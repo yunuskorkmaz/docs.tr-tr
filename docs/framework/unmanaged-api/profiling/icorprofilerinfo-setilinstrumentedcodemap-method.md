@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bce1dcf8-b4ec-4e73-a917-f2df1ad49c8a
 topic_type:
 - apiref
-ms.openlocfilehash: 32e63a6d2b6f739025d4c5558c16fe2d74fde73c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 99e473268fd0d5bb8ce120b97576277949b86508
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449870"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76869003"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap Yöntemi
 
@@ -55,7 +55,7 @@ HRESULT SetILInstrumentedCodeMap(
 
 ## <a name="remarks"></a>Açıklamalar
 
-Profil Oluşturucu genellikle bu yöntemi işaretlemek için (örneğin, belirli bir kaynak satırına ulaşıldığında bildirmek üzere) bir yöntemin kaynak koduna deyimler ekler. `SetILInstrumentedCodeMap`, profil oluşturucunun özgün MSIL talimatlarını yeni konumlarına eşlemesine olanak sağlar. Bir profil oluşturucu, belirli bir yerel kenar için özgün MSIL sapmasını almak üzere [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) metodunu kullanabilir.
+Profil Oluşturucu genellikle bu yöntemi işaretlemek için (örneğin, belirli bir kaynak satırına ulaşıldığında bildirmek üzere) bir yöntemin kaynak koduna deyimler ekler. `SetILInstrumentedCodeMap`, profil oluşturucunun özgün MSIL talimatlarını yeni konumlarına eşlemesine olanak sağlar. Bir profil oluşturucu, belirli bir yerel kenar için özgün MSIL sapmasını almak üzere [ICorProfilerInfo:: GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md) metodunu kullanabilir.
 
 Hata ayıklayıcı, her bir eski kaydırın orijinal, değiştirilmemiş MSIL kodu içindeki bir MSIL denkleşeceğini ve her yeni kaydırın yeni, belgelenmiş koddaki MSIL denkleşeceğini varsayacaktır. Haritanın artan sırada sıralanması gerekir. Adımlamayı düzgün şekilde çalışmak için aşağıdaki yönergeleri izleyin:
 
@@ -97,4 +97,4 @@ Hata ayıklayıcı, her bir eski kaydırın orijinal, değiştirilmemiş MSIL ko
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo Arabirimi](icorprofilerinfo-interface.md)

@@ -2,12 +2,12 @@
 title: 'ICorDebugVariableSymbol:: GetValue yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
-ms.openlocfilehash: 5ef7e67efb2bafd9b9f52203246fd7d1590e6107
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2dc074384d209d0740a1fb0a9a16d96ff355f02b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120958"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790880"
 ---
 # <a name="icordebugvariablesymbolgetvalue-method"></a>ICorDebugVariableSymbol:: GetValue yöntemi
 Bir değişkenin değerini bir bayt dizisi olarak alır.  
@@ -60,5 +60,5 @@ HRESULT GetValue(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugVariableSymbol Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugVariableSymbol Arabirimi](icordebugvariablesymbol-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

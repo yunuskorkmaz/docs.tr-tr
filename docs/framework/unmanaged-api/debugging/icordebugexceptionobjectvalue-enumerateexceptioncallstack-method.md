@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00c64533-15dd-47f4-bb97-fe80a1ebadef
 topic_type:
 - apiref
-ms.openlocfilehash: 9f54fdfe16bc24394503ba6f5a9b906a32ec2c8b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 57eb284bfe39ce92b2d6c03a2aeb4ae84d6aba91
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091098"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788676"
 ---
 # <a name="icordebugexceptionobjectvalueenumerateexceptioncallstack-method"></a>ICorDebugExceptionObjectValue::EnumerateExceptionCallStack Yöntemi
 Özel durum nesnesine katıştırılmış çağrı yığınına bir Numaralandırıcı alır.  
@@ -35,12 +35,12 @@ HRESULT EnumerateExceptionCallStack(
   
 ## <a name="parameters"></a>Parametreler  
  ppCallStackEnum  
- dışı Yönetilen bir özel durum nesnesi için yığın izleme numaralandırıcısı olan [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) arabirimi nesnesinin adresine yönelik bir işaretçi.  
+ dışı Yönetilen bir özel durum nesnesi için yığın izleme numaralandırıcısı olan [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md) arabirimi nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hiçbir çağrı yığını bilgisi yoksa, yöntem `S_OK`döndürür ve [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) , 0 uzunluğunda geçerli bir Numaralandırıcı. Yöntem yığın izleme bilgilerini alamadığında, dönüş değeri `E_FAIL` ve hiçbir Numaralandırıcı döndürülmez.  
+ Hiçbir çağrı yığını bilgisi yoksa, yöntem `S_OK`döndürür ve [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md) , 0 uzunluğunda geçerli bir Numaralandırıcı. Yöntem yığın izleme bilgilerini alamadığında, dönüş değeri `E_FAIL` ve hiçbir Numaralandırıcı döndürülmez.  
   
- [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) nesnesi, özel durum nesnesinin `_stackTrace` alanından yığın izleme verilerinin kodunu çözmekten sorumludur.  
+ [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md) nesnesi, özel durum nesnesinin `_stackTrace` alanından yığın izleme verilerinin kodunu çözmekten sorumludur.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -53,5 +53,5 @@ HRESULT EnumerateExceptionCallStack(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugExceptionObjectValue Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectvalue-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugExceptionObjectValue Arabirimi](icordebugexceptionobjectvalue-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

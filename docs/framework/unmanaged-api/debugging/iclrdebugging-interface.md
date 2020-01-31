@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 429d8fce-b1b1-49d7-895c-28c1c1aa2dbd
 topic_type:
 - apiref
-ms.openlocfilehash: 6506b11d97490f796486729dbeb612e47762b60a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9a768535c3bf69b5127777de4cee27054943091d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111444"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793636"
 ---
 # <a name="iclrdebugging-interface"></a>ICLRDebugging Arabirimi
 Hata ayıklama amacıyla modülleri yükleme ve kaldırma işlemlerini yapan yöntemler sağlar.  
@@ -28,8 +28,8 @@ Hata ayıklama amacıyla modülleri yükleme ve kaldırma işlemlerini yapan yö
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[OpenVirtualProcess Yöntemi](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)|İşlemde yüklenen ortak dil çalışma zamanı (CLR) modülüne karşılık gelen "ICorDebugProcess" arabirimini alır.|  
-|[CanUnloadNow Yöntemi](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)|Bir [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) arabirimi tarafından sağlanmış bir kitaplığın hala kullanımda olup olmadığını veya kaldırılabileceğini belirler.|  
+|[OpenVirtualProcess Yöntemi](iclrdebugging-openvirtualprocess-method.md)|İşlemde yüklenen ortak dil çalışma zamanı (CLR) modülüne karşılık gelen "ICorDebugProcess" arabirimini alır.|  
+|[CanUnloadNow Yöntemi](iclrdebugging-canunloadnow-method.md)|Bir [ICLRDebuggingLibraryProvider](iclrdebugginglibraryprovider-interface.md) arabirimi tarafından sağlanmış bir kitaplığın hala kullanımda olup olmadığını veya kaldırılabileceğini belirler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `ICLRDebugging` arabiriminin bir örneğini [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) işlevini kullanarak elde edebilirsiniz.  
@@ -45,5 +45,5 @@ Hata ayıklama amacıyla modülleri yükleme ve kaldırma işlemlerini yapan yö
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [Hata Ayıklama](index.md)

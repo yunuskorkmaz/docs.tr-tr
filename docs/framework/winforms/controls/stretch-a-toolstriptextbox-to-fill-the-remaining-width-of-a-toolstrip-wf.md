@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Bir toolstrip'nin kalan genişliğini (Windows Forms) doldurmak için"
+title: "Nasıl yapılır: ToolStripTextBox'nu bir ToolStrip'nin Kalan Genişliğini Kaplayacak Şekilde Genişletme"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - text boxes [Windows Forms], stretching in ToolStrip control [Windows Forms]
 - ToolStrip control [Windows Forms], stretching a text box
 ms.assetid: 0e610fbf-85fe-414c-900c-9704a5dd5cc6
-ms.openlocfilehash: 7a9fd703206caadf2d9c63d92567f8b1c3b51e61
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c60cc2a377f08a73159f25b2ab5f2812d41f0c10
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751425"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742845"
 ---
-# <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>Nasıl yapılır: Bir toolstrip'nin kalan genişliğini (Windows Forms) doldurmak için
-Ayarladığınızda <xref:System.Windows.Forms.ToolStrip.Stretch%2A> özelliği bir <xref:System.Windows.Forms.ToolStrip> denetimini `true`, denetimi uçtan uca, kapsayıcı doldurur ve kapsayıcısı boyutlandırdığında yeniden boyutlandırır. Bu yapılandırmada, bir öğesi denetiminde gibi esnetme yararlı bir <xref:System.Windows.Forms.ToolStripTextBox>kullanılabilir alanı dolduracak şekilde ve denetim boyutlandırdığında yeniden boyutlandırabilirsiniz. Görünümünü ve davranışını Microsoft® Internet Explorer Adres çubuğuna benzer elde etmek istiyorsanız bu uzatma gibi yararlı olur.  
+# <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>Nasıl Yapılır: ToolStripTextBox'nu bir ToolStrip'nin Kalan Genişliğini Kaplayacak Şekilde Genişletme (Windows Forms)
+Bir <xref:System.Windows.Forms.ToolStrip> denetiminin <xref:System.Windows.Forms.ToolStrip.Stretch%2A> özelliğini `true`olarak ayarladığınızda denetim, kapsayıcısını uçtan uca doldurur ve kapsayıcısı yeniden boyutlandırdığında yeniden boyutlandırılır. Bu yapılandırmada, denetimdeki bir öğeyi (<xref:System.Windows.Forms.ToolStripTextBox>gibi), kullanılabilir alanı dolduracak ve denetimin yeniden boyutlandırılıp boyutlandırılacağını anlamak için yararlı bulabilirsiniz. Bu uzatma, örneğin Microsoft® Internet Explorer 'da adres çubuğuna benzer görünüm ve davranış elde etmek istiyorsanız yararlı olur.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, türetilen bir sınıf sağlar <xref:System.Windows.Forms.ToolStripTextBox> adlı `ToolStripSpringTextBox`. Bu sınıf geçersiz kılmalar <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A> üst kullanılabilir genişliğini hesaplamak için gereken yöntemini <xref:System.Windows.Forms.ToolStrip> diğer tüm öğelerin birleşik genişliğini çıkarılmasıyla denetim. Bu kod örneği de sağlayan bir <xref:System.Windows.Forms.Form> sınıfı ve bir `Program` yeni davranış göstermek için sınıf.  
+ Aşağıdaki kod örneği, `ToolStripSpringTextBox`çağrılan <xref:System.Windows.Forms.ToolStripTextBox> türetilmiş bir sınıf sağlar. Bu sınıf, diğer tüm öğelerin Birleşik genişliği çıkarılmasıyla sonra üst <xref:System.Windows.Forms.ToolStrip> denetiminin kullanılabilir genişliğini hesaplamak için <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A> yöntemini geçersiz kılar. Bu kod örneği Ayrıca yeni davranışı göstermek için bir <xref:System.Windows.Forms.Form> sınıfı ve bir `Program` sınıfı sağlar.  
   
  [!code-csharp[ToolStripSpringTextBox#00](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripSpringTextBox/cs/ToolStripSpringTextBox.cs#00)]
  [!code-vb[ToolStripSpringTextBox#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripSpringTextBox/vb/ToolStripSpringTextBox.vb#00)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu örnek şunları gerektirir:  
   
-- Sistem, System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
+- System, System. Drawing ve System. Windows. Forms derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -36,4 +36,4 @@ Ayarladığınızda <xref:System.Windows.Forms.ToolStrip.Stretch%2A> özelliği 
 - <xref:System.Windows.Forms.ToolStripTextBox>
 - <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A?displayProperty=nameWithType>
 - [ToolStrip Denetim, Mimarisi](toolstrip-control-architecture.md)
-- [Nasıl yapılır: Bir StatusStrip içinde Spring özelliğini etkileşimli kullanma](how-to-use-the-spring-property-interactively-in-a-statusstrip.md)
+- [Nasıl yapılır: Bir StatusStrip içinde Spring Özelliğini Etkileşimli Kullanma](how-to-use-the-spring-property-interactively-in-a-statusstrip.md)

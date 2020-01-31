@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1edba68-9c36-4f69-be9f-678ce0b33480
 topic_type:
 - apiref
-ms.openlocfilehash: 3ab4da3fcf43731587dae6f3a8e82ea48c5ee1ec
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8070b0693b5718ad8b4cbeb9bf5792cb7f4a0a85
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129637"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792398"
 ---
 # <a name="icordebugprocess5enumerateheapregions-method"></a>ICorDebugProcess5::EnumerateHeapRegions Yöntemi
 Yönetilen yığının bellek aralıkları için bir Numaralandırıcı alır.  
@@ -35,14 +35,14 @@ HRESULT EnumerateHeapRegions(
   
 ## <a name="parameters"></a>Parametreler  
  `ppRegions`  
- dışı Nesnelerin yönetilen yığında bulunduğu bellek aralıklarına yönelik bir Numaralandırıcı olan [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) arabirimi nesnesinin adresine yönelik bir işaretçi.  
+ dışı Nesnelerin yönetilen yığında bulunduğu bellek aralıklarına yönelik bir Numaralandırıcı olan [ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md) arabirimi nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorDebugProcess5::EnumerateHeapRegions` yöntemi çağrılmadan önce, [ICorDebugProcess5:: GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) metodunu çağırmanız ve döndürülen [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) nesnesinin `areGCStructuresValid` alanının değerini inceleyerek, çöp toplama işleminin geçerli durum Numaralandırılabilir. Ayrıca, `ICorDebugProcess5::EnumerateHeapRegions` yöntemi, işlem kullanım ömrü içinde çok erken iliştirmeye, bellek bölgeleri oluşturulmadan önce `E_FAIL` döndürür.  
+ `ICorDebugProcess5::EnumerateHeapRegions` yöntemi çağrılmadan önce, [ICorDebugProcess5:: GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) metodunu çağırmanız ve döndürülen [COR_HEAPINFO](cor-heapinfo-structure.md) nesnesinin `areGCStructuresValid` alanının değerini inceleyerek geçerli durumunda çöp toplama yığınının numaralandırılanmış olduğundan emin olmanız gerekir. Ayrıca, `ICorDebugProcess5::EnumerateHeapRegions` yöntemi, işlem kullanım ömrü içinde çok erken iliştirmeye, bellek bölgeleri oluşturulmadan önce `E_FAIL` döndürür.  
   
- Bu yöntem, yönetilen nesneler içerebilen tüm bellek bölgelerini numaralandırmak için garanti edilir, ancak yönetilen nesnelerin gerçekten bu bölgelerde yer aldığı garanti etmez. [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) Collection nesnesi boş veya ayrılmış bellek bölgeleri içerebilir.  
+ Bu yöntem, yönetilen nesneler içerebilen tüm bellek bölgelerini numaralandırmak için garanti edilir, ancak yönetilen nesnelerin gerçekten bu bölgelerde yer aldığı garanti etmez. [ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md) Collection nesnesi boş veya ayrılmış bellek bölgeleri içerebilir.  
   
- [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) Interface nesnesi, [cor_segment](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md) nesnelerini Listeletmanızı sağlayan ıcorhata ayıklama genum arabiriminden türetilmiş standart bir Numaralandırıcı. Her [cor_segment](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md) nesnesi, belirli bir segmentin bellek aralığı ve bu kesimdeki nesnelerin nestiyle birlikte hakkında bilgi sağlar.  
+ [ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md) Interface nesnesi, [cor_segment](cor-segment-structure.md) nesneleri Listeletmanızı sağlayan ıcorı, genum arabiriminden türetilmiş standart bir Numaralandırıcı. Her [cor_segment](cor-segment-structure.md) nesnesi, belirli bir segmentin bellek aralığı hakkında, bu kesimdeki nesnelerin nestiyle birlikte bilgi sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -55,5 +55,5 @@ HRESULT EnumerateHeapRegions(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugProcess5 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess5 Arabirimi](icordebugprocess5-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

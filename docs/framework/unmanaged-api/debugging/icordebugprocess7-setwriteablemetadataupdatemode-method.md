@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 8589bba7-7304-45ba-9e31-7bf43dfd5c19
 topic_type:
 - apiref
-ms.openlocfilehash: 453486c9e3d98ffd6f0dcfa08e7a0a9a1c1d3342
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 35767529d9433764b7eed0b3b4acdd806f399962
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123399"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792174"
 ---
 # <a name="icordebugprocess7setwriteablemetadataupdatemode-method"></a>ICorDebugProcess7::SetWriteableMetadataUpdateMode Yöntemi
 [.NET Framework 4.5.2 ve sonraki sürümlerde desteklenir]  
@@ -34,7 +34,7 @@ HRESULT SetWriteableMetadataUpdateMode(
   
 ## <a name="parameters"></a>Parametreler  
  `flags`  
- Hedef işlemde meta verilere yönelik bellek güncelleştirmelerinin görünür olup olmadığını belirten bir [WriteableMetadataUpdateMode](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md) numaralandırma değeri (`WriteableMetadataUpdateMode::AlwaysShowUpdates`) veya hata ayıklayıcıda görünür (`WriteableMetadataUpdateMode::LegacyCompatPolicy`).  
+ Hedef işlemde meta verilere yönelik bellek güncelleştirmelerinin görünür olup olmadığını belirten bir [WriteableMetadataUpdateMode](writeablemetadataupdatemode-enumeration.md) numaralandırma değeri (`WriteableMetadataUpdateMode::AlwaysShowUpdates`) veya hata ayıklayıcıda görünür (`WriteableMetadataUpdateMode::LegacyCompatPolicy`).  
   
 ## <a name="remarks"></a>Açıklamalar  
  Hedef işlemin meta verilerinde yapılan güncelleştirmeler, düzenleme ve devam etme, profil oluşturucu veya <xref:System.Reflection.Emit?displayProperty=nameWithType>gelebilir.  
@@ -50,5 +50,5 @@ HRESULT SetWriteableMetadataUpdateMode(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugProcess7 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess7 Arabirimi](icordebugprocess7-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b546be4-f86d-4536-8cfc-1d08e5066eb6
 topic_type:
 - apiref
-ms.openlocfilehash: 36d314211d95dff6648753f5d550a2cfd402a918
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cafa1c99a8988c199d866796911d1983aabb7208
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134042"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785061"
 ---
 # <a name="icordebugsetunmanagedhandler-method"></a>ICorDebug::SetUnmanagedHandler Yöntemi
 Yönetilmeyen olaylar için olay işleyicisi nesnesini belirtir.  
@@ -35,10 +35,10 @@ HRESULT SetUnmanagedHandler (
   
 ## <a name="parameters"></a>Parametreler  
  `pCallback`  
- 'ndaki Yönetilmeyen olaylar için olay işleyicisini temsil eden [ICorDebugUnmanagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md) nesnesine yönelik bir işaretçi.  
+ 'ndaki Yönetilmeyen olaylar için olay işleyicisini temsil eden [ICorDebugUnmanagedCallback](icordebugunmanagedcallback-interface.md) nesnesine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yönetilmeyen olaylar için olay işleyicisi nesnesi [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md) :: Initialize ve ICorDebug: [: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) veya [ICorDebug::D ebugactiveprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md)çağrılarına yapılan çağrıdan sonra ayarlanmalıdır. Ancak, eski amaçlar için, ilk yerel hata ayıklama olayı oluşturuluncaya kadar yönetilmeyen olaylar için olay işleyicisi nesnesini ayarlamanız gerekmez. Özellikle, `ICorDebug::CreateProcess` CREATE_SUSPENDED bayrağını ayarlandıysa, ana iş parçacığı sürdürülene kadar yerel hata ayıklama olayları dağıtılamaz.  
+ Yönetilmeyen olaylar için olay işleyicisi nesnesi [ICorDebug](icordebug-initialize-method.md) :: Initialize ve ICorDebug: [: CreateProcess](icordebug-createprocess-method.md) veya [ICorDebug::D ebugactiveprocess](icordebug-debugactiveprocess-method.md)çağrılarına yapılan çağrıdan sonra ayarlanmalıdır. Ancak, eski amaçlar için, ilk yerel hata ayıklama olayı oluşturuluncaya kadar yönetilmeyen olaylar için olay işleyicisi nesnesini ayarlamanız gerekmez. Özellikle, `ICorDebug::CreateProcess` CREATE_SUSPENDED bayrağını ayarlandıysa, ana iş parçacığı sürdürülene kadar yerel hata ayıklama olayları dağıtılamaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -51,4 +51,4 @@ HRESULT SetUnmanagedHandler (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebug Arabirimi](icordebug-interface.md)

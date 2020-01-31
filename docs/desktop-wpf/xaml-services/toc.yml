@@ -76,7 +76,7 @@
           href: service-contexts-with-type-converters-and-markup-extensions.md
     - name: XAML'deki Genel Türler
       href: generics.md
-    - name: .NET Framework XAML Hizmetlerinde Kullanılacak Özel Türleri Tanımlama
+    - name: .NET XAML Hizmetlerinde Kullanılacak Özel Türleri Tanımlama
       href: define-custom-types.md
       items:
         - name: Özel Türler ve Kitaplıkar İçin XAML İlişkili CLR Öznitelikleri

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1e35031b-e095-4c14-9644-8deeb3081e0b
 topic_type:
 - apiref
-ms.openlocfilehash: b83706176091fd70d48e0f50a0fe5988c876f606
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b9fb308f19ff09218c97b030296b9a3d4f0f2512
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447614"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868193"
 ---
 # <a name="icorprofilerthreadenum-interface"></a>ICorProfilerThreadEnum Arabirimi
 Ortak dil çalışma zamanındaki iş parçacığı koleksiyonunda sırayla yinelemek için yöntemler sağlar.  
@@ -28,11 +28,11 @@ Ortak dil çalışma zamanındaki iş parçacığı koleksiyonunda sırayla yine
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Clone Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-clone-method.md)|Bu `ICorProfilerThreadEnum` arabiriminin bir kopyasına bir arabirim işaretçisi alır.|  
-|[GetCount Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-getcount-method.md)|Uygulama tarafından kullanılan iş parçacıklarının sayısını alır.|  
-|[Next Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-next-method.md)|Numaralandırıcının dizideki geçerli konumundan başlayarak ardışık iş parçacığı koleksiyonundan belirtilen sayıda bitişik iş parçacığı alır.|  
-|[Reset Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-reset-method.md)|Numaralandırıcının imlecini sıranın başlangıç konumuna taşımaktır.|  
-|[Skip Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-skip-method.md)|Numaralandırıcının imlecini, belirtilen sayıda öğeyi atlayacak şekilde geçerli konumundan ilerletir.|  
+|[Clone Yöntemi](icorprofilerthreadenum-clone-method.md)|Bu `ICorProfilerThreadEnum` arabiriminin bir kopyasına bir arabirim işaretçisi alır.|  
+|[GetCount Yöntemi](icorprofilerthreadenum-getcount-method.md)|Uygulama tarafından kullanılan iş parçacıklarının sayısını alır.|  
+|[Next Yöntemi](icorprofilerthreadenum-next-method.md)|Numaralandırıcının dizideki geçerli konumundan başlayarak ardışık iş parçacığı koleksiyonundan belirtilen sayıda bitişik iş parçacığı alır.|  
+|[Reset Yöntemi](icorprofilerthreadenum-reset-method.md)|Numaralandırıcının imlecini sıranın başlangıç konumuna taşımaktır.|  
+|[Skip Yöntemi](icorprofilerthreadenum-skip-method.md)|Numaralandırıcının imlecini, belirtilen sayıda öğeyi atlayacak şekilde geçerli konumundan ilerletir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `ICorProfilerThreadEnum` arabirimi bir Numaralandırıcı. Bir dizinin alıcısından alıcı için uygun bir hızda öğe çekmesini sağlar. Diğer bir deyişle, alıcı, dizi öğelerinin akışını açıkça denetleyebilir ve böylece büyük dizileri Yöntem parametreleri olarak geçirme ile ilişkili sorunlardan kaçınarak.  
@@ -48,5 +48,5 @@ Ortak dil çalışma zamanındaki iş parçacığı koleksiyonunda sırayla yine
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [ICorProfilerInfo Arabirimi](icorprofilerinfo-interface.md)
+- [Profil Oluşturma Arabirimleri](profiling-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-ms.openlocfilehash: ef9e339c74b2d2785d758ed9c4adfc1901073253
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dca2a4e5ee869346108137a8ba01ab8855756725
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139367"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792554"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory Yöntemi
 Bu işlem için belirtilen bellek alanını okur.  
@@ -51,7 +51,7 @@ HRESULT ReadMemory(
 ## <a name="remarks"></a>Açıklamalar  
  `ReadMemory` Yöntemi öncelikle, hata ayıklanan yönetilmeyen bölümü tarafından kullanılmakta olan bellek bölgelerini incelemek için birlikte çalışma hata ayıklaması tarafından kullanılmak üzere tasarlanmıştır. Bu yöntem, Microsoft ara dili (MSIL) kodu ve yerel JıT derlenmiş kod okumak için de kullanılabilir.  
   
- Yönetilen kesme noktaları, `buffer` parametresinde döndürülen verilerden kaldırılır. [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)tarafından ayarlanan yerel kesme noktaları için hiçbir değişiklik yapılmayacak.  
+ Yönetilen kesme noktaları, `buffer` parametresinde döndürülen verilerden kaldırılır. [ICorDebugProcess2:: SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md)tarafından ayarlanan yerel kesme noktaları için hiçbir değişiklik yapılmayacak.  
   
  İşlem belleğini önbelleğe alma işlemi yapılmaz.  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 25c208c98802be540bde7532c53798e6f7b35446
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 29aecd530d18b931420467e9127bcbf96d3a4a5f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445955"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866780"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler Yöntemi
 Belirtilen işlem oluşturucuyu belirtilen işleme iliştirir.  
@@ -37,25 +37,32 @@ HRESULT AttachProfiler(
   [in] UINT cbClientData);                          // optional  
 ```  
   
-## <a name="parameters"></a>Parametreler  
- `dwProfileeProcessID`  
- 'ndaki Profil oluşturucunun eklendiği işlemin işlem KIMLIĞI. 64 bitlik bir makinede, profili oluşturulan işlemin bit genişliği, `AttachProfiler`çağıran tetikleyici işlemin bit durumuyla aynı olmalıdır. `AttachProfiler` altında çağrıldığı Kullanıcı hesabının yönetim ayrıcalıkları varsa, hedef işlem sistemde herhangi bir işlem olabilir. Aksi takdirde, hedef işlem aynı kullanıcı hesabına ait olmalıdır.  
+## <a name="parameters"></a>Parametreler
+
+- `dwProfileeProcessID`
+
+  \[içinde] profil oluşturucunun eklendiği işlemin işlem KIMLIĞI. 64 bitlik bir makinede, profili oluşturulan işlemin bit genişliği, `AttachProfiler`çağıran tetikleyici işlemin bit durumuyla aynı olmalıdır. `AttachProfiler` altında çağrıldığı Kullanıcı hesabının yönetim ayrıcalıkları varsa, hedef işlem sistemde herhangi bir işlem olabilir. Aksi takdirde, hedef işlem aynı kullanıcı hesabına ait olmalıdır.
+
+- `dwMillisecondsMax`
+
+  \[, `AttachProfiler` tamamlanmayacak süre (milisaniye cinsinden). Tetikleme işlemi, belirli bir profil oluşturucunun başlatma işlemini tamamlaması için yeterince bilinen bir zaman aşımı süresi iletmelidir.
   
- `dwMillisecondsMax`  
- 'ndaki `AttachProfiler` tamamlanma süresi (milisaniye cinsinden). Tetikleme işlemi, belirli bir profil oluşturucunun başlatma işlemini tamamlaması için yeterince bilinen bir zaman aşımı süresi iletmelidir.  
-  
- `pClsidProfiler`  
- 'ndaki Yüklenecek profil oluşturucunun CLSID 'sine yönelik bir işaretçi. Tetikleyici işlemi, `AttachProfiler` döndüğünde bu belleği yeniden kullanabilir.  
-  
- `wszProfilerPath`  
- 'ndaki Profil oluşturucunun yüklenecek DLL dosyasının tam yolu. Bu dize, null Sonlandırıcı dahil olmak üzere en fazla 260 karakter içermelidir. `wszProfilerPath` null ya da boş bir dize ise, ortak dil çalışma zamanı (CLR) `pClsidProfiler` işaret eden CLSID için kayıt defterine bakarak profil oluşturucunun DLL dosyasının konumunu bulmaya çalışır.  
-  
- `pvClientData`  
- 'ndaki [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) yöntemi tarafından Profiler 'a geçirilecek veriye yönelik bir işaretçi. Tetikleyici işlemi, `AttachProfiler` döndüğünde bu belleği yeniden kullanabilir. `pvClientData` null ise, `cbClientData` 0 (sıfır) olmalıdır.  
-  
- `cbClientData`  
- 'ndaki `pvClientData` tarafından işaret edilen verilerin bayt cinsinden boyutu.  
-  
+- `pClsidProfiler`
+
+  \[içinde, yüklenecek profil oluşturucunun CLSID 'sine yönelik bir işaretçi. Tetikleyici işlemi, `AttachProfiler` döndüğünde bu belleği yeniden kullanabilir.
+
+- `wszProfilerPath`
+
+  \[içinde] yüklenecek profil oluşturucunun DLL dosyasının tam yolu. Bu dize, null Sonlandırıcı dahil olmak üzere en fazla 260 karakter içermelidir. `wszProfilerPath` null ya da boş bir dize ise, ortak dil çalışma zamanı (CLR) `pClsidProfiler` işaret eden CLSID için kayıt defterine bakarak profil oluşturucunun DLL dosyasının konumunu bulmaya çalışır.
+
+- `pvClientData`
+
+  \[içinde, [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) yöntemi tarafından Profiler 'a geçirilecek verilerin bir işaretçisi. Tetikleyici işlemi, `AttachProfiler` döndüğünde bu belleği yeniden kullanabilir. `pvClientData` null ise, `cbClientData` 0 (sıfır) olmalıdır.
+
+- `cbClientData`
+
+  \[, `pvClientData` tarafından işaret edilen verilerin bayt cinsinden boyutudur.
+
 ## <a name="return-value"></a>Dönüş Değeri  
  Bu yöntem aşağıdaki HRESULTs 'leri döndürür.  
   
@@ -72,7 +79,7 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32 (ERROR_TIMEOUT)|Zaman aşımı, profil oluşturucuyu yüklemeye başlamadan önce doldu. İliştirme işlemini yeniden deneyebilirsiniz. Hedef işlemdeki bir Sonlandırıcı, zaman aşımı değerinden daha uzun bir süre çalıştığında zaman aşımları oluşur.|  
 |E_INVALIDARG|Bir veya daha fazla parametrenin geçersiz değerleri var.|  
 |E_FAIL|Belirtilmeyen bir hata oluştu.|  
-|Diğer hata kodları|Profiler 'ın [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) yöntemi hata BELIRTEN bir HRESULT döndürürse, `AttachProfiler` aynı hresult döndürür. Bu durumda, E_NOTIMPL CORPROF_E_PROFILER_NOT_ATTACHABLE dönüştürülür.|  
+|Diğer hata kodları|Profiler 'ın [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) yöntemi hata BELIRTEN bir HRESULT döndürürse, `AttachProfiler` aynı hresult döndürür. Bu durumda, E_NOTIMPL CORPROF_E_PROFILER_NOT_ATTACHABLE dönüştürülür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -90,7 +97,7 @@ HRESULT AttachProfiler(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerInfo3 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerCallback Arabirimi](icorprofilercallback-interface.md)
+- [ICorProfilerInfo3 Yöntemi](icorprofilerinfo3-interface.md)
+- [Profil Oluşturma Arabirimleri](profiling-interfaces.md)
+- [Profil Oluşturma](index.md)

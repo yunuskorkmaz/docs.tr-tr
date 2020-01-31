@@ -2,12 +2,12 @@
 title: "Öğretici: Visual Studio Code kullanarak macOS 'ta .NET Core çözümü oluşturma"
 description: Bu belge, Visual Studio Code kullanarak bir .NET Core çözümü oluşturmak için adımlar ve iş akışı sağlar.
 ms.date: 12/19/2019
-ms.openlocfilehash: 4dc44a0aa155dca3c106a7da68cf100ef644b58b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e3c210d4391c0e3c9c3455ecf23dd138abdb4363
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715299"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741548"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak macOS 'ta .NET Core çözümü oluşturma
 
@@ -20,15 +20,15 @@ Bu belge, macOS için .NET Core çözümü oluşturmaya yönelik adımları ve i
 
 [.NET Core SDK](https://dotnet.microsoft.com/download)'i yükler. .NET Core SDK .NET Core Framework ve çalışma zamanının en son sürümünü içerir.
 
-[Visual Studio Code](https://code.visualstudio.com)’u yükleyin. Bu makalenin kursu sırasında, .NET Core geliştirme deneyimini geliştiren Visual Studio Code uzantıları da yüklersiniz.
+[Visual Studio Code](https://code.visualstudio.com)'i yükler. Bu makalenin kursu sırasında, .NET Core geliştirme deneyimini geliştiren Visual Studio Code uzantıları da yüklersiniz.
 
 Visual Studio Code açıp C# <kbd>FN</kbd>+<kbd>F1</kbd> tuşlarına basarak Visual Studio Code uzantısını yükleyip Visual Studio Code paleti açın. Uzantı listesini görmek için **EXT Install** yazın. C# Uzantıyı seçin. Uzantıyı etkinleştirmek için Visual Studio Code yeniden başlatın. Daha fazla bilgi için [ C# Visual Studio Code uzantısı belgelerine](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)bakın.
 
-## <a name="get-started"></a>Kullanmaya başlayın
+## <a name="get-started"></a>Başlangıç
 
 Bu öğreticide, üç proje oluşturursunuz: bir kitaplık projesi, bu kitaplık projesi için testler ve kitaplığı kullanan bir konsol uygulaması. Bu makalenin kaynağını GitHub 'daki DotNet/Samples deposunda [görüntüleyebilir veya indirebilirsiniz](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) . İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Visual Studio Code başlatın. Visual Studio Code içinde gömülü bir terminal açmak için <kbd>Ctrl</kbd>+<kbd>\`</kbd> (backquote veya backtick karakteri) veya menüden **View > Terminal** ' i seçin. Visual Studio Code dışında çalışmayı tercih ediyorsanız, bir dış kabuğu Explorer **komut istemi** komutunda aç (Mac veya Linux 'ta**terminalde aç** ) ile açabilirsiniz.
+Visual Studio Code başlatın. Visual Studio Code yerleşik bir terminal açmak için <kbd>Ctrl</kbd> <kbd>\`</kbd> (backquote veya backtick karakteri) ya da menüden > **Terminal** **görüntüle** ' yi seçin. Visual Studio Code dışında çalışmayı tercih ediyorsanız, bir dış kabuğu, **komut istemi** komutunda aç (MacOS veya Linux 'ta**terminalde aç** ) ile açabilirsiniz.
 
 Bir veya daha fazla .NET Core projesi için kapsayıcı görevi gören bir çözüm dosyası oluşturarak başlayın. Terminalde, *altın*adlı yeni bir klasörde *altın. sln* yeni bir çözüm oluşturmak için [`dotnet new`](../tools/dotnet-new.md) komutunu çalıştırın:
 
@@ -142,7 +142,8 @@ namespace TestApp
     public class LibraryTests
     {
         [Fact]
-        public void TestThing() {
+        public void TestThing()
+        {
             Assert.NotEqual(42, new Thing().Get(19, 23));
         }
     }
@@ -211,7 +212,7 @@ dotnet run -p app/app.csproj
 
 `Main` yönteminde `WriteLine` bildiriminde bir kesme noktası ayarlayın. İmleç `WriteLine` çizginin üzerindeyken ya da kesme noktasını ayarlamak istediğiniz satırdaki sol kenar boşluğunda fareyle tıklanarak, <kbd>Fn</kbd>+<kbd>F9</kbd> tuşuna basarak bunu yapın. Kod satırının yanındaki kenar boşluğunda kırmızı bir daire görünür. Kesme noktasına ulaşıldığında, kesme noktası çizgisi yürütülmeden *önce* kod yürütme durur.
 
-Visual Studio Code araç çubuğunda hata ayıklama simgesini seçerek hata ayıklayıcı sekmesini açın, menü çubuğundan **> hata ayıklamayı görüntüle** ' yi seçin veya klavye kısayol <kbd>komutunu</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>:
+Visual Studio Code araç çubuğunda hata ayıklama simgesini seçerek hata ayıklayıcı sekmesini açın, menü çubuğundan >  **hata ayıklamayı** görüntüle ' yi seçin veya <kbd>&#8679;</kbd> <kbd>&#8984;</kbd> <kbd>klavye kısayolunu kullanın</kbd>:
 
 ![Visual Studio Code hata ayıklayıcı](./media/using-on-macos/visual-studio-code-debugger.png)
 

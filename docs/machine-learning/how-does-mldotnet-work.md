@@ -4,16 +4,16 @@ description: ML.NET, çevrimiçi veya çevrimdışı senaryolarda .NET uygulamal
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 98251c39a4bdaba8203c26c6a781a86efc46efa4
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: bc157b22201c66bceecf78aaa36b9c653fe6a131
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740085"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794569"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET nedir ve nasıl çalışır?
 
-ML.NET, çevrimiçi veya çevrimdışı senaryolarda .NET uygulamalarına makine öğrenimi ekleme olanağı sunar. Bu özellik sayesinde, uygulamanızın kullanabildiği verileri kullanarak otomatik tahminler yapabilirsiniz.
+ML.NET, çevrimiçi veya çevrimdışı senaryolarda .NET uygulamalarına makine öğrenimi ekleme olanağı sunar. Bu özellik sayesinde, uygulamanızın kullanabildiği verileri kullanarak otomatik tahminler yapabilirsiniz. Machine Learning uygulamaları, açık olarak programlanabilir olması yerine tahmine dayalı hale getirmek için verilerdeki desenleri kullanır.
 
 Merkezi ML.NET, bir makine öğrenimi **modelidir**. Model, giriş verilerinizi bir tahmine dönüştürmek için gereken adımları belirtir. ML.NET ile, bir algoritma belirterek özel bir modeli eğitebilirsiniz veya önceden eğitilen TensorFlow ve ONNX modellerini içeri aktarabilirsiniz.
 
@@ -30,7 +30,7 @@ ML.NET ile yapabileceğiniz tahmin türlerine örnek olarak şunlar verilebilir:
 |Anomali Algılama|Sahte bankacılık işlemlerini Algıla |
 |Öneriler|Çevrimiçi alışverişçilerin, önceki satın alımlarına göre satın almasını isteyebileceğiniz ürünleri önerin|
 |Zaman serisi/sıralı veriler|Hava durumu/ürün satışları tahminini yapın|
-|Görüntü sınıflandırma|Tıbbi görüntülerde pathologies kategorilere ayırma|
+|Görüntü sınıflandırması|Tıbbi görüntülerde pathologies kategorilere ayırma|
 
 ## <a name="hello-mlnet-world"></a>Merhaba ML.NET dünya
 
@@ -270,7 +270,7 @@ DataView nesnelerinin önemli bir özelliği, **geç**değerlendirilmesinden kay
 
 Hata ayıklayıcıda `debug` değişkenini izleyebilir ve içeriğini inceleyebilirsiniz. Performansı önemli ölçüde düşürür, üretim kodunda önizleme yöntemini kullanmayın.
 
-### <a name="model-deployment"></a>Dağıtım Modeli
+### <a name="model-deployment"></a>Model dağıtımı
 
 Gerçek yaşam uygulamalarında, model eğitimi ve değerlendirme kodunuz tahmininizden ayrı olacaktır. Aslında, bu iki etkinlik genellikle ayrı takımlar tarafından gerçekleştirilir. Model geliştirme ekibiniz, modeli tahmin uygulamasında kullanım için kaydedebilir.
 

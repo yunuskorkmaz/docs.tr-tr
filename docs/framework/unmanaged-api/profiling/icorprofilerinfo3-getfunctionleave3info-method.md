@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: df7083d2-fd43-44c7-9ce5-912c25cef0ff
 topic_type:
 - apiref
-ms.openlocfilehash: bacb50520df9f1553226ec6bf1e878238b64bb17
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0d3b93a293d4dda9dfe7b576708c832de2e25869
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449714"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862411"
 ---
 # <a name="icorprofilerinfo3getfunctionleave3info-method"></a>ICorProfilerInfo3::GetFunctionLeave3Info Yöntemi
-[FunctionLeave3WithInfo işlev](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) işlevi tarafından Profiler 'a bildirilen işlevin yığın çerçevesini ve dönüş değerini sağlar. Bu yöntem yalnızca `FunctionLeave3WithInfo` geri çağırma sırasında çağrılabilir.  
+[FunctionLeave3WithInfo işlev](functionleave3withinfo-function.md) işlevi tarafından Profiler 'a bildirilen işlevin yığın çerçevesini ve dönüş değerini sağlar. Bu yöntem yalnızca `FunctionLeave3WithInfo` geri çağırma sırasında çağrılabilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,13 +40,13 @@ HRESULT GetFunctionLeave3Info(
  'ndaki Döndürülen işlevin `FunctionID`.  
   
  `eltInfo`  
- 'ndaki Belirli bir yığın çerçevesi hakkındaki bilgileri temsil eden donuk bir tanıtıcı. Profil Oluşturucu, [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) işlevi tarafından Profiler 'a verilen aynı `eltInfo` sağlamalıdır.  
+ 'ndaki Belirli bir yığın çerçevesi hakkındaki bilgileri temsil eden donuk bir tanıtıcı. Profil Oluşturucu, [FunctionLeave3WithInfo](functionleave3withinfo-function.md) işlevi tarafından Profiler 'a verilen aynı `eltInfo` sağlamalıdır.  
   
  `pFrameInfo`  
  dışı Belirli bir yığın çerçevesiyle ilgili genel türler bilgilerini temsil eden donuk bir tanıtıcı. Bu tanıtıcı yalnızca profil oluşturucunun `GetFunctionLeave3Info` metodunu çağırdığı `FunctionLeave3WithInfo` geri çağırma sırasında geçerlidir.  
   
  `pRetvalRange`  
- dışı İşlevden döndürülen değeri içeren [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) yapısına yönelik bir işaretçi. Dönüş değeri bilgilerine erişmek için `COR_PRF_ENABLE_FUNCTION_RETVAL` bayrağının ayarlanması gerekir. Profil Oluşturucu, olay bayraklarını ayarlamak için [ICorProfilerInfo:: SetEventMask yöntemini](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) kullanabilir.  
+ dışı İşlevden döndürülen değeri içeren [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) yapısına yönelik bir işaretçi. Dönüş değeri bilgilerine erişmek için `COR_PRF_ENABLE_FUNCTION_RETVAL` bayrağının ayarlanması gerekir. Profil Oluşturucu, olay bayraklarını ayarlamak için [ICorProfilerInfo:: SetEventMask yöntemini](icorprofilerinfo-seteventmask-method.md) kullanabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -61,9 +61,9 @@ HRESULT GetFunctionLeave3Info(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Functionenter3withınfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
-- [Functionleave3withınfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
-- [Functiontailcall3withınfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
-- [ICorProfilerInfo3 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [Functionenter3withınfo](functionenter3withinfo-function.md)
+- [Functionleave3withınfo](functionleave3withinfo-function.md)
+- [Functiontailcall3withınfo](functiontailcall3withinfo-function.md)
+- [ICorProfilerInfo3 Yöntemi](icorprofilerinfo3-interface.md)
+- [Profil Oluşturma Arabirimleri](profiling-interfaces.md)
+- [Profil Oluşturma](index.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-ms.openlocfilehash: 312b8b005998da44feb5ae24ab4a0a17bb948a3f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e60d4b128bf03ff81863e0c95815b2c204807583
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138567"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794465"
 ---
 # <a name="icordebuggenericvalue-interface"></a>ICorDebugGenericValue Arabirimi
 
@@ -29,8 +29,8 @@ Tüm değerler için geçerli olan "ICorDebugValue" öğesinin bir alt sınıfı
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetValue Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-getvalue-method.md)|Değeri belirtilen arabelleğe kopyalar.|  
-|[SetValue Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|Belirtilen arabellekteki yeni bir değer kopyalar.|  
+|[GetValue Yöntemi](icordebuggenericvalue-getvalue-method.md)|Değeri belirtilen arabelleğe kopyalar.|  
+|[SetValue Yöntemi](icordebuggenericvalue-setvalue-method.md)|Belirtilen arabellekteki yeni bir değer kopyalar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `ICorDebugGenericValue`, Uzaktan erişilemeyen için bir alt arabirimdir.  
@@ -53,4 +53,4 @@ Tüm değerler için geçerli olan "ICorDebugValue" öğesinin bir alt sınıfı
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

@@ -2,12 +2,12 @@
 title: İş akışından OData akışlarını kullanma-WF
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: c9780200d9b7c7bc89797b3c16b22bc38440fccc
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ceac2c2d07351fcb79e2345068f07fa22f356411
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802667"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743785"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Bir iş akışından OData akışlarını kullanma
 
@@ -15,7 +15,7 @@ WCF Veri Hizmetleri, temsili durum aktarımı (REST) semantiğini kullanarak Web
 
 ## <a name="using-the-sample-northwind-odata-service"></a>Örnek Northwind OData hizmetini kullanma
 
-Bu konudaki örneklerde <https://services.odata.org/Northwind/Northwind.svc/>konumunda bulunan örnek Northwind veri hizmeti kullanılmaktadır. Bu hizmet [OData SDK 'sının](https://www.odata.org/wp-content/uploads/sites/21/odatasdkcodesamples.zip) bir parçası olarak sağlanır ve örnek Northwind veritabanına salt okuma erişimi sağlar. Yazma erişimi isteniyorsa veya yerel bir WCF veri hizmeti isteniyorsa, Northwind veritabanına erişim sağlayan yerel bir OData hizmeti oluşturmak için [WCF veri hizmetleri hızlı başlangıç](../data/wcf/quickstart-wcf-data-services.md) adımlarını izleyebilirsiniz. Hızlı başlangıcı izlerseniz, bu konudaki örnek kodda belirtilen bir yerel URI 'yi yerine koyun.
+Bu konudaki örneklerde <https://services.odata.org/Northwind/Northwind.svc/>konumunda bulunan örnek Northwind veri hizmeti kullanılmaktadır. Bu hizmet [OData SDK 'sının](https://www.odata.org/ecosystem/#sdk) bir parçası olarak sağlanır ve örnek Northwind veritabanına salt okuma erişimi sağlar. Yazma erişimi isteniyorsa veya yerel bir WCF veri hizmeti isteniyorsa, Northwind veritabanına erişim sağlayan yerel bir OData hizmeti oluşturmak için [WCF veri hizmetleri hızlı başlangıç](../data/wcf/quickstart-wcf-data-services.md) adımlarını izleyebilirsiniz. Hızlı başlangıcı izlerseniz, bu konudaki örnek kodda belirtilen bir yerel URI 'yi yerine koyun.
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>İstemci kitaplıklarını kullanarak OData akışını kullanma
 

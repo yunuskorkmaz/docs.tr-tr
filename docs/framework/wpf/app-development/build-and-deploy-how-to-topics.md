@@ -7,29 +7,29 @@ helpviewer_keywords:
 - WPF application [WPF], building
 - WPF application [WPF], deploying
 ms.assetid: 88952ad2-5b74-48ca-a4c5-3f4fbb53ce12
-ms.openlocfilehash: 4aaeeed4ff6a130c6d3ddda696286222d7c9efaf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e233b84da1bdecdbc0bdcf676c7bf39125ada6ca
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052241"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870716"
 ---
-# <a name="build-and-deploy-how-to-topics"></a>Oluşturma ve Dağıtma ile İlgili Nasıl Yapılır Konuları
-Aşağıdaki konular, proje dosyaları için çeşitli oluşturma işlemi gösterilmektedir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama türleri.  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
- [WPF Uygulamalarını Dağıtmak için IIS 5.0 ve IIS 6.0'ı Yapılandırma](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
- [Web Hizmeti Çağırmak Amacıyla XAML Tarayıcı Uygulamasında Hata Ayıklamak için Visual Studio'yu Yapılandırma](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
- [Yüklü WPF Sürümünü Belirleme](how-to-determine-the-installed-version-of-wpf.md)  
- [.NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama](how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
- [.NET Framework 3.5'in Yüklü Olup Olmadığını Algılama](how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
- [Firefox WPF Eklentisinin Yüklü Olup Olmadığını Algılama](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
-  
-## <a name="related-sections"></a>İlgili Bölümler  
- [WPF Uygulaması Derleme](building-a-wpf-application-wpf.md)  
-  
- [WPF Uygulaması Dağıtma](deploying-a-wpf-application-wpf.md)  
-  
- [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
-  
- [Nasıl yapılır: Yeni bir WPF tarayıcı uygulaması projesi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))
+# <a name="build-and-deploy-how-to-topics"></a>Oluşturma ve dağıtma ile ilgili nasıl yapılır konuları
+
+Aşağıdaki konularda çeşitli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama türleri için proje dosyalarının nasıl oluşturulacağı gösterilmektedir.
+
+## <a name="in-this-section"></a>Bu bölümde
+
+- [WPF Uygulamalarını Dağıtmak için IIS 5.0 ve IIS 6.0'ı Yapılandırma](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)
+- [Web Hizmeti Çağırmak Amacıyla XAML Tarayıcı Uygulamasında Hata Ayıklamak için Visual Studio'yu Yapılandırma](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
+- [.NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+- [.NET Framework 3.5'in Yüklü Olup Olmadığını Algılama](how-to-detect-whether-the-net-framework-3-5-is-installed.md)
+- [Firefox WPF Eklentisinin Yüklü Olup Olmadığını Algılama](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)
+
+## <a name="related-sections"></a>İlgili bölümler
+
+- [WPF Uygulaması Derleme](building-a-wpf-application-wpf.md)
+- [WPF Uygulaması Dağıtma](deploying-a-wpf-application-wpf.md)
+- [İzlenecek Yol: İlk WPF masaüstü uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Nasıl yapılır: yeni bir WPF tarayıcı uygulaması projesi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))
+- [Yüklü WPF sürümünü belirleme (.NET Framework 3,5)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa349641(v=vs.90))

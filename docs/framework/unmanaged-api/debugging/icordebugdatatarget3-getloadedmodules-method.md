@@ -2,12 +2,12 @@
 title: ICorDebugDataTarget3::GetLoadedModules Yöntemi
 ms.date: 03/30/2017
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
-ms.openlocfilehash: 6ee2215e2b3e3bd911158b3fc801361fc4e22db1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d4c22146422085daa4dc9d90ae5b3735a12500c2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136681"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793564"
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>ICorDebugDataTarget3::GetLoadedModules Yöntemi
 Şimdiye kadar yüklenmiş modüllerin listesini alır.  
@@ -30,7 +30,7 @@ HRESULT GetLoadedModules(
  dışı Bilgilerin döndürüldüğü modül sayısına yönelik bir işaretçi.  
   
  `pLoadedModules`  
- dışı Yüklü modüller hakkında bilgi sağlayan [ICorDebugLoadedModule](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md) nesneleri dizisine yönelik bir işaretçi.  
+ dışı Yüklü modüller hakkında bilgi sağlayan [ICorDebugLoadedModule](icordebugloadedmodule-interface.md) nesneleri dizisine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -48,5 +48,5 @@ HRESULT GetLoadedModules(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugDataTarget3 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget3-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugDataTarget3 Arabirimi](icordebugdatatarget3-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

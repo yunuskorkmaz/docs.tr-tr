@@ -2,12 +2,12 @@
 title: 'ICorDebugSymbolProvider:: GetMethodLocalSymbols yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 8b989e38-e779-49d1-9e90-f1f920484b08
-ms.openlocfilehash: 6cd04ea7f83fb7ae96d9ffd1beba39530511ec25
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41fc8e94ec8a5c8794674bebb32494bb3806e69d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138898"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791612"
 ---
 # <a name="icordebugsymbolprovidergetmethodlocalsymbols-method"></a>ICorDebugSymbolProvider:: GetMethodLocalSymbols yöntemi
 Yöntemin yerel sembollerini, bu yöntemin göreli sanal adresi (RVA) verildiğinde alır.  
@@ -34,7 +34,7 @@ HRESULT GetMethodLocalSymbols(
  dışı Yöntemi tarafından alınan sembol sayısına yönelik bir işaretçi.  
   
  `pcFetchedSymbols`  
- dışı Metodun yerel sembollerini içeren [ICorDebugVariableSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md) dizisine yönelik bir işaretçi.  
+ dışı Metodun yerel sembollerini içeren [ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md) dizisine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -52,6 +52,6 @@ HRESULT GetMethodLocalSymbols(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [GetMethodParameterSymbols Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodparametersymbols-method.md)
-- [ICorDebugSymbolProvider Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [GetMethodParameterSymbols Yöntemi](icordebugsymbolprovider-getmethodparametersymbols-method.md)
+- [ICorDebugSymbolProvider Arabirimi](icordebugsymbolprovider-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

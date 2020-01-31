@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 091c5f32-c160-49e3-a75f-4692e084c8e4
 topic_type:
 - apiref
-ms.openlocfilehash: fed643ae52f50b1b8cd134880c644c8941da6f56
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fcf0ab73c79a5fa116a89cdfcc2e73b17d9eabfc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122868"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785487"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>ICLRDataTarget::GetImageBase Yöntemi
 Belirtilen görüntünün taban bellek adresini alır.  
@@ -39,7 +39,7 @@ HRESULT GetImageBase (
  'ndaki Görüntünün yolu da dahil olmak üzere dosya adı.  
   
  `baseAddress`  
- dışı Görüntünün temel adresini depolayan bir CLRDATA_ADDRESS işaretçisi.  
+ dışı Görüntünün temel adresini depolayan CLRDATA_ADDRESS işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Görüntü dosyası adı bir yola sahip olabilir veya olmayabilir. Bir yol belirtilmişse, eşleşme tam yol üzerinde yapılır; Aksi takdirde, eşleştirme yalnızca dosya adı üzerinde yapılır.  
@@ -55,4 +55,4 @@ HRESULT GetImageBase (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRDataTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [ICLRDataTarget Arabirimi](iclrdatatarget-interface.md)

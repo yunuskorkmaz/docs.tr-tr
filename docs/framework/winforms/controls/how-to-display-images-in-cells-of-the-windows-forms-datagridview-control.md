@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms DataGridView Denetiminin Hücrelerinde Resim Görüntüleme'
+title: DataGridView denetiminin hücrelerinde görüntü görüntüleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,37 +10,37 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], displaying images
 - data grids [Windows Forms], displaying images in cells
 ms.assetid: 53b13d31-1b56-476d-9ab4-18bfac138a22
-ms.openlocfilehash: e3a4c395e86e4091d8344bebcf99ee04474f3295
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0e125c816877875b80e0f20887d9beee443577a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609924"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740280"
 ---
 # <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminin Hücrelerinde Resim Görüntüleme
-Bir resim veya grafik veri satırında görüntüleyebilen değerlerinden biri. Genellikle, bu grafik bir çalışanın fotoğraf veya bir şirket logosu biçiminde.  
+Bir resim veya grafik, bir veri satırında görüntülenebilecek değerlerden biridir. Genellikle, bu grafikler bir çalışanın fotoğrafı veya şirket logosu biçimini alır.  
   
- Resim ekleme basit veri içinde görüntülediğinizde <xref:System.Windows.Forms.DataGridView> denetimi. <xref:System.Windows.Forms.DataGridView> Denetimi tarafından desteklenen herhangi bir resim biçimi yerel olarak işleme <xref:System.Drawing.Image> OLE yanı sıra, sınıf resim bazı veritabanları tarafından kullanılan biçimi.  
+ <xref:System.Windows.Forms.DataGridView> denetimi içinde veri görüntülediğinizde resimleri eklemek basittir. <xref:System.Windows.Forms.DataGridView> denetimi, <xref:System.Drawing.Image> sınıfının desteklediği tüm görüntü biçimlerini ve bazı veritabanları tarafından kullanılan OLE resim biçimini yerel olarak işler.  
   
- Varsa <xref:System.Windows.Forms.DataGridView> tarafından otomatik olarak görüntülenir, denetiminin veri kaynağına sahip bir sütun görüntülerin <xref:System.Windows.Forms.DataGridView> denetimi.  
+ <xref:System.Windows.Forms.DataGridView> denetimin veri kaynağında bir görüntü sütunu varsa, bu, <xref:System.Windows.Forms.DataGridView> denetimi tarafından otomatik olarak görüntülenir.  
   
- Aşağıdaki kod örneği, katıştırılmış bir kaynaktan bir simgeyi çıkarma ve bir bit eşlem görüntülenmek üzere her bir hücresinde göreceğiniz bir görüntü sütunu Dönüştür gösterilmektedir. Metinsel hücre değerlerine karşılık gelen görüntülerle değiştiren başka bir örnek için bkz [nasıl yapılır: Windows Forms DataGridView denetiminde veri biçimlendirmeyi özelleştirme](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
+ Aşağıdaki kod örneği, gömülü bir kaynaktan bir simgenin nasıl ayıklanacağını ve bir görüntü sütununun her hücresinde görüntülenmek üzere bir bit eşlem 'e nasıl dönüştürüleceğini gösterir. Metin hücresi değerlerini karşılık gelen görüntülerle değiştiren başka bir örnek için, bkz. [nasıl yapılır: veri biçimlendirmeyi özelleştirme Windows Forms DataGridView denetiminde](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#050](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#050)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#050](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#050)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu örnek şunları gerektirir:  
   
-- A <xref:System.Windows.Forms.DataGridView> adlı Denetim `dataGridView1`.  
+- `dataGridView1`adlı <xref:System.Windows.Forms.DataGridView> denetim.  
   
-- Adlı bir katıştırılmış simge kaynağı `tree.ico`.  
+- `tree.ico`adlı gömülü bir simge kaynağı.  
   
-- Başvurular <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, ve <xref:System.Drawing?displayProperty=nameWithType> derlemeler.  
+- <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>ve <xref:System.Drawing?displayProperty=nameWithType> derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Windows Forms DataGridView Denetimindeki Temel Sütun, Satır ve Hücre Özellikleri](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetiminde veri biçimlendirmeyi özelleştirme](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Veri Biçimlendirmeyi Özelleştirme](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

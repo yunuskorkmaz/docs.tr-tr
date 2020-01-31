@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0500854e-2121-43d9-a028-64312da35258
 topic_type:
 - apiref
-ms.openlocfilehash: da35db8a943fda5fb3fbf4126684bb9cb7243001
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 63f7bf8c09480b9ce2cfb8eb8dc66e4a6133ef8f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137421"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777480"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap Yöntemi
 Hata ayıklayıcıya CTRL + C 'nin hata ayıklamakta olan işlemde yakalandığını bildirir.  
@@ -58,4 +58,4 @@ HRESULT ControlCTrap (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback Arabirimi](icordebugmanagedcallback-interface.md)

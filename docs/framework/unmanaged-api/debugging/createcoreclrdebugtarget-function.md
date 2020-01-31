@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1cf4ca8e-d9bb-4633-9adf-5e24315bf87a
 topic_type:
 - apiref
-ms.openlocfilehash: d52757f82a950c382c7c8f2162630eda7d7795e7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a7fed8cb70785f0ccfcadf1e16181db303ac98e0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132102"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789189"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget İşlevi
-Uzak makinede çalışan bir hata ayıklayıcı Proxy 'sine bir bağlantı oluşturur ve çalışan işlemlerin ve uzak makinedeki yüklü [](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) çalışma zamanlarının sorgulanmasıdır.  
+Uzak makinede çalışan bir hata ayıklayıcı Proxy 'sine bir bağlantı oluşturur ve çalışan işlemlerin ve uzak makinedeki yüklü [](icoreclrdebugtarget-interface.md) çalışma zamanlarının sorgulanmasıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,7 +40,7 @@ HRESULT CreateCoreClrDebugTarget (
  'ndaki Uzak hedef makinenin IPv4 adresi.  
   
  `ppTarget`  
- dışı Oluşturulacak [ıreclrdebugtarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) nesnesine yönelik işaretçinin işaretçisi.  
+ dışı Oluşturulacak [ıreclrdebugtarget](icoreclrdebugtarget-interface.md) nesnesine yönelik işaretçinin işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  S_OK  
@@ -49,7 +49,7 @@ HRESULT CreateCoreClrDebugTarget (
  E_OUTOFMEMORY  
  `ppTarget`için yeterli bellek ayrılamıyor.  
   
- E_FAıL (veya diğer E_ dönüş kodları)  
+ E_FAIL (veya diğer E_ dönüş kodları)  
  Diğer sorunlar.  
   
 ## <a name="requirements"></a>Gereksinimler  

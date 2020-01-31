@@ -1,5 +1,5 @@
 ---
-title: PageSetupDialog Bileşeni (Windows Forms)
+title: PageSetupDialog Bileşeni
 ms.date: 03/30/2017
 helpviewer_keywords:
 - printing [Windows Forms], page setup
@@ -19,33 +19,31 @@ helpviewer_keywords:
 - page header
 - printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
-ms.openlocfilehash: 93d5466c1f528ea3c8fa360222f046b0c2672fa6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59c5599aa5d36e61b89e1a67ac3064d2c8358206
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012704"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868076"
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>PageSetupDialog Bileşeni (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.PageSetupDialog> sayfa ayrıntıları yazdırma için Windows tabanlı uygulamalar ayarlamak için kullanılan bir önceden yapılandırılmış bir iletişim kutusu bir bileşendir. Windows tabanlı uygulamanızda basit bir çözüm olarak kullanıcılar yerine kendi iletişim kutusu yapılandırma sayfası tercihleri ayarlamak için kullanın. Kenarlık ve kenar boşluğu ayarlamaları, üstbilgiler, altbilgiler ve yatay ve dikey ayarlamak kullanıcıların etkinleştirebilirsiniz. Standart Windows iletişim kutularında bağlı olarak, temel işlevleri kullanıcılarına hemen tanıdık uygulamalar oluşturun.  
+Windows Forms <xref:System.Windows.Forms.PageSetupDialog> bileşeni, Windows tabanlı uygulamalarda yazdırma için sayfa ayrıntılarını ayarlamak üzere kullanılan önceden yapılandırılmış bir iletişim kutusudur. Kullanıcıların kendi iletişim kutusunu yapılandırmak yerine sayfa tercihleri ayarlamak için Windows tabanlı uygulamanızda bu uygulamayı basit bir çözüm olarak kullanın. Kullanıcıların kenarlık ve kenar boşluğu ayarlamalarını, üst bilgileri ve altbilgileri ve dikey ve yatay yönlendirmeyi ayarlamasını sağlayabilirsiniz. Standart Windows iletişim kutularına bağlı olarak, temel işlevselliği kullanıcılara hemen tanıdık olan uygulamalar oluşturursunuz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [PageSetupDialog Bileşenine Genel Bakış](pagesetupdialog-component-overview-windows-forms.md)  
- Genel konseptlerini tanıtan <xref:System.Windows.Forms.PageSetupDialog> kullanıcı sayfa ayarları değiştirmek için kullanabileceğiniz bir önceden yapılandırılmış iletişim kutusunu görüntülemek için kullanabileceğiniz bir bileşen.  
+ , Kullanıcıların sayfa ayarlarını yönetmek için kullanabileceği önceden yapılandırılmış bir iletişim kutusu göstermek için kullanabileceğiniz <xref:System.Windows.Forms.PageSetupDialog> bileşeninin genel kavramlarını tanıtır.  
   
- [Nasıl yapılır: PageSetupDialog bileşenini kullanarak sayfa özelliklerini belirleme](how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
- Örneğini kullanarak sayfa özelliklerini ayarlama açıklanmaktadır <xref:System.Windows.Forms.PageSetupDialog> çalışma zamanında bileşeni.  
+ [Nasıl Yapılır: PageSetupDialog Bileşenini Kullanarak Sayfa Özelliklerini Belirleme](how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
+ Çalışma zamanında <xref:System.Windows.Forms.PageSetupDialog> bileşeninin bir örneğini kullanarak sayfa özelliklerinin nasıl ayarlanacağını açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.PageSetupDialog>  
- Sınıf ve onun üyeleri hakkında başvuru bilgileri sağlar.  
+ Sınıf ve üyeleri hakkında başvuru bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
- Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.  
+ Windows Forms denetimlerinin tüm listesini, kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte sağlar.  
   
  [İletişim Kutusu Denetimleri ve Bileşenleri](dialog-box-controls-and-components-windows-forms.md)  
- Denetimleri ve bileşenleri kullanıcıların uygulama veya sistem standart etkileşim gerçekleştirmesine olanak sağlayan birtakım açıklar.  
-  
- [Windows için temel kod Forms iletişim kutuları](https://go.microsoft.com/fwlink/?LinkID=102575)  
- Windows Forms iletişim kutusu denetimleri ve bileşenleri ve bunların temel işlevlerini yürütmek için gerekli kod açıklanır. (MSDN çevrimiçi kitaplığındaki teknik makalesi)
+ Kullanıcıların uygulama veya sistemle standart etkileşimler gerçekleştirmesine izin veren bir denetim ve bileşen kümesini açıklar.
+ 

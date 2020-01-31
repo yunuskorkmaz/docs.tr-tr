@@ -13,12 +13,12 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 8198359e2c54c4ed098703fbcc070f7469b3362a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fb8836d9c556b317c50b6b34a9dde4e42c6486b5
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344648"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867353"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.Text.Json üzerinde DateTime ve DateTimeOffset desteği
 
@@ -126,7 +126,7 @@ Aşağıdaki örnek, bir özel <xref:System.DateTimeOffset> metin gösteriminin 
 | Bileşen       | Biçimi                      | Açıklama                                                                     |
 |-----------------|-----------------------------|---------------------------------------------------------------------------------|
 | Yıl            | "yyyy"                      | 0001-9999                                                                       |
-| Ay           | "AA"                        | 01-12                                                                           |
+| Başından           | "AA"                        | 01-12                                                                           |
 | Gün             | "dd"                        | 01-28, 01-29, 01-30, 01-31, ay/yıl temelinde                                  |
 | Saat            | "HH"                        | 00-23                                                                           |
 | Dakika          | "mm"                        | 00-59                                                                           |
@@ -199,4 +199,12 @@ Biçimlendirme için aşağıdaki ayrıntı düzeyi düzeyleri tanımlanmıştı
 
         Bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> Kesirli saniyeler ile ve yerel bir uzaklığa göre biçimlendirmek için kullanılır.
 
-Varsa, en fazla 7 kesirli basamak yazılır. Bu, bu çözümlenle sınırlı <xref:System.DateTime> uygulamayla hizalanır.
+Bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> örneğinin [gidiş dönüş biçimi](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) temsili kesirli saniye içinde sondaki sıfırları içeriyorsa, <xref:System.Text.Json.JsonSerializer> ve <xref:System.Text.Json.Utf8JsonWriter>, sondaki sıfırları olmadan örneğin bir temsilini biçimlendirir.
+Örneğin, [gidiş dönüş biçimi](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) temsili `2019-04-24T14:50:17.1010000Z`olan <xref:System.DateTime> bir örnek, <xref:System.Text.Json.JsonSerializer> ve <xref:System.Text.Json.Utf8JsonWriter>tarafından `2019-04-24T14:50:17.101Z` olarak biçimlendirilir.
+
+Bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> örneğinin [gidiş dönüş biçim](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) temsili kesirli saniye içinde tüm sıfırları içeriyorsa, <xref:System.Text.Json.JsonSerializer> ve <xref:System.Text.Json.Utf8JsonWriter> kesirli saniye olmadan örneğin bir temsilini biçimlendirir.
+Örneğin, [gidiş dönüş biçimi](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) temsili `2019-04-24T14:50:17.0000000+02:00`olan <xref:System.DateTime> bir örnek, <xref:System.Text.Json.JsonSerializer> ve <xref:System.Text.Json.Utf8JsonWriter>tarafından `2019-04-24T14:50:17+02:00` olarak biçimlendirilir.
+
+Kesirli saniyelik basamakların kesilmesinin kesilmesi, yazılacak gidiş dönüş hakkındaki bilgileri korumak için gereken en küçük çıkışın yapılmasına izin verir.
+
+En fazla 7 kesirli saniyelik basamak yazılmıştır. Bu, bu çözümlenle sınırlı <xref:System.DateTime> uygulamayla hizalanır.

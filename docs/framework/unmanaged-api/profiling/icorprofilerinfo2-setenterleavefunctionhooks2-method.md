@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c26b3e7-f72b-48a5-bf8c-edc122523a4b
 topic_type:
 - apiref
-ms.openlocfilehash: 4068c8fee13a6086bc6b48bcc6d4117357062747
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7eac42e1d8132ca9e6d6c6b43efd43b88c1e5d3d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449790"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868596"
 ---
 # <a name="icorprofilerinfo2setenterleavefunctionhooks2-method"></a>ICorProfilerInfo2::SetEnterLeaveFunctionHooks2 Yöntemi
 Yönetilen işlevlerin "Enter", "Leave" ve "cloncall" kancalarının güncelleştirilmiş sürümlerinde çağrılacak Profil Oluşturucu uygulanmış işlevleri belirtir.  
@@ -36,20 +36,20 @@ HRESULT SetEnterLeaveFunctionHooks2(
   
 ## <a name="parameters"></a>Parametreler  
  `pFuncEnter`  
- 'ndaki [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) geri çağırması olarak kullanılacak uygulamaya yönelik bir işaretçi.  
+ 'ndaki [FunctionEnter2](functionenter2-function.md) geri çağırması olarak kullanılacak uygulamaya yönelik bir işaretçi.  
   
  `pFuncLeave`  
- 'ndaki [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) geri çağırması olarak kullanılacak uygulamaya yönelik bir işaretçi.  
+ 'ndaki [FunctionLeave2](functionleave2-function.md) geri çağırması olarak kullanılacak uygulamaya yönelik bir işaretçi.  
   
  `pFuncTailcall`  
- 'ndaki [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) geri çağırması olarak kullanılacak uygulamaya yönelik bir işaretçi.  
+ 'ndaki [FunctionTailcall2](functiontailcall2-function.md) geri çağırması olarak kullanılacak uygulamaya yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `SetEnterLeaveFunctionHooks2` yöntemi [ICorProfilerInfo:: Setenterleavefunctionkancalar](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setenterleavefunctionhooks-method.md) yöntemine benzer. ENTER/Leave/bir çağrı geri çağırmaların daha yeni sürümleri olarak kullanılacak işlevleri belirtmek için, önceki ' ni kullanın ve ENTER/Leave/, çağrı geri çağırmaların eski sürümleri olarak kullanılacak işlevleri belirtin.  
+ `SetEnterLeaveFunctionHooks2` yöntemi [ICorProfilerInfo:: Setenterleavefunctionkancalar](icorprofilerinfo-setenterleavefunctionhooks-method.md) yöntemine benzer. ENTER/Leave/bir çağrı geri çağırmaların daha yeni sürümleri olarak kullanılacak işlevleri belirtmek için, önceki ' ni kullanın ve ENTER/Leave/, çağrı geri çağırmaların eski sürümleri olarak kullanılacak işlevleri belirtin.  
   
  Tek seferde yalnızca bir geri çağırma kümesi etkin olabilir. Bu nedenle, bir profil oluşturucu hem `ICorProfilerInfo::SetEnterLeaveFunctionHooks` hem de `SetEnterLeaveFunctionHooks2`çağırırsa `SetEnterLeaveFunctionHooks2` kullanılır.  
   
- `SetEnterLeaveFunctionHooks2` yöntemi yalnızca Profiler 'ın [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) geri çağrısından çağrılabilir.  
+ `SetEnterLeaveFunctionHooks2` yöntemi yalnızca Profiler 'ın [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) geri çağrısından çağrılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -62,5 +62,5 @@ HRESULT SetEnterLeaveFunctionHooks2(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo Arabirimi](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 Arabirimi](icorprofilerinfo2-interface.md)

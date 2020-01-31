@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd5e9b64-b4a3-4ba6-9be6-ddb540f4ffcf
 topic_type:
 - apiref
-ms.openlocfilehash: 4f8cfd912a3d6f66f5f2586a8942c7ce9bd52a63
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6e6cc44c2f9028c0e26c4f933242cad93e3a98c3
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445894"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866097"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>ICorProfilerCallback::ObjectReferences Yöntemi
 Belirtilen nesne tarafından başvurulan bellekteki nesneler hakkında profil oluşturucuyu bildirir.  
@@ -51,9 +51,9 @@ HRESULT ObjectReferences(
 ## <a name="remarks"></a>Açıklamalar  
  Bir çöp toplama işlemi tamamlandıktan sonra yığında kalan her nesne için `ObjectReferences` yöntemi çağırılır. Profil Oluşturucu bu geri aramadan bir hata döndürürse, profil oluşturma hizmetleri sonraki atık toplamaya kadar bu geri aramayı çağırmayı sona erecek.  
   
- `ObjectReferences` geri çağırması [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) geri çağırması ile birlikte kullanılabilir ve çalışma zamanı için tamamen bir nesne başvurusu grafiği oluşturur. Ortak dil çalışma zamanı (CLR), her bir nesne başvurusunun `ObjectReferences` yöntemi tarafından yalnızca bir kez raporlanmasını sağlar.  
+ `ObjectReferences` geri çağırması [ICorProfilerCallback:: RootReferences](icorprofilercallback-rootreferences-method.md) geri çağırması ile birlikte kullanılabilir ve çalışma zamanı için tamamen bir nesne başvurusu grafiği oluşturur. Ortak dil çalışma zamanı (CLR), her bir nesne başvurusunun `ObjectReferences` yöntemi tarafından yalnızca bir kez raporlanmasını sağlar.  
   
- Çöp toplama nesnelerin ortasında olabileceğinden, `ObjectReferences` tarafından döndürülen nesne kimlikleri geri çağırma sırasında geçerli değildir. Bu nedenle, profil oluşturucular `ObjectReferences` çağrısı sırasında nesneleri incelemeyi denememelidir. [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) çağrıldığında, çöp toplama tamamlanmıştır ve denetleme güvenle yapılabilir.  
+ Çöp toplama nesnelerin ortasında olabileceğinden, `ObjectReferences` tarafından döndürülen nesne kimlikleri geri çağırma sırasında geçerli değildir. Bu nedenle, profil oluşturucular `ObjectReferences` çağrısı sırasında nesneleri incelemeyi denememelidir. [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md) çağrıldığında, çöp toplama tamamlanmıştır ve denetleme güvenle yapılabilir.  
   
  Null `ClassId`, `objectId`, kaldırma işlemi için bir türe sahip olduğunu gösterir.  
   
@@ -68,4 +68,4 @@ HRESULT ObjectReferences(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback Arabirimi](icorprofilercallback-interface.md)

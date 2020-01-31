@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 61d2e9ef-5f1f-4771-8847-239616e35d84
 topic_type:
 - apiref
-ms.openlocfilehash: ce34d43091cdee0bca88f94711e49072fa4fd08c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7981e7d2d2a4588e56d3c30d0ede2d003fdcd32e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430072"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865031"
 ---
 # <a name="icorprofilercallback5-interface"></a>ICorProfilerCallback5 Arabirimi
-Bir profil oluşturucunun, ICorProfilerCallback:: [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md) ve [ConditionalWeakTableElementReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-conditionalweaktableelementreferences-method.md) yöntemleriyle birlikte [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) veya [ICorProfilerCallback2:: RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) yöntemi ile birlikte kullanıldığında, canlı nesnelerin tam kapatılmasını belirlemesine yardımcı olmak için bilgileri tamamlar.  
+Bir profil oluşturucunun, ICorProfilerCallback:: [ObjectReferences](icorprofilercallback-objectreferences-method.md) ve [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md) yöntemleriyle birlikte [ICorProfilerCallback:: RootReferences](icorprofilercallback-rootreferences-method.md) veya [ICorProfilerCallback2:: RootReferences2](icorprofilercallback2-rootreferences2-method.md) yöntemi ile birlikte kullanıldığında, canlı nesnelerin tam kapatılmasını belirlemesine yardımcı olmak için bilgileri tamamlar.  
   
  bağımlı tanıtıcılarla ilgili bildirimlere abone olmak için `ICorProfilerCallback5` yönetilen bir bellek Oluşturucu tarafından uygulanmalıdır.  
   
@@ -32,7 +32,7 @@ Bir profil oluşturucunun, ICorProfilerCallback:: [ObjectReferences](../../../..
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[ConditionalWeakTableElementReferences Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-conditionalweaktableelementreferences-method.md)|Doğrudan üye alan başvuruları ve `ConditionalWeakTable` bağımlılıklarıyla, bu köklerin başvurduğu nesnelerin geçişli kapatılmasını belirler.|  
+|[ConditionalWeakTableElementReferences Yöntemi](icorprofilercallback5-conditionalweaktableelementreferences-method.md)|Doğrudan üye alan başvuruları ve `ConditionalWeakTable` bağımlılıklarıyla, bu köklerin başvurduğu nesnelerin geçişli kapatılmasını belirler.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -43,5 +43,5 @@ Bir profil oluşturucunun, ICorProfilerCallback:: [ObjectReferences](../../../..
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [ICorProfilerCallback2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [Profil Oluşturma Arabirimleri](profiling-interfaces.md)
+- [ICorProfilerCallback2 Arabirimi](icorprofilercallback2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 532da6ee-7f0a-401b-a61e-fc47ec235d2e
 topic_type:
 - apiref
-ms.openlocfilehash: 5149e3fab023de42d03673ec5d3e5ae888a9ed5a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9295ea8b22f72529f55cbe13f6a79a0aa34d2fa0
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433290"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868802"
 ---
 # <a name="icorprofilerinfo2getcodeinfo2-method"></a>ICorProfilerInfo2::GetCodeInfo2 Yöntemi
 Belirtilen `FunctionID`ilişkili yerel kod kapsamlarını alır.  
@@ -44,7 +44,7 @@ HRESULT GetCodeInfo2(
  'ndaki `codeInfos` dizisinin boyutu.  
   
  `pcCodeInfos`  
- dışı [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) yapılarının toplam sayısına yönelik bir işaretçi.  
+ dışı [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) yapılarının toplam sayısına yönelik bir işaretçi.  
   
  `codeInfos`  
  dışı Arayan tarafından sağlanmış arabellek. Yöntemi çağrıldıktan sonra, her biri yerel kod bloğunu açıklayan `COR_PRF_CODE_INFO` yapıları dizisi içerir.  
@@ -67,7 +67,7 @@ HRESULT GetCodeInfo2(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [GetCodeInfo3 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getcodeinfo3-method.md)
-- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [GetCodeInfo3 Yöntemi](icorprofilerinfo4-getcodeinfo3-method.md)
+- [ICorProfilerInfo2 Arabirimi](icorprofilerinfo2-interface.md)
+- [Profil Oluşturma Arabirimleri](profiling-interfaces.md)
+- [Profil Oluşturma](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d6471bc-ad9b-4b1d-a307-c10443918863
 topic_type:
 - apiref
-ms.openlocfilehash: c6c361113a441df050a8e7cd5219819cc8332581
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bc6543b46200dd611e13bdf55aabfabd8302e70a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131490"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793341"
 ---
 # <a name="icordebugmanagedcallback2functionremapopportunity-method"></a>ICorDebugManagedCallback2::FunctionRemapOpportunity Yöntemi
 Kod yürütmenin, düzenlenmiş bir işlevin daha eski bir sürümündeki bir sıra noktasına ulaştığı hata ayıklayıcıya bildirir.  
@@ -54,9 +54,9 @@ HRESULT FunctionRemapOpportunity (
  'ndaki İşlevin eski sürümündeki yönerge işaretçisinin Microsoft ara dili (MSIL) boşluğu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu geri çağırma, [ICorDebugILFrame2:: RemapFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md) metodunu çağırarak, yönerge işaretçisini belirtilen işlevin yeni sürümünde doğru yere yeniden eşlemek için bir fırsat sağlar. Hata ayıklayıcı [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) metodunu çağırmadan önce `RemapFunction` çağırmadığından, çalışma zamanı eski kodu yürütmeye devam eder ve bir sonraki dizi noktasında başka bir `FunctionRemapOpportunity` geri çağırma işlemini harekete geçmeyecektir.  
+ Bu geri çağırma, [ICorDebugILFrame2:: RemapFunction](icordebugilframe2-remapfunction-method.md) metodunu çağırarak, yönerge işaretçisini belirtilen işlevin yeni sürümünde doğru yere yeniden eşlemek için bir fırsat sağlar. Hata ayıklayıcı [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) metodunu çağırmadan önce `RemapFunction` çağırmadığından, çalışma zamanı eski kodu yürütmeye devam eder ve bir sonraki dizi noktasında başka bir `FunctionRemapOpportunity` geri çağırma işlemini harekete geçmeyecektir.  
   
- Bu geri çağırma, belirtilen işlevin daha eski bir sürümünü yürüten her çerçeve için, hata ayıklayıcısı S_OK döndürene kadar çağrılacaktır.  
+ Bu geri çağırma, hata ayıklayıcı S_OK dönene kadar verilen işlevin daha eski bir sürümünü yürüten her çerçeve için çağrılacaktır.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -69,5 +69,5 @@ HRESULT FunctionRemapOpportunity (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugManagedCallback2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback2 Arabirimi](icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback Arabirimi](icordebugmanagedcallback-interface.md)

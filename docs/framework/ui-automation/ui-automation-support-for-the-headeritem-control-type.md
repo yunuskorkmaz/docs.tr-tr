@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Header Item control type
 - control types, Header Item
 ms.assetid: 09ce1310-ee31-493c-a71e-010bafc42fcf
-ms.openlocfilehash: c67c357a0447cfa7ff3769fff2f8a67f90171635
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 17b28e17690d5a05440cae6b969617de1528fb41
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741227"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778726"
 ---
 # <a name="ui-automation-support-for-the-headeritem-control-type"></a>HeaderItem Denetim Türü için UI Otomasyon Desteği
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741227"
   
  HeaderItem denetim türü bir satır veya bilgi sütunu için görsel etiket sağlar.  
   
- Üst bilgi öğe denetimleri, HeaderItem denetim türünü uygulayan denetimlerin örnekleridir. Aşağıdaki bölümlerde [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gereksinimler, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 veya [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]bakılmaksızın tüm üst bilgi denetimlerine uygulanır.  
+ Üst bilgi öğe denetimleri, HeaderItem denetim türünü uygulayan denetimlerin örnekleridir. Aşağıdaki bölümlerde [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gereksinimler, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 veya Windows Forms bakılmaksızın tüm üst bilgi denetimlerine uygulanır.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Gerekli UI Otomasyonu ağaç yapısı  

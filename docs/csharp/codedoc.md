@@ -1,15 +1,15 @@
 ---
 title: Kodunuzu XML açıklamalarıyla belgeleme
 description: Kodunuzu XML belge açıklamalarıyla belgeleme ve derleme zamanında bir XML belge dosyası oluşturma hakkında bilgi edinin.
-ms.date: 02/14/2017
+ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 6aa52030e20f61b26311347a57629658ebe0e609
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ef0d22e0ee7faa3ba51da6b44cf1827f19baf4f1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713933"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787830"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Kodunuzu XML açıklamalarıyla belgeleme
 
@@ -169,6 +169,12 @@ Belge bilgilerini sıralı liste, sırasız liste veya tablo olarak biçimlendir
 [!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
 `type` özniteliğini sırasıyla `number` veya `table`olarak değiştirerek sıralı bir liste veya tablo yapabilirsiniz.
+
+## <a name="inheritdoc"></a>\<devralma belgesi >
+
+Temel sınıflardan, arabirimlerde ve benzer yöntemlerle XML açıklamalarını devralacak `<inheritdoc>` etiketini kullanabilirsiniz. Bu, yinelenen XML açıklamalarını istenmeyen kopyalama ve yapıştırmayı ortadan kaldırır ve otomatik olarak XML açıklamalarını eşitlenmiş halde tutar.
+
+[!code-csharp-interactive[InheritDoc Tag](~/samples/snippets/csharp/concepts/codedoc/inheritdoc-tag.cs)]
 
 ### <a name="put-it-all-together"></a>Hepsini bir araya getirin
 

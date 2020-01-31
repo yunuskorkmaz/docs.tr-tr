@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: aac8fcf9-ac09-437c-bd5c-2fda14ae1007
 topic_type:
 - apiref
-ms.openlocfilehash: 3a7267548a957d403cfe02aa3d800a410c14b82a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 188ff8feabd704d828256a09aca20f9db2227f2c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103425"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790504"
 ---
 # <a name="icorpublishprocessenum-interface"></a>ICorPublishProcessEnum Arabirimi
-ICorPublishEnum [](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) arabiriminin bir [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) nesneleri koleksiyonunu gezme yöntemleri sağlayan bir alt sınıfı.  
+ICorPublishEnum [](icorpublishenum-interface.md) arabiriminin bir [ICorPublishProcess](icorpublishprocess-interface.md) nesneleri koleksiyonunu gezme yöntemleri sağlayan bir alt sınıfı.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-next-method.md)|Geçerli konumdan başlayarak koleksiyondan belirtilen sayıda `ICorPublishProcess` örneği alır.|  
+|[Next Yöntemi](icorpublishprocessenum-next-method.md)|Geçerli konumdan başlayarak koleksiyondan belirtilen sayıda `ICorPublishProcess` örneği alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorPublishProcessEnum` arabirimi, [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)soyut arabiriminin yöntemlerini uygular.  
+ `ICorPublishProcessEnum` arabirimi, [ICorPublishEnum](icorpublishenum-interface.md)soyut arabiriminin yöntemlerini uygular.  
   
- [ICorPublish:: EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icorpublish-enumprocesses-method.md) yöntemi tarafından bir `ICorPublishProcessEnum` örneği oluşturulur. `ICorPublishProcess` nesne koleksiyonunun çapraz geçişi, `ICorPublishProcessEnum` örneği oluşturulduğu sırada verilen filtre ölçütüne bağlıdır.  
+ [ICorPublish:: EnumProcesses](icorpublish-enumprocesses-method.md) yöntemi tarafından bir `ICorPublishProcessEnum` örneği oluşturulur. `ICorPublishProcess` nesne koleksiyonunun çapraz geçişi, `ICorPublishProcessEnum` örneği oluşturulduğu sırada verilen filtre ölçütüne bağlıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -46,5 +46,5 @@ ICorPublishEnum [](../../../../docs/framework/unmanaged-api/debugging/icorpublis
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [CorpubPublish Coclass](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [CorpubPublish Coclass](corpubpublish-coclass.md)

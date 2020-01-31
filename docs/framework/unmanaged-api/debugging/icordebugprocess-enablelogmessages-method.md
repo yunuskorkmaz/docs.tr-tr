@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 14a4e5a3-3eaf-4f53-9dd1-762726963a23
 topic_type:
 - apiref
-ms.openlocfilehash: 4134062be93a2fc5e76949d465a7b5822556b408
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6b1ccffa4f24122e643a64270f44945afdbc8fff
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128897"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792645"
 ---
 # <a name="icordebugprocessenablelogmessages-method"></a>ICorDebugProcess::EnableLogMessages Yöntemi
 Günlük iletilerinin hata ayıklayıcıya aktarılmasını sağlar ve devre dışı bırakır.  
@@ -36,7 +36,7 @@ HRESULT EnableLogMessages([in]BOOL fOnOff);
  [in] `true` günlük iletilerinin iletimini sunar; `false`, iletimi devre dışı bırakır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem yalnızca [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) geri çağırma işlemi oluştuktan sonra geçerlidir.  
+ Bu yöntem yalnızca [ICorDebugManagedCallback:: CreateProcess](icordebugmanagedcallback-createprocess-method.md) geri çağırma işlemi oluştuktan sonra geçerlidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

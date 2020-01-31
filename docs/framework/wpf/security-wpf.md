@@ -1,5 +1,5 @@
 ---
-title: Güvenlik (WPF)
+title: Güvenlik
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML files [WPF], sandbox behavior
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 612b99354310c18030cefce4e6f02fab8ed20f83
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: a49634fd955b0dc1f4cac5c785d49c24d16bbc60
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636781"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868050"
 ---
 # <a name="security-wpf"></a>Güvenlik (WPF)
 <a name="introduction"></a>Windows Presentation Foundation (WPF) tek başına ve tarayıcıda barındırılan uygulamalar geliştirirken güvenlik modelini göz önünde bulundurmanız gerekir. WPF tek başına uygulamaları, Windows Installer (. msi), XCopy veya ClickOnce kullanılarak dağıtılıp dağıtılmayacağı Kısıtlanmamış izinlerle (CAS**FullTrust** izin kümesi) yürütülür. ClickOnce ile kısmi güven dağıtma, tek başına WPF uygulamaları desteklenmez. Ancak, bir tam güven ana bilgisayar uygulaması, .NET Framework eklenti modelini kullanarak kısmi güven <xref:System.AppDomain> oluşturabilir. Daha fazla bilgi için bkz. [WPF Eklentilerine Genel Bakış](./app-development/wpf-add-ins-overview.md).  
@@ -136,7 +136,7 @@ ms.locfileid: "75636781"
   
  Aşağıdaki tabloda, ayarlankullanılabilecek değerler listelenmektedir.  
   
-|Değer Adı|Değer türü|Değer verisi|  
+|Değer adı|Değer türü|Değer verisi|  
 |----------------|----------------|----------------|  
 |Xbapallow|REG_DWORD|1-izin verme; izin verilecek 0.|  
 |Gevsexamlallow|REG_DWORD|1-izin verme; izin verilecek 0.|  
@@ -184,7 +184,7 @@ ms.locfileid: "75636781"
  Özellik denetimleri, WebBrowser ActiveX nesnesini örnekleyerek işlem tarafından uygulanır. Bu nedenle, güvenilmeyen içeriğe gidebileceğiniz tek başına bir uygulama oluşturuyorsanız, ek özellik denetimlerini etkinleştirmeyi ciddi bir şekilde dikkate almanız gerekir.  
   
 > [!NOTE]
-> Bu öneri, MSHTML ve SHDOCVW ana bilgisayar güvenliği için genel önerilere dayanır. Daha fazla bilgi için bkz. [MSHTML ana bilgisayar GÜVENLIK SSS: II 'Nin bölüm](https://msrc-blog.microsoft.com/archive/2009/04/02/the-mshtml-host-security-faq.aspx) ve [MSHTML ana bilgisayar GÜVENLIK SSS: II 'nin Bölüm II](https://msrc-blog.microsoft.com/archive/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii.aspx).  
+> Bu öneri, MSHTML ve SHDOCVW ana bilgisayar güvenliği için genel önerilere dayanır. Daha fazla bilgi için bkz. [MSHTML ana bilgisayar GÜVENLIK SSS: II 'Nin bölüm](https://msrc-blog.microsoft.com/2009/04/02/the-mshtml-host-security-faq-part-i-of-ii/) ve [MSHTML ana bilgisayar GÜVENLIK SSS: II 'nin Bölüm II](https://msrc-blog.microsoft.com/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii/).  
   
  Yürütülebilir dosya için, kayıt defteri değerini 1 olarak ayarlayarak aşağıdaki özellik denetimlerini etkinleştirmeyi düşünün.  
   

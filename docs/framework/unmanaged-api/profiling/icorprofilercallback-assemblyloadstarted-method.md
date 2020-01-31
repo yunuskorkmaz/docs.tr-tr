@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67e8209d-a0ca-4118-a6e6-c1ee0abc2221
 topic_type:
 - apiref
-ms.openlocfilehash: 34744132442440ef160841db5a50bf75355f2410
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b83be5e79c533e7e5a2468a12a0793d300700428
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445165"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866648"
 ---
 # <a name="icorprofilercallbackassemblyloadstarted-method"></a>ICorProfilerCallback::AssemblyLoadStarted Yöntemi
 Profiler 'ın bir derlemenin yüklenmekte olduğunu bildirir.  
@@ -32,12 +32,14 @@ HRESULT AssemblyLoadStarted(
     [in] AssemblyID assemblyId);  
 ```  
   
-## <a name="parameters"></a>Parametreler  
- `assemblyId`  
- 'ndaki Yüklenmekte olan derlemeyi tanımlar.  
-  
+## <a name="parameters"></a>Parametreler
+
+- `assemblyId`
+
+  \[in] yüklenmekte olan derlemeyi tanımlar.
+
 ## <a name="remarks"></a>Açıklamalar  
- `assemblyId` değeri, [ICorProfilerCallback:: AssemblyLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md) yöntemi çağrılana kadar bir bilgi isteği için geçerli değildir.  
+ `assemblyId` değeri, [ICorProfilerCallback:: AssemblyLoadFinished](icorprofilercallback-assemblyloadfinished-method.md) yöntemi çağrılana kadar bir bilgi isteği için geçerli değildir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -50,4 +52,4 @@ HRESULT AssemblyLoadStarted(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback Arabirimi](icorprofilercallback-interface.md)

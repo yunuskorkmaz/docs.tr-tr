@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aaac8f98-5cf4-42c7-b04b-556cce367e36
 topic_type:
 - apiref
-ms.openlocfilehash: 165981627337c562dd3721b7d93cb2027d0a0c37
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f14dff33217656c35379a214f007ccb3642ef4b1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444934"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866461"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a>ICorProfilerCallback::ExceptionCLRCatcherExecute Yöntemi
 Bir özel durum için `catch` bloğu ortak dil çalışma zamanı (CLR) içinde yürütüldüğünde çağırılır. Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor.  
@@ -42,5 +42,5 @@ HRESULT ExceptionCLRCatcherExecute();
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ExceptionCLRCatcherFound Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherfound-method.md)
+- [ICorProfilerCallback Arabirimi](icorprofilercallback-interface.md)
+- [ExceptionCLRCatcherFound Yöntemi](icorprofilercallback-exceptionclrcatcherfound-method.md)

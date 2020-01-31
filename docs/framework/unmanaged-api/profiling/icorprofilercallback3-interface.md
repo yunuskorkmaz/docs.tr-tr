@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: be83af41-3dec-4c77-8529-9dd6b8042af6
 topic_type:
 - apiref
-ms.openlocfilehash: 25d674a143019ac5d724e36f03f36c79602b1e11
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ad9c5445cbef0be7919570db64b027556d923752
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439502"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865577"
 ---
 # <a name="icorprofilercallback3-interface"></a>ICorProfilerCallback3 Arabirimi
 Ortak dil çalışma zamanının (CLR) profil oluşturucuya iliştirme ve ayır durum bilgilerini iletişim kurmak için kullandığı geri çağırma yöntemleri sağlar.  
@@ -28,9 +28,9 @@ Ortak dil çalışma zamanının (CLR) profil oluşturucuya iliştirme ve ayır 
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[InitializeForAttach Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)|Profil oluşturucuya bir iliştirme işleminden sonra durumunu başlatma fırsatı vermek için CLR tarafından çağırılır.|  
-|[ProfilerAttachComplete Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-profilerattachcomplete-method.md)|Profiler tarafından, profil oluşturucunun artık yakalama yöntemlerini çağırabelirteolabileceğini göstermek için çağırılır.|  
-|[ProfilerDetachSucceeded Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-profilerdetachsucceeded-method.md)|Profil oluşturucuyu ortak dil çalışma zamanının (CLR) profil oluşturucu DLL 'sini kaldırmak üzere olduğunu bildirir.|  
+|[InitializeForAttach Yöntemi](icorprofilercallback3-initializeforattach-method.md)|Profil oluşturucuya bir iliştirme işleminden sonra durumunu başlatma fırsatı vermek için CLR tarafından çağırılır.|  
+|[ProfilerAttachComplete Yöntemi](icorprofilercallback3-profilerattachcomplete-method.md)|Profiler tarafından, profil oluşturucunun artık yakalama yöntemlerini çağırabelirteolabileceğini göstermek için çağırılır.|  
+|[ProfilerDetachSucceeded Yöntemi](icorprofilercallback3-profilerdetachsucceeded-method.md)|Profil oluşturucuyu ortak dil çalışma zamanının (CLR) profil oluşturucu DLL 'sini kaldırmak üzere olduğunu bildirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -45,7 +45,7 @@ Ortak dil çalışma zamanının (CLR) profil oluşturucuya iliştirme ve ayır 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerCallback2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
-- [ICorProfilerCallback4 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [Profil Oluşturma Arabirimleri](profiling-interfaces.md)
+- [ICorProfilerInfo Arabirimi](icorprofilerinfo-interface.md)
+- [ICorProfilerCallback2 Arabirimi](icorprofilercallback2-interface.md)
+- [ICorProfilerCallback4 Arabirimi](icorprofilercallback4-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 376fb03f-f1ef-4107-baa4-4d9d55884862
 topic_type:
 - apiref
-ms.openlocfilehash: 7b56f0f3ba62efb48ac8d79aad4480b5f22771ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e90952a92c408762a98a2bfcb91b6aeb72052df1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110224"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791213"
 ---
 # <a name="icordebugtype2-interface"></a>ICorDebugType2 Arabirimi
 Bir temel türün tür tanımlayıcısını veya karmaşık (Kullanıcı tanımlı) türünü almak için ICorDebugType arabirimini genişletir.  
@@ -28,7 +28,7 @@ Bir temel türün tür tanımlayıcısını veya karmaşık (Kullanıcı tanıml
   
 |Yöntem||  
 |------------|-|  
-|[GetTypeID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|Bu tür için bir [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) alır.|  
+|[GetTypeID Yöntemi](icordebugtype2-gettypeid-method.md)|Bu tür için bir [COR_TYPEID](cor-typeid-structure.md) alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu arabirim, ICorDebugType arabiriminin mantıksal uzantısıdır.  
@@ -37,7 +37,7 @@ Bir temel türün tür tanımlayıcısını veya karmaşık (Kullanıcı tanıml
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod parçası, [ICorDebugType2:: GetTypeId](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) yönteminin kullanımını gösterir.  
+ Aşağıdaki kod parçası, [ICorDebugType2:: GetTypeId](icordebugtype2-gettypeid-method.md) yönteminin kullanımını gösterir.  
   
 ```cpp  
 // (error checking omitted for brevity)  
@@ -63,4 +63,4 @@ pType2->GetTypeID(&id);
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

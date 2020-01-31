@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataMethodDefinition::EndEnumInstances yöntemi
+title: 'IXCLRDataMethodDefinition:: Endenumınstances yöntemi'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodDefinition::EndEnumInstances Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 3d9e3ca31eddff9d08607c4d6d37ca76139bf5d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 605a4244d20ef6c0b7af3c2b26b65ff2a63fa9dd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756311"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790454"
 ---
-# <a name="ixclrdatamethoddefinitionendenuminstances-method"></a>IXCLRDataMethodDefinition::EndEnumInstances yöntemi
+# <a name="ixclrdatamethoddefinitionendenuminstances-method"></a>IXCLRDataMethodDefinition:: Endenumınstances yöntemi
 
-Örnek numaralandırma sırasında kullanılan iç yineleyiciler tarafından kullanılan kaynakları serbest bırakır.
+Örnek numaralandırması sırasında kullanılan iç yineleyiciler tarafından kullanılan kaynakları serbest bırakır.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,20 +39,20 @@ HRESULT EndEnumInstances(
 ## <a name="parameters"></a>Parametreler
 
 `handle`\
-[out] Örnekleri numaralandırma tanıtıcısı.
+dışı Örnekleri numaralandırmak için bir tanıtıcı.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sağlanan yöntem parçasıdır `IXCLRDataMethodDefinition` arabirim ve sanal yöntem tablosunu beşinci yuvaya karşılık gelir.
+Belirtilen yöntem `IXCLRDataMethodDefinition` arabiriminin bir parçasıdır ve sanal yöntem tablosunun beşinci yuvasına karşılık gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** None  
-**Kitaplığı:** Yok.  
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Üst bilgi:** Seçim  
+**Kitaplık:** Seçim  
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataMethodDefinition arabirimi](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-interface.md)
+- [Hata Ayıklama](index.md)
+- [IXCLRDataMethodDefinition arabirimi](ixclrdatamethoddefinition-interface.md)

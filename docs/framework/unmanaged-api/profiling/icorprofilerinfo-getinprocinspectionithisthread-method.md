@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: badddccd-f85c-416e-9f0f-419eab2c9d42
 topic_type:
 - apiref
-ms.openlocfilehash: bcc324d0f5cd14e1de9f02c8e6844a5868b70e8b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0ab383f0968061667b3580a2058687eecda99dde
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438903"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870048"
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>ICorProfilerInfo::GetInprocInspectionIThisThread Yöntemi
 ICorDebugThread arabirimi için sorgulanabilen bir nesne alır. Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor.  
@@ -50,4 +50,4 @@ HRESULT GetInprocInspectionIThisThread(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo Arabirimi](icorprofilerinfo-interface.md)

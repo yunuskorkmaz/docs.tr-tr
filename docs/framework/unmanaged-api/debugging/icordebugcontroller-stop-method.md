@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c34e79be-a7fb-479e-8dec-d126a4c330e5
 topic_type:
 - apiref
-ms.openlocfilehash: c8c6b40f7a9c63a577140209eed65436040addcb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3a107176e48a88a0a04534f7044c1e416caf4091
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125381"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788887"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop Yöntemi
 İşlemde yönetilen kod çalıştıran tüm iş parçacıkları üzerinde birlikte bir durdurma işlemi gerçekleştirir.  
@@ -35,13 +35,13 @@ HRESULT Stop (
   
 ## <a name="parameters"></a>Parametreler  
  `dwTimeoutIgnored`  
- Kullanılmadı.  
+ Kullanılmıyor.  
   
 ## <a name="remarks"></a>Açıklamalar  
  `Stop`, işlemde yönetilen kod çalıştıran tüm iş parçacıklarında birlikte bir durdurma işlemi gerçekleştirir. Yalnızca yönetilen bir hata ayıklama oturumu sırasında, yönetilmeyen iş parçacıkları çalışmaya devam edebilir (ancak yönetilen kodu çağırmaya çalışırken engellenecektir). Birlikte çalışma hata ayıklama oturumu sırasında, yönetilmeyen iş parçacıkları da durdurulacak. `dwTimeoutIgnored` değeri şu anda yoksayıldı ve sonsuz (-1) olarak kabul edilir. Kilitlenme nedeniyle birlikte çalışmayan durdurma başarısız olursa, tüm iş parçacıkları askıya alınır ve E_TIMEOUT döndürülür.  
   
 > [!NOTE]
-> `Stop`, hata ayıklama API 'sindeki tek zaman uyumlu yöntemidir. `Stop` S_OK döndürdüğünde, işlem durdurulur. Durun dinleyicilerini bilgilendirmek için hiçbir geri arama verilmez. Hata ayıklayıcı, işlemin devam etmesine izin vermek için [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) çağırmalıdır.  
+> `Stop`, hata ayıklama API 'sindeki tek zaman uyumlu yöntemidir. `Stop` S_OK döndürdüğünde işlem durdurulur. Durun dinleyicilerini bilgilendirmek için hiçbir geri arama verilmez. Hata ayıklayıcı, işlemin devam etmesine izin vermek için [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) çağırmalıdır.  
   
  Hata ayıklayıcı bir durdurma sayacı tutar. Sayaç sıfıra gittiğinde, denetleyici sürdürülür. `Stop` veya dağıtılan her bir geri çağırma çağrısı sayacı arttırır. `ICorDebugController::Continue` yapılan her çağrı sayacı azaltır.  
   

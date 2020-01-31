@@ -5,16 +5,16 @@ author: thraka
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: a4723d6d63c5739123fad774bc75fae7c9fd6703
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3a72f68f5634c9ee5b137baf12a279130861e61a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340168"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787834"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Öğretici: şablon paketi oluşturma
 
-.NET Core ile projeler, dosyalar, hatta kaynaklar üreten şablonlar oluşturabilir ve dağıtabilirsiniz. Bu öğretici, `dotnet new` komutuyla kullanılmak üzere şablonlar oluşturmayı, yüklemeyi ve kaldırmayı öğretir.
+.NET Core ile projeler, dosyalar, hatta kaynaklar üreten şablonlar oluşturabilir ve dağıtabilirsiniz. Bu öğretici, `dotnet new` komutuyla kullanılmak üzere şablonlar oluşturmayı, yüklemeyi ve kaldırmayı öğretir ve bir serinin üçüncü bölümüdür.
 
 Serinin bu bölümünde şunları nasıl yapacağınızı öğreneceksiniz:
 
@@ -49,7 +49,7 @@ Terminalinizde _çalışma_ klasörüne gidin. Yeni bir proje oluşturun ve adı
 dotnet new console -n templatepack -o .
 ```
 
-`-n` parametresi _. csproj_ dosya adını _templatepack. csproj_ olarak ayarlar ve `-o` parametreleri geçerli dizindeki dosyaları oluşturur. Aşağıdaki çıktıya benzer bir sonuç görmeniz gerekir.
+`-n` parametresi _. csproj_ dosya adını _templatepack. csproj_olarak ayarlar. `-o` parametresi, geçerli dizindeki dosyaları oluşturur. Aşağıdaki çıktıya benzer bir sonuç görmeniz gerekir.
 
 ```console
 C:\working> dotnet new console -n templatepack -o .
@@ -91,7 +91,7 @@ Ardından, en sevdiğiniz düzenleyicide _templatepack. csproj_ dosyasını aç�
 </Project>
 ```
 
-Yukarıdaki XML 'deki `<PropertyGroup>` ayarları üç gruba bölünmüştür. İlk grup, bir NuGet paketi için gereken özelliklerle ilgilidir. Üç `<Package` ayarlarının, bir NuGet akışında paketinizi tanımlamak için NuGet paket özellikleriyle olması gerekir. Özellikle `<PacakgeId>` değeri, şablon paketini dizin yolu yerine tek bir adla kaldırmak için kullanılır. Ayrıca, bir NuGet akışından şablon paketini yüklemek için de kullanılabilir. `<Title>` ve `<Tags>` gibi kalan ayarların, NuGet akışında görüntülenecek meta verilerle olması gerekir. NuGet ayarları hakkında daha fazla bilgi için bkz. [NuGet ve MSBuild özellikleri](/nuget/reference/msbuild-targets).
+Yukarıdaki XML 'deki `<PropertyGroup>` ayarları üç gruba bölünmüştür. İlk grup, bir NuGet paketi için gereken özelliklerle ilgilidir. Üç `<Package` ayarlarının, bir NuGet akışında paketinizi tanımlamak için NuGet paket özellikleriyle olması gerekir. Özellikle `<PackageId>` değeri, şablon paketini dizin yolu yerine tek bir adla kaldırmak için kullanılır. Ayrıca, bir NuGet akışından şablon paketini yüklemek için de kullanılabilir. `<Title>` ve `<PackageTags>` gibi kalan ayarların, NuGet akışında görüntülenecek meta verilerle olması gerekir. NuGet ayarları hakkında daha fazla bilgi için bkz. [NuGet ve MSBuild özellikleri](/nuget/reference/msbuild-targets).
 
 Projeyi derlemek ve paketetmek için paket komutunu çalıştırdığınızda MSBuild 'in düzgün çalışması için `<TargetFramework>` ayar ayarlanmalıdır.
 
@@ -178,7 +178,7 @@ Currently installed items:
 
 Şablonu kaldırmak için `dotnet new -u AdatumCorporation.Utility.Templates` çalıştırın. `dotnet new` komutu, daha önce yüklediğiniz şablonları atlamanızı gerektiren yardım bilgilerini çıktı olarak alırsınız.
 
-Tebrikler! bir şablon paketi yüklediniz ve kaldırdık. 
+Tebrikler! bir şablon paketi yüklediniz ve kaldırdık.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

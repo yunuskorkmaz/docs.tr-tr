@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: db3c3d38e0200f9849c84d7605a436816d56b813
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2d99c6d8bd2af02456c6a90143b524c337483868
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427429"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866901"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 İşlevi
 Şu anda yürütülmekte olan işlevin başka bir işleve bir tail çağrısı gerçekleştirmek üzere olduğunu ve yığın çerçevesi hakkında bilgi sağladığını bildiren Profiler öğesine bildirir.  
@@ -34,20 +34,24 @@ void __stdcall FunctionTailcall2 (
 );  
 ```  
   
-## <a name="parameters"></a>Parametreler  
- `funcId`  
- 'ndaki Bir tail çağrısı yapmak üzere olan şu anda yürütülmekte olan işlevin tanımlayıcısı.  
+## <a name="parameters"></a>Parametreler
+
+- `funcId`
+
+  \[in] Şu anda yürütülmekte olan işlevin tanıtıcısı, kuyruk çağrısını yapmak için kullanılır.
+
+- `clientData`
+
+  \[içinde] ' de, bir kuyruk çağrısını yapmak üzere olan şu anda yürütülmekte olan işlevin [FunctionIDMapper](functionidmapper-function.md)aracılığıyla belirtilen profil oluşturucunun yeniden eşlenen işlev tanımlayıcısı.
   
- `clientData`  
- 'ndaki Önceden oluşturucunun, bir tail çağrısı yapmak üzere olan şu anda yürütülmekte olan işlevin [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)ile belirttiği, yeniden eşlenen işlev tanımlayıcısı.  
-  
- `func`  
- 'ndaki Yığın çerçevesi hakkındaki bilgileri gösteren `COR_PRF_FRAME_INFO` değeri.  
-  
- Profil Oluşturucu bunu [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) yönteminde yürütme motoruna geri geçirilebilecek donuk bir tanıtıcı olarak kabul etmelidir.  
-  
+- `func`
+
+  \[içinde, yığın çerçevesi hakkındaki bilgileri gösteren bir `COR_PRF_FRAME_INFO` değeri.
+
+  Profil Oluşturucu bunu [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) yönteminde yürütme motoruna geri geçirilebilecek donuk bir tanıtıcı olarak kabul etmelidir.
+
 ## <a name="remarks"></a>Açıklamalar  
- Tail çağrısının hedef işlevi geçerli yığın çerçevesini kullanır ve doğrudan kuyruk çağrısını yapan işlevin çağıranına döndürülür. Bu, bir kuyruk çağrısının hedefi olan bir işlev için [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) geri çağrısının yayımlanmayacağı anlamına gelir.  
+ Tail çağrısının hedef işlevi geçerli yığın çerçevesini kullanır ve doğrudan kuyruk çağrısını yapan işlevin çağıranına döndürülür. Bu, bir kuyruk çağrısının hedefi olan bir işlev için [FunctionLeave2](functionleave2-function.md) geri çağrısının yayımlanmayacağı anlamına gelir.  
   
  `func` parametresinin değeri, `FunctionTailcall2` işlevi döndürüldüğünden geçerli değildir çünkü değer değişebilir veya yok edilir.  
   
@@ -74,7 +78,7 @@ void __stdcall FunctionTailcall2 (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [FunctionEnter2 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2 İşlevi](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [SetEnterLeaveFunctionHooks2 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [Profil Oluşturma Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2 İşlevi](functionenter2-function.md)
+- [FunctionLeave2 İşlevi](functionleave2-function.md)
+- [SetEnterLeaveFunctionHooks2 Yöntemi](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Profil Oluşturma Genel Statik İşlevleri](profiling-global-static-functions.md)

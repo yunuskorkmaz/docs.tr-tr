@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8dcd7537-d0c6-498c-8a56-2c060310ef65
 topic_type:
 - apiref
-ms.openlocfilehash: 1bbdfa93913b9fdf8aa164c8ca6c35cd33a228df
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f1cfef464569b577923fbb16624c99358998d29c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449920"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866253"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>ICorProfilerCallback::JITCompilationFinished Yöntemi
 Profil oluşturucuyu, Just-In-Time (JıT) derleyicisinin bir işlevi derlemeyi tamamladığını bildirir.  
@@ -34,18 +34,22 @@ HRESULT JITCompilationFinished(
     [in] BOOL       fIsSafeToBlock);  
 ```  
   
-## <a name="parameters"></a>Parametreler  
- `functionId`  
- 'ndaki Derlenen işlevin KIMLIĞI.  
-  
- `hrStatus`  
- 'ndaki Derlemenin başarılı olup olmadığını gösteren bir değer.  
-  
- `fIsSafeToBlock`  
- 'ndaki Profiler 'ın çalışma zamanının işlemini etkilemesinin ne olmayacağını gösteren bir değer. Engelleme, çalışma zamanının çağıran iş parçacığının bu geri aramadan dönmesini beklemesini neden olabileceğinden `true`. Aksi takdirde, `false`.  
-  
- `true` değeri çalışma zamanına zarar verse de, profil oluşturma sonuçlarını çarpıtmasına neden olabilir.  
-  
+## <a name="parameters"></a>Parametreler
+
+- `functionId`
+
+  \[içinde] derlenen işlevin KIMLIĞI.
+
+- `hrStatus`
+
+  \[in] derlemenin başarılı olup olmadığını gösteren bir değer.
+
+- `fIsSafeToBlock`
+
+  \[in] profil oluşturucunun, engelleme çalışma zamanının işlemini etkilemesini isteyip olmayacağını gösteren bir değer. Engelleme, çalışma zamanının çağıran iş parçacığının bu geri aramadan dönmesini beklemesini neden olabileceğinden `true`. Aksi takdirde, `false`.
+
+  `true` değeri çalışma zamanına zarar verse de, profil oluşturma sonuçlarını çarpıtmasına neden olabilir.
+
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
@@ -57,5 +61,5 @@ HRESULT JITCompilationFinished(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [JITCompilationStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
+- [ICorProfilerCallback Arabirimi](icorprofilercallback-interface.md)
+- [JITCompilationStarted Yöntemi](icorprofilercallback-jitcompilationstarted-method.md)

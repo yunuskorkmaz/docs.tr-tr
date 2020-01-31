@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0aa60f24-8bbd-4c83-83c5-86ad191b1d82
 topic_type:
 - apiref
-ms.openlocfilehash: 11f9a186f5ec5e3b9e718a3ccd43b35b66d28078
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dcd162aec12dc75585f1828cffdd4cdbedcf9988
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433183"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868668"
 ---
 # <a name="icorprofilerinfo2getfunctioninfo2-method"></a>ICorProfilerInfo2::GetFunctionInfo2 Yöntemi
 Bir işlevin varsa, üst sınıfı, meta veri belirtecini ve her tür bağımsız değişkeninin `ClassID` alır.  
@@ -65,7 +65,7 @@ HRESULT GetFunctionInfo2(
  dışı Her biri işlevin tür bağımsız değişkeninin KIMLIĞI olan `ClassID` değerleri dizisi. Yöntemi döndürüldüğünde, `typeArgs` `ClassID` değerlerinin bazılarını veya tümünü içerecektir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Profil Oluşturucu kodu, belirli bir modül için [meta](../../../../docs/framework/unmanaged-api/metadata/index.md) veri arabirimi elde etmek üzere [ICorProfilerInfo:: GetModuleMetaData öğesini](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) çağırabilir. `pToken` tarafından başvurulan konuma döndürülen meta veri belirteci, daha sonra işlevin meta verilerine erişmek için kullanılabilir.  
+ Profil Oluşturucu kodu, belirli bir modül için [meta](../../../../docs/framework/unmanaged-api/metadata/index.md) veri arabirimi elde etmek üzere [ICorProfilerInfo:: GetModuleMetaData öğesini](icorprofilerinfo-getmodulemetadata-method.md) çağırabilir. `pToken` tarafından başvurulan konuma döndürülen meta veri belirteci, daha sonra işlevin meta verilerine erişmek için kullanılabilir.  
   
  `pClassId` ve `typeArgs` parametreleri aracılığıyla döndürülen sınıf KIMLIĞI ve tür bağımsız değişkenleri, aşağıdaki tabloda gösterildiği gibi `frameInfo` parametresine geçirilen değere bağlıdır.  
   
@@ -90,7 +90,7 @@ HRESULT GetFunctionInfo2(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo Arabirimi](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 Arabirimi](icorprofilerinfo2-interface.md)
+- [Profil Oluşturma Arabirimleri](profiling-interfaces.md)
+- [Profil Oluşturma](index.md)

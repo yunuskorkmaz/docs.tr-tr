@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc663e76-e23f-49a8-bdd5-52cdf1a3b2b3
 topic_type:
 - apiref
-ms.openlocfilehash: e74bab058adda759db1fb549022608eedfef5d80
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d30d0bc262d76cf8980f90d8384173d89baf92d5
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432980"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862692"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>ICorProfilerInfo2::GetStaticFieldInfo Yöntemi
 Belirtilen alan için geçerli olan statik türünü gösteren bir değer alır.  
@@ -42,7 +42,7 @@ HRESULT GetStaticFieldInfo (
  'ndaki Statik alan için meta veri belirteci.  
   
  `pFieldInfo`  
- dışı Belirtilen alanın statik olup olmadığını belirten [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) sabit değerinin bir işaretçisi ve bu durumda, alan için geçerli olan statik türü.  
+ dışı Belirtilen alanın statik olup olmadığını belirten [COR_PRF_STATIC_TYPE](cor-prf-static-type-enumeration.md) sabit değerinin bir işaretçisi ve bu durumda, alan için geçerli olan statik türü.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu bilgiler, statik alanın adresini almak için hangi işlevin çağrılacağını belirlemede kullanılabilir.  
@@ -60,5 +60,5 @@ HRESULT GetStaticFieldInfo (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo Arabirimi](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 Arabirimi](icorprofilerinfo2-interface.md)

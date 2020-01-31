@@ -14,24 +14,24 @@ helpviewer_keywords:
 ms.assetid: bb798c56-042e-475d-a245-b6fac36d0c07
 topic_type:
 - apiref
-ms.openlocfilehash: cbe2aa48a8b67b0b6e88f7b5267bc70848fe3cec
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 61cac0922423acabef3d47618d98ddf082d071da
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140319"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790670"
 ---
 # <a name="icorpublishappdomainenum-interface"></a>ICorPublishAppDomainEnum Arabirimi
-Bir işlemde mevcut olan [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) nesnelerinin bir koleksiyonunu gezme yöntemleri sağlayan [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) arabiriminin bir alt sınıfı.  
+Bir işlemde mevcut olan [ICorPublishAppDomain](icorpublishappdomain-interface.md) nesnelerinin bir koleksiyonunu gezme yöntemleri sağlayan [ICorPublishEnum](icorpublishenum-interface.md) arabiriminin bir alt sınıfı.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-next-method.md)|Geçerli konumdan başlayarak koleksiyondan belirtilen sayıda `ICorPublishAppDomain` örneği alır.|  
+|[Next Yöntemi](icorpublishappdomainenum-next-method.md)|Geçerli konumdan başlayarak koleksiyondan belirtilen sayıda `ICorPublishAppDomain` örneği alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorPublishAppDomainEnum` arabirimi, [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)soyut arabiriminin yöntemlerini uygular.  
+ `ICorPublishAppDomainEnum` arabirimi, [ICorPublishEnum](icorpublishenum-interface.md)soyut arabiriminin yöntemlerini uygular.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,5 +44,5 @@ Bir işlemde mevcut olan [ICorPublishAppDomain](../../../../docs/framework/unman
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [CorpubPublish Coclass](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [CorpubPublish Coclass](corpubpublish-coclass.md)

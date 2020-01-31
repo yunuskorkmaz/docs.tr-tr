@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 77ef2c65157df4a033700bb8d0295875ede46554
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 46031f29da6916eeaeea863ebef6924a720d7155
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739115"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793824"
 ---
 # <a name="dacprejitdata-structure"></a>DacpReJitData Yapısı
 
-Belirli bir profil oluşturucu izleme eklenmiş yöntemi ile ilgili temel bilgileri tanımlar.
+Belirli bir profil oluşturucu tarafından işaretlenmiş yöntem hakkında temel bilgileri tanımlar.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -51,21 +51,21 @@ struct MSLAYOUT DacpReJitData
 
 | Üye           | Açıklama                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------ |
-| `rejitID`        | Bir yöntem için ReJit düzeltme numarası.                                                          |
-| `flags`          | Belirtilen sürüm için yöntemin ReJit izleme geçerli durumunu belirten bir bayrak. |
-| `NativeCodeAddr` | Yöntemin rejitted uygulamasının temel adres.                                         |
+| `rejitID`        | Bir yöntem için ReJIT düzeltme numarası.                                                          |
+| `flags`          | Metodun verilen sürüm için yeniden JIT araçlarının geçerli durumunu belirten bayrak. |
+| `NativeCodeAddr` | Metodun yeniden derlenen uygulamasının temel adresi.                                         |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı, çalışma zamanı içinde yer alan ve herhangi bir üst bilgiler veya kitaplık dosyaları gösterilmez. Bunu kullanmak için yukarıda belirtildiği gibi yapısını tanımlar. Yapı kullanarak da tanımlanmalıdır `ms_struct` Microsoft derleyicileri kullanarak değilse paketleme.
+Bu yapı çalışma zamanının içinde bulunur ve herhangi bir üst bilgi veya kitaplık dosyası aracılığıyla gösterilmez. Kullanmak için, yapıyı yukarıda belirtilen şekilde tanımlayın. Yapının ayrıca Microsoft derleyicileri yoksa `ms_struct` paketleme kullanılarak tanımlanması gerekir.
 
 ## <a name="requirements"></a>Gereksinimler
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** Yok.  
-**Kitaplığı:** Yok.  
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Üst bilgi:** Seçim  
+**Kitaplık:** Seçim  
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Hata Ayıklama](index.md)
+- [Hata Ayıklama Yapıları](debugging-structures.md)

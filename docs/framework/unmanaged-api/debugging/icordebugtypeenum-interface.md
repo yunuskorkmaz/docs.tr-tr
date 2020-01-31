@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 159ccfcf-b37c-4ad9-8e0d-a9a443262472
 topic_type:
 - apiref
-ms.openlocfilehash: a8fa4f2fbe576083658a934e30177bb7a48be06d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ed7bceec9bf6ea0cf69cbb57fff83a91093ba6c4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110227"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791204"
 ---
 # <a name="icordebugtypeenum-interface"></a>ICorDebugTypeEnum Arabirimi
 "Icordebugger Genum" yöntemlerini uygular ve "ICorDebugType" dizilerini numaralandırır.  
@@ -28,7 +28,7 @@ ms.locfileid: "73110227"
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-next-method.md)|Geçerli konumdan başlayarak Numaralandırmadaki belirtilen `ICorDebugType` örneği sayısını alır.|  
+|[Next Yöntemi](icordebugtypeenum-next-method.md)|Geçerli konumdan başlayarak Numaralandırmadaki belirtilen `ICorDebugType` örneği sayısını alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -46,4 +46,4 @@ ms.locfileid: "73110227"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

@@ -2,21 +2,21 @@
 title: ICorDebugDataTarget3 Arabirimi
 ms.date: 03/30/2017
 ms.assetid: f477af85-994f-4df0-ae78-404ed252bf49
-ms.openlocfilehash: 5f91db291396589a916933bdc7c2a2390dd61a5d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 04e7b9a064d4a06a06b8a1518f06092ba79a3561
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136675"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783487"
 ---
 # <a name="icordebugdatatarget3-interface"></a>ICorDebugDataTarget3 Arabirimi
-Yüklü modüller hakkında bilgi sağlamak için [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) arabirimini mantıksal olarak genişletir.  
+Yüklü modüller hakkında bilgi sağlamak için [ICorDebugDataTarget](icordebugdatatarget-interface.md) arabirimini mantıksal olarak genişletir.  
   
 ## <a name="method"></a>Yöntem  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetLoadedModules Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget3-getloadedmodules-method.md)|Şimdiye kadar yüklenmiş modüllerin listesini alır.|  
+|[GetLoadedModules Yöntemi](icordebugdatatarget3-getloadedmodules-method.md)|Şimdiye kadar yüklenmiş modüllerin listesini alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -34,5 +34,5 @@ Yüklü modüller hakkında bilgi sağlamak için [ICorDebugDataTarget](../../..
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [Hata Ayıklama](index.md)

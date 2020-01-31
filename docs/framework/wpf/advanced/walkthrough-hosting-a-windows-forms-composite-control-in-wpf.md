@@ -9,15 +9,15 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: 16c09b4bb393fa830412385b4b405dd1fae9878b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 22eb323d1c1921832630d1d1b30463b4ecb7d1fd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744999"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794237"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], uygulamalar oluşturmak için zengin bir ortam sağlar. Ancak [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodda önemli bir yatırımınız olduğunda, sıfırdan yazmak yerine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamanızda bu kodların en az bir kısmını yeniden kullanmak daha etkili olabilir. En yaygın senaryo, Windows Forms denetimlerinizi var. Bazı durumlarda, bu denetimlerin kaynak koduna bile erişiminiz olmayabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bu denetimleri bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamasında barındırmak için kolay bir yordam sağlar. Örneğin, özelleştirilmiş <xref:System.Windows.Forms.DataGridView> denetimlerinizi barındırırken birçok programlama için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanabilirsiniz.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], uygulamalar oluşturmak için zengin bir ortam sağlar. Ancak Windows Forms kodda önemli bir yatırımınız olduğunda, sıfırdan yazmak yerine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamanızda bu kodların en az bir kısmını yeniden kullanmak daha etkili olabilir. En yaygın senaryo, Windows Forms denetimlerinizi var. Bazı durumlarda, bu denetimlerin kaynak koduna bile erişiminiz olmayabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bu denetimleri bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamasında barındırmak için kolay bir yordam sağlar. Örneğin, özelleştirilmiş <xref:System.Windows.Forms.DataGridView> denetimlerinizi barındırırken birçok programlama için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanabilirsiniz.  
   
  Bu izlenecek yol, bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamasında veri girişi gerçekleştirmek üzere Windows Forms Bileşik bir denetim barındıran bir uygulamada size kılavuzluk ediyor. Bileşik denetim bir DLL içinde paketlenmiştir. Bu genel yordam, daha karmaşık uygulamalar ve denetimler için genişletilebilir. Bu izlenecek yol, görünüm ve işlevlerle neredeyse özdeş olacak şekilde tasarlanmıştır [: WINDOWS Forms WPF bileşik denetimini barındırma](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md). Birincil fark, barındırma senaryosunun tersine çevrilme olur.  
   

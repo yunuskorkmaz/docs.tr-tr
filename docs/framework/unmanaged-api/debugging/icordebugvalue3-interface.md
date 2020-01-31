@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d5385d3-f4a5-47c4-8478-a3513b5e9406
 topic_type:
 - apiref
-ms.openlocfilehash: 1f46866a1b975455acd294221e38ef3b4c358660
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5fa042223e47961dad0a6799ab8ca999ef76e285
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140209"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791087"
 ---
 # <a name="icordebugvalue3-interface"></a>ICorDebugValue3 Arabirimi
 2 GB 'den büyük diziler için destek sağlamak üzere "ICorDebugValue" ve "ICorDebugValue2" arabirimlerini genişletir.  
@@ -28,10 +28,10 @@ ms.locfileid: "73140209"
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetSize64 Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)|Bu `ICorDebugValue3` nesnesinin bayt cinsinden boyutunu alır.|  
+|[GetSize64 Yöntemi](icordebugvalue3-getsize64-method.md)|Bu `ICorDebugValue3` nesnesinin bayt cinsinden boyutunu alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [ICorDebugValue:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) yöntemi, 0 ile 2.147.483.647 bayt arasında değişen bir nesne boyutu döndürür. .NET Framework 4,5 ' de, dizilerin boyutu 2 GB 'ı aşabilirler. `ICorDebugValue3` arabirimi bu dizilerin boyutunu belirlemenizi sağlar.  
+ [ICorDebugValue:: GetSize](icordebugvalue3-getsize64-method.md) yöntemi, 0 ile 2.147.483.647 bayt arasında değişen bir nesne boyutu döndürür. .NET Framework 4,5 ' de, dizilerin boyutu 2 GB 'ı aşabilirler. `ICorDebugValue3` arabirimi bu dizilerin boyutunu belirlemenizi sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,5 +44,5 @@ ms.locfileid: "73140209"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [Hata Ayıklama](index.md)
