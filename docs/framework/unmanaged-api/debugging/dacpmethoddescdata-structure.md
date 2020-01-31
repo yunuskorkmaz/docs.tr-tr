@@ -15,20 +15,20 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 97079b824dbd0e056374af4173e49304babd6c32
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc54664ea8ad61005de3f3fae7407946d1c861b2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739139"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793838"
 ---
-# <a name="dacpmethoddescdata-structure"></a><span data-ttu-id="ef220-102">DacpMethodDescData Yapısı</span><span class="sxs-lookup"><span data-stu-id="ef220-102">DacpMethodDescData Structure</span></span>
+# <a name="dacpmethoddescdata-structure"></a><span data-ttu-id="5feae-102">DacpMethodDescData Yapısı</span><span class="sxs-lookup"><span data-stu-id="5feae-102">DacpMethodDescData Structure</span></span>
 
-<span data-ttu-id="ef220-103">Bir yöntemin çalışma zamanı bilgileri için transport arabellek tanımlar.</span><span class="sxs-lookup"><span data-stu-id="ef220-103">Defines a transport buffer for a method's runtime information.</span></span>
+<span data-ttu-id="5feae-103">Metodun çalışma zamanı bilgileri için bir aktarım arabelleği tanımlar.</span><span class="sxs-lookup"><span data-stu-id="5feae-103">Defines a transport buffer for a method's runtime information.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="ef220-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ef220-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="5feae-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5feae-104">Syntax</span></span>
 
 ```cpp
 struct DacpMethodDescData
@@ -52,39 +52,39 @@ struct DacpMethodDescData
 };
 ```
 
-## <a name="members"></a><span data-ttu-id="ef220-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="ef220-105">Members</span></span>
+## <a name="members"></a><span data-ttu-id="5feae-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="5feae-105">Members</span></span>
 
-| <span data-ttu-id="ef220-106">Üye</span><span class="sxs-lookup"><span data-stu-id="ef220-106">Member</span></span>                       | <span data-ttu-id="ef220-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ef220-107">Description</span></span>                                                                                     |
+| <span data-ttu-id="5feae-106">Üye</span><span class="sxs-lookup"><span data-stu-id="5feae-106">Member</span></span>                       | <span data-ttu-id="5feae-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5feae-107">Description</span></span>                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
-| `bHasNativeCode`             | <span data-ttu-id="ef220-108">Çalışma zamanı yerel kod yöntemin belirli örneklemesi için kullanılabilir olup olmadığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="ef220-108">Indicates if the runtime has native code available for the given instantiation of the method.</span></span> |
-| `bIsDynamic`                 | <span data-ttu-id="ef220-109">Basit kod oluşturma yöntemini dinamik olarak oluşturulur, gösterir.</span><span class="sxs-lookup"><span data-stu-id="ef220-109">Indicates if the method is generated dynamically through lightweight code generation.</span></span>           |
-| `wSlotNumber`                | <span data-ttu-id="ef220-110">Yöntem tablosunu yöntemin yuva numarası.</span><span class="sxs-lookup"><span data-stu-id="ef220-110">The method's slot number in the method table.</span></span>                                                   |
-| `NativeCodeAddr`             | <span data-ttu-id="ef220-111">Yöntemin ilk yerel adres.</span><span class="sxs-lookup"><span data-stu-id="ef220-111">The method's initial native address.</span></span>                                                            |
-| `data`                       | <span data-ttu-id="ef220-112">Çalışma zamanı tarafından dahili olarak kullanılan arabellek için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ef220-112">Pointer to a buffer used internally by the runtime.</span></span>                                             |
-| `MethodDescPtr`              | <span data-ttu-id="ef220-113">İşaretçi `MethodDesc` çalışma zamanında.</span><span class="sxs-lookup"><span data-stu-id="ef220-113">Pointer to the `MethodDesc` in the runtime.</span></span>                                                     |
-| `nativeCodeInfo`             | <span data-ttu-id="ef220-114">Dahili yöntemleri izlemek için çalışma zamanı tarafından kullanılan arabellek için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ef220-114">Pointer to a buffer used internally by the runtime to track methods.</span></span>                            |
-| `moduleInfo`                 | <span data-ttu-id="ef220-115">Çalışma zamanı tarafından modülü bilgileri için dahili olarak kullanılan arabellek için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ef220-115">Pointer to a buffer used internally by the runtime for module information.</span></span>                      |
-| `MDToken`                    | <span data-ttu-id="ef220-116">Belirtilen yöntemle ilişkili belirteci.</span><span class="sxs-lookup"><span data-stu-id="ef220-116">Token associated with the given method.</span></span>                                                         |
-| `payloadGC`                  | <span data-ttu-id="ef220-117">Çalışma zamanı tarafından dahili olarak kullanılan bir çöp toplama arabellek için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ef220-117">Pointer to a garbage collection buffer used internally by the runtime.</span></span>                          |
-| `payloadGC2`                 | <span data-ttu-id="ef220-118">Çalışma zamanı tarafından dahili olarak kullanılan bir çöp toplama arabellek için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ef220-118">Pointer to a garbage collection buffer used internally by the runtime.</span></span>                          |
-| `managedDynamicMethodObject` | <span data-ttu-id="ef220-119">Yöntem dinamik ise, çalışma zamanı bu arabellek izleme bilgileri için dahili olarak kullanır.</span><span class="sxs-lookup"><span data-stu-id="ef220-119">If the method is dynamic, the runtime uses this buffer internally for information tracking.</span></span>     |
-| `requestedIP`                | <span data-ttu-id="ef220-120">Yerel kod adresi verildiğinde istek başına yapısı doldurmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="ef220-120">Used to populate the structure per request when given a native code address.</span></span>                    |
-| `rejitDataCurrent`           | <span data-ttu-id="ef220-121">Yöntemin belgelenmiş en son sürüm hakkında bilgi.</span><span class="sxs-lookup"><span data-stu-id="ef220-121">Information about the latest instrumented version of the method.</span></span>                                   |
-| `rejitDataRequested`         | <span data-ttu-id="ef220-122">İstenen yerel adres için Rejit bilgileri.</span><span class="sxs-lookup"><span data-stu-id="ef220-122">Rejit information for the requested native address.</span></span>                                             |
-| `cJittedRejitVersions`       | <span data-ttu-id="ef220-123">İzleme aracılığıyla rejitted yöntemi çağrıldıysa sayısı.</span><span class="sxs-lookup"><span data-stu-id="ef220-123">Number of times the method has been rejitted through instrumentation.</span></span>                           |
+| `bHasNativeCode`             | <span data-ttu-id="5feae-108">Çalışma zamanının, yöntemin belirli bir örneği için kullanılabilir yerel koda sahip olup olmadığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="5feae-108">Indicates if the runtime has native code available for the given instantiation of the method.</span></span> |
+| `bIsDynamic`                 | <span data-ttu-id="5feae-109">Yöntemin hafif kod üretimi aracılığıyla dinamik olarak oluşturulup oluşturulmayacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="5feae-109">Indicates if the method is generated dynamically through lightweight code generation.</span></span>           |
+| `wSlotNumber`                | <span data-ttu-id="5feae-110">Yöntem tablosundaki yuva numarası.</span><span class="sxs-lookup"><span data-stu-id="5feae-110">The method's slot number in the method table.</span></span>                                                   |
+| `NativeCodeAddr`             | <span data-ttu-id="5feae-111">Metodun ilk yerel adresi.</span><span class="sxs-lookup"><span data-stu-id="5feae-111">The method's initial native address.</span></span>                                                            |
+| `data`                       | <span data-ttu-id="5feae-112">Çalışma zamanı tarafından dahili olarak kullanılan arabelleğin işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="5feae-112">Pointer to a buffer used internally by the runtime.</span></span>                                             |
+| `MethodDescPtr`              | <span data-ttu-id="5feae-113">Çalışma zamanındaki `MethodDesc` işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="5feae-113">Pointer to the `MethodDesc` in the runtime.</span></span>                                                     |
+| `nativeCodeInfo`             | <span data-ttu-id="5feae-114">Yöntemleri izlemek için çalışma zamanı tarafından dahili olarak kullanılan bir arabelleğin işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="5feae-114">Pointer to a buffer used internally by the runtime to track methods.</span></span>                            |
+| `moduleInfo`                 | <span data-ttu-id="5feae-115">Modül bilgileri için çalışma zamanı tarafından dahili olarak kullanılan bir arabelleğin işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="5feae-115">Pointer to a buffer used internally by the runtime for module information.</span></span>                      |
+| `MDToken`                    | <span data-ttu-id="5feae-116">Verilen yöntemle ilişkili belirteç.</span><span class="sxs-lookup"><span data-stu-id="5feae-116">Token associated with the given method.</span></span>                                                         |
+| `payloadGC`                  | <span data-ttu-id="5feae-117">Çalışma zamanı tarafından dahili olarak kullanılan bir çöp toplama arabelleğinin işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="5feae-117">Pointer to a garbage collection buffer used internally by the runtime.</span></span>                          |
+| `payloadGC2`                 | <span data-ttu-id="5feae-118">Çalışma zamanı tarafından dahili olarak kullanılan bir çöp toplama arabelleğinin işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="5feae-118">Pointer to a garbage collection buffer used internally by the runtime.</span></span>                          |
+| `managedDynamicMethodObject` | <span data-ttu-id="5feae-119">Yöntem dinamik ise, çalışma zamanı bu arabelleği bilgi izleme için dahili olarak kullanır.</span><span class="sxs-lookup"><span data-stu-id="5feae-119">If the method is dynamic, the runtime uses this buffer internally for information tracking.</span></span>     |
+| `requestedIP`                | <span data-ttu-id="5feae-120">Yerel kod adresi verildiğinde istek başına yapıyı doldurmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="5feae-120">Used to populate the structure per request when given a native code address.</span></span>                    |
+| `rejitDataCurrent`           | <span data-ttu-id="5feae-121">Metodun en son belgelenmiş sürümü hakkında bilgi.</span><span class="sxs-lookup"><span data-stu-id="5feae-121">Information about the latest instrumented version of the method.</span></span>                                   |
+| `rejitDataRequested`         | <span data-ttu-id="5feae-122">İstenen yerel adres için ReJIT bilgileri.</span><span class="sxs-lookup"><span data-stu-id="5feae-122">Rejit information for the requested native address.</span></span>                                             |
+| `cJittedRejitVersions`       | <span data-ttu-id="5feae-123">Metodun izleme aracılığıyla yeniden derlenen sayısı.</span><span class="sxs-lookup"><span data-stu-id="5feae-123">Number of times the method has been rejitted through instrumentation.</span></span>                           |
 
-## <a name="remarks"></a><span data-ttu-id="ef220-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ef220-124">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="5feae-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5feae-124">Remarks</span></span>
 
-<span data-ttu-id="ef220-125">Bu yapı, çalışma zamanı içinde yer alan ve herhangi bir üst bilgiler veya kitaplık dosyaları gösterilmez.</span><span class="sxs-lookup"><span data-stu-id="ef220-125">This structure lives inside the runtime and is not exposed through any headers or library files.</span></span> <span data-ttu-id="ef220-126">Bunu kullanmak için yukarıda belirtildiği gibi yapısını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="ef220-126">To use it, define the structure as specified above.</span></span>
+<span data-ttu-id="5feae-125">Bu yapı çalışma zamanının içinde bulunur ve herhangi bir üst bilgi veya kitaplık dosyası aracılığıyla gösterilmez.</span><span class="sxs-lookup"><span data-stu-id="5feae-125">This structure lives inside the runtime and is not exposed through any headers or library files.</span></span> <span data-ttu-id="5feae-126">Kullanmak için, yapıyı yukarıda belirtilen şekilde tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="5feae-126">To use it, define the structure as specified above.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="ef220-127">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ef220-127">Requirements</span></span>
-<span data-ttu-id="ef220-128">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ef220-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-<span data-ttu-id="ef220-129">**Üst bilgi:** None</span><span class="sxs-lookup"><span data-stu-id="ef220-129">**Header:** None</span></span>  
-<span data-ttu-id="ef220-130">**Kitaplığı:** Yok.</span><span class="sxs-lookup"><span data-stu-id="ef220-130">**Library:** None</span></span>  
-<span data-ttu-id="ef220-131">**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="ef220-131">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5feae-127">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5feae-127">Requirements</span></span>
+<span data-ttu-id="5feae-128">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5feae-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="5feae-129">**Üst bilgi:** Seçim</span><span class="sxs-lookup"><span data-stu-id="5feae-129">**Header:** None</span></span>  
+<span data-ttu-id="5feae-130">**Kitaplık:** Seçim</span><span class="sxs-lookup"><span data-stu-id="5feae-130">**Library:** None</span></span>  
+<span data-ttu-id="5feae-131">**.NET Framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="5feae-131">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="ef220-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ef220-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5feae-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5feae-132">See also</span></span>
 
-- [<span data-ttu-id="ef220-133">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="ef220-133">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [<span data-ttu-id="ef220-134">Hata Ayıklama Yapıları</span><span class="sxs-lookup"><span data-stu-id="ef220-134">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="ef220-135">Ortak Veri Türleri</span><span class="sxs-lookup"><span data-stu-id="ef220-135">Common Data Types</span></span>](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)
+- [<span data-ttu-id="5feae-133">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="5feae-133">Debugging</span></span>](index.md)
+- [<span data-ttu-id="5feae-134">Hata Ayıklama Yapıları</span><span class="sxs-lookup"><span data-stu-id="5feae-134">Debugging Structures</span></span>](debugging-structures.md)
+- [<span data-ttu-id="5feae-135">Ortak Veri Türleri</span><span class="sxs-lookup"><span data-stu-id="5feae-135">Common Data Types</span></span>](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)
