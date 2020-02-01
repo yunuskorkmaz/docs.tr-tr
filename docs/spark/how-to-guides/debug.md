@@ -1,23 +1,23 @@
 ---
 title: Windows 'da Apache Spark uygulama için bir .NET hatası ayıklama
 description: Windows 'da Apache Spark için .NET uygulamanızı nasıl ayıklayacağınızı öğrenin.
-ms.date: 08/15/2019
+ms.date: 01/29/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 098c7519fe99ef04773c5e4b81685ca0f06f1272
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 25f5291c47dc1cdf2668cb077fae7439e330cc1c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281524"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919935"
 ---
-# <a name="debug-a-net-for-apache-spark-application"></a><span data-ttu-id="7c552-103">Apache Spark uygulama için bir .NET hatası ayıklama</span><span class="sxs-lookup"><span data-stu-id="7c552-103">Debug a .NET for Apache Spark application</span></span>
+# <a name="debug-a-net-for-apache-spark-application"></a><span data-ttu-id="7418a-103">Apache Spark uygulama için bir .NET hatası ayıklama</span><span class="sxs-lookup"><span data-stu-id="7418a-103">Debug a .NET for Apache Spark application</span></span>
 
-<span data-ttu-id="7c552-104">Bu nasıl yapılır, Windows 'da Apache Spark uygulaması ve Scala kodu için .NET uygulamanızda hata ayıklamak üzere çalıştırmanız gereken komutları sağlar.</span><span class="sxs-lookup"><span data-stu-id="7c552-104">This how-to provides the commands you need to run to debug your .NET for Apache Spark application and Scala code on Windows.</span></span>
+<span data-ttu-id="7418a-104">Bu nasıl yapılır, Windows 'da Apache Spark için .NET uygulamanızı hata ayıklama adımlarını sağlar.</span><span class="sxs-lookup"><span data-stu-id="7418a-104">This how-to provides the steps to debug your .NET for Apache Spark application on Windows.</span></span>
 
-## <a name="debug-your-application"></a><span data-ttu-id="7c552-105">Uygulamanızda hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="7c552-105">Debug your application</span></span>
+## <a name="debug-your-application"></a><span data-ttu-id="7418a-105">Uygulamanızda hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="7418a-105">Debug your application</span></span>
 
-<span data-ttu-id="7c552-106">Yeni bir komut istemi penceresi açın, aşağıdakileri çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="7c552-106">Open a new command prompt window, run the following:</span></span>
+<span data-ttu-id="7418a-106">Yeni bir komut istemi penceresi açın ve aşağıdaki komutu çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="7418a-106">Open a new command prompt window and run the following command:</span></span>
 
 ```shell
 spark-submit \
@@ -27,7 +27,7 @@ spark-submit \
   debug
 ```
 
-<span data-ttu-id="7c552-107">Komutu çalıştırdığınızda aşağıdaki çıktıyı görürsünüz:</span><span class="sxs-lookup"><span data-stu-id="7c552-107">When you run the command, you see the following output:</span></span>
+<span data-ttu-id="7418a-107">Komutu çalıştırdığınızda aşağıdaki çıktıyı görürsünüz:</span><span class="sxs-lookup"><span data-stu-id="7418a-107">When you run the command, you see the following output:</span></span>
 
 ```console
 ***********************************************************************
@@ -35,13 +35,40 @@ spark-submit \
 ***********************************************************************
 ```
 
-<span data-ttu-id="7c552-108">Bu hata ayıklama modunda, `DotnetRunner` .NET uygulamasını başlatamaz, ancak bağlanmasını bekler.</span><span class="sxs-lookup"><span data-stu-id="7c552-108">In this debug mode, `DotnetRunner` does not launch the .NET application, but it waits for it to connect.</span></span> <span data-ttu-id="7c552-109">Bu komut istemi penceresini açık bırakın.</span><span class="sxs-lookup"><span data-stu-id="7c552-109">Leave this command prompt window open.</span></span>
+<span data-ttu-id="7418a-108">Hata ayıklama modunda, DotnetRunner .NET uygulamasını başlatmaz, bunun yerine .NET uygulamasını başlatmanız için bekler.</span><span class="sxs-lookup"><span data-stu-id="7418a-108">In debug mode, DotnetRunner does not launch the .NET application, but instead waits for you to start the .NET app.</span></span> <span data-ttu-id="7418a-109">Uygulamanızda hata ayıklamak için bu komut istemi penceresini açık bırakın ve hata C# ayıklayıcı aracılığıyla .NET uygulamanızı başlatın.</span><span class="sxs-lookup"><span data-stu-id="7418a-109">Leave this command prompt window open and start your .NET application through C# debugger to debug your application.</span></span> <span data-ttu-id="7418a-110">Uygulamanızda hata ayıklamak için, .net C# uygulamanızı bir hata ayıklayıcı ([Windows/MacOS için Visual Studio hata ayıklayıcı](https://visualstudio.microsoft.com/vs/) veya [ C# Visual Studio Code hata ayıklama uzantısı](https://code.visualstudio.com/Docs/editor/debugging)) ile başlatın.</span><span class="sxs-lookup"><span data-stu-id="7418a-110">Start your .NET application with a C# debugger ([Visual Studio Debugger for Windows/macOS](https://visualstudio.microsoft.com/vs/) or [C# Debugger Extension in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)) to debug your application.</span></span>
 
-<span data-ttu-id="7c552-110">Artık uygulamanızda hata ayıklamak için, .NET uygulamanızı herhangi bir hata ayıklayıcı ile çalıştırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7c552-110">Now you can run your .NET application with any debugger to debug your application.</span></span>
+## <a name="debug-a-user-defined-function-udf"></a><span data-ttu-id="7418a-111">Kullanıcı tanımlı bir işlevde hata ayıklama (UDF)</span><span class="sxs-lookup"><span data-stu-id="7418a-111">Debug a user-defined function (UDF)</span></span>
 
-## <a name="debug-scala-code"></a><span data-ttu-id="7c552-111">Scala kodunda hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="7c552-111">Debug Scala code</span></span>
+> [!NOTE]
+> <span data-ttu-id="7418a-112">Kullanıcı tanımlı işlevler yalnızca Visual Studio hata ayıklayıcı ile Windows 'da desteklenir.</span><span class="sxs-lookup"><span data-stu-id="7418a-112">User-defined functions are supported only on Windows with Visual Studio Debugger.</span></span>
 
-<span data-ttu-id="7c552-112">`DotnetRunner` veya `DotnetBackendHandler`gibi Scala tarafı kodunda hata ayıklaması yapmanız gerekiyorsa, aşağıdaki komutu çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="7c552-112">If you need to debug the Scala side code, such as `DotnetRunner` or `DotnetBackendHandler`, run the following command:</span></span>
+<span data-ttu-id="7418a-113">`spark-submit`çalıştırmadan önce, aşağıdaki ortam değişkenini ayarlayın:</span><span class="sxs-lookup"><span data-stu-id="7418a-113">Before running `spark-submit`, set the following environment variable:</span></span>
+
+```bat
+set DOTNET_WORKER_DEBUG=1
+```
+
+<span data-ttu-id="7418a-114">Spark uygulamanızı çalıştırdığınızda `Choose Just-In-Time Debugger` bir pencere açılır.</span><span class="sxs-lookup"><span data-stu-id="7418a-114">When you run your Spark application, a `Choose Just-In-Time Debugger` window will pop up.</span></span> <span data-ttu-id="7418a-115">Bir Visual Studio hata ayıklayıcısı seçin.</span><span class="sxs-lookup"><span data-stu-id="7418a-115">Choose a Visual Studio debugger.</span></span>
+
+<span data-ttu-id="7418a-116">Hata ayıklayıcı [TaskRunner.cs](https://github.com/dotnet/spark/blob/5e9c08b430b4bc56b5f42252c4b73437377afaed/src/csharp/Microsoft.Spark.Worker/TaskRunner.cs#L52)içinde aşağıdaki konumda kesilir:</span><span class="sxs-lookup"><span data-stu-id="7418a-116">The debugger will break at the following location in [TaskRunner.cs](https://github.com/dotnet/spark/blob/5e9c08b430b4bc56b5f42252c4b73437377afaed/src/csharp/Microsoft.Spark.Worker/TaskRunner.cs#L52):</span></span>
+
+```csharp
+if (EnvironmentUtils.GetEnvironmentVariableAsBool("DOTNET_WORKER_DEBUG"))
+{
+    Debugger.Launch(); // <-- The debugger will break here.
+}
+```
+
+<span data-ttu-id="7418a-117">Hata ayıklamayı planladığınız UDF 'yi içeren *. cs* dosyasına gidin ve [bir kesme noktası ayarlayın](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints?view=vs-2019).</span><span class="sxs-lookup"><span data-stu-id="7418a-117">Navigate to the *.cs* file that contains the UDF that you plan to debug, and [set a breakpoint](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints?view=vs-2019).</span></span> <span data-ttu-id="7418a-118">Çalışan, henüz UDF içeren derlemeyi yüklemediği için kesme noktası `The breakpoint will not currently be hit` olur.</span><span class="sxs-lookup"><span data-stu-id="7418a-118">The breakpoint will say `The breakpoint will not currently be hit` because the worker hasn't loaded the assembly that contains UDF yet.</span></span>
+
+<span data-ttu-id="7418a-119">Uygulamanıza devam etmek için `F5` vurun ve kesme noktası sonunda vuracaktır.</span><span class="sxs-lookup"><span data-stu-id="7418a-119">Hit `F5` to continue your application and the breakpoint will eventually be hit.</span></span>
+
+> [!NOTE] 
+> <span data-ttu-id="7418a-120">Tam zamanında hata ayıklayıcı Seç penceresi her bir görev için açılır.</span><span class="sxs-lookup"><span data-stu-id="7418a-120">The Choose Just-In-Time Debugger window pops up for each task.</span></span> <span data-ttu-id="7418a-121">Aşırı açılan pencerelerin olmaması için, yürüticilerinin sayısını düşük bir sayı olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="7418a-121">To avoid excessive pop-ups, set the number of executors to a low number.</span></span> <span data-ttu-id="7418a-122">Örneğin, tek bir hata ayıklayıcı örneği başlatan görev sayısını 1 olarak ayarlamak için Spark-Gönder için **--Master yerel [1]** seçeneğini kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7418a-122">For example, you can use the **--master local[1]** option for spark-submit to set the number of tasks to 1, which launches a single debugger instance.</span></span>
+
+## <a name="debug-scala-code"></a><span data-ttu-id="7418a-123">Scala kodunda hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="7418a-123">Debug Scala code</span></span>
+
+<span data-ttu-id="7418a-124">Scala tarafı kodunda (`DotnetRunner`, `DotnetBackendHandler`, vb.) hata ayıklaması yapmanız gerekirse, aşağıdaki komutu kullanabilir ve [IntelliJ](https://www.jetbrains.com/help/idea/attaching-to-local-process.html)kullanarak çalışan işleme bir hata ayıklayıcı ekleyebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="7418a-124">If you need to debug the Scala-side code (`DotnetRunner`, `DotnetBackendHandler`, etc.), you can use the following command and attach a debugger to the running process using [IntelliJ](https://www.jetbrains.com/help/idea/attaching-to-local-process.html):</span></span>
 
 ```shell
 spark-submit \
@@ -52,11 +79,11 @@ spark-submit \
   <path-to-your-app-exe> <argument(s)-to-your-app>
 ```
 
-<span data-ttu-id="7c552-113">Komutu çalıştırdıktan sonra, [IntelliJ](https://www.jetbrains.com/help/idea/attaching-to-local-process.html)kullanarak çalışan işleme bir hata ayıklayıcı ekleyin.</span><span class="sxs-lookup"><span data-stu-id="7c552-113">After you run the command, attach a debugger to the running process using [Intellij](https://www.jetbrains.com/help/idea/attaching-to-local-process.html).</span></span>
+<span data-ttu-id="7418a-125">Komutu çalıştırdıktan sonra, [IntelliJ](https://www.jetbrains.com/help/idea/attaching-to-local-process.html)kullanarak çalışan işleme bir hata ayıklayıcı ekleyin.</span><span class="sxs-lookup"><span data-stu-id="7418a-125">After you run the command, attach a debugger to the running process using [Intellij](https://www.jetbrains.com/help/idea/attaching-to-local-process.html).</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="7c552-114">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="7c552-114">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="7418a-126">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="7418a-126">Next steps</span></span>
 
-* [<span data-ttu-id="7c552-115">Apache Spark için .NET ile çalışmaya başlama</span><span class="sxs-lookup"><span data-stu-id="7c552-115">Get started with .NET for Apache Spark</span></span>](../tutorials/get-started.md)
-* [<span data-ttu-id="7c552-116">Azure HDInsight 'a bir .NET Apache Spark uygulaması dağıtma</span><span class="sxs-lookup"><span data-stu-id="7c552-116">Deploy a .NET for Apache Spark application to Azure HDInsight</span></span>](../tutorials/hdinsight-deployment.md)
-* [<span data-ttu-id="7c552-117">Databricks 'e Apache Spark uygulamasına yönelik bir .NET dağıtımı</span><span class="sxs-lookup"><span data-stu-id="7c552-117">Deploy a .NET for Apache Spark application to Databricks</span></span>](../tutorials/databricks-deployment.md)
-* [<span data-ttu-id="7c552-118">Amazon EMR Spark için bir .NET Apache Spark uygulaması dağıtma</span><span class="sxs-lookup"><span data-stu-id="7c552-118">Deploy a .NET for Apache Spark application to Amazon EMR Spark</span></span>](../tutorials/amazon-emr-spark-deployment.md)
+* [<span data-ttu-id="7418a-127">Apache Spark için .NET ile çalışmaya başlama</span><span class="sxs-lookup"><span data-stu-id="7418a-127">Get started with .NET for Apache Spark</span></span>](../tutorials/get-started.md)
+* [<span data-ttu-id="7418a-128">Azure HDInsight 'a bir .NET Apache Spark uygulaması dağıtma</span><span class="sxs-lookup"><span data-stu-id="7418a-128">Deploy a .NET for Apache Spark application to Azure HDInsight</span></span>](../tutorials/hdinsight-deployment.md)
+* [<span data-ttu-id="7418a-129">Databricks 'e Apache Spark uygulamasına yönelik bir .NET dağıtımı</span><span class="sxs-lookup"><span data-stu-id="7418a-129">Deploy a .NET for Apache Spark application to Databricks</span></span>](../tutorials/databricks-deployment.md)
+* [<span data-ttu-id="7418a-130">Amazon EMR Spark için bir .NET Apache Spark uygulaması dağıtma</span><span class="sxs-lookup"><span data-stu-id="7418a-130">Deploy a .NET for Apache Spark application to Amazon EMR Spark</span></span>](../tutorials/amazon-emr-spark-deployment.md)
