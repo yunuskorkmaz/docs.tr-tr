@@ -4,49 +4,49 @@ description: Mac, Linux ve Windows 'da uygulamalar ve kitaplıklar oluşturmak i
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 7039d5877ecbd4477d64991321a7fc46cadc2848
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4e0acc357453d3bd3fb877e357264cc1aa715e4c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714038"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920436"
 ---
-# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a><span data-ttu-id="1c94a-103">Bu öğreticileri inceleyerek .NET Core ve .NET Core SDK araçları hakkında bilgi edinin</span><span class="sxs-lookup"><span data-stu-id="1c94a-103">Learn .NET Core and the .NET Core SDK tools by exploring these tutorials</span></span>
+# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a><span data-ttu-id="2ea7a-103">Bu öğreticileri inceleyerek .NET Core ve .NET Core SDK araçları hakkında bilgi edinin</span><span class="sxs-lookup"><span data-stu-id="2ea7a-103">Learn .NET Core and the .NET Core SDK tools by exploring these tutorials</span></span>
 
-<span data-ttu-id="1c94a-104">.NET Core hakkında bilgi edinmek için aşağıdaki öğreticiler mevcuttur.</span><span class="sxs-lookup"><span data-stu-id="1c94a-104">The following tutorials are available for learning about .NET Core.</span></span>
+<span data-ttu-id="2ea7a-104">.NET Core hakkında bilgi edinmek için aşağıdaki öğreticiler mevcuttur.</span><span class="sxs-lookup"><span data-stu-id="2ea7a-104">The following tutorials are available for learning about .NET Core.</span></span>
 
-## <a name="create-applications-with-visual-studio"></a><span data-ttu-id="1c94a-105">Visual Studio ile uygulama oluşturma</span><span class="sxs-lookup"><span data-stu-id="1c94a-105">Create applications with Visual Studio</span></span>
+## <a name="create-applications-with-visual-studio"></a><span data-ttu-id="2ea7a-105">Visual Studio ile uygulama oluşturma</span><span class="sxs-lookup"><span data-stu-id="2ea7a-105">Create applications with Visual Studio</span></span>
 
-- [<span data-ttu-id="1c94a-106">Merhaba Dünya konsol uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="1c94a-106">Create a Hello World console application</span></span>](with-visual-studio.md)
-- [<span data-ttu-id="1c94a-107">Merhaba Dünya uygulamanızda hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="1c94a-107">Debug your Hello World application</span></span>](debugging-with-visual-studio.md)
-- [<span data-ttu-id="1c94a-108">Merhaba Dünya uygulamanızı yayımlama</span><span class="sxs-lookup"><span data-stu-id="1c94a-108">Publish your Hello World application</span></span>](publishing-with-visual-studio.md)
-- [<span data-ttu-id="1c94a-109">Sınıf kitaplığı oluşturma</span><span class="sxs-lookup"><span data-stu-id="1c94a-109">Build a class library</span></span>](library-with-visual-studio.md)
-- [<span data-ttu-id="1c94a-110">Sınıf kitaplığını test etme</span><span class="sxs-lookup"><span data-stu-id="1c94a-110">Test a class library</span></span>](testing-library-with-visual-studio.md)
-- [<span data-ttu-id="1c94a-111">Sınıf Kitaplığı kullanma</span><span class="sxs-lookup"><span data-stu-id="1c94a-111">Consume a class library</span></span>](consuming-library-with-visual-studio.md)
-- [<span data-ttu-id="1c94a-112">Azure Cosmos DB: SQL API ve .NET Core ile çalışmaya başlama</span><span class="sxs-lookup"><span data-stu-id="1c94a-112">Azure Cosmos DB: Get started with the SQL API and .NET Core</span></span>](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [<span data-ttu-id="2ea7a-106">Merhaba Dünya konsol uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="2ea7a-106">Create a Hello World console application</span></span>](with-visual-studio.md)
+- [<span data-ttu-id="2ea7a-107">Merhaba Dünya uygulamanızda hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="2ea7a-107">Debug your Hello World application</span></span>](debugging-with-visual-studio.md)
+- [<span data-ttu-id="2ea7a-108">Merhaba Dünya uygulamanızı yayımlama</span><span class="sxs-lookup"><span data-stu-id="2ea7a-108">Publish your Hello World application</span></span>](publishing-with-visual-studio.md)
+- [<span data-ttu-id="2ea7a-109">Sınıf kitaplığı oluşturma</span><span class="sxs-lookup"><span data-stu-id="2ea7a-109">Build a class library</span></span>](library-with-visual-studio.md)
+- [<span data-ttu-id="2ea7a-110">Sınıf kitaplığını test etme</span><span class="sxs-lookup"><span data-stu-id="2ea7a-110">Test a class library</span></span>](testing-library-with-visual-studio.md)
+- [<span data-ttu-id="2ea7a-111">Sınıf Kitaplığı kullanma</span><span class="sxs-lookup"><span data-stu-id="2ea7a-111">Consume a class library</span></span>](consuming-library-with-visual-studio.md)
+- [<span data-ttu-id="2ea7a-112">Azure Cosmos DB: SQL API ve .NET Core ile çalışmaya başlama</span><span class="sxs-lookup"><span data-stu-id="2ea7a-112">Azure Cosmos DB: Get started with the SQL API and .NET Core</span></span>](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
-## <a name="build-applications-with-visual-studio-code"></a><span data-ttu-id="1c94a-113">Visual Studio Code ile uygulama oluşturma</span><span class="sxs-lookup"><span data-stu-id="1c94a-113">Build applications with Visual Studio Code</span></span>
+## <a name="build-applications-with-visual-studio-code"></a><span data-ttu-id="2ea7a-113">Visual Studio Code ile uygulama oluşturma</span><span class="sxs-lookup"><span data-stu-id="2ea7a-113">Build applications with Visual Studio Code</span></span>
 
-- [<span data-ttu-id="1c94a-114">C# ve Visual Studio Code kullanmaya başlama</span><span class="sxs-lookup"><span data-stu-id="1c94a-114">Get started with C# and Visual Studio Code</span></span>](with-visual-studio-code.md)
-- [<span data-ttu-id="1c94a-115">MacOS üzerinde .NET Core kullanmaya başlama</span><span class="sxs-lookup"><span data-stu-id="1c94a-115">Get started with .NET Core on macOS</span></span>](using-on-macos.md)
+- [<span data-ttu-id="2ea7a-114">C# ve Visual Studio Code kullanmaya başlama</span><span class="sxs-lookup"><span data-stu-id="2ea7a-114">Get started with C# and Visual Studio Code</span></span>](with-visual-studio-code.md)
+- [<span data-ttu-id="2ea7a-115">MacOS üzerinde .NET Core kullanmaya başlama</span><span class="sxs-lookup"><span data-stu-id="2ea7a-115">Get started with .NET Core on macOS</span></span>](using-on-macos.md)
 
-## <a name="build-applications-with-visual-studio-for-mac"></a><span data-ttu-id="1c94a-116">Mac için Visual Studio ile uygulama oluşturma</span><span class="sxs-lookup"><span data-stu-id="1c94a-116">Build applications with Visual Studio for Mac</span></span>
+## <a name="build-applications-with-visual-studio-for-mac"></a><span data-ttu-id="2ea7a-116">Mac için Visual Studio ile uygulama oluşturma</span><span class="sxs-lookup"><span data-stu-id="2ea7a-116">Build applications with Visual Studio for Mac</span></span>
 
-- [<span data-ttu-id="1c94a-117">Mac için Visual Studio kullanarak macOS üzerinde .NET Core kullanmaya başlama</span><span class="sxs-lookup"><span data-stu-id="1c94a-117">Get started with .NET Core on macOS using Visual Studio for Mac</span></span>](using-on-mac-vs.md)
-- [<span data-ttu-id="1c94a-118">Mac için Visual Studio kullanarak macOS’ta eksiksiz bir .NET Core çözümü derleme</span><span class="sxs-lookup"><span data-stu-id="1c94a-118">Building a complete .NET Core solution on macOS using Visual Studio for Mac</span></span>](using-on-mac-vs-full-solution.md)
+- [<span data-ttu-id="2ea7a-117">Mac için Visual Studio kullanarak macOS üzerinde .NET Core kullanmaya başlama</span><span class="sxs-lookup"><span data-stu-id="2ea7a-117">Get started with .NET Core on macOS using Visual Studio for Mac</span></span>](using-on-mac-vs.md)
+- [<span data-ttu-id="2ea7a-118">Mac için Visual Studio kullanarak macOS’ta eksiksiz bir .NET Core çözümü derleme</span><span class="sxs-lookup"><span data-stu-id="2ea7a-118">Building a complete .NET Core solution on macOS using Visual Studio for Mac</span></span>](using-on-mac-vs-full-solution.md)
 
-## <a name="build-applications-with-the-net-core-cli-tools"></a><span data-ttu-id="1c94a-119">.NET Core CLI araçlarıyla uygulamalar oluşturun</span><span class="sxs-lookup"><span data-stu-id="1c94a-119">Build applications with the .NET Core CLI tools</span></span>
+## <a name="build-applications-with-the-net-core-cli"></a><span data-ttu-id="2ea7a-119">.NET Core CLI uygulamalar oluşturun</span><span class="sxs-lookup"><span data-stu-id="2ea7a-119">Build applications with the .NET Core CLI</span></span>
 
-- [<span data-ttu-id="1c94a-120">.NET Core CLI araçlarını kullanarak Windows/Linux/macOS 'ta .NET Core ile çalışmaya başlama</span><span class="sxs-lookup"><span data-stu-id="1c94a-120">Get started with .NET Core on Windows/Linux/macOS using the .NET Core CLI tools</span></span>](cli-create-console-app.md)
-- [<span data-ttu-id="1c94a-121">.NET Core CLI araçlarıyla projeleri düzenleme ve test etme</span><span class="sxs-lookup"><span data-stu-id="1c94a-121">Organizing and testing projects with the .NET Core CLI tools</span></span>](testing-with-cli.md)
-- [<span data-ttu-id="1c94a-122">Kullanmaya başlayınF#</span><span class="sxs-lookup"><span data-stu-id="1c94a-122">Get started with F#</span></span>](../../fsharp/get-started/get-started-command-line.md)
+- [<span data-ttu-id="2ea7a-120">.NET Core CLI kullanarak Windows/Linux/macOS 'ta .NET Core ile çalışmaya başlama</span><span class="sxs-lookup"><span data-stu-id="2ea7a-120">Get started with .NET Core on Windows/Linux/macOS using the .NET Core CLI</span></span>](cli-create-console-app.md)
+- [<span data-ttu-id="2ea7a-121">.NET Core CLI projeleri düzenleme ve test etme</span><span class="sxs-lookup"><span data-stu-id="2ea7a-121">Organizing and testing projects with the .NET Core CLI</span></span>](testing-with-cli.md)
+- [<span data-ttu-id="2ea7a-122">Kullanmaya başlayınF#</span><span class="sxs-lookup"><span data-stu-id="2ea7a-122">Get started with F#</span></span>](../../fsharp/get-started/get-started-command-line.md)
 
-## <a name="other"></a><span data-ttu-id="1c94a-123">Diğer</span><span class="sxs-lookup"><span data-stu-id="1c94a-123">Other</span></span>
+## <a name="other"></a><span data-ttu-id="2ea7a-123">Diğer</span><span class="sxs-lookup"><span data-stu-id="2ea7a-123">Other</span></span>
 
-- [<span data-ttu-id="1c94a-124">DotNet testini kullanarak .NET Core 'da birim testi</span><span class="sxs-lookup"><span data-stu-id="1c94a-124">Unit Testing in .NET Core using dotnet test</span></span>](../testing/unit-testing-with-dotnet-test.md)
-- [<span data-ttu-id="1c94a-125">MSTest ve .NET Core ile birim testi</span><span class="sxs-lookup"><span data-stu-id="1c94a-125">Unit testing with MSTest and .NET Core</span></span>](../testing/unit-testing-with-mstest.md)
-- [<span data-ttu-id="1c94a-126">Platformlar Arası Araçlarla Kitaplık Geliştirme</span><span class="sxs-lookup"><span data-stu-id="1c94a-126">Developing Libraries with Cross Platform Tools</span></span>](libraries.md)
-- [<span data-ttu-id="1c94a-127">Yerel koddan .NET Core barındırma</span><span class="sxs-lookup"><span data-stu-id="1c94a-127">Hosting .NET Core from native code</span></span>](netcore-hosting.md)
-- [<span data-ttu-id="1c94a-128">Dotnet new için özel şablon oluşturma</span><span class="sxs-lookup"><span data-stu-id="1c94a-128">Create a custom template for dotnet new</span></span>](cli-templates-create-item-template.md)
+- [<span data-ttu-id="2ea7a-124">DotNet testini kullanarak .NET Core 'da birim testi</span><span class="sxs-lookup"><span data-stu-id="2ea7a-124">Unit Testing in .NET Core using dotnet test</span></span>](../testing/unit-testing-with-dotnet-test.md)
+- [<span data-ttu-id="2ea7a-125">MSTest ve .NET Core ile birim testi</span><span class="sxs-lookup"><span data-stu-id="2ea7a-125">Unit testing with MSTest and .NET Core</span></span>](../testing/unit-testing-with-mstest.md)
+- [<span data-ttu-id="2ea7a-126">Platformlar Arası Araçlarla Kitaplık Geliştirme</span><span class="sxs-lookup"><span data-stu-id="2ea7a-126">Developing Libraries with Cross Platform Tools</span></span>](libraries.md)
+- [<span data-ttu-id="2ea7a-127">Yerel koddan .NET Core barındırma</span><span class="sxs-lookup"><span data-stu-id="2ea7a-127">Hosting .NET Core from native code</span></span>](netcore-hosting.md)
+- [<span data-ttu-id="2ea7a-128">Dotnet new için özel şablon oluşturma</span><span class="sxs-lookup"><span data-stu-id="2ea7a-128">Create a custom template for dotnet new</span></span>](cli-templates-create-item-template.md)
 
-<span data-ttu-id="1c94a-129">ASP.NET Core Web uygulamaları geliştirme hakkında öğreticiler için [ASP.NET Core belgelerine](/aspnet/core/)bakın.</span><span class="sxs-lookup"><span data-stu-id="1c94a-129">For tutorials about developing ASP.NET Core web applications, see the [ASP.NET Core documentation](/aspnet/core/).</span></span>
+<span data-ttu-id="2ea7a-129">ASP.NET Core Web uygulamaları geliştirme hakkında öğreticiler için [ASP.NET Core belgelerine](/aspnet/core/)bakın.</span><span class="sxs-lookup"><span data-stu-id="2ea7a-129">For tutorials about developing ASP.NET Core web applications, see the [ASP.NET Core documentation](/aspnet/core/).</span></span>
