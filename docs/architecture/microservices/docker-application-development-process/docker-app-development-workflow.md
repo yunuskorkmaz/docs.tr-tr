@@ -2,12 +2,12 @@
 title: Docker uygulamaları için geliştirme iş akışı
 description: Docker tabanlı uygulamalar geliştirmeye yönelik iş akışının ayrıntılarını anlayın. Adım adım ilerleyin ve Dockerfiles 'ı iyileştirmek ve Visual Studio 'Yu kullanırken kullanılabilecek Basitleştirilmiş iş akışıyla sona erdirmek için bazı ayrıntılara ulaşın.
 ms.date: 01/07/2019
-ms.openlocfilehash: 0c2789377bc388b8ac7373ee7fa46e3141f1b518
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5df646ffaba67a016d2b18959b9873b52c3d5e4c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "73740197"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920335"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -409,7 +409,7 @@ Mikro hizmetleri ve çok Kapsayıcılı uygulamaları nasıl uygulayacağınız�
 
 ### <a name="working-with-docker-composeyml-in-visual-studio-2017"></a>Visual Studio 2017 ' de Docker-Compose. yıml ile çalışma
 
-Daha önce bahsedildiği gibi, bir projeye Dockerfile eklemenin yanı sıra, Visual Studio 2017 (15,8 ' den itibaren) bir çözüme Docker Compose için Orchestrator desteği ekleyebilir.
+Daha önce bahsedildiği gibi, bir projeye Dockerfile eklemenin yanı sıra, Visual Studio 2017 (sürüm 15,8 ' den itibaren) bir çözüme Docker Compose için Orchestrator desteği ekleyebilirler.
 
 Şekil 5-7 ' de gösterildiği gibi, kapsayıcı Orchestrator desteğini ilk kez eklediğinizde, Visual Studio proje için Dockerfile 'ı oluşturur ve çeşitli küresel `docker-compose*.yml` dosyaları ile çözümünüzde yeni bir (hizmet bölümü) projesi oluşturur ve ardından projeyi bu dosyalara ekler. Daha sonra Docker-Compose. yıml dosyalarını açabilir ve bunları ek özelliklerle güncelleştirebilirsiniz.
 
@@ -574,7 +574,7 @@ RUN powershell add-windowsfeature web-asp-net45
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **ASPNET-Docker/Dockerfile.** Windows özelliklerini dahil etmek için dockerfile 'ları destekliyor 'tan çalıştırılacak örnek PowerShell komutları. \
+- **aspnet-docker/Dockerfile.** Windows özelliklerini dahil etmek için dockerfile 'ları destekliyor 'tan çalıştırılacak örnek PowerShell komutları. \
   <https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile>
 
 >[!div class="step-by-step"]

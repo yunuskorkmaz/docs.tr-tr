@@ -2,12 +2,12 @@
 title: Docker nedir?
 description: Docker 'ın anlaşılmasından biraz daha ayrıntılı bir şekilde yararlandığınızda, size yardımcı olabilecek basit bir benzerleme vurguladı.
 ms.date: 02/15/2019
-ms.openlocfilehash: 8636ae3b1ad32158e10ce2aa58423f9c9824d8c0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e3b3685f2fc6d5a9d33bb176d04ca910f0289344
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738168"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919871"
 ---
 # <a name="what-is-docker"></a>Docker nedir?
 
@@ -19,7 +19,7 @@ ms.locfileid: "73738168"
 
 Yukarıdaki diyagramda gösterildiği gibi, Docker kapsayıcıları, müşteri veri merkezinde her yerde, şirket içi bir hizmet sağlayıcısında veya bulutta, Azure 'da yer alabilir. Docker görüntü kapsayıcıları, Linux ve Windows üzerinde yerel olarak da çalıştırılabilir. Ancak, Windows yansımaları yalnızca Windows konakları üzerinde çalışabilir ve Linux görüntüleri Linux konakları ve Windows konakları üzerinde çalıştırılabilir (Bu nedenle, ana bilgisayar bir sunucu veya VM anlamına gelir).
 
-Geliştiriciler Windows, Linux veya macOS 'ta geliştirme ortamlarını kullanabilir. Geliştirme bilgisayarında, geliştirici, uygulama ve bağımlılıkları dahil olmak üzere Docker görüntülerinin dağıtıldığı bir Docker ana bilgisayarı çalıştırır. Linux veya Mac üzerinde çalışan geliştiriciler, Linux tabanlı bir Docker Konağı kullanır ve yalnızca Linux kapsayıcıları için görüntü oluşturabilir. (Mac üzerinde çalışan geliştiriciler, macOS 'tan kod düzenleyebilir veya Docker komut satırı arabirimini (CLı) çalıştırabilir, ancak bu yazma itibariyle kapsayıcılar doğrudan macOS üzerinde çalışmaz.) Windows üzerinde çalışan geliştiriciler, Linux ya da Windows kapsayıcıları için görüntü oluşturabilir.
+Geliştiriciler Windows, Linux veya macOS 'ta geliştirme ortamlarını kullanabilir. Geliştirme bilgisayarında, geliştirici, uygulama ve bağımlılıkları dahil olmak üzere Docker görüntülerinin dağıtıldığı bir Docker ana bilgisayarı çalıştırır. Linux veya Mac üzerinde çalışan geliştiriciler, Linux tabanlı bir Docker Konağı kullanır ve yalnızca Linux kapsayıcıları için görüntü oluşturabilir. (Mac üzerinde çalışan geliştiriciler kodu düzenleyebilir veya macOS 'tan Docker CLı 'yi çalıştırabilir, ancak bu yazma itibariyle kapsayıcılar doğrudan macOS üzerinde çalışmaz.) Windows üzerinde çalışan geliştiriciler, Linux ya da Windows kapsayıcıları için görüntü oluşturabilir.
 
 Geliştirme ortamlarında kapsayıcıları barındırmak ve ek geliştirici araçları sağlamak için Docker, Windows veya macOS için [Docker Community Edition (CE)](https://www.docker.com/community-edition) ile birlikte gelir. Bu ürünler, kapsayıcıları barındırmak için gerekli VM 'yi (Docker ana bilgisayarı) yükler. Docker Ayrıca Kurumsal Geliştirme için tasarlanan kullanılabilir [Docker Enterprise Edition 'ı (ee)](https://www.docker.com/enterprise-edition)de sunar ve üretimde büyük işletme açısından kritik uygulamalar oluşturan, gönderen ve çalıştıran BT ekipleri tarafından kullanılır.
 

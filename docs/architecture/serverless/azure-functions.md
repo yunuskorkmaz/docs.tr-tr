@@ -4,12 +4,12 @@ description: Azure işlevleri, olay odaklı anında ölçeklendirme kodu sağlam
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5e8187b3752a0f0d0bcf8e15f2ce440dc5a64e45
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 8764e6a33f3fdd53e60fa767d0fb584a9c07de7e
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72522871"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920976"
 ---
 # <a name="azure-functions"></a>Azure İşlevleri
 
@@ -61,7 +61,7 @@ Daha fazla bilgi için bkz. [App Service planları](https://docs.microsoft.com/a
 İşlev uygulamaları oluşturabileceğiniz üç yaygın yol vardır.
 
 - Portalda betik işlevleri.
-- Azure komut satırı arabirimi 'ni (CLı) kullanarak gerekli kaynakları oluşturun.
+- Azure CLı kullanarak gereken kaynakları oluşturun.
 - En sevdiğiniz IDE 'yi kullanarak işlevleri yerel olarak derleyin ve Azure 'da yayımlayın.
 
 Portalda betikleştirilmiş bir işlev oluşturma hakkında daha fazla bilgi için, [Azure Portal ilk işlevinizi oluşturma](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)bölümüne bakın.

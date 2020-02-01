@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Orta
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 4dd747293fba4c18c2d10738d36f4d98cfd3f5b9
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: bf346825c7e29831111fc11c836ca6b4a05a18ce
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926495"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920992"
 ---
 # <a name="common-client-side-web-technologies"></a>Ortak istemci tarafı web teknolojileri
 
@@ -24,7 +24,7 @@ HTML ve CSS görece kararlı olsa da, JavaScript, uygulama çerçeveleri ve yard
 
 HTML (köprü metni biçimlendirme dili), Web sayfaları ve Web uygulamaları oluşturmak için kullanılan standart biçimlendirme dilidir. Öğeleri, biçimlendirilen metin, görüntüler, form girişleri ve diğer yapıları temsil eden sayfa oluşturma blokları oluşturuyor. Bir tarayıcı bir URL 'ye istek yaptığında, bir sayfa veya uygulama döndürmeksizin döndürülen ilk şey bir HTML belgesidir. Bu HTML belgesi, CSS biçimindeki görünüm ve düzen ile ilgili ek bilgilere başvurabilir veya JavaScript biçiminde davranış gösterebilir.
 
-## <a name="css"></a>CSS
+## <a name="css"></a>{1&gt;CSS&lt;1}
 
 CSS (Geçişli Stil Sayfaları), HTML öğelerinin görünüm ve yerleşimini denetlemek için kullanılır. CSS stilleri, aynı sayfada ayrı olarak tanımlanan veya ayrı bir dosyada tanımlanmış ve sayfa tarafından başvurulan bir HTML öğesine doğrudan uygulanabilir. Stiller, belirli bir HTML öğesini seçmek için nasıl kullanıldığına göre basamaklandırılır. Örneğin, bir stil tüm belgeye uygulanabilir, ancak belirli bir öğeye uygulanan bir stil tarafından geçersiz kılınır. Benzer şekilde, öğeye özgü bir stil, öğesine uygulanan bir CSS sınıfına uygulanan bir stil tarafından geçersiz kılınır. Bu, sırasıyla bu öğenin belirli bir örneğini hedefleyen bir stil tarafından geçersiz kılınır (kimliği aracılığıyla). Şekil 6-1
 
@@ -98,7 +98,7 @@ Bileşenler, bileşeni hakkında meta veriler alan @Component dekoratör işlevi
 
 DOM öğeleri yerine bileşenler ve şablonlar ile çalışarak, angular uygulamaları daha yüksek bir soyutlama düzeyinde ve yalnızca JavaScript ("Vanilla JS" olarak da bilinir) kullanılarak yazılmış uygulamalardan veya jQuery ile daha az genel kodla çalışabilir. Angular Ayrıca, istemci tarafı betik dosyalarınızı düzenleme konusunda bir sıralama uygular. Kurala göre, angular uygulamaları, bir uygulama klasöründe bulunan modül ve bileşen komut dosyaları ile ortak bir klasör yapısı kullanır. Uygulama oluşturma, dağıtma ve test etme ile ilgili angular betikleri genellikle daha yüksek düzey bir klasörde bulunur.
 
-Angular ayrıca komut satırı arabirimi (CLı) araçlarının harika bir şekilde kullanılmasını sağlar. Angular geliştirmeyi yerel olarak kullanmaya başlama (git ve NPM 'nin yüklü olduğu varsayılarak), GitHub 'dan bir depoyu kopyalamayı ve `npm install` ve `npm start`çalıştırmayı içerir. Bunun ötesinde, angular, proje oluşturabileceğiniz, dosya ekleyen ve test etme, paketleme ve dağıtım görevlerine yardımcı olan kendi CLı aracını dağıtırın. Bu CLı araçları, özellikle de ASP.NET Core ile uyumlu olan ve harika CLı desteği sunan bir fikir sunar.
+CLı kullanarak angular uygulamaları geliştirebilirsiniz. Angular geliştirmeyi yerel olarak kullanmaya başlama (git ve NPM 'nin yüklü olduğu varsayılarak), GitHub 'dan bir depoyu kopyalamayı ve `npm install` ve `npm start`çalıştırmayı içerir. Bunun ötesinde, angular, proje oluşturabileceğiniz, dosya ekleyebilen ve test, paketleme ve dağıtım görevlerine yardımcı olan kendi CLı 'yı dağıtırın. Bu CLı daha yakından, büyük CLı desteğini de kapsayan ASP.NET Core özellikle uyumlu hale getirir.
 
 Microsoft, angular SPA uygulaması içeren bir başvuru uygulaması ( [Eshoponcontainers](https://aka.ms/MicroservicesArchitecture)) geliştirmiştir. Bu uygulama, çevrimiçi mağaza alışveriş sepetini yönetmek, kataloğundan öğeleri yüklemek ve göstermek ve sipariş oluşturmayı işlemek için angular modüllerini içerir. Örnek uygulamayı [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA)' dan görüntüleyebilir ve indirebilirsiniz.
 

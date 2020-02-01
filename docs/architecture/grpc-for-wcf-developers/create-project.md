@@ -2,12 +2,12 @@
 title: WCF geliştiricileri için yeni bir ASP.NET Core gRPC projesi oluşturma-gRPC
 description: Visual Studio veya komut satırını kullanarak bir gRPC projesi oluşturmayı öğrenin.
 ms.date: 09/02/2019
-ms.openlocfilehash: ea6d7658404f61fedb25d7de7ddedb7c51437383
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: fbcc598cf503a5baeca941803ff8fa0d5fc99671
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711443"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919407"
 ---
 # <a name="create-a-new-aspnet-core-grpc-project"></a>Yeni bir ASP.NET Core gRPC projesi oluşturma
 
@@ -16,13 +16,13 @@ ms.locfileid: "74711443"
 ## <a name="create-the-project-by-using-visual-studio"></a>Visual Studio 'Yu kullanarak proje oluşturma
 
 > [!IMPORTANT]
-> ASP.NET Core 3,0 uygulaması geliştirmek için, **ASP.net ve Web geliştirme** iş yükü yüklüyken Visual Studio 2019 16,3 veya sonraki bir sürüme sahip olmanız gerekir.
+> ASP.NET Core 3,0 uygulaması geliştirmek için, **ASP.net ve Web geliştirme** iş yükü yüklüyken Visual Studio 2019 sürüm 16,3 veya sonraki bir sürüme sahip olmanız gerekir.
 
 *Boş çözüm* şablonundan **tradersys** adlı boş bir çözüm oluşturun. `src`adlı bir çözüm klasörü ekleyin. Ardından, klasöre sağ tıklayıp > **Yeni proje** **Ekle** ' yi seçin. Şablon arama kutusuna `grpc` girin ve `gRPC Service`adlı bir proje şablonu görmeniz gerekir.
 
 ![Yeni Proje Ekle iletişim kutusunun ekran görüntüsü](media/create-project/new-grpc-project.png)
 
-**Yeni projeyi Yapılandır** iletişim kutusunu kullanmaya devam etmek için **İleri ' yi** seçin. Projeyi `TraderSys.Portfolios`olarak adlandırın ve **konuma**bir `src` alt dizini ekleyin.
+**Yeni projeyi Yapılandır** iletişim kutusunu kullanmaya devam etmek için **İleri ' yi** seçin. Projeyi `TraderSys.Portfolios` adlandırın ve **konuma**bir `src` alt dizin ekleyin.
 
 ![Yeni projenizi yapılandırma iletişim kutusunun ekran görüntüsü](media/create-project/configure-project.png)
 

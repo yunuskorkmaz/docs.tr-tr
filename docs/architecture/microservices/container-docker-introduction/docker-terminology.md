@@ -2,12 +2,12 @@
 title: Docker terimleri
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Docker terminolojisi
 ms.date: 01/07/2019
-ms.openlocfilehash: 2735188c508a7bbb0101946429faec122b13a17b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 33f2918df5b63cc4bd54ddb84900c6bd91e9f77e
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090047"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921013"
 ---
 # <a name="docker-terminology"></a>Docker terimleri
 
@@ -47,7 +47,7 @@ Bu bölümde, Docker 'a daha ayrıntılı bir şekilde yararlanmak için bilmeni
 
 **Küme**: tek bir sanal Docker ana bilgisayarı gibi kullanıma sunulan Docker konaklarının bir koleksiyonu, uygulamanın birden fazla hizmetin kümedeki birden fazla örneğine yayılabilmesini sağlamak için, bu, uygulamanın birden çok hizmet örneğine ölçeklenebilmesini sağlar. Docker kümeleri, Kubernetes, Azure Service Fabric, Docker Sısınma ve Mesosphere DC/OS ile oluşturulabilir.
 
-**Orchestrator**: kümelerin ve Docker konaklarının yönetimini kolaylaştıran bir araç. Düzenleyiciler, bir komut satırı arabirimi (CLı) veya grafik kullanıcı arabirimi aracılığıyla görüntülerini, kapsayıcıları ve konaklarını yönetmenizi sağlar. Kapsayıcı ağ, yapılandırma, Yük Dengeleme, hizmet bulma, yüksek kullanılabilirlik, Docker ana bilgisayar yapılandırması ve daha fazlasını yönetebilirsiniz. Bir Orchestrator, bir düğüm koleksiyonunda çalıştırma, dağıtma, ölçekleme ve düzeltme yüklerini çalıştırmaktan sorumludur. Genellikle, Orchestrator ürünleri, piyasadaki diğer tekliflerin yanı sıra Kubernetes ve Azure Service Fabric gibi küme altyapısı sağlayan ürünlerdir.
+**Orchestrator**: kümelerin ve Docker konaklarının yönetimini kolaylaştıran bir araç. Düzenleyiciler bir CLı veya grafik kullanıcı arabirimi aracılığıyla görüntülerini, kapsayıcıları ve konaklarını yönetmenizi sağlar. Kapsayıcı ağ, yapılandırma, Yük Dengeleme, hizmet bulma, yüksek kullanılabilirlik, Docker ana bilgisayar yapılandırması ve daha fazlasını yönetebilirsiniz. Bir Orchestrator, bir düğüm koleksiyonunda çalıştırma, dağıtma, ölçekleme ve düzeltme yüklerini çalıştırmaktan sorumludur. Genellikle, Orchestrator ürünleri, piyasadaki diğer tekliflerin yanı sıra Kubernetes ve Azure Service Fabric gibi küme altyapısı sağlayan ürünlerdir.
 
 >[!div class="step-by-step"]
 >[Önceki](docker-defined.md)

@@ -2,12 +2,12 @@
 title: Mikro hizmet odaklı bir uygulama tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmet odaklı bir uygulamanın avantajlarını ve altlarını anlayın ve bu sayede bilinçli bir karar alabilirsiniz.
 ms.date: 10/02/2018
-ms.openlocfilehash: a783d582f39d25be0123f410553a54af970a4f67
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 63c93f237172d80704c00472ef2d4cbf7c787ab0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739556"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921017"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Mikro hizmet odaklı bir uygulama tasarlama
 

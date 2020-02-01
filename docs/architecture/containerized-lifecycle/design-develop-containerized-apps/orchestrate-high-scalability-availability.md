@@ -2,12 +2,12 @@
 title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 description: Gerçek üretim uygulamalarının, tüm kapsayıcıların sistem durumunu, iş yükünü ve yaşam döngülerini ele alan düzenleyiciler ile dağıtılması ve yönetilmesi gerekir.
 ms.date: 02/15/2019
-ms.openlocfilehash: eb02a89a58b7df449edc05461e11fbeeec86b4a1
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e548e6b3816dec1e56c273c53c9fd052443eb09b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771083"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919535"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 
@@ -21,7 +21,7 @@ Uygulamanızın mikro hizmetlere dayalı olması veya birden çok kapsayıcıya 
 
 Mantıksal bir yaklaşım gibi görünüyor. Ancak yük dengelemeyi nasıl işleirsiniz, Yönlendirme ve bu oluşturulan uygulamalar nasıl düzenlenir?
 
-Docker komut satırı arabirimi (CLı), bir konak üzerinde tek bir kapsayıcıyı yönetme ihtiyaçlarını karşılar, ancak daha karmaşık dağıtılmış uygulamalar için birden çok konağa dağıtılan birden çok kapsayıcıyı yönetmek için geldiğinde kısa sürer. Çoğu durumda, kapsayıcıları otomatik olarak başlatacak, her görüntü için birden fazla örneğe sahip kapsayıcıları ölçeklendirecek, onları askıya alacak veya gerektiğinde kapatmak için bir yönetim platformuna ihtiyacınız vardır ve ayrıca, ağ ve veri gibi kaynaklara nasıl eriştikleri de kontrol edersiniz Depo.
+Docker CLı, bir konak üzerinde tek bir kapsayıcıyı yönetme ihtiyaçlarını karşılar, ancak daha karmaşık dağıtılmış uygulamalar için birden çok konağa dağıtılan birden çok kapsayıcıyı yönetmek için geldiğinde kısa sürer. Çoğu durumda, kapsayıcıları otomatik olarak başlatacak, her görüntü için birden fazla örneğe sahip kapsayıcıları ölçeklendirecek, onları askıya alacak veya gerektiğinde kapatmak için bir yönetim platformuna ihtiyacınız vardır ve ayrıca, ağ ve veri gibi kaynaklara nasıl eriştikleri de kontrol edersiniz Depo.
 
 Tek tek kapsayıcıların veya basit oluşturulan uygulamaların yönetimini ötesinde ve mikro hizmetlerle daha büyük kurumsal uygulamalarda gezinmek için, düzenleme ve kümeleme platformları ' nı açmanız gerekir.
 

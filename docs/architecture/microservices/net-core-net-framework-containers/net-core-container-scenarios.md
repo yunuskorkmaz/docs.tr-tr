@@ -2,12 +2,12 @@
 title: Docker kapsayıcıları için ne zaman .NET Core seçilmelidir?
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Docker kapsayıcıları için ne zaman .NET Core seçme
 ms.date: 09/11/2018
-ms.openlocfilehash: 54ed1b4bbb16352b8c99204383f85ffb25d62be7
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d17b6b7620f485f09f8f18ac792418a48ae40037
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296502"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920986"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Docker kapsayıcıları için ne zaman .NET Core seçilmelidir?
 
@@ -27,9 +27,9 @@ Açık olarak, amacınız Docker (Linux ve Windows) tarafından desteklenen bird
 
 [Mac için Visual Studio](https://www.visualstudio.com/vs/visual-studio-mac/) , MacOS üzerinde çalışan ve Docker tabanlı uygulama geliştirmeyi destekleyen Xamarin Studio evrimi olan bir IDE 'dir. Bu, güçlü bir IDE kullanmak isteyen Mac makinelerde çalışan geliştiriciler için tercih edilen seçim olmalıdır.
 
-MacOS, Linux ve Windows üzerinde [Visual Studio Code](https://code.visualstudio.com/) (vs Code) de kullanabilirsiniz. VS Code IntelliSense ve hata ayıklama dahil .NET Core 'u tam olarak destekler. VS Code basit bir düzenleyici olduğundan, Docker CLı ve [.NET Core komut satırı arabirimi (CLI)](../../../core/tools/index.md)Ile birlikte Mac üzerinde Kapsayıcılı uygulamalar geliştirmek için kullanabilirsiniz. Ayrıca, IntelliSense desteği sağlayan alt Lime, Emacs, VI ve açık kaynaklı OmniSharp projesi gibi üçüncü taraf düzenleyicilerle de .NET Core 'u hedefleyebilirsiniz.
+MacOS, Linux ve Windows üzerinde [Visual Studio Code](https://code.visualstudio.com/) de kullanabilirsiniz. Visual Studio Code IntelliSense ve hata ayıklama dahil .NET Core 'u tam olarak destekler. VS Code basit bir düzenleyici olduğundan, Docker CLı ve [.NET Core CLI](../../../core/tools/index.md)birlikte Mac üzerinde Kapsayıcılı uygulamalar geliştirmek için kullanabilirsiniz. Ayrıca, IntelliSense desteği sağlayan alt Lime, Emacs, VI ve açık kaynaklı OmniSharp projesi gibi üçüncü taraf düzenleyicilerle de .NET Core 'u hedefleyebilirsiniz.
 
-Ides ve düzenleyicilere ek olarak, desteklenen tüm platformlar için [.NET Core CLI](../../../core/tools/index.md) araçlarını kullanabilirsiniz.
+Ides ve düzenleyicilere ek olarak, desteklenen tüm platformlar için [.NET Core CLI](../../../core/tools/index.md) kullanabilirsiniz.
 
 ## <a name="using-containers-for-new-green-field-projects"></a>Yeni ("yeşil-alan") projeler için kapsayıcıları kullanma
 
