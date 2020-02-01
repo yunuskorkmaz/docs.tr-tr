@@ -4,12 +4,12 @@ description: Bir paket Yöneticisi kullanarak .NET Core SDK ve çalışma zaman�
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 7a9d4524661e1230af7d1d50a4d8a60ad7774a68
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 32b152ff9be5135cf0ca7f8914bc9ee4f78000be
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740712"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920845"
 ---
 # <a name="debian-9-package-manager---install-net-core"></a>Detem 9 Paket Yöneticisi-.NET Core 'ı yükler
 
@@ -17,7 +17,7 @@ ms.locfileid: "75740712"
 
 Bu makalede, bir paket yöneticisinin .NET Core 'u debir 9 ' a yüklemek için nasıl kullanılacağı açıklanır. Çalışma zamanını yüklüyorsanız, hem .NET Core 'u hem de ASP.NET Core çalışma zamanlarını içerdiğinden [ASP.NET Core çalışma zamanını](#install-the-aspnet-core-runtime)yüklemenizi öneririz.
 
-## <a name="register-microsoft-key-and-feed"></a>Microsoft anahtarını ve akışını kaydetme
+## <a name="register-microsoft-key-and-feed"></a>Microsoft anahtar ve akışını Kaydet
 
 .NET yüklemeden önce şunları yapmanız gerekir:
 
@@ -25,7 +25,7 @@ Bu makalede, bir paket yöneticisinin .NET Core 'u debir 9 ' a yüklemek için n
 - Ürün deposunu kaydedin.
 - Gerekli bağımlılıkları yükler.
 
-Bu işlemin makine başına tek bir kez yapılması yeterlidir.
+Bu, makine başına yalnızca bir kez yapılmalıdır.
 
 Bir Terminal açın ve aşağıdaki komutları çalıştırın.
 
@@ -74,3 +74,11 @@ sudo apt-get install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>Paket yöneticisinin sorunlarını giderme
+
+Bu bölüm, .NET Core 'u yüklemek için Paket Yöneticisi 'ni kullanırken karşılaşabileceğiniz yaygın hatalarla ilgili bilgiler sağlar.
+
+### <a name="failed-to-fetch"></a>Getirilemedi
+
+[!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]

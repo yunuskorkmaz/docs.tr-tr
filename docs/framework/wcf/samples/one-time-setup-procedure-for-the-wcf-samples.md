@@ -2,12 +2,12 @@
 title: Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: b75dd523d4c88eae70f8d21ac8b3c9f72ae055ed
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1d7b5f6cb5922bde4b002611209ea3464f8e457c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744778"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921177"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 
@@ -63,7 +63,7 @@ Windows Communication Foundation (WCF) örneklerinin çoğu Internet Information
     > [!NOTE]
     > Bu adım tamamlanmazsa, derleme sırasında IIS 'de barındırılan tüm örnekler başarısız olur. İzinleri doğru şekilde ayarlamış olduğunuzdan emin olun veya hem SDK komut istemi 'ni hem de Visual Studio komut Istemi 'ni (2012) yönetici olarak çalıştırın.
 
-11. Bilgisayarda C:\logs dizini oluşturun; bazı örnekler bekleniyor olabilir. Uygun hesabın bu klasöre verilen yazma erişimi olduğundan emin olun. Windows 7, Windows Vista ve Windows Server 2008 R2 için bu hesap, **ağ hizmetidir**. Windows Server 2008 için, hesap NT Authority\Network Service ' dir. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ve Windows Server 2003 için, bu hesap ASPNET ' dir.
+11. Bilgisayarda C:\logs dizini oluşturun; bazı örnekler bekleniyor olabilir. Uygun hesabın bu klasöre verilen yazma erişimi olduğundan emin olun. Windows 7, Windows Vista ve Windows Server 2008 R2 için bu hesap, **ağ hizmetidir**. Windows Server 2008 için, hesap NT Authority\Network Service ' dir. Windows XP ve Windows Server 2003 için, bu hesap ASPNET ' dir.
 
 12. Setupcerttool. bat dosyasını çalıştırın. Bu dosya \<InstallPath > \ WF_WCF_Samples \WCF\Setup\ klasöründe bulunur.  Bu betik aşağıdaki görevleri gerçekleştirir:
 

@@ -2,12 +2,12 @@
 title: WS-AtomicTransaction Yapılandırması MMC Ek Bileşeni
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 9b6c7ecf112309b6c10414bfe506559e153911c2
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 0bcd08f9a3450c850ead941df6313526d076df2d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900721"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921344"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction Yapılandırması MMC ek bileşeni
 
@@ -15,11 +15,11 @@ WS-AtomicTransaction Yapılandırması MMC ek bileşeni, hem yerel hem de uzak m
 
 ## <a name="remarks"></a>Açıklamalar
 
-[!INCLUDE[wxp](../../../includes/wxp-md.md)] veya Windows Server 2003 çalıştırıyorsanız, MMC ek bileşeni **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri/** **, Bilgisayarım ' a sağ tıklayıp** **Özellikler**' i seçerek bulunabilir. Bu, MSDTC 'yi yapılandırabileceğiniz konumdur. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.
+Windows XP veya Windows Server 2003 çalıştırıyorsanız, MMC ek bileşeni **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri/** , Bilgisayarım ' a sağ tıklayıp **Özellikler** **' i seçerek**bulunabilir. Bu, MSDTC 'yi yapılandırabileceğiniz konumdur. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.
 
  Windows Vista veya Windows Server 2008 çalıştırıyorsanız, MMC ek bileşeni **Başlat** düğmesine tıklayıp **arama** kutusuna `dcomcnfg.exe` yazarak bulunabilir. MMC açıldığında, **bilgisayar \ dağıtılmış işlem Koordinatlıklasör** düğümü ' ne gidin, sağ tıklayın ve **Özellikler**' i seçin. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.
 
- Önceki adımlar, yerel bir makineyi yapılandırmak için ek bileşeni başlatmak üzere kullanılır. Uzak bir makineyi yapılandırmak istiyorsanız, uzak makinenin adını **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri**/olarak bulmanız ve [!INCLUDE[wxp](../../../includes/wxp-md.md)] veya Windows Server 2003 çalıştırıyorsanız benzer adımları gerçekleştirmeniz gerekir. Windows Vista veya Windows Server 2008 çalıştırıyorsanız, Vista ve Windows Server 2008 için önceki adımları izleyin, ancak uzak bilgisayarın düğümü altındaki **Dağıtılmış işlem Koordinatı\local DTC** düğümünü kullanın.
+ Önceki adımlar, yerel bir makineyi yapılandırmak için ek bileşeni başlatmak üzere kullanılır. Uzak bir makineyi yapılandırmak istiyorsanız, uzak makinenin adını **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri/** olarak bulmanız ve Windows XP veya windows Server 2003 çalıştırıyorsanız benzer adımları gerçekleştirmeniz gerekir. Windows Vista veya Windows Server 2008 çalıştırıyorsanız, Vista ve Windows Server 2008 için önceki adımları izleyin, ancak uzak bilgisayarın düğümü altındaki **Dağıtılmış işlem Koordinatı\local DTC** düğümünü kullanın.
 
  Araç tarafından sunulan kullanıcı arabirimini kullanmak için, aşağıdaki yolda bulunan WsatUI. dll dosyasını kaydetmeniz gerekir.
 

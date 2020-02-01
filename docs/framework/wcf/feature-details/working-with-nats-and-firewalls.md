@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: b8be10740c8e92d3dac7094f07b3372e8d78a3d9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 28360b8b5b07c7c532dd2406ca98604870b8335f
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743863"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921072"
 ---
 # <a name="working-with-nats-and-firewalls"></a>NAT ve Güvenlik Duvarlarıyla Çalışma
 Bir ağ bağlantısının istemci ve sunucusunun genellikle iletişim için doğrudan ve açık bir yolu yoktur. Paketler, hem uç nokta makinelerinde hem de ağdaki ara makinelerde filtrelenir, yönlendirilir, çözümlenir ve dönüştürülür. Ağ adresi çevirileri (NAT) ve güvenlik duvarları, ağ iletişimine katılabileceğiniz ara uygulamaların yaygın örnekleridir.  
@@ -25,7 +25,7 @@ Bir ağ bağlantısının istemci ve sunucusunun genellikle iletişim için doğ
  Bazı NAT 'ler, dış makinelerin belirli bir iç makineye bağlanmasına izin vermek için iletme kurallarının yapılandırılmasını destekler. İletme kurallarını yapılandırmaya yönelik yönergeler farklı NAT 'Lar arasında farklılık gösterir ve son kullanıcılardan, çoğu uygulama için NAT yapılandırmalarını değiştirmesini ister. Birçok Son Kullanıcı, belirli bir uygulama için NAT yapılandırmalarını değiştirmek ya da istemiyor.  
   
 ## <a name="how-firewalls-affect-communication"></a>Güvenlik duvarları Iletişimi nasıl etkiler  
- *Güvenlik duvarı* , geçişine izin verip vermeyeceğine karar vermek için geçiş yapan trafiğe yönelik kurallar uygulayan bir yazılım veya donanım aygıtıdır. Gelen ve/veya giden trafik akışlarını incelemek için güvenlik duvarlarını yapılandırabilirsiniz. Güvenlik Duvarı, ağın kenarından veya uç nokta ana bilgisayarında ağ için bir güvenlik sınırı sağlar. İş kullanıcıları, kötü amaçlı saldırıları engellemek için sunucularını bir güvenlik duvarının arkasında geleneksel olarak tutmıştır. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]' de kişisel güvenlik duvarının kullanıma sunulmasından sonra, güvenlik duvarının arkasındaki ev kullanıcılarının sayısı da büyük ölçüde artmıştır. Bu, bir bağlantının bir veya her iki ucunun de paketleri İnceleme güvenlik duvarı olmasını sağlar.  
+ *Güvenlik duvarı* , geçişine izin verip vermeyeceğine karar vermek için geçiş yapan trafiğe yönelik kurallar uygulayan bir yazılım veya donanım aygıtıdır. Gelen ve/veya giden trafik akışlarını incelemek için güvenlik duvarlarını yapılandırabilirsiniz. Güvenlik Duvarı, ağın kenarından veya uç nokta ana bilgisayarında ağ için bir güvenlik sınırı sağlar. İş kullanıcıları, kötü amaçlı saldırıları engellemek için sunucularını bir güvenlik duvarının arkasında geleneksel olarak tutmıştır. Windows XP SP2 'de kişisel güvenlik duvarının tanıtımı sırasında, güvenlik duvarının arkasındaki ev kullanıcılarının sayısı da büyük ölçüde artmıştır. Bu, bir bağlantının bir veya her iki ucunun de paketleri İnceleme güvenlik duvarı olmasını sağlar.  
   
  Güvenlik duvarları, paketlerin incelenmesinde karmaşıklık ve becerileri bakımından büyük ölçüde farklılık gösterir. Basit güvenlik duvarları, paketlerindeki kaynak ve hedef adreslere ve bağlantı noktalarına göre kuralları uygular. Akıllı güvenlik duvarları Ayrıca kararlar almak için paketlerin içeriğini inceleyebilir. Bu güvenlik duvarları birçok farklı yapılandırmada gelir ve genellikle özelleştirilmiş uygulamalar için kullanılır.  
   
@@ -33,7 +33,7 @@ Bir ağ bağlantısının istemci ve sunucusunun genellikle iletişim için doğ
   
 ## <a name="using-teredo"></a>Teredo 'Yu kullanma  
 
- Teredo, bir NAT arkasındaki makinelerin doğrudan adreslenebilirliğini sağlayan bir IPv6 geçiş teknolojisidir. Teredo, olası bağlantıları tanıtmak için herkese açık ve genel olarak yönlendirilemeyen bir sunucu kullanımına dayanır. Teredo sunucusu, uygulama istemcisine ve sunucusuna, bağlantı bilgilerini değiş tokuş ettikleri ortak bir toplantı noktası sağlar. Daha sonra makineler geçici bir Teredo adresi ister ve paketler mevcut ağ üzerinden tünellenmiş. WCF 'de Teredo desteği, işletim sisteminde IPv6 ve Teredo desteğinin etkinleştirilmesini gerektirir. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ve üzeri işletim sistemleri Teredo 'Yu destekler. Windows Vista ve sonraki işletim sistemleri IPv6 'Yı varsayılan olarak destekler ve yalnızca kullanıcının Teredo 'Yu etkinleştirmesini gerektirir. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] ve Windows Server 2003, kullanıcının hem IPv6 hem de Teredo 'Yu etkinleştirmesini gerektirir. Daha fazla bilgi için bkz. [Teredo 'Ya genel bakış](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10)).  
+ Teredo, bir NAT arkasındaki makinelerin doğrudan adreslenebilirliğini sağlayan bir IPv6 geçiş teknolojisidir. Teredo, olası bağlantıları tanıtmak için herkese açık ve genel olarak yönlendirilemeyen bir sunucu kullanımına dayanır. Teredo sunucusu, uygulama istemcisine ve sunucusuna, bağlantı bilgilerini değiş tokuş ettikleri ortak bir toplantı noktası sağlar. Daha sonra makineler geçici bir Teredo adresi ister ve paketler mevcut ağ üzerinden tünellenmiş. WCF 'de Teredo desteği, işletim sisteminde IPv6 ve Teredo desteğinin etkinleştirilmesini gerektirir. Windows XP ve üzeri işletim sistemleri Teredo 'Yu destekler. Windows Vista ve sonraki işletim sistemleri IPv6 'Yı varsayılan olarak destekler ve yalnızca kullanıcının Teredo 'Yu etkinleştirmesini gerektirir. Windows XP SP2 ve Windows Server 2003, kullanıcının hem IPv6 hem de Teredo 'Yu etkinleştirmesini gerektirir. Daha fazla bilgi için bkz. [Teredo 'Ya genel bakış](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10)).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Aktarım ve Ileti değişim modelini seçme  
  Bir taşımanın ve MEP 'nin seçilmesi üç adımlı bir işlemdir:  

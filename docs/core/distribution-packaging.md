@@ -3,12 +3,12 @@ title: .NET Core dağıtımı paketleme
 description: Dağıtım için .NET Core 'u paketleme, adlandırma ve sürüm hakkında bilgi edinin.
 author: tmds
 ms.date: 10/09/2019
-ms.openlocfilehash: 1b5adf761a51e006f8309e1f326fc0a9c12aab7a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a345aeded29b3058c6c56abbff439ea26cbc7afb
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76748505"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920868"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core dağıtımı paketleme
 
@@ -69,7 +69,7 @@ Tek bir ana bilgisayar olsa da, diğer bileşenlerin çoğu sürümlü dizinlerd
 
 - (2) **Host/FXR/\<FXR sürümü >** ana bilgisayar tarafından kullanılan çerçeve çözümleme mantığını içerir. Ana bilgisayar, yüklü en son hostfxr 'yi kullanır. Hostfxr, .NET Core uygulaması yürütürken uygun çalışma zamanının seçilmesinden sorumludur. Örneğin, .NET Core 2.0.0 için oluşturulmuş bir uygulama, varsa 2.0.5 çalışma zamanını kullanır. Benzer şekilde, hostfxr geliştirme sırasında uygun SDK 'Yı seçer.
 
-- (3) SDK **/\<SDK sürümü >** SDK ("araç araçları" olarak da bilinir), .NET Core kitaplıklarını ve uygulamalarını yazmak ve derlemek için kullanılan bir yönetilen araçlar kümesidir. SDK, .NET Core komut satırı arabirimi (CLı), yönetilen diller derleyicileri, MSBuild ve ilişkili derleme görevleri ile hedefleri, NuGet, yeni proje şablonları vb. içerir.
+- (3) SDK **/\<SDK sürümü >** SDK ("araç araçları" olarak da bilinir), .NET Core kitaplıklarını ve uygulamalarını yazmak ve derlemek için kullanılan bir yönetilen araçlar kümesidir. SDK .NET Core CLI, yönetilen diller derleyicileri, MSBuild ve ilişkili derleme görevlerini ve hedeflerini, NuGet, yeni proje şablonlarını vb. içerir.
 
 - (4) **SDK/NuGetFallbackFolder** , geri yükleme işlemi sırasında, `dotnet restore` veya `dotnet build`çalıştırılırken olduğu gıbı bir SDK tarafından kullanılan NuGet paketlerinin bir önbelleğini içerir. Bu klasör yalnızca .NET Core 3,0 ' den önce kullanılır. `nuget.org`'den önceden oluşturulmuş ikili varlıklar içerdiğinden kaynaktan derlenebilir.
 

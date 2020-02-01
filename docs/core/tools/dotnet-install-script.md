@@ -2,12 +2,12 @@
 title: dotnet-install scripts
 description: .NET Core SDK ve paylaşılan çalışma zamanını yüklemek için DotNet-install betikleri hakkında bilgi edinin.
 ms.date: 01/23/2020
-ms.openlocfilehash: 169991ac4cd24ccab90634ff265c3ae5b603f8e9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 76055627c6b2016396209c9594dba36e56eb841c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734208"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920569"
 ---
 # <a name="dotnet-install-scripts-reference"></a>DotNet-betiklerin başvurusunu yüklemeyi
 
@@ -35,7 +35,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 ## <a name="description"></a>Açıklama
 
-`dotnet-install` betikler, .NET Core CLI araçlarını ve paylaşılan çalışma zamanını içeren .NET Core SDK yönetici olmayan yüklemesini gerçekleştirmek için kullanılır.
+`dotnet-install` betikler, .NET Core CLI ve paylaşılan çalışma zamanını içeren .NET Core SDK yönetici olmayan yüklemesini gerçekleştirmek için kullanılır.
 
 Betiklerin kararlı sürümünü kullanmanızı öneririz:
 
@@ -108,7 +108,7 @@ Betiği çalıştırmadan önce gerekli [bağımlılıkları](../install/depende
 
 - **`-NoPath|--no-path`**
 
-  Ayarlanırsa, yükleme klasörü geçerli oturum için yola aktarılmaz. Varsayılan olarak, komut dosyası yolu değiştirir ve bu, CLı araçlarının yüklemeden hemen sonra kullanılabilmesini sağlar.
+  Ayarlanırsa, yükleme klasörü geçerli oturum için yola aktarılmaz. Varsayılan olarak, komut dosyası yolu değiştirir ve bu, .NET Core CLI yüklemeden hemen sonra kullanılabilir hale getirir.
 
 - **`-Verbose|--verbose`**
 

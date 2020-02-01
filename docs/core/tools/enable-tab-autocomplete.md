@@ -4,14 +4,14 @@ description: Bu makalede PowerShell, bash ve zsh için .NET Core CLI sekme tamam
 author: thraka
 ms.author: adegeo
 ms.date: 11/03/2019
-ms.openlocfilehash: 8c5d6a254db5ba21417ba45122ed0d7cb093c7c3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 649b723c2abfa74443a16914594284a77e0eafc0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739306"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920529"
 ---
-# <a name="how-to-enable-tab-completion-for-net-core-cli"></a>.NET Core CLI için sekme tamamlamayı etkinleştirme
+# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>.NET Core CLI için sekme tamamlamayı etkinleştirme
 
 .NET Core 2,0 SDK ile başlayarak, .NET Core CLI sekme tamamlamayı destekler. Bu makalede, üç kabuk, PowerShell, bash ve zsh için sekme tamamlamayı yapılandırma açıklanmaktadır. Diğer kabukların otomatik tamamlama desteği olabilir. Otomatik tamamlamayı yapılandırma hakkında daha fazla bilgi için, bu makalede açıklanan adımlara benzer olmalıdır.
 

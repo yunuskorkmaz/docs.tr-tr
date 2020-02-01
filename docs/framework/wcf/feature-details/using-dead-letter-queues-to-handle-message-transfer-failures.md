@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: 0be22fa1e81c85d82494bc4b93468a18f05d6423
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 48e3a080097aae2e539c238bfe33c3e107f81bf0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345567"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921148"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma
 Sıraya alınan iletiler teslim başarısız olabilir. Bu başarısız iletiler, teslim edilemeyen bir sıraya kaydedilir. Başarısız teslimat, ağ hataları, silinen bir kuyruk, tam sıra, kimlik doğrulama hatası veya zaman içinde teslim etme hatası gibi nedenlerle neden olabilir.  
@@ -23,7 +23,7 @@ Sıraya alınan iletiler teslim başarısız olabilir. Bu başarısız iletiler,
   
  Özel atılacak mektup kuyruğu, iletileri göndermek için aynı MSMQ hizmetini paylaşan istemciler arasında yalıtım sağlar.  
   
- Windows Server 2003 ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]Windows Communication Foundation (WCF), tüm sıraya alınmış istemci uygulamaları için sistem genelinde bir atılacak ileti sırası sağlar. Windows Vista 'da WCF, her kuyruğa alınan istemci uygulaması için atılacak bir sıra sağlar.  
+ Windows Server 2003 ve Windows XP 'de Windows Communication Foundation (WCF), sıraya alınan tüm istemci uygulamaları için sistem genelinde bir atılacak ileti sırası sağlar. Windows Vista 'da WCF, her kuyruğa alınan istemci uygulaması için atılacak bir sıra sağlar.  
   
 ## <a name="specifying-use-of-the-dead-letter-queue"></a>Atılacak Ileti sırasının kullanımını belirtme  
  Teslim edilemeyen bir sıra, gönderen uygulamanın kuyruk yöneticisidir. Bu, zaman aşımına uğradı veya başarısız aktarım ya da teslim olan iletileri depolar.  

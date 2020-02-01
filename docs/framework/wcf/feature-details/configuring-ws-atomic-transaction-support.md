@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 068ddcab5cfb7bfb5f37a1858820195a5a05269f
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 6399d64746db158ba0569eaf0137127603973513
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964575"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919340"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>WS Atomik Işlem desteğini yapılandırma
 
@@ -25,7 +25,7 @@ Komut satırı penceresine, "%WINDIR%\Microsoft.NET\Framework\v3.0\Windows Commu
 
 Komut satırı aracı hakkında daha fazla bilgi için bkz. [WS-AtomicTransaction Yapılandırma yardımcı programı (wsatConfig. exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).
 
-[!INCLUDE[wxp](../../../../includes/wxp-md.md)] veya Windows Server 2003 çalıştırıyorsanız, **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri**' ne giderek, Bilgisayarım ' a sağ tıklayıp **Özellikler** **' i seçerek**MMC ek bileşenine erişebilirsiniz. Bu, Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) yapılandırabileceğiniz konumdur. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır. Windows Vista veya Windows Server 2008 çalıştırıyorsanız, MMC ek bileşeni **Başlat** düğmesine tıklayıp **arama** kutusuna `dcomcnfg.exe` girerek bulunabilir. MMC açıldığında, **bilgisayar \ dağıtılmış işlem Koordinatlıklasör** düğümü ' ne gidin, sağ tıklayın ve **Özellikler**' i seçin. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.
+Windows XP veya Windows Server 2003 çalıştırıyorsanız, **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri**' ne giderek MMC ek bileşenine erişebilir, Bilgisayarıma sağ tıklayıp **Özellikler** **' i seçebilirsiniz**. Bu, Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) yapılandırabileceğiniz konumdur. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır. Windows Vista veya Windows Server 2008 çalıştırıyorsanız, MMC ek bileşeni **Başlat** düğmesine tıklayıp **arama** kutusuna `dcomcnfg.exe` girerek bulunabilir. MMC açıldığında, **bilgisayar \ dağıtılmış işlem Koordinatlıklasör** düğümü ' ne gidin, sağ tıklayın ve **Özellikler**' i seçin. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.
 
 Ek bileşen hakkında daha fazla bilgi için bkz. [WS-AtomicTransaction YAPıLANDıRMASı MMC ek bileşeni](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).
 

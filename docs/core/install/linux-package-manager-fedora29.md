@@ -4,12 +4,12 @@ description: .NET Core SDK ve çalışma zamanını Fedora 29 ' a yüklemek içi
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 750952229297ae069c0e8465bf83333d86b38dbd
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: d917c867e0d8cdb066b7dee64a9dbd767b56072d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740686"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920803"
 ---
 # <a name="fedora-29-package-manager---install-net-core"></a>Fedora 29 Paket Yöneticisi-.NET Core 'ı yükler
 
@@ -17,7 +17,7 @@ ms.locfileid: "75740686"
 
 Bu makalede, Fedora 29 ' da .NET Core yüklemek için bir paket yöneticisi 'nin nasıl kullanılacağı açıklanır. Çalışma zamanını yüklüyorsanız, hem .NET Core 'u hem de ASP.NET Core çalışma zamanlarını içerdiğinden [ASP.NET Core çalışma zamanını](#install-the-aspnet-core-runtime)yüklemenizi öneririz.
 
-## <a name="register-microsoft-key-and-feed"></a>Microsoft anahtarını ve akışını kaydetme
+## <a name="register-microsoft-key-and-feed"></a>Microsoft anahtar ve akışını Kaydet
 
 .NET yüklemeden önce şunları yapmanız gerekir:
 
@@ -25,7 +25,7 @@ Bu makalede, Fedora 29 ' da .NET Core yüklemek için bir paket yöneticisi 'nin
 - Ürün deposunu kaydedin.
 - Gerekli bağımlılıkları yükler.
 
-Bu işlemin makine başına tek bir kez yapılması yeterlidir.
+Bu, makine başına yalnızca bir kez yapılmalıdır.
 
 Bir Terminal açın ve aşağıdaki komutları çalıştırın.
 
@@ -61,3 +61,11 @@ sudo dnf install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>Paket yöneticisinin sorunlarını giderme
+
+Bu bölüm, .NET Core 'u yüklemek için Paket Yöneticisi 'ni kullanırken karşılaşabileceğiniz yaygın hatalarla ilgili bilgiler sağlar.
+
+### <a name="failed-to-fetch"></a>Getirilemedi
+
+[!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

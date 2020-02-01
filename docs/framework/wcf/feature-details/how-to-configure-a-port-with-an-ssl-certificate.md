@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 1ea7680d092a4270b8c0969c50db8accf7c23d49
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 412aa2bb2a56fbe654b0d9ce5f4b9b5176fc5549
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963303"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921309"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma
 Aktarım güvenliği kullanan <xref:System.ServiceModel.WSHttpBinding> sınıfıyla şirket içinde barındırılan bir Windows Communication Foundation (WCF) hizmeti oluştururken, bir X. 509.440 sertifikası ile bir bağlantı noktası da yapılandırmanız gerekir. Kendi kendine barındırılan bir hizmet oluşturmadıysanız, hizmetinizi Internet Information Services (IIS) üzerinde barındırabilirsiniz. Daha fazla bilgi için bkz. [http aktarım güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Bir bağlantı noktasını yapılandırmak için, kullandığınız araç makinenizde çalışan işletim sistemine bağlıdır.  
   
- Windows Server 2003 veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)]çalıştırıyorsanız, HttpCfg. exe aracını kullanın. Windows Server 2003 ile bu araç yüklüdür. [!INCLUDE[wxp](../../../../includes/wxp-md.md)], aracı [WINDOWS XP Service Pack 2 destek araçları](https://go.microsoft.com/fwlink/?LinkId=88606)' na yükleyebilirsiniz. Daha fazla bilgi için bkz. [Httpcfg Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). [Windows Destek Araçları belgeleri](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) , Httpcfg. exe aracının sözdizimini açıklar.  
+ Windows Server 2003 veya Windows XP çalıştırıyorsanız, HttpCfg. exe aracını kullanın. Windows Server 2003 ile bu araç yüklüdür. Windows XP ile aracı [WINDOWS XP Service Pack 2 destek araçları](https://go.microsoft.com/fwlink/?LinkId=88606)' na indirebilirsiniz. Daha fazla bilgi için bkz. [Httpcfg Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). [Windows Destek Araçları belgeleri](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) , Httpcfg. exe aracının sözdizimini açıklar.  
   
  Windows Vista çalıştırıyorsanız, zaten yüklü olan Netsh. exe aracını kullanın.  
   
@@ -41,7 +41,7 @@ Aktarım güvenliği kullanan <xref:System.ServiceModel.WSHttpBinding> sınıfı
   
 ### <a name="to-determine-how-ports-are-configured"></a>Bağlantı noktalarının nasıl yapılandırıldığını belirleme  
   
-1. Windows Server 2003 veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)]'de, aşağıdaki örnekte gösterildiği gibi, **sorgu** ve **SSL** anahtarlarını kullanarak geçerli bağlantı noktası yapılandırmasını görüntülemek için Httpcfg. exe aracını kullanın.  
+1. Windows Server 2003 veya Windows XP 'de, aşağıdaki örnekte gösterildiği gibi, **sorgu** ve **SSL** anahtarlarını kullanarak geçerli bağlantı noktası yapılandırmasını görüntülemek için Httpcfg. exe aracını kullanın.  
   
     ```console
     httpcfg query ssl  
@@ -57,7 +57,7 @@ Aktarım güvenliği kullanan <xref:System.ServiceModel.WSHttpBinding> sınıfı
   
 1. İstemci kimlik doğrulamasının amaçlanan amacını içeren bir X. 509.440 sertifikası bulmak için Sertifikalar MMC ek bileşenini kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: MMC ek bileşeni Ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-2. Sertifikanın parmak izine erişin. Daha fazla bilgi için bkz. [Nasıl yapılır: Bir Sertifikanın Parmak İzini Alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2. Sertifikanın parmak izine erişin. Daha fazla bilgi için bkz. [nasıl yapılır: bir sertifikanın parmak Izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3. Sertifikanın parmak izini Not Defteri gibi bir metin düzenleyicisine kopyalayın.  
   
@@ -65,7 +65,7 @@ Aktarım güvenliği kullanan <xref:System.ServiceModel.WSHttpBinding> sınıfı
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number"></a>Bir SSL sertifikasını bir bağlantı noktası numarasına bağlamak için  
   
-1. Windows Server 2003 veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)]'de, sertifikayı bir bağlantı noktası numarasına bağlamak için Güvenli Yuva Katmanı (SSL) deposundaki "küme" modunda HttpCfg. exe aracını kullanın. Araç, aşağıdaki örnekte gösterildiği gibi sertifikayı tanımlamak için parmak izini kullanır.  
+1. Windows Server 2003 veya Windows XP 'de, sertifikayı bir bağlantı noktası numarasına bağlamak için Güvenli Yuva Katmanı (SSL) deposundaki "küme" modunda HttpCfg. exe aracını kullanın. Araç, aşağıdaki örnekte gösterildiği gibi sertifikayı tanımlamak için parmak izini kullanır.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
@@ -89,7 +89,7 @@ Aktarım güvenliği kullanan <xref:System.ServiceModel.WSHttpBinding> sınıfı
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Bir bağlantı noktası numarasına bir SSL sertifikası bağlamak ve istemci sertifikalarını desteklemek için  
   
-1. Windows Server 2003 veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)]' de, aktarım katmanında X. 509.440 sertifikalarıyla kimlik doğrulayan istemcileri desteklemek için, önceki yordamı izleyin, ancak aşağıdaki örnekte gösterildiği gibi, HttpCfg. exe ' ye ek bir komut satırı parametresi geçirin.  
+1. Windows Server 2003 veya Windows XP 'de, aktarım katmanında X. 509.440 sertifikalarıyla kimlik doğrulayan istemcileri desteklemek için, önceki yordamı izleyin, ancak aşağıdaki örnekte gösterildiği gibi, HttpCfg. exe ' ye ek bir komut satırı parametresi geçirin.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
@@ -111,7 +111,7 @@ Aktarım güvenliği kullanan <xref:System.ServiceModel.WSHttpBinding> sınıfı
     httpcfg query ssl>myMachinePorts.txt  
     ```
   
-2. Windows Server 2003 veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)]'de, **Delete** ve **SSL** anahtar sözcükleriyle Httpcfg. exe aracını kullanın. Parmak izini belirtmek için `IP`:`port` Number ve **-h** anahtarını belirtmek için **-ı** anahtarını kullanın.  
+2. Windows Server 2003 veya Windows XP 'de, **Delete** ve **SSL** anahtar sözcükleriyle Httpcfg. exe aracını kullanın. Parmak izini belirtmek için `IP`:`port` Number ve **-h** anahtarını belirtmek için **-ı** anahtarını kullanın.  
   
     ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  

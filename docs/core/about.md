@@ -2,12 +2,12 @@
 title: .NET Core hakkında
 description: .NET Core hakkında bilgi edinin.
 ms.date: 09/17/2019
-ms.openlocfilehash: 12611c2cd0b872a683d070ff17dcf9f111578627
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e5460fd1d968a49478a1bdc5f18962de2c7cbbe0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900614"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920952"
 ---
 # <a name="about-net-core"></a>.NET Core hakkında
 
@@ -52,20 +52,20 @@ Bu tümleştirme, kapsamında, [Omnisharp](https://www.omnisharp.net/) ve [ıon�
 - [Windows 10 Evrensel Windows Platformu (UWP)](https://developer.microsoft.com/windows)
 - [Tizen](https://developer.tizen.org/development/training/.net-application)
 
-## <a name="composition"></a>Birleşim
+## <a name="composition"></a>Birleştirme
 
 .NET Core aşağıdaki bölümlerden oluşur:
 
 - Bir tür sistemi, derleme yükleme, çöp toplayıcı, yerel birlikte çalışma ve diğer temel hizmetler sağlayan [.NET Core çalışma zamanı](https://github.com/dotnet/runtime/tree/master/src/coreclr). [.NET Core Framework kitaplıkları](https://github.com/dotnet/runtime/tree/master/src/libraries) temel veri türleri, uygulama bileşim türleri ve temel yardımcı programları sağlar.
 - Web uygulamaları, IoT uygulamaları ve mobil arka uçlar gibi modern bulut tabanlı Internet 'e bağlı uygulamalar oluşturmaya yönelik bir çerçeve sağlayan [ASP.NET Core çalışma zamanı](https://github.com/dotnet/aspnetcore).
-- .NET Core geliştirici deneyimini etkinleştiren [.NET Core CLI araçları](https://github.com/dotnet/sdk) ve dil derleyicileri ( [F#](https://github.com/microsoft/visualfsharp)[Roslyn](https://github.com/dotnet/roslyn) ve).
-- .NET Core Uygulamaları ve CLı araçları 'nı başlatmak için kullanılan [DotNet aracı](https://github.com/dotnet/core-setup). Çalışma zamanını seçer ve çalışma zamanını barındırır, bir derleme yükleme ilkesi sağlar ve uygulamaları ve araçları başlatır.
+- .NET Core geliştirici deneyimini etkinleştiren [.NET Core SDK](https://github.com/dotnet/sdk) ve dil derleyicileri ( [F#](https://github.com/microsoft/visualfsharp)[Roslyn](https://github.com/dotnet/roslyn) ve).
+- .NET Core uygulamalarını ve CLı komutlarını başlatmak için kullanılan [DotNet komutu](./tools/dotnet.md). Çalışma zamanını seçer ve çalışma zamanını barındırır, bir derleme yükleme ilkesi sağlar ve uygulamaları ve araçları başlatır.
 
 Bu bileşenler aşağıdaki yollarla dağıtılır:
 
 - [.NET Core çalışma zamanı](https://dotnet.microsoft.com/download) --.NET Core çalışma zamanı ve çerçeve kitaplıklarını içerir.
 - [ASP.NET Core çalışma zamanı](https://dotnet.microsoft.com/download) --ASP.NET Core ve .NET Core çalışma zamanı ve çerçeve kitaplıklarını içerir.
-- [.NET Core SDK](https://dotnet.microsoft.com/download) --.net CLI araçlarını, ASP.NET Core çalışma zamanını ve .NET Core çalışma zamanını ve çerçevesini içerir.
+- [.NET Core SDK](https://dotnet.microsoft.com/download) --.NET Core CLI, ASP.NET Core çalışma zamanını ve .NET Core çalışma zamanı ve çerçevesini içerir.
 
 ### <a name="open-source"></a>Açık kaynak
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 603e7ae4ffb9e6a4bb477af9597d6948bd63f55e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 32784f7d4b9e3a93eb7f81b4829b39c1a06ef949
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100743"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920391"
 ---
 # <a name="whats-new-in-net-core-21"></a>​.NET Core 2.1’deki yenilikler
 
@@ -29,13 +29,13 @@ ms.locfileid: "73100743"
 
 ### <a name="build-performance-improvements"></a>Derleme performansı iyileştirmeleri
 
-.NET Core 2,1 ' nin önemli bir odağında, özellikle Artımlı derlemeler için derleme zamanı performansı geliştiriyoruz. Bu performans geliştirmeleri, `dotnet build` ve Visual Studio 'da derlemeler kullanılarak her iki komut satırı derlemesi için de geçerlidir. İyileşme özgü bazı alanlarda şunlar vardır:
+.NET Core 2,1 ' nin önemli bir odağında, özellikle Artımlı derlemeler için derleme zamanı performansı geliştiriyoruz. Bu performans iyileştirmeleri hem `dotnet build` hem de Visual Studio 'daki derlemeler için kullanılan komut satırı yapılarına uygulanır. İyileşme özgü bazı alanlarda şunlar vardır:
 
 - Paket varlık çözümlemesi için, yalnızca tüm varlıklar yerine bir derleme tarafından kullanılan varlıkları çözümleme.
 
 - Derleme başvurularını önbelleğe alma.
 
-- Tek başına `dotnet build` çağırmaları arasında yayılan süreçler olan uzun süre çalışan SDK yapı sunucularının kullanımı. Her `dotnet build` çalıştırıldığında büyük kod bloklarını JıT ile derleme ihtiyacını ortadan kaldırır. Yapı sunucusu işlemi aşağıdaki komutla otomatik olarak sonlandırılabilir:
+- Bağımsız `dotnet build` çağırmaları arasında yayılan süreçler olan uzun süreli SDK yapı sunucularının kullanımı. `dotnet build` her çalıştırıldığında büyük kod bloklarını JıT ile derleme ihtiyacını ortadan kaldırır. Yapı sunucusu işlemi aşağıdaki komutla otomatik olarak sonlandırılabilir:
 
    ```dotnetcli
    dotnet buildserver shutdown
@@ -43,9 +43,9 @@ ms.locfileid: "73100743"
 
 ### <a name="new-cli-commands"></a>Yeni CLı komutları
 
-Yalnızca .NET Core SDK bir parçası olarak [`DotnetCliToolReference`](../tools/extensibility.md) kullanılarak proje başına kullanılabilen birçok araç vardır. Bu araçlar şunları içerir:
+Artık .NET Core SDK bir parçası olarak [`DotnetCliToolReference`](../tools/extensibility.md) kullanılarak yalnızca proje temelinde kullanılabilen birçok araç vardır. Bu araçlar şunları içerir:
 
-- `dotnet watch`, belirli bir komut kümesini yürütmeden önce bir dosyanın değiştirilmesini bekleyen bir dosya sistem izleyicisi sağlar. Örneğin, aşağıdaki komut, geçerli projeyi otomatik olarak yeniden oluşturur ve her bir dosya değiştiğinde ayrıntılı çıkış üretir:
+- `dotnet watch`, bir dosyanın belirli bir komut kümesini yürütmeden önce değiştirilmesini bekleyen bir dosya sistem izleyicisi sağlar. Örneğin, aşağıdaki komut, geçerli projeyi otomatik olarak yeniden oluşturur ve her bir dosya değiştiğinde ayrıntılı çıkış üretir:
 
    ```dotnetcli
    dotnet watch -- --verbose build
@@ -55,17 +55,17 @@ Yalnızca .NET Core SDK bir parçası olarak [`DotnetCliToolReference`](../tools
   
    Daha fazla bilgi için bkz. [DotNet Watch kullanarak ASP.NET Core uygulamalar geliştirme](/aspnet/core/tutorials/dotnet-watch).
 
-- `dotnet dev-certs` ASP.NET Core uygulamalarda geliştirme sırasında kullanılan sertifikaları oluşturur ve yönetir.
+- `dotnet dev-certs`, ASP.NET Core uygulamalarında geliştirme sırasında kullanılan sertifikaları oluşturur ve yönetir.
 
 - `dotnet user-secrets`, ASP.NET Core uygulamalarda Kullanıcı gizli deposundaki gizli dizileri yönetir.
 
 - `dotnet sql-cache`, dağıtılmış önbellek için kullanılacak bir Microsoft SQL Server veritabanında tablo ve dizinler oluşturur.
 
-- `dotnet ef`, Entity Framework Core uygulamalardaki veritabanlarını, <xref:Microsoft.EntityFrameworkCore.DbContext> nesneleri ve geçişleri yönetmeye yönelik bir araçtır. Daha fazla bilgi için bkz. [.NET komut satırı araçlarını EF Core](/ef/core/miscellaneous/cli/dotnet).
+- `dotnet ef`, Entity Framework Core uygulamalarında veritabanları, <xref:Microsoft.EntityFrameworkCore.DbContext> nesneleri ve geçişleri yönetmeye yönelik bir araçtır. Daha fazla bilgi için bkz. [.NET komut satırı araçlarını EF Core](/ef/core/miscellaneous/cli/dotnet).
 
 ### <a name="global-tools"></a>Genel Araçlar
 
-.NET Core 2,1, *genel araçları* destekler-diğer bir deyişle, komut satırından küresel olarak kullanılabilir özel araçlar. .NET Core 'un önceki sürümlerindeki genişletilebilirlik modeli, yalnızca [`DotnetCliToolReference` ' i](../tools/extensibility.md#consuming-per-project-tools)kullanarak her proje için kullanılabilir özel araçları kullanıma sunulmuştur.
+.NET Core 2,1, *genel araçları* destekler-diğer bir deyişle, komut satırından küresel olarak kullanılabilir özel araçlar. .NET Core 'un önceki sürümlerindeki genişletilebilirlik modeli, her proje için yalnızca [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools)kullanarak kullanılabilir özel araçlar yaptı.
 
 Küresel bir araç yüklemek için [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın. Örneğin:
 
@@ -81,11 +81,11 @@ Yüklendikten sonra araç, araç adı belirtilerek komut satırından çalışt�
 
 - bir araç yüklemek için [`dotnet tool install`](../tools/dotnet-tool-install.md) .
 
-- [`dotnet tool update`](../tools/dotnet-tool-update.md) ' i kaldırmak ve yeniden yüklemek için, etkin bir şekilde güncelleştiren bir araç.
+- uygulamayı etkin bir şekilde güncelleştiren bir araç kaldırıp yeniden yükleme [`dotnet tool update`](../tools/dotnet-tool-update.md) .
 
-- Şu anda yüklü olan araçları listelemek için [`dotnet tool list`](../tools/dotnet-tool-list.md) .
+- Şu anda yüklü olan araçları listelemek [`dotnet tool list`](../tools/dotnet-tool-list.md) .
 
-- yüklü olan araçları kaldırmak için [`dotnet tool uninstall`](../tools/dotnet-tool-uninstall.md) .
+- Şu anda yüklü olan araçları kaldırmak [`dotnet tool uninstall`](../tools/dotnet-tool-uninstall.md) .
 
 ## <a name="roll-forward"></a>İleri al
 
@@ -112,7 +112,7 @@ Bu ayarı, üç şekilde değiştirebilirsiniz:
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- [.NET Core CLI araçlarını](../tools/index.md)kullanırken, istenen değeri `run` gibi bir .NET Core komutuna ekleyerek aşağıdaki seçeneği ekleyin:
+- [.NET Core CLI](../tools/index.md)kullanırken, istenen değeri `run`gibi bir .NET Core komutuna ekleyerek aşağıdaki seçeneği ekleyin:
 
    ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0
@@ -124,7 +124,7 @@ Düzeltme Eki Sürümü ileri, bu ayardan bağımsızdır ve herhangi bir olası
 
 ### <a name="self-contained-application-servicing"></a>Kendi içinde uygulama Bakımı
 
-`dotnet publish` artık hizmet verilen çalışma zamanı sürümü ile bağımsız uygulamalar yayımlar. Bir bağımsız uygulamayı .NET Core 2,1 SDK (v 2.1.300) ile yayımladığınızda, uygulamanız ilgili SDK tarafından bilinen en son hizmet verilen çalışma zamanı sürümünü içerir. En son SDK 'ya yükselttiğinizde, en son .NET Core çalışma zamanı sürümü ile yayımlayabilirsiniz. Bu, .NET Core 1,0 çalışma zamanları ve üzeri için geçerlidir.
+`dotnet publish` artık, hizmet verilen çalışma zamanı sürümü ile bağımsız uygulamalar yayımlar. Bir bağımsız uygulamayı .NET Core 2,1 SDK (v 2.1.300) ile yayımladığınızda, uygulamanız ilgili SDK tarafından bilinen en son hizmet verilen çalışma zamanı sürümünü içerir. En son SDK 'ya yükselttiğinizde, en son .NET Core çalışma zamanı sürümü ile yayımlayabilirsiniz. Bu, .NET Core 1,0 çalışma zamanları ve üzeri için geçerlidir.
 
 Kendi içinde yayımlama, NuGet.org üzerinde çalışma zamanı sürümlerini kullanır. Makinenizde bakım çalışma zamanına sahip olmanız gerekmez.
 
@@ -133,7 +133,7 @@ Kendi içinde yayımlama, NuGet.org üzerinde çalışma zamanı sürümlerini k
 Daha fazla bilgi için bkz. [kendi kendine içerilen dağıtım çalışma zamanı ileri](../deploying/runtime-patch-selection.md).
 ## <a name="windows-compatibility-pack"></a>Windows Uyumluluk Paketi
 
-.NET Framework mevcut koddan .NET Core 'a bağlantı oluşturduğunuzda [Windows Uyumluluk Paketi](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)' ni kullanabilirsiniz. .NET Core 'da bulunandan daha fazla 20.000 API erişimi sağlar. Bu API 'Ler <xref:System.Drawing?displayProperty=nameWithType> ad alanı, <xref:System.Diagnostics.EventLog> sınıfı, WMI, performans sayaçları, Windows Hizmetleri ve Windows kayıt defteri türleri ve üyeleri türlerini içerir.
+.NET Framework mevcut koddan .NET Core 'a bağlantı oluşturduğunuzda [Windows Uyumluluk Paketi](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)' ni kullanabilirsiniz. .NET Core 'da bulunandan daha fazla 20.000 API erişimi sağlar. Bu API 'Ler <xref:System.Drawing?displayProperty=nameWithType> ad alanındaki türleri, <xref:System.Diagnostics.EventLog> sınıfı, WMI, performans sayaçlarını, Windows hizmetlerini ve Windows kayıt defteri türlerini ve üyelerini içerir.
 
 ## <a name="jit-compiler-improvements"></a>JıT derleyicisi geliştirmeleri
 
@@ -183,7 +183,7 @@ Aşağıdaki örnek, bir dizi 10 öğenin sanal görünümünü sağlamak için 
 
 ### <a name="brotli-compression"></a>Brotli sıkıştırma
 
-.NET Core 2,1, Brotli sıkıştırma ve açma için destek ekler. Brotli, [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) ' de tanımlanan ve çoğu Web tarayıcısı ve ana Web sunucusu tarafından desteklenen genel amaçlı kayıpsız bir sıkıştırma algoritmasıdır. Stream tabanlı <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> sınıfını veya yüksek performanslı span tabanlı <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> ve <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> sınıflarını kullanabilirsiniz. Aşağıdaki örnek <xref:System.IO.Compression.BrotliStream> sınıfıyla sıkıştırmayı gösterir:
+.NET Core 2,1, Brotli sıkıştırma ve açma için destek ekler. Brotli, [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) ' de tanımlanan ve çoğu Web tarayıcısı ve ana Web sunucusu tarafından desteklenen genel amaçlı kayıpsız bir sıkıştırma algoritmasıdır. Stream tabanlı <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> sınıfını veya yüksek performanslı span tabanlı <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> ve <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> sınıfları kullanabilirsiniz. Aşağıdaki örnekte <xref:System.IO.Compression.BrotliStream> sınıfıyla sıkıştırma gösterilmektedir:
 
 [!code-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
 
@@ -195,7 +195,7 @@ Aşağıdaki örnek, bir dizi 10 öğenin sanal görünümünü sağlamak için 
 
 .NET Core 2,1, şifreleme API 'Lerinde çok sayıda geliştirme içerir:
 
-- <xref:System.Security.Cryptography.Pkcs.SignedCms?displayProperty=nameWithType>, System. Security. Cryptography. Pkcs paketinde kullanılabilir. Uygulama, .NET Framework <xref:System.Security.Cryptography.Pkcs.SignedCms> sınıfıyla aynıdır.
+- <xref:System.Security.Cryptography.Pkcs.SignedCms?displayProperty=nameWithType> System. Security. Cryptography. Pkcs paketinde kullanılabilir. Uygulama, .NET Framework <xref:System.Security.Cryptography.Pkcs.SignedCms> sınıfıyla aynıdır.
 
 - <xref:System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHash%2A?displayProperty=nameWithType> ve <xref:System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHashString%2A?displayProperty=nameWithType> yöntemlerinin yeni aşırı yüklemeleri, çağıranların SHA-1 dışındaki algoritmaları kullanarak sertifika parmak izi değerlerini almasını sağlamak için bir karma algoritma tanımlayıcısı kabul eder.
 
@@ -219,7 +219,7 @@ Aşağıdaki örnek, bir dizi 10 öğenin sanal görünümünü sağlamak için 
 
 ### <a name="sockets-improvements"></a>Yuva geliştirmeleri
 
-.NET Core, daha yüksek düzey ağ API 'Lerinin temelini oluşturan <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType> ve bir yeniden yazma <xref:System.Net.Http.HttpMessageHandler?displayProperty=nameWithType> olan yeni bir tür içerir.  <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType>, örneğin, <xref:System.Net.Http.HttpClient> uygulamasının temelini oluşturur. .NET Core 'un önceki sürümlerinde, daha üst düzey API 'Ler yerel ağ uygulamalarına dayalıdır.
+.NET Core, daha üst düzey ağ API 'Lerinin temelini oluşturan yeni bir tür, <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType>ve yeniden yazma <xref:System.Net.Http.HttpMessageHandler?displayProperty=nameWithType>içerir.  Örneğin, <xref:System.Net.Http.HttpClient> uygulamasının temelini <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType>. .NET Core 'un önceki sürümlerinde, daha üst düzey API 'Ler yerel ağ uygulamalarına dayalıdır.
 
 .NET Core 2,1 ' de tanıtılan yuva uygulamasının çeşitli avantajları vardır:
 
@@ -229,7 +229,7 @@ Aşağıdaki örnek, bir dizi 10 öğenin sanal görünümünü sağlamak için 
 
 - Tüm .NET Core platformları genelinde tutarlı davranış.
 
-<xref:System.Net.Http.SocketsHttpHandler>, .NET Core 2,1 ' de varsayılan uygulamasıdır. Ancak, <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> yöntemini çağırarak uygulamanızı eski <xref:System.Net.Http.HttpClientHandler> sınıfını kullanacak şekilde yapılandırabilirsiniz:
+<xref:System.Net.Http.SocketsHttpHandler> .NET Core 2,1 ' de varsayılan uygulamasıdır. Ancak, <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> yöntemini çağırarak uygulamanızı eski <xref:System.Net.Http.HttpClientHandler> sınıfını kullanacak şekilde yapılandırabilirsiniz:
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", false);
@@ -241,9 +241,9 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 
 Ayrıca, <xref:System.Net.Http.SocketsHttpHandler>dayalı yuva uygulamalarını kullanmayı devre dışı bırakmak için bir ortam değişkeni de kullanabilirsiniz. Bunu yapmak için `DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER` `false` ya da 0 olarak ayarlayın.
 
-Windows 'da, bir yerel uygulamaya bağlı <xref:System.Net.Http.WinHttpHandler?displayProperty=nameWithType> ' ı veya bir sınıfın örneğini <xref:System.Net.Http.HttpClient> oluşturucusuna geçirerek <xref:System.Net.Http.SocketsHttpHandler> sınıfını kullanmayı da seçebilirsiniz.
+Windows 'da, bir sınıfın örneğini <xref:System.Net.Http.HttpClient> oluşturucusuna geçirerek yerel bir uygulamaya dayanan <xref:System.Net.Http.WinHttpHandler?displayProperty=nameWithType>kullanmayı veya <xref:System.Net.Http.SocketsHttpHandler> sınıfını da seçebilirsiniz.
 
-Linux ve macOS 'ta, işlem başına temelinde yalnızca <xref:System.Net.Http.HttpClient> ' ı yapılandırabilirsiniz. Linux 'ta, eski <xref:System.Net.Http.HttpClient> uygulamasını kullanmak istiyorsanız, [libkıvrık](https://curl.haxx.se/libcurl/) dağıtım yapmanız gerekir. (.NET Core 2,0 ile yüklenir.)
+Linux ve macOS 'ta yalnızca <xref:System.Net.Http.HttpClient> işlem başına temelinde yapılandırabilirsiniz. Linux 'ta, eski <xref:System.Net.Http.HttpClient> uygulamasını kullanmak istiyorsanız [libkıvrık](https://curl.haxx.se/libcurl/) dağıtım yapmanız gerekir. (.NET Core 2,0 ile yüklenir.)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

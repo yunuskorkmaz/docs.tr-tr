@@ -1,16 +1,16 @@
 ---
-title: .NET Core komut satırı ile projeleri düzenleme ve test etme
+title: .NET Core CLI projeleri düzenleme ve test etme
 description: Bu öğreticide, .NET Core projelerini komut satırından düzenleme ve test etme işlemleri açıklanmaktadır.
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: fdaa42be4d3b8872a3119f97f253ce277564339e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 11d13ad1d74c69cdfe0626bda8823dd0609da85f
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715338"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920416"
 ---
-# <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>.NET Core komut satırı ile projeleri düzenleme ve test etme
+# <a name="organizing-and-testing-projects-with-the-net-core-cli"></a>.NET Core CLI projeleri düzenleme ve test etme
 
 Bu öğretici, [komut satırını kullanarak Windows/Linux/macOS 'ta .NET Core ile çalışmaya başlama](cli-create-console-app.md), gelişmiş ve iyi düzenlenmiş uygulamalar geliştirmeye yönelik basit bir konsol uygulaması oluşturma aşamasından daha fazla yararlanılarak. Kodunuzu düzenlemek için klasörleri nasıl kullanacağınızı gösterdikten sonra, bu öğreticide [xUnit](https://xunit.github.io/) test çerçevesiyle bir konsol uygulamasını nasıl genişletebileceğinizi gösterir.
 
@@ -96,7 +96,7 @@ Woof!
 Meow!
 ```
 
-İsteğe bağlı alıştırma: Bu projeyi genişleterek `Bird`gibi yeni bir evcil hayvan türü ekleyebilirsiniz. Kuş`TalkToOwner` yönteminin Sahibe bir `Tweet!` vermesini sağlayın. Uygulamayı tekrar çalıştırın. Çıktı `Tweet!` içerecektir
+İsteğe bağlı alıştırma: Bu projeyi genişleterek `Bird`gibi yeni bir evcil hayvan türü ekleyebilirsiniz. Kuş`TalkToOwner` yönteminin Sahibe bir `Tweet!` vermesini sağlayın. Uygulamayı yeniden çalıştırın. Çıktı `Tweet!` içerecektir
 
 ### <a name="testing-the-sample"></a>Örneği test etme
 

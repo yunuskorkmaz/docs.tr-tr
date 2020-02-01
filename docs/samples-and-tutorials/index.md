@@ -4,12 +4,12 @@ description: .NET Core, ASP.NET Core ve .NET hakkında bilgi edinmenize yardımc
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: e64d0fdd02b28a1c9f21f06305f5ef278fb2827b
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9a161d5325125fba8d4f4e53a0a306c989ed6bc5
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901031"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921400"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET örnekleri ve öğreticiler
 
@@ -25,13 +25,13 @@ Bu kılavuzda, bir ASP.NET Core Web uygulaması ve ilişkili birim testlerini na
 
 ### <a name="tutorials"></a>Öğreticiler
 
-**[CLı araçlarını kullanarak .NET Core konsol uygulamaları yazma: adım adım kılavuz](../core/tutorials/cli-create-console-app.md)**
+**[.NET Core CLI kullanarak .NET Core konsol uygulamaları yazma: adım adım kılavuz](../core/tutorials/cli-create-console-app.md)**
 
 Bu kılavuzda, platformlar arası konsol uygulamaları oluşturmak için .NET Core CLI araçları 'nın nasıl kullanılacağı gösterilmektedir. Temel konsol uygulamasıyla başlar ve sonuçta test dahil birden çok projeye yayılır. Adım adım özellikleri, siz gittiğiniz bilgilerinizi ekleyerek öğreneceksiniz. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/core/console-apps) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
 **[Platformlar arası araçlarla kitaplıklar yazma](../core/tutorials/libraries.md)**
 
-Bu örnek, platformlar arası CLı araçları kullanılarak .NET için kitaplıkların nasıl yazılacağını ele alır. Bu araçlar, desteklenen herhangi bir işletim sisteminde çalışan etkili ve düşük düzeyli bir deneyim sağlar. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library) , GitHub 'daki DotNet/Samples deposunda bulunur.
+Bu örnek, .NET Core CLI kullanarak .NET için kitaplıkların nasıl yazılacağını ele alır. Bu araçlar, desteklenen herhangi bir işletim sisteminde çalışan etkili ve düşük düzeyli bir deneyim sağlar. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
@@ -111,7 +111,7 @@ Birçok konuda, GitHub 'dan görüntülenmek veya indirmek için kullanılabilen
    * Depoyu yerel olarak kopyalayın. Bir docs deposunu doğrudan yerel sisteminize klonladığınızda, işleme doğrudan resmi depoya karşı, belge katkılarını daha sonra yapamayabilmeniz mümkün olmayacaktır. Daha sonra belgelere katkıda bulunmak için fırsatı korumak istiyorsanız, daha önce açıklanan çatal ve kopyalama yordamını kullanın.
 1. Deponun klasörlerinde örnek konumuna gidin. Örnek konumunun göreli yolu, örneğin bağlantısını izlediğinizde tarayıcınızın adres çubuğunda görüntülenir.
 1. Örnek çalıştırmak için birkaç seçeneğiniz vardır:
-   * [DotNet CLI araçlarını](../core/tools/index.md)kullanın: bir konsol penceresinde, örnek klasörüne gidin ve DotNet CLI komutlarını kullanın.
+   * [.NET Core CLI](../core/tools/index.md)kullanın: bir konsol penceresinde, örnek klasörüne gidin ve DotNet CLI komutlarını kullanın.
    * [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) veya [Mac için Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)kullanın: menü çubuğundan **Dosya > > proje/çözüm aç** ' ı seçerek örneği açın, örnek proje klasörüne gidin ve proje dosyasını ( *. csproj* veya *. fsproj*) seçin.
    * [Visual Studio Code](https://code.visualstudio.com/)kullan: menü çubuğundan **Dosya > klasörü aç** ' a tıklayarak ve örneğin proje klasörünü seçerek örneği açın.
    * .NET Core projelerini destekleyen farklı bir IDE kullanın.

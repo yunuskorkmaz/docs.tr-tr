@@ -2,12 +2,12 @@
 title: Zehirli İleti İşleme
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: ff1eaec99308b06250722b290b7005ac21731570
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 389d0651438036cd23d30cf7dd866956ac8e5dae
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337640"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921195"
 ---
 # <a name="poison-message-handling"></a>Zehirli İleti İşleme
 *Zararlı ileti* , uygulamaya yönelik en fazla teslim deneme sayısını aşmış bir iletidir. Bu durum, kuyruk tabanlı bir uygulama hatalar nedeniyle bir iletiyi işleyemediği zaman ortaya çıkabilir. Bir sıraya alınmış uygulama, güvenilirlik taleplerini karşılamak için bir işlem altında iletileri alır. Sıraya alınan bir iletinin alındığı işlemi iptal etmek, iletinin yeni bir işlem altında yeniden deneneceği şekilde kuyruktaki iletiyi bırakır. İşlemin iptaline neden olan sorun düzeltilmezse, alıcı uygulama, en fazla sayıda teslim denemesi aşılıncaya ve bir zarar iletisi sonuçlarıyla aynı iletiyi alıp iptal etmeden bir döngüde kalabilir.  
@@ -21,7 +21,7 @@ ms.locfileid: "75337640"
   
 - `ReceiveRetryCount`. Uygulama kuyruğundan uygulamaya bir ileti teslimini yeniden deneme sayısının üst sınırını belirten bir tamsayı değeri. Varsayılan değer 5 ' tir. Bu, bir veritabanında geçici bir kilitlenme gibi bir anında yeniden denemenin sorunu düzelttiği durumlarda yeterlidir.  
   
-- `MaxRetryCycles`. En fazla yeniden deneme döngüsü sayısını belirten bir tamsayı değeri. Yeniden deneme çevrimi, bir iletiyi uygulama kuyruğundan yeniden deneme alt sırasına ve yapılandırılabilir bir gecikmeden sonra yeniden deneme alt sırasından yeniden uygulama kuyruğuna aktarma işleminden oluşur. Varsayılan değer 2 ' dir. Windows Vista 'da ileti en fazla (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) kez denenir. `MaxRetryCycles`, Windows Server 2003 ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]üzerinde yok sayılır.  
+- `MaxRetryCycles`. En fazla yeniden deneme döngüsü sayısını belirten bir tamsayı değeri. Yeniden deneme çevrimi, bir iletiyi uygulama kuyruğundan yeniden deneme alt sırasına ve yapılandırılabilir bir gecikmeden sonra yeniden deneme alt sırasından yeniden uygulama kuyruğuna aktarma işleminden oluşur. Varsayılan değer 2 ' dir. Windows Vista 'da ileti en fazla (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) kez denenir. `MaxRetryCycles`, Windows Server 2003 ve Windows XP 'de yok sayılır.  
   
 - `RetryCycleDelay`. Yeniden deneme döngüleri arasındaki gecikme süresi. Varsayılan değer 30 dakikadır. `MaxRetryCycles` ve `RetryCycleDelay` birlikte, bir düzenli gecikmeden sonra yeniden deneme sorunu çözdükleri sorunu gidermeye yönelik bir mekanizma sağlar. Örneğin, bu, bekleyen işlem işleme SQL Server bir kilitli satırı işler.  
   
@@ -33,18 +33,18 @@ ms.locfileid: "75337640"
   
 - Mesi. Bu seçenek yalnızca Windows Vista 'da kullanılabilir. Bu, Message Queuing (MSMQ), uygulamanın iletiyi alamaması için gönderme kuyruğu yöneticisine olumsuz bir onay göndermesi talimatını verir. İleti, gönderme kuyruğu yöneticisinin atılacak ileti kuyruğuna yerleştirilir.  
   
-- Taşı öğesini seçin. Bu seçenek yalnızca Windows Vista 'da kullanılabilir. Bu, zarar iletisini daha sonra bir zarar iletisi işleme uygulaması tarafından işlenmek üzere bir zarar iletisi kuyruğuna taşIar. Poison-Message kuyruğu, uygulama sırasının bir alt sıranız. Zararlı ileti işleme uygulaması, zarar sırasındaki iletileri okuyan bir WCF hizmeti olabilir. Zarar sırası, uygulama sırasının bir alt sıranız ve net. MSMQ://\<*makine adı*>/*applicationQueue*;p oison olarak çözülebilir. burada *makine adı* , sıranın bulunduğu bilgisayarın adı ve *applicationQueue* uygulamaya özgü kuyruğun adıdır.  
+- Geçiş. Bu seçenek yalnızca Windows Vista 'da kullanılabilir. Bu, zarar iletisini daha sonra bir zarar iletisi işleme uygulaması tarafından işlenmek üzere bir zarar iletisi kuyruğuna taşIar. Poison-Message kuyruğu, uygulama sırasının bir alt sıranız. Zararlı ileti işleme uygulaması, zarar sırasındaki iletileri okuyan bir WCF hizmeti olabilir. Zarar sırası, uygulama sırasının bir alt sıranız ve net. MSMQ://\<*makine adı*>/*applicationQueue*;p oison olarak çözülebilir. burada *makine adı* , sıranın bulunduğu bilgisayarın adı ve *applicationQueue* uygulamaya özgü kuyruğun adıdır.  
   
  Aşağıda, bir ileti için yapılan en fazla teslim denemesi sayısı verilmiştir:  
   
 - ((ReceiveRetryCount + 1) * (Maxretrydöngülerini + 1)) Windows Vista 'da.  
   
-- (ReceiveRetryCount + 1) Windows Server 2003 ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- (ReceiveRetryCount + 1) Windows Server 2003 ve Windows XP 'de.  
   
 > [!NOTE]
 > Başarıyla teslim edilen bir ileti için yeniden deneme yapılmadı.  
   
- İleti okuma girişimi sayısını izlemek için, Windows Vista, uygulamanın sırası ve alt sıraları arasında iletinin kaç kez hareket edeceğini sayan bir taşıma sayısı özelliğinin sayısını sayan sürekli bir ileti özelliği tutar. WCF kanalı, alma yeniden deneme sayısı ve yeniden deneme döngüsü sayısını hesaplamak için bunları kullanır. Windows Server 2003 ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]'de, durdurma sayısı WCF kanalı tarafından bellekte tutulur ve uygulama başarısız olursa sıfırlanır. Ayrıca, WCF kanalı, her zaman bellekte en fazla 256 ileti için iptal sayısını tutabilir. Bir 257th iletisi okunsa, en eski iletinin durdurma sayısı sıfırlanır.  
+ İleti okuma girişimi sayısını izlemek için, Windows Vista, uygulamanın sırası ve alt sıraları arasında iletinin kaç kez hareket edeceğini sayan bir taşıma sayısı özelliğinin sayısını sayan sürekli bir ileti özelliği tutar. WCF kanalı, alma yeniden deneme sayısı ve yeniden deneme döngüsü sayısını hesaplamak için bunları kullanır. Windows Server 2003 ve Windows XP 'de, durdurma sayısı WCF kanalı tarafından bellekte tutulur ve uygulama başarısız olursa sıfırlanır. Ayrıca, WCF kanalı, her zaman bellekte en fazla 256 ileti için iptal sayısını tutabilir. Bir 257th iletisi okunsa, en eski iletinin durdurma sayısı sıfırlanır.  
   
  Durdurma sayısı ve taşıma sayısı özellikleri, işlem bağlamı aracılığıyla hizmet işlemi için kullanılabilir. Aşağıdaki kod örneğinde nasıl erişebileceğiniz gösterilmektedir.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75337640"
   
  Uygulama, bir hizmetin sıradaki iletilerin geri kalanına erişebilmeleri için, zarar iletilerini bir zarar iletisi kuyruğuna taşırken, zarar iletilerinin bir dizi otomatik işlemesini gerektirebilir. Yalnızca, bir hata işleyicisi mekanizmasını, zehirli ileti özel durumlarını dinlemek için kullanmaya yönelik tek senaryo, <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> ayarı <xref:System.ServiceModel.ReceiveErrorHandling.Fault>olarak ayarlanmıştır. Message Queuing 3,0 için zehirli ileti örneği bu davranışı gösterir. Aşağıda, en iyi yöntemler de dahil olmak üzere, zarar iletilerini işlemek için gereken adımlar özetlenmektedir:  
   
-1. Zarar ayarlarınızın uygulamanızın gereksinimlerini yansıttığından emin olun. Ayarlarla çalışırken, Windows Vista, Windows Server 2003 ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]Message Queuing özellikleri arasındaki farklılıkları anladığınızdan emin olun.  
+1. Zarar ayarlarınızın uygulamanızın gereksinimlerini yansıttığından emin olun. Ayarlarla çalışırken, Windows Vista, Windows Server 2003 ve Windows XP 'de Message Queuing özellikleri arasındaki farklılıkları anladığınızdan emin olun.  
   
 2. Gerekirse, zarar iletisi hatalarını işlemek için `IErrorHandler` uygulayın. `Fault` `ReceiveErrorHandling` ayarı, zarar iletisini kuyruktan taşımak için el ile bir mekanizma gerektirdiğinden veya bir dış bağımlı sorunu düzelttiğinden, aşağıdaki kodda gösterildiği gibi, `ReceiveErrorHandling` `Fault`olarak ayarlandığında, tipik kullanım `IErrorHandler` uygulamadır.  
   
@@ -95,13 +95,13 @@ ms.locfileid: "75337640"
  Poison-Message kuyruğuna bir ileti yerleştirildiğinde, zehirli ileti işleme bitmez. Zarar iletisi sırasındaki iletiler yine de okunmalıdır ve işlenmelidir. Son zarar alt sırasından gelen iletileri okurken, zarar iletisi işleme ayarlarının bir alt kümesini kullanabilirsiniz. Geçerli ayarlar `ReceiveRetryCount` ve `ReceiveErrorHandling`. `ReceiveErrorHandling` bırakma, reddetme veya hata olarak ayarlayabilirsiniz. `MaxRetryCycles` yok sayılır ve `ReceiveErrorHandling` Move olarak ayarlandıysa bir özel durum oluşturulur.  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Windows Vista, Windows Server 2003 ve Windows XP farkları  
- Daha önce belirtildiği gibi, tüm Poison-Message işleme ayarları Windows Server 2003 ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]için de geçerlidir. Windows Server 2003, [!INCLUDE[wxp](../../../../includes/wxp-md.md)]ve Windows Vista 'daki Message Queuing arasındaki aşağıdaki önemli farklılıklar, zarar iletisi işleme ile ilgilidir:  
+ Daha önce belirtildiği gibi, tüm Poison-Message işleme ayarları Windows Server 2003 ve Windows XP için geçerlidir. Windows Server 2003, Windows XP ve Windows Vista 'daki Message Queuing arasındaki aşağıdaki önemli farklılıklar, zehirli ileti işleme ile ilgilidir:  
   
-- Windows Vista 'daki Message Queuing alt sıraları destekler, ancak Windows Server 2003 ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)] alt sıraları desteklemez. Alt sıralar, zehirli ileti işlemede kullanılır. Yeniden deneme kuyrukları ve zarar sırası, zarar iletisi işleme ayarlarına göre oluşturulan uygulama kuyruğu için alt çizglardır. `MaxRetryCycles`, kaç yeniden deneme alt için oluşturulacağını belirler. Bu nedenle, Windows Server 2003 veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)]çalışırken, `MaxRetryCycles` yok sayılır ve `ReceiveErrorHandling.Move` izin verilmez.  
+- Windows Vista 'daki Message Queuing alt sıraları destekler, ancak Windows Server 2003 ve Windows XP alt sıraları desteklemez. Alt sıralar, zehirli ileti işlemede kullanılır. Yeniden deneme kuyrukları ve zarar sırası, zarar iletisi işleme ayarlarına göre oluşturulan uygulama kuyruğu için alt çizglardır. `MaxRetryCycles`, kaç yeniden deneme alt için oluşturulacağını belirler. Bu nedenle, Windows Server 2003 veya Windows XP 'de çalışırken `MaxRetryCycles` yok sayılır ve `ReceiveErrorHandling.Move` izin verilmez.  
   
-- Windows Vista 'daki Message Queuing negatif bildirimi destekler, ancak Windows Server 2003 ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)] desteklemez. Alma kuyruğu yöneticisinin olumsuz bir bildirimi, gönderme kuyruğu yöneticisinin reddedilen iletiyi atılacak ileti kuyruğuna yerleştirmesini sağlar. Bu nedenle, Windows Server 2003 ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]`ReceiveErrorHandling.Reject` izin verilmez.  
+- Windows Vista 'daki Message Queuing negatif bildirimi destekler, ancak Windows Server 2003 ve Windows XP desteklemez. Alma kuyruğu yöneticisinin olumsuz bir bildirimi, gönderme kuyruğu yöneticisinin reddedilen iletiyi atılacak ileti kuyruğuna yerleştirmesini sağlar. Bu nedenle, Windows Server 2003 ve Windows XP 'de `ReceiveErrorHandling.Reject` izin verilmez.  
   
-- Windows Vista 'daki Message Queuing ileti tesliminin denenme sayısını tutan bir ileti özelliğini destekler. Bu Abort Count özelliği Windows Server 2003 ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]üzerinde kullanılamaz. WCF, bellekteki durdurma sayısını korur, bu nedenle aynı ileti bir grupta birden fazla WCF hizmeti tarafından okunabildiği zaman bu özelliğin doğru bir değer içermemesi olasıdır.  
+- Windows Vista 'daki Message Queuing ileti tesliminin denenme sayısını tutan bir ileti özelliğini destekler. Bu Abort Count özelliği Windows Server 2003 ve Windows XP 'de kullanılamaz. WCF, bellekteki durdurma sayısını korur, bu nedenle aynı ileti bir grupta birden fazla WCF hizmeti tarafından okunabildiği zaman bu özelliğin doğru bir değer içermemesi olasıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

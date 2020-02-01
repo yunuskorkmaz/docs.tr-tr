@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: fbe3a546fd431beb5ddf1d71153d38580a19ecc9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 92bd3a6809386764251c4a69c6bc583ed745205d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348347"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921354"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation'da Kuyruklar
 Bu bölümdeki konular, kuyruklar için Windows Communication Foundation (WCF) desteğini tartışır. WCF, bir taşıma olarak Microsoft Message Queuing (daha önce MSMQ olarak bilinir) kullanarak sıraya alma desteği sağlar ve aşağıdaki senaryoları sağlar:  
@@ -18,7 +18,7 @@ Bu bölümdeki konular, kuyruklar için Windows Communication Foundation (WCF) d
   
 - Hata yalıtımı. Bir kuyruğa ileti gönderen veya alan uygulamalar birbirini etkilemeden başarısız olabilir. Örneğin, alıcı uygulama başarısız olursa, gönderen uygulama iletileri kuyruğa göndermeye devam edebilir. Alıcı tekrar çalışır duruma geldiğinde iletileri kuyruktan işleyebilir. Hata yalıtımı genel sistem güvenilirliğini ve kullanılabilirliğini artırır.  
   
-- Yük dengeleme. Uygulamaları göndermek, iletilerle birlikte uygulamaları alabilir. Kuyruklar, uyumsuz ileti üretimini ve tüketim hızlarını yönetebilir ve böylece bir alıcı aşırı olmaz.  
+- Yük Dengeleme. Uygulamaları göndermek, iletilerle birlikte uygulamaları alabilir. Kuyruklar, uyumsuz ileti üretimini ve tüketim hızlarını yönetebilir ve böylece bir alıcı aşırı olmaz.  
   
 - Bağlantısı kesilen işlemler. Mobil cihazlarda olduğu gibi, yüksek gecikmeli ağlar veya sınırlı kullanılabilirlik ağları üzerinden iletişim kurulurken, gönderme, alma ve işleme işlemleri kesilebilir. Kuyruklar, uç noktaların bağlantısı kesildiğinde bile bu işlemlerin devam etmesine izin verir. Bağlantı yeniden kurulduğunda, kuyruk iletileri alıcı uygulamaya iletir.  
   
@@ -50,7 +50,7 @@ Bu bölümdeki konular, kuyruklar için Windows Communication Foundation (WCF) d
  Zarar iletilerinin nasıl işleneceğini açıklar (alıcı uygulamaya en fazla teslim girişimi sayısını aşmış olan mesajlar).  
   
  [Windows Vista, Windows Server 2003 ve Windows XP'de Kuyruğa Alma Özelliği Arasındaki Farklar](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- Windows Vista, Windows Server 2003 ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]arasındaki WCF kuyrukları özelliğindeki farklılıkları özetler.  
+ Windows Vista, Windows Server 2003 ve Windows XP arasındaki WCF kuyrukları özelliğindeki farklılıkları özetler.  
   
  [Aktarım Güvenliği Kullanarak İletileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  Sıraya alınan iletileri güvenli hale getirmek için Transport Security 'nin nasıl kullanılacağını açıklar.  

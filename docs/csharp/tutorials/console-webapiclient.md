@@ -3,20 +3,18 @@ title: .NET Core kullanarak REST istemcisi oluşturma
 description: Bu öğretici, .NET Core ve bu C# dilin çeşitli özelliklerini öğretir.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 1b85a03919ea057cda4526ac1c873bf058c9a825
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: eb7946d669de60c3469ca8098e40b159082ea270
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867366"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921084"
 ---
 # <a name="rest-client"></a>REST istemcisi
 
-## <a name="introduction"></a>Giriş
-
 Bu öğretici, .NET Core ve bu C# dilin çeşitli özelliklerini öğretir. Şunları öğreneceksiniz:
 
-* .NET Core komut satırı arabirimi (CLı) temelleri.
+* .NET Core CLI temel kavramları.
 * C# Dil özelliklerine genel bakış.
 * NuGet ile bağımlılıkları yönetme
 * HTTP Iletişimleri

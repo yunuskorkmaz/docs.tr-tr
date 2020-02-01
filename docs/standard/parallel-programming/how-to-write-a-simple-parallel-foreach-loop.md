@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: c2f2484f37c0e99f45b3f10951540c2bb3a4cb8d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 528e22d6b54179181d1479f4feaedfbf82933c58
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134171"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921205"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Nasıl yapılır: basit bir Parallel. ForEach Döngüsü Yazma
 
@@ -47,7 +47,7 @@ Kodu, .NET Framework için bir konsol uygulaması olarak veya .NET Core için bi
 
 Visual Studio 'da, Windows Masaüstü ve .NET C# Core için Visual Basic ve konsol uygulaması şablonları vardır.
 
-Komut satırından, .NET Core ve CLı araçlarından birini (örneğin, `dotnet new console` veya `dotnet new console -lang vb`) kullanabilir veya dosyayı oluşturabilir ve bir .NET Framework uygulaması için komut satırı derleyicisini kullanabilirsiniz.
+Komut satırından .NET Core CLI komutlarını (örneğin, `dotnet new console` veya `dotnet new console -lang vb`) kullanabilir ya da dosyayı oluşturabilir ve bir .NET Framework uygulaması için komut satırı derleyicisini kullanabilirsiniz.
 
 Bir .NET Core projesi için **System. Drawing. Common** NuGet paketine başvurmanız gerekir. Visual Studio 'da, paketi yüklemek için NuGet Paket Yöneticisi ' ni kullanın. Alternatif olarak, \*. csproj veya \*. vbproj dosyanızdaki pakete bir başvuru ekleyebilirsiniz:
  

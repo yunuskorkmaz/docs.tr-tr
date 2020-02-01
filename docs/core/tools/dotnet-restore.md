@@ -2,12 +2,12 @@
 title: dotnet restore komutu
 description: Dotnet restore komutuyla bağımlılıkları ve projeye özel araçları nasıl geri yükleyeceğinizi öğrenin.
 ms.date: 05/29/2018
-ms.openlocfilehash: 82dd85e340a4cb520f781d977b0798b0f532a088
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: dc73b7b2482d25872be922e68103fb86067146f7
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340443"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920557"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -45,7 +45,7 @@ dotnet restore [-h|--help]
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Bağımlılıkları geri yüklemek için, NuGet paketlerin bulunduğu akışlara ihtiyaç duyuyor. Akışlar genellikle *NuGet. config* yapılandırma dosyası aracılığıyla sağlanır. CLı araçları yüklendiğinde varsayılan bir yapılandırma dosyası sağlanır. Proje dizininde kendi *NuGet. config* dosyanızı oluşturarak ek akışlar belirlersiniz. *NuGet. config* akışlarını `-s` seçeneği ile geçersiz kılabilirsiniz.
+Bağımlılıkları geri yüklemek için, NuGet paketlerin bulunduğu akışlara ihtiyaç duyuyor. Akışlar genellikle *NuGet. config* yapılandırma dosyası aracılığıyla sağlanır. .NET Core SDK yüklendiğinde varsayılan bir yapılandırma dosyası sağlanır. Proje dizininde kendi *NuGet. config* dosyanızı oluşturarak ek akışlar belirlersiniz. *NuGet. config* akışlarını `-s` seçeneği ile geçersiz kılabilirsiniz.
 
 Bağımlılıklar için, geri yükleme işlemi sırasında `--packages` bağımsız değişkenini kullanarak geri yüklenen paketlerin nereye yerleştirileceğini belirtirsiniz. Belirtilmezse, varsayılan NuGet paketi önbelleği kullanılır ve bu, kullanıcının tüm işletim sistemlerindeki giriş dizinindeki `.nuget/packages` dizininde bulunur. Örneğin, Linux üzerinde */home/user1* veya Windows üzerinde *c:\Users\User1* .
 

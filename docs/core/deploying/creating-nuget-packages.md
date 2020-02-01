@@ -1,17 +1,17 @@
 ---
-title: .NET Core CLI bir NuGet paketi oluşturma
+title: .NET Core CLI bir NuGet paketi oluşturun
 description: "' DotNet Pack ' komutuyla bir NuGet paketi oluşturmayı öğrenin."
 author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.openlocfilehash: ddc19faa7547637036686146f8600f40713541a8
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3f8e75a501cfc48e1c416f71e91290cab1a4ffae
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740868"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920913"
 ---
-# <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>.NET Core komut satırı arabirimi (CLı) araçlarıyla bir NuGet paketi oluşturma
+# <a name="how-to-create-a-nuget-package-with-the-net-core-cli"></a>.NET Core CLI bir NuGet paketi oluşturma
 
 > [!NOTE]
 > Aşağıda UNIX kullanan komut satırı örnekleri gösterilmektedir. Burada gösterildiği gibi `dotnet pack` komutu, Windows 'ta aynı şekilde çalışmaktadır.

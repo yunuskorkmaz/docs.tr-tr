@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 6116b2322ed2071b78bcd77de7c38ad07c327aa6
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 23dc0f691c8a8d80a0bd2a5d301ace0d129007af
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740846"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920888"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio ile .NET Core uygulamaları dağıtma
 
@@ -28,7 +28,7 @@ Aşağıdaki bölümlerde, aşağıdaki dağıtım türlerini oluşturmak için 
 
 ## <a name="framework-dependent-deployment"></a>Framework bağımlı dağıtım
 
-Bir üçüncü taraf bağımlılığı olmadan çerçeveye bağlı bir dağıtımı dağıtmak, uygulamayı oluşturma, test etme ve yayımlamayı içerir. İçinde C# yazılmış basit bir örnek işlemi gösterir.  
+Bir üçüncü taraf bağımlılığı olmadan çerçeveye bağlı bir dağıtımı dağıtmak, uygulamayı oluşturma, test etme ve yayımlamayı içerir. İçinde C# yazılmış basit bir örnek işlemi gösterir.
 
 1. Projeyi oluşturun.
 
@@ -189,7 +189,7 @@ Uygulamanızın hedeflediği her platform için aşağıdakileri yapın:
    Zaten bir profil oluşturduysanız, zaten açık değilse **Yayımla** iletişim kutusunu açmak için projeye sağ tıklayın. Ardından **Yeni profil**' i seçin.
 
    **Bir Yayımla hedefi seç** iletişim kutusu açılır.
-  
+
 1. Visual Studio 'Nun uygulamanızı yayımlayıp konumunu seçin.
 
    Yalnızca tek bir platforma yayımlıyorsanız, **klasör seçin** metin kutusunda varsayılan değeri kabul edebilirsiniz; Bu, uygulamanızın çerçeveye bağlı dağıtımını *\<Project-directory > \Bin\release\netcoreapp2,\publish* dizinine yayınlar.
@@ -244,7 +244,7 @@ Ayrıca, Visual Studio, hedeflediğiniz her platform için ayrı bir yayımlama 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-https://go.microsoft.com/fwlink/?LinkID=208121. 
+https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>

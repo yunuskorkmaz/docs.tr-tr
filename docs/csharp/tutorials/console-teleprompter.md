@@ -4,18 +4,18 @@ description: Bu öğretici, .NET Core ve bu C# dilin çeşitli özelliklerini ö
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 921c8fc7824bdb48f08e4d9f5a276bf2284f8a17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 09ce36e7a61f576dc4449976ce676701dc57c9cd
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714599"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921130"
 ---
 # <a name="console-app"></a>Konsol uygulaması
 
 Bu öğretici, .NET Core ve bu C# dilin çeşitli özelliklerini öğretir. Şunları öğreneceksiniz:
 
-- .NET Core komut satırı arabirimi (CLı) temelleri
+- .NET Core CLI temel kavramları
 - C# Konsol uygulamasının yapısı
 - Konsol g/ç
 - .NET 'teki dosya g/ç API 'Lerinin temelleri
@@ -311,6 +311,6 @@ RunTeleprompter().Wait();
 
 ## <a name="conclusion"></a>Sonuç
 
-Bu öğreticide, C# dil etrafındaki ve konsol uygulamalarında çalışmaya yönelik .NET Core kitaplıklarının çeşitli özellikleri gösterildi. Bu bilgiyi, dil ve burada tanıtılan sınıflar hakkında daha fazla bilgi için oluşturabilirsiniz. Dosya ve konsol g/ç, görev tabanlı zaman uyumsuz programlama ile ilgili temel bilgileri, C# dilin bir turuna ve programların nasıl C# düzenlendiğini ve .NET Core komut satırı arabirimini ve araçlarını gördünüz.
+Bu öğreticide, C# dil etrafındaki ve konsol uygulamalarında çalışmaya yönelik .NET Core kitaplıklarının çeşitli özellikleri gösterildi. Bu bilgiyi, dil ve burada tanıtılan sınıflar hakkında daha fazla bilgi için oluşturabilirsiniz. Dosya ve konsol g/ç ile ilgili temel bilgileri, görev tabanlı zaman uyumsuz programlamayı engellemeyi ve engellenmemiş kullanımı, C# dilin bir turu ve programların nasıl C# düzenlendiğini ve .NET Core CLI olduğunu gördünüz.
 
 Dosya g/ç hakkında daha fazla bilgi için bkz. [dosya ve akış g/ç](../../standard/io/index.md) konusu. Bu öğreticide kullanılan zaman uyumsuz programlama modeli hakkında daha fazla bilgi için [görev tabanlı zaman uyumsuz programlama](../..//standard/parallel-programming/task-based-asynchronous-programming.md) konusuna ve [zaman uyumsuz programlama](../async.md) konusuna bakın.

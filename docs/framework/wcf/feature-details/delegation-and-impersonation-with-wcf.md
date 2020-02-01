@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 578957888daf7be20ab7418a46c533a011b3d2ac
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 3fd90cde16afdfe32b9bd0533ba04e35928d2706
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964159"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920200"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF ile Temsilcilik ve Kimliğe Bürünme
 *Kimliğe bürünme* , hizmetlerin, istemci erişimini bir hizmet etki alanı kaynaklarına kısıtlamak için kullandığı yaygın bir tekniktir. Hizmet etki alanı kaynakları, yerel dosyalar (kimliğe bürünme) gibi makine kaynakları ya da başka bir makinedeki bir dosya paylaşma (temsili) gibi bir kaynak olabilir. Örnek bir uygulama için bkz. [Istemcinin kimliğine bürünme](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Kimliğe bürünme özelliğinin nasıl kullanılacağına ilişkin bir örnek için bkz. [nasıl yapılır: bir hizmette Istemcinin kimliğine bürünme](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "75964159"
  WCF altyapısı, yalnızca çağıran tarafından bir Windows kullanıcı hesabıyla eşleştirilecek kimlik bilgileriyle doğrulandıysa çağıranın kimliğine bürünebilir. Hizmet, bir Windows hesabına eşlenemeyen bir kimlik bilgisi kullanarak kimlik doğrulaması yapacak şekilde yapılandırıldıysa, hizmet yöntemi yürütülmez.  
   
 > [!NOTE]
-> [!INCLUDE[wxp](../../../../includes/wxp-md.md)], kimliğe bürünülmüş bir SCT oluşturulursa, kimliğe bürünme başarısız olur ve bir <xref:System.InvalidOperationException>olur. Daha fazla bilgi için bkz. [desteklenmeyen senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
+> Windows XP 'de, bir durum bilgisi olan bir SCT oluşturulduysa kimliğe bürünme başarısız olur ve <xref:System.InvalidOperationException>olur. Daha fazla bilgi için bkz. [desteklenmeyen senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>Bir hizmet yönteminde kimliğe bürünme: kesinlik temelli model  
  Bazen bir çağıranın, işlev için tüm hizmet yöntemini taklit etmesine gerek yoktur, ancak yalnızca bir bölümü için. Bu durumda, çağıranın Windows kimliğini hizmet yöntemi içinde edinin ve imperatively kimliğe bürünme işlemini gerçekleştirin. Bunu, <xref:System.Security.Principal.WindowsIdentity> sınıfının bir örneğini döndürmek ve örneği kullanmadan önce <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> metodunu çağırmak için <xref:System.ServiceModel.ServiceSecurityContext> <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> özelliğini kullanarak yapın.  
@@ -113,21 +113,21 @@ ms.locfileid: "75964159"
   
 |`AllowedImpersonationLevel` değeri|Hizmette `SeImpersonatePrivilege`|Hizmet ve istemci, temsilciliğini alabilir|Önbelleğe alınmış belirteç `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|Anonim|Evet|yok|Kimliğe bürünme|  
-|Anonim|Hayır|yok|Kimlik|  
+|Deðeri|Evet|yok|Kimliğe bürünme|  
+|Deðeri|Hayır|yok|Kimlik|  
 |Kimlik|yok|yok|Kimlik|  
 |Kimliğe bürünme|Evet|yok|Kimliğe bürünme|  
 |Kimliğe bürünme|Hayır|yok|Kimlik|  
-|Temsilci|Evet|Evet|Temsilci|  
-|Temsilci|Evet|Hayır|Kimliğe bürünme|  
-|Temsilci|Hayır|yok|Kimlik|  
+|Verilmesini|Evet|Evet|Verilmesini|  
+|Verilmesini|Evet|Hayır|Kimliğe bürünme|  
+|Verilmesini|Hayır|yok|Kimlik|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>Kullanıcı adı kimlik bilgilerinden alınan kimliğe bürünme düzeyi ve önbelleğe alınmış belirteç kimliğe bürünme  
  İstemci, hizmetin Kullanıcı adını ve parolasını geçirerek, WCF 'nin Kullanıcı olarak oturum açmasına olanak sağlar ve bu da `AllowedImpersonationLevel` özelliğini <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>olarak ayarlamaya eşdeğerdir. (`AllowedImpersonationLevel` <xref:System.ServiceModel.Security.WindowsClientCredential> ve <xref:System.ServiceModel.Security.HttpDigestClientCredential> sınıflarında kullanılabilir.) Aşağıdaki tablo, hizmet Kullanıcı adı kimlik bilgilerini aldığında elde edilen kimliğe bürünme düzeyini sağlar.  
   
 |`AllowedImpersonationLevel`|Hizmette `SeImpersonatePrivilege`|Hizmet ve istemci, temsilciliğini alabilir|Önbelleğe alınmış belirteç `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|yok|Evet|Evet|Temsilci|  
+|yok|Evet|Evet|Verilmesini|  
 |yok|Evet|Hayır|Kimliğe bürünme|  
 |yok|Hayır|yok|Kimlik|  
   
@@ -169,7 +169,7 @@ ServiceHost sh = new ServiceHost(typeof(HelloService), httpUri);
 sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAccount = true;  
 ```  
   
-## <a name="delegation"></a>Temsilci  
+## <a name="delegation"></a>Verilmesini  
  Bir arka uç hizmetine temsilci seçmek için, bir hizmet, istemcinin Windows kimliğini kullanarak Kerberos Multi-BAI (NTLM geri dönüşü olmadan SSPI) veya arka uç hizmetine Kerberos doğrudan kimlik doğrulaması gerçekleştirmelidir. Bir arka uç hizmetine temsilci seçmek için bir <xref:System.ServiceModel.ChannelFactory%601> ve kanal oluşturun ve sonra istemciyi taklit ederken kanal üzerinden iletişim kurun. Bu tür bir temsilciyle, arka uç hizmetinin ön uç hizmetinden konumlandırıldığı mesafe ön uç hizmeti tarafından elde edilen kimliğe bürünme düzeyine bağlıdır. Kimliğe bürünme düzeyi <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>olduğunda, ön uç ve arka uç hizmetlerinin aynı makinede çalışıyor olması gerekir. Kimliğe bürünme düzeyi <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>olduğunda, ön uç ve arka uç hizmetleri ayrı makinelerde veya aynı makinede olabilir. Temsili düzeyi kimliğe bürünme özelliğinin etkinleştirilmesi için Windows etki alanı ilkesinin temsilciliğe izin verecek şekilde yapılandırılması gerekir. Temsilci desteği için Active Directory yapılandırma hakkında daha fazla bilgi için bkz. [temsilci kimlik doğrulamasını etkinleştirme](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780217(v=ws.10)).  
   
 > [!NOTE]

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 45e4926905bbf3b5a24af15de153afc7bd2a4823
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 9dbf9eee6e4222f899d77a4457bc78132ec7f092
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964565"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920225"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows Kimlik Doğrulama Hatalarını Ayıklama
 Windows kimlik doğrulamasını bir güvenlik mekanizması olarak kullanırken, güvenlik desteği sağlayıcısı arabirimi (SSPI) güvenlik süreçlerini işler. SSPI katmanında güvenlik hataları oluştuğunda, bunlar Windows Communication Foundation (WCF) ile ortaya çıkar. Bu konu, hataları tanılamanıza yardımcı olmak için bir çerçeve ve soru kümesi sağlar.  
@@ -38,10 +38,10 @@ Windows kimlik doğrulamasını bir güvenlik mekanizması olarak kullanırken, 
   
 ||Yerel Kullanıcı|Yerel Sistem|Etki alanı kullanıcısı|Etki alanı makinesi|  
 |-|----------------|------------------|-----------------|--------------------|  
-|Yerel Kullanıcı|NTLM|NTLM|NTLM|NTLM|  
+|Yerel Kullanıcı|NT|NT|NT|NT|  
 |Yerel Sistem|Anonim NTLM|Anonim NTLM|Anonim NTLM|Anonim NTLM|  
-|Etki alanı kullanıcısı|NTLM|NTLM|Kerberos|Kerberos|  
-|Etki alanı makinesi|NTLM|NTLM|Kerberos|Kerberos|  
+|Etki alanı kullanıcısı|NT|NT|Kerberos|Kerberos|  
+|Etki alanı makinesi|NT|NT|Kerberos|Kerberos|  
   
  Özellikle, dört hesap türü şunları içerir:  
   
@@ -139,7 +139,7 @@ Windows kimlik doğrulamasını bir güvenlik mekanizması olarak kullanırken, 
  [!code-vb[C_DebuggingWindowsAuth#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#3)]  
   
 #### <a name="sspi-is-not-available"></a>SSPI kullanılamıyor  
- Aşağıdaki işletim sistemleri, sunucu olarak kullanıldığında Windows kimlik doğrulamasını desteklemez: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition ve Windows Vista Home sürümleri.  
+ Aşağıdaki işletim sistemleri, sunucu olarak kullanıldığında Windows kimlik doğrulamasını desteklemez: Windows XP Home Edition, Windows XP Media Center Edition ve Windows Vista Home Edition.  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>Farklı kimliklerle geliştirme ve dağıtma  
  Uygulamanızı tek bir makinede geliştirir ve başka bir makineye dağıtırsanız ve her makinede kimlik doğrulamak için farklı hesap türleri kullanırsanız, farklı davranışlar yaşayabilirsiniz. Örneğin, `SSPI Negotiated` kimlik doğrulama modunu kullanarak uygulamanızı bir Windows XP Pro makinesi üzerinde geliştirdiğinizi varsayalım. Kimlik doğrulaması için yerel bir kullanıcı hesabı kullanıyorsanız, NTLM protokolü kullanılacaktır. Uygulama geliştirildikten sonra, hizmeti bir etki alanı hesabı altında çalıştığı bir Windows Server 2003 makinesine dağıtırsınız. Bu noktada, istemci Kerberos ve bir etki alanı denetleyicisi kullandığından hizmetin kimliğini doğrulayamayacak.  

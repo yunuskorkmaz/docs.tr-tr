@@ -5,13 +5,13 @@ dev_langs:
 - csharp
 author: thraka
 ms.author: adegeo
-ms.date: 10/22/2019
-ms.openlocfilehash: b8aa19a1d422fe7d6accd2b095f15843446599cd
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 01/27/2020
+ms.openlocfilehash: 92d97ca3efe761c879d0940a02342edb5a8180f0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789898"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920372"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
@@ -180,7 +180,7 @@ ReadyToRun derleyicisi Şu anda çapraz hedefleme 'yi desteklememektedir. Belirl
 
 ## <a name="runtimesdk"></a>Çalışma zamanı/SDK
 
-### <a name="major-version-roll-forward"></a>Büyük sürüm Ileri
+### <a name="major-version-runtime-roll-forward"></a>Büyük sürüm çalışma zamanı ileri
 
 .NET Core 3.0, uygulamanızın .NET Core 'un en son ana sürümüne iletmesini sağlayan bir katılım özelliği sunar. Ayrıca, geri alma 'nın uygulamanıza nasıl uygulandığını denetlemek için yeni bir ayar eklenmiştir. Bu, aşağıdaki yollarla yapılandırılabilir:
 
@@ -226,6 +226,15 @@ Bağlama ve Razor sayfası yayımlama gibi bazı işlemler, yayımlamayı gerekt
 Yerel araçlar, geçerli dizininizde `dotnet-tools.json` bir bildirim dosyası adına güvenir. Bu bildirim dosyası, bu klasörde ve altında kullanılabilecek araçları tanımlar. Kodunuzla çalışan herkesin aynı araçları geri yükleyip kullanabilmesini sağlamak için, bildirim dosyasını kodunuzla dağıtabilirsiniz.
 
 Hem genel hem de yerel araçlar için, çalışma zamanının uyumlu bir sürümü gereklidir. Şu anda NuGet.org hedef .NET Core çalışma zamanı 2.1 ' de birçok araç. Bu araçları küresel olarak veya yerel olarak yüklemek için, hala [NET Core 2.1 çalışma zamanını](https://dotnet.microsoft.com/download/dotnet-core/2.1)yüklemeniz gerekir.
+
+### <a name="new-globaljson-options"></a>Yeni Global. JSON seçenekleri
+
+*Global. JSON* dosyası, hangi .NET Core SDK sürümünün kullanıldığını tanımlamaya çalışırken daha fazla esneklik sağlayan yeni seçeneklere sahiptir. Yeni seçenekler şunlardır:
+
+- `allowPrerelease`: SDK Çözümleyicisinin kullanılacak SDK sürümünü seçerken yayın öncesi sürümlerini düşünmesinin gerekip gerekmediğini belirtir.
+- `rollForward`: bir SDK sürümü seçerken kullanılacak yuvarlama ilkesini, belirli bir SDK sürümü eksik olduğunda geri dönüş olarak veya daha yüksek bir sürümü kullanmak için bir yönerge olarak gösterir.
+
+Varsayılan değerler, desteklenen değerler ve yeni eşleştirme kuralları gibi değişiklikler hakkında daha fazla bilgi için bkz. [Global. JSON genel bakış](../tools/global-json.md).
 
 ### <a name="smaller-garbage-collection-heap-sizes"></a>Daha küçük atık toplama yığın boyutları
 

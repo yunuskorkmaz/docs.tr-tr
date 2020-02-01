@@ -2,12 +2,12 @@
 title: .NET Core uygulama dağıtımı
 description: .NET Core uygulaması dağıtma yolları hakkında bilgi edinin.
 ms.date: 12/03/2018
-ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 425f0d5bf11fd0572825d2025005aacf65d7d2cd
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740813"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920885"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core uygulama dağıtımı
 
@@ -91,11 +91,11 @@ Birkaç dezavantajın de vardır:
 
 ## <a name="step-by-step-examples"></a>Adım adım örnekler
 
-CLı araçlarıyla .NET Core uygulamaları dağıtmanın adım adım örnekleri için bkz. [CLI araçları ile .NET Core uygulamaları dağıtma](deploy-with-cli.md). Visual Studio ile .NET Core uygulamaları dağıtmanın adım adım örnekleri için bkz. [Visual Studio ile .NET Core uygulamaları dağıtma](deploy-with-vs.md). 
+.NET Core uygulamalarını .NET Core CLI dağıtmaya yönelik adım adım örnekler için, bkz. [.NET Core CLI .NET Core Apps yayımlama](deploy-with-cli.md). Visual Studio ile .NET Core uygulamaları dağıtmanın adım adım örnekleri için bkz. [Visual Studio ile .NET Core uygulamaları dağıtma](deploy-with-vs.md). 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CLı araçları ile .NET Core uygulamaları dağıtma](deploy-with-cli.md)
+- [.NET Core CLI .NET Core uygulamaları yayımlayın](deploy-with-cli.md)
 - [Visual Studio ile .NET Core uygulamaları dağıtma](deploy-with-vs.md)
 - [Paketler, Meta Paketler ve Çerçeveler](../packages.md)
 - [.NET Core çalışma zamanı tanımlayıcısı (RID) kataloğu](../rid-catalog.md)

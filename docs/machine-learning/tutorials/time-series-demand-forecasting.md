@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 2482709abfadad0505a40f4c37fd58cee4a2634c
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 026421d7b1b2a0e39118ae712780ca7fc8f6e444
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978197"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921250"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Öğretici: zaman serisi analizi ve ML.NET ile tahmin Bisiklet kiralama hizmeti talebi
 
@@ -29,7 +29,7 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- [Visual Studio 2017 15,6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
+- [Visual Studio 2017 sürüm 15,6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 
 ## <a name="time-series-forecasting-sample-overview"></a>Zaman serisi tahmin örneğine genel bakış
 
@@ -92,7 +92,7 @@ Aşağıda, verilerin bir örneği verilmiştir:
 
     [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L1-L8)]
 
-1. `ModelInput` sınıfı oluşturun. `Program` sınıfının altına aşağıdaki kodu ekleyin.
+1. `ModelInput` sınıfını oluşturun. `Program` sınıfının altına aşağıdaki kodu ekleyin.
 
     [!code-csharp [ModelInputClass](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L120-L127)]
 
@@ -122,7 +122,7 @@ Aşağıda, verilerin bir örneği verilmiştir:
 
     [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L21)]
 
-    [`MLContext`](xref:Microsoft.ML.MLContext) sınıfı tüm ml.NET işlemleri için bir başlangıç noktasıdır ve mlcontext 'i başlatmak, model oluşturma iş akışı nesneleri genelinde paylaşılabilen yeni bir ml.net ortamı oluşturur. Bu, kavramsal olarak, Entity Framework `DBContext` ' a benzer.
+    [`MLContext`](xref:Microsoft.ML.MLContext) sınıfı tüm ml.NET işlemleri için bir başlangıç noktasıdır ve mlcontext 'i başlatmak, model oluşturma iş akışı nesneleri genelinde paylaşılabilen yeni bir ml.net ortamı oluşturur. Benzer, kavramsal olarak, Entity Framework `DBContext`.
 
 ## <a name="load-the-data"></a>Verileri yükleme
 
@@ -245,7 +245,7 @@ Modelinize memnun kaldıysanız, daha sonra diğer uygulamalarda kullanmak üzer
 
     [!code-csharp [DisplayForecast](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L111-L116)]
 
-## <a name="run-the-application"></a>Uygulamayı çalıştırma
+## <a name="run-the-application"></a>Uygulamayı çalıştırın
 
 1. `Main` yönteminin içinde `Forecast` yöntemini çağırın.
 
@@ -280,7 +280,7 @@ Gerçek ve tahmin edilen değerlerin incelemesinde aşağıdaki ilişkiler göst
 
 Tahmin edilen değerler tam sayı sayısını tahmin etmez, ancak bir işlemin kaynakları kullanımlarını en uygun hale getirmesine izin veren daha dar bir değer aralığı sağlarlar.
 
-Mühendisi! Artık Bisiklet Kiralama talebini tahmin etmek için bir zaman serisi makine öğrenimi modelini başarıyla oluşturdunuz.
+Tebrikler! Artık Bisiklet Kiralama talebini tahmin etmek için bir zaman serisi makine öğrenimi modelini başarıyla oluşturdunuz.
 
 Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-örnekleri](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) deposunda bulabilirsiniz.
 

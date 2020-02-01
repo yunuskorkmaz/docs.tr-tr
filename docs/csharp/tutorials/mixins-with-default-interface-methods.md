@@ -3,12 +3,12 @@ title: Varsayılan arabirim yöntemlerini kullanarak Mixin türleri oluşturma
 description: Varsayılan arabirim üyelerini kullanarak, uygulamaları uygulayıcılar için isteğe bağlı varsayılan uygulamalarla genişletebilirsiniz.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: fb8fc1f432bdf909bae4f54bb76d10d7619f71a3
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f97410124a4ca5bbb10972ab5e7942fa4af68d72
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140853"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921453"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Öğretici: varsayılan arabirim yöntemleriyle arabirimleri kullanarak sınıf oluştururken içindeki işlevselliği karıştırma
 
@@ -24,7 +24,7 @@ Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Makinenizi, C# 8,0 derleyicisi dahil .NET Core çalıştıracak şekilde ayarlamanız gerekir. C# 8,0 derleyicisi, [Visual Studio 2019, 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)veya [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya sonraki sürümleriyle başlayarak kullanılabilir.
+Makinenizi, C# 8,0 derleyicisi dahil .NET Core çalıştıracak şekilde ayarlamanız gerekir. C# 8,0 derleyicisi, [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)veya [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya sonraki sürümleriyle başlayarak kullanılabilir.
 
 ## <a name="limitations-of-extension-methods"></a>Uzantı yöntemlerinin sınırlamaları
 
@@ -45,7 +45,7 @@ Bir giriş otomasyon uygulaması düşünün. Belki de şirket genelinde kullan�
 
 Bu genişletilmiş yeteneklerin bazıları, en az kümeyi destekleyen cihazlarda öykünüyolabilir. Bu, varsayılan bir uygulama sağlamayı gösterir. İçinde daha fazla özelliğe yerleşik olan cihazlar için, cihaz yazılımı yerel özellikleri kullanır. Diğer ışıklar için, arabirimi uygulamayı ve varsayılan uygulamayı kullanmayı seçebilirler.
 
-Varsayılan arabirim üyeleri bu senaryoya uzantı yöntemlerinden daha iyi bir çözümdür. Sınıf yazarları, hangi arabirimlerin uygulanacağını seçebilecekleri denetleyebilir. Tercih ettikleri arabirimler yöntemler olarak kullanılabilir. Ek olarak, varsayılan arabirim yöntemleri varsayılan olarak sanal olduğundan, yöntemi dağıtım her zaman sınıfındaki uygulamayı seçer. 
+Varsayılan arabirim üyeleri bu senaryoya uzantı yöntemlerinden daha iyi bir çözümdür. Sınıf yazarları, hangi arabirimlerin uygulanacağını seçebilecekleri denetleyebilir. Tercih ettikleri arabirimler yöntemler olarak kullanılabilir. Ek olarak, varsayılan arabirim yöntemleri varsayılan olarak sanal olduğundan, yöntemi dağıtım her zaman sınıfındaki uygulamayı seçer.
 
 Bu farklılıkları göstermek için kodu oluşturalım.
 
@@ -79,7 +79,7 @@ Farklı bir ışık türü, daha karmaşık bir protokolü destekleyebilir. Aşa
 
 [!code-csharp[Override the timer function](~/samples/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
 
-Sanal Sınıf yöntemlerinin geçersiz kılınmasından farklı olarak, `HalogenLight` sınıfındaki `TurnOnFor` bildirimi `override` anahtar sözcüğünü kullanmaz. 
+Sanal Sınıf yöntemlerinin geçersiz kılınmasından farklı olarak, `HalogenLight` sınıfındaki `TurnOnFor` bildirimi `override` anahtar sözcüğünü kullanmaz.
 
 ## <a name="mix-and-match-capabilities"></a>Karıştırma ve eşleştirme özellikleri
 

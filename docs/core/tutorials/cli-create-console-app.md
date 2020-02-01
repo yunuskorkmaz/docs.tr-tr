@@ -1,23 +1,23 @@
 ---
-title: CLı-.NET Core CLI kullanarak .NET Core ile çalışmaya başlama
-description: .NET Core komut satırı arabirimi (CLı) kullanarak Windows, Linux veya macOS 'ta .NET Core ile çalışmaya başlama hakkında adım adım öğretici.
+title: CLı kullanarak .NET Core ile çalışmaya başlama
+description: .NET Core CLI kullanarak Windows, Linux veya macOS 'ta .NET Core ile çalışmaya başlama hakkında adım adım öğretici.
 author: thraka
 ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 4285ed3c0488ea615ca89b0b771bf09c8c29b318
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6e1c7881aa415ea54307d80214001a2f0fe5b4a6
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739120"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920474"
 ---
-# <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Komut satırını kullanarak Windows/Linux/macOS 'ta .NET Core ile çalışmaya başlama
+# <a name="get-started-with-net-core-using-the-net-core-cli"></a>.NET Core CLI kullanarak .NET Core ile çalışmaya başlama
 
-Bu makalede, .NET Core CLI araçları kullanılarak makinenizde platformlar arası uygulamalar geliştirmeye nasıl başlayacaksınız gösterilmektedir.
+Bu makalede, .NET Core CLI kullanarak Windows, Linux ve macOS üzerinde çalışan .NET Core uygulamaları geliştirmeye nasıl başlayacaksınız.
 
-.NET Core CLI araç takımını tanımıyorsanız, [.NET Core SDK genel bakış](../tools/index.md)makalesini okuyun.
+.NET Core CLI hakkında bilgi sahibi değilseniz, [.NET Core CLI genel bakış ' a](../tools/index.md)bakın.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -194,6 +194,6 @@ Hello World!
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core CLI araçlarıyla projeleri düzenleme ve test etme](testing-with-cli.md)
-- [CLı ile .NET Core uygulamaları yayımlayın](../deploying/deploy-with-cli.md)
-- [Uygulama dağıtımı hakkında daha fazla bilgi edinin](../deploying/index.md)
+- [.NET Core CLI projeleri düzenleme ve test etme](testing-with-cli.md)
+- [.NET Core CLI .NET Core uygulamaları yayımlayın](../deploying/deploy-with-cli.md)
+- [.NET core uygulama dağıtımı](../deploying/index.md)

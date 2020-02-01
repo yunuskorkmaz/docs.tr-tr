@@ -4,12 +4,12 @@ description: Mac, Linux ve Windows 'da uygulamalar ve kitaplıklar oluşturmak i
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 7039d5877ecbd4477d64991321a7fc46cadc2848
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4e0acc357453d3bd3fb877e357264cc1aa715e4c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714038"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920436"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Bu öğreticileri inceleyerek .NET Core ve .NET Core SDK araçları hakkında bilgi edinin
 
@@ -35,10 +35,10 @@ ms.locfileid: "75714038"
 - [Mac için Visual Studio kullanarak macOS üzerinde .NET Core kullanmaya başlama](using-on-mac-vs.md)
 - [Mac için Visual Studio kullanarak macOS’ta eksiksiz bir .NET Core çözümü derleme](using-on-mac-vs-full-solution.md)
 
-## <a name="build-applications-with-the-net-core-cli-tools"></a>.NET Core CLI araçlarıyla uygulamalar oluşturun
+## <a name="build-applications-with-the-net-core-cli"></a>.NET Core CLI uygulamalar oluşturun
 
-- [.NET Core CLI araçlarını kullanarak Windows/Linux/macOS 'ta .NET Core ile çalışmaya başlama](cli-create-console-app.md)
-- [.NET Core CLI araçlarıyla projeleri düzenleme ve test etme](testing-with-cli.md)
+- [.NET Core CLI kullanarak Windows/Linux/macOS 'ta .NET Core ile çalışmaya başlama](cli-create-console-app.md)
+- [.NET Core CLI projeleri düzenleme ve test etme](testing-with-cli.md)
 - [Kullanmaya başlayınF#](../../fsharp/get-started/get-started-command-line.md)
 
 ## <a name="other"></a>Diğer

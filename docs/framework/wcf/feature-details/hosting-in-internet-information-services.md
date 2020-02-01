@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 108048f6bdd2c02a67e331bd7b07b724d0e86527
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 2e0fb579897797b732859692092665225a0d6168
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963796"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919361"
 ---
 # <a name="host-in-internet-information-services"></a>Internet Information Services 'de barındırma
 
@@ -19,7 +19,7 @@ Windows Communication Foundation (WCF) hizmetlerini barındırmak için bir seç
 
 WCF aşağıdaki işletim sistemlerinde IIS 'nin aşağıdaki sürümlerinde barındırılabilir:
 
-- [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]'de IIS 5,1. Bu ortam, daha sonra Windows Server 2003 gibi bir sunucu işletim sisteminde dağıtılan IIS tarafından barındırılan uygulamaların tasarımı ve geliştirilmesi için yararlıdır.
+- Windows XP SP2 üzerinde IIS 5,1. Bu ortam, daha sonra Windows Server 2003 gibi bir sunucu işletim sisteminde dağıtılan IIS tarafından barındırılan uygulamaların tasarımı ve geliştirilmesi için yararlıdır.
 
 - Windows Server 2003 üzerinde IIS 6,0. IIS 6,0, geliştirilmiş ölçeklenebilirlik, güvenilirlik ve uygulama yalıtımı sunan gelişmiş bir işlem modeli sağlar. Bu ortam, yalnızca HTTP iletişimini kullanan WCF hizmetlerinin üretim dağıtımı için uygundur.
 

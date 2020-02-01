@@ -4,12 +4,12 @@ description: Bu makalede, .NET Standard her yeni sürümünde bulunan yeni özel
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: ebf656c4a5499fff54cb5a70a93c4e8cc9c82d0a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a90df0360211c3b02f4f2d8697890180099c5807
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73101766"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921067"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard’daki Yenilikler
 
@@ -63,7 +63,7 @@ Artık Visual Basic .NET Standard kitaplıklarını geliştirebilirsiniz. .NET C
 
 ### <a name="tooling-support-for-net-standard-libraries"></a>.NET Standard kitaplıkları için araç desteği
 
-.NET Core 2,0 ve .NET Standard 2,0 sürümü ile hem Visual Studio 2017 hem de [.NET Core komut satırı arabirimi (CLI)](../../core/tools/index.md) , .NET Standard kitaplıkları oluşturmak için araç desteğini içerir.
+.NET Core 2,0 ve .NET Standard 2,0 sürümü ile hem Visual Studio 2017 hem de [.NET Core CLI](../../core/tools/index.md) .NET Standard kitaplıkları oluşturmak için araç desteğini içerir.
 
 Visual Studio 'Yu **.NET Core platformlar arası geliştirme** iş yüküyle birlikte yüklerseniz, aşağıdaki şekilde gösterildiği gibi bir proje şablonu kullanarak bir .NET Standard 2,0 kitaplık projesi oluşturabilirsiniz:
 

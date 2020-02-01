@@ -1,26 +1,20 @@
 ---
-title: .NET Core komut satırı arabirimi (CLı) araçları
-description: .NET Core komut satırı arabirimi (CLı) araçları ve özelliklerine genel bakış.
+title: .NET Core CLI
+titleSuffix: ''
+description: .NET Core CLI ve özelliklerine genel bir bakış.
 ms.date: 08/14/2017
-ms.openlocfilehash: f19dcb19fb9d0203b3d3795c3fdc0b026c4c60e3
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: b0a8e0dd8cf77bb6f7567c27e9972f62515ec0f2
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163221"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920480"
 ---
-# <a name="net-core-command-line-interface-cli-tools"></a>.NET Core komut satırı arabirimi (CLı) araçları
+# <a name="net-core-cli-overview"></a>.NET Core CLI genel bakış
 
-.NET Core komut satırı arabirimi (CLı), .NET uygulamaları geliştirmeye yönelik platformlar arası bir araç zinciridir. CLı, tümleşik geliştirme ortamları (IDN 'ler), düzenleyiciler ve derleme yöneticileri gibi daha üst düzey araçların geri kalanı olan bir temelidir.
+.NET Core komut satırı arabirimi (CLı), .NET Core uygulamaları geliştirmeye, oluşturmaya, çalıştırmaya ve yayımlamaya yönelik platformlar arası bir araç zinciridir.
 
-## <a name="installation"></a>Yükleme
-
-Yerel yükleyicileri kullanın veya yükleme kabuğu betikleri kullanın:
-
-- Yerel yükleyiciler öncelikle geliştiricinin makinelerinde kullanılır ve desteklenen her platformun yerel yükleme mekanizmasını kullanır. Örneğin, Windows üzerinde Ubuntu veya MSI paketlerinde DEB paketleri. Bu yükleyiciler, geliştirici tarafından anında kullanılmak üzere ortamı yükler ve yapılandırır, ancak makinede yönetici ayrıcalıkları gerektirir. Yükleme yönergelerini [.NET Core yükleme kılavuzunda](https://aka.ms/dotnetcoregs)görüntüleyebilirsiniz.
-- Kabuk betikleri öncelikle yapı sunucularını ayarlamak için veya araçları yönetici ayrıcalıkları olmadan yüklemek istediğinizde kullanılır. Betikleri yükleme, el ile yüklenmesi gereken makineye önkoşulları yüklemez. Daha fazla bilgi için bkz. [komut dosyası başvurusunu install konusu](dotnet-install-script.md). Sürekli tümleştirme (CI) derleme sunucunuzda CLı 'yı ayarlama hakkında daha fazla bilgi için bkz. [.NET Core SDK ve araçları sürekli tümleştirme (CI) Içinde kullanma](using-ci-with-cli.md).
-
-Varsayılan olarak, CLı yan yana (SxS) bir şekilde yüklenir. bu nedenle, CLı araçlarının birden çok sürümü tek bir makinede birlikte bulunabilir. Birden çok sürümün yüklü olduğu bir makinede hangi sürümün kullanıldığını belirleme, [sürücü](#driver) bölümünde daha ayrıntılı olarak açıklanmıştır.
+.NET Core CLI, [.NET Core SDK](../sdk.md)dahil edilir. .NET Core SDK nasıl yükleneceğini öğrenmek için bkz. [.NET Core SDK yüklemesi](../install/sdk.md).
 
 ## <a name="cli-commands"></a>CLı komutları
 
@@ -35,12 +29,12 @@ Aşağıdaki komutlar varsayılan olarak yüklenir:
 - [new](dotnet-new.md)
 - [restore](dotnet-restore.md)
 - [derlemeyi](dotnet-build.md)
-- [publish](dotnet-publish.md)
+- [yayınlamanız](dotnet-publish.md)
 - [çalışmaz](dotnet-run.md)
 - [sınamanız](dotnet-test.md)
 - [VSTest](dotnet-vstest.md)
 - [pack](dotnet-pack.md)
-- [geçirme](dotnet-migrate.md)
+- [geçiremezsiniz](dotnet-migrate.md)
 - [temizlenemedi](dotnet-clean.md)
 - [sln](dotnet-sln.md)
 - [Yardım](dotnet-help.md)
@@ -69,12 +63,12 @@ Aşağıdaki komutlar varsayılan olarak yüklenir:
 - [new](dotnet-new.md)
 - [restore](dotnet-restore.md)
 - [derlemeyi](dotnet-build.md)
-- [publish](dotnet-publish.md)
+- [yayınlamanız](dotnet-publish.md)
 - [çalışmaz](dotnet-run.md)
 - [sınamanız](dotnet-test.md)
 - [VSTest](dotnet-vstest.md)
 - [pack](dotnet-pack.md)
-- [geçirme](dotnet-migrate.md)
+- [geçiremezsiniz](dotnet-migrate.md)
 - [temizlenemedi](dotnet-clean.md)
 - [sln](dotnet-sln.md)
 
@@ -153,5 +147,5 @@ Komut satırında geçirdiğiniz seçenekler çağrılan komuta yönelik seçene
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DotNet/CLı GitHub deposu](https://github.com/dotnet/cli/)
+- [DotNet/SDK GitHub deposu](https://github.com/dotnet/sdk/)
 - [.NET Core yükleme kılavuzu](https://aka.ms/dotnetcoregs)

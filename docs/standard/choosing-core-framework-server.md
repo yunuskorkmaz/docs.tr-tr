@@ -4,12 +4,12 @@ description: .NET ' te bir sunucu uygulaması oluştururken göz önünde bulund
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: b2b9e15cfdfd63d070ae94c29a9f2d1a5b5c87b2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: c280e22341a45260a816a36c1148dc8c4f76db09
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738675"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921425"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma
 
@@ -38,7 +38,7 @@ Aşağıdaki bölümlerde, .NET Core çekmeye yönelik daha önce belirtilen ned
 
 Uygulamanızın (Web/hizmet) birden çok platformda (Windows, Linux ve macOS) çalışması gerekiyorsa .NET Core kullanın.
 
-.NET Core, geliştirme iş istasyonunuz olarak yukarıda bahsedilen işletim sistemlerini destekler. Visual Studio, Windows ve macOS için tümleşik bir geliştirme ortamı (IDE) sağlar. MacOS, Linux ve Windows üzerinde çalışan Visual Studio Code de kullanabilirsiniz. Visual Studio Code, IntelliSense ve hata ayıklama dahil .NET Core 'u destekler. Alt Lime, Emacs ve VI gibi üçüncü taraf düzenleyicilerin çoğu .NET Core ile çalışır. Bu üçüncü taraf düzenleyiciler, [Omnisharp](https://www.omnisharp.net/)kullanarak düzenleyici IntelliSense 'i alır. Ayrıca, herhangi bir kod düzenleyiciden kaçınabilir ve desteklenen tüm platformlar için kullanılabilen [.NET Core CLI araçları](../core/tools/index.md)' nı doğrudan kullanabilirsiniz.
+.NET Core, geliştirme iş istasyonunuz olarak yukarıda bahsedilen işletim sistemlerini destekler. Visual Studio, Windows ve macOS için tümleşik bir geliştirme ortamı (IDE) sağlar. MacOS, Linux ve Windows üzerinde çalışan Visual Studio Code de kullanabilirsiniz. Visual Studio Code, IntelliSense ve hata ayıklama dahil .NET Core 'u destekler. Alt Lime, Emacs ve VI gibi üçüncü taraf düzenleyicilerin çoğu .NET Core ile çalışır. Bu üçüncü taraf düzenleyiciler, [Omnisharp](https://www.omnisharp.net/)kullanarak düzenleyici IntelliSense 'i alır. Ayrıca, herhangi bir kod düzenleyiciden kaçınabilir ve tüm desteklenen platformlar için kullanılabilen [.NET Core CLI](../core/tools/index.md)doğrudan kullanabilirsiniz.
 
 ### <a name="microservices-architecture"></a>Mikro hizmetler mimarisi
 

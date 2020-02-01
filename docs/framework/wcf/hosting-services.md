@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 7a77f7d11bbd2b685bdcf53a3992b4e04b3691b8
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9608f9cc55bbba29686440be529659c6606b0eb8
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901226"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921044"
 ---
 # <a name="hosting-services"></a>Barındırma hizmetleri
 
@@ -32,9 +32,9 @@ Bu barındırma seçeneği, bir WCF hizmetini yönetilen bir Windows hizmeti (es
 
 ### <a name="internet-information-services-iis"></a>Internet Information Services (IIS)
 
-IIS barındırma seçeneği, ASP.NET ile tümleşiktir ve işlem geri dönüşümü, boşta kalma, işlem sistem durumu izleme ve ileti tabanlı etkinleştirme gibi bu teknolojilerin sunduğu özellikleri kullanır. [!INCLUDE[wxp](../../../includes/wxp-md.md)] ve Windows Server 2003 işletim sistemlerinde bu, yüksek oranda kullanılabilir ve yüksek oranda ölçeklenebilir olması gereken Web hizmeti uygulamalarını barındırmak için tercih edilen çözümdür. IIS Ayrıca, müşterilerin bir kurumsal sınıf sunucu ürününden beklediği tümleşik yönetilebilirlik sağlar. Bu barındırma seçeneği IIS 'nin düzgün şekilde yapılandırılmasını gerektirir, ancak herhangi bir barındırma kodunun uygulamanın bir parçası olarak yazılmasını gerektirmez. WCF hizmeti için IIS barındırmanın nasıl yapılandırılacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: IIS 'de WCF hizmeti barındırma](./feature-details/how-to-host-a-wcf-service-in-iis.md).
+IIS barındırma seçeneği, ASP.NET ile tümleşiktir ve işlem geri dönüşümü, boşta kalma, işlem sistem durumu izleme ve ileti tabanlı etkinleştirme gibi bu teknolojilerin sunduğu özellikleri kullanır. Windows XP ve Windows Server 2003 işletim sistemlerinde bu, yüksek oranda kullanılabilir ve yüksek oranda ölçeklenebilir olması gereken Web hizmeti uygulamalarını barındırmak için tercih edilen çözümdür. IIS Ayrıca, müşterilerin bir kurumsal sınıf sunucu ürününden beklediği tümleşik yönetilebilirlik sağlar. Bu barındırma seçeneği IIS 'nin düzgün şekilde yapılandırılmasını gerektirir, ancak herhangi bir barındırma kodunun uygulamanın bir parçası olarak yazılmasını gerektirmez. WCF hizmeti için IIS barındırmanın nasıl yapılandırılacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: IIS 'de WCF hizmeti barındırma](./feature-details/how-to-host-a-wcf-service-in-iis.md).
 
- IIS tarafından barındırılan hizmetler yalnızca HTTP taşımasını kullanabilir. IIS 5,1 ' de uygulanması [!INCLUDE[wxp](../../../includes/wxp-md.md)]bazı sınırlamalar sunmuştur. [!INCLUDE[wxp](../../../includes/wxp-md.md)] üzerinde IIS 5,1 tarafından bir WCF hizmeti için sunulan ileti tabanlı etkinleştirme, aynı bilgisayardaki diğer şirket içinde barındırılan WCF hizmetini, iletişim kurmak için 80 bağlantı noktasını kullanarak engeller. WCF Hizmetleri, Windows Server 2003 üzerinde IIS 6,0 ile barındırılan diğer uygulamalarla aynı AppDomain/uygulama havuzunda/çalışan Işleminde çalıştırılabilir. Ancak, WCF ve IIS 6,0 her ikisi de çekirdek modu HTTP yığınını (HTTP. sys) kullandığından, IIS 6,0, bağlantı noktası 80 ' nı aynı makinede çalışan diğer şirket içinde barındırılan WCF hizmetleriyle paylaşabilir ve IIS 5,1 ' den farklı olabilir.
+ IIS tarafından barındırılan hizmetler yalnızca HTTP taşımasını kullanabilir. IIS 5,1 ' de uygulanması Windows XP 'de bazı sınırlamalar sunmuştur. Windows XP 'de IIS 5,1 tarafından bir WCF hizmeti için sunulan ileti tabanlı etkinleştirme, aynı bilgisayardaki diğer şirket içinde barındırılan WCF hizmetinin iletişim kurmak için 80 bağlantı noktasını kullanmasını engeller. WCF Hizmetleri, Windows Server 2003 üzerinde IIS 6,0 ile barındırılan diğer uygulamalarla aynı AppDomain/uygulama havuzunda/çalışan Işleminde çalıştırılabilir. Ancak, WCF ve IIS 6,0 her ikisi de çekirdek modu HTTP yığınını (HTTP. sys) kullandığından, IIS 6,0, bağlantı noktası 80 ' nı aynı makinede çalışan diğer şirket içinde barındırılan WCF hizmetleriyle paylaşabilir ve IIS 5,1 ' den farklı olabilir.
 
 ### <a name="windows-process-activation-service-was"></a>Windows Işlem etkinleştirme hizmeti (WAS)
 
@@ -57,9 +57,9 @@ Windows Işlem etkinleştirme hizmeti (WAS), Windows Server 2008 için Windows V
 
 |Barındırma ortamı|Platform kullanılabilirliği|Desteklenen aktarımlar|İşlem ve AppDomain geri dönüştürme|
 |-------------------------|---------------------------|--------------------------|-------------------------------------|
-|Yönetilen uygulamalar ("kendiliğinden konak")|[!INCLUDE[wxp](../../../includes/wxp-md.md)], Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP<br /><br /> net. TCP,<br /><br /> net. pipe,<br /><br /> net.msmq|Hayır|
-|Windows Hizmetleri (eski adıyla NT Hizmetleri olarak biliniyordu)|[!INCLUDE[wxp](../../../includes/wxp-md.md)], Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP<br /><br /> net. TCP,<br /><br /> net. pipe,<br /><br /> net.msmq|Hayır|
-|IıS 5,1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|Evet|
+|Yönetilen uygulamalar ("kendiliğinden konak")|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP<br /><br /> net. TCP,<br /><br /> net. pipe,<br /><br /> net.msmq|Hayır|
+|Windows Hizmetleri (eski adıyla NT Hizmetleri olarak biliniyordu)|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP<br /><br /> net. TCP,<br /><br /> net. pipe,<br /><br /> net.msmq|Hayır|
+|IıS 5,1|Windows XP|HTTP|Evet|
 |IIS 6.0|Windows Server 2003|HTTP|Evet|
 |Windows Işlem etkinleştirme hizmeti (WAS)|Windows Vista, Windows Server 2008|HTTP<br /><br /> net. TCP,<br /><br /> net. pipe,<br /><br /> net.msmq|Evet|
 

@@ -5,12 +5,12 @@ ms.date: 12/17/2019
 author: billwagner
 ms.author: wiwagn
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8f8dbf7a8730712dc546643a6ef86425a3e19794
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 82fbccdec0323b54d313960279fcbfeeb6033319
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713994"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920407"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>.NET Core çalışma zamanı ve SDK 'sını kaldırma
 
@@ -136,7 +136,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ---
 
-## <a name="uninstalling-net-core"></a>.NET Core kaldırılıyor
+## <a name="uninstall-net-core"></a>.NET Core kaldır
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
@@ -220,7 +220,7 @@ Visual Studio 2019 sürüm 16,3 ' den önce, Visual Studio yükleyicileri tek ba
 | Visual Studio 2017 sürüm 15,9 | .NET Core SDK 2.2.1 xx, 2.1.5 xx |
 | Visual Studio 2017 sürüm 15,8 | .NET Core SDK 2.1.4 xx |
 
-Visual Studio 2019 16,3 ' den itibaren, Visual Studio .NET Core SDK kendi kopyasına göre ücretlendirilir. Bu nedenle, bu SDK sürümlerini **Program Ekle/Kaldır** iletişim kutusunda artık göremezsiniz.
+Visual Studio 2019 sürüm 16,3 ' den itibaren, Visual Studio .NET Core SDK kendi kopyasına göre ücretlendirilir. Bu nedenle, bu SDK sürümlerini **Program Ekle/Kaldır** iletişim kutusunda artık göremezsiniz.
 
 ## <a name="remove-the-nuget-fallback-folder"></a>NuGet geri dönüş klasörünü kaldır
 

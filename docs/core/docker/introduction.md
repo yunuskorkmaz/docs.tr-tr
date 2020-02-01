@@ -3,12 +3,12 @@ title: Docker 'a giriş
 description: Bu makalede bir .NET Core uygulaması bağlamında Docker 'a bir giriş ve genel bakış sunulmaktadır.
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: 278c921de83282d61b25f4d44e91535981285e83
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 40c8a3c8d81d23c621ccb83a283f49aa34a58ac1
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715544"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920817"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET ve Docker’a Giriş
 
@@ -18,7 +18,7 @@ Docker 'ı yükleme hakkında daha fazla bilgi için bkz. [Docker Desktop için 
 
 ## <a name="docker-basics"></a>Docker temelleri
 
-Bilmeniz gereken birkaç kavram vardır. Docker istemcisinin, görüntüleri ve kapsayıcıları yönetmek için kullandığınız bir komut satırı arabirimi programı vardır. Daha önce belirtildiği gibi, [Docker genel bakış](https://docs.docker.com/engine/docker-overview/) belgelerini okumak için zaman yapmanız gerekir. 
+Bilmeniz gereken birkaç kavram vardır. Docker istemcisinde, görüntüleri ve kapsayıcıları yönetmek için kullanabileceğiniz bir CLı vardır. Daha önce belirtildiği gibi, [Docker genel bakış](https://docs.docker.com/engine/docker-overview/) belgelerini okumak için zaman yapmanız gerekir. 
 
 ### <a name="images"></a>Görüntüler
 
@@ -30,7 +30,7 @@ Resimler görüntülerden oluşturulduğu için görüntüler, kapsayıcı başl
 
 Kapsayıcı bir görüntünün çalıştırılabilir örneğidir. Görüntünüzü oluştururken uygulamanızı ve bağımlılıklarınızı dağıtırsınız. Daha sonra, birden çok kapsayıcı, her biri bir diğerinden yalıtılmış olarak oluşturulabilir. Her kapsayıcı örneğinin kendi dosya sistemi, belleği ve ağ arabirimi vardır.
 
-### <a name="registries"></a>Kayıt Defterleri
+### <a name="registries"></a>kayıt
 
 Kapsayıcı kayıt defterleri, bir görüntü depoları koleksiyonudur. Görüntülerinizi bir kayıt defteri görüntüsünde temel alabilirsiniz. Kapsayıcılardan doğrudan kayıt defterindeki bir görüntüden kapsayıcı oluşturabilirsiniz. [Docker kapsayıcıları, görüntüleri ve kayıt defterleri arasındaki ilişki](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md) , [Kapsayıcılı uygulamaları veya mikro hizmetleri tasarlayarak ve derlerken](../../architecture/microservices/architect-microservice-container-applications/index.md)önemli bir kavramdır. Bu yaklaşım geliştirme ve dağıtım arasındaki süreyi büyük ölçüde kısaltır.
 

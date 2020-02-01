@@ -2,12 +2,12 @@
 title: DNX 'ten .NET Core CLI geçirme
 description: DNX Araçları ' i kullanarak .NET Core CLI Araçları ' na geçirin.
 ms.date: 06/20/2016
-ms.openlocfilehash: 91a43ffda31b34332d2e545a90c857221aa162c4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e15e7ce10bb7a36deb2acd2abb9a0bd4ec8cd4a9
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715522"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920619"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>DNX 'ten .NET Core CLI 'e geçme (Project. JSON)
 
@@ -30,9 +30,9 @@ Araç üzerinde ilk olarak özetlenen bazı genel değişiklikler vardır.
 ### <a name="no-more-dnvm"></a>Başka DNVM yok
 DNVM, *DotNet sürüm Yöneticisi* için Short, makinenizde DNX yüklemek için kullanılan bir bash/PowerShell betiğiydi. Kullanıcıların, belirtilen oturum için $PATH, belirli bir DNX "etkin" olarak işaretleneceği (veya varsayılan olarak) akışların gereksinim duyduğu DNX 'i almasını ve bu dosyayı verilen oturum için yerleştirmesine yardımcı olur. Bu, çeşitli araçları kullanmanıza olanak sağlar.
 
-DNVM, özellik kümesi .NET Core CLI araçlarında gelen değişiklikler tarafından yedekli şekilde yapıldığı için kullanımdan kaldırıldı.
+DNVM, özellik kümesi .NET Core CLI gelen değişiklikler tarafından yedekli şekilde yapıldığı için kullanımdan kaldırıldı.
 
-CLı araçları iki ana şekilde paketlenmiş olarak sunulur:
+CLı iki ana şekilde paketlenmiş olarak sunulur:
 
 1. Belirli bir platform için yerel yükleyiciler
 2. Diğer durumlar için betiği (CI sunucuları gibi) yükler
@@ -69,7 +69,7 @@ DNU, "genel komutlar" adlı bir kavram ile geldi. Bunlar temelde, uygulamayı ç
 CLı bu kavramı desteklemez. Ancak, tanıdık `dotnet <command>` sözdizimi kullanılarak çağrılabilecek proje başına komutları ekleme kavramını destekler.
 
 ### <a name="installing-dependencies"></a>Bağımlılıklar yükleniyor
-V1 itibariyle .NET Core CLI araçları, bağımlılıkları yüklemek için bir `install` komutuna sahip değildir. NuGet 'den bir paket yüklemek için, `project.json` dosyanıza bir bağımlılık olarak eklemeniz ve sonra `dotnet restore` çalıştırmanız gerekir ([bkz. Note](#dotnet-restore-note)).
+V1 itibariyle, .NET Core CLI bağımlılıkları yüklemek için bir `install` komutu yoktur. NuGet 'den bir paket yüklemek için, `project.json` dosyanıza bir bağımlılık olarak eklemeniz ve sonra `dotnet restore` çalıştırmanız gerekir ([bkz. Note](#dotnet-restore-note)).
 
 ### <a name="running-your-code"></a>Kodunuzu çalıştırma
 Kodunuzu çalıştırmanın iki ana yolu vardır. Biri kaynaktan, `dotnet run`. `dnx run`aksine, bu, bellek içi derleme kullanmaz. Kodu oluşturmak için gerçekten `dotnet build` çağırır ve sonra oluşturulan ikiliyi çalıştırır.
@@ -84,7 +84,7 @@ Kodunuzla çalışırken yeni komutların kullanılmasına ek olarak, DNX 'ten g
 3. Herhangi bir DNX API 'sini BCL karşılıklarına geçirme.
 
 ### <a name="changing-the-globaljson-file"></a>Global. json dosyasını değiştirme
-`global.json` dosyası, hem RC1 hem de RC2 (veya üzeri) projeleri için bir çözüm dosyası gibi davranır. CLı araçlarının (ve Visual Studio 'Nun yanı sıra) RC1 ve sonraki sürümleri birbirinden ayırt edilebilmesi için `"sdk": { "version" }` özelliğini kullanarak projenin RC1 veya üzeri olduğunu fark edin. `global.json` bu düğümü hiç içermiyorsa, en son olarak kabul edilir.
+`global.json` dosyası, hem RC1 hem de RC2 (veya üzeri) projeleri için bir çözüm dosyası gibi davranır. RC1 ve sonraki sürümleri birbirinden ayırt etmek için .NET Core CLI (ve Visual Studio 'Nun yanı sıra) için, hangi projenin RC1 veya üzeri olduğunu fark etmek üzere `"sdk": { "version" }` özelliğini kullanırlar. `global.json` bu düğümü hiç içermiyorsa, en son olarak kabul edilir.
 
 `global.json` dosyasını güncelleştirmek için, özelliği kaldırın ya da kullanmak istediğiniz araçların tam sürümüne ayarlayın, bu örnekte **1.0.0-preview2-003121**:
 

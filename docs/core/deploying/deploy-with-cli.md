@@ -1,20 +1,20 @@
 ---
-title: CLı ile .NET Core uygulamaları yayımlayın
-description: .NET Core SDK komut satırı arabirimi (CLı) araçlarıyla .NET Core uygulaması yayımlamayı öğrenin.
+title: .NET Core CLI ile uygulama yayımlama
+description: .NET Core CLI komutlarını kullanarak bir .NET Core uygulaması yayımlamayı öğrenin.
 author: thraka
 ms.author: adegeo
 ms.date: 12/12/2019
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 98f1e96ac087727e711f9ebf3d3eaf86c4d4eec9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f4c2a4ccf551c53e4aa4e125cb5720d6f1cc9601
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740849"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920905"
 ---
-# <a name="publish-net-core-apps-with-the-cli"></a>CLı ile .NET Core uygulamaları yayımlayın
+# <a name="publish-net-core-apps-with-the-net-core-cli"></a>.NET Core CLI .NET Core uygulamaları yayımlayın
 
 Bu makalede, .NET Core uygulamanızı komut satırından nasıl yayımlayacağınız gösterilmektedir. .NET Core, uygulamalarınızı yayımlamanın üç yolunu sağlar. Çerçeveye bağımlı dağıtım, yerel olarak yüklenmiş .NET Core çalışma zamanını kullanan platformlar arası bir. dll dosyası üretir. Çerçeveye bağımlı yürütülebilir, yerel olarak yüklenmiş .NET Core çalışma zamanını kullanan platforma özgü bir yürütülebilir dosya oluşturur. Kendi içinde bulunan yürütülebilir bir platforma özgü yürütülebilir dosya oluşturur ve .NET Core çalışma zamanının yerel bir kopyasını içerir.
 
@@ -22,7 +22,7 @@ Bu yayımlama modlarına genel bakış için bkz. [.NET Core uygulama dağıtım
 
 CLı kullanımıyla ilgili bazı hızlı yardım mı arıyorsunuz? Aşağıdaki tabloda, uygulamanızı nasıl yayımlayacağınız hakkında bazı örnekler gösterilmektedir. Hedef çerçeveyi `-f <TFM>` parametresi ile veya proje dosyasını düzenleyerek belirtebilirsiniz. Daha fazla bilgi için bkz. [Yayımlama temelleri](#publishing-basics).
 
-| Yayımlama modu | SDK Sürümü | Komut |
+| Yayımlama modu | SDK sürümü | Komut |
 | ------------ | ----------- | ------- |
 | Framework bağımlı dağıtım | 2.x | `dotnet publish -c Release` |
 | Çerçeveye bağımlı yürütülebilir dosya | 2.2 | `dotnet publish -c Release -r <RID> --self-contained false` |

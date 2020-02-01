@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: eb61ad85580310c7becc2a1a2237efe188fbecf0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2dfa3cdab9de47b55f7a3f73f0d6e9460390700c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794591"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920097"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Öğretici: ML.NET görüntü sınıflandırma API 'SI ile aktarım öğrenimini kullanarak otomatikleştirilmiş görsel inceleme
 
@@ -28,7 +28,7 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- [Visual Studio 2017 15,6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
+- [Visual Studio 2017 sürüm 15,6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 
 ## <a name="image-classification-transfer-learning-sample-overview"></a>Görüntü sınıflandırma aktarım öğrenme örneğine genel bakış
 
@@ -253,7 +253,7 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 Model eğitimi birkaç adımdan oluşur. İlk olarak, modeli eğitmek için görüntü sınıflandırma API 'SI kullanılır. Daha sonra, `PredictedLabel` sütunundaki kodlanmış Etiketler, `MapKeyToValue` dönüşümü kullanılarak özgün kategorik değerlerine geri dönüştürülür.
 
-1. Bir `ImageClassificationTrainer`için gerekli ve isteğe bağlı parametrelerin bir kümesini depolamak üzere yeni bir değişken oluşturun. 
+1. Bir `ImageClassificationTrainer`için gerekli ve isteğe bağlı parametrelerin bir kümesini depolamak üzere yeni bir değişken oluşturun.
 
     [!code-csharp [ClassifierOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L46-L57)]
 

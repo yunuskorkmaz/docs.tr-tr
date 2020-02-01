@@ -3,12 +3,12 @@ title: .NET Core 'a bağlantı noktası kitaplıkları
 description: .NET Framework kitaplığı projelerinin nasıl .NET Core 'a bağlantı sağladığını öğrenin.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 6ff38647f77bbe1d25dd1d0065c4b32c60f87fcd
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: 646587120de2e51280c2af4de36bf3a6b0f60c2d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777344"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920615"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Core 'a bağlantı noktası .NET Framework kitaplıkları
 
@@ -31,7 +31,7 @@ Bu makalede, tüm .NET uygulamalarında kullanılabilmesi amaçlanan .NET API 'l
 Bu makalede, .NET Core 'un paketleri nasıl tanımladığı ve kullandığı ve paketlerin birden çok .NET uygulamasında çalışan kodun nasıl desteklediği açıklanır.
 
 [Platformlar arası araçlarla kitaplıklar geliştirme](../tutorials/libraries.md)\
-Bu makalede platformlar arası CLı araçları kullanılarak .NET için kitaplıkların nasıl yazılacağı açıklanır.
+Bu makalede, .NET Core CLI kullanarak kitaplıkların nasıl yazılacağı açıklanır.
 
 [.NET Core\ *csproj* biçimine eklemeler](../tools/csproj.md)
 Bu makalede, *csproj* ve MSBuild 'e taşıma kapsamında proje dosyasına eklenen değişiklikler özetlenmektedir.

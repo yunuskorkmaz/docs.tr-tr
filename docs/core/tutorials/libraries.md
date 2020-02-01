@@ -1,18 +1,18 @@
 ---
-title: Platformlar Arası Araçlarla Kitaplık Geliştirme
-description: .NET Core CLI araçlarını kullanarak .NET Core kitaplıkları oluşturmayı öğrenin. Çoklu çerçeveleri destekleyen bir kitaplık oluşturacaksınız.
+title: .NET Core CLI ile Kitaplıklar geliştirin
+description: .NET Core CLI kullanarak .NET Core kitaplıkları oluşturmayı öğrenin. Çoklu çerçeveleri destekleyen bir kitaplık oluşturacaksınız.
 author: cartermp
 ms.date: 05/01/2017
-ms.openlocfilehash: 4132113037e6c5ec555d2d1859b8217a1a53d07f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a7c0175d29f483571578b58d698dd790cf66f7f4
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714025"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920438"
 ---
-# <a name="develop-libraries-with-cross-platform-tools"></a>Platformlar arası araçlarla kitaplık geliştirme
+# <a name="develop-libraries-with-the-net-core-cli"></a>.NET Core CLI ile Kitaplıklar geliştirin
 
-Bu makalede, platformlar arası CLı araçları kullanılarak .NET için kitaplıkların nasıl yazılacağı ele alınmaktadır. CLı, desteklenen tüm işletim sistemlerinde çalışacak etkili ve düşük düzeyde bir deneyim sağlar. Visual Studio ile Kitaplıklar oluşturmaya devam edebilirsiniz ve tercih ettiğiniz deneyim [Visual Studio kılavuzuna başvurur](library-with-visual-studio.md).
+Bu makalede, .NET Core CLI kullanarak .NET için kitaplıkların nasıl yazılacağı ele alınmaktadır. CLı, desteklenen tüm işletim sistemlerinde çalışacak etkili ve düşük düzeyde bir deneyim sağlar. Visual Studio ile Kitaplıklar oluşturmaya devam edebilirsiniz ve tercih ettiğiniz deneyim [Visual Studio kılavuzuna başvurur](library-with-visual-studio.md).
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -27,7 +27,7 @@ Ayrıca, eski .NET Framework hedeflerini desteklemek istiyorsanız, [.net indirm
 | 4.6.1                  | .NET Framework 4.6.1 hedefleme paketi                    |
 | 4.6                    | .NET Framework 4,6 hedefleme paketi                      |
 | 4.5.2                  | .NET Framework 4.5.2 Geliştirici paketi                    |
-| 4.5.1                  | .NET Framework 4.5.1 Geliştirici Paketi                    |
+| 4.5.1                  | .NET Framework 4.5.1 Geliştirici paketi                    |
 | 4,5                    | Windows 8 için Windows Yazılım Geliştirme Seti         |
 | 4.0                    | Windows 7 ve .NET Framework 4 için Windows SDK         |
 | 2,0, 3,0 ve 3,5      | .NET Framework 3,5 SP1 çalışma zamanı (veya Windows 8 + sürüm) |
@@ -76,7 +76,7 @@ En fazla geliştirici ve proje sayısına ulaşmak isterseniz, taban çizgisi he
 | .NET Framework 2.0     | `net20`  |
 | .NET Framework 3.0     | `net30`  |
 | .NET Framework 3.5     | `net35`  |
-| .NET Framework 4.0     | `net40`  |
+| .NET Framework 4,0     | `net40`  |
 | .NET Framework 4.5     | `net45`  |
 | .NET Framework 4.5.1   | `net451` |
 | .NET Framework 4.5.2   | `net452` |
@@ -216,7 +216,7 @@ Bunların her biri, her bir hedefin `.dll` dosyalarını içerir.
 Platformlar arasında test etmek önemlidir. Kutusundan [xUnit](https://xunit.github.io/) veya mstest kullanabilirsiniz. Her ikisi de kitaplığınızın .NET Core 'da birim testi için uygundur. Çözümünüzü Test projeleri ile nasıl [ayarlayacağınıza çözümünüzün yapısına](#structuring-a-solution)göre değişiklik gösterir. Aşağıdaki örnek, test ve kaynak dizinlerinin aynı en üst düzey dizinde canlı olduğunu varsayar.
 
 > [!NOTE]
-> Bu, bazı [.NET Core CLI komutlarını](../tools/index.md)kullanır. Daha fazla bilgi için bkz. [DotNet New](../tools/dotnet-new.md) ve [DotNet sln](../tools/dotnet-sln.md) .
+> Bu, bazı [.NET Core CLI](../tools/index.md) komutlarını kullanır. Daha fazla bilgi için bkz. [DotNet New](../tools/dotnet-new.md) ve [DotNet sln](../tools/dotnet-sln.md) .
 
 1. Çözümünüzü ayarlayın. Bunu aşağıdaki komutlarla yapabilirsiniz:
 

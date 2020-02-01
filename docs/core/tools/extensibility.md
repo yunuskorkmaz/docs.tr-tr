@@ -1,21 +1,21 @@
 ---
 title: .NET Core CLI genişletilebilirlik modeli
-description: Komut satırı arabirimi (CLı) araçlarını nasıl genişletebileceğinizi öğrenin.
+description: .NET Core CLI nasıl genişletebileceğinizi öğrenin.
 ms.date: 04/12/2017
-ms.openlocfilehash: 4f49735fa94b2a7ee32e0d80590f9e680edeff16
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 74da895fb3a3f6c77640a2b9a64acdb2894a954b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714188"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920521"
 ---
-# <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI araçları genişletilebilirlik modeli
+# <a name="net-core-cli-extensibility-model"></a>.NET Core CLI genişletilebilirlik modeli
 
-Bu belge, .NET Core komut satırı arabirimi (CLı) araçlarını genişletebileceğiniz ve bunların her birini hedefleyen senaryoları açıklayan farklı yolları ele almaktadır.
+Bu makalede .NET Core CLI genişletebileceğiniz farklı yollar ele alınmaktadır ve bunların her birini hedefleyen senaryolar açıklanacaktır.
 Araçların nasıl kullanılacağı ve farklı araç türlerini nasıl oluşturacağınız hakkında bilgi edineceksiniz.
 
-## <a name="how-to-extend-cli-tools"></a>CLı araçlarını genişletme
-CLı araçları üç ana şekilde genişletilebilir:
+## <a name="how-to-extend-the-cli"></a>CLı 'yı genişletme
+CLı üç ana şekilde genişletilebilir:
 
 1. [Her proje temelinde NuGet paketleri aracılığıyla](#per-project-based-extensibility)
 
@@ -79,7 +79,7 @@ Aynı depoda [kullanılan araçların uygulanmasını](https://github.com/dotnet
 
 ## <a name="custom-targets"></a>Özel hedefler
 
-NuGet [özel MSBuild hedeflerini ve props dosyalarını paketleme](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)özelliğine sahiptir. MSBuild 'i kullanmak için .NET Core CLI araçları taşınmasıyla aynı genişletilebilirlik mekanizması artık .NET Core projeleri için geçerlidir. Yapı işlemini genişletmek istediğinizde veya oluşturulan dosyalar gibi yapı işlemindeki yapıtlardan herhangi birine erişmek istediğinizde veya yapının çağrıldığı yapılandırmayı incelemek istediğinizde, bu tür bir genişletilebilirlik kullanın vb.
+NuGet [özel MSBuild hedeflerini ve props dosyalarını paketleme](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)özelliğine sahiptir. MSBuild 'i kullanmak için .NET Core 'un taşınması sayesinde aynı genişletilebilirlik mekanizması artık .NET Core projeleri için geçerlidir. Yapı işlemini genişletmek istediğinizde veya oluşturulan dosyalar gibi yapı işlemindeki yapıtlardan herhangi birine erişmek istediğinizde veya yapının çağrıldığı yapılandırmayı incelemek istediğinizde, bu tür bir genişletilebilirlik kullanın vb.
 
 Aşağıdaki örnekte, `csproj` sözdizimini kullanarak hedefin proje dosyasını görebilirsiniz. Bu, [`dotnet pack`](dotnet-pack.md) komutuna ne paketlenecek, hedef dosyaların yanı sıra derlemeleri paketin içindeki *Yapı* klasörüne yerleştirmesini sağlar. `Label` özelliği `dotnet pack instructions`olarak ayarlanan `<ItemGroup>` öğeye ve altında tanımlanan hedefe dikkat edin.
 

@@ -2,12 +2,12 @@
 title: Teslim Edilemeyen İletiler Sırası
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: d493aba9a3f7a51824243fe8d06441ab563b2261
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5025aa784817d1189f23918eacfef275abf968e1
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344535"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921431"
 ---
 # <a name="dead-letter-queues"></a>Teslim Edilemeyen İletiler Sırası
 Bu örnek, teslimin başarısız olduğu iletileri nasıl işleyeceğinizi ve işleyeceğini gösterir. Bu [işlem, IŞLENEN MSMQ bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) örneğini temel alır. Bu örnek `netMsmqBinding` bağlamasını kullanır. Hizmet, sıraya alınan iletileri alma hizmetini gözlemlemeye olanak sağlayan, kendinden konak bir konsol uygulamasıdır.
@@ -16,7 +16,7 @@ Bu örnek, teslimin başarısız olduğu iletileri nasıl işleyeceğinizi ve i�
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
 
 > [!NOTE]
-> Bu örnek, yalnızca Windows Vista 'da bulunan tüm uygulama atılacak ileti sırasını gösterir. Örnek, Windows Server 2003 ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]için MSMQ 3,0 için varsayılan sistem genelinde kuyrukları kullanacak şekilde değiştirilebilir.
+> Bu örnek, yalnızca Windows Vista 'da bulunan tüm uygulama atılacak ileti sırasını gösterir. Örnek, Windows Server 2003 ve Windows XP 'de MSMQ 3,0 için varsayılan sistem genelinde kuyrukları kullanacak şekilde değiştirilebilir.
 
  Sıraya alınmış iletişimde istemci, hizmet ile bir kuyruk kullanarak iletişim kurar. Daha kesin olarak, istemci iletileri bir kuyruğa gönderir. Hizmet kuyruktaki iletileri alır. Bu nedenle, hizmet ve istemci, bir kuyruk kullanarak iletişim kurmak için aynı anda çalışıyor olması gerekmez.
 

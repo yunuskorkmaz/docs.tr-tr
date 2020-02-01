@@ -2,16 +2,16 @@
 title: Desteklenmeyen Senaryolar
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: a963b46d22f2103cddcc8fd080feefc39070690c
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: b643e6df8a877860ce36fc6ee34c4e4ca08ec748
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901275"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921166"
 ---
 # <a name="unsupported-scenarios"></a>Desteklenmeyen senaryolar
 
-Çeşitli nedenlerle Windows Communication Foundation (WCF) bazı belirli güvenlik senaryolarını desteklemez. Örneğin, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home sürümü SSPI veya Kerberos kimlik doğrulama protokollerini uygulamaz ve bu nedenle WCF, bu platformda Windows kimlik doğrulaması ile bir hizmetin çalıştırılmasını desteklemez. Windows XP Home Edition altında WCF çalıştırılırken Kullanıcı adı/parola ve HTTP/HTTPS tümleşik kimlik doğrulaması gibi diğer kimlik doğrulama mekanizmaları desteklenir.
+Çeşitli nedenlerle Windows Communication Foundation (WCF) bazı belirli güvenlik senaryolarını desteklemez. Örneğin, Windows XP Home Edition SSPI veya Kerberos kimlik doğrulama protokollerini uygulamaz ve bu nedenle WCF, bu platformda Windows kimlik doğrulamasına sahip bir hizmetin çalıştırılmasını desteklemez. Windows XP Home Edition altında WCF çalıştırılırken Kullanıcı adı/parola ve HTTP/HTTPS tümleşik kimlik doğrulaması gibi diğer kimlik doğrulama mekanizmaları desteklenir.
 
 ## <a name="impersonation-scenarios"></a>Kimliğe bürünme senaryoları
 
@@ -22,7 +22,7 @@ ms.locfileid: "75901275"
 
 WCF, kimliğe bürünme özelliğini desteklemez ve aşağıdaki koşullar mevcut olduğunda bir <xref:System.InvalidOperationException> oluşur:
 
-- İşletim sistemi [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+- İşletim sistemi Windows XP 'dir.
 
 - Kimlik doğrulama modu bir Windows kimliği ile sonuçlanır.
 
@@ -35,7 +35,7 @@ WCF, kimliğe bürünme özelliğini desteklemez ve aşağıdaki koşullar mevcu
  Alternatif olarak, yapılandırma ' da, belirteç bir <`customBinding`oluşturarak >, sonra bir <`security`> öğesi eklenerek ve `authenticationMode` özniteliği SecureConversation ve `requireSecurityContextCancellation` özniteliği `true`olarak ayarlanarak etkinleştirilir.
 
 > [!NOTE]
-> Önceki gereksinimler özeldir. Örneğin <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>, Windows kimliği ile sonuçlanan ancak bir SCT oluşturmayan bir bağlama öğesi oluşturur. Bu nedenle, bunu [!INCLUDE[wxp](../../../../includes/wxp-md.md)]`Required` seçeneği ile kullanabilirsiniz.
+> Önceki gereksinimler özeldir. Örneğin <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>, Windows kimliği ile sonuçlanan ancak bir SCT oluşturmayan bir bağlama öğesi oluşturur. Bu nedenle, Windows XP 'de `Required` seçeneğiyle kullanabilirsiniz.
 
 ### <a name="possible-aspnet-conflict"></a>Olası ASP.NET çakışması
 

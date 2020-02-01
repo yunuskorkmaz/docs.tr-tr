@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 6505cc027b2983fd61ae53ca7ae43319024c74f7
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: e1c3e3d7697bf9a85cf0ab7df35a4755939d1df0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964709"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921407"
 ---
 # <a name="auditing-security-events"></a>Güvenlik Etkinliklerini Denetleme
 Windows Communication Foundation (WCF) ile oluşturulan uygulamalar, denetim özelliğiyle güvenlik olaylarını (başarı, hata veya her ikisi de) günlüğe kaydedebilir. Olaylar Windows sistem olay günlüğüne yazılır ve Olay Görüntüleyicisi kullanılarak incelenebilir.  
@@ -32,7 +32,7 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar, denetim öz
   
  Güvenlik günlüğüne yazmak için `SeAuditPrivilege`gerekir. Varsayılan olarak, yalnızca yerel sistem ve ağ hizmeti hesaplarında bu ayrıcalık vardır. Güvenlik günlüğü işlevlerini yönetmek için `read` ve `delete` `SeSecurityPrivilege`gerekir. Varsayılan olarak, yalnızca Yöneticiler bu ayrıcalığa sahiptir.  
   
- Buna karşılık, kimliği doğrulanmış kullanıcılar uygulama günlüğünü okuyup yazabilir. [!INCLUDE[wxp](../../../../includes/wxp-md.md)], varsayılan olarak, denetim olaylarını uygulama günlüğüne yazar. Günlük Ayrıca, tüm kimliği doğrulanmış kullanıcılara görünür olan kişisel bilgileri de içerebilir.  
+ Buna karşılık, kimliği doğrulanmış kullanıcılar uygulama günlüğünü okuyup yazabilir. Windows XP, denetim olaylarını varsayılan olarak uygulama günlüğüne yazar. Günlük Ayrıca, tüm kimliği doğrulanmış kullanıcılara görünür olan kişisel bilgileri de içerebilir.  
   
 ## <a name="suppressing-audit-failures"></a>Denetim başarısızlıklarını gizleme  
  Denetim sırasında başka bir seçenek de herhangi bir denetim hatasının engellenip engellenmeyeceğini belirtir. Varsayılan olarak, bir denetim hatası uygulamayı etkilemez. Ancak gerekirse, seçeneğini `false`olarak ayarlayabilirsiniz. Bu, bir özel durumun oluşturulmasına neden olur.  
@@ -78,7 +78,7 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar, denetim öz
 ## <a name="security-considerations"></a>Güvenlik Konuları  
  Kötü amaçlı bir kullanıcı denetimin etkinleştirildiğini biliyorsa, bu saldırgan denetim girişlerinin yazılmasına neden olan geçersiz iletiler gönderebilir. Denetim günlüğü bu şekilde doldurulmuşsa, denetim sistemi başarısız olur. Bunu azaltmak için <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğini `true` olarak ayarlayın ve Denetim davranışını denetlemek için Olay Görüntüleyicisi özelliklerini kullanın.  
   
- [!INCLUDE[wxp](../../../../includes/wxp-md.md)] uygulama günlüğüne yazılan denetim olayları, kimliği doğrulanmış herhangi bir kullanıcı tarafından görülebilir.  
+ Windows XP 'de uygulama günlüğüne yazılan denetim olayları, kimliği doğrulanmış herhangi bir kullanıcı tarafından görülebilir.  
   
 ## <a name="choosing-between-application-and-security-event-logs"></a>Uygulama ve güvenlik olay günlükleri arasında seçim yapma  
  Aşağıdaki tablolar, uygulamada veya güvenlik olay günlüğünde oturum açıp kullanmayacağınızı seçmenize yardımcı olacak bilgiler sağlar.  
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar, denetim öz
   
 |Sistem|Uygulama günlüğü|Güvenlik günlüğü|  
 |------------|---------------------|------------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] veya üzeri|Desteklenir|Desteklenmez|  
+|Windows XP SP2 veya üzeri|Desteklenir|Desteklenmez|  
 |Windows Server 2003 SP1 ve Windows Vista|Desteklenir|İş parçacığı bağlamı `SeAuditPrivilege` sahip olmalıdır|  
   
 #### <a name="other-factors"></a>Diğer faktörler  
