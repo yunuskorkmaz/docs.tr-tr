@@ -13,7 +13,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76733659"
 ---
-# <a name="get-started"></a>Başlangıç
+# <a name="get-started"></a>Kullanmaya başlayın
 
 .NET ile çalışmaya başlamanın birkaç yolu vardır. .NET çok büyük bir platform olduğundan, bu belgelerde, her biri farklı bir perspektiften .NET ile çalışmaya başlamanıza yardımcı olabilecek birden fazla makale vardır.
 

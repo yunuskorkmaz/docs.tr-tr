@@ -59,7 +59,7 @@ private void Form1_Paint(System.Object sender,
 }  
 ```  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
  Yukarıdaki kod, form yeniden çizilene kadar grafiklerin kalıcı olması için formun <xref:System.Windows.Forms.Control.Paint> olay işleyicisinde çalıştırılır. Bu nedenle, form başka bir form tarafından yeniden boyutlandırılmışsa veya gizlendiyse çizilen içerik yeniden çizilmediği için <xref:System.Windows.Forms.Form.Load> olay işleyicisinde grafik ile ilgili yöntemleri çağırmayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

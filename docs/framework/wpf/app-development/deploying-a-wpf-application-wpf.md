@@ -1,5 +1,5 @@
 ---
-title: Uygulama dağıtma
+title: Uygulamayı dağıtma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF applications [WPF], deployment
@@ -124,4 +124,4 @@ Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıt�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [WPF Uygulaması Derleme](building-a-wpf-application-wpf.md)
-- [Security](../security-wpf.md)
+- [Güvenlik](../security-wpf.md)

@@ -39,7 +39,7 @@ ms.locfileid: "76743754"
   
  <xref:System.Security.Permissions.FileDialogPermission> sınıfı, uygulamanızın kullanabileceği dosya iletişim kutusu türünü belirtir. Aşağıdaki tabloda, her bir <xref:System.Windows.Forms.FileDialog> sınıfını kullanmak için sahip olmanız gereken değer gösterilmektedir.  
   
-|Sınıf|Gerekli erişim değeri|  
+|örneği|Gerekli erişim değeri|  
 |-----------|---------------------------|  
 |<xref:System.Windows.Forms.OpenFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Open>|  
 |<xref:System.Windows.Forms.SaveFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Save>|  
@@ -348,7 +348,7 @@ public void Write()
 }  
 ```  
   
-## <a name="database-access"></a>Veritabanı erişimi  
+## <a name="database-access"></a>Veritabanı Erişimi  
  Veritabanına erişmek için gereken izinler veritabanı sağlayıcısına göre değişiklik gösterir; Ancak, yalnızca uygun izinlerle çalışan uygulamalar, bir veritabanına veri bağlantısı aracılığıyla erişebilir. Veritabanına erişmek için gereken izinler hakkında daha fazla bilgi için bkz. [kod erişimi güvenliği ve ADO.net](../data/adonet/code-access-security.md).  
   
  Uygulamanızın kısmi güvende çalışmasını istediğiniz için doğrudan bir veritabanına erişemiyorsanız, verilerinize erişmek için alternatif bir yöntem olarak Web hizmetini kullanabilirsiniz. Web hizmeti, bir ağ üzerinden programlı bir şekilde erişilebilen bir yazılım parçasıdır. Web hizmetleriyle, uygulamalar, kod grubu bölgelerinde veri paylaşabilir. Varsayılan olarak, yerel intranet ve Internet bölgelerindeki uygulamalara kendi kaynak sitelerine erişme hakkı verilir ve bu da aynı sunucuda barındırılan bir Web hizmetini çağırabilir. Daha fazla bilgi için bkz. ASP.NET AJAX veya [Windows Communication Foundation](../wcf/index.md) [Web Hizmetleri](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100)) .  

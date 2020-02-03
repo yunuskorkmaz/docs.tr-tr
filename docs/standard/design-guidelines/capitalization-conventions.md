@@ -47,9 +47,9 @@ Bu bölümdeki yönergeler, tutarlı bir şekilde uygulandığında, türler, Ü
 
  Aşağıdaki tabloda, farklı türlerde tanımlayıcılar için büyük/küçük harf kuralları açıklanmaktadır.
 
-|tanımlayıcı|Büyük/küçük harf kullanımı|Örnek|
+|Tanımlayıcı|Büyük/küçük harf kullanımı|Örnek|
 |----------------|------------|-------------|
-|Ad alanı|Pascal|`namespace System.Security { ... }`|
+|Ad Alanı|Pascal|`namespace System.Security { ... }`|
 |Tür|Pascal|`public class StreamReader { ... }`|
 |Arabirim|Pascal|`public interface IEnumerable { ... }`|
 |Yöntem|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
@@ -57,7 +57,7 @@ Bu bölümdeki yönergeler, tutarlı bir şekilde uygulandığında, türler, Ü
 |Olay|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
 |Alan|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
 |Sabit listesi değeri|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|
-|Parametre|Ortası|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
+|Parametre|Ortası büyük harf|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
 
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Bileşik sözcüklerin ve ortak koşulların büyük bir olması
  Çoğu bileşik terim, büyük küçük harf amaçlarıyla tek sözcük olarak değerlendirilir.
@@ -66,7 +66,7 @@ Bu bölümdeki yönergeler, tutarlı bir şekilde uygulandığında, türler, Ü
 
  Bunlar, uç nokta gibi tek bir kelime olarak yazılmış olan Birleşik sözcüklerdir. Büyük/küçük harf yönergeleri için kapalı biçimli bir bileşik sözcüğü tek bir sözcük olarak değerlendirin. Bileşik bir sözcüğün kapalı biçimde yazılıp yazılmadığını öğrenmek için geçerli bir sözlük kullanın.
 
-|Pascal|Ortası|değil|
+|Pascal|Ortası büyük harf|Not|
 |------------|-----------|---------|
 |`BitFlag`|`bitFlag`|`Bitflag`|
 |`Callback`|`callback`|`CallBack`|
@@ -101,7 +101,7 @@ Bu bölümdeki yönergeler, tutarlı bir şekilde uygulandığında, türler, Ü
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*
+ *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

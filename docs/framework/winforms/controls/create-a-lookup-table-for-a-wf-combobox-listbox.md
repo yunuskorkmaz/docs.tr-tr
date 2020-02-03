@@ -33,7 +33,7 @@ Bazen, verileri bir Windows form üzerinde Kullanıcı dostu bir biçimde göste
   
 ### <a name="itemtable"></a>ItemTable  
   
-|Kimlik|Name|  
+|Kimlik|Ad|  
 |--------|----------|  
 |12|Patates|  
 |13|Tavuk|  

@@ -91,7 +91,7 @@ Güvenilir bilgi Işlem, güvenli kod üretimi sağlamaya yönelik bir Microsoft
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Security](security-wpf.md)
+- [Güvenlik](security-wpf.md)
 - [WPF Kısmi Güven Güvenliği](wpf-partial-trust-security.md)
 - [WPF Güvenlik Stratejisi - Platform Güvenliği](wpf-security-strategy-platform-security.md)
 - [Güvenilir bilgi Işlem](https://www.microsoft.com/mscorp/twc/default.mspx)

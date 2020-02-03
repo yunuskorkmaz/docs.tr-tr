@@ -22,7 +22,7 @@ Windows Forms denetimler veriye bağlandığında sıralama değildir. Sıralanm
   
 ### <a name="to-sort-the-list"></a>Listeyi sıralamak için  
   
-1. Ayarlama `Sorted` özelliğini `true`.  
+1. `Sorted` özelliğini `true`olarak ayarlayın.  
   
      Bu ayar, tüm mevcut liste öğelerini sıralanmış sırada yeniden konumlandırır.  
   

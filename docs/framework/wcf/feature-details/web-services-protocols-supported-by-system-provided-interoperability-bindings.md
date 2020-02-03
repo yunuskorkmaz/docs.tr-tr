@@ -47,7 +47,7 @@ Windows Communication Foundation (WCF), Web Hizmetleri belirtimleri olarak bilin
   
 |Kategori|Protokol|Belirtim ve kullanım|  
 |--------------|--------------|-----------------------------|  
-|İleti|SOAP 1,2|[İlk](https://www.w3.org/TR/soap12-part0/)<br /><br /> [Mesajlaşma çerçevesi](https://www.w3.org/TR/2007/REC-soap12-part1-20070427/)<br /><br /> [Adjuncts (HTTP bağlama dahil)](https://www.w3.org/TR/soap12-part2/)|  
+|İleti|SOAP 1,2|[Primer](https://www.w3.org/TR/soap12-part0/)<br /><br /> [Mesajlaşma çerçevesi](https://www.w3.org/TR/2007/REC-soap12-part1-20070427/)<br /><br /> [Adjuncts (HTTP bağlama dahil)](https://www.w3.org/TR/soap12-part2/)|  
 |İleti|WS-Addressing 2005/08|[Web Hizmetleri adresleme 1,0-çekirdek](https://www.w3.org/TR/ws-addr-core/)<br /><br /> [Web Hizmetleri adresleme 1,0-SOAP](https://www.w3.org/TR/ws-addr-soap/)<br /><br /> `wsHttpBinding`, `ws2007HttpBinding`ve `wsDualHttpBinding`, zaman uyumsuz mesajlaşma, ileti bağıntısı ve taşıma bağımsız adresleme mekanizmalarını etkinleştirmek için World Wide Web Konsorsiyumu (W3C) WS-Addressing önerisi uygular.<br /><br /> WCF, WS-* belirtimleri tarafından izin verilse de WS-Addressing üst bilgileri şifrelemesini desteklemez.|  
 |İleti|WS-Addressing 1,0-meta veriler|[Ws-Addressing 1,0 meta verileri](https://www.w3.org/2007/05/addressing/metadata/) ServiceMetadata davranışındaki ilke sürümü ayarlanarak etkinleştirilir ve PolicyVersion, 1,2 (varsayılan) olarak ayarlandıysa, WSDL açıklaması WS-Addressing wsdl ile uyumludur, PolicyVersion ayarı 1,5 olarak ayarlanır, WSDL açıklaması ws-Addressing meta verileri ile uyumludur.<br /><br /> WCF, WS-* belirtimleri tarafından izin verilse de WS-Addressing üst bilgileri şifrelemesini desteklemez.|  
 |Güvenlik|WSS SOAP Iletisi güvenliği 1,0|[WSS SOAP Iletisi güvenliği 1,0](http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf)<br /><br /> `securityMode` özniteliği "wsSecurityOverHttp" (varsayılan) olarak ayarlandığında ve parametreler `wsSecurity` alt öğesi kullanılarak yapılandırıldığında kullanın.<br /><br /> `<wsHttpBinding>   <binding name="myBinding">      <security mode="Message" .../>   </binding> </wsHttpBinding>`|  
@@ -94,7 +94,7 @@ Windows Communication Foundation (WCF), Web Hizmetleri belirtimleri olarak bilin
 |Kategori|Protokol|Belirtim ve kullanım|  
 |--------------|--------------|-----------------------------|  
 |Aktarım|HTTP 1,1|[HTTP 1,1](https://www.ietf.org/rfc/rfc2616.txt)|  
-|İleti|SOAP 1,2|[İlk](https://www.w3.org/TR/soap12-part0/)<br /><br /> [Mesajlaşma çerçevesi](https://www.w3.org/TR/2007/REC-soap12-part1-20070427/)<br /><br /> [Adjuncts (HTTP bağlama dahil)](https://www.w3.org/TR/soap12-part2/)|  
+|İleti|SOAP 1,2|[Primer](https://www.w3.org/TR/soap12-part0/)<br /><br /> [Mesajlaşma çerçevesi](https://www.w3.org/TR/2007/REC-soap12-part1-20070427/)<br /><br /> [Adjuncts (HTTP bağlama dahil)](https://www.w3.org/TR/soap12-part2/)|  
 |İleti|WS-Addressing 2005/08|[Web Hizmetleri adresleme 1,0-çekirdek](https://www.w3.org/TR/ws-addr-core/)<br /><br /> [Web Hizmetleri adresleme 1,0-SOAP](https://www.w3.org/TR/ws-addr-soap/)|  
 |Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF, XML şeması, WSDL ve WS-Policy almak için WS-MetadataExchange uygular.|  
   
@@ -104,7 +104,7 @@ Windows Communication Foundation (WCF), Web Hizmetleri belirtimleri olarak bilin
 |Kategori|Protokol|Belirtim ve kullanım|  
 |--------------|--------------|-----------------------------|  
 |Aktarım|HTTP 1,1|[HTTP 1,1](https://www.ietf.org/rfc/rfc2616.txt)<br /><br /> Taşıma güvenliği etkin.|  
-|İleti|SOAP 1,2|[İlk](https://www.w3.org/TR/soap12-part0/)<br /><br /> [Mesajlaşma çerçevesi](https://www.w3.org/TR/2007/REC-soap12-part1-20070427/)<br /><br /> [Adjuncts (HTTP bağlama dahil)](https://www.w3.org/TR/soap12-part2/)|  
+|İleti|SOAP 1,2|[Primer](https://www.w3.org/TR/soap12-part0/)<br /><br /> [Mesajlaşma çerçevesi](https://www.w3.org/TR/2007/REC-soap12-part1-20070427/)<br /><br /> [Adjuncts (HTTP bağlama dahil)](https://www.w3.org/TR/soap12-part2/)|  
 |İleti|WS-Addressing 2005/08|[Web Hizmetleri adresleme 1,0-çekirdek](https://www.w3.org/TR/ws-addr-core/)<br /><br /> [Web Hizmetleri adresleme 1,0-SOAP](https://www.w3.org/TR/ws-addr-soap/)|  
 |Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF, XML şeması, WSDL ve WS-Policy almak için WS-MetadataExchange uygular.|  
   
@@ -112,7 +112,7 @@ Windows Communication Foundation (WCF), Web Hizmetleri belirtimleri olarak bilin
 
 - [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)
-- [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
+- [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
 - [\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)
-- [\<mexHttpsBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)
-- [\<mexHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)
+- [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)
+- [\<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)

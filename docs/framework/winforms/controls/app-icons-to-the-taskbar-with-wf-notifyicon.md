@@ -31,7 +31,7 @@ Windows Forms <xref:System.Windows.Forms.NotifyIcon> bileşeni, görev çubuğun
 
 1. <xref:System.Windows.Forms.NotifyIcon.Icon%2A> özelliğine bir değer atayın. Değer `System.Drawing.Icon` türünde olmalı ve bir. ico dosyasından yüklenebilir. Koddaki simge dosyasını veya üç nokta düğmesini (...), **Özellikler** penceresindeki <xref:System.Windows.Forms.NotifyIcon.Icon%2A> özelliğinin yanındaki (... Özellikler penceresi) ve ardından görüntülenen **Aç** iletişim kutusunda dosyayı seçerek belirtebilirsiniz (![)](./media/visual-studio-ellipsis-button.png).
 
-2. Ayarlama <xref:System.Windows.Forms.NotifyIcon.Visible%2A> özelliğini `true`.
+2. <xref:System.Windows.Forms.NotifyIcon.Visible%2A> özelliğini `true`olarak ayarlayın.
 
 3. <xref:System.Windows.Forms.NotifyIcon.Text%2A> özelliğini uygun bir araç Ipucu dizesine ayarlayın.
 

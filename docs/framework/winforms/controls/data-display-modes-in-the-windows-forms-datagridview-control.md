@@ -23,7 +23,7 @@ ms.locfileid: "76744013"
   
  Salt biçimli ilişkisiz <xref:System.Windows.Forms.DataGridView>kullanan bir örnek için bkz. [nasıl yapılır: ilişkisiz Windows Forms DataGridView denetimi oluşturma](how-to-create-an-unbound-windows-forms-datagridview-control.md).  
   
-## <a name="bound"></a>Sınırlı  
+## <a name="bound"></a>Bound  
  Sınırlı mod, veri deposuyla otomatik etkileşim kullanılarak verilerin yönetilmesi için uygundur. <xref:System.Windows.Forms.DataGridView.DataSource%2A> özelliğini ayarlayarak <xref:System.Windows.Forms.DataGridView> denetimini doğrudan kendi veri kaynağına ekleyebilirsiniz. Denetim veri bağladığında, veri satırları, sizin bölüminizdeki açık yönetime gerek olmadan itilir ve çekilir. <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> Özellik `true`olduğunda, veri kaynağınızdaki her sütun denetimde ilgili bir sütunun oluşturulmasına neden olur. Kendi sütunlarınızı oluşturmayı tercih ediyorsanız, bu özelliği `false` olarak ayarlayabilir ve <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> özelliğini kullanarak her sütunu yapılandırdığınızda bağlayabilirsiniz. Bu, varsayılan olarak oluşturulan türlerden farklı bir sütun türü kullanmak istediğinizde yararlıdır. Daha fazla bilgi için bkz. [Windows Forms DataGridView Denetimindeki sütun türleri](column-types-in-the-windows-forms-datagridview-control.md).  
   
  Bağlantılı <xref:System.Windows.Forms.DataGridView> denetimi kullanan bir örnek için bkz. [Walkthrough: Windows Forms DataGridView Denetimindeki verileri doğrulama](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  

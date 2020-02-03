@@ -24,7 +24,7 @@ Aşağıdaki senaryoda Windows güvenliği tarafından güvenliği sağlanmış 
 |Güvenlik modu|Aktarım|  
 |Birlikte Çalışabilirlik|Yalnızca WCF|  
 |Kimlik doğrulaması (sunucu)<br /><br /> Kimlik doğrulaması (Istemci)|Evet (Windows tümleşik kimlik doğrulaması kullanarak)<br /><br /> Evet (Windows tümleşik kimlik doğrulaması kullanarak)|  
-|Doğruluğunu|Evet|  
+|Bütünlük|Evet|  
 |Gizlilik|Evet|  
 |Aktarım|NET. TCP|  
 |Bağlama|<xref:System.ServiceModel.NetTcpBinding>|  

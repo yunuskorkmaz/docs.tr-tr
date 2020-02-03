@@ -29,7 +29,7 @@ Aşağıdaki teknoloji alanlarından yalnızca Windows 'un yanı sıra platforml
 - İnizde
 - ODBC
 - İzinler
-- Bağlantı noktaları
+- Bağlantı Noktaları
 - Windows Access Control listeleri (ACL)
 - Windows Communication Foundation (WCF)
 - Windows şifrelemesi
@@ -42,7 +42,7 @@ Aşağıdaki teknoloji alanlarından yalnızca Windows 'un yanı sıra platforml
 
 Daha fazla bilgi için bkz. [Uyumluluk paketinin belirtimi](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).
 
-## <a name="get-started"></a>Başlangıç
+## <a name="get-started"></a>Kullanmaya başlayın
 
 1. Taşıma işleminden önce, [taşıma işlemine](index.md)göz atın.
 

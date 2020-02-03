@@ -35,7 +35,7 @@ CLR perspektifinden, türlerin yalnızca iki kategorisi vardır: başvuru türle
 ## <a name="in-this-section"></a>Bu Bölümde
  [Sınıf ve yapı](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md) [soyut sınıf tasarımı](../../../docs/standard/design-guidelines/abstract-class.md) arasında seçim yapma [statik sınıf tasarımı](../../../docs/standard/design-guidelines/static-class.md) [arabirim tasarım](../../../docs/standard/design-guidelines/interface.md) [yapı birimi](../../../docs/standard/design-guidelines/struct.md) tasarım [enum](../../../docs/standard/design-guidelines/enum.md) tasarım [iç içe türler](../../../docs/standard/design-guidelines/nested-types.md) *bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*
+ *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

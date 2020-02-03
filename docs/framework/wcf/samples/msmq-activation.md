@@ -269,7 +269,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
         Bu komut, `http://localhost/servicemodelsamples` ve `net.msmq://localhost/servicemodelsamples`kullanılarak/servicemodelsamples uygulamasına erişilmesini sağlar.
 
-7. Daha önce yapmadıysanız, MSMQ etkinleştirme hizmeti 'nin etkinleştirildiğinden emin olun. **Başlat** menüsünde **Çalıştır**' a tıklayın ve `Services.msc`yazın. **Net. MSMQ dinleyicisi bağdaştırıcısı**için Hizmetler listesinde arama yapın. Sağ tıklayın ve **Özellikler**' i seçin. **Başlangıç türünü** **Otomatik**olarak ayarlayın, **Uygula** ' ya tıklayın ve **Başlat** düğmesine tıklayın. Bu adım yalnızca, net. MSMQ dinleyicisi bağdaştırıcısı hizmetinin ilk kullanımından önce bir kez yapılmalıdır.
+7. Daha önce yapmadıysanız, MSMQ etkinleştirme hizmeti 'nin etkinleştirildiğinden emin olun. **Başlat** menüsünde **Çalıştır**' a tıklayın ve `Services.msc`yazın. **Net. MSMQ dinleyicisi bağdaştırıcısı**için Hizmetler listesinde arama yapın. Sağ tıklayın ve **Özellikler**’i seçin. **Başlangıç türünü** **Otomatik**olarak ayarlayın, **Uygula** ' ya tıklayın ve **Başlat** düğmesine tıklayın. Bu adım yalnızca, net. MSMQ dinleyicisi bağdaştırıcısı hizmetinin ilk kullanımından önce bir kez yapılmalıdır.
 
 8. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin. Ayrıca, satın alma siparişi gönderen istemcideki kodu, satın alma siparişi gönderilirken kuyruğun URI 'sindeki bilgisayar adını yansıtacak şekilde değiştirin. Aşağıdaki kodu kullanın:
 

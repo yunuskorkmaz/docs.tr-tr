@@ -55,7 +55,7 @@ Sütun dolgusu modunda, <xref:System.Windows.Forms.DataGridView> denetimi sütun
   
 - Bazı sütunların <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> değerlerini değiştirin. Sütunları veya formu yeniden boyutlandırdığınızda etkiyi gözlemleyin.  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek şunları gerektirir:  
   
 - System, System. Drawing ve System. Windows. Forms derlemelerine başvurular.  

@@ -24,7 +24,7 @@ Bu konu, bir Windows Forms uygulamasının temel öğelerini açıklar ve deneti
   
 - <xref:System.Windows.Forms.Form?displayProperty=nameWithType>türetilen bir veya daha fazla sınıf.  
   
-- `static` (Visual Basic içinde`shared`) ve <xref:System.Windows.Forms.Application.Run%2A> bir örneği ileten bir `Main` yöntemi. <xref:System.Windows.Forms.Application.Run%2A> yöntemi, işletim sistemindeki iletileri uygulamaya işler.  
+- `static` (Visual Basic içinde`shared`) ve <xref:System.Windows.Forms.Application.Run%2A> bir örneği ileten bir `Main` yöntemi.<xref:System.Windows.Forms.Form> <xref:System.Windows.Forms.Application.Run%2A> yöntemi, işletim sistemindeki iletileri uygulamaya işler.  
   
  Aşağıdaki kod örneği, bir Windows Forms uygulamasının temel öğelerini gösterir.  
   

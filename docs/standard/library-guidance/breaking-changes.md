@@ -103,4 +103,4 @@ public class Document
 - [.NET Son değişiklik kuralları](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
->[Önceki](versioning.md)
+>[Öncekini](versioning.md)

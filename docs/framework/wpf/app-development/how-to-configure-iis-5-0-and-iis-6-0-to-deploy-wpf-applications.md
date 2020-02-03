@@ -52,7 +52,7 @@ Bu konuda, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-wincl
 
 İstemci sistemindeki tarayıcının doğru işleyiciyi yükleyebilmesi için birkaç MIME türünü ve dosya uzantısını kaydetmeniz gerekir. Aşağıdaki türleri eklemeniz gerekir:
 
-|Uzantı|MIME türü|
+|Dahili numara|MIME türü|
 |---------------|---------------|
 |. manifest|uygulama/bildirim|
 |. xaml|uygulama/xaml + xml|

@@ -32,7 +32,7 @@ ms.locfileid: "76738496"
 
   Aşağıdaki tabloda, yansıma ilkesi türleri ve bunların kullanılabileceği program öğeleri listelenmektedir.
 
-  |Öğe|Etkinleştir|Gözat|Dinamik|
+  |Öğe|Etkinleştir|Göz at|Dinamik|
   |-------------|--------------|------------|-------------|
   |[\<uygulama >](application-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
   |[Derleme > \<](assembly-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|

@@ -72,7 +72,7 @@ Bir veri örneğinin sınıfını (kategori) tahmin etmek için kullanılan [den
 Daha fazla bilgi için Vikipde bulunan [birden çok sınıf sınıflandırması](https://en.wikipedia.org/wiki/Multiclass_classification) makalesine bakın.
 
 >[!NOTE]
->Bunlardan biri, birden çok Lass veri kümesi üzerinde işlem yapmak için herhangi bir [ikili sınıflandırmanın yükseltimidir](#binary-classification) . [Vikipedi] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest) hakkında daha fazla bilgi.
+>Bunlardan biri, birden çok Lass veri kümesi üzerinde işlem yapmak için herhangi bir [ikili sınıflandırmanın yükseltimidir](#binary-classification) . [Vikipedi] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)hakkında daha fazla bilgi.
 
 ### <a name="multiclass-classification-trainers"></a>Birden çok Lass sınıflandırma traipleyiciler
 
@@ -156,7 +156,7 @@ Bu, aşağıdaki çıkışları verir:
 | `Score` | <xref:System.Single> vektörü | Verilen veri noktasının tüm kümelerdeki mesafeler ' centriods |
 | `PredictedLabel` | [anahtar](xref:Microsoft.ML.Data.KeyDataViewType) türü | Model tarafından tahmin edilen en yakın küme dizini. |
 
-## <a name="anomaly-detection"></a>Anomali algılama
+## <a name="anomaly-detection"></a>Anormallik algılama
 
 Bu görev, sorumlu bileşen analizi (PCA) kullanarak bir anomali algılama modeli oluşturur. PCA tabanlı anomali algılama, geçerli işlemler gibi bir sınıftan eğitim verileri elde etmek, ancak hedeflenen bozukluklar için yeterli örnek elde etmek zor olan senaryolarda bir model oluşturmanıza yardımcı olur.
 

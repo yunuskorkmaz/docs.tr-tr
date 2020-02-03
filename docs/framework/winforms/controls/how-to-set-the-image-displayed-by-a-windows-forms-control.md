@@ -23,7 +23,7 @@ ms.locfileid: "76746876"
 
 Birçok Windows Forms denetimi görüntü görüntüleyebilir. Bu görüntüler, Kaydet komutunu gösteren bir düğmedeki disket simgesi gibi denetimin amacını açıklığa kavuşturacak simgeler olabilir. Alternatif olarak, simgeler istediğiniz görünümü ve davranışı denetlemek için arka plan görüntüleri olabilir.
 
-## <a name="programmatic"></a>Programatik
+## <a name="programmatic"></a>Programlı
 
 Denetimin `Image` veya `BackgroundImage` özelliğini <xref:System.Drawing.Image>türünde bir nesne olarak ayarlayın. Genellikle, <xref:System.Drawing.Image.FromFile%2A> yöntemini kullanarak görüntüyü bir dosyadan yüklersiniz.
 

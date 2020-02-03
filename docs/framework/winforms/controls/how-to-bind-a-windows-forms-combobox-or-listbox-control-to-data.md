@@ -31,7 +31,7 @@ Bir veritabanındaki verilere göz atma, yeni veriler girme veya var olan verile
   
 2. Bir tabloya bağlıyorsanız, `DisplayMember` özelliğini veri kaynağındaki bir sütunun adı olarak ayarlayın.  
   
-     \- veya -  
+     \- veya-  
   
      Bir <xref:System.Collections.IList>bağlıyorsanız, görüntüleme üyesini listedeki türün ortak özelliği olarak ayarlayın.  
   

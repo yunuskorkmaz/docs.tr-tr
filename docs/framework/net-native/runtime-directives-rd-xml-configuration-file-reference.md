@@ -42,17 +42,17 @@ Başvuru bilgileri için aşağıdaki yapıdaki öğeleri seçin veya [çalışm
 - [Yönergeler](directives-element-net-native.md) [1:1]
   - [Uygulama](application-element-net-native.md) [0:1]
     - [Derleme](assembly-element-net-native.md) [0: d]
-      - [Ad alanı](namespace-element-net-native.md) [0: d]. . .
-      - [0: d] [yazın](type-element-net-native.md) . . .
-      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. . .
+      - [Ad alanı](namespace-element-net-native.md) [0: d]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+      - [0: d] [yazın](type-element-net-native.md) . biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
     - [Ad alanı](namespace-element-net-native.md) [0: d]
-      - [Ad alanı](namespace-element-net-native.md) [0: d]. . .
-      - [0: d] [yazın](type-element-net-native.md) . . .
-      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. . .
+      - [Ad alanı](namespace-element-net-native.md) [0: d]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+      - [0: d] [yazın](type-element-net-native.md) . biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
     - [Tür](type-element-net-native.md) [0: d]
       - Alt [türler](subtypes-element-net-native.md) (kapsayan türün alt sınıfları) [o:1]
-      - [0: d] [yazın](type-element-net-native.md) . . .
-      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. . .
+      - [0: d] [yazın](type-element-net-native.md) . biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
       - [Attributeme](attributeimplies-element-net-native.md) (tür içeren bir öznitelik) [o:1]
       - [Genericparameter](genericparameter-element-net-native.md) [0: d]
       - [Yöntem](method-element-net-native.md) [0: d]
@@ -64,8 +64,8 @@ Başvuru bilgileri için aşağıdaki yapıdaki öğeleri seçin veya [çalışm
       - [Alan](field-element-net-native.md) [0: d]
       - [Olay](event-element-net-native.md) [0: d]
     - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: d]
-      - [0: d] [yazın](type-element-net-native.md) . . .
-      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. . .
+      - [0: d] [yazın](type-element-net-native.md) . biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
       - [Yöntem](method-element-net-native.md) [0: d]
         - [Parametre](parameter-element-net-native.md) [0: d]
         - [Typeparameter](typeparameter-element-net-native.md) [0: d]
@@ -76,17 +76,17 @@ Başvuru bilgileri için aşağıdaki yapıdaki öğeleri seçin veya [çalışm
       - [Olay](event-element-net-native.md) [0: d]
   - [Kitaplık](library-element-net-native.md) [0: d]
     - [Derleme](assembly-element-net-native.md) [0: d]
-      - [Ad alanı](namespace-element-net-native.md) [0: d]. . .
-      - [0: d] [yazın](type-element-net-native.md) . . .
-      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. . .
+      - [Ad alanı](namespace-element-net-native.md) [0: d]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+      - [0: d] [yazın](type-element-net-native.md) . biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
     - [Ad alanı](namespace-element-net-native.md) [0: d]
-      - [Ad alanı](namespace-element-net-native.md) [0: d]. . .
-      - [0: d] [yazın](type-element-net-native.md) . . .
-      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. . .
+      - [Ad alanı](namespace-element-net-native.md) [0: d]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+      - [0: d] [yazın](type-element-net-native.md) . biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
     - [Tür](type-element-net-native.md) [0: d]
       - Alt [türler](subtypes-element-net-native.md) (kapsayan türün alt sınıfları) [o:1]
-      - [0: d] [yazın](type-element-net-native.md) . . .
-      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. . .
+      - [0: d] [yazın](type-element-net-native.md) . biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
       - [Attributeme](attributeimplies-element-net-native.md) (tür içeren bir öznitelik) [o:1]
       - [Genericparameter](genericparameter-element-net-native.md) [0: d]
       - [Yöntem](method-element-net-native.md) [0: d]
@@ -95,8 +95,8 @@ Başvuru bilgileri için aşağıdaki yapıdaki öğeleri seçin veya [çalışm
       - [Alan](field-element-net-native.md) [0: d]
       - [Olay](event-element-net-native.md) [0: d]
     - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: d]
-      - [0: d] [yazın](type-element-net-native.md) . . .
-      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. . .
+      - [0: d] [yazın](type-element-net-native.md) . biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
       - [Yöntem](method-element-net-native.md) [0: d]
       - [Methodörneklemesi](methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: a]
       - [Özellik](property-element-net-native.md) [0: d]
@@ -150,7 +150,7 @@ Bir öğenin özniteliği tarafından belirtilen herhangi bir ilke, bu ilke içi
 
 - `MarshalDelegate`. Temsilci türlerini yerel koda işlev işaretçileri olarak hazırlama ilkesini denetler.
 
-- `MarshalStructure` . Yapıları yerel koda hazırlama ilkesini denetler.
+- `MarshalStructure`. Yapıları yerel koda hazırlama ilkesini denetler.
 
 Bu ilke türleriyle ilişkili ayarlar şunlardır:
 

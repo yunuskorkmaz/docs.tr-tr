@@ -38,7 +38,7 @@ ms.locfileid: "76745666"
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#085](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#085)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#085](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#085)]  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek şunları gerektirir:  
   
 - `getCurrentCellButton` ve `setCurrentCellButton`adlı denetimleri <xref:System.Windows.Forms.Button>. Görselde C#, her düğmenin <xref:System.Windows.Forms.Control.Click> olaylarını örnek kodda ilişkili olay işleyicisine eklemeniz gerekir.  

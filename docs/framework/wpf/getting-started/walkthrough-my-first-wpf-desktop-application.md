@@ -215,7 +215,7 @@ Bu bölümde, uygulamaya iki sayfa ve bir görüntü ekleyeceksiniz.
 
     2. **Varolan öğe Ekle** iletişim kutusunda, dosya filtresini **tüm dosyalar** veya **görüntü dosyaları**olarak ayarlayın, kullanmak istediğiniz görüntü dosyasına gidin ve **Ekle**' yi seçin.
 
-## <a name="build-and-run-the-application"></a>Uygulamayı derleyin ve çalıştırın
+## <a name="build-and-run-the-application"></a>Uygulamayı derleme ve çalıştırma
 
 1. Uygulamayı derlemek ve çalıştırmak için **F5** tuşuna basın veya **Hata Ayıkla** menüsünden **hata ayıklamayı Başlat** ' ı seçin.
 
@@ -474,7 +474,7 @@ Aşağıdaki çizimde denetimler, düzen, stiller, veri bağlama ve veri şablon
 > Bu örnek, WPF 'nin belirli bir özelliğini gösterir ve güvenlik, yerelleştirme ve erişilebilirlik gibi şeyler için en iyi uygulamaları izlemez. WPF ve .NET uygulama geliştirmenin en iyi uygulamalarının kapsamlı kapsamı için aşağıdaki konulara bakın:
 >
 > - [Erişilebilirlik](../../ui-automation/accessibility-best-practices.md)
-> - [Security](../security-wpf.md)
+> - [Güvenlik](../security-wpf.md)
 > - [WPF Genelleştirme ve yerelleştirme](../advanced/wpf-globalization-and-localization-overview.md)
 > - [WPF performansı](../advanced/optimizing-wpf-application-performance.md)
 

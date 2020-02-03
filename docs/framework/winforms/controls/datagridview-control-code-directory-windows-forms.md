@@ -22,7 +22,7 @@ Bu konu, belgelerde kullanılabilen <xref:System.Windows.Forms.DataGridView>ile 
   
  Ek kod örnekleri, sınıf kitaplığı başvuru belgelerinde bulunur. <xref:System.Windows.Forms.DataGridView> denetimiyle ilişkili asıl sınıfların ve arabirimlerin listesi için, [DataGridView Control Technology Summary](datagridview-control-technology-summary-windows-forms.md)içindeki tabloya bakın.  
   
-## <a name="codelist"></a>CodeList  
+## <a name="codelist"></a>Kod Listesi  
   
 ## <a name="unbound-data-examples"></a>İlişkisiz veri örnekleri  
   

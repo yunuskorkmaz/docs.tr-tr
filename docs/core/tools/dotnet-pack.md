@@ -17,7 +17,7 @@ ms.locfileid: "76734113"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>Ad
 
 `dotnet pack`-kodu bir NuGet paketine paketler.
 

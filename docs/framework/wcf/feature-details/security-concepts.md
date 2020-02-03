@@ -38,6 +38,6 @@ Bu bölümde Windows Communication Foundation (WCF) güvenliğiyle ilişkili kav
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Security](../../../../docs/framework/wcf/feature-details/security.md)
+- [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)
 - [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

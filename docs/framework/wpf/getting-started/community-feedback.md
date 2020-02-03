@@ -104,9 +104,9 @@ Hatalar, uygulamalarınızı geliştirmek ve derlemek için kullanılan araçlar
   - MSBuild
   - İfade Grafik Tasarımcısı
   - İfade etkileşimli tasarımcı
-  - {1&gt;Visual Studio&lt;1}
+  - Visual Studio
 - Çözüm yapılandırması, örneğin:
-  - Bir çözüm
+  - Çözüm
   - Tek bir proje
   - Birden çok bağımlı projeyle bir çözüm
 - Uygulamanızın dile özgü veya dilden bağımsız kaynaklar içerip içermediğini belirtir. Örneğin, `Application`, `Page`ve `Resource` türleri için `UICulture` proje özelliğini veya yerelleştirilebilir meta verileri mi belirtistediniz?

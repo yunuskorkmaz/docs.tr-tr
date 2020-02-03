@@ -22,7 +22,7 @@ Kullanıcının <xref:System.Windows.Forms.ToolStrip><xref:System.Windows.Forms.
   
 ### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a>Çalışma zamanında ToolStripItem yeniden düzenlemesini etkinleştirmek için  
   
-- Ayarlama <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> özelliğini `true`. Varsayılan olarak, <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> `false`.  
+- <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> özelliğini `true`olarak ayarlayın. Varsayılan olarak, <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> `false`.  
   
      Çalışma zamanında Kullanıcı, bir <xref:System.Windows.Forms.ToolStripItem> <xref:System.Windows.Forms.ToolStrip>farklı bir konuma sürüklemek için ALT tuşunu ve sol fare düğmesini tutar.  
   

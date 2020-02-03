@@ -20,7 +20,7 @@ Bu konu, `DataGridView` denetimi ve kullanımını destekleyen sınıflar hakkı
 ## <a name="keywords"></a>Anahtar Sözcükler  
  DataGridView, BindingSource, Table, Cell, veri bağlama, sanal mod  
   
-## <a name="namespaces"></a>{1&gt;Ad alanları&lt;1}  
+## <a name="namespaces"></a>Ad Alanları  
  <xref:System.Windows.Forms?displayProperty=nameWithType>  
   
  <xref:System.Data?displayProperty=nameWithType>  

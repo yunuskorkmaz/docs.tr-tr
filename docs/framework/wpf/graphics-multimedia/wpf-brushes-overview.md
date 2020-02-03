@@ -26,7 +26,7 @@ Fırça örnekleri
   
  Çoğu görsel nesne nasıl boyanmış olduğunu belirtmenizi sağlar. Aşağıdaki tabloda, <xref:System.Windows.Media.Brush>kullanabileceğiniz bazı ortak nesneler ve özellikler listelenmiştir.  
   
-|Sınıf|Fırça özellikleri|  
+|örneği|Fırça özellikleri|  
 |-----------|----------------------|  
 |<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>, <xref:System.Windows.Controls.Border.Background%2A>|  
 |<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>|  

@@ -1,5 +1,5 @@
 ---
-title: Düğme Kontrolü
+title: Düğme Denetimi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons

@@ -33,7 +33,7 @@ Tablo verileri genellikle, değişen satırlarda farklı arka plan rengine sahip
     > [!NOTE]
     > <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> ve <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> özellikleri kullanılarak belirtilen stiller, sütun ve <xref:System.Windows.Forms.DataGridView> düzeyinde belirtilen stilleri geçersiz kılar, ancak tek satır ve hücre düzeyinde ayarlanan stiller tarafından geçersiz kılınır. Daha fazla bilgi için [Windows Forms DataGridView Denetimindeki Hücre stilleri](cell-styles-in-the-windows-forms-datagridview-control.md)bölümüne bakın.  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek şunları gerektirir:  
   
 - `dataGridView1`adlı <xref:System.Windows.Forms.DataGridView> denetim.  

@@ -63,7 +63,7 @@ Bir Windows form denetimini bir XML Web hizmeti çağırma işleminden elde edil
  [!code-csharp[System.Windows.Forms.DataConnectorWebService#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataConnectorWebService#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu, bir `Main` yöntemi ve istemci tarafı proxy kodunun kısaltılmış bir sürümünü içeren tam bir örnektir.  
   
  Bu örnek şunları gerektirir:  

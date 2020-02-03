@@ -72,7 +72,7 @@ Dijital sertifikalar, *güven zinciri*olarak da adlandırılan bu hiyerarşiye b
 
 Yeni bir hizmet oluştururken, güvenilen kök sertifika tarafından verilmemiş bir sertifika kullanıyor olabilirsiniz veya veren sertifika, güvenilen kök sertifika yetkilileri deposunda bulunmayabilir. Yalnızca geliştirme amacıyla, bir sertifika için güven zincirini denetleyen mekanizmayı geçici olarak devre dışı bırakabilirsiniz. Bunu yapmak için `CertificateValidationMode` özelliğini `PeerTrust` veya `PeerOrChainTrust`olarak ayarlayın. Her iki mod da, sertifikanın kendi kendine yayınlanan (eş güven) veya bir güven zincirinin parçası olduğunu belirtir. Özelliğini aşağıdaki sınıfların herhangi birinde ayarlayabilirsiniz.
 
-|Sınıf|Özellik|
+|örneği|Özellik|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -141,7 +141,7 @@ Ayrıca yapılandırma modunu, hem [\<kimlik doğrulama >](../../../../docs/fram
 
 WCF 'de, bir hizmet veya istemcinin bir iletiyi doğrulamak, şifrelemek veya dijital olarak imzalamak için kullanması gereken bir sertifikayı veya sertifika kümesini belirtmeniz gerekir. Bunu, X. 509.440 sertifikalarını temsil eden çeşitli sınıfların `SetCertificate` yöntemini kullanarak programlı bir şekilde yapabilirsiniz. Aşağıdaki sınıflar bir sertifika belirtmek için `SetCertificate` yöntemini kullanır.
 
-|Sınıf|Yöntem|
+|örneği|Yöntem|
 |-----------|------------|
 |<xref:System.ServiceModel.Security.PeerCredential>|<xref:System.ServiceModel.Security.PeerCredential.SetCertificate%2A>|
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>|

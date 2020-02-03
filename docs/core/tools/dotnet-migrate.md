@@ -13,7 +13,7 @@ ms.locfileid: "76734146"
 
 **Bu makale için geçerlidir:** .NET Core 1. x SDK ✔️ .NET Core 2. x SDK ✔️
 
-## <a name="name"></a>Name
+## <a name="name"></a>Ad
 
 `dotnet migrate`-Preview 2 .NET Core projesini .NET Core SDK stili bir projeye geçirir.
 

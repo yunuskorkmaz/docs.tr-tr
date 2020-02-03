@@ -35,7 +35,7 @@ ms.locfileid: "76742630"
 |Birlikte Çalışabilirlik|Yalnızca Windows Communication Foundation (WCF).|  
 |Kimlik doğrulaması (hizmet)|Güvenlik belirteci hizmeti, istemcilerin kimliğini doğrular ve yetkilendirir.|  
 |Kimlik doğrulaması (istemci)|Güvenilen alt sistem istemcinin kimliğini doğrular ve kaynak, güvenilen alt sistem hizmetinin kimliğini doğrular.|  
-|Doğruluğunu|Evet|  
+|Bütünlük|Evet|  
 |Gizlilik|Evet|  
 |Aktarım|İstemci ile güvenilen alt sistem hizmeti arasında HTTP.<br /><br /> NET. Güvenilen alt sistem hizmeti ve kaynak (arka uç hizmeti) arasında TCP.|  
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  

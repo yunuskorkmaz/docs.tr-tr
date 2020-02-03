@@ -52,7 +52,7 @@ public class String {
 
  ✔️ bir özelliği türüyle aynı ada vermeyi düşünün.
 
- Örneğin, aşağıdaki özelliği doğru alır ve bir enum değeri ayarlar `Color`, özellik adlı `Color`:
+ Örneğin, aşağıdaki özellik, `Color`adlı bir sabit listesi değerini doğru bir şekilde alır ve ayarlar. bu nedenle, özelliğin adı `Color`olur:
 
 ```csharp
 public enum Color {...}
@@ -66,11 +66,11 @@ public class Control {
 
  bir fiil veya fiil ifadesi ile ad olayları ✔️.
 
- Örnekler `Clicked`, `Painting`, `DroppedDown`ve benzeri.
+ Örnekler şunlardır `Clicked`, `Painting`, `DroppedDown`ve benzeri.
 
  ✔️, var olan ve son kullanılan kullanımı kullanarak olay adlarını önceden ve sonra bir kavram olarak verir.
 
- Örneğin, bir pencere kapatılmadan hemen önce bir kapatma olayı adlı `Closing`, ve penceresi kapatıldıktan sonra başlatan bir çağrılabilir `Closed`.
+ Örneğin, bir pencere kapatılmadan önce oluşturulan bir Close olayı `Closing`çağrılır ve pencere kapatıldıktan sonra oluşturulan bir kapatma olayı `Closed`çağırılır.
 
  ❌ ön ve son olayları belirtmek için "önce" veya "After" öneklerini veya postdüzeltmelerinizi kullanmayın. Kullanımı mevcut ve geçmiş zamanlarını yalnızca tanımlandığı gibi.
 
@@ -80,12 +80,12 @@ public class Control {
 
  ✔️, olay işleyicilerinde `sender` ve `e` adında iki parametre kullanır.
 
- Gönderen parametresi olayı tetikleyen nesne temsil eder. Gönderen parametresi genellikle türüdür `object`bile daha belirli bir tür kullanmak istemiyorsunuz mümkündür.
+ Gönderen parametresi olayı tetikleyen nesne temsil eder. Gönderen parametresi, daha belirli bir tür kullanmak mümkün olsa bile, genellikle `object`türüdür.
 
  ✔️ olay bağımsız değişkeni sınıflarını "EventArgs" sonekiyle birlikte adlandırın.
 
 ## <a name="names-of-fields"></a>Alanların adlarını
- Statik genel ve korumalı alanlar için alan adlandırma yönergeleri uygulayın. İç ve özel alanları yönergeleri tarafından kapsanmayan ve ortak veya korumalı örnek alanları tarafından izin verilmez [üye tasarımı yönergeleri](../../../docs/standard/design-guidelines/member.md).
+ Statik genel ve korumalı alanlar için alan adlandırma yönergeleri uygulayın. İç ve özel alanlar yönergeler kapsamında değildir ve ortak veya korumalı örnek alanlarına [üye tasarım yönergeleri](../../../docs/standard/design-guidelines/member.md)tarafından izin verilmez.
 
  ✔️, alan adlarında Pascalbüyük harfleri kullanır.
 
@@ -97,7 +97,7 @@ public class Control {
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*
+ *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

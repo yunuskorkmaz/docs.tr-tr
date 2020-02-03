@@ -19,7 +19,7 @@ Aşağıdaki tabloda önceden tanımlanmış örtük işaretçi dönüşümleri 
 |Başlangıç|Bitiş|  
 |----------|--------|  
 |Herhangi bir işaretçi türü|Kağıt|  
-|{1&gt;null&lt;1}|Herhangi bir işaretçi türü|  
+|null|Herhangi bir işaretçi türü|  
   
  Açık işaretçi dönüştürmesi, bir atama ifadesi kullanarak örtük dönüştürme olmayan dönüştürmeler gerçekleştirmek için kullanılır. Aşağıdaki tabloda bu dönüşümler gösterilmektedir.  
   

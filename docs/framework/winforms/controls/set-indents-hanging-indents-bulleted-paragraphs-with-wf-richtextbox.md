@@ -25,7 +25,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi, görüntülediğ
   
 ### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>Paragrafı madde işaretli liste olarak biçimlendirmek için  
   
-1. Ayarlama <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> özelliğini `true`.  
+1. <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> özelliğini `true`olarak ayarlayın.  
   
     ```vb  
     RichTextBox1.SelectionBullet = True  

@@ -26,7 +26,7 @@ Aşağıdaki genel bakışta, akıllı istemci uygulamalarının avantajları, W
 
  Windows Forms, *form* , kullanıcıya bilgi görüntüleyen görsel bir yüzeydir. Genellikle formlara denetimler ekleyerek ve fare tıklamaları veya tuşa basma gibi kullanıcı eylemlerine yanıt geliştirmeye göre Windows Forms uygulamalar derleyebilirsiniz. *Denetim* , verileri görüntüleyen veya veri girişini kabul eden ayrı bir kullanıcı ARABIRIMI (UI) öğesidir.
 
- Bir Kullanıcı formunuza veya denetimlerinden birine bir şey yaparken eylem bir olay oluşturur. Uygulamanız kodu kullanarak bu olaylara tepki verir ve olayları gerçekleştiğinde işler. Daha fazla bilgi için [Windows Forms'ta olay işleyicileri oluşturma](creating-event-handlers-in-windows-forms.md).
+ Bir Kullanıcı formunuza veya denetimlerinden birine bir şey yaparken eylem bir olay oluşturur. Uygulamanız kodu kullanarak bu olaylara tepki verir ve olayları gerçekleştiğinde işler. Daha fazla bilgi için bkz. [Windows Forms olay Işleyicileri oluşturma](creating-event-handlers-in-windows-forms.md).
 
  Windows Forms formlara ekleyebileceğiniz çeşitli denetimler içerir: metin kutularını, düğmeleri, açılan kutuları, radyo düğmelerini ve hatta Web sayfalarını görüntüleyen denetimler. Bir formda kullanabileceğiniz tüm denetimlerin listesi için, bkz. [Windows Forms kullanılacak denetimler](./controls/controls-to-use-on-windows-forms.md). Mevcut bir denetim gereksinimlerinizi karşılamıyorsa, Windows Forms <xref:System.Windows.Forms.UserControl> sınıfını kullanarak kendi özel denetimlerinizi oluşturmayı da destekler.
 

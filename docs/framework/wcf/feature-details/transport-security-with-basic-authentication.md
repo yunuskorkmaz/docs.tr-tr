@@ -22,7 +22,7 @@ Aşağıdaki çizimde bir Windows Communication Foundation (WCF) hizmeti ve iste
 |Güvenlik modu|Aktarım|  
 |Birlikte Çalışabilirlik|Mevcut Web hizmeti istemcileri ve hizmetleriyle|  
 |Kimlik doğrulaması (sunucu)<br /><br /> Kimlik doğrulaması (Istemci)|Evet (HTTPS kullanarak)<br /><br /> Evet (Kullanıcı adı/parola aracılığıyla)|  
-|Doğruluğunu|Evet|  
+|Bütünlük|Evet|  
 |Gizlilik|Evet|  
 |Aktarım|HTTPS|  
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding>|  
@@ -117,5 +117,5 @@ Aşağıdaki çizimde bir Windows Communication Foundation (WCF) hizmeti ve iste
 - [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [clientCredentials \<](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+- [clientCredentials \<>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
 - [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

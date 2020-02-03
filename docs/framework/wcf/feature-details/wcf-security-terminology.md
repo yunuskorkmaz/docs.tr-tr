@@ -56,7 +56,7 @@ Güvenliği tartışmak için kullanılan bazı terminoloji tanıdık gelebilir.
  Dijital imza  
  Gönderenin kimliğini gönderilmekte olan bilgilere bağlayan veriler. Dijital imza herhangi bir ileti, dosya veya dijital olarak kodlanan diğer bilgilerle birlikte paketlenmiştir veya ayrı olarak iletilebilir. Dijital imzalar ortak anahtar ortamlarında kullanılır ve kimlik doğrulama ve bütünlük hizmetleri sağlar.  
   
- {1&gt;encoding&lt;1}  
+ encoding  
  Verileri bir bit akışına çevirme işlemi. Kodlama, verileri bir ve sıfırlardan oluşan bir akışa dönüştüren serileştirme işleminin bir parçasıdır.  
   
  Exchange anahtar çifti  
@@ -178,7 +178,7 @@ Güvenliği tartışmak için kullanılan bazı terminoloji tanıdık gelebilir.
 > [!NOTE]
 > WCF, standart UPN biçimine ek olarak alt düzey biçimde UPN 'leri kabul eder, örneğin, cohowınara. com\someone.  
   
- X. 509.440  
+ X.509  
  Gerekli parçalarını tanımlayan sertifikalar için uluslararası olarak tanınan bir standart.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

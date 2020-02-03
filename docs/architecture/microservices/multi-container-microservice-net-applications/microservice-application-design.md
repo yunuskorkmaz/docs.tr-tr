@@ -2,14 +2,14 @@
 title: Mikro hizmet odaklı bir uygulama tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmet odaklı bir uygulamanın avantajlarını ve altlarını anlayın ve bu sayede bilinçli bir karar alabilirsiniz.
 ms.date: 10/02/2018
-ms.openlocfilehash: 63c93f237172d80704c00472ef2d4cbf7c787ab0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 619440c02c1a82e05adb2cec9ddba933cd3e0a65
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921017"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965769"
 ---
-# <a name="designing-a-microservice-oriented-application"></a>Mikro hizmet odaklı bir uygulama tasarlama
+# <a name="design-a-microservice-oriented-application"></a>Mikro hizmet odaklı bir uygulama tasarlama
 
 Bu bölüm, kuramsal bir sunucu tarafı kurumsal uygulama geliştirmeye odaklanmaktadır.
 
@@ -96,7 +96,7 @@ Bu nedenle, mikro hizmetler (ve bu uygulamadaki veritabanları için de) dağıt
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Mikro hizmet tabanlı bir çözümün avantajları
 
-Bunun gibi bir mikro hizmet tabanlı çözümün birçok avantajı vardır:
+Bunun gibi mikro hizmet tabanlı bir çözümün birçok avantajı vardır:
 
 **Her mikro hizmet görece küçük, kolayca yönetiyoruz ve gelişme**. Engelle
 
@@ -118,7 +118,7 @@ Bunun gibi bir mikro hizmet tabanlı çözümün birçok avantajı vardır:
 
 ## <a name="downsides-of-a-microservice-based-solution"></a>Mikro hizmet tabanlı bir çözümün aşağı yönleri
 
-Buna benzer bir mikro hizmet tabanlı çözüm de bazı dezavantajları vardır:
+Bunun gibi mikro hizmet tabanlı bir çözüm de bazı dezavantajları vardır:
 
 **Dağıtılmış uygulama**. Uygulamayı dağıtmak, Hizmetleri tasarlarken ve oluştururken geliştiriciler için karmaşıklık ekler. Örneğin, geliştiriciler, test ve özel durum işleme için karmaşıklık ekleyen HTTP veya AMPQ gibi protokolleri kullanarak hizmet dışı iletişim uygulamalıdır. Ayrıca sisteme gecikme süresi ekler.
 
@@ -180,7 +180,7 @@ Multi-mimari model ve çok yönlü mikro hizmetleri, dilleri ve teknolojileri he
 
 Örneğin, basit bir CRUD bakım uygulaması için DDD desenleri tasarlamak ve uygulamak mantıklı olmayabilir. Ancak, çekirdek etki alanınız veya temel işletmeniz için, sürekli değişen iş kurallarıyla iş karmaşıklığını ortadan açmaya yönelik daha gelişmiş desenler uygulamanız gerekebilir.
 
-Özellikle birden çok alt sistem tarafından oluşturulan büyük uygulamalarla uğraşdığınızda, tek bir mimari deseninin temelinde tek bir üst düzey mimari uygulamanız gerekmez. Örneğin, CQRS, tüm uygulama için en üst düzey mimari olarak uygulanmamalıdır, ancak belirli bir hizmet kümesi için yararlı olabilir.
+Özellikle birden çok alt sistemi tarafından oluşturulan büyük uygulamalarla uğraşdığınızda, tek bir mimari deseninin temelinde tek bir üst düzey mimari uygulamamalısınız. Örneğin, CQRS, tüm uygulama için en üst düzey mimari olarak uygulanmamalıdır, ancak belirli bir hizmet kümesi için yararlı olabilir.
 
 Her belirli durum için gümüş bir madde işareti veya sağ mimari model yoktur. "Tümünü kural için bir mimari deseninin" olması gerekmez. Her mikro hizmetin önceliklerine bağlı olarak, aşağıdaki bölümlerde açıklandığı gibi her biri için farklı bir yaklaşım seçmeniz gerekir.
 

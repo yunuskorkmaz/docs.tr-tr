@@ -27,54 +27,54 @@ Visual Studio 'Yu, Arapça ve Ibranice gibi çift yönlü (sağdan sola) dilleri
 
 |Denetim/bileşen|RightToLeft özelliğinin etkisi|RightToLeftLayout özelliğinin etkisi|Yansıtma gerekiyor mu?|
 |------------------------|------------------------------------|------------------------------------------|-------------------------|
-|<xref:System.Windows.Forms.Button>|RTL okuma sırasını ayarlar. <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A>ve <xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A> tersine çevirir|Efekt yok|Hayır|
-|<xref:System.Windows.Forms.CheckBox>|Onay kutusu, metnin sağ tarafında görüntülenir|Efekt yok|Hayır|
-|<xref:System.Windows.Forms.CheckedListBox>|Tüm onay kutuları, metnin sağ tarafında görüntülenir|Efekt yok|Hayır|
-|<xref:System.Windows.Forms.ColorDialog>|Etkilenmemiştir; işletim sisteminin diline bağlıdır|Efekt yok|Hayır|
-|<xref:System.Windows.Forms.ComboBox>|Birleşik giriş kutusu denetimindeki öğeler sağa hizalı|Efekt yok|Hayır|
-|<xref:System.Windows.Forms.ContextMenu>|Sağdan sola okuma düzeni ile sağa hizalı görüntülenir|Efekt yok|Hayır|
-|<xref:System.Windows.Forms.DataGrid>|Sağdan sola okuma düzeni ile sağa hizalı görüntülenir|Efekt yok|Hayır|
-|<xref:System.Windows.Forms.DataGridView>|Hem RTL okuma sırası hem de denetim düzenini etkiler|Efekt yok|Hayır|
+|<xref:System.Windows.Forms.Button>|RTL okuma sırasını ayarlar. <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A>ve <xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A> tersine çevirir|Etki yok|Hayır|
+|<xref:System.Windows.Forms.CheckBox>|Onay kutusu, metnin sağ tarafında görüntülenir|Etki yok|Hayır|
+|<xref:System.Windows.Forms.CheckedListBox>|Tüm onay kutuları, metnin sağ tarafında görüntülenir|Etki yok|Hayır|
+|<xref:System.Windows.Forms.ColorDialog>|Etkilenmemiştir; işletim sisteminin diline bağlıdır|Etki yok|Hayır|
+|<xref:System.Windows.Forms.ComboBox>|Birleşik giriş kutusu denetimindeki öğeler sağa hizalı|Etki yok|Hayır|
+|<xref:System.Windows.Forms.ContextMenu>|Sağdan sola okuma düzeni ile sağa hizalı görüntülenir|Etki yok|Hayır|
+|<xref:System.Windows.Forms.DataGrid>|Sağdan sola okuma düzeni ile sağa hizalı görüntülenir|Etki yok|Hayır|
+|<xref:System.Windows.Forms.DataGridView>|Hem RTL okuma sırası hem de denetim düzenini etkiler|Etki yok|Hayır|
 |<xref:System.Windows.Forms.DateTimePicker>|Etkilenmemiştir; işletim sisteminin diline bağlıdır|Denetimi yansıtır|Evet|
-|<xref:System.Windows.Forms.DomainUpDown>|Yukarı ve aşağı düğmeleri sola hizalar|Efekt yok|Hayır|
-|<xref:System.Windows.Forms.ErrorProvider>|Desteklenmez|Efekt yok|Hayır|
-|<xref:System.Windows.Forms.FontDialog>|İşletim sisteminin diline bağlıdır|Efekt yok|Hayır|
+|<xref:System.Windows.Forms.DomainUpDown>|Yukarı ve aşağı düğmeleri sola hizalar|Etki yok|Hayır|
+|<xref:System.Windows.Forms.ErrorProvider>|Desteklenmez|Etki yok|Hayır|
+|<xref:System.Windows.Forms.FontDialog>|İşletim sisteminin diline bağlıdır|Etki yok|Hayır|
 |<xref:System.Windows.Forms.Form>|RTL okuma düzenini ayarlar ve kaydırma çubuklarını ters çevirir|Formu yansıtır|Evet|
 |<xref:System.Windows.Forms.GroupBox>|Başlık sağa hizalı görüntülenir. Alt denetimler bu özelliği devralınabilir.|Sağdan sola yansıtma desteği için denetim içindeki bir <xref:System.Windows.Forms.TableLayoutPanel> kullanın|Hayır|
-|<xref:System.Windows.Forms.HScrollBar>|Kaydırma kutusuyla başlar (Thumb) sağa hizalı|Efekt yok|Hayır|
-|<xref:System.Windows.Forms.ImageList>|Gerekli değil|Efekt yok|Hayır|
-|<xref:System.Windows.Forms.Label>|Sağa hizalı olarak görüntülendi. <xref:System.Windows.Forms.Label.TextAlign%2A> ve <xref:System.Windows.Forms.Label.ImageAlign%2A> ters çevirir|Efekt yok|Hayır|
-|<xref:System.Windows.Forms.LinkLabel>|Sağa hizalı olarak görüntülendi. <xref:System.Windows.Forms.Label.TextAlign%2A> ve <xref:System.Windows.Forms.Label.ImageAlign%2A> ters çevirir|Efekt yok|Hayır|
-|<xref:System.Windows.Forms.ListBox>|Öğeler sağa hizalı|Efekt yok|Hayır|
+|<xref:System.Windows.Forms.HScrollBar>|Kaydırma kutusuyla başlar (Thumb) sağa hizalı|Etki yok|Hayır|
+|<xref:System.Windows.Forms.ImageList>|Gerekli değil|Etki yok|Hayır|
+|<xref:System.Windows.Forms.Label>|Sağa hizalı olarak görüntülendi. <xref:System.Windows.Forms.Label.TextAlign%2A> ve <xref:System.Windows.Forms.Label.ImageAlign%2A> ters çevirir|Etki yok|Hayır|
+|<xref:System.Windows.Forms.LinkLabel>|Sağa hizalı olarak görüntülendi. <xref:System.Windows.Forms.Label.TextAlign%2A> ve <xref:System.Windows.Forms.Label.ImageAlign%2A> ters çevirir|Etki yok|Hayır|
+|<xref:System.Windows.Forms.ListBox>|Öğeler sağa hizalı|Etki yok|Hayır|
 |<xref:System.Windows.Forms.ListView>|Okuma sırasını RTL olarak ayarlar; öğeler sola hizalı kalır|Denetimi yansıtır|Evet|
-|<xref:System.Windows.Forms.MainMenu>|Çalışma zamanında (tasarım zamanında değil) RTL okuma sırasıyla sağa hizalı olarak görüntülendi|Efekt yok|Hayır|
-|<xref:System.Windows.Forms.MaskedTextBox>|Sağdan sola metin görüntüler.|Efekt yok|Hayır|
+|<xref:System.Windows.Forms.MainMenu>|Çalışma zamanında (tasarım zamanında değil) RTL okuma sırasıyla sağa hizalı olarak görüntülendi|Etki yok|Hayır|
+|<xref:System.Windows.Forms.MaskedTextBox>|Sağdan sola metin görüntüler.|Etki yok|Hayır|
 |<xref:System.Windows.Forms.MonthCalendar>|Etkilenmemiştir; işletim sisteminin diline bağlıdır|Denetimi yansıtır|Evet|
 |<xref:System.Windows.Forms.NotifyIcon>|Desteklenmez|Desteklenmez|Hayır|
-|<xref:System.Windows.Forms.NumericUpDown>|Yukarı ve aşağı düğmeleri sola hizalı|Efekt yok|Hayır|
-|<xref:System.Windows.Forms.OpenFileDialog>|Sağdan sola işletim sistemlerinde, içeren formun <xref:System.Windows.Forms.Control.RightToLeft> özelliğini, iletişim kutusunu <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> yerelleştirir olarak ayarlama |Efekt yok|Hayır|
-|<xref:System.Windows.Forms.PageSetupDialog>|Etkilenmemiştir; işletim sisteminin diline bağlıdır|Efekt yok|Hayır|
+|<xref:System.Windows.Forms.NumericUpDown>|Yukarı ve aşağı düğmeleri sola hizalı|Etki yok|Hayır|
+|<xref:System.Windows.Forms.OpenFileDialog>|Sağdan sola işletim sistemlerinde, içeren formun <xref:System.Windows.Forms.Control.RightToLeft> özelliğini, iletişim kutusunu <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> yerelleştirir olarak ayarlama |Etki yok|Hayır|
+|<xref:System.Windows.Forms.PageSetupDialog>|Etkilenmemiştir; işletim sisteminin diline bağlıdır|Etki yok|Hayır|
 |<xref:System.Windows.Forms.Panel>|Alt denetimler bu özelliği kalýtýmla alabilir|Sağdan sola destek için denetim içinde <xref:System.Windows.Forms.TableLayoutPanel> kullanın|Evet|
-|<xref:System.Windows.Forms.PictureBox>|Desteklenmez|Efekt yok|Hayır|
-|<xref:System.Windows.Forms.PrintDialog>|Etkilenmemiştir; işletim sisteminin diline bağlıdır|Efekt yok|Hayır|
-|<xref:System.Drawing.Printing.PrintDocument>|Dikey kaydırma çubuğu sola hizalı hale gelir ve yatay kaydırma çubuğu soldan başlar|Efekt yok|Hayır|
+|<xref:System.Windows.Forms.PictureBox>|Desteklenmez|Etki yok|Hayır|
+|<xref:System.Windows.Forms.PrintDialog>|Etkilenmemiştir; işletim sisteminin diline bağlıdır|Etki yok|Hayır|
+|<xref:System.Drawing.Printing.PrintDocument>|Dikey kaydırma çubuğu sola hizalı hale gelir ve yatay kaydırma çubuğu soldan başlar|Etki yok|Hayır|
 |<xref:System.Windows.Forms.PrintPreviewDialog>|Desteklenmez|Desteklenmez|Hayır|
 |<xref:System.Windows.Forms.ProgressBar>|Bu özellik tarafından etkilenmiyor|Denetimi yansıtır|Evet|
-|<xref:System.Windows.Forms.RadioButton>|Radyo düğmesi metnin sağ tarafında görüntülenir|Efekt yok|Hayır|
-|<xref:System.Windows.Forms.RichTextBox>|Metin içeren denetim öğeleri sağdan sola, RTL okuma sırasıyla görüntülenir|Efekt yok|Hayır|
-|<xref:System.Windows.Forms.SaveFileDialog>|Etkilenmemiştir; işletim sisteminin diline bağlıdır|Efekt yok|Hayır|
+|<xref:System.Windows.Forms.RadioButton>|Radyo düğmesi metnin sağ tarafında görüntülenir|Etki yok|Hayır|
+|<xref:System.Windows.Forms.RichTextBox>|Metin içeren denetim öğeleri sağdan sola, RTL okuma sırasıyla görüntülenir|Etki yok|Hayır|
+|<xref:System.Windows.Forms.SaveFileDialog>|Etkilenmemiştir; işletim sisteminin diline bağlıdır|Etki yok|Hayır|
 |<xref:System.Windows.Forms.SplitContainer>|Panel düzeni tersine çevrilir; dikey kaydırma çubuğu solda görünür; yatay kaydırma çubuğu sağdan başlar|Alt denetimlerin sırasını yansıtmak için <xref:System.Windows.Forms.TableLayoutPanel> kullanma|Hayır|
-|<xref:System.Windows.Forms.Splitter>|Desteklenmez|Efekt yok|Hayır|
+|<xref:System.Windows.Forms.Splitter>|Desteklenmez|Etki yok|Hayır|
 |<xref:System.Windows.Forms.StatusBar>|Desteklenmiyor; Bunun yerine <xref:System.Windows.Forms.StatusStrip> kullanın|Efekt yok; Bunun yerine <xref:System.Windows.Forms.StatusStrip> kullanın|Hayır|
 |<xref:System.Windows.Forms.TabControl>|Bu özellikten etkilenmiyor|Denetimi yansıtır|Evet|
-|<xref:System.Windows.Forms.TextBox>|Sağdan sola, RTL okuma düzeninde metin görüntüler|Efekt yok|Hayır|
+|<xref:System.Windows.Forms.TextBox>|Sağdan sola, RTL okuma düzeninde metin görüntüler|Etki yok|Hayır|
 |<xref:System.Windows.Forms.Timer>|Gerekli değil|Gerekli değil|Hayır|
 |<xref:System.Windows.Forms.ToolBar>|Bu özellikten etkilenmemektedir; Bunun yerine <xref:System.Windows.Forms.ToolStrip> kullanın|Efekt yok; Bunun yerine <xref:System.Windows.Forms.ToolStrip> kullanın|Evet|
-|<xref:System.Windows.Forms.ToolTip>|RTL okuma sırasını ayarlar|Efekt yok|Hayır|
-|<xref:System.Windows.Forms.TrackBar>|Kaydırma veya izleme sağdan başlar; <xref:System.Windows.Forms.TrackBar.Orientation%2A> dikey olduğunda, sağ taraftaki zaman işaretleri oluşur|Efekt yok|Hayır|
+|<xref:System.Windows.Forms.ToolTip>|RTL okuma sırasını ayarlar|Etki yok|Hayır|
+|<xref:System.Windows.Forms.TrackBar>|Kaydırma veya izleme sağdan başlar; <xref:System.Windows.Forms.TrackBar.Orientation%2A> dikey olduğunda, sağ taraftaki zaman işaretleri oluşur|Etki yok|Hayır|
 |<xref:System.Windows.Forms.TreeView>|Yalnızca RTL okuma düzenini ayarlar|Denetimi yansıtır|Evet|
 |<xref:System.Windows.Forms.UserControl>|Dikey kaydırma çubuğu solda görünür; yatay kaydırma çubuğunun sağ tarafta parmak izi vardır|Doğrudan destek yoktur; <xref:System.Windows.Forms.TableLayoutPanel> kullanma|Hayır|
-|<xref:System.Windows.Forms.VScrollBar>|Kaydırılabilir denetimlerin sağ tarafı yerine sol tarafta gösterilir|Efekt yok|Hayır|
+|<xref:System.Windows.Forms.VScrollBar>|Kaydırılabilir denetimlerin sağ tarafı yerine sol tarafta gösterilir|Etki yok|Hayır|
 
 ## <a name="encoding"></a>Encoding
  Windows Forms Unicode desteği sayesinde, çift yönlü uygulamalarınızı oluştururken herhangi bir karakter kümesini dahil edebilirsiniz. Ancak, tüm Windows Forms denetimleri tüm platformlarda Unicode 'U desteklemez.

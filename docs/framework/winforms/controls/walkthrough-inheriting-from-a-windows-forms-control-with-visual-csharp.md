@@ -87,7 +87,7 @@ Denetimler tek başına projeler değildir; Bunlar bir kapsayıcıda barındır�
 
 ### <a name="to-build-your-control"></a>Denetiminizi oluşturmak için
 
-Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**. Derleme, derleyici hataları veya uyarıları olmadan başarılı olmalıdır.
+**Yapı** menüsünde **Yapı Çözümü**’ne tıklayın. Derleme, derleyici hataları veya uyarıları olmadan başarılı olmalıdır.
 
 ### <a name="to-create-a-test-project"></a>Bir test projesi oluşturmak için
 
@@ -137,7 +137,7 @@ Denetimler tek başına projeler değildir; Bunlar bir kapsayıcıda barındır�
 
      `Form1` görüntülenir.
 
-12. Tıklatın `valueButton1`.
+12. `valueButton1` öğesine tıklayın.
 
      ' 5 ' rakamı, devralınan denetiminizin `ButtonValue` özelliğinin `valueButton1_Click` yöntemi aracılığıyla `label1` geçtiğini gösteren `label1`görüntülenir. Bu nedenle `ValueButton` denetiminiz standart Windows Forms düğmesinin tüm işlevlerini devralır, ancak ek, özel bir özellik sunar.
 

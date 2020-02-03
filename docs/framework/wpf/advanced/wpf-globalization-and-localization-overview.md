@@ -247,11 +247,11 @@ Microsoft Suudi Arabistan Web sitesinin bu şekilde sahte olması, RightToLeft d
 
 Kök <xref:System.Windows.FrameworkElement.FlowDirection%2A> değiştirildiğinde arka plan gradyan fırçaları doğru şekilde çevrildiğini de gözlemleyin:
 
-**FlowDirection="LeftToRight"**
+**FlowDirection = "Solttoright"**
 
 ![Soldan sağa gradyan akışını gösteren ekran görüntüsü.](./media/wpf-globalization-and-localization-overview/gradient-flow-left-right.png)
 
-**FlowDirection="RightToLeft"**
+**FlowDirection = "RightToLeft"**
 
 ![Sağdan sola gradyan akışını gösteren ekran görüntüsü.](./media/wpf-globalization-and-localization-overview/gradient-flow-right-left.png)
 

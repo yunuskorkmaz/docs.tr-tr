@@ -59,7 +59,7 @@ Proje dosyası:
 | | Ayar adı | Değerler |
 | - | - | - |
 | **runtimeconfig. JSON** | `Switch.System.Globalization.EnforceJapaneseEraYearRanges` | `false` gevşek Aralık denetimleri<br/>`true`-taşmalar özel duruma neden olur |
-| **Ortam değişkeni** | YOK | YOK |
+| **Ortam değişkeni** | Yok | Yok |
 
 ## <a name="japanese-date-parsing"></a>Japonca Tarih ayrıştırma
 
@@ -70,7 +70,7 @@ Proje dosyası:
 | | Ayar adı | Değerler |
 | - | - | - |
 | **runtimeconfig. JSON** | `Switch.System.Globalization.EnforceLegacyJapaneseDateParsing` | `false`-"gannen" veya "1" destekleniyor<br/>`true`-yalnızca "1" destekleniyor |
-| **Ortam değişkeni** | YOK | YOK |
+| **Ortam değişkeni** | Yok | Yok |
 
 ## <a name="japanese-year-format"></a>Japon yıl biçimi
 
@@ -81,4 +81,4 @@ Proje dosyası:
 | | Ayar adı | Değerler |
 | - | - | - |
 | **runtimeconfig. JSON** | `Switch.System.Globalization.FormatJapaneseFirstYearAsANumber` | `false`-"gannen" olarak Biçimlendir<br/>`true`-sayı olarak Biçimlendir |
-| **Ortam değişkeni** | YOK | YOK |
+| **Ortam değişkeni** | Yok | Yok |

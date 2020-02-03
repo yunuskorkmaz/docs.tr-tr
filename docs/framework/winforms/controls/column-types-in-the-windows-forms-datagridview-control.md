@@ -22,7 +22,7 @@ ms.locfileid: "76743860"
   
  Aşağıdaki tabloda <xref:System.Windows.Forms.DataGridView> denetiminde kullanılabilecek çeşitli sütun sınıfları açıklanmaktadır.  
   
-|Sınıf|Açıklama|  
+|örneği|Açıklama|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|Metin tabanlı değerlerle kullanılır. Sayılara ve dizelere bağlamada otomatik olarak oluşturulur.|  
 |<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|<xref:System.Boolean> ve <xref:System.Windows.Forms.CheckState> değerleriyle kullanılır. Bu türlerin değerlerine bağlanırken otomatik olarak oluşturulur.|  

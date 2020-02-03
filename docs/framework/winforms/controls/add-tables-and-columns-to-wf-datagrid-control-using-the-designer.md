@@ -26,7 +26,7 @@ Aşağıdaki yordamlar, bir <xref:System.Windows.Forms.DataGrid> denetimi içere
 
 1. Tablodaki verileri göstermek için öncelikle <xref:System.Windows.Forms.DataGrid> denetimini bir veri kümesine bağlamanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: tasarımcı kullanarak Windows Forms DataGrid denetimini bir veri kaynağına bağlama](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).
 
-2. Özellikler penceresi <xref:System.Windows.Forms.DataGrid> denetimin <xref:System.Windows.Forms.DataGrid.TableStyles%2A> özelliğini seçin ve sonra, **DataGridTableStyle koleksiyon düzenleyicisini**göstermek için özelliğin yanındaki üç![nokta düğmesini (...) ve ardından Özellikler penceresi) tıklatın.
+2. Özellikler penceresi <xref:System.Windows.Forms.DataGrid> denetimin <xref:System.Windows.Forms.DataGrid.TableStyles%2A> özelliğini seçin ve sonra, **DataGridTableStyle koleksiyon düzenleyicisini**göstermek için özelliğin yanındaki üç![nokta düğmesini (...) ve ardından Özellikler penceresi) tıklatın.](./media/visual-studio-ellipsis-button.png)
 
 3. Koleksiyon Düzenleyicisi 'nde tablo stili eklemek için **Ekle** ' ye tıklayın.
 

@@ -46,7 +46,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetimi takvimin görü
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>Denetimin en altındaki geçerli tarihi görüntüleme  
   
-- Ayarlama <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> özelliğini `true`. Aşağıdaki örnek, form çift tıklandığında bugünün tarihini görüntüleme ve atlama arasında geçiş yapar.  
+- <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> özelliğini `true`olarak ayarlayın. Aşağıdaki örnek, form çift tıklandığında bugünün tarihini görüntüleme ve atlama arasında geçiş yapar.  
   
     ```vb  
     Private Sub Form1_DoubleClick(ByVal sender As Object, _  
@@ -87,7 +87,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetimi takvimin görü
   
 ### <a name="to-display-week-numbers"></a>Hafta numaralarını görüntüleme  
   
-- Ayarlama <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> özelliğini `true`. Bu özelliği kodda ya da Özellikler penceresi olarak ayarlayabilirsiniz.  
+- <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> özelliğini `true`olarak ayarlayın. Bu özelliği kodda ya da Özellikler penceresi olarak ayarlayabilirsiniz.  
   
      Hafta numaraları, haftanın ilk gününün solunda ayrı bir sütunda görüntülenir.  
   

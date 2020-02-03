@@ -1,5 +1,5 @@
 ---
-title: Ayırıcı Denetimine Genel Bakış
+title: Bölümlendirici Denetimine Genel Bakış
 ms.date: 03/30/2017
 f1_keywords:
 - Splitter

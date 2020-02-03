@@ -34,4 +34,4 @@ Visual Studio 'daki Windows Presentation Foundation (WPF), geliştiricilere Wind
   
  [.NET Framework WPF](../index.md)  
   
- [Get Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+ [Visual Studio 'Yu al](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

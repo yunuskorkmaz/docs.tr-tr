@@ -60,4 +60,4 @@ Windows Presentation Foundation (WPF) ana bilgisayarı (PresentationHost. exe), 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Security](../security-wpf.md)
+- [Güvenlik](../security-wpf.md)

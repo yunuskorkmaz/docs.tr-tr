@@ -32,8 +32,8 @@ Yayın hakkında daha fazla bilgi için bkz. [.NET Core 3,1 duyurusu](https://de
 | Sürüm | Not |
 | ------- | ---- |
 | .NET Core 3.0 | 3 Mart 2020 ' de yaşam sonu.     |
-| .NET Core 2,2 | 23 Aralık 2019 ' de yaşam sonu. |
-| .NET Core 2,1 | 21 Ağustos 2021 ' de yaşam sonu.    |
+| .NET Core 2.2 | 23 Aralık 2019 ' de yaşam sonu. |
+| .NET Core 2.1 | 21 Ağustos 2021 ' de yaşam sonu.    |
 
 Daha fazla bilgi için bkz. [.NET Core destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
 

@@ -27,7 +27,7 @@ Windows Forms <xref:System.Windows.Forms.ListView> denetim, simgeleri olan öğe
   
  Aşağıdaki tabloda <xref:System.Windows.Forms.ListView> üyelerinden bazıları ve bunların geçerli oldukları görünümler listelenmiştir.  
   
-|ListView üyesi|Görünüm|  
+|ListView üyesi|Görüntüle|  
 |---------------------|----------|  
 |<xref:System.Windows.Forms.ListView.Alignment%2A> özelliği|<xref:System.Windows.Forms.View.SmallIcon> veya <xref:System.Windows.Forms.View.LargeIcon>|  
 |<xref:System.Windows.Forms.ListView.AutoArrange%2A> özelliği|<xref:System.Windows.Forms.View.SmallIcon> veya <xref:System.Windows.Forms.View.LargeIcon>|  

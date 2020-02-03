@@ -101,7 +101,7 @@ ms.locfileid: "76742288"
 
 1. Visual Studio 'da proje özelliklerini açın.
 
-2. **Güvenlik** sekmesinde **Gelişmiş**' e tıklayın.
+2. **Güvenlik** sekmesinde **Gelişmiş**’e tıklayın.
 
      Gelişmiş güvenlik ayarları iletişim kutusu görüntülenir.
 
@@ -113,11 +113,11 @@ ms.locfileid: "76742288"
 
      Internet Seçenekleri iletişim kutusu görüntülenir.
 
-6. Tıklayın **Gelişmiş** sekmesi.
+6. **Gelişmiş** sekmesine tıklayın.
 
 7. **Güvenlik**altındaki **Ayarlar** listesinde, **etkin Içeriğin bilgisayarımdaki dosyalarda çalıştırılmasına izin ver** onay kutusunu işaretleyin.
 
-8. **Tamam**'ı tıklatın.
+8. **Tamam**’a tıklayın.
 
      Internet Explorer 'ı yeniden başlattıktan sonra değişiklikler geçerli olur.
 

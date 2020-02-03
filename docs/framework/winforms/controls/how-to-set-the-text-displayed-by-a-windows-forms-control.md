@@ -34,7 +34,7 @@ Windows Forms denetimleri genellikle denetimin birincil işleviyle ilgili bazı 
 
 Ayrıca, [tasarımcıyı](#designer)kullanarak metni de ayarlayabilirsiniz.
 
-## <a name="programmatic"></a>Programatik
+## <a name="programmatic"></a>Programlı
 
 1. <xref:System.Windows.Forms.Control.Text%2A> özelliğini bir dizeye ayarlayın.
 

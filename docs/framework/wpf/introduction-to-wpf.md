@@ -165,7 +165,7 @@ Yerleşik WPF denetimleri burada listelenmiştir:
 
 - **Giriş**: <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>ve <xref:System.Windows.Controls.PasswordBox>.
 
-- **Düzen**: <xref:System.Windows.Controls.Border>, <xref:System.Windows.Controls.Primitives.BulletDecorator>, <xref:System.Windows.Controls.Canvas>, <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.Expander>, <xref:System.Windows.Controls.Grid>, <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridSplitter>, <xref:System.Windows.Controls.GroupBox>, <xref:System.Windows.Controls.Panel>, <xref:System.Windows.Controls.Primitives.ResizeGrip>, <xref:System.Windows.Controls.Separator>, <xref:System.Windows.Controls.Primitives.ScrollBar><xref:System.Windows.Controls.ScrollViewer>, <xref:System.Windows.Controls.StackPanel>, <xref:System.Windows.Controls.Primitives.Thumb>, <xref:System.Windows.Controls.Viewbox>ve <xref:System.Windows.Controls.VirtualizingStackPanel>.
+- **Düzen**: <xref:System.Windows.Controls.Border>, <xref:System.Windows.Controls.Primitives.BulletDecorator>, <xref:System.Windows.Controls.Canvas>, <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.Expander>, <xref:System.Windows.Controls.Grid>, <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridSplitter>, <xref:System.Windows.Controls.GroupBox>, <xref:System.Windows.Controls.Panel>, <xref:System.Windows.Controls.Primitives.ResizeGrip>, <xref:System.Windows.Controls.Separator>, <xref:System.Windows.Controls.Primitives.ScrollBar><xref:System.Windows.Controls.ScrollViewer>, <xref:System.Windows.Controls.StackPanel>, <xref:System.Windows.Controls.Primitives.Thumb>, <xref:System.Windows.Controls.Viewbox>ve <xref:System.Windows.Controls.VirtualizingStackPanel>.<xref:System.Windows.Window><xref:System.Windows.Controls.WrapPanel>
 
 - **Medya**: <xref:System.Windows.Controls.Image>, <xref:System.Windows.Controls.MediaElement>ve <xref:System.Windows.Controls.SoundPlayerAction>.
 
@@ -323,7 +323,7 @@ WPF animasyon desteği, denetimlerin büyümesi, sallanması, dönmesi ve belirm
 
 Daha fazla bilgi için bkz. [animasyon genel bakış](graphics-multimedia/animation-overview.md).
 
-## <a name="media"></a>Ortam
+## <a name="media"></a>Medya
 
 Zengin içerik iletmenin bir yolu, Audiovisual medyası kullanmaktır. WPF, görüntüler, videolar ve ses için özel destek sağlar.
 
@@ -650,7 +650,7 @@ Aşağıdaki şekilde, <xref:System.Windows.Window>barındırılan `NumericUpDow
 
 ## <a name="wpf-best-practices"></a>WPF en iyi uygulamaları
 
-Her türlü geliştirme platformunda olduğu gibi, WPF istenen sonuca ulaşmak için çeşitli yollarla kullanılabilir. WPF uygulamalarınızın gerekli Kullanıcı deneyimini sağlayıp, genel olarak hedef kitle taleplerini karşıladığından emin olmanın bir yolu olarak erişilebilirlik, Genelleştirme ve yerelleştirme ve performans için önerilen en iyi uygulamalar vardır. Daha fazla bilgi için bkz.
+Her türlü geliştirme platformunda olduğu gibi, WPF istenen sonuca ulaşmak için çeşitli yollarla kullanılabilir. WPF uygulamalarınızın gerekli Kullanıcı deneyimini sağlayıp, genel olarak hedef kitle taleplerini karşıladığından emin olmanın bir yolu olarak erişilebilirlik, Genelleştirme ve yerelleştirme ve performans için önerilen en iyi uygulamalar vardır. Daha fazla bilgi için bkz.:
 
 - [Erişilebilirlik](../ui-automation/accessibility-best-practices.md)
 - [WPF Genelleştirme ve yerelleştirme](advanced/wpf-globalization-and-localization-overview.md)

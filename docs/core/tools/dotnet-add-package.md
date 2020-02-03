@@ -17,7 +17,7 @@ ms.locfileid: "76733322"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>Ad
 
 `dotnet add package`-proje dosyasına bir paket başvurusu ekler.
 

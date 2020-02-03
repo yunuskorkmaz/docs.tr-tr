@@ -18,7 +18,7 @@ Varsayılan olarak Windows Forms <xref:System.Windows.Forms.RichTextBox> denetim
   
 ### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>Bir RichTextBox denetiminde kaydırma çubuklarını görüntüleme  
   
-1. Ayarlama <xref:System.Windows.Forms.RichTextBox.Multiline%2A> özelliğini `true`. <xref:System.Windows.Forms.RichTextBox.Multiline%2A> özelliği `false`olarak ayarlanırsa yatay dahil olmak üzere kaydırma çubuğu türü görüntülenmez.  
+1. <xref:System.Windows.Forms.RichTextBox.Multiline%2A> özelliğini `true`olarak ayarlayın. <xref:System.Windows.Forms.RichTextBox.Multiline%2A> özelliği `false`olarak ayarlanırsa yatay dahil olmak üzere kaydırma çubuğu türü görüntülenmez.  
   
 2. <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> özelliğini <xref:System.Windows.Forms.RichTextBoxScrollBars> sabit listesinin uygun bir değeri olarak ayarlayın.  
   

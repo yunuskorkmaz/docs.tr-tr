@@ -22,7 +22,7 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> denetimi, denetimdeki t
   
 ### <a name="to-display-a-custom-format"></a>Özel bir biçim göstermek için  
   
-1. Ayarlama <xref:System.Windows.Forms.DateTimePicker.Format%2A> özelliğini `DateTimePickerFormat.Custom`.  
+1. <xref:System.Windows.Forms.DateTimePicker.Format%2A> özelliğini `DateTimePickerFormat.Custom`olarak ayarlayın.  
   
 2. <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> özelliğini bir biçim dizesine ayarlayın.  
   

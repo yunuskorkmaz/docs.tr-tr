@@ -48,7 +48,7 @@ Yerelleştirmeye izin veren formların oluşturulması uluslararası pazarlar i�
   
 9. [İzlenecek yol: veri girişi için yeniden boyutlandırılabilir Windows formu oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek şunları gerektirir:  
   
 - System, System. Data, System. Drawing ve System. Windows. Forms derlemelerine başvurular.  

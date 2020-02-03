@@ -28,14 +28,14 @@ Daha fazla bilgi ve örnek için bkz. [arabirimler](../../programming-guide/inte
 Arabirim, bir ad alanı veya sınıf üyesi olabilir. Arabirim bildirimi, aşağıdaki üyelerin bildirimlerini (herhangi bir uygulama olmadan imzalar) içerebilir:
 
 - [Yöntemler](../../programming-guide/classes-and-structs/methods.md)
-- [Veri Erişimi](../../programming-guide/classes-and-structs/using-properties.md)
+- [Özellikler](../../programming-guide/classes-and-structs/using-properties.md)
 - [Dizin Oluşturucular](../../programming-guide/indexers/using-indexers.md)
 - [Olaylar](event.md)
 
 Bu önceki üye bildirimleri genellikle gövde içermez. 8,0 ile C# başlayarak bir arabirim üyesi bir gövde bildirebilir. Bu, varsayılan bir *uygulama*olarak adlandırılır. Gövdeler içeren Üyeler, arabirimin geçersiz kılan bir uygulama sağlamayan sınıflar ve yapılar için "varsayılan" bir uygulama sağlamasına izin verir. Ayrıca, 8,0 ile C# başlayarak bir arabirim şunlar olabilir:
 
 - [Sabitler](const.md)
-- [İşleçler](../operators/operator-overloading.md)
+- [işleçler](../operators/operator-overloading.md)
 - [Statik Oluşturucu](../../programming-guide/classes-and-structs/constructors.md#static-constructors).
 - [İç içe türler](../../programming-guide/classes-and-structs/nested-types.md)
 - [Statik alanlar, Yöntemler, özellikler, Dizin oluşturucular ve olaylar](static.md)

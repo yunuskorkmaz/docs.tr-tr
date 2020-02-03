@@ -194,7 +194,7 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını değiştirir.
 
 ## <a name="behavioral-changes"></a>Davranış değişiklikleri
 
-### <a name="assemblies"></a>Derlemeler
+### <a name="assemblies"></a>Bütünleştirilmiş kodlar
 
 - ✔️ **Izin verildi: aynı platformlar hala desteklenmeden bir derlemeyi taşınabilir hale getirme**
 
@@ -260,7 +260,7 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını değiştirir.
 
 - ❌ **Izin verilmiyor: Yukarıda listelenmeyen herhangi bir özel durumu kaldırma**
 
-### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
+### <a name="attributes"></a>Öznitelikler
 
 - ✔️ **Izin verildi: observable *olmayan* bir özniteliğin değerini değiştirme**
 

@@ -1,5 +1,5 @@
 ---
-title: İzlenecek Yollar
+title: İzlenecek yollar
 ms.date: 03/30/2017
 helpviewer_keywords:
 - walkthroughs [WPF]

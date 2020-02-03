@@ -50,7 +50,7 @@ ms.locfileid: "76742966"
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örneği çalıştırmak için kodu, `BindingSource1` adlı bir <xref:System.Windows.Forms.BindingSource> ve `dataGridView1`adlı <xref:System.Windows.Forms.DataGridView> içeren bir forma yapıştırın. Form için <xref:System.Windows.Forms.Form.Load> olayını işleyin ve Load olay işleyicisi yönteminde `InitializeSortedFilteredBindingSource` çağırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

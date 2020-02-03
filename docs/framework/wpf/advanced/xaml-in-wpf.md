@@ -40,7 +40,7 @@ ms.locfileid: "76741886"
 [WPF Mimarisi](wpf-architecture.md)  
 [Temel Öğeler](base-elements.md)  
 [Öğe Ağacı ve Serileştirme](element-tree-and-serialization.md)  
-[Veri Erişimi](properties-wpf.md)  
+[Özellikler](properties-wpf.md)  
 [Olaylar](events-wpf.md)  
 [Giriş](input-wpf.md)  
 [Kaynaklar](resources-wpf.md)  

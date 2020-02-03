@@ -73,7 +73,7 @@ Bu konuda, istemcilerin kuyruklardan okuyan hizmetleri nasıl ele aldığı ve h
 |WCF URI tabanlı sıra adresi|Active Directory özelliğini kullan|Sıra Aktarım Protokolü özelliği|Sonuçta elde edilen MSMQ biçim adları|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
 |Net. MSMQ://\<makine-adı >/Private/ABC|False (varsayılan)|Yerel (varsayılan)|DIRECT = OS: Machine-name\private $ \abc|  
-|Net. MSMQ://\<makine-adı >/Private/ABC|False|SRMP|DIRECT =http://machine/msmq/private $/ABC|  
+|Net. MSMQ://\<makine-adı >/Private/ABC|False|SRMP|DIRECT =http://machine/msmq/private$/ABC|  
 |Net. MSMQ://\<makine-adı >/Private/ABC|Doğru|Yerel|PUBLIC = bazı-GUID (kuyruğun GUID 'SI)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Iletileri atılacak ileti sırasından veya Poison-Message sırasından okuma  
@@ -100,7 +100,7 @@ Bu konuda, istemcilerin kuyruklardan okuyan hizmetleri nasıl ele aldığı ve h
   
  `MsmqIntegrationBinding`kullanarak bir kuyruktan ileti alırken yalnızca doğrudan biçim adlarını ve ortak ve özel biçim adlarını (Active Directory tümleştirme gerektirir) kullanabileceğinizi unutmayın. Ancak, doğrudan biçim adları kullanmanız önerilir. Örneğin, Windows Vista 'da, başka bir biçim adı kullanılması, sistem bir alt sıra açmaya çalıştığı ve yalnızca doğrudan biçim adlarıyla açılabilen bir hataya neden olur.  
   
- `MsmqIntegrationBinding`kullanarak SRMP 'nin adreslenmesi sırasında, doğrudan biçim Internet Information Services adında/MSMQ/eklemek için bir gereksinim yoktur. Örneğin: doğrudan =http://adatum.com/msmq/private $/ABC yerine SRMP protokolünü kullanarak ABC kuyruğunu adreslendirirken doğrudan =http://adatum.com/private $/abckullanmanız gerekir.  
+ `MsmqIntegrationBinding`kullanarak SRMP 'nin adreslenmesi sırasında, doğrudan biçim Internet Information Services adında/MSMQ/eklemek için bir gereksinim yoktur. Örneğin: doğrudan =http://adatum.com/msmq/private$/ABC yerine SRMP protokolünü kullanarak ABC kuyruğunu adreslendirirken doğrudan =http://adatum.com/private$/abckullanmanız gerekir.  
   
  `MsmqIntegrationBinding`ile net. MSMQ://adreslemeyi kullanmayacağınızı unutmayın. `MsmqIntegrationBinding`, serbest biçimli MSMQ biçimi adı adresini desteklediğinden, MSMQ 'daki çok noktaya yayın ve dağıtım listesi özelliklerini kullanmak için bu bağlamayı kullanan bir WCF hizmeti kullanabilirsiniz. Bir özel durum, `MsmqIntegrationBinding`kullanılırken `CustomDeadLetterQueue` belirtmektir. Bu, `NetMsmqBinding`kullanarak nasıl belirtime benzer şekilde net. MSMQ://biçiminde olmalıdır.  
   

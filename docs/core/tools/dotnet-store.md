@@ -13,7 +13,7 @@ ms.locfileid: "76733058"
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>Ad
 
 `dotnet store`-belirtilen derlemeleri [çalışma zamanı paket deposunda](../deploying/runtime-store.md)depolar.
 

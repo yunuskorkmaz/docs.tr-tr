@@ -24,7 +24,7 @@ ms.locfileid: "76742532"
  Aşağıdaki bölümlerde <xref:System.Windows.Forms.DataGridView> yardımcı sınıfları daha ayrıntılı olarak açıklanır.  
   
 ### <a name="datagridviewelementstates"></a>DataGridViewElementStates  
- <xref:System.Windows.Forms.DataGridViewElementStates> Numaralandırma aşağıdaki değerleri içerir:  
+ <xref:System.Windows.Forms.DataGridViewElementStates> numaralandırması aşağıdaki değerleri içerir:  
   
 - <xref:System.Windows.Forms.DataGridViewElementStates.None>  
   

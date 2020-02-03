@@ -46,7 +46,7 @@ Windows Presentation Foundation (WPF), uygulamalar oluşturmak için zengin bir 
   
 5. Konak penceresini oluşturduktan sonra barındırılan pencerenin HWND 'sini döndürün. Bir veya daha fazla Win32 denetimini barındırmak istiyorsanız, genellikle HWND 'nin bir alt öğesi olarak bir ana bilgisayar penceresi oluşturur ve bu konak penceresinin alt öğelerini yapar. Denetimleri bir ana bilgisayar penceresinde sarmalama, WPF sayfanızın, HWND sınırları içindeki bildirimlerle ilgili bazı Win32 sorunlarıyla ilgilenen, denetimlerden bildirimler alması için basit bir yol sağlar.  
   
-6. Alt denetimlerin bildirimleri gibi ana bilgisayar penceresine gönderilen Seçili iletileri işleyin. Bunu iki şekilde yapabilirsiniz.  
+6. Alt denetimlerin bildirimleri gibi ana bilgisayar penceresine gönderilen Seçili iletileri işleyin. Bunu yapmanın iki yolu vardır.  
   
     - Barındırma sınıfınıza iletileri işlemek isterseniz, <xref:System.Windows.Interop.HwndHost> sınıfının <xref:System.Windows.Interop.HwndHost.WndProc%2A> yöntemini geçersiz kılın.  
   

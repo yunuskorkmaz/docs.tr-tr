@@ -46,7 +46,7 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> denetimi ve onunla ilişkili
   
 ### <a name="important-toolstrip-members"></a>Önemli ToolStrip üyeleri  
   
-|Name|Açıklama|  
+|Ad|Açıklama|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|Üst kapsayıcının bir <xref:System.Windows.Forms.ToolStrip> hangi kenarından yerleştirildiğini alır veya ayarlar.|  
 |<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|Sürükle ve bırak ile öğe yeniden sıralamayı <xref:System.Windows.Forms.ToolStrip> sınıfı tarafından özel olarak işlenip işlenmediğini gösteren bir değer alır veya ayarlar.|  
@@ -62,7 +62,7 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> denetimi ve onunla ilişkili
   
 ### <a name="important-toolstrip-companion-classes"></a>Önemli ToolStrip yardımcı sınıfları  
   
-|Name|Açıklama|  
+|Ad|Açıklama|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip>|, <xref:System.Windows.Forms.MainMenu> sınıfına işlevselliği ekler ve değiştirir.|  
 |<xref:System.Windows.Forms.StatusStrip>|, <xref:System.Windows.Forms.StatusBar> sınıfına işlevselliği ekler ve değiştirir.|  

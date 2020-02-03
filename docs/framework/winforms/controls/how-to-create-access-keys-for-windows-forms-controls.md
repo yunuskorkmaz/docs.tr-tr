@@ -33,7 +33,7 @@ ms.locfileid: "76731163"
 
 Odak alamayan denetimler erişim anahtarlarına sahip olamaz.
 
-## <a name="programmatic"></a>Programatik
+## <a name="programmatic"></a>Programlı
 
 `Text` özelliğini, kısayol olacak harften önce bir ve işareti (&) içeren bir dizeye ayarlayın.
 

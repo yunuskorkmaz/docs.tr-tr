@@ -72,4 +72,4 @@ Aşağıdaki adımlarda, yayımlama işlemi tarafından oluşturulan dosyalara b
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- [.NET core uygulama dağıtımı](../deploying/index.md)
+- [.NET Core uygulama dağıtımı](../deploying/index.md)

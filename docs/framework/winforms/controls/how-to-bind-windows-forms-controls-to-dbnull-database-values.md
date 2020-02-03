@@ -27,7 +27,7 @@ Windows Forms denetimleri bir veri kaynağına bağladığınızda ve veri kayna
   
  Bağlantılı özelliğin türleri ve <xref:System.Windows.Forms.Binding.NullValue%2A> özelliği aynı olmalıdır veya hata oluşur, başka bir <xref:System.Windows.Forms.Binding.NullValue%2A> değeri işlenmeyecek. Bu durumda, bir özel durum oluşturulmaz.  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek şunları gerektirir:  
   
 - System, System. Data, System. Drawing ve System. Windows. Forms derlemelerine başvurular.  

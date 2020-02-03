@@ -2,12 +2,12 @@
 title: Docker uygulamaları için geliştirme iş akışı
 description: Docker tabanlı uygulamalar geliştirmeye yönelik iş akışının ayrıntılarını anlayın. Adım adım ilerleyin ve Dockerfiles 'ı iyileştirmek ve Visual Studio 'Yu kullanırken kullanılabilecek Basitleştirilmiş iş akışıyla sona erdirmek için bazı ayrıntılara ulaşın.
 ms.date: 01/07/2019
-ms.openlocfilehash: 5df646ffaba67a016d2b18959b9873b52c3d5e4c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 53675bf974069e9052d6d03b2743314af6f13cf9
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920335"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965795"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -442,10 +442,10 @@ Uygulamanızın yalnızca tek bir kapsayıcısı varsa, bunu Docker konağına (
 Şekil 5-9 ' de gösterildiği gibi `docker run` komutunu kullanarak bir Docker kapsayıcısı çalıştırabilirsiniz:
 
 ```console
-  docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
+docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 ```
 
-Yukarıdaki komut, her çalıştırılışında belirtilen görüntüden yeni bir kapsayıcı örneği oluşturur. Kapsayıcıya bir ad vermek için `--name` parametresini kullanabilir ve sonra var olan bir kapsayıcı örneğini çalıştırmak için `docker start {name}` (ya da kapsayıcı kimliğini veya otomatik adı kullanabilirsiniz) kullanabilirsiniz.
+Yukarıdaki komut, her çalıştırılışında belirtilen görüntüden yeni bir kapsayıcı örneği oluşturur. Kapsayıcıya bir ad vermek için `--name` parametresini kullanabilir ve sonra var olan bir kapsayıcı örneğini çalıştırmak için `docker start {name}` (ya da kapsayıcı KIMLIĞINI veya otomatik adı kullanabilirsiniz) kullanabilirsiniz.
 
 ![Docker Run komutunu kullanarak Docker kapsayıcısı çalıştıran ekran görüntüsü.](./media/docker-app-development-workflow/use-docker-run-command.png)
 
@@ -453,7 +453,7 @@ Yukarıdaki komut, her çalıştırılışında belirtilen görüntüden yeni bi
 
 Bu durumda, komut kapsayıcının 5000 iç bağlantı noktasını ana makinenin 80 numaralı bağlantı noktasına bağlar. Bu, konağın 80 numaralı bağlantı noktasını dinlediği ve kapsayıcıda bağlantı noktası 5000 ' e ileten anlamına gelir.
 
-Gösterilen karma kapsayıcı kimliğidir ve `--name` seçeneği kullanılmazsa rastgele okunabilir bir ad atanır.
+Gösterilen karma kapsayıcı KIMLIĞIDIR ve `--name` seçeneği kullanılmazsa rastgele okunabilir bir ad atanır.
 
 #### <a name="using-visual-studio"></a>Visual Studio 'Yu kullanma
 

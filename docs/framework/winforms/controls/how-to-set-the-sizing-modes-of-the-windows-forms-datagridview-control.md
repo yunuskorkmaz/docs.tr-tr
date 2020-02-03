@@ -51,7 +51,7 @@ Aşağıdaki yordamlarda <xref:System.Windows.Forms.DataGridView> denetimi ve de
   
 - Sütun bölücüleri fareyle sürükleyerek sütun boyutlarını değiştirin. Bazı sütunların yeniden boyutlandırılamayacağını ve yeniden boyutlandırılabilir sütunların minimum genişliklerinden daha dar bir şekilde yapıllamayacağını gözlemleyin.  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek şunları gerektirir:  
   
 - System ve System. Windows. Forms derlemelerine başvurular.  

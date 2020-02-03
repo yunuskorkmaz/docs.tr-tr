@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın MVC 
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 0cb5c5c604d4a82798d4af736ff278b096621588
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5f63e350e2f1ba8699bb002a54492cbf9501948e
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777102"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965782"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>MVC uygulamalarını test ASP.NET Core
 
@@ -143,7 +143,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-\_günlükçüsü ve \_ımageservice, her ikisi de bağımlılıklar olarak eklenir. Artık eylem yöntemine geçirilen aynı kimliğin \_ımageservice 'e geçtiğini ve sonuçta elde edilen baytların FileResult 'nin bir parçası olarak döndürüldüğünü test edebilirsiniz. Ayrıca, hata günlüğü 'nün beklenen şekilde olduğunu ve görüntü eksikse bir NotFound sonucunun döndürüldüğünü, bunun önemli uygulama davranışı olduğunu (yani, bir sorunu tanılamak için geliştiricinin eklediği geçici bir kod değil) kabul edebilirsiniz. Gerçek dosya mantığı ayrı bir uygulama hizmetine taşındı ve eksik bir dosya olması durumunda uygulamaya özel bir özel durum döndürecek şekilde geliştirilmiştir. Bu uygulamayı bir tümleştirme testi kullanarak bağımsız olarak test edebilirsiniz.
+`_logger` ve `_imageService` her ikisi de bağımlılıklar olarak eklenir. Artık, eylem yöntemine geçirilen aynı KIMLIğIN `_imageService`geçirilir ve elde edilen baytların FileResult 'nin bir parçası olarak döndürüldüğünden test edebilirsiniz. Ayrıca, hata günlüğü 'nün beklenen şekilde olduğunu ve görüntü eksikse bir `NotFound` sonucunun döndürüldüğünü, bunun önemli uygulama davranışı olduğunu (yani yalnızca bir sorunu tanılamak için geliştiricinin eklediği geçici bir kod değil) kabul ederek test edebilirsiniz. Gerçek dosya mantığı ayrı bir uygulama hizmetine taşındı ve eksik bir dosya olması durumunda uygulamaya özel bir özel durum döndürecek şekilde geliştirilmiştir. Bu uygulamayı bir tümleştirme testi kullanarak bağımsız olarak test edebilirsiniz.
 
 Çoğu durumda, denetleyicilerinizde genel özel durum işleyicilerini kullanmak isteyeceksiniz. bu nedenle, içindeki mantık miktarı minimum ve büyük olasılıkla birim testi olmamalıdır. İşlev testlerini ve aşağıda açıklanan `TestServer` sınıfını kullanarak, denetleyici eylemlerinin büyük bir kısmını test etmeniz gerekir.
 
@@ -153,7 +153,7 @@ ASP.NET Core uygulamalarınızın çoğu tümleştirme testi, altyapı projenizd
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Uygulamalar ASP.NET Core işlevsel test
 
-ASP.NET Core uygulamalar için `TestServer` sınıfı, işlevsel testleri yazma konusunda oldukça kolay hale getirir. Bir `TestServer` doğrudan (uygulamanız için yaptığınız gibi) veya `WebApplicationFactory` türüyle (2,1 sürümünden itibaren kullanılabilir) `WebHostBuilder` kullanarak yapılandırabilirsiniz. Test ana bilgisayarınızı üretim konağınız için mümkün olduğunca yakından eşleştirmeye çalışmalısınız, bu sayede testleriniz, uygulamanın üretimde ne yapacaklarına benzer davranışlar sağlar. `WebApplicationFactory` sınıfı, TestServer 'ın, görünümler gibi statik kaynağı bulmak için ASP.NET Core tarafından kullanılan ContentRoot 'yi yapılandırmak için yararlıdır.
+ASP.NET Core uygulamalar için `TestServer` sınıfı, işlevsel testleri yazma konusunda oldukça kolay hale getirir. Bir `TestServer` doğrudan (uygulamanız için yaptığınız gibi) veya `WebApplicationFactory` türünde (2,1 sürümünden itibaren kullanılabilir) bir `WebHostBuilder` kullanarak yapılandırırsınız. Test ana bilgisayarınızı üretim konağınız için mümkün olduğunca yakından eşleştirmeye çalışın. böylece testleriniz, uygulamanın üretimde ne yapacaklarına benzer davranışlar sağlar. `WebApplicationFactory` sınıfı, TestServer 'ın, görünümler gibi statik kaynağı bulmak için ASP.NET Core tarafından kullanılan ContentRoot 'yi yapılandırmak için yararlıdır.
 
 Issfixture\<WebApplicationFactory\<TEntry > > uygulayan bir test sınıfı oluşturarak (TEntry Web uygulamanızın başlangıç sınıfı olduğunda) basit işlevsel testler oluşturabilirsiniz. Bu şekilde, test armatürü, fabrika 'nin CreateClient metodunu kullanarak bir istemci oluşturabilir:
 
