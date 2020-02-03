@@ -20,12 +20,12 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746328"
 ---
-# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="ce42d-102">Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminde Belirli Öğelere Erişme</span><span class="sxs-lookup"><span data-stu-id="ce42d-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
-<span data-ttu-id="ce42d-103">Windows Forms Birleşik giriş kutusu, liste kutusu veya işaretlenmiş liste kutusunda belirli öğelere erişmek, gerekli bir görevdir.</span><span class="sxs-lookup"><span data-stu-id="ce42d-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="ce42d-104">Bu, belirli bir konumdaki listede nelerin olduğunu programlı bir şekilde belirlemenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="ce42d-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="7c9fb-102">Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminde Belirli Öğelere Erişme</span><span class="sxs-lookup"><span data-stu-id="7c9fb-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
+<span data-ttu-id="7c9fb-103">Windows Forms Birleşik giriş kutusu, liste kutusu veya işaretlenmiş liste kutusunda belirli öğelere erişmek, gerekli bir görevdir.</span><span class="sxs-lookup"><span data-stu-id="7c9fb-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="7c9fb-104">Bu, belirli bir konumdaki listede nelerin olduğunu programlı bir şekilde belirlemenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="7c9fb-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
   
-### <a name="to-access-a-specific-item"></a><span data-ttu-id="ce42d-105">Belirli bir öğeye erişmek için</span><span class="sxs-lookup"><span data-stu-id="ce42d-105">To access a specific item</span></span>  
+### <a name="to-access-a-specific-item"></a><span data-ttu-id="7c9fb-105">Belirli bir öğeye erişmek için</span><span class="sxs-lookup"><span data-stu-id="7c9fb-105">To access a specific item</span></span>  
   
-1. <span data-ttu-id="ce42d-106">`Items` koleksiyonunu, belirli bir öğenin dizinini kullanarak sorgulayın:</span><span class="sxs-lookup"><span data-stu-id="ce42d-106">Query the `Items` collection using the index of the specific item:</span></span>  
+1. <span data-ttu-id="7c9fb-106">`Items` koleksiyonunu, belirli bir öğenin dizinini kullanarak sorgulayın:</span><span class="sxs-lookup"><span data-stu-id="7c9fb-106">Query the `Items` collection using the index of the specific item:</span></span>  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
@@ -51,9 +51,9 @@ ms.locfileid: "76746328"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="ce42d-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ce42d-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7c9fb-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7c9fb-107">See also</span></span>
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [<span data-ttu-id="ce42d-108">Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri</span><span class="sxs-lookup"><span data-stu-id="ce42d-108">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
+- [<span data-ttu-id="7c9fb-108">Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri</span><span class="sxs-lookup"><span data-stu-id="7c9fb-108">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)

@@ -15,21 +15,21 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739001"
 ---
-# <a name="windows-in-wpf-applications"></a><span data-ttu-id="3a856-102">WPF Uygulamalarında Pencereler</span><span class="sxs-lookup"><span data-stu-id="3a856-102">Windows in WPF Applications</span></span>
-<span data-ttu-id="3a856-103">Kullanıcılar, Windows ile uygulamalarla etkileşime geçer.</span><span class="sxs-lookup"><span data-stu-id="3a856-103">Users interact with applications through windows.</span></span> <span data-ttu-id="3a856-104">Pencerenin temel amacı, içeriği barındırmak ve görüntülemektir.</span><span class="sxs-lookup"><span data-stu-id="3a856-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="3a856-105">Pencerenin barındırdığı içerik türü, bir uygulamanın üzerinde çalıştığı verilerin türüne bağlıdır. Bu, medya, Extensible Application Markup Language (XAML) sayfaları, Web sayfaları, belgeler, veritabanı tabloları ve kayıtları ve sistem bilgileri içerebilir.</span><span class="sxs-lookup"><span data-stu-id="3a856-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  
+# <a name="windows-in-wpf-applications"></a><span data-ttu-id="706e8-102">WPF Uygulamalarında Pencereler</span><span class="sxs-lookup"><span data-stu-id="706e8-102">Windows in WPF Applications</span></span>
+<span data-ttu-id="706e8-103">Kullanıcılar, Windows ile uygulamalarla etkileşime geçer.</span><span class="sxs-lookup"><span data-stu-id="706e8-103">Users interact with applications through windows.</span></span> <span data-ttu-id="706e8-104">Pencerenin temel amacı, içeriği barındırmak ve görüntülemektir.</span><span class="sxs-lookup"><span data-stu-id="706e8-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="706e8-105">Pencerenin barındırdığı içerik türü, bir uygulamanın üzerinde çalıştığı verilerin türüne bağlıdır. Bu, medya, Extensible Application Markup Language (XAML) sayfaları, Web sayfaları, belgeler, veritabanı tabloları ve kayıtları ve sistem bilgileri içerebilir.</span><span class="sxs-lookup"><span data-stu-id="706e8-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3a856-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="3a856-106">In This Section</span></span>  
- [<span data-ttu-id="3a856-107">WPF Windows'a Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="3a856-107">WPF Windows Overview</span></span>](wpf-windows-overview.md)  
- [<span data-ttu-id="3a856-108">İletişim Kutularına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="3a856-108">Dialog Boxes Overview</span></span>](dialog-boxes-overview.md)  
- [<span data-ttu-id="3a856-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="3a856-109">How-to Topics</span></span>](window-management-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="706e8-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="706e8-106">In This Section</span></span>  
+ [<span data-ttu-id="706e8-107">WPF Windows'a Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="706e8-107">WPF Windows Overview</span></span>](wpf-windows-overview.md)  
+ [<span data-ttu-id="706e8-108">İletişim Kutularına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="706e8-108">Dialog Boxes Overview</span></span>](dialog-boxes-overview.md)  
+ [<span data-ttu-id="706e8-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="706e8-109">How-to Topics</span></span>](window-management-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="3a856-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="3a856-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="706e8-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="706e8-110">Reference</span></span>  
  <xref:System.Windows.Window>  
   
  <xref:System.Windows.Navigation.NavigationWindow>  
   
-## <a name="related-sections"></a><span data-ttu-id="3a856-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="3a856-111">Related Sections</span></span>  
- [<span data-ttu-id="3a856-112">Uygulama Yönetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="3a856-112">Application Management Overview</span></span>](application-management-overview.md)  
-  [<span data-ttu-id="3a856-113">Gezintiye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="3a856-113">Navigation Overview</span></span>](navigation-overview.md)  
-  [<span data-ttu-id="3a856-114">Barındırma</span><span class="sxs-lookup"><span data-stu-id="3a856-114">Hosting</span></span>](hosting-wpf-applications.md)  
-  [<span data-ttu-id="3a856-115">Derleme ve Dağıtma</span><span class="sxs-lookup"><span data-stu-id="3a856-115">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)
+## <a name="related-sections"></a><span data-ttu-id="706e8-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="706e8-111">Related Sections</span></span>  
+ [<span data-ttu-id="706e8-112">Uygulama Yönetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="706e8-112">Application Management Overview</span></span>](application-management-overview.md)  
+  [<span data-ttu-id="706e8-113">Gezintiye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="706e8-113">Navigation Overview</span></span>](navigation-overview.md)  
+  [<span data-ttu-id="706e8-114">Barındırma</span><span class="sxs-lookup"><span data-stu-id="706e8-114">Hosting</span></span>](hosting-wpf-applications.md)  
+  [<span data-ttu-id="706e8-115">Derleme ve Dağıtma</span><span class="sxs-lookup"><span data-stu-id="706e8-115">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)

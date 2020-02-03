@@ -9,17 +9,17 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76740785"
 ---
-# <a name="pre-atomization-of-xname-objects-linq-to-xml-visual-basic"></a><span data-ttu-id="66ccd-102">XName nesnelerinin (LINQ to XML) ön atomda (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66ccd-102">Pre-Atomization of XName Objects (LINQ to XML) (Visual Basic)</span></span>
+# <a name="pre-atomization-of-xname-objects-linq-to-xml-visual-basic"></a><span data-ttu-id="de75e-102">XName nesnelerinin (LINQ to XML) ön atomda (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="de75e-102">Pre-Atomization of XName Objects (LINQ to XML) (Visual Basic)</span></span>
 
-<span data-ttu-id="66ccd-103">LINQ to XML performansını artırmanın bir yolu, önceden ayrılamaz <xref:System.Xml.Linq.XName> nesneleri kullanmaktır.</span><span class="sxs-lookup"><span data-stu-id="66ccd-103">One way to improve performance in LINQ to XML is to pre-atomize <xref:System.Xml.Linq.XName> objects.</span></span> <span data-ttu-id="66ccd-104">Ön cekleştirme, <xref:System.Xml.Linq.XElement> ve <xref:System.Xml.Linq.XAttribute> sınıflarının oluşturucularını kullanarak XML ağacını oluşturmadan önce bir <xref:System.Xml.Linq.XName> nesnesine bir dize atamanız anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="66ccd-104">Pre-atomization means that you assign a string to an <xref:System.Xml.Linq.XName> object before you create the XML tree by using the constructors of the <xref:System.Xml.Linq.XElement> and <xref:System.Xml.Linq.XAttribute> classes.</span></span> <span data-ttu-id="66ccd-105">Sonra, dizeden <xref:System.Xml.Linq.XName>örtük dönüştürmeyi kullanan oluşturucuya bir dize geçirmek yerine, başlatılan <xref:System.Xml.Linq.XName> nesnesini geçirirsiniz.</span><span class="sxs-lookup"><span data-stu-id="66ccd-105">Then, instead of passing a string to the constructor, which would use the implicit conversion from string to <xref:System.Xml.Linq.XName>, you pass the initialized <xref:System.Xml.Linq.XName> object.</span></span>
+<span data-ttu-id="de75e-103">LINQ to XML performansını artırmanın bir yolu, önceden ayrılamaz <xref:System.Xml.Linq.XName> nesneleri kullanmaktır.</span><span class="sxs-lookup"><span data-stu-id="de75e-103">One way to improve performance in LINQ to XML is to pre-atomize <xref:System.Xml.Linq.XName> objects.</span></span> <span data-ttu-id="de75e-104">Ön cekleştirme, <xref:System.Xml.Linq.XElement> ve <xref:System.Xml.Linq.XAttribute> sınıflarının oluşturucularını kullanarak XML ağacını oluşturmadan önce bir <xref:System.Xml.Linq.XName> nesnesine bir dize atamanız anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="de75e-104">Pre-atomization means that you assign a string to an <xref:System.Xml.Linq.XName> object before you create the XML tree by using the constructors of the <xref:System.Xml.Linq.XElement> and <xref:System.Xml.Linq.XAttribute> classes.</span></span> <span data-ttu-id="de75e-105">Sonra, dizeden <xref:System.Xml.Linq.XName>örtük dönüştürmeyi kullanan oluşturucuya bir dize geçirmek yerine, başlatılan <xref:System.Xml.Linq.XName> nesnesini geçirirsiniz.</span><span class="sxs-lookup"><span data-stu-id="de75e-105">Then, instead of passing a string to the constructor, which would use the implicit conversion from string to <xref:System.Xml.Linq.XName>, you pass the initialized <xref:System.Xml.Linq.XName> object.</span></span>
 
-<span data-ttu-id="66ccd-106">Bu, belirli adların tekrarlandığı büyük bir XML ağacı oluşturduğunuzda performansı geliştirir.</span><span class="sxs-lookup"><span data-stu-id="66ccd-106">This improves performance when you create a large XML tree in which specific names are repeated.</span></span> <span data-ttu-id="66ccd-107">Bunu yapmak için, XML ağacını oluşturmadan önce <xref:System.Xml.Linq.XName> nesneleri bildirip başlatın ve ardından öğe ve öznitelik adları için dizeleri belirtmek yerine <xref:System.Xml.Linq.XName> nesneleri kullanın.</span><span class="sxs-lookup"><span data-stu-id="66ccd-107">To do this, you declare and initialize <xref:System.Xml.Linq.XName> objects before you construct the XML tree, and then use the <xref:System.Xml.Linq.XName> objects instead of specifying strings for the element and attribute names.</span></span> <span data-ttu-id="66ccd-108">Aynı ada sahip çok sayıda öğe (veya öznitelik) oluşturuyorsanız bu teknik önemli performans artışı elde edebilir.</span><span class="sxs-lookup"><span data-stu-id="66ccd-108">This technique can yield significant performance gains if you are creating a large number of elements (or attributes) with the same name.</span></span>
+<span data-ttu-id="de75e-106">Bu, belirli adların tekrarlandığı büyük bir XML ağacı oluşturduğunuzda performansı geliştirir.</span><span class="sxs-lookup"><span data-stu-id="de75e-106">This improves performance when you create a large XML tree in which specific names are repeated.</span></span> <span data-ttu-id="de75e-107">Bunu yapmak için, XML ağacını oluşturmadan önce <xref:System.Xml.Linq.XName> nesneleri bildirip başlatın ve ardından öğe ve öznitelik adları için dizeleri belirtmek yerine <xref:System.Xml.Linq.XName> nesneleri kullanın.</span><span class="sxs-lookup"><span data-stu-id="de75e-107">To do this, you declare and initialize <xref:System.Xml.Linq.XName> objects before you construct the XML tree, and then use the <xref:System.Xml.Linq.XName> objects instead of specifying strings for the element and attribute names.</span></span> <span data-ttu-id="de75e-108">Aynı ada sahip çok sayıda öğe (veya öznitelik) oluşturuyorsanız bu teknik önemli performans artışı elde edebilir.</span><span class="sxs-lookup"><span data-stu-id="de75e-108">This technique can yield significant performance gains if you are creating a large number of elements (or attributes) with the same name.</span></span>
 
-<span data-ttu-id="66ccd-109">Kullanmanız gerekip gerekmediğini belirlemek için senaryolarınız ile önceden atomleştirme testi yapmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="66ccd-109">You should test pre-atomization with your scenario to decide if you should use it.</span></span>
+<span data-ttu-id="de75e-109">Kullanmanız gerekip gerekmediğini belirlemek için senaryolarınız ile önceden atomleştirme testi yapmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="de75e-109">You should test pre-atomization with your scenario to decide if you should use it.</span></span>
 
-## <a name="example"></a><span data-ttu-id="66ccd-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="66ccd-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="de75e-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="de75e-110">Example</span></span>
 
-<span data-ttu-id="66ccd-111">Aşağıdaki örnek şunu gösterir:</span><span class="sxs-lookup"><span data-stu-id="66ccd-111">The following example demonstrates this:</span></span>
+<span data-ttu-id="de75e-111">Aşağıdaki örnek şunu gösterir:</span><span class="sxs-lookup"><span data-stu-id="de75e-111">The following example demonstrates this:</span></span>
 
 ```vb
 Dim root1 As XName = "Root"
@@ -33,7 +33,7 @@ Dim root2 As New XElement(root1, New XElement(data, New XAttribute(id, "1"), "4,
 Console.WriteLine(root2)
 ```
 
-<span data-ttu-id="66ccd-112">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="66ccd-112">This example produces the following output:</span></span>
+<span data-ttu-id="de75e-112">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="de75e-112">This example produces the following output:</span></span>
 
 ```xml
 <Root>
@@ -43,7 +43,7 @@ Console.WriteLine(root2)
 </Root>
 ```
 
-<span data-ttu-id="66ccd-113">Aşağıdaki örnek, XML belgesinin bir ad alanında bulunduğu tekniği gösterir:</span><span class="sxs-lookup"><span data-stu-id="66ccd-113">The following example shows the same technique where the XML document is in a namespace:</span></span>
+<span data-ttu-id="de75e-113">Aşağıdaki örnek, XML belgesinin bir ad alanında bulunduğu tekniği gösterir:</span><span class="sxs-lookup"><span data-stu-id="de75e-113">The following example shows the same technique where the XML document is in a namespace:</span></span>
 
 ```vb
 Dim aw As XNamespace = "http://www.adventure-works.com"
@@ -59,7 +59,7 @@ Dim root2 As New XElement(root1, New XAttribute(XNamespace.Xmlns + "aw", aw),
 Console.WriteLine(root2)
 ```
 
-<span data-ttu-id="66ccd-114">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="66ccd-114">This example produces the following output:</span></span>
+<span data-ttu-id="de75e-114">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="de75e-114">This example produces the following output:</span></span>
 
 ```xml
 <aw:Root xmlns:aw="http://www.adventure-works.com">
@@ -69,7 +69,7 @@ Console.WriteLine(root2)
 </aw:Root>
 ```
 
-<span data-ttu-id="66ccd-115">Aşağıdaki örnek, gerçek dünyada büyük olasılıkla karşılaşacağınız şekilde daha benzerdir.</span><span class="sxs-lookup"><span data-stu-id="66ccd-115">The following example is more similar to what you will likely encounter in the real world.</span></span> <span data-ttu-id="66ccd-116">Bu örnekte, öğesinin içeriği bir sorgu tarafından sağlanır:</span><span class="sxs-lookup"><span data-stu-id="66ccd-116">In this example, the content of the element is supplied by a query:</span></span>
+<span data-ttu-id="de75e-115">Aşağıdaki örnek, gerçek dünyada büyük olasılıkla karşılaşacağınız şekilde daha benzerdir.</span><span class="sxs-lookup"><span data-stu-id="de75e-115">The following example is more similar to what you will likely encounter in the real world.</span></span> <span data-ttu-id="de75e-116">Bu örnekte, öğesinin içeriği bir sorgu tarafından sağlanır:</span><span class="sxs-lookup"><span data-stu-id="de75e-116">In this example, the content of the element is supplied by a query:</span></span>
 
 ```vb
 Dim root1 As XName = "Root"
@@ -83,7 +83,7 @@ sw.Stop()
 Console.WriteLine($"Time to construct: {sw.ElapsedMilliseconds} milliseconds")
 ```  
 
-<span data-ttu-id="66ccd-117">Önceki örnek, şu örnekteki adların ön cede olmadığı bir daha iyi şekilde çalışır:</span><span class="sxs-lookup"><span data-stu-id="66ccd-117">The previous example performs better than the following example, in which names are not pre-atomized:</span></span>
+<span data-ttu-id="de75e-117">Önceki örnek, şu örnekteki adların ön cede olmadığı bir daha iyi şekilde çalışır:</span><span class="sxs-lookup"><span data-stu-id="de75e-117">The previous example performs better than the following example, in which names are not pre-atomized:</span></span>
 
 ```vb
 Dim sw As Stopwatch = Stopwatch.StartNew()
@@ -93,7 +93,7 @@ sw.Stop()
 Console.WriteLine($"Time to construct: {sw.ElapsedMilliseconds} milliseconds")
 ```
 
-## <a name="see-also"></a><span data-ttu-id="66ccd-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="66ccd-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="de75e-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="de75e-118">See also</span></span>
 
-- [<span data-ttu-id="66ccd-119">Performans (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66ccd-119">Performance (LINQ to XML) (Visual Basic)</span></span>](performance-linq-to-xml.md)
-- [<span data-ttu-id="66ccd-120">Atomlanmış XName ve XNamespace nesneleri (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66ccd-120">Atomized XName and XNamespace Objects (LINQ to XML) (Visual Basic)</span></span>](atomized-xname-and-xnamespace-objects-linq-to-xml.md)
+- [<span data-ttu-id="de75e-119">Performans (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="de75e-119">Performance (LINQ to XML) (Visual Basic)</span></span>](performance-linq-to-xml.md)
+- [<span data-ttu-id="de75e-120">Atomlanmış XName ve XNamespace nesneleri (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="de75e-120">Atomized XName and XNamespace Objects (LINQ to XML) (Visual Basic)</span></span>](atomized-xname-and-xnamespace-objects-linq-to-xml.md)

@@ -13,18 +13,18 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76737916"
 ---
-# <a name="fonts-wpf"></a><span data-ttu-id="c34a9-102">Yazı Tipleri (WPF)</span><span class="sxs-lookup"><span data-stu-id="c34a9-102">Fonts (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="c34a9-103">, OpenType yazı tiplerini kullanarak zengin metin sunumu için destek içerir.</span><span class="sxs-lookup"><span data-stu-id="c34a9-103">includes support for rich presentation of text using OpenType fonts.</span></span> <span data-ttu-id="c34a9-104">Windows SDK, OpenType yazı tiplerinin örnek bir paketini içerir.</span><span class="sxs-lookup"><span data-stu-id="c34a9-104">A sample pack of OpenType fonts is included with the Windows SDK.</span></span>  
+# <a name="fonts-wpf"></a><span data-ttu-id="6f224-102">Yazı Tipleri (WPF)</span><span class="sxs-lookup"><span data-stu-id="6f224-102">Fonts (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="6f224-103">, OpenType yazı tiplerini kullanarak zengin metin sunumu için destek içerir.</span><span class="sxs-lookup"><span data-stu-id="6f224-103">includes support for rich presentation of text using OpenType fonts.</span></span> <span data-ttu-id="6f224-104">Windows SDK, OpenType yazı tiplerinin örnek bir paketini içerir.</span><span class="sxs-lookup"><span data-stu-id="6f224-104">A sample pack of OpenType fonts is included with the Windows SDK.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c34a9-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="c34a9-105">In This Section</span></span>  
- [<span data-ttu-id="c34a9-106">OpenType Yazı Tipi Özellikleri</span><span class="sxs-lookup"><span data-stu-id="c34a9-106">OpenType Font Features</span></span>](opentype-font-features.md)  
- [<span data-ttu-id="c34a9-107">Uygulamalarla Yazı Tiplerini Paketleme</span><span class="sxs-lookup"><span data-stu-id="c34a9-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
- [<span data-ttu-id="c34a9-108">Örnek OpenType Yazı Tipi Paketi</span><span class="sxs-lookup"><span data-stu-id="c34a9-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
- [<span data-ttu-id="c34a9-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="c34a9-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6f224-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="6f224-105">In This Section</span></span>  
+ [<span data-ttu-id="6f224-106">OpenType Yazı Tipi Özellikleri</span><span class="sxs-lookup"><span data-stu-id="6f224-106">OpenType Font Features</span></span>](opentype-font-features.md)  
+ [<span data-ttu-id="6f224-107">Uygulamalarla Yazı Tiplerini Paketleme</span><span class="sxs-lookup"><span data-stu-id="6f224-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
+ [<span data-ttu-id="6f224-108">Örnek OpenType Yazı Tipi Paketi</span><span class="sxs-lookup"><span data-stu-id="6f224-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
+ [<span data-ttu-id="6f224-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="6f224-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="c34a9-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c34a9-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6f224-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6f224-110">See also</span></span>
 
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [<span data-ttu-id="c34a9-111">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="c34a9-111">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="c34a9-112">WPF'de Tipografi</span><span class="sxs-lookup"><span data-stu-id="c34a9-112">Typography in WPF</span></span>](typography-in-wpf.md)
+- [<span data-ttu-id="6f224-111">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="6f224-111">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="6f224-112">WPF'de Tipografi</span><span class="sxs-lookup"><span data-stu-id="6f224-112">Typography in WPF</span></span>](typography-in-wpf.md)
