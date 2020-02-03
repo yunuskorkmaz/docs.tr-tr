@@ -16,12 +16,12 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76727935"
 ---
-# <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="5e92f-102">LoadFromHistory Işlevi (WPF yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="5e92f-102">LoadFromHistory Function (WPF Unmanaged API Reference)</span></span>
-<span data-ttu-id="5e92f-103">Bu API Windows Presentation Foundation (WPF) altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="5e92f-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="388ed-102">LoadFromHistory Işlevi (WPF yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="388ed-102">LoadFromHistory Function (WPF Unmanaged API Reference)</span></span>
+<span data-ttu-id="388ed-103">Bu API Windows Presentation Foundation (WPF) altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="388ed-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="5e92f-104">Windows yönetimi için Windows Presentation Foundation (WPF) altyapısı tarafından kullanılır.</span><span class="sxs-lookup"><span data-stu-id="5e92f-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
+ <span data-ttu-id="388ed-104">Windows yönetimi için Windows Presentation Foundation (WPF) altyapısı tarafından kullanılır.</span><span class="sxs-lookup"><span data-stu-id="388ed-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5e92f-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5e92f-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="388ed-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="388ed-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT LoadFromHistory_export(  
@@ -30,24 +30,24 @@ HRESULT LoadFromHistory_export(
 )  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5e92f-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5e92f-106">Parameters</span></span>  
- <span data-ttu-id="5e92f-107">pHistoryStream</span><span class="sxs-lookup"><span data-stu-id="5e92f-107">pHistoryStream</span></span>  
- <span data-ttu-id="5e92f-108">Geçmiş bilgileri akışına yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5e92f-108">A pointer to a stream of history information.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="388ed-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="388ed-106">Parameters</span></span>  
+ <span data-ttu-id="388ed-107">pHistoryStream</span><span class="sxs-lookup"><span data-stu-id="388ed-107">pHistoryStream</span></span>  
+ <span data-ttu-id="388ed-108">Geçmiş bilgileri akışına yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="388ed-108">A pointer to a stream of history information.</span></span>  
   
- <span data-ttu-id="5e92f-109">pBindCtx</span><span class="sxs-lookup"><span data-stu-id="5e92f-109">pBindCtx</span></span>  
- <span data-ttu-id="5e92f-110">Bağlama bağlamına yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5e92f-110">A pointer to a bind context.</span></span>  
+ <span data-ttu-id="388ed-109">pBindCtx</span><span class="sxs-lookup"><span data-stu-id="388ed-109">pBindCtx</span></span>  
+ <span data-ttu-id="388ed-110">Bağlama bağlamına yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="388ed-110">A pointer to a bind context.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5e92f-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5e92f-111">Requirements</span></span>  
- <span data-ttu-id="5e92f-112">**Platformlar:** Bkz. [.NET Framework sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5e92f-112">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="388ed-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="388ed-111">Requirements</span></span>  
+ <span data-ttu-id="388ed-112">**Platformlar:** Bkz. [.NET Framework sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="388ed-112">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5e92f-113">**DOSYASıNı**</span><span class="sxs-lookup"><span data-stu-id="5e92f-113">**DLL:**</span></span>  
+ <span data-ttu-id="388ed-113">**DOSYASıNı**</span><span class="sxs-lookup"><span data-stu-id="388ed-113">**DLL:**</span></span>  
   
- <span data-ttu-id="5e92f-114">.NET Framework 3,0 ve 3,5: PresentationHostDLL. dll</span><span class="sxs-lookup"><span data-stu-id="5e92f-114">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
+ <span data-ttu-id="388ed-114">.NET Framework 3,0 ve 3,5: PresentationHostDLL. dll</span><span class="sxs-lookup"><span data-stu-id="388ed-114">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
   
- <span data-ttu-id="5e92f-115">.NET Framework 4 ve üzeri: PresentationHost_v0400. dll</span><span class="sxs-lookup"><span data-stu-id="5e92f-115">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
+ <span data-ttu-id="388ed-115">.NET Framework 4 ve üzeri: PresentationHost_v0400. dll</span><span class="sxs-lookup"><span data-stu-id="388ed-115">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
   
- <span data-ttu-id="5e92f-116">**.NET Framework sürümü:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5e92f-116">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
+ <span data-ttu-id="388ed-116">**.NET Framework sürümü:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="388ed-116">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5e92f-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5e92f-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="388ed-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="388ed-117">See also</span></span>
 
-- [<span data-ttu-id="5e92f-118">WPF Yönetilmeyen API Başvurusu</span><span class="sxs-lookup"><span data-stu-id="5e92f-118">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)
+- [<span data-ttu-id="388ed-118">WPF Yönetilmeyen API Başvurusu</span><span class="sxs-lookup"><span data-stu-id="388ed-118">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)

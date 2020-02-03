@@ -15,35 +15,35 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76737931"
 ---
-# <a name="events-wpf"></a><span data-ttu-id="03128-102">Olaylar (WPF)</span><span class="sxs-lookup"><span data-stu-id="03128-102">Events (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="03128-103">, bir uygulamanın öğe ağacındaki çeşitli dinleyicilerde bulunan işleyicileri çağırabilen yönlendirilmiş olayları tanıtır.</span><span class="sxs-lookup"><span data-stu-id="03128-103">introduces routed events that can invoke handlers that exist on various listeners in the element tree of an application.</span></span>  
+# <a name="events-wpf"></a><span data-ttu-id="2704e-102">Olaylar (WPF)</span><span class="sxs-lookup"><span data-stu-id="2704e-102">Events (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="2704e-103">, bir uygulamanın öğe ağacındaki çeşitli dinleyicilerde bulunan işleyicileri çağırabilen yönlendirilmiş olayları tanıtır.</span><span class="sxs-lookup"><span data-stu-id="2704e-103">introduces routed events that can invoke handlers that exist on various listeners in the element tree of an application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="03128-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="03128-104">In This Section</span></span>  
- [<span data-ttu-id="03128-105">Yönlendirilmiş Olaylara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="03128-105">Routed Events Overview</span></span>](routed-events-overview.md)  
- [<span data-ttu-id="03128-106">İliştirilmiş Olaylara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="03128-106">Attached Events Overview</span></span>](attached-events-overview.md)  
- [<span data-ttu-id="03128-107">Nesne Yaşam Süresi Olayları</span><span class="sxs-lookup"><span data-stu-id="03128-107">Object Lifetime Events</span></span>](object-lifetime-events.md)  
- [<span data-ttu-id="03128-108">Yönlendirilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi</span><span class="sxs-lookup"><span data-stu-id="03128-108">Marking Routed Events as Handled, and Class Handling</span></span>](marking-routed-events-as-handled-and-class-handling.md)  
- [<span data-ttu-id="03128-109">Önizleme Olayları</span><span class="sxs-lookup"><span data-stu-id="03128-109">Preview Events</span></span>](preview-events.md)  
- [<span data-ttu-id="03128-110">Özellik Değiştirme Olayları</span><span class="sxs-lookup"><span data-stu-id="03128-110">Property Change Events</span></span>](property-change-events.md)  
- [<span data-ttu-id="03128-111">Visual Basic ve WPF Olay İşleme</span><span class="sxs-lookup"><span data-stu-id="03128-111">Visual Basic and WPF Event Handling</span></span>](visual-basic-and-wpf-event-handling.md)  
- [<span data-ttu-id="03128-112">Zayıf Olay Desenleri</span><span class="sxs-lookup"><span data-stu-id="03128-112">Weak Event Patterns</span></span>](weak-event-patterns.md)  
- [<span data-ttu-id="03128-113">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="03128-113">How-to Topics</span></span>](events-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2704e-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="2704e-104">In This Section</span></span>  
+ [<span data-ttu-id="2704e-105">Yönlendirilmiş Olaylara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="2704e-105">Routed Events Overview</span></span>](routed-events-overview.md)  
+ [<span data-ttu-id="2704e-106">İliştirilmiş Olaylara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="2704e-106">Attached Events Overview</span></span>](attached-events-overview.md)  
+ [<span data-ttu-id="2704e-107">Nesne Yaşam Süresi Olayları</span><span class="sxs-lookup"><span data-stu-id="2704e-107">Object Lifetime Events</span></span>](object-lifetime-events.md)  
+ [<span data-ttu-id="2704e-108">Yönlendirilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi</span><span class="sxs-lookup"><span data-stu-id="2704e-108">Marking Routed Events as Handled, and Class Handling</span></span>](marking-routed-events-as-handled-and-class-handling.md)  
+ [<span data-ttu-id="2704e-109">Önizleme Olayları</span><span class="sxs-lookup"><span data-stu-id="2704e-109">Preview Events</span></span>](preview-events.md)  
+ [<span data-ttu-id="2704e-110">Özellik Değiştirme Olayları</span><span class="sxs-lookup"><span data-stu-id="2704e-110">Property Change Events</span></span>](property-change-events.md)  
+ [<span data-ttu-id="2704e-111">Visual Basic ve WPF Olay İşleme</span><span class="sxs-lookup"><span data-stu-id="2704e-111">Visual Basic and WPF Event Handling</span></span>](visual-basic-and-wpf-event-handling.md)  
+ [<span data-ttu-id="2704e-112">Zayıf Olay Desenleri</span><span class="sxs-lookup"><span data-stu-id="2704e-112">Weak Event Patterns</span></span>](weak-event-patterns.md)  
+ [<span data-ttu-id="2704e-113">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="2704e-113">How-to Topics</span></span>](events-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="03128-114">Başvuru</span><span class="sxs-lookup"><span data-stu-id="03128-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2704e-114">Başvuru</span><span class="sxs-lookup"><span data-stu-id="2704e-114">Reference</span></span>  
  <xref:System.Windows.RoutedEvent>  
   
  <xref:System.Windows.EventManager>  
   
  <xref:System.Windows.RoutingStrategy>  
   
-## <a name="related-sections"></a><span data-ttu-id="03128-115">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="03128-115">Related Sections</span></span>  
- [<span data-ttu-id="03128-116">WPF Mimarisi</span><span class="sxs-lookup"><span data-stu-id="03128-116">WPF Architecture</span></span>](wpf-architecture.md)  
-  [<span data-ttu-id="03128-117">WPF'de XAML</span><span class="sxs-lookup"><span data-stu-id="03128-117">XAML in WPF</span></span>](xaml-in-wpf.md)  
-  [<span data-ttu-id="03128-118">Temel Öğeler</span><span class="sxs-lookup"><span data-stu-id="03128-118">Base Elements</span></span>](base-elements.md)  
-  [<span data-ttu-id="03128-119">Öğe Ağacı ve Serileştirme</span><span class="sxs-lookup"><span data-stu-id="03128-119">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
-  [<span data-ttu-id="03128-120">Veri Erişimi</span><span class="sxs-lookup"><span data-stu-id="03128-120">Properties</span></span>](properties-wpf.md)  
-  [<span data-ttu-id="03128-121">Giriş</span><span class="sxs-lookup"><span data-stu-id="03128-121">Input</span></span>](input-wpf.md)  
-  [<span data-ttu-id="03128-122">Kaynaklar</span><span class="sxs-lookup"><span data-stu-id="03128-122">Resources</span></span>](resources-wpf.md)  
-  [<span data-ttu-id="03128-123">Stil ve Şablon Oluşturma</span><span class="sxs-lookup"><span data-stu-id="03128-123">Styling and Templating</span></span>](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
-  [<span data-ttu-id="03128-124">WPF İçerik Modeli</span><span class="sxs-lookup"><span data-stu-id="03128-124">WPF Content Model</span></span>](../controls/wpf-content-model.md)  
-  [<span data-ttu-id="03128-125">İş Parçacığı Modeli</span><span class="sxs-lookup"><span data-stu-id="03128-125">Threading Model</span></span>](threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="2704e-115">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="2704e-115">Related Sections</span></span>  
+ [<span data-ttu-id="2704e-116">WPF Mimarisi</span><span class="sxs-lookup"><span data-stu-id="2704e-116">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="2704e-117">WPF'de XAML</span><span class="sxs-lookup"><span data-stu-id="2704e-117">XAML in WPF</span></span>](xaml-in-wpf.md)  
+  [<span data-ttu-id="2704e-118">Temel Öğeler</span><span class="sxs-lookup"><span data-stu-id="2704e-118">Base Elements</span></span>](base-elements.md)  
+  [<span data-ttu-id="2704e-119">Öğe Ağacı ve Serileştirme</span><span class="sxs-lookup"><span data-stu-id="2704e-119">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+  [<span data-ttu-id="2704e-120">Özellikler</span><span class="sxs-lookup"><span data-stu-id="2704e-120">Properties</span></span>](properties-wpf.md)  
+  [<span data-ttu-id="2704e-121">Giriş</span><span class="sxs-lookup"><span data-stu-id="2704e-121">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="2704e-122">Kaynaklar</span><span class="sxs-lookup"><span data-stu-id="2704e-122">Resources</span></span>](resources-wpf.md)  
+  [<span data-ttu-id="2704e-123">Stil ve Şablon Oluşturma</span><span class="sxs-lookup"><span data-stu-id="2704e-123">Styling and Templating</span></span>](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
+  [<span data-ttu-id="2704e-124">WPF İçerik Modeli</span><span class="sxs-lookup"><span data-stu-id="2704e-124">WPF Content Model</span></span>](../controls/wpf-content-model.md)  
+  [<span data-ttu-id="2704e-125">İş Parçacığı Modeli</span><span class="sxs-lookup"><span data-stu-id="2704e-125">Threading Model</span></span>](threading-model.md)

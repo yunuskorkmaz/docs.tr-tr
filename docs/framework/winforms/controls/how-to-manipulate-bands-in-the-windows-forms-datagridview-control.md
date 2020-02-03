@@ -17,23 +17,23 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76736121"
 ---
-# <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="45d08-102">Nasıl yapılır: Windows Forms DataGridView Denetiminde Bantları Yönlendirme</span><span class="sxs-lookup"><span data-stu-id="45d08-102">How to: Manipulate Bands in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="45d08-103">Aşağıdaki kod örneği, <xref:System.Windows.Forms.DataGridViewRow> ve <xref:System.Windows.Forms.DataGridViewColumn> sınıflarının türettikleri <xref:System.Windows.Forms.DataGridViewBand> sınıfının özelliklerini kullanarak <xref:System.Windows.Forms.DataGridView> satırları ve sütunları işlemek için çeşitli yollar gösterir.</span><span class="sxs-lookup"><span data-stu-id="45d08-103">The following code example shows various ways to manipulate <xref:System.Windows.Forms.DataGridView> rows and columns using properties of the <xref:System.Windows.Forms.DataGridViewBand> class from which the <xref:System.Windows.Forms.DataGridViewRow> and <xref:System.Windows.Forms.DataGridViewColumn> classes derive.</span></span>  
+# <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="3cdc8-102">Nasıl yapılır: Windows Forms DataGridView Denetiminde Bantları Yönlendirme</span><span class="sxs-lookup"><span data-stu-id="3cdc8-102">How to: Manipulate Bands in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="3cdc8-103">Aşağıdaki kod örneği, <xref:System.Windows.Forms.DataGridViewRow> ve <xref:System.Windows.Forms.DataGridViewColumn> sınıflarının türettikleri <xref:System.Windows.Forms.DataGridViewBand> sınıfının özelliklerini kullanarak <xref:System.Windows.Forms.DataGridView> satırları ve sütunları işlemek için çeşitli yollar gösterir.</span><span class="sxs-lookup"><span data-stu-id="3cdc8-103">The following code example shows various ways to manipulate <xref:System.Windows.Forms.DataGridView> rows and columns using properties of the <xref:System.Windows.Forms.DataGridViewBand> class from which the <xref:System.Windows.Forms.DataGridViewRow> and <xref:System.Windows.Forms.DataGridViewColumn> classes derive.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="45d08-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="45d08-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="3cdc8-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="3cdc8-104">Example</span></span>  
  [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewBandDemo.cpp#0)]
  [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewBandDemo.cs#0)]
  [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewbanddemo.vb#0)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="45d08-105">Kod Derleme</span><span class="sxs-lookup"><span data-stu-id="45d08-105">Compiling the Code</span></span>  
- <span data-ttu-id="45d08-106">Bu örnek şunları gerektirir:</span><span class="sxs-lookup"><span data-stu-id="45d08-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="3cdc8-105">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="3cdc8-105">Compiling the Code</span></span>  
+ <span data-ttu-id="3cdc8-106">Bu örnek şunları gerektirir:</span><span class="sxs-lookup"><span data-stu-id="3cdc8-106">This example requires:</span></span>  
   
-- <span data-ttu-id="45d08-107">System, System. Drawing ve System. Windows. Forms derlemelerine başvurular.</span><span class="sxs-lookup"><span data-stu-id="45d08-107">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="3cdc8-107">System, System. Drawing ve System. Windows. Forms derlemelerine başvurular.</span><span class="sxs-lookup"><span data-stu-id="3cdc8-107">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="45d08-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="45d08-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3cdc8-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3cdc8-108">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewBand>
 - <xref:System.Windows.Forms.DataGridViewRow>
 - <xref:System.Windows.Forms.DataGridViewColumn>
-- [<span data-ttu-id="45d08-109">Windows Forms DataGridView Denetiminde Hücreler, Satırlar ve Sütunlarla Programlama</span><span class="sxs-lookup"><span data-stu-id="45d08-109">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [<span data-ttu-id="3cdc8-109">Windows Forms DataGridView Denetiminde Hücreler, Satırlar ve Sütunlarla Programlama</span><span class="sxs-lookup"><span data-stu-id="3cdc8-109">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](programming-with-cells-rows-and-columns-in-the-datagrid.md)

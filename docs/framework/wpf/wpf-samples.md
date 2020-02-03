@@ -12,6 +12,6 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743314"
 ---
-# <a name="wpf-samples"></a><span data-ttu-id="569f2-102">WPF Örnekleri</span><span class="sxs-lookup"><span data-stu-id="569f2-102">WPF Samples</span></span>
+# <a name="wpf-samples"></a><span data-ttu-id="e54ee-102">WPF Örnekleri</span><span class="sxs-lookup"><span data-stu-id="e54ee-102">WPF Samples</span></span>
 
-<span data-ttu-id="569f2-103">Windows Presentation Foundation (WPF) gösteren örnekler için bkz. GitHub 'da [Microsoft/WPF-Samples deposu](https://github.com/Microsoft/WPF-Samples) .</span><span class="sxs-lookup"><span data-stu-id="569f2-103">For samples that demonstrate Windows Presentation Foundation (WPF), see the [Microsoft/WPF-Samples repo](https://github.com/Microsoft/WPF-Samples) on GitHub.</span></span>
+<span data-ttu-id="e54ee-103">Windows Presentation Foundation (WPF) gösteren örnekler için bkz. GitHub 'da [Microsoft/WPF-Samples deposu](https://github.com/Microsoft/WPF-Samples) .</span><span class="sxs-lookup"><span data-stu-id="e54ee-103">For samples that demonstrate Windows Presentation Foundation (WPF), see the [Microsoft/WPF-Samples repo](https://github.com/Microsoft/WPF-Samples) on GitHub.</span></span>

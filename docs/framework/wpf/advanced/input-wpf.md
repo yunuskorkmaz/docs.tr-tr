@@ -14,19 +14,19 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76727848"
 ---
-# <a name="input-wpf"></a><span data-ttu-id="a0e03-102">Giriş (WPF)</span><span class="sxs-lookup"><span data-stu-id="a0e03-102">Input (WPF)</span></span>
-<span data-ttu-id="a0e03-103">Windows Presentation Foundation (WPF), çeşitli giriş türleri için destek içerir.</span><span class="sxs-lookup"><span data-stu-id="a0e03-103">Windows Presentation Foundation (WPF) includes support for several types of input.</span></span> <span data-ttu-id="a0e03-104">Bu giriş metin, dokunmatik, fare, komutlar, odak, dokunmatik, sürükle ve bırak ve dijital mürekkep içerir.</span><span class="sxs-lookup"><span data-stu-id="a0e03-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="a0e03-105">Bu bölümde, WPF 'de girişle ilgili konular açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="a0e03-105">This section describes topics related to input in WPF.</span></span>  
+# <a name="input-wpf"></a><span data-ttu-id="087aa-102">Giriş (WPF)</span><span class="sxs-lookup"><span data-stu-id="087aa-102">Input (WPF)</span></span>
+<span data-ttu-id="087aa-103">Windows Presentation Foundation (WPF), çeşitli giriş türleri için destek içerir.</span><span class="sxs-lookup"><span data-stu-id="087aa-103">Windows Presentation Foundation (WPF) includes support for several types of input.</span></span> <span data-ttu-id="087aa-104">Bu giriş metin, dokunmatik, fare, komutlar, odak, dokunmatik, sürükle ve bırak ve dijital mürekkep içerir.</span><span class="sxs-lookup"><span data-stu-id="087aa-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="087aa-105">Bu bölümde, WPF 'de girişle ilgili konular açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="087aa-105">This section describes topics related to input in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a0e03-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="a0e03-106">In This Section</span></span>  
- [<span data-ttu-id="a0e03-107">Girişe Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="a0e03-107">Input Overview</span></span>](input-overview.md)  
- [<span data-ttu-id="a0e03-108">Komut Vermeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="a0e03-108">Commanding Overview</span></span>](commanding-overview.md)  
- [<span data-ttu-id="a0e03-109">Odağa Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="a0e03-109">Focus Overview</span></span>](focus-overview.md)  
- [<span data-ttu-id="a0e03-110">Denetimlerde Odak için Stil Oluşturma ve FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="a0e03-110">Styling for Focus in Controls, and FocusVisualStyle</span></span>](styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [<span data-ttu-id="a0e03-111">İzlenecek yol: İlk Dokunmatik Uygulamanızı Oluşturma</span><span class="sxs-lookup"><span data-stu-id="a0e03-111">Walkthrough: Creating Your First Touch Application</span></span>](walkthrough-creating-your-first-touch-application.md)  
- [<span data-ttu-id="a0e03-112">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="a0e03-112">How-to Topics</span></span>](input-and-commands-how-to-topics.md)  
- [<span data-ttu-id="a0e03-113">Dijital Mürekkep</span><span class="sxs-lookup"><span data-stu-id="a0e03-113">Digital Ink</span></span>](digital-ink.md)  
+## <a name="in-this-section"></a><span data-ttu-id="087aa-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="087aa-106">In This Section</span></span>  
+ [<span data-ttu-id="087aa-107">Girişe Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="087aa-107">Input Overview</span></span>](input-overview.md)  
+ [<span data-ttu-id="087aa-108">Komut Vermeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="087aa-108">Commanding Overview</span></span>](commanding-overview.md)  
+ [<span data-ttu-id="087aa-109">Odağa Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="087aa-109">Focus Overview</span></span>](focus-overview.md)  
+ [<span data-ttu-id="087aa-110">Denetimlerde Odak için Stil Oluşturma ve FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="087aa-110">Styling for Focus in Controls, and FocusVisualStyle</span></span>](styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [<span data-ttu-id="087aa-111">İzlenecek yol: İlk Dokunmatik Uygulamanızı Oluşturma</span><span class="sxs-lookup"><span data-stu-id="087aa-111">Walkthrough: Creating Your First Touch Application</span></span>](walkthrough-creating-your-first-touch-application.md)  
+ [<span data-ttu-id="087aa-112">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="087aa-112">How-to Topics</span></span>](input-and-commands-how-to-topics.md)  
+ [<span data-ttu-id="087aa-113">Dijital Mürekkep</span><span class="sxs-lookup"><span data-stu-id="087aa-113">Digital Ink</span></span>](digital-ink.md)  
   
-## <a name="reference"></a><span data-ttu-id="a0e03-114">Başvuru</span><span class="sxs-lookup"><span data-stu-id="a0e03-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="087aa-114">Başvuru</span><span class="sxs-lookup"><span data-stu-id="087aa-114">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  
@@ -41,6 +41,6 @@ ms.locfileid: "76727848"
   
  <xref:System.Windows.Input.FocusManager>  
   
-## <a name="related-sections"></a><span data-ttu-id="a0e03-115">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="a0e03-115">Related Sections</span></span>  
- [<span data-ttu-id="a0e03-116">Denetimler</span><span class="sxs-lookup"><span data-stu-id="a0e03-116">Controls</span></span>](../controls/index.md)  
-  [<span data-ttu-id="a0e03-117">Olaylar</span><span class="sxs-lookup"><span data-stu-id="a0e03-117">Events</span></span>](events-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="087aa-115">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="087aa-115">Related Sections</span></span>  
+ [<span data-ttu-id="087aa-116">Denetimler</span><span class="sxs-lookup"><span data-stu-id="087aa-116">Controls</span></span>](../controls/index.md)  
+  [<span data-ttu-id="087aa-117">Olaylar</span><span class="sxs-lookup"><span data-stu-id="087aa-117">Events</span></span>](events-wpf.md)
