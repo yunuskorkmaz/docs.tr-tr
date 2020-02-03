@@ -36,7 +36,7 @@ ms.locfileid: "76742427"
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#110)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#110)]  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek şunları gerektirir:  
   
 - Northwind örnek veritabanındaki `Customers` tablosu gibi `Fax` ve `CustomerID` sütunları içeren bir tabloya bağlanan `dataGridView1` adlı bir <xref:System.Windows.Forms.DataGridView> denetim.  

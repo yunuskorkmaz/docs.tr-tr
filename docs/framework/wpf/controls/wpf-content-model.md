@@ -137,9 +137,9 @@ ms.locfileid: "76738274"
   
 - Bir dize.  
   
-- A <xref:System.DateTime> nesne.  
+- Bir <xref:System.DateTime> nesnesi.  
   
-- A <xref:System.Windows.UIElement>.  
+- Bir <xref:System.Windows.UIElement>.  
   
 - Bir <xref:System.Windows.Shapes.Ellipse> ve <xref:System.Windows.Controls.TextBlock>içeren bir <xref:System.Windows.Controls.Panel>.  
   

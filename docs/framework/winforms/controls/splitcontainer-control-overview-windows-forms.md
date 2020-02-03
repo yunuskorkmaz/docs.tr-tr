@@ -38,7 +38,7 @@ Windows Forms <xref:System.Windows.Forms.SplitContainer> denetimi bileşik olara
   
 ## <a name="commonly-used-properties-methods-and-events"></a>Yaygın olarak kullanılan özellikler, Yöntemler ve olaylar  
   
-|Name|Açıklama|  
+|Ad|Açıklama|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> özelliği|<xref:System.Windows.Forms.SplitContainer> denetimi yeniden boyutlandırılırken hangi panelin aynı boyutta kalacağını belirler.|  
 |<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> özelliği|Bölümlendiricinin klavye veya fareyle taşınıp taşınamayacağını belirler.|  

@@ -117,7 +117,7 @@ kaynak kodunuz tüm hedefler için aynıysa, .NET Standard ❌ çoklu hedeflemey
 
 .NET, artık yaygın olarak kullanılmayan platformların yanı sıra, .NET Framework, destek ve uzun süreli olan sürümlerinin hedeflenmesini destekler. Kitaplığınızın mümkün olduğunca çok sayıda hedef üzerinde çalışmasını sağlamak için bir değer olsa da, eksik API 'Leri geçici olarak çözmek için önemli ölçüde ek yük eklenebilir. Belirli çerçevelerin daha fazla hedeflenmesini ve bunların erişim ve sınırlamalarını göz önünde bulundurduğumuz düşünülmektedir.
 
-❌, taşınabilir sınıf kitaplığı (PCL) hedefi içermez. Örneğin: `portable-net45+win8+wpa81+wp8`.
+❌, taşınabilir sınıf kitaplığı (PCL) hedefi içermez. Örneğin, `portable-net45+win8+wpa81+wp8`.
 
 > .NET Standard, platformlar arası .NET kitaplıklarını desteklemeye yönelik modern bir yoldur ve PCLs 'yi değiştirir.
 

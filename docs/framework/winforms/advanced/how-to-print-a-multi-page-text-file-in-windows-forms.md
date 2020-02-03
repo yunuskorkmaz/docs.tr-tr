@@ -51,7 +51,7 @@ Windows tabanlı uygulamaların metin yazdırması çok yaygındır. <xref:Syste
  [!code-csharp[System.Drawing.Printing.PrintExamples#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/CS/Form1.cs#0)]
  [!code-vb[System.Drawing.Printing.PrintExamples#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/VB/Form1.vb#0)]  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek şunları gerektirir:  
   
 - C:\\sürücüsünün kökünde bulunan, yazdırılacak metni içeren testPage. txt adlı bir metin dosyası. Farklı bir dosyayı yazdırmak için kodu düzenleyin.  

@@ -29,7 +29,7 @@ Varsayılan olarak, Windows Forms <xref:System.Windows.Forms.TextBox> denetim te
   
 ### <a name="to-view-multiple-lines-in-the-textbox-control"></a>TextBox denetiminde birden çok satırı görüntülemek için  
   
-1. Ayarlama <xref:System.Windows.Forms.TextBox.Multiline%2A> özelliğini `true`. <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> `true` (varsayılan), denetimdeki metin bir veya daha fazla paragraf olarak görünür; Aksi takdirde, bazı satırların denetimin kenarında kırpıldığı bir liste olarak görüntülenir.  
+1. <xref:System.Windows.Forms.TextBox.Multiline%2A> özelliğini `true`olarak ayarlayın. <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> `true` (varsayılan), denetimdeki metin bir veya daha fazla paragraf olarak görünür; Aksi takdirde, bazı satırların denetimin kenarında kırpıldığı bir liste olarak görüntülenir.  
   
 2. <xref:System.Windows.Forms.TextBox.ScrollBars%2A> özelliğini uygun bir değer olarak ayarlayın.  
   

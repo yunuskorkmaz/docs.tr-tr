@@ -77,7 +77,7 @@ Aşağıdaki kod örneği, seçenek düğmesi davranışını göstermek için t
 [!code-csharp[ToolStripRadioButtonMenuItem#000](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#000)]
 [!code-vb[ToolStripRadioButtonMenuItem#000](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#000)]
 
-## <a name="compiling-the-code"></a>Kod Derleme
+## <a name="compiling-the-code"></a>Kod Derleniyor
 
 Bu örnek şunları gerektirir:
 

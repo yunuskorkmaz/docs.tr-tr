@@ -28,7 +28,7 @@ Varolan bir denetimin işlevselliğini genişletmek istiyorsanız, devralma yolu
 
 1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
-    **Yeni Öğe Ekle** iletişim kutusu görüntülenir.
+    **Yeni Öğe Ekle** iletişim kutusu görünür.
 
 1. **Yeni öğe Ekle** Iletişim kutusunda **özel denetim ' e**çift tıklayın.
 

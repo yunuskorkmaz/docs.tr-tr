@@ -31,7 +31,7 @@ Bir Windows Forms denetimini bir veri kaynağına bağlamak için bir <xref:Syst
  [!code-csharp[System.Windows.Forms.DataConnector.AddingNew#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.AddingNew/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataConnector.AddingNew#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.AddingNew/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek şunları gerektirir:  
   
 - System, System. Data, System. Drawing ve System. Windows. Forms derlemelerine başvurular.  

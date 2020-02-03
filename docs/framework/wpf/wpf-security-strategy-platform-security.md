@@ -103,7 +103,7 @@ Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı eri�
   
 - **Yerel Intranet**. İntranetten başlatılan uygulamalar. (Biraz güvenilir).  
   
-- **Internet**. Internet 'ten başlatılan uygulamalar. (En az güvenilir).  
+- **İnternet**. Internet 'ten başlatılan uygulamalar. (En az güvenilir).  
   
 - **Güvenilen siteler**. Bir kullanıcı tarafından güvenilen olarak tanımlanan uygulamalar. (En az güvenilir).  
   
@@ -115,7 +115,7 @@ Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı eri�
   
 - **LocalIntranet**. **Yerel Intranet** bölgesinden başlatılan uygulamalar için. Yalıtılmış depolama, sınırsız Kullanıcı Arabirimi erişimi, kısıtlanmamış dosya iletişimleri, sınırlı yansıma, ortam değişkenlerine sınırlı erişim dahil olmak üzere bir istemci makinenin kaynaklarına orta erişim sağlamak için izin alt kümesi verilir. Kayıt defteri gibi kritik kaynakların izinleri sağlanmaz.  
   
-- **Internet**. **Internet** veya **Güvenilen siteler** bölgesinden başlatılan uygulamalar için. Yalıtılmış depolama, yalnızca dosya açma ve sınırlı kullanıcı arabirimi dahil olmak üzere bir istemci makinenin kaynaklarına sınırlı erişim sağlamak için bir izin alt kümesi verilmiştir. Temelde, bu izin kümesi, uygulamaları istemci makineden ayırır.  
+- **İnternet**. **Internet** veya **Güvenilen siteler** bölgesinden başlatılan uygulamalar için. Yalıtılmış depolama, yalnızca dosya açma ve sınırlı kullanıcı arabirimi dahil olmak üzere bir istemci makinenin kaynaklarına sınırlı erişim sağlamak için bir izin alt kümesi verilmiştir. Temelde, bu izin kümesi, uygulamaları istemci makineden ayırır.  
   
  **Güvenilmeyen siteler** bölgesinde olduğu şekilde tanımlanan uygulamalara, CA 'lar tarafından hiçbir izin verilmez. Sonuç olarak, önceden tanımlanmış bir izin kümesi onlar için mevcut değildir.  
   
@@ -189,6 +189,6 @@ Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı eri�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kod erişim güvenliği](../misc/code-access-security.md)
-- [Security](security-wpf.md)
+- [Güvenlik](security-wpf.md)
 - [WPF Kısmi Güven Güvenliği](wpf-partial-trust-security.md)
 - [WPF Güvenlik Stratejisi - Güvenlik Mühendisliği](wpf-security-strategy-security-engineering.md)

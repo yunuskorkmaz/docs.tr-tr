@@ -28,7 +28,7 @@ Aşağıdaki kod örneği, <xref:System.Windows.Forms.DataGridView> bir denetim 
  [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#000](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#000)]
  [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#000](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#000)]  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek şunları gerektirir:  
   
 - System ve System. Windows. Forms derlemelerine başvurular.  

@@ -79,7 +79,7 @@ Visual Studio 'nun IntelliSense için farklı bir dil kullanabilmesi için, uygu
 
 1. Bilgisayarınızda Visual Studio yükleyicisi bulun.
 
-   Örneğin, Windows 10 çalıştıran bir bilgisayarda seçin **Başlat**ve harfi kaydırın **V**, olarak listelenen burada **Visual Studio yükleyicisi**.
+   Örneğin, Windows 10 çalıştıran bir bilgisayarda **Başlat**' ı seçin ve ardından **Visual Studio yükleyicisi**olarak listelendiği **V**harfine gidin.
 
    ![Visual Studio Yükleyicisi Windows 'tan açın](./media/localized-intellisense/vs-installer-windows-start.png)
 

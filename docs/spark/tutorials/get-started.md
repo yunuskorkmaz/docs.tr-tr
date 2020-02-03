@@ -72,7 +72,7 @@ Apache Spark dosyalarını ayıklamak için:
 * **Spark-2.4.1-bin-Hadoop 2.7. tar** öğesine sağ tıklayın ve **7-ZIP-> dosyaları ayıkla ' yı seçin...**
 * **Ayıkla** alanına **c:\Bin** yazın.
 * **Ayıkla** alanının altındaki onay kutusunun işaretini kaldırın.
-* Seçin **Tamam**.
+* **Tamam**’ı seçin.
 * Apache Spark dosyaları C:\bin\spark-2.4.1-bin-hadoop2.7\ ' ye ayıklanır
 
 ![Spark 'ı yükler](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
@@ -102,7 +102,7 @@ Microsoft. spark. Worker öğesini ayıklamak için:
 * Sağ tıklayıp **7 ZIP-> dosyaları ayıkla ' yı seçin...**
 * **Ayıkla** alanına **c:\Bin** yazın.
 * **Ayıkla** alanının altındaki onay kutusunun işaretini kaldırın.
-* Seçin **Tamam**.
+* **Tamam**’ı seçin.
 
 ![.NET Spark 'ı yükler](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
 

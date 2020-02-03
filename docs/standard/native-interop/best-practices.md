@@ -120,7 +120,7 @@ Sabitlenmiş bir `GCHandle`oluşturmaya çalışan bir türün blittable olup ol
 
 ✔️ yapılarınızı mümkün olduğunca blittable yapın.
 
-Daha fazla bilgi için bkz.
+Daha fazla bilgi için bkz.:
 
 - [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](../../framework/interop/blittable-and-non-blittable-types.md)
 - [Tür sıralaması](type-marshaling.md)

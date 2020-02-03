@@ -1,24 +1,24 @@
 ---
-title: Ortak istemci tarafı web teknolojileri
+title: Ortak istemci tarafı Web teknolojileri
 description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Ortak istemci tarafı Web teknolojileri
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: bf346825c7e29831111fc11c836ca6b4a05a18ce
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 0e5f3578edc723e2e2a32b9b3a1d8a7dcabd2909
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920992"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965756"
 ---
-# <a name="common-client-side-web-technologies"></a>Ortak istemci tarafı web teknolojileri
+# <a name="common-client-side-web-technologies"></a>Ortak istemci tarafı Web teknolojileri
 
 > "Web siteleri, iç ve çıkış arasında iyi görünmelidir."  
 > _-Paul pişirme son_
 
 ASP.NET Core uygulamalar Web uygulamalardır ve genellikle HTML, CSS ve JavaScript gibi istemci tarafı Web teknolojilerine bağımlıdır. Sayfa (HTML) içeriğini düzen ve stil (CSS) ve davranışını (JavaScript aracılığıyla) ayırarak, karmaşık Web uygulamaları, endişeleri ayrımı özelliğinden yararlanabilir. Uygulamanın yapısı, tasarımı veya davranışında yapılacak değişiklikler, bu konular intertwined olmadığında daha kolay hale getirilebilir.
 
-HTML ve CSS görece kararlı olsa da, JavaScript, uygulama çerçeveleri ve yardımcı programlar tarafından Web tabanlı uygulamalar oluşturmak için birlikte çalışarak,, Breakneck hızında gelişiyor. Bu bölüm, JavaScript 'in Web geliştiricileri tarafından uygulama geliştirme kapsamında kullanıldığı, angular ve istemci tarafı kitaplıklarına yanıt verme konusunda üst düzey bir genel bakış sunan bazı yöntemlere bakar.
+HTML ve CSS görece kararlı olsa da, JavaScript, uygulama çerçeveleri ve yardımcı programlar tarafından Web tabanlı uygulamalar oluşturmak için birlikte çalışarak,, Breakneck hızında gelişiyor. Bu bölüm, JavaScript 'in Web geliştiricileri tarafından uygulama geliştirme kapsamında kullanıldığı, angular hakkında üst düzey bir genel bakış ve istemci tarafı kitaplıklarına yanıt verme gibi çeşitli yöntemlere bakar.
 
 ## <a name="html"></a>HTML
 
@@ -26,7 +26,7 @@ HTML (köprü metni biçimlendirme dili), Web sayfaları ve Web uygulamaları ol
 
 ## <a name="css"></a>{1&gt;CSS&lt;1}
 
-CSS (Geçişli Stil Sayfaları), HTML öğelerinin görünüm ve yerleşimini denetlemek için kullanılır. CSS stilleri, aynı sayfada ayrı olarak tanımlanan veya ayrı bir dosyada tanımlanmış ve sayfa tarafından başvurulan bir HTML öğesine doğrudan uygulanabilir. Stiller, belirli bir HTML öğesini seçmek için nasıl kullanıldığına göre basamaklandırılır. Örneğin, bir stil tüm belgeye uygulanabilir, ancak belirli bir öğeye uygulanan bir stil tarafından geçersiz kılınır. Benzer şekilde, öğeye özgü bir stil, öğesine uygulanan bir CSS sınıfına uygulanan bir stil tarafından geçersiz kılınır. Bu, sırasıyla bu öğenin belirli bir örneğini hedefleyen bir stil tarafından geçersiz kılınır (kimliği aracılığıyla). Şekil 6-1
+CSS (Geçişli Stil Sayfaları), HTML öğelerinin görünüm ve yerleşimini denetlemek için kullanılır. CSS stilleri, aynı sayfada ayrı olarak tanımlanan veya ayrı bir dosyada tanımlanmış ve sayfa tarafından başvurulan bir HTML öğesine doğrudan uygulanabilir. Stiller, belirli bir HTML öğesini seçmek için nasıl kullanıldığına göre basamaklandırılır. Örneğin, bir stil tüm belgeye uygulanabilir, ancak belirli bir öğeye uygulanan bir stil tarafından geçersiz kılınır. Benzer şekilde, öğeye özgü bir stil, öğesine uygulanan bir CSS sınıfına uygulanan bir stil tarafından geçersiz kılınır. Bu, sırasıyla bu öğenin belirli bir örneğini hedefleyen bir stil tarafından geçersiz kılınır (KIMLIĞI aracılığıyla). Şekil 6-1
 
 ![CSS specificity kuralları](./media/image6-1.png)
 
@@ -38,7 +38,7 @@ Stilleri kendi ayrı stil sayfası dosyalarında tutmak ve uygulama içinde tuta
 
 CSS stil sayfalarında koşullu mantık, değişkenler ve diğer programlama dili özellikleri için destek yoktur. Bu nedenle, birçok farklı HTML ve CSS sınıfı çeşitlemelerine aynı renk, yazı tipi veya diğer ayarlar uygulandığından büyük stil sayfaları genellikle çok fazla yineleme içerir. CSS önişlemcisi, stil sayfalarınızın ve mantığa yönelik destek ekleyerek [kurutma ilkesini](https://deviq.com/don-t-repeat-yourself/) takip etmenize yardımcı olabilir.
 
-En popüler CSS önişlemcisi Sass ve küçüktür. Her ikisi de CSS 'yi genişletir ve bununla birlikte, düz bir CSS dosyasının geçerli bir Sass veya daha az dosya olduğu anlamına gelir. Sass, Ruby tabanlıdır ve JavaScript tabanlıdır ve genellikle yerel geliştirme işleminizin bir parçası olarak çalışır. Hem komut satırı araçlarının hem de Gulp ya da Grreki görevleri kullanılarak çalıştırılması için Visual Studio 'da yerleşik destek bulunur.
+En popüler CSS önişlemcisi Sass ve küçüktür. Her ikisi de CSS 'yi genişletir ve bununla birlikte, düz bir CSS dosyasının geçerli bir Sass veya daha az dosya olduğu anlamına gelir. Sass, Ruby tabanlıdır ve JavaScript tabanlıdır ve genellikle yerel geliştirme işleminizin bir parçası olarak çalışır. Hem komut satırı araçlarına hem de Gulp veya Grreksel görevler kullanılarak çalıştırmak üzere Visual Studio 'da yerleşik desteğe sahiptir.
 
 ## <a name="javascript"></a>JavaScript
 
@@ -58,7 +58,7 @@ Bu görevlerin tümünü tek başına JavaScript ile gerçekleştirebilirsiniz, 
 
 ### <a name="legacy-web-apps-with-jquery"></a>JQuery ile eski Web uygulamaları
 
-JavaScript Framework standartlarına göre, jQuery, HTML/CSS ile çalışmaya ve Web API 'Lerine AJAX çağrıları yapan uygulamalar oluşturmaya yönelik çok yaygın olarak kullanılan bir kitaplık olmaya devam etmektedir. Bununla birlikte, jQuery, tarayıcı belgesi nesne modeli (DOM) düzeyinde çalışır ve varsayılan olarak, bildirim temelli model yerine yalnızca bir kesinlik sağlar.
+JavaScript Framework standartlarına bağlı olarak, jQuery, HTML/CSS ile çalışmak ve Web API 'Lerine AJAX çağrıları yapan uygulamalar oluşturmak için yaygın olarak kullanılan bir kitaplık olmaya devam eder. Bununla birlikte, jQuery, tarayıcı belgesi nesne modeli (DOM) düzeyinde çalışır ve varsayılan olarak, bildirim temelli model yerine yalnızca bir kesinlik sağlar.
 
 Örneğin, bir TextBox değeri 10 ' u aşarsa sayfadaki bir öğenin görünür hale getirilmesinin gerektiği hakkında düşünün. JQuery 'ta bu, genellikle TextBox 'ın değerini inceleyerek ve hedef öğenin görünürlüğünü bu değere göre ayarlayabilecek kodla bir olay işleyicisi yazılarak uygulanır. Bu, zorunlu, kod tabanlı bir yaklaşımdır. Bunun yerine başka bir çerçeve, öğesinin görünürlüğünü bildirimli olarak metin değerine bağlamak için veri bağlamayı kullanabilir. Bu, herhangi bir kod yazmayı gerektirmez, ancak bunun yerine yalnızca veri bağlama öznitelikleriyle ilgili öğeleri dekoratmayı gerektirir. İstemci tarafı davranışları daha karmaşık büyürken, veri bağlama yaklaşımları genellikle daha az kod ve koşullu karmaşıklıkla daha basit çözümlere neden olacak.
 
@@ -73,7 +73,7 @@ JavaScript Framework standartlarına göre, jQuery, HTML/CSS ile çalışmaya ve
 | Örneğine | **Eşleşen** | **Evet** |
 | Derin bağlantı yönlendirme | **Eşleşen** | **Evet** |
 
-JQuery eksik doğası gereği özelliklerinin çoğu diğer kitaplıkların eklenmesiyle eklenebilir. Ancak, angular gibi bir SPA çerçevesi, başlangıçtan itibaren göz önünde bulundurularak tasarlandığından, bu özellikleri daha tümleşik bir biçimde sunar. Ayrıca, jQuery, jQuery ile herhangi bir şey yapmak için jQuery işlevlerini çağırmanız gereken çok kesinlik içeren bir kitaplıktır. SPA çerçevelerinin sağladığı iş ve işlevselliğin çoğu bildirimli olarak yapılabilir ve hiçbir gerçek kod yazılmasına gerek yoktur.
+JQuery eksik doğası gereği özelliklerinin çoğu diğer kitaplıkların eklenmesiyle eklenebilir. Ancak, angular gibi bir SPA çerçevesi, başlangıçtan itibaren göz önünde bulundurularak tasarlandığından, bu özellikleri daha tümleşik bir biçimde sunar. Ayrıca, jQuery, jQuery ile herhangi bir şey yapmak için jQuery işlevlerini çağırmanız gereken anlamına gelen, zorunlu bir kitaplıktır. SPA çerçevelerinin sağladığı iş ve işlevselliğin çoğu bildirimli olarak yapılabilir ve hiçbir gerçek kod yazılmasına gerek yoktur.
 
 Veri bağlama buna harika bir örnektir. JQuery 'ta, genellikle bir DOM öğesinin değerini almak veya bir öğenin değerini ayarlamak için yalnızca tek bir kod satırı alır. Ancak, bu kodu, öğenin değerini değiştirmeniz gereken her seferinde yazmanız gerekir ve bazen bu, bir sayfada birden çok işlev ile gerçekleşir. Diğer bir yaygın örnek, öğe görünürlüğüne sahiptir. JQuery 'de, belirli öğelerin görünür olup olmadığını denetlemek için kod yazacağınız birçok farklı yer olabilir. Bu durumların her birinde, veri bağlamayı kullanırken, hiçbir kodun yazılması gerekmez. Söz konusu öğe (ler) in değerini veya görünürlüğünü sayfadaki bir *ViewModel* 'e bağlamanız yeterlidir ve bu ViewModel üzerindeki değişiklikler otomatik olarak bağlı öğelerde yansıtılır.
 
@@ -94,7 +94,7 @@ import { Component } from '@angular/core';
 export class AppComponent { name = 'Angular'; }
 ```
 
-Bileşenler, bileşeni hakkında meta veriler alan @Component dekoratör işlevi kullanılarak tanımlanır. Selector özelliği, bu bileşenin görüntüleneceği sayfadaki öğenin kimliğini tanımlar. Şablon özelliği, son satırda tanımlanan bileşen adı özelliğine karşılık gelen bir yer tutucu içeren basit bir HTML şablonudur.
+Bileşenler, bileşeni hakkında meta veriler alan @Component dekoratör işlevi kullanılarak tanımlanır. Selector özelliği, bu bileşenin görüntüleneceği sayfadaki öğenin KIMLIĞINI tanımlar. Şablon özelliği, son satırda tanımlanan bileşen adı özelliğine karşılık gelen bir yer tutucu içeren basit bir HTML şablonudur.
 
 DOM öğeleri yerine bileşenler ve şablonlar ile çalışarak, angular uygulamaları daha yüksek bir soyutlama düzeyinde ve yalnızca JavaScript ("Vanilla JS" olarak da bilinir) kullanılarak yazılmış uygulamalardan veya jQuery ile daha az genel kodla çalışabilir. Angular Ayrıca, istemci tarafı betik dosyalarınızı düzenleme konusunda bir sıralama uygular. Kurala göre, angular uygulamaları, bir uygulama klasöründe bulunan modül ve bileşen komut dosyaları ile ortak bir klasör yapısı kullanır. Uygulama oluşturma, dağıtma ve test etme ile ilgili angular betikleri genellikle daha yüksek düzey bir klasörde bulunur.
 
@@ -134,7 +134,7 @@ Hangi JavaScript çerçevesinin, SPA 'nizi destekleyecek en iyi şekilde çalı�
 
 - İyi belgelenmiş mi?
 
-- Topluluk nasıl etkin? Yeni projeler derleme ile derlensin mi?
+- Topluluk nasıl etkin? Yeni projeler ile derlenmekte mi?
 
 - Etkin olan temel ekibi nedir? Sorun çözümlenmekte ve yeni sürümler düzenli olarak sevk ediliyor mu?
 

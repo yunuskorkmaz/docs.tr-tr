@@ -27,7 +27,7 @@ Aşağıdaki kod örneği, <xref:System.Windows.Forms.DataGridViewColumn> sını
 [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#100)]
 [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#100)]
 
-## <a name="compiling-the-code"></a>Kod Derleme
+## <a name="compiling-the-code"></a>Kod Derleniyor
 
 Bu örnek şunları gerektirir:
 

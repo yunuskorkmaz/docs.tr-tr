@@ -205,7 +205,7 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
-| **runtimeconfig. JSON** | YOK | YOK | YOK |
+| **runtimeconfig. JSON** | Yok | Yok | Yok |
 | **Ortam değişkeni** | `COMPlus_GCCpuGroup` | `0`-devre dışı<br/>`1` etkin | .NET Core 1,0 |
 | **.NET Framework için App. config** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false`-devre dışı<br/>`true` etkin |  |
 
@@ -331,7 +331,7 @@ Proje dosyası:
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
-| **runtimeconfig. JSON** | YOK | YOK | YOK |
+| **runtimeconfig. JSON** | Yok | Yok | Yok |
 | **Ortam değişkeni** | `COMPlus_GCLargePages` | `0`-devre dışı<br/>`1` etkin | .NET Core 3.0 |
 
 ## <a name="large-objects"></a>Büyük nesneler
@@ -344,7 +344,7 @@ Proje dosyası:
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
-| **runtimeconfig. JSON** | YOK | YOK | YOK |
+| **runtimeconfig. JSON** | Yok | Yok | Yok |
 | **Ortam değişkeni** | `COMPlus_gcAllowVeryLargeObjects` | `1` etkin<br/> `0`-devre dışı | .NET Core 1,0 |
 | **.NET Framework için App. config** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | `1` etkin<br/> `0`-devre dışı | .NET Framework 4.5 |
 
@@ -386,5 +386,5 @@ Proje dosyası:
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
-| **runtimeconfig. JSON** | YOK | YOK | YOK |
-| **Ortam değişkeni** | `COMPlus_GCName` | *string_path* | .NET Core 2,0 |
+| **runtimeconfig. JSON** | Yok | Yok | Yok |
+| **Ortam değişkeni** | `COMPlus_GCName` | *string_path* | .NET Core 2.0 |

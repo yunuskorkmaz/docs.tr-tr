@@ -304,7 +304,7 @@ WPF 'nin <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.
 
 <a name="PerformanceOptimization"></a>
 
-## <a name="performance-optimization"></a>Performans Iyileştirmesi
+## <a name="performance-optimization"></a>Performans İyileştirme
 
 Varsayılan olarak, birden çok uygulama etki alanı kullanıldığında, her bir uygulama için gereken çeşitli .NET Framework derlemeleri bu uygulamanın etki alanına yüklenir. Sonuç olarak, yeni uygulama etki alanları oluşturmak için gereken süre ve içindeki uygulamaları başlatmak performansı etkileyebilir. Ancak .NET Framework, uygulamaların zaten yüklü olmaları durumunda derlemeleri uygulama etki alanları arasında paylaşmasını sağlayarak başlangıç zamanlarını düşürmeniz için bir yol sağlar. Bunu, giriş noktası yöntemine (`Main`) uygulanması gereken <xref:System.LoaderOptimizationAttribute> özniteliğini kullanarak yapabilirsiniz. Bu durumda, uygulama tanımınızı uygulamak için yalnızca kod kullanmanız gerekir (bkz. [uygulama yönetimine genel bakış](application-management-overview.md)).
 

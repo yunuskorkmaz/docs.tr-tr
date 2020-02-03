@@ -85,7 +85,7 @@ Bazı uygulamalarda, bir çoklu belge arabirimi (MDI) alt penceresinin türü MD
     System.EventHandler(this.openToolStripMenuItem_Click);  
     ```  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek şunları gerektirir:  
   
 - `Form1` ve `Form2`adlı iki <xref:System.Windows.Forms.Form> denetimi.  

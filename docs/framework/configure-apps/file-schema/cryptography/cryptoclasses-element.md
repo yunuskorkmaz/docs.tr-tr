@@ -34,7 +34,7 @@ ms.locfileid: "76732882"
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
-### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}  
+### <a name="attributes"></a>Öznitelikler  
  Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  

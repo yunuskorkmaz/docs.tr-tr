@@ -13,7 +13,7 @@ ms.locfileid: "76733199"
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>Ad
 
 `dotnet msbuild`-bir projeyi ve tüm bağımlılıklarını oluşturur.
 

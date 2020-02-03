@@ -41,7 +41,7 @@ ms.locfileid: "76737931"
   [WPF'de XAML](xaml-in-wpf.md)  
   [Temel Öğeler](base-elements.md)  
   [Öğe Ağacı ve Serileştirme](element-tree-and-serialization.md)  
-  [Veri Erişimi](properties-wpf.md)  
+  [Özellikler](properties-wpf.md)  
   [Giriş](input-wpf.md)  
   [Kaynaklar](resources-wpf.md)  
   [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  

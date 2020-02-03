@@ -22,12 +22,12 @@ Verilerin hepsi düzenlenmez. <xref:System.Windows.Forms.DataGridView> denetimin
   
 ### <a name="to-make-a-column-read-only-programmatically"></a>Sütunu programlı olarak salt okunabilir hale getirmek için  
   
-- Ayarlama <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType> özelliğini `true`.  
+- <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType> özelliğini `true`olarak ayarlayın.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#064](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#064)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#064](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#064)]  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek şunları gerektirir:  
   
 - `CompanyName`adlı bir sütunla `dataGridView1` adlı <xref:System.Windows.Forms.DataGridView> denetim.  

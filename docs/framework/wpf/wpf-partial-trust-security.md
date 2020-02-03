@@ -44,7 +44,7 @@ ms.locfileid: "76743333"
 |Özellik alanı|Özellik|  
 |------------------|-------------|  
 |Genel|Tarayıcı penceresi<br /><br /> Kaynak erişimi sitesi<br /><br /> IsolatedStorage (512KB sınırı)<br /><br /> UIAutomation sağlayıcıları<br /><br /> Verme<br /><br /> Giriş Yöntemi Düzenleyicileri (IME'ler)<br /><br /> Tablet ekran kalemi ve mürekkep<br /><br /> Fare yakalama ve taşıma olayları kullanılarak sanal sürükleyip bırakma<br /><br /> OpenFileDialog<br /><br /> XAML serisini kaldırma (XamlReader. Load aracılığıyla)|  
-|Web tümleştirmesi|Tarayıcı Indirme Iletişim kutusu<br /><br /> En üst düzey kullanıcı tarafından başlatılan Gezinti<br /><br /> mailto: bağlantılar<br /><br /> Tekdüzen Kaynak tanımlayıcısı parametreleri<br /><br /> HTTPWebRequest<br /><br /> IFRAME 'de barındırılan WPF Içeriği<br /><br /> Çerçeve kullanarak aynı site HTML sayfalarının barındırılması<br /><br /> WebBrowser kullanarak aynı site HTML sayfalarının barındırılması<br /><br /> Web Hizmetleri (ASMX)<br /><br /> Web Hizmetleri (Windows Communication Foundation kullanarak)<br /><br /> Komut Dosyaları<br /><br /> Belge Nesne Modeli|  
+|Web tümleştirmesi|Tarayıcı Indirme Iletişim kutusu<br /><br /> En üst düzey kullanıcı tarafından başlatılan Gezinti<br /><br /> mailto: bağlantılar<br /><br /> Tekdüzen Kaynak tanımlayıcısı parametreleri<br /><br /> HTTPWebRequest<br /><br /> IFRAME 'de barındırılan WPF Içeriği<br /><br /> Çerçeve kullanarak aynı site HTML sayfalarının barındırılması<br /><br /> WebBrowser kullanarak aynı site HTML sayfalarının barındırılması<br /><br /> Web Hizmetleri (ASMX)<br /><br /> Web Hizmetleri (Windows Communication Foundation kullanarak)<br /><br /> Betik Oluşturma<br /><br /> Belge Nesne Modeli|  
 |Öğeleri|2B ve 3B<br /><br /> Animasyon<br /><br /> Medya (kaynak ve etki alanları arası)<br /><br /> Görüntü/ses/video|  
 |Okuyamadı|FlowDocuments<br /><br /> XPS belgeleri<br /><br /> Katıştırılmış & sistem yazı tipleri<br /><br /> CFF & TrueType yazı tipleri|  
 |Düzenleme|Yazım denetimi<br /><br /> RichTextBox<br /><br /> Düz metin ve mürekkep panosu desteği<br /><br /> Kullanıcı tarafından başlatılan yapıştırma<br /><br /> Seçili Içerik kopyalanıyor|  
@@ -131,13 +131,13 @@ ms.locfileid: "76743333"
 |İzin|Öznitelik|Yerel Intranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
 |DNS|DNS sunucularına erişme|Evet|Hayır|  
-|Ortam Değişkenleri|Okuma|Evet|Hayır|  
+|Ortam Değişkenleri|Oku|Evet|Hayır|  
 |Dosya Iletişimleri|Open|Evet|Evet|  
 |Dosya Iletişimleri|Edin|Evet|Hayır|  
 |Yalıtılmış Depolama|Kullanıcıya göre derleme yalıtımı|Evet|Hayır|  
 |Yalıtılmış Depolama|Bilinmeyen yalıtım|Evet|Evet|  
 |Yalıtılmış Depolama|Sınırsız Kullanıcı kotası|Evet|Hayır|  
-|Ortam|Güvenli ses, video ve görüntüler|Evet|Evet|  
+|Medya|Güvenli ses, video ve görüntüler|Evet|Evet|  
 |Yazdırma|Varsayılan yazdırma|Evet|Hayır|  
 |Yazdırma|Güvenli yazdırma|Evet|Evet|  
 |Yansıma|Pdb|Evet|Hayır|  
@@ -146,7 +146,7 @@ ms.locfileid: "76743333"
 |Kullanıcı Arabirimi|Edin|Evet|Hayır|  
 |Kullanıcı Arabirimi|Güvenli üst düzey pencereler|Evet|Evet|  
 |Kullanıcı Arabirimi|Kendi Pano|Evet|Evet|  
-|Web tarayıcısı|HTML 'e güvenli çerçeve gezintisi|Evet|Evet|  
+|Web Tarayıcısı|HTML 'e güvenli çerçeve gezintisi|Evet|Evet|  
   
 > [!NOTE]
 > Kesme ve yapıştırmaya yalnızca Kullanıcı başlatıldığında kısmi güvende izin verilir.  
@@ -165,6 +165,6 @@ ms.locfileid: "76743333"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Security](security-wpf.md)
+- [Güvenlik](security-wpf.md)
 - [WPF Güvenlik Stratejisi - Platform Güvenliği](wpf-security-strategy-platform-security.md)
 - [WPF Güvenlik Stratejisi - Güvenlik Mühendisliği](wpf-security-strategy-security-engineering.md)

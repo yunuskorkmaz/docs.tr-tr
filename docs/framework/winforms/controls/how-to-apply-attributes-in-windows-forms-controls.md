@@ -73,7 +73,7 @@ Tasarım ortamıyla doğru şekilde etkileşim kuran ve çalışma zamanında do
  [!code-csharp[System.ComponentModel.AttributesDemoControl#26](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#26)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#26](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#26)]  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
   
 - `AttributesDemoControl` barındıran form, derlemek için `AttributesDemoControl` derlemesine bir başvuru gerektirir.  
   

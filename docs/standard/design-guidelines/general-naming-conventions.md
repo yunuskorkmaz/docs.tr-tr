@@ -69,7 +69,7 @@ Bu bölümde, Word seçimiyle ilgili genel adlandırma kuralları, kısaltmalar 
 |**ulong**|**Int64**|**imzasız __int64**|**Int64**|
 |**float**|**Sunuculu**|**float**|**Sunuculu**|
 |**double**|**Çift**|**double**|**Çift**|
-|**bool**|**Boole değeri**|**bool**|**Boole değeri**|
+|**bool**|**Boolean**|**bool**|**Boolean**|
 |**char**|**Char**|**wchar_t**|**Char**|
 |**string**|**Dize**|**Dize**|**Dize**|
 |**object**|**Nesne**|**Nesne**|**Nesne**|
@@ -95,7 +95,7 @@ Bu bölümde, Word seçimiyle ilgili genel adlandırma kuralları, kısaltmalar 
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*
+ *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

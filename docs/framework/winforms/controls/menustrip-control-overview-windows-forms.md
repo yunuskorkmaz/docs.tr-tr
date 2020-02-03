@@ -47,7 +47,7 @@ Menüler, ortak bir temaya göre gruplanmış komutları tutarak kullanıcılar�
   
  Aşağıdaki tabloda, önemli <xref:System.Windows.Forms.MenuStrip> yardımcı sınıflar gösterilmektedir.  
   
-|Sınıf|Açıklama|  
+|örneği|Açıklama|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripMenuItem>|<xref:System.Windows.Forms.MenuStrip> veya <xref:System.Windows.Forms.ContextMenuStrip>üzerinde görünen seçilebilir bir seçeneği temsil eder.|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|Bir kısayol menüsünü temsil eder.|  

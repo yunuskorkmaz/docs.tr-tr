@@ -73,7 +73,7 @@ ms.locfileid: "76728066"
 
 6. **Çözüm için dizin oluştur** onay kutusunu seçin.
 
-7. **Tamam**'ı tıklatın.
+7. **Tamam**’a tıklayın.
 
      WPF Tasarımcısı **Tasarım** görünümünde açılır ve MainWindow. xaml dosyasını görüntüler. Visual Studio **My projem** klasörünü, Application. xaml dosyasını ve MainWindow. xaml dosyasını oluşturur.
 
@@ -99,9 +99,9 @@ ms.locfileid: "76728066"
 
 4. **Hedef Framework (tüm konfigürasyonlar)** listesinde .NET Framework 4 ' ü seçin. (.NET Framework 4 Istemci profili seçmeyin.)
 
-5. **Tamam**'ı tıklatın.
+5. **Tamam**’a tıklayın.
 
-     **Hedef Framework değişikliği** iletişim kutusu görüntülenir.
+     **Hedef çerçeve değişimi** iletişim kutusu görüntülenir.
 
 6. **Hedef çerçeve değişimi** Iletişim kutusunda **Evet**' e tıklayın.
 
@@ -288,7 +288,7 @@ ms.locfileid: "76728066"
 
 #### <a name="to-test-caching-in-the-wpf-application"></a>WPF uygulamasında önbelleğe almayı sınamak için
 
-1. Uygulamayı çalıştırmak için CTRL + F5 tuşlarına basın.
+1. Uygulamayı çalıştırmak için CTRL+F5'e basın.
 
      `MainWindow` penceresi görüntülenir.
 

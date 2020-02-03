@@ -43,7 +43,7 @@ ms.locfileid: "76743075"
      [!code-csharp[System.Windows.Forms.DataGridViewSelectedCollections#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/CS/DataGridViewSelectedCollections.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewSelectedCollections#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/VB/DataGridViewSelectedCollections.vb#30)]  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek şunları gerektirir:  
   
 - `selectedCellsButton`, `selectedRowsButton`ve `selectedColumnsButton`adlı, her biri <xref:System.Windows.Forms.Control.Click> olayı için işleyiciler içeren <xref:System.Windows.Forms.Button> denetimleri.  

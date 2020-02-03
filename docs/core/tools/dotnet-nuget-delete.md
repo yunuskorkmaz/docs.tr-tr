@@ -18,7 +18,7 @@ ms.locfileid: "76733128"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>Ad
 
 `dotnet nuget delete`-sunucudan bir paketi siler veya listesini kaldırır.
 

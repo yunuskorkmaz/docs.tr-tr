@@ -25,7 +25,7 @@ Aşağıdaki kod örneği, <xref:System.Windows.Forms.DataGridView> görüntü s
  [!code-csharp[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/CS/tictactoe.cs#0)]
  [!code-vb[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/VB/tictactoe.vb#0)]  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek şunları gerektirir:  
   
 - System ve System. Windows. Forms derlemelerine başvurular.  

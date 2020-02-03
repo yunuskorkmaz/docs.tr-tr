@@ -72,7 +72,7 @@ Birden çok belge arabirimi (MDI) kullanarak, aynı anda birden fazla belge aça
     this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);  
     ```  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek şunları gerektirir:  
   
 - `Form1` ve `Form2`adlı iki <xref:System.Windows.Forms.Form> denetimi.  
