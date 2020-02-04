@@ -1365,8 +1365,6 @@
               items:
                 - name: Yerleşik türler tablosu
                   href: language-reference/keywords/built-in-types-table.md
-                - name: Sayısal sonuçlar tablosunu biçimlendirme
-                  href: language-reference/keywords/formatting-numeric-results-table.md
         - name: Değiştiriciler
           items:
             - name: Erişim Değiştiricileri
