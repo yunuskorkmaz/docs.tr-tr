@@ -6,33 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 7dff42d612d740fa9d05f303721cef45e1a03c32
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 7305258570ad853afa88a231592fd4b6cd2dd74e
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901027"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965873"
 ---
-# <a name="microsoft-ui-automation"></a><span data-ttu-id="d68a8-102">Microsoft UI Otomasyonu</span><span class="sxs-lookup"><span data-stu-id="d68a8-102">Microsoft UI Automation</span></span>
+# <a name="microsoft-ui-automation"></a><span data-ttu-id="7faea-102">Microsoft UI Otomasyonu</span><span class="sxs-lookup"><span data-stu-id="7faea-102">Microsoft UI Automation</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="d68a8-103">Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen UI Otomasyon sınıflarını kullanmak isteyen .NET geliştiricileri için tasarlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="d68a8-103">This documentation is intended for .NET developers who want to use the managed UI Automation classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="d68a8-104">UI Otomasyonu hakkında en son bilgiler için bkz. [Windows AUTOMATION API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).</span><span class="sxs-lookup"><span data-stu-id="d68a8-104">For the latest information about UI Automation, see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>
+> <span data-ttu-id="7faea-103">Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen UI Otomasyon sınıflarını kullanmak isteyen .NET geliştiricileri için tasarlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="7faea-103">This documentation is intended for .NET developers who want to use the managed UI Automation classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="7faea-104">UI Otomasyonu hakkında en son bilgiler için bkz. [Windows AUTOMATION API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).</span><span class="sxs-lookup"><span data-stu-id="7faea-104">For the latest information about UI Automation, see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>
 
- <span data-ttu-id="d68a8-105">Microsoft UI Otomasyonu, Microsoft Windows için bir erişilebilirlik çerçevesidir.</span><span class="sxs-lookup"><span data-stu-id="d68a8-105">Microsoft UI Automation is an accessibility framework for Microsoft Windows.</span></span> <span data-ttu-id="d68a8-106">Kullanıcı arabirimi (UI) hakkındaki bilgilere programlı erişim sağlayarak yardımcı teknoloji ürünlerinin ve otomatikleştirilmiş test çerçevelerinin ihtiyaçlarını ele alınmaktadır.</span><span class="sxs-lookup"><span data-stu-id="d68a8-106">It addresses the needs of assistive technology products and automated test frameworks by providing programmatic access to information about the user interface (UI).</span></span> <span data-ttu-id="d68a8-107">Ayrıca, UI Otomasyonu, denetim ve uygulama geliştiricilerinin ürünlerini erişilebilir hale getirmenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="d68a8-107">In addition, UI Automation enables control and application developers to make their products accessible.</span></span>
+ <span data-ttu-id="7faea-105">Microsoft UI Otomasyonu, Microsoft Windows için bir erişilebilirlik çerçevesidir.</span><span class="sxs-lookup"><span data-stu-id="7faea-105">Microsoft UI Automation is an accessibility framework for Microsoft Windows.</span></span> <span data-ttu-id="7faea-106">Kullanıcı arabirimi (UI) hakkındaki bilgilere programlı erişim sağlayarak yardımcı teknoloji ürünlerinin ve otomatikleştirilmiş test çerçevelerinin ihtiyaçlarını ele alınmaktadır.</span><span class="sxs-lookup"><span data-stu-id="7faea-106">It addresses the needs of assistive technology products and automated test frameworks by providing programmatic access to information about the user interface (UI).</span></span> <span data-ttu-id="7faea-107">Ayrıca, UI Otomasyonu, denetim ve uygulama geliştiricilerinin ürünlerini erişilebilir hale getirmenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="7faea-107">In addition, UI Automation enables control and application developers to make their products accessible.</span></span>
 
- <span data-ttu-id="d68a8-108">Bu belgede, yönetilen kod için UI Otomasyonu API 'SI açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="d68a8-108">This documentation describes the UI Automation API for managed code.</span></span> <span data-ttu-id="d68a8-109">' De C++UI Otomasyonu programlama hakkında bilgi için bkz. [Win32 uygulamaları için UI Otomasyonu](/windows/desktop/winauto/windows-automation-api-portal).</span><span class="sxs-lookup"><span data-stu-id="d68a8-109">For information on programming for UI Automation in C++, see [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal).</span></span>
+ <span data-ttu-id="7faea-108">Bu belgede, yönetilen kod için UI Otomasyonu API 'SI açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="7faea-108">This documentation describes the UI Automation API for managed code.</span></span> <span data-ttu-id="7faea-109">' De C++UI Otomasyonu programlama hakkında bilgi için bkz. [Win32 uygulamaları için UI Otomasyonu](/windows/desktop/winauto/windows-automation-api-portal).</span><span class="sxs-lookup"><span data-stu-id="7faea-109">For information on programming for UI Automation in C++, see [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal).</span></span>
 
-## <a name="in-this-section"></a><span data-ttu-id="d68a8-110">Bu bölümde</span><span class="sxs-lookup"><span data-stu-id="d68a8-110">In this section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="7faea-110">Bu bölümde</span><span class="sxs-lookup"><span data-stu-id="7faea-110">In this section</span></span>
 
-- [<span data-ttu-id="d68a8-111">En İyi Erişilebilirlik Uygulamaları</span><span class="sxs-lookup"><span data-stu-id="d68a8-111">Accessibility Best Practices</span></span>](accessibility-best-practices.md)
-- [<span data-ttu-id="d68a8-112">UI Otomasyonu Temelleri</span><span class="sxs-lookup"><span data-stu-id="d68a8-112">UI Automation Fundamentals</span></span>](ui-automation-fundamentals.md)
-- [<span data-ttu-id="d68a8-113">Yönetilen Kod İçin UI Otomasyonu Sağlayıcıları</span><span class="sxs-lookup"><span data-stu-id="d68a8-113">UI Automation Providers for Managed Code</span></span>](ui-automation-providers-for-managed-code.md)
-- [<span data-ttu-id="d68a8-114">Yönetilen Kod İçin UI Otomasyonu İstemcileri</span><span class="sxs-lookup"><span data-stu-id="d68a8-114">UI Automation Clients for Managed Code</span></span>](ui-automation-clients-for-managed-code.md)
-- [<span data-ttu-id="d68a8-115">UI Otomasyonu Denetim Desenleri</span><span class="sxs-lookup"><span data-stu-id="d68a8-115">UI Automation Control Patterns</span></span>](ui-automation-control-patterns.md)
-- [<span data-ttu-id="d68a8-116">UI Otomasyonu Metin Deseni</span><span class="sxs-lookup"><span data-stu-id="d68a8-116">UI Automation Text Pattern</span></span>](ui-automation-text-pattern.md)
-- [<span data-ttu-id="d68a8-117">UI Otomasyonu Denetim Türleri</span><span class="sxs-lookup"><span data-stu-id="d68a8-117">UI Automation Control Types</span></span>](ui-automation-control-types.md)
-- [<span data-ttu-id="d68a8-118">UI Otomasyonu Belirtimi ve Topluluk Taahhüdü</span><span class="sxs-lookup"><span data-stu-id="d68a8-118">UI Automation Specification and Community Promise</span></span>](ui-automation-specification-and-community-promise.md)
+- [<span data-ttu-id="7faea-111">En İyi Erişilebilirlik Uygulamaları</span><span class="sxs-lookup"><span data-stu-id="7faea-111">Accessibility Best Practices</span></span>](accessibility-best-practices.md)
+- [<span data-ttu-id="7faea-112">UI Otomasyonu Temelleri</span><span class="sxs-lookup"><span data-stu-id="7faea-112">UI Automation Fundamentals</span></span>](ui-automation-fundamentals.md)
+- [<span data-ttu-id="7faea-113">Yönetilen Kod İçin UI Otomasyonu Sağlayıcıları</span><span class="sxs-lookup"><span data-stu-id="7faea-113">UI Automation Providers for Managed Code</span></span>](ui-automation-providers-for-managed-code.md)
+- [<span data-ttu-id="7faea-114">Yönetilen Kod İçin UI Otomasyonu İstemcileri</span><span class="sxs-lookup"><span data-stu-id="7faea-114">UI Automation Clients for Managed Code</span></span>](ui-automation-clients-for-managed-code.md)
+- [<span data-ttu-id="7faea-115">UI Otomasyonu Denetim Desenleri</span><span class="sxs-lookup"><span data-stu-id="7faea-115">UI Automation Control Patterns</span></span>](ui-automation-control-patterns.md)
+- [<span data-ttu-id="7faea-116">UI Otomasyonu Metin Deseni</span><span class="sxs-lookup"><span data-stu-id="7faea-116">UI Automation Text Pattern</span></span>](ui-automation-text-pattern.md)
+- [<span data-ttu-id="7faea-117">UI Otomasyonu Denetim Türleri</span><span class="sxs-lookup"><span data-stu-id="7faea-117">UI Automation Control Types</span></span>](ui-automation-control-types.md)
 
-## <a name="related-sections"></a><span data-ttu-id="d68a8-119">İlgili bölümler</span><span class="sxs-lookup"><span data-stu-id="d68a8-119">Related sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="7faea-118">İlgili bölümler</span><span class="sxs-lookup"><span data-stu-id="7faea-118">Related sections</span></span>
 
-- [<span data-ttu-id="d68a8-120">Erişilebilirlik örnekleri</span><span class="sxs-lookup"><span data-stu-id="d68a8-120">Accessibility Samples</span></span>](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 
+- [<span data-ttu-id="7faea-119">Erişilebilirlik örnekleri</span><span class="sxs-lookup"><span data-stu-id="7faea-119">Accessibility Samples</span></span>](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 
