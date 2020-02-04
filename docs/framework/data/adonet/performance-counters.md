@@ -1,22 +1,22 @@
 ---
-title: ADO.NET 'de performans sayaçları
+title: Performans Sayaçları
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: a529cae724d24b47d856f86744eebe87d68cb158
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 985951180a5c8ee09460b7fe4bf3213b986c3bb6
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783305"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980073"
 ---
 # <a name="performance-counters-in-adonet"></a>ADO.NET 'de performans sayaçları
-ADO.NET 2,0 <xref:System.Data.SqlClient> , ve <xref:System.Data.OracleClient>için desteği içeren performans sayaçları için genişletilmiş destek sunmuştur. Önceki ADO.net sürümlerinde bulunan performanssayaçlarıkullanımdankaldırılmıştırvebukonudaelealınanyeniperformanssayaçlarıyladeğiştirilmiştir.<xref:System.Data.SqlClient> Uygulamanızın durumunu ve kullandığı bağlantı kaynaklarını izlemek için ADO.NET performans sayaçlarını kullanabilirsiniz. Performans sayaçları, <xref:System.Diagnostics.PerformanceCounter> <xref:System.Diagnostics> Windows Performans İzleyicisi kullanılarak izlenebilir veya ad alanındaki sınıfı kullanılarak programlı bir şekilde erişilebilir.  
+ADO.NET 2,0, hem <xref:System.Data.SqlClient> hem de <xref:System.Data.OracleClient>için destek içeren performans sayaçları için genişletilmiş destek getirmiştir. Önceki ADO.NET sürümlerinde bulunan <xref:System.Data.SqlClient> performans sayaçları kullanımdan kaldırılmıştır ve bu konuda açıklanan yeni performans sayaçlarıyla değiştirilmiştir. Uygulamanızın durumunu ve kullandığı bağlantı kaynaklarını izlemek için ADO.NET performans sayaçlarını kullanabilirsiniz. Performans sayaçları, Windows performans Izleyicisi kullanılarak izlenebilir veya <xref:System.Diagnostics> ad alanındaki <xref:System.Diagnostics.PerformanceCounter> sınıfı kullanılarak programlı bir şekilde erişilebilir.  
   
 ## <a name="available-performance-counters"></a>Kullanılabilir performans sayaçları  
- Şu anda, için <xref:System.Data.SqlClient> ve <xref:System.Data.OracleClient> aşağıdaki tabloda açıklandığı gibi 14 farklı performans sayacı mevcuttur. Bireysel sayaçların adlarının Microsoft .NET çerçevesinin bölgesel sürümlerinde yerelleştirilmemiş olduğunu unutmayın.  
+ Şu anda <xref:System.Data.SqlClient> ve <xref:System.Data.OracleClient> için aşağıdaki tabloda açıklandığı gibi 14 farklı performans sayacı mevcuttur. Bireysel sayaçların adlarının Microsoft .NET çerçevesinin bölgesel sürümlerinde yerelleştirilmemiş olduğunu unutmayın.  
   
 |Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
@@ -24,23 +24,23 @@ ADO.NET 2,0 <xref:System.Data.SqlClient> , ve <xref:System.Data.OracleClient>iç
 |`HardDisconnectsPerSecond`|Bir veritabanı sunucusuna yapılan saniye başına bağlantı kesilen bağlantı sayısı.|  
 |`NumberOfActiveConnectionPoolGroups`|Etkin olan benzersiz bağlantı havuzu grupları sayısı. Bu sayaç, AppDomain 'de bulunan benzersiz bağlantı dizeleri sayısına göre denetlenir.|  
 |`NumberOfActiveConnectionPools`|Bağlantı havuzlarının toplam sayısı.|  
-|`NumberOfActiveConnections`|Şu anda kullanımda olan etkin bağlantı sayısı. **Not:**  Bu performans sayacı varsayılan olarak etkinleştirilmemiştir. Bu performans sayacını etkinleştirmek için bkz. [Varsayılan olarak devre dışı sayaçları etkinleştirme](#ActivatingOffByDefault).|  
-|`NumberOfFreeConnections`|Bağlantı havuzlarında kullanılabilecek bağlantı sayısı. **Not:**  Bu performans sayacı varsayılan olarak etkinleştirilmemiştir. Bu performans sayacını etkinleştirmek için bkz. [Varsayılan olarak devre dışı sayaçları etkinleştirme](#ActivatingOffByDefault).|  
+|`NumberOfActiveConnections`|Şu anda kullanımda olan etkin bağlantı sayısı. **Note:**  Bu performans sayacı varsayılan olarak etkinleştirilmemiştir. Bu performans sayacını etkinleştirmek için bkz. [Varsayılan olarak devre dışı sayaçları etkinleştirme](#ActivatingOffByDefault).|  
+|`NumberOfFreeConnections`|Bağlantı havuzlarında kullanılabilecek bağlantı sayısı. **Note:**  Bu performans sayacı varsayılan olarak etkinleştirilmemiştir. Bu performans sayacını etkinleştirmek için bkz. [Varsayılan olarak devre dışı sayaçları etkinleştirme](#ActivatingOffByDefault).|  
 |`NumberOfInactiveConnectionPoolGroups`|Ayıklama için işaretlenen benzersiz bağlantı havuzu grupları sayısı. Bu sayaç, AppDomain 'de bulunan benzersiz bağlantı dizeleri sayısına göre denetlenir.|  
 |`NumberOfInactiveConnectionPools`|En son etkinliği olmayan ve aktiften çıkarılmayı bekleyen etkin olmayan bağlantı havuzu sayısı.|  
 |`NumberOfNonPooledConnections`|Havuza alınmamış etkin bağlantı sayısı.|  
 |`NumberOfPooledConnections`|Bağlantı havuzu altyapısı tarafından yönetilmekte olan etkin bağlantı sayısı.|  
-|`NumberOfReclaimedConnections`|`Close` Ya da`Dispose` uygulama tarafından çağrılmayan çöp toplama aracılığıyla geri kazanılan bağlantı sayısı. Bağlantı kesilmesi performansını açıkça kapatma veya atma.|  
+|`NumberOfReclaimedConnections`|`Close` veya `Dispose` uygulama tarafından çağrılmayan çöp toplama aracılığıyla geri kazanılan bağlantı sayısı. Bağlantı kesilmesi performansını açıkça kapatma veya atma.|  
 |`NumberOfStasisConnections`|Şu anda bir eylemin tamamlanmasını bekleyen ve bu nedenle uygulamanız tarafından kullanılamayan bağlantı sayısı.|  
-|`SoftConnectsPerSecond`|Bağlantı havuzundan çekilen etkin bağlantı sayısı. **Not:**  Bu performans sayacı varsayılan olarak etkinleştirilmemiştir. Bu performans sayacını etkinleştirmek için bkz. [Varsayılan olarak devre dışı sayaçları etkinleştirme](#ActivatingOffByDefault).|  
-|`SoftDisconnectsPerSecond`|Bağlantı havuzuna döndürülen etkin bağlantı sayısı. **Not:**  Bu performans sayacı varsayılan olarak etkinleştirilmemiştir. Bu performans sayacını etkinleştirmek için bkz. [Varsayılan olarak devre dışı sayaçları etkinleştirme](#ActivatingOffByDefault).|  
+|`SoftConnectsPerSecond`|Bağlantı havuzundan çekilen etkin bağlantı sayısı. **Note:**  Bu performans sayacı varsayılan olarak etkinleştirilmemiştir. Bu performans sayacını etkinleştirmek için bkz. [Varsayılan olarak devre dışı sayaçları etkinleştirme](#ActivatingOffByDefault).|  
+|`SoftDisconnectsPerSecond`|Bağlantı havuzuna döndürülen etkin bağlantı sayısı. **Note:**  Bu performans sayacı varsayılan olarak etkinleştirilmemiştir. Bu performans sayacını etkinleştirmek için bkz. [Varsayılan olarak devre dışı sayaçları etkinleştirme](#ActivatingOffByDefault).|  
   
 ### <a name="connection-pool-groups-and-connection-pools"></a>Bağlantı havuzu grupları ve bağlantı havuzları  
- Windows kimlik doğrulaması (tümleşik güvenlik) kullanırken hem hem de `NumberOfActiveConnectionPoolGroups` `NumberOfActiveConnectionPools` performans sayaçlarını izlemeniz gerekir. Bunun nedeni, bağlantı havuzu gruplarının benzersiz bağlantı dizeleriyle eşlenme nedenidir. Tümleşik güvenlik kullanıldığında, bağlantı havuzları bağlantı dizelerine eşlenir ve ayrıca ayrı Windows kimlikleri için ayrı havuzlar oluşturur. Örneğin, her ikisi de `"Data Source=MySqlServer;Integrated Security=true"`aynı AppDomain içinde olan Fred ve Julie ise, bağlantı dizesi için bir bağlantı havuzu grubu oluşturulur ve biri Fred ve Julie için bir tane olmak üzere iki ek havuz oluşturulur. John ve Martha aynı SQL Server oturum açma `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`işlemiyle bir bağlantı dizesi kullanıyorsa, **lowprıkullanıcı** kimliği için yalnızca tek bir havuz oluşturulur.  
+ Windows kimlik doğrulaması (tümleşik güvenlik) kullanırken hem `NumberOfActiveConnectionPoolGroups` hem de `NumberOfActiveConnectionPools` performans sayaçlarını izlemeniz gerekir. Bunun nedeni, bağlantı havuzu gruplarının benzersiz bağlantı dizeleriyle eşlenme nedenidir. Tümleşik güvenlik kullanıldığında, bağlantı havuzları bağlantı dizelerine eşlenir ve ayrıca ayrı Windows kimlikleri için ayrı havuzlar oluşturur. Örneğin, Fred ve Julie, her ikisi de aynı AppDomain içinde `"Data Source=MySqlServer;Integrated Security=true"`, bağlantı dizesi için bir bağlantı havuzu grubu oluşturulur ve biri Fred ve Julie için olmak üzere iki ek havuz oluşturulur. John ve Martha aynı SQL Server oturum açma `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`sahip bir bağlantı dizesi kullanıyorsa, **Lowprıkullanıcı** kimliği için yalnızca tek bir havuz oluşturulur.  
   
 <a name="ActivatingOffByDefault"></a>   
 ### <a name="activating-off-by-default-counters"></a>Varsayılan olarak devre dışı sayaçları etkinleştirme  
- `NumberOfFreeConnections`Performans sayaçları `NumberOfActiveConnections` ,,`SoftConnectsPerSecond` , ve varsayılan olarak kapalıdır. `SoftDisconnectsPerSecond` Aşağıdaki bilgileri etkinleştirmek için uygulamanın yapılandırma dosyasına ekleyin:  
+ `NumberOfFreeConnections`, `NumberOfActiveConnections`, `SoftDisconnectsPerSecond`ve `SoftConnectsPerSecond` performans sayaçları varsayılan olarak kapalıdır. Aşağıdaki bilgileri etkinleştirmek için uygulamanın yapılandırma dosyasına ekleyin:  
   
 ```xml  
 <system.diagnostics>  

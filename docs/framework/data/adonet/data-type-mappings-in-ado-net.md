@@ -1,36 +1,36 @@
 ---
-title: ADO.NET’te Veri Türü Eşlemeleri
+title: Veri Türü Eşlemeleri
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
-ms.openlocfilehash: 9c0d19f724c1876f7dac86055bed2ef77ac76a77
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 610cdc1a679b0c51125075076120e12db97da421
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785595"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980203"
 ---
 # <a name="data-type-mappings-in-adonet"></a>ADO.NET’te Veri Türü Eşlemeleri
-.NET Framework, çalışma zamanında türlerin nasıl bildirildiği, kullanıldığı ve yönetildiğini tanımlayan ortak tür sistemine dayalıdır. Her ikisi de <xref:System.Object> temel türden türetilen değer türleri ve başvuru türlerinden oluşur. Bir veri kaynağıyla çalışırken, açıkça belirtilmemişse veri türü veri sağlayıcısından algılanır. Örneğin, bir nesne <xref:System.Data.DataSet> belirli bir veri kaynağından bağımsızdır. İçindeki `DataSet` veriler bir veri kaynağından alınır ve değişiklikler bir `DataAdapter`kullanılarak veri kaynağına geri kaydedilir. Diğer bir deyişle, bir `DataAdapter` veri kaynağından <xref:System.Data.DataTable> değerleri `DataSet` olan bir ile bir doldurduğunda, içindeki sütunların sonuç veri türleri, .NET Framework veri sağlayıcısına özgü `DataTable` türler yerine .NET Framework türlerdir. veri kaynağına bağlanmak için kullanılır.  
+.NET Framework, çalışma zamanında türlerin nasıl bildirildiği, kullanıldığı ve yönetildiğini tanımlayan ortak tür sistemine dayalıdır. Hem değer türleri hem de başvuru türlerinden oluşur ve bunların hepsi <xref:System.Object> temel türünden türetilir. Bir veri kaynağıyla çalışırken, açıkça belirtilmemişse veri türü veri sağlayıcısından algılanır. Örneğin, bir <xref:System.Data.DataSet> nesnesi herhangi bir belirli veri kaynağından bağımsızdır. Bir `DataSet` veriler bir veri kaynağından alınır ve değişiklikler `DataAdapter`kullanılarak veri kaynağına geri kaydedilir. Bu, bir `DataAdapter` bir <xref:System.Data.DataTable> veri kaynağından alınan bir `DataSet` doldurduğunda, `DataTable` sütunların elde edilen veri türleri, veri kaynağına bağlanmak için kullanılan .NET Framework veri sağlayıcısına özgü türler yerine .NET Framework türlerdir.  
   
- Benzer şekilde, bir `DataReader` veri kaynağından bir değer döndürdüğünde, sonuçta elde edilen değer .NET Framework türüne sahip yerel bir değişkende depolanır. Ve yöntemlerinin her `Fill`ikisi için,.NETFrameworktürü.NETFrameworkverisağlayıcısındandöndürülendeğerdençıkarsanamıyor.`Get` `DataAdapter` `DataReader`  
+ Benzer şekilde, bir `DataReader` veri kaynağından bir değer döndürdüğünde, elde edilen değer bir .NET Framework türüne sahip yerel bir değişkende depolanır. `DataAdapter` `Fill` işlemler ve `DataReader``Get` yöntemleri için .NET Framework türü .NET Framework veri sağlayıcısından döndürülen değerden algılanır.  
   
- Gösterilen veri türüne güvenmek yerine, döndürülmekte olan değerin belirli bir türünü bildiğiniz `DataReader` zaman türü belirlenmiş erişimci yöntemlerini kullanabilirsiniz. Türü belirlenmiş erişimci yöntemleri, bir değeri belirli bir .NET Framework türüne döndürerek daha iyi performans sağlar ve bu da ek tür dönüştürme gereksinimini ortadan kaldırır.  
+ Çıkarılan veri türüne güvenmek yerine, döndürülmekte olan değerin belirli bir türünü bildiğiniz `DataReader` türü belirlenmiş erişimci yöntemlerini kullanabilirsiniz. Türü belirlenmiş erişimci yöntemleri, bir değeri belirli bir .NET Framework türüne döndürerek daha iyi performans sağlar ve bu da ek tür dönüştürme gereksinimini ortadan kaldırır.  
   
 > [!NOTE]
-> .NET Framework veri sağlayıcısı veri türleri için null değerler tarafından `DBNull.Value`temsil edilir.  
+> .NET Framework veri sağlayıcısı veri türleri için null değerler `DBNull.Value`temsil edilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [SQL Server Veri Türü Eşlemeleri](sql-server-data-type-mappings.md)  
- İçin <xref:System.Data.SqlClient>gösterilen veri türü eşlemelerini ve veri erişimcisi yöntemlerini listeler.  
+ <xref:System.Data.SqlClient>için gösterilen veri türü eşlemelerini ve veri erişimci yöntemlerini listeler.  
   
  [OLE DB Veri Türü Eşlemeleri](ole-db-data-type-mappings.md)  
- İçin <xref:System.Data.OleDb>gösterilen veri türü eşlemelerini ve veri erişimcisi yöntemlerini listeler.  
+ <xref:System.Data.OleDb>için gösterilen veri türü eşlemelerini ve veri erişimci yöntemlerini listeler.  
   
  [ODBC Veri Türü Eşlemeleri](odbc-data-type-mappings.md)  
- İçin <xref:System.Data.Odbc>gösterilen veri türü eşlemelerini ve veri erişimcisi yöntemlerini listeler.  
+ <xref:System.Data.Odbc>için gösterilen veri türü eşlemelerini ve veri erişimci yöntemlerini listeler.  
   
  [Oracle Veri Türü Eşlemeleri](oracle-data-type-mappings.md)  
- İçin <xref:System.Data.OracleClient>gösterilen veri türü eşlemelerini ve veri erişimcisi yöntemlerini listeler.  
+ <xref:System.Data.OracleClient>için gösterilen veri türü eşlemelerini ve veri erişimci yöntemlerini listeler.  
   
  [Kayan Noktalı Sayılar](floating-point-numbers.md)  
  Kayan nokta numaralarıyla çalışırken geliştiricilerin sıkça karşılaştığı sorunları açıklar.  

@@ -1,13 +1,13 @@
 ---
-title: Gezinti özelliği-ADO.NET
+title: Gezinti özelliği
 ms.date: 03/30/2017
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
-ms.openlocfilehash: afb2043abf70fa92ea7cdf8d1e8246d5cdfdba74
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b6c286e63322a66be0407c864295a20685df2b7f
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738391"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980164"
 ---
 # <a name="navigation-property"></a>Gezinti özelliği
 
@@ -35,7 +35,7 @@ Aşağıdaki diyagramda üç varlık türü olan kavramsal bir model gösterilme
 
 [!code-xml[EDM_Example_Model#EntityExample](~/samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]
 
-XML özniteliklerinin bir gezinti özelliği tanımlamak için gereken bilgileri iletmek için kullanıldığını unutmayın: öznitelik `Name` özelliğin adını, `Relationship` gezindiği ilişkinin adını içerir ve `FromRole` ve `ToRole` içerir ilişkilendirmenin uçları.
+XML özniteliklerinin bir gezinti özelliği tanımlamak için gereken bilgileri iletmek için kullanıldığını unutmayın: öznitelik `Name` özelliğin adını, `Relationship` gezindiği ilişkinin adını içerir ve `FromRole` ve `ToRole` ilişkinin uçlarını içerir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,13 +1,13 @@
 ---
-title: ADO.NET Veri Kümeleri
+title: Veri Kümeleri
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 85c0df88d7e919649eae8d2b4e551b26cc684dd8
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 86c14f516ff82e4d9acf7cc3078e04590971a8a1
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634943"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980307"
 ---
 # <a name="adonet-datasets"></a>ADO.NET Veri Kümeleri
 <xref:System.Data.DataSet> nesnesi, ADO.NET ile bağlı olmayan, dağıtılmış veri senaryolarını desteklemek için merkezi bir merkezidir. Veri **kümesi** , veri kaynağından bağımsız olarak tutarlı bir ilişkisel programlama modeli sağlayan verilerin bellekte yerleşik bir gösterimidir. Bu, birden çok ve farklı veri kaynaklarıyla, XML verileriyle birlikte kullanılabilir veya uygulamadaki verileri yerel olarak yönetebilir. Veri **kümesi** , ilişkili tablolar, kısıtlamalar ve tablolar arasındaki ilişkiler dahil olmak üzere bir bütün veri kümesini temsil eder. Aşağıdaki çizimde **veri kümesi** nesne modeli gösterilmektedir.  

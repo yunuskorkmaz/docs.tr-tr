@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1ef705fcf046af1f4136ddcf1b29f417c0d72c83
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4fa01922c5c3097adb124d67272b9f449b70ada3
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741858"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979878"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF Güvenlik Stratejisi - Platform Güvenliği
 Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetleri sağladığından, işletim sistemini, CLR 'yi ve Internet Explorer 'ı içeren temel platformun güvenlik özelliklerinden de yararlanır. Bu katmanlar WPF 'e, aşağıdaki şekilde gösterildiği gibi, tek bir hata noktası oluşmasını önlemeye yönelik güçlü, derinlemesine bir güvenlik modeli sağlamak üzere birleştirilir:  
@@ -35,14 +35,14 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetleri sağladı�
 Windows çekirdeği, WPF ile oluşturulmuş olanlar da dahil olmak üzere tüm Windows uygulamaları için güvenlik temelini oluşturan çeşitli güvenlik özellikleri sağlar. Bu konu, WPF için önemli olan bu güvenlik özelliklerinin kapsamını ele almaktadır ve WPF 'in bunlarla nasıl tümleştirilebildiğinden daha ayrıntılı savunma sağlar.  
   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
- Genel İnceleme ve Windows 'un güçlendirilemesinin yanı sıra, bu konuda tartışıyoruz [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] üç temel özellik vardır:  
+ Windows XP SP2 'nin Genel İnceleme ve güçlendirmeye ek olarak, bu konuda tartışacak üç temel özellik vardır:  
   
 - /GS derlemesi  
   
 - Microsoft Windows Update.  
   
 #### <a name="gs-compilation"></a>/GS derlemesi  
- [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)], arabellek taşmalarını azaltmaya yardımcı olmak için CLR gibi tüm WPF bağımlılıkları dahil olmak üzere birçok çekirdek sistem kitaplığını yeniden derleyerek koruma sağlar. Bu, C/C++ komut satırı derleyicisi ile/GS parametresi kullanılarak elde edilir. Arabellek taşmalarının açıkça kaçınılması gerekse de,/GS derlemesi, bu, yanlışlıkla veya kötü amaçlı olarak oluşturulan olası güvenlik açıklarına karşı derinlemesine savunma sağlayan bir örnek sağlar.  
+ Windows XP SP2, arabellek taşmalarını azaltmaya yardımcı olmak için CLR gibi tüm WPF bağımlılıkları dahil olmak üzere birçok çekirdek sistem kitaplığını yeniden derleyerek koruma sağlar. Bu, C/C++ komut satırı derleyicisi ile/GS parametresi kullanılarak elde edilir. Arabellek taşmalarının açıkça kaçınılması gerekse de,/GS derlemesi, bu, yanlışlıkla veya kötü amaçlı olarak oluşturulan olası güvenlik açıklarına karşı derinlemesine savunma sağlayan bir örnek sağlar.  
   
  Geçmişte, arabellek aşımları birçok yüksek etki güvenliği güvenlik açığından oluşur. Bir saldırgan, bir arabelleğin sınırlarını aşan kötü amaçlı kod eklenmesine izin veren bir kod güvenlik açığından yararlanıyorsa bir arabellek taşması oluşur. Bu daha sonra, saldırganın kodunun yürütülmesine neden olmak için bir işlevin dönüş adresinin üzerine yazarak kodun yürütüldüğü işlemi bir saldırganın almasına izin verir. Sonuç, ele geçirilen işlemle aynı ayrıcalıklarla rastgele kod yürüten kötü amaçlı koddur.  
   
@@ -103,7 +103,7 @@ Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı eri�
   
 - **Yerel Intranet**. İntranetten başlatılan uygulamalar. (Biraz güvenilir).  
   
-- **İnternet**. Internet 'ten başlatılan uygulamalar. (En az güvenilir).  
+- **Internet**. Internet 'ten başlatılan uygulamalar. (En az güvenilir).  
   
 - **Güvenilen siteler**. Bir kullanıcı tarafından güvenilen olarak tanımlanan uygulamalar. (En az güvenilir).  
   
@@ -115,7 +115,7 @@ Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı eri�
   
 - **LocalIntranet**. **Yerel Intranet** bölgesinden başlatılan uygulamalar için. Yalıtılmış depolama, sınırsız Kullanıcı Arabirimi erişimi, kısıtlanmamış dosya iletişimleri, sınırlı yansıma, ortam değişkenlerine sınırlı erişim dahil olmak üzere bir istemci makinenin kaynaklarına orta erişim sağlamak için izin alt kümesi verilir. Kayıt defteri gibi kritik kaynakların izinleri sağlanmaz.  
   
-- **İnternet**. **Internet** veya **Güvenilen siteler** bölgesinden başlatılan uygulamalar için. Yalıtılmış depolama, yalnızca dosya açma ve sınırlı kullanıcı arabirimi dahil olmak üzere bir istemci makinenin kaynaklarına sınırlı erişim sağlamak için bir izin alt kümesi verilmiştir. Temelde, bu izin kümesi, uygulamaları istemci makineden ayırır.  
+- **Internet**. **Internet** veya **Güvenilen siteler** bölgesinden başlatılan uygulamalar için. Yalıtılmış depolama, yalnızca dosya açma ve sınırlı kullanıcı arabirimi dahil olmak üzere bir istemci makinenin kaynaklarına sınırlı erişim sağlamak için bir izin alt kümesi verilmiştir. Temelde, bu izin kümesi, uygulamaları istemci makineden ayırır.  
   
  **Güvenilmeyen siteler** bölgesinde olduğu şekilde tanımlanan uygulamalara, CA 'lar tarafından hiçbir izin verilmez. Sonuç olarak, önceden tanımlanmış bir izin kümesi onlar için mevcut değildir.  
   
@@ -189,6 +189,6 @@ Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı eri�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kod erişim güvenliği](../misc/code-access-security.md)
-- [Güvenlik](security-wpf.md)
+- [Security](security-wpf.md)
 - [WPF Kısmi Güven Güvenliği](wpf-partial-trust-security.md)
 - [WPF Güvenlik Stratejisi - Güvenlik Mühendisliği](wpf-security-strategy-security-engineering.md)

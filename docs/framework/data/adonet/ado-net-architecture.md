@@ -1,13 +1,13 @@
 ---
-title: ADO.NET Mimarisi
+title: Mimari
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 2692959d5a3e12d503d91b55e19f744bb9abd112
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: de33c9964f3c03b18593b0df0607f941d2117be0
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568453"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980320"
 ---
 # <a name="adonet-architecture"></a>ADO.NET Mimarisi
 Veri işleme, temelde genellikle bağlantı tabanlı, iki katmanlı bir modele bağlıdır. Veri işleme giderek çok katmanlı mimarilerin kullanıldığı için programcılar, uygulamaları için daha iyi ölçeklenebilirlik sağlamak üzere bağlantısı kesilen bir yaklaşıma geçiş yapıyor.  
@@ -40,7 +40,7 @@ ADO.NET mimarisi
  `DataSet`tarafından sunulan işlevselliğe ihtiyacınız yoksa, verilerinizi yalnızca ileri, Salt okunabilir bir şekilde döndürmek için `DataReader` kullanarak uygulamanızın performansını artırabilirsiniz. `DataAdapter`, bir `DataSet` içeriğini doldurmak için `DataReader` kullansa da (bkz. [DataAdapter 'tan bir veri kümesini doldurma](populating-a-dataset-from-a-dataadapter.md)) `DataReader`, `DataSet`tarafından tüketilen belleği kaydedecağından ve `DataSet`içeriğini oluşturmak ve doldurmak için gereken işlemden kaçınmak için performansı artırabilir.  
   
 ## <a name="linq-to-dataset"></a>LINQ - DataSet  
- LINQ to DataSet, veri kümesi nesnesinde önbelleğe alınan veriler üzerinde sorgu özellikleri ve derleme zamanı tür denetimi sağlar. Sorgular, C# veya Visual Basic gibi .NET Framework geliştirme dilinden birine yazmanızı sağlar. Daha fazla bilgi için bkz. [LINQ to DataSet](linq-to-dataset.md).  
+ LINQ to DataSet, veri kümesi nesnesinde önbelleğe alınan veriler üzerinde sorgu özellikleri ve derleme zamanı tür denetimi sağlar. Sorgular, C# veya Visual Basic gibi .NET Framework geliştirme dilinden birine yazmanızı sağlar. Daha fazla bilgi için [LINQ to DataSet](linq-to-dataset.md).  
   
 ## <a name="linq-to-sql"></a>LINQ - SQL  
  LINQ to SQL, bir ara kavramsal model kullanılmadan ilişkisel bir veritabanının veri yapılarına eşlenmiş bir nesne modeline karşı sorguları destekler. Her tablo ayrı bir sınıf tarafından temsil edilir ve nesne modelini ilişkisel veritabanı şemasına sıkı bir şekilde ayırır. LINQ to SQL, nesne modelindeki dil ile tümleşik sorguları Transact-SQL ' e çevirir ve yürütmek üzere veritabanına gönderir. Veritabanı sonuçları döndürdüğünde LINQ to SQL sonuçları nesnelere geri çevirir. Daha fazla bilgi için bkz. [LINQ to SQL](./sql/linq/index.md).  
@@ -49,7 +49,7 @@ ADO.NET mimarisi
  ADO.NET Entity Framework, geliştiricilerin doğrudan ilişkisel bir depolama şemasına karşı programlama yerine kavramsal bir uygulama modeline karşı programlama yaparak veri erişimi uygulamaları oluşturmalarına olanak tanımak üzere tasarlanmıştır. Amaç, veri odaklı uygulamalar için gereken kod ve bakım miktarını azaltmaktır. Daha fazla bilgi için bkz. [ADO.NET Entity Framework](./ef/index.md).  
   
 ## <a name="wcf-data-services"></a>WCF Veri Hizmetleri  
- WCF Veri Hizmetleri, Web 'de veya intranette veri hizmetlerini dağıtmak için kullanılır. Veriler, Varlık Veri Modeli belirtimlerine göre varlıklar ve ilişkiler olarak yapılandırılır. Bu modelde dağıtılan verilere standart HTTP protokolü tarafından adreslenebilir. Daha fazla bilgi için bkz. [WCF Veri Hizmetleri 4,5](../wcf/index.md).  
+ WCF Veri Hizmetleri, Web 'de veya intranette veri hizmetlerini dağıtmak için kullanılır. Veriler, Varlık Veri Modeli belirtimlerine göre varlıklar ve ilişkiler olarak yapılandırılır. Bu modelde dağıtılan verilere standart HTTP protokolü tarafından adreslenebilir. Daha fazla bilgi için [WCF Veri Hizmetleri 4.5](../wcf/index.md).  
   
 ## <a name="xml-and-adonet"></a>XML ve ADO.NET  
  ADO.NET, verilere bağlantısız erişim sağlamak için XML 'nin gücünden yararlanır. ADO.NET, .NET Framework içindeki XML sınıflarıyla birlikte tasarlanmıştır; her ikisi de tek bir mimarinin bileşenleridir.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 7bd56d44eeb6af70b94cdde77d48e917ef8afb9a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 30ea92f09bc655796b6bc268212b6d9e0e05bd9b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347790"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919326"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation Gizlilik Bilgileri
 Microsoft, son kullanıcıların gizliliğini korumayı taahhüt etmektedir. Windows Communication Foundation (WCF), sürüm 3,0 kullanarak bir uygulama oluşturduğunuzda, uygulamanız son kullanıcılarınızın gizliliğini etkileyebilir. Örneğin, uygulamanız kullanıcı iletişim bilgilerini açıkça toplayabilir veya Internet üzerinden Web sitenize bilgi talep edebilir veya gönderebilir. Uygulamanıza Microsoft teknolojisi eklerseniz, bu teknolojinin gizliliği etkileyebilecek kendi davranışı olabilir. WCF, siz veya son kullanıcı tarafından bize göndermek için seçim yapmadıkça Microsoft 'a herhangi bir bilgi göndermez.  
@@ -54,7 +54,7 @@ Microsoft, son kullanıcıların gizliliğini korumayı taahhüt etmektedir. Win
 ## <a name="auditing"></a>Denetim  
  Denetim, kimlik doğrulama ve yetkilendirme olaylarının başarısını ve başarısızlığını kaydeder. Denetim kayıtları şu verileri içerir: hizmet URI 'SI, eylem URI 'SI ve arayanın kimliği.  
   
- Ayrıca Denetim, yönetici ileti günlüğe kaydetme yapılandırmasını değiştirdiğinde (açık veya kapalı), ileti günlüğü, uygulamaya özgü verileri üst bilgilerde ve gövdelerde günlüğe kaydeder. [!INCLUDE[wxp](../../../includes/wxp-md.md)]için, uygulama olay günlüğüne bir kayıt kaydedilir. Windows Vista ve Windows Server 2003 için güvenlik olay günlüğüne bir kayıt kaydedilir.  
+ Ayrıca Denetim, yönetici ileti günlüğe kaydetme yapılandırmasını değiştirdiğinde (açık veya kapalı), ileti günlüğü, uygulamaya özgü verileri üst bilgilerde ve gövdelerde günlüğe kaydeder. Windows XP 'de, uygulama olay günlüğüne bir kayıt kaydedilir. Windows Vista ve Windows Server 2003 için güvenlik olay günlüğüne bir kayıt kaydedilir.  
   
 ## <a name="transactions"></a>İşlemler  
  İşlemler özelliği bir WCF uygulamasına işlem hizmetleri sağlar.  
@@ -127,13 +127,13 @@ Microsoft, son kullanıcıların gizliliğini korumayı taahhüt etmektedir. Win
   
  Kaldırılan anahtarlar:  
   
- xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" ve xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" Için \-  
+ xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" ve xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" Için \-  
   
  wst:BinarySecret  
   
  Wst: entropi  
   
- xmlns Için \-: ws& = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" ve xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ Için \- xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" ve xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  WSS: parola  
   
@@ -141,7 +141,7 @@ Microsoft, son kullanıcıların gizliliğini korumayı taahhüt etmektedir. Win
   
  Kaldırılan potansiyel kişisel bilgiler:  
   
- xmlns Için \-: ws& = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" ve xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ Için \- xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" ve xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  WSS: Kullanıcı adı  
   
@@ -304,7 +304,7 @@ Microsoft, son kullanıcıların gizliliğini korumayı taahhüt etmektedir. Win
   
  Aşağıdaki ad alanları için:  
   
- xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" ve xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (örneğin, kullanılabilir bir eylem yoksa)  
+ xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" ve xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (örneğin, kullanılabilir bir eylem yoksa)  
   
  Bu gövde öğeleri için, anahtar değişimini içeren bilgiler kaldırılır:  
   

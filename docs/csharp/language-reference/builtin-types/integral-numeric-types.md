@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 058e75c81c18f0ec73140f6fc13a91f4e0012a61
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2fb4d7185ac85b29f2cc2d2e7a29e192f91a0868
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036368"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980151"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Integral sayısal türleri (C# başvuru)
 
@@ -90,17 +90,17 @@ Yukarıdaki örnek ayrıca, 7,0 ile C# başlayarak desteklenen bir *rakam ayır�
 Bir tamsayı sabit değerinin türü, soneki tarafından aşağıdaki şekilde belirlenir:
 
 - Değişmez değer için bir sonek yoksa, türü, değerinin gösterilebileceği aşağıdaki türlerin birincsahiptir: `int`, `uint`, `long`, `ulong`.
-- Sabit değer `U` veya `u` ile sondiçeriyorsa, türü, değeri gösterilebileceği aşağıdaki türlerin birincsahiptir: `uint`, `ulong`.
-- Sabit değer `L` veya `l` ile sondiçeriyorsa, türü, değeri gösterilebileceği aşağıdaki türlerin birincsahiptir: `long`, `ulong`.
+- Sabit değer `U` veya `u`ile sondiçeriyorsa, türü, değeri gösterilebileceği aşağıdaki türlerin birincsahiptir: `uint`, `ulong`.
+- Sabit değer `L` veya `l`ile sondiçeriyorsa, türü, değeri gösterilebileceği aşağıdaki türlerin birincsahiptir: `long`, `ulong`.
 
   > [!NOTE]
-  > Küçük harf `l` bir sonek olarak kullanabilirsiniz. Ancak, harf `l` `1` basamak ile karıştırıabileceğinden bu bir derleyici uyarısı oluşturur. Açıklık için `L` kullanın.
+  > Küçük harf `l` bir sonek olarak kullanabilirsiniz. Ancak, harf `l` `1`basamak ile karıştırıabileceğinden bu bir derleyici uyarısı oluşturur. Açıklık için `L` kullanın.
 
-- Sabit değer `UL`, `Ul`, `uL`, `ul`, `LU`, `Lu`, `lU` veya `lu` tarafından düzeltildiğinde, türü `ulong` olur.
+- Sabit değer `UL`, `Ul`, `uL`, `ul`, `LU`, `Lu`, `lU`veya `lu`tarafından düzeltildiğinde, türü `ulong`olur.
 
-Bir tamsayı değişmez değeri ile temsil edilen değer <xref:System.UInt64.MaxValue?displayProperty=nameWithType> aşarsa, bir derleyici hatası [CS1021](../../misc/cs1021.md) oluşur.
+Bir tamsayı değişmez değeri ile temsil edilen değer <xref:System.UInt64.MaxValue?displayProperty=nameWithType>aşarsa, bir derleyici hatası [CS1021](../../misc/cs1021.md) oluşur.
 
-Bir tamsayı değişmez değerinin belirlenen türü `int` ise ve değişmez değer tarafından temsil edilen değer hedef türün aralığı içindeyse, değer örtük olarak `sbyte`, `byte`, `short`, `ushort`dönüştürülebilir , `uint`veya `ulong`:
+Bir tamsayı değişmez değerinin belirlenen türü `int` ise ve değişmez değer tarafından temsil edilen değer hedef türünün aralığı içindeyse, değer örtük olarak `sbyte`, `byte`, `short`, `ushort`, `uint`veya `ulong`dönüştürülebilir:
 
 ```csharp
 byte a = 17;
@@ -118,7 +118,7 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>Dönüşümler
 
-Herhangi bir integral sayısal türü diğer tüm integral sayısal türlerine dönüştürebilirsiniz. Hedef türü kaynak türünün tüm değerlerini depolayabiliyorsanız, dönüştürme örtük olur. Aksi takdirde, açık bir dönüştürme çağırmak için [`()` cast işlecini](../operators/type-testing-and-cast.md#cast-operator-) kullanmanız gerekir. Daha fazla bilgi için bkz. [yerleşik sayısal dönüştürmeler](numeric-conversions.md).
+Herhangi bir integral sayısal türü diğer tüm integral sayısal türlerine dönüştürebilirsiniz. Hedef türü kaynak türünün tüm değerlerini depolayabiliyorsanız, dönüştürme örtük olur. Aksi takdirde, açık bir dönüştürme çağırmak için [`()`cast işlecini](../operators/type-testing-and-cast.md#cast-operator-) kullanmanız gerekir. Daha fazla bilgi için bkz. [yerleşik sayısal dönüştürmeler](numeric-conversions.md).
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -132,5 +132,5 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 - [C#başvurunun](../index.md)
 - [Yerleşik türler tablosu](../keywords/built-in-types-table.md)
 - [Kayan nokta türleri](floating-point-numeric-types.md)
-- [Sayısal sonuçlar tablosunu biçimlendirme](../keywords/formatting-numeric-results-table.md)
+- [Standart sayısal biçim dizeleri](../../../standard/base-types/standard-numeric-format-strings.md)
 - [.NET Sayısal Değerleri](../../../standard/numerics.md)

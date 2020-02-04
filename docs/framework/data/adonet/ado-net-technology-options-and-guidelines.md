@@ -1,13 +1,13 @@
 ---
-title: ADO.NET Teknoloji Seçenekleri ve Yönergeleri
+title: Teknoloji seçenekleri ve yönergeleri
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: 6c7ff59be7c163117ba990331e7cae75d10e8f59
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 9be44a5b9c06a310581aee57cdb6a304127f8a12
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569428"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980281"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET Teknoloji Seçenekleri ve Yönergeleri
 ADO.NET veri platformu, geliştiriciler için gereken kodlama ve bakım miktarını, kavramsal varlık veri modellerine karşı programlamalarına izin verecek şekilde azaltmak için çok bölgeli bir stratejidir. Bu platform, ADO.NET Entity Framework ve ilgili teknolojileri içerir.  
@@ -30,14 +30,14 @@ ADO.NET veri platformu, geliştiriciler için gereken kodlama ve bakım miktarı
 ### <a name="entityclient"></a>EntityClient  
  EntityClient, bir Varlık Veri Modeli etkileşim kurmak için kullanılan yeni bir .NET Framework veri sağlayıcısıdır. EntityClient, bir <xref:System.Data.EntityClient.EntityDataReader>döndüren <xref:System.Data.EntityClient.EntityConnection> ve <xref:System.Data.EntityClient.EntityCommand> nesnelerini ortaya çıkaran .NET Framework veri sağlayıcısı modelini izler. EntityClient, Entity SQL diliyle çalışarak, depolamaya özgü veri sağlayıcılarına esnek eşleme sağlar. Daha fazla bilgi için bkz. [Entity Framework Için EntityClient sağlayıcısı](./ef/entityclient-provider-for-the-entity-framework.md).  
   
-### <a name="entity-data-model-tools"></a>Varlık Veri Modeli araçları  
+### <a name="entity-data-model-tools"></a>Varlık veri modeli araçları  
  Entity Framework, EDM uygulamaları oluşturmayı kolaylaştırmak için komut satırı araçları, sihirbazlar ve tasarımcılar sağlar. EntityDataSource denetimi, EDM tabanlı veri bağlama senaryolarını destekler. EntityDataSource denetiminin programlama yüzeyi, Visual Studio 'daki diğer veri kaynağı denetimlerine benzer. Daha fazla bilgi için bkz. [ADO.NET varlık veri modeli araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)).  
   
 ## <a name="linq-to-sql"></a>LINQ - SQL  
  LINQ to SQL, .NET Framework sınıfları kullanarak SQL Server veritabanını modelleyerek bir nesne ilişkisel eşleme (veya/e) uygulamasıdır. LINQ to SQL, LINQ kullanarak veritabanınızı sorgulamanızı ve verileri güncelleştirme, ekleme ve silme gibi verileri de silebilir. LINQ to SQL, veri doğrulama ve iş mantığı kurallarını veri modelinize tümleştirmenin kolay bir yolunu sağlayan işlemler, görünümler ve saklı yordamları destekler. Bir veritabanındaki nesneleri temel alan varlık sınıflarını ve ilişkilendirmelerini modellemek için Nesne İlişkisel Tasarımcısı (O/R Designer) kullanabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'da LINQ to SQL araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="wcf-data-services"></a>WCF Veri Hizmetleri  
- WCF Veri Hizmetleri, Web üzerinde veya bir intranette veri Hizmetleri dağıtır. Veriler, Varlık Veri Modeli belirtimlerine göre varlıklar ve ilişkiler olarak yapılandırılır. Bu modelde dağıtılan verilere standart HTTP protokolü tarafından adreslenebilir. Daha fazla bilgi için bkz. [WCF Veri Hizmetleri 4,5](../wcf/index.md).  
+ WCF Veri Hizmetleri, Web üzerinde veya bir intranette veri Hizmetleri dağıtır. Veriler, Varlık Veri Modeli belirtimlerine göre varlıklar ve ilişkiler olarak yapılandırılır. Bu modelde dağıtılan verilere standart HTTP protokolü tarafından adreslenebilir. Daha fazla bilgi için [WCF Veri Hizmetleri 4.5](../wcf/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

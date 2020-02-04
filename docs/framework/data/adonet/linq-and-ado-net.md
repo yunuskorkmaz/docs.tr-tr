@@ -1,13 +1,14 @@
 ---
 title: LINQ ve ADO.NET
+titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: f6b956aa4d19a5bf558681975da3125b45b36c5f
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: e24473f68fe5ccd993c5d205660ea8f397b6f797
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634852"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980099"
 ---
 # <a name="linq-and-adonet"></a>LINQ ve ADO.NET
 Günümüzde, birçok iş geliştiricisi iki (veya daha fazla) programlama dili kullanmalıdır: iş mantığı ve sunum katmanları (görsel C# veya Visual Basic gibi) için üst düzey bir dil ve veritabanıyla etkileşime geçmek için bir sorgu dili (Transact-SQL gibi). Bunun yapılması, geliştiricinin birkaç dilde etkili olması için yeterlilisi olmasını ve ayrıca geliştirme ortamında dil uyuşmazlıklarını da sağlar. Örneğin, bir veritabanına karşı sorgu yürütmek için bir veri erişim API 'SI kullanan bir uygulama, tırnak işaretleri kullanarak sorguyu dize sabit değeri olarak belirtir. Bu sorgu dizesi derleyiciye okunabilir değil ve hatalı söz dizimi ya da başvurduğu sütunlarda veya satırlarda hata olup olmadığını denetmedi. Sorgu parametrelerinin hiçbir tür denetlemesi yoktur ve `IntelliSense` desteklenmez.  

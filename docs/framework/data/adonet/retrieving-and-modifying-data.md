@@ -1,16 +1,16 @@
 ---
-title: ADO.NET’te Veri Alma ve Değiştirme
+title: Verileri alma ve değiştirme
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: 78012a6a5ecdfac0e4cd7c4939ae3ab0036ab716
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 65c373ecff004e219527754bf2e9cc56837dc305
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782856"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980060"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>ADO.NET’te Veri Alma ve Değiştirme
-Herhangi bir veritabanı uygulamasının birincil işlevi bir veri kaynağına bağlanıyor ve içerdiği verileri alıyor. ADO.NET veri sağlayıcıları bir uygulama ile veri kaynağı arasında bir köprü olarak görev yapar ve ayrıca, bir **DataReader** veya **DataAdapter**kullanarak veri alma ve komutları yürütmenize olanak tanır. .NET Framework Herhangi bir veritabanı uygulamasının anahtar işlevi, veritabanında depolanan verileri güncelleştirebilme olanağıdır. ADO.net ' de, verilerin güncelleştirilmesi **DataAdapter** ve <xref:System.Data.DataSet> **Command** nesnelerinin yanı sıra işlemleri kullanmayı da gerektirebilir.  
+Herhangi bir veritabanı uygulamasının birincil işlevi bir veri kaynağına bağlanıyor ve içerdiği verileri alıyor. ADO.NET veri sağlayıcıları bir uygulama ile veri kaynağı arasında bir köprü olarak görev yapar ve ayrıca, bir **DataReader** veya **DataAdapter**kullanarak veri alma ve komutları yürütmenize olanak tanır. .NET Framework Herhangi bir veritabanı uygulamasının anahtar işlevi, veritabanında depolanan verileri güncelleştirebilme olanağıdır. ADO.NET ' de, verileri güncelleştirme, **DataAdapter** ve <xref:System.Data.DataSet>ile **komut** nesnelerinin kullanımı ile ilgilidir. Ayrıca işlem kullanmayı da gerektirebilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Veri Kaynağına Bağlanma](connecting-to-a-data-source.md)  
@@ -32,10 +32,10 @@ Herhangi bir veritabanı uygulamasının birincil işlevi bir veri kaynağına b
  Yerel işlemlerin nasıl gerçekleştirileceğini, dağıtılmış işlemlerin ve iyimser eşzamanlılık ile nasıl çalıştığını açıklayan konuları içerir.  
   
  [Kimliği veya Otomatik Sayı Değerlerini Alma](retrieving-identity-or-autonumber-values.md)  
- Bir SQL Server tablosundaki bir **kimlik** sütunu için veya bir Microsoft Access tablosundaki bir **OtomatikSayı** alanı için oluşturulan değerleri bir tabloda bulunan satır sütunuyla eşlemek için bir örnek sağlar. İçindeki kimlik değerlerini birleştirmeyi açıklar `DataTable`.  
+ Bir SQL Server tablosundaki bir **kimlik** sütunu için veya bir Microsoft Access tablosundaki bir **OtomatikSayı** alanı için oluşturulan değerleri bir tabloda bulunan satır sütunuyla eşlemek için bir örnek sağlar. Kimlik değerlerini bir `DataTable`birleştirmeyi açıklar.  
   
  [İkili Verileri Alma](retrieving-binary-data.md)  
- Kullanılarak `CommandBehavior`ikili verilerin veya büyük veri yapılarının nasıl alınacağını açıklar.`SequentialAccess` Varsayılan davranışını `DataReader`değiştirmek için.  
+ `CommandBehavior`kullanarak ikili verilerin veya büyük veri yapılarının nasıl alınacağını açıklar.`SequentialAccess` `DataReader`varsayılan davranışını değiştirmek için.  
   
  [Saklı Yordamlarla Verileri Değiştirme](modifying-data-with-stored-procedures.md)  
  Yeni bir kimlik değeri döndüren bir veritabanına satır eklemek için saklı yordam giriş parametrelerinin ve çıkış parametrelerinin nasıl kullanılacağını açıklar.  
@@ -50,7 +50,7 @@ Herhangi bir veritabanı uygulamasının birincil işlevi bir veri kaynağına b
  ADO.NET 'in yerleşik veri izleme işlevselliği nasıl sağladığını açıklar.  
   
  [Performans Sayaçları](performance-counters.md)  
- `SqlClient` Ve`OracleClient`için kullanılabilir performans sayaçlarını açıklar.  
+ `SqlClient` ve `OracleClient`için kullanılabilen performans sayaçlarını açıklar.  
   
  [Zaman uyumsuz programlama](asynchronous-programming.md)  
  Zaman uyumsuz programlama için ADO.NET desteğini açıklar.  

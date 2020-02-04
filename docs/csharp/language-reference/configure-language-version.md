@@ -2,12 +2,12 @@
 title: C#dil sürümü oluşturma C# -kılavuz
 description: C# Dil sürümünün projenize göre nasıl belirlendiği hakkında bilgi edinin ve bunu el ile ayarlayabileceğiniz farklı değerler.
 ms.date: 07/10/2019
-ms.openlocfilehash: 90624816a68de694cacd0017c6d3162f6a89431c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3c1035d983660ea0a945e4d4b7b72c69736c90cb
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713870"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980138"
 ---
 # <a name="c-language-versioning"></a>C#dil sürümü oluşturma
 
@@ -54,7 +54,7 @@ Değer `preview`, derleyicinizin desteklediği en son C# önizleme dili sürüm�
 
 ### <a name="configure-multiple-projects"></a>Birden çok proje yapılandırma
 
-Birden çok dizini yapılandırmak için `<LangVersion>` öğesini içeren bir **Dizin. Build. props** dosyası oluşturabilirsiniz. Bunu genellikle çözüm dizininizde yapabilirsiniz. Aşağıdakileri çözüm dizininizde bir **Dizin. Build. props** dosyasına ekleyin:
+Birden çok projeyi yapılandırmak için, `<LangVersion>` öğesini içeren bir **Dizin. Build. props** dosyası oluşturabilirsiniz. Bunu genellikle çözüm dizininizde yapabilirsiniz. Aşağıdakileri çözüm dizininizde bir **Dizin. Build. props** dosyasına ekleyin:
 
 ```xml
 <Project>
@@ -84,5 +84,5 @@ Aşağıdaki tabloda tüm geçerli C# dil sürümleri gösterilmektedir. Daha es
 |5|Derleyici yalnızca C# 5,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
 |4|Derleyici yalnızca C# 4,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
 |3|Derleyici yalnızca C# 3,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
-|ISO-2|Derleyici yalnızca ISO/ıEC 23270:2006 C# (2,0) içinde bulunan söz dizimini kabul eder |
-|ISO-1|Derleyici yalnızca ISO/ıEC 23270:2003 C# (1.0/1.2) içinde bulunan söz dizimini kabul eder |
+|ISO-2|Derleyici yalnızca ISO/ıEC 23270:2006 C# (2,0) içinde bulunan söz dizimini kabul eder. |
+|ISO-1|Derleyici yalnızca ISO/ıEC 23270:2003 C# (1.0/1.2) içinde bulunan söz dizimini kabul eder. |

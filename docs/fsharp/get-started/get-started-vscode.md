@@ -2,12 +2,12 @@
 title: Visual Studio Code’da F# Kullanmaya Başlama
 description: Visual Studio Code ve ıonıde eklenti Suite ile nasıl kullanacağınızı F# öğrenin.
 ms.date: 12/23/2018
-ms.openlocfilehash: 91265303c2954387df0f500940c9af68b3c97dac
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 2aa62bb1afc220348f884865e55c4d7de4359b7f
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559670"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980359"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code’da F# Kullanmaya Başlama
 
@@ -121,7 +121,7 @@ Bu `toPigLatin`, giriş olarak bir `string` alan (`word`olarak adlandırılan) v
 
 Giriş sözcüğünün ilk karakterinin sesli harf olup olmadığını denetleyin. Varsa, sözcüğün sonuna "oley" ekleyin. Aksi takdirde, ilk karakteri sözcüğün sonuna taşıyın ve buna "ay" ekleyin.
 
-Bunun hakkında dikkat edilecek bir son şey vardır: başka birçok dilin aksine, işlevden döndürülecek açık yönerge yoktur. Bunun nedeni F# , ifade tabanlıdır ve bir işlevin gövdesindeki son ifade dönüş değeridir. `if..then..else` kendisinin bir ifadesi olduğundan, giriş değerine bağlı olarak, `then` bloğunun veya `else` bloğunun gövdesi döndürülür.
+Bunun hakkında dikkat edilecek bir son şey vardır: içinde F#, işlevden döndürülecek açık bir yönerge yoktur. Bunun nedeni F# , ifade tabanlıdır ve bir işlevin gövdesinde değerlendirilen son ifade bu işlevin dönüş değerini belirler. `if..then..else` kendisinin bir ifadesi olduğundan, `then` bloğunun gövdesinin veya `else` bloğunun gövdesi değerlendirmesi `toPigLatin` işlevi tarafından döndürülen değeri belirler.
 
 ## <a name="turn-the-console-app-into-a-pig-latin-generator"></a>Konsol uygulamasını bir Pig Latin oluşturucusuna dönüştürme
 
