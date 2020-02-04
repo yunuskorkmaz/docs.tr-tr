@@ -97,7 +97,7 @@
       href: tutorials/using-on-mac-vs.md
     - name: macOS üzerinde kapsamlı bir .NET Core çözümü oluşturma
       href: tutorials/using-on-mac-vs-full-solution.md
-    - name: CLI araçları ile .NET Core kullanmaya başlama
+    - name: CLI kullanarak .NET Core kullanmaya başlama
       href: tutorials/cli-create-console-app.md
     - name: .NET Core CLI ile projeleri düzenleme ve test etme
       href: tutorials/testing-with-cli.md
@@ -151,11 +151,11 @@
 - name: Uygulama dağıtımı
   href: deploying/index.md
   items:
-    - name: CLI araçlarıyla uygulama dağıtma
+    - name: CLI ile uygulama yayımlama
       href: deploying/deploy-with-cli.md
     - name: Visual Studio ile uygulama dağıtma
       href: deploying/deploy-with-vs.md
-    - name: Platformlar arası araçlarla NuGet paketi oluşturma
+    - name: CLI ile NuGet paketi oluşturma
       href: deploying/creating-nuget-packages.md
     - name: Kendi içinde dağıtım çalışma zamanını ileri sarma
       href: deploying/runtime-patch-selection.md
