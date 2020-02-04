@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: f0c00e4cc866c537fe26dd1ad466d6cde95bc608
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 964c63e01a6b09e63e305e9a10dca46e62c18648
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706233"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965964"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework Şifreleme Modeli
 
@@ -33,15 +33,11 @@ Bu türetilmiş sınıfların modelini kullanarak, yeni bir algoritma veya var o
 
 Algoritma için kullanılabilen farklı uygulamalara örnek olarak, simetrik algoritmaları göz önünde bulundurun. Tüm simetrik algoritmaların tabanı, aşağıdaki algoritmalar tarafından devralınan <xref:System.Security.Cryptography.SymmetricAlgorithm>.
 
-1. <xref:System.Security.Cryptography.Aes>
-
-2. <xref:System.Security.Cryptography.DES>
-
-3. <xref:System.Security.Cryptography.RC2>
-
-4. <xref:System.Security.Cryptography.Rijndael>
-
-5. <xref:System.Security.Cryptography.TripleDES>
+* <xref:System.Security.Cryptography.Aes>
+* <xref:System.Security.Cryptography.DES>
+* <xref:System.Security.Cryptography.RC2>
+* <xref:System.Security.Cryptography.Rijndael>
+* <xref:System.Security.Cryptography.TripleDES>
 
 <xref:System.Security.Cryptography.Aes> iki sınıf tarafından devralınır: <xref:System.Security.Cryptography.AesCryptoServiceProvider> ve <xref:System.Security.Cryptography.AesManaged>. <xref:System.Security.Cryptography.AesCryptoServiceProvider> sınıfı, AES 'nin Windows şifreleme API 'SI (CAPı) uygulamasındaki bir sarmalayıcıdır, ancak <xref:System.Security.Cryptography.AesManaged> sınıfı tamamen yönetilen kodda yazılır. Ayrıca, yönetilen ve CAPı uygulamalarına ek olarak, bir sonraki nesil şifreleme (CNG) gibi üçüncü bir uygulama türü de vardır. CNG algoritmasına bir örnek <xref:System.Security.Cryptography.ECDiffieHellmanCng>. CNG algoritmaları Windows Vista ve sonraki sürümlerde kullanılabilir.
 
@@ -62,35 +58,22 @@ Farklı nedenlerle bir algoritma seçebilirsiniz: Örneğin, veri bütünlüğü
 Uygulamaya göre önerilen algoritmaların bir listesi aşağıda verilmiştir:
 
 - Veri gizliliği:
-
   - <xref:System.Security.Cryptography.Aes>
-
 - Veri bütünlüğü:
-
   - <xref:System.Security.Cryptography.HMACSHA256>
-
   - <xref:System.Security.Cryptography.HMACSHA512>
-
 - Dijital imza:
-
   - <xref:System.Security.Cryptography.ECDsa>
-
   - <xref:System.Security.Cryptography.RSA>
-
 - Anahtar değişimi:
-
   - <xref:System.Security.Cryptography.ECDiffieHellman>
-
   - <xref:System.Security.Cryptography.RSA>
-
 - Rastgele sayı oluşturma:
-
   - <xref:System.Security.Cryptography.RNGCryptoServiceProvider>
-
 - Paroladan anahtar oluşturma:
-
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)
+- [C 'de, deneme CE Schneier göre uygulanan şifreleme protokolleri, algoritmalar ve kaynak kodu](https://www.schneier.com/books/applied_cryptography/)

@@ -2,16 +2,20 @@
 title: Windows 10, 8,1, 8 ' de .NET Framework 3,5 'yi yükler
 description: 3,5 .NET Framework Windows 10, Windows 8.1 ve Windows 8 ' e nasıl yükleyeceğinizi öğrenin.
 ms.date: 07/16/2018
-ms.openlocfilehash: 208016e22eed324a3996552284072c6ad29637a5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cfe21c0821b8f3223301dcc802533e1aaf024a79
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716387"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965951"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Windows 10, Windows 8.1 ve Windows 8’de .NET Framework 3.5 Yükleme
 
 Windows 10, Windows 8.1 ve Windows 8 ' de uygulama çalıştırmak için .NET Framework 3,5 gerekebilir. Bu yönergeleri önceki Windows sürümleri için de kullanabilirsiniz.
+
+## <a name="download-the-offline-installer"></a>Çevrimdışı yükleyiciyi indirin
+
+.NET Framework 3,5 SP1 çevrimdışı yükleyicisi [.NET Framework 3,5 SP1 indirme sayfasında](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) bulunur ve Windows 10 ' dan önceki Windows sürümlerinde kullanılabilir.
 
 ## <a name="install-the-net-framework-35-on-demand"></a>Isteğe bağlı .NET Framework 3,5 'yi yükler
 

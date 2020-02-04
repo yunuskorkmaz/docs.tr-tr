@@ -3,12 +3,12 @@ title: Windows 7 SP1 'e .NET Framework yüklemesi
 ms.custom: updateeachrelease
 description: Windows 7 SP1 'e .NET Framework yüklemeyi öğrenin.
 ms.date: 04/18/2019
-ms.openlocfilehash: 729e1ca86d6f7b4268ce2c8b601b700817501128
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 77177b8c4a40f68eb139f5d765bcb421a4d6bb49
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716347"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965860"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Windows 7 SP1 ve Windows Server 2008 R2’de .NET Framework Yükleme
 
@@ -21,13 +21,13 @@ Bu yönergeler, ihtiyacınız olan .NET Framework sürümlerini yüklemenize yar
 ## <a name="net-framework-48"></a>.NET Framework 4,8
 
 > [!div class="button"]
-> [.NET Framework 4.8'i İndirin](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> [4,8 .NET Framework indirin](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 [.NET Framework 4,8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) , .NET Framework 4,0 veya üzeri için oluşturulmuş uygulamaları çalıştırmak için kullanılabilir.
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
-[3,5 .NET Framework](https://www.microsoft.com/download/details.aspx?id=21) , Windows 7 ' ye dahildir.
+[3,5 .NET Framework](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) , Windows 7 ' ye dahildir.
 
 .NET Framework 3,5 ile 3,5 .NET Framework 1,0 için oluşturulmuş uygulamaları destekler.
 

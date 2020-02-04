@@ -3,12 +3,12 @@ title: .NET Framework Windows 10 ' a yükler
 description: .NET Framework Windows 10 veya Windows Server 2016 ' e yüklemeyi öğrenin.
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: c2b274bb85b6d4c496e7b6b6b62f05aa932202dd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: eed15b9088d6ba46d8f5bc6d16ba779dd6115b0d
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716374"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965977"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Windows 10 ve Windows Server 2016 ve sonraki sürümlere .NET Framework yüklemesini
 
@@ -25,7 +25,7 @@ Bir uygulamayı çalıştırmayı ve makinenizde aşağıdakine benzer bir ileti
 - [Windows 10 Mayıs 2019 güncelleştirmesi](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 > [!div class="button"]
-> [.NET Framework 4.8'i İndirin](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> [4,8 .NET Framework indirin](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 [.NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48) , 4.7.2 aracılığıyla 4,0 .NET Framework için oluşturulan uygulamaları çalıştırmak için kullanılabilir.
 
@@ -50,7 +50,7 @@ Windows 10 1507 veya 1511 kullanıyorsanız ve .NET Framework 4,8 ' i yüklemek 
 
 ## <a name="net-framework-462"></a>.NET Framework 4.6.2
 
-[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345) , Windows 10 1507 ve 1511 ' de en son desteklenen .NET Framework sürümdür.
+[.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462) , Windows 10 1507 ve 1511 ' de en son desteklenen .NET Framework sürümdür.
 
 .NET Framework 4.6.2, 4.6.2 aracılığıyla 4,0 .NET Framework oluşturulan uygulamaları destekler.
 

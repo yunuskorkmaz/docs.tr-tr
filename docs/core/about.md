@@ -2,12 +2,12 @@
 title: .NET Core hakkında
 description: .NET Core hakkında bilgi edinin.
 ms.date: 09/17/2019
-ms.openlocfilehash: e5460fd1d968a49478a1bdc5f18962de2c7cbbe0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 7908cf70e91dcd68668008c2c3082dc293330ec1
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920952"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965847"
 ---
 # <a name="about-net-core"></a>.NET Core hakkında
 
@@ -73,7 +73,7 @@ Bu bileşenler aşağıdaki yollarla dağıtılır:
 
 ### <a name="designed-for-adaptability"></a>Uyarlamalı uyumluluk için tasarlandı
 
-.NET Core, diğer .NET ürünleriyle karşılaştırıldığında çok benzer ancak benzersiz bir ürün olarak oluşturulmuştur. Yeni platformlar ve iş yükleri için geniş uyum sağlayacak şekilde tasarlandı ve kullanılabilir birden fazla işletim sistemi ve CPU bağlantı noktasına sahiptir (ve çok daha fazla olabilir).
+.NET Core, diğer .NET ürünleriyle karşılaştırıldığında benzer ancak benzersiz bir ürün olarak oluşturulmuştur. Yeni platformlar ve iş yükleri için geniş uyum sağlayacak şekilde tasarlandı ve kullanılabilir birden fazla işletim sistemi ve CPU bağlantı noktasına sahiptir (ve çok daha fazla olabilir).
 
 Ürün çeşitli parçalara ayrılmıştır ve çeşitli parçaların farklı zamanlarda yeni platformlara uyarlanılmasına olanak sağlar. Çalışma zamanına ve platforma özgü temel kitaplıkların birim olarak bir birim olarak bir arada olması gerekir. Platformdan bağımsız kitaplıklar, oluşturma tarafından tüm platformlarda olduğu gibi çalışır. Her bir algoritma veya API 'nin tam olarak veya yerinde bu şekilde uygulanması için, C# platforma özgü uygulamaları azaltmaya yönelik bir proje sapması vardır.
 
@@ -128,7 +128,7 @@ Windows ve UNIX uygulamaları boyutuyla benzerdir. .NET Core kitaplıkları, [Mi
 .NET 5 ' in, .NET Core 'un bir sonraki sürümü olacağı ve platformun bir listesini temsil ettiği duyurulmuştur. Proje, .net 'i birkaç önemli şekilde geliştirmek için amaçlar:
 
 - Her yerde kullanılabilen ve Tekdüzen çalışma zamanı davranışları ve geliştirici deneyimleri içeren tek bir .NET çalışma zamanı ve çerçevesi üretin.
-- .NET Core, .NET Framework, Xamarin ve mono 'nin en iyi özelliklerini alarak .NET yeteneklerini genişletin.
+- .NET Core, .NET Framework, Xamarin ve mono en iyi şekilde yararlanarak .NET özelliklerini genişletin.
 - Bu ürünü, geliştiricilerin (Microsoft ve topluluk) üzerinde çalışabileceği ve birlikte ve tüm senaryoları geliştiren tek bir kod tabanında oluşturun.
 
 .NET 5 için nelerin planlanmakta olduğu hakkında daha fazla ayrıntı için bkz. [.NET 5 tanıtımı](https://devblogs.microsoft.com/dotnet/introducing-net-5/).

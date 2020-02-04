@@ -4,18 +4,18 @@ description: Kodunuzu XML belge açıklamalarıyla belgeleme ve derleme zamanın
 ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: ef0d22e0ee7faa3ba51da6b44cf1827f19baf4f1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1ec088db1de7c953bdb20b1129c5fd40f9e31454
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787830"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965938"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Kodunuzu XML açıklamalarıyla belgeleme
 
 XML belge açıklamaları, Kullanıcı tanımlı herhangi bir tür veya üyenin tanımının üzerine eklenen özel bir açıklama türüdür.
 Bunlar, derleme zamanında bir XML belge dosyası oluşturmak için derleyici tarafından işlenebilecekleri için özeldir.
-Derleyici tarafından oluşturulan XML dosyası, .NET derlemenizin yanı sıra, Visual Studio ve diğer IDE 'Ler, türler veya üyeler hakkında hızlı bilgileri göstermek için IntelliSense kullanabilmesi için birlikte dağıtılabilir. Ayrıca, XML dosyasını gibi araçlarla çalıştırılabilir [DocFX](https://dotnet.github.io/docfx/) ve [Sandcastle](https://github.com/EWSoftware/SHFB) API Başvurusu Web siteleri oluşturmak için.
+Derleyici tarafından oluşturulan XML dosyası, Visual Studio ve diğer IDE 'Ler, türler veya üyeler hakkında hızlı bilgi göstermek için IntelliSense kullanabilmesi için .NET derlemenizin yanı sıra dağıtılabilir. Ayrıca, XML dosyasını gibi araçlarla çalıştırılabilir [DocFX](https://dotnet.github.io/docfx/) ve [Sandcastle](https://github.com/EWSoftware/SHFB) API Başvurusu Web siteleri oluşturmak için.
 
 Tüm diğer yorumlar gibi XML belgesi açıklamaları derleyici tarafından yok sayılır.
 
@@ -49,7 +49,7 @@ Basit matematik kitaplığı için kod aşağıda verilmiştir:
 
 [!code-csharp[Sample Library](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
 
-Örnek kitaplık, `int` ve `double` veri türlerinde `add`, `subtract`, `multiply` ve `divide` dört önemli aritmetik işlemi destekler.
+Örnek kitaplık, `int` ve `double` veri türlerinde dört önemli aritmetik işlemi (`add`, `subtract`, `multiply`ve `divide`) destekler.
 
 Şimdi kitaplığınızı kullanan üçüncü taraf geliştiriciler için kodunuzda bir API başvuru belgesi oluşturabilmek, ancak kaynak koda erişiminiz yok.
 Daha önce bahsedilen XML belge etiketleri bunu elde etmek için kullanılabilir. Artık C# derleyicinin DESTEKLEDIĞI standart XML etiketlerine tanıtılıcaksınız.
@@ -61,7 +61,7 @@ Daha önce bahsedilen XML belge etiketleri bunu elde etmek için kullanılabilir
 
 [!code-csharp[Summary Tag](~/samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
-`<summary>` etiketi çok önemlidir ve içeriği, IntelliSense 'de veya bir API başvuru belgesinde bulunan içerik veya üye bilgilerinin birincil kaynağı olduğundan, bunu dahil etmenizi öneririz.
+`<summary>` etiketi önemlidir ve içeriği, IntelliSense 'de veya bir API başvuru belgesinde bulunan içerik veya üye bilgilerinin birincil kaynağı olduğundan, bunu dahil etmenizi öneririz.
 
 ## <a name="remarks"></a>\<açıklamalar >
 
@@ -150,7 +150,7 @@ Bir miktarın diğerinden daha büyük olup olmadığını denetlemek için `Mat
 
 ## <a name="paramref"></a>\<paramref >
 
-Bazen, bir yöntemin `<summary>` bir etiketle ne olduğunu açıklayan ortasında olabilirsiniz ve bir parametreye başvuru yapmak isteyebilirsiniz. `<paramref>` etiketi yalnızca bunun için harika. Double tabanlı `Add` yönteminizin özetini güncelleştirelim. `<param>` etiketi gibi, **gerekli** `name` özniteliğinde parametre adı belirtilir.
+Bazen, bir yöntemin `<summary>` bir etiketle ne olduğunu açıklayan ortasında olabilirsiniz ve bir parametreye başvuru yapmak isteyebilirsiniz. `<paramref>` etiketi yalnızca bunun için harika. Double tabanlı `Add` yönteminizin özetini güncelleştirelim. `<param>` etiketi gibi, parametre adı **gerekli** `name` özniteliğinde belirtilir.
 
 [!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
@@ -163,8 +163,7 @@ Daha önce oluşturduğunuz genel yöntemi kullanabilirsiniz.
 
 ## <a name="list"></a>\<listesi >
 
-Belge bilgilerini sıralı liste, sırasız liste veya tablo olarak biçimlendirmek için `<list>` etiketini kullanırsınız.
-`Math` kitaplığınızın desteklediği her matematik işleminin sıralanmamış bir listesini oluşturun.
+Belge bilgilerini sıralı liste, sırasız liste veya tablo olarak biçimlendirmek için `<list>` etiketini kullanırsınız. `Math` kitaplığınızın desteklediği her matematik işleminin sıralanmamış bir listesini oluşturun.
 
 [!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
@@ -207,7 +206,7 @@ Bu durumda: kodunuz okunabilir hale getirilir ve belge bilgisi kaybedilmiyor.
 
 `name` özniteliği, etiketteki açıklamaların önündeki ad belirticisini temsil eder.
 
-`name` yerine kullanılabilecek `id` özniteliği, yorumların önündeki etiketin KIMLIĞINI temsil eder.
+`name`yerine kullanılabilecek `id` özniteliği, yorumların önündeki etiketin KIMLIĞINI temsil eder.
 
 ### <a name="user-defined-tags"></a>Kullanıcı tanımlı Etiketler
 

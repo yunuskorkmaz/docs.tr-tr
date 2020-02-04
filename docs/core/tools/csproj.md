@@ -2,12 +2,12 @@
 title: .NET Core için csproj biçimine eklemeler
 description: Mevcut ve .NET Core csproj dosyaları arasındaki farklılıklar hakkında bilgi edinin
 ms.date: 04/08/2019
-ms.openlocfilehash: 126f5b10999e65d9715e9b52cb54a2bf1dbd3933
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 202c1867ae6404db074e6196b28ffe5f453ef5bf
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787872"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965613"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core için csproj biçimine eklemeler
 
@@ -145,7 +145,7 @@ Projede birden çok hedef çerçeve varsa, komutun sonuçları MSBuild özelliğ
 
 #### <a name="version"></a>Sürüm
 
-Gerekli `Version` özniteliği geri yüklenecek paketin sürümünü belirtir. Öznitelik, [NuGet sürüm oluşturma](/nuget/reference/package-versioning#version-ranges-and-wildcards) şemasının kurallarına uyar. Varsayılan davranış, tam bir sürüm eşleşmedir. Örneğin, `Version="1.2.3"` belirtilmesi, paketin tam 1.2.3 sürümü için NuGet gösterimi `[1.2.3]` eşdeğerdir.
+Gerekli `Version` özniteliği geri yüklenecek paketin sürümünü belirtir. Öznitelik, [NuGet sürüm oluşturma](/nuget/reference/package-versioning#version-ranges-and-wildcards) şemasının kurallarına uyar. Varsayılan davranış en düşük sürüm ve kapsamlı eşleşmedir. Örneğin, `Version="1.2.3"` belirtmek NuGet gösterimi `[1.2.3, )` eşdeğerdir ve çözülmüş paketin, varsa veya daha büyük bir sürüm olan 1.2.3 sürümüne sahip olacağı anlamına gelir.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>Includevarlıklarını, Excludevarlıklarını ve Privatevarlıkları
 
@@ -184,7 +184,7 @@ Alternatif olarak, öznitelik şunları içerebilir:
 
 #### <a name="version"></a>Sürüm
 
-`Version` geri yüklenecek paketin sürümünü belirtir. Öznitelik, [NuGet sürüm oluşturma](/nuget/create-packages/dependency-versions#version-ranges) şemasının kurallarına uyar. Varsayılan davranış, tam bir sürüm eşleşmedir. Örneğin, `Version="1.2.3"` belirtilmesi, paketin tam 1.2.3 sürümü için NuGet gösterimi `[1.2.3]` eşdeğerdir.
+`Version` geri yüklenecek paketin sürümünü belirtir. Öznitelik, [NuGet sürüm oluşturma](/nuget/create-packages/dependency-versions#version-ranges) şemasının kurallarına uyar. Varsayılan davranış en düşük sürüm ve kapsamlı eşleşmedir. Örneğin, `Version="1.2.3"` belirtmek NuGet gösterimi `[1.2.3, )` eşdeğerdir ve çözülmüş paketin, varsa veya daha büyük bir sürüm olan 1.2.3 sürümüne sahip olacağı anlamına gelir.
 
 ### <a name="runtimeidentifiers"></a>Runtimetanımlayıcıtanımlayıcıları
 
