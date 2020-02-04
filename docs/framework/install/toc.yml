@@ -1,27 +1,27 @@
 - name: Yükleme kılavuzu
   href: index.md
   items:
-    - name: Windows 10 ve Windows Server 2016’da .NET Framework Yükleme
-      href: on-windows-10.md
-    - name: Windows 8.1 ve Windows Server 2012 R2’de .NET Framework Yükleme
-      href: on-windows-8-1.md
-    - name: Windows 8 ve Windows Server 2012’de .NET Framework Yükleme
-      href: on-windows-8.md
-    - name: Windows 7 SP1 ve Windows Server 2008 R2’de .NET Framework Yükleme
-      href: on-windows-7.md
-    - name: Windows Vista ve Windows Server 2008’de .NET Framework Yükleme
-      href: on-windows-vista.md
-    - name: Windows XP ve Windows Server 2003’te .NET Framework Yükleme
-      href: on-windows-xp.md
     - name: Geliştiriciler için yükleme kılavuzu
       href: guide-for-developers.md
+    - name: Windows 10 ve Windows Server 2016
+      href: on-windows-10.md
+    - name: Windows 8.1 ve Windows Server 2012 R2
+      href: on-windows-8-1.md
+    - name: Windows 8 ve Windows Server 2012
+      href: on-windows-8.md
+    - name: Windows 7 SP1 ve Windows Server 2008 R2
+      href: on-windows-7.md
+    - name: Windows Vista ve Windows Server 2008
+      href: on-windows-vista.md
+    - name: Windows XP ve Windows Server 2003
+      href: on-windows-xp.md
     - name: .NET Framework’ü Onarma
       href: repair.md
-    - name: Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme
+    - name: Yükleme ve kaldırma sorunlarını giderme
       href: troubleshoot-blocked-installations-and-uninstallations.md
-    - name: “Bu uygulama başlatılamadı” iletisinden kaynaklanan sorunları giderme
+    - name: “Bu uygulama başlatılamadı” sorununu giderme
       href: application-not-started.md
-    - name: 'Windows 10, Windows 8.1 ve Windows 8’de .NET Framework 3.5 Yükleme'
+    - name: Windows 10 aracılığıyla Windows 8’de .NET Framework 3.5
       href: dotnet-35-windows-10.md
-    - name: 'Windows 8, Windows 8.1 veya Windows 10’da .NET Framework 1.1 uygulamalarını çalıştırma'
+    - name: Windows 10 aracılığıyla Windows 8’de .NET Framework 1.1 uygulamaları
       href: run-net-framework-1-1-apps.md

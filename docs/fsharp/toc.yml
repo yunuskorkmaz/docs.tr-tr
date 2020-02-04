@@ -256,6 +256,8 @@
       href: language-reference/caller-information.md
     - name: Ayrıntılı Sözdizimi
       href: language-reference/verbose-syntax.md
+    - name: Derleyici hataları ve uyarıları
+      href: language-reference/compiler-messages/index.md
 - name: 'F# stil kılavuzu'
   href: style-guide/index.md
   items:

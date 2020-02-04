@@ -1337,7 +1337,7 @@
                 - name: Numaralandırma türleri
                   href: language-reference/builtin-types/enum.md
                   displayName: 'enum, bit flags, bit field'
-                - name: struct
+                - name: 'struct '
                   href: language-reference/keywords/struct.md
                 - name: Boş değer atanabilen değer türleri
                   href: language-reference/builtin-types/nullable-value-types.md
@@ -1398,7 +1398,7 @@
               displayName: await
             - name: const
               href: language-reference/keywords/const.md
-            - name: olay
+            - name: event
               href: language-reference/keywords/event.md
             - name: extern
               href: language-reference/keywords/extern.md
@@ -1412,7 +1412,7 @@
               href: language-reference/keywords/override.md
             - name: readonly
               href: language-reference/keywords/readonly.md
-            - name: korumalı
+            - name: sealed
               href: language-reference/keywords/sealed.md
             - name: static
               href: language-reference/keywords/static.md
@@ -1430,7 +1430,7 @@
               items:
                 - name: if-else
                   href: language-reference/keywords/if-else.md
-                - name: anahtarı
+                - name: switch
                   href: language-reference/keywords/switch.md
             - name: Yineleme Deyimleri
               items:
@@ -1511,11 +1511,11 @@
           items:
             - name: new kısıtlaması
               href: language-reference/keywords/new-constraint.md
-            - name: Burada
+            - name: where
               href: language-reference/keywords/where-generic-type-constraint.md
         - name: Anahtar Sözcüklere Erişim
           items:
-            - name: taban
+            - name: base
               href: language-reference/keywords/base.md
             - name: this
               href: language-reference/keywords/this.md
@@ -1577,11 +1577,11 @@
               href: language-reference/keywords/descending.md
             - name: 'on'
               href: language-reference/keywords/on.md
-            - name: eşittir
+            - name: equals
               href: language-reference/keywords/equals.md
             - name: by
               href: language-reference/keywords/by.md
-            - name: içinde
+            - name: in
               href: language-reference/keywords/in.md
     - name: 'C# işleçleri'
       items:
@@ -1642,7 +1642,7 @@
         - name: await işleci
           href: language-reference/operators/await.md
           displayName: async
-        - name: varsayılan işleç
+        - name: default işleçi
           href: language-reference/operators/default.md
           displayName: 'default value, default literal, type default'
         - name: delegate işleci
