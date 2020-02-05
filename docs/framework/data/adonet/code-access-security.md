@@ -1,16 +1,16 @@
 ---
-title: Kod Erişimi Güvenliği ve ADO.NET
+title: Kod Erişimi Güvenliği
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: e83c10d6d7b66723d8347f98c1f7b118d7a2f963
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c2b6be79855955887988378b9fcffe1891520d68
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040160"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980268"
 ---
 # <a name="code-access-security-and-adonet"></a>Kod Erişimi Güvenliği ve ADO.NET
 .NET Framework, her ikisi de ortak dil çalışma zamanı (CLR) tarafından sağlanan ortak bir altyapı kullanılarak uygulanan, rol tabanlı güvenlik ve kod erişim güvenliği (CAS) sağlar. Yönetilmeyen kod dünyasında, çoğu uygulama kullanıcı veya sorumlu izinleriyle yürütülür. Sonuç olarak, kötü amaçlı veya hata doldurulmuş yazılımlar yükseltilmiş ayrıcalıklara sahip bir kullanıcı tarafından çalıştırıldığında bilgisayar sistemleri zarar görmüş ve özel veri güvenliği tehlikeye girebilir.  
@@ -49,7 +49,7 @@ ms.locfileid: "73040160"
   
  Oluşturmakta olduğunuz uygulamanın türüne bağlı olarak, veritabanında rol tabanlı izinleri uygulamayı da göz önünde bulundurmanız gerekir. SQL Server rol tabanlı güvenlik hakkında daha fazla bilgi için bkz. [SQL Server Security](./sql/sql-server-security.md).  
   
-## <a name="assemblies"></a>Bütünleştirilmiş kodlar  
+## <a name="assemblies"></a>Derlemeler  
  Derlemeler bir .NET Framework uygulaması için temel dağıtım, sürüm denetimi, yeniden kullanım, etkinleştirme kapsamı ve güvenlik izinlerini oluşturur. Derleme, birlikte çalışacak ve mantıksal bir işlevsellik birimi oluşturacak bir tür ve kaynak koleksiyonu sağlar. CLR 'ye bir tür, bir derleme bağlamı dışında yok. Derlemeleri oluşturma ve dağıtma hakkında daha fazla bilgi için bkz. [Derlemelerle programlama](../../../standard/assembly/program.md).  
   
 ### <a name="strong-naming-assemblies"></a>Tanımlayıcı adlandırma bütünleştirilmiş kodları  
@@ -136,7 +136,7 @@ ms.locfileid: "73040160"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>Özel bir Izin kümesiyle kısmi güven etkinleştiriliyor  
- Belirli bir bölge için <xref:System.Data.SqlClient> izinlerinin kullanımını etkinleştirmek üzere bir sistem yöneticisinin özel bir izin kümesi oluşturması ve belirli bir bölge için izin kümesi olarak ayarlaması gerekir. `LocalIntranet`gibi varsayılan izin kümeleri değiştirilemez. Örneğin, `LocalIntranet`<xref:System.Security.Policy.Zone> olan kod için <xref:System.Data.SqlClient> izinleri eklemek üzere bir sistem yöneticisi `LocalIntranet`için izin kümesini kopyalayabilir, "CustomLocalIntranet" olarak yeniden adlandırabilir, <xref:System.Data.SqlClient> izinlerini ekleyebilir, CustomLocalIntranet 'i içeri aktarabilir [Caspol. exe (kod erişimi güvenlik Ilkesi aracı)](../../tools/caspol-exe-code-access-security-policy-tool.md)kullanarak izin kümesi ve `LocalIntranet_Zone` Izin kümesini CustomLocalIntranet olarak ayarlayın.  
+ Belirli bir bölge için <xref:System.Data.SqlClient> izinlerinin kullanımını etkinleştirmek üzere bir sistem yöneticisinin özel bir izin kümesi oluşturması ve belirli bir bölge için izin kümesi olarak ayarlaması gerekir. `LocalIntranet`gibi varsayılan izin kümeleri değiştirilemez. Örneğin, `LocalIntranet`<xref:System.Security.Policy.Zone> olan kod için <xref:System.Data.SqlClient> izinleri eklemek için, bir sistem yöneticisi `LocalIntranet`izin kümesini kopyalayabilir, "CustomLocalIntranet" olarak yeniden adlandırabilir, <xref:System.Data.SqlClient> izinlerini ekleyebilir, [Caspol. exe (kod erişimi güvenlik Ilkesi aracı)](../../tools/caspol-exe-code-access-security-policy-tool.md)kullanarak CustomLocalIntranet izin kümesini içeri aktarabilir ve `LocalIntranet_Zone` Izin kümesini CustomLocalIntranet olarak ayarlayabilir.  
   
 ### <a name="sample-permission-set"></a>Örnek Izin kümesi  
  Aşağıda kısmen güvenilen bir senaryoda SQL Server için .NET Framework Veri Sağlayıcısı bir örnek izin kümesi verilmiştir. Özel izin kümeleri oluşturma hakkında bilgi için bkz. [Caspol. exe kullanarak Izin kümelerini yapılandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
