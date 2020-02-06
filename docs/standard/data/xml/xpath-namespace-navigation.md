@@ -3,14 +3,12 @@ title: XPath Ad Alanı Gezintisi
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f6facc047d87c503313015eff4e869861cd6b301
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 37b9d3e04e075c7ef95420c70881ba9b34e031ce
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957007"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709796"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath Ad Alanı Gezintisi
 XML belgeleriyle XPath sorguları kullanmak için, XML ad alanlarını ve ad alanları tarafından içerilen öğeleri doğru bir şekilde ele almanız gerekir. Ad alanları, adlar birden fazla bağlamda kullanıldığında oluşabilecek belirsizlikleri önler; Örneğin ad `ID`, bir XML belgesinin farklı öğeleriyle ilişkili birden fazla tanımlayıcıya başvurabilir. Ad alanı sözdizimi, bir XML belgesinin öğelerini ayırt eden URI 'Leri, adları ve önekleri belirtir.  
@@ -20,7 +18,7 @@ XML belgeleriyle XPath sorguları kullanmak için, XML ad alanlarını ve ad ala
 ## <a name="namespace-declarations"></a>Ad alanı bildirimleri  
  Ad alanı bildirimleri, bir <xref:System.Xml.XPath.XPathNavigator>örneği kullanılırken bir XML belgesinin öğelerini ayırt edilemez ve adreslenebilir hale getirir. Ad alanı önekleri ad alanlarını adresleme için kısa bir sözdizimi sağlar.  
   
- Ön ekler şu biçimde tanımlanır: Bu sözdiziminde `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.`, "`e`" ön eki, ad alanının biçimsel URI 'SI için bir kısaltmadır. `Body` öğesini `Envelope` ad alanının bir üyesi olarak belirleyebilirsiniz: `e:Body`.  
+ Ön ekler şu biçimde tanımlanır: Bu sözdiziminde `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.`" ön eki, ad alanının biçimsel URI 'SI için bir kısaltmadır. `Body` öğesini `Envelope` ad alanının bir üyesi olarak belirleyebilirsiniz: `e:Body`.  
   
  Sonraki bölümde gezinti örneğinde `response.xml` olarak aşağıdaki XML belgesine başvurulur.  
   
@@ -62,7 +60,7 @@ using (XmlReader reader = XmlReader.Create("response.xml"))
 }  
 ```  
   
- Tam nitelikli ad alanları ve adların duyarlığı bir rahatlığından daha fazla. Belge tanımı ve önceki örneklerde bulunan kod içeren küçük bir deneme, tam olarak nitelenen öğe adları olmayan gezinmenin özel durum oluşturduğunu doğrular. Örneğin, öğe tanımı: `<Search xmlns="http://schemas.microsoft.com/v1/Search">`ve sorgu: `Search` öğesinde ad alanı öneki olmadan dize `xpath = "/s:Envelope/s:Body/Search";`, `Search` öğesi yerine `null` döndürmez.  
+ Tam nitelikli ad alanları ve adların duyarlığı bir rahatlığından daha fazla. Belge tanımı ve önceki örneklerde bulunan kod içeren küçük bir deneme, tam olarak nitelenen öğe adları olmayan gezinmenin özel durum oluşturduğunu doğrular. Örneğin, öğe tanımı: `<Search>`ve sorgu: `Search` öğesinde ad alanı öneki olmadan dize `xpath = "/s:Envelope/s:Body/Search";`, `Search` öğesi yerine `null` döndürmez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
