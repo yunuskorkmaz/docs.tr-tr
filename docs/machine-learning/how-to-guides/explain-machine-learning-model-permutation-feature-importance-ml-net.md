@@ -1,20 +1,20 @@
 ---
-title: Permütasyon özelliği önem derecesi kullanarak model tahminlerini açıklayın
+title: Permütasyon özelliği önem derecesine sahip ML.NET modellerini yorumlama
 description: ML.NET içinde permütasyon özelliği önem derecesine sahip modellerin Özellik önemini anlayın
-ms.date: 08/29/2019
+ms.date: 01/30/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4bad8b0ed17a34ba290bf9c00d65cc3f000a2acf
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c1163a41cd2feb0e8785ae9d4c6a71dfbedf3f12
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976682"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092622"
 ---
-# <a name="explain-model-predictions-using-permutation-feature-importance"></a>Permütasyon özelliği önem derecesi kullanarak model tahminlerini açıklayın
+# <a name="interpret-model-predictions-using-permutation-feature-importance"></a>Permütasyon özelliği önem derecesi kullanarak model tahminlerini yorumlama
 
-ML.NET makine öğrenme modeli tahminlerini, katkı özelliklerinin permütasyon özelliğinin önem derecesini (PFı) kullanarak tahmin etmek zorunda olduğunu anlayarak nasıl açıklacağınızı öğrenin.
+Permütasyon özelliği önem derecesi (PFI) kullanarak ML.NET Machine Learning model tahminlerini nasıl yorumlayacağınızı öğrenin. PFI her bir özelliğin bir tahmine göre yaptığı göreli katkıyı sağlar.
 
 Makine öğrenimi modelleri genellikle giriş ve çıkış oluşturan siyah kutular olarak düşünülebilir. Çıktıyı etkileyen özellikler arasındaki ara adımlar veya etkileşimler nadiren anlaşılmıştır. Makine öğrenimi, sağlık hizmetleri gibi günlük hayatın daha belirgin yönlerine tanıtıldığında, Machine Learning modelinin neden yaptığı kararları nasıl yaptığını anlamak en önemli öneme sahiptir. Örneğin, bir makine öğrenimi modeliyle tanılar yapılırsa, sağlık uzmanlarının, bu, bu, tanılar haline gelen faktörleri bulmak için bir yol gerekir. Doğru tanısı sağlamak, hasta 'ın hızlı bir şekilde kurtarma yapıp yapmayacağı konusunda harika bir farklılık yapabilir. Bu nedenle, bir modeldeki explainability düzeyi arttıkça, daha yüksek güvenilirlikli sağlık uzmanlarının model tarafından yapılan kararları kabul etmesi veya reddetmesi gerekir.
 
@@ -26,7 +26,7 @@ Ayrıca, en önemli özellikleri vurgulayarak model oluşturucular, gürültü v
 
 Bu örnek için kullanılan veri kümesindeki Özellikler 1-12 sütunlarında bulunur. Amaç `Price`tahmin etmek için kullanılır.
 
-| Sütunuyla | Özellik | Açıklama
+| Sütun | Özellik | Açıklama
 | --- | --- | --- |
 | 1\. | Crimerde | GDP suta hızı başına
 | 2 | ResidentialZones | Kasadaki mesken bölgeleri
@@ -40,7 +40,7 @@ Bu örnek için kullanılan veri kümesindeki Özellikler 1-12 sütunlarında bu
 | 10 | Vergilenrate | Özellik vergi oranı
 | 11 | StudentTeacherRatio | Öğrencilerin öğretmenler için oranı
 | 12 | PercentPopulationBelowPoverty | Poverty 'in altında yaşayan popülasyon yüzdesi
-| 13 | Bkz | Giriş fiyatı
+| 13 | Fiyat | Giriş fiyatı
 
 Veri kümesinin bir örneği aşağıda gösterilmiştir:
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: a5b49e2a1f7536fb9d8e8f4dbfc53494dcd1f1ac
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: be9bc6e0cddc0581b9acb319f7d1fc1c81dae268
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740776"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095118"
 ---
 # <a name="sample-opentype-font-pack"></a>Örnek OpenType Yazı Tipi Paketi
 Bu konu, Windows SDK dağıtılan örnek OpenType yazı tiplerine genel bir bakış sağlar. Örnek yazı tipleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar tarafından kullanılabilen genişletilmiş OpenType özelliklerini destekler.  
@@ -20,7 +20,7 @@ Bu konu, Windows SDK dağıtılan örnek OpenType yazı tiplerine genel bir bak�
 ## <a name="fonts-in-the-opentype-font-pack"></a>OpenType yazı tipi paketindeki yazı tipleri  
  Windows SDK, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar oluşturmak için kullanabileceğiniz örnek bir OpenType yazı tipi kümesi sağlar. Örnek yazı tipleri, Ascender Corporation lisansı altında sağlanır. Bu yazı tipleri, OpenType biçimi tarafından tanımlanan toplam özelliklerin yalnızca bir alt kümesini uygular. Aşağıdaki tabloda örnek OpenType yazı tiplerinin adları listelenmektedir.  
   
-|**Ad**|**Dosyasýný**|  
+|**Ad**|**Dosya**|  
 |--------------|--------------|  
 |Kootenay|Kooten.ttf|  
 |Juniors|Linds.ttf|  
@@ -35,7 +35,7 @@ Bu konu, Windows SDK dağıtılan örnek OpenType yazı tiplerine genel bir bak�
   
  ![Örnek yazı tipi paketindeki yazı tipi adlarının listesi](./media/sample-opentype-font-pack/font-names-sample-pack.gif)  
   
- Örnek yazı tipleri, Ascender Corporation lisansı altında sağlanır. Ascender, gelişmiş yazı tipi ürünlerinin bir sağlayıcısıdır. Örnek yazı tiplerinin genişletilmiş veya özel sürümlerini lisanslamak için, bkz. [Ascender Corporation 'ın Web sitesi](https://go.microsoft.com/fwlink/?LinkId=182627).  
+ Örnek yazı tipleri, Ascender Corporation lisansı altında sağlanır. Ascender, gelişmiş yazı tipi ürünlerinin bir sağlayıcısıdır. Örnek yazı tiplerinin genişletilmiş veya özel sürümlerini lisanslamak için, bkz. [Ascender Corporation 'ın Web sitesi](https://www.monotype.com/).  
   
 > [!NOTE]
 > Geliştirici olarak, bir uygulama içine eklediğiniz veya başka bir şekilde yeniden dağıtırabilmeniz gereken herhangi bir yazı tipi için gerekli lisans haklarına sahip olduğunuzdan emin olmak sizin sorumluluğunuzdadır.  

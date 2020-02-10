@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: a2028ccce47de54b59323194a0ffab3a643d878c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4f7ddad8c3dc12391ef6bf345a73ebb384400b38
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712981"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093155"
 ---
 # <a name="using-directive-c-reference"></a>using yönergesi (C# başvuru)
 
@@ -68,7 +68,7 @@ Bir tanımlayıcıyı bir ad alanına veya türe göre bulmayı kolaylaştırmak
 
 ```csharp
 using s = System.Text;
-using s.RegularExpressions;
+using s.RegularExpressions; // Generates a compiler error.
 ```
 
 Ad alanını belirtmek zorunda kalmadan bir ad alanındaki türleri kullanmak için bir `using` yönergesi oluşturun. `using` yönergesi, belirttiğiniz ad alanı içinde iç içe geçmiş herhangi bir ad alanı için erişim sağlamaz.
@@ -99,5 +99,5 @@ Daha fazla bilgi için bkz. [ C# dil belirtiminde](/dotnet/csharp/language-refer
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [Ad Alanlarını Kullanma](../../programming-guide/namespaces/using-namespaces.md)
 - [C# Anahtar Sözcükleri](index.md)
-- [Ad Alanları](../../programming-guide/namespaces/index.md)
+- [Ad alanları](../../programming-guide/namespaces/index.md)
 - [using Deyimi](using-statement.md)

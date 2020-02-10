@@ -3,12 +3,12 @@ title: F# kullanarak Azure Blob depolama kullanmaya başlama
 description: Azure Blob depolama ile yapılandırılmamış verileri bulutta depolayın.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 90ec0d63b11ad00c53a1740211e9a6509582e863
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 79f6a559ac603b0544916764126a988d3f3f43d7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935513"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092635"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F\# kullanarak Azure Blob depolama ile çalışmaya başlama
 
@@ -16,11 +16,11 @@ Azure Blob Storage, bulutta nesne/blob olarak yapılandırılmamış veri depola
 
 Bu makalede, blob depolamayı kullanarak genel görevlerin nasıl gerçekleştirileceği gösterilir. Örnekler, .NET için Azure F# Storage istemci kitaplığı kullanılarak yazılır. Kapsanan görevler, Blobları karşıya yükleme, listeleme, indirme ve silme işlemleri içerir.
 
-Blob depolamaya kavramsal bir genel bakış için bkz. [BLOB depolama için .net Kılavuzu](/azure/storage/storage-dotnet-how-to-use-blobs).
+Blob depolamaya kavramsal bir genel bakış için bkz. [BLOB depolama için .net Kılavuzu](/azure/storage/blobs/storage-quickstart-blobs-dotnet).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
-Bu kılavuzu kullanmak için önce [bir Azure depolama hesabı oluşturmanız](/azure/storage/storage-create-storage-account)gerekir. Bu hesap için depolama erişim anahtarınıza de ihtiyacınız vardır.
+Bu kılavuzu kullanmak için önce [bir Azure depolama hesabı oluşturmanız](/azure/storage/common/storage-account-create)gerekir. Bu hesap için depolama erişim anahtarınıza de ihtiyacınız vardır.
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>F# Betik oluşturma ve etkileşimli başlatma F#
 
@@ -72,7 +72,7 @@ Başlamadan önce, betiğimizin dizininde bazı sözde yerel veriler oluşturun.
 
 Artık Blob Storage’da n veri okuyan ve bu depolamaya veri yazan kodu yazmaya hazırsınız.
 
-## <a name="create-a-container"></a>Kapsayıcı oluşturma
+## <a name="create-a-container"></a>Bir kapsayıcı oluşturma
 
 Bu örnek, zaten yoksa, nasıl bir kapsayıcı oluşturulacağını gösterir:
 
@@ -196,8 +196,8 @@ Daha fazla bilgi için bkz. [Microsoft Azure depolama eşzamanlılık yönetimi]
 
 Azure Storage’daki her blob bir kapsayıcıda yer almalıdır. Kapsayıcı, blob adının bir bölümünü oluşturur. Örneğin, bu örnek blob URI’lerinde `mydata` kapsayıcının adıdır:
 
-- https://storagesample.blob.core.windows.net/mydata/blob1.txt
-- https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
+- `https://storagesample.blob.core.windows.net/mydata/blob1.txt`
+- `https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg`
 
 Kapsayıcı adı, aşağıdaki adlandırma kurallarına uygun geçerli bir DNS adı olmalıdır:
 
@@ -224,7 +224,7 @@ Azure depolama, blob verilerini hem istemcide hem de sunucuda şifrelemeyi deste
 
 Blob Storage’ın temellerini öğrendiğinize göre, daha fazla bilgi edinmek için bu bağlantıları izleyin.
 
-### <a name="tools"></a>Araçları
+### <a name="tools"></a>Araçlar
 
 - [ F# Azurestooygettypeınfo](https://fsprojects.github.io/AzureStorageTypeProvider/)\
 Blob F# , tablo ve kuyruk Azure depolama varlıklarını araştırmak ve bunlara kolayca CRUD işlemleri uygulamak için kullanılabilen bir tür sağlayıcısı.
@@ -237,14 +237,13 @@ Microsoft 'un Windows, OS X ve Linux üzerinde Azure Depolama verileriyle görse
 
 ### <a name="blob-storage-reference"></a>Blob Storage başvurusu
 
-- [.NET için Azure Depolama API'leri](/dotnet/api/overview/azure/storage)
-- [Azure Depolama Hizmeti REST API Başvurusu](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
+- [.NET için Azure depolama API 'Leri](/dotnet/api/overview/azure/storage)
+- [Azure Depolama Hizmetleri REST API Başvurusu](/rest/api/storageservices/)
 
 ### <a name="related-guides"></a>İlgili kılavuzlar
 
-- [Azure Blob depolama ile çalışmaya başlamaC#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
-- [Windows 'da AzCopy komut satırı yardımcı programıyla veri aktarma](/azure/storage/common/storage-use-azcopy)
-- [Linux üzerinde AzCopy komut satırı yardımcı programıyla veri aktarma](/azure/storage/common/storage-use-azcopy-linux)
+- [.NET için Azure Blob depolama örnekleri](https://docs.microsoft.com/samples/azure-samples/storage-blob-dotnet-getting-started/storage-blob-dotnet-getting-started/)
+- [AzCopy ile çalışmaya başlama](/azure/storage/common/storage-use-azcopy-v10)
 - [Azure Depolama bağlantı dizelerini yapılandırma](/azure/storage/common/storage-configure-connection-string)
 - [Azure Depolama Ekibi Blog’u](https://docs.microsoft.com/archive/blogs/windowsazurestorage/)
 - [Hızlı başlangıç: nesne depolamada blob oluşturmak için .NET kullanın](/azure/storage/blobs/storage-quickstart-blobs-dotnet)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 6771edcca8159b0805018c16167b25c287d3152c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 14bb8227a4a6c8beff6ab04c58d8e1a43db69856
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743737"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093142"
 ---
 # <a name="equality-operators-c-reference"></a>Eşitlik işleçleri (C# başvuru)
 
@@ -75,7 +75,7 @@ Anlamsal olarak özdeş [lambda ifadeleri](../../programming-guide/statements-ex
 
 ## <a name="inequality-operator-"></a>Eşitsizlik işleci! =
 
-Eşitsizlik işleci `!=`, işlenenleri eşit değilse `true` döndürür `false` Aksi takdirde. [Yerleşik türlerin](../keywords/built-in-types-table.md)işlenenleri için ifade `x != y`, ifade `!(x == y)`aynı sonucu üretir. Tür eşitliği hakkında daha fazla bilgi için [eşitlik işleci](#equality-operator-) bölümüne bakın.
+Eşitsizlik işleci `!=`, işlenenleri eşit değilse `true` döndürür `false` Aksi takdirde. [Yerleşik türlerin](../builtin-types/built-in-types.md)işlenenleri için ifade `x != y`, ifade `!(x == y)`aynı sonucu üretir. Tür eşitliği hakkında daha fazla bilgi için [eşitlik işleci](#equality-operator-) bölümüne bakın.
 
 Aşağıdaki örnek `!=` işlecinin kullanımını gösterir:
 

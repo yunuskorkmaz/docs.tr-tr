@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: ff0555105f219db5ed891c02400b0587c825718e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6703825d4453b2e0e65036fa2d9c856139ee473c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974655"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094572"
 ---
 # <a name="document-serialization-and-storage"></a>Belge Serileştirme ve Depolama
 
@@ -88,4 +88,4 @@ Hem Eklenti serileştiricileri hem de bağlantılı serileştiriciler aynı aç�
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
 - [WPF'deki Belgeler](documents-in-wpf.md)
 - [Yazdırmaya Genel Bakış](printing-overview.md)
-- [XML Kağıt Belirtimi: genel bakış](https://go.microsoft.com/fwlink?LinkID=106246)
+- [XML Kağıt Belirtimi](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf)

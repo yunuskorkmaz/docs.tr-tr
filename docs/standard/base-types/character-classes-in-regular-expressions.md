@@ -12,12 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: cd9d3f69f8135b608ced91c34f747600352bafe1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 047d0ea7b3783f8cf45afde2a15470adda94cd6e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711460"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095053"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Normal ifadelerde karakter sınıfları
 
@@ -127,7 +127,7 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
   
  İki veya daha fazla karakter aralığı birleştirilebilir. Örneğin, "0" ile "9" arasındaki ondalık basamak aralığını, "a" ile "f" arasındaki küçük harflerin aralığını ve "A" ile "F" arasındaki büyük harflerin aralığını belirtmek için `[0-9a-fA-F]`kullanın.  
   
- Negatif bir karakter grubundaki baştaki simgeyi seçtiğinizde karakteri (`^`) zorunludur ve karakter grubu pozitif karakter grubu yerine negatif bir karakter grubu olduğunu gösterir.  
+ Negatif bir karakter grubundaki önde gelen giriş işareti karakteri (`^`) zorunludur ve karakter grubunun pozitif karakter grubu yerine negatif bir karakter grubu olduğunu gösterir.  
   
 > [!IMPORTANT]
 > Büyük bir normal ifade deseninde bulunan bir negatif karakter grubu, sıfır genişlikli onay değildir. Yani, normal ifade motoru negatif karakter grubunu değerlendirdikten sonra giriş dizesinde bir karakter ilerler.  
@@ -158,7 +158,7 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
 ## <a name="any-character-"></a>Herhangi bir karakter:.  
  Nokta karakteri (.), aşağıdaki iki nitelikle `\n` (yeni satır karakteri, \u000A) dışında herhangi bir karakterle eşleşir:  
   
-- Bir normal ifade deseninin <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> seçeneği tarafından değiştirilmesi veya `.` karakter sınıfını içeren deseninin bölümü `s` seçeneği tarafından değiştirilmişse, `.` herhangi bir karakterle eşleşir. Daha fazla bilgi için bkz. [Normal İfade Seçenekleri](../../../docs/standard/base-types/regular-expression-options.md).  
+- Bir normal ifade deseninin <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> seçeneği tarafından değiştirilmesi veya `.` karakter sınıfını içeren deseninin bölümü `s` seçeneği tarafından değiştirilmişse, `.` herhangi bir karakterle eşleşir. Daha fazla bilgi için bkz. [normal Ifade seçenekleri](../../../docs/standard/base-types/regular-expression-options.md).  
   
      Aşağıdaki örnek, varsayılan olarak ve <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> seçeneğiyle `.` karakter sınıfının farklı davranışını gösterir. Normal ifade `^.+` dizenin başlangıcında başlar ve her karakterle eşleşir. Varsayılan olarak eşleştirme, ilk satırın sonunda biter; normal ifade deseninin satır dönüş karakteriyle `\r` veya \u000D ile eşleşmesi, ancak `\n`eşleşmez. <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> seçeneği giriş dizesinin tamamını tek bir satır olarak yorumladığından, `\n`dahil olmak üzere giriş dizesindeki her karakterle eşleşir.  
   
@@ -174,7 +174,7 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
-> Herhangi bir karakterle eşleştiğinden `.` Language öğesi genellikle bir normal ifade deseninin herhangi bir karakteri birden çok kez eşleştirmeye çalışırsa bir yavaş nicelik karakteriyle birlikte kullanılır. Daha fazla bilgi için bkz [Miktar Belirleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+> Herhangi bir karakterle eşleştiğinden `.` Language öğesi genellikle bir normal ifade deseninin herhangi bir karakteri birden çok kez eşleştirmeye çalışırsa bir yavaş nicelik karakteriyle birlikte kullanılır. Daha fazla bilgi için bkz. [nicelik belirteçleri](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
 <a name="CategoryOrBlock"></a>   
 ## <a name="unicode-category-or-unicode-block-p"></a>Unicode kategorisi veya Unicode bloğu: \p{}  
@@ -240,7 +240,7 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
  ECMAScript uyumlu davranış belirtilmişse, `\w` `[a-zA-Z_0-9]`eşdeğerdir. ECMAScript normal ifadeleri hakkında daha fazla bilgi için [normal Ifade seçeneklerinde](../../../docs/standard/base-types/regular-expression-options.md)"ECMAScript eşleştirme davranışı" bölümüne bakın.  
   
 > [!NOTE]
-> Herhangi bir kelime karakteriyle eşleştiği için, bir normal ifade deseninin her bir sözcük karakterini birden çok kez ve ardından belirli bir sözcük karakteri ile eşleştirmeye çalışırsa, `\w` Language öğesi genellikle bir yavaş belirleyici ile birlikte kullanılır. Daha fazla bilgi için bkz [Miktar Belirleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+> Herhangi bir kelime karakteriyle eşleştiği için, bir normal ifade deseninin her bir sözcük karakterini birden çok kez ve ardından belirli bir sözcük karakteri ile eşleştirmeye çalışırsa, `\w` Language öğesi genellikle bir yavaş belirleyici ile birlikte kullanılır. Daha fazla bilgi için bkz. [nicelik belirteçleri](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  Aşağıdaki örnek, bir sözcükteki yinelenen karakterleri eşleştirmek için `\w` Language öğesini kullanır. Örnek, `(\w)\1`bir normal ifade deseninin tanımlar, bu, aşağıdaki şekilde yorumlanabilir.  
   
@@ -274,7 +274,7 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
  ECMAScript uyumlu davranış belirtilmişse, `\W` `[^a-zA-Z_0-9]`eşdeğerdir. ECMAScript normal ifadeleri hakkında daha fazla bilgi için [normal Ifade seçeneklerinde](../../../docs/standard/base-types/regular-expression-options.md)"ECMAScript eşleştirme davranışı" bölümüne bakın.  
   
 > [!NOTE]
-> Sözcük olmayan herhangi bir karakterle eşleştiğinden, bir normal ifade deseninin sözcük olmayan herhangi bir karakterle birden çok kez ve ardından belirli bir sözcük olmayan karakterle eşleşmesi deneniyorsa, `\W` Language öğesi genellikle bir yavaş belirleyici ile birlikte kullanılır. Daha fazla bilgi için bkz [Miktar Belirleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+> Sözcük olmayan herhangi bir karakterle eşleştiğinden, bir normal ifade deseninin sözcük olmayan herhangi bir karakterle birden çok kez ve ardından belirli bir sözcük olmayan karakterle eşleşmesi deneniyorsa, `\W` Language öğesi genellikle bir yavaş belirleyici ile birlikte kullanılır. Daha fazla bilgi için bkz. [nicelik belirteçleri](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  Aşağıdaki örnekte `\W` karakter sınıfı gösterilmektedir.  Bir sözcüğe ve ardından boşluk veya noktalama gibi bir veya iki sözcük olmayan karakterle eşleşen bir normal ifade deseninin `\b(\w+)(\W){1,2}`tanımlar. Normal ifade aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   

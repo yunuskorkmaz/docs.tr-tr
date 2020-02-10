@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: c786137a471e0199a8ac60f8d82b4ce440e33b7e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f23f54283849ddaa827a98f0f28a39a72305dc1d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740403"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095235"
 ---
 # <a name="drawing-formatted-text"></a>Biçimlendirilmiş Metin Çizme
 Bu konu, <xref:System.Windows.Media.FormattedText> nesnesinin özelliklerine genel bir bakış sağlar. Bu nesne [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalarında metin çizmek için alt düzey denetim sağlar.  
@@ -33,7 +33,7 @@ Bu konu, <xref:System.Windows.Media.FormattedText> nesnesinin özelliklerine gen
   
  <xref:System.Windows.Media.FormattedText> nesnesi, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] metin denetimlerinden daha fazla metin biçimlendirme özelliği sağlar ve metni dekoratif bir öğe olarak kullanmak istediğiniz durumlarda yararlı olabilir. Daha fazla bilgi için, [biçimlendirilen metni bir geometriye dönüştürmenin](#converting_formatted_text)aşağıdaki bölümüne bakın.  
   
- Ayrıca, <xref:System.Windows.Media.FormattedText> nesnesi metin odaklı <xref:System.Windows.Media.DrawingVisual>türetilmiş nesneler oluşturmak için faydalıdır. <xref:System.Windows.Media.DrawingVisual> şekilleri, resimleri veya metinleri işlemek için kullanılan basit bir çizim sınıfıdır. Daha fazla bilgi için bkz. [Drawinggörselleri kullanarak Isabet testi örneği](https://go.microsoft.com/fwlink/?LinkID=159994).  
+ Ayrıca, <xref:System.Windows.Media.FormattedText> nesnesi metin odaklı <xref:System.Windows.Media.DrawingVisual>türetilmiş nesneler oluşturmak için faydalıdır. <xref:System.Windows.Media.DrawingVisual> şekilleri, resimleri veya metinleri işlemek için kullanılan basit bir çizim sınıfıdır. Daha fazla bilgi için bkz. [Drawinggörselleri kullanarak Isabet testi örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Visual%20Layer/DrawingVisual).  
   
 ## <a name="using-the-formattedtext-object"></a>FormattedText nesnesini kullanma  
  Biçimli metin oluşturmak için, bir <xref:System.Windows.Media.FormattedText> nesnesi oluşturmak üzere <xref:System.Windows.Media.FormattedText.%23ctor%2A> oluşturucusunu çağırın. İlk biçimlendirilmiş metin dizesini oluşturduktan sonra bir dizi biçimlendirme stili uygulayabilirsiniz.  
@@ -107,7 +107,7 @@ Metnin yol geometrisini izleyen Sphere
 |DT_PREFIX|Yok.|Desteklenmez. Bir Hızlandırıcı tuşu veya bağlantı gibi metin için alt çizgi kullanmak istiyorsanız <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A> yöntemini kullanın.|  
 |DT_PREFIXONLY|Yok.|Desteklenmez.|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|<xref:System.Windows.Media.FormattedText.TextAlignment%2A> özelliğini <xref:System.Windows.TextAlignment.Right>olarak ayarlanan değerle kullanın. (Yalnızca WPF)|  
-|DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|Ayarlama <xref:System.Windows.Media.FormattedText.FlowDirection%2A> özelliğini <xref:System.Windows.FlowDirection.RightToLeft>.|  
+|DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|<xref:System.Windows.Media.FormattedText.FlowDirection%2A> özelliğini <xref:System.Windows.FlowDirection.RightToLeft>olarak ayarlayın.|  
 |DT_SINGLELINE|Yok.|Gerekli değildir. <xref:System.Windows.Media.FormattedText> nesneler, <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> özelliği ayarlanmamışsa veya metin bir satır başı/satır besleme (CR/LF) içermiyorsa, tek satırlık bir denetim gibi davranır.|  
 |DT_TABSTOP|Yok.|Kullanıcı tanımlı sekme durağı konumları desteği yok.|  
 |DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|Gerekli değildir. En üstteki gerekçe varsayılandır. Diğer dikey konumlandırma değerleri, uygun bir Win32 DrawText ' y ' konumunu hesaplamak için <xref:System.Windows.Media.FormattedText.Height%2A> özelliği kullanılarak tanımlanabilir.|  

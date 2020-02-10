@@ -2,16 +2,16 @@
 title: Veritabanı Erişimi Etkinlikleri
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: eec368803eeacb2bab729bcd6d57cc7fc6107256
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ed3f0ad3f2fd19f622c9cb0faf7d5cd864b81995
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710854"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094650"
 ---
 # <a name="database-access-activities"></a>Veritabanı Erişimi Etkinlikleri
 
-Veritabanı erişim etkinlikleri, bir iş akışı içindeki bir veritabanına erişmenizi sağlar. Bu etkinlikler, veritabanlarına erişim sağlamak veya bilgileri değiştirmek ve veritabanına erişmek için [ADO.net](https://go.microsoft.com/fwlink/?LinkId=166081) kullanmayı sağlar.
+Veritabanı erişim etkinlikleri, bir iş akışı içindeki bir veritabanına erişmenizi sağlar. Bu etkinlikler, veritabanlarına erişim sağlamak veya bilgileri değiştirmek ve veritabanına erişmek için [ADO.net](../../data/adonet/index.md) kullanmayı sağlar.
 
 > [!IMPORTANT]
 > Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
@@ -78,7 +78,7 @@ Public class DbUpdate: AsyncCodeActivity
 |ConnectionString|Veritabanına bağlanmak için bağlantı dizesi. Bu bağımsız değişken ayarlandıysa, `ProviderName` de ayarlanmalıdır.|
 |ConfigName|Bağlantı bilgilerinin depolandığı yapılandırma dosyası bölümünün adı. Bu bağımsız değişken ayarlandığında `ProviderName` ve `ConnectionString` gerekli değildir.|
 |CommandType|Yürütülecek <xref:System.Data.Common.DbCommand> türü.|
-|SQL|Yürütülecek SQL komutu.|
+|Sql|Yürütülecek SQL komutu.|
 |Parametreler|SQL sorgusunun parametrelerinin koleksiyonu.|
 |AffectedRecords|Son işlemden etkilenen kayıt sayısı.|
 
@@ -132,7 +132,7 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 |ConnectionString|Veritabanına bağlanmak için bağlantı dizesi. Bu bağımsız değişken ayarlandıysa, `ProviderName` de ayarlanmalıdır.|
 |ConfigName|Bağlantı bilgilerinin depolandığı yapılandırma dosyası bölümünün adı. Bu bağımsız değişken ayarlandığında `ProviderName` ve `ConnectionString` gerekli değildir.|
 |CommandType|Yürütülecek <xref:System.Data.Common.DbCommand> türü.|
-|SQL|Yürütülecek SQL komutu.|
+|Sql|Yürütülecek SQL komutu.|
 |Parametreler|SQL sorgusunun parametrelerinin koleksiyonu.|
 |Sonuç|Sorgu yürütüldükten sonra elde edilen skaler. Bu bağımsız değişken `TResult`türündedir.|
 
@@ -192,7 +192,7 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 |ConnectionString|Veritabanına bağlanmak için bağlantı dizesi. Bu bağımsız değişken ayarlandıysa, `ProviderName` de ayarlanmalıdır.|
 |ConfigName|Bağlantı bilgilerinin depolandığı yapılandırma dosyası bölümünün adı. Bu bağımsız değişken ayarlandığında `ProviderName` ve `ConnectionString` gerekli değildir.|
 |CommandType|Yürütülecek <xref:System.Data.Common.DbCommand> türü.|
-|SQL|Yürütülecek SQL komutu.|
+|Sql|Yürütülecek SQL komutu.|
 |Parametreler|SQL sorgusunun parametrelerinin koleksiyonu.|
 |Eşleyici|Eşleme işlevi (<xref:System.Func%601><`DbDataReader`, `TResult`>) sorguyu yürütmenin sonucu olarak elde edilen `DataReader` bir kayıt alır ve `TResult` koleksiyonuna eklenmek üzere `Result` türünde bir nesnenin örneğini döndürür.<br /><br /> Bu durumda, eşleme tek bir yürütmede yürütme yapılır, ancak tasarımcı kullanılarak bildirimli olarak yazılamıyor.|
 |MapperFunc|Eşleme işlevi (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>) sorguyu yürütmenin sonucu olarak elde edilen `DataReader` bir kayıt alır ve `TResult` koleksiyonuna eklenmek üzere `Result` türünde bir nesnenin örneğini döndürür.<br /><br /> Bu durumda, eşleme birden çok sayıda yürütmede yapılır. Bu işlev XAML 'ye serileştirilebilir ve bildirimli olarak yazılabilir (var olan herhangi bir etkinlik eşlemede yer alabilir).|
@@ -246,7 +246,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 |ConnectionString|Veritabanına bağlanmak için bağlantı dizesi. Bu bağımsız değişken ayarlandıysa, `ProviderName` de ayarlanmalıdır.|
 |ConfigName|Bağlantı bilgilerinin depolandığı yapılandırma dosyası bölümünün adı. Bu bağımsız değişken ayarlandığında `ProviderName` ve `ConnectionString` gerekli değildir.|
 |CommandType|Yürütülecek <xref:System.Data.Common.DbCommand> türü.|
-|SQL|Yürütülecek SQL komutu.|
+|Sql|Yürütülecek SQL komutu.|
 |Parametreler|SQL sorgusunun parametrelerinin koleksiyonu.|
 |Sonuç|Sorgu yürütüldükten sonra elde edilen <xref:System.Data.DataSet>.|
 

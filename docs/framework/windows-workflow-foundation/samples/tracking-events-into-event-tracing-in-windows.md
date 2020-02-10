@@ -2,12 +2,12 @@
 title: Windows'ta Olay İzleme ile Olayları İzleme
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: fe50476eedef505258c2e6818e75a32c06ed6fa6
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2c397bcfa809a1306e9c31bf3f652b055d997f38
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715923"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094585"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Windows'ta Olay İzleme ile Olayları İzleme
 
@@ -47,7 +47,7 @@ Aşağıdaki tabloda iş akışı çalışma zamanının yaydığı izleme kayı
 
 3. Çözümü çalıştırmak için F5 'e basın.
 
-    Hizmet, varsayılan olarak 53797 numaralı bağlantı noktasını (http://localhost:53797/SampleWorkflowService.xamlx) ) dinler.
+    Hizmet, varsayılan olarak 53797 numaralı bağlantı noktasını (http://localhost:53797/SampleWorkflowService.xamlx)) dinler.
 
 4. Dosya Gezgini 'ni kullanarak WCF test istemcisini açın.
 
@@ -57,9 +57,9 @@ Aşağıdaki tabloda iş akışı çalışma zamanının yaydığı izleme kayı
 
 5. WCF test istemcisinde **Dosya** menüsünden **Hizmet Ekle** ' yi seçin.
 
-    Giriş kutusuna uç nokta adresini ekleyin. Varsayılan, `http://localhost:53797/SampleWorkflowService.xamlx` değeridir.
+    Giriş kutusuna uç nokta adresini ekleyin. Varsayılan: `http://localhost:53797/SampleWorkflowService.xamlx`.
 
-6. Olay Görüntüleyicisi uygulamasını açın.
+6. Olay Görüntüleyici uygulamasını açın.
 
     Hizmeti çağırmadan önce, **Başlat** menüsünden Olay Görüntüleyicisi başlatın, **Çalıştır** ' ı seçin ve `eventvwr.exe`yazın. Olay günlüğünün, iş akışı hizmetinden yayılan izleme olaylarını dinlediğinden emin olun.
 
@@ -153,4 +153,4 @@ Sistem durumu izleme izleme profili, iş akışı örneği kayıtları ve etkinl
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric Izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric Izleme örnekleri](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

@@ -1,25 +1,20 @@
 ---
-title: Model explainability için genelleştirilmiş ekleme modellerini ve şekil işlevlerini kullanma
-description: ML.NET içinde model explainability için genelleştirilmiş ekleme modellerini ve şekil işlevlerini kullanma
-ms.date: 03/05/2019
+title: Genelleştirilmiş eklenebilir modellerle ML.NET modellerini yorumlama
+description: ML.NET içinde model yorumlenebilirliği için genelleştirilmiş ek modeller ve şekil işlevlerini kullanın
+ms.date: 01/30/2020
 ms.custom: mvc,how-to
-ms.openlocfilehash: c58cf823007196c35da093fab7423c1e40ba1158
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 6df19eff4fec98c5815a9f8f4d8e4e9a80cba6ed
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855609"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092479"
 ---
-# <a name="use-generalized-additive-models-and-shape-functions-for-model-explainability-in-mlnet"></a>ML.NET içinde model explainability için genelleştirilmiş ekleme modellerini ve şekil işlevlerini kullanma
+# <a name="use-generalized-additive-models-and-shape-functions-for-model-interpretability-in-mlnet"></a>ML.NET içinde model yorumlenebilirliği için genelleştirilmiş ek modeller ve şekil işlevlerini kullanın
 
-> [!NOTE]
-> Bu konu, şu anda önizleme aşamasında olan ML.NET 'e başvurur ve malzemeler değişebilir. Daha fazla bilgi için [ml.net](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) sayfasını ziyaret edin.
+Makine öğrenimi modelleri oluştururken, genellikle tahmin yapmak için yeterli değildir. Genellikle, makine öğrenimi geliştiricilerinin, karar mekanizmalarının ve modellerden etkilenen kullanıcıların, makine öğrenimi modellerinin kararlar vermesini ve hangi özelliklerin performansına katkıda bulunduğunu anlaması gerekir. **Genelleştirilmiş ek modeller (GAMs)** , makine öğrenimi geliştiricilerin başkaları tarafından kolayca yorumlanabilecek yüksek kapasiteli modeller oluşturmalarına yardımcı olmak üzere model yorumlanabilir için dahili olarak Microsoft 'ta kullanılır.
 
-Bu nasıl yapılır ve ilgili örnek şu anda **ml.NET sürüm 0,10**kullanıyor. Daha fazla bilgi için [DotNet/Machine-posta GitHub](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)depolarındaki sürüm notlarına bakın.
-
-Makine öğrenimi modelleri oluştururken, genellikle tahmin yapmak için yeterli değildir. Genellikle, makine öğrenimi geliştiricilerinin, karar mekanizmalarının ve modellerden etkilenen kullanıcıların, makine öğrenimi modellerinin kararlar vermesini ve hangi özelliklerin performansına katkıda bulunduğunu anlaması gerekir. Machine Learning geliştiricilerinin, başkaları tarafından kolayca yorumlanabilecek yüksek kapasiteli modeller oluşturmalarına yardımcı olmak üzere, Microsoft model explainability için dahili olarak Microsoft 'ta **Genelleştirilmiş ek modeller (GAMs)** kullanılır.
-
-GAMs, koşulların tek bir değişkenin "şekil işlevleri" olarak adlandırılan doğrusal olmayan işlevler olduğu doğrusal modeller olan bir **yorumlı modellerden** oluşan bir sınıftır. Doğrusal modeller olarak kolayca yorumlanır, ancak modeller tek bir ağırlığa değil özelliklerin işlevlerini öğrendiklerinden basit bir doğrusal modelden daha karmaşık ilişkiler modelleyebilir. Elde edilen GAM tahmini, eğitim kümesi üzerinden ortalama tahminleri ve ortalama tahmine ait sapmayı temsil eden şekil işlevlerini temsil eden bir kesme dönemi içerir. Şekil işlevleri, bir özelliğin farklı değerlerine modelin yanıtını görmek için göz önünde görünebilir ve kod örneği sonunda oluşturulan aşağıdaki grafik gibi görselleştirilir. ML.net ' deki gam eğitmen, basit olmayan şekil işlevlerini öğrenmek için (örneğin Tree Stumps) ve Lou tarafından [sınıflandırma ve gerileme için anlaşılır modellerle](https://www.cs.cornell.edu/~yinlou/papers/lou-kdd12.pdf) tanımlanan yöntemi temel alarak, Caruana ve Gehrke.
+GAMs, koşulların tek bir değişkenin "şekil işlevleri" olarak adlandırılan doğrusal olmayan işlevler olduğu doğrusal modeller olan bir **yorumlı modellerden** oluşan bir sınıftır. Doğrusal modeller olarak kolayca yorumlanır, ancak modeller tek bir ağırlığa değil özelliklerin işlevlerini öğrendiklerinden basit bir doğrusal modelden daha karmaşık ilişkiler modelleyebilir. Elde edilen GAM tahmini, eğitim kümesi üzerinden ortalama tahminleri ve ortalama tahmine ait sapmayı temsil eden şekil işlevlerini temsil eden bir kesme dönemi içerir. Şekil işlevleri, bir özelliğin farklı değerlerine modelin yanıtını görmek için göz önünde görünebilir ve kod örneği sonunda oluşturulan aşağıdaki grafik gibi görselleştirilir. ML.net ' deki gam eğitmen, basit olmayan şekil işlevlerini öğrenmek için (örneğin Tree Stumps) ve Lou, Caruana ve Gehrke tarafından [sınıflandırma ve gerileme için okunaklı modellerle](https://www.cs.cornell.edu/~yinlou/papers/lou-kdd12.pdf) tanımlanan yöntemi temel alır.
 
 ```csharp
 // Train the Generalized Additive Model

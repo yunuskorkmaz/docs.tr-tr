@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: da8f3e592e47c9482d4395b81627c1582e2354f7
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 65ecfc4269ff894d45c9b4ee15e349b1a7ddbb73
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72005243"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094520"
 ---
 # <a name="opentype-font-features"></a>OpenType Yazı Tipi Özellikleri
 
@@ -39,7 +39,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
 > [!NOTE]
 > Windows SDK, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalarıyla kullanabileceğiniz örnek bir OpenType yazı tipi kümesi içerir. Bu yazı tipleri, bu konunun geri kalanında gösterilen özelliklerin çoğunu sağlar. Daha fazla bilgi için bkz. [örnek OpenType yazı tipi paketi](sample-opentype-font-pack.md).  
   
- OpenType yazı tipi biçiminin ayrıntıları için bkz. [OpenType belirtimi](https://go.microsoft.com/fwlink/?LinkId=96731) .  
+OpenType yazı tipi biçiminin ayrıntıları için bkz. [OpenType belirtimi](https://docs.microsoft.com/typography/opentype/spec/).  
   
 ### <a name="advanced-typographic-extensions"></a>Gelişmiş tipografik uzantılar  
  Gelişmiş tipografik tablolar (OpenType Düzen tabloları), yazı tiplerinin işlevselliğini TrueType ya da CFF anahatlarıyla genişletir. OpenType Düzen yazı tipleri, yüksek kaliteli uluslararası Tipografisi desteklemek için yazı tiplerinin yeteneklerini genişleten ek bilgiler içerir. Çoğu OpenType yazı tipi, kullanılabilen toplam OpenType özelliklerinin yalnızca bir alt kümesini sunar. OpenType yazı tipleri aşağıdaki özellikleri sağlar.  
@@ -52,7 +52,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
   
  OpenType Düzen tabloları, OpenType belirtiminin ["yazı tipi dosya tabloları"](https://www.microsoft.com/typography/otspec/otff.htm) bölümünde daha ayrıntılı olarak açıklanmıştır.  
   
- Bu genel bakışın geri kalanında <xref:System.Windows.Documents.Typography> nesnesinin özellikleri tarafından açığa çıkarılan, bazı görsel açıdan ilgi çekici OpenType özelliklerinin kapsamını ve esnekliği tanıtılmıştır. Bu nesne hakkında daha fazla bilgi için bkz. [tipografi sınıfı](#typography_class).  
+ Bu genel bakışın geri kalanında, <xref:System.Windows.Documents.Typography> nesnesinin özellikleri tarafından kullanıma sunulan bazı görsel açıdan ilgi çekici OpenType özelliklerden bazıları ve esnekliği tanıtılmaktadır. Bu nesne hakkında daha fazla bilgi için bkz. [tipografi sınıfı](#typography_class).  
   
 <a name="variants"></a>   
 ## <a name="variants"></a>Değişkenler  
@@ -140,7 +140,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
   
  ![OpenType isteğe bağlı ligatür kullanan metin](./media/opentype-font-features/opentype-discretionary-ligatures.gif "OpenType isteğe bağlı ligatür kullanan metin")  
   
- Aşağıdaki biçimlendirme örneğinde, <xref:System.Windows.Documents.Typography> nesnesinin özellikleri kullanılarak Pericles yazı tipi için isteğe bağlı ligatür karakterlerinin nasıl tanımlanacağı gösterilmektedir.  
+ Aşağıdaki biçimlendirme örneği, <xref:System.Windows.Documents.Typography> nesnesinin özelliklerini kullanarak Pericles yazı tipi için isteğe bağlı ligatür karakterlerinin nasıl tanımlanacağını gösterir.  
   
  [!code-xaml[OpenTypeFontSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#5)]  
   
@@ -215,7 +215,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
   
  ![OpenType geçmiş formlarını kullanan metin](./media/opentype-font-features/opentype-historical-forms.gif "OpenType geçmiş formlarını kullanan metin")  
    
- Aşağıdaki biçimlendirme örneğinde, <xref:System.Windows.Documents.Typography> nesnesinin özellikleri kullanılarak Palatino Linotype yazı tipi için geçmiş formlarının nasıl tanımlanacağı gösterilmektedir.  
+ Aşağıdaki biçimlendirme örneği, <xref:System.Windows.Documents.Typography> nesnesinin özelliklerini kullanarak Palatino Linotype yazı tipi için geçmiş formlarının nasıl tanımlanacağını gösterir.  
   
  [!code-xaml[OpenTypeFontSamples#8](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#8)]  
   
@@ -271,7 +271,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
   
 <a name="typography_class"></a>   
 ## <a name="typography-class"></a>Tipografi sınıfı  
- <xref:System.Windows.Documents.Typography> nesnesi, OpenType yazı tipinin desteklediği özellikler kümesini kullanıma sunar. Biçimlendirme içinde <xref:System.Windows.Documents.Typography> ' ın özelliklerini ayarlayarak OpenType özelliklerinden faydalanan belgeleri kolayca yazabilirsiniz.  
+ <xref:System.Windows.Documents.Typography> nesnesi, OpenType yazı tipinin desteklediği özellikler kümesini kullanıma sunar. Biçimlendirme <xref:System.Windows.Documents.Typography> özelliklerini ayarlayarak, OpenType özelliklerinden faydalanan belgeleri kolayca yazabilirsiniz.  
   
  Aşağıdaki metin Pescadero yazı tipi için standart büyük harfleri, ardından "SmallCaps" ve "AllSmallCaps" olarak stillendirilmiş harfleri görüntüler. Bu durumda, üç sözcük için de aynı yazı tipi boyutu kullanılır.  
   
@@ -292,7 +292,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
 |Özellik|Değer (ler)|Varsayılan Değer|  
 |--------------|----------------|-------------------|  
 |<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|Sayısal değer-bayt|0|  
-|<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; 0 &#124; 2|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; <xref:System.Windows.FontCapitals.Titling> &#124; <xref:System.Windows.FontCapitals.Unicase>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.CapitalSpacing%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.CaseSensitiveForms%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.ContextualAlternates%2A>|<xref:System.Boolean>|`true`|  
@@ -300,8 +300,8 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
 |<xref:System.Windows.Documents.Typography.ContextualSwashes%2A>|Sayısal değer-bayt|0|  
 |<xref:System.Windows.Documents.Typography.DiscretionaryLigatures%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.EastAsianExpertForms%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124;<xref:System.Windows.FontEastAsianLanguage.Jis04>&#124;<xref:System.Windows.FontEastAsianLanguage.Jis78>&#124;<xref:System.Windows.FontEastAsianLanguage.Jis83>&#124;<xref:System.Windows.FontEastAsianLanguage.Jis90>&#124;<xref:System.Windows.FontEastAsianLanguage.NlcKanji>&#124;<xref:System.Windows.FontEastAsianLanguage.Normal>&#124;<xref:System.Windows.FontEastAsianLanguage.Simplified>&#124;<xref:System.Windows.FontEastAsianLanguage.Traditional>&#124;<xref:System.Windows.FontEastAsianLanguage.TraditionalNames>|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
-|<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<xref:System.Windows.FontEastAsianWidths.Full> &#124; <xref:System.Windows.FontEastAsianWidths.Half> &#124; <xref:System.Windows.FontEastAsianWidths.Normal> &#124; <xref:System.Windows.FontEastAsianWidths.Proportional> &#124; <xref:System.Windows.FontEastAsianWidths.Quarter> &#124; 0|<xref:System.Windows.FontEastAsianWidths.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis04> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis78> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis83> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis90> &#124; <xref:System.Windows.FontEastAsianLanguage.NlcKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Normal> &#124; <xref:System.Windows.FontEastAsianLanguage.Simplified> &#124; <xref:System.Windows.FontEastAsianLanguage.Traditional> &#124; <xref:System.Windows.FontEastAsianLanguage.TraditionalNames>|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<xref:System.Windows.FontEastAsianWidths.Full> &#124; <xref:System.Windows.FontEastAsianWidths.Half> &#124; <xref:System.Windows.FontEastAsianWidths.Normal> &#124; <xref:System.Windows.FontEastAsianWidths.Proportional> &#124; <xref:System.Windows.FontEastAsianWidths.Quarter> &#124; <xref:System.Windows.FontEastAsianWidths.Third>|<xref:System.Windows.FontEastAsianWidths.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.Fraction%2A>|<xref:System.Windows.FontFraction.Normal> &#124; <xref:System.Windows.FontFraction.Slashed> &#124; <xref:System.Windows.FontFraction.Stacked>|<xref:System.Windows.FontFraction.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.HistoricalForms%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.HistoricalLigatures%2A>|<xref:System.Boolean>|`false`|  
@@ -333,12 +333,12 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
 |<xref:System.Windows.Documents.Typography.StylisticSet18%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet19%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet20%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; 0|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; <xref:System.Windows.FontVariants.Superscript>|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Documents.Typography>
-- [OpenType belirtimi](https://go.microsoft.com/fwlink/?LinkId=96731)
+- [OpenType belirtimi](https://docs.microsoft.com/typography/opentype/spec/)
 - [WPF'de Tipografi](typography-in-wpf.md)
 - [Örnek OpenType Yazı Tipi Paketi](sample-opentype-font-pack.md)
 - [Uygulamalarla Yazı Tiplerini Paketleme](packaging-fonts-with-applications.md)

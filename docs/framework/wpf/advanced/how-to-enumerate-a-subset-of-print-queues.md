@@ -9,30 +9,30 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-ms.openlocfilehash: adcfff0196bd0430ec1ae563fbd5489062de11f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aae41931f012f6d34fc057fdd6ee9fc9baab6e7b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776070"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094546"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>Nasıl yapılır: Yazdırma Kuyruklarının Alt Kümesini Numaralandırma
-Belirli özelliklere sahip yazıcıların listesini oluşturmak için olduğu yazıcıların şirket genelindeki bir ayar kümesini yönetme, bilgi teknolojisi (BT) uzmanları tarafından karşılaşılan yaygın bir durumdur. Bu işlev tarafından sağlanan <xref:System.Printing.PrintServer.GetPrintQueues%2A> yöntemi bir <xref:System.Printing.PrintServer> nesne ve <xref:System.Printing.EnumeratedPrintQueueTypes> sabit listesi.  
+Şirket genelinde bir yazıcı kümesini yöneten Bilişim Teknolojileri (BT) uzmanlarının karşılaştığı yaygın bir durum, belirli özelliklere sahip yazıcıların bir listesini oluşturmak. Bu işlevsellik, bir <xref:System.Printing.PrintServer> nesnesinin <xref:System.Printing.PrintServer.GetPrintQueues%2A> yöntemi ve <xref:System.Printing.EnumeratedPrintQueueTypes> numaralandırması tarafından sağlanır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, bir dizi listelemek istediğiniz yazdırma sıralarını özelliklerini belirten bayrakları oluşturarak kodu başlar. Bu örnekte, yazdırma sunucusunda yerel olarak yüklenir ve paylaşılan yazdırma sıraları için arıyoruz. <xref:System.Printing.EnumeratedPrintQueueTypes> Numaralandırma birçok diğer olanaklar sağlar.  
+ Aşağıdaki örnekte kod, listelemek istediğimiz yazdırma sıralarının özelliklerini belirten bir bayrak dizisi oluşturarak başlar. Bu örnekte, yazdırma sunucusuna yerel olarak yüklenen ve paylaşılan yazdırma kuyruklarını arıyoruz. <xref:System.Printing.EnumeratedPrintQueueTypes> numaralandırması birçok farklı olasılık sağlar.  
   
- Ardından kod oluşturur bir <xref:System.Printing.LocalPrintServer> türetilmiş bir sınıf nesnesi <xref:System.Printing.PrintServer>. Yerel yazdırma sunucusu, uygulamanın çalıştığı bilgisayardır.  
+ Kod daha sonra, <xref:System.Printing.PrintServer>türetilmiş bir sınıf olan bir <xref:System.Printing.LocalPrintServer> nesnesi oluşturur. Yerel yazdırma sunucusu, uygulamanın çalıştığı bilgisayardır.  
   
- Son önemli adım dizisine geçirmektir <xref:System.Printing.PrintServer.GetPrintQueues%2A> yöntemi.  
+ Son önemli adım diziyi <xref:System.Printing.PrintServer.GetPrintQueues%2A> yöntemine geçirmektir.  
   
- Son olarak, sonuçları kullanıcıya gösterilir.  
+ Son olarak, sonuçlar kullanıcıya sunulur.  
   
  [!code-cpp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CPP/Program.cpp#listsubsetofprintqueues)]
  [!code-csharp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CSharp/Program.cs#listsubsetofprintqueues)]
  [!code-vb[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/visualbasic/program.vb#listsubsetofprintqueues)]  
   
- Bu örnek sağlayarak genişletilebiliyordu `foreach` her bir yazdırma sırası daha da incelemek döngü filtreleme. Örneğin, iki taraflı yazdırma döngüyle tarafından desteklemeyen yazıcıları her yazıcı sırasının ekran <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> yöntemi ve çift yönlü baskı varlığını test döndürülen değer.  
+ Bu örneği, her bir yazdırma kuyruğundaki adımları daha fazla filtreleyerek `foreach` döngüsüne sahip olacak şekilde genişletebilirsiniz. Örneğin, döngüyü her bir yazdırma sırasının <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> yöntemini çağırarak ve çift yönlülüme varlığı için döndürülen değeri test ederek iki taraflı yazdırmayı desteklemeyen yazıcılar izleyebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -44,4 +44,4 @@ Belirli özelliklere sahip yazıcıların listesini oluşturmak için olduğu ya
 - <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
 - [WPF'deki Belgeler](documents-in-wpf.md)
 - [Yazdırmaya Genel Bakış](printing-overview.md)
-- [Microsoft XPS Belge Yazıcısı](https://go.microsoft.com/fwlink/?LinkId=147319)
+- [Microsoft XPS Belge Yazıcısı](/windows/win32/printdocs/microsoft-xps-document-writer)

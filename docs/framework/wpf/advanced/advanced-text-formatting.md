@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: d509de02cd1b3f645ee439c0b0eb33fd1ddbdb07
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 26ee3c2b8a431200c3dc04130deb2247b6c1446d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636113"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095248"
 ---
 # <a name="advanced-text-formatting"></a>Gelişmiş Metin Biçimlendirme
 Windows Presentation Foundation (WPF), uygulamanıza metin dahil etmek için güçlü bir API kümesi sağlar. <xref:System.Windows.Controls.TextBlock>gibi düzen ve [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] API 'Leri, metin sunumu için en yaygın ve genel kullanım öğelerini sağlar. <xref:System.Windows.Media.GlyphRunDrawing> ve <xref:System.Windows.Media.FormattedText>gibi çizim API 'Leri, çizimlerde biçimlendirilen metin ekleme için bir yol sağlar. WPF, en gelişmiş düzeyde metin kopyası yönetimi, metin çalışma biçimlendirme yönetimi ve katıştırılmış nesne yönetimi gibi metin sunumunun her yönüyle kontrol etmek için genişletilebilir bir metin biçimlendirme altyapısı sağlar.  
@@ -22,10 +22,10 @@ Windows Presentation Foundation (WPF), uygulamanıza metin dahil etmek için gü
  Bu konuda WPF metin biçimlendirmeye giriş sağlanır. İstemci uygulamasına odaklanır ve WPF metin biçimlendirme altyapısının kullanımını kullanır.  
   
 > [!NOTE]
-> Bu belgedeki tüm kod örnekleri, [Gelişmiş metin biçimlendirme örneğinde](https://go.microsoft.com/fwlink/?LinkID=159965)bulunabilir.  
+> Bu belgedeki tüm kod örnekleri, [Gelişmiş metin biçimlendirme örneğinde](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI/TextFormatting)bulunabilir.  
 
 <a name="prereq"></a>   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Önkoşullar  
  Bu konu başlığı altında, metin sunumu için kullanılan yüksek düzey API 'lerle ilgili bilgi sahibi olduğunuz varsayılır. Çoğu Kullanıcı senaryosunda, bu konuda ele alınan Gelişmiş metin biçimlendirme API 'Leri gerekli değildir. Farklı metin API 'Lerine giriş için bkz. [WPF Içindeki belgeler](documents-in-wpf.md).  
   
 <a name="section1"></a>   

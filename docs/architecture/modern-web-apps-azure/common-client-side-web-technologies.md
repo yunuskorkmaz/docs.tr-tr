@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Orta
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 0e5f3578edc723e2e2a32b9b3a1d8a7dcabd2909
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 7dd3765b1b71d8c1ef22d714a00be3e171fab523
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965756"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093129"
 ---
 # <a name="common-client-side-web-technologies"></a>Ortak istemci tarafı Web teknolojileri
 
@@ -18,13 +18,13 @@ ms.locfileid: "76965756"
 
 ASP.NET Core uygulamalar Web uygulamalardır ve genellikle HTML, CSS ve JavaScript gibi istemci tarafı Web teknolojilerine bağımlıdır. Sayfa (HTML) içeriğini düzen ve stil (CSS) ve davranışını (JavaScript aracılığıyla) ayırarak, karmaşık Web uygulamaları, endişeleri ayrımı özelliğinden yararlanabilir. Uygulamanın yapısı, tasarımı veya davranışında yapılacak değişiklikler, bu konular intertwined olmadığında daha kolay hale getirilebilir.
 
-HTML ve CSS görece kararlı olsa da, JavaScript, uygulama çerçeveleri ve yardımcı programlar tarafından Web tabanlı uygulamalar oluşturmak için birlikte çalışarak,, Breakneck hızında gelişiyor. Bu bölüm, JavaScript 'in Web geliştiricileri tarafından uygulama geliştirme kapsamında kullanıldığı, angular hakkında üst düzey bir genel bakış ve istemci tarafı kitaplıklarına yanıt verme gibi çeşitli yöntemlere bakar.
+HTML ve CSS görece kararlı olsa da, JavaScript, uygulama çerçeveleri ve yardımcı programlar tarafından Web tabanlı uygulamalar oluşturmak için birlikte çalışarak,, Breakneck hızında gelişiyor. Bu bölüm, JavaScript 'in Web geliştiricileri tarafından kullanıldığı birkaç yolla, angular ve istemci tarafı kitaplıklarının tepki verme ve yanıt verme konusunda üst düzey bir genel bakış sunar.
 
 ## <a name="html"></a>HTML
 
 HTML (köprü metni biçimlendirme dili), Web sayfaları ve Web uygulamaları oluşturmak için kullanılan standart biçimlendirme dilidir. Öğeleri, biçimlendirilen metin, görüntüler, form girişleri ve diğer yapıları temsil eden sayfa oluşturma blokları oluşturuyor. Bir tarayıcı bir URL 'ye istek yaptığında, bir sayfa veya uygulama döndürmeksizin döndürülen ilk şey bir HTML belgesidir. Bu HTML belgesi, CSS biçimindeki görünüm ve düzen ile ilgili ek bilgilere başvurabilir veya JavaScript biçiminde davranış gösterebilir.
 
-## <a name="css"></a>{1&gt;CSS&lt;1}
+## <a name="css"></a>CSS
 
 CSS (Geçişli Stil Sayfaları), HTML öğelerinin görünüm ve yerleşimini denetlemek için kullanılır. CSS stilleri, aynı sayfada ayrı olarak tanımlanan veya ayrı bir dosyada tanımlanmış ve sayfa tarafından başvurulan bir HTML öğesine doğrudan uygulanabilir. Stiller, belirli bir HTML öğesini seçmek için nasıl kullanıldığına göre basamaklandırılır. Örneğin, bir stil tüm belgeye uygulanabilir, ancak belirli bir öğeye uygulanan bir stil tarafından geçersiz kılınır. Benzer şekilde, öğeye özgü bir stil, öğesine uygulanan bir CSS sınıfına uygulanan bir stil tarafından geçersiz kılınır. Bu, sırasıyla bu öğenin belirli bir örneğini hedefleyen bir stil tarafından geçersiz kılınır (KIMLIĞI aracılığıyla). Şekil 6-1
 
@@ -68,14 +68,14 @@ JavaScript Framework standartlarına bağlı olarak, jQuery, HTML/CSS ile çalı
 |--------------------------|------------|-------------|
 | DOM 'ı soyutlar | **Evet** | **Evet** |
 | AJAX desteği | **Evet** | **Evet** |
-| Bildirime dayalı veri bağlama | **Eşleşen** | **Evet** |
-| MVC stili yönlendirme | **Eşleşen** | **Evet** |
-| Örneğine | **Eşleşen** | **Evet** |
-| Derin bağlantı yönlendirme | **Eşleşen** | **Evet** |
+| Bildirime dayalı veri bağlama | **Hayır** | **Evet** |
+| MVC stili yönlendirme | **Hayır** | **Evet** |
+| Örneğine | **Hayır** | **Evet** |
+| Derin bağlantı yönlendirme | **Hayır** | **Evet** |
 
 JQuery eksik doğası gereği özelliklerinin çoğu diğer kitaplıkların eklenmesiyle eklenebilir. Ancak, angular gibi bir SPA çerçevesi, başlangıçtan itibaren göz önünde bulundurularak tasarlandığından, bu özellikleri daha tümleşik bir biçimde sunar. Ayrıca, jQuery, jQuery ile herhangi bir şey yapmak için jQuery işlevlerini çağırmanız gereken anlamına gelen, zorunlu bir kitaplıktır. SPA çerçevelerinin sağladığı iş ve işlevselliğin çoğu bildirimli olarak yapılabilir ve hiçbir gerçek kod yazılmasına gerek yoktur.
 
-Veri bağlama buna harika bir örnektir. JQuery 'ta, genellikle bir DOM öğesinin değerini almak veya bir öğenin değerini ayarlamak için yalnızca tek bir kod satırı alır. Ancak, bu kodu, öğenin değerini değiştirmeniz gereken her seferinde yazmanız gerekir ve bazen bu, bir sayfada birden çok işlev ile gerçekleşir. Diğer bir yaygın örnek, öğe görünürlüğüne sahiptir. JQuery 'de, belirli öğelerin görünür olup olmadığını denetlemek için kod yazacağınız birçok farklı yer olabilir. Bu durumların her birinde, veri bağlamayı kullanırken, hiçbir kodun yazılması gerekmez. Söz konusu öğe (ler) in değerini veya görünürlüğünü sayfadaki bir *ViewModel* 'e bağlamanız yeterlidir ve bu ViewModel üzerindeki değişiklikler otomatik olarak bağlı öğelerde yansıtılır.
+Veri bağlama buna harika bir örnektir. JQuery 'de, genellikle bir DOM öğesinin değerini almak veya bir öğenin değerini ayarlamak için yalnızca bir kod satırı alır. Ancak, bu kodu, her zaman, öğenin değerini değiştirmeniz gerekir ve bazen bu, bir sayfada birden çok işlev ile gerçekleşir. Diğer bir yaygın örnek, öğe görünürlüğüne sahiptir. JQuery 'de, belirli öğelerin görünür olup olmadığını denetlemek için kod yazacağınız birçok farklı yer olabilir. Bu durumların her birinde, veri bağlamayı kullanırken, hiçbir kodun yazılması gerekmez. Söz konusu öğelerin değerini veya görünürlüğünü sayfadaki bir *ViewModel* ' e bağlamanız yeterlidir ve bu ViewModel üzerindeki değişiklikler otomatik olarak bağlı öğelerde yansıtılır.
 
 ### <a name="angular-spas"></a>Angular maça 'Ları
 

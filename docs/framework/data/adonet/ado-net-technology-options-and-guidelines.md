@@ -2,14 +2,15 @@
 title: Teknoloji seçenekleri ve yönergeleri
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: 9be44a5b9c06a310581aee57cdb6a304127f8a12
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 1996a5f5b86715db099e52e163fd23be2497f5eb
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980281"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094468"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET Teknoloji Seçenekleri ve Yönergeleri
+
 ADO.NET veri platformu, geliştiriciler için gereken kodlama ve bakım miktarını, kavramsal varlık veri modellerine karşı programlamalarına izin verecek şekilde azaltmak için çok bölgeli bir stratejidir. Bu platform, ADO.NET Entity Framework ve ilgili teknolojileri içerir.  
   
 ## <a name="entity-framework"></a>Varlık Çerçevesi  
@@ -22,9 +23,9 @@ ADO.NET veri platformu, geliştiriciler için gereken kodlama ve bakım miktarı
  Nesne Hizmetleri, programcıların ortak dil çalışma zamanı (CLR) sınıfları kümesi aracılığıyla kavramsal modelle etkileşime geçmesini sağlar. Bu sınıflar kavramsal modelden otomatik olarak oluşturulabilir veya kavramsal modelin yapısını yansıtmak için bağımsız olarak geliştirilebilir. Ayrıca, nesne Hizmetleri, durum yönetimi, değişiklik izleme, kimlik çözümlemesi, ilişkileri yükleme ve gezinme, nesne değişikliklerini veritabanı değişikliklerine yayma gibi hizmetler de dahil olmak üzere Entity Framework için altyapı desteği sağlar, ve Entity SQL için sorgu oluşturma desteği. Daha fazla bilgi için bkz. [nesne hizmetlerine genel bakış (Entity Framework)](https://docs.microsoft.com/previous-versions/bb386871(v=vs.100)).  
   
 ### <a name="linq-to-entities"></a>LINQ - Varlıklar  
- LINQ to Entities, geliştiricilerin LINQ ifadelerini ve LINQ standart sorgu işleçlerini kullanarak Entity Framework nesne bağlamına karşı kesin olarak yazılmış sorgular oluşturmalarına olanak tanıyan dil ile tümleşik bir sorgu (LINQ) uygulamasıdır. LINQ to Entities, geliştiricilerin Microsoft SQL Server ve üçüncü taraf veritabanları arasında çok esnek bir nesne ilişkisel eşleme ile kavramsal bir modele karşı çalışmasını sağlar. Daha fazla bilgi için bkz. [LINQ to Entities](./ef/language-reference/linq-to-entities.md).  
+ LINQ to Entities, geliştiricilerin LINQ ifadelerini ve LINQ standart sorgu işleçlerini kullanarak Entity Framework nesne bağlamına karşı kesin olarak yazılmış sorgular oluşturmalarına olanak tanıyan dil ile tümleşik bir sorgu (LINQ) uygulamasıdır. LINQ to Entities, geliştiricilerin Microsoft SQL Server ve üçüncü taraf veritabanları arasında esnek bir nesne ilişkisel eşleme ile kavramsal bir modele karşı çalışmasını sağlar. Daha fazla bilgi için bkz. [LINQ to Entities](./ef/language-reference/linq-to-entities.md).  
   
-### <a name="entity-sql"></a>Entity SQL  
+### <a name="entity-sql"></a>Varlık SQL  
  Entity SQL, bir Varlık Veri Modeli etkileşimde bulunmak için tasarlanan metin tabanlı bir sorgu dilidir. Entity SQL, devralma, karmaşık türler ve açık ilişkiler gibi daha üst düzey modelleme kavramları açısından sorgu oluşturma yapıları içeren bir SQL diyalekti. Geliştiriciler ayrıca doğrudan nesne hizmetleriyle Entity SQL de kullanabilir. Daha fazla bilgi için bkz. [Entity SQL Language](./ef/language-reference/entity-sql-language.md).  
   
 ### <a name="entityclient"></a>EntityClient  
@@ -34,10 +35,10 @@ ADO.NET veri platformu, geliştiriciler için gereken kodlama ve bakım miktarı
  Entity Framework, EDM uygulamaları oluşturmayı kolaylaştırmak için komut satırı araçları, sihirbazlar ve tasarımcılar sağlar. EntityDataSource denetimi, EDM tabanlı veri bağlama senaryolarını destekler. EntityDataSource denetiminin programlama yüzeyi, Visual Studio 'daki diğer veri kaynağı denetimlerine benzer. Daha fazla bilgi için bkz. [ADO.NET varlık veri modeli araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)).  
   
 ## <a name="linq-to-sql"></a>LINQ - SQL  
- LINQ to SQL, .NET Framework sınıfları kullanarak SQL Server veritabanını modelleyerek bir nesne ilişkisel eşleme (veya/e) uygulamasıdır. LINQ to SQL, LINQ kullanarak veritabanınızı sorgulamanızı ve verileri güncelleştirme, ekleme ve silme gibi verileri de silebilir. LINQ to SQL, veri doğrulama ve iş mantığı kurallarını veri modelinize tümleştirmenin kolay bir yolunu sağlayan işlemler, görünümler ve saklı yordamları destekler. Bir veritabanındaki nesneleri temel alan varlık sınıflarını ve ilişkilendirmelerini modellemek için Nesne İlişkisel Tasarımcısı (O/R Designer) kullanabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'da LINQ to SQL araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ LINQ to SQL, .NET Framework sınıfları kullanarak SQL Server veritabanını modelleyerek bir nesne ilişkisel eşleme (veya/e) uygulamasıdır. LINQ to SQL, LINQ kullanarak veritabanınızı sorgulamanızı ve verileri güncelleştirme, ekleme ve silme işleminden de olanak tanır. LINQ to SQL, veri doğrulama ve iş mantığı kurallarını veri modelinize tümleştirmenin kolay bir yolunu sağlayan işlemler, görünümler ve saklı yordamları destekler. Bir veritabanındaki nesneleri temel alan varlık sınıflarını ve ilişkilendirmelerini modellemek için Nesne İlişkisel Tasarımcısı (O/R Designer) kullanabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'da LINQ to SQL araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="wcf-data-services"></a>WCF Veri Hizmetleri  
- WCF Veri Hizmetleri, Web üzerinde veya bir intranette veri Hizmetleri dağıtır. Veriler, Varlık Veri Modeli belirtimlerine göre varlıklar ve ilişkiler olarak yapılandırılır. Bu modelde dağıtılan verilere standart HTTP protokolü tarafından adreslenebilir. Daha fazla bilgi için [WCF Veri Hizmetleri 4.5](../wcf/index.md).  
+ WCF Veri Hizmetleri, Web üzerinde veya bir intranette veri Hizmetleri dağıtır. Veriler, Varlık Veri Modeli belirtimlerine göre varlıklar ve ilişkiler olarak yapılandırılır. Bu modelde dağıtılan verilere standart HTTP protokolü tarafından adreslenebilir. Daha fazla bilgi için bkz. [WCF Veri Hizmetleri 4,5](../wcf/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

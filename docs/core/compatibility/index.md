@@ -1,13 +1,13 @@
 ---
-title: Son değişiklik türleri-.NET Core
+title: Son değişiklik türleri
 description: .NET Core 'un .NET sürümlerindeki geliştiriciler için uyumluluk denemelerini ve ne tür bir değişikliğin Son değişiklik olduğunu öğrenin.
 ms.date: 06/10/2019
-ms.openlocfilehash: 76d04504c4476f0f7517a633cfbf1c0aa9d5797e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1c5790e39754b91aacbde9e87ed99f9dcc36ce9f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738577"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092986"
 ---
 # <a name="changes-that-affect-compatibility"></a>Uyumluluğu etkileyen değişiklikler
 
@@ -87,7 +87,7 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını değiştirir.
 
    Ancak, bir türün görünürlüğünü artırmak için izin verilir.
 
-### <a name="members"></a>Üyeler
+### <a name="members"></a>Members
 
 - ✔️ **Izin verildi: [sanal](../../csharp/language-reference/keywords/sealed.md) olmayan bir üyenin görünürlüğünü genişletme**
 
@@ -194,7 +194,7 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını değiştirir.
 
 ## <a name="behavioral-changes"></a>Davranış değişiklikleri
 
-### <a name="assemblies"></a>Bütünleştirilmiş kodlar
+### <a name="assemblies"></a>Derlemeler
 
 - ✔️ **Izin verildi: aynı platformlar hala desteklenmeden bir derlemeyi taşınabilir hale getirme**
 
@@ -227,7 +227,7 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını değiştirir.
 
 - ❓ **, Giriş ayrıştırması ve yeni özel durumlar oluşturmadaki bir değişiklik olmalıdır (ayrıştırma davranışı belgelerde belirtilmese bile).**
 
-### <a name="exceptions"></a>Özel Durumlar
+### <a name="exceptions"></a>Özel durumlar
 
 - ✔️ **Izin verilen: var olan bir özel durumdan daha fazla türetilmiş özel durum üretiliyor**
 

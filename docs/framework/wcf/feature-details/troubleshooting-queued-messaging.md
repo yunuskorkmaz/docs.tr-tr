@@ -2,12 +2,12 @@
 title: Kuyruğa Alınan İletilerde Sorun Giderme
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 5c039c34983647884561f33645f26e4a89280248
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 7990d4b9847ee2f35b9fe6269bb211763c4c80b6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921263"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095014"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Kuyruğa Alınan İletilerde Sorun Giderme
 
@@ -53,7 +53,7 @@ Bu bölüm, en yaygın sorun giderme sorunlarının yanıtlarını içerir. Bili
 
 **S:** Özel bir sıra kullanmaya çalışıyorum ve şu özel durumu alıyorum: `System.InvalidOperationException`: URL geçersiz. Kuyruğun URL 'SI ' $ ' karakterini içeremez. Özel bir kuyruğu gidermek için net. MSMQ: gt Machine/Private/SıraAdı içindeki sözdizimini kullanın.
 
-Y **:** Lütfen yapılandırma ve kodunuzda sıra Tekdüzen Kaynak tanımlayıcısı 'nı (URI) denetleyin. URI 'de "$" karakterini kullanmayın. Örneğin, OrdersQueue adlı özel bir kuyruğu ele almak için, URI 'yi net. MSMQ://localhost/private/ordersQueue. olarak belirtin.
+Y **:** Yapılandırmanızda ve kodunuzda sıra Tekdüzen Kaynak tanımlayıcısı 'nı (URI) denetleyin. URI 'de "$" karakterini kullanmayın. Örneğin, OrdersQueue adlı özel bir kuyruğu ele almak için URI 'yi `net.msmq://localhost/private/ordersQueue`olarak belirtin.
 
 **S:** Sıraya alınan uygulamamda `ServiceHost.Open()` çağırmak şu özel durumu oluşturur: `System.ArgumentException`: temel adres bir URI sorgu dizesi içeremez. Neden?
 
@@ -89,7 +89,7 @@ Eğer (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) yoks
 
 **S:** Hizmetim SvcHost üzerinde oluşturulur. "EndpointListener Requirements ListenerFactory tarafından karşılanamıyor" iletisiyle birlikte aç. Neden?
 
-BİR. Hizmet sözleşmenizi denetleyin. Tüm hizmet işlemlerine "IsOneWay =`true`" yerleştirmeye unutulmuş olabilirsiniz. Kuyruklar yalnızca tek yönlü hizmet işlemlerini destekler.
+A. Hizmet sözleşmenizi denetleyin. Tüm hizmet işlemlerine "IsOneWay =`true`" yerleştirmeye unutulmuş olabilirsiniz. Kuyruklar yalnızca tek yönlü hizmet işlemlerini destekler.
 
 **S:** Kuyrukta ileti var, ancak hiçbir hizmet işlemi çağrılmayacak. Sorun nedir?
 
@@ -132,7 +132,7 @@ Y **:** MSMQ tümleştirme bağlamasını kullandığınızda, MSMQ. formatname 
 
 **S:** Ortak veya özel biçim adı kullandığımda ve hizmet ana bilgisayarını Windows Vista 'da açtığınızda bir hata alıyorum. Neden?
 
-Y **:** Windows Vista 'daki WCF tümleştirme kanalı, zarar iletilerini işlemek için ana uygulama kuyruğu için bir alt sıranın açılıp açılmadığını denetler. Alt kuyruk adı, dinleyiciye geçirilen bir MSMQ. formatname URI 'sinden türetilir. MSMQ 'daki alt sıra adı yalnızca bir doğrudan biçim adı olabilir. Bu nedenle hatayı görürsünüz. Sıra URI 'sini doğrudan biçim adıyla değiştirin.
+Y **:** Windows Vista 'daki WCF tümleştirme kanalı, zarar iletilerini işlemek için ana uygulama kuyruğu için bir alt sıra açılıp açılmadığını denetler. Alt sıra adı, dinleyiciye geçirilen bir MSMQ. formatname URI 'sinden türetilir. MSMQ 'daki alt sıra adı yalnızca bir doğrudan biçim adı olabilir. Bu nedenle hatayı görürsünüz. Sıra URI 'sini doğrudan biçim adıyla değiştirin.
 
 **S:** MSMQ uygulamasından bir ileti alırken ileti kuyrukta bulunur ve alan WCF uygulaması tarafından okunamaz. Neden?
 
@@ -208,4 +208,4 @@ Y **:** Ağ hizmetinin kuyruktan okuyabağlanabildiğinden emin olmak için kuyr
 
 ## <a name="using-custom-msmq-bindings-with-receivecontext-enabled"></a>ReceiveContext etkin özel MSMQ bağlamaları kullanma
 
-<xref:System.ServiceModel.Channels.ReceiveContext> etkinleştirilmiş bir özel MSMQ bağlama kullanılırken, yerel MSMQ zaman uyumsuz <xref:System.ServiceModel.Channels.ReceiveContext> alma işlemi için g/ç tamamlamayı desteklemediğinden, bir iş parçacığı havuzu iş parçacığı kullanır. Bunun nedeni, bu tür bir iletinin işlenmesi <xref:System.ServiceModel.Channels.ReceiveContext> için iç işlemler kullanıyor ve MSMQ zaman uyumsuz işlemeyi desteklemez. Bu sorunu geçici olarak çözmek için, zaman uyumlu işlemeyi zorlamak veya <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> 1 olarak ayarlamak için uç noktaya <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> ekleyebilirsiniz.
+<xref:System.ServiceModel.Channels.ReceiveContext> etkinken özel bir MSMQ bağlama kullanılırken, gelen bir iletiyi işlemek, zaman uyumsuz <xref:System.ServiceModel.Channels.ReceiveContext> alma işlemi için g/ç tamamlamayı desteklemediğinden bir iş parçacığı havuzu iş parçacığı kullanır. Bunun nedeni, bu tür bir iletinin işlenmesi <xref:System.ServiceModel.Channels.ReceiveContext> için iç işlemler kullanıyor ve MSMQ zaman uyumsuz işlemeyi desteklemez. Bu sorunu geçici olarak çözmek için, zaman uyumlu işlemeyi zorlamak veya <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> 1 olarak ayarlamak için uç noktaya <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> ekleyebilirsiniz.

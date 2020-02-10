@@ -2,12 +2,12 @@
 title: ByRef’ler
 description: İçindeki F#ByRef ve ByRef benzeri türler hakkında bilgi edinin ve bu, alt düzey programlama için kullanılır.
 ms.date: 11/04/2019
-ms.openlocfilehash: 05a40059ad5b72829233b0c4135c76eb1cff4da5
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 2d98d325dc4ad26548fb2cc6aa5b872e152ee0a8
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965821"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092794"
 ---
 # <a name="byrefs"></a>ByRef’ler
 
@@ -188,7 +188,7 @@ let squareAndPrint (data : byref<int>) =
 ```
 
 ByRef değeri döndürmek için değeri içeren değişken geçerli kapsamdan daha uzun bir süre etkin olmalıdır.
-Ayrıca, ByRef döndürmek için & değerini kullanın (değeri, geçerli kapsamdan daha uzun bir süre bulunan bir değişkendir).
+Ayrıca, ByRef döndürmek için `&value` (değeri geçerli kapsamdan daha uzun süre bulunan bir değişkendir) kullanın.
 
 ```fsharp
 let mutable sum = 0
@@ -252,4 +252,4 @@ let test () =
     ()
 ```
 
-Bu, iyileştirmelere göre derleme yaptığınızda veya kapadığınıza bağlı olarak farklı sonuçlar almanızı önler.
+Bu, iyileştirmelere göre derlemenize bağlı olarak farklı sonuçlar almanızı önler.

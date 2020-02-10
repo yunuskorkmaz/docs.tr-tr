@@ -2,12 +2,12 @@
 title: dotnet-install scripts
 description: .NET Core SDK ve paylaşılan çalışma zamanını yüklemek için DotNet-install betikleri hakkında bilgi edinin.
 ms.date: 01/23/2020
-ms.openlocfilehash: 76055627c6b2016396209c9594dba36e56eb841c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: bf28f872be3ac2b4115b1d5e5c06e32afec0b49e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920569"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092869"
 ---
 # <a name="dotnet-install-scripts-reference"></a>DotNet-betiklerin başvurusunu yüklemeyi
 
@@ -63,7 +63,7 @@ Betiği çalıştırmadan önce gerekli [bağımlılıkları](../install/depende
   - Belirli bir yayını temsil eden X. Y biçimindeki iki bölümden oluşan sürüm (örneğin, `2.1` veya `3.0`).
   - Dal adı: Örneğin, `release/3.1.1xx` veya `master` (gecelik yayınlar için). Bir önizleme kanalından sürüm yüklemek için bu seçeneği kullanın. Bir kanalın adını [yükleyiciler ve Ikili dosyalar](https://github.com/dotnet/core-sdk#installers-and-binaries)bölümünde listelendiği şekilde kullanın.
 
-  Varsayılan değer `LTS` şeklindedir. .NET destek kanalları hakkında daha fazla bilgi için bkz. [.net destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sayfası.
+  Varsayılan değer: `LTS`. .NET destek kanalları hakkında daha fazla bilgi için bkz. [.net destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sayfası.
 
 - **`-Version|--version <VERSION>`**
 
@@ -116,7 +116,7 @@ Betiği çalıştırmadan önce gerekli [bağımlılıkları](../install/depende
 
 - **`-AzureFeed|--azure-feed`**
 
-  Yükleyicideki Azure akışına ait URL 'YI belirtir. Bu değeri değiştirmemenizi öneririz. Varsayılan değer `https://dotnetcli.azureedge.net/dotnet` şeklindedir.
+  Yükleyicideki Azure akışına ait URL 'YI belirtir. Bu değeri değiştirmemenizi öneririz. Varsayılan değer: `https://dotnetcli.azureedge.net/dotnet`.
 
 - **`-UncachedFeed|--uncached-feed`**
 
@@ -213,7 +213,7 @@ Betiği çalıştırmadan önce gerekli [bağımlılıkları](../install/depende
   macOS/Linux:
 
   ```bash
-  curl -ssl https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
+  curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
 ## <a name="see-also"></a>Ayrıca bkz.

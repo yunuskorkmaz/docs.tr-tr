@@ -2,12 +2,12 @@
 title: Windows için WCF Hizmetleri ve Etkinlik İzleme
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 93663cbc33b6fab9b34bb02187e5b04192f5c13d
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 5bf965ad6a9997ec0603325f246679cf42662a52
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715259"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094819"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Windows için WCF Hizmetleri ve Etkinlik İzleme
 Bu örnek, Windows için olay Izleme (ETW) içindeki olayları göstermek için Windows Communication Foundation (WCF) ' de analitik izlemenin nasıl kullanılacağını gösterir. Analitik izlemeler, WCF yığınında, üretim ortamındaki WCF hizmetlerinde sorun gidermeye izin veren önemli noktalara yayılan olaylardır.
@@ -34,9 +34,9 @@ Bu örnek, Windows için olay Izleme (ETW) içindeki olayları göstermek için 
 
 5. WCF Test istemcisi içinde **Dosya**' yı ve ardından **Hizmet Ekle**' yi seçerek hizmeti ekleyin.
 
-     Giriş kutusuna uç nokta adresini ekleyin. Varsayılan, `http://localhost:1378/Calculator.svc` değeridir.
+     Giriş kutusuna uç nokta adresini ekleyin. Varsayılan: `http://localhost:1378/Calculator.svc`.
 
-6. Olay Görüntüleyicisi uygulamasını açın.
+6. Olay Görüntüleyici uygulamasını açın.
 
      Hizmeti çağırmadan önce Olay Görüntüleyicisi başlatın ve olay günlüğünün WCF hizmetinden yayılan izleme olaylarını dinlediğinden emin olun.
 
@@ -89,4 +89,4 @@ Bu örnek, Windows için olay Izleme (ETW) içindeki olayları göstermek için 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric Izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric Izleme örnekleri](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

@@ -4,12 +4,12 @@ description: Tüm C# programlarda çekirdek türleri (Numerics, dizeler ve nesne
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 7b6dec16b3fd84ced856a9f0e42f38189b1e03fd
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ad496a9cbb0a654ec10ac38b374a76b042911302
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75339278"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093298"
 ---
 # <a name="types-variables-and-values"></a>Türler, değişkenler ve değerler
 
@@ -54,7 +54,7 @@ Daha fazla bilgi için bkz. [atama ve tür dönüştürmeleri](programming-guide
 
 ## <a name="built-in-types"></a>Yerleşik türler
 
-C#tamsayılar, kayan nokta değerleri, Boole ifadeleri, metin karakterleri, ondalık değerler ve diğer veri türlerini temsil etmek için standart bir yerleşik sayısal türler kümesi sağlar. Ayrıca yerleşik **dize** ve **nesne** türleri de vardır. Bunlar, herhangi bir C# programda kullanabilmeniz için kullanılabilir. Yerleşik türler hakkında daha fazla bilgi için bkz. [Yerleşik türler Için başvuru tablosu](language-reference/keywords/built-in-types-table.md).  
+C#tamsayılar, kayan nokta değerleri, Boole ifadeleri, metin karakterleri, ondalık değerler ve diğer veri türlerini temsil etmek için standart bir yerleşik sayısal türler kümesi sağlar. Ayrıca yerleşik **dize** ve **nesne** türleri de vardır. Bunlar, herhangi bir C# programda kullanabilmeniz için kullanılabilir. Yerleşik türlerin tam listesi için bkz. [Yerleşik türler](language-reference/builtin-types/built-in-types.md).
   
 ## <a name="custom-types"></a>Özel türler
 

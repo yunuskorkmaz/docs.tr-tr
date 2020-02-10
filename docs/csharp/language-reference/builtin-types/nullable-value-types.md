@@ -4,16 +4,16 @@ description: Null yapılabilir C# değer türleri ve bunların nasıl kullanıla
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 42673d16ac68bbf119e57e4c357b1b2b2a0b5c51
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bd90a0b1b77349efe581eb8aae44c58802ba756d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740939"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093194"
 ---
 # <a name="nullable-value-types-c-reference"></a>Nullable değer türleri (C# başvuru)
 
-Null olabilen bir değer türü `T?` temel alınan [değer `T` türünün](value-types.md) tüm değerlerini ve ek bir [null](../keywords/null.md) değeri temsil eder. Örneğin, aşağıdaki üç değerden herhangi birini bir `bool?` değişkenine atayabilirsiniz: `true`, `false`veya `null`. Temel alınan değer türü `T`, null yapılabilir bir değer türü olamaz.
+*Null olabilen bir değer türü* `T?` temel alınan [değer `T` türünün](value-types.md) tüm değerlerini ve ek bir [null](../keywords/null.md) değeri temsil eder. Örneğin, aşağıdaki üç değerden herhangi birini bir `bool?` değişkenine atayabilirsiniz: `true`, `false`veya `null`. Temel alınan değer türü `T`, null yapılabilir bir değer türü olamaz.
 
 > [!NOTE]
 > C#8,0, Nullable başvuru türleri özelliğini tanıtır. Daha fazla bilgi için bkz. [Nullable başvuru türleri](../../nullable-references.md). Null yapılabilir değer türleri 2 ile C# başlayarak kullanılabilir.
@@ -68,7 +68,7 @@ Null yapılamayan bir değer türü `T`, örtük olarak karşılık gelen null d
 
 ## <a name="lifted-operators"></a>Yükseltilmemiş işleçleri
 
-Önceden tanımlanmış birli ve ikili işleçler veya `T` bir değer türü tarafından desteklenen aşırı yüklenmiş işleçler, karşılık gelen null yapılabilir değer türü `T?`tarafından da desteklenir. *Yükseltilmemiş işleçleri*olarak da bilinen bu işleçler, bir veya her iki işlenen de `null``null` üretir; Aksi takdirde, işleç sonucu hesaplamak için işlenenlerinin kapsanan değerlerini kullanır. Örneğin:
+Önceden tanımlanmış birli ve ikili [işleçler](../operators/index.md) veya `T` bir değer türü tarafından desteklenen aşırı yüklenmiş işleçler, karşılık gelen null yapılabilir değer türü `T?`tarafından da desteklenir. *Yükseltilmemiş işleçleri*olarak da bilinen bu işleçler, bir veya her iki işlenen de `null``null` üretir; Aksi takdirde, işleç sonucu hesaplamak için işlenenlerinin kapsanan değerlerini kullanır. Örneğin:
 
 [!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
 
@@ -82,7 +82,9 @@ Null yapılamayan bir değer türü `T`, örtük olarak karşılık gelen null d
 
 [!code-csharp-interactive[relational and equality operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#ComparisonOperators)]
 
-Yukarıdaki örnek ayrıca, `null` her ikisi de `true`değerlendirilen iki null yapılabilir değer türü örneğinin eşitlik karşılaştırmasını gösterir.
+[Eşitlik işleci](../operators/equality-operators.md#equality-operator-) `==`her iki işlenen de `null`, sonuç `true`, yalnızca işlenenleri yalnızca biri `null`ise sonuç `false`olur; Aksi takdirde, kapsanan işlenen değerleri karşılaştırılır.
+
+[Eşitsizlik işleci](../operators/equality-operators.md#inequality-operator-) `!=`her iki işlenen de `null`, sonuç `false`, yalnızca işlenenleri yalnızca biri `null`ise sonuç `true`olur; Aksi takdirde, kapsanan işlenen değerleri karşılaştırılır.
 
 İki değer türü arasında [Kullanıcı tanımlı bir dönüştürme](../operators/user-defined-conversion-operators.md) varsa, aynı dönüştürme karşılık gelen null atanabilir değer türleri arasında da kullanılabilir.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: a346a19400c1d2c536fff56ed7fb6dc27570df29
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 597bfd2c16f6289a2bcb931c3896918dcb6d9a4d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965834"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094143"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET Framework dağıtım kılavuzu
 Bu konu, .NET Framework 4,5 ' den .NET Framework herhangi bir sürümünü uygulamalarıyla [!INCLUDE[net_current](../../../includes/net-current-version.md)] yüklemek isteyen geliştiriciler için bilgi sağlamaktadır.
@@ -359,16 +359,16 @@ Aşağıdaki tabloda, .NET Framework 4,5 yeniden dağıtılabilir öğesini uygu
 |Seçenek|Açıklama|
 |------------|-----------------|
 |**/Ceiponayı**|Varsayılan davranışın üzerine yazar ve gelecekteki dağıtım deneyimlerini geliştirmek üzere Microsoft 'a anonim geri bildirim gönderir. Bu seçenek, yalnızca kurulum programı onay isterse ve Kullanıcı Microsoft 'a anonim geri bildirim gönderme izni veriyorsa kullanılabilir.|
-|**/ChainingPackage** `packageName`|Zincirlemeyi yapan yürütülebilir dosyanın adını belirtir. Bu bilgiler, gelecekteki dağıtım deneyimlerini iyileştirmenize yardımcı olmak için anonim geri bildirim olarak Microsoft 'a gönderilir.<br /><br /> Paket adı boşluk içeriyorsa, çift tırnak işaretlerini sınırlayıcılar olarak kullanın; Örneğin: **/chainingpackage "Lucerne Publishing"** . Bir zincir paketi örneği için bkz. MSDN kitaplığındaki [bir yükleme paketinden Ilerleme bilgisi alma](https://go.microsoft.com/fwlink/?LinkId=181926) .|
+|**/ChainingPackage** `packageName`|Zincirlemeyi yapan yürütülebilir dosyanın adını belirtir. Bu bilgiler, gelecekteki dağıtım deneyimlerini iyileştirmenize yardımcı olmak için anonim geri bildirim olarak Microsoft 'a gönderilir.<br /><br /> Paket adı boşluk içeriyorsa, çift tırnak işaretlerini sınırlayıcılar olarak kullanın; Örneğin: **/chainingpackage "Lucerne Publishing"** . Bir zincir paketi örneği için bkz. [bir yükleme paketinden Ilerleme bilgisi alma](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).|
 |**/LCID**`LCID`<br /><br /> Burada `LCID` bir yerel ayar tanımlayıcıyı belirtir (bkz. [desteklenen diller](#supported-languages))|, Sessiz mod ayarlanmadığı takdirde, `LCID` tarafından belirtilen dil paketini ve görüntülenen kullanıcı arabirimini o dilde gösterilecek şekilde zorlar.<br /><br /> Web Yükleyicisi için bu seçenek zinciri, dil paketini Web 'den kurar. **Note:**  Bu seçeneği yalnızca Web yükleyicisiyle kullanın.|
 |**/log** `file` &#124; `folder`|Günlük dosyasının konumunu belirtir. Varsayılan, işlemin geçici klasörüdür ve varsayılan dosya adı pakete dayalıdır. Dosya uzantısı. txt ise, bir metin günlüğü üretilir. Başka bir uzantıyı veya uzantıyı belirtirseniz, bir HTML günlüğü oluşturulur.|
 |**/msioptions**|. Msi ve. msp öğeleri için geçirilecek seçenekleri belirtir; Örneğin: `/msioptions "PROPERTY1='Value'"`.|
-|**/ norestart**|Kurulum programının otomatik olarak yeniden başlatılmasını önler. Bu seçeneği kullanırsanız, zincirleme uygulamanın dönüş kodunu yakalaması ve yeniden başlatma işlemini işlemesi gerekir (bkz. MSDN kitaplığındaki [bir yükleme paketinden Ilerleme bilgilerini alma](https://go.microsoft.com/fwlink/?LinkId=179606) ).|
-|**/ passive**|Pasif modu ayarlar. Yüklemenin devam ettiğini belirten, ancak kullanıcıya hiçbir istem veya hata iletisi görüntülemediğini belirten ilerleme çubuğunu görüntüler. Bu modda, bir kurulum programı tarafından zincirleme yaparken, zincirleme paketi [dönüş kodlarını](#return-codes)işlemelidir.|
+|**/norestart**|Kurulum programının otomatik olarak yeniden başlatılmasını önler. Bu seçeneği kullanırsanız, zincirleme uygulamanın dönüş kodunu yakalaması ve yeniden başlatma işlemini işlemesi gerekir (bkz. [bir yükleme paketinden Ilerleme bilgilerini alma](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))).|
+|**/passive**|Pasif modu ayarlar. Yüklemenin devam ettiğini belirten, ancak kullanıcıya hiçbir istem veya hata iletisi görüntülemediğini belirten ilerleme çubuğunu görüntüler. Bu modda, bir kurulum programı tarafından zincirleme yaparken, zincirleme paketi [dönüş kodlarını](#return-codes)işlemelidir.|
 |**/Pipe**|Bir zincir oluşturma paketinin ilerlemesini sağlamak için bir iletişim kanalı oluşturur.|
 |**/promptrestart**|Yalnızca Pasif mod, Kurulum programı yeniden başlatma gerektiriyorsa, kullanıcıya sorar. Yeniden başlatma gerekirse bu seçenek kullanıcı etkileşimini gerektirir.|
-|**/q**|Sessiz modu ayarlar.|
-|**/ Repair**|Onarma işlevini tetikler.|
+|**anahtarın**|Sessiz modu ayarlar.|
+|**/Repair**|Onarma işlevini tetikler.|
 |**/serialdownload**|Yüklemeyi yalnızca paket indirildikten sonra gerçekleşecek şekilde zorlar.|
 |**/showfinalhatası**|Pasif modu ayarlar. Yalnızca yükleme başarılı olmazsa hataları görüntüler. Yükleme başarılı olmazsa bu seçenek kullanıcı etkileşimini gerektirir.|
 |**/showrmuı**|Yalnızca **/passive** seçeneğiyle kullanılır. Kullanıcıların şu anda çalışmakta olan uygulamaları .NET Framework kapatmasını isteyen bir ileti kutusu görüntüler. Bu ileti kutusu pasif ve pasif olmayan modda aynı şekilde davranır.|
@@ -394,7 +394,7 @@ Aşağıdaki tabloda, .NET Framework 4,5 ve sonraki sürümleri için kullanıla
 |1041|Japonca|Sofya|
 |1042|Korece|dili|
 |1043|Felemenkçe – Hollanda|nl|
-|1044|Norveççe (Bokmål)|eşleşen|
+|1044|Norveççe (Bokmål)|hayır|
 |1045|Lehçe|pl|
 |1046|Portekizce – Brezilya|pt-BR|
 |1049|Rusça|ru|

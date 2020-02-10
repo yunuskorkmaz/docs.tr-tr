@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: 964c63e01a6b09e63e305e9a10dca46e62c18648
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: f878f73497b83aaf31f2ba3b23cca1f685867b3e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965964"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095274"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework Şifreleme Modeli
 
@@ -41,7 +41,7 @@ Algoritma için kullanılabilen farklı uygulamalara örnek olarak, simetrik alg
 
 <xref:System.Security.Cryptography.Aes> iki sınıf tarafından devralınır: <xref:System.Security.Cryptography.AesCryptoServiceProvider> ve <xref:System.Security.Cryptography.AesManaged>. <xref:System.Security.Cryptography.AesCryptoServiceProvider> sınıfı, AES 'nin Windows şifreleme API 'SI (CAPı) uygulamasındaki bir sarmalayıcıdır, ancak <xref:System.Security.Cryptography.AesManaged> sınıfı tamamen yönetilen kodda yazılır. Ayrıca, yönetilen ve CAPı uygulamalarına ek olarak, bir sonraki nesil şifreleme (CNG) gibi üçüncü bir uygulama türü de vardır. CNG algoritmasına bir örnek <xref:System.Security.Cryptography.ECDiffieHellmanCng>. CNG algoritmaları Windows Vista ve sonraki sürümlerde kullanılabilir.
 
-Hangi uygulamanın sizin için en uygun olduğunu seçebilirsiniz.  Yönetilen uygulamalar .NET Framework destekleyen tüm platformlarda kullanılabilir.  CAPı uygulamaları daha eski işletim sistemlerinde kullanılabilir ve artık geliştirilmiyor. CNG, yeni geliştirmenin gerçekleştiği en son uygulamasıdır. Ancak, yönetilen uygulamalar Federal bilgi Işleme standartları (FIPS) tarafından sertifikalandırılması ve sarmalayıcı sınıflarından daha yavaş olabilir.
+Hangi uygulamanın sizin için en uygun olduğunu seçebilirsiniz. Yönetilen uygulamalar .NET Framework destekleyen tüm platformlarda kullanılabilir. CAPı uygulamaları daha eski işletim sistemlerinde kullanılabilir ve artık geliştirilmiyor. CNG, yeni geliştirmenin gerçekleşmesi için en son uygulamasıdır. Ancak, yönetilen uygulamalar Federal bilgi Işleme standartları (FIPS) tarafından sertifikalandırılması ve sarmalayıcı sınıflarından daha yavaş olabilir.
 
 ## <a name="stream-design"></a>Akış tasarımı
 

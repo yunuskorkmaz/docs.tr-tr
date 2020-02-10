@@ -3,14 +3,15 @@ title: ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: a803c0592cd44801c55a699b56a9a498781a6593
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: cca3075a73a7bb45fd6154f760adfcda9064345c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980112"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094403"
 ---
 # <a name="adonet"></a>ADO.NET
+
 ADO.NET, .NET Framework programcıları için veri erişim hizmetlerini kullanıma sunan bir sınıf kümesidir. ADO.NET, dağıtılmış, veri paylaşımı uygulamaları oluşturmaya yönelik zengin bir bileşen kümesi sağlar. İlişkisel, XML ve uygulama verilerine erişim sağlayan .NET Framework integral bir parçasıdır. ADO.NET, ön uç veritabanı istemcilerinin oluşturulması ve uygulamalar, Araçlar, diller veya Internet tarayıcıları tarafından kullanılan orta katman iş nesnelerinin oluşturulması dahil olmak üzere çeşitli geliştirme gereksinimlerini destekler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
@@ -20,7 +21,7 @@ ADO.NET, .NET Framework programcıları için veri erişim hizmetlerini kullanı
  [ADO.NET’e Genel Bakış](ado-net-overview.md)  
  ADO.NET 'in tasarımına ve bileşenlerine bir giriş sağlar.  
   
- [Varlık Çerçevesi](/ef/ef6/index)  
+ [Entity Framework](/ef/ef6/index)  
  Entity Framework kullanarak uygulama oluşturmayı açıklar.  
   
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](securing-ado-net-applications.md)  
@@ -36,7 +37,7 @@ ADO.NET, .NET Framework programcıları için veri erişim hizmetlerini kullanı
  Programlama örnekleri de dahil olmak üzere LINQ to DataSet hakkında bilgi sağlar.  
   
  [ADO.NET’te Veri Alma ve Değiştirme](retrieving-and-modifying-data.md)  
- Bir veri kaynağına bağlanmayı ve `Commands`, `DataReaders` ve `DataAdapters`kullanarak verileri nasıl alacağınızı ve değiştirebileceğinizi açıklar.  
+ Bir veri kaynağına bağlanmayı ve `Commands`, `DataReaders`ve `DataAdapters`kullanarak verileri nasıl alacağınızı ve değiştirebileceğinizi açıklar.  
   
  [SQL Server ve ADO.NET](./sql/index.md)  
  SQL Server özgü özellikler ve işlevlerle nasıl çalışabileceğinizi açıklar.  

@@ -2,15 +2,16 @@
 title: Güvenilir Güvenlik Profili
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: ee94dc5be2c50f9e383a42d435996b2fd35df4a4
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ef4680673f37655603a42f6da8aaf7eceaa01f56
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716497"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094949"
 ---
 # <a name="reliable-secure-profile"></a>Güvenilir Güvenlik Profili
-Bu örnek, WCF ve [güvenilir güvenli profilin](https://go.microsoft.com/fwlink/?LinkId=178140) (rsp) nasıl oluşturulacağını gösterir. Bu örnek, güvenilir mesajlaşma ile birlikte oluşturabileceğiniz bir [bağlantı oluşturma](https://go.microsoft.com/fwlink/?LinkId=178141) kanalının uygulanmasını ve isteğe bağlı olarak RSP belirtimine dayalı güvenilir bir güvenli bağlama oluşturmak için güvenli bir kanal oluşturmayı gösterir.  
+
+Bu örnek, WCF ve [güvenilir güvenli profilin (rsp)](http://www.ws-i.org/Profiles/ReliableSecureProfile-1.0.html)nasıl oluşturulacağını gösterir. Bu örnek, güvenilir mesajlaşma ile birlikte oluşturabileceğiniz ve isteğe bağlı olarak RSP belirtimine dayalı güvenilir bir güvenli bağlama oluşturmak için güvenli bir kanal olan bir [bağlantı oluşturma](http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf) kanalının uygulanmasını gösterir.  
   
 > [!IMPORTANT]
 > Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  

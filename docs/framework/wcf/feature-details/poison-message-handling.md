@@ -2,12 +2,12 @@
 title: Zehirli İleti İşleme
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 389d0651438036cd23d30cf7dd866956ac8e5dae
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 378849815617f6556a7d9cc7e89c6697bfdd895d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921195"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095001"
 ---
 # <a name="poison-message-handling"></a>Zehirli İleti İşleme
 *Zararlı ileti* , uygulamaya yönelik en fazla teslim deneme sayısını aşmış bir iletidir. Bu durum, kuyruk tabanlı bir uygulama hatalar nedeniyle bir iletiyi işleyemediği zaman ortaya çıkabilir. Bir sıraya alınmış uygulama, güvenilirlik taleplerini karşılamak için bir işlem altında iletileri alır. Sıraya alınan bir iletinin alındığı işlemi iptal etmek, iletinin yeni bir işlem altında yeniden deneneceği şekilde kuyruktaki iletiyi bırakır. İşlemin iptaline neden olan sorun düzeltilmezse, alıcı uygulama, en fazla sayıda teslim denemesi aşılıncaya ve bir zarar iletisi sonuçlarıyla aynı iletiyi alıp iptal etmeden bir döngüde kalabilir.  
@@ -17,7 +17,7 @@ ms.locfileid: "76921195"
  Nadir durumlarda, iletiler uygulamaya dağıtılması başarısız olabilir. Windows Communication Foundation (WCF) katmanı, iletide yanlış çerçeve varsa, kendisine bağlı geçersiz ileti kimlik bilgileri veya geçersiz bir eylem üstbilgisi gibi iletiyle ilgili bir sorun bulabilir. Bu durumlarda, uygulama hiçbir zaman iletiyi almaz; Ancak, ileti hala zarar görmüş bir ileti haline gelebilir ve el ile işlenebilir.  
   
 ## <a name="handling-poison-messages"></a>Zarar Iletilerini işleme  
- WCF 'de, zehirli ileti işleme, uygulamaya dağıtılan iletilerle veya uygulamaya dağıtılan, ancak uygulamaya özel olarak işlenemediği iletilerle ilgilenmesi için alıcı bir uygulama mekanizması sağlar olası. Zarar iletisi işleme, kullanılabilir sıraya alınmış bağlamaların her birinde aşağıdaki özelliklerle yapılandırılır:  
+ WCF 'de, zehirli ileti işleme, uygulamaya dağıtılan ancak uygulamaya özgü bir nedenle işlenemeyecek olan, uygulama veya iletilere iletilemez olan iletilerle ilgilenmesi için alıcı bir uygulama mekanizması sağlar olası. Her kullanılabilir sıraya alınmış bağlamaların her birinde aşağıdaki özelliklerle, zehirli ileti işlemeyi yapılandırın:  
   
 - `ReceiveRetryCount`. Uygulama kuyruğundan uygulamaya bir ileti teslimini yeniden deneme sayısının üst sınırını belirten bir tamsayı değeri. Varsayılan değer 5 ' tir. Bu, bir veritabanında geçici bir kilitlenme gibi bir anında yeniden denemenin sorunu düzelttiği durumlarda yeterlidir.  
   
@@ -31,11 +31,11 @@ ms.locfileid: "76921195"
   
 - Açılan. Bu seçenek, zarar iletisini bırakır ve ileti hiçbir şekilde uygulamaya teslim değildir. Bu noktada iletinin `TimeToLive` özelliğinin süresi dolmuşsa ileti, gönderenin teslim edilemeyen ileti kuyruğunda görünebilir. Aksi takdirde, ileti herhangi bir yerde görünmez. Bu seçenek, iletinin kaybolması durumunda kullanıcının ne yapılacağını belirtmediğini belirtir.  
   
-- Mesi. Bu seçenek yalnızca Windows Vista 'da kullanılabilir. Bu, Message Queuing (MSMQ), uygulamanın iletiyi alamaması için gönderme kuyruğu yöneticisine olumsuz bir onay göndermesi talimatını verir. İleti, gönderme kuyruğu yöneticisinin atılacak ileti kuyruğuna yerleştirilir.  
+- Mesi. Bu seçenek yalnızca Windows Vista 'da kullanılabilir. Bu, Message Queuing (MSMQ) ' nin, uygulamanın iletiyi alamaması için gönderme kuyruğu yöneticisine olumsuz bir bildirim göndermesini sağlar. İleti, gönderme kuyruğu yöneticisinin atılacak ileti kuyruğuna yerleştirilir.  
   
 - Geçiş. Bu seçenek yalnızca Windows Vista 'da kullanılabilir. Bu, zarar iletisini daha sonra bir zarar iletisi işleme uygulaması tarafından işlenmek üzere bir zarar iletisi kuyruğuna taşIar. Poison-Message kuyruğu, uygulama sırasının bir alt sıranız. Zararlı ileti işleme uygulaması, zarar sırasındaki iletileri okuyan bir WCF hizmeti olabilir. Zarar sırası, uygulama sırasının bir alt sıranız ve net. MSMQ://\<*makine adı*>/*applicationQueue*;p oison olarak çözülebilir. burada *makine adı* , sıranın bulunduğu bilgisayarın adı ve *applicationQueue* uygulamaya özgü kuyruğun adıdır.  
   
- Aşağıda, bir ileti için yapılan en fazla teslim denemesi sayısı verilmiştir:  
+Aşağıda, bir ileti için yapılan en fazla teslim denemesi sayısı verilmiştir:  
   
 - ((ReceiveRetryCount + 1) * (Maxretrydöngülerini + 1)) Windows Vista 'da.  
   

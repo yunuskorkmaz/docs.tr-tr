@@ -2,22 +2,22 @@
 title: WCF Analiz İzleme
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 52a6787f6c7d309b1ae3a932780e4dbcb2ec0792
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3ed9c5f08e89d978f8290dcda5ab1ecfd8b9c56c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715300"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094832"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF Analiz İzleme
 Bu örnek, [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]' de ETW 'nin Windows Communication Foundation (WCF) yazdığı analitik izlemelerinin akışına kendi izleme olaylarınızın nasıl ekleneceğini gösterir. Analitik izlemeler, yüksek performans cezası ödemeksizin hizmetlerinizin görünürlüğünü daha kolay hale getirmek için tasarlanmıştır. Bu örnek, WCF hizmetleriyle tümleştirilen olayları yazmak için <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API 'Lerinin nasıl kullanılacağını gösterir.  
   
  <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API 'Leri hakkında daha fazla bilgi için bkz. <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
- Windows 'da olay izleme hakkında daha fazla bilgi edinmek için bkz. [ETW Ile hata ayıklamayı ve performans ayarlamayı geliştirme](https://go.microsoft.com/fwlink/?LinkId=166488).  
+ Windows 'da olay izleme hakkında daha fazla bilgi edinmek için bkz. [ETW Ile hata ayıklamayı ve performans ayarlamayı geliştirme](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw).  
   
 ## <a name="disposing-eventprovider"></a>EventProvider elden atılıyor  
- Bu örnek, <xref:System.IDisposable?displayProperty=nameWithType>uygulayan <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> sınıfını kullanır. Bir WCF hizmeti için izlemeyi uygularken, bu, hizmetin kullanım ömrü boyunca <xref:System.Diagnostics.Eventing.EventProvider>kaynaklarını kullanıyor olabilirsiniz. Bu nedenle ve okunabilirlik için, bu örnek sarmalanmış <xref:System.Diagnostics.Eventing.EventProvider>hiçbir şekilde yok. Bazı nedenlerle hizmetinizin izleme için farklı gereksinimleri varsa ve bu kaynağı atlamazsanız, bu örneği yönetilmeyen kaynakların elden atılamamasının en iyi uygulamalarına uygun olarak değiştirmeniz gerekir. Yönetilmeyen kaynakları elden atma hakkında daha fazla bilgi için bkz. [Dispose yöntemi uygulama](https://go.microsoft.com/fwlink/?LinkId=166436).  
+ Bu örnek, <xref:System.IDisposable?displayProperty=nameWithType>uygulayan <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> sınıfını kullanır. Bir WCF hizmeti için izlemeyi uygularken, bu, hizmetin kullanım ömrü boyunca <xref:System.Diagnostics.Eventing.EventProvider>kaynaklarını kullanıyor olabilirsiniz. Bu nedenle ve okunabilirlik için, bu örnek sarmalanmış <xref:System.Diagnostics.Eventing.EventProvider>hiçbir şekilde yok. Bazı nedenlerle hizmetinizin izleme için farklı gereksinimleri varsa ve bu kaynağı atlamazsanız, bu örneği yönetilmeyen kaynakların elden atılamamasının en iyi uygulamalarına uygun olarak değiştirmeniz gerekir. Yönetilmeyen kaynakları elden atma hakkında daha fazla bilgi için bkz. [Dispose yöntemi uygulama](https://docs.microsoft.com/dotnet/standard/garbage-collection/implementing-dispose).  
   
 ## <a name="self-hosting-vs-web-hosting"></a>Kendi kendine barındırma ile Web barındırma  
  Web 'de barındırılan hizmetlerde, WCF 'nin analitik izlemeleri, izlemeleri yayan hizmeti belirlemek için kullanılan "HostReference" adlı bir alan sağlar. Genişletilebilir kullanıcı izlemeleri bu modele katılabilir ve bu örnekte bunu gerçekleştirmek için en iyi yöntemler gösterilmektedir. Sonuçta ortaya çıkan dizedeki Kanal '&#124;' karakteri göründüğünde bir Web ana bilgisayar başvurusunun biçimi aşağıdakilerden biri olabilir:  
@@ -63,7 +63,7 @@ Bu örnek, [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long
   
      Icalsoltor hizmeti, sol bölmede **hizmet projelerim**altında eklenir.  
   
-7. Olay Görüntüleyicisi uygulamasını açın.  
+7. Olay Görüntüleyici uygulamasını açın.  
   
      Hizmeti çağırmadan önce Olay Görüntüleyicisi başlatın ve olay günlüğünün WCF hizmetinden yayılan izleme olaylarını dinlediğinden emin olun.  
   
@@ -97,7 +97,7 @@ Bu örnek, [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long
   
 #### <a name="to-clean-up-optional"></a>Temizlemek için (Isteğe bağlı)  
   
-1. **Olay Görüntüleyicisi**açın.  
+1. **Olay Görüntüleyicisi**'ni açın.  
   
 2. **Olay Görüntüleyicisi**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**ve sonra **uygulama-sunucu uygulamaları**' na gidin. **Analitik** öğesine sağ tıklayın ve **günlüğü devre dışı bırak**' ı seçin.  
   
@@ -119,4 +119,4 @@ Bu örnek, [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric Izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric Izleme örnekleri](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

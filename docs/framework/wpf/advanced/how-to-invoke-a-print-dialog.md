@@ -8,12 +8,12 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-ms.openlocfilehash: 6d7bc322079718d17a921ef34af79145b021e3a7
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: f7ef3312d876324b44b055d70fd22e3fba075ec6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636100"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095183"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>Nasıl yapılır: Yazdır İletişim Kutusu Çağırma
 Uygulamadan yazdırabilme olanağı sağlamak için bir <xref:System.Windows.Controls.PrintDialog> nesnesi oluşturup açabilirsiniz.  
@@ -24,7 +24,7 @@ Uygulamadan yazdırabilme olanağı sağlamak için bir <xref:System.Windows.Con
  [!code-csharp[printdialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintDialog/CSharp/Window1.xaml.cs#1)]
  [!code-vb[printdialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintDialog/visualbasic/window1.xaml.vb#1)]  
   
- İletişim kutusu açıldıktan sonra kullanıcılar, bilgisayarlarında yüklü olan yazıcıların arasından seçim yapabilir. Ayrıca, yazdırma yerine bir XML Kağıt Belirtimi (XPS) dosyası oluşturmak için [MICROSOFT XPS Belge Yazıcısı](https://go.microsoft.com/fwlink/?LinkId=147319) 'nı seçme seçeneği de vardır.  
+ İletişim kutusu açıldıktan sonra kullanıcılar, bilgisayarlarında yüklü olan yazıcıların arasından seçim yapabilir. Ayrıca, yazdırma yerine bir XML Kağıt Belirtimi (XPS) dosyası oluşturmak için [MICROSOFT XPS Belge Yazıcısı](/windows/win32/printdocs/microsoft-xps-document-writer) 'nı seçme seçeneği de vardır.  
   
 > [!NOTE]
 > Bu konuda açıklanan WPF <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> denetimi, Windows Forms <xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> bileşeniyle karıştırılmamalıdır.  
@@ -36,4 +36,4 @@ Uygulamadan yazdırabilme olanağı sağlamak için bir <xref:System.Windows.Con
 - <xref:System.Windows.Controls.PrintDialog>
 - [WPF'deki Belgeler](documents-in-wpf.md)
 - [Yazdırmaya Genel Bakış](printing-overview.md)
-- [Microsoft XPS Belge Yazıcısı](https://go.microsoft.com/fwlink/?LinkId=147319)
+- [Microsoft XPS Belge Yazıcısı](/windows/win32/printdocs/microsoft-xps-document-writer)

@@ -2,12 +2,12 @@
 title: SendMail Özel Etkinliği
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: b1e2d58a09362569d4d408f6e1c9e589aa6bda76
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 90b3192d931b216345b50ba49465455427e43a64
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715574"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094611"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail Özel Etkinliği
 Bu örnek, bir iş akışı uygulamasında kullanmak üzere SMTP kullanarak e-posta göndermek için <xref:System.Activities.AsyncCodeActivity> türetilen özel bir etkinliğin nasıl oluşturulacağını gösterir. Özel etkinlik, e-postayı zaman uyumsuz olarak göndermek ve kimlik doğrulamasıyla posta göndermek için <xref:System.Net.Mail.SmtpClient> yeteneklerini kullanır. Ayrıca, test modu, belirteç değiştirme, dosya şablonları ve test bırakma yolu gibi bazı son kullanıcı özellikleri de sağlar.  
@@ -16,27 +16,27 @@ Bu örnek, bir iş akışı uygulamasında kullanmak üzere SMTP kullanarak e-po
   
 |Name|Tür|Açıklama|  
 |-|-|-|  
-|Konak|Dize|SMTP sunucusu konağının adresi.|  
-|Bağlantı Noktası|Dize|Konaktaki SMTP hizmetinin bağlantı noktası.|  
-|enableSsl|bool|<xref:System.Net.Mail.SmtpClient> bağlantıyı şifrelemek için Güvenli Yuva Katmanı (SSL) kullanıp kullanmayacağını belirtir.|  
-|UserName|Dize|Gönderenin <xref:System.Net.Mail.SmtpClient.Credentials%2A> özelliğinin kimliğini doğrulamak üzere kimlik bilgilerini ayarlamak için Kullanıcı adı.|  
-|istemcisiyle yönetilen bir cihaz için)|Dize|Gönderenin <xref:System.Net.Mail.SmtpClient.Credentials%2A> özelliğini doğrulamak üzere kimlik bilgilerini ayarlamak için parola.|  
+|Ana bilgisayar|String|SMTP sunucusu konağının adresi.|  
+|Bağlantı Noktası|String|Konaktaki SMTP hizmetinin bağlantı noktası.|  
+|EnableSsl|bool|<xref:System.Net.Mail.SmtpClient> bağlantıyı şifrelemek için Güvenli Yuva Katmanı (SSL) kullanıp kullanmayacağını belirtir.|  
+|UserName|String|Gönderenin <xref:System.Net.Mail.SmtpClient.Credentials%2A> özelliğinin kimliğini doğrulamak üzere kimlik bilgilerini ayarlamak için Kullanıcı adı.|  
+|Parola|String|Gönderenin <xref:System.Net.Mail.SmtpClient.Credentials%2A> özelliğini doğrulamak üzere kimlik bilgilerini ayarlamak için parola.|  
 |Konu|<xref:System.Activities.InArgument%601>\<dize >|İletinin konusu.|  
-|bölümü|<xref:System.Activities.InArgument%601>\<dize >|İletinin gövdesi.|  
-|Ekler|<xref:System.Activities.InArgument%601>\<dize >|Bu e-posta iletisine eklenen verileri depolamak için kullanılan ek koleksiyonu.|  
+|Gövde|<xref:System.Activities.InArgument%601>\<dize >|İletinin gövdesi.|  
+|Ekleri|<xref:System.Activities.InArgument%601>\<dize >|Bu e-posta iletisine eklenen verileri depolamak için kullanılan ek koleksiyonu.|  
 |Başlangıç|<xref:System.Net.Mail.MailAddress>|Bu e-posta iletisinin Kimden adresi.|  
 |Bitiş|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Bu e-posta iletisinin alıcılarını içeren adres toplama.|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Bu e-posta iletisi için karbon kopyası (CC) alıcılarını içeren adres toplama.|  
 |ALÝCÝ|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Bu e-posta iletisi için gizli bilgi kopyası (gızlı) alıcılarını içeren adres toplama.|  
 |Belirteçler|<xref:System.Activities.InArgument%601>< IDictionary\<dize, dize > >|Gövdede değiştirilecek belirteçler. Bu özellik, kullanıcıların gövdede daha sonra bu özellik kullanılarak girilen belirteçlerle değiştirilebilmesi için bazı değerler belirlemesine izin verir.|  
-|BodyTemplateFilePath|Dize|Gövde şablonunun yolu. `SendMail` etkinliği bu dosyanın içeriğini Body özelliğine kopyalar.<br /><br /> Şablon, belirteçler özelliğinin içeriğiyle değiştirilmiş belirteçleri içerebilir.|  
+|BodyTemplateFilePath|String|Gövde şablonunun yolu. `SendMail` etkinliği bu dosyanın içeriğini Body özelliğine kopyalar.<br /><br /> Şablon, belirteçler özelliğinin içeriğiyle değiştirilmiş belirteçleri içerebilir.|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|Bu özellik ayarlandığında, tüm e-postalar içinde belirtilen adrese gönderilir.<br /><br /> Bu özellik iş akışlarını test ederken kullanılmak üzere tasarlanmıştır. Örneğin, tüm e-postaların gerçek alıcılara gönderilmeksizin gönderilmesini sağlamak istediğinizde.|  
-|TestDropPath|Dize|Bu özellik ayarlandığında, tüm e-postalar da belirtilen dosyaya kaydedilir.<br /><br /> Bu özellik, giden e-postaların biçiminin ve içeriğinin uygun olduğundan emin olmak için iş akışlarını test ederken veya hata ayıklarken kullanılmak üzere tasarlanmıştır.|  
+|TestDropPath|String|Bu özellik ayarlandığında, tüm e-postalar da belirtilen dosyaya kaydedilir.<br /><br /> Bu özellik, giden e-postaların biçiminin ve içeriğinin uygun olduğundan emin olmak için iş akışlarını test ederken veya hata ayıklarken kullanılmak üzere tasarlanmıştır.|  
   
 ## <a name="solution-contents"></a>Çözüm Içeriği  
  Çözüm iki proje içerir.  
   
-|{1&gt;Proje (Project)&lt;1}|Açıklama|Önemli dosyalar|  
+|Proje|Açıklama|Önemli dosyalar|  
 |-------------|-----------------|---------------------|  
 |SendMail|SendMail etkinliği|1. SendMail.cs: ana etkinlik için uygulama<br />SendMail etkinliği için 2. SendMailDesigner. xaml ve SendMailDesigner.xaml.cs: Designer<br />3. MailTemplateBody. htm: gönderilecek e-postanın şablonu.|  
 |SendMailTestClient|SendMail etkinliğini test etmek için istemci.  Bu proje, SendMail etkinliğini çağırmanın iki yolunu gösterir: bildirimli ve programlı olarak.|1. Sequence1. xaml: SendMail etkinliğini çağıran iş akışı.<br />2. Program.cs: Sequence1 çağırır ve ayrıca SendMail kullanan programlı bir iş akışı oluşturur.|  
@@ -107,13 +107,11 @@ new SendMail
   
  SMTP sunucusu kurma hakkında daha fazla bilgi için aşağıdaki bağlantılara bakın.  
   
-- [Microsoft TechNet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [SMTP hizmetini yapılandırma (IIS 6,0)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784968(v=ws.10))  
   
-- [SMTP hizmetini yapılandırma (IIS 6,0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [IIS 7,0: SMTP e-postasını Yapılandırma](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772058(v=ws.10))  
   
-- [IIS 7,0: SMTP e-postasını Yapılandırma](https://go.microsoft.com/fwlink/?LinkId=150457)  
-  
-- [SMTP hizmetini nasıl yükleyeceğiniz](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [SMTP hizmetini nasıl yükleyeceğiniz](https://docs.microsoft.com/previous-versions/tn-archive/aa997480(v=exchg.65))  
   
  Üçüncü taraflar tarafından sağlanan SMTP öykünücüleri indirilebilir.  
   

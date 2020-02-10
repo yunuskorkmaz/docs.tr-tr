@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: 14abb5bd181f401a4e6834d110e20fa920566580
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4f76d28d5531c1b9f01fa950589407934cc1244a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789731"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093480"
 ---
 # <a name="permission-c-programming-guide"></a>\<izin > (C# Programlama Kılavuzu)
 
@@ -29,7 +29,7 @@ ms.locfileid: "76789731"
 
   Geçerli derleme ortamından çağrılabilen bir üyeye veya alana başvuru. Derleyici verilen kod öğesinin var olduğunu denetler ve çıkış XML dosyasında kurallı öğe adına `member` çevirir. *üye* çift tırnak işareti ("") içinde yer almalıdır.
 
-  Genel bir türe cref başvurusu oluşturma hakkında daha fazla bilgi için bkz. [\<](./see.md).
+  Genel bir türe cref başvurusu oluşturma hakkında daha fazla bilgi için bkz. [cref özniteliği](./cref-attribute.md).
 
 - `description`
 

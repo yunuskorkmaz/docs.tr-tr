@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 26c09e547205e7819ebb43d6e34b6e18d6d9ff98
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7e034e92e1ff2b9bec0eaf8e0f3330f7a832a7e5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460843"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095175"
 ---
 # <a name="how-to-localize-an-application"></a>Nasıl yapılır: Bir Uygulamayı Yerelleştirme
 Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanın nasıl oluşturulacağı açıklanmaktadır.  
@@ -23,7 +23,7 @@ Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanı
 > LocBaml aracı üretime yönelik olarak hazırlanmayan bir uygulama değildir. Bu, yerelleştirme API 'Lerinden bazılarını kullanan bir örnek olarak sunulur ve yerelleştirme aracını nasıl yazacağınızı gösterir.  
   
 <a name="Introduction"></a>   
-## <a name="overview"></a>Genel bakış  
+## <a name="overview"></a>Genel Bakış  
  Bu tartışma, bir uygulamayı yerelleştirme konusunda adım adım bir yaklaşım sağlar. İlk olarak, çevrilecek metnin ayıklanabilmesi için uygulamanızı hazırlayacaksınız. Metin çevrildikten sonra, çevrilmiş metni orijinal uygulamanın yeni bir kopyasına birleştirirsiniz.  
   
 <a name="Requirements"></a>   
@@ -81,7 +81,7 @@ Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanı
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>LocBaml aracını oluşturma  
   
-1. LocBaml oluşturmak için gereken tüm dosyalar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] örneklerde bulunur. C# Dosyaları [LocBaml araç örneğinden](https://go.microsoft.com/fwlink/?LinkID=160016)indirin.  
+1. LocBaml oluşturmak için gereken tüm dosyalar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] örneklerde bulunur. C# Dosyaları [LocBaml araç örneğinden](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)indirin.  
   
 2. Araç oluşturmak için komut satırından proje dosyasını (LocBaml. csproj) çalıştırın:  
   
@@ -149,10 +149,10 @@ Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanı
   
    Aşağıdaki tabloda, bu alanların. csv dosyasının ayrılmış değerleriyle nasıl eşlenme gösterilmektedir:  
   
-   |BAML adı|Kaynak anahtarı|Kategori|Luğunu|Modifibilme|Açıklamalar|Değer|  
+   |BAML adı|Kaynak anahtarı|Kategori|Okunabilirlik|Modifibilme|Açıklamalar|Value|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp. g. en-US. resources: Window1. BAML|Stack1: System. Windows. Controls. StackPanel. $Content|Yoksay|YANLÝÞ|YANLÝÞ||#Text1; #Text2|
-   |HelloApp. g. en-US. resources: Window1. BAML|Metin1: System. Windows. Controls. TextBlock. $Content|Yok.|TRUE|TRUE||Merhaba Dünya|
+   |HelloApp. g. en-US. resources: Window1. BAML|Stack1: System. Windows. Controls. StackPanel. $Content|Yoksayma|Yanlış|Yanlış||#Text1; #Text2|
+   |HelloApp. g. en-US. resources: Window1. BAML|Metin1: System. Windows. Controls. TextBlock. $Content|Yok.|TRUE|TRUE||Hello World|
    |HelloApp. g. en-US. resources: Window1. BAML|Metin2: System. Windows. Controls. TextBlock. $Content|Yok.|TRUE|TRUE||Güle dünya|
   
    **Comments** alanı için tüm değerlerin değer içermediğini unutmayın; bir alanın değeri yoksa, boştur. Ayrıca, ilk satırdaki öğenin okunabilir ve değiştirilebilir olmadığından ve **Kategori** değeri olarak "Yoksay" değerine sahip olduğuna dikkat edin; hepsi değerin yerelleştirilemeyen olmadığını gösterir.  

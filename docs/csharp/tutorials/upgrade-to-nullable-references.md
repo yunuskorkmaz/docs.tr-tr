@@ -4,18 +4,18 @@ description: Bu gelişmiş öğreticide, var olan kodun null yapılabilir başvu
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: e480cfa7c041d18a2bdaf8caa2468165e855186e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 4edeab7b2a4211d50c424f567ad7df6ced0bf4ce
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740458"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093311"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Öğretici: mevcut kodu Nullable başvuru türleriyle geçirme
 
 C#8, null olabilen değer türleri için aynı şekilde, başvuru türlerini tamamlayan **null yapılabilir başvuru türlerini**tanıtır. Türe bir `?` ekleyerek **null olabilen bir başvuru türü** olarak bir değişken bildirirsiniz. Örneğin `string?`, null yapılabilir bir `string`temsil eder. Tasarım amacınızı daha net bir şekilde ifade etmek için bu yeni türleri kullanabilirsiniz: bazı değişkenlerin *her zaman bir değeri olması gerekir*, bazılarında *bir değer eksik*olabilir. Bir başvuru türünün varolan değişkenleri, null olamayan bir başvuru türü olarak yorumlanır. 
 
-Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -24,7 +24,7 @@ Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > - Null yapılabilir etkin ve null yapılabilir devre dışı bağlamların arabirimini yönetin.
 > - Null yapılabilir ek açıklama bağlamlarını denetleyin.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Makinenizi, C# 8,0 derleyicisi dahil .NET Core çalıştıracak şekilde ayarlamanız gerekir. 8 C# derleyicisi, [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download)ile başlayarak kullanılabilir.
 
@@ -40,7 +40,7 @@ Bir projeyi geçirme hedefiniz yeni dil özelliklerinden faydalanır, böylece a
 
 ## <a name="upgrade-the-projects-to-c-8"></a>Projeleri 8 ' e C# yükseltin
 
-Geçiş görevinin kapsamını belirlemekte iyi bir ilk adım vardır. Projeyi C# 8,0 (veya daha yeni) sürümüne yükselterek başlayın. Web projesi ve birim test projesi için `LangVersion` öğesini her iki csproj dosyasına ekleyin:
+Geçiş görevinin kapsamını belirlemekte iyi bir ilk adım vardır. Projeyi C# 8,0 (veya daha yeni) sürümüne yükselterek başlayın. Web projesi ve birim test projesi için her iki csproj dosyasında bulunan PropertyGroup öğesine `LangVersion` öğesini ekleyin:
 
 ```xml
 <LangVersion>8.0</LangVersion>
@@ -163,7 +163,7 @@ Bu değişiklik kümesi, genel örneklemeleri içeren kodu güncelleştirirken �
 
 `IMapper` parametresi null atanamaz bir başvuru olarak yazılmış. ASP.NET Core altyapı kodu tarafından çağrılır, bu nedenle derleyici `IMapper` hiçbir şekilde null olmadığını bilmez. Varsayılan ASP.NET Core bağımlılık ekleme (dı) kapsayıcısı, gerekli bir hizmeti çözümleyemezse, kod doğru olduğunda bir özel durum oluşturur. Kodunuz null yapılabilir ek açıklama bağlamlarıyla derlense bile derleyici ortak API 'lerinize yapılan tüm çağrıları doğrulayamaz. Ayrıca, kitaplıklarınız henüz null yapılabilir başvuru türlerini kullanarak onaylanmamış projeler tarafından tüketilebilir. Bu girdileri null yapılamayan türler olarak bildirseniz bile ortak API 'lere yönelik girişleri doğrulayın.
 
-## <a name="get-the-code"></a>Kodu edinin
+## <a name="get-the-code"></a>Kodu alma
 
 İlk test derlenmesi sırasında belirlediğiniz uyarıları düzelttiniz, bu nedenle artık her iki proje için de null yapılabilir ek açıklama bağlamını açabilirsiniz. Projeleri yeniden derleyin; Derleyici hiçbir uyarı rapor vermez. [DotNet/Samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/finished) GitHub deposundaki tamamlanmış projenin kodunu alabilirsiniz.
 

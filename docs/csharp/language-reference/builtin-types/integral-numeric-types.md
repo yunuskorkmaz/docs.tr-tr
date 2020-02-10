@@ -32,16 +32,16 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 2fb4d7185ac85b29f2cc2d2e7a29e192f91a0868
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980151"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093207"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Integral sayısal türleri (C# başvuru)
 
-**İntegral sayısal türleri** **basit türlerin** bir alt kümesidir ve [*değişmez değerler*](#integer-literals)ile başlatılabilir. Tüm integral türleri de değer türlerdir. Tüm integral sayısal türler [Aritmetik](../operators/arithmetic-operators.md), [bit düzeyinde mantıksal](../operators/bitwise-and-shift-operators.md), [karşılaştırma](../operators/comparison-operators.md)ve [eşitlik](../operators/equality-operators.md) işleçlerini destekler.
+*İntegral sayısal türleri* tamsayı sayılarını temsil eder. Tüm integral sayısal türleri [değer türlerdir](value-types.md). Bunlar ayrıca [basit türlerdir](value-types.md#built-in-value-types) ve [değişmez değerler](#integer-literals)ile başlatılabilir. Tüm integral sayısal türler [Aritmetik](../operators/arithmetic-operators.md), [bit düzeyinde mantıksal](../operators/bitwise-and-shift-operators.md), [karşılaştırma](../operators/comparison-operators.md)ve [eşitlik](../operators/equality-operators.md) işleçlerini destekler.
 
 ## <a name="characteristics-of-the-integral-types"></a>İntegral türlerinin özellikleri
 
@@ -130,7 +130,7 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C#başvurunun](../index.md)
-- [Yerleşik türler tablosu](../keywords/built-in-types-table.md)
+- [Değer türleri](value-types.md)
 - [Kayan nokta türleri](floating-point-numeric-types.md)
 - [Standart sayısal biçim dizeleri](../../../standard/base-types/standard-numeric-format-strings.md)
 - [.NET Sayısal Değerleri](../../../standard/numerics.md)

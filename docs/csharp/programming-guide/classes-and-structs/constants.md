@@ -5,15 +5,15 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: fc3dc534756c462fdc368d997da40277e5dc2869
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 85f6684617b893bdd85eb5b530aa2481941fbc5d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937572"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093558"
 ---
 # <a name="constants-c-programming-guide"></a>Sabitler (C# Programlama Kılavuzu)
-Sabitler, derleme zamanında bilinen ve programın ömrü boyunca değişmeyen sabit değerlerdir. Sabitler [const](../../language-reference/keywords/const.md) değiştiricisi ile bildirilmiştir. Yalnızca C# yerleşik türler (<xref:System.Object?displayProperty=nameWithType>hariç) `const`olarak bildirilemez. Yerleşik türlerin listesi için bkz. [Yerleşik türler tablosu](../../language-reference/keywords/built-in-types-table.md). Sınıflar, yapılar ve diziler dahil Kullanıcı tanımlı türler `const`olamaz. Çalışma zamanında bir kez başlatılan bir sınıf, yapı veya dizi oluşturmak için [salt okunur](../../language-reference/keywords/readonly.md) değiştiricisini kullanın (örneğin, bir oluşturucuda) ve bundan sonra değiştirilemez.  
+Sabitler, derleme zamanında bilinen ve programın ömrü boyunca değişmeyen sabit değerlerdir. Sabitler [const](../../language-reference/keywords/const.md) değiştiricisi ile bildirilmiştir. C# Yalnızca [Yerleşik türler](../../language-reference/builtin-types/built-in-types.md) (<xref:System.Object?displayProperty=nameWithType>hariç) `const`olarak bildirilemez. Sınıflar, yapılar ve diziler dahil Kullanıcı tanımlı türler `const`olamaz. Çalışma zamanında bir kez başlatılan bir sınıf, yapı veya dizi oluşturmak için [salt okunur](../../language-reference/keywords/readonly.md) değiştiricisini kullanın (örneğin, bir oluşturucuda) ve bundan sonra değiştirilemez.  
   
  C#`const` yöntemleri, özellikleri veya olayları desteklemez.  
   
@@ -49,7 +49,7 @@ Sabitler, derleme zamanında bilinen ve programın ömrü boyunca değişmeyen s
 
 - [C# Programlama Kılavuzu](../index.md)
 - [Sınıflar ve Yapılar](./index.md)
-- [Veri Erişimi](./properties.md)
+- [Özellikler](./properties.md)
 - [Türler](../types/index.md)
 - [readonly](../../language-reference/keywords/readonly.md)
 - [Birinci C# bölümde kullanılabilirlik kullanılabilirliği: tür değiştirici kullanılabilirliği](https://docs.microsoft.com/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability)

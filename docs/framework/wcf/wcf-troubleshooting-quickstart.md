@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 2fef4c7b00fd6a1ed8f85a8bfa01ef9cfffa1bbb
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: d1cae7ad2ac0fdf963d11911484b1bd534cbc129
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919946"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094741"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF Sorun Giderme Hızlı Başlangıç
 Bu konuda, müşterilerin, WCF istemcileri ve Hizmetleri geliştirirken çalıştırdığı bazı bilinen sorunlar listelenmektedir. Çalıştırmakta olduğunuz sorun bu listede yoksa, hizmetiniz için izlemeyi yapılandırmanızı öneririz. Bu, izleme dosyası görüntüleyiciyle görüntüleyebileceğiniz bir izleme dosyası oluşturur ve hizmet içinde oluşabilecek özel durumlar hakkında ayrıntılı bilgi edinebilirsiniz. İzlemeyi yapılandırma hakkında daha fazla bilgi için bkz: [Izlemeyi yapılandırma](./diagnostics/tracing/configuring-tracing.md). İzleme dosyası Görüntüleyicisi hakkında daha fazla bilgi için bkz. [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer. exe)](service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -59,7 +59,7 @@ Bu konuda, müşterilerin, WCF istemcileri ve Hizmetleri geliştirirken çalış
   
 <a name="BKMK_q3"></a>   
 ## <a name="can-i-load-my-service-configuration-from-somewhere-other-than-the-wcf-applications-configuration-file"></a>Hizmet yapılandırmadan WCF uygulamasının yapılandırma dosyası dışında bir yerde yükleyebilir miyim?  
- Evet, ancak, <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> yöntemini geçersiz kılan özel bir <xref:System.ServiceModel.ServiceHost> sınıfı oluşturmanız gerekir. Bu yöntemin içinde, önce yapılandırmayı yüklemek için temel çağırabilirsiniz (Standart yapılandırma bilgilerini de yüklemek istiyorsanız), ancak yapılandırma yükleme sistemini tamamen değiştirebilirsiniz. Yapılandırmayı uygulama yapılandırma dosyasından farklı bir yapılandırma dosyasından yüklemek isterseniz, yapılandırma dosyasını kendiniz ayrıştırabilmeniz ve yapılandırmayı yüklemeniz gerekir.  
+ Evet, ancak, <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> yöntemini geçersiz kılan özel bir <xref:System.ServiceModel.ServiceHost> sınıfı oluşturmanız gerekir. Bu yöntemin içinde, önce yapılandırmayı yüklemek için temel çağırabilirsiniz (Standart yapılandırma bilgilerini de yüklemek istiyorsanız), ancak yapılandırma yükleme sistemini tamamen değiştirebilirsiniz. Yapılandırma dosyasından uygulama yapılandırma dosyasından farklı bir yapılandırma yüklemek istiyorsanız, yapılandırma dosyasını kendiniz ayrıştırmalısınız ve yapılandırmayı yüklemeniz gerekir.  
   
  Aşağıdaki kod örneği, <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> yönteminin nasıl geçersiz kılınacağını ve bir uç noktanın doğrudan nasıl yapılandırılacağını gösterir.  
   
@@ -130,7 +130,7 @@ public class MyServiceHost : ServiceHost
   
     3. Hizmeti, varsayılan olarak hizmet asıl adı (SPN) hesabını kullanan Internet Information Services (IIS) altında barındırın.  
   
-    4. SetSPN kullanarak etki alanı ile yeni bir SPN kaydettirin. Bunu yapmak için, bir etki alanı yöneticisi olmanız gerektiğini unutmayın.  
+    4. SetSPN kullanarak etki alanı ile yeni bir SPN kaydettirin. Bunu yapmak için bir etki alanı yöneticisi olmanız gerekir.  
   
  Kerberos protokolü hakkında daha fazla bilgi için bkz. [WCF 'de kullanılan güvenlik kavramları](./feature-details/security-concepts-used-in-wcf.md) ve:  
   
@@ -166,7 +166,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>Bir işlemin ilk parametresini büyük harften küçük harfe kadar değiştirdim; Artık istemcim bir özel durum oluşturuyor. Ne oluyor?  
- İşlem imzasında parametre adlarının değeri sözleşmenin bir parçasıdır ve büyük/küçük harfe duyarlıdır. Yerel parametre adı ile istemci uygulamaları için işlemi açıklayan meta veriler arasında ayrım yapmanız gerektiğinde <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType> özniteliğini kullanın.  
+ İşlem imzasında parametre adlarının değerleri sözleşmenin bir parçasıdır ve büyük/küçük harfe duyarlıdır. Yerel parametre adı ile istemci uygulamaları için işlemi açıklayan meta veriler arasında ayrım yapmanız gerektiğinde <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType> özniteliğini kullanın.  
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>İzleme araçlarından birini kullanıyorum ve bir EndpointNotFoundException aldım. Ne oluyor?  
@@ -237,7 +237,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BK_MK99"></a>   
 ## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>WCF SOAP uygulamasından bir WCF Web HTTP uygulaması çağrılırken hizmet şu hatayı döndürür: 405 yöntemine Izin verilmiyor  
- WCF Web HTTP uygulamasını (<xref:System.ServiceModel.WebHttpBinding> ve <xref:System.ServiceModel.Description.WebHttpBehavior>kullanan bir hizmet) bir WCF hizmetinden çağırmak şu özel durumu oluşturabilir: `Unhandled Exception: System.ServiceModel.FaultException`1 [System. ServiceModel. ExceptionDetail]: uzak sunucu beklenmeyen bir yanıt döndürdü: (405) yönteme Izin verilmiyor. ' Bu özel durum, WCF giden <xref:System.ServiceModel.OperationContext> gelen <xref:System.ServiceModel.OperationContext>üzerine yazılmasından dolayı oluşur. Bu sorunu çözmek için, WCF Web HTTP hizmeti işlemi içinde bir <xref:System.ServiceModel.OperationContextScope> oluşturun. Örneğin:  
+ WCF Web HTTP uygulamasını (<xref:System.ServiceModel.WebHttpBinding> ve <xref:System.ServiceModel.Description.WebHttpBehavior>kullanan bir hizmet) bir WCF hizmetinden çağırmak aşağıdaki özel durumu oluşturabilir: Bu özel durum, WCF giden <xref:System.ServiceModel.OperationContext> gelen <xref:System.ServiceModel.OperationContext>üzerine yazmasından dolayı ``Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The remote server returned an unexpected response: (405) Method Not Allowed.``. Bu sorunu çözmek için, WCF Web HTTP hizmeti işlemi içinde bir <xref:System.ServiceModel.OperationContextScope> oluşturun. Örneğin:  
   
 ```csharp
 public string Echo(string input)  

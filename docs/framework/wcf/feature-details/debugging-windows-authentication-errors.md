@@ -8,14 +8,15 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 9dbf9eee6e4222f899d77a4457bc78132ec7f092
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 4a5e56f6b7f33a4c6f29aa384635737eeee37ddd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920225"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095040"
 ---
-# <a name="debugging-windows-authentication-errors"></a>Windows Kimlik Doğrulama Hatalarını Ayıklama
+# <a name="debug-windows-authentication-errors"></a>Windows kimlik doğrulama hatalarını ayıklama
+
 Windows kimlik doğrulamasını bir güvenlik mekanizması olarak kullanırken, güvenlik desteği sağlayıcısı arabirimi (SSPI) güvenlik süreçlerini işler. SSPI katmanında güvenlik hataları oluştuğunda, bunlar Windows Communication Foundation (WCF) ile ortaya çıkar. Bu konu, hataları tanılamanıza yardımcı olmak için bir çerçeve ve soru kümesi sağlar.  
   
  Kerberos protokolüne genel bakış için bkz. [Kerberos açıklanıyor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/bb742516(v=technet.10)); SSPI 'ye genel bakış için bkz. [SSPI](/windows/win32/secauthn/sspi).  
@@ -98,7 +99,7 @@ Windows kimlik doğrulamasını bir güvenlik mekanizması olarak kullanırken, 
 ### <a name="ntlm-protocol"></a>NTLM protokolü  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>Negotiate SSP, NTLM 'ye geri döner, ancak NTLM devre dışı bırakılır  
- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> özelliği, NTLM kullanılıyorsa, Windows Communication Foundation (WCF) bir özel durum oluşturmak için en iyi çaba oluşturulmasına neden olan `false`olarak ayarlanır. Bu özelliği `false` olarak ayarlamanın, NTLM kimlik bilgilerinin tel üzerinden gönderilmesini engelleyemeyeceğini unutmayın.  
+ <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> özelliği, NTLM kullanılıyorsa, Windows Communication Foundation (WCF) bir özel durum oluşturmak için en iyi çaba oluşturulmasına neden olan `false`olarak ayarlanır. Bu özelliğin `false` olarak ayarlanması, NTLM kimlik bilgilerinin kablo üzerinden gönderilmesini engelleyemeyebilir.  
   
  Aşağıda, NTLM 'ye geri dönüşü devre dışı bırakma gösterilmektedir.  
   

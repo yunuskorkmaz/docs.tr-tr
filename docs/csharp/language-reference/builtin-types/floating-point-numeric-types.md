@@ -18,16 +18,16 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 9fde2b28288b58d7da3a4d003ec50af7d7e7a965
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 9c8b11f9337ee9de90f2d4d96b5be162713bfcbd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980177"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093220"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Kayan nokta sayısal türleri (C# başvuru)
 
-**Kayan nokta türleri** **basit türlerin** bir alt kümesidir ve [*değişmez değerler*](#real-literals)ile başlatılabilir. Tüm kayan nokta türleri de değer türlerdir. Tüm kayan nokta sayısal türleri [Aritmetik](../operators/arithmetic-operators.md), [karşılaştırma](../operators/comparison-operators.md)ve [eşitlik](../operators/equality-operators.md) işleçlerini destekler.
+*Kayan nokta sayısal türleri* gerçek sayıları temsil eder. Tüm kayan nokta sayısal türleri [değer türlerdir](value-types.md). Bunlar ayrıca [basit türlerdir](value-types.md#built-in-value-types) ve [değişmez değerler](#real-literals)ile başlatılabilir. Tüm kayan nokta sayısal türleri [Aritmetik](../operators/arithmetic-operators.md), [karşılaştırma](../operators/comparison-operators.md)ve [eşitlik](../operators/equality-operators.md) işleçlerini destekler.
 
 ## <a name="characteristics-of-the-floating-point-types"></a>Kayan nokta türlerinin özellikleri
 
@@ -118,7 +118,7 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C#başvurunun](../index.md)
-- [Yerleşik türler tablosu](../keywords/built-in-types-table.md)
+- [Değer türleri](value-types.md)
 - [Integral türleri](integral-numeric-types.md)
 - [Standart sayısal biçim dizeleri](../../../standard/base-types/standard-numeric-format-strings.md)
 - [.NET Sayısal Değerleri](../../../standard/numerics.md)

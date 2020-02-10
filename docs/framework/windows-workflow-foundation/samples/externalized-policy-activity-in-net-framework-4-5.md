@@ -2,20 +2,20 @@
 title: .NET Framework 4.5’te Dış İlke Etkinliği
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 9184386751bb44e89dfdcedd34ab0ab84a27323e
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 8fd08c9c29f7a268170aaa101a9bdb85250157dc
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710922"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094637"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5’te Dış İlke Etkinliği
 
-Bu örnek, ExternalizedPolicy4 etkinliğinin, WF 3,5 ' te sunulan Rules altyapısını kullanarak doğrudan [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4,5) <xref:System.Workflow.Activities.Rules.RuleSet> nesnelerinin mevcut .NET Framework 3,5 Windows Workflow Foundation (WF 3,5) nasıl yürütülmeye izin verdiğini gösterir. Bu etkinliği kullanarak var olan WF 3,5 <xref:System.Workflow.Activities.Rules.RuleSet>açabilir ve çalıştırabilirsiniz. Windows Workflow Foundation kapsamında yer alan WF 3,5 kural altyapısı hakkında daha fazla bilgi için lütfen [Windows Workflow Foundation kuralları altyapısına giriş](https://go.microsoft.com/fwlink/?LinkId=166079)makalesini okuyun. Kuralları [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)][!INCLUDE[wf1](../../../../includes/wf1-md.md)] geçirme hakkında daha fazla bilgi için, bkz. [Geçiş Kılavuzu](../migration-guidance.md).
+Bu örnek, ExternalizedPolicy4 etkinliğinin, WF 3,5 ' te sunulan Rules altyapısını kullanarak doğrudan [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4,5) <xref:System.Workflow.Activities.Rules.RuleSet> nesnelerinin mevcut .NET Framework 3,5 Windows Workflow Foundation (WF 3,5) nasıl yürütülmeye izin verdiğini gösterir. Bu etkinliği kullanarak var olan WF 3,5 <xref:System.Workflow.Activities.Rules.RuleSet>açabilir ve çalıştırabilirsiniz. Windows Workflow Foundation kapsamında yer alan WF 3,5 kural altyapısı hakkında daha fazla bilgi için lütfen [Windows Workflow Foundation kuralları altyapısına giriş](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480193(v=msdn.10))makalesini okuyun. Kuralları [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)][!INCLUDE[wf1](../../../../includes/wf1-md.md)] geçirme hakkında daha fazla bilgi için, bkz. [Geçiş Kılavuzu](../migration-guidance.md).
 
 ## <a name="projects-in-this-sample"></a>Bu örnekteki projeler
 
-|Proje adı|Açıklama|Ana dosyalar|
+|Proje Adı|Açıklama|Ana dosyalar|
 |-|-|-|
 |ExternalizedPolicy4|ExternalizedPolicy4 etkinliğini ve onun WF 4,5 tasarımcısını içerir.|**ExternalizedPolicy4.cs**: etkinlik tanımı.<br /><br /> **ExternalizedPolicy4Designer. xaml**: ExternalizedPolicy4 etkinliği için özel tasarımcı. WF 3,5 kural altyapısından kural düzenleyicisini (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) kullanır.|
 |ImperativeCodeClientSample|Bir ExternalizedPolicy4 uygulamasını kullanarak bir iş akışını yapılandıran ve bu uygulama çalıştıran örnek istemci uygulaması C# , zorunlu kod (tasarımcı olmadan) kullanır.|**ApplyDiscount. Rules**: [!INCLUDE[wf1](../../../../includes/wf1-md.md)] kural tanımlarına sahip dosya.<br /><br /> **Order.cs**: bir müşteri siparişini temsil eden tür. Kurallar bu türden nesnelere uygulanır.<br /><br /> **Program.cs**: ApplyDiscount içinde tanımlanan kuralları uygulamak için Policy4 etkinliğine sahip bir iş akışını yapılandırır ve çalıştırır. sıralama nesnelerinin örneklerine yönelik kurallar.<br /><br /> App. config: kural dosyasının yolunu içeren yapılandırma dosyası.|
@@ -48,7 +48,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 |RuleSetName|. Rules dosyası içinde kullanılacak <xref:System.Workflow.Activities.Rules.RuleSet> adı.|
 |TargetObject|<xref:System.Workflow.Activities.Rules.RuleSet> <xref:System.Workflow.Activities.Rules.Rule> nesnelerinin üzerinde değerlendirildiği nesne.|
 |ResultObject|Kurallar uygulandıktan sonra elde edilen nesne (örneğin, kurallar giriş bağımsız değişkenine göre uygulanır ve sonuç sonuç bağımsız değişkeninde saklanır.)|
-|Doğrulama hatası|Yürütmeden önce hedef nesneye karşı <xref:System.Workflow.Activities.Rules.RuleSet> doğrulanırken WF 3,5 kural altyapısının döndürdüğü doğrulama hatalarının listesi.|
+|ValidationError|Yürütmeden önce hedef nesneye karşı <xref:System.Workflow.Activities.Rules.RuleSet> doğrulanırken WF 3,5 kural altyapısının döndürdüğü doğrulama hatalarının listesi.|
 
 ## <a name="externalizedpolicy4-activity-designer"></a>ExternalizedPolicy4 Etkinlik Tasarımcısı
 

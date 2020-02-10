@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: e73eeeeb0e613d45b2ce31e744803bb75ba2a3c2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d6775263e6f1afb227aa263b01d60f5181da74f3
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75700646"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093516"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Komut Satırı Bağımsız Değişkenleri (C# Programlama Kılavuzu)
 
@@ -78,6 +78,6 @@ Uygulamayı bir komut isteminden derlemek ve çalıştırmak için aşağıdaki 
 - <xref:System.Environment?displayProperty=nameWithType>
 - [C# Programlama Kılavuzu](../index.md)
 - [Ana() ve Komut Satırı Bağımsız Değişkenleri](index.md)
-- [Komut satırı bağımsız değişkenlerini nasıl DSP](how-to-display-command-line-arguments.md)
+- [Komut satırı bağımsız değişkenlerini görüntüleme](how-to-display-command-line-arguments.md)
 - [Ana() Dönüş Değerleri](main-return-values.md)
 - [Sınıflar](../classes-and-structs/classes.md)

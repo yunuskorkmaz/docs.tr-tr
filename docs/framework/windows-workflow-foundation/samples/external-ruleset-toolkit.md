@@ -2,12 +2,12 @@
 title: Dış Kural Kümesi Araç Seti
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: b07d2b63d9f3d98b8f08eb697a8d688d8fac1962
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: eb59b02d469788b23126f4e02c5b7ae5a63081f0
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710891"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094676"
 ---
 # <a name="external-ruleset-toolkit"></a>Dış Kural Kümesi Araç Seti
 
@@ -16,7 +16,7 @@ Normalde, kurallar bir iş akışı uygulaması içinde kullanıldığında, kur
 Dış RuleSet Toolkit örneği, bir veritabanında RuleSet sürümlerini yönetmek ve düzenlemek için kullanabileceğiniz Windows Forms tabanlı bir araç içerir. Ayrıca, bu kuralları yürütmek için bir etkinlik ve bir konak hizmeti içerir.
 
 > [!NOTE]
-> Bu örnek [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=96181)gerektirir.
+> Bu örnek [Microsoft SQL Server](/sql)gerektirir.
 
 Visual Studio, Windows Workflow Foundation (WF) bir parçası olarak bir RuleSet Düzenleyicisi sağlar. Bu düzenleyiciyi bir iş akışındaki `Policy` etkinliğine çift tıklayarak başlatabilirsiniz. tanımlanan RuleSet nesnesini iş akışıyla ilişkili. Rules dosyasına seri hale getirir (bir `Policy` etkinlik iş akışında bir RuleSet örneği çalıştırır). . Rules dosyası, iş akışı projesi oluşturduğunuzda bir kaynak olarak derlemeye derlenir.
 

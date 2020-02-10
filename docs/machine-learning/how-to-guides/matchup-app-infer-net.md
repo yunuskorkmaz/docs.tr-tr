@@ -1,14 +1,14 @@
 ---
-title: Infer.NET ve dayalı programlamasında bir oyun eşleştirme listesi uygulaması oluşturma
-description: Basitleştirilmiş bir Trueskıll sürümüne göre bir oyun eşleme listesi uygulaması oluşturmak için dayalı Programming with Infer.NET ile nasıl kullanacağınızı öğrenin.
-ms.date: 05/06/2019
+title: Infer.NET oyun eşleştirme uygulaması-dayalı programlama
+description: Bir Trueskıll 'ın basitleştirilmiş bir sürümüne göre bir oyun eşleştirme listesi uygulaması oluşturmak için dayalı Programming with Infer.NET ile nasıl kullanacağınızı öğrenin.
+ms.date: 01/30/2020
 ms.custom: mvc,how-to
-ms.openlocfilehash: 69515c7b3518c35bf84335c453408b1466f93f34
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8e489d61c5e6cca53ba12b13fddd0b73c7f85ef9
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774540"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092609"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET ve dayalı programlamasında bir oyun eşleştirme listesi uygulaması oluşturma
 
@@ -18,7 +18,7 @@ Bu nasıl yapılır Kılavuzu, Infer.NET kullanarak dayalı programlama hakkınd
 
 Dayalı programlama, gerçek dünyada işlemlerin istatistiksel modellerini oluşturmanızı sağlar.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 - Yerel geliştirme ortamı kurulumu
 
@@ -33,7 +33,7 @@ dotnet new console -o myApp
 cd myApp
 ```
 
-@No__t_0 komutu `console` türünde bir `new` uygulaması oluşturur. @No__t_0 parametresi, uygulamanızın depolandığı `myApp` adlı bir dizin oluşturur ve gerekli dosyalarla doldurur. @No__t_0 komutu sizi yeni oluşturulan uygulama dizinine koyar.
+`dotnet` komutu `console`türünde bir `new` uygulaması oluşturur. `-o` parametresi, uygulamanızın depolandığı `myApp` adlı bir dizin oluşturur ve gerekli dosyalarla doldurur. `cd myApp` komutu sizi yeni oluşturulan uygulama dizinine koyar.
 
 ## <a name="install-infernet-package"></a>Infer.NET paketi 'ni yükler
 

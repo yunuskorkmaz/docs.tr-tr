@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: db23c250014006655fa51ee5a2e5b54e15e4f964
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 781934e9ab27f761e71841c2edc509f9b8022aa7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714593"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094754"
 ---
 # <a name="ws-transaction-flow"></a>WS İşlem Akışı
 Bu örnek, WS-Atomik Işlem veya OleTransactions protokolünü kullanarak, istemci ile eşgüdümlü bir işlemin ve işlem akışı için istemci ve sunucu seçeneklerinin kullanımını gösterir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hizmetini temel alır ancak işlemler, işlem akışının ne derece etkin olduğunu belirlemek için **TransactionFlowOption** numaralandırmasıyla `TransactionFlowAttribute` kullanımını göstermeye yönelik olarak belirlenir. Akışlı işlemin kapsamı içinde, istenen işlemlerin bir günlüğü veritabanına yazılır ve istemci ile Eşgüdümlü işlem tamamlanana kadar devam etmez-istemci işlemi tamamlanmazsa, Web hizmeti işlemi veritabanına yönelik uygun güncelleştirmeler yürütülmedi.  
@@ -230,7 +230,7 @@ Press <ENTER> to terminate the service.
 3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
     > [!NOTE]
-    > Platformlar arası yapılandırma için aşağıdaki yönergeleri kullanarak Dağıtılmış İşlem Düzenleyicisi etkinleştirin ve Windows SDK WCF Işlemleri ağ desteğini etkinleştirmek için WsatConfig. exe aracını kullanın. WsatConfig. exe ' yi ayarlama hakkında bilgi için bkz. [WS Atomik Işlem desteğini yapılandırma](https://go.microsoft.com/fwlink/?LinkId=190370) .  
+    > Platformlar arası yapılandırma için aşağıdaki yönergeleri kullanarak Dağıtılmış İşlem Düzenleyicisi etkinleştirin ve Windows SDK WCF Işlemleri ağ desteğini etkinleştirmek için WsatConfig. exe aracını kullanın. WsatConfig. exe ' yi ayarlama hakkında daha fazla bilgi için bkz. [WS Atomik Işlem desteğini yapılandırma](../feature-details/configuring-ws-atomic-transaction-support.md).  
   
  Örneği aynı bilgisayarda veya farklı bilgisayarlarda çalıştırdığınız gibi, ağ işlem akışını etkinleştirmek için Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) yapılandırmanız ve WCF işlemleri ağ desteğini etkinleştirmek için WsatConfig. exe aracını kullanmanız gerekir.  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate the service.
   
     6. **Tamam**' a tıklayın ve ardından **Evet** ' e tıklayarak MSDTC hizmetini yeniden başlatın.  
   
-    7. İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
+    7. **Tamam**’a tıklayarak iletişim kutusunu kapatın.  
   
 2. Windows Server 2008 veya Windows Vista çalıştıran bir hizmet makinesinde, bu yönergeleri izleyerek MSDTC 'yi gelen ağ işlemlerine izin verecek şekilde yapılandırın.  
   
@@ -264,7 +264,7 @@ Press <ENTER> to terminate the service.
   
     5. **Tamam**' a tıklayın ve ardından **Evet** ' e tıklayarak MSDTC hizmetini yeniden başlatın.  
   
-    6. İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
+    6. **Tamam**’a tıklayarak iletişim kutusunu kapatın.  
   
 3. İstemci makinesinde, giden ağ işlemlerine izin vermek için MSDTC 'yi yapılandırın:  
   
@@ -278,7 +278,7 @@ Press <ENTER> to terminate the service.
   
     5. **Tamam**' a tıklayın ve ardından **Evet** ' e tıklayarak MSDTC hizmetini yeniden başlatın.  
   
-    6. İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
+    6. **Tamam**’a tıklayarak iletişim kutusunu kapatın.  
   
 > [!IMPORTANT]
 > Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  

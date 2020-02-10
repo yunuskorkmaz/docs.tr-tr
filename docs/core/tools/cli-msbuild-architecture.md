@@ -2,12 +2,12 @@
 title: .NET Core komut satırı araçları mimarisi
 description: .NET Core araç katmanları ve son sürümlerde nelerin değiştiğini öğrenin.
 ms.date: 03/06/2017
-ms.openlocfilehash: 0064e7354f073be618bcf6a79962ab495927fadd
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: fde1a0acb6af9dd65aa3466b4ea37473b2eab6fb
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980216"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092921"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core araçlarındaki değişikliklere yüksek düzeyde genel bakış
 
@@ -24,13 +24,13 @@ Bu taşımanın bir parçası olarak, Project. JSON projelerini derlemek için g
 
 ## <a name="the-tooling-layers"></a>Araç katmanları
 
-Var olan proje sisteminin yanı sıra altyapı anahtarları oluşturma ile, doğal olarak takip eden soru, bu değişikliklerden herhangi biri, tüm .NET Core araçları ekosisteminin genel "katmanlama" düzeyini değiştirir. Yeni BITS ve bileşenler var mı?
+Derleme motorunda değişiklik ve mevcut proje sisteminden uzaklaşmak için bazı sorular doğal olarak takip edin. Bu değişikliklerden herhangi biri, .NET Core araçları ekosisteminin genel "katmanlama" düzeyini değiştirir mi? Yeni BITS ve bileşenler var mı?
 
 Aşağıdaki resimde gösterildiği gibi Önizleme 2 katmanlarındaki hızlı yenileyici ile başlayalım:
 
 ![Preview 2 araçları üst düzey mimari](media/cli-msbuild-architecture/p2-arch.png)
 
-Araçların katmanlama işlemi oldukça basittir. En altta, temel .NET Core CLI. Visual Studio veya Visual Studio Code gibi diğer tüm diğer, daha üst düzey araçlar, projeleri oluşturmak, bağımlılıkları geri yüklemek vb. için CLı 'ye bağımlıdır. Örneğin, Visual Studio bir geri yükleme işlemi gerçekleştirmek istiyorsam, CLı 'daki `dotnet restore` ([bkz. Note](#dotnet-restore-note)) komutuna çağrı yapar.
+Preview 2 ' deki araçların katmanlama basittir. En altta, temel .NET Core CLI. Visual Studio veya Visual Studio Code gibi diğer tüm diğer, daha üst düzey araçlar, projeleri oluşturmak, bağımlılıkları geri yüklemek vb. için CLı 'ye bağımlıdır. Örneğin, Visual Studio bir geri yükleme işlemi gerçekleştirmek istiyorsam, CLı 'daki `dotnet restore` ([bkz. Note](#dotnet-restore-note)) komutuna çağrı yapar.
 
 Yeni proje sistemine taşıma ile önceki diyagramda değişiklik yapılır:
 
@@ -45,7 +45,7 @@ Tüm araç takımları 'ler artık paylaşılan SDK bileşenini ve bunların hed
 
 ### <a name="cli-commands"></a>CLı komutları
 
-Paylaşılan SDK bileşeni, var olan CLı komutlarının büyük çoğunluğunun MSBuild görevi ve hedefleri olarak yeniden uygulandığı anlamına gelir. Bu, CLı komutları ve araç takımını kullanımınız için ne anlama geliyor?
+Paylaşılan SDK bileşeni, var olan CLı komutlarının çoğunluğunun MSBuild görevleri ve hedefleri olarak yeniden uygulandığı anlamına gelir. Bu, CLı komutları ve araç takımını kullanımınız için ne anlama geliyor?
 
 Kullanım perspektifinden, CLı 'yı kullanma yöntemini değiştirmez. CLı hala .NET Core 1,0 Preview 2 sürümünde bulunan temel komutlara sahiptir:
 

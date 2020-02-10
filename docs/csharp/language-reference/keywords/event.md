@@ -1,5 +1,5 @@
 ---
-title: olay C# başvurusu
+title: event C# başvurusu
 ms.date: 07/20/2015
 f1_keywords:
 - event
@@ -16,7 +16,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75713564"
 ---
-# <a name="event-c-reference"></a>Olay (C# başvuru)
+# <a name="event-c-reference"></a>event (C# başvuru)
 
 `event` anahtar sözcüğü bir yayımcı sınıfında bir olay bildirmek için kullanılır.
 
@@ -34,7 +34,7 @@ Olaylar [ortak](./public.md), [özel](./private.md), [korumalı](./protected.md)
 
 Aşağıdaki anahtar sözcükler olaylar için geçerlidir.
 
-|Anahtar sözcüğü|Açıklama|Daha fazla bilgi için|
+|Anahtar sözcüğü|Açıklama|Daha fazla bilgi edinmek için|
 |-------------|-----------------|--------------------------|
 |[static](./static.md)|Sınıfın bir örneği mevcut olmasa bile, olayı her zaman çağıranlar için kullanılabilir hale getirir.|[Statik Sınıflar ve Statik Sınıf Üyeleri](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|
 |[virtual](./virtual.md)|Türetilmiş sınıfların, [override](./override.md) anahtar sözcüğünü kullanarak olay davranışını geçersiz kılmasına izin verir.|[Devralma](../../programming-guide/classes-and-structs/inheritance.md)|

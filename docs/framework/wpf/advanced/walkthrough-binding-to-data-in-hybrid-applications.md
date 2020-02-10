@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 1bb38436049e338ab6033ae3b6370732a457d520
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0d1e66a1277e6a04d2f49ac91691160f70fb56e4
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794217"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095079"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>İzlenecek yol: Karma Uygulamalarda Veriye Bağlama
 
@@ -35,11 +35,11 @@ Bu izlenecek yolda gösterilen görevler şunlardır:
 
 - Veri kaynağına bağlanıyor.
 
-Bu izlenecek yolda gösterilen görevlerin tüm kod listesi için bkz. [karma uygulamalar Için veri bağlama örneği](https://go.microsoft.com/fwlink/?LinkID=159983).
+Bu izlenecek yolda gösterilen görevlerin tüm kod listesi için bkz. [karma uygulamalar Için veri bağlama örneği](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFWithWFAndDatabinding).
 
 İşiniz bittiğinde, karma uygulamalardaki veri bağlama özelliklerinin anlaşılmasına sahip olacaksınız.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
@@ -179,13 +179,13 @@ Visual Studio ile projenize kolayca veri kaynağı ekleyebilirsiniz. Bu yordam, 
      [!code-csharp[WPFWithWFAndDatabinding#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
      [!code-vb[WPFWithWFAndDatabinding#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]
 
-10. Uygulamayı derlemek ve çalıştırmak için F5 tuşuna basın.
+10. Uygulamayı derleyip çalıştırmak için F5'e basın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Visual Studio’da XAML tasarlama](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
-- [Karma uygulamalarda veri bağlama örneği](https://go.microsoft.com/fwlink/?LinkID=159983)
+- [Karma uygulamalarda veri bağlama örneği](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFWithWFAndDatabinding)
 - [İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

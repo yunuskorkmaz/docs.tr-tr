@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 550ba74c7ceba16c2040932918364ae2a59ea665
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 87dcfa22bcce730c5a9b61721c3a846a08146475
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794267"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094507"
 ---
 # <a name="threading-model"></a>İş Parçacığı Modeli
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], geliştiricilerin iş parçacığı zorluklarından kaydedileceği şekilde tasarlanmıştır. Sonuç olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geliştiricilerin çoğunluğu birden fazla iş parçacığı kullanan bir arabirim yazmak zorunda kalmaz. Çok iş parçacıklı programlar karmaşık olduğu ve hata ayıklamanın zor olduğu için, tek iş parçacıklı çözümler olduğunda bu, kaçınılmalıdır.
@@ -99,7 +99,7 @@ ms.locfileid: "76794267"
 
  Bu yöntem, sonraki tek sayının asal olup olmadığını denetler. Asal ise Yöntem, bulmayı yansıtmak için `bigPrime`<xref:System.Windows.Controls.TextBlock> doğrudan güncelleştirir. Bu, hesaplamayı, bileşeni oluşturmak için kullanılan aynı iş parçacığında gerçekleştiğinden, bunu yapabiliriz. Hesaplama için ayrı bir iş parçacığı kullanmayı seçtik, daha karmaşık bir eşitleme mekanizması kullanmak ve güncelleştirmeyi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığında yürütmek istiyoruz. Bu durumu daha sonra göstereceğiz.
 
- Bu örneğe ilişkin tam kaynak kodu için, [uzun süre çalışan hesaplama örneğiyle tek Iş parçacıklı uygulamaya](https://go.microsoft.com/fwlink/?LinkID=160038) bakın
+ Bu örneğe ilişkin tam kaynak kodu için, [uzun süre çalışan hesaplama örneğiyle tek Iş parçacıklı uygulamaya](https://github.com/Microsoft/WPF-Samples/tree/master/Threading/SingleThreadedApplication) bakın
 
 <a name="weather_sim"></a>
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>Bir arka plan Iş parçacığı ile engelleyici Işlemi işleme
@@ -217,4 +217,4 @@ ms.locfileid: "76794267"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uzun süre çalışan hesaplama örneği olan tek Iş parçacıklı uygulama](https://go.microsoft.com/fwlink/?LinkID=160038)
+- [Uzun süre çalışan hesaplama örneği olan tek Iş parçacıklı uygulama](https://github.com/Microsoft/WPF-Samples/tree/master/Threading/SingleThreadedApplication)

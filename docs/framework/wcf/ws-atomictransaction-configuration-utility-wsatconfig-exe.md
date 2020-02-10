@@ -2,14 +2,15 @@
 title: WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 3b37c271afa20de120682d093e40c0f30f4730de
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 009be8d4c25fd9db5b2f2df6e75fb046e92f389a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921325"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094728"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)
+
 WS-AtomicTransaction Yapılandırma yardımcı programı, temel WS-AtomicTransaction destek ayarlarını yapılandırmak için kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -47,7 +48,7 @@ wsatConfig [Options]
 |-traceProp:\<enable&#124;devre dışı >|Yayma olaylarının izlenmesini etkinleştirilir veya devre dışı bırakır.|  
 |-yeniden Başlat|Değişiklikleri hemen etkinleştirmek için MSDTC 'yi yeniden başlatır. Bu belirtilmemişse, değişiklikler MSDTC yeniden başlatıldığında geçerli olur.|  
 |-göster|Geçerli WS-AtomicTransaction protokol ayarlarını görüntüler.|  
-|-virtualServer: virtualServer\<|DTC kaynak kümesi adını belirtir.|  
+|-virtualServer: virtualServer\<>|DTC kaynak kümesi adını belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

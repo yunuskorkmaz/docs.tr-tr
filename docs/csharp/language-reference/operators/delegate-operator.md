@@ -1,5 +1,5 @@
 ---
-title: temsilci işleci- C# başvuru
+title: delegate işleci- C# başvuru
 ms.date: 07/18/2019
 helpviewer_keywords:
 - delegate [C#]
@@ -11,7 +11,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73039036"
 ---
-# <a name="delegate-operator-c-reference"></a>temsilci işleci (C# başvuru)
+# <a name="delegate-operator-c-reference"></a>delegate işleci (C# başvuru)
 
 `delegate` işleci, bir temsilci türüne dönüştürülebilen anonim bir yöntem oluşturur:
 

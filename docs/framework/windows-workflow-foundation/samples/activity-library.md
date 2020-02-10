@@ -2,12 +2,12 @@
 title: Etkinlik Kitaplığı
 ms.date: 03/30/2017
 ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
-ms.openlocfilehash: 15260fc2ad96e1761a8a41ccc84b2c199e3d448a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ce65bf8e7adad6acefd7aac6d69c3f836b94be29
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283146"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094702"
 ---
 # <a name="activity-library"></a>Etkinlik Kitaplığı
 Bu bölüm Windows Workflow Foundation (WF) içinde gelişmiş özel etkinlikleri gösteren örnekler içerir.  
@@ -21,7 +21,7 @@ Bu bölüm Windows Workflow Foundation (WF) içinde gelişmiş özel etkinlikler
  `ThrottleParallelForEach` etkinliğin, eş zamanlı dalların yürütülmesi için eşzamanlılık faktörünün ayarlanmasına izin veren bir özel durumla <xref:System.Activities.Statements.ParallelForEach%601> etkinliğe nasıl benzediğini gösterir.
   
  [Veritabanı Erişimi Etkinlikleri](database-access-activities.md)  
- Veritabanlarına erişilmesine, bilgileri alma veya değiştirme ve veritabanına erişmek için [ADO.net](https://go.microsoft.com/fwlink/?LinkId=166081) kullanma izni veren etkinliklerin nasıl oluşturulduğunu gösterir.  
+ Veritabanlarına erişilmesine, bilgileri alma veya değiştirme ve veritabanına erişmek için [ADO.net](../../data/adonet/index.md) kullanma izni veren etkinliklerin nasıl oluşturulduğunu gösterir.  
   
  [.NET Framework 4.5’te Dış İlke Etkinliği](externalized-policy-activity-in-net-framework-4-5.md)  
  ExternalizedPolicy4 etkinliğinin, WF 3,5 ' te sunulan Rules altyapısını kullanarak doğrudan (WF 4,5) [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation <xref:System.Workflow.Activities.Rules.RuleSet> nesnelerinde bulunan mevcut Windows Workflow Foundation .NET Framework 3,5 ' de (WF 3,5) nasıl yürütmeye izin verdiğini gösterir. 

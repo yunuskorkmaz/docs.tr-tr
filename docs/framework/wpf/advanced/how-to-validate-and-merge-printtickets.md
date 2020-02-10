@@ -10,15 +10,15 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 15e328729886e0f1efc3b47705fcb4ce13013137
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: bd7f399555b343a52ec6f36aa3b8c706747d8b06
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035570"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094533"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>Nasıl yapılır: PrintTickets'i Doğrulama ve Birleştirme
-Microsoft Windows [yazdırma şeması](https://go.microsoft.com/fwlink/?LinkId=186397) , esnek ve Genişletilebilir <xref:System.Printing.PrintCapabilities> ve <xref:System.Printing.PrintTicket> öğelerini içerir. Daha önce bir yazdırma cihazının özellikleri, ikincisi ise cihazın belirli bir dizi belge, tek belge veya ayrı bir sayfa için bu özellikleri nasıl kullanması gerektiğini belirtir.  
+Microsoft Windows [yazdırma şeması](/windows/win32/printdocs/printschema) , esnek ve Genişletilebilir <xref:System.Printing.PrintCapabilities> ve <xref:System.Printing.PrintTicket> öğelerini içerir. Daha önce bir yazdırma cihazının özellikleri, ikincisi ise cihazın belirli bir dizi belge, tek belge veya ayrı bir sayfa için bu özellikleri nasıl kullanması gerektiğini belirtir.  
   
  Yazdırmayı destekleyen bir uygulama için tipik bir görev dizisi aşağıdaki gibidir.  
   
@@ -67,4 +67,4 @@ Microsoft Windows [yazdırma şeması](https://go.microsoft.com/fwlink/?LinkId=1
 - <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
 - [WPF'deki Belgeler](documents-in-wpf.md)
 - [Yazdırmaya Genel Bakış](printing-overview.md)
-- [Şemayı Yazdır](https://go.microsoft.com/fwlink/?LinkId=186397)
+- [Şemayı Yazdır](/windows/win32/printdocs/printschema)

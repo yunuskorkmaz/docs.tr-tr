@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: c38127281139d0c85b54a5d5077034804f1102a8
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 00026fee12e447b7fba56b42cd86699aba38cc52
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76966016"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094689"
 ---
-# <a name="whats-new-in-the-net-framework"></a>.NET Framework’teki yenilikler
+# <a name="whats-new-in-net-framework"></a>.NET Framework yenilikleri
 
 Bu makalede, .NET Framework aşağıdaki sürümlerindeki temel yeni özellikler ve geliştirmeler özetlenmektedir:
 
@@ -350,7 +350,7 @@ Windows API 'Leri kullanarak açma desteği, .NET Framework 4.7.2 ' i hedefleyen
 
 **Ek koleksiyon API 'Leri**
 
-.NET Framework 4.7.2, <xref:System.Collections.Generic.SortedSet%601> ve <xref:System.Collections.Generic.HashSet%601> türlerine bir dizi yeni API ekler. Bu güncelleştirmeler şunlardır:
+.NET Framework 4.7.2, <xref:System.Collections.Generic.SortedSet%601> ve <xref:System.Collections.Generic.HashSet%601> türlerine bir dizi yeni API ekler. Bunlar:
 
 - diğer koleksiyon türlerinde kullanılan try modelini bu iki türe genişleten `TryGetValue` yöntemleri. Yöntemler şunlardır:
 
@@ -434,7 +434,7 @@ Web yapılandırma dosyasını değiştirerek <xref:System.Web.Security.FormsAut
 
 <a name="net472" />
 
-#### <a name="networking"></a>Ağ Oluşturma
+#### <a name="networking"></a>Ağ
 
 **HttpClientHandler özelliklerinin uygulanması**
 
@@ -519,7 +519,7 @@ Dim dictionaries As IEnumerable(Of ResourceDictionary) = ResourceDictionaryDiagn
 
 .NET Framework 4.7.2 ile başlayarak bir tanılama Yardımcısı, belirli bir <xref:Windows.UI.Xaml.ResourceDictionary>sahiplerini bulabilir. (Özelliği, üretim uygulamalarına göre değil, tanılama yardımcıları tarafından kullanılır.) Bir <xref:Windows.UI.Xaml.ResourceDictionary>her değişiklik yapıldığında WPF, değişiklikten etkilenebilecek tüm [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) başvurularını otomatik olarak bulur.
 
-Visual Studio 'nun "Düzenle ve devam et" özelliği gibi bir tanılama Yardımcısı, bu, [StaticResource](../wpf/advanced/staticresource-markup-extension.md) başvurularını işlemek için bunu genişletmek isteyebilir. Bu işlemin ilk adımı, sözlüğün sahiplerini bulledir; diğer bir deyişle, `Resources` özelliği sözlüğüne başvuran tüm nesneleri bulmak için (doğrudan veya <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType> özelliği aracılığıyla dolaylı olarak). <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType> sınıfında uygulanan üç yeni statik yöntem, bir `Resources` özelliğine sahip olan temel türlerin her biri için, bu adımı destekler:
+Visual Studio "Düzenle ve devam et" özelliği gibi bir tanılama Yardımcısı, bu, [StaticResource](../wpf/advanced/staticresource-markup-extension.md) başvurularını işlemek için bunu genişletmek isteyebilir. Bu işlemin ilk adımı, sözlüğün sahiplerini bulledir; diğer bir deyişle, `Resources` özelliği sözlüğüne başvuran tüm nesneleri bulmak için (doğrudan veya <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType> özelliği aracılığıyla dolaylı olarak). <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType> sınıfında uygulanan üç yeni statik yöntem, bir `Resources` özelliğine sahip olan temel türlerin her biri için, bu adımı destekler:
 
 - [`public static IEnumerable<FrameworkElement> GetFrameworkElementOwners(ResourceDictionary dictionary);`](xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetFrameworkElementOwners%2A)
 
@@ -630,7 +630,7 @@ Yapılandırma üreticileri, geliştiricilerin uygulamalar için yapılandırma 
 
 <a name="net471"/>
 
-#### <a name="networking"></a>Ağ Oluşturma
+#### <a name="networking"></a>Ağ
 
 **Message. HashAlgorithm için SHA-2 desteği**
 
@@ -677,7 +677,7 @@ ASP.NET, 23 olay içeren önceden tanımlanmış bir işlem hattındaki istekler
 - [Windows Forms](#wf47)
 - [Windows Presentation Foundation (WPF)](#WPF47)
 
-.NET Framework 4,7 ' ye eklenen yeni API 'lerin bir listesi için bkz. GitHub 'da [.NET Framework 4,7 API değişiklikleri](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) . .NET Framework 4,7 ' deki Özellik geliştirmeleri ve hata düzeltmeleri listesi için GitHub 'da [.NET Framework 4,7 değişiklik listesine](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) bakın.  Daha fazla bilgi için bkz. .NET blogu 'nda [.NET Framework 4,7 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7/) .
+.NET Framework 4,7 ' ye eklenen yeni API 'lerin bir listesi için bkz. GitHub 'da [.NET Framework 4,7 API değişiklikleri](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) . .NET Framework 4,7 ' deki Özellik geliştirmeleri ve hata düzeltmeleri listesi için GitHub 'da [.NET Framework 4,7 değişiklik listesine](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) bakın. Daha fazla bilgi için bkz. .NET blogu 'nda [.NET Framework 4,7 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7/) .
 
 <a name="Core47" />
 
@@ -699,7 +699,7 @@ GitHub 'da [4,7 .NET Framework şifreleme geliştirmesi örneği](https://gist.g
 
 <a name="net47" />
 
-#### <a name="networking"></a>Ağ Oluşturma
+#### <a name="networking"></a>Ağ
 
 .NET Framework 4,7, ağla ilgili aşağıdaki özelliği ekler:
 
@@ -741,7 +741,7 @@ WCF, .NET Framework 4,7 ' den itibaren, varsayılan ileti güvenlik protokolü o
 
 **WCF uygulamalarının ve WCF serileştirmenin güvenilirliği geliştirildi**
 
-WCF, yarış koşullarını ortadan kaldıran bir dizi kod değişikliği içerir, böylece performansı ve serileştirme seçeneklerinin güvenilirliğini geliştirir. Bu güncelleştirmeler şunlardır:
+WCF, yarış koşullarını ortadan kaldıran bir dizi kod değişikliği içerir, böylece performansı ve serileştirme seçeneklerinin güvenilirliğini geliştirir. Bunlar:
 
 - **SocketConnection. BeginRead** ve **SocketConnection. Read**çağrılarına zaman uyumsuz ve zaman uyumlu kod karıştırma için daha iyi destek.
 - **Sharedconnectionlistener** ve **DuplexChannelBinder**ile bağlantı iptal edildiğinde iyileştirilmiş güvenilirlik.
@@ -784,7 +784,7 @@ WPF 'nin <xref:System.Printing.PrintQueue?displayProperty=nameWithType> sınıf�
 
 - [Karakter kategorileri](#Strings)
 
-- [To](#Crypto462)
+- [Şifreleme](#Crypto462)
 
 - [SqlClient](#SQLClient)
 
@@ -841,7 +841,7 @@ End Class
 
 Ardından, anahtar hata iletisi dizesi olan ve değeri yerelleştirilmiş hata iletisi olan DataAnnotation. yerelleştirme. fr. resx olan bir kaynak dosyası oluşturabilirsiniz. Dosyanın `App.LocalResources` klasöründe bulunması gerekir. Örneğin, aşağıdaki anahtar ve değeri yerelleştirilmiş Fransızca (fr) dil hata iletisinde verilmiştir:
 
-| Name                                 | Değer                                     |
+| Name                                 | Value                                     |
 | ------------------------------------ | ----------------------------------------- |
 | Derecelendirme 1 ile 10 arasında olmalıdır. | La Note DoIt être, diğer 1 et 10. |
 
@@ -1029,7 +1029,7 @@ SQL Server için .NET Framework Veri Sağlayıcısı (<xref:System.Data.SqlClien
 
 **Azure SQL veritabanları ile bağlantı havuzu oluşturma ve zaman aşımları**
 
-Bağlantı havuzu etkinleştirildiğinde ve bir zaman aşımı ya da başka bir oturum açma hatası oluştuğunda, bir özel durum önbelleğe alınır ve sonraki 5 saniye 1 dakikaya kadar sonraki bağlantı denemelerde önbelleğe alınan özel durum oluşturulur.  Daha ayrıntılı bilgi için bkz. [SQL Server bağlantı havuzu (ADO.net)](../data/adonet/sql-server-connection-pooling.md).
+Bağlantı havuzu etkinleştirildiğinde ve bir zaman aşımı ya da başka bir oturum açma hatası oluştuğunda, bir özel durum önbelleğe alınır ve sonraki 5 saniye 1 dakikaya kadar sonraki bağlantı denemelerde önbelleğe alınan özel durum oluşturulur. Daha fazla bilgi için bkz. [SQL Server bağlantı havuzu (ADO.net)](../data/adonet/sql-server-connection-pooling.md).
 
 Bağlantı girişimleri genellikle hızla kurtarılan geçici hatalarla başarısız olduğundan, bu davranış Azure SQL veritabanlarına bağlanırken istenmez. Bağlantı yeniden deneme deneyimini daha iyi en iyi hale getirebilmesi için, Azure SQL veritabanlarına bağlantı başarısız olduğunda bağlantı havuzu engelleme süresi davranışı kaldırılır.
 
@@ -1168,11 +1168,11 @@ Grup sıralamasını desteklemek için, yeni <xref:System.ComponentModel.GroupDe
 </SortDescriptions>
 ```
 
-**Yazılım klavye desteği**
+**Dokunmatik klavye desteği**
 
-Yumuşak klavye desteği, bir WPF uygulamalarında, dokunma girişi metin girişi yapan bir denetim tarafından alındığında, otomatik olarak Windows 10 ' da yeni yazılım klavyesini çağırarak ve yok ederek, bir WPF uygulamalarında odak izlemeye izin verebilir.
+Dokunmatik klavye desteği, dokunma girişi metin girişi yapan bir denetim tarafından alındığında, Windows 10 ' da dokunmatik klavyeyi otomatik olarak çağırarak ve yok ederek, WPF uygulamalarında odak izlemeye izin verebilir.
 
-.NET Framework önceki sürümlerinde, WPF uygulamaları WPF kalem/dokunma hareketi desteğini devre dışı bırakmadan odak izlemeyi kabul edemez.  Sonuç olarak, WPF uygulamalarının tam WPF dokunma desteği arasında seçim yapmanız veya Windows fare yükseltmesine güvenmelidir.
+.NET Framework önceki sürümlerinde, WPF uygulamaları WPF kalem/dokunma hareketi desteğini devre dışı bırakmadan odak izlemeyi kabul edemiyor. Sonuç olarak, WPF uygulamalarının tam WPF dokunma desteği arasında seçim yapmanız veya Windows fare yükseltmesine güvenmelidir.
 
 **Monitör başına DPı**
 
@@ -1196,9 +1196,9 @@ WPF uygulamaları için yüksek DPı ve hibrit DPı ortamlarının en son kullan
 
 **Yeniden barındırılan C# WF tasarımcısında Ifadeler ve IntelliSense desteği**
 
-WF, 4,5 .NET Framework başlayarak hem Visual Studio C# tasarımcısında hem de kod iş akışlarında ifadeleri destekler. Yeniden barındırılan İş Akışı Tasarımcısı, bir WF 'nin Visual Studio dışında bir uygulamada olmasını İş Akışı Tasarımcısı sağlayan bir temel özelliktir (örneğin, WPF).  Windows Workflow Foundation, yeniden barındırılan İş Akışı Tasarımcısı ifadeleri C# ve IntelliSense 'i destekleme yeteneği sağlar. Daha fazla bilgi için [Windows Workflow Foundation bloguna](https://docs.microsoft.com/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer)bakın.
+WF .NET Framework 4,5 ' den başlayarak hem C# Visual Studio tasarımcısında hem de kod iş akışlarında ifadeleri destekler. Yeniden barındırılan İş Akışı Tasarımcısı, bir WF 'nin Visual Studio dışında bir uygulamada olmasını İş Akışı Tasarımcısı sağlayan bir temel özelliktir (örneğin, WPF).  Windows Workflow Foundation, yeniden barındırılan İş Akışı Tasarımcısı ifadeleri C# ve IntelliSense 'i destekleme yeteneği sağlar. Daha fazla bilgi için [Windows Workflow Foundation bloguna](https://docs.microsoft.com/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer)bakın.
 
-.NET Framework 4.6.2 ' den önceki .NET Framework sürümlerindeki `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`, bir müşteri, Visual Studio 'dan bir iş akışı projesi yeniden oluştururken WF Tasarımcısı IntelliSense bozulur. Proje derlemesi başarılı olsa da, iş akışı türleri tasarımcıda bulunmadı ve eksik iş akışı türleri için IntelliSense uyarıları **hata listesi** penceresinde görünür. .NET Framework 4.6.2 Bu sorunu giderir ve IntelliSense 'i kullanılabilir hale getirir.
+4\.6.2 ' den önceki .NET Framework sürümlerindeki `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`, bir müşteri, Visual Studio 'dan bir iş akışı projesi yeniden oluştururken WF Tasarımcısı IntelliSense bozulur. Proje derlemesi başarılı olsa da, iş akışı türleri tasarımcıda bulunmadı ve eksik iş akışı türleri için IntelliSense uyarıları **hata listesi** penceresinde görünür. .NET Framework 4.6.2 Bu sorunu giderir ve IntelliSense 'i kullanılabilir hale getirir.
 
 **İş akışı Izleme olan iş akışı v1 uygulamaları artık FIPS modunda çalıştırılır**
 
@@ -1248,7 +1248,7 @@ Dönüştürülmüş masaüstü uygulamaları, UWP API 'Lerinin, canlı kutucuk 
 
 .NET Framework 4.6.1, aşağıdaki alanlardaki yeni özellikler içerir:
 
-- [To](#Crypto)
+- [Şifreleme](#Crypto)
 
 - [ADO.NET](#ADO.NET461)
 
@@ -1256,7 +1256,7 @@ Dönüştürülmüş masaüstü uygulamaları, UWP API 'Lerinin, canlı kutucuk 
 
 - [Windows Workflow Foundation](#WWF461)
 
-- [Profil Oluşturma](#Profile461)
+- [Profil oluşturma](#Profile461)
 
 - [NGen](#NGEN461)
 
@@ -1442,7 +1442,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   - **Belirteç bağlama protokolü desteği**
 
-    Microsoft ve Google, [belirteç bağlama protokolü](https://github.com/TokenBinding/Internet-Drafts)olarak adlandırılan kimlik doğrulamaya yönelik yeni bir yaklaşım üzerinde işbirliği yapmış. Şirket içi, kimlik doğrulama belirteçlerinin (tarayıcı önbelleğinizin) çalınabileceği ve güvenli kaynaklara (örn. banka hesabınız) parolanızı veya diğer ayrıcalıklı bilgilere ihtiyaç duymadan erişmek üzere dolandırıcıların de kullanılabilir olmasını sağlar. Bu sorunu hafifletmek için yeni protokol amaçlar.
+    Microsoft ve Google, [belirteç bağlama protokolü](https://github.com/TokenBinding/Internet-Drafts)olarak adlandırılan kimlik doğrulamaya yönelik yeni bir yaklaşım üzerinde işbirliği yapmış. Şirket içi, kimlik doğrulama belirteçlerinin (tarayıcı önbelleğinizin) çalınabileceği ve güvenli kaynaklara (örneğin, banka hesabınızda) parola veya herhangi bir ayrıcalıklı bilgi gerekmeden erişmek için kullanılabilir. Bu sorunu hafifletmek için yeni protokol amaçlar.
 
     Belirteç bağlama protokolü Windows 10 ' da bir tarayıcı özelliği olarak uygulanır. ASP.NET uygulamalar protokolde yer alacak ve kimlik doğrulama belirteçlerinin yasal olması için doğrulanacak. İstemci ve sunucu uygulamaları, protokol tarafından belirtilen uçtan uca korumayı oluştururlar.
 
@@ -1462,7 +1462,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
 - **yönetilen kod için 64 bit JıT derleyicisi**
 
-  .NET Framework 4,6, 64 bit JıT derleyicisinin yeni bir sürümünü (özgün olarak kod adı RyuJIT) sunar. Yeni 64 bit derleyicisi, eski 64 bit JıT derleyicisi üzerinde önemli performans iyileştirmeleri sağlar. Yeni 64 bit derleyici, .NET Framework 4,6 üzerinde çalışan 64 bit süreçler için etkinleştirilmiştir. Uygulamanız 64 bit ya da AnyCPU olarak derlenirse ve bir 64-bit işletim sisteminde çalışıyorsa, 64 bitlik bir işlemde çalışır. Yeni derleyiciye geçişi mümkün olduğunca saydam hale getirmek için dikkatli olunurken, davranıştaki değişiklikler mümkündür. Yeni JıT derleyicisini kullanırken karşılaşılan sorunları doğrudan öğrenmek istiyoruz. Yeni 64-bit JıT derleyicisi ile ilgili olabilecek bir sorunla karşılaşırsanız lütfen [Microsoft Connect](https://connect.microsoft.com/) üzerinden bizimle iletişim kurun.
+  .NET Framework 4,6, 64 bit JıT derleyicisinin yeni bir sürümünü (özgün olarak kod adı RyuJIT) sunar. Yeni 64 bit derleyicisi, eski 64 bit JıT derleyicisi üzerinde önemli performans iyileştirmeleri sağlar. Yeni 64 bit derleyici, .NET Framework 4,6 üzerinde çalışan 64 bit süreçler için etkinleştirilmiştir. Uygulamanız 64 bit ya da AnyCPU olarak derlenirse ve bir 64-bit işletim sisteminde çalışıyorsa, 64 bitlik bir işlemde çalışır. Yeni derleyiciye geçişi mümkün olduğunca saydam hale getirmek için dikkatli olunurken, davranıştaki değişiklikler mümkündür.
 
   Yeni 64-bit JıT derleyicisi Ayrıca, <xref:System.Numerics> ad alanındaki SıMD özellikli türlerle birlikte kullanıldığında, iyi performans iyileştirmeleri sağlayan donanım SıMD hızlandırma özelliklerini de içerir.
 
@@ -1528,7 +1528,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   - **Uyumluluk anahtarları**
 
-    Yeni <xref:System.AppContext> sınıfı, kitaplık yazıcılarının kullanıcılarına yönelik yeni işlevler için Tekdüzen bir geri alma mekanizması sağlamasını sağlayan yeni bir uyumluluk özelliği ekler. Bir kapatma isteğini iletmek için bileşenler arasında gevşek olarak bağlanmış bir sözleşme oluşturur. Bu özellik, genellikle mevcut işlevlere bir değişiklik yapıldığında önemlidir. Buna karşılık, yeni işlevsellik için zaten örtük bir katılım vardır.
+    <xref:System.AppContext> sınıfı, kitaplık yazıcılarının kullanıcılarına yeni işlevsellik için Tekdüzen bir geri alma mekanizması sağlamasını sağlayan yeni bir uyumluluk özelliği ekler. Bir geri çevirme isteğini iletmek için bileşenler arasında gevşek olarak bağlanmış bir sözleşme oluşturur. Bu özellik, genellikle mevcut işlevlere bir değişiklik yapıldığında önemlidir. Buna karşılık, yeni işlevsellik için zaten örtük bir katılım vardır.
 
     <xref:System.AppContext>, kitaplıklar uyumluluk anahtarlarını tanımlar ve kullanıma sunar, ancak bunlara bağlı olan kod bu anahtarları kitaplık davranışını etkileyecek şekilde ayarlayabilir. Varsayılan olarak, kitaplıklar yeni işlevselliği sağlar ve yalnızca, anahtar ayarlanmışsa (yani, önceki işlevleri sağlar) değiştirir.
 
@@ -1665,7 +1665,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   - **Farklı HTTP bağlantıları kullanarak ileti gönderme**
 
-    WCF artık kullanıcıların, farklı temel HTTP bağlantıları kullanılarak belirli iletilerin gönderilmesini sağlamasına izin veriyor. Bunu yapmak için iki yol vardır:
+    WCF artık kullanıcıların, farklı temel HTTP bağlantıları kullanılarak belirli iletilerin gönderilmesini sağlamasına izin veriyor. Bunu yapmanın iki yolu vardır:
 
     - **Bağlantı grubu adı ön eki kullanma**
 
@@ -1707,7 +1707,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
   <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/>
   ```
 
-  Varsayılan değer `false` şeklindedir.
+  Varsayılan değer: `false`.
 
 - **Ağ**
 
@@ -1715,7 +1715,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
     Windows 10, giden TCP bağlantıları için yerel bağlantı noktalarını yeniden kullanarak makine kaynaklarından daha iyi şekilde yararlanmasına yönelik yeni bir yüksek ölçeklenebilirlik ağ algoritması içerir. .NET Framework 4,6 yeni algoritmayı destekleyerek, .NET uygulamalarının yeni davranıştan yararlanmasını sağlar. Önceki Windows sürümlerinde, bir hizmetin ölçeklenebilirliğini, yük altında bağlantı noktası tükenmesi olmasına neden olarak sınırlayan yapay bir eşzamanlı bağlantı sınırı (genellikle 16.384) vardı.
 
-    .NET Framework 4,6 ' de, bağlantı noktası yeniden kullanımını etkinleştirmek için iki yeni API eklenmiştir. Bu, eşzamanlı bağlantılarda 64K sınırını etkili bir şekilde kaldırır:
+    .NET Framework 4,6 ' de, bağlantı noktası yeniden kullanımını etkinleştirmek için iki API eklenmiştir. Bu, eşzamanlı bağlantılarda 64 KB sınırını etkili bir şekilde kaldırır:
 
     - <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> numaralandırma değeri.
 
@@ -1755,7 +1755,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
 - **Açık kaynaklı .NET Framework paketleri**
 
-  Sabit koleksiyonlar, [SIMD API 'leri](https://www.nuget.org/packages/Microsoft.Bcl.Simd)ve <xref:System.Net.Http> ad alanında bulunan gibi ağ API 'leri gibi .NET Core paketleri artık [GitHub](https://github.com/)'da açık kaynak paketleri olarak kullanılabilir. Koda erişmek için [GitHub 'da .net](https://github.com/dotnet/runtime)bölümüne bakın. Daha fazla bilgi ve bu paketlere katkıda bulunma hakkında daha fazla bilgi için bkz. GitHub 'da [.NET Core ve açık kaynak](../get-started/net-core-and-open-source.md), [.net giriş sayfası](https://github.com/dotnet/home).
+  Sabit koleksiyonlar, [SIMD API 'leri](https://www.nuget.org/packages/Microsoft.Bcl.Simd)ve <xref:System.Net.Http> ad alanında bulunanlar gibi ağ API 'leri gibi .NET Core paketleri artık [GitHub](https://github.com/)'da açık kaynak paketler olarak kullanılabilir. Koda erişmek için [GitHub 'da .net](https://github.com/dotnet/runtime)bölümüne bakın. Daha fazla bilgi ve bu paketlere katkıda bulunma hakkında daha fazla bilgi için bkz. GitHub 'da [.NET Core ve açık kaynak](../get-started/net-core-and-open-source.md), [.net giriş sayfası](https://github.com/dotnet/home).
 
 <a name="v452" />
 
@@ -1900,7 +1900,7 @@ ASP.NET 4.5.1 içindeki yeni özellikler için bkz. [Visual Studio 2013 Sürüm 
 
 <a name="v45" />
 
-## <a name="whats-new-in-net-framework-45"></a>{1&gt;{2&gt;.NET Framework 4.5'teki Yenilikler&lt;2}&lt;1}
+## <a name="whats-new-in-net-framework-45"></a>.NET Framework 4,5 ' deki yenilikler
 
 ### <a name="base-classes"></a>Temel sınıflar
 
@@ -1954,7 +1954,7 @@ Daha fazla bilgi için bkz. [Managed Extensibility Framework (MEF)](../mef/index
 
 <a name="tools" />
 
-### <a name="tools"></a>Araçları
+### <a name="tools"></a>Araçlar
 
 .NET Framework 4,5, kaynak dosya Oluşturucu (Resgen. exe), bir. resources .NET Framework dosyasındaki Windows 8. x Mağaza uygulamalarında kullanılmak üzere bir. resw dosyası oluşturmanıza olanak sağlar. Daha fazla bilgi için bkz. [Resgen. exe (kaynak dosya Oluşturucu)](../tools/resgen-exe-resource-file-generator.md).
 
@@ -2128,8 +2128,7 @@ Visual Studio 2012 ' deki (ve sonraki sürümlerde) taşınabilir sınıf kitapl
 
 - [.NET Framework ve Bant Dışı Yayınlar](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [.NET Framework erişilebilirlik yenilikleri](whats-new-in-accessibility.md)
-- [Visual Studio 2017'deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2017)
+- [Visual Studio 2017 ' deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2017)
 - [Visual Studio 2019 ' deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Visual Studio C++ 'daki yenilikler](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
- 

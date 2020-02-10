@@ -1,15 +1,15 @@
 ---
-title: 'Öğretici: önceden eğitilen bir TensorFlow modeli kullanarak film incelemelerinin yaklaşımını çözümleyin'
+title: 'Öğretici: bir TensorFlow modeli kullanarak İnceleme yaklaşımını çözümleme'
 description: Bu öğreticide, Web sitesi açıklamalarında yaklaşımı sınıflandırmak için önceden eğitilen bir TensorFlow modelinin nasıl kullanılacağı gösterilmektedir. İkili yaklaşım Sınıflandırıcısı, Visual Studio kullanılarak C# geliştirilen bir konsol uygulamasıdır.
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0e80cdc6bb7dcc62a57466e909451da972c92db8
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 7a6043f56a2ecaca633ba5545170f27a85a22efc
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738692"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092401"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Öğretici: ML.NET 'de önceden eğitilen bir TensorFlow modeli kullanarak film incelemelerinin yaklaşımını çözümleyin
 
@@ -17,7 +17,7 @@ Bu öğreticide, Web sitesi açıklamalarında yaklaşımı sınıflandırmak i�
 
 Bu öğreticide kullanılan TensorFlow modeli, ıMDB veritabanından Film İncelemeleri kullanılarak eğitildi. Uygulamayı geliştirmeyi bitirdikten sonra, film gözden geçirme metni sağlayabileceksiniz ve uygulama Gözden geçirmedeki pozitif veya negatif bir yaklaşım olup olmadığını söyleyecektir.
 
-Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > * Önceden eğitilen bir TensorFlow modeli yükleme
@@ -26,7 +26,7 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 
 Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF) deposunda bulabilirsiniz.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 * [Visual Studio 2017 sürüm 15,6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 
@@ -73,22 +73,22 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
     * `_modelPath` eğitilen modelin dosya yoludur.
     * `FeatureLength`, modelin beklediği tamsayı özelliği dizisinin uzunluğudur.
 
-### <a name="model-the-data"></a>Verileri modelleme
+### <a name="model-the-data"></a>Verileri modelleyin
 
 Film İncelemeleri, ücretsiz form metinlerdir. Uygulamanız, metni bir dizi farklı aşamada model tarafından beklenen giriş biçimine dönüştürür.
 
 Birincisi, metni ayrı sözcüklere bölmek ve her bir sözcüğü bir tamsayı kodlamasıyla eşlemek için belirtilen eşleme dosyasını kullanmaktır. Bu dönüştürmenin sonucu, tümcedeki sözcüklerin sayısına karşılık gelen uzunluğa sahip bir değişken uzunluklu tamsayı dizisidir.
 
-|Özellik| Değer|Tür|
+|Özellik| Value|Tür|
 |-------------|-----------------------|------|
-|Belgemetinmetni|Bu film gerçekten iyi|dize|
+|Belgemetinmetni|Bu film gerçekten iyi|string|
 |VariableLengthFeatures|14, 22, 9, 66, 78,... |int []|
 
 Değişken uzunluğu özellik dizisi daha sonra sabit 600 uzunluğuna yeniden boyutlandırılır. Bu, TensorFlow modelinin beklediği uzunluktadır.
 
-|Özellik| Değer|Tür|
+|Özellik| Value|Tür|
 |-------------|-----------------------|------|
-|Belgemetinmetni|Bu film gerçekten iyi|dize|
+|Belgemetinmetni|Bu film gerçekten iyi|string|
 |VariableLengthFeatures|14, 22, 9, 66, 78,... |int []|
 |Özellikler|14, 22, 9, 66, 78,... |Tamsayı [600]|
 
@@ -224,7 +224,7 @@ Değişken uzunluğu özellik dizisi daha sonra sabit 600 uzunluğuna yeniden bo
 
 1. [Tahmin ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) işlevi, tek bir veri satırı üzerinde bir tahmin yapar:
 
-    |Özellik| Değer|Tür|
+    |Özellik| Value|Tür|
     |-------------|-----------------------|------|
     |Tahmin|[0,5459937, 0,454006255]|float []|
 
