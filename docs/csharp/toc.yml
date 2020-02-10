@@ -1313,7 +1313,7 @@
         - name: Genel Bakış
           displayName: keywords
           href: language-reference/keywords/index.md
-        - name: Yerleşik türler
+        - name: Türler
           items:
             - name: Değer türleri
               items:
@@ -1337,7 +1337,7 @@
                 - name: Numaralandırma türleri
                   href: language-reference/builtin-types/enum.md
                   displayName: 'enum, bit flags, bit field'
-                - name: 'struct '
+                - name: struct
                   href: language-reference/keywords/struct.md
                 - name: Boş değer atanabilen değer türleri
                   href: language-reference/builtin-types/nullable-value-types.md
@@ -1357,14 +1357,12 @@
               href: language-reference/keywords/void.md
             - name: var
               href: language-reference/keywords/var.md
+            - name: Yerleşik türler
+              href: language-reference/builtin-types/built-in-types.md
             - name: Yönetilmeyen türler
               href: language-reference/builtin-types/unmanaged-types.md
             - name: Varsayılan değerler
               href: language-reference/builtin-types/default-values.md
-            - name: Türler için başvuru tabloları
-              items:
-                - name: Yerleşik türler tablosu
-                  href: language-reference/keywords/built-in-types-table.md
         - name: Değiştiriciler
           items:
             - name: Erişim Değiştiricileri
