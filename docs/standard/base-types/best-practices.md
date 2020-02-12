@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: cb1764d1a6f363f3011268eae5fbcb2c76d9cc89
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 9b09f5a2505888c6154a58a3512c94c51f89295b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938008"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124428"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 'teki normal ifadeler için en iyi uygulamalar
 
@@ -176,7 +176,7 @@ Genelde, geri izlemenin bir eşleme için gerekli olmadığı gerçeğine rağme
 
 Bir kelime sınırı bir kelime karakteri ile aynı ya da bunu bir alt kümesi olmadığından, normal ifade motorunun kelime karakterlerini eşlerken bir kelime sınırı geçirmesi mümkün değildir. Bunun anlamı şudur: bu normal ifadede geri dönüş, herhangi bir eşleşmenin genel başarısına hiçbir zaman katkıda bulunamaz; olsa olsa performansı düşürebilir, çünkü normal ifade altyapısı başarılı her sözcük karakteri eşleşmesindeki durumunu kaydetmeye zorlanır.
 
-Geri izlemenin gerekli olmadığını belirlerseniz, `(?>subexpression)` Language öğesini kullanarak devre dışı bırakabilirsiniz. Aşağıdaki örnek, bir girdi dizesini iki normal ifade kullanarak ayrıştırmaktadır. İlki `\b\p{Lu}\w*\b`, geri izlemeyi temel alır. İkincisi `\b\p{Lu}(?>\w*)\b`, geri izlemeyi devre dışı bırakır. Örneğin çıktısında gösterildiği üzere bunların her ikisi de aynı sonucu üretir.
+Geri izlemenin gerekli olmadığını belirlerseniz, atomik grup olarak bilinen `(?>subexpression)` Language öğesini kullanarak devre dışı bırakabilirsiniz. Aşağıdaki örnek, bir girdi dizesini iki normal ifade kullanarak ayrıştırmaktadır. İlki `\b\p{Lu}\w*\b`, geri izlemeyi temel alır. İkincisi `\b\p{Lu}(?>\w*)\b`, geri izlemeyi devre dışı bırakır. Örneğin çıktısında gösterildiği üzere bunların her ikisi de aynı sonucu üretir.
 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]
@@ -204,7 +204,7 @@ Aşağıdaki örnek, bu normal ifadenin parça numaraları içeriyor olabilecek 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack4.cs#11)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack4.vb#11)]
 
-.NET 'teki normal ifade dili, iç içe nicelik belirteçleri ortadan kaldırmak için kullanabileceğiniz aşağıdaki dil öğelerini içerir. Daha fazla bilgi için bkz. [Gruplandırma Yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+.NET 'teki normal ifade dili, iç içe nicelik belirteçleri ortadan kaldırmak için kullanabileceğiniz aşağıdaki dil öğelerini içerir. Daha fazla bilgi için bkz. [yapıları gruplandırma](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
 |Dil öğesi|Açıklama|
 |----------------------|-----------------|
@@ -265,7 +265,7 @@ Tutmayı, şu yöntemlerden biriyle devre dışı bırakabilirsiniz:
 
 - <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> seçeneğini kullanın. Normal ifade deseninde tüm adlandırılmamış ya da örtük yakalamaları devre dışı bırakır. Bu seçeneği kullandığınızda, yalnızca `(?<name>subexpression)` Language öğesiyle tanımlanan adlandırılmış gruplarla eşleşen alt dizeler yakalanabilir. <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> bayrağı, bir <xref:System.Text.RegularExpressions.Regex> sınıf oluşturucusunun `options` parametresine veya <xref:System.Text.RegularExpressions.Regex> statik eşleştirme yönteminin `options` parametresine geçirilebilir.
 
-- `(?imnsx)` Language öğesindeki `n` seçeneğini kullanın. Bu seçenek, tutulan tüm adlandırılmamış veya örtük öğeleri, öğenin normal ifade deseninde ortaya çıktığı noktadan başlayarak devre dışı bırakır. Yakalamaları, düzenin sonuna kadar veya `(-n)` seçeneği adlandırılmamış ya da örtük yakalamaları etkinleştirene kadar devre dışı bırakılır. Daha fazla bilgi için bkz. [Çeşitli Yapılar](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).
+- `(?imnsx)` Language öğesindeki `n` seçeneğini kullanın. Bu seçenek, tutulan tüm adlandırılmamış veya örtük öğeleri, öğenin normal ifade deseninde ortaya çıktığı noktadan başlayarak devre dışı bırakır. Yakalamaları, düzenin sonuna kadar veya `(-n)` seçeneği adlandırılmamış ya da örtük yakalamaları etkinleştirene kadar devre dışı bırakılır. Daha fazla bilgi için bkz. [çeşitli yapılar](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).
 
 - `(?imnsx:subexpression)` Language öğesindeki `n` seçeneğini kullanın. Bu seçenek `subexpression`tüm adlandırılmamış veya örtük yakalamaları devre dışı bırakır. Yakalamalar adlandırılmamış ya da örtük yuvalı yakalama grupları tarafından devre dışı bırakılır.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: af812e1e42d57c349e94b5992b768636857d2a0c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348278"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124357"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Normal ifade davranışının ayrıntıları
 
@@ -87,7 +87,7 @@ ms.locfileid: "75348278"
 
      Olumsuz ileri onaylar hakkında daha fazla bilgi için bkz. [gruplandırma yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-- Koşullu değerlendirme: `(?(`*ifade*`)`*Evet*`|` *`)`* *ve `(?(`* *ad* *`)``|`* , burada *ifade* eşleşmek üzere bir alt ifade, *ad* bir yakalama grubunun adıdır, *ifade* eşleştirildiği ya da *ad* geçerli, boş bir yakalanamayan Grup, *Evet* ise eşleştirilecek *dize, if* *ifadesi* eşleşmiyor veya *ad* geçerli, boş olmayan bir yakalanan grup değil. Bu özellik, bir önceki alt ifadenin veya sıfır genişlikli bir onaylama sonucuna bağlı olarak, altyapının birden fazla alternatif model kullanarak arama yapmasına olanak sağlar. Bu, örneğin, önceki alt ifadenin eşleştirildiği bir alt ifadeyi eşleştirmesine izin veren daha güçlü bir geri başvuru biçimi sağlar. Aşağıdaki örnekteki normal ifade, hem genel hem de iç kullanım için tasarlanan paragraflarla eşleşir. Yalnızca iç kullanım için tasarlanan paragraflar bir `<PRIVATE>` etiketiyle başlar. Normal ifade deseninin `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$`, genel ve iç kullanım için tasarlanan paragrafların içeriğini ayrı yakalama grupları atamak için koşullu değerlendirme kullanır. Bu paragraflar daha sonra farklı işlenebilirler.
+- Koşullu değerlendirme: `(?(`*ifade*`)`*Evet*`|` *`)`* *ve `(?(`* *ad* *`)``|`* , burada *ifade* eşleşmek üzere bir alt ifade, *ad* bir yakalama grubunun adıdır, *ifade* eşleştirildiği ya da *ad* geçerli, boş bir yakalanamayan Grup, *Evet* ise eşleştirilecek *dize, if* *ifadesi* eşleşmiyor veya *ad* geçerli, boş olmayan bir yakalanan grup değil.`)` Bu özellik, bir önceki alt ifadenin veya sıfır genişlikli bir onaylama sonucuna bağlı olarak, altyapının birden fazla alternatif model kullanarak arama yapmasına olanak sağlar. Bu, örneğin, önceki alt ifadenin eşleştirildiği bir alt ifadeyi eşleştirmesine izin veren daha güçlü bir geri başvuru biçimi sağlar. Aşağıdaki örnekteki normal ifade, hem genel hem de iç kullanım için tasarlanan paragraflarla eşleşir. Yalnızca iç kullanım için tasarlanan paragraflar bir `<PRIVATE>` etiketiyle başlar. Normal ifade deseninin `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$`, genel ve iç kullanım için tasarlanan paragrafların içeriğini ayrı yakalama grupları atamak için koşullu değerlendirme kullanır. Bu paragraflar daha sonra farklı işlenebilirler.
 
      [!code-csharp[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/conditional1.cs#4)]
      [!code-vb[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/conditional1.vb#4)]
@@ -106,7 +106,7 @@ ms.locfileid: "75348278"
 
 - Grup tanımlarını dengeleme: `(?<`*name1*`-`*AD2*`>` alt *ifade*`)`. Bu özellik, normal ifade altyapısının parantez ya da açılış ve kapanış ayraçları gibi iç içe yapıları izlemesini sağlar. Bir örnek için bkz. [gruplandırma yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-- Geri izleme olmayan alt ifadeler (doyumsuz alt ifadeleri olarak da bilinir): `(?>`alt *ifade*`)`. Bu özellik geri izleme altyapısının, ifadenin kendisini içeren ifadeden bağımsız olarak çalışıyor gibi, alt ifadenin yalnızca ilk eşleştirmelerle eşleştiğini garanti etmesine olanak tanır. Bu yapıyı kullanmazsanız, daha büyük ifadeden geri alma aramaları alt ifadenin davranışını değiştirebilir. Örneğin, normal ifade, `(a+)\w` bir veya daha fazla "a" karakteri, "a" karakterlerinden sonraki bir sözcük karakteriyle birlikte eşleşir ve "a" karakterlerinden oluşan diziyi ilk yakalama grubuna atar, ancak giriş dizesinin son karakteri de bir "a" ise, bu, `\w` Language öğesi ile eşleştirilir ve yakalanan gruba dahil değildir.
+- Atomik gruplar: `(?>`alt *ifade*`)`. Bu özellik geri izleme altyapısının, ifadenin kendisini içeren ifadeden bağımsız olarak çalışıyor gibi, alt ifadenin yalnızca ilk eşleştirmelerle eşleştiğini garanti etmesine olanak tanır. Bu yapıyı kullanmazsanız, daha büyük ifadeden geri alma aramaları alt ifadenin davranışını değiştirebilir. Örneğin, normal `(a+)\w` ifade, bir veya daha fazla "a" karakteri ile eşleşir ve "a" karakterlerinden oluşan bir sözcük karakteriyle birlikte, ilk yakalama grubuna "a" karakterlerinden oluşan diziyi atar. Ancak, giriş dizesinin son karakteri de bir "a" ise, `\w` Language öğesi ile eşleştirilir ve yakalanan gruba dahil değildir.
 
      [!code-csharp[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking2.vb#7)]
@@ -116,7 +116,7 @@ ms.locfileid: "75348278"
      [!code-csharp[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking1.cs#8)]
      [!code-vb[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking1.vb#8)]
 
-     Geri alma olmayan alt ifadeler hakkında daha fazla bilgi için bkz. [gruplandırma yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+     Atomik gruplar hakkında daha fazla bilgi için bkz. [gruplandırma yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
 - <xref:System.Text.RegularExpressions.Regex> sınıf oluşturucusuna veya statik örnek eşleştirme yöntemine <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> seçeneği sağlanarak belirtilen sağdan sola eşleme. Bu özellik soldan sağa yerine sağdan sola doğru arama yaparken veya sol yerine modelin sağ bölümünde bir eşleştirmeye başlamak daha verimli olduğu durumlarda faydalıdır. Aşağıdaki örnekte gösterildiği gibi, sağdan sola eşleşme kullanımı, doyumsuz nicelik belirteçleri davranışını değiştirebilir. Örnek, bir sayıyla biten bir cümle için iki arama yapar. Doyumsuz nicelik sayısını kullanan soldan sağa arama `+`, tümcedeki altı basamaktan biriyle eşleşir, ancak sağdan sola arama altı basamakla eşleşir. Normal ifade deseninin bir açıklaması için, bu bölümün önceki kısımlarında yer alan yavaş nicelik belirteçleri gösteren örneğe bakın.
 

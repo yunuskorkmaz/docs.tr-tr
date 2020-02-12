@@ -5,20 +5,20 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 9be6245d7429466490d9dac93c5b94d70bde30bd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 665daa14b543a357b17747a7d9d34dac2224711d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744481"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124565"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış
 
-Ürününüzün kullanılabilirliğini yalnızca bir dille sınırlandırdığınızda, olası müşteri tabanınızı dünyanın 6.500.000.000 popülasyonızın bir bölümü ile sınırlandırdığınızda. Uygulamalarınızın küresel bir hedef kitleye ulaşmasını istiyorsanız, ürününüzün düşük maliyetli yerelleştirilmesi, daha fazla müşteriye ulaşmak için en iyi ve en ekonomik yolların biridir.
+Ürününüzün kullanılabilirliğini yalnızca bir dille sınırlandırdığınızda, olası müşteri tabanınızı dünyanın 7.500.000.000 popülasyonızın bir bölümü ile sınırlandırdığınızda. Uygulamalarınızın küresel bir hedef kitleye ulaşmasını istiyorsanız, ürününüzün düşük maliyetli yerelleştirilmesi, daha fazla müşteriye ulaşmak için en iyi ve en ekonomik yolların biridir.
 
 Bu genel bakışta [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Genelleştirme ve yerelleştirme tanıtılmıştır. Genelleştirme, birden çok konumda gerçekleştiren uygulamaların tasarımını ve geliştirilmesini geliştirmektedir. Örneğin, Genelleştirme farklı kültürler içindeki kullanıcılar için yerelleştirilmiş kullanıcı arabirimlerini ve bölgesel verileri destekler. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], otomatik düzen, uydu derlemeleri ve yerelleştirilmiş öznitelikler ve açıklama ekleme dahil olmak üzere Genelleştirilmiş tasarım özellikleri sağlar.
 
-Yerelleştirme, uygulama kaynaklarının, uygulamanın desteklediği belirli kültürler için yerelleştirilmiş sürümlere çevirmesidir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]' de yerelleştirmeniz durumunda, <xref:System.Windows.Markup.Localizer> ad alanındaki API 'Leri kullanırsınız. Bu API 'Ler [LocBaml aracı örnek](https://go.microsoft.com/fwlink/?LinkID=160016) komut satırı aracını güçlendirin. LocBaml oluşturma ve kullanma hakkında daha fazla bilgi için bkz. [uygulamayı yerelleştirin](how-to-localize-an-application.md).
+Yerelleştirme, uygulama kaynaklarının, uygulamanın desteklediği belirli kültürler için yerelleştirilmiş sürümlere çevirmesidir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]' de yerelleştirmeniz durumunda, <xref:System.Windows.Markup.Localizer> ad alanındaki API 'Leri kullanırsınız. Bu API 'Ler [LocBaml aracı örnek](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml) komut satırı aracını güçlendirin. LocBaml oluşturma ve kullanma hakkında daha fazla bilgi için bkz. [uygulamayı yerelleştirin](how-to-localize-an-application.md).
 
 ## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>WPF 'de Genelleştirme ve yerelleştirme için en iyi uygulamalar
 
@@ -48,7 +48,7 @@ Bu bölümün sağladığı Kullanıcı arabirimi tasarımını ve Yerelleştirm
 
 - Sağdan sola biçimli bir biçimde metin sunan bir kültür içinde yerelleştirilebilecek Gezinti uygulamaları oluşturduğunuzda, sayfanın <xref:System.Windows.Navigation.NavigationWindow><xref:System.Windows.FlowDirection> devralmasını sağlamak için her sayfanın <xref:System.Windows.FlowDirection> açık olarak ayarlayın.
 
-- Bir tarayıcı dışında barındırılan tek başına Gezinti uygulamaları oluşturduğunuzda, ilk uygulamanızın <xref:System.Windows.Application.StartupUri%2A>, bir sayfa yerine bir <xref:System.Windows.Navigation.NavigationWindow> ayarlayın (örneğin, `<Application StartupUri="NavigationWindow.xaml">`). Bu tasarım, pencerenin <xref:System.Windows.FlowDirection> ve gezinti çubuğunun değiştirilmesini sağlar. Daha fazla bilgi ve örnek için bkz. [Genelleştirme giriş sayfası örneği](https://go.microsoft.com/fwlink/?LinkID=159990).
+- Bir tarayıcı dışında barındırılan tek başına Gezinti uygulamaları oluşturduğunuzda, ilk uygulamanızın <xref:System.Windows.Application.StartupUri%2A>, bir sayfa yerine bir <xref:System.Windows.Navigation.NavigationWindow> ayarlayın (örneğin, `<Application StartupUri="NavigationWindow.xaml">`). Bu tasarım, pencerenin <xref:System.Windows.FlowDirection> ve gezinti çubuğunun değiştirilmesini sağlar. Daha fazla bilgi ve örnek için bkz. [Genelleştirme giriş sayfası örneği](https://github.com/microsoft/WPF-Samples/tree/master/Globalization%20and%20Localization/GlobalizationHomepage).
 
 ### <a name="best-practices-for-wpf-localization"></a>WPF yerelleştirme için en iyi uygulamalar
 
@@ -64,7 +64,7 @@ Bu bölümün sağladığı Kullanıcı arabirimi tasarımını ve Yerelleştirm
 
   - Yinelenen <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özellikleri kullanmayın (Kopyala ve Yapıştır komutunu kullandığınızda bu ipucunu unutmayın).
 
-  - Geri dönüş için uygun dili belirtmek üzere AssemblyInfo. * içindeki `UltimateResourceFallback` konumunu ayarlayın (örneğin, `[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`).
+  - AssemblyInfo içinde `UltimateResourceFallback` konumunu ayarlayın. geri dönüş için uygun dili belirtmek üzere\* (örneğin, `[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`).
 
     Proje dosyanızdaki `<UICulture>` etiketini atlayarak kaynak dilinizi ana derlemeye eklemeye karar verirseniz, `UltimateResourceFallback` konumunu uydu yerine ana derleme olarak ayarlayın (örneğin, `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`).
 
@@ -102,7 +102,7 @@ Aşağıdaki grafik, XAML 'in BAML formunu temel alan tipik bir yerelleştirme i
 
 Bu bölüm, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalarını nasıl derleyip yerelleştirebileceğinizi anlamanıza yardımcı olacak yerelleştirilmiş uygulamalar örneklerini içerir.
 
-#### <a name="run-dialog-box-example"></a>Çalıştır Iletişim kutusu örneği
+### <a name="run-dialog-box-example"></a>Çalıştır Iletişim kutusu örneği
 
 Aşağıdaki grafiklerde, **Çalıştır** iletişim kutusu örneğinin çıkışı gösterilmektedir.
 
@@ -172,7 +172,7 @@ Tüm kültürler için aynı görünmesi gerektiğinden `RunIcon.JPG` yerelleşt
 
 **Parse**
 
-Uygulamayı oluşturduktan sonra, yerelleştirmedeki ilk adım, yardımcı derlemeden yerelleştirilebilir kaynakların ayrıştırılmasından oluşur. Bu konunun amaçları doğrultusunda, [LocBaml araç örneğinde](https://go.microsoft.com/fwlink/?LinkID=160016)bulunan örnek LocBaml aracını kullanın. LocBaml 'in yalnızca yerelleştirme sürecinizi karşılayan bir yerelleştirme aracı oluşturmaya başlamanıza yardımcı olacak bir örnek araç olduğunu unutmayın. LocBaml kullanarak, "RunDialog. resources. dll. CSV" dosyası oluşturmak için şunu çalıştırın: **LocBaml/parse RunDialog. resources. dll/out:** .
+Uygulamayı oluşturduktan sonra, yerelleştirmedeki ilk adım, yardımcı derlemeden yerelleştirilebilir kaynakların ayrıştırılmasından oluşur. Bu konunun amaçları doğrultusunda, [LocBaml araç örneğinde](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)bulunan örnek LocBaml aracını kullanın. LocBaml 'in yalnızca yerelleştirme sürecinizi karşılayan bir yerelleştirme aracı oluşturmaya başlamanıza yardımcı olacak bir örnek araç olduğunu unutmayın. LocBaml kullanarak, "RunDialog. resources. dll. CSV" dosyası oluşturmak için şunu çalıştırın: **LocBaml/parse RunDialog. resources. dll/out:** .
 
 **Başlat**
 
@@ -215,7 +215,7 @@ Almanya penceresinde, bu resources. dll ana derlemenin yanındaki bir de klasör
 |Kod|Orijinal Ingilizce BAML|Yerelleştirilmiş BAML|
 |Genel olarak nötr kaynaklar|Ingilizce 'deki diğer kaynaklar|Almanca 'ya yerelleştirilmiş diğer kaynaklar|
 
-.NET Framework, uygulamanın `Thread.CurrentThread.CurrentUICulture`göre hangi uydu kaynakları derlemesinin yükleneceğini otomatik olarak seçer. Bu, varsayılan olarak Windows işletim sisteminin kültürüne göre yapılır. Yani, Almanca Windows kullanıyorsanız, de-DE\MyDialog.resources.dll yüklenir, en-US\MyDialog.resources.dll yüklenir. Projenizin AssemblyInfo. * ' de NeutralResourcesLanguage belirterek uygulamanız için en son geri dönüş kaynağını ayarlayabilirsiniz. Örneğin şunu belirtirseniz:
+.NET Framework, uygulamanın `Thread.CurrentThread.CurrentUICulture`göre hangi uydu kaynakları derlemesinin yükleneceğini otomatik olarak seçer. Bu, varsayılan olarak Windows işletim sisteminin kültürüne göre yapılır. Yani, Almanca Windows kullanıyorsanız, de-DE\MyDialog.resources.dll yüklenir, en-US\MyDialog.resources.dll yüklenir. Projenizin AssemblyInfo ' da NeutralResourcesLanguage ' i belirterek uygulamanız için en son geri dönüş kaynağını ayarlayabilirsiniz.\*. Örneğin şunu belirtirseniz:
 
 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]`
 
@@ -223,7 +223,7 @@ daha sonra, de-DE\MyDialog.resources.dll veya de\MyDialog.resources.dll her ikis
 
 ### <a name="microsoft-saudi-arabia-homepage"></a>Microsoft Suudi Arabistan giriş sayfası
 
-Aşağıdaki grafiklerde Ingilizce ve Arapça bir giriş sayfası gösterilmektedir. Bu grafikleri üreten tüm örnek için bkz. [Genelleştirme giriş sayfası örneği](https://go.microsoft.com/fwlink/?LinkID=159990).
+Aşağıdaki grafiklerde Ingilizce ve Arapça bir giriş sayfası gösterilmektedir. Bu grafikleri üreten tüm örnek için bkz. [Genelleştirme giriş sayfası örneği](https://github.com/microsoft/WPF-Samples/tree/master/Globalization%20and%20Localization/GlobalizationHomepage).
 
 **İngilizce:**
 
@@ -305,4 +305,4 @@ Bileşik yazı tipleri hakkında daha fazla bilgi için bkz. <xref:System.Window
 
 **Microsoft giriş sayfasını yerelleştirme**
 
-Bu uygulamayı yerelleştirmek için Run Iletişim kutusuyla aynı adımları izleyebilirsiniz. Arapça için yerelleştirilmiş. csv dosyası, [Genelleştirme giriş sayfası örneğinde](https://go.microsoft.com/fwlink/?LinkID=159990)sizin için kullanılabilir.
+Bu uygulamayı yerelleştirmek için Run Iletişim kutusuyla aynı adımları izleyebilirsiniz. Arapça için yerelleştirilmiş. csv dosyası, [Genelleştirme giriş sayfası örneğinde](https://github.com/microsoft/WPF-Samples/tree/master/Globalization%20and%20Localization/GlobalizationHomepage)sizin için kullanılabilir.

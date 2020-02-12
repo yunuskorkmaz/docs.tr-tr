@@ -7,20 +7,20 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: 7e285b916b076fdf0fc0d6477fba47d946b95726
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 68981f30918b5fff346daa2fce94bbf4601ea2e9
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744226"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124513"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>Destek API'leri Barındıran Yerel WPF Tarayıcısı
 WPF uygulamalarının Web tarayıcılarında barındırılması, WPF ana bilgisayarının dışında kayıtlı bir etkin belge sunucusu (DocObject olarak da bilinir) tarafından kolaylaştırılırdı. Internet Explorer, etkin bir belgeyle doğrudan etkinleştirebilir ve tümleştirilebilir. Mozilla tarayıcılarında XBAP ve gevşek XAML belgelerinin barındırılması için WPF, Internet Explorer tarafından sağlanan WPF etkin belge sunucusuna benzer bir barındırma ortamı sağlayan bir NPAPı eklentisi sağlar. Ancak, diğer tarayıcılarda ve tek başına uygulamalarda XBAP ve XAML belgelerini barındırmak için en kolay pratik yol Internet Explorer Web tarayıcısı denetimidir. Web tarayıcısı denetimi, karmaşık etkin belge sunucusu barındırma ortamını sağlar, ancak kendi ana bilgisayarının bu ortamı özelleştirmesini ve genişletmesine ve doğrudan geçerli etkin belge nesnesiyle iletişim kurmasına olanak tanır.  
   
- WPF etkin belge sunucusu, [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [ıpersisttakma](https://go.microsoft.com/fwlink/?LinkId=162045)adı, [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)dahil olmak üzere birkaç ortak barındırma arabirimi uygular. Web tarayıcısı denetiminde barındırıldığında, bu arabirimler [denetiminden IWebBrowser2::D okısaent](https://go.microsoft.com/fwlink/?LinkId=162048) özelliği tarafından döndürülen nesneden sorgu olabilir.  
+ WPF etkin belge sunucusu, [IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject), [IOleDocument](/windows/win32/api/docobj/nn-docobj-ioledocument), [IOleInPlaceActiveObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceactiveobject), [ıpersisttakma](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775042(v=vs.85))adı, [IOleCommandTarget](/windows/win32/api/docobj/nn-docobj-iolecommandtarget)dahil olmak üzere birkaç ortak barındırma arabirimi uygular. Web tarayıcısı denetiminde barındırıldığında, bu arabirimler [denetiminden IWebBrowser2::D okısaent](https://docs.microsoft.com/previous-versions/aa752116(v=vs.85)) özelliği tarafından döndürülen nesneden sorgu olabilir.  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
- WPF etkin belge sunucusu 'nun [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) uygulamasının uygulanması, standart OLE komut grubunun (null bir komut grubu GUID 'si ile) çok sayıda gezinmede ilgili ve tarayıcıya özgü komutları destekler. Ayrıca, CGID_PresentationHost adlı özel bir komut grubunu tanır. Şu anda bu grupta tanımlı yalnızca bir komut vardır.  
+ WPF etkin belge sunucusu 'nun [IOleCommandTarget](/windows/win32/api/docobj/nn-docobj-iolecommandtarget) uygulamasının uygulanması, standart OLE komut grubunun (null bir komut grubu GUID 'si ile) çok sayıda gezinmede ilgili ve tarayıcıya özgü komutları destekler. Ayrıca, CGID_PresentationHost adlı özel bir komut grubunu tanır. Şu anda bu grupta tanımlı yalnızca bir komut vardır.  
   
 ```cpp  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  

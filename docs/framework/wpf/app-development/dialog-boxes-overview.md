@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 9ec6716fefdc8de75d7e523c56ae0b3a02c8cf02
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bce2eed5f0e78c16b85b399e588c3d0d68ce7cb7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424638"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123720"
 ---
 # <a name="dialog-boxes-overview"></a>İletişim kutularına genel bakış
 Tek başına uygulamalar genellikle uygulamanın çalıştığı ana verileri görüntüleyen ve menü çubukları, araç çubukları ve durum çubukları gibi [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mekanizmalarda bu verileri işleme işlevselliğini sunan bir ana pencereye sahiptir. Önemsiz olmayan bir uygulama, aşağıdakileri yapmak için ek pencereler de gösterebilir:  
@@ -32,7 +32,7 @@ Tek başına uygulamalar genellikle uygulamanın çalıştığı ana verileri g�
   
  Diğer yandan *geçici* bir iletişim kutusu, bir kullanıcının açıkken diğer pencereleri etkinleştirmesini engellemez. Örneğin, bir Kullanıcı bir belgedeki belirli bir sözcüğün tekrarlığını bulmak isterse, bir ana pencere genellikle bir iletişim kutusu açar ve bu, kullanıcıya baktıkları kelimeyi ister. Bir sözcüğün bulunması kullanıcının belgeyi düzenlemesini engellemez, ancak iletişim kutusunun kalıcı olması gerekmez. Kalıcı olmayan iletişim kutusu, en azından iletişim kutusunu kapatmak için bir **Kapat** düğmesi sağlar ve bir sözcük aramasının bul ölçütleriyle eşleşen sonraki sözcüğü bulmak Için bir **Sonrakini Bul** düğmesi gibi belirli işlevleri yürütmek için ek düğmeler sağlayabilir.  
   
- Windows Presentation Foundation (WPF) ileti kutuları, ortak iletişim kutuları ve özel iletişim kutuları dahil olmak üzere birkaç iletişim kutusu türü oluşturmanızı sağlar. Bu konuda her biri incelenmektedir ve [Iletişim kutusu örneği](https://go.microsoft.com/fwlink/?LinkID=159984) eşleşen örnekler sağlar.  
+ Windows Presentation Foundation (WPF) ileti kutuları, ortak iletişim kutuları ve özel iletişim kutuları dahil olmak üzere birkaç iletişim kutusu türü oluşturmanızı sağlar. Bu konuda her biri incelenmektedir ve [Iletişim kutusu örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox) eşleşen örnekler sağlar.  
 
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>İleti kutuları  
@@ -55,9 +55,9 @@ Tek başına uygulamalar genellikle uygulamanın çalıştığı ana verileri g�
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowandresultcodebehind1)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowandresultcodebehind1)]  
   
- İleti kutularını kullanma hakkında daha fazla bilgi için bkz. <xref:System.Windows.MessageBox>, [MessageBox örneği](https://go.microsoft.com/fwlink/?LinkID=160023)ve [iletişim kutusu örneği](https://go.microsoft.com/fwlink/?LinkID=159984).  
+ İleti kutularını kullanma hakkında daha fazla bilgi için bkz. <xref:System.Windows.MessageBox>, [MessageBox örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/MessageBox)ve [iletişim kutusu örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox).  
   
- <xref:System.Windows.MessageBox> basit bir iletişim kutusu kullanıcı deneyimi sunabilse de, <xref:System.Windows.MessageBox> kullanmanın avantajı, kısmi güven güvenlik alanı (bkz. [güvenlik](../security-wpf.md)) IÇINDE (XAML tarayıcısı gibi) çalışan uygulamalar tarafından gösterilebilecek tek pencere türüdür. uygulamalar (XBAP).  
+ <xref:System.Windows.MessageBox> basit bir iletişim kutusu kullanıcı deneyimi sunabilse de, <xref:System.Windows.MessageBox> kullanmanın avantajı, bir kısmi güven güvenlik alanı içinde (bkz. [güvenlik](../security-wpf.md)) (ÖRNEĞIN, XAML tarayıcı uygulamaları (XBAP)) çalışan uygulamalar tarafından gösterilebilecek tek bir pencere türüdür.  
   
  Çoğu iletişim kutusu, metin, seçim (onay kutuları), karşılıklı kullanım dışı seçim (radyo düğmeleri) ve liste seçimi (liste kutuları, Birleşik giriş kutuları, açılan liste kutuları) gibi bir ileti kutusunun sonucundan daha karmaşık veriler görüntüler ve toplar. Bunlar için, Windows Presentation Foundation (WPF) birkaç ortak iletişim kutusu sağlar ve bunların kullanımı tam güvenle çalışan uygulamalarla sınırlı olsa da, kendi iletişim kutularınızı oluşturmanızı sağlar.  
   
@@ -118,7 +118,7 @@ Ortak iletişim kutuları yararlı olsa da, mümkün olduğunda kullanılmalıd�
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>Kalıcı özel iletişim kutusu oluşturma
 
-Bu konuda, bir örnek olarak `Margins` iletişim kutusunu kullanarak tipik bir kalıcı iletişim kutusu uygulamasının oluşturulması için <xref:System.Windows.Window> nasıl kullanılacağı gösterilmektedir (bkz. [Iletişim kutusu örneği](https://go.microsoft.com/fwlink/?LinkID=159984)). `Margins` iletişim kutusu aşağıdaki şekilde gösterilmiştir.  
+Bu konuda, bir örnek olarak `Margins` iletişim kutusunu kullanarak tipik bir kalıcı iletişim kutusu uygulamasının oluşturulması için <xref:System.Windows.Window> nasıl kullanılacağı gösterilmektedir (bkz. [Iletişim kutusu örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)). `Margins` iletişim kutusu aşağıdaki şekilde gösterilmiştir.  
   
  ![Sol kenar boşluğu, üst kenar boşluğu, sağ kenar boşluğu ve alt kenar boşluğu tanımlamak için alanları olan bir kenar boşlukları iletişim kutusu.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
@@ -307,4 +307,4 @@ Alternatif olarak, **Kapat** düğmesine tıklandığında kodunuz <xref:System.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Açılan Pencereye Genel Bakış](../controls/popup-overview.md)
-- [İletişim kutusu örneği](https://go.microsoft.com/fwlink/?LinkID=159984)
+- [İletişim kutusu örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)

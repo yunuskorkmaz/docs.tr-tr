@@ -12,14 +12,12 @@ helpviewer_keywords:
 - resources, for multiple platforms
 - targeting multiple platforms, resources for
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b32c2e354ea48e25ddb0aa561eb576cbfd89e3fb
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 3bf475117a85c2fced260dcc9460d55cd7007277
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204747"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123668"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Birden Çok Platformu Hedefleyen Kitaplıklar için Uygulama Kaynakları
 Sınıf kitaplıklarınızdaki kaynaklara birden çok platformdan erişilebildiğinden emin olmak için .NET Framework [taşınabilir sınıf kitaplığı](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) proje türünü kullanabilirsiniz. Bu proje türü, Visual Studio 2012 ' de kullanılabilir ve .NET Framework sınıfı kitaplığının taşınabilir alt kümesini hedefler. Taşınabilir sınıf kitaplığı kullanmak, kitaplığınıza masaüstü uygulamaları, Silverlight uygulamaları, Windows Phone uygulamaları ve Windows 8. x Mağazası uygulamaları üzerinden erişilebilmesini sağlar.
@@ -63,11 +61,11 @@ Sınıf kitaplıklarınızdaki kaynaklara birden çok platformdan erişilebildi�
 |İşe Alma Uzunluğu|12|
 |Kimlik|Kimlik|
 |KİMLİK.Uzunluğu|12|
-|Name|Name|
+|Ad|Ad|
 |Ad Uzunluğu|25|
 |Başlık|Personel Veritabanı|
 
- Aşağıdaki kod, dosya için **erişim değiştiricisi** **Public**olarak değiştirildiğinde, Visual Studio tarafından oluşturulan `resources` adlı Kaynak Yöneticisi sarmalayıcı kullanan bir `UILibrary` sınıfını tanımlar. UILibrary sınıfı, dize verilerini gerektiği gibi ayrıştırır. . Sınıfının `MyCompany.Employees` ad alanında olduğunu unutmayın.
+ Aşağıdaki kod, dosya için **erişim değiştiricisi** **Public**olarak değiştirildiğinde, Visual Studio tarafından oluşturulan `resources` adlı Kaynak Yöneticisi sarmalayıcı kullanan bir `UILibrary` sınıfını tanımlar. UILibrary sınıfı, dize verilerini gerektiği gibi ayrıştırır. biçimindeki telefon numarasıdır. Sınıfının `MyCompany.Employees` ad alanında olduğunu unutmayın.
 
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]
@@ -91,7 +89,7 @@ Sınıf kitaplıklarınızdaki kaynaklara birden çok platformdan erişilebildi�
 |İşe Alma|İşe Giriş Tarihi|
 |İşe Alma Uzunluğu|16|
 |Kimlik|Kimlik|
-|Name|Ad|
+|Ad|Ad|
 |Başlık|Çalışanlar veritabanı|
 
  Aşağıdaki kod, `UILibrary` sınıfına ve kaynaklarına konsol modundaki bir uygulamadan nasıl erişilebileceğini gösterir. Konsol uygulaması projesine eklenmek üzere Uııbrary. dll ' ye bir başvuru gerektirir.

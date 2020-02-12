@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: 8bf6870e3eb3ef65b498f431cb2b8805eee7ec3c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 87cc3d53cf06457191d9c87020c4151e3f848c51
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140118"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124331"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Normal İfadelerdeki Gruplandırma Yapıları
 Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve bir giriş dizesinin alt dizelerini yakalar. Aşağıdakileri yapmak için gruplandırma yapılarını kullanabilirsiniz:  
@@ -44,7 +44,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
 |[Sıfır Genişlik negatif ileri düzey onaylama](#zerowidth_negative_lookahead_assertion)|Yakalama yapmayan|  
 |[Sıfır Genişlik pozitif geriye yönelik onaylar](#zerowidth_positive_lookbehind_assertion)|Yakalama yapmayan|  
 |[Sıfır Genişlik negatif geriye yönelik onaylar](#zerowidth_negative_lookbehind_assertion)|Yakalama yapmayan|  
-|[Geri dönüş olmayan alt ifadeler](#nonbacktracking_subexpression)|Yakalama yapmayan|  
+|[Atomik gruplar](#atomic_groups)|Yakalama yapmayan|  
   
  Gruplar ve normal ifade nesne modeli hakkında bilgi için bkz. [gruplandırma yapıları ve normal ifade nesneleri](#Objects).  
   
@@ -63,7 +63,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
 - Normal ifade içinde geri başvuru yapısını kullanarak. Eşleşen alt ifadeye, `\`*Number*sözdizimi kullanılarak aynı normal ifadede başvurulur, burada *sayı* yakalanan alt ifadenin sıra numarasıdır.  
   
-- Normal ifade içinde adlandırılmış yeniden başvuru yapısını kullanarak. Eşleşen alt ifadeye aynı normal ifadede `\k<`*ad*`>`sözdizimi kullanılarak başvurulur, burada *ad* bir yakalama grubunun adı, veya `\k<`*sayı*`>`, burada *sayı* sıralı yakalama grubu sayısı. Yakalama grubu, sıra numarasıyla aynı olan varsayılan bir ada sahiptir. Daha fazla bilgi için bu konunun ilerleyen kısımlarında bulunan [eşleşen alt ifadeler](#named_matched_subexpression) bölümüne bakın.  
+- Normal ifade içinde adlandırılmış yeniden başvuru yapısını kullanarak. Eşleşen alt ifadeye aynı normal ifadede `\k<`*ad*`>`sözdizimi kullanılarak başvurulur, burada *ad* bir yakalama grubunun adıdır veya `\k<`*sayı*`>`, burada *sayı* bir yakalama grubunun sıra numarasıdır. Yakalama grubu, sıra numarasıyla aynı olan varsayılan bir ada sahiptir. Daha fazla bilgi için bu konunun ilerleyen kısımlarında bulunan [eşleşen alt ifadeler](#named_matched_subexpression) bölümüne bakın.  
   
 - Bir <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> veya <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> Yöntem çağrısında `$`*numarası* değiştirme sırasını kullanarak, burada *sayı* yakalanan alt ifadenin sıra numarasıdır.  
   
@@ -100,7 +100,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
  Burada *Name* geçerli bir grup adıdır ve alt *ifade* geçerli bir normal ifade örüntü. *ad* , herhangi bir noktalama karakteri içermemelidir ve bir sayıyla başlayamaz.  
   
 > [!NOTE]
-> Bir normal ifade deseninin eşleşen yönteminin <xref:System.Text.RegularExpressions.RegexOptions> parametresi <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> bayrağını içeriyorsa veya `n` seçeneği bu alt ifadeye uygulanmışsa (Bu konunun ilerleyen kısımlarında bulunan [Grup seçeneklerine](#group_options) bakın), bir alt ifadeyi yakalamaya yönelik tek yol şu şekilde yapılır: yakalama gruplarını açıkça adlandırın.  
+> Bir normal ifade deseninin eşleşen yönteminin <xref:System.Text.RegularExpressions.RegexOptions> parametresi <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> bayrağını içeriyorsa veya bu alt ifadeye `n` seçeneği uygulanmışsa (Bu konunun ilerleyen kısımlarında bulunan [Grup seçeneklerine](#group_options) bakın), bir alt ifadeyi yakalamaya yönelik tek yol, yakalama gruplarının açıkça adı olarak adlandırılmalıdır.  
   
  Adlandırılmış yakalanan gruplara aşağıdaki yollarla erişebilirsiniz:  
   
@@ -118,13 +118,13 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Basit bir normal ifade modelinde, numaralandırılmış (adlandırılmamış) ve adlandırılmış grupların programlı olarak veya normal ifade dili sözdizimi kullanılarak nasıl başvurulabileceği gösterilmektedir. Normal ifade `((?<One>abc)\d+)?(?<Two>xyz)(.*)`, aşağıdaki yakalama gruplarını sayıyla ve ada göre üretir. İlk yakalama grubu (sayı 0) her zaman tüm modele başvurur.  
   
-|Sayı|Name|Desen|  
+|Sayı|Ad|Desen|  
 |------------|----------|-------------|  
 |0|0 (varsayılan ad)|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
 |1\.|1 (varsayılan ad)|`((?<One>abc)\d+)`|  
 |2|2 (varsayılan ad)|`(.*)`|  
 |3|Bir|`(?<One>abc)`|  
-|4|ikiye|`(?<Two>xyz)`|  
+|4|İki|`(?<Two>xyz)`|  
   
  Aşağıdaki örnek, yinelenen kelimeleri ve her bir yinelenen sözcüğü hemen izleyen kelimeyi tanımlayan bir normal ifade gösterir. Normal ifade deseninin iki adlandırılmış alt ifadesi tanımlar: yinelenen kelimeyi temsil eden `duplicateWord`; ve yinelenen kelimeyi izleyen kelimeyi temsil eden `nextWord`.  
   
@@ -171,7 +171,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
 `(?'name1-name2' subexpression)`
   
- Burada *name1* geçerli grup (isteğe bağlı) ise, *AD2* daha önce tanımlanmış bir gruptur ve alt *ifade* geçerli bir normal ifade örünyordu. Dengeleme grubu tanımı, *AD2* tanımını siler ve *name1*içinde *AD2* ve *name1* arasındaki aralığı depolar. Hiçbir *AD2* grubu tanımlanmamışsa, eşleşme geri izler. En son bir *AD2* tanımını silmek, *AD2*öğesinin önceki tanımını ortaya çıkardığından, bu yapı, boşluk olarak grup *AD2* için yakalama yığınını, parantez veya açma gibi iç içe yapıların izlenmesini bir sayaç olarak kullanmanıza olanak tanır. ve köşeli ayraçlar kapatılıyor.  
+ Burada *name1* geçerli grup (isteğe bağlı) ise, *AD2* daha önce tanımlanmış bir gruptur ve alt *ifade* geçerli bir normal ifade örünyordu. Dengeleme grubu tanımı, *AD2* tanımını siler ve *name1*içinde *AD2* ve *name1* arasındaki aralığı depolar. Hiçbir *AD2* grubu tanımlanmamışsa, eşleşme geri izler. N} öğesinin son tanımını silmek, *AD2* *'ın önceki tanımını ortaya* çıkardığı için, bu yapı, boşluk olarak grup *AD2* için yakalama yığınını, parantez gibi iç içe yapıları izlemek için bir sayaç olarak kullanmanıza olanak sağlar.  
   
  Dengeleme grubu tanımı bir yığın olarak *AD2* kullanır. İç içe yerleştirilmiş her yapının başlangıç karakteri gruba ve <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> koleksiyonuna yerleştirilir. Kapanış karakteri eşleştiğinde, karşılık gelen açma karakteri gruptan kaldırılır ve <xref:System.Text.RegularExpressions.Group.Captures%2A> koleksiyonu bir tane azaltılır. Tüm iç içe yapıların açılış ve kapanış karakterleri eşleştirdikten sonra, *AD2* boş olur.  
   
@@ -214,7 +214,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
 |3|`(((?'Open'<)`|"\<ABC >" içindeki sol açılı parantezle eşleşir ve onu `Open` grubuna atar.|  
 |4|`[^<>]*`|"Abc" ile eşleşir.|  
 |5|`)+`|"< ABC" değeri, yakalanan ikinci grubun değeridir.<br /><br /> Giriş dizesindeki sonraki karakter sol açılı ayraç değildir, bu nedenle normal ifade altyapısı `(?'Open'<)[^<>]*)` alt düzenine geri döngülemez.|  
-|6|`((?'Close-Open'>)`|"\<ABC >" içindeki sağ açılı parantezle eşleşir, `Open` grubu ile sağ açılı ayraç ile `Close` grubuna alt dize olan "abc" atar ve < grubunun geçerli değerini ("`Open`") siler , boş bırakılır.|  
+|6|`((?'Close-Open'>)`|"\<ABC >" içindeki sağ açılı parantezle eşleşir, `Open` grubu ile sağ açılı ayraç ile `Close` grubuna alt dize olan "abc" atar ve < grubunun geçerli değerini ("`Open`") siler ve boş bırakır.|  
 |7|`[^<>]*`|Sağ açılı parantezden sonra açılı olmayan köşeli ayraç karakterleri arar; eşleşme buluyor.|  
 |8|`)+`|Yakalanan üçüncü grubun değeri ">".<br /><br /> Giriş dizesindeki sonraki karakter sağ açılı ayraç değildir, bu nedenle normal ifade altyapısı `((?'Close-Open'>)[^<>]*)` alt düzenine geri döngülemez.|  
 |9|`)*`|Yakalanan ilk grubun değeri "\<ABC >".<br /><br /> Giriş dizesindeki sonraki karakter sol açılı köşeli ayraç olduğundan, normal ifade altyapısı `(((?'Open'<)` alt düzenine geri döngü sağlar.|  
@@ -395,9 +395,9 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
 |`\d{4}\b`|Dört ondalık basamağı eşleştirin ve eşleşmeyi bir sözcük sınırında sonlandırın.|  
 |<code>(?<!(Saturday&#124;Sunday) )</code>|Eşleşmeden önce "Cumartesi" veya "Pazar" dizelerinden sonra bir boşluk gelmesi durumunda eşleşme başarılı olur.|  
   
-<a name="nonbacktracking_subexpression"></a>   
-## <a name="nonbacktracking-subexpressions"></a>Geri Dönüşlü Olmayan Alt İfadeler  
- Aşağıdaki gruplandırma yapısı, geri izleme olmayan bir alt ifadeyi temsil eder ("Greedy" alt ifadesi olarak da bilinir):  
+<a name="atomic_groups"></a>   
+## <a name="atomic-groups"></a>Atomik gruplar  
+ Aşağıdaki gruplandırma yapısı bir atomik grubu temsil eder (diğer bazı normal ifade altyapılarında geri alma olmayan alt ifade, atomik alt ifade veya yalnızca bir kez alt ifade olarak bilinir):
   
  `(?>` alt *ifade* `)`  
   
@@ -409,7 +409,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Geri izlemenin başarısız olacağını biliyorsanız bu seçenek önerilir. Normal ifade altyapısının gereksiz arama gerçekleştirmesini önlemek performansı geliştirir.  
   
- Aşağıdaki örnek, geri alma olmayan bir alt ifadenin bir model eşleşmesi sonuçlarını nasıl değiştirdiğini gösterir. Geri izleme normal ifadesi, bir dizi yinelenen karakterle başarıyla eşleşir, ancak bir sözcük sınırında aynı karakterin daha fazla tekrarı gelir, ancak geri dönüş olmayan normal ifade değildir.  
+ Aşağıdaki örnek, bir atomik grubun bir model eşleşme sonuçlarını nasıl değiştirdiği gösterilmektedir. Geri izleme normal ifadesi, bir dizi yinelenen karakterle başarıyla eşleşir, ancak bir sözcük sınırında aynı karakterin daha fazla tekrarı gelir, ancak geri dönüş olmayan normal ifade değildir.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#11](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/nonbacktracking1.cs#11)]
  [!code-vb[RegularExpressions.Language.Grouping#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/nonbacktracking1.vb#11)]  

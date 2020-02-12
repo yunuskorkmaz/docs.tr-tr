@@ -1,18 +1,16 @@
 ---
 title: .NET Standard
 description: .NET Standard, sürümleri ve bunu destekleyen .NET uygulamaları hakkında bilgi edinin.
-author: mairaw
-ms.author: mairaw
 ms.date: 09/23/2019
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 6a4406775056b76dfa789911b8bb14e84dbc8eea
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 25490d5063a1f6c31b76af30ac6d37de6cb8c07f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738662"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124643"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -60,7 +58,7 @@ Ancak, daha düşük .NET Standard sürümleri hedeflemek çok sayıda destek ba
 - Eklenebilir: .NET Standard sürümler mantıksal olarak eşmerkezli daireler: daha yüksek sürümler önceki sürümlerden tüm API 'Leri dahil. Sürümler arasında hiç Son değişiklik yok.
 - Sabit: sevk edildiğinde .NET Standard sürümler dondurulur. Yeni API 'Ler öncelikle .NET Core gibi belirli .NET uygulamalarında kullanılabilir hale gelir. .NET Standard gözden geçirme panosu, tüm .NET uygulamalarında yeni API 'Lerin kullanılabilir olması gerektiğini düşünürsa, yeni bir .NET Standard sürümüne eklenir.
 
-## <a name="specification"></a>Belirtim
+## <a name="specification"></a>Min
 
 .NET Standard belirtimi, standartlaştırılmış bir API kümesidir. Belirtim .NET uygulayıcılar tarafından, özellikle Microsoft (.NET Framework, .NET Core ve mono dahil) ve Unity tarafından korunur. [GitHub](https://github.com/dotnet/standard)aracılığıyla yeni .NET Standard sürümlerini oluşturma işleminin parçası olarak genel geri bildirim işlemi kullanılır.
 

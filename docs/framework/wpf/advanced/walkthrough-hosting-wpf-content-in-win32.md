@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: ff95b330ff67e916a4d27ef841e757998d847c8b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 418c5a4708a7842e5e441235738b73a009c9c956
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735313"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124556"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>İzlenecek yol: Win32'de WPF Barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], uygulamalar oluşturmak için zengin bir ortam sağlar. Ancak, Win32 kodunda önemli bir yatırımınız varsa, özgün kodunuzu yeniden yazmak yerine uygulamanıza [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işlevselliği eklemek daha etkili olabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir Win32 penceresinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği barındırmak için kolay bir mekanizma sağlar.  
   
- Bu öğreticide, bir Win32 penceresinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği barındıran [bir Win32 pencere ÖRNEĞINDE WPF Içeriği barındıran](https://go.microsoft.com/fwlink/?LinkID=160004)örnek bir uygulamanın nasıl yazılacağı açıklanmaktadır. Bu örneği, herhangi bir Win32 penceresini barındırmak için genişletebilirsiniz. Yönetilen ve yönetilmeyen kodu karıştırmayı içerdiğinden, uygulama/Clide C++yazılır.  
+ Bu öğreticide, bir Win32 penceresinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği barındıran [bir Win32 pencere ÖRNEĞINDE WPF Içeriği barındıran](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32HostingWPFPage)örnek bir uygulamanın nasıl yazılacağı açıklanmaktadır. Bu örneği, herhangi bir Win32 penceresini barındırmak için genişletebilirsiniz. Yönetilen ve yönetilmeyen kodu karıştırmayı içerdiğinden, uygulama/Clide C++yazılır.  
 
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Gereksinimler  
@@ -26,7 +26,7 @@ ms.locfileid: "76735313"
  Bu öğreticiye eşlik eden örnek, C++/CLI ' da uygulandığından, bu öğreticide, Windows API 'sinin programlanması ve yönetilen kod programlamasını anlamak için kullanımı hakkında C++ bilgiler verilir. /CLI ile C++benzerlik yararlı ancak gerekli değildir.  
   
 > [!NOTE]
-> Bu öğretici, ilişkili örnekten bir dizi kod örneği içerir. Ancak okunabilirlik için, örnek kodu tamamen içermez. Tüm örnek kod için bkz. [bir Win32 pencere ÖRNEĞINDE WPF Içeriğini barındırma](https://go.microsoft.com/fwlink/?LinkID=160004).  
+> Bu öğretici, ilişkili örnekten bir dizi kod örneği içerir. Ancak okunabilirlik için, örnek kodu tamamen içermez. Tüm örnek kod için bkz. [bir Win32 pencere ÖRNEĞINDE WPF Içeriğini barındırma](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32HostingWPFPage).  
   
 <a name="basic_procedure"></a>   
 ## <a name="the-basic-procedure"></a>Temel yordam  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: d77ce78fe914bf300c5b33019d7cf67aa4ad74c3
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: d0962793854a6066112eb987fbdb3f703617787f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291451"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124435"
 ---
 # <a name="panels-overview"></a>Panellere Genel Bakış
 <xref:System.Windows.Controls.Panel> öğeleri öğelerin işlenmesini denetleyen bileşenlerdir: boyut ve boyutlar, bunların konumları ve alt içeriklerinin yerleşimi. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], bir dizi önceden tanımlanmış <xref:System.Windows.Controls.Panel> öğesi ve özel <xref:System.Windows.Controls.Panel> öğeleri oluşturma özelliğini sağlar.  
@@ -94,14 +94,14 @@ ms.locfileid: "72291451"
   
 <a name="Panels_overview_Canvas_subsection"></a>   
 ### <a name="canvas"></a>Tuval  
- <xref:System.Windows.Controls.Canvas> öğesi, mutlak *x* ve *y*koordinatlarına göre içerik konumlandırmasını sağlar. Öğeler benzersiz bir konumda çizilebilirler; ya da öğeler aynı koordinatları kapladıklarında, İşaretlemede görünme sırası öğelerin çizildiği sırayı belirler.  
+ <xref:System.Windows.Controls.Canvas> öğesi, mutlak *x* ve *y* koordinatlarına göre içerik konumlandırmasını sağlar. Öğeler benzersiz bir konumda çizilebilirler; ya da öğeler aynı koordinatları kapladıklarında, İşaretlemede görünme sırası öğelerin çizildiği sırayı belirler.  
   
  <xref:System.Windows.Controls.Canvas> herhangi bir <xref:System.Windows.Controls.Panel>en esnek düzen desteğini sağlar. Height ve Width özellikleri, tuvalin alanını tanımlamak için kullanılır ve içindeki öğeler, üst <xref:System.Windows.Controls.Canvas>alanına göre mutlak koordinatları atanır. Dört Ekli Özellik, <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType> ve <xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>, bir <xref:System.Windows.Controls.Canvas>içindeki nesne yerleştirmesi üzerinde ince denetime izin verir, böylece Geliştirici öğeleri ekranda hassas bir şekilde konumlandırın ve düzenlemenizi sağlar.  
   
 #### <a name="cliptobounds-within-a-canvas"></a>Tuval Içindeki Cliptosınırlara  
  <xref:System.Windows.Controls.Canvas>, kendi tanımlı <xref:System.Windows.FrameworkElement.Height%2A> ve <xref:System.Windows.FrameworkElement.Width%2A>dışındaki koordinatlara bile, alt öğeleri ekranda herhangi bir konumda konumlandırabilirsiniz. Ayrıca, <xref:System.Windows.Controls.Canvas> alt öğelerinin boyutundan etkilenmez. Sonuç olarak, alt öğe, üst <xref:System.Windows.Controls.Canvas>sınırlayıcı dikdörtgeni dışında diğer öğeleri fazla çizmek için mümkündür. Bir <xref:System.Windows.Controls.Canvas> varsayılan davranışı alt öğelerin üst <xref:System.Windows.Controls.Canvas>sınırlarının dışına çizilmesini sağlar. Bu davranış istenmeyen ise, <xref:System.Windows.UIElement.ClipToBounds%2A> özelliği `true`olarak ayarlanabilir. Bu, <xref:System.Windows.Controls.Canvas> kendi boyutuna kırpmasına neden olur. <xref:System.Windows.Controls.Canvas>, alt öğelerin sınırlarının dışına çizilmesini sağlayan tek düzen öğesidir.  
   
- Bu davranış, [Width özellikleri karşılaştırma örneğinde](https://go.microsoft.com/fwlink/?LinkID=160050)grafiksel olarak gösterilmiştir.  
+ Bu davranış, [Width özellikleri karşılaştırma örneğinde](https://github.com/Microsoft/WPF-Samples/tree/master/Elements/WidthProperties)grafiksel olarak gösterilmiştir.  
   
 #### <a name="defining-and-using-a-canvas"></a>Tuval tanımlama ve kullanma  
  <xref:System.Windows.Controls.Canvas>, yalnızca [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] veya kod kullanılarak oluşturulabilir. Aşağıdaki örnek, içeriğin mutlak olarak konumlandırılması için <xref:System.Windows.Controls.Canvas> nasıl kullanılacağını gösterir. Bu kod 3 100 piksellik kareler üretir. İlk kare kırmızı ve sol üst (*x, y*) konumu (0, 0) olarak belirtilir. İkinci kare yeşil ve sol üst konumu (100, 100), ilk karenin hemen altına ve sağına eklenir. Üçüncü kare mavi ve sol üst konumu (50, 50), bu nedenle ilk karenin sağ alt çeyreğine ve ikincinin sol üst çeyreğine dahil olur. Üçüncü kare en son düzenlendiği için, diğer iki karenin üzerinde olduğu gibi görünür, diğer bir deyişle, çakışan bölümler üçüncü kutunun rengine varsayılmıştır.  
@@ -174,7 +174,7 @@ ms.locfileid: "72291451"
   
  İşleme davranışlarındaki fark bu görüntüde görülebilir.  
   
- ![Ekran görüntüsü: StackPanel Ile DockPanel ekran görüntüsü](./media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
+ ![Ekran görüntüsü: StackPanel ile DockPanel ekran görüntüsü](./media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
   
 #### <a name="defining-and-using-a-stackpanel"></a>StackPanel tanımlama ve kullanma  
  Aşağıdaki örnek, bir <xref:System.Windows.Controls.StackPanel> dikey konumlandırılmış düğmeler kümesi oluşturmak için nasıl kullanılacağını gösterir. Yatay konumlandırma için <xref:System.Windows.Controls.StackPanel.Orientation%2A> özelliğini <xref:System.Windows.Controls.Orientation.Horizontal>olarak ayarlayın.  
@@ -232,7 +232,7 @@ ms.locfileid: "72291451"
   
  Benzer şekilde, türetilmiş sınıflara dayalı özel düzen davranışları (<xref:System.Windows.Controls.Canvas> veya <xref:System.Windows.Controls.Grid>gibi), <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> ve <xref:System.Windows.FrameworkElement.MeasureOverride%2A> yöntemleri geçersiz kılınarak tanımlanabilir.  
   
- Aşağıdaki biçimlendirme özel bir <xref:System.Windows.Controls.Panel> öğesinin nasıl oluşturulacağını göstermektedir. `PlotPanel`olarak tanımlanan bu yeni <xref:System.Windows.Controls.Panel>, sabit kodlanmış *x* ve *y*koordinatları kullanılarak alt öğelerin konumlandırılmasını destekler. Bu örnekte, bir <xref:System.Windows.Shapes.Rectangle> öğesi (gösterilmez), çizim noktası 50 (*x*) ve 50 (*y*) konumunda konumlandırılır.  
+ Aşağıdaki biçimlendirme özel bir <xref:System.Windows.Controls.Panel> öğesinin nasıl oluşturulacağını göstermektedir. `PlotPanel`olarak tanımlanan bu yeni <xref:System.Windows.Controls.Panel>, sabit kodlanmış *x* ve *y* koordinatları kullanılarak alt öğelerin konumlandırılmasını destekler. Bu örnekte, bir <xref:System.Windows.Shapes.Rectangle> öğesi (gösterilmez), çizim noktası 50 (*x*) ve 50 (*y*) konumunda konumlandırılır.  
   
  [!code-cpp[PlotPanel#1](~/samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
  [!code-csharp[PlotPanel#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
@@ -257,7 +257,7 @@ ms.locfileid: "72291451"
 - [İzlenecek Yol: İlk WPF masaüstü uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [WPF düzen Galerisi örneği](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [Düzen](../advanced/layout.md)
-- [WPF denetimleri Galeri örneği](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [WPF denetimleri Galeri örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
 - [Hizalama, Kenar Boşlukları ve Doldurmaya Genel Bakış](../advanced/alignment-margins-and-padding-overview.md)
 - [Özel Içerik sarmalama paneli örneği oluşturma](https://go.microsoft.com/fwlink/?LinkID=159979)
 - [Ekli Özelliklere Genel Bakış](../advanced/attached-properties-overview.md)

@@ -10,25 +10,25 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 1c6d6b7beba03aaa5c978b5cb72c09ce625e0d7e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 01b8dc50860757b0eddee477219db1e19d27f40f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460403"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124409"
 ---
 # <a name="control-styles-and-templates"></a>Denetim Stilleri ve Şablonları
 Windows Presentation Foundation (WPF) içindeki denetimlerin, bu denetimin görsel ağacını içeren bir <xref:System.Windows.Controls.ControlTemplate> vardır. Denetimin yapısını ve görünümünü, bu denetimin <xref:System.Windows.Controls.ControlTemplate> değiştirerek değiştirebilirsiniz. Bir denetimin görsel ağacının yalnızca bir kısmını değiştirmek mümkün değildir; bir denetimin görsel ağacını değiştirmek için denetimin <xref:System.Windows.Controls.Control.Template%2A> özelliğini yeni ve tamamlanmış <xref:System.Windows.Controls.ControlTemplate>olarak ayarlamanız gerekir.  
   
- Masaüstü temaları, hangi kaynak sözlüğün kullanıldığını belirlenir. Masaüstü temaları için kaynak sözlüklerini almak için bkz. [varsayılan WPF temaları](https://go.microsoft.com/fwlink/?LinkID=158252).  
+ Masaüstü temaları, hangi kaynak sözlüğün kullanıldığını belirlenir. Masaüstü temaları için kaynak sözlüklerini almak için bkz. [varsayılan WPF temaları](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
  Aşağıdaki tabloda kaynak sözlüğü dosya adları ve bunlara karşılık gelen masaüstü temaları açıklanmaktadır.  
   
 |Tema dosyası|Masaüstü teması|  
 |----------------|-------------------|  
 |Klasik. xaml|Windows XP işletim sisteminde klasik Windows görünümü (Windows 95, Windows 98 ve Windows 2000).|  
-|Luna. NormalColor. xaml|Windows XP 'de varsayılan mavi tema.|  
-|Luna. Homestead. xaml|Windows XP 'de zeytin teması.|  
+|Luna.NormalColor.xaml|Windows XP 'de varsayılan mavi tema.|  
+|Luna.Homestead.xaml|Windows XP 'de zeytin teması.|  
 |Luna. metalik. xaml|Windows XP 'de Gümüş teması.|  
 |Royale. NormalColor. xaml|Windows XP Media Center Edition işletim sisteminde varsayılan tema.|  
 |Aero. NormalColor. xaml|Windows Vista işletim sisteminde varsayılan tema.|  

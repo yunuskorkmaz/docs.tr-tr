@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: bec7e14ceed867e89c3117efbc245938356b9d78
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 825b689dea145d18035344cd902ea1b8a50e82c3
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742288"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124214"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML Tarayıcı Uygulamalarına Genel Bakış
 <a name="introduction"></a>XAML tarayıcı uygulamaları (XBAP 'ler) hem Web uygulamalarının hem de zengin istemci uygulamalarının özelliklerini birleştirir. Web uygulamaları gibi, XBAP 'ler bir Web sunucusuna dağıtılabilir ve Internet Explorer veya Firefox 'tan başlatılabilir. Zengin istemci uygulamaları gibi, XBAP 'ler WPF 'nin yeteneklerini kullanabilir. XBAP 'lerin geliştirilmesi, zengin istemci geliştirmeye de benzer. Bu konu, XBAP geliştirmeye basit, yüksek düzey bir giriş sağlar ve XBAP geliştirmenin standart zengin istemci geliştirmeden farklı olduğunu açıklar.
@@ -91,7 +91,7 @@ ms.locfileid: "76742288"
 
 <a name="communicating_with_the_host_web_page"></a>
 ## <a name="communicating-with-the-host-web-page"></a>Ana bilgisayar Web sayfasıyla iletişim kurma
- Uygulama bir HTML çerçevesinde barındırıldığı zaman, XBAP içeren Web sayfasıyla iletişim kurabilirsiniz. Bunu, <xref:System.Windows.Interop.BrowserInteropHelper><xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> özelliğini alarak yapabilirsiniz. Bu özellik HTML penceresini temsil eden bir betik nesnesi döndürür. Daha sonra normal nokta söz dizimini kullanarak [pencere nesnesindeki](https://go.microsoft.com/fwlink/?LinkId=160274) özelliklere, yöntemlere ve olaylara erişebilirsiniz. Ayrıca, betik yöntemlerine ve genel değişkenlere erişebilirsiniz. Aşağıdaki örnek, komut dosyası nesnesinin nasıl alınacağını ve tarayıcının nasıl kapatılmasını gösterir.
+ Uygulama bir HTML çerçevesinde barındırıldığı zaman, XBAP içeren Web sayfasıyla iletişim kurabilirsiniz. Bunu, <xref:System.Windows.Interop.BrowserInteropHelper><xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> özelliğini alarak yapabilirsiniz. Bu özellik HTML penceresini temsil eden bir betik nesnesi döndürür. Daha sonra normal nokta söz dizimini kullanarak [pencere nesnesindeki](https://developer.mozilla.org/en-US/docs/Web/API/Window) özelliklere, yöntemlere ve olaylara erişebilirsiniz. Ayrıca, betik yöntemlerine ve genel değişkenlere erişebilirsiniz. Aşağıdaki örnek, komut dosyası nesnesinin nasıl alınacağını ve tarayıcının nasıl kapatılmasını gösterir.
 
  [!code-csharp[XbapBrowserInterop#10](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
  [!code-vb[XbapBrowserInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]
@@ -117,7 +117,7 @@ ms.locfileid: "76742288"
 
 7. **Güvenlik**altındaki **Ayarlar** listesinde, **etkin Içeriğin bilgisayarımdaki dosyalarda çalıştırılmasına izin ver** onay kutusunu işaretleyin.
 
-8. **Tamam**’a tıklayın.
+8. **Tamam**'a tıklayın.
 
      Internet Explorer 'ı yeniden başlattıktan sonra değişiklikler geçerli olur.
 
@@ -175,7 +175,7 @@ ms.locfileid: "76742288"
 > [!NOTE]
 > Önceki tabloda açıklanan davranış, ClickOnce güvenilir dağıtım modelini takip eden tam güvenli XBAP 'ler içindir.
 
- Tam güvenle bir XBAP dağıtmak için ClickOnce güvenilir dağıtım modelini kullanmanız önerilir. Bu model, Kullanıcı sorulmadan, XBAP 'nize güvenlik bölgesinden bağımsız olarak tam güven verilmesini sağlar. Bu modelin bir parçası olarak, uygulamanızı güvenilir bir yayımcının sertifikası ile imzalamanız gerekir. Daha fazla bilgi için bkz. [Güvenilen uygulama dağıtımına genel bakış](/visualstudio/deployment/trusted-application-deployment-overview) ve [kod imzalamaya giriş](https://go.microsoft.com/fwlink/?LinkId=166327).
+ Tam güvenle bir XBAP dağıtmak için ClickOnce güvenilir dağıtım modelini kullanmanız önerilir. Bu model, Kullanıcı sorulmadan, XBAP 'nize güvenlik bölgesinden bağımsız olarak tam güven verilmesini sağlar. Bu modelin bir parçası olarak, uygulamanızı güvenilir bir yayımcının sertifikası ile imzalamanız gerekir. Daha fazla bilgi için bkz. [Güvenilen uygulama dağıtımına genel bakış](/visualstudio/deployment/trusted-application-deployment-overview) ve [kod imzalamaya giriş](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85)).
 
 <a name="xbap_start_time_performance_considerations"></a>
 ## <a name="xbap-start-time-performance-considerations"></a>XBAP başlangıç zamanı performans konuları

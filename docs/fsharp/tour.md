@@ -1,19 +1,19 @@
 ---
 title: F# Turu
-description: Kod örnekleri ile bu turda F# programlama dilinin bazı temel özelliklerini inceleyin.
-ms.date: 11/06/2018
-ms.openlocfilehash: cfea2827dcec65f9e3606e8528179029e1f2db84
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+description: Bazı F# programlama dilinde kod örnekleriyle birlikte bu turda anahtar özelliklerini inceleyin.
+ms.date: 02/09/2020
+ms.openlocfilehash: ac2eef40e2dbc494e41a9760f0a70edb0f7ce399
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423813"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124578"
 ---
 # <a name="tour-of-f"></a>F\# turu
 
-' İ öğrenmenin F# en iyi yolu, kodu okumanız F# ve yazmaktır. Bu makale, F# dilin bazı önemli özelliklerinden bir tur görevi görür ve makinenizde yürütebilmeniz için bazı kod parçacıklarını sağlar. Geliştirme ortamı ayarlama hakkında bilgi edinmek [için Başlarken 'e göz atın.](get-started/index.md)
+F# hakkında bilgi edinmek için en iyi yolu, okuma ve F# kodu yazacak sağlamaktır. Bu makalede tura F# dilinin temel özelliklerinden bazıları aracılığıyla görür ve makinenizde yürütebilir bazı kod parçacıklarına verin. Geliştirme ortamı ayarlama hakkında bilgi edinmek [için Başlarken 'e göz atın.](get-started/index.md)
 
-' De F#iki birincil kavram vardır: işlevler ve türler.  Bu tur, bu iki kavrama giren dilin özelliklerini vurgulayacak.
+İki birincil kavram vardır F#: işlevleri ve türleri.  Bu tur, bu iki kavrama giren dilin özelliklerini vurgulayacak.
 
 ## <a name="executing-the-code-online"></a>Kodu çevrimiçi olarak yürütme
 
@@ -33,7 +33,7 @@ Herhangi bir F# programın en temel parçaları, ***modüller***halinde düzenle
 
 .NET dili olarak, F# .NET sürümünde var olan temel [temel türleri](language-reference/basic-types.md) destekler.
 
-Aşağıda çeşitli sayısal türlerin temsil edildiği gösterilmektedir F#:
+Çeşitli sayısal türleri F# dilinde gösterilir aşağıda verilmiştir:
 
 [!code-fsharp[Numbers](~/samples/snippets/fsharp/tour.fs#L49-L68)]
 
@@ -51,7 +51,7 @@ Aşağıda, hangi Boole değerleri ve temel koşullu mantık gerçekleştiriliyo
 
 [!code-fsharp[Tuples](~/samples/snippets/fsharp/tour.fs#L186-L203)]
 
-F# 4,1 itibariyle `struct` tanımlama grupları da oluşturabilirsiniz.  Bunlar ayrıca, aynı zamanda `struct` tanımlama grupları olan C# 7/Visual Basic 15 tanımlama grupları ile tamamen birlikte çalışır:
+Ayrıca, `struct` tanımlama grupları da oluşturabilirsiniz.  Bunlar ayrıca, aynı zamanda `struct` tanımlama grupları olan C# 7/Visual Basic 15 tanımlama grupları ile tamamen birlikte çalışır:
 
 [!code-fsharp[Tuples](~/samples/snippets/fsharp/tour.fs#L205-L218)]
 
@@ -67,13 +67,13 @@ F# 4,1 itibariyle `struct` tanımlama grupları da oluşturabilirsiniz.  Bunlar 
 
 ## <a name="lists-arrays-and-sequences"></a>Listeler, diziler ve diziler
 
-Listeler, diziler ve diziler, F# çekirdek kitaplığındaki üç birincil koleksiyon türüdür.
+F# çekirdek kitaplığının üç birincil koleksiyon türlerini listeler, diziler ve dizileri var.
 
 [Listeler](./language-reference/lists.md) sıralanmış, aynı türde öğelerin sabit koleksiyonlarıdır.  Bunlar, listedir bağlantılı listelerdir, bu, numaralandırma için amaçlılar, ancak büyük olmaları durumunda rastgele erişim ve birleştirme için zayıf bir seçimdir.  Bu, genellikle listeleri temsil etmek için listedir bağlantılı bir liste kullanmayan diğer popüler dillerdeki listelerin aksine.
 
 [!code-fsharp[Lists](~/samples/snippets/fsharp/tour.fs#L309-L359)]
 
-[Diziler](./language-reference/arrays.md) aynı türdeki öğelerin sabit boyutlu ve *değişebilir* koleksiyonlarıdır.  Öğelerin hızlı rastgele erişimini destekler ve yalnızca bitişik bellek blokları olduklarından F# listelerden daha hızlıdır.
+[Diziler](./language-reference/arrays.md) aynı türdeki öğelerin sabit boyutlu ve *değişebilir* koleksiyonlarıdır.  Öğelerin hızlı rastgele erişim desteği ve yalnızca bitişik bellek bloklarını oldukları için F# listeleri işlevinden daha hızlıdır.
 
 [!code-fsharp[Arrays](~/samples/snippets/fsharp/tour.fs#L368-L407)]
 
@@ -83,24 +83,24 @@ Listeler, diziler ve diziler, F# çekirdek kitaplığındaki üç birincil kolek
 
 ## <a name="recursive-functions"></a>Özyinelemeli İşlevler
 
-Koleksiyonları veya öğe dizilerini işlemek genellikle içinde F# [özyineleme](./language-reference/functions/index.md#recursive-functions) ile yapılır.  , F# Döngüler ve kesinlik temelli programlama desteğiyle birlikte doğruluğu güvence altına almak daha kolay olduğundan özyineleme tercih edilir.
+Koleksiyonları veya öğe dizilerini işlemek genellikle içinde F# [özyineleme](./language-reference/functions/index.md#recursive-functions) ile yapılır.  F# döngüler ve kesin programlama desteği sahip olsa da, doğruluğu garanti etmek daha kolay olduğundan, özyineleme tercih edilir.
 
 > [!NOTE]
 > Aşağıdaki örnek, `match` ifadesi ile eşleşen düzenin kullanımını sağlar.  Bu temel yapı, bu makalenin ilerleyen kısımlarında ele alınmıştır.
 
 [!code-fsharp[RecursiveFunctions](~/samples/snippets/fsharp/tour.fs#L461-L500)]
 
-F#Ayrıca, bir döngü yapısı kadar hızlı olacak şekilde özyinelemeli çağrıları en iyi duruma getirmenin bir yolu olan kuyruk çağrısı Iyileştirmesi için tam destek içerir.
+F# de Tail çağrısı iyileştirmesi için tam destek, böylece bunlar yalnızca bir döngü yapısı kadar hızlı ilerleyebilirler özyinelemeli çağrılar iyileştirmeye yönelik bir yol yoktur.
 
 ## <a name="record-and-discriminated-union-types"></a>Kayıt ve ayırt edici birleşim türleri
 
-Kayıt ve birleşim türleri F# kodda kullanılan iki temel veri türüdür ve genellikle bir F# programdaki verileri göstermenin en iyi yoludur.  Bu, diğer dillerdeki sınıflara benzer olsa da, birincil farklarından biri yapısal eşitlik semantiklerinden biridir.  Bu, "yerel olarak" karşılaştırılabilir ve eşitlik basit oldukları anlamına gelir. yalnızca birinin diğerine eşit olup olmadığını kontrol edin.
+Kayıt ve birleşim türlerini F# kodunda kullanılan iki temel veri türleri ve genellikle bir F# programında verileri temsil etmek için en iyi yoludur.  Bu, diğer dillerdeki sınıflara benzer olsa da, birincil farklarından biri yapısal eşitlik semantiklerinden biridir.  Bu, "yerel olarak" karşılaştırılabilir ve eşitlik basit oldukları anlamına gelir. yalnızca birinin diğerine eşit olup olmadığını kontrol edin.
 
 [Kayıtlar](./language-reference/records.md) , isteğe bağlı üyelere (örneğin, Yöntemler) sahip adlandırılmış değerlerin toplamıdır.  C# Ya da Java hakkında bilginiz varsa, bu, yalnızca yapısal eşitlik ve daha az sertifika Içeren Pocos veya POJOs 'ye benzer.
 
 [!code-fsharp[Records](~/samples/snippets/fsharp/tour.fs#L507-L559)]
 
-F# 4,1 itibariyle kayıtları `struct`s olarak da temsil edebilirsiniz.  Bu, `[<Struct>]` özniteliğiyle yapılır:
+Kayıtları yapı olarak da temsil edebilirsiniz. Bu, `[<Struct>]` özniteliğiyle yapılır:
 
 [!code-fsharp[Records](~/samples/snippets/fsharp/tour.fs#L561-L568)]
 
@@ -139,13 +139,17 @@ Yukarıdaki işlemin başarısız olması, derleme hatasına neden olur.
 
 Fark ettiğiniz bir şey `_` deseninin kullanımı olduğunu fark etmiş olabilirsiniz.  Bu, "bir şeyin ne olduğunu merak ediyorum" şeklinde bir yol gösteren [joker karakter stili](./language-reference/pattern-matching.md#wildcard-pattern)olarak bilinir.  Kullanışlı olsa da, `_`kullanımı konusunda dikkatli olmadığınız durumlarda, ayrıntılı bir şekilde eşleştirmeyi daha da atlayabilirsiniz ve derleme zamanı zorlamalarından artık faydalanabilirsiniz.  Bir model eşleştirme ifadesinde tüm anlamlı durumları Numaralandırdığınızda, bu en iyi şekilde, kalıp eşleme veya son yan tümce için belirli parçaları önemsemezseniz kullanılır.
 
+Aşağıdaki örnekte, bir ayrıştırma işlemi başarısız olduğunda `_` durumu kullanılır.
+
+[!code-fsharp[PatternMatching](~/samples/snippets/fsharp/tour.fs#L744-L762)]
+
 [Etkin desenler](./language-reference/active-patterns.md) , desen eşleştirme ile kullanmak için başka bir güçlü yapıdır.  Bu kişiler, giriş verilerini özel formlara bölümleyerek, bu dosyaları model eşleştirme çağrı sitesinde oluşturmayı sağlar.  Bunlar ayrıca parametrelenebilir ve bu sayede bölümü bir işlev olarak tanımlamaya izin verir.  Etkin desenleri desteklemek için önceki örneğin genişletilmesi şuna benzer:
 
 [!code-fsharp[ActivePatterns](~/samples/snippets/fsharp/tour.fs#L764-L786)]
 
 ## <a name="optional-types"></a>İsteğe bağlı türler
 
-Ayırt edici birleşim türlerinin bir özel durumu, seçenek türüdür ve bu, F# Çekirdek Kitaplığı 'nın bir parçası olduğundan kullanışlıdır.
+Ayırt edici birleşim türlerinin bir özel durum seçeneği, F# çekirdek kitaplığının bir parçası olduğunu oldukça kullanışlı olduğu türüdür.
 
 [Seçenek türü](./language-reference/options.md) , iki durumlardan birini temsil eden bir türdür: bir değer veya hiç bir şey yok.  Bir değerin belirli bir işlemden kaynaklanan veya neden olabileceği herhangi bir senaryoda kullanılır.  Bu, her iki durumda da size bir çalışma zamanı sorunu yerine bir derleme zamanı sorunu sunarak hesaba zorlar.  Bunlar genellikle `null`, bunun yerine "hiçbir şey" göstermek için kullanıldığı API 'lerde kullanılır, bu nedenle birçok durumda `NullReferenceException` endişelenmenize gerek kalmaz.
 
@@ -153,13 +157,13 @@ Ayırt edici birleşim türlerinin bir özel durumu, seçenek türüdür ve bu, 
 
 ## <a name="units-of-measure"></a>Ölçü Birimleri
 
-Tür sisteminin benzersiz bir F#özelliği, ölçü birimleri aracılığıyla sayısal sabit değerler için bağlam sağlayabilmesidir.
+F# tür sistemi benzersiz bir özellik ölçü birimleri ile sayısal değişmez değerleri için bağlam sağlamak için olanağıdır.
 
 [Ölçü birimleri](./language-reference/units-of-measure.md) , sayısal bir türü ölçüm gibi bir birimle ilişkilendirmenize ve işlevlerin sayısal değişmez değerler yerine birimlerde çalışma gerçekleştirmesini sağlar.  Bu, derleyicinin verilen sayısal sabit değer türlerinin belirli bir bağlam altında anlamlı olduğunu doğrulamasını ve bu sayede çalışma zamanı hatalarını ilgili çalışma türüyle ortadan kaldırmayı sağlar.
 
 [!code-fsharp[UnitsOfMeasure](~/samples/snippets/fsharp/tour.fs#L817-L842)]
 
-F# Çekirdek KITAPLıK birçok sı birim türünü ve birim dönüştürmeleri tanımlar.  Daha fazla bilgi edinmek için [Microsoft.FSharp.Data.UnitSystems.sı ad alanına](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.data.unitsystems.si-namespace-%5bfsharp%5d)göz atın.
+F# çekirdek kitaplığının birçok sı birim türleri ve birim dönüştürmeleri tanımlar.  Daha fazla bilgi edinmek için [Microsoft.FSharp.Data.UnitSystems.sı ad alanına](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.data.unitsystems.si-namespace-%5bfsharp%5d)göz atın.
 
 ## <a name="classes-and-interfaces"></a>Sınıflar ve arabirimler
 
@@ -191,8 +195,8 @@ Sınıflar, bilgileri temsil etmeniz gerektiğinde ve ayrıca bu bilgileri işle
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
-Artık dilin birincil özelliklerinden bazılarını gördüğünüze göre, ilk F# programlarınızı yazmaya hazır olmanız gerekir!  Geliştirme ortamınızı ayarlamayı ve kod yazmayı öğrenmek [için Başlarken ' e göz](get-started/index.md) atın.
+Birincil dili özelliklerinin bazılarını gördüğünüze göre ilk, F# programları yazmak için hazır!  Geliştirme ortamınızı ayarlamayı ve kod yazmayı öğrenmek [için Başlarken ' e göz](get-started/index.md) atın.
 
-Daha fazla bilgi edinmek için sonraki adımlar istediğiniz gibi olabilir, ancak temel fonksiyonel programlama kavramlarını rahat bir şekilde sağlamak için [' de F# işlevsel programlamaya giriş](./introduction-to-functional-programming/index.md) yapmanız önerilir.  Bu, ortamında güçlü programlar oluşturmak için gereklidir F#.
+Daha fazla bilgi edinmek için sonraki adımlar istediğiniz gibi olabilir, ancak temel fonksiyonel programlama kavramlarını rahat bir şekilde sağlamak için [' de F# işlevsel programlamaya giriş](./introduction-to-functional-programming/index.md) yapmanız önerilir.  Bunlar, F# içinde sağlam programları derleme gerekli olacaktır.
 
 Ayrıca, ayrıntılı bir kavramsal içerik koleksiyonunu görmek için [ F# dil başvurusunu](./language-reference/index.md) inceleyin F#.

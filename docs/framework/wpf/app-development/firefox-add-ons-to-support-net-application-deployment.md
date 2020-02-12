@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: 687f61bd3ec7d10c6aa66c20cd5eb58fcc56f18a
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 56f5f633092d8aa0bfabdb0570ec26f14221838d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636373"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124617"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>.NET Uygulaması Dağıtımını Destekleyen Firefox Eklentileri
 Firefox için Windows Presentation Foundation (WPF) eklentisi ve Firefox .NET Framework Yardımcısı, XAML tarayıcı uygulamaları (XBAP), gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ve ClickOnce uygulamalarının Mozilla Firefox tarayıcısı ile çalışmasını sağlar.  
@@ -31,7 +31,7 @@ Firefox için Windows Presentation Foundation (WPF) eklentisi ve Firefox .NET Fr
   
 - .NET Framework yüklü tüm sürümlerini veya yalnızca en son sürümü bildirin.  
   
- Firefox için .NET Framework Yardımcısı, .NET Framework 3,5 SP1 'e dahildir. Firefox .NET Framework yardımcısını kaldırma hakkında daha fazla bilgi için bkz. [Firefox için .NET Framework yardımcısını kaldırma](https://go.microsoft.com/fwlink/?LinkId=177944).  
+ Firefox için .NET Framework Yardımcısı, .NET Framework 3,5 SP1 'e dahildir. Firefox .NET Framework yardımcısını kaldırma hakkında daha fazla bilgi için bkz. [Firefox için .NET Framework yardımcısını kaldırma](https://support.microsoft.com/help/963707/how-to-remove-the-net-framework-assistant-for-firefox).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

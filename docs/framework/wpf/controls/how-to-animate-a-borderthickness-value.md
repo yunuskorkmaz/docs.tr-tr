@@ -8,23 +8,23 @@ helpviewer_keywords:
 - border thickness [WPF], animating changes to
 - animation [WPF], changes to border thickness
 ms.assetid: fd021978-f74b-4e7b-a7f7-3987dcad9e0f
-ms.openlocfilehash: 10e177d1f6d6add4638ce14af900e75d7e363890
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4533ce6f2a1fe7243267ee8d638e2ad0a4f9cf3a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911254"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124669"
 ---
 # <a name="how-to-animate-a-borderthickness-value"></a>Nasıl yapılır: BorderThickness Değerine Animasyon Ekleme
-Bu örnekte kullanarak kenarlık kalınlığına değişiklikler animasyon gösterilmektedir <xref:System.Windows.Media.Animation.ThicknessAnimation> sınıfı.  
+Bu örnek, <xref:System.Windows.Media.Animation.ThicknessAnimation> sınıfını kullanarak bir kenarlık kalınlığına yapılan değişikliklere nasıl animasyon ekleneceğini gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örneği kullanarak kenarlık kalınlığına canlandırır <xref:System.Windows.Media.Animation.ThicknessAnimation>. Örnekte <xref:System.Windows.Controls.Border.BorderThickness%2A> özelliği <xref:System.Windows.Controls.Border>.  
+ Aşağıdaki örnek, <xref:System.Windows.Media.Animation.ThicknessAnimation>kullanarak bir kenarlık kalınlığını hareketlendirir. Örnek, <xref:System.Windows.Controls.Border><xref:System.Windows.Controls.Border.BorderThickness%2A> özelliğini kullanır.  
   
  [!code-csharp[BasicAnimations_snip#ThicknessAnimationWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snip/CSharp/ThicknessAnimationExample.cs#thicknessanimationwholepage)]
  [!code-vb[BasicAnimations_snip#ThicknessAnimationWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/ThicknessAnimationExample.vb#thicknessanimationwholepage)]  
   
- Tam bir örnek için bkz. [animasyon örnek Galerisi](https://go.microsoft.com/fwlink/?LinkID=159969).  
+ Tüm örnek için bkz. [animasyon örnek Galerisi](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationExamples).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

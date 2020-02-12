@@ -3,14 +3,12 @@ title: .NET Framework ile Birden Çok Platform için Geliştirme
 ms.date: 07/18/2018
 ms.technology: dotnet-standard
 ms.assetid: b153baaa-130c-4169-860b-e580591de91e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf5c48640b56b5515cc8240ef12319515b859f83
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 0b7a2b4d234227a4901a461dba5362cada6ed4cf
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938026"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124383"
 ---
 # <a name="developing-for-multiple-platforms-with-the-net-framework"></a>.NET Framework ile Birden Çok Platform için Geliştirme
 
@@ -22,7 +20,7 @@ ms.locfileid: "75938026"
   
  Birden çok platform için geliştirme yapmak amacıyla kaynak kodu veya ikili dosyaları paylaşabilir ve .NET Framework kodu ve Windows Çalışma Zamanı API 'Leri arasında çağrılar yapabilirsiniz.  
   
-|Şunu yapmak istiyorsanız...|Kullan...|  
+|İstiyorsanız...|Kullan...|  
 |-----------------------|------------|  
 |Windows Phone 8,1 ve Windows 8.1 uygulamalar arasında kaynak kodu paylaşma|**Paylaşılan projeler** (Visual Studio 2013 Içinde evrensel uygulamalar şablonu, güncelleştirme 2).<br /><br /> -Şu anda Visual Basic desteği yok.<br />-#`if` deyimlerini kullanarak platforma özgü kodu ayırabilirsiniz.<br /><br /> Ayrıntılar için bkz.<br /><br /> -   [kodlamaya başlayın](/windows/uwp/get-started/create-uwp-apps)<br />[evrensel xaml uygulamaları oluşturmak Için Visual Studio 'Yu kullanarak](https://devblogs.microsoft.com/visualstudio/using-visual-studio-to-build-universal-xaml-apps/) -   (blog gönderisi)<br />[xaml yakınsanmış uygulamalar oluşturmak Için Visual Studio 'Yu kullanarak](https://channel9.msdn.com/Events/Build/2014/3-591) -   (video)|  
 |Farklı platformları hedefleyen uygulamalar arasında ikili dosyalar paylaşma|Platform belirsiz olan kod için **taşınabilir sınıf kitaplığı projeleri** .<br /><br /> -Bu yaklaşım genellikle iş mantığını uygulayan kod için kullanılır.<br />-Visual Basic veya C#kullanabilirsiniz.<br />-API desteği platforma göre farklılık gösterir.<br />-Windows 8.1 ve Windows Phone 8,1 ' i hedefleyen taşınabilir sınıf kitaplığı projeleri Windows Çalışma Zamanı API 'Leri ve XAML 'yi destekler. Bu özellikler, taşınabilir sınıf kitaplığının eski sürümlerinde kullanılamaz.<br />-Gerekirse, arabirimleri veya soyut sınıfları kullanarak platforma özgü kodu soyutlamak için kullanabilirsiniz.<br /><br /> Ayrıntılar için bkz.<br /><br /> [taşınabilir sınıf kitaplığı](cross-platform-development-with-the-portable-class-library.md) -   <br />[taşınabilir sınıf kitaplıklarının sizin Için nasıl çalıştığını](https://docs.microsoft.com/archive/blogs/dsplaisted/how-to-make-portable-class-libraries-work-for-you) -   (blog gönderisi)<br />[MVVM Ile taşınabilir sınıf kitaplığı kullanarak](using-portable-class-library-with-model-view-view-model.md) -    <br />[birden çok platformu hedefleyen kitaplıklar Için uygulama kaynakları](app-resources-for-libraries-that-target-multiple-platforms.md) -    <br />-   [.net taşınabilirlik Çözümleyicisi](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) (Visual Studio uzantısı)|  

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: d3d5116a2fa2198661050a1c1adbae9512cd078a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82da07620135224b5f7353f2acce087d939c1855
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790890"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124240"
 ---
 # <a name="textbox-how-to-topics"></a>TextBox Nasıl Yapılır Konuları
-Bu bölümde kullanarak yaygın görevlerin nasıl yerine getirileceğini gösteren örnekler <xref:System.Windows.Controls.TextBox> denetimi.  
+Bu bölümde, <xref:System.Windows.Controls.TextBox> denetimini kullanarak genel görevlerin nasıl gerçekleştirileceğini gösteren örnekler verilmektedir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Çok Satırlı TextBox Denetimi Oluşturma](how-to-create-a-multiline-textbox-control.md)  
@@ -43,5 +43,5 @@ Bu bölümde kullanarak yaygın görevlerin nasıl yerine getirileceğini göste
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WPF denetimleri Galerisi örneği](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [WPF denetimleri Galeri örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
 - [TextBox Stilleri ve Şablonları](textbox-styles-and-templates.md)

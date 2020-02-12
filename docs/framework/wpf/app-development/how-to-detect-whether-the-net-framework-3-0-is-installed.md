@@ -1,23 +1,23 @@
 ---
-title: "Nasıl yapılır: .NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama"
+title: Nasıl yapılır .NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WinFX Runtime user-agent string
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: c68daf2cb5687497e66ad3022ce42352a17ae0f7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 41010e615b6b3d10ebf6adc0e3f871873e94f409
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053447"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124461"
 ---
-# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Nasıl yapılır: .NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Nasıl yapılır .NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama
 Yöneticiler bir sistemde Microsoft .NET Framework uygulamaları dağıtabilmek için önce .NET Framework çalışma zamanının mevcut olduğunu doğrulamamalıdır. Bu konuda, yöneticilerin bir sistemde .NET Framework olup olmadığını belirlemede kullanabilecekleri HTML/JavaScript 'te yazılmış bir komut dosyası sağlanmaktadır.  
   
 > [!NOTE]
-> Microsoft .NET çerçevesini yükleme, dağıtma ve algılamayla ilgili daha ayrıntılı bilgi için bkz. [Microsoft .NET Framework sürüm 3,0](https://go.microsoft.com/fwlink/?LinkId=96739)' i dağıtma.  
+> Microsoft .NET çerçevesini yükleme, dağıtma ve algılamayla ilgili daha ayrıntılı bilgi için bkz. [Microsoft .NET Framework sürüm 3,0](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480198(v=msdn.10))' i dağıtma.  
   
 <a name="content_expiration"></a>   
 ## <a name="detect-the-net-clr-user-agent-string"></a>".NET CLR" Kullanıcı aracısı dizesini Algıla  

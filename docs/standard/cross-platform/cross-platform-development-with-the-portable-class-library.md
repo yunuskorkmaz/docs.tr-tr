@@ -7,50 +7,48 @@ helpviewer_keywords:
 - targeting multiple platforms
 - multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5b6a32aa465700fb316bf2269c4d057ff823443
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd5e5612de15a499c0dce34dc30faa6fd5731c17
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590344"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124539"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Taşınabilir sınıf kitaplığı ile platformlar arası geliştirme
 
-Taşınabilir sınıf kitaplığı proje türü Visual Studio'da platformlar arası uygulamalar ve kitaplıklar Microsoft platformları için hızlı ve kolay bir şekilde oluşturmanıza yardımcı olur.
+Visual Studio 'daki taşınabilir sınıf kitaplığı proje türü, Microsoft platformları için platformlar arası uygulamaları ve kitaplıkları hızlı ve kolay bir şekilde oluşturmanıza yardımcı olur.
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
-Taşınabilir sınıf kitaplıkları, saat ve geliştirme ve test maliyetlerini azaltmaya yardımcı olabilir. Bu proje türü .NET Framework taşınabilir derlemeler yazmak ve oluşturmak için kullanın ve ardından bu derlemeler .NET Framework, iOS veya Mac gibi çoklu platformları hedefleyen uygulamalar başvuru
+Taşınabilir sınıf kitaplıkları, kod geliştirme ve test etme süresini ve maliyetlerini azaltmanıza yardımcı olabilir. Taşınabilir .NET Framework derlemeleri yazmak ve derlemek ve sonra .NET Framework, iOS veya Mac gibi birden çok platformu hedefleyen uygulamalardan bu derlemelere başvurmak için bu proje türünü kullanın.
 
-Visual Studio'da bir taşınabilir sınıf kitaplığı projesi oluşturun ve bunu geliştirmeye başlayın bile sonra hedef platformlar değiştirebilirsiniz. Visual Studio, kodunuzda yapmanız gereken değişiklikleri belirlemenize yardımcı olur, yeni derlemeler kitaplığıyla derler.
+Visual Studio 'da taşınabilir bir sınıf kitaplığı projesi oluşturup geliştirmeye başladıktan sonra bile hedef platformları değiştirebilirsiniz. Visual Studio, kitaplığınızı yeni Derlemelerle derler ve bu da kodunuzda yapmanız gereken değişiklikleri belirlemenize yardımcı olur.
 
-## <a name="create-a-portable-class-library-project"></a>Taşınabilir sınıf kitaplığı projesi oluşturun
+## <a name="create-a-portable-class-library-project"></a>Taşınabilir sınıf kitaplığı projesi oluşturma
 
-Taşınabilir sınıf kitaplığı oluşturmak için Visual Studio'da sağlanan şablonunu kullanın. Yeni bir proje oluşturun (**dosya** > **yeni proje**) ve **yeni proje** iletişim kutusunda, programlama diliniz (Visual C# veya Visual Basic) seçin. Ardından, **sınıf kitaplığı (eski taşınabilir)** şablonu. Projeniz için bir ad girin ve seçin **Tamam**.
+Taşınabilir bir sınıf kitaplığı oluşturmak için, Visual Studio 'da sunulan şablonu kullanın. Yeni bir proje (**dosya** > **Yeni proje**) oluşturun ve **Yeni proje** Iletişim kutusunda, programlama dilinizi (görsel C# veya Visual Basic) seçin. Ardından, **sınıf kitaplığı (eski taşınabilir)** şablonunu seçin. Projeniz için bir ad girin ve **Tamam**' ı seçin.
 
-**Taşınabilir sınıf kitaplığı Ekle** iletişim kutusu görüntülenir. İki veya daha fazla hedefleri seçin ve ardından **Tamam**.
+**Taşınabilir sınıf kitaplığı Ekle** iletişim kutusu görünür. İki veya daha fazla hedef seçin ve ardından **Tamam**' ı seçin.
 
-![Visual Studio'da taşınabilir sınıf kitaplığı hedefleri ekleme](media/add-portable-class-library.png)
+![Visual Studio 'da taşınabilir sınıf kitaplığı hedefleri ekleme](media/add-portable-class-library.png)
 
-## <a name="change-targets"></a>Hedefleri Değiştir
+## <a name="change-targets"></a>Değişiklik hedefleri
 
-Hedef platformları taşınabilir sınık kitaplık projesinin oluşturduğunuzda veya geliştirme başladıktan sonra değiştirebilirsiniz. İçinde projenizi oluşturduktan sonra hedeflerini değiştirmek istiyorsanız **Çözüm Gezgini**, taşınabilir sınıf kitaplığı projeniz (çözümü değil) için kısayol menüsünü açın ve ardından **özellikleri** . Proje özellikleri sayfasında **Kitaplığı** projeniz şu anda hedefler sekmesi platformları gösterir.
+Bir taşınabilir sınıf kitaplığı projesinin hedef platformlarını oluştururken veya geliştirmeye başladıktan sonra değiştirebilirsiniz. Projenizi oluşturduktan sonra hedefleri değiştirmek istiyorsanız, **Çözüm Gezgini**' de, taşınabilir sınıf kitaplığı projeniz (çözüm değil) için kısayol menüsünü açın ve ardından **Özellikler**' i seçin. Proje Özellikleri sayfasında, **kitaplık** sekmesi projenizin şu anda hedeflediği platformları gösterir.
 
-![Visual Studio'da taşınabilir sınıf kitaplığı için proje özellikleri](media/pcl-project-properties.png)
+![Visual Studio 'da taşınabilir sınıf kitaplığı için proje özellikleri](media/pcl-project-properties.png)
 
-Ekleme veya kaldırma hedefleri için seçin **değişiklik** düğmesini seçin ve uygun onay kutularını temizleyin.
+Hedefleri eklemek veya kaldırmak için, **Değiştir** düğmesini seçin ve ardından uygun onay kutularını seçin ve temizleyin.
 
-Hedefleri değiştirdiğinizde, projenizin geliştirmek için kullanabileceğiniz API'ler seçiminizi eşleşecek şekilde değişir. Visual Studio değiştirme hedefleri sonucunda ortaya çıkabilecek uyarıları ve hataları bildirir.
+Hedefleri değiştirdiğinizde, projenizi geliştirirken kullanabileceğiniz API 'Ler seçiminizle eşleşecek şekilde değişir. Visual Studio, hedeflerin değişme sonucu olarak oluşabilecek hataları ve uyarıları raporlar.
 
-Taşınabilirlik değerlendirmek istiyorsanız, önce derlemelerinizin Visual Studio'da değişiklik yapmak, kullanabilirsiniz [.NET Portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).
+Visual Studio 'da değişiklik yapmadan önce derlemelerinizin taşınabilirliği değerlendirmek istiyorsanız [.net taşınabilirlik Çözümleyicisi](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)' ni kullanabilirsiniz.
 
 ## <a name="supported-types-and-members"></a>Desteklenen türler ve Üyeler
 
-Türler ve taşınabilir sınıf kitaplığı projesinde kullanılabilir üyeler çeşitli uyumluluk unsurları tarafından zorlanır:
+Taşınabilir sınıf kitaplığı projelerinde kullanılabilir olan türler ve Üyeler çeşitli uyumluluk faktörlerine göre kısıtlanıyor:
 
-- Bunlar, seçtiğiniz hedef arasında paylaşılabilir olmalıdır.
+- Seçtiğiniz hedefler arasında paylaşılmaları gerekir.
 
 - Bu hedefler arasında benzer şekilde davranmalıdır.
 
@@ -58,31 +56,31 @@ Türler ve taşınabilir sınıf kitaplığı projesinde kullanılabilir üyeler
 
 - Özellikle destekleyici üyeler taşınabilir olmadığında bunlar taşınabilir ortamda anlamlı olmalıdırlar.
 
-Üye taşınabilir sınıf kitaplığı ve seçili hedeflerinizi destekleniyorsa, projenizdeki ıntellisense'te görünür. Bununla birlikte, bir API taşınabilir Sınıf Kitaplığı'nda desteklenmiyor olabilir, ancak API kullanıp kullanamayacağını bağlıdır hedeflerde, unutmayın seçin.
+Taşınabilir sınıf kitaplığında ve seçtiğiniz hedeflerde bir üye destekleniyorsa, IntelliSense 'de projenizde görüntülenir. Ancak, taşınabilir sınıf kitaplığında bir API 'nin desteklenip desteklenmediğini unutmayın, ancak API 'YI kullanıp kullanmayacağınızı seçtiğiniz hedeflere göre değişir.
 
 ## <a name="api-differences-in-the-portable-class-library"></a>Taşınabilir Sınıf kitaplığındaki API farklılıkları
 
-Bütün platformlar tarafından desteklenen taşınabilir sınıf kitaplığı derlemeleri uyumlu hale getirmek için bazı üyeler biraz taşınabilir Sınıf Kitaplığı'nda değiştirildi.
+Taşınabilir sınıf kitaplığı derlemelerini desteklenen tüm platformlarda uyumlu hale getirmek için bazı Üyeler taşınabilir sınıf kitaplığı 'nda biraz değişmiş.
 
-## <a name="use-the-portable-class-library"></a>Taşınabilir sınıf kitaplığı kullanma
+## <a name="use-the-portable-class-library"></a>Taşınabilir sınıf kitaplığını kullanma
 
-Taşınabilir sınıf kitaplığı projenizi derledikten sonra sadece bunu diğer projelerden başvuruda. Erişmek istediğiniz sınıfları içeren projeyi veya belirli derlemeleri projeye ekleyebilirsiniz.
+Taşınabilir sınıf kitaplığı projenizi oluşturduktan sonra, yalnızca diğer projelerden başvuru yapmanız yeterlidir. Erişmek istediğiniz sınıfları içeren projeyi veya belirli derlemeleri projeye ekleyebilirsiniz.
 
-Bir taşınabilir sınıf kitaplığı derleme gerekli sürümü başvuran bir uygulamayı çalıştırmak için (veya üzeri) hedeflenen platformun bilgisayarınızda yüklü olması gerekir. Visual Studio tüm gerekli framework'leri içerdiğinden, uygulamayı geliştirirken kullandığınız bilgisayarda daha fazla değişiklik gerekmeden uygulamayı çalıştırabilirsiniz.
+Taşınabilir bir sınıf kitaplığı derlemesine başvuran bir uygulamayı çalıştırmak için, hedeflenen platformların gerekli sürümü (veya üzeri) bilgisayarınızda yüklü olmalıdır. Visual Studio tüm gerekli çerçeveleri içerir, bu nedenle uygulamayı geliştirmek için kullandığınız bilgisayarda daha fazla değişiklik yapmadan uygulamayı çalıştırabilirsiniz.
 
-### <a name="deploy-a-universal-windows-app"></a>Bir evrensel Windows uygulaması dağıtma
+### <a name="deploy-a-universal-windows-app"></a>Evrensel Windows uygulaması dağıtma
 
-Bir evrensel Windows uygulaması oluştururken bir taşınabilir sınıf kitaplığı derleme başvuran, uygulamayı dağıtmak için ihtiyacınız olan her şey uygulama paketine dahildir ve başka bir adım gereklidir.
+Taşınabilir bir sınıf kitaplığı derlemesine başvuran bir Evrensel Windows uygulaması oluşturduğunuzda, uygulamayı dağıtmak için ihtiyacınız olan her şey uygulama paketine dahil edilir ve başka bir adım gerekmez.
 
-### <a name="deploy-a-net-framework-app"></a>Dağıtma bir .NET Framework uygulaması
+### <a name="deploy-a-net-framework-app"></a>.NET Framework uygulaması dağıtma
 
-Taşınabilir sınıf kitaplığı derlemesine başvuran bir .NET Framework uygulamasını dağıtırken, bir bağımlılık '.NET Framework'ün doğru versiyonundaki belirtmeniz gerekir. Bu bağımlılığı belirterek, gerekli sürümün uygulamanızla birlikte yüklü olup olmadığını garantiye almış olursunuz.
+Taşınabilir bir sınıf kitaplığı derlemesine başvuran bir .NET Framework uygulaması dağıttığınızda, .NET Framework doğru sürümünde bir bağımlılık belirtmeniz gerekir. Bu bağımlılığı belirterek, gerekli sürümün uygulamanızla birlikte yüklü olup olmadığını garantiye almış olursunuz.
 
-- ClickOnce dağıtımı ile bir bağımlılık oluşturmak için: İçinde **Çözüm Gezgini**, yayımlamak istediğiniz proje için proje düğümünü seçin. (Taşınabilir sınıf kitaplığı projesine başvuran proje budur.) Menü çubuğunda, **proje** > **özellikleri**ve ardından **Yayımla** sekmesi. Üzerinde **Yayımla** sayfasında **önkoşulları**. Önkoşul olarak gerekli .NET Framework sürümünü seçin.
+- ClickOnce dağıtımı ile bir bağımlılık oluşturmak için: **Çözüm Gezgini**, yayımlamak istediğiniz projenin proje düğümünü seçin. (Bu, taşınabilir sınıf kitaplığı projesine başvuruda bulunan projem.) Menü çubuğunda, **proje** > **Özellikler**' i seçin ve ardından **Yayımla** sekmesini seçin. **Yayımla** sayfasında, **Önkoşullar**' ı seçin. Önkoşul olarak gerekli .NET Framework sürümünü seçin.
 
-- Bir kurulum projesi ile bir bağımlılık oluşturmak için: İçinde **Çözüm Gezgini**, Kurulum projesini seçin. Menü çubuğunda, **proje** > **özellikleri** > **önkoşulları**. Önkoşul olarak gerekli .NET Framework sürümünü seçin.
+- Bir kurulum projesi ile bir bağımlılık oluşturmak için: **Çözüm Gezgini**, Kurulum projesini seçin. Menü çubuğunda **proje** > **Özellikler** > **önkoşulları**' nı seçin. Önkoşul olarak gerekli .NET Framework sürümünü seçin.
 
-.NET Framework uygulamalarını dağıtmak hakkında daha fazla bilgi için bkz. [geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md).
+.NET Framework uygulamalarını dağıtma hakkında daha fazla bilgi için bkz. [geliştiriciler Için dağıtım kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
