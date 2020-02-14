@@ -7,22 +7,20 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), marshaling
 - MDAs (managed debugging assistants), marshaling
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6a6399828f934ad97cde9f36d75cfe3bfc410885
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f7bb630d3a1e832cf6bf083ce4cf603034248ceb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052498"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217328"
 ---
 # <a name="marshaling-mda"></a>MDA Sıralama
-`marshaling` Yönetilen hata ayıklama Yardımcısı (MDA), clr bir yöntem parametresi veya bir yapının alanı için sıralama bilgilerini ayarlarsa etkinleştirilir. Bu MDA, JıT derlenmiş derlemeler için çalışmaz.  
+`marshaling` yönetilen hata ayıklama Yardımcısı (MDA), CLR bir yöntem parametresi veya bir yapının alanı için sıralama bilgilerini ayarlarsa etkinleştirilir. Bu MDA, JıT derlenmiş derlemeler için çalışmaz.  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
  Bu MDA, CLR üzerinde hiçbir etkisi yoktur.  
   
-## <a name="output"></a>Çıkış  
+## <a name="output"></a>Çıktı  
  MDA, yönetilen ve yönetilmeyen bağlamlardaki parametre ya da alanın türünü ve türünü içeren yapıyı ya da yöntemi görüntüler.  Bir alan için çıktının bir örneği aşağıda verilmiştir:  
   
 ```output
@@ -31,7 +29,7 @@ name="assembly!Namespace.Class::myChar
 ```  
   
 ## <a name="configuration"></a>Yapılandırma  
- MDA yapılandırması, bildirilen sıralama bilgilerini ilgili alana veya yöntem adlarına göre filtrelemenize izin verir.  Aşağıdaki örnek `methodFilter`, filtre belirtmek için, `fieldFilter`ve `match` öğelerinin kullanımını gösterir.  Özniteliği bir yıldız işareti (\*) olarak ayarlamak her şeyi eşleştirecektir. `name`  
+ MDA yapılandırması, bildirilen sıralama bilgilerini ilgili alana veya yöntem adlarına göre filtrelemenize izin verir.  Aşağıdaki örnek, filtreleri belirtmek için `methodFilter`, `fieldFilter`ve `match` öğelerinin kullanımını gösterir.  `name` özniteliğini bir yıldız işareti (\*) olarak ayarlamak her şeyi eşleştirecektir.  
   
 ```xml  
 <mdaConfig>  

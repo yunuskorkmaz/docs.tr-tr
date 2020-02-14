@@ -1,7 +1,5 @@
 ---
 title: XmlReader. CreateSqlReader yöntemi (System. xml)
-author: mairaw
-ms.author: mairaw
 ms.date: 10/17/2019
 topic_type:
 - apiref
@@ -11,14 +9,14 @@ api_location:
 - system.xml.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 302be4eff32d2c96a1571d291e0b289e77694db8
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c65ef7c073175488c11c5e912a44d46fd4319209
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584136"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215457"
 ---
-# <a name="xmlreadercreatesqlreader-method"></a>XmlReader. CreateSqlReader yöntemi
+# <a name="xmlreadercreatesqlreader-method"></a>XmlReader.CreateSqlReader Metodu
 
 Belirtilen akışı, ayarları ve ayrıştırma için bağlam bilgilerini kullanarak yeni bir <xref:System.Xml.XmlReader> örneği oluşturur.
 
@@ -29,14 +27,14 @@ internal static XmlReader CreateSqlReader(Stream input,
 
 ## <a name="parameters"></a>Parametreler
 
-- `input`<xref:System.IO.Stream>  
+- `input` <xref:System.IO.Stream>  
   XML verilerini içeren akış.
 
-- `settings`<xref:System.Xml.XmlReaderSettings>  
-  Yeni <xref:System.Xml.XmlReader> örneğinin ayarları. Bu değer `null` olabilir.
+- `settings` <xref:System.Xml.XmlReaderSettings>  
+  Yeni <xref:System.Xml.XmlReader> örneğinin ayarları. Bu değer `null`olabilir.
 
-- `inputContext`<xref:System.Xml.XmlParserContext>  
-  XML parçasını ayrıştırmak için gereken bağlam bilgileri. Bu değer `null` olabilir.
+- `inputContext` <xref:System.Xml.XmlParserContext>  
+  XML parçasını ayrıştırmak için gereken bağlam bilgileri. Bu değer `null`olabilir.
 
 ## <a name="returns"></a>Döndürür
 
@@ -46,7 +44,7 @@ Akıştaki XML verilerini okumak için kullanılan bir nesne.
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> @No__t_0 yöntemi dahili ve doğrudan kodunuzda kullanılmamalıdır.
+> `XmlReader.CreateSqlReader` yöntemi dahili ve doğrudan kodunuzda kullanılmamalıdır.
 >
 > Microsoft, bu yöntemin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 

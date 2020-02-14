@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir korumalı alanda kısmen güvenilen kod Çalıştır'
+title: 'Nasıl yapılır: Korumalı Alanda Kısmen Güvenilen Kodu Çalıştırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -8,25 +8,23 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e8b1db291fbaf19ae9086fe1e2b76a475d198e19
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0191846f5589b0162ba342161fb5919ff20099d4
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894554"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215855"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Nasıl yapılır: Bir korumalı alanda kısmen güvenilen kod Çalıştır
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Nasıl yapılır: Korumalı Alanda Kısmen Güvenilen Kodu Çalıştırma
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Korumalı alana alma, kodu, koda verilen erişim izinlerini sınırlayan kısıtlı bir güvenlik ortamında çalıştırmaya yönelik bir uygulamadır. Örneğin, tam olarak güvenmediğiniz bir kaynaktan yönetilen bir kitaplığınız varsa, bunu tam güvenilir olarak çalıştırmanız gerekir. Bunun yerine, kodu, izinlerini beklediğinizi (örneğin, <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> izin) sınırlayan bir korumalı alana yerleştirmeniz gerekir.  
   
  Ayrıca, dağıtmak istediğiniz kodu, kısmen güvenilen ortamlarda çalışacak şekilde test etmek için korumalı alana alma kullanabilirsiniz.  
   
- <xref:System.AppDomain> , Yönetilen uygulamalar için korumalı alan sağlamanın etkili bir yoludur. Kısmen güvenilen kodu çalıştırmak için kullanılan uygulama etki alanları, içinde <xref:System.AppDomain>çalışırken kullanılabilir olan korumalı kaynakları tanımlayan izinlere sahiptir. İçinde <xref:System.AppDomain> çalışan kod, <xref:System.AppDomain> ile ilişkili izinlerle ilişkilidir ve yalnızca belirtilen kaynaklara erişim izni verilir. Ayrıca <xref:System.AppDomain> , tam olarak <xref:System.Security.Policy.StrongName> güvenilir olarak yüklenecek derlemeleri tanımlamak için kullanılan bir dizi içerir. Bu, bir <xref:System.AppDomain> öğesinin, belirli yardımcı derlemelerin tam olarak güvenilir olmasını sağlayan yeni bir korumalı etki alanını başlatmasını sağlar. Derlemeleri tamamen güvenilir olarak yüklemek için başka bir seçenek de bunları genel derleme önbelleğine yerleştirmelidir; Ancak, derlemeleri bu bilgisayarda oluşturulan tüm uygulama etki alanlarında tam güvenilir olarak yükler. Tanımlayıcı adların listesi, daha kısıtlayıcı bir belirleme sağlayan<xref:System.AppDomain> kararların her birini destekler.  
+ <xref:System.AppDomain>, yönetilen uygulamalar için korumalı alan sağlamanın etkili bir yoludur. Kısmen güvenilen kodu çalıştırmak için kullanılan uygulama etki alanları, bu <xref:System.AppDomain>içinde çalışırken kullanılabilir olan korumalı kaynakları tanımlayan izinlere sahiptir. <xref:System.AppDomain> içinde çalışan kod, <xref:System.AppDomain> ilişkili izinlerle ilişkilidir ve yalnızca belirtilen kaynaklara erişmesine izin verilir. <xref:System.AppDomain> Ayrıca, tam güvenilir olarak yüklenecek derlemeleri tanımlamak için kullanılan bir <xref:System.Security.Policy.StrongName> dizisi içerir. Bu, bir <xref:System.AppDomain> oluşturucusunun belirli yardımcı derlemelerin tam olarak güvenilir olmasını sağlayan yeni bir korumalı etki alanı başlatmasını sağlar. Derlemeleri tamamen güvenilir olarak yüklemek için başka bir seçenek de bunları genel derleme önbelleğine yerleştirmelidir; Ancak, derlemeleri bu bilgisayarda oluşturulan tüm uygulama etki alanlarında tam güvenilir olarak yükler. Tanımlayıcı adların listesi, daha kısıtlayıcı belirleme sağlayan<xref:System.AppDomain> başına bir kararı destekler.  
   
- Bir korumalı alanda çalışan <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> uygulamalar için izin kümesini belirtmek üzere yöntem aşırı yüklemesini kullanabilirsiniz. Bu aşırı yükleme, istediğiniz kod erişimi güvenliğinin tam düzeyini belirtmenize olanak sağlar. Bu aşırı yükleme kullanılarak bir <xref:System.AppDomain> öğesine yüklenen derlemeler yalnızca belirtilen izin kümesine sahip olabilir ya da tam güvenilir olabilir. Bütünleştirilmiş kod, genel derleme önbelleğidir veya `fullTrustAssemblies` <xref:System.Security.Policy.StrongName>() dizi parametresinde listeleniyorsa, tam güven verilir. Yalnızca tam güvenilir olarak bilinen derlemeler `fullTrustAssemblies` listeye eklenmelidir.  
+ Bir korumalı alanda çalışan uygulamalar için izin kümesini belirtmek üzere <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> yöntemi aşırı yüklemesini kullanabilirsiniz. Bu aşırı yükleme, istediğiniz kod erişimi güvenliğinin tam düzeyini belirtmenize olanak sağlar. Bu aşırı yükleme kullanılarak bir <xref:System.AppDomain> yüklenen derlemeler yalnızca belirtilen izin kümesine sahip olabilir veya tam olarak güvenilir olabilir. Bütünleştirilmiş kod, genel derleme önbelleğiyle veya `fullTrustAssemblies` (<xref:System.Security.Policy.StrongName>) dizi parametresinde listeleniyorsa, tam güven verilir. Yalnızca tam güvenilir olarak bilinen derlemeler `fullTrustAssemblies` listesine eklenmelidir.  
   
  Aşırı yükleme aşağıdaki imzaya sahiptir:  
   
@@ -38,17 +36,17 @@ AppDomain.CreateDomain( string friendlyName,
                         params StrongName[] fullTrustAssemblies);  
 ```  
   
- <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> Yöntem aşırı yüklemesi için parametreler,, için <xref:System.AppDomain> <xref:System.AppDomainSetup> kanıt, korumalı <xref:System.AppDomain>alan için uygulama temelini tanımlayan nesne, kullanılacak izin kümesi ve tanımlayıcı adlar belirler tam güvenilir derlemeler.  
+ <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> yöntemi aşırı yüklemesi için parametreler, <xref:System.AppDomain>adını, <xref:System.AppDomain>için kanıt, korumalı alan için uygulama temeli tanımlayan <xref:System.AppDomainSetup> nesnesini, izin olarak ayarlandığını ve tam güvenilir derlemeler için tanımlayıcı adlarını belirtir.  
   
  Güvenlik nedenleriyle, `info` parametresinde belirtilen uygulama tabanı, barındırma uygulaması için uygulama temeli olmamalıdır.  
   
- Parametresi için, açıkça oluşturduğunuz bir izin kümesini ya da <xref:System.Security.SecurityManager.GetStandardSandbox%2A> yöntemi tarafından oluşturulan standart bir izin kümesini belirtebilirsiniz. `grantSet`  
+ `grantSet` parametresinde, açıkça oluşturduğunuz bir izin kümesini ya da <xref:System.Security.SecurityManager.GetStandardSandbox%2A> yöntemi tarafından oluşturulan standart bir izin kümesini belirtebilirsiniz.  
   
- Çoğu <xref:System.AppDomain> yüklerden farklı olarak, kısmen güvenilen <xref:System.AppDomain> derlemeler için izin kümesini belirlemede ( `securityInfo` parametresi tarafından sağlanır) için kanıt kullanılmaz. Bunun yerine, `grantSet` parametresi tarafından bağımsız olarak belirtilir. Ancak kanıt, yalıtılmış depolama kapsamını belirleme gibi başka amaçlar için de kullanılabilir.  
+ <xref:System.AppDomain> yüklemelerinin aksine, kısmen güvenilen derlemeler için izin kümesini belirlemede <xref:System.AppDomain> (`securityInfo` parametresi tarafından sağlanır) için kanıt kullanılmaz. Bunun yerine, `grantSet` parametresi tarafından bağımsız olarak belirtilir. Ancak kanıt, yalıtılmış depolama kapsamını belirleme gibi başka amaçlar için de kullanılabilir.  
   
 ### <a name="to-run-an-application-in-a-sandbox"></a>Bir korumalı alanda uygulama çalıştırmak için  
   
-1. Güvenilmeyen uygulamaya verilecek izin kümesini oluşturun. <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> İzin verdiğiniz en düşük izin izinidir. Ayrıca, güvenilir olmayan kod için güvenli olabileceğini düşündüğünüz ek izinler verebilirsiniz; Örneğin, <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Aşağıdaki kod yalnızca <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> izne sahip yeni bir izin kümesi oluşturur.  
+1. Güvenilmeyen uygulamaya verilecek izin kümesini oluşturun. İzin verdiğiniz en düşük izin <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> izindir. Ayrıca, güvenilir olmayan kod için güvenli olabileceğini düşündüğünüz ek izinler verebilirsiniz; Örneğin, <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Aşağıdaki kod yalnızca <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> iznine sahip yeni bir izin kümesi oluşturur.  
   
     ```csharp
     PermissionSet permSet = new PermissionSet(PermissionState.None);  
@@ -63,9 +61,9 @@ AppDomain.CreateDomain( string friendlyName,
     PermissionSet internetPS = SecurityManager.GetStandardSandbox(ev);  
     ```  
   
-     Yöntemi <xref:System.Security.SecurityManager.GetStandardSandbox%2A> , kanıt içindeki bölgeye `Internet` bağlı olarak bir izin `LocalIntranet` kümesi veya bir izin kümesi döndürür. <xref:System.Security.SecurityManager.GetStandardSandbox%2A>Ayrıca, başvuru olarak geçirilen bazı kanıt nesneleri için kimlik izinleri oluşturur.  
+     <xref:System.Security.SecurityManager.GetStandardSandbox%2A> yöntemi, kanıt içindeki bölgeye bağlı olarak bir `Internet` izin kümesi veya `LocalIntranet` izin kümesi döndürür. <xref:System.Security.SecurityManager.GetStandardSandbox%2A> Ayrıca, başvuru olarak geçirilen bazı kanıt nesneleri için kimlik izinleri oluşturur.  
   
-2. Güvenilmeyen kodu çağıran barındırma sınıfını (Bu örnekte adlandırılır `Sandboxer` ) içeren derlemeyi imzalayın. <xref:System.Security.Policy.StrongName> Derlemeyi çağrının<xref:System.AppDomain.CreateDomain%2A> parametresinin dizisine imzalamak için kullanılan öğesini ekleyin. <xref:System.Security.Policy.StrongName> `fullTrustAssemblies` Barındırma sınıfının, kısmi güven kodunun yürütülmesini sağlamak veya kısmi güven uygulamasına hizmet sunmak için tam olarak güvenilir olarak çalıştırılması gerekir. Bu, <xref:System.Security.Policy.StrongName> bir derlemenin türünü okuduğunuzdan oluşur:  
+2. Güvenilmeyen kodu çağıran barındırma sınıfını (Bu örnekteki `Sandboxer` adlı) içeren derlemeyi imzalayın. Derlemeyi <xref:System.AppDomain.CreateDomain%2A> çağrısının `fullTrustAssemblies` parametresinin <xref:System.Security.Policy.StrongName> dizisine imzalamak için kullanılan <xref:System.Security.Policy.StrongName> ekleyin. Barındırma sınıfının, kısmi güven kodunun yürütülmesini sağlamak veya kısmi güven uygulamasına hizmet sunmak için tam olarak güvenilir olarak çalıştırılması gerekir. Bir derlemenin <xref:System.Security.Policy.StrongName> okuyabilirsiniz:  
   
     ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
@@ -73,14 +71,14 @@ AppDomain.CreateDomain( string friendlyName,
   
      Mscorlib ve System. dll gibi .NET Framework derlemelerin tam güven listesine eklenmesi gerekmez, çünkü genel derleme önbelleğinden tam güvenilir olarak yüklenirler.  
   
-3. <xref:System.AppDomain.CreateDomain%2A> Yönteminin <xref:System.AppDomainSetup> parametresini başlatın. Bu parametreyle, yeni <xref:System.AppDomain>' nin birçok ayarını kontrol edebilirsiniz. Özelliği önemli bir ayardır ve barındırma uygulamasının <xref:System.AppDomainSetup.ApplicationBase%2A> özelliğinden <xref:System.AppDomain> farklı olmalıdır. <xref:System.AppDomainSetup.ApplicationBase%2A> <xref:System.AppDomainSetup.ApplicationBase%2A> Ayarlar aynıysa, kısmi güven uygulaması, ana bilgisayar uygulamasının tanımladığı özel durumu (tam olarak güvenilir olarak) tarafından daha sonra onu kötüye yükleyebilir. Bu, bir catch (özel durum) kullanılması önerilmez. Konağın uygulama tabanının, korumalı uygulamanın uygulama tabanından farklı ayarlanması, yararlanma riskini azaltır.  
+3. <xref:System.AppDomain.CreateDomain%2A> yönteminin <xref:System.AppDomainSetup> parametresini başlatın. Bu parametreyle, yeni <xref:System.AppDomain>ayarlarının birçoğunu denetleyebilirsiniz. <xref:System.AppDomainSetup.ApplicationBase%2A> özelliği önemli bir ayardır ve barındırma uygulamasının <xref:System.AppDomain> için <xref:System.AppDomainSetup.ApplicationBase%2A> özelliğinden farklı olmalıdır. <xref:System.AppDomainSetup.ApplicationBase%2A> ayarları aynıysa, kısmi güven uygulaması, ana bilgisayar uygulamasının tanımladığı bir özel durumu (tam olarak güvenilir), bu sayede onu kötüye yükleyebilir. Bu, bir catch (özel durum) kullanılması önerilmez. Konağın uygulama tabanının, korumalı uygulamanın uygulama tabanından farklı ayarlanması, yararlanma riskini azaltır.  
   
     ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
     adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
     ```  
   
-4. Belirttiğimiz parametreleri kullanarak uygulama etki alanı oluşturmak için yöntemaşırıyüklemesiniçağırın.<xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29>  
+4. Belirttiğimiz parametreleri kullanarak uygulama etki alanını oluşturmak için <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> yöntemi aşırı yüklemesini çağırın.  
   
      Bu yöntemin imzası:  
   
@@ -92,13 +90,13 @@ AppDomain.CreateDomain( string friendlyName,
   
      Ek bilgiler:  
   
-    - Bu, <xref:System.AppDomain.CreateDomain%2A> yöntemi parametresi <xref:System.Security.PermissionSet> olarak alan tek aşırı yüktür ve bu nedenle kısmi güven ayarında bir uygulamayı yüklemenize imkan tanıyan tek aşırı yükleme.  
+    - Bu, bir <xref:System.Security.PermissionSet> parametresi olarak alan <xref:System.AppDomain.CreateDomain%2A> yönteminin tek aşırı yüktür ve bu nedenle kısmi güven ayarında bir uygulamayı yüklemenize imkan tanıyan tek aşırı yükleme.  
   
-    - `evidence` Parametresi, bir izin kümesini hesaplamak için kullanılmaz; .NET Framework diğer özelliklerinin tanımlanması için kullanılır.  
+    - `evidence` parametresi bir izin kümesini hesaplamak için kullanılmaz; .NET Framework diğer özelliklerinin tanımlanması için kullanılır.  
   
-    - `info` Parametresinin özelliğinin ayarlanması bu aşırı yükleme için zorunludur. <xref:System.AppDomainSetup.ApplicationBase%2A>  
+    - `info` parametresinin <xref:System.AppDomainSetup.ApplicationBase%2A> özelliğinin ayarlanması bu aşırı yükleme için zorunludur.  
   
-    - Parametresi, `params` anahtar sözcüğüne sahiptir, yani bir <xref:System.Security.Policy.StrongName> dizi oluşturmak için gerekli değildir. `fullTrustAssemblies` Parametre olarak 0, 1 veya daha fazla tanımlayıcı ad geçirmek için izin verilir.  
+    - `fullTrustAssemblies` parametresi `params` anahtar sözcüğüne sahiptir, yani <xref:System.Security.Policy.StrongName> bir dizi oluşturmak için bu gerekli değildir. Parametre olarak 0, 1 veya daha fazla tanımlayıcı ad geçirmek için izin verilir.  
   
     - Uygulama etki alanı oluşturma kodu:  
   
@@ -106,17 +104,17 @@ AppDomain.CreateDomain( string friendlyName,
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
-5. Kodu oluşturduğunuz korumalı alana alma <xref:System.AppDomain> içine yükleyin. Bu, iki şekilde yapılabilir:  
+5. Kodu, oluşturduğunuz korumalı alana alma <xref:System.AppDomain> yükleyin. Bu, iki şekilde yapılabilir:  
   
     - Derleme için <xref:System.AppDomain.ExecuteAssembly%2A> yöntemini çağırın.  
   
-    - <xref:System.Activator.CreateInstanceFrom%2A> Yeni <xref:System.MarshalByRefObject> içinde türetilmiş bir sınıfın örneğini oluşturmak için yöntemini kullanın. <xref:System.AppDomain>  
+    - Yeni <xref:System.AppDomain><xref:System.MarshalByRefObject> türetilmiş bir sınıfın örneğini oluşturmak için <xref:System.Activator.CreateInstanceFrom%2A> yöntemini kullanın.  
   
-     İkinci yöntem tercih edilir, çünkü parametreleri yeni <xref:System.AppDomain> örneğe geçirmek daha kolay hale getirir. <xref:System.Activator.CreateInstanceFrom%2A> Yöntemi iki önemli özellik sağlar:  
+     İkinci yöntem tercih edilir, çünkü parametreleri yeni <xref:System.AppDomain> örneğine geçirmek daha kolay hale getirir. <xref:System.Activator.CreateInstanceFrom%2A> yöntemi iki önemli özellik sağlar:  
   
     - Derlemenizi içermeyen bir konuma işaret eden bir kod tabanı kullanabilirsiniz.  
   
-    - Bir <xref:System.Security.CodeAccessPermission.Assert%2A> kritik sınıfın örneğini oluşturmanızı sağlayan tam güven (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) için oluşturma ' yı kullanabilirsiniz. (Bu, derlemenizin saydamlık işaretlerini yoksa ve tamamen güvenilir olarak yüklendiğinde gerçekleşir.) Bu nedenle, yalnızca bu işlevle güvendiğiniz kodu oluşturmak için dikkatli olmanız gerekir ve yeni uygulama etki alanında yalnızca tam olarak güvenilen sınıfların örneklerini oluşturmanız önerilir.  
+    - Bir <xref:System.Security.CodeAccessPermission.Assert%2A>, bir kritik sınıfın örneğini oluşturmanıza olanak sağlayan tam güven (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) için oluşturma yapabilirsiniz. (Bu, derlemenizin saydamlık işaretlerini yoksa ve tamamen güvenilir olarak yüklendiğinde gerçekleşir.) Bu nedenle, yalnızca bu işlevle güvendiğiniz kodu oluşturmak için dikkatli olmanız gerekir ve yeni uygulama etki alanında yalnızca tam olarak güvenilen sınıfların örneklerini oluşturmanız önerilir.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
@@ -124,7 +122,7 @@ AppDomain.CreateDomain( string friendlyName,
            typeof(Sandboxer).FullName );  
     ```  
   
-     Yeni bir etki alanında sınıfın bir örneğini oluşturmak için sınıfın <xref:System.MarshalByRefObject> sınıfı genişletmesine sahip olduğunu unutmayın.  
+     Yeni bir etki alanında sınıfın bir örneğini oluşturmak için sınıfın <xref:System.MarshalByRefObject> sınıfını genişletecek olması gerektiğini unutmayın.  
   
     ```csharp
     class Sandboxer:MarshalByRefObject  
@@ -136,7 +134,7 @@ AppDomain.CreateDomain( string friendlyName,
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
-7. Yeni oluşturduğunuz `Sandboxer` sınıfın örneğindeki yöntemiçağırın.`ExecuteUntrustedCode`  
+7. Yeni oluşturduğunuz `Sandboxer` sınıfının örneğinde `ExecuteUntrustedCode` yöntemini çağırın.  
   
     ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  
@@ -167,18 +165,18 @@ AppDomain.CreateDomain( string friendlyName,
     }  
     ```  
   
-     <xref:System.Reflection>kısmen güvenilen derlemedeki bir yöntemin tanıtıcısını almak için kullanılır. Tanıtıcı, kodu minimum izinlerle güvenli bir şekilde yürütmek için kullanılabilir.  
+     <xref:System.Reflection> kısmen güvenilen derlemedeki bir yöntemin tanıtıcısını almak için kullanılır. Tanıtıcı, kodu minimum izinlerle güvenli bir şekilde yürütmek için kullanılabilir.  
   
-     Önceki kodda, ' yi <xref:System.Security.PermissionSet.Assert%2A> <xref:System.Security.SecurityException>yazdırmadan önce tam güven izni için ' a göz önüne alın.  
+     Önceki kodda, <xref:System.Security.SecurityException>yazdırmadan önce tam güven izninin <xref:System.Security.PermissionSet.Assert%2A> göz önünde önüne alın.  
   
     ```csharp
     new PermissionSet(PermissionState.Unrestricted).Assert()  
     ```  
   
-     Tam güven onayı, <xref:System.Security.SecurityException>' dan genişletilmiş bilgileri elde etmek için kullanılır. <xref:System.Security.PermissionSet.Assert%2A> Olmadan<xref:System.Security.SecurityException.ToString%2A> yöntemi ,<xref:System.Security.SecurityException> yığın üzerinde kısmen güvenilen kod olduğunu ve döndürülen bilgileri kısıtlayamayacağını keşfeder. Kısmi güven kodu bu bilgileri okuyabiliyorsanız ve risk verilmemesine <xref:System.Security.Permissions.UIPermission>göre azaltıldığında, bu güvenlik sorunlarına neden olabilir. Tam güven onayı, az önce ve yalnızca kısmi güven kodunun tam güvene yükseltilmesine izin vermediğinizden emin olduğunuzda kullanılmalıdır. Kural olarak, aynı işlevde güvenmediğiniz ve tam güven için bir onay çağırdıktan sonra kodu çağırmayın. Kullanmayı bitirdikten sonra her zaman onayı döndürmenizde iyi bir uygulamadır.  
+     Tam güven onayı <xref:System.Security.SecurityException>genişletilmiş bilgileri elde etmek için kullanılır. <xref:System.Security.PermissionSet.Assert%2A>olmadan, <xref:System.Security.SecurityException> <xref:System.Security.SecurityException.ToString%2A> yöntemi yığında kısmen güvenilen kod olduğunu ve döndürülen bilgileri kısıtlayamayacağını keşfeder. Bu, kısmi güven kodu bu bilgileri okuyabiliyorsanız güvenlik sorunlarına neden olabilir, ancak risk <xref:System.Security.Permissions.UIPermission>verilmemesine göre azaltılmalıdır. Tam güven onayı, az önce ve yalnızca kısmi güven kodunun tam güvene yükseltilmesine izin vermediğinizden emin olduğunuzda kullanılmalıdır. Kural olarak, aynı işlevde güvenmediğiniz ve tam güven için bir onay çağırdıktan sonra kodu çağırmayın. Kullanmayı bitirdikten sonra her zaman onayı döndürmenizde iyi bir uygulamadır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, önceki bölümde yordamı uygular. Örnekte, Visual Studio çözümünde adlı `Sandboxer` bir proje, sınıfını `UntrustedClass`uygulayan adlı `UntrustedCode`bir projeyi de içerir. Bu senaryoda, döndürmesi `true` beklenen bir yöntemi içeren bir kitaplık derlemesini indirdiğiniz veya `false` girdiğiniz sayının bir fibonaccı numarası olup olmadığını belirtmesi gerektiğini varsaymaktadır. Bunun yerine, yöntemi bilgisayarınızdan bir dosyayı okumaya çalışır. Aşağıdaki örnek güvenilmeyen kodu gösterir.  
+ Aşağıdaki örnek, önceki bölümde yordamı uygular. Örnekte, Visual Studio çözümünde `Sandboxer` adlı bir proje aynı zamanda sınıf `UntrustedClass`uygulayan `UntrustedCode`adlı bir proje içerir. Bu senaryoda, `true` döndürmesi beklenen bir yöntemi içeren bir kitaplık derlemesini indirdiğinizi varsayar veya belirttiğiniz sayının bir Fibonaccı numarası olup olmadığını belirtmek için `false`. Bunun yerine, yöntemi bilgisayarınızdan bir dosyayı okumaya çalışır. Aşağıdaki örnek güvenilmeyen kodu gösterir.  
   
 ```csharp
 using System;  
@@ -198,7 +196,7 @@ namespace UntrustedCode
 }  
 ```  
   
- Aşağıdaki örnek, güvenilmeyen kodu `Sandboxer` yürüten uygulama kodunu gösterir.  
+ Aşağıdaki örnek, güvenilmeyen kodu yürüten `Sandboxer` uygulama kodunu gösterir.  
   
 ```csharp
 using System;  

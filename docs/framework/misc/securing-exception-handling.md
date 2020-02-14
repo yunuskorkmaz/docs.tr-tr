@@ -9,14 +9,12 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 256d9c9b825081e3bcfafd6e0e09de825d046d20
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e0465f2eb6be61e161f5e6b8cadf629a53f11906
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894549"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215796"
 ---
 # <a name="securing-exception-handling"></a>Özel Durum İşleme Güvenliğini Sağlama
 Görsel C++ ve Visual Basic, yığın üzerinde daha fazla bir filtre ifadesi herhangi bir **finally** ifadesiyle önce çalışır. Bu filtreyle ilişkili **catch** bloğu **finally** ifadesinden sonra çalışır. Daha fazla bilgi için bkz. [Kullanıcı filtrelenmiş özel durumları kullanma](../../standard/exceptions/using-user-filtered-exception-handlers.md). Bu bölümde, bu sıranın güvenlik etkileri incelenir. Filter deyimlerinin ve **finally** deyimlerinin çalışacağı sırayı gösteren aşağıdaki sözde kod örneğini göz önünde bulundurun.  
@@ -116,7 +114,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- Bu durumda doğru düzeltme, bir **TRY**/**catch** bloğunda var olan **TRY**/**finally** bloğunu sarmalıdır. Aşağıdaki örnekte gösterildiği gibi, var olan **TRY**/**finally** bloğunun içine bir **catch-throw** yan tümcesinin oluşturulması sorunu çözmemektedir.  
+ Bu durumda doğru düzeltme, **try**/**catch** bloğunda var olan **TRY**/**finally** bloğunu sarmalıdır. Aşağıdaki örnekte gösterildiği gibi, var olan **try**/**finally** bloğunun bir **catch-throw** yan tümcesini sorunu çözmez.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,7 +134,7 @@ YourObject.YourMethod()
 }  
 ```  
   
- **Finally** deyimleri, `FilterFunc` almadan önce çalıştırılmadığından, bu sorunu çözmez.  
+ Bu, `FilterFunc` denetimi almadan önce **finally** ifadesinin çalıştırılmadığı için sorunu çözmez.  
   
  Aşağıdaki örnek, çağıran özel durum filtre blokları için bir özel durum sunmadan önce **finally** yan tümcesinin yürütüldüğünü sağlayarak sorunu düzeltir.  
   

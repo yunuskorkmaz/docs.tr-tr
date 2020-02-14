@@ -7,20 +7,18 @@ helpviewer_keywords:
 - Windows Forms, app settings schema
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 609ddba9cd4d58f9c388cf669039ee128e87efd0
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 0a3363b35a6fc8bd27753eb034f8a1e95feb5292
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088074"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215423"
 ---
 # <a name="app-settings-schema"></a>Uygulama ayarları şeması
 
 Dosya yolları, XML Web hizmeti URL 'Leri veya bir uygulama için başka özel yapılandırma bilgileri gibi özel uygulama ayarlarını içerir.
 
-[ **\<configuration >** ](../configuration-element.md) \
+[ **\<yapılandırma >** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<appSettings >** ](appsettings-element-for-configuration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<add >** ](add-element-for-appsettings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear >** ](clear-element-for-appsettings.md)\

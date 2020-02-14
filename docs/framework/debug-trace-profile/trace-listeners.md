@@ -14,33 +14,31 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 752a6a5f9608aa260f192ee3e9e0709b7a10e27e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a51c046a296fbb62d21c7784cf7c1e78b700f3e9
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052282"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216136"
 ---
 # <a name="trace-listeners"></a>İz Dinleyicileri
-**Trace**, **Debug** ve <xref:System.Diagnostics.TraceSource>kullanırken gönderilen iletileri toplamak ve kaydetmek için bir mekanizmanız olması gerekir. İzleme iletileri *dinleyiciler*tarafından alınır. Bir dinleyicinin amacı, izleme iletilerini toplamak, depolamak ve yönlendirmaktır. Dinleyiciler izleme çıkışını günlük, pencere veya metin dosyası gibi uygun bir hedefe yönlendirir.  
+**Trace**, **Debug** ve <xref:System.Diagnostics.TraceSource>kullanırken, gönderilen iletileri toplama ve kaydetme mekanizmasına sahip olmanız gerekir. İzleme iletileri *dinleyiciler*tarafından alınır. Bir dinleyicinin amacı, izleme iletilerini toplamak, depolamak ve yönlendirmaktır. Dinleyiciler izleme çıkışını günlük, pencere veya metin dosyası gibi uygun bir hedefe yönlendirir.  
   
- Dinleyicileri, her biri **hata ayıklama**, **izleme**ve <xref:System.Diagnostics.TraceSource> sınıflar tarafından kullanılabilir ve bu, çıktısını çeşitli dinleyici nesnelerine gönderebilirler. Aşağıda yaygın olarak kullanılan önceden tanımlanmış dinleyiciler verilmiştir:  
+ Dinleyicileri, her biri **hata ayıklama**, **izleme**ve <xref:System.Diagnostics.TraceSource> sınıflarında kullanılabilir ve bu, çıktısını çeşitli dinleyici nesnelerine gönderebilirler. Aşağıda yaygın olarak kullanılan önceden tanımlanmış dinleyiciler verilmiştir:  
   
-- <xref:System.IO.Stream> , <xref:System.Diagnostics.TextWriterTraceListener> Çıktıyısınıfının<xref:System.IO.TextWriter> bir örneğine veya bir sınıf olan herhangi bir örneğe yönlendirir. Ayrıca, bunlar sınıflar olduklarından <xref:System.IO.Stream> konsola veya bir dosyaya da yazabilir.  
+- <xref:System.Diagnostics.TextWriterTraceListener>, çıktıyı <xref:System.IO.TextWriter> sınıfının bir örneğine veya <xref:System.IO.Stream> sınıf olan herhangi bir örneğe yönlendirir. Ayrıca, bu <xref:System.IO.Stream> sınıflar olduğundan konsola veya bir dosyaya da yazabilir.  
   
-- Çıktıyı bir olay günlüğüne yönlendirir.<xref:System.Diagnostics.EventLogTraceListener>  
+- Bir <xref:System.Diagnostics.EventLogTraceListener> çıkışı bir olay günlüğüne yönlendirir.  
   
-- Bir <xref:System.Diagnostics.DefaultTraceListener> **Write** ve **WriteLine** iletilerini **OutputDebugString** ve **Debugger. log** yöntemine yayar. Visual Studio 'da bu, hata ayıklama iletilerinin çıkış penceresinde görünmesine neden olur. **Başarısız** ve başarısız **onaylama** Iletileri Ayrıca **OutputDebugString** Windows API 'sine ve **hata ayıklayıcı. log** yöntemine de sahiptir ve ayrıca bir ileti kutusunun görüntülenmesine neden olur. Bu davranış, **hata ayıklama** ve **izleme** iletilerinde varsayılan davranıştır, çünkü **DefaultTraceListener** her `Listeners` koleksiyona otomatik olarak eklenir ve tek dinleyici otomatik olarak eklenir.  
+- <xref:System.Diagnostics.DefaultTraceListener>, **OutputDebugString** ve **Debugger. log** yöntemine **Write** ve **WriteLine** iletilerini yayar. Visual Studio 'da bu, hata ayıklama iletilerinin çıkış penceresinde görünmesine neden olur. **Başarısız** ve başarısız **onaylama** Iletileri Ayrıca **OutputDebugString** Windows API 'sine ve **hata ayıklayıcı. log** yöntemine de sahiptir ve ayrıca bir ileti kutusunun görüntülenmesine neden olur. Bu davranış, **hata ayıklama** ve **izleme** iletileri için varsayılan davranıştır, çünkü **DefaultTraceListener** her `Listeners` koleksiyonuna otomatik olarak dahildir ve tek dinleyici otomatik olarak eklenir.  
   
-- Bir <xref:System.Diagnostics.ConsoleTraceListener> izleme veya hata ayıklama çıkışını standart çıktıya ya da standart hata akışına yönlendirir.  
+- <xref:System.Diagnostics.ConsoleTraceListener>, izleme veya hata ayıklama çıkışını standart çıktıya ya da standart hata akışına yönlendirir.  
   
-- Bir <xref:System.Diagnostics.DelimitedListTraceListener> akış yazıcı gibi bir metin yazıcısına veya dosya akışı gibi bir akışa izleme veya hata ayıklama çıktısı yönlendirir. İzleme çıktısı, <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> özelliği tarafından belirtilen sınırlayıcıyı kullanan bir ayrılmış metin biçimindedir.  
+- <xref:System.Diagnostics.DelimitedListTraceListener>, çıkış veya hata ayıklama çıkışını akış yazıcı gibi bir metin yazıcısına veya dosya akışı gibi bir akışa yönlendirir. İzleme çıktısı, <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> özelliği tarafından belirtilen sınırlayıcıyı kullanan sınırlandırılmış bir metin biçimindedir.  
   
-- , Bir veya gibi bir veya öğesine <xref:System.Diagnostics.XmlWriterTraceListener> XMLkodluveriler<xref:System.IO.TextWriter> olarak izleme veya hata ayıklama çıktısı yönlendirir. <xref:System.IO.FileStream> <xref:System.IO.Stream>  
+- <xref:System.Diagnostics.XmlWriterTraceListener>, izleme veya hata ayıklama çıkışını XML kodlu veriler olarak bir <xref:System.IO.TextWriter> ya da <xref:System.IO.FileStream>gibi bir <xref:System.IO.Stream>yönlendirir.  
   
- **Hata ayıklama**, **izleme** <xref:System.Diagnostics.TraceSource> ve çıkış almak <xref:System.Diagnostics.DefaultTraceListener> için öğesine ek olarak herhangi bir dinleyici istiyorsanız, onu `Listeners` koleksiyona eklemeniz gerekir. Daha fazla bilgi için [nasıl yapılır: İzleme dinleyicileri](how-to-create-and-initialize-trace-listeners.md) oluşturun ve başlatın ve [şunları yapın: Izleme dinleyicileri](how-to-use-tracesource-and-filters-with-trace-listeners.md)Ile TraceSource ve filtreler kullanın. **Dinleyiciler** koleksiyonundaki herhangi bir dinleyici, izleme çıkış yöntemlerinden aynı iletileri alır. Örneğin, iki dinleyici ayarladığınızı varsayalım: bir **TextWriterTraceListener** ve bir **EventLogTraceListener**. Her dinleyici aynı iletiyi alır. **TextWriterTraceListener** , çıktısını bir akışa yönlendirebilir ve **EventLogTraceListener** çıkışını bir olay günlüğüne yönlendirebilir.  
+ <xref:System.Diagnostics.DefaultTraceListener> **hata ayıklama**, **izleme** ve <xref:System.Diagnostics.TraceSource> çıktısını almak için herhangi bir dinleyici istiyorsanız, `Listeners` koleksiyonuna eklemeniz gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: Izleme dinleyicileri oluşturma ve başlatma](how-to-create-and-initialize-trace-listeners.md) ve [nasıl yapılır: Izleme dinleyicileri Ile TraceSource ve filtreler kullanma](how-to-use-tracesource-and-filters-with-trace-listeners.md). **Dinleyiciler** koleksiyonundaki herhangi bir dinleyici, izleme çıkış yöntemlerinden aynı iletileri alır. Örneğin, iki dinleyici ayarladığınızı varsayalım: bir **TextWriterTraceListener** ve bir **EventLogTraceListener**. Her dinleyici aynı iletiyi alır. **TextWriterTraceListener** , çıktısını bir akışa yönlendirebilir ve **EventLogTraceListener** çıkışını bir olay günlüğüne yönlendirebilir.  
   
  Aşağıdaki örnek, bir çıkışın **dinleyici** koleksiyonuna nasıl gönderileceğini gösterir.  
   
@@ -74,7 +72,7 @@ System.Diagnostics.Trace.Listeners.Add(
 ```  
   
 ## <a name="developer-defined-listeners"></a>Geliştirici tanımlı dinleyiciler  
- **TraceListener** temel sınıfından devralarak kendi dinleyicilerini tanımlayabilir ve kendi yöntemlerini özelleştirilmiş yöntemleriniz ile geçersiz kılarak tanımlayabilirsiniz. Geliştirici tanımlı dinleyiciler oluşturma hakkında daha fazla bilgi için .NET Framework başvuru <xref:System.Diagnostics.TraceListener> içindeki bölümüne bakın.  
+ **TraceListener** temel sınıfından devralarak kendi dinleyicilerini tanımlayabilir ve kendi yöntemlerini özelleştirilmiş yöntemleriniz ile geçersiz kılarak tanımlayabilirsiniz. Geliştirici tanımlı dinleyiciler oluşturma hakkında daha fazla bilgi için .NET Framework başvurusunda <xref:System.Diagnostics.TraceListener> bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

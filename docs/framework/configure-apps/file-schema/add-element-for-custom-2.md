@@ -7,20 +7,18 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ac07fc9ba6f030209a5e0d0160689fab95bc1b4a
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 57722f3518fad12cb8e6e35d68f40bb8465bdd86
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088759"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215433"
 ---
 # <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler ve DictionarySectionHandler için > öğesi \<ekleyin
 
 Özel uygulama ayarları ekler. Her **\<add >** etiketi bir anahtar/değer çifti içerir.
 
-[ **\<configuration >** ](configuration-element.md) \
+[ **\<yapılandırma >** ](configuration-element.md)\
 &nbsp;&nbsp;[ **\<sectionName >** ](custom-element-2.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<ekleme >**
 
@@ -45,7 +43,7 @@ ms.locfileid: "74088759"
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-Yok.
+Hiçbiri
 
 ## <a name="example"></a>Örnek
 

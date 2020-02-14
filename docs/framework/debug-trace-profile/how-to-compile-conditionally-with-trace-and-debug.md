@@ -10,14 +10,12 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a2cb2ef473d6870da47e0e4c00fecf6bd60707f3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2c3ec54535319f4c7507563a5976038ca40d20aa
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975578"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217449"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme
 Geliştirme sırasında bir uygulamada hata ayıklarken, hem izleme hem de hata ayıklama çıkışı Visual Studio 'daki çıkış penceresine gider. Ancak, dağıtılmış bir uygulamada izleme özelliklerini dahil etmek için, izlenen uygulamalarınızı **Trace** derleyici yönergesi etkinken derlemeniz gerekir. Bu, izleme kodunun uygulamanızın yayın sürümüne derlenmesini sağlar. **İzleme** yönergesini etkinleştirmezseniz, derleme sırasında tüm izleme kodu yok sayılır ve dağıtacağınız yürütülebilir koda dahil edilmez.  
@@ -59,7 +57,7 @@ Geliştirme sırasında bir uygulamada hata ayıklarken, hem izleme hem de hata 
   
      Yukarıdaki örneklerde kullanılan koşullu derleme yönergelerinin anlamı aşağıdaki gibidir:  
   
-    |Deki|Açıklama|  
+    |Yönergesi|Anlamı|  
     |---------------|-------------|  
     |`vbc`|Visual Basic derleyici|  
     |`csc`|C#Derleyici|  
@@ -73,7 +71,7 @@ Geliştirme sırasında bir uygulamada hata ayıklarken, hem izleme hem de hata 
   
 1. Kaynak kodu dosyasının en üstünde programlama diliniz için uygun olan ifadeyi yazın.  
   
-    |Dil|Deyim|Sonuç|  
+    |Dil|Ekstre|Sonuç|  
     |--------------|---------------|------------|  
     |**Visual Basic**|**#CONST TRACE = true**|İzlemeyi etkinleştirilir|  
     ||**#CONST TRACE = false**|İzlemeyi devre dışı bırakır|  

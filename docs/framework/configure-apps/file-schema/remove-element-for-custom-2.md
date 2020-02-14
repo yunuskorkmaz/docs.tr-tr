@@ -7,20 +7,18 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6cdd5833e14da1ab5185e56dce1190adfee4a2bf
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: d1e4f3478f6afd6a20c01c6b57a137020ee88f5f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089035"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214762"
 ---
 # <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler ve DictionarySectionHandler için > öğesini \<kaldırın
 
 Daha önce tanımlanmış bir ayarı kaldırır.
 
-[ **\<configuration >** ](configuration-element.md) \
+[ **\<yapılandırma >** ](configuration-element.md)\
 &nbsp;&nbsp;[ **\<sectionName >** ](custom-element-2.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<kaldır >**
 
@@ -44,7 +42,7 @@ Daha önce tanımlanmış bir ayarı kaldırır.
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-Yok.
+Hiçbiri
 
 ## <a name="remarks"></a>Açıklamalar
 

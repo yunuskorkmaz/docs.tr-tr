@@ -7,30 +7,28 @@ helpviewer_keywords:
 - LoadFrom context
 - LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 89605a119e8251ffd577ff402366dff0fd4af4d7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 28ef6e12c82cf5ca56962756b9ea964d0ae9baaa
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052512"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216168"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
-Bağlam içine bir derleme yüklenirse yönetilenhataayıklamaYardımcısı(MDA)etkinleştirilir.`loadFromContext` `LoadFrom` Bu durum, çağırma <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> işleminin veya diğer benzer yöntemlerin sonucu olarak ortaya çıkabilir.  
+`loadFromContext` yönetilen hata ayıklama Yardımcısı (MDA), bir derleme `LoadFrom` bağlamına yüklenirse etkinleştirilir. Bu durum, <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> veya başka benzer yöntemlerin çağrılması sonucu olarak ortaya çıkabilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Bazı yükleyici yöntemlerinin kullanımı, derlemelerin bağlamda `LoadFrom` yüklenmesine neden olabilir. Bu bağlamın kullanılması serileştirme, atama ve bağımlılık çözümlemesi için beklenmeyen davranışlara neden olabilir. Genel olarak, bu sorunlardan kaçınmak için derlemelerin `Load` bağlamına yüklenmesi önerilir. Bir derlemenin Bu MDA ' dan ne şekilde yüklendiğini belirlemek zordur.  
+ Bazı yükleyici yöntemlerinin kullanımı, derlemelerin `LoadFrom` bağlamına yüklenmesine neden olabilir. Bu bağlamın kullanılması serileştirme, atama ve bağımlılık çözümlemesi için beklenmeyen davranışlara neden olabilir. Genel olarak, bu sorunlardan kaçınmak için derlemelerin `Load` bağlamına yüklenmesi önerilir. Bir derlemenin Bu MDA ' dan ne şekilde yüklendiğini belirlemek zordur.  
   
-## <a name="cause"></a>Sebep  
- Genellikle, `LoadFrom` genelderleme`Load` önbelleği veya özelliğigibibağlamdışındakibiryoldanyüklenmişse,birderlemebağlamınayüklenmiştir.<xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType>  
+## <a name="cause"></a>Nedeni  
+ Genellikle, genel derleme önbelleği veya <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> özelliği gibi `Load` bağlamı dışında bir yoldan yüklenmişse, bir derleme `LoadFrom` bağlamına yüklenmiştir.  
   
 ## <a name="resolution"></a>Çözüm  
- <xref:System.Reflection.Assembly.LoadFrom%2A> Çağrılara artık gerek duyulmayan uygulamalar için yapılandırma. Bunu yapmak için aşağıdaki teknikleri kullanabilirsiniz:  
+ <xref:System.Reflection.Assembly.LoadFrom%2A> çağrılarına artık gerek duyulmayan uygulamaları yapılandırın. Bunu yapmak için aşağıdaki teknikleri kullanabilirsiniz:  
   
 - Derlemeleri genel bütünleştirilmiş kod önbelleğine yükler.  
   
-- <xref:System.AppDomainSetup.ApplicationBase%2A> Derlemeleri<xref:System.AppDomain>için dizinine yerleştirin. Varsayılan etki alanı <xref:System.AppDomainSetup.ApplicationBase%2A> durumunda Dizin, işlemi başlatan yürütülebilir dosyayı içeren bir dosyadır. Bu, derlemeyi taşımak uygun değilse yeni <xref:System.AppDomain> bir oluşturma işlemi de gerektirebilir.  
+- Derlemeleri <xref:System.AppDomain><xref:System.AppDomainSetup.ApplicationBase%2A> dizinine yerleştirin. Varsayılan etki alanı söz konusu olduğunda <xref:System.AppDomainSetup.ApplicationBase%2A> Dizin, işlemi başlatan yürütülebilir dosyayı içeren bir dosyadır. Bu, derlemeyi taşımak uygun değilse yeni bir <xref:System.AppDomain> oluşturulmasını de gerektirebilir.  
   
 - Bağımlı derlemeler çalıştırılabilire göre alt dizinlerde ise, uygulama yapılandırma (. config) dosyanıza veya ikincil uygulama etki alanlarına bir yoklama yolu ekleyin.  
   
@@ -39,8 +37,8 @@ Bağlam içine bir derleme yüklenirse yönetilenhataayıklamaYardımcısı(MDA)
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
  MDA 'nin CLR üzerinde hiçbir etkisi yoktur. Yükleme isteğinin sonucu olarak kullanılan bağlamı bildirir.  
   
-## <a name="output"></a>Çıkış  
- MDA, derlemenin `LoadFrom` bağlama göre yüklendiğini bildirir. Derlemenin basit adını ve yolunu belirtir. Ayrıca, `LoadFrom` bağlamını kullanmaktan kaçınmak için azaltıcı etkenleri de önerir.  
+## <a name="output"></a>Çıktı  
+ MDA, derlemenin `LoadFrom` bağlamına yüklendiğini bildiriyor. Derlemenin basit adını ve yolunu belirtir. Ayrıca, `LoadFrom` bağlamını kullanmaktan kaçınmak için azaltıcı etkenleri de önerir.  
   
 ## <a name="configuration"></a>Yapılandırma  
   

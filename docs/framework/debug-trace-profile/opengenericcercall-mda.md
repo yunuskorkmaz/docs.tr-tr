@@ -10,24 +10,22 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), CER calls
 - generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 44b6ee3e4f74a523c1e902a4eb48a64b11eb3937
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: de1735103314dfedbabe27623f579ce2c1e728af
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960910"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217272"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 
-`openGenericCERCall` yönetilen hata ayıklama Yardımcısı, kök yöntemde genel tür değişkenleri olan kısıtlanmış bir yürütme bölgesi (CER) grafiğinin JıT derleme veya yerel görüntü oluşturma zamanı ve en az bir genel türden işlendiği konusunda uyarma için etkinleştirilir. değişkenler bir nesne başvuru türüdür.
+`openGenericCERCall` yönetilen hata ayıklama Yardımcısı, kök yöntemde genel tür değişkenleri olan kısıtlanmış bir yürütme bölgesi (CER) grafiğinin JıT derleme veya yerel görüntü oluşturma zamanında işlendiğini ve genel tür değişkenlerinden en az birinin bir nesne başvuru türü olduğunu uyarmak için etkinleştirilir.
 
 ## <a name="symptoms"></a>Belirtiler
 
 Bir iş parçacığı iptal edildiğinde veya bir uygulama etki alanı kaldırıldığında CER kodu çalışmaz.
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
 
 JıT derleme zamanında, bir nesne başvuru türü içeren bir örnekleme yalnızca temsilcisidir çünkü sonuç kodu paylaşılır ve nesne başvuru türü değişkenlerinin her biri herhangi bir nesne başvuru türü olabilir. Bu, bazı çalışma zamanı kaynaklarının zamandan önce hazırlanmasını engelleyebilir.
 
@@ -45,7 +43,7 @@ Bir CER içerebilen yöntemler için nesne başvuru türü olan genel tür deği
 
 Bu MDA, CLR üzerinde hiçbir etkisi yoktur.
 
-## <a name="output"></a>Çıkış
+## <a name="output"></a>Çıktı
 
 Bu MDA 'ın çıkış örneği aşağıda verilmiştir:
   

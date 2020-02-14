@@ -9,22 +9,20 @@ helpviewer_keywords:
 - PInvokeLog MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0883849eee12922601e50c2337bb0048d77cab68
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 12d7f60bcaedc5a97a7718610f40188547f87050
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052370"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216125"
 ---
 # <a name="pinvokelog-mda"></a>pInvokeLog MDA
-Yönetilen `pInvokeLog` hata ayıklama Yardımcısı (MDA), yürütme sırasında kullanılan her benzersiz platform çağırma imzası için etkinleştirilir.  
+`pInvokeLog` yönetilen hata ayıklama Yardımcısı (MDA), yürütme sırasında kullanılan her bir benzersiz platform çağırma imzası için etkinleştirilir.  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
  Bu MDA, CLR üzerinde hiçbir etkisi yoktur.  
   
-## <a name="output"></a>Çıkış  
+## <a name="output"></a>Çıktı  
  Yürütme sırasında kullanılan platform çağırma imzasını belirten bir ileti.  
   
 ## <a name="configuration"></a>Yapılandırma  

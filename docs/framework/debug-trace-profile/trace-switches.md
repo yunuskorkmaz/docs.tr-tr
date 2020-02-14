@@ -12,19 +12,17 @@ helpviewer_keywords:
 - trace switches
 - trace switches, creating custom
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b796d79fc6acf7d54aac7c69d376e587144d14d1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c164e26c6757094b9820af14a098229ab11eb137
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052255"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217203"
 ---
 # <a name="trace-switches"></a>İzleme Anahtarları
-İzleme anahtarları, izleme çıkışını etkinleştirmenizi, devre dışı bırakmanızı ve filtrelemenizi sağlar. Bunlar, kodunuzda var olan ve. config dosyası aracılığıyla dışarıdan yapılandırılabilecekleri nesnelerdir. .NET Framework üç tür izleme anahtarı vardır: <xref:System.Diagnostics.BooleanSwitch> sınıfı <xref:System.Diagnostics.TraceSwitch> , sınıfı ve <xref:System.Diagnostics.SourceSwitch> sınıfı. Sınıfı <xref:System.Diagnostics.BooleanSwitch> , çeşitli izleme deyimlerini etkinleştirmek veya devre dışı bırakmak için iki durumlu anahtar işlevi görür. Ve sınıfları belirli bir izleme düzeyi için bir izleme anahtarı etkinleştirmenizi sağlar, böylece <xref:System.Diagnostics.Trace> bu düzeyi ve altındaki tüm düzeyler için belirtilen iletiler görüntülenir. <xref:System.Diagnostics.TraceSource> <xref:System.Diagnostics.TraceSwitch> <xref:System.Diagnostics.SourceSwitch> Anahtarı devre dışı bırakırsanız izleme iletileri görünmez. Tüm bu sınıflar, Kullanıcı tarafından geliştirilen tüm anahtarlar gibi soyut (**MustInherit**) sınıf **anahtarından**türetilir.  
+İzleme anahtarları, izleme çıkışını etkinleştirmenizi, devre dışı bırakmanızı ve filtrelemenizi sağlar. Bunlar, kodunuzda var olan ve. config dosyası aracılığıyla dışarıdan yapılandırılabilecekleri nesnelerdir. .NET Framework üç tür izleme anahtarı vardır: <xref:System.Diagnostics.BooleanSwitch> sınıfı, <xref:System.Diagnostics.TraceSwitch> sınıfı ve <xref:System.Diagnostics.SourceSwitch> sınıfı. <xref:System.Diagnostics.BooleanSwitch> sınıfı, çeşitli izleme deyimlerini etkinleştirerek veya devre dışı bırakarak iki durumlu anahtar işlevi görür. <xref:System.Diagnostics.TraceSwitch> ve <xref:System.Diagnostics.SourceSwitch> sınıfları belirli bir izleme düzeyi için bir izleme anahtarı etkinleştirmenizi sağlar, böylece bu düzeyi ve altındaki tüm düzeyler için belirtilen <xref:System.Diagnostics.Trace> veya <xref:System.Diagnostics.TraceSource> iletileri görüntülenir. Anahtarı devre dışı bırakırsanız izleme iletileri görünmez. Tüm bu sınıflar, Kullanıcı tarafından geliştirilen tüm anahtarlar gibi soyut (**MustInherit**) sınıf **anahtarından**türetilir.  
   
- İzleme anahtarları, bilgileri filtrelemek için yararlı olabilir. Örneğin, bir veri erişim modülündeki her izleme iletisini görmek isteyebilirsiniz, ancak yalnızca uygulamanın geri kalanında hata iletileri görebilirsiniz. Bu durumda, veri erişim modülü için bir izleme anahtarı ve uygulamanın geri kalanı için bir anahtar kullanırsınız. Anahtarları uygun ayarlara göre yapılandırmak için. config dosyasını kullanarak hangi türde iz iletileri aldığınızı denetleyebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Izleme anahtarları](how-to-create-initialize-and-configure-trace-switches.md)oluşturun, başlatın ve yapılandırın.  
+ İzleme anahtarları, bilgileri filtrelemek için yararlı olabilir. Örneğin, bir veri erişim modülündeki her izleme iletisini görmek isteyebilirsiniz, ancak yalnızca uygulamanın geri kalanında hata iletileri görebilirsiniz. Bu durumda, veri erişim modülü için bir izleme anahtarı ve uygulamanın geri kalanı için bir anahtar kullanırsınız. Anahtarları uygun ayarlara göre yapılandırmak için. config dosyasını kullanarak hangi türde iz iletileri aldığınızı denetleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: oluşturma, başlatma ve yapılandırma Izleme anahtarları](how-to-create-initialize-and-configure-trace-switches.md).  
   
  Genellikle dağıtılan bir uygulama, anahtarları devre dışı bırakılmış olarak yürütülür. böylece kullanıcılar ekranda görüntülenen çok sayıda ilgisiz izleme iletisini gözlemlemeye veya uygulama çalışırken bir günlük dosyasının doldurulmasına gerek kalmaz. Uygulama yürütme sırasında bir sorun oluşursa, uygulamayı durdurabilir, anahtarları etkinleştirebilir ve uygulamayı yeniden başlatabilirsiniz. İzleme iletileri görüntülenir.  
   
@@ -49,8 +47,8 @@ ms.locfileid: "71052255"
   
 |Numaralandırılmış değer|Tamsayı değeri|Görüntülenecek ileti türü (veya belirtilen bir çıktı hedefine yazıldı)|  
 |----------------------|-------------------|---------------------------------------------------------------------------|  
-|Kapalı|0|Yok.|  
-|Hata|1\.|Yalnızca hata iletileri|  
+|Kapalı|0|Hiçbiri|  
+|Hata|1|Yalnızca hata iletileri|  
 |Uyarı|2|Uyarı iletileri ve hata iletileri|  
 |Bilgi|3|Bilgilendirici iletiler, uyarı iletileri ve hata iletileri|  
 |Ayrıntılı|4|Ayrıntılı iletiler, bilgilendirici iletiler, uyarı iletileri ve hata iletileri|  
@@ -86,5 +84,5 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İzleme Dinleyicileri](trace-listeners.md)
-- [Nasıl yapılır: Uygulama koduna Izleme deyimleri ekleme](how-to-add-trace-statements-to-application-code.md)
+- [Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme](how-to-add-trace-statements-to-application-code.md)
 - [İzleme ve İşaretleme Uygulamaları](tracing-and-instrumenting-applications.md)

@@ -7,20 +7,18 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fff5a5c2a523480f2eaebb127ec98ff6e9908acf
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: f6d860f35d22002030ffa3d09dd0d8a96116bf5e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088709"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214752"
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler ve DictionarySectionHandler için \<Clear > öğesi
 
 Bir bölümdeki önceden tanımlanmış tüm ayarları temizler.
 
-[ **\<configuration >** ](configuration-element.md) \
+[ **\<yapılandırma >** ](configuration-element.md)\
 &nbsp;&nbsp;[ **\<sectionName >** ](custom-element-2.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<temizle >**
 
@@ -32,7 +30,7 @@ Bir bölümdeki önceden tanımlanmış tüm ayarları temizler.
 
 ## <a name="attributes"></a>Öznitelikler
 
-Yok.
+Hiçbiri
 
 ## <a name="parent-element"></a>Üst öğe
 
@@ -42,7 +40,7 @@ Yok.
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-Yok.
+Hiçbiri
 
 ## <a name="remarks"></a>Açıklamalar
 

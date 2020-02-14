@@ -1,5 +1,5 @@
 ---
-title: <configSections> için <remove> öğesi
+title: <remove> için <configSections> öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/remove
@@ -7,20 +7,18 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: efc7208aa51cbf6abdb2fe151d48071c0aa95b5c
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 99d67bd621390789993caa4862e5ce379135eb92
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089046"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215385"
 ---
 # <a name="remove-element-for-configsections"></a>\<configSections için > öğesini \<kaldırın >
 
 Önceden tanımlanmış bir bölümü veya bölüm grubunu kaldırır.
 
-[ **\<configuration >** ](configuration-element.md) \
+[ **\<yapılandırma >** ](configuration-element.md)\
 &nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<kaldır >**
 
@@ -44,7 +42,7 @@ ms.locfileid: "74089046"
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-Yok.
+Hiçbiri
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -69,7 +67,7 @@ Aşağıdaki makine yapılandırma dosyası kodu, **\<samplesection >** bölüm�
 </configuration>
 ```
 
-Aşağıdaki uygulama yapılandırma dosyası kodu **\<samplesection >** bölümünü kaldırır. Kaldırma işleminden sonra uygulama, **\<sampleSection**içindeki ayarları alamaz.
+Aşağıdaki uygulama yapılandırma dosyası kodu **\<samplesection >** bölümünü kaldırır. Kaldırma işleminden sonra uygulama, **>\<sampleSection**içindeki ayarları alamaz.
 
 ```xml
 <!-- Application configuration file -->

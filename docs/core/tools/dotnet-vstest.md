@@ -1,14 +1,13 @@
 ---
 title: DotNet VSTest komutu
 description: DotNet VSTest komutu bir proje ve tüm bağımlılıklarını oluşturur.
-author: mairaw
 ms.date: 05/30/2018
-ms.openlocfilehash: ffe3807be2c35fb4d6b46b83ed84200433f551d8
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c3838617ed539cf56f2840b826e9de58833820fd
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117517"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215306"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -16,7 +15,7 @@ ms.locfileid: "71117517"
 
 ## <a name="name"></a>Ad
 
-`dotnet-vstest`-Belirtilen dosyalardan testleri çalıştırır.
+`dotnet-vstest`, belirtilen dosyalardan testleri çalıştırır.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -51,9 +50,9 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 ## <a name="description"></a>Açıklama
 
-Komut `dotnet-vstest` , otomatik birim `VSTest.Console` testlerini çalıştırmak için komut satırı uygulamasını çalıştırır.
+`dotnet-vstest` komutu, otomatik birim testlerini çalıştırmak için `VSTest.Console` komut satırı uygulamasını çalıştırır.
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
 `TEST_FILE_NAMES`
 
@@ -77,11 +76,11 @@ Test çalıştırmasında belirli bir yoldan (varsa) özel test bağdaştırıc�
 
 `--Platform|/Platform:<Platform type>`
 
-Test yürütmesi için kullanılan hedef platform mimarisi. Geçerli değerler `x86`, `x64`, ve `ARM`.
+Test yürütmesi için kullanılan hedef platform mimarisi. Geçerli değerler `x86`, `x64`ve `ARM`.
 
 `--Framework|/Framework:<Framework Version>`
 
-Test yürütmesi için kullanılan hedef .NET Framework sürümü. Geçerli değer `.NETFramework,Version=v4.6` örnekleri veya `.NETCoreApp,Version=v1.0`. Desteklenen `Framework40`diğer değerler `Framework45` ,`FrameworkCore10`, ve`FrameworkUap10`' dir.
+Test yürütmesi için kullanılan hedef .NET Framework sürümü. Geçerli değer örnekleri `.NETFramework,Version=v4.6` veya `.NETCoreApp,Version=v1.0`. Desteklenen diğer değerler `Framework40`, `Framework45`, `FrameworkCore10`ve `FrameworkUap10`.
 
 `--Parallel|/Parallel`
 
@@ -89,7 +88,7 @@ Testleri paralel olarak yürütün. Varsayılan olarak, makinedeki tüm kullanı
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Verilen ifadeyle eşleşen testleri çalıştırın. `<Expression>`biçimindedir `<property>Operator<value>[|&<Expression>]`, burada işleci `=`, `!=`veya `~`' den biridir. İşlecinde `~` ' Contains ' semantiği var ve gibi `DisplayName`dize özellikleri için geçerlidir. Parantez `()` alt ifadeleri gruplandırmak için kullanılır.
+Verilen ifadeyle eşleşen testleri çalıştırın. `<Expression>` biçim `<property>Operator<value>[|&<Expression>]`, burada Işleç `=`, `!=`veya `~`biridir. İşleç `~` ' Contains ' semantiğine sahiptir ve `DisplayName`gibi dize özellikleri için geçerlidir. Parantez `()` alt ifadeleri gruplandırmak için kullanılır.
 
 `-?|--Help|/?|/Help`
 
@@ -99,7 +98,7 @@ Komut için kısa bir yardım yazdırır.
 
 Test sonuçları için bir günlükçü belirtin.
 
-* Team Foundation Server için test sonuçlarını yayınlamak için `TfsPublisher` günlükçü sağlayıcısını kullanın:
+* Test sonuçlarını Team Foundation Server yayımlamak için `TfsPublisher` günlükçü sağlayıcısını kullanın:
 
   ```console
   /logger:TfsPublisher;
@@ -111,7 +110,7 @@ Test sonuçları için bir günlükçü belirtin.
       [;RunTitle=<title>]
   ```
 
-* Sonuçları bir Visual Studio test sonuçları dosyasına (trx) kaydetmek için `trx` günlükçü sağlayıcısını kullanın. Bu anahtar, test sonuçları dizininde verilen günlük dosyası adına sahip bir dosya oluşturur. `LogFileName` Sağlanmazsa, test sonuçlarını tutmak için benzersiz bir dosya adı oluşturulur.
+* Sonuçları bir Visual Studio Test Sonuçları dosyasına (TRX) kaydetmek için `trx` günlükçü sağlayıcısını kullanın. Bu anahtar, test sonuçları dizininde verilen günlük dosyası adına sahip bir dosya oluşturur. `LogFileName` sağlanmazsa, test sonuçlarını tutmak için benzersiz bir dosya adı oluşturulur.
 
   ```console
   /logger:trx [;LogFileName=<Defaults to unique file name>]
@@ -147,7 +146,7 @@ Daha fazla seçenek için yanıt dosyasını okur.
 
 `args`
 
-Bağdaştırıcıya geçirilecek ek bağımsız değişkenleri belirtir. Bağımsız değişkenler, formun `<n>=<v>`ad-değer çiftleri olarak belirtilir, burada `<n>` bağımsız değişken adıdır ve `<v>` bağımsız değişken değeridir. Birden çok bağımsız değişkeni ayırmak için boşluk kullanın.
+Bağdaştırıcıya geçirilecek ek bağımsız değişkenleri belirtir. Bağımsız değişkenler `<n>=<v>`biçim-değer çiftleri olarak belirtilir; burada `<n>` bağımsız değişken adıdır ve `<v>` bağımsız değişken değeridir. Birden çok bağımsız değişkeni ayırmak için boşluk kullanın.
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2,0](#tab/netcore20)
 
@@ -165,11 +164,11 @@ Test çalıştırmasında belirli bir yoldan (varsa) özel test bağdaştırıc�
 
 `--Platform|/Platform:<Platform type>`
 
-Test yürütmesi için kullanılan hedef platform mimarisi. Geçerli değerler `x86`, `x64`, ve `ARM`.
+Test yürütmesi için kullanılan hedef platform mimarisi. Geçerli değerler `x86`, `x64`ve `ARM`.
 
 `--Framework|/Framework:<Framework Version>`
 
-Test yürütmesi için kullanılan hedef .NET Framework sürümü. Geçerli değer `.NETFramework,Version=v4.6` örnekleri veya `.NETCoreApp,Version=v1.0`. Desteklenen diğer değerler, `Framework40` `Framework45`ve `FrameworkCore10`' dir.
+Test yürütmesi için kullanılan hedef .NET Framework sürümü. Geçerli değer örnekleri `.NETFramework,Version=v4.6` veya `.NETCoreApp,Version=v1.0`. Desteklenen diğer değerler `Framework40`, `Framework45`ve `FrameworkCore10`.
 
 `--Parallel|/Parallel`
 
@@ -177,7 +176,7 @@ Testleri paralel olarak yürütün. Varsayılan olarak, makinedeki tüm kullanı
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Verilen ifadeyle eşleşen testleri çalıştırın. `<Expression>`biçimindedir `<property>Operator<value>[|&<Expression>]`, burada işleci `=`, `!=`veya `~`' den biridir. İşlecinde `~` ' Contains ' semantiği var ve gibi `DisplayName`dize özellikleri için geçerlidir. Parantez `()` alt ifadeleri gruplandırmak için kullanılır.
+Verilen ifadeyle eşleşen testleri çalıştırın. `<Expression>` biçim `<property>Operator<value>[|&<Expression>]`, burada Işleç `=`, `!=`veya `~`biridir. İşleç `~` ' Contains ' semantiğine sahiptir ve `DisplayName`gibi dize özellikleri için geçerlidir. Parantez `()` alt ifadeleri gruplandırmak için kullanılır.
 
 `-?|--Help|/?|/Help`
 
@@ -187,7 +186,7 @@ Komut için kısa bir yardım yazdırır.
 
 Test sonuçları için bir günlükçü belirtin.
 
-* Team Foundation Server için test sonuçlarını yayınlamak için `TfsPublisher` günlükçü sağlayıcısını kullanın:
+* Test sonuçlarını Team Foundation Server yayımlamak için `TfsPublisher` günlükçü sağlayıcısını kullanın:
 
   ```console
   /logger:TfsPublisher;
@@ -199,7 +198,7 @@ Test sonuçları için bir günlükçü belirtin.
       [;RunTitle=<title>]
   ```
 
-* Sonuçları bir Visual Studio test sonuçları dosyasına (trx) kaydetmek için `trx` günlükçü sağlayıcısını kullanın. Bu anahtar, test sonuçları dizininde verilen günlük dosyası adına sahip bir dosya oluşturur. `LogFileName` Sağlanmazsa, test sonuçlarını tutmak için benzersiz bir dosya adı oluşturulur.
+* Sonuçları bir Visual Studio Test Sonuçları dosyasına (TRX) kaydetmek için `trx` günlükçü sağlayıcısını kullanın. Bu anahtar, test sonuçları dizininde verilen günlük dosyası adına sahip bir dosya oluşturur. `LogFileName` sağlanmazsa, test sonuçlarını tutmak için benzersiz bir dosya adı oluşturulur.
 
   ```console
   /logger:trx [;LogFileName=<Defaults to unique file name>]
@@ -223,7 +222,7 @@ Test platformu için ayrıntılı günlükleri etkinleştirilir. Günlükler, be
 
 `args`
 
-Bağdaştırıcıya geçirilecek ek bağımsız değişkenleri belirtir. Bağımsız değişkenler, formun `<n>=<v>`ad-değer çiftleri olarak belirtilir, burada `<n>` bağımsız değişken adıdır ve `<v>` bağımsız değişken değeridir. Birden çok bağımsız değişkeni ayırmak için boşluk kullanın.
+Bağdaştırıcıya geçirilecek ek bağımsız değişkenleri belirtir. Bağımsız değişkenler `<n>=<v>`biçim-değer çiftleri olarak belirtilir; burada `<n>` bağımsız değişken adıdır ve `<v>` bağımsız değişken değeridir. Birden çok bağımsız değişkeni ayırmak için boşluk kullanın.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
@@ -241,11 +240,11 @@ Test çalıştırmasında belirli bir yoldan (varsa) özel test bağdaştırıc�
 
 `--Platform|/Platform:<Platform type>`
 
-Test yürütmesi için kullanılan hedef platform mimarisi. Geçerli değerler `x86`, `x64`, ve `ARM`.
+Test yürütmesi için kullanılan hedef platform mimarisi. Geçerli değerler `x86`, `x64`ve `ARM`.
 
 `--Framework|/Framework:<Framework Version>`
 
-Test yürütmesi için kullanılan hedef .NET Framework sürümü. Geçerli değer `.NETFramework,Version=v4.6` örnekleri veya `.NETCoreApp,Version=v1.0`. Desteklenen diğer değerler, `Framework40` `Framework45`ve `FrameworkCore10`' dir.
+Test yürütmesi için kullanılan hedef .NET Framework sürümü. Geçerli değer örnekleri `.NETFramework,Version=v4.6` veya `.NETCoreApp,Version=v1.0`. Desteklenen diğer değerler `Framework40`, `Framework45`ve `FrameworkCore10`.
 
 `--Parallel|/Parallel`
 
@@ -253,7 +252,7 @@ Testleri paralel olarak yürütün. Varsayılan olarak, makinedeki tüm kullanı
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Verilen ifadeyle eşleşen testleri çalıştırın. `<Expression>`biçimindedir `<property>Operator<value>[|&<Expression>]`, burada işleci `=`, `!=`veya `~`' den biridir. İşlecinde `~` ' Contains ' semantiği var ve gibi `DisplayName`dize özellikleri için geçerlidir. Parantez `()` alt ifadeleri gruplandırmak için kullanılır.
+Verilen ifadeyle eşleşen testleri çalıştırın. `<Expression>` biçim `<property>Operator<value>[|&<Expression>]`, burada Işleç `=`, `!=`veya `~`biridir. İşleç `~` ' Contains ' semantiğine sahiptir ve `DisplayName`gibi dize özellikleri için geçerlidir. Parantez `()` alt ifadeleri gruplandırmak için kullanılır.
 
 `-?|--Help|/?|/Help`
 
@@ -263,7 +262,7 @@ Komut için kısa bir yardım yazdırır.
 
 Test sonuçları için bir günlükçü belirtin.
 
-* Team Foundation Server için test sonuçlarını yayınlamak için `TfsPublisher` günlükçü sağlayıcısını kullanın:
+* Test sonuçlarını Team Foundation Server yayımlamak için `TfsPublisher` günlükçü sağlayıcısını kullanın:
 
   ```console
   /logger:TfsPublisher;
@@ -275,7 +274,7 @@ Test sonuçları için bir günlükçü belirtin.
       [;RunTitle=<title>]
   ```
 
-* Sonuçları bir Visual Studio test sonuçları dosyasına (trx) kaydetmek için `trx` günlükçü sağlayıcısını kullanın. Bu anahtar, test sonuçları dizininde verilen günlük dosyası adına sahip bir dosya oluşturur. `LogFileName` Sağlanmazsa, test sonuçlarını tutmak için benzersiz bir dosya adı oluşturulur.
+* Sonuçları bir Visual Studio Test Sonuçları dosyasına (TRX) kaydetmek için `trx` günlükçü sağlayıcısını kullanın. Bu anahtar, test sonuçları dizininde verilen günlük dosyası adına sahip bir dosya oluşturur. `LogFileName` sağlanmazsa, test sonuçlarını tutmak için benzersiz bir dosya adı oluşturulur.
 
   ```console
   /logger:trx [;LogFileName=<Defaults to unique file name>]
@@ -299,28 +298,28 @@ Test platformu için ayrıntılı günlükleri etkinleştirilir. Günlükler, be
 
 `args`
 
-Bağdaştırıcıya geçirilecek ek bağımsız değişkenleri belirtir. Bağımsız değişkenler, formun `<n>=<v>`ad-değer çiftleri olarak belirtilir, burada `<n>` bağımsız değişken adıdır ve `<v>` bağımsız değişken değeridir. Birden çok bağımsız değişkeni ayırmak için boşluk kullanın.
+Bağdaştırıcıya geçirilecek ek bağımsız değişkenleri belirtir. Bağımsız değişkenler `<n>=<v>`biçim-değer çiftleri olarak belirtilir; burada `<n>` bağımsız değişken adıdır ve `<v>` bağımsız değişken değeridir. Birden çok bağımsız değişkeni ayırmak için boşluk kullanın.
 
 ---
 
 ## <a name="examples"></a>Örnekler
 
-Testleri `mytestproject.dll`çalıştırma:
+`mytestproject.dll`Testleri Çalıştır:
 
 `dotnet vstest mytestproject.dll`
 
-Özel adla özel `mytestproject.dll`klasöre dışarı aktarmak için içindeki testleri çalıştırın:
+Testleri `mytestproject.dll`' de Çalıştır, özel bir klasöre dışarı aktarma özel adı:
 
 `dotnet vstest mytestproject.dll --logger:"trx;LogFileName=custom_file_name.trx" --ResultsDirectory:custom/file/path`
 
-Testleri ve `mytestproject.dll` `myothertestproject.exe`içinde çalıştırın:
+`mytestproject.dll` ve `myothertestproject.exe`testleri çalıştırın:
 
 `dotnet vstest mytestproject.dll myothertestproject.exe`
 
-Testleri `TestMethod1` Çalıştır:
+`TestMethod1` testlerini Çalıştır:
 
 `dotnet vstest /Tests:TestMethod1`
 
-Çalıştır `TestMethod1` ve`TestMethod2` testler:
+`TestMethod1` Çalıştır ve Testleri `TestMethod2`:
 
 `dotnet vstest /Tests:TestMethod1,TestMethod2`

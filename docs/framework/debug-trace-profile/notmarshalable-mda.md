@@ -11,31 +11,29 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), marshaling
 - notMarshalable MDA
 ms.assetid: 96e7b2c1-843f-4d64-b519-740c3a18b50a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ddb6b0b5c2248d215245e0f881c8e7c91b13e480
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 45db0e70b2446fa6e3175409bcc3844042f0acc0
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052425"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217279"
 ---
 # <a name="notmarshalable-mda"></a>notMarshalable MDA
-Yönetilen hata ayıklama Yardımcısı (MDA), ortak dil çalışma zamanı (CLR) geçerli bir kayıtlı proxy/saplama veya hatalı `IMarshal` bir arabirim uygulama olmadan bir com arabirim işaretçisi ile karşılaştığında etkinleştirilir `notMarshalable` arabirim bağlamları arasında sıralama.  
+`notMarshalable` yönetilen hata ayıklama Yardımcısı (MDA), ortak dil çalışma zamanı (CLR), geçerli bir kayıtlı ara sunucu/saplama olmadan bir COM arabirim işaretçisi veya bağlamı arasında arabirim sıralaması denenirken yanlış bir `IMarshal` arabirim uygulamasıyla karşılaştığında etkinleştirilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
  Çağrılara hizmet verilmez veya COM arabirim işaretçileri için yanlış bağlamda çağrılar oluşur.  
   
-## <a name="cause"></a>Sebep  
- Geçerli kayıtlı ara sunucu/saplama yok ya da `IMarshal` arabirim bağlamlarda hazırlanmaya çalışılırken yanlış.  
+## <a name="cause"></a>Nedeni  
+ Arabirim bağlamlarda hazırlanmaya çalışılırken geçerli kayıtlı ara sunucu/saplama yok ya da yanlış `IMarshal`.  
   
 ## <a name="resolution"></a>Çözüm  
- Kayıtlı bir ara sunucu Saplamasının olduğundan ve `IMarshal` uygulamanın geçerli olduğundan emin olun.  
+ Kayıtlı bir ara sunucu Saplamasının olduğundan ve `IMarshal` uygulamasının geçerli olduğundan emin olun.  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
  Bu MDA çalışma zamanı üzerinde hiçbir etkisi yoktur.  
   
-## <a name="output"></a>Çıkış  
+## <a name="output"></a>Çıktı  
  Sorunu açıklayan bir ileti.  
   
 ## <a name="configuration"></a>Yapılandırma  

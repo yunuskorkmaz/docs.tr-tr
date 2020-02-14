@@ -12,22 +12,20 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - unmanaged to managed garbage collection
 ms.assetid: 103eb3a3-1cf0-4406-8a9a-a7798fdc22d1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1679f87276262a08f5717ea81d263f4600542971
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dd4080870ae88da8d4e2055369cd36f3981f2eac
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052770"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216449"
 ---
 # <a name="gcunmanagedtomanaged-mda"></a>gcUnmanagedToManaged MDA
-Yönetilen `gcUnmanagedToManaged` hata ayıklama Yardımcısı (MDA), bir iş parçacığı yönetilmeyenden yönetilen koddan her geçiş yaptığında çöp toplamaya neden olur.  
+`gcUnmanagedToManaged` yönetilen hata ayıklama Yardımcısı (MDA), bir iş parçacığı yönetilmeyenden yönetilen koddan her geçiş yaptığında çöp toplamaya neden olur.  
   
 ## <a name="symptoms"></a>Belirtiler  
  COM ve platform Invoke kullanılarak yönetilmeyen Kullanıcı bileşenlerini çalıştıran bir uygulama, CLR 'de belirleyici olmayan bir erişim ihlaline neden oluyor.  
   
-## <a name="cause"></a>Sebep  
+## <a name="cause"></a>Nedeni  
  Bir uygulama yönetilmeyen Kullanıcı bileşenleri çalıştırıyorsa, bu bileşenler atık toplanan yığını bozmuş olabilir. Bu, çöp toplayıcı nesne grafiğine kılavuzluk etmeye çalıştığında CLR 'de erişim ihlaline neden olur.  
   
 ## <a name="resolution"></a>Çözüm  
@@ -36,7 +34,7 @@ Yönetilen `gcUnmanagedToManaged` hata ayıklama Yardımcısı (MDA), bir iş pa
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
  Bir iş parçacığı yönetilmeyenden yönetilen koddan her geçiş yaptığında çöp toplamaya neden olur.  
   
-## <a name="output"></a>Çıkış  
+## <a name="output"></a>Çıktı  
  Bu MDA hiçbir çıkış üretmez.  
   
 ## <a name="configuration"></a>Yapılandırma  

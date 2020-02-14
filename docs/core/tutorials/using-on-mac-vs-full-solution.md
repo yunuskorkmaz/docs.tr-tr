@@ -1,14 +1,13 @@
 ---
 title: Mac için Visual Studio kullanarak tüm .NET Core çözümü oluşturma
 description: Bu makalede, yeniden kullanılabilir bir kitaplık ve birim testi içeren bir .NET Core çözümü oluşturma işlemi adım adım açıklanmaktadır.
-author: mairaw
 ms.date: 12/19/2019
-ms.openlocfilehash: f4284cd4c3c8b358b87c31c0fd5c067b1e7fb8a2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dea23da33912de849f0dcbe1e2f6fa3edb3a5e24
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715358"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215191"
 ---
 # <a name="build-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak macOS 'ta kapsamlı bir .NET Core çözümü oluşturun
 
@@ -22,7 +21,7 @@ Bu öğreticide, bir arama sözcüğünü ve kullanıcıdan bir metin dizesini k
 > - Mac için Visual Studio, menüden **sorun bildirmek** > **Yardım** ' ı veya bir hata raporu dosyalayarak bir pencere açan hoş geldiniz ekranından **sorun bildir** ' i seçin. Geri bildiriminizi [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/spaces/41/index.html) portalında izleyebilirsiniz.
 > - Bir öneride bulunmak için, **yardım** > menüden **bir öneri sağlayın** ya da size [Mac için Visual Studio Geliştirici topluluğu Web sayfasına](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)götüren hoş geldiniz ekranından **bir öneri sağlayın** .
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 - [.NET Core SDK 3,1 veya üzeri](https://dotnet.microsoft.com/download)
 - [Mac için Visual Studio 2019](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
@@ -36,7 +35,7 @@ Bu öğreticide, bir arama sözcüğünü ve kullanıcıdan bir metin dizesini k
    > [!div class="mx-imgBorder"]
    > Yeni proje iletişim kutusunu Mac için Visual Studio ![](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project.png)
 
-1. Projeyi "TextUtils" ("metin yardımcı programları" için kısa bir ad) ve "WordCounter" çözümünü adlandırın. **Çözüm dizini içinde bir proje dizini oluşturma** onay işaretli kalsın. Seçin **oluşturma**.
+1. Projeyi "TextUtils" ("metin yardımcı programları" için kısa bir ad) ve "WordCounter" çözümünü adlandırın. **Çözüm dizini içinde bir proje dizini oluşturma** onay işaretli kalsın. **Oluştur**'u seçin.
 
    > [!div class="mx-imgBorder"]
    > Yeni ![Mac için Visual Studio proje iletişim seçeneklerini](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project-options.png)

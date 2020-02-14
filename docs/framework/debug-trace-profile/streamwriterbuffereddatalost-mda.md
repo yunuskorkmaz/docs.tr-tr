@@ -10,23 +10,21 @@ helpviewer_keywords:
 - data buffering problems
 - streamWriterBufferedDataLost MDA
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c3dcdd329318d48efa203d2b9dcbfe3501d94b3e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 82940b40b302f4a928547f2e6a0c285727e13934
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052275"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216099"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost MDA
-<xref:System.IO.StreamWriter.Flush%2A> <xref:System.IO.StreamWriter> <xref:System.IO.StreamWriter> <xref:System.IO.StreamWriter.Close%2A> Yönetilen hata ayıklama Yardımcısı (MDA), öğesine yazıldığında etkinleştirilir, ancak ya da yöntemi daha sonra örneği yok edildiğinde çağrılır. `streamWriterBufferedDataLost` Bu MDA etkin olduğunda, çalışma zamanı, arabelleğe alınmış verilerin hala içinde <xref:System.IO.StreamWriter>varolup olmadığını belirler. Arabelleğe alınan veriler varsa, MDA etkin olur. <xref:System.GC.Collect%2A> Ve<xref:System.GC.WaitForPendingFinalizers%2A> yöntemlerini çağırmak, sonlandırıcıları çalıştırmaya zorlayabilir. Sonlandırıcılar, normalde Rastgele zamanlarda çalışır ve muhtemelen işlemden çıkılmaz. Bu MDA etkin olan sonlandırıcıları açıkça çalıştırmak, bu tür bir sorunu daha güvenilir bir şekilde yeniden oluşturmaya yardımcı olur.  
+`streamWriterBufferedDataLost` yönetilen hata ayıklama Yardımcısı (MDA), bir <xref:System.IO.StreamWriter> yazıldığında etkinleştirilir, ancak <xref:System.IO.StreamWriter> örneği yok etmeden önce <xref:System.IO.StreamWriter.Flush%2A> veya <xref:System.IO.StreamWriter.Close%2A> yöntemi daha sonra çağrılmaz. Bu MDA etkin olduğunda, çalışma zamanı, arabelleğe alınmış verilerin <xref:System.IO.StreamWriter>içinde hala mevcut olup olmadığını belirler. Arabelleğe alınan veriler varsa, MDA etkin olur. <xref:System.GC.Collect%2A> ve <xref:System.GC.WaitForPendingFinalizers%2A> yöntemlerinin çağrılması, sonlandırıcıları çalıştırmaya zorlayabilir. Sonlandırıcılar, normalde Rastgele zamanlarda çalışır ve muhtemelen işlemden çıkılmaz. Bu MDA etkin olan sonlandırıcıları açıkça çalıştırmak, bu tür bir sorunu daha güvenilir bir şekilde yeniden oluşturmaya yardımcı olur.  
   
 ## <a name="symptoms"></a>Belirtiler  
- A <xref:System.IO.StreamWriter> bir dosyaya son 1 – 4 KB veri yazmaz.  
+ <xref:System.IO.StreamWriter>, bir dosyaya son 1 – 4 KB 'lık verileri yazmaz.  
   
-## <a name="cause"></a>Sebep  
- Verileri dahili olarak arabelleğe <xref:System.IO.StreamWriter.Close%2A> <xref:System.IO.StreamWriter.Flush%2A> alır. Bu, ya da yönteminin, arabelleğe alınan verileri temeldeki veri deposuna yazmak üzere çağrılması gerekir. <xref:System.IO.StreamWriter> Ya da <xref:System.IO.StreamWriter.Flush%2A> uygun bir şekilde çağrılmamışsa <xref:System.IO.StreamWriter> , örnekte ara belleğe alınan veriler beklenen şekilde yazılmayabilir. <xref:System.IO.StreamWriter.Close%2A>  
+## <a name="cause"></a>Nedeni  
+ <xref:System.IO.StreamWriter> verileri dahili olarak arabelleğe alır, bu, arabelleğe alınan verileri temeldeki veri deposuna yazmak için <xref:System.IO.StreamWriter.Close%2A> veya <xref:System.IO.StreamWriter.Flush%2A> yönteminin çağrılması gerekir. <xref:System.IO.StreamWriter.Close%2A> veya <xref:System.IO.StreamWriter.Flush%2A> uygun şekilde çağrılmamışsa, <xref:System.IO.StreamWriter> örneğinde arabelleğe alınan veriler beklenen şekilde yazılamaz.  
   
  Aşağıda, bu MDA 'ın yakalandığı kötü yazılmış kodun bir örneği verilmiştir.  
   
@@ -48,7 +46,7 @@ GC.WaitForPendingFinalizers();
 ```  
   
 ## <a name="resolution"></a>Çözüm  
- Bir uygulamayı veya bir <xref:System.IO.StreamWriter.Close%2A> <xref:System.IO.StreamWriter> <xref:System.IO.StreamWriter.Flush%2A> örneğine<xref:System.IO.StreamWriter>sahip herhangi bir kod bloğunu kapatmadan önce veya ' de ' i çağırdığınızdan emin olun. Bunu elde etmek için en iyi mekanizmalardan biri, örneğin C# `using` , yazıcı <xref:System.IO.StreamWriter.Dispose%2A> yönteminin çağrılmasını ve`Using` örneğin doğru şekilde kapatılmasını sağlamak için bir blok (Visual Basic) ile örneği oluşturmaktır.  
+ Bir uygulamayı veya bir <xref:System.IO.StreamWriter>örneğine sahip herhangi bir kod bloğunu kapatmadan önce <xref:System.IO.StreamWriter> <xref:System.IO.StreamWriter.Close%2A> veya <xref:System.IO.StreamWriter.Flush%2A> çağırdığınızdan emin olun. Bunu elde etmek için en iyi mekanizmalardan biri, örneğin Visual Basic `using` bir C# blok (`Using`) oluşturarak Örneğin, yazıcı için <xref:System.IO.StreamWriter.Dispose%2A> yönteminin çağrılmasını ve örneğin doğru şekilde kapatılmasını sağlamak olacaktır.  
   
 ```csharp
 using(StreamWriter sw = new StreamWriter("file.txt"))   
@@ -57,7 +55,7 @@ using(StreamWriter sw = new StreamWriter("file.txt"))
 }  
 ```  
   
- Aşağıdaki kod, `try/finally` `using`yerine kullanılarak aynı çözümü gösterir.  
+ Aşağıdaki kod, `using`yerine `try/finally` kullanarak aynı çözümü gösterir.  
   
 ```csharp
 StreamWriter sw;  
@@ -73,7 +71,7 @@ finally
 }  
 ```  
   
- Bu çözümlerin hiçbiri kullanılabilir değilse <xref:System.IO.StreamWriter> (örneğin, bir statik değişkende depolanıyorsa ve yaşam süresinin sonunda kodu kolayca çalıştıramıyorsa), <xref:System.IO.StreamWriter.Flush%2A> <xref:System.IO.StreamWriter> en son kullanımı veya ayarı <xref:System.IO.StreamWriter.AutoFlush%2A> ilk kullanımı `true` öncesindeki özelliğin bu sorundan kaçınmak gerekir.  
+ Bu çözümlerin hiçbiri kullanılabilir (örneğin, bir <xref:System.IO.StreamWriter> statik bir değişkende depolanıyorsa ve yaşam süresinin sonunda kodu kolayca çalıştıramıyorsa), son kullanıldıktan sonra <xref:System.IO.StreamWriter> <xref:System.IO.StreamWriter.Flush%2A> çağırmak veya ilk kullanılmadan önce <xref:System.IO.StreamWriter.AutoFlush%2A> özelliğini `true` olarak ayarlamak bu sorundan kaçınmak zorunda kalmamak.  
   
 ```csharp
 private static StreamWriter log;  
@@ -91,7 +89,7 @@ static WriteToFile()
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
  Bu MDA çalışma zamanı üzerinde hiçbir etkisi yoktur.  
   
-## <a name="output"></a>Çıkış  
+## <a name="output"></a>Çıktı  
  Bu ihlalin oluştuğunu belirten bir ileti.  
   
 ## <a name="configuration"></a>Yapılandırma  

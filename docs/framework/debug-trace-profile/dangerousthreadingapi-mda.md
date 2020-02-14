@@ -10,35 +10,33 @@ helpviewer_keywords:
 - Suspend method
 - threading [.NET Framework], managed debugging assistants
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 860f524820e6b92e58f4a593e2ddf651a5e7094d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4e7e858dfb85eeccbadb23da60d081d1407e89d8
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052904"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216679"
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI MDA
-Yönetilen hata ayıklama Yardımcısı (MDA), <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> yöntem geçerli iş parçacığı dışında bir iş parçacığında çağrıldığında etkinleştirilir. `dangerousThreadingAPI`  
+`dangerousThreadingAPI` yönetilen hata ayıklama Yardımcısı (MDA), <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> yöntemi geçerli iş parçacığı dışında bir iş parçacığında çağrıldığında etkinleştirilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
  Bir uygulama süresiz olarak yanıt vermemeye başlıyor veya askıda kalıyor. Sistem veya uygulama verileri, geçici olarak veya bir uygulama kapatıldıktan sonra bile öngörülemeyen bir durumda kalabilir. Bazı işlemler beklendiği gibi tamamlanmıyor.  
   
  Belirtiler, soruna bağlı rasgelelik nedeniyle büyük ölçüde farklılık gösterebilir.  
   
-## <a name="cause"></a>Sebep  
- İş parçacığı, <xref:System.Threading.Thread.Suspend%2A> yöntemi kullanılarak başka bir iş parçacığı tarafından zaman uyumsuz olarak askıya alındı. Bir işlemin ortasında olabilecek başka bir iş parçacığını askıya almanın ne zaman güvenli olduğunu belirlemenin bir yolu yoktur. İş parçacığını askıya almak, verilerin bozulmasına veya ınvarıant 'ların bozulmasına yol açabilir. Bir iş parçacığının askıya alınma durumuna yerleştirilmesi ve <xref:System.Threading.Thread.Resume%2A> yöntemi kullanılarak hiçbir şekilde sürdürülmemesi, uygulamanın süresiz olarak askıda kalması ve muhtemelen uygulama verilerine zarar verebiliyor olması gerekir. Bu yöntemler artık kullanılmıyor olarak işaretlendi.  
+## <a name="cause"></a>Nedeni  
+ Bir iş parçacığı <xref:System.Threading.Thread.Suspend%2A> yöntemi kullanılarak başka bir iş parçacığı tarafından zaman uyumsuz olarak askıya alındı. Bir işlemin ortasında olabilecek başka bir iş parçacığını askıya almanın ne zaman güvenli olduğunu belirlemenin bir yolu yoktur. İş parçacığını askıya almak, verilerin bozulmasına veya ınvarıant 'ların bozulmasına yol açabilir. Bir iş parçacığının askıya alınma durumuna yerleştirilmesi ve <xref:System.Threading.Thread.Resume%2A> yöntemi kullanılarak hiçbir şekilde sürdürülmemesi, uygulamanın süresiz olarak askıda kalması ve muhtemelen uygulama verilerine zarar verebiliyor olması gerekir. Bu yöntemler artık kullanılmıyor olarak işaretlendi.  
   
- Eşitleme temelleri hedef iş parçacığı tarafından tutuluyorsa, askıya alma sırasında tutuluyor olarak kalırlar. Bu, kilitlenmeyle <xref:System.Threading.Thread.Suspend%2A>ilgili başka bir iş parçacığı olmalıdır, örneğin iş parçacığı, temel üzerinde bir kilit elde etmeye çalışır. Bu durumda, sorun kendi kendine bir kilitlenme olarak bildirim gösterir.  
+ Eşitleme temelleri hedef iş parçacığı tarafından tutuluyorsa, askıya alma sırasında tutuluyor olarak kalırlar. Bu, kilitlenmeleri başka bir iş parçacığı olmalıdır, örneğin <xref:System.Threading.Thread.Suspend%2A>yapan iş parçacığı temel üzerinde bir kilit elde etmeye çalışır. Bu durumda, sorun kendi kendine bir kilitlenme olarak bildirim gösterir.  
   
 ## <a name="resolution"></a>Çözüm  
- <xref:System.Threading.Thread.Suspend%2A> Ve<xref:System.Threading.Thread.Resume%2A>kullanımını gerektiren tasarımlardan kaçının. İş parçacıkları arasındaki ortak işlem için,,, <xref:System.Threading.Monitor>veya C# `lock` deyimleri gibi <xref:System.Threading.ReaderWriterLock>eşitleme <xref:System.Threading.Mutex>temel öğelerini kullanın. Bu yöntemleri kullanmanız gerekiyorsa, zaman penceresini küçültün ve iş parçacığı askıya alınma durumundayken yürütülen kod miktarını en aza indirin.  
+ <xref:System.Threading.Thread.Suspend%2A> ve <xref:System.Threading.Thread.Resume%2A>kullanımını gerektiren tasarımlardan kaçının. İş parçacıkları arasındaki ortak işlem için <xref:System.Threading.Monitor>, <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Mutex>veya C# `lock` ifadesiyle ilgili eşitleme temel öğelerini kullanın. Bu yöntemleri kullanmanız gerekiyorsa, zaman penceresini küçültün ve iş parçacığı askıya alınma durumundayken yürütülen kod miktarını en aza indirin.  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
  Bu MDA, CLR üzerinde hiçbir etkisi yoktur. Yalnızca tehlikeli iş parçacığı oluşturma işlemleriyle ilgili verileri raporlar.  
   
-## <a name="output"></a>Çıkış  
+## <a name="output"></a>Çıktı  
  MDA, etkinleştirilmesinin nedeni olan tehlikeli iş parçacığı yöntemini tanımlar.  
   
 ## <a name="configuration"></a>Yapılandırma  
@@ -52,7 +50,7 @@ Yönetilen hata ayıklama Yardımcısı (MDA), <xref:System.Threading.Thread.Sus
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, <xref:System.Threading.Thread.Suspend%2A> `dangerousThreadingAPI`etkinleştirmesine neden olan yöntemine yapılan çağrıyı gösterir.  
+ Aşağıdaki kod örneği, `dangerousThreadingAPI`etkinleştirmesine neden olan <xref:System.Threading.Thread.Suspend%2A> yöntemine yapılan çağrıyı gösterir.  
   
 ```csharp
 using System.Threading;  

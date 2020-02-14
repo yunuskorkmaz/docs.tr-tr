@@ -8,24 +8,22 @@ helpviewer_keywords:
 - section Element
 - <section> Element
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8c1675540df6844f98572c11cfb140bff23b31a8
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 8785523d664294e3ca3792fb0f84d739d1f1a376
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089028"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215725"
 ---
 # <a name="section-element"></a>\<Bölüm > öğesi
 
 Bir yapılandırma bölümü bildirimi içerir.
 
-[ **\<configuration >** ](configuration-element.md) \
+[ **\<yapılandırma >** ](configuration-element.md)\
 &nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<bölüm >**
 
-[ **\<configuration >** ](configuration-element.md) \
+[ **\<yapılandırma >** ](configuration-element.md)\
 &nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bölümü >**
@@ -44,7 +42,7 @@ Bir yapılandırma bölümü bildirimi içerir.
 |           | Açıklama |
 | --------- | ----------- |
 | **ada**  | Yapılandırma bölümünün adını belirtir. |
-| **türüyle**  | Yapılandırma dosyasından bölümü okuyan yapılandırma bölümü işleyici sınıfının adını belirtir. Tür değeri "tam nitelikli-bölüm-işleyici-sınıf-adı, basit-derleme-adı" sözdizimine sahiptir. Basit derleme adı, *. dll* dosya uzantısı olmayan kök dosya adıdır. |
+| **type**  | Yapılandırma dosyasından bölümü okuyan yapılandırma bölümü işleyici sınıfının adını belirtir. Tür değeri "tam nitelikli-bölüm-işleyici-sınıf-adı, basit-derleme-adı" sözdizimine sahiptir. Basit derleme adı, *. dll* dosya uzantısı olmayan kök dosya adıdır. |
 
 ## <a name="optional-attributes"></a>İsteğe bağlı öznitelikler
 
@@ -67,7 +65,7 @@ Aşağıdaki öznitelikler yalnızca ASP.NET uygulamaları için geçerlidir. Ya
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-Yok.
+Hiçbiri
 
 ## <a name="remarks"></a>Açıklamalar
 

@@ -11,17 +11,15 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ed4933ae59223c0674d2e36428894cbc3a07933f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8acafcc2fba9a7d30cc77f25f06adaca7c79db32
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052659"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217411"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
-`invalidApartmentStateChange` Yönetilen hata ayıklama Yardımcısı (MDS) iki sorunlardan biri tarafından etkinleştirilir:  
+`invalidApartmentStateChange` yönetilen hata ayıklama Yardımcısı (MDS) iki sorunlardan biri tarafından etkinleştirilir:  
   
 - COM tarafından zaten başlatılmış olan bir iş parçacığının COM grup durumunu farklı bir grup durumuna değiştirme girişiminde bulunuldu.  
   
@@ -29,25 +27,25 @@ ms.locfileid: "71052659"
   
 ## <a name="symptoms"></a>Belirtiler  
   
-- Bir iş parçacığının COM grubu durumu istenen değildir. Bu durum, mevcut bir iş parçacığı modeline sahip COM bileşenleri için proxy 'lerin kullanılmasına neden olabilir. Bu sırayla, com nesnesi çapraz <xref:System.InvalidCastException> grup sıralaması için ayarlanmamış arabirimler aracılığıyla çağrılırken bir oluşturulmasına neden olabilir.  
+- Bir iş parçacığının COM grubu durumu istenen değildir. Bu durum, mevcut bir iş parçacığı modeline sahip COM bileşenleri için proxy 'lerin kullanılmasına neden olabilir. Bu sırayla, COM nesnesi çapraz grup sıralaması için ayarlanmamış arabirimler aracılığıyla çağrılırken bir <xref:System.InvalidCastException> oluşturulmasına neden olabilir.  
   
-- İş parçacığının COM apartman durumu beklenenden farklı. Bu, bir [çalışma zamanı çağrılabilir sarmalayıcı](../../standard/native-interop/runtime-callable-wrapper.md) (RCW) üzerinde çağrılar <xref:System.InvalidCastException> yaparken bir HRESULT ile birlikte bir <xref:System.Runtime.InteropServices.COMException> RPC_E_WRONG_THREAD ve bir ile oluşmasına neden olabilir. Bu Ayrıca, bazı tek iş parçacıklı COM bileşenlerine aynı anda birden çok iş parçacığı tarafından erişilmesine neden olabilir, bu da bozulmaya veya veri kaybına neden olabilir.  
+- İş parçacığının COM apartman durumu beklenenden farklı. Bu, bir [çalışma zamanı çağrılabilir sarmalayıcı](../../standard/native-interop/runtime-callable-wrapper.md) (RCW) üzerinde çağrılar yaparken bır <xref:System.Runtime.InteropServices.COMException> hresult rpc_e_wrong_thread ve bir <xref:System.InvalidCastException> olan bir neden olabilir. Bu Ayrıca, bazı tek iş parçacıklı COM bileşenlerine aynı anda birden çok iş parçacığı tarafından erişilmesine neden olabilir, bu da bozulmaya veya veri kaybına neden olabilir.  
   
-## <a name="cause"></a>Sebep  
+## <a name="cause"></a>Nedeni  
   
-- İş parçacığı daha önce farklı bir COM grubu durumuna başlatılmıştı. Bir iş parçacığının Grup durumunun açık veya örtük olarak ayarlankullanılamayacağını unutmayın. Açık işlemler, <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> özelliğini <xref:System.Threading.Thread.SetApartmentState%2A> ve ve <xref:System.Threading.Thread.TrySetApartmentState%2A> yöntemlerini içerir. <xref:System.Threading.Thread.Start%2A> Yöntemi kullanılarak oluşturulan bir iş parçacığı, iş parçacığı başlatılmadan <xref:System.Threading.ApartmentState.MTA> önce <xref:System.Threading.Thread.SetApartmentState%2A> çağrılmadığı için örtük olarak olarak ayarlanır. Uygulamanın ana iş parçacığı, <xref:System.Threading.ApartmentState.MTA> <xref:System.STAThreadAttribute> özniteliği Main yönteminde belirtilmediği takdirde olarak olarak da başlatılır.  
+- İş parçacığı daha önce farklı bir COM grubu durumuna başlatılmıştı. Bir iş parçacığının Grup durumunun açık veya örtük olarak ayarlankullanılamayacağını unutmayın. Açık işlemler <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> özelliğini ve <xref:System.Threading.Thread.SetApartmentState%2A> ve <xref:System.Threading.Thread.TrySetApartmentState%2A> yöntemlerini içerir. <xref:System.Threading.Thread.Start%2A> yöntemi kullanılarak oluşturulan bir iş parçacığı, <xref:System.Threading.Thread.SetApartmentState%2A> iş parçacığı başlatılmadan önce çağrılmadığı müddetçe örtük olarak <xref:System.Threading.ApartmentState.MTA> olarak ayarlanır. Uygulamanın ana iş parçacığı Ayrıca, ana yöntemde <xref:System.STAThreadAttribute> özniteliği belirtilmedikçe <xref:System.Threading.ApartmentState.MTA> için de örtülü olarak başlatılır.  
   
-- Farklı bir eşzamanlılık modeliyle `CoInitializeEx` Yöntemi(veyayöntemi)işparçacığındaçağırılır.`CoUninitialize`  
+- Farklı bir eşzamanlılık modeliyle `CoUninitialize` yöntemi (veya `CoInitializeEx` yöntemi) iş parçacığında çağırılır.  
   
 ## <a name="resolution"></a>Çözüm  
- Yürütmeye başlamadan önce iş parçacığının Grup durumunu ayarlayın veya <xref:System.STAThreadAttribute> özniteliğini <xref:System.MTAThreadAttribute> ya da özniteliğini uygulamanın Main yöntemine uygulayın.  
+ Yürütmeye başlamadan önce iş parçacığının Grup durumunu ayarlayın veya <xref:System.STAThreadAttribute> özniteliğini ya da <xref:System.MTAThreadAttribute> özniteliğini uygulamanın Main yöntemine uygulayın.  
   
- İkinci nedenle, en ideal olarak, `CoUninitialize` yöntemi çağıran kod, iş parçacığı sonlandırılmaya ve bir RCWs olmadığından ve temel alınan com bileşenleri iş parçacığı tarafından hala kullanımda olana kadar çağrıyı geciktirmek için değiştirilmelidir. Ancak, `CoUninitialize` yöntemi çağıran kodu değiştirmek mümkün değilse, bu şekilde başlatılmamış iş parçacıklarında hiçbir RCWs kullanılmamalıdır.  
+ İkinci neden için `CoUninitialize` yöntemi çağıran kod, iş parçacığı sonlandırılmaya ve bir RCWs olmadığından ve temel alınan COM bileşenleri iş parçacığı tarafından hala kullanımda olana kadar çağrıyı geciktirmek için değiştirilmelidir. Ancak, `CoUninitialize` yöntemini çağıran kodu değiştirmek mümkün değilse, bu şekilde başlatılmamış iş parçacıklarında hiçbir RCWs kullanılmamalıdır.  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
  Bu MDA, CLR üzerinde hiçbir etkisi yoktur.  
   
-## <a name="output"></a>Çıkış  
+## <a name="output"></a>Çıktı  
  Geçerli iş parçacığının COM grubu durumu ve kodun uygulanmaya çalışılması gereken durum.  
   
 ## <a name="configuration"></a>Yapılandırma  

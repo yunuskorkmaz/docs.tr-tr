@@ -2,14 +2,13 @@
 title: .NET Core 'a taşıma araçları
 description: .NET Core 'a bağlantı noktası için kullanabileceğiniz araçlardan bazıları hakkında bilgi edinin
 author: cartermp
-ms.author: mairaw
 ms.date: 12/07/2018
-ms.openlocfilehash: 101a110dec643d307e1c7cd807d9ed9fcfa7d845
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3b71c31b4f26b278b2bd1088adc8e9f64d28ab7b
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714315"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215187"
 ---
 # <a name="tools-to-help-with-porting-to-net-core"></a>.NET Core’a taşıma konusunda yardımcı olabilecek araçlar
 

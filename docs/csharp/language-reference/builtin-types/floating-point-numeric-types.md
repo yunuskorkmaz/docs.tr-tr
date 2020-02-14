@@ -1,7 +1,7 @@
 ---
 title: Kayan nokta sayısal türleri- C# başvuru
-description: Yerleşik C# kayan nokta türlerine genel bakış
-ms.date: 10/22/2019
+description: 'Yerleşik C# kayan nokta türleri hakkında bilgi edinin: float, Double ve Decimal'
+ms.date: 02/10/2020
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 9c8b11f9337ee9de90f2d4d96b5be162713bfcbd
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 95b7f266654bbbcdcd0f81e3aa11cfc94af9f0e5
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093220"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215247"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Kayan nokta sayısal türleri (C# başvuru)
 
@@ -50,19 +50,21 @@ Her kayan nokta türünün varsayılan değeri sıfırdır `0`. Kayan nokta tür
 
 `decimal` türü daha fazla kesinlik ve `float` ve `double`daha küçük bir aralığa sahip olduğundan, finansal ve parasal hesaplamalar için uygundur.
 
-Bir ifadede [integral](integral-numeric-types.md) türlerini ve kayan nokta türlerini karıştırabilirsiniz. Bu durumda, integral türler kayan nokta türlerine dönüştürülür. İfadenin değerlendirmesi aşağıdaki kurallara göre gerçekleştirilir:
+Bir ifadede [integral](integral-numeric-types.md) türlerini ve `float` ve `double` türlerini karıştırabilirsiniz. Bu durumda, integral türler örtük olarak kayan nokta türlerinden birine dönüştürülür ve gerekirse `float` türü örtük olarak `double`dönüştürülür. İfade, aşağıdaki gibi değerlendirilir:
 
-- Kayan nokta türlerinden biri `double`, ifade `double`veya ilişkisel ve eşitlik karşılaştırmalarında [bool](bool.md) olarak değerlendirilir.
-- İfadede `double` tür yoksa, ifade `float`veya ilişkisel ve eşitlik karşılaştırmalarında [bool](bool.md) olarak değerlendirilir.
+- İfadede `double` tür varsa, ifade `double`veya ilişkisel ve eşitlik karşılaştırmalarında [`bool`](bool.md) olarak değerlendirilir.
+- İfadede `double` tür yoksa, ifade `float`veya ilişkisel ve eşitlik karşılaştırmalarında `bool` olarak değerlendirilir.
 
-Kayan nokta ifadesi aşağıdaki değer kümelerini içerebilir:
+Ayrıca, tamsayı türlerini ve `decimal` türünü bir ifadede karıştırabilirsiniz. Bu durumda, tam sayı türleri örtülü olarak `decimal` türüne dönüştürülür ve ifade `decimal`veya ilişkisel ve eşitlik karşılaştırmaları `bool` olarak değerlendirilir.
 
-- Pozitif ve negatif sıfır
-- Pozitif ve negatif sonsuzluk
-- Sayı olmayan değer (NaN)
-- Sınırlı olmayan değerler kümesi
+`decimal` türünü bir ifadede `float` ve `double` türleriyle karıştırılamaz. Bu durumda, aritmetik, karşılaştırma veya eşitlik işlemleri gerçekleştirmek istiyorsanız, aşağıdaki örnekte gösterildiği gibi, işlenenleri ya da `decimal` türüne açıkça dönüştürmeniz gerekir:
 
-Bu değerler hakkında daha fazla bilgi için, [IEEE](https://www.ieee.org) Web sitesinde kullanılabilen Ikili kayan nokta ARITMETIĞI Için IEEE Standard ' a bakın.
+```csharp-interactive
+double a = 1.0;
+decimal b = 2.1m;
+Console.WriteLine(a + (double)b);
+Console.WriteLine((decimal)a + b);
+```
 
 Kayan noktalı bir değeri biçimlendirmek için [Standart sayısal biçim dizelerini](../../../standard/base-types/standard-numeric-format-strings.md) veya [özel sayısal biçim dizelerini](../../../standard/base-types/custom-numeric-format-strings.md) kullanabilirsiniz.
 

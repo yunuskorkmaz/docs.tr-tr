@@ -29,14 +29,12 @@ helpviewer_keywords:
 - output, managed debugging assistants
 - errors [.NET Framework], managed debugging assistants
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6cb2a240a2e7e82b7015eb7a6d99c2117fa63045
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 712fbbe9e0ad291385e8eef321c5e8a2fa092a5d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052894"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216553"
 ---
 # <a name="diagnose-errors-with-managed-debugging-assistants"></a>Yönetilen hata ayıklama yardımcıları ile hataları tanılama
 
@@ -70,7 +68,7 @@ Aşağıdaki tabloda .NET Framework ile birlikte gelen Mdalar listelenmektedir:
 |[releaseHandleFailed](releasehandlefailed-mda.md)|[reportAvOnComRelease](reportavoncomrelease-mda.md)|
 |[streamWriterBufferedDataLost](streamwriterbuffereddatalost-mda.md)|[virtualCERCall](virtualcercall-mda.md)|
 
-Varsayılan olarak, .NET Framework yönetilen tüm hata ayıklayıcıları için bir MDA alt kümesini etkinleştirir. Visual Studio 'da varsayılan kümeyi **Hata Ayıkla** menüsündeki **Windows** > **özel durum ayarları** ' nı seçerek ve ardından **yönetilen hata ayıklama yardımcıları** listesini genişleterek görüntüleyebilirsiniz.
+Varsayılan olarak, .NET Framework yönetilen tüm hata ayıklayıcıları için bir MDA alt kümesini etkinleştirir. Visual Studio 'da varsayılan kümeyi **hata ayıklama** menüsünde **Windows** > **özel durum ayarları** ' nı seçerek ve ardından **yönetilen hata ayıklama yardımcıları** listesini genişleterek görüntüleyebilirsiniz.
 
 ![Visual Studio 'da özel durum ayarları penceresi](./media/diagnosing-errors-with-managed-debugging-assistants/exception-settings-mdas.png)
 
@@ -79,11 +77,11 @@ Varsayılan olarak, .NET Framework yönetilen tüm hata ayıklayıcıları için
 Bir kayıt defteri anahtarını, bir ortam değişkenini ve uygulama yapılandırma ayarlarını kullanarak MDA'leri etkinleştirebilir ve devre dışı bırakabilirsiniz. Uygulama yapılandırma ayarlarını kullanmak için kayıt defteri anahtarını veya ortam değişkenini etkinleştirmeniz gerekir.
 
 > [!TIP]
-> MDAs 'yi devre dışı bırakmak yerine, bir MDA bildirimi alındığında Visual Studio 'Nun MDA iletişim kutusunu görüntülemesini engelleyebilirsiniz. Bunu yapmak için, **hata ayıklama** menüsünde **Windows** > **özel durum ayarları** ' nı seçin, **yönetilen hata ayıklama yardımcıları** listesini genişletin ve sonra tek bir mda için **oluşturulduğunda kes** onay kutusunu seçin veya temizleyin.
+> MDAs 'yi devre dışı bırakmak yerine, bir MDA bildirimi alındığında Visual Studio 'Nun MDA iletişim kutusunu görüntülemesini engelleyebilirsiniz. Bunu yapmak için, **hata ayıklama** menüsünde **Windows** > **özel durum ayarları** ' nı seçin, **yönetilen hata ayıklama YARDıMCıLARı** listesini genişletin ve sonra tek bir mda için **oluşturulduğunda kes** onay kutusunu seçin veya temizleyin.
 
 ### <a name="registry-key"></a>Kayıt Defteri Anahtarı
 
-MDAs 'yi etkinleştirmek için **HKEY_LOCAL_MACHINE\Software\Microsoft\\ekleyin. Windows kayıt defteri 'nde NETFramework\MDA** alt anahtarı (REG_SZ, değer 1 yazın). Aşağıdaki örneği *Mdadenable. reg*adlı bir metin dosyasına kopyalayın. Windows kayıt defteri Düzenleyicisi 'Ni (RegEdit. exe) açın ve **Dosya** menüsünden **içeri aktar**' ı seçin. Bu bilgisayarda MDAs 'yi etkinleştirmek için *MDAEnable. reg* dosyasını seçin. Alt anahtarı **1** ' in dize DEĞERINE (DWORD değeri **1**değil) ayarlamak, *ApplicationName. suffix*. mda. config dosyasından MDA ayarlarının okunmasına olanak sağlar. Örneğin, Notepad için MDA yapılandırma dosyası Notepad. exe. mda. config olarak adlandırılır.
+MDAs 'yi etkinleştirmek için, **\ software\microsoft\\HKEY_LOCAL_MACHINE ekleyin. Windows kayıt defteri 'nde NETFramework\MDA** AltAnahtar (tür REG_SZ, değer 1). Aşağıdaki örneği *Mdadenable. reg*adlı bir metin dosyasına kopyalayın. Windows kayıt defteri Düzenleyicisi 'Ni (RegEdit. exe) açın ve **Dosya** menüsünden **içeri aktar**' ı seçin. Bu bilgisayarda MDAs 'yi etkinleştirmek için *MDAEnable. reg* dosyasını seçin. Alt anahtarı **1** ' in dize DEĞERINE (DWORD değeri **1**değil) ayarlamak, *ApplicationName. suffix*. mda. config dosyasından MDA ayarlarının okunmasına olanak sağlar. Örneğin, Notepad için MDA yapılandırma dosyası Notepad. exe. mda. config olarak adlandırılır.
 
 ```text
 Windows Registry Editor Version 5.00
@@ -129,7 +127,7 @@ MDA etkinleştirmesi aynı zamanda, kayıt defteri anahtarını geçersiz kılan
 
 ### <a name="application-specific-configuration-settings"></a>Uygulamaya özgü yapılandırma ayarları
 
-Uygulamaya ait MDA yapılandırma dosyası içinde bazı yardımcıları etkinleştirebilir, devre dışı bırakabilir ve ayrı ayrı yapılandırabilirsiniz. MDA'leri yapılandırmak üzere bir uygulama yapılandırma dosyasının kullanımını etkinleştirmek için MDA kayıt defteri anahtarının veya COMPLUS_MDA ortam değişkeni ayarlanması gerekir. Uygulama yapılandırma dosyası, genellikle uygulamanın yürütülebilir (.exe) dosyası ile aynı dizinde bulunur. Dosya adı, *ApplicationName*. mda. config biçimini alır; Örneğin, Notepad. exe. mda. config. Uygulama yapılandırma dosyasında etkinleştirilen yardımcılar, o yardımcının davranışını denetlemek için özel olarak tasarlanan özniteliklere veya öğelere sahip olabilir.
+Uygulamaya ait MDA yapılandırma dosyası içinde bazı yardımcıları etkinleştirebilir, devre dışı bırakabilir ve ayrı ayrı yapılandırabilirsiniz. MDA'leri yapılandırmak üzere bir uygulama yapılandırma dosyasının kullanımını etkinleştirmek için MDA kayıt defteri anahtarının veya COMPLUS_MDA ortam değişkeni ayarlanması gerekir. Uygulama yapılandırma dosyası, genellikle uygulamanın yürütülebilir (.exe) dosyası ile aynı dizinde bulunur. Dosya adı, *ApplicationName*. mda. config biçimini alır; Örneğin, Notepad. exe. mda. config. Uygulama yapılandırma dosyasında etkinleştirilen yardımcılar, bu yardımcının davranışını denetlemek için özel olarak tasarlanmış özniteliklere veya öğelere sahip olabilir.
 
 Aşağıdaki örnek, [hazırlamayı](marshaling-mda.md)nasıl etkinleştireceğinizi ve yapılandıracağınızı göstermektedir:
 
@@ -148,7 +146,7 @@ Aşağıdaki örnek, [hazırlamayı](marshaling-mda.md)nasıl etkinleştireceği
 </mdaConfig>
 ```
 
-`Marshaling` MDA, uygulamadaki her yönetilenden yönetilmeyene geçiş için bir yönetilmeyen türe sıraya koyulan yönetilen tür hakkında bilgiler verir. MDA, sırasıyla **methodFilter** ve **FieldFilter** alt öğelerinde sağlanan yöntem ve yapı alanlarının adlarını da filtreleyebilirler. `Marshaling`
+`Marshaling` MDA, uygulamadaki her yönetilenden yönetilmeyene geçiş için bir yönetilmeyen türe sıraya koyulan yönetilen tür hakkında bilgiler verir. `Marshaling` MDA, sırasıyla **methodFilter** ve **FieldFilter** alt öğelerinde sağlanan yöntem ve yapı alanlarının adlarını da filtreleyebilirler.
 
 Aşağıdaki örnek, varsayılan ayarlarını kullanarak birden çok Mdayı nasıl etkinleştireceğinizi göstermektedir:
 
@@ -174,7 +172,7 @@ Kodunuz Visual Studio tümleşik geliştirme ortamında (IDE) yürütüldüğün
 
 ## <a name="mda-output"></a>MDA Çıktısı
 
-Mda çıktısı, `PInvokeStackImbalance` mda ' dan çıktıyı gösteren aşağıdaki örneğe benzer.
+MDA çıktısı, `PInvokeStackImbalance` MDA ' dan gelen çıktıyı gösteren aşağıdaki örneğe benzer:
 
 **PInvoke işlevi ' Mdadtest! ' çağrısı Mdadtest. Program:: StdCall ', yığına dengesiz. Bu, yönetilen PInvoke imzasının yönetilmeyen hedef imzasıyla eşleşmemesi nedeniyle olasıdır. PInvoke imzasının çağırma kuralı ve parametrelerinin hedef yönetilmeyen imzayla eşleşip eşleştiğinden emin olun.**
 

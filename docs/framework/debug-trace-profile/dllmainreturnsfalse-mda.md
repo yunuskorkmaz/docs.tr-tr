@@ -7,32 +7,30 @@ helpviewer_keywords:
 - DllMain function
 - MDAs (managed debugging assistants), DllMain returns false
 ms.assetid: e2abdd04-f571-4b97-8c16-2221b8588429
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: adc05ae9bd357c142ff09de069aff446b5ea60e8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0b413521e0a2dc06c2ff0be642f080eaf541202f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052853"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216441"
 ---
 # <a name="dllmainreturnsfalse-mda"></a>dllMainReturnsFalse MDA
-Yönetilen hata ayıklama Yardımcısı (MDA), DLL_PROCESS_ATTACH nedeni ile çağrılan `DllMain` bir Kullanıcı derlemesinin yönetilen işlevi false değerini döndürürse etkinleştirilir. `dllMainReturnsFalse`  
+`dllMainReturnsFalse` yönetilen hata ayıklama Yardımcısı (MDA), bir Kullanıcı derlemesinin yönetilen `DllMain` işlevi, neden DLL_PROCESS_ATTACH çağrıldığında etkinleştirilir, FALSE döndürür.  
   
 ## <a name="symptoms"></a>Belirtiler  
- `DllMain` İşlev, doğru şekilde yürütülmediğini belirten yanlış olarak döndürüldü. Bu, `DllMain` işlev genellikle önemli başlatma kodu içerdiği için belirlenmeyen sorunlara neden olabilir.  
+ `DllMain` işlevi, doğru şekilde yürütülmediğini belirten yanlış döndürdü. `DllMain` işlevler tipik olarak önemli başlatma kodu içerdiği için bu, belirlenmemiş sorunlara neden olabilir.  
   
-## <a name="cause"></a>Sebep  
- İşlev `DllMain` , yükleme sonrasında DLL_PROCESS_ATTACH for dll başlatması nedeniyle çağrılır. YANLıŞ döndürürse, DLL başlatması başarısız oldu demektir.  
+## <a name="cause"></a>Nedeni  
+ `DllMain` işlevi, yükleme sonrasında DLL başlatma için DLL_PROCESS_ATTACH neden ile çağırılır. YANLıŞ döndürürse, DLL başlatması başarısız oldu demektir.  
   
 ## <a name="resolution"></a>Çözüm  
- Başarısız olan dll `DllMain` işlevinin kodunu çözümleyin ve başlatma hatasının nedenini belirler.  
+ Başarısız DLL 'nin `DllMain` işlevinin kodunu çözümleyin ve başlatma hatasının nedenini belirler.  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
- Bu MDA, CLR üzerinde hiçbir etkisi yoktur. Yalnızca dönüş değeri `DllMain`ile ilgili verileri raporlar.  
+ Bu MDA, CLR üzerinde hiçbir etkisi yoktur. Yalnızca `DllMain`için dönüş değeri hakkındaki verileri raporlar.  
   
-## <a name="output"></a>Çıkış  
- DLL_PROCESS_ATTACH nedeni için çağrılan bir `DllMain` işlevin yanlış döndürüldüğünü belirten bir ileti. Bu mda 'ın yalnızca `DllMain` yönetilen kodda uygulanmışsa etkinleştirildiğini unutmayın.  
+## <a name="output"></a>Çıktı  
+ DLL_PROCESS_ATTACH nedeni için çağrılan `DllMain` işlevinin yanlış döndürüldüğünü belirten bir ileti. Bu MDA 'ın yalnızca `DllMain` yönetilen kodda uygulanmışsa etkinleştirildiğini unutmayın.  
   
 ## <a name="configuration"></a>Yapılandırma  
   

@@ -14,19 +14,17 @@ helpviewer_keywords:
 - trace listeners, filters
 - trace listeners, initializing
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a1e214266b66f390fecffe802270a4181a6d7a7f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 53cdce767d437c47aab94e883381954f8cf70653
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052693"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215916"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Nasıl yapılır: İz Dinleyicileri ile TraceSource ve Filtreler Kullanma
-.NET Framework sürüm 2,0 ' deki yeni özelliklerden biri, gelişmiş bir izleme sistemidir. Temel şirket içi değiştirilmez: izleme iletileri, verileri ilişkili bir çıkış ortamına rapor eden, dinleyicilerine anahtarlar aracılığıyla gönderilir. Sürüm 2,0 ' in birincil bir farkı, izlemelerin <xref:System.Diagnostics.TraceSource> sınıf örnekleri aracılığıyla başlatılabiliyordu. <xref:System.Diagnostics.TraceSource>, gelişmiş bir izleme sistemi olarak işlevine yöneliktir ve eski <xref:System.Diagnostics.Trace> ve <xref:System.Diagnostics.Debug> izleme sınıflarının statik yöntemlerinin yerine kullanılabilir. Tanıdık <xref:System.Diagnostics.Trace> <xref:System.Diagnostics.TraceSource> ve <xref:System.Diagnostics.Debug> sınıfları hala mevcuttur, ancak önerilen uygulama, izleme için sınıfını kullanmaktır.  
+.NET Framework sürüm 2,0 ' deki yeni özelliklerden biri, gelişmiş bir izleme sistemidir. Temel şirket içi değiştirilmez: izleme iletileri, verileri ilişkili bir çıkış ortamına rapor eden, dinleyicilerine anahtarlar aracılığıyla gönderilir. Sürüm 2,0 ' in birincil bir farkı, izlemelerin <xref:System.Diagnostics.TraceSource> sınıfının örnekleri aracılığıyla başlatılabiliyordu. <xref:System.Diagnostics.TraceSource>, gelişmiş bir izleme sistemi olarak işlevine yöneliktir ve eski <xref:System.Diagnostics.Trace> ve <xref:System.Diagnostics.Debug> izleme sınıflarının statik yöntemlerinin yerine kullanılabilir. Tanıdık <xref:System.Diagnostics.Trace> ve <xref:System.Diagnostics.Debug> sınıfları hala mevcuttur, ancak önerilen uygulama, izleme için <xref:System.Diagnostics.TraceSource> sınıfını kullanmaktır.  
   
- Bu konuda, bir uygulama yapılandırma dosyası <xref:System.Diagnostics.TraceSource> ile bağlanmış bir kullanımı açıklanmaktadır.  Bir yapılandırma dosyası <xref:System.Diagnostics.TraceSource> kullanılmadan ' ı kullanarak izlemek mümkün olmasa da, kullanılması önerilmez. Yapılandırma dosyası olmadan izleme hakkında bilgi için bkz [. nasıl yapılır: Izleme kaynaklarını](how-to-create-and-initialize-trace-sources.md)oluşturun ve başlatın.  
+ Bu konu, bir uygulama yapılandırma dosyası ile bağlanmış <xref:System.Diagnostics.TraceSource> kullanımını açıklar.  Bir yapılandırma dosyası kullanılmadan bir <xref:System.Diagnostics.TraceSource> kullanmayı izlemek mümkün olmasa da, önerilmez. Yapılandırma dosyası olmadan izleme hakkında bilgi için bkz. [nasıl yapılır: Izleme kaynakları oluşturma ve başlatma](how-to-create-and-initialize-trace-sources.md).  
   
 ### <a name="to-create-and-initialize-your-trace-source"></a>İzleme kaynağınızı oluşturmak ve başlatmak için  
   
@@ -99,7 +97,7 @@ ms.locfileid: "71052693"
   
 ### <a name="to-change-the-level-at-which-a-listener-writes-a-trace-message"></a>Bir dinleyicinin bir izleme iletisi yazdığı düzeyi değiştirmek için  
   
-1. Yapılandırma dosyası, uygulamanın başlatıldığı sırada izleme kaynağı için ayarları başlatır. Bu ayarları değiştirmek için yapılandırma dosyasını değiştirmeniz ve uygulamayı yeniden başlatmanız ya da <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType> yöntemi kullanarak uygulamayı programlı olarak yenilemeniz gerekir. Uygulama, Kullanıcı tarafından belirtilen ayarları geçersiz kılmak için yapılandırma dosyası tarafından ayarlanan özellikleri dinamik olarak değiştirebilir.  Örneğin, geçerli yapılandırma ayarlarından bağımsız olarak, kritik iletilerin her zaman bir metin dosyasına gönderilmesini güvence altına almak isteyebilirsiniz.  
+1. Yapılandırma dosyası, uygulamanın başlatıldığı sırada izleme kaynağı için ayarları başlatır. Bu ayarları değiştirmek için yapılandırma dosyasını değiştirmeniz ve uygulamayı yeniden başlatmanız veya <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType> yöntemini kullanarak uygulamayı programlı olarak yenilemeniz gerekir. Uygulama, Kullanıcı tarafından belirtilen ayarları geçersiz kılmak için yapılandırma dosyası tarafından ayarlanan özellikleri dinamik olarak değiştirebilir.  Örneğin, geçerli yapılandırma ayarlarından bağımsız olarak, kritik iletilerin her zaman bir metin dosyasına gönderilmesini güvence altına almak isteyebilirsiniz.  
   
     ```csharp
     using System;  
@@ -169,5 +167,5 @@ ms.locfileid: "71052693"
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventTypeFilter>
-- [Nasıl yapılır: Izleme kaynakları oluşturma ve başlatma](how-to-create-and-initialize-trace-sources.md)
+- [Nasıl yapılır: İzleme Kaynakları Oluşturma ve Başlatma](how-to-create-and-initialize-trace-sources.md)
 - [İzleme Dinleyicileri](trace-listeners.md)

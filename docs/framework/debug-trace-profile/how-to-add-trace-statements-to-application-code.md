@@ -13,17 +13,15 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4517da87603dcdd398d536cd9bf9e441430be375
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 21df0e8129505e50e6b7f29c4f4f5aea94f380e3
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052733"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217462"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme
-İzleme için en sık kullanılan yöntemler, dinleyicilerine çıkış yazma yöntemleridir: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **onaylama**ve **başarısız**. Bu yöntemler iki kategoriye ayrılabilir: **Write**, **WriteLine**ve **Fail** for All,, **WriteIf**, **WriteLineIf**ve **onaylama** test bir Boolean koşulunu ve onay testi, koşulun değerine göre yazma veya yazma. Koşul ise `false` `true`, WriteIf ve **WriteLineIf** bir çıkış yayıyorsa, Eğer koşul ise **Çıkış yayar.**  
+İzleme için en sık kullanılan yöntemler, dinleyicilerine çıkış yazma yöntemleridir: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **onaylama**ve **başarısız**. Bu yöntemler iki kategoriye ayrılabilir: **Write**, **WriteLine**ve **Fail** for All, on Unon, **WriteLineIf**ve **onaylama** testi, Boolean koşulunu ve onay testini, koşulun değerine göre yazma veya yazma. Koşul `true`ise, **WriteIf** ve **WriteLineIf** , **Çıkış yayar ve** koşul `false`olursa çıkış gönderir.  
   
  İzleme ve hata ayıklama stratejinizi tasarlarken çıktının nasıl görünmesini istediğinizi düşünmeniz gerekir. İlişkisiz bilgilerle doldurulmuş birden fazla **yazma** deyimi, okunması zor olan bir günlük oluşturur. Diğer taraftan, ilişkili deyimleri ayrı satırlara koymak için **WriteLine** kullanmak, hangi bilgilerin birlikte olduğunu ayırt etmenizi zorlaştırır. Genel olarak, tek bir bilgilendirici ileti oluşturmak için birden fazla kaynaktaki bilgileri birleştirmek istediğinizde birden çok **yazma** ifadesi kullanın ve tek bir ileti oluşturmak istediğinizde **WriteLine** deyimini kullanın.  
   
@@ -69,7 +67,7 @@ ms.locfileid: "71052733"
   
 ### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>Belirli koşulların, bir yöntemi yürütmeden önce veya sonra var olduğunu doğrulamak için  
   
-1. Çağrı <xref:System.Diagnostics.Trace.Assert%2A> yöntemi.  
+1. <xref:System.Diagnostics.Trace.Assert%2A> yöntemini çağırın.  
   
     ```vb  
     Dim i As Integer = 4  
@@ -91,6 +89,6 @@ ms.locfileid: "71052733"
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
 - [İzleme ve İşaretleme Uygulamaları](tracing-and-instrumenting-applications.md)
-- [Nasıl yapılır: Izleme anahtarları oluşturma, başlatma ve yapılandırma](how-to-create-initialize-and-configure-trace-switches.md)
+- [Nasıl yapılır: İzleme Anahtarları Oluşturma, Başlatma ve Yapılandırma](how-to-create-initialize-and-configure-trace-switches.md)
 - [İzleme Anahtarları](trace-switches.md)
 - [İzleme Dinleyicileri](trace-listeners.md)

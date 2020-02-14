@@ -8,32 +8,30 @@ helpviewer_keywords:
 - IllegalPrepareConstrainedRegions MDA
 - MDAs (managed debugging assistants), illegal PrepareConstrainedRegions
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 623aff91eb801b4b32fc180bd97ed3822ad7f163
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b80d6160876834b22e8d9d1eb7112b8b67c15fcc
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052671"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216472"
 ---
 # <a name="illegalprepareconstrainedregion-mda"></a>illegalPrepareConstrainedRegion MDA
-Yönetilen hata ayıklama Yardımcısı (MDA), bir <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> Yöntem çağrısı özel durum işleyicisinin `try` ifadesinden hemen önce gelmediğinde etkinleştirilir. `illegalPrepareConstrainedRegion` Bu kısıtlama MSIL düzeyindedir, bu nedenle çağrı ile `try`yorum gibi kod oluşturma olmayan kaynağa izin verilir.  
+`illegalPrepareConstrainedRegion` yönetilen hata ayıklama Yardımcısı (MDA), bir <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> yöntemi çağrısı özel durum işleyicisinin `try` deyimiyle hemen önce olmadığında etkinleştirilir. Bu kısıtlama MSIL düzeyindedir; bu nedenle, çağrı ve `try`arasında kod oluşturma dışı kaynağa (Yorumlar gibi) izin verilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Bu, basit bir özel durum işleme bloğu (`finally` veya `catch`) olarak hiçbir şekilde kabul edilen kısıtlı bir yürütme bölgesi (cer). Sonuç olarak, bölge bellek dışı bir koşul veya bir iş parçacığı iptali durumunda çalışmaz.  
+ Bu şekilde hiçbir şekilde kabul edilen kısıtlı bir yürütme bölgesi (CER), ancak basit bir özel durum işleme bloğu (`finally` veya `catch`). Sonuç olarak, bölge bellek dışı bir koşul veya bir iş parçacığı iptali durumunda çalışmaz.  
   
-## <a name="cause"></a>Sebep  
- Bir CER için hazırlık deseninin doğru şekilde izlenmiyor.  Bu bir hata olayıdır. `catch` Özeldurum`finally` işleyicilerini / <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> blok`filter` içindeki birceriletanışınolarakişaretlemekiçinkullanılanyöntemçağrısı,/ `fault` / `try` bildirim.  
+## <a name="cause"></a>Nedeni  
+ Bir CER için hazırlık deseninin doğru şekilde izlenmiyor.  Bu bir hata olayıdır. Özel durum işleyicilerini, `catch`/`finally`/`fault`/`filter` blokları üzerinde bir CER 'ye giriş olarak işaretlemek için kullanılan <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> yöntemi çağrısı `try` deyimlerinden hemen önce kullanılmalıdır.  
   
 ## <a name="resolution"></a>Çözüm  
- Çağrısının <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> ,`try` deyimden hemen önce yapıldığından emin olun.  
+ <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> çağrısının `try` deyimden hemen önce yapıldığından emin olun.  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
  Bu MDA, CLR üzerinde hiçbir etkisi yoktur.  
   
-## <a name="output"></a>Çıkış  
- MDA, <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> yöntemi çağıran yöntemin adını, MSIL farkını ve çağrının try bloğunun başlangıcından hemen önce gelmesini belirten bir iletiyi görüntüler.  
+## <a name="output"></a>Çıktı  
+ MDA, <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> yöntemini çağıran yöntemin adını, MSIL sapmasını ve çağrının, try bloğunun başlangıcından hemen önce gelmediğini belirten bir ileti görüntüler.  
   
 ## <a name="configuration"></a>Yapılandırma  
   

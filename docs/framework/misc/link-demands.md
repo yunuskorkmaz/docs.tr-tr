@@ -14,14 +14,12 @@ helpviewer_keywords:
 - caller security checks
 - link demands
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f040e1e1706e1f84ced8b253ff3fb15dbcbd6e1e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 31fbd938acb457a4ea803375d18cb1be11d8b287
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206015"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217164"
 ---
 # <a name="link-demands"></a>Bağlantı Talepleri
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -30,14 +28,14 @@ ms.locfileid: "70206015"
   
  Tam bir yığın ilerinin bu talep türü ile gerçekleştirilmediğini ve kodunuzun yine de en fazla saldırı saldırılarına maruz olduğunu unutmayın. Örneğin, derleme A içindeki bir yöntem bir bağlantı talebi tarafından korunuyorsa, B derlemesinde doğrudan çağıran derleme B 'nin izinlerine göre değerlendirilir.  Ancak, bağlantı isteği, derleme B içindeki yöntemi kullanarak dolaylı olarak bir derlemeyi çağıran derleme C 'deki bir yöntemi değerlendirmeyecektir. Bağlantı talebi yalnızca hemen çağıran derlemede bulunan izin doğrudan çağıranlarının kodunuza bağlanması için sahip olması gerektiğini belirtir. Tüm çağıranların kodunuzu çalıştırmak için sahip olması gereken izinleri belirtmez.  
   
- <xref:System.Security.CodeAccessPermission.Assert%2A>, Veyığın<xref:System.Security.CodeAccessPermission.PermitOnly%2A> ilerleme değiştiricileri bağlantı taleplerinin değerlendirilmesini etkilemez. <xref:System.Security.CodeAccessPermission.Deny%2A>  Bağlantı talepleri bir yığın ilerleme işlemi gerçekleştirmediğinden, yığın ilerleme değiştiricilerin bağlantı taleplerini etkilemez.  
+ <xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A>ve <xref:System.Security.CodeAccessPermission.PermitOnly%2A> Stack izlenecek değiştiriciler bağlantı taleplerinin değerlendirilmesini etkilemez.  Bağlantı talepleri bir yığın ilerleme işlemi gerçekleştirmediğinden, yığın ilerleme değiştiricilerin bağlantı taleplerini etkilemez.  
   
- Bir bağlantı talebi tarafından korunan bir yönteme [yansıma](../reflection-and-codedom/reflection.md)aracılığıyla erişiliyorsa, bağlantı talebi, yansıma aracılığıyla erişilen kodun hemen çağırışını denetler. Bu, hem yöntem bulma hem de yansıma kullanılarak gerçekleştirilen yöntem çağırma için geçerlidir. Örneğin, kodun bir bağlantı talebi tarafından korunan bir yöntemi <xref:System.Reflection.MethodInfo> temsil eden bir nesneyi döndürmek için yansıma kullandığını varsayın ve sonra bu **MethodInfo** nesnesini, özgün yöntemi çağırmak için nesnesini kullanan başka bir koda geçirir. Bu durumda, bağlantı isteği denetimi iki kez gerçekleşir: **MethodInfo** nesnesini döndüren kod için bir kez ve onu çağıran kod için bir kez.  
+ Bir bağlantı talebi tarafından korunan bir yönteme [yansıma](../reflection-and-codedom/reflection.md)aracılığıyla erişiliyorsa, bağlantı talebi, yansıma aracılığıyla erişilen kodun hemen çağırışını denetler. Bu, hem yöntem bulma hem de yansıma kullanılarak gerçekleştirilen yöntem çağırma için geçerlidir. Örneğin, kodun bir bağlantı talebi tarafından korunan bir yöntemi temsil eden bir <xref:System.Reflection.MethodInfo> nesnesi döndürecek şekilde yansıma kullandığını varsayalım ve bu **MethodInfo** nesnesini, özgün yöntemi çağırmak için nesneyi kullanan başka bir koda geçirir. Bu durumda, bağlantı isteği denetimi iki kez gerçekleşir: **MethodInfo** nesnesini döndüren kod için bir kez ve onu çağıran kod için bir kez.  
   
 > [!NOTE]
 > Statik oluşturucular, uygulamanın kod yürütme yolu dışında, sistem tarafından çağrılamadığından, statik sınıf oluşturucusunda gerçekleştirilen bir bağlantı isteği oluşturucuyu korumaz. Sonuç olarak, bir bağlantı isteği tüm sınıfa uygulandığında, sınıfın geri kalanını korusa da statik bir oluşturucuya erişimi koruyamaz.  
   
- Aşağıdaki kod parçası bildirimli olarak, `ReadData` yönteme bağlanan herhangi bir kodun `CustomPermission` izne sahip olması gerektiğini belirtir. Bu izin kuramsal bir özel izindir ve .NET Framework yok. Talep, öğesine `CustomPermissionAttribute`bir **SecurityAction. LinkDemand** bayrağı geçirilerek yapılır.  
+ Aşağıdaki kod parçası bildirimli olarak `ReadData` yöntemine bağlanan herhangi bir kodun `CustomPermission` iznine sahip olması gerektiğini belirtir. Bu izin kuramsal bir özel izindir ve .NET Framework yok. Talep, `CustomPermissionAttribute`bir **SecurityAction. LinkDemand** bayrağı geçirerek yapılır.  
   
 ```vb  
 <CustomPermissionAttribute(SecurityAction.LinkDemand)> _  

@@ -9,30 +9,28 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), binding failures
 - BindingFailure MDA
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 93c426cce792c8f30a3551e2d4626736dd67278f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e3a9a915d25cbe5f052f039055167cf3ae4bf424
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052952"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216926"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 
-Yönetilen `bindingFailure` hata ayıklama Yardımcısı (MDA), bir derleme yükleme başarısız olduğunda etkinleştirilir.
+`bindingFailure` yönetilen hata ayıklama Yardımcısı (MDA), bir derleme yükleme başarısız olduğunda etkinleştirilir.
 
 ## <a name="symptoms"></a>Belirtiler
 
-Kod, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> statik başvuru veya ya <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>da gibi Loader yöntemlerinden birini kullanarak bir derlemeyi yüklemeyi denedi. Derleme yüklü değil ve bir <xref:System.IO.FileNotFoundException> veya <xref:System.IO.FileLoadException> özel durum oluşturuldu.
+Kod, statik başvuru veya <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> ya da <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>gibi Loader yöntemlerinden birini kullanarak bir derlemeyi yüklemeyi denedi. Derleme yüklü değil ve bir <xref:System.IO.FileNotFoundException> veya <xref:System.IO.FileLoadException> özel durumu oluşturuldu.
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
 
 Çalışma zamanı bir derlemeyi yükleyemediğinde bağlama hatası oluşur. Bir bağlama hatası, aşağıdaki durumlardan birinin sonucu olabilir:
 
 - Ortak dil çalışma zamanı (CLR) istenen derlemeyi bulamıyor. Bunun gerçekleşebileceği, derlemenin yüklü olmadığı veya uygulamanın derlemeyi bulmak için doğru şekilde yapılandırılmadığı birçok nedeni vardır.
 
-- Yaygın bir sorun senaryosu başka bir uygulama etki alanına bir tür geçirilerek, CLR 'nin diğer uygulama etki alanında bu türü içeren derlemeyi yüklemesi gerekir. Diğer uygulama etki alanı orijinal uygulama etki alanından farklı yapılandırılmışsa, çalışma zamanının derlemeyi yüklemesi mümkün olmayabilir. Örneğin, iki uygulama etki alanı farklı <xref:System.AppDomain.BaseDirectory%2A> özellik değerlerine sahip olabilir.
+- Yaygın bir sorun senaryosu başka bir uygulama etki alanına bir tür geçirilerek, CLR 'nin diğer uygulama etki alanında bu türü içeren derlemeyi yüklemesi gerekir. Diğer uygulama etki alanı orijinal uygulama etki alanından farklı yapılandırılmışsa, çalışma zamanının derlemeyi yüklemesi mümkün olmayabilir. Örneğin, iki uygulama etki alanının farklı <xref:System.AppDomain.BaseDirectory%2A> özellik değerleri olabilir.
 
 - İstenen derleme bozuk veya bir derleme değil.
 
@@ -44,19 +42,19 @@ Kod, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> stat
 
 İlk adım, CLR 'nin istenen derlemeye neden bağlanmadığını belirlemektir. Çalışma zamanının istenen derlemeyi (nedeni bölümünde listelenen senaryolar gibi) bulmamasının pek çok nedeni olabilir. Bağlama hatasının nedenini ortadan kaldırmak için aşağıdaki eylemler önerilir:
 
-- `bindingFailure` Mda tarafından belirtilen verileri kullanarak nedenini belirleme:
+- `bindingFailure` MDA tarafından belirtilen verileri kullanarak nedenini belirleme:
 
   - Derleme cildi tarafından üretilen hata günlüklerini okumak için [Fuslogvw. exe ' yi (derleme bağlama günlük Görüntüleyici)](../tools/fuslogvw-exe-assembly-binding-log-viewer.md) çalıştırın.
 
-  - Derlemenin istenen konumda olup olmadığını belirleme. <xref:System.Reflection.Assembly.LoadFrom%2A> Ve<xref:System.Reflection.Assembly.LoadFile%2A> yöntemleri söz konusu olduğunda, istenen konum kolayca belirlenebilir. Derleme kimliğini kullanarak bağlanan <xref:System.Reflection.Assembly.Load%2A> yöntemi söz konusu olduğunda, uygulama <xref:System.AppDomain.BaseDirectory%2A> etki alanının özellik araştırma yolu ve genel derleme önbelleğinde bu kimlikle eşleşen derlemeler için arama yapmanız gerekir.
+  - Derlemenin istenen konumda olup olmadığını belirleme. <xref:System.Reflection.Assembly.LoadFrom%2A> ve <xref:System.Reflection.Assembly.LoadFile%2A> yöntemleri söz konusu olduğunda, istenen konum kolayca belirlenebilir. Derleme kimliğini kullanarak bağlanan <xref:System.Reflection.Assembly.Load%2A> yöntemi söz konusu olduğunda, uygulama etki alanının <xref:System.AppDomain.BaseDirectory%2A> özelliği araştırma yolu ve genel derleme önbelleğinde bu kimlikle eşleşen derlemeler aramanız gerekir.
 
 - Önceki belirleme temelinde nedeni çözün. Olası çözüm seçenekleri şunlardır:
 
-  - İstenen derlemeyi genel derleme önbelleğine yükleyip öğesini çağırın. <xref:System.Reflection.Assembly.Load%2A>derlemeyi kimliğe göre yükleme yöntemi.
+  - İstenen derlemeyi genel derleme önbelleğine yükleyip öğesini çağırın. derlemeyi kimliğe göre yüklemek için <xref:System.Reflection.Assembly.Load%2A> yöntemi.
 
-  - İstenen derlemeyi uygulama dizinine kopyalayın ve derlemeyi kimliğe göre yüklemek için <xref:System.Reflection.Assembly.Load%2A> yöntemini çağırın.
+  - İstenen derlemeyi uygulama dizinine kopyalayın ve derlemeyi kimliğe göre yüklemek için <xref:System.Reflection.Assembly.Load%2A> yöntemi çağırın.
 
-  - <xref:System.AppDomain.BaseDirectory%2A> Özelliği değiştirerek ya da özel yoklama yolları ekleyerek, derleme yolunu dahil etmek için bağlama hatasının oluştuğu uygulama etki alanını yeniden yapılandırın.
+  - <xref:System.AppDomain.BaseDirectory%2A> özelliğini değiştirerek ya da özel yoklama yolları ekleyerek, derleme yolunu dahil etmek için bağlama hatasının oluştuğu uygulama etki alanını yeniden yapılandırın.
 
   - Oturum açan kullanıcının dosyayı okumasına izin vermek için dosya için erişim denetim listesini değiştirin.
 
@@ -64,11 +62,11 @@ Kod, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> stat
 
 Bu MDA, CLR üzerinde hiçbir etkisi yoktur. Yalnızca bağlama hatalarıyla ilgili verileri raporlar.
 
-## <a name="output"></a>Çıkış
+## <a name="output"></a>Çıktı
 
 MDA, istenen yol ve/veya görünen ad, bağlama bağlamı, yükün istendiği uygulama etki alanı ve hatanın nedeni dahil olmak üzere, yükleme başarısız olan derlemeyi rapor ediyor.
 
-Görünen ad veya istenen yol, verilerin CLR tarafından kullanılamadığı durumlarda boş olabilir. Başarısız olan çağrı <xref:System.Reflection.Assembly.Load%2A> yöntemi ise, çalışma zamanının derleme için görünen adı belirleyememe olasıdır.
+Görünen ad veya istenen yol, verilerin CLR tarafından kullanılamadığı durumlarda boş olabilir. Başarısız olan çağrı <xref:System.Reflection.Assembly.Load%2A> yöntemi ise, çalışma zamanı, derleme için görünen adı belirleyemeyebilir.
 
 ## <a name="configuration"></a>Yapılandırma
 

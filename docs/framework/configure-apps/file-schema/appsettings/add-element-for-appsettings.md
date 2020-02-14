@@ -1,5 +1,5 @@
 ---
-title: <appSettings> için <add> öğesi
+title: <add> için <appSettings> öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/add
@@ -7,20 +7,18 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 865c693bf8f23bf050064ac097b72aa6fa3b371e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 5c7de79ec626966e71d461dd3865b294a8979db2
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088752"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214807"
 ---
 # <a name="add-element-for-appsettings"></a>\<appSettings için > öğesi \<ekleyin >
 
 Özel bir uygulama ayarı ekler.
 
-[ **\<configuration >** ](../configuration-element.md) \
+[ **\<yapılandırma >** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<appSettings >** ](appsettings-element-for-configuration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<ekleme >**
 
@@ -47,7 +45,7 @@ ms.locfileid: "74088752"
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-Yok.
+Hiçbiri
 
 ## <a name="example"></a>Örnek
 

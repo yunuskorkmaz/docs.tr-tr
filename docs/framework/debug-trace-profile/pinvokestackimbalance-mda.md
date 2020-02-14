@@ -10,14 +10,12 @@ helpviewer_keywords:
 - PInvokeStackImbalance MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 117e0838f78d43bf9ffa555947bf8749830c9840
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c789e8cb409bd4c59c91d6b646efe428afe7c86d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802003"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217249"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance MDA
 
@@ -32,7 +30,7 @@ ms.locfileid: "74802003"
 
 Bir uygulama, bir platform çağırma çağrısını yaparken veya takip edildiğinde bir erişim ihlali veya bellek bozulması ile karşılaşır.
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
 
 Platform çağırma çağrısının yönetilen imzası, çağrılan metodun yönetilmeyen imzasıyla eşleşmeyebilir.  Bu uyuşmazlığın nedeni, yönetilen imzanın doğru parametre sayısını bildirmemesi veya parametreler için uygun boyutu belirtmemesidir.  Ayrıca, <xref:System.Runtime.InteropServices.DllImportAttribute> özniteliği tarafından belirtilen çağırma kuralı yönetilmeyen çağrı kuralıyla eşleşmediğinden, MDA da etkinleştirilebilir.
 
@@ -40,11 +38,11 @@ Platform çağırma çağrısının yönetilen imzası, çağrılan metodun yön
 
 Yönetilen platform çağırma imzasını ve çağırma kuralını inceleyerek yerel hedefin imza ve çağırma kuralına uyduğundan emin olun.  Hem yönetilen hem de yönetilmeyen tarafta çağırma kuralını açıkça belirtmeyi deneyin. Yönetilmeyen işlevin, yönetilmeyen derleyicide oluşan bir hata gibi başka bir nedenle yığına dengesiz olması mümkün olmasa da mümkündür.
 
-## <a name="effect-on-the-runtime"></a>Çalışma Zamanı üzerindeki etkisi
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki
 
 Tüm platform çağırma çağrılarını CLR 'de iyileştirilmemiş olmayan yolu alacak şekilde zorlar.
 
-## <a name="output"></a>Çıkış
+## <a name="output"></a>Çıktı
 
 MDA iletisi, yığın dengesizlenmesi için yol açan platform çağırma yöntemi çağrısının adını verir. Yöntem `SampleMethod` bir platform çağırma çağrısının örnek iletisi:
 

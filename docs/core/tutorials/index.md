@@ -4,12 +4,12 @@ description: Mac, Linux ve Windows 'da uygulamalar ve kitaplıklar oluşturmak i
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 4e0acc357453d3bd3fb877e357264cc1aa715e4c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: e9fc5544904fc5a1304dcce135e01b1895d3446b
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920436"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215177"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Bu öğreticileri inceleyerek .NET Core ve .NET Core SDK araçları hakkında bilgi edinin
 
@@ -47,6 +47,6 @@ ms.locfileid: "76920436"
 - [MSTest ve .NET Core ile birim testi](../testing/unit-testing-with-mstest.md)
 - [Platformlar Arası Araçlarla Kitaplık Geliştirme](libraries.md)
 - [Yerel koddan .NET Core barındırma](netcore-hosting.md)
-- [Dotnet new için özel şablon oluşturma](cli-templates-create-item-template.md)
+- [CLı için şablon oluşturma](cli-templates-create-item-template.md)
 
 ASP.NET Core Web uygulamaları geliştirme hakkında öğreticiler için [ASP.NET Core belgelerine](/aspnet/core/)bakın.

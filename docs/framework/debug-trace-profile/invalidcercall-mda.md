@@ -9,27 +9,25 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d508beb697e07f7d3b960b6627b9a07ffe25adf4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f8e467401f7c50898613c7cf6eca68a8a705431a
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052630"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217389"
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall MDA
-`invalidCERCall` Yönetilen hata ayıklama Yardımcısı (MDA), güvenilirlik sözleşmesi olmayan bir yönteme veya aşırı derecede zayıf bir sözleşmeye sahip olan kısıtlı yürütme bölgesi (cer) grafiğinde bir çağrı olduğunda etkinleştirilir. Zayıf bir sözleşme, en kötü durum durumu bozulmasının çağrıya geçirilen örnekten daha büyük kapsam olduğunu bildiren bir sözleşmedir, yani <xref:System.AppDomain> veya işlem durumu bozulmuş olabilir ya da sonucun her zaman kesin bir şekilde bir tablo olmadığından emin olur bir CER içinde çağrıldığında.  
+`invalidCERCall` yönetilen hata ayıklama Yardımcısı (MDA), sınırlı yürütme bölgesi (CER) grafiğinde, güvenilirlik sözleşmesi olmayan bir yönteme veya aşırı zayıf bir sözleşmeye bir çağrı yapıldığında etkinleştirilir. Zayıf bir sözleşme, en kötü durum durumu bozulmasının çağrıya geçirilen örnekten daha büyük kapsam olduğunu bildiren bir sözleşmedir, yani <xref:System.AppDomain> veya işlem durumu bozulabilir veya bir CER içinde çağrıldığında her zaman belirleyici bir tablo değildir.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Bir CER 'de kod yürütürken beklenmedik sonuçlar. Belirtiler özel değildir. Bu, çalışma zamanı bir <xref:System.OutOfMemoryException> <xref:System.Threading.ThreadAbortException> süre önce <xref:System.Threading.ThreadAbortException>hazırlanmadığından veya çalışma zamanında özel durumlarla korunmadığından, güvenilir olmayan yönteme yapılan çağrıda beklenmedik, bir veya başka bir özel durum olabilir. Daha büyük bir tehdit, çalışma zamanında yönteminden kaynaklanan herhangi bir özel durumun <xref:System.AppDomain> veya işlemin bir cer hedefi olan kararsız bir durumda kalmasını sağlayabilir. Bir CER 'nin oluşturulma nedeni, bu gibi durum bozukluklarının önüne girmaktır. Tutarlı durumun tanımı uygulamalar arasında farklı olduğundan, bozuk durum belirtileri uygulamaya özgüdür.  
+ Bir CER 'de kod yürütürken beklenmedik sonuçlar. Belirtiler özel değildir. Çalışma zamanı bir süre önce hazırlanmadığından veya çalışma zamanında <xref:System.Threading.ThreadAbortException> özel durumlarla korunmadığından, bu durum beklenmeyen bir <xref:System.OutOfMemoryException>, <xref:System.Threading.ThreadAbortException>veya güvenilir olmayan yönteme yapılan çağrıda yer alabilir. Daha büyük bir tehdit, çalışma zamanında yönteminden kaynaklanan tüm özel durumlar <xref:System.AppDomain> veya işlemi bir CER hedefi olan kararsız bir durumda bırakabilir. Bir CER 'nin oluşturulma nedeni, bu gibi durum bozukluklarının önüne girmaktır. Tutarlı durumun tanımı uygulamalar arasında farklı olduğundan, bozuk durum belirtileri uygulamaya özgüdür.  
   
-## <a name="cause"></a>Sebep  
- Bir cer içindeki kod, bir işlev olmadan <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> veya bir cer 'de çalışan ile uyumlu olmayan zayıf <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> bir işlevi çağırıyor.  
+## <a name="cause"></a>Nedeni  
+ Bir CER içindeki kod, <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> olmayan bir işlevi veya bir CER içinde çalışan ile uyumlu olmayan zayıf bir <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> çağırır.  
   
- Güvenilirlik sözleşmesi sözdizimi açısından, zayıf <xref:System.Runtime.ConstrainedExecution.Consistency> bir sözleşme, bir numaralandırma değeri belirtmeyen veya <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>ya <xref:System.Runtime.ConstrainedExecution.Cer.None>da <xref:System.Runtime.ConstrainedExecution.Consistency> değerini belirten bir anlaşmadır. Bu koşullardan herhangi biri, olarak adlandırılan kodun, CER 'deki diğer kodun çalışmalarını, tutarlı durum sağlamak üzere engelleyebileceğini belirtir.  CERs, kodun hataları çok belirleyici bir şekilde ele almasını sağlar, böylece uygulama için önemli olan iç ınvaryantları koruyun ve bellek dışı özel durumlar gibi geçici hatalar halinde çalışmaya devam etmesine izin verilir.  
+ Güvenilirlik sözleşmesi sözdizimi açısından, zayıf bir sözleşme <xref:System.Runtime.ConstrainedExecution.Consistency> numaralandırma değeri belirtmeyen veya <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>veya <xref:System.Runtime.ConstrainedExecution.Cer.None><xref:System.Runtime.ConstrainedExecution.Consistency> değerini belirten bir anlaşmadır. Bu koşullardan herhangi biri, olarak adlandırılan kodun, CER 'deki diğer kodun çalışmalarını, tutarlı durum sağlamak üzere engelleyebileceğini belirtir.  CERs, kodun hataları çok belirleyici bir şekilde ele almasını sağlar, böylece uygulama için önemli olan iç ınvaryantları koruyun ve bellek dışı özel durumlar gibi geçici hatalar halinde çalışmaya devam etmesine izin verilir.  
   
- Bu mda ' ın etkinleştirilmesi, cer 'de çağrılan yöntemin çağırıcının beklemediği veya <xref:System.AppDomain> bozulan ya da kurtarılamayan veya kurtarılamaz bir şekilde başarısız olmasına neden olduğunu gösterir. Kuşkusuz, çağrılan kod doğru şekilde yürütülemeyebilir ve sorun yalnızca eksik bir anlaşmada olur. Ancak, güvenilir kod yazma ile ilgili sorunlar hafif ve bir sözleşmenin yokluğu iyi bir göstergedir ve kod doğru bir şekilde yürütülmeyebilir. Sözleşmeler, programcının güvenilir bir şekilde kodlandığı ve ayrıca bu garantilere kodun gelecekteki düzeltmeleri içinde değişmeyecektir.  Diğer bir deyişle, sözleşmelerin yalnızca uygulama ayrıntıları değil, amaç bildirimleri vardır.  
+ Bu MDA 'ın etkinleştirilmesi, CER 'de çağrılan yöntemin, çağıranın beklemediği veya <xref:System.AppDomain> ya da işlem durumunun bozulmuş ya da kurtarılamayan bir şekilde başarısız olmasına yol açabilir. Kuşkusuz, çağrılan kod doğru şekilde yürütülemeyebilir ve sorun yalnızca eksik bir anlaşmada olur. Ancak, güvenilir kod yazma ile ilgili sorunlar hafif ve bir sözleşmenin yokluğu iyi bir göstergedir ve kod doğru bir şekilde yürütülmeyebilir. Sözleşmeler, programcının güvenilir bir şekilde kodlandığı ve ayrıca bu garantilere kodun gelecekteki düzeltmeleri içinde değişmeyecektir.  Diğer bir deyişle, sözleşmelerin yalnızca uygulama ayrıntıları değil, amaç bildirimleri vardır.  
   
  Zayıf veya varolmayan bir sözleşmeye sahip herhangi bir yöntem potansiyel olarak çok sayıda öngörülemeyen şekilde başarısız olabileceğinden, çalışma zamanı, yavaş JıT oluşturma, genel türler sözlüğü tarafından tanıtılan yöntemden kendi öngörülemeyen hatalarından hiçbirini kaldırmaya çalışmaz Örneğin, popülasyon veya iş parçacığı iptal eder. Diğer bir deyişle, bu MDA etkin olduğunda, çalışma zamanının tanımlanmakta olan CER 'ye çağrılan yöntemi içermediğini belirtir; Bu alt ağacı hazırlamaya devam etmek olası hatayı maskelemek için bu düğümde çağrı grafı sonlandırıldı.  
   
@@ -37,9 +35,9 @@ ms.locfileid: "71052630"
  İşleve geçerli bir güvenilirlik sözleşmesi ekleyin veya bu işlev çağrısını kullanmaktan kaçının.  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
- Bir CER 'den zayıf bir sözleşmeyi çağırma etkisi, işlemlerini tamamlamaya yönelik CER hatası olabilir. Bu <xref:System.AppDomain> işlem durumu bozulmasına yol açabilir.  
+ Bir CER 'den zayıf bir sözleşmeyi çağırma etkisi, işlemlerini tamamlamaya yönelik CER hatası olabilir. Bu, <xref:System.AppDomain> işlem durumunun bozulmasına yol açabilir.  
   
-## <a name="output"></a>Çıkış  
+## <a name="output"></a>Çıktı  
  Bu MDA 'ın örnek çıktısı aşağıda verilmiştir.  
   
  `Method 'MethodWithCer', while executing within a constrained execution region, makes a call at IL offset 0x000C to 'MethodWithWeakContract', which does not have a sufficiently strong reliability contract and might cause non-deterministic results.`  
