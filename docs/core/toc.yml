@@ -49,8 +49,9 @@
     - name: Yerelleştirilmiş IntelliSense’i yükleme
       href: install/localized-intellisense.md
 - name: Kullanmaya başlayın
-  href: get-started.md
   items:
+    - name: Kullanmaya başlayın
+      href: get-started.md
     - name: 'C# ve Visual Studio Code kullanmaya başlama'
       href: tutorials/with-visual-studio-code.md
     - name: Visual Studio Code kullanarak macOS üzerinde .NET Core kullanmaya başlama
@@ -83,16 +84,9 @@
   displayName: app compatibility
   href: compatibility/
 - name: Öğreticiler
-  href: tutorials/index.md
   items:
-    - name: CLI için şablonlar
-      items:
-        - name: 1 - Öğe şablonu oluşturma
-          href: tutorials/cli-templates-create-item-template.md
-        - name: 2 - Proje şablonu oluşturma
-          href: tutorials/cli-templates-create-project-template.md
-        - name: 3 - Şablon paketi oluşturma
-          href: tutorials/cli-templates-create-template-pack.md
+    - name: Genel Bakış
+      href: tutorials/index.md
     - name: Mac için Visual Studio kullanarak .NET Core kullanmaya başlama
       href: tutorials/using-on-mac-vs.md
     - name: macOS üzerinde kapsamlı bir .NET Core çözümü oluşturma
@@ -109,6 +103,14 @@
       href: tutorials/aspnet-core.md
     - name: Yerel koddan .NET Core barındırma
       href: tutorials/netcore-hosting.md
+    - name: CLI için şablonlar oluşturma
+      items:
+        - name: 1 - Öğe şablonu oluşturma
+          href: tutorials/cli-templates-create-item-template.md
+        - name: 2 - Proje şablonu oluşturma
+          href: tutorials/cli-templates-create-project-template.md
+        - name: 3 - Şablon paketi oluşturma
+          href: tutorials/cli-templates-create-template-pack.md
 - name: Çalışma zamanı yapılandırması
   items:
     - name: Ayarlar
@@ -131,13 +133,6 @@
       href: native-interop/expose-components-to-com.md
 - name: 'Paketler, meta paketler ve çerçeveler'
   href: packages.md
-- name: CLI’daki değişikliklere genel bakış
-  href: tools/cli-msbuild-architecture.md
-  items:
-    - name: Bağımlılık yönetimi
-      href: tools/dependencies.md
-    - name: Csproj biçimine eklenenler
-      href: tools/csproj.md
 - name: Geçiş
   items:
     - name: .NET Core 2.0’dan 2.1’e geçiş
@@ -146,11 +141,16 @@
       href: migration/index.md
     - name: Project.json ile csproj arasında eşleme
       href: tools/project-json-to-csproj.md
+    - name: CLI’daki değişikliklere genel bakış
+      href: tools/cli-msbuild-architecture.md
+    - name: Csproj biçimine eklenenler
+      href: tools/csproj.md
     - name: DNX’ten geçiş
       href: migration/from-dnx.md
 - name: Uygulama dağıtımı
-  href: deploying/index.md
   items:
+    - name: Genel Bakış
+      href: deploying/index.md
     - name: CLI ile uygulama yayımlama
       href: deploying/deploy-with-cli.md
     - name: Visual Studio ile uygulama dağıtma
@@ -192,6 +192,8 @@
 - name: Birim testi
   href: testing/index.md
   items:
+    - name: Genel Bakış
+      href: testing/index.md
     - name: Birim testi en iyi deneyimler
       href: testing/unit-testing-best-practices.md
     - name: 'xUnit ile C# birim testi'
@@ -221,8 +223,9 @@
 - name: Sürekli tümleştirme
   href: tools/using-ci-with-cli.md
 - name: Sürüm Oluşturma
-  href: versions/index.md
   items:
+    - name: Genel Bakış
+      href: versions/index.md
     - name: .NET Core sürüm seçimi
       href: versions/selection.md
     - name: Eski çalışma zamanlarını ve SDK’ları kaldırma
@@ -330,8 +333,9 @@
             - name: dotnet remove package
               href: tools/dotnet-remove-package.md
 - name: .NET Core ek araçlar
-  href: additional-tools/index.md
   items:
+    - name: Genel Bakış
+      href: additional-tools/index.md
     - name: .NET Core Kaldırma Aracı
       href: additional-tools/uninstall-tool.md
     - name: WCF Web Service Reference Provider
@@ -364,13 +368,15 @@
       href: porting/wpf.md
     - name: C++/CLI projelerini taşıma
       href: porting/cpp-cli.md
-- name: Bağımlılık yüklemesi
+- name: Bağımlılık yönetimi ve yüklemesi
   items:
-    - name: Genel Bakış
+    - name: Bağımlılık yönetimi
+      href: tools/dependencies.md
+    - name: Bağımlılık yüklemesi
       href: dependency-loading/overview.md
     - name: AssemblyLoadContext’i anlama
       href: dependency-loading/understanding-assemblyloadcontext.md
-    - name: Yükleme ayrıntıları
+    - name: Bağımlılık yüklemesi ayrıntıları
       items:
         - name: Varsayılan bağımlılık araştırması
           href: dependency-loading/default-probing.md
@@ -387,6 +393,4 @@
         - name: .NET Core’da kaldırabilme özelliğini kullanma ve hatalarını ayıklama
           href: ../standard/assembly/unloadability-howto.md
 - name: .NET Core dağıtımı paketleme
-  items:
-    - name: Genel Bakış
-      href: distribution-packaging.md
+  href: distribution-packaging.md
