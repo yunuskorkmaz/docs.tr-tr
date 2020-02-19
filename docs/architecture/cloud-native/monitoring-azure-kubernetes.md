@@ -1,13 +1,13 @@
 ---
 title: Azure Kubernetes Service'te İzleme
 description: Azure Kubernetes Service'te İzleme
-ms.date: 09/23/2019
-ms.openlocfilehash: fc9d84fd738ff1c40d25860680e14313c9323517
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.date: 02/05/2020
+ms.openlocfilehash: 5c46b9e8599f70d430ad26cf1364343454d30a16
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711655"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450069"
 ---
 # <a name="monitoring-in-azure-kubernetes-services"></a>Azure Kubernetes Service'te İzleme
 
@@ -15,28 +15,14 @@ ms.locfileid: "75711655"
 
 Kubernetes 'te yerleşik günlük oluşturma basit bir. Ancak, günlükleri Kubernetes dışında ve düzgün çözümlenebilecekleri bir yere almak için bazı harika seçenekler vardır. AKS kümelerinizi izlemeniz gerekiyorsa, Kubernetes için elastik yığının yapılandırılması harika bir çözümdür.
 
-## <a name="elastic-stack"></a>Elastik yığın
+## <a name="azure-monitor-for-containers"></a>Kapsayıcılar için Azure İzleyici
 
-Elastik yığın, bir Kubernetes kümesinden bilgi toplamak için güçlü bir seçenektir. Kubernetes, bir Elakes arama uç noktasına günlük göndermeyi destekler ve [çoğu bölüm](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/)Için, Şekil 7-5 ' de gösterildiği gibi, ortam değişkenlerini ayarlamak gerekir:
-
-```kubernetes
-KUBE_LOGGING_DESTINATION=elasticsearch
-KUBE_ENABLE_NODE_LOGGING=true
-```
-
-**Şekil 7-5** -Kubernetes için yapılandırma değişkenleri
-
-Bu, küme üzerinde elaa araması yükleyecek ve tüm küme günlüklerini buna gönderen hedeflenecek.
-
-Kubernetes](./media/kibana-dashboard.png)
-**şekil 7-6**' den alınan günlüklere yönelik sorgu sonuçlarının gösterildiği bir kibana panosu örneği ![. Kubernetes 'ten alınan günlüklere yönelik bir sorgunun sonuçlarını gösteren bir kibana panosu örneği
-
-## <a name="azure-container-monitoring"></a>Azure Kapsayıcı Izleme
-
-Azure Container Monitoring yalnızca Kubernetes değil, DC/OS, Docker Sısınma ve Red Hat OpenShift gibi diğer düzenleme altyapılarından günlük kullanmayı destekler.
+[Kapsayıcılar Için Azure izleyici](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview) , yalnızca Kubernetes değil de, DC/OS, Docker Sısınma ve Red Hat OpenShift gibi diğer düzenleme altyapılarından günlük kullanmayı destekler.
 
 farklı kapsayıcılardan günlük ![](./media/containers-diagram.png)
-**şekil 7-7**.  Çeşitli kapsayıcılardan günlükleri kullanma
+**şekil 7-10**. Çeşitli kapsayıcılardan günlükleri kullanma
+
+[Prometheus](https://prometheus.io/) , popüler bir açık kaynak ölçüm izleme çözümüdür. Bulut Yerel Işlem altyapısı 'nın bir parçasıdır. Genellikle, Prometheus 'ın kullanılması için kendi deposu ile bir Prometheus sunucusunun yönetilmesi gerekir. Ancak, [kapsayıcılar Için Azure izleyici, Prometheus ölçüm uç noktaları ile doğrudan tümleştirme sağlar](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-prometheus-integration), bu yüzden ayrı bir sunucu gerekli değildir.
 
 Günlük ve ölçüm bilgileri yalnızca kümede çalışan kapsayıcılardan değil, küme konaklarından da toplanır. Bu, bir hatayı daha kolay bir şekilde izlemek için, günlük bilgilerinin iki ' dan daha kolay olmasını sağlar.
 
@@ -44,7 +30,7 @@ Günlük toplayıcıların yüklenmesi [Windows](https://docs.microsoft.com/azur
 
 Hangi Orchestrator veya işletim sisteminin Azure Izleyici arka plan programını çalıştırıyor olduğuna bakılmaksızın, günlük bilgileri kullanıcıların tanıdık olduğu Azure Izleyici araçlarına iletilir. Bu, karma bir Kubernetes/Azure Işlevleri ortamı gibi farklı günlük kaynaklarını karıştırarak oluşan ortamlarda paralel bir deneyim sağlar.
 
-çeşitli çalışan kapsayıcılardan günlük ve ölçüm bilgilerini gösteren örnek bir pano ![. **şekil 7-8**](./media/containers-dashboard.png)
+çeşitli çalışan kapsayıcılardan günlük ve ölçüm bilgilerini gösteren örnek bir pano ![. **şekil 7-11**](./media/containers-dashboard.png)
 . Bir dizi çalışan kapsayıcıyı günlüğe kaydetme ve ölçüm bilgilerini gösteren örnek bir Pano.
 
 ## <a name="logfinalize"></a>Log. Finalize ()

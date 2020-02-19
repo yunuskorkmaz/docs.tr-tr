@@ -3,13 +3,13 @@ title: ASP.NET Core MVC uygulamaları geliştirme
 description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın ASP.NET Core MVC uygulamaları geliştirme
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 7bc30db084f361e6c4654b89e69230b379b0136c
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.date: 12/04/2019
+ms.openlocfilehash: 3b1409fbb924638f0148c74a678d482aeb732357
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116535"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449458"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC uygulamaları geliştirin
 
@@ -26,7 +26,7 @@ Yeni bir ASP.NET Core uygulaması oluşturduğunuzda, derlemek istediğiniz uygu
 
 ### <a name="why-razor-pages"></a>Neden Razor Pages?
 
-Razor Pages, Visual Studio 'da yeni Web uygulamaları için varsayılan yaklaşımdır. Razor Pages, SPA olmayan formlar gibi sayfa tabanlı uygulama özelliklerini oluşturmanın daha basit bir yolunu sunar. Denetleyiciler ve görünümleri kullanarak, uygulamaların birçok farklı bağımlılıklarla çalışan çok büyük denetleyicileri olması ve modelleri görüntülemesi ve birçok farklı görünüm döndürdüğünden yaygındır. Bu çok karmaşıklığa neden olur ve genellikle tek sorumluluk Ilkesini veya açık/kapalı Ilkeleri etkili bir şekilde izleyen denetleyicilerle sonuçlanmıştır. Razor Pages, Razor işaretlemesi ile bir Web uygulamasındaki belirli bir mantıksal "sayfa" için sunucu tarafı mantığını kapsülleyerek bu sorunu giderir. Sunucu tarafı mantığı olmayan bir Razor sayfası, yalnızca bir Razor dosyasından (örneğin, "Index. cshtml") oluşabilir. Ancak, önemsiz olmayan Razor Pages ilişkili bir sayfa modeli sınıfına sahip olur. Bu, kurala göre, ". cs" uzantısıyla Razor dosyası ile aynı ada sahiptir (örneğin, "Index.cshtml.cs").
+Razor Pages, Visual Studio 'da yeni Web uygulamaları için varsayılan yaklaşımdır. Razor Pages, SPA olmayan formlar gibi sayfa tabanlı uygulama özelliklerini oluşturmanın daha basit bir yolunu sunar. Denetleyiciler ve görünümleri kullanarak, uygulamaların birçok farklı bağımlılıklarla çalışan çok büyük denetleyicileri olması ve modelleri görüntülemesi ve birçok farklı görünüm döndürdüğünden yaygındır. Bu, daha karmaşıklığa neden olur ve genellikle tek sorumluluk Ilkesini veya açık/kapalı Ilkeleri etkili bir şekilde izleyen denetleyicilerle sonuçlanmıştır. Razor Pages, Razor işaretlemesi ile bir Web uygulamasındaki belirli bir mantıksal "sayfa" için sunucu tarafı mantığını kapsülleyerek bu sorunu giderir. Sunucu tarafı mantığı olmayan bir Razor sayfası, yalnızca bir Razor dosyasından (örneğin, "Index. cshtml") oluşabilir. Ancak, önemsiz olmayan Razor Pages ilişkili bir sayfa modeli sınıfına sahip olur. Bu, kurala göre, ". cs" uzantısıyla Razor dosyası ile aynı ada sahiptir (örneğin, "Index.cshtml.cs").
 
 Bir Razor sayfasının sayfa modeli, bir MVC denetleyicisinin ve viewmodelinin sorumluluklarını birleştirir. İstekleri denetleyici eylem yöntemleriyle işlemek yerine, "OnGet ()" gibi sayfa modeli işleyicileri, ilişkili sayfaları varsayılan olarak işlenerek yürütülür. Razor Pages, ASP.NET Core MVC 'nin tüm mimari özelliklerini sağlamaya devam ederken, tek tek sayfaları bir ASP.NET Core uygulamasında oluşturma işlemini basitleştirir. Bu, yeni sayfa tabanlı işlevselliği için iyi bir varsayılan seçenektir.
 
@@ -43,9 +43,9 @@ ASP.NET Core uygulamalar gelen istekleri giden yanıtlara eşler. Düşük düze
 ASP.NET Core MVC uygulamaları geleneksel yollar, öznitelik yolları veya her ikisini kullanabilir. Geleneksel yollar kodda tanımlanmıştır ve aşağıdaki örnekte olduğu gibi sözdizimi kullanılarak yönlendirme _kurallarını_ belirtin:
 
 ```csharp
-app.UseMvc(routes =>
+app.UseEndpoints(endpoints =>
 {
-    routes.MapRoute("default","{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
 });
 ```
 
@@ -129,9 +129,9 @@ public class Startup
     public Startup(IHostingEnvironment env)
     {
         var builder = new ConfigurationBuilder()
-        .SetBasePath(env.ContentRootPath)
-        .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-        .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+            .SetBasePath(env.ContentRootPath)
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
     }
 }
 ```
@@ -152,7 +152,7 @@ public void Configure(IApplicationBuilder app,
 ConfigureServices yöntemi bu davranışın istisnadır; yalnızca ıvicecollection türünde tek bir parametre almalıdır. Son olarak, hizmet kapsayıcısına nesne eklemekten sorumlu olduğu ve diğer tüm yapılandırılmış hizmetlere ıvicecollection parametresi aracılığıyla erişimi olduğundan, bağımlılık ekleme işlemini desteklemesi gerçekten gerekli değildir. Bu nedenle, gerekli hizmeti bir parametre olarak isteyerek veya ConfigureServices içindeki ıvicecollection ile çalışarak, başlangıç sınıfının her bölümünde ASP.NET Core Hizmetleri koleksiyonunda tanımlanan bağımlılıklarla çalışabilirsiniz.
 
 > [!NOTE]
-> Başlangıç sınıfınız için bazı hizmetlerin kullanılabilir olduğundan emin olmanız gerekiyorsa, bunları WebHostBuilder ve ConfigureServices metodunu kullanarak yapılandırabilirsiniz.
+> Başlangıç sınıfınız için bazı hizmetlerin kullanılabilir olduğundan emin olmanız gerekiyorsa, bunları CreateDefaultBuilder çağrısının içindeki bir ıwebhostbuilder ve ConfigureServices yöntemi ile yapılandırabilirsiniz.
 
 Başlangıç sınıfı, ASP.NET Core uygulamanızın diğer bölümlerini denetleyicilerden ara yazılıma kendi hizmetlerinize yönelik olarak nasıl yapılandıracağınıza yönelik bir modeldir. Her durumda, doğrudan oluşturmak yerine bağımlılıklarınızı isteyerek ve uygulamanızın tamamında bağımlılık ekleme özelliğinden yararlanarak [Açık bağımlılıklar ilkesini](https://deviq.com/explicit-dependencies-principle/)izlemelisiniz. Uygulamaları, özellikle de altyapıyla çalışan veya yan etkileri olan uygulamaları, doğrudan hizmet ve nesneleri nasıl ve nasıl örneklendirileceğine dikkat edin. Uygulama çekirdekde tanımlanan soyutlamalar ile çalışmayı tercih edin ve belirli uygulama türlerine yönelik başvuruları kodlamaları için bağımsız değişken olarak geçirilmiş olarak geçin.
 
@@ -191,15 +191,10 @@ public class HomeController
 Ayrıca, rotalarınız için alan desteği eklemeniz gerekir:
 
 ```csharp
-app.UseMvc(routes =>
+app.UseEndpoints(endpoints =>
 {
-    // Areas support
-    routes.MapRoute(
-    name: "areaRoute",
-    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
-    routes.MapRoute(
-    name: "default",
-    template: "{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "areaRoute", pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
 });
 ```
 
@@ -237,7 +232,7 @@ Bundan sonra, ConfigureServices 'daki uygulamanıza MVC desteği eklediğinizde 
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-ASP.NET Core MVC, görünümleri bulmak için de bir kural kullanır. Görünümlerin Özellik klasörlerinizde bulunması için (yukarıdaki FeatureConvention tarafından sunulan özellik adı kullanılarak) özel bir kural ile geçersiz kılabilirsiniz. Bu yaklaşım hakkında daha fazla bilgi alabilir ve MSDN makalesinden çalışan bir örnek indirebilirsiniz [ASP.NET Core MVC Için özellik dilimleri](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc).
+ASP.NET Core MVC, görünümleri bulmak için de bir kural kullanır. Görünümlerin Özellik klasörlerinizde bulunması için (yukarıdaki FeatureConvention tarafından sunulan özellik adı kullanılarak) özel bir kural ile geçersiz kılabilirsiniz. Bu yaklaşım hakkında daha fazla bilgi alabilir ve MSDN Magazine makalesinden çalışan bir örnek indirebilirsiniz [ASP.NET Core MVC Için özellik dilimleri](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc).
 
 ### <a name="cross-cutting-concerns"></a>Geniş kapsamlı kritik konular
 
@@ -282,7 +277,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-Eylem yöntemlerinizi bunun gibi koşullu kodla karışık hale gelmesine izin vermez. Bunun yerine, ilkeleri gereken şekilde uygulanabilecek filtrelere çekin. Bu örnekte, API 'ye herhangi bir komutun gönderilmesi durumunda oluşması gereken model doğrulama denetimi aşağıdaki öznitelikle değiştirilebilir:
+Eylem yöntemlerinizi bunun gibi koşullu kodla karışık hale gelmesine izin vermez. Bunun yerine, ilkeleri gereken şekilde uygulanabilecek filtrelere çekin. Bu örnekte, API 'ye bir komutun gönderilmesi her zaman oluşması gereken model doğrulama denetimi aşağıdaki öznitelikle değiştirilebilir:
 
 ```csharp
 public class ValidateModelAttribute : ActionFilterAttribute
@@ -311,7 +306,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-Filtre uygulama hakkında daha fazla bilgi edinmek ve MSDN makalesinden, [gerçek dünyada ASP.NET Core MVC filtrelerinden](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters)çalışan bir örnek indirmek için daha fazla bilgi edinebilirsiniz.
+Filtre uygulama hakkında daha fazla bilgi edinmek ve MSDN Magazine makalesinden, [gerçek dünya ASP.NET Core MVC filtrelerinden](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters)çalışan bir örneği indirmek için daha fazla bilgi edinebilirsiniz.
 
 > ### <a name="references--structuring-applications"></a>Başvurular – uygulamaları yapılandırma
 >
@@ -321,7 +316,7 @@ Filtre uygulama hakkında daha fazla bilgi edinmek ve MSDN makalesinden, [gerçe
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc>
 > - **Filtreler**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **MSDN – gerçek dünya ASP.NET Core MVC filtreleri**  
+> - **MSDN Magazine – gerçek dünya ASP.NET Core MVC filtreleri**  
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
 ## <a name="security"></a>Güvenlik
@@ -356,11 +351,9 @@ public void Configure(IApplicationBuilder app)
 {
     app.UseStaticFiles();
     app.UseIdentity();
-    app.UseMvc(routes =>
+    app.UseEndpoints(endpoints =>
     {
-        routes.MapRoute(
-        name: "default",
-        template: "{controller=Home}/{action=Index}/{id?}");
+        endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
     });
 }
 ```
@@ -395,7 +388,7 @@ public IActionResult ExecutiveSalaryReport()
 
 İlkeleri bu şekilde kullanarak, bu işlem için uygulanan belirli rol veya kurallardan sınırlandırılmakta olan eylemlerin türlerini ayırabilirsiniz. Daha sonra, belirli kaynaklara erişmesi gereken yeni bir rol oluşturursanız, her bir rol listesini her bir \[\] özniteliğinde güncelleştirmek yerine yalnızca bir ilkeyi güncelleştirebilirsiniz.
 
-#### <a name="claims"></a>Talepler
+#### <a name="claims"></a>Belirt
 
 Talepler, kimliği doğrulanmış bir kullanıcının özelliklerini temsil eden ad değer çiftleridir. Örneğin, kullanıcıların çalışan numarasını bir talep olarak saklayabilirsiniz. Talepler, yetkilendirme ilkelerinin bir parçası olarak kullanılabilir. Bu örnekte gösterildiği gibi "EmployeeNumber" adlı bir talebin varlığını gerektiren "EmployeeOnly" adlı bir ilke oluşturabilirsiniz:
 
@@ -444,8 +437,6 @@ Kendi kimlik doğrulama hizmetinizi oluşturabilir, Azure AD ve OAuth ile tümle
 ## <a name="client-communication"></a>İstemci iletişimi
 
 Web API 'Leri aracılığıyla sayfalara hizmet vermeye ve veri isteklerine yanıt vermeye ek olarak, ASP.NET Core uygulamalar doğrudan bağlantılı istemcilerle iletişim kurabilir. Bu giden iletişim, en yaygın WebSockets olmak üzere çeşitli taşıma teknolojileri kullanabilir. ASP.NET Core SignalR, uygulamalarınıza gerçek zamanlı sunucudan istemciye iletişim işlevselliği eklemeyi basit hale getiren bir kitaplıktır. SignalR, WebSockets dahil olmak üzere çeşitli taşıma teknolojilerini destekler ve geliştiriciden birçok uygulama ayrıntılarını soyutlar.
-
-ASP.NET Core SignalR, sürüm 2,1 ' den beri ASP.NET Core ile kullanılabilir.
 
 WebSockets doğrudan veya diğer tekniklerin kullanılması halinde gerçek zamanlı istemci iletişimi, çeşitli uygulama senaryolarında yararlı olur. Bazı örnekler:
 
@@ -520,7 +511,7 @@ Etki alanı modeliniz, sistem davranışlarını göstermek için birbirleriyle 
 
 - Sistem içindeki diğer bölümleri ilgilendiren işlemleri temsil eden [etki alanı olayları](https://martinfowler.com/eaaDev/DomainEvent.html).
 
-DDD etki alanı modelinin model içerisindeki karmaşık davranışı kapsüllemelidir. Varlıklar, özellikle de yalnızca özellik koleksiyonları olmamalıdır. Etki alanı modelinde davranış olmadığında ve yalnızca sistemin durumunu temsil ettiğinde, bu, DDD 'da istenmeyen bir [anemik modeli](https://deviq.com/anemic-model/)olarak kabul edilir.
+DDD etki alanı modeli, model içerisindeki karmaşık davranışı kapsüllemelidir. Varlıklar, özellikle de yalnızca özellik koleksiyonları olmamalıdır. Etki alanı modelinde davranış olmadığında ve yalnızca sistemin durumunu temsil ettiğinde, bu, DDD 'da istenmeyen bir [anemik modeli](https://deviq.com/anemic-model/)olarak kabul edilir.
 
 Bu model türlerine ek olarak, DDD genellikle çeşitli desenler kullanır:
 
@@ -559,7 +550,7 @@ ASP.NET Core uygulamanızın nerede barındırıldığından bağımsız olarak 
 
 ASP.NET Core uygulamalar, uygulama (veya sunucu) kilitlenirse sunucu önyüklendiğinde ve yeniden başlatıldığında başlatılmış olması gereken konsol uygulamalardır. İşlem Yöneticisi, bu işlemi otomatikleştirmek için kullanılabilir. ASP.NET Core için en yaygın işlem yöneticileri, Linux ve IIS ya da Windows hizmetinde Windows hizmetinde NGINX ve Apache 'tir.
 
-Bir işlem yöneticisinin yanı sıra, Kestrel Web sunucusunda barındırılan ASP.NET Core uygulamalar, ters proxy sunucu kullanmalıdır. Ters proxy sunucusu, internet 'ten gelen HTTP isteklerini alır ve bazı ön işleme sonrasında Kestrel 'e iletir. Ters proxy sunucuları, uygulama için bir güvenlik katmanı sağlar ve uç dağıtımlar (internetten gelen trafiğe gösterilir) için gereklidir. Kestrel görece yenidir ve henüz belirli saldırılara karşı savunma sunmaz. Kestrel aynı bağlantı noktasında birden fazla uygulamanın barındırılmasını desteklemez, bu nedenle konak üstbilgileri gibi teknikler aynı bağlantı noktasında ve IP adresinde birden çok uygulamanın barındırılmasına olanak tanımak için kullanılamaz.
+ASP.NET Core uygulamalar, bir işlem yöneticisi 'ne ek olarak ters proxy sunucusu kullanabilir. Ters proxy sunucusu, Internet 'ten gelen HTTP isteklerini alır ve bazı ön işleme sonrasında Kestrel 'e iletir. Ters proxy sunucuları, uygulama için bir güvenlik katmanı sağlar. Kestrel aynı bağlantı noktasında birden fazla uygulamanın barındırılmasını desteklemez, bu nedenle konak üstbilgileri gibi teknikler aynı bağlantı noktasında ve IP adresinde birden çok uygulamanın barındırılmasına olanak tanımak için kullanılamaz.
 
 ![Kestrel to Internet](./media/image7-5.png)
 

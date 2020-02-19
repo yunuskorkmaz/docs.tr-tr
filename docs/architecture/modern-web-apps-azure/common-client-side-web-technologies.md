@@ -3,13 +3,13 @@ title: Ortak istemci tarafı Web teknolojileri
 description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Ortak istemci tarafı Web teknolojileri
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 7dd3765b1b71d8c1ef22d714a00be3e171fab523
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.date: 12/04/2019
+ms.openlocfilehash: 2809c8539b42e8e2250039dceed1389b3cbdcd8a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093129"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449380"
 ---
 # <a name="common-client-side-web-technologies"></a>Ortak istemci tarafı Web teknolojileri
 
@@ -18,13 +18,16 @@ ms.locfileid: "77093129"
 
 ASP.NET Core uygulamalar Web uygulamalardır ve genellikle HTML, CSS ve JavaScript gibi istemci tarafı Web teknolojilerine bağımlıdır. Sayfa (HTML) içeriğini düzen ve stil (CSS) ve davranışını (JavaScript aracılığıyla) ayırarak, karmaşık Web uygulamaları, endişeleri ayrımı özelliğinden yararlanabilir. Uygulamanın yapısı, tasarımı veya davranışında yapılacak değişiklikler, bu konular intertwined olmadığında daha kolay hale getirilebilir.
 
-HTML ve CSS görece kararlı olsa da, JavaScript, uygulama çerçeveleri ve yardımcı programlar tarafından Web tabanlı uygulamalar oluşturmak için birlikte çalışarak,, Breakneck hızında gelişiyor. Bu bölüm, JavaScript 'in Web geliştiricileri tarafından kullanıldığı birkaç yolla, angular ve istemci tarafı kitaplıklarının tepki verme ve yanıt verme konusunda üst düzey bir genel bakış sunar.
+HTML ve CSS görece kararlı olsa da, JavaScript, uygulama çerçeveleri ve yardımcı programlar tarafından Web tabanlı uygulamalar oluşturmak için birlikte çalışarak,, Breakneck hızında gelişiyor. Bu bölümde, JavaScript 'in Web geliştiricileri tarafından kullanılması ve angular hakkında üst düzey bir genel bakış ve istemci tarafı kitaplıklarına yanıt verme gibi bazı yollar sunulmaktadır.
+
+> [!NOTE]
+> Blazor zengin, etkileşimli istemci kullanıcı arabirimleri oluşturmak için JavaScript çerçevelerine bir alternatif sağlar. İstemci tarafı Blazor desteği hala önizlemededir, bu nedenle artık bu bölüm için kapsam dışındadır.
 
 ## <a name="html"></a>HTML
 
-HTML (köprü metni biçimlendirme dili), Web sayfaları ve Web uygulamaları oluşturmak için kullanılan standart biçimlendirme dilidir. Öğeleri, biçimlendirilen metin, görüntüler, form girişleri ve diğer yapıları temsil eden sayfa oluşturma blokları oluşturuyor. Bir tarayıcı bir URL 'ye istek yaptığında, bir sayfa veya uygulama döndürmeksizin döndürülen ilk şey bir HTML belgesidir. Bu HTML belgesi, CSS biçimindeki görünüm ve düzen ile ilgili ek bilgilere başvurabilir veya JavaScript biçiminde davranış gösterebilir.
+HTML, Web sayfaları ve Web uygulamaları oluşturmak için kullanılan standart biçimlendirme dilidir. Öğeleri, biçimlendirilen metin, görüntüler, form girişleri ve diğer yapıları temsil eden sayfa oluşturma blokları oluşturuyor. Bir tarayıcı bir URL 'ye istek yaptığında, bir sayfa veya uygulama döndürmeksizin döndürülen ilk şey bir HTML belgesidir. Bu HTML belgesi, CSS biçimindeki görünüm ve düzen ile ilgili ek bilgilere başvurabilir veya JavaScript biçiminde davranış gösterebilir.
 
-## <a name="css"></a>CSS
+## <a name="css"></a>{1&gt;CSS&lt;1}
 
 CSS (Geçişli Stil Sayfaları), HTML öğelerinin görünüm ve yerleşimini denetlemek için kullanılır. CSS stilleri, aynı sayfada ayrı olarak tanımlanan veya ayrı bir dosyada tanımlanmış ve sayfa tarafından başvurulan bir HTML öğesine doğrudan uygulanabilir. Stiller, belirli bir HTML öğesini seçmek için nasıl kullanıldığına göre basamaklandırılır. Örneğin, bir stil tüm belgeye uygulanabilir, ancak belirli bir öğeye uygulanan bir stil tarafından geçersiz kılınır. Benzer şekilde, öğeye özgü bir stil, öğesine uygulanan bir CSS sınıfına uygulanan bir stil tarafından geçersiz kılınır. Bu, sırasıyla bu öğenin belirli bir örneğini hedefleyen bir stil tarafından geçersiz kılınır (KIMLIĞI aracılığıyla). Şekil 6-1
 
@@ -36,13 +39,13 @@ Stilleri kendi ayrı stil sayfası dosyalarında tutmak ve uygulama içinde tuta
 
 ### <a name="css-preprocessors"></a>CSS önişlemcisi
 
-CSS stil sayfalarında koşullu mantık, değişkenler ve diğer programlama dili özellikleri için destek yoktur. Bu nedenle, birçok farklı HTML ve CSS sınıfı çeşitlemelerine aynı renk, yazı tipi veya diğer ayarlar uygulandığından büyük stil sayfaları genellikle çok fazla yineleme içerir. CSS önişlemcisi, stil sayfalarınızın ve mantığa yönelik destek ekleyerek [kurutma ilkesini](https://deviq.com/don-t-repeat-yourself/) takip etmenize yardımcı olabilir.
+CSS stil sayfalarında koşullu mantık, değişkenler ve diğer programlama dili özellikleri için destek yoktur. Bu nedenle, birçok farklı HTML öğesi ve CSS sınıfı çeşitlemelerine aynı renk, yazı tipi veya başka bir ayar uygulandığından, büyük stil sayfaları genellikle tam bir tekrardır. CSS önişlemcisi, stil sayfalarınızın ve mantığa yönelik destek ekleyerek [kurutma ilkesini](https://deviq.com/don-t-repeat-yourself/) takip etmenize yardımcı olabilir.
 
 En popüler CSS önişlemcisi Sass ve küçüktür. Her ikisi de CSS 'yi genişletir ve bununla birlikte, düz bir CSS dosyasının geçerli bir Sass veya daha az dosya olduğu anlamına gelir. Sass, Ruby tabanlıdır ve JavaScript tabanlıdır ve genellikle yerel geliştirme işleminizin bir parçası olarak çalışır. Hem komut satırı araçlarına hem de Gulp veya Grreksel görevler kullanılarak çalıştırmak üzere Visual Studio 'da yerleşik desteğe sahiptir.
 
 ## <a name="javascript"></a>JavaScript
 
-JavaScript, ECMAScript dil belirtiminde standartlaştırılmış olan dinamik, yorumlanan bir programlama dilidir. Web 'in programlama dilidir. CSS gibi JavaScript, HTML öğeleri içinde, bir sayfa içinde betik blokları olarak veya ayrı dosyalarda öznitelik olarak tanımlanabilir. CSS gibi, genellikle JavaScript 'i ayrı dosyalara düzenlemeniz önerilir ve bu, ayrı Web sayfalarında veya uygulama görünümlerinde bulunan HTML 'den mümkün olduğunca ayrılmaktadır.
+JavaScript, ECMAScript dil belirtiminde standartlaştırılmış olan dinamik, yorumlanan bir programlama dilidir. Web 'in programlama dilidir. CSS gibi JavaScript, HTML öğeleri içinde, bir sayfa içinde betik blokları olarak veya ayrı dosyalarda öznitelik olarak tanımlanabilir. CSS gibi, JavaScript 'i ayrı dosyalara düzenlemeniz önerilir ve bu, ayrı Web sayfalarında veya uygulama görünümlerinde bulunan HTML 'den mümkün olduğunca ayrılmaya karşı sürer.
 
 Web uygulamanızda JavaScript ile çalışırken, genellikle gerçekleştirmeniz gereken birkaç görev vardır:
 
@@ -79,7 +82,7 @@ Veri bağlama buna harika bir örnektir. JQuery 'de, genellikle bir DOM öğesin
 
 ### <a name="angular-spas"></a>Angular maça 'Ları
 
-AngularJS, dünyanın en popüler JavaScript çerçevelerinden bir hızla gelmiştir. Angular 2 ile, ekip çerçeveyi baştan sona yeniden oluşturur ( [TypeScript](https://www.typescriptlang.org/)kullanarak) ve AngularJS 'Den yalnızca angular 'e yeniden markalı olur. Şu anda sürüm 4 ' te, angular tek sayfalı uygulamalar oluşturmaya yönelik sağlam bir çerçeve olmaya devam etmektedir.
+Angular dünyanın en popüler JavaScript çerçevelerinden biri olarak kalır. Angular 2 ' den itibaren, ekip çerçeveyi baştan sona yeniden oluşturur ( [TypeScript](https://www.typescriptlang.org/)kullanarak) ve özgün AngularJS adından yalnızca angular olarak yeniden markalı olur. Artık birkaç yıldır, yeniden tasarlanan angular tek sayfalı uygulamalar oluşturmaya yönelik sağlam bir çerçeve olmaya devam etmektedir.
 
 Angular uygulamaları bileşenlerden oluşturulmuştur. Bileşenler, HTML şablonlarını özel nesnelerle birleştirir ve sayfanın bir bölümünü kontrol edin. Angular belgelerinden basit bir bileşen aşağıda gösterilmiştir:
 
@@ -104,7 +107,7 @@ Microsoft, angular SPA uygulaması içeren bir başvuru uygulaması ( [Eshoponco
 
 ### <a name="react"></a>React
 
-Tam model-görünüm-denetleyici modeli uygulamasını sunan angular 'ın aksine, yanıt verme yalnızca görünümlerle ilgilidir. Yalnızca bir kitaplık değildir, bu nedenle bir SPA oluşturmak için ek kitaplıkların olması gerekir.
+Tam model-görünüm-denetleyici modeli uygulamasını sunan angular 'ın aksine, yanıt verme yalnızca görünümlerle ilgilidir. Yalnızca bir kitaplık değildir, bu nedenle bir SPA oluşturmak için ek kitaplıkların olması gerekir. Zengin tek sayfa uygulamaları oluşturmak için tepki vererek kullanılmak üzere tasarlanan çeşitli kitaplıklar vardır.
 
 Yanıt verme 'nın en önemli özelliklerinden biri, sanal DOM 'ın kullanımı. Sanal DOM, performans dahil olmak üzere çeşitli avantajlar sağlar (sanal DOM gerçek DOM 'ın hangi bölümlerinin güncelleştirileceğini en iyi hale getirebilir) ve tekararlılığı (yanıt verme ve sanal DOM ile etkileşimlerini test etmek için bir tarayıcıya gerek yoktur).
 
@@ -121,6 +124,40 @@ Ayrıca, HTML ile nasıl çalıştığı konusunda da olağan dışı tepki veri
 JavaScript 'ı zaten biliyorsanız, öğrenme tepki verme kolay olmalıdır. Neredeyse çok fazla öğrenme eğrisi veya angular veya diğer popüler kitaplıklarla ilgili özel söz dizimi yoktur.
 
 Yanıt verme tam bir çerçeve olmadığından, genellikle diğer kitaplıkların yönlendirme, Web API çağrıları ve bağımlılık yönetimi gibi işlemleri işlemesini isteyeceksiniz. Her biri için en iyi kitaplığı seçebilirsiniz, ancak bu kararların hepsini yapmanız ve seçtiğiniz tüm kitaplıkların tümünü doğrulamanız gerektiğinde tüm bu kararları vermeniz gerekir. İyi bir başlangıç noktası isterseniz, bir dizi uyumlu kitaplığı tepki vererek, yanıt veren bir yük görüntüsü gibi bir başlatıcı kiti kullanabilirsiniz.
+
+### <a name="vue"></a>Vue
+
+Başlangıç kılavuzuyla, "Vue, Kullanıcı arabirimleri oluşturmaya yönelik aşamalı bir çerçevedir. Diğer tek parçalı çerçevelerden farklı olarak, Vue, baştan sona artımlı olarak kullanılacak şekilde tasarlanmıştır. Çekirdek kitaplık yalnızca görünüm katmanına odaklanılmıştır ve diğer kitaplıklarla veya mevcut projelerle tümleştirilebilen ve tümleştirilebilen kolay bir işlemdir. Öte yandan, Vue modern araç ve destekleyici kitaplıklarla birlikte kullanıldığında Gelişmiş tek sayfalı uygulamaları güçlendirme özelliğine sahiptir. "
+
+Vue ile çalışmaya başlamak, komut dosyasının bir HTML dosyası içine dahil edilmesi için gereklidir:
+
+```html
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+```
+
+Framework eklendiğinde, Vue 'in doğrudan şablon oluşturma söz dizimini kullanarak verileri geçici olarak DOM 'a işleyebileceksiniz:
+
+```html
+<div id="app">
+  {{ message }}
+</div>
+```
+
+ve sonra aşağıdaki betiği ekleyin:
+
+```js
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+```
+
+Bu, "Hello Vue!" öğesini işlemek için yeterlidir sayfasında. Ancak, Vue 'in iletiyi div öğesine bir kez oluşturmadığını unutmayın. Veri bağlamayı ve dinamik güncelleştirmeleri destekler, çünkü `message` değeri değişirse `<div>` değeri onu yansıtacak şekilde hemen güncelleştirilir.
+
+Tabii ki bu, yalnızca Vue 'nin sahip olduğu yüzey yüzeyini çiziyor. Bu, son birkaç yıl içinde çok sayıda popülerlik kazanmıştır ve büyük bir topluluğa sahiptir. Vue ile birlikte çalışan [destekleyici bileşenlerin ve kitaplıkların büyük ve artan bir listesi](https://github.com/vuejs/awesome-vue#redux) vardır. Web uygulamanıza istemci tarafı davranışı eklemek veya tam bir SPA oluşturmayı düşünüyorsanız, Vue 'nin araştırılması gerekir.
 
 ### <a name="choosing-a-spa-framework"></a>SPA çerçevesi seçme
 
@@ -157,13 +194,13 @@ JavaScript çerçeveleri Breakneck hızında gelişmeye devam eder. Daha sonra b
 > - **Angular**  
 > <https://angular.io/>
 > - **React**  
-> <https://facebook.github.io/react/>
-> - **Temingshot 'e tepki verme**  
-> <https://github.com/coryhouse/react-slingshot>
-> - **Tepki ve açı 2 karşılaştırması**  
-> <https://www.codementor.io/codementorteam/react-vs-angular-2-comparison-beginners-guide-lvz5710ha>
-> - **2017 en iyi 5 JavaScript çerçeveleri**  
-> <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
+> <https://reactjs.org/>
+> - **Vue**  
+> <https://vuejs.org/>
+> - **Angular ile yanıt veren vs Vue: 2020
+> Içinde seçebileceğiniz çerçeve** <https://www.codeinwp.com/blog/angular-vs-vue-vs-react/>
+> - **2020 sürümünde ön uç geliştirme için En Iyi JavaScript çerçeveleri**  
+> <https://www.freecodecamp.org/news/complete-guide-for-front-end-developers-javascript-frameworks-2019/>
 
 >[!div class="step-by-step"]
 >[Önceki](common-web-application-architectures.md)

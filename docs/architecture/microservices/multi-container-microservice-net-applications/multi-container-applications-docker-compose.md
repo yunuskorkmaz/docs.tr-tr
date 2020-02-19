@@ -2,12 +2,12 @@
 title: docker-compose.yml ile çok kapsayıcılı uygulamanızı tanımlama
 description: Docker-Compose. yıml ile çok kapsayıcılı bir uygulama için mikro hizmet birleşimini belirtme.
 ms.date: 10/02/2018
-ms.openlocfilehash: f9cab35ac8e11ca89a83f646c29bf72f84e66ef4
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 26b7362112c12583377db9f8fa516ee8ce3b1ac2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116546"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450706"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml ile çok kapsayıcılı uygulamanızı tanımlama
 
@@ -463,7 +463,7 @@ Bu işlemi gerçekleştirmek için, .NET ekibi [DotNet/Core](https://hub.docker.
 1. **SDK**: geliştirme ve derleme senaryoları için
 1. **ASPNET**: ASP.NET üretim senaryoları için
 1. **çalışma zamanı**: .NET üretim senaryoları için
-1. **Runtime-Deps**: [kendi içindeki uygulamaların](../../../core/deploying/index.md#self-contained-deployments-scd)üretim senaryoları için.
+1. **Runtime-Deps**: [kendi içindeki uygulamaların](../../../core/deploying/index.md#publish-self-contained)üretim senaryoları için.
 
 Daha hızlı başlangıç için, çalışma zamanı görüntüleri Ayrıca aspnetcore\_URL 'lerini otomatik olarak 80 numaralı bağlantı noktasına ayarlar ve derlemelerin yerel görüntü önbelleğini oluşturmak için Ngen 'i kullanır.
 

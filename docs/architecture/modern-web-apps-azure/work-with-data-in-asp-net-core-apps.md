@@ -3,13 +3,13 @@ title: ASP.NET Core uygulamalarda verilerle çalışma
 description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın ASP.NET Core uygulamalarında verilerle çalışma
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: d3c91f594eedd2636cbf08285f0dee352bc4835a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 12/04/2019
+ms.openlocfilehash: f37bdca688559236d9b07b97f7ee7459b3be4f39
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777126"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449354"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core uygulamalarında verilerle çalışma
 
@@ -200,9 +200,9 @@ private void ConfigureOrder(EntityTypeBuilder<Order> builder)
 }
 ```
 
-Bu örnekte, `ShipToAddress` özelliği `Address`türündedir. `Address`, `Street` ve `City`gibi çeşitli özelliklere sahip bir değer nesnesidir. EF Core, `Order` nesnesini `Address` özelliği başına tek sütunlu bir sütunla eşler, her sütun adının özelliğin adıyla sonuna önek olarak. Bu örnekte, `Order` tablo `ShipToAddress_Street` ve `ShipToAddress_City`gibi sütunları içerir.
+Bu örnekte, `ShipToAddress` özelliği `Address`türündedir. `Address`, `Street` ve `City`gibi çeşitli özelliklere sahip bir değer nesnesidir. EF Core, `Order` nesnesini `Address` özelliği başına tek sütunlu bir sütunla eşler, her sütun adının özelliğin adıyla sonuna önek olarak. Bu örnekte, `Order` tablo `ShipToAddress_Street` ve `ShipToAddress_City`gibi sütunları içerir. İsterseniz, sahip olunan türleri ayrı tablolarda depolamak da mümkündür.
 
-[EF Core 2,2, sahip olunan varlıkların koleksiyonları için destek sunar](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
+[EF Core ' de sahip olan varlık desteği](/ef/core/modeling/owned-entities)hakkında daha fazla bilgi edinin.
 
 ### <a name="resilient-connections"></a>Dayanıklı bağlantılar
 
@@ -242,7 +242,7 @@ Ancak, kodunuz BeginTransaction kullanarak bir işlem başlatırsa, birim olarak
 
 System. InvalidOperationException: yapılandırılan ' Sqlserverretryingexecutionstrateji ' yürütme stratejisi, Kullanıcı tarafından başlatılan işlemleri desteklemez. İşlemdeki tüm işlemleri yeniden denenebilir bir birim olarak yürütmek için ' DbContext. Database. Createexecutionstrateji () ' tarafından döndürülen yürütme stratejisini kullanın.
 
-Çözüm, yürütülmesi gereken her şeyi temsil eden bir temsilciyle EF yürütme stratejisini el ile çağırmalıdır. Geçici bir hata oluşursa, yürütme stratejisi temsilciyi tekrar çağıracaktır. Aşağıdaki kod, bu yaklaşımın nasıl uygulanacağını göstermektedir:
+Çözüm, yürütülmesi gereken her şeyi temsil eden bir temsilciyle EF yürütme stratejisini el ile çağırmalıdır. Geçici bir hata oluşursa yürütme stratejisi temsilciyi yeniden çağırır. Aşağıdaki kod, bu yaklaşımın nasıl uygulanacağını göstermektedir:
 
 ```csharp
 // Use of an EF Core resiliency strategy when using multiple DbContexts
@@ -350,7 +350,7 @@ Azure Cosmos DB, bulut tabanlı şemaya ücretsiz veri depolama sağlayan, tam o
 
 **Şekil 8-2.** Kaynak organizasyonunu Azure Cosmos DB.
 
-Azure Cosmos DB sorgu dili, JSON belgelerini sorgulamak için basit ancak güçlü bir arabirimdir. Dil, ANSI SQL dilbilgisi 'nin bir alt kümesini destekler ve JavaScript nesnesi, diziler, nesne oluşturma ve işlev çağırma için derin tümleştirme ekler.
+Azure Cosmos DB sorgu dili, JSON belgelerini sorgulamak için basit ancak güçlü bir arabirimdir. Dil, ANSI SQL dil bilgisinin bir alt kümesini destekler ve JavaScript nesnesi, dizileri, nesne oluşturması ve işlev çağrısı için derin tümleştirme sağlar.
 
 **Başvurular – Azure Cosmos DB**
 
@@ -372,7 +372,7 @@ Azure Cosmos DB sorgu dili, JSON belgelerini sorgulamak için basit ancak güçl
 
 - Azure depolama giriş <https://docs.microsoft.com/azure/storage/storage-introduction>
 
-## <a name="caching"></a>Önbelleğe Alma
+## <a name="caching"></a>Önbelleğe alma
 
 Web uygulamalarında, her Web isteği mümkün olan en kısa sürede tamamlanmalıdır. Bunu gerçekleştirmenin bir yolu, sunucunun isteği tamamlaması için yapması gereken dış çağrı sayısını sınırlayacaktır. Önbelleğe alma işlemi, sunucuda verilerin bir kopyasının depolanmasını (veya verilerin kaynağından daha kolay sorgulanan başka bir veri deposu) içerir. Web uygulamaları ve özellikle de non-SPA geleneksel olmayan Web uygulamaları, her istekle birlikte Kullanıcı arabiriminin tamamını oluşturmanız gerekir. Bu sıklıkla, bir Kullanıcı isteğinden bir sonrakine aynı veritabanı sorgularının birçok kez oluşturulmasını içerir. Çoğu durumda, bu veriler nadiren değişir, bu yüzden sürekli olarak veritabanından isteme nedenidir. ASP.NET Core, tüm sayfaların önbelleğe alınması ve daha ayrıntılı önbelleğe alma davranışını destekleyen veri önbelleğe alma işlemleri için yanıt önbelleğe almayı destekler.
 
@@ -411,7 +411,7 @@ public void Configure(IApplicationBuilder app)
 
 Yanıt önbelleğe alma ara yazılımı, özelleştirmeleri, özelleştirebileceğiniz bir dizi koşula göre otomatik olarak önbelleğe alır. Varsayılan olarak, GET veya HEAD yöntemleri aracılığıyla istenen yalnızca 200 (Tamam) yanıt önbelleğe alınır. Ayrıca, isteklerin Cache-Control: public üst bilgisine sahip bir yanıtı olmalıdır ve yetkilendirme ya da set-Cookie üst bilgisini içeremez. [Yanıt önbelleğe alma ara yazılımı tarafından kullanılan önbelleğe alma koşullarının tüm listesini](/aspnet/core/performance/caching/middleware#conditions-for-caching)görün.
 
-### <a name="data-caching"></a>Veri önbelleğe alma
+### <a name="data-caching"></a>Verileri önbelleğe alma
 
 (Veya buna ek olarak) tam Web yanıtlarını önbelleğe alma yerine, bireysel veri sorgularının sonuçlarını önbelleğe alabilirsiniz. Bunun için, Web sunucusunda bellek önbelleklemesi veya [Dağıtılmış önbellek](/aspnet/core/performance/caching/distributed)kullanabilirsiniz. Bu bölüm, bellek önbelleğe alma işleminde nasıl uygulanacağını gösterir.
 

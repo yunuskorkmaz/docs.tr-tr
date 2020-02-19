@@ -3,13 +3,13 @@ title: Mimari ilkeleri
 description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Mimari ilkeler
 author: ardalis
 ms.author: wiwagn
-ms.date: 02/16/2019
-ms.openlocfilehash: 656c92c417283366e4bb757489c189ecbc0ea815
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 12/04/2019
+ms.openlocfilehash: ffc890bf8cd6b07bd70d8fc7b2b8cfeaf474ae35
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416697"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450277"
 ---
 # <a name="architectural-principles"></a>Mimari ilkeleri
 
@@ -34,7 +34,7 @@ Sınıflarda, sınıfın iç durumuna erişimi dışarıdan kısıtlamak için k
 
 ### <a name="dependency-inversion"></a>Bağımlılık Inversion
 
-Uygulamanın içindeki bağımlılığın yönü, uygulama ayrıntıları değil soyutlama yönünde olmalıdır. Çoğu uygulama, çalışma zamanı yürütme yönündeki derleme zamanı bağımlılığı akışları gibi yazılır. Bu, doğrudan bağımlılık grafiği oluşturur. Diğer bir deyişle, A modülü C modülünde bir işlevi çağıran Modül B 'de bir işlevi çağırırsa, sonra da şekil 4-1 ' de gösterildiği gibi C 'ye bağlı olan B 'ye bağlı olarak değişir.
+Uygulamanın içindeki bağımlılığın yönü, uygulama ayrıntıları değil soyutlama yönünde olmalıdır. Çoğu uygulama, çalışma zamanı yürütme yönündeki derleme zamanı bağımlılığı akışları gibi yazılır. Bu, doğrudan bağımlılık grafiği oluşturur. Diğer bir deyişle, A modülü C modülünde bir işlevi çağıran Modül B 'de bir işlev çağırırsa, sonra da şekil 4-1 ' de gösterildiği gibi C 'ye bağlı olan B 'ye bağlı olur.
 
 ![Doğrudan bağımlılık grafiği](./media/image4-1.png)
 
@@ -46,17 +46,17 @@ Bağımlılık Inversion ilkesini uygulamak, bir soyutlamalarda b 'nin uyguladı
 
 **Şekil 4-2.** Ters bağımlılık grafiği.
 
-**Bağımlılık Inversion** , gevşek olarak bağlanmış uygulamalar oluşturmanın önemli bir parçasıdır. bu sayede uygulama ayrıntıları, diğer bir yöntem yerine daha yüksek düzey soyutlamalar uygulamak ve uygulamak için kullanılabilir. Elde edilen uygulamalar daha kararlı, modüler ve sonuç olarak sürdürülebilir. Bağımlılık/sürüm prensibi ile *bağımlılık ekleme* yöntemi mümkündür.
+**Bağımlılık Inversion** , gevşek olarak bağlanmış uygulamalar oluşturmanın önemli bir parçasıdır. bu sayede uygulama ayrıntıları, diğer bir yöntem yerine daha yüksek düzeyli soyutlamalar uygulamak üzere yazılabilir. Elde edilen uygulamalar daha kararlı, modüler ve sonuç olarak sürdürülebilir. Bağımlılık/sürüm prensibi ile *bağımlılık ekleme* yöntemi mümkündür.
 
 ### <a name="explicit-dependencies"></a>Açık bağımlılıklar
 
-**Yöntemler ve sınıflar, doğru çalışması için ihtiyaç duydukları tüm işbirliği nesneleri açıkça gerektirmelidir.** Sınıf oluşturucular, sınıfların geçerli bir durumda olması ve düzgün çalışması için ihtiyaç duydukları şeyleri belirlemesine yönelik bir fırsat sağlar. Oluşturulabilir ve çağrılabilir olan, ancak yalnızca belirli küresel veya altyapı bileşenleri varsa düzgün şekilde çalışacak sınıflar tanımlarsanız, bu sınıflar *istemcilerle birlikte kabul* edilir. Oluşturucu sözleşmesi, istemciye yalnızca belirtilen şeyleri (sınıf parametresiz bir Oluşturucu kullanıyorsa Nothing) ister, daha sonra çalışma zamanında nesneyi, başka bir şeye ihtiyaç duyması durumunda olduğunu bildiriyor.
+**Yöntemler ve sınıflar, doğru çalışması için ihtiyaç duydukları tüm işbirliği nesneleri açıkça gerektirmelidir.** Sınıf oluşturucular, sınıfların geçerli bir durumda olması ve düzgün çalışması için ihtiyaç duydukları şeyleri belirlemesine yönelik bir fırsat sağlar. Oluşturulabilecek ve çağrılabilen sınıflar tanımlarsanız ancak bu, yalnızca belirli küresel veya altyapı bileşenleri mevcutsa düzgün şekilde çalışır, ancak bu sınıflar *istemcilerle birlikte kabul* edilir. Oluşturucu sözleşmesi, istemciye yalnızca belirtilen şeyleri (sınıf parametresiz bir Oluşturucu kullanıyorsa Nothing) ister, daha sonra çalışma zamanında nesneyi, başka bir şeye ihtiyaç duyması durumunda olduğunu bildiriyor.
 
 Açık bağımlılıklar ilkesini izleyerek, sınıflarınız ve yöntemleriniz, işlevleri çalışması için ihtiyaç duydukları gibi istemcilerle birlikte kullanılır. Bu, kodunuzun daha kolay belgelendikleri ve kodlarınızın, yöntem veya Oluşturucu parametreleri biçiminde gerekli olanları sağladıklarında güveneceği ve üzerinde çalıştıkları nesneler olduğu sürece daha fazla Kullanıcı dostu hale gelmesine neden olur. çalışma zamanında düzgün şekilde.
 
 ### <a name="single-responsibility"></a>Tek sorumluluk
 
-Tek sorumluluk ilkesi, nesne odaklı tasarım için geçerlidir, ancak sorunların ayrılılmasına benzer bir mimari prensibi olarak da düşünülebilir. Nesnelerin yalnızca bir sorumluluğu olması gerektiğini ve yalnızca bir sorumluluğun olması gerektiğini belirtir. Özellikle, nesnenin değiştirilmesi gereken tek durum, bir sorumluluğu tek bir sorumluluğu gerçekleştirmelidir. Bu prensibi, daha gevşek bağlanmış ve modüler sistemler oluşturulmasına yardımcı olur, çünkü birçok yeni davranış, mevcut sınıflara ek sorumluluk eklemek yerine yeni sınıflar olarak uygulanırlar. Yeni sınıflar eklemek, hiçbir kod henüz yeni sınıflara bağlı olmadığından, her zaman var olan sınıfları değiştirmekle daha güvenlidir.
+Tek sorumluluk ilkesi, nesne odaklı tasarım için geçerlidir, ancak sorunların ayrılılmasına benzer bir mimari prensibi olarak da düşünülebilir. Nesnelerin yalnızca bir sorumluluğu olması gerektiğini ve yalnızca bir sorumluluğun olması gerektiğini belirtir. Özellikle, nesnenin değiştirilmesi gereken tek durum, bir sorumluluğu tek bir sorumluluğu gerçekleştirmelidir. Bu prensibi, daha gevşek bir şekilde bağlanmış ve modüler sistemler oluşturulmasına yardımcı olur, çünkü birçok yeni davranış, mevcut sınıflara ek sorumluluk eklemek yerine yeni sınıflar olarak uygulanırlar. Yeni sınıflar eklemek, hiçbir kod henüz yeni sınıflara bağlı olmadığından, her zaman var olan sınıfları değiştirmekle daha güvenlidir.
 
 Tek parçalı bir uygulamada, tek sorumluluk ilkesini uygulamadaki katmanlara yüksek düzeyde uygulayabiliriz. Sunum sorumluluğu, veri erişimi sorumluluğunun bir altyapı projesi içinde tutulması gerektiği sırada, Kullanıcı arabirimi projesinde kalmalıdır. İş mantığı, kolayca test edileceği ve diğer sorumluluklardan bağımsız olarak gelişebilecekleri uygulama çekirdeği projesinde tutulmalıdır.
 

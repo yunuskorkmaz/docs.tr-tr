@@ -1,20 +1,37 @@
 ---
 title: Elastik Yığın ile günlüğe kaydetme
 description: Elastik yığın, Logstash ve kibana kullanarak günlüğe kaydetme
-ms.date: 09/23/2019
-ms.openlocfilehash: 989834925bc08541bf484e1a4567a56ac324872f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 02/05/2020
+ms.openlocfilehash: 6863c66b63854fe3ecaabe2919beded2926ea64c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087063"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448935"
 ---
 # <a name="logging-with-elastic-stack"></a>Elastik Yığın ile günlüğe kaydetme
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Birçok iyi Merkezi günlük aracı vardır ve daha pahalı seçeneklere karşı ücretsiz, açık kaynaklı araçlar ve maliyet bakımından farklılık gösterir. Birçok durumda, ücretsiz araçlar ücretli tekliflerle veya daha iyi bir seçenektir. Bu tür bir araç, üç açık kaynaklı bileşen birleşimidir: elastik arama, Logstash ve kibana.
+
 Toplu olarak bu araçlar elastik yığın veya ELK yığını olarak bilinir.
+
+## <a name="elastic-stack"></a>Elastik yığın
+
+Elastik yığın, bir Kubernetes kümesinden bilgi toplamak için güçlü bir seçenektir. Kubernetes, bir Elakes arama uç noktasına günlük göndermeyi destekler ve [çoğu bölüm](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/)Için, Şekil 7-5 ' de gösterildiği gibi, ortam değişkenlerini ayarlamak gerekir:
+
+```kubernetes
+KUBE_LOGGING_DESTINATION=elasticsearch
+KUBE_ENABLE_NODE_LOGGING=true
+```
+
+**Şekil 7-5**. Kubernetes için yapılandırma değişkenleri
+
+Bu, küme üzerinde elaa araması yükleyecek ve tüm küme günlüklerini buna gönderen hedeflenecek.
+
+Kubernetes](./media/kibana-dashboard.png)
+**şekil 7-6**' den alınan günlüklere yönelik sorgu sonuçlarının gösterildiği bir kibana panosu örneği ![. Kubernetes 'ten alınan günlüklere yönelik bir sorgunun sonuçlarını gösteren bir kibana panosu örneği
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>Esnek yığının avantajları nelerdir?
 
@@ -24,7 +41,7 @@ Elastik yığın, düşük maliyetli, ölçeklenebilir, bulut kullanımı kolay 
 
 İlk bileşen [Logstash](https://www.elastic.co/products/logstash)' dir. Bu araç, çok çeşitli farklı kaynaklardan günlük bilgilerini toplamak için kullanılır. Örneğin Logstash, günlükleri diskten okuyabilir ve ayrıca [Serilog](https://serilog.net/)gibi günlük kitaplıklarından iletiler alabilir. Logstash, geldikçe günlüklerde bazı temel filtreleme ve genişleme işlemlerini gerçekleştirebilir. Örneğin, günlükleriniz IP adresleri içeriyorsa, Logstash coğrafi arama yapmak ve bu ileti için bir ülke veya hatta kaynak şehir almak üzere yapılandırılabilir.
 
-Serilog, parametreli günlüğe kaydetmeye olanak sağlayan .NET dilleri için bir günlüğe kaydetme kitaplığıdır. Alanları katıştıran bir metin günlüğü iletisi oluşturmak yerine Parametreler ayrı tutulur. Bu, daha akıllı filtreleme ve arama sağlar. Şekil 7-2 ' de Logstash yazmak için örnek bir Serilog yapılandırması görüntülenir.
+Serilog, parametreli günlüğe kaydetmeye olanak sağlayan .NET dilleri için bir günlüğe kaydetme kitaplığıdır. Alanları katıştıran bir metin günlüğü iletisi oluşturmak yerine Parametreler ayrı tutulur. Bu, daha akıllı filtreleme ve arama sağlar. Şekil 7-7 ' de Logstash yazmak için örnek bir Serilog yapılandırması görüntülenir.
 
 ```csharp
 var log = new LoggerConfiguration()
@@ -32,9 +49,9 @@ var log = new LoggerConfiguration()
          .CreateLogger();
 ```
 
-**Şekil 7-2** HTTP üzerinden logstash 'e doğrudan günlük bilgilerini yazmak için Serilog config
+**Şekil 7-7**. HTTP üzerinden logstash 'e doğrudan günlük bilgilerini yazmak için Serilog config
 
-Logstash, Şekil 7-3 ' de gösterilen şekilde bir yapılandırma kullanır.
+Logstash, Şekil 7-8 ' de gösterilen şekilde bir yapılandırma kullanır.
 
 ```
 input {
@@ -52,7 +69,7 @@ output {
 }
 ```
 
-**Şekil 7-3** -Serilog 'dan günlük tüketme Için bir Logstash yapılandırması
+**Şekil 7-8**. Serilog 'dan günlük tüketme için bir Logstash yapılandırması
 
 Kapsamlı günlük işleme gerekli olmadığı senaryolar için, [tempts](https://www.elastic.co/products/beats)olarak bilinen Logstash için bir alternatif vardır. Pts, günlüklerdeki ağ verilerine ve çalışma süresi bilgilerine çok çeşitli veriler toplayabilen bir araç ailesidir. Birçok uygulama, hem Logstash hem de Pts 'yi kullanacaktır.
 
@@ -64,7 +81,7 @@ Elastik arama, geldikçe günlükleri dizinlebilecekleri güçlü bir arama alty
 
 Parametreleri içermesi için üretilmiş olan veya parametreleri Logstash işleme aracılığıyla bölüşdüğü olan günlük iletileri, bu bilgileri koruyan şekilde doğrudan sorgulanabilir.
 
-`jill@example.com`tarafından ziyaret edilen ilk 10 sayfayı arayan sorgu Şekil 7-4 ' de görünür.
+`jill@example.com`tarafından ziyaret edilen ilk 10 sayfayı arayan sorgu Şekil 7-9 ' de görünür.
 
 ```
 "query": {
@@ -82,7 +99,7 @@ Parametreleri içermesi için üretilmiş olan veya parametreleri Logstash işle
   }
 ```
 
-**Şekil 7-4** -bir kullanıcı tarafından ziyaret edilen ilk 10 sayfayı bulmak Için bir elaa arama sorgusu
+**Şekil 7-9**. Bir kullanıcı tarafından ziyaret edilen ilk 10 sayfayı bulmak için bir elaa arama sorgusu
 
 ## <a name="visualizing-information-with-kibana-web-dashboards"></a>Kibana Web panolarıyla bilgi görselleştiriliyor
 
@@ -96,7 +113,7 @@ Daha az ek yük olan bir seçenek, elastik yığının zaten yapılandırıldı�
 
 Diğer bir seçenek [de, son bildirilen bir hizmet olarak yeni tekliftir](https://devops.com/logz-io-unveils-azure-open-source-elk-monitoring-solution/).
 
-## <a name="references"></a>Referanslar
+## <a name="references"></a>Başvurular
 
 - [Azure 'da elastik yığın yüklemesi](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)
 

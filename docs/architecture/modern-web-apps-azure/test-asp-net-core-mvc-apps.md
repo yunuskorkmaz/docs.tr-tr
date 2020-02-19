@@ -3,13 +3,13 @@ title: MVC uygulamalarını test ASP.NET Core
 description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın MVC uygulamalarını test ASP.NET Core
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 5f63e350e2f1ba8699bb002a54492cbf9501948e
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.date: 12/04/2019
+ms.openlocfilehash: d83f7fca10aed6301c170b7b6c5651da6f02be08
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965782"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449367"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>MVC uygulamalarını test ASP.NET Core
 
@@ -106,7 +106,7 @@ Belirli bir uygulama sınıfının test edilmekte olan çok sayıda yöntemi (ve
 
 ## <a name="unit-testing-aspnet-core-apps"></a>Uygulamalar ASP.NET Core birim testi
 
-İyi tasarlanmış bir ASP.NET Core uygulamasında, karmaşıklık ve iş mantığının çoğu iş varlıklarında ve çeşitli hizmetlerde kapsüllenir. ASP.NET Core MVC uygulamasının kendisi, denetleyiciler, filtreler, viewmodeller ve görünümleriyle, çok az sayıda birim testi gerektirmelidir. Belirli bir eylemin işlevselliğinin çoğu eylem yönteminin dışında kalıyor. Yönlendirmenin doğru şekilde çalışıp çalışmadığını test etme veya küresel hata işleme, birim testi ile etkin bir şekilde yapılamaz. Benzer şekilde, model doğrulama ve kimlik doğrulama ve Yetkilendirme filtreleri dahil olmak üzere herhangi bir filtre de birim test edilemez. Bu davranış kaynakları olmadan, çoğu eylem yöntemi, bunları kullanan denetleyiciden bağımsız olarak test edilebilir hizmetler için çalışmanın toplu olarak küçük olması gerekir.
+İyi tasarlanmış bir ASP.NET Core uygulamasında, karmaşıklık ve iş mantığının çoğu iş varlıklarında ve çeşitli hizmetlerde kapsüllenir. ASP.NET Core MVC uygulamasının kendisi, denetleyiciler, filtreler, viewmodeller ve görünümleriyle, çok az sayıda birim testi gerektirmelidir. Belirli bir eylemin işlevselliğinin çoğu eylem yönteminin dışında kalıyor. Yönlendirmenin doğru şekilde çalışıp çalışmadığını test etme veya küresel hata işleme, birim testi ile etkin bir şekilde yapılamaz. Benzer şekilde, model doğrulama ve kimlik doğrulama ve Yetkilendirme filtreleri dahil olmak üzere tüm filtreler, denetleyicinin eylem yöntemini hedefleyen bir test ile birim test edilemez. Bu davranış kaynakları olmadan, çoğu eylem yöntemi, bunları kullanan denetleyiciden bağımsız olarak test edilebilir hizmetler için çalışmanın toplu olarak küçük olması gerekir.
 
 Bazen kodunuzu birim test etmek için yeniden düzenlemeniz gerekir. Genellikle bu, soyutlamaları tanımlamayı ve doğrudan altyapıya yönelik olarak kodlamak yerine test etmek istediğiniz koddaki soyutlamadan erişmek için bağımlılık ekleme kullanımını içerir. Örneğin, görüntüleri görüntülemek için bu basit eylem yöntemini göz önünde bulundurun:
 
@@ -153,7 +153,7 @@ ASP.NET Core uygulamalarınızın çoğu tümleştirme testi, altyapı projenizd
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Uygulamalar ASP.NET Core işlevsel test
 
-ASP.NET Core uygulamalar için `TestServer` sınıfı, işlevsel testleri yazma konusunda oldukça kolay hale getirir. Bir `TestServer` doğrudan (uygulamanız için yaptığınız gibi) veya `WebApplicationFactory` türünde (2,1 sürümünden itibaren kullanılabilir) bir `WebHostBuilder` kullanarak yapılandırırsınız. Test ana bilgisayarınızı üretim konağınız için mümkün olduğunca yakından eşleştirmeye çalışın. böylece testleriniz, uygulamanın üretimde ne yapacaklarına benzer davranışlar sağlar. `WebApplicationFactory` sınıfı, TestServer 'ın, görünümler gibi statik kaynağı bulmak için ASP.NET Core tarafından kullanılan ContentRoot 'yi yapılandırmak için yararlıdır.
+ASP.NET Core uygulamalar için `TestServer` sınıfı, işlevsel testleri yazma konusunda oldukça kolay hale getirir. Bir `TestServer` `WebHostBuilder` (veya `HostBuilder`) doğrudan (sizin uygulamanız için yaptığınız gibi) veya `WebApplicationFactory` türü (2,1 sürümünden itibaren kullanılabilir) kullanarak yapılandırırsınız. Test ana bilgisayarınızı üretim konağınız için mümkün olduğunca yakından eşleştirmeye çalışmalısınız, bu sayede testleriniz, uygulamanın üretimde ne yapacaklarına benzer davranışlar sağlar. `WebApplicationFactory` sınıfı, TestServer 'ın, görünümler gibi statik kaynağı bulmak için ASP.NET Core tarafından kullanılan ContentRoot 'yi yapılandırmak için yararlıdır.
 
 Issfixture\<WebApplicationFactory\<TEntry > > uygulayan bir test sınıfı oluşturarak (TEntry Web uygulamanızın başlangıç sınıfı olduğunda) basit işlevsel testler oluşturabilirsiniz. Bu şekilde, test armatürü, fabrika 'nin CreateClient metodunu kullanarak bir istemci oluşturabilir:
 
@@ -175,6 +175,7 @@ Genellikle, her bir test çalıştırılmadan önce sitenizin bazı ek yapıland
 
 ```cs
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.eShopWeb.Infrastructure.Data;
@@ -184,32 +185,35 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
 
-namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
+namespace Microsoft.eShopWeb.FunctionalTests.Web
 {
-    public class CustomWebApplicationFactory<TStartup>
-    : WebApplicationFactory<Startup>
+    public class WebTestFixture : WebApplicationFactory<Startup>
     {
         protected override void ConfigureWebHost(IWebHostBuilder builder)
         {
+            builder.UseEnvironment("Testing");
+
             builder.ConfigureServices(services =>
             {
+                 services.AddEntityFrameworkInMemoryDatabase();
+
                 // Create a new service provider.
-                var serviceProvider = new ServiceCollection()
+                var provider = services
                     .AddEntityFrameworkInMemoryDatabase()
                     .BuildServiceProvider();
 
-                // Add a database context (ApplicationDbContext) using an in-memory
+                // Add a database context (ApplicationDbContext) using an in-memory 
                 // database for testing.
                 services.AddDbContext<CatalogContext>(options =>
                 {
                     options.UseInMemoryDatabase("InMemoryDbForTesting");
-                    options.UseInternalServiceProvider(serviceProvider);
+                    options.UseInternalServiceProvider(provider);
                 });
 
                 services.AddDbContext<AppIdentityDbContext>(options =>
                 {
                     options.UseInMemoryDatabase("Identity");
-                    options.UseInternalServiceProvider(serviceProvider);
+                    options.UseInternalServiceProvider(provider);
                 });
 
                 // Build the service provider.
@@ -224,7 +228,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
                     var loggerFactory = scopedServices.GetRequiredService<ILoggerFactory>();
 
                     var logger = scopedServices
-                        .GetRequiredService<ILogger<CustomWebApplicationFactory<TStartup>>>();
+                        .GetRequiredService<ILogger<WebTestFixture>>();
 
                     // Ensure the database is created.
                     db.Database.EnsureCreated();
@@ -233,6 +237,11 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
                     {
                         // Seed the database with test data.
                         CatalogContextSeed.SeedAsync(db, loggerFactory).Wait();
+
+                        // seed sample user data
+                        var userManager = scopedServices.GetRequiredService<UserManager<ApplicationUser>>();
+                        var roleManager = scopedServices.GetRequiredService<RoleManager<IdentityRole>>();
+                        AppIdentityDbContextSeed.SeedAsync(userManager, roleManager).Wait();
                     }
                     catch (Exception ex)
                     {
@@ -249,17 +258,17 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
 Testler, bu özel WebApplicationFactory 'yi kullanarak bir istemci oluşturup bu istemci örneğini kullanarak uygulamaya istekler yapmasını sağlar. Uygulamanın, test onaylamaları kapsamında kullanılabilecek verileri, çalıştırılabilir. Aşağıdaki test, eShopOnWeb uygulamasının giriş sayfasının doğru şekilde yüklendiğini doğrular ve tohum verilerinin bir parçası olarak uygulamaya eklenen bir ürün listesini içerir.
 
 ```cs
-using Microsoft.eShopWeb.FunctionalTests.Web.Controllers;
-using Microsoft.eShopWeb.Web;
+using Microsoft.eShopWeb.FunctionalTests.Web;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 {
-    public class HomePageOnGet : IClassFixture<CustomWebApplicationFactory<Startup>>
+    [Collection("Sequential")]
+    public class HomePageOnGet : IClassFixture<WebTestFixture>
     {
-        public HomePageOnGet(CustomWebApplicationFactory<Startup> factory)
+        public HomePageOnGet(WebTestFixture factory)
         {
             Client = factory.CreateClient();
         }
@@ -293,8 +302,6 @@ Bu fonksiyonel test, bir bütün ara yazılım, filtre, cilt, vb. dahil olmak ü
 >   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
 > - **ASP.NET Core \ tümleştirme testleri**
 >   <https://docs.microsoft.com/aspnet/core/test/integration-tests>
-> - **ASP.net Community-15 Mayıs, 2018-Javier C. Nelson-YouTube videosu Ile MVC testi**
->   <https://www.youtube.com/watch?v=wtOE-xmFJkw&list=PL1rZQsJPBU2StolNg0aqvQswETPcYnNKL&index=5>
 
 >[!div class="step-by-step"]
 >[Önceki](work-with-data-in-asp-net-core-apps.md)

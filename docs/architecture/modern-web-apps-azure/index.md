@@ -3,19 +3,21 @@ title: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın
 description: ASP.NET Core ve Azure kullanarak tek parçalı Web uygulamaları oluşturmaya yönelik uçtan uca rehberlik sağlayan bir kılavuz.
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 739dd607aaa45f73e777a30c6495e329236fee17
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 12/4/2019
+ms.openlocfilehash: c19e5e90cfb96463f744cfb064abe72ee5db2e9f
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296294"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449340"
 ---
-# <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core ve Azure ile modern web uygulamalarını mimarın
+# <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core ve Microsoft Azure ile Modern Web Uygulamaları Tasarlama
 
-![Mimari modern web uygulamaları kılavuzu 'nun kapak resmi.](./media/index/web-application-guide-cover-image.png)
+![Mimarel Modern Web uygulamaları kılavuzu 'nun kitap kapağı resmi.](./media/index/web-application-guide-cover-image.png)
 
-YAYIMLAYAN
+**Sürüm v 3.1** -ASP.NET Core 3,1 ' ye güncelleştirildi
+
+YAYıMLAYAN
 
 Microsoft Geliştirici bölümü, .NET ve Visual Studio ürün ekipleri
 
@@ -25,7 +27,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Telif hakkı © 2019 Microsoft Corporation
+Telif hakkı © 2020 Microsoft Corporation
 
 Tüm hakları saklıdır. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
 
@@ -33,15 +35,15 @@ Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi
 
 Burada gösterilen bazı örnekler yalnızca gösterim amaçlıdır ve hayal ürünüdür. Hiçbir gerçek ilişkilendirme veya bağlantı amaçlanmaz veya çıkarsanmamalıdır.
 
-Microsoft ve "ticari markalar" https://www.microsoft.com Web sayfasında listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
+Microsoft ve "ticari markalar" Web sayfasındaki https://www.microsoft.com listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
 
 Mac ve macOS, Apple Inc. ' in ticari markalarıdır.
 
-Docker balina logosu, Docker, Inc 'nin tescilli ticari markasıdır. İzin tarafından kullanılır.
+Docker balina logosu,, izin tarafından kullanılan Docker, Inc. ' in tescilli ticari markasıdır.
 
 Diğer tüm işaretler ve amblemler kendi sahiplerinin mülkiyetindedir.
 
-Geliştirici
+Yazar:
 
 > **Steve "ardalış" Smith** -yazılım mimarı ve trainer- [Ardalis.com](https://ardalis.com)
 
@@ -83,7 +85,7 @@ Azure 'da barındırılan ASP.NET Core ile Web uygulamaları oluşturmak, gelene
 
 Bu kılavuz, ASP.NET Core ve Azure kullanarak *tek parçalı* Web uygulamaları oluşturmaya yönelik uçtan uca yönergeler sağlar. Bu bağlamda, "monoparçalı", bu uygulamaların bir etkileşim Hizmetleri ve uygulamaları koleksiyonu olarak değil, tek bir birim olarak dağıtılmasının gerçeğini ifade eder.
 
-Bu kılavuz, [".net mikro Hizmetleri _" için tamamlayıcı bir kılavuzdur. Docker, mikro hizmetler ve_kapsayıcı](../microservices/index.md) dağıtımında kurumsal uygulamaları barındırmak için daha fazla odaklanan kapsayıcı .NET uygulamaları için mimari.
+Bu kılavuz, [" _.net mikro hizmetleri" için tamamlayıcı bir kılavuzdur._ ](../microservices/index.md) Docker, mikro hizmetler ve kapsayıcı dağıtımında kurumsal uygulamaları barındırmak için daha fazla odaklanan kapsayıcı .NET uygulamaları için mimari.
 
 ### <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET mikro hizmetleri. Kapsayıcılı .NET Uygulamaları Mimarisi
 
@@ -104,7 +106,7 @@ Bu kılavuz, modern .NET teknolojileri ve Windows Azure ile Web uygulamaları ol
 
 Bu noktaların ve fırsatların yaygın olarak anlaşılmasına yardımcı olmak için bu kılavuzu ekibinize iletmekten çekinmeyin. Her bir gövdenin ortak bir terminoloji kümesinden ve temel ilkelerin üzerinde çalışmasını sağlamak, mimari desenlerinin ve uygulamaların tutarlı olmasını sağlamaya yardımcı olur.
 
-## <a name="references"></a>Referanslar
+## <a name="references"></a>Başvurular
 
 - **Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma**  
   [https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server](../../standard/choosing-core-framework-server.md)

@@ -3,13 +3,13 @@ title: Ortak web uygulaması mimarileri
 description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Ortak Web uygulaması mimarilerini keşfet
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 6a4e971c1cb19a12710ad7893378a49758b4016e
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.date: 12/04/2019
+ms.openlocfilehash: 7ec0d9cece40ba8a99e8ab5e028f7ac491ed6f4d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884247"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450198"
 ---
 # <a name="common-web-application-architectures"></a>Ortak web uygulaması mimarileri
 
@@ -38,9 +38,9 @@ Basit olsa da, tek projem tek parçalı çözüm, bazı dezavantajlara sahiptir.
 
 Uygulamalar, bu sorunları çözmek için genellikle her projenin uygulamanın belirli bir _katmanında_ yer aldığı kabul edildiği çoklu proje çözümlerinde gelişmektedir.
 
-## <a name="what-are-layers"></a>Mantıksal katman nedir?
+## <a name="what-are-layers"></a>Katmanlar nelerdir?
 
-Uygulamalar karmaşıklıkla büyüdükçe, bu karmaşıklığı yönetmenin bir yolu, uygulamayı sorumluluklara veya kaygılarına göre kesmeniz gerekir. Bu, endişeleri ayırmayı izler ve geliştiricilerin belirli işlevlerin uygulandığı yeri kolayca bulabilmeleri için büyüyen bir kod temelinin düzenlenmesine devam etmenize yardımcı olabilir. Katmanlı mimari, yalnızca kod kuruluşunun ötesinde çok sayıda avantaj sunar, ancak.
+Uygulamalar karmaşıklıkla büyüdükçe, bu karmaşıklığı yönetmenin bir yolu, uygulamayı sorumluluklara veya kaygılarına göre kesmeniz gerekir. Bu, kaygıları ilkesinin ayrımını izler ve geliştiricilerin belirli işlevlerin uygulandığı yeri kolayca bulabilmeleri için büyüyen bir kod temelinin düzenlenmesine devam etmenize yardımcı olabilir. Katmanlı mimari, yalnızca kod kuruluşunun ötesinde çok sayıda avantaj sunar, ancak.
 
 Kodu katmanlara düzenleyerek, yaygın alt düzey işlevler uygulama genelinde yeniden kullanılabilir. Bu yeniden kullanım yararlı olur çünkü bu, daha az kodun yazılması ve uygulamanın tek bir uygulamada standartlaştırılmasına izin verebileceğinden, [kendinizi yinelemeyin (kuru)](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) prensibi bir uygulamadır.
 
@@ -99,8 +99,7 @@ Azure 'da bir Web uygulamasını ölçeklendirmeye yönelik en basit yaklaşım,
 
 Bağımlılık Inversion Ilkesini ve etki alanı odaklı tasarım (DDD) ilkelerini izleyen uygulamalar benzer bir mimariye ulaşacak. Bu mimari, yıl boyunca pek çok adla geçmiş. İlk adlardan biri altılık mimariydi ve bağlantı noktaları ve bağdaştırıcılar tarafından izlenir. Daha yakın zamanda, [Çoklu kare mimarisi](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) veya [Temizleme mimarisi](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)olarak alıntı yapılır. İkinci ad, temiz mimari, bu e-kitapta bu mimarinin adı olarak kullanılır.
 
-> [!NOTE]
-> Temiz mimari terimi, DDD Ilkeleri kullanılarak oluşturulan uygulamalara ve DDD kullanılarak oluşturulmayan uygulamalara uygulanabilir. Önceki durumda, Bu bileşim "Temizleme DDD mimarisi" olarak adlandırılabilir.
+EShopOnWeb Reference uygulaması, kodunu projeler halinde organize eden temizleme mimarisi yaklaşımını kullanır. [Ardalış/Temizleme mimarisi](https://github.com/ardalis/cleanarchitecture) GitHub deposunda kendi ASP.NET Core için başlangıç noktası olarak kullanabileceğiniz bir çözüm şablonu bulabilirsiniz.
 
 Temizleme mimarisi, iş mantığını ve uygulama modelini uygulamanın ortasına koyar. İş mantığını veri erişimine veya diğer altyapı kaygılarına bağlı olmak yerine, bu bağımlılık tersine çevrilir: altyapı ve uygulama ayrıntıları uygulama çekirdeğinize bağlıdır. Bu, uygulama çekirdeği içinde, daha sonra altyapı katmanında tanımlanan türler tarafından uygulanan soyutlamalar veya arabirimler tanımlayarak elde edilir. Bu mimariyi görselleştirmenin yaygın bir yolu, bir çoklu kare ile benzer bir dizi Eşmerkezli daire kullanmaktır. Şekil 5-7, mimari gösteriminin bu stilinin bir örneğini gösterir.
 
@@ -170,10 +169,10 @@ ASP.NET Core MVC uygulamasındaki kullanıcı arabirimi katmanı, uygulamanın g
 ### <a name="ui-layer-types"></a>UI katman türleri
 
 - Denetleyiciler
-- FilTReleri
+- Filtreler
 - Görünümler
 - ViewModel 'lar
-- Başlat
+- Başlangıç
 
 Başlangıç sınıfı, uygulamayı yapılandırmadan ve uygulama türlerini arabirimlere bağlamak için, bağımlılık ekleme işleminin çalışma zamanında düzgün çalışmasına izin verir.
 
@@ -212,7 +211,7 @@ Docker görüntüsü olarak güncelleştirmelerin dağıtımı, çok daha hızl�
 
 Kapsayıcılar, Tasarım gereği doğal olarak değişmez, ancak güncelleştirme betikleri, diskte kalan belirli bir yapılandırma veya dosya için hesabı unutabilirken, bu durumda bozuk VM 'Lerde endişelenmenize gerek kalmaz.
 
-Docker kapsayıcılarını, daha basit Web uygulamalarının tek parçalı dağıtımı için kullanabilirsiniz. Bu, sürekli tümleştirme ve sürekli dağıtım işlem hatlarını geliştirir ve dağıtım-üretim başarısını elde etmenize yardımcı olur. Daha fazla "makinenizde çalışmıyor, neden üretimde çalışmıyor?"
+Docker kapsayıcılarını, daha basit Web uygulamalarının tek parçalı dağıtımı için kullanabilirsiniz. Bu, sürekli tümleştirme ve sürekli dağıtım işlem hatlarını geliştirir ve dağıtım-üretim başarısını elde etmenize yardımcı olur. Daha fazla "makinem üzerinde çalışmıyor, neden üretimde çalışmıyor?"
 
 Mikro hizmet tabanlı mimarinin birçok avantajı vardır, ancak bu avantajlar artan karmaşıklık maliyetlerine göre gelir. Bazı durumlarda, maliyetler avantajlardan yararlanır. böylece tek bir kapsayıcıda veya yalnızca birkaç kapsayıcıda çalışan tek parçalı bir dağıtım uygulaması daha iyi bir seçenektir.
 
@@ -263,21 +262,19 @@ networks:
 `docker-compose.yml` dosya `Web` projesindeki `Dockerfile` başvurur. `Dockerfile`, kullanılacak temel kapsayıcıyı ve uygulamanın nasıl yapılandırılacağını belirtmek için kullanılır. `Web`' `Dockerfile`:
 
 ```Dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /app
 
+COPY *.sln .
 COPY . .
 WORKDIR /app/src/Web
 RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
-
-# Optional: Set this here if not setting it from docker-compose.yml
-# ENV ASPNETCORE_ENVIRONMENT Development
 
 ENTRYPOINT ["dotnet", "Web.dll"]
 ```
@@ -298,7 +295,7 @@ Visual Studio kullanarak uygulamanıza Docker desteği eklemek istiyorsanız, bu
   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 - **Depo deseninin**  
   <https://deviq.com/repository-pattern/>
-- **Temizleme mimarisi çözüm örneği**  
+- **Mimari çözüm şablonunu temizle**  
   <https://github.com/ardalis/cleanarchitecture>
 - **Mikro hizmetler e-kitabı mimarisi**  
   <https://aka.ms/MicroservicesEbook>
