@@ -154,6 +154,9 @@
             - name: Sürüm Oluşturma
               tocHref: /dotnet/core/versions/
               topicHref: /dotnet/core/versions/index
+            - name: SDK projeleri
+              tocHref: /dotnet/core/project-sdk/
+              topicHref: /dotnet/core/project-sdk/overview
             - name: Araçlar
               tocHref: /dotnet/core/tools/
               topicHref: /dotnet/core/tools/index
