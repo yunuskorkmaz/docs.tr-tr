@@ -1,20 +1,20 @@
 ---
 title: .NET Standard
 description: .NET Standard, sürümleri ve bunu destekleyen .NET uygulamaları hakkında bilgi edinin.
-ms.date: 09/23/2019
+ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 25490d5063a1f6c31b76af30ac6d37de6cb8c07f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 00b40b771a8608bad7e3f992e3c99367ff6bb131
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124643"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452597"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.NET Standard](https://github.com/dotnet/standard) , tüm .NET uygulamalarında kullanılabilmesi amaçlanan .NET API 'lerinin resmi bir belirtimidir. .NET Standard arkasındaki mosyon, .NET ekosisteminde daha büyük bir uyumluluk oluşturur. [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) , .NET uygulama davranışı için birlik özelliği oluşturmaya devam etmektedir, ancak .NET kitaplığı uygulamalarına yönelik .net temel sınıf KITAPLıKLARı (BCL) için benzer bir belirtim yoktur.
+[.NET Standard](https://github.com/dotnet/standard) , tüm .NET uygulamalarında kullanılabilmesi amaçlanan .NET API 'lerinin resmi bir belirtimidir. .NET Standard arkasındaki mosyon, .NET ekosisteminde daha fazla esneklik sağlamak için kullanılır. [Ecma 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) , .NET uygulama davranışı için bir kullanılabilirlik kurmaya devam eder ve ECMA 335 küçük bir standart kitaplıklar kümesini belirttiğinde .NET Standard belirtimi, daha geniş bir .NET API 'si yelpazesi kapsar.
 
 .NET Standard aşağıdaki temel senaryolara izin vermez:
 
@@ -86,7 +86,7 @@ NuGet paketleri bir [veya daha fazla](frameworks.md)çerçeveyi hedeflemelidir. 
 
 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) metapackage, .NET Standard tanımlayan tüm NuGet paketleri kümesine başvurur.  `netstandard` hedeflemek için en yaygın yol, bu metapackage 'e başvurarak yapılır. Bu, .NET Standard tanımlayan ~ 40 .NET kitaplıklarına ve ilişkili API 'lere erişim sağlar. Ek API 'lere erişim sağlamak için, `netstandard` hedef olan ek paketlere başvurabilirsiniz.
 
-### <a name="versioning"></a>Sürüm Oluşturma
+### <a name="versioning"></a>Sürüm oluşturma
 
 Belirtim tekil değildir, ancak artımlı olarak büyüyen ve önceden oluşturulmuş bir API kümesidir. Standart 'ın ilk sürümü bir temel API kümesi oluşturur. Sonraki sürümler, API 'Ler ekler ve önceki sürümler tarafından tanımlanan API 'Leri alırlar. Standart olmayan API 'Leri kaldırmak için bir sağlama yoktur.
 
