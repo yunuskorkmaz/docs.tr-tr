@@ -3,24 +3,24 @@ title: Project. JSON ve csproj karşılaştırması
 description: Project. JSON ve csproj öğeleri arasındaki eşlemeyi görüntüleyin.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: c31590cf34990867b81af4d073846c2952928798
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714130"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451111"
 ---
-# <a name="a-mapping-between-projectjson-and-csproj-properties"></a><span data-ttu-id="d3bf2-103">Project. JSON ve csproj özellikleri arasındaki eşleme</span><span class="sxs-lookup"><span data-stu-id="d3bf2-103">A mapping between project.json and csproj properties</span></span>
+# <a name="a-mapping-between-projectjson-and-csproj-properties"></a><span data-ttu-id="ad29a-103">Project. JSON ve csproj özellikleri arasındaki eşleme</span><span class="sxs-lookup"><span data-stu-id="ad29a-103">A mapping between project.json and csproj properties</span></span>
 
-<span data-ttu-id="d3bf2-104">[Nate McMaster](https://github.com/natemcmaster) tarafından</span><span class="sxs-lookup"><span data-stu-id="d3bf2-104">By [Nate McMaster](https://github.com/natemcmaster)</span></span>
+<span data-ttu-id="ad29a-104">[Nate McMaster](https://github.com/natemcmaster) tarafından</span><span class="sxs-lookup"><span data-stu-id="ad29a-104">By [Nate McMaster](https://github.com/natemcmaster)</span></span>
 
-<span data-ttu-id="d3bf2-105">.NET Core araçları 'nın geliştirilmesi sırasında, artık *Project. JSON* dosyalarını desteklemeyen önemli bir tasarım değişikliği yapılmıştır ve bunun yerine .NET Core projelerini MSBuild/csproj biçimine taşıyın.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-105">During the development of the .NET Core tooling, an important design change was made to no longer support *project.json* files and instead move the .NET Core projects to the MSBuild/csproj format.</span></span>
+<span data-ttu-id="ad29a-105">.NET Core araçları 'nın geliştirilmesi sırasında, artık *Project. JSON* dosyalarını desteklemeyen önemli bir tasarım değişikliği yapılmıştır ve bunun yerine .NET Core projelerini MSBuild/csproj biçimine taşıyın.</span><span class="sxs-lookup"><span data-stu-id="ad29a-105">During the development of the .NET Core tooling, an important design change was made to no longer support *project.json* files and instead move the .NET Core projects to the MSBuild/csproj format.</span></span>
 
-<span data-ttu-id="d3bf2-106">Bu makalede, Project *. JSON* Içindeki ayarların MSBuild/csproj biçiminde nasıl temsil edildiği gösterilmektedir, böylece yeni biçimin nasıl kullanılacağını ve projenizi araçların en son sürümüne yükseltirken geçiş araçlarının yaptığı değişiklikleri nasıl anlayabileceğinizi öğrenebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-106">This article shows how the settings in *project.json* are represented in the MSBuild/csproj format so you can learn how to use the new format and understand the changes made by the migration tools when you're upgrading your project to the latest version of the tooling.</span></span>
+<span data-ttu-id="ad29a-106">Bu makalede, Project *. JSON* Içindeki ayarların MSBuild/csproj biçiminde nasıl temsil edildiği gösterilmektedir, böylece yeni biçimin nasıl kullanılacağını ve projenizi araçların en son sürümüne yükseltirken geçiş araçlarının yaptığı değişiklikleri nasıl anlayabileceğinizi öğrenebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ad29a-106">This article shows how the settings in *project.json* are represented in the MSBuild/csproj format so you can learn how to use the new format and understand the changes made by the migration tools when you're upgrading your project to the latest version of the tooling.</span></span>
 
-## <a name="the-csproj-format"></a><span data-ttu-id="d3bf2-107">Csproj biçimi</span><span class="sxs-lookup"><span data-stu-id="d3bf2-107">The csproj format</span></span>
+## <a name="the-csproj-format"></a><span data-ttu-id="ad29a-107">Csproj biçimi</span><span class="sxs-lookup"><span data-stu-id="ad29a-107">The csproj format</span></span>
 
-<span data-ttu-id="d3bf2-108">Yeni biçim olan \*. csproj, XML tabanlı bir biçimdir.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-108">The new format, \*.csproj, is an XML-based format.</span></span> <span data-ttu-id="d3bf2-109">Aşağıdaki örnek, `Microsoft.NET.Sdk`kullanarak bir .NET Core projesinin kök düğümünü gösterir.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-109">The following example shows the root node of a .NET Core project using the `Microsoft.NET.Sdk`.</span></span> <span data-ttu-id="d3bf2-110">Web projeleri için kullanılan SDK `Microsoft.NET.Sdk.Web`.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-110">For web projects, the SDK used is `Microsoft.NET.Sdk.Web`.</span></span>
+<span data-ttu-id="ad29a-108">Yeni biçim olan \*. csproj, XML tabanlı bir biçimdir.</span><span class="sxs-lookup"><span data-stu-id="ad29a-108">The new format, \*.csproj, is an XML-based format.</span></span> <span data-ttu-id="ad29a-109">Aşağıdaki örnek, `Microsoft.NET.Sdk`kullanarak bir .NET Core projesinin kök düğümünü gösterir.</span><span class="sxs-lookup"><span data-stu-id="ad29a-109">The following example shows the root node of a .NET Core project using the `Microsoft.NET.Sdk`.</span></span> <span data-ttu-id="ad29a-110">Web projeleri için kullanılan SDK `Microsoft.NET.Sdk.Web`.</span><span class="sxs-lookup"><span data-stu-id="ad29a-110">For web projects, the SDK used is `Microsoft.NET.Sdk.Web`.</span></span>
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -28,9 +28,9 @@ ms.locfileid: "75714130"
 </Project>
 ```
 
-## <a name="common-top-level-properties"></a><span data-ttu-id="d3bf2-111">Ortak en üst düzey Özellikler</span><span class="sxs-lookup"><span data-stu-id="d3bf2-111">Common top-level properties</span></span>
+## <a name="common-top-level-properties"></a><span data-ttu-id="ad29a-111">Ortak en üst düzey Özellikler</span><span class="sxs-lookup"><span data-stu-id="ad29a-111">Common top-level properties</span></span>
 
-### <a name="name"></a><span data-ttu-id="d3bf2-112">{1&gt;name&lt;1}</span><span class="sxs-lookup"><span data-stu-id="d3bf2-112">name</span></span>
+### <a name="name"></a><span data-ttu-id="ad29a-112">name</span><span class="sxs-lookup"><span data-stu-id="ad29a-112">name</span></span>
 
 ```json
 {
@@ -38,9 +38,9 @@ ms.locfileid: "75714130"
 }
 ```
 
-<span data-ttu-id="d3bf2-113">Artık desteklenmiyor.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-113">No longer supported.</span></span> <span data-ttu-id="d3bf2-114">Csproj içinde, bu, genellikle dizin adıyla eşleşen proje dosya adı tarafından belirlenir.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-114">In csproj, this is determined by the project filename, which usually matches the directory name.</span></span> <span data-ttu-id="d3bf2-115">Örneğin: `MyProjectName.csproj`.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-115">For example, `MyProjectName.csproj`.</span></span>
+<span data-ttu-id="ad29a-113">Artık desteklenmiyor.</span><span class="sxs-lookup"><span data-stu-id="ad29a-113">No longer supported.</span></span> <span data-ttu-id="ad29a-114">Csproj içinde, bu, genellikle dizin adıyla eşleşen proje dosya adı tarafından belirlenir.</span><span class="sxs-lookup"><span data-stu-id="ad29a-114">In csproj, this is determined by the project filename, which usually matches the directory name.</span></span> <span data-ttu-id="ad29a-115">Örneğin, `MyProjectName.csproj`.</span><span class="sxs-lookup"><span data-stu-id="ad29a-115">For example, `MyProjectName.csproj`.</span></span>
 
-<span data-ttu-id="d3bf2-116">Varsayılan olarak, proje dosya adı `<AssemblyName>` ve `<PackageId>` özelliklerinin değerini de belirtir.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-116">By default, the project filename also specifies the value of the `<AssemblyName>` and `<PackageId>` properties.</span></span>
+<span data-ttu-id="ad29a-116">Varsayılan olarak, proje dosya adı `<AssemblyName>` ve `<PackageId>` özelliklerinin değerini de belirtir.</span><span class="sxs-lookup"><span data-stu-id="ad29a-116">By default, the project filename also specifies the value of the `<AssemblyName>` and `<PackageId>` properties.</span></span>
 
 ```xml
 <PropertyGroup>
@@ -49,10 +49,10 @@ ms.locfileid: "75714130"
 </PropertyGroup>
 ```
 
-<span data-ttu-id="d3bf2-117">`<AssemblyName>`, Project. JSON içinde `buildOptions\outputName` özelliği tanımlanmışsa `<PackageId>` farklı bir değere sahip olacaktır.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-117">The `<AssemblyName>` will have a different value than `<PackageId>` if `buildOptions\outputName` property was defined in project.json.</span></span>
-<span data-ttu-id="d3bf2-118">Daha fazla bilgi için bkz. [diğer ortak derleme seçenekleri](#other-common-build-options).</span><span class="sxs-lookup"><span data-stu-id="d3bf2-118">For more information, see [Other common build options](#other-common-build-options).</span></span>
+<span data-ttu-id="ad29a-117">`<AssemblyName>`, Project. JSON içinde `buildOptions\outputName` özelliği tanımlanmışsa `<PackageId>` farklı bir değere sahip olacaktır.</span><span class="sxs-lookup"><span data-stu-id="ad29a-117">The `<AssemblyName>` will have a different value than `<PackageId>` if `buildOptions\outputName` property was defined in project.json.</span></span>
+<span data-ttu-id="ad29a-118">Daha fazla bilgi için bkz. [diğer ortak derleme seçenekleri](#other-common-build-options).</span><span class="sxs-lookup"><span data-stu-id="ad29a-118">For more information, see [Other common build options](#other-common-build-options).</span></span>
 
-### <a name="version"></a><span data-ttu-id="d3bf2-119">sürümü</span><span class="sxs-lookup"><span data-stu-id="d3bf2-119">version</span></span>
+### <a name="version"></a><span data-ttu-id="ad29a-119">sürüm</span><span class="sxs-lookup"><span data-stu-id="ad29a-119">version</span></span>
 
 ```json
 {
@@ -60,7 +60,7 @@ ms.locfileid: "75714130"
 }
 ```
 
-<span data-ttu-id="d3bf2-120">`VersionPrefix` ve `VersionSuffix` özelliklerini kullanın:</span><span class="sxs-lookup"><span data-stu-id="d3bf2-120">Use the `VersionPrefix` and `VersionSuffix` properties:</span></span>
+<span data-ttu-id="ad29a-120">`VersionPrefix` ve `VersionSuffix` özelliklerini kullanın:</span><span class="sxs-lookup"><span data-stu-id="ad29a-120">Use the `VersionPrefix` and `VersionSuffix` properties:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -69,7 +69,7 @@ ms.locfileid: "75714130"
 </PropertyGroup>
 ```
 
-<span data-ttu-id="d3bf2-121">`Version` özelliğini de kullanabilirsiniz, ancak bu durum paketleme sırasında sürüm ayarlarını geçersiz kılabilir:</span><span class="sxs-lookup"><span data-stu-id="d3bf2-121">You can also use the `Version` property, but this may override version settings during packaging:</span></span>
+<span data-ttu-id="ad29a-121">`Version` özelliğini de kullanabilirsiniz, ancak bu durum paketleme sırasında sürüm ayarlarını geçersiz kılabilir:</span><span class="sxs-lookup"><span data-stu-id="ad29a-121">You can also use the `Version` property, but this may override version settings during packaging:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -77,7 +77,7 @@ ms.locfileid: "75714130"
 </PropertyGroup>
 ```
 
-### <a name="other-common-root-level-options"></a><span data-ttu-id="d3bf2-122">Diğer genel kök düzeyi seçenekleri</span><span class="sxs-lookup"><span data-stu-id="d3bf2-122">Other common root-level options</span></span>
+### <a name="other-common-root-level-options"></a><span data-ttu-id="ad29a-122">Diğer genel kök düzeyi seçenekleri</span><span class="sxs-lookup"><span data-stu-id="ad29a-122">Other common root-level options</span></span>
 
 ```json
 {
@@ -104,9 +104,9 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-## <a name="frameworks"></a><span data-ttu-id="d3bf2-123">çerçeveleri</span><span class="sxs-lookup"><span data-stu-id="d3bf2-123">frameworks</span></span>
+## <a name="frameworks"></a><span data-ttu-id="ad29a-123">çerçeveleri</span><span class="sxs-lookup"><span data-stu-id="ad29a-123">frameworks</span></span>
 
-### <a name="one-target-framework"></a><span data-ttu-id="d3bf2-124">Bir hedef çerçeve</span><span class="sxs-lookup"><span data-stu-id="d3bf2-124">One target framework</span></span>
+### <a name="one-target-framework"></a><span data-ttu-id="ad29a-124">Bir hedef çerçeve</span><span class="sxs-lookup"><span data-stu-id="ad29a-124">One target framework</span></span>
 
 ```json
 {
@@ -122,7 +122,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="multiple-target-frameworks"></a><span data-ttu-id="d3bf2-125">Birden çok hedef çerçeve</span><span class="sxs-lookup"><span data-stu-id="d3bf2-125">Multiple target frameworks</span></span>
+### <a name="multiple-target-frameworks"></a><span data-ttu-id="ad29a-125">Birden çok hedef çerçeve</span><span class="sxs-lookup"><span data-stu-id="ad29a-125">Multiple target frameworks</span></span>
 
 ```json
 {
@@ -133,7 +133,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="d3bf2-126">Hedef çerçeveler listenizi tanımlamak için `TargetFrameworks` özelliğini kullanın.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-126">Use the `TargetFrameworks` property to define your list of target frameworks.</span></span> <span data-ttu-id="d3bf2-127">Birden çok Framework değerini ayırmak için noktalı virgül kullanın.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-127">Use semi-colon to separate multiple framework values.</span></span>
+<span data-ttu-id="ad29a-126">Hedef çerçeveler listenizi tanımlamak için `TargetFrameworks` özelliğini kullanın.</span><span class="sxs-lookup"><span data-stu-id="ad29a-126">Use the `TargetFrameworks` property to define your list of target frameworks.</span></span> <span data-ttu-id="ad29a-127">Birden çok Framework değerini ayırmak için noktalı virgül kullanın.</span><span class="sxs-lookup"><span data-stu-id="ad29a-127">Use semi-colon to separate multiple framework values.</span></span>
 
 ```xml
 <PropertyGroup>
@@ -141,13 +141,13 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-## <a name="dependencies"></a><span data-ttu-id="d3bf2-128">bağımlılıklar</span><span class="sxs-lookup"><span data-stu-id="d3bf2-128">dependencies</span></span>
+## <a name="dependencies"></a><span data-ttu-id="ad29a-128">bağımlılıklar</span><span class="sxs-lookup"><span data-stu-id="ad29a-128">dependencies</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="d3bf2-129">Bağımlılık bir paket değil bir **projem** ise, biçim farklıdır.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-129">If the dependency is a **project** and not a package, the format is different.</span></span>
-> <span data-ttu-id="d3bf2-130">Daha fazla bilgi için [bağımlılık türü](#dependency-type) bölümüne bakın.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-130">For more information, see the [dependency type](#dependency-type) section.</span></span>
+> <span data-ttu-id="ad29a-129">Bağımlılık bir paket değil bir **projem** ise, biçim farklıdır.</span><span class="sxs-lookup"><span data-stu-id="ad29a-129">If the dependency is a **project** and not a package, the format is different.</span></span>
+> <span data-ttu-id="ad29a-130">Daha fazla bilgi için [bağımlılık türü](#dependency-type) bölümüne bakın.</span><span class="sxs-lookup"><span data-stu-id="ad29a-130">For more information, see the [dependency type](#dependency-type) section.</span></span>
 
-### <a name="netstandardlibrary-metapackage"></a><span data-ttu-id="d3bf2-131">NETStandard. Library meta paketi</span><span class="sxs-lookup"><span data-stu-id="d3bf2-131">NETStandard.Library metapackage</span></span>
+### <a name="netstandardlibrary-metapackage"></a><span data-ttu-id="ad29a-131">NETStandard. Library meta paketi</span><span class="sxs-lookup"><span data-stu-id="ad29a-131">NETStandard.Library metapackage</span></span>
 
 ```json
 {
@@ -163,7 +163,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="microsoftnetcoreapp-metapackage"></a><span data-ttu-id="d3bf2-132">Microsoft. NETCore. app metapackage</span><span class="sxs-lookup"><span data-stu-id="d3bf2-132">Microsoft.NETCore.App metapackage</span></span>
+### <a name="microsoftnetcoreapp-metapackage"></a><span data-ttu-id="ad29a-132">Microsoft. NETCore. app metapackage</span><span class="sxs-lookup"><span data-stu-id="ad29a-132">Microsoft.NETCore.App metapackage</span></span>
 
 ```json
 {
@@ -179,9 +179,9 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-<span data-ttu-id="d3bf2-133">Geçirilen projedeki `<RuntimeFrameworkVersion>` değerinin yüklediğiniz SDK sürümü tarafından belirlendiğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-133">Note that the `<RuntimeFrameworkVersion>` value in the migrated project is determined by the version of the SDK you have installed.</span></span>
+<span data-ttu-id="ad29a-133">Geçirilen projedeki `<RuntimeFrameworkVersion>` değerinin yüklediğiniz SDK sürümü tarafından belirlendiğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="ad29a-133">Note that the `<RuntimeFrameworkVersion>` value in the migrated project is determined by the version of the SDK you have installed.</span></span>
 
-### <a name="top-level-dependencies"></a><span data-ttu-id="d3bf2-134">Üst düzey bağımlılıklar</span><span class="sxs-lookup"><span data-stu-id="d3bf2-134">Top-level dependencies</span></span>
+### <a name="top-level-dependencies"></a><span data-ttu-id="ad29a-134">Üst düzey bağımlılıklar</span><span class="sxs-lookup"><span data-stu-id="ad29a-134">Top-level dependencies</span></span>
 
 ```json
 {
@@ -197,7 +197,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-### <a name="per-framework-dependencies"></a><span data-ttu-id="d3bf2-135">Çerçeve başına bağımlılıklar</span><span class="sxs-lookup"><span data-stu-id="d3bf2-135">Per-framework dependencies</span></span>
+### <a name="per-framework-dependencies"></a><span data-ttu-id="ad29a-135">Çerçeve başına bağımlılıklar</span><span class="sxs-lookup"><span data-stu-id="ad29a-135">Per-framework dependencies</span></span>
 
 ```json
 {
@@ -226,7 +226,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-### <a name="imports"></a><span data-ttu-id="d3bf2-136">içeri aktarmalar</span><span class="sxs-lookup"><span data-stu-id="d3bf2-136">imports</span></span>
+### <a name="imports"></a><span data-ttu-id="ad29a-136">içeri aktarmalar</span><span class="sxs-lookup"><span data-stu-id="ad29a-136">imports</span></span>
 
 ```json
 {
@@ -253,9 +253,9 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-### <a name="dependency-type"></a><span data-ttu-id="d3bf2-137">bağımlılık türü</span><span class="sxs-lookup"><span data-stu-id="d3bf2-137">dependency type</span></span>
+### <a name="dependency-type"></a><span data-ttu-id="ad29a-137">bağımlılık türü</span><span class="sxs-lookup"><span data-stu-id="ad29a-137">dependency type</span></span>
 
-#### <a name="type-project"></a><span data-ttu-id="d3bf2-138">Tür: proje</span><span class="sxs-lookup"><span data-stu-id="d3bf2-138">type: project</span></span>
+#### <a name="type-project"></a><span data-ttu-id="ad29a-138">Tür: proje</span><span class="sxs-lookup"><span data-stu-id="ad29a-138">type: project</span></span>
 
 ```json
 {
@@ -276,9 +276,9 @@ And it's really great!</Description>
 ```
 
 > [!NOTE]
-> <span data-ttu-id="d3bf2-139">Bu, `dotnet pack --version-suffix $suffix` bir proje başvurusunun bağımlılık sürümünü belirleyen yolunu ortadan keser.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-139">This will break the way that `dotnet pack --version-suffix $suffix` determines the dependency version of a project reference.</span></span>
+> <span data-ttu-id="ad29a-139">Bu, `dotnet pack --version-suffix $suffix` bir proje başvurusunun bağımlılık sürümünü belirleyen yolunu ortadan keser.</span><span class="sxs-lookup"><span data-stu-id="ad29a-139">This will break the way that `dotnet pack --version-suffix $suffix` determines the dependency version of a project reference.</span></span>
 
-#### <a name="type-build"></a><span data-ttu-id="d3bf2-140">Tür: derleme</span><span class="sxs-lookup"><span data-stu-id="d3bf2-140">type: build</span></span>
+#### <a name="type-build"></a><span data-ttu-id="ad29a-140">Tür: derleme</span><span class="sxs-lookup"><span data-stu-id="ad29a-140">type: build</span></span>
 
 ```json
 {
@@ -297,7 +297,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-#### <a name="type-platform"></a><span data-ttu-id="d3bf2-141">Tür: platform</span><span class="sxs-lookup"><span data-stu-id="d3bf2-141">type: platform</span></span>
+#### <a name="type-platform"></a><span data-ttu-id="ad29a-141">Tür: platform</span><span class="sxs-lookup"><span data-stu-id="ad29a-141">type: platform</span></span>
 
 ```json
 {
@@ -310,9 +310,9 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="d3bf2-142">Csproj içinde eşdeğer değildir.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-142">There is no equivalent in csproj.</span></span>
+<span data-ttu-id="ad29a-142">Csproj içinde eşdeğer değildir.</span><span class="sxs-lookup"><span data-stu-id="ad29a-142">There is no equivalent in csproj.</span></span>
 
-## <a name="runtimes"></a><span data-ttu-id="d3bf2-143">zamanları</span><span class="sxs-lookup"><span data-stu-id="d3bf2-143">runtimes</span></span>
+## <a name="runtimes"></a><span data-ttu-id="ad29a-143">zamanları</span><span class="sxs-lookup"><span data-stu-id="ad29a-143">runtimes</span></span>
 
 ```json
 {
@@ -330,16 +330,16 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="standalone-apps-self-contained-deployment"></a><span data-ttu-id="d3bf2-144">Tek başına uygulamalar (otomatik olarak kapsanan dağıtım)</span><span class="sxs-lookup"><span data-stu-id="d3bf2-144">Standalone apps (self-contained deployment)</span></span>
+### <a name="standalone-apps-self-contained-deployment"></a><span data-ttu-id="ad29a-144">Tek başına uygulamalar (otomatik olarak kapsanan dağıtım)</span><span class="sxs-lookup"><span data-stu-id="ad29a-144">Standalone apps (self-contained deployment)</span></span>
 
-<span data-ttu-id="d3bf2-145">Project. JSON içinde, bir `runtimes` bölümü tanımlamak, uygulamanın oluşturma ve yayımlama sırasında tek başına olduğu anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-145">In project.json, defining a `runtimes` section means the app was standalone during build and publish.</span></span>
-<span data-ttu-id="d3bf2-146">MSBuild 'de, tüm projeler derleme sırasında *Taşınabilir* , ancak tek başına olarak yayımlanabilir.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-146">In MSBuild, all projects are *portable* during build, but can be published as standalone.</span></span>
+<span data-ttu-id="ad29a-145">Project. JSON içinde, bir `runtimes` bölümü tanımlamak, uygulamanın oluşturma ve yayımlama sırasında tek başına olduğu anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="ad29a-145">In project.json, defining a `runtimes` section means the app was standalone during build and publish.</span></span>
+<span data-ttu-id="ad29a-146">MSBuild 'de, tüm projeler derleme sırasında *Taşınabilir* , ancak tek başına olarak yayımlanabilir.</span><span class="sxs-lookup"><span data-stu-id="ad29a-146">In MSBuild, all projects are *portable* during build, but can be published as standalone.</span></span>
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
-<span data-ttu-id="d3bf2-147">Daha fazla bilgi için bkz. [kendi içindeki dağıtımlar (SCD)](../deploying/index.md#self-contained-deployments-scd).</span><span class="sxs-lookup"><span data-stu-id="d3bf2-147">For more information, see [Self-contained deployments (SCD)](../deploying/index.md#self-contained-deployments-scd).</span></span>
+<span data-ttu-id="ad29a-147">Daha fazla bilgi için bkz. [kendi içindeki dağıtımlar (SCD)](../deploying/index.md#publish-self-contained).</span><span class="sxs-lookup"><span data-stu-id="ad29a-147">For more information, see [Self-contained deployments (SCD)](../deploying/index.md#publish-self-contained).</span></span>
 
-## <a name="tools"></a><span data-ttu-id="d3bf2-148">araçlar</span><span class="sxs-lookup"><span data-stu-id="d3bf2-148">tools</span></span>
+## <a name="tools"></a><span data-ttu-id="ad29a-148">araçlar</span><span class="sxs-lookup"><span data-stu-id="ad29a-148">tools</span></span>
 
 ```json
 {
@@ -356,13 +356,13 @@ And it's really great!</Description>
 ```
 
 > [!NOTE]
-> <span data-ttu-id="d3bf2-149">`imports` araçları, csproj 'da desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-149">`imports` on tools are not supported in csproj.</span></span> <span data-ttu-id="d3bf2-150">İçeri aktarmalar gerektiren araçlar yeni `Microsoft.NET.Sdk`çalışmaz.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-150">Tools that need imports will not work with the new `Microsoft.NET.Sdk`.</span></span>
+> <span data-ttu-id="ad29a-149">`imports` araçları, csproj 'da desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="ad29a-149">`imports` on tools are not supported in csproj.</span></span> <span data-ttu-id="ad29a-150">İçeri aktarmalar gerektiren araçlar yeni `Microsoft.NET.Sdk`çalışmaz.</span><span class="sxs-lookup"><span data-stu-id="ad29a-150">Tools that need imports will not work with the new `Microsoft.NET.Sdk`.</span></span>
 
-## <a name="buildoptions"></a><span data-ttu-id="d3bf2-151">Buildoseçenekleri</span><span class="sxs-lookup"><span data-stu-id="d3bf2-151">buildOptions</span></span>
+## <a name="buildoptions"></a><span data-ttu-id="ad29a-151">Buildoseçenekleri</span><span class="sxs-lookup"><span data-stu-id="ad29a-151">buildOptions</span></span>
 
-<span data-ttu-id="d3bf2-152">Ayrıca bkz. [dosyalar](#files).</span><span class="sxs-lookup"><span data-stu-id="d3bf2-152">See also [Files](#files).</span></span>
+<span data-ttu-id="ad29a-152">Ayrıca bkz. [dosyalar](#files).</span><span class="sxs-lookup"><span data-stu-id="ad29a-152">See also [Files](#files).</span></span>
 
-### <a name="emitentrypoint"></a><span data-ttu-id="d3bf2-153">emitEntryPoint</span><span class="sxs-lookup"><span data-stu-id="d3bf2-153">emitEntryPoint</span></span>
+### <a name="emitentrypoint"></a><span data-ttu-id="ad29a-153">emitEntryPoint</span><span class="sxs-lookup"><span data-stu-id="ad29a-153">emitEntryPoint</span></span>
 
 ```json
 {
@@ -378,7 +378,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-<span data-ttu-id="d3bf2-154">`emitEntryPoint` `false`, `OutputType` değeri, varsayılan değer olan `Library`' a dönüştürülür:</span><span class="sxs-lookup"><span data-stu-id="d3bf2-154">If `emitEntryPoint` was `false`, the value of `OutputType` is converted to `Library`, which is the default value:</span></span>
+<span data-ttu-id="ad29a-154">`emitEntryPoint` `false`, `OutputType` değeri, varsayılan değer olan `Library`' a dönüştürülür:</span><span class="sxs-lookup"><span data-stu-id="ad29a-154">If `emitEntryPoint` was `false`, the value of `OutputType` is converted to `Library`, which is the default value:</span></span>
 
 ```json
 {
@@ -395,7 +395,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="keyfile"></a><span data-ttu-id="d3bf2-155">Dosyasına</span><span class="sxs-lookup"><span data-stu-id="d3bf2-155">keyFile</span></span>
+### <a name="keyfile"></a><span data-ttu-id="ad29a-155">Dosyasına</span><span class="sxs-lookup"><span data-stu-id="ad29a-155">keyFile</span></span>
 
 ```json
 {
@@ -405,7 +405,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="d3bf2-156">`keyFile` öğesi MSBuild 'te üç özelliğe genişletilir:</span><span class="sxs-lookup"><span data-stu-id="d3bf2-156">The `keyFile` element expands to three properties in MSBuild:</span></span>
+<span data-ttu-id="ad29a-156">`keyFile` öğesi MSBuild 'te üç özelliğe genişletilir:</span><span class="sxs-lookup"><span data-stu-id="ad29a-156">The `keyFile` element expands to three properties in MSBuild:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -415,7 +415,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="other-common-build-options"></a><span data-ttu-id="d3bf2-157">Diğer ortak derleme seçenekleri</span><span class="sxs-lookup"><span data-stu-id="d3bf2-157">Other common build options</span></span>
+### <a name="other-common-build-options"></a><span data-ttu-id="ad29a-157">Diğer ortak derleme seçenekleri</span><span class="sxs-lookup"><span data-stu-id="ad29a-157">Other common build options</span></span>
 
 ```json
 {
@@ -445,11 +445,11 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-## <a name="packoptions"></a><span data-ttu-id="d3bf2-158">packOptions</span><span class="sxs-lookup"><span data-stu-id="d3bf2-158">packOptions</span></span>
+## <a name="packoptions"></a><span data-ttu-id="ad29a-158">packOptions</span><span class="sxs-lookup"><span data-stu-id="ad29a-158">packOptions</span></span>
 
-<span data-ttu-id="d3bf2-159">Ayrıca bkz. [dosyalar](#files).</span><span class="sxs-lookup"><span data-stu-id="d3bf2-159">See also [Files](#files).</span></span>
+<span data-ttu-id="ad29a-159">Ayrıca bkz. [dosyalar](#files).</span><span class="sxs-lookup"><span data-stu-id="ad29a-159">See also [Files](#files).</span></span>
 
-### <a name="common-pack-options"></a><span data-ttu-id="d3bf2-160">Ortak paket seçenekleri</span><span class="sxs-lookup"><span data-stu-id="d3bf2-160">Common pack options</span></span>
+### <a name="common-pack-options"></a><span data-ttu-id="ad29a-160">Ortak paket seçenekleri</span><span class="sxs-lookup"><span data-stu-id="ad29a-160">Common pack options</span></span>
 
 ```json
 {
@@ -485,10 +485,10 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-<span data-ttu-id="d3bf2-161">MSBuild içinde `owners` öğesi için eşdeğer yok.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-161">There is no equivalent for the `owners` element in MSBuild.</span></span>
-<span data-ttu-id="d3bf2-162">`summary`, bu özellik [`description`](#other-common-root-level-options) öğesiyle eşlendiğinden, `summary` değeri bu özelliğe otomatik olarak geçirilmese de, MSBuild `<Description>` özelliğini kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-162">For `summary`, you can use the MSBuild `<Description>` property, even though the value of `summary` is not migrated automatically to that property, since that property is mapped to the [`description`](#other-common-root-level-options) element.</span></span>
+<span data-ttu-id="ad29a-161">MSBuild içinde `owners` öğesi için eşdeğer yok.</span><span class="sxs-lookup"><span data-stu-id="ad29a-161">There is no equivalent for the `owners` element in MSBuild.</span></span>
+<span data-ttu-id="ad29a-162">`summary`, bu özellik [`description`](#other-common-root-level-options) öğesiyle eşlendiğinden, `summary` değeri bu özelliğe otomatik olarak geçirilmese de, MSBuild `<Description>` özelliğini kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ad29a-162">For `summary`, you can use the MSBuild `<Description>` property, even though the value of `summary` is not migrated automatically to that property, since that property is mapped to the [`description`](#other-common-root-level-options) element.</span></span>
 
-## <a name="scripts"></a><span data-ttu-id="d3bf2-163">betikler</span><span class="sxs-lookup"><span data-stu-id="d3bf2-163">scripts</span></span>
+## <a name="scripts"></a><span data-ttu-id="ad29a-163">betikler</span><span class="sxs-lookup"><span data-stu-id="ad29a-163">scripts</span></span>
 
 ```json
 {
@@ -499,7 +499,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="d3bf2-164">MSBuild 'teki eşdeğeri [hedefler](/visualstudio/msbuild/msbuild-targets):</span><span class="sxs-lookup"><span data-stu-id="d3bf2-164">Their equivalent in MSBuild are [targets](/visualstudio/msbuild/msbuild-targets):</span></span>
+<span data-ttu-id="ad29a-164">MSBuild 'teki eşdeğeri [hedefler](/visualstudio/msbuild/msbuild-targets):</span><span class="sxs-lookup"><span data-stu-id="ad29a-164">Their equivalent in MSBuild are [targets](/visualstudio/msbuild/msbuild-targets):</span></span>
 
 ```xml
 <Target Name="MyPreCompileTarget" BeforeTargets="Build">
@@ -512,7 +512,7 @@ And it's really great!</Description>
 </Target>
 ```
 
-## <a name="runtimeoptions"></a><span data-ttu-id="d3bf2-165">runtimeOptions</span><span class="sxs-lookup"><span data-stu-id="d3bf2-165">runtimeOptions</span></span>
+## <a name="runtimeoptions"></a><span data-ttu-id="ad29a-165">runtimeOptions</span><span class="sxs-lookup"><span data-stu-id="ad29a-165">runtimeOptions</span></span>
 
 ```json
 {
@@ -528,7 +528,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="d3bf2-166">Bu gruptaki "System. GC. Server" özelliği hariç tüm ayarlar, proje klasöründe *runtimeconfig. Template. JSON* adlı bir dosyaya yerleştirilir ve bu işlem, geçiş işlemi sırasında kök nesnesine yükseltilmemiş seçenekleridir:</span><span class="sxs-lookup"><span data-stu-id="d3bf2-166">All settings in this group, except for the "System.GC.Server" property, are placed into a file called *runtimeconfig.template.json* in the project folder, with options lifted to the root object during the migration process:</span></span>
+<span data-ttu-id="ad29a-166">Bu gruptaki "System. GC. Server" özelliği hariç tüm ayarlar, proje klasöründe *runtimeconfig. Template. JSON* adlı bir dosyaya yerleştirilir ve bu işlem, geçiş işlemi sırasında kök nesnesine yükseltilmemiş seçenekleridir:</span><span class="sxs-lookup"><span data-stu-id="ad29a-166">All settings in this group, except for the "System.GC.Server" property, are placed into a file called *runtimeconfig.template.json* in the project folder, with options lifted to the root object during the migration process:</span></span>
 
 ```json
 {
@@ -541,7 +541,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="d3bf2-167">"System. GC. Server" özelliği csproj dosyasına geçirilir:</span><span class="sxs-lookup"><span data-stu-id="d3bf2-167">The "System.GC.Server" property is migrated into the csproj file:</span></span>
+<span data-ttu-id="ad29a-167">"System. GC. Server" özelliği csproj dosyasına geçirilir:</span><span class="sxs-lookup"><span data-stu-id="ad29a-167">The "System.GC.Server" property is migrated into the csproj file:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -549,7 +549,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-<span data-ttu-id="d3bf2-168">Bununla birlikte, csproj içindeki tüm değerleri ve MSBuild özelliklerini de ayarlayabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="d3bf2-168">However, you can set all those values in the csproj as well as MSBuild properties:</span></span>
+<span data-ttu-id="ad29a-168">Bununla birlikte, csproj içindeki tüm değerleri ve MSBuild özelliklerini de ayarlayabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="ad29a-168">However, you can set all those values in the csproj as well as MSBuild properties:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -561,7 +561,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-## <a name="shared"></a><span data-ttu-id="d3bf2-169">shared</span><span class="sxs-lookup"><span data-stu-id="d3bf2-169">shared</span></span>
+## <a name="shared"></a><span data-ttu-id="ad29a-169">shared</span><span class="sxs-lookup"><span data-stu-id="ad29a-169">shared</span></span>
 
 ```json
 {
@@ -569,13 +569,13 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="d3bf2-170">Csproj içinde desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-170">Not supported in csproj.</span></span> <span data-ttu-id="d3bf2-171">Bunun yerine, *. nuspec* dosyanızdaki içerik dosyalarını ekle ' nin oluşturulması gerekir.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-171">You must instead create include content files in your *.nuspec* file.</span></span>
-<span data-ttu-id="d3bf2-172">Daha fazla bilgi için bkz. [içerik dosyaları ekleme](/nuget/schema/nuspec#including-content-files).</span><span class="sxs-lookup"><span data-stu-id="d3bf2-172">For more information, see [Including content files](/nuget/schema/nuspec#including-content-files).</span></span>
+<span data-ttu-id="ad29a-170">Csproj içinde desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="ad29a-170">Not supported in csproj.</span></span> <span data-ttu-id="ad29a-171">Bunun yerine, *. nuspec* dosyanızdaki içerik dosyalarını ekle ' nin oluşturulması gerekir.</span><span class="sxs-lookup"><span data-stu-id="ad29a-171">You must instead create include content files in your *.nuspec* file.</span></span>
+<span data-ttu-id="ad29a-172">Daha fazla bilgi için bkz. [içerik dosyaları ekleme](/nuget/schema/nuspec#including-content-files).</span><span class="sxs-lookup"><span data-stu-id="ad29a-172">For more information, see [Including content files](/nuget/schema/nuspec#including-content-files).</span></span>
 
-## <a name="files"></a><span data-ttu-id="d3bf2-173">dosyaları</span><span class="sxs-lookup"><span data-stu-id="d3bf2-173">files</span></span>
+## <a name="files"></a><span data-ttu-id="ad29a-173">dosyaları</span><span class="sxs-lookup"><span data-stu-id="ad29a-173">files</span></span>
 
-<span data-ttu-id="d3bf2-174">*Project. JSON*içinde derleme ve paketleme farklı klasörlerden derlenmesi ve katıştırılması için genişletilebilir.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-174">In *project.json*, build and pack could be extended to compile and embed from different folders.</span></span>
-<span data-ttu-id="d3bf2-175">MSBuild 'te bu, [öğeler](/visualstudio/msbuild/common-msbuild-project-items)kullanılarak yapılır.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-175">In MSBuild, this is done using [items](/visualstudio/msbuild/common-msbuild-project-items).</span></span> <span data-ttu-id="d3bf2-176">Aşağıdaki örnek ortak bir dönüştürmedir:</span><span class="sxs-lookup"><span data-stu-id="d3bf2-176">The following example is a common conversion:</span></span>
+<span data-ttu-id="ad29a-174">*Project. JSON*içinde derleme ve paketleme farklı klasörlerden derlenmesi ve katıştırılması için genişletilebilir.</span><span class="sxs-lookup"><span data-stu-id="ad29a-174">In *project.json*, build and pack could be extended to compile and embed from different folders.</span></span>
+<span data-ttu-id="ad29a-175">MSBuild 'te bu, [öğeler](/visualstudio/msbuild/common-msbuild-project-items)kullanılarak yapılır.</span><span class="sxs-lookup"><span data-stu-id="ad29a-175">In MSBuild, this is done using [items](/visualstudio/msbuild/common-msbuild-project-items).</span></span> <span data-ttu-id="ad29a-176">Aşağıdaki örnek ortak bir dönüştürmedir:</span><span class="sxs-lookup"><span data-stu-id="ad29a-176">The following example is a common conversion:</span></span>
 
 ```json
 {
@@ -621,21 +621,21 @@ And it's really great!</Description>
 ```
 
 > [!NOTE]
-> <span data-ttu-id="d3bf2-177">Varsayılan [Glob desenlerinin](https://en.wikipedia.org/wiki/Glob_(programming)) birçoğu .NET Core SDK tarafından otomatik olarak eklenir.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-177">Many of the default [globbing patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are added automatically by the .NET Core SDK.</span></span>
-> <span data-ttu-id="d3bf2-178">Daha fazla bilgi için bkz. [varsayılan derleme öğesi değerleri](https://aka.ms/sdkimplicititems).</span><span class="sxs-lookup"><span data-stu-id="d3bf2-178">For more information, see [Default Compile Item Values](https://aka.ms/sdkimplicititems).</span></span>
+> <span data-ttu-id="ad29a-177">Varsayılan [Glob desenlerinin](https://en.wikipedia.org/wiki/Glob_(programming)) birçoğu .NET Core SDK tarafından otomatik olarak eklenir.</span><span class="sxs-lookup"><span data-stu-id="ad29a-177">Many of the default [globbing patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are added automatically by the .NET Core SDK.</span></span>
+> <span data-ttu-id="ad29a-178">Daha fazla bilgi için bkz. [varsayılan derleme öğesi değerleri](https://aka.ms/sdkimplicititems).</span><span class="sxs-lookup"><span data-stu-id="ad29a-178">For more information, see [Default Compile Item Values](https://aka.ms/sdkimplicititems).</span></span>
 
-<span data-ttu-id="d3bf2-179">Tüm MSBuild `ItemGroup` öğeleri `Include`, `Exclude`ve `Remove`destekler.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-179">All MSBuild `ItemGroup` elements support `Include`, `Exclude`, and `Remove`.</span></span>
+<span data-ttu-id="ad29a-179">Tüm MSBuild `ItemGroup` öğeleri `Include`, `Exclude`ve `Remove`destekler.</span><span class="sxs-lookup"><span data-stu-id="ad29a-179">All MSBuild `ItemGroup` elements support `Include`, `Exclude`, and `Remove`.</span></span>
 
-<span data-ttu-id="d3bf2-180">. Nupkg içindeki paket düzeni `PackagePath="path"`ile değiştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-180">Package layout inside the .nupkg can be modified with `PackagePath="path"`.</span></span>
+<span data-ttu-id="ad29a-180">. Nupkg içindeki paket düzeni `PackagePath="path"`ile değiştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="ad29a-180">Package layout inside the .nupkg can be modified with `PackagePath="path"`.</span></span>
 
-<span data-ttu-id="d3bf2-181">`Content`haricinde çoğu öğe grubu, pakete dahil edilecek `Pack="true"` açıkça eklenmesini gerektirir.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-181">Except for `Content`, most item groups require explicitly adding `Pack="true"` to be included in the package.</span></span> <span data-ttu-id="d3bf2-182">MSBuild `<IncludeContentInPack>` özelliği varsayılan olarak `true` olarak ayarlandığı için `Content` bir paketin *içerik* klasörüne yerleştirilir.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-182">`Content` will be put in the *content* folder in a package since the MSBuild `<IncludeContentInPack>` property is set to `true` by default.</span></span>
-<span data-ttu-id="d3bf2-183">Daha fazla bilgi için bkz. [bir paketteki Içerik ekleme](/nuget/schema/msbuild-targets#including-content-in-a-package).</span><span class="sxs-lookup"><span data-stu-id="d3bf2-183">For more information, see [Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package).</span></span>
+<span data-ttu-id="ad29a-181">`Content`haricinde çoğu öğe grubu, pakete dahil edilecek `Pack="true"` açıkça eklenmesini gerektirir.</span><span class="sxs-lookup"><span data-stu-id="ad29a-181">Except for `Content`, most item groups require explicitly adding `Pack="true"` to be included in the package.</span></span> <span data-ttu-id="ad29a-182">MSBuild `<IncludeContentInPack>` özelliği varsayılan olarak `true` olarak ayarlandığı için `Content` bir paketin *içerik* klasörüne yerleştirilir.</span><span class="sxs-lookup"><span data-stu-id="ad29a-182">`Content` will be put in the *content* folder in a package since the MSBuild `<IncludeContentInPack>` property is set to `true` by default.</span></span>
+<span data-ttu-id="ad29a-183">Daha fazla bilgi için bkz. [bir paketteki Içerik ekleme](/nuget/schema/msbuild-targets#including-content-in-a-package).</span><span class="sxs-lookup"><span data-stu-id="ad29a-183">For more information, see [Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package).</span></span>
 
-<span data-ttu-id="d3bf2-184">`PackagePath="%(Identity)"`, paket yolunu proje göreli dosya yoluna ayarlamanın kısa bir yoludur.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-184">`PackagePath="%(Identity)"` is a short way of setting package path to the project-relative file path.</span></span>
+<span data-ttu-id="ad29a-184">`PackagePath="%(Identity)"`, paket yolunu proje göreli dosya yoluna ayarlamanın kısa bir yoludur.</span><span class="sxs-lookup"><span data-stu-id="ad29a-184">`PackagePath="%(Identity)"` is a short way of setting package path to the project-relative file path.</span></span>
 
-## <a name="testrunner"></a><span data-ttu-id="d3bf2-185">TestRunner belirtilmelidir</span><span class="sxs-lookup"><span data-stu-id="d3bf2-185">testRunner</span></span>
+## <a name="testrunner"></a><span data-ttu-id="ad29a-185">TestRunner belirtilmelidir</span><span class="sxs-lookup"><span data-stu-id="ad29a-185">testRunner</span></span>
 
-### <a name="xunit"></a><span data-ttu-id="d3bf2-186">xUnit</span><span class="sxs-lookup"><span data-stu-id="d3bf2-186">xUnit</span></span>
+### <a name="xunit"></a><span data-ttu-id="ad29a-186">xUnit</span><span class="sxs-lookup"><span data-stu-id="ad29a-186">xUnit</span></span>
 
 ```json
 {
@@ -654,7 +654,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-### <a name="mstest"></a><span data-ttu-id="d3bf2-187">MSTest</span><span class="sxs-lookup"><span data-stu-id="d3bf2-187">MSTest</span></span>
+### <a name="mstest"></a><span data-ttu-id="ad29a-187">MSTest</span><span class="sxs-lookup"><span data-stu-id="ad29a-187">MSTest</span></span>
 
 ```json
 {
@@ -673,6 +673,6 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="d3bf2-188">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d3bf2-188">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ad29a-188">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ad29a-188">See also</span></span>
 
-- [<span data-ttu-id="d3bf2-189">CLı 'deki değişikliklere üst düzey genel bakış</span><span class="sxs-lookup"><span data-stu-id="d3bf2-189">High-level overview of changes in CLI</span></span>](../tools/cli-msbuild-architecture.md)
+- [<span data-ttu-id="ad29a-189">CLı 'deki değişikliklere üst düzey genel bakış</span><span class="sxs-lookup"><span data-stu-id="ad29a-189">High-level overview of changes in CLI</span></span>](../tools/cli-msbuild-architecture.md)

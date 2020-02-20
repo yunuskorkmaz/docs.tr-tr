@@ -9,24 +9,24 @@ helpviewer_keywords:
 - Viewbox control [WPF]
 - scaling elements [WPF], Viewbox control
 ms.assetid: 00fc0a16-1078-4d55-9849-ffaf7da96531
-ms.openlocfilehash: 707375230acea3558b060f398add919370d352b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b99bf4cc4ff6288501279730a47c2e9e57662fdd
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761201"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452142"
 ---
-# <a name="viewbox"></a><span data-ttu-id="972bc-102">Viewbox</span><span class="sxs-lookup"><span data-stu-id="972bc-102">Viewbox</span></span>
-<span data-ttu-id="972bc-103"><xref:System.Windows.Controls.Viewbox> Denetimi uzatma veya bir alt öğe ölçeklendirme için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="972bc-103">The <xref:System.Windows.Controls.Viewbox> control is used to stretch or scale a child element.</span></span>  
+# <a name="viewbox"></a><span data-ttu-id="2bdd0-102">Viewbox</span><span class="sxs-lookup"><span data-stu-id="2bdd0-102">Viewbox</span></span>
+<span data-ttu-id="2bdd0-103"><xref:System.Windows.Controls.Viewbox> denetimi bir alt öğeyi uzatmak veya ölçeklendirmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="2bdd0-103">The <xref:System.Windows.Controls.Viewbox> control is used to stretch or scale a child element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="972bc-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="972bc-104">In This Section</span></span>  
- [<span data-ttu-id="972bc-105">Viewbox İçeriğine Uzatma Özellikleri Uygulama</span><span class="sxs-lookup"><span data-stu-id="972bc-105">Apply Stretch Properties to the Contents of a Viewbox</span></span>](how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2bdd0-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="2bdd0-104">In This Section</span></span>  
+ [<span data-ttu-id="2bdd0-105">Viewbox İçeriğine Uzatma Özellikleri Uygulama</span><span class="sxs-lookup"><span data-stu-id="2bdd0-105">Apply Stretch Properties to the Contents of a Viewbox</span></span>](how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md)  
   
-## <a name="reference"></a><span data-ttu-id="972bc-106">Başvuru</span><span class="sxs-lookup"><span data-stu-id="972bc-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2bdd0-106">Başvuru</span><span class="sxs-lookup"><span data-stu-id="2bdd0-106">Reference</span></span>  
  <xref:System.Windows.Controls.Viewbox>  
   
  <xref:System.Windows.Controls.Image>  
   
-## <a name="see-also"></a><span data-ttu-id="972bc-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="972bc-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2bdd0-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2bdd0-107">See also</span></span>
 
-- [<span data-ttu-id="972bc-108">WPF denetimleri Galerisi örneği</span><span class="sxs-lookup"><span data-stu-id="972bc-108">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [<span data-ttu-id="2bdd0-108">WPF denetimleri Galeri örneği</span><span class="sxs-lookup"><span data-stu-id="2bdd0-108">WPF Controls Gallery Sample</span></span>](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
