@@ -1,105 +1,105 @@
 ---
 title: DotNet geçiş komutu
 description: DotNet Migrate komutu bir projeyi ve tüm bağımlılıklarını geçirir.
-ms.date: 01/07/2020
-ms.openlocfilehash: b81669d3e4cffeaf10bea39639410d5f06579d84
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 6148048c469c43320cc4459352fd2fb62f101740
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734146"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503703"
 ---
-# <a name="dotnet-migrate"></a><span data-ttu-id="bb93b-103">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="bb93b-103">dotnet migrate</span></span>
+# <a name="dotnet-migrate"></a><span data-ttu-id="9e6cc-103">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="9e6cc-103">dotnet migrate</span></span>
 
-<span data-ttu-id="bb93b-104">**Bu makale için geçerlidir:** .NET Core 1. x SDK ✔️ .NET Core 2. x SDK ✔️</span><span class="sxs-lookup"><span data-stu-id="bb93b-104">**This article applies to:** ✔️ .NET Core 1.x SDK ✔️ .NET Core 2.x SDK</span></span>
+<span data-ttu-id="9e6cc-104">**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK</span><span class="sxs-lookup"><span data-stu-id="9e6cc-104">**This article applies to:** ✔️ .NET Core 2.x SDK</span></span>
 
-## <a name="name"></a><span data-ttu-id="bb93b-105">Ad</span><span class="sxs-lookup"><span data-stu-id="bb93b-105">Name</span></span>
+## <a name="name"></a><span data-ttu-id="9e6cc-105">Adı</span><span class="sxs-lookup"><span data-stu-id="9e6cc-105">Name</span></span>
 
-<span data-ttu-id="bb93b-106">`dotnet migrate`-Preview 2 .NET Core projesini .NET Core SDK stili bir projeye geçirir.</span><span class="sxs-lookup"><span data-stu-id="bb93b-106">`dotnet migrate` - Migrates a Preview 2 .NET Core project to a .NET Core SDK-style project.</span></span>
+<span data-ttu-id="9e6cc-106">`dotnet migrate`-Preview 2 .NET Core projesini .NET Core SDK stili bir projeye geçirir.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-106">`dotnet migrate` - Migrates a Preview 2 .NET Core project to a .NET Core SDK-style project.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="bb93b-107">Özeti</span><span class="sxs-lookup"><span data-stu-id="bb93b-107">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="9e6cc-107">Özeti</span><span class="sxs-lookup"><span data-stu-id="9e6cc-107">Synopsis</span></span>
 
 ```dotnetcli
 dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--report-file] [-s|--skip-project-references] [--skip-backup] [-t|--template-file] [-v|--sdk-package-version] [-x|--xproj-file]
 dotnet migrate [-h|--help]
 ```
 
-## <a name="description"></a><span data-ttu-id="bb93b-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="bb93b-108">Description</span></span>
+## <a name="description"></a><span data-ttu-id="9e6cc-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9e6cc-108">Description</span></span>
 
-<span data-ttu-id="bb93b-109">Bu komut kullanım dışıdır.</span><span class="sxs-lookup"><span data-stu-id="bb93b-109">This command is deprecated.</span></span> <span data-ttu-id="bb93b-110">`dotnet migrate` komutu artık .NET Core 3,0 SDK ile başlayarak kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="bb93b-110">The `dotnet migrate` command is no longer available starting with .NET Core 3.0 SDK.</span></span> <span data-ttu-id="bb93b-111">Yalnızca bir Preview 2 .NET Core projesini, desteklenmeyen bir 1. x .NET Core projesine geçirebilirler.</span><span class="sxs-lookup"><span data-stu-id="bb93b-111">It can only migrate a Preview 2 .NET Core project to a 1.x .NET Core project, which is out of support.</span></span>
+<span data-ttu-id="9e6cc-109">Bu komut kullanım dışıdır.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-109">This command is deprecated.</span></span> <span data-ttu-id="9e6cc-110">`dotnet migrate` komutu artık .NET Core 3,0 SDK ile başlayarak kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-110">The `dotnet migrate` command is no longer available starting with .NET Core 3.0 SDK.</span></span> <span data-ttu-id="9e6cc-111">Yalnızca bir Preview 2 .NET Core projesini, desteklenmeyen bir 1. x .NET Core projesine geçirebilirler.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-111">It can only migrate a Preview 2 .NET Core project to a 1.x .NET Core project, which is out of support.</span></span>
 
-<span data-ttu-id="bb93b-112">Varsayılan olarak, komut kök projeyi ve kök projenin içerdiği tüm proje başvurularını geçirir.</span><span class="sxs-lookup"><span data-stu-id="bb93b-112">By default, the command migrates the root project and any project references that the root project contains.</span></span> <span data-ttu-id="bb93b-113">Bu davranış, çalışma zamanında `--skip-project-references` seçeneği kullanılarak devre dışıdır.</span><span class="sxs-lookup"><span data-stu-id="bb93b-113">This behavior is disabled using the `--skip-project-references` option at runtime.</span></span>
+<span data-ttu-id="9e6cc-112">Varsayılan olarak, komut kök projeyi ve kök projenin içerdiği tüm proje başvurularını geçirir.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-112">By default, the command migrates the root project and any project references that the root project contains.</span></span> <span data-ttu-id="9e6cc-113">Bu davranış, çalışma zamanında `--skip-project-references` seçeneği kullanılarak devre dışıdır.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-113">This behavior is disabled using the `--skip-project-references` option at runtime.</span></span>
 
-<span data-ttu-id="bb93b-114">Aşağıdaki varlıklarda geçiş yapılabilir:</span><span class="sxs-lookup"><span data-stu-id="bb93b-114">Migration can be performed on the following assets:</span></span>
+<span data-ttu-id="9e6cc-114">Aşağıdaki varlıklarda geçiş yapılabilir:</span><span class="sxs-lookup"><span data-stu-id="9e6cc-114">Migration can be performed on the following assets:</span></span>
 
-* <span data-ttu-id="bb93b-115">Geçirilecek *Project. JSON* dosyasını belirterek tek bir proje.</span><span class="sxs-lookup"><span data-stu-id="bb93b-115">A single project by specifying the *project.json* file to migrate.</span></span>
-* <span data-ttu-id="bb93b-116">Global. *json dosyasında bir* yolu geçirerek *Global. JSON* dosyasında belirtilen tüm dizinler.</span><span class="sxs-lookup"><span data-stu-id="bb93b-116">All of the directories specified in the *global.json* file by passing in a path to the *global.json* file.</span></span>
-* <span data-ttu-id="bb93b-117">Çözümde başvurulan projeleri geçirirken *çözüm. sln* dosyası.</span><span class="sxs-lookup"><span data-stu-id="bb93b-117">A *solution.sln* file, where it migrates the projects referenced in the solution.</span></span>
-* <span data-ttu-id="bb93b-118">Verilen dizinin tüm alt dizinlerinde özyinelemeli olarak.</span><span class="sxs-lookup"><span data-stu-id="bb93b-118">On all subdirectories of the given directory recursively.</span></span>
+* <span data-ttu-id="9e6cc-115">Geçirilecek *Project. JSON* dosyasını belirterek tek bir proje.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-115">A single project by specifying the *project.json* file to migrate.</span></span>
+* <span data-ttu-id="9e6cc-116">Global. *json dosyasında bir* yolu geçirerek *Global. JSON* dosyasında belirtilen tüm dizinler.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-116">All of the directories specified in the *global.json* file by passing in a path to the *global.json* file.</span></span>
+* <span data-ttu-id="9e6cc-117">Çözümde başvurulan projeleri geçirirken *çözüm. sln* dosyası.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-117">A *solution.sln* file, where it migrates the projects referenced in the solution.</span></span>
+* <span data-ttu-id="9e6cc-118">Verilen dizinin tüm alt dizinlerinde özyinelemeli olarak.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-118">On all subdirectories of the given directory recursively.</span></span>
 
-<span data-ttu-id="bb93b-119">`dotnet migrate` komutu geçirilmiş *proje. JSON* dosyasını, dizin yoksa oluşturduğu `backup` bir dizin içinde tutar.</span><span class="sxs-lookup"><span data-stu-id="bb93b-119">The `dotnet migrate` command keeps the migrated *project.json* file inside a `backup` directory, which it creates if the directory doesn't exist.</span></span> <span data-ttu-id="bb93b-120">Bu davranış, `--skip-backup` seçeneği kullanılarak geçersiz kılınır.</span><span class="sxs-lookup"><span data-stu-id="bb93b-120">This behavior is overridden using the `--skip-backup` option.</span></span>
+<span data-ttu-id="9e6cc-119">`dotnet migrate` komutu geçirilmiş *proje. JSON* dosyasını, dizin yoksa oluşturduğu `backup` bir dizin içinde tutar.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-119">The `dotnet migrate` command keeps the migrated *project.json* file inside a `backup` directory, which it creates if the directory doesn't exist.</span></span> <span data-ttu-id="9e6cc-120">Bu davranış, `--skip-backup` seçeneği kullanılarak geçersiz kılınır.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-120">This behavior is overridden using the `--skip-backup` option.</span></span>
 
-<span data-ttu-id="bb93b-121">Varsayılan olarak, geçiş işlemi geçiş işleminin durumunu standart çıktıya (STDOUT) verir.</span><span class="sxs-lookup"><span data-stu-id="bb93b-121">By default, the migration operation outputs the state of the migration process to standard output (STDOUT).</span></span> <span data-ttu-id="bb93b-122">`--report-file <REPORT_FILE>` seçeneğini kullanırsanız, çıkış dosyaya kaydedilir.</span><span class="sxs-lookup"><span data-stu-id="bb93b-122">If you use the `--report-file <REPORT_FILE>` option, the output is saved to the file specify.</span></span>
+<span data-ttu-id="9e6cc-121">Varsayılan olarak, geçiş işlemi geçiş işleminin durumunu standart çıktıya (STDOUT) verir.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-121">By default, the migration operation outputs the state of the migration process to standard output (STDOUT).</span></span> <span data-ttu-id="9e6cc-122">`--report-file <REPORT_FILE>` seçeneğini kullanırsanız, çıkış dosyaya kaydedilir.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-122">If you use the `--report-file <REPORT_FILE>` option, the output is saved to the file specify.</span></span>
 
-<span data-ttu-id="bb93b-123">`dotnet migrate` komutu yalnızca geçerli Preview 2 *Project. JSON*tabanlı projeleri destekler.</span><span class="sxs-lookup"><span data-stu-id="bb93b-123">The `dotnet migrate` command only supports valid Preview 2 *project.json*-based projects.</span></span> <span data-ttu-id="bb93b-124">Bu, DNX veya Preview 1 *Project. JSON*tabanlı projeleri doğrudan MSBuild/csproj projelerine geçirebileceğiniz anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="bb93b-124">This means that you cannot use it to migrate DNX or Preview 1 *project.json*-based projects directly to MSBuild/csproj projects.</span></span> <span data-ttu-id="bb93b-125">Önce projeyi bir Preview 2 *Project. JSON*tabanlı projeye el ile geçirmeniz ve sonra `dotnet migrate` komutunu kullanarak projeyi geçirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="bb93b-125">You first need to manually migrate the project to a Preview 2 *project.json*-based project and then use the `dotnet migrate` command to migrate the project.</span></span>
+<span data-ttu-id="9e6cc-123">`dotnet migrate` komutu yalnızca geçerli Preview 2 *Project. JSON*tabanlı projeleri destekler.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-123">The `dotnet migrate` command only supports valid Preview 2 *project.json*-based projects.</span></span> <span data-ttu-id="9e6cc-124">Bu, DNX veya Preview 1 *Project. JSON*tabanlı projeleri doğrudan MSBuild/csproj projelerine geçirebileceğiniz anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-124">This means that you cannot use it to migrate DNX or Preview 1 *project.json*-based projects directly to MSBuild/csproj projects.</span></span> <span data-ttu-id="9e6cc-125">Önce projeyi bir Preview 2 *Project. JSON*tabanlı projeye el ile geçirmeniz ve sonra `dotnet migrate` komutunu kullanarak projeyi geçirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-125">You first need to manually migrate the project to a Preview 2 *project.json*-based project and then use the `dotnet migrate` command to migrate the project.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="bb93b-126">Arguments</span><span class="sxs-lookup"><span data-stu-id="bb93b-126">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="9e6cc-126">Bağımsız Değişkenler</span><span class="sxs-lookup"><span data-stu-id="9e6cc-126">Arguments</span></span>
 
 `PROJECT_JSON/GLOBAL_JSON/SOLUTION_FILE/PROJECT_DIR`
 
-<span data-ttu-id="bb93b-127">Aşağıdakilerden birinin yolu:</span><span class="sxs-lookup"><span data-stu-id="bb93b-127">The path to one of the following:</span></span>
+<span data-ttu-id="9e6cc-127">Aşağıdakilerden birinin yolu:</span><span class="sxs-lookup"><span data-stu-id="9e6cc-127">The path to one of the following:</span></span>
 
-* <span data-ttu-id="bb93b-128">geçirilecek bir *Project. JSON* dosyası.</span><span class="sxs-lookup"><span data-stu-id="bb93b-128">a *project.json* file to migrate.</span></span>
-* <span data-ttu-id="bb93b-129">*Global. JSON* dosyası: *Global. JSON* içinde belirtilen klasörler geçirilir.</span><span class="sxs-lookup"><span data-stu-id="bb93b-129">a *global.json* file: the folders specified in *global.json* are migrated.</span></span>
-* <span data-ttu-id="bb93b-130">bir *çözüm. sln* dosyası: çözümde başvurulan projeler geçirilir.</span><span class="sxs-lookup"><span data-stu-id="bb93b-130">a *solution.sln* file: the projects referenced in the solution are migrated.</span></span>
-* <span data-ttu-id="bb93b-131">geçirilecek Dizin: özyinelemeli olarak *Project. JSON* dosyalarını belirtilen dizin içinde geçirilecek şekilde arar.</span><span class="sxs-lookup"><span data-stu-id="bb93b-131">a directory to migrate: recursively searches for *project.json* files to migrate inside the specified directory.</span></span>
+* <span data-ttu-id="9e6cc-128">geçirilecek bir *Project. JSON* dosyası.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-128">a *project.json* file to migrate.</span></span>
+* <span data-ttu-id="9e6cc-129">*Global. JSON* dosyası: *Global. JSON* içinde belirtilen klasörler geçirilir.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-129">a *global.json* file: the folders specified in *global.json* are migrated.</span></span>
+* <span data-ttu-id="9e6cc-130">bir *çözüm. sln* dosyası: çözümde başvurulan projeler geçirilir.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-130">a *solution.sln* file: the projects referenced in the solution are migrated.</span></span>
+* <span data-ttu-id="9e6cc-131">geçirilecek Dizin: özyinelemeli olarak *Project. JSON* dosyalarını belirtilen dizin içinde geçirilecek şekilde arar.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-131">a directory to migrate: recursively searches for *project.json* files to migrate inside the specified directory.</span></span>
 
-<span data-ttu-id="bb93b-132">Hiçbir şey belirtilmemişse, varsayılan olarak geçerli dizine ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="bb93b-132">Defaults to current directory if nothing is specified.</span></span>
+<span data-ttu-id="9e6cc-132">Hiçbir şey belirtilmemişse, varsayılan olarak geçerli dizine ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-132">Defaults to current directory if nothing is specified.</span></span>
 
-## <a name="options"></a><span data-ttu-id="bb93b-133">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="bb93b-133">Options</span></span>
+## <a name="options"></a><span data-ttu-id="9e6cc-133">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="9e6cc-133">Options</span></span>
 
 `--format-report-file-json <REPORT_FILE>`
 
-<span data-ttu-id="bb93b-134">Geçiş raporu dosyasını kullanıcı iletileri yerine JSON olarak çıkar.</span><span class="sxs-lookup"><span data-stu-id="bb93b-134">Output migration report file as JSON rather than user messages.</span></span>
+<span data-ttu-id="9e6cc-134">Geçiş raporu dosyasını kullanıcı iletileri yerine JSON olarak çıkar.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-134">Output migration report file as JSON rather than user messages.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="bb93b-135">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="bb93b-135">Prints out a short help for the command.</span></span>
+<span data-ttu-id="9e6cc-135">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-135">Prints out a short help for the command.</span></span>
 
 `-r|--report-file <REPORT_FILE>`
 
-<span data-ttu-id="bb93b-136">Konsola ek olarak çıkış geçiş raporu.</span><span class="sxs-lookup"><span data-stu-id="bb93b-136">Output migration report to a file in addition to the console.</span></span>
+<span data-ttu-id="9e6cc-136">Konsola ek olarak çıkış geçiş raporu.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-136">Output migration report to a file in addition to the console.</span></span>
 
 `-s|--skip-project-references [Debug|Release]`
 
-<span data-ttu-id="bb93b-137">Proje başvurularını geçirmeyi atlayın.</span><span class="sxs-lookup"><span data-stu-id="bb93b-137">Skip migrating project references.</span></span> <span data-ttu-id="bb93b-138">Varsayılan olarak, proje başvuruları yinelemeli olarak geçirilir.</span><span class="sxs-lookup"><span data-stu-id="bb93b-138">By default, project references are migrated recursively.</span></span>
+<span data-ttu-id="9e6cc-137">Proje başvurularını geçirmeyi atlayın.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-137">Skip migrating project references.</span></span> <span data-ttu-id="9e6cc-138">Varsayılan olarak, proje başvuruları yinelemeli olarak geçirilir.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-138">By default, project references are migrated recursively.</span></span>
 
 `--skip-backup`
 
-<span data-ttu-id="bb93b-139">Başarılı geçişten sonra *Project. JSON*, *Global. JSON*ve *\*. xproj* ' ı bir `backup` dizinine taşımayı atlayın.</span><span class="sxs-lookup"><span data-stu-id="bb93b-139">Skip moving *project.json*, *global.json*, and *\*.xproj* to a `backup` directory after successful migration.</span></span>
+<span data-ttu-id="9e6cc-139">Başarılı geçişten sonra *Project. JSON*, *Global. JSON*ve *\*. xproj* ' ı bir `backup` dizinine taşımayı atlayın.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-139">Skip moving *project.json*, *global.json*, and *\*.xproj* to a `backup` directory after successful migration.</span></span>
 
 `-t|--template-file <TEMPLATE_FILE>`
 
-<span data-ttu-id="bb93b-140">Geçiş için kullanılacak şablon csproj dosyası.</span><span class="sxs-lookup"><span data-stu-id="bb93b-140">Template csproj file to use for migration.</span></span> <span data-ttu-id="bb93b-141">Varsayılan olarak, `dotnet new console` tarafından bırakılan şablonla aynı şablon kullanılır.</span><span class="sxs-lookup"><span data-stu-id="bb93b-141">By default, the same template as the one dropped by `dotnet new console` is used.</span></span>
+<span data-ttu-id="9e6cc-140">Geçiş için kullanılacak şablon csproj dosyası.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-140">Template csproj file to use for migration.</span></span> <span data-ttu-id="9e6cc-141">Varsayılan olarak, `dotnet new console` tarafından bırakılan şablonla aynı şablon kullanılır.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-141">By default, the same template as the one dropped by `dotnet new console` is used.</span></span>
 
 `-v|--sdk-package-version <VERSION>`
 
-<span data-ttu-id="bb93b-142">Geçirilen uygulamada başvurulan SDK paketinin sürümü.</span><span class="sxs-lookup"><span data-stu-id="bb93b-142">The version of the sdk package that's referenced in the migrated app.</span></span> <span data-ttu-id="bb93b-143">Varsayılan değer `dotnet new`SDK 'nın sürümüdür.</span><span class="sxs-lookup"><span data-stu-id="bb93b-143">The default is the version of the SDK in `dotnet new`.</span></span>
+<span data-ttu-id="9e6cc-142">Geçirilen uygulamada başvurulan SDK paketinin sürümü.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-142">The version of the sdk package that's referenced in the migrated app.</span></span> <span data-ttu-id="9e6cc-143">Varsayılan değer `dotnet new`SDK 'nın sürümüdür.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-143">The default is the version of the SDK in `dotnet new`.</span></span>
 
 `-x|--xproj-file <FILE>`
 
-<span data-ttu-id="bb93b-144">Kullanılacak xproj dosyasının yolu.</span><span class="sxs-lookup"><span data-stu-id="bb93b-144">The path to the xproj file to use.</span></span> <span data-ttu-id="bb93b-145">Proje dizininde birden fazla xproj olduğunda gereklidir.</span><span class="sxs-lookup"><span data-stu-id="bb93b-145">Required when there is more than one xproj in a project directory.</span></span>
+<span data-ttu-id="9e6cc-144">Kullanılacak xproj dosyasının yolu.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-144">The path to the xproj file to use.</span></span> <span data-ttu-id="9e6cc-145">Proje dizininde birden fazla xproj olduğunda gereklidir.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-145">Required when there is more than one xproj in a project directory.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="bb93b-146">Örnekler</span><span class="sxs-lookup"><span data-stu-id="bb93b-146">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="9e6cc-146">Örnekler</span><span class="sxs-lookup"><span data-stu-id="9e6cc-146">Examples</span></span>
 
-<span data-ttu-id="bb93b-147">Geçerli dizindeki bir projeyi ve projenin tüm proje bağımlılıklarını geçirin:</span><span class="sxs-lookup"><span data-stu-id="bb93b-147">Migrate a project in the current directory and all of its project-to-project dependencies:</span></span>
+<span data-ttu-id="9e6cc-147">Geçerli dizindeki bir projeyi ve projenin tüm proje bağımlılıklarını geçirin:</span><span class="sxs-lookup"><span data-stu-id="9e6cc-147">Migrate a project in the current directory and all of its project-to-project dependencies:</span></span>
 
 `dotnet migrate`
 
-<span data-ttu-id="bb93b-148">*Global. JSON* dosyasının içerdiği tüm projeleri geçirin:</span><span class="sxs-lookup"><span data-stu-id="bb93b-148">Migrate all projects that *global.json* file includes:</span></span>
+<span data-ttu-id="9e6cc-148">*Global. JSON* dosyasının içerdiği tüm projeleri geçirin:</span><span class="sxs-lookup"><span data-stu-id="9e6cc-148">Migrate all projects that *global.json* file includes:</span></span>
 
 `dotnet migrate path/to/global.json`
 
-<span data-ttu-id="bb93b-149">Yalnızca geçerli projeyi geçirin ve projeden projeye (P2P) bağımlılıkları yoktur.</span><span class="sxs-lookup"><span data-stu-id="bb93b-149">Migrate only the current project and no project-to-project (P2P) dependencies.</span></span> <span data-ttu-id="bb93b-150">Ayrıca, belirli bir SDK sürümünü kullanın:</span><span class="sxs-lookup"><span data-stu-id="bb93b-150">Also, use a specific SDK version:</span></span>
+<span data-ttu-id="9e6cc-149">Yalnızca geçerli projeyi geçirin ve projeden projeye (P2P) bağımlılıkları yoktur.</span><span class="sxs-lookup"><span data-stu-id="9e6cc-149">Migrate only the current project and no project-to-project (P2P) dependencies.</span></span> <span data-ttu-id="9e6cc-150">Ayrıca, belirli bir SDK sürümünü kullanın:</span><span class="sxs-lookup"><span data-stu-id="9e6cc-150">Also, use a specific SDK version:</span></span>
 
 `dotnet migrate -s -v 1.0.0-preview4`

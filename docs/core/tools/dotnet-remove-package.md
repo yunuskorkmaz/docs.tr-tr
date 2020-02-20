@@ -1,48 +1,52 @@
 ---
-title: DotNet Paketi komutu Kaldır
-description: Dotnet remove paket komutu bir proje için NuGet paket başvuruyu kaldırmak için kullanışlı bir seçenek sağlar.
-ms.date: 05/29/2018
-ms.openlocfilehash: cbdeacff78ef20c9a73010e10a771a724b23792e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+title: DotNet paket Kaldır komutu
+description: DotNet Remove Package komutu, bir projeye NuGet paket başvurusunu kaldırmak için kullanışlı bir seçenek sağlar.
+ms.date: 02/14/2020
+ms.openlocfilehash: 8eaa311748c5627351ef149012dc4dddd2ab2793
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632430"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503638"
 ---
-# <a name="dotnet-remove-package"></a><span data-ttu-id="be35f-103">DotNet Kaldır paket</span><span class="sxs-lookup"><span data-stu-id="be35f-103">dotnet remove package</span></span>
+# <a name="dotnet-remove-package"></a><span data-ttu-id="588d8-103">dotnet remove package</span><span class="sxs-lookup"><span data-stu-id="588d8-103">dotnet remove package</span></span>
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+<span data-ttu-id="588d8-104">**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri</span><span class="sxs-lookup"><span data-stu-id="588d8-104">**This article applies to:** ✔️ .NET Core 2.x SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="be35f-104">Ad</span><span class="sxs-lookup"><span data-stu-id="be35f-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="588d8-105">Adı</span><span class="sxs-lookup"><span data-stu-id="588d8-105">Name</span></span>
 
-<span data-ttu-id="be35f-105">`dotnet remove package` -Paket başvurusu proje dosyasından kaldırır.</span><span class="sxs-lookup"><span data-stu-id="be35f-105">`dotnet remove package` - Removes package reference from a project file.</span></span>
+<span data-ttu-id="588d8-106">`dotnet remove package`-paket başvurusunu bir proje dosyasından kaldırır.</span><span class="sxs-lookup"><span data-stu-id="588d8-106">`dotnet remove package` - Removes package reference from a project file.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="be35f-106">Synopsis</span><span class="sxs-lookup"><span data-stu-id="be35f-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="588d8-107">Özeti</span><span class="sxs-lookup"><span data-stu-id="588d8-107">Synopsis</span></span>
 
-`dotnet remove [<PROJECT>] package <PACKAGE_NAME> [-h|--help]`
+```dotnetcli
+dotnet remove [<PROJECT>] package <PACKAGE_NAME> [-h|--help]
+```
 
-## <a name="description"></a><span data-ttu-id="be35f-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="be35f-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="588d8-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="588d8-108">Description</span></span>
 
-<span data-ttu-id="be35f-108">`dotnet remove package` Komutu bir projeden NuGet paketi başvuruyu kaldırmak için kullanışlı bir seçenek sağlar.</span><span class="sxs-lookup"><span data-stu-id="be35f-108">The `dotnet remove package` command provides a convenient option to remove a NuGet package reference from a project.</span></span>
+<span data-ttu-id="588d8-109">`dotnet remove package` komutu bir projeden NuGet paket başvurusunu kaldırmak için kullanışlı bir seçenek sağlar.</span><span class="sxs-lookup"><span data-stu-id="588d8-109">The `dotnet remove package` command provides a convenient option to remove a NuGet package reference from a project.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="be35f-109">Arguments</span><span class="sxs-lookup"><span data-stu-id="be35f-109">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="588d8-110">Bağımsız Değişkenler</span><span class="sxs-lookup"><span data-stu-id="588d8-110">Arguments</span></span>
 
 `PROJECT`
 
-<span data-ttu-id="be35f-110">Proje dosyasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="be35f-110">Specifies the project file.</span></span> <span data-ttu-id="be35f-111">Belirtilmezse, komut için geçerli dizinde arar.</span><span class="sxs-lookup"><span data-stu-id="be35f-111">If not specified, the command searches the current directory for one.</span></span>
+<span data-ttu-id="588d8-111">Proje dosyasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="588d8-111">Specifies the project file.</span></span> <span data-ttu-id="588d8-112">Belirtilmemişse, komut geçerli dizinde bir arama yapar.</span><span class="sxs-lookup"><span data-stu-id="588d8-112">If not specified, the command searches the current directory for one.</span></span>
 
 `PACKAGE_NAME`
 
-<span data-ttu-id="be35f-112">Kaldırmak için paket başvurusu.</span><span class="sxs-lookup"><span data-stu-id="be35f-112">The package reference to remove.</span></span>
+<span data-ttu-id="588d8-113">Kaldırılacak paket başvurusu.</span><span class="sxs-lookup"><span data-stu-id="588d8-113">The package reference to remove.</span></span>
 
-## <a name="options"></a><span data-ttu-id="be35f-113">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="be35f-113">Options</span></span>
+## <a name="options"></a><span data-ttu-id="588d8-114">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="588d8-114">Options</span></span>
 
-`-h|--help`
+- **`-h|--help`**
 
-<span data-ttu-id="be35f-114">Komut için kısa bir Yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="be35f-114">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="588d8-115">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="588d8-115">Prints out a short help for the command.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="be35f-115">Örnekler</span><span class="sxs-lookup"><span data-stu-id="be35f-115">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="588d8-116">Örnekler</span><span class="sxs-lookup"><span data-stu-id="588d8-116">Examples</span></span>
 
-<span data-ttu-id="be35f-116">Kaldırır `Newtonsoft.Json` geçerli dizindeki bir projeden NuGet paketi:</span><span class="sxs-lookup"><span data-stu-id="be35f-116">Removes `Newtonsoft.Json` NuGet package from a project in the current directory:</span></span>
+- <span data-ttu-id="588d8-117">`Newtonsoft.Json` NuGet paketini geçerli dizindeki bir projeden kaldır:</span><span class="sxs-lookup"><span data-stu-id="588d8-117">Remove `Newtonsoft.Json` NuGet package from a project in the current directory:</span></span>
 
-`dotnet remove package Newtonsoft.Json`
+  ```dotnetcli
+  dotnet remove package Newtonsoft.Json
+  ```
