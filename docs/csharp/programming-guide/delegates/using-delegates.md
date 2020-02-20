@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 643e2fad1fd07ecb48c66452533cd80af7557be0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dcc73aba738d6296a44c48aad8b66cd6fc7f4a7b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712357"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448445"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Temsilcileri Kullanma (C# Programlama Kılavuzu)
 
-[Temsilci](../../language-reference/builtin-types/reference-types.md) , bir yöntemi güvenli bir şekilde kapsülleyen, C ve C++içindeki işlev işaretçisine benzer bir türdür. C işlev işaretçilerinden farklı olarak, temsilciler nesne odaklı, tür kullanımı güvenli ve güvenli. Temsilcinin türü, temsilcinin adı tarafından tanımlanır. Aşağıdaki örnek, bir [dizeyi](../../language-reference/builtin-types/reference-types.md) bağımsız değişken olarak alan ve [void](../../language-reference/keywords/void.md)döndüren bir yöntemi kapsülleyen `Del` adlı bir temsilci bildirir:
+[Temsilci](../../language-reference/builtin-types/reference-types.md) , bir yöntemi güvenli bir şekilde kapsülleyen, C ve C++içindeki işlev işaretçisine benzer bir türdür. C işlev işaretçilerinden farklı olarak, temsilciler nesne odaklı, tür kullanımı güvenli ve güvenli. Temsilcinin türü, temsilcinin adı tarafından tanımlanır. Aşağıdaki örnek, bir [dizeyi](../../language-reference/builtin-types/reference-types.md) bağımsız değişken olarak alan ve [void](../../language-reference/builtin-types/void.md)döndüren bir yöntemi kapsülleyen `Del` adlı bir temsilci bildirir:
 
 [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]
 
-Temsilci nesnesi normalde, temsilcinin kaydıralacağı yöntemin adı veya [anonim bir işlevle](../statements-expressions-operators/anonymous-functions.md)oluşturulur. Bir temsilci örneği oluşturulduktan sonra temsilciye yapılan bir yöntem çağrısı, bu yönteme verilen temsilci tarafından geçirilir. Çağıran tarafından temsilciye geçirilen parametreler yöntemine geçirilir ve yöntem, varsa dönüş değeri, temsilci tarafından çağırana döndürülür. Bu, temsilciyi çağırmak olarak bilinir. Örneklenen bir temsilci, Sarmalanan yöntemin kendisi gibi çağrılabilir. Örneğin:
+Temsilci nesnesi normalde, temsilcinin kaydıralacağı yöntemin adı veya [anonim bir işlevle](../statements-expressions-operators/anonymous-functions.md)oluşturulur. Bir temsilci örneği oluşturulduktan sonra temsilciye yapılan bir yöntem çağrısı, bu yönteme verilen temsilci tarafından geçirilir. Çağıran tarafından temsilciye geçirilen parametreler yöntemine geçirilir ve yöntem, varsa dönüş değeri, temsilci tarafından çağırana döndürülür. Bu, temsilciyi çağırmak olarak bilinir. Örneklenen bir temsilci, Sarmalanan yöntemin kendisi gibi çağrılabilir. Örnek:
 
 [!code-csharp[csProgGuideDelegates#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#22)]  
 
@@ -47,11 +47,11 @@ Bir temsilci bir örnek yöntemini kaydırmak üzere oluşturulduğunda, temsilc
 
 Daha önce gösterilen statik `DelegateMethod` birlikte, artık `Del` bir örnek tarafından sarmalanabilir üç yöntem vardır.
 
-Bir temsilci, çağrıldığında birden fazla yöntem çağırabilir. Bu, çok noktaya yayın olarak adlandırılır. Temsilcinin Yöntemler listesine ek bir yöntem eklemek için — çağırma listesi — ekleme veya ekleme atama işleçlerini (' + ' veya ' + = ') kullanarak yalnızca iki temsilci eklenmesini gerektirir. Örneğin:
+Bir temsilci, çağrıldığında birden fazla yöntem çağırabilir. Bu, çok noktaya yayın olarak adlandırılır. Temsilcinin Yöntemler listesine ek bir yöntem eklemek için — çağırma listesi — ekleme veya ekleme atama işleçlerini (' + ' veya ' + = ') kullanarak yalnızca iki temsilci eklenmesini gerektirir. Örnek:
 
 [!code-csharp[csProgGuideDelegates#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#27)]
 
-Bu noktada `allMethodsDelegate`, çağrı listesinde üç yöntem içerir:`Method1`, `Method2`ve `DelegateMethod`. Özgün üç temsilci, `d1`, `d2`ve `d3`değişmeden kalır. `allMethodsDelegate` çağrıldığında, üç yöntemin tümü sırasıyla çağrılır. Temsilci başvuru parametreleri kullanıyorsa, başvuru her üç yöntemin her birine sırayla geçirilir ve bir yönteme göre yapılan değişiklikler sonraki yönteme göre görünür. Metotlardan herhangi biri, yöntemi içinde yakalanmayan bir özel durum oluşturduğunda, bu özel durum temsilci çağıranına geçirilir ve çağrı listesinde sonraki Yöntemler çağrılmaz. Temsilcinin dönüş değeri ve/veya out parametreleri varsa, çağrılan son yöntemin dönüş değerini ve parametrelerini döndürür. Çağırma listesinden bir yöntemi kaldırmak için [çıkarma veya çıkarma atama işleçlerini](../../language-reference/operators/subtraction-operator.md) (`-` veya `-=`) kullanın. Örneğin:
+Bu noktada `allMethodsDelegate`, çağrı listesinde üç yöntem içerir:`Method1`, `Method2`ve `DelegateMethod`. Özgün üç temsilci, `d1`, `d2`ve `d3`değişmeden kalır. `allMethodsDelegate` çağrıldığında, üç yöntemin tümü sırasıyla çağrılır. Temsilci başvuru parametreleri kullanıyorsa, başvuru her üç yöntemin her birine sırayla geçirilir ve bir yönteme göre yapılan değişiklikler sonraki yönteme göre görünür. Metotlardan herhangi biri, yöntemi içinde yakalanmayan bir özel durum oluşturduğunda, bu özel durum temsilci çağıranına geçirilir ve çağrı listesinde sonraki Yöntemler çağrılmaz. Temsilcinin dönüş değeri ve/veya out parametreleri varsa, çağrılan son yöntemin dönüş değerini ve parametrelerini döndürür. Çağırma listesinden bir yöntemi kaldırmak için [çıkarma veya çıkarma atama işleçlerini](../../language-reference/operators/subtraction-operator.md) (`-` veya `-=`) kullanın. Örnek:
 
 [!code-csharp[csProgGuideDelegates#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#28)]
 
@@ -63,7 +63,7 @@ Temsilci türleri `System.Delegate`türetildiği için, bu sınıf tarafından t
 
 Çok noktaya yayın temsilcileri, yoğun şekilde olay İşlemede kullanılır. Olay kaynak nesneleri olay bildirimlerini, bu olayı almak için kaydedilen alıcı nesnelerine gönderir. Bir olaya kaydolmak için alıcı, olayı işlemek için tasarlanan bir yöntem oluşturur, ardından bu yöntem için bir temsilci oluşturur ve temsilciyi olay kaynağına geçirir. Kaynak, olay gerçekleştiğinde temsilciyi çağırır. Temsilci daha sonra olay verilerini teslim eden, alıcı üzerinde olay işleme yöntemini çağırır. Belirli bir olayın temsilci türü olay kaynağı tarafından tanımlanır. Daha fazla bilgi için bkz. [Olaylar](../events/index.md).
 
-Derleme zamanında atanan iki farklı türün temsilcilerin karşılaştırılması, derleme hatasına neden olur. Temsilci örnekleri `System.Delegate`türünde bir statik ise, karşılaştırmaya izin verilir, ancak çalışma zamanında false döndürür. Örneğin:
+Derleme zamanında atanan iki farklı türün temsilcilerin karşılaştırılması, derleme hatasına neden olur. Temsilci örnekleri `System.Delegate`türünde bir statik ise, karşılaştırmaya izin verilir, ancak çalışma zamanında false döndürür. Örnek:
 
 [!code-csharp[csProgGuideDelegates#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#30)]
 

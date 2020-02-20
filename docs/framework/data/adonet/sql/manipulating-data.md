@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: 322325b765f62d04e5713557f2ef9c97e1746ae0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a84f74bde8da9ca7e40184b76efe51cea129b66a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792051"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451856"
 ---
 # <a name="manipulating-data"></a>Verileri Düzenleme
 Birden çok etkin sonuç kümesi (MARS) gönderilmeden önce, geliştiricilerin belirli senaryoları çözümlemek için birden çok bağlantı veya sunucu tarafı imleçler kullanması gerekiyordu. Ayrıca, işlem durumunda birden çok bağlantı kullanıldığında, ilişkili bağlantılar ( **sp_getbindtoken** ve **sp_bindsession**ile) gerekiyordu. Aşağıdaki senaryolarda, birden çok bağlantı yerine MARS özellikli bir bağlantının nasıl kullanılacağı gösterilmektedir.  
   
 ## <a name="using-multiple-commands-with-mars"></a>MARS ile birden çok komut kullanma  
- Aşağıdaki konsol uygulaması, iki nesne <xref:System.Data.SqlClient.SqlDataReader> <xref:System.Data.SqlClient.SqlCommand> ile iki nesne ve Mars özellikli tek <xref:System.Data.SqlClient.SqlConnection> bir nesne kullanmayı gösterir.  
+ Aşağıdaki konsol uygulaması, iki <xref:System.Data.SqlClient.SqlCommand> nesnesi ile iki <xref:System.Data.SqlClient.SqlDataReader> nesnesinin nasıl kullanılacağını ve MARS ile tek bir <xref:System.Data.SqlClient.SqlConnection> nesnesini nasıl kullanacağınızı gösterir.  
   
 ### <a name="example"></a>Örnek  
- Örnek, **AdventureWorks** veritabanına tek bir bağlantı açar. <xref:System.Data.SqlClient.SqlCommand> Bir<xref:System.Data.SqlClient.SqlDataReader> nesnesi kullanılarak oluşturulur. Okuyucu kullanıldığı için, ikinci bir okuyucu için <xref:System.Data.SqlClient.SqlDataReader> WHERE yan tümcesine giriş olarak ilk <xref:System.Data.SqlClient.SqlDataReader> girdi kullanılarak ikinci bir saniye açılır.  
+ Örnek, **AdventureWorks** veritabanına tek bir bağlantı açar. Bir <xref:System.Data.SqlClient.SqlCommand> nesnesi kullanarak bir <xref:System.Data.SqlClient.SqlDataReader> oluşturulur. Okuyucu kullanıldığı için ikinci bir <xref:System.Data.SqlClient.SqlDataReader>, ikinci okuyucu için WHERE yan tümcesine girdi olarak ilk <xref:System.Data.SqlClient.SqlDataReader> verileri kullanılarak açılır.  
   
 > [!NOTE]
 > Aşağıdaki örnek, SQL Server eklenen örnek **AdventureWorks** veritabanını kullanır. Örnek kodda sağlanan bağlantı dizesi, veritabanının yerel bilgisayarda yüklü ve kullanılabilir olduğunu varsayar. Bağlantı dizesini ortamınız için gereken şekilde değiştirin.  
@@ -164,10 +164,10 @@ static void Main()
 ```  
   
 ## <a name="reading-and-updating-data-with-mars"></a>MARS ile verileri okuma ve güncelleştirme  
- MARS, bir bağlantının hem okuma işlemleri hem de veri işleme dili (DML) işlemleri için birden fazla bekleyen işlemle kullanılmasına izin verir. Bu özellik, bir uygulamanın bağlantı meşgul hatalarıyla ilgilenmesi gereksinimini ortadan kaldırır. Ayrıca, MARS, genellikle daha fazla kaynak kullanan sunucu tarafı imleçlerinin kullanıcısını değiştirebilir. Son olarak, birden çok işlem tek bir bağlantı üzerinde çalışabildiklerinden, **sp_getbindtoken** ve **sp_bindsession** sistem saklı yordamlarını kullanma gereksinimini ortadan kaldıran aynı işlem bağlamını paylaşabilir.  
+ MARS, bir bağlantının hem okuma işlemleri hem de veri işleme dili (DML) işlemleri için birden fazla bekleyen işlemle kullanılmasına izin verir. Bu özellik, bir uygulamanın bağlantı meşgul hatalarıyla ilgilenmesi gereksinimini ortadan kaldırır. Ayrıca, MARS, genellikle daha fazla kaynak kullanan sunucu tarafı imleçler kullanımını değiştirebilir. Son olarak, birden çok işlem tek bir bağlantı üzerinde çalışabildiklerinden, aynı işlem bağlamını paylaşabilir, **sp_getbindtoken** kullanma gereksinimini ortadan kaldırır ve sistem saklı yordamlarını **sp_bindsession** .  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki konsol uygulaması, üç <xref:System.Data.SqlClient.SqlDataReader> <xref:System.Data.SqlClient.SqlCommand> nesne ile iki nesnenin nasıl kullanılacağını ve Mars ile tek <xref:System.Data.SqlClient.SqlConnection> bir nesneyle nasıl kullanıldığını gösterir. İlk komut nesnesi, kredi derecelendirmesi 5 olan satıcıların bir listesini alır. İkinci komut nesnesi, belirli bir satıcıya ait tüm ürünlerle ikincisini <xref:System.Data.SqlClient.SqlDataReader> <xref:System.Data.SqlClient.SqlDataReader> yüklemek için bir kaynağından belirtilen satıcı kimliğini kullanır. Her ürün kaydı ikinciden <xref:System.Data.SqlClient.SqlDataReader>ziyaret edilir. Yeni **Onordermik** 'in ne olması gerektiğini belirlemek için bir hesaplama gerçekleştirilir. Ardından, üçüncü komut nesnesi, **ProductVendor** tablosunu yeni değerle güncelleştirmek için kullanılır. Bu işlemin tamamı, sonunda geri alınan tek bir işlem içinde gerçekleşir.  
+ Aşağıdaki konsol uygulaması, üç <xref:System.Data.SqlClient.SqlCommand> nesnesi ile iki <xref:System.Data.SqlClient.SqlDataReader> nesnesinin nasıl kullanılacağını ve MARS ile tek bir <xref:System.Data.SqlClient.SqlConnection> nesnesini nasıl kullanacağınızı gösterir. İlk komut nesnesi, kredi derecelendirmesi 5 olan satıcıların bir listesini alır. İkinci komut nesnesi, belirli bir satıcının tüm ürünleriyle ikinci <xref:System.Data.SqlClient.SqlDataReader> yüklemek için bir <xref:System.Data.SqlClient.SqlDataReader> tarafından belirtilen satıcı KIMLIĞINI kullanır. Her ürün kaydı ikinci <xref:System.Data.SqlClient.SqlDataReader>ziyaret edilir. Yeni **Onordermik** 'in ne olması gerektiğini belirlemek için bir hesaplama gerçekleştirilir. Ardından, üçüncü komut nesnesi, **ProductVendor** tablosunu yeni değerle güncelleştirmek için kullanılır. Bu işlemin tamamı, sonunda geri alınan tek bir işlem içinde gerçekleşir.  
   
 > [!NOTE]
 > Aşağıdaki örnek, SQL Server eklenen örnek **AdventureWorks** veritabanını kullanır. Örnek kodda sağlanan bağlantı dizesi, veritabanının yerel bilgisayarda yüklü ve kullanılabilir olduğunu varsayar. Bağlantı dizesini ortamınız için gereken şekilde değiştirin.  

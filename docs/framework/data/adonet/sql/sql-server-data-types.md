@@ -3,12 +3,12 @@ title: SQL Server Veri Türleri ve ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 9baffc7a439c851ead7ec0e12899adf418174e22
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: f727c69b1dd5c23c6a89911005256de70255fd4c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76979865"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452337"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server Veri Türleri ve ADO.NET
 SQL Server ve .NET Framework, farklı tür sistemlerine dayalıdır, bu da olası veri kaybına neden olabilir. Veri bütünlüğünü korumak için SQL Server (<xref:System.Data.SqlClient>) için .NET Framework Veri Sağlayıcısı, SQL Server verilerle çalışmak üzere türü belirlenmiş erişimci yöntemleri sağlar. <xref:System.Data.SqlClient.SqlParameter> veri türlerini belirtmek için <xref:System.Data.SqlDbType> sınıflarında numaralandırmaları kullanabilirsiniz.  
@@ -19,9 +19,9 @@ SQL Server ve .NET Framework, farklı tür sistemlerine dayalıdır, bu da olas�
   
  Uygulamanızda kullanıma sunulan SQL Server veri türleri, kullanmakta olduğunuz SQL Server sürümüne bağlıdır. Daha fazla bilgi için aşağıdaki tabloda SQL Server Books Online 'ın ilgili sürümüne bakın.  
   
- **Books Online SQL Server**  
+ **SQL Server belgeleri**  
   
-1. [Veri türleri (veritabanı altyapısı)](https://go.microsoft.com/fwlink/?LinkID=107468)  
+1. [Veri türleri (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [SqlTypes ve DataSet](sqltypes-and-the-dataset.md)  

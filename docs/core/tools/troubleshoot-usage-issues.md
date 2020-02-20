@@ -3,12 +3,12 @@ title: .NET Core araç kullanımı sorunlarını giderme
 description: .NET Core araçları ve olası çözümleri çalıştırırken sık karşılaşılan sorunları öğrenin.
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: df896405a122050acba220923eee58e87e0b75b6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 45139c3441b84964b937d5d1cc63a018f8d1f0fb
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74282497"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451083"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>.NET Core araç kullanımı sorunlarını giderme
 
@@ -40,7 +40,7 @@ Yürütülebilir dosyanın adı, aracı nasıl çağırabileceğinizi belirler. 
 | `dotnet-<toolName>.exe` | `dotnet <toolName>` |
 | `<toolName>.exe`        | `<toolName>`        |
 
-* Küresel Araçlar
+* Genel araçlar
 
     Genel araçlar varsayılan dizine veya belirli bir konuma yüklenebilir. Varsayılan dizinler şunlardır:
 
@@ -73,7 +73,7 @@ Yürütülebilir dosyanın adı, aracı nasıl çağırabileceğinizi belirler. 
 
 ### <a name="runtime-not-found"></a>Çalışma zamanı bulunamadı
 
-.NET Core araçları, [çerçeveye bağlı uygulamalardır](../deploying/index.md#framework-dependent-deployments-fdd)ve bu, makinenizde yüklü bir .NET Core çalışma zamanına bağlıdır. Beklenen çalışma zamanı bulunmazsa, normal .NET Core çalışma zamanı alma-iletme kurallarını izler:
+.NET Core araçları, [çerçeveye bağlı uygulamalardır](../deploying/index.md#publish-runtime-dependent)ve bu, makinenizde yüklü bir .NET Core çalışma zamanına bağlıdır. Beklenen çalışma zamanı bulunmazsa, normal .NET Core çalışma zamanı alma-iletme kurallarını izler:
 
 * Bir uygulama, belirtilen birincil ve ikincil sürümün en yüksek düzeltme eki sürümüne ileri kaydedilir.
 * Eşleşen bir ana ve alt sürüm numarasına sahip eşleşen bir çalışma zamanı yoksa, sonraki en düşük sürüm kullanılır.

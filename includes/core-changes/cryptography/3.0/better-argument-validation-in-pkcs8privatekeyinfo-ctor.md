@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a9b6af31b68c25ab58c52757f48ed23cca3f5a35
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8d3a8712528d2d35c706cc26b8c388b65d6ad506
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567971"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449236"
 ---
 ### <a name="better-argument-validation-in-the-pkcs8privatekeyinfo-constructor"></a>Pkcs8PrivateKeyInfo oluşturucusunda daha iyi bağımsız değişken doğrulaması
 
@@ -24,7 +24,7 @@ var info = new Pkcs8PrivateKeyInfo(algorithmId, algorithmParameters, privateKey)
 byte[] encoded = info.Encode();
 ```
 
-.NET Core 3,0 Preview 9 ' dan itibaren, bağımsız değişken oluşturucuda onaylanır ve geçersiz bir değer, <xref:System.Security.Cryptography.CryptographicException>oluşturan Yöntem sonucu oluşur. Bu değişiklik, özel durumu veri hatasının kaynağına yaklaştırır. Örneğin:
+.NET Core 3,0 Preview 9 ' dan itibaren, bağımsız değişken oluşturucuda onaylanır ve geçersiz bir değer, <xref:System.Security.Cryptography.CryptographicException>oluşturan Yöntem sonucu oluşur. Bu değişiklik, özel durumu veri hatasının kaynağına yaklaştırır. Örnek:
 
 ```csharp
 byte[] algorithmParameters = { 0x05, 0x00, 0x05, 0x00 };
@@ -53,6 +53,6 @@ var info = new Pkcs8PrivateKeyInfo(algorithmId, algorithmParameters, privateKey)
 
 ### Affected APIs
 
-- `M:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.#ctor(System.Security.Cryptography.Oid,System.Nullable{System.ReadOnlyMemory{System.Byte}},System.ReadOnlyMemory{System.Byte},System.Boolean))
+- `M:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.#ctor(System.Security.Cryptography.Oid,System.Nullable{System.ReadOnlyMemory{System.Byte}},System.ReadOnlyMemory{System.Byte},System.Boolean)`
 
 -->

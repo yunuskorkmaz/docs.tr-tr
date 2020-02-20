@@ -1,13 +1,13 @@
 ---
 title: DotNet komutu
 description: DotNet komutu (.NET Core CLI için genel sürücü) ve kullanımı hakkında bilgi edinin.
-ms.date: 06/04/2018
-ms.openlocfilehash: 7674529980623caa2291987bdeba52f50ce2fc2c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 02/13/2020
+ms.openlocfilehash: 364978465b63401907b46ead64dbceb2f15c8169
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920543"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451174"
 ---
 # <a name="dotnet-command"></a>DotNet komutu
 
@@ -21,14 +21,14 @@ ms.locfileid: "76920543"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2,1](#tab/netcore21)
 
 ```dotnetcli
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
     [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2,0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2,0](#tab/netcore20)
 
 ```dotnetcli
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
@@ -36,7 +36,7 @@ dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--de
     [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagnostics]
@@ -53,7 +53,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ## <a name="options"></a>Seçenekler
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2,1](#tab/netcore21)
 
 `--additional-deps <PATH>`
 
@@ -95,7 +95,7 @@ Yüklü .NET Core SDK 'larını görüntüler.
 
 `--roll-forward-on-no-candidate-fx <N>`
 
-Gerekli paylaşılan çerçeve kullanılabilir olmadığında davranışını tanımlar. `N` aşağıdakilerden biri olabilir:
+Gerekli paylaşılan çerçeve kullanılabilir olmadığında davranışını tanımlar. `N` şu olabilir:
 
 - `0`-alt düzey sürüm iletmeyi devre dışı bırakın.
 - `1`-önemli sürümde değil, küçük sürümde ilet. Bu varsayılan davranıştır.
@@ -117,7 +117,7 @@ Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inima
 
 Kullanımda olan .NET Core SDK sürümünü yazdırır.
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2,0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2,0](#tab/netcore20)
 
 `--additional-deps <PATH>`
 
@@ -167,7 +167,7 @@ Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inima
 
 Kullanımda olan .NET Core SDK sürümünü yazdırır.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 `--additionalprobingpath <PATH>`
 
@@ -215,7 +215,7 @@ Kullanımda olan .NET Core SDK sürümünü yazdırır.
 
 ### <a name="general"></a>Genel
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2,1](#tab/netcore21)
 
 | Komut                                       | İşlev                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
@@ -234,7 +234,7 @@ Kullanımda olan .NET Core SDK sürümünü yazdırır.
 | [dotnet store](dotnet-store.md)               | Derlemeleri çalışma zamanı paket deposunda depolar.                     |
 | [dotnet test](dotnet-test.md)                 | Testleri bir Test Çalıştırıcısı kullanarak çalıştırır.                                     |
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2,0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2,0](#tab/netcore20)
 
 | Komut                             | İşlev                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
@@ -252,7 +252,7 @@ Kullanımda olan .NET Core SDK sürümünü yazdırır.
 | [dotnet store](dotnet-store.md)     | Derlemeleri çalışma zamanı paket deposunda depolar.                     |
 | [dotnet test](dotnet-test.md)       | Testleri bir Test Çalıştırıcısı kullanarak çalıştırır.                                     |
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 | Komut                             | İşlev                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
@@ -293,16 +293,16 @@ Komut | İşlev
 [dotnet nuget locals](dotnet-nuget-locals.md) | Http-istek önbelleği, geçici önbellek veya makine genelindeki genel paketler klasörü gibi yerel NuGet kaynaklarını temizler veya listeler.
 [dotnet nuget push](dotnet-nuget-push.md) | Bir paketi sunucuya gönderir ve yayımlar.
 
-### <a name="global-tools-commands"></a>Küresel araçlar komutları
+### <a name="global-tool-path-and-local-tools-commands"></a>Küresel, araç yolu ve yerel araçlar komutları
 
-[.NET Core küresel araçlar](global-tools.md) .NET Core SDK 2.1.300 ile başlayarak kullanılabilir:
+Araçlar, NuGet paketlerinden yüklenen ve komut isteminden çağrılan konsol uygulamalarıdır. Araçları kendiniz yazabilir veya üçüncü taraflarca yazılmış Araçları yükleyebilirsiniz. Araçlar genel araçlar, araç yolu araçları ve yerel araçlar olarak da bilinir. Daha fazla bilgi için bkz. [.NET Core araçlarına genel bakış](global-tools.md). Genel ve araç yolu araçları .NET Core SDK 2,1 ' den başlayarak kullanılabilir. Yerel araçlar .NET Core SDK 3,0 ' den başlayarak kullanılabilir.
 
 Komut | İşlev
 --- | ---
-[dotnet tool install](dotnet-tool-install.md) | Makinenize küresel bir araç kurar.
-[dotnet tool list](dotnet-tool-list.md) | Makinenizde varsayılan dizinde veya belirtilen yolda yüklü olan tüm genel araçları listeler.
-[dotnet tool install](dotnet-tool-uninstall.md) | Bir genel aracı makinenizden kaldırır.
-[dotnet tool update](dotnet-tool-update.md) | Makinenizde küresel bir aracı güncelleştirir.
+[dotnet tool install](dotnet-tool-install.md) | Makinenize bir araç kurar.
+[dotnet tool list](dotnet-tool-list.md) | Makinenizde yüklü olan tüm genel, araç-yol veya yerel araçları listeler.
+[dotnet tool install](dotnet-tool-uninstall.md) | Bir aracı makinenizden kaldırır.
+[dotnet tool update](dotnet-tool-update.md) | Makinenizde yüklü bir aracı güncelleştirir.
 
 ### <a name="additional-tools"></a>Ek araçlar
 
@@ -340,7 +340,7 @@ Belirli bir dizinde bir proje ve onun bağımlılıklarını oluşturun:
 
 ## <a name="environment-variables"></a>Ortam değişkenleri
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2,1](#tab/netcore21)
 
 `DOTNET_PACKAGES`
 
@@ -362,7 +362,7 @@ Genel paketler klasörü. Ayarlanmamışsa, varsayılan olarak UNIX veya Windows
 
 `0`olarak ayarlandıysa, ikincil sürüm iletmeyi devre dışı bırakır. Daha fazla bilgi için bkz. [Ileri alma](../whats-new/dotnet-core-2-1.md#roll-forward).
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2,0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2,0](#tab/netcore20)
 
 `DOTNET_PACKAGES`
 
@@ -380,7 +380,7 @@ Birincil paket önbelleği. Ayarlanmamışsa, varsayılan olarak UNIX veya Windo
 
 .NET Core çalışma zamanı, paylaşılan Framework veya SDK 'nın genel konumdan çözümlenip çözümlenmediğini belirtir. Ayarlanmamışsa, varsayılan olarak `true`olur. Genel konumdan çözümlenmemelidir ve yalıtılmış .NET Core yüklemelerine sahip olmak için `false` olarak ayarlayın (değerler `0` veya `false` kabul edilir). Çoklu düzey arama hakkında daha fazla bilgi için bkz. [çok düzeyli SharedFX arama](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 `DOTNET_PACKAGES`
 

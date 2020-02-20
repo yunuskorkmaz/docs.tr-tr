@@ -2,12 +2,12 @@
 title: WCF Kolaylaştırma Özellikleri
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: dd944ad2963e29fd3aa9254f3a37f2c2b98ce70d
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 28a05053fda8380b55a1a9eee20119b8c4cfccfe
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802394"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452662"
 ---
 # <a name="wcf-simplification-features"></a>WCF Kolaylaştırma Özellikleri
 
@@ -78,7 +78,7 @@ WCF artık sözleşmenin ilk geliştirmeyi destekler. Svcutil. exe aracında bir
 
 ## <a name="add-service-reference-from-a-portable-subset-project"></a>Taşınabilir alt küme projesinden Hizmet Başvurusu Ekle
 
-Taşınabilir alt küme projeleri, .NET derleme programcılarının tek bir kaynak ağacı ve derleme sistemi ile aynı zamanda birden çok .NET uygulaması (Masaüstü, Silverlight, Windows Phone ve XBOX) desteklemeye devam etmektedir. Taşınabilir alt küme projeleri yalnızca .NET uygulamalarında kullanılabilecek .NET Framework derlemesi olan .NET taşınabilir kitaplıklarına başvurur. Geliştirici deneyimi, diğer herhangi bir WCF istemci uygulamasında bir hizmet başvurusu eklemekle aynıdır. Daha fazla bilgi için bkz. [Taşınabilir alt küme projesinde hizmet başvurusu Ekle](add-service-reference-in-a-portable-subset-project.md).
+Taşınabilir alt küme projeleri, .NET derleme programcılarının tek bir kaynak ağacı ve derleme sistemi ile aynı zamanda birden çok .NET uygulaması (Masaüstü, Silverlight, Windows Phone ve Xbox) desteklemeye devam etmektedir. Taşınabilir alt küme projeleri yalnızca .NET uygulamalarında kullanılabilecek derlemeler olan .NET taşınabilir kitaplıklarına başvurur. Geliştirici deneyimi, diğer herhangi bir WCF istemci uygulamasında bir hizmet başvurusu eklemekle aynıdır. Daha fazla bilgi için bkz. [Taşınabilir alt küme projesinde hizmet başvurusu Ekle](add-service-reference-in-a-portable-subset-project.md).
 
 ## <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET uyumluluk modu varsayılan olarak değiştirildi
 
@@ -94,7 +94,7 @@ WCF, geliştiricilere WCF Hizmetleri yazarken ASP.NET HTTP işlem hattının öz
 
 Aşağıdaki tablo, değişen ayarları ve ek bilgilerin nerede bulunacağını açıklar.
 
-|Özellik|Açık|Yeni varsayılan|Daha fazla bilgi|
+|Özellik|Açık|Yeni varsayılan|Daha Fazla Bilgi|
 |--------------|--------|-----------------|----------------------|
 |ChannelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 saniye|Bu özellik, bir TCP bağlantısının, .NET çerçeveleme protokolünü kullanarak kimliğini doğrulamak için ne kadar süreyle işlem yapabileceğini belirler. Sunucunun kimlik doğrulamasını gerçekleştirmek için yeterli bilgi olmadan önce bir istemcinin bazı ilk verileri gönderebilmesi gerekir. Bu zaman aşımı, ReceiveTimeout (10 dak) olarak daha küçük hale getirilir ve böylece kötü kimliği doğrulanmamış istemcilerin bağlantıları uzun süredir sunucuya bağlı tutmaması sağlanır. Varsayılan değer 30 saniyedir. <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A> hakkında daha fazla bilgi için|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * işlemci sayısı|Bu yuva düzeyi özelliği, sıraya eklenecek "bekleyen kabul etme" isteklerinin sayısını açıklar. Dinleme biriktirme listesi sırası dolarsa, yeni yuva istekleri reddedilir. <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A> hakkında daha fazla bilgi için|

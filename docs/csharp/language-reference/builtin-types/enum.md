@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: ac4dafef92bbc900d291a5b653c55ba295f1a6d6
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 4377d113a18d23c8a0f9a669e6112f1a8223cc79
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093233"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450875"
 ---
 # <a name="enumeration-types-c-reference"></a>Sabit listesi türleriC# (başvuru)
 
@@ -89,5 +89,6 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 
 - [C#başvurunun](../index.md)
 - [Sabit listesi biçim dizeleri](../../../standard/base-types/enumeration-format-strings.md)
-- [Sabit Listesi adlandırma kuralları](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
+- [Tasarım yönergeleri-numaralandırma tasarımı](../../../standard/design-guidelines/enum.md)
+- [Tasarım yönergeleri-sabit listesi adlandırma kuralları](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
 - [Switch deyimleri](../keywords/switch.md)

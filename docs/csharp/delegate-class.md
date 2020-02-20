@@ -1,23 +1,23 @@
 ---
 title: System. Delegate ve `delegate` anahtar sözcüğü
-description: Temsilcileri destekleyen .NET Framework sınıflar ve bunların ' Delegate ' anahtar sözcüğüyle nasıl eşlendikleri hakkında bilgi edinin.
+description: Temsilcileri destekleyen ve bunların ' Delegate ' anahtar sözcüğüyle nasıl eşlendikleri .NET sınıfları hakkında bilgi edinin.
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 3cfc9925be0f191dc3fc93c02f4a8f9a40b71895
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420362"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450927"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System. Delegate ve `delegate` anahtar sözcüğü
 
 [Öncekini](delegates-overview.md)
 
-Bu makale, temsilcileri destekleyen .NET Framework içindeki sınıfları ve bunların `delegate` anahtar kelimesiyle nasıl eşlendiğini kapsar.
+Bu makalede temsilcileri destekleyen .NET sınıfları ve bunların `delegate` anahtar kelimesiyle nasıl eşlendikleri ele alınmaktadır.
 
-## <a name="defining-delegate-types"></a>Temsilci türlerini tanımlama
+## <a name="define-delegate-types"></a>Temsilci türlerini tanımlama
 
 ' Delegate ' anahtar sözcüğüyle başlayalım, çünkü bu aslında temsilcilerle çalışırken kullanacağınız şeydir. `delegate` anahtar sözcüğünü kullandığınızda derleyicinin oluşturduğu kod, <xref:System.Delegate> ve <xref:System.MulticastDelegate> sınıflarının üyelerini çağıran yöntem çağrılarına eşlenir. 
 
@@ -41,7 +41,7 @@ Sözdiziminin bir değişken bildirmiş gibi görünebileceğini ancak gerçekte
 
 Derleyici Ayrıca bu yeni tür için ekleme ve kaldırma işleyicileri üretir. bu sayede, bu sınıfın istemcileri bir örneğin çağrı listesinden Yöntem ekleyebilir ve kaldırabilir. Derleyici, eklenen veya kaldırılan yöntemin imzasının, yöntemi bildirirken kullanılan imza ile eşleştiğinden zorlanır. 
 
-## <a name="declaring-instances-of-delegates"></a>Temsilci örneklerini bildirme
+## <a name="declare-instances-of-delegates"></a>Temsilcilerin örneklerini bildirme
 
 Temsilciyi tanımladıktan sonra, bu türün bir örneğini oluşturabilirsiniz.
 İçindeki C#tüm değişkenler gibi, temsilci örneklerini doğrudan bir ad alanında veya genel ad alanında bildiremezsiniz.
@@ -57,7 +57,7 @@ Değişkenin türü, daha önce tanımlanan temsilci türü `Comparison<T>`. De�
  
  Yukarıdaki kod parçacığı, bir sınıf içinde bir üye değişkeni bildirdi. Yerel değişkenler veya yöntemler için bağımsız değişkenler olan temsilci değişkenlerini de bildirebilirsiniz.
 
-## <a name="invoking-delegates"></a>Temsilcileri çağırma
+## <a name="invoke-delegates"></a>Temsilcileri çağır
 
 Bu temsilciyi çağırarak bir temsilcinin çağırma listesindeki yöntemleri çağırabilirsiniz. `Sort()` yönteminin içinde, hangi nesnelerin yerleştirileceği sırayı belirleyen kod karşılaştırma yöntemini çağırır:
 
@@ -70,7 +70,7 @@ Değişkeni bir yöntem adı olarak değerlendirir ve normal Yöntem çağrısı
 
 Bu kod satırı güvenli olmayan bir varsayımına neden olur: temsilciye bir hedefin eklendiğinden emin olmaz. Hiçbir hedef iliştirilmişse, yukarıdaki satır `NullReferenceException` oluşturulmasına neden olur. Bu sorunu gidermek için kullanılan ıoms, basit bir null denetiminden daha karmaşıktır ve bu [serinin](delegates-patterns.md)ilerleyen kısımlarında ele alınmıştır.
 
-## <a name="assigning-adding-and-removing-invocation-targets"></a>Çağırma hedeflerini atama, ekleme ve kaldırma
+## <a name="assign-add-and-remove-invocation-targets"></a>Çağırma hedeflerini atama, ekleme ve kaldırma
 
 Temsilci türünün tanımlanması ve temsilci örneklerinin nasıl bildirildiği ve çağrıldığı.
 
@@ -119,7 +119,7 @@ Yukarıda açıklanan dil desteği, genellikle temsilcilerle çalışmanız gere
 
 Her ne kadar `System.Delegate` ve `System.MulticastDelegate` sınıfları kendilerine temsilci türleri değildir. Bunlar, tüm özel temsilci türleri için temel sağlar. Aynı dil tasarım süreci, `Delegate` veya `MulticastDelegate`türetilen bir sınıfı bildiremezsiniz. C# Dil kuralları bunu yasaklar.
  
-Bunun yerine, C# derleyici, temsilci türlerini bildirmek için C# language anahtar sözcüğünü kullandığınızda `MulticastDelegate`türetilen bir sınıfın örneklerini oluşturur.
+Bunun yerine, C# derleyici, temsilci türlerini bildirmek için C# language anahtar sözcüğünü kullandığınızda `MulticastDelegate` türetilen bir sınıfın örneklerini oluşturur.
 
 Bu tasarım, C# ve .net ilk sürümünde köklerine sahiptir. Tasarım ekibi için bir hedef, temsilci kullanılırken dilin tür güvenliğini zorlamasını sağlamaktır. Bu, temsilcilerin doğru tür ve bağımsız değişken sayısıyla çağrılmasını sağlamaktır. Ve herhangi bir dönüş türü, derleme zamanında doğru şekilde belirtilmiştir. Temsilciler, genel türler 'den önce olan 1,0 .NET sürümünün bir parçası idi.
 
@@ -129,8 +129,8 @@ Türetilmiş sınıfları doğrudan oluşturamasanız bile, bu sınıflarda tan�
 
 Anımsanması gereken ilk, en önemli olgu, birlikte çalıştığınız her temsilcinin `MulticastDelegate`türetilir. Çok noktaya yayın temsilcisi, bir temsilci aracılığıyla çağrıldığında birden fazla yöntem hedefinin çağrılabileceği anlamına gelir. Özgün tasarım, yalnızca bir hedef yöntemin iliştirilebileceği ve çağrılabildiği temsilciler arasında ayrım yapmayı ve birden çok hedef metodun iliştirilebileceği ve çağrılabileceği temsilcileri arasında ayrım yapmayı düşünüder. Bu ayrım, ilk düşünmeden uygulamada daha az yararlı olacaktır. İki farklı sınıf zaten oluşturuldu ve ilk genel sürümünden bu yana çerçevede vardı.
 
-Temsilcilerle en iyi şekilde kullanacağınız Yöntemler `Invoke()` ve / `EndInvoke()``BeginInvoke()`. `Invoke()`, belirli bir temsilci örneğine eklenmiş olan tüm yöntemleri çağırır. Yukarıda gördüğünüz gibi genellikle temsilci değişkeninde Yöntem çağrısı söz dizimini kullanarak temsilciler çağırılır. [Bu serinin ilerleyen kısımlarında](delegates-patterns.md)göreceğiniz gibi, bu yöntemlerle doğrudan çalışan desenler vardır.
+Temsilcilerle en iyi şekilde kullanacağınız Yöntemler `Invoke()` ve  / `EndInvoke()``BeginInvoke()`. `Invoke()`, belirli bir temsilci örneğine eklenmiş olan tüm yöntemleri çağırır. Yukarıda gördüğünüz gibi genellikle temsilci değişkeninde Yöntem çağrısı söz dizimini kullanarak temsilciler çağırılır. [Bu serinin ilerleyen kısımlarında](delegates-patterns.md)göreceğiniz gibi, bu yöntemlerle doğrudan çalışan desenler vardır.
 
-Artık dil sözdizimini ve temsilcileri destekleyen sınıfları gördüğünüze göre, türü kesin belirlenmiş temsilcilerin ne kullanıldığını, oluşturulduğunu ve çağırılacağını incelim.
+Artık dil sözdizimini ve temsilcileri destekleyen sınıfları gördüğünüze göre, türü kesin belirlenmiş temsilcilerin ne kullanıldığını, oluşturulduğunu ve çağrılmasını incelim.
 
 [Next](delegates-strongly-typed.md)

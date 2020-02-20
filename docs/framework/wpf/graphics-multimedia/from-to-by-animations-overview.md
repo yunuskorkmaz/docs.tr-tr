@@ -1,5 +1,5 @@
 ---
-title: Gelen-için-göre animasyonlarına genel bakış
+title: Öğesinden By Animasyonlarına Genel Bakış
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,41 +8,41 @@ helpviewer_keywords:
 - animation [WPF], From/to/by
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
-ms.openlocfilehash: d36be70a8c1287274c3820aec3aa789830914ceb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 661c035f55ba1fb550726d75921cd01a72b2eecc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615410"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449016"
 ---
 # <a name="fromtoby-animations-overview"></a>Gelen/İçin/Göre Animasyonlarına Genel Bakış
-Bu konuda, gelen/için/göre animasyonlarına bağımlılık özelliklerine animasyon uygulamak için kullanmayı açıklar. From/To/By animasyonu iki değer arasındaki bir geçiş oluşturur.  
+Bu konu başlığı altında, bağımlılık özelliklerine animasyon uygulamak için From/To/By animasyonlarını kullanma açıklanmaktadır. From/To/By animasyonu iki değer arasında bir geçiş oluşturur.  
   
 <a name="prereq"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konuda anlamak için aşina olmalısınız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyonları özellikleri. Animasyon özelliklerine bir giriş için bkz [animasyona genel bakış](animation-overview.md).  
+ Bu konuyu anlamak için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyonları özellikleriyle ilgili bilgi sahibi olmanız gerekir. Animasyon özelliklerine giriş için [animasyon genel bakış](animation-overview.md)bölümüne bakın.  
   
 <a name="whatisanimation"></a>   
-## <a name="what-is-a-fromtoby-animation"></a>From/To/By animasyon nedir?  
- From/To/By animasyonu türüdür <xref:System.Windows.Media.Animation.AnimationTimeline> bir başlangıç ve bitiş değeri arasında bir geçiş oluşturur. Geçişi tamamlamak için gereken süreyi tarafından belirlenen <xref:System.Windows.Media.Animation.Timeline.Duration%2A> o animasyonun.  
+## <a name="what-is-a-fromtoby-animation"></a>From/To/By animasyonu nedir?  
+ From/To/By animasyonu, başlangıç değeri ile bitiş değeri arasında bir geçiş oluşturan <xref:System.Windows.Media.Animation.AnimationTimeline> türüdür. Geçişin tamamlaması için gereken süre, bu animasyonun <xref:System.Windows.Media.Animation.Timeline.Duration%2A> belirlenir.  
   
- From/To/By uygulayabilirsiniz kullanarak bir özelliğe animasyon bir <xref:System.Windows.Media.Animation.Storyboard> işaretleme ve kod veya kullanarak <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> kodda yöntemi. U animasyon oluşturmak için kullanabilirsiniz bir <xref:System.Windows.Media.Animation.AnimationClock> ve bir veya daha fazla özellikler için geçerlidir. Animasyonlara uygulama için farklı yöntemler hakkında daha fazla bilgi için bkz. [özellik Animasyon Tekniklerine Genel Bakış](property-animation-techniques-overview.md).  
+ Biçimlendirme ve koddaki <xref:System.Windows.Media.Animation.Storyboard> kullanarak veya koddaki <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> yöntemini kullanarak bir özelliğe From/To/By animasyonu uygulayabilirsiniz. Ayrıca, bir <xref:System.Windows.Media.Animation.AnimationClock> oluşturup bir veya daha fazla özelliğe uygulamak için From/To/By animasyonu kullanabilirsiniz. Animasyonları uygulamaya yönelik farklı yöntemler hakkında daha fazla bilgi için bkz. [animasyon tekniklerine genel bakış](property-animation-techniques-overview.md).  
   
- Gelen/için/göre animasyonlarına ikiden fazla hedef değerine sahip olabilir. Anahtar çerçeve animasyonu ikiden fazla hedef değeri olan animasyon gerekiyorsa kullanın. Anahtar-çerçeve animasyonlara açıklanan [anahtar-çerçeve animasyonlara genel bakış](key-frame-animations-overview.md).  
+ From/To/By animasyonları ikiden fazla hedef değere sahip olamaz. İkiden fazla hedef değere sahip bir animasyon gerekiyorsa, anahtar çerçeve animasyonunu kullanın. Anahtar çerçeve animasyonları, [anahtar çerçeve animasyonlarında genel bakış](key-frame-animations-overview.md)bölümünde açıklanmıştır.  
   
 <a name="animation_types"></a>   
-## <a name="fromtoby-animation-types"></a>From/To/By animasyon türü  
- Özellik değerlerini animasyonlar oluşturması nedeniyle farklı özellik türleri için farklı animasyon türü vardır. Alan özelliği oynatmak bir <xref:System.Double>, gibi <xref:System.Windows.FrameworkElement.Width%2A> bir öğe özelliğini kullanın üreten bir animasyon <xref:System.Double> değerleri. Alan özelliği oynatmak bir <xref:System.Windows.Point>, üreten bir animasyon kullanın <xref:System.Windows.Point> değerleri ve benzeri.  
+## <a name="fromtoby-animation-types"></a>From/To/By animasyon türleri  
+ Animasyonlar özellik değerleri oluşturduğundan, farklı özellik türleri için farklı animasyon türleri vardır. Bir öğenin <xref:System.Windows.FrameworkElement.Width%2A> özelliği gibi <xref:System.Double>alan bir özelliğe animasyon uygulamak için <xref:System.Double> değerler üreten bir animasyon kullanın. <xref:System.Windows.Point>alan bir özelliğe animasyon uygulamak için <xref:System.Windows.Point> değerleri üreten bir animasyon kullanın ve bu şekilde devam edin.  
   
- From/To/By animasyon sınıfları ait <xref:System.Windows.Media.Animation> ad alanı ve şu adlandırma kuralını kullanır:  
+ From/To/By animasyon sınıfları <xref:System.Windows.Media.Animation> ad alanına aittir ve aşağıdaki adlandırma kuralını kullanır:  
   
  *\<türü >* `Animation`  
   
- Burada  *\<türü >* sınıfı canlandırır değer türüdür.  
+ *\<tür >* , sınıfın canlandırır değer türüdür.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aşağıdaki From/To/By animasyonu sınıflar sağlar.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], aşağıdaki From/To/By animasyon sınıflarını sağlar.  
   
-|Özellik türü|Karşılık gelen From/To/By animasyonu sınıfı|  
+|Özellik türü|Karşılık gelen/to/by animasyon sınıfı|  
 |-------------------|------------------------------------------------|  
 |<xref:System.Byte>|<xref:System.Windows.Media.Animation.ByteAnimation>|  
 |<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|  
@@ -62,83 +62,83 @@ Bu konuda, gelen/için/göre animasyonlarına bağımlılık özelliklerine anim
 |<xref:System.Windows.Vector>|<xref:System.Windows.Media.Animation.VectorAnimation>|  
   
 <a name="anim_values"></a>   
-## <a name="target-values"></a>Hedef değerleri  
- From/To/By animasyonu iki hedef değer arasında bir geçiş oluşturur. Başlangıç değerini belirtmek yaygındır (kullanarak ayarlamak <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliği) ve bitiş değeri (kullanarak ayarlamak <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliği). Ancak, yalnızca bir başlangıç değeri, bir hedef değer veya bir uzaklık değeri de belirtebilirsiniz. Bu gibi durumlarda animasyon eksik hedef değer animasyon uygulanan özelliğinden alır. Aşağıdaki listede, animasyon hedef değerleri belirlemek için farklı yollar açıklanmaktadır.  
+## <a name="target-values"></a>Hedef değerler  
+ From/To/By animasyonu iki hedef değer arasında bir geçiş oluşturur. Başlangıç değeri (<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliğini kullanarak ayarla) ve bir bitiş değeri (<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliğini kullanarak ayarlayın) belirtilmesi yaygındır. Bununla birlikte, yalnızca bir başlangıç değeri, bir hedef değer veya bir konum değeri de belirtebilirsiniz. Bu durumlarda animasyon, hareketli olmayan özelliğinden eksik hedef değeri edinir. Aşağıdaki listede bir animasyonun hedef değerlerini belirtmek için farklı yollar açıklanmaktadır.  
   
 - **Başlangıç değeri**  
   
-     Kullanım <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliği açıkça bir animasyon başlangıç değerine belirtmek istediğinizde. Kullanabileceğiniz <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliğini tek başına veya birlikte <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> veya <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliği. Yalnızca belirtirseniz <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özellik, animasyon geçişler bu değeri temel değerine özelliğin.  
+     Bir animasyonun başlangıç değerini açıkça belirtmek istediğinizde <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliğini kullanın. <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliğini kendi başına veya <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> veya <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliği ile kullanabilirsiniz. Yalnızca <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliğini belirtirseniz, animasyon bu değerden animasyon özelliğinin temel değerine geçiş yapar.  
   
 - **Bitiş değeri**  
   
-     Animasyonun bitiş değeri belirtmek için kullanın, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliği. Kullanırsanız <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliği kendisi tarafından animasyon alır başlangıç değerine animasyon uygulanan bir özellik veya aynı özelliğe uygulanan başka bir animasyon çıktısı. Kullanabileceğiniz <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliği ile birlikte <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> başlangıç ve bitiş değerlerinin animasyon için açıkça belirtmek için özellik.  
+     Animasyonun bitiş değerini belirtmek için, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliğini kullanın. <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliğini tek başına kullanırsanız, animasyon, kendi başlangıç değerini hareketlendirilen özelliğinden veya aynı özelliğe uygulanan başka bir animasyonun çıktısından alır. Animasyonun başlangıç ve bitiş değerlerini açıkça belirtmek için <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliğini <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliğiyle birlikte kullanabilirsiniz.  
   
-- **Uzaklık değeri**  
+- **Konum değeri**  
   
-     <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> Özelliği, bir açık başlangıç veya bitiş değeri animasyonun yerine bir uzaklık belirtmenizi sağlar. <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> Animasyonun özellik belirtir tarafından ne kadar animasyon süresi boyunca bir değer değiştirir. Kullanabileceğiniz <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliğini tek başına veya birlikte <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliği. Yalnızca belirtirseniz <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özellik, animasyon özelliği için taban değerini veya başka bir animasyon çıktısı için uzaklık değeri ekler.  
+     <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliği, animasyon için açık bir başlangıç veya bitiş değeri yerine bir konum belirtmenizi sağlar. Bir animasyonun <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliği, animasyonun bir değeri süresi boyunca ne kadar değiştirdiğine göre belirtir. <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliğini kendi başına veya <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliği ile kullanabilirsiniz. Yalnızca <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliğini belirtirseniz, animasyon, Aralık değerini özelliğin temel değerine veya başka bir animasyonun çıktısına ekler.  
   
 <a name="examples"></a>   
-## <a name="using-fromtoby-values"></a>Gelen/için/göre değerleri kullanarak  
- Aşağıdaki bölümlerde nasıl kullanılacağını <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, ve <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özellikleri birlikte veya ayrı ayrı.  
+## <a name="using-fromtoby-values"></a>From/To/By değerlerini kullanma  
+ Aşağıdaki bölümlerde <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>ve <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliklerinin birlikte nasıl kullanılacağı ve ayrı olarak nasıl kullanılacağı açıklanır.  
   
- Her kullanım bölümdeki Bu örneklerde bir <xref:System.Windows.Media.Animation.DoubleAnimation>, animasyon uygulamak için From/To/By animasyonu, bir tür olduğu <xref:System.Windows.FrameworkElement.Width%2A> özelliği bir <xref:System.Windows.Shapes.Rectangle> diğer bir deyişle, 10 cihaz bağımsız piksel yüksekliğinde ve 100 cihaz bağımsız piksel genişliğinde.  
+ Bu bölümdeki örneklerde her biri, 10 cihazdan bağımsız piksel yüksekliğinde ve 100 cihazdan bağımsız piksel genişliğinde bir <xref:System.Windows.Shapes.Rectangle> <xref:System.Windows.FrameworkElement.Width%2A> özelliğine animasyon uygulamak için From/To/By animasyon türünde bir <xref:System.Windows.Media.Animation.DoubleAnimation>kullanır.  
   
- Her örnek kullansa da bir <xref:System.Windows.Media.Animation.DoubleAnimation>, ve tüm From/To/By özellikleri tarafından animasyonları aynı şekilde davranır. Bu örneklerin her kullansa da bir <xref:System.Windows.Media.Animation.Storyboard>, gelen/için/göre animasyonlarına başka yöntemlerle de kullanabilirsiniz. Daha fazla bilgi için [özellik Animasyon Tekniklerine Genel Bakış](property-animation-techniques-overview.md).  
+ Her örnek bir <xref:System.Windows.Media.Animation.DoubleAnimation>kullansa da, tüm From/To/By animasyonlarını from, to ve By özellikleri aynı şekilde davranır. Bu örneklerin her biri bir <xref:System.Windows.Media.Animation.Storyboard>kullansa da, diğer yollarla From/To/By animasyonlarını kullanabilirsiniz. Daha fazla bilgi için bkz. [özellik animasyon tekniklerine genel bakış](property-animation-techniques-overview.md).  
   
-### <a name="fromto"></a>/  
- Ayarladığınızda <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> ve <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> birlikte tarafından belirtilen değere animasyon ilerler değerleri <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliği tarafından belirtilen değere <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliği.  
+### <a name="fromto"></a>From/to  
+ <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> ve <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> değerlerini birlikte ayarlarsanız, animasyon <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliği tarafından belirtilen değerden <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliği tarafından belirtilen değere ilerler.  
   
- Aşağıdaki örnek kümeleri <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliği <xref:System.Windows.Media.Animation.DoubleAnimation> 50'ye ve kendi <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 300 özelliği. Sonuç olarak, <xref:System.Windows.FrameworkElement.Width%2A> , <xref:System.Windows.Shapes.Rectangle> 50'den 300 bir animasyon görünür.  
+ Aşağıdaki örnek, <xref:System.Windows.Media.Animation.DoubleAnimation> <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliğini 50 ve <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliğini 300 olarak ayarlar. Sonuç olarak, <xref:System.Windows.Shapes.Rectangle> <xref:System.Windows.FrameworkElement.Width%2A> 50 ' den 300 ' e canlandırılır.  
   
  [!code-csharp[basicvalues_snip#FromToAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#fromtoanimationinline)]
  [!code-vb[basicvalues_snip#FromToAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#fromtoanimationinline)]  
   
-### <a name="to"></a>Bitiş  
- Yalnızca ayarlandığında <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özellik, animasyon ilerlemesi için taban değerini animasyonlu özelliği veya çıkış için aynı özelliği tarafından belirtilen değeri daha önce uygulanan bir animasyonun <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özellik.  
+### <a name="to"></a>Alıcı  
+ Yalnızca <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliğini ayarladığınızda animasyon, animasyonlu özelliğin temel değerinden veya daha önce aynı özelliğe uygulanan bir oluşturma animasyonunun çıktısından, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliği tarafından belirtilen değere ilerler.  
   
- ("Animasyon oluşturma" başvurduğu bir <xref:System.Windows.Media.Animation.ClockState.Active> veya <xref:System.Windows.Media.Animation.ClockState.Filling> geçerli animasyon kullanarak uygulandığında hala etkin olan aynı özelliğe daha önce uygulanan bir animasyon <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> iletim davranışı.)  
+ ("Animasyon oluşturma", geçerli animasyon <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> iletim davranışı kullanılarak uygulandığında hala geçerli olan özelliğe uygulanmış bir <xref:System.Windows.Media.Animation.ClockState.Active> veya <xref:System.Windows.Media.Animation.ClockState.Filling> animasyonu anlamına gelir.)  
   
- Aşağıdaki örnek yalnızca ayarlar <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliği <xref:System.Windows.Media.Animation.DoubleAnimation> 300. Başlangıç değeri belirtilmiş olduğundan <xref:System.Windows.Media.Animation.DoubleAnimation> taban değerini (100) kullanan <xref:System.Windows.FrameworkElement.Width%2A> özelliği olarak başlangıç değeri. <xref:System.Windows.FrameworkElement.Width%2A> , <xref:System.Windows.Shapes.Rectangle> 100'den 300 animasyonun hedef değer için bir animasyon görünür.  
+ Aşağıdaki örnek, yalnızca <xref:System.Windows.Media.Animation.DoubleAnimation> <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliğini 300 olarak ayarlar. Başlangıç değeri belirtilmediğinden <xref:System.Windows.Media.Animation.DoubleAnimation>, başlangıç değeri olarak <xref:System.Windows.FrameworkElement.Width%2A> özelliğinin temel değerini (100) kullanır. <xref:System.Windows.Shapes.Rectangle> <xref:System.Windows.FrameworkElement.Width%2A> 100 ' den animasyonun hedef değeri 300 ' den canlandırılır.  
   
  [!code-csharp[basicvalues_snip#ToAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#toanimationinline)]
  [!code-vb[basicvalues_snip#ToAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#toanimationinline)]  
   
 ### <a name="by"></a>Tarafından  
- Yalnızca ayarlandığında <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> animasyonun özellik, animasyon ilerler animasyon uygulanan bir özellik için taban değerini veya animasyonun toplanacak değeri tarafından belirtilen değeri ve çıktıya <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özellik.  
+ Bir animasyonun yalnızca <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliğini ayarladığınızda animasyon, hareketlendirilen özelliğin temel değerinden veya bir oluşturan animasyonun çıktısından, bu değerin toplamına ve <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliği tarafından belirtilen değere kadar ilerler.  
   
- Aşağıdaki örnek yalnızca ayarlar <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliği <xref:System.Windows.Media.Animation.DoubleAnimation> 300. Örnek bir başlangıç değeri belirtmediğinden <xref:System.Windows.Media.Animation.DoubleAnimation> için taban değerini kullanan <xref:System.Windows.FrameworkElement.Width%2A> özelliği, 100 ' Başlangıç değeri olarak. Bitiş değeri eklenerek belirlenir <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> animasyon başlangıç değerine, 100 300 değeri: 400. Sonuç olarak, <xref:System.Windows.FrameworkElement.Width%2A> , <xref:System.Windows.Shapes.Rectangle> 100'den 400'e bir animasyon görünür.  
+ Aşağıdaki örnek, yalnızca <xref:System.Windows.Media.Animation.DoubleAnimation> <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliğini 300 olarak ayarlar. Örnek bir başlangıç değeri belirtmediğinden, <xref:System.Windows.Media.Animation.DoubleAnimation> <xref:System.Windows.FrameworkElement.Width%2A> özelliğinin temel değerini, başlangıç değeri olarak 100 kullanır. Bitiş değeri, 300 değerinin başlangıç değerine, 100:400 ' e animasyon <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> değeri eklenerek belirlenir. Sonuç olarak, <xref:System.Windows.Shapes.Rectangle> <xref:System.Windows.FrameworkElement.Width%2A> 100 ' den 400 ' e canlandırılır.  
   
  [!code-csharp[basicvalues_snip#ByAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#byanimationinline)]
  [!code-vb[basicvalues_snip#ByAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#byanimationinline)]  
   
-### <a name="fromby"></a>Gelen/göre  
- Ayarladığınızda <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> ve <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> animasyon özelliklerini, tarafından belirtilen değere animasyon ilerler <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> toplamı tarafından belirtilen değere özelliği <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> ve <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özellikleri.  
+### <a name="fromby"></a>Şuradan/bu yana  
+ Animasyonun <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> ve <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliklerini ayarladığınızda, animasyon <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliği tarafından belirtilen değerden <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> ve <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliklerinin toplamı tarafından belirtilen değere ilerlerler.  
   
- Aşağıdaki örnek kümeleri <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliği <xref:System.Windows.Media.Animation.DoubleAnimation> 50'ye ve kendi <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 300 özelliği. Bitiş değeri eklenerek belirlenir <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> animasyon başlangıç değerine, 50 300 değeri: 350. Sonuç olarak, <xref:System.Windows.FrameworkElement.Width%2A> , <xref:System.Windows.Shapes.Rectangle> 50'den 350 için bir animasyon görünür.  
+ Aşağıdaki örnek, <xref:System.Windows.Media.Animation.DoubleAnimation> <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliğini 50 ve <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliğini 300 olarak ayarlar. Bitiş değeri, 300 değerinin başlangıç değerine, 50:350 ' e animasyon <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> değeri eklenerek belirlenir. Sonuç olarak, <xref:System.Windows.Shapes.Rectangle> <xref:System.Windows.FrameworkElement.Width%2A> 50 ' den 350 ' e canlandırılır.  
   
  [!code-csharp[basicvalues_snip#FromByAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#frombyanimationinline)]
  [!code-vb[basicvalues_snip#FromByAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#frombyanimationinline)]  
   
 ### <a name="from"></a>Başlangıç  
- Yalnızca belirttiğinizde <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> , animasyon değeri tarafından belirtilen değere animasyon ilerler <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliğini, animasyon uygulanan bir özellik için taban değerini veya animasyonun çıktısı.  
+ Bir animasyonun yalnızca <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> değerini belirttiğinizde animasyon, <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliği tarafından belirtilen değerden, hareketlendirilen özelliğin temel değerine veya bir oluşturma animasyonunun çıkışına kadar ilerler.  
   
- Aşağıdaki örnek yalnızca ayarlar <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliği <xref:System.Windows.Media.Animation.DoubleAnimation> 50 '. Hiçbir bitiş değeri belirtilmiş olduğundan <xref:System.Windows.Media.Animation.DoubleAnimation> için taban değerini kullanır <xref:System.Windows.FrameworkElement.Width%2A> özelliği, 100 olarak bitiş değeri. <xref:System.Windows.FrameworkElement.Width%2A> , <xref:System.Windows.Shapes.Rectangle> 50'den taban değerini animasyonlu <xref:System.Windows.FrameworkElement.Width%2A> özelliği, 100.  
+ Aşağıdaki örnek, yalnızca <xref:System.Windows.Media.Animation.DoubleAnimation> <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliğini 50 olarak ayarlar. Bitiş değeri belirtilmediği için <xref:System.Windows.Media.Animation.DoubleAnimation>, <xref:System.Windows.FrameworkElement.Width%2A> özelliğinin temel değerini, 100, onun bitiş değeri olarak kullanır. <xref:System.Windows.Shapes.Rectangle> <xref:System.Windows.FrameworkElement.Width%2A> 50 100 ' den <xref:System.Windows.FrameworkElement.Width%2A> özelliğinin temel değerine canlandırılır.  
   
  [!code-csharp[basicvalues_snip#FromAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#fromanimationinline)]
  [!code-vb[basicvalues_snip#FromAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#fromanimationinline)]  
   
-### <a name="toby"></a>İçin/göre  
- Her ikisi de ayarlarsanız <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> ve <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> animasyon özelliklerini <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliği yok sayılır.  
+### <a name="toby"></a>To/by  
+ Animasyonun hem <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> hem de <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliklerini ayarlarsanız <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> özelliği yok sayılır.  
   
 <a name="otheranimationtypes"></a>   
-## <a name="other-animation-types"></a>Diğer animasyon türü  
- Gelen/için/göre animasyonlarına animasyon türü değildir, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sağlar: anahtar-çerçeve animasyonlara ve yol animasyonları da sağlar.  
+## <a name="other-animation-types"></a>Diğer animasyon türleri  
+ From/To/By animasyonları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sağladığı tek animasyon türü değildir: Ayrıca anahtar çerçeve animasyonları ve yol animasyonları sağlar.  
   
-- Anahtar çerçeve animasyon hedef değerleri, açıklanan anahtar çerçeveler kullanarak herhangi bir sayıda canlandırır. Daha fazla bilgi için [anahtar-çerçeve animasyonlara genel bakış](key-frame-animations-overview.md).  
+- Anahtar çerçeve animasyonu, anahtar çerçeveler kullanılarak tanımlanan herhangi bir sayıda hedef değer üzerinde hareketlenir. Daha fazla bilgi için bkz. [anahtar-çerçeve animasyonlara genel bakış](key-frame-animations-overview.md).  
   
-- Yol animasyonu çıkış değerlerini oluşturur bir <xref:System.Windows.Media.PathGeometry>. Daha fazla bilgi için [yol animasyonlarına genel bakış](path-animations-overview.md).  
+- Yol animasyonu bir <xref:System.Windows.Media.PathGeometry>çıkış değerleri oluşturur. Daha fazla bilgi için bkz. [yol animasyonlara genel bakış](path-animations-overview.md).  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ayrıca, kendi özel animasyon türleri oluşturmanıza olanak sağlar. Daha fazla bilgi için [özel animasyonlara genel bakış](custom-animations-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], kendi özel animasyon türlerinizi oluşturmanıza de olanak sağlar. Daha fazla bilgi için bkz. [Özel animasyonlara genel bakış](custom-animations-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -149,4 +149,4 @@ Bu konuda, gelen/için/göre animasyonlarına bağımlılık özelliklerine anim
 - [Anahtar-Çerçeve Animasyonlara Genel Bakış](key-frame-animations-overview.md)
 - [Yol Animasyonlarına Genel Bakış](path-animations-overview.md)
 - [Özel Animasyonlara Genel Bakış](custom-animations-overview.md)
-- [Gelen, için ve göre animasyon hedef değerleri örneği](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [From, to ve By animasyon hedefi değerleri örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/TargetValues)

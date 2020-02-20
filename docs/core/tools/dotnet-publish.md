@@ -2,26 +2,26 @@
 title: dotnet publish komutu
 description: Dotnet publish komutu .NET Core projenizi bir dizinde yayımlar.
 ms.date: 05/29/2018
-ms.openlocfilehash: 4612c8cd1f63550905ef7c6d94af050892b1620c
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 0653a7b1e1abd6d7ffd3d21a0410279235b43a28
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117607"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451298"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
-`dotnet publish`-Uygulamayı ve bağımlılıklarını bir barındırma sistemine dağıtım için bir klasöre paketler.
+uygulama ve bağımlılıklarını bir barındırma sistemine dağıtım için bir klasöre `dotnet publish` paketler.
 
 ## <a name="synopsis"></a>Özeti
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2,1](#tab/netcore21)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-build] [--no-dependencies]
@@ -29,7 +29,7 @@ dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--ma
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2,0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2,0](#tab/netcore20)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies]
@@ -37,7 +37,7 @@ dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--ma
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
@@ -49,18 +49,18 @@ dotnet publish [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet publish`uygulamayı derler, proje dosyasında belirtilen bağımlılıklarını okur ve elde edilen dosya kümesini bir dizine yayınlar. Çıktı aşağıdaki varlıkları içerir:
+`dotnet publish` uygulamayı derler, proje dosyasında belirtilen bağımlılıklarını okur ve elde edilen dosya kümesini bir dizine yayınlar. Çıktı aşağıdaki varlıkları içerir:
 
 - *DLL* uzantılı bir derlemede ara DIL (IL) kodu.
 - *. Deps. JSON* dosyası, projenin tüm bağımlılıklarını içerir.
 - uygulamanın beklediği paylaşılan çalışma zamanını belirten *. runtimeconfig. JSON* dosyası, ayrıca çalışma zamanına yönelik diğer yapılandırma seçenekleri (örneğin, çöp toplama türü).
 - NuGet önbelleğinden çıkış klasörüne kopyalanmış olan uygulamanın bağımlılıkları.
 
-`dotnet publish` Komutun çıktısı, yürütme için bir barındırma sistemine (örneğin, bir sunucu, PC, Mac, dizüstü bilgisayar) dağıtıma yöneliktir. Uygulamayı dağıtıma hazırlamak için tek resmi olarak desteklenen bir yoldur. Projenin belirttiği dağıtımın türüne bağlı olarak, barındırma sisteminde .NET Core paylaşılan çalışma zamanı yüklü olabilir veya olmayabilir. Daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md). Yayımlanan bir uygulamanın dizin yapısı için bkz. [Dizin yapısı](/aspnet/core/hosting/directory-structure).
+`dotnet publish` komutun çıktısı, yürütme için bir barındırma sistemine (örneğin, bir sunucu, PC, Mac, dizüstü bilgisayar) dağıtıma yöneliktir. Uygulamayı dağıtıma hazırlamak için tek resmi olarak desteklenen bir yoldur. Projenin belirttiği dağıtımın türüne bağlı olarak, barındırma sisteminde .NET Core paylaşılan çalışma zamanı yüklü olabilir veya olmayabilir. Daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md). Yayımlanan bir uygulamanın dizin yapısı için bkz. [Dizin yapısı](/aspnet/core/hosting/directory-structure).
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
 `PROJECT`
 
@@ -68,7 +68,7 @@ Yayımlanacak proje. Bir [C#](csproj.md), F#veya Visual Basic proje dosyasının
 
 ## <a name="options"></a>Seçenekler
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2,1](#tab/netcore21)
 
 `-c|--configuration {Debug|Release}`
 
@@ -88,11 +88,11 @@ Komut için kısa bir yardım yazdırır.
 
 `--manifest <PATH_TO_MANIFEST_FILE>`
 
-Uygulamayla yayımlanmış paket kümesini kırpmak için kullanılacak bir veya birkaç [hedef bildirimi](../deploying/runtime-store.md) belirtir. Bildirim dosyası, [ `dotnet store` komutun](dotnet-store.md)çıktısının bir parçasıdır. Birden çok bildirim belirtmek için her bildirim `--manifest` için bir seçenek ekleyin. Bu seçenek .NET Core 2,0 SDK ile başlayarak kullanılabilir.
+Uygulamayla yayımlanmış paket kümesini kırpmak için kullanılacak bir veya birkaç [hedef bildirimi](../deploying/runtime-store.md) belirtir. Bildirim dosyası [`dotnet store` komutunun](dotnet-store.md)çıktısının bir parçasıdır. Birden çok bildirim belirtmek için her bildirim için bir `--manifest` seçeneği ekleyin. Bu seçenek .NET Core 2,0 SDK ile başlayarak kullanılabilir.
 
 `--no-build`
 
-Yayımlamadan önce projeyi oluşturmaz. Ayrıca `--no-restore` bayrağı örtülü olarak ayarlar.
+Yayımlamadan önce projeyi oluşturmaz. Ayrıca `--no-restore` bayrağını örtülü olarak ayarlar.
 
 `--no-dependencies`
 
@@ -109,21 +109,21 @@ Yol göreli ise, oluşturulan çıkış dizini geçerli çalışma dizinine değ
 
 `--self-contained`
 
-.NET Core çalışma zamanını uygulamanızla yayımlar, böylece çalışma zamanının hedef makinede yüklü olması gerekmez. Bir çalışma zamanı tanımlayıcısı belirtilmişse, varsayılan değeri olur `true`. Farklı dağıtım türleri hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md).
+.NET Core çalışma zamanını uygulamanızla yayımlar, böylece çalışma zamanının hedef makinede yüklü olması gerekmez. Bir çalışma zamanı tanımlayıcısı belirtilmişse, varsayılan değeri `true`. Farklı dağıtım türleri hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md).
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Uygulamayı belirli bir çalışma zamanı için yayımlar. Bu, [kendinden bağımsız bir dağıtım (SCD)](../deploying/index.md#self-contained-deployments-scd)oluşturulurken kullanılır. Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md). Varsayılan, [çerçeveye bağımlı bir dağıtımı (FDD)](../deploying/index.md#framework-dependent-deployments-fdd)yayımlamaktır.
+Uygulamayı belirli bir çalışma zamanı için yayımlar. Bu, [kendinden bağımsız bir dağıtım (SCD)](../deploying/index.md#publish-self-contained)oluşturulurken kullanılır. Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md). Varsayılan, [çerçeveye bağımlı bir dağıtımı (FDD)](../deploying/index.md#publish-runtime-dependent)yayımlamaktır.
 
 `-v|--verbosity <LEVEL>`
 
-Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`
+Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`.
 
 `--version-suffix <VERSION_SUFFIX>`
 
-Proje dosyasının sürüm alanındaki yıldız işaretini (`*`) değiştirecek olan sürüm sonekini tanımlar.
+Proje dosyasının sürüm alanındaki yıldız işaretini (`*`) değiştirecek sürüm sonekini tanımlar.
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2,0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2,0](#tab/netcore20)
 
 `-c|--configuration {Debug|Release}`
 
@@ -143,7 +143,7 @@ Komut için kısa bir yardım yazdırır.
 
 `--manifest <PATH_TO_MANIFEST_FILE>`
 
-Uygulamayla yayımlanmış paket kümesini kırpmak için kullanılacak bir veya birkaç [hedef bildirimi](../deploying/runtime-store.md) belirtir. Bildirim dosyası, [ `dotnet store` komutun](dotnet-store.md)çıktısının bir parçasıdır. Birden çok bildirim belirtmek için her bildirim `--manifest` için bir seçenek ekleyin. Bu seçenek .NET Core 2,0 SDK ile başlayarak kullanılabilir.
+Uygulamayla yayımlanmış paket kümesini kırpmak için kullanılacak bir veya birkaç [hedef bildirimi](../deploying/runtime-store.md) belirtir. Bildirim dosyası [`dotnet store` komutunun](dotnet-store.md)çıktısının bir parçasıdır. Birden çok bildirim belirtmek için her bildirim için bir `--manifest` seçeneği ekleyin. Bu seçenek .NET Core 2,0 SDK ile başlayarak kullanılabilir.
 
 `--no-dependencies`
 
@@ -160,21 +160,21 @@ Yol göreli ise, oluşturulan çıkış dizini geçerli çalışma dizinine değ
 
 `--self-contained`
 
-.NET Core çalışma zamanını uygulamanızla yayımlar, böylece çalışma zamanının hedef makinede yüklü olması gerekmez. Bir çalışma zamanı tanımlayıcısı belirtilmişse, varsayılan değeri olur `true`. Farklı dağıtım türleri hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md).
+.NET Core çalışma zamanını uygulamanızla yayımlar, böylece çalışma zamanının hedef makinede yüklü olması gerekmez. Bir çalışma zamanı tanımlayıcısı belirtilmişse, varsayılan değeri `true`. Farklı dağıtım türleri hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md).
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Uygulamayı belirli bir çalışma zamanı için yayımlar. Bu, [kendinden bağımsız bir dağıtım (SCD)](../deploying/index.md#self-contained-deployments-scd)oluşturulurken kullanılır. Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md). Varsayılan, [çerçeveye bağımlı bir dağıtımı (FDD)](../deploying/index.md#framework-dependent-deployments-fdd)yayımlamaktır.
+Uygulamayı belirli bir çalışma zamanı için yayımlar. Bu, [kendinden bağımsız bir dağıtım (SCD)](../deploying/index.md#publish-self-contained)oluşturulurken kullanılır. Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md). Varsayılan, [çerçeveye bağımlı bir dağıtımı (FDD)](../deploying/index.md#publish-runtime-dependent)yayımlamaktır.
 
 `-v|--verbosity <LEVEL>`
 
-Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`
+Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`.
 
 `--version-suffix <VERSION_SUFFIX>`
 
-Proje dosyasının sürüm alanındaki yıldız işaretini (`*`) değiştirecek olan sürüm sonekini tanımlar.
+Proje dosyasının sürüm alanındaki yıldız işaretini (`*`) değiştirecek sürüm sonekini tanımlar.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
@@ -190,7 +190,7 @@ Komut için kısa bir yardım yazdırır.
 
 `--manifest <PATH_TO_MANIFEST_FILE>`
 
-Uygulamayla yayımlanmış paket kümesini kırpmak için kullanılacak bir veya birkaç [hedef bildirimi](../deploying/runtime-store.md) belirtir. Bildirim dosyası, [ `dotnet store` komutun](dotnet-store.md)çıktısının bir parçasıdır. Birden çok bildirim belirtmek için her bildirim `--manifest` için bir seçenek ekleyin. Bu seçenek .NET Core 2,0 SDK ile başlayarak kullanılabilir.
+Uygulamayla yayımlanmış paket kümesini kırpmak için kullanılacak bir veya birkaç [hedef bildirimi](../deploying/runtime-store.md) belirtir. Bildirim dosyası [`dotnet store` komutunun](dotnet-store.md)çıktısının bir parçasıdır. Birden çok bildirim belirtmek için her bildirim için bir `--manifest` seçeneği ekleyin. Bu seçenek .NET Core 2,0 SDK ile başlayarak kullanılabilir.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -199,15 +199,15 @@ Yol göreli ise, oluşturulan çıkış dizini geçerli çalışma dizinine değ
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Uygulamayı belirli bir çalışma zamanı için yayımlar. Bu, [kendinden bağımsız bir dağıtım (SCD)](../deploying/index.md#self-contained-deployments-scd)oluşturulurken kullanılır. Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md). Varsayılan, [çerçeveye bağımlı bir dağıtımı (FDD)](../deploying/index.md#framework-dependent-deployments-fdd)yayımlamaktır.
+Uygulamayı belirli bir çalışma zamanı için yayımlar. Bu, [kendinden bağımsız bir dağıtım (SCD)](../deploying/index.md#publish-self-contained)oluşturulurken kullanılır. Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md). Varsayılan, [çerçeveye bağımlı bir dağıtımı (FDD)](../deploying/index.md#publish-runtime-dependent)yayımlamaktır.
 
 `-v|--verbosity <LEVEL>`
 
-Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`
+Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`.
 
 `--version-suffix <VERSION_SUFFIX>`
 
-Proje dosyasının sürüm alanındaki yıldız işaretini (`*`) değiştirecek olan sürüm sonekini tanımlar.
+Proje dosyasının sürüm alanındaki yıldız işaretini (`*`) değiştirecek sürüm sonekini tanımlar.
 
 ---
 
@@ -221,11 +221,11 @@ Belirtilen proje dosyasını kullanarak uygulamayı yayımlayın:
 
 `dotnet publish ~/projects/app1/app1.csproj`
 
-Şu `netcoreapp1.1` Framework 'ü kullanarak projeyi geçerli dizinde yayımlayın:
+`netcoreapp1.1` çerçevesini kullanarak projeyi geçerli dizinde yayımlayın:
 
 `dotnet publish --framework netcoreapp1.1`
 
-`netcoreapp1.1` Çerçevesini ve`OS X 10.10` çalışma zamanını kullanarak geçerli uygulamayı yayımlayın (Bu RID 'yi proje dosyasında listemalısınız).
+`netcoreapp1.1` çerçevesini ve `OS X 10.10` çalışma zamanını kullanarak geçerli uygulamayı yayımlayın (Bu RID 'yi proje dosyasında listemalısınız).
 
 `dotnet publish --framework netcoreapp1.1 --runtime osx.10.11-x64`
 

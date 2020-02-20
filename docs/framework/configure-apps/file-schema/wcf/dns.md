@@ -2,24 +2,24 @@
 title: <dns>
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-ms.openlocfilehash: c68cabd03eca71b41a0d0acce26897fa2653f4d3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e49a564c9793b371425b2b787586bb9d3cbed58b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855368"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452233"
 ---
-# <a name="dns"></a>\<DNS >
+# <a name="dns"></a>DNS > \<
 Sunucunun beklenen kimliğini belirtir. Sunucunun sertifikası aynı değere sahip bir DNS içeriyorsa, bu kimlik, x509 sertifika kimlik doğrulama modu için geçerlidir. SPN aynı değere sahipse, Windows kimlik doğrulama modu için de geçerlidir.  
   
 Öğe değerini ayarlama hakkında daha fazla bilgi için bkz. [hizmet kimliği ve kimlik doğrulaması](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<İstemci >** ](client.md)\
+[ **\<yapılandırma >** ](../configuration-element.md)\
+[**System. serviceModel >\<** ](system-servicemodel.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<istemci >** ](client.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<uç nokta >** ](endpoint-of-client.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<kimlik >** ](identity.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<DNS >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dns >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,7 +34,7 @@ Sunucunun beklenen kimliğini belirtir. Sunucunun sertifikası aynı değere sah
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|value|Sertifikanın DNS 'i. DNS, IP tabanlı bir ağdaki bilgisayarları bulmak için kullanılan sektör standardı bir protokoldür. Kullanıcılar, 207.46.131.137 gibi sayı tabanlı adreslerden daha <https://go.microsoft.com/fwlink/?prd=10929> kolay [https://go.microsoft.com/fwlink/?LinkID=96165](https://go.microsoft.com/fwlink/?LinkID=96165)görünen adları anımsayabilir.|  
+|value|Sertifikanın DNS 'i. DNS, IP tabanlı bir ağdaki bilgisayarları bulmak için kullanılan sektör standardı bir protokoldür. Kullanıcılar, `https://go.microsoft.com/fwlink/?prd=10929` veya `https://go.microsoft.com/fwlink/?LinkID=96165`gibi görünen adları, 207.46.131.137 gibi sayı tabanlı adreslerden daha kolay anımsayabilir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  

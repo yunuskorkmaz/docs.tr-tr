@@ -8,16 +8,16 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: 30f3123a70e414e80842f726584623534994ab95
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: fc8b35c89e76a415529d76db687bc96767384e11
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645654"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452129"
 ---
-# <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>İzlenecek yol: DataGrid denetimindeki SQL Server veritabanından veri görüntüleme
+# <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>İzlenecek yol: DataGrid Denetimindeki SQL Server veritabanından veri görüntüleme
 
-Bu kılavuzda, bir SQL Server veritabanından veri almak ve bu verileri görüntüleme bir <xref:System.Windows.Controls.DataGrid> denetimi. ADO.NET varlık çerçevesi veri temsil eder ve bir varlık sınıfı belirtilen verileri alan bir sorgu yazmak için LINQ kullanma varlık sınıfları oluşturmak için kullanın.
+Bu kılavuzda, verileri bir SQL Server veritabanından alır ve bu verileri bir <xref:System.Windows.Controls.DataGrid> denetiminde görüntüleriz. Verileri temsil eden varlık sınıflarını oluşturmak için ADO.NET Entity Framework kullanır ve bir varlık sınıfından belirtilen verileri alan bir sorgu yazmak için LINQ kullanın.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -25,79 +25,78 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 - Visual Studio.
 
-- Çalışan bir SQL Server veya SQL Server bağlı AdventureWorks örnek veritabanı içeren bir Express örneğine erişim. AdventureWorks veritabanı indirebileceğiniz [GitHub](https://github.com/Microsoft/sql-server-samples/releases).
+- Üzerinde AdventureWorks örnek veritabanının eklendiği SQL Server veya SQL Server Express çalışan bir örneğine erişim. AdventureWorks veritabanını [GitHub](https://github.com/Microsoft/sql-server-samples/releases)'dan indirebilirsiniz.
 
 ## <a name="create-entity-classes"></a>Varlık sınıfları oluşturma
 
-1. Visual Basic veya C# içinde yeni bir WPF uygulaması projesi oluşturun ve adlandırın `DataGridSQLExample`.
+1. Visual Basic veya C#içinde yenı bir WPF uygulaması projesi oluşturun ve `DataGridSQLExample`olarak adlandırın.
 
-2. Çözüm Gezgini'nde projenize sağ tıklayın, fareyle **Ekle**ve ardından **yeni öğe**.
+2. Çözüm Gezgini, projenize sağ tıklayın, **Ekle**' nin üzerine gelin ve sonra **Yeni öğe**' yi seçin.
 
-     Yeni Öğe Ekle iletişim kutusu görüntülenir.
+     Yeni öğe Ekle iletişim kutusu görüntülenir.
 
-3. Yüklü Şablonlar bölmesinde seçin **veri** şablonları listesinde seçip **ADO.NET varlık veri modeli**.
+3. Yüklü şablonlar bölmesinde, **veriler** ' i seçin ve şablonlar listesinde **ADO.net varlık veri modeli**' yi seçin.
 
-     ![ADO.NET varlık veri modeli öğe şablonu](../../wcf/feature-details/./media/ado-net-entity-data-model-item-template.png)
+     ![ADO.NET Varlık Veri Modeli öğesi şablonu](../../wcf/feature-details/./media/ado-net-entity-data-model-item-template.png)
 
-4. Dosya adı `AdventureWorksModel.edmx` ve ardından **Ekle**.
+4. `AdventureWorksModel.edmx` dosyayı adlandırın ve ardından **Ekle**' ye tıklayın.
 
      Varlık Veri Modeli Sihirbazı görüntülenir.
 
-5. Choose Model Contents ekranında seçin **EF veritabanı Tasarımcısından** ve ardından **sonraki**.
+5. Model Içeriğini seçin ekranında, **veritabanından EF Designer** ' ı seçin ve ardından **İleri**' ye tıklayın.
 
-6. Veri bağlantınızı seçin ekranında AdventureWorksLT2008 veritabanınıza bağlantı sağlar. Daha fazla bilgi için [seçin bilgisayarınızı veri bağlantısı iletişim kutusu](https://go.microsoft.com/fwlink/?LinkId=160190).
+6. Veri bağlantınızı seçin ekranında AdventureWorksLT2008 veritabanınıza bağlantı sağlayın. Daha fazla bilgi için bkz. [veri bağlantınızı seçme Iletişim kutusu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399244(v=vs.100)).
 
-    Adı olduğundan emin olun `AdventureWorksLT2008Entities` ve **varlığı App.Config dosyasındaki bağlantı ayarlarını Kaydet** onay kutusunun seçili olduğundan ve ardından **sonraki**.
+    Adın `AdventureWorksLT2008Entities` olduğundan ve **app. config dosyasındaki varlık bağlantı ayarlarını kaydet** onay kutusunun seçili olduğundan emin olun ve ardından **İleri**' ye tıklayın.
 
-7. Veritabanı nesnelerinizi seçin ekranında, tablolar düğümünü genişletin ve seçin **ürün** ve **ProductCategory** tablolar.
+7. Veritabanı nesnelerinizi seçin ekranında, tablolar düğümünü genişletin ve **Product** ve **ProductCategory** tablolarını seçin.
 
-     Tüm tablolar için varlık sınıfları oluşturabilirsiniz; Ancak, bu örnekte, yalnızca bu iki tablolarından verileri alın.
+     Tüm tablolar için varlık sınıfları oluşturabilirsiniz; Ancak, bu örnekte yalnızca bu iki tablodan veri alınır.
 
-     ![Product ve ProductCategory tablolarından seçin](./media/datagrid-sql-ef-step4.png "DataGrid_SQL_EF_Step4")
+     ![Tablolardan Product ve ProductCategory seçin](./media/datagrid-sql-ef-step4.png "DataGrid_SQL_EF_Step4")
 
 8. **Son**'a tıklayın.
 
-     Product ve ProductCategory varlıklar, varlık Tasarımcısı'nda görüntülenir.
+     Product ve ProductCategory varlıkları Entity Desisgner görüntülenir.
 
      ![Product ve ProductCategory varlık modelleri](./media/datagrid-sql-ef-step5.png "DataGrid_SQL_EF_Step5")
 
-## <a name="retrieve-and-present-the-data"></a>Almak ve verileri sunmak
+## <a name="retrieve-and-present-the-data"></a>Verileri alma ve sunma
 
-1. MainWindow.xaml dosyasını açın.
+1. MainWindow. xaml dosyasını açın.
 
-2. Ayarlama <xref:System.Windows.FrameworkElement.Width%2A> özelliği <xref:System.Windows.Window> 450.
+2. <xref:System.Windows.Window> <xref:System.Windows.FrameworkElement.Width%2A> özelliğini 450 olarak ayarlayın.
 
-3. XAML Düzenleyicisi'nde, aşağıdaki ekleyin <xref:System.Windows.Controls.DataGrid> arasında etiketi `<Grid>` ve `</Grid>` eklenecek etiketleri bir <xref:System.Windows.Controls.DataGrid> adlı `dataGrid1`.
+3. XAML düzenleyicisinde, `dataGrid1`adlı bir <xref:System.Windows.Controls.DataGrid> eklemek için `<Grid>` ve `</Grid>` etiketleri arasına aşağıdaki <xref:System.Windows.Controls.DataGrid> etiketini ekleyin.
 
      [!code-xaml[DataGrid_SQL_EF_Walkthrough#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#3)]
 
-     ![DataGrid penceresiyle](./media/datagrid-sql-ef-step6.png "DataGrid_SQL_EF_Step6")
+     ![DataGrid ile pencere](./media/datagrid-sql-ef-step6.png "DataGrid_SQL_EF_Step6")
 
-4. Seçin <xref:System.Windows.Window>.
+4. <xref:System.Windows.Window>seçin.
 
-5. Özellikler penceresinde veya XAML Düzenleyicisi'ni kullanarak oluşturmak için bir olay işleyicisi <xref:System.Windows.Window> adlı `Window_Loaded` için <xref:System.Windows.FrameworkElement.Loaded> olay. Daha fazla bilgi için [nasıl yapılır: Basit olay işleyicisi oluşturun](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100)).
+5. Özellikler penceresi veya XAML düzenleyicisini kullanarak, <xref:System.Windows.FrameworkElement.Loaded> olayı için `Window_Loaded` adlı <xref:System.Windows.Window> bir olay işleyicisi oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: basit olay Işleyicisi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100)).
 
-     Aşağıdaki XAML MainWindow.xaml için gösterir.
+     Aşağıda MainWindow. xaml için XAML gösterilmektedir.
 
     > [!NOTE]
-    > Visual Basic kullanıyorsanız MainWindow.xaml öğesinin ilk satırı değiştirin `x:Class="DataGridSQLExample.MainWindow"` ile `x:Class="MainWindow"`.
+    > Visual Basic kullanıyorsanız, MainWindow. xaml ' in ilk satırında `x:Class="DataGridSQLExample.MainWindow"` ' yı `x:Class="MainWindow"`ile değiştirin.
 
      [!code-xaml[DataGrid_SQL_EF_Walkthrough#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#1)]
 
-6. Arka plan kod dosyası (MainWindow.xaml.vb veya MainWindow.xaml.cs) açık <xref:System.Windows.Window>.
+6. <xref:System.Windows.Window>için arka plan kod dosyasını (MainWindow. xaml. vb veya MainWindow.xaml.cs) açın.
 
-7. Yalnızca belirli değerleri birleştirilmiş tablolardaki almak ve ayarlamak için aşağıdaki kodu ekleyin <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> özelliği <xref:System.Windows.Controls.DataGrid> sorgu sonuçlarını.
+7. Birleşik tablolardan yalnızca belirli değerleri almak için aşağıdaki kodu ekleyin ve <xref:System.Windows.Controls.DataGrid> <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> özelliğini sorgunun sonuçlarına ayarlayın.
 
      [!code-csharp[DataGrid_SQL_EF_Walkthrough#2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml.cs#2)]
      [!code-vb[DataGrid_SQL_EF_Walkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/VB/MainWindow.xaml.vb#2)]
 
 8. Örneği çalıştırın.
 
-     Görmelisiniz bir <xref:System.Windows.Controls.DataGrid> , verileri görüntüler.
+     Verileri görüntüleyen bir <xref:System.Windows.Controls.DataGrid> görmeniz gerekir.
 
-     ![SQL veritabanındaki verilerle DataGrid](./media/datagrid-sql-ef-step7.png "DataGrid_SQL_EF_Step7")
+     ![SQL veritabanı 'ndan veri içeren DataGrid](./media/datagrid-sql-ef-step7.png "DataGrid_SQL_EF_Step7")
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Controls.DataGrid>
-- [Nasıl Yaparım WPF uygulamalarında Entity Framework ile çalışmaya başlama?](https://go.microsoft.com/fwlink/?LinkId=159868)

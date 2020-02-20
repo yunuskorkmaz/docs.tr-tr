@@ -8,34 +8,34 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation)
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
-ms.openlocfilehash: 3c90d20cac60004aa9876d9fe8d213d33c5a6883
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7dfc233fe60e1cea293edc44a2bba79dc6962f7c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651429"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452915"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Nasıl yapılır: Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (Matris Animasyonu)
-Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> sınıfının bir nesnenin tarafından tanımlanan bir yol üzerinde animasyonunu bir <xref:System.Windows.Media.PathGeometry>.  
+Bu örnek, bir <xref:System.Windows.Media.PathGeometry>tarafından tanımlanan yol üzerinde bir nesneye animasyon uygulamak için <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> sınıfını nasıl kullanacağınızı gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, aşağıdakileri yaparak bir nesnenin yol canlandırın:  
+ Aşağıdaki örnek, aşağıdakileri yaparak bir nesneyi yol üzerinde hareketlendirir:  
   
-- Geçerli bir <xref:System.Windows.Media.MatrixTransform> taşımak için nesne.  
+- Taşımak için nesnesine bir <xref:System.Windows.Media.MatrixTransform> uygular.  
   
-- Yolu kullanarak tanımlayan bir <xref:System.Windows.Media.PathGeometry>.  
+- <xref:System.Windows.Media.PathGeometry>kullanarak yolu tanımlar.  
   
-- Oluşturur bir <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> ve animasyon uygulamak için kullandığı <xref:System.Windows.Media.Matrix> özelliği <xref:System.Windows.Media.MatrixTransform>. <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> Alır <xref:System.Windows.Media.PathGeometry> ve oluşturmak için kullandığı <xref:System.Windows.Media.Matrix> değerleri.  
+- Bir <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> oluşturur ve <xref:System.Windows.Media.MatrixTransform><xref:System.Windows.Media.Matrix> özelliğine animasyon uygulamak için onu kullanır. <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> <xref:System.Windows.Media.PathGeometry> alır ve <xref:System.Windows.Media.Matrix> değerler oluşturmak için onu kullanır.  
   
  [!code-xaml[PathAnimationGallery_snippet#MatrixAnimationUsingPathWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/matrixanimationusingpathexample.xaml#matrixanimationusingpathwholepage)]  
   
  [!code-csharp[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/CSharp/MatrixAnimationUsingPathExample.cs#matrixanimationusingpathwholepage)]
  [!code-vb[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/VisualBasic/MatrixAnimationUsingPathExample.vb#matrixanimationusingpathwholepage)]  
   
- Tam bir örnek için bkz. [yol animasyonu örneği](https://go.microsoft.com/fwlink/?LinkID=160028). Geometrik yollar hakkında daha fazla bilgi için bkz. [geometrisi](geometry-overview.md).  
+ Tüm örnek için bkz. [yol animasyon örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/PathAnimations). Geometrik yollar hakkında daha fazla bilgi için bkz. [geometriye genel bakış](geometry-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Animasyona Genel bakış](animation-overview.md)
-- [Yol animasyonu örneği](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Yol animasyon örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/PathAnimations)
 - [Yol Animasyonu ile İlgili Nasıl Yapılır Konuları](path-animation-how-to-topics.md)

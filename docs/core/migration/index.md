@@ -2,12 +2,12 @@
 title: Project. json ' dan .NET Core geçişi
 description: Project. JSON kullanarak eski bir .NET Core projesini geçirmeyi öğrenin
 ms.date: 07/19/2017
-ms.openlocfilehash: f81d01c052c3632c48a5f961be86eab686c2074e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8a9dc05c82fd5476a70ee36a294a287abbfb68c4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714352"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450693"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Project. json ' dan .NET Core projelerini geçirme
 
@@ -65,7 +65,7 @@ Geçerli veya üst dizinde *Global. JSON* dosyanız varsa ve belirttiği `sdk` s
 .NET Core geliştirme için DNX kullanmaya devam ediyorsanız, geçiş işleminiz iki aşamada yapılmalıdır:
 
 1. DNX 'ten Project-JSON etkin CLı 'ye geçiş yapmak için [mevcut DNX geçiş kılavuzunu](from-dnx.md) kullanın.
-2. *Project. JSON* ' dan *. csproj*'a geçiş yapmak için önceki bölümdeki adımları izleyin.  
+2. *Project. JSON* ' dan *. csproj*'a geçiş yapmak için önceki bölümdeki adımları izleyin.
 
 > [!NOTE]
 > DNX, .NET Core CLI Preview 1 sürümü sırasında resmi kullanım dışı duruma geldi.
@@ -80,7 +80,7 @@ Geçerli veya üst dizinde *Global. JSON* dosyanız varsa ve belirttiği `sdk` s
 - `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` ve `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` deyimlerini projenin üst ve alt kısmından kaldırın. Bu içeri aktarma deyimleri SDK tarafından kapsanıyor, bu nedenle projenin projede olması gerekmez.
 - Projenizdeki öğelerin `<PackageReference>` `Microsoft.NETCore.App` veya `NETStandard.Library` varsa, bunları kaldırmanız gerekir. Bu paket başvuruları [SDK tarafından kapsanıyor](https://aka.ms/sdkimplicitrefs).
 - Varsa `Microsoft.NET.Sdk` `<PackageReference>` öğesi kaldırın. SDK başvurusu, `<Project>` öğesindeki `Sdk` özniteliği aracılığıyla gelir.
-- [SDK tarafından kapsanan](../tools/csproj.md#default-compilation-includes-in-net-core-projects) [genelleştirmeler](https://en.wikipedia.org/wiki/Glob_(programming)) kaldırın. Derleme öğeleri yineleneceği için bu genelleştirmeler, projenizde bir hata oluşmasına neden olur.
+- [SDK tarafından kapsanan](../project-sdk/overview.md#default-compilation-includes) [genelleştirmeler](https://en.wikipedia.org/wiki/Glob_(programming)) kaldırın. Derleme öğeleri yineleneceği için bu genelleştirmeler, projenizde bir hata oluşmasına neden olur.
 
 Bu adımların ardından projenizin RTM .NET Core csproj biçimiyle tamamen uyumlu olması gerekir.
 
@@ -88,4 +88,4 @@ Eski csproj biçiminden yenisine geçişten önceki ve sonraki örneklere örnek
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Taşıma, geçirme ve Visual Studio projelerini yükseltme](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)
+- [Visual Studio projelerini bağlantı noktası, geçirme ve yükseltme](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)

@@ -4,12 +4,12 @@ description: Dizin oluşturucular C# ve bunların, bir veya daha fazla bağıms�
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 86e646b341cf098d8621f095d4bfc9ea2191940d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 966483e80d8dd0421dce1b7fabdb0d443d73a0fc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039113"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450888"
 ---
 # <a name="indexers"></a>Dizin Oluşturucular
 
@@ -175,7 +175,7 @@ public class DataSamples
 
 Tüm veri kümesinin bellek içi bir koleksiyona yüklenmesinin iyi nedenleri olduğu durumlarda, herhangi bir koleksiyon sıralamasını modellemek için bu tasarım deyimlerini takip edebilirsiniz. `Page` sınıfının, ortak arabirimin parçası olmayan özel bir iç içe sınıf olduğunu unutmayın. Bu ayrıntılar, bu sınıfın tüm kullanıcılarından gizlenir.
 
-### <a name="dictionaries"></a>sözlüğü
+### <a name="dictionaries"></a>Sözlükler
 
 Diğer bir yaygın senaryo, bir sözlüğü veya eşlemeyi modellemenize gerek duyduğunuzda olur. Bu senaryo, yazdığınız değerleri anahtar temelinde, genellikle metin anahtarlarına göre depoladığında olur. Bu örnek, komut satırı bağımsız değişkenlerini bu seçenekleri yöneten [lambda ifadelerine](delegates-overview.md) eşleyen bir sözlük oluşturur. Aşağıdaki örnekte iki sınıf gösterilmektedir: bir komut satırı seçeneğini bir `Action` temsilcisine eşleyen `ArgsActions` sınıfı ve bu seçenekle karşılaştığında her `Action` yürütmek için `ArgsActions` kullanan bir `ArgsProcessor`.
 
@@ -321,7 +321,7 @@ using CityDataMeasurements = System.Collections.Generic.Dictionary<string, Syste
 
 oluşturulan genel tür için bir *diğer ad* oluşturun. Bu deyimler daha sonra kodu daha sonra `Dictionary<DateTime, Measurements>` ve `Dictionary<string, Dictionary<DateTime, Measurements> >`genel yapımı yerine daha açıklayıcı `DateMeasurements` ve `CityDateMeasurements` adlarını kullanacak şekilde etkinleştirir. Bu yapı, `=` işaretinin sağ tarafında tam nitelikli tür adlarının kullanılmasını gerektirir.
 
-İkinci yöntem, koleksiyonlara dizin eklemek için kullanılan herhangi bir `DateTime` nesnesinin zaman kısımlarını bir kez çıkaramadır. .NET Framework yalnızca tarih türü içermez.
+İkinci yöntem, koleksiyonlara dizin eklemek için kullanılan herhangi bir `DateTime` nesnesinin zaman kısımlarını bir kez çıkaramadır. .NET yalnızca Tarih türünde bir tür içermez.
 Geliştiriciler `DateTime` türünü kullanır, ancak bu gündeki herhangi bir `DateTime` nesnesinin eşit olduğundan emin olmak için `Date` özelliğini kullanın.
 
 ## <a name="summing-up"></a>Toplam

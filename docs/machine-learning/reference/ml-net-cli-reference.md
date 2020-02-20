@@ -2,21 +2,21 @@
 title: ML.NET CLı komut başvurusu
 description: ML.NET CLı aracında otomatik eğitme komutuna genel bakış, örnekler ve başvuru.
 ms.date: 12/18/2019
-ms.openlocfilehash: 5e59eba91721b26622360818a73adb07a654dc28
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 537f8d361c170378f5fe8cf454320831d7c8cbf2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636126"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449705"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>ML.NET CLı komut başvurusu
 
-`auto-train` komutu, ML.NET CLı aracı tarafından sunulan ana komuttur. Komut otomatik makine öğrenimi (Otomatikml) kullanarak iyi bir kalite ML.NET modeli oluşturmanıza ve bu modeli çalıştırmak/skor yapmak için örnek C# kodu oluşturmanızı sağlar. Ayrıca, modelin eğiteme C# kodu, modelin algoritmasını ve ayarlarını araştırmanız için oluşturulur.
+`auto-train` komutu, ML.NET CLı aracı tarafından sunulan ana komuttur. Komut otomatik makine öğrenimi (Otomatikml) kullanarak iyi bir kalite ML.NET modeli oluşturmanıza ve bu modeli çalıştırmak/skor yapmak için C# örnek kodu oluşturmanızı sağlar. Ayrıca, modelin eğiteme C# kodu, modelin algoritmasını ve ayarlarını araştırmanız için oluşturulur.
 
 > [!NOTE]
 > Bu konu, şu anda önizleme aşamasında olan ML.NET CLı ve ML.NET oto ml 'ye başvurur ve malzemeler değişebilir.
 
-## <a name="overview"></a>Genel bakış
+## <a name="overview"></a>Genel Bakış
 
 Örnek kullanım:
 
@@ -145,7 +145,7 @@ Temel olarak, bir `validation dataset` ve `test dataset`kullanılırken, doğrul
 1. İlk bölümde, modellerinize göz atadınız ve doğrulama verilerini kullanarak en iyi şekilde gerçekleştirdiğiniz yaklaşımı seçersiniz (= doğrulama)
 2. Ardından seçili yaklaşımın doğruluğunu tahmin edersiniz (= test).
 
-Bu nedenle, verilerin ayrımı 80/10/10 veya 75/15/10 olabilir. Örneğin:
+Bu nedenle, verilerin ayrımı 80/10/10 veya 75/15/10 olabilir. Örnek:
 
 - `training-dataset` dosya verilerin %75 ' i olmalıdır.
 - `validation-dataset` dosya verilerin %15 ' i olmalıdır.
@@ -225,7 +225,7 @@ Aşağıdaki değerleri belirtebilirsiniz:
 
 `--cache` parametresini belirtmezseniz, varsayılan olarak önbellek `auto` yapılandırması kullanılacaktır.
 
-## <a name="name"></a>Name
+## <a name="name"></a>Adı
 
 `--name | -N` (dize)
 

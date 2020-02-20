@@ -4,12 +4,12 @@ description: .NET Core 'un programınızın çalışma zamanı sürümlerini oto
 author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
-ms.openlocfilehash: 546725db907937dea6fe0739656fb585a8855644
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 55f04ce81f63753831fca8fa2e44811c44049733
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713982"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451005"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Kullanılacak .NET Core sürümünü seçin
 
@@ -78,7 +78,7 @@ Belirli bir SDK, birlikte geldiği çalışma zamanının hedef çerçevesine ka
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Çerçeveye bağımlı uygulamalar ileri alma
 
-Bir uygulamayı [`dotnet run`](../tools/dotnet-run.md), [**çerçeveye bağlı bir dağıtımdan**](../deploying/index.md#framework-dependent-deployments-fdd) [`dotnet myapp.dll`](../tools/dotnet.md#description)veya `myapp.exe`olan [**çerçeveye bağlı bir yürütülebilirden**](../deploying/index.md#framework-dependent-executables-fde) çalıştırdığınızda, `dotnet` çalıştırılabilir dosya uygulamanın **ana bilgisayarı** olur.
+Bir uygulamayı [`dotnet run`](../tools/dotnet-run.md), [**çerçeveye bağlı bir dağıtımdan**](../deploying/index.md#publish-runtime-dependent) [`dotnet myapp.dll`](../tools/dotnet.md#description)veya `myapp.exe`olan [**çerçeveye bağlı bir yürütülebilirden**](../deploying/index.md#publish-runtime-dependent) çalıştırdığınızda, `dotnet` çalıştırılabilir dosya uygulamanın **ana bilgisayarı** olur.
 
 Konak makinede yüklü en son düzeltme eki sürümünü seçer. Örneğin, proje dosyanızda `netcoreapp2.0` belirttiyseniz ve en son .NET çalışma zamanı yüklü `2.0.4`, `2.0.4` çalışma zamanı kullanılır.
 
@@ -91,7 +91,7 @@ Birkaç kullanım örneği, 2,0 hedefliyorsanız davranışı gösterir:
 - 2,0 belirtildi. 2,0. * sürüm yüklendi. 2.2.2, en yüksek 2. x çalışma zamanı sürümü yüklenir. 2.2.2 kullanılır.
 - 2,0 belirtildi. 2\. x sürümü yüklü değil. 3.0.0 yüklendi. Bir hata iletisi görüntülenir.
 
-İkincil sürüm al-ileri, son kullanıcıları etkileyebilecek bir yan etkiye sahiptir. Aşağıdaki senaryoyu ele alalım:
+İkincil sürüm al-ileri, son kullanıcıları etkileyebilecek bir yan etkiye sahiptir. Şu senaryoyu göz önünde bulundurun:
 
 1. Uygulama, 2,0 'in gerekli olduğunu belirtir.
 2. Çalıştırıldığında, 2,0. * sürümü yüklü değildir, ancak 2.2.2. Sürüm 2.2.2 kullanılacak.
@@ -101,7 +101,7 @@ Birkaç kullanım örneği, 2,0 hedefliyorsanız davranışı gösterir:
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>Kendi içindeki dağıtımlar seçili çalışma zamanını içerir
 
-Bir uygulamayı [**kendi kendine dahil**](../deploying/index.md#self-contained-deployments-scd)edilen bir dağıtım olarak yayımlayabilirsiniz. Bu yaklaşım, uygulamanızla birlikte .NET Core çalışma zamanı ve kitaplıklarını paketler. Kendi içinde olan dağıtımlar çalışma zamanı ortamlarına bağımlılığı yoktur. Çalışma zamanı sürüm seçimi yayımlama zamanında gerçekleşir, çalışma zamanı değildir.
+Bir uygulamayı [**kendi kendine dahil**](../deploying/index.md#publish-self-contained)edilen bir dağıtım olarak yayımlayabilirsiniz. Bu yaklaşım, uygulamanızla birlikte .NET Core çalışma zamanı ve kitaplıklarını paketler. Kendi içinde olan dağıtımlar çalışma zamanı ortamlarına bağımlılığı yoktur. Çalışma zamanı sürüm seçimi yayımlama zamanında gerçekleşir, çalışma zamanı değildir.
 
 Yayımlama işlemi, belirtilen çalışma zamanı ailesinin en son düzeltme eki sürümünü seçer. Örneğin, .NET Core 2,0 çalışma zamanı ailesindeki en son düzeltme eki sürümüdür `dotnet publish` .NET Core 2.0.4 ' yi seçmeyecektir. Hedef Framework (en son yüklenen güvenlik düzeltme ekleri dahil) uygulamayla birlikte paketlenir.
 

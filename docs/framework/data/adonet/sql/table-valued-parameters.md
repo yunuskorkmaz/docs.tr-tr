@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 6c01453556a71925c322e9f9aef8065cbddb3540
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d99cea1641dc61c1cae6d6b1634359211ce788ae
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894393"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452311"
 ---
 # <a name="table-valued-parameters"></a>Tablo Değerli Parametreler
 Tablo değerli parametreler, bir istemci uygulamasından birden çok veri satırını, verilerin işlenmesine yönelik birden çok gidiş dönüş veya özel sunucu tarafı mantığı gerekmeden SQL Server için kolay bir yol sağlar. Bir istemci uygulamasındaki veri satırlarını kapsüllemek ve verileri sunucuya tek parametreli bir komutta göndermek için tablo değerli parametreleri kullanabilirsiniz. Gelen veri satırları, daha sonra Transact-SQL kullanılarak üzerinde çalışabilecek bir tablo değişkeninde depolanır.  
@@ -24,8 +24,8 @@ Tablo değerli parametreler, bir istemci uygulamasından birden çok veri satır
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|SQL Server Books Online 'da [tablo değerli parametreler (veritabanı altyapısı)](https://go.microsoft.com/fwlink/?LinkId=98363)|Tablo değerli parametrelerin nasıl oluşturulduğunu ve kullanıldığını açıklar.|  
-|SQL Server Books Online 'da [Kullanıcı tanımlı tablo türleri](https://go.microsoft.com/fwlink/?LinkId=98364)|Tablo değerli parametreleri bildirmek için kullanılan Kullanıcı tanımlı tablo türlerini açıklar.|  
+|[Tablo değerli parametreleri kullanın (veritabanı altyapısı)](/sql/relational-databases/tables/use-table-valued-parameters-database-engine)|Tablo değerli parametrelerin nasıl oluşturulduğunu ve kullanıldığını açıklar.|  
+|[Kullanıcı tanımlı tablo türleri](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|Tablo değerli parametreleri bildirmek için kullanılan Kullanıcı tanımlı tablo türlerini açıklar.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>SQL Server önceki sürümlerinde birden çok satır geçirme  
  Tablo değerli parametreler SQL Server 2008 ' e sunulmadan önce, bir saklı yordama veya parametreli bir SQL komutuna birden fazla veri satırı geçirme seçenekleri sınırlandı. Bir geliştirici, sunucuya birden çok satır geçirmek için aşağıdaki seçeneklerden birini seçebilir:  
@@ -34,12 +34,12 @@ Tablo değerli parametreler, bir istemci uygulamasından birden çok veri satır
   
 - Birden çok veri değerini ayrılmış dizelere veya XML belgelerine paketleyin ve sonra bu metin değerlerini bir yordama veya ifadeye geçirin. Bu yordam veya deyimin veri yapılarını doğrulamak ve değerleri yeniden paketlemek için gereken mantığı içermesini gerektirir.  
   
-- `Update` '<xref:System.Data.SqlClient.SqlDataAdapter>In yöntemini çağırarak oluşturulanlar gibi birden çok satırı etkileyen veri değişiklikleri için bir dizi tekil SQL deyimi oluşturun. Değişiklikler sunucuya ayrı ayrı veya toplu olarak gönderilebilir. Ancak, birden çok deyim içeren toplu işlemlere gönderilse bile, her bir deyim sunucu üzerinde ayrı olarak yürütülür.  
+- Bir <xref:System.Data.SqlClient.SqlDataAdapter>`Update` metodu çağırarak oluşturulanlar gibi birden çok satırı etkileyen veri değişiklikleri için bir dizi tekil SQL deyimi oluşturun. Değişiklikler sunucuya ayrı ayrı veya toplu olarak gönderilebilir. Ancak, birden çok deyim içeren toplu işlemlere gönderilse bile, her bir deyim sunucu üzerinde ayrı olarak yürütülür.  
   
-- Bir tabloya birçok veri satırı yüklemek <xref:System.Data.SqlClient.SqlBulkCopy> için yardımcıprogramprogramınıveyanesnesinikullanın.`bcp` Bu teknik çok verimli olsa da, veriler geçici bir tabloya veya tablo değişkenine yüklenmedikleri takdirde sunucu tarafı işlemeyi desteklemez.  
+- Birçok veri satırını bir tabloya yüklemek için `bcp` yardımcı programını veya <xref:System.Data.SqlClient.SqlBulkCopy> nesnesini kullanın. Bu teknik çok verimli olsa da, veriler geçici bir tabloya veya tablo değişkenine yüklenmedikleri takdirde sunucu tarafı işlemeyi desteklemez.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Tablo değerli parametre türleri oluşturma  
- Tablo değerli parametreler, Transact-SQL CREATE TYPE deyimleri kullanılarak tanımlanan, kesin türü belirtilmiş tablo yapılarını temel alır. İstemci uygulamalarınızda tablo değerli parametreleri kullanabilmeniz için bir tablo türü oluşturmanız ve yapıyı SQL Server tanımlamanız gerekir. Tablo türleri oluşturma hakkında daha fazla bilgi için, SQL Server Books Online 'daki [Kullanıcı tanımlı tablo türleri](https://go.microsoft.com/fwlink/?LinkID=98364) bölümüne bakın.  
+ Tablo değerli parametreler, Transact-SQL CREATE TYPE deyimleri kullanılarak tanımlanan, kesin türü belirtilmiş tablo yapılarını temel alır. İstemci uygulamalarınızda tablo değerli parametreleri kullanabilmeniz için bir tablo türü oluşturmanız ve yapıyı SQL Server tanımlamanız gerekir. Tablo türleri oluşturma hakkında daha fazla bilgi için bkz. [Kullanıcı tanımlı tablo türleri](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)).  
   
  Aşağıdaki ifade CategoryID ve CategoryName sütunlarından oluşan CategoryTableType adlı bir tablo türü oluşturur:  
   
@@ -86,9 +86,9 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 - Tablo değerli parametrelerin tasarımını değiştirmek için ALTER TABLE deyimlerini kullanamazsınız.  
   
 ## <a name="configuring-a-sqlparameter-example"></a>SqlParameter örneğini yapılandırma  
- <xref:System.Data.SqlClient><xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> veya nesnelerindentablo \  değerli parametrelerin doldurulmasına destek. <xref:System.Collections.Generic.IEnumerable%601> <xref:Microsoft.SqlServer.Server.SqlDataRecord> Öğesinin özelliğini<xref:System.Data.SqlClient.SqlParameter.TypeName%2A> kullanarak tablo değerli parametre için bir tür adı belirtmeniz gerekir. <xref:System.Data.SqlClient.SqlParameter> , `TypeName` Sunucuda daha önce oluşturulmuş olan uyumlu bir türün adıyla eşleşmelidir. Aşağıdaki kod parçası, verileri eklemek için nasıl <xref:System.Data.SqlClient.SqlParameter> yapılandırılacağını gösterir.  
+ <xref:System.Data.SqlClient>, <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> veya <xref:System.Collections.Generic.IEnumerable%601> \ nesnelerden tablo değerli parametrelerin doldurulmasının destekler.<xref:Microsoft.SqlServer.Server.SqlDataRecord> Bir <xref:System.Data.SqlClient.SqlParameter><xref:System.Data.SqlClient.SqlParameter.TypeName%2A> özelliğini kullanarak tablo değerli parametre için bir tür adı belirtmeniz gerekir. `TypeName`, sunucuda daha önce oluşturulmuş olan uyumlu bir türün adıyla eşleşmelidir. Aşağıdaki kod parçası, verileri eklemek için <xref:System.Data.SqlClient.SqlParameter> yapılandırmayı gösterir.  
  
-Aşağıdaki örnekte, `addedCategories` değişkeni bir <xref:System.Data.DataTable>içerir. Değişkenin nasıl doldurulduğuna bakmak için, bir sonraki bölümdeki örneklere bakın ve bir [saklı yordama tablo değerli parametre geçirirsiniz](#passing).
+Aşağıdaki örnekte `addedCategories` değişkeni bir <xref:System.Data.DataTable>içerir. Değişkenin nasıl doldurulduğuna bakmak için, bir sonraki bölümdeki örneklere bakın ve bir [saklı yordama tablo değerli parametre geçirirsiniz](#passing).
 
 ```csharp  
 // Configure the command and parameter.  
@@ -108,7 +108,7 @@ tvpParam.SqlDbType = SqlDbType.Structured
 tvpParam.TypeName = "dbo.CategoryTableType"  
 ```  
   
- Ayrıca, bu parçada gösterildiği gibi, veri <xref:System.Data.Common.DbDataReader> satırlarını tablo değerli bir parametreye akışı için öğesinden türetilmiş herhangi bir nesneyi de kullanabilirsiniz:  
+ Ayrıca, bu parçada gösterildiği gibi, veri satırlarını tablo değerli bir parametreye aktarmak için <xref:System.Data.Common.DbDataReader> türetilen herhangi bir nesneyi de kullanabilirsiniz:  
   
 ```csharp  
 // Configure the SqlCommand and table-valued parameter.  
@@ -129,7 +129,7 @@ tvpParam.SqlDbType = SqlDbType.Structured
 ```  
   
 ## <a name="passing"></a>Bir saklı yordama tablo değerli parametre geçirme  
- Bu örnek, bir saklı yordama tablo değerli parametre verilerinin nasıl geçirileceğini gösterir. Kod, <xref:System.Data.DataTable> <xref:System.Data.DataTable.GetChanges%2A> yöntemi kullanılarak eklenen satırları yeni içine ayıklar. Kodu daha sonra bir <xref:System.Data.SqlClient.SqlCommand>tanımlar, <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> özelliği olarak <xref:System.Data.CommandType.StoredProcedure>ayarlar. , <xref:System.Data.SqlClient.SqlParameter> Yöntemi<xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> kullanılarak doldurulur ve, <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> olarak `Structured`ayarlanır. Daha sonra <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> yöntemi kullanılarak yürütülür. <xref:System.Data.SqlClient.SqlCommand>  
+ Bu örnek, bir saklı yordama tablo değerli parametre verilerinin nasıl geçirileceğini gösterir. Kod, <xref:System.Data.DataTable.GetChanges%2A> yöntemi kullanılarak eklenen satırları yeni bir <xref:System.Data.DataTable> ayıklar. Kod daha sonra bir <xref:System.Data.SqlClient.SqlCommand>tanımlar ve <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> özelliğini <xref:System.Data.CommandType.StoredProcedure>olarak ayarlar. <xref:System.Data.SqlClient.SqlParameter>, <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> yöntemi kullanılarak doldurulur ve <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> `Structured`olarak ayarlanır. <xref:System.Data.SqlClient.SqlCommand> daha sonra <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> yöntemi kullanılarak yürütülür.  
   
 ```csharp  
 // Assumes connection is an open SqlConnection object.  
@@ -171,7 +171,7 @@ End Using
 ```  
   
 ### <a name="passing-a-table-valued-parameter-to-a-parameterized-sql-statement"></a>Parametreli bir SQL bildirimine tablo değerli parametre geçirme  
- Aşağıdaki örnek, dbo 'ya nasıl veri ekleneceğini gösterir. Veri kaynağı olarak tablo değerli parametreye sahip bir SELECT deyimini içeren bir INSERT deyimini kullanarak Kategoriler tablosu. Tablo değerli bir parametreyi parametreli bir SQL ifadesine geçirirken, <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> <xref:System.Data.SqlClient.SqlParameter>öğesinin yeni özelliğini kullanarak tablo değerli parametre için bir tür adı belirtmeniz gerekir. Bu `TypeName` , sunucuda daha önce oluşturulmuş olan uyumlu bir türün adıyla eşleşmelidir. Bu örnekteki kod, dbo içinde tanımlanan `TypeName` tür yapısına başvurmak için özelliğini kullanır. CategoryTableType.  
+ Aşağıdaki örnek, dbo 'ya nasıl veri ekleneceğini gösterir. Veri kaynağı olarak tablo değerli parametreye sahip bir SELECT deyimini içeren bir INSERT deyimini kullanarak Kategoriler tablosu. Tablo değerli bir parametreyi parametreli bir SQL ifadesine geçirirken, bir <xref:System.Data.SqlClient.SqlParameter>yeni <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> özelliğini kullanarak tablo değerli parametre için bir tür adı belirtmeniz gerekir. Bu `TypeName`, sunucuda daha önce oluşturulmuş olan uyumlu bir türün adıyla eşleşmelidir. Bu örnekteki kod, dbo içinde tanımlanan tür yapısına başvurmak için `TypeName` özelliğini kullanır. CategoryTableType.  
   
 > [!NOTE]
 > Tablo değerli bir parametrede kimlik sütunu için bir değer sağlarsanız, oturum için SET IDENTITY_INSERT ifadesini vermeniz gerekir.  
@@ -227,7 +227,7 @@ End Using
 ```  
   
 ## <a name="streaming-rows-with-a-datareader"></a>DataReader ile akış satırları  
- Ayrıca, veri satırlarını tablo değerli bir parametreye <xref:System.Data.Common.DbDataReader> akışı için öğesinden türetilmiş herhangi bir nesneyi kullanabilirsiniz. Aşağıdaki kod parçası, <xref:System.Data.OracleClient.OracleCommand> <xref:System.Data.OracleClient.OracleDataReader>ve kullanarak bir Oracle veritabanından veri almayı gösterir. Daha sonra kod, bir <xref:System.Data.SqlClient.SqlCommand> saklı yordamı tek bir giriş parametresiyle çağırmak üzere bir yapılandırır. <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> Öğesinin özelliği olarak ayarlanır`Structured`. <xref:System.Data.SqlClient.SqlParameter> , <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> `OracleDataReader` Sonuç kümesini saklı yordama tablo değerli bir parametre olarak geçirir.  
+ Ayrıca, tablo değerli bir parametreye veri satırları akışı için <xref:System.Data.Common.DbDataReader> türetilmiş herhangi bir nesneyi kullanabilirsiniz. Aşağıdaki kod parçası, bir <xref:System.Data.OracleClient.OracleCommand> ve <xref:System.Data.OracleClient.OracleDataReader>kullanarak bir Oracle veritabanından veri almayı gösterir. Kod daha sonra, tek bir giriş parametresiyle saklı yordam çağırmak için bir <xref:System.Data.SqlClient.SqlCommand> yapılandırır. <xref:System.Data.SqlClient.SqlParameter> <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> özelliği `Structured`olarak ayarlanmıştır. <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A>, `OracleDataReader` sonucu kümesini saklı yordama tablo değerli bir parametre olarak geçirir.  
   
 ```csharp  
 // Assumes connection is an open SqlConnection.  

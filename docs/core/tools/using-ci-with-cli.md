@@ -2,12 +2,12 @@
 title: .NET Core SDK ve araçlarla sürekli tümleştirme (CI)
 description: .NET Core SDK ve araçlarını sürekli tümleştirme ile yapı sunucusunda nasıl kullanacağınızı öğrenin.
 ms.date: 05/18/2017
-ms.openlocfilehash: bdb3913cbe588377d9fbee0f1c054e682629ac96
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 6e23a21dd36422a095e56519c9aa28ce2549f7b2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215226"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451044"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Sürekli tümleştirme (CI) içinde .NET Core SDK ve araçları kullanma
 
@@ -32,7 +32,7 @@ Yükleyici betiği, SDK 'nın istenen sürümünü getirmek ve yüklemek üzere 
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> Yükleyici betiği kullanılırken, yerel bağımlılıklar otomatik olarak yüklenmez. İşletim sisteminde yoksa yerel bağımlılıkları yüklemelisiniz. Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](../install/dependencies.md?tabs=netcore30&pivots=os-linux).
+> Yükleyici betiği kullanılırken, yerel bağımlılıklar otomatik olarak yüklenmez. İşletim sisteminde yoksa yerel bağımlılıkları yüklemelisiniz. Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](../install/dependencies.md).
 
 ## <a name="ci-setup-examples"></a>CI kurulum örnekleri
 

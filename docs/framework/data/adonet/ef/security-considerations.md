@@ -2,12 +2,12 @@
 title: Güvenlik konuları (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 9a560db5dbcb7a87a1c933febfb8bf676cc8816b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e2e1fc75049d41b50aa59092fe1aa21e8cdab659
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968410"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452493"
 ---
 # <a name="security-considerations-entity-framework"></a>Güvenlik konuları (Entity Framework)
 Bu konuda Entity Framework uygulamaları geliştirmeye, dağıtmaya ve çalıştırmaya özgü güvenlik konuları açıklanmaktadır. Ayrıca, güvenli .NET Framework uygulamalar oluşturmaya yönelik önerileri de izlemeniz gerekir. Daha fazla bilgi için bkz. [Güvenliğe genel bakış](../security-overview.md).  
@@ -27,7 +27,7 @@ Bu konuda Entity Framework uygulamaları geliştirmeye, dağıtmaya ve çalışt
  Oturum açma işlemi sırasında, Kullanıcı parolasını temel alan bilgiler, temel alınan veri kaynağının ağ kitaplıkları aracılığıyla sunucusuna geçirilir. Kötü amaçlı bir sağlayıcı Kullanıcı kimlik bilgilerini çalabilir, kötü amaçlı sorgular oluşturabilir veya sonuç kümesiyle daha fazla oynayabilir.  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>Hassas verileri korumak için bağlantınızı şifreleyin.  
- Entity Framework, veri şifrelemesini doğrudan işlemez. Kullanıcılar bir genel ağ üzerinden verilere erişebilirse, uygulamanızın güvenliği artırmak için veri kaynağıyla şifreli bir bağlantı kurması gerekir. Daha fazla bilgi için, veri kaynağınıza yönelik güvenlikle ilgili belgelere bakın. SQL Server veri kaynağı için bkz. [SQL Server bağlantıları şifreleme](https://go.microsoft.com/fwlink/?LinkId=119544).  
+ Entity Framework, veri şifrelemesini doğrudan işlemez. Kullanıcılar bir genel ağ üzerinden verilere erişebilirse, uygulamanızın güvenliği artırmak için veri kaynağıyla şifreli bir bağlantı kurması gerekir. Daha fazla bilgi için, veri kaynağınıza yönelik güvenlikle ilgili belgelere bakın. SQL Server veri kaynağı için bkz. [SQL Server bağlantıları şifreleme](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)).  
   
 #### <a name="secure-the-connection-string"></a>Bağlantı dizesinin güvenliğini sağlayın.  
  Veri kaynağınıza erişimi korumak, bir uygulamayı güvenli hale getirirken en önemli amaçlardan biridir. Bir bağlantı dizesi, güvenliği sağlanmayacaksa veya yanlış oluşturulursa, olası bir güvenlik açığı sunar. Bağlantı bilgilerini düz metin olarak depoladığınızda veya bellekte kalıcı hale getirikten, sisteminizin tamamını tehlikeye atdığınızda. Bağlantı dizelerini güvenli hale getirmek için önerilen yöntemler aşağıda verilmiştir:  
@@ -81,7 +81,7 @@ Bu konuda Entity Framework uygulamaları geliştirmeye, dağıtmaya ve çalışt
  Entity Framework herhangi bir güvenlik iznini zorlamaz ve güvenilir olup olmamasına bakılmaksızın işlem içinde Kullanıcı tarafından sağlanan veri nesne kodu çağırılır. İstemcinin kimlik doğrulamasının ve yetkilendirmesinin, veri deposu ve uygulamanız tarafından gerçekleştirildiğinden emin olun.  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>Tüm yapılandırma dosyalarına erişimi kısıtlayın.  
- Bir yöneticinin, enterprisesec. config, Security. config, Machine. conf ve uygulama yapılandırma dosyası \<*uygulama*> dahil olmak üzere bir uygulama için yapılandırma belirten tüm dosyalara yazma erişimini kısıtlamalı olması gerekir. exe. config.  
+ Bir yönetici, enterprisesec. config, Security. config, Machine. conf ve uygulama yapılandırma dosyası \<*application*>. exe. config dahil olmak üzere bir uygulama için yapılandırma belirten tüm dosyalara yazma erişimini kısıtlamalıdır.  
   
  Sağlayıcı sabit adı App. config dosyasında değiştirilebilir. İstemci uygulaması, bir güçlü ad kullanarak standart sağlayıcı fabrikası aracılığıyla temel sağlayıcıya erişim sorumluluğunu almalıdır.  
   

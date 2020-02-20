@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], getting binding objects from bound target properties
 - properties [WPF], getting binding objects from
 ms.assetid: 87974c5f-136b-4de7-b07d-9285b62ab123
-ms.openlocfilehash: cf2ddc93a7c46ee6956d2731a786289f64086360
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c528515124898c7deb6114e620ce21766123ab3c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976430"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453058"
 ---
 # <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a>Nasıl yapılır: Bağımlı Hedef Özelliğinden Bağlama Nesnesi Alma
 Bu örnek, bağlama nesnesinin bir veri bağlantılı hedef özelliğinden nasıl alınacağını gösterir.
@@ -25,7 +25,7 @@ Bu örnek, bağlama nesnesinin bir veri bağlantılı hedef özelliğinden nası
 
  Alternatif olarak, <xref:System.Windows.Data.BindingExpression> alabilir ve sonra <xref:System.Windows.Data.BindingExpression.ParentBinding%2A> özelliğinin değerini alabilirsiniz.
 
- Tüm örnek için bkz. [bağlama doğrulama örneği](https://go.microsoft.com/fwlink/?LinkID=159972).
+ Tüm örnek için bkz. [bağlama doğrulama örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/BindValidation).
 
 > [!NOTE]
 > Bağlamanız bir <xref:System.Windows.Data.MultiBinding>ise, <xref:System.Windows.Data.BindingOperations.GetMultiBinding%2A?displayProperty=nameWithType>kullanın. <xref:System.Windows.Data.PriorityBinding>, <xref:System.Windows.Data.BindingOperations.GetPriorityBinding%2A?displayProperty=nameWithType>kullanın. Hedef özelliğin <xref:System.Windows.Data.Binding>, bir <xref:System.Windows.Data.MultiBinding>veya <xref:System.Windows.Data.PriorityBinding>kullanarak bağlanıp bağlanmadığından emin değilseniz, <xref:System.Windows.Data.BindingOperations.GetBindingBase%2A?displayProperty=nameWithType>kullanabilirsiniz.

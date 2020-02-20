@@ -2,12 +2,12 @@
 title: Zaman Uyumsuz Uygulamalarda Yeniden Girişi İşleme
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: cd8b43aa9b2373b5ce038e5007678778201f0746
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 44c2cdbadd02aef6b2bbb32bde8bcb9b19f8360d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354273"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452584"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Zaman uyumsuz uygulamalarda yeniden girişi işleme (Visual Basic)
 
@@ -17,7 +17,7 @@ Uygulamanıza zaman uyumsuz kod eklediğinizde, işlem tamamlanmadan önce zaman
 > Örneği çalıştırmak için, bilgisayarınızda Visual Studio 2012 veya daha yeni bir sürümü ve .NET Framework 4,5 ya da daha yeni bir sürümü yüklü olmalıdır.
 
 > [!NOTE]
-> Aktarım Katmanı Güvenliği (TLS) sürüm 1,2 artık uygulama geliştirmede kullanılacak en düşük sürümdür. Uygulamanız 4,7 sürümünden önceki bir .NET Framework sürümünü hedefliyorsa, lütfen [.NET Framework Aktarım Katmanı Güvenliği (TLS) en iyi uygulamaları](../../../../framework/network-programming/tls.md) için aşağıdaki makaleye bakın 
+> Aktarım Katmanı Güvenliği (TLS) sürüm 1,2 artık uygulama geliştirmede kullanılacak en düşük sürümdür. Uygulamanız 4,7 sürümünden önceki bir .NET Framework sürümünü hedefliyorsa [.NET Framework Aktarım Katmanı Güvenliği (TLS) en iyi uygulamaları](../../../../framework/network-programming/tls.md)için aşağıdaki makaleye bakın.
 
 ## <a name="BKMK_RecognizingReentrancy"></a>Yeniden giriş tanıma
 

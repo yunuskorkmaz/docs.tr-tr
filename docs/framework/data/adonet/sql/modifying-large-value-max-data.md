@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: cb37fdb85d323d4f0816a3667a4624da8ec75e65
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 7ed036f5ad3a1c042ee277ecd2145f72746ef420
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76979852"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451843"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET İçinde Büyük Değerli (Maks) Verileri Değiştirme
 Büyük nesne (LOB) veri türleri, 8 kilobayt (KB) olan en büyük satır boyutunu aşacak olanlardır. SQL Server, 2 ^ 32 bayt kadar büyük değerler depolamaya izin vermek için `varchar`, `nvarchar`ve `varbinary` veri türleri için `max` belirleyicisi sağlar. Tablo sütunları ve Transact-SQL değişkenleri `varchar(max)`, `nvarchar(max)`veya `varbinary(max)` veri türlerini belirtebilir. ADO.NET ' de `max` veri türleri bir `DataReader`tarafından getirilebilir ve ayrıca özel bir işleme olmadan hem giriş hem de çıkış parametre değerleri olarak belirtilebilir. Büyük `varchar` veri türleri için veriler artımlı olarak alınabilir ve güncelleştirilir.  
@@ -19,9 +19,9 @@ Büyük nesne (LOB) veri türleri, 8 kilobayt (KB) olan en büyük satır boyutu
   
  Aşağıdaki tabloda SQL Server Books Online 'daki belgelerin bağlantıları verilmiştir.  
   
- **Books Online SQL Server**  
+ **SQL Server belgeleri**  
   
-1. [Büyük değer veri türlerini kullanma](https://go.microsoft.com/fwlink/?LinkId=120498)  
+1. [Büyük değer veri türlerini kullanma](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms178158(v=sql.100))  
   
 ## <a name="large-value-type-restrictions"></a>Büyük değer türü kısıtlamaları  
  Aşağıdaki kısıtlamalar, daha küçük veri türleri için mevcut olmayan `max` veri türleri için geçerlidir:  

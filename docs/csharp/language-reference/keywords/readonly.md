@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: f9fa6f893e7f999564c4dcb43d40755547d3c793
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c3db8f7791e510768608e834339526fb82771979
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713124"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451947"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# Başvurusu)
 
@@ -70,7 +70,7 @@ p2.y = 66;        // Error
 
 Derleyici hata iletisini alırsınız:
 
-`A readonly field cannot be assigned to (except in a constructor or a variable initializer)`
+**Salt okunur bir alana atama yapılamaz (Oluşturucu veya değişken başlatıcı içinde olması dışında)**
 
 ## <a name="readonly-struct-example"></a>ReadOnly struct örneği
 

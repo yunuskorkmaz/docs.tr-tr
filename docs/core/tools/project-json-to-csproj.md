@@ -3,12 +3,12 @@ title: Project. JSON ve csproj karşılaştırması
 description: Project. JSON ve csproj öğeleri arasındaki eşlemeyi görüntüleyin.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: c31590cf34990867b81af4d073846c2952928798
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714130"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451111"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Project. JSON ve csproj özellikleri arasındaki eşleme
 
@@ -30,7 +30,7 @@ Yeni biçim olan \*. csproj, XML tabanlı bir biçimdir. Aşağıdaki örnek, `M
 
 ## <a name="common-top-level-properties"></a>Ortak en üst düzey Özellikler
 
-### <a name="name"></a>{1&gt;name&lt;1}
+### <a name="name"></a>name
 
 ```json
 {
@@ -38,7 +38,7 @@ Yeni biçim olan \*. csproj, XML tabanlı bir biçimdir. Aşağıdaki örnek, `M
 }
 ```
 
-Artık desteklenmiyor. Csproj içinde, bu, genellikle dizin adıyla eşleşen proje dosya adı tarafından belirlenir. Örneğin: `MyProjectName.csproj`.
+Artık desteklenmiyor. Csproj içinde, bu, genellikle dizin adıyla eşleşen proje dosya adı tarafından belirlenir. Örneğin, `MyProjectName.csproj`.
 
 Varsayılan olarak, proje dosya adı `<AssemblyName>` ve `<PackageId>` özelliklerinin değerini de belirtir.
 
@@ -52,7 +52,7 @@ Varsayılan olarak, proje dosya adı `<AssemblyName>` ve `<PackageId>` özellikl
 `<AssemblyName>`, Project. JSON içinde `buildOptions\outputName` özelliği tanımlanmışsa `<PackageId>` farklı bir değere sahip olacaktır.
 Daha fazla bilgi için bkz. [diğer ortak derleme seçenekleri](#other-common-build-options).
 
-### <a name="version"></a>sürümü
+### <a name="version"></a>sürüm
 
 ```json
 {
@@ -337,7 +337,7 @@ MSBuild 'de, tüm projeler derleme sırasında *Taşınabilir* , ancak tek baş�
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
-Daha fazla bilgi için bkz. [kendi içindeki dağıtımlar (SCD)](../deploying/index.md#self-contained-deployments-scd).
+Daha fazla bilgi için bkz. [kendi içindeki dağıtımlar (SCD)](../deploying/index.md#publish-self-contained).
 
 ## <a name="tools"></a>araçlar
 

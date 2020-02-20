@@ -9,40 +9,40 @@ helpviewer_keywords:
 - filtering data in views [WPF]
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
-ms.openlocfilehash: ea49897ca5e9cb6b639cf7d98ff05bd287c51761
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f15bcfd1e3c4175f8b4b97244f120d5edbdec9b8
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453475"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453084"
 ---
 # <a name="how-to-filter-data-in-a-view"></a>Nasıl yapılır: Görünümde Veri Filtreleme
-This example shows how to filter data in a view.  
+Bu örnekte, bir görünümdeki verilerin nasıl filtreleneceği gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- To create a filter, define a method that provides the filtering logic. The method is used as a callback and accepts a parameter of type `object`. The following method returns all the `Order` objects with the `filled` property set to "No", filtering out the rest of the objects.  
+ Filtre oluşturmak için filtreleme mantığını sağlayan bir yöntem tanımlayın. Yöntemi, bir geri çağırma olarak kullanılır ve `object`türünde bir parametreyi kabul eder. Aşağıdaki yöntem, `filled` özelliği "Hayır" olarak ayarlanmış tüm `Order` nesnelerini döndürür ve nesnelerin geri kalanını filtreler.  
   
  [!code-csharp[SortFilter#2](~/samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#2)]
  [!code-vb[SortFilter#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#2)]  
   
- You can then apply the filter, as shown in the following example. In this example, `myCollectionView` is a <xref:System.Windows.Data.ListCollectionView> object.  
+ Ardından, aşağıdaki örnekte gösterildiği gibi filtreyi uygulayabilirsiniz. Bu örnekte, `myCollectionView` bir <xref:System.Windows.Data.ListCollectionView> nesnesidir.  
   
  [!code-csharp[SortFilter#Filter](~/samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#filter)]
  [!code-vb[SortFilter#Filter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#filter)]  
   
- To undo filtering, you can set the <xref:System.Windows.Data.CollectionView.Filter%2A> property to `null`:  
+ Filtrelemeyi geri almak için <xref:System.Windows.Data.CollectionView.Filter%2A> özelliğini `null`olarak ayarlayabilirsiniz:  
   
  [!code-csharp[SortFilter#Unfilter](~/samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#unfilter)]
  [!code-vb[SortFilter#Unfilter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#unfilter)]  
   
- For information about how to create or obtain a view, see [Get the Default View of a Data Collection](how-to-get-the-default-view-of-a-data-collection.md). For the complete example, see [Sorting and Filtering Items in a View Sample](https://go.microsoft.com/fwlink/?LinkID=160040).  
+ Bir görünüm oluşturma veya alma hakkında daha fazla bilgi için bkz. [veri koleksiyonunun varsayılan görünümünü alma](how-to-get-the-default-view-of-a-data-collection.md). Tüm örnek için bkz. [bir görünüm örneğinde öğeleri sıralama ve filtreleme](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/SortFilter).  
   
- If your view object comes from a <xref:System.Windows.Data.CollectionViewSource> object, you apply filtering logic by setting an event handler for the <xref:System.Windows.Data.CollectionViewSource.Filter> event. In the following example, `listingDataView` is an instance of <xref:System.Windows.Data.CollectionViewSource>.  
+ Görünüm nesneniz bir <xref:System.Windows.Data.CollectionViewSource> nesnesinden geliyorsa, <xref:System.Windows.Data.CollectionViewSource.Filter> olayı için bir olay işleyicisi ayarlayarak filtreleme mantığını uygularsınız. Aşağıdaki örnekte, `listingDataView` bir <xref:System.Windows.Data.CollectionViewSource>örneğidir.  
   
  [!code-csharp[DataBindingLab#10](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#10)]
  [!code-vb[DataBindingLab#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#10)]  
   
- The following shows the implementation of the example `ShowOnlyBargainsFilter` filter event handler. This event handler uses the <xref:System.Windows.Data.FilterEventArgs.Accepted%2A> property to filter out `AuctionItem` objects that have a `CurrentPrice` of $25 or greater.  
+ Aşağıda örnek `ShowOnlyBargainsFilter` Filter olay işleyicisi örneği verilmiştir. Bu olay işleyicisi, $25 veya daha büyük bir `CurrentPrice` sahip `AuctionItem` nesneleri filtrelemek için <xref:System.Windows.Data.FilterEventArgs.Accepted%2A> özelliğini kullanır.  
   
  [!code-csharp[DataBindingLab#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
  [!code-vb[DataBindingLab#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  

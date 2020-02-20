@@ -2,12 +2,12 @@
 title: SQL Server'da Saklı Yordam İmzalama
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 8dc62527be7273d3ce3222d4d261b81bc40b1e19
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0131655d06a6ef543ea460d04739401538cac04b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791804"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452363"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>SQL Server'da Saklı Yordam İmzalama
 
@@ -15,9 +15,9 @@ Dijital imza, imzalayanın özel anahtarıyla şifrelenmiş bir veri özetine sa
 
 Saklı yordamı sertifikayla veya asimetrik anahtarla imzalayabilirsiniz. Bu, izinler sahiplik zincirden devralınamayacağını veya dinamik SQL gibi sahiplik zinciri kopuk olduğunda senaryolar için tasarlanmıştır. Daha sonra sertifikayla eşlenmiş bir kullanıcı oluşturabilirsiniz, böylece saklı yordamın erişmesi gereken nesneler üzerinde sertifika Kullanıcı izinleri verebilirsiniz.
 
-Aynı sertifikayla eşlenmiş bir oturum açma da oluşturabilir ve ardından bu oturum açma için gerekli sunucu düzeyi izinleri verebilir ya da oturum açma bilgilerini bir veya daha fazla sabit sunucu rolüne ekleyebilirsiniz. Bu, daha üst düzey izinlerin gerekli `TRUSTWORTHY` olduğu senaryolar için veritabanı ayarının etkinleştirilmesini önlemek üzere tasarlanmıştır.
+Aynı sertifikayla eşlenmiş bir oturum açma da oluşturabilir ve ardından bu oturum açma için gerekli sunucu düzeyi izinleri verebilir ya da oturum açma bilgilerini bir veya daha fazla sabit sunucu rolüne ekleyebilirsiniz. Bu, üst düzey izinlerin gerekli olduğu senaryolar için `TRUSTWORTHY` veritabanı ayarının etkinleştirilmesini önlemek için tasarlanmıştır.
 
-Saklı yordam yürütüldüğünde, sertifika kullanıcısının izinlerini ve/veya arayanla birlikte oturum açma bilgilerini birleştirir SQL Server. `EXECUTE AS` Yan tümcesinin aksine, yordamın yürütme bağlamını değiştirmez. Oturum açma ve Kullanıcı adlarını döndüren yerleşik işlevler, sertifika kullanıcı adını değil, çağıranın adını döndürür.
+Saklı yordam yürütüldüğünde, sertifika kullanıcısının izinlerini ve/veya arayanla birlikte oturum açma bilgilerini birleştirir SQL Server. `EXECUTE AS` yan tümcesinin aksine, yordamın yürütme bağlamını değiştirmez. Oturum açma ve Kullanıcı adlarını döndüren yerleşik işlevler, sertifika kullanıcı adını değil, çağıranın adını döndürür.
 
 ## <a name="creating-certificates"></a>Sertifika oluşturma
 
@@ -54,8 +54,8 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın.
 
 |Kaynak|Açıklama|
 |--------------|-----------------|
-|SQL Server Books Online 'da [Modül oturumu açma](https://go.microsoft.com/fwlink/?LinkId=98590)|Modül imzalamayı açıklar, örnek bir senaryo ve ilgili Transact-SQL konularına bağlantılar sağlar.|
-|SQL Server Books Online 'daki [bir sertifikayla saklı yordamları imzalama](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate)|Bir saklı yordamı sertifikayla imzalamak için bir öğretici sağlar.|
+|[Modül Imzalama](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms345102(v=sql.100))|Modül imzalamayı açıklar, örnek bir senaryo ve ilgili Transact-SQL makalelerine bağlantılar sağlar.|
+|[Saklı yordamları bir sertifikayla imzalama](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate)|Bir saklı yordamı sertifikayla imzalamak için bir öğretici sağlar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -3,12 +3,12 @@ title: C# 7,0 C# kılavuzundaki yenilikler
 description: C# Dilin sürüm 7,0 ' deki yeni özelliklere genel bakış alın.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 73563a04dea04c942a6326d6a04ddd54bb80b0ed
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a6ac5c00ceb2ce8e5e56e2a86a8cde937d5108e2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694588"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448640"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7,0 sürümündeki yenilikler
 
@@ -40,7 +40,7 @@ Bu makalenin geri kalanında her özelliğe bir genel bakış sunulmaktadır. He
 1. [DotNet-TRY](https://github.com/dotnet/try/blob/master/README.md#setup) küresel aracını yükler.
 1. [DotNet/TRY-Samples](https://github.com/dotnet/try-samples) deposunu kopyalayın.
 1. *TRY-Samples* deposu için geçerli dizini *csharp7* alt dizinine ayarlayın.
-1. `dotnet try`'i çalıştırın.
+1. `dotnet try` öğesini çalıştırın.
 
 ## <a name="out-variables"></a>`out` değişkenleri
 
@@ -236,7 +236,7 @@ Bu ek, daha fazla ifade tabanlı kod yazmayı kolaylaştırır. Hata denetimi i�
 
 Zaman uyumsuz metotlardan `Task` bir nesne döndürmek, belirli yollarda performans sorunlarını ortaya çıkarabilir. `Task` bir başvuru türüdür, bu nedenle kullanmak bir nesne ayırmayı gösterir. `async` değiştiricisi ile belirtilen bir yöntemin önbelleğe alınmış bir sonuç döndürdüğü veya zaman uyumlu olarak tamamladığı durumlarda, ek ayırmalar kodun performans açısından kritik bölümlerinde önemli bir zaman maliyeti olabilir. Bu ayırmalar sıkı Döngülerde gerçekleşirse maliyetli hale gelebilir.
 
-Yeni dil özelliği, zaman uyumsuz yöntem dönüş türlerinin `Task`, `Task<T>`ve `void`sınırlı olmadığı anlamına gelir. Döndürülen tür zaman uyumsuz düzene uymalıdır, yani bir `GetAwaiter` yöntemi erişilebilir olmalıdır. Tek bir somut örnek olarak, bu yeni dil özelliğinden kullanımı sağlamak için `ValueTask` türü .NET Framework 'e eklenmiştir:
+Yeni dil özelliği, zaman uyumsuz yöntem dönüş türlerinin `Task`, `Task<T>`ve `void`sınırlı olmadığı anlamına gelir. Döndürülen tür zaman uyumsuz düzene uymalıdır, yani bir `GetAwaiter` yöntemi erişilebilir olmalıdır. Tek bir somut örnek olarak, bu yeni dil özelliğinin kullanılması için `ValueTask` türü .NET 'e eklenmiştir:
 
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 

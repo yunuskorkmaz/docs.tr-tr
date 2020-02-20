@@ -6,28 +6,28 @@ helpviewer_keywords:
 - graphics [WPF], lines
 - lines [WPF], drawing
 ms.assetid: 0513ee01-6b27-4bb3-85f3-3a3e6710d80e
-ms.openlocfilehash: c11dfb9523834ec2e622cb2e62bd6982a1a78fd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a803c1be01086ca8911ef4cc33bd67697239e2c0
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947660"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452954"
 ---
 # <a name="how-to-draw-a-line"></a>Nasıl yapılır: Çizgi Çizme
-Bu örnekte kullanarak çizgi çizmek gösterilmektedir <xref:System.Windows.Shapes.Line> öğesi.  
+Bu örnek, <xref:System.Windows.Shapes.Line> öğesini kullanarak nasıl çizgi çizileceğini gösterir.  
   
- Bir çizgi çizmek için oluşturma bir <xref:System.Windows.Shapes.Line> öğesi. Kullanın, <xref:System.Windows.Shapes.Line.X1%2A> ve <xref:System.Windows.Shapes.Line.Y1%2A> özellikleri, başlangıç noktası; ve kullanmak için kendi <xref:System.Windows.Shapes.Line.X2%2A> ve <xref:System.Windows.Shapes.Line.Y2%2A> uç noktasına ayarlamak için özellikler. Son olarak ayarlayın, <xref:System.Windows.Shapes.Shape.Stroke%2A> ve <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> çünkü bir çizgi görünmez.  
+ Çizgi çizmek için bir <xref:System.Windows.Shapes.Line> öğesi oluşturun. Başlangıç noktasını ayarlamak için <xref:System.Windows.Shapes.Line.X1%2A> ve <xref:System.Windows.Shapes.Line.Y1%2A> özelliklerini kullanın; ve <xref:System.Windows.Shapes.Line.X2%2A> ve <xref:System.Windows.Shapes.Line.Y2%2A> özelliklerini kullanarak bitiş noktasını ayarlayın. Son olarak, konturu olmayan bir çizgi görünmez olduğundan <xref:System.Windows.Shapes.Shape.Stroke%2A> ve <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> ayarlayın.  
   
- Ayar <xref:System.Windows.Shapes.Shape.Fill%2A> öğesi bir satır için hiçbir iç çizginin olmadığı için hiçbir etkiye sahiptir.  
+ Bir çizginin iç kısmı olmadığından, bir satır için <xref:System.Windows.Shapes.Shape.Fill%2A> öğesinin ayarlanması etkisizdir.  
   
- Aşağıdaki örnek üç satır içinde çizen bir <xref:System.Windows.Controls.Canvas> öğesi.  
+ Aşağıdaki örnek, <xref:System.Windows.Controls.Canvas> öğesinin içinde üç satır çizer.  
   
 ## <a name="example"></a>Örnek  
  [!code-xaml[drawingwithshapeelements#LineExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
   
- Bu örnek, daha büyük bir örnek bir parçasıdır; tam bir örnek için bkz. [şekil öğeleri örneği](https://go.microsoft.com/fwlink/?LinkID=160037).  
+ Bu örnek, daha büyük bir örneğin bir parçasıdır; Tüm örnek için bkz. [Şekil öğeleri örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Shapes.Line>
-- [Şekil öğeleri örneği](https://go.microsoft.com/fwlink/?LinkID=160037)
+- [Şekil öğeleri örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements)

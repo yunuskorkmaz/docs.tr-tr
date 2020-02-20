@@ -2,12 +2,12 @@
 title: Performans konuları (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 2b116a22c0f422377246d8cc0b2d647fd78a289b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 6cd0adb7963b3cfc05fcd6f30d8a7039a50f9485
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039853"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452467"
 ---
 # <a name="performance-considerations-entity-framework"></a>Performans konuları (Entity Framework)
 Bu konu, ADO.NET Entity Framework performans özelliklerini açıklar ve Entity Framework uygulamaların performansını artırmaya yardımcı olmak için bazı hususlar sağlar.  
@@ -15,7 +15,7 @@ Bu konu, ADO.NET Entity Framework performans özelliklerini açıklar ve Entity 
 ## <a name="stages-of-query-execution"></a>Sorgu yürütme aşamaları  
  Entity Framework sorguların performansını daha iyi anlamak için, bir sorgu kavramsal bir modelde yürütüldüğünde oluşan işlemleri anlamak ve verileri nesne olarak döndürmek yararlı olur. Aşağıdaki tabloda bu işlem dizisi açıklanmaktadır.  
   
-|Çalışma|Göreli maliyet|Sıklık|Açıklamalar|  
+|İşlem|Göreli maliyet|Frequency|Yorumlar|  
 |---------------|-------------------|---------------|--------------|  
 |Meta veriler yükleniyor|Düzey|Her uygulama etki alanında bir kez.|Entity Framework tarafından kullanılan model ve eşleme meta verileri bir <xref:System.Data.Metadata.Edm.MetadataWorkspace>yüklenir. Bu meta veriler genel olarak önbelleğe alınır ve aynı uygulama etki alanındaki diğer <xref:System.Data.Objects.ObjectContext> örnekleri için kullanılabilir.|  
 |Veritabanı bağlantısı açılıyor|Orta<sup>1</sup>|Gerektiğinde.|Veritabanına açık bir bağlantı değerli bir kaynak kullandığından, Entity Framework açılır ve veritabanı bağlantısını yalnızca gerektiğinde kapatır. Ayrıca bağlantıyı açık bir şekilde açabilirsiniz. Daha fazla bilgi için bkz. [bağlantıları ve Işlemleri yönetme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).|  
@@ -41,7 +41,7 @@ Bu konu, ADO.NET Entity Framework performans özelliklerini açıklar ve Entity 
  Sorgular kaynak kullanımı yoğun olabileceğinden, kodunuzun hangi noktada ve bir sorgunun yürütülebileceğini göz önünde bulundurun.  
   
 #### <a name="deferred-versus-immediate-execution"></a>Ertelenmiş ve anında yürütme  
- <xref:System.Data.Objects.ObjectQuery%601> veya LINQ sorgusu oluşturduğunuzda sorgu hemen yürütülemeyebilir. Sorgu yürütme, `foreach` (C#) veya`For Each`(Visual Basic) numaralandırması sırasında veya bir<xref:System.Collections.Generic.List%601>koleksiyonunu dolduracak şekilde atandığında, sonuçlar gerekene kadar ertelenir. Sorgu yürütme, bir <xref:System.Data.Objects.ObjectQuery%601> <xref:System.Data.Objects.ObjectQuery%601.Execute%2A> yöntemini çağırdığınızda veya <xref:System.Linq.Enumerable.First%2A> ya da <xref:System.Linq.Enumerable.Any%2A>gibi tek bir sorgu döndüren LINQ metodunu çağırdığınızda hemen başlar. Daha fazla bilgi için bkz. [nesne sorguları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)) ve [sorgu yürütme (LINQ to Entities)](./language-reference/query-execution.md).  
+ <xref:System.Data.Objects.ObjectQuery%601> veya LINQ sorgusu oluşturduğunuzda sorgu hemen yürütülemeyebilir. Sorgu yürütme, `foreach` (C#) veya `For Each` (Visual Basic) numaralandırması sırasında veya bir <xref:System.Collections.Generic.List%601> koleksiyonunu dolduracak şekilde atandığında, sonuçlar gerekene kadar ertelenir. Sorgu yürütme, bir <xref:System.Data.Objects.ObjectQuery%601> <xref:System.Data.Objects.ObjectQuery%601.Execute%2A> yöntemini çağırdığınızda veya <xref:System.Linq.Enumerable.First%2A> ya da <xref:System.Linq.Enumerable.Any%2A>gibi tek bir sorgu döndüren LINQ metodunu çağırdığınızda hemen başlar. Daha fazla bilgi için bkz. [nesne sorguları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)) ve [sorgu yürütme (LINQ to Entities)](./language-reference/query-execution.md).  
   
 #### <a name="client-side-execution-of-linq-queries"></a>LINQ sorgularının istemci tarafı yürütmesi  
  Bir LINQ sorgusunun yürütülmesi, veri kaynağını barındıran bilgisayarda gerçekleşse de, bir LINQ sorgusunun bazı kısımları istemci bilgisayarda değerlendirilemeyebilir. Daha fazla bilgi için, [sorgu yürütme (LINQ to Entities)](./language-reference/query-execution.md)konusunun mağaza yürütme bölümüne bakın.  
@@ -128,7 +128,7 @@ Bu konu, ADO.NET Entity Framework performans özelliklerini açıklar ve Entity 
   
  Çok büyük modellerle çalışırken aşağıdaki düşünce geçerlidir:  
   
- .NET meta veri biçimi, belirli bir ikilide bulunan Kullanıcı dizesi karakterlerinin sayısını 16.777.215 (0xFFFFFF) olarak sınırlar. Çok büyük bir model için görünümler oluşturuyorsanız ve görünüm dosyası bu boyut sınırına ulaşırsa, "daha fazla kullanıcı dizesi oluşturmak için mantıksal alan kalmadı." ifadesini görürsünüz. derleme hatası. Bu boyut sınırlaması tüm yönetilen ikililer için geçerlidir. Daha fazla bilgi için, büyük ve karmaşık modellerle çalışırken hatanın nasıl önleneceğini gösteren [bloga](https://go.microsoft.com/fwlink/?LinkId=201476) bakın.  
+ .NET meta veri biçimi, belirli bir ikilide bulunan Kullanıcı dizesi karakterlerinin sayısını 16.777.215 (0xFFFFFF) olarak sınırlar. Çok büyük bir model için görünümler oluşturuyorsanız ve görünüm dosyası bu boyut sınırına ulaşırsa, "daha fazla kullanıcı dizesi oluşturmak için mantıksal alan kalmadı." ifadesini görürsünüz. derleme hatası. Bu boyut sınırlaması tüm yönetilen ikililer için geçerlidir. Daha fazla bilgi için, büyük ve karmaşık modellerle çalışırken hatanın nasıl önleneceğini gösteren [bloga](https://docs.microsoft.com/archive/blogs/appfabriccat/solving-the-no-logical-space-left-to-create-more-user-strings-error-and-improving-performance-of-pre-generated-views-in-visual-studio-net4-entity-framework) bakın.  
   
 #### <a name="consider-using-the-notracking-merge-option-for-queries"></a>Sorgular için NoTracking birleştirme seçeneğini kullanmayı düşünün  
  Nesne bağlamındaki döndürülen nesneleri izlemek için gereken bir maliyet vardır. Nesnelerde yapılan değişiklikler algılanıyor ve aynı mantıksal varlık için birden çok isteğin aynı nesne örneğini döndürmesini sağlamak, nesnelerin bir <xref:System.Data.Objects.ObjectContext> örneğine eklenmesini gerektirir. Nesneler üzerinde güncelleştirme veya silme yapmayı planlamıyorsanız ve kimlik yönetimi gerektirmiyorsa, sorguları yürüttüğünüzde <xref:System.Data.Objects.MergeOption.NoTracking> birleştirme seçeneklerini kullanmayı düşünün.  
@@ -145,13 +145,13 @@ Bu konu, ADO.NET Entity Framework performans özelliklerini açıklar ve Entity 
  Uygulamanız, veri kaynağında oluşturma, güncelleştirme ve silme işlemlerini kalıcı hale getirmek için <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> bir dizi sorgu veya sıklıkla çağrı yürüttüğünde, Entity Framework sürekli olarak açılmaları ve veri kaynağına bağlantıyı kapatması gerekir. Bu durumlarda, bu işlemlerin başlangıcında bağlantıyı el ile açmayı ve işlemler tamamlandığında bağlantıyı kapatmayı ya da elden kaldırmayı düşünün. Daha fazla bilgi için bkz. [bağlantıları ve Işlemleri yönetme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
 ## <a name="performance-data"></a>Performans Verileri  
- Entity Framework ilişkin bazı performans verileri [ADO.NET ekip blogundan](https://go.microsoft.com/fwlink/?LinkId=91905)aşağıdaki gönderilerde yayımlanır:  
+ Entity Framework ilişkin bazı performans verileri [ADO.NET ekip blogundan](https://docs.microsoft.com/archive/blogs/adonet/)aşağıdaki gönderilerde yayımlanır:  
   
-- [ADO.NET Entity Framework performansını keşfetme-Bölüm 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
+- [ADO.NET Entity Framework performansını keşfetme-Bölüm 1](https://docs.microsoft.com/archive/blogs/adonet/exploring-the-performance-of-the-ado-net-entity-framework-part-1)  
   
-- [ADO.NET Entity Framework performansını keşfetme – Bölüm 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
+- [ADO.NET Entity Framework performansını keşfetme – Bölüm 2](https://docs.microsoft.com/archive/blogs/adonet/exploring-the-performance-of-the-ado-net-entity-framework-part-2)  
   
-- [ADO.NET Entity Framework performans karşılaştırması](https://go.microsoft.com/fwlink/?LinkID=123913)  
+- [ADO.NET Entity Framework performans karşılaştırması](https://docs.microsoft.com/archive/blogs/adonet/ado-net-entity-framework-performance-comparison)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

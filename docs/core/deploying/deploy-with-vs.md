@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 23dc0f691c8a8d80a0bd2a5d301ace0d129007af
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 11a322278ce3ff38964fe2fa389e0b4a58897ec4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920888"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449029"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio ile .NET Core uygulamaları dağıtma
 
@@ -24,7 +24,7 @@ Aşağıdaki bölümlerde, aşağıdaki dağıtım türlerini oluşturmak için 
 - Kendi içinde dağıtım
 - Üçüncü taraf bağımlılıklarla kendi kendine kapsanan dağıtım
 
-.NET Core uygulamaları geliştirmek için Visual Studio 'Yu kullanma hakkında bilgi için bkz. [.NET Core Dependencies ve Requirements](../install/dependencies.md?tabs=netcore30&pivots=os-windows).
+.NET Core uygulamaları geliştirmek için Visual Studio 'Yu kullanma hakkında bilgi için bkz. [.NET Core Dependencies ve Requirements](../install/dependencies.md?pivots=os-windows).
 
 ## <a name="framework-dependent-deployment"></a>Framework bağımlı dağıtım
 
@@ -110,7 +110,7 @@ Hata ayıklamayı tamamladıktan sonra, kendi içindeki dağıtımınızı yayı
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15,6 ve öncesi](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15,6 ve öncesi](#tab/vs156)
 
 Programı hata ayıkladıktan ve test ettikten sonra, hedeflediği her platform için uygulamanıza dağıtılacak dosyaları oluşturun.
 
@@ -150,7 +150,7 @@ Uygulamanızı Visual Studio 'dan yayımlamak için şunları yapın:
 
          1. **Yayımla** iletişim kutusunda **Yeni Profil oluştur** ' u seçin.
 
-         1. **Bir yayımlama hedefi seç** iletişim kutusunda, **klasör seçin** konumunu *Bin\release\publishoutput\win10-x64*olarak değiştirin. Seçin **Tamam**.
+         1. **Bir yayımlama hedefi seç** iletişim kutusunda, **klasör seçin** konumunu *Bin\release\publishoutput\win10-x64*olarak değiştirin. **Tamam**’ı seçin.
 
          1. Profiller listesinden yeni profili (**FolderProfile1**) seçin ve **hedef çalışma zamanının** `win10-x64`olduğundan emin olun. Değilse, **Ayarlar**' ı seçin. **Profil ayarları** iletişim kutusunda, **hedef çalışma zamanını** `win10-x64` olarak değiştirin ve **Kaydet**' i seçin. Aksi takdirde **iptal**' i seçin.
 
@@ -176,7 +176,7 @@ Bu proje için tüm *csproj* dosyası aşağıda verilmiştir.
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15,7 ve üzeri](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15,7 ve üzeri](#tab/vs157)
 
 Programı hata ayıkladıktan ve test ettikten sonra, hedeflediği her platform için uygulamanıza dağıtılacak dosyaları oluşturun. Bu, her hedef platform için ayrı bir profil oluşturmayı içerir.
 
@@ -274,7 +274,7 @@ Bir veya daha fazla üçüncü taraf bağımlılığı ile kendi içindeki bir d
 
 Bu proje için tüm *csproj* dosyası aşağıda verilmiştir:
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15,6 ve öncesi](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15,6 ve öncesi](#tab/vs156)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -289,7 +289,7 @@ Bu proje için tüm *csproj* dosyası aşağıda verilmiştir:
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15,7 ve üzeri](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15,7 ve üzeri](#tab/vs157)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

@@ -12,32 +12,32 @@ helpviewer_keywords:
 - animation [WPF], color of GradientStop objects
 - GradientStop objects [WPF], animating position of
 ms.assetid: 6f5b8b47-6c32-4b8e-98ee-fdf6515ec843
-ms.openlocfilehash: 4762233cace895c9d492fb426f3f6be14498ad53
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aeae33f5f3c8016808988f58d61969e9b6f05039
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593363"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452850"
 ---
 # <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>Nasıl yapılır: Gradyan Duraklarının Konumuna veya Rengine Animasyon Ekleme
-Bu örnek, animasyon ekleme işlemi gösterilmektedir <xref:System.Windows.Media.GradientStop.Color%2A> ve <xref:System.Windows.Media.GradientStop.Offset%2A> , <xref:System.Windows.Media.GradientStop> nesneleri.  
+Bu örnek, <xref:System.Windows.Media.GradientStop> nesnelerinin <xref:System.Windows.Media.GradientStop.Color%2A> ve <xref:System.Windows.Media.GradientStop.Offset%2A> nasıl hareketlendirileceğini gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek üç gradyan durağını içinde canlandırır bir <xref:System.Windows.Media.LinearGradientBrush>. Örnek üç animasyon, her biri farklı bir gradyan durağını canlandırır kullanır:  
+ Aşağıdaki örnek, <xref:System.Windows.Media.LinearGradientBrush>içinde üç gradyan durağını hareketlendirir. Örnek, her biri farklı bir gradyan durağını canlandırarak üç animasyon kullanır:  
   
-- İlk animasyon, bir <xref:System.Windows.Media.Animation.DoubleAnimation>, ilk gradyan durağının <xref:System.Windows.Media.GradientStop.Offset%2A> 0,0-1.0 0.0 yeniden. Sonuç olarak, ilk sağ tarafındaki dikdörtgenin sol taraftaki gradyan kaydırılır, renk ve ardından sol tarafa yeniden.  
+- İlk animasyon, bir <xref:System.Windows.Media.Animation.DoubleAnimation>, ilk gradyan durağının <xref:System.Windows.Media.GradientStop.Offset%2A> 0,0 ' den 1,0 ' ye ve ardından 0,0 ' a geri hareketlenir. Sonuç olarak, gradyanın ilk rengi, dikdörtgenin sol tarafından sağ tarafına ve ardından sol tarafa geri kayar.  
   
-- İkinci animasyon bir <xref:System.Windows.Media.Animation.ColorAnimation>, ikinci gradyan durağının <xref:System.Windows.Media.GradientStop.Color%2A> gelen <xref:System.Windows.Media.Colors.Purple%2A> için <xref:System.Windows.Media.Colors.Yellow%2A> ve ardından yeniden <xref:System.Windows.Media.Colors.Purple%2A>. Sonuç olarak, Orta Gradyan Rengi sarı ve mor dön mor değiştirir.  
+- İkinci animasyon, bir <xref:System.Windows.Media.Animation.ColorAnimation>, ikinci gradyan durağının <xref:System.Windows.Media.GradientStop.Color%2A> <xref:System.Windows.Media.Colors.Purple%2A> <xref:System.Windows.Media.Colors.Yellow%2A> ve daha sonra <xref:System.Windows.Media.Colors.Purple%2A>'e geri hareketlendirir. Sonuç olarak, gradyanın ortadaki rengi mor ve mor olarak değişir.  
   
-- Üçüncü animasyon, başka bir <xref:System.Windows.Media.Animation.ColorAnimation>, üçüncü gradyan durağının saydamlığını canlandırır <xref:System.Windows.Media.GradientStop.Color%2A> göre -1 ve ardından yeniden. Sonuç olarak, üçüncü bir renk gradyanı, kaybolur ve daha sonra yeniden donuk olur.  
+- Üçüncü animasyon, başka bir <xref:System.Windows.Media.Animation.ColorAnimation>, üçüncü gradyan durağının <xref:System.Windows.Media.GradientStop.Color%2A> saydamlığını-1 ve sonra geri hareketlendirir. Sonuç olarak, gradyanın üçüncü rengi kaybolur ve sonra yeniden donuk hale gelir.  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/GradientStopAnimationExample.cs#graphicsmmgradientanimationexampleswholepage)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/gradientstopanimationexample.vb#graphicsmmgradientanimationexampleswholepage)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/GradientStopAnimationExample.xaml#graphicsmmgradientanimationexampleswholepage)]  
   
- Bu örnekte rağmen bir <xref:System.Windows.Media.LinearGradientBrush>, aynı animasyon ekleme işlemidir <xref:System.Windows.Media.GradientStop> içindeki nesneleri bir <xref:System.Windows.Media.RadialGradientBrush>.  
+ Bu örnek bir <xref:System.Windows.Media.LinearGradientBrush>kullansa da, işlem <xref:System.Windows.Media.RadialGradientBrush>içindeki <xref:System.Windows.Media.GradientStop> nesneleri hareketlendirmek için aynıdır.  
   
- Diğer örnekler için [Fırçalar örnek](https://go.microsoft.com/fwlink/?LinkID=159973).  
+ Daha fazla örnek için bkz. [fırçalar örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Brushes).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

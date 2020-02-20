@@ -2,12 +2,12 @@
 title: .NET Core çalışma zamanı tanımlayıcısı (RID) kataloğu
 description: .NET Core 'da çalışma zamanı tanımlayıcısı (RID) ve RID 'Lerin nasıl kullanıldığı hakkında bilgi edinin.
 ms.date: 02/22/2019
-ms.openlocfilehash: 4369e263f1f46c73f04c65e4124f63c68d133520
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: feb19632f16a047ecfb2dcb697a9b837824a1929
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789903"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451739"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID kataloğu
 
@@ -27,9 +27,9 @@ Tek bir RID, proje dosyanızın `<RuntimeIdentifier>` öğesinde ayarlanabilir. 
 
 Somut işletim sistemlerini temsil eden RID 'Ler genellikle şu düzene uyar: burada `[os].[version]-[architecture]-[additional qualifiers]`:
 
-- `[os]`, işletim/platform sistem adıdır. Örneğin: `ubuntu`.
+- `[os]`, işletim/platform sistem adıdır. Örneğin, `ubuntu`.
 
-- `[version]`, işletim sistemi sürümü, noktayla ayrılmış (`.`) bir sürüm numarası biçiminde olur. Örneğin: `15.10`.
+- `[version]`, işletim sistemi sürümü, noktayla ayrılmış (`.`) bir sürüm numarası biçiminde olur. Örneğin, `15.10`.
 
   - Sürüm, genellikle farklı platform API yüzey alanı ile birlikte işletim sisteminin birden fazla ayrı sürümünü temsil ettiğinden, **Pazarlama sürümü olmamalıdır** .
 
@@ -108,7 +108,7 @@ Yalnızca ortak değerler listelenir. En son ve tüm sürüm için `dotnet/runti
   - `win10-arm`
   - `win10-arm64`
 
-Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](install/dependencies.md?tabs=netcore30&pivots=os-windows).
+Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](install/dependencies.md?pivots=os-windows).
 
 ## <a name="linux-rids"></a>Linux RID 'leri
 
@@ -126,7 +126,7 @@ Yalnızca ortak değerler listelenir. En son ve tüm sürüm için `dotnet/runti
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](install/dependencies.md?tabs=netcore30&pivots=os-linux).
+Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](install/dependencies.md?pivots=os-linux).
 
 ## <a name="macos-rids"></a>macOS RIDs
 
@@ -145,7 +145,7 @@ macOS 'Ler eski "OSX" markasını kullanır. Yalnızca ortak değerler listeleni
 - macOS 10,14 Mojave (.NET Core 1,1 veya sonraki sürümler)
   - `osx.10.14-x64`
 
-Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](install/dependencies.md?tabs=netcore30&pivots=os-macos).
+Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](install/dependencies.md?pivots=os-macos).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

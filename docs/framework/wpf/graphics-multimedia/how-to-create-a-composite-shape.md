@@ -9,15 +9,15 @@ helpviewer_keywords:
 - composite shapes [WPF]
 - graphics [WPF], composite shapes
 ms.assetid: 8e5c7ef4-d7ed-4c43-afc9-ca01325c300b
-ms.openlocfilehash: de9f7972c7a51ea623c3630fe62bb48f6109317e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c56053f2b07d6055deac5097a68fd7b80ad704ba
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052904"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452103"
 ---
 # <a name="how-to-create-a-composite-shape"></a>Nasıl yapılır: Bileşik Şekil Oluşturma
-Bu örnekte kullanarak bileşik şekil oluşturma işlemi gösterilmektedir <xref:System.Windows.Media.Geometry> nesneleri ve bunları görüntülemek kullanarak bir <xref:System.Windows.Shapes.Path> öğesi. Aşağıdaki örnekte, bir <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.EllipseGeometry>ve <xref:System.Windows.Media.RectangleGeometry> ile kullanılan bir <xref:System.Windows.Media.GeometryGroup> bileşik şekil oluşturma. Geometriler kullanılarak çizilir bir <xref:System.Windows.Shapes.Path> öğesi.  
+Bu örnek, <xref:System.Windows.Media.Geometry> nesneleri kullanarak bileşik şekillerin nasıl oluşturulduğunu ve <xref:System.Windows.Shapes.Path> bir öğesi kullanarak nasıl görüntüleneceğini gösterir. Aşağıdaki örnekte, bir <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.EllipseGeometry>ve bir <xref:System.Windows.Media.RectangleGeometry> bileşik şekil oluşturmak için <xref:System.Windows.Media.GeometryGroup> ile birlikte kullanılır. Geometriler daha sonra bir <xref:System.Windows.Shapes.Path> öğesi kullanılarak çizilir.  
   
 ## <a name="example"></a>Örnek  
  [!code-xaml[GeometrySample#19](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#19)]  
@@ -25,11 +25,11 @@ Bu örnekte kullanarak bileşik şekil oluşturma işlemi gösterilmektedir <xre
  [!code-csharp[GeometriesMiscSnippets_procedural_snip#CompositeShapeCodeExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/CSharp/CompositeShapeExample.cs#compositeshapecodeexampleinline1)]
  [!code-vb[GeometriesMiscSnippets_procedural_snip#CompositeShapeCodeExampleInline1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/visualbasic/compositeshapeexample.vb#compositeshapecodeexampleinline1)]  
   
- Önceki örnekte oluşturulan şekli aşağıda gösterilmiştir.  
+ Aşağıdaki çizimde, önceki örnekte oluşturulan Şekil gösterilmektedir.  
   
- ![GeometryGroup kullanılarak oluşturulan bir Birleşik Geometri](./media/wcpsdk-graphicsmm-compositegeometryexample1.jpg "wcpsdk_graphicsmm_compositegeometryexample1")  
-Birleşik Geometri  
+ ![GeometryGroup kullanılarak oluşturulan bileşik geometri](./media/wcpsdk-graphicsmm-compositegeometryexample1.jpg "wcpsdk_graphicsmm_compositegeometryexample1")  
+Bileşik geometri  
   
- Çokgen ve şekiller eğri kesimli gibi daha karmaşık şekiller kullanarak oluşturulabilir bir <xref:System.Windows.Media.PathGeometry>. Kullanma şekli oluşturmayı gösteren bir örnek için bir <xref:System.Windows.Media.PathGeometry>, bkz: [PathGeometry kullanarak şekil oluşturma](how-to-create-a-shape-by-using-a-pathgeometry.md).  Bu örnek ekran kullanarak bir şekil çizer rağmen bir <xref:System.Windows.Shapes.Path> öğesi <xref:System.Windows.Media.Geometry> nesneleri ayrıca içeriğini açıklamak için kullanılabilir bir <xref:System.Windows.Media.GeometryDrawing> veya <xref:System.Windows.Media.DrawingContext>. Bunlar, kırpma ve isabet sınaması için de kullanılabilir.  
+ <xref:System.Windows.Media.PathGeometry>kullanılarak çokgenler ve eğri kesimli şekiller gibi daha karmaşık şekiller oluşturulabilir. <xref:System.Windows.Media.PathGeometry>kullanarak şekil oluşturmayı gösteren bir örnek için, bkz. [PathGeometry kullanarak şekil oluşturma](how-to-create-a-shape-by-using-a-pathgeometry.md).  Bu örnek, <xref:System.Windows.Shapes.Path> bir öğesi kullanarak ekrana bir şekil çizer, ancak <xref:System.Windows.Media.Geometry> nesneleri, bir <xref:System.Windows.Media.GeometryDrawing> veya bir <xref:System.Windows.Media.DrawingContext>içeriğini anlatmak için de kullanılabilir. Bunlar, kırpma ve isabet testi için de kullanılabilir.  
   
- Bu örnek, daha büyük örnek bir parçasıdır; tam bir örnek için bkz. [geometri örneği](https://go.microsoft.com/fwlink/?LinkID=159989).
+ Bu örnek, daha büyük bir örnek parçasıdır; Tüm örnek için bkz. [geometriler örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Geometry).

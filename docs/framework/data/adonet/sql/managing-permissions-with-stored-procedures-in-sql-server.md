@@ -2,12 +2,12 @@
 title: SQL Server'da Saklı Yordam İzinlerini Yönetme
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 412d2a0a292e2ac83e6c42cf721c83e63633408c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 85383c46dd029db825d24d2f67d2dbda00f3bc95
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780959"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452389"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>SQL Server'da Saklı Yordam İzinlerini Yönetme
 Veritabanınızda birden çok savunma hattı oluşturmanın bir yöntemi, saklı yordamları veya Kullanıcı tanımlı işlevleri kullanarak tüm veri erişimini uygulamaktır. Tablolar gibi temeldeki nesneler için tüm izinleri iptal eder veya reddeder ve saklı yordamlarda yürütme izinleri verir. Bu, veri ve veritabanı nesneleriniz etrafında etkin bir güvenlik çevresi oluşturur.  
@@ -32,16 +32,16 @@ Veritabanınızda birden çok savunma hattı oluşturmanın bir yöntemi, saklı
 ## <a name="stored-procedure-execution"></a>Saklı yordam yürütme  
  Saklı yordamlar, kullanıcıların veritabanına erişim sağlamak için sahiplik zincirinden yararlanır ve böylece kullanıcılar veritabanı nesnelerine erişim için açık izne sahip olmaları gerekmez. Bir sahiplik zinciri birbirlerine her ardışık olarak erişen nesneler aynı kullanıcıya ait olduğunda oluşur. Örneğin, saklı yordam diğer saklı yordamları çağırabilir veya saklı yordam birden fazla tabloya erişebilir. Yürütme zincirindeki tüm nesneler aynı sahibe sahip ise SQL Server, yalnızca arayan için yürütme iznini denetler, çağıranın diğer nesneler üzerindeki izinleri değildir. Bu nedenle, yalnızca saklı yordamlarda yürütme izinleri vermeniz gerekir; temel alınan tablolardaki tüm izinleri iptal edebilir veya reddedebilirsiniz.  
   
-## <a name="best-practices"></a>En İyi Yöntemler  
+## <a name="best-practices"></a>En İyi Uygulamalar  
  Saklı yordamları yazmak, uygulamanızı yeterince güvenli hale getirmek için yeterli değildir. Ayrıca, aşağıdaki olası güvenlik boşluklarını de göz önünde bulundurmanız gerekir.  
   
 - Verilere erişebilmek istediğiniz veritabanı rollerinin saklı yordamları üzerinde yürütme izinleri verin.  
   
-- `public` Rol dahil olmak üzere veritabanındaki tüm roller ve kullanıcılar için temel alınan tabloların tüm izinlerini iptal edin veya reddedin. Tüm kullanıcılar izinleri herkese devralınır. Bu nedenle, izinleri `public` reddetme, yalnızca sahiplerin ve `sysadmin` üyelerin erişimi olduğu anlamına gelir; diğer tüm kullanıcılar diğer rollerdeki üyelikle izinleri almayacaktır.  
+- `public` rolü de dahil olmak üzere, veritabanındaki tüm roller ve kullanıcılar için temel alınan tabloların tüm izinlerini iptal edin veya reddedin. Tüm kullanıcılar izinleri herkese devralınır. Bu nedenle `public` izinleri reddetmek yalnızca sahipleri ve `sysadmin` üyelerinin erişime sahip olduğu anlamına gelir; diğer tüm kullanıcılar, diğer rollerdeki üyeliğinden izinleri devralmasını başaramadı.  
   
-- `sysadmin` Veya`db_owner` rollerine Kullanıcı veya rol eklemeyin. Sistem yöneticileri ve veritabanı sahipleri, tüm veritabanı nesnelerine erişebilir.  
+- `sysadmin` veya `db_owner` rollerine Kullanıcı veya rol eklemeyin. Sistem yöneticileri ve veritabanı sahipleri, tüm veritabanı nesnelerine erişebilir.  
   
-- `guest` Hesabı devre dışı bırakın. Bu, anonim kullanıcıların veritabanına bağlanmasını engeller. Yeni veritabanlarında Konuk hesabı varsayılan olarak devre dışıdır.  
+- `guest` hesabını devre dışı bırakın. Bu, anonim kullanıcıların veritabanına bağlanmasını engeller. Yeni veritabanlarında Konuk hesabı varsayılan olarak devre dışıdır.  
   
 - Hata işleme ve günlük hatalarını uygulayın.  
   
@@ -54,7 +54,7 @@ Veritabanınızda birden çok savunma hattı oluşturmanın bir yöntemi, saklı
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|SQL Server Books Online 'da [saklı yordamlar](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) ve [SQL ekleme](https://go.microsoft.com/fwlink/?LinkId=98234)|Konular, saklı yordamların nasıl oluşturulduğunu ve SQL ekleme 'nin nasıl çalıştığını açıklamaktadır.|  
+|[Saklı yordamlar](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) ve [SQL ekleme](/sql/relational-databases/security/sql-injection)|Makaleler, saklı yordamların nasıl oluşturulduğunu ve SQL ekleme 'nin nasıl çalıştığını açıklamaktadır.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

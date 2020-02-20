@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 917b51e0cf36cca45135fda4a084eb2bca62e835
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9495288658fa102df8f0fbd643e2fcdf49d8f3b3
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100687"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451986"
 ---
 # <a name="whats-new-in-net-core-22"></a>​.NET Core 2.2’deki yenilikler
 
@@ -18,7 +18,7 @@ ms.locfileid: "73100687"
 
 ## <a name="new-deployment-mode"></a>Yeni dağıtım modu
 
-.NET Core 2,2 ile başlayarak,. **DLL** dosyaları yerine **. exe** dosyaları olan [çerçeveye bağımlı yürütülebilir](../deploying/index.md#framework-dependent-executables-fde)dosyaları dağıtabilirsiniz. İşleve bağımlı dağıtımlara benzer şekilde, çerçeveye bağımlı yürütülebilir dosyalar (FDE), .NET Core 'un paylaşılan sistem genelindeki bir sürümünün çalışmasına de dayanmaktadır. Uygulamanız yalnızca kendi kodunuzu ve üçüncü taraf bağımlılıklarını içerir. Çerçeveye bağımlı dağıtımlardan farklı olarak, FDEs platforma özgüdür.
+.NET Core 2,2 ile başlayarak,. **DLL** dosyaları yerine **. exe** dosyaları olan [çerçeveye bağımlı yürütülebilir](../deploying/index.md#publish-runtime-dependent)dosyaları dağıtabilirsiniz. İşleve bağımlı dağıtımlara benzer şekilde, çerçeveye bağımlı yürütülebilir dosyalar (FDE), .NET Core 'un paylaşılan sistem genelindeki bir sürümünün çalışmasına de dayanmaktadır. Uygulamanız yalnızca kendi kodunuzu ve üçüncü taraf bağımlılıklarını içerir. Çerçeveye bağımlı dağıtımlardan farklı olarak, FDEs platforma özgüdür.
 
 Bu yeni dağıtım modu, bir kitaplık yerine yürütülebilir bir dosya oluşturmanın farklı avantajına sahiptir. Bu, uygulamanızı öncelikle `dotnet` çağırmadan doğrudan çalıştırabilmeniz anlamına gelir.
 

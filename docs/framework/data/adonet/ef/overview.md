@@ -2,12 +2,12 @@
 title: Entity Framework’e Genel Bakış
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: b68db4f139330ccc1da5057498a37a08d00ba266
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ff0c85da89c44834620831c041df3ccdcaf8282f
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738500"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452532"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework genel bakış
 
@@ -20,9 +20,9 @@ Entity Framework, geliştiricilerin bu verilerin bulunduğu temel veritabanı ta
 
  Fiziksel model, performansı artırmak için veritabanı yöneticileri tarafından iyileştirilmektedir, ancak uygulama kodu yazan programcılar öncelikle SQL sorguları yazarak ve saklı yordamları çağırarak kendi kendilerini mantıksal modelle çalışmaya göre sorgular. Etki alanı modelleri genellikle bir uygulamanın gereksinimlerini yakalamak ve iletişim kurmak için kullanılan bir araç olarak, bir projenin erken aşamalarında görüntülenen ve ele alınan ve daha sonra terk edilmiş bir şekilde, ve ardından bırakılmış bir uygulama için bir araç olarak kullanılır. Birçok geliştirme ekibi, bir kavramsal model oluşturmayı atlar ve ilişkisel bir veritabanındaki tabloları, sütunları ve anahtarları belirterek başlar.
 
- Entity Framework, geliştiricilerin etki alanı modelindeki varlıkları ve ilişkileri (Entity Framework *kavramsal* model olarak adlandırılır), bu işlemleri veri kaynağına çevirmek için Entity Framework bağlı olarak, bir yandan modeller sağlar – Belirli komutlar. Bu, uygulamaları belirli bir veri kaynağındaki sabit kodlanmış bağımlılıklardan boşaltır.
+ Entity Framework, geliştiricilerin etki alanı modelindeki varlıkları ve ilişkileri (Entity Framework *kavramsal* model olarak adlandırılır), bu işlemleri veri kaynağına özel komutlara çevirecek şekilde Entity Framework bağlı olarak, bir yandan modellerden elde etmenizi sağlar. Bu, uygulamaları belirli bir veri kaynağındaki sabit kodlanmış bağımlılıklardan boşaltır.
 
- Code First ile çalışırken kavramsal model, koddaki depolama modeliyle eşlenir. Entity Framework, kavramsal modeli, nesne türlerine ve tanımladığınız ek yapılandırmalara göre çıkarsalabilir. Eşleme meta verileri, etki alanı türlerinizi nasıl tanımladığınıza ve kodda sağladığınız ek yapılandırma bilgilerine göre çalışma zamanı sırasında oluşturulur. Entity Framework, meta verileri temel alarak veritabanını gereken şekilde oluşturur. Daha fazla bilgi için bkz. [kavramsal model oluşturma ve eşleme](https://go.microsoft.com/fwlink/?LinkID=235382).
+ Code First ile çalışırken kavramsal model, koddaki depolama modeliyle eşlenir. Entity Framework, kavramsal modeli, nesne türlerine ve tanımladığınız ek yapılandırmalara göre çıkarsalabilir. Eşleme meta verileri, etki alanı türlerinizi nasıl tanımladığınıza ve kodda sağladığınız ek yapılandırma bilgilerine göre çalışma zamanı sırasında oluşturulur. Entity Framework, meta verileri temel alarak veritabanını gereken şekilde oluşturur. Daha fazla bilgi için bkz. [model oluşturma](/ef/ef6/modeling/).
 
  Varlık Veri Modeli araçlarıyla çalışırken, kavramsal model, depolama modeli ve ikisi arasındaki eşlemeler, XML tabanlı şemalarda ifade edilir ve karşılık gelen ad uzantılarına sahip dosyalarda tanımlanır:
 
@@ -37,7 +37,7 @@ Depolama modeli ve eşlemeler, kavramsal modelde, veri sınıflarında veya uygu
 Entity Framework bu modeli ve eşleme dosyalarını, kavramsal modeldeki varlıklara ve ilişkilere yönelik olarak veri kaynağındaki eşdeğer işlemlere karşı oluşturma, okuma, güncelleştirme ve silme işlemleri için kullanır. Entity Framework, kavramsal modeldeki varlıkların veri kaynağındaki saklı yordamlara eşlenmesini de destekler. Daha fazla bilgi için bkz. [csdl, SSDL ve MSL belirtimleri](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).
 
 ## <a name="map-objects-to-data"></a>Nesneleri verilerle eşleme
- Nesne odaklı programlama, veri depolama sistemleriyle etkileşime geçmek için bir zorluk doğurur. Sınıfların organizasyonu ilişkisel veritabanı tablolarının organizasyonunu sıklıkla yansıtsa da, sığdırma kusursuz değildir. Birden çok normalleştirilmiş tablo sıklıkla tek bir sınıfa karşılık gelir ve sınıflar arasındaki ilişkiler genellikle tablolar arasındaki ilişkilerden farklı şekilde temsil edilir. Örneğin, bir satış siparişi için müşteriyi göstermek üzere bir `Order` sınıfı, bir `Customer` sınıfının örneğine başvuru içeren bir özellik kullanabilir, ancak veritabanındaki bir `Order` tablo satırı, bir değeri olan bir yabancı anahtar sütunu (veya sütun kümesi) içeriyorsa `Customer` tablosundaki bir birincil anahtar değerine karşılık gelir. Bir `Customer` sınıfı, `Order` sınıfının örneklerinin bir koleksiyonunu içeren `Orders` adında bir özelliğe sahip olabilir, ancak bir veritabanındaki `Customer` tablo, karşılaştırılabilir bir sütuna sahip değildir. Entity Framework, geliştiricilere bu şekilde ilişkileri temsil etme esnekliği sağlar veya veritabanında gösterildiği gibi ilişkileri daha yakından modelleyebilir.
+ Nesne odaklı programlama, veri depolama sistemleriyle etkileşime geçmek için bir zorluk doğurur. Sınıfların organizasyonu ilişkisel veritabanı tablolarının organizasyonunu sıklıkla yansıtsa da, sığdırma kusursuz değildir. Birden çok normalleştirilmiş tablo sıklıkla tek bir sınıfa karşılık gelir ve sınıflar arasındaki ilişkiler genellikle tablolar arasındaki ilişkilerden farklı şekilde temsil edilir. Örneğin, bir satış siparişi için müşteriyi göstermek üzere, bir `Order` sınıfı bir `Customer` sınıfının örneğine başvuru içeren bir özellik kullanabilir, ancak veritabanındaki bir `Order` tablo satırı, `Customer` tablosundaki birincil anahtar değerine karşılık gelen bir değere sahip bir yabancı anahtar sütunu (veya sütun kümesi) içerir. Bir `Customer` sınıfı, `Order` sınıfının örneklerinin bir koleksiyonunu içeren `Orders` adında bir özelliğe sahip olabilir, ancak bir veritabanındaki `Customer` tablo, karşılaştırılabilir bir sütuna sahip değildir. Entity Framework, geliştiricilere bu şekilde ilişkileri temsil etme esnekliği sağlar veya veritabanında gösterildiği gibi ilişkileri daha yakından modelleyebilir.
 
  Mevcut çözümler, genellikle "Impedance uyuşmazlığı" olarak adlandırılan ve yalnızca nesne odaklı sınıfları ve özellikleri ilişkisel tablo ve sütunlara eşleyerek bu boşluğu köprü oluşturmaya çalıştı. Entity Framework, bu geleneksel yaklaşımı almak yerine, mantıksal modellerdeki ilişkisel tabloları, sütunları ve yabancı anahtar kısıtlamalarını kavramsal modellerdeki varlıklara ve ilişkilere eşler. Bu, hem nesneleri tanımlamada hem de mantıksal modeli iyileştirirken daha fazla esneklik sağlar. Varlık Veri Modeli araçları, kavramsal modeli temel alan genişletilebilir veri sınıfları oluşturur. Bu sınıflar, geliştiricinin eklediği ek üyelerle genişletilebilen kısmi sınıflardır. Varsayılan olarak, belirli bir kavramsal model için oluşturulan sınıflar, varlıkları nesneler olarak görselleştirme ve değişiklikleri izleme ve kaydetme için hizmet sağlayan temel sınıflardan türetilir. Geliştiriciler bu sınıfları, ilişkilerle ilgili nesneler olarak varlıklar ve ilişkiler ile çalışmak için kullanabilir. Geliştiriciler bir kavramsal model için oluşturulan sınıfları da özelleştirebilir. Daha fazla bilgi için bkz. [nesneleriyle çalışma](working-with-objects.md).
 

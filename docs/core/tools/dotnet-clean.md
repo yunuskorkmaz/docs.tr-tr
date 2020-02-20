@@ -2,12 +2,12 @@
 title: DotNet temizleme komutu
 description: DotNet Clean komutu geçerli dizini temizler.
 ms.date: 06/26/2019
-ms.openlocfilehash: 736c0bba5d156e919534f1ad811641e815b3ffac
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 715a33a8a1aa13a2a76f9d4522413dcc72e4b4aa
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734244"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451362"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -17,7 +17,7 @@ ms.locfileid: "76734244"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
 `dotnet clean`-bir projenin çıkışını temizler.
 
@@ -33,7 +33,7 @@ dotnet clean [-h|--help]
 
 `dotnet clean` komutu, önceki derleme çıkışını temizler. Bir [MSBuild hedefi](/visualstudio/msbuild/msbuild-targets)olarak uygulanır, bu nedenle, komut çalıştırıldığında proje değerlendirilir. Yalnızca derleme sırasında oluşturulan çıktılar temizlenir. Ara (*obj*) ve nihai çıkış (*bin*) klasörleri temizlenir.
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
 `PROJECT | SOLUTION`
 
@@ -67,7 +67,7 @@ Temizleyen MSBuild projesi veya çözümü. Bir proje veya çözüm dosyası bel
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Belirtilen çalışma zamanının çıkış klasörünü temizler. Bu, [kendinden bağımsız bir dağıtım](../deploying/index.md#self-contained-deployments-scd) oluşturulduğu zaman kullanılır. .NET Core 2,0 SDK 'dan beri kullanılabilir seçeneği.
+  Belirtilen çalışma zamanının çıkış klasörünü temizler. Bu, [kendinden bağımsız bir dağıtım](../deploying/index.md#publish-self-contained) oluşturulduğu zaman kullanılır. .NET Core 2,0 SDK 'dan beri kullanılabilir seçeneği.
 
 * **`-v|--verbosity <LEVEL>`**
 

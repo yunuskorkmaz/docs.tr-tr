@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Action delegate, creating with lambda expression
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
-ms.openlocfilehash: d1b716e977702d03db176da70be00a1e5c789a4b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4e5be295a52edc1a7f0a0a3aa98f55335ae3e31b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129025"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453006"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>PLINQ ve TPL'deki Lambda İfadeleri
 
@@ -26,11 +26,11 @@ Görev paralel kitaplığı (TPL), giriş parametreleri olarak temsilci <xref:Sy
 
 ## <a name="func-delegate"></a>Func temsilcisi
 
-`Func` bir temsilci, bir değer döndüren bir yöntemi kapsüller. Bir Func imzasında, son veya en sağdaki tür parametresi her zaman dönüş türünü belirtir. Derleyici hatalarının yaygın nedenlerinden biri, <xref:System.Func%602?displayProperty=nameWithType>iki giriş parametresini geçirmeye çalışmektir; Aslında bu tür yalnızca bir giriş parametresi alır. Framework sınıf kitaplığı `Func`17 sürümlerini tanımlar: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType>, vb. <xref:System.Func%6017?displayProperty=nameWithType>.
+`Func` bir temsilci, bir değer döndüren bir yöntemi kapsüller. `Func` imzasında, son veya en sağdaki tür parametresi her zaman dönüş türünü belirtir. Derleyici hatalarının yaygın nedenlerinden biri, <xref:System.Func%602?displayProperty=nameWithType>iki giriş parametresini geçirmeye çalışmektir; Aslında bu tür yalnızca bir giriş parametresi alır. .NET `Func`17 sürümlerini tanımlar: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType>, vb. <xref:System.Func%6017?displayProperty=nameWithType>.
 
 ## <a name="action-delegate"></a>Eylem temsilcisi
 
-<xref:System.Action?displayProperty=nameWithType> temsilci, bir değeri döndürmeyen veya [void](../../csharp/language-reference/keywords/void.md)döndüren bir yöntemi (Visual Basic Sub) kapsüller. Bir eylem türü imzasında, tür parametreleri yalnızca giriş parametrelerini temsil eder. Func gibi, Framework sınıf kitaplığı, 16 türünde parametrelere sahip bir sürüm aracılığıyla hiçbir tür parametresi olmayan bir sürümden, eylemin 17 sürümlerini tanımlar.
+<xref:System.Action?displayProperty=nameWithType> bir temsilci, bir değeri döndürmeyen bir yöntemi (Visual Basic Sub) kapsüller. `Action` bir imzada tür parametreleri yalnızca giriş parametrelerini temsil eder. `Func`gibi, .NET, 16 tür parametrelere sahip bir sürüm aracılığıyla hiçbir tür parametresi olmayan bir sürümden `Action`17 sürümlerini tanımlar.
 
 ## <a name="example"></a>Örnek
 

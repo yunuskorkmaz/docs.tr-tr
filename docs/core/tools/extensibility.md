@@ -2,12 +2,12 @@
 title: .NET Core CLI genişletilebilirlik modeli
 description: .NET Core CLI nasıl genişletebileceğinizi öğrenin.
 ms.date: 04/12/2017
-ms.openlocfilehash: 74da895fb3a3f6c77640a2b9a64acdb2894a954b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 56a9cedc090ddca446c0ee1a60f2ca49590e7635
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920521"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451161"
 ---
 # <a name="net-core-cli-extensibility-model"></a>.NET Core CLI genişletilebilirlik modeli
 
@@ -32,7 +32,7 @@ CLı üç ana şekilde genişletilebilir:
 Yukarıda özetlenen üç genişletilebilirlik mekanizması dışlamalı değildir. Birini veya tümünü veya bunların bir bileşimini kullanabilirsiniz. Bunlardan biri, uzantınıza ulaşmayı denediğiniz hedefe büyük ölçüde bağlıdır.
 
 ## <a name="per-project-based-extensibility"></a>Proje tabanlı genişletilebilirlik
-Proje başına Araçlar, NuGet paketleri olarak dağıtılan [çerçeveye bağımlı dağıtımlardır](../deploying/index.md#framework-dependent-deployments-fdd) . Araçlar yalnızca bunlara başvuran ve bunların geri yüklendiği proje bağlamında kullanılabilir. Proje bağlamı dışında (örneğin, projeyi içeren dizinin dışında) çağırma başarısız olur çünkü komut bulunamıyor.
+Proje başına Araçlar, NuGet paketleri olarak dağıtılan [çerçeveye bağımlı dağıtımlardır](../deploying/index.md#publish-runtime-dependent) . Araçlar yalnızca bunlara başvuran ve bunların geri yüklendiği proje bağlamında kullanılabilir. Proje bağlamı dışında (örneğin, projeyi içeren dizinin dışında) çağırma başarısız olur çünkü komut bulunamıyor.
 
 Bu araçlar, derleme sunucuları için idealdir, çünkü proje dosyası dışında hiçbir şey gerekmez. Yapı işlemi, oluşturduğu proje için geri yüklemeyi çalıştırır ve araçlar kullanılabilir olacaktır. Her proje yalnızca belirli bir F#dilde yazıdıklarından, gibi dil projeleri de bu kategoride yer alabilir.
 

@@ -9,29 +9,29 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation with offset accumulation)
 - matrix animation with offset accumulation [WPF]
 ms.assetid: 1bca90ef-9832-4128-8ed6-62908e7ec146
-ms.openlocfilehash: 3e7b892e2a2215d26512850477844d71bce7fe09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b3975ef5031b50381dfa9baf7f34a58fc05ab4e
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922700"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453110"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation-with-offset-accumulation"></a>Nasıl yapılır: Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (Sapma Birikmesi ile Matris Animasyonu)
-Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> uzaklığı accumulate animasyonun bir nesnenin yol üzerinde animasyonunu oluşturma ve sınıf yinelenecek şekilde değerleri.  
+Bu örnek, bir nesnenin yol üzerinde animasyonunu yapmak için <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> sınıfının nasıl kullanılacağını gösterir ve animasyonun, yineleme değerlerini tekrarlandığı şekilde birikmesini sağlar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> animasyon uygulamak için nesne <xref:System.Windows.Media.MatrixTransform.Matrix%2A> özelliği bir <xref:System.Windows.Media.MatrixTransform> düğmeye uygulanır. Sonuç olarak, bir düğme eğri yola taşır.  
+ Aşağıdaki örnek, bir düğmeye uygulanan bir <xref:System.Windows.Media.MatrixTransform> <xref:System.Windows.Media.MatrixTransform.Matrix%2A> özelliğine animasyon eklemek için <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> nesnesini kullanır. Sonuç olarak, bir düğme eğri yol üzerinde taşınıyor.  
   
- Ayrıca, örnek ayarlar <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.IsOffsetCumulative%2A> özelliğini `true`, animasyonlu matris animasyonu yineler gibi accumulate uzaklığı neden olur. Uzaklık biriktirir olduğundan, düğme daha da esnetmenize için başlangıç konumu sıfırlama yerine, ekranın animasyonu yinelendiğinde arasında taşır.  
+ Buna ek olarak, örnek <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.IsOffsetCumulative%2A> özelliğini `true`olarak ayarlar, bu da animasyon yinelendikçe animasyonlu matrisin sapmasını birikmesine neden olur. Fark biriktiğinden, düğme, animasyon yinelendiğinde, başlangıç konumuna sıfırlamak yerine, ekran üzerinde daha fazla gider.  
   
  [!code-xaml[PathAnimationGallery_snippet#MatrixAnimationUsingPathOffsetCumulativeWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/matrixanimationusingpathexampleoffsetcumulative.xaml#matrixanimationusingpathoffsetcumulativewholepage)]  
   
  [!code-csharp[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathOffsetCumulativeWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/CSharp/MatrixAnimationUsingPathExampleOffsetCumulative.cs#matrixanimationusingpathoffsetcumulativewholepage)]
  [!code-vb[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathOffsetCumulativeWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/VisualBasic/MatrixAnimationUsingPathExampleOffsetCumulative.vb#matrixanimationusingpathoffsetcumulativewholepage)]  
   
- Ancak Not <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.IsOffsetCumulative%2A> özelliği repetitions ulaşıncaya kadar uzaklık değerleri neden olur, dönüş değerleri birikmesine neden olmaz. Accumulate dönüş değerleri için animasyonun ayarlayın <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> ve <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.IsAngleCumulative%2A> özelliklerine `true`.  
+ <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.IsOffsetCumulative%2A> özelliği, fark değerlerinin tekrarları üzerinden birikmesine neden olmasına rağmen, döndürme değerlerinin birikmesine neden olmaz. Döndürme değerlerinin birikmesini sağlamak için, animasyonun <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> ve <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.IsAngleCumulative%2A> özelliklerini `true`olarak ayarlayın.  
   
- Tam bir örnek için bkz. [yol animasyonu örneği](https://go.microsoft.com/fwlink/?LinkID=160028). Nasıl yapıldığını gösteren bir örnek için bir <xref:System.Windows.Media.Matrix> sapma birikmesi olmadan yol değeri için bkz: [bir nesne boyunca bir yolu (Matris Animasyonu) animasyon](how-to-animate-an-object-along-a-path-matrix-animation.md).  
+ Tüm örnek için bkz. [yol animasyon örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/PathAnimations). Bir <xref:System.Windows.Media.Matrix> değerinin, fark birikmesi olmadan yol boyunca nasıl hareketlendirileceğini gösteren bir örnek için, bkz. bir [nesneye animasyon ekleme (matris animasyonu)](how-to-animate-an-object-along-a-path-matrix-animation.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

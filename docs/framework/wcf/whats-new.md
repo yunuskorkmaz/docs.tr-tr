@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: e01b3a39a004e963e5bb66c5fa71433cb4e7204a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: b22266efe2e775acd04c400cf9da50bffab28183
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802381"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449510"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5'teki Yenilikler
 
@@ -36,7 +36,7 @@ WCF artık sözleşmenin ilk geliştirmeyi destekler. Svcutil. exe ' nin bir WSD
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>Taşınabilir alt küme projesinden Hizmet Başvurusu Ekle
 
-Taşınabilir alt küme projeleri, .NET derleme programcılarının tek bir kaynak ağacı ve derleme sistemi ile aynı zamanda birden çok .NET platformunu (Masaüstü, Silverlight, Windows Phone ve XBOX) desteklemeye devam etmektedir. Taşınabilir alt küme projeleri yalnızca .NET platformunda kullanılabilen .NET Framework derlemesi olan .NET taşınabilir kitaplıklarına başvurur. Geliştirici deneyimi, diğer herhangi bir WCF istemci uygulamasında bir hizmet başvurusu eklemekle aynıdır. Daha fazla bilgi için bkz. [Taşınabilir alt küme projesinde hizmet başvurusu Ekle](add-service-reference-in-a-portable-subset-project.md).
+Taşınabilir alt küme projeleri, .NET derleme programcılarının tek bir kaynak ağacı ve derleme sistemi ile aynı zamanda birden çok .NET platformunu (Masaüstü, Silverlight, Windows Phone ve Xbox) desteklemeye devam etmektedir. Taşınabilir alt küme projeleri yalnızca .NET platformunda kullanılabilecek derlemeler olan .NET taşınabilir kitaplıklarına başvurur. Geliştirici deneyimi, diğer herhangi bir WCF istemci uygulamasında bir hizmet başvurusu eklemekle aynıdır. Daha fazla bilgi için bkz. [Taşınabilir alt küme projesinde hizmet başvurusu Ekle](add-service-reference-in-a-portable-subset-project.md).
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET uyumluluk modu varsayılan olarak değiştirildi
 
@@ -78,7 +78,7 @@ WebSockets, TCP 'ye benzer performans özellikleriyle 80 ve 443 bağlantı nokta
 
 Aşağıdaki tablo, değişen ayarları ve ek bilgilerin nerede bulunacağını açıklar.
 
-|Özellik|Açık|Yeni varsayılan|Daha fazla bilgi için, bkz.|
+|Özellik|Açık|Yeni varsayılan|Daha fazla bilgi için bkz.|
 |--------------|--------|-----------------|------------------------------|
 |ChannelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 saniye|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * işlemci sayısı|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
@@ -114,7 +114,7 @@ WCF ikili Kodlayıcısı 4,5 ile başlayarak sıkıştırma için destek ekler. 
 
 ## <a name="udp"></a>UDP
 
-, Geliştiricilerin "yangın ve unut" iletilerini kullanan hizmetler yazmasına olanak tanıyan bir UDP taşıması için destek eklenmiştir. İstemci bir hizmete ileti gönderir ve hizmetten yanıt beklemez.
+, Geliştiricilerin "yangın ve unut" iletilerini kullanan hizmetler yazmasına olanak tanıyan bir UDP taşıması için destek eklenmiştir. İstemci, hizmete bir ileti gönderir ve hizmetten yanıt vermez.
 
 ## <a name="multiple-authentication-support"></a>Çoklu kimlik doğrulama desteği
 

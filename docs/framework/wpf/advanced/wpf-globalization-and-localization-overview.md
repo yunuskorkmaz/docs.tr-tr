@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 665daa14b543a357b17747a7d9d34dac2224711d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ba49b3ec0f6edebff6278f4e90ae22baba9f1edf
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124565"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452675"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış
 
@@ -186,7 +186,7 @@ Bu dosyayı düzenlemek için Unicode 'U destekleyen en sevdiğiniz CSV düzenle
 |ComboBox_1: System. Windows. Controls. ComboBox. $Content|ComboBox||
 |TextBlock_1: System. Windows. Controls. TextBlock. $Content|Metin|Bir program, klasör, belge veya Internet kaynağı adı yazın ve Windows bunu sizin için açar.|
 |TextBlock_2: System. Windows. Controls. TextBlock. $Content|Metin|Açın|
-|Window_1: System. Windows. Window. title|Başlık|Çalıştır|
+|Window_1: System. Windows. Window. title|Başlık|Çalıştırın|
 
 Uygulamayı Almanca olarak yerelleştirirken aşağıdaki Çeviriler gereklidir:
 
@@ -198,7 +198,7 @@ Uygulamayı Almanca olarak yerelleştirirken aşağıdaki Çeviriler gereklidir:
 |ComboBox_1: System. Windows. Controls. ComboBox. $Content|ComboBox||
 |TextBlock_1: System. Windows. Controls. TextBlock. $Content|Metin|Geben, adam EMS, Ordyalar, Dokuments Oder einer ınternetresource a.|
 |TextBlock_2: System. Windows. Controls. TextBlock. $Content|Metin|Öffnen:|
-|Window_1: System. Windows. Window. title|Başlık|Çalıştır|
+|Window_1: System. Windows. Window. title|Başlık|Çalıştırın|
 
 **Üretecek**
 
@@ -215,11 +215,11 @@ Almanya penceresinde, bu resources. dll ana derlemenin yanındaki bir de klasör
 |Kod|Orijinal Ingilizce BAML|Yerelleştirilmiş BAML|
 |Genel olarak nötr kaynaklar|Ingilizce 'deki diğer kaynaklar|Almanca 'ya yerelleştirilmiş diğer kaynaklar|
 
-.NET Framework, uygulamanın `Thread.CurrentThread.CurrentUICulture`göre hangi uydu kaynakları derlemesinin yükleneceğini otomatik olarak seçer. Bu, varsayılan olarak Windows işletim sisteminin kültürüne göre yapılır. Yani, Almanca Windows kullanıyorsanız, de-DE\MyDialog.resources.dll yüklenir, en-US\MyDialog.resources.dll yüklenir. Projenizin AssemblyInfo ' da NeutralResourcesLanguage ' i belirterek uygulamanız için en son geri dönüş kaynağını ayarlayabilirsiniz.\*. Örneğin şunu belirtirseniz:
+.NET, uygulamanın <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>göre hangi uydu kaynakları derlemesinin yükleneceğini otomatik olarak seçer. Bu, varsayılan olarak Windows işletim sisteminin kültürüne göre yapılır. Almanca Windows kullanıyorsanız, *de-DE\MyDialog.resources.dll* dosyası yüklenir. Ingilizce Windows kullanıyorsanız, *en-US\MyDialog.resources.dll* dosyası yüklenir. Projenizin *AssemblyInfo* dosyasında `NeutralResourcesLanguage` özniteliğini belirterek uygulamanız için en son geri dönüş kaynağını ayarlayabilirsiniz. Örneğin, şunu belirtirseniz:
 
 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]`
 
-daha sonra, de-DE\MyDialog.resources.dll veya de\MyDialog.resources.dll her ikisi de kullanılamazsa, en-US\MyDialog.resources.dll Almanca Windows ile kullanılacaktır.
+Aşağıdaki dosyaların hiçbiri kullanılabilir değilse, *en-US\MyDialog.resources.dll* dosyası Almanca Windows ile birlikte kullanılır: *de-DE\MyDialog.resources.dll* veya *DE\MyDialog.resources.dll*.
 
 ### <a name="microsoft-saudi-arabia-homepage"></a>Microsoft Suudi Arabistan giriş sayfası
 
@@ -267,7 +267,7 @@ Giriş sayfası. xaml 'ye göz atın, en üstteki <xref:System.Windows.Controls.
 
 Bu yorum, TextBlock_1 içeriğiyle ve LocBaml aracı durumunda (bkz. [bir uygulamayı yerelleştirin](how-to-localize-an-application.md)) ilişkili hale gelir. Bu, output. csv dosyasındaki TextBlock_1 satırının 6 sütununda görülebilir:
 
-|Kaynak anahtarı|Kategori|Ama|Düzenlenerek|Yorum|Değer|
+|Kaynak anahtarı|Kategori|Ama|Düzenlenerek|Açıklama|Değer|
 |-|-|-|-|-|-|
 |TextBlock_1: System. Windows. Controls. TextBlock. $Content|Metin|TRUE|TRUE|Bu karakter, dekoratif bir kural olarak kullanılır.|&#124;|
 
@@ -285,7 +285,7 @@ Okunabilirlik ve modifiyeteneğinin özniteliklerine ek olarak [!INCLUDE[TLA2#tl
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sağladığı varsayılan yerelleştirme öznitelikleri, kod aracılığıyla da geçersiz kılınabilir, bu sayede özel denetimlerin doğru varsayılan değerlerini doğru şekilde ayarlayabilirsiniz. Örneğin:
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sağladığı varsayılan yerelleştirme öznitelikleri, kod aracılığıyla da geçersiz kılınabilir, bu sayede özel denetimlerin doğru varsayılan değerlerini doğru şekilde ayarlayabilirsiniz. Örnek:
 
 ```csharp
 [Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]

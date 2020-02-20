@@ -2,29 +2,29 @@
 title: SQL Server'da Sorgu Bildirimleri
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 94171c8dac59fc17b0dd699d87fc043651fa5b7a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 11d9a1a800bea4224853a57b128ca89c9f2cf781
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791775"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452376"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server'da Sorgu Bildirimleri
 Hizmet Aracısı altyapısına inşa edildiğinde sorgu bildirimleri, veriler değiştiğinde uygulamalara bildirim gönderilmesini sağlar. Bu özellik özellikle bir Web uygulaması gibi bir veritabanından bilgi önbelleği sağlayan ve kaynak veriler değiştirildiğinde bildirilmesi gereken uygulamalar için yararlıdır.  
   
  ADO.NET kullanarak sorgu bildirimleri uygulayabileceğiniz üç yol vardır:  
   
-1. Düşük düzey uygulama, sunucu tarafı işlevselliğini kullanıma sunan `SqlNotificationRequest` sınıf tarafından sağlanır ve bir komut, bildirim isteğiyle birlikte yürütmelerine olanak tanır.  
+1. Düşük düzey uygulama, sunucu tarafı işlevselliği kullanıma sunan `SqlNotificationRequest` sınıfı tarafından sağlanır ve bir komut, bildirim isteğiyle birlikte yürütmelerine olanak tanır.  
   
-2. Üst düzey uygulama, kaynak uygulama ve SQL Server arasında `SqlDependency` yüksek düzeyde bir bildirim işlevselliği sağlayan sınıfı tarafından sağlanır ve bu sayede, içindeki değişiklikleri algılamak için bir bağımlılık kullanmanıza olanak sağlanır. Server. Çoğu durumda bu, SQL Server için .NET Framework Veri Sağlayıcısı kullanarak yönetilen istemci uygulamaları tarafından SQL Server bildirim yeteneğinin faydalanacak en basit ve en etkili yoldur.  
+2. Üst düzey uygulama, kaynak uygulama ve SQL Server arasında yüksek düzeyde bir bildirim işlevselliği sağlayan bir sınıf olan `SqlDependency` sınıfı tarafından sağlanır ve bu, sunucudaki değişiklikleri algılamak için bir bağımlılık kullanmanıza olanak sağlar. Çoğu durumda bu, SQL Server için .NET Framework Veri Sağlayıcısı kullanarak yönetilen istemci uygulamaları tarafından SQL Server bildirim yeteneğinin faydalanacak en basit ve en etkili yoldur.  
   
-3. Ayrıca, ASP.NET 2,0 veya üzeri kullanılarak oluşturulan Web uygulamaları `SqlCacheDependency` yardımcı sınıfları kullanabilir.  
+3. Ayrıca, ASP.NET 2,0 veya üzeri kullanılarak oluşturulan Web uygulamaları `SqlCacheDependency` yardımcı sınıflarını kullanabilir.  
   
  Sorgu bildirimleri, temel verilerdeki değişikliklere yanıt olarak, ekranları veya önbellekleri yenilemesi gereken uygulamalar için kullanılır. Microsoft SQL Server, .NET Framework uygulamaların SQL Server bir komut göndermesini ve aynı komutun yürütülmesi, başlangıçta alınanlardan farklı sonuç kümeleri üretmesi durumunda bildirim istemesi için izin verir. Sunucuda oluşturulan bildirimler daha sonra işlenmek üzere kuyruklarla gönderilir.  
   
  SELECT ve EXECUTE deyimlerine yönelik bildirimler ayarlayabilirsiniz. EXECUTE ifadesini kullanırken, SQL Server EXECUTE ifadesinin kendisi yerine yürütülen komut için bir bildirim kaydeder. Komutun, SELECT ifadesiyle ilgili gereksinimleri ve sınırlamaları karşılaması gerekir. Bildirimi kaydeden bir komut birden fazla ifade içeriyorsa, veritabanı altyapısı toplu işteki her bir bildirim için bir bildirim oluşturur.  
   
- Veriler değiştiğinde güvenilir alt-ikinci bildirimlere ihtiyacınız olan bir uygulama geliştiriyorsanız, planlama içindeki **etkili bir sorgu bildirimleri stratejisi planlama** ve **sorgu bildirimleri için alternatifler** planlama başlıklı bölümleri gözden geçirin. [ ](https://go.microsoft.com/fwlink/?LinkId=211984)SQL Server Books Online 'daki bildirimler konusu. Sorgu bildirimleri ve SQL Server Hizmet Aracısı hakkında daha fazla bilgi için, SQL Server Books Online 'daki konulara yönelik aşağıdaki bağlantılara bakın.  
+ Veriler değiştiğinde güvenilir alt-ikinci bildirimlere ihtiyacınız olan bir uygulama geliştiriyorsanız, **etkili bir sorgu bildirimleri stratejisi planlama** ve [bildirim planlaması](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms187528(v=sql.105)) makalesinde **sorgu bildirimlerinin alternatiflerini** planlama başlıklı bölümleri gözden geçirin. Sorgu bildirimleri ve SQL Server Hizmet Aracısı hakkında daha fazla bilgi için, SQL Server belgelerindeki makalelere yönelik aşağıdaki bağlantılara bakın.  
   
  **SQL Server belgeleri**  
   
@@ -49,17 +49,17 @@ Hizmet Aracısı altyapısına inşa edildiğinde sorgu bildirimleri, veriler de
  Sorgu sonuçlarının başlangıçta alınanlardan farklı olacağını nasıl algılayabileceğinizi gösterir.  
   
  [Bir SqlNotificationRequest ile SqlCommand Yürütme](sqlcommand-execution-with-a-sqlnotificationrequest.md)  
- Bir <xref:System.Data.SqlClient.SqlCommand> nesneyi sorgu bildirimiyle çalışacak şekilde yapılandırmayı gösterir.  
+ Bir <xref:System.Data.SqlClient.SqlCommand> nesnesinin sorgu bildirimiyle çalışması için nasıl yapılandırılacağını gösterir.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Data.Sql.SqlNotificationRequest>  
- <xref:System.Data.Sql.SqlNotificationRequest> Sınıfını ve tüm üyelerini açıklar.  
+ <xref:System.Data.Sql.SqlNotificationRequest> sınıfını ve tüm üyelerini açıklar.  
   
  <xref:System.Data.SqlClient.SqlDependency>  
- <xref:System.Data.SqlClient.SqlDependency> Sınıfını ve tüm üyelerini açıklar.  
+ <xref:System.Data.SqlClient.SqlDependency> sınıfını ve tüm üyelerini açıklar.  
   
  <xref:System.Web.Caching.SqlCacheDependency>  
- <xref:System.Web.Caching.SqlCacheDependency> Sınıfını ve tüm üyelerini açıklar.  
+ <xref:System.Web.Caching.SqlCacheDependency> sınıfını ve tüm üyelerini açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

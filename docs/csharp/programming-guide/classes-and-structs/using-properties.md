@@ -6,12 +6,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 5f4697ea518e7fe03df4ecac9d748386a8ac6313
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d873f626b660bb6bd94710add4543e21e11823d6
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705411"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452025"
 ---
 # <a name="using-properties-c-programming-guide"></a>Özellikleri Kullanma (C# Programlama Kılavuzu)
 
@@ -53,7 +53,7 @@ Otomatik uygulanan özellikler basit özellik bildirimleri için Basitleştirilm
 
 ## <a name="the-set-accessor"></a>Set erişimcisi
 
-`set` erişimcisi, dönüş türü [void](../../language-reference/keywords/void.md)olan bir yönteme benzer. Türü özelliğin türü olan `value`adlı örtük bir parametre kullanır. Aşağıdaki örnekte, `Name` özelliğine bir `set` erişimcisi eklenmiştir:
+`set` erişimcisi, dönüş türü [void](../../language-reference/builtin-types/void.md)olan bir yönteme benzer. Türü özelliğin türü olan `value`adlı örtük bir parametre kullanır. Aşağıdaki örnekte, `Name` özelliğine bir `set` erişimcisi eklenmiştir:
 
 [!code-csharp[csProgGuideProperties#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#12)]
 
@@ -109,6 +109,6 @@ Bu örnekte, iki sınıf, `Cube` ve `Square`, soyut bir sınıfı uygular `Shape
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Veri Erişimi](properties.md)
+- [Özellikler](properties.md)
 - [Arabirim Özellikleri](interface-properties.md)
 - [Otomatik Uygulanan Özellikler](auto-implemented-properties.md)

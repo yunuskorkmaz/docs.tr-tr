@@ -8,120 +8,120 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: b97c926da28eeb5385de71362a6cbc064ccc20cd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5a9ca51b87f73a24b90d0bd843ee306f8a1b970a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615434"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453097"
 ---
 # <a name="custom-animations-overview"></a>Özel Animasyonlara Genel Bakış
-Bu konu nasıl ve ne zaman açıklar genişletmek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon sistem özel anahtar çerçeveler, animasyon sınıfları oluşturarak veya onu atlamak için çerçeve başına geri çağırma kullanarak.  
+Bu konu, özel anahtar çerçeveler, animasyon sınıfları oluşturarak veya bunu atlamak için çerçeve başına geri çağırma kullanarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon sisteminin nasıl ve ne zaman genişletileceğini açıklar.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konuda anlamak için farklı türdeki tarafından sağlanan animasyonları tanımanız gerekir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Daha fazla bilgi için bkz: u animasyonlarına genel bakış [anahtar-çerçeve animasyonlara genel bakış](key-frame-animations-overview.md)ve [yol animasyonlarına genel bakış](path-animations-overview.md).  
+ Bu konuyu anlamak için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]tarafından sunulan farklı animasyon türleri hakkında bilgi sahibi olmanız gerekir. Daha fazla bilgi için bkz. From/To/By animasyonlara genel bakış, [anahtar çerçeve Animasyonlarına Genel](key-frame-animations-overview.md)bakış ve [yol animasyonlara genel](path-animations-overview.md)bakış.  
   
- Animasyon sınıfları <xref:System.Windows.Freezable> sınıfı olmanız gerekir aşina <xref:System.Windows.Freezable> nesneleri ve devralınacak nasıl <xref:System.Windows.Freezable>. Daha fazla bilgi için [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md).  
+ Animasyon sınıfları <xref:System.Windows.Freezable> sınıfından devraldığı için, <xref:System.Windows.Freezable> nesneleri ve <xref:System.Windows.Freezable>nasıl devraldığı hakkında bilgi sahibi olmanız gerekir. Daha fazla bilgi için bkz. [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md).  
   
 <a name="extendingtheanimationsystem"></a>   
 ## <a name="extending-the-animation-system"></a>Animasyon sistemini genişletme  
- Birçok genişletin yoldan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanmak istediğiniz yerleşik işlevsellik düzeyine bağlı olarak, animasyon sistemi.  Üç birincil genişletilebilirlik noktaları vardır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon altyapısı:  
+ Kullanmak istediğiniz yerleşik işlevselliğin düzeyine bağlı olarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon sistemini genişletmek için çeşitli yollar vardır.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon altyapısında üç birincil genişletilebilirlik noktası vardır:  
   
-- Birinden devralan bir özel anahtar çerçeve nesnesi oluşturma  *\<türü >* gibi ana kare sınıfları <xref:System.Windows.Media.Animation.DoubleKeyFrame>. Bu yaklaşım yerleşik işlevselliğinin kullanır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon altyapısı.  
+- <xref:System.Windows.Media.Animation.DoubleKeyFrame>gibi *\<türü >* ana kare sınıflarından birinden devralarak özel bir anahtar çerçeve nesnesi oluşturun. Bu yaklaşım [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon altyapısının yerleşik işlevlerinin çoğunu kullanır.  
   
-- Kendi animasyon sınıfı devralarak oluşturma <xref:System.Windows.Media.Animation.AnimationTimeline> veya biri  *\<türü >* AnimationBase sınıfları.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline> veya *\<türünden birini >* AnimationBase sınıflarından devralarak kendi animasyon sınıfınızı oluşturun.  
   
-- Çerçeve başına geri çağırma çerçeve başına temelinde animasyonları oluşturmak için kullanın. Bu yaklaşım, animasyon ve zamanlama sistemi tamamen atlar.  
+- Çerçeve başına, animasyon oluşturmak için kare başına geri çağırma kullanın. Bu yaklaşım, animasyon ve zamanlama sistemini tamamen atlar.  
   
- Aşağıdaki tabloda, bazı animasyon sistemini genişletmek için senaryoları açıklar.  
+ Aşağıdaki tabloda, animasyon sisteminin genişlemesiyle ilgili bazı senaryolar açıklanmaktadır.  
   
-|Ne yapmak istiyorsunuz?|Bu yaklaşımı kullanın|  
+|İstediğiniz zaman...|Bu yaklaşımı kullanın|  
 |-------------------------|-----------------------|  
-|Karşılık gelen bir tür değerleri arasında enterpolasyon özelleştirme  *\<türü >* AnimationUsingKeyFrames|Özel anahtar çerçevesi oluşturun. Daha fazla bilgi için [bir özel anahtar çerçeve oluşturma](#createacustomkeyframe) bölümü.|  
-|Daha fazlasını karşılık gelen bir tür değerleri arasında enterpolasyon özelleştirme  *\<türü >* animasyon.|Devralınan özel animasyon sınıfı oluşturma  *\<türü >* animasyon uygulamak istediğiniz türüne karşılık gelen AnimationBase sınıfı. Daha fazla bilgi için [özel animasyon sınıfı oluşturma](#createacustomanimationtype) bölümü.|  
-|Karşılık gelen bir yok türü hareketlendirme [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon|Kullanım bir <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> veya devralınan bir sınıf oluşturmanız <xref:System.Windows.Media.Animation.AnimationTimeline>. Daha fazla bilgi için [özel animasyon sınıfı oluşturma](#createacustomanimationtype) bölümü.|  
-|Her hesaplanan değerlerle birden fazla nesne çerçeve ve son nesne etkileşimlerini kümesini temel alarak Canlandır|Çerçeve başına geri çağırma kullanın. Daha fazla bilgi için [kullanım çerçeve başına geri çağırma oluşturun](#useperframecallback) bölümü.|  
+|Karşılık gelen bir *\<türüne*sahip bir türün değerleri arasındaki ilişkilendirmeyi Özelleştirme > AnimationUsingKeyFrames|Özel bir anahtar çerçevesi oluşturun. Daha fazla bilgi için [özel anahtar çerçevesi oluşturma](#createacustomkeyframe) bölümüne bakın.|  
+|Karşılık gelen *\<türü >* animasyonuna sahip olan bir türün değerleri arasında ilişkilendirmeden fazlasını özelleştirin.|Hareketlendirmek istediğiniz türe karşılık gelen *\<türü >* AnimationBase sınıfından devralan özel bir animasyon sınıfı oluşturun. Daha fazla bilgi için [özel animasyon sınıfı oluşturma](#createacustomanimationtype) bölümüne bakın.|  
+|Karşılık gelen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyonu olmayan bir türe animasyon ekleme|<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> kullanın veya <xref:System.Windows.Media.Animation.AnimationTimeline>devralan bir sınıf oluşturun. Daha fazla bilgi için [özel animasyon sınıfı oluşturma](#createacustomanimationtype) bölümüne bakın.|  
+|Her karede hesaplanan ve son nesne etkileşimleri kümesini temel alan değerlerle birden çok nesneye animasyon ekleyin|Çerçeve başına geri çağırma kullanın. Daha fazla bilgi için, [çerçeve başına kullanım çağrısı oluşturma](#useperframecallback) bölümüne bakın.|  
   
 <a name="createacustomkeyframe"></a>   
-## <a name="create-a-custom-key-frame"></a>Özel bir anahtar kare oluşturma  
- Bir özel anahtar çerçeve sınıfı oluşturmak, animasyon sistemini genişletmek için kolay bir yoludur. Farklı ilişkilendirme yöntemi için bir anahtar çerçeve animasyonu istediğinizde bu yaklaşımı kullanın.  Bölümünde anlatıldığı gibi [anahtar-çerçeve animasyonlara genel bakış](key-frame-animations-overview.md), çıkış değerleri oluşturmak için anahtar çerçeve nesneleri anahtar çerçeve animasyonu kullanır. Her bir ana kare nesne üç işlevleri gerçekleştirir:  
+## <a name="create-a-custom-key-frame"></a>Özel anahtar çerçevesi oluşturma  
+ Özel anahtar çerçeve sınıfı oluşturmak, animasyon sistemini genişletmenin en kolay yoludur. Anahtar çerçeve animasyonu için farklı bir enterpolasyon yöntemi istediğinizde bu yaklaşımı kullanın.  [Anahtar çerçeve animasyonlara genel bakış](key-frame-animations-overview.md)bölümünde açıklandığı gibi, bir anahtar çerçeve animasyonu çıkış değerlerini oluşturmak için anahtar çerçeve nesnelerini kullanır. Her anahtar çerçeve nesnesi üç işlev gerçekleştirir:  
   
-- Kullanarak bir hedef değer belirtir, <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> özelliği.  
+- <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> özelliğini kullanarak bir hedef değer belirtir.  
   
-- Başlangıçtan bu değeri erişilmesi kullanarak süreyi belirtir, <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> özelliği.  
+- <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> özelliğini kullanarak bu değere erişilmesi gereken süreyi belirtir.  
   
-- Değeri, önceki anahtar çerçeve ile kendi değerine arasında InterpolateValueCore yöntem uygulanarak ilişkilendirir.  
+- InterpolateValueCore metodunu uygulayarak önceki anahtar çerçevesinin değeri ile kendi değeri arasında enterpolasyonlar.  
   
  **Uygulama yönergeleri**  
   
- Öğesinden türetilen  *\<türü >* ana kare soyut sınıf ve InterpolateValueCore yöntemini uygulayın. Anahtar çerçevesi'nin geçerli değeri InterpolateValueCore yöntemini döndürür. İki parametre alır: değeri önceki anahtar çerçeve ve 0 ile 1 arasında bir ilerleme değeri. Anahtar çerçeve başladığına ve anahtar çerçeve tamamladığını ve ile belirtilen değer döndürmelidir 1 değerini gösterir 0 ilerlemesini gösterir, <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> özelliği.  
+ *\<türü >* ana kare soyut sınıfından türetir ve InterpolateValueCore yöntemini uygulayın. InterpolateValueCore yöntemi, anahtar çerçevesinin geçerli değerini döndürür. İki parametre alır: önceki anahtar çerçevesinin değeri ve 0 ile 1 arasında değişen bir ilerleme değeri. 0 ilerlemesi, anahtar çerçevesinin yeni başlatıldığını gösterir ve 1 değeri anahtar çerçevesinin tamamlandığını ve <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> özelliği tarafından belirtilen değeri döndürmesi gerektiğini gösterir.  
   
- Çünkü  *\<türü >* ana kare sınıfları <xref:System.Windows.Freezable> sınıfı, ayrıca kılmanız gerekir <xref:System.Windows.Freezable.CreateInstanceCore%2A> çekirdeğini sınıfınıza yeni bir örneğini döndürür. Sınıf verilerini depolamak için bağımlılık özellikleri kullanmıyorsa veya oluşturulduktan sonra ek başlatma gerektirirse, ek yöntemleri geçersiz kılmanız gerekebilir; bkz: [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md) daha fazla bilgi için.  
+ *\<türü >* ana kare sınıfları <xref:System.Windows.Freezable> sınıfından devraldığı için, sınıfınızın yeni bir örneğini döndürmek için <xref:System.Windows.Freezable.CreateInstanceCore%2A> çekirdeğini da geçersiz kılmanız gerekir. Sınıf, verilerini depolamak için bağımlılık özelliklerini kullanmıyorsa veya oluşturulduktan sonra ek başlatma gerektiriyorsa, ek yöntemleri geçersiz kılmanız gerekebilir; daha fazla bilgi için [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md) bölümüne bakın.  
   
- Kendi özel oluşturduktan sonra  *\<türü >* ana kare animasyon kullanabileceğiniz ile  *\<türü >* AnimationUsingKeyFrames türü için.  
+ Özel *\<türü >* ana kare animasyonunu oluşturduktan sonra, bu türü *\<türü >* AnimationUsingKeyFrames ile kullanabilirsiniz.  
   
 <a name="createacustomanimationtype"></a>   
-## <a name="create-a-custom-animation-class"></a>Özel animasyon sınıfı oluşturma  
- Daha fazla nesneyi animasyonlu üzerinde nasıl denetim türü verir kendi animasyon oluşturuluyor. Kendi animasyon türü oluşturmak için önerilen iki yolu vardır: türetebilirsiniz <xref:System.Windows.Media.Animation.AnimationTimeline> sınıfı veya  *\<türü >* AnimationBase sınıfı. Öğesinden türetme  *\<türü >* animasyon veya  *\<türü >* AnimationUsingKeyFrames sınıfları önerilmez.  
+## <a name="create-a-custom-animation-class"></a>Özel bir animasyon sınıfı oluşturma  
+ Kendi animasyon türünü oluşturmak, bir nesneye animasyon eklenmiş olarak daha fazla denetim sağlar. Kendi animasyon türünü oluşturmak için önerilen iki yöntem vardır: <xref:System.Windows.Media.Animation.AnimationTimeline> sınıfından veya *\<türü >* AnimationBase sınıfından türetebilirsiniz. *\<türünden türetme >* animasyon veya *\<tür >* AnimationUsingKeyFrames sınıfları önerilmez.  
   
-### <a name="derive-from-typeanimationbase"></a>Öğesinden türetilen \<türü > AnimationBase  
- Türetilen bir  *\<türü >* AnimationBase sınıfı, yeni bir animasyon türü oluşturmak için en basit yolu. Zaten olan bir karşılık gelen bir tür için yeni bir animasyon oluşturmak istiyorsanız bu yaklaşımı kullanın  *\<türü >* AnimationBase sınıfı.  
-  
- **Uygulama yönergeleri**  
-  
- Öğesinden türetilen bir  *\<türü >* animasyon sınıfı ve GetCurrentValueCore yöntemini uygulayın. GetCurrentValueCore yöntemi animasyon geçerli değerini döndürür. Üç parametreleri alır: önerilen bir başlangıç değeri, önerilen bir bitiş değeri ve bir <xref:System.Windows.Media.Animation.AnimationClock>, animasyonun ilerleme durumunu belirlemek için kullanın.  
-  
- Çünkü  *\<türü >* AnimationBase sınıfları <xref:System.Windows.Freezable> sınıfı, ayrıca kılmanız gerekir <xref:System.Windows.Freezable.CreateInstanceCore%2A> çekirdeğini sınıfınıza yeni bir örneğini döndürür. Sınıf verilerini depolamak için bağımlılık özellikleri kullanmıyorsa veya oluşturulduktan sonra ek başlatma gerektirirse, ek yöntemleri geçersiz kılmanız gerekebilir; bkz: [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md) daha fazla bilgi için.  
-  
- Daha fazla bilgi için GetCurrentValueCore yöntemi belgelerine bakın  *\<türü >* animasyon uygulamak istediğiniz türe ilişkin AnimationBase sınıfı. Bir örnek için bkz [özel animasyon örneği](https://go.microsoft.com/fwlink/?LinkID=159981)  
-  
- **Alternatif yaklaşımlar**  
-  
- Animasyon değerlerini nasıl ilişkilendirileceğini değiştirmek istiyorsanız, birinden türettikten dikkate  *\<türü >* ana kare sınıfları. Oluşturduğunuz anahtar çerçeve ile ilgili kullanılabilir  *\<türü >* AnimationUsingKeyFrames sağladığı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
-  
-### <a name="derive-from-animationtimeline"></a>AnimationTimeline'dan Türetme  
- Öğesinden türetilen <xref:System.Windows.Media.Animation.AnimationTimeline> sınıf zaten eşleşen bir sahip olmayan bir tür için bir animasyon oluşturmak istediğinizde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon veya türü kesin belirlenmiş değil bir animasyon oluşturmak istiyorsanız.  
+### <a name="derive-from-typeanimationbase"></a>\<türünden türet > AnimationBase  
+ *\<türü >* AnimationBase sınıfından türetmek, yeni bir animasyon türü oluşturmanın en kolay yoludur. Karşılık gelen bir *\<türü >* AnimationBase sınıfına zaten sahip olan tür için yeni bir animasyon oluşturmak istediğinizde bu yaklaşımı kullanın.  
   
  **Uygulama yönergeleri**  
   
- Öğesinden türetilen <xref:System.Windows.Media.Animation.AnimationTimeline> sınıfı ve aşağıdaki üyeleri geçersiz kıl:  
+ Bir *\<türü >* animasyon sınıfından türetebilir ve GetCurrentValueCore yöntemini uygulayın. GetCurrentValueCore yöntemi animasyonun geçerli değerini döndürür. Üç parametre alır: önerilen başlangıç değeri, önerilen bitiş değeri ve animasyonun ilerlemesini belirlemek için kullandığınız <xref:System.Windows.Media.Animation.AnimationClock>.  
   
-- <xref:System.Windows.Freezable.CreateInstanceCore%2A> – Yeni sınıfınıza somut ise, geçersiz kılmanız gerekir <xref:System.Windows.Freezable.CreateInstanceCore%2A> sınıfınıza yeni bir örneğini dönün.  
+ *\<türü >* AnimationBase sınıfları <xref:System.Windows.Freezable> sınıfından devraldığı için, sınıfınızın yeni bir örneğini döndürmek için <xref:System.Windows.Freezable.CreateInstanceCore%2A> çekirdeğini da geçersiz kılmanız gerekir. Sınıf, verilerini depolamak için bağımlılık özelliklerini kullanmıyorsa veya oluşturulduktan sonra ek başlatma gerektiriyorsa, ek yöntemleri geçersiz kılmanız gerekebilir; daha fazla bilgi için [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md) bölümüne bakın.  
   
-- <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> – Animasyonunuzu geçerli değerini döndürmek için bu yöntemi yok sayın. Üç parametreleri alır: varsayılan kaynak değeri, varsayılan hedef değer ve bir <xref:System.Windows.Media.Animation.AnimationClock>. Kullanım <xref:System.Windows.Media.Animation.AnimationClock> geçerli zamanı veya animasyon için devam eden elde edilir. Varsayılan kaynak ve hedef değerleri kullanılıp kullanılmayacağını seçebilirsiniz.  
-  
-- <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> – Animasyonunuzu tarafından belirtilen varsayılan hedef değer kullanıp kullanmadığını göstermek için bu özelliği geçersiz kılma <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> yöntemi.  
-  
-- <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – Belirtmek için bu özelliği geçersiz kılma <xref:System.Type> animasyonunuzu çıktısı üretir.  
-  
- Sınıf verilerini depolamak için bağımlılık özellikleri kullanmıyorsa veya oluşturulduktan sonra ek başlatma gerektirirse, ek yöntemleri geçersiz kılmanız gerekebilir; bkz: [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md) daha fazla bilgi için.  
-  
- Önerilen paradigma (tarafından kullanılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyonları) iki devralma düzeyleri kullanmaktır:  
-  
-1. Bir soyut oluşturma  *\<türü >* türetildiği AnimationBase sınıfı <xref:System.Windows.Media.Animation.AnimationTimeline>. Bu sınıf'ı geçersiz kılmalıdır <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> yöntemi. Ayrıca yeni soyut bir yöntem olan GetCurrentValueCore'u, ve geçersiz kılma <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> varsayılan hedef değer parametreleri ve varsayılan başlangıç değer türlerini doğrular, böylece daha sonra GetCurrentValueCore çağırır.  
-  
-2. Devralan başka bir sınıf oluşturmanız gelen yeni  *\<türü >* AnimationBase sınıf ve geçersiz kılmaları <xref:System.Windows.Freezable.CreateInstanceCore%2A> yöntemi, tanıttığınız GetCurrentValueCore yöntemi ve <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> özelliği.  
+ Daha fazla bilgi için, hareketlendirmek istediğiniz türe ilişkin *\<türü >* AnimationBase sınıfına yönelik GetCurrentValueCore yöntemi belgelerine bakın. Bir örnek için bkz. [özel animasyon örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/CustomAnimation)  
   
  **Alternatif yaklaşımlar**  
   
- Karşılık gelen From/To/By animasyonu veya anahtar çerçeve animasyonu olmayan bir tür animasyon uygulamak isterseniz kullanmayı bir <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>. Zayıf yazılmış, çünkü bir <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> herhangi bir türde değer animasyon uygulayabilirsiniz. Bu yaklaşımın bir dezavantajı olan <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> yalnızca ayrık ilişkilendirme destekler.  
+ Yalnızca animasyon değerlerinin nasıl ilişkilendirileceğini değiştirmek istiyorsanız, *\<türünden birini >* ana kare sınıflarından türetmeyi göz önünde bulundurarak. Oluşturduğunuz anahtar çerçeve, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]tarafından sunulan karşılık gelen *\<türü >* AnimationUsingKeyFrames ile birlikte kullanılabilir.  
+  
+### <a name="derive-from-animationtimeline"></a>AnimationTimeline 'dan türet  
+ Zaten eşleşen bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyonuna sahip olmayan bir tür için animasyon oluşturmak istediğinizde veya kesin olarak yazılmamış bir animasyon oluşturmak istiyorsanız <xref:System.Windows.Media.Animation.AnimationTimeline> sınıfından türetebilirsiniz.  
+  
+ **Uygulama yönergeleri**  
+  
+ <xref:System.Windows.Media.Animation.AnimationTimeline> sınıfından türet ve aşağıdaki üyeleri geçersiz kıl:  
+  
+- <xref:System.Windows.Freezable.CreateInstanceCore%2A> – yeni sınıfınız somut ise, sınıfınızın yeni bir örneğini döndürmek için <xref:System.Windows.Freezable.CreateInstanceCore%2A> geçersiz kılmanız gerekir.  
+  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> – Animasyonunuzun geçerli değerini döndürmek için bu yöntemi geçersiz kılın. Üç parametre alır: varsayılan bir kaynak değeri, varsayılan hedef değeri ve bir <xref:System.Windows.Media.Animation.AnimationClock>. Animasyonun geçerli saatini veya ilerlemesini almak için <xref:System.Windows.Media.Animation.AnimationClock> kullanın. Varsayılan kaynak ve hedef değerlerini kullanıp kullanmayacağınızı seçebilirsiniz.  
+  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> – Animasyonunuzun <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> yöntemi tarafından belirtilen varsayılan hedef değeri kullanıp kullanmadığını belirtmek için bu özelliği geçersiz kılın.  
+  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – Animasyonunuzun ürettiği çıkışın <xref:System.Type> belirtmek için bu özelliği geçersiz kılın.  
+  
+ Sınıf, verilerini depolamak için bağımlılık özelliklerini kullanmıyorsa veya oluşturulduktan sonra ek başlatma gerektiriyorsa, ek yöntemleri geçersiz kılmanız gerekebilir; daha fazla bilgi için [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md) bölümüne bakın.  
+  
+ Önerilen paradigma ([!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyonları tarafından kullanılır) iki devralma düzeyi kullanmaktır:  
+  
+1. <xref:System.Windows.Media.Animation.AnimationTimeline>türetilen bir soyut *\<türü >* AnimationBase sınıfı oluşturun. Bu sınıf <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> yöntemi geçersiz kılmalıdır. Ayrıca, varsayılan kaynak değeri ve varsayılan hedef değer parametrelerinin türlerini doğrulamak üzere <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> yeni bir soyut Yöntem, GetCurrentValueCore ve geçersiz kılmalıdır ve sonra GetCurrentValueCore öğesini çağırır.  
+  
+2. Yeni *\<türünden >* AnimationBase sınıfından devralan başka bir sınıf oluşturun ve <xref:System.Windows.Freezable.CreateInstanceCore%2A> yöntemini, kullanıma aldığınız GetCurrentValueCore yöntemini ve <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> özelliğini geçersiz kılar.  
+  
+ **Alternatif yaklaşımlar**  
+  
+ Kendisine karşılık gelen/to/By animasyonuna veya anahtar çerçeve animasyonuna sahip olmayan bir türe animasyon eklemek istiyorsanız, bir <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>kullanmayı düşünün. Zayıf bir tür olduğundan, bir <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> her türlü değer için animasyon uygulayabilir. Bu yaklaşımın dezavantajı <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> yalnızca ayrık ilişkilendirmeyi desteklemesidir.  
   
 <a name="useperframecallback"></a>   
-## <a name="use-per-frame-callback"></a>Çerçeve başına geri çağırma kullanın  
- Tamamen atlamak gerektiğinde bu yaklaşımı kullanın [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon sistemi. Bu yaklaşıma bir senaryo fizik animasyonları, burada her animasyonu adım yeni veya animasyonlu nesnelerin konumunu yeniden hesaplanmasını gerekiyor nesne etkileşimlerini son kümesinde dayalıdır.  
+## <a name="use-per-frame-callback"></a>Çerçeve başına geri çağırma kullan  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon sistemini tamamen atlamak gerektiğinde bu yaklaşımı kullanın. Bu yaklaşım için bir senaryo, her animasyon adımının yeni bir yön veya animasyonlu nesne konumunun son nesne etkileşimleri kümesine göre yeniden hesaplanması gereken fizik animasyonlarıdır.  
   
  **Uygulama yönergeleri**  
   
- Bu genel bakışta açıklanan diğer bir yaklaşım, çerçeve başına geri çağırma kullanmak için özel animasyon veya anahtar çerçeve sınıfı oluşturmanız gerekmez.  
+ Bu genel bakışta açıklanan diğer yaklaşımlardan farklı olarak, çerçeve başına geri çağırma kullanmak için özel bir animasyon veya anahtar çerçeve sınıfı oluşturmanız gerekmez.  
   
- Bunun yerine, için kayıt <xref:System.Windows.Media.CompositionTarget.Rendering> olayı animasyon uygulamak istediğiniz nesneleri içeren nesne. Bu olay işleyicisi yöntemi, çerçeve başına bir kez çağrılır. Her [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sıraladığında kalıcı işleme verileri arasında görsel ağaç kompozisyon ağacı, olay işleyicisi yönteminiz için çağrılır.  
+ Bunun yerine, hareketlendirmek istediğiniz nesneleri içeren nesnenin <xref:System.Windows.Media.CompositionTarget.Rendering> olayına kaydolabilirsiniz. Bu olay işleyicisi yöntemi çerçeve başına bir kez çağırılır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] her seferinde, görsel ağaçtaki kalıcı işleme verilerini birleşim ağacına her sıraladığında olay işleyicisi yönteminiz çağırılır.  
   
- Olay işleyicisinde, gerçekleştirin, animasyon için gerekli hesaplamalar etkisi yoktur ve bu değerleri ile animasyon uygulamak istediğiniz nesnelerin özelliklerini ayarlayın.  
+ Olay işleyicinizde, animasyon efektiniz için gereken hesaplamaları gerçekleştirin ve bu değerlerle hareketlendirmek istediğiniz nesnelerin özelliklerini ayarlayın.  
   
- Geçerli çerçevenin sunu zamanını almak için <xref:System.EventArgs> bununla ilişkili olay olarak yayımlanabilir <xref:System.Windows.Media.RenderingEventArgs>, sağlayan bir <xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A> geçerli çerçeve elde etmek için kullanabileceğiniz özellik işleme süresini.  
+ Geçerli çerçevenin sunum süresini elde etmek için, bu olayla ilişkili <xref:System.EventArgs> <xref:System.Windows.Media.RenderingEventArgs>olarak ayarlanabilir, bu da geçerli çerçevenin işleme süresini elde etmek için kullanabileceğiniz bir <xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A> özelliği sağlar.  
   
- Daha fazla bilgi için <xref:System.Windows.Media.CompositionTarget.Rendering> sayfası.  
+ Daha fazla bilgi için <xref:System.Windows.Media.CompositionTarget.Rendering> sayfasına bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -133,4 +133,4 @@ Bu konu nasıl ve ne zaman açıklar genişletmek için [!INCLUDE[TLA2#tla_wincl
 - [Yol Animasyonlarına Genel Bakış](path-animations-overview.md)
 - [Animasyona Genel bakış](animation-overview.md)
 - [Animasyon ve Zamanlama Sistemine Genel Bakış](animation-and-timing-system-overview.md)
-- [Özel animasyon örneği](https://go.microsoft.com/fwlink/?LinkID=159981)
+- [Özel animasyon örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/CustomAnimation)

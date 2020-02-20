@@ -8,12 +8,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 3d3f045eed3bad3624ed4994aebb862c52a4e196
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 30ee13a4174a137481fbcd36ccef721958b94a12
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713777"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450862"
 ---
 # <a name="async-c-reference"></a>async (C# Başvurusu)
 
@@ -71,7 +71,7 @@ Zaman uyumsuz bir yöntem aşağıdaki dönüş türlerine sahip olabilir:
 
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
-- [void](./void.md). `async void` yöntemler genellikle olay işleyicileri dışındaki kod için önerilmez çünkü çağıranlar bu yöntemleri `await` ve başarılı tamamlamayı veya hata koşullarını raporlamak için farklı bir mekanizma uygulamalıdır.
+- [void](../builtin-types/void.md). `async void` yöntemler genellikle olay işleyicileri dışındaki kod için önerilmez çünkü çağıranlar bu yöntemleri `await` ve başarılı tamamlamayı veya hata koşullarını raporlamak için farklı bir mekanizma uygulamalıdır.
 - 7,0 ile C# başlayarak, erişilebilir `GetAwaiter` yöntemi olan herhangi bir tür. `System.Threading.Tasks.ValueTask<TResult>` türü, bu tür bir uygulama. NuGet paketi `System.Threading.Tasks.Extensions`eklenerek kullanılabilir. 
 
 Async yöntemi [içinde](./in-parameter-modifier.md)herhangi bir [ref](./ref.md) veya [Out](./out-parameter-modifier.md) parametresi bildiremez ve [Başvuru dönüş değerine](../../programming-guide/classes-and-structs/ref-returns.md)sahip olabilir, ancak bu parametrelere sahip yöntemleri çağırabilir.  

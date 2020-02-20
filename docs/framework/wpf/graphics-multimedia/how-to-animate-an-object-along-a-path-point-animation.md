@@ -8,30 +8,30 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (point animation)
 - point animation [WPF]
 ms.assetid: 1fa3f817-35bc-41a1-b366-f5a20b70da0c
-ms.openlocfilehash: 4ef28118975d02500916676ca50e0f9622c7a3e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eff0c24a9369ffaa0cfca1cc46af4eff39f58a38
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651460"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452902"
 ---
 # <a name="how-to-animate-an-object-along-a-path-point-animation"></a>Nasıl yapılır: Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (İşaret Etme Animasyonu)
-Bu örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Media.Animation.PointAnimationUsingPath> animasyon uygulamak için nesne bir <xref:System.Windows.Point> eğri yol.  
+Bu örnek, bir <xref:System.Windows.Point> eğri yol üzerinde hareketlendirmek için bir <xref:System.Windows.Media.Animation.PointAnimationUsingPath> nesnesinin nasıl kullanılacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek taşır bir <xref:System.Windows.Media.EllipseGeometry> tarafından tanımlanan yol bir <xref:System.Windows.Media.PathGeometry>. Elips geometrisinin <xref:System.Windows.Media.EllipseGeometry.Center%2A> alan, özelliği bir <xref:System.Windows.Point> animasyon olarak oluşturmak, elips geometrisini taşımak için; konumunu belirtir, değeri kendi <xref:System.Windows.Media.EllipseGeometry.Center%2A> özelliği. Örnekte bir <xref:System.Windows.Media.Animation.PointAnimationUsingPath> animasyon uygulamak için <xref:System.Windows.Media.EllipseGeometry> nesnenin <xref:System.Windows.Media.EllipseGeometry.Center%2A> özelliği.  
+ Aşağıdaki örnek, bir <xref:System.Windows.Media.EllipseGeometry> <xref:System.Windows.Media.PathGeometry>tarafından tanımlanan bir yol üzerinde taşıdır. Elips geometrisinin <xref:System.Windows.Media.EllipseGeometry.Center%2A> özelliği, bir <xref:System.Windows.Point> değeri alır, konumunu belirtir; elips geometrisini taşımak için <xref:System.Windows.Media.EllipseGeometry.Center%2A> özelliğine animasyon uygularsınız. Örnek, <xref:System.Windows.Media.EllipseGeometry> nesnesinin <xref:System.Windows.Media.EllipseGeometry.Center%2A> özelliğine animasyon uygulamak için bir <xref:System.Windows.Media.Animation.PointAnimationUsingPath> kullanır.  
   
  [!code-xaml[PathAnimationGallery_snippet#PointAnimationUsingPathWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/pointanimationusingpathexample.xaml#pointanimationusingpathwholepage)]  
   
  [!code-csharp[PathAnimationGallery_procedural_snip#PointAnimationUsingPathWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/CSharp/PointAnimationUsingPathExample.cs#pointanimationusingpathwholepage)]
  [!code-vb[PathAnimationGallery_procedural_snip#PointAnimationUsingPathWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/VisualBasic/PointAnimationUsingPathExample.vb#pointanimationusingpathwholepage)]  
   
- Tam bir örnek için bkz. [yol animasyonu örneği](https://go.microsoft.com/fwlink/?LinkID=160028).  
+ Tüm örnek için bkz. [yol animasyon örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/PathAnimations).  
   
- Önceki örnekte kullanılan kod sürümünü bir <xref:System.Windows.Media.Animation.Storyboard> animasyon uygulamak için <xref:System.Windows.Media.EllipseGeometry>, yalnızca bir animasyon uygulanmış olmasına rağmen. A <xref:System.Windows.Media.Animation.Storyboard> genellikle animasyonlarına aynı tarafından denetlenebilir olduğundan, birden çok animasyon uygulamak için en kolay yoludur <xref:System.Windows.Media.Animation.Storyboard>. Ancak, tek bir animasyonu kod kullanarak bir özelliğe uygulamak için daha kolay bir yolu kullanmaktır <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> yöntemi. Bir örnek için bkz. [özelliği olmadan kullanarak bir görsel taslak animasyon](how-to-animate-a-property-without-using-a-storyboard.md).  
+ Önceki örneğin kod sürümü, yalnızca bir animasyon uygulanmış olsa da <xref:System.Windows.Media.EllipseGeometry>hareketlendirmek için bir <xref:System.Windows.Media.Animation.Storyboard> kullandı. <xref:System.Windows.Media.Animation.Storyboard>, bu animasyonlar aynı <xref:System.Windows.Media.Animation.Storyboard>tarafından denetlenebildiğinden, genellikle birden çok animasyon uygulamanın en kolay yoludur. Ancak, kod kullanırken bir özelliğe tek bir animasyon uygulamak için daha kolay bir yol <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> yöntemi kullanmaktır. Bir örnek için bkz. [görsel taslak kullanmadan özelliğe animasyon ekleme](how-to-animate-a-property-without-using-a-storyboard.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yol animasyonu örneği](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Yol animasyon örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/PathAnimations)
 - [Animasyona Genel bakış](animation-overview.md)
 - [Yol Animasyonu ile İlgili Nasıl Yapılır Konuları](path-animation-how-to-topics.md)

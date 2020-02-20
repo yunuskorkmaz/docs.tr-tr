@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 00f01b63cdf9397fe25f28fff08767dfc3a83e69
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559722"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453123"
 ---
 # <a name="animation-overview"></a>Animasyona Genel bakış
 
@@ -341,7 +341,7 @@ Zamanlama sistemi <xref:System.Windows.Media.Animation.DoubleAnimation> için bi
 
 Bir animasyonun veri bağlamayı veya animasyon değişikliklerini yansıtması için, saatinin yeniden oluşturulması gerekir. Saatler sizin için otomatik olarak yeniden oluşturulmaz. Bir animasyonun değişiklikleri yansıtması için, film şeridini bir <xref:System.Windows.Media.Animation.BeginStoryboard> veya <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> yöntemi kullanarak yeniden uygulayın. Bu yöntemlerden birini kullandığınızda animasyon yeniden başlatılır. Kod içinde, görsel taslağı önceki konumuna geri kaydırmak için <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> yöntemini kullanabilirsiniz.
 
-Veri bağlantılı animasyon örneği için bkz. [Anahtar eğri animasyon örneği](https://go.microsoft.com/fwlink/?LinkID=160011). Animasyon ve zamanlama sisteminin nasıl çalıştığı hakkında daha fazla bilgi için bkz. [animasyon ve zamanlama sistemine genel bakış](animation-and-timing-system-overview.md).
+Veri bağlantılı animasyon örneği için bkz. [Anahtar eğri animasyon örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/KeySplineAnimations). Animasyon ve zamanlama sisteminin nasıl çalıştığı hakkında daha fazla bilgi için bkz. [animasyon ve zamanlama sistemine genel bakış](animation-and-timing-system-overview.md).
 
 <a name="otherWaysToAnimateSection"></a>
 
@@ -355,11 +355,11 @@ Bu genel bakışdaki örneklerde film şeritleri kullanılarak nasıl animasyon 
 
 Aşağıdaki örnekler uygulamalarınıza animasyon eklemeye başlamanıza yardımcı olabilir.
 
-- [From, to ve By animasyon hedefi değerleri örneği](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [From, to ve By animasyon hedefi değerleri örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/TargetValues)
 
   Farklı From/To/By ayarlarını gösterir.
 
-- [Animasyon Zamanlama davranışı örneği](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Animasyon Zamanlama davranışı örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationTiming)
 
   Animasyonun zamanlama davranışını denetleyebilmeniz için farklı yollar gösterir. Bu örnek ayrıca bir animasyonun hedef değerini veri bağlama şeklini gösterir.
 
