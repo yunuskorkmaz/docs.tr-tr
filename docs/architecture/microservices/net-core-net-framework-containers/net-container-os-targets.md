@@ -1,13 +1,13 @@
 ---
 title: .NET kapsayıcıları ile hangi işletim sistemi hedeflenmelidir?
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | .NET kapsayıcıları ile hedef işletim sistemi
-ms.date: 01/07/2019
-ms.openlocfilehash: dcf91f5ab808a8704201979f6bab1140c3343bce
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: a09e3981ece478a9795c0f27acc98d604864cdd5
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736914"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501858"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>.NET kapsayıcıları ile hangi işletim sistemi hedeflenmelidir?
 
@@ -32,12 +32,12 @@ Ayrıca, farklı bir Linux veya Microsoft tarafından sağlanmayan sürümlere s
 
 Resim adını Dockerfile dosyanıza eklediğinizde, aşağıdaki örneklerde olduğu gibi, kullandığınız etikete bağlı olarak işletim sistemini ve sürümü seçebilirsiniz:
 
-| Görüntü | Açıklamalar |
+| Görüntü | Yorumlar |
 |-------|----------|
-| mcr.microsoft.com/dotnet/core/runtime:2.2 | .NET Core 2,2 Multi-Architecture: Docker konağına bağlı olarak Linux ve Windows nano Server 'ı destekler. |
-| mcr.microsoft.com/dotnet/core/aspnet:2.2 | ASP.NET Core 2,2 Multi-Architecture: Docker konağına bağlı olarak Linux ve Windows nano Server 'ı destekler. <br/> Aspnetcore görüntüsünün ASP.NET Core için birkaç iyileştirmesi vardır. |
-| mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine | .NET Core 2,2 çalışma zamanı-yalnızca Linux alp Deon |
-| mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803 | .NET Core 2,2 çalışma zamanı-yalnızca Windows nano Server 'da (Windows Server sürüm 1803) |
+| mcr.microsoft.com/dotnet/core/runtime:3.1 | .NET Core 3,1 Multi-Architecture: Docker konağına bağlı olarak Linux ve Windows nano Server 'ı destekler. |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1 | ASP.NET Core 3,1 Multi-Architecture: Docker konağına bağlı olarak Linux ve Windows nano Server 'ı destekler. <br/> Aspnetcore görüntüsünün ASP.NET Core için birkaç iyileştirmesi vardır. |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim | .NET Core 3,1 çalışma zamanı-yalnızca Linux 'ta dedıon |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1809 | .NET Core 3,1 çalışma zamanı-yalnızca Windows nano Server 'da (Windows Server sürüm 1809) |
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

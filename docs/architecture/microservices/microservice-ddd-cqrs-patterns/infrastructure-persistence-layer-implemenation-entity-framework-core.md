@@ -1,13 +1,13 @@
 ---
 title: Entity Framework Core ile altyapı kalıcılık katmanını uygulama
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Entity Framework Core kullanarak altyapı kalıcılığı katmanının uygulama ayrıntılarını keşfedebilirsiniz.
-ms.date: 10/08/2018
-ms.openlocfilehash: b70ede6b47cbf990d0435aef841416c68f6439b4
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Entity Framework Core kullanarak altyapı kalıcılığı katmanının uygulama ayrıntılarını bulun.
+ms.date: 01/30/2020
+ms.openlocfilehash: 63579dc74ba52551bc1ee02a57337c1b17fdf396
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737904"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502491"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Altyapı kalıcılığı katmanını Entity Framework Core ile uygulama
 
@@ -32,7 +32,7 @@ EF Core giriş Microsoft belgelerinde zaten mevcut olduğundan, bu bilgilere yö
 - **DbContext sınıfı** \
   [https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext](xref:Microsoft.EntityFrameworkCore.DbContext)
 
-- **EF Core & EF6. x \ karşılaştırın**
+- **EF Core &AMP; EF6. x \ karşılaştırın**
   [https://docs.microsoft.com/ef/efcore-and-ef6/index](/ef/efcore-and-ef6/index)
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Bir DDD perspektifinden Entity Framework Core altyapısı
@@ -273,49 +273,73 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 {
     public void Configure(EntityTypeBuilder<Order> orderConfiguration)
     {
-            orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
+        orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
 
-            orderConfiguration.HasKey(o => o.Id);
+        orderConfiguration.HasKey(o => o.Id);
 
-            orderConfiguration.Ignore(b => b.DomainEvents);
+        orderConfiguration.Ignore(b => b.DomainEvents);
 
-            orderConfiguration.Property(o => o.Id)
-                .ForSqlServerUseSequenceHiLo("orderseq", OrderingContext.DEFAULT_SCHEMA);
+        orderConfiguration.Property(o => o.Id)
+            .UseHiLo("orderseq", OrderingContext.DEFAULT_SCHEMA);
 
-            //Address Value Object persisted as owned entity type supported since EF Core 2.0
-            orderConfiguration.OwnsOne(o => o.Address);
+        //Address value object persisted as owned entity type supported since EF Core 2.0
+        orderConfiguration
+            .OwnsOne(o => o.Address, a =>
+            {
+                a.WithOwner();
+            });
 
-            orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
-            orderConfiguration.Property<int?>("BuyerId").IsRequired(false);
-            orderConfiguration.Property<int>("OrderStatusId").IsRequired();
-            orderConfiguration.Property<int?>("PaymentMethodId").IsRequired(false);
-            orderConfiguration.Property<string>("Description").IsRequired(false);
+        orderConfiguration
+            .Property<int?>("_buyerId")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("BuyerId")
+            .IsRequired(false);
 
-            var navigation = orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+        orderConfiguration
+            .Property<DateTime>("_orderDate")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("OrderDate")
+            .IsRequired();
 
-            // DDD Patterns comment:
-            //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
-            navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+        orderConfiguration
+            .Property<int>("_orderStatusId")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("OrderStatusId")
+            .IsRequired();
 
-            orderConfiguration.HasOne<PaymentMethod>()
-                .WithMany()
-                .HasForeignKey("PaymentMethodId")
-                .IsRequired(false)
-                .OnDelete(DeleteBehavior.Restrict);
+        orderConfiguration
+            .Property<int?>("_paymentMethodId")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("PaymentMethodId")
+            .IsRequired(false);
 
-            orderConfiguration.HasOne<Buyer>()
-                .WithMany()
-                .IsRequired(false)
-                .HasForeignKey("BuyerId");
+        orderConfiguration.Property<string>("Description").IsRequired(false);
 
-            orderConfiguration.HasOne(o => o.OrderStatus)
-                .WithMany()
-                .HasForeignKey("OrderStatusId");
+        var navigation = orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+
+        // DDD Patterns comment:
+        //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
+        navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+
+        orderConfiguration.HasOne<PaymentMethod>()
+            .WithMany()
+            .HasForeignKey("_paymentMethodId")
+            .IsRequired(false)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        orderConfiguration.HasOne<Buyer>()
+            .WithMany()
+            .IsRequired(false)
+            .HasForeignKey("_buyerId");
+
+        orderConfiguration.HasOne(o => o.OrderStatus)
+            .WithMany()
+            .HasForeignKey("_orderStatusId");
     }
 }
 ```
 
-Aynı Onmodeloluþturma yöntemi içindeki tüm akıcı API eşlemelerini ayarlayabilirsiniz, ancak örnekte gösterildiği gibi, bu kodu bölümlemek ve varlık başına bir tane olmak üzere birden çok yapılandırma sınıfı olması önerilir. Özellikle büyük modeller için, farklı varlık türlerini yapılandırmak üzere ayrı yapılandırma sınıfları olması önerilir.
+Tüm akıcı API eşlemelerini aynı `OnModelCreating` yöntemi içinde ayarlayabilirsiniz, ancak örnekte gösterildiği gibi bu kodu bölümlemek ve varlık başına birden çok yapılandırma sınıfı olması önerilir. Özellikle büyük modellerde, farklı varlık türlerini yapılandırmak için ayrı yapılandırma sınıfları olması önerilir.
 
 Örnekteki kodda birkaç açık bildirim ve eşleme gösterilmektedir. Ancak, EF Core kuralları bu eşlemelerin çoğunu otomatik olarak bir şekilde yapın, bu nedenle, büyük/küçük harfli ihtiyacınız olan gerçek kod daha küçük olabilir.
 
@@ -333,7 +357,7 @@ Merhaba/Lo algoritması, ilgili bir veritabanı sırasından benzersiz kimlik to
 
 - GUID kullanan tekniklerin aksine, okunabilir bir tanımlayıcı oluşturur.
 
-EF Core, önceki örnekte gösterildiği gibi, Forsqlserverusesequencechild o yöntemiyle birlikte bulunan ' [yi destekler.](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm)
+EF Core, yukarıdaki örnekte gösterildiği gibi, `UseHiLo` yöntemiyle [Tepo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) 'u destekler.
 
 ### <a name="map-fields-instead-of-properties"></a>Özellikler yerine harita alanları
 
@@ -410,6 +434,7 @@ public class BasketWithItemsSpecification : BaseSpecification<Basket>
     {
         AddInclude(b => b.Items);
     }
+
     public BasketWithItemsSpecification(string buyerId)
         : base(b => b.BuyerId == buyerId)
     {
@@ -445,7 +470,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
 
 Filtre mantığını kapsüllemenin yanı sıra belirtim, doldurulacak verilerin şeklini belirtebilir ve bu da doldurulacak özellikler de dahil olmak üzere döndürülür.
 
-Bir depodan IQueryable döndürmek önerilmese de, bir dizi sonuç oluşturmak için bunları depoda kullanmak çok güzel. Bu yaklaşımı, yukarıdaki List yönteminde, sorgunun son satırdaki belirtim ölçütlerine sahip Sorguyu yürütmeden önce sorgunun dahil olduğu bir sorgu listesini oluşturmak için kullandığını görebilirsiniz.
+Bir depodan `IQueryable` döndürmemenizi önermeyiz olsa da, bir dizi sonuç oluşturmak için bunları depoda kullanmak çok güzel. Bu yaklaşımı Yukarıdaki liste yönteminde görebilirsiniz. Bu yaklaşım, sorguyu son satırda belirtim ölçütlerine göre yürütmeden önce sorgunun dahil olduğu bir sorgu listesini oluşturmak için ara `IQueryable` ifadelerini kullanır.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 

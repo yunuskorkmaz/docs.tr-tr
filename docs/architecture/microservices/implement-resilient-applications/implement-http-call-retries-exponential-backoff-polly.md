@@ -1,13 +1,13 @@
 ---
 title: Polly üstel geri alma ile HTTP çağrı yeniden denemelerini uygulama
 description: Polly ve HttpClientFactory ile HTTP başarısızlıklarını nasıl ele alabileceğinizi öğrenin.
-ms.date: 01/07/2019
-ms.openlocfilehash: 551cd1230c565b30c81090c984747e726680b9ed
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 01/30/2020
+ms.openlocfilehash: 60943360c9674f93b246b37b2667b48dab659e0e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089964"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502664"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory ve Polly ilkeleriyle üstel geri alma ile HTTP çağrı yeniden denemeleri uygulayın
 
@@ -19,9 +19,9 @@ Ancak, HttpClient ile Polly 'in kitaplığını kullanmak için kendi özel kodu
 
 Aşağıdaki adımlarda, önceki bölümde açıklanan HttpClientFactory ile tümleştirilen, http yeniden denemeleri nasıl kullanabileceğiniz gösterilmektedir.
 
-**ASP.NET Core 2,2 paketlerine başvurun**
+**ASP.NET Core 3,1 paketlerine başvurun**
 
-`HttpClientFactory` .NET Core 2,1 ' den bu yana kullanılabilir, ancak projenizde NuGet 'den en son ASP.NET Core 2,2 paketlerini kullanmanızı öneririz. Genellikle `AspNetCore` metapackage ve uzantı paketi `Microsoft.Extensions.Http.Polly`gerekir.
+`HttpClientFactory` .NET Core 2,1 ' den bu yana kullanılabilir, ancak projenizde NuGet 'den en son ASP.NET Core 3,1 paketlerini kullanmanızı öneririz. Genellikle `Microsoft.Extensions.Http.Polly`uzantı paketine başvurmanız gerekir.
 
 **Başlangıçta, bir istemciyi Polly 'nin yeniden deneme ilkesiyle yapılandırma**
 
@@ -70,7 +70,7 @@ Polly, proje Web sitesi aracılığıyla üretime hazırlı değişim algoritmal
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Yeniden deneme biçimi**  
+- **Yeniden deneme düzeni**  
   [https://docs.microsoft.com/azure/architecture/patterns/retry](/azure/architecture/patterns/retry)
 
 - **Polly ve HttpClientFactory**  

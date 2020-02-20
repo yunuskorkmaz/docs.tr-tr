@@ -1,13 +1,13 @@
 ---
 title: Docker uygulamaları için geliştirme iş akışı
 description: Docker tabanlı uygulamalar geliştirmeye yönelik iş akışının ayrıntılarını anlayın. Adım adım ilerleyin ve Dockerfiles 'ı iyileştirmek ve Visual Studio 'Yu kullanırken kullanılabilecek Basitleştirilmiş iş akışıyla sona erdirmek için bazı ayrıntılara ulaşın.
-ms.date: 01/07/2019
-ms.openlocfilehash: 53675bf974069e9052d6d03b2743314af6f13cf9
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.date: 01/30/2020
+ms.openlocfilehash: c58ea2436027968143777a19286a1a0a72107717
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965795"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502785"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -37,13 +37,13 @@ Bu bölümde, bu tüm süreç ayrıntılıdır ve her ana adım bir Visual Studi
 
 Bir düzenleyici/CLı geliştirme yaklaşımı kullandığınızda (örneğin Visual Studio Code, macOS veya Windows üzerinde Docker CLı), Visual Studio 'Yu kullanmaktan daha ayrıntılı olarak, her adımı bilmeniz gerekir. CLı ortamında çalışma hakkında daha fazla bilgi için bkz. [Microsoft platformları ve araçları ile e-kitap Kapsayıcılı Docker uygulaması yaşam döngüsü](https://aka.ms/dockerlifecycleebook/).
 
-Visual Studio 2017 kullanırken, bu adımların birçoğu sizin için işlenir ve bu da üretkenliğinizi önemli ölçüde geliştirir. Visual Studio 2017 kullanırken ve çok Kapsayıcılı uygulamaları hedeflerken bu durum özellikle doğrudur. Örneğin, yalnızca bir fare tıklaması ile, Visual Studio Dockerfile ve Docker-Compose. yıml dosyasını, uygulamanıza yönelik yapılandırmayla birlikte projenize ekler. Uygulamayı Visual Studio 'da çalıştırdığınızda, Docker görüntüsünü oluşturur ve çok Kapsayıcılı uygulamayı doğrudan Docker içinde çalıştırır; aynı zamanda birkaç kapsayıcıda hata ayıklamanıza da olanak tanır. Bu özellikler, geliştirme hızınızı artırır.
+Visual Studio 2019 kullanırken, bu adımların birçoğu sizin için işlenir ve bu da üretkenliğinizi önemli ölçüde geliştirir. Visual Studio 2019 kullanırken ve çok Kapsayıcılı uygulamaları hedeflerken bu durum özellikle doğrudur. Örneğin, yalnızca bir fare tıklaması ile, Visual Studio `Dockerfile` ve `docker-compose.yml` dosyasını, uygulamanıza yönelik yapılandırmayla birlikte projenize ekler. Uygulamayı Visual Studio 'da çalıştırdığınızda, Docker görüntüsünü oluşturur ve çok Kapsayıcılı uygulamayı doğrudan Docker içinde çalıştırır; aynı zamanda birkaç kapsayıcıda hata ayıklamanıza da olanak tanır. Bu özellikler, geliştirme hızınızı artırır.
 
 Ancak, yalnızca Visual Studio bu adımları otomatik hale getiren için Docker ile neler olduğunu bilmeniz gerekmez. Bu nedenle, aşağıdaki kılavuz her adımda ayrıntılardır.
 
 ![1\. adım için görüntü.](./media/docker-app-development-workflow/step-1-code-your-app.png)
 
-## <a name="step-1-start-coding-and-create-your-initial-application-or-service-baseline"></a>Adım 1. Kodlamaya başlayın ve başlangıç uygulamanızı veya hizmet temelinizi oluşturun
+## <a name="step-1-start-coding-and-create-your-initial-application-or-service-baseline"></a>1\. Adım. Kodlamaya başlayın ve başlangıç uygulamanızı veya hizmet temelinizi oluşturun
 
 Docker uygulaması geliştirmek, Docker olmadan uygulama geliştirme yöntemine benzer. Bu fark, Docker için geliştirme yaparken, yerel ortamınızdaki Docker Kapsayıcıları içinde çalışan uygulamanızı veya hizmetlerinizi (Windows kapsayıcıları kullanılıyorsa Docker veya doğrudan Windows) bir Linux VM kurulumu) dağıtmakta ve test eteceğiz.
 
@@ -53,11 +53,11 @@ Başlamak için, aşağıdaki yönergelerde açıklandığı gibi Windows için 
 
 [Docker CE for Windows kullanmaya başlayın](https://docs.docker.com/docker-for-windows/)
 
-Ayrıca, Şekil 5-2 ' de gösterildiği gibi, **.NET Core platformlar arası geliştirme** iş yükü yüklüyken Visual Studio 2017 sürüm 15,7 veya üzeri bir sürüme ihtiyacınız vardır.
+Ayrıca, Şekil 5-2 ' de gösterildiği gibi, **.NET Core platformlar arası geliştirme** iş yükü yüklüyken Visual Studio 2019 sürüm 16,4 veya üzeri bir sürüme ihtiyacınız vardır.
 
 ![.NET Core platformlar arası geliştirme seçiminin ekran görüntüsü.](./media/docker-app-development-workflow/dotnet-core-cross-platform-development.png)
 
-**Şekil 5-2**. Visual Studio 2017 kurulumu sırasında **.NET Core platformlar arası geliştirme** iş yükünü seçme
+**Şekil 5-2**. Visual Studio 2019 kurulumu sırasında **.NET Core platformlar arası geliştirme** iş yükünü seçme
 
 Uygulamanızda Docker 'ı etkinleştirmeden ve Docker 'da dağıtıp test etmeden önce bile, uygulamanızı basit .NET (genellikle .NET Core 'da) kodlamaya başlayabilirsiniz. Ancak, gerçek ortam olacağı ve herhangi bir sorun mümkün olan en kısa sürede keşfedilebilir olduğundan, Docker üzerinde en kısa sürede çalışmaya başlamanız önerilir. Visual Studio, Visual Studio 'daki çok Kapsayıcılı uygulamalarda hata ayıklarken en iyi örnek olan Docker ile neredeyse oldukça kolay bir şekilde çalışmasını sağlayan bu, önerilir.
 
@@ -66,45 +66,45 @@ Uygulamanızda Docker 'ı etkinleştirmeden ve Docker 'da dağıtıp test etmede
 - **Docker CE for Windows \ kullanmaya başlama**
   <https://docs.docker.com/docker-for-windows/>
 
-- **Visual Studio 2017** \
-  [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
+- **Visual Studio 2019** \
+  [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
 ![2\. adım için görüntü.](./media/docker-app-development-workflow/step-2-write-dockerfile.png)
 
-## <a name="step-2-create-a-dockerfile-related-to-an-existing-net-base-image"></a>Adım 2. Mevcut bir .NET temel görüntüsüyle ilişkili bir Dockerfile oluşturma
+## <a name="step-2-create-a-dockerfile-related-to-an-existing-net-base-image"></a>2\. Adım Mevcut bir .NET temel görüntüsüyle ilişkili bir Dockerfile oluşturma
 
 Derlemek istediğiniz her özel görüntü için bir Dockerfile gerekir; Ayrıca, Visual Studio 'dan otomatik olarak veya Docker CLı (Docker Run ve Docker-Compose komutları) kullanarak el ile dağıtım yapıp etmeksizin her bir kapsayıcının dağıtılması için bir Dockerfile gerekir. Uygulamanız tek bir özel hizmet içeriyorsa, tek bir Dockerfile gerekir. Uygulamanız birden çok hizmet içeriyorsa (bir mikro hizmet mimarisinde olduğu gibi), her hizmet için bir Dockerfile gerekir.
 
 Dockerfile, uygulamanızın veya hizmetinizin kök klasörüne yerleştirilir. Bu, Docker 'a uygulamanızı veya hizmetinizi bir kapsayıcıda ayarlamayı ve çalıştırmayı söyleyen komutları içerir. Kodda el ile Dockerfile oluşturabilir ve bunları .NET bağımlılıklarınızla birlikte projenize ekleyebilirsiniz.
 
-Visual Studio ve Docker Araçları ile bu görev yalnızca birkaç fare tıklamasını gerektirir. Visual Studio 2017 ' de yeni bir proje oluşturduğunuzda, Şekil 5-3 ' de gösterildiği gibi, **kapsayıcı (Docker) desteğini etkinleştir**adlı bir seçenek vardır.
+Visual Studio ve Docker Araçları ile bu görev yalnızca birkaç fare tıklamasını gerektirir. Visual Studio 2019 ' de yeni bir proje oluşturduğunuzda, Şekil 5-3 ' de gösterildiği gibi **Docker desteğini etkinleştir**adlı bir seçenek vardır.
 
 ![Docker desteğini etkinleştir onay kutusunu gösteren ekran görüntüsü.](./media/docker-app-development-workflow/enable-docker-support-check-box.png)
 
-**Şekil 5-3**. Visual Studio 2017 'de yeni bir ASP.NET Core projesi oluştururken Docker desteğini etkinleştirme
+**Şekil 5-3**. Visual Studio 2019 'de yeni bir ASP.NET Core projesi oluştururken Docker desteğini etkinleştirme
 
-Ayrıca, Şekil 5-4 ' de gösterildiği gibi, mevcut bir ASP.NET Core Web uygulaması projesinde, **Çözüm Gezgini** projeye sağ tıklayıp > **Docker desteği** **Ekle** ' yi seçerek Docker desteğini etkinleştirebilirsiniz.
+Ayrıca, Şekil 5-4 ' de gösterildiği gibi, mevcut bir ASP.NET Core Web uygulaması projesinde, **Çözüm Gezgini** projeye sağ tıklayıp > **Docker desteği ekle..** . seçeneğini belirleyerek Docker desteğini de etkinleştirebilirsiniz.
 
 ![Ekle menüsündeki Docker desteği seçeneğini gösteren ekran görüntüsü.](./media/docker-app-development-workflow/add-docker-support-option.png)
 
-**Şekil 5-4**. Mevcut bir Visual Studio 2017 projesinde Docker desteğini etkinleştirme
+**Şekil 5-4**. Mevcut bir Visual Studio 2019 projesinde Docker desteğini etkinleştirme
 
 Bu eylem, gerekli yapılandırmayla projeye bir *Dockerfile* ekler ve yalnızca ASP.NET Core projelerinde kullanılabilir.
 
-Benzer bir şekilde, Visual Studio, **> kapsayıcı Orchestrator desteği**seçeneğine sahip tüm çözüme yönelik bir Docker-Compose. yıml dosyası da ekleyebilir. 4\. adımda bu seçeneği daha ayrıntılı bir şekilde araştıracağız.
+Benzer bir biçimde, Visual Studio, **> kapsayıcı Orchestrator desteği ekle**seçeneği ile tüm çözüme yönelik bir `docker-compose.yml` dosyası da ekleyebilir.... 4. adımda bu seçeneği daha ayrıntılı bir şekilde araştıracağız.
 
 ### <a name="using-an-existing-official-net-docker-image"></a>Mevcut bir resmi .NET Docker görüntüsünü kullanma
 
-Genellikle, [Docker Hub](https://hub.docker.com/) kayıt defteri gibi resmi bir depodan aldığınız temel görüntünün en üstünde Kapsayıcınız için özel bir görüntü oluşturursunuz. Visual Studio 'da Docker desteğini etkinleştirdiğinizde bu durum kesin olarak ne olur? Dockerfile, var olan bir `aspnetcore` görüntüsünü kullanır.
+Genellikle, [Docker Hub](https://hub.docker.com/) kayıt defteri gibi resmi bir depodan aldığınız temel görüntünün en üstünde Kapsayıcınız için özel bir görüntü oluşturursunuz. Visual Studio 'da Docker desteğini etkinleştirdiğinizde bu durum kesin olarak ne olur? Dockerfile, var olan bir `dotnet/core/aspnet` görüntüsünü kullanır.
 
-Daha önce seçtiğiniz çerçeveye ve işletim sistemine bağlı olarak, hangi Docker görüntülerini ve depolarınızı kullanacağınızı anlatılmıştır. Örneğin, ASP.NET Core (Linux veya Windows) kullanmak istiyorsanız kullanılacak görüntü `mcr.microsoft.com/dotnet/core/aspnet:2.2`. Bu nedenle, yalnızca Kapsayıcınız için kullanacağınız temel Docker görüntüsünü belirtmeniz yeterlidir. Bunu, Dockerfile 'a `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2` ekleyerek yapabilirsiniz. Bu, Visual Studio tarafından otomatik olarak gerçekleştirilir, ancak sürümü güncelleştirirseniz, bu değeri güncelleştirmeniz gerekir.
+Daha önce seçtiğiniz çerçeveye ve işletim sistemine bağlı olarak, hangi Docker görüntülerini ve depolarınızı kullanacağınızı anlatılmıştır. Örneğin, ASP.NET Core (Linux veya Windows) kullanmak istiyorsanız kullanılacak görüntü `mcr.microsoft.com/dotnet/core/aspnet:3.1`. Bu nedenle, yalnızca Kapsayıcınız için kullanacağınız temel Docker görüntüsünü belirtmeniz yeterlidir. Bunu, Dockerfile 'a `FROM mcr.microsoft.com/dotnet/core/aspnet:3.1` ekleyerek yapabilirsiniz. Bu, Visual Studio tarafından otomatik olarak gerçekleştirilir, ancak sürümü güncelleştirirseniz, bu değeri güncelleştirmeniz gerekir.
 
 Docker Hub 'dan sürüm numarası olan resmi bir .NET görüntü deposu kullanmak, tüm makinelerde (geliştirme, test ve üretim dahil) aynı dil özelliklerinin kullanılabilmesini sağlar.
 
 Aşağıdaki örnekte, bir ASP.NET Core kapsayıcısı için örnek bir Dockerfile gösterilmektedir.
 
 ```Dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 ARG source
 WORKDIR /app
 EXPOSE 80
@@ -112,7 +112,7 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-Bu durumda, görüntü, resmi ASP.NET Core Docker görüntüsünün 2,2 sürümünü temel alır (Linux ve Windows için çoklu mimari). Bu ayar `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2`. (Bu temel görüntü hakkında daha fazla bilgi için bkz. [.NET Core Docker Image](https://hub.docker.com/_/microsoft-dotnet-core/) sayfası.) Dockerfile 'da, çalışma zamanında kullanacağınız TCP bağlantı noktasını dinlemek için Docker 'a (Bu durumda, "kullanıma hazır ayarıyla yapılandırıldığı şekilde, bağlantı noktası 80) da sahip olmanız gerekir.
+Bu durumda, görüntü, resmi ASP.NET Core Docker görüntüsünün 3,1 sürümünü temel alır (Linux ve Windows için çoklu mimari). Bu ayar `FROM mcr.microsoft.com/dotnet/core/aspnet:3.1`. (Bu temel görüntü hakkında daha fazla bilgi için bkz. [.NET Core Docker Image](https://hub.docker.com/_/microsoft-dotnet-core/) sayfası.) Dockerfile 'da, çalışma zamanında kullanacağınız TCP bağlantı noktasını dinlemek için Docker 'a (Bu durumda, "kullanıma hazır ayarıyla yapılandırıldığı şekilde, bağlantı noktası 80) da sahip olmanız gerekir.
 
 Kullanmakta olduğunuz dile ve çerçeveye bağlı olarak Dockerfile içinde ek yapılandırma ayarları belirtebilirsiniz. Örneğin, `["dotnet", "MySingleContainerWebApp.dll"]` GIRIŞ noktası satırı, Docker 'ın bir .NET Core uygulaması çalıştırmasını söyler. .NET uygulamasını derlemek ve çalıştırmak için SDK ve .NET Core CLI (DotNet CLı) kullanıyorsanız, bu ayar farklı olur. Alt çizgi, GIRIŞ noktası çizgisi ve diğer ayarların, uygulamanız için seçtiğiniz dile ve platforma bağlı olarak farklı olacaktır.
 
@@ -136,16 +136,16 @@ Tek bir depo, Linux görüntüsü ve Windows görüntüsü gibi platform türevl
 
 Bir etiketi belirtirseniz, aşağıdaki durumlarda açık olan bir platformu hedefliyorsanız:
 
-- `microsoft/dotnet:2.2-aspnetcore-runtime-stretch-slim` \
-  Hedefler: .NET Core 2,2 çalışma zamanı-yalnızca Linux üzerinde
+- `mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim` \
+  Hedefler: .NET Core 3,1 çalışma zamanı-yalnızca Linux üzerinde
 
-- `microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1809` \
-  Hedefler: .NET Core 2,2 çalışma zamanı-yalnızca Windows nano Server üzerinde
+- `mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1909` \
+  Hedefler: .NET Core 3,1 çalışma zamanı-yalnızca Windows nano Server üzerinde
 
-Ancak, aynı etiketle birlikte aynı görüntü adını belirtirseniz, çok katmanlı görüntüler (`aspnetcore` görüntüsü gibi), aşağıdaki örnekte gösterildiği gibi, dağıttığınız Docker ana bilgisayarı işletim sistemine bağlı olarak Linux veya Windows sürümünü kullanır:
+Ancak, aynı etiketle birlikte aynı görüntü adını belirtirseniz, çok katmanlı görüntüler (`aspnet` görüntüsü gibi), aşağıdaki örnekte gösterildiği gibi, dağıttığınız Docker ana bilgisayarı işletim sistemine bağlı olarak Linux veya Windows sürümünü kullanır:
 
-- `microsoft/dotnet:2.2-aspnetcore-runtime` \
-  Multi-Arch: .NET Core 2,2 Runtime-yalnızca Docker Konağı işletim sistemine bağlı olarak Linux veya Windows nano Server
+- `mcr.microsoft.com/dotnet/core/aspnet:3.1` \
+  Multi-Arch: .NET Core 3,1 Runtime-yalnızca Docker Konağı işletim sistemine bağlı olarak Linux veya Windows nano Server
 
 Bu şekilde, bir Windows ana bilgisayardan bir görüntü çektiğinizde Windows türevini çeker ve aynı görüntü adının bir Linux ana bilgisayardan çekilerek Linux varyantı alınır.
 
@@ -174,11 +174,11 @@ Kısaca, çok aşamalı derlemeler, oluşturma işleminin farklı "aşamalarda" 
 İlk Dockerfile şuna benzer görünebilir:
 
 ```Dockerfile
- 1  FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS base
+ 1  FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
+ 5  FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
  8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks …
@@ -277,11 +277,11 @@ Son iyileştirme için, satır 23 ' ün aynı zamanda uygulama oluşturup 20 ' d
 Elde edilen dosya bundan sonra:
 
 ```Dockerfile
- 1  FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS base
+ 1  FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS publish
+ 5  FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS publish
  6  WORKDIR /src
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj
@@ -308,7 +308,7 @@ Sıfırdan kendi Docker temel görüntünüzü oluşturabilirsiniz. Bu senaryo, 
 
 ![3\. adım için görüntü.](./media/docker-app-development-workflow/step-3-create-dockerfile-defined-images.png)
 
-## <a name="step-3-create-your-custom-docker-images-and-embed-your-application-or-service-in-them"></a>Adım 3: Özel Docker görüntülerinizi oluşturun ve uygulamanızı veya hizmetinizi bunlara ekleyin
+## <a name="step-3-create-your-custom-docker-images-and-embed-your-application-or-service-in-them"></a>3\. Adım Özel Docker görüntülerinizi oluşturun ve uygulamanızı veya hizmetinizi bunlara ekleyin
 
 Uygulamanızdaki her hizmet için ilgili bir görüntü oluşturmanız gerekir. Uygulamanız tek bir hizmetten veya Web uygulamasından yapılırsa yalnızca tek bir görüntüye ihtiyacınız vardır.
 
@@ -340,7 +340,7 @@ Docker desteğiyle bir proje oluşturmak için Visual Studio kullandığınızda
 
 ![İsteğe bağlı 4. adım için görüntü.](./media/docker-app-development-workflow/step-4-define-services-docker-compose-yml.png)
 
-## <a name="step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application"></a>4\. adımı. Çok kapsayıcılı bir Docker uygulaması oluştururken hizmetlerinizi Docker-Compose. yıml 'de tanımlama
+## <a name="step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application"></a>4\. Adım. Çok kapsayıcılı bir Docker uygulaması oluştururken hizmetlerinizi Docker-Compose. yıml 'de tanımlama
 
 [Docker-Compose. yıml](https://docs.docker.com/compose/compose-file/) dosyası, dağıtım komutlarıyla oluşturulmuş bir uygulama olarak dağıtılacak bir ilgili hizmet kümesi tanımlamanızı sağlar. Ayrıca, bağımlılık ilişkilerini ve çalışma zamanı yapılandırmasını yapılandırır.
 
@@ -354,35 +354,35 @@ services:
   webmvc:
     image: eshop/web
     environment:
-      - CatalogUrl=http://catalog.api
-      - OrderingUrl=http://ordering.api
+      - CatalogUrl=http://catalog-api
+      - OrderingUrl=http://ordering-api
     ports:
       - "80:80"
     depends_on:
-      - catalog.api
-      - ordering.api
+      - catalog-api
+      - ordering-api
 
-  catalog.api:
-    image: eshop/catalog.api
+  catalog-api:
+    image: eshop/catalog-api
     environment:
-      - ConnectionString=Server=sql.data;Port=1433;Database=CatalogDB;…
+      - ConnectionString=Server=sqldata;Port=1433;Database=CatalogDB;…
     ports:
       - "81:80"
     depends_on:
-      - sql.data
+      - sqldata
 
-  ordering.api:
-    image: eshop/ordering.api
+  ordering-api:
+    image: eshop/ordering-api
     environment:
-      - ConnectionString=Server=sql.data;Database=OrderingDb;…
+      - ConnectionString=Server=sqldata;Database=OrderingDb;…
     ports:
       - "82:80"
     extra_hosts:
       - "CESARDLBOOKVHD:10.0.75.1"
     depends_on:
-      - sql.data
+      - sqldata
 
-  sql.data:
+  sqldata:
     image: mssql-server-linux:latest
     environment:
       - SA_PASSWORD=Pass@word
@@ -393,7 +393,7 @@ services:
 
 Bu Docker-Compose. yıml dosyası Basitleştirilmiş ve birleştirilmiş bir sürümdür. Her bir kapsayıcı için (özel görüntünün adı gibi) statik yapılandırma verilerini, her zaman gerekli olan ve bağlantı dizesi gibi dağıtım ortamına bağlı olabilecek yapılandırma bilgilerini içerir. Sonraki bölümlerde, Docker-Compose. yıml yapılandırmasını birden çok Docker-Compose dosyasına nasıl böleyeceğinizi ve ortam ve yürütme türüne (hata ayıklama veya sürüm) göre değerleri nasıl geçersiz kılacağınızı öğreneceksiniz.
 
-Docker-Compose. yml dosyası örneği dört hizmeti tanımlar: `webmvc` hizmeti (bir Web uygulaması), iki mikro hizmet (`ordering.api` ve `basket.api`) ve bir veri kaynağı kapsayıcısı, `sql.data`bir kapsayıcı olarak çalışan Linux için SQL Server temel alır. Her hizmet bir kapsayıcı olarak dağıtılır, bu nedenle her biri için bir Docker görüntüsü gerekir.
+Docker-Compose. yml dosyası örneği dört hizmeti tanımlar: `webmvc` hizmeti (bir Web uygulaması), iki mikro hizmet (`ordering-api` ve `basket-api`) ve bir veri kaynağı kapsayıcısı, `sqldata`bir kapsayıcı olarak çalışan Linux için SQL Server temel alır. Her hizmet bir kapsayıcı olarak dağıtılır, bu nedenle her biri için bir Docker görüntüsü gerekir.
 
 Docker-Compose. yıml dosyası yalnızca hangi kapsayıcıların kullanıldığını, ancak bunların ayrı ayrı nasıl yapılandırıldığını belirtir. Örneğin,. yml dosyasındaki `webmvc` kapsayıcı tanımı:
 
@@ -407,7 +407,7 @@ Docker-Compose. yıml dosyası yalnızca hangi kapsayıcıların kullanıldığ�
 
 Mikro hizmetleri ve çok Kapsayıcılı uygulamaları nasıl uygulayacağınızı kapsadığımızda, Docker-Compose. yıml dosyasını sonraki bir bölümde geri ziyaret edeceğiz.
 
-### <a name="working-with-docker-composeyml-in-visual-studio-2017"></a>Visual Studio 2017 ' de Docker-Compose. yıml ile çalışma
+### <a name="working-with-docker-composeyml-in-visual-studio-2019"></a>Visual Studio 2019 ' de Docker-Compose. yıml ile çalışma
 
 Daha önce bahsedildiği gibi, bir projeye Dockerfile eklemenin yanı sıra, Visual Studio 2017 (sürüm 15,8 ' den itibaren) bir çözüme Docker Compose için Orchestrator desteği ekleyebilirler.
 
@@ -415,25 +415,25 @@ Daha önce bahsedildiği gibi, bir projeye Dockerfile eklemenin yanı sıra, Vis
 
 Bu işlemi, Docker-Compose. yıml dosyasına eklemek istediğiniz her proje için tekrarlamanız gerekir.
 
-Bu yazma sırasında, Visual Studio Docker Compose ve Service Fabric düzenleyiciler destekler.
+Bu yazma sırasında, Visual Studio **Docker Compose** ve **Kubernetes/Held** düzenleyiciler destekler.
 
 ![Proje bağlam menüsündeki kapsayıcı Orchestrator desteği seçeneğini gösteren ekran görüntüsü.](./media/docker-app-development-workflow/add-container-orchestrator-support-option.png)
 
-**Şekil 5-7**. ASP.NET Core projesine sağ tıklayarak Visual Studio 2017 ' de Docker desteği ekleme
+**Şekil 5-7**. ASP.NET Core projesine sağ tıklayarak Visual Studio 2019 ' de Docker desteği ekleme
 
 Visual Studio 'daki çözümünüze Orchestrator desteği ekledikten sonra, Şekil 5-8 ' de gösterildiği gibi eklenen Docker-Compose. yıml dosyalarını içeren Çözüm Gezgini yeni bir düğüm (`docker-compose.dcproj` proje dosyasında) görürsünüz.
 
 ![Çözüm Gezgini Docker-Compose düğümünün ekran görüntüsü.](./media/docker-app-development-workflow/docker-compose-tree-node.png)
 
-**Şekil 5-8**. Visual Studio 2017 Çözüm Gezgini eklenen **Docker-Compose** ağacı düğümü
+**Şekil 5-8**. Visual Studio 2019 Çözüm Gezgini eklenen **Docker-Compose** ağacı düğümü
 
 `docker-compose up` komutunu kullanarak, tek bir Docker-Compose. yıml dosyası ile çok kapsayıcılı bir uygulama dağıtabilirsiniz. Ancak, Visual Studio bu grubun bir grubunu ekleyerek ortama (geliştirme veya üretim) ve yürütme türüne (yayın veya hata ayıklama) bağlı olarak değerleri geçersiz kılabilirsiniz. Bu özellik sonraki bölümlerde açıklanacaktır.
 
 ![5\. adım için görüntü.](./media/docker-app-development-workflow/step-5-run-containers-compose-app.png)
 
-## <a name="step-5-build-and-run-your-docker-application"></a>5\. adımı. Docker uygulamanızı derleyin ve çalıştırın
+## <a name="step-5-build-and-run-your-docker-application"></a>5\. Adım. Docker uygulamanızı derleyin ve çalıştırın
 
-Uygulamanızın yalnızca tek bir kapsayıcısı varsa, bunu Docker konağına (VM veya fiziksel sunucu) dağıtarak çalıştırabilirsiniz. Bununla birlikte, uygulamanız birden çok hizmet içeriyorsa, tek bir CLı komutu (Docker-Compose) veya Visual Studio ile birlikte bulunan ve bu komutu kapakları altında kullanacak şekilde oluşturulan bir uygulama olarak dağıtabilirsiniz. Farklı seçeneklere göz atalım.
+Uygulamanızın yalnızca tek bir kapsayıcısı varsa, bunu Docker konağına (VM veya fiziksel sunucu) dağıtarak çalıştırabilirsiniz. Ancak, uygulamanız birden çok hizmet içeriyorsa, tek bir CLı komutu (`docker-compose up)`veya Visual Studio ile birlikte, bu komutu kapakları altında kullanacak şekilde, oluşturulan bir uygulama olarak dağıtabilirsiniz. Farklı seçeneklere göz atalım.
 
 ### <a name="option-a-running-a-single-container-application"></a>Seçenek A: tek kapsayıcılı bir uygulama çalıştırma
 
@@ -455,7 +455,7 @@ Bu durumda, komut kapsayıcının 5000 iç bağlantı noktasını ana makinenin 
 
 Gösterilen karma kapsayıcı KIMLIĞIDIR ve `--name` seçeneği kullanılmazsa rastgele okunabilir bir ad atanır.
 
-#### <a name="using-visual-studio"></a>Visual Studio 'Yu kullanma
+#### <a name="using-visual-studio"></a>Visual Studio’yu kullanma
 
 Kapsayıcı Orchestrator desteği eklemediyseniz, Visual Studio 'da **CTRL-F5** tuşlarına basarak tek bir kapsayıcı uygulamasını da çalıştırabilirsiniz ve ayrıca **F5** 'i kullanarak kapsayıcıda uygulamada hata ayıklaması yapabilirsiniz. Kapsayıcı, Docker Run kullanarak yerel olarak çalışır.
 
@@ -477,9 +477,9 @@ Docker CLı ile çok kapsayıcılı bir uygulama çalıştırmak için `docker-c
 
 Docker-Compose komutu çalıştıktan sonra, uygulama ve ilgili kapsayıcıları Şekil 5-10 ' de gösterildiği gibi Docker ana bilgisayarınıza dağıtılır.
 
-#### <a name="using-visual-studio"></a>Visual Studio 'Yu kullanma
+#### <a name="using-visual-studio"></a>Visual Studio’yu kullanma
 
-Visual Studio 2017 kullanarak çok kapsayıcılı bir uygulama çalıştırmak daha basit olamaz. Hata ayıklamak için **CTRL-F5** tuşlarına **basın veya her** zamanki gibi, **Docker-Compose** projesini başlangıç projesi olarak ayarlayın.  Visual Studio tüm gerekli kurulumu işler, bu nedenle her zamanki gibi kesme noktaları oluşturabilir ve son olarak "uzak sunucular" içinde çalışan bağımsız işlemlere (tıpkı bunun gibi) hata ayıklaması yapabilirsiniz.
+Visual Studio 2019 kullanarak çok kapsayıcılı bir uygulama çalıştırmak daha basit olamaz. Hata ayıklamak için **CTRL-F5** tuşlarına **basın veya her** zamanki gibi, **Docker-Compose** projesini başlangıç projesi olarak ayarlayın.  Visual Studio tüm gerekli kurulumu işler, bu nedenle her zamanki gibi kesme noktaları oluşturabilir ve son olarak "uzak sunucular" içinde çalışan bağımsız işlemlere ne zaman hata ayıklaması yapabilirsiniz, hata ayıklayıcı zaten eklenmiş olur. Tıpkı bunun gibi.
 
 Daha önce bahsedildiği gibi, bir çözüm içindeki bir projeye Docker çözüm desteği eklediğinizde, bu proje genel (çözüm düzeyi) Docker-Compose. yıml dosyasında yapılandırılmıştır ve bu, tüm çözümü tek seferde çalıştırmanıza veya hata ayıklamanıza olanak tanır. Visual Studio, Docker çözüm desteğinin etkinleştirildiği her proje için bir kapsayıcı başlatır ve tüm iç adımları (dotnet publish, Docker Build, vb.) gerçekleştirir.
 
@@ -487,11 +487,11 @@ Tüm drudgery göz atmak istiyorsanız, dosyaya göz atın:
 
 `{root solution folder}\obj\Docker\docker-compose.vs.debug.g.yml`
 
-Buradaki önemli nokta, Şekil 5-12 ' de gösterildiği gibi, Visual Studio 2017 ' de gösterildiği gibi, F5 tuşu eylemi için ek bir **Docker** komutu vardır. Bu seçenek, çözüm düzeyindeki Docker-Compose. yıml dosyalarında tanımlanan tüm kapsayıcıları çalıştırarak çok kapsayıcılı bir uygulamayı çalıştırmanızı veya hata ayıklamanıza olanak sağlar. Birden çok Kapsayıcılı çözüm için hata ayıklama özelliği, çeşitli kesme noktaları, farklı bir projede (kapsayıcı) ve Visual Studio 'dan hata ayıklama yaparken, farklı projelerde tanımlanan kesme noktalarında durulacağınız ve üzerinde çalışırken durdurulacak anlamına gelir. farklı kapsayıcılar.
+Buradaki önemli nokta, Şekil 5-12 ' de gösterildiği gibi, Visual Studio 2019 ' de gösterildiği gibi, F5 tuşu eylemi için ek bir **Docker** komutu vardır. Bu seçenek, çözüm düzeyindeki Docker-Compose. yıml dosyalarında tanımlanan tüm kapsayıcıları çalıştırarak çok kapsayıcılı bir uygulamayı çalıştırmanızı veya hata ayıklamanıza olanak sağlar. Birden çok Kapsayıcılı çözüm için hata ayıklama özelliği, çeşitli kesme noktaları, farklı bir projede (kapsayıcı) ve Visual Studio 'dan hata ayıklama yaparken, farklı projelerde tanımlanan kesme noktalarında durulacağınız ve üzerinde çalışırken durdurulacak anlamına gelir. farklı kapsayıcılar.
 
 ![Docker-Compose projesi çalıştıran hata ayıklama araç çubuğunun ekran görüntüsü.](./media/docker-app-development-workflow/debug-toolbar-docker-compose-project.png)
 
-**Şekil 5-12**. Visual Studio 2017 'de çok Kapsayıcılı uygulamalar çalıştırma
+**Şekil 5-12**. Visual Studio 2019 'de çok Kapsayıcılı uygulamalar çalıştırma
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
@@ -504,7 +504,7 @@ Docker-Compose ve Docker çalıştırma komutları (ya da Visual Studio 'da kaps
 
 ![6\. adım için görüntü.](./media/docker-app-development-workflow/step-6-test-app-microservices.png)
 
-## <a name="step-6-test-your-docker-application-using-your-local-docker-host"></a>6\. adım. Yerel Docker konağını kullanarak Docker uygulamanızı test etme
+## <a name="step-6-test-your-docker-application-using-your-local-docker-host"></a>6\. Adım. Yerel Docker konağını kullanarak Docker uygulamanızı test etme
 
 Bu adım, uygulamanızın yaptığı işe göre farklılık gösterir. Tek bir kapsayıcı veya hizmet olarak dağıtılan basit bir .NET Core Web uygulamasında, Şekil 5-13 ' de gösterildiği gibi, Docker ana bilgisayarında bir tarayıcı açarak ve bu siteye giderek hizmete erişebilirsiniz. (Dockerfile içindeki yapılandırma kapsayıcıyı 80 dışında bir şey olan konaktaki bir bağlantı noktasıyla eşleiyorsa, URL 'ye ana bilgisayar bağlantı noktasını ekleyin.)
 
@@ -522,13 +522,13 @@ Ayrıca Şekil 5-14 ' de gösterildiği gibi, terminalden kıvrımlı kullanarak
 
 **Şekil 5-14**. Docker uygulamanızı kıvrımlı kullanarak yerel olarak test etme örneği
 
-### <a name="testing-and-debugging-containers-with-visual-studio-2017"></a>Visual Studio 2017 ile kapsayıcıları test etme ve hata ayıklama
+### <a name="testing-and-debugging-containers-with-visual-studio-2019"></a>Visual Studio 2019 ile kapsayıcıları test etme ve hata ayıklama
 
-Visual Studio 2017 ile kapsayıcıları çalıştırırken ve hata ayıklarken, kapsayıcılar olmadan çalıştırırken kullandığınız şekilde .NET uygulamasında hata ayıklaması yapabilirsiniz.
+Visual Studio 2019 ile kapsayıcıları çalıştırırken ve hata ayıklarken, kapsayıcılar olmadan çalıştırırken kullandığınız şekilde .NET uygulamasında hata ayıklaması yapabilirsiniz.
 
 ### <a name="testing-and-debugging-without-visual-studio"></a>Visual Studio olmadan test etme ve hata ayıklama
 
-Düzenleyici/CLı yaklaşımını kullanarak geliştiriyorsanız, hata ayıklama kapsayıcıları daha zordur ve izleme oluşturarak hata ayıklama yapmak isteyeceksiniz.
+Düzenleyici/CLı yaklaşımını kullanarak geliştiriyorsanız, hata ayıklama kapsayıcıları daha zordur ve büyük olasılıkla izlemeler oluşturarak hata ayıklama isteyeceksiniz.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
@@ -552,7 +552,7 @@ Ayrıca, adım 2 ' yi (projelerinize Docker desteği ekleme) yalnızca bir kez g
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Visual Studio 2017 Ile Steve Lasker .net Docker geliştirme** \
+- **Steve Lasker. Visual Studio ile .net Docker geliştirme (2017)**  \
   <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Windows kapsayıcıları ayarlamak için bir Dockerfile içinde PowerShell komutlarını kullanma
@@ -560,7 +560,7 @@ Ayrıca, adım 2 ' yi (projelerinize Docker desteği ekleme) yalnızca bir kez g
 [Windows kapsayıcıları](https://docs.microsoft.com/virtualization/windowscontainers/about/index) , mevcut Windows uygulamalarınızı Docker görüntülerine dönüştürmenize ve bunları Docker ekosisteminin geri kalanıyla aynı araçlarla dağıtmanıza imkan tanır. Windows kapsayıcılarını kullanmak için aşağıdaki örnekte gösterildiği gibi, Dockerfile içinde PowerShell komutlarını çalıştırın:
 
 ```Dockerfile
-FROM microsoft/windowsservercore
+FROM mcr.microsoft.com/windows/servercore
 LABEL Description="IIS" Vendor="Microsoft" Version="10"
 RUN powershell -Command Add-WindowsFeature Web-Server
 CMD [ "ping", "localhost", "-t" ]
@@ -574,7 +574,7 @@ RUN powershell add-windowsfeature web-asp-net45
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **aspnet-docker/Dockerfile.** Windows özelliklerini dahil etmek için dockerfile 'ları destekliyor 'tan çalıştırılacak örnek PowerShell komutları. \
+- **ASPNET-Docker/Dockerfile.** Windows özelliklerini dahil etmek için dockerfile 'ları destekliyor 'tan çalıştırılacak örnek PowerShell komutları. \
   <https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile>
 
 >[!div class="step-by-step"]

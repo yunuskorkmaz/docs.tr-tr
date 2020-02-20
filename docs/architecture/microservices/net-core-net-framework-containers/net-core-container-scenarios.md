@@ -1,13 +1,13 @@
 ---
 title: Docker kapsayıcıları için ne zaman .NET Core seçilmelidir?
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Docker kapsayıcıları için ne zaman .NET Core seçme
-ms.date: 09/11/2018
-ms.openlocfilehash: d17b6b7620f485f09f8f18ac792418a48ae40037
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 01/30/2020
+ms.openlocfilehash: b3cb1eefe739b4ffdbbdd0bdcb3c74b51862704b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920986"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501844"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Docker kapsayıcıları için ne zaman .NET Core seçilmelidir?
 
@@ -35,11 +35,11 @@ Ides ve düzenleyicilere ek olarak, desteklenen tüm platformlar için [.NET Cor
 
 Kapsayıcılar genellikle bir mikro hizmet mimarisi ile birlikte kullanılır, ancak her türlü mimari kalıbı izleyen Web uygulamalarını veya hizmetlerini kapsayıtabilecek de kullanılabilirler. Windows kapsayıcılarında .NET Framework kullanabilirsiniz, ancak .NET Core 'un modülerliği ve hafif doğası, kapsayıcılar ve mikro hizmet mimarileri için mükemmel hale getirir. Bir kapsayıcı oluşturduğunuzda ve dağıttığınızda, bu görüntü .NET Core ile .NET Framework göre daha küçüktür.
 
-## <a name="creating-and-deploying-microservices-on-containers"></a>Kapsayıcılar üzerinde mikro hizmetler oluşturma ve dağıtma
+## <a name="create-and-deploy-microservices-on-containers"></a>Kapsayıcılar üzerinde mikro hizmetler oluşturma ve dağıtma
 
-Düz süreçler kullanarak mikro hizmet tabanlı uygulamalar (kapsayıcılar olmadan) oluşturmak için geleneksel .NET Framework kullanabilirsiniz. Bu şekilde, .NET Framework zaten yüklenmiş ve süreçler genelinde paylaşıldığı için, süreçler hafif ve hızlı bir şekilde başlatılır. Ancak kapsayıcıları kullanıyorsanız, geleneksel .NET Framework görüntüsü de Windows Server Core ' a dayalıdır ve bu, mikro hizmetler arası bir yaklaşım için çok daha ağır hale gelir.
+Düz süreçler kullanarak mikro hizmet tabanlı uygulamalar (kapsayıcılar olmadan) oluşturmak için geleneksel .NET Framework kullanabilirsiniz. Bu şekilde, .NET Framework zaten yüklenmiş ve süreçler genelinde paylaşıldığı için, süreçler hafif ve hızlı bir şekilde başlatılır. Ancak kapsayıcıları kullanıyorsanız, geleneksel .NET Framework görüntüsü de Windows Server Core ' a dayalıdır ve bu, mikro hizmetler arası bir yaklaşım için çok daha ağır hale gelir. Ancak ekipler, .NET Framework kullanıcılara da deneyimi geliştirmek üzere fırsatlar arıyor. Son olarak, [Windows Server çekirdek kapsayıcısı görüntülerinin boyutu %40 daha küçük > kadar azaltılmıştır](https://devblogs.microsoft.com/dotnet/we-made-windows-server-core-container-images-40-smaller). 
 
-Buna karşılık, .NET Core basit olduğundan, kapsayıcıları temel alan mikro hizmetlere dayalı bir sistemi benimseme konusunda .NET Core en iyi adaydır. Bunlara ek olarak, Linux görüntüsü veya Windows nano görüntüsü olan ilişkili kapsayıcı görüntüleri, her ikisi de açık ve hızlı bir şekilde kaplar ve hızla başlatılabilir.
+Diğer yandan, .NET Core basit olduğundan, kapsayıcıları temel alan mikro hizmetlere dayalı bir sistem kullanıyorsanız, .NET Core en iyi adaydır. Ayrıca, Linux veya Windows nano Server için ilgili kapsayıcı görüntüleri yalın ve küçüktür, kapsayıcılar açık ve hızlı bir şekilde başlatılır.
 
 Mikro hizmet mümkün olduğunca küçük olacak şekilde, küçük bir parmak izine sahip olmak, küçük bir [ilgi alanına sahip](https://en.wikipedia.org/wiki/Domain-driven_design)olmak, küçük bir sorun olduğunu göstermek ve hızlı bir şekilde başlayabilmek ve durdurmak için en az bir değer olması gerekir: Bu gereksinimler için, .NET Core kapsayıcı görüntüsü gibi küçük ve hızlı-örnek oluşturma kapsayıcı görüntülerini kullanmak isteyeceksiniz.
 

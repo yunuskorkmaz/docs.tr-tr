@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın MVC 
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: d83f7fca10aed6301c170b7b6c5651da6f02be08
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 164e820ffa6030b3dcb9180d56e57ce39bb03143
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449367"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503939"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>MVC uygulamalarını test ASP.NET Core
 
@@ -70,7 +70,7 @@ Ortak bir yaklaşım, bir ' src ' klasörü altında uygulama projelerini ve uyg
 
 **Şekil 9-2**. Çözümünüzde test organizasyonu
 
-Tercih ettiğiniz test çerçevesini kullanabilirsiniz. XUnit çerçevesi iyi çalışmaktadır ve tüm ASP.NET Core ve EF Core testlerin yazıldığı şeydir. Şekil 9-3 ' de gösterilen şablonu kullanarak Visual Studio 'da bir xUnit test projesi veya DotNet New xUnit kullanarak CLı ekleyebilirsiniz.
+Tercih ettiğiniz test çerçevesini kullanabilirsiniz. XUnit çerçevesi iyi çalışmaktadır ve tüm ASP.NET Core ve EF Core testlerin yazıldığı şeydir. Şekil 9-3 ' de gösterilen şablonu kullanarak Visual Studio 'da bir xUnit test projesi ekleyebilir veya `dotnet new xunit`kullanarak CLı ekleyebilirsiniz.
 
 ![Visual Studio 'da bir xUnit test projesi ekleme](./media/image9-3.png)
 

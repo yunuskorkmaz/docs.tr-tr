@@ -1,35 +1,41 @@
 ---
 title: Akış Hizmetleri ile yinelenen alanlar-WCF geliştiricileri için gRPC
-description: GRPC ile veri koleksiyonlarını geçirme yöntemi olarak yinelenen alanları akış Hizmetleri ile karşılaştırın.
+description: GRPC kullanarak veri koleksiyonlarını geçirme yöntemi olarak, yinelenen alanları akış Hizmetleri ile karşılaştırın.
 ms.date: 09/02/2019
-ms.openlocfilehash: 46586ab08df6b136cdafb990ce8be75435a6bf6c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 0e717df57ba2bb52d63a063072d8a45bf0f7e395
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337863"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503378"
 ---
-# <a name="grpc-streaming-services-versus-repeated-fields"></a>gRPC akış Hizmetleri ve yinelenen alanlara karşı
+# <a name="grpc-streaming-services-vs-repeated-fields"></a>gRPC akış Hizmetleri ile yinelenen alanlar
 
-gRPC Hizmetleri, veri kümelerini veya nesne listelerini döndürmenin iki yolunu sağlar. Protokol arabellekleri ileti belirtimi, başka bir iletideki ileti türlerini veya ileti dizilerini bildirmek için `repeated` anahtar sözcüğünü kullanır. GRPC hizmeti belirtimi, birden fazla iletinin gönderildiği ve tek tek işlenebileceği uzun süre çalışan kalıcı bir bağlantı bildirmek için `stream` anahtar sözcüğünü kullanır. `stream` özelliği, bildirimler veya günlük iletileri gibi uzun süre çalışan zamana bağlı veriler için de kullanılabilir, ancak bu bölüm, tek bir veri kümesi döndürmek için kullanımını göz önünde bulunduracaktır.
+gRPC Hizmetleri, veri kümelerini veya nesne listelerini döndürmenin iki yolunu sağlar. Protokol arabellekleri ileti belirtimi, başka bir iletideki ileti türlerini veya ileti dizilerini bildirmek için `repeated` anahtar sözcüğünü kullanır. GRPC hizmeti belirtimi, uzun süre çalışan kalıcı bir bağlantı bildirmek için `stream` anahtar sözcüğünü kullanır. Bu bağlantı üzerinde, birden çok ileti gönderilir ve tek tek işlenebilir. 
 
-Kullanmanız gereken, veri kümesinin genel boyutu, istemci veya sunucu ucunda veri kümesini oluşturmak için geçen süre ve veri kümesinin tüketicisi ilk öğe kullanılabilir duruma geldiğinde bu işlemi yapmaya başlayıp başlamadığı gibi çeşitli faktörlere bağlıdır. ya da tüm yararlı bir işlem yapmak için veri kümesinin tamamını gerektirir.
+Ayrıca, bildirimler veya günlük iletileri gibi uzun süre çalışan zamana bağlı veriler için `stream` özelliğini de kullanabilirsiniz. Ancak bu bölüm, tek bir veri kümesi döndürmek için kullanımını göz önünde bulunduracaktır.
+
+Kullanmanız gereken etkenlere bağlıdır, örneğin:
+
+- Veri kümesinin genel boyutu.
+- Veri kümesini istemci ya da sunucu ucunda oluşturmak için geçen süre.
+- Veri kümesinin tüketicisinin, ilk öğe kullanılabilir duruma geldiğinde hemen üzerinde işlem yapıp başlatamayacağını veya her şeyi yararlı hale yapması için tüm veri kümesine ihtiyacı olup olmadığı.
 
 ## <a name="when-to-use-repeated-fields"></a>`repeated` alanları ne zaman kullanılır?
 
-Boyut açısından kısıtlanmış olan ve kısa bir süre içinde tek bir şekilde oluşturulabilecek tüm veri kümeleri için — bir saniyenin altında, normal bir prototipleme iletisinde `repeated` alanı kullanmanız gerekir. Örneğin, bir e-ticaret sisteminde, bir sipariş içindeki öğelerin listesini oluşturmak büyük olasılıkla hızlıdır ve liste çok büyük olmaz. `repeated` alanla tek bir ileti döndürülmesi, `stream` kullanmaktan daha hızlı bir sıralama düzeni ve daha az ağ yükü doğurur.
+Boyut açısından kısıtlanmış olan ve kısa bir süre içinde tek bir şekilde oluşturulabilecek tüm veri kümeleri için — bir saniyenin altında, normal bir prototipleme iletisinde `repeated` alanı kullanmanız gerekir. Örneğin, bir e-ticaret sisteminde, bir sipariş içindeki öğelerin listesini oluşturmak büyük olasılıkla hızlıdır ve liste çok büyük olmaz. `repeated` alanla tek bir ileti döndürülmesi `stream` kullanmaktan daha hızlı bir sıralama düzeni ve daha az ağ yükü doğurur.
 
-İstemci, işleme başlamadan önce tüm verilere ihtiyaç duyuyorsa ve veri kümesi bellekte oluşturmaya yetecek kadar küçükse, sunucudaki bellekte veri kümesinin gerçek oluşturma işlemi daha yavaş olsa bile bir `repeated` alanı kullanmayı düşünün.
+İstemciye, işleme başlamadan önce tüm veriler gerekiyorsa ve veri kümesi bellekte oluşturmaya yetecek kadar küçükse, bir `repeated` alanı kullanmayı göz önünde bulundurun. Sunucu üzerindeki bellekte veri kümesinin oluşturulması daha yavaş olsa bile bunu göz önünde bulundurun.
 
 ## <a name="when-to-use-stream-methods"></a>`stream` yöntemlerinin ne zaman kullanılacağı
 
-İleti nesnelerinin potansiyel olarak çok büyük olduğu veri kümeleri, akış istekleri veya yanıtları kullanılarak en iyi şekilde aktarılır. Bellekte büyük bir nesne oluşturmak, ağa yazmak ve sonra kaynakları boşaltmak daha etkilidir. Bu yaklaşım, hizmetinizin ölçeklenebilirliğini geliştirir.
+Veri kümelerinizde bulunan ileti nesneleri çok büyükse, akış isteklerini veya yanıtlarını kullanarak bunları aktarmanız en iyisidir. Bellekte büyük bir nesne oluşturmak, ağa yazmak ve sonra kaynakları boşaltmak daha etkilidir. Bu yaklaşım, hizmetinizin ölçeklenebilirliğini geliştirir.
 
-Benzer şekilde, bu dosyaları oluştururken belleğin tükenmemesi için, kısıtlanmış olmayan boyutun veri kümelerinin akış üzerinden gönderilmesi gerekir.
+Benzer şekilde, bunları oluştururken belleğin tükenmesinden kaçınmak için, akış üzerinde kısıtlanmış olmayan boyut veri kümelerini göndermeniz gerekir.
 
-Her bir öğenin tüketici tarafından ayrı olarak işlenebildiği veri kümelerinde, ilerlemenin son kullanıcıya belirtilebileceği anlamına gelir. Bu, uygulamanın genel performansına karşı dengelenmesi gerekse de bir uygulamanın görünen yanıt hızını iyileştirebilir.
+Tüketicinin her bir öğeyi ayrı olarak işleyebildiği veri kümeleri için, ilerlemenin kullanıcıya belirtilebileceği anlamına gelir. Bir akışın kullanılması, bir uygulamanın yanıt hızını iyileştirebilir, ancak uygulamanın genel performansına karşı dengelenmesi gerekir.
 
-Akışların yararlı olabilecek başka bir senaryo da birçok hizmet arasında bir iletinin işlendiği yerdir. Bir zincirdeki her bir hizmet bir akış döndürürse, Terminal Hizmeti (diğer bir deyişle, zincirdeki son), işlenen ve bir akış döndürebilen ya da bir akışa geri alınabilecek iletileri geri dönerek tek bir yanıt iletisine neden olur. Bu yaklaşım, eşleme/azaltma gibi desenlerin kendisini geliştirir.
+Akışların yararlı olabilecek başka bir senaryo da birçok hizmet arasında bir iletinin işlendiği yerdir. Bir zincirdeki her hizmet bir akış döndürürse, Terminal Hizmeti (diğer bir deyişle, zincirdeki son) iletileri döndürmeye başlayabilir. Bu iletiler işlenebilir ve özgün istek sahibine zincirde geri geçirilebilir. İstek sahibi, bir akış döndürebilir ya da sonuçları tek bir yanıt iletisine toplayabilirler. Bu yaklaşım MapReduce gibi desenlerin kendisini geliştirir.
 
 >[!div class="step-by-step"]
 >[Önceki](migrate-duplex-services.md)

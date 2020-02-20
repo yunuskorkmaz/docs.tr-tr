@@ -1,13 +1,13 @@
 ---
 title: Tek Yapılı Uygulamaları Kapsayıcıya Alma
 description: Tek parçalı uygulamaların kapsayıcılarından yararlanın, mikro hizmetler mimarisinin tüm avantajlarını almamakla birlikte, hemen teslim edilebilir önemli dağıtım avantajları vardır.
-ms.date: 09/20/2018
-ms.openlocfilehash: e02aa4ff644fc26b7f15721866f8862f6a175cf2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 0e6f7504a91d2b1a89193471746168fc34f50956
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737955"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503275"
 ---
 # <a name="containerizing-monolithic-applications"></a>Tek Yapılı Uygulamaları Kapsayıcıya Alma
 
@@ -61,7 +61,7 @@ Azure 'a dağıtılan bir kapsayıcının doğrulanmasını mi yoksa bir uygulam
 
 ![Container Registry gösteren App Service oluştur iletişim kutusunun ekran görüntüsü.](./media/containerize-monolithic-applications/publish-azure-app-service-container.png)
 
-**Şekil 4-4**. Visual Studio 'dan Azure App Service için tek kapsayıcılı bir uygulama yayımlama
+**Şekil 4-4**. Visual Studio 2019 Azure App Service için tek kapsayıcılı bir uygulama yayımlama
 
 Docker olmadan, Azure App Service desteklenmeyen diğer yetenekler, çerçeveler veya bağımlılıklara ihtiyaç duymanız durumunda, Azure ekibi App Service bu bağımlılıkları güncelleştirene kadar beklemeniz gerekiyordu. Ya da daha fazla denetiminiz olan Azure Cloud Services veya VM 'Ler gibi diğer hizmetlere geçmeniz gerekiyordu ve uygulamanız için gerekli bir bileşeni veya çerçeveyi yükleyebilirsiniz.
 

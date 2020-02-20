@@ -2,18 +2,18 @@
 title: Self-hosted gRPC uygulamaları-WCF geliştiricileri için gRPC
 description: ASP.NET Core gRPC uygulamalarını self-hosted Hizmetleri olarak dağıtma.
 ms.date: 09/02/2019
-ms.openlocfilehash: 00b4ad50eae629b5b36a890d1eecf7119386c74c
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 2244f161ad4b5d60138ae0f7b4d6a9c8c8829aa8
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545073"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503407"
 ---
 # <a name="self-hosted-grpc-applications"></a>Şirket içinde barındırılan gRPC uygulamaları
 
-ASP.NET Core 3,0 uygulamaları Windows Server 'da IIS 'de barındırılamasa da, HTTP/2 işlevselliğinin bazıları henüz desteklenmediğinden, şu anda IIS 'de bir gRPC uygulaması barındırılamaz. Bu işlevsellik, gelecekteki bir Windows Server güncelleştirmesinde beklenmektedir.
+ASP.NET Core 3,0 uygulamaları Windows Server 'da IIS 'de barındırılamasa da, HTTP/2 işlevselliğinin bazıları desteklenmediğinden, şu anda IIS 'de bir gRPC uygulaması barındırılamaz. Bu işlevsellik, gelecekteki bir Windows Server güncelleştirmesi için bir hedeftir.
 
-.NET Core 3,0 barındırma uzantılarında bazı yeni özellikler sayesinde uygulamanızı Windows hizmeti olarak veya [systemd](https://en.wikipedia.org/wiki/Systemd)tarafından denetlenen bir Linux hizmeti olarak çalıştırabilirsiniz.
+Uygulamanızı bir Windows hizmeti olarak çalıştırabilirsiniz. Veya .NET Core 3,0 barındırma uzantılarında yeni özellikler nedeniyle bu hizmeti [systemd](https://en.wikipedia.org/wiki/Systemd)tarafından denetlenen bir Linux hizmeti olarak çalıştırabilirsiniz.
 
 ## <a name="run-your-app-as-a-windows-service"></a>Uygulamanızı bir Windows hizmeti olarak çalıştırma
 
@@ -32,31 +32,36 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 > [!NOTE]
 > Uygulama bir Windows hizmeti olarak çalışmıyorsa `UseWindowsService` yöntemi hiçbir şey yapmaz.
 
-Şimdi, Visual Studio 'dan projeye sağ tıklayıp bağlam menüsünden *Yayımla* ' yı seçerek veya .NET Core CLI uygulamanızı yayımlayın.
+Şimdi aşağıdaki yöntemlerden birini kullanarak uygulamanızı yayımlayın:
 
-Bir .NET Core uygulaması yayımladığınızda, *çerçeveye bağımlı* bir dağıtım veya *kendi kendine dahil* edilen bir dağıtım oluşturmayı tercih edebilirsiniz. Çerçeveye bağımlı dağıtımlar, çalıştırıldıkları konakta .NET Core paylaşılan çalışma zamanının yüklenmesini gerektirir. Kendi içindeki dağıtımlar, .NET Core çalışma zamanının ve çerçevesinin tam kopyasıyla yayımlanır ve herhangi bir konakta çalıştırılabilir. Her yaklaşımın avantajları ve dezavantajları dahil daha fazla bilgi için [.NET Core uygulama dağıtım](../../core/deploying/index.md) belgelerine bakın.
+* Visual Studio 'dan projeye sağ tıklayıp kısayol menüsünde **Yayımla** ' yı seçin.
+* .NET Core CLI.
 
-.NET Core 3,0 çalışma zamanının konakta yüklü olmasını gerektirmeyen uygulamanın kendi içindeki bir derlemesini yayımlamak için `-r` (veya `--runtime`) bayrağını kullanarak uygulamaya dahil edilecek çalışma zamanını belirtin.
+Bir .NET Core uygulaması yayımladığınızda, *çerçeveye bağımlı* bir dağıtım veya *kendi kendine dahil* edilen bir dağıtım oluşturmayı tercih edebilirsiniz. Çerçeveye bağımlı dağıtımlar, çalıştırıldıkları konakta .NET Core paylaşılan çalışma zamanının yüklenmesini gerektirir. Kendi içindeki dağıtımlar, .NET Core çalışma zamanının ve çerçevesinin tam kopyasıyla yayımlanır ve herhangi bir konakta çalıştırılabilir. Her yaklaşımın avantajları ve dezavantajları dahil daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../../core/deploying/index.md) belgeleri.
 
-```console
+.NET Core 3,0 çalışma zamanının konakta yüklü olmasını gerektirmeyen uygulamanın kendi içindeki bir derlemesini yayımlamak için, uygulamaya dahil edilecek çalışma zamanını belirtin. `-r` (veya `--runtime`) bayrağını kullanın.
+
+```dotnetcli
 dotnet publish -c Release -r win-x64 -o ./publish
 ```
 
 Çerçeveye bağımlı bir yapı yayımlamak için `-r` bayrağını atlayın.
 
-```console
+```dotnetcli
 dotnet publish -c Release -o ./publish
 ```
 
-`publish` dizininin tüm içeriğini bir yükleme klasörüne kopyalayın ve bir yürütülebilir dosya için Windows hizmeti oluşturmak üzere [sc yardımcı programını](https://docs.microsoft.com/windows/desktop/services/controlling-a-service-using-sc) kullanın.
+`publish` dizininin tüm içeriğini bir yükleme klasörüne kopyalayın. Ardından, bir yürütülebilir dosya için bir Windows hizmeti oluşturmak üzere [SC aracını](/windows/desktop/services/controlling-a-service-using-sc) kullanın.
 
 ```console
 sc create MyService binPath=C:\MyService\MyService.exe
 ```
 
-### <a name="log-to-windows-event-log"></a>Windows olay günlüğü 'ne Kaydet
+### <a name="log-to-the-windows-event-log"></a>Windows olay günlüğü 'ne Kaydet
 
-`UseWindowsService` yöntemi, Windows olay günlüğüne günlük iletilerini yazan bir [günlüğe kaydetme](https://docs.microsoft.com/aspnet/core/fundamentals/logging/?view=aspnetcore-3.0) sağlayıcısını otomatik olarak ekler. `appsettings.json` veya diğer yapılandırma kaynağının `Logging` bölümüne bir `EventLog` girişi ekleyerek bu sağlayıcının günlüğünü yapılandırabilirsiniz. Olay günlüğünde kullanılan kaynak adı, bu ayarlarda bir `SourceName` özelliği ayarlanarak geçersiz kılınabilir; bir ad belirtmezseniz, varsayılan uygulama adı (normalde yürütülebilir derleme adı) kullanılacaktır.
+`UseWindowsService` yöntemi, Windows olay günlüğüne günlük iletilerini yazan bir [günlüğe kaydetme](/aspnet/core/fundamentals/logging/) sağlayıcısını otomatik olarak ekler. `appsettings.json` ya da başka bir yapılandırma kaynağının `Logging` bölümüne bir `EventLog` girişi ekleyerek bu sağlayıcının günlüğünü yapılandırabilirsiniz. 
+
+Bu ayarlarda bir `SourceName` özelliğini ayarlayarak olay günlüğünde kullanılan kaynak adını geçersiz kılabilirsiniz. Bir ad belirtmezseniz, varsayılan uygulama adı (normalde yürütülebilir derleme adı) kullanılacaktır.
 
 Günlüğe kaydetme hakkında daha fazla bilgi bu bölümün sonunda yer alır.
 
@@ -77,15 +82,17 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 > [!NOTE]
 > Uygulama bir Linux hizmeti olarak çalışmıyorsa `UseSystemd` yöntemi hiçbir şey yapmaz.
 
-Şimdi, Visual Studio 'dan projeye sağ tıklayıp bağlam menüsünden *Yayımla* ' yı seçerek .NET Core CLI veya aşağıdaki komutu kullanarak, uygulamayı (örneğin, ilgili Linux çalışma zamanı için Framework 'e bağımlı veya şirket içinde `linux-x64`) yayımlayın.
+Şimdi uygulamanızı yayımlayın. Uygulama, ilgili Linux çalışma zamanı (örneğin, `linux-x64`) için çerçeve bağımlı veya kendi kendine dahil olabilir. Aşağıdaki yöntemlerden birini kullanarak yayımlayabilirsiniz:
 
-```console
-dotnet publish -c Release -r linux-x64 -o ./publish
-```
+* Visual Studio 'dan projeye sağ tıklayıp kısayol menüsünde **Yayımla** ' yı seçin. 
+* .NET Core CLI, aşağıdaki komutu kullanarak:
 
-`publish` dizininin tüm içeriğini Linux ana bilgisayarındaki bir yükleme klasörüne kopyalayın. Hizmeti kaydetmek için, `/etc/systemd/system` dizinine eklenmek üzere "birim dosyası" olarak adlandırılan özel bir dosya gerekir. Bu klasörde bir dosya oluşturmak için kök izninizin olması gerekir. `systemd` kullanmak istediğiniz tanımlayıcıyı ve `.service` uzantısını adlandırın. Örneğin: `/etc/systemd/system/myapp.service`.
+  ```dotnetcli
+  dotnet publish -c Release -r linux-x64 -o ./publish
+  ```
+`publish` dizininin tüm içeriğini Linux ana bilgisayarındaki bir yükleme klasörüne kopyalayın. Hizmeti kaydettirmek, `/etc/systemd/system` dizinine eklenmek üzere *birim dosyası*olarak adlandırılan özel bir dosya gerektirir. Bu klasörde bir dosya oluşturmak için kök izninizin olması gerekir. `systemd` kullanmak istediğiniz tanımlayıcıyı ve `.service` uzantısını adlandırın. Örneğin, `/etc/systemd/system/myapp.service`kullanın.
 
-Hizmet dosyası, bu örnekte gösterildiği gibi ıNı biçimini kullanır.
+Hizmet dosyası, aşağıdaki örnekte gösterildiği gibi ıNı biçimini kullanır:
 
 ```ini
 [Unit]
@@ -99,16 +106,16 @@ ExecStart=/usr/sbin/myapp
 WantedBy=multi-user.target
 ```
 
-`Type=notify` özelliği, uygulamanın başlatma ve kapatmayla haberdar olacağını `systemd` söyler. `WantedBy=multi-user.target` ayarı, Linux sistemi "Runlevel 2" değerine ulaştığında hizmetin başlatılmasına neden olur, yani grafik olmayan bir çok kullanıcılı kabuk etkin olur.
+`Type=notify` özelliği, uygulamanın başlatma ve kapatmayla haberdar olacağını `systemd` söyler. `WantedBy=multi-user.target` ayarı, Linux sistemi "Runlevel 2" değerine ulaştığında hizmetin başlatılmasına neden olur. Bu, grafik olmayan bir çok kullanıcılı kabuğun etkin olduğu anlamına gelir.
 
-`systemd`, hizmeti tanıyamadan önce, yapılandırmasını yeniden yüklemesi gerekir. `systemctl` komutunu kullanarak `systemd` kontrol edersiniz. Yeniden yükledikten sonra, uygulamanın başarıyla kaydedildiğini doğrulamak için `status` alt komutunu kullanın.
+`systemd`, hizmeti tanıyamadan önce, yapılandırmasını yeniden yüklemesi gerekir. `systemctl` komutunu kullanarak `systemd` denetlersiniz. Yeniden yüklendikten sonra, uygulamanın başarıyla kaydedildiğini doğrulamak için `status` alt komutunu kullanın.
 
 ```console
 sudo systemctl daemon-reload
 sudo systemctl status myapp
 ```
 
-Hizmeti doğru şekilde yapılandırdıysanız aşağıdaki çıktı gösterilir:
+Hizmeti doğru şekilde yapılandırdıysanız aşağıdaki çıktıyı alırsınız:
 
 ```text
 myapp.service - My gRPC Application
@@ -123,7 +130,7 @@ sudo systemctl start myapp.service
 ```
 
 > [!TIP]
-> `systemctl start`kullanılırken `.service` uzantısı isteğe bağlıdır.
+> `systemctl start`kullandığınızda `.service` uzantısı isteğe bağlıdır.
 
 `systemd` sistem başlangıcında hizmeti otomatik olarak başlatmasını söylemek için `enable` komutunu kullanın.
 
@@ -133,9 +140,9 @@ sudo systemctl enable myapp
 
 ### <a name="log-to-journald"></a>Journald 'de günlüğe kaydet
 
-Windows olay günlüğü 'nün Linux eşdeğeri, `systemd`bir parçası olan yapılandırılmış bir günlük sistem hizmetidir `journald`. Bir Linux Daemon tarafından standart çıktıya yazılan günlük iletileri `journald`otomatik olarak yazılır, bu nedenle günlüğe kaydetme düzeylerini yapılandırmak için günlük yapılandırmasının `Console` bölümünü kullanın. `UseSystemd` ana bilgisayar Oluşturucu yöntemi, konsol çıkış biçimini otomatik olarak günlüğe uyacak şekilde yapılandırır.
+Windows olay günlüğü 'nün Linux eşdeğeri, `systemd`bir parçası olan yapılandırılmış bir günlük sistem hizmetidir `journald`. Bir Linux Daemon tarafından standart çıktıya yazılan günlük iletileri `journald`otomatik olarak yazılır. Günlüğe kaydetme düzeylerini yapılandırmak için, günlük yapılandırmasının `Console` bölümünü kullanın. `UseSystemd` ana bilgisayar Oluşturucu yöntemi, konsol çıkış biçimini otomatik olarak günlüğe uyacak şekilde yapılandırır.
 
-`journald`, Linux günlükleri için standart olduğundan, bununla tümleştirilen çeşitli araçlar vardır ve günlükleri `journald` üzerinden bir dış günlük sistemine kolayca yönlendirebilirsiniz. Konakta yerel olarak çalışarak, komut satırından günlükleri görüntülemek için `journalctl` komutunu kullanabilirsiniz.
+`journald`, Linux günlükleri için standart olduğundan, çeşitli araçlar onunla tümleştirilir. Günlükleri `journald` bir dış günlük sistemine kolayca yönlendirebilirsiniz. Konakta yerel olarak çalışarak, komut satırından günlükleri görüntülemek için `journalctl` komutunu kullanabilirsiniz.
 
 ```console
 sudo journalctl -u myapp
@@ -144,21 +151,24 @@ sudo journalctl -u myapp
 > [!TIP]
 > Ana bilgisayarınızda kullanılabilir bir GUI ortamınız varsa, Linux için *Qjournalctl* ve *GNOME günlükleri*gibi birkaç grafik günlük görüntüleyicileri vardır.
 
-Komut satırından `journalctl`systemd günlüğünü sorgulama hakkında daha fazla bilgi edinmek için, [adam sayfalarına](https://manpages.debian.org/buster/systemd/journalctl.1)bakın.
+`journalctl`kullanarak komut satırından `systemd` günlüğünü sorgulama hakkında daha fazla bilgi edinmek için, [adam sayfalarına](https://manpages.debian.org/buster/systemd/journalctl.1)bakın.
 
 ## <a name="https-certificates-for-self-hosted-applications"></a>Şirket içinde barındırılan uygulamalar için HTTPS sertifikaları
 
-Bir gRPC uygulamasını üretimde çalıştırırken, güvenilir bir sertifika yetkilisinden (CA) bir TLS sertifikası kullanmanız gerekir. Bu CA, genel bir CA veya kuruluşunuz için bir dahili olabilir.
+Üretimde bir gRPC uygulaması çalıştırırken, güvenilir bir sertifika yetkilisinden (CA) bir TLS sertifikası kullanmanız gerekir. Bu CA, bir genel CA veya kuruluşunuz için bir dahili olabilir.
 
-Windows konakları üzerinde, sertifika <xref:System.Security.Cryptography.X509Certificates.X509Store> sınıfı kullanılarak güvenli bir [sertifika deposundan](/windows/win32/seccrypto/managing-certificates-with-certificate-stores) yüklenebilir. `X509Store` sınıfı, bazı Linux konaklarındaki OpenSSL anahtar deposu ile de kullanılabilir.
+Windows konakları üzerinde, <xref:System.Security.Cryptography.X509Certificates.X509Store> sınıfını kullanarak güvenli bir [sertifika deposundan](/windows/win32/seccrypto/managing-certificates-with-certificate-stores) sertifikayı yükleyebilirsiniz. `X509Store` sınıfını, bazı Linux konaklarındaki OpenSSL anahtar deposu ile de kullanabilirsiniz.
 
-Sertifikalar, bir dosyadan ( [Örneğin, güçlü](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0)bir parolayla korunan `.pfx` bir dosya) veya [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)gibi güvenli bir depolama hizmetinden alınan ikili verilerden biri kullanılarak da oluşturulabilir.
+Ayrıca, [X509Certificate2 oluşturucularından](xref:System.Security.Cryptography.X509Certificates.X509Certificate2.%23ctor%2A)birini kullanarak da sertifikalar oluşturabilirsiniz:
 
-Kestrel, bir sertifikayı iki şekilde kullanacak şekilde yapılandırılabilir: yapılandırmadan veya kodda.
+* Güçlü bir parolayla korunan `.pfx` dosyası gibi bir dosya
+* [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) gibi güvenli bir depolama hizmetinden alınan ikili veriler
 
-### <a name="set-https-certificates-using-configuration"></a>Yapılandırma kullanarak HTTPS sertifikaları ayarlama
+Kestrel 'yi bir sertifikayı kullanmak için iki şekilde yapılandırabilirsiniz: yapılandırmadan veya koddan.
 
-Yapılandırma yaklaşımı, sertifika `.pfx` dosyası yolunu ve Kestrel yapılandırma bölümünde parolayı ayarlamayı gerektirir. `appsettings.json` bu şekilde görünür.
+### <a name="set-https-certificates-by-using-configuration"></a>HTTPS sertifikalarını yapılandırma kullanarak ayarlama
+
+Yapılandırma yaklaşımı, sertifika `.pfx` dosyası yolunu ve Kestrel yapılandırma bölümünde parolayı ayarlamayı gerektirir. `appsettings.json`, bu şöyle görünür:
 
 ```json
 {
@@ -173,9 +183,10 @@ Yapılandırma yaklaşımı, sertifika `.pfx` dosyası yolunu ve Kestrel yapıla
 }
 ```
 
-Parolanın Azure Keykasası veya HashiCorp kasası gibi güvenli bir yapılandırma kaynağı kullanılarak sağlanması gerekir.
+Azure Key Vault veya HashiCorp kasası gibi güvenli bir yapılandırma kaynağı kullanarak parolayı girin.
 
-Şifrelenmemiş parolaları yapılandırma dosyalarında depolamamalısınız.
+> [!IMPORTANT]
+> Şifrelenmemiş parolaları yapılandırma dosyalarında depolamamayın.
 
 ### <a name="set-https-certificates-in-code"></a>Kodda HTTPS sertifikaları ayarlama
 
@@ -197,7 +208,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
         });
 ```
 
-Yeniden, `.pfx` dosyanın parolasının ' de depolanması ve güvenli bir yapılandırma kaynağından alınması gerekir.
+Ayrıca, `.pfx` dosyanın parolasını içinde depoladığınızdan ve güvenli bir yapılandırma kaynağından geri aldığınızdan emin olun.
 
 >[!div class="step-by-step"]
 >[Önceki](grpc-in-production.md)

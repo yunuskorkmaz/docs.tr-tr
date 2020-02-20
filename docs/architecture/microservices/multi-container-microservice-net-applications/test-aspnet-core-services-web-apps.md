@@ -1,13 +1,13 @@
 ---
 title: ASP.NET Core hizmetlerini ve web uygulamalarını test etme
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Kapsayıcılarda ASP.NET Core Hizmetleri ve Web uygulamalarını test etmek için bir mimari bulun.
-ms.date: 10/02/2018
-ms.openlocfilehash: 324b71d830bca43be71e8847fe2dd1b8b1593556
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: ab3ae6276ea4e4c741731f050913d956046271ca
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739483"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501983"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core hizmetlerini ve web uygulamalarını test etme
 
@@ -68,7 +68,7 @@ Birim testinin aksine, tümleştirme sınamaları genellikle veritabanı, dosya 
 
 Tümleştirme sınamaları, kod segmentlerinin birim testlerine göre daha büyük kesimlebildiğinden ve tümleştirme testleri altyapı öğelerini kullandığından, birim testlerinden daha yavaş bir şekilde sıra daha yavaş bir şekilde ücretlidir. Bu nedenle, kaç tane tümleştirme testini yazıp çalıştıracağınızı kısıtlamak iyi bir fikirdir.
 
-ASP.NET Core, ağ yükü olmadan HTTP isteklerini işlemek için kullanılabilen yerleşik bir test Web ana bilgisayarı içerir, yani bu testleri gerçek bir Web ana bilgisayarı kullanırken daha hızlı çalıştırabilirsiniz. Test Web ana bilgisayarı (TestServer), bir NuGet bileşeninde Microsoft. AspNetCore. TestHost olarak kullanılabilir. Tümleştirme test projelerine eklenebilir ve ASP.NET Core uygulamalarını barındırmak için kullanılır.
+ASP.NET Core, ağ yükü olmadan HTTP isteklerini işlemek için kullanılabilen yerleşik bir test Web ana bilgisayarı içerir, yani bu testleri gerçek bir Web ana bilgisayarı kullanmaktan daha hızlı çalıştırabilmeniz anlamına gelir. Test Web ana bilgisayarı (TestServer), bir NuGet bileşeninde Microsoft. AspNetCore. TestHost olarak kullanılabilir. Tümleştirme test projelerine eklenebilir ve ASP.NET Core uygulamalarını barındırmak için kullanılır.
 
 Aşağıdaki kodda görebileceğiniz gibi, ASP.NET Core denetleyicileri için tümleştirme testleri oluşturduğunuzda, denetleyicileri test ana bilgisayarı aracılığıyla örnekleyebilirsiniz. Bu bir HTTP isteğine benzer, ancak daha hızlı çalışır.
 
@@ -140,8 +140,6 @@ Başvuru uygulaması (eShopOnContainers) testleri yakın zamanda yeniden yapıla
 
 3. Birkaç mikro hizmet sunan test çalışmaları ile mikro hizmet tümleştirmesine odaklanarak **uygulama işlevsel/tümleştirme sınamaları**. Bu testler Project **Application. FunctionalTests**içinde bulunur.
 
-4. Her mikro hizmet için yanıt sürelerine odaklanarak **Yük testleri**. Bu sınamalar proje **LoadTest** ' de bulunur ve Visual Studio 2017 Enterprise Edition gerekir.
-
 Mikro hizmet başına birim ve tümleştirme testi, her mikro hizmette bir test klasöründe bulunur ve uygulama, Şekil 6-25 ' de gösterildiği gibi çözüm klasöründeki test klasörü altında bir yük testi içerir.
 
 ![Çözümdeki test projelerinin bazılarını gösteren ekran görüntüsü.](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
@@ -160,9 +158,9 @@ services:
     image: redis:alpine
   rabbitmq:
     image: rabbitmq:3-management-alpine
-  sql.data:
-    image: microsoft/mssql-server-linux:2017-latest
-  nosql.data:
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+  nosqldata:
     image: mongo
 ```
 
@@ -179,13 +177,13 @@ services:
     ports:
       - "15672:15672"
       - "5672:5672"
-  sql.data:
+  sqldata:
     environment:
       - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
     ports:
       - "5433:1433"
-  nosql.data:
+  nosqldata:
     ports:
       - "27017:27017"
 ```

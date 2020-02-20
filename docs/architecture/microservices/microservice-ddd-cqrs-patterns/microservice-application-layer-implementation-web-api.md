@@ -1,13 +1,13 @@
 ---
 title: Web API’si kullanarak mikro hizmet uygulama katmanını uygulama
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Bağımlılık ekleme ve ortalama düzenlerini ve bunların uygulama ayrıntılarını Web API 'SI uygulama katmanında anlayın.
-ms.date: 10/08/2018
-ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+description: Bağımlılık ekleme ve ortalama düzenlerini ve bunların uygulama ayrıntılarını Web API 'SI uygulama katmanında anlayın.
+ms.date: 01/30/2020
+ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "73737489"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502441"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API 'sini kullanarak mikro hizmet uygulama katmanını uygulama
 
@@ -92,11 +92,9 @@ public void ConfigureServices(IServiceCollection services)
 {
     // Register out-of-the-box framework services.
     services.AddDbContext<CatalogContext>(c =>
-    {
-        c.UseSqlServer(Configuration["ConnectionString"]);
-    },
-    ServiceLifetime.Scoped
-    );
+        c.UseSqlServer(Configuration["ConnectionString"]),
+        ServiceLifetime.Scoped);
+
     services.AddMvc();
     // Register custom application dependencies.
     services.AddScoped<IMyCustomRepository, MyCustomSQLRepository>();
@@ -289,7 +287,7 @@ Temel olarak, komut sınıfı, etki alanı model nesnelerini kullanarak bir iş 
 
 Ek bir özellik olarak, beklenen kullanım doğrudan etki alanı modeli tarafından işlendiklerinden, komutlar sabittir. Bunların öngörülen yaşam süresi boyunca değiştirmeleri gerekmez. Bir sınıfta C# , bir ayarlayıcıya ya da iç durumu değiştiren başka yöntemler yoksa, dengeshlik kullanılabilirliği elde edilebilir.
 
-Komutları bir serileştirme/seri durumdan çıkarma sürecinde işlem yapmanız veya beklemeniz durumunda, özelliklerin özel ayarlayıcı ve `[DataMember]` (ya da `[JsonProperty]`) özniteliği olması gerektiğini unutmayın, aksi takdirde, seri hale getirici, hedefteki nesneyi gerekli değerlerle yeniden yapılandıramazlar.
+Bir serileştirme/seri durumdan çıkarma işleminden sonra komutların bir özel ayarlayıcı ve `[DataMember]` (veya `[JsonProperty]`) özniteliği olması planlandıysanız veya beklediğinizi aklınızda bulundurun. Aksi takdirde, seri hale getirici, hedefteki nesneyi gerekli değerlerle yeniden oluşturamayacak. Ayrıca, sınıfın tüm özellikler için parametrelere sahip bir oluşturucuya sahip olması durumunda, her zamanki camelCase adlandırma kuralına sahip ve oluşturucuya `[JsonConstructor]`olarak açıklama eklemek için gerçekten salt okuma özelliklerini de kullanabilirsiniz. Ancak, bu seçenek daha fazla kod gerektirir.
 
 Örneğin, sipariş oluşturmak için komut sınıfı büyük olasılıkla veri bakımından oluşturmak istediğiniz sıraya benzer, ancak büyük olasılıkla aynı özniteliklere gerek kalmaz. Örneğin, sipariş henüz oluşturulmadığından `CreateOrderCommand` bir sıra KIMLIĞI değildir.
 
@@ -313,9 +311,9 @@ public class UpdateOrderStatusCommand
 
 Bazı geliştiriciler, Kullanıcı arabirimi istek nesnelerini kendi komut DTOs dışında, ancak bu yalnızca tercihlerden ayrı hale getirir. Bu, çok fazla eklenen değer olmadan sıkıcı bir ayırdır ve nesneler neredeyse tam olarak aynı şekildir. Örneğin, eShopOnContainers 'da, bazı komutlar doğrudan istemci tarafından gelir.
 
-### <a name="the-command-handler-class"></a>Komut Işleyici sınıfı
+### <a name="the-command-handler-class"></a>Komut işleyici sınıfı
 
-Her komut için belirli bir komut işleyici sınıfı uygulamalısınız. Bu, modelin nasıl çalıştığı ve komut nesnesini, etki alanı nesnelerini ve altyapı deposu nesnelerini kullanacağınız yerdir. Komut işleyici, CQRS ve DDD bakımından uygulama katmanının temelini bulgidir. Ancak, tüm etki alanı mantığının, toplama kökleri (kök varlıklar), alt varlıklar veya [etki alanı Hizmetleri](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/)içindeki etki alanı sınıfları içinde olması gerekir, ancak uygulama katmanından bir sınıf olan komut işleyicisinde yer almalıdır.
+Her komut için belirli bir komut işleyici sınıfı uygulamalısınız. Bu, deseninin nasıl çalıştığı ve komut nesnesini, etki alanı nesnelerini ve altyapı deposu nesnelerini kullanacağınız yerdir. Komut işleyici, CQRS ve DDD bakımından uygulama katmanının temelini bulgidir. Ancak, tüm etki alanı mantığının, toplama kökleri (kök varlıklar), alt varlıklar veya [etki alanı Hizmetleri](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/)içindeki etki alanı sınıflarında yer almalıdır, ancak uygulama katmanından bir sınıf olan komut işleyicisinde değil.
 
 Komut işleyici sınıfı, önceki bölümde bahsedilen tek sorumluluk Ilkesine (SRP) ulaşmak için bir güçlü atlama pulu sunar.
 

@@ -1,13 +1,13 @@
 ---
 title: NoSQL veritabanlarını bir kalıcılık altyapısı olarak kullanma
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Genel olarak NoSql veritabanlarının kullanımını ve özellikle de Azure Cosmos DB, persistance uygulama seçeneği olarak anlayın.
-ms.date: 10/08/2018
-ms.openlocfilehash: 44fc2fa01e2d19efed7314f421a682c0a635a9f6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+description: NoSql veritabanlarının genel olarak kullanımını ve özel olarak Azure Cosmos DB, kalıcılığı uygulama seçeneği olarak anlayın.
+ms.date: 01/30/2020
+ms.openlocfilehash: 7da4141d9aadc4aaa265ac97d328bc4b7569a0cb
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737422"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502392"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Kalıcı altyapı olarak NoSQL veritabanlarını kullanma
 
@@ -52,11 +52,11 @@ Etki alanı modelinizi toplamalara göre tasarladığınızda, NoSQL ve belge od
 
 ## <a name="introduction-to-azure-cosmos-db-and-the-native-cosmos-db-api"></a>Azure Cosmos DB ve yerel Cosmos DB API 'sine giriş
 
-[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) , Microsoft 'un görev açısından kritik uygulamalar için genel olarak dağıtılmış veritabanı hizmetidir. Azure Cosmos DB, açık [anahtar genel dağıtımı](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally), [Esnek işleme ve depolama için esnek ölçeklendirme](https://docs.microsoft.com/azure/cosmos-db/partition-data) , 99. yüzdebirlik, [beş adet iyi tanımlanmış tutarlılık düzeyi](https://docs.microsoft.com/azure/cosmos-db/consistency-levels)ve garantili yüksek kullanılabilirlik, hepsi [sektörde önde gelen SLA 'lar](https://azure.microsoft.com/support/legal/sla/cosmos-db/)tarafından desteklenir. Azure Cosmos DB, şema ve dizin yönetimiyle ilgilenmenize gerek kalmadan [otomatik olarak verilerin dizinini oluşturur](https://www.vldb.org/pvldb/vol8/p1668-shukla.pdf). Çok modelli olan bu hizmet belge, anahtar-değer, grafik ve sütunlu veri modellerini destekler.
+[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) , Microsoft 'un görev açısından kritik uygulamalar için genel olarak dağıtılmış veritabanı hizmetidir. Azure Cosmos DB tarafından [kullanıma hazır genel dağıtım](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally), dünya çapında [aktarım hızı ve depolama için elastik ölçeklendirme](https://docs.microsoft.com/azure/cosmos-db/partition-data), 99. yüzdebirlik dilimde tek haneli milisaniyelik gecikme süreleri, [beş iyi tanımlanmış tutarlılık düzeyi](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) ve garantili yüksek kullanılabilirlik olanakları sağlanır ve bunların tamamı [sektör lideri SLA’lar](https://azure.microsoft.com/support/legal/sla/cosmos-db/) ile desteklenir. Azure Cosmos DB, şema ve dizin yönetimiyle ilgilenmenize gerek kalmadan [otomatik olarak verilerin dizinini oluşturur](https://www.vldb.org/pvldb/vol8/p1668-shukla.pdf). Çok modelli olan bu hizmet belge, anahtar-değer, grafik ve sütunlu veri modellerini destekler.
 
 ![Azure Cosmos DB genel dağıtımı gösteren diyagram.](./media/nosql-database-persistence-infrastructure/azure-cosmos-db-global-distribution.png)
 
-**Şekil 7-19**. Azure Cosmos DB küresel dağıtım
+**Şekil 7-19**. Azure Cosmos DB genel dağıtımı
 
 Azure Cosmos DB API 'SI tarafından kullanılacak toplamı uygulamak için bir C\# modeli kullandığınızda, toplama, EF Core ile kullanılan C\# POCO sınıflarına benzer olabilir. Bu fark, aşağıdaki kodda olduğu gibi uygulama ve altyapı katmanlarından kullanmanın bir yoludur:
 
@@ -122,9 +122,9 @@ Ancak, modelinizi NoSQL veritabanına kalıcı hale getirebilmeniz durumunda kod
 
 Kapsayıcılarda çalışan .NET kodundan, diğer tüm .NET uygulamaları gibi Azure Cosmos DB veritabanlarına erişebilirsiniz. Örneğin, eShopOnContainers içindeki locations. API ve Marketing. API mikro hizmetleri, Azure Cosmos DB veritabanlarını tüketebilecekleri şekilde uygulanır.
 
-Ancak, bir Docker geliştirme ortamı görünümündeki Azure Cosmos DB bir sınırlama vardır. Bir şirket içi [Azure Cosmos DB öykünücü](https://docs.microsoft.com/azure/cosmos-db/local-emulator) , bir bilgisayar gibi bir yerel geliştirme makinesinde (PC gibi) çalıştırılabilse de, en geç 2017 Itibariyle yalnızca Windows 'u destekler.
+Ancak, bir Docker geliştirme ortamı görünümündeki Azure Cosmos DB bir sınırlama vardır. Yerel bir geliştirme makinesinde çalışabilen şirket içi [Azure Cosmos DB öykünücü](https://docs.microsoft.com/azure/cosmos-db/local-emulator) olmasına rağmen yalnızca Windows 'u destekler. Linux ve macOS desteklenmez.
 
-Ayrıca, Linux kapsayıcılarıyla değil, yalnızca Windows kapsayıcılarında bu öykünücüyü çalıştırma olasılığı da vardır. Uygulamanız Linux kapsayıcıları olarak dağıtılmışsa geliştirme ortamı için bir ilk Handicap olan bu, şu anda Linux ve Windows kapsayıcılarını Docker for Windows aynı anda dağıtamazsınız. Dağıtılmakta olan tüm kapsayıcıların Linux veya Windows için olması gerekir.
+Ayrıca, Linux kapsayıcılarıyla değil, yalnızca Windows kapsayıcılarında bu öykünücüyü çalıştırma olasılığı da vardır. Uygulamanız Linux kapsayıcıları olarak dağıtılmışsa, bu, şu anda Linux ve Windows Docker for Windows kapsayıcılarını aynı anda dağıtamadıysanız, geliştirme ortamı için bir ilk Handicap vardır. Dağıtılmakta olan tüm kapsayıcıların Linux veya Windows için olması gerekir.
 
 Geliştirme/test çözümüne yönelik ideal ve daha basit dağıtım, geliştirme ve test ortamlarınızın her zaman tutarlı olması için veritabanı sistemlerinizi özel kapsayıcılarınızla birlikte kapsayıcı olarak dağıtabilmelidir.
 
@@ -273,14 +273,14 @@ Bir MongoClient nesnesi oluştururken, doğru veritabanına işaret eden, tam ol
 version: '3.4'
 services:
   # Other services
-  locations.api:
+  locations-api:
     environment:
       # Other settings
-      - ConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosql.data}
+      - ConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosqldata}
 
 ```
 
-`ConnectionString` ortam değişkeni bu şekilde çözümlenir: `ESHOP_AZURE_COSMOSDB` genel değişkeni Azure Cosmos DB bağlantı dizesiyle `.env` dosyasında tanımlanmışsa, bu, Bulutta Azure Cosmos DB veritabanına erişmek için kullanır. Tanımlı değilse, `mongodb://nosql.data` değeri alır ve geliştirme MongoDB kapsayıcısını kullanacaktır.
+`ConnectionString` ortam değişkeni bu şekilde çözümlenir: `ESHOP_AZURE_COSMOSDB` genel değişkeni Azure Cosmos DB bağlantı dizesiyle `.env` dosyasında tanımlanmışsa, bu, Bulutta Azure Cosmos DB veritabanına erişmek için kullanır. Tanımlı değilse, `mongodb://nosqldata` değeri alır ve geliştirme MongoDB kapsayıcısını kullanacaktır.
 
 Aşağıdaki kod, Azure Cosmos DB bağlantı dizesi genel ortam değişkeni ile `.env` dosyayı eShopOnContainers içinde uygulandığı gibi gösterir:
 
@@ -301,14 +301,14 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 
 ESHOP_AZURE_COSMOSDB satırının açıklamasını kaldırın ve Azure Cosmos DB bağlantı dizeniz ile [bir MongoDB uygulamasını Azure Cosmos DB 'ye bağlama](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)bölümünde açıklandığı gibi Azure Portal elde edin.
 
-`ESHOP_AZURE_COSMOSDB` genel değişkeni boşsa, `.env` dosyasında açıklama eklendiğinde, kapsayıcı Eshopon`nosql.data` containers içinde dağıtılan yerel MongoDB kapsayıcısını işaret eden bir varsayılan MongoDB bağlantı dizesi kullanarak, aşağıdaki. yıml kodunda gösterildiği gibi, Docker-Compose dosyasında tanımlanmıştır.
+`ESHOP_AZURE_COSMOSDB` genel değişkeni boşsa, `.env` dosyasında açıklama eklendiğinde, kapsayıcı varsayılan MongoDB bağlantı dizesini kullanır. Bu bağlantı dizesi, aşağıdaki. yml kodunda gösterildiği gibi, `nosqldata` adlı eShopOnContainers 'da dağıtılan yerel MongoDB kapsayıcısını işaret eder ve Docker-Compose dosyasında tanımlanmıştır:
 
 ``` yml
 # docker-compose.yml
 version: '3.4'
 services:
   # ...Other services...
-  nosql.data:
+  nosqldata:
     image: mongo
 ```
 

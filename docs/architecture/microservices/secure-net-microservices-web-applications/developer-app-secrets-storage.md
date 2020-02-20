@@ -2,14 +2,13 @@
 title: Geliştirme sırasında uygulama gizli dizilerini güvenli bir şekilde depolama
 description: .NET mikro hizmetleri ve Web uygulamalarında güvenlik-kaynak denetimindeki parolalar, bağlantı dizeleri veya API anahtarları gibi uygulama gizli dizilerini depolamayın, ASP.NET Core içinde kullanabileceğiniz seçenekleri anlayın, özellikle de "Kullanıcı gizli dizileri ".
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: fe8e7fa11c9a4f4cae133c2e09f9e4b4dd40a546
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 01/30/2020
+ms.openlocfilehash: 1ef2246746b9165f1564fa7be64ff7eb28eb1d32
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296486"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501794"
 ---
 # <a name="store-application-secrets-safely-during-development"></a>Geliştirme sırasında uygulama gizli dizilerini güvenli bir şekilde depolayın
 
@@ -39,7 +38,7 @@ Ortam değişkenlerinin yaygın olarak düz metin olarak depolandığını unutm
 
 ## <a name="store-secrets-with-the-aspnet-core-secret-manager"></a>ASP.NET Core gizli Yöneticisi ile gizli dizileri depolayın
 
-ASP.NET Core [Secret Manager](/aspnet/core/security/app-secrets#secret-manager) Aracı, kaynak kodu dışında gizli dizileri tutmanın başka bir yöntemini sağlar. Gizli dizi Yöneticisi aracını kullanmak için, proje dosyanıza **Microsoft. Extensions. Configuration. SecretManager** paketini yükle. Bu bağımlılık mevcut olduğunda ve geri yüklendikten sonra, komut satırındaki gizli dizi değerlerini ayarlamak için `dotnet user-secrets` komutu kullanılabilir. Bu gizli diziler, kullanıcının profil dizinindeki bir JSON dosyasında (Ayrıntılar işletim sistemine göre değişir) kaynak koddan uzakta saklanır.
+ASP.NET Core [gizli dizi Yöneticisi](/aspnet/core/security/app-secrets#secret-manager) aracı **geliştirme sırasında**kaynak kodu dışında gizli dizileri tutmanın başka bir yöntemini sağlar. Gizli dizi Yöneticisi aracını kullanmak için, proje dosyanıza **Microsoft. Extensions. Configuration. SecretManager** paketini yükle. Bu bağımlılık mevcut olduğunda ve geri yüklendikten sonra, komut satırındaki gizli dizi değerlerini ayarlamak için `dotnet user-secrets` komutu kullanılabilir. Bu gizli diziler, kullanıcının profil dizinindeki bir JSON dosyasında (Ayrıntılar işletim sistemine göre değişir) kaynak koddan uzakta saklanır.
 
 Gizli dizi Yöneticisi aracı tarafından ayarlanan gizlilikler, parolaların kullanıldığı projenin `UserSecretsId` özelliğine göre düzenlenir. Bu nedenle, aşağıdaki kod parçacığında gösterildiği gibi, proje dosyanızda Usersecretsıd özelliğini ayarladığınızdan emin olmanız gerekir. Varsayılan değer, Visual Studio tarafından atanan bir GUID 'dir, ancak bilgisayarınızda benzersiz olduğu sürece gerçek dize önemli değildir.
 

@@ -1,13 +1,13 @@
 ---
 title: Mikro hizmet etki alan modeli tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | DDD-yönelimli bir etki alanı modeli tasarlarken temel kavramları anlayın.
-ms.date: 10/08/2018
-ms.openlocfilehash: 3a02059064305ca148b7909923e2f51e60ee54d5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 628fb5c76362ec8f48367b3d69d16ea6ebd24f09
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737466"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502328"
 ---
 # <a name="design-a-microservice-domain-model"></a>Mikro hizmet etki alanı modeli tasarlama
 
@@ -74,9 +74,9 @@ Mikro hizmetteki bir varlık başka bir mikro hizmette varlık olmayabilir, çü
 
 Adı ve soyadı olan bir kişi genellikle bir varlıktır, çünkü ad ve soyadı başka bir değer kümesiyle aynı olsa da, bu adlar farklı bir kişiye başvuruyor olabilir.
 
-Değer nesneleri, ilişkisel veritabanlarında ve ORMs 'nin aynı şekilde yönetilmesi zor olduğundan, belge odaklı veritabanlarında uygulama ve kullanım daha kolay olur.
+Değer nesneleri, ilişkisel veritabanlarında ve ORMs Entity Framework (EF) gibi daha kolay bir şekilde yönetilmesi zor olduğundan, belge odaklı veritabanlarında daha kolay uygulanması ve kullanılması daha kolaydır.
 
-EF Core 2,0, daha sonra ayrıntılı olarak göreceğiniz için değer nesnelerinin daha kolay işlemesini sağlayan [varlık](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) özelliğini içerir.
+EF Core 2,0 ve sonraki sürümler, daha sonra ayrıntılı olarak göreceğiniz gibi, değer nesnelerinin daha kolay işlemesini sağlayan [varlıklar](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) özelliğini içerir.
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 

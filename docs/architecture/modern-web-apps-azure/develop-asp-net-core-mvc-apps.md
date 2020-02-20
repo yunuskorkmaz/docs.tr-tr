@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 3b1409fbb924638f0148c74a678d482aeb732357
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: a18b4dfc60c7d3971136f73f333b7225735710b3
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449458"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503949"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC uygulamaları geliştirin
 
@@ -51,7 +51,7 @@ app.UseEndpoints(endpoints =>
 
 Bu örnekte, yönlendirme tablosuna "default" adlı bir yol eklenmiştir. _Denetleyici_, _eylem_ve _kimlik_yer tutucuları olan bir rota şablonu tanımlar. Denetleyici ve eylem yer tutucuları, varsayılan olarak belirtilmiştir (sırasıyla "Home" ve "Dizin") ve kimlik yer tutucusu isteğe bağlıdır (bir "?" öğesinin virtuale tarafından). Burada tanımlanan kural, bir isteğin ilk bölümünün denetleyicinin adına, eylemin ikinci bölümüne karşılık gelmesi ve gerekirse üçüncü bir parçanın bir kimlik parametresini temsil etmesi gerektiğini belirtir. Geleneksel yollar genellikle uygulama için, başlangıç sınıfındaki configure yönteminde olduğu gibi bir yerde tanımlanır.
 
-Öznitelik yolları, genel olarak belirtitense, denetleyicilere ve eylemlere doğrudan uygulanır. Bu, belirli bir yönteme baktığınızda çok daha keşfedilebilir hale getirme avantajına sahiptir, ancak yönlendirme bilgilerinin uygulamada tek bir yerde tutulmadığından emin olur. Öznitelik rotalarıyla, belirli bir eylem için kolayca birden çok yol belirtebilir ve ayrıca, denetleyiciler ve Eylemler arasındaki yolları birleştirebilirsiniz. Örneğin:
+Öznitelik yolları, genel olarak belirtitense, denetleyicilere ve eylemlere doğrudan uygulanır. Bu, belirli bir yönteme baktığınızda çok daha keşfedilebilir hale getirme avantajına sahiptir, ancak yönlendirme bilgilerinin uygulamada tek bir yerde tutulmadığından emin olur. Öznitelik rotalarıyla, belirli bir eylem için kolayca birden çok yol belirtebilir ve ayrıca, denetleyiciler ve Eylemler arasındaki yolları birleştirebilirsiniz. Örnek:
 
 ```csharp
 [Route("Home")]
@@ -323,7 +323,7 @@ Filtre uygulama hakkında daha fazla bilgi edinmek ve MSDN Magazine makalesinden
 
 Web uygulamalarının güvenliğini sağlamak, çok sayıda konuyla büyük bir konudur. En temel düzeyinde güvenlik, belirli bir isteğin geldiği kişiyi öğrendiğinizden ve isteğin yalnızca gereken kaynaklara erişimi olduğundan emin olmanızı içerir. Kimlik doğrulaması, isteğin bilinen bir varlıktan geldiği kabul edilmesinin gerekip gerekmediğini görmek için, güvenilir bir veri deposundaki bir istekle girilen kimlik bilgilerini karşılaştırma işlemidir. Yetkilendirme, belirli kaynaklara erişimi kullanıcı kimliğine göre kısıtlama işlemidir. Üçüncü bir güvenlik konusu, isteklerin, en azından [SSL 'nin uygulamanız tarafından kullanıldığından emin](/aspnet/core/security/enforcing-ssl)olmanız gereken üçüncü taraflar tarafından dinleyerek dinleme yaptığı isteklerden korunuyor.
 
-### <a name="authentication"></a>Kimlik Doğrulama
+### <a name="authentication"></a>Kimlik Doğrulaması
 
 ASP.NET Core kimlik, uygulamanız için oturum açma işlevlerini desteklemek için kullanabileceğiniz bir üyelik sistemidir. Bu, yerel kullanıcı hesaplarının yanı sıra Microsoft hesabı, Twitter, Facebook, Google ve daha fazlası gibi sağlayıcılardan dış oturum açma sağlayıcısı desteği için destek içerir. ASP.NET Core kimliğe ek olarak, uygulamanız Windows kimlik doğrulamasını veya [kimlik sunucusu](https://github.com/IdentityServer/IdentityServer4)gibi bir üçüncü taraf kimlik sağlayıcısını kullanabilir.
 
@@ -546,7 +546,7 @@ Karma yaklaşım yalnızca, uygulamanın işlem veya daha fazla karmaşık alan�
 
 ## <a name="deployment"></a>Dağıtım
 
-ASP.NET Core uygulamanızın nerede barındırıldığından bağımsız olarak dağıtımı sürecinde birkaç adım vardır. İlk adım, dotnet publish CLı komutu kullanılarak yapılabilecek uygulamayı yayımlamaktır. Bu işlem uygulamayı derler ve uygulamayı belirlenmiş bir klasöre çalıştırmak için gereken tüm dosyaları yerleştirir. Visual Studio 'dan dağıtırken, bu adım sizin için otomatik olarak gerçekleştirilir. Yayımla klasörü, uygulama ve bağımlılıkları için. exe ve. dll dosyalarını içerir. Bağımsız bir uygulama de .NET çalışma zamanının bir sürümünü içerir. ASP.NET Core uygulamalar yapılandırma dosyaları, statik istemci varlıkları ve MVC görünümlerini de içerecektir.
+ASP.NET Core uygulamanızın nerede barındırıldığından bağımsız olarak dağıtımı sürecinde birkaç adım vardır. İlk adım, `dotnet publish` CLı komutu kullanılarak yapılabilecek uygulamayı yayımlamaktır. Bu işlem uygulamayı derler ve uygulamayı belirlenmiş bir klasöre çalıştırmak için gereken tüm dosyaları yerleştirir. Visual Studio 'dan dağıtırken, bu adım sizin için otomatik olarak gerçekleştirilir. Yayımla klasörü, uygulama ve bağımlılıkları için. exe ve. dll dosyalarını içerir. Bağımsız bir uygulama de .NET çalışma zamanının bir sürümünü içerir. ASP.NET Core uygulamalar yapılandırma dosyaları, statik istemci varlıkları ve MVC görünümlerini de içerecektir.
 
 ASP.NET Core uygulamalar, uygulama (veya sunucu) kilitlenirse sunucu önyüklendiğinde ve yeniden başlatıldığında başlatılmış olması gereken konsol uygulamalardır. İşlem Yöneticisi, bu işlemi otomatikleştirmek için kullanılabilir. ASP.NET Core için en yaygın işlem yöneticileri, Linux ve IIS ya da Windows hizmetinde Windows hizmetinde NGINX ve Apache 'tir.
 

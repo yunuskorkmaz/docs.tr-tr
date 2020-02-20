@@ -1,19 +1,19 @@
 ---
 title: Olaylara abone olma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Tümleştirme olaylarına yayımlama ve aboneliğin ayrıntılarını anlayın.
-ms.date: 10/02/2018
-ms.openlocfilehash: facbb04d322c5df03498a0313556dd9b5b3161d2
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.date: 01/30/2020
+ms.openlocfilehash: 544af8035ed23dd6507dfed4944b0c327c81d943
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937142"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501804"
 ---
 # <a name="subscribing-to-events"></a>Olaylara abone olma
 
 Olay veri yolunu kullanmanın ilk adımı, mikro hizmetlerin almak istedikleri olaylara abone olmadır. Bu, alıcının mikro hizmetlerinde yapılmalıdır.
 
-Aşağıdaki basit kod, hizmet başlatıldığında (yani `Startup` sınıfında), ihtiyaç duyacağı olaylara abone olmak için her bir alıcı mikro hizmetinin ne kadar uygulanması gerektiğini gösterir. Bu durumda `basket.api` mikro hizmeti `ProductPriceChangedIntegrationEvent` ve `OrderStartedIntegrationEvent` iletilerine abone olmalıdır.
+Aşağıdaki basit kod, hizmet başlatıldığında (yani `Startup` sınıfında), ihtiyaç duyacağı olaylara abone olmak için her bir alıcı mikro hizmetinin ne kadar uygulanması gerektiğini gösterir. Bu durumda `basket-api` mikro hizmeti `ProductPriceChangedIntegrationEvent` ve `OrderStartedIntegrationEvent` iletilerine abone olmalıdır.
 
 Örneğin, `ProductPriceChangedIntegrationEvent` olayına abone olurken, sepet mikro hizmeti, ürün fiyatındaki herhangi bir değişikliği algılar ve bu ürünün kullanıcının sepetinde olması durumunda kullanıcıyı bu değişiklik hakkında uyarmasını sağlar.
 
@@ -107,7 +107,7 @@ Mimari bölümünde daha önce bahsedildiği gibi, bu sorunla ilgilenirken çeş
 
 - [Giden kutusu deseninin](https://www.kamilgrzybek.com/design/the-outbox-pattern/)kullanımı. Bu, tümleştirme olaylarını depolamak için (yerel işlemi genişletme) bir işlem tablosudur.
 
-Bu senaryo için tam olay kaynağını belirleme (ES) deseni en iyi yaklaşımlardan biri değilse kullanmaktır *en* iyi. Bununla birlikte, birçok uygulama senaryosunda, bir tam ES sistemi uygulamaımayabilir. ES, geçerli durum verilerini depolamak yerine yalnızca işlem veritabanınızda bulunan etki alanı olaylarını depolayan anlamına gelir. Yalnızca etki alanı olaylarının depolanması, sisteminizin geçmişini ve geçmişteki bir zamanda sisteminizin durumunu tespit etmek gibi harika avantajlar elde edebilir. Ancak, bir tam ES sisteminin uygulanması sisteminizin çoğunu yeniden mimararak birçok karmaşıklığın ve gereksinimin tanıtılmasının yapılmasını gerektirir. Örneğin, Event [Store](https://eventstore.org/)veya Azure Cosmos DB, MongoDB, Cassandra, couşdb veya ırvendb gibi belge yönelimli bir veritabanı için özel olarak oluşturulan bir veritabanını kullanmak isteyebilirsiniz. Daha önce olay kaynağını öğrenmediğiniz müddetçe, bu soruna yönelik harika bir yaklaşım, ancak en kolay çözüm değildir.
+Bu senaryoda, en iyi *durumda değilse,* tam olay kaynağını BELIRLEME (es) deseninin kullanılması en iyi yaklaşımlardan biridir. Bununla birlikte, birçok uygulama senaryosunda, bir tam ES sistemi uygulamaımayabilir. ES, geçerli durum verilerini depolamak yerine yalnızca işlem veritabanınızda bulunan etki alanı olaylarını depolayan anlamına gelir. Yalnızca etki alanı olaylarının depolanması, sisteminizin geçmişini ve geçmişteki bir zamanda sisteminizin durumunu tespit etmek gibi harika avantajlar elde edebilir. Ancak, bir tam ES sisteminin uygulanması sisteminizin çoğunu yeniden mimararak birçok karmaşıklığın ve gereksinimin tanıtılmasının yapılmasını gerektirir. Örneğin, Event [Store](https://eventstore.org/)veya Azure Cosmos DB, MongoDB, Cassandra, couşdb veya ırvendb gibi belge yönelimli bir veritabanı için özel olarak oluşturulan bir veritabanını kullanmak isteyebilirsiniz. Daha önce olay kaynağını öğrenmediğiniz müddetçe, bu soruna yönelik harika bir yaklaşım, ancak en kolay çözüm değildir.
 
 İşlem günlüğü madenciliği ilk başta kullanma seçeneği çok saydam görünüyor. Ancak, bu yaklaşımı kullanmak için mikro hizmetin SQL Server işlem günlüğü gibi RDBMS işlem günlüğü ile bağlanmış olması gerekir. Bu muhtemelen istenmez. Diğer bir sakıncası, işlem günlüğünde kayıtlı olan alt düzey güncelleştirmelerin, üst düzey tümleştirme olaylarınız ile aynı düzeyde olmaması olabilir. Bu durumda, bu işlem günlüğü işlemlerinin tersine mühendislik işlemi zor olabilir.
 
@@ -301,7 +301,7 @@ Bazı ileti işleme, kendiliğinden ıdempotent. Örneğin, bir sistem görünt�
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **İleti tekisliliği**  
+- **İleti tekisliliği** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>Tümleştirme olayı iletilerini Çoğaltma kaldırma
@@ -338,7 +338,7 @@ Aralıklı ağ arızalarının meydana gelmesi durumunda iletiler yinelenebilir 
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 - **Nihai tutarlılık** \
-    [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+    <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Philip kahverengi. Sınırlı bağlamlara tümleştirme stratejileri** \
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
@@ -359,7 +359,7 @@ Aralıklı ağ arızalarının meydana gelmesi durumunda iletiler yinelenebilir 
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
 - Üst **sınır** \
-    [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
+    <https://en.wikipedia.org/wiki/CAP_theorem>
 
 - **SıNıR nedir?** \
     <https://www.quora.com/What-Is-CAP-Theorem-1>
@@ -377,7 +377,7 @@ Aralıklı ağ arızalarının meydana gelmesi durumunda iletiler yinelenebilir 
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **Güvenilirlik Kılavuzu** (kbbitmq belgeleri) \
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
+    <https://www.rabbitmq.com/reliability.html#consumer>
 
 > [!div class="step-by-step"]
 > [Önceki](rabbitmq-event-bus-development-test-environment.md)

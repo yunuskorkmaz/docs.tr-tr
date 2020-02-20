@@ -1,13 +1,13 @@
 ---
 title: Mikro hizmet mimarisinde iletişim
 description: Mikro hizmetler arasındaki iletişimin farklı yollarını inceleyerek, zaman uyumlu ve zaman uyumsuz yolların etkilerini anlayın.
-ms.date: 09/20/2018
-ms.openlocfilehash: 7bd45e0b8f8ea3330cf8d2b613e54111cc72f14f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.date: 01/30/2020
+ms.openlocfilehash: f2d6e78966bb7d5f481de6db0ab1dcfe2812a1b5
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966987"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503309"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Mikro hizmet mimarisinde iletişim
 
@@ -47,7 +47,7 @@ Belirtildiği gibi, mikro hizmetler tabanlı bir uygulama oluşturmanın önemli
 
 Mümkünse, sorgular için de değil, birden fazla mikro hizmet arasında zaman uyumlu iletişime (istek/yanıt) hiçbir zaman bağlı değildir. Her mikro hizmetin hedefi, uçtan uca uygulamanın parçası olan diğer hizmetler doğru veya sağlıksız olsa bile, istemci tüketicisi için otonom ve kullanılabilir olmalıdır. Bir mikro hizmetten diğer mikro hizmetlere (bir veri sorgusu için HTTP isteği gerçekleştirmek gibi) bir istemci uygulamasına yanıt sağlayabilmek için bir çağrı yapmanız gerektiğini düşünüyorsanız, bazı mikro hizmetler başarısız olduğunda dayanıklı olmayan bir mimariniz vardır.
 
-Üstelik, Şekil 4-15 ' in ilk bölümünde gösterildiği gibi, HTTP istek zincirleriyle uzun istek/yanıt döngüleri oluştururken olduğu gibi, mikro hizmetler arasında HTTP bağımlılıklarına sahip olma, yalnızca mikro hizmetlerinizin otonom olmaması, ancak performanslarını de Bu zincirdeki hizmetlerden biri iyi gerçekleştirmediğinde, bundan önce etkilendi.
+Üstelik, Şekil 4-15 ' in ilk bölümünde gösterildiği gibi, HTTP istek zincirleriyle uzun istek/yanıt döngüleri oluştururken olduğu gibi, mikro hizmetler arasında HTTP bağımlılıklarına sahip olmak gibi, yalnızca mikro hizmetlerinizin otonom olmaması, ancak aynı zamanda o zincirdeki hizmetlerden biri de bundan sonra performansından etkilenmesidir.
 
 Diğer bir deyişle, sorgu istekleri gibi mikro hizmetler arasında zaman uyumlu bağımlılıklar eklediğinizde, istemci uygulamaları için genel yanıt süresinin ne kadar kötüleştiğini.
 
@@ -61,7 +61,7 @@ Mikro hizmetinizin başka bir mikro hizmette ek bir eylem oluşturması gerekiyo
 
 Son olarak (ve mikro hizmetleri oluştururken çoğu sorun oluşur), ilk mikro hizmetiniz ilk olarak diğer mikro hizmetlere ait veriler istiyorsa, bu veriler için zaman uyumlu istek yapmaya güvenmeyin. Bunun yerine, nihai tutarlılık (genellikle, yaklaşan bölümlerde açıklandığı gibi tümleştirme olaylarını kullanarak) kullanarak bu verileri (yalnızca ihtiyacınız olan öznitelikleri) ilk hizmetin veritabanına çoğaltın veya yayın.
 
-[Her mikro hizmet için etki alanı modeli sınırlarını tanımlayan](identify-microservice-domain-model-boundaries.md)bölümde daha önce belirtildiği gibi, birkaç mikro hizmette bazı verilerin çoğaltılması yanlış bir tasarım değildir. Bu durumda, verileri bu ek etki alanının veya sınırlı bağlamın belirli diline veya koşullarına çevirebilir. Örneğin, [Eshoponcontainers uygulamasında](https://github.com/dotnet-architecture/eShopOnContainers) , Kullanıcı adlı bir varlıkla Kullanıcı verilerinin büyük bir kısmı üzerinde olan Identity. API adlı bir mikro hizmetiniz vardır. Bununla birlikte, kullanıcı hakkındaki verileri sıralama mikro hizmeti içinde depolamanız gerektiğinde, bunu alıcı adlı farklı bir varlık olarak depoladığınızda. Alıcı varlığı, özgün Kullanıcı varlığıyla aynı kimliği paylaşır, ancak yalnızca sıralama etki alanı için gerekli olan ve Kullanıcı profilinin tamamı yerine yalnızca birkaç özniteliği olabilir.
+Daha önce [her bir mikro hizmet için etki alanı modeli sınırlarının tanımlanması](identify-microservice-domain-model-boundaries.md) bölümünde belirtildiği gibi, birkaç mikro hizmette bazı verilerin çoğaltılması yanlış bir tasarım değildir — bu durumda, verileri bu ek etki alanı veya sınırlanmış bağlamın belirli diline veya koşullarına çevirebilir. Örneğin, [Eshoponcontainers uygulamasında](https://github.com/dotnet-architecture/eShopOnContainers) , Kullanıcı verilerinin büyük bir kısmı `User`adlı bir varlıkla ücretlendiren `identity-api` adlı bir mikro hizmetiniz vardır. Ancak, `Ordering` mikro hizmetinde Kullanıcı hakkında veri depolamanız gerektiğinde, bunu `Buyer`adlı farklı bir varlık olarak depoladığınızda. `Buyer` varlığı, özgün `User` varlığıyla aynı kimliği paylaşır, ancak yalnızca `Ordering` etki alanı için gerekli olan ve Kullanıcı profilinin tamamı değil yalnızca birkaç özniteliği olabilir.
 
 Nihai tutarlılığı sağlamak için, mikro hizmetlerde verileri zaman uyumsuz olarak iletmek ve yaymak için herhangi bir protokol kullanabilirsiniz. Belirtildiği gibi, bir olay veri yolu veya ileti Aracısı kullanarak tümleştirme olaylarını kullanabilir veya bunun yerine diğer hizmetleri yoklayarak HTTP 'yi de kullanabilirsiniz. Bunun önemi yoktur. Önemli kural, mikro hizmetleriniz arasında zaman uyumlu bağımlılıklar oluşturmamalıdır.
 

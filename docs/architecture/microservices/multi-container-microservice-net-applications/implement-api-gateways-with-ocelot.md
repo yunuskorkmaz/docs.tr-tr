@@ -1,22 +1,20 @@
 ---
 title: Ocelot ile API Ağ Geçitlerini uygulama
 description: Ocelot ile API ağ geçitleri uygulamayı ve kapsayıcı tabanlı bir ortamda Ocelot 'yi kullanmayı öğrenin.
-ms.date: 10/02/2018
-ms.openlocfilehash: c0bcd240b6bd190dd02266c7faaf9fd668eb23bb
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 01/30/2020
+ms.openlocfilehash: 0eb834829a418cfa1ccdf13c5fc8849f6855c4ba
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777301"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502424"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot ile API ağ geçitleri uygulama
 
-Başvuru mikro hizmet uygulaması [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers) , eshoponcontainers tarafından kullanılan aşağıdaki ortamların herhangi birinde olduğu gibi, mikro hizmetlerinize/kapsayıcılarınızla birlikte dağıtabileceğiniz basit ve hafıf bir API ağ geçidi olan [Ocelot](https://github.com/ThreeMammals/Ocelot)'yi kullanıyor:
-
-- Docker ana bilgisayarı, yerel geliştirme bilgisayarınızda, şirket içinde veya bulutta.
-- Kubernetes kümesi, şirket içi veya Azure Kubernetes hizmeti (AKS) gibi yönetilen bulutta.
-- Küme, şirket içinde veya bulutta Service Fabric.
-- Azure 'da PaaS/sunucusuz olarak Service Fabric mesh.
+> [!IMPORTANT]
+> Başvuru mikro hizmet uygulaması [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers) Şu anda, önceki başvurulan [OCELOT](https://github.com/ThreeMammals/Ocelot)yerine API ağ geçidini uygulamak üzere [Envoy](https://www.envoyproxy.io/) tarafından sunulan özellikleri kullanıyor.
+> Bu tasarımı, eShopOnContainers 'da uygulanan yeni gRPC Hizmetleri arası iletişimler için gerekli olan WebSocket protokolüne yönelik yerleşik destek nedeniyle, bu tasarımın seçimi yaptık.
+> Ancak, bu bölümü kılavuzda tutduk, böylece üretim sınıfı senaryolar için uygun olan basit, yetenekli ve hafif bir API ağ geçidi olarak Ocelot 'yi düşünebilirsiniz.
 
 ## <a name="architect-and-design-your-api-gateways"></a>API ağ geçitlerini mimarinizi ve tasarlama
 
@@ -89,7 +87,7 @@ HTTP isteği, mikro hizmet veritabanına ve gerekli ek eylemlere C# erişen bu t
 Mikro hizmet URL 'SI ile ilgili olan kapsayıcılar yerel geliştirme PC 'nizde (yerel Docker ana bilgisayarı) dağıtıldığında, her mikro hizmet kapsayıcısı, aşağıdaki dockerfile içinde olduğu gibi, dockerfile 'da belirtilen her zaman bir iç bağlantı noktasına (genellikle bağlantı noktası 80) sahiptir:
 
 ```Dockerfile
-FROM microsoft/aspnetcore:2.0.5 AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
 ```
@@ -105,7 +103,7 @@ Ancak geliştirme sırasında, mikro hizmet/kapsayıcıya doğrudan erişmek ve 
 Katalog mikro hizmeti için `docker-compose.override.yml` dosyasına bir örnek aşağıda verilmiştir:
 
 ```yml
-catalog.api:
+catalog-api:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
     - ASPNETCORE_URLS=http://0.0.0.0:80
@@ -123,10 +121,10 @@ Genellikle, mikro hizmetler için doğru üretim dağıtım ortamı Kubernetes v
 Katalog mikro hizmetini yerel Docker ana bilgisayarınızda çalıştırın. Visual Studio 'dan tam eShopOnContainers çözümünü çalıştırın (Docker-Compose dosyalarındaki tüm hizmetleri çalıştırır) ya da Katalog mikro hizmetini, `docker-compose.yml` ve `docker-compose.override.yml` yerleştirildiği klasörde konumlandırılmış olan CMD veya PowerShell 'de aşağıdaki Docker-Compose komutuyla başlatın.
 
 ```console
-docker-compose run --service-ports catalog.api
+docker-compose run --service-ports catalog-api
 ```
 
-Bu komut yalnızca Catalog. API hizmet kapsayıcısını ve Docker-Compose. yıml içinde belirtilen bağımlılıkları çalıştırır. Bu durumda, SQL Server Container ve Kbbitmq kapsayıcısı.
+Bu komut yalnızca Catalog-API hizmet kapsayıcısını ve Docker-Compose. yıml içinde belirtilen bağımlılıkları çalıştırır. Bu durumda, SQL Server Container ve Kbbitmq kapsayıcısı.
 
 Daha sonra, Katalog mikro hizmetine doğrudan erişebilir ve bu durumda, bu örnekte bu bağlantı noktasından doğrudan bu bağlantı noktası üzerinden erişim için Swagger Kullanıcı arabirimi aracılığıyla yöntemleri görebilirsiniz `http://localhost:5101/swagger`:
 
@@ -142,7 +140,7 @@ Ancak, bu durumda 5101 dış bağlantı noktası aracılığıyla mikro hizmetle
 
 Ocelot, temel olarak belirli bir sırada uygulayabileceğiniz bir middlewares kümesidir.
 
-Ocelot yalnızca ASP.NET Core çalışmak üzere tasarlanmıştır. .NET Core 2,0 çalışma zamanı ve .NET Framework 4.6.1 çalışma zamanı ve ' de dahil olmak üzere 2,0 .NET Standard her yerde kullanılabilmesi için Netstandard 2.0 'ı hedefliyordu.
+Ocelot yalnızca ASP.NET Core çalışmak üzere tasarlanmıştır. .NET Core 2,0 Runtime ve .NET Framework 4.6.1 Runtime ve 2,0 dahil olmak üzere .NET Standard her yerde kullanılabilmesi için `netstandard2.0` hedefler.
 
 Ocelot 'yi ve onun bağımlılıklarını, Visual Studio 'dan [Ocelot 'Nin NuGet paketiyle](https://www.nuget.org/packages/Ocelot/)ASP.NET Core projenize yüklersiniz.
 
@@ -150,7 +148,7 @@ Ocelot 'yi ve onun bağımlılıklarını, Visual Studio 'dan [Ocelot 'Nin NuGet
 Install-Package Ocelot
 ```
 
-EShopOnContainers 'da, API Gateway uygulamasının basit bir ASP.NET Core WebHost projesi ve Ocelot 'nin middlewares, aşağıdaki görüntüde gösterildiği gibi tüm API Gateway özelliklerini işlemesi:
+EShopOnContainers 'da, API Gateway uygulamasının basit bir ASP.NET Core WebHost projesi ve Ocelot 'nin ara yazılımı, aşağıdaki görüntüde gösterildiği gibi tüm API ağ geçidi özelliklerini işler:
 
 ![Ocelot API Gateway projesini gösteren Çözüm Gezgini ekran görüntüsü.](./media/implement-api-gateways-with-ocelot/ocelotapigw-base-project.png)
 
@@ -207,7 +205,7 @@ Aşağıda, eShopOnContainers 'dan API ağ geçitlerinden birinden [yapılandır
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "catalog.api",
+          "Host": "catalog-api",
           "Port": 80
         }
       ],
@@ -219,7 +217,7 @@ Aşağıda, eShopOnContainers 'dan API ağ geçitlerinden birinden [yapılandır
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],
@@ -249,7 +247,7 @@ Bir Ocelot API ağ geçidinin ana işlevselliği, gelen HTTP isteklerini almak v
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],
@@ -318,7 +316,7 @@ Ayrıca, aşağıdaki Docker-Compose. override. yıml dosyasında görebileceği
 mobileshoppingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5200:80"
   volumes:
@@ -327,7 +325,7 @@ mobileshoppingapigw:
 mobilemarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5201:80"
   volumes:
@@ -336,7 +334,7 @@ mobilemarketingapigw:
 webshoppingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5202:80"
   volumes:
@@ -345,7 +343,7 @@ webshoppingapigw:
 webmarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5203:80"
   volumes:
@@ -362,13 +360,13 @@ API ağ geçidini birden çok API ağ geçidine bölerek, mikro hizmetlerin fark
 
 Artık, API ağ geçitleri ile eShopOnContainers çalıştırırsanız (eShopOnContainers-ServicesAndWebApps. sln çözümü açılırken veya "Docker-Compose up" çalıştırıyorsanız), aşağıdaki örnek yollar gerçekleştirilir.
 
-Örneğin, webshoppingapigw API Gateway tarafından sunulan yukarı akış URL 'sini ziyaret `http://localhost:5202/api/v1/c/catalog/items/2/`, aşağıdaki tarayıcıda olduğu gibi, Docker konağının içindeki iç aşağı akış URL 'SI `http://catalog.api/api/v1/2` aynı sonucu elde edersiniz.
+Örneğin, webshoppingapigw API Gateway tarafından sunulan yukarı akış URL 'sini ziyaret `http://localhost:5202/api/v1/c/catalog/items/2/`, aşağıdaki tarayıcıda olduğu gibi, Docker konağının içindeki iç aşağı akış URL 'SI `http://catalog-api/api/v1/2` aynı sonucu elde edersiniz.
 
 ![API Gateway üzerinden yanıt gösteren bir tarayıcının ekran görüntüsü.](./media/implement-api-gateways-with-ocelot/access-microservice-through-url.png)
 
 **Şekil 6-35**. API ağ geçidi tarafından sunulan bir URL aracılığıyla mikro hizmete erişme
 
-Test veya hata ayıklama nedenlerinden dolayı, API Gateway 'e geçmeden doğrudan Katalog Docker kapsayıcısına (yalnızca geliştirme ortamında) erişmek isterseniz, ' Catalog. API ', Docker ana bilgisayarına (Docker-Compose hizmet adları tarafından işlenen hizmet bulma) iç bir DNS çözümünden, kapsayıcıya doğrudan erişmenin tek yolu, yalnızca aşağıdaki tarayıcıda `http://localhost:5101/api/v1/Catalog/items/1` gibi geliştirme testlerinde sağlanmış olan Docker-Compose. override. yıml içinde Yayınlanan dış bağlantı noktasıdır.
+Test veya hata ayıklama nedenlerinden dolayı, API Gateway 'e geçmeden doğrudan Katalog Docker kapsayıcısına (yalnızca geliştirme ortamında) erişmek isterseniz, ' Catalog-API ', Docker ana bilgisayarına (Docker-Compose hizmet adları tarafından işlenen hizmet bulma) iç bir DNS çözümünden, kapsayıcıya doğrudan erişmenin tek yolu, yalnızca aşağıdaki tarayıcıda `http://localhost:5101/api/v1/Catalog/items/1` gibi geliştirme testlerinde sağlanmış olan Docker-Compose. override. yıml içinde Yayınlanan dış bağlantı noktasıdır.
 
 ![Catalog. API 'ye doğrudan yanıt gösteren tarayıcının ekran görüntüsü.](./media/implement-api-gateways-with-ocelot/direct-access-microservice-testing.png)
 
@@ -426,7 +424,7 @@ API ağ geçidi düzeyinde herhangi bir hizmette kimlik doğrulama ile güvenli 
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],

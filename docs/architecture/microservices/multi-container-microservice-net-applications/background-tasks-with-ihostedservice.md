@@ -1,13 +1,13 @@
 ---
 title: Ihostedservice ve BackgroundService sınıfıyla mikro hizmetlerde arka plan görevleri uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmetler .NET Core 'da arka plan görevleri uygulamak için ıhostedservice ve BackgroundService kullanmak üzere yeni seçenekleri anlayın.
-ms.date: 01/07/2019
-ms.openlocfilehash: d289d8ccc737fa9fc13b95da44e4b617b431f96a
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: fab67c816e90c69a4d593422b4974cb9b8819807
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737195"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502302"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Ihostedservice ve BackgroundService sınıfıyla mikro hizmetlerde arka plan görevleri uygulama
 
@@ -21,15 +21,15 @@ Arka plan görevleri ve zamanlanan işler, sonunda, mikro hizmet tabanlı bir uy
 
 **Şekil 6-26**. Bir WebHost 'de ıhostedservice kullanma ve bir ana bilgisayar
 
-ASP.NET Core 1. x ve 2. x, Web Apps 'te arka plan işlemlerinde ıwebhost 'yi destekler. .NET Core 2,1, düz konsol uygulamalarıyla arka plan işlemlerinde IHOST 'ı destekler. `WebHost` ve `Host`arasında yapılan farkı dikkate alın.
+Web Apps 'teki arka plan işlemlerine yönelik ASP.NET Core 1. x ve 2. x desteği `IWebHost`. .NET Core 2,1 ve sonraki sürümleri, düz konsol uygulamalarıyla arka plan işlemlerine yönelik `IHost` destekler. `WebHost` ve `Host`arasında yapılan farkı dikkate alın.
 
-ASP.NET Core 2,0 ' de bir `WebHost` (`IWebHost`uygulayan temel sınıf), uygulamanıza HTTP sunucusu özellikleri sağlamak için kullandığınız altyapı yapıtıdır (örneğin, MVC web uygulaması veya Web API hizmeti). ASP.NET Core, bağımlılık ekleme, istek ardışık düzeninde middlewares ekleme ve bu `IHostedServices` arka plan görevleri için tam olarak kullanma olanağı sunan tüm yeni altyapıyı bir araya getirir.
+ASP.NET Core 2,0 ' de bir `WebHost` (`IWebHost`uygulayan temel sınıf), işleminizi bir MVC web uygulaması veya Web API hizmeti uygularken olduğu gibi HTTP sunucu özellikleri sağlamak için kullandığınız altyapı yapıtıdır. ASP.NET Core, bağımlılık ekleme, istek ardışık düzeninde middlewares ekleme ve benzer şekilde tüm yeni altyapıyı bir araya getirir. `WebHost`, arka plan görevleri için bu `IHostedServices` kullanır.
 
 .NET Core 2,1 ' de bir `Host` (`IHost`uygulayan temel sınıf) eklenmiştir. Temel olarak bir `Host`, `WebHost` sahip olduğunuz kadar benzer bir altyapıya sahip olmanız (bağımlılık ekleme, barındırılan hizmetler vb.) sağlar, ancak bu durumda, MVC, Web API 'SI veya HTTP sunucusu özellikleriyle ilgili hiçbir şey olmadan ana bilgisayar için basit ve daha hafif bir işlem yapmanız yeterlidir.
 
-Bu nedenle, barındırılan Hizmetleri işlemek için IHOST ile özelleştirilmiş bir konak işlemi oluşturabilir ve başka hiçbir şey yapmayabilir; Örneğin, yalnızca `IHostedServices`barındırmak için yapılan bir mikro hizmet veya mevcut bir ASP.NET Core Web API 'SI veya MVC uygulaması gibi mevcut bir ASP.NET Core `WebHost`genişletebilirsiniz.
+Bu nedenle, barındırılan Hizmetleri işlemek için `IHost` ile özel bir konak oluşturma ve başka hiçbir şey yapma (örneğin, `IHostedServices`barındırmak için yapılan bir mikro hizmet) veya mevcut bir ASP.NET Core Web API 'SI ya da MVC uygulaması gibi mevcut bir ASP.NET Core `WebHost`genişletebilirsiniz.
 
-Her yaklaşımın iş ve ölçeklenebilirlik gereksinimlerinize bağlı olarak profesyonelleri ve dezavantajları vardır. Arka plan görevleriniz, HTTP (ıwebhost) ile hiçbir şey yapmayabilir ve IHOST kullanmanız gerekir.
+Her yaklaşımın iş ve ölçeklenebilirlik gereksinimlerinize bağlı olarak profesyonelleri ve dezavantajları vardır. Arka plan görevleriniz HTTP (`IWebHost`) ile hiçbir şey yapmayabilir ve `IHost`kullanmanız gerekir.
 
 ## <a name="registering-hosted-services-in-your-webhost-or-host"></a>Barındırılan Hizmetleri WebHost veya ana bilgisayarınıza kaydetme
 
@@ -43,7 +43,7 @@ SignalR, barındırılan Hizmetleri kullanan bir yapıtın örneğidir, ancak ş
 - `ILogger`gibi ortak hizmetleri paylaşırken bir Web uygulamasının arka planında bir ileti kuyruğundan iletileri işleme.
 - `Task.Run()`ile başlayan bir arka plan görevi.
 
-Bu eylemlerin herhangi birini temel olarak ıhostedservice temelli bir arka plan görevine devreolursunuz.
+Bu eylemlerin herhangi birini, `IHostedService`uygulayan bir arka plan görevine temelde devretmek.
 
 `WebHost` veya `Host` bir veya birden çok `IHostedServices` eklemenin yolu,  ASP.NET Core (ya da .NET Core 2,1 ve üzeri sürümlerde bir `WebHost`) <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A>`Host` uzantı yöntemiyle kayıt yaptırarak yapılır. Temel olarak, barındırılan Hizmetleri, tipik bir ASP.NET WebHost öğesinden aşağıdaki kodda olduğu gibi, `Startup` sınıfının tanıdık `ConfigureServices()` yöntemi içine kaydetmeniz gerekir.
 
@@ -232,22 +232,22 @@ Sınıf diyagramı: ıwebhost ve IHOST, ıhostedservice 'i uygulayan BackgroundS
 
 ### <a name="deployment-considerations-and-takeaways"></a>Dağıtım değerlendirmeleri ve özellikleri
 
-ASP.NET Core `WebHost` veya .NET Core `Host` dağıtırken, son çözümü etkileyebilecek şekilde dikkat etmeniz önemlidir. Örneğin, `WebHost` IIS veya normal bir Azure App Service dağıtırsanız, uygulama havuzu geri dönüştürme nedeniyle ana bilgisayarınız kapatılabilir. Ancak, ana bilgisayarınızı bir kapsayıcı olarak Kubernetes veya Service Fabric gibi bir Orchestrator 'a dağıtıyorsanız, ana bilgisayarınızda bulunan canlı örnek sayısını kontrol edebilirsiniz. Ayrıca, Azure Işlevleri gibi bu senaryolar için bulutta yapılan diğer yaklaşımları de göz önünde bulundurmanız gerekir. Son olarak, hizmetin tüm zamanı çalıştırması ve bir Windows Server üzerinde dağıtımı gerekiyorsa, bir Windows hizmeti kullanabilirsiniz.
+ASP.NET Core `WebHost` veya .NET Core `Host` dağıtırken, son çözümü etkileyebilecek şekilde dikkat etmeniz önemlidir. Örneğin, `WebHost` IIS veya normal bir Azure App Service dağıtırsanız, uygulama havuzu geri dönüştürme nedeniyle ana bilgisayarınız kapatılabilir. Ancak, ana bilgisayarınızı bir kapsayıcı olarak Kubernetes gibi bir Orchestrator 'a dağıtıyorsanız, ana bilgisayarınızda bulunan canlı örnek sayısını kontrol edebilirsiniz. Ayrıca, Azure Işlevleri gibi bu senaryolar için bulutta yapılan diğer yaklaşımları de göz önünde bulundurmanız gerekir. Son olarak, hizmetin tüm zamanı çalıştırması ve bir Windows Server üzerinde dağıtımı gerekiyorsa, bir Windows hizmeti kullanabilirsiniz.
 
 Ancak, bir uygulama havuzuna dağıtılan `WebHost` bile, uygulamanın bellek içi önbelleğini yeniden doldurma veya temizleme gibi senaryolar da uygulanabilir.
 
-`IHostedService` arabirimi, bir ASP.NET Core Web uygulamasında (.NET Core 2,0 ' de) veya herhangi bir işlem/konakta (`IHost`.NET Core 2,1 ' den başlayarak) arka plan görevleri başlatmak için kullanışlı bir yol sağlar. Ana avantajı, ana bilgisayarın kendisi kapatılırken arka plan görevlerinizin kodunu temizlemek için sorunsuz iptalle elde ettiğiniz fırsatdır.
+`IHostedService` arabirimi, bir ASP.NET Core Web uygulamasında (.NET Core 2,0 ve sonraki sürümlerde) veya herhangi bir işlem/konakta (.NET Core 2,1 ' de `IHost`başlayarak) arka plan görevleri başlatmak için kullanışlı bir yol sağlar. Ana avantajı, ana bilgisayarın kendisi kapatılırken arka plan görevlerinizin kodunu temizlemek için sorunsuz iptalle elde ettiğiniz fırsatdır.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **ASP.NET Core/standart 2,0
-  bir zamanlanmış görev oluşturma** <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
+- **ASP.NET Core/standart 2,0 \ zamanlanan bir görev oluşturma**
+  <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **ASP.NET Core 2,0
-  'Da ıhostedservice 'ı uygulama** <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
+- **ASP.NET Core 2,0 ' de ıhostedservice uygulama** \
+  <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
-- **ASP.NET Core 2,1
-  kullanan Generichost örneği** <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
+- **ASP.NET Core 2,1 kullanarak Generichost örneği** \
+  <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]
 >[Önceki](test-aspnet-core-services-web-apps.md)

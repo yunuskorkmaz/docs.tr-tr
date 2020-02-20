@@ -2,14 +2,13 @@
 title: .NET mikro hizmetleri ve Web uygulamalarının güvenliğini sağlama
 description: .NET mikro hizmetleri ve Web uygulamalarında güvenlik-ASP.NET Core Web uygulamalarında kimlik doğrulama seçeneklerini öğrenin.
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: 6d318f4efc6958610947f164d6ca63634f3d7db5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 01/30/2020
+ms.openlocfilehash: f82212956f5492a51ec99d092e1a5131d1b31313
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777209"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501642"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Güvenli .NET mikro hizmetleri ve Web uygulamaları oluşturun
 
@@ -37,17 +36,48 @@ Mikro hizmetlere doğrudan erişildiğinde, kimlik doğrulaması ve yetkilendirm
 
 Bir uygulamanın kullanıcılarını tanımlamak için ASP.NET Core birincil mekanizması [ASP.NET Core kimlik](/aspnet/core/security/authentication/identity) üyelik sistemidir. ASP.NET Core kimlik, geliştirici tarafından yapılandırılan bir veri deposundaki kullanıcı bilgilerini (oturum açma bilgileri, roller ve talepler dahil) depolar. Genellikle, ASP.NET Core Identity veri deposu `Microsoft.AspNetCore.Identity.EntityFrameworkCore` paketinde sunulan bir Entity Framework deposudur. Ancak, Azure Tablo depolama, CosmosDB veya diğer konumlarda kimlik bilgilerini depolamak için özel mağazalar veya diğer üçüncü taraf paketleri kullanılabilir.
 
-Aşağıdaki kod, bireysel kullanıcı hesabı kimlik doğrulaması seçili olan ASP.NET Core Web uygulaması proje şablonundan alınmıştır. Başlangıç. ConfigureServices yönteminde EntityFramework. Core kullanılarak ASP.NET Core kimliğin nasıl yapılandırılacağını gösterir.
+> [!TIP]
+> ASP.NET Core 2,1 ve üzeri, [Razor sınıf kitaplığı](/aspnet/core/razor-pages/ui-class)olarak [ASP.NET Core kimlik](/aspnet/core/security/authentication/identity) sağlar; bu nedenle, önceki sürümlerde olduğu gibi projenizde gerekli kodların çoğunu görmezsiniz. Kimlik kodunu gereksinimlerinize uyacak şekilde özelleştirmeye ilişkin ayrıntılar için bkz. [ASP.NET Core projelerinde Scaffold Identity](/aspnet/core/security/authentication/scaffold-identity).
+
+Aşağıdaki kod, bireysel kullanıcı hesabı kimlik doğrulaması seçili olan ASP.NET Core Web uygulaması MVC 3,1 proje şablonundan alınmıştır. `Startup.ConfigureServices` yönteminde Entity Framework Core kullanılarak ASP.NET Core kimliğin nasıl yapılandırılacağını gösterir.
 
 ```csharp
-services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-    services.AddIdentity<ApplicationUser, IdentityRole>()
-        .AddEntityFrameworkStores<ApplicationDbContext>()
-        .AddDefaultTokenProviders();
+public void ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.AddDbContext<ApplicationDbContext>(options =>
+        options.UseSqlServer(
+            Configuration.GetConnectionString("DefaultConnection")));
+
+    services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+        .AddEntityFrameworkStores<ApplicationDbContext>();
+
+    services.AddRazorPages();
+    //...
+}
 ```
 
-ASP.NET Core kimlik yapılandırıldıktan sonra, uygulamayı çağırarak etkinleştirin. Hizmetin `Startup.Configure` yönteminde Useıdentity.
+ASP.NET Core kimlik yapılandırıldıktan sonra, hizmetin `Startup.Configure` yönteminde aşağıdaki kodda gösterildiği gibi `app.UseAuthentication()` ve `endpoints.MapRazorPages()` ekleyerek etkinleştirin:
+
+```csharp
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+    //...
+    app.UseRouting();
+
+    app.UseAuthentication();
+    app.UseAuthorization();
+
+    app.UseEndpoints(endpoints =>
+    {
+        endpoints.MapRazorPages();
+    });
+    //...
+}
+```
+
+> [!IMPORTANT]
+> Önceki koddaki satırlar kimliğin düzgün çalışması için **GÖSTERILEN sırada** olmalıdır.
 
 ASP.NET Core kimlik kullanmak çeşitli senaryolara izin vermez:
 
@@ -65,69 +95,54 @@ Yerel bir kullanıcı veri deposunu kullanan ve tanımlama bilgilerini kullanara
 
 ASP.NET Core Ayrıca, kullanıcıların [OAuth 2,0](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2) akışları aracılığıyla oturum açmasını sağlamak için [dış kimlik doğrulama sağlayıcılarının](/aspnet/core/security/authentication/social/) kullanılmasını da destekler. Bu, kullanıcıların Microsoft, Google, Facebook veya Twitter gibi sağlayıcılardan mevcut kimlik doğrulama süreçlerini kullanarak oturum açabileceği ve bu kimlikleri uygulamanızdaki bir ASP.NET Core kimlikle ilişkilendirebileceği anlamına gelir.
 
-Dış kimlik doğrulamasını kullanmak için uygulamanızın HTTP istek işleme ardışık düzenine uygun kimlik doğrulama ara yazılımını dahil edersiniz. Bu ara yazılım, kimlik doğrulama sağlayıcısından URI yolları döndürmek, kimlik bilgilerini yakalamak ve SignInManager. Getexternalloginınfo yöntemi aracılığıyla kullanılabilir hale getirmek için istekleri işlemekten sorumludur.
+Daha önce belirtildiği gibi kimlik doğrulama ara yazılımı dahil olmak üzere dış kimlik doğrulamasını kullanmak için, `app.UseAuthentication()` yöntemi kullanılarak dış sağlayıcıyı aşağıdaki örnekte gösterildiği gibi `Startup` kaydetmeniz gerekir:
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+        .AddEntityFrameworkStores<ApplicationDbContext>();
+
+    services.AddAuthentication()
+        .AddMicrosoftAccount(microsoftOptions =>
+        {
+            microsoftOptions.ClientId = Configuration["Authentication:Microsoft:ClientId"];
+            microsoftOptions.ClientSecret = Configuration["Authentication:Microsoft:ClientSecret"];
+        })
+        .AddGoogle(googleOptions => { ... })
+        .AddTwitter(twitterOptions => { ... })
+        .AddFacebook(facebookOptions => { ... });
+    //...
+}
+```
 
 Popüler dış kimlik doğrulama sağlayıcıları ve bunlarla ilişkili NuGet paketleri aşağıdaki tabloda gösterilmiştir:
 
 | **Sağlayıcı**  | **Paket**                                          |
 | ------------- | ---------------------------------------------------- |
-| **Microsoft** | **Microsoft. AspNetCore. Authentication. MicrosoftAccount** |
+| **MICROSOFT** | **Microsoft. AspNetCore. Authentication. MicrosoftAccount** |
 | **Google**    | **Microsoft. AspNetCore. Authentication. Google**           |
-| **'A**  | **Microsoft. AspNetCore. Authentication. Facebook**         |
+| **Facebook**  | **Microsoft. AspNetCore. Authentication. Facebook**         |
 | **Twitter**   | **Microsoft. AspNetCore. Authentication. Twitter**          |
 
-Her durumda, ara yazılım `Startup.Configure``app.Use{ExternalProvider}Authentication` benzer bir kayıt yöntemi çağrısıyla kaydedilir. Bu kayıt yöntemleri, sağlayıcının gerektirdiği şekilde uygulama KIMLIĞI ve gizli bilgiler (örneğin, bir parola) içeren bir seçenek nesnesi alır. Dış kimlik doğrulama sağlayıcıları, kullanıcıya hangi uygulamanın kimlik erişimi istediğini bildirmek için uygulamanın kaydolmasını ( [ASP.NET Core belgelerde](/aspnet/core/security/authentication/social/)açıklandığı gibi) gerektirir.
+Her durumda, satıcıya bağımlı olan ve genellikle şunları içeren bir uygulama kayıt yordamını gerçekleştirmeniz gerekir:
 
-Ara yazılım `Startup.Configure`bir kez kaydolduktan sonra, kullanıcılardan herhangi bir denetleyici eyleminden oturum açmasını isteyebilirsiniz. Bunu yapmak için kimlik doğrulama sağlayıcısının adını ve yeniden yönlendirme URL 'sini içeren bir `AuthenticationProperties` nesnesi oluşturun. Daha sonra `AuthenticationProperties` nesnesini geçiren bir sınama yanıtı döndürün. Aşağıdaki kod buna bir örnek gösterir.
+1. Istemci uygulama KIMLIĞI alınıyor.
+2. Istemci uygulaması gizli dizisi alınıyor.
+3. Yetkilendirme ara yazılımı ve kayıtlı sağlayıcı tarafından işlenen bir yeniden yönlendirme URL 'sini yapılandırma
+4. İsteğe bağlı olarak, çoklu oturum açma (SSO) senaryosunda oturumu Kapat 'ı düzgün şekilde işlemek için bir oturum kapatma URL 'SI yapılandırma.
 
-```csharp
-var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider,
-    redirectUrl);
-return Challenge(properties, provider);
-```
+Uygulamanızı bir dış sağlayıcıya yapılandırma hakkında daha fazla bilgi için, [ASP.NET Core belgelerinde dış sağlayıcı kimlik doğrulaması](/aspnet/core/security/authentication/social/)' na bakın.
 
-RedirectUrl parametresi, kullanıcının kimliği doğrulandıktan sonra dış sağlayıcının yeniden yönlendirileceği URL 'YI içerir. URL, aşağıdaki Basitleştirilmiş örnekte olduğu gibi, dış kimlik bilgilerine göre kullanıcıyı imzalayamayacak bir eylemi temsil etmelidir:
+> [!TIP]
+Tüm ayrıntılar, daha önce bahsedilen yetkilendirme ara yazılımı ve Hizmetleri tarafından işlenir. Bu nedenle, Şekil 9-3 ' de gösterildiği gibi, daha önce bahsedilen kimlik doğrulama sağlayıcılarını kaydetmenin yanı sıra, ASP.NET Code Web uygulaması projesini Visual Studio 'da oluştururken yalnızca **bireysel kullanıcı hesabı** kimlik doğrulaması seçeneğini seçmeniz gerekir.
 
-```csharp
-// Sign in the user with this external login provider if the user
-// already has a login.
-var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, isPersistent: false);
+![Yeni ASP.NET Core Web uygulaması iletişim kutusunun ekran görüntüsü.](./media/index/select-individual-user-account-authentication-option.png)
 
-if (result.Succeeded)
-{
-    return RedirectToLocal(returnUrl);
-}
-else
-{
-    ApplicationUser newUser = new ApplicationUser
-    {
-        // The user object can be constructed with claims from the
-        // external authentication provider, combined with information
-        // supplied by the user after they have authenticated with
-        // the external provider.
-        UserName = info.Principal.FindFirstValue(ClaimTypes.Name),
-        Email = info.Principal.FindFirstValue(ClaimTypes.Email)
-    };
-    var identityResult = await _userManager.CreateAsync(newUser);
-    if (identityResult.Succeeded)
-    {
-        identityResult = await _userManager.AddLoginAsync(newUser, info);
-        if (identityResult.Succeeded)
-        {
-            await _signInManager.SignInAsync(newUser, isPersistent: false);
-        }
-        return RedirectToLocal(returnUrl);
-    }
-}
-```
+**Şekil 9-3**. Visual Studio 2019 ' de bir Web uygulaması projesi oluştururken dış kimlik doğrulaması kullanmak için bireysel kullanıcı hesapları seçeneğini seçme.
 
-Visual Studio 'da ASP.NET Core Web uygulaması projesi oluşturduğunuzda **bireysel kullanıcı hesabı** kimlik doğrulaması seçeneğini belirlerseniz, Şekil 9-3 ' de gösterildiği gibi, bir dış sağlayıcıyla oturum açmak için gereken tüm kodlar zaten projede bulunur.
-
-![Yeni ASP.NET Core Web uygulaması iletişim kutusunun ekran görüntüsü.](./media/index/select-external-authentication-option.png)
-
-**Şekil 9-3**. Web uygulaması projesi oluştururken dış kimlik doğrulaması kullanma seçeneği seçme
-
-Daha önce listelenen dış kimlik doğrulama sağlayıcılarının yanı sıra, birçok daha fazla dış kimlik doğrulama sağlayıcısının kullanılmasına yönelik ara yazılım sağlayan üçüncü taraf paketleri de mevcuttur. Bir liste için bkz. GitHub 'da [Aspnet. Security. OAuth. Providers](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src) deposu.
+Daha önce listelenen dış kimlik doğrulama sağlayıcılarının yanı sıra, birçok daha fazla dış kimlik doğrulama sağlayıcısının kullanılmasına yönelik ara yazılım sağlayan üçüncü taraf paketleri de mevcuttur. Bir liste için GitHub 'daki [Aspnet. Security. OAuth. Providers](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src) deposuna bakın.
 
 Ayrıca, özel ihtiyaçları çözümlemek için kendi dış kimlik doğrulama ara yazılımını da oluşturabilirsiniz.
 
@@ -147,31 +162,36 @@ Kullanıcı bilgileri Azure Active Directory veya OpenID Connect ya da OAuth 2,0
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
     //…
-    // Configure the pipeline to use authentication
     app.UseAuthentication();
     //…
-    app.UseMvc();
+    app.UseEndpoints(endpoints =>
+    {
+        //...
+    });
 }
 
 public void ConfigureServices(IServiceCollection services)
 {
     var identityUrl = Configuration.GetValue<string>("IdentityUrl");
     var callBackUrl = Configuration.GetValue<string>("CallBackUrl");
+    var sessionCookieLifetime = configuration.GetValue("SessionCookieLifetimeMinutes", 60);
 
     // Add Authentication services
 
     services.AddAuthentication(options =>
     {
         options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-        options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
     })
-    .AddCookie()
+    .AddCookie(setup => setup.ExpireTimeSpan = TimeSpan.FromMinutes(sessionCookieLifetime))
     .AddOpenIdConnect(options =>
     {
         options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-        options.Authority = identityUrl;
-        options.SignedOutRedirectUri = callBackUrl;
+        options.Authority = identityUrl.ToString();
+        options.SignedOutRedirectUri = callBackUrl.ToString();
+        options.ClientId = useLoadTest ? "mvctest" : "mvc";
         options.ClientSecret = "secret";
+        options.ResponseType = useLoadTest ? "code id_token token" : "code id_token";
         options.SaveTokens = true;
         options.GetClaimsFromUserInfoEndpoint = true;
         options.RequireHttpsMetadata = false;
@@ -218,12 +238,16 @@ Identityserver4 için kullanılacak istemcileri ve kaynakları belirttiğinizde,
 Identityserver4 için, bellek içi kaynakları ve özel bir ılientstore türü tarafından sunulan istemcileri kullanmak için örnek bir yapılandırma aşağıdaki örnekteki gibi görünebilir:
 
 ```csharp
-// Add IdentityServer services
-services.AddSingleton<IClientStore, CustomClientStore>();
-services.AddIdentityServer()
-    .AddSigningCredential("CN=sts")
-    .AddInMemoryApiResources(MyApiResourceProvider.GetAllResources())
-    .AddAspNetIdentity<ApplicationUser>();
+public IServiceProvider ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.AddSingleton<IClientStore, CustomClientStore>();
+    services.AddIdentityServer()
+        .AddSigningCredential("CN=sts")
+        .AddInMemoryApiResources(MyApiResourceProvider.GetAllResources())
+        .AddAspNetIdentity<ApplicationUser>();
+    //...
+}
 ```
 
 ### <a name="consume-security-tokens"></a>Güvenlik belirteçlerini kullanma
@@ -241,7 +265,10 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     // Configure the pipeline to use authentication
     app.UseAuthentication();
     //…
-    app.UseMvc();
+    app.UseEndpoints(endpoints =>
+    {
+        //...
+    });
 }
 
 public void ConfigureServices(IServiceCollection services)
@@ -252,8 +279,8 @@ public void ConfigureServices(IServiceCollection services)
 
     services.AddAuthentication(options =>
     {
-        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultAuthenticateScheme = AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme;
 
     }).AddJwtBearer(options =>
     {

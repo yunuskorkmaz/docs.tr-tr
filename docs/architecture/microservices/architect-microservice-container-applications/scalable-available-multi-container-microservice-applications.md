@@ -1,15 +1,15 @@
 ---
 title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 description: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok Kapsayıcılı uygulamaları düzenleme seçeneklerini ve Kubernetes uygulama yaşam döngüsünü geliştirirken Azure Dev Spaces olasılıklarını öğrenin.
-ms.date: 09/20/2018
-ms.openlocfilehash: 3915e6386e66d40bedc92368bfbcda81790c6923
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 01/30/2020
+ms.openlocfilehash: f9e91d3958e2d567e68257c377f76cc3c2325a0b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090137"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502989"
 ---
-# <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
+# <a name="orchestrate-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 
 Uygulamanız mikro hizmetleri temel alıyorsa veya yalnızca birden çok kapsayıcıyı ayırmak için, üretime yönelik uygulamalar için düzenleyiciler kullanmak gereklidir. Daha önce belirtildiği gibi, mikro hizmet tabanlı bir yaklaşımda, her mikro hizmet modelin ve verilerinin sahibi olur, böylece bir geliştirme ve dağıtım noktasından otonom hale gelir. Ancak, birden çok hizmetten (SOA gibi) oluşan daha geleneksel bir uygulamanız olsa da, dağıtılmış bir sistem olarak dağıtılması gereken tek bir iş uygulamasının bulunduğu birden fazla kapsayıcıyla veya hizmete sahip olursunuz. Bu tür sistemler, ölçeği genişletmek ve yönetmek için karmaşıktır; Bu nedenle, üretime hazırlı ve ölçeklenebilir çok kapsayıcılı bir uygulamaya sahip olmak istiyorsanız kesinlikle bir Orchestrator gerekir.
 
@@ -38,7 +38,7 @@ Bir kümenin ve Scheduler 'ın kavramlarıyla ilgili olarak, farklı satıcılar
 |     |   |
 |-----|---|
 | **Kubernetes** <br> Kubernetes logosunun bir görüntüsünü ![.](./media/scalable-available-multi-container-microservice-applications/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/) , özellikleri düzenlemek için küme altyapısı ve kapsayıcı zamanlamalarından değişen işlevselliği sağlayan açık kaynaklı bir üründür. Ana bilgisayar kümelerinde uygulama kapsayıcılarının dağıtım, ölçeklendirme ve işlemlerini otomatikleştirmenizi sağlar. <br><br> *Kubernetes* , kolay yönetim ve bulma için uygulama kapsayıcılarını mantıksal birimlere gruplandıran kapsayıcı merkezli bir altyapı sağlar. <br><br> *Kubernetes* , Linux 'Ta, Windows 'da daha az olgun bir yerde. |
-| **Azure Kubernetes Service'i (AKS)** <br> Azure Kubernetes hizmet logosunun bir görüntüsünü ![.](./media/scalable-available-multi-container-microservice-applications/azure-kubernetes-service-logo.png) | [Aks](https://azure.microsoft.com/services/kubernetes-service/) , Azure 'Da Kubernetes kümesinin yönetimini, dağıtımını ve işlemlerini kolaylaştıran yönetilen bir Kubernetes kapsayıcı düzenleme hizmetidir. |
+| **Azure Kubernetes Service (AKS)** <br> Azure Kubernetes hizmet logosunun bir görüntüsünü ![.](./media/scalable-available-multi-container-microservice-applications/azure-kubernetes-service-logo.png) | [Aks](https://azure.microsoft.com/services/kubernetes-service/) , Azure 'Da Kubernetes kümesinin yönetimini, dağıtımını ve işlemlerini kolaylaştıran yönetilen bir Kubernetes kapsayıcı düzenleme hizmetidir. |
 
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Microsoft Azure içinde kapsayıcı tabanlı düzenleyiciler kullanma
 
@@ -72,9 +72,9 @@ AKS 'yi kullanmaya başlamak için Azure portal veya CLı kullanarak bir AKS kü
 
 Varsayılan olarak AKS 'nin bir parçası olarak yüklenen yazılımların herhangi bir ücreti yoktur. Tüm varsayılan seçenekler açık kaynaklı yazılımlarla uygulanır. AKS, Azure 'da birden çok sanal makine için kullanılabilir. Yalnızca seçtiğiniz işlem örnekleri için ücretlendirilirsiniz, Ayrıca, depolama ve ağ gibi diğer temel altyapı kaynakları kullanılır. AKS 'in kendisi için artımlı ücret alınmaz.
 
-Kubectl ve özgün. YAML dosyalarını temel alan Kubernetes 'e dağıtım hakkında daha fazla uygulama bilgisi için, [AKS 'de (Azure Kubernetes hizmeti) eShopOnContainers 'ı ayarlama](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.-Setting-the-solution-up-in-AKS-(Azure-Kubernetes-Service))bölümüne bakın.
+Kubernetes için varsayılan üretim dağıtım seçeneği, sonraki bölümde kullanıma sunulan helk grafiklerini kullanmaktır.
 
-## <a name="deploying-with-helm-charts-into-kubernetes-clusters"></a>Kubernetes kümelerine helk grafiklerle dağıtım
+## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>Kubernetes kümelerine helk grafiklerle dağıtım
 
 Bir uygulamayı bir Kubernetes kümesine dağıttığınızda, özgün kubectl. exe CLı aracını, önceki bölümde belirtildiği gibi yerel biçimi (. YAML dosyaları) temel alarak dağıtım dosyalarını kullanarak kullanabilirsiniz. Ancak, karmaşık mikro hizmet tabanlı uygulamalar dağıtımında olduğu gibi daha karmaşık Kubernetes uygulamaları için [Held](https://helm.sh/)kullanılması önerilir.
 
@@ -84,15 +84,15 @@ Ayrıca, [Azure dev SPACES](https://docs.microsoft.com/azure/dev-spaces/azure-de
 
 HELI, [bulut Yerel Bilgi Işlem altyapısı (CNCF)](https://www.cncf.io/) tarafından korunur. Microsoft, Google, BitNami ve helmkatkıda bulunan topluluğuyla işbirliği yapın.
 
-Helk grafikleri ve Kubernetes hakkında daha fazla uygulama bilgisi için, [eShopOnContainers 'ı AKS 'e dağıtmak Için helk grafiklerini kullanma](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Deploying-to-AKS-using-Helm-Charts)gönderisini kontrol edin.
+Helk grafikleri ve Kubernetes hakkında daha fazla uygulama bilgisi için, [AKS gönderisini eShopOnContainers dağıtmak üzere helk grafiklerini kullanma](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)) konusuna bakın.
 
 ## <a name="use-azure-dev-spaces-for-your-kubernetes-application-lifecycle"></a>Kubernetes uygulama yaşam döngünüz için Azure Dev Spaces kullanın
 
-[Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) takımlar için hızlı, yinelemeli bir Kubernetes geliştirme deneyimi sağlar. En düşük geliştirme makinesi kurulumu ile doğrudan Azure Kubernetes Service (AKS) ' de çalışan ve hata ayıklama kapsayıcılarını seçebilirsiniz. Visual Studio, Visual Studio Code veya komut satırı gibi tanıdık araçları kullanarak Windows, Mac veya Linux 'ta geliştirme yapın.
+[Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) takımlar için hızlı, yinelemeli bir Kubernetes geliştirme deneyimi sağlar. Minimum geliştirme makinesi kurulumu ile, doğrudan Azure Kubernetes Service (AKS) içinde yinelemeli olarak kapsayıcıları çalıştırabilir ve kapsayıcıların hatasını ayıklayabilirsiniz. Windows, Mac veya Linux’ta, Visual Studio, Visual Studio Code veya komut satırı gibi bilindik araçları kullanarak geliştirme gerçekleştirin.
 
 Belirtildiği gibi, kapsayıcı tabanlı uygulamaları dağıtmada Azure Dev Spaces HELI grafiklerini kullanır.
 
-Azure Dev Spaces, Visual Studio 2017 veya Visual Studio Code kullanarak doğrudan Azure 'daki genel bir Kubernetes kümesinde kodu hızla yinelemenize ve hata ayıklamanıza olanak sağladığından geliştirme ekiplerinin Kubernetes üzerinde daha üretken olmasına yardımcı olur. Azure 'daki Kubernetes kümesi paylaşılan bir yönetilen Kubernetes kümesidir ve bu sayede ekibiniz birlikte çalışarak işbirliği yapabilir. Kodunuzu yalıtımlı olarak geliştirebilir, daha sonra genel kümeye dağıtabilir ve bağımlılıkları çoğaltmadan veya mocize etmeden diğer bileşenlerle uçtan uca test gerçekleştirebilirsiniz.
+Azure Dev Spaces, Visual Studio 2019 veya Visual Studio Code kullanarak doğrudan Azure 'daki genel bir Kubernetes kümesinde kodu hızla yinelemenize ve hata ayıklamanıza olanak sağladığından geliştirme ekiplerinin Kubernetes üzerinde daha üretken olmasına yardımcı olur. Azure 'daki Kubernetes kümesi paylaşılan bir yönetilen Kubernetes kümesidir ve bu sayede ekibiniz birlikte çalışarak işbirliği yapabilir. Kodunuzu yalıtımlı olarak geliştirebilir, daha sonra genel kümeye dağıtabilir ve bağımlılıkları çoğaltmadan veya mocize etmeden diğer bileşenlerle uçtan uca test gerçekleştirebilirsiniz.
 
 Şekil 4-26 ' de gösterildiği gibi, Azure Dev Spaces en yüksek fark özelliği, kümedeki genel dağıtımın geri kalanı ile tümleştirilen ' Spaces ' oluşturma yeteneğidir.
 
@@ -100,13 +100,13 @@ Azure Dev Spaces, Visual Studio 2017 veya Visual Studio Code kullanarak doğruda
 
 **Şekil 4-26**. Azure Dev Spaces birden çok boşluk kullanma
 
-Temel olarak Azure 'da paylaşılan bir geliştirme alanı ayarlayabilirsiniz. Her geliştirici uygulamanın yalnızca bir kısmına odaklanabilir ve senaryolarının bağımlı olduğu diğer tüm hizmetleri ve bulut kaynaklarını zaten içeren bir geliştirme alanında ön taahhüt kodu geliştirebilir. Bağımlılıklar her zaman güncel değildir ve geliştiriciler üretimi yansıtan bir şekilde çalışır.
+Temel olarak Azure 'da paylaşılan bir geliştirme alanı ayarlayabilirsiniz. Her geliştirici uygulamanın yalnızca bir kısmına odaklanabilir ve senaryolarının bağımlı olduğu diğer tüm hizmetleri ve bulut kaynaklarını zaten içeren bir geliştirme alanında ön taahhüt kodu geliştirebilir. Bağımlılıklar her zaman günceldir ve geliştiriciler üretimi yansıtan bir şekilde çalışır.
 
 Azure Dev Spaces, bir alan kavramı sağlar. Bu, göreli yalıtımda çalışmanıza ve takımınızın çalışmasını bozmadan korku etmenize olanak tanır. Her dev alanı, "en iyi" ana geliştirme alanındaki bir mikro hizmeti (veya daha fazla), kendi süren iş mikro hizmetinizdeki bir mikro hizmeti (veya çok sayıda) geçersiz kılmanızı sağlayan hiyerarşik bir yapının parçasıdır.
 
 Bu özellik URL öneklerini temel alır. bu nedenle, URL 'de herhangi bir geliştirme alanı öneki kullanılırken bir istek, geliştirme alanında varsa hedef mikro hizmetten sunulur, aksi takdirde hiyerarşide bulunan hedef mikro hizmetin ilk örneğine iletilir , sonunda ana geliştirme alanını en üstte elde edin.
 
-Somut bir örnek üzerinde pratik bir görünüm almak için [Azure dev Spaces Eshoponcontainers wiki sayfasını](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Using-Azure-Dev-Spaces-and-AKS)görebilirsiniz.
+Somut bir örnek üzerinde pratik bir görünüm almak için [Azure dev Spaces üzerindeki Eshoponcontainers wiki sayfasına](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)bakın.
 
 Daha fazla bilgi için [Azure dev Spaces Ile takım geliştirme](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore)makalesini inceleyin.
 

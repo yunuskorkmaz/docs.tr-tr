@@ -1,19 +1,19 @@
 ---
 title: .NET mikro hizmetleri. Kapsayıcılı .NET Uygulamaları Mimarisi
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmetler modüler ve bağımsız olarak dağıtılabilir hizmetlerdir. Docker Kapsayıcıları (Linux ve Windows için), bir hizmet ve bağımlılıklarını tek bir birim halinde paketleyerek dağıtım ve test etmeyi basitleştirir. Bu, daha sonra yalıtılmış bir ortamda çalıştırılır.
-ms.date: 01/07/2019
-ms.openlocfilehash: 7fa4935fe56ca873a5311812637964083e34170e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 01/30/2020
+ms.openlocfilehash: 5da167de1ffd2169aea44b9872281e71c87927b1
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089906"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502625"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET mikro hizmetleri: Kapsayıcılı .NET uygulamaları için mimari
 
 ![Kitap kapağı](./media/cover-small.png)
 
-**Sürüm v 2.2** -ASP.NET Core 2,2 ' ye güncelleştirildi
+**Sürüm v 3.1** -ASP.NET Core 3,1 ' ye güncelleştirildi
 
 Bu kılavuz, mikro hizmet tabanlı uygulamalar geliştirmeye ve kapsayıcıları kullanarak bunları yönetmeye yönelik bir giriş niteliğindedir. .NET Core ve Docker Kapsayıcıları kullanılarak mimari tasarımı ve uygulama yaklaşımlarını ele alır.
 
@@ -45,9 +45,9 @@ Bu kılavuzda, temel olarak iki teknolojiyi içeren bir geliştirme ortamı düz
 
 Bu kılavuzu araştırdık aldıktan sonra, bir sonraki adımınız Microsoft Azure üzerinde üretime Ready mikro hizmetler hakkında bilgi almak için olacaktır.
 
-## <a name="version"></a>Version
+## <a name="version"></a>Sürüm
 
-Bu kılavuz, **.NET Core 2,2** sürümünün yanı sıra teknolojilerin "Wave" ile ilgili birçok ek güncelleştirmeyi (yani,) kapsayacak şekilde değiştirilmiştir. Azure ve diğer 3. taraf teknolojileri) .NET Core 2,2 ile zaman içinde coinciding. Kitap sürümü de **2,2**sürümüne güncelleştirilmiştir.
+Bu kılavuz, .NET Core 3,1 sürümüyle aynı "Wave" teknolojileri (Azure ve ek üçüncü taraf teknolojileri) ile ilgili birçok ek güncelleştirme ile birlikte **.net core 3,1** sürümünü kapsayacak şekilde değiştirilmiştir. Kitap sürümü de **3,1**sürümüne güncelleştirilmiştir.
 
 ## <a name="what-this-guide-does-not-cover"></a>Bu kılavuzun kapsamayan
 
@@ -82,7 +82,7 @@ Uygulamanın amacı, mimari desenleri göstersağlamaktır. Gerçek dünyada uyg
 
 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com)
 
-## <a name="credits"></a>iler
+## <a name="credits"></a>Krediler
 
 Ortak Yazarlar:
 
@@ -146,9 +146,9 @@ Katılımcılar ve gözden geçirenler:
 >
 > **Charles Lowell**, yazılım mühendısı, vs Cat ekibi, Microsoft
 >
-> **Miguel Veloso**, SR. danışman, zorlu zorluk
+> **MIGUEL Veloso**, düz kavramlarda yazılım geliştirme mühendisi
 
-## <a name="copyright"></a>yaptırımlar
+## <a name="copyright"></a>Yaptırımlar
 
 INDIRME şu adreste bulunabilir: <https://aka.ms/microservicesebook>
 
@@ -162,7 +162,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Telif hakkı © 2019 Microsoft Corporation
+Telif hakkı © 2020 Microsoft Corporation
 
 Tüm hakları saklıdır. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
 

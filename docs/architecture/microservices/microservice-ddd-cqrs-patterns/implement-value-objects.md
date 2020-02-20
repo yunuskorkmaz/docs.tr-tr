@@ -1,13 +1,13 @@
 ---
 title: Değer nesneleri uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Yeni Entity Framework özelliklerini kullanarak değer nesneleri uygulamak için Ayrıntılar ve seçeneklere ulaşın.
-ms.date: 10/08/2018
-ms.openlocfilehash: 70c92fe86fda20ed4e909b945b843e8e71092f09
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.date: 01/30/2020
+ms.openlocfilehash: 4ace5c141b1cbd2dcfefb7ea7165a4006b130479
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899770"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502509"
 ---
 # <a name="implement-value-objects"></a>Değer nesneleri uygulama
 
@@ -131,13 +131,13 @@ public class Address : ValueObject
 
 Bu değerin nesne uygulamasının bir kimlik olmadığını ve bu nedenle, hiçbir kimlik alanı olmadığını, hiçbir ID alanını ve ne zaman ValueObject sınıfında bile olmadığını görebilirsiniz.
 
-Entity Framework tarafından kullanılacak bir sınıfta ID alanı olmadığından, KIMLIK olmayan daha iyi değer nesnelerini uygulama konusunda büyük ölçüde yardımcı olan EF Core 2,0 ' e kadar mümkün değildir. Bu, bir sonraki bölümün tam olarak bir açıklaması olur.
+Entity Framework (EF) tarafından kullanılmak üzere bir sınıfta ID alanı olmadığından, KIMLIK olmayan daha iyi değer nesnelerini uygulama konusunda büyük ölçüde yardımcı olan EF Core 2,0 'e kadar mümkün değildir. Bu, bir sonraki bölümün tam olarak bir açıklaması olur.
 
-Değer nesnelerinin sabit olması, salt okunurdur (yani salt al özellikleri) ve gerçekten doğru olması gerekir. Ancak, değer nesneleri genellikle serileştirilmiş ve seri durumdan çıkarılmış olarak ileti kuyrukları üzerinden alınır ve salt okunurdur. bu nedenle, bunları yalnızca pratik olması gereken özel bir küme olarak bırakıyoruz.
+Değer nesnelerinin sabit olması, salt okunurdur (yani salt al özelliklerine sahip) ve gerçekten doğru olması gerekir. Ancak, değer nesneleri genellikle serileştirilmiş ve seri durumdan çıkarılmış olarak ileti kuyrukları üzerinden alınır ve salt okunurdur. bu nedenle, bunları yalnızca pratik olması gereken özel bir küme olarak bırakıyoruz.
 
-## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>EF Core 2,0 ile veritabanında değer nesnelerini kalıcı hale getirme
+## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>EF Core 2,0 ve üzeri ile veritabanında değer nesnelerini kalıcı hale getirme
 
-Yalnızca etki alanı modelinizde bir değer nesnesinin nasıl tanımlanacağını gördünüz. Ancak, bunu, genellikle kimliği olan varlıkları hedefleyen Entity Framework (EF) Core aracılığıyla veritabanında kalıcı hale getirebilirsiniz?
+Yalnızca etki alanı modelinizde bir değer nesnesinin nasıl tanımlanacağını gördünüz. Ancak, genellikle kimliği olan varlıkları hedeflediğinden bu Entity Framework Core kullanarak veritabanını veritabanına nasıl kalıcı hale getirebilirsiniz?
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>EF Core 1,1 kullanarak arka plan ve eski yaklaşımlar
 
@@ -160,11 +160,11 @@ void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 
 Ancak, bu değer nesnesinin veritabanına kalıcılığı, farklı bir tablodaki normal bir varlık gibi gerçekleştirildi.
 
-EF Core 2,0 ile, değer nesnelerini kalıcı hale getirmek için yeni ve daha iyi yollar vardır.
+EF Core 2,0 ve üzeri sürümlerde, değer nesnelerini kalıcı hale getirmek için yeni ve daha iyi yollar vardır.
 
-## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20"></a>Değer nesnelerini EF Core 2,0 ' de sahip olan varlık türleri olarak kalıcı hale getirme
+## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20-and-later"></a>Değer nesnelerini EF Core 2,0 ve sonraki sürümlerde sahip olan varlık türleri olarak kalıcı hale getirme
 
-DDD 'daki kurallı değer nesne deseninin yanı sıra EF Core sahip olan varlık türü arasında bazı boşluklar olsa da, şu anda değer nesnelerini EF Core 2,0 ile kalıcı hale getirmenin en iyi yoludur. Bu bölümün sonundaki sınırlamalara bakabilirsiniz.
+DDD 'daki kurallı değer nesne deseninin yanı sıra EF Core sahip olan varlık türü arasında bazı boşluklar olsa da, EF Core 2,0 ve üzeri ile değer nesnelerini kalıcı hale getirmenin en iyi yolu vardır. Bu bölümün sonundaki sınırlamalara bakabilirsiniz.
 
 Sahip olan varlık türü özelliği 2,0 sürümünden bu yana EF Core eklenmiştir.
 
@@ -178,7 +178,7 @@ Sahip olunan türlerin örneklerinin kimliği tamamen kendi kendine değil. Üç
 
 - İşaret eden gezinti özelliği
 
-- Sahip olduğu türlerdeki koleksiyonlar söz konusu olduğunda, bağımsız bir bileşen (henüz EF Core 2,0 ' de desteklenmemiştir, 2,2 ' de kullanıma sunulacak).
+- Sahip olunan türlerin koleksiyonları durumunda bağımsız bir bileşen (EF Core 2,2 ve üzeri sürümlerde desteklenir).
 
 Örneğin, eShopOnContainers 'daki sıralama etki alanı modelinde, sipariş varlığının bir parçası olarak, adres değeri nesnesi, sahip varlığı içinde, sipariş varlığı olan bir sahip varlık türü olarak uygulanır. Adres, etki alanı modelinde tanımlanmış Identity özelliği olmayan bir türdür. Bu, belirli bir siparişin sevkiyat adresini belirtmek için sipariş türünün bir özelliği olarak kullanılır.
 
@@ -226,7 +226,7 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 
 Önceki kodda `orderConfiguration.OwnsOne(o => o.Address)` yöntemi, `Address` özelliğinin `Order` türünün sahip olduğu bir varlık olduğunu belirtir.
 
-Varsayılan olarak EF Core kurallar, sahip olduğu varlık türünün özelliklerinin veritabanı sütunlarını `EntityProperty_OwnedEntityProperty`olarak adlandırın. Bu nedenle, `Address` iç özellikleri `Orders` tabloda `Address_Street`, `Address_City` (`State`ve `Country` için) adlarıyla görüntülenir.
+Varsayılan olarak EF Core kurallar, sahip olduğu varlık türünün özelliklerinin veritabanı sütunlarını `EntityProperty_OwnedEntityProperty`olarak adlandırın. Bu nedenle, `Address` iç özellikleri `Orders` tabloda `Address_Street`, `Address_City` (`State`ve `Country` için) adlarıyla görüntülenir.`ZipCode`
 
 Bu sütunları yeniden adlandırmak için `Property().HasColumnName()` floent metodunu ekleyebilirsiniz. `Address` ortak bir özellik olduğu durumda, eşlemeler aşağıdakine benzer olacaktır:
 
@@ -275,7 +275,7 @@ public class Address
 
 - Yığınımızda sahip olan bir tür örneğinin kimliği (anahtarı), sahip türünün kimliğinin ve sahip olunan türün tanımının bir bileşiminin bir örneğidir.
 
-#### <a name="owned-entities-capabilities"></a>Sahip olunan varlıkların özellikleri:
+#### <a name="owned-entities-capabilities"></a>Sahip olunan varlıkların özellikleri
 
 - Sahip olunan türler, sahip olunan (iç içe geçmiş türler) veya sahip olmayan (diğer varlıklara ait normal başvuru gezinti özellikleri) diğer varlıklara başvurabilir.
 
@@ -283,27 +283,27 @@ public class Address
 
 - Tablo bölme, kurala göre ayarlanır, ancak sahip olan türünü ToTable kullanarak farklı bir tabloyla eşleştirerek bu seçeneği kullanabilirsiniz.
 
-- Eager yüklemesi, sahip olunan türler üzerinde otomatik olarak gerçekleştirilir, yani sorgu üzerinde Include () çağrısı gerektirmez.
+- Eager yüklemesi, sahip olunan türler üzerinde otomatik olarak gerçekleştirilir, yani sorgu üzerinde `.Include()` çağırmanız gerekmez.
 
-- EF Core 2,1 itibariyle, sahip olduğu\]\[özniteliğiyle yapılandırılabilir
+- , EF Core 2,1 ve üzeri kullanılarak `[Owned]`özniteliğiyle yapılandırılabilir.
 
-#### <a name="owned-entities-limitations"></a>Sahip olunan varlıkların sınırlamaları:
+- , Sahip olunan türlerin koleksiyonlarını işleyebilir (sürüm 2,2 ve üzeri kullanarak).
 
-- Sahip olunan bir türün (tasarıma göre) bir DbSet\<T\> oluşturamazsınız.
+#### <a name="owned-entities-limitations"></a>Sahip olunan varlıkların sınırlamaları
 
-- ModelBuilder. Entity\<T\>() sahip olan türler (Şu anda tasarım kaynaklı) çağrılamaz.
+- Sahip olunan bir türün `DbSet<T>` oluşturamazsınız (tasarıma göre).
 
-- Henüz sahip olunan türler koleksiyonu yok (EF Core 2,1 itibariyle, ancak bunlar 2,2 ' de desteklenecektir).
+- Sahip olunan türler üzerinde `ModelBuilder.Entity<T>()` çağıramıyorum (Şu anda tasarım kaynaklı).
 
-- Aynı tablodaki (yani tablo bölme kullanılarak) sahip ile eşlenmiş isteğe bağlı (null yapılabilir) türler desteklenmez. Bunun nedeni her bir özellik için eşlemenin yapılmadığımızda, null karmaşık değeri için bir bütün olarak ayrı bir Sentinel yoktur.
+- Aynı tablodaki (yani, tablo bölme kullanılarak) sahip ile eşlenmiş isteğe bağlı (null yapılabilir) türler desteklenmez. Bunun nedeni her bir özellik için eşlemenin yapılmadığımızda, null karmaşık değeri için bir bütün olarak ayrı bir Sentinel yoktur.
 
 - Sahip olunan türler için devralma eşlemesi desteği yoktur, ancak aynı devralma hiyerarşilerindeki iki yaprak türünü farklı sahipli türlerle eşleyemezsiniz. EF Core, aynı hiyerarşinin bir parçası oldukları gerçeğiyle ilgili bir neden olmayacaktır.
 
 #### <a name="main-differences-with-ef6s-complex-types"></a>EF6's karmaşık türlerle ana farklılıklar
 
-- Tablo bölme isteğe bağlıdır, örneğin, isteğe bağlı olarak ayrı bir tabloyla eşleştirilebilir ve sahip oldukları türler de vardır.
+- Tablo bölme isteğe bağlıdır, diğer bir deyişle, isteğe bağlı olarak ayrı bir tabloyla eşleştirilebilir ve sahip oldukları türler de vardır.
 
-- Diğer varlıklara başvurabilir (yani, sahip olunan diğer türlere ilişkilerle bağımlı taraf olarak davranabilir).
+- Diğer varlıklara başvurabilir (diğer bir deyişle, bağımlı olan diğer türlere ilişkilerle ilgili olarak görev yapabilir).
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
@@ -316,8 +316,11 @@ public class Address
 - **Vaughn versuz. Etki alanı odaklı tasarım uygulama.** (Kitap; değer nesnelerinin bir tartışmasını içerir) \
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
+- **Sahip olan varlık türleri** \
+  <https://docs.microsoft.com/ef/core/modeling/owned-entities>
+
 - **Gölge özellikleri** \
-  [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
+  <https://docs.microsoft.com/ef/core/modeling/shadow-properties>
 
 - **Karmaşık türler ve/veya değer nesneleri**. EF Core GitHub deposu 'nda tartışma (sorunlar sekmesi) \
   <https://github.com/dotnet/efcore/issues/246>

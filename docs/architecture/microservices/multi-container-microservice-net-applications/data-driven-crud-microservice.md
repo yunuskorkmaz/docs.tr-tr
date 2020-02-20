@@ -1,13 +1,13 @@
 ---
 title: Basit bir veri temelli CRUD mikro hizmeti oluşturma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Bir mikro Hizmetler uygulaması bağlamında basit bir CRUD (veri odaklı) mikro hizmeti oluşturmayı anlayın.
-ms.date: 01/07/2019
-ms.openlocfilehash: 56cec488c22b0f3b45b9c1dae9d2f4fd7ef7beaa
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: b72d7defed81e57e2971c5e2b53df2d86b2dc947
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737364"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502346"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Basit bir veri temelli CRUD mikro hizmeti oluşturma
 
@@ -39,7 +39,7 @@ Son olarak, Dockerfile ve Docker-Compose. yıml meta veri dosyalarını düzenle
 
 ![Projenin kurulumunu gösteren görsel Studios ekran görüntüsü.](./media/data-driven-crud-microservice/create-asp-net-core-web-api-project.png)
 
-**Şekil 6-6**. Visual Studio 'da ASP.NET Core Web API projesi oluşturma
+**Şekil 6-6**. Visual Studio 2019 ' de ASP.NET Core Web API projesi oluşturma
 
 ASP.NET Core Web API projesi oluşturmak için önce bir ASP.NET Core Web uygulaması seçin ve ardından API türünü seçin. Projeyi oluşturduktan sonra, Entity Framework API 'sini veya diğer API 'yi kullanarak, MVC denetleyicilerinizi diğer Web API projesinde yaptığınız gibi uygulayabilirsiniz. Yeni bir Web API projesinde, bu mikro hizmette sahip olduğunuz tek bağımlılığın ASP.NET Core kendisinde olduğunu görebilirsiniz. Dahili olarak, *Microsoft. AspNetCore. All* bağımlılığında, Şekil 6-7 ' de gösterildiği gibi Entity Framework ve diğer birçok .NET Core NuGet paketine başvuruyorlar.
 
@@ -129,12 +129,27 @@ public class CatalogController : ControllerBase
 
     // GET api/v1/[controller]/items[?pageSize=3&pageIndex=10]
     [HttpGet]
-    [Route("[action]")]
+    [Route("items")]
     [ProducesResponseType(typeof(PaginatedItemsViewModel<CatalogItem>), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> Items([FromQuery]int pageSize = 10,
-                                           [FromQuery]int pageIndex = 0)
-
+    [ProducesResponseType(typeof(IEnumerable<CatalogItem>), (int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+    public async Task<IActionResult> ItemsAsync(
+        [FromQuery]int pageSize = 10,
+        [FromQuery]int pageIndex = 0,
+        string ids = null)
     {
+        if (!string.IsNullOrEmpty(ids))
+        {
+            var items = await GetItemsByIdsAsync(ids);
+
+            if (!items.Any())
+            {
+                return BadRequest("ids value invalid. Must be comma-separated list of numbers");
+            }
+
+            return Ok(items);
+        }
+
         var totalItems = await _catalogContext.CatalogItems
             .LongCountAsync();
 
@@ -172,7 +187,7 @@ ASP.NET Core, bağımlılık ekleme (dı) kutusunu kutudan çıkar. Tercih etti�
 
 `CatalogController` sınıfının Yukarıdaki örnekte, `CatalogController()` Oluşturucusu aracılığıyla `CatalogContext` türünde bir nesne ve diğer nesneler ekleme.
 
-Web API projesinde ayarlanmakta olan önemli bir yapılandırma, hizmetin IOC kapsayıcısına DbContext sınıfı kaydolmalıdır. Genellikle, aşağıdaki örnekte gösterildiği gibi `ConfigureServices()` yönteminin içindeki `services.AddDbContext<DbContext>()` yöntemini çağırarak `Startup` sınıfında bunu yapabilirsiniz:
+Web API projesinde ayarlanmakta olan önemli bir yapılandırma, hizmetin IOC kapsayıcısına DbContext sınıfı kaydolmalıdır. Bunu genellikle, aşağıdaki **Basitleştirilmiş** örnekte gösterildiği gibi `ConfigureServices()` yönteminin içindeki `services.AddDbContext<DbContext>()` yöntemini çağırarak `Startup` sınıfında yapabilirsiniz:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -240,9 +255,9 @@ Docker-Compose. yıml veya Docker-Compose. override. yıml dosyalarından, bu or
 # docker-compose.override.yml
 
 #
-catalog.api:
+catalog-api:
   environment:
-    - ConnectionString=Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word
+    - ConnectionString=Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word
     # Additional environment variables for this service
   ports:
     - "5101:80"
@@ -350,7 +365,7 @@ Swashbuckle tarafından oluşturulan Swagger Kullanıcı arabirimi API 'SI belge
 
 Şu anda, swashbuckle, ASP.NET Core uygulamalar için üst düzey meta-paket [swashbuckle. AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore) altında beş iç NuGet paketinden oluşur.
 
-Bu NuGet paketlerini Web API Projenize yükledikten sonra, başlangıç sınıfında, aşağıdaki kodda olduğu gibi Swagger 'yi yapılandırmanız gerekir (Basitleştirilmiş):
+Bu NuGet paketlerini Web API Projenize yükledikten sonra, aşağıdaki **Basitleştirilmiş** kodda olduğu gibi başlangıç sınıfında Swagger 'yi yapılandırmanız gerekir:
 
 ```csharp
 public class Startup
@@ -366,12 +381,11 @@ public class Startup
         services.AddSwaggerGen(options =>
         {
             options.DescribeAllEnumsAsStrings();
-            options.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
+            options.SwaggerDoc("v1", new OpenApiInfo
             {
                 Title = "eShopOnContainers - Catalog HTTP API",
                 Version = "v1",
-                Description = "The Catalog Microservice HTTP API. This is a Data-Driven/CRUD microservice sample",
-                TermsOfService = "Terms Of Service"
+                Description = "The Catalog Microservice HTTP API. This is a Data-Driven/CRUD microservice sample"
             });
         });
 
@@ -395,7 +409,7 @@ public class Startup
 
 Bu işlem tamamlandıktan sonra, aşağıdaki gibi URL 'Leri kullanarak uygulamanızı başlatabilir ve aşağıdaki Swagger JSON ve UI uç noktalarına gidebilirsiniz:
 
-```url
+```console
   http://<your-root-url>/swagger/v1/swagger.json
 
   http://<your-root-url>/swagger/

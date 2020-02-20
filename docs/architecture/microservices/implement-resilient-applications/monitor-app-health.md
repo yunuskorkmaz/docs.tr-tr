@@ -1,15 +1,15 @@
 ---
-title: Sistem durumu izleme
+title: Sistem durumunu izleme
 description: Sistem durumu izlemeyi uygulamayla bir yolu bulun.
-ms.date: 01/07/2019
-ms.openlocfilehash: f1d63e04bbea95fcf0a9f9d3b50aef0e7d4a830e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: a91e51af66049f9774365cd56b90ab792a4dd4fc
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732868"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502674"
 ---
-# <a name="health-monitoring"></a>Sistem durumu izleme
+# <a name="health-monitoring"></a>Sistem durumunu izleme
 
 Sistem durumu izleme, kapsayıcılarınızın ve mikro hizmetlerinizin durumu hakkında neredeyse gerçek zamanlı bilgilere izin verebilir. Sistem durumu izleme, işletim mikro hizmetlerinin birden çok yönü için kritik öneme sahiptir ve bu, daha sonra açıklandığı gibi, bazı durumlarda, aşamalar halinde kısmi uygulama yükseltmeleri gerçekleştirirken özellikle önemlidir.
 
@@ -19,7 +19,7 @@ Tipik modelde, hizmetler durumları hakkında raporlar gönderir ve uygulamanız
 
 ## <a name="implement-health-checks-in-aspnet-core-services"></a>ASP.NET Core hizmetlerinde sistem durumu denetimleri uygulama
 
-ASP.NET Core mikro hizmet veya Web uygulaması geliştirirken, ASP .NET Core 2,2 ' de yayınlanan yerleşik sistem durumu denetimleri özelliğini kullanabilirsiniz. Birçok ASP.NET Core özelliği gibi, sistem durumu denetimleri de bir dizi hizmet ve bir ara yazılım ile gelir.
+ASP.NET Core mikro hizmet veya Web uygulaması geliştirirken, ASP .NET Core 3,1 ([Microsoft. Extensions. Diagnostics. Healthdenetimleri](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)) içinde Yayınlanan yerleşik sistem durumu denetimleri özelliğini kullanabilirsiniz. Birçok ASP.NET Core özelliği gibi, sistem durumu denetimleri de bir dizi hizmet ve bir ara yazılım ile gelir.
 
 Sistem durumu denetimi Hizmetleri ve ara yazılımı kullanımı kolaydır ve uygulamanız için gerekli herhangi bir dış kaynak (SQL Server veritabanı veya uzak bir API gibi) düzgün çalışıp çalışmadığını doğrulamanıza olanak sağlayan yetenekler sağlar. Bu özelliği kullandığınızda, daha sonra açıklandığımız için kaynağın sağlıklı ne anlama geldiğini de seçebilirsiniz.
 
@@ -27,20 +27,23 @@ Bu özelliği etkin bir şekilde kullanmak için, önce mikro hizmetinizdeki hiz
 
 ### <a name="use-the-healthchecks-feature-in-your-back-end-aspnet-microservices"></a>Arka uç ASP.NET mikro hizmetlerinizin Healthdenetimleri özelliğini kullanın
 
-Bu bölümde, Healthdenetimleri özelliğinin örnek bir ASP.NET Core 2,2 Web API uygulamasında nasıl kullanıldığını öğreneceksiniz. EShopOnContainers gibi büyük ölçekli mikro hizmetlerde bu özelliğin uygulanması, sonraki bölümde açıklanmaktadır. Başlamak için, her mikro hizmet için sağlıklı durumu neyin oluşturduğunu tanımlamanız gerekir. Örnek uygulamada, mikro hizmet API 'sine HTTP üzerinden erişilebiliyorsa ve ilgili SQL Server veritabanı da kullanılabilir olduğunda mikro hizmetler sağlıklı olur.
+Bu bölümde, [Aspnetcore. Diagnostics. healthdenetimlerinin](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks)uygulandığı gibi healthdenetimlerin özelliğinin örnek bir ASP.NET Core 3,1 Web API uygulamasında kullanıldığını öğreneceksiniz. EShopOnContainers gibi büyük ölçekli mikro hizmetlerde bu özelliğin uygulanması, sonraki bölümde açıklanmaktadır. Başlamak için, her mikro hizmet için sağlıklı durumu neyin oluşturduğunu tanımlamanız gerekir. Örnek uygulamada, mikro hizmet API 'sine HTTP üzerinden erişilebiliyorsa ve ilgili SQL Server veritabanı da kullanılabilir olduğunda mikro hizmetler sağlıklı olur.
 
-.NET Core 2,2 ' de, yerleşik API 'Ler ile hizmetleri yapılandırabilir, mikro hizmet için bir sistem durumu denetimi ve bu şekilde bağımlı SQL Server veritabanı ekleyebilirsiniz:
+.NET Core 3,1 ' de, yerleşik API 'Ler ile hizmetleri yapılandırabilir, mikro hizmet için bir sistem durumu denetimi ve bu şekilde bağımlı SQL Server veritabanı ekleyebilirsiniz:
 
 ```csharp
-// Startup.cs from .NET Core 2.2 Web Api sample
+// Startup.cs from .NET Core 3.1 Web API sample
 //
 public void ConfigureServices(IServiceCollection services)
 {
     //...
     // Registers required services for health checks
     services.AddHealthChecks()
-    // Add a health check for a SQL database
-    .AddCheck("MyDatabase", new SqlConnectionHealthCheck(Configuration["ConnectionStrings:DefaultConnection"]));
+        // Add a health check for a SQL Server database
+        .AddSqlServer(
+            configuration["ConnectionString"],
+            name: "OrderingDB-check",
+            tags: new string[] { "orderingdb" });
 }
 ```
 
@@ -98,17 +101,26 @@ public class SqlConnectionHealthCheck : IHealthCheck
 }
 ```
 
-Önceki kodda `Select 1` veritabanının durumunu denetlemek için kullanılan sorgu olduğunu unutmayın. Mikro hizmetlerinizin kullanılabilirliğini izlemek için, Kubernetes gibi düzenleyiciler ve Service Fabric mikro hizmetleri test etmek üzere istek göndererek düzenli aralıklarla durum denetimleri gerçekleştirir. Bu işlemlerin hızlı olması için veritabanı sorgularınızın etkili tutulması ve kaynakların daha yüksek kullanımına neden olması önemlidir.
+Önceki kodda `Select 1` veritabanının durumunu denetlemek için kullanılan sorgu olduğunu unutmayın. Mikro hizmetlerinizin kullanılabilirliğini izlemek için, Kubernetes gibi düzenleyiciler, mikro hizmetleri test etmek üzere istek göndererek düzenli aralıklarla sistem durumu denetimleri gerçekleştirir. Bu işlemlerin hızlı olması için veritabanı sorgularınızın etkili tutulması ve kaynakların daha yüksek kullanımına neden olması önemlidir.
 
-Son olarak, "/HC" URL yoluna yanıt veren bir ara yazılım oluşturun:
+Son olarak, URL yoluna yanıt veren bir ara yazılım ekleyin `/hc`:
 
 ```csharp
-// Startup.cs from .NET Core 2.2 Web Api sample
+// Startup.cs from .NET Core 3.1 Web Api sample
 //
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
     //…
-    app.UseHealthChecks("/hc");
+    app.UseEndpoints(endpoints =>
+    {
+        //...
+        endpoints.MapHealthChecks("/hc", new HealthCheckOptions()
+        {
+            Predicate = _ => true,
+            ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+        });
+        //...
+    });
     //…
 }
 ```
@@ -119,7 +131,7 @@ Uç nokta `<yourmicroservice>/hc` çağrıldığında, başlangıç sınıfında
 
 EShopOnContainers 'daki mikro hizmetler, görevini gerçekleştirmek için birden çok hizmete bağımlıdır. Örneğin, eShopOnContainers 'dan `Catalog.API` mikro hizmeti, Azure Blob depolama, SQL Server ve Kbbitmq gibi birçok hizmete bağlıdır. Bu nedenle, `AddCheck()` yöntemi kullanılarak birçok sistem durumu denetimi eklenmiştir. Her bağımlı hizmet için, ilgili sistem durumunu tanımlayan özel bir `IHealthCheck` uygulamasının eklenmesi gerekir.
 
-Açık kaynaklı proje [Aspnetcore. Diagnostics. healthcheck](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) , .net Core 2,2 üzerinde oluşturulan bu kurumsal hizmetlerden her biri için özel sistem durumu denetimi uygulamaları sağlayarak bu sorunu çözer. Her bir sistem durumu denetimi, projeye kolaylıkla eklenebilen tek bir NuGet paketi olarak kullanılabilir. eShopOnContainers bunları, tüm mikro hizmetlerinde kapsamlı olarak kullanır.
+Açık kaynaklı proje [Aspnetcore. Diagnostics. healthcheck](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) , .net Core 3,1 üzerinde oluşturulan bu kurumsal hizmetlerden her biri için özel sistem durumu denetimi uygulamaları sağlayarak bu sorunu çözer. Her bir sistem durumu denetimi, projeye kolaylıkla eklenebilen tek bir NuGet paketi olarak kullanılabilir. eShopOnContainers, bunları tüm mikro hizmetlerinde kapsamlı olarak kullanır.
 
 Örneğin, `Catalog.API` mikro hizmetinde aşağıdaki NuGet paketleri eklendi:
 
@@ -175,7 +187,7 @@ public static IServiceCollection AddCustomHealthCheck(this IServiceCollection se
 }
 ```
 
-Son olarak, "/HC" uç noktasını dinlemek için HealthCheck ara yazılımını ekliyoruz:
+Son olarak, "/HC" uç noktasını dinlemek için HealthCheck ara yazılımını ekleyin:
 
 ```csharp
 // HealthCheck middleware
@@ -279,7 +291,7 @@ Son olarak, tüm olay akışlarını depoluyorsanız, verileri görselleştirmek
 - **Service Fabric sistem durumu Izlemeye giriş** \
   [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
 
-- **Azure Izleyici**  
+- **Azure izleyici** \
   <https://azure.microsoft.com/services/monitor/>
 
 >[!div class="step-by-step"]
