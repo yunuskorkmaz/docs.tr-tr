@@ -3,12 +3,12 @@ title: .NET Core kullanarak REST istemcisi oluşturma
 description: Bu öğretici, .NET Core ve bu C# dilin çeşitli özelliklerini öğretir.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: eb7946d669de60c3469ca8098e40b159082ea270
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: f85d50b222d06caa045e22b452d0902aaac66088
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921084"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503977"
 ---
 # <a name="rest-client"></a>REST istemcisi
 
@@ -27,7 +27,7 @@ Bu öğreticide birçok özellik vardır. Bunları birer birer oluşturalım.
 
 Bu konuyla ilgili [son örnekle](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) birlikte izlemeyi tercih ediyorsanız, indirebilirsiniz. İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. Yükleme yönergelerini [.NET Core İndirmeleri](https://dotnet.microsoft.com/download) sayfasında bulabilirsiniz. Bu uygulamayı Windows, Linux, macOS veya bir Docker kapsayıcısında çalıştırabilirsiniz.
 En sevdiğiniz kod düzenleyicinizi yüklemeniz gerekir. Aşağıdaki açıklamalar açık kaynaklı, platformlar arası bir düzenleyici olan [Visual Studio Code](https://code.visualstudio.com/)kullanır. Bununla birlikte, rahat olan her türlü aracı kullanabilirsiniz.
@@ -51,7 +51,7 @@ Değişiklik yapmaya başlamadan önce, uygulamanızı çalıştırmak için kom
 
 Bu uygulama için `System.Runtime.Serialization.Json` pakete ihtiyacınız olacak. Aşağıdaki [.net CLI](../../core/tools/dotnet-add-package.md) komutunu çalıştırarak projenize ekleyin:
 
-```console
+```dotnetcli
 dotnet add package System.Text.Json
 ```
 

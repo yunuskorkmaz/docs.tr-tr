@@ -3,24 +3,24 @@ title: C# ve Visual Studio Code kullanmaya başlama
 description: Visual Studio Code C# kullanarak Ilk .NET Core uygulamanızı nasıl oluşturacağınızı ve hata ayıklacağınızı öğrenin.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: fdf26d67ca06ffb5ae9f8c12aa29819280770d5c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: acd1c300545bc6c107552576180afd7dec6b7382
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715315"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503512"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# ve Visual Studio Code kullanmaya başlama
 
 .NET Core, Windows, Linux ve macOS 'ta çalışan uygulamalar oluşturmaya yönelik hızlı ve modüler bir platform sağlar. IntelliSense (akıllı kod C# tamamlama) ve hata ayıklama için C# tam desteğe sahip güçlü bir düzen deneyimi almak üzere uzantıya sahip Visual Studio Code kullanın.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
-1. [Visual Studio Code](https://code.visualstudio.com/)’u yükleyin.
+1. [Visual Studio Code](https://code.visualstudio.com/)'i yükler.
 2. [.NET Core SDK](https://dotnet.microsoft.com/download)'i yükler.
 3. Visual Studio Code [ C# uzantısını](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) yükler. Visual Studio Code uzantıları nasıl yükleyeceğiniz hakkında daha fazla bilgi için bkz. [vs Code uzantısı marketi](https://code.visualstudio.com/docs/editor/extension-gallery).
 
-## <a name="hello-world"></a>Merhaba Dünya
+## <a name="hello-world"></a>Hello World
 
 .NET Core üzerinde basit bir "Merhaba Dünya" programı kullanmaya başlayalım:
 
@@ -129,8 +129,13 @@ Ayrıca, [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Co
 
 5. Değişikliklerinizi kaydedin ve programınızı yeniden çalıştırın. Yeni ileti, eklenen dizeyle birlikte görünmelidir.
 
+    ```dotnetcli
+    dotnet run
+    ```
+
+    Aşağıdaki çıkışı alırsınız:
+
     ```console
-    > dotnet run
     Hello World! Happy coding!
     ```
 

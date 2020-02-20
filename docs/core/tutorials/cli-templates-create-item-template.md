@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: fa0ae18221c33d196960239411f8860a561b20ee
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5f4038e863d9bb59df470d3516c08fd2ad29c078
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340379"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503560"
 ---
 # <a name="tutorial-create-an-item-template"></a>Öğretici: öğe şablonu oluşturma
 
@@ -26,7 +26,7 @@ Serinin bu bölümünde şunları yapmayı öğreneceksiniz:
 > * Bir öğe şablonunu test etme
 > * Öğe şablonunu kaldırma
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 * [.NET Core 2,2 SDK](https://dotnet.microsoft.com/download) veya sonraki sürümleri.
 * [DotNet New Için özel şablonlar](../tools/custom-templates.md)başvuru makalesine okuyun.
@@ -41,7 +41,7 @@ Bu seri, şablon kaynağınızın bulunduğu bir "çalışma klasörü" ve şabl
 
 İlk olarak, üst klasörü oluşturun, ad önemlidir. Ardından, _çalışıyor_adlı bir alt klasör oluşturun. _Çalışma_ klasörünün içinde _Şablonlar_adlı bir alt klasör oluşturun.
 
-Sonra, _Test_adlı üst klasör altında bir klasör oluşturun. Klasör yapısı aşağıdaki gibi görünmelidir:
+Sonra, _Test_adlı üst klasör altında bir klasör oluşturun. Klasör yapısı aşağıdaki gibi görünmelidir.
 
 ```console
 parent_folder
@@ -99,7 +99,7 @@ working
                 template.json
 ```
 
-En sevdiğiniz metin düzenleyicinizle _Template. JSON_ ' i açın ve aşağıdaki JSON kodunu yapıştırın ve kaydedin:
+En sevdiğiniz metin düzenleyicinizle _Template. JSON_ ' i açın ve aşağıdaki JSON kodunu yapıştırın ve kaydedin.
 
 ```json
 {
@@ -151,8 +151,13 @@ Worker Service                                    worker                [C#]    
 
 Artık bir öğe şablonu yükleolduğunuza göre, test edin. _Teste/_ klasöre gidin ve `dotnet new console`yeni bir konsol uygulaması oluşturun. Bu, `dotnet run` komutuyla kolayca test edebileceğiniz bir çalışan proje oluşturur.
 
+```dotnetcli
+dotnet new console
+```
+
+Aşağıdakine benzer bir çıktı alırsınız.
+
 ```console
-C:\test> dotnet new console
 The template "Console Application" was created successfully.
 
 Processing post-creation actions...
@@ -162,15 +167,27 @@ Running 'dotnet restore' on C:\test\test.csproj...
 Restore succeeded.
 ```
 
+Projeyi ile çalıştırın.
+
+```dotnetcli
+dotnet run
+```
+
+Aşağıdaki çıktıyı alırsınız.
+
 ```console
-C:\test> dotnet run
 Hello World!
 ```
 
 Sonra, şablondan _CommonExtensions.cs_ oluşturmak için `dotnet new stringext` çalıştırın.
 
+```dotnetcli
+dotnet new stringext
+```
+
+Aşağıdaki çıktıyı alırsınız.
+
 ```console
-C:\test> dotnet new stringext
 The template "Example templates: string extensions" was created successfully.
 ```
 
@@ -182,8 +199,13 @@ Console.WriteLine("Hello World!".Reverse());
 
 Programı yeniden çalıştırın ve sonucun tersine çevrilip çevrilmediğini görürsünüz.
 
+```dotnetcli
+dotnet run
+```
+
+Aşağıdaki çıktıyı alırsınız.
+
 ```console
-C:\test> dotnet run
 !dlroW olleH
 ```
 
@@ -193,8 +215,13 @@ Tebrikler! .NET Core ile bir öğe şablonu oluşturup dağıttıysanız. Bu ö�
 
 Şablonu dosya yoluna göre yükletiğinden, **mutlak** dosya yolu ile kaldırmanız gerekir. `dotnet new -u` komutunu çalıştırarak, yüklenmiş şablonların listesini görebilirsiniz. Şablonunuzun son listelenmesi gerekir. `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` komutuyla şablonunuzu kaldırmak için listelenen yolu kullanın.
 
+```dotnetcli
+dotnet new -u
+```
+
+Aşağıdakine benzer bir çıktı alırsınız.
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
@@ -222,8 +249,10 @@ Currently installed items:
       Example templates: string extensions (stringext) C#
 ```
 
-```console
-C:\working> dotnet new -u C:\working\templates\extensions
+Bir şablonu kaldırmak için aşağıdaki komutu çalıştırın.
+
+```dotnetcli
+dotnet new -u C:\working\templates\extensions
 ```
 
 ## <a name="next-steps"></a>Sonraki adımlar

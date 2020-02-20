@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-ms.openlocfilehash: 3763e93ff3a14819f59102a01cf3285e85afd12d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e879dcf385acbc522c0a3573cfa374550ea23333
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716206"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504129"
 ---
 # <a name="clr-etw-events"></a>CLR ETW Olayları
 Bu bölümdeki konular, Windows için olay izleme (ETW) olaylarını anlatmaktadır. Her olayın ilişkili bir anahtar sözcüğü ve düzeyi vardır ve bu, [CLR ETW anahtar sözcükleri ve düzeyleri](clr-etw-keywords-and-levels.md) konusunda açıklanmıştır. CLR, olaylar için iki sağlayıcıya sahiptir:  
@@ -62,7 +62,6 @@ Bu bölümdeki konular, Windows için olay izleme (ETW) olaylarını anlatmaktad
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ETW Ile hata ayıklama ve performans ayarlamayı geliştirme](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
-- [Windows performans blogu](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
 - [.NET Framework Günlük Kaydını Denetleme](controlling-logging.md)
 - [CLR ETW Sağlayıcılar](clr-etw-providers.md)
 - [CLR ETW Anahtar Sözcükleri ve Düzeyler](clr-etw-keywords-and-levels.md)

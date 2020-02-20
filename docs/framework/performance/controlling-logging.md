@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: 180cce516a1209711430429a46cb5b718b29f1d9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e7d7d6e60b2f582a579f5811225f4027c37c7876
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716104"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504104"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework Günlük Kaydını Denetleme
 
@@ -17,7 +17,7 @@ Ortak dil çalışma zamanı (CLR) olaylarını izlemek için Windows olay izlem
 
 - Windows işletim sistemine dahil olan [Logman](/windows-server/administration/windows-commands/logman) ve [tracerpt](/windows-server/administration/windows-commands/tracerpt_1) komut satırı araçları.
 
-- [Windows performans araç seti](/windows-hardware/test/wpt/)'Nde [XPerf](/windows-hardware/test/wpt/xperf-command-line-reference) araçları. XPerf hakkında daha fazla bilgi için [Windows performans blogu](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)' na bakın.
+- [Windows performans araç seti](/windows-hardware/test/wpt/)'Nde [XPerf](/windows-hardware/test/wpt/xperf-command-line-reference) araçları. XPerf hakkında daha fazla bilgi için [Windows performans blogu](https://docs.microsoft.com/archive/blogs/pigscanfly/)' na bakın.
 
 CLR olay bilgilerini yakalamak için, CLR sağlayıcısı bilgisayarınıza yüklenmelidir. Sağlayıcının yüklendiğini doğrulamak için komut istemine `logman query providers` yazın. Sağlayıcı listesi görüntülenir. Bu liste, sağlayıcılar gibi CLR sağlayıcısı için bir girdi içermelidir.
 
@@ -27,7 +27,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-CLR sağlayıcısı listede yoksa, Windows [wevtutil](/windows-server/administration/windows-commands/wevtutil) komut satırı aracını kullanarak Windows Vista ve sonraki işletim sistemlerine yükleyebilirsiniz. Komut istemi penceresini yönetici olarak açın. İstem dizinini .NET Framework 4 klasörü olarak değiştirin (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET sürümü > \). Bu klasör, CLE-ETW.man dosyasını içerir. Komut isteminde, CLR sağlayıcısını yüklemek için aşağıdaki komutu yazın:
+CLR sağlayıcısı listede yoksa, Windows [wevtutil](/windows-server/administration/windows-commands/wevtutil) komut satırı aracını kullanarak Windows Vista ve sonraki işletim sistemlerine yükleyebilirsiniz. Yönetici olarak Komut İstemi penceresini açın. İstem dizinini .NET Framework 4 klasörü olarak değiştirin (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET sürümü > \). Bu klasör, CLE-ETW.man dosyasını içerir. Komut isteminde, CLR sağlayıcısını yüklemek için aşağıdaki komutu yazın:
 
 `wevtutil im CLR-ETW.man`
 
@@ -45,7 +45,7 @@ Bir kullanıcının, günlüğü etkinleştirmek için üç şeyi belirtmesi ger
 
 ### <a name="to-capture-clr-etw-events-using-logman"></a>Logman kullanarak CLR ETW olaylarını yakalamak için
 
-1. Komut isteminde, şunları yazın:
+1. Komut istemine şunları yazın:
 
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`
 
@@ -69,7 +69,7 @@ Bir kullanıcının, günlüğü etkinleştirmek için üç şeyi belirtmesi ger
 
 ### <a name="to-capture-clr-etw-events-using-xperf"></a>Xperf kullanarak CLR ETW olaylarını yakalamak için
 
-1. Komut isteminde, şunları yazın:
+1. Komut istemine şunları yazın:
 
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`
 
@@ -87,7 +87,7 @@ CLR ETW olaylarını görüntülemek için aşağıda listelenen komutları kull
 
 ### <a name="to-view-clr-etw-events-using-tracerpt"></a>Tracerpt kullanarak CLR ETW olaylarını görüntülemek için
 
-- Komut isteminde, şunları yazın:
+- Komut istemine şunları yazın:
 
      `tracerpt clrevents.etl`
 
@@ -95,7 +95,7 @@ CLR ETW olaylarını görüntülemek için aşağıda listelenen komutları kull
 
 ### <a name="to-view-clr-etw-events-using-xperf"></a>Xperf kullanarak CLR ETW olaylarını görüntülemek için
 
-- Komut isteminde, şunları yazın:
+- Komut istemine şunları yazın:
 
      `xperf clrevents.etl`
 
@@ -103,7 +103,7 @@ CLR ETW olaylarını görüntülemek için aşağıda listelenen komutları kull
 
 ### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>.etl dosyasını, virgülle ayrılmış değerler dosyasına dönüştürmek için
 
-- Komut isteminde, şunları yazın:
+- Komut istemine şunları yazın:
 
      `xperf -i clrevents.etl -f clrevents.csv`
 

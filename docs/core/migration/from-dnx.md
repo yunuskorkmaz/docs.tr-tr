@@ -2,16 +2,16 @@
 title: DNX 'ten .NET Core CLI geçirme
 description: DNX Araçları ' i kullanarak .NET Core CLI Araçları ' na geçirin.
 ms.date: 06/20/2016
-ms.openlocfilehash: e15e7ce10bb7a36deb2acd2abb9a0bd4ec8cd4a9
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 31317f110ae1e8586b78becd757d0a8ff07f1459
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920619"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503824"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>DNX 'ten .NET Core CLI 'e geçme (Project. JSON)
 
-## <a name="overview"></a>Genel bakış
+## <a name="overview"></a>Genel Bakış
 .NET Core 'un RC1 sürümü ve ASP.NET Core 1,0 DNX araçları 'nı kullanıma sunmuştur. .NET Core ve ASP.NET Core 1,0 'nin RC2 sürümü DNX 'ten .NET Core CLI taşındı.
 
 Küçük bir yenileyici olarak DNX 'in hangi amaçla olduğunu görelim. DNX, .NET Core ve daha özel olarak ASP.NET Core 1,0 uygulamaları oluşturmak için kullanılan bir çalışma zamanı ve bir araç takımıdır. 3 ana parçadan oluşur:
@@ -48,13 +48,13 @@ Aşağıdaki tabloda DNX/DNU komutları ve CLı karşılıkları arasındaki eş
 
 | DNX komutu                    | CLı komutu    | Açıklama                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
-| DNX çalıştırma                        | dotnet run     | Kaynaktaki kodu çalıştırın.                                                                                           |
-| dnu derlemesi                      | dotnet build   | Kodunuzun bir Il ikilisini oluşturun.                                                                                |
-| dnu paketi                       | dotnet pack    | Kodunuzun NuGet paketini paketleyin.                                                                        |
+| DNX çalıştırma                        | `dotnet run`     | Kaynaktaki kodu çalıştırın.                                                                                           |
+| dnu derlemesi                      | `dotnet build`   | Kodunuzun bir Il ikilisini oluşturun.                                                                                |
+| dnu paketi                       | `dotnet pack`    | Kodunuzun NuGet paketini paketleyin.                                                                        |
 | DNX \[komutu] (örneğin, "DNX Web") | Yok\*          | DNX dünyasında, Project. JSON içinde tanımlandığı şekilde bir komut çalıştırın.                                                     |
 | dnu yüklemesi                    | Yok\*          | DNX dünyasında, bir paketi bağımlılık olarak yükler.                                                            |
-| dnu geri yükleme                    | dotnet restore | Project. JSON uygulamanızda belirtilen bağımlılıkları geri yükleyin. ([bkz. nota bakın](#dotnet-restore-note))                                                            |
-| dnu yayımlama                    | dotnet publish | Uygulamanızı üç formdan birinde dağıtım için yayımlayın (taşınabilir, yerel ve tek başına taşınabilir). |
+| dnu geri yükleme                    | `dotnet restore` | Project. JSON uygulamanızda belirtilen bağımlılıkları geri yükleyin. ([bkz. nota bakın](#dotnet-restore-note))                                                            |
+| dnu yayımlama                    | `dotnet publish` | Uygulamanızı üç formdan birinde dağıtım için yayımlayın (taşınabilir, yerel ve tek başına taşınabilir). |
 | dnu kaydırması                       | Yok\*          | DNX Dünyası ' de bir proje. json ' u csproj içinde sarın.                                                                    |
 | dnu komutları                   | Yok\*          | DNX dünyasında, genel olarak yüklenen komutları yönetin.                                                           |
 

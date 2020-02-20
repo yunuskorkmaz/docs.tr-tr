@@ -1,23 +1,19 @@
 ---
 title: DotNet derleme komutu
 description: DotNet derleme komutu bir projeyi ve tüm bağımlılıklarını oluşturur.
-ms.date: 10/14/2019
-ms.openlocfilehash: ec37d82c9e22a59acf7617f80a7491c0bcab89c9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 9f9a78ec0a6a25c54c8a727c05081ce6835514ee
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734319"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503768"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 1. x SDK ve sonraki sürümleri
+**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
-
-## <a name="name"></a>Ad
+## <a name="name"></a>Adı
 
 `dotnet build`-bir projeyi ve tüm bağımlılıklarını oluşturur.
 
@@ -67,7 +63,7 @@ Bir kitaplık oluşturmak için `<OutputType>` özelliğini atlayın veya değer
 
 Çalışan `dotnet build`, çalışan `dotnet msbuild -restore`eşdeğerdir; Ancak, çıktının varsayılan ayrıntı düzeyi farklıdır.
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
 `PROJECT | SOLUTION`
 
@@ -75,7 +71,7 @@ Derlenecek proje veya çözüm dosyası. Bir proje veya çözüm dosyası belirt
 
 ## <a name="options"></a>Seçenekler
 
-- **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration <CONFIGURATION>`**
 
   Yapı yapılandırmasını tanımlar. Çoğu proje için varsayılan değer `Debug`, ancak projenizde derleme yapılandırma ayarlarını geçersiz kılabilirsiniz.
 
@@ -85,7 +81,7 @@ Derlenecek proje veya çözüm dosyası. Bir proje veya çözüm dosyası belirt
 
 - **`--force`**
 
-  Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar. Bu bayrağın belirtilmesi, *Project. varlıklar. JSON* dosyasını silme ile aynıdır. .NET Core 2,0 SDK 'dan beri kullanılabilir.
+  Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar. Bu bayrağın belirtilmesi, *Project. varlıklar. JSON* dosyasını silme ile aynıdır.
 
 - **`-h|--help`**
 
@@ -105,7 +101,7 @@ Derlenecek proje veya çözüm dosyası. Bir proje veya çözüm dosyası belirt
 
 - **`--no-restore`**
 
-  Derleme sırasında örtük geri yükleme yürütmez. .NET Core 2,0 SDK 'dan beri kullanılabilir.
+  Derleme sırasında örtük geri yükleme yürütmez.
 
 - **`--nologo`**
 
@@ -121,7 +117,7 @@ Derlenecek proje veya çözüm dosyası. Bir proje veya çözüm dosyası belirt
 
 - **`-v|--verbosity <LEVEL>`**
 
-  MSBuild ayrıntı düzeyi düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`. Varsayılan, `minimal` değeridir.
+  MSBuild ayrıntı düzeyi düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`. Varsayılan değer: `minimal`.
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 

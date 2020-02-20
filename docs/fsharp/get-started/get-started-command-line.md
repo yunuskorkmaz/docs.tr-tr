@@ -2,18 +2,18 @@
 title: Komut satırı araçlarıyla F# çalışmaya başlama
 description: Herhangi bir işletim sisteminde (Windows, macOS veya Linux F# ) .NET Core CLI kullanarak basit bir çoklu proje çözümü oluşturmayı öğrenin.
 ms.date: 03/26/2018
-ms.openlocfilehash: aa3ed84660a951eeafc11a00ea3831f587b6d876
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 6f67314f49150e20b18734f21f24daa3ce856922
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559493"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504136"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>.NET Core CLI ile çalışmaya F# başlama
 
 Bu makalede, .NET Core CLI ile herhangi bir işletim sisteminde F# (Windows, MacOS veya Linux) kullanmaya nasıl başlacağınız açıklanmaktadır. Konsol uygulaması tarafından çağrılan bir sınıf kitaplığıyla birden çok projeli bir çözüm oluşturma işlemi ilerler.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Başlamak için en son [.NET Core SDK](https://dotnet.microsoft.com/download)yüklemelisiniz.
 
@@ -135,7 +135,7 @@ NuGet bağımlılıklarını geri yükleyin, `dotnet restore` ve projeyi derleme
 
 Dizini `src/App` konsol projesi olarak değiştirin ve `Hello World` bağımsız değişken olarak geçirerek projeyi çalıştırın:
 
-```console
+```dotnetcli
 cd src/App
 dotnet run Hello World
 ```

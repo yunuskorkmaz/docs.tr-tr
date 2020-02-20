@@ -1,14 +1,14 @@
 ---
 title: Microsoft. NET. SDK için MSBuild özellikleri
 description: .NET Core SDK anlayan MSBuild özelliklerine yönelik başvuru.
-ms.date: 02/02/2020
+ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: f5dc2079bc313b8dd9fa5556cd941521a597ae38
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 00d9152d864ac0727a511f4c3c15abba82aab904
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453813"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503815"
 ---
 # <a name="msbuild-properties-for-net-core-sdk-projects"></a>.NET Core SDK projeleri için MSBuild özellikleri
 
@@ -19,25 +19,9 @@ Bu sayfa, .NET Core projelerini yapılandırmaya yönelik MSBuild özelliklerini
 
 ## <a name="framework-properties"></a>Çerçeve özellikleri
 
-- [Netstandardımplicitpackageversion](#netstandardimplicitpackageversion)
 - [TargetFramework](#targetframework)
 - [Targetçerçeveler](#targetframeworks)
-
-### <a name="netstandardimplicitpackageversion"></a>Netstandardımplicitpackageversion
-
-> [!NOTE]
-> Bu özellik yalnızca `netstandard1.x`kullanan projeler için geçerlidir. `netstandard2` ve üstünü kullanan projeler için uygulanmaz.
-
-[Metapackage](../packages.md#metapackages) sürümünden daha düşük bir çerçeve sürümü belirtmek istediğinizde `NetStandardImplicitPackageVersion` özelliğini kullanın. Aşağıdaki örnekteki proje dosyası `netstandard1.3` hedefler, ancak `NETStandard.Library`1.6.0 sürümünü kullanır.
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
-    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
-  </PropertyGroup>
-</Project>
-```
+- [Netstandardımplicitpackageversion](#netstandardimplicitpackageversion)
 
 ### <a name="targetframework"></a>targetFramework
 
@@ -69,6 +53,22 @@ Uygulamanızın birden çok platformu hedeflemesini istediğinizde `TargetFramew
 ```
 
 Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md).
+
+### <a name="netstandardimplicitpackageversion"></a>Netstandardımplicitpackageversion
+
+> [!NOTE]
+> Bu özellik yalnızca `netstandard1.x`kullanan projeler için geçerlidir. `netstandard2.x`kullanan projeler için uygulanmaz.
+
+[Metapackage](../packages.md#metapackages) sürümünden daha düşük bir çerçeve sürümü belirtmek istediğinizde `NetStandardImplicitPackageVersion` özelliğini kullanın. Aşağıdaki örnekteki proje dosyası `netstandard1.3` hedefler, ancak `NETStandard.Library`1.6.0 sürümünü kullanır.
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+  </PropertyGroup>
+</Project>
+```
 
 ## <a name="publish-properties"></a>Özellikleri Yayımla
 

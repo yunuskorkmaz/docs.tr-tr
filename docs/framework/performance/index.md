@@ -5,12 +5,12 @@ helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-ms.openlocfilehash: ccff2318355ae2d5b606ee283d45d05afd35310d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 47d85ae63f0594b778523425631ff54f9f3ca32f
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716041"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504094"
 ---
 # <a name="net-framework-performance"></a>.NET Framework Performansı
 Harika performansa sahip uygulamalar oluşturmak istiyorsanız, uygulamanızın başka bir özelliğini tasarladığınızda olduğu gibi, performansı tasarlamalısınız ve planlamanız gerekir. Uygulamanızın performansını ölçmek için Microsoft tarafından sunulan araçları kullanabilir ve gerekirse, bellek kullanımı, kod işleme ve yanıt verme için geliştirmeler yapabilirsiniz. Bu konu, Microsoft 'un sağladığı performans analizi araçlarını listeler ve uygulama geliştirmenin belirli alanlarının performansını kapsayan diğer konulara bağlantılar sağlar.  
@@ -28,12 +28,12 @@ Harika performansa sahip uygulamalar oluşturmak istiyorsanız, uygulamanızın 
 ### <a name="performance-tools"></a>Performans araçları  
  .NET Framework uygulamalarınızla kullanabileceğiniz bazı performans araçları aşağıda verilmiştir.  
   
-|Aracı|Açıklama|  
+|Araç|Açıklama|  
 |----------|-----------------|  
 |Visual Studio performans analizi|Windows işletim sistemi çalıştıran bilgisayarlara dağıtılacak .NET Framework uygulamalarınızın CPU kullanımını çözümlemek için kullanın.<br /><br /> Bu araç, bir projeyi açtıktan sonra Visual Studio 'daki **hata ayıklama** menüsünden kullanılabilir. Daha fazla bilgi için bkz. [Performans Gezgini](/visualstudio/profiling/performance-explorer). **Note:**  Windows Phone hedeflerken uygulama analizini Windows Phone (sonraki satıra bakın) kullanın.|  
 |Uygulama analizini Windows Phone|Windows Phone uygulamalarınızda CPU ve bellek, ağ veri aktarım hızı, uygulama yanıt hızı ve pil tüketimini çözümlemek için kullanın.<br /><br /> Bu araç, [Windows Phone SDK 'sını](https://go.microsoft.com/fwlink/?LinkId=265773)yükledikten sonra Visual Studio 'da bir Windows Phone projesi Için **hata ayıklama** menüsünden kullanılabilir. Daha fazla bilgi için bkz. [Windows Phone 8 Için uygulama profili oluşturma](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105)).|  
-|[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|CPU ve bellekle ilgili performans sorunlarını belirlemek için kullanın. Bu araç, gelişmiş bellek ve CPU araştırmaları ve çöp toplama ve JıT derleme hakkında bilgi sağlamak için Windows için olay izleme (ETW) ve CLR profil oluşturma API 'Lerini kullanır. PerfView kullanma hakkında daha fazla bilgi için, uygulamanın, [Channel 9 video öğreticilerinin](https://channel9.msdn.com/Series/PerfView-Tutorial)ve [Blog gönderilerinin](https://blogs.msdn.microsoft.com/vancem/tag/perfview/)içerdiği öğretici ve yardım dosyalarına bakın.<br /><br /> Belleğe özgü sorunlar için bkz. [bellek araştırmaları Için PerfView kullanma](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots).|  
-|[Windows Performans Çözümleyicisi](https://www.microsoft.com/download/details.aspx?id=30652)|Aynı bilgisayarda birden çok uygulama çalışırken uygulamanızın belleği ve depolama alanı kullanımı gibi genel sistem performansının belirlenmesi için kullanın. Bu araç, Windows 8 için Windows değerlendirme ve dağıtım seti 'nin (ADK) bir parçası olarak indirme merkezinden edinilebilir. Daha fazla bilgi için bkz. [Windows Performans Çözümleyici](/windows-hardware/test/wpt/windows-performance-analyzer).|  
+|[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|CPU ve bellekle ilgili performans sorunlarını belirlemek için kullanın. Bu araç, gelişmiş bellek ve CPU araştırmaları ve çöp toplama ve JıT derleme hakkında bilgi sağlamak için Windows için olay izleme (ETW) ve CLR profil oluşturma API 'Lerini kullanır. PerfView kullanma hakkında daha fazla bilgi için, uygulamanın, [Channel 9 video öğreticilerinin](https://channel9.msdn.com/Series/PerfView-Tutorial)ve [Blog gönderilerinin](https://docs.microsoft.com/archive/blogs/vancem/)içerdiği öğretici ve yardım dosyalarına bakın.<br /><br /> Belleğe özgü sorunlar için bkz. [bellek araştırmaları Için PerfView kullanma](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots).|  
+|[Windows Performans Çözümleyicisi](https://www.microsoft.com/download/details.aspx?id=30652)|Aynı bilgisayarda birden çok uygulama çalışırken uygulamanızın belleği ve depolama alanı kullanımı gibi genel sistem performansının belirlenmesi için kullanın. Bu araç, Windows 8 için Windows değerlendirme ve dağıtım seti 'nin (ADK) bir parçası olarak indirme merkezinden edinilebilir. Daha fazla bilgi için bkz. [Windows Performans Çözümleyici](/windows-hardware/test/wpt/windows-performance-analyzer).|
   
 ### <a name="event-tracing-for-windows-etw"></a>Windows için olay izleme (ETW)  
  ETW, çalışan kod hakkında tanılama bilgileri elde etmenizi sağlayan ve daha önce bahsedilen birçok performans aracı için gerekli olan bir tekniktir. ETW, belirli olaylar .NET Framework uygulamalar ve Windows tarafından başlatıldığında Günlükler oluşturur. ETW ile günlüğü dinamik olarak etkinleştirebilir ve devre dışı bırakabilir. böylece, uygulamanızı yeniden başlatmadan bir üretim ortamında ayrıntılı izleme yapabilirsiniz. .NET Framework ETW olayları için destek sağlar ve ETW, performans verileri oluşturmak için birçok profil oluşturma ve performans aracı tarafından kullanılır. Bu araçlar, ETW olaylarını etkinleştirir ve devre dışı bırakır. bu nedenle, bunlarla benzerlik yararlı olur. Uygulamanızın belirli bileşenleriyle ilgili performans bilgilerini toplamak için belirli ETW olayları kullanabilirsiniz. .NET Framework ETW desteği hakkında daha fazla bilgi için, [görev paralel kitaplığı ve PLıNQ 'Da](etw-events-in-task-parallel-library-and-plinq.md) [ortak dil çalışma zamanı](etw-events-in-the-common-language-runtime.md) ve ETW olayları ' nda ETW olayları ' na bakın.  

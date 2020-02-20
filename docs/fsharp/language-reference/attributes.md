@@ -2,12 +2,12 @@
 title: Öznitelikler
 description: Özniteliklerin bir F# programlama yapısına nasıl uygulanacağını nasıl etkinleştirebileceğinizi öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 223263f5789b0fc7eb2b3ef2905f6436980bd14a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1e42dc61d44f31930a7b34799f28a68a2db69c8c
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424791"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504121"
 ---
 # <a name="attributes"></a>Öznitelikler
 
@@ -39,7 +39,7 @@ Bu örnekte, öznitelik `DllImportAttribute`, kısaltılmış biçimde kullanıl
 
 Öznitelikler, bir *öznitelik* olarak bilinen bir nesnenin bir tür veya diğer program öğesiyle ilişkilendirilmesi için bir .NET programlama yapısıdır. Bir özniteliğin uygulandığı program öğesi *öznitelik hedefi*olarak bilinir. Özniteliği genellikle hedefi hakkında meta veriler içerir. Bu bağlamda meta veriler, alanları ve üyeleri dışındaki türle ilgili herhangi bir veri olabilir.
 
-İçindeki F# öznitelikler şu programlama yapılarına uygulanabilir: işlevler, Yöntemler, derlemeler, modüller, türler (sınıflar, kayıtlar, yapılar, arabirimler, temsilciler, numaralandırmalar, birleşimler, vb.), oluşturucular, özellikler, alanlar, Parametreler, tür parametreleri ve dönüş değerleri. Sınıfların, ifadelerin veya iş akışı ifadelerinin içindeki `let` bağlamalarda özniteliklere izin verilmez.
+İçindeki F# öznitelikler şu programlama yapılarına uygulanabilir: işlevler, Yöntemler, derlemeler, modüller, türler (sınıflar, kayıtlar, yapılar, arabirimler, temsilciler, numaralandırmalar, birleşimler, vb.), oluşturucular, özellikler, alanlar, parametreler, tür parametreleri ve dönüş değerleri. Sınıfların, ifadelerin veya iş akışı ifadelerinin içindeki `let` bağlamalarda özniteliklere izin verilmez.
 
 Genellikle, öznitelik bildirimi doğrudan öznitelik hedefinin bildiriminden önce görünür. Birden çok öznitelik bildirimi, aşağıdaki gibi birlikte kullanılabilir:
 
@@ -85,19 +85,19 @@ Genellikle öznitelik hedefini açıkça belirtmeniz gerekmese de, bir özniteli
     <td><pre lang="fsharp"><code>[&lt;property: Obsolete&gt;] this.MyProperty = x</code></pre></td>
   </tr>
   <tr>
-    <td>Larına</td>
+    <td>larına</td>
     <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10</code></pre></td>
   </tr>
   <tr>
-    <td>türü</td>
+    <td>type</td>
     <td>
         <pre lang="fsharp"><code>
-[&lt;type: StructLayout(Sequential)&gt;]
+[&lt;type: StructLayout(LayoutKind.Sequential)&gt;]
 type MyStruct =
-struct
-x : byte
-y : int
-end</code></pre>
+  struct
+    val x : byte
+    val y : int
+  end</code></pre>
     </td>
   </tr>
 </table>

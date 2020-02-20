@@ -4,12 +4,12 @@ description: Yapı türü ve bunları nasıl oluşturacağınız hakkında bilgi
 ms.date: 10/12/2016
 ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: cdfe2a763058b8f568ede2ff93c918c2dae874f7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 540742ea6a215e09f0cc31b218ac10fbf6192352
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346897"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503984"
 ---
 # <a name="structs"></a>Yapılar
 
@@ -46,9 +46,6 @@ Yapılar sınıflarla aynı sözdiziminin çoğunu paylaşır, ancak yapılar s�
 - Yapılar, değer türlerdir ve sınıflardır başvuru türleridir.
 
 - Sınıfların aksine, yapılar `new` işleci kullanılmadan oluşturulabilir.
-
-   > [!NOTE]
-   > .NET Core 2,1 ve üzeri sürümlerde, bir yapı türü [Yeni işleç](language-reference/operators/new-operator.md) veya [varsayılan değişmez değer](language-reference/operators/default.md#default-literal)kullanılarak veya özel alanlarının her biri başlatılarak oluşturulmalıdır. Daha fazla bilgi için [2,0 sürümünden 2,1 ' e geçiş Için Son değişiklikler](../core/compatibility/2.0-2.1.md#corefx)konusuna bakın.
 
 - Yapılar, parametreleri olan oluşturucular bildirebilir.
 

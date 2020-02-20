@@ -1,19 +1,19 @@
 ---
 title: DotNet geçiş komutu
 description: DotNet Migrate komutu bir projeyi ve tüm bağımlılıklarını geçirir.
-ms.date: 01/07/2020
-ms.openlocfilehash: b81669d3e4cffeaf10bea39639410d5f06579d84
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 6148048c469c43320cc4459352fd2fb62f101740
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734146"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503703"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
-**Bu makale için geçerlidir:** .NET Core 1. x SDK ✔️ .NET Core 2. x SDK ✔️
+**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Adı
 
 `dotnet migrate`-Preview 2 .NET Core projesini .NET Core SDK stili bir projeye geçirir.
 
@@ -43,7 +43,7 @@ Varsayılan olarak, geçiş işlemi geçiş işleminin durumunu standart çıkt�
 
 `dotnet migrate` komutu yalnızca geçerli Preview 2 *Project. JSON*tabanlı projeleri destekler. Bu, DNX veya Preview 1 *Project. JSON*tabanlı projeleri doğrudan MSBuild/csproj projelerine geçirebileceğiniz anlamına gelir. Önce projeyi bir Preview 2 *Project. JSON*tabanlı projeye el ile geçirmeniz ve sonra `dotnet migrate` komutunu kullanarak projeyi geçirmeniz gerekir.
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
 `PROJECT_JSON/GLOBAL_JSON/SOLUTION_FILE/PROJECT_DIR`
 

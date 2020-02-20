@@ -1,23 +1,19 @@
 ---
 title: DotNet Build-Server komutu
 description: DotNet Build-Server komutu, bir derleme tarafından başlatılan sunucularla etkileşime girer.
-ms.date: 04/24/2019
-ms.openlocfilehash: e77a4d9f49f555ac847bb13380380599eef881b1
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: a6a9cd6de66371caef66d1101b3f844dffc771ef
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734381"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503784"
 ---
 # <a name="dotnet-build-server"></a>dotnet build-server
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-21plus](../../../includes/topic-appliesto-net-core-21plus.md)]
--->
-
-## <a name="name"></a>Ad
+## <a name="name"></a>Adı
 
 `dotnet build-server`-bir derleme tarafından başlatılan sunucularla etkileşime girer.
 

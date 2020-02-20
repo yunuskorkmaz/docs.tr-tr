@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: e34f7c8a0194e3901453923530a5cd07202801f6
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 1a017267c034fa1d6ea522855b7e0e7f056637ac
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937454"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504029"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Geliştirme ve dağıtma WCF Veri Hizmetleri
 
@@ -80,7 +80,7 @@ Bir veri hizmeti geliştirirken, aşağıdakileri dikkate almanız gerekir:
 
 - HTTP inceleme programı, istek ve yanıt iletilerinin içeriğini denetlemenizi sağlayarak veri hizmetinde hata ayıklarken size epey yardımcı olabilir. Veri hizmetine yapılan HTTP isteklerini ve veri hizmetinden alınan yanıtları denetlemek için ham paketleri görüntüleyebilen herhangi bir ağ paketi çözümleyicisi kullanılabilir.
 
-- Veri hizmetinde hata ayıklarken, normal işlem sırasında veri hizmetinden bir hata hakkında daha fazla bilgi edinmek isteyebilirsiniz. <xref:System.Data.Services.DataServiceConfiguration> <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> özelliğini `true` ve veri hizmeti sınıfındaki <xref:System.ServiceModel.Description.ServiceDebugBehavior> özniteliğinin <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> özelliğini `true`olarak ayarlayarak veri hizmetinden ek hata bilgileri alabilirsiniz. Daha fazla bilgi için bkz. Post [hata ayıklama WCF veri Hizmetleri](https://blogs.msdn.microsoft.com/phaniraj/?m=20086). Ayrıca, HTTP mesajlaşma katmanında oluşturulan özel durumları görüntülemek için WCF 'de izlemeyi etkinleştirebilirsiniz. Daha fazla bilgi için bkz. [Izlemeyi yapılandırma](../../wcf/diagnostics/tracing/configuring-tracing.md).
+- Veri hizmetinde hata ayıklarken, normal işlem sırasında veri hizmetinden bir hata hakkında daha fazla bilgi edinmek isteyebilirsiniz. <xref:System.Data.Services.DataServiceConfiguration> <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> özelliğini `true` ve veri hizmeti sınıfındaki <xref:System.ServiceModel.Description.ServiceDebugBehavior> özniteliğinin <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> özelliğini `true`olarak ayarlayarak veri hizmetinden ek hata bilgileri alabilirsiniz. Daha fazla bilgi için bkz. Post [hata ayıklama WCF veri Hizmetleri](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services). Ayrıca, HTTP mesajlaşma katmanında oluşturulan özel durumları görüntülemek için WCF 'de izlemeyi etkinleştirebilirsiniz. Daha fazla bilgi için bkz. [Izlemeyi yapılandırma](../../wcf/diagnostics/tracing/configuring-tracing.md).
 
 - Bir veri hizmeti genellikle bir ASP.NET uygulama projesi olarak geliştirilir, ancak Visual Studio 'da da bir ASP.NET Web sitesi projesi olarak veri hizmeti oluşturabilirsiniz. İki tür proje arasındaki farklar hakkında daha fazla bilgi için bkz. [Web uygulaması projeleri ve Visual Studio 'Da Web sitesi projelerine karşı](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
 
@@ -113,7 +113,7 @@ WCF Veri Hizmeti, veri hizmetini barındıran işlemi seçmede esneklik sağlar.
     > [!TIP]
     > Veri hizmetini IIS'ye dağıtmayı denemeden önce, IIS çalıştıran Web sunucusuna dağıtımı test ettiğinizden emin olun. Daha fazla bilgi için bkz. [nasıl yapılır: IIS 'de çalışan BIR WCF veri hizmeti geliştirme](how-to-develop-a-wcf-data-service-running-on-iis.md).
 
-- **Windows Azure**
+- **Microsoft Azure**
 
      Visual Studio için Microsoft Azure Araçları 'nı kullanarak bir veri hizmetini Microsoft Azure 'a dağıtabilirsiniz. Visual Studio için Windows Azure Araçları 'nı [Microsoft Indirme merkezi](https://go.microsoft.com/fwlink/?LinkID=201848)' nden indirebilirsiniz. Windows Azure 'a bir veri hizmeti dağıtma hakkında daha fazla bilgi için bkz. [Windows Azure 'Da OData hizmetini dağıtma](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 

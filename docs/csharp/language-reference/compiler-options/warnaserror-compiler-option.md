@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: 66c78ee56c9d5153b5b878b2e695ad4ee6bffe0b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7d43941629e933ac5a9e9c9d6a1388b6194f8d99
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606259"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503482"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (C# derleyici seçenekleri)
 **-Warnaserror +** seçeneği tüm uyarıları hata olarak değerlendirir  
@@ -29,7 +29,7 @@ ms.locfileid: "69606259"
   
  Varsayılan olarak, **-warnaserror-** , bir çıkış dosyasının oluşturulmasını engellemez uyarısı oluşmasına neden olur. \- **warnaserror +** ile aynı olan **warnaserror**, uyarıların hata olarak işlenmesine neden olur.  
   
- İsteğe bağlı olarak, yalnızca birkaç özel uyarının hata olarak değerlendirilmesini istiyorsanız, hata olarak değerlendirilecek uyarı numaralarının virgülle ayrılmış bir listesini belirtebilirsiniz.  
+ İsteğe bağlı olarak, yalnızca birkaç özel uyarının hata olarak değerlendirilmesini istiyorsanız, hata olarak değerlendirilecek uyarı numaralarının virgülle ayrılmış bir listesini belirtebilirsiniz. Tüm null olabilme uyarıları kümesi **Nullable toplu değer** ile belirtilebilir.
   
  Derleyicinin görüntülemesini istediğiniz uyarı düzeyini belirtmek için [-Warn](./warn-compiler-option.md) kullanın. Belirli uyarıları devre dışı bırakmak için [-nowarn](./nowarn-compiler-option.md) kullanın.  
   
@@ -41,14 +41,14 @@ ms.locfileid: "69606259"
   
 3. **Uyarıları hata olarak değerlendir** özelliğini değiştirin.  
   
- Bu derleyici seçeneğini program aracılığıyla ayarlamak için, <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors>bkz.  
+ Bu derleyici seçeneğini program aracılığıyla ayarlamak için, bkz. <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors>.  
   
 ## <a name="example"></a>Örnek  
- Derle `in.cs` ve derleyicinin hiçbir uyarı görüntülememe:  
+ `in.cs` derleyin ve derleyicinin hiçbir uyarı görüntülememesine sahip olamaz:  
   
 ```console  
 csc -warnaserror in.cs  
-csc -warnaserror:642,649,652 in.cs  
+csc -warnaserror:642,649,652,nullable in.cs  
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.

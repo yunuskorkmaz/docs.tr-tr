@@ -4,12 +4,12 @@ description: İçindeki desenler eşleşen ifadeler hakkında bilgi edininC#
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: ff84ddd4f07fb77dc9fe648a495a441ed8f9198b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: db509a0ebf1e205e9996ba8102757fe8c0b9ea3a
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039363"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501622"
 ---
 # <a name="pattern-matching"></a>Desen Eşleştirme
 
@@ -33,7 +33,7 @@ Bu yapılardan, bazı şekillerin alanını hesaplayan bir yöntem yazalım.
 
 ## <a name="the-is-type-pattern-expression"></a>`is` tür deseninin ifadesi
 
-7,0 C# öncesinde, her türü bir dizi`if`ve`is`deyimlerde test etmeniz gerekir:
+7,0 C# öncesinde, her türü bir dizi `if` ve `is` deyimlerde test etmeniz gerekir:
 
 [!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
@@ -136,3 +136,7 @@ Bu, bir `default` ifadesinden farklı bir `var` Case ifadesini düşünmek istey
 Model eşleştirme, herhangi bir veri türü ile birlikte çalışabilir. Nesneyi inceleyecek ve bu koşullara göre denetim akışı kararları veren ifadeler yazarsınız.
 
 Bu örnekteki kodu, bir soyut `Shape` için bir sınıf hiyerarşisi oluşturmaktan ve her biri, alanı hesaplamak için bir sanal yöntemin kendi uygulamalarına sahip olan belirli türetilmiş şekillerin, bu örnekten karşılaştırın. Genellikle, verilerle çalışırken ve veri depolama sorunlarını davranış kaygılarından ayırmak istediğinizde, model eşleştirme ifadelerinin çok faydalı bir araç olduğunu fark edeceksiniz.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Öğretici: veri türlerini genişletmek için model eşleştirme özelliklerini kullanma](tutorials/pattern-matching.md)

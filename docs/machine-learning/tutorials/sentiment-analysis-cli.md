@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 12/23/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: caf12296b208b3d2e57c3a74300cced225e4db66
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 38ca93f62a066bade988a89b704fca26368b0b2b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738762"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504149"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI kullanarak yaklaşımı çözümleme
 
@@ -48,11 +48,11 @@ Oluşturulan C# kod projelerini Visual Studio 'dan veya `dotnet run` (.NET Core 
 1. [(Aşağıdaki notdaki alıntıların bulunduğu) cümleler veri kümesi ZIP dosyasını](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)indirin ve seçtiğiniz herhangi bir klasörde sıkıştırmayı açın.
 
     > [!NOTE]
-    > Bu öğreticide veri kümeleri, ' Kimden grubundan, derin özellikleri kullanarak tek tek etiketlere, Kotzıas et al ' ı kullanır. KDD 2015 ve UCI Machine Learning Repository-dua, D. ve karra Taniskidou, E. (2017). UCI Machine Learning deposu [http://archive.ics.uci.edu/ml ]. Irvine, CA: California Üniversitesi, bilgi Okulu ve bilgisayar bilimi.
+    > Bu öğreticide veri kümeleri, ' Kimden grubundan, derin özellikleri kullanarak tek tek etiketlere, Kotzıas et al ' ı kullanır. KDD 2015 ve UCI Machine Learning Repository-dua, D. ve karra Taniskidou, E. (2017). UCI Machine Learning deposu [http://archive.ics.uci.edu/ml]. Irvine, CA: California Üniversitesi, bilgi Okulu ve bilgisayar bilimi.
 
 2. `yelp_labelled.txt` dosyasını daha önce oluşturduğunuz herhangi bir klasöre (`/cli-test`gibi) kopyalayın.
 
-3. Tercih ettiğiniz komut istemi ' ni açın ve veri kümesi dosyasını kopyaladığınız klasöre gidin. Örneğin:
+3. Tercih ettiğiniz komut istemi ' ni açın ve veri kümesi dosyasını kopyaladığınız klasöre gidin. Örnek:
 
     ```console
     cd /cli-test
@@ -66,7 +66,7 @@ Oluşturulan C# kod projelerini Visual Studio 'dan veya `dotnet run` (.NET Core 
 
         | Metin (sütun dizini 0) | Etiket (sütun dizini 1)|
         |--------------------------|-------|
-        | Wow... Bu yere iner. | 1\. |
+        | Wow... Bu yere iner. | 1 |
         | Crust iyi değil. | 0 |
         | Nefis değildir ve doku yalnızca Nasty idi. | 0 |
         | ... ÇOK SAYıDA METIN SATıRı... | ... (1 veya 0)... |
@@ -83,7 +83,7 @@ Oluşturulan C# kod projelerini Visual Studio 'dan veya `dotnet run` (.NET Core 
 1. Aşağıdaki ML.NET CLı komutunu çalıştırın:
 
     ```console
-    mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
+    mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
     ```
 
     Bu komut **`mlnet auto-train` komutunu**çalıştırır:
@@ -97,11 +97,11 @@ Oluşturulan C# kod projelerini Visual Studio 'dan veya `dotnet run` (.NET Core 
 
     <!-- markdownlint-disable MD023 MD025 -->
 
-    # <a name="windowstabwindows"></a>[Windows](#tab/windows)
+    # <a name="windows"></a>[Windows](#tab/windows)
 
     ![PowerShell 'de ML.NET CLı otomatik eğitimi](./media/mlnet-cli/mlnet-auto-train-binary-classification-powershell.gif)
 
-    # <a name="macos-bashtabmacosbash"></a>[macOS Bash](#tab/macosbash)
+    # <a name="macos-bash"></a>[macOS Bash](#tab/macosbash)
 
     ![PowerShell 'de ML.NET CLı otomatik eğitimi](./media/mlnet-cli/mlnet-auto-train-binary-classification-bash.gif)
 
@@ -174,42 +174,42 @@ Bu numaralandırılabilir varlıklar, öğreticinin aşağıdaki adımlarında a
     }
     ```
 
-- Kodun ilk satırı, ML.NET kodunu her çalıştırdığınızda gerekli bir `MLContext` nesnesi oluşturur.
+    - Kodun ilk satırı, ML.NET kodunu her çalıştırdığınızda gerekli bir `MLContext` nesnesi oluşturur.
 
-- İkinci kod satırı, CLı aracı tarafından zaten eğitilen ve modelin seri hale getirilmiş olduğundan modeli eğmenize gerek olmadığı için yorumlandı. ZIP dosyası. Ancak CLı tarafından *"modelin eğitilme şekli"* ni görmek isterseniz, söz konusu satırın açıklamasını kaldırın ve söz konusu ml modeli için kullanılan eğitim kodunu çalıştırın/hata ayıklayın.
+    - İkinci kod satırı, CLı aracı tarafından zaten eğitilen ve modelin seri hale getirilmiş olduğundan modeli eğmenize gerek olmadığı için yorumlandı. ZIP dosyası. Ancak CLı tarafından *"modelin eğitilme şekli"* ni görmek isterseniz, söz konusu satırın açıklamasını kaldırın ve söz konusu ml modeli için kullanılan eğitim kodunu çalıştırın/hata ayıklayın.
 
-- Üçüncü kod satırında modeli serileştirilmiş modelden yüklersiniz. Bu modelin yolunu sağlayarak `mlContext.Model.Load()` API 'SI ile ZIP dosyası. ZIP dosyası.
+    - Üçüncü kod satırında modeli serileştirilmiş modelden yüklersiniz. Bu modelin yolunu sağlayarak `mlContext.Model.Load()` API 'SI ile ZIP dosyası. ZIP dosyası.
 
-- Yüklediğiniz dördüncü kod satırında, `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` API 'siyle `PredictionEngine` nesnesini oluşturun. Tek bir veri örneğini (Bu durumda, kendi yaklaşımını tahmin etmek için tek bir metin parçası) hedefleyen bir tahmin yapmak istediğinizde `PredictionEngine` nesnesine ihtiyacınız vardır.
+    - Yüklediğiniz dördüncü kod satırında, `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` API 'siyle `PredictionEngine` nesnesini oluşturun. Tek bir veri örneğini (Bu durumda, kendi yaklaşımını tahmin etmek için tek bir metin parçası) hedefleyen bir tahmin yapmak istediğinizde `PredictionEngine` nesnesine ihtiyacınız vardır.
 
-- Beşinci kod satırı, `CreateSingleDataSample()`işlevini çağırarak tahmin için kullanılacak *tek örnek verileri* oluşturduğunuz yerdir. CLı aracı ne tür örnek verileri kullanacağınızı bilmediğinden, bu işlev içinde veri kümesinin ilk satırını yüklüyor. Ancak, bu durumda, bu işlevi uygulayan daha basit kodu güncelleştirerek `CreateSingleDataSample()` işlevinin geçerli uygulaması yerine ' sabit kodlanmış ' verileri de oluşturabilirsiniz:
+    - Beşinci kod satırı, `CreateSingleDataSample()`işlevini çağırarak tahmin için kullanılacak *tek örnek verileri* oluşturduğunuz yerdir. CLı aracı ne tür örnek verileri kullanacağınızı bilmediğinden, bu işlev içinde veri kümesinin ilk satırını yüklüyor. Ancak, bu durumda, bu işlevi uygulayan daha basit kodu güncelleştirerek `CreateSingleDataSample()` işlevinin geçerli uygulaması yerine ' sabit kodlanmış ' verileri de oluşturabilirsiniz:
 
-    ```csharp
-    private static ModelInput CreateSingleDataSample()
-    {
-        ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
-        return sampleForPrediction;
-    }
-    ```
+        ```csharp
+        private static ModelInput CreateSingleDataSample()
+        {
+            ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
+            return sampleForPrediction;
+        }
+        ```
 
 1. Veri kümesinin ilk satırından yüklenen özgün örnek verileri kullanarak ya da kendi özel sabit kodlanmış örnek verilerinizi sağlayarak projeyi çalıştırın. Şu şekilde bir tahmin almanız gerekir:
 
-    # <a name="windowstabwindows"></a>[Windows](#tab/windows)
+    # <a name="windows"></a>[Windows](#tab/windows)
 
     F5 tuşuna basarak (Play Button) konsol uygulamasını Visual Studio 'dan çalıştırın:
 
     ![PowerShell 'de ML.NET CLı otomatik eğitimi](./media/mlnet-cli/sample-cli-prediction-execution.png))
 
-    # <a name="macos-bashtabmacosbash"></a>[macOS Bash](#tab/macosbash)
+    # <a name="macos-bash"></a>[macOS Bash](#tab/macosbash)
 
     Aşağıdaki komutları yazarak konsol uygulamasını komut isteminden çalıştırın:
 
-     ```bash
-     cd SampleBinaryClassification
-     cd SampleBinaryClassification.ConsoleApp
+    ```dotnetcli
+    cd SampleBinaryClassification
+    cd SampleBinaryClassification.ConsoleApp
 
-     dotnet run
-     ```
+    dotnet run
+    ```
 
     ![PowerShell 'de ML.NET CLı otomatik eğitimi](./media/mlnet-cli/sample-cli-prediction-execution-bash.png))
 

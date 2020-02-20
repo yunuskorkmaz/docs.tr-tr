@@ -3,18 +3,18 @@ title: .NET Core CLI ile Kitaplıklar geliştirin
 description: .NET Core CLI kullanarak .NET Core kitaplıkları oluşturmayı öğrenin. Çoklu çerçeveleri destekleyen bir kitaplık oluşturacaksınız.
 author: cartermp
 ms.date: 05/01/2017
-ms.openlocfilehash: a7c0175d29f483571578b58d698dd790cf66f7f4
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920438"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503502"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>.NET Core CLI ile Kitaplıklar geliştirin
 
 Bu makalede, .NET Core CLI kullanarak .NET için kitaplıkların nasıl yazılacağı ele alınmaktadır. CLı, desteklenen tüm işletim sistemlerinde çalışacak etkili ve düşük düzeyde bir deneyim sağlar. Visual Studio ile Kitaplıklar oluşturmaya devam edebilirsiniz ve tercih ettiğiniz deneyim [Visual Studio kılavuzuna başvurur](library-with-visual-studio.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Makinenizde yüklü [.NET Core SDK ve CLI](https://dotnet.microsoft.com/download) olması gerekir.
 
@@ -75,7 +75,7 @@ En fazla geliştirici ve proje sayısına ulaşmak isterseniz, taban çizgisi he
 | ---------------------- | -------- |
 | .NET Framework 2.0     | `net20`  |
 | .NET Framework 3.0     | `net30`  |
-| .NET Framework 3.5     | `net35`  |
+| .NET Framework 3.5     | `net35`  |
 | .NET Framework 4,0     | `net40`  |
 | .NET Framework 4.5     | `net45`  |
 | .NET Framework 4.5.1   | `net451` |
@@ -96,7 +96,7 @@ Daha sonra bu tfd 'yi proje dosyanızın `TargetFramework` bölümüne eklersini
 </Project>
 ```
 
-İşte bu kadar! Bu yalnızca .NET Framework 4 için derlense de, kitaplığı .NET Framework daha yeni sürümlerinde kullanabilirsiniz.
+Hepsi bu! Bu yalnızca .NET Framework 4 için derlense de, kitaplığı .NET Framework daha yeni sürümlerinde kullanabilirsiniz.
 
 ## <a name="how-to-multitarget"></a>Çoklu hedef
 
@@ -220,7 +220,7 @@ Platformlar arasında test etmek önemlidir. Kutusundan [xUnit](https://xunit.gi
 
 1. Çözümünüzü ayarlayın. Bunu aşağıdaki komutlarla yapabilirsiniz:
 
-   ```bash
+   ```dotnetcli
    mkdir SolutionWithSrcAndTest
    cd SolutionWithSrcAndTest
    dotnet new sln
@@ -241,7 +241,7 @@ Platformlar arasında test etmek önemlidir. Kutusundan [xUnit](https://xunit.gi
 
 1. Test projesinin dizinine gidin ve `MyProject``MyProject.Test` bir başvuru ekleyin.
 
-   ```bash
+   ```dotnetcli
    cd MyProject.Test
    dotnet add reference ../MyProject/MyProject.csproj
    ```
@@ -257,7 +257,7 @@ Platformlar arasında test etmek önemlidir. Kutusundan [xUnit](https://xunit.gi
 
 1. `dotnet test` komutunu yürüterek xUnit 'nin çalıştığını doğrulayın. MSTest kullanmayı seçerseniz, bunun yerine MSTest konsol Çalıştırıcısı çalıştırılmalıdır.
 
-İşte bu kadar! Artık, komut satırı araçlarını kullanarak kitaplığınızı tüm platformlarda test edebilirsiniz. Artık her şeyi ayarlamış olduğunuza göre teste devam etmek için, kitaplığınızı test etmek çok basittir:
+Hepsi bu! Artık, komut satırı araçlarını kullanarak kitaplığınızı tüm platformlarda test edebilirsiniz. Artık her şeyi ayarlamış olduğunuza göre teste devam etmek için, kitaplığınızı test etmek çok basittir:
 
 1. Kitaplığınızda değişiklik yapın.
 1. Testleri komut satırından, test dizininizde, `dotnet test` komutuyla çalıştırın.
@@ -300,7 +300,7 @@ Buna benzer tüketim senaryoları, erişildiği API 'Lerin ve C# F#için farklı
 
 Bu kılavuzla aynı yapıyı oluşturmak için terminalinizde aşağıdaki komutları çalıştırabilirsiniz:
 
-```console
+```dotnetcli
 mkdir AwesomeLibrary && cd AwesomeLibrary
 dotnet new sln
 mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib

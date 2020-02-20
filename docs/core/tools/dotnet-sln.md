@@ -1,23 +1,19 @@
 ---
 title: DotNet sln komutu
 description: DotNet-sln komutu bir çözüm dosyasındaki projeleri eklemek, kaldırmak ve listelemek için kullanışlı bir seçenek sağlar.
-ms.date: 10/29/2019
-ms.openlocfilehash: e344deaae0867202a79a3c38df48a2be8d4d7d13
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: dc0e2f294076ea649f150b076ac279cdc5d224a0
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733076"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503596"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 1. x SDK ve sonraki sürümleri
+**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
-
-## <a name="name"></a>Ad
+## <a name="name"></a>Adı
 
 `dotnet sln`-bir .NET Core çözüm dosyasını değiştirir.
 
@@ -37,7 +33,7 @@ dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 dotnet new sln
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
 - **`SOLUTION_FILE`**
 
@@ -62,7 +58,7 @@ dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PAT
 dotnet sln add [-h|--help]
 ```
 
-#### <a name="arguments"></a>Arguments
+#### <a name="arguments"></a>Bağımsız Değişkenler
 
 - **`SOLUTION_FILE`**
 
@@ -97,7 +93,7 @@ dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH>
 dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 ```
 
-#### <a name="arguments"></a>Arguments
+#### <a name="arguments"></a>Bağımsız Değişkenler
 
 - **`SOLUTION_FILE`**
 
@@ -123,7 +119,7 @@ Bir çözüm dosyasındaki tüm projeleri listeler.
 dotnet sln list [-h|--help]
 ```
 
-#### <a name="arguments"></a>Arguments
+#### <a name="arguments"></a>Bağımsız Değişkenler
 
 - **`SOLUTION_FILE`**
 

@@ -5,12 +5,12 @@ ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: 62ec1e21fd8e95991af6e2f8fa6f99c17249c761
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 486b320ca30323684d301630ad29f8f4615764ee
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452727"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504053"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework sürümleri ve bağımlılıklar
 
@@ -184,7 +184,7 @@ Aşağıdaki tablolarda, sürüm geçmişi .NET Framework ve her sürümü Visua
 |**Windows Server sürümleri**|➕ 2008 R2 SP1<br />➕ 2008 SP2<br />➕ 2003|
 |**Yüklü .NET sürümünü belirleme**|[Yönergelere](how-to-determine-which-versions-are-installed.md) bakın|
 
-### <a name="net-framework-35"></a>.NET Framework 3.5
+### <a name="net-framework-35"></a>.NET Framework 3.5
 
 [Yeni özellikler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms171868\(v=vs.90\)):
 
@@ -236,8 +236,8 @@ Aşağıdaki tablolarda, sürüm geçmişi .NET Framework ve her sürümü Visua
 |-|-|
 |**CLR sürümü**|2,0|
 |**Visual Studio sürümüne dahil edilmiştir**|2005|
-|**Windows sürümleri**|YOK|
-|**Windows Server sürümleri**|✔️ 2008 R2 SP1<br />✔️ 2008 SP2<br />✔️ 200|
+|**Windows sürümleri**|Yok|
+|**Windows Server sürümleri**|✔️ 2008 R2 SP1<br />✔️ 2008 SP2<br />✔️ 2003|
 |**Yüklü .NET sürümünü belirleme**|[Yönergelere](how-to-determine-which-versions-are-installed.md) bakın|
 
 ### <a name="net-framework-11"></a>.NET Framework 1.1
@@ -252,7 +252,7 @@ Aşağıdaki tablolarda, sürüm geçmişi .NET Framework ve her sürümü Visua
 |-|-|
 |**CLR sürümü**|1.1|
 |**Visual Studio sürümüne dahil edilmiştir**|2003|
-|**Windows sürümleri**|YOK|
+|**Windows sürümleri**|Yok|
 |**Windows Server sürümleri**|✔️ 2003|
 |**Yüklü .NET sürümünü belirleme**|[Yönergelere](how-to-determine-which-versions-are-installed.md) bakın|
 
@@ -262,8 +262,8 @@ Aşağıdaki tablolarda, sürüm geçmişi .NET Framework ve her sürümü Visua
 |-|-|
 |**CLR sürümü**|1.0|
 |**Visual Studio sürümüne dahil edilmiştir**|Visual Studio .NET|
-|**Windows sürümleri**|YOK|
-|**Windows Server sürümleri**|YOK|
+|**Windows sürümleri**|Yok|
+|**Windows Server sürümleri**|Yok|
 |**Yüklü .NET sürümünü belirleme**|[Yönergelere](how-to-determine-which-versions-are-installed.md) bakın|
 
 > [!NOTE]

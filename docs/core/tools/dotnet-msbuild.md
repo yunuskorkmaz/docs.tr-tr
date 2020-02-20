@@ -1,19 +1,19 @@
 ---
 title: DotNet MSBuild komutu
 description: DotNet MSBuild komutu, MSBuild komut satırına erişim sağlar.
-ms.date: 12/03/2018
-ms.openlocfilehash: dae1e9f0ca355166d41c11fbafb80c7c9fb29748
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733199"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503668"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Adı
 
 `dotnet msbuild`-bir projeyi ve tüm bağımlılıklarını oluşturur.
 
@@ -31,25 +31,25 @@ Komutu, yalnızca SDK stilindeki projeler için mevcut MSBuild komut satırı is
 
 ## <a name="examples"></a>Örnekler
 
-* Bir proje ve bağımlılıklarını oluşturun:
+- Bir proje ve bağımlılıklarını oluşturun:
 
   ```dotnetcli
   dotnet msbuild
   ```
 
-* Yayın yapılandırması kullanarak bir proje ve bağımlılıklarını oluşturun:
+- Yayın yapılandırması kullanarak bir proje ve bağımlılıklarını oluşturun:
 
   ```dotnetcli
   dotnet msbuild -property:Configuration=Release
   ```
 
-* Yayımla hedefini çalıştırın ve RID `osx.10.11-x64` için yayımlayın:
+- Yayımla hedefini çalıştırın ve RID `osx.10.11-x64` için yayımlayın:
 
   ```dotnetcli
   dotnet msbuild -target:Publish -property:RuntimeIdentifiers=osx.10.11-x64
   ```
 
-* SDK tarafından eklenen tüm hedefleri içeren tüm projeyi görüntüleyin:
+- SDK tarafından eklenen tüm hedefleri içeren tüm projeyi görüntüleyin:
 
   ```dotnetcli
   dotnet msbuild -preprocess

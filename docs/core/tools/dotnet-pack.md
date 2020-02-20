@@ -1,23 +1,19 @@
 ---
 title: DotNet paketi komutu
 description: DotNet Pack komutu, .NET Core projeniz için NuGet paketleri oluşturur.
-ms.date: 08/08/2019
-ms.openlocfilehash: 057d1029e5c933912c43c178b6db8a8498f2ed57
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734113"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503651"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 1. x SDK ve sonraki sürümleri
+**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
-
-## <a name="name"></a>Ad
+## <a name="name"></a>Adı
 
 `dotnet pack`-kodu bir NuGet paketine paketler.
 
@@ -55,7 +51,7 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
 `PROJECT | SOLUTION`
 
@@ -63,13 +59,13 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 ## <a name="options"></a>Seçenekler
 
-- **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration <CONFIGURATION>`**
 
-  Yapı yapılandırmasını tanımlar. Varsayılan değer `Debug` şeklindedir.
+  Yapı yapılandırmasını tanımlar. Çoğu proje için varsayılan değer `Debug`, ancak projenizde derleme yapılandırma ayarlarını geçersiz kılabilirsiniz.
 
 - **`--force`**
 
-  Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar. Bu bayrağın belirtilmesi, *Project. varlıklar. JSON* dosyasını silme ile aynıdır. .NET Core 2,0 SDK 'dan beri kullanılabilir seçeneği.
+  Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar. Bu bayrağın belirtilmesi, *Project. varlıklar. JSON* dosyasını silme ile aynıdır.
 
 - **`-h|--help`**
 
@@ -93,11 +89,11 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 - **`--no-dependencies`**
 
-  Projeden projeye başvuruları yoksayar ve yalnızca kök projeyi geri yükler. .NET Core 2,0 SDK 'dan beri kullanılabilir seçeneği.
+  Projeden projeye başvuruları yoksayar ve yalnızca kök projeyi geri yükler.
 
 - **`--no-restore`**
 
-  Komutu çalıştırılırken örtük geri yükleme yürütülmez. .NET Core 2,0 SDK 'dan beri kullanılabilir seçeneği.
+  Komutu çalıştırılırken örtük geri yükleme yürütülmez.
 
 - **`--nologo`**
 
@@ -109,7 +105,7 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  Paketlerinin geri yükleneceği hedef çalışma zamanını belirtir. Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md). .NET Core 2,0 SDK 'dan beri kullanılabilir seçeneği.
+  Paketlerinin geri yükleneceği hedef çalışma zamanını belirtir. Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md).
 
 - **`-s|--serviceable`**
 
@@ -167,7 +163,7 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-- Projeyi paketleme ve geri yükleme işlemi için belirli bir çalışma zamanı (Windows 10) kullanın (.NET Core SDK 2,0 ve sonraki sürümler):
+- Projeyi paketleme ve geri yükleme işlemi için belirli bir çalışma zamanı (Windows 10) kullanın:
 
   ```dotnetcli
   dotnet pack --runtime win10-x64

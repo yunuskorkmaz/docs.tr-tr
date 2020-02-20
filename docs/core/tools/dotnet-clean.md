@@ -1,23 +1,19 @@
 ---
 title: DotNet temizleme komutu
 description: DotNet Clean komutu geçerli dizini temizler.
-ms.date: 06/26/2019
-ms.openlocfilehash: 715a33a8a1aa13a2a76f9d4522413dcc72e4b4aa
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 02/14/2020
+ms.openlocfilehash: 186f1ea07718a8e178f88c3d079cf6e2f1f8660b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451362"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503747"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 1. x SDK ve sonraki sürümleri
+**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
-
-## <a name="name"></a>Name
+## <a name="name"></a>Adı
 
 `dotnet clean`-bir projenin çıkışını temizler.
 
@@ -41,9 +37,9 @@ Temizleyen MSBuild projesi veya çözümü. Bir proje veya çözüm dosyası bel
 
 ## <a name="options"></a>Seçenekler
 
-* **`-c|--configuration {Debug|Release}`**
+* **`-c|--configuration <CONFIGURATION>`**
 
-  Yapı yapılandırmasını tanımlar. Varsayılan değer `Debug` şeklindedir. Bu seçenek yalnızca derleme zamanı sırasında belirtilmişse temizlik sırasında gereklidir.
+  Yapı yapılandırmasını tanımlar. Çoğu proje için varsayılan değer `Debug`, ancak projenizde derleme yapılandırma ayarlarını geçersiz kılabilirsiniz. Bu seçenek yalnızca derleme zamanı sırasında belirtilmişse temizlik sırasında gereklidir.
 
 * **`-f|--framework <FRAMEWORK>`**
 
@@ -67,11 +63,11 @@ Temizleyen MSBuild projesi veya çözümü. Bir proje veya çözüm dosyası bel
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Belirtilen çalışma zamanının çıkış klasörünü temizler. Bu, [kendinden bağımsız bir dağıtım](../deploying/index.md#publish-self-contained) oluşturulduğu zaman kullanılır. .NET Core 2,0 SDK 'dan beri kullanılabilir seçeneği.
+  Belirtilen çalışma zamanının çıkış klasörünü temizler. Bu, [kendinden bağımsız bir dağıtım](../deploying/index.md#publish-self-contained) oluşturulduğu zaman kullanılır.
 
 * **`-v|--verbosity <LEVEL>`**
 
-  MSBuild ayrıntı düzeyi düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`. Varsayılan, `normal` değeridir.
+  MSBuild ayrıntı düzeyi düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`. Varsayılan değer: `normal`.
 
 ## <a name="examples"></a>Örnekler
 
