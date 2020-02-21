@@ -1,68 +1,79 @@
 ---
 title: DotNet Aracı kaldırma komutu
-description: DotNet Aracı kaldırma komutu, belirtilen .NET Core küresel aracını makinenizden kaldırır.
-ms.date: 05/29/2018
-ms.openlocfilehash: 033753f44464e78b826e908e0b6cdf276da8a179
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+description: DotNet Aracı kaldırma komutu, belirtilen .NET Core aracını makinenizden kaldırır.
+ms.date: 02/14/2020
+ms.openlocfilehash: 82dad0206d9c3e2ef0f41c353f4a608f10e4f127
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117545"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543449"
 ---
-# <a name="dotnet-tool-uninstall"></a><span data-ttu-id="abc78-103">dotnet tool uninstall</span><span class="sxs-lookup"><span data-stu-id="abc78-103">dotnet tool uninstall</span></span>
+# <a name="dotnet-tool-uninstall"></a><span data-ttu-id="e6f15-103">dotnet tool uninstall</span><span class="sxs-lookup"><span data-stu-id="e6f15-103">dotnet tool uninstall</span></span>
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+<span data-ttu-id="e6f15-104">**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri</span><span class="sxs-lookup"><span data-stu-id="e6f15-104">**This article applies to:** ✔️ .NET Core 2.1 SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="abc78-104">Ad</span><span class="sxs-lookup"><span data-stu-id="abc78-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="e6f15-105">Adı</span><span class="sxs-lookup"><span data-stu-id="e6f15-105">Name</span></span>
 
-<span data-ttu-id="abc78-105">`dotnet tool uninstall`-Belirtilen [.NET Core küresel aracını](global-tools.md) makinenizden kaldırır.</span><span class="sxs-lookup"><span data-stu-id="abc78-105">`dotnet tool uninstall` - Uninstalls the specified [.NET Core Global Tool](global-tools.md) from your machine.</span></span>
+<span data-ttu-id="e6f15-106">`dotnet tool uninstall`-belirtilen [.NET Core aracını](global-tools.md) makinenizden kaldırır.</span><span class="sxs-lookup"><span data-stu-id="e6f15-106">`dotnet tool uninstall` - Uninstalls the specified [.NET Core tool](global-tools.md) from your machine.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="abc78-106">Özeti</span><span class="sxs-lookup"><span data-stu-id="abc78-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="e6f15-107">Özeti</span><span class="sxs-lookup"><span data-stu-id="e6f15-107">Synopsis</span></span>
 
 ```dotnetcli
 dotnet tool uninstall <PACKAGE_NAME> <-g|--global>
 dotnet tool uninstall <PACKAGE_NAME> <--tool-path>
+dotnet tool uninstall <PACKAGE_NAME>
 dotnet tool uninstall <-h|--help>
 ```
 
-## <a name="description"></a><span data-ttu-id="abc78-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="abc78-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="e6f15-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e6f15-108">Description</span></span>
 
-<span data-ttu-id="abc78-108">Komut `dotnet tool uninstall` , makinenizden .NET Core küresel araçlarını kaldırmanız için bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="abc78-108">The `dotnet tool uninstall` command provides a way for you to uninstall .NET Core Global Tools from your machine.</span></span> <span data-ttu-id="abc78-109">Komutunu kullanmak için, `--global` seçeneğini kullanarak bir Kullanıcı genelindeki aracı kaldırmak istediğinizi belirtmeniz veya `--tool-path` seçeneği kullanılarak aracın yüklendiği konuma bir yol belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="abc78-109">To use the command, you either have to specify that you want to remove a user-wide tool using the `--global` option or specify a path to where the tool is installed using the `--tool-path` option.</span></span>
+<span data-ttu-id="e6f15-109">`dotnet tool uninstall` komutu, makinenizden .NET Core araçlarını kaldırmanız için bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="e6f15-109">The `dotnet tool uninstall` command provides a way for you to uninstall .NET Core tools from your machine.</span></span> <span data-ttu-id="e6f15-110">Komutunu kullanmak için aşağıdaki seçeneklerden birini belirtin:</span><span class="sxs-lookup"><span data-stu-id="e6f15-110">To use the command, you specify one of the following options:</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="abc78-110">Arguments</span><span class="sxs-lookup"><span data-stu-id="abc78-110">Arguments</span></span>
+* <span data-ttu-id="e6f15-111">Varsayılan konumda yüklü olan küresel bir aracı kaldırmak için `--global` seçeneğini kullanın.</span><span class="sxs-lookup"><span data-stu-id="e6f15-111">To uninstall a global tool that was installed in the default location, use the `--global` option.</span></span>
+* <span data-ttu-id="e6f15-112">Özel bir konuma yüklenmiş olan küresel bir aracı kaldırmak için `--tool-path` seçeneğini kullanın.</span><span class="sxs-lookup"><span data-stu-id="e6f15-112">To uninstall a global tool that was installed in a custom location,  use the `--tool-path` option.</span></span>
+* <span data-ttu-id="e6f15-113">Yerel bir aracı kaldırmak için `--global` ve `--tool-path` seçeneklerini atlayın.</span><span class="sxs-lookup"><span data-stu-id="e6f15-113">To uninstall a local tool, omit the `--global` and `--tool-path` options.</span></span>
 
-`PACKAGE_NAME`
+<span data-ttu-id="e6f15-114">**Yerel araçlar .NET Core SDK 3,0 ' den başlayarak kullanılabilir.**</span><span class="sxs-lookup"><span data-stu-id="e6f15-114">**Local tools are available starting with .NET Core SDK 3.0.**</span></span>
 
-<span data-ttu-id="abc78-111">Kaldırılacak .NET Core küresel aracını içeren NuGet paketinin adı/KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="abc78-111">Name/ID of the NuGet package that contains the .NET Core Global Tool to uninstall.</span></span> <span data-ttu-id="abc78-112">[DotNet araç listesi](dotnet-tool-list.md) komutunu kullanarak paket adını bulabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="abc78-112">You can find the package name using the [dotnet tool list](dotnet-tool-list.md) command.</span></span>
+## <a name="arguments"></a><span data-ttu-id="e6f15-115">Bağımsız Değişkenler</span><span class="sxs-lookup"><span data-stu-id="e6f15-115">Arguments</span></span>
 
-## <a name="options"></a><span data-ttu-id="abc78-113">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="abc78-113">Options</span></span>
+- **`PACKAGE_NAME`**
 
-`-g|--global`
+  <span data-ttu-id="e6f15-116">Kaldırılacak .NET Core aracını içeren NuGet paketinin adı/KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="e6f15-116">Name/ID of the NuGet package that contains the .NET Core tool to uninstall.</span></span> <span data-ttu-id="e6f15-117">[DotNet araç listesi](dotnet-tool-list.md) komutunu kullanarak paket adını bulabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e6f15-117">You can find the package name using the [dotnet tool list](dotnet-tool-list.md) command.</span></span>
 
-<span data-ttu-id="abc78-114">Kaldırılacak aracın Kullanıcı genelindeki bir yüklemeden olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="abc78-114">Specifies that the tool to be removed is from a user-wide installation.</span></span> <span data-ttu-id="abc78-115">`--tool-path` Seçeneğiyle birleştirilemez.</span><span class="sxs-lookup"><span data-stu-id="abc78-115">Can't be combined with the `--tool-path` option.</span></span> <span data-ttu-id="abc78-116">Bu seçeneği belirtmezseniz, `--tool-path` seçeneğini belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="abc78-116">If you don't specify this option, you must specify the `--tool-path` option.</span></span>
+## <a name="options"></a><span data-ttu-id="e6f15-118">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="e6f15-118">Options</span></span>
 
-`-h|--help`
+- **`-g|--global`**
 
-<span data-ttu-id="abc78-117">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="abc78-117">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="e6f15-119">Kaldırılacak aracın Kullanıcı genelindeki bir yüklemeden olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="e6f15-119">Specifies that the tool to be removed is from a user-wide installation.</span></span> <span data-ttu-id="e6f15-120">`--tool-path` seçeneği ile birleştirilemez.</span><span class="sxs-lookup"><span data-stu-id="e6f15-120">Can't be combined with the `--tool-path` option.</span></span> <span data-ttu-id="e6f15-121">`--global` ve `--tool-path` her ikisi de kullanılmazsa, kaldırılacak aracın yerel bir araç olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="e6f15-121">Omitting both `--global` and `--tool-path` specifies that the tool to be removed is a local tool.</span></span> 
 
-`--tool-path <PATH>`
+- **`-h|--help`**
 
-<span data-ttu-id="abc78-118">Genel aracının kaldırılacağı konumu belirtir.</span><span class="sxs-lookup"><span data-stu-id="abc78-118">Specifies the location where to uninstall the Global Tool.</span></span> <span data-ttu-id="abc78-119">YOL mutlak veya göreli olabilir.</span><span class="sxs-lookup"><span data-stu-id="abc78-119">PATH can be absolute or relative.</span></span> <span data-ttu-id="abc78-120">`--global` Seçeneğiyle birleştirilemez.</span><span class="sxs-lookup"><span data-stu-id="abc78-120">Can't be combined with the `--global` option.</span></span> <span data-ttu-id="abc78-121">Bu seçeneği belirtmezseniz, `--global` seçeneğini belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="abc78-121">If you don't specify this option, you must specify the `--global` option.</span></span>
+  <span data-ttu-id="e6f15-122">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="e6f15-122">Prints out a short help for the command.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="abc78-122">Örnekler</span><span class="sxs-lookup"><span data-stu-id="abc78-122">Examples</span></span>
+- **`--tool-path <PATH>`**
 
-<span data-ttu-id="abc78-123">[Dotnetdeyin](https://www.nuget.org/packages/dotnetsay/) genel aracını kaldırır:</span><span class="sxs-lookup"><span data-stu-id="abc78-123">Uninstalls the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) Global Tool:</span></span>
+  <span data-ttu-id="e6f15-123">Aracının kaldırılacağı konumu belirtir.</span><span class="sxs-lookup"><span data-stu-id="e6f15-123">Specifies the location where to uninstall the tool.</span></span> <span data-ttu-id="e6f15-124">YOL mutlak veya göreli olabilir.</span><span class="sxs-lookup"><span data-stu-id="e6f15-124">PATH can be absolute or relative.</span></span> <span data-ttu-id="e6f15-125">`--global` seçeneği ile birleştirilemez.</span><span class="sxs-lookup"><span data-stu-id="e6f15-125">Can't be combined with the `--global` option.</span></span> <span data-ttu-id="e6f15-126">`--global` ve `--tool-path` her ikisi de kullanılmazsa, kaldırılacak aracın yerel bir araç olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="e6f15-126">Omitting both `--global` and `--tool-path` specifies that the tool to be removed is a local tool.</span></span> 
 
-`dotnet tool uninstall -g dotnetsay`
+## <a name="examples"></a><span data-ttu-id="e6f15-127">Örnekler</span><span class="sxs-lookup"><span data-stu-id="e6f15-127">Examples</span></span>
 
-<span data-ttu-id="abc78-124">[Dotnetsöyleme](https://www.nuget.org/packages/dotnetsay/) genel aracını belirli bir Windows klasöründen kaldırır:</span><span class="sxs-lookup"><span data-stu-id="abc78-124">Uninstalls the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) Global Tool from a specific Windows folder:</span></span>
+- **`dotnet tool uninstall -g dotnetsay`**
 
-`dotnet tool uninstall dotnetsay --tool-path c:\global-tools`
+  <span data-ttu-id="e6f15-128">[Dotnetdeyin](https://www.nuget.org/packages/dotnetsay/) küresel aracını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="e6f15-128">Uninstalls the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) global tool.</span></span>
 
-<span data-ttu-id="abc78-125">[Dotnetsöyleyin](https://www.nuget.org/packages/dotnetsay/) küresel aracını belirli bir Linux/MacOS klasöründen kaldırır:</span><span class="sxs-lookup"><span data-stu-id="abc78-125">Uninstalls the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) Global Tool from a specific Linux/macOS folder:</span></span>
+- **`dotnet tool uninstall dotnetsay --tool-path c:\global-tools`**
 
-`dotnet tool uninstall dotnetsay --tool-path ~/bin`
+  <span data-ttu-id="e6f15-129">[Dotnetsöyleme](https://www.nuget.org/packages/dotnetsay/) genel aracını belirli bir Windows dizininden kaldırır.</span><span class="sxs-lookup"><span data-stu-id="e6f15-129">Uninstalls the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) global tool from a specific Windows directory.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="abc78-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="abc78-126">See also</span></span>
+- **`dotnet tool uninstall dotnetsay --tool-path ~/bin`**
 
-- [<span data-ttu-id="abc78-127">.NET Core küresel araçları</span><span class="sxs-lookup"><span data-stu-id="abc78-127">.NET Core Global Tools</span></span>](global-tools.md)
+  <span data-ttu-id="e6f15-130">Belirli bir Linux/macOS dizininden [dotnetsöyleyin](https://www.nuget.org/packages/dotnetsay/) genel aracını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="e6f15-130">Uninstalls the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) global tool from a specific Linux/macOS directory.</span></span>
+
+- **`dotnet tool uninstall dotnetsay`**
+
+  <span data-ttu-id="e6f15-131">Geçerli dizinden [dotnetdeyin](https://www.nuget.org/packages/dotnetsay/) yerel aracını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="e6f15-131">Uninstalls the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) local tool from the current directory.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="e6f15-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e6f15-132">See also</span></span>
+
+- [<span data-ttu-id="e6f15-133">.NET Core araçları</span><span class="sxs-lookup"><span data-stu-id="e6f15-133">.NET Core tools</span></span>](global-tools.md)

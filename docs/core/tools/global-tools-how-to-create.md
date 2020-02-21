@@ -1,193 +1,211 @@
 ---
-title: .NET Core küresel aracı oluşturma
-description: Genel bir aracın nasıl oluşturulacağını açıklar. Genel araç, .NET Core CLI aracılığıyla yüklenen bir konsol uygulamasıdır.
-author: Thraka
-ms.author: adegeo
-ms.date: 08/22/2018
-ms.openlocfilehash: 1daecf7234f02a5fe0dcf25cf7edbb0af327b8c1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+title: 'Öğretici: .NET Core aracı oluşturma'
+description: .NET Core aracı oluşturmayı öğrenin. Araç, .NET Core CLI kullanılarak yüklenen bir konsol uygulamasıdır.
+ms.date: 02/12/2020
+ms.openlocfilehash: 558bf9e37efc8de68a61f1384fababe342ab7d66
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343518"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543410"
 ---
-# <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a><span data-ttu-id="5c8e0-104">.NET Core CLI kullanarak bir .NET Core genel aracı oluşturun</span><span class="sxs-lookup"><span data-stu-id="5c8e0-104">Create a .NET Core Global Tool using the .NET Core CLI</span></span>
+# <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a><span data-ttu-id="c6bab-104">Öğretici: .NET Core CLI kullanarak bir .NET Core aracı oluşturma</span><span class="sxs-lookup"><span data-stu-id="c6bab-104">Tutorial: Create a .NET Core tool using the .NET Core CLI</span></span>
 
-<span data-ttu-id="5c8e0-105">Bu makalede bir .NET Core küresel aracı oluşturma ve paketleme hakkında öğretilir.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-105">This article teaches you how to create and package a .NET Core Global Tool.</span></span> <span data-ttu-id="5c8e0-106">.NET Core CLI, bir konsol uygulamasını küresel bir araç olarak oluşturmanıza olanak tanır. Bu, başkalarının kolayca yükleyip çalıştırabilmesini sağlar.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-106">The .NET Core CLI allows you to create a console application as a Global Tool, which others can easily install and run.</span></span> <span data-ttu-id="5c8e0-107">.NET Core küresel araçları, .NET Core CLI yüklenen NuGet paketlerdir.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-107">.NET Core Global Tools are NuGet packages that are installed from the .NET Core CLI.</span></span> <span data-ttu-id="5c8e0-108">Küresel araçlar hakkında daha fazla bilgi için bkz. [.NET Core genel araçlarına genel bakış](global-tools.md).</span><span class="sxs-lookup"><span data-stu-id="5c8e0-108">For more information about Global Tools, see [.NET Core Global Tools overview](global-tools.md).</span></span>
+<span data-ttu-id="c6bab-105">**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri</span><span class="sxs-lookup"><span data-stu-id="c6bab-105">**This article applies to:** ✔️ .NET Core 2.1 SDK and later versions</span></span>
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+<span data-ttu-id="c6bab-106">Bu öğreticide bir .NET Core aracı oluşturma ve paketleme öğretilir.</span><span class="sxs-lookup"><span data-stu-id="c6bab-106">This tutorial teaches you how to create and package a .NET Core tool.</span></span> <span data-ttu-id="c6bab-107">.NET Core CLI, diğer kullanıcıların yükleyebileceği ve çalıştırabileceği bir araç olarak konsol uygulaması oluşturmanızı sağlar.</span><span class="sxs-lookup"><span data-stu-id="c6bab-107">The .NET Core CLI lets you create a console application as a tool, which others can install and run.</span></span> <span data-ttu-id="c6bab-108">.NET Core araçları, .NET Core CLI yüklenen NuGet paketlerdir.</span><span class="sxs-lookup"><span data-stu-id="c6bab-108">.NET Core tools are NuGet packages that are installed from the .NET Core CLI.</span></span> <span data-ttu-id="c6bab-109">Araçlar hakkında daha fazla bilgi için bkz. [.NET Core araçlarına genel bakış](global-tools.md).</span><span class="sxs-lookup"><span data-stu-id="c6bab-109">For more information about tools, see [.NET Core tools overview](global-tools.md).</span></span>
 
-## <a name="create-a-project"></a><span data-ttu-id="5c8e0-109">Proje oluştur</span><span class="sxs-lookup"><span data-stu-id="5c8e0-109">Create a project</span></span>
+<span data-ttu-id="c6bab-110">Oluşturacağınız araç, girdi olarak bir ileti alıp iletiyi bir robot görüntüsünü oluşturan metin satırlarıyla birlikte görüntüleyen bir konsol uygulamasıdır.</span><span class="sxs-lookup"><span data-stu-id="c6bab-110">The tool that you'll create is a console application that takes a message as input and displays the message along with lines of text that create the image of a robot.</span></span>
 
-<span data-ttu-id="5c8e0-110">Bu makale bir proje oluşturmak ve yönetmek için .NET Core CLI kullanır.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-110">This article uses the .NET Core CLI to create and manage a project.</span></span>
+<span data-ttu-id="c6bab-111">Bu, bir dizi üç öğreticiden ilkdir.</span><span class="sxs-lookup"><span data-stu-id="c6bab-111">This is the first in a series of three tutorials.</span></span> <span data-ttu-id="c6bab-112">Bu öğreticide bir araç oluşturur ve paketleyin.</span><span class="sxs-lookup"><span data-stu-id="c6bab-112">In this tutorial, you create and package a tool.</span></span> <span data-ttu-id="c6bab-113">Sonraki iki öğreticilerde [, aracı genel araç olarak kullanır](global-tools-how-to-use.md) ve [Aracı yerel bir araç olarak kullanabilirsiniz](local-tools-how-to-use.md).</span><span class="sxs-lookup"><span data-stu-id="c6bab-113">In the next two tutorials you [use the tool as a global tool](global-tools-how-to-use.md) and [use the tool as a local tool](local-tools-how-to-use.md).</span></span>
 
-<span data-ttu-id="5c8e0-111">Örnek aracımız, bir ASCII bot üreten ve bir ileti yazdıran bir konsol uygulaması olacaktır.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-111">Our example tool will be a console application that generates an ASCII bot and prints a message.</span></span> <span data-ttu-id="5c8e0-112">İlk olarak, yeni bir .NET Core konsol uygulaması oluşturun.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-112">First, create a new .NET Core Console Application.</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="c6bab-114">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="c6bab-114">Prerequisites</span></span>
 
-```dotnetcli
-dotnet new console -o botsay
-```
+- <span data-ttu-id="c6bab-115">[.NET Core SDK 3,1](https://dotnet.microsoft.com/download) veya sonraki bir sürümü.</span><span class="sxs-lookup"><span data-stu-id="c6bab-115">[.NET Core SDK 3.1](https://dotnet.microsoft.com/download) or a later version.</span></span>
 
-<span data-ttu-id="5c8e0-113">Önceki komut tarafından oluşturulan `botsay` dizinine gidin.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-113">Navigate to the `botsay` directory created by the previous command.</span></span>
+  <span data-ttu-id="c6bab-116">Bu öğreticide, genel [araçlar .NET Core SDK](global-tools-how-to-use.md) 2,1 ve üzeri sürümler için bu öğretici ve bu sürümden itibaren küresel araçlar geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="c6bab-116">This tutorial and the following [tutorial for global tools](global-tools-how-to-use.md) apply to .NET Core SDK 2.1 and later versions because global tools are available starting in that version.</span></span> <span data-ttu-id="c6bab-117">Ancak bu öğreticide, [Yerel araçlar öğreticisine](local-tools-how-to-use.md)devam etme seçeneğine sahip olmanız için 3,1 veya sonraki bir sürümü yüklemiş olduğunuz varsayılmaktadır.</span><span class="sxs-lookup"><span data-stu-id="c6bab-117">But this tutorial assumes you have installed 3.1 or later so that you have the option of continuing on to the [local tools tutorial](local-tools-how-to-use.md).</span></span> <span data-ttu-id="c6bab-118">Yerel araçlar .NET Core SDK 3,0 ' den başlayarak kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="c6bab-118">Local tools are available starting in .NET Core SDK 3.0.</span></span> <span data-ttu-id="c6bab-119">Bir araç oluşturma yordamları, bunu küresel bir araç olarak veya yerel bir araç olarak kullanıp kullanmayacağınızı de aynıdır.</span><span class="sxs-lookup"><span data-stu-id="c6bab-119">The procedures for creating a tool are the same whether you use it as a global tool or as a local tool.</span></span>
+  
+- <span data-ttu-id="c6bab-120">Tercih ettiğiniz bir metin veya kod düzenleyicisi.</span><span class="sxs-lookup"><span data-stu-id="c6bab-120">A text editor or code editor of your choice.</span></span>
 
-## <a name="add-the-code"></a><span data-ttu-id="5c8e0-114">Kod ekleme</span><span class="sxs-lookup"><span data-stu-id="5c8e0-114">Add the code</span></span>
+## <a name="create-a-project"></a><span data-ttu-id="c6bab-121">Proje oluştur</span><span class="sxs-lookup"><span data-stu-id="c6bab-121">Create a project</span></span>
 
-<span data-ttu-id="5c8e0-115">`Program.cs` dosyasını `vim` veya [Visual Studio Code](https://code.visualstudio.com/)gibi en sevdiğiniz metin düzenleyicinizle açın.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-115">Open the `Program.cs` file with your favorite text editor, such as `vim` or [Visual Studio Code](https://code.visualstudio.com/).</span></span>
+1. <span data-ttu-id="c6bab-122">Bir komut istemi açın ve *Depo*adlı bir klasör oluşturun.</span><span class="sxs-lookup"><span data-stu-id="c6bab-122">Open a command prompt and create a folder named *repository*.</span></span>
 
-<span data-ttu-id="5c8e0-116">Aşağıdaki `using` yönergesini dosyanın en üstüne ekleyin, bu, uygulamanın sürüm bilgilerini göstermek için kodu kısaltmanıza yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-116">Add the following `using` directive to the top of the file, this helps shorten the code to display the version information of the application.</span></span>
+1. <span data-ttu-id="c6bab-123">*Depo* klasörüne gidin ve aşağıdaki komutu girin ve proje adının benzersiz olması için `<name>` benzersiz bir değerle değiştirin.</span><span class="sxs-lookup"><span data-stu-id="c6bab-123">Navigate to the *repository* folder and enter the following command, replacing `<name>` with a unique value to make the project name unique.</span></span> 
 
-```csharp
-using System.Reflection;
-```
+   ```dotnetcli
+   dotnet new console -n botsay-<name>
+   ```
 
-<span data-ttu-id="5c8e0-117">Sonra `Main` yöntemine gidin.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-117">Next, move down to the `Main` method.</span></span> <span data-ttu-id="5c8e0-118">Yöntemi, uygulamanız için komut satırı bağımsız değişkenlerini işlemek üzere aşağıdaki kodla değiştirin.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-118">Replace the method with the following code to process the command-line arguments for your application.</span></span> <span data-ttu-id="5c8e0-119">Bağımsız değişken geçirilmemişse, kısa bir yardım iletisi görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-119">If no arguments were passed, a short help message is displayed.</span></span> <span data-ttu-id="5c8e0-120">Aksi takdirde, bu bağımsız değişkenlerin tümü bir dizeye dönüştürülür ve bot ile birlikte yazdırılır.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-120">Otherwise, all of those arguments are transformed into a string and printed with the bot.</span></span>
+   <span data-ttu-id="c6bab-124">Örneğin, aşağıdaki komutu çalıştırabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="c6bab-124">For example, you could run the following command:</span></span>
 
-```csharp
-static void Main(string[] args)
-{
-    if (args.Length == 0)
-    {
-        var versionString = Assembly.GetEntryAssembly()
-                                .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
-                                .InformationalVersion
-                                .ToString();
+   ```dotnetcli
+   dotnet new console -n botsay-nancydavolio
+   ```
 
-        Console.WriteLine($"botsay v{versionString}");
-        Console.WriteLine("-------------");
-        Console.WriteLine("\nUsage:");
-        Console.WriteLine("  botsay <message>");
-        return;
-    }
+   <span data-ttu-id="c6bab-125">Komut, *Depo* klasörü altında *botdeyin-\<name >* adlı yeni bir klasör oluşturur.</span><span class="sxs-lookup"><span data-stu-id="c6bab-125">The command creates a new folder named *botsay-\<name>* under the *repository* folder.</span></span>
 
-    ShowBot(string.Join(' ', args));
-}
-```
+1. <span data-ttu-id="c6bab-126">*Botdeyin-\<adı >* klasörüne gidin.</span><span class="sxs-lookup"><span data-stu-id="c6bab-126">Navigate to the *botsay-\<name>* folder.</span></span>
 
-### <a name="create-the-bot"></a><span data-ttu-id="5c8e0-121">Bot oluşturma</span><span class="sxs-lookup"><span data-stu-id="5c8e0-121">Create the bot</span></span>
+   ```console
+   cd botsay-<name>
+   ```
 
-<span data-ttu-id="5c8e0-122">Sonra, bir dize parametresi alan `ShowBot` adlı yeni bir yöntem ekleyin.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-122">Next, add a new method named `ShowBot` that takes a string parameter.</span></span> <span data-ttu-id="5c8e0-123">Bu yöntem, iletiyi ve ASCII bot 'ı yazdırır.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-123">This method prints out the message and the ASCII bot.</span></span> <span data-ttu-id="5c8e0-124">Bir [dotnetbot kodu dotnetbot](https://github.com/dotnet/core/blob/master/samples/dotnetsay/Program.cs) örneğinden alındı.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-124">The ASCII bot code was taken from the [dotnetbot](https://github.com/dotnet/core/blob/master/samples/dotnetsay/Program.cs) sample.</span></span>
+## <a name="add-the-code"></a><span data-ttu-id="c6bab-127">Kod ekleme</span><span class="sxs-lookup"><span data-stu-id="c6bab-127">Add the code</span></span>
 
-```csharp
-static void ShowBot(string message)
-{
-    string bot = $"\n        {message}";
-    bot += @"
-    __________________
-                      \
-                       \
-                          ....
-                          ....'
-                           ....
-                        ..........
-                    .............'..'..
-                 ................'..'.....
-               .......'..........'..'..'....
-              ........'..........'..'..'.....
-             .'....'..'..........'..'.......'.
-             .'..................'...   ......
-             .  ......'.........         .....
-             .    _            __        ......
-            ..    #            ##        ......
-           ....       .                 .......
-           ......  .......          ............
-            ................  ......................
-            ........................'................
-           ......................'..'......    .......
-        .........................'..'.....       .......
-     ........    ..'.............'..'....      ..........
-   ..'..'...      ...............'.......      ..........
-  ...'......     ...... ..........  ......         .......
- ...........   .......              ........        ......
-.......        '...'.'.              '.'.'.'         ....
-.......       .....'..               ..'.....
-   ..       ..........               ..'........
-          ............               ..............
-         .............               '..............
-        ...........'..              .'.'............
-       ...............              .'.'.............
-      .............'..               ..'..'...........
-      ...............                 .'..............
-       .........                        ..............
-        .....
-";
-    Console.WriteLine(bot);
-}
-```
+1. <span data-ttu-id="c6bab-128">`Program.cs` dosyasını kod düzenleyicinizle açın.</span><span class="sxs-lookup"><span data-stu-id="c6bab-128">Open the `Program.cs` file with your code editor.</span></span>
 
-### <a name="test-the-tool"></a><span data-ttu-id="5c8e0-125">Aracı test etme</span><span class="sxs-lookup"><span data-stu-id="5c8e0-125">Test the tool</span></span>
+1. <span data-ttu-id="c6bab-129">Aşağıdaki `using` yönergesini dosyanın en üstüne ekleyin:</span><span class="sxs-lookup"><span data-stu-id="c6bab-129">Add the following `using` directive to the top of the file:</span></span>
 
-<span data-ttu-id="5c8e0-126">Projeyi çalıştırın ve çıktıyı görüntüleyin.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-126">Run the project and see the output.</span></span> <span data-ttu-id="5c8e0-127">Farklı sonuçları görmek için komut satırında bu çeşitlemeleri deneyin:</span><span class="sxs-lookup"><span data-stu-id="5c8e0-127">Try these variations at the command line to see different results:</span></span>
+   ```csharp
+   using System.Reflection;
+   ```
+
+1. <span data-ttu-id="c6bab-130">Uygulama için komut satırı bağımsız değişkenlerini işlemek üzere `Main` yöntemini aşağıdaki kodla değiştirin.</span><span class="sxs-lookup"><span data-stu-id="c6bab-130">Replace the `Main` method with the following code to process the command-line arguments for the application.</span></span>
+
+   ```csharp
+   static void Main(string[] args)
+   {
+       if (args.Length == 0)
+       {
+           var versionString = Assembly.GetEntryAssembly()
+                                   .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+                                   .InformationalVersion
+                                   .ToString();
+
+           Console.WriteLine($"botsay v{versionString}");
+           Console.WriteLine("-------------");
+           Console.WriteLine("\nUsage:");
+           Console.WriteLine("  botsay <message>");
+           return;
+       }
+
+       ShowBot(string.Join(' ', args));
+   }
+   ```
+
+   <span data-ttu-id="c6bab-131">Hiçbir bağımsız değişken geçirilmezse, kısa bir yardım iletisi görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="c6bab-131">If no arguments are passed, a short help message is displayed.</span></span> <span data-ttu-id="c6bab-132">Aksi takdirde, tüm bağımsız değişkenler tek bir dizeye birleştirilir ve bir sonraki adımda oluşturduğunuz `ShowBot` yöntemi çağırarak yazdırılır.</span><span class="sxs-lookup"><span data-stu-id="c6bab-132">Otherwise, all of the arguments are concatenated into a single string and printed by calling the `ShowBot` method that you create in the next step.</span></span>
+
+1. <span data-ttu-id="c6bab-133">Dize parametresi alan `ShowBot` adlı yeni bir yöntem ekleyin.</span><span class="sxs-lookup"><span data-stu-id="c6bab-133">Add a new method named `ShowBot` that takes a string parameter.</span></span> <span data-ttu-id="c6bab-134">Yöntemi, metin satırlarını kullanarak iletiyi ve bir robot görüntüsünü yazdırır.</span><span class="sxs-lookup"><span data-stu-id="c6bab-134">The method prints out the message and an image of a robot using lines of text.</span></span>
+
+   ```csharp
+   static void ShowBot(string message)
+   {
+       string bot = $"\n        {message}";
+       bot += @"
+       __________________
+                         \
+                          \
+                             ....
+                             ....'
+                              ....
+                           ..........
+                       .............'..'..
+                    ................'..'.....
+                  .......'..........'..'..'....
+                 ........'..........'..'..'.....
+                .'....'..'..........'..'.......'.
+                .'..................'...   ......
+                .  ......'.........         .....
+                .    _            __        ......
+               ..    #            ##        ......
+              ....       .                 .......
+              ......  .......          ............
+               ................  ......................
+               ........................'................
+              ......................'..'......    .......
+           .........................'..'.....       .......
+        ........    ..'.............'..'....      ..........
+      ..'..'...      ...............'.......      ..........
+     ...'......     ...... ..........  ......         .......
+    ...........   .......              ........        ......
+   .......        '...'.'.              '.'.'.'         ....
+   .......       .....'..               ..'.....
+      ..       ..........               ..'........
+             ............               ..............
+            .............               '..............
+           ...........'..              .'.'............
+          ...............              .'.'.............
+         .............'..               ..'..'...........
+         ...............                 .'..............
+          .........                        ..............
+           .....
+   ";
+       Console.WriteLine(bot);
+   }
+   ```
+
+1. <span data-ttu-id="c6bab-135">Yaptığınız değişiklikleri kaydedin.</span><span class="sxs-lookup"><span data-stu-id="c6bab-135">Save your changes.</span></span>
+
+## <a name="test-the-application"></a><span data-ttu-id="c6bab-136">Uygulamayı test etme</span><span class="sxs-lookup"><span data-stu-id="c6bab-136">Test the application</span></span>
+
+<span data-ttu-id="c6bab-137">Projeyi çalıştırın ve çıktıyı görüntüleyin.</span><span class="sxs-lookup"><span data-stu-id="c6bab-137">Run the project and see the output.</span></span> <span data-ttu-id="c6bab-138">Farklı sonuçları görmek için komut satırında bu çeşitlemeleri deneyin:</span><span class="sxs-lookup"><span data-stu-id="c6bab-138">Try these variations at the command line to see different results:</span></span>
 
 ```dotnetcli
 dotnet run
 dotnet run -- "Hello from the bot"
-dotnet run -- hello from the bot
+dotnet run -- Hello from the bot
 ```
 
-<span data-ttu-id="5c8e0-128">`--` sınırlayıcısından sonraki tüm bağımsız değişkenler uygulamanıza geçirilir.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-128">All arguments after the `--` delimiter are passed to your application.</span></span>
+<span data-ttu-id="c6bab-139">`--` sınırlayıcısından sonraki tüm bağımsız değişkenler uygulamanıza geçirilir.</span><span class="sxs-lookup"><span data-stu-id="c6bab-139">All arguments after the `--` delimiter are passed to your application.</span></span>
 
-## <a name="set-up-the-global-tool"></a><span data-ttu-id="5c8e0-129">Genel aracı ayarlama</span><span class="sxs-lookup"><span data-stu-id="5c8e0-129">Set up the global tool</span></span>
+## <a name="package-the-tool"></a><span data-ttu-id="c6bab-140">Aracı paketleyin</span><span class="sxs-lookup"><span data-stu-id="c6bab-140">Package the tool</span></span>
 
-<span data-ttu-id="5c8e0-130">Uygulamayı küresel bir araç olarak paketleyebilir ve dağıtabilmeniz için önce proje dosyasını değiştirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-130">Before you can pack and distribute the application as a Global Tool, you need to modify the project file.</span></span> <span data-ttu-id="5c8e0-131">`botsay.csproj` dosyasını açın ve `<Project><PropertyGroup>` düğümüne üç yeni XML düğümü ekleyin:</span><span class="sxs-lookup"><span data-stu-id="5c8e0-131">Open the `botsay.csproj` file and add three new XML nodes to the `<Project><PropertyGroup>` node:</span></span>
+<span data-ttu-id="c6bab-141">Uygulamayı bir araç olarak paketleyebilir ve dağıtabilmeniz için önce proje dosyasını değiştirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="c6bab-141">Before you can pack and distribute the application as a tool, you need to modify the project file.</span></span> 
 
-- `<PackAsTool>`\
-<span data-ttu-id="5c8e0-132">ISTENIR Uygulamanın genel bir araç olarak yüklenmek üzere paketleneceğine bildirir.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-132">[REQUIRED] Indicates that the application will be packaged for install as a Global Tool.</span></span>
+1. <span data-ttu-id="c6bab-142">*Botdeyin-\<adı >. csproj* dosyasını açın ve `<PropertyGroup>` düğümünün sonuna üç yeni XML düğümü ekleyin:</span><span class="sxs-lookup"><span data-stu-id="c6bab-142">Open the *botsay-\<name>.csproj* file and add three new XML nodes to the end of the `<PropertyGroup>` node:</span></span>
 
-- `<ToolCommandName>`\
-<span data-ttu-id="5c8e0-133">SEÇIM Araç için alternatif bir ad, aksi takdirde araç için komut adı proje dosyasından sonra adlandıralınacaktır.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-133">[OPTIONAL] An alternative name for the tool, otherwise the command name for the tool will be named after the project file.</span></span> <span data-ttu-id="5c8e0-134">Pakette birden fazla araca sahip olabilirsiniz, benzersiz ve kolay bir ad seçmek aynı paketteki diğer araçlardan ayırt edilmesine yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-134">You can have multiple tools in a package, choosing a unique and friendly name helps differentiate from other tools in the same package.</span></span>
+   ```xml
+   <PackAsTool>true</PackAsTool>
+   <ToolCommandName>botsay</ToolCommandName>
+   <PackageOutputPath>./nupkg</PackageOutputPath>
+   ```
 
-- `<PackageOutputPath>`\
-<span data-ttu-id="5c8e0-135">SEÇIM NuGet paketinin üretileceği yer.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-135">[OPTIONAL] Where the NuGet package will be produced.</span></span> <span data-ttu-id="5c8e0-136">NuGet paketi, .NET Core CLI genel araçların aracınızı yüklemek için kullandığı şeydir.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-136">The NuGet package is what the .NET Core CLI Global Tools uses to install your tool.</span></span>
+   <span data-ttu-id="c6bab-143">`<ToolCommandName>`, yüklendikten sonra aracı çağıracağı komutu belirten isteğe bağlı bir öğedir.</span><span class="sxs-lookup"><span data-stu-id="c6bab-143">`<ToolCommandName>` is an optional element that specifies the command that will invoke the tool after it's installed.</span></span> <span data-ttu-id="c6bab-144">Bu öğe sağlanmazsa, araç için komut adı *. csproj* uzantısı olmayan proje dosyası adıdır.</span><span class="sxs-lookup"><span data-stu-id="c6bab-144">If this element isn't provided, the command name for the tool is the project file name without the *.csproj* extension.</span></span>
 
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
+   <span data-ttu-id="c6bab-145">`<PackageOutputPath>`, NuGet paketinin nerede üretileceği belirleyen isteğe bağlı bir öğedir.</span><span class="sxs-lookup"><span data-stu-id="c6bab-145">`<PackageOutputPath>` is an optional element that determines where the NuGet package will be produced.</span></span> <span data-ttu-id="c6bab-146">NuGet paketi, .NET Core CLI aracınızı yüklemek için kullandığı şeydir.</span><span class="sxs-lookup"><span data-stu-id="c6bab-146">The NuGet package is what the .NET Core CLI uses to install your tool.</span></span>
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+   <span data-ttu-id="c6bab-147">Proje dosyası artık aşağıdaki örneğe benzer şekilde görünür:</span><span class="sxs-lookup"><span data-stu-id="c6bab-147">The project file now looks like the following example:</span></span>
 
-    <PackAsTool>true</PackAsTool>
-    <ToolCommandName>botsay</ToolCommandName>
-    <PackageOutputPath>./nupkg</PackageOutputPath>
+   ```xml
+   <Project Sdk="Microsoft.NET.Sdk">
+  
+     <PropertyGroup>
 
-  </PropertyGroup>
+       <OutputType>Exe</OutputType>
+       <TargetFramework>netcoreapp3.1</TargetFramework>
+  
+       <PackAsTool>true</PackAsTool>
+       <ToolCommandName>botsay</ToolCommandName>
+       <PackageOutputPath>./nupkg</PackageOutputPath>
+  
+     </PropertyGroup>
 
-</Project>
-```
+   </Project>
+   ```
 
-<span data-ttu-id="5c8e0-137">`<PackageOutputPath>`, isteğe bağlı olsa da, bu örnekte kullanın.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-137">Even though `<PackageOutputPath>` is optional, use it in this example.</span></span> <span data-ttu-id="5c8e0-138">Ayarladığınızdan emin olun: `<PackageOutputPath>./nupkg</PackageOutputPath>`.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-138">Make sure you set it: `<PackageOutputPath>./nupkg</PackageOutputPath>`.</span></span>
+1. <span data-ttu-id="c6bab-148">[DotNet Pack](dotnet-pack.md) komutunu çalıştırarak bir NuGet paketi oluşturun:</span><span class="sxs-lookup"><span data-stu-id="c6bab-148">Create a NuGet package by running the [dotnet pack](dotnet-pack.md) command:</span></span>
 
-<span data-ttu-id="5c8e0-139">Ardından, uygulamanız için bir NuGet paketi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-139">Next, create a NuGet package for your application.</span></span>
+   ```dotnetcli
+   dotnet pack
+   ```
 
-```dotnetcli
-dotnet pack
-```
+   <span data-ttu-id="c6bab-149">*Botdeyin-\<name >. 1.0.0. nupkg* dosyası, bu örnekte *./nupkg klasörüdür./n/nDosya* olan *botsöyleyin-\<name >. csproj* dosyasındaki `<PackageOutputPath>` değeri tarafından tanımlanan klasörde oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="c6bab-149">The *botsay-\<name>.1.0.0.nupkg* file is created in the folder identified by the `<PackageOutputPath>` value from the *botsay-\<name>.csproj* file, which in this example is the *./nupkg* folder.</span></span>
+  
+   <span data-ttu-id="c6bab-150">Bir aracı herkese açık bir şekilde yayınlamak istediğinizde, `https://www.nuget.org`yükleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c6bab-150">When you want to release a tool publicly, you can upload it to `https://www.nuget.org`.</span></span> <span data-ttu-id="c6bab-151">Araç NuGet 'de kullanılabilir olduğunda, geliştiriciler [DotNet aracı install](dotnet-tool-install.md) komutunu kullanarak aracı yükleyebilir.</span><span class="sxs-lookup"><span data-stu-id="c6bab-151">Once the tool is available on NuGet, developers can install the tool by using the [dotnet tool install](dotnet-tool-install.md) command.</span></span> <span data-ttu-id="c6bab-152">Bu öğreticide, paketini doğrudan yerel *nupkg* klasöründen yüklersiniz, bu nedenle paketi NuGet 'e yüklemeye gerek yoktur.</span><span class="sxs-lookup"><span data-stu-id="c6bab-152">For this tutorial you install the package directly from the local *nupkg* folder, so there's no need to upload the package to NuGet.</span></span>
 
-<span data-ttu-id="5c8e0-140">`botsay.1.0.0.nupkg` dosyası, bu örnekte `./nupkg` klasörü olan `botsay.csproj` dosyasından `<PackageOutputPath>` XML değeri tarafından tanımlanan klasörde oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-140">The `botsay.1.0.0.nupkg` file is created in the folder identified by the `<PackageOutputPath>` XML value from the `botsay.csproj` file, which in this example is the `./nupkg` folder.</span></span> <span data-ttu-id="5c8e0-141">Bu, yüklemeyi ve test yapmayı kolaylaştırır.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-141">This makes it easy to install and test.</span></span> <span data-ttu-id="5c8e0-142">Bir aracı herkese açık bir şekilde yayınlamak istediğinizde, <https://www.nuget.org>' ye yükleyin.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-142">When you want to release a tool publicly, upload it to <https://www.nuget.org>.</span></span> <span data-ttu-id="5c8e0-143">Araç NuGet 'de kullanılabilir olduğunda, geliştiriciler [DotNet aracı install](dotnet-tool-install.md) komutunun `--global` seçeneğini kullanarak aracın Kullanıcı genelindeki bir yüklemesini gerçekleştirebilir.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-143">Once the tool is available on NuGet, developers can perform a user-wide installation of the tool using the `--global` option of the [dotnet tool install](dotnet-tool-install.md) command.</span></span>
+## <a name="troubleshoot"></a><span data-ttu-id="c6bab-153">Sorunları Gider</span><span class="sxs-lookup"><span data-stu-id="c6bab-153">Troubleshoot</span></span>
 
-<span data-ttu-id="5c8e0-144">Artık bir paketiniz olduğuna göre, aracı bu paketten yükleyebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="5c8e0-144">Now that you have a package, install the tool from that package:</span></span>
+<span data-ttu-id="c6bab-154">Öğreticiyi takip ederken bir hata mesajı alırsanız bkz. [.NET Core araç kullanımı sorunlarını giderme](troubleshoot-usage-issues.md).</span><span class="sxs-lookup"><span data-stu-id="c6bab-154">If you get an error message while following the tutorial, see [Troubleshoot .NET Core tool usage issues](troubleshoot-usage-issues.md).</span></span>
 
-```dotnetcli
-dotnet tool install --global --add-source ./nupkg botsay
-```
+## <a name="next-steps"></a><span data-ttu-id="c6bab-155">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="c6bab-155">Next steps</span></span>
 
-<span data-ttu-id="5c8e0-145">`--add-source` parametresi, .NET Core CLI, NuGet paketleri için ek bir kaynak akışı olarak `./nupkg` klasörünü (`<PackageOutputPath>` klasörü) geçici olarak kullanmasını söyler.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-145">The `--add-source` parameter tells the .NET Core CLI to temporarily use the `./nupkg` folder (our `<PackageOutputPath>` folder) as an additional source feed for NuGet packages.</span></span> <span data-ttu-id="5c8e0-146">Genel araçları yükleme hakkında daha fazla bilgi için bkz. [.NET Core genel araçlarına genel bakış](global-tools.md).</span><span class="sxs-lookup"><span data-stu-id="5c8e0-146">For more information about installing Global Tools, see [.NET Core Global Tools overview](global-tools.md).</span></span>
+<span data-ttu-id="c6bab-156">Bu öğreticide, bir konsol uygulaması oluşturdunuz ve bunu bir araç olarak paketlediyseniz.</span><span class="sxs-lookup"><span data-stu-id="c6bab-156">In this tutorial, you created a console application and packaged it as a tool.</span></span> <span data-ttu-id="c6bab-157">Aracın genel bir araç olarak nasıl kullanılacağını öğrenmek için bir sonraki öğreticiye ilerleyin.</span><span class="sxs-lookup"><span data-stu-id="c6bab-157">To learn how to use the tool as a global tool, advance to the next tutorial.</span></span>
 
-<span data-ttu-id="5c8e0-147">Yükleme başarılı olursa, aşağıdaki örneğe benzer şekilde, aracı ve yüklü sürümü çağırmak için kullanılan komutu gösteren bir ileti görüntülenir:</span><span class="sxs-lookup"><span data-stu-id="5c8e0-147">If installation is successful, a message is displayed showing the command used to call the tool and the version installed, similar to the following example:</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="c6bab-158">Küresel bir araç yükleyip kullanma</span><span class="sxs-lookup"><span data-stu-id="c6bab-158">Install and use a global tool</span></span>](global-tools-how-to-use.md)
 
-```output
-You can invoke the tool using the following command: botsay
-Tool 'botsay' (version '1.0.0') was successfully installed.
-```
+<span data-ttu-id="c6bab-159">İsterseniz küresel araçlar öğreticisini atlayabilir ve doğrudan yerel araçlar öğreticisine gidebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c6bab-159">If you prefer, you can skip the global tools tutorial and go directly to the local tools tutorial.</span></span>
 
-<span data-ttu-id="5c8e0-148">Artık `botsay` yazabilir ve araçtan bir yanıt alabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-148">You should now be able to type `botsay` and get a response from the tool.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="5c8e0-149">Yüklemesi başarılı olduysa, ancak `botsay` komutunu kullanamazsınız, yolu yenilemek için yeni bir Terminal açmanız gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="5c8e0-149">If the install was successful, but you cannot use the `botsay` command, you may need to open a new terminal to refresh the PATH.</span></span>
-
-## <a name="remove-the-tool"></a><span data-ttu-id="5c8e0-150">Aracı kaldır</span><span class="sxs-lookup"><span data-stu-id="5c8e0-150">Remove the tool</span></span>
-
-<span data-ttu-id="5c8e0-151">Araç ile deneme tamamladıktan sonra, aşağıdaki komutla kaldırabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="5c8e0-151">Once you're done experimenting with the tool, you can remove it with the following command:</span></span>
-
-```dotnetcli
-dotnet tool uninstall -g botsay
-```
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="c6bab-160">Yerel bir araç yükleyip kullanma</span><span class="sxs-lookup"><span data-stu-id="c6bab-160">Install and use a local tool</span></span>](local-tools-how-to-use.md)
