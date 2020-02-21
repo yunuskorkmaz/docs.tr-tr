@@ -2,18 +2,18 @@
 title: Değişken türleri için bir veya daha fazla alan için alanların prototip geliştiriciler için gRPC
 description: İletilerle Ilgili değişken nesne türlerini temsil etmek için any türlerini ve oneof anahtar sözcüğünü nasıl kullanacağınızı öğrenin.
 ms.date: 09/09/2019
-ms.openlocfilehash: af3ba22c238aa80a8c6119f62d5d8914770cad68
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6fe7acbd1ec35289f7ad6f3acee8509ab934619d
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971611"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543202"
 ---
 # <a name="protobuf-any-and-oneof-fields-for-variant-types"></a>Değişken türleri için bir veya daha fazla alanın prototipini oluşturma
 
-WCF 'de dinamik özellik türlerini (`object`türündeki Özellikler) işlemek karmaşıktır. Serileştiriciler belirtilmelidir, [KnownType](xref:System.Runtime.Serialization.KnownTypeAttribute) öznitelikleri sağlanmalı ve bu şekilde devam etmelidir.
+Dinamik özellik türlerini (diğer bir deyişle, `object`türündeki Özellikler) Windows Communication Foundation (WCF) içinde işlemek karmaşıktır. Örneğin, serileştiriciler belirtmeniz ve [KnownType](xref:System.Runtime.Serialization.KnownTypeAttribute) öznitelikleri sağlamanız gerekir.
 
-Prototip, birden fazla türden olabilecek değerlerle ilgilenmede iki basit seçenek sağlar. `Any` türü bilinen Prototipsiz ileti türlerini temsil edebilir, ancak `oneof` anahtar sözcüğü belirli bir ileti içinde yalnızca bir alan aralığı ayarlayabilmesinin izin verdiği.
+Protokol arabelleği (Protobuffer), birden fazla türden olabilecek değerlerle ilgilenmede iki basit seçenek sağlar. `Any` türü bilinen Prototipsiz ileti türlerini temsil edebilir. Ve `oneof` anahtar sözcüğünü kullanarak herhangi bir ileti için yalnızca bir alan aralığının ayarlayabelirtebilirsiniz.
 
 ## <a name="any"></a>Tümü
 
@@ -58,11 +58,11 @@ public void FormatChangeNotification(ChangeNotification change)
 }
 ```
 
-Oluşturulan her türdeki `Descriptor` statik alanı, `Any` alanı türlerini çözümlemek için prototipte iç yansıma kodu tarafından kullanılır. Ayrıca bir `TryUnpack<T>` yöntemi vardır ancak bu, başarısız olsa bile başlatılmamış bir `T` örneğini oluşturur, bu nedenle `Is` yönteminin yukarıda gösterildiği gibi kullanılması daha iyidir.
+Prototipte iç yansıma kodu, `Any` alanı türlerini çözümlemek için her oluşturulan türdeki `Descriptor` statik alanını kullanır. Ayrıca bir `TryUnpack<T>` yöntemi vardır ancak bu, başarısız olsa bile başlatılmamış bir `T` örneği oluşturur. Daha önce gösterildiği gibi `Is` yönteminin kullanılması daha iyidir.
 
 ## <a name="oneof"></a>Oneof
 
-Oneof alanları bir dil özelliğidir: `oneof` anahtar sözcüğü, ileti sınıfını oluşturduğunda derleyici tarafından işlenir. `ChangeNotification` iletisini belirtmek için `oneof` kullanmak şöyle görünebilir:
+Oneof alanları bir dil özelliğidir: derleyici, ileti sınıfını oluşturduğunda `oneof` anahtar sözcüğünü işler. `ChangeNotification` iletisini belirtmek için `oneof` kullanmak şöyle görünebilir:
 
 ```protobuf
 message Stock {
@@ -105,7 +105,7 @@ public void FormatChangeNotification(ChangeNotification change)
 }
 ```
 
-Bir `oneof` kümesinin parçası olan herhangi bir alanı ayarlamak, küme içindeki diğer alanları otomatik olarak temizler. `oneof``repeated` kullanamazsınız. Bunun yerine, bu sınırlamaya geçici bir çözüm olarak, yinelenen alanla veya `oneof` ayarlanmış olarak iç içe geçmiş bir ileti oluşturabilirsiniz.
+Bir `oneof` kümesinin parçası olan herhangi bir alanın ayarlanması, belirlenen diğer alanları otomatik olarak temizler. `oneof``repeated` kullanamazsınız. Bunun yerine, bu sınırlamaya geçici bir çözüm olarak, yinelenen alanla veya `oneof` ayarlanmış olarak iç içe geçmiş bir ileti oluşturabilirsiniz.
 
 >[!div class="step-by-step"]
 >[Önceki](protobuf-reserved.md)

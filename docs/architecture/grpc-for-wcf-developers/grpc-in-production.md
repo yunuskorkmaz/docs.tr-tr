@@ -2,16 +2,16 @@
 title: üretim ortamında gRPC-WCF geliştiricileri için gRPC
 description: Üretim ortamlarında ASP.NET Core gRPC uygulamalarını çalıştırma
 ms.date: 09/02/2019
-ms.openlocfilehash: f30252b9937353b8670f509a245694f89512ba30
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3c1f0f20199dc67429f1e382fcbceb1bbc5b0c0d
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967797"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542783"
 ---
 # <a name="grpc-in-production"></a>Üretimde gRPC
 
-GRPC hizmetleri de dahil olmak üzere ASP.NET Core 3,0 uygulamaları, Docker ve Kubernetes gibi modern platformlar kullanılarak Windows, Linux ve kapsayıcılar üzerinde çalıştırılabilir. Bu bölümde, Systems 'ın en iyi şekilde çalışmasını sağlamak için, gRPC hizmetlerinizi üretimde çalıştırmaya yönelik çeşitli seçenekler araştırılacak ve izleme ve günlüğe kaydetme seçeneklerine göz atalım.
+GRPC Hizmetleri, Windows 'ta, Linux 'ta ve Docker ve Kubernetes gibi modern platformları kullanarak kapsayıcılar dahil ASP.NET Core 3,0 uygulamalarını çalıştırabilirsiniz. Bu bölümde, Systems 'ın en iyi şekilde çalışmasını sağlamak için, gRPC hizmetlerinizi üretimde çalıştırmaya yönelik çeşitli seçenekler ele getirilmiştir ve izleme ve günlüğe kaydetme seçeneklerine bakar.
 
 >[!div class="step-by-step"]
 >[Önceki](encryption.md)

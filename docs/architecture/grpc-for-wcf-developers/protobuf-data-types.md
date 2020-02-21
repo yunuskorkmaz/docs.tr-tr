@@ -1,17 +1,17 @@
 ---
 title: Prototipsiz skaler veri türleri-WCF geliştiricileri için gRPC
-description: .NET Core 'da Protoarabellek ve gRPC tarafından desteklenen temel ve iyi bilinen veri türleri hakkında bilgi edinin.
+description: .NET Core 'da prototip ve gRPC desteği sunan temel ve iyi bilinen veri türleri hakkında bilgi edinin.
 ms.date: 09/09/2019
-ms.openlocfilehash: ae7f5f48099000dff0eefb36e23cb9b9f2ac517c
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: f5215550a6a2d54dfe2e859c574a34f641fdb68d
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971549"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543163"
 ---
 # <a name="protobuf-scalar-data-types"></a>Protobuf skaler veri türleri
 
-Prototip, yerel skaler değer türlerini destekler. Aşağıdaki tabloda bunların hepsi eşdeğer C# tür ile listelenmektedir:
+Protokol arabelleği (Protobuffer), yerel skaler değer türlerinin bir aralığını destekler. Aşağıdaki tabloda bunların hepsi eşdeğer C# tür ile listelenmektedir:
 
 | Prototip türü | C#türüyle      | Notlar |
 | ------------- | ------------ | ----- |
@@ -31,18 +31,20 @@ Prototip, yerel skaler değer türlerini destekler. Aşağıdaki tabloda bunlar�
 | `string`      | `string`     | 3     |
 | `bytes`       | `ByteString` | 4     |
 
-## <a name="notes"></a>Notlar
+Notlar:
 
-1. `int32` ve `int64` için standart kodlama, imzalanmış değerlerle çalışırken verimsiz bir değer. Alanınız büyük olasılıkla negatif sayı içeriyorsa, bunun yerine `sint32` veya `sint64` kullanın. Her iki tür de sırasıyla C# `int` ve `long` türleriyle eşlenir.
+1. `int32` ve `int64` için standart kodlama, imzalanmış değerlerle çalışırken verimsiz bir çalışmadır. Alanınız büyük olasılıkla negatif sayı içeriyorsa, bunun yerine `sint32` veya `sint64` kullanın. Bu türler sırasıyla C# `int` ve `long` türleriyle eşlenir.
 2. `fixed` alanlar, her zaman değerin ne kadar olduğunu bağımsız olarak aynı sayıda bayt kullanır. Bu davranış, daha büyük değerler için serileştirme ve seri durumdan çıkarma sağlar.
-3. Prototip dizeler UTF-8 (veya 7 bit ASCII) kodlardır ve kodlanan uzunluk 2<sup>32</sup>' den büyük olamaz.
+3. Prototip dizeler UTF-8 (veya 7 bit ASCII) kodlardır. Kodlanan uzunluk 2<sup>32</sup>' den büyük olamaz.
 4. Prototip çalışma zamanı, `byte[]` dizilerden ve bu kaynaklardan C# kolayca eşleyen bir `ByteString` türü sağlar.
 
 ## <a name="other-net-primitive-types"></a>Diğer .NET ilkel türleri
 
 ### <a name="dates-and-times"></a>Tarihler ve saatler
 
-Yerel skaler türler, <xref:System.DateTimeOffset>, <xref:System.DateTime>ve <xref:System.TimeSpan>eşdeğer C#tarih ve saat değerleri için sağlamaz. Bu türler, desteklenen platformlar genelinde daha karmaşık alan türleri için kod oluşturma ve çalışma zamanı desteği sağlayan bazı Google "tanınmış türler" uzantıları kullanılarak belirtilebilir. Aşağıdaki tabloda tarih ve saat türleri gösterilmektedir:
+Yerel skaler türler, <xref:System.DateTimeOffset>, <xref:System.DateTime>ve <xref:System.TimeSpan>eşdeğer C#tarih ve saat değerleri için sağlamaz. Bu türleri, bazı Google "tanınmış türler" uzantılarını kullanarak belirtebilirsiniz. Bu uzantılar desteklenen platformlar genelinde karmaşık alan türleri için kod oluşturma ve çalışma zamanı desteği sağlar. 
+
+Aşağıdaki tabloda tarih ve saat türleri gösterilmektedir:
 
 | C#türüyle | Prototip iyi bilinen tür |
 | ------- | ------------------------ |
@@ -65,7 +67,7 @@ message Meeting {
 }  
 ```
 
-C# Sınıfındaki oluşturulan Özellikler .net tarih ve saat türleri değildir. Özellikler, `DateTimeOffset`, `DateTime`ve `TimeSpan`dönüştürmek için yöntemler sağlayan `Google.Protobuf.WellKnownTypes` ad alanındaki `Timestamp` ve `Duration` sınıflarını kullanır.
+C# Sınıfındaki oluşturulan Özellikler .net tarih ve saat türleri değildir. Özellikler, `Google.Protobuf.WellKnownTypes` ad alanındaki `Timestamp` ve `Duration` sınıflarını kullanır. Bu sınıflar, `DateTimeOffset`, `DateTime`ve `TimeSpan`dönüştürmek için yöntemler sağlar.
 
 ```csharp
 // Create Timestamp and Duration from .NET DateTimeOffset and TimeSpan
@@ -81,15 +83,21 @@ TimeSpan? duration = meeting.Duration?.ToTimeSpan();
 ```
 
 > [!NOTE]
-> `Timestamp` türü UTC zamanları ile birlikte çalışarak `DateTimeOffset` değerler her zaman sıfır bir uzaklığa sahiptir ve `DateTime.Kind` özelliği her zaman `DateTimeKind.Utc`olur.
+> `Timestamp` türü UTC saatleriyle birlikte çalışmaktadır. `DateTimeOffset` değerler her zaman sıfır bir uzaklığa sahiptir ve `DateTime.Kind` özelliği her zaman `DateTimeKind.Utc`.
 
 ### <a name="systemguid"></a>System. Guid
 
-Diğer platformlarda `UUID` olarak bilinen <xref:System.Guid> türü, prototipte doğrudan desteklenmez ve bunun için iyi bilinen bir tür yoktur. En iyi yaklaşım, tüm diller ve platformlar tarafından ayrıştırılabilen standart `8-4-4-4-12` onaltılık biçimi (örneğin, `45a9fda3-bd01-47a9-8460-c1cd7484b0b3`) kullanılarak `string` alanı olarak `Guid` değerlerini idare kullanmaktır. `Guid` değerleri için `bytes` alanı kullanmayın, çünkü bitime ile ilgili sorunlar, Java gibi diğer platformlarla etkileşerek Erratic davranışa neden olabilir.
+Protoarabellek, diğer platformlarda `UUID` olarak bilinen <xref:System.Guid> türünü doğrudan desteklemez. Bunun için iyi bilinen bir tür yoktur. 
+
+En iyi yaklaşım, standart `8-4-4-4-12` onaltılı biçimi (örneğin, `45a9fda3-bd01-47a9-8460-c1cd7484b0b3`) kullanarak `Guid` değerlerini `string` alanı olarak idare kullanmaktır. Tüm diller ve platformlar bu biçimi ayrıştırabilirler.
+
+`Guid` değerleri için `bytes` alanı kullanmayın. ([Vikipedi Definition](https://en.wikipedia.org/wiki/Endianness)) *ile Ilgili sorunlar* , prototip, Java gibi diğer platformlarla etkileşime girildiğinde Erratic davranışa neden olabilir.
 
 ### <a name="nullable-types"></a>Boş değer atanabilir tipler
 
-İçin C# prototip kod oluşturma, `int32`için `int` gibi yerel türleri kullanır. Bu, değerlerin her zaman dahil olduğu ve null olamayacağı anlamına gelir. C# Kodunuzda `int?` kullanma gibi açık null gerektiren değerler Için, prototipli "Iyi bilinen türler", null yapılabilir C# türlere derlenen sarmalayıcıları içerir. Bunları kullanmak için, `wrappers.proto` `.proto` dosyanıza aşağıdaki gibi içeri aktarın:
+İçin C# prototip kod oluşturma, `int32`için `int` gibi yerel türleri kullanır. Bu nedenle değerler her zaman dahil edilir ve null olamaz. 
+
+C# Kodunuzda `int?` kullanma gibi açık null gerektiren değerler Için, prototipli "Iyi bilinen türler", null yapılabilir C# türlere derlenen sarmalayıcıları içerir. Bunları kullanmak için, `wrappers.proto` `.proto` dosyanıza aşağıdaki gibi içeri aktarın:
 
 ```protobuf  
 syntax = "proto3"
@@ -117,17 +125,17 @@ Aşağıdaki tabloda, sarmalama türlerinin, eşdeğer C# türlerine sahip tüm 
 | `uint?`   | `google.protobuf.UInt32Value` |
 | `ulong?`  | `google.protobuf.UInt64Value` |
 
-`Timestamp` ve `Duration` bilinen türler, .NET içinde sınıflar olarak temsil edilir. bu nedenle, null yapılabilir bir sürüme gerek yoktur, ancak `DateTimeOffset` veya `TimeSpan`dönüştürülürken bu türlerin özelliklerinde null denetimi yapmanız önemlidir.
+`Timestamp` ve `Duration` bilinen türler .NET içinde sınıflar olarak temsil edilir, bu nedenle null yapılabilir bir sürüme gerek yoktur. Ancak `DateTimeOffset` veya `TimeSpan`dönüştürme sırasında bu türlerin özelliklerinde null olup olmadığını denetlemek önemlidir.
 
 ## <a name="decimals"></a>In
 
-Prototip, yalnızca `double` ve `float`.NET `decimal` türünü yerel olarak desteklemez. Prototip projesinde, iyi bilinen türlere standart bir `Decimal` türü ekleme olasılığa, bunu destekleyen diller ve çerçeveler için platform desteğiyle, ancak henüz hiçbir şey uygulanmadığı için, prototipli projede devam eden bir tartışma vardır.
+Prototip, yalnızca `double` ve `float`.NET `decimal` türünü yerel olarak desteklemez. Prototip projesinde, iyi bilinen türlere standart bir `Decimal` türü ekleme olasılığa ilişkin, bunu destekleyen diller ve çerçeveler için platform desteği ile birlikte, yaygın olarak kullanılan bir tartışmada devam eden bir tartışma vardır. Henüz hiçbir şey uygulanmadı.
 
-.NET istemcileri ve sunucuları arasında güvenli seri hale getirme için çalışacak `decimal` türünü temsil eden bir ileti tanımı oluşturmak mümkündür, ancak diğer platformlardaki geliştiricilerin kullanılmakta olan biçimi anlaması ve onun için kendi işlemesini uygulaması gerekir.
+.NET istemcileri ve sunucuları arasında güvenli serileştirme için çalışacak `decimal` türünü temsil eden bir ileti tanımı oluşturmak mümkündür. Ancak diğer platformlardaki geliştiricilerin, kullanılmakta olan biçimi anlaması ve onun için kendi işlemesini uygulaması gerekir.
 
 ### <a name="creating-a-custom-decimal-type-for-protobuf"></a>Protoarabellek için özel bir ondalık tür oluşturma
 
-Çok basit bir uygulama, `currency` alanı olmadan bazı Google API 'Leri tarafından kullanılan standart olmayan `Money` türüne benzer.
+Basit bir uygulama, bazı Google API 'Lerinin kullandığı, `currency` alanı olmadan standart olmayan `Money` türüne benzer olabilir.
 
 ```protobuf
 package CustomTypes;
@@ -144,12 +152,12 @@ message Decimal {
 }
 ```
 
-`nanos` alanı `-0.999_999_999``0.999_999_999` değerleri temsil eder. Örneğin, `1.5m` `decimal` değer `{ units = 1, nanos = 500_000_000 }` olarak temsil edilir (Bu nedenle bu örnekteki `nanos` alanı, daha büyük değerler için `sfixed32` daha verimli bir şekilde kodlayan `int32` türünü kullanır). `units` alanı negatifse, `nanos` alanı da negatif olmalıdır.
+`nanos` alanı `-0.999_999_999``0.999_999_999` değerleri temsil eder. Örneğin, `1.5m` `decimal` değer `{ units = 1, nanos = 500_000_000 }`olarak temsil edilir. Bu nedenle, bu örnekteki `nanos` alanı, daha büyük değerler için `int32` daha verimli bir şekilde kodlayan `sfixed32` türünü kullanır. `units` alanı negatifse, `nanos` alanı da negatif olmalıdır.
 
 > [!NOTE]
-> `decimal` değerlerini bayt dizeleri olarak kodlamak için birden çok başka algoritma mevcuttur, ancak bu iletinin bunlardan herhangi birinin anlaşılması çok daha kolay olur ve değerler farklı platformlarda *[bitikten](https://en.wikipedia.org/wiki/Endianness)* etkilenmez.
+> `decimal` değerlerini bayt dizeleri olarak kodlamak için birden çok başka algoritma mevcuttur, ancak bu iletinin bunlardan herhangi birinin anlaşılması daha kolaydır. Değerler farklı platformlarda bitime tarafından etkilenmez.
 
-Bu tür ile BCL `decimal` türü arasında dönüştürme bunun gibi bir şekilde C# uygulanabilir.
+Bu tür ile BCL `decimal` türü arasında dönüştürme C# şöyle uygulanabilir:
 
 ```csharp
 namespace CustomTypes
@@ -182,7 +190,7 @@ namespace CustomTypes
 ```
 
 > [!IMPORTANT]
-> Bunun gibi özel yardımcı program ileti türlerini kullandığınızda, diğer geliştiricilerin kendi dillerinde veya çerçevesindeki eşdeğer türe ve bu türden dönüştürme uygulayabilmesi için, onları `.proto` yorumlarla belgeetmeniz **gerekir** .
+> Bu gibi özel ileti türlerini kullandığınızda, bunları `.proto`açıklamalarıyla belgeetmeniz *gerekir* . Diğer geliştiriciler daha sonra kendi dillerinde veya çerçevesinde eşdeğer türe ve dönüşümünü uygulayabilir.
 
 >[!div class="step-by-step"]
 >[Önceki](protobuf-messages.md)

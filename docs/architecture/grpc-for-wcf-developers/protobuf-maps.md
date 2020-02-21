@@ -1,17 +1,17 @@
 ---
 title: WCF geliştiricileri için gRPC, sözlüklere yönelik prototip haritaları
-description: Prototiplerinin göstermek için nasıl kullanılacağını anlayın. NET ' in Sözlük türleri.
+description: .NET 'teki sözlük türlerini temsil etmek için prototiplerin nasıl kullanılacağını anlayın.
 ms.date: 09/09/2019
-ms.openlocfilehash: 8b4f29daa263f329dc533d3ddc596d0f47c1b6e0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: bf848bbc7e3618f6d78e280fcd85d5eb88d5cfae
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967421"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543137"
 ---
 # <a name="protobuf-maps-for-dictionaries"></a>Protobuf sözlük eşlemeleri
 
-İletilerde adlandırılmış değerlerin rastgele koleksiyonlarını temsil etmek önemlidir. .NET ' te genellikle Sözlük türleri kullanılarak işlenir. Prototip, .NET <xref:System.Collections.Generic.IDictionary%602> türünün eşdeğeridir `map<key_type, value_type>` türüdür. Bu bölümde, prototipte bir `map` bildirme ve oluşturulan kodun nasıl kullanılacağı gösterilmektedir.
+İletilerde adlandırılmış değerlerin rastgele koleksiyonlarını temsil etmek önemlidir. .NET sürümünde bu genellikle Sözlük türleri aracılığıyla işlenir. Protokol arabelleğindeki .NET <xref:System.Collections.Generic.IDictionary%602> türünün (Protobuffer) eşdeğeri `map<key_type, value_type>` türüdür. Bu bölümde, prototipte bir `map` türünün nasıl bildirildiği ve oluşturulan kodun nasıl kullanılacağı gösterilmektedir.
 
 ```protobuf
 message StockPrices {
@@ -19,9 +19,9 @@ message StockPrices {
 }
 ```
 
-Oluşturulan kodda `map` alanları, <xref:System.Collections.Generic.IDictionary%602>dahil olmak üzere standart .NET koleksiyonu arabirimlerini uygulayan `Google.Protobuf.Collections.MapField<TKey, TValue>` sınıfını kullanır.
+Oluşturulan kodda `map` alanları `Google.Protobuf.Collections.MapField<TKey, TValue>` sınıfını kullanır. Bu sınıf, <xref:System.Collections.Generic.IDictionary%602>dahil olmak üzere standart .NET koleksiyonu arabirimlerini uygular.
 
-Harita alanları bir ileti tanımında doğrudan yinelenemez, ancak bir harita içeren iç içe geçmiş bir ileti oluşturabilir ve aşağıdaki örnekte olduğu gibi ileti türünde `repeated` kullanabilirsiniz:
+Harita alanları bir ileti tanımında doğrudan yinelenemez. Ancak, aşağıdaki örnekte olduğu gibi, bir harita içeren iç içe geçmiş bir ileti oluşturabilir ve ileti türünde `repeated` kullanabilirsiniz:
 
 ```protobuf
 message Order {
@@ -45,7 +45,7 @@ public Order CreateOrder(Dictionary<string, string> attributes)
 }
 ```
 
-## <a name="further-reading"></a>Daha fazla okuma
+## <a name="further-reading"></a>Daha fazla bilgi
 
 Prototip hakkında daha fazla bilgi için bkz. resmi [prototip belgeleri](https://developers.google.com/protocol-buffers/docs/overview).
 

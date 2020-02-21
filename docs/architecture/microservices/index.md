@@ -2,12 +2,12 @@
 title: .NET mikro hizmetleri. Kapsayıcılı .NET Uygulamaları Mimarisi
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmetler modüler ve bağımsız olarak dağıtılabilir hizmetlerdir. Docker Kapsayıcıları (Linux ve Windows için), bir hizmet ve bağımlılıklarını tek bir birim halinde paketleyerek dağıtım ve test etmeyi basitleştirir. Bu, daha sonra yalıtılmış bir ortamda çalıştırılır.
 ms.date: 01/30/2020
-ms.openlocfilehash: 5da167de1ffd2169aea44b9872281e71c87927b1
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 1337fe56e78e03a85627737bd52a089fd946b842
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502625"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543540"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET mikro hizmetleri: Kapsayıcılı .NET uygulamaları için mimari
 
@@ -21,7 +21,7 @@ Daha kolay çalışmaya başlamak için kılavuz, keşfedebileceğiniz bir başv
 
 ## <a name="action-links"></a>Eylem bağlantıları
 
-- Bu e-kitabı tercih ettiğiniz biçime indirin (Yalnızca Ingilizce sürüm): | [PDF](https://aka.ms/microservicesebook) | [mobi](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
+- Bu e-kitap ayrıca bir PDF biçiminde (Yalnızca Ingilizce sürüm) [indirilebilir](https://aka.ms/microservicesebook)
 
 - [GitHub 'daki başvuru uygulaması Eshoponcontainers 'ı](https://github.com/dotnet-architecture/eShopOnContainers) kopyalama/çatal
 
@@ -78,9 +78,7 @@ Uygulamanın amacı, mimari desenleri göstersağlamaktır. Gerçek dünyada uyg
 
 ## <a name="send-us-your-feedback"></a>Görüşlerinizi bize gönderin!
 
-.NET 'teki Kapsayıcılı uygulamaların ve mikro hizmetlerin mimarisini anlamanıza yardımcı olması için bu kılavuzu yazdık. Kılavuz ve ilgili başvuru uygulaması geliştireceğiz, bu nedenle geri bildirimlerinize hoş geldiniz! Bu kılavuzun nasıl iyileştirilen hakkında açıklamalarınız varsa, lütfen şu kişilere gönderin:
-
-[dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com)
+.NET 'teki Kapsayıcılı uygulamaların ve mikro hizmetlerin mimarisini anlamanıza yardımcı olması için bu kılavuzu yazdık. Kılavuz ve ilgili başvuru uygulaması geliştireceğiz, bu nedenle geri bildirimlerinize hoş geldiniz! Bu kılavuzun nasıl iyileştirilen hakkında açıklamalarınız varsa <https://aka.ms/ebookfeedback>adresinden geri bildirimde bulunun.
 
 ## <a name="credits"></a>Krediler
 
@@ -149,8 +147,6 @@ Katılımcılar ve gözden geçirenler:
 > **MIGUEL Veloso**, düz kavramlarda yazılım geliştirme mühendisi
 
 ## <a name="copyright"></a>Yaptırımlar
-
-INDIRME şu adreste bulunabilir: <https://aka.ms/microservicesebook>
 
 YAYıMLAYAN
 

@@ -2,16 +2,18 @@
 title: Prototip için ayrılmış alanlar-WCF geliştiricileri için gRPC
 description: Sürümler arası uyumluluk için ayrılmış alanlar hakkında bilgi edinin.
 ms.date: 09/09/2019
-ms.openlocfilehash: e589cd38a712ce014fa2c4d847fbde359d538dd0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 50082a1aab2e7707a1839b9d56455124a9e4a6a1
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967307"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542982"
 ---
 # <a name="protobuf-reserved-fields"></a>Protobuf ayrılmış alanları
 
-Prototipin geri uyumluluk garantisi, her zaman aynı veri öğesini temsil eden alan numaralarına dayanır. Bir alan, hizmetin yeni bir sürümündeki iletiden kaldırılırsa, bu alan numarası asla yeniden kullanılmamalıdır. Bu, `reserved` anahtar sözcüğü kullanılarak zorlanabilir. `displayName` ve `marketId` alanlar daha önce tanımlanan `Stock` iletiden kaldırılmışsa, alan numaralarının aşağıdaki örnekte olduğu gibi ayrılması gerekir.
+Protokol arabelleğindeki geri uyumluluk garantisi (Protobuffer), her zaman aynı veri öğesini temsil eden alan numaralarına dayanır. Bir alan, hizmetin yeni bir sürümündeki iletiden kaldırılırsa, bu alan numarası asla yeniden kullanılmamalıdır. Bunu, `reserved` anahtar sözcüğünü kullanarak gerçekleştirebilirsiniz. 
+
+`displayName` ve `marketId` alanlar daha önce tanımlanan `Stock` iletiden kaldırılmışsa, alan numaralarının aşağıdaki örnekte olduğu gibi ayrılması gerekir.
 
 ```protobuf
 syntax "proto3";
@@ -25,7 +27,7 @@ message Stock {
 }
 ```
 
-`reserved` anahtar sözcüğü, gelecekte eklenebilen alanlar için yer tutucu olarak da kullanılabilir. Ardışık alan numaraları `to` anahtar sözcüğünü kullanarak bir Aralık olarak ifade edilebilir.
+`reserved` anahtar sözcüğünü gelecekte eklenebilen alanlar için yer tutucu olarak da kullanabilirsiniz. `to` anahtar sözcüğünü kullanarak bitişik alan numaralarını bir Aralık olarak ifade edebilirsiniz.
 
 ```protobuf
 syntax "proto3";

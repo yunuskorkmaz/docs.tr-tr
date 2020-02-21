@@ -2,20 +2,22 @@
 title: Prototipsiz iletiler-WCF geliştiricileri için gRPC
 description: Daha fazla bilgi için bkz. IDL ve içinde C#oluşturulan prototip.
 ms.date: 09/09/2019
-ms.openlocfilehash: 4d543fe88c21999cd820a0bb98073d58a229913a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c7375bafb7572b0eaa0458b0310a0114e3fd078c
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967433"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543046"
 ---
 # <a name="protobuf-messages"></a>Protobuf iletileri
 
-Bu bölümde, `.proto` dosyalarında prototip iletilerinin nasıl bildirildiği, alan numaralarının ve türlerin temel kavramları açıklanmaktadır ve `protoc` derleyicisi tarafından oluşturulan C# koda bakar. Bölümün geri kalanı, farklı veri türlerinin prototipte nasıl temsil edildiği konusunda daha ayrıntılı bilgi sağlayacaktır.
+Bu bölümde, `.proto` dosyalarında protokol arabelleği (Protobuffer) iletilerinin nasıl bildirildiği ele alınmaktadır. Alan numaralarının ve türlerinin temel kavramlarını açıklar ve `protoc` derleyicisinin oluşturduğu C# koda bakar. 
+
+Bölümün geri kalanı, farklı veri türlerinin prototipte nasıl temsil edildiği konusunda daha ayrıntılı bilgi sağlayacaktır.
 
 ## <a name="declaring-a-message"></a>İleti bildirme
 
-WCF 'de, hisse senedi Pazar ticareti uygulaması için bir `Stock` sınıfı aşağıdaki örnekte olduğu gibi tanımlanabilir:
+Windows Communication Foundation (WCF) ' de, hisse senedi Pazar ticareti uygulaması için bir `Stock` sınıfı aşağıdaki örnekte olduğu gibi tanımlanabilir:
 
 ```csharp
 namespace TraderSys
@@ -35,7 +37,7 @@ namespace TraderSys
 }
 ```
 
-Protoarabelleğe denk sınıfı uygulamak için, `.proto` dosyasında bildirilmelidir. `protoc` derleyici daha sonra yapı sürecinin bir parçası olarak .NET sınıfını oluşturur.
+Protoarabelleğe denk sınıfı uygulamak için, `.proto` dosyasında bildirmeniz gerekir. `protoc` derleyici daha sonra yapı sürecinin bir parçası olarak .NET sınıfını oluşturur.
 
 ```protobuf
 syntax "proto3";
@@ -52,24 +54,24 @@ message Stock {
 }  
 ```
 
-İlk satır, kullanılmakta olan sözdizimi sürümünü bildirir. Dilin sürüm 3 2016 ' de yayımlanmıştır ve gRPC Hizmetleri için önerilen sürümdür.
+İlk satır, kullanılmakta olan sözdizimi sürümünü bildirir. Dilin sürüm 3 2016 ' de yayımlanmıştır. Bu, gRPC Hizmetleri için önerdiğimiz sürümdür.
 
-`option csharp_namespace` satırı, oluşturulan C# türler için kullanılacak ad alanını belirtir. `.proto` dosyası diğer diller için derlendiğinde Bu seçenek yok sayılır. Prototip dosyalarının birkaç dilde dile özgü seçenekleri içermesi yaygındır.
+`option csharp_namespace` satırı, oluşturulan C# türler için kullanılacak ad alanını belirtir. `.proto` dosyası diğer diller için derlendiğinde Bu seçenek yok sayılır. Prototip dosyaları genellikle birkaç dil için dile özgü seçenekler içerir.
 
-`Stock` ileti tanımı, her biri türü, adı ve alan numarası olan dört alanı belirtir.
+`Stock` ileti tanımı dört alanı belirtir. Her birinin bir türü, adı ve alan numarası vardır.
 
 ## <a name="field-numbers"></a>Alan numaraları
 
-Alan numaraları, prototipin önemli bir parçasıdır. Bunlar, ikili kodlu verilerdeki alanları tanımlamak için kullanılır. Bu, sürümden hizmetinizin sürümüne değiştiremeyeceği anlamına gelir. Bunun avantajı, geriye doğru ve ileri uyumluluğun mümkün olmadır. Eksik değer olasılığı işlendiği sürece, istemciler ve hizmetler, hakkında bilgi sahibi olmadıkları alan numaralarını yok sayacaktır.
+Alan numaraları, prototipin önemli bir parçasıdır. Bunlar, ikili kodlu verilerdeki alanları tanımlamak için kullanılır. Bu, sürümden hizmetinizin sürümüne değiştiremeyeceği anlamına gelir. Bunun avantajı, geriye dönük uyumluluk ve ileriye doğru uyumluluk olanaklarından yararlanabilmektir. Eksik değer olasılığı işlendiği sürece, istemciler ve hizmetler, hakkında bilgi sahibi olmadıkları alan numaralarını yok sayacaktır.
 
-İkili biçimde, alan numarası bir tür tanımlayıcısıyla birleştirilir. 1 ile 15 arasında alan numaraları, tek bir bayt olarak türlerine göre kodlanabilir; 16 ile 2047 arasında sayılar 2 bayt sürer. Herhangi bir nedenden dolayı bir ileti üzerinde 2047 ' den fazla alana ihtiyacınız varsa daha yüksek bir değere geçebilirsiniz. 1 ile 15 arasındaki alan numaralarının tek baytlık tanımlayıcıları daha iyi performans sağlar, bu nedenle bunları en temel, sık kullanılan alanlar için kullanmanız gerekir.
+İkili biçimde, alan numarası bir tür tanımlayıcısıyla birleştirilir. 1 ile 15 arasında alan numaraları, tek bir bayt olarak türlerine göre kodlanabilir. 16 ile 2.047 arasında sayılar 2 bayt sürer. Herhangi bir nedenden dolayı bir ileti üzerinde 2.047 ' den fazla alana ihtiyacınız varsa daha yüksek bir değere geçebilirsiniz. 1 ile 15 arasındaki alan numaralarının tek baytlık tanımlayıcıları daha iyi performans sağlar, bu nedenle bunları en temel, sık kullanılan alanlar için kullanmanız gerekir.
 
 ## <a name="types"></a>Türler
 
 Tür bildirimleri, [sonraki bölümde](protobuf-data-types.md)daha ayrıntılı bir şekilde ele alınan Prototiparabelleği yerel skaler veri türlerini kullanıyor. Bu bölümün geri kalanı, prototipin yerleşik türlerini kapsayacak ve bunların ortak .NET türleriyle ilişkisini göstermeyecektir.
 
 > [!NOTE]
-> Prototip `decimal` bir türü yerel olarak desteklemez, bu nedenle bunun yerine Double kullanılır. Tam ondalık duyarlık gerektiren uygulamalar için, bu bölümün sonraki bölümünde yer [alan Ondalıklar bölümüne](protobuf-data-types.md#decimals) bakın.
+> Prototip `decimal` bir türü yerel olarak desteklemez, bu nedenle bunun yerine `double` kullanılır. Tam ondalık duyarlık gerektiren uygulamalar için, bu bölümün sonraki bölümünde yer [alan Ondalıklar bölümüne](protobuf-data-types.md#decimals) bakın.
 
 ## <a name="the-generated-code"></a>Oluşturulan kod
 
@@ -85,11 +87,11 @@ public class Stock
 }
 ```
 
-Oluşturulan gerçek kod bundan çok daha karmaşıktır, çünkü her bir sınıf kendisini seri hale getirmek için gereken tüm kodu ve ikili tel biçiminde seri durumdan çıkarmak için gereklidir.
+Oluşturulan gerçek kod bundan çok daha karmaşıktır. Bunun nedeni, her bir sınıfın kendisini seri hale getirmek için gereken tüm kodu ve ikili tel biçiminde seri durumdan çıkarmak için gerekli olduğunu içerir.
 
 ### <a name="property-names"></a>Özellik adları
 
-Prototip derleyicinin, `.proto` dosyasında `snake_case` olsa da özellik adlarına `PascalCase` uygulandığını unutmayın. [Prototipli Stil Kılavuzu](https://developers.google.com/protocol-buffers/docs/style) , diğer platformlar için kod oluşturmanın, kuralları için beklenen durumu üretmeleri için ileti tanımlarınızda `snake_case` kullanılmasını önerir.
+Prototip derleyicisinin, `.proto` dosyasında `snake_case` olsa da özellik adlarına `PascalCase` uygulandığını unutmayın. [Prototipli Stil Kılavuzu](https://developers.google.com/protocol-buffers/docs/style) , diğer platformlar için kod oluşturmanın, kuralları için beklenen durumu üretmeleri için ileti tanımlarınızda `snake_case` kullanılmasını önerir.
 
 >[!div class="step-by-step"]
 >[Önceki](protocol-buffers.md)

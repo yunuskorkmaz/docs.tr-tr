@@ -2,12 +2,12 @@
 title: Self-hosted gRPC uygulamaları-WCF geliştiricileri için gRPC
 description: ASP.NET Core gRPC uygulamalarını self-hosted Hizmetleri olarak dağıtma.
 ms.date: 09/02/2019
-ms.openlocfilehash: 2244f161ad4b5d60138ae0f7b4d6a9c8c8829aa8
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ee370ba1893b060505b38ddf84235bd84433ad32
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503407"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542995"
 ---
 # <a name="self-hosted-grpc-applications"></a>Şirket içinde barındırılan gRPC uygulamaları
 
@@ -90,6 +90,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
   ```dotnetcli
   dotnet publish -c Release -r linux-x64 -o ./publish
   ```
+  
 `publish` dizininin tüm içeriğini Linux ana bilgisayarındaki bir yükleme klasörüne kopyalayın. Hizmeti kaydettirmek, `/etc/systemd/system` dizinine eklenmek üzere *birim dosyası*olarak adlandırılan özel bir dosya gerektirir. Bu klasörde bir dosya oluşturmak için kök izninizin olması gerekir. `systemd` kullanmak istediğiniz tanımlayıcıyı ve `.service` uzantısını adlandırın. Örneğin, `/etc/systemd/system/myapp.service`kullanın.
 
 Hizmet dosyası, aşağıdaki örnekte gösterildiği gibi ıNı biçimini kullanır:

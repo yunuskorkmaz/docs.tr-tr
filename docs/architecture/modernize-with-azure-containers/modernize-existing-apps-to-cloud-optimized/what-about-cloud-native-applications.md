@@ -2,12 +2,12 @@
 title: Bulutta Yerel uygulamalar nedir?
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Bulutta yerel uygulamalar hakkında ne olacak?
 ms.date: 04/28/2018
-ms.openlocfilehash: cf4c3b24a4eeb62ed84a5fccb294b675d38fcc36
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: d2a7f89e347d75ddbdae84c8eb57e32447b83297
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72318431"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543553"
 ---
 # <a name="what-about-cloud-native-applications"></a>Bulutta Yerel uygulamalar nedir?
 
@@ -41,7 +41,10 @@ Cloud-Native, büyük ve görev açısından kritik uygulamalar için daha geli�
 
 [Bulut Yerel Bilgi Işlem altyapısı (CNCF)](https://www.cncf.io/) , bulutta yerel ilkelerin birincil promokdır. Microsoft, [CNCF 'nin bir üyesidir](https://azure.microsoft.com/blog/announcing-cncf/).
 
-Örnek bir tanım ve bulut Yerel uygulamalarının özellikleri hakkında daha fazla bilgi için bkz. Gartner, [bulutta yerel uygulamaları mimari ve tasarlama](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Microsoft 'un bulut Yerel uygulamasının nasıl uygulanacağı hakkında belirli yönergeler için bkz. [.net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için mimari](https://aka.ms/microservicesebook).
+Bulutta yerel uygulamalar tasarlama ve geliştirme hakkında ayrıntılı yönergeler için aşağıdaki ücretsiz e-kitapları okuyun:
+
+* [Azure için bulutta yerel .NET uygulamaları tasarlama](../../cloud-native/introduction.md)
+* [.Net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için mimari](../../microservices/index.md).
 
 Tam bir uygulamayı bulutta yerel modele geçirdiğinizde göz önünde bulundurmanız gereken en önemli faktör, mikro hizmet tabanlı bir mimariye yeniden mimarinizin olması gerekir. Bu, ilgili büyük yeniden düzenleme süreci nedeniyle geliştirmede önemli bir yatırım gerektirir. Bu seçenek genellikle yeni ölçeklenebilirlik düzeyi ve uzun süreli çeviklik gerektiren görev açısından kritik uygulamalar için seçilir. Ancak, yalnızca birkaç yeni senaryo için mikro hizmetler ekleyerek buluta yerel olarak taşımaya başlayabilir ve sonunda uygulamayı mikro hizmet olarak tamamen yeniden düzenleyin. Bu, bazı senaryolar için en iyi seçenek olan artımlı bir yaklaşımdır.
 
