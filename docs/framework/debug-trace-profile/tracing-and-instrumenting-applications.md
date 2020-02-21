@@ -13,12 +13,12 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-ms.openlocfilehash: 1dd7317e38b6bee44dda75319c9f7c2a6567e3b4
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2dcdbaf50ed053d43fc2df2c80fe7688e7b3e51f
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216034"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542617"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>İzleme Uygulamaları
 İzleme, çalışırken uygulamanızın yürütülmesini izlemenize yönelik bir yoldur. Geliştirme sırasında .NET Framework uygulamanıza izleme ve hata ayıklama araçları ekleyebilirsiniz ve bu araçları, uygulamayı geliştirirken ve dağıttıktan sonra kullanabilirsiniz. Daha sonraki analize yönelik günlüklerde, metin dosyalarında veya diğer cihazlarda hatalar ve uygulama yürütme bilgilerini kaydetmek için <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType>ve <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> sınıflarını kullanabilirsiniz.  
@@ -97,7 +97,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 7. Çalışma zamanı sırasında bir sorun oluşursa, uygun izleme anahtarını açın. Daha fazla bilgi için bkz. [Izleme anahtarlarını yapılandırma](how-to-create-initialize-and-configure-trace-switches.md).  
   
-     İzleme kodu, izleme iletilerini belirli bir hedefe Yazar; Örneğin, bir ekran, metin dosyası veya olay günlüğü. **Trace. Listeners** koleksiyonuna eklediğiniz dinleyicinin türü hedefi belirler.  
+     İzleme kodu, izleme iletilerini belirli bir hedefe Yazar; Örneğin, bir ekran, metin dosyası veya olay günlüğü. <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> koleksiyonuna eklediğiniz dinleyicinin türü hedefi belirler.  
   
 8. Uygulamadaki sorunu tanımlamak ve anlamak için izleme iletilerini çözümleyin.  
   
@@ -120,18 +120,18 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 |Yöntem|Çıktı|  
 |------------|------------|  
-|**Vermediğini**|Belirtilen metin; ya da hiçbiri belirtilmemişse, çağrı yığını. Çıkış **yalnızca, onay deyimindeki bir** bağımsız değişken olarak belirtilen koşul **false**olduğunda yazılır.|  
-|**Neden**|Belirtilen metin; ya da hiçbiri belirtilmemişse, çağrı yığını.|  
-|**Yazma**|Belirtilen metin.|  
-|**WriteIf**|Belirtilen metin, **WriteIf** ifadesinde bağımsız değişken olarak belirtilen koşul karşılandığında.|  
-|**WriteLine**|Belirtilen metin ve bir satır başı.|  
-|**WriteLineIf**|Belirtilen metin ve bir satır başı, **WriteLineIf** ifadesinde bağımsız değişken olarak belirtilen koşul karşılandığında.|  
+|`Assert`|Belirtilen metin; ya da hiçbiri belirtilmemişse, çağrı yığını. Çıktı yalnızca `Assert` deyimindeki bir bağımsız değişken olarak belirtilen koşul **false**olduğunda yazılır.|  
+|`Fail`|Belirtilen metin; ya da hiçbiri belirtilmemişse, çağrı yığını.|  
+|`Write`|Belirtilen metin.|  
+|`WriteIf`|`WriteIf` deyimindeki bir bağımsız değişken olarak belirtilen koşul karşılandığında, belirtilen metin.|  
+|`WriteLine`|Belirtilen metin ve bir satır başı.|  
+|`WriteLineIf`|`WriteLineIf` deyimindeki bir bağımsız değişken olarak belirtilen koşul karşılandığında, belirtilen metin ve bir satır başı.|  
   
- <xref:System.Diagnostics.Trace.Listeners%2A> koleksiyonundaki tüm dinleyiciler yukarıdaki tabloda açıklanan iletileri alır, ancak alınan eylemler iletiyi alan dinleyicinin ne olduğuna bağlı olarak farklılık gösterebilir. Örneğin, <xref:System.Diagnostics.DefaultTraceListener> **başarısız** veya başarısız **onaylama** bildirimi aldığında bir onaylama iletişim kutusu görüntüler, ancak bir <xref:System.Diagnostics.TextWriterTraceListener> çıktıyı akışa yazar.  
+ <xref:System.Diagnostics.Trace.Listeners%2A> koleksiyonundaki tüm dinleyiciler yukarıdaki tabloda açıklanan iletileri alır, ancak alınan eylemler iletiyi alan dinleyicinin ne olduğuna bağlı olarak farklılık gösterebilir. Örneğin, <xref:System.Diagnostics.DefaultTraceListener> bir `Fail` veya başarısız `Assert` bildirimi aldığında bir onaylama iletişim kutusu görüntüler, ancak <xref:System.Diagnostics.TextWriterTraceListener> çıktıyı akışa yazar.  
   
  Kendi dinleyicinizi uygulayarak özel sonuçlar elde edebilirsiniz. Özel bir izleme dinleyicisi Örneğin, iletileri bir ileti kutusuna görüntüleyebilir veya bir tabloya ileti eklemek için bir veritabanına bağlanabilir. Tüm özel dinleyiciler yukarıda bahsedilen altı yöntemi desteklemelidir. Geliştirici tanımlı dinleyiciler oluşturma hakkında daha fazla bilgi için .NET Framework başvurusunda <xref:System.Diagnostics.TraceListener> bakın.  
   
- **Write** ve **WriteLine** yöntemleri her zaman belirttiğiniz metni yazar. **Onaylama**, **Writeif**ve **WriteLineIf** , belirtilen metni yazıp yazmadığını denetleyen bir Boole bağımsız değişkeni gerektirir; yalnızca ifade **true** Ise ( **WriteIf** ve **WriteLineIf**için) veya **false** (onay **için) ise**, belirtilen metni yazar. **Fail** yöntemi her zaman belirtilen metni yazar. Daha fazla bilgi için bkz. [nasıl yapılır: uygulama koduna Izleme deyimleri ekleme](how-to-add-trace-statements-to-application-code.md) ve .NET Framework başvurusu.  
+ `Write` ve `WriteLine` yöntemleri her zaman belirttiğiniz metni yazar. `Assert`, `WriteIf`ve `WriteLineIf`, belirtilen metni yazıp yazmadığını denetleyen bir Boole bağımsız değişkeni gerektirir; yalnızca ifade **true** ise (`WriteIf` ve `WriteLineIf`) veya **false** (`Assert`için) ise, belirtilen metni yazar. `Fail` yöntemi her zaman belirtilen metni yazar. Daha fazla bilgi için bkz. [nasıl yapılır: uygulama koduna Izleme deyimleri ekleme](how-to-add-trace-statements-to-application-code.md) ve .NET Framework başvurusu.  
   
 ## <a name="security-concerns"></a>Güvenlik sorunları  
  Bir ASP.NET uygulamasını dağıtımdan önce izlemeyi ve hata ayıklamayı devre dışı bırakmayın, uygulamanız kötü amaçlı bir program tarafından yararlanılabilen hakkında bilgi açığa çıkabilir. Daha fazla bilgi için bkz. [nasıl yapılır: izleme ve hata ayıklama Ile koşullu derleme](how-to-compile-conditionally-with-trace-and-debug.md), [derleme ve derleme](/visualstudio/ide/compiling-and-building-in-visual-studio)ve [nasıl yapılır: izleme anahtarları oluşturma, başlatma ve yapılandırma](how-to-create-initialize-and-configure-trace-switches.md). Hata ayıklama Ayrıca Internet Information Services (IIS) aracılığıyla yapılandırılabilir.  

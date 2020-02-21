@@ -1,193 +1,211 @@
 ---
-title: .NET Core küresel aracı oluşturma
-description: Genel bir aracın nasıl oluşturulacağını açıklar. Genel araç, .NET Core CLI aracılığıyla yüklenen bir konsol uygulamasıdır.
-author: Thraka
-ms.author: adegeo
-ms.date: 08/22/2018
-ms.openlocfilehash: 1daecf7234f02a5fe0dcf25cf7edbb0af327b8c1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+title: 'Öğretici: .NET Core aracı oluşturma'
+description: .NET Core aracı oluşturmayı öğrenin. Araç, .NET Core CLI kullanılarak yüklenen bir konsol uygulamasıdır.
+ms.date: 02/12/2020
+ms.openlocfilehash: 558bf9e37efc8de68a61f1384fababe342ab7d66
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343518"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543410"
 ---
-# <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>.NET Core CLI kullanarak bir .NET Core genel aracı oluşturun
+# <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>Öğretici: .NET Core CLI kullanarak bir .NET Core aracı oluşturma
 
-Bu makalede bir .NET Core küresel aracı oluşturma ve paketleme hakkında öğretilir. .NET Core CLI, bir konsol uygulamasını küresel bir araç olarak oluşturmanıza olanak tanır. Bu, başkalarının kolayca yükleyip çalıştırabilmesini sağlar. .NET Core küresel araçları, .NET Core CLI yüklenen NuGet paketlerdir. Küresel araçlar hakkında daha fazla bilgi için bkz. [.NET Core genel araçlarına genel bakış](global-tools.md).
+**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+Bu öğreticide bir .NET Core aracı oluşturma ve paketleme öğretilir. .NET Core CLI, diğer kullanıcıların yükleyebileceği ve çalıştırabileceği bir araç olarak konsol uygulaması oluşturmanızı sağlar. .NET Core araçları, .NET Core CLI yüklenen NuGet paketlerdir. Araçlar hakkında daha fazla bilgi için bkz. [.NET Core araçlarına genel bakış](global-tools.md).
+
+Oluşturacağınız araç, girdi olarak bir ileti alıp iletiyi bir robot görüntüsünü oluşturan metin satırlarıyla birlikte görüntüleyen bir konsol uygulamasıdır.
+
+Bu, bir dizi üç öğreticiden ilkdir. Bu öğreticide bir araç oluşturur ve paketleyin. Sonraki iki öğreticilerde [, aracı genel araç olarak kullanır](global-tools-how-to-use.md) ve [Aracı yerel bir araç olarak kullanabilirsiniz](local-tools-how-to-use.md).
+
+## <a name="prerequisites"></a>Önkoşullar
+
+- [.NET Core SDK 3,1](https://dotnet.microsoft.com/download) veya sonraki bir sürümü.
+
+  Bu öğreticide, genel [araçlar .NET Core SDK](global-tools-how-to-use.md) 2,1 ve üzeri sürümler için bu öğretici ve bu sürümden itibaren küresel araçlar geçerlidir. Ancak bu öğreticide, [Yerel araçlar öğreticisine](local-tools-how-to-use.md)devam etme seçeneğine sahip olmanız için 3,1 veya sonraki bir sürümü yüklemiş olduğunuz varsayılmaktadır. Yerel araçlar .NET Core SDK 3,0 ' den başlayarak kullanılabilir. Bir araç oluşturma yordamları, bunu küresel bir araç olarak veya yerel bir araç olarak kullanıp kullanmayacağınızı de aynıdır.
+  
+- Tercih ettiğiniz bir metin veya kod düzenleyicisi.
 
 ## <a name="create-a-project"></a>Proje oluştur
 
-Bu makale bir proje oluşturmak ve yönetmek için .NET Core CLI kullanır.
+1. Bir komut istemi açın ve *Depo*adlı bir klasör oluşturun.
 
-Örnek aracımız, bir ASCII bot üreten ve bir ileti yazdıran bir konsol uygulaması olacaktır. İlk olarak, yeni bir .NET Core konsol uygulaması oluşturun.
+1. *Depo* klasörüne gidin ve aşağıdaki komutu girin ve proje adının benzersiz olması için `<name>` benzersiz bir değerle değiştirin. 
 
-```dotnetcli
-dotnet new console -o botsay
-```
+   ```dotnetcli
+   dotnet new console -n botsay-<name>
+   ```
 
-Önceki komut tarafından oluşturulan `botsay` dizinine gidin.
+   Örneğin, aşağıdaki komutu çalıştırabilirsiniz:
+
+   ```dotnetcli
+   dotnet new console -n botsay-nancydavolio
+   ```
+
+   Komut, *Depo* klasörü altında *botdeyin-\<name >* adlı yeni bir klasör oluşturur.
+
+1. *Botdeyin-\<adı >* klasörüne gidin.
+
+   ```console
+   cd botsay-<name>
+   ```
 
 ## <a name="add-the-code"></a>Kod ekleme
 
-`Program.cs` dosyasını `vim` veya [Visual Studio Code](https://code.visualstudio.com/)gibi en sevdiğiniz metin düzenleyicinizle açın.
+1. `Program.cs` dosyasını kod düzenleyicinizle açın.
 
-Aşağıdaki `using` yönergesini dosyanın en üstüne ekleyin, bu, uygulamanın sürüm bilgilerini göstermek için kodu kısaltmanıza yardımcı olur.
+1. Aşağıdaki `using` yönergesini dosyanın en üstüne ekleyin:
 
-```csharp
-using System.Reflection;
-```
+   ```csharp
+   using System.Reflection;
+   ```
 
-Sonra `Main` yöntemine gidin. Yöntemi, uygulamanız için komut satırı bağımsız değişkenlerini işlemek üzere aşağıdaki kodla değiştirin. Bağımsız değişken geçirilmemişse, kısa bir yardım iletisi görüntülenir. Aksi takdirde, bu bağımsız değişkenlerin tümü bir dizeye dönüştürülür ve bot ile birlikte yazdırılır.
+1. Uygulama için komut satırı bağımsız değişkenlerini işlemek üzere `Main` yöntemini aşağıdaki kodla değiştirin.
 
-```csharp
-static void Main(string[] args)
-{
-    if (args.Length == 0)
-    {
-        var versionString = Assembly.GetEntryAssembly()
-                                .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
-                                .InformationalVersion
-                                .ToString();
+   ```csharp
+   static void Main(string[] args)
+   {
+       if (args.Length == 0)
+       {
+           var versionString = Assembly.GetEntryAssembly()
+                                   .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+                                   .InformationalVersion
+                                   .ToString();
 
-        Console.WriteLine($"botsay v{versionString}");
-        Console.WriteLine("-------------");
-        Console.WriteLine("\nUsage:");
-        Console.WriteLine("  botsay <message>");
-        return;
-    }
+           Console.WriteLine($"botsay v{versionString}");
+           Console.WriteLine("-------------");
+           Console.WriteLine("\nUsage:");
+           Console.WriteLine("  botsay <message>");
+           return;
+       }
 
-    ShowBot(string.Join(' ', args));
-}
-```
+       ShowBot(string.Join(' ', args));
+   }
+   ```
 
-### <a name="create-the-bot"></a>Bot oluşturma
+   Hiçbir bağımsız değişken geçirilmezse, kısa bir yardım iletisi görüntülenir. Aksi takdirde, tüm bağımsız değişkenler tek bir dizeye birleştirilir ve bir sonraki adımda oluşturduğunuz `ShowBot` yöntemi çağırarak yazdırılır.
 
-Sonra, bir dize parametresi alan `ShowBot` adlı yeni bir yöntem ekleyin. Bu yöntem, iletiyi ve ASCII bot 'ı yazdırır. Bir [dotnetbot kodu dotnetbot](https://github.com/dotnet/core/blob/master/samples/dotnetsay/Program.cs) örneğinden alındı.
+1. Dize parametresi alan `ShowBot` adlı yeni bir yöntem ekleyin. Yöntemi, metin satırlarını kullanarak iletiyi ve bir robot görüntüsünü yazdırır.
 
-```csharp
-static void ShowBot(string message)
-{
-    string bot = $"\n        {message}";
-    bot += @"
-    __________________
-                      \
-                       \
-                          ....
-                          ....'
-                           ....
-                        ..........
-                    .............'..'..
-                 ................'..'.....
-               .......'..........'..'..'....
-              ........'..........'..'..'.....
-             .'....'..'..........'..'.......'.
-             .'..................'...   ......
-             .  ......'.........         .....
-             .    _            __        ......
-            ..    #            ##        ......
-           ....       .                 .......
-           ......  .......          ............
-            ................  ......................
-            ........................'................
-           ......................'..'......    .......
-        .........................'..'.....       .......
-     ........    ..'.............'..'....      ..........
-   ..'..'...      ...............'.......      ..........
-  ...'......     ...... ..........  ......         .......
- ...........   .......              ........        ......
-.......        '...'.'.              '.'.'.'         ....
-.......       .....'..               ..'.....
-   ..       ..........               ..'........
-          ............               ..............
-         .............               '..............
-        ...........'..              .'.'............
-       ...............              .'.'.............
-      .............'..               ..'..'...........
-      ...............                 .'..............
-       .........                        ..............
-        .....
-";
-    Console.WriteLine(bot);
-}
-```
+   ```csharp
+   static void ShowBot(string message)
+   {
+       string bot = $"\n        {message}";
+       bot += @"
+       __________________
+                         \
+                          \
+                             ....
+                             ....'
+                              ....
+                           ..........
+                       .............'..'..
+                    ................'..'.....
+                  .......'..........'..'..'....
+                 ........'..........'..'..'.....
+                .'....'..'..........'..'.......'.
+                .'..................'...   ......
+                .  ......'.........         .....
+                .    _            __        ......
+               ..    #            ##        ......
+              ....       .                 .......
+              ......  .......          ............
+               ................  ......................
+               ........................'................
+              ......................'..'......    .......
+           .........................'..'.....       .......
+        ........    ..'.............'..'....      ..........
+      ..'..'...      ...............'.......      ..........
+     ...'......     ...... ..........  ......         .......
+    ...........   .......              ........        ......
+   .......        '...'.'.              '.'.'.'         ....
+   .......       .....'..               ..'.....
+      ..       ..........               ..'........
+             ............               ..............
+            .............               '..............
+           ...........'..              .'.'............
+          ...............              .'.'.............
+         .............'..               ..'..'...........
+         ...............                 .'..............
+          .........                        ..............
+           .....
+   ";
+       Console.WriteLine(bot);
+   }
+   ```
 
-### <a name="test-the-tool"></a>Aracı test etme
+1. Yaptığınız değişiklikleri kaydedin.
+
+## <a name="test-the-application"></a>Uygulamayı test etme
 
 Projeyi çalıştırın ve çıktıyı görüntüleyin. Farklı sonuçları görmek için komut satırında bu çeşitlemeleri deneyin:
 
 ```dotnetcli
 dotnet run
 dotnet run -- "Hello from the bot"
-dotnet run -- hello from the bot
+dotnet run -- Hello from the bot
 ```
 
 `--` sınırlayıcısından sonraki tüm bağımsız değişkenler uygulamanıza geçirilir.
 
-## <a name="set-up-the-global-tool"></a>Genel aracı ayarlama
+## <a name="package-the-tool"></a>Aracı paketleyin
 
-Uygulamayı küresel bir araç olarak paketleyebilir ve dağıtabilmeniz için önce proje dosyasını değiştirmeniz gerekir. `botsay.csproj` dosyasını açın ve `<Project><PropertyGroup>` düğümüne üç yeni XML düğümü ekleyin:
+Uygulamayı bir araç olarak paketleyebilir ve dağıtabilmeniz için önce proje dosyasını değiştirmeniz gerekir. 
 
-- `<PackAsTool>`\
-ISTENIR Uygulamanın genel bir araç olarak yüklenmek üzere paketleneceğine bildirir.
+1. *Botdeyin-\<adı >. csproj* dosyasını açın ve `<PropertyGroup>` düğümünün sonuna üç yeni XML düğümü ekleyin:
 
-- `<ToolCommandName>`\
-SEÇIM Araç için alternatif bir ad, aksi takdirde araç için komut adı proje dosyasından sonra adlandıralınacaktır. Pakette birden fazla araca sahip olabilirsiniz, benzersiz ve kolay bir ad seçmek aynı paketteki diğer araçlardan ayırt edilmesine yardımcı olur.
+   ```xml
+   <PackAsTool>true</PackAsTool>
+   <ToolCommandName>botsay</ToolCommandName>
+   <PackageOutputPath>./nupkg</PackageOutputPath>
+   ```
 
-- `<PackageOutputPath>`\
-SEÇIM NuGet paketinin üretileceği yer. NuGet paketi, .NET Core CLI genel araçların aracınızı yüklemek için kullandığı şeydir.
+   `<ToolCommandName>`, yüklendikten sonra aracı çağıracağı komutu belirten isteğe bağlı bir öğedir. Bu öğe sağlanmazsa, araç için komut adı *. csproj* uzantısı olmayan proje dosyası adıdır.
 
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
+   `<PackageOutputPath>`, NuGet paketinin nerede üretileceği belirleyen isteğe bağlı bir öğedir. NuGet paketi, .NET Core CLI aracınızı yüklemek için kullandığı şeydir.
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+   Proje dosyası artık aşağıdaki örneğe benzer şekilde görünür:
 
-    <PackAsTool>true</PackAsTool>
-    <ToolCommandName>botsay</ToolCommandName>
-    <PackageOutputPath>./nupkg</PackageOutputPath>
+   ```xml
+   <Project Sdk="Microsoft.NET.Sdk">
+  
+     <PropertyGroup>
 
-  </PropertyGroup>
+       <OutputType>Exe</OutputType>
+       <TargetFramework>netcoreapp3.1</TargetFramework>
+  
+       <PackAsTool>true</PackAsTool>
+       <ToolCommandName>botsay</ToolCommandName>
+       <PackageOutputPath>./nupkg</PackageOutputPath>
+  
+     </PropertyGroup>
 
-</Project>
-```
+   </Project>
+   ```
 
-`<PackageOutputPath>`, isteğe bağlı olsa da, bu örnekte kullanın. Ayarladığınızdan emin olun: `<PackageOutputPath>./nupkg</PackageOutputPath>`.
+1. [DotNet Pack](dotnet-pack.md) komutunu çalıştırarak bir NuGet paketi oluşturun:
 
-Ardından, uygulamanız için bir NuGet paketi oluşturun.
+   ```dotnetcli
+   dotnet pack
+   ```
 
-```dotnetcli
-dotnet pack
-```
+   *Botdeyin-\<name >. 1.0.0. nupkg* dosyası, bu örnekte *./nupkg klasörüdür./n/nDosya* olan *botsöyleyin-\<name >. csproj* dosyasındaki `<PackageOutputPath>` değeri tarafından tanımlanan klasörde oluşturulur.
+  
+   Bir aracı herkese açık bir şekilde yayınlamak istediğinizde, `https://www.nuget.org`yükleyebilirsiniz. Araç NuGet 'de kullanılabilir olduğunda, geliştiriciler [DotNet aracı install](dotnet-tool-install.md) komutunu kullanarak aracı yükleyebilir. Bu öğreticide, paketini doğrudan yerel *nupkg* klasöründen yüklersiniz, bu nedenle paketi NuGet 'e yüklemeye gerek yoktur.
 
-`botsay.1.0.0.nupkg` dosyası, bu örnekte `./nupkg` klasörü olan `botsay.csproj` dosyasından `<PackageOutputPath>` XML değeri tarafından tanımlanan klasörde oluşturulur. Bu, yüklemeyi ve test yapmayı kolaylaştırır. Bir aracı herkese açık bir şekilde yayınlamak istediğinizde, <https://www.nuget.org>' ye yükleyin. Araç NuGet 'de kullanılabilir olduğunda, geliştiriciler [DotNet aracı install](dotnet-tool-install.md) komutunun `--global` seçeneğini kullanarak aracın Kullanıcı genelindeki bir yüklemesini gerçekleştirebilir.
+## <a name="troubleshoot"></a>Sorunları Gider
 
-Artık bir paketiniz olduğuna göre, aracı bu paketten yükleyebilirsiniz:
+Öğreticiyi takip ederken bir hata mesajı alırsanız bkz. [.NET Core araç kullanımı sorunlarını giderme](troubleshoot-usage-issues.md).
 
-```dotnetcli
-dotnet tool install --global --add-source ./nupkg botsay
-```
+## <a name="next-steps"></a>Sonraki adımlar
 
-`--add-source` parametresi, .NET Core CLI, NuGet paketleri için ek bir kaynak akışı olarak `./nupkg` klasörünü (`<PackageOutputPath>` klasörü) geçici olarak kullanmasını söyler. Genel araçları yükleme hakkında daha fazla bilgi için bkz. [.NET Core genel araçlarına genel bakış](global-tools.md).
+Bu öğreticide, bir konsol uygulaması oluşturdunuz ve bunu bir araç olarak paketlediyseniz. Aracın genel bir araç olarak nasıl kullanılacağını öğrenmek için bir sonraki öğreticiye ilerleyin.
 
-Yükleme başarılı olursa, aşağıdaki örneğe benzer şekilde, aracı ve yüklü sürümü çağırmak için kullanılan komutu gösteren bir ileti görüntülenir:
+> [!div class="nextstepaction"]
+> [Küresel bir araç yükleyip kullanma](global-tools-how-to-use.md)
 
-```output
-You can invoke the tool using the following command: botsay
-Tool 'botsay' (version '1.0.0') was successfully installed.
-```
+İsterseniz küresel araçlar öğreticisini atlayabilir ve doğrudan yerel araçlar öğreticisine gidebilirsiniz.
 
-Artık `botsay` yazabilir ve araçtan bir yanıt alabilirsiniz.
-
-> [!NOTE]
-> Yüklemesi başarılı olduysa, ancak `botsay` komutunu kullanamazsınız, yolu yenilemek için yeni bir Terminal açmanız gerekebilir.
-
-## <a name="remove-the-tool"></a>Aracı kaldır
-
-Araç ile deneme tamamladıktan sonra, aşağıdaki komutla kaldırabilirsiniz:
-
-```dotnetcli
-dotnet tool uninstall -g botsay
-```
+> [!div class="nextstepaction"]
+> [Yerel bir araç yükleyip kullanma](local-tools-how-to-use.md)

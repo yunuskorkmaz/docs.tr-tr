@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 8c90f06bfadc528bd9575ead30e6b01263055fe8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8348e080d833e79dd364aee511ac7d05fb53d1cc
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743910"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543566"
 ---
 # <a name="methods-c-programming-guide"></a>Yöntemler (C# Programlama Kılavuzu)
 
@@ -21,7 +21,7 @@ Yöntemi, bir dizi deyim içeren bir kod bloğudur. Program, metodu çağırarak
 
 ## <a name="method-signatures"></a>Yöntem imzaları
 
-Yöntemler, `public` veya `private`, `abstract` veya `sealed`, dönüş değeri, yöntemin adı ve herhangi bir yöntem parametresi gibi erişim düzeyi belirtilerek bir [sınıf](../../language-reference/keywords/class.md) veya [Yapı](../../language-reference/keywords/struct.md) içinde bildirilmiştir. Bu parçalar, yönteminin imzasıdır.
+Yöntemler, `public` veya `private`, `abstract` veya `sealed`, dönüş değeri, yöntemin adı ve herhangi bir yöntem parametresi gibi erişim düzeyi belirtilerek bir [sınıf](../../language-reference/keywords/class.md), [Yapı](../../language-reference/keywords/struct.md)veya [arabirim](../interfaces/index.md) içinde bildirilmiştir. Bu parçalar, yönteminin imzasıdır.
 
 > [!NOTE]
 > Bir yöntemin dönüş türü, yöntem aşırı yüklemesi amaçları için yöntemin imzasının bir parçası değildir. Ancak, bir temsilci ve işaret ettiği yöntem arasındaki uyumluluğun belirlenmesi sırasında yönteminin imzasının bir parçasıdır.

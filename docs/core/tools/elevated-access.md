@@ -3,12 +3,12 @@ title: DotNet komutları için yükseltilmiş erişim
 description: Yükseltilmiş erişim gerektiren DotNet komutları için en iyi uygulamaları öğrenin.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: 1cf29012736e5b6d858ca22dc2a9b97e7e8e33ef
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: fe33cbe966d175f71ba350737b283c1e83f64fa6
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503574"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543436"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>DotNet komutları için yükseltilmiş erişim
 
@@ -31,7 +31,7 @@ Aşağıdaki yönergelerde, yürütme için yükseltilmiş izinler gerektiren .N
 
 # <a name="windows"></a>[Windows](#tab/windows)
 
-### <a name="install-the-global-tool"></a>Genel aracı 'nı yükler
+### <a name="install-the-tool"></a>Aracı 'nı yükler
 
 `%ProgramFiles%\dotnet-tools` klasör zaten mevcutsa, "kullanıcılar" grubunun bu dizini yazma veya değiştirme izni olup olmadığını denetlemek için aşağıdakileri yapın:
 

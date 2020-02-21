@@ -2,14 +2,14 @@
 title: .NET API Çözümleyicisi
 description: .NET API Çözümleyicisi 'nin kullanım dışı API 'Leri ve platform uyumluluk sorunlarını algılamaya nasıl yardımcı olabileceğini öğrenin.
 author: oliag
-ms.date: 04/26/2019
+ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: efbfa89f431bd02cdf86b8eff8704aec63a29b6c
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: f6cf2d8109c564447972afd18c6d6d587711304b
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124253"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542630"
 ---
 # <a name="net-api-analyzer"></a>.NET API Çözümleyicisi
 
@@ -20,11 +20,11 @@ API Çözümleyicisi, [Microsoft. DotNet. çözümleyiciler. Compatibility](http
 > [!NOTE]
 > .NET API Çözümleyicisi, hala yayın öncesi bir sürümdür.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 - Visual Studio 2017 ve üzeri sürümleri veya Mac için Visual Studio (tüm sürümler).
 
-## <a name="discovering-deprecated-apis"></a>Kullanımdan kaldırılan API 'Ler bulunuyor
+## <a name="discover-deprecated-apis"></a>Kullanımdan kaldırılan API 'Leri bul
 
 ### <a name="what-are-deprecated-apis"></a>Kullanımdan kaldırılan API 'Ler nelerdir?
 
@@ -36,7 +36,21 @@ API Çözümleyicisi, [Microsoft. DotNet. çözümleyiciler. Compatibility](http
 
 API Çözümleyicisi, tek tek uyarıların görüntülenmesi üzerinde denetime izin veren, DE (kullanımdan kaldırma hatası anlamına gelir) ile başlayan API 'ye özel hata kodları kullanır. Çözümleyici tarafından tanımlanan kullanım dışı API 'Ler [DotNet/platform-COMPAT](https://github.com/dotnet/platform-compat) deposunda tanımlanmıştır.
 
-### <a name="using-the-api-analyzer"></a>API Çözümleyicisi 'ni kullanma
+### <a name="add-the-api-analyzer-to-your-project"></a>Projenize API Çözümleyicisi ekleme
+
+1. Visual Studio'yu açın.
+2. Çözümleyiciyi çalıştırmak istediğiniz projeyi açın.
+3. **Çözüm Gezgini**, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. (Bu seçenek, **Proje** menüsünden de kullanılabilir.)
+4. NuGet Paket Yöneticisi sekmesinde:
+   1. Paket kaynağı olarak "nuget.org" öğesini seçin.
+   2. **Araştır** sekmesine gidin.
+   3. **Yayın öncesi Ekle**' yi seçin.
+   4. **Microsoft. DotNet. çözümleyiciler**için arama yapın. uyumluluk.
+   5. Listeden bu paketi seçin.
+   6. **Install** düğmesini seçin. 
+   7. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin.
+
+### <a name="use-the-api-analyzer"></a>API Çözümleyicisi 'ni kullanma
 
 <xref:System.Net.WebClient>gibi kullanım dışı bir API bir kodda kullanıldığında, API Çözümleyicisi bunu yeşil dalgalı çizgi ile vurgular. API çağrısının üzerine geldiğinizde, aşağıdaki örnekte olduğu gibi, API 'nin kullanımdan kaldırılması hakkında bilgiler içeren bir ampul görüntülenir:
 
@@ -50,14 +64,14 @@ KIMLIĞE tıkladığınızda, API 'nin neden kullanım dışı olduğuna ilişki
 
 Vurgulanan üyeye sağ tıklayıp **\<tanılama kimliği > Gizle**' yi seçerek herhangi bir uyarı gizlenebilir. Uyarıları basmanın iki yolu vardır: 
 
-- [Yerel olarak (kaynakta)](#suppressing-warnings-locally)
-- [küresel olarak (bir gizleme dosyasında)](#suppressing-warnings-globally) önerilir
+- [Yerel olarak (kaynakta)](#suppress-warnings-locally)
+- [küresel olarak (bir gizleme dosyasında)](#suppress-warnings-globally) önerilir
 
-### <a name="suppressing-warnings-locally"></a>Uyarıları yerel olarak gizleme
+### <a name="suppress-warnings-locally"></a>Uyarıları yerel olarak gösterme
 
 Uyarıları yerel olarak gizlemek için, uyarılarını gizlemek istediğiniz üyeye sağ tıklayın ve sonra **Hızlı Eylemler ve yeniden düzenlemeler** > tanılama kimliği **\<tanı kimliği >**  > . [#Pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) uyarı ön işlemci yönergesi, tanımlanan kapsamdaki kaynak kodunuza eklenir: !["#pragma uyarı devre dışı ile çerçeveli kod ekran görüntüsü"](media/api-analyzer/suppress-in-source.jpg)
 
-### <a name="suppressing-warnings-globally"></a>Uyarıları küresel olarak gizleme
+### <a name="suppress-warnings-globally"></a>Uyarıları küresel olarak gösterme
 
 Uyarıları küresel olarak gizlemek için, uyarıları gizlemek istediğiniz üyeye sağ tıklayın ve sonra **Hızlı Eylemler ve yeniden düzenlemeler** > tanılama kimliği **\<tanılama kimliği > > **  **gizleme dosyası**' nı gizleyin.
 
@@ -69,7 +83,7 @@ Uyarıları küresel olarak gizlemek için, uyarıları gizlemek istediğiniz ü
 
 Genel gizleme, projeler genelinde API kullanımının tutarlılığını sağlamak için önerilen yoldur.
 
-## <a name="discovering-cross-platform-issues"></a>Platformlar arası sorunları keşfetme
+## <a name="discover-cross-platform-issues"></a>Platformlar arası sorunları bulma
 
 Kullanım dışı olan API 'Lerle benzer şekilde, çözümleyici platformlar arası olmayan tüm API 'Leri tanımlar. Örneğin <xref:System.Console.WindowWidth?displayProperty=nameWithType>, Linux ve macOS 'ta değil, Windows üzerinde çalışmaktadır. Tanılama KIMLIĞI **hata listesi** penceresinde gösterilir. Sağ tıklayıp **Hızlı Eylemler ve yeniden düzenlemeler '** i seçerek bu uyarının görüntülenmesini sağlayabilirsiniz. İki seçeneğe sahip olduğunuz kullanım dışı durumların aksine (kullanımdan kaldırılan üyeyi kullanmaya devam edin, uyarıları gizleyin veya hiç kullanmayın), burada kodunuzu yalnızca belirli platformlar için geliştiriyorsanız, tüm diğer platformlar için tüm uyarıları gizleyebilirsiniz kodunuzu üzerinde çalıştırmayı planlayın. Bunu yapmak için yalnızca proje dosyanızı düzenlemeniz ve tüm platformları listeleyen `PlatformCompatIgnore` özelliğini yok sayılacak şekilde eklemeniz yeterlidir. Kabul edilen değerler şunlardır: `Linux`, `macOS`ve `Windows`.
 

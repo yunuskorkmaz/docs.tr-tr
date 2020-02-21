@@ -2,13 +2,13 @@
 title: .NET Core araç kullanımı sorunlarını giderme
 description: .NET Core araçları ve olası çözümleri çalıştırırken sık karşılaşılan sorunları öğrenin.
 author: kdollard
-ms.date: 09/23/2019
-ms.openlocfilehash: 45139c3441b84964b937d5d1cc63a018f8d1f0fb
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 02/14/2020
+ms.openlocfilehash: ab5d1be8f201ea283f8537f18886feab46157127
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451083"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543280"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>.NET Core araç kullanımı sorunlarını giderme
 
@@ -59,7 +59,7 @@ Yürütülebilir dosyanın adı, aracı nasıl çağırabileceğinizi belirler. 
   * .NET Core 3,0 SDK 'sını yüklediyseniz ve `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` ortam değişkenini `false`olarak ayarladıysanız.
   * .NET Core 2,2 SDK veya önceki sürümlerini yüklediyseniz ve `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` ortam değişkenini `true`olarak ayarladıysanız.
 
-  Küresel araçlar hakkında daha fazla bilgi için bkz. [.NET Core genel araçlarına genel bakış](global-tools.md).
+  Daha fazla bilgi için bkz. [.NET Core araçları](global-tools.md).
 
 * Yerel Araçlar
 
@@ -99,7 +99,7 @@ Aracın şu anda yüklü olan çalışma zamanı sürümünü desteklemesi gerek
 
 ## <a name="net-core-tool-installation-fails"></a>.NET Core aracı yüklemesi başarısız oluyor
 
-.NET Core küresel veya yerel bir araç yüklemesinin başarısız olması birkaç nedenden kaynaklanabilir. Araç yüklemesi başarısız olduğunda, aşağıdakine benzer bir ileti görürsünüz:
+.NET Core küresel veya yerel bir araç yüklemesinin başarısız olması birkaç nedenden kaynaklanabilir. Araç yüklemesi başarısız olduğunda aşağıdakine benzer bir ileti görürsünüz:
 
 ```console
 Tool '{0}' failed to install. This failure may have been caused by:
@@ -137,9 +137,6 @@ Paket kimlikleri güncelleştirildiğinden, en son güncelleştirmeleri almak i�
 dotnet tool install -g --version 1.1.0-pre <toolName>
 ```
 
-> [!NOTE]
-> .NET Core CLI ekibi, daha kolay hale getirmek için gelecekteki bir sürüme bir `--preview` anahtarı eklemeyi planlıyor.
-
 ### <a name="package-isnt-a-net-core-tool"></a>Paket bir .NET Core aracı değil
 
 * Bu ada sahip bir NuGet paketi bulundu, ancak bir .NET Core aracı değildi.
@@ -162,4 +159,4 @@ Hatanın yaygın bir nedeni, araç adının doğru olmaması. Bu, yanlış yazma
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [.NET Core genel araçlarına genel bakış](global-tools.md)
+* [.NET Core araçları](global-tools.md)

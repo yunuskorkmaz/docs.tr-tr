@@ -2,12 +2,12 @@
 title: DotNet sln komutu
 description: DotNet-sln komutu bir çözüm dosyasındaki projeleri eklemek, kaldırmak ve listelemek için kullanışlı bir seçenek sağlar.
 ms.date: 02/14/2020
-ms.openlocfilehash: dc0e2f294076ea649f150b076ac279cdc5d224a0
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: b2455c04a46b2a10b8142d8ddc2d8129f2154b27
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503596"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543488"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -15,7 +15,7 @@ ms.locfileid: "77503596"
 
 ## <a name="name"></a>Adı
 
-`dotnet sln`-bir .NET Core çözüm dosyasını değiştirir.
+`dotnet sln`-bir .NET Core çözüm dosyasındaki projeleri listeler veya değiştirir.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -25,7 +25,7 @@ dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet sln` komutu bir çözüm dosyasındaki projeleri eklemek, kaldırmak ve listelemek için kullanışlı bir yol sağlar.
+`dotnet sln` komutu bir çözüm dosyasındaki projeleri listelemek ve değiştirmek için kullanışlı bir yol sağlar.
 
 `dotnet sln` komutunu kullanmak için, çözüm dosyası zaten var olmalıdır. Bir tane oluşturmanız gerekiyorsa, aşağıdaki örnekte olduğu gibi [DotNet New](dotnet-new.md) komutunu kullanın:
 
@@ -37,24 +37,46 @@ dotnet new sln
 
 - **`SOLUTION_FILE`**
 
-  Kullanılacak çözüm dosyası. Belirtilmemişse, komut geçerli dizinde bir arama yapar. Dizinde birden çok çözüm dosyası varsa, birinin belirtilmesi gerekir.
+  Kullanılacak çözüm dosyası. Bu bağımsız değişken atlanırsa, komut geçerli dizinde bir arar. Çözüm dosyası veya birden çok çözüm dosyası bulursa, komut başarısız olur.
 
 ## <a name="options"></a>Seçenekler
 
 - **`-h|--help`**
 
-  Komut için kısa bir yardım yazdırır.
+  Komutunun nasıl kullanılacağına ilişkin bir açıklama yazdırır.
 
 ## <a name="commands"></a>Komutlar
 
-### `add`
+### `list`
 
-Çözüm dosyasına bir proje veya birden çok proje ekler.
+Bir çözüm dosyasındaki tüm projeleri listeler.
 
 #### <a name="synopsis"></a>Özeti
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH>
+dotnet sln list [-h|--help]
+```
+
+#### <a name="arguments"></a>Bağımsız Değişkenler
+
+- **`SOLUTION_FILE`**
+
+  Kullanılacak çözüm dosyası. Bu bağımsız değişken atlanırsa, komut geçerli dizinde bir arar. Çözüm dosyası veya birden çok çözüm dosyası bulursa, komut başarısız olur.
+
+#### <a name="options"></a>Seçenekler
+
+- **`-h|--help`**
+
+  Komutunun nasıl kullanılacağına ilişkin bir açıklama yazdırır.
+  
+### `add`
+
+Çözüm dosyasına bir veya daha fazla proje ekler.
+
+#### <a name="synopsis"></a>Özeti
+
+```dotnetcli
+dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH> [<PROJECT_PATH>...]
 dotnet sln add [-h|--help]
 ```
 
@@ -62,17 +84,17 @@ dotnet sln add [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  Kullanılacak çözüm dosyası. Belirtilmemişse, komut geçerli dizinde bir arama yapar. Dizinde birden çok çözüm dosyası varsa, birinin belirtilmesi gerekir.
+  Kullanılacak çözüm dosyası. Belirtilmemişse, komut geçerli dizinde bir arar ve birden çok çözüm dosyası varsa başarısız olur.
 
 - **`PROJECT_PATH`**
 
-  Çözüme eklenecek projenin yolu. Boşluktan daha sonra bir tane ekleyerek birden fazla proje ekleyin. UNIX/Linux kabuğu [Glob model](https://en.wikipedia.org/wiki/Glob_(programming)) genişletmeleri `dotnet sln` komutu tarafından doğru şekilde işlenir.
+  Çözüme eklenecek projenin veya projelerin yolu. UNIX/Linux kabuğu [Glob model](https://en.wikipedia.org/wiki/Glob_(programming)) genişletmeleri `dotnet sln` komutu tarafından doğru şekilde işlenir.
 
 #### <a name="options"></a>Seçenekler
 
 - **`-h|--help`**
 
-  Komut için kısa bir yardım yazdırır.
+  Komutunun nasıl kullanılacağına ilişkin bir açıklama yazdırır.
 
 - **`--in-root`**
 
@@ -89,7 +111,7 @@ dotnet sln add [-h|--help]
 #### <a name="synopsis"></a>Özeti
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH>
+dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH> [<PROJECT_PATH>...]
 dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 ```
 
@@ -97,52 +119,42 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  Kullanılacak çözüm dosyası. Belirtilmemişse, komut geçerli dizinde bir arama yapar. Dizinde birden çok çözüm dosyası varsa, birinin belirtilmesi gerekir.
+  Kullanılacak çözüm dosyası. Belirtilmemişse, komut geçerli dizinde bir arar ve birden çok çözüm dosyası varsa başarısız olur.
 
 - **`PROJECT_PATH`**
 
-  Çözümden kaldırılacak projenin yolu. Boşluktan daha sonra bir tane ekleyerek birden çok projeyi kaldırın. UNIX/Linux kabuğu [Glob model](https://en.wikipedia.org/wiki/Glob_(programming)) genişletmeleri `dotnet sln` komutu tarafından doğru şekilde işlenir.
+  Çözüme eklenecek projenin veya projelerin yolu. UNIX/Linux kabuğu [Glob model](https://en.wikipedia.org/wiki/Glob_(programming)) genişletmeleri `dotnet sln` komutu tarafından doğru şekilde işlenir.
 
 #### <a name="options"></a>Seçenekler
 
 - **`-h|--help`**
 
-  Komut için kısa bir yardım yazdırır.
-
-### `list`
-
-Bir çözüm dosyasındaki tüm projeleri listeler.
-
-#### <a name="synopsis"></a>Özeti
-
-```dotnetcli
-dotnet sln list [-h|--help]
-```
-
-#### <a name="arguments"></a>Bağımsız Değişkenler
-
-- **`SOLUTION_FILE`**
-
-  Kullanılacak çözüm dosyası. Belirtilmemişse, komut geçerli dizinde bir arama yapar. Dizinde birden çok çözüm dosyası varsa, birinin belirtilmesi gerekir.
-
-#### <a name="options"></a>Seçenekler
-
-- **`-h|--help`**
-
-  Komut için kısa bir yardım yazdırır.
+  Komutunun nasıl kullanılacağına ilişkin bir açıklama yazdırır.
 
 ## <a name="examples"></a>Örnekler
+
+- Bir çözümdeki projeleri listeleyin:
+
+  ```dotnetcli
+  dotnet sln todo.sln list
+  ```
 
 - Bir çözüme C# proje ekleme:
 
   ```dotnetcli
-  dotnet sln todo.sln add todo-app/todo-app.csproj
+  dotnet sln add todo-app/todo-app.csproj
   ```
 
 - Bir C# projeyi çözümden kaldırma:
 
   ```dotnetcli
-  dotnet sln todo.sln remove todo-app/todo-app.csproj
+  dotnet sln remove todo-app/todo-app.csproj
+  ```
+
+- Bir çözümün C# köküne birden çok proje ekleyin:
+
+  ```dotnetcli
+  dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj --in-root
   ```
 
 - Bir çözüme C# birden çok proje ekleyin:

@@ -3,12 +3,12 @@ title: Dize içeriğini değiştirme- C# kılavuz
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 539e313173d46c2c92399cefe94207c8beed03b4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973265"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543267"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>C\# dize içeriklerini değiştirme
 
@@ -62,12 +62,13 @@ Aşağıdaki örnek, bir dizedeki bir karakter kümesinin nasıl değiştirilece
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
-## <a name="unsafe-modifications-to-string"></a>Dizedeki güvenli olmayan değişiklikler
+## <a name="programmatically-build-up-string-content"></a>Program aracılığıyla dize içeriği oluşturma
 
-**Güvenli olmayan** kod kullanarak, bir dizeyi oluşturulduktan sonra "yerinde" değiştirebilirsiniz. Güvenli olmayan kod, kodda belirli hata türlerini en aza indirmek için tasarlanan birçok .NET özelliğini atlar. Dize sınıfı **sabit** bir tür olarak tasarlandığından, bir dizeyi yerinde değiştirmek için güvenli olmayan kod kullanmanız gerekir. Oluşturulduktan sonra değeri değişmez. Güvenli olmayan kod, normal `string` yöntemleri kullanmadan bir `string` tarafından kullanılan belleğe erişerek ve değiştirerek bu özelliği atlalar.
-Aşağıdaki örnek, güvenli olmayan kod kullanarak bir dizeyi yerinde değiştirmek istediğiniz nadir durumlar için verilmiştir. Örnek, `fixed` anahtar sözcüğünün nasıl kullanılacağını göstermektedir. `fixed` anahtar sözcüğü çöp toplayıcısının (GC), kod, güvenli olmayan işaretçi kullanılarak belleğe eriştiği sırada dize nesnesini bellekten taşımasını önler. Ayrıca C# derleyicinin (Interns) dizelerini dahili olarak depoladığı şekilde, dizelerde güvenli olmayan işlemlerin olası bir yan etkisi gösterilmektedir. Genel olarak, kesinlikle gerekli olmadığı müddetçe bu tekniği kullanmamanız gerekir. Daha fazla bilgi için, [güvenli olmayan](../language-reference/keywords/unsafe.md) ve [düzeltilen](../language-reference/keywords/fixed-statement.md)makalelerde daha fazla bilgi edinebilirsiniz. <xref:System.String.Intern%2A> için API başvurusu, dize oluşturma hakkında bilgi içerir.
+Dizeler sabit olduğundan, önceki örneklerin tümü geçici dizeler veya karakter dizileri oluşturur. Yüksek performans senaryolarında bu yığın ayırmalarının oluşmaması istenebilir. .NET Core, ara geçici dize ayırmalarını önleyerek bir dizenin karakter içeriğini bir geri çağırma yoluyla programlama yoluyla doldurmanıza olanak sağlayan bir <xref:System.String.Create%2A?displayProperty=nameWithType> yöntemi sağlar.
 
-[!code-csharp[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+[!code-csharp[using string.Create to programmatically build the string content for a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+
+Güvenli olmayan koda sahip sabit bir blokta bir dizeyi değiştirebilirsiniz ancak dize oluşturulduktan sonra dize içeriğinin değiştirilmesi **kesinlikle** önerilmez. Bunun yapılması, işlemleri öngörülemeyen yollarla bozacaktır. Örneğin, birisi sizinki ile aynı içeriğe sahip bir dizeyi birbirine kaydetirse, sizin kopyanızı alır ve dizenizi her zaman değiştirmenizi beklemez.
 
 Bu örnekleri, [GitHub deponuzdaki](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)koda bakarak deneyebilirsiniz. Ya da örnekleri [zip dosyası olarak](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)indirebilirsiniz.
 

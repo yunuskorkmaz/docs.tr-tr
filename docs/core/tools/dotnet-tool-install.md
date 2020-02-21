@@ -1,99 +1,118 @@
 ---
 title: DotNet aracı install komutu
-description: DotNet aracı yükleme komutu, makinenizde belirtilen .NET Core küresel aracını yükler.
-ms.date: 05/29/2018
-ms.openlocfilehash: d6f691117e93a39c9837b282dca19e452515c80a
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+description: DotNet aracı yükleme komutu, makinenizde belirtilen .NET Core aracını yükler.
+ms.date: 02/14/2020
+ms.openlocfilehash: 2705defe9b77009ca1411da28dd86d144ccc19e6
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117474"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543475"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Adı
 
-`dotnet tool install`-Makinenizde belirtilen [.NET Core küresel aracını](global-tools.md) yükleme.
+`dotnet tool install`-makinenizde belirtilen [.NET Core aracını](global-tools.md) yükleme.
 
 ## <a name="synopsis"></a>Özeti
 
 ```dotnetcli
 dotnet tool install <PACKAGE_NAME> <-g|--global> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
 dotnet tool install <PACKAGE_NAME> <--tool-path> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
+dotnet tool install <PACKAGE_NAME> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
 dotnet tool install <-h|--help>
 ```
 
 ## <a name="description"></a>Açıklama
 
-Bu `dotnet tool install` komut, makinenizde .NET Core küresel araçları yüklemenizi sağlayan bir yol sağlar. Komutunu kullanmak için, `--global` seçeneğini kullanarak Kullanıcı genelindeki bir yüklemeyi istediğinizi veya `--tool-path` seçeneğini kullanarak yüklemek için bir yol belirtmenizi belirtmeniz gerekir.
+`dotnet tool install` komutu, makinenizde .NET Core araçları yüklemenizi sağlayan bir yol sağlar. Komutunu kullanmak için aşağıdaki yükleme seçeneklerinden birini belirtin:
 
-Genel araçlar, `-g` (veya `--global`) seçeneğini belirttiğinizde varsayılan olarak aşağıdaki dizinlere yüklenir:
+* Genel bir aracı varsayılan konuma yüklemek için `--tool-path` seçeneğini kullanın.
+* Bir genel aracı özel bir konuma yüklemek için `--tool-path` seçeneğini kullanın.
+* Yerel bir araç yüklemek için `--global` ve `--tool-path` seçeneklerini atlayın.
 
-| OS          | Yol                          |
+**Yerel araçlar .NET Core SDK 3,0 ' den başlayarak kullanılabilir.**
+
+`-g` veya `--global` seçeneğini belirttiğinizde, genel araçlar varsayılan olarak aşağıdaki dizinlere yüklenir:
+
+| İşletim Sistemi          | Yol                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-## <a name="arguments"></a>Arguments
+Yerel araçlar, geçerli dizinin altındaki bir *. config* dizininde bulunan bir *araç bildirimi. JSON* dosyasına eklenir. Henüz bir bildirim dosyası yoksa, aşağıdaki komutu çalıştırarak oluşturun:
 
-`PACKAGE_NAME`
+```dotnetcli
+dotnet new tool-manifest
+```
 
-Yüklenecek .NET Core küresel aracını içeren NuGet paketinin adı/KIMLIĞI.
+Daha fazla bilgi için bkz. [yerel araç yüklemesi](global-tools.md#install-a-local-tool).
+
+## <a name="arguments"></a>Bağımsız Değişkenler
+
+- **`PACKAGE_NAME`**
+
+  Yüklenecek .NET Core aracını içeren NuGet paketinin adı/KIMLIĞI.
 
 ## <a name="options"></a>Seçenekler
 
-`--add-source <SOURCE>`
+- **`add-source <SOURCE>`**
 
-Yükleme sırasında kullanmak üzere ek bir NuGet paketi kaynağı ekler.
+  Yükleme sırasında kullanmak üzere ek bir NuGet paketi kaynağı ekler.
 
-`--configfile <FILE>`
+- **`configfile <FILE>`**
 
-Kullanılacak NuGet yapılandırma (*NuGet. config*) dosyası.
+  Kullanılacak NuGet yapılandırma (*NuGet. config*) dosyası.
 
-`--framework <FRAMEWORK>`
+- **`framework <FRAMEWORK>`**
 
-Aracının yükleneceği [hedef çerçeveyi](../../standard/frameworks.md) belirtir. .NET Core SDK, varsayılan olarak en uygun hedef Framework 'ü seçmaya çalışır.
+  Aracının yükleneceği [hedef çerçeveyi](../../standard/frameworks.md) belirtir. .NET Core SDK, varsayılan olarak en uygun hedef Framework 'ü seçmaya çalışır.
 
-`-g|--global`
+- **`-g|--global`**
 
-Yüklemenin Kullanıcı genelinde olduğunu belirtir. `--tool-path` Seçeneğiyle birleştirilemez. Bu seçeneği belirtmezseniz, `--tool-path` seçeneğini belirtmeniz gerekir.
+  Yüklemenin Kullanıcı genelinde olduğunu belirtir. `--tool-path` seçeneği ile birleştirilemez. `--global` ve `--tool-path` her ikisi de kullanılmazsa yerel bir araç yüklemesi belirtilir. 
 
-`-h|--help`
+- **`-h|--help`**
 
-Komut için kısa bir yardım yazdırır.
+  Komut için kısa bir yardım yazdırır.
 
-`--tool-path <PATH>`
+- **`tool-path <PATH>`**
 
-Genel aracın yükleneceği konumu belirtir. YOL mutlak veya göreli olabilir. YOL yoksa, komut onu oluşturmaya çalışır. `--global` Seçeneğiyle birleştirilemez. Bu seçeneği belirtmezseniz, `--global` seçeneğini belirtmeniz gerekir.
+  Genel aracın yükleneceği konumu belirtir. YOL mutlak veya göreli olabilir. YOL yoksa, komut onu oluşturmaya çalışır. `--global` ve `--tool-path` her ikisi de kullanılmazsa yerel bir araç yüklemesi belirtilir. 
 
-`-v|--verbosity <LEVEL>`
+- **`-v|--verbosity <LEVEL>`**
 
-Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`
+  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`.
 
-`--version <VERSION_NUMBER>`
+- **`--version <VERSION_NUMBER>`**
 
-Yüklenecek aracın sürümü. Varsayılan olarak, en son kararlı paket sürümü yüklenir. Aracının önizlemesini veya eski sürümlerini yüklemek için bu seçeneği kullanın.
+  Yüklenecek aracın sürümü. Varsayılan olarak, en son kararlı paket sürümü yüklenir. Aracının önizlemesini veya eski sürümlerini yüklemek için bu seçeneği kullanın.
 
 ## <a name="examples"></a>Örnekler
 
-[Dotnetsay](https://www.nuget.org/packages/dotnetsay/) genel aracını varsayılan konuma yüklenir:
+- **`dotnet tool install -g dotnetsay`**
 
-`dotnet tool install -g dotnetsay`
+  Varsayılan konumda [dotnetdeyin](https://www.nuget.org/packages/dotnetsay/) genel araç olarak yüklenir.
 
-Özel bir Windows klasörüne [dotnetdeyin](https://www.nuget.org/packages/dotnetsay/) genel aracını yükleme:
+- **`dotnet tool install dotnetsay --tool-path c:\global-tools`**
 
-`dotnet tool install dotnetsay --tool-path c:\global-tools`
+  Özel bir Windows dizininde [dotnetdeyin](https://www.nuget.org/packages/dotnetsay/) genel bir araç olarak yüklenir.
 
-Belirli bir Linux/macOS klasörüne [dotnetdeyin](https://www.nuget.org/packages/dotnetsay/) genel aracını yükleme:
+- **`dotnet tool install dotnetsay --tool-path ~/bin`**
 
-`dotnet tool install dotnetsay --tool-path ~/bin`
+  [Dotnetdeyin](https://www.nuget.org/packages/dotnetsay/) , belirli bir Linux/MacOS dizininde küresel bir araç olarak yüklenir.
 
-[Dotnetsay](https://www.nuget.org/packages/dotnetsay/) küresel aracının 2.0.0 sürümünü kurar:
+- **`dotnet tool install -g dotnetsay --version 2.0.0`**
 
-`dotnet tool install -g dotnetsay --version 2.0.0`
+  [Dotnetme](https://www.nuget.org/packages/dotnetsay/) 'nin 2.0.0 sürümünü küresel bir araç olarak kurar.
+
+- **`dotnet tool install dotnetsay`**
+
+  Geçerli dizin için [dotnetdeyin](https://www.nuget.org/packages/dotnetsay/) 'ı yerel bir araç olarak kurar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core küresel araçları](global-tools.md)
+- [.NET Core araçları](global-tools.md)
