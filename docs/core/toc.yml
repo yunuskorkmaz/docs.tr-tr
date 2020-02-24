@@ -250,17 +250,23 @@
   items:
     - name: Genel Bakış
       href: tools/index.md
-    - name: Araçlar
+    - name: Genel ve yerel araçlar
       expanded: true
       items:
-        - name: Genel araçlar
-          expanded: true
+        - name: Araçları yönetme
+          href: tools/global-tools.md
+        - name: Öğreticiler
           items:
-            - name: Genel Bakış
-              href: tools/global-tools.md
-            - name: Genel araç oluşturma
+            - name: Araç oluşturma
+              displayName: tools
               href: tools/global-tools-how-to-create.md
-        - name: Araç kullanım sorunlarını giderme
+            - name: Genel araç yükleyip kullanma
+              displayName: tools
+              href: tools/global-tools-how-to-use.md
+            - name: Yerel araç yükleyip kullanma
+              displayName: tools
+              href: tools/local-tools-how-to-use.md
+        - name: Sorun giderme araçları
           href: tools/troubleshoot-usage-issues.md
     - name: Yükseltilmiş erişim
       href: tools/elevated-access.md
@@ -320,6 +326,10 @@
               href: tools/dotnet-tool-install.md
             - name: dotnet tool list
               href: tools/dotnet-tool-list.md
+            - name: dotnet tool restore
+              href: tools/dotnet-tool-restore.md
+            - name: dotnet tool run
+              href: tools/dotnet-tool-run.md
             - name: dotnet tool uninstall
               href: tools/dotnet-tool-uninstall.md
             - name: dotnet tool update
