@@ -12,7 +12,7 @@
           href: interface-definition-language.md
         - name: Ağ protokolleri
           href: network-protocols.md
-        - name: WCF geliştiricilerine neden gRPC önerilir?
+        - name: WCF geliştiricileri için gRPC’yi neden öneriyoruz?
           href: Why-grpc.md
     - name: Protokol Arabellekleri
       href: protocol-buffers.md
@@ -27,7 +27,7 @@
           href: protobuf-repeated.md
         - name: Protobuf ayrılmış alanları
           href: protobuf-reserved.md
-        - name: Değişken türler için Protobuf Any ve OneOf alanları
+        - name: Değişken türler için Protobuf Any ve Oneof alanları
           href: protobuf-any-oneof.md
         - name: Protobuf sabit listeleri
           href: protobuf-enums.md
@@ -36,7 +36,7 @@
     - name: WCF hizmetlerini gRPC ile karşılaştırma
       href: wcf-services-to-grpc-comparison.md
       items:
-        - name: WCF Uç Noktaları ve gRPC yöntemleri
+        - name: WCF uç noktaları ve gRPC yöntemleri
           href: wcf-endpoints-grpc-methods.md
         - name: WCF bağlamaları ve aktarımları
           href: wcf-bindings.md
@@ -79,11 +79,11 @@
           href: docker.md
         - name: Kubernetes
           href: kubernetes.md
-        - name: gRPC ve Service Mesh
+        - name: Hizmet ağları
           href: service-mesh.md
         - name: Yük dengeleme
           href: load-balancing.md
-        - name: Uygulama Performansı Yönetimi
+        - name: Uygulama performansı yönetimi
           href: application-performance-management.md
     - name: Ek
       href: appendix.md
