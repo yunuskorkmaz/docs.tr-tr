@@ -3,12 +3,12 @@ title: global.json’a genel bakış
 description: .NET Core CLI komutlarını çalıştırırken .NET Core SDK sürümünü ayarlamak için Global. json dosyasını nasıl kullanacağınızı öğrenin.
 ms.date: 01/14/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8582c495be58e38ca19320f14e20f8c511a9c821
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 70257566e1ff30f5c97212a5e0e3c308c27738b7
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920506"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626001"
 ---
 # <a name="globaljson-overview"></a>global.json’a genel bakış
 
@@ -24,13 +24,13 @@ Bunun yerine çalışma zamanının belirtilmesi hakkında daha fazla bilgi içi
 
 ## <a name="globaljson-schema"></a>Global. JSON şeması
 
-### <a name="sdk"></a>'sının
+### <a name="sdk"></a>sdk
 
 Tür: `object`
 
 Seçilecek .NET Core SDK hakkındaki bilgileri belirtir.
 
-#### <a name="version"></a>sürümü
+#### <a name="version"></a>version
 
 - Tür: `string`
 
@@ -147,7 +147,7 @@ dotnet new globaljson --sdk-version 3.0.100
 > [!NOTE]
 > Eşleşen kurallar, yüklü olan tüm .NET çekirdeği yüklü çalışma zamanları genelinde ortak olan `dotnet.exe` giriş noktasına tabidir. .NET Core çalışma zamanının en son yüklü sürümü için eşleşen kurallar, yan yana birden çok çalışma zamanı yüklendiğinde kullanılır.
 
-## <a name="net-core-3xtabnetcore3x"></a>[.NET Core 3. x](#tab/netcore3x)
+## <a name="net-core-3x"></a>[.NET Core 3. x](#tab/netcore3x)
 
 .NET Core 3,0 ile başlayarak, hangi SDK sürümünün kullanılacağını belirlerken aşağıdaki kurallar geçerlidir:
 
@@ -160,7 +160,7 @@ dotnet new globaljson --sdk-version 3.0.100
   - `rollFoward` değer ayarlanmamışsa, varsayılan `rollForward` ilkesi olarak `latestPatch` kullanır. Aksi takdirde, her bir değeri ve bunların davranışını [rollforward](#rollforward) bölümünde denetleyin.
   - Ön sürüm sürümlerinin dikkate alınıp alınmayacağını ve `allowPrerelease` ayarlanmamışsa, [Allowbir ön sürümü](#allowprerelease) bölümünde açıklanan varsayılan davranış nedir?
 
-## <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
+## <a name="net-core-2x"></a>[.NET Core 2. x](#tab/netcore2x)
 
 .NET Core 2. x SDK 'da, hangi SDK sürümünün kullanılacağını belirlerken aşağıdaki kurallar geçerlidir:
 
@@ -182,17 +182,19 @@ SDK sürümü aşağıdaki bölümlerden oluşur:
 
 ---
 
-## <a name="troubleshooting-build-warnings"></a>Derleme uyarıları sorunlarını giderme
+## <a name="troubleshoot-build-warnings"></a>Derleme uyarıları sorunlarını giderme
 
-> [!WARNING]
-> .NET Core SDK bir önizleme sürümü ile çalışıyorsunuz. SDK sürümünü geçerli projedeki Global. JSON dosyası aracılığıyla tanımlayabilirsiniz. Daha fazla <https://go.microsoft.com/fwlink/?linkid=869452>
+* Aşağıdaki uyarı, projenizin .NET Core SDK ön sürümü kullanılarak derlendiğini gösterir:
 
-Bu uyarı, projenizin .NET Core SDK ön sürümü kullanılarak derlendiğini gösterir. .NET Core SDK sürümlerde yüksek kaliteli bir geçmiş ve taahhüt vardır. Ancak, bir ön sürüm sürümü kullanmak istemiyorsanız, .NET Core 3,0 SDK ile kullanabileceğiniz farklı stratejileri veya [allowbir ön](#allowprerelease) sürümü bölümünde daha sonraki bir sürümü kontrol edin. .NET Core 3,0 veya daha yüksek bir çalışma zamanı veya SDK yüklü olmayan makinelerde, bir *Global. JSON* dosyası oluşturmanız ve kullanmak istediğiniz tam sürümü belirtmeniz gerekir.
+  > .NET Core SDK bir önizleme sürümü ile çalışıyorsunuz. SDK sürümünü geçerli projedeki Global. JSON dosyası aracılığıyla tanımlayabilirsiniz. Daha fazla <https://go.microsoft.com/fwlink/?linkid=869452>.
 
-> [!WARNING]
-> ' {StartupProject} ' başlangıç projesi Framework 'ü hedefliyor. NETCoreApp ' sürümü ' {targetFrameworkVersion} '. Entity Framework Core .NET komut satırı araçlarının bu sürümü yalnızca sürüm 2,0 veya üstünü destekler. Araçların eski sürümlerini kullanma hakkında daha fazla bilgi için bkz. <https://go.microsoft.com/fwlink/?linkid=871254>
+  .NET Core SDK sürümlerde yüksek kaliteli bir geçmiş ve taahhüt vardır. Ancak, bir ön sürüm sürümü kullanmak istemiyorsanız, .NET Core 3,0 SDK ile kullanabileceğiniz farklı stratejileri veya [allowbir ön](#allowprerelease) sürümü bölümünde daha sonraki bir sürümü kontrol edin. .NET Core 3,0 veya daha yüksek bir çalışma zamanı veya SDK yüklü olmayan makinelerde, bir *Global. JSON* dosyası oluşturmanız ve kullanmak istediğiniz tam sürümü belirtmeniz gerekir.
 
-.NET Core 2,1 SDK (sürüm 2.1.300) ile başlayarak, `dotnet ef` komutu SDK 'ya dahil edilir. Bu uyarı, projenizin .NET Core 2,1 SDK ve sonraki sürümlerle uyumlu olmayan EF Core 1,0 veya 1,1 ' i hedeflediğini belirtir. Projenizi derlemek için, makinenizde .NET Core 2,0 SDK (sürüm 2.1.201) ve önceki bir sürümü yükleyip *Global. JSON* dosyasını kullanarak istenen SDK sürümünü tanımlayın. `dotnet ef` komutu hakkında daha fazla bilgi için bkz. [EF Core .NET komut satırı araçları](/ef/core/miscellaneous/cli/dotnet).
+* Aşağıdaki uyarı, projenizin .NET Core 2,1 SDK ve sonraki sürümlerle uyumlu olmayan 1,0 veya 1,1 EF Core hedeflediği anlamına gelir:
+
+  > ' {StartupProject} ' başlangıç projesi Framework 'ü hedefliyor. NETCoreApp ' sürümü ' {targetFrameworkVersion} '. Entity Framework Core .NET komut satırı araçlarının bu sürümü yalnızca sürüm 2,0 veya üstünü destekler. Araçların eski sürümlerini kullanma hakkında daha fazla bilgi için bkz. <https://go.microsoft.com/fwlink/?linkid=871254>.
+
+  .NET Core 2,1 SDK (sürüm 2.1.300) ile başlayarak, `dotnet ef` komutu SDK 'ya dahil edilir. Projenizi derlemek için, makinenizde .NET Core 2,0 SDK 'sını (sürüm 2.1.201) veya daha önceki bir sürümü yükleyip *Global. JSON* dosyasını kullanarak istenen SDK sürümünü tanımlayın. `dotnet ef` komutu hakkında daha fazla bilgi için bkz. [EF Core .NET komut satırı araçları](/ef/core/miscellaneous/cli/dotnet).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

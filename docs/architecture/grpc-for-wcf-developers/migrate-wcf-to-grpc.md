@@ -1,26 +1,26 @@
 ---
 title: WCF geliştiricileri için bir WCF çözümünü gRPC-gRPC 'ye geçirme
-description: Farklı türlerde WCF hizmetini gRPC 'de eşdeğerine geçirme.
+description: Farklı türlerde WCF Hizmetleri gRPC 'de eşdeğerine nasıl geçirilir.
 ms.date: 09/02/2019
-ms.openlocfilehash: 33823d20e1593323a03da12981c5a4534c4d491a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 12e724ab46a33547d352da7a604a5a994e617bc2
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971769"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628520"
 ---
 # <a name="migrate-a-wcf-solution-to-grpc"></a>WCF çözümünü gRPC'ye geçirme
 
-Bu bölümde, ASP.NET Core 3,0 gRPC projeleriyle nasıl çalışılacağı ve farklı türlerde WCF hizmetinin gRPC eşdeğerine geçirilmesi gösterilmektedir:
+Bu bölümde, ASP.NET Core 3,0 gRPC projeleriyle nasıl çalışılacağı ve farklı türlerde Windows Communication Foundation (WCF) Hizmetleri gRPC eşdeğerine nasıl geçirilerek anlatılmaktadır:
 
 - ASP.NET Core 3,0 gRPC projesi oluşturun.
-- Basit Istek-gRPC birli RPC 'ye yönelik yanıt verme işlemleri.
+- Basit istek-gRPC birli RPC 'ye yönelik yanıt verme işlemleri.
 - GRPC istemci akışı RPC 'ye tek yönlü işlemler.
 - GRPC çift yönlü akış RPC 'ye tam çift yönlü hizmetler.
 
-Ayrıca, veri kümelerinin döndürülmesi için yinelenen alanlar ve Bölüm sonundaki istemci kitaplıklarının kullanımı gibi akış Hizmetleri kullanmanın bir karşılaştırması de vardır.
+Ayrıca, veri kümelerini döndürmek için tekrarlanan alanlar ve akış Hizmetleri kullanmanın bir karşılaştırması vardır ve bu, bölümün sonunda istemci kitaplıklarının kullanımıyla ilgili bir tartışmadır.
 
-Örnek WCF uygulaması, bağımlılık ekleme için *Autofac* adlı, açık kaynaklı denetim (IOC) kapsayıcı kitaplığının kullanıldığı bir hisse senedi Hizmetleri kümesinin en az bir saplaması örneğidir. Her WCF hizmet türü için bir tane olmak üzere üç hizmet içerir. Hizmetler aşağıdaki bölümlerde daha ayrıntılı bir şekilde ele alınacaktır. Çözümler, GitHub 'da [DotNet-Architecture/GRPC-for-WCF-geliştiricilerinden](https://github.com/dotnet-architecture/grpc-for-wcf-developers) indirilebilir. Hizmetler, dış bağımlılıkları en aza indirmek için sahte veriler kullanır.
+Örnek WCF uygulaması, bir hisse senedi Hizmetleri kümesinin en az bir saplama örneğidir. Bağımlılık ekleme için Autofac adlı açık kaynaklı denetim (IOC) kapsayıcı kitaplığını kullanır. Her WCF hizmet türü için bir tane olmak üzere üç hizmet içerir. Hizmetler aşağıdaki bölümlerde daha ayrıntılı bir şekilde ele alınacaktır. GitHub 'da, [DotNet-Architecture/GRPC-for-WCF-Developers](https://github.com/dotnet-architecture/grpc-for-wcf-developers) çözümlerini yükleyebilirsiniz. Hizmetler, dış bağımlılıkları en aza indirmek için sahte veriler kullanır.
 
 Örnekler, her bir hizmetin WCF ve gRPC uygulamalarını içerir.
 

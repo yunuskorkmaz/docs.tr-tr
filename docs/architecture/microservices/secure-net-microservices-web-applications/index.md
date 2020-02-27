@@ -3,12 +3,12 @@ title: .NET mikro hizmetleri ve Web uygulamalarının güvenliğini sağlama
 description: .NET mikro hizmetleri ve Web uygulamalarında güvenlik-ASP.NET Core Web uygulamalarında kimlik doğrulama seçeneklerini öğrenin.
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: f82212956f5492a51ec99d092e1a5131d1b31313
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0ac2591f8650e9f8cf29560735a9ec803d29ee4f
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501642"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628338"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Güvenli .NET mikro hizmetleri ve Web uygulamaları oluşturun
 
@@ -135,8 +135,8 @@ Her durumda, satıcıya bağımlı olan ve genellikle şunları içeren bir uygu
 
 Uygulamanızı bir dış sağlayıcıya yapılandırma hakkında daha fazla bilgi için, [ASP.NET Core belgelerinde dış sağlayıcı kimlik doğrulaması](/aspnet/core/security/authentication/social/)' na bakın.
 
-> [!TIP]
-Tüm ayrıntılar, daha önce bahsedilen yetkilendirme ara yazılımı ve Hizmetleri tarafından işlenir. Bu nedenle, Şekil 9-3 ' de gösterildiği gibi, daha önce bahsedilen kimlik doğrulama sağlayıcılarını kaydetmenin yanı sıra, ASP.NET Code Web uygulaması projesini Visual Studio 'da oluştururken yalnızca **bireysel kullanıcı hesabı** kimlik doğrulaması seçeneğini seçmeniz gerekir.
+>[!TIP]
+>Tüm ayrıntılar, daha önce bahsedilen yetkilendirme ara yazılımı ve Hizmetleri tarafından işlenir. Bu nedenle, Şekil 9-3 ' de gösterildiği gibi, daha önce bahsedilen kimlik doğrulama sağlayıcılarını kaydetmenin yanı sıra, ASP.NET Code Web uygulaması projesini Visual Studio 'da oluştururken yalnızca **bireysel kullanıcı hesabı** kimlik doğrulaması seçeneğini seçmeniz gerekir.
 
 ![Yeni ASP.NET Core Web uygulaması iletişim kutusunun ekran görüntüsü.](./media/index/select-individual-user-account-authentication-option.png)
 

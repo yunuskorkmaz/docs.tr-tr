@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: ac862d163f1bd8b66f29160d836bc459e4bf4081
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0305df5e7566f9441ce09fa3346a8b2dc67c8943
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745133"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627974"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Nasıl yapılır: Windows Formları BindingNavigator Denetimine Yükleme, Kaydetme ve İptal Düğmeleri Ekleme
 
@@ -35,7 +35,7 @@ Aşağıdaki yordamda, <xref:System.Windows.Forms.TextBox> bir denetim verilere 
 
 5. <xref:System.Windows.Forms.BindingNavigator> denetimini seçin.
 
-6. **BindingNavigator görevleri** iletişim kutusunun görünmesi ve **öğeleri Düzenle**' yi seçmek için akıllı etiket kabartmasını (![akıllı etiket karakter](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) tıklatın.
+6. (![küçük siyah ok](./media/designer-actions-glyph.gif)) tasarımcı eylemleri simgesine tıklayın, böylece **BindingNavigator görevler** iletişim kutusu görünür ve **öğeleri Düzenle**' yi seçin.
 
      **Öğeler koleksiyonu Düzenleyicisi** görünür.
 
@@ -49,7 +49,7 @@ Aşağıdaki yordamda, <xref:System.Windows.Forms.TextBox> bir denetim verilere 
 
     4. Düğmelerin her biri için <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> özelliğini **metin**olarak ayarlayın. Alternatif olarak, bu özelliği **Image** veya **ImageAndText**olarak ayarlayabilir ve <xref:System.Windows.Forms.ToolStripItem.Image%2A> özelliğinde görüntülenecek şekilde ayarlayabilirsiniz.
 
-    5. İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın. Düğmeler <xref:System.Windows.Forms.ToolStrip>eklenir.
+    5. **Tamam**’a tıklayarak iletişim kutusunu kapatın. Düğmeler <xref:System.Windows.Forms.ToolStrip>eklenir.
 
 8. Forma sağ tıklayın ve **kodu görüntüle**' yi seçin.
 

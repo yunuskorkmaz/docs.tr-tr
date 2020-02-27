@@ -7,12 +7,12 @@ helpviewer_keywords:
 - columns [Windows Forms], reordering
 - data [Windows Forms], displaying
 ms.assetid: d82bd69c-6799-4439-a32c-91139c5901d1
-ms.openlocfilehash: 823c0064b2710ab5dfd0f67edf95374590d4490b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 14dc1081a8608c6e6add67f641c4b55825d2fc81
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745847"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626977"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları DataGridView Denetimindeki Sütun Yeniden Sıralamayı Etkinleştirme
 Bir Windows Forms <xref:System.Windows.Forms.DataGridView> denetiminde görüntülenen verileri görüntülerken, kullanıcılar bazen belirli sütunlardaki değerleri karşılaştırmak istiyor. Sütunları denetimde yaygın olarak ayrılırsa, özellikle ilgilendikleri tüm sütunları görmek için kullanıcıların otomatik olarak geri ve ileri kaydırılabilmesi durumunda bu durum kullanışlı olabilir. Kullanıcılarınızın sütunları yeniden sıralamak için sütun değerlerini karşılaştırma görevinin daha kolay olmasını sağlayabilirsiniz. Sütun yeniden sıralamayı etkinleştirdiğinizde, kullanıcılar sütun başlığını fareyle sürükleyerek bir sütunu yeni bir konuma taşıyabilir.
@@ -21,7 +21,7 @@ Bir Windows Forms <xref:System.Windows.Forms.DataGridView> denetiminde görünt�
 
 ## <a name="to-enable-column-reordering"></a>Sütun yeniden sıralamayı etkinleştirmek için
 
-- <xref:System.Windows.Forms.DataGridView> denetiminin sağ üst köşesindeki akıllı etiket glifi ' ne (![akıllı etiket karakter](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) tıklayın ve ardından **sütun yeniden sıralamayı etkinleştir**' i seçin.
+- <xref:System.Windows.Forms.DataGridView> denetiminin sağ üst köşesinde bulunan Tasarımcı eylemleri glifinin (![küçük siyah ok](./media/designer-actions-glyph.gif)) tıklayın ve ardından **sütun yeniden sıralamayı etkinleştir**' i seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

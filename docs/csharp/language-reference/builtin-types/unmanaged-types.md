@@ -3,12 +3,12 @@ title: Yönetilmeyen türler- C# başvuru
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 97aa4dd629e385dbe9641d82a7da21a0aaa63e92
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 042cf382879cc4010a388fb75f41099b4342c9d9
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342590"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626951"
 ---
 # <a name="unmanaged-types-c-reference"></a>Yönetilmeyen türler (C# başvuru)
 
@@ -17,7 +17,7 @@ Bir tür, aşağıdaki türlerden biri ise, **yönetilmeyen bir türdür** :
 - `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal`veya `bool`
 - Herhangi bir [numaralandırma](enum.md) türü
 - Herhangi bir [işaretçi](../../programming-guide/unsafe-code-pointers/pointer-types.md) türü
-- Yalnızca yönetilmeyen türlerin ve [](../keywords/struct.md) 7,3 ve önceki sürümlerde bulunan C# alanları içeren Kullanıcı tanımlı herhangi bir yapı türü, oluşturulmuş bir tür değildir (en az bir tür bağımsız değişkeni içeren bir tür)
+- Yalnızca yönetilmeyen türlerin ve [](struct.md) 7,3 ve önceki sürümlerde bulunan C# alanları içeren Kullanıcı tanımlı herhangi bir yapı türü, oluşturulmuş bir tür değildir (en az bir tür bağımsız değişkeni içeren bir tür)
 
 7,3 ile C# başlayarak, bir tür parametresinin işaretçi olmayan, null atanamaz yönetilmeyen bir tür olduğunu belirtmek için [`unmanaged` kısıtlamasını](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) kullanabilirsiniz.
 

@@ -4,16 +4,16 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: bf290681395460bec10be45c4eaa1f165e453caf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 17162a0dc959a85c03a5cb5757e2b91fe10b0ab3
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75702902"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628169"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Dizin oluşturucular kullanmaC# (Programlama Kılavuzu)
 
-Dizin oluşturucular, istemci uygulamaların yalnızca bir dizi olarak erişebileceği bir [sınıf](../../language-reference/keywords/class.md), [Yapı](../../language-reference/keywords/struct.md)veya [arabirim](../../language-reference/keywords/interface.md) oluşturmanıza imkan tanıyan sözdizimsel bir kolaydır. Dizin oluşturucular en sık, birincil amacı bir iç koleksiyonu veya diziyi kapsüllemek olan türlerde uygulanır. Örneğin, 24 saatlik bir dönemde 10 farklı zamanda kaydedilen Fahrenhayt 'teki sıcaklığı temsil eden bir sınıf `TempRecord` olduğunu varsayalım. Sınıfı, sıcaklık değerlerini depolamak için `float[]` türünde bir dizi `temps` içerir. Bu sınıfta bir Dizin Oluşturucu uygulayarak, istemciler, bir `TempRecord` örneğindeki sıcaklıkların `float temp = tr.temps[4]`yerine `float temp = tr[4]` olarak erişebileceği. Dizin Oluşturucu gösterimi yalnızca istemci uygulamaları için söz dizimini basitleştirir; Ayrıca, diğer geliştiricilerin anlayabilmesi için sınıfı ve amacını daha sezgisel hale getirir.  
+Dizin oluşturucular, istemci uygulamaların yalnızca bir dizi olarak erişebileceği bir [sınıf](../../language-reference/keywords/class.md), [Yapı](../../language-reference/builtin-types/struct.md)veya [arabirim](../../language-reference/keywords/interface.md) oluşturmanıza imkan tanıyan sözdizimsel bir kolaydır. Dizin oluşturucular en sık, birincil amacı bir iç koleksiyonu veya diziyi kapsüllemek olan türlerde uygulanır. Örneğin, 24 saatlik bir dönemde 10 farklı zamanda kaydedilen Fahrenhayt 'teki sıcaklığı temsil eden bir sınıf `TempRecord` olduğunu varsayalım. Sınıfı, sıcaklık değerlerini depolamak için `float[]` türünde bir dizi `temps` içerir. Bu sınıfta bir Dizin Oluşturucu uygulayarak, istemciler, bir `TempRecord` örneğindeki sıcaklıkların `float temp = tr.temps[4]`yerine `float temp = tr[4]` olarak erişebileceği. Dizin Oluşturucu gösterimi yalnızca istemci uygulamaları için söz dizimini basitleştirir; Ayrıca, diğer geliştiricilerin anlayabilmesi için sınıfı ve amacını daha sezgisel hale getirir.  
   
 Bir sınıf veya yapı biriminde bir Dizin Oluşturucu bildirmek için aşağıdaki örnekte gösterildiği gibi [this](../../language-reference/keywords/this.md) anahtar sözcüğünü kullanın:
 
@@ -76,4 +76,4 @@ Aşağıdaki örnek, haftanın günlerini depolayan bir sınıf bildirir. `get` 
 
 - [C# Programlama Kılavuzu](../index.md)
 - [Dizin Oluşturucular](./index.md)
-- [Veri Erişimi](../classes-and-structs/properties.md)
+- [Özellikler](../classes-and-structs/properties.md)

@@ -10,12 +10,12 @@ ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3b88f64fca8d3f11308f1cbfde97de2e6c2f22cc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0b68a70b55cbf03d480fd388a637a4caf78b6eaa
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740212"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628806"
 ---
 # <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>İzlenecek yol: Windows Forms denetimleri, yama çizgileri kullanarak düzenleme
 
@@ -25,7 +25,7 @@ Anlık görüntü çizgileri, denetimleri diğer denetimlerle nerede hizalamak g
 
 Anlık görüntü çizgileri denetimlerinizi, profesyonel görünüm ve davranış için (göz atın) kolayca hizalamanızı kolaylaştırır.
 
-## <a name="create-the-project"></a>Projeyi oluşturma
+## <a name="create-the-project"></a>Proje oluşturma
 
 1. Visual Studio 'da, "SnaplineExample" adlı bir Windows tabanlı uygulama projesi oluşturun.
 
@@ -124,7 +124,7 @@ Gruplanmış denetimleri ve bir <xref:System.Windows.Forms.GroupBox> denetiminde
 
 ## <a name="align-a-label-to-a-controls-text"></a>Etiketi bir denetimin metnine hizalayın
 
-1. **Araç kutusundan** bir <xref:System.Windows.Forms.TextBox> denetimini formunuza sürükleyin. Form üzerine <xref:System.Windows.Forms.TextBox> denetimini bıraktığınızda, akıllı etiket simgesine tıklayın ve **metni textBox1 olarak ayarla** seçeneğini belirleyin. Ayrıntılar için bkz. [Izlenecek yol: Windows Forms Denetimlerinde akıllı etiketleri kullanarak ortak görevleri gerçekleştirme](performing-common-tasks-using-smart-tags-on-wf-controls.md).
+1. **Araç kutusundan** bir <xref:System.Windows.Forms.TextBox> denetimini formunuza sürükleyin. Form üzerine <xref:System.Windows.Forms.TextBox> denetimini bıraktığınızda, akıllı etiket simgesine tıklayın ve **metni textBox1 olarak ayarla** seçeneğini belirleyin. Ayrıntılar için bkz. [Izlenecek yol: tasarımcı eylemlerini kullanarak ortak görevleri gerçekleştirme](perform-common-tasks-design-actions.md).
 
 2. **Araç kutusundan** bir <xref:System.Windows.Forms.Label> denetimini formunuza sürükleyin.
 

@@ -2,12 +2,12 @@
 title: Yineleyiciler
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 465a8e6650c3d015520164030a146c9502ebe603
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2789ac66690ebfd472b9bae5ccf08b1bdfaa0922
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353733"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628741"
 ---
 # <a name="iterators-visual-basic"></a>Yineleyiciler (Visual Basic)
 
@@ -435,7 +435,7 @@ Bir yineleyici Yöntem olarak yazdığınızda, derleyici onu bir durum makinesi
 
 Derleyicinin ne yaptığını görmek için, bir yineleyici yöntemi için oluşturulan Microsoft ara dil kodunu görüntülemek için ıldadsm. exe aracını kullanabilirsiniz.
 
-Bir [sınıf](../../../csharp/language-reference/keywords/class.md) veya [Yapı](../../../csharp/language-reference/keywords/struct.md)için yineleyici oluşturduğunuzda, tüm <xref:System.Collections.IEnumerator> arabirimini uygulamanız gerekmez. Derleyici yineleyiciyi algıladığında, <xref:System.Collections.IEnumerator> veya <xref:System.Collections.Generic.IEnumerator%601> arabiriminin `Current`, `MoveNext`ve `Dispose` yöntemlerini otomatik olarak oluşturur.
+Bir [sınıf](../../language-reference/statements/class-statement.md) veya [Yapı](../../language-reference/statements/structure-statement.md)için yineleyici oluşturduğunuzda, tüm <xref:System.Collections.IEnumerator> arabirimini uygulamanız gerekmez. Derleyici yineleyiciyi algıladığında, <xref:System.Collections.IEnumerator> veya <xref:System.Collections.Generic.IEnumerator%601> arabiriminin `Current`, `MoveNext`ve `Dispose` yöntemlerini otomatik olarak oluşturur.
 
 `For Each…Next` döngüsünün art arda her tekrarında (veya doğrudan `IEnumerator.MoveNext`çağrısı), sonraki Yineleyici kod gövdesi önceki `Yield` deyimden sonra devam eder. Daha sonra Yineleyici gövdesinin sonuna ulaşılana kadar veya bir `Exit Function` ya da `Return` ifadesiyle karşılaşana kadar sonraki `Yield` bildirimine devam eder.
 

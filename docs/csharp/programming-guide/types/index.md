@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: d277869809b7148a2c3d568c91fce15f9a83baa1
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ade2cba857a1a32039f8fd07881f13f63f0dbe1a
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093571"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628143"
 ---
 # <a name="types-c-programming-guide"></a>Türler (C# Programlama Kılavuzu)
 
@@ -67,7 +67,7 @@ C#tamsayılar, kayan nokta değerleri, Boole ifadeleri, metin karakterleri, onda
 
 ## <a name="custom-types"></a>Özel türler
 
-Kendi özel türlerinizi oluşturmak için [struct](../../language-reference/keywords/struct.md), [Class](../../language-reference/keywords/class.md), [Interface](../../language-reference/keywords/interface.md)ve [enum](../../language-reference/builtin-types/enum.md) yapılarını kullanırsınız. .NET sınıf kitaplığı, Microsoft tarafından kendi uygulamalarınızda kullanabileceğiniz özel türlerin bir koleksiyonudur. Varsayılan olarak, sınıf kitaplığındaki en sık kullanılan türler her C# programda kullanılabilir. Diğerleri yalnızca tanımlandıkları derlemeye açıkça bir proje başvurusu eklediğinizde kullanılabilir hale gelir. Derleyicinin derlemeye bir başvurusu olduktan sonra, kaynak kodda o derlemede belirtilen türlerin değişkenlerini (ve sabitleri) bildirebilirsiniz. Daha fazla bilgi için bkz. [.NET sınıf kitaplığı](../../../standard/class-library-overview.md).
+Kendi özel türlerinizi oluşturmak için [struct](../../language-reference/builtin-types/struct.md), [Class](../../language-reference/keywords/class.md), [Interface](../../language-reference/keywords/interface.md)ve [enum](../../language-reference/builtin-types/enum.md) yapılarını kullanırsınız. .NET sınıf kitaplığı, Microsoft tarafından kendi uygulamalarınızda kullanabileceğiniz özel türlerin bir koleksiyonudur. Varsayılan olarak, sınıf kitaplığındaki en sık kullanılan türler her C# programda kullanılabilir. Diğerleri yalnızca tanımlandıkları derlemeye açıkça bir proje başvurusu eklediğinizde kullanılabilir hale gelir. Derleyicinin derlemeye bir başvurusu olduktan sonra, kaynak kodda o derlemede belirtilen türlerin değişkenlerini (ve sabitleri) bildirebilirsiniz. Daha fazla bilgi için bkz. [.NET sınıf kitaplığı](../../../standard/class-library-overview.md).
 
 ## <a name="the-common-type-system"></a>Ortak tür sistemi
 
@@ -75,7 +75,7 @@ Kendi özel türlerinizi oluşturmak için [struct](../../language-reference/key
 
 - Devralma ilkesini destekler. Türler, *temel türler*olarak adlandırılan diğer türlerden türetilebilir. Türetilmiş tür, yöntemleri, özellikleri ve temel türün diğer üyelerini devralır (bazı kısıtlamalarla). Temel tür başka bir türden türetebilir, bu durumda türetilmiş tür, devralma hiyerarşisindeki her iki temel türün üyelerini devralır. <xref:System.Int32?displayProperty=nameWithType> (C# anahtar sözcük: [int](../../language-reference/builtin-types/integral-numeric-types.md)) gibi yerleşik sayısal türler dahil olmak üzere tüm türler, sonunda <xref:System.Object?displayProperty=nameWithType> (C# anahtar sözcük: [nesne](../../language-reference/builtin-types/reference-types.md)) olan tek bir temel türden türetilir. Bu Birleşik tür hiyerarşisine [ortak tür sistemi](../../../standard/base-types/common-type-system.md) (Cts) denir. ' De C#devralma hakkında daha fazla bilgi için bkz. [Devralma](../classes-and-structs/inheritance.md).
 
-- CTS içindeki her tür, bir *değer türü* veya bir *başvuru türü*olarak tanımlanır. Bu, .NET sınıf kitaplığı 'ndaki tüm özel türleri ve ayrıca kendi Kullanıcı tanımlı türlerinizi içerir. [Struct](../../language-reference/keywords/struct.md) anahtar sözcüğünü kullanarak tanımladığınız türler değer türleridir; Tüm yerleşik sayısal türler `structs`. [Sınıf](../../language-reference/keywords/class.md) anahtar sözcüğünü kullanarak tanımladığınız türler başvuru türleridir. Başvuru türleri ve değer türlerinde farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışları vardır.
+- CTS içindeki her tür, bir *değer türü* veya bir *başvuru türü*olarak tanımlanır. Bu, .NET sınıf kitaplığı 'ndaki tüm özel türleri ve ayrıca kendi Kullanıcı tanımlı türlerinizi içerir. [Struct](../../language-reference/builtin-types/struct.md) anahtar sözcüğünü kullanarak tanımladığınız türler değer türleridir; Tüm yerleşik sayısal türler `structs`. [Sınıf](../../language-reference/keywords/class.md) anahtar sözcüğünü kullanarak tanımladığınız türler başvuru türleridir. Başvuru türleri ve değer türlerinde farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışları vardır.
 
 Aşağıdaki çizimde, CTS 'deki değer türleri ve başvuru türleri arasındaki ilişki gösterilmektedir.
 
@@ -90,7 +90,7 @@ Aşağıdaki görüntüde, CTS 'deki değer türleri ve başvuru türleri göste
 
 Değer türleri, <xref:System.Object?displayProperty=nameWithType>türetilen <xref:System.ValueType?displayProperty=nameWithType>türetilir. <xref:System.ValueType?displayProperty=nameWithType> türetilen türlerin CLR 'de özel davranışı vardır. Değer türü değişkenleri doğrudan değerlerini içerir, bu da belleğin, değişkenin bildirildiği bağlamda satır içi olarak ayrıldığı anlamına gelir. Değer türü değişkenler için ayrı bir yığın ayırma veya çöp toplama ek yükü yoktur.
 
-Değer türlerinin iki kategorisi vardır: [struct](../../language-reference/keywords/struct.md) ve [enum](../../language-reference/builtin-types/enum.md).
+Değer türlerinin iki kategorisi vardır: [struct](../../language-reference/builtin-types/struct.md) ve [enum](../../language-reference/builtin-types/enum.md).
 
 Yerleşik sayısal türler yapı birimleridir ve erişebileceğiniz özelliklere ve yöntemlere sahiptirler:
 
@@ -109,7 +109,7 @@ char c = 'Z';
 
 Değer türleri *korumalıdır*, yani örneğin, bir türü <xref:System.Int32?displayProperty=nameWithType>türetemezsiniz ve Kullanıcı tanımlı herhangi bir sınıftan veya yapıdan devralacak bir struct tanımlayamazsınız, çünkü bir struct yalnızca <xref:System.ValueType?displayProperty=nameWithType>devralabilir. Ancak, bir struct bir veya daha fazla arabirim uygulayabilir. Yapı türünü, uygulayan herhangi bir arabirim türüne çevirebilirsiniz; Bu, bir *kutulama* işleminin yapıyı yönetilen yığında bir başvuru türü nesnesinin içine sarmasına neden olur. Kutulama işlemleri, bir <xref:System.Object?displayProperty=nameWithType> veya herhangi bir arabirim türünü giriş parametresi olarak alan bir yönteme bir değer türü geçirdiğinizde oluşur. Daha fazla bilgi için bkz. [kutulama ve kutudan](./boxing-and-unboxing.md)çıkarma.
 
-Kendi özel değer türlerinizi oluşturmak için [struct](../../language-reference/keywords/struct.md) anahtar sözcüğünü kullanırsınız. Genellikle, bir yapı aşağıdaki örnekte gösterildiği gibi küçük bir ilgili değişkenler kümesi için kapsayıcı olarak kullanılır:
+Kendi özel değer türlerinizi oluşturmak için [struct](../../language-reference/builtin-types/struct.md) anahtar sözcüğünü kullanırsınız. Genellikle, bir yapı aşağıdaki örnekte gösterildiği gibi küçük bir ilgili değişkenler kümesi için kapsayıcı olarak kullanılır:
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
@@ -177,7 +177,7 @@ Sıradan değer türlerinin değeri [null](../../language-reference/keywords/nul
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-Daha fazla bilgi için aşağıdaki konulara bakın:
+Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
 
 - [Tür Değiştirme ve Tür Dönüştürmeler](./casting-and-type-conversions.md)
 

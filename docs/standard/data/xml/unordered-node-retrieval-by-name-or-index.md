@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-ms.openlocfilehash: 8c6819b4c1628d9e09a9bbf96ae8d5edbb6c643d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 577de6b60e579b37eb54ea69de72f3534f1d23ac
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710082"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628910"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Ada veya Dizine Göre Sırasız Düğüm Alma
 **XmlNamedNodeMap** , world WIDE Web KONSORSIYUMU (W3C) belirtiminde NamedNodeMap olarak tanımlanır ve düğümler adına veya dizinine göre başvuru yeteneğine sahip sıralanmamış bir düğüm kümesini işlemek için gereklidir. **XmlNamedNodeMap** 'e erişiminizin tek yolu, bir **XmlNamedNodeMap** bir yöntem veya özellik aracılığıyla döndürüldüğünde olur. **XmlNamedNodeMap**döndüren üç yöntem veya özellik vardır:  
@@ -115,7 +115,7 @@ class test {
 }  
 ```  
   
- Bir **AttributeCollection**'dan çıkarılan bir özniteliği gösteren ek bir kod örneği görmek için bkz. [XmlNamedNodeMap. Removenamedidıtem yöntemi](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem). Yöntemler ve özellikler hakkında daha fazla bilgi için bkz. [XmlNamedNodeMap üyeleri](AllMembers.T:System.Xml.XmlNamedNodeMap).  
+ Bir **AttributeCollection**'dan çıkarılan bir özniteliği gösteren ek bir kod örneği görmek için bkz. [XmlNamedNodeMap. Removenamedidıtem yöntemi](xref:System.Xml.XmlNamedNodeMap.RemoveNamedItem%2A). Yöntemler ve özellikler hakkında daha fazla bilgi için bkz. [XmlNamedNodeMap üyeleri](xref:System.Xml.XmlNamedNodeMap).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

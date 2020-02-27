@@ -2,12 +2,12 @@
 title: Azure İzleyici
 description: Sisteminizin üzerinde görünürlük elde etmek için Azure Izleyici 'yi kullanma.
 ms.date: 02/05/2020
-ms.openlocfilehash: 961331011db4e59583438a2dbdf366bbe0e34261
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 87ffca186346c3356c0277809d1d67145d1dd17b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448938"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628039"
 ---
 # <a name="azure-monitor"></a>Azure İzleyici
 
@@ -78,7 +78,7 @@ Azure Izleyici, dağıtılan uygulamaların normal işletim parametrelerini anla
 ## <a name="references"></a>Başvurular
 
 - [Azure İzleyici](https://docs.microsoft.com/azure/azure-monitor/overview)
-- [Akıllı Uyarı Yönetimi-MS Ignite-video](https://oxfordcomputergroup.com/resourceso365-security-native-cloud-authentication/)
+- [Akıllı Uyarı Yönetimi-MS Ignite-video](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/)
 
 >[!div class="step-by-step"]
 >[Önceki](monitoring-azure-kubernetes.md)

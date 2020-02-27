@@ -8,16 +8,16 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 6b96d65f657f2af1af5c9a245e956640ee06260e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 76f4a3ed929e3ac8e3e6cc74158e75af7a6c8cf2
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76748519"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625953"
 ---
 # <a name="value-types-c-reference"></a>Değer türleri (C# başvuru)
 
-*Değer türleri* ve [başvuru türleri](../keywords/reference-types.md) , C# türlerin iki ana kategorileridir. Değer türünde bir değişken türün bir örneğini içerir. Bu, bir tür örneğine başvuru içeren bir başvuru türü değişkeninden farklıdır. Varsayılan olarak, [atama](../operators/assignment-operator.md)üzerinde, bir yönteme bir bağımsız değişken geçirmekte veya bir yöntem sonucu döndürürken değişken değerleri kopyalanır. Değer türü değişkenler söz konusu olduğunda, karşılık gelen tür örnekleri kopyalanır. Aşağıdaki örnekte bu davranış gösterilmektedir:
+*Değer türleri* ve [başvuru türleri](../keywords/reference-types.md) , C# türlerin iki ana kategorileridir. Değer türünde bir değişken türün bir örneğini içerir. Bu, bir tür örneğine başvuru içeren bir başvuru türü değişkeninden farklıdır. Varsayılan olarak, [atama](../operators/assignment-operator.md), bir yönteme bir bağımsız değişken geçirme ve bir yöntem sonucu döndürme, değişken değerleri kopyalanır. Değer türü değişkenler söz konusu olduğunda, karşılık gelen tür örnekleri kopyalanır. Aşağıdaki örnekte bu davranış gösterilmektedir:
 
 [!code-csharp[copy of values](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
 
@@ -34,7 +34,7 @@ Değer türü bir başvuru türünün veri üyesini içeriyorsa, bir değer tür
 
 Değer türü aşağıdaki iki türden biri olabilir:
 
-- veri ve ilgili işlevleri kapsülleyen bir [Yapı türü](../keywords/struct.md)
+- veri ve ilgili işlevleri kapsülleyen bir [Yapı türü](struct.md)
 - bir adlandırılmış sabitler kümesi tarafından tanımlanan ve bir seçimi veya seçenek bileşimini temsil eden bir [numaralandırma türü](enum.md)
 
 [Null olabilen bir değer türü](nullable-value-types.md) `T?` temel alınan değer `T` türünün tüm değerlerini ve ek bir [null](../keywords/null.md) değeri temsil eder. Null atanabilir bir değer türü olmadığı takdirde, değer türü değişkenine `null` atayamazsınız.

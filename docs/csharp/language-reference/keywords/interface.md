@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: b315d1f04c9e74700afba8ee7871b23ab4b2fd28
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 473f5f8e226f0a144746ac943afcffdccd4777c7
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744685"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625858"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (C# başvuru)
 
-Arabirim, bir sözleşmeyi tanımlar. Bu sözleşmeyi uygulayan [`class`](class.md) veya [`struct`](struct.md) , arabirimde tanımlı üyelerin bir uygulamasını sağlaması gerekir. 8,0 ile C# başlayarak bir arabirim, Üyeler için varsayılan bir uygulama tanımlayabilir. Ayrıca, yaygın işlevselliğe tek bir uygulama sağlamak için [`static`](static.md) üyelerini tanımlayabilir.
+Arabirim, bir sözleşmeyi tanımlar. Bu sözleşmeyi uygulayan [`class`](class.md) veya [`struct`](../builtin-types/struct.md) , arabirimde tanımlı üyelerin bir uygulamasını sağlaması gerekir. 8,0 ile C# başlayarak bir arabirim, Üyeler için varsayılan bir uygulama tanımlayabilir. Ayrıca, yaygın işlevselliğe tek bir uygulama sağlamak için [`static`](static.md) üyelerini tanımlayabilir.
 
 Aşağıdaki örnekte `ImplementationClass` sınıfının, parametresi olmayan ve `SampleMethod`'i döndüren `void` adlı bir yöntemi uygulaması gerekir.
 
@@ -35,7 +35,7 @@ Arabirim, bir ad alanı veya sınıf üyesi olabilir. Arabirim bildirimi, aşağ
 Bu önceki üye bildirimleri genellikle gövde içermez. 8,0 ile C# başlayarak bir arabirim üyesi bir gövde bildirebilir. Bu, varsayılan bir *uygulama*olarak adlandırılır. Gövdeler içeren Üyeler, arabirimin geçersiz kılan bir uygulama sağlamayan sınıflar ve yapılar için "varsayılan" bir uygulama sağlamasına izin verir. Ayrıca, 8,0 ile C# başlayarak bir arabirim şunlar olabilir:
 
 - [Sabitler](const.md)
-- [işleçler](../operators/operator-overloading.md)
+- [İşleçler](../operators/operator-overloading.md)
 - [Statik Oluşturucu](../../programming-guide/classes-and-structs/constructors.md#static-constructors).
 - [İç içe türler](../../programming-guide/classes-and-structs/nested-types.md)
 - [Statik alanlar, Yöntemler, özellikler, Dizin oluşturucular ve olaylar](static.md)
@@ -78,6 +78,4 @@ Daha fazla bilgi için, [varsayılan arabirim üyeleri C# ](~/_csharplang/propos
 - [Arabirimler](../../programming-guide/interfaces/index.md)
 - [Özellikleri Kullanma](../../programming-guide/classes-and-structs/using-properties.md)
 - [Dizin Oluşturucular Kullanma](../../programming-guide/indexers/using-indexers.md)
-- [class](class.md)
-- [struct](struct.md)
 - [Arabirimler](../../programming-guide/interfaces/index.md)

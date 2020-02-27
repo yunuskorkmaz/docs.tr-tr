@@ -2,12 +2,12 @@
 title: Kapsayıcı olarak çalışan bir veritabanı sunucusunu kullanma
 description: Yalnızca geliştirme için bir kapsayıcı olarak çalışan bir veritabanı sunucusunu kullanmanın önemini anlayın. Üretim için hiçbir şekilde.
 ms.date: 01/30/2020
-ms.openlocfilehash: 816ac196636f78a368a9f20e8eedcc6a22567fa7
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0cbc933003aac10970814378c27e88b5cb0ddbe5
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502283"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628533"
 ---
 # <a name="use-a-database-server-running-as-a-container"></a>Kapsayıcı olarak çalışan bir veritabanı sunucusunu kullanma
 
@@ -48,10 +48,10 @@ Bir kapsayıcı olarak çalışan SQL Server olması yalnızca bir SQL Server ö
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Linux, Mac veya Windows \ SQL Server Docker görüntüsünü çalıştırın**
-    <https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker>
+  <https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker>
 
 - **Sqlcmd \ ile Linux üzerinde SQL Server bağlama ve sorgulama**
-    <https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd>
+  <https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd>
 
 ## <a name="seeding-with-test-data-on-web-application-startup"></a>Web uygulaması başlangıcında test verileriyle dengeli dağıtım
 

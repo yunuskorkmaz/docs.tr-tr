@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Menü Birleştirme ve ToolStrip Denetimleri içeren MDI Formu Oluşturma'
+title: 'İzlenecek yol: Menü Birleştirme ve ToolStrip Denetimleri ile bir MDI Formu Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,188 +14,188 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], creating
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
-ms.openlocfilehash: 5853760231cbece27805923c009d83e16c9b0a5e
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: e0343b98cb71521b35418e70550a93e0bfe20fa8
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211555"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628793"
 ---
-# <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>İzlenecek yol: Menü Birleştirme ve ToolStrip Denetimleri içeren MDI Formu Oluşturma
+# <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>İzlenecek yol: Menü Birleştirme ve ToolStrip Denetimleri ile bir MDI Formu Oluşturma
 
-<xref:System.Windows.Forms?displayProperty=nameWithType> Ad alanı birden çok belge arabirimi (MDI) uygulamaları destekler ve <xref:System.Windows.Forms.MenuStrip> denetimi, menü birleştirmeyi destekler. MDI formları aynı zamanda <xref:System.Windows.Forms.ToolStrip> kontrol eder.
+<xref:System.Windows.Forms?displayProperty=nameWithType> ad alanı birden çok belge arabirimi (MDI) uygulamasını destekler ve <xref:System.Windows.Forms.MenuStrip> denetimi menüyü birleştirmeyi destekler. MDI Forms denetimleri de <xref:System.Windows.Forms.ToolStrip>.
 
-Bu izlenecek yolda nasıl kullanılacağını gösterir <xref:System.Windows.Forms.ToolStripPanel> denetimleriyle MDI formu. Formu ile alt menülerini birleştirme menüsünü de destekler. Aşağıdaki görevler bu kılavuzda gösterilen:
+Bu izlenecek yol, <xref:System.Windows.Forms.ToolStripPanel> denetimlerinin MDI formu ile nasıl kullanılacağını gösterir. Form Ayrıca alt menülerle menü birleştirmeyi destekler. Aşağıdaki görevler Bu izlenecek yolda gösterilmektedir:
 
-- Bir Windows Forms projesi oluşturma.
+- Windows Forms projesi oluşturma.
 
-- Formunuz için ana menü oluşturuluyor. Menü gerçek adıyla değişir.
+- Formunuz için ana menü oluşturma. Menünün gerçek adı farklılık gösterecektir.
 
-- Ekleme <xref:System.Windows.Forms.ToolStripPanel> denetimini **araç kutusu**.
+- **Araç kutusuna**<xref:System.Windows.Forms.ToolStripPanel> denetimi ekleme.
 
-- Bir alt form oluşturuluyor.
+- Alt form oluşturma.
 
-- Düzenleme <xref:System.Windows.Forms.ToolStripPanel> z sırasına göre denetimler.
+- <xref:System.Windows.Forms.ToolStripPanel> denetimleri z düzeninde düzenleme.
 
-İşlemi tamamladığınızda, menü birleştirme ve taşınabilir destekleyen MDI Formu olacaktır <xref:System.Windows.Forms.ToolStrip> kontrol eder.
+İşiniz bittiğinde, menü birleştirme ve taşınabilir <xref:System.Windows.Forms.ToolStrip> denetimlerini destekleyen bir MDI formunuza sahip olursunuz.
 
-Bu konudaki tek bir liste olarak kodu kopyalamak için bkz: [nasıl yapılır: Menü birleştirme ve ToolStrip denetimleri içeren MDI formu oluşturma](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).
+Bu konudaki kodu tek bir liste olarak kopyalamak için bkz. [nasıl yapılır: menü birleştirme ve ToolStrip denetimleri Ile MDI formu oluşturma](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yolu tamamlamak için Visual Studio gerekir.
 
-## <a name="create-the-project"></a>Projeyi oluşturma
+## <a name="create-the-project"></a>Proje oluşturma
 
-1. Visual Studio'da adlı bir Windows uygulaması projesi oluşturmak **MdiForm** (**dosya** > **yeni** > **proje**  >  **Visual C#**  veya **Visual Basic** > **Klasik Masaüstü**  >   **Windows Forms uygulamalarındaki**).
+1. Visual Studio 'da, **MDIForm** adlı bir Windows uygulama projesi**oluşturun (** **Visual C#**  veya **Visual Basic** > **Klasik Masaüstü** > Windows Forms **uygulaması** **) > ** ** >  > .**
 
-2. Formu Windows Form Tasarımcısı'nda seçin.
+2. Windows Form Tasarımcısı, formunu seçin.
 
-3. Özellikler penceresinde ayarlayın <xref:System.Windows.Forms.Form.IsMdiContainer%2A> için `true`.
+3. Özellikler penceresi, <xref:System.Windows.Forms.Form.IsMdiContainer%2A> değerini `true`olarak ayarlayın.
 
-## <a name="create-the-main-menu"></a>Ana menü oluşturma
+## <a name="create-the-main-menu"></a>Ana menüyü oluşturma
 
-Üst MDI formu ana menü içerir. Ana menü öğesi adlı tek menü sahip **penceresi**. İle **penceresi** menü öğesi alt formları oluşturabilirsiniz. Ana menüye menü öğeleri alt formları birleştirilir.
+Üst MDI formu ana menüyü içerir. Ana menüde **pencere**adlı bir menü öğesi vardır. **Pencere** menü öğesiyle alt formlar oluşturabilirsiniz. Alt formlardan menü öğeleri ana menüde birleştirilir.
 
-1. Gelen **araç kutusu**, sürükleyin bir <xref:System.Windows.Forms.MenuStrip> forma denetim.
+1. **Araç kutusundan**bir <xref:System.Windows.Forms.MenuStrip> denetimini form üzerine sürükleyin.
 
-2. Ekleme bir <xref:System.Windows.Forms.ToolStripMenuItem> için <xref:System.Windows.Forms.MenuStrip> denetlemek ve adlandırın **penceresi**.
+2. <xref:System.Windows.Forms.MenuStrip> denetimine <xref:System.Windows.Forms.ToolStripMenuItem> ekleyin ve **pencereye**adlandırın.
 
-3. Seçin <xref:System.Windows.Forms.MenuStrip> denetimi.
+3. <xref:System.Windows.Forms.MenuStrip> denetimini seçin.
 
-4. Özellikler penceresinde ayarlayın <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> özelliğini `ToolStripMenuItem1`.
+4. Özellikler penceresi, <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> özelliğinin değerini `ToolStripMenuItem1`olarak ayarlayın.
 
-5. Eklemek için bir alt **penceresi** menü öğesini ve ardından ad alt **yeni**.
+5. **Pencere** menü öğesine bir alt öğe ekleyin ve ardından **Yeni**alt öğesi adlandırın.
 
-6. Özellikler penceresinde tıklayın **olayları**.
+6. Özellikler penceresi, **Olaylar**' a tıklayın.
 
-7. Çift <xref:System.Windows.Forms.ToolStripItem.Click> olay.
+7. <xref:System.Windows.Forms.ToolStripItem.Click> olayına çift tıklayın.
 
-     Windows Form Tasarımcısı için bir olay işleyicisi oluşturur <xref:System.Windows.Forms.ToolStripItem.Click> olay.
+     Windows Form Tasarımcısı, <xref:System.Windows.Forms.ToolStripItem.Click> olayı için bir olay işleyicisi oluşturur.
 
 8. Olay işleyicisine aşağıdaki kodu ekleyin.
 
      [!code-csharp[System.Windows.Forms.ToolStrip.MdiForm#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.MdiForm#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/VB/Form1.vb#2)]
 
-## <a name="add-the-toolstrippanel-control-to-the-toolbox"></a>ToolStripPanel denetimi araç kutusuna ekleme
+## <a name="add-the-toolstrippanel-control-to-the-toolbox"></a>Araç kutusuna ToolStripPanel denetimini ekleme
 
-Kullanırken <xref:System.Windows.Forms.MenuStrip> denetimleriyle MDI Formu olmalıdır <xref:System.Windows.Forms.ToolStripPanel> denetimi. Eklemelisiniz <xref:System.Windows.Forms.ToolStripPanel> denetimini **araç kutusu** , MDI Formu Windows Form Tasarımcısı'nda oluşturulacak.
+MDI formuyla <xref:System.Windows.Forms.MenuStrip> denetimleri kullandığınızda <xref:System.Windows.Forms.ToolStripPanel> denetimine sahip olmanız gerekir. Windows Form Tasarımcısı MDI formunuzu oluşturmak için **araç kutusuna** <xref:System.Windows.Forms.ToolStripPanel> denetimini eklemeniz gerekir.
 
-1. Açık **araç kutusu**ve ardından **tüm Windows Formları** kullanılabilir Windows Forms denetimleri göstermek için sekmesinde.
+1. **Araç kutusunu**açın ve kullanılabilir Windows Forms denetimlerini göstermek için **tüm Windows Forms** sekmesine tıklayın.
 
-2. Kısayol menüsünü açmak için sağ tıklatın ve seçin **öğelerini Seç**.
+2. Sağ tıklayarak kısayol menüsünü açın ve **öğeleri seç**' i seçin.
 
-3. İçinde **araç kutusu öğelerini Seç** iletişim kutusu, aşağı kaydırın **adı** bulana kadar sütun **ToolStripPanel**.
+3. **Araç kutusu öğelerini Seç** iletişim kutusunda, **ToolStripPanel**' i bulana kadar **ad** sütununu aşağı kaydırın.
 
-4. Onay kutusunu **ToolStripPanel**ve ardından **Tamam**.
+4. **ToolStripPanel**'e göre onay kutusunu seçin ve ardından **Tamam**' a tıklayın.
 
-     <xref:System.Windows.Forms.ToolStripPanel> Denetimi görünür **araç kutusu**.
+     <xref:System.Windows.Forms.ToolStripPanel> denetimi **araç kutusunda**görünür.
 
-## <a name="create-a-child-form"></a>Bir alt form oluşturun
+## <a name="create-a-child-form"></a>Alt form oluşturma
 
-Bu yordamda, kendi ayrı bir alt form sınıfı tanımlayacak <xref:System.Windows.Forms.MenuStrip> denetimi. Bu form için menü öğeleri bu üst formu ile birleştirilir.
+Bu yordamda, kendi <xref:System.Windows.Forms.MenuStrip> denetimine sahip ayrı bir alt form sınıfı tanımlayacaksınız. Bu formun menü öğeleri üst form ile birleştirilir.
 
-1. Adlı yeni bir form ekleyin `ChildForm` projeye.
+1. Projeye `ChildForm` adlı yeni bir form ekleyin.
 
-     Daha fazla bilgi için [nasıl yapılır: Windows formlarını bir projeye ekleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y2xxdce3(v=vs.100)).
+     Daha fazla bilgi için bkz. [nasıl yapılır: bir projeye Windows Forms ekleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y2xxdce3(v=vs.100)).
 
-2. Gelen **araç kutusu**, sürükleyin bir <xref:System.Windows.Forms.MenuStrip> alt forma denetim.
+2. **Araç kutusundan**bir <xref:System.Windows.Forms.MenuStrip> denetimini alt form üzerine sürükleyin.
 
-3. Tıklayın <xref:System.Windows.Forms.MenuStrip> denetimin akıllı etiket karakterini (![akıllı etiket karakterini](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) ve ardından **öğe düzenleme**.
+3. <xref:System.Windows.Forms.MenuStrip> denetimin tasarımcı eylemleri glifsimgesine (![küçük siyah ok](./media/designer-actions-glyph.gif)) tıklayın ve ardından **öğeleri Düzenle**' yi seçin.
 
-4. İçinde **öğeler Koleksiyonu Düzenleyicisi** iletişim kutusunda, yeni bir <xref:System.Windows.Forms.ToolStripMenuItem> adlı **ChildMenuItem** alt menüsü.
+4. **Öğeler koleksiyonu Düzenleyicisi** iletişim kutusunda alt menüye **ChildMenuItem** adlı yeni bir <xref:System.Windows.Forms.ToolStripMenuItem> ekleyin.
 
-     Daha fazla bilgi için [ToolStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100)).
+     Daha fazla bilgi için bkz. [ToolStrip öğeleri koleksiyon Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100)).
 
-## <a name="test-the-form"></a>Form test
+## <a name="test-the-form"></a>Formu test etme
 
-1. Tuşuna **F5** derlemek ve formunuza çalıştırmak için.
+1. Formunuzu derlemek ve çalıştırmak için **F5** tuşuna basın.
 
-2. Tıklayın **penceresi** menüsünü açın ve ardından menü öğesi **yeni**.
+2. Menüyü açmak için **pencere** menü öğesine tıklayın ve sonra **Yeni**' ye tıklayın.
 
-     Yeni bir alt form, form denetiminin MDI istemci alanında oluşturulur. Alt formun menüsünde ana menü ile birleştirilir.
+     Formun MDI istemci alanında yeni bir alt form oluşturulur. Alt formun menüsü, ana menü ile birleştirilir.
 
 3. Alt formu kapatın.
 
      Alt formun menüsü, ana menüden kaldırılır.
 
-4. Tıklayın **yeni** birkaç kez.
+4. **Yeni** birkaç kez tıklayın.
 
-     Alt formları otomatik olarak altında listelenen **penceresi** menü öğesi olduğundan <xref:System.Windows.Forms.MenuStrip> denetimin <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> özelliğine atanır.
+     <xref:System.Windows.Forms.MenuStrip> denetiminin <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> özelliği atandığından, alt formlar **pencere** menü öğesi altında otomatik olarak listelenir.
 
-## <a name="add-toolstrip-support"></a>ToolStrip desteği eklendi
+## <a name="add-toolstrip-support"></a>ToolStrip desteği ekle
 
-Bu yordamda, dört ekleyeceksiniz <xref:System.Windows.Forms.ToolStrip> MDI üst formu için denetimler. Her <xref:System.Windows.Forms.ToolStrip> denetimi içinde eklenir bir <xref:System.Windows.Forms.ToolStripPanel> form kenarına yerleştirildiğini denetimi.
+Bu yordamda, MDI parent form 'a dört <xref:System.Windows.Forms.ToolStrip> denetimi ekleyeceksiniz. Her <xref:System.Windows.Forms.ToolStrip> denetimi, formun kenarına yerleştirilen bir <xref:System.Windows.Forms.ToolStripPanel> denetiminin içine eklenir.
 
-1. Gelen **araç kutusu**, sürükleyin bir <xref:System.Windows.Forms.ToolStripPanel> forma denetim.
+1. **Araç kutusundan**bir <xref:System.Windows.Forms.ToolStripPanel> denetimini form üzerine sürükleyin.
 
-2. İle <xref:System.Windows.Forms.ToolStripPanel> çift tıklayın, Denetim seçili <xref:System.Windows.Forms.ToolStrip> denetim **araç kutusu**.
+2. <xref:System.Windows.Forms.ToolStripPanel> denetimi seçiliyken **araç kutusunda**<xref:System.Windows.Forms.ToolStrip> denetimine çift tıklayın.
 
-     A <xref:System.Windows.Forms.ToolStrip> denetim oluşturuldu <xref:System.Windows.Forms.ToolStripPanel> denetimi.
+     <xref:System.Windows.Forms.ToolStripPanel> denetiminde <xref:System.Windows.Forms.ToolStrip> denetimi oluşturulur.
 
-3. Seçin <xref:System.Windows.Forms.ToolStripPanel> denetimi.
+3. <xref:System.Windows.Forms.ToolStripPanel> denetimini seçin.
 
-4. Özellikler penceresinde, denetimin değiştirin <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Left>.
+4. Özellikler penceresi, denetimin <xref:System.Windows.Forms.Control.Dock%2A> özelliğinin değerini <xref:System.Windows.Forms.DockStyle.Left>olarak değiştirin.
 
-     <xref:System.Windows.Forms.ToolStripPanel> Kontrol noktalarını sol tarafındaki formun ana menü altında. MDI istemci alanını uyacak şekilde yeniden boyutlandırır <xref:System.Windows.Forms.ToolStripPanel> denetimi.
+     <xref:System.Windows.Forms.ToolStripPanel> denetim noktaları formun sol tarafına, ana menünün altına göre yapılır. MDI istemci alanı, <xref:System.Windows.Forms.ToolStripPanel> denetimine uyacak şekilde yeniden boyutlandırılır.
 
-5. 1 ile 4 arasındaki adımları yineleyin.
+5. 1 ile 4 arasındaki adımları tekrarlayın.
 
-     Yeni dock <xref:System.Windows.Forms.ToolStripPanel> üst form denetimi.
+     Yeni <xref:System.Windows.Forms.ToolStripPanel> denetimini formun en üstüne yerleştirin.
 
-     <xref:System.Windows.Forms.ToolStripPanel> Denetim ana menü altında ancak ilk sağındaki yerleştirilmiştir <xref:System.Windows.Forms.ToolStripPanel> denetimi. Bu adım doğru konumlandırmada z düzenini önemini gösterir <xref:System.Windows.Forms.ToolStripPanel> kontrol eder.
+     <xref:System.Windows.Forms.ToolStripPanel> denetimi ana menünün altına, ancak ilk <xref:System.Windows.Forms.ToolStripPanel> denetiminin sağına yerleştirilir. Bu adımda, <xref:System.Windows.Forms.ToolStripPanel> denetimlerinde doğru şekilde konumlama ile z düzeninin önemi gösterilmektedir.
 
-6. Daha fazla iki için 1 ile 4 arasındaki adımları yineleyin <xref:System.Windows.Forms.ToolStripPanel> kontrol eder.
+6. İki <xref:System.Windows.Forms.ToolStripPanel> denetimi için 1 ile 4 arasındaki adımları tekrarlayın.
 
-     Yeni dock <xref:System.Windows.Forms.ToolStripPanel> sağa ve formun altına denetimleri.
+     Yeni <xref:System.Windows.Forms.ToolStripPanel> denetimlerini formun sağına ve sonuna yerleştirin.
 
-## <a name="arrange-toolstrippanel-controls-by-z-order"></a>Z sırasına ToolStripPanel denetimleri düzenleme
+## <a name="arrange-toolstrippanel-controls-by-z-order"></a>ToolStripPanel denetimlerini Z sırasına göre düzenleme
 
-Bir yerleşik konumunu <xref:System.Windows.Forms.ToolStripPanel> , MDI formu denetimi, z düzenini denetimin konumu tarafından belirlenir. Belge Anahattı penceresi içinde denetimlerin z düzenini kolayca düzenleyebilirsiniz.
+MDI formunuzdaki yerleşik bir <xref:System.Windows.Forms.ToolStripPanel> denetiminin konumu, denetimin z düzeninde bulunduğu konuma göre belirlenir. Belge Anahattı penceresinde, denetimlerinizin z düzenini kolayca düzenleyebilirsiniz.
 
-1. İçinde **görünümü** menüsünde tıklatın **diğer Windows**ve ardından **belge anahattı**.
+1. **Görünüm** menüsünde **diğer pencereler**' e ve ardından **Belge Anahattı**' na tıklayın.
 
-     Düzenlemesini, <xref:System.Windows.Forms.ToolStripPanel> denetimleri önceki yordamın bildiriliyor. Z düzenini doğru olmadığı için budur. Belge Anahattı penceresi denetimlerinin z sıralamasını değiştirmek için kullanın.
+     Önceki yordamdan <xref:System.Windows.Forms.ToolStripPanel> denetimlerinizi düzenleme işlemi standart dışı. Bunun nedeni, z düzeninin doğru olmaması. Denetimlerin z düzenini değiştirmek için belge anahattı penceresini kullanın.
 
-2. Belge Anahattı penceresini seçin **ToolStripPanel4**.
+2. Belge Anahattı penceresinde **ToolStripPanel4**' yi seçin.
 
-3. Aşağı ok düğmesini tekrar tekrar kadar **ToolStripPanel4** listesinin alt.
+3. **ToolStripPanel4** listenin en altında olana kadar aşağı ok düğmesine tekrar tekrar tıklayın.
 
-     **ToolStripPanel4** denetim, diğer denetimlerin altında formun altına yerleştirilmiştir.
+     **ToolStripPanel4** denetimi, formun alt kısmına, diğer denetimlerin altına yerleştirilir.
 
-4. Seçin **ToolStripPanel2**.
+4. **ToolStripPanel2**öğesini seçin.
 
-5. Aşağı ok düğmesini denetimi üçüncü listede konumlandırmak için bir kez tıklayın.
+5. Listeyi listede üçüncü olarak konumlandırmak için aşağı ok düğmesine bir kez tıklayın.
 
-     **ToolStripPanel2** denetimi için ana menü altında ve diğer denetimleri yukarıda formun üst yerleştirilmiştir.
+     **ToolStripPanel2** denetimi formun en üstüne, ana menünün altına ve diğer denetimlerin üstüne yerleştirilir.
 
-6. Çeşitli denetimleri seçin **belge anahattı** penceresi ve z düzeninde farklı konumlara taşıyabilirsiniz. Yerleşik denetimler yerleşimini z düzenini etkisini unutmayın. CTRL-Z kullanın veya **geri** üzerinde **Düzenle** değişikliklerinizi geri almak için menü.
+6. **Belge ana hattı** penceresinde çeşitli denetimler ' i seçin ve z düzeninde farklı konumlara taşıyın. Sabitlenmiş denetimlerin yerleştirilme üzerinde z düzeninin etkisini göz önünde edin. Değişikliklerinizi geri almak için **düzenleme** menüsünde CTRL-Z veya **geri al** komutunu kullanın.
 
-## <a name="checkpoint---test-your-form"></a>Checkpoint - formunuza test
+## <a name="checkpoint---test-your-form"></a>Kontrol noktası-formunuzu test etme
 
-1. Tuşuna **F5** derlemek ve formunuza çalıştırmak için.
+1. Formunuzu derlemek ve çalıştırmak için **F5** tuşuna basın.
 
-2. Tutamacı tıklayın bir <xref:System.Windows.Forms.ToolStrip> denetlemek ve denetimi form üzerinde farklı konumlara sürükleyin.
+2. <xref:System.Windows.Forms.ToolStrip> denetimin bir öğesine tıklayın ve denetimi formdaki farklı konumlara sürükleyin.
 
-     Sürükleyebilirsiniz bir <xref:System.Windows.Forms.ToolStrip> bir denetimden <xref:System.Windows.Forms.ToolStripPanel> başka bir denetim.
+     Bir <xref:System.Windows.Forms.ToolStrip> denetimini, bir <xref:System.Windows.Forms.ToolStripPanel> denetiminden diğerine sürükleyebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu kılavuzda, MDI üst formu ile oluşturduğunuz <xref:System.Windows.Forms.ToolStrip> denetimleri ve menü birleştirme. Kullanabileceğiniz <xref:System.Windows.Forms.ToolStrip> birçok başka amaçlarla denetimlerin ailesi:
+Bu kılavuzda, <xref:System.Windows.Forms.ToolStrip> denetimleri ve menü birleştirme ile bir MDI parent formu oluşturdunuz. Denetimlerin <xref:System.Windows.Forms.ToolStrip> ailesini birçok farklı amaçla kullanabilirsiniz:
 
-- Sahip, denetimler için kısayol menüleri oluşturma <xref:System.Windows.Forms.ContextMenuStrip>. Daha fazla bilgi için [ContextMenu bileşenine genel bakış](contextmenu-component-overview-windows-forms.md).
+- <xref:System.Windows.Forms.ContextMenuStrip>denetimlerle ilgili kısayol menüleri oluşturun. Daha fazla bilgi için bkz. [ContextMenu bileşenine genel bakış](contextmenu-component-overview-windows-forms.md).
 
-- Bir formu otomatik olarak doldurulan bir standart menü ile oluşturuldu. Daha fazla bilgi için [izlenecek yol: Bir forma standart menü öğeleri sağlama](walkthrough-providing-standard-menu-items-to-a-form.md).
+- Otomatik olarak doldurulmuş bir standart menü içeren bir form oluşturuldu. Daha fazla bilgi için bkz. [Izlenecek yol: bir forma standart menü öğeleri sağlama](walkthrough-providing-standard-menu-items-to-a-form.md).
 
-- Verin, <xref:System.Windows.Forms.ToolStrip> profesyonel bir görünümünü denetler. Daha fazla bilgi için [nasıl yapılır: Bir uygulama için ToolStrip oluşturucusunu ayarlama](how-to-set-the-toolstrip-renderer-for-an-application.md).
+- <xref:System.Windows.Forms.ToolStrip> denetimlerine profesyonel bir görünüm kazandırın. Daha fazla bilgi için bkz. [nasıl yapılır: bir uygulama Için ToolStrip oluşturucuyu ayarlama](how-to-set-the-toolstrip-renderer-for-an-application.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [Nasıl yapılır: MDI üst formları oluşturma](../advanced/how-to-create-mdi-parent-forms.md)
-- [Nasıl yapılır: MDI alt formları oluştur](../advanced/how-to-create-mdi-child-forms.md)
-- [Nasıl yapılır: Bir MDI açılan menüsüne MenuStrip ekleme](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
+- [Nasıl yapılır: MDI Üst Formları Oluşturma](../advanced/how-to-create-mdi-parent-forms.md)
+- [Nasıl yapılır: MDI Alt Formları Oluşturma](../advanced/how-to-create-mdi-child-forms.md)
+- [Nasıl yapılır: Bir MDI Açılan Menüsüne MenuStrip ekleme](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
 - [ToolStrip Denetimi](toolstrip-control-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Zaman uyumsuz programlama
 description: Temel fonksiyonel F# programlama kavramlarından türetilmiş bir dil düzeyi programlama modeline göre zaman uyumsuzluğu için nasıl temiz destek sağladığını öğrenin.
 ms.date: 12/17/2018
-ms.openlocfilehash: 471566befd69f330fb9254dbd57b19569d9f9ad3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7021d7936d10f9ea6fceb4aa56db3285d21624ad
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344670"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628858"
 ---
 # <a name="async-programming-in-f"></a>F\# 'da zaman uyumsuz programlama
 
@@ -69,7 +69,7 @@ let main argv =
     0
 ```
 
-Örnekte, `printTotalFileBytes` işlevi `string -> Async<unit>`türündedir. İşlevin çağrılması, zaman uyumsuz hesaplamayı gerçekten yürütmez. Bunun yerine, zaman uyumsuz olarak yürütülecek işin *belirtimi* olarak davranan bir `Async<unit>` döndürür. <xref:System.IO.File.WriteAllBytesAsync%2A> sonucunu uygun bir türe dönüştüren gövdesinde `Async.AwaitTask` çağırır.
+Örnekte, `printTotalFileBytes` işlevi `string -> Async<unit>`türündedir. İşlevin çağrılması, zaman uyumsuz hesaplamayı gerçekten yürütmez. Bunun yerine, zaman uyumsuz olarak yürütülecek işin *belirtimi* olarak davranan bir `Async<unit>` döndürür. <xref:System.IO.File.ReadAllBytesAsync%2A> sonucunu uygun bir türe dönüştüren gövdesinde `Async.AwaitTask` çağırır.
 
 Başka bir önemli satır `Async.RunSynchronously`çağrıdır. Bu, gerçekten zaman uyumsuz bir F# hesaplamayı yürütmek istiyorsanız çağırmanız gereken bir zaman uyumsuz modül başlatma işlevleridir.
 
@@ -150,7 +150,7 @@ Bir zaman uyumsuz hesaplama içinde bir alt hesaplama başlatır. Bu, birden ço
 computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
 ```
 
-Kullanılması gereken durumlar:
+Ne zaman kullanılır:
 
 - Aynı anda birden çok zaman uyumsuz hesaplamalar çalıştırmak istediğinizde, ancak paralel olarak zamanlanamaz.
 - Bir alt hesaplamanın ömrünü bir üst hesaplamadan bağlamak istediğinizde.
@@ -170,7 +170,7 @@ Geçerli işletim sistemi iş parçacığında hemen başlayarak bir zaman uyums
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 ```
 
-Kullanılması gereken durumlar:
+Ne zaman kullanılır:
 
 - Bir zaman uyumsuz hesaplamanın ortasında çağıran iş parçacığında bir şeyi güncelleştirmeniz gerektiğinde.
 
@@ -188,7 +188,7 @@ Kullanılması gereken durumlar:
 computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
 ```
 
-Kullanılması gereken durumlar:
+Ne zaman kullanılır:
 
 - Bir <xref:System.Threading.Tasks.Task%601> zaman uyumsuz bir hesaplamanın sonucunu göstermesini bekleyen bir .NET API 'sine çağrı yapmanız gerektiğinde.
 
@@ -245,7 +245,7 @@ Verilen <xref:System.Threading.Tasks.Task%601> tamamlanmasını bekleyen bir zam
 task: Task<'T>  -> Async<'T>
 ```
 
-Kullanılması gereken durumlar:
+Ne zaman kullanılır:
 
 - F# Zaman uyumsuz bir hesaplama içinde <xref:System.Threading.Tasks.Task%601> döndüren bir .NET API 'si kullanıyorsanız.
 
@@ -263,7 +263,7 @@ Verilen bir `Async<'T>`yürüten zaman uyumsuz bir hesaplama oluşturur ve bir `
 computation: Async<'T> -> Async<Choice<'T, exn>>
 ```
 
-Kullanılması gereken durumlar:
+Ne zaman kullanılır:
 
 - Bir özel durumla başarısız olabilecek ve çağıranın bu özel durumu işlemek istediğiniz zaman uyumsuz iş yaparken.
 
@@ -281,7 +281,7 @@ Verilen hesaplamayı çalıştıran ve sonucunu yoksayan zaman uyumsuz bir hesap
 computation: Async<'T> -> Async<unit>
 ```
 
-Kullanılması gereken durumlar:
+Ne zaman kullanılır:
 
 - Zaman uyumsuz bir hesaplamanız olduğunda, sonucu gerekli değildir. Bu, zaman uyumsuz kod için `ignore` koduna benzerdir.
 

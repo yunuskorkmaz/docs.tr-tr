@@ -5,17 +5,15 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: 12408bd9f10e7ed147a6c1adc0497d3b8d797e42
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 705e571e11fa7c8276fcb48d15ed0160fbda2bc5
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319817"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628767"
 ---
 # <a name="guide-to-the-documentation"></a>Belgeler için Kılavuz
 Burada verilen Windows Communication Foundation (WCF) belgeleriyle ilgili rehberlik vardır. Bağlantılı belgeler, belirli ilgi alanları ve uzmanlık düzeylerine göre gruplanan başlangıç noktaları için önerilir.  
-  
- Belge ve Yardım Görüntüleyicisi 'nin tek başına bir sürümünü yüklemek için, [Microsoft Windows SDK v 7,1](https://go.microsoft.com/fwlink/?LinkID=194146&clcid=0x409)' yi indirin.  
   
 ## <a name="new-to-windows-communication-foundation-programming"></a>Windows Communication Foundation programlamaya yeni  
   

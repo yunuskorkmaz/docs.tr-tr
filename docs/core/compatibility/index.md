@@ -2,12 +2,12 @@
 title: Son değişiklik türleri
 description: .NET Core 'un .NET sürümlerindeki geliştiriciler için uyumluluk denemelerini ve ne tür bir değişikliğin Son değişiklik olduğunu öğrenin.
 ms.date: 06/10/2019
-ms.openlocfilehash: 1c5790e39754b91aacbde9e87ed99f9dcc36ce9f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: bf0cc35d69e6bb501640455604a99a1f48962c4a
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092986"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628598"
 ---
 # <a name="changes-that-affect-compatibility"></a>Uyumluluğu etkileyen değişiklikler
 
@@ -49,7 +49,7 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını değiştirir.
 
   *Eski* derleme, yeni derlemeye işaret eden <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> işaretlenmelidir.
 
-- ✔️ **Izin verildi: bir [yapı](../../csharp/language-reference/keywords/struct.md) türünü `readonly struct` bir tür olarak değiştirme**
+- ✔️ **Izin verildi: bir [yapı](../../csharp/language-reference/builtin-types/struct.md) türünü `readonly struct` bir tür olarak değiştirme**
 
   `readonly struct` türü `struct` bir tür olarak değiştirilmesine izin verilmez.
 
@@ -77,17 +77,17 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını değiştirir.
 
   Arabirim kaldırma kuralı için bir özel durum vardır: kaldırılan arabirimden türetilen bir arabirimin uygulamasını ekleyebilirsiniz. Örneğin, tür veya arabirim artık <xref:System.IDisposable>uygulayan <xref:System.ComponentModel.IComponent>uygularsa <xref:System.IDisposable> kaldırabilirsiniz.
 
-- ❌ **Izin verilmiyor: bir `readonly struct` türünü [struct](../../csharp/language-reference/keywords/struct.md) türü olarak değiştirme**
+- ❌ **Izin verilmiyor: bir `readonly struct` türünü [struct](../../csharp/language-reference/builtin-types/struct.md) türü olarak değiştirme**
 
   Ancak `struct` türünün bir `readonly struct` türüne değiştirilmesine izin verilir.
 
-- ❌ **Izin verilmiyor: bir [yapı](../../csharp/language-reference/keywords/struct.md) türünü `ref struct` bir tür olarak değiştirme ve tam tersi**
+- ❌ **Izin verilmiyor: bir [yapı](../../csharp/language-reference/builtin-types/struct.md) türünü `ref struct` bir tür olarak değiştirme ve tam tersi**
 
 - ❌ **Izin verilmiyor: bir türün görünürlüğünü azaltma**
 
    Ancak, bir türün görünürlüğünü artırmak için izin verilir.
 
-### <a name="members"></a>Members
+### <a name="members"></a>Üyeler
 
 - ✔️ **Izin verildi: [sanal](../../csharp/language-reference/keywords/sealed.md) olmayan bir üyenin görünürlüğünü genişletme**
 
@@ -194,7 +194,7 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını değiştirir.
 
 ## <a name="behavioral-changes"></a>Davranış değişiklikleri
 
-### <a name="assemblies"></a>Derlemeler
+### <a name="assemblies"></a>Bütünleştirilmiş kodlar
 
 - ✔️ **Izin verildi: aynı platformlar hala desteklenmeden bir derlemeyi taşınabilir hale getirme**
 
@@ -300,7 +300,7 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını değiştirir.
 
 - ✔️ **Izin verilen: parametreye [params](../../csharp/language-reference/keywords/params.md) ekleme**
 
-- ❌ **Izin verilmiyor: bir [yapıyı](../../csharp/language-reference/keywords/struct.md) bir [sınıfa](../../csharp/language-reference/keywords/class.md) değiştirme ve tam tersi**
+- ❌ **Izin verilmiyor: bir [yapıyı](../../csharp/language-reference/builtin-types/struct.md) bir [sınıfa](../../csharp/language-reference/keywords/class.md) değiştirme ve tam tersi**
 
 - ❌ **Izin verilmiyor: bir kod bloğuna [Checked](../../csharp/language-reference/keywords/virtual.md) anahtar sözcüğünü ekleme**
 

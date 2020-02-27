@@ -2,12 +2,12 @@
 title: DotNet aracı install komutu
 description: DotNet aracı yükleme komutu, makinenizde belirtilen .NET Core aracını yükler.
 ms.date: 02/14/2020
-ms.openlocfilehash: 2705defe9b77009ca1411da28dd86d144ccc19e6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 837d12bc807ad95ccdbd9c0e087c7d45418c6e74
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543475"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626040"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -30,7 +30,7 @@ dotnet tool install <-h|--help>
 
 `dotnet tool install` komutu, makinenizde .NET Core araçları yüklemenizi sağlayan bir yol sağlar. Komutunu kullanmak için aşağıdaki yükleme seçeneklerinden birini belirtin:
 
-* Genel bir aracı varsayılan konuma yüklemek için `--tool-path` seçeneğini kullanın.
+* Genel bir aracı varsayılan konuma yüklemek için `--global` seçeneğini kullanın.
 * Bir genel aracı özel bir konuma yüklemek için `--tool-path` seçeneğini kullanın.
 * Yerel bir araç yüklemek için `--global` ve `--tool-path` seçeneklerini atlayın.
 

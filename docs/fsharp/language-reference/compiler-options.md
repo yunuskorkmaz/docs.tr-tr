@@ -2,16 +2,18 @@
 title: Derleyici Seçenekleri
 description: Uygulama F# ve kitaplıklarınızın F# derlemesini denetlemek için derleyici komut satırı seçeneklerini kullanın.
 ms.date: 12/10/2018
-ms.openlocfilehash: d0f4d1ca5ae45af25d6c304a2920d5c457700b1a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ecaae538a5db2f5dfefa79cb8e7b8b51d39c440d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424754"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628884"
 ---
 # <a name="compiler-options"></a>Derleyici Seçenekleri
 
-Bu konu, FSC. exe F# derleyicisi için derleyici komut satırı seçeneklerini açıklar. Derleme ortamı, proje özellikleri ayarlanarak de denetlenebilir.
+Bu konu, FSC. exe F# derleyicisi için derleyici komut satırı seçeneklerini açıklar.
+
+Derleme ortamı, proje özellikleri ayarlanarak de denetlenebilir. .NET Core 'u hedefleyen projeler için, "diğer bayraklar" özelliği, `.fsproj``<OtherFlags>...</OtherFlags>`, ek komut satırı seçeneklerini belirtmek için kullanılır.
 
 ## <a name="compiler-options-listed-alphabetically"></a>Alfabetik Listelenmiş Derleyici Seçenekleri
 
@@ -67,7 +69,7 @@ Aşağıdaki tabloda alfabetik olarak listelenen derleyici seçenekleri gösteri
 |`--win32manifest:manifest-filename`|Derlemeye bir Win32 bildirim dosyası ekler. Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz [ &#47;. &#40;win32manifest&#35; C derleyici&#41;seçenekleri](https://msdn.microsoft.com/library/bb545961.aspx).|
 |`--win32res:resource-filename`|Derlemeye bir Win32 kaynak dosyası ekler.<br /><br />Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz [ &#47;. win32res&#40;(&#35;C) derleyici&#41;seçenekleri](https://msdn.microsoft.com/library/8f2f5x2e.aspx).|
 
-## <a name="related-articles"></a>İlgili makaleler
+## <a name="related-articles"></a>İlgili makaleler:
 
 |Başlık|Açıklama|
 |-----|-----------|

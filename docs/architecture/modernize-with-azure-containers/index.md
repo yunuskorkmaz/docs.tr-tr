@@ -2,24 +2,24 @@
 title: Azure bulut ve Windows kapsayıcıları Ile mevcut .NET uygulamalarını modernleştirin (2. sürüm)
 description: Bu e-defterle, mevcut uygulamaları Azure bulutuna ve kapsayıcılara kaldırıp modernleştirin ve bunlarla aynı şekilde geçiş yapmayı öğrenin.
 ms.date: 04/28/2018
-ms.openlocfilehash: fa20e606c9a1364fbdf8c9a58c8703420d9e65a9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9439de84dd46ac3153d951378764d10184c33a52
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714580"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628454"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin (2. sürüm)
 
 ![Modernleştirin .NET uygulamaları kılavuzu 'nun kapak resmi.](./media/index/web-application-guide-cover-image.png)
 
-YAYIMLAYAN  
+YAYıMLAYAN  
 Microsoft Press ve Microsoft Devdıv  
 Microsoft Corporation 'ın bölümleri  
 One Microsoft Way  
 Redmond, Washington 98052-6399  
 
-Telif hakkı © 2018 Microsoft Corporation  
+Telif hakkı © 2020 Microsoft Corporation  
 
 Tüm hakları saklıdır. Bu kitabın içeriğinin bir kısmı herhangi bir biçimde veya herhangi bir şekilde, yayımcının yazılı izni olmadan çoğaltılamaz.
 
@@ -29,7 +29,7 @@ Bu kitap ile ilgili sorularınız varsa [dotnet-architecture-ebooks-feedback@ser
 
 Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi ifade eder. URL ve diğer Internet Web sitesi başvuruları dahil olmak üzere bu kitapta ifade edilen görünümler, eklentiler ve bilgiler bildirimde bulunmadan değiştirilebilir.
 
-Burada gösterilen bazı örnekler yalnızca örnek amaçlıdır ve kurgusaldır. Gerçek bir ilişki veya bağlantı amaçlanmaz ya da bu anlam çıkarılmamalıdır.
+Burada gösterilen bazı örnekler yalnızca gösterim amaçlıdır ve hayal ürünüdür. Hiçbir gerçek ilişkilendirme veya bağlantı amaçlanmaz veya çıkarsanmamalıdır.
 
 Microsoft ve "ticari markalar" Web sayfasındaki <https://www.microsoft.com> listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır. Diğer tüm işaretler ilgili sahiplerinin mülkiyetindedir.
 

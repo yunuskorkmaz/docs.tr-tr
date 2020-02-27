@@ -2,12 +2,12 @@
 title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 description: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok Kapsayıcılı uygulamaları düzenleme seçeneklerini ve Kubernetes uygulama yaşam döngüsünü geliştirirken Azure Dev Spaces olasılıklarını öğrenin.
 ms.date: 01/30/2020
-ms.openlocfilehash: f9e91d3958e2d567e68257c377f76cc3c2325a0b
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ea204941a461794fbeeb2482aa11973b79437027
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502989"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628507"
 ---
 # <a name="orchestrate-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 
@@ -36,7 +36,7 @@ Bir kümenin ve Scheduler 'ın kavramlarıyla ilgili olarak, farklı satıcılar
 ## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>Kapsayıcı Kümelemesi, düzenleme ve zamanlama için yazılım platformları
 
 |     |   |
-|-----|---|
+|:---:|---|
 | **Kubernetes** <br> Kubernetes logosunun bir görüntüsünü ![.](./media/scalable-available-multi-container-microservice-applications/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/) , özellikleri düzenlemek için küme altyapısı ve kapsayıcı zamanlamalarından değişen işlevselliği sağlayan açık kaynaklı bir üründür. Ana bilgisayar kümelerinde uygulama kapsayıcılarının dağıtım, ölçeklendirme ve işlemlerini otomatikleştirmenizi sağlar. <br><br> *Kubernetes* , kolay yönetim ve bulma için uygulama kapsayıcılarını mantıksal birimlere gruplandıran kapsayıcı merkezli bir altyapı sağlar. <br><br> *Kubernetes* , Linux 'Ta, Windows 'da daha az olgun bir yerde. |
 | **Azure Kubernetes Service (AKS)** <br> Azure Kubernetes hizmet logosunun bir görüntüsünü ![.](./media/scalable-available-multi-container-microservice-applications/azure-kubernetes-service-logo.png) | [Aks](https://azure.microsoft.com/services/kubernetes-service/) , Azure 'Da Kubernetes kümesinin yönetimini, dağıtımını ve işlemlerini kolaylaştıran yönetilen bir Kubernetes kapsayıcı düzenleme hizmetidir. |
 

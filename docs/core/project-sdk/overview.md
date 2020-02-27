@@ -3,12 +3,12 @@ title: .NET Core proje SDK 'sına genel bakış
 description: .NET Core proje SDK 'Ları hakkında bilgi edinin.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: b1b839f81b1b4a8d20dbb34d3d2fc000c64acb8a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: c41b25bf7933e7b1f6cb50da5e52dc0b312f5c74
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453806"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626251"
 ---
 # <a name="net-core-project-sdks"></a>.NET Core proje SDK 'Ları
 
@@ -32,7 +32,7 @@ Ayrıca kendi SDK 'nizi, NuGet aracılığıyla dağıtılabilecek şekilde yaza
 
 ## <a name="project-files"></a>Proje dosyaları
 
-.NET Core projeleri [MSBuild](/visualstudio/msbuild/msbuild) biçimine dayanır. Projeler için *. csproj* ve projeler için F# *. fsproj* gıbı uzantılara sahip proje dosyaları, XML biçimindedir. C# MSBuild proje dosyasının kök öğesi [Proje](/msbuild/project-element-msbuild) öğesidir. `Project` öğesinin hangi SDK (ve sürümü) kullanacağınızı belirten isteğe bağlı bir `Sdk` özniteliği vardır. .NET Core araçlarını kullanmak ve kodunuzu derlemek için `Sdk` özniteliğini [kullanılabilir SDK](#available-sdks) 'Lar tablosundaki kimliklerden birine ayarlayın.
+.NET Core projeleri [MSBuild](/visualstudio/msbuild/msbuild) biçimine dayanır. Projeler için *. csproj* ve projeler için F# *. fsproj* gıbı uzantılara sahip proje dosyaları, XML biçimindedir. C# MSBuild proje dosyasının kök öğesi [Proje](/visualstudio/msbuild/project-element-msbuild) öğesidir. `Project` öğesinin hangi SDK (ve sürümü) kullanacağınızı belirten isteğe bağlı bir `Sdk` özniteliği vardır. .NET Core araçlarını kullanmak ve kodunuzu derlemek için `Sdk` özniteliğini [kullanılabilir SDK](#available-sdks) 'Lar tablosundaki kimliklerden birine ayarlayın.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -76,7 +76,7 @@ Bu yollarla bir SDK 'ya başvurmak, .NET Core için proje dosyalarını büyük 
 
 SDK ve hedefleri `dotnet msbuild -preprocess` komutu kullanılarak eklendikten sonra, tam genişletilmiş projeyi MSBuild olarak görebilirsiniz. [`dotnet msbuild`](../tools/dotnet-msbuild.md) komutunun [ön işleme](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) anahtarı, hangi dosyaların içeri aktarılacağını, kaynaklarını ve derleme için gerçekten projeyi oluşturmadan bunların katkılarını gösterir.
 
-Projede birden çok hedef çerçeve varsa, komutun sonuçlarını MSBuild özelliği olarak belirterek yalnızca bir çerçeveye odaklayın. Örneğin:
+Projede birden çok hedef çerçeve varsa, komutun sonuçlarını MSBuild özelliği olarak belirterek yalnızca bir çerçeveye odaklayın. Örnek:
 
 `dotnet msbuild -property:TargetFramework=netcoreapp2.0 -preprocess:output.xml`
 
@@ -88,9 +88,9 @@ Aşağıdaki tabloda, .NET Core SDK hangi öğe ve hangi [genelleştirmeler](htt
 
 | Öğe           | Glob 'yi dahil et                              | Glob 'yi hariç tut                                                  | Glob 'yi kaldır              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|--------------------------|
-| Derleme           | \*\*/\*. cs (veya diğer dil uzantıları) | \*\*/\*. Kullanıcı;  \*\*/\*.\*PROJ;  \*\*/\*. sln;  \*\*/\*. vssscc  | YOK                      |
-| EmbeddedResource  | \*\*/\*. resx                              | \*\*/\*. Kullanıcı; \*\*/\*.\*PROJ; \*\*/\*. sln; \*\*/\*. vssscc     | YOK                      |
-| Yok.              | \*\*/\*                                   | \*\*/\*. Kullanıcı; \*\*/\*.\*PROJ; \*\*/\*. sln; \*\*/\*. vssscc     | \*\*/\*. cs; \*\*/\*. resx |
+| Derleme           | \*\*/\*. cs (veya diğer dil uzantıları) | \*\*/\*. Kullanıcı;  \*\*/\*.\*PROJ;  \*\*/\*. sln;  \*\*/\*. vssscc  | Yok                      |
+| EmbeddedResource  | \*\*/\*. resx                              | \*\*/\*. Kullanıcı; \*\*/\*.\*PROJ; \*\*/\*. sln; \*\*/\*. vssscc     | Yok                      |
+| None              | \*\*/\*                                   | \*\*/\*. Kullanıcı; \*\*/\*.\*PROJ; \*\*/\*. sln; \*\*/\*. vssscc     | \*\*/\*. cs; \*\*/\*. resx |
 
 > [!NOTE]
 > `$(BaseOutputPath)` ve `$(BaseIntermediateOutputPath)` MSBuild özellikleriyle temsil edilen `./bin` ve `./obj` klasörleri varsayılan olarak genelleştirmeler çıkarılır. Dışlayarak Özellik `$(DefaultItemExcludes)`temsil edilir.

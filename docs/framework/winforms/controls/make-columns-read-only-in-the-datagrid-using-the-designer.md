@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 - columns [Windows Forms], read-only
 ms.assetid: b4ef7a75-ab33-4ee3-b2cf-201530e454e9
-ms.openlocfilehash: 51d9488ef83f7d2c1c01c9ffd756edf8944d738d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 2dd3f8bfcad39ca3d530c79a6e6a8170585f7adf
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744968"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627961"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları DataGridView Denetimindeki Sütunları Salt Okunur Yapma
 Varsayılan olarak, kullanıcılar Windows Forms <xref:System.Windows.Forms.DataGridView> denetiminde görünen metin ve sayısal verileri değiştirebilir. Değişiklik için amaçlanmış verileri göstermek istiyorsanız, verileri içeren sütunları salt okunurdur yapmalısınız. Denetimi tamamen salt okuma yapma hakkında bilgi için bkz. [nasıl yapılır: tasarımcı kullanarak Windows Forms DataGridView denetiminde satır eklemeyi ve silmeyi engelleme](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md).
@@ -21,7 +21,7 @@ Varsayılan olarak, kullanıcılar Windows Forms <xref:System.Windows.Forms.Data
 
 ## <a name="to-make-a-column-read-only-by-using-the-designer"></a>Tasarımcıyı kullanarak bir sütunu salt okunabilir hale getirmek için
 
-1. <xref:System.Windows.Forms.DataGridView> denetiminin sağ üst köşesindeki akıllı etiket glifi ' ne (![akıllı etiket karakter](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) tıklayın ve ardından **Sütunları Düzenle**' yi seçin.
+1. <xref:System.Windows.Forms.DataGridView> denetiminin sağ üst köşesinde bulunan Tasarımcı eylemleri glifinin (![küçük siyah ok](./media/designer-actions-glyph.gif)) tıklayın ve ardından **Sütunları Düzenle**' yi seçin.
 
 2. **Seçili sütunlar** listesinden bir sütun seçin.
 

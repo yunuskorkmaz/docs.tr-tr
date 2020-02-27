@@ -12,12 +12,12 @@ ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dac049ea6a51037daa0e23dc93476e4410b2df06
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7626e1efbb30ef3bfe9b5b1278c0adb18dd5944b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745990"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628715"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>Tasarım zamanında Windows Forms denetimleri geliştirme
 
@@ -36,7 +36,7 @@ Web Forms için kullanmak üzere özel denetimler oluşturmak istiyorsanız, bkz
 [Izlenecek yol: Windows Forms denetiminden devralma](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)\
 ' De C#devralma kullanarak basit bir Windows Forms denetiminin nasıl oluşturulacağını gösterir.
 
-[Izlenecek yol: Windows Forms Denetimlerinde akıllı etiketleri kullanarak ortak görevleri gerçekleştirme](performing-common-tasks-using-smart-tags-on-wf-controls.md)\
+[Izlenecek yol: tasarımcı eylemlerini kullanarak ortak görevleri gerçekleştirme](perform-common-tasks-design-actions.md)\
 Windows Forms Denetimlerinde akıllı etiket özelliğinin nasıl kullanılacağını gösterir.
 
 [Izlenecek yol: DesignerSerializationVisibilityAttribute\ standart türlerin koleksiyonlarını serileştirme](serializing-collections-designerserializationvisibilityattribute.md)

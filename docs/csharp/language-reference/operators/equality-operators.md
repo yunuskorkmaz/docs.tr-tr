@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 14bb8227a4a6c8beff6ab04c58d8e1a43db69856
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 578413b053fc1daab0c3162d9032f4d64d3e470d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093142"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626704"
 ---
 # <a name="equality-operators-c-reference"></a>Eşitlik işleçleri (C# başvuru)
 
@@ -41,7 +41,7 @@ ms.locfileid: "77093142"
 
 Temeldeki integral türünün karşılık gelen değerleri eşitse aynı [sabit listesi](../builtin-types/enum.md) türünün iki işleneni eşittir.
 
-Kullanıcı tanımlı [Yapı](../keywords/struct.md) türleri, varsayılan olarak `==` işlecini desteklemez. `==` işlecini desteklemek için Kullanıcı tanımlı bir yapının onu [tekrar yüklemesi](operator-overloading.md) gerekir.
+Kullanıcı tanımlı [Yapı](../builtin-types/struct.md) türleri, varsayılan olarak `==` işlecini desteklemez. `==` işlecini desteklemek için Kullanıcı tanımlı bir yapının onu [tekrar yüklemesi](operator-overloading.md) gerekir.
 
 7,3 ile C# başlayarak, `==` ve `!=` işleçleri C# [diziler](../../tuples.md)tarafından desteklenir. Daha fazla bilgi için [ C# demet türleri](../../tuples.md) makalesinin [eşitlik ve diziler](../../tuples.md#equality-and-tuples) bölümüne bakın.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 258cf59fb8383fe131f4a0e78dac6189e1d9c91e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b3510be5d417b555d2db163636eac5ce0c0779e4
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337669"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628052"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows sistemlerinde dosya yolu biçimleri
 
@@ -48,6 +48,8 @@ Aşağıdaki örnek mutlak ve göreli yollar arasındaki farkı gösterir. Dizin
 
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
+
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
 
 ## <a name="unc-paths"></a>UNC yolları
 
@@ -93,7 +95,7 @@ DOS cihaz yolu aşağıdaki bileşenlerden oluşur:
 
    Cihaz yolu belirticisinden sonra DOS cihaz yolunun ilk segmenti birimi veya sürücüyü tanımlar. (Örneğin, `\\?\C:\` ve `\\.\BootPartition\`.)
 
-   UNCs 'Ler için, `UNC`olarak adlandırılan belirli bir bağlantı vardır. Örneğin:
+   UNCs 'Ler için, `UNC`olarak adlandırılan belirli bir bağlantı vardır. Örnek:
 
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`

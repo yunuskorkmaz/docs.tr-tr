@@ -2,24 +2,24 @@
 title: Özel Bir Şifreleme Algoritması Belirtme
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 55200732b392c15a25853af28ecdf9e32d092da4
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0bfa6c46f4db1171eb314625e36c267000a0ec12
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849110"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628689"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Özel Bir Şifreleme Algoritması Belirtme
 WCF, verileri şifrelerken veya dijital imzaları hesaplarken kullanılacak özel bir şifre algoritması belirtmenize olanak tanır. Bu işlem aşağıdaki adımlarla yapılır:  
   
-1. Öğesinden bir sınıf türet<xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
+1. <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> bir sınıf türet  
   
 2. Algoritmayı kaydetme  
   
-3. Bağlamayı <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>türetilmiş sınıfla yapılandırın.  
+3. <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>türetilen sınıfla bağlamayı yapılandırın.  
   
 ## <a name="derive-a-class-from-securityalgorithmsuite"></a>SecurityAlgorithmSuite 'ten bir sınıf türet  
- , <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> Güvenlikle ilgili çeşitli işlemler gerçekleştirirken kullanılacak algoritmayı belirtmenize olanak tanıyan soyut bir temel sınıftır. Örneğin, dijital imza için bir karma hesaplama veya bir iletiyi şifreleme. Aşağıdaki kod, öğesinden <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>bir sınıfın nasıl türetileceğini göstermektedir:  
+ <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, güvenlikle ilgili çeşitli işlemleri gerçekleştirirken kullanılacak algoritmayı belirtmenize olanak tanıyan bir soyut temel sınıftır. Örneğin, dijital imza için bir karma hesaplama veya bir iletiyi şifreleme. Aşağıdaki kod, <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>bir sınıfın nasıl türetileceğini göstermektedir:  
   
 ```csharp  
 public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite  
@@ -105,7 +105,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- <`cryptoClasses`> Öğesinin altındaki bölüm, SHA256CryptoServiceProvider ve "SHA256CSP" diğer adı arasında eşlemeyi oluşturur. <`nameEntry`> Öğesi, "SHA256CSP" diğer adı ve belirtilen URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ) arasında eşleme oluşturur.  
+ <`cryptoClasses`> öğesinin altındaki bölüm, SHA256CryptoServiceProvider ve "SHA256CSP" diğer adı arasında eşleme oluşturur. <`nameEntry`> öğesi, "SHA256CSP" diğer adı ve belirtilen URL `http://constoso.com/CustomAlgorithms/CustomHashAlgorithm`arasında eşleme oluşturur.  
   
  Özel algoritmayı kodda kaydetmek için <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> yöntemini kullanın. Bu yöntem her iki eşlemeyi de oluşturur. Aşağıdaki örnek, bu yöntemin nasıl çağrılacağını göstermektedir:  
   
@@ -116,7 +116,7 @@ CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://constoso.
 ```  
   
 ## <a name="configure-the-binding"></a>Bağlamayı yapılandırma  
- Bağlama ayarlarında, aşağıdaki kod parçacığında gösterildiği gibi <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>özel türetilmiş sınıfı belirterek bağlamayı yapılandırırsınız:  
+ Bağlamayı, aşağıdaki kod parçacığında gösterildiği gibi bağlama ayarlarında özel <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>türetilmiş sınıfını belirterek yapılandırırsınız:  
   
 ```csharp  
 WSHttpBinding binding = new WSHttpBinding();  

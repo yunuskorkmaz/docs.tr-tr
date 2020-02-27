@@ -3,12 +3,12 @@ title: .NET Core CLI
 titleSuffix: ''
 description: .NET Core CLI ve özelliklerine genel bir bakış.
 ms.date: 02/13/2020
-ms.openlocfilehash: 1078d68ddc088274fa14b0094a81765f7af69dad
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: c491088f26a9aa1c065414e76fb0b80d554380b4
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543320"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625988"
 ---
 # <a name="net-core-cli-overview"></a>.NET Core CLI genel bakış
 
@@ -81,13 +81,13 @@ Sürücü [DotNet](dotnet.md) olarak adlandırılır ve [çerçeveye bağlı bir
 
 Çerçeveye bağımlı bir uygulama çalıştırmak için, uygulamayı sürücüden sonra belirtin, örneğin, `dotnet /path/to/my_app.dll`. Uygulamanın DLL 'sinin bulunduğu klasörden komutu yürütürken `dotnet my_app.dll`yürütmek yeterlidir. .NET Core çalışma zamanının belirli bir sürümünü kullanmak istiyorsanız, `--fx-version <VERSION>` seçeneğini kullanın ( [DotNet komut](dotnet.md) başvurusuna bakın).
 
-Sürücüye bir komut sağlarsanız, `dotnet.exe` CLı komutu yürütme işlemini başlatır. Örneğin:
+Sürücüye bir komut sağlarsanız, `dotnet.exe` CLı komutu yürütme işlemini başlatır. Örnek:
 
 ```dotnetcli
 dotnet build
 ```
 
-İlk olarak, sürücü kullanılacak SDK sürümünü belirler. [' Global. json '](global-json.md)yoksa SDK 'nın kullanılabilir en son sürümü kullanılır. Bu, makinede en son nelerin olduğuna bağlı olarak önizleme veya kararlı bir sürüm olabilir.  SDK sürümü belirlendikten sonra, komutunu yürütür.
+İlk olarak, sürücü kullanılacak SDK sürümünü belirler. [Global. JSON](global-json.md) dosyası yoksa, kullanılabilir SDK 'nın en son sürümü kullanılır. Bu, makinede en son nelerin olduğuna bağlı olarak önizleme veya kararlı bir sürüm olabilir.  SDK sürümü belirlendikten sonra, komutunu yürütür.
 
 ### <a name="command"></a>Komut
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 597bfd2c16f6289a2bcb931c3896918dcb6d9a4d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 26c168040b0fa5e975e64a7518b0d0bf250c4711
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094143"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628130"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET Framework dağıtım kılavuzu
 Bu konu, .NET Framework 4,5 ' den .NET Framework herhangi bir sürümünü uygulamalarıyla [!INCLUDE[net_current](../../../includes/net-current-version.md)] yüklemek isteyen geliştiriciler için bilgi sağlamaktadır.
@@ -65,7 +65,7 @@ Uygulamanızı bir Web sunucusuna veya başka bir merkezi konuma yayımlamaya, b
 
 ||Web Yükleyicisi|Çevrimdışı yükleyici|
 |-|-------------------|-----------------------|
-|Internet bağlantısı gerekiyor mu?|Evet|Hayır|
+|Internet bağlantısı gerekiyor mu?|Yes|Hayır|
 |İndirme boyutu|Daha küçük (yalnızca hedef platform için yükleyiciyi içerir) *|Boyutta|
 |Dil paketleri|Dahil * *|Tüm işletim sistemlerini hedefleyen paketi kullanmadığınız takdirde [ayrı olarak yüklenmelidir](#chain_langpack)|
 |Dağıtım yöntemi|Tüm yöntemleri destekler:<br /><br />- [ClickOnce](#clickonce-deployment)<br />[InstallAware](#installaware-deployment) - <br />- [InstallShield](#installshield-deployment)<br />- [WINDOWS Installer XML (WiX)](#wix)<br />[el ile yükleme](#installing_manually) - <br />[özel kurulum - (zincirleme)](#chaining)|Tüm yöntemleri destekler:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />[InstallAware](#installaware-deployment) - <br />- [InstallShield](#installshield-deployment)<br />- [WINDOWS Installer XML (WiX)](#wix)<br />[el ile yükleme](#installing_manually) - <br />[özel kurulum - (zincirleme)](#chaining)|
@@ -134,21 +134,7 @@ InstallAware, tek bir kaynaktan Windows uygulaması (APPX), Windows Installer (M
 
 ### <a name="installshield-deployment"></a>InstallShield dağıtımı
 
-Visual Studio 'da InstallShield dağıtımını seçmek ve .NET Framework bir bağımlılık eklemek için:
-
-1. Visual Studio menü çubuğunda **Dosya**, **Yeni**, **Proje**' yi seçin.
-
-2. **Yeni proje** iletişim kutusunun sol bölmesinde **diğer proje türleri**, **Kurulum ve dağıtım**, **InstallShield Le**' yi seçin.
-
-3. **Ad** kutusuna projeniz için bir ad yazın ve ardından **Tamam**' ı seçin.
-
-4. İlk kez bir kurulum ve dağıtım projesi oluşturuyorsanız, **InstallShield 'A git** ' i veya Microsoft Visual Studio sürümünüze ait InstallShield Limited Edition 'ı Indirmek Için **InstallShield Limited Edition 'ı etkinleştirin** . Visual Studio'yu yeniden başlatın.
-
-5. Proje çıktısını eklemek için **Proje Yardımcısı** sihirbazına gidin ve **uygulama dosyalarını** seçin. Bu Sihirbazı kullanarak diğer proje özniteliklerini yapılandırabilirsiniz.
-
-6. **Yükleme gereksinimleri** ' ne gidin ve işletim sistemlerini ve yüklemek istediğiniz .NET Framework sürümünü seçin.
-
-7. Kurulum projeniz için kısayol menüsünü açın ve **Oluştur**' a tıklayın.
+InstallShield, Windows uygulama paketleri (MSIX, APPX), Windows Installer paketleri (MSI) ve yerel kod (EXE) yükleyicileri oluşturur. InstallShield Ayrıca Visual Studio tümleştirmesi de sağlar. Daha fazla bilgi için [InstallShield](https://www.flexerasoftware.com/install/products/installshield.html) Web sitesine bakın.
 
 <a name="wix"></a>
 
@@ -190,7 +176,7 @@ Her iki yöntem de web yükleyicisini veya çevrimdışı yükleyiciyi kullanman
 
 `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso`
 
-Yüklemeyi özelleştirmek için ek komut satırı seçeneklerini kullanabilirsiniz. Örneğin:
+Yüklemeyi özelleştirmek için ek komut satırı seçeneklerini kullanabilirsiniz. Örnek:
 
 - Kullanıcıların, sistem yeniden başlatmaları en aza indirmek için .NET Framework uygulamaları kapatmalarının bir yolunu sağlamak için, Pasif modu ayarlayın ve `/showrmui` seçeneğini şu şekilde kullanın:
 
@@ -275,7 +261,7 @@ Yükleme başarılı olduğunda .NET Framework yükleyicisi kayıt defteri anaht
 | | |
 |-|-|
 | Anahtar | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| Name | Sürüm |
+| Adı | Yayınla |
 | Tür | DWORD |
 
 4,5 ile 4.7.2 arasında .NET Framework belirli bir sürümü için dil paketinin son sürümünün yüklenip yüklenmediğini saptamak için, önceki bölümde açıklanan yayın anahtarı DWORD değerinin değerini denetleyin ve [.NET Framework](#detect_net)tespit edin.

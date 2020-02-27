@@ -2,18 +2,18 @@
 title: dotnet publish komutu
 description: Dotnet publish komutu .NET Core projenizi bir dizinde yayımlar.
 ms.date: 05/29/2018
-ms.openlocfilehash: 0653a7b1e1abd6d7ffd3d21a0410279235b43a28
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 88dc53d6c45bc18f630d8a7137704e813ad4f0e3
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451298"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626079"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>Adı
 
 uygulama ve bağımlılıklarını bir barındırma sistemine dağıtım için bir klasöre `dotnet publish` paketler.
 
@@ -70,9 +70,9 @@ Yayımlanacak proje. Bir [C#](csproj.md), F#veya Visual Basic proje dosyasının
 
 # <a name="net-core-21"></a>[.NET Core 2,1](#tab/netcore21)
 
-`-c|--configuration {Debug|Release}`
+`-c|--configuration <CONFIGURATION>`
 
-Yapı yapılandırmasını tanımlar. Varsayılan değer `Debug` şeklindedir.
+Yapı yapılandırmasını tanımlar. Çoğu proje için varsayılan değer `Debug`, ancak projenizde derleme yapılandırma ayarlarını geçersiz kılabilirsiniz.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -125,9 +125,9 @@ Proje dosyasının sürüm alanındaki yıldız işaretini (`*`) değiştirecek 
 
 # <a name="net-core-20"></a>[.NET Core 2,0](#tab/netcore20)
 
-`-c|--configuration {Debug|Release}`
+`-c|--configuration <CONFIGURATION>`
 
-Yapı yapılandırmasını tanımlar. Varsayılan değer `Debug` şeklindedir.
+Yapı yapılandırmasını tanımlar. Çoğu proje için varsayılan değer `Debug`, ancak projenizde derleme yapılandırma ayarlarını geçersiz kılabilirsiniz.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -176,9 +176,9 @@ Proje dosyasının sürüm alanındaki yıldız işaretini (`*`) değiştirecek 
 
 # <a name="net-core-1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
-`-c|--configuration {Debug|Release}`
+`-c|--configuration <CONFIGURATION>`
 
-Yapı yapılandırmasını tanımlar. Varsayılan değer `Debug` şeklindedir.
+Yapı yapılandırmasını tanımlar. Çoğu proje için varsayılan değer `Debug`, ancak projenizde derleme yapılandırma ayarlarını geçersiz kılabilirsiniz.
 
 `-f|--framework <FRAMEWORK>`
 

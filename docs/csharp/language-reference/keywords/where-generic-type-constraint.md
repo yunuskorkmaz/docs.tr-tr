@@ -6,12 +6,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 19bf7682916336173ed93619fb6f0ff1242a1b30
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d236420c5019f7529b729155b13df50807dc1dab
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712812"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626717"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (genel tür kısıtlaması) (C# Başvurusu)
 
@@ -32,7 +32,7 @@ Genel tanımda `where` yan tümcesi, genel bir tür, metot, temsilci veya yerel 
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-`where` yan tümcesi `notnull` kısıtlaması içerebilir. `notnull` kısıtlaması, tür parametresini null yapılamayan türler ile sınırlandırır. Bu tür bir [değer türü](struct.md) veya null yapılamayan bir başvuru türü olabilir. `notnull` kısıtlaması, bir [`nullable enable` bağlamında](../../nullable-references.md#nullable-contexts)derlenen C# kod için 8,0 ' den başlayarak kullanılabilir. Diğer kısıtlamaların aksine, bir tür bağımsız değişkeni `notnull` kısıtlamasını ihlal ederse, derleyici hata yerine bir uyarı oluşturur. Uyarılar yalnızca bir `nullable enable` bağlamında oluşturulur. 
+`where` yan tümcesi `notnull` kısıtlaması içerebilir. `notnull` kısıtlaması, tür parametresini null yapılamayan türler ile sınırlandırır. Bu tür bir [değer türü](../builtin-types/value-types.md) veya null yapılamayan bir başvuru türü olabilir. `notnull` kısıtlaması, bir [`nullable enable` bağlamında](../../nullable-references.md#nullable-contexts)derlenen C# kod için 8,0 ' den başlayarak kullanılabilir. Diğer kısıtlamaların aksine, bir tür bağımsız değişkeni `notnull` kısıtlamasını ihlal ederse, derleyici hata yerine bir uyarı oluşturur. Uyarılar yalnızca bir `nullable enable` bağlamında oluşturulur.
 
 > [!IMPORTANT]
 > `notnull` kısıtlamasını içeren genel bildirimler null olabilir bir zorunluluvou bağlamında kullanılabilir, ancak derleyici kısıtlamayı zorlamaz.
@@ -43,7 +43,7 @@ Genel tanımda `where` yan tümcesi, genel bir tür, metot, temsilci veya yerel 
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
-`where` yan tümcesi Ayrıca, `new()`bir Oluşturucu kısıtlaması içerebilir. Bu kısıtlama, `new` işlecini kullanarak bir tür parametresinin örneğini oluşturmayı mümkün kılar. [New () kısıtlaması](new-constraint.md) , derleyicinin sağlanan herhangi bir tür bağımsız değişkeninin erişilebilir parametresiz bir oluşturucuya sahip olması gerektiğini bilmesini sağlar. Örneğin:
+`where` yan tümcesi Ayrıca, `new()`bir Oluşturucu kısıtlaması içerebilir. Bu kısıtlama, `new` işlecini kullanarak bir tür parametresinin örneğini oluşturmayı mümkün kılar. [New () kısıtlaması](new-constraint.md) , derleyicinin sağlanan herhangi bir tür bağımsız değişkeninin erişilebilir parametresiz bir oluşturucuya sahip olması gerektiğini bilmesini sağlar. Örnek:
 
 [!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
 

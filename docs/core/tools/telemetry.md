@@ -3,12 +3,12 @@ title: .NET Core SDK telemetri
 description: Analiz için kullanım bilgilerini toplayan, hangi verilerin toplandığı ve devre dışı bırakılacağı .NET Core SDK telemetri özelliklerini bulun.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 8bde344ee393e113502a0895ee55c241cbf24c57
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: abc9f8e1ef134ebfb5ec9acacb629d5180aaf83b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714109"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625923"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK telemetri
 
@@ -54,7 +54,7 @@ Gizliliğinizi korumak bizim için önemlidir. Telemetrinin hassas verileri topl
 
 Telemetri özelliği aşağıdaki verileri toplar:
 
-| SDK sürümleri | Veri |
+| SDK sürümleri | Veriler |
 |--------------|------|
 | Tümü          | Çağırma zaman damgası. |
 | Tümü          | Komut çağrıldı (örneğin, "Build"), 2,1 'den başlayarak karma hale getirilmiş. |
@@ -128,7 +128,7 @@ at Microsoft.DotNet.Cli.Program.ProcessArgs(String[] args, ITelemetry telemetryC
 at Microsoft.DotNet.Cli.Program.Main(String[] args)
 ```
 
-### <a name="avoid-inadvertent-disclosure-information"></a>Yanlışlıkla açıklanmaktan kaçının
+### <a name="avoid-inadvertent-disclosure-of-information"></a>Bilgilerin yanlışlıkla açıklanmasını önleyin
 
 .NET Core katkıda bulunanlar ve başkalarının oluşturdukları .NET Core SDK bir sürümünü çalıştıran herkes kendi SDK kaynak kodu yolunu dikkate almalıdır. Özel hata ayıklama derlemesi olan veya özel derleme sembol dosyalarıyla yapılandırılmış bir .NET Core SDK kullanırken kilitlenme oluşursa, derleme makinesinden SDK kaynak dosyası yolu, yığın izlemenin bir parçası olarak toplanır ve karma değildir.
 

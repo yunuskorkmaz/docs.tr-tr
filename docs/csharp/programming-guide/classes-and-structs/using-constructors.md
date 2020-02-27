@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: faab6ac57629db11c60ee5b563ea95ebb90016dd
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 7c227b61c6d5b4ead00fced0dba046b90683fde1
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964354"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626418"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Oluşturucular Kullanma (C# Programlama Kılavuzu)
 
-Bir [sınıf](../../language-reference/keywords/class.md) veya [Yapı](../../language-reference/keywords/struct.md) oluşturulduğunda, Oluşturucusu çağırılır. Oluşturucular, sınıf veya struct ile aynı ada sahiptir ve genellikle yeni nesnenin veri üyelerini başlatır.  
+Bir [sınıf](../../language-reference/keywords/class.md) veya [Yapı](../../language-reference/builtin-types/struct.md) oluşturulduğunda, Oluşturucusu çağırılır. Oluşturucular, sınıf veya struct ile aynı ada sahiptir ve genellikle yeni nesnenin veri üyelerini başlatır.  
   
  Aşağıdaki örnekte, `Taxi` adlı bir sınıf basit bir Oluşturucu kullanılarak tanımlanır. Bu sınıf daha sonra [New](../../language-reference/operators/new-operator.md) işleciyle oluşturulur. `Taxi` Oluşturucusu, yeni nesne için bellek ayrıldıktan hemen sonra `new` işleci tarafından çağrılır.  
   
@@ -29,7 +29,7 @@ Bir [sınıf](../../language-reference/keywords/class.md) veya [Yapı](../../lan
   
  Daha fazla bilgi için bkz. [özel oluşturucular](./private-constructors.md).  
   
- [Yapı](../../language-reference/keywords/struct.md) türleri için oluşturucular Sınıf oluşturuculara benzer, ancak `structs` derleyici tarafından otomatik olarak sağlandığı için açık parametresiz bir oluşturucu içeremez. Bu Oluşturucu `struct` her alanı [varsayılan değere](../../language-reference/builtin-types/default-values.md)başlatır. Ancak, bu parametresiz Oluşturucu yalnızca `struct` `new`ile birlikte oluşturulduğunda çağrılır. Örneğin, bu kod, tamsayının başlatıldığından emin olmak için <xref:System.Int32>parametresiz oluşturucuyu kullanır.  
+ [Yapı](../../language-reference/builtin-types/struct.md) türleri için oluşturucular Sınıf oluşturuculara benzer, ancak `structs` derleyici tarafından otomatik olarak sağlandığı için açık parametresiz bir oluşturucu içeremez. Bu Oluşturucu `struct` her alanı [varsayılan değere](../../language-reference/builtin-types/default-values.md)başlatır. Ancak, bu parametresiz Oluşturucu yalnızca `struct` `new`ile birlikte oluşturulduğunda çağrılır. Örneğin, bu kod, tamsayının başlatıldığından emin olmak için <xref:System.Int32>parametresiz oluşturucuyu kullanır.  
   
 ```csharp  
 int i = new int();  
@@ -54,7 +54,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  Bu nedenle, bir değer türü için parametresiz oluşturucunun çağrılması gerekli değildir.  
   
- Her iki sınıf ve `structs` de parametre alma oluşturucuları tanımlayabilir. Parametreleri alan oluşturucuların bir `new` ifadesiyle veya bir [taban](../../language-reference/keywords/base.md) ifadesiyle çağrılması gerekir. Sınıflar ve `structs` de birden çok Oluşturucu tanımlayabilir ve parametresiz bir Oluşturucu tanımlamak gerekmez. Örneğin:  
+ Her iki sınıf ve `structs` de parametre alma oluşturucuları tanımlayabilir. Parametreleri alan oluşturucuların bir `new` ifadesiyle veya bir [taban](../../language-reference/keywords/base.md) ifadesiyle çağrılması gerekir. Sınıflar ve `structs` de birden çok Oluşturucu tanımlayabilir ve parametresiz bir Oluşturucu tanımlamak gerekmez. Örnek:  
   
  [!code-csharp[csProgGuideObjects#54](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#54)]  
   
@@ -62,7 +62,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-csharp[csProgGuideObjects#55](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#55)]  
   
- Bir Oluşturucu, bir temel sınıfın yapıcısını çağırmak için `base` anahtar sözcüğünü kullanabilir. Örneğin:  
+ Bir Oluşturucu, bir temel sınıfın yapıcısını çağırmak için `base` anahtar sözcüğünü kullanabilir. Örnek:  
   
  [!code-csharp[csProgGuideObjects#56](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#56)]  
   

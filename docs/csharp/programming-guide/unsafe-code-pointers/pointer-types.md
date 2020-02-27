@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: ad6e6f17f9a8c30339a74b8ab41af3a99e716d3f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: dc03744559a87a2548c5bee9452c22cd20f337b8
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745350"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627716"
 ---
 # <a name="pointer-types-c-programming-guide"></a>İşaretçi türleri (C# Programlama Kılavuzu)
 
@@ -24,14 +24,14 @@ Bir işaretçi türündeki `*` önce belirtilen tür, **başvurulan tür**olarak
 
 İşaretçi türleri [nesneden](../../language-reference/builtin-types/reference-types.md) devralma ve işaretçi türleri ve `object`arasında dönüştürme yok. Ayrıca, kutulama ve kutudan çıkarma işaretçileri desteklemez. Ancak, farklı işaretçi türleri ve işaretçi türleri ve tamsayı türleri arasında dönüştürme yapabilirsiniz.
 
-Aynı bildirimde birden çok işaretçi bildirdiğinizde, yıldız işareti (*) yalnızca altı çizili türle birlikte yazılır; her bir işaretçi adı için önek olarak kullanılmaz. Örneğin:
+Aynı bildirimde birden çok işaretçi bildirdiğinizde, yıldız işareti (*) yalnızca altı çizili türle birlikte yazılır; her bir işaretçi adı için önek olarak kullanılmaz. Örnek:
 
 ```csharp
 int* p1, p2, p3;   // Ok
 int *p1, *p2, *p3;   // Invalid in C#
 ```
 
-Bir işaretçi, bir işaretçiye işaret eden bir nesne başvurusu atık olarak toplanabileceğinden, bir başvuruya veya başvuru içeren bir [yapıya](../../language-reference/keywords/struct.md) işaret edemez. Çöp toplayıcı, bir nesneye herhangi bir işaretçi türü tarafından işaret edilip edilmediğini izlemez.
+Bir işaretçi, bir işaretçiye işaret eden bir nesne başvurusu atık olarak toplanabileceğinden, bir başvuruya veya başvuru içeren bir [yapıya](../../language-reference/builtin-types/struct.md) işaret edemez. Çöp toplayıcı, bir nesneye herhangi bir işaretçi türü tarafından işaret edilip edilmediğini izlemez.
 
 `myType*` türündeki işaretçi değişkeninin değeri, `myType`türünde bir değişkenin adresidir. Aşağıda, işaretçi türü bildirimi örnekleri verilmiştir:
 
@@ -63,7 +63,7 @@ Yöntemler arasında işaretçiler geçirmek tanımsız davranışlara neden ola
 
 Aşağıdaki tabloda, güvenli olmayan bir bağlamda işaretçiler üzerinde işlem yapabilecek işleçler ve deyimler listelenmektedir:
 
-|İşleç/Deyim|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|
+|İşleç/Deyim|Kullanım|
 |-------------------------|---------|
 |`*`|İşaretçi yöneltmesi gerçekleştirir.|
 |`->`|Bir yapının bir üyesine bir işaretçi yoluyla erişir.|

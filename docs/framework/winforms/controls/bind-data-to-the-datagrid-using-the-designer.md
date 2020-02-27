@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: d5fab6acc53e5b8be247e958bdba78f0d3647fdc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d49a718e42a989c731cdf748fb63a6305ee096bf
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744120"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626339"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları DataGridView Denetimine Veri Bağlama
 Bir <xref:System.Windows.Forms.DataGridView> denetimini veritabanları, iş nesneleri veya Web Hizmetleri gibi birçok farklı değişken veri kaynağına bağlamak için tasarımcısını kullanabilirsiniz. Tasarımcıyı kullanarak denetimi bir veri kaynağına bağladığınızda, denetim otomatik olarak veri kaynağını temsil eden bir <xref:System.Windows.Forms.BindingSource> bileşenine bağlanır. Ayrıca, veri kaynağı tarafından belirtilen şema bilgilerini eşleştirmek için, sütunlarda otomatik olarak sütunlar oluşturulur.
@@ -24,7 +24,7 @@ Bir <xref:System.Windows.Forms.DataGridView> denetimini veritabanları, iş nesn
 
 ## <a name="to-bind-the-control-to-a-data-source"></a>Denetimi bir veri kaynağına bağlamak için
 
-1. <xref:System.Windows.Forms.DataGridView> denetiminin sağ üst köşesindeki akıllı etiket glifi ' ne (![akıllı etiket karakter](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) tıklayın.
+1. <xref:System.Windows.Forms.DataGridView> denetiminin sağ üst köşesinde bulunan Tasarımcı eylemleri glifinin (![küçük siyah ok](./media/designer-actions-glyph.gif)) tıklatın.
 
 2. **Veri kaynağı seç** seçeneğinin açılır okuna tıklayın.
 

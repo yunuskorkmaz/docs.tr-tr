@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: d5ca0593d802d331d980cf35c701e0a79d54abee
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 6b65d7e79e4eac30171eb0aad650f7c1e3880e30
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163104"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627276"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Yerleşik başvuru türleri (C# başvuru)
 
@@ -39,7 +39,7 @@ C#, çeşitli yerleşik başvuru türlerine sahiptir. .NET kitaplığındaki bir
 
 `string` türü, sıfır veya daha fazla Unicode karakter dizisini temsil eder. `string`, .NET <xref:System.String?displayProperty=nameWithType> için bir diğer addır.
 
-`string` bir başvuru türü olsa da, [eşitlik işleçleri `==` ve `!=`](../operators/equality-operators.md#string-equality) , başvuruları değil `string` nesnelerinin değerlerini karşılaştırmak için tanımlanmıştır. Bu, dize eşitlik sınamasını daha sezgisel hale getirir. Örneğin:
+`string` bir başvuru türü olsa da, [eşitlik işleçleri `==` ve `!=`](../operators/equality-operators.md#string-equality) , başvuruları değil `string` nesnelerinin değerlerini karşılaştırmak için tanımlanmıştır. Bu, dize eşitlik sınamasını daha sezgisel hale getirir. Örnek:
 
 ```csharp-interactive
 string a = "hello";
@@ -97,15 +97,15 @@ Dize sabit değerleri, herhangi bir karakter sabit değeri içerebilir. Kaçış
 ```csharp-interactive
 string a = "\\\u0066\n F";
 Console.WriteLine(a);
-\\ Output:
-\\ \f
-\\  F
+// Output:
+// \f
+//  F
 ```
 
 > [!NOTE]
 > Kaçış kodu `\udddd` (`dddd` dört basamaklı bir sayıdır), U +`dddd`Unicode karakterini temsil eder. Sekiz basamaklı Unicode kaçış kodları da tanınmalıdır: `\Udddddddd`.
 
-Tam [dize sabit değerleri](../tokens/verbatim.md) `@` ile başlar ve ayrıca çift tırnak işaretleri içine alınır. Örneğin:
+Tam [dize sabit değerleri](../tokens/verbatim.md) `@` ile başlar ve ayrıca çift tırnak işaretleri içine alınır. Örnek:
 
 ```csharp
 @"good morning"  // a string literal

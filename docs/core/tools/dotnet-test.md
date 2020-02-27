@@ -2,53 +2,32 @@
 title: DotNet test komutu
 description: DotNet test komutu, belirli bir projedeki birim testlerini yürütmek için kullanılır.
 ms.date: 05/29/2018
-ms.openlocfilehash: 909815151265117395c6d8d13b4443a245c05f9e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 890d1fc3fd9d47f2bdcd63f2a25248c3edd705e4
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451200"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626053"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Name
+## <a name="name"></a>Adı
 
 birim testlerini yürütmek için kullanılan `dotnet test` .NET test sürücüsü.
 
 ## <a name="synopsis"></a>Özeti
 
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-21"></a>[.NET Core 2,1](#tab/netcore21)
-
 ```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] 
-    [-v|--verbosity] [-- <RunSettings arguments>]
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame]
+    [-c|--configuration] [--collect] [-d|--diag] [-f|--framework]
+    [--filter] [-l|--logger] [--no-build] [--no-restore]
+    [-o|--output] [-r|--results-directory] [-s|--settings]
+    [-t|--list-tests] [-v|--verbosity] [-- <RunSettings arguments>]
 
 dotnet test [-h|--help]
 ```
-
-# <a name="net-core-20"></a>[.NET Core 2,0](#tab/netcore20)
-
-```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
-
-dotnet test [-h|--help]
-```
-
-# <a name="net-core-1x"></a>[.NET Core 1. x](#tab/netcore1x)
-
-```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
-
-dotnet test [-h|--help]
-```
-
----
 
 ## <a name="description"></a>Açıklama
 
@@ -60,213 +39,103 @@ Test projeleri, aşağıdaki örnek proje dosyasında görüldüğü gibi sırad
 
 ## <a name="arguments"></a>Bağımsız Değişkenler
 
-`PROJECT`
+- **`PROJECT`**
 
-Test projesinin yolu. Belirtilmezse, varsayılan olarak geçerli dizin olur.
+  Test projesinin yolu. Belirtilmezse, varsayılan olarak geçerli dizin olur.
 
 ## <a name="options"></a>Seçenekler
 
-# <a name="net-core-21"></a>[.NET Core 2,1](#tab/netcore21)
+- **`a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
+  Test çalıştırmasında belirtilen yoldan özel test bağdaştırıcılarını kullanın.
 
-Test çalıştırmasında belirtilen yoldan özel test bağdaştırıcılarını kullanın.
+- **`-blame`**
 
-`--blame`
+  Testleri sorumluyu modunda çalıştırır. Bu seçenek, test ana bilgisayarının kilitlenmesine neden olan sorunlu testleri yalıtmak için yararlıdır. Geçerli dizinde, kilitlenmeden önce yürütülen testlerin sırasını yakalayan *Sequence. xml* olarak bir çıktı dosyası oluşturur.
 
-Testleri sorumluyu modunda çalıştırır. Bu seçenek, test ana bilgisayarının kilitlenmesine neden olan sorunlu testleri yalıtmak için yararlıdır. Geçerli dizinde, kilitlenmeden önce yürütülen testlerin sırasını yakalayan *Sequence. xml* olarak bir çıktı dosyası oluşturur.
+- **`c|--configuration {Debug|Release}`**
 
-`-c|--configuration {Debug|Release}`
+  Yapı yapılandırmasını tanımlar. Varsayılan değer `Debug`, ancak projenizin yapılandırması bu varsayılan SDK ayarını geçersiz kılabilir.
 
-Yapı yapılandırmasını tanımlar. Varsayılan değer `Debug`, ancak projenizin yapılandırması bu varsayılan SDK ayarını geçersiz kılabilir.
+- **`-collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
-`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
+  Test çalıştırması için veri toplayıcıyı etkinleştirilir. Daha fazla bilgi için bkz. [test çalıştırmasını izleme ve çözümleme](https://aka.ms/vstest-collect).
 
-Test çalıştırması için veri toplayıcıyı etkinleştirilir. Daha fazla bilgi için bkz. [test çalıştırmasını izleme ve çözümleme](https://aka.ms/vstest-collect).
+- **`d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+  Test platformu için tanılama modunu sağlar ve belirtilen dosyaya tanılama iletileri yazar.
 
-Test platformu için tanılama modunu sağlar ve belirtilen dosyaya tanılama iletileri yazar.
+- **`f|--framework <FRAMEWORK>`**
 
-`-f|--framework <FRAMEWORK>`
+  Belirli bir [çerçeve](../../standard/frameworks.md)için test ikililerini arar.
 
-Belirli bir [çerçeve](../../standard/frameworks.md)için test ikililerini arar.
+- **`--filter <EXPRESSION>`**
 
-`--filter <EXPRESSION>`
+  Geçerli projede verilen ifadeyi kullanarak testleri filtreler. Daha fazla bilgi için, [filtre seçeneği ayrıntıları](#filter-option-details) bölümüne bakın. Seçmeli birim testi filtrelemeyi kullanma hakkında daha fazla bilgi ve örnekler için bkz. [Seçmeli birim testlerini çalıştırma](../testing/selective-unit-tests.md).
 
-Geçerli projede verilen ifadeyi kullanarak testleri filtreler. Daha fazla bilgi için, [filtre seçeneği ayrıntıları](#filter-option-details) bölümüne bakın. Seçmeli birim testi filtrelemeyi kullanma hakkında daha fazla bilgi ve örnekler için bkz. [Seçmeli birim testlerini çalıştırma](../testing/selective-unit-tests.md).
+- **`h|--help`**
 
-`-h|--help`
+  Komut için kısa bir yardım yazdırır.
 
-Komut için kısa bir yardım yazdırır.
+- **`l|--logger <LoggerUri/FriendlyName>`**
 
-`-l|--logger <LoggerUri/FriendlyName>`
+  Test sonuçları için bir günlükçü belirtir.
 
-Test sonuçları için bir günlükçü belirtir.
+- **`--no-build`**
 
-`--no-build`
+  Test projesi çalıştırılmadan önce derlenmez. Ayrıca,-`--no-restore` bayrağını örtülü olarak ayarlar.
 
-Test projesi çalıştırılmadan önce derlenmez. Ayrıca `--no-restore` bayrağını örtülü olarak ayarlar.
+- **`--no-restore`**
 
-`--no-restore`
+  Komutu çalıştırılırken örtük geri yükleme yürütülmez.
 
-Komutu çalıştırılırken örtük geri yükleme yürütülmez.
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
-`-o|--output <OUTPUT_DIRECTORY>`
+  Çalıştırılacak ikililerin bulunacağı dizin.
 
-Çalıştırılacak ikililerin bulunacağı dizin.
+- **`-r|--results-directory <PATH>`**
 
-`-r|--results-directory <PATH>`
+  Test sonuçlarının yerleştirileceği dizin. Belirtilen dizin yoksa, oluşturulur.
 
-Test sonuçlarının yerleştirileceği dizin. Belirtilen dizin yoksa, oluşturulur.
+- **`-s|--settings <SETTINGS_FILE>`**
 
-`-s|--settings <SETTINGS_FILE>`
+  Testleri çalıştırmak için kullanılacak `.runsettings` dosyası. [`.runsettings` bir dosya kullanarak birim testlerini yapılandırın.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
-Testleri çalıştırmak için kullanılacak `.runsettings` dosyası. [`.runsettings` bir dosya kullanarak birim testlerini yapılandırın.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
+- **`-t|--list-tests`**
 
-`-t|--list-tests`
+  Geçerli projedeki tüm bulunan testlerin listesini listeleyin.
 
-Geçerli projedeki tüm bulunan testlerin listesini listeleyin.
+- **`-v|--verbosity <LEVEL>`**
 
-`-v|--verbosity <LEVEL>`
+  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`.
 
-Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`.
+- `RunSettings` bağımsız değişkenleri
 
-`RunSettings arguments`
+  Bağımsız değişkenler test için `RunSettings` yapılandırma olarak geçirilir. Bağımsız değişkenler "--" sonra `[name]=[value]` çiftleri olarak belirtilir (--After--------- Birden çok `[name]=[value]` çiftini ayırmak için bir boşluk kullanılır.
 
-Test için RunSettings yapılandırması olarak geçirilen bağımsız değişkenler. Bağımsız değişkenler "--" sonra `[name]=[value]` çiftleri olarak belirtilir (--After--------- Birden çok `[name]=[value]` çiftini ayırmak için bir boşluk kullanılır.
+  Örnek: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-Örnek: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
-
-RunSettings hakkında daha fazla bilgi için bkz. [VSTest. Console. exe: runsettings args geçirme](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
-
-# <a name="net-core-20"></a>[.NET Core 2,0](#tab/netcore20)
-
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
-
-Test çalıştırmasında belirtilen yoldan özel test bağdaştırıcılarını kullanın.
-
-`-c|--configuration {Debug|Release}`
-
-Yapı yapılandırmasını tanımlar. Varsayılan değer `Debug`, ancak projenizin yapılandırması bu varsayılan SDK ayarını geçersiz kılabilir.
-
-`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
-
-Test çalıştırması için veri toplayıcıyı etkinleştirilir. Daha fazla bilgi için bkz. [test çalıştırmasını izleme ve çözümleme](https://aka.ms/vstest-collect).
-
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
-
-Test platformu için tanılama modunu sağlar ve belirtilen dosyaya tanılama iletileri yazar.
-
-`-f|--framework <FRAMEWORK>`
-
-Belirli bir [çerçeve](../../standard/frameworks.md)için test ikililerini arar.
-
-`--filter <EXPRESSION>`
-
-Geçerli projede verilen ifadeyi kullanarak testleri filtreler. Daha fazla bilgi için, [filtre seçeneği ayrıntıları](#filter-option-details) bölümüne bakın. Seçmeli birim testi filtrelemeyi kullanma hakkında daha fazla bilgi ve örnekler için bkz. [Seçmeli birim testlerini çalıştırma](../testing/selective-unit-tests.md).
-
-`-h|--help`
-
-Komut için kısa bir yardım yazdırır.
-
-`-l|--logger <LoggerUri/FriendlyName>`
-
-Test sonuçları için bir günlükçü belirtir.
-
-`--no-build`
-
-Test projesi çalıştırılmadan önce derlenmez. Ayrıca `--no-restore` bayrağını örtülü olarak ayarlar.
-
-`--no-restore`
-
-Komutu çalıştırılırken örtük geri yükleme yürütülmez.
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-Çalıştırılacak ikililerin bulunacağı dizin.
-
-`-r|--results-directory <PATH>`
-
-Test sonuçlarının yerleştirileceği dizin. Belirtilen dizin yoksa, oluşturulur.
-
-`-s|--settings <SETTINGS_FILE>`
-
-Testleri çalıştırmak için kullanılacak `.runsettings` dosyası. [`.runsettings` bir dosya kullanarak birim testlerini yapılandırın.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
-
-`-t|--list-tests`
-
-Geçerli projedeki tüm bulunan testlerin listesini listeleyin.
-
-`-v|--verbosity <LEVEL>`
-
-Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`.
-
-# <a name="net-core-1x"></a>[.NET Core 1. x](#tab/netcore1x)
-
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
-
-Test çalıştırmasında belirtilen yoldan özel test bağdaştırıcılarını kullanın.
-
-`-c|--configuration {Debug|Release}`
-
-Yapı yapılandırmasını tanımlar. Varsayılan değer `Debug`, ancak projenizin yapılandırması bu varsayılan SDK ayarını geçersiz kılabilir.
-
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
-
-Test platformu için tanılama modunu sağlar ve belirtilen dosyaya tanılama iletileri yazar.
-
-`-f|--framework <FRAMEWORK>`
-
-Belirli bir [çerçeve](../../standard/frameworks.md)için test ikililerini arar.
-
-`--filter <EXPRESSION>`
-
-Geçerli projede verilen ifadeyi kullanarak testleri filtreler. Daha fazla bilgi için, [filtre seçeneği ayrıntıları](#filter-option-details) bölümüne bakın. Seçmeli birim testi filtrelemeyi kullanma hakkında daha fazla bilgi ve örnekler için bkz. [Seçmeli birim testlerini çalıştırma](../testing/selective-unit-tests.md).
-
-`-h|--help`
-
-Komut için kısa bir yardım yazdırır.
-
-`-l|--logger <LoggerUri/FriendlyName>`
-
-Test sonuçları için bir günlükçü belirtir.
-
-`--no-build`
-
-Test projesi çalıştırılmadan önce derlenmez.
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-Çalıştırılacak ikililerin bulunacağı dizin.
-
-`-s|--settings <SETTINGS_FILE>`
-
-Testleri çalıştırmak için kullanılacak `.runsettings` dosyası. [`.runsettings` bir dosya kullanarak birim testlerini yapılandırın.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
-
-`-t|--list-tests`
-
-Geçerli projedeki tüm bulunan testlerin listesini listeleyin.
-
-`-v|--verbosity <LEVEL>`
-
-Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`.
-
----
+  Daha fazla bilgi için bkz. [VSTest. Console. exe: RunSettings args geçirme](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
 
 ## <a name="examples"></a>Örnekler
 
-Projedeki testleri geçerli dizinde çalıştırın:
+- Projedeki testleri geçerli dizinde çalıştırın:
 
-`dotnet test`
+  ```dotnetcli
+  dotnet test
+  ```
 
-`test1` projesindeki testleri çalıştırın:
+- `test1` projesindeki testleri çalıştırın:
 
-`dotnet test ~/projects/test1/test1.csproj`
+  ```dotnetcli
+  dotnet test ~/projects/test1/test1.csproj
+  ```
 
-Projedeki testleri geçerli dizinde çalıştırın ve TRX biçiminde bir test sonuçları dosyası oluşturun:
+- Projedeki testleri geçerli dizinde çalıştırın ve TRX biçiminde bir test sonuçları dosyası oluşturun:
 
-`dotnet test --logger trx`
+  ```dotnetcli
+  dotnet test --logger trx
+  ```
 
 ## <a name="filter-option-details"></a>Filtre seçeneği ayrıntıları
 
@@ -278,7 +147,7 @@ Projedeki testleri geçerli dizinde çalıştırın ve TRX biçiminde bir test s
 
 | Test çerçevesi | Desteklenen özellikler                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>TamAdı</li><li>Name</li><li>Sınıf</li><li>Öncelik</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>TamAdı</li><li>Adı</li><li>Sınıf</li><li>Öncelik</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>TamAdı</li><li>DisplayName</li><li>Lerdir</li></ul>                                   |
 
 `<operator>`, özelliği ve değeri arasındaki ilişkiyi açıklar:
@@ -287,7 +156,7 @@ Projedeki testleri geçerli dizinde çalıştırın ve TRX biçiminde bir test s
 | :------: | --------------- |
 | `=`      | Tam eşleşme     |
 | `!=`     | Tam eşleşme yok |
-| `~`      | İçerir        |
+| `~`      | Contains        |
 | `!~`     | İçermez    |
 
 `<value>` bir dizedir. Tüm aramalar büyük/küçük harfe duyarlıdır.
@@ -298,7 +167,7 @@ Projedeki testleri geçerli dizinde çalıştırın ve TRX biçiminde bir test s
 
 | İşleç            | İşlev |
 | ------------------- | -------- |
-| <code>&#124;</code> | VEYA       |
+| <code>&#124;</code> | OR       |
 | `&`                 | AND      |
 
 Koşullu işleçler kullandığınızda (örneğin, `(Name~TestMethod1) | (Name~TestMethod2)`) ifadeleri parantez içine alabilirsiniz.

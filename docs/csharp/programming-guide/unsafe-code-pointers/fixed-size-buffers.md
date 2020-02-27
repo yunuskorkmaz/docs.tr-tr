@@ -5,12 +5,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: b5be6892a265f0a2b7f3109321fdcf46d4b0ea22
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9005c425badc5a4ed74e6af3447e563daf61229e
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711850"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627805"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Sabit Boyutlu Arabellekler (C# Programlama Kılavuzu)
 
@@ -22,7 +22,7 @@ private fixed char name[30];
 
 ## <a name="remarks"></a>Açıklamalar
 
-Güvenli kodda, dizi içeren C# bir struct dizi öğelerini içermez. Bunun yerine, yapı öğelerine bir başvuru içerir. [Güvenli olmayan](../../language-reference/keywords/unsafe.md) bir kod bloğunda kullanıldığında bir [yapıda](../../language-reference/keywords/struct.md) sabit boyutlu bir dizi ekleyebilirsiniz.
+Güvenli kodda, dizi içeren C# bir struct dizi öğelerini içermez. Bunun yerine, yapı öğelerine bir başvuru içerir. [Güvenli olmayan](../../language-reference/keywords/unsafe.md) bir kod bloğunda kullanıldığında bir [yapıda](../../language-reference/builtin-types/struct.md) sabit boyutlu bir dizi ekleyebilirsiniz.
 
 Aşağıdaki `struct` boyutu 8 bayttır. `pathName` dizi bir başvurudur:
 

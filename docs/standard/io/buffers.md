@@ -7,12 +7,12 @@ helpviewer_keywords:
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: e42f165bfedec3b1fa54615ee7e2a2028f40aadb
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 5b98e3e2d41d3e49a28db6393f15f13c3579b06d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960497"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628084"
 ---
 # <a name="work-with-buffers-in-net"></a>.NET 'teki arabelleklerle çalışma
 
@@ -57,7 +57,7 @@ Bu yazma yöntemi, `IBufferWriter<T>`tarafından sunulan `Memory<T>`/`Span<T>` a
 
 Üçüncü Gösterim, `ReadOnlySequence<T>`çeşitli işlemlerde performans etkilerine sahip olduğu için en ilginç bir gösterimidir:
 
-|Sunum|Çalışma|Karmaşıklık|
+|İmle|İşlem|Karmaşıklık|
 ---|---|---|
 |`T[]`/`ReadOnlyMemory<T>`|`Length`|`O(1)`|
 |`T[]`/`ReadOnlyMemory<T>`|`GetPosition(long)`|`O(1)`|
@@ -105,7 +105,7 @@ Verileri çok kesimli dizilerden işlemek için kullanılabilecek birkaç yakla�
 - `ReadOnlySequence<T>` bitişik bir diziye kopyalayın ve tek bir arabellek gibi değerlendirin:
   - `ReadOnlySequence<T>` boyutu küçükse, [stackalloc](../../csharp/language-reference/operators/stackalloc.md) işleci kullanılarak verileri yığına ayrılan bir arabelleğe kopyalamak makul olabilir.
   - <xref:System.Buffers.ArrayPool%601.Shared%2A?displayProperty=nameWithType>kullanarak `ReadOnlySequence<T>` havuza alınmış bir diziye kopyalayın.
-  - Kullanım [ `ReadOnlySequence<T>.ToArray()` ](xref:System.Buffers.BuffersExtensions.ToArray%2A). Bu, yığın üzerinde yeni bir `T[]` ayırdığı için etkin yollarda önerilmez.
+  - [`ReadOnlySequence<T>.ToArray()`](xref:System.Buffers.BuffersExtensions.ToArray%2A) adresini kullanın. Bu, yığın üzerinde yeni bir `T[]` ayırdığı için etkin yollarda önerilmez.
 
 Aşağıdaki örneklerde `ReadOnlySequence<byte>`işlemeye yönelik bazı genel durumlar gösterilmektedir:
 
@@ -114,6 +114,8 @@ Aşağıdaki örneklerde `ReadOnlySequence<byte>`işlemeye yönelik bazı genel 
 Aşağıdaki örnek, `ReadOnlySequence<byte>`başlangıcından 4 baytlık büyük endian tamsayı uzunluğunu ayrıştırır.
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet5)]
+
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
 
 ##### <a name="process-text-data"></a>Metin verilerini işleme
 
@@ -146,7 +148,7 @@ Bir `ReadOnlySequence<T>`/ile ilgilenirken olağan dışı sonuçlar vardır `Se
 - İki `SequencePosition` karşılaştırılamaz ve şunları yapmayı zorlaştırıyor:
   - Bir konumun başka bir konumdan büyük veya küçük olup olmadığını öğrenin.
   - Bazı ayrıştırma algoritmaları yazın.
-- `ReadOnlySequence<T>` bir nesne başvurusundan daha büyük ve [içinde](../../csharp/language-reference/keywords/in-parameter-modifier.md) ya da mümkün olduğunda [başvuru](../../csharp/language-reference/keywords/ref.md) olarak geçirilmelidir. `in` veya `ref` tarafından `ReadOnlySequence<T>` geçirme [yapının](../../csharp/language-reference/keywords/struct.md)kopyalarını azaltır.
+- `ReadOnlySequence<T>` bir nesne başvurusundan daha büyük ve [içinde](../../csharp/language-reference/keywords/in-parameter-modifier.md) ya da mümkün olduğunda [başvuru](../../csharp/language-reference/keywords/ref.md) olarak geçirilmelidir. `in` veya `ref` tarafından `ReadOnlySequence<T>` geçirme [yapının](../../csharp/language-reference/builtin-types/struct.md)kopyalarını azaltır.
 - Boş segmentler:
   - `ReadOnlySequence<T>`içinde geçerlidir.
   - `ReadOnlySequence<T>.TryGet` yöntemi kullanılarak yinelenirken görünebilirler.

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 8348e080d833e79dd364aee511ac7d05fb53d1cc
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 114fa2973c50be9a4199db9729e3cd9ea6122866
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543566"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626535"
 ---
 # <a name="methods-c-programming-guide"></a>Yöntemler (C# Programlama Kılavuzu)
 
@@ -21,7 +21,7 @@ Yöntemi, bir dizi deyim içeren bir kod bloğudur. Program, metodu çağırarak
 
 ## <a name="method-signatures"></a>Yöntem imzaları
 
-Yöntemler, `public` veya `private`, `abstract` veya `sealed`, dönüş değeri, yöntemin adı ve herhangi bir yöntem parametresi gibi erişim düzeyi belirtilerek bir [sınıf](../../language-reference/keywords/class.md), [Yapı](../../language-reference/keywords/struct.md)veya [arabirim](../interfaces/index.md) içinde bildirilmiştir. Bu parçalar, yönteminin imzasıdır.
+Yöntemler, `public` veya `private`, `abstract` veya `sealed`, dönüş değeri, yöntemin adı ve herhangi bir yöntem parametresi gibi erişim düzeyi belirtilerek bir [sınıf](../../language-reference/keywords/class.md), [Yapı](../../language-reference/builtin-types/struct.md)veya [arabirim](../interfaces/index.md) içinde bildirilmiştir. Bu parçalar, yönteminin imzasıdır.
 
 > [!NOTE]
 > Bir yöntemin dönüş türü, yöntem aşırı yüklemesi amaçları için yöntemin imzasının bir parçası değildir. Ancak, bir temsilci ve işaret ettiği yöntem arasındaki uyumluluğun belirlenmesi sırasında yönteminin imzasının bir parçasıdır.
@@ -38,7 +38,7 @@ Bir nesne üzerinde bir yöntemi çağırmak, bir alana erişme gibidir. Nesne a
 
 ## <a name="method-parameters-vs-arguments"></a>Yöntem parametreleri ve bağımsız değişkenler
 
-Yöntem tanımı, gerekli parametrelerin adlarını ve türlerini belirtir. Kodu çağırırken yöntemi çağırdığında, her parametre için bağımsız değişkenler olarak adlandırılan somut değerler sağlar. Bağımsız değişkenlerin parametre türüyle uyumlu olması gerekir, ancak çağıran kodda kullanılan bağımsız değişken adı (varsa) yöntemde tanımlanan parametre ile aynı olmalıdır. Örneğin:
+Yöntem tanımı, gerekli parametrelerin adlarını ve türlerini belirtir. Kodu çağırırken yöntemi çağırdığında, her parametre için bağımsız değişkenler olarak adlandırılan somut değerler sağlar. Bağımsız değişkenlerin parametre türüyle uyumlu olması gerekir, ancak çağıran kodda kullanılan bağımsız değişken adı (varsa) yöntemde tanımlanan parametre ile aynı olmalıdır. Örnek:
 
 [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]
 
