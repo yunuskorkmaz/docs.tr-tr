@@ -3,19 +3,19 @@ title: Windows 'da Apache Spark uygulaması için .NET oluşturma
 description: Windows 'da Apache Spark için .NET uygulamanızı nasıl oluşturacağınızı öğrenin.
 ms.date: 01/29/2020
 ms.topic: conceptual
-ms.custom: mvc,how-to
-ms.openlocfilehash: e6dec09f7d3e8d478cdcccf9df1c3e72d5f884eb
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.custom: how-to
+ms.openlocfilehash: 640459c8c80b6d798718b89d4965802cdacd6c63
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76928038"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628663"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>Windows 'da Apache Spark için .NET uygulamanızı nasıl oluşturacağınızı öğrenin
 
 Bu makalede, Windows 'da Apache Spark uygulamalarınızı .NET için nasıl oluşturabileceğiniz öğretilir.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adımlarına atlayın.
 
@@ -24,25 +24,25 @@ Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adıml
      * .NET masaüstü geliştirme
        * Tüm gerekli bileşenler
          * .NET Framework 4.6.1 geliştirme araçları
-     * .NET Core platformlar arası geliştirme
+     * .NET Core çoklu platform geliştirme
        * Tüm gerekli bileşenler
   3. **[Java 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)** ' i yükler. 
-     - İşletim sisteminiz için uygun sürümü (örneğin, Win x64 makinesi için JDK-8u201-Windows-x64. exe) seçin.
+     - İşletim sisteminiz için uygun sürümü seçin. Örneğin, Windows x64 makinesi için *JDK-8u201-Windows-x64. exe* .
      - Yükleyiciyi kullanarak yükleme yapın ve komut satırınızdan `java` çalıştırabildiğinizi doğrulayın.
   4. **[Apache Maven 3.6.0 +](https://maven.apache.org/download.cgi)** 'yi yükler.
-     - [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip)indirin.
-     - Yerel bir dizine (örneğin, `C:\bin\apache-maven-3.6.0\`) ayıklayın.
-     - [Yol ortam değişkeniniz](https://www.java.com/en/download/help/path.xml) , `C:\bin\apache-maven-3.6.0\bin`gibi Apache Maven 'i ekleyin.
+     - [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip)indirin.
+     - Yerel bir dizine ayıklayın. Örneğin, * C:\bin\apache-Maven-3.6.0\*.
+     - [Yol ortam değişkeninizin](https://www.java.com/en/download/help/path.xml)Apache Maven 'i ekleyin. Örneğin, *C:\bin\apache-Maven-3.6.0\Bin*.
      - Komut satırınızdan `mvn` çalıştırabildiğinizi doğrulayın.
   5. **[Apache Spark 2.3 +](https://spark.apache.org/downloads.html)** ' yı yükler.
-     - [Apache Spark 2.3 +](https://spark.apache.org/downloads.html) indirin ve bu dosyayı yerel bir klasöre (örneğin, `C:\bin\spark-2.3.2-bin-hadoop2.7\`) [7-zip](https://www.7-zip.org/)kullanarak ayıklayın. (Desteklenen Spark sürümleri 2,3. *, 2.4.0, 2.4.1, 2.4.3 ve 2.4.4)
-     - Yeni bir [ortam değişkeni](https://www.java.com/en/download/help/path.xml) ekleyin `SPARK_HOME` örneğin, `C:\bin\spark-2.3.2-bin-hadoop2.7\`.
+     - [Apache Spark 2.3 +](https://spark.apache.org/downloads.html) indirin ve bu dosyayı yerel bir klasöre (örneğin, *C:\bin\spark-2.3.2-bin-hadoop2.7\*) [7-zip](https://www.7-zip.org/)kullanarak ayıklayın. (Desteklenen Spark sürümleri 2,3.* , 2.4.0, 2.4.1, 2.4.3 ve 2.4.4)
+     - `SPARK_HOME`[Yeni bir ortam değişkeni](https://www.java.com/en/download/help/path.xml) ekleyin. Örneğin, * C:\bin\spark-2.3.2-bin-hadoop2.7\*.
 
        ```powershell
        set SPARK_HOME=C:\bin\spark-2.3.2-bin-hadoop2.7\       
        ```
 
-     - [Yol ortam değişkenine](https://www.java.com/en/download/help/path.xml) Apache Spark ekleyin, örneğin, `C:\bin\spark-2.3.2-bin-hadoop2.7\bin`.
+     - [Path ortam değişkeninizin](https://www.java.com/en/download/help/path.xml)Apache Spark ekleyin. Örneğin, *C:\bin\spark-2.3.2-bin-hadoop2.7\bin*.
 
        ```powershell       
        set PATH=%SPARK_HOME%\bin;%PATH%
@@ -70,8 +70,8 @@ Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adıml
         </details>
 
   6. **[Winutils](https://github.com/steveloughran/winutils)** 'i yükler.
-     - [Winutils deposundan](https://github.com/steveloughran/winutils)`winutils.exe` ikilisini indirin. Spark dağıtımının derlenmiş olduğu Hadoop sürümünü seçmeniz gerekir. Örneğin, Spark 2.3.2 için Hadoop-2.7.1 kullanın.
-     - `winutils.exe` ikilisini istediğiniz dizine kaydedin, örneğin, `C:\hadoop\bin`.
+     - [Winutils deposundan](https://github.com/steveloughran/winutils)`winutils.exe` ikilisini indirin. Spark dağıtımının derlenmiş olduğu Hadoop sürümünü seçmeniz gerekir. Exammple için, Spark 2.3.2 için Hadoop-2.7.1 kullanın.
+     - `winutils.exe` ikilisini istediğiniz bir dizine kaydedin. Örneğin, *C:\hadoop\bin*.
      - `HADOOP_HOME`, winutils. exe ile dizini yansıtacak şekilde ayarlayın (bin olmadan). Örneğin, komut satırını kullanarak:
 
        ```powershell
@@ -84,14 +84,14 @@ Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adıml
        set PATH=%HADOOP_HOME%\bin;%PATH%
        ```
 
-Bir sonraki bölüme geçmeden önce komut satırınızdan `dotnet`, `java`, `mvn``spark-shell` çalıştırabildiğinizden emin olun. Daha iyi bir yol var mı? Lütfen [bir sorun açıp](https://github.com/dotnet/spark/issues) katkıda bulunmaktan çekinmeyin.
+Sonraki bölüme geçmeden önce komut satırınızdan `dotnet`, `java`, `mvn``spark-shell` çalıştırabildiğinizden emin olun. Daha iyi bir yol var mı? [Bir sorun açın](https://github.com/dotnet/spark/issues) ve katkıda bulunmak için ücretsizdir.
 
 > [!NOTE]
-> Bir ortam değişkeni güncelleştirilirse, komut satırı yeni bir örneği gerekli olabilir.
+> Bir ortam değişkeni güncelleştirilirse, komut satırının yeni bir örneği gerekli olabilir.
 
-## <a name="build"></a>{1&gt;Yapı (Build)&lt;1}
+## <a name="build"></a>Oluşturma
 
-Bu kılavuzun geri kalanı için, .NET Apache Spark deposunu makinenize Klonladığınız bir işlem olması gerekir. Klonlanan depo için herhangi bir konum seçebilirsiniz, örneğin, `C:\github\dotnet-spark\`.
+Bu kılavuzun geri kalanı için, .NET Apache Spark deposunu makinenize Klonladığınız bir işlem olması gerekir. Kopyalanmış depo için herhangi bir konum seçebilirsiniz. Örneğin, * C:\github\dotnet-Spark\*.
 
 ```bash
 git clone https://github.com/dotnet/spark.git C:\github\dotnet-spark
@@ -99,7 +99,7 @@ git clone https://github.com/dotnet/spark.git C:\github\dotnet-spark
 
 ### <a name="build-net-for-apache-spark-scala-extensions-layer"></a>Apache Spark Scala uzantıları katmanı için .NET derleme
 
-.NET uygulaması gönderdiğinizde, Apache Spark için .NET, isteklerinizi nasıl işleyeceğinizi (örneğin, yeni bir Spark oturumu oluşturma isteği, .NET tarafından JVM 'ye veri aktarma isteği vb.) Apache Spark bildiren gerekli mantığı içerir. Bu mantık, [.net Spark Scala kaynak kodunda](https://github.com/dotnet/spark/tree/master/src/scala)bulunabilir.
+Bir .NET uygulaması gönderdiğinizde, Apache Spark için .NET, isteklerinizi nasıl işleyeceğinizi (örneğin, yeni bir Spark oturumu oluşturma isteği, .NET tarafından JVM tarafına veri aktarma isteği vb.) Apache Spark bildiren gerekli mantığa sahiptir. Bu mantık, [.net Spark Scala kaynak kodunda](https://github.com/dotnet/spark/tree/master/src/scala)bulunabilir.
 
 .NET Framework veya .NET Core 'u kullanıp kullanmadığına bakılmaksızın, Apache Spark Scala uzantı katmanı için .NET oluşturmanız gerekir:
 
@@ -212,13 +212,13 @@ Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.
 
 Örnekleri oluşturduktan sonra, .NET Framework veya .NET Core 'u hedeflemenize bakılmaksızın `spark-submit` çalışıyor olur. [Önkoşul](#prerequisites) bölümünü izlediğinizden ve Apache Spark yüklediğinizden emin olun.
 
-  1. `DOTNET_WORKER_DIR` veya `PATH` ortam değişkenini `Microsoft.Spark.Worker` ikilisinin oluşturulduğu yolu içerecek şekilde ayarlayın (örn. .NET Framework için `C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461`, .NET Core için `C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish`):
+  1. `DOTNET_WORKER_DIR` veya `PATH` ortam değişkenini `Microsoft.Spark.Worker` ikilisinin oluşturulduğu yolu içerecek şekilde ayarlayın (örneğin, .NET Framework için *C:\github\dotnet\spark\artifacts\bin\Microsoft.spark.Worker\Debug\net461* , .NET Core için *C:\github\dotnet-spark\artifacts\bin\Microsoft.spark.Worker\Debug\netcoreapp2.1\win10-x64\publish* ):
 
       ```powershell
       set DOTNET_WORKER_DIR=C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish
       ```
   
-  2. PowerShell 'i açın ve uygulama ikilisinin oluşturulduğu dizine gidin (örneğin, .NET Framework için `C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461`, .NET Core için `C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish`):
+  2. PowerShell 'i açın ve uygulama ikilisinin oluşturulduğu dizine gidin (örneğin, .NET Framework için *C:\github\dotnet\spark\artifacts\bin\Microsoft.spark.CSharp.Examples\Debug\net461* , .NET Core için *C:\github\dotnet-spark\artifacts\bin\Microsoft.spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish* ):
 
       ```powershell
       cd C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish
