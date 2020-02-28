@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: ade2cba857a1a32039f8fd07881f13f63f0dbe1a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: a094e6e8ab9094fb14ce9a2ca8a180cbf9b273cb
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628143"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673400"
 ---
 # <a name="types-c-programming-guide"></a>Türler (C# Programlama Kılavuzu)
 
@@ -113,7 +113,7 @@ Kendi özel değer türlerinizi oluşturmak için [struct](../../language-refere
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-Yapılar hakkında daha fazla bilgi için bkz. [yapılar](../classes-and-structs/structs.md). Değer türleri hakkında daha fazla bilgi için bkz. [değer türleri](../../language-reference/builtin-types/value-types.md).
+Yapılar hakkında daha fazla bilgi için bkz. [yapı türleri](../../language-reference/builtin-types/struct.md). Değer türleri hakkında daha fazla bilgi için bkz. [değer türleri](../../language-reference/builtin-types/value-types.md).
 
 Değer türlerinin diğer kategorisi [sabit listesi](../../language-reference/builtin-types/enum.md)' dir. Enum, adlandırılmış integral sabitleri kümesini tanımlar. Örneğin, .NET sınıf kitaplığındaki <xref:System.IO.FileMode?displayProperty=nameWithType> numaralandırması, bir dosyanın nasıl açılacağını belirten adlandırılmış sabit tamsayılar kümesi içerir. Aşağıdaki örnekte gösterildiği gibi tanımlanmıştır:
 
@@ -205,3 +205,4 @@ Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
 - [C# Programlama Kılavuzu](../index.md)
 - [XML Veri Türlerini Dönüştürme](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [Integral türleri](../../language-reference/builtin-types/integral-numeric-types.md)
+ 

@@ -1,48 +1,48 @@
 ---
-title: C#Diziler - Turu C# dil
-description: En temel koleksiyon türü dizilerdir C# dil
+title: C#Diziler- C# dilin turu
+description: Diziler, C# dildeki en temel koleksiyon türüdür
 ms.date: 08/10/2016
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-ms.openlocfilehash: 56a053ac8525d4c6c34592d6092f3f162cb04247
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 195df1f31c71ee7a202a3b57076775c4f717d399
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634601"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673322"
 ---
 # <a name="arrays"></a>Diziler
 
-Bir ***dizi*** hesaplanan dizinlerini erişilen değişken bir sayı içeren bir veri yapısıdır. Bir dizi içindeki değişkenler olarak da bilinir ***öğeleri*** dizinin tümü aynı türde ve bu tür çağrılır ***öğe türü*** dizi.
+***Dizi*** , hesaplanan dizinler üzerinden erişilen çeşitli değişkenler içeren bir veri yapısıdır. Bir dizide bulunan değişkenler, dizi ***öğeleri*** de denir, hepsi aynı türdür ve bu tür dizinin ***öğe türü*** olarak adlandırılır.
 
-Dizi türleri, başvuru türleridir ve bir dizi değişkeni bildirimi yalnızca kenara alanı başvuru bir dizi örneği için ayarlar. Gerçek bir dizi örnekleri, new işleci kullanılarak çalışma zamanında dinamik olarak oluşturulur. Yeni işlemi belirtir ***uzunluğu*** sonra Örneğin ömrü boyunca sabittir yeni dizi örneği. Dizinleri öğelerinden oluşan bir dizi aralığından `0` için `Length - 1`. `new` İşleci, örneğin, sıfır olan tüm sayısal türler için varsayılan değerlerine bir dizinin öğeleri otomatik olarak başlatır ve `null` tüm başvuru türleri için.
+Dizi türleri başvuru türlerdir ve bir dizi değişkeninin bildirimi, bir dizi örneğine yönelik bir başvuru için yalnızca alan ayırın. Gerçek dizi örnekleri, çalışma zamanında yeni işleci kullanılarak dinamik olarak oluşturulur. Yeni işlem, daha sonra örneğin ömrü boyunca düzeltilen yeni dizi örneğinin ***uzunluğunu*** belirtir. Dizi aralığının öğelerinin dizinleri `Length - 1``0`. `new` işleci, bir dizinin öğelerini otomatik olarak varsayılan değerlerine başlatır. Bu, örneğin, tüm sayısal türler için sıfır ve tüm başvuru türleri için `null`.
 
-Aşağıdaki örnek, bir dizi oluşturur. `int` öğeleri, dizi başlatır ve dizinin içeriği yazdırır.
+Aşağıdaki örnek `int` öğelerinden oluşan bir dizi oluşturur, diziyi başlatır ve dizinin içeriğini yazdırır.
 
 [!code-csharp[ArraySample](../../../samples/snippets/csharp/tour/arrays/Program.cs#L3-L18)]
 
-Bu örneği oluşturur ve üzerinde çalıştığı bir ***tek boyutlu dizi***. C# ' yı da destekler ***çok boyutlu diziler***. Olarak da bilinen bir dizinin boyut sayısını yazın ***derece*** dizi türü köşeli ayraç yazılan virgül sayısı artı bir dizi türünde olduğu. Aşağıdaki örnek bir tek boyutlu, iki boyutlu bir ve üç boyutlu bir dizi sırasıyla ayırır.
+Bu örnek, ***tek boyutlu bir dizi***üzerinde oluşturur ve çalışır. C#, ***çok boyutlu dizileri***de destekler. Dizi türünün ***derecesi*** olarak da bilinen bir dizi türünün boyut sayısı, dizi türünün köşeli ayraçları arasına yazılan virgüllerin sayısıdır. Aşağıdaki örnek, sırasıyla tek boyutlu, iki boyutlu ve üç boyutlu bir diziyi ayırır.
 
 [!code-csharp[ArrayRank](../../../samples/snippets/csharp/tour/arrays/Program.cs#L24-L26)]
 
-`a1` Dizi 10 öğe içeriyor `a2` dizi içeriyor 50 (10 × 5) öğeleri ve `a3` dizi içeriyor (10 × 5 × 2) 100 öğeleri.
-Bir dizinin öğe türü bir dizi türü de dahil olmak üzere herhangi bir tür olabilir. Bir dizi türünde öğelere sahip bir dizi adlandırılan bir ***düzensiz dizi*** öğe dizisi uzunluklarının tümünü değil aynı olmak zorunda olduğu. Aşağıdaki örnekte dizi ayırır `int`:
+`a1` dizi 10 öğe içeriyorsa, `a2` dizisi 50 (10 × 5) öğesi içerir ve `a3` dizisi 100 (10 × 5 × 2) öğe içerir.
+Bir dizinin öğe türü, bir dizi türü de dahil olmak üzere herhangi bir tür olabilir. Dizi türündeki öğeleri içeren bir dizi, bazen öğe dizilerinin uzunluklarının tümünün aynı olması gerektiğinden ***pürüzlü dizi*** olarak adlandırılır. Aşağıdaki örnek, `int`dizi dizileri ayırır:
 
 [!code-csharp[ArrayAllocation](../../../samples/snippets/csharp/tour/arrays/Program.cs#L31-L34)]
 
-İlk satır, üç öğeyle her türü bir dizi oluşturur `int[]` ve her bir başlangıç değeri ile `null`. Sonraki satırların başvurular değişen uzunlukları örneklerini tek bir dizi üç öğeleri ardından başlatın.
+İlk satır, her biri `int[]` her biri `null`başlangıç değeri olan üç öğe içeren bir dizi oluşturur. Sonraki satırlar, Farklı uzunluklardaki ayrı dizi örneklerine yapılan başvurularla üç öğeyi başlatır.
 
-New işleci Başlangıç değerlerini kullanarak belirtilen dizi öğelerinin izin veren bir ***dizi Başlatıcısı***, sınırlayıcılar arasında yazılan ifadeler listesi olduğu `{` ve `}`. Aşağıdaki örnek ayırır ve başlatan bir `int[]` üç öğelerle.
+New işleci, dizi öğelerinin başlangıç değerlerinin, `{` ve `}`sınırlayıcılarının yazıldığı bir ifade listesi olan ***dizi başlatıcısı***kullanılarak belirtilmesine izin verir. Aşağıdaki örnek, üç öğe ile bir `int[]` ayırır ve başlatır.
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L39-L39)]
 
-Dizinin uzunluğu arasında ifadelerin sayısından algılanır Not {ve}. Yerel değişken ve alan bildirimleri kısalttık daha fazla sağlayacak şekilde dizi türü açıklandı gerekmez.
+Dizi uzunluğunun {ve} arasındaki ifade sayısından çıkarsandığına unutmayın. Yerel değişken ve alan bildirimleri daha fazla kısaltılarak, dizi türünün yeniden oluşturulması gerekmez.
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L44-L44)]
 
-Önceki örneklerin her ikisi de aşağıdakine eşdeğerdir:
+Yukarıdaki örneklerin her ikisi de aşağıdaki gibi eşdeğerdir:
 
 [!code-csharp[ArrayAssignment](../../../samples/snippets/csharp/tour/arrays/Program.cs#L49-L53)]
 
 >[!div class="step-by-step"]
->[Önceki](structs.md)
+>[Önceki](classes-and-objects.md)
 >[İleri](interfaces.md)

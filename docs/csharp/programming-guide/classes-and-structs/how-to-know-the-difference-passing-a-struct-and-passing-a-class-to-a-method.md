@@ -6,12 +6,12 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: 258001ae8ed3591bf75aeb040d1a63118196455a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: a280a6df873d7c03c204bc5c86468e7e7298d723
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628208"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673439"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Bir struct geçirme ve bir yönteme sınıf başvurusu geçirme arasındaki farkı nasıl anlarsınız (C# Programlama Kılavuzu)
 Aşağıdaki örnek bir [yapının](../../language-reference/builtin-types/struct.md) bir yönteme nasıl geçtiğini gösterir bir yönteme nasıl bir [sınıf](../../language-reference/keywords/class.md) örneği geçirmekten farklıdır. Örnekte, bağımsız değişkenlerin (struct ve sınıf örneği) her ikisi de değere göre geçirilir ve her iki yöntem de bağımsız değişkenin bir alanının değerini değiştirir. Ancak, bir yapı geçirdiğinizde geçirilen özellikler, bir sınıfın örneğini geçirdiğinizde geçirilen verilerden farklı olduğundan, iki yöntemin sonuçları aynı değildir.  
@@ -29,5 +29,5 @@ Aşağıdaki örnek bir [yapının](../../language-reference/builtin-types/struc
 
 - [C# Programlama Kılavuzu](../index.md)
 - [Sınıflar](./classes.md)
-- [Yapılar](./structs.md)
+- [Yapı türleri](../../language-reference/builtin-types/struct.md)
 - [Parametreleri Geçirme](./passing-parameters.md)

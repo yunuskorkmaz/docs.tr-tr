@@ -3,12 +3,12 @@ title: İçindeki C# sınıflar ve nesneler- C# dilin turu
 description: Yeni C#misiniz? Sınıflar, nesneler ve devralmayla bu genel bakışı okuyun
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: be8e760b19b7ca5305918ecfdbf9ad797d7e76b2
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e5078135ab22445ac636c6edc3d46570be8fcaf5
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105628"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673309"
 ---
 # <a name="classes-and-objects"></a>Sınıflar ve nesneler
 
@@ -32,7 +32,7 @@ Bir sınıfın üyeleri statik üyeler veya örnek üyeleridir. Statik Üyeler s
 
 Aşağıda bir sınıfın içerebileceği üye türlerine ilişkin bir genel bakış sunulmaktadır.
 
-- {1&gt;Sabitler&lt;1}
+- Sabitler
   - Sınıfla ilişkili sabit değerler
 - Alanlar
   - Sınıfın değişkenleri
@@ -258,7 +258,7 @@ Bir özelliğin erişimcisi sanal olabilir. Bir özellik bildirimi `virtual`, `a
 
 *Dizin Oluşturucu* , nesnelerin diziyle aynı şekilde dizinlenmesini sağlayan bir üyedir. Bir Dizin Oluşturucu, üye adının `this` ve ardından sınırlayıcı `[` ve `]`arasında yazılmış bir parametre listesi olması dışında bir özellik gibi bildirilmiştir. Parametreler, dizin oluşturucunun erişimcisinde kullanılabilir. Özelliklere benzer şekilde, Dizin oluşturucular okunabilir-yazılır, salt okunurdur ve salt yazılır olabilir ve bir dizin oluşturucunun erişimcisi sanal olabilir.
 
-`MyList<T>` sınıfı, bir `int` parametresi alan tek bir okuma-yazma Dizin oluşturucuyu bildirir. Dizin Oluşturucu, `MyList<T>` örneklerinin `int` değerlerle dizinini oluşturmanızı mümkün kılar. Örneğin:
+`MyList<T>` sınıfı, bir `int` parametresi alan tek bir okuma-yazma Dizin oluşturucuyu bildirir. Dizin Oluşturucu, `MyList<T>` örneklerinin `int` değerlerle dizinini oluşturmanızı mümkün kılar. Örnek:
 
 [!code-csharp[ListExample3](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L109-L117)]
 
@@ -298,4 +298,4 @@ Bir olayın temeldeki depolamanın denetiminin istendiği Gelişmiş senaryolard
 
 > [!div class="step-by-step"]
 > [Önceki](statements.md)
-> [İleri](structs.md)
+> [İleri](arrays.md)

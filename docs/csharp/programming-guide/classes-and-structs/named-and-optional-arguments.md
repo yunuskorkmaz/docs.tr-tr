@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 6afa8a2bd2dfee8d7c36b58342036d18241317a8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3685482caebd892c460a3cc2ecf3a22acbe3c9ec
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714795"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673413"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler (C# Programlama Kılavuzu)
 C#4 adlandırılmış ve isteğe bağlı bağımsız değişkenleri tanıtır. *Adlandırılmış bağımsız değişkenler* , bağımsız değişkenini parametrenin adıyla ilişkilendirerek parametre listesindeki konumuyla değil, belirli bir parametre için bir bağımsız değişken belirtmenizi sağlar. *Isteğe bağlı bağımsız değişkenler* bazı parametrelerin bağımsız değişkenlerini atlamanızı sağlar. Her iki yöntem de Yöntemler, Dizin oluşturucular, oluşturucular ve temsilcilerle birlikte kullanılabilir.  
@@ -69,7 +69,7 @@ C#4 adlandırılmış ve isteğe bağlı bağımsız değişkenleri tanıtır. *
   
 - sabit bir ifade;  
   
-- `new ValType()`, `ValType` bir [numaralandırma](../../language-reference/builtin-types/enum.md) ya da [Yapı](structs.md)gibi bir değer türü olduğunda formun bir ifadesi;  
+- `new ValType()`, `ValType` bir [numaralandırma](../../language-reference/builtin-types/enum.md) ya da [Yapı](../../language-reference/builtin-types/struct.md)gibi bir değer türü olduğunda formun bir ifadesi;  
   
 - [varsayılan form (ValType)](../../language-reference/operators/default.md)bir ifade, burada `ValType` bir değer türüdür.  
   

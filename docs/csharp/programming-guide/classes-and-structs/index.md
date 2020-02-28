@@ -10,12 +10,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 301ba292010470208e92a225c1014bcb50497106
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: afd9e688bd716375bafb370fad4af082a9498411
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714817"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673426"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Sınıflar ve Yapılar (C# Programlama Kılavuzu)
 Sınıflar ve yapılar, .NET Framework ortak tür sisteminin temel yapılarıdır. Her biri, mantıksal birim olarak birbirine ait bir veri kümesini ve davranışları kapsülleyen bir veri yapısıdır. Veri ve davranışlar, sınıfın veya yapının *üyeleridir* ve bu konuda daha sonra listelendiği gibi yöntemleri, özellikleri ve olayları gibi, vb. içerir.  
@@ -28,7 +28,7 @@ Sınıflar ve yapılar, .NET Framework ortak tür sisteminin temel yapılarıdı
   
  Genel olarak, sınıflar daha karmaşık davranışı modellemek veya bir sınıf nesnesi oluşturulduktan sonra değiştirilmesi amaçlanan veriler için kullanılır. Yapılar, öncelikle yapı oluşturulduktan sonra değiştirilmesi amaçlanmayan verileri içeren küçük veri yapıları için idealdir.  
   
- Daha fazla bilgi için bkz. [sınıflar](./classes.md), [nesneler](./objects.md)ve [yapılar](./structs.md).  
+ Daha fazla bilgi için bkz. [sınıflar](./classes.md), [nesneler](./objects.md)ve [yapı türleri](../../language-reference/builtin-types/struct.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte, `ProgrammingGuide` ad alanındaki `CustomClass` üç üyeye sahiptir: bir örnek Oluşturucu, `Number`adlı bir özellik ve `Multiply`adlı bir yöntem. `Program` sınıfındaki `Main` yöntemi, `CustomClass`bir örnek (nesne) oluşturur ve nesnenin yöntemi ile özelliğine nokta gösterimi kullanılarak erişilir.
@@ -47,7 +47,7 @@ Sınıflar ve yapılar, .NET Framework ortak tür sisteminin temel yapılarıdı
   
 - [Sabitler](./constants.md)  
   
-- [Veri Erişimi](./properties.md)  
+- [Özellikler](./properties.md)  
   
 - [Yöntemler](./methods.md)  
   

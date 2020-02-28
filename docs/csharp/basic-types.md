@@ -4,12 +4,12 @@ description: Tüm C# programlarda çekirdek türleri (Numerics, dizeler ve nesne
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 10230394ece27a2a34be1075abcdbd3765995aeb
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: bb2177026afb2eef2e14ece0c306bfd3ffe7af39
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628572"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673270"
 ---
 # <a name="types-variables-and-values"></a>Türler, değişkenler ve değerler
 
@@ -82,9 +82,10 @@ Bir yöntemden birden fazla değer döndürmek, yaygın bir yöntemdir. Tek bir 
   
 - Devralma ilkesini destekler. Türler, *temel türler*olarak adlandırılan diğer türlerden türetilebilir. Türetilmiş tür, yöntemleri, özellikleri ve temel türün diğer üyelerini devralır (bazı kısıtlamalarla). Temel tür başka bir türden türetebilir, bu durumda türetilmiş tür, devralma hiyerarşisindeki her iki temel türün üyelerini devralır. <xref:System.Int32> (C# anahtar sözcük: `int`) gibi yerleşik sayısal türler dahil olmak üzere tüm türler, sonunda <xref:System.Object> (C# anahtar sözcük: `object`) olan tek bir temel türden türetilir. Bu Birleşik tür hiyerarşisine [ortak tür sistemi](../standard/common-type-system.md) (Cts) denir. ' De C#devralma hakkında daha fazla bilgi için bkz. [Devralma](programming-guide/classes-and-structs/inheritance.md).  
   
-- CTS içindeki her tür, bir *değer türü* veya bir *başvuru türü*olarak tanımlanır. Bu, .NET Framework sınıf kitaplığındaki tüm özel türleri ve ayrıca kendi Kullanıcı tanımlı türlerinizi içerir. [Struct](language-reference/builtin-types/struct.md) anahtar sözcüğünü kullanarak tanımladığınız türler değer türleridir; Tüm yerleşik sayısal türler **yapılar**' dur. Değer türleri hakkında daha fazla bilgi için bkz. [yapılar](structs.md). [Sınıf](language-reference/keywords/class.md) anahtar sözcüğünü kullanarak tanımladığınız türler başvuru türleridir. Başvuru türleri hakkında daha fazla bilgi için bkz. [sınıflar](programming-guide/classes-and-structs/classes.md). Başvuru türleri ve değer türlerinde farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışları vardır.
+- CTS içindeki her tür, bir *değer türü* veya bir *başvuru türü*olarak tanımlanır. Bu, .NET sınıf kitaplığı 'ndaki tüm özel türleri ve ayrıca kendi Kullanıcı tanımlı türlerinizi içerir. `struct` veya `enum` anahtar sözcüğünü kullanarak tanımladığınız türler değer türlerdir. Değer türleri hakkında daha fazla bilgi için bkz. [değer türleri](language-reference/builtin-types/value-types.md). [Sınıf](language-reference/keywords/class.md) anahtar sözcüğünü kullanarak tanımladığınız türler başvuru türleridir. Başvuru türleri hakkında daha fazla bilgi için bkz. [sınıflar](programming-guide/classes-and-structs/classes.md). Başvuru türleri ve değer türlerinde farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışları vardır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yapılar](structs.md)
+- [Yapı türleri](language-reference/builtin-types/struct.md)
+- [Sabit listesi türleri](language-reference/builtin-types/enum.md)
 - [Sınıflar](programming-guide/classes-and-structs/classes.md)

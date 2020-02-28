@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: cdb739b585722ca5988192d288a7ef4fbcfe7d8c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4a2340c29527ac09ba53daee03e06420b269df56
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75702583"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673348"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>C# Programının Genel Yapısı (C# Programlama Kılavuzu)
 C#Programlar, bir veya daha fazla dosyadan oluşabilir. Her dosya sıfır veya daha fazla ad alanı içerebilir. Ad alanı, diğer ad alanlarına ek olarak sınıflar, yapılar, arabirimler, numaralandırmalar ve temsilciler gibi türleri içerebilir. Aşağıda, bu öğelerin tümünü içeren bir C# programın iskelet 'i verilmiştir.  
@@ -21,7 +21,7 @@ C#Programlar, bir veya daha fazla dosyadan oluşabilir. Her dosya sıfır veya d
   
 - [Sınıflar](../classes-and-structs/classes.md)  
   
-- [Yapılar](../classes-and-structs/structs.md)  
+- [Yapılar](../../language-reference/builtin-types/struct.md)  
   
 - [Ad Alanları](../namespaces/index.md)  
   

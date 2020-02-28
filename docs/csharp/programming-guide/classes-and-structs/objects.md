@@ -5,12 +5,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: a2f5300f9647823cf2c9ac2a4a5c7c888c7dd245
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 09b290713f3bc2a7a7824bb19c98138943ad5b2c
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626587"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673387"
 ---
 # <a name="objects-c-programming-guide"></a>Nesneler (C# Programlama Kılavuzu)
 Sınıf veya yapı tanımı, türün ne yapabileceğini belirten bir şema gibidir. Bir nesne temelde, Blueprint 'e göre ayrılan ve yapılandırılan bir bellek bloğudur. Bir program aynı sınıftan birçok nesne oluşturabilir. Nesneler de örnekler olarak adlandırılır ve adlandırılmış bir değişkende veya bir dizi ya da koleksiyonda depolanabilir. İstemci kodu, yöntemleri çağırmak ve nesnenin ortak özelliklerine erişmek için bu değişkenleri kullanan koddur. Gibi nesne yönelimli bir dilde C#, tipik bir program dinamik olarak etkileşimde bulunan birden çok nesneden oluşur.  
@@ -52,8 +52,6 @@ Sınıf veya yapı tanımı, türün ne yapabileceğini belirten bir şema gibid
   
 - [Sınıflar](./classes.md)  
   
-- [Yapılar](./structs.md)  
-  
 - [Oluşturucular](./constructors.md)  
   
 - [Sonlandırıcılar](./destructors.md)  
@@ -66,6 +64,6 @@ Sınıf veya yapı tanımı, türün ne yapabileceğini belirten bir şema gibid
 - [object](../../language-reference/builtin-types/reference-types.md)
 - [Devralma](./inheritance.md)
 - [class](../../language-reference/keywords/class.md)
-- [struct](../../language-reference/builtin-types/struct.md)
+- [Yapı türleri](../../language-reference/builtin-types/struct.md)
 - [new İşleci](../../language-reference/operators/new-operator.md)
 - [Ortak Tür Sistemi](../../../standard/base-types/common-type-system.md)

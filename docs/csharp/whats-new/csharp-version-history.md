@@ -3,12 +3,12 @@ title: C# Kılavuz geçmişi C#
 description: Dil en eski sürümlerinde ne şekilde görünür ve bu tarihten sonra nasıl gelişmiştir?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 83934d9c8194d5109cea0e847d287c01c32a2955
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739098"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673283"
 ---
 # <a name="the-history-of-c"></a>C\# geçmişi
 
@@ -37,10 +37,10 @@ C#sürüm 1,0, bugün ile karşılaştırıldığında özelliklerden çıkarıl
 1,0 'nin C# önemli özellikleri dahildir:
 
 - [Sınıflar](../programming-guide/classes-and-structs/classes.md)
-- [Yapılar](../programming-guide/classes-and-structs/structs.md)
+- [Yapılar](../language-reference/builtin-types/struct.md)
 - [Arabirimler](../programming-guide/interfaces/index.md)
 - [Olaylar](../events-overview.md)
-- [Veri Erişimi](../properties.md)
+- [Özellikler](../properties.md)
 - [Temsilciler](../delegates-overview.md)
 - [İfadeler](../programming-guide/statements-expressions-operators/expressions.md)
 - [Deyimler](../programming-guide/statements-expressions-operators/statements.md)

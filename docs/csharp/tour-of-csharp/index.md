@@ -2,12 +2,12 @@
 title: C# Kılavuz turu C#
 description: Yeni C#misiniz? Dilin temel bilgilerini öğrenin.
 ms.date: 04/05/2019
-ms.openlocfilehash: e2d7af3a35dc9d4fdeddf9eb742d155ab33094b4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b510342f957a259a6c7763441778461b3dd4ef1e
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711668"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673296"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# Dilin turu
 
@@ -64,8 +64,6 @@ Hakkında C#daha fazla bilgi edinmek için çok daha fazla şey vardır. Aşağ�
   - Bir programın eylemlerini ifade etmek için ***deyimlerini*** kullanırsınız.
 - [Sınıflar ve nesneler](classes-and-objects.md)
   - ***Sınıflar*** , türlerin en temel C#larıdır. ***Nesneler*** bir sınıfın örnekleridir. Sınıflar, bu konunun de ele alındığı ***Üyeler***kullanılarak oluşturulmuştur.
-- [Yapılar](structs.md)
-  - ***Yapılar*** , sınıfların aksine değer türleri olan veri yapılarıdır.
 - [Diziler](arrays.md)
   - ***Dizi*** , hesaplanan dizinler üzerinden erişilen çeşitli değişkenler içeren bir veri yapısıdır.
 - [Arabirimler](interfaces.md)

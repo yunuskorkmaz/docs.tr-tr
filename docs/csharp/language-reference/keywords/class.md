@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 187a49131e903e00cab54d9db43b6cd8eb359a3a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 500160d3bc9280b866e5f5ba24c5edc623e752c1
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713685"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673101"
 ---
 # <a name="class-c-reference"></a>class (C# Başvurusu)
 
@@ -32,10 +32,10 @@ class TestClass
 
 |Devralma|Örnek|
 |-----------------|-------------|
-|Yok.|`class ClassA { }`|
-|Tek|`class DerivedClass: BaseClass { }`|
-|Hiçbiri, iki arabirim uygular|`class ImplClass: IFace1, IFace2 { }`|
-|Tek, bir arabirim uygular|`class ImplDerivedClass: BaseClass, IFace1 { }`|
+|None|`class ClassA { }`|
+|Tek|`class DerivedClass : BaseClass { }`|
+|Hiçbiri, iki arabirim uygular|`class ImplClass : IFace1, IFace2 { }`|
+|Tek, bir arabirim uygular|`class ImplDerivedClass : BaseClass, IFace1 { }`|
 
 Diğer sınıflarda iç içe değil, bir ad alanı içinde doğrudan bildirdiğiniz sınıflar [ortak](./public.md) veya [iç](./internal.md)olabilir. Sınıflar varsayılan olarak `internal`.
 
@@ -57,7 +57,7 @@ Bir sınıf, aşağıdaki üyelerin bildirimlerini içerebilir:
 
 - [Yöntemler](../../programming-guide/classes-and-structs/methods.md)
 
-- [Veri Erişimi](../../programming-guide/classes-and-structs/properties.md)
+- [Özellikler](../../programming-guide/classes-and-structs/properties.md)
 
 - [Dizin Oluşturucular](../../programming-guide/indexers/index.md)
 
@@ -71,9 +71,9 @@ Bir sınıf, aşağıdaki üyelerin bildirimlerini içerebilir:
 
 - [Arabirimler](../../programming-guide/interfaces/index.md)
 
-- [Yapılar](../../programming-guide/classes-and-structs/structs.md)
+- [Yapı türleri](../builtin-types/struct.md)
 
-- [Sabit Listeleri](../builtin-types/enum.md)
+- [Sabit listesi türleri](../builtin-types/enum.md)
 
 ## <a name="example"></a>Örnek
 
@@ -81,7 +81,7 @@ Aşağıdaki örnek, sınıf alanları, oluşturucular ve yöntemlerinin bildiri
 
 [!code-csharp[csrefKeywordsTypes#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#5)]
 
-## <a name="comments"></a>Açıklamalar
+## <a name="comments"></a>Yorumlar
 
 Önceki örnekte özel alanlara (`name` ve `age`) yalnızca `Child` sınıfının public yöntemi aracılığıyla erişildiğine dikkat edin. Örneğin, aşağıdaki gibi bir ifade kullanarak, çocuğun adını `Main` yönteminden yazdıramıyorsunuz:
 
