@@ -11,20 +11,20 @@ helpviewer_keywords:
 - cryptography [.NET Framework], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: b335e0d39c1809b028e2005a472fe77729e9d267
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 669b9c77ca0102ed94d8743cf37b18c0d0c528dc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706220"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159409"
 ---
-# <a name="encrypting-data"></a><span data-ttu-id="2ba61-102">Veri Şifreleme</span><span class="sxs-lookup"><span data-stu-id="2ba61-102">Encrypting Data</span></span>
-<span data-ttu-id="2ba61-103">Simetrik şifreleme ve asimetrik şifreleme farklı süreçler kullanılarak gerçekleştirilir.</span><span class="sxs-lookup"><span data-stu-id="2ba61-103">Symmetric encryption and asymmetric encryption are performed using different processes.</span></span> <span data-ttu-id="2ba61-104">Simetrik şifreleme, akışlarda gerçekleştirilir ve bu nedenle büyük miktarlarda veriyi şifrelemek yararlı olur.</span><span class="sxs-lookup"><span data-stu-id="2ba61-104">Symmetric encryption is performed on streams and is therefore useful to encrypt large amounts of data.</span></span> <span data-ttu-id="2ba61-105">Asimetrik şifreleme, az sayıda bayt üzerinde gerçekleştirilir ve bu nedenle yalnızca küçük miktarlarda veri için yararlıdır.</span><span class="sxs-lookup"><span data-stu-id="2ba61-105">Asymmetric encryption is performed on a small number of bytes and is therefore useful only for small amounts of data.</span></span>  
+# <a name="encrypting-data"></a><span data-ttu-id="0a8c6-102">Veri Şifreleme</span><span class="sxs-lookup"><span data-stu-id="0a8c6-102">Encrypting Data</span></span>
+<span data-ttu-id="0a8c6-103">Simetrik şifreleme ve asimetrik şifreleme farklı süreçler kullanılarak gerçekleştirilir.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-103">Symmetric encryption and asymmetric encryption are performed using different processes.</span></span> <span data-ttu-id="0a8c6-104">Simetrik şifreleme, akışlarda gerçekleştirilir ve bu nedenle büyük miktarlarda veriyi şifrelemek yararlı olur.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-104">Symmetric encryption is performed on streams and is therefore useful to encrypt large amounts of data.</span></span> <span data-ttu-id="0a8c6-105">Asimetrik şifreleme, az sayıda bayt üzerinde gerçekleştirilir ve bu nedenle yalnızca küçük miktarlarda veri için yararlıdır.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-105">Asymmetric encryption is performed on a small number of bytes and is therefore useful only for small amounts of data.</span></span>  
   
-## <a name="symmetric-encryption"></a><span data-ttu-id="2ba61-106">Simetrik şifreleme</span><span class="sxs-lookup"><span data-stu-id="2ba61-106">Symmetric Encryption</span></span>  
- <span data-ttu-id="2ba61-107">Yönetilen simetrik şifreleme sınıfları, akışa okunan verileri şifreleyen <xref:System.Security.Cryptography.CryptoStream> adlı özel bir akış sınıfıyla kullanılır.</span><span class="sxs-lookup"><span data-stu-id="2ba61-107">The managed symmetric cryptography classes are used with a special stream class called a <xref:System.Security.Cryptography.CryptoStream> that encrypts data read into the stream.</span></span> <span data-ttu-id="2ba61-108">**CryptoStream** sınıfı yönetilen bir akış sınıfıyla başlatılır, bir sınıf <xref:System.Security.Cryptography.ICryptoTransform> arabirimini (bir şifreleme algoritması uygulayan bir sınıftan oluşturulur) ve **CryptoStream**'e izin verilen erişimin türünü açıklayan bir <xref:System.Security.Cryptography.CryptoStreamMode> numaralandırması uygular.</span><span class="sxs-lookup"><span data-stu-id="2ba61-108">The **CryptoStream** class is initialized with a managed stream class, a class implements the <xref:System.Security.Cryptography.ICryptoTransform> interface (created from a class that implements a cryptographic algorithm), and a <xref:System.Security.Cryptography.CryptoStreamMode> enumeration that describes the type of access permitted to the **CryptoStream**.</span></span> <span data-ttu-id="2ba61-109">**CryptoStream** sınıfı, <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>ve <xref:System.Net.Sockets.NetworkStream>dahil olmak üzere <xref:System.IO.Stream> sınıfından türetilen herhangi bir sınıf kullanılarak başlatılabilir.</span><span class="sxs-lookup"><span data-stu-id="2ba61-109">The **CryptoStream** class can be initialized using any class that derives from the <xref:System.IO.Stream> class, including <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>, and <xref:System.Net.Sockets.NetworkStream>.</span></span> <span data-ttu-id="2ba61-110">Bu sınıfları kullanarak, çeşitli Stream nesnelerinde simetrik şifreleme yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2ba61-110">Using these classes, you can perform symmetric encryption on a variety of stream objects.</span></span>  
+## <a name="symmetric-encryption"></a><span data-ttu-id="0a8c6-106">Simetrik şifreleme</span><span class="sxs-lookup"><span data-stu-id="0a8c6-106">Symmetric Encryption</span></span>  
+ <span data-ttu-id="0a8c6-107">Yönetilen simetrik şifreleme sınıfları, akışa okunan verileri şifreleyen <xref:System.Security.Cryptography.CryptoStream> adlı özel bir akış sınıfıyla kullanılır.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-107">The managed symmetric cryptography classes are used with a special stream class called a <xref:System.Security.Cryptography.CryptoStream> that encrypts data read into the stream.</span></span> <span data-ttu-id="0a8c6-108">**CryptoStream** sınıfı yönetilen bir akış sınıfıyla başlatılır, bir sınıf <xref:System.Security.Cryptography.ICryptoTransform> arabirimini (bir şifreleme algoritması uygulayan bir sınıftan oluşturulur) ve **CryptoStream**'e izin verilen erişimin türünü açıklayan bir <xref:System.Security.Cryptography.CryptoStreamMode> numaralandırması uygular.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-108">The **CryptoStream** class is initialized with a managed stream class, a class implements the <xref:System.Security.Cryptography.ICryptoTransform> interface (created from a class that implements a cryptographic algorithm), and a <xref:System.Security.Cryptography.CryptoStreamMode> enumeration that describes the type of access permitted to the **CryptoStream**.</span></span> <span data-ttu-id="0a8c6-109">**CryptoStream** sınıfı, <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>ve <xref:System.Net.Sockets.NetworkStream>dahil olmak üzere <xref:System.IO.Stream> sınıfından türetilen herhangi bir sınıf kullanılarak başlatılabilir.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-109">The **CryptoStream** class can be initialized using any class that derives from the <xref:System.IO.Stream> class, including <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>, and <xref:System.Net.Sockets.NetworkStream>.</span></span> <span data-ttu-id="0a8c6-110">Bu sınıfları kullanarak, çeşitli Stream nesnelerinde simetrik şifreleme yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-110">Using these classes, you can perform symmetric encryption on a variety of stream objects.</span></span>  
   
- <span data-ttu-id="2ba61-111">Aşağıdaki örnek, bir **CryptoStream** sınıfında şifreleme gerçekleştirmek için bir <xref:System.Security.Cryptography.RijndaelManaged> sınıfının yeni bir örneğinin nasıl oluşturulacağını gösterir ve bunu nasıl kullanacağınızı gösterir.</span><span class="sxs-lookup"><span data-stu-id="2ba61-111">The following example illustrates how to create a new instance of the <xref:System.Security.Cryptography.RijndaelManaged> class, which implements the Rijndael encryption algorithm, and use it to perform encryption on a **CryptoStream** class.</span></span> <span data-ttu-id="2ba61-112">Bu örnekte, **CryptoStream** herhangi bir tür yönetilen akış olabilecek `myStream` adlı bir Stream nesnesi ile başlatılır.</span><span class="sxs-lookup"><span data-stu-id="2ba61-112">In this example, the **CryptoStream** is initialized with a stream object called `myStream` that can be any type of managed stream.</span></span> <span data-ttu-id="2ba61-113">**Rijndadelmanaged** sınıfından **CreateEncryptor** yöntemi, şifreleme IÇIN kullanılan anahtar ve IV ' i geçti.</span><span class="sxs-lookup"><span data-stu-id="2ba61-113">The **CreateEncryptor** method from the **RijndaelManaged** class is passed the key and IV that are used for encryption.</span></span> <span data-ttu-id="2ba61-114">Bu durumda, `rmCrypto` oluşturulan varsayılan anahtar ve IV kullanılır.</span><span class="sxs-lookup"><span data-stu-id="2ba61-114">In this case, the default key and IV generated from `rmCrypto` are used.</span></span> <span data-ttu-id="2ba61-115">Son olarak, bir akışa yazma erişimi belirterek **CryptoStreamMode. Write** işlemi geçirilir.</span><span class="sxs-lookup"><span data-stu-id="2ba61-115">Finally, the **CryptoStreamMode.Write** is passed, specifying write access to the stream.</span></span>  
+ <span data-ttu-id="0a8c6-111">Aşağıdaki örnek, bir **CryptoStream** sınıfında şifreleme gerçekleştirmek için bir <xref:System.Security.Cryptography.RijndaelManaged> sınıfının yeni bir örneğinin nasıl oluşturulacağını gösterir ve bunu nasıl kullanacağınızı gösterir.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-111">The following example illustrates how to create a new instance of the <xref:System.Security.Cryptography.RijndaelManaged> class, which implements the Rijndael encryption algorithm, and use it to perform encryption on a **CryptoStream** class.</span></span> <span data-ttu-id="0a8c6-112">Bu örnekte, **CryptoStream** herhangi bir tür yönetilen akış olabilecek `myStream` adlı bir Stream nesnesi ile başlatılır.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-112">In this example, the **CryptoStream** is initialized with a stream object called `myStream` that can be any type of managed stream.</span></span> <span data-ttu-id="0a8c6-113">**Rijndadelmanaged** sınıfından **CreateEncryptor** yöntemi, şifreleme IÇIN kullanılan anahtar ve IV ' i geçti.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-113">The **CreateEncryptor** method from the **RijndaelManaged** class is passed the key and IV that are used for encryption.</span></span> <span data-ttu-id="0a8c6-114">Bu durumda, `rmCrypto` oluşturulan varsayılan anahtar ve IV kullanılır.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-114">In this case, the default key and IV generated from `rmCrypto` are used.</span></span> <span data-ttu-id="0a8c6-115">Son olarak, bir akışa yazma erişimi belirterek **CryptoStreamMode. Write** işlemi geçirilir.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-115">Finally, the **CryptoStreamMode.Write** is passed, specifying write access to the stream.</span></span>  
   
 ```vb  
 Dim rmCrypto As New RijndaelManaged()  
@@ -36,12 +36,12 @@ RijndaelManaged rmCrypto = new RijndaelManaged();
 CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateEncryptor(), CryptoStreamMode.Write);  
 ```  
   
- <span data-ttu-id="2ba61-116">Bu kod yürütüldükten sonra, **CryptoStream** nesnesine yazılan tüm veriler Rijndadel algoritması kullanılarak şifrelenir.</span><span class="sxs-lookup"><span data-stu-id="2ba61-116">After this code is executed, any data written to the **CryptoStream** object is encrypted using the Rijndael algorithm.</span></span>  
+ <span data-ttu-id="0a8c6-116">Bu kod yürütüldükten sonra, **CryptoStream** nesnesine yazılan tüm veriler Rijndadel algoritması kullanılarak şifrelenir.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-116">After this code is executed, any data written to the **CryptoStream** object is encrypted using the Rijndael algorithm.</span></span>  
   
- <span data-ttu-id="2ba61-117">Aşağıdaki örnek, bir akış oluşturma, akışı şifreleme, akışa yazma ve akışı kapatma sürecinin tamamını gösterir.</span><span class="sxs-lookup"><span data-stu-id="2ba61-117">The following example shows the entire process of creating a stream, encrypting the stream, writing to the stream, and closing the stream.</span></span> <span data-ttu-id="2ba61-118">Bu örnekte, **CryptoStream** sınıfı ve **Rijndadelmanaged** sınıfı kullanılarak şifrelenen bir ağ akışı oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="2ba61-118">This example creates a network stream that is encrypted using the **CryptoStream** class and the **RijndaelManaged** class.</span></span> <span data-ttu-id="2ba61-119"><xref:System.IO.StreamWriter> sınıfıyla şifrelenmiş akışa bir ileti yazılır.</span><span class="sxs-lookup"><span data-stu-id="2ba61-119">A message is written to the encrypted stream with the <xref:System.IO.StreamWriter> class.</span></span>  
+ <span data-ttu-id="0a8c6-117">Aşağıdaki örnek, bir akış oluşturma, akışı şifreleme, akışa yazma ve akışı kapatma sürecinin tamamını gösterir.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-117">The following example shows the entire process of creating a stream, encrypting the stream, writing to the stream, and closing the stream.</span></span> <span data-ttu-id="0a8c6-118">Bu örnekte, **CryptoStream** sınıfı ve **Rijndadelmanaged** sınıfı kullanılarak şifrelenen bir ağ akışı oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-118">This example creates a network stream that is encrypted using the **CryptoStream** class and the **RijndaelManaged** class.</span></span> <span data-ttu-id="0a8c6-119"><xref:System.IO.StreamWriter> sınıfıyla şifrelenmiş akışa bir ileti yazılır.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-119">A message is written to the encrypted stream with the <xref:System.IO.StreamWriter> class.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="2ba61-120">Bu örneği bir dosyaya yazmak için de kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2ba61-120">You can also use this example to write to a file.</span></span> <span data-ttu-id="2ba61-121">Bunu yapmak için <xref:System.Net.Sockets.TcpClient> başvurusunu silin ve <xref:System.Net.Sockets.NetworkStream> <xref:System.IO.FileStream>ile değiştirin.</span><span class="sxs-lookup"><span data-stu-id="2ba61-121">To do that, delete the <xref:System.Net.Sockets.TcpClient> reference and replace the <xref:System.Net.Sockets.NetworkStream> with a <xref:System.IO.FileStream>.</span></span>  
+> <span data-ttu-id="0a8c6-120">Bu örneği bir dosyaya yazmak için de kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-120">You can also use this example to write to a file.</span></span> <span data-ttu-id="0a8c6-121">Bunu yapmak için <xref:System.Net.Sockets.TcpClient> başvurusunu silin ve <xref:System.Net.Sockets.NetworkStream> <xref:System.IO.FileStream>ile değiştirin.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-121">To do that, delete the <xref:System.Net.Sockets.TcpClient> reference and replace the <xref:System.Net.Sockets.NetworkStream> with a <xref:System.IO.FileStream>.</span></span>  
   
 ```vb  
 Imports System  
@@ -54,11 +54,11 @@ Sub Main()
    Try  
       'Create a TCP connection to a listening TCP process.  
       'Use "localhost" to specify the current computer or  
-      'replace "localhost" with the IP address of the   
-      'listening process.   
+      'replace "localhost" with the IP address of the
+      'listening process.
       Dim tcp As New TcpClient("localhost", 11000)  
   
-      'Create a network stream from the TCP connection.   
+      'Create a network stream from the TCP connection.
       Dim netStream As NetworkStream = tcp.GetStream()  
   
       'Create a new instance of the RijndaelManaged class  
@@ -68,11 +68,11 @@ Sub Main()
             Dim key As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}  
             Dim iv As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}  
   
-      'Create a CryptoStream, pass it the NetworkStream, and encrypt   
+      'Create a CryptoStream, pass it the NetworkStream, and encrypt
       'it with the Rijndael class.  
       Dim cryptStream As New CryptoStream(netStream, rmCrypto.CreateEncryptor(key, iv), CryptoStreamMode.Write)  
   
-      'Create a StreamWriter for easy writing to the   
+      'Create a StreamWriter for easy writing to the
       'network stream.  
       Dim sWriter As New StreamWriter(cryptStream)  
   
@@ -110,11 +110,11 @@ public class main
       {  
          //Create a TCP connection to a listening TCP process.  
          //Use "localhost" to specify the current computer or  
-         //replace "localhost" with the IP address of the   
-         //listening process.    
+         //replace "localhost" with the IP address of the
+         //listening process.
          TcpClient tcp = new TcpClient("localhost",11000);  
   
-         //Create a network stream from the TCP connection.   
+         //Create a network stream from the TCP connection.
          NetworkStream netStream = tcp.GetStream();  
   
          //Create a new instance of the RijndaelManaged class  
@@ -124,13 +124,13 @@ public class main
          byte[] key = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16};  
          byte[] iv = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16};  
   
-         //Create a CryptoStream, pass it the NetworkStream, and encrypt   
+         //Create a CryptoStream, pass it the NetworkStream, and encrypt
          //it with the Rijndael class.  
-         CryptoStream cryptStream = new CryptoStream(netStream,   
-         rmCrypto.CreateEncryptor(key, iv),     
+         CryptoStream cryptStream = new CryptoStream(netStream,
+         rmCrypto.CreateEncryptor(key, iv),
          CryptoStreamMode.Write);  
   
-         //Create a StreamWriter for easy writing to the   
+         //Create a StreamWriter for easy writing to the
          //network stream.  
          StreamWriter sWriter = new StreamWriter(cryptStream);  
   
@@ -156,22 +156,22 @@ public class main
 }  
 ```  
   
- <span data-ttu-id="2ba61-122">Önceki örneğin başarıyla yürütülmesi için <xref:System.Net.Sockets.TcpClient> sınıfında belirtilen IP adresini ve bağlantı noktası numarasını dinleyen bir işlem olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="2ba61-122">For the previous example to execute successfully, there must be a process listening on the IP address and port number specified in the <xref:System.Net.Sockets.TcpClient> class.</span></span> <span data-ttu-id="2ba61-123">Bir dinleme işlemi varsa, kod dinleme işlemine bağlanır, Rijndavel simetrik algoritmasını kullanarak akışı şifreler ve "Merhaba Dünya!" yazacaktır.</span><span class="sxs-lookup"><span data-stu-id="2ba61-123">If a listening process exists, the code will connect to the listening process, encrypt the stream using the Rijndael symmetric algorithm, and write "Hello World!"</span></span> <span data-ttu-id="2ba61-124">akışa.</span><span class="sxs-lookup"><span data-stu-id="2ba61-124">to the stream.</span></span> <span data-ttu-id="2ba61-125">Kod başarılı olursa konsola aşağıdaki metni görüntüler:</span><span class="sxs-lookup"><span data-stu-id="2ba61-125">If the code is successful, it displays the following text to the console:</span></span>  
+ <span data-ttu-id="0a8c6-122">Önceki örneğin başarıyla yürütülmesi için <xref:System.Net.Sockets.TcpClient> sınıfında belirtilen IP adresini ve bağlantı noktası numarasını dinleyen bir işlem olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-122">For the previous example to execute successfully, there must be a process listening on the IP address and port number specified in the <xref:System.Net.Sockets.TcpClient> class.</span></span> <span data-ttu-id="0a8c6-123">Bir dinleme işlemi varsa, kod dinleme işlemine bağlanır, Rijndavel simetrik algoritmasını kullanarak akışı şifreler ve "Merhaba Dünya!" yazacaktır.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-123">If a listening process exists, the code will connect to the listening process, encrypt the stream using the Rijndael symmetric algorithm, and write "Hello World!"</span></span> <span data-ttu-id="0a8c6-124">akışa.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-124">to the stream.</span></span> <span data-ttu-id="0a8c6-125">Kod başarılı olursa konsola aşağıdaki metni görüntüler:</span><span class="sxs-lookup"><span data-stu-id="0a8c6-125">If the code is successful, it displays the following text to the console:</span></span>  
   
 ```console  
 The message was sent.  
 ```  
   
- <span data-ttu-id="2ba61-126">Ancak, bir dinleme işlemi bulunamazsa veya bir özel durum harekete geçirilir, kod konsola aşağıdaki metni gösterir:</span><span class="sxs-lookup"><span data-stu-id="2ba61-126">However, if no listening process is found or an exception is raised, the code displays the following text to the console:</span></span>  
+ <span data-ttu-id="0a8c6-126">Ancak, bir dinleme işlemi bulunamazsa veya bir özel durum harekete geçirilir, kod konsola aşağıdaki metni gösterir:</span><span class="sxs-lookup"><span data-stu-id="0a8c6-126">However, if no listening process is found or an exception is raised, the code displays the following text to the console:</span></span>  
   
 ```console  
 The connection failed.  
 ```  
   
-## <a name="asymmetric-encryption"></a><span data-ttu-id="2ba61-127">Asimetrik şifreleme</span><span class="sxs-lookup"><span data-stu-id="2ba61-127">Asymmetric Encryption</span></span>  
- <span data-ttu-id="2ba61-128">Asimetrik algoritmalar genellikle simetrik anahtar ve IV Şifrelemesi gibi küçük miktarlarda verileri şifrelemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="2ba61-128">Asymmetric algorithms are usually used to encrypt small amounts of data such as the encryption of a symmetric key and IV.</span></span> <span data-ttu-id="2ba61-129">Genellikle, bir asimetrik şifreleme gerçekleştiren bir kişi, başka bir tarafın oluşturduğu ortak anahtarı kullanır.</span><span class="sxs-lookup"><span data-stu-id="2ba61-129">Typically, an individual performing asymmetric encryption uses the public key generated by another party.</span></span> <span data-ttu-id="2ba61-130"><xref:System.Security.Cryptography.RSACryptoServiceProvider> sınıfı bu amaçla .NET Framework tarafından sağlanır.</span><span class="sxs-lookup"><span data-stu-id="2ba61-130">The <xref:System.Security.Cryptography.RSACryptoServiceProvider> class is provided by the .NET Framework for this purpose.</span></span>  
+## <a name="asymmetric-encryption"></a><span data-ttu-id="0a8c6-127">Asimetrik şifreleme</span><span class="sxs-lookup"><span data-stu-id="0a8c6-127">Asymmetric Encryption</span></span>  
+ <span data-ttu-id="0a8c6-128">Asimetrik algoritmalar genellikle simetrik anahtar ve IV Şifrelemesi gibi küçük miktarlarda verileri şifrelemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-128">Asymmetric algorithms are usually used to encrypt small amounts of data such as the encryption of a symmetric key and IV.</span></span> <span data-ttu-id="0a8c6-129">Genellikle, bir asimetrik şifreleme gerçekleştiren bir kişi, başka bir tarafın oluşturduğu ortak anahtarı kullanır.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-129">Typically, an individual performing asymmetric encryption uses the public key generated by another party.</span></span> <span data-ttu-id="0a8c6-130"><xref:System.Security.Cryptography.RSACryptoServiceProvider> sınıfı bu amaçla .NET Framework tarafından sağlanır.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-130">The <xref:System.Security.Cryptography.RSACryptoServiceProvider> class is provided by the .NET Framework for this purpose.</span></span>  
   
- <span data-ttu-id="2ba61-131">Aşağıdaki örnek, bir simetrik anahtar ve IV şifrelemek için ortak anahtar bilgilerini kullanır.</span><span class="sxs-lookup"><span data-stu-id="2ba61-131">The following example uses public key information to encrypt a symmetric key and IV.</span></span> <span data-ttu-id="2ba61-132">Üçüncü bir tarafın ortak anahtarını temsil eden iki baytlık diziler başlatılır.</span><span class="sxs-lookup"><span data-stu-id="2ba61-132">Two byte arrays are initialized that represent the public key of a third party.</span></span> <span data-ttu-id="2ba61-133"><xref:System.Security.Cryptography.RSAParameters> nesne bu değerlere başlatılır.</span><span class="sxs-lookup"><span data-stu-id="2ba61-133">An <xref:System.Security.Cryptography.RSAParameters> object is initialized to these values.</span></span> <span data-ttu-id="2ba61-134">Daha sonra, **RSAParameters** nesnesi (temsil ettiği ortak anahtarla birlikte) <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> yöntemi kullanılarak bir **RSACryptoServiceProvider** içine aktarılır.</span><span class="sxs-lookup"><span data-stu-id="2ba61-134">Next, the **RSAParameters** object (along with the public key it represents) is imported into an **RSACryptoServiceProvider** using the <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="2ba61-135">Son olarak, bir <xref:System.Security.Cryptography.RijndaelManaged> sınıfı tarafından oluşturulan özel anahtar ve IV şifrelenir.</span><span class="sxs-lookup"><span data-stu-id="2ba61-135">Finally, the private key and IV created by a <xref:System.Security.Cryptography.RijndaelManaged> class are encrypted.</span></span> <span data-ttu-id="2ba61-136">Bu örnek, sistemlerde 128 bit şifrelemenin yüklü olmasını gerektirir.</span><span class="sxs-lookup"><span data-stu-id="2ba61-136">This example requires systems to have 128-bit encryption installed.</span></span>  
+ <span data-ttu-id="0a8c6-131">Aşağıdaki örnek, bir simetrik anahtar ve IV şifrelemek için ortak anahtar bilgilerini kullanır.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-131">The following example uses public key information to encrypt a symmetric key and IV.</span></span> <span data-ttu-id="0a8c6-132">Üçüncü bir tarafın ortak anahtarını temsil eden iki baytlık diziler başlatılır.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-132">Two byte arrays are initialized that represent the public key of a third party.</span></span> <span data-ttu-id="0a8c6-133"><xref:System.Security.Cryptography.RSAParameters> nesne bu değerlere başlatılır.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-133">An <xref:System.Security.Cryptography.RSAParameters> object is initialized to these values.</span></span> <span data-ttu-id="0a8c6-134">Daha sonra, **RSAParameters** nesnesi (temsil ettiği ortak anahtarla birlikte) <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> yöntemi kullanılarak bir **RSACryptoServiceProvider** içine aktarılır.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-134">Next, the **RSAParameters** object (along with the public key it represents) is imported into an **RSACryptoServiceProvider** using the <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="0a8c6-135">Son olarak, bir <xref:System.Security.Cryptography.RijndaelManaged> sınıfı tarafından oluşturulan özel anahtar ve IV şifrelenir.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-135">Finally, the private key and IV created by a <xref:System.Security.Cryptography.RijndaelManaged> class are encrypted.</span></span> <span data-ttu-id="0a8c6-136">Bu örnek, sistemlerde 128 bit şifrelemenin yüklü olmasını gerektirir.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-136">This example requires systems to have 128-bit encryption installed.</span></span>  
   
 ```vb  
 Imports System  
@@ -195,7 +195,7 @@ Module Module1
         'Create a new instance of the RSAParameters structure.  
         Dim rsaKeyInfo As New RSAParameters()  
   
-        'Set rsaKeyInfo to the public key values.   
+        'Set rsaKeyInfo to the public key values.
         rsaKeyInfo.Modulus = publicKey  
         rsaKeyInfo.Exponent = exponent  
   
@@ -243,7 +243,7 @@ class Class1
       //Create a new instance of the RSAParameters structure.  
       RSAParameters rsaKeyInfo = new RSAParameters();  
   
-      //Set rsaKeyInfo to the public key values.   
+      //Set rsaKeyInfo to the public key values.
       rsaKeyInfo.Modulus = publicKey;  
       rsaKeyInfo.Exponent = exponent;  
   
@@ -260,8 +260,8 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2ba61-137">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2ba61-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a8c6-137">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0a8c6-137">See also</span></span>
 
-- [<span data-ttu-id="2ba61-138">Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma</span><span class="sxs-lookup"><span data-stu-id="2ba61-138">Generating Keys for Encryption and Decryption</span></span>](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
-- [<span data-ttu-id="2ba61-139">Verilerin Şifresini Çözme</span><span class="sxs-lookup"><span data-stu-id="2ba61-139">Decrypting Data</span></span>](../../../docs/standard/security/decrypting-data.md)
-- [<span data-ttu-id="2ba61-140">Şifreleme Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="2ba61-140">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)
+- [<span data-ttu-id="0a8c6-138">Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma</span><span class="sxs-lookup"><span data-stu-id="0a8c6-138">Generating Keys for Encryption and Decryption</span></span>](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [<span data-ttu-id="0a8c6-139">Verilerin Şifresini Çözme</span><span class="sxs-lookup"><span data-stu-id="0a8c6-139">Decrypting Data</span></span>](../../../docs/standard/security/decrypting-data.md)
+- [<span data-ttu-id="0a8c6-140">Şifreleme Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="0a8c6-140">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)

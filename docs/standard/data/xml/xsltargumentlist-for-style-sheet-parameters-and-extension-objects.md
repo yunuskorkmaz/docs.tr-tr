@@ -6,56 +6,56 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 5cd733d557dabe66145fdbb848c473411d63c62b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 34ffb9923337bbad90b2170a16d610d26c7f6f23
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709627"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160202"
 ---
-# <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a><span data-ttu-id="64c54-102">Stil Sayfası Parametreleri ve Genişletme Nesneleri için XsltArgumentList</span><span class="sxs-lookup"><span data-stu-id="64c54-102">XsltArgumentList for Style Sheet Parameters and Extension Objects</span></span>
-<span data-ttu-id="64c54-103"><xref:System.Xml.Xsl.XsltArgumentList> sınıfı, dönüşümler (XSLT) parametreleri ve XSLT uzantı nesneleri için Genişletilebilir Stil sayfası dili içerir.</span><span class="sxs-lookup"><span data-stu-id="64c54-103">The <xref:System.Xml.Xsl.XsltArgumentList> class contains Extensible Stylesheet Language for Transformations (XSLT) parameters and XSLT extension objects.</span></span> <span data-ttu-id="64c54-104"><xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemine geçirildiğinde, bu parametreler ve uzantı nesneleri stil sayfalarından çağrılabilir.</span><span class="sxs-lookup"><span data-stu-id="64c54-104">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
+# <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a><span data-ttu-id="a53ef-102">Stil Sayfası Parametreleri ve Genişletme Nesneleri için XsltArgumentList</span><span class="sxs-lookup"><span data-stu-id="a53ef-102">XsltArgumentList for Style Sheet Parameters and Extension Objects</span></span>
+<span data-ttu-id="a53ef-103"><xref:System.Xml.Xsl.XsltArgumentList> sınıfı, dönüşümler (XSLT) parametreleri ve XSLT uzantı nesneleri için Genişletilebilir Stil sayfası dili içerir.</span><span class="sxs-lookup"><span data-stu-id="a53ef-103">The <xref:System.Xml.Xsl.XsltArgumentList> class contains Extensible Stylesheet Language for Transformations (XSLT) parameters and XSLT extension objects.</span></span> <span data-ttu-id="a53ef-104"><xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemine geçirildiğinde, bu parametreler ve uzantı nesneleri stil sayfalarından çağrılabilir.</span><span class="sxs-lookup"><span data-stu-id="a53ef-104">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="64c54-105"><xref:System.Xml.Xsl.XslTransform> ve <xref:System.Xml.Xsl.XsltArgumentList> sınıfları .NET Framework 2,0 ' de kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="64c54-105">The <xref:System.Xml.Xsl.XslTransform> and <xref:System.Xml.Xsl.XsltArgumentList> classes are obsolete in the .NET Framework 2.0.</span></span> <span data-ttu-id="64c54-106"><xref:System.Xml.Xsl.XslCompiledTransform> sınıfını kullanarak XSLT dönüşümleri gerçekleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="64c54-106">You can perform XSLT transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="64c54-107">Daha fazla bilgi için, bkz. [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [XslTransform sınıfından geçiş](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .</span><span class="sxs-lookup"><span data-stu-id="64c54-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
+> <span data-ttu-id="a53ef-105"><xref:System.Xml.Xsl.XslTransform> ve <xref:System.Xml.Xsl.XsltArgumentList> sınıfları .NET Framework 2,0 ' de kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="a53ef-105">The <xref:System.Xml.Xsl.XslTransform> and <xref:System.Xml.Xsl.XsltArgumentList> classes are obsolete in the .NET Framework 2.0.</span></span> <span data-ttu-id="a53ef-106"><xref:System.Xml.Xsl.XslCompiledTransform> sınıfını kullanarak XSLT dönüşümleri gerçekleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a53ef-106">You can perform XSLT transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="a53ef-107">Daha fazla bilgi için, bkz. [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [XslTransform sınıfından geçiş](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .</span><span class="sxs-lookup"><span data-stu-id="a53ef-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
   
- <span data-ttu-id="64c54-108"><xref:System.Xml.Xsl.XsltArgumentList> sınıfı XSLT parametrelerini ve XSLT uzantısı nesnelerini içerir.</span><span class="sxs-lookup"><span data-stu-id="64c54-108">The <xref:System.Xml.Xsl.XsltArgumentList> class contains XSLT parameters and XSLT extension objects.</span></span> <span data-ttu-id="64c54-109"><xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemine geçirildiğinde, bu parametreler ve uzantı nesneleri stil sayfalarından çağrılabilir.</span><span class="sxs-lookup"><span data-stu-id="64c54-109">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
+ <span data-ttu-id="a53ef-108"><xref:System.Xml.Xsl.XsltArgumentList> sınıfı XSLT parametrelerini ve XSLT uzantısı nesnelerini içerir.</span><span class="sxs-lookup"><span data-stu-id="a53ef-108">The <xref:System.Xml.Xsl.XsltArgumentList> class contains XSLT parameters and XSLT extension objects.</span></span> <span data-ttu-id="a53ef-109"><xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemine geçirildiğinde, bu parametreler ve uzantı nesneleri stil sayfalarından çağrılabilir.</span><span class="sxs-lookup"><span data-stu-id="a53ef-109">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
   
- <span data-ttu-id="64c54-110">Bir katıştırılmış betik kullanmak yerine bir nesne geçirmenin avantajları aşağıda verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="64c54-110">The following are advantages to passing an object rather than using an embedded script:</span></span>  
+ <span data-ttu-id="a53ef-110">Bir katıştırılmış betik kullanmak yerine bir nesne geçirmenin avantajları aşağıda verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="a53ef-110">The following are advantages to passing an object rather than using an embedded script:</span></span>  
   
-- <span data-ttu-id="64c54-111">Sınıfların daha iyi kapsüllemesini ve yeniden kullanılmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="64c54-111">Provides better encapsulation and reuse of classes.</span></span>  
+- <span data-ttu-id="a53ef-111">Sınıfların daha iyi kapsüllemesini ve yeniden kullanılmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="a53ef-111">Provides better encapsulation and reuse of classes.</span></span>  
   
-- <span data-ttu-id="64c54-112">Stil sayfalarının daha küçük ve sürdürülebilir olmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="64c54-112">Allows style sheets to be smaller and more maintainable.</span></span>  
+- <span data-ttu-id="a53ef-112">Stil sayfalarının daha küçük ve sürdürülebilir olmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="a53ef-112">Allows style sheets to be smaller and more maintainable.</span></span>  
   
-- <span data-ttu-id="64c54-113">Desteklenen <xref:System> ad alanları kümesi içinde tanımlananlardan farklı ad alanlarına ait sınıflarda çağırma yöntemlerini destekler.</span><span class="sxs-lookup"><span data-stu-id="64c54-113">Supports calling methods on classes belonging to namespaces other than those defined within the set of supported <xref:System> namespaces.</span></span>  
+- <span data-ttu-id="a53ef-113">Desteklenen <xref:System> ad alanları kümesi içinde tanımlananlardan farklı ad alanlarına ait sınıflarda çağırma yöntemlerini destekler.</span><span class="sxs-lookup"><span data-stu-id="a53ef-113">Supports calling methods on classes belonging to namespaces other than those defined within the set of supported <xref:System> namespaces.</span></span>  
   
-- <span data-ttu-id="64c54-114"><xref:System.Xml.XPath.XPathNodeIterator>kullanımı ile, sonuç ağacı parçalarının stil sayfasına geçirilmesini destekler.</span><span class="sxs-lookup"><span data-stu-id="64c54-114">Supports passing result tree fragments to the style sheet with the use of the <xref:System.Xml.XPath.XPathNodeIterator>.</span></span>  
+- <span data-ttu-id="a53ef-114"><xref:System.Xml.XPath.XPathNodeIterator>kullanımı ile, sonuç ağacı parçalarının stil sayfasına geçirilmesini destekler.</span><span class="sxs-lookup"><span data-stu-id="a53ef-114">Supports passing result tree fragments to the style sheet with the use of the <xref:System.Xml.XPath.XPathNodeIterator>.</span></span>  
   
-## <a name="xslt-style-sheet-parameters"></a><span data-ttu-id="64c54-115">XSLT stil sayfası parametreleri</span><span class="sxs-lookup"><span data-stu-id="64c54-115">XSLT Style Sheet Parameters</span></span>  
- <span data-ttu-id="64c54-116">XSLT parametreleri, <xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> yöntemi kullanılarak eklenir.</span><span class="sxs-lookup"><span data-stu-id="64c54-116">XSLT parameters are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method.</span></span> <span data-ttu-id="64c54-117">Tam ad ve ad alanı Tekdüzen Kaynak tanımlayıcısı (URI), parametre nesnesiyle ilişkili zamanda ilişkilendirilir.</span><span class="sxs-lookup"><span data-stu-id="64c54-117">A qualified name and namespace Uniform Resource Identifier (URI) are associated with the parameter object at that time.</span></span>  
+## <a name="xslt-style-sheet-parameters"></a><span data-ttu-id="a53ef-115">XSLT stil sayfası parametreleri</span><span class="sxs-lookup"><span data-stu-id="a53ef-115">XSLT Style Sheet Parameters</span></span>  
+ <span data-ttu-id="a53ef-116">XSLT parametreleri, <xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> yöntemi kullanılarak eklenir.</span><span class="sxs-lookup"><span data-stu-id="a53ef-116">XSLT parameters are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method.</span></span> <span data-ttu-id="a53ef-117">Tam ad ve ad alanı Tekdüzen Kaynak tanımlayıcısı (URI), parametre nesnesiyle ilişkili zamanda ilişkilendirilir.</span><span class="sxs-lookup"><span data-stu-id="a53ef-117">A qualified name and namespace Uniform Resource Identifier (URI) are associated with the parameter object at that time.</span></span>  
   
- <span data-ttu-id="64c54-118">Parameter nesnesi bir World Wide Web Konsorsiyumu (W3C) türüne karşılık gelmelidir.</span><span class="sxs-lookup"><span data-stu-id="64c54-118">The parameter object should correspond to a World Wide Web Consortium (W3C) type.</span></span> <span data-ttu-id="64c54-119">Aşağıdaki tablo, karşılık gelen W3C türlerini, eşdeğer .NET Framework sınıfları (türü) ve W3C türünün bir XML Path Language (XPath) türü ya da XSLT türü olup olmadığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="64c54-119">The following table shows the corresponding W3C types, the equivalent .NET Framework classes (type), and whether the W3C type is an XML Path Language (XPath) type or XSLT type.</span></span>  
+ <span data-ttu-id="a53ef-118">Parameter nesnesi bir World Wide Web Konsorsiyumu (W3C) türüne karşılık gelmelidir.</span><span class="sxs-lookup"><span data-stu-id="a53ef-118">The parameter object should correspond to a World Wide Web Consortium (W3C) type.</span></span> <span data-ttu-id="a53ef-119">Aşağıdaki tablo, karşılık gelen W3C türlerini, eşdeğer .NET Framework sınıfları (türü) ve W3C türünün bir XML Path Language (XPath) türü ya da XSLT türü olup olmadığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="a53ef-119">The following table shows the corresponding W3C types, the equivalent .NET Framework classes (type), and whether the W3C type is an XML Path Language (XPath) type or XSLT type.</span></span>  
   
-|<span data-ttu-id="64c54-120">W3C türü</span><span class="sxs-lookup"><span data-stu-id="64c54-120">W3C Type</span></span>|<span data-ttu-id="64c54-121">Eşdeğer .NET Framework sınıfı (tür)</span><span class="sxs-lookup"><span data-stu-id="64c54-121">Equivalent .NET Framework class (type)</span></span>|<span data-ttu-id="64c54-122">XPath türü veya XSLT türü</span><span class="sxs-lookup"><span data-stu-id="64c54-122">XPath type or XSLT type</span></span>|  
+|<span data-ttu-id="a53ef-120">W3C türü</span><span class="sxs-lookup"><span data-stu-id="a53ef-120">W3C Type</span></span>|<span data-ttu-id="a53ef-121">Eşdeğer .NET Framework sınıfı (tür)</span><span class="sxs-lookup"><span data-stu-id="a53ef-121">Equivalent .NET Framework class (type)</span></span>|<span data-ttu-id="a53ef-122">XPath türü veya XSLT türü</span><span class="sxs-lookup"><span data-stu-id="a53ef-122">XPath type or XSLT type</span></span>|  
 |--------------|----------------------------------------------|-----------------------------|  
-|<span data-ttu-id="64c54-123">Dize</span><span class="sxs-lookup"><span data-stu-id="64c54-123">String</span></span>|<span data-ttu-id="64c54-124">System. String</span><span class="sxs-lookup"><span data-stu-id="64c54-124">System.String</span></span>|<span data-ttu-id="64c54-125">{1&gt;XPath&lt;1}</span><span class="sxs-lookup"><span data-stu-id="64c54-125">XPath</span></span>|  
-|<span data-ttu-id="64c54-126">Boole değeri</span><span class="sxs-lookup"><span data-stu-id="64c54-126">Boolean</span></span>|<span data-ttu-id="64c54-127">System. Boolean</span><span class="sxs-lookup"><span data-stu-id="64c54-127">System.Boolean</span></span>|<span data-ttu-id="64c54-128">{1&gt;XPath&lt;1}</span><span class="sxs-lookup"><span data-stu-id="64c54-128">XPath</span></span>|  
-|<span data-ttu-id="64c54-129">Sayı</span><span class="sxs-lookup"><span data-stu-id="64c54-129">Number</span></span>|<span data-ttu-id="64c54-130">System. Double</span><span class="sxs-lookup"><span data-stu-id="64c54-130">System.Double</span></span>|<span data-ttu-id="64c54-131">{1&gt;XPath&lt;1}</span><span class="sxs-lookup"><span data-stu-id="64c54-131">XPath</span></span>|  
-|<span data-ttu-id="64c54-132">Sonuç ağacı parçası</span><span class="sxs-lookup"><span data-stu-id="64c54-132">Result Tree Fragment</span></span>|<span data-ttu-id="64c54-133">System. xml. XPath. XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="64c54-133">System.Xml.XPath.XPathNavigator</span></span>|<span data-ttu-id="64c54-134">XSLT</span><span class="sxs-lookup"><span data-stu-id="64c54-134">XSLT</span></span>|  
-|<span data-ttu-id="64c54-135">Düğüm kümesi</span><span class="sxs-lookup"><span data-stu-id="64c54-135">Node Set</span></span>|<span data-ttu-id="64c54-136">System.Xml.XPath.XPathNodeIterator</span><span class="sxs-lookup"><span data-stu-id="64c54-136">System.Xml.XPath.XPathNodeIterator</span></span>|<span data-ttu-id="64c54-137">{1&gt;XPath&lt;1}</span><span class="sxs-lookup"><span data-stu-id="64c54-137">XPath</span></span>|  
+|<span data-ttu-id="a53ef-123">Dize</span><span class="sxs-lookup"><span data-stu-id="a53ef-123">String</span></span>|<span data-ttu-id="a53ef-124">System. String</span><span class="sxs-lookup"><span data-stu-id="a53ef-124">System.String</span></span>|<span data-ttu-id="a53ef-125">XPath</span><span class="sxs-lookup"><span data-stu-id="a53ef-125">XPath</span></span>|  
+|<span data-ttu-id="a53ef-126">Boole</span><span class="sxs-lookup"><span data-stu-id="a53ef-126">Boolean</span></span>|<span data-ttu-id="a53ef-127">System. Boolean</span><span class="sxs-lookup"><span data-stu-id="a53ef-127">System.Boolean</span></span>|<span data-ttu-id="a53ef-128">XPath</span><span class="sxs-lookup"><span data-stu-id="a53ef-128">XPath</span></span>|  
+|<span data-ttu-id="a53ef-129">Sayı</span><span class="sxs-lookup"><span data-stu-id="a53ef-129">Number</span></span>|<span data-ttu-id="a53ef-130">System. Double</span><span class="sxs-lookup"><span data-stu-id="a53ef-130">System.Double</span></span>|<span data-ttu-id="a53ef-131">XPath</span><span class="sxs-lookup"><span data-stu-id="a53ef-131">XPath</span></span>|  
+|<span data-ttu-id="a53ef-132">Sonuç ağacı parçası</span><span class="sxs-lookup"><span data-stu-id="a53ef-132">Result Tree Fragment</span></span>|<span data-ttu-id="a53ef-133">System. xml. XPath. XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="a53ef-133">System.Xml.XPath.XPathNavigator</span></span>|<span data-ttu-id="a53ef-134">XSLT</span><span class="sxs-lookup"><span data-stu-id="a53ef-134">XSLT</span></span>|  
+|<span data-ttu-id="a53ef-135">Düğüm kümesi</span><span class="sxs-lookup"><span data-stu-id="a53ef-135">Node Set</span></span>|<span data-ttu-id="a53ef-136">System.Xml.XPath.XPathNodeIterator</span><span class="sxs-lookup"><span data-stu-id="a53ef-136">System.Xml.XPath.XPathNodeIterator</span></span>|<span data-ttu-id="a53ef-137">XPath</span><span class="sxs-lookup"><span data-stu-id="a53ef-137">XPath</span></span>|  
   
- <span data-ttu-id="64c54-138">Parametre nesnesi yukarıdaki sınıflardan biri değilse, uygun şekilde bir Double veya String öğesine zorlanır.</span><span class="sxs-lookup"><span data-stu-id="64c54-138">If the parameter object is not one of the above classes, it is forced to either a Double or String, as appropriate.</span></span> <span data-ttu-id="64c54-139">Int16, UInt16, Int32, UInt32, Int64, UInt64, tek ve ondalık türler Double 'a zorlanır.</span><span class="sxs-lookup"><span data-stu-id="64c54-139">Int16, UInt16, Int32, UInt32, Int64, UInt64, Single and Decimal types are forced to a Double.</span></span> <span data-ttu-id="64c54-140">Tüm diğer türler `ToString` yöntemi kullanılarak bir dizeye zorlanır.</span><span class="sxs-lookup"><span data-stu-id="64c54-140">All other types are forced to a String using the `ToString` method.</span></span>  
+ <span data-ttu-id="a53ef-138">Parametre nesnesi yukarıdaki sınıflardan biri değilse, uygun şekilde bir Double veya String öğesine zorlanır.</span><span class="sxs-lookup"><span data-stu-id="a53ef-138">If the parameter object is not one of the above classes, it is forced to either a Double or String, as appropriate.</span></span> <span data-ttu-id="a53ef-139">Int16, UInt16, Int32, UInt32, Int64, UInt64, tek ve ondalık türler Double 'a zorlanır.</span><span class="sxs-lookup"><span data-stu-id="a53ef-139">Int16, UInt16, Int32, UInt32, Int64, UInt64, Single and Decimal types are forced to a Double.</span></span> <span data-ttu-id="a53ef-140">Tüm diğer türler `ToString` yöntemi kullanılarak bir dizeye zorlanır.</span><span class="sxs-lookup"><span data-stu-id="a53ef-140">All other types are forced to a String using the `ToString` method.</span></span>  
   
-#### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a><span data-ttu-id="64c54-141">XSLT parametresini kullanmak için, kullanıcının şunları yapması gerekir:</span><span class="sxs-lookup"><span data-stu-id="64c54-141">To use the XSLT parameter, the user needs to do the following:</span></span>  
+#### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a><span data-ttu-id="a53ef-141">XSLT parametresini kullanmak için, kullanıcının şunları yapması gerekir:</span><span class="sxs-lookup"><span data-stu-id="a53ef-141">To use the XSLT parameter, the user needs to do the following:</span></span>  
   
-1. <span data-ttu-id="64c54-142"><xref:System.Xml.Xsl.XsltArgumentList> oluşturun ve <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>kullanarak nesneleri ekleyin.</span><span class="sxs-lookup"><span data-stu-id="64c54-142">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the objects using <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.</span></span>  
+1. <span data-ttu-id="a53ef-142"><xref:System.Xml.Xsl.XsltArgumentList> oluşturun ve <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>kullanarak nesneleri ekleyin.</span><span class="sxs-lookup"><span data-stu-id="a53ef-142">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the objects using <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.</span></span>  
   
-2. <span data-ttu-id="64c54-143">Stil sayfasından parametreleri çağırın.</span><span class="sxs-lookup"><span data-stu-id="64c54-143">Call the parameters from the style sheet.</span></span>  
+2. <span data-ttu-id="a53ef-143">Stil sayfasından parametreleri çağırın.</span><span class="sxs-lookup"><span data-stu-id="a53ef-143">Call the parameters from the style sheet.</span></span>  
   
-3. <span data-ttu-id="64c54-144"><xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XslTransform.Transform%2A> metoduna geçirin.</span><span class="sxs-lookup"><span data-stu-id="64c54-144">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
+3. <span data-ttu-id="a53ef-144"><xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XslTransform.Transform%2A> metoduna geçirin.</span><span class="sxs-lookup"><span data-stu-id="a53ef-144">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="64c54-145">Örnek</span><span class="sxs-lookup"><span data-stu-id="64c54-145">Example</span></span>  
- <span data-ttu-id="64c54-146">Aşağıdaki örnek, bir hesaplanan indirim tarihini tutacak bir parametre oluşturmak için <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> yöntemini kullanır.</span><span class="sxs-lookup"><span data-stu-id="64c54-146">The following example uses the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method to create a parameter to hold a calculated discount date.</span></span> <span data-ttu-id="64c54-147">İndirim tarihi, sipariş tarihinden itibaren 20 gün olacak şekilde hesaplanır.</span><span class="sxs-lookup"><span data-stu-id="64c54-147">The discount date is calculated to be 20 days from the order date.</span></span>  
+### <a name="example"></a><span data-ttu-id="a53ef-145">Örnek</span><span class="sxs-lookup"><span data-stu-id="a53ef-145">Example</span></span>  
+ <span data-ttu-id="a53ef-146">Aşağıdaki örnek, bir hesaplanan indirim tarihini tutacak bir parametre oluşturmak için <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> yöntemini kullanır.</span><span class="sxs-lookup"><span data-stu-id="a53ef-146">The following example uses the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method to create a parameter to hold a calculated discount date.</span></span> <span data-ttu-id="a53ef-147">İndirim tarihi, sipariş tarihinden itibaren 20 gün olacak şekilde hesaplanır.</span><span class="sxs-lookup"><span data-stu-id="a53ef-147">The discount date is calculated to be 20 days from the order date.</span></span>  
   
 ```vb  
 Imports System  
@@ -137,8 +137,8 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a><span data-ttu-id="64c54-148">Giriş</span><span class="sxs-lookup"><span data-stu-id="64c54-148">Input</span></span>  
- <span data-ttu-id="64c54-149">Order. xml</span><span class="sxs-lookup"><span data-stu-id="64c54-149">order.xml</span></span>  
+### <a name="input"></a><span data-ttu-id="a53ef-148">Girdi</span><span class="sxs-lookup"><span data-stu-id="a53ef-148">Input</span></span>  
+ <span data-ttu-id="a53ef-149">Order. xml</span><span class="sxs-lookup"><span data-stu-id="a53ef-149">order.xml</span></span>  
   
 ```xml  
 <!--Represents a customer order-->  
@@ -154,7 +154,7 @@ public class Sample
 </order>  
 ```  
   
- <span data-ttu-id="64c54-150">Discount. Xsl</span><span class="sxs-lookup"><span data-stu-id="64c54-150">discount.xsl</span></span>  
+ <span data-ttu-id="a53ef-150">Discount. Xsl</span><span class="sxs-lookup"><span data-stu-id="a53ef-150">discount.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">  
@@ -169,34 +169,34 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a><span data-ttu-id="64c54-151">Çıkış</span><span class="sxs-lookup"><span data-stu-id="64c54-151">Output</span></span>  
+### <a name="output"></a><span data-ttu-id="a53ef-151">Çıktı</span><span class="sxs-lookup"><span data-stu-id="a53ef-151">Output</span></span>  
   
 ```xml  
 <order>  
-   <total>36.9</total>   
-   15% discount if paid by: 5/6/2001 5:01:15 PM   
+   <total>36.9</total>
+   15% discount if paid by: 5/6/2001 5:01:15 PM
 </order>  
 ```  
   
-## <a name="xslt-extension-objects"></a><span data-ttu-id="64c54-152">XSLT Genişletme Nesneleri</span><span class="sxs-lookup"><span data-stu-id="64c54-152">XSLT Extension Objects</span></span>  
- <span data-ttu-id="64c54-153">XSLT uzantı nesneleri <xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> yöntemi kullanılarak eklenir.</span><span class="sxs-lookup"><span data-stu-id="64c54-153">XSLT extension objects are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span> <span data-ttu-id="64c54-154">Tam ad ve ad alanı URI 'SI, o zaman uzantı nesnesiyle ilişkilendirilir.</span><span class="sxs-lookup"><span data-stu-id="64c54-154">A qualified name and namespace URI are associated with the extension object at that time.</span></span>  
+## <a name="xslt-extension-objects"></a><span data-ttu-id="a53ef-152">XSLT Genişletme Nesneleri</span><span class="sxs-lookup"><span data-stu-id="a53ef-152">XSLT Extension Objects</span></span>  
+ <span data-ttu-id="a53ef-153">XSLT uzantı nesneleri <xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> yöntemi kullanılarak eklenir.</span><span class="sxs-lookup"><span data-stu-id="a53ef-153">XSLT extension objects are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span> <span data-ttu-id="a53ef-154">Tam ad ve ad alanı URI 'SI, o zaman uzantı nesnesiyle ilişkilendirilir.</span><span class="sxs-lookup"><span data-stu-id="a53ef-154">A qualified name and namespace URI are associated with the extension object at that time.</span></span>  
   
- <span data-ttu-id="64c54-155">Bir nesne eklendiğinde <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> çağıranın güvenlik ilkesinde tam olarak güvenilir olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="64c54-155">When an object is added, the caller of the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> must be fully trusted in the security policy.</span></span> <span data-ttu-id="64c54-156">Arayan yarı güvenilir ise, ekleme başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="64c54-156">If the caller is semi-trusted, the addition will fail.</span></span>  
+ <span data-ttu-id="a53ef-155">Bir nesne eklendiğinde <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> çağıranın güvenlik ilkesinde tam olarak güvenilir olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="a53ef-155">When an object is added, the caller of the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> must be fully trusted in the security policy.</span></span> <span data-ttu-id="a53ef-156">Arayan yarı güvenilir ise, ekleme başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="a53ef-156">If the caller is semi-trusted, the addition will fail.</span></span>  
   
- <span data-ttu-id="64c54-157">Bir nesne başarıyla eklenirse, yürütmenin başarılı olacağını garanti etmez.</span><span class="sxs-lookup"><span data-stu-id="64c54-157">Though an object is added successfully, it does not guarantee that the execution will be successful.</span></span> <span data-ttu-id="64c54-158"><xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi çağrıldığında izinler, <xref:System.Xml.Xsl.XslTransform.Load%2A> zamanında verilen kanıtla karşılaştırılır ve bu izin kümesi tüm dönüştürme işlemine atanır.</span><span class="sxs-lookup"><span data-stu-id="64c54-158">When the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method is called, permissions are calculated against the evidence provided at <xref:System.Xml.Xsl.XslTransform.Load%2A> time, and that permission set is assigned to the entire transformation process.</span></span> <span data-ttu-id="64c54-159">Uzantı nesnesi, küme içinde bulunamayan izinleri gerektiren bir eylem başlatmaya çalışırsa, bir özel durum oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="64c54-159">If an extension object attempts to initiate an action that requires permissions not found in the set, an exception is thrown.</span></span>  
+ <span data-ttu-id="a53ef-157">Bir nesne başarıyla eklenirse, yürütmenin başarılı olacağını garanti etmez.</span><span class="sxs-lookup"><span data-stu-id="a53ef-157">Though an object is added successfully, it does not guarantee that the execution will be successful.</span></span> <span data-ttu-id="a53ef-158"><xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi çağrıldığında izinler, <xref:System.Xml.Xsl.XslTransform.Load%2A> zamanında verilen kanıtla karşılaştırılır ve bu izin kümesi tüm dönüştürme işlemine atanır.</span><span class="sxs-lookup"><span data-stu-id="a53ef-158">When the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method is called, permissions are calculated against the evidence provided at <xref:System.Xml.Xsl.XslTransform.Load%2A> time, and that permission set is assigned to the entire transformation process.</span></span> <span data-ttu-id="a53ef-159">Uzantı nesnesi, küme içinde bulunamayan izinleri gerektiren bir eylem başlatmaya çalışırsa, bir özel durum oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="a53ef-159">If an extension object attempts to initiate an action that requires permissions not found in the set, an exception is thrown.</span></span>  
   
- <span data-ttu-id="64c54-160">Uzantı nesnelerinden döndürülen veri türleri, sayı, dize, Boolean ve düğüm kümesinin dört temel XPath veri türünden biridir.</span><span class="sxs-lookup"><span data-stu-id="64c54-160">The data types returned from extension objects are one of the four basic XPath data types of number, string, Boolean, and node set.</span></span>  
+ <span data-ttu-id="a53ef-160">Uzantı nesnelerinden döndürülen veri türleri, sayı, dize, Boolean ve düğüm kümesinin dört temel XPath veri türünden biridir.</span><span class="sxs-lookup"><span data-stu-id="a53ef-160">The data types returned from extension objects are one of the four basic XPath data types of number, string, Boolean, and node set.</span></span>  
   
-#### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a><span data-ttu-id="64c54-161">XSLT Uzantı nesnesini kullanmak için, kullanıcının şunları yapması gerekir:</span><span class="sxs-lookup"><span data-stu-id="64c54-161">To use the XSLT extension object, the user needs to do the following:</span></span>  
+#### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a><span data-ttu-id="a53ef-161">XSLT Uzantı nesnesini kullanmak için, kullanıcının şunları yapması gerekir:</span><span class="sxs-lookup"><span data-stu-id="a53ef-161">To use the XSLT extension object, the user needs to do the following:</span></span>  
   
-1. <span data-ttu-id="64c54-162"><xref:System.Xml.Xsl.XsltArgumentList> oluşturun ve <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>kullanarak Uzantı nesnesini ekleyin.</span><span class="sxs-lookup"><span data-stu-id="64c54-162">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the extension object using <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.</span></span>  
+1. <span data-ttu-id="a53ef-162"><xref:System.Xml.Xsl.XsltArgumentList> oluşturun ve <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>kullanarak Uzantı nesnesini ekleyin.</span><span class="sxs-lookup"><span data-stu-id="a53ef-162">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the extension object using <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.</span></span>  
   
-2. <span data-ttu-id="64c54-163">Uzantı nesnesini stil sayfasından çağırın.</span><span class="sxs-lookup"><span data-stu-id="64c54-163">Invoke the extension object from the style sheet.</span></span>  
+2. <span data-ttu-id="a53ef-163">Uzantı nesnesini stil sayfasından çağırın.</span><span class="sxs-lookup"><span data-stu-id="a53ef-163">Invoke the extension object from the style sheet.</span></span>  
   
-3. <span data-ttu-id="64c54-164"><xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XslTransform.Transform%2A> metoduna geçirin.</span><span class="sxs-lookup"><span data-stu-id="64c54-164">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
+3. <span data-ttu-id="a53ef-164"><xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XslTransform.Transform%2A> metoduna geçirin.</span><span class="sxs-lookup"><span data-stu-id="a53ef-164">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="64c54-165">Örnek</span><span class="sxs-lookup"><span data-stu-id="64c54-165">Example</span></span>  
- <span data-ttu-id="64c54-166">Aşağıdaki örnek, yarıçapı verilen bir dairenin çevresini hesaplar.</span><span class="sxs-lookup"><span data-stu-id="64c54-166">The following example calculates the circumference of a circle given its radius.</span></span>  
+### <a name="example"></a><span data-ttu-id="a53ef-165">Örnek</span><span class="sxs-lookup"><span data-stu-id="a53ef-165">Example</span></span>  
+ <span data-ttu-id="a53ef-166">Aşağıdaki örnek, yarıçapı verilen bir dairenin çevresini hesaplar.</span><span class="sxs-lookup"><span data-stu-id="a53ef-166">The following example calculates the circumference of a circle given its radius.</span></span>  
   
 ```vb  
 Imports System  
@@ -305,8 +305,8 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a><span data-ttu-id="64c54-167">Giriş</span><span class="sxs-lookup"><span data-stu-id="64c54-167">Input</span></span>  
- <span data-ttu-id="64c54-168">Number. xml</span><span class="sxs-lookup"><span data-stu-id="64c54-168">number.xml</span></span>  
+### <a name="input"></a><span data-ttu-id="a53ef-167">Girdi</span><span class="sxs-lookup"><span data-stu-id="a53ef-167">Input</span></span>  
+ <span data-ttu-id="a53ef-168">Number. xml</span><span class="sxs-lookup"><span data-stu-id="a53ef-168">number.xml</span></span>  
   
 ```xml  
 <?xml version='1.0'?>  
@@ -317,10 +317,10 @@ public class Sample
   <circle>  
     <radius>37.5</radius>  
   </circle>  
-</data>    
+</data>
 ```  
   
- <span data-ttu-id="64c54-169">Circle. Xsl</span><span class="sxs-lookup"><span data-stu-id="64c54-169">circle.xsl</span></span>  
+ <span data-ttu-id="a53ef-169">Circle. Xsl</span><span class="sxs-lookup"><span data-stu-id="a53ef-169">circle.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -332,7 +332,7 @@ public class Sample
     <circle>  
     <xsl:copy-of select="node()"/>  
        <circumference>  
-          <xsl:value-of select="myObj:Circumference(radius)"/>          
+          <xsl:value-of select="myObj:Circumference(radius)"/>
        </circumference>  
     </circle>  
   </xsl:for-each>  
@@ -341,7 +341,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a><span data-ttu-id="64c54-170">Çıkış</span><span class="sxs-lookup"><span data-stu-id="64c54-170">Output</span></span>  
+### <a name="output"></a><span data-ttu-id="a53ef-170">Çıktı</span><span class="sxs-lookup"><span data-stu-id="a53ef-170">Output</span></span>  
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  
@@ -362,6 +362,6 @@ public class Sample
   
  `</circles>`  
   
-## <a name="see-also"></a><span data-ttu-id="64c54-171">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="64c54-171">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a53ef-171">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a53ef-171">See also</span></span>
 
-- [<span data-ttu-id="64c54-172">XslTransform Sınıfı XSLT İşlemcisini Uygular</span><span class="sxs-lookup"><span data-stu-id="64c54-172">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [<span data-ttu-id="a53ef-172">XslTransform Sınıfı XSLT İşlemcisini Uygular</span><span class="sxs-lookup"><span data-stu-id="a53ef-172">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

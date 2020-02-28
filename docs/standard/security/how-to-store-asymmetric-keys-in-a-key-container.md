@@ -15,36 +15,36 @@ helpviewer_keywords:
 - encryption [.NET Framework], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-ms.openlocfilehash: 8ca4c4c5b1257411ecdf86858040bf428a9e6ce0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6b703156b38f52513c86f7b2507ac6c185a9dd50
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706064"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155951"
 ---
-# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a><span data-ttu-id="6e2eb-102">Nasıl yapılır: Bir Anahtar Kapsayıcısında Asimetrik Anahtarlar Depolama</span><span class="sxs-lookup"><span data-stu-id="6e2eb-102">How to: Store Asymmetric Keys in a Key Container</span></span>
-<span data-ttu-id="6e2eb-103">Asimetrik özel anahtarlar yerel bilgisayarda asla oldukları gibi veya düz metin olarak tutulmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="6e2eb-103">Asymmetric private keys should never be stored verbatim or in plain text on the local computer.</span></span> <span data-ttu-id="6e2eb-104">Özel anahtarı depolamanız gerekiyorsa, bir anahtar kapsayıcısı kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="6e2eb-104">If you need to store a private key, you should use a key container.</span></span> <span data-ttu-id="6e2eb-105">Anahtar kapsayıcıları hakkında daha fazla bilgi için bkz. [makine düzeyi ve Kullanıcı DÜZEYI RSA anahtar kapsayıcılarını anlama](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="6e2eb-105">For more information on key containers, see [Understanding Machine-Level and User-Level RSA Key Containers](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).</span></span>  
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a><span data-ttu-id="61c5c-102">Nasıl yapılır: Bir Anahtar Kapsayıcısında Asimetrik Anahtarlar Depolama</span><span class="sxs-lookup"><span data-stu-id="61c5c-102">How to: Store Asymmetric Keys in a Key Container</span></span>
+<span data-ttu-id="61c5c-103">Asimetrik özel anahtarlar yerel bilgisayarda asla oldukları gibi veya düz metin olarak tutulmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="61c5c-103">Asymmetric private keys should never be stored verbatim or in plain text on the local computer.</span></span> <span data-ttu-id="61c5c-104">Özel anahtarı depolamanız gerekiyorsa, bir anahtar kapsayıcısı kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="61c5c-104">If you need to store a private key, you should use a key container.</span></span> <span data-ttu-id="61c5c-105">Anahtar kapsayıcıları hakkında daha fazla bilgi için bkz. [makine düzeyi ve Kullanıcı DÜZEYI RSA anahtar kapsayıcılarını anlama](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="61c5c-105">For more information on key containers, see [Understanding Machine-Level and User-Level RSA Key Containers](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).</span></span>  
   
-### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a><span data-ttu-id="6e2eb-106">Asimetrik anahtar oluşturmak ve anahtarı bir anahtar kapsayıcısına kaydetmek için</span><span class="sxs-lookup"><span data-stu-id="6e2eb-106">To create an asymmetric key and save it in a key container</span></span>  
+### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a><span data-ttu-id="61c5c-106">Asimetrik anahtar oluşturmak ve anahtarı bir anahtar kapsayıcısına kaydetmek için</span><span class="sxs-lookup"><span data-stu-id="61c5c-106">To create an asymmetric key and save it in a key container</span></span>  
   
-1. <span data-ttu-id="6e2eb-107"><xref:System.Security.Cryptography.CspParameters> sınıfının yeni bir örneğini oluşturun ve anahtar kapsayıcısını çağırmak istediğiniz adı <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> alanına geçirin.</span><span class="sxs-lookup"><span data-stu-id="6e2eb-107">Create a new instance of a <xref:System.Security.Cryptography.CspParameters> class and pass the name that you want to call the key container to the <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> field.</span></span>  
+1. <span data-ttu-id="61c5c-107"><xref:System.Security.Cryptography.CspParameters> sınıfının yeni bir örneğini oluşturun ve anahtar kapsayıcısını çağırmak istediğiniz adı <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> alanına geçirin.</span><span class="sxs-lookup"><span data-stu-id="61c5c-107">Create a new instance of a <xref:System.Security.Cryptography.CspParameters> class and pass the name that you want to call the key container to the <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> field.</span></span>  
   
-2. <span data-ttu-id="6e2eb-108"><xref:System.Security.Cryptography.AsymmetricAlgorithm> sınıfından (genellikle **RSACryptoServiceProvider** veya **DSACryptoServiceProvider**) türetilen bir sınıfın yeni bir örneğini oluşturun ve önceden oluşturulan **CspParameters** nesnesini oluşturucuya geçirin.</span><span class="sxs-lookup"><span data-stu-id="6e2eb-108">Create a new instance of a class that derives from the <xref:System.Security.Cryptography.AsymmetricAlgorithm> class (usually **RSACryptoServiceProvider** or **DSACryptoServiceProvider**) and pass the previously created **CspParameters** object to its constructor.</span></span>  
+2. <span data-ttu-id="61c5c-108"><xref:System.Security.Cryptography.AsymmetricAlgorithm> sınıfından (genellikle **RSACryptoServiceProvider** veya **DSACryptoServiceProvider**) türetilen bir sınıfın yeni bir örneğini oluşturun ve önceden oluşturulan **CspParameters** nesnesini oluşturucuya geçirin.</span><span class="sxs-lookup"><span data-stu-id="61c5c-108">Create a new instance of a class that derives from the <xref:System.Security.Cryptography.AsymmetricAlgorithm> class (usually **RSACryptoServiceProvider** or **DSACryptoServiceProvider**) and pass the previously created **CspParameters** object to its constructor.</span></span>  
   
-### <a name="to-delete-the-key-from-a-key-container"></a><span data-ttu-id="6e2eb-109">Anahtar kapsayıcısından anahtarı silmek için</span><span class="sxs-lookup"><span data-stu-id="6e2eb-109">To delete the key from a key container</span></span>  
+### <a name="to-delete-the-key-from-a-key-container"></a><span data-ttu-id="61c5c-109">Anahtar kapsayıcısından anahtarı silmek için</span><span class="sxs-lookup"><span data-stu-id="61c5c-109">To delete the key from a key container</span></span>  
   
-1. <span data-ttu-id="6e2eb-110">**CspParameters** sınıfının yeni bir örneğini oluşturun ve anahtar kapsayıcısını, **CspParameters. KeyContainerName** alanına çağırmak istediğiniz adı geçirin.</span><span class="sxs-lookup"><span data-stu-id="6e2eb-110">Create a new instance of a **CspParameters** class and pass the name that you want to call the key container to the **CspParameters.KeyContainerName** field.</span></span>  
+1. <span data-ttu-id="61c5c-110">**CspParameters** sınıfının yeni bir örneğini oluşturun ve anahtar kapsayıcısını, **CspParameters. KeyContainerName** alanına çağırmak istediğiniz adı geçirin.</span><span class="sxs-lookup"><span data-stu-id="61c5c-110">Create a new instance of a **CspParameters** class and pass the name that you want to call the key container to the **CspParameters.KeyContainerName** field.</span></span>  
   
-2. <span data-ttu-id="6e2eb-111">**AsymmetricAlgorithm** sınıfından (genellikle **RSACryptoServiceProvider** veya **DSACryptoServiceProvider**) türetilen bir sınıfın yeni bir örneğini oluşturun ve önceden oluşturulan **CspParameters** nesnesini oluşturucuya geçirin.</span><span class="sxs-lookup"><span data-stu-id="6e2eb-111">Create a new instance of a class that derives from the **AsymmetricAlgorithm** class (usually **RSACryptoServiceProvider** or **DSACryptoServiceProvider**) and pass the previously created **CspParameters** object to its constructor.</span></span>  
+2. <span data-ttu-id="61c5c-111">**AsymmetricAlgorithm** sınıfından (genellikle **RSACryptoServiceProvider** veya **DSACryptoServiceProvider**) türetilen bir sınıfın yeni bir örneğini oluşturun ve önceden oluşturulan **CspParameters** nesnesini oluşturucuya geçirin.</span><span class="sxs-lookup"><span data-stu-id="61c5c-111">Create a new instance of a class that derives from the **AsymmetricAlgorithm** class (usually **RSACryptoServiceProvider** or **DSACryptoServiceProvider**) and pass the previously created **CspParameters** object to its constructor.</span></span>  
   
-3. <span data-ttu-id="6e2eb-112">**AsymmetricAlgorithm** sınıfından türetilen sınıfın **Persistkeyincsp** özelliğini **false** olarak ayarlayın (Visual Basic için**false** ).</span><span class="sxs-lookup"><span data-stu-id="6e2eb-112">Set the **PersistKeyInCSP** property of the class that derives from **AsymmetricAlgorithm** to **false** (**False** in Visual Basic).</span></span>  
+3. <span data-ttu-id="61c5c-112">**AsymmetricAlgorithm** sınıfından türetilen sınıfın **Persistkeyincsp** özelliğini **false** olarak ayarlayın (Visual Basic için**false** ).</span><span class="sxs-lookup"><span data-stu-id="61c5c-112">Set the **PersistKeyInCSP** property of the class that derives from **AsymmetricAlgorithm** to **false** (**False** in Visual Basic).</span></span>  
   
-4. <span data-ttu-id="6e2eb-113">**AsymmetricAlgorithm**türetilen sınıfın **clear** metodunu çağırın.</span><span class="sxs-lookup"><span data-stu-id="6e2eb-113">Call the **Clear** method of the class that derives from **AsymmetricAlgorithm**.</span></span> <span data-ttu-id="6e2eb-114">Bu yöntem, sınıfın tüm kaynaklarını serbest bırakır ve anahtar kapsayıcısını temizler.</span><span class="sxs-lookup"><span data-stu-id="6e2eb-114">This method releases all resources of the class and clears the key container.</span></span>  
+4. <span data-ttu-id="61c5c-113">**AsymmetricAlgorithm**türetilen sınıfın **clear** metodunu çağırın.</span><span class="sxs-lookup"><span data-stu-id="61c5c-113">Call the **Clear** method of the class that derives from **AsymmetricAlgorithm**.</span></span> <span data-ttu-id="61c5c-114">Bu yöntem, sınıfın tüm kaynaklarını serbest bırakır ve anahtar kapsayıcısını temizler.</span><span class="sxs-lookup"><span data-stu-id="61c5c-114">This method releases all resources of the class and clears the key container.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6e2eb-115">Örnek</span><span class="sxs-lookup"><span data-stu-id="6e2eb-115">Example</span></span>  
- <span data-ttu-id="6e2eb-116">Aşağıdaki örnek, asimetrik anahtar oluşturmayı, anahtar kapsayıcısına kaydetmeyi, daha sonra anahtarı almayı ve kapsayıcıyı kapsayıcıdan silmeyi gösterir.</span><span class="sxs-lookup"><span data-stu-id="6e2eb-116">The following example demonstrates how to create an asymmetric key, save it in a key container, retrieve the key at a later time, and delete the key from the container.</span></span>  
+## <a name="example"></a><span data-ttu-id="61c5c-115">Örnek</span><span class="sxs-lookup"><span data-stu-id="61c5c-115">Example</span></span>  
+ <span data-ttu-id="61c5c-116">Aşağıdaki örnek, asimetrik anahtar oluşturmayı, anahtar kapsayıcısına kaydetmeyi, daha sonra anahtarı almayı ve kapsayıcıyı kapsayıcıdan silmeyi gösterir.</span><span class="sxs-lookup"><span data-stu-id="61c5c-116">The following example demonstrates how to create an asymmetric key, save it in a key container, retrieve the key at a later time, and delete the key from the container.</span></span>  
   
- <span data-ttu-id="6e2eb-117">`GenKey_SaveInContainer` yöntemi ve `GetKeyFromContainer` yöntemi içindeki kodun benzer olduğuna dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="6e2eb-117">Notice that code in the `GenKey_SaveInContainer` method and the `GetKeyFromContainer` method is similar.</span></span>  <span data-ttu-id="6e2eb-118"><xref:System.Security.Cryptography.CspParameters> nesnesi için bir anahtar kapsayıcı adı belirttiğinizde ve bunu <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> özelliği veya <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> özelliği true olarak ayarlanan bir <xref:System.Security.Cryptography.AsymmetricAlgorithm> nesnesine geçirdiğinizde, aşağıdakiler gerçekleşir.</span><span class="sxs-lookup"><span data-stu-id="6e2eb-118">When you specify a key container name for a <xref:System.Security.Cryptography.CspParameters> object and pass it to an <xref:System.Security.Cryptography.AsymmetricAlgorithm> object with the <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> property or <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> property set to true, the following occurs.</span></span>  <span data-ttu-id="6e2eb-119">Belirtilen ada sahip bir anahtar kapsayıcısı yoksa, bir tane oluşturulur ve anahtar kalıcıdır.</span><span class="sxs-lookup"><span data-stu-id="6e2eb-119">If a key container with the specified name does not exist, then one is created and the key is persisted.</span></span>  <span data-ttu-id="6e2eb-120">Belirtilen ada sahip bir anahtar kapsayıcısı varsa, kapsayıcıdaki anahtar geçerli <xref:System.Security.Cryptography.AsymmetricAlgorithm> nesnesine otomatik olarak yüklenir.</span><span class="sxs-lookup"><span data-stu-id="6e2eb-120">If a key container with the specified name does exist, then the key in the container is automatically loaded into the current <xref:System.Security.Cryptography.AsymmetricAlgorithm> object.</span></span>  <span data-ttu-id="6e2eb-121">Bu nedenle, `GenKey_SaveInContainer` yöntemindeki kod, ilk kez çalıştırıldığı için anahtarı devam ettirir, ancak `GetKeyFromContainer` yöntemindeki kod ikinci çalıştırıldığı için anahtarı yükler.</span><span class="sxs-lookup"><span data-stu-id="6e2eb-121">Therefore, the code in the `GenKey_SaveInContainer` method persists the key because it is run first, while the code in the `GetKeyFromContainer` method loads the key because it is run second.</span></span>  
+ <span data-ttu-id="61c5c-117">`GenKey_SaveInContainer` yöntemi ve `GetKeyFromContainer` yöntemi içindeki kodun benzer olduğuna dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="61c5c-117">Notice that code in the `GenKey_SaveInContainer` method and the `GetKeyFromContainer` method is similar.</span></span>  <span data-ttu-id="61c5c-118"><xref:System.Security.Cryptography.CspParameters> nesnesi için bir anahtar kapsayıcı adı belirttiğinizde ve bunu <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> özelliği veya <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> özelliği true olarak ayarlanan bir <xref:System.Security.Cryptography.AsymmetricAlgorithm> nesnesine geçirdiğinizde, aşağıdakiler gerçekleşir.</span><span class="sxs-lookup"><span data-stu-id="61c5c-118">When you specify a key container name for a <xref:System.Security.Cryptography.CspParameters> object and pass it to an <xref:System.Security.Cryptography.AsymmetricAlgorithm> object with the <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> property or <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> property set to true, the following occurs.</span></span>  <span data-ttu-id="61c5c-119">Belirtilen ada sahip bir anahtar kapsayıcısı yoksa, bir tane oluşturulur ve anahtar kalıcıdır.</span><span class="sxs-lookup"><span data-stu-id="61c5c-119">If a key container with the specified name does not exist, then one is created and the key is persisted.</span></span>  <span data-ttu-id="61c5c-120">Belirtilen ada sahip bir anahtar kapsayıcısı varsa, kapsayıcıdaki anahtar geçerli <xref:System.Security.Cryptography.AsymmetricAlgorithm> nesnesine otomatik olarak yüklenir.</span><span class="sxs-lookup"><span data-stu-id="61c5c-120">If a key container with the specified name does exist, then the key in the container is automatically loaded into the current <xref:System.Security.Cryptography.AsymmetricAlgorithm> object.</span></span>  <span data-ttu-id="61c5c-121">Bu nedenle, `GenKey_SaveInContainer` yöntemindeki kod, ilk kez çalıştırıldığı için anahtarı devam ettirir, ancak `GetKeyFromContainer` yöntemindeki kod ikinci çalıştırıldığı için anahtarı yükler.</span><span class="sxs-lookup"><span data-stu-id="61c5c-121">Therefore, the code in the `GenKey_SaveInContainer` method persists the key because it is run first, while the code in the `GetKeyFromContainer` method loads the key because it is run second.</span></span>  
   
 ```vb  
 Imports System  
@@ -76,7 +76,7 @@ Public Class StoreKey
     End Sub  
   
     Public Shared Sub GenKey_SaveInContainer(ByVal ContainerName As String)  
-        ' Create the CspParameters object and set the key container   
+        ' Create the CspParameters object and set the key container
         ' name used to store the RSA key pair.  
         Dim cp As New CspParameters()  
         cp.KeyContainerName = ContainerName  
@@ -90,7 +90,7 @@ Public Class StoreKey
     End Sub  
   
     Public Shared Sub GetKeyFromContainer(ByVal ContainerName As String)  
-        ' Create the CspParameters object and set the key container   
+        ' Create the CspParameters object and set the key container
         '  name used to store the RSA key pair.  
         Dim cp As New CspParameters()  
         cp.KeyContainerName = ContainerName  
@@ -104,7 +104,7 @@ Public Class StoreKey
     End Sub  
   
     Public Shared Sub DeleteKeyFromContainer(ByVal ContainerName As String)  
-        ' Create the CspParameters object and set the key container   
+        ' Create the CspParameters object and set the key container
         '  name used to store the RSA key pair.  
         Dim cp As New CspParameters()  
         cp.KeyContainerName = ContainerName  
@@ -160,7 +160,7 @@ public class StoreKey
   
     public static void GenKey_SaveInContainer(string ContainerName)  
     {  
-        // Create the CspParameters object and set the key container   
+        // Create the CspParameters object and set the key container
         // name used to store the RSA key pair.  
         CspParameters cp = new CspParameters();  
         cp.KeyContainerName = ContainerName;  
@@ -175,7 +175,7 @@ public class StoreKey
   
     public static void GetKeyFromContainer(string ContainerName)  
     {  
-        // Create the CspParameters object and set the key container   
+        // Create the CspParameters object and set the key container
         // name used to store the RSA key pair.  
         CspParameters cp = new CspParameters();  
         cp.KeyContainerName = ContainerName;  
@@ -190,7 +190,7 @@ public class StoreKey
   
     public static void DeleteKeyFromContainer(string ContainerName)  
     {  
-        // Create the CspParameters object and set the key container   
+        // Create the CspParameters object and set the key container
         // name used to store the RSA key pair.  
         CspParameters cp = new CspParameters();  
         cp.KeyContainerName = ContainerName;  
@@ -221,9 +221,9 @@ Key added to container:
 Key deleted.  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6e2eb-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6e2eb-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="61c5c-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="61c5c-122">See also</span></span>
 
-- [<span data-ttu-id="6e2eb-123">Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma</span><span class="sxs-lookup"><span data-stu-id="6e2eb-123">Generating Keys for Encryption and Decryption</span></span>](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
-- [<span data-ttu-id="6e2eb-124">Veri Şifreleme</span><span class="sxs-lookup"><span data-stu-id="6e2eb-124">Encrypting Data</span></span>](../../../docs/standard/security/encrypting-data.md)
-- [<span data-ttu-id="6e2eb-125">Verilerin Şifresini Çözme</span><span class="sxs-lookup"><span data-stu-id="6e2eb-125">Decrypting Data</span></span>](../../../docs/standard/security/decrypting-data.md)
-- [<span data-ttu-id="6e2eb-126">Şifreleme Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="6e2eb-126">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)
+- [<span data-ttu-id="61c5c-123">Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma</span><span class="sxs-lookup"><span data-stu-id="61c5c-123">Generating Keys for Encryption and Decryption</span></span>](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [<span data-ttu-id="61c5c-124">Veri Şifreleme</span><span class="sxs-lookup"><span data-stu-id="61c5c-124">Encrypting Data</span></span>](../../../docs/standard/security/encrypting-data.md)
+- [<span data-ttu-id="61c5c-125">Verilerin Şifresini Çözme</span><span class="sxs-lookup"><span data-stu-id="61c5c-125">Decrypting Data</span></span>](../../../docs/standard/security/decrypting-data.md)
+- [<span data-ttu-id="61c5c-126">Şifreleme Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="61c5c-126">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)

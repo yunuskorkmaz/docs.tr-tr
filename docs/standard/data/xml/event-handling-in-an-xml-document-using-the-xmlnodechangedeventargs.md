@@ -6,44 +6,44 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-ms.openlocfilehash: ecbed7e57628b4e140e0f4dbcd600643617b075a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b27c51572b1ba83480d90eba4add7f930715a4e5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710901"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156536"
 ---
-# <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a><span data-ttu-id="bde5e-102">Bir XML Belgesinde XmlNodeChangedEventArgs Kullanarak Olay İşleme</span><span class="sxs-lookup"><span data-stu-id="bde5e-102">Event Handling in an XML Document Using the XmlNodeChangedEventArgs</span></span>
-<span data-ttu-id="bde5e-103">**XmlNodeChangedEventArgs** , olayları Işlemek için **XmlDocument** nesnesinde kayıtlı olan olay işleyicilerine geçirilen bağımsız değişkenleri kapsüller.</span><span class="sxs-lookup"><span data-stu-id="bde5e-103">The **XmlNodeChangedEventArgs** encapsulates the arguments passed to the event handlers registered on the **XmlDocument** object for handling events.</span></span> <span data-ttu-id="bde5e-104">Olaylar ve tetiklendiklerinde bir açıklama aşağıdaki tabloda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="bde5e-104">The events and a description of when they are fired is given in the following table.</span></span>  
+# <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a><span data-ttu-id="26377-102">Bir XML Belgesinde XmlNodeChangedEventArgs Kullanarak Olay İşleme</span><span class="sxs-lookup"><span data-stu-id="26377-102">Event Handling in an XML Document Using the XmlNodeChangedEventArgs</span></span>
+<span data-ttu-id="26377-103">**XmlNodeChangedEventArgs** , olayları Işlemek için **XmlDocument** nesnesinde kayıtlı olan olay işleyicilerine geçirilen bağımsız değişkenleri kapsüller.</span><span class="sxs-lookup"><span data-stu-id="26377-103">The **XmlNodeChangedEventArgs** encapsulates the arguments passed to the event handlers registered on the **XmlDocument** object for handling events.</span></span> <span data-ttu-id="26377-104">Olaylar ve tetiklendiklerinde bir açıklama aşağıdaki tabloda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="26377-104">The events and a description of when they are fired is given in the following table.</span></span>  
   
-|<span data-ttu-id="bde5e-105">Olay</span><span class="sxs-lookup"><span data-stu-id="bde5e-105">Event</span></span>|<span data-ttu-id="bde5e-106">Tetiklenen</span><span class="sxs-lookup"><span data-stu-id="bde5e-106">Fired</span></span>|  
+|<span data-ttu-id="26377-105">Olay</span><span class="sxs-lookup"><span data-stu-id="26377-105">Event</span></span>|<span data-ttu-id="26377-106">Belirtildiği</span><span class="sxs-lookup"><span data-stu-id="26377-106">Fired</span></span>|  
 |-----------|-----------|  
-|<xref:System.Xml.XmlDocument.NodeInserting>|<span data-ttu-id="bde5e-107">Geçerli belgeye ait bir düğüm başka bir düğüme Eklenme konusunda olduğunda.</span><span class="sxs-lookup"><span data-stu-id="bde5e-107">When a node belonging to the current document is about to be inserted into another node.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeInserted>|<span data-ttu-id="bde5e-108">Geçerli belgeye ait bir düğüm başka bir düğüme eklendiyse.</span><span class="sxs-lookup"><span data-stu-id="bde5e-108">When a node belonging to the current document has been inserted into another node.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeRemoving>|<span data-ttu-id="bde5e-109">Bu belgeye ait bir düğüm belgeden kaldırılmak üzere olduğunda.</span><span class="sxs-lookup"><span data-stu-id="bde5e-109">When a node belonging to this document is about to be removed from the document.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeRemoved>|<span data-ttu-id="bde5e-110">Bu belgeye ait bir düğüm, üst öğesinden kaldırıldığında.</span><span class="sxs-lookup"><span data-stu-id="bde5e-110">When a node belonging to this document has been removed from its parent.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeChanging>|<span data-ttu-id="bde5e-111">Bir düğümün değeri değiştirilme için olduğunda.</span><span class="sxs-lookup"><span data-stu-id="bde5e-111">When the value of a node is about to be changed.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeChanged>|<span data-ttu-id="bde5e-112">Bir düğümün değeri değiştirildiğinde.</span><span class="sxs-lookup"><span data-stu-id="bde5e-112">When the value of a node has been changed.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeInserting>|<span data-ttu-id="26377-107">Geçerli belgeye ait bir düğüm başka bir düğüme Eklenme konusunda olduğunda.</span><span class="sxs-lookup"><span data-stu-id="26377-107">When a node belonging to the current document is about to be inserted into another node.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeInserted>|<span data-ttu-id="26377-108">Geçerli belgeye ait bir düğüm başka bir düğüme eklendiyse.</span><span class="sxs-lookup"><span data-stu-id="26377-108">When a node belonging to the current document has been inserted into another node.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeRemoving>|<span data-ttu-id="26377-109">Bu belgeye ait bir düğüm belgeden kaldırılmak üzere olduğunda.</span><span class="sxs-lookup"><span data-stu-id="26377-109">When a node belonging to this document is about to be removed from the document.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeRemoved>|<span data-ttu-id="26377-110">Bu belgeye ait bir düğüm, üst öğesinden kaldırıldığında.</span><span class="sxs-lookup"><span data-stu-id="26377-110">When a node belonging to this document has been removed from its parent.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeChanging>|<span data-ttu-id="26377-111">Bir düğümün değeri değiştirilme için olduğunda.</span><span class="sxs-lookup"><span data-stu-id="26377-111">When the value of a node is about to be changed.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeChanged>|<span data-ttu-id="26377-112">Bir düğümün değeri değiştirildiğinde.</span><span class="sxs-lookup"><span data-stu-id="26377-112">When the value of a node has been changed.</span></span>|  
   
 > [!NOTE]
-> <span data-ttu-id="bde5e-113">**XmlDataDocument** bellek kullanımı, **veri kümesi** depolamayı kullanmak için tamamen iyileştirilirse, temel alınan **veri kümesinde**değişiklik yapıldığında **XmlDataDocument** , yukarıda listelenen olayları tetiklemeyebilir.</span><span class="sxs-lookup"><span data-stu-id="bde5e-113">If the **XmlDataDocument** memory usage is fully optimized to use **DataSet** storage, the **XmlDataDocument** might not raise any of the events listed above when changes are made to the underlying **DataSet**.</span></span> <span data-ttu-id="bde5e-114">Bu olaylara ihtiyacınız varsa, bellek kullanımını tam olarak iyileştirilmemiş hale getirmek için **XmlDocument** 'ın tamamına bir kez geçiş yapmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="bde5e-114">If you need these events, you must traverse the whole **XmlDocument** once to make the memory usage non-fully optimized.</span></span>  
+> <span data-ttu-id="26377-113">**XmlDataDocument** bellek kullanımı, **veri kümesi** depolamayı kullanmak için tamamen iyileştirilirse, temel alınan **veri kümesinde**değişiklik yapıldığında **XmlDataDocument** , yukarıda listelenen olayları tetiklemeyebilir.</span><span class="sxs-lookup"><span data-stu-id="26377-113">If the **XmlDataDocument** memory usage is fully optimized to use **DataSet** storage, the **XmlDataDocument** might not raise any of the events listed above when changes are made to the underlying **DataSet**.</span></span> <span data-ttu-id="26377-114">Bu olaylara ihtiyacınız varsa, bellek kullanımını tam olarak iyileştirilmemiş hale getirmek için **XmlDocument** 'ın tamamına bir kez geçiş yapmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="26377-114">If you need these events, you must traverse the whole **XmlDocument** once to make the memory usage non-fully optimized.</span></span>  
   
- <span data-ttu-id="bde5e-115">Aşağıdaki kod örneği bir olay işleyicisinin nasıl tanımlanacağını ve olay işleyicisinin bir olaya nasıl ekleneceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="bde5e-115">The following code example shows how to define an event handler and how to add the event handler to an event.</span></span>  
+ <span data-ttu-id="26377-115">Aşağıdaki kod örneği bir olay işleyicisinin nasıl tanımlanacağını ve olay işleyicisinin bir olaya nasıl ekleneceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="26377-115">The following code example shows how to define an event handler and how to add the event handler to an event.</span></span>  
   
 ```vb  
 ' Attach the event handler, NodeInsertedHandler, to the NodeInserted  
 ' event.  
 Dim doc as XmlDocument = new XmlDocument()  
-Dim XmlNodeChgEHdlr as XmlNodeChangedEventHandler = new XmlNodeChangedEventHandler(addressof MyNodeChangedEvent)   
-AddHandler doc.NodeInserted, XmlNodeChgEHdlr   
+Dim XmlNodeChgEHdlr as XmlNodeChangedEventHandler = new XmlNodeChangedEventHandler(addressof MyNodeChangedEvent)
+AddHandler doc.NodeInserted, XmlNodeChgEHdlr
   
 Dim n as XmlNode = doc.CreateElement( "element" )  
-Console.WriteLine( "Before Event Inserting" )   
+Console.WriteLine( "Before Event Inserting" )
   
 ' This is the point where the new node is being inserted in the tree,  
 ' and this is the point where the NodeInserted event is raised.  
 doc.AppendChild( n )  
-Console.WriteLine( "After Event Inserting" )   
+Console.WriteLine( "After Event Inserting" )
   
 ' Define the event handler that handles the NodeInserted event.  
 sub NodeInsertedHandler(src as Object, args as XmlNodeChangedEventArgs)  
@@ -62,7 +62,7 @@ Console.WriteLine( "Before Event Inserting" );
 // This is the point where the new node is being inserted in the tree,  
 // and this is the point where the NodeInserted event is raised.  
 doc.AppendChild( n );  
-Console.WriteLine( "After Event Inserting" );   
+Console.WriteLine( "After Event Inserting" );
   
 // Define the event handler that handles the NodeInserted event.  
 void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)  
@@ -71,9 +71,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- <span data-ttu-id="bde5e-116">Bazı XML Belge Nesne Modeli (DOM) işlemleri, birden çok olayın tetikedilmesine neden olan bileşik işlemlerdir.</span><span class="sxs-lookup"><span data-stu-id="bde5e-116">Some XML Document Object Model (DOM) operations are compound operations that can result in multiple events being fired.</span></span> <span data-ttu-id="bde5e-117">Örneğin, **AppendChild** 'ın önceki üst öğesinden eklenen düğümü kaldırmak da gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="bde5e-117">For example, **AppendChild** may also have to remove the node being appended from its previous parent.</span></span> <span data-ttu-id="bde5e-118">Bu durumda, önce tetiklenen bir **Noderetaşınmış** olay, ardından **nodeınsertedbir** olay görürsünüz.</span><span class="sxs-lookup"><span data-stu-id="bde5e-118">In this case, you see a **NodeRemoved** event fired first, followed by a **NodeInserted** event.</span></span> <span data-ttu-id="bde5e-119">**InnerXml** ayarı gibi işlemler birden çok olay oluşmasına neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="bde5e-119">Operations like setting **InnerXml** could result in multiple events.</span></span>  
+ <span data-ttu-id="26377-116">Bazı XML Belge Nesne Modeli (DOM) işlemleri, birden çok olayın tetikedilmesine neden olan bileşik işlemlerdir.</span><span class="sxs-lookup"><span data-stu-id="26377-116">Some XML Document Object Model (DOM) operations are compound operations that can result in multiple events being fired.</span></span> <span data-ttu-id="26377-117">Örneğin, **AppendChild** 'ın önceki üst öğesinden eklenen düğümü kaldırmak da gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="26377-117">For example, **AppendChild** may also have to remove the node being appended from its previous parent.</span></span> <span data-ttu-id="26377-118">Bu durumda, önce tetiklenen bir **Noderetaşınmış** olay, ardından **nodeınsertedbir** olay görürsünüz.</span><span class="sxs-lookup"><span data-stu-id="26377-118">In this case, you see a **NodeRemoved** event fired first, followed by a **NodeInserted** event.</span></span> <span data-ttu-id="26377-119">**InnerXml** ayarı gibi işlemler birden çok olay oluşmasına neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="26377-119">Operations like setting **InnerXml** could result in multiple events.</span></span>  
   
- <span data-ttu-id="bde5e-120">Aşağıdaki kod örneğinde, olay işleyicisinin oluşturulması ve **Nodeınsertedetkinliğin** işlenmesi gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="bde5e-120">The following code example shows the creation of the event handler and the handling of the **NodeInserted** event.</span></span>  
+ <span data-ttu-id="26377-120">Aşağıdaki kod örneğinde, olay işleyicisinin oluşturulması ve **Nodeınsertedetkinliğin** işlenmesi gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="26377-120">The following code example shows the creation of the event handler and the handling of the **NodeInserted** event.</span></span>  
   
 ```vb  
 Imports System  
@@ -173,7 +173,7 @@ public class Sample
      doc.DocumentElement.AppendChild(newElem);  
   
      Console.WriteLine("\r\nDisplay the modified XML...");  
-     Console.WriteLine(doc.OuterXml);             
+     Console.WriteLine(doc.OuterXml);
   
   }  
   
@@ -201,11 +201,11 @@ public class Sample
         Console.WriteLine("");  
   }  
   
-} // End class   
+} // End class
 ```  
   
- <span data-ttu-id="bde5e-121">Daha fazla bilgi için bkz. <xref:System.Xml.XmlNodeChangedEventArgs> ve <xref:System.Xml.XmlNodeChangedEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="bde5e-121">For more information, see <xref:System.Xml.XmlNodeChangedEventArgs> and <xref:System.Xml.XmlNodeChangedEventHandler>.</span></span>  
+ <span data-ttu-id="26377-121">Daha fazla bilgi için <xref:System.Xml.XmlNodeChangedEventArgs> ve <xref:System.Xml.XmlNodeChangedEventHandler> bölümlerine bakın.</span><span class="sxs-lookup"><span data-stu-id="26377-121">For more information, see <xref:System.Xml.XmlNodeChangedEventArgs> and <xref:System.Xml.XmlNodeChangedEventHandler>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bde5e-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bde5e-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="26377-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="26377-122">See also</span></span>
 
-- [<span data-ttu-id="bde5e-123">XML Belge Nesne Modeli (DOM)</span><span class="sxs-lookup"><span data-stu-id="bde5e-123">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [<span data-ttu-id="26377-123">XML Belge Nesne Modeli (DOM)</span><span class="sxs-lookup"><span data-stu-id="26377-123">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
