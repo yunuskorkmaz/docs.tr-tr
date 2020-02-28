@@ -49,25 +49,7 @@
     - name: Yerelleştirilmiş IntelliSense’i yükleme
       href: install/localized-intellisense.md
 - name: Kullanmaya başlayın
-  items:
-    - name: Kullanmaya başlayın
-      href: get-started.md
-    - name: 'C# ve Visual Studio Code kullanmaya başlama'
-      href: tutorials/with-visual-studio-code.md
-    - name: Visual Studio Code kullanarak macOS üzerinde .NET Core kullanmaya başlama
-      href: tutorials/using-on-macos.md
-    - name: Visual Studio’da ilk konsol uygulamanızı oluşturma
-      href: tutorials/with-visual-studio.md
-    - name: Visual Studio kullanarak uygulamada hata ayıklama
-      href: tutorials/debugging-with-visual-studio.md
-    - name: Visual Studio kullanarak uygulamayı yayımlama
-      href: tutorials/publishing-with-visual-studio.md
-    - name: Visual Studio’da bir .NET Standard kitaplığı oluşturma
-      href: tutorials/library-with-visual-studio.md
-    - name: Visual Studio’da bir .NET Standard kitaplığını test etme
-      href: tutorials/testing-library-with-visual-studio.md
-    - name: Visual Studio’da bir .NET Standard kitaplığını kullanma
-      href: tutorials/consuming-library-with-visual-studio.md
+  href: get-started.md
 - name: ​.NET Core’daki yenilikler
   items:
     - name: ​.NET Core 3.1’deki yenilikler
@@ -87,12 +69,28 @@
   items:
     - name: Genel Bakış
       href: tutorials/index.md
-    - name: Mac için Visual Studio kullanarak .NET Core kullanmaya başlama
-      href: tutorials/using-on-mac-vs.md
-    - name: macOS üzerinde kapsamlı bir .NET Core çözümü oluşturma
-      href: tutorials/using-on-mac-vs-full-solution.md
+    - name: Visual Studio kullanarak .NET Core kullanmaya başlama
+      href: tutorials/with-visual-studio.md
+    - name: Visual Studio Code kullanarak .NET Core kullanmaya başlama
+      href: tutorials/with-visual-studio-code.md
     - name: CLI kullanarak .NET Core kullanmaya başlama
       href: tutorials/cli-create-console-app.md
+    - name: macOS üzerinde Visual Studio Code kullanarak .NET Core kullanmaya başlama
+      href: tutorials/using-on-macos.md
+    - name: Mac için Visual Studio kullanarak .NET Core kullanmaya başlama
+      href: tutorials/using-on-mac-vs.md
+    - name: Visual Studio kullanarak uygulamada hata ayıklama
+      href: tutorials/debugging-with-visual-studio.md
+    - name: Visual Studio kullanarak uygulamayı yayımlama
+      href: tutorials/publishing-with-visual-studio.md
+    - name: Visual Studio’da bir .NET Standard kitaplığı oluşturma
+      href: tutorials/library-with-visual-studio.md
+    - name: Visual Studio’da bir .NET Standard kitaplığını test etme
+      href: tutorials/testing-library-with-visual-studio.md
+    - name: Visual Studio’da bir .NET Standard kitaplığını kullanma
+      href: tutorials/consuming-library-with-visual-studio.md
+    - name: macOS üzerinde kapsamlı bir .NET Core çözümü oluşturma
+      href: tutorials/using-on-mac-vs-full-solution.md
     - name: .NET Core CLI ile projeleri düzenleme ve test etme
       href: tutorials/testing-with-cli.md
     - name: Platformlar arası araçlarla kitaplık geliştirme
