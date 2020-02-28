@@ -2,12 +2,12 @@
 title: DotNet araç listesi komutu
 description: DotNet araç listesi komutu, makinenizde yüklü olan .NET Core araçlarını listeler.
 ms.date: 02/14/2020
-ms.openlocfilehash: bb74cfeaf441cf8a1a030d97d16655f85d8267d1
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: f231dcfe64a925f75f948d508e7a2d83befd9a00
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543462"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156991"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -40,7 +40,7 @@ dotnet tool list <-h|--help>
 
 - **`-g|--global`**
 
-  Kullanıcı genelindeki genel araçları listeler. `--tool-path` seçeneği ile birleştirilemez. Hem `--global` hem de `--tool-path`, yerel araçları listeler. 
+  Kullanıcı genelindeki genel araçları listeler. `--tool-path` seçeneği ile birleştirilemez. Hem `--global` hem de `--tool-path`, yerel araçları listeler.
 
 - **`-h|--help`**
 
@@ -48,7 +48,7 @@ dotnet tool list <-h|--help>
 
 - **`--tool-path <PATH>`**
 
-  Genel araçların bulunacağı bir özel konum belirtir. YOL mutlak veya göreli olabilir. `--global` seçeneği ile birleştirilemez. Hem `--global` hem de `--tool-path`, yerel araçları listeler. 
+  Genel araçların bulunacağı bir özel konum belirtir. YOL mutlak veya göreli olabilir. `--global` seçeneği ile birleştirilemez. Hem `--global` hem de `--tool-path`, yerel araçları listeler.
 
 ## <a name="examples"></a>Örnekler
 

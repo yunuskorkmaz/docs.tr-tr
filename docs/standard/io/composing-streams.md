@@ -13,15 +13,15 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-ms.openlocfilehash: 689cc9537cd7a5fe6a677d42e5790bbcf1b3aefa
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3f18712793254f4942c092c87a3e64c73b492ae0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708154"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160111"
 ---
 # <a name="compose-streams"></a>Akışları oluştur
-*Yedekleme deposu* , disk veya bellek gibi bir depolama ortamıdır. Her farklı yedekleme deposu, <xref:System.IO.Stream> sınıfının bir uygulama olarak kendi akışını uygular. 
+*Yedekleme deposu* , disk veya bellek gibi bir depolama ortamıdır. Her farklı yedekleme deposu, <xref:System.IO.Stream> sınıfının bir uygulama olarak kendi akışını uygular.
 
 Her akış türü, ve ' den verilen yedekleme deposundan baytları okur ve yazar. Yedekleme depolarına bağlanan akışlar *Temel akışlar*olarak adlandırılır. Temel akışlar, akışı yedekleme deposuna bağlamak için gereken parametrelere sahip oluşturucuları vardır. Örneğin, <xref:System.IO.FileStream>, dosyanın işlemlerle nasıl paylaşılacağını belirten bir yol parametresi belirten oluşturuculara sahiptir.  
 

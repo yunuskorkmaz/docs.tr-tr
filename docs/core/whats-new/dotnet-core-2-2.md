@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 9495288658fa102df8f0fbd643e2fcdf49d8f3b3
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: e045c39240c99777d05ca86ee0a8cd1fa4309c4f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451986"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156588"
 ---
 # <a name="whats-new-in-net-core-22"></a>​.NET Core 2.2’deki yenilikler
 
@@ -26,7 +26,7 @@ Bu yeni dağıtım modu, bir kitaplık yerine yürütülebilir bir dosya oluştu
 
 **Çalışma zamanı hizmetlerindeki olayları işleme**
 
-Uygulamanızı nasıl etkileyeceğini anlamak için, uygulamanızın GC, JıT ve ThreadPool gibi çalışma zamanı hizmetlerinin kullanımını izlemek isteyebilirsiniz. Windows sistemlerinde, bu genellikle geçerli işlemin ETW olayları izlenerek yapılır. Bu, sorunsuz çalışmaya devam ederken, düşük ayrıcalıklı bir ortamda veya Linux veya macOS 'ta çalışıyorsanız ETW 'yi kullanmak her zaman mümkün değildir. 
+Uygulamanızı nasıl etkileyeceğini anlamak için, uygulamanızın GC, JıT ve ThreadPool gibi çalışma zamanı hizmetlerinin kullanımını izlemek isteyebilirsiniz. Windows sistemlerinde, bu genellikle geçerli işlemin ETW olayları izlenerek yapılır. Bu, sorunsuz çalışmaya devam ederken, düşük ayrıcalıklı bir ortamda veya Linux veya macOS 'ta çalışıyorsanız ETW 'yi kullanmak her zaman mümkün değildir.
 
 .NET Core 2,2 ile başlayarak CoreCLR olayları artık <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType> sınıfı kullanılarak tüketilebilir. Bu olaylar, bu tür çalışma zamanı hizmetlerinin GC, JıT, ThreadPool ve birlikte çalışma olarak davranışını anlatmaktadır. Bunlar CoreCLR ETW sağlayıcısı 'nın bir parçası olarak sunulan olaylardır.  Bu, uygulamaların bu olayları kullanmasına veya bir telemetri toplama hizmetine göndermek için bir taşıma mekanizması kullanmasına izin verir. Aşağıdaki kod örneğinde olaylara nasıl abone olunacağına bakabilirsiniz:
 
@@ -64,7 +64,7 @@ Ayrıca, .NET Core 2,2, ETW olayları hakkında ek bilgi sağlamak için <xref:S
 
 - <xref:System.Diagnostics.Tracing.EventWrittenEventArgs.TimeStamp?displayProperty=nameWithType>
 
-## <a name="data"></a>Veri
+## <a name="data"></a>Veriler
 
 **SqlConnection. AccessToken özelliği ile Azure SQL veritabanlarında AAD kimlik doğrulaması**
 
@@ -84,7 +84,7 @@ Katmanlı derlemeden kaynaklanan performans iyileştirmesi hakkında daha fazla 
 
 .NET Core 2,2 Preview 2 ' de katmanlı derleme varsayılan olarak etkinleştirilmiştir. Ancak, varsayılan olarak katmanlı derlemeyi etkinleştirmeye hazır olmaya devam ediyoruz. Bu nedenle, .NET Core 2,2 ' de katmanlı derleme bir kabul etme özelliği olmaya devam eder. Katmanlı derleme ile ilgili daha fazla bilgi için bkz. [.NET Core 2,1 'deki](dotnet-core-2-1.md)Yenilikler bölümünde [JIT derleyicisi geliştirmeleri](dotnet-core-2-1.md#jit-compiler-improvements) .
 
-## <a name="runtime"></a>Çalışma zamanı
+## <a name="runtime"></a>Çalışma Zamanı
 
 **Ana yöntemi yürütmeden önce ekleme kodu**
 

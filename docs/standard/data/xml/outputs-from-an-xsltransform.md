@@ -3,12 +3,12 @@ title: XslTransform Çıkışları
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-ms.openlocfilehash: 178b1e949868d3af893cbcb6df63590053341a3e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 93cbf7807630a605e17e7f513055c052aad0d08e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710498"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159643"
 ---
 # <a name="outputs-from-an-xsltransform"></a>XslTransform Çıkışları
 Stil sayfaları `method` özniteliğiyle `<xsl:output>` bir bildirim kullanarak çıkış biçimini belirleyebildiğinden, aşağıdaki tabloda çıktı biçiminin çıktıyı yazmak için ne <xref:System.Xml.Xsl.XslTransform.Transform%2A> zaman kullanıldığı ve çıkış biçiminin bir <xref:System.IO.Stream> veya <xref:System.IO.TextWriter>olarak bildirildiği açıklanır.  
@@ -20,7 +20,7 @@ Stil sayfaları `method` özniteliğiyle `<xsl:output>` bir bildirim kullanarak 
   
 |\<xsl: output yöntemi = > özniteliği|Sonuç biçimi|  
 |-----------------------------------------|-------------------|  
-|method = "xml"|{1&gt;XML&lt;1}|  
+|method = "xml"|XML|  
 |method="html"|HTML|  
 |method = "metin"|Metin|  
   
@@ -31,9 +31,9 @@ Stil sayfaları `method` özniteliğiyle `<xsl:output>` bir bildirim kullanarak 
   
 - şifreleme  
   
-- {1&gt;atlayın-xml-bildirimi&lt;1}  
+- XML bildirimini atla  
   
-- tek başına  
+- bağımsız  
   
 - doctype-genel  
   
@@ -41,10 +41,10 @@ Stil sayfaları `method` özniteliğiyle `<xsl:output>` bir bildirim kullanarak 
   
 - CDATA-bölüm-öğeler  
   
-- {1&gt;Girinti&lt;1}  
+- leyebilirsiniz  
   
     > [!NOTE]
-    > \*, <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi çıktısını bir <xref:System.IO.TextWriter>gönderirken kodlama özniteliği yok sayılır. Bunun yerine <xref:System.IO.TextWriter> kodlama özelliği kullanılır. 
+    > \*, <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi çıktısını bir <xref:System.IO.TextWriter>gönderirken kodlama özniteliği yok sayılır. Bunun yerine <xref:System.IO.TextWriter> kodlama özelliği kullanılır.
   
  <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi çıktısı bir <xref:System.IO.Stream>olduğunda aşağıdaki öznitelik yoksayılır:  
   

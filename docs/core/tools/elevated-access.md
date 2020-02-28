@@ -3,16 +3,16 @@ title: DotNet komutları için yükseltilmiş erişim
 description: Yükseltilmiş erişim gerektiren DotNet komutları için en iyi uygulamaları öğrenin.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: fe33cbe966d175f71ba350737b283c1e83f64fa6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 4aff9badfa8ad9b83adc4496d4ebd6df29252e36
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543436"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156770"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>DotNet komutları için yükseltilmiş erişim
 
-Yazılım geliştirme en iyi uygulamaları, geliştiricilerin en az ayrıcalık gerektiren yazılımları yazmasını sağlar. Ancak, performans izleme araçları gibi bazı yazılımlar, işletim sistemi kuralları nedeniyle yönetici izni gerektirir. Aşağıdaki kılavuzda .NET Core ile bu tür yazılımları yazmaya yönelik desteklenen senaryolar açıklanmaktadır. 
+Yazılım geliştirme en iyi uygulamaları, geliştiricilerin en az ayrıcalık gerektiren yazılımları yazmasını sağlar. Ancak, performans izleme araçları gibi bazı yazılımlar, işletim sistemi kuralları nedeniyle yönetici izni gerektirir. Aşağıdaki kılavuzda .NET Core ile bu tür yazılımları yazmaya yönelik desteklenen senaryolar açıklanmaktadır.
 
 Aşağıdaki komutlar yükseltilmiş olarak çalıştırılabilir:
 
@@ -35,8 +35,8 @@ Aşağıdaki yönergelerde, yürütme için yükseltilmiş izinler gerektiren .N
 
 `%ProgramFiles%\dotnet-tools` klasör zaten mevcutsa, "kullanıcılar" grubunun bu dizini yazma veya değiştirme izni olup olmadığını denetlemek için aşağıdakileri yapın:
 
-- `%ProgramFiles%\dotnet-tools` klasörüne sağ tıklayın ve **Özellikler**' i seçin. **Ortak özellikler** iletişim kutusu açılır. 
-- **Güvenlik** sekmesini seçin. **Grup veya Kullanıcı adları**altında "kullanıcılar" grubunun dizini yazma veya değiştirme izni olup olmadığını denetleyin. 
+- `%ProgramFiles%\dotnet-tools` klasörüne sağ tıklayın ve **Özellikler**' i seçin. **Ortak özellikler** iletişim kutusu açılır.
+- **Güvenlik** sekmesini seçin. **Grup veya Kullanıcı adları**altında "kullanıcılar" grubunun dizini yazma veya değiştirme izni olup olmadığını denetleyin.
 - "Kullanıcılar" grubu dizini yazabilir veya değiştirebiliyorsanız, *DotNet araçları*yerine araçları yüklerken farklı bir dizin adı kullanın.
 
 Araçları yüklemek için, yükseltilmiş komut isteminde aşağıdaki komutu çalıştırın. Yükleme sırasında *DotNet araçları* klasörünü oluşturur.
@@ -97,7 +97,7 @@ Geliştirme sırasında uygulamanızı test etmek için yükseltilmiş erişime 
    dotnet build
    sudo ./bin/Debug/netcoreapp3.0/APPLICATIONNAME
    ```
-    
+
 - Yeni ikili dosyaları üretmemek için `—no-build` bayrağıyla [DotNet Run](dotnet-run.md) komutunu kullanma:
 
    ```dotnetcli

@@ -1,46 +1,46 @@
 ---
-title: C#Deyimleri - Turu C# dil
-description: Eylemler, oluşturduğunuz bir C# deyimleri kullanarak program
-ms.date: 11/06/2016
+title: C#Deyimler- C# dilin turu
+description: Deyimleri kullanarak bir C# programın eylemlerini oluşturun
+ms.date: 02/27/2020
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.openlocfilehash: 26b151bc116dde9120757f954bdcf3aee041c5f5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ced13b1bfd17977acb98bf33c0a477161cf08a93
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634540"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159110"
 ---
 # <a name="statements"></a>Deyimler
 
-Bir programın eylemleri kullanılarak ifade edilir *deyimleri*. C# ifadeleri açısından katıştırılmış deyimi bir dizi tanımlanmış birkaç farklı türde destekler.
+Bir programın eylemleri *deyimler*kullanılarak ifade edilir. C#, birden çok farklı türde deyimi destekler, bu sayı katıştırılmış deyimler bakımından tanımlanır.
 
-A *blok* bağlamlarda yazılacak birden çok deyime burada tek bir deyimde izin verir. Sınırlayıcılar yazılan deyimlerin listesini bir blok oluşan `{` ve `}`.
+Bir *blok* , tek bir ifadeye izin verilen bağlamlarda birden çok deyimin yazılmasına izin verir. Bir blok `{` ve `}`sınırlayıcıları arasına yazılan deyimler listesinden oluşur.
 
 *Bildirim deyimleri* yerel değişkenleri ve sabitleri bildirmek için kullanılır.
 
-*İfade deyimleri* ifadeler değerlendirilir. Deyimleri kullanılabilir ifadeler, yöntem çağrılarını içeren nesne ayırmaları kullanarak `new` işleç, atamaları kullanarak `=` ve bileşik atama işleçleri, artırma ve azaltma işlemlerini kullanarak`++`ve `--` işleçler ve `await` ifadeler.
+*İfade deyimleri* , ifadeleri değerlendirmek için kullanılır. Deyimler olarak kullanılabilecek ifadeler, `new` işleci kullanılarak nesne ayırmaları, `=` ve bileşik atama işleçleri kullanılarak atamalar, `++` ve `--` işleçlerini ve `await` ifadelerini kullanarak işlemleri artırma ve azaltma işlemlerini içerir.
 
-*Seçim deyimleri* olası deyimleri yürütme bazı ifadesinin değerine göre bir dizi birini seçmek için kullanılır. Bu gruba `if` ve `switch` deyimleri.
+*Seçim deyimleri* , bazı deyimlerin değerine göre yürütme için bir dizi olası deyimden birini seçmek için kullanılır. Bu grup `if` ve `switch` deyimlerini içerir.
 
-*Yineleme deyimleri* sürekli bir katıştırılmış deyimi yürütmek için kullanılır. Bu gruba `while`, `do`, `for`, ve `foreach` deyimleri.
+*Yineleme deyimleri* , art arda gömülü bir deyimi yürütmek için kullanılır. Bu grup `while`, `do`, `for`ve `foreach` deyimlerini içerir.
 
-*Atlama deyimleri* denetim aktarmak için kullanılır. Bu gruba `break`, `continue`, `goto`, `throw`, `return`, ve `yield` deyimleri.
+*Sıçrama deyimleri* , denetimi aktarmak için kullanılır. Bu grup `break`, `continue`, `goto`, `throw`, `return`ve `yield` deyimlerini içerir.
 
-`try`... `catch` deyimi, bir blok yürütülmesi sırasında oluşan özel durumları yakalamak için kullanılır ve `try`... `finally` deyimi veya bir özel durum oluştu olup olmadığını her zaman yürütülür, sonlandırma kodu belirtmek için kullanılır.
+`try`...`catch` deyimleri, bir bloğun yürütülmesi sırasında oluşan özel durumları yakalamak için kullanılır ve bir özel durumun gerçekleşmediği, her zaman yürütülen sonlandırma kodunu belirtmek için `try`...`finally` deyimleri kullanılır.
 
-`checked` Ve `unchecked` ifadeler Tamsayı türünde aritmetik işlemler ve dönüştürmeler için taşma denetimi bağlamını denetlemek için kullanılır.
+`checked` ve `unchecked` deyimleri, tam sayı türü aritmetik işlemler ve dönüştürmeler için taşma denetimi bağlamını denetlemek üzere kullanılır.
 
-`lock` Deyimi belirli bir nesne için karşılıklı dışlama kilidini almak, bir deyimi yürütün ve sonra kilidi için kullanılır.
+`lock` deyimleri, belirli bir nesne için karşılıklı dışlama kilidini almak, bir ifadeyi yürütmek ve sonra kilidi serbest bırakmak için kullanılır.
 
-`using` Deyimi bir kaynağı almak, bir deyimi yürütün ve sonra o kaynağını atma için kullanılır.
+`using` deyimleri, kaynak almak, bir ifadeyi yürütmek ve ardından bu kaynağı atmak için kullanılır.
 
-Aşağıda, her biri için bir örnek sağlar ve kullanılabilir deyimleri türlerini listeler.
+Aşağıdakiler, kullanılabilecek deyimlerin türlerini listeler ve her biri için bir örnek sağlar.
 
 * Yerel değişken bildirimi:
 
  [!code-csharp[Declarations](../../../samples/snippets/csharp/tour/statements/Program.cs#L9-L15)]
 
-* Yerel sabit bildiriminde:
+* Yerel sabit bildirimi:
 
  [!code-csharp[ConstantDeclarations](../../../samples/snippets/csharp/tour/statements/Program.cs#L17-L22)]
 
@@ -48,63 +48,63 @@ Aşağıda, her biri için bir örnek sağlar ve kullanılabilir deyimleri türl
 
  [!code-csharp[Expressions](../../../samples/snippets/csharp/tour/statements/Program.cs#L24-L31)]
 
-* `if` deyimi:
+* `if` ekstresi:
 
  [!code-csharp[IfStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L33-L43)]
 
-* `switch` deyimi:
+* `switch` ekstresi:
 
  [!code-csharp[SwitchStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L45-L60)]
 
-* `while` deyimi:
+* `while` ekstresi:
 
  [!code-csharp[WhileStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L62-L70)]
 
-* `do` deyimi:
+* `do` ekstresi:
 
  [!code-csharp[DoStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L72-L81)]
 
-* `for` deyimi:
+* `for` ekstresi:
 
  [!code-csharp[ForStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L83-L89)]
 
-* `foreach` deyimi:
+* `foreach` ekstresi:
 
  [!code-csharp[ForEachStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L91-L97)]
 
-* `break` deyimi:
+* `break` ekstresi:
 
  [!code-csharp[BreakStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L99-L108)]
 
-* `continue` deyimi:
+* `continue` ekstresi:
 
  [!code-csharp[ContinueStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L110-L118)]
 
-* `goto` deyimi:
+* `goto` ekstresi:
 
  [!code-csharp[GotoStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L120-L129)]
 
-* `return` deyimi:
+* `return` ekstresi:
 
  [!code-csharp[ReturnStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L131-L139)]
 
-* `yield` deyimi:
+* `yield` ekstresi:
 
  [!code-csharp[YieldStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L141-L155)]
 
-* `throw` deyimleri ve `try` ifadeleri:
+* `throw` deyimleri ve `try` deyimleri:
 
  [!code-csharp[TryThrow](../../../samples/snippets/csharp/tour/statements/Program.cs#L157-L183)]
 
-* `checked` ve `unchecked` ifadeleri:
+* `checked` ve `unchecked` deyimleri:
 
  [!code-csharp[CheckedUncheckedStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L185-L196)]
 
-* `lock` deyimi:
+* `lock` ekstresi:
 
  [!code-csharp[LockStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L257-L273)]
 
-* `using` deyimi:
+* `using` ekstresi:
 
  [!code-csharp[UsingStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L198-L206)]
 

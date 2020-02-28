@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: 87cc3d53cf06457191d9c87020c4151e3f848c51
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 5b2ea110837d9d5b905f97ab706af52a594f1c43
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124331"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159227"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Normal İfadelerdeki Gruplandırma Yapıları
 Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve bir giriş dizesinin alt dizelerini yakalar. Aşağıdakileri yapmak için gruplandırma yapılarını kullanabilirsiniz:  
@@ -48,7 +48,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Gruplar ve normal ifade nesne modeli hakkında bilgi için bkz. [gruplandırma yapıları ve normal ifade nesneleri](#Objects).  
   
-<a name="matched_subexpression"></a>   
+<a name="matched_subexpression"></a>
 ## <a name="matched-subexpressions"></a>Eşleşen Alt İfadeler  
  Aşağıdaki gruplandırma yapısı eşleşen bir alt ifadeyi yakalar:  
   
@@ -87,7 +87,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
 |`(\1)`|Yakalanan ilk gruptaki dizeyle eşleştirin. Bu ikinci yakalama grubudur. Örnek, yinelenen sözcüğün başlangıç konumunun `Match.Index` özelliğinden alınabilmesi için onu yakalanan bir gruba atar.|  
 |`\W`|Boşluk ve noktalama işaretleri de dahil olmak üzere sözcüksiz bir karakterle eşleştirin. Bu, normal ifade deseninin, ilk yakalanan gruptan kelimeyle başlayan bir sözcükle eşleşmesini önler.|  
   
-<a name="named_matched_subexpression"></a>   
+<a name="named_matched_subexpression"></a>
 ## <a name="named-matched-subexpressions"></a>Adlandırılmış Eşleşen Alt İfadeler  
  Aşağıdaki gruplandırma yapısı eşleşen bir alt ifadeyi yakalar ve ada veya numaraya göre erişmenizi sağlar:  
   
@@ -118,10 +118,10 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Basit bir normal ifade modelinde, numaralandırılmış (adlandırılmamış) ve adlandırılmış grupların programlı olarak veya normal ifade dili sözdizimi kullanılarak nasıl başvurulabileceği gösterilmektedir. Normal ifade `((?<One>abc)\d+)?(?<Two>xyz)(.*)`, aşağıdaki yakalama gruplarını sayıyla ve ada göre üretir. İlk yakalama grubu (sayı 0) her zaman tüm modele başvurur.  
   
-|Sayı|Ad|Desen|  
+|Sayı|Adı|Desen|  
 |------------|----------|-------------|  
 |0|0 (varsayılan ad)|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
-|1\.|1 (varsayılan ad)|`((?<One>abc)\d+)`|  
+|1|1 (varsayılan ad)|`((?<One>abc)\d+)`|  
 |2|2 (varsayılan ad)|`(.*)`|  
 |3|Bir|`(?<One>abc)`|  
 |4|İki|`(?<Two>xyz)`|  
@@ -161,7 +161,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
 |`\D+`|Ondalık olmayan bir veya daha fazla karakter eşleştirin.|  
 |`(?<digit>\d+)?`|Bir veya daha fazla ondalık basamak karakterinin sıfır veya bir oluşumunu eşleştirin. Eşleşmeyi `digit` adlı gruba atayın.|  
   
-<a name="balancing_group_definition"></a>   
+<a name="balancing_group_definition"></a>
 ## <a name="balancing-group-definitions"></a>Grup Tanımlarını Dengeleme  
  Bir Dengeleme grubu tanımı, daha önce tanımlanmış bir grubun tanımını ve geçerli grupta, daha önce tanımlanan grup ve geçerli grup arasındaki aralığı siler. Bu gruplandırma yapısı aşağıdaki biçimdedir:  
   
@@ -209,7 +209,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
 |Adım|Desen|Sonuç|  
 |----------|-------------|------------|  
-|1\.|`^`|Giriş dizesinin başlangıcında eşleşmeyi başlatır|  
+|1|`^`|Giriş dizesinin başlangıcında eşleşmeyi başlatır|  
 |2|`[^<>]*`|Sol açılı ayraçtan önce açılı olmayan köşeli ayraç karakterleri arar; eşleşme bulmazsa.|  
 |3|`(((?'Open'<)`|"\<ABC >" içindeki sol açılı parantezle eşleşir ve onu `Open` grubuna atar.|  
 |4|`[^<>]*`|"Abc" ile eşleşir.|  
@@ -234,7 +234,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
 |23|`(?(Open)(?!))`|`Open` grubu tanımlı değil, bu nedenle hiçbir eşleşme denenmedi.|  
 |24|`$`|Giriş dizesinin sonuyla eşleşir.|  
   
-<a name="noncapturing_group"></a>   
+<a name="noncapturing_group"></a>
 ## <a name="noncapturing-groups"></a>Yakalama Yapmayan Gruplar  
  Aşağıdaki gruplandırma yapısı bir alt ifade ile eşleşen alt dizeyi yakalamaz:  
   
@@ -260,7 +260,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
 |`(?:\b(?:\w+)\W*)+`|Bir sözcük sınırında başlayan bir veya daha fazla sözcük karakterinin örüntüsünün ardından sıfır veya daha fazla sözcük olmayan karakter, bir veya daha fazla kez olacak şekilde eşleştirin. Eşleşen metni yakalanan bir gruba atamayın.|  
 |`\.`|Bir noktayla eşleştirin.|  
   
-<a name="group_options"></a>   
+<a name="group_options"></a>
 ## <a name="group-options"></a>Grup Seçenekleri  
  Aşağıdaki gruplandırma yapısı, bir alt ifade içinde belirtilen seçenekleri uygular veya devre dışı bırakır:  
   
@@ -284,7 +284,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
  [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
  [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]  
   
-<a name="zerowidth_positive_lookahead_assertion"></a>   
+<a name="zerowidth_positive_lookahead_assertion"></a>
 ## <a name="zero-width-positive-lookahead-assertions"></a>Sıfır Genişlik Pozitif İleriye Yönelik Onaylar  
  Aşağıdaki gruplandırma yapısı sıfır genişlikli pozitif ileri yönlü bir onaylama işlemi tanımlar:  
   
@@ -307,7 +307,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
 |`\w+`|Bir veya daha fazla sözcük karakteri eşleştir.|  
 |`(?=\sis\b)`|Sözcük karakterlerinin ardından bir boşluk karakteri ve "olup olmadığını" dizesinin bir sözcük sınırı üzerinde bittiğini belirleme. Öyleyse, eşleşme başarılı olur.|  
   
-<a name="zerowidth_negative_lookahead_assertion"></a>   
+<a name="zerowidth_negative_lookahead_assertion"></a>
 ## <a name="zero-width-negative-lookahead-assertions"></a>Sıfır Genişlik Negatif İleriye Yönelik Onaylar  
  Aşağıdaki gruplandırma yapısı sıfır Genişlik negatif ileriye yönelik bir onaylama tanımlar:  
   
@@ -345,7 +345,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
 |`\b`|Eşlemeyi bir sözcük sınırında sonlandır.|  
 |`\p{P})`|Sonraki karakter bir noktalama simgesi (nokta veya virgül gibi) değilse, eşleşme başarılı olur.|  
   
-<a name="zerowidth_positive_lookbehind_assertion"></a>   
+<a name="zerowidth_positive_lookbehind_assertion"></a>
 ## <a name="zero-width-positive-lookbehind-assertions"></a>Sıfır Genişlik Pozitif Geriye Yönelik Onaylar  
  Aşağıdaki gruplandırma yapısı sıfır genişlikli pozitif geriye yönelik bir onaylama işlemi tanımlar:  
   
@@ -370,7 +370,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Sıfır genişlikli pozitif geriye yönelik onaylar Ayrıca, yakalanan bir gruptaki son karakter veya karakterlerin, bu grubun normal ifade düzeniyle eşleşen karakterlerin bir alt kümesi olması gerektiğinde geri izlemeyi sınırlandırmak için de kullanılır. Örneğin, bir grup tüm ardışık kelime karakterlerini yakaladığında, son karakterin alfabetik olmasını gerektirmek için sıfır genişlikli pozitif geriye yönelik bir onaylama işlemi kullanabilirsiniz.  
   
-<a name="zerowidth_negative_lookbehind_assertion"></a>   
+<a name="zerowidth_negative_lookbehind_assertion"></a>
 ## <a name="zero-width-negative-lookbehind-assertions"></a>Sıfır Genişlik Negatif Geriye Yönelik Onaylar  
  Aşağıdaki gruplandırma yapısı sıfır Genişlik negatif geriye yönelik bir onaylama işlemi tanımlar:  
   
@@ -395,7 +395,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
 |`\d{4}\b`|Dört ondalık basamağı eşleştirin ve eşleşmeyi bir sözcük sınırında sonlandırın.|  
 |<code>(?<!(Saturday&#124;Sunday) )</code>|Eşleşmeden önce "Cumartesi" veya "Pazar" dizelerinden sonra bir boşluk gelmesi durumunda eşleşme başarılı olur.|  
   
-<a name="atomic_groups"></a>   
+<a name="atomic_groups"></a>
 ## <a name="atomic-groups"></a>Atomik gruplar  
  Aşağıdaki gruplandırma yapısı bir atomik grubu temsil eder (diğer bazı normal ifade altyapılarında geri alma olmayan alt ifade, atomik alt ifade veya yalnızca bir kez alt ifade olarak bilinir):
   
@@ -424,7 +424,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
 |`\b`|Eşleşmeyi bir sözcük sınırında sonlandır.|  
 |`(?>(\w)\1+)`|Yinelenen bir sözcük karakterinin bir veya daha fazla tekrarı ile eşleşir, ancak bir sözcük sınırının son karakteriyle eşleşecek şekilde geri izlememeyin.|  
   
-<a name="Objects"></a>   
+<a name="Objects"></a>
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>Yapıları ve Normal İfade Nesnelerini Gruplandırma  
  Normal bir ifade yakalama grubuyla eşleşen alt dizeler, <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> özelliği tarafından döndürülen <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> nesnesinden alınabilecek <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> nesneleri tarafından temsil edilir. <xref:System.Text.RegularExpressions.GroupCollection> nesnesi aşağıdaki gibi doldurulur:  
   

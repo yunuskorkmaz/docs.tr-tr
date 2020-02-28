@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 4a6c8b27812e9f60e52132169dda0464c24abcc2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 0aa323533dd9136372c2bbc330c9c3056fdf428c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740573"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157577"
 ---
 # <a name="install-the-net-core-sdk"></a>.NET Core SDK 'i yükler
 
@@ -36,6 +36,19 @@ macOS, .NET Core 3,1 SDK 'sını yüklemek için kullanılabilecek tek başına 
 
 - [x64 (64-bit) CPU 'Lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
+## <a name="download-and-manually-install"></a>İndirme ve el ile yükleme
+
+.NET Core için macOS yükleyicilerine alternatif olarak SDK 'yı indirip el ile yükleyebilirsiniz.
+
+SDK 'Yı ayıklamak ve .NET Core CLI komutlarının terminalde kullanılabilir hale getirmek için önce bir .NET Core ikili sürümü [indirin](#all-net-core-downloads) . Ardından, bir Terminal açın ve aşağıdaki komutları çalıştırın. Çalışma zamanının `~/Downloads/dotnet-sdk.pkg` dosyasına indirildiği varsayılır.
+
+```bash
+mkdir -p $HOME/dotnet
+sudo installer -pkg ~/Downloads/dotnet-sdk.pkg -target $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
+
 ::: zone-end
 
 ::: zone pivot="os-linux"
@@ -59,7 +72,7 @@ export PATH=$PATH:$HOME/dotnet
 > [!TIP]
 > Yukarıdaki `export` komutları yalnızca .NET Core CLI komutlarını çalıştırıldığı terminal oturumu için kullanılabilir hale getirir.
 >
-> Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örneğin:
+> Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örnek:
 >
 > - **Bash kabuğu**: *~/. bash_profile*, *~/,bashrc*
 > - **Korn kabuğu**: *~/,KSHRC* veya *. Profile*
@@ -86,7 +99,7 @@ export PATH=$PATH:$HOME/dotnet
 
 Visual Studio zaten yüklüyse, aşağıdaki adımlarla sürümünüzü kontrol edebilirsiniz.
 
-01. Visual Studio'yu açın.
+01. Visual Studio’yu açın.
 01. **Microsoft Visual Studio hakkında** **Yardım** > seçin.
 01. **Hakkında** iletişim kutusunda sürüm numarasını okuyun.
 
@@ -104,6 +117,25 @@ Visual Studio 'Yu yüklerken veya değiştirirken, oluşturmakta olduğunuz uygu
 - **Masaüstü & mobil** bölümündeki **.net masaüstü geliştirme** iş yükü.
 
 [.NET Core iş yüküne sahip Windows Visual Studio 2019 ![](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)
+
+## <a name="download-and-manually-install"></a>İndirme ve el ile yükleme
+
+Çalışma zamanını ayıklamak ve .NET Core CLI komutlarının terminalde kullanılabilir hale getirmek için önce bir .NET Core ikili sürümü [indirin](#all-net-core-downloads) . Ardından, yüklemek için bir dizin oluşturun, örneğin `%USERPROFILE%\dotnet`. Son olarak, indirilen ZIP dosyasını bu dizine ayıklayın.
+
+Varsayılan olarak, .NET Core CLI komutları ve uygulamalar .NET Core 'u bu şekilde kullanmaz. Açıkça kullanmayı tercih etmeniz gerekir. Bunu yapmak için, bir uygulamanın başlatıldığı ortam değişkenlerini değiştirin:
+
+```console
+set DOTNET_ROOT=%USERPROFILE%\dotnet
+set PATH=%USERPROFILE%\dotnet;%PATH%
+```
+
+Bu yaklaşım, farklı konumlara birden çok sürüm yüklemenize olanak sağlar ve ardından uygulamayı o konuma işaret eden ortam değişkenleriyle çalıştırarak uygulamanın kullanması gereken yüklemeyi açıkça seçebilirsiniz.
+
+Bu ortam değişkenleri ayarlansa bile, .NET Core uygulamayı çalıştırmak için en iyi çerçeveyi seçerken varsayılan genel yüklemesi konumunu yine de dikkate alır. Varsayılan değer genellikle yükleyicilerin kullanacağı `C:\Program Files\dotnet`. Çalışma zamanına yalnızca bu ortam değişkenini de ayarlayarak özel bir yüklemede kullanmak üzere talimat verebilirsiniz:
+
+```console
+set DOTNET_MULTILEVEL_LOOKUP=0
+```
 
 ::: zone-end
 
@@ -186,6 +218,7 @@ Bir Docker kapsayıcısında .NET Core kullanma hakkında daha fazla bilgi için
 
 ::: zone pivot="os-macos"
 
+- [MacOS Catalina Ile çalışma](macos-notarization-issues.md).
 - [Öğretici: macOS 'u kullanmaya](../tutorials/using-on-mac-vs.md)başlayın.
 - [Öğretici: Visual Studio Code yeni bir uygulama oluşturun](../tutorials/with-visual-studio-code.md).
 - [Öğretici: bir .NET Core uygulamasını Kapsayıize](../docker/build-container.md)edin.

@@ -3,12 +3,12 @@ title: .NET Sözlüğü
 description: .NET belgelerinde kullanılan seçili koşulların anlamını öğrenin.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 822d6c9513d49dcc6bc57421003441d9bcc7c281
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921118"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160098"
 ---
 # <a name="net-glossary"></a>.NET Sözlüğü
 
@@ -22,15 +22,15 @@ Sonraki süre derleyicisi.
 
 Bkz. [Corert](#corert) ve [.NET Native](#net-native).
 
-## <a name="aspnet"></a>ASP.NET 
+## <a name="aspnet"></a>ASP.NET
 
 .NET Framework ile birlikte gelen özgün ASP.NET uygulamasıdır.
 
-Bazen ASP.NET, ASP.NET Core dahil olmak üzere hem ASP.NET uygulamalarına başvuran bir şemsiye terimidir. Belirli bir örnekte yer alan dönemin, bağlam tarafından belirlendiği anlamı. Her iki uygulamayı da belirtmek için ASP.NET kullanmadığınız net bir ASP.NET 4. x öğesine başvurun. 
+Bazen ASP.NET, ASP.NET Core dahil olmak üzere hem ASP.NET uygulamalarına başvuran bir şemsiye terimidir. Belirli bir örnekte yer alan dönemin, bağlam tarafından belirlendiği anlamı. Her iki uygulamayı da belirtmek için ASP.NET kullanmadığınız net bir ASP.NET 4. x öğesine başvurun.
 
 Bkz. [ASP.net belgeleri](/aspnet/#pivot=aspnet).
 
-## <a name="aspnet-core"></a>ASP.NET Core
+## <a name="aspnet-core"></a>ASP.NET Çekirdeği
 
 .NET Core üzerinde oluşturulan ASP.NET platformlar arası, yüksek performanslı, açık kaynaklı bir uygulama.
 
@@ -78,7 +78,7 @@ Belirli bir teknoloji için uygulama derlemek ve çalıştırmak için kullanıl
 
 ".NET ekosistemi" terimi, üçüncü taraf uygulama ve kitaplıkları dahil olmak üzere ".NET Stack" gibi benzer terimlerden farklıdır. Tümcede bir örnek aşağıda verilmiştir:
 
-- " [.NET Standard](#net-standard) arkasındaki mosyon, .net ekosisteminde daha fazla esneklik sağlamak." 
+- " [.NET Standard](#net-standard) arkasındaki mosyon, .net ekosisteminde daha fazla esneklik sağlamak."
 
 ## <a name="framework"></a>çerçeve
 
@@ -96,11 +96,11 @@ Mevcut belgelerde, "Framework" Bazen bir [.NET uygulamasını](#implementation-o
 
 Çöp toplayıcı.
 
-Çöp toplayıcı, otomatik bellek yönetiminin bir uygulamasıdır.  GC, artık kullanılmayan nesnelerin kapladığı belleği serbest bırakır. 
+Çöp toplayıcı, otomatik bellek yönetiminin bir uygulamasıdır.  GC, artık kullanılmayan nesnelerin kapladığı belleği serbest bırakır.
 
 Bkz. [çöp toplama](garbage-collection/index.md).
 
-## <a name="il"></a>DEMIRYOLU
+## <a name="il"></a>IL
 
 Ara dil.
 
@@ -157,7 +157,7 @@ Mono hakkında daha fazla bilgi edinmek için [mono belgelerine](https://www.mon
 
 Bkz. [.net Kılavuzu](index.md)
 
-## <a name="net-core"></a>.NET Core 
+## <a name="net-core"></a>.NET Core
 
 .NET için platformlar arası, yüksek performanslı, açık kaynaklı bir uygulama. Çekirdek ortak dil çalışma zamanını (CoreCLR), çekirdek AOT çalışma zamanını (, geliştirme sırasında CoreRT), çekirdek temel sınıf kitaplığını ve temel SDK 'Yı içerir.
 
@@ -217,7 +217,7 @@ Windows, macOS, Linux, iOS ve Android gibi bir işletim sistemi ve üzerinde ça
 
 Cümlelerde kullanım örnekleri aşağıda verilmiştir:
 
-- ".NET Core, .NET 'in platformlar arası bir uygulamasıdır." 
+- ".NET Core, .NET 'in platformlar arası bir uygulamasıdır."
 - "PCL profilleri Microsoft platformlarını temsil ederken .NET Standard platforma göre belirsizdir."
 
 .NET belgeleri, .NET veya .NET Stack 'in tüm uygulamalar dahil bir uygulamasını ifade etmek için sık sık ".NET platformu" kullanır. Bu kullanımların her ikisi de birincil (OS/donanım) anlamı ile karıştırılmamalıdır. bu nedenle, bu kullanımları belgelerden ortadan kaldırmaya planlanıyoruz.
@@ -239,13 +239,13 @@ Yönetilen programın yürütme ortamı.
 - "Birden çok çalışma zamanında çalıştırılması amaçlanan kitaplıkların bu çerçeveyi hedeflemesi gerekir." (.NET Standard başvurma)
 - "Çeşitli .NET çalışma zamanları .NET Standard belirli sürümlerini uygular. … Her .NET çalışma zamanı sürümü, desteklediği en yüksek .NET Standard sürümünü tanıtır... "
 
-Bu tutarsız kullanımı ortadan kaldırmaya planlıyoruz. 
+Bu tutarsız kullanımı ortadan kaldırmaya planlıyoruz.
 
 ## <a name="stack"></a>yığın
 
 Uygulamaları derlemek ve çalıştırmak için birlikte kullanılan bir programlama teknolojileri kümesi.
 
-".NET Stack" .NET Standard ve tüm .NET uygulamalarını ifade eder. "A .NET Stack" ifadesi bir .NET uygulamasına başvurabilir. 
+".NET Stack" .NET Standard ve tüm .NET uygulamalarını ifade eder. "A .NET Stack" ifadesi bir .NET uygulamasına başvurabilir.
 
 ## <a name="target-framework"></a>Hedef çerçeve
 

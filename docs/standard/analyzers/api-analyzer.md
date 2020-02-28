@@ -4,12 +4,12 @@ description: .NET API Çözümleyicisi 'nin kullanım dışı API 'Leri ve platf
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: f6cf2d8109c564447972afd18c6d6d587711304b
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: e214c91f2beebc7f3b3324f4879deba9a5623f86
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542630"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156140"
 ---
 # <a name="net-api-analyzer"></a>.NET API Çözümleyicisi
 
@@ -38,7 +38,7 @@ API Çözümleyicisi, tek tek uyarıların görüntülenmesi üzerinde denetime 
 
 ### <a name="add-the-api-analyzer-to-your-project"></a>Projenize API Çözümleyicisi ekleme
 
-1. Visual Studio'yu açın.
+1. Visual Studio’yu açın.
 2. Çözümleyiciyi çalıştırmak istediğiniz projeyi açın.
 3. **Çözüm Gezgini**, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. (Bu seçenek, **Proje** menüsünden de kullanılabilir.)
 4. NuGet Paket Yöneticisi sekmesinde:
@@ -47,7 +47,7 @@ API Çözümleyicisi, tek tek uyarıların görüntülenmesi üzerinde denetime 
    3. **Yayın öncesi Ekle**' yi seçin.
    4. **Microsoft. DotNet. çözümleyiciler**için arama yapın. uyumluluk.
    5. Listeden bu paketi seçin.
-   6. **Install** düğmesini seçin. 
+   6. **Install** düğmesini seçin.
    7. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin.
 
 ### <a name="use-the-api-analyzer"></a>API Çözümleyicisi 'ni kullanma
@@ -56,13 +56,13 @@ API Çözümleyicisi, tek tek uyarıların görüntülenmesi üzerinde denetime 
 
 !["Yeşil dalgalı çizgili ve sol tarafta açık ampul içeren WebClient API ekran görüntüsü"](media/api-analyzer/green-squiggle.jpg)
 
-**Hata listesi** penceresinde, aşağıdaki örnekte gösterildiği gibi KULLANıMDAN kaldırılan API başına BENZERSIZ bir kimliğe sahip uyarılar bulunur (`DE004`): 
+**Hata listesi** penceresinde, aşağıdaki örnekte gösterildiği gibi KULLANıMDAN kaldırılan API başına BENZERSIZ bir kimliğe sahip uyarılar bulunur (`DE004`):
 
 !["Uyarının KIMLIĞINI ve açıklamasını gösteren Hata Listesi penceresinin ekran görüntüsü"](media/api-analyzer/warnings-id-and-descriptions.jpg "Uyarıları içeren Hata Listesi pencere.")
 
 KIMLIĞE tıkladığınızda, API 'nin neden kullanım dışı olduğuna ilişkin ayrıntılı bilgiler ve kullanılabilecek alternatif API 'Ler ile ilgili öneriler içeren bir Web sayfasına gidebilirsiniz.
 
-Vurgulanan üyeye sağ tıklayıp **\<tanılama kimliği > Gizle**' yi seçerek herhangi bir uyarı gizlenebilir. Uyarıları basmanın iki yolu vardır: 
+Vurgulanan üyeye sağ tıklayıp **\<tanılama kimliği > Gizle**' yi seçerek herhangi bir uyarı gizlenebilir. Uyarıları basmanın iki yolu vardır:
 
 - [Yerel olarak (kaynakta)](#suppress-warnings-locally)
 - [küresel olarak (bir gizleme dosyasında)](#suppress-warnings-globally) önerilir

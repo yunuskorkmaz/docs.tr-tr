@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 87436b7d9e2041afb14b146ae0c16201c8593154
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b33366922677b26f8fe99454206cacd5bb124f32
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348289"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159279"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Özel tarih ve saat biçim dizeleri
 
@@ -30,7 +30,7 @@ Tarih ve saat biçimi dizesi, biçimlendirme işleminden kaynaklanan bir <xref:S
 
 Özel tarih ve saat biçim dizeleri, hem <xref:System.DateTime> hem de <xref:System.DateTimeOffset> değerleriyle birlikte kullanılabilir.
 
-[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)] 
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)]
 
 <a name="table"></a>Biçimlendirme işlemlerinde, özel tarih ve saat biçim dizeleri, bir tarih ve saat örneğinin `ToString` yöntemiyle ya da bileşik biçimlendirmeyi destekleyen bir yöntemle kullanılabilir. Aşağıdaki örnek her iki kullanımı da gösterir.
 
@@ -398,7 +398,7 @@ Aşağıdaki örnek bir özel biçim dizesinde "M" özel biçim belirticisini i�
 [!code-csharp[Formatting.DateAndTime.Custom#11](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#11)]
 [!code-vb[Formatting.DateAndTime.Custom#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#11)]
 
-[Tabloya dön](#table) 
+[Tabloya dön](#table)
 
 ## <a name="MM_Specifier"></a>"MM" Özel Biçim belirleyicisi
 
@@ -627,10 +627,10 @@ Aşağıdaki örnek bir özel biçim dizesinde "zzz" özel biçim belirticisini 
 
 ||||||
 |-|-|-|-|-|
-|F|H|K|M|{1&gt;d&lt;1}|
-|f|G|h|m|s|
-|t|{1&gt;y&lt;1}|z|%|:|
-|/|"|'|&#92;||
+|F|H|K|M|d|
+|vadeli|G|h|m|s|
+|t|y|z|%|:|
+|/|depolama hesabında ayarlanan Yaşam Döngüsü Yönetimi İlkesinden dolayı otomatik olarak arşiv katmanına geri geçirilecek"|'|&#92;||
 
 Tüm diğer karakterler her zaman karakter değişmezleri olarak yorumlanır ve bir biçimlendirme işleminde, sonuç dizesine değiştirilmeden dahil edilir.  Bir ayrıştırma işleminde, giriş dizesindeki karakterlerle tam olarak eşleşmesi gerekir; Karşılaştırma büyük/küçük harfe duyarlıdır.
 

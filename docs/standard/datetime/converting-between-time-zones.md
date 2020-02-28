@@ -12,12 +12,12 @@ helpviewer_keywords:
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-ms.openlocfilehash: d0b38523f054598ba6fb1f05a0183bc4ccff2120
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fbb59dbe364763209f44a4e2241d1d5275036c40
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132559"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156029"
 ---
 # <a name="converting-times-between-time-zones"></a>Saatleri saat dilimleri arasında dönüştürme
 
@@ -109,7 +109,7 @@ Aşağıdaki örnek, Haian standart saatinden yerel saate dönüştürmek için 
 Örneğin, bir Web sayfası için Kullanıcı isteğinin tarih ve saati biliniyorsa ve aa/gg/yyyy HH: mm: ss zzzz biçiminde bir dize olarak serileştirildiğinde aşağıdaki `ReturnTimeOnServer` yöntemi bu tarih ve saat değerini Web sunucusundaki tarih ve saate dönüştürür.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/TimeConversions.cs#1)]
-[!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions.vb#1)] 
+[!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions.vb#1)]
 
 Yöntem UTC 'den beş saat dilimde tarih ve saati bir kez geçir9/1/2007 5:32:07 -05:00 Tiyse, ABD Pasifik standart saat diliminde bulunan bir sunucu için 9/1/2007 3:32:07 ÖÖ-07:00 döndürür.
 

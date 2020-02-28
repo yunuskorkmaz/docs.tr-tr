@@ -15,24 +15,24 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: 66a4945f536c2f30d61a878e6449a6b0f6b45f22
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bdbe267bb178e90c0008422e6543a23178c2c4d8
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132889"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159994"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>.NET 'teki Dizelerdeki karakterleri kırpma ve kaldırma
 Bir tümceyi tek tek sözcüklere ayrıştırdıysanız, sözcüğün her iki ucunda da boşluk olan (boşluk da denir) sözcüklerden oluşan sözcüklerle karşılaşabilirsiniz. Bu durumda, dizedeki belirli bir konumdan herhangi bir sayıda boşluğu veya diğer karakteri kaldırmak için **System. String** sınıfındaki trim yöntemlerinden birini kullanabilirsiniz. Aşağıdaki tabloda kullanılabilir kırpma yöntemleri açıklanmaktadır.  
   
-|Yöntem adı|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|  
+|Yöntem adı|Kullanım|  
 |-----------------|---------|  
 |<xref:System.String.Trim%2A?displayProperty=nameWithType>|Bir dizenin başındaki ve sonundaki karakter dizisinde belirtilen boşluk veya karakterleri kaldırır.|  
 |<xref:System.String.TrimEnd%2A?displayProperty=nameWithType>|Bir dizenin sonundaki karakter dizisinde belirtilen karakterleri kaldırır.|  
 |<xref:System.String.TrimStart%2A?displayProperty=nameWithType>|Bir karakter dizisinde belirtilen karakterleri dizenin başından kaldırır.|  
 |<xref:System.String.Remove%2A?displayProperty=nameWithType>|Bir dizedeki belirtilen dizin konumundan belirtilen sayıda karakteri kaldırır.|  
   
-## <a name="trim"></a>Kırpma
+## <a name="trim"></a>kırpma
 
  Aşağıdaki örnekte gösterildiği gibi, <xref:System.String.Trim%2A?displayProperty=nameWithType> yöntemini kullanarak, bir dizenin her iki ucunda da kolayca beyaz boşluk çıkarabilirsiniz.  
   
@@ -77,7 +77,7 @@ Bir tümceyi tek tek sözcüklere ayrıştırdıysanız, sözcüğün her iki uc
   
  Bu kod konsola `World!` görüntüler.  
   
-## <a name="remove"></a>Kaldır 
+## <a name="remove"></a>Kaldır
 
  <xref:System.String.Remove%2A?displayProperty=nameWithType> yöntemi, varolan bir dizedeki belirli bir konumda başlayan belirtilen sayıda karakteri kaldırır. Bu yöntem sıfır tabanlı bir dizini varsayar.  
   
@@ -87,7 +87,7 @@ Bir tümceyi tek tek sözcüklere ayrıştırdıysanız, sözcüğün her iki uc
  [!code-csharp[Conceptual.String.BasicOps#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#21)]
  [!code-vb[Conceptual.String.BasicOps#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#21)]  
   
-## <a name="replace"></a>değiştirin
+## <a name="replace"></a>Değiştir
 
  Ayrıca, <xref:System.String.Replace%28System.String%2CSystem.String%29?displayProperty=nameWithType> yöntemini çağırarak ve değiştirme olarak boş bir dize (<xref:System.String.Empty?displayProperty=nameWithType>) belirterek, bir dizeden belirtilen bir karakteri veya alt dizeyi kaldırabilirsiniz. Aşağıdaki örnek bir dizeden tüm virgülleri kaldırır.  
   

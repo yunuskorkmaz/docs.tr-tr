@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-ms.openlocfilehash: d409c0e9a2a6564e5fb16e4e2c72ab661ae2d5ce
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 30af18b7d7b86621586c7da66eda1b37356d5565
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706168"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159786"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>Nasıl yapılır: WindowsPrincipal Nesnesi Oluşturma
 Kodun, tekrar tekrar rol tabanlı doğrulama yapıp gerçekleştirmeyeceğini veya yalnızca bir kez yerine getirmeniz gerektiğini bağlı olarak, <xref:System.Security.Principal.WindowsPrincipal> nesnesi oluşturmanın iki yolu vardır.  
@@ -40,13 +40,13 @@ Kodun, tekrar tekrar rol tabanlı doğrulama yapıp gerçekleştirmeyeceğini ve
 2. İlke kümesiyle, geçerli Windows kullanıcısını kapsülleyen sorumluyu almak için statik <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> özelliğini kullanın. Özellik dönüş türü <xref:System.Security.Principal.IPrincipal>olduğundan, sonucu bir <xref:System.Security.Principal.WindowsPrincipal> türüne atamalısınız. Aşağıdaki kod, geçerli iş parçacığıyla ilişkili asıl değerin değerine yeni bir <xref:System.Security.Principal.WindowsPrincipal> nesnesi başlatır.  
   
     ```csharp  
-    WindowsPrincipal myPrincipal =   
+    WindowsPrincipal myPrincipal =
         (WindowsPrincipal) Thread.CurrentPrincipal;  
     ```  
   
     ```vb  
     Dim myPrincipal As WindowsPrincipal = _  
-        CType(Thread.CurrentPrincipal, WindowsPrincipal)   
+        CType(Thread.CurrentPrincipal, WindowsPrincipal)
     ```  
   
 3. Asıl nesne oluşturulduğunda, doğrulamak için birkaç yöntemden birini kullanabilirsiniz.  

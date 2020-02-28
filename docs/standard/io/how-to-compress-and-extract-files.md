@@ -10,12 +10,12 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: 6345b467e9ade085a38de6dc9758b1bd99d1ae62
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5aa25e265ed6ffb613e9916414c6f2335a4aaf57
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708108"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159383"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Nasıl yapılır: dosyaları sıkıştırma ve ayıklama
 
@@ -31,9 +31,9 @@ Aşağıdaki örneklerde, sıkıştırılmış dosyalarla gerçekleştirebilece�
 
 ## <a name="example-1-create-and-extract-a-zip-file"></a>Örnek 1: bir. zip dosyası oluşturma ve ayıklama
 
-Aşağıdaki örnek, <xref:System.IO.Compression.ZipFile> sınıfını kullanarak sıkıştırılmış bir *. zip* dosyası oluşturmayı ve ayıklamayı gösterir. Örnek, bir klasörün içeriğini yeni bir *. zip* dosyasına sıkıştırır ve sonra zip 'i yeni bir klasöre ayıklar. 
+Aşağıdaki örnek, <xref:System.IO.Compression.ZipFile> sınıfını kullanarak sıkıştırılmış bir *. zip* dosyası oluşturmayı ve ayıklamayı gösterir. Örnek, bir klasörün içeriğini yeni bir *. zip* dosyasına sıkıştırır ve sonra zip 'i yeni bir klasöre ayıklar.
 
-Örneği çalıştırmak için, program klasörünüzde bir *Başlangıç* klasörü oluşturun ve dosyaları ZIP 'e göre doldurun. 
+Örneği çalıştırmak için, program klasörünüzde bir *Başlangıç* klasörü oluşturun ve dosyaları ZIP 'e göre doldurun.
 
 "ZipFile" adı geçerli bağlamda mevcut değil, "derleme hatası" varsa, projenize `System.IO.Compression.FileSystem` derlemesine bir başvuru ekleyin.
 
@@ -42,13 +42,13 @@ Aşağıdaki örnek, <xref:System.IO.Compression.ZipFile> sınıfını kullanara
 
 ## <a name="example-2-extract-specific-file-extensions"></a>Örnek 2: belirli dosya uzantılarını ayıklama
 
-Sonraki örnek, var olan bir *. zip* dosyasının içeriği boyunca yinelenir ve *. txt* uzantısına sahip dosyaları ayıklar. ZIP 'e erişmek için <xref:System.IO.Compression.ZipArchive> sınıfını ve tek tek girdileri incelemek için <xref:System.IO.Compression.ZipArchiveEntry> sınıfını kullanır. <xref:System.IO.Compression.ZipArchiveEntry> nesnesi için <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> genişletme yöntemi <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> sınıfında kullanılabilir. 
+Sonraki örnek, var olan bir *. zip* dosyasının içeriği boyunca yinelenir ve *. txt* uzantısına sahip dosyaları ayıklar. ZIP 'e erişmek için <xref:System.IO.Compression.ZipArchive> sınıfını ve tek tek girdileri incelemek için <xref:System.IO.Compression.ZipArchiveEntry> sınıfını kullanır. <xref:System.IO.Compression.ZipArchiveEntry> nesnesi için <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> genişletme yöntemi <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> sınıfında kullanılabilir.
 
-Örneği çalıştırmak için program klasörünüze *Result. zip* adlı bir *. zip* dosyası yerleştirin. İstendiğinde, ' a Ayıklanacak bir klasör adı belirtin. 
+Örneği çalıştırmak için program klasörünüze *Result. zip* adlı bir *. zip* dosyası yerleştirin. İstendiğinde, ' a Ayıklanacak bir klasör adı belirtin.
 
 "ZipFile" adı geçerli bağlamda mevcut değil, "derleme hatası" varsa, projenize `System.IO.Compression.FileSystem` derlemesine bir başvuru ekleyin.
 
-"' ZipArchive ' türü, başvurulmayan bir derlemede tanımlanmıştır," `System.IO.Compression` derlemesine bir başvuru ekleyin. 
+"' ZipArchive ' türü, başvurulmayan bir derlemede tanımlanmıştır," `System.IO.Compression` derlemesine bir başvuru ekleyin.
 
 > [!IMPORTANT]
 > Dosyaları kaldırdığınızda, geri yüklediğiniz dizinden çıkmak için kötü amaçlı dosya yolları araması yapmanız gerekir. Bu, yol çapraz geçişi saldırısı olarak bilinir. Aşağıdaki örnek, kötü amaçlı dosya yollarının nasıl denetleyeceğinizi ve sıkıştırmayı açmak için güvenli bir yol sağlar.

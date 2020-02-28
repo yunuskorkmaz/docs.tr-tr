@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 60794c4f8a5f9aeb7a4b3cd58c0c9f00e03fa9e7
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 6e85c2c3e796ae59a13f944bd4913e4b7316c56a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450986"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156575"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
@@ -54,12 +54,40 @@ Visual Studio kullanıyorsanız, Visual Studio 2017 **.NET Standard 2,1** veya *
 
 ### <a name="default-executables"></a>Varsayılan yürütülebilir dosyalar
 
-.NET Core artık [çerçeveye bağlı yürütülebilir dosyaları](../deploying/index.md#publish-runtime-dependent) varsayılan olarak oluşturur. Bu davranış, .NET Core 'un küresel olarak yüklenen bir sürümünü kullanan uygulamalar için yenidir. Daha önce yalnızca [kendi kendine kapsanan dağıtımlar](../deploying/index.md#publish-self-contained) yürütülebilir bir dosya üretecektir.
+.NET Core artık [çalışma zamanına bağımlı yürütülebilir dosyaları](../deploying/index.md#publish-runtime-dependent) varsayılan olarak oluşturur. Bu davranış, .NET Core 'un küresel olarak yüklenen bir sürümünü kullanan uygulamalar için yenidir. Daha önce yalnızca [kendi kendine kapsanan dağıtımlar](../deploying/index.md#publish-self-contained) yürütülebilir bir dosya üretecektir.
 
-`dotnet build` veya `dotnet publish`sırasında, kullanmakta olduğunuz SDK ortamı ve platformuyla eşleşen bir yürütülebilir dosya oluşturulur. Bu yürütülebilir dosyalarla aynı şeyleri, diğer yerel yürütülebilir dosyaları gibi bekleyebilir, örneğin:
+`dotnet build` veya `dotnet publish`sırasında, kullanmakta olduğunuz SDK ortamı ve platformuyla eşleşen bir çalıştırılabilir ( **appHost**olarak bilinir) oluşturulur. Bu yürütülebilir dosyalarla aynı şeyleri, diğer yerel yürütülebilir dosyaları gibi bekleyebilir, örneğin:
 
 - Yürütülebilir dosyaya çift tıklayabilirsiniz.
 - Uygulamayı Windows üzerinde `myapp.exe`, Linux ve macOS 'ta `./myapp` gibi doğrudan bir komut isteminden başlatabilirsiniz.
+
+### <a name="macos-apphost-and-notarization"></a>macOS appHost ve notarlama
+
+*yalnızca macOS*
+
+MacOS için .NET Core SDK 3,0 ' den başlayarak, varsayılan bir yürütülebilir dosya (appHost olarak bilinir) oluşturma ayarı varsayılan olarak devre dışıdır. Daha fazla bilgi için bkz. [MacOS Catalina Notarleştirme ve .NET Core indirmeleri ve projeleri üzerindeki etki](../install/macos-notarization-issues.md).
+
+AppHost ayarı etkinleştirildiğinde, .NET Core, oluşturduğunuzda veya yayımladığınızda yerel bir MAK-O çalıştırılabilir dosyası oluşturur. Uygulamanız, `dotnet run` komutuyla kaynak koddan çalıştırıldığında veya mak-O yürütülebilir dosyasını doğrudan başlatarak appHost bağlamında çalışır.
+
+AppHost olmadan, bir kullanıcıya [çalışma zamanına bağımlı](../deploying/index.md#publish-runtime-dependent) bir uygulama başlatabilir tek yol `dotnet <filename.dll>` komuttur. Uygulamanızı [kendi içinde](../deploying/index.md#publish-self-contained)yayımladığınızda her zaman bir appHost oluşturulur.
+
+AppHost 'yi proje düzeyinde yapılandırabilir ya da `-p:UseAppHost` parametresiyle belirli bir `dotnet` komutu için appHost ' yi değiştirebilirsiniz:
+
+- Proje dosyası
+
+  ```xml
+  <PropertyGroup>
+    <UseAppHost>true</UseAppHost>
+  </PropertyGroup>
+  ```
+
+- Komut satırı parametresi
+
+  ```dotnetcli
+  dotnet run -p:UseAppHost=true
+  ```
+
+`UseAppHost` ayarı hakkında daha fazla bilgi için bkz. [Microsoft. net. SDK Için MSBuild özellikleri](../project-sdk/msbuild-props.md#useapphost).
 
 ### <a name="single-file-executables"></a>Tek dosya yürütülebilir dosyaları
 
@@ -74,7 +102,7 @@ Tek dosya yürütülebiliri yayımlamak için, projenizdeki `PublishSingleFile` 
 </PropertyGroup>
 ```
 
-veya
+-veya-
 
 ```dotnetcli
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
@@ -482,7 +510,7 @@ Daha fazla bilgi için bkz. [.NET platformu bağımlı iç](https://github.com/d
 
 ### <a name="improved-net-core-version-apis"></a>Geliştirilmiş .NET Core sürümü API 'Leri
 
-.NET Core 3.0 ile başlayarak, .NET Core ile birlikte sunulan sürüm API 'Leri artık istediğiniz bilgileri döndürür. Örneğin:
+.NET Core 3.0 ile başlayarak, .NET Core ile birlikte sunulan sürüm API 'Leri artık istediğiniz bilgileri döndürür. Örnek:
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");

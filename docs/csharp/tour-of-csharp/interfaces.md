@@ -1,14 +1,14 @@
 ---
 title: C#Arabirimler- C# dilin turu
 description: İçindeki türler tarafından uygulanan sözleşmeleri tanımlayan arabirimlerC#
-ms.date: 08/10/2016
+ms.date: 02/27/2020
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-ms.openlocfilehash: d10d9f69cebe9a05cdff9b9ff5d817237bf8c56f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 62d94462fa481379cf70d63a598deb7f36be204f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346835"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159136"
 ---
 # <a name="interfaces"></a>Arabirimler
 
@@ -26,7 +26,7 @@ Bir sınıf veya yapı belirli bir arabirimi uygularsa, bu sınıfın veya yapı
 
 [!code-csharp[InterfacesThree](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L33-L35)]
 
-Bir örneğin belirli bir arabirimi uygulamak üzere statik olarak bilinmediği durumlarda dinamik tür atamaları kullanılabilir. Örneğin, aşağıdaki deyimler bir nesnenin `IControl` ve `IDataBound` arabirim uygulamalarını almak için dinamik tür yayınları kullanır. Nesnenin çalışma zamanı gerçek türü `EditBox`olduğundan, yayınlar başarılı olur.
+Bir örneğin belirli bir arabirimi uygulamak için statik olarak bilinen bir durum olduğu durumlarda, dinamik tür atamaları kullanılabilir. Örneğin, aşağıdaki deyimler bir nesnenin `IControl` ve `IDataBound` arabirim uygulamalarını almak için dinamik tür yayınları kullanır. Nesnenin çalışma zamanı gerçek türü `EditBox`olduğundan, yayınlar başarılı olur.
 
 [!code-csharp[InterfacesFour](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L40-L42)]
 

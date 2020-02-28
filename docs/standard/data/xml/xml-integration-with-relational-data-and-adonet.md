@@ -3,12 +3,12 @@ title: İlişkisel Veriler ve ADO.NET ile XML Tümleştirmesi
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-ms.openlocfilehash: 373e28d1fffd8c47acb4acb70271db056aa3a27b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 30b788c77a2352d0d02ee772ab3f428381facd9f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709939"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155626"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>İlişkisel Veriler ve ADO.NET ile XML Tümleştirmesi
 **XmlDataDocument** sınıfı, **XmlDocument**'ın TÜRETILMIŞ bir sınıfıdır ve XML verisi içerir. **XmlDataDocument** 'in avantajı, ilişkisel ve hiyerarşik veriler arasında bir köprü sağlar. Bu, bir **veri kümesine** bağlanabilen ve iki sınıfta bulunan veriler üzerinde yapılan değişiklikleri eşitleyebileceğiniz bir **XmlDocument** . Bir **veri kümesine** bağlanan bir **XmlDocument** , XML 'nin ilişkisel verilerle tümleştirilmesine olanak tanır ve verilerinizin XML veya ilişkisel biçimde temsil edilebilmesi gerekmez. Her ikisini de yapabilirsiniz ve verilerin tek bir gösterimiyle sınırlandırmayın.  
@@ -27,7 +27,7 @@ ms.locfileid: "75709939"
   
  **XmlDataDocument** bir **XmlDocument**ÖĞESINDEN DEVRALıNDıĞıNDAN, W3C DOM uygulamasının bir uygulamasını sağlar. **XmlDataDocument** 'in ilişkilendirildiği ve içindeki verilerinin bir alt kümesini depoladığı olgu, bir **veri kümesi** herhangi bir şekilde bir **XmlDocument** olarak kullanımını kısıtlamaz veya değiştirmez. Bir **XmlDocument** kullanmak için yazılan kod, bir **XmlDataDocument**'e karşı değiştirilmeden çalışmaktadır. **Veri kümesi** , tabloları, sütunları, ilişkileri ve kısıtlamaları tanımlayarak aynı verilerin ilişkisel görünümünü sağlar ve tek başına, bellek içi kullanıcı veri deposudur.  
   
- Aşağıdaki çizimde XML verilerinde veri **kümesi** ve **XmlDataDocument**ile birlikte bulunan farklı ilişkilendirmeler gösterilmektedir: 
+ Aşağıdaki çizimde XML verilerinde veri **kümesi** ve **XmlDataDocument**ile birlikte bulunan farklı ilişkilendirmeler gösterilmektedir:
   
  ![XML veri kümesiyle farklı ilişkilendirmeleri gösteren diyagram.](./media/xml-integration-with-relational-data-and-adonet/xml-integration-relational-data-adodotnet.gif)  
   

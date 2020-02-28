@@ -2,15 +2,15 @@
 title: Model Oluşturucu Azure eğitim kaynakları
 description: Azure Machine Learning kaynaklar Kılavuzu
 ms.topic: reference
-ms.date: 02/25/2020
+ms.date: 02/27/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: a0a75283cdc7402c67b6bfb0799189fa34cd39a7
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 866fd5a90d13f85f2f8a1aa45ff0e1efb0096642
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77675207"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159305"
 ---
 # <a name="model-builder-azure-training-resources"></a>Model Oluşturucu Azure eğitim kaynakları
 
@@ -52,7 +52,7 @@ Bir Azure Machine Learning çalışma alanı oluşturmak için aşağıdakiler g
 
 ## <a name="training"></a>Eğitim
 
-Azure eğitimi yalnızca model Oluşturucu görüntü sınıflandırma senaryosu için kullanılabilir. Bu modelleri eğmek için kullanılan algoritma, ResNet50 mimarisini temel alan derin bir sinir ağı. Eğitim sırasında modeli eğitmek için gereken kaynaklar sağlanır ve model eğitilir. Bu işlem birkaç dakika sürer ve bu süre, seçilen işlem boyutuna ve veri miktarına bağlı olarak değişebilir. Visual Studio 'daki "geçerli çalışmayı Izle Azure portal" bağlantısını seçerek çalıştırmaların ilerlemesini izleyebilirsiniz.
+Azure eğitimi yalnızca model Oluşturucu görüntü sınıflandırma senaryosu için kullanılabilir. Bu modelleri eğmek için kullanılan algoritma, ResNet50 mimarisini temel alan derin bir sinir ağı. Eğitim süreci bir süre sürer ve zaman miktarı, seçilen işlem boyutuna ve veri miktarına bağlı olarak değişebilir. Bir modelin ilk eğitiminde, kaynakların sağlanması gerektiğinden biraz daha uzun bir eğitim süresi bekleyebilir. Visual Studio 'daki "geçerli çalışmayı Izle Azure portal" bağlantısını seçerek çalıştırmaların ilerlemesini izleyebilirsiniz.
 
 ## <a name="results"></a>Sonuçlar
 
@@ -64,12 +64,26 @@ Eğitim tamamlandıktan sonra, aşağıdaki son eklerle çözümünüze iki proj
   - en iyi model. onnx: Open sinir Network Exchange (ONNX) biçiminde modelin serileştirilmiş bir sürümü. ONNX, ML.NET, PyTorch ve TensorFlow gibi çerçeveler arasında birlikte çalışabilirliği destekleyen AI modelleri için açık bir kaynak biçimidir.
   - en iyi modelMap. JSON: model çıkışını bir metin kategorisine eşlemek için tahminleri yaparken kullanılan kategorilerin bir listesi.
   - MLModel. zip: ML.NET tahmin işlem hattının seri hale getirilmiş bir sürümü, tahmine dayalı hale getirmek için model *. onnx* , `bestModelMap.json` dosyası kullanarak çıkış ve eşleme yapmak için kullanılır.
-  
+
+## <a name="use-the-machine-learning-model"></a>Machine Learning modelini kullanma
+
+*Model* projesindeki `ModelInput` ve `ModelOutput` sınıfları, modelin beklenen giriş ve çıkış şemasını sırasıyla tanımlar.
+
+Bir görüntü sınıflandırma senaryosunda `ModelInput` iki sütun içerir:
+
+- `ImageSource`: görüntü konumunun dize yolu.
+- `Label`: resmin ait olduğu gerçek kategori. `Label` yalnızca eğitim sırasında giriş olarak kullanılır ve tahmine dayalı hale geldiğinde sağlanması gerekmez.
+
+`ModelOutput` iki sütun içerir:
+
+- `Prediction`: görüntünün tahmin edilen kategorisi.
+- `Score`: tüm kategoriler için olasılıkların listesi (en üst, `Prediction`aittir).
+
 ## <a name="troubleshooting"></a>Sorun giderme
 
 ### <a name="cannot-create-compute"></a>İşlem oluşturulamıyor
 
 Azure Machine Learning işlem oluşturma sırasında bir hata oluşursa, bilgi işlem kaynağı hatalı durumda hala mevcut olabilir. Aynı ada sahip işlem kaynağını yeniden oluşturmayı denerseniz, işlem başarısız olur. Bu hatayı onarmak için aşağıdakilerden birini yapın:
 
-* Farklı bir adla yeni işlem oluştur
-* Azure portal gidin ve özgün işlem kaynağını kaldırın
+- Farklı bir adla yeni işlem oluştur
+- Azure portal gidin ve özgün işlem kaynağını kaldırın

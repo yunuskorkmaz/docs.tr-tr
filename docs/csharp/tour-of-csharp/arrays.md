@@ -1,14 +1,14 @@
 ---
 title: C#Diziler- C# dilin turu
 description: Diziler, C# dildeki en temel koleksiyon türüdür
-ms.date: 08/10/2016
+ms.date: 02/27/2020
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-ms.openlocfilehash: 195df1f31c71ee7a202a3b57076775c4f717d399
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 3e045c0933a21beab6958c7851546ba6e0b55ef9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673322"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159201"
 ---
 # <a name="arrays"></a>Diziler
 
@@ -35,11 +35,11 @@ New işleci, dizi öğelerinin başlangıç değerlerinin, `{` ve `}`sınırlay�
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L39-L39)]
 
-Dizi uzunluğunun {ve} arasındaki ifade sayısından çıkarsandığına unutmayın. Yerel değişken ve alan bildirimleri daha fazla kısaltılarak, dizi türünün yeniden oluşturulması gerekmez.
+Dizinin uzunluğu {ve} arasındaki ifade sayısından çıkarsanamıyor. Yerel değişken ve alan bildirimleri daha fazla kısaltılarak, dizi türünün yeniden oluşturulması gerekmez.
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L44-L44)]
 
-Yukarıdaki örneklerin her ikisi de aşağıdaki gibi eşdeğerdir:
+Yukarıdaki örneklerin her ikisi de aşağıdaki koda eşdeğerdir:
 
 [!code-csharp[ArrayAssignment](../../../samples/snippets/csharp/tour/arrays/Program.cs#L49-L53)]
 

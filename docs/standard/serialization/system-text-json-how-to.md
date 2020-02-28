@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fdca8d957bb2453e90652af1dfe5ef99b33b1b2c
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 8025f84f2425f5b91e08b28ddb24d105d8c4d1a3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163208"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159591"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET içinde JSON ve seri hale getirme (sıralama ve kaldırma)
 
@@ -24,7 +24,7 @@ Yönergeler ve örnek kod, kitaplığı, [ASP.NET Core](/aspnet/core/)gibi bir �
 
 Seri hale getirme örnek kodunun çoğu, JSON 'ı (örneğin girintileme ve insanlar okunabilirlik için boşluk) `true` <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> belirler. Üretim kullanımı için genellikle bu ayar için `false` varsayılan değerini kabul etmiş olursunuz.
 
-## <a name="namespaces"></a>{1&gt;Ad alanları&lt;1}
+## <a name="namespaces"></a>Ad Alanları
 
 <xref:System.Text.Json> ad alanı tüm giriş noktalarını ve ana türleri içerir. <xref:System.Text.Json.Serialization> ad alanı, serileştirme ve seri durumdan çıkarma için özel gelişmiş senaryolar ve özelleştirmeler için öznitelikler ve API 'Leri içerir. Bu makalede gösterilen kod örnekleri, bu ad alanlarından biri veya her ikisi için `using` yönergeler gerektirir:
 
@@ -61,7 +61,7 @@ Aşağıda, koleksiyonları ve iç içe yerleştirilmiş bir sınıfı içeren �
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPOCOs)]
 
-Önceki türün bir örneğinin serileştirilmesi için JSON çıktısı aşağıdaki örnekteki gibi görünür. JSON çıktısı varsayılan olarak Mini olarak belirlenir: 
+Önceki türün bir örneğinin serileştirilmesi için JSON çıktısı aşağıdaki örnekteki gibi görünür. JSON çıktısı varsayılan olarak Mini olarak belirlenir:
 
 ```json
 {"Date":"2019-08-01T00:00:00-07:00","TemperatureCelsius":25,"Summary":"Hot","DatesAvailable":["2019-08-01T00:00:00-07:00","2019-08-02T00:00:00-07:00"],"TemperatureRanges":{"Cold":{"High":20,"Low":-10},"Hot":{"High":60,"Low":20}},"SummaryWords":["Cool","Windy","Humid"]}
@@ -191,7 +191,7 @@ Varsayılan olarak, özellik adları ve sözlük anahtarları, büyük/küçük 
 * [Tüm özellik adlarını ortası durumuna Dönüştür](#use-camel-case-for-all-json-property-names)
 * [Özel özellik adlandırma ilkesi uygulama](#use-a-custom-json-property-naming-policy)
 * [Sözlük anahtarlarını ortası örneğine Dönüştür](#camel-case-dictionary-keys)
-* [Numaralandırmaları dizelere ve ortası örneğine Dönüştür](#enums-as-strings) 
+* [Numaralandırmaları dizelere ve ortası örneğine Dönüştür](#enums-as-strings)
 
 JSON özellik adlarını ve değerlerini özel olarak işleme gerektiren diğer senaryolar için [özel dönüştürücüler uygulayabilirsiniz](system-text-json-converters-how-to.md).
 
@@ -382,7 +382,7 @@ Seri hale getirmek ve JSON çıktısı için örnek bir nesne aşağıda verilmi
 |---------|---------|
 | Tarih    | 8/1/2019 12:00:00-07:00|
 | TemperatureCelsius| 25 |
-| Özet| {1&gt;null&lt;1}|
+| Özet| null|
 
 ```json
 {
@@ -507,7 +507,7 @@ Yukarıdaki örnek senaryoda, her iki yaklaşım da `WindSpeed` özelliğin JSON
 ```
 
 > [!IMPORTANT]
-> Bu yaklaşımlar yalnızca kök nesnenin seri hale getirilmesi için, bu kök nesnenin özellikleri için değil, polimorfik serileştirme sağlar. 
+> Bu yaklaşımlar yalnızca kök nesnenin seri hale getirilmesi için, bu kök nesnenin özellikleri için değil, polimorfik serileştirme sağlar.
 
 `object`tür olarak tanımlarsanız alt düzey nesneler için polimorfik serileştirme alabilirsiniz. Örneğin, `WeatherForecast` sınıfınızın, tür `WeatherForecast` veya `object`olarak tanımlanabilen `PreviousForecast` adında bir özelliği olduğunu varsayalım:
 
@@ -566,7 +566,7 @@ Aşağıdaki örnek, önceki koddan elde edilen JSON 'u göstermektedir:
 }
 ```
 
-Polimorfik **serileştirme**hakkında daha fazla bilgi ve **seri durumundan çıkarma**hakkında daha fazla bilgi için, bkz. [Newtonsoft.Json 'dan System.Text.Json'ye geçirme ](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
+Polimorfik **serileştirme**hakkında daha fazla bilgi edinmek ve **serisini kaldırma**hakkında bilgi Için, bkz. [Newtonsoft. JSON 'Dan System. Text. JSON 'a geçiş](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
 
 ## <a name="allow-comments-and-trailing-commas"></a>Yorumlara ve sondaki virgülleri izin ver
 
@@ -712,7 +712,7 @@ Aşağıdaki örnek, bir JSON dizesindeki verilere rastgele erişim için <xref:
 Yukarıdaki kod:
 
 * Çözümlenecek JSON 'ın `jsonString`adlı bir dizede olduğunu varsayar.
-* Bir `Grade` özelliğine sahip `Students` dizisindeki nesneler için Ortalama bir sınıf hesaplar. 
+* Bir `Grade` özelliğine sahip `Students` dizisindeki nesneler için Ortalama bir sınıf hesaplar.
 * Bir sınıfa sahip olmayan öğrenciler için varsayılan bir 70 sınıfı atar.
 * Her yinelemeyle bir `count` değişkenini arttırarak öğrencileri sayar. Aşağıdaki örnekte gösterildiği gibi <xref:System.Text.Json.JsonElement.GetArrayLength%2A>bir alternatif çağrdır:
 
@@ -732,7 +732,7 @@ Yukarıdaki kod:
 
 * Bir JSON dosyası okur, verileri bir `JsonDocument`yükler ve bir dosyaya biçimlendirilen (düzgün yazdırılmış) JSON yazar.
 * JSON girişi içindeki açıklamalara izin verildiğini ancak yok sayılacağını belirtmek için <xref:System.Text.Json.JsonDocumentOptions> kullanır.
-* İşiniz bittiğinde, yazıcı <xref:System.Text.Json.Utf8JsonWriter.Flush%2A> çağırır. Diğer bir seçenek de yazıcı boşaltıatıldığı zaman yazıcının temizlemesini sağlar. 
+* İşiniz bittiğinde, yazıcı <xref:System.Text.Json.Utf8JsonWriter.Flush%2A> çağırır. Diğer bir seçenek de yazıcı boşaltıatıldığı zaman yazıcının temizlemesini sağlar.
 
 Örnek kod tarafından işlenecek JSON girişi örneği aşağıda verilmiştir:
 
@@ -769,7 +769,7 @@ Yukarıdaki kod:
 * Dosyanın UTF-16 olarak kodlandığını varsayar ve bunu UTF-8 ' e dönüştürür. UTF-8 olarak kodlanmış bir dosya aşağıdaki kodu kullanarak doğrudan bir `ReadOnlySpan<byte>`okunabilir:
 
   ```csharp
-  ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName); 
+  ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName);
   ```
 
   Dosya bir UTF-8 bayt sırası işareti (BOM) içeriyorsa, bu, okuyucunun metin beklediği için baytları `Utf8JsonReader`geçirmeden önce kaldırın. Aksi takdirde, BOM geçersiz JSON olarak değerlendirilir ve okuyucu bir özel durum oluşturur.

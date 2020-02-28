@@ -11,12 +11,12 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: fe5bb95d5e1f90c0dafa30977d76ea1d62125c99
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4f0f3555ae1ab7e662d5f88ac65739a7c791a964
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130888"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78158083"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Özniteliklerde Depolanan Bilgileri Alma
 Özel bir özniteliğin alınması basit bir işlemdir. İlk olarak, almak istediğiniz özniteliğin bir örneğini bildirin. Ardından, yeni özniteliğini almak istediğiniz özniteliğin değerine başlatmak için <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> yöntemini kullanın. Yeni özniteliği başlatıldıktan sonra, değerlerini almak için özelliklerini kullanmanız yeterlidir.  
@@ -32,7 +32,7 @@ ms.locfileid: "73130888"
   
 - [Farklı kapsamlara uygulanan bir özniteliğin birden fazla örneğini alma](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
-<a name="cpconretrievingsingleinstanceofattribute"></a>   
+<a name="cpconretrievingsingleinstanceofattribute"></a>
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>Bir özniteliğin tek bir örneğini alma  
  Aşağıdaki örnekte, `DeveloperAttribute` (önceki bölümde açıklanan) sınıf düzeyindeki `MainApp` sınıfına uygulanır. `GetAttribute` yöntemi, konsol içine görüntülemeden önce sınıf düzeyinde `DeveloperAttribute` depolanan değerleri almak için **GetCustomAttribute** kullanır.  
   
@@ -51,12 +51,12 @@ The Reviewed Attribute is: True.
  Öznitelik bulunamazsa **GetCustomAttribute** yöntemi null bir değere `MyAttribute` başlatır. Bu örnek, böyle bir örnek için `MyAttribute` denetler ve hiçbir öznitelik bulunamazsa kullanıcıya bildirir. `DeveloperAttribute` sınıf kapsamında bulunmazsa, aşağıdaki ileti konsola görüntülenir.  
   
 ```console  
-The attribute was not found.   
+The attribute was not found.
 ```  
   
  Bu örnek, öznitelik tanımının geçerli ad alanında olduğunu varsayar. Geçerli ad alanında değilse öznitelik tanımının bulunduğu ad alanını içeri aktarmayı unutmayın.  
   
-<a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>   
+<a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-the-same-scope"></a>Aynı kapsama uygulanan bir özniteliğin birden fazla örneğini alma  
  Önceki örnekte, incelenecek sınıf ve bulunacak özel öznitelik <xref:System.Attribute.GetCustomAttribute%2A>geçirilir. Bu kod, sınıf düzeyinde bir özniteliğin yalnızca bir örneği uygulandığında iyi bir şekilde çalışacaktır. Ancak, aynı sınıf düzeyinde bir özniteliğin birden çok örneği uygulanırsa **GetCustomAttribute** yöntemi tüm bilgileri almaz. Aynı özniteliğin birden fazla örneğinin aynı kapsama uygulandığı durumlarda, bir özniteliğin tüm örneklerini bir diziye yerleştirmek için <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> kullanabilirsiniz. Örneğin, iki `DeveloperAttribute` örneği aynı sınıfın sınıf düzeyinde uygulanırsa, `GetAttribute` yöntemi her iki özniteliklerde bulunan bilgileri görüntüleyecek şekilde değiştirilebilir. Aynı düzeyde birden fazla öznitelik uygulamak için, <xref:System.AttributeUsageAttribute>özniteliğin **AllowMultiple** özelliği **true** olarak ayarlanmış şekilde tanımlanması gerektiğini unutmayın.  
   
@@ -68,9 +68,9 @@ The attribute was not found.
   
  Hiçbir öznitelik bulunamazsa, bu kod kullanıcıyı uyarır. Aksi halde, her iki `DeveloperAttribute` örneğinde bulunan bilgiler görüntülenir.  
   
-<a name="cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes"></a>   
+<a name="cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes"></a>
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-different-scopes"></a>Farklı kapsamlara uygulanan bir özniteliğin birden fazla örneğini alma  
- <xref:System.Attribute.GetCustomAttributes%2A> ve <xref:System.Attribute.GetCustomAttribute%2A> yöntemleri bir sınıfın tamamını aramaz ve bu sınıftaki bir özniteliğin tüm örneklerini döndürmez. Bunun yerine, tek seferde yalnızca bir belirtilen yöntemi veya üyeyi arar. Her üyeye uygulanmış aynı özniteliğe sahip bir sınıfınız varsa ve bu üyelere uygulanan tüm özniteliklerin değerlerini almak istiyorsanız, her yöntemi veya üyeyi **GetCustomAttributes** ve GetCustomAttribute için tek tek sağlamalısınız.  
+ <xref:System.Attribute.GetCustomAttributes%2A> ve <xref:System.Attribute.GetCustomAttribute%2A> yöntemleri bir sınıfın tamamını aramaz ve bu sınıftaki bir özniteliğin tüm örneklerini döndürmez. Bunun yerine, tek seferde yalnızca bir belirtilen yöntemi veya üyeyi arar. Her üyeye uygulanmış aynı özniteliğe sahip bir sınıfınız varsa ve bu üyelere uygulanan tüm özniteliklerin değerlerini almak istiyorsanız, her yöntemi veya üyeyi **GetCustomAttributes** ve **GetCustomAttribute**için tek tek sağlamalısınız.  
   
  Aşağıdaki kod örneği bir sınıfı parametre olarak alır ve sınıf düzeyinde ve bu sınıfın her bir yöntemi üzerinde `DeveloperAttribute` (daha önce tanımlanan) arar.  
   

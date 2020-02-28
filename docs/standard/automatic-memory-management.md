@@ -12,12 +12,12 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-ms.openlocfilehash: d112bf6d145893bd7b0f99e2b233fc83e72fe227
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1038f16dca507e58005189c9558a9ec8dae4b34f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140573"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159708"
 ---
 # <a name="automatic-memory-management"></a>Otomatik Bellek Yönetimi
 Otomatik bellek yönetimi, ortak dil çalışma zamanının [yönetilen yürütme](../../docs/standard/managed-execution-process.md)sırasında sağladığı hizmetlerden biridir. Ortak dil çalışma zamanının atık toplayıcısı, bir uygulama için bellek ayırmayı ve serbest bırakma işlemini yönetir. Geliştiriciler için bu, yönetilen uygulamalar geliştirirken bellek yönetimi görevleri gerçekleştirmek için kod yazmaya gerek olmadığı anlamına gelir. Otomatik bellek yönetimi, bir nesneyi serbest bırakmayı unutarak bir bellek sızıntısına neden olmak veya daha önce serbest bırakılmış bir nesnenin belleğine erişmeye çalışmak gibi yaygın sorunları ortadan kaldırabilir. Bu bölümde, atık toplayıcının belleği nasıl ayırdığı ve serbest bıraktığı açıklanmaktadır.  
@@ -27,7 +27,7 @@ Otomatik bellek yönetimi, ortak dil çalışma zamanının [yönetilen yürütm
   
  Yönetilen yığından bellek ayırmak, yönetilmeyen bellek ayrımından daha hızlıdır. Çalışma zamanı bir nesneye bellek ayırmak için bir işaretçiye bir değer eklediği için, neredeyse yığından bellek ayırma kadar hızlıdır. Ek olarak, art arda ayrılan nesneler yönetilen yığında bitişik bir biçimde tutulduklarından, uygulama nesnelere çok hızlı bir şekilde erişebilir.  
   
-<a name="cpconautomaticmemorymanagementreleasingmemoryanchor1"></a>   
+<a name="cpconautomaticmemorymanagementreleasingmemoryanchor1"></a>
 ## <a name="releasing-memory"></a>Bellek Serbest Bırakma  
  Atık toplayıcısının optimizasyon altyapısı, yapılan ayrımlara göre bir toplama işlemini gerçekleştirmek için en iyi zamanı belirler. Atık toplayıcı bir toplama gerçekleştirdiğinde, uygulama tarafından artık kullanılmayan nesnelere ayrılan belleği serbest bırakır. Uygulamanın köklerini inceleyerek hangi nesnelerin artık kullanılmadığını belirler. Her uygulamanın bir kök kümesi vardır. Her kök yönetilen yığındaki bir nesneye başvurur veya null olarak ayarlanır. Bir uygulamanın kökleri statik alanlar, yerel değişkenler ve bir iş parçacığının yığınındaki parametreleri ve CPU kayıtları içerir. Çöp toplayıcı, [tam zamanında (JIT) derleyicisinin](../../docs/standard/managed-execution-process.md) ve çalışma zamanının korumasını sağlayan etkin kökler listesine erişebilir. Bu listeyi kullanarak bir uygulamanın köklerini inceler, ve bu esnada köklerden erişilebilen tüm nesneleri içeren bir grafik oluşturur.  
   

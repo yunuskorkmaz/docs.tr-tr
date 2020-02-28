@@ -3,12 +3,12 @@ title: Visual Studio ile Merhaba Dünya .NET Core uygulamanızda hata ayıklama
 description: Visual Studio ile C# veya Visual Basic yazılmış Merhaba Dünya bir uygulamada hata ayıklamayı öğrenin.
 ms.date: 12/05/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: bc2736165ec827c1f2670605f23f549ceed4e83a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b2ee1401fc89f990c5f930d80d1a510a117e63a0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714049"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156679"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio"></a>Visual Studio C# 'yu kullanarak veya Visual Basic .net Core Merhaba Dünya uygulamanızda hata ayıklayın
 
@@ -22,13 +22,13 @@ ms.locfileid: "75714049"
 
 Uygulamanızın hata ayıklama sürümünü çalıştırarak başlayın. Hata ayıklama derleme yapılandırması, çoğu derleyici iyileştirmesini kapatır ve derleme işlemi sırasında daha zengin bilgiler sağlar.
 
-## <a name="set-a-breakpoint"></a>Bir kesme noktası belirleyin
+## <a name="set-a-breakpoint"></a>Kesme noktası ayarlama
 
 Programınızı çalıştırın ve birkaç hata ayıklama özelliğini deneyin:
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Bu satırdaki kod penceresinin sol kenar boşluğuna tıklayarak `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` okuyan satırda bir *kesme noktası* ayarlayın. Ayrıca, giriş işaretini kod satırına yerleştirip **F9** tuşuna basarak veya menü çubuğundan **kesme noktası > geçiş noktasını** seçerek de bir kesme noktası ayarlayabilirsiniz.
 
@@ -64,12 +64,12 @@ Programınızı çalıştırın ve birkaç hata ayıklama özelliğini deneyin:
 
 1. Uygulamadan çıkmak ve hata ayıklamayı durdurmak için herhangi bir tuşa basın.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Bu satırdaki kod penceresinin sol kenar boşluğuna tıklayarak `Console.WriteLine($"{vbCrLf}Hello, {name}, on {currentDate:d} at {currentDate:t}!")` okuyan satırda bir *kesme noktası* ayarlayın. Ayrıca, giriş işaretini istediğiniz satıra yerleştirip **hata ayıkla** > menü çubuğundan **kesme noktası** ' nı seçerek bir kesme noktası da ayarlayabilirsiniz.
 
    Kesme noktası, kesme noktası olan satır yürütülmeden *önce* uygulamanın yürütülmesini geçici olarak keser.
-   
+
    Aşağıdaki şekilde gösterildiği gibi, Visual Studio, kesme noktasının ayarlandığı ve sol kenar boşluğunda kırmızı bir daire görüntülendiği satırı gösterir.
 
    ![Kesme noktası ayarlanmış Visual Studio program penceresi](./media/debugging-with-visual-studio/vb/set-breakpoint-in-editor.png)
@@ -104,7 +104,7 @@ Programınız kullanıcının girdiği dizeyi görüntüler. Kullanıcı hiçbir
 
 Koşullu bir kesme noktası ayarlamak ve Kullanıcı bir dize giremediğinde ne olacağını sınamak için aşağıdakileri yapın:
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Kesme noktasını temsil eden kırmızı noktaya sağ tıklayın. Bağlam menüsünde **koşullar** ' ı seçerek **kesme noktası ayarları** iletişim kutusunu açın. Henüz seçili değilse, **koşullar** kutusunu işaretleyin.
 
@@ -142,7 +142,7 @@ Koşullu bir kesme noktası ayarlamak ve Kullanıcı bir dize giremediğinde ne 
 
 1. Kod satırının sol kenarındaki noktaya tıklayarak veya kod satırı seçiliyken **kesme noktası > geçiş noktasını** seçerek kesme noktasını temizleyin.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Kesme noktasını temsil eden kırmızı noktaya sağ tıklayın. Bağlam menüsünde **koşullar** ' ı seçerek **kesme noktası ayarları** iletişim kutusunu açın. **Koşullar**kutusunu işaretleyin.
 
@@ -185,7 +185,7 @@ Koşullu bir kesme noktası ayarlamak ve Kullanıcı bir dize giremediğinde ne 
 
 Visual Studio Ayrıca, bir program aracılığıyla satıra göre çizgi ve yürütmeyi izlemeye de olanak tanır. Normalde, bir kesme noktası ayarlarsınız ve program kodunuzun küçük bir bölümünde program akışını izlemek için bu özelliği kullanabilirsiniz. Programınız küçük olduğundan, programın tamamında ilerlayabilirsiniz:
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Menü çubuğunda **hata ayıkla** > **adımla** ' yı seçin veya **F11**tuşuna basın. Visual Studio, sonraki yürütme satırının yanında bir ok görüntüler.
 
@@ -211,7 +211,7 @@ Visual Studio Ayrıca, bir program aracılığıyla satıra göre çizgi ve yür
 
 1. Herhangi bir tuşa basarak konsol penceresini kapatın ve hata ayıklamayı durdurun.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Menü çubuğunda **hata ayıkla** > **adımla** ' yı seçin veya **F11**tuşuna basın. Visual Studio, sonraki yürütme satırının yanında bir ok görüntüler.
 

@@ -2,12 +2,12 @@
 title: 'Öğretici: .NET Core yerel araçlarını yükleyip kullanın'
 description: .NET aracını yerel bir araç olarak yüklemeyi ve kullanmayı öğrenin.
 ms.date: 02/12/2020
-ms.openlocfilehash: 6de620772cec1e9d1b1f57380b72c0163d68337c
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: a4355886513040e2436bdbd87905e5baee2dd7a5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543868"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156705"
 ---
 # <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>Öğretici: .NET Core CLI kullanarak bir .NET Core yerel aracı yükleyip kullanın
 
@@ -24,9 +24,9 @@ Bu öğretici, yerel bir araç yüklemeyi ve kullanmayı öğretir. [Bu serinin 
 
 ## <a name="create-a-manifest-file"></a>Bildirim dosyası oluşturma
 
-Yalnızca yerel erişim için bir araç yüklemek üzere (geçerli dizin ve alt dizinler için), bir bildirim dosyasına eklenmelidir. 
+Yalnızca yerel erişim için bir araç yüklemek üzere (geçerli dizin ve alt dizinler için), bir bildirim dosyasına eklenmelidir.
 
-*Botdeyin-\<adı >* klasöründen, *Depo* klasörü için bir düzey yukarı gidin:
+*Microsoft. botsay* klasöründen, *Depo* klasörü için bir düzey yukarı gidin:
 
 ```console
 cd ..
@@ -63,7 +63,7 @@ Yerel bir araca başvuran bir CLı komutu kullandığınızda, SDK geçerli dizi
 Aracı ilk öğreticide oluşturduğunuz paketten yükleyebilirsiniz:
 
 ```dotnetcli
-dotnet tool install --add-source ./botsay-<name>/nupkg botsay-<name>
+dotnet tool install --add-source ./microsoft.botsay/nupkg microsoft.botsay
 ```
 
 Bu komut, önceki adımda oluşturduğunuz bildirim dosyasına aracı ekler. Komut çıktısı, yeni yüklenen aracın hangi bildirim dosyasında olduğunu gösterir:
@@ -71,7 +71,7 @@ Bu komut, önceki adımda oluşturduğunuz bildirim dosyasına aracı ekler. Kom
  ```console
  You can invoke the tool from this directory using the following command:
  'dotnet tool run botsay' or 'dotnet botsay'
- Tool 'botsay-<name>' (version '1.0.0') was successfully installed.
+ Tool 'microsoft.botsay' (version '1.0.0') was successfully installed.
  Entry is added to the manifest file /home/name/repository/.config/dotnet-tools.json
  ```
 
@@ -82,7 +82,7 @@ Bu komut, önceki adımda oluşturduğunuz bildirim dosyasına aracı ekler. Kom
   "version": 1,
   "isRoot": true,
   "tools": {
-    "botsay-<name>": {
+    "microsoft.botsay": {
       "version": "1.0.0",
       "commands": [
         "botsay"
@@ -111,7 +111,7 @@ Genellikle deponun kök dizinine yerel bir araç yüklersiniz. Bildirim dosyası
      "version": 1,
      "isRoot": true,
      "tools": {
-       "botsay-<name>": {
+       "microsoft.botsay": {
          "version": "1.0.0",
          "commands": [
            "botsay"
@@ -131,7 +131,7 @@ Genellikle deponun kök dizinine yerel bir araç yüklersiniz. Bildirim dosyası
 
 1. Yaptığınız değişiklikleri kaydedin.
 
-   Bu değişikliğin yapılması, proje dizini için `dotnetsay` başka birisi yüklendikten sonra depodan en son sürümü alma ile aynıdır. 
+   Bu değişikliğin yapılması, proje dizini için `dotnetsay` başka birisi yüklendikten sonra depodan en son sürümü alma ile aynıdır.
 
 1. `dotnet tool restore` komutunu çalıştırın.
 
@@ -142,7 +142,7 @@ Genellikle deponun kök dizinine yerel bir araç yüklersiniz. Bildirim dosyası
    Komut aşağıdaki örnekte olduğu gibi bir çıktı üretir:
 
    ```console
-   Tool 'botsay-<name>' (version '1.0.0') was restored. Available commands: botsay
+   Tool 'microsoft.botsay' (version '1.0.0') was restored. Available commands: botsay
    Tool 'dotnetsay' (version '2.1.3') was restored. Available commands: dotnetsay
    Restore was successful.
    ```
@@ -157,9 +157,9 @@ Genellikle deponun kök dizinine yerel bir araç yüklersiniz. Bildirim dosyası
 
    ```console
    Package Id      Version      Commands       Manifest
-   -------------------------------------------------------------------------------------------
-   botsay-<name>   1.0.0        botsay         /home/name/repository/.config/dotnet-tools.json
-   dotnetsay       2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
+   --------------------------------------------------------------------------------------------
+   microsoft.botsay 1.0.0        botsay         /home/name/repository/.config/dotnet-tools.json
+   dotnetsay        2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
    ```
 
 1. Araçları test etme:
@@ -191,14 +191,14 @@ Update komutu, paket KIMLIĞINI içeren ilk bildirim dosyasını bulur ve günce
 [DotNet Aracı kaldırma](dotnet-tool-uninstall.md) komutunu çalıştırarak yüklü araçları kaldırın:
 
 ```dotnetcli
-dotnet tool uninstall botsay-<name>
+dotnet tool uninstall microsoft.botsay
 ```
 
 ```dotnetcli
 dotnet tool uninstall dotnetsay
 ```
 
-## <a name="troubleshoot"></a>Sorunları Gider
+## <a name="troubleshoot"></a>Sorun giderme
 
 Öğreticiyi takip ederken bir hata mesajı alırsanız bkz. [.NET Core araç kullanımı sorunlarını giderme](troubleshoot-usage-issues.md).
 

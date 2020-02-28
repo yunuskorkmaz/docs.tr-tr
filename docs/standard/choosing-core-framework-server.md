@@ -3,12 +3,12 @@ title: Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim y
 description: .NET ' te bir sunucu uygulaması oluştururken göz önünde bulundurmanız gereken .NET uygulaması hakkında bir kılavuz.
 author: cartermp
 ms.date: 06/19/2018
-ms.openlocfilehash: c202e42a46c4a72bdceca1fb250170d381603a8d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 0b6bf4c2eb66aa4de497923a0a16b65a955ba6fc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124630"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159981"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma
 
@@ -75,7 +75,7 @@ Performans ve ölçeklenebilirlik özellikle, yüzlerce mikro hizmetin çalışt
 
 Kitaplıklar .NET Standard hızlı bir şekilde kullanılır. .NET Standard .NET Core dahil tüm .NET uygulamalarında kod paylaşmaya izin verebilir. .NET Standard 2,0 ile bu da daha kolay olur:
 
-- API yüzeyi çok daha büyük hale geldi. 
+- API yüzeyi çok daha büyük hale geldi.
 - .NET Framework uyumluluk modu sunuldu. Bu uyumluluk modu .NET Standard/. NET Core projelerinin .NET Framework kitaplıklarına başvurmasına olanak tanır. Uyumluluk modu hakkında daha fazla bilgi edinmek için bkz. [duyurusu .NET Standard 2,0](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-0/).
 
 Bu nedenle, yalnızca kitaplıkların veya NuGet paketlerinin .NET Standard/. NET Core 'da kullanılamayan teknolojileri kullanması durumunda, .NET Framework kullanmanız gerekir.
@@ -86,7 +86,7 @@ Bazı .NET Framework teknolojileri .NET Core 'da kullanılamaz. Bunlardan bazıl
 
 - ASP.NET Web Forms uygulamalar: ASP.NET Web Forms yalnızca .NET Framework mevcuttur. ASP.NET Core, ASP.NET Web Forms için kullanılamaz. .NET Core 'a ASP.NET Web Forms getirmek için bir plan yoktur.
 
-- ASP.NET Web Pages uygulamaları: ASP.NET Web Pages ASP.NET Core. 
+- ASP.NET Web Pages uygulamaları: ASP.NET Web Pages ASP.NET Core.
 
 - WCF Hizmetleri uygulama. .NET Core 'dan WCF hizmetlerini kullanmak için bir [WCF-istemci kitaplığı](https://github.com/dotnet/wcf) olsa bıle, WCF sunucu uygulamasının şu anda yalnızca .NET Framework kullanılabilir. Bu senaryo, .NET Core için geçerli planın bir parçası değildir, ancak geleceğe göre değerlendirilir.
 

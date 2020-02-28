@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: 01e11ed62b0855b9027dfd7999f8b787c075028a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9bf57e0f74a353fb6512a24214e9479c1d813aab
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709679"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160215"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>\<msxsl: script > kullanarak XSLT stil sayfası betiği oluşturma
 <xref:System.Xml.Xsl.XslTransform> sınıfı, `script` öğesi kullanılarak gömülü komut dosyalarını destekler.  
@@ -64,11 +64,11 @@ ms.locfileid: "75709679"
   
 |Tür|Eşdeğer .NET Framework sınıfı (tür)|XPath türü veya XSLT türü|  
 |----------|----------------------------------------------|-----------------------------|  
-|Dize|System. String|{1&gt;XPath&lt;1}|  
-|Boole değeri|System. Boolean|{1&gt;XPath&lt;1}|  
-|Sayı|System. Double|{1&gt;XPath&lt;1}|  
+|Dize|System. String|XPath|  
+|Boole|System. Boolean|XPath|  
+|Sayı|System. Double|XPath|  
 |Sonuç ağacı parçası|System. xml. XPath. XPathNavigator|XSLT|  
-|Düğüm kümesi|System.Xml.XPath.XPathNodeIterator|{1&gt;XPath&lt;1}|  
+|Düğüm kümesi|System.Xml.XPath.XPathNodeIterator|XPath|  
   
  Betik işlevi şu sayısal türlerden birini kullanıyorsa: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single veya Decimal, W3C XPath tür numarasıyla eşlenen Double olarak zorlanır. Tüm diğer türler `ToString` yöntemi çağırarak bir dizeye zorlanır.  
   
@@ -122,14 +122,14 @@ Public Class Sample
     'Load the XML data file.  
     Dim doc As XPathDocument = New XPathDocument(filename)  
   
-    'Create an XmlTextWriter to output to the console.               
+    'Create an XmlTextWriter to output to the console.
     Dim writer As XmlTextWriter = New XmlTextWriter(Console.Out)  
     writer.Formatting = Formatting.Indented  
   
     'Transform the file.  
     xslt.Transform(doc, Nothing, writer, Nothing)  
     writer.Close()  
-  End Sub   
+  End Sub
 End Class  
 ```  
   
@@ -154,7 +154,7 @@ public class Sample
     //Load the XML data file.  
     XPathDocument doc = new XPathDocument(filename);  
   
-    //Create an XmlTextWriter to output to the console.               
+    //Create an XmlTextWriter to output to the console.
     XmlTextWriter writer = new XmlTextWriter(Console.Out);  
     writer.Formatting = Formatting.Indented;  
   
@@ -165,7 +165,7 @@ public class Sample
 }  
 ```  
   
-## <a name="input"></a>Giriş  
+## <a name="input"></a>Girdi  
  Number. xml  
   
 ```xml  
@@ -198,14 +198,14 @@ public class Sample
       ]]>  
    </msxsl:script>  
   
-  <xsl:template match="data">    
+  <xsl:template match="data">
   <circles>  
   
   <xsl:for-each select="circle">  
     <circle>  
     <xsl:copy-of select="node()"/>  
        <circumference>  
-          <xsl:value-of select="user:circumference(radius)"/>   
+          <xsl:value-of select="user:circumference(radius)"/>
        </circumference>  
     </circle>  
   </xsl:for-each>  
@@ -214,7 +214,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a>Çıkış  
+## <a name="output"></a>Çıktı  
   
 ```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  
@@ -226,7 +226,7 @@ public class Sample
     <radius>37.5</radius>  
     <circumference>235.5</circumference>  
   </circle>  
-</circles>    
+</circles>
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.

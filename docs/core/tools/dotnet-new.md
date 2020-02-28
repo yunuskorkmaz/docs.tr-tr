@@ -2,25 +2,25 @@
 title: DotNet yeni komut
 description: DotNet New komutu, belirtilen şablona göre yeni .NET Core projeleri oluşturur.
 ms.date: 02/13/2020
-ms.openlocfilehash: f11512acf5a1fdc4bde49b3d1212ccf6335dff8b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451336"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157225"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,0 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Name
+## <a name="name"></a>Adı
 
 `dotnet new`-belirtilen şablona göre yeni bir proje, yapılandırma dosyası veya çözüm oluşturur.
 
 ## <a name="synopsis"></a>Özeti
 
 ```dotnetcli
-dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name] 
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name]
     [--nuget-source] [-o|--output] [-u|--uninstall] [--update-apply] [--update-check] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
@@ -77,11 +77,11 @@ Komutu, belirtilen şablon ve seçeneklere göre diskteki yapıtları oluşturma
 | ASP.NET Core Web API'si                         | [WebApi](#webapi)               | [C#],F#     | Web/WebAPI                            | 1.0        |
 | ASP.NET Core gRPC hizmeti                    | [GRPC](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
 | Protokol arabelleği dosyası                         | [Proto](#namespace)             |              | Web/gRPC                              | 3.0        |
-| DotNet gitignore dosyası                        | `gitignore`                     |              | Yapılandırma                                | 3.0        |
-| Global. JSON dosyası                             | [globaljson](#globaljson)       |              | Yapılandırma                                | 2,0        |
-| NuGet yapılandırması                                 | `nugetconfig`                   |              | Yapılandırma                                | 1.0        |
-| DotNet yerel araç bildirim dosyası              | `tool-manifest`                 |              | Yapılandırma                                | 3.0        |
-| Web yapılandırması                                   | `webconfig`                     |              | Yapılandırma                                | 1.0        |
+| DotNet gitignore dosyası                        | `gitignore`                     |              | Config                                | 3.0        |
+| Global. JSON dosyası                             | [globaljson](#globaljson)       |              | Config                                | 2,0        |
+| NuGet yapılandırması                                 | `nugetconfig`                   |              | Config                                | 1.0        |
+| DotNet yerel araç bildirim dosyası              | `tool-manifest`                 |              | Config                                | 3.0        |
+| Web yapılandırması                                   | `webconfig`                     |              | Config                                | 1.0        |
 | Çözüm dosyası                                | `sln`                           |              | Çözüm                              | 1.0        |
 
 ## <a name="options"></a>Seçenekler
@@ -155,7 +155,7 @@ Komutu, belirtilen şablon ve seçeneklere göre diskteki yapıtları oluşturma
 
 Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıdaki ek seçeneklere sahiptir:
 
-### <a name="console"></a>konsolu
+### <a name="console"></a>console
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -174,7 +174,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   Varsayılan C# sürümlerin bir listesi için bkz. [Varsayılanlar](../../csharp/language-reference/configure-language-version.md#defaults).
 
-- **`--no-restore`** 
+- **`--no-restore`**
 
   Belirtilmişse, proje oluşturma sırasında örtük geri yükleme yürütmez. .NET Core 2,2 SDK 'dan beri kullanılabilir.
 
@@ -184,7 +184,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Değerler: bir .NET Standard sınıf kitaplığı oluşturmak için bir .NET Core sınıf kitaplığı veya `netstandard<version>` oluşturmak `netcoreapp<version>`. Varsayılan değer `netstandard2.0` şeklindedir.
+  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Değerler: bir .NET Standard sınıf kitaplığı oluşturmak için bir .NET Core sınıf kitaplığı veya `netstandard<version>` oluşturmak `netcoreapp<version>`. Varsayılan değer: `netstandard2.0`.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -202,7 +202,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Varsayılan değer `netcoreapp3.1` şeklindedir. .NET Core 3,1 SDK 'dan beri kullanılabilir. 
+  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Varsayılan değer: `netcoreapp3.1`. .NET Core 3,1 SDK 'dan beri kullanılabilir.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -234,7 +234,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Varsayılan değer `netcoreapp3.1` şeklindedir. .NET Core 3,1 SDK 'dan beri kullanılabilir. 
+  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Varsayılan değer: `netcoreapp3.1`. .NET Core 3,1 SDK 'dan beri kullanılabilir.
 
 - **`--exclude-launch-settings`**
 
@@ -298,7 +298,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`-na|--namespace <NAMESPACE_NAME>`**
 
-  Oluşturulan kod için ad alanı. Varsayılan değer `MyApp.Namespace` şeklindedir.
+  Oluşturulan kod için ad alanı. Varsayılan değer: `MyApp.Namespace`.
 
 - **`-np|--no-pagemodel`**
 
@@ -310,7 +310,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`-na|--namespace <NAMESPACE_NAME>`**
 
-  Oluşturulan kod için ad alanı. Varsayılan değer `MyApp.Namespace` şeklindedir.
+  Oluşturulan kod için ad alanı. Varsayılan değer: `MyApp.Namespace`.
 
 ***
 
@@ -329,7 +329,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
-  Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/tfp/` şeklindedir.
+  Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer: `https://login.microsoftonline.com/tfp/`.
 
 - **`-ssp|--susi-policy-id <ID>`**
 
@@ -345,23 +345,23 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`--aad-instance <INSTANCE>`**
 
-  Bağlanılacak Azure Active Directory örneği. `SingleOrg` veya `MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/` şeklindedir.
+  Bağlanılacak Azure Active Directory örneği. `SingleOrg` veya `MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer: `https://login.microsoftonline.com/`.
 
 - **`--client-id <ID>`**
 
-  Bu projenin Istemci KIMLIĞI. `IndividualB2C`, `SingleOrg`veya `MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `11111111-1111-1111-11111111111111111` şeklindedir.
+  Bu projenin Istemci KIMLIĞI. `IndividualB2C`, `SingleOrg`veya `MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer: `11111111-1111-1111-11111111111111111`.
 
 - **`--domain <DOMAIN>`**
 
-  Dizin kiracının etki alanı. `SingleOrg` veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `qualified.domain.name` şeklindedir.
+  Dizin kiracının etki alanı. `SingleOrg` veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer: `qualified.domain.name`.
 
 - **`--tenant-id <ID>`**
 
-  Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `22222222-2222-2222-2222-222222222222` şeklindedir.
+  Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer: `22222222-2222-2222-2222-222222222222`.
 
 - **`--callback-path <PATH>`**
 
-  Uygulamanın yeniden yönlendirme URI 'sinin temel yolundaki istek yolu. `SingleOrg` veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `/signin-oidc` şeklindedir.
+  Uygulamanın yeniden yönlendirme URI 'sinin temel yolundaki istek yolu. `SingleOrg` veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer: `/signin-oidc`.
 
 - **`-r|--org-read-access`**
 
@@ -428,7 +428,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
-  Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/tfp/` şeklindedir.
+  Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer: `https://login.microsoftonline.com/tfp/`.
 
 - **`-ssp|--susi-policy-id <ID>`**
 
@@ -444,23 +444,23 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`--aad-instance <INSTANCE>`**
 
-  Bağlanılacak Azure Active Directory örneği. `SingleOrg` veya `MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/` şeklindedir.
+  Bağlanılacak Azure Active Directory örneği. `SingleOrg` veya `MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer: `https://login.microsoftonline.com/`.
 
 - **`--client-id <ID>`**
 
-  Bu projenin Istemci KIMLIĞI. `IndividualB2C`, `SingleOrg`veya `MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `11111111-1111-1111-11111111111111111` şeklindedir.
+  Bu projenin Istemci KIMLIĞI. `IndividualB2C`, `SingleOrg`veya `MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer: `11111111-1111-1111-11111111111111111`.
 
 - **`--domain <DOMAIN>`**
 
-  Dizin kiracının etki alanı. `SingleOrg` veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `qualified.domain.name` şeklindedir.
+  Dizin kiracının etki alanı. `SingleOrg` veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer: `qualified.domain.name`.
 
 - **`--tenant-id <ID>`**
 
-  Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `22222222-2222-2222-2222-222222222222` şeklindedir.
+  Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer: `22222222-2222-2222-2222-222222222222`.
 
 - **`--callback-path <PATH>`**
 
-  Uygulamanın yeniden yönlendirme URI 'sinin temel yolundaki istek yolu. `SingleOrg` veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `/signin-oidc` şeklindedir.
+  Uygulamanın yeniden yönlendirme URI 'sinin temel yolundaki istek yolu. `SingleOrg` veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer: `/signin-oidc`.
 
 - **`-r|--org-read-access`**
 
@@ -503,7 +503,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  Kullanılacak kimlik doğrulaması türü. .NET Core 3,0 SDK 'dan beri kullanılabilir. 
+  Kullanılacak kimlik doğrulaması türü. .NET Core 3,0 SDK 'dan beri kullanılabilir.
   
   Olası değerler şunlardır:
 
@@ -512,7 +512,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`--exclude-launch-settings`**
 
-  Oluşturulan şablondan *Launchsettings. JSON* öğesini dışlar. 
+  Oluşturulan şablondan *Launchsettings. JSON* öğesini dışlar.
 
 - **`--no-restore`**
 
@@ -544,7 +544,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`--exclude-launch-settings`**
 
-  Oluşturulan şablondan *Launchsettings. JSON* öğesini dışlar. 
+  Oluşturulan şablondan *Launchsettings. JSON* öğesini dışlar.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -593,7 +593,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
-  Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/tfp/` şeklindedir.
+  Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer: `https://login.microsoftonline.com/tfp/`.
 
 - **`-ssp|--susi-policy-id <ID>`**
 
@@ -601,19 +601,19 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`--aad-instance <INSTANCE>`**
 
-  Bağlanılacak Azure Active Directory örneği. `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `https://login.microsoftonline.com/` şeklindedir.
+  Bağlanılacak Azure Active Directory örneği. `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer: `https://login.microsoftonline.com/`.
 
 - **`--client-id <ID>`**
 
-  Bu projenin Istemci KIMLIĞI. `IndividualB2C` veya `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `11111111-1111-1111-11111111111111111` şeklindedir.
+  Bu projenin Istemci KIMLIĞI. `IndividualB2C` veya `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer: `11111111-1111-1111-11111111111111111`.
 
 - **`--domain <DOMAIN>`**
 
-  Dizin kiracının etki alanı. `IndividualB2C` veya `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `qualified.domain.name` şeklindedir.
+  Dizin kiracının etki alanı. `IndividualB2C` veya `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer: `qualified.domain.name`.
 
 - **`--tenant-id <ID>`**
 
-  Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer `22222222-2222-2222-2222-222222222222` şeklindedir.
+  Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer: `22222222-2222-2222-2222-222222222222`.
 
 - **`-r|--org-read-access`**
 

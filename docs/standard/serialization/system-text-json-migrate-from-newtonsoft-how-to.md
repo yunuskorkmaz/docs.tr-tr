@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 221d19ee6441614324d375b66e8b13a90f683890
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: e0a6912c10baa0be4a8ef9f6536948ae27f235c7
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921284"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159565"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Newtonsoft. JSON 'dan System. Text. JSON 'a geçiş
 
@@ -81,7 +81,7 @@ Bu, `Newtonsoft.Json` özelliklerinin ayrıntılı bir listesi değildir. Listed
 
 <xref:System.Text.Json>, varsayılan olarak katı olur ve arayan adına tahmin veya yorumlamayı önler, belirleyici davranışı vurgulayarak. Kitaplık, performans ve güvenlik için kasıtlı olarak bu şekilde tasarlanmıştır. `Newtonsoft.Json` varsayılan olarak esnektir. Tasarımda bu temel fark, varsayılan davranıştaki aşağıdaki belirli farklılıklardan birçoğın arkasında bulunur.
 
-### <a name="case-insensitive-deserialization"></a>Büyük/küçük harfe duyarsız seri hale 
+### <a name="case-insensitive-deserialization"></a>Büyük/küçük harfe duyarsız seri hale
 
 Seri durumdan çıkarma sırasında `Newtonsoft.Json`, varsayılan olarak büyük/küçük harfe duyarsız Özellik adı eşleştirmeyi yapar. <xref:System.Text.Json> varsayılan, büyük/küçük harfe duyarlıdır ve tam bir eşleşme yaptığından daha iyi performans sağlar. Büyük/küçük harfe duyarsız eşleşme yapma hakkında daha fazla bilgi için bkz. [büyük/küçük harfe duyarsız Özellik eşleştirme](system-text-json-how-to.md#case-insensitive-property-matching).
 
@@ -91,7 +91,7 @@ ASP.NET Core kullanarak dolaylı `System.Text.Json` kullanıyorsanız, `Newtonso
 
 Serileştirme sırasında `Newtonsoft.Json`, karakterlerin kaçış olmadan geçmesine izin verme konusunda görece bir şekilde izin verir. Diğer bir deyişle, `xxxx` karakterin kod noktası olduğu `\uxxxx` değiştirmez. Burada kaçış yaptığı yerde, karakterden önce bir `\` yayarak (örneğin, `"` `\"`olur). <xref:System.Text.Json>, siteler arası komut dosyası (XSS) veya bilgi açıklama saldırılarına karşı derinlemesine savunma korumaları sağlamak için varsayılan olarak daha fazla karakter çıkar ve altı karakterli sırayı kullanarak bunu yapar. `System.Text.Json`, tüm ASCII olmayan karakterleri varsayılan olarak çıkar, bu nedenle `Newtonsoft.Json``StringEscapeHandling.EscapeNonAscii` kullanıyorsanız herhangi bir şey yapmanız gerekmez. `System.Text.Json` Ayrıca, varsayılan olarak HTML duyarlı karakterleri de çıkar. Varsayılan `System.Text.Json` davranışının nasıl geçersiz kılındığı hakkında daha fazla bilgi için bkz. [Özelleştirme karakter kodlaması](system-text-json-how-to.md#customize-character-encoding).
 
-### <a name="comments"></a>Açıklamalar
+### <a name="comments"></a>Yorumlar
 
 Seri durumdan çıkarma sırasında, `Newtonsoft.Json` JSON 'daki açıklamaları varsayılan olarak yoksayar. <xref:System.Text.Json> varsayılan, [RFC 8259](https://tools.ietf.org/html/rfc8259) belirtiminde bunları içermediğinden, açıklamalar için özel durumlar atmak şeklindedir. Açıklamalara izin verme hakkında daha fazla bilgi için bkz. [yorumlara Izin verme ve sondaki virgüller](system-text-json-how-to.md#allow-comments-and-trailing-commas).
 
@@ -194,7 +194,7 @@ Aşağıdaki senaryolar yerleşik işlevsellik tarafından desteklenmez, ancak g
 
 `Newtonsoft.Json`, JSON dizeleri (tırnak içine alınmış) tarafından temsil edilen sayıları seri hale verebilir veya serisini kaldıramıyor. Örneğin, bunu kabul edebilir: `{"DegreesCelsius":23}`yerine `{"DegreesCelsius":"23"}`. <xref:System.Text.Json>' de bu davranışı etkinleştirmek için, aşağıdaki örnekte olduğu gibi özel bir dönüştürücü uygulayın. Dönüştürücü `long`olarak tanımlanan özellikleri işler:
 
-* Onları JSON dizeleri olarak serileştirir. 
+* Onları JSON dizeleri olarak serileştirir.
 * Seri durumdan çıkarılırken, tırnak içindeki JSON numaralarını ve sayıları kabul eder.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/LongToStringConverter.cs)]
@@ -238,7 +238,7 @@ Ancak, `System.Text.Json` `null` `Newtonsoft.Json` ile aynı şekilde davranır 
 
 `object` özellikleri için tür çıkarımı uygulamak için, [özel dönüştürücüler yazma](system-text-json-converters-how-to.md#deserialize-inferred-types-to-object-properties)bölümünde örnek gibi bir dönüştürücü oluşturun.
 
-### <a name="deserialize-null-to-non-nullable-type"></a>Null olamayan tür için null serisini kaldırma 
+### <a name="deserialize-null-to-non-nullable-type"></a>Null olamayan tür için null serisini kaldırma
 
 `Newtonsoft.Json` aşağıdaki senaryoda bir özel durum oluşturmaz:
 
@@ -326,7 +326,7 @@ Yukarıdaki dönüştürücü kodu basitleştirilmiş bir örnektir. Öznitelikl
 
 `Newtonsoft.Json` serileştirme veya seri durumdan çıkarma için bir özelliği koşullu olarak yoksaymanın birkaç yolu vardır:
 
-* `DefaultContractResolver`, rastgele ölçütlere göre dahil edilecek veya hariç tutulacak özellikleri seçmenizi sağlar. 
+* `DefaultContractResolver`, rastgele ölçütlere göre dahil edilecek veya hariç tutulacak özellikleri seçmenizi sağlar.
 * `JsonSerializerSettings` `NullValueHandling` ve `DefaultValueHandling` ayarları, tüm null değer veya varsayılan değer özelliklerinin yok sayılacağını belirtmenize olanak tanır.
 * `[JsonProperty]` özniteliğinde `NullValueHandling` ve `DefaultValueHandling` ayarları, null ya da varsayılan değer olarak ayarlandığında yoksayılacak tek tek özellikleri belirtmenize izin verir.
 
@@ -341,7 +341,7 @@ Bu seçenekler **şunları yapmanızı sağlar** :
 * Türü için varsayılan değere sahip tüm özellikleri yoksayın.
 * Türü için varsayılan değere sahip seçili özellikleri yoksayın.
 * Değerleri null ise seçili özellikleri yoksayın.
-* Çalışma zamanında değerlendirilen rastgele ölçütlere göre seçili özellikleri yoksayın. 
+* Çalışma zamanında değerlendirilen rastgele ölçütlere göre seçili özellikleri yoksayın.
 
 Bu işlevsellik için özel bir dönüştürücü yazabilirsiniz. İşte bu yaklaşımı gösteren örnek bir POCO ve özel dönüştürücü.
 
@@ -349,7 +349,7 @@ Bu işlevsellik için özel bir dönüştürücü yazabilirsiniz. İşte bu yakl
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecastRuntimeIgnoreConverter.cs)]
 
-Dönüştürücü, değeri null, boş bir dize veya "N/A" ise, `Summary` özelliğinin Serileştirmeden atlanmasına neden olur. 
+Dönüştürücü, değeri null, boş bir dize veya "N/A" ise, `Summary` özelliğinin Serileştirmeden atlanmasına neden olur.
 
 Bu özel dönüştürücüyü [sınıfında bir özniteliği kullanarak](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) veya dönüştürücüyü <xref:System.Text.Json.JsonSerializerOptions.Converters> koleksiyonuna [ekleyerek](system-text-json-converters-how-to.md#registration-sample---converters-collection) kaydettirin.
 
@@ -446,7 +446,7 @@ Ayrıca `Newtonsoft.Json` bir özel durum oluşturmak yerine döngüsel başvuru
 
 ### <a name="jsondocument-is-idisposable"></a>JsonDocument, IDisposable
 
-`JsonDocument`, toplanan arabellekte verilerin bellek içi bir görünümünü oluşturur. Bu nedenle, `Newtonsoft.Json``JObject` veya `JArray` aksine, `JsonDocument` türü `IDisposable` uygular ve bir using bloğu içinde kullanılması gerekir. 
+`JsonDocument`, toplanan arabellekte verilerin bellek içi bir görünümünü oluşturur. Bu nedenle, `Newtonsoft.Json``JObject` veya `JArray` aksine, `JsonDocument` türü `IDisposable` uygular ve bir using bloğu içinde kullanılması gerekir.
 
 Yalnızca yaşam süresi sahipliğini aktarmak ve arayana atmak istiyorsanız API 'nizden bir `JsonDocument` döndürün. Çoğu senaryoda, bu gerekli değildir. Çağıranın tüm JSON belgesiyle çalışması gerekiyorsa, bir <xref:System.Text.Json.JsonElement><xref:System.Text.Json.JsonDocument.RootElement%2A><xref:System.Text.Json.JsonElement.Clone%2A> döndürün. Çağıranın JSON belgesi içinde belirli bir öğeyle çalışması gerekiyorsa, bu <xref:System.Text.Json.JsonElement><xref:System.Text.Json.JsonElement.Clone%2A> döndürün. Bir `Clone`oluşturmadan doğrudan `RootElement` veya alt öğe döndürdüğünüzde, çağıran `JsonElement`, bu, ona sahip olan `JsonDocument` atıldıktan sonra, döndürülen erişemez.
 
@@ -456,7 +456,7 @@ Yalnızca yaşam süresi sahipliğini aktarmak ve arayana atmak istiyorsanız AP
 public JsonElement LookAndLoad(JsonElement source)
 {
     string json = File.ReadAllText(source.GetProperty("fileName").GetString());
-   
+
     using (JsonDocument doc = JsonDocument.Parse(json))
     {
         return doc.RootElement.Clone();
@@ -464,9 +464,9 @@ public JsonElement LookAndLoad(JsonElement source)
 }
 ```
 
-Yukarıdaki kod, `fileName` özelliği içeren bir `JsonElement` bekler. JSON dosyasını açar ve bir `JsonDocument`oluşturur. Yöntemi, çağıranın tüm belgeyle çalışmak istediğini varsayar, bu nedenle `RootElement``Clone` döndürür. 
+Yukarıdaki kod, `fileName` özelliği içeren bir `JsonElement` bekler. JSON dosyasını açar ve bir `JsonDocument`oluşturur. Yöntemi, çağıranın tüm belgeyle çalışmak istediğini varsayar, bu nedenle `RootElement``Clone` döndürür.
 
-Bir `JsonElement` alırsanız ve bir alt öğe döndürüyorsa, alt öğenin bir `Clone` döndürülmesi gerekli değildir. Çağıranın, geçirilen `JsonElement` ait olduğu `JsonDocument` canlı tutulmasından sorumludur. Örneğin:
+Bir `JsonElement` alırsanız ve bir alt öğe döndürüyorsa, alt öğenin bir `Clone` döndürülmesi gerekli değildir. Çağıranın, geçirilen `JsonElement` ait olduğu `JsonDocument` canlı tutulmasından sorumludur. Örnek:
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)
@@ -514,7 +514,7 @@ Aşağıdaki bölümlerde `Utf8JsonReader`kullanımı için önerilen programlam
 
 `Utf8JsonReader`, UTF-8 kodlamalı [Readonlyspan\<byte >](xref:System.ReadOnlySpan%601) veya [readonlysequence\<byte >](xref:System.Buffers.ReadOnlySequence%601) (bir <xref:System.IO.Pipelines.PipeReader>okuma sonucu olan) okumayı destekler.
 
-Zaman uyumlu okuma için, akışın sonuna kadar bir bayt dizisine kadar JSON yükünü okuyabilir ve bunu okuyucuya geçirebilirsiniz. Dizeden okuma (UTF-16 olarak kodlanmış) için, <xref:System.Text.Encoding.UTF8>çağırın.<xref:System.Text.Encoding.GetBytes%2A> İlk olarak dizeyi bir UTF-8 kodlu bayt dizisine dönüştürme. Sonra bu `Utf8JsonReader`geçirin. 
+Zaman uyumlu okuma için, akışın sonuna kadar bir bayt dizisine kadar JSON yükünü okuyabilir ve bunu okuyucuya geçirebilirsiniz. Dizeden okuma (UTF-16 olarak kodlanmış) için, <xref:System.Text.Encoding.UTF8>çağırın.<xref:System.Text.Encoding.GetBytes%2A> İlk olarak dizeyi bir UTF-8 kodlu bayt dizisine dönüştürme. Sonra bu `Utf8JsonReader`geçirin.
 
 `Utf8JsonReader` girişin JSON metni olduğunu düşündüğü için UTF-8 bayt sırası işareti (BOM) geçersiz JSON olarak kabul edilir. Çağıranın verileri okuyucuya geçirmeden önce onu filtrelemeniz gerekir.
 

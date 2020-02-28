@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: bf8a1c028b7b987cb9a7340597087d799dfd4321
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7de8c4e44e1866e3df36c666c9ecc210dc6a7d83
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123168"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159370"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Devamlılık Görevlerini Kullanarak Görevleri Birbirine Bağlama
 Zaman uyumsuz programlamada, bir zaman uyumsuz işlem için, tamamlandığında ikinci bir işlemi çağırmak ve verileri iletmek için yaygındır. Geleneksel olarak, devamlılıklar geri çağırma yöntemleri kullanılarak yapılır. Görev paralel kitaplığında, aynı işlevler *devamlılık görevleri*tarafından sağlanır. Devamlılık görevi (sadece devamlılık olarak da bilinir *), öncül*olarak bilinen başka bir görev tarafından çağrılan zaman uyumsuz bir görevdir.  
@@ -42,7 +42,7 @@ Zaman uyumsuz programlamada, bir zaman uyumsuz işlem için, tamamlandığında 
  Devamlılık bir <xref:System.Threading.Tasks.Task> ve başlatıldığı iş parçacığını engellemez. Devamlılık görevi bitene kadar engellemek için <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemini çağırın.  
   
 ## <a name="creating-a-continuation-for-a-single-antecedent"></a>Tek bir öncül için devamlılık oluşturma  
- <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> yöntemini çağırarak öncül öğesinin son tamamlandığında yürütülen bir devamlılık oluşturursunuz. Aşağıdaki örnekte temel desenler gösterilmektedir (açıklık için özel durum işleme atlanır). Bir öncül görevini yürütür, bu, haftanın geçerli gününün adını belirten bir <xref:System.DayOfWeek> nesnesi döndüren `taskA`. Öncül tamamlandığında, devamlılık görevi `continuation`, öncül işlemi geçirilir ve sonucunu içeren bir dize görüntüler. 
+ <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> yöntemini çağırarak öncül öğesinin son tamamlandığında yürütülen bir devamlılık oluşturursunuz. Aşağıdaki örnekte temel desenler gösterilmektedir (açıklık için özel durum işleme atlanır). Bir öncül görevini yürütür, bu, haftanın geçerli gününün adını belirten bir <xref:System.DayOfWeek> nesnesi döndüren `taskA`. Öncül tamamlandığında, devamlılık görevi `continuation`, öncül işlemi geçirilir ve sonucunu içeren bir dize görüntüler.
 
 > [!NOTE]
 > Bu C# makaledeki örneklerde, `Main` yönteminde `async` değiştiricisinden yararlanabilirsiniz. Bu özellik C# 7,1 ve üzeri sürümlerde kullanılabilir. Önceki sürümler bu örnek kodu derlerken [`CS5001`](../../csharp/misc/cs5001.md) oluşturur. Dil sürümünü C# 7,1 veya daha yeni bir sürüme ayarlamanız gerekir. Dil sürümünü [yapılandırma sürümünü yapılandırma](../../csharp/language-reference/configure-language-version.md)makalesindeki makaleyi yapılandırma hakkında bilgi edinebilirsiniz.

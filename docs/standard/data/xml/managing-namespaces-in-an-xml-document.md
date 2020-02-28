@@ -3,17 +3,17 @@ title: XML Belgesinde Ad Alanlarını Yönetme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: 64ef9fd4ca3a9a83b9cd3eba9cb952b0f668e9f0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7b219788895ab2f89fa285c2e1b7de62639bfcf9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710706"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160046"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>XML Belgesinde Ad Alanlarını Yönetme
 XML ad alanları, bir XML belgesindeki öğe ve öznitelik adlarını özel ve önceden tanımlanmış URI 'Ler ile ilişkilendirir. Bu ilişkilendirmeleri oluşturmak için, ad alanı URI 'Leri için ön ekleri tanımlar ve bu önekleri, XML verilerinde öğe ve öznitelik adlarını nitelemek için kullanabilirsiniz. Ad alanları öğe ve öznitelik adı çakışmalarını önler ve aynı ada sahip öğelerin ve özniteliklerin işlenmesini ve farklı şekilde doğrulanmasını etkinleştirir.  
   
-<a name="declare"></a>   
+<a name="declare"></a>
 ## <a name="declaring-namespaces"></a>Ad alanlarını bildirme  
  Bir öğe üzerinde bir ad alanı bildirmek için `xmlns:` özniteliğini kullanın:  
   
@@ -30,7 +30,7 @@ XML ad alanları, bir XML belgesindeki öğe ve öznitelik adlarını özel ve �
   
  Bir öğenin belirli bir ad alanının parçası olduğunu belirtmek için, buna ad alanı öneki ekleyin. Örneğin, bir `Author` öğesi `mybook` ad alanına aitse, `<mybook:Author>`olarak bildirilmiştir.  
   
-<a name="scope"></a>   
+<a name="scope"></a>
 ## <a name="declaration-scope"></a>Bildirim kapsamı  
  Bir ad alanı, içinde bildirildiği öğenin sonuna kadar bildirim noktasından etkilidir. Bu örnekte, `BOOK` öğesinde tanımlanan ad alanı `Publisher` öğesi gibi `BOOK` öğesi dışındaki öğelere uygulanmaz:  
   
@@ -65,7 +65,7 @@ XML ad alanları, bir XML belgesindeki öğe ve öznitelik adlarını özel ve �
   
  <xref:System.Xml.XmlNamespaceManager> sınıfıyla gerçekleştirebileceğiniz yönetim ve arama görevlerinin bazıları aşağıda verilmiştir. Daha fazla bilgi ve örnek için, her bir yöntem veya özellik için başvuru sayfasının bağlantılarını izleyin.  
   
-|Bitiş|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|  
+|Alıcı|Kullanım|  
 |--------|---------|  
 |Ad alanı Ekle|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> yöntemi|  
 |Ad alanını kaldır|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> yöntemi|  

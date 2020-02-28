@@ -4,12 +4,12 @@ description: Ve .NET Core 'daki C# birim testi kavramlarını, DotNet test ve MS
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: 2d432f5efd6f8de3593f939abbd488f9fe68b73e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1b21e961ffceb3fce2697ad3254e79ed258aaa1a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715393"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157343"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>MSTest ve C# .NET Core ile birim testi
 
@@ -36,15 +36,15 @@ namespace Prime.Services
 {
     public class PrimeService
     {
-        public bool IsPrime(int candidate) 
+        public bool IsPrime(int candidate)
         {
             throw new NotImplementedException("Please create a test first.");
-        } 
+        }
     }
 }
 ```
 
-Dizini *Unit-Testing-MSTest* dizinine doğru değiştirin. Çözüme Sınıf Kitaplığı projesini eklemek için [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) çalıştırın. 
+Dizini *Unit-Testing-MSTest* dizinine doğru değiştirin. Çözüme Sınıf Kitaplığı projesini eklemek için [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) çalıştırın.
 
 ## <a name="create-the-test-project"></a>Test projesi oluşturma
 
@@ -90,7 +90,7 @@ Aşağıdaki ana hat, son çözüm yerleşimini göstermektedir:
         PrimeServiceTests.csproj
 ```
 
-[`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) *birim-test-using-MSTest* dizininde yürütün. 
+[`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) *birim-test-using-MSTest* dizininde yürütün.
 
 ## <a name="create-the-first-test"></a>İlk testi oluşturma
 
@@ -123,7 +123,7 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-[TestClass özniteliği](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) birim testlerini içeren bir sınıfı gösterir. [TestMethod özniteliği](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) bir yöntemin test yöntemi olduğunu gösterir. 
+[TestClass özniteliği](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) birim testlerini içeren bir sınıfı gösterir. [TestMethod özniteliği](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) bir yöntemin test yöntemi olduğunu gösterir.
 
 Testleri ve sınıf kitaplığını oluşturmak için bu dosyayı kaydedin ve [`dotnet test`](../tools/dotnet-test.md) yürütün ve ardından testleri çalıştırın. MSTest Test Çalıştırıcısı, testlerinizi çalıştırmak için program giriş noktasını içerir. `dotnet test`, oluşturduğunuz birim test projesini kullanarak Test Çalıştırıcısı başlatır.
 
@@ -163,5 +163,5 @@ Bu kitaplık için küçük bir kitaplık ve birim testleri kümesi oluşturdunu
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting>
-- [MSTest framework birim testleri kullanın](/visualstudio/test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests)
+- [Birim testlerinde MSTest çerçevesini kullanma](/visualstudio/test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests)
 - [MSTest v2 test çerçevesi belgeleri](https://github.com/Microsoft/testfx-docs)

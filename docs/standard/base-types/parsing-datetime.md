@@ -14,12 +14,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 16daa0ef3133b6cd04dc48b7f79fd365098e4bdf
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9555304e570226b2ed3b040735cf099b5a018f93
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348066"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156549"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>.NET 'teki tarih ve saat dizelerini ayrıştırma
 
@@ -48,7 +48,7 @@ Bir tarih ve saat bileşenine ek olarak, bir tarih ve saatin dize gösterimi, za
   
 Biçim sağlayıcısı, belirsiz bir sayısal tarihi yorumlamak için de kullanılır. "02/03/04" dizesi ile temsil edilen tarihin hangi bileşenlerinin ay, gün ve yıl olduğunu net değildir. Bileşenler, biçim sağlayıcısındaki benzer Tarih biçimlerinin sırasına göre yorumlanır.
 
-## <a name="parse"></a>Ayrıştır
+## <a name="parse"></a>MAZ
 
 Aşağıdaki örnek, bir `string` <xref:System.DateTime>dönüştürmek için <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> yönteminin kullanımını gösterir. Bu örnek, geçerli iş parçacığıyla ilişkili kültürü kullanır. Geçerli kültür ile ilişkili <xref:System.Globalization.CultureInfo> giriş dizesini ayrıştıramaz, bir <xref:System.FormatException> oluşturulur.
 
@@ -72,7 +72,7 @@ Ancak, özel biçim sağlayıcıları belirtmek için <xref:System.DateTime.Pars
 
 [!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
 [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#3)]
- 
+
 ## <a name="parseexact"></a>ParseExact
 
 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> yöntemi, belirtilen dize desenlerinden birine uyuyorsa bir dizeyi <xref:System.DateTime> nesnesine dönüştürür. Belirtilen formlardan biri olmayan bir dize bu yönteme geçirildiğinde, bir <xref:System.FormatException> oluşturulur. Standart Tarih ve saat biçimi belirticilerden birini ya da özel biçim belirticileri birleşimini belirtebilirsiniz. Özel biçim belirticilerini kullanarak, özel bir tanıma dizesi oluşturmanız mümkündür. Belirticilerin açıklaması için [Standart Tarih ve saat biçimi dizeleri](standard-date-and-time-format-strings.md) ve [özel tarih ve saat biçim dizeleri](custom-date-and-time-format-strings.md)hakkındaki konulara bakın.  

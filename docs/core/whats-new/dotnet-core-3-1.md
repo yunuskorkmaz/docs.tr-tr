@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 0905cbebb2d966570be4ac3aefb40f4377b97061
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 323a2390f079c17b81db01e4e3787916251943bf
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742579"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156562"
 ---
 # <a name="whats-new-in-net-core-31"></a>​.NET Core 3.1’deki yenilikler
 
@@ -29,13 +29,41 @@ Yayın hakkında daha fazla bilgi için bkz. [.NET Core 3,1 duyurusu](https://de
 
 .NET Core 3,1, bir sonraki üç yılda Microsoft desteğiyle desteklenen bir LTS sürümüdür. Uygulamalarınızı .NET Core 3,1 ' e taşımanız önemle tavsiye edilir. Diğer ana yayınların geçerli yaşam döngüsü aşağıdaki gibidir:
 
-| Sürüm | Not |
+| Yayınla | Not |
 | ------- | ---- |
 | .NET Core 3.0 | 3 Mart 2020 ' de yaşam sonu.     |
 | .NET Core 2.2 | 23 Aralık 2019 ' de yaşam sonu. |
 | .NET Core 2.1 | 21 Ağustos 2021 ' de yaşam sonu.    |
 
 Daha fazla bilgi için bkz. [.NET Core destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
+
+## <a name="macos-apphost-and-notarization"></a>macOS appHost ve notarlama
+
+*yalnızca macOS*
+
+MacOS için .NET Core SDK 3,1 ' den başlayarak, appHost ayarı varsayılan olarak devre dışıdır. Daha fazla bilgi için bkz. [MacOS Catalina Notarleştirme ve .NET Core indirmeleri ve projeleri üzerindeki etki](../install/macos-notarization-issues.md).
+
+AppHost ayarı etkinleştirildiğinde, .NET Core, oluşturduğunuzda veya yayımladığınızda yerel bir MAK-O çalıştırılabilir dosyası oluşturur. Uygulamanız, `dotnet run` komutuyla kaynak koddan çalıştırıldığında veya mak-O yürütülebilir dosyasını doğrudan başlatarak appHost bağlamında çalışır.
+
+AppHost olmadan, bir kullanıcıya [çalışma zamanına bağımlı](../deploying/index.md#publish-runtime-dependent) bir uygulama başlatabilir tek yol `dotnet <filename.dll>` komuttur. Uygulamanızı [kendi içinde](../deploying/index.md#publish-self-contained)yayımladığınızda her zaman bir appHost oluşturulur.
+
+AppHost 'yi proje düzeyinde yapılandırabilir ya da `-p:UseAppHost` parametresiyle belirli bir `dotnet` komutu için appHost ' yi değiştirebilirsiniz:
+
+- Proje dosyası
+
+  ```xml
+  <PropertyGroup>
+    <UseAppHost>true</UseAppHost>
+  </PropertyGroup>
+  ```
+
+- Komut satırı parametresi
+
+  ```dotnetcli
+  dotnet run -p:UseAppHost=true
+  ```
+
+`UseAppHost` ayarı hakkında daha fazla bilgi için bkz. [Microsoft. net. SDK Için MSBuild özellikleri](../project-sdk/msbuild-props.md#useapphost).
 
 ## <a name="windows-forms"></a>Windows Forms
 

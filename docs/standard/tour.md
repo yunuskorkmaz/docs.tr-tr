@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 0154910b91df0b2f72daebe802e4c75bbca964bb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f4cd2e47da236d276a42b972265ffd1a2fe27310
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337575"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160345"
 ---
 # <a name="tour-of-net"></a>.NET Turu
 
@@ -21,13 +21,13 @@ Bu makalede, .NET 'in temel özelliklerinden bazıları üzerinden kılavuzlu bi
 
 ## <a name="how-to-run-the-code-samples"></a>Kod örneklerini çalıştırma
 
-Kod örneklerini çalıştırmak için bir geliştirme ortamı ayarlamayı öğrenmek için [Başlarken](get-started.md) konusuna bakın. Kod örneklerini bu sayfadan kopyalayıp yürütmek için ortamınıza yapıştırın. 
+Kod örneklerini çalıştırmak için bir geliştirme ortamı ayarlamayı öğrenmek için [Başlarken](get-started.md) konusuna bakın. Kod örneklerini bu sayfadan kopyalayıp yürütmek için ortamınıza yapıştırın.
 
 ## <a name="programming-languages"></a>Programlama dilleri
 
 .NET birden çok programlama dilini destekler. .NET uygulamaları, diğer şeyler arasında dilden bağımsız çalışma zamanı ve dil birlikte çalışabilirliği belirten [ortak dil altyapısını (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)uygular. Bu, .NET üzerinde uygulama ve hizmet oluşturmak için herhangi bir .NET dilini seçtiğiniz anlamına gelir.
 
-Microsoft, üç .NET dilini etkin bir şekilde geliştirir C#ve F#destekler:, ve Visual Basic. 
+Microsoft, üç .NET dilini etkin bir şekilde geliştirir C#ve F#destekler:, ve Visual Basic.
 
 * C#basit, güçlü, tür kullanımı uyumlu ve nesne yönelimlidir. Bu, C stili dillerin ifade ve inceliğini bir kısmını korur. C ve benzer dilleri bilen herkes, ile uyumlu olan bazı sorunlar buluyor C#. Hakkında C#daha fazla bilgi edinmek için [ C# kılavuza](../csharp/index.yml) göz atın.
 

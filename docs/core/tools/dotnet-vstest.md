@@ -1,13 +1,13 @@
 ---
 title: DotNet VSTest komutu
 description: DotNet VSTest komutu bir proje ve tüm bağımlılıklarını oluşturur.
-ms.date: 05/30/2018
-ms.openlocfilehash: fc0aa4f9abf069f78e27692ee84aea2559109c98
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.date: 02/27/2020
+ms.openlocfilehash: 88e5b6a8966d78d0746f9ea5ccbccab142a2e0f6
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626027"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156939"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 

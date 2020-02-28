@@ -10,12 +10,12 @@ helpviewer_keywords:
 - enumeration format strings
 - formatting [.NET Framework], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-ms.openlocfilehash: c32fd9d59f61b6befe94ff9eb85b0c39ce926adb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: da7634758f5c4319fa18612d216682dc141318fd
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348260"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155964"
 ---
 # <a name="enumeration-format-strings"></a>Sabit listesi biçim dizeleri
 
@@ -48,7 +48,7 @@ Numaralandırma girişini mümkün olan en kısa temsilde tamsayı değeri olara
 
 Sabit Listesi girişini onaltılık bir değer olarak görüntüler. Sonuç dizesinin, numaralandırma türünün [temel alınan sayısal türündeki](xref:System.Enum.GetUnderlyingType%2A)her bayt için iki karakteri olduğundan emin olmak için, değer önde gelen sıfır ile temsil edilir. Aşağıdaki örnekte X Biçim belirleyicisi gösterilmektedir. Örnekte, hem <xref:System.ConsoleColor> hem de <xref:System.IO.FileAttributes> temel alınan türü <xref:System.Int32>ya da 8 karakterlik bir sonuç dizesi üreten 32 bitlik (veya 4 baytlık) bir tamsayıdır.
 
-[!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]      
+[!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]
 [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]
 
 ## <a name="example"></a>Örnek

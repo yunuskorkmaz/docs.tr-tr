@@ -2,12 +2,12 @@
 title: DotNet Aracı kaldırma komutu
 description: DotNet Aracı kaldırma komutu, belirtilen .NET Core aracını makinenizden kaldırır.
 ms.date: 02/14/2020
-ms.openlocfilehash: 82dad0206d9c3e2ef0f41c353f4a608f10e4f127
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 7a15c169c73cf5a743e0fa6f47645d6bccedbde3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543449"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157051"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
@@ -46,7 +46,7 @@ dotnet tool uninstall <-h|--help>
 
 - **`-g|--global`**
 
-  Kaldırılacak aracın Kullanıcı genelindeki bir yüklemeden olduğunu belirtir. `--tool-path` seçeneği ile birleştirilemez. `--global` ve `--tool-path` her ikisi de kullanılmazsa, kaldırılacak aracın yerel bir araç olduğunu belirtir. 
+  Kaldırılacak aracın Kullanıcı genelindeki bir yüklemeden olduğunu belirtir. `--tool-path` seçeneği ile birleştirilemez. `--global` ve `--tool-path` her ikisi de kullanılmazsa, kaldırılacak aracın yerel bir araç olduğunu belirtir.
 
 - **`-h|--help`**
 
@@ -54,7 +54,7 @@ dotnet tool uninstall <-h|--help>
 
 - **`--tool-path <PATH>`**
 
-  Aracının kaldırılacağı konumu belirtir. YOL mutlak veya göreli olabilir. `--global` seçeneği ile birleştirilemez. `--global` ve `--tool-path` her ikisi de kullanılmazsa, kaldırılacak aracın yerel bir araç olduğunu belirtir. 
+  Aracının kaldırılacağı konumu belirtir. YOL mutlak veya göreli olabilir. `--global` seçeneği ile birleştirilemez. `--global` ve `--tool-path` her ikisi de kullanılmazsa, kaldırılacak aracın yerel bir araç olduğunu belirtir.
 
 ## <a name="examples"></a>Örnekler
 

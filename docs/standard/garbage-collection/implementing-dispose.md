@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 0583329ae75fa54cf000212479895ccebdbd30d8
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: a7e03a833886a1486e0dc081d6ef059791a464b5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142059"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156341"
 ---
 # <a name="implementing-a-dispose-method"></a>Dispose yöntemi uygulama
 
@@ -70,7 +70,7 @@ Yöntemin gövdesi iki kod bloğundan oluşur:
   
   **Büyük miktarlarda bellek kullanan veya nadir kaynaklarını tüketen yönetilen nesneler.** Bu nesneleri açıkça `Dispose` yönteminde serbest bırakma, çöp toplayıcı tarafından belirleyici olmayan şekilde geri kazanıladıklarından daha hızlı bir şekilde serbest bırakır.  
   
-Yöntem çağrısı bir sonlandırıcının geliyorsa (yani, *disposing* `false`), yalnızca yönetilmeyen kaynakları serbest bırakma kodu yürütülür. Çöp toplayıcı 'nın sonlandırma sırasında yönetilen nesneleri yok ettiği sıra tanımlanmadığı için, bu `Dispose` aşırı yüklemesini `false` bir değer ile çağırmak, sonlandırıcının zaten yapılmış olabilecek yönetilen kaynakları serbest bırakmasına engel olur lamıyor.  
+Yöntem çağrısı bir sonlandırıcının geliyorsa (yani, *disposing* `false`), yalnızca yönetilmeyen kaynakları serbest bırakma kodu yürütülür. Çöp toplayıcı 'nın sonlandırma sırasında yönetilen nesneleri yok ettiği sıra tanımlanmadığı için, bu `Dispose` aşırı yüklemesinin `false` bir değerle çağrılması, sonlandırıcının zaten geri kazanımış olabilecek yönetilen kaynakları serbest bırakmaya çalışmasını önler.  
   
 ## <a name="implementing-the-dispose-pattern-for-a-base-class"></a>Dispose desenini bir temel sınıf için uygulama
 
@@ -125,7 +125,7 @@ Güvenli tanıtıcı kullanan bir türetilen sınıf için dispose deseni uygula
 > [!NOTE]
 > İçinde C#, bir [yıkıcı](../../csharp/programming-guide/classes-and-structs/destructors.md)tanımlayarak <xref:System.Object.Finalize%2A?displayProperty=nameWithType> geçersiz kılabilirsiniz.  
   
-<a name="SafeHandles"></a>   
+<a name="SafeHandles"></a>
 ## <a name="using-safe-handles"></a>Güvenli tanıtıcıları kullanma
 
 Bir nesnenin sonlandırıcısı için kod yazmak, doğru yapılmaması durumunda sorunlara neden olabilecek karmaşık bir görevdir. Bu nedenle, bir sonlandırıcıyı uygulamak yerine <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> nesneleri oluşturmanızı öneririz.  
@@ -142,7 +142,7 @@ Bir nesnenin sonlandırıcısı için kod yazmak, doğru yapılmaması durumunda
   
 - Wait tutamaçları için <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> sınıfı.  
   
-<a name="base"></a>   
+<a name="base"></a>
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>Bir temel sınıfa ilişkin olarak dispose deseni uygulamak için güvenli tanıtıcı kullanma
 
 Aşağıdaki örnek, yönetilmeyen kaynakları kapsüllemek için güvenli bir tanıtıcı kullanan `DisposableStreamResource`bir temel sınıf için Dispose modelini gösterir. Açık bir dosyayı temsil eden bir <xref:System.IO.Stream> nesnesini kaydırmak için <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> kullanan bir `DisposableResource` sınıfını tanımlar. `DisposableResource` yöntemi, dosya akışındaki toplam bayt sayısını döndüren `Size`tek bir özelliğini de içerir.  
@@ -150,7 +150,7 @@ Aşağıdaki örnek, yönetilmeyen kaynakları kapsüllemek için güvenli bir t
 [!code-csharp[Conceptual.Disposable#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/base1.cs#9)]
 [!code-vb[Conceptual.Disposable#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/base1.vb#9)]  
   
-<a name="derived"></a>   
+<a name="derived"></a>
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-derived-class"></a>Bir türetilen sınıfa ilişkin olarak dispose deseni uygulamak için güvenli tanıtıcı kullanma
 
 Aşağıdaki örnek, bir önceki örnekte sunulan `DisposableStreamResource` sınıfından devralan `DisposableStreamResource2`türetilmiş bir sınıf için Dispose modelini gösterir. Sınıfı, `WriteFileInfo`ek bir yöntem ekler ve yazılabilir dosyanın tanıtıcısını kaydırmak için bir <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> nesnesi kullanır.  

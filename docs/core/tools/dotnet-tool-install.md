@@ -2,12 +2,12 @@
 title: DotNet aracı install komutu
 description: DotNet aracı yükleme komutu, makinenizde belirtilen .NET Core aracını yükler.
 ms.date: 02/14/2020
-ms.openlocfilehash: 837d12bc807ad95ccdbd9c0e087c7d45418c6e74
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 641e6a2753b1cf3bfc334ba2495342f7c42421fc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626040"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156980"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -73,7 +73,7 @@ Daha fazla bilgi için bkz. [yerel araç yüklemesi](global-tools.md#install-a-l
 
 - **`-g|--global`**
 
-  Yüklemenin Kullanıcı genelinde olduğunu belirtir. `--tool-path` seçeneği ile birleştirilemez. `--global` ve `--tool-path` her ikisi de kullanılmazsa yerel bir araç yüklemesi belirtilir. 
+  Yüklemenin Kullanıcı genelinde olduğunu belirtir. `--tool-path` seçeneği ile birleştirilemez. `--global` ve `--tool-path` her ikisi de kullanılmazsa yerel bir araç yüklemesi belirtilir.
 
 - **`-h|--help`**
 
@@ -81,7 +81,7 @@ Daha fazla bilgi için bkz. [yerel araç yüklemesi](global-tools.md#install-a-l
 
 - **`tool-path <PATH>`**
 
-  Genel aracın yükleneceği konumu belirtir. YOL mutlak veya göreli olabilir. YOL yoksa, komut onu oluşturmaya çalışır. `--global` ve `--tool-path` her ikisi de kullanılmazsa yerel bir araç yüklemesi belirtilir. 
+  Genel aracın yükleneceği konumu belirtir. YOL mutlak veya göreli olabilir. YOL yoksa, komut onu oluşturmaya çalışır. `--global` ve `--tool-path` her ikisi de kullanılmazsa yerel bir araç yüklemesi belirtilir.
 
 - **`-v|--verbosity <LEVEL>`**
 

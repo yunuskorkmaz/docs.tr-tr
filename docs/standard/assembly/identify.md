@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Bir dosyanın derleme olup olmadığını belirleme'
+title: 'Nasıl yapılır: bir dosyanın derleme olup olmadığını belirleme'
 ms.date: 08/19/2019
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: f9bff86ac559e40136ed016b862eef8ba0863ce3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1d66c0c166724f195a3cafd9bcbe3c7414c08ebb
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973224"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159513"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly"></a>Nasıl yapılır: Bir dosyanın derleme olup olmadığını belirleme
+# <a name="how-to-determine-if-a-file-is-an-assembly"></a>Nasıl yapılır: bir dosyanın derleme olup olmadığını belirleme
 
 Bir dosya, yalnızca yönetilmiyorsa ve meta verilerinde bir derleme girişi içeriyorsa bir derlemedir. Derlemeler ve meta veriler hakkında daha fazla bilgi için bkz. [bütünleştirilmiş kod bildirimi](manifest.md).  
   
@@ -22,13 +22,13 @@ Bir dosya, yalnızca yönetilmiyorsa ve meta verilerinde bir derleme girişi iç
   
 2. Sınamak istediğiniz dosyayı yükleyin.  
   
-3. **Ildadsm** , dosyanın taşınabilir bir ÇALıŞTıRıLABILIR (PE) dosyası olmadığını bildirirse, bir derleme değildir. Daha fazla bilgi için bkz [. nasıl yapılır: Derleme içeriğini](view-contents.md)görüntüleyin.  
+3. **Ildadsm** , dosyanın taşınabilir bir ÇALıŞTıRıLABILIR (PE) dosyası olmadığını bildirirse, bir derleme değildir. Daha fazla bilgi için [nasıl yapılır: derleme Içeriğini görüntüleme](view-contents.md)konusuna bakın.  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Bir dosyanın derleme olup olmadığını programlı olarak belirleme  
   
-1. Test ettiğiniz dosyanın tam dosya yolunu ve adını geçirerek yönteminiçağırın.<xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType>  
+1. Test ettiğiniz dosyanın tam dosya yolunu ve adını geçirerek <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> yöntemini çağırın.  
   
-2. Bir <xref:System.BadImageFormatException> özel durum oluşturulursa, dosya bir derleme değildir.  
+2. <xref:System.BadImageFormatException> bir özel durum oluşturulursa, dosya bir derleme değildir.  
   
 ## <a name="example"></a>Örnek  
 Bu örnek, bir derleme olup olmadığını görmek için bir DLL 'yi sınar.  
@@ -88,8 +88,8 @@ End Module
 ' Output (with .NET Framework 3.5 installed):  
 '        Yes, the file is an Assembly.  
 ```
- 
-<xref:System.Reflection.AssemblyName.GetAssemblyName%2A> Yöntemi, test dosyasını yükler ve ardından bilgiler okunduktan sonra serbest bırakır.  
+
+<xref:System.Reflection.AssemblyName.GetAssemblyName%2A> yöntemi test dosyasını yükler ve ardından bilgiler okunduktan sonra serbest bırakır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

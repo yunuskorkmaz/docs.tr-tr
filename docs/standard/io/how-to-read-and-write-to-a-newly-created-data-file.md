@@ -13,15 +13,15 @@ helpviewer_keywords:
 - I/O [.NET Framework], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-ms.openlocfilehash: 0bb06f42542d6acb3214fd4a1a3ca5c54f7caab2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3772aeeb25d1251a13fde2a0e51a913e5e39eabc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706705"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155756"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Nasıl yapılır: yeni oluşturulan bir veri dosyasını okuma ve yazma
-<xref:System.IO.BinaryWriter?displayProperty=nameWithType> ve <xref:System.IO.BinaryReader?displayProperty=nameWithType> sınıfları, karakter dizeleri dışında veri yazmak ve okumak için kullanılır. Aşağıdaki örnek, boş bir dosya akışının nasıl oluşturulacağını, verilerin nasıl yazılacağını ve verilerin nasıl okunacağını gösterir. 
+<xref:System.IO.BinaryWriter?displayProperty=nameWithType> ve <xref:System.IO.BinaryReader?displayProperty=nameWithType> sınıfları, karakter dizeleri dışında veri yazmak ve okumak için kullanılır. Aşağıdaki örnek, boş bir dosya akışının nasıl oluşturulacağını, verilerin nasıl yazılacağını ve verilerin nasıl okunacağını gösterir.
 
 Örnek, geçerli dizinde *test. Data* adlı bir veri dosyası oluşturur, ilişkili <xref:System.IO.BinaryWriter> ve <xref:System.IO.BinaryReader> nesneleri oluşturur ve dosya işaretçisini dosyanın *sonunda bırakmak üzere*0 ' dan 10 ' a kadar olan tamsayıları yazmak için <xref:System.IO.BinaryWriter> nesnesini kullanır. <xref:System.IO.BinaryReader> nesnesi sonra dosya işaretçisini kaynağa geri ayarlar ve belirtilen içeriği okur.  
   

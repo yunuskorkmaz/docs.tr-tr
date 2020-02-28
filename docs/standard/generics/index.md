@@ -26,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: f04b6fcd1641a53efe75d38ab7122967bff6a58d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f20e5108ad8bff602f5b761e65f093d987f2608
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708377"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156315"
 ---
 # <a name="generics-in-net"></a>.NET içindeki Genel Türler
 
@@ -124,7 +124,7 @@ Genel türler, bir yöntemi, sınıfı, yapıyı veya arabirimi üzerinde çalı
   
  Ortak dil çalışma zamanı, Microsoft ara dili (MSIL) içindeki <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained>ve <xref:System.Reflection.Emit.OpCodes.Readonly>gibi genel türleri desteklemek için yeni opkodlara ve önekleri sağlar.  
   
- Visual C++, C#ve Visual Basic hepsi, genel türleri tanımlamaya ve kullanmaya yönelik tam destek sağlar. Dil desteği hakkında daha fazla bilgi için bkz. [Visual Basic genel türler](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), Genel türlere [giriş](../../csharp/programming-guide/generics/index.md)ve [Visual C++'teki genel bakışa genel bakış ](/cpp/windows/overview-of-generics-in-visual-cpp). 
+ Visual C++, C#ve Visual Basic hepsi, genel türleri tanımlamaya ve kullanmaya yönelik tam destek sağlar. Dil desteği hakkında daha fazla bilgi için bkz. [Visual Basic genel türler](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), Genel türlere [giriş](../../csharp/programming-guide/generics/index.md)ve [Visual C++'teki genel bakışa genel bakış ](/cpp/windows/overview-of-generics-in-visual-cpp).
 
 ## <a name="nested-types-and-generics"></a>İç içe türler ve genel türler  
  Genel türde iç içe yerleştirilmiş bir tür, kapsayan genel türün tür parametrelerine bağlı olabilir. Ortak dil çalışma zamanı, iç içe geçmiş türleri kendi genel tür parametrelerine sahip olmasalar bile genel olacak şekilde değerlendirir. İç içe geçmiş bir türün örneğini oluşturduğunuzda, kapsayan tüm genel türler için tür bağımsız değişkenleri belirtmeniz gerekir.  

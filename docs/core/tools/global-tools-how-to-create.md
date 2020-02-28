@@ -2,12 +2,12 @@
 title: 'Öğretici: .NET Core aracı oluşturma'
 description: .NET Core aracı oluşturmayı öğrenin. Araç, .NET Core CLI kullanılarak yüklenen bir konsol uygulamasıdır.
 ms.date: 02/12/2020
-ms.openlocfilehash: 558bf9e37efc8de68a61f1384fababe342ab7d66
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 88cc3be7b149834ace0c5f3ba8ac8c039199908f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543410"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156731"
 ---
 # <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>Öğretici: .NET Core CLI kullanarak bir .NET Core aracı oluşturma
 
@@ -27,28 +27,22 @@ Bu, bir dizi üç öğreticiden ilkdir. Bu öğreticide bir araç oluşturur ve 
   
 - Tercih ettiğiniz bir metin veya kod düzenleyicisi.
 
-## <a name="create-a-project"></a>Proje oluştur
+## <a name="create-a-project"></a>Proje oluşturma
 
 1. Bir komut istemi açın ve *Depo*adlı bir klasör oluşturun.
 
-1. *Depo* klasörüne gidin ve aşağıdaki komutu girin ve proje adının benzersiz olması için `<name>` benzersiz bir değerle değiştirin. 
+1. *Depo* klasörüne gidin ve şu komutu girin:
 
    ```dotnetcli
-   dotnet new console -n botsay-<name>
+   dotnet new console -n microsoft.botsay
    ```
 
-   Örneğin, aşağıdaki komutu çalıştırabilirsiniz:
+   Komut, *Depo* klasörü altında *Microsoft. botdeyin* adlı yeni bir klasör oluşturur.
 
-   ```dotnetcli
-   dotnet new console -n botsay-nancydavolio
-   ```
-
-   Komut, *Depo* klasörü altında *botdeyin-\<name >* adlı yeni bir klasör oluşturur.
-
-1. *Botdeyin-\<adı >* klasörüne gidin.
+1. *Microsoft. botsay* klasörüne gidin.
 
    ```console
-   cd botsay-<name>
+   cd microsoft.botsay
    ```
 
 ## <a name="add-the-code"></a>Kod ekleme
@@ -151,9 +145,9 @@ dotnet run -- Hello from the bot
 
 ## <a name="package-the-tool"></a>Aracı paketleyin
 
-Uygulamayı bir araç olarak paketleyebilir ve dağıtabilmeniz için önce proje dosyasını değiştirmeniz gerekir. 
+Uygulamayı bir araç olarak paketleyebilir ve dağıtabilmeniz için önce proje dosyasını değiştirmeniz gerekir.
 
-1. *Botdeyin-\<adı >. csproj* dosyasını açın ve `<PropertyGroup>` düğümünün sonuna üç yeni XML düğümü ekleyin:
+1. *Microsoft. botsöyleyin. csproj* dosyasını açın ve `<PropertyGroup>` düğümünün sonuna üç yeni XML düğümü ekleyin:
 
    ```xml
    <PackAsTool>true</PackAsTool>
@@ -190,11 +184,11 @@ Uygulamayı bir araç olarak paketleyebilir ve dağıtabilmeniz için önce proj
    dotnet pack
    ```
 
-   *Botdeyin-\<name >. 1.0.0. nupkg* dosyası, bu örnekte *./nupkg klasörüdür./n/nDosya* olan *botsöyleyin-\<name >. csproj* dosyasındaki `<PackageOutputPath>` değeri tarafından tanımlanan klasörde oluşturulur.
+   *Microsoft. botı. 1.0.0. nupkg* dosyası, bu örnekte *./nupkg* klasörü olan *Microsoft. botsöyleyin. csproj* dosyasındaki `<PackageOutputPath>` değeri tarafından tanımlanan klasörde oluşturulur.
   
    Bir aracı herkese açık bir şekilde yayınlamak istediğinizde, `https://www.nuget.org`yükleyebilirsiniz. Araç NuGet 'de kullanılabilir olduğunda, geliştiriciler [DotNet aracı install](dotnet-tool-install.md) komutunu kullanarak aracı yükleyebilir. Bu öğreticide, paketini doğrudan yerel *nupkg* klasöründen yüklersiniz, bu nedenle paketi NuGet 'e yüklemeye gerek yoktur.
 
-## <a name="troubleshoot"></a>Sorunları Gider
+## <a name="troubleshoot"></a>Sorun giderme
 
 Öğreticiyi takip ederken bir hata mesajı alırsanız bkz. [.NET Core araç kullanımı sorunlarını giderme](troubleshoot-usage-issues.md).
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: aa8a62ee0c653a1905283696b97f55a3e6ffff85
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 99e1f3f96465d05c100a0dbb2bc5218810c33754
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706549"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159435"
 ---
 # <a name="types-of-isolation"></a>Yalıtım Türleri
 Yalıtılmış depolamaya erişim, her zaman onu oluşturan kullanıcıyla kısıtlanır. Bu tür yalıtımın uygulanması için ortak dil çalışma zamanı, işletim sisteminin tanıdığı aynı kullanıcı kimliği kavramını kullanır. Bu, mağaza açıldığında kodun çalıştırıldığı işlemle ilişkili kimliktir. Bu kimlik kimliği doğrulanmış bir kullanıcı kimliğidir, ancak kimliğe bürünme geçerli kullanıcının kimliğinin dinamik olarak değişmesine neden olabilir.  
@@ -53,7 +53,7 @@ Yalıtılmış depolamaya erişim, her zaman onu oluşturan kullanıcıyla kıs�
 > [!IMPORTANT]
 > Yalıtılmış depolama, Windows 8. x Mağazası uygulamaları için kullanılamaz. Bunun yerine, yerel verileri ve dosyaları depolamak için Windows Çalışma Zamanı API 'sinde bulunan `Windows.Storage` ad alanlarında uygulama veri sınıflarını kullanın. Daha fazla bilgi için bkz. Windows Geliştirme Merkezi 'nde [uygulama verileri](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) .  
   
-<a name="UserAssembly"></a>   
+<a name="UserAssembly"></a>
 ## <a name="isolation-by-user-and-assembly"></a>Kullanıcı ve Derlemeye Göre Yalıtım  
  Veri deposunu kullanan derlemeye herhangi bir uygulamanın etki alanından erişilebilir olması gerektiğinde, Kullanıcı ve derlemeye göre yalıtım uygundur. Genellikle, bu durumda, yalıtılmış depolama, birden fazla uygulama için geçerli olan ve kullanıcının adı ya da lisans bilgileri gibi belirli bir uygulamaya bağlı olmayan verileri depolamak için kullanılır. Kullanıcı ve derlemeye göre yalıtılmış depolamaya erişmek için, kodun uygulamalar arasında aktarılmasını sağlamak üzere koda güvenilmesi gerekir. Genellikle, Kullanıcı ve derlemeye göre yalıtım için Internet 'te değil, intranet üzerinde izin verilir. Statik <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> yöntemini çağırmak ve bir Kullanıcı ve derleme <xref:System.IO.IsolatedStorage.IsolatedStorageScope> geçirmek, bu tür yalıtımına sahip depolama döndürür.  
   
@@ -71,7 +71,7 @@ Yalıtılmış depolamaya erişim, her zaman onu oluşturan kullanıcıyla kıs�
  [!code-csharp[Conceptual.IsolatedStorage#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source11.cs#18)]
  [!code-vb[Conceptual.IsolatedStorage#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source11.vb#18)]  
   
-<a name="UserDomainAssembly"></a>   
+<a name="UserDomainAssembly"></a>
 ## <a name="isolation-by-user-domain-and-assembly"></a>Kullanıcı, Etki Alanı ve Derlemeye Göre Yalıtım  
  Uygulamanız özel veri deposu gerektiren bir üçüncü taraf derleme kullanıyorsa, özel verileri depolamak için yalıtılmış depolamayı kullanabilirsiniz. Kullanıcı, etki alanı ve derlemeye göre yalıtım, yalnızca belirli bir derlemedeki kodun verilere erişebilmesini ve yalnızca derlemenin depoyu oluştururken çalışan uygulama tarafından kullanıldığı ve yalnızca deponun oluşturulduğu Kullanıcı tarafından çalıştırıldığı zaman  Uygulamanızı. Kullanıcı, etki alanı ve derlemeye göre yalıtım, üçüncü taraf derlemenin diğer uygulamalara veri sızmasını önler. Yalıtılmış depolama kullanmak istediğinizi bildiğiniz ancak hangi tür yalıtımın kullanılacağı konusunda emin değilseniz, bu yalıtım türü varsayılan seçiminiz olmalıdır. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> statik <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> yöntemini çağırmak ve bir Kullanıcı, etki alanı ve derleme <xref:System.IO.IsolatedStorage.IsolatedStorageScope> geçirmek bu tür yalıtımına sahip depolama döndürür.  
   
@@ -87,7 +87,7 @@ Yalıtılmış depolamaya erişim, her zaman onu oluşturan kullanıcıyla kıs�
  [!code-csharp[Conceptual.IsolatedStorage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source10.cs#15)]
  [!code-vb[Conceptual.IsolatedStorage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#15)]  
   
-<a name="Roaming"></a>   
+<a name="Roaming"></a>
 ## <a name="isolated-storage-and-roaming"></a>Ayrık Depolama ve Dolaşım  
  Gezici Kullanıcı profilleri, bir kullanıcının ağ üzerinde bir kimlik ayarlaması ve bu kimliği herhangi bir ağ bilgisayarında oturum açmak için, tüm kişiselleştirilmiş ayarları yerine getiren bir Windows özelliğidir. Yalıtılmış depolama kullanan bir derleme, kullanıcının yalıtılmış depolamanın gezici kullanıcı profili ile hareket etmesi gerektiğini belirtebilir. Dolaşım, Kullanıcı ve derlemeye göre yalıtım ile veya Kullanıcı, etki alanı ve derlemeye göre yalıtımla birlikte kullanılabilir. Dolaşım kapsamı kullanılmazsa, bir dolaşım Kullanıcı profili kullanılsa bile depolar dolaşımda olmaz.  
   

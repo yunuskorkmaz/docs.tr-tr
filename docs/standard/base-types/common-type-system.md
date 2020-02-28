@@ -16,12 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: 5223c9b2031b1e25ec2f84326c811da1a78ddc15
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c574719da9b89b468b92b042e1f2b5b10fbe3c0d
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711421"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159331"
 ---
 # <a name="common-type-system"></a>Ortak Tür Sistemi
 Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildiği, kullanıldığı ve yönetildiğini tanımlar ve ayrıca çalışma zamanının çapraz dil tümleştirmesi desteğinin önemli bir parçasıdır. Ortak tür sistemi aşağıdaki işlevleri gerçekleştirir:  
@@ -44,7 +44,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
 - [Üye türü özellikleri](#characteristics_of_type_members)  
   
-<a name="types_in_the_net_framework"></a>   
+<a name="types_in_the_net_framework"></a>
 ## <a name="types-in-net"></a>.NET 'teki türler  
  .NET 'teki tüm türler değer türleri ya da başvuru türleridir.  
   
@@ -64,15 +64,15 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
 - [Temsilciler](#Delegates)  
   
-<a name="Classes"></a>   
+<a name="Classes"></a>
 ### <a name="classes"></a>Sınıflar  
  Bir sınıf, doğrudan başka bir sınıftan türetilebilen ve <xref:System.Object?displayProperty=nameWithType>örtülü olarak türetilen bir başvuru türüdür. Sınıfı, bir nesnenin (sınıfın bir örneği olan) gerçekleştirebileceği işlemleri (Yöntemler, olaylar veya Özellikler) ve nesnenin içerdiği verileri (alanlar) tanımlar. Bir sınıf genellikle hem tanım hem de uygulama içerse de (örneğin, yalnızca uygulama olmadan tanım içeren arabirimlerin aksine), hiçbir uygulamaya sahip olmayan bir veya daha fazla üyesi olabilir.  
   
  Aşağıdaki tabloda bir sınıfın sahip olabileceği bazı özellikler açıklanmaktadır. Çalışma zamanını destekleyen her dil, bir sınıf veya sınıf üyesinin bu özelliklerden birini veya daha fazlasını olduğunu göstermek için bir yol sağlar. Ancak, .NET ' i hedefleyen bireysel programlama dilleri, bu özelliklerin tümünü kullanabilir hale gelebilir.  
   
-|Özellikler|Açıklama|  
+|Özellik|Açıklama|  
 |--------------------|-----------------|  
-|korumalı|Başka bir sınıfın bu türden türetilemeyeceğini belirtir.|  
+|sealed|Başka bir sınıfın bu türden türetilemeyeceğini belirtir.|  
 |uygulamalar|Sınıfın, arabirim üyesi uygulamalar sunarak bir veya daha fazla arabirim kullandığını gösterir.|  
 |abstract|Sınıfın örneklendirilmediğini belirtir. Bunu kullanmak için, bundan başka bir sınıf türetmeniz gerekir.|  
 |Devralan|Sınıfın örneklerinin temel sınıfın belirtildiği her yerde kullanılabileceğini gösterir. Temel sınıftan devralan türetilmiş bir sınıf, temel sınıf tarafından sağlanmış olan herhangi bir ortak üyenin uygulamasını kullanabilir veya türetilmiş sınıf ortak üyelerin uygulamasını kendi uygulamasıyla geçersiz kılabilir.|  
@@ -85,7 +85,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
  Bir sınıf herhangi bir sayıda arabirim uygulayabilir, ancak tüm sınıfların örtük olarak devraldığı <xref:System.Object?displayProperty=nameWithType>ek olarak yalnızca bir temel sınıftan devralınabilir. Tüm sınıfların, sınıfının yeni örneklerini Başlatan en az bir oluşturucusu olmalıdır. Açıkça bir Oluşturucu tanımlamadıysanız, çoğu derleyiciler parametresiz bir Oluşturucu otomatik olarak sağlayacaktır.  
   
-<a name="Structures"></a>   
+<a name="Structures"></a>
 ### <a name="structures"></a>Yapılar  
  Yapı, <xref:System.ValueType?displayProperty=nameWithType>örtülü olarak türetilen bir değer türüdür ve bu da <xref:System.Object?displayProperty=nameWithType>türetilir. Bir yapı, bellek gereksinimleri küçük olan değerleri temsil etmek ve değerleri kesin belirlenmiş parametrelere sahip yöntemlere değer olarak parametre olarak geçirmek için çok yararlıdır. .NET sürümünde tüm temel veri türleri (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>ve <xref:System.UInt64>) yapılar olarak tanımlanmıştır.  
   
@@ -95,8 +95,8 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
  Her değer türü için ortak dil çalışma zamanı, değer türüyle aynı durum ve davranışa sahip bir sınıf olan, karşılık gelen paketlenmiş bir tür sağlar. Değer türünün bir örneği, <xref:System.Object?displayProperty=nameWithType>türünde bir parametre kabul eden bir yönteme geçirildiğinde paketlenmelidir. Denetim kutulanır (yani, bir sınıfın örneğinden bir değer türünün örneğine dönüştürülür) denetim, bir değer türünü başvuru parametresi olarak kabul eden bir yöntem çağrısından geri döndüğünde. Bazı diller kutulanmış tür gerektiğinde özel sözdizimi kullanmanızı gerektirir; diğerleri gerektiğinde kutulanmış türü otomatik olarak kullanır. Bir değer türü tanımladığınızda, hem paketlenmiş hem de kutulanmamış türü tanımlarsınız.  
   
-<a name="Enumerations"></a>   
-### <a name="enumerations"></a>Listelemeler  
+<a name="Enumerations"></a>
+### <a name="enumerations"></a>Numaralandırmalar  
  Sabit Listesi (enum), doğrudan <xref:System.Enum?displayProperty=nameWithType> devralan ve temel alınan temel bir türün değerleri için alternatif adlar sağlayan bir değer türüdür. Sabit listesi türü, yerleşik imzalı veya işaretsiz tamsayı türlerinden biri olması gereken temel bir tür olan bir ada sahiptir (<xref:System.Byte>, <xref:System.Int32>veya <xref:System.UInt64>) ve bir alan kümesi. Alanlar, her biri bir sabiti temsil eden statik sabit değerli alanlardır. Aynı değer birden çok alana atanabilir. Bu gerçekleştiğinde, bir değerden birini yansıma ve dize dönüştürmesi için birincil numaralandırma değeri olarak işaretlemeniz gerekir.  
   
  Temel alınan türün bir değerini bir sabit listesine atayabilir ve tam tersi de (çalışma zamanı için atama gerekmez). Sabit listesinin bir örneğini oluşturabilir ve <xref:System.Enum?displayProperty=nameWithType>yöntemlerinin yanı sıra numaralandırmanın temel alınan türünde tanımlanan yöntemleri çağırabilirsiniz. Ancak, bazı diller, temel alınan türden bir örnek gerektiğinde (veya tam tersi) bir sabit listesini parametre olarak geçirmenize izin vermiyor.  
@@ -121,7 +121,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
  [!code-csharp[Conceptual.Types.Enum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.enum/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Enum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.enum/vb/example.vb#1)]  
   
-<a name="Interfaces"></a>   
+<a name="Interfaces"></a>
 ### <a name="interfaces"></a>Arabirimler  
  Arabirim, "yapabilir" ilişki veya "bir" a "ilişkisi belirten bir sözleşmeyi tanımlar. Arabirimler genellikle karşılaştırma ve sıralama (<xref:System.IComparable> ve <xref:System.IComparable%601> arabirimleri), eşitlik için test etme (<xref:System.IEquatable%601> arabirimi) veya bir koleksiyondaki öğeleri numaralandırma (<xref:System.Collections.IEnumerable> ve <xref:System.Collections.Generic.IEnumerable%601> arabirimleri) gibi işlevleri uygulamak için kullanılır. Arabirimler, hepsi soyut üye olan özellikler, Yöntemler ve olaylar içerebilir; diğer bir deyişle, arabirim üyeleri ve bunların imzalarını tanımlasa da, her arabirim üyesinin işlevselliğini tanımlamak için arabirimini uygulayan türe bırakır. Bu, bir arabirimi uygulayan herhangi bir sınıfın veya yapının, arabiriminde belirtilen soyut üyelere yönelik tanımlar sağlaması gerektiği anlamına gelir. Bir arabirim, bir veya daha fazla arabirimi de uygulamak için herhangi bir uygulama sınıfı veya yapısının kullanılmasını gerektirebilir.  
   
@@ -137,7 +137,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
  Her dil, birden fazla arabirim aynı imzaya sahip bir üyeyi bildirebildiğinden ve bu Üyeler ayrı uygulamalara sahip olabileceğinden, bir uygulamayı üye gerektiren arabirime eşlemek için kurallar sağlamalıdır.  
   
-<a name="Delegates"></a>   
+<a name="Delegates"></a>
 ### <a name="delegates"></a>Temsilciler  
  Temsilciler, içindeki C++işlev işaretçilerinden benzer bir amaçla sunan başvuru türleridir. .NET 'teki olay işleyicileri ve geri çağırma işlevleri için kullanılırlar. İşlev işaretçilerinden farklı olarak, temsilciler güvenli, doğrulanabilir ve tür güvenlidir. Bir temsilci türü, uyumlu imzaya sahip herhangi bir örnek yöntemini veya statik yöntemi temsil edebilir.  
   
@@ -163,7 +163,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
 > [!NOTE]
 > Bu diller olay işleyicilerini ekleme ve kaldırma için sözdizimi sağladığından, ve Visual Basic içindeki C# C++olay işleyici temsilcileri için bu yöntemlerin kullanılması gerekli değildir.  
 
-<a name="type_definitions"></a>   
+<a name="type_definitions"></a>
 ## <a name="type-definitions"></a>Tür Tanımları  
  Bir tür tanımı şunları içerir:  
   
@@ -179,7 +179,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
 - Türün üyelerinin her biri için tanımlar.  
   
-### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}  
+### <a name="attributes"></a>Öznitelikler  
  Öznitelikler, Kullanıcı tanımlı ek meta veriler sağlar. En yaygın olarak, kendi derlemesinde bir tür hakkındaki ek bilgileri depolamak veya tasarım zamanı ya da çalışma zamanı ortamında bir tür üyesinin davranışını değiştirmek için kullanılır.  
   
  Öznitelikleri, <xref:System.Attribute?displayProperty=nameWithType>'ten devraldığı sınıflardır. Özniteliklerin kullanımını destekleyen dillerin, öznitelikleri bir dil öğesine uygulamak için kendi sözdizimi vardır. Öznitelikler, neredeyse tüm dil öğeleri için uygulanabilir; bir özniteliğin uygulanabileceğini belirleyen belirli öğeler, bu öznitelik sınıfına uygulanan <xref:System.AttributeUsageAttribute> tarafından tanımlanır.  
@@ -189,7 +189,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
 |Erişilebilirlik|Açıklama|  
 |-------------------|-----------------|  
-|{1&gt;public&lt;1}|Türe tüm derlemeler tarafından erişilebilir.|  
+|public|Türe tüm derlemeler tarafından erişilebilir.|  
 |derleme|Türe yalnızca kendi derlemesi içinden erişilebilir.|  
   
  İç içe bir türün erişilebilirliği, hem belirtilen üyenin hem de hem de hem de kapsayan türdeki erişilebilirlik etki alanı tarafından belirlenen erişilebilirlik etki alanına bağlıdır. Ancak, iç içe geçmiş bir türün erişilebilirlik etki alanı, kapsayan türden bu türü aşamaz.  
@@ -222,13 +222,13 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
  Bir tür, herhangi bir sayıda arabirim uygulayabilir. Bir arabirim uygulamak için bir türün, bu arabirimin tüm sanal üyelerini uygulaması gerekir. Sanal bir yöntem, türetilmiş bir tür tarafından uygulanabilir ve statik veya dinamik olarak çağrılabilir.  
 
-<a name="type_members"></a>   
+<a name="type_members"></a>
 ## <a name="type-members"></a>Tür Üyeleri  
  Çalışma zamanı, bir türün davranışını ve durumunu belirten, türünden Üyeler tanımlamanızı sağlar. Tür üyeleri şunları içerir:  
   
 - [Alanlar](#Fields)  
   
-- [Veri Erişimi](#Properties)  
+- [Özellikler](#Properties)  
   
 - [Yöntemler](#Methods)  
   
@@ -238,7 +238,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
 - [İç içe türler](#NestedTypes)  
   
-<a name="Fields"></a>   
+<a name="Fields"></a>
 ### <a name="fields"></a>Alanlar  
  Bir alan, türün durumunun bir parçasını tanımlar ve içerir. Alanlar, çalışma zamanı tarafından desteklenen herhangi bir türde olabilir. En yaygın olarak, alanlar yalnızca sınıfın içinden veya türetilmiş bir sınıftan erişilebilir olmaları için `private` ya da `protected`. Bir alanın değeri, türünün dışından değiştirilebiliyorsanız, genellikle bir özellik kümesi erişimcisi kullanılır. Genel olarak gösterilen alanlar genellikle salt okunurdur ve iki türden olabilir:  
   
@@ -251,7 +251,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
  [!code-csharp[Conceptual.Types.Members.Fields#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.fields/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Fields#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.fields/vb/example.vb#1)]  
   
-<a name="Properties"></a>   
+<a name="Properties"></a>
 ### <a name="properties"></a>Özellikler  
  Bir özellik, türün bir değerini veya durumunu adlandırır ve özelliğin değerini almak veya ayarlamak için yöntemleri tanımlar. Özellikler basit türler, temel türler koleksiyonları, Kullanıcı tanımlı türler veya Kullanıcı tanımlı türlerin koleksiyonları olabilir. Özellikler genellikle türün gerçek gösteriminden bağımsız olarak bir türün genel arabirimini tutmak için kullanılır. Bu, özelliklerin doğrudan sınıfında depolanmayan değerleri yansıtmasını sağlar (örneğin, bir özellik hesaplanan bir değer döndürdüğünde) veya değerler özel alanlara atanmadan önce doğrulama gerçekleştirir. Aşağıdaki örnek, son stili gösterir.  
   
@@ -260,13 +260,13 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
  Özelliğin kendisini eklemenin yanı sıra, okunabilir bir özelliği içeren bir türün Microsoft ara dili (MSIL) bir `get_`*PropertyName* yöntemi içerir ve yazılabilir özelliği içeren bir tür için msıl bir `set_`*PropertyName* yöntemi içerir.  
   
-<a name="Methods"></a>   
+<a name="Methods"></a>
 ### <a name="methods"></a>Yöntemler  
  Bir yöntemi, türünde kullanılabilir olan işlemleri açıklar. Yöntemin imzası, tüm parametrelerinin ve dönüş değerinin izin verilen türlerini belirtir.  
   
  Çoğu Yöntem Yöntem çağrıları için gerekli parametrelerin tam sayısını tanımlasa da, bazı yöntemler değişken sayıda parametreyi destekler. Bu yöntemlerin son tanımlanmış parametresi <xref:System.ParamArrayAttribute> özniteliğiyle işaretlenir. Dil derleyicileri genellikle Visual Basic `params` C# ve `ParamArray` gibi açık <xref:System.ParamArrayAttribute> açıkça kullanımını sağlayan bir anahtar sözcük sağlar.  
   
-<a name="Constructors"></a>   
+<a name="Constructors"></a>
 ### <a name="constructors"></a>Oluşturucular  
  Oluşturucu, bir sınıfın veya yapının yeni örneklerini oluşturan özel bir yöntem türüdür. Diğer tüm yöntemler gibi, bir Oluşturucu parametreleri içerebilir; Ancak, oluşturucuların dönüş değeri yoktur (yani, `void`döndürür).  
   
@@ -274,29 +274,29 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
  Bir yapının kaynak kodu oluşturucuları tanımlıyorsa, bunlar parametreli olmalıdır; bir yapı parametresiz bir Oluşturucu tanımlayabilir ve derleyiciler yapılar veya diğer değer türleri için parametresiz oluşturucular oluşturmaz. Tüm değer türlerinde örtük olarak parametresiz bir Oluşturucu vardır. Bu Oluşturucu ortak dil çalışma zamanı tarafından uygulanır ve yapının tüm alanlarını varsayılan değerlerine başlatır.  
   
-<a name="Events"></a>   
+<a name="Events"></a>
 ### <a name="events"></a>Olaylar  
  Bir olay, yanıtlamış olabilecek bir olayı tanımlar ve ' a abone olunmakta olan, etkinliği kaldırmak ve olayı yükseltmek için Yöntemler tanımlar. Olaylar genellikle diğer durum değişikliği türlerini bilgilendirmek için kullanılır. Daha fazla bilgi için bkz. [Olaylar](../../../docs/standard/events/index.md).  
   
-<a name="NestedTypes"></a>   
+<a name="NestedTypes"></a>
 ### <a name="nested-types"></a>İç içe Geçmiş Türler  
  İç içe bir tür, başka bir türün üyesi olan bir türdür. İç içe türler kapsayan türlerine sıkı bir biçimde bağlanmalıdır ve genel amaçlı bir tür olarak yararlı olmamalıdır. İç içe türler, bildirim türü kullandığında ve iç içe türün örneklerini oluşturduğunda ve iç içe türün kullanılması Ortak üyelerde gösterilmediği durumlarda faydalıdır.  
   
  İç içe türler bazı geliştiricilere kafa karıştırıcı ve görünürlük açısından etkileyici bir neden olmadıkça herkese açık olmamalıdır. İyi tasarlanmış bir kitaplıkta, geliştiricilerin nesneleri başlatmak veya değişkenleri bildirmek için nadiren iç içe türler kullanması gerekir.  
 
-<a name="characteristics_of_type_members"></a>   
+<a name="characteristics_of_type_members"></a>
 ## <a name="characteristics-of-type-members"></a>Üye türü özellikleri  
  Ortak tür sistemi, tür üyelerinin çeşitli özelliklere sahip olmasına olanak sağlar; Ancak, dillerin tüm bu özellikleri desteklemesi gerekmez. Aşağıdaki tabloda üye özellikleri açıklanmaktadır.  
   
-|Özellikler|Uygulanabilir|Açıklama|  
+|Özellik|Uygulanabilir|Açıklama|  
 |--------------------|------------------|-----------------|  
 |abstract|Yöntemler, Özellikler ve olaylar|Tür, yöntemin uygulamasını sağlamaz. Soyut yöntemleri devraldığı veya uygulayan türler, yöntemi için bir uygulama sağlamalıdır. Tek özel durum, türetilmiş türün bir soyut tür olduğu durumdur. Tüm soyut yöntemler sanal.|  
-|Özel, Aile, derleme, Aile ve derleme, Aile veya derleme ya da ortak|Tümü|Üyenin erişilebilirliğini tanımlar:<br /><br /> private<br /> Yalnızca üyeyle aynı tür içinden veya iç içe yerleştirilmiş bir tür içinde erişilebilir.<br /><br /> aile<br /> Üyeyle aynı tür içinden ve ondan kalıtımla alan türetilmiş türlerden erişilebilir.<br /><br /> derleme<br /> Yalnızca türün tanımlandığı derlemede erişilebilir.<br /><br /> Aile ve derleme<br /> Yalnızca aile ve derleme erişimi için uygun olan türlerden erişilebilir.<br /><br /> Aile veya derleme<br /> Yalnızca aile veya derleme erişimi için uygun olan türlerden erişilebilir.<br /><br /> {1&gt;public&lt;1}<br /> Herhangi bir türden erişilebilir.|  
-|{1&gt;son&lt;1}|Yöntemler, Özellikler ve olaylar|Sanal yöntem türetilmiş bir türde geçersiz kılınamaz.|  
+|Özel, Aile, derleme, Aile ve derleme, Aile veya derleme ya da ortak|Tümü|Üyenin erişilebilirliğini tanımlar:<br /><br /> private<br /> Yalnızca üyeyle aynı tür içinden veya iç içe yerleştirilmiş bir tür içinde erişilebilir.<br /><br /> Family<br /> Üyeyle aynı tür içinden ve ondan kalıtımla alan türetilmiş türlerden erişilebilir.<br /><br /> derleme<br /> Yalnızca türün tanımlandığı derlemede erişilebilir.<br /><br /> Aile ve derleme<br /> Yalnızca aile ve derleme erişimi için uygun olan türlerden erişilebilir.<br /><br /> Aile veya derleme<br /> Yalnızca aile veya derleme erişimi için uygun olan türlerden erişilebilir.<br /><br /> public<br /> Herhangi bir türden erişilebilir.|  
+|son|Yöntemler, Özellikler ve olaylar|Sanal yöntem türetilmiş bir türde geçersiz kılınamaz.|  
 |yalnızca başlatma|Alanlar|Değer yalnızca başlatılabilir ve başlatma sonrasında yazılamaz.|  
 |örnek|Alanlar, Yöntemler, Özellikler ve olaylar|Bir üye `static`C# (ve C++), `Shared` (Visual Basic), `virtual` (C# ve C++) veya `Overridable` (Visual Basic) olarak işaretlenmişse, bir örnek üyesidir (örnek anahtar sözcüğü yoktur). Bellekte bu tür üyelerin, onu kullanan nesneler olduğu gibi birçok kopyası olacaktır.|  
 |değişmez değer|Alanlar|Alana atanan değer, yerleşik bir değer türünün derleme zamanında bilinen sabit bir değerdir. Değişmez değer alanları bazen sabitler olarak adlandırılır.|  
-|newslot veya override|Tümü|Üyenin aynı imzaya sahip devralınmış üyelerle nasıl etkileşime gireceğini tanımlar:<br /><br /> NewSlot<br /> Aynı imzaya sahip devralınmış üyeleri gizler.<br /><br /> geçersiz kılma<br /> Devralınan bir sanal yöntemin tanımını değiştirir.<br /><br /> Varsayılan, gazetik ' dır.|  
+|newslot veya override|Tümü|Üyenin aynı imzaya sahip devralınmış üyelerle nasıl etkileşime gireceğini tanımlar:<br /><br /> NewSlot<br /> Aynı imzaya sahip devralınmış üyeleri gizler.<br /><br /> override<br /> Devralınan bir sanal yöntemin tanımını değiştirir.<br /><br /> Varsayılan, gazetik ' dır.|  
 |static|Alanlar, Yöntemler, Özellikler ve olaylar|Üye, türünün belirli bir örneğine değil, tanımlandığı türe aittir; üye, türün bir örneği oluşturulmasa bile vardır ve bu, türün tüm örnekleri arasında paylaşılır.|  
 |virtual|Yöntemler, Özellikler ve olaylar|Yöntemi türetilmiş bir tür tarafından uygulanabilir ve statik veya dinamik olarak çağrılabilir. Dinamik çağırma kullanılırsa, çağrı çalışma zamanında (derleme zamanında bilinen tür yerine) yapan örnek türü, yöntemin hangi uygulamanın çağrılacağını belirler. Statik olarak sanal bir yöntemi çağırmak için, değişkenin istenen sürümünü kullanan bir türe dönüştürülmesi gerekebilir.|  
   

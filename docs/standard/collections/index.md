@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 9b868bd5ed77788cd9b44c11623ae38eba58153c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3ca340e19d7340d7bea133fa62c6d8bbc3c0512a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711369"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160397"
 ---
 # <a name="collections-and-data-structures"></a>Koleksiyonlar ve Veri Yapıları
 Benzer veriler genellikle koleksiyon olarak depolandığında ve değiştirildiğinde daha verimli bir şekilde işlenebilir. Tek tek öğeleri veya bir koleksiyondaki öğe aralığını eklemek, kaldırmak ve değiştirmek için <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System. Collections. sabit ad alanlarındaki <xref:System.Array?displayProperty=nameWithType> sınıfını veya sınıfları kullanabilirsiniz.  
@@ -24,7 +24,7 @@ Benzer veriler genellikle koleksiyon olarak depolandığında ve değiştirildi�
   
  .NET Framework 4 ' ten başlayarak, <xref:System.Collections.Concurrent> ad alanındaki koleksiyonlar birden çok iş parçacığından koleksiyon öğelerine erişmek için verimli iş parçacığı güvenli işlemleri sağlar. System. Collections. sabit ad alanındaki ([NuGet paketindeki](https://www.nuget.org/packages/System.Collections.Immutable)) sabit koleksiyon sınıfları, işlemler orijinal koleksiyonun bir kopyasında gerçekleştirildiğinden ve özgün koleksiyon değiştirilemediğinden, kendiliğinden iş parçacığı güvenlidir.  
 
-<a name="BKMK_Commoncollectionfeatures"></a>   
+<a name="BKMK_Commoncollectionfeatures"></a>
 ## <a name="common-collection-features"></a>Ortak koleksiyon özellikleri  
  Tüm Koleksiyonlar koleksiyondaki öğeleri eklemek, kaldırmak veya bulmak için yöntemler sağlar. Ayrıca, <xref:System.Collections.ICollection> arabirimini veya <xref:System.Collections.Generic.ICollection%601> arabirimini doğrudan veya dolaylı olarak uygulayan tüm koleksiyonlar bu özellikleri paylaşır:  
   
@@ -54,10 +54,10 @@ Benzer veriler genellikle koleksiyon olarak depolandığında ve değiştirildi�
   
      <xref:System.Collections> ad alanındaki genel olmayan koleksiyon türleri eşitlemeyle bazı iş parçacığı güvenliği sağlar; genellikle <xref:System.Collections.ICollection.SyncRoot%2A> ve <xref:System.Collections.ICollection.IsSynchronized%2A> üyeleri aracılığıyla sunulur. Bu koleksiyonlar varsayılan olarak iş parçacığı açısından güvenli değildir. Bir koleksiyona ölçeklenebilir ve verimli çok iş parçacıklı erişim istiyorsanız, <xref:System.Collections.Concurrent> ad alanındaki sınıflardan birini kullanın veya sabit bir koleksiyon kullanmayı deneyin. Daha fazla bilgi için bkz. [Iş parçacığı güvenli koleksiyonlar](../../../docs/standard/collections/thread-safe/index.md).  
   
-<a name="BKMK_Choosingacollection"></a>   
+<a name="BKMK_Choosingacollection"></a>
 ## <a name="choosing-a-collection"></a>Koleksiyon seçme  
  Genel olarak, genel Koleksiyonlar kullanmanız gerekir. Aşağıdaki tabloda bazı yaygın koleksiyon senaryoları ve bu senaryolar için kullanabileceğiniz koleksiyon sınıfları açıklanmaktadır. Genel koleksiyonlarınız için yeni olduğunuzda, bu tablo göreviniz için en iyi sonucu veren genel koleksiyonu seçmenize yardımcı olur.  
- 
+
 |İstiyorum...|Genel koleksiyon seçenekleri|Genel olmayan koleksiyon seçenekleri|İş parçacığı güvenli veya sabit koleksiyon seçenekleri|  
 |-|-|-|-|  
 |Öğeleri anahtara göre hızlı arama için anahtar/değer çiftleri olarak depola|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (Anahtarın karma koduna göre düzenlenmiş anahtar/değer çiftleri koleksiyonu.)|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  
@@ -69,7 +69,7 @@ Benzer veriler genellikle koleksiyon olarak depolandığında ve değiştirildi�
 |Sıralanmış bir koleksiyon|<xref:System.Collections.Generic.SortedList%602>|<xref:System.Collections.SortedList>|<xref:System.Collections.Immutable.ImmutableSortedDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
 |Matematik işlevleri için bir küme|<xref:System.Collections.Generic.HashSet%601><br /><br /> <xref:System.Collections.Generic.SortedSet%601>|Öneri yok|<xref:System.Collections.Immutable.ImmutableHashSet%601><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
   
-<a name="BKMK_RelatedTopics"></a>   
+<a name="BKMK_RelatedTopics"></a>
 ## <a name="related-topics"></a>İlgili Konular  
   
 |Başlık|Açıklama|  
@@ -83,7 +83,7 @@ Benzer veriler genellikle koleksiyon olarak depolandığında ve değiştirildi�
 |[İş Parçacığı Güvenli Koleksiyonları](../../../docs/standard/collections/thread-safe/index.md)|Birden çok iş parçacığından güvenli ve verimli eşzamanlı erişimi destekleyen <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> ve <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> gibi koleksiyon türlerini açıklar.|  
 |System. Collections. sabit|Değişmez koleksiyonları tanıtır ve koleksiyon türlerine bağlantılar sağlar.|  
   
-<a name="BKMK_Reference"></a>   
+<a name="BKMK_Reference"></a>
 ## <a name="reference"></a>Başvuru  
  <xref:System.Array?displayProperty=nameWithType>  
  <xref:System.Collections?displayProperty=nameWithType>  

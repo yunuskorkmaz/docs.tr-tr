@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-ms.openlocfilehash: f9fe33bb46f0ba78756c4172032dfbaf45d6fc89
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 981c13c68eaf1eb0c19f95eb1b097935ea02a16d
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123975"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159760"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Diğer Zaman Uyumsuz Desen ve Türlerle Birlikte Çalışma
 .NET Framework 1,0, [zaman uyumsuz programlama modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)veya `Begin/End` modeli olarak da bilinen <xref:System.IAsyncResult> deseninin tanıtıldığı durumda.  2,0 .NET Framework, [olay tabanlı zaman uyumsuz düzene (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)eklendi.  .NET Framework 4 ' ten başlayarak, [görev tabanlı zaman uyumsuz desen (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) hem APM hem de EAP 'nin yerine geçer, ancak önceki desenlerden kolayca geçiş yordamları oluşturma yeteneği sağlar.  
@@ -30,10 +30,10 @@ ms.locfileid: "73123975"
   
 - [Görevler ve bekleme tutamaçları](#WaitHandles) ([bekleme tanıtıcılarından](#WHToTap) dokunarak veya [dokunmada bekleyen tutamaçlar](#TapToWH))  
   
-<a name="APM"></a>   
+<a name="APM"></a>
 ## <a name="tasks-and-the-asynchronous-programming-model-apm"></a>Görevler ve zaman uyumsuz programlama modeli (APM)  
   
-<a name="ApmToTap"></a>   
+<a name="ApmToTap"></a>
 ### <a name="from-apm-to-tap"></a>APM 'den dokunarak  
  [Zaman uyumsuz programlama modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) modeli çok yapılandırılmış olduğundan, bir APM UYGULAMASıNı bir dokunma uygulama olarak göstermek için bir sarmalayıcı oluşturmak oldukça kolaydır. Aslında, .NET Framework 4 ' ü kullanmaya başlayan .NET Framework, bu çeviriyi sağlamak için <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> yöntemi aşırı yüklemeleri biçiminde yardımcı yordamlar içerir.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73123975"
  [!code-csharp[Conceptual.AsyncInterop#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wrap2.cs#5)]
  [!code-vb[Conceptual.AsyncInterop#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wrap2.vb#5)]  
   
-<a name="TapToApm"></a>   
+<a name="TapToApm"></a>
 ### <a name="from-tap-to-apm"></a>DOKUNARAK APM 'ye  
  Mevcut altyapınızda APM deseninin kullanılması bekleniyorsa, bir dokunarak uygulama alıp APM uygulamasının beklendiği yerde kullanılması gerekir.  Görevler oluşturulabildikleri için ve <xref:System.Threading.Tasks.Task> sınıfı <xref:System.IAsyncResult> arabirimini uyguladığı için, bunu yapmak amacıyla daha basit bir yardımcı işlev kullanabilirsiniz. Aşağıdaki kod <xref:System.Threading.Tasks.Task%601> sınıfının bir uzantısını kullanır, ancak genel olmayan görevler için neredeyse özdeş bir işlevi kullanabilirsiniz.  
   
@@ -80,17 +80,17 @@ ms.locfileid: "73123975"
  [!code-csharp[Conceptual.AsyncInterop#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/APM2.cs#10)]
  [!code-vb[Conceptual.AsyncInterop#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/APM2.vb#10)]  
   
-<a name="EAP"></a>   
+<a name="EAP"></a>
 ## <a name="tasks-and-the-event-based-asynchronous-pattern-eap"></a>Görevler ve olay tabanlı zaman uyumsuz model (EAP)  
  Bir [olay tabanlı zaman uyumsuz model (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) uygulamasını sarmalama, bir APM deseninin sarmalanması dışında daha KARMAŞıKTıR çünkü EAP deseninin APM düzeninden daha fazla çeşitlemesi ve daha az yapısı vardır.  Göstermek için aşağıdaki kod `DownloadStringAsync` yöntemini sarmalar.  `DownloadStringAsync`, bir URI 'yi kabul eder, devam etmekte olan birden fazla istatistiği raporlamak için, indirme sırasında `DownloadProgressChanged` olayını başlatır ve tamamlandığında `DownloadStringCompleted` olayını oluşturur.  Nihai sonuç, belirtilen URI 'deki sayfanın içeriğini içeren bir dizedir.  
   
  [!code-csharp[Conceptual.AsyncInterop#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/EAP1.cs#11)]
  [!code-vb[Conceptual.AsyncInterop#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/EAP1.vb#11)]  
   
-<a name="WaitHandles"></a>   
+<a name="WaitHandles"></a>
 ## <a name="tasks-and-wait-handles"></a>Görevler ve bekleme tutamaçları  
   
-<a name="WHToTap"></a>   
+<a name="WHToTap"></a>
 ### <a name="from-wait-handles-to-tap"></a>Bekleme tanıtıcılarından dokunarak  
  Wait tutamaçları zaman uyumsuz bir model uygulamasa da, gelişmiş geliştiriciler, bir bekleme tutamacı ayarlandığında, zaman uyumsuz bildirimler için <xref:System.Threading.WaitHandle> sınıfını ve <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> yöntemini kullanabilir.  Bir bekleme tanıtıcısından herhangi bir zaman uyumlu bekleme için görev tabanlı bir alternatif sağlamak üzere <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> yöntemini kaydırabilirsiniz:  
   
@@ -104,7 +104,7 @@ ms.locfileid: "73123975"
   
  Ayrıca, bekleme tanıtıcılarını içermeyen ve bunun yerine görevlerle tamamen çalışabilen bir zaman uyumsuz semafor oluşturabilirsiniz. Bunu yapmak için, <xref:System.Threading.Tasks.Task>en üstünde veri yapıları oluşturmak için [görev tabanlı zaman uyumsuz model tükettiği](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md) gibi teknikleri kullanabilirsiniz.  
   
-<a name="TapToWH"></a>   
+<a name="TapToWH"></a>
 ### <a name="from-tap-to-wait-handles"></a>DOKUNARAK bekleme tutamaçlarından  
  Daha önce belirtildiği gibi, <xref:System.Threading.Tasks.Task> sınıfı <xref:System.IAsyncResult>uygular ve bu uygulama, <xref:System.Threading.Tasks.Task> tamamlandığında ayarlanacak bir bekleme tutamacı döndüren <xref:System.Threading.Tasks.Task.System%23IAsyncResult%23AsyncWaitHandle%2A> özelliğini kullanıma sunar.  Bir <xref:System.Threading.Tasks.Task> için aşağıdaki gibi bir <xref:System.Threading.WaitHandle> edinebilirsiniz:  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: 78f89c3c8784467d3ec396106de7bbb34a2022f6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ca104c512641774217de5e270dc50b7393fc5725
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121948"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159253"
 ---
 # <a name="applying-interop-attributes"></a>Birlikte Çalışma Özniteliklerini Uygulama
 <xref:System.Runtime.InteropServices> ad alanı, birlikte çalışabilirlik 'e özgü özniteliklerin üç kategorisini sağlar: tasarım zamanında sizin tarafınızdan, dönüştürme işlemi sırasında COM birlikte çalışma araçları ve API 'Leri tarafından uygulanan ve sizin tarafınızdan veya COM birlikte çalışma tarafından uygulanan bunlar.  
@@ -38,7 +38,7 @@ ms.locfileid: "73121948"
 |<xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>|Sınıf için olay kaynakları olan arabirimleri tanımlar.<br /><br /> COM birlikte çalışabilirlik araçları, bu özniteliği uygulayabilir.|  
 |<xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>|Derleme COM 'tan kaydolmasından sonra, Kullanıcı tarafından yazılan kodun işlem sırasında yürütülebilmesi için bir yöntemin çağrılması gerektiğini gösterir.|  
 |<xref:System.Runtime.InteropServices.ComVisibleAttribute>|Öznitelik değeri **false**değerine eşitse, türleri com olarak görünmez hale gelir. Bu öznitelik, COM görünürlüğünü denetlemek için tek bir türe veya bir derlemenin tamamına uygulanabilir. Varsayılan olarak, tüm yönetilen, genel türler görünür; özniteliğin görünür olması için gerekli değildir.|  
-|<xref:System.Runtime.InteropServices.DispIdAttribute>|Bir yöntemin veya alanın COM dağıtım tanımlayıcısını (DISPID) belirtir. Bu öznitelik, açıkladığı yöntemin, alanın veya özelliğin DISPID 'sini içerir.<br /><br /> COM birlikte çalışabilirlik araçları, bu özniteliği uygulayabilir.| 
+|<xref:System.Runtime.InteropServices.DispIdAttribute>|Bir yöntemin veya alanın COM dağıtım tanımlayıcısını (DISPID) belirtir. Bu öznitelik, açıkladığı yöntemin, alanın veya özelliğin DISPID 'sini içerir.<br /><br /> COM birlikte çalışabilirlik araçları, bu özniteliği uygulayabilir.|
 |<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute>|.NET ' te uygulanan bir COM sınıfının varsayılan arabirimini gösterir.<br /><br /> COM birlikte çalışabilirlik araçları, bu özniteliği uygulayabilir.|
 |<xref:System.Runtime.InteropServices.FieldOffsetAttribute>|**StructLayoutAttribute**ile kullanıldığında bir sınıfın içindeki her alanın fiziksel konumunu gösterir ve **LayoutKind** açık olarak ayarlanır.|  
 |<xref:System.Runtime.InteropServices.GuidAttribute>|Bir sınıfın, arabirimin veya bütün bir tür kitaplığının genel benzersiz tanımlayıcısını (GUID) belirtir. Özniteliğe geçirilen dize, **System. Guid**türü için kabul edilebilir bir Oluşturucu bağımsız değişkeni olan bir biçim olmalıdır.<br /><br /> COM birlikte çalışabilirlik araçları, bu özniteliği uygulayabilir.|  

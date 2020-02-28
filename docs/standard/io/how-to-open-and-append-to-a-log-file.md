@@ -11,15 +11,15 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET Framework], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-ms.openlocfilehash: b0e399ba3c0cfa0ad3b92afbc7e07af7659e8ae6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a549aba3a763bcfc5a3889efd65e2495eca7622c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706718"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155717"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Nasıl yapılır: günlük dosyasını açma ve ekleme
-<xref:System.IO.StreamWriter> ve <xref:System.IO.StreamReader> akışlardan karakter yazma ve okuma. Aşağıdaki kod örneği, giriş için *log. txt* dosyasını açar veya yoksa oluşturur ve günlük bilgilerini dosyanın sonuna ekler. Örnek daha sonra dosyanın içeriğini görüntüleme için standart çıktıya yazar. 
+<xref:System.IO.StreamWriter> ve <xref:System.IO.StreamReader> akışlardan karakter yazma ve okuma. Aşağıdaki kod örneği, giriş için *log. txt* dosyasını açar veya yoksa oluşturur ve günlük bilgilerini dosyanın sonuna ekler. Örnek daha sonra dosyanın içeriğini görüntüleme için standart çıktıya yazar.
 
 Bu örneğe alternatif olarak, bilgileri tek bir dize veya dize dizisi olarak saklayabilir ve aynı işlevselliğe ulaşmak için <xref:System.IO.File.WriteAllText%2A?displayProperty=nameWithType> ya da <xref:System.IO.File.WriteAllLines%2A?displayProperty=nameWithType> yöntemini kullanabilirsiniz.  
   

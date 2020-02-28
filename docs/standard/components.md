@@ -4,12 +4,12 @@ description: .NET Standard, .NET uygulamaları, .NET çalışma zamanları ve ar
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: af28863ac98ff5ffb5a8133fb98f2f1e7036985d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: eadcf05069edfa32a52c5e73045b4cebd1a9a6ac
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124396"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160384"
 ---
 # <a name="net-architectural-components"></a>.NET mimari bileşenleri
 
@@ -70,7 +70,7 @@ UWP hakkında daha fazla bilgi edinmek için bkz. [Evrensel Windows platformu gi
 
 - .NET Framework için ortak dil çalışma zamanı (CLR)
 - .NET Core için çekirdek ortak dil çalışma zamanı (CoreCLR)
-- Evrensel Windows Platformu için .NET Native 
+- Evrensel Windows Platformu için .NET Native
 - Xamarin. iOS, Xamarin. Android, Xamarin. Mac ve mono masaüstü çerçevesi için mono çalışma zamanı
 
 ## <a name="net-tooling-and-common-infrastructure"></a>.NET araçları ve ortak altyapı
@@ -96,7 +96,7 @@ Aşağıdaki resmi ECMA belgeleri ve [C#](http://www.ecma-international.org/publ
 - **Dil standardı (sürüm 5,0): ECMA-334. PDF C#**  [](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
 - **Ortak dil altyapısı**: Bu, [PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) form ve [ZIP](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) biçiminde kullanılabilir.
 - **Bölüm IV XML dosyasından türetilmiş bilgiler**: Bu, [PDF](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) ve [ZIP](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) biçimlerinde kullanılabilir.
- 
+
 Resmi ISO/ıEC belgeleri ISO/ıEC [genel kullanıma açık standartlar](https://standards.iso.org/ittf/PubliclyAvailableStandards/) sayfasından kullanılabilir. Bu bağlantılar bu sayfadan doğrudan yapılır:
 
 - **Bilgi teknolojisi-programlama dilleri- C#** : [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)

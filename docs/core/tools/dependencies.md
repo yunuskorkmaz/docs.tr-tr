@@ -1,29 +1,31 @@
 ---
-title: .NET Core araçları 'nda bağımlılıkları yönetme
-description: .NET Core araçlarıyla bağımlılıklarınızın nasıl yönetileceğini açıklar.
-ms.date: 03/06/2017
-ms.openlocfilehash: 916daca0240c10dc63ca96048590a426bc51d450
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+title: .NET Core 'da bağımlılıkları yönetme
+description: Bir .NET Core uygulaması için proje bağımlılıklarının nasıl yönetileceğini açıklar.
+no-loc:
+- dotnet add package
+- dotnet remove package
+- dotnet list package
+ms.date: 02/25/2020
+ms.openlocfilehash: 367be7eb04d58bffc0846de1d035a5801e8d9376
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965626"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157251"
 ---
-# <a name="manage-dependencies-with-net-core-sdk-10"></a>.NET Core SDK 1,0 ile bağımlılıkları yönetme
+# <a name="manage-dependencies-in-net-core-applications"></a>.NET Core uygulamalarında bağımlılıkları yönetme
 
-.NET Core projelerinin Project. json ' dan csproj ve MSBuild 'e taşınması sayesinde, proje dosyası ve bağımlılık izlemeye izin veren varlıkların birleşme ile sonuçlanan önemli bir yatırım gerçekleşsin. .NET Core projeleri için bu, Project. JSON öğesine benzerdir. NuGet bağımlılıklarını izleyen ayrı bir JSON veya XML dosyası yoktur. Bu değişiklik ile, `<PackageReference>`adlı csproj sözdizimine başka bir *başvuru* türü de sunuyoruz.
+Bu makalede, proje dosyasını düzenleyerek veya CLı kullanarak bağımlılık ekleme ve kaldırma işlemleri açıklanmaktadır.
 
-Bu belgede yeni başvuru türü açıklanmaktadır. Ayrıca, bu yeni başvuru türünü kullanarak projenize nasıl bir paket bağımlılığı ekleneceğini gösterir.
+## <a name="the-packagereference-element"></a>\<PackageReference > öğesi
 
-## <a name="the-new-packagereference-element"></a>Yeni \<PackageReference > öğesi
-
-`<PackageReference>` aşağıdaki temel yapıya sahiptir:
+`<PackageReference>` proje dosyası öğesi aşağıdaki yapıya sahiptir:
 
 ```xml
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" />
 ```
 
-MSBuild hakkında bilginiz varsa, zaten mevcut olan diğer başvuru türlerine tanıdık gelecektir. Bu anahtar, projeye eklemek istediğiniz paket KIMLIĞINI belirten `Include` deyimidir. `<Version>` Child öğesi alınacak sürümü belirtir. Sürümler, [NuGet sürüm kuralları](/nuget/create-packages/dependency-versions#version-ranges)başına olarak belirtilir.
+`Include` özniteliği, projeye eklenecek paketin KIMLIĞINI belirtir. `Version` özniteliği alınacak sürümü belirtir. Sürümler, [NuGet sürüm kuralları](/nuget/create-packages/dependency-versions#version-ranges)başına belirtilmiştir.
 
 > [!NOTE]
 > Proje dosyası söz dizimine alışkın değilseniz, daha fazla bilgi için [MSBuild proje başvurusu](/visualstudio/msbuild/msbuild-project-file-schema-reference) belgelerine bakın.
@@ -34,39 +36,47 @@ Aşağıdaki örnekte gösterildiği gibi, yalnızca belirli bir hedefte kullan�
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-Bağımlılık yalnızca, söz konusu hedef için derleme gerçekleşuyorsa geçerli olur. Koşuldaki `$(TargetFramework)`, projede ayarlanmış bir MSBuild özelliğidir. En yaygın .NET Core uygulamaları için bunu yapmanız gerekmez.
+Önceki örnekteki bağımlılık yalnızca derleme söz konusu hedef için varsa geçerli olacaktır. Koşuldaki `$(TargetFramework)`, projede ayarlanmış bir MSBuild özelliğidir. En yaygın .NET Core uygulamaları için bunu yapmanız gerekmez.
 
-## <a name="add-a-dependency-to-the-project"></a>Projeye bağımlılık ekleme
+## <a name="add-a-dependency-by-editing-the-project-file"></a>Proje dosyasını düzenleyerek bir bağımlılık ekleyin
 
-Projenize bağımlılık eklemek basittir. Projenize Json.NET Version `9.0.1` eklemenin bir örneği aşağıda verilmiştir. Tabii ki, diğer herhangi bir NuGet bağımlılığı için geçerlidir.
-
-Proje dosyanızda iki veya daha fazla `<ItemGroup>` düğümü vardır. Düğümlerden biri zaten içinde `<PackageReference>` öğe içeriyor. Yeni bağımlılığı bu düğüme ekleyebilir veya yeni bir tane oluşturabilirsiniz; Sonuç aynı olacaktır.
-
-Aşağıdaki örnek, `dotnet new console`tarafından bırakılan varsayılan şablonu kullanır. Bu basit bir konsol uygulamasıdır. Projeyi açtığınızda, içinde zaten var olan `<PackageReference>` `<ItemGroup>` bulacaksınız. Aşağıdaki öğesine ekleyin:
+Bir bağımlılık eklemek için, bir `<ItemGroup>` öğesinin içine bir `<PackageReference>` öğesi ekleyin. Var olan bir `<ItemGroup>` ekleyebilir veya yeni bir tane oluşturabilirsiniz. Aşağıdaki örnek, `dotnet new console`tarafından oluşturulan varsayılan konsol uygulaması projesini kullanır:
 
 ```xml
-<PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
-```
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
-Bundan sonra, projeyi kaydedin ve bağımlılığı yüklemek için `dotnet restore` komutunu çalıştırın.
-
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
-
-Tam proje şöyle görünür:
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
   </ItemGroup>
+
 </Project>
 ```
 
-## <a name="remove-a-dependency-from-the-project"></a>Bir bağımlılığı projeden kaldırma
+## <a name="add-a-dependency-by-using-the-cli"></a>CLı kullanarak bağımlılık ekleme
 
-Proje dosyasından bir bağımlılığı kaldırmak, `<PackageReference>` proje dosyasından kaldırmayı içerir.
+Bir bağımlılık eklemek için, aşağıdaki örnekte gösterildiği gibi [dotnet add package](dotnet-add-package.md) komutunu çalıştırın:
+
+```dotnetcli
+dotnet add package Microsoft.EntityFrameworkCore
+```
+
+## <a name="remove-a-dependency-by-editing-the-project-file"></a>Proje dosyasını düzenleyerek bağımlılığı kaldırma
+
+Bir bağımlılığı kaldırmak için `<PackageReference>` öğesini proje dosyasından kaldırın.
+
+## <a name="remove-a-dependency-by-using-the-cli"></a>CLı kullanarak bir bağımlılığı kaldırma
+
+Bir bağımlılığı kaldırmak için, aşağıdaki örnekte gösterildiği gibi [dotnet remove package](dotnet-remove-package.md) komutunu çalıştırın:
+
+```dotnetcli
+dotnet remove package Microsoft.EntityFrameworkCore
+```
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+* [Proje dosyalarındaki NuGet paketleri](../project-sdk/msbuild-props.md#nuget-packages)
+* [dotnet list package komutu](dotnet-remove-package.md)

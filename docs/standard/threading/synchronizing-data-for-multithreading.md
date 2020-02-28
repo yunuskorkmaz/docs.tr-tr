@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: ecc1e234b03cb45075c40ff6698f71f8ce18d0de
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a70bd3070d8b1dcd06e55d330a01d29071293f6c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128976"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159396"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Çoklu iş parçacıklı verileri eşitleme
 
@@ -33,7 +33,7 @@ Birden çok iş parçacığı tek bir nesnenin özelliklerine ve yöntemlerine �
 |Kategori|Genel alanlar|Statik alanlar|Statik yöntemler|Örnek alanları|Örnek yöntemleri|Belirli kod blokları|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
 |Eşitleme yok|Hayır|Hayır|Hayır|Hayır|Hayır|Hayır|  
-|Eşitlenmiş bağlam|Hayır|Hayır|Hayır|Evet|Evet|Hayır|  
+|Eşitlenmiş bağlam|Hayır|Hayır|Hayır|Yes|Yes|Hayır|  
 |Eşitlenmiş kod bölgeleri|Hayır|Hayır|Yalnızca işaretlenmişse|Hayır|Yalnızca işaretlenmişse|Yalnızca işaretlenmişse|  
 |El ile eşitleme|El ile|El ile|El ile|El ile|El ile|El ile|  
   
@@ -64,7 +64,7 @@ Birden çok iş parçacığı tek bir nesnenin özelliklerine ve yöntemlerine �
  Her iki durumda da, kod bloğunda bir özel durum oluşturulursa, **kilit** veya **SyncLock** tarafından alınan kilit otomatik olarak serbest bırakılır. Ve C# Visual Basic derleyicileri, Monitor ile **TRY**/**finally** bloğunu yayar. TRY 'ın başlangıcında ENTER, **finally** bloğunda **Monitor. Exit** **yazın** . **Kilit** veya **SyncLock** bloğunun içinde bir özel durum oluşturulursa, **finally** işleyicisi herhangi bir temizleme işi yapmanıza olanak tanımak için çalışır.  
   
 ## <a name="synchronized-context"></a>Eşitlenmiş bağlam  
- 
+
 Yalnızca .NET Framework ve Xamarin uygulamalarında, tüm örnek yöntemlerini ve alanlarını eşleştirmek için <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> herhangi bir <xref:System.ContextBoundObject> kullanabilirsiniz. Aynı bağlam etki alanındaki tüm nesneler aynı kilidi paylaşır. Birden çok iş parçacığının yöntemlere ve alanlara erişmesine izin verilir, ancak herhangi bir zamanda yalnızca tek bir iş parçacığına izin verilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

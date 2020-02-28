@@ -4,12 +4,12 @@ description: Bu makalede, .NET Core ve .NET Standard projelerine yönelik birim 
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 41f4457e636ca495b78109803ca66680e72d007e
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 1263bfe337b9d6609c0ca7df70aa299a61a7f1a0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899891"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157407"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core ve .NET Standard birim testi
 
@@ -23,9 +23,9 @@ Bir **ASP.NET Core** projesi test ediyorsanız bkz. [ASP.NET Core tümleştirme 
 
 ## <a name="what-are-unit-tests"></a>Birim testi nedir?
 
-Otomatikleştirilmiş testlerin olması, bir yazılım uygulamasının yazarlarını yapmak için yaptığı şeyleri yaptığını sağlamak için harika bir yoldur. Yazılım uygulamaları için birden çok test türü vardır. Bu, tümleştirme testlerini, Web testlerini, yük testlerini ve diğerlerini içerir. **Birim testleri** , bireysel yazılım bileşenlerini ve yöntemlerini test eder. Birim testleri yalnızca geliştiricinin denetimindeki kodu test etmelidir. Altyapı sorunlarını test etmez. Altyapı sorunları veritabanları, dosya sistemleri ve ağ kaynaklarıdır. 
+Otomatikleştirilmiş testlerin olması, bir yazılım uygulamasının yazarlarını yapmak için yaptığı şeyleri yaptığını sağlamak için harika bir yoldur. Yazılım uygulamaları için birden çok test türü vardır. Bu, tümleştirme testlerini, Web testlerini, yük testlerini ve diğerlerini içerir. **Birim testleri** , bireysel yazılım bileşenlerini ve yöntemlerini test eder. Birim testleri yalnızca geliştiricinin denetimindeki kodu test etmelidir. Altyapı sorunlarını test etmez. Altyapı sorunları veritabanları, dosya sistemleri ve ağ kaynaklarıdır.
 
-Ayrıca, testlerin yazılması için en iyi uygulamaları aklınızda bulundurun. Örneğin, [test odaklı geliştirme (TDD)](https://deviq.com/test-driven-development/) , bir birim testinin denetlenecek kodun önüne yazıldığı bir birimdir. TDD yazmadan önce kitap için bir ana hat oluşturma gibidir. Geliştiricilerin daha basit, daha okunabilir ve verimli bir kod yazmasına yardımcı olmak için tasarlanmıştır. 
+Ayrıca, testlerin yazılması için en iyi uygulamaları aklınızda bulundurun. Örneğin, [test odaklı geliştirme (TDD)](https://deviq.com/test-driven-development/) , bir birim testinin denetlenecek kodun önüne yazıldığı bir birimdir. TDD yazmadan önce kitap için bir ana hat oluşturma gibidir. Geliştiricilerin daha basit, daha okunabilir ve verimli bir kod yazmasına yardımcı olmak için tasarlanmıştır.
 
 > [!NOTE]
 > ASP.NET ekibi, geliştiricilerin test sınıfları ve yöntemleri için iyi adlarla karşılaşmalarına yardımcı olmak için [Bu kuralları](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#unit-tests-and-functional-tests) izler.
@@ -40,11 +40,11 @@ Birim testlerini yazarken altyapıya bağımlılıklar tanıtmamanızda deneyin.
 
 - [C#](../../csharp/index.yml)
 - [F#](../../fsharp/index.yml)
-- [Visual Basic](../../visual-basic/index.yml) 
+- [Visual Basic](../../visual-basic/index.yml)
 
 Şunları da seçebilirsiniz:
 
-- [xUnit](https://xunit.github.io) 
+- [xUnit](https://xunit.github.io)
 - [NUnit](https://nunit.org)
 - ['I](https://github.com/Microsoft/testfx-docs)
 

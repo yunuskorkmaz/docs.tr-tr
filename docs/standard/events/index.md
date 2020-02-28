@@ -14,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: a53a8123db64948503bd6d2da9a27fc414dc1e1f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b8ed028bc1edabf14d7b2dd67d94b28d574d2eb4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423533"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159630"
 ---
 # <a name="handling-and-raising-events"></a>Olayları işleme ve oluşturma
 
@@ -78,7 +78,7 @@ Aşağıdaki örnek, <xref:System.EventHandler> temsilcisinin imzasıyla eşleş
 [!code-vb[EventsOverview#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>Statik ve dinamik olay işleyicileri  
- 
+
 .NET, abonelerin statik veya dinamik olarak olay bildirimlerine kaydolmanızı sağlar. Statik olay işleyicileri, olaylarını işleyen sınıfın tüm ömrü için geçerli olur. Dinamik olay işleyicileri, genellikle bazı koşullu program mantığına yanıt olarak program yürütmesi sırasında açıkça etkinleştirilir ve devre dışı bırakılır. Örneğin, olay bildirimleri yalnızca belirli koşullar altında gerekliyse veya bir uygulama birden çok olay işleyicisi sağlıyorsa ve çalışma zamanı koşullarını kullanmak üzere uygun olanı tanımladıysanız kullanılabilirler. Önceki bölümdeki örnek, dinamik olarak bir olay işleyicisinin nasıl ekleneceğini gösterir. Daha fazla bilgi için bkz. [Olaylar](../../visual-basic/programming-guide/language-features/events/index.md) (Visual Basic) ve [olayları](../../csharp/programming-guide/events/index.md) (içinde C#).  
   
 ## <a name="raising-multiple-events"></a>Birden çok olayı oluşturma  

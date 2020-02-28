@@ -9,12 +9,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], enumerating
 - enumerating time zones [.NET Framework]
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
-ms.openlocfilehash: 662e389f4fecc77244e378f1c0672935403fa456
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aa8962c8aea208778983610041937dc3f75c1f1e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129116"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159448"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Nasıl yapılır: bir bilgisayarda mevcut saat dilimlerini numaralandırma
 
@@ -25,7 +25,7 @@ Belirlenen saat dilimiyle başarıyla çalışarak, bu saat dilimi hakkındaki b
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>Yerel sistemde mevcut olan saat dilimlerini listelemek için
 
-1. <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> yöntemini çağırın. Yöntemi, <xref:System.TimeZoneInfo> nesnelerin genel <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> koleksiyonunu döndürür. Koleksiyondaki girişler <xref:System.TimeZoneInfo.DisplayName%2A> özelliklerine göre sıralanır. Örneğin:
+1. <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> yöntemini çağırın. Yöntemi, <xref:System.TimeZoneInfo> nesnelerin genel <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> koleksiyonunu döndürür. Koleksiyondaki girişler <xref:System.TimeZoneInfo.DisplayName%2A> özelliklerine göre sıralanır. Örnek:
 
    [!code-csharp[System.TimeZone2.Concepts#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#1)]
    [!code-vb[System.TimeZone2.Concepts#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#1)]
@@ -55,9 +55,9 @@ Belirlenen saat dilimiyle başarıyla çalışarak, bu saat dilimi hakkındaki b
 Çoğu liste denetimleri (<xref:System.Windows.Forms.ListBox?displayProperty=nameWithType> veya <xref:System.Web.UI.WebControls.BulletedList?displayProperty=nameWithType> denetimi), bu koleksiyonun <xref:System.Collections.IEnumerable> arabirimini uyguladığı sürece `DataSource` özelliklerine bir nesne değişkenleri koleksiyonu atamanıza olanak tanır. (Genel <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> sınıfı bunu yapar.) Koleksiyonda tek bir nesneyi göstermek için denetim, nesneyi temsil etmek için kullanılan dizeyi ayıklamak için bu nesnenin `ToString` yöntemini çağırır. <xref:System.TimeZoneInfo> nesneler söz konusu olduğunda, `ToString` yöntemi <xref:System.TimeZoneInfo> nesnenin görünen adını döndürür (<xref:System.TimeZoneInfo.DisplayName%2A> özelliğinin değeri).
 
 > [!NOTE]
-> Liste denetimleri bir nesnenin `ToString` yöntemini çağırdığından, denetime <xref:System.TimeZoneInfo> nesnelerden oluşan bir koleksiyon atayabilir, denetimin her nesne için anlamlı bir ad görüntülemesini ve kullanıcının seçtiği <xref:System.TimeZoneInfo> nesnesini almanızı sağlayabilirsiniz. Bu, koleksiyondaki her bir nesne için bir dize ayıklama gereksinimini ortadan kaldırır, dizeyi denetimin `DataSource` özelliğine atanan bir koleksiyona atar, kullanıcının seçtiği dizeyi alır ve ardından bu dizeyi kullanarak şu nesneyi ayıklayın açıklanmaktadır. 
+> Liste denetimleri bir nesnenin `ToString` yöntemini çağırdığından, denetime <xref:System.TimeZoneInfo> nesnelerden oluşan bir koleksiyon atayabilir, denetimin her nesne için anlamlı bir ad görüntülemesini ve kullanıcının seçtiği <xref:System.TimeZoneInfo> nesnesini almanızı sağlayabilirsiniz. Bu, koleksiyondaki her bir nesne için bir dize ayıklama gereksinimini ortadan kaldırır, dizeyi denetimin `DataSource` özelliğine atanan bir koleksiyona atar, kullanıcının seçtiği dizeyi alır ve ardından bu dizeyi kullanarak açıkladığı nesneyi ayıklar.
 
-## <a name="compiling-the-code"></a>Kodu derleme
+## <a name="compiling-the-code"></a>Kod derleme
 
 Bu örnek şunları gerektirir:
 

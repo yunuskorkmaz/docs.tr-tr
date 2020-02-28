@@ -1,14 +1,14 @@
 ---
 title: İçindeki C# sınıflar ve nesneler- C# dilin turu
 description: Yeni C#misiniz? Sınıflar, nesneler ve devralmayla bu genel bakışı okuyun
-ms.date: 08/10/2016
+ms.date: 02/27/2020
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: e5078135ab22445ac636c6edc3d46570be8fcaf5
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: c178e11b5667905f75538555c8a309e2fdb4a9ef
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673309"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159188"
 ---
 # <a name="classes-and-objects"></a>Sınıflar ve nesneler
 
@@ -16,7 +16,7 @@ ms.locfileid: "77673309"
 
 Yeni sınıflar sınıf bildirimleri kullanılarak oluşturulur. Sınıf bildirimi, sınıfın özniteliklerini ve değiştiricilerini, sınıfın adını, Taban sınıfını (belirtilmişse) ve sınıf tarafından uygulanan arabirimleri belirten bir üstbilgiyle başlar. Üst bilgi, `{` ve `}`sınırlayıcılarının yazıldığı üye bildirimlerinin bir listesinden oluşan sınıf gövdesinden gelir.
 
-Aşağıda `Point`adlı basit bir sınıfın bildirimi verilmiştir:
+Aşağıdaki kod, `Point`adlı basit bir sınıfın bir bildirimini gösterir:
 
 [!code-csharp[PointClass](~/samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L11)]
 
@@ -24,13 +24,13 @@ Sınıf örnekleri, yeni bir örnek için bellek ayıran `new` işleci kullanıl
 
 [!code-csharp[PointExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L9-L10)]
 
-Nesne artık erişilebilir olmadığında bir nesnenin kapladığı bellek otomatik olarak geri kazanılır. Üzerinde C#nesneleri açıkça serbest bırakmak gerekli değildir veya mümkün değildir.
+Nesne artık erişilebilir olmadığında bir nesnenin kapladığı bellek otomatik olarak geri kazanılır. İçindeki C#nesneleri açıkça serbest bırakmak gerekli değildir veya mümkün değildir.
 
 ## <a name="members"></a>Üyeler
 
 Bir sınıfın üyeleri statik üyeler veya örnek üyeleridir. Statik Üyeler sınıflara aittir ve örnek üyeleri nesnelere aittir (sınıf örnekleri).
 
-Aşağıda bir sınıfın içerebileceği üye türlerine ilişkin bir genel bakış sunulmaktadır.
+Aşağıdaki liste, bir sınıfın içerebileceği üye türlerine genel bir bakış sağlar.
 
 - Sabitler
   - Sınıfla ilişkili sabit değerler
@@ -55,20 +55,20 @@ Aşağıda bir sınıfın içerebileceği üye türlerine ilişkin bir genel bak
 
 ## <a name="accessibility"></a>Erişilebilirlik
 
-Bir sınıfın her üyesinin ilişkili bir erişilebilirliği vardır ve bu, üyeye erişebilen program metni bölgelerini denetler. Olası altı erişilebilirlik biçimi vardır. Bunlar aşağıda özetlenmiştir.
+Bir sınıfın her üyesinin ilişkili bir erişilebilirliği vardır ve bu, üyeye erişebilen program metni bölgelerini denetler. Olası altı erişilebilirlik biçimi vardır. Erişim değiştiriciler aşağıda özetlenmiştir.
 
 - `public`
-  - Erişim sınırlı değil
+  - Erişim sınırlı değil.
 - `protected`
-  - Bu sınıftan türetilmiş bu sınıfla veya sınıflarla sınırlı erişim
+  - Erişim bu sınıftan türetilmiş bu sınıfla veya sınıflarla sınırlıdır.
 - `internal`
-  - Geçerli bütünleştirilmiş koda (. exe,. dll, vb.) sınırlı erişim
+  - Erişim geçerli derleme (. exe,. dll vb.) ile sınırlıdır.
 - `protected internal`
-  - İçerilen sınıfla sınırlı erişim, kapsayan sınıftan türetilmiş sınıflar veya aynı derleme içindeki sınıflar
+  - Erişim, kapsayan sınıf, kapsayan sınıftan türetilmiş sınıflar veya aynı derleme içindeki sınıflar ile sınırlıdır.
 - `private`
-  - Bu sınıfla sınırlı erişim
+  - Erişim bu sınıfla sınırlıdır.
 - `private protected`
-  - Aynı derleme içindeki kapsayan türden türetilmiş kapsayan sınıf veya sınıflarla sınırlı erişim
+  - Erişim, aynı derleme içindeki kapsayan türden türetilmiş sınıf veya sınıflarla sınırlıdır.
 
 ## <a name="type-parameters"></a>Tür parametreleri
 
@@ -89,9 +89,9 @@ Sınıf bildirimi, sınıf adı ve tür parametreleri iki nokta ve temel sınıf
 
 [!code-csharp[Point3DClass](~/samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L20)]
 
-Bir sınıf, temel sınıfının üyelerini devralır. Devralma, bir sınıfın örnek ve statik oluşturucular ve temel sınıfın sonlandırıcıları dışında, temel sınıfının tüm üyelerini örtük olarak içerdiği anlamına gelir. Türetilmiş bir sınıf, devralananlara yeni üyeler ekleyebilir, ancak devralınmış bir üyenin tanımını kaldıramaz. Önceki örnekte, `Point3D` `x` ve `y` alanları `Point`devralır ve her `Point3D` örnek, `x`, `y`ve `z`üç alan içerir.
+Bir sınıf, temel sınıfının üyelerini devralır. Devralma, bir sınıfın örnek ve statik oluşturucular ve temel sınıfın sonlandırıcıları dışında, temel sınıfının tüm üyelerini örtük olarak içerdiği anlamına gelir. Türetilmiş bir sınıf, devraldığı üyelere yeni üyeler ekleyebilir, ancak devralınan bir üyenin tanımını kaldıramıyorum. Önceki örnekte, `Point3D` `x` ve `y` alanları `Point`devralır ve her `Point3D` örnek, `x`, `y`ve `z`üç alan içerir.
 
-Bir sınıf türünden, temel sınıf türlerinden herhangi birine örtük bir dönüştürme vardır. Bu nedenle, bir sınıf türünün değişkeni bu sınıfın bir örneğine veya türetilmiş herhangi bir sınıfın örneğine başvurabilir. Örneğin, önceki sınıf bildirimleri verildiğinde `Point` türünde bir değişken `Point` veya `Point3D`başvurabilir:
+Bir sınıf türünden, temel sınıf türlerinden herhangi birine örtük bir dönüştürme vardır. Bir sınıf türünün değişkeni, bu sınıfın bir örneğine veya türetilmiş herhangi bir sınıfın örneğine başvurabilir. Örneğin, önceki sınıf bildirimleri verildiğinde `Point` türünde bir değişken `Point` veya `Point3D`başvurabilir:
 
 [!code-csharp[Point3DExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]
 
@@ -135,7 +135,7 @@ Bir *output parametresi* , bağımsız değişkenleri başvuruya göre geçirmek
 
 [!code-csharp[OutExample](~/samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
 
-Bir *parametre dizisi* , bir metoda değişken sayıda bağımsız değişken geçirilmesine izin verir. Bir parametre dizisi `params` değiştiricisiyle birlikte bildirilmiştir. Bir yöntemin yalnızca son parametresi bir parametre dizisi olabilir ve bir parametre dizisinin türü tek boyutlu bir dizi türü olmalıdır. <xref:System.Console?displayProperty=nameWithType> sınıfının Write ve WriteLine yöntemleri, parametre dizisi kullanımının iyi örnekleridir. Bunlar aşağıdaki gibi bildirilmiştir.
+Bir *parametre dizisi* , bir metoda değişken sayıda bağımsız değişken geçirilmesine izin verir. Bir parametre dizisi `params` değiştiricisiyle birlikte bildirilmiştir. Bir yöntemin yalnızca son parametresi bir parametre dizisi olabilir ve bir parametre dizisinin türü tek boyutlu bir dizi türü olmalıdır. <xref:System.Console?displayProperty=nameWithType> sınıfının Write ve WriteLine yöntemleri, parametre dizisi kullanımının iyi örnekleridir. Bunlar aşağıdaki şekilde bildirilmiştir.
 
 [!code-csharp[ConsoleExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]
 
@@ -155,13 +155,13 @@ Yöntem gövdesi, yöntemi çağrısına özgü değişkenleri bildirebilir. Bu 
 
 [!code-csharp[Squares](~/samples/snippets/csharp/tour/classes-and-objects/Squares.cs#L3-L17)]
 
-C#değeri alınabilmesi için önce bir yerel değişkenin *kesinlikle atanmasını* gerektirir. Örneğin, önceki `i` bildirimi bir başlangıç değeri içermiyorsa, `i`, programda bu noktalarda kesinlikle atanamadığı için, derleyici `i` sonraki kullanımları için bir hata raporlayabilir.
+C#değeri alınabilmesi için önce bir yerel değişkenin *kesinlikle atanmasını* gerektirir. Örneğin, önceki `i` bildirimi bir başlangıç değeri içermiyorsa, `i`, programda bu noktalarda kesinlikle atanamadığı için, derleyici `i` sonraki kullanımları için bir hata bildirir.
 
 Bir yöntem, `return` deyimlerini kullanarak çağıranına denetim döndürebilir. `void`döndüren bir yöntemde `return` deyimler bir ifade belirtemez. Void olmayan `return` deyimlerini döndüren bir yöntemde, dönüş değerini hesaplayan bir ifade içermelidir.
 
 ### <a name="static-and-instance-methods"></a>Statik ve örnek yöntemleri
 
-Statik değiştirici ile belirtilen bir yöntem *statik bir yöntemdir*. Statik bir yöntem belirli bir örnek üzerinde çalışmaz ve yalnızca statik üyelere doğrudan erişebilir.
+Statik değiştirici ile belirtilen bir yöntem *statik bir yöntemdir*. Statik bir yöntem, belirli bir örnek üzerinde çalışmaz ve yalnızca statik üyelere doğrudan erişebilir.
 
 Statik değiştirici olmadan belirtilen bir yöntem bir *örnek yöntemidir*. Örnek yöntemi, belirli bir örnek üzerinde çalışır ve hem statik hem de örnek üyelerine erişebilir. Örnek yönteminin çağrıldığı örnek, `this`olarak açıkça erişilebilir. Statik bir yöntemde `this` başvurmak hatadır.
 
@@ -169,7 +169,7 @@ Aşağıdaki `Entity` sınıfı hem statik hem de örnek üyelere sahiptir.
 
 [!code-csharp[Entity](~/samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L16-L36)]
 
-Her bir `Entity` örneği bir seri numarası içerir (ve burada görünmeyen bazı diğer bilgileri kabul etmez). `Entity` Oluşturucusu (bir örnek yöntemi gibi) yeni örneği bir sonraki kullanılabilir seri numarası ile başlatır. Oluşturucu bir örnek üyesi olduğundan, hem `serialNo` örnek alanına hem de `nextSerialNo` statik alanına erişim izni verilir.
+Her bir `Entity` örneği bir seri numarası içerir (ve burada görünmeyen bazı diğer bilgileri kabul edilir). `Entity` Oluşturucusu (bir örnek yöntemi gibi) yeni örneği bir sonraki kullanılabilir seri numarası ile başlatır. Oluşturucu bir örnek üyesi olduğundan, hem `serialNo` örnek alanına hem de `nextSerialNo` statik alanına erişme izni verilir.
 
 `GetNextSerialNo` ve `SetNextSerialNo` statik yöntemleri `nextSerialNo` statik alana erişebilir, ancak `serialNo` örnek alanına doğrudan erişmesi için bir hata olabilir.
 
@@ -177,7 +177,7 @@ Aşağıdaki örnek, Entity sınıfının kullanımını gösterir.
 
 [!code-csharp[EntityExample](~/samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L3-L15)]
 
-Sınıf üzerinde `GetSerialNo` örnek yöntemi çağrıldığında, `SetNextSerialNo` ve `GetNextSerialNo` statik yöntemlerinin sınıfında çağırılacağını unutmayın.
+`SetNextSerialNo` ve `GetNextSerialNo` static yöntemler sınıfında çağrılır, ancak `GetSerialNo` örnek yöntemi sınıfının örneklerinde çağrılır.
 
 ### <a name="virtual-override-and-abstract-methods"></a>Sanal, geçersiz kılma ve soyut yöntemler
 
@@ -189,7 +189,7 @@ Bir sanal yöntem, türetilmiş bir sınıfta *geçersiz kılınabilir* . Bir ö
 
 *Soyut bir yöntem* , uygulama içermeyen bir sanal yöntemdir. Soyut bir yöntem soyut değiştiriciyle birlikte bildirilmiştir ve yalnızca soyut olarak da tanımlanmış bir sınıfta izin verilir. Soyut olmayan her türetilmiş sınıfta bir soyut yöntem geçersiz kılınmalıdır.
 
-Aşağıdaki örnek, bir soyut sınıfı, bir ifade ağaç düğümünü temsil eden `Expression`, üç türetilmiş sınıf, `Constant`, `VariableReference`ve `Operation`sabitler, değişken başvuruları ve aritmetik işlemler için ifade ağacı düğümleri uygulayan bildirir. (Bu şuna benzerdir, ancak ifade ağacı türleriyle karıştırılmamalıdır).
+Aşağıdaki örnek, bir soyut sınıfı, bir ifade ağaç düğümünü temsil eden `Expression`, üç türetilmiş sınıf, `Constant`, `VariableReference`ve `Operation`sabitler, değişken başvuruları ve aritmetik işlemler için ifade ağacı düğümleri uygulayan bildirir. (Bu örnek ile benzerdir ancak ifade ağacı türleriyle karıştırılmamalıdır).
 
 [!code-csharp[ExpressionClass](~/samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L3-L61)]
 
@@ -207,7 +207,7 @@ Aşağıdaki program, `x` ve `y`farklı değerleri için ifade `x * (y + 2)` de�
 
 ### <a name="method-overloading"></a>Yöntem aşırı yüklemesi
 
-Yöntem *aşırı yüklemesi* , aynı sınıftaki birden çok metodun benzersiz imzalara sahip oldukları sürece aynı ada sahip olmasını sağlar. Aşırı yüklenmiş bir yöntemin çağrılması derlenirken, derleyici çağrılacak özel yöntemi belirlemekte *aşırı yükleme çözümü* kullanır. Aşırı yükleme çözümlemesi, bağımsız değişkenlerle en iyi eşleşen bir yöntemi bulur veya tek bir en iyi eşleşme bulunamazsa hata bildiriyor. Aşağıdaki örnekte, etkin olan aşırı yükleme çözümü gösterilmektedir. `UsageExample` yöntemi içindeki her çağrının yorumu, hangi yöntemin gerçekten çağrılacağını gösterir.
+Yöntem *aşırı yüklemesi* , aynı sınıftaki birden çok metodun benzersiz imzalara sahip oldukları sürece aynı ada sahip olmasını sağlar. Aşırı yüklenmiş bir yöntemin çağrılması derlenirken, derleyici çağrılacak özel yöntemi belirlemekte *aşırı yükleme çözümü* kullanır. Aşırı yükleme çözümlemesi, bağımsız değişkenlerle en iyi eşleşen bir yöntemi bulur veya tek bir en iyi eşleşme bulunamazsa hata bildiriyor. Aşağıdaki örnekte, etkin olan aşırı yükleme çözümü gösterilmektedir. `UsageExample` yöntemi içindeki her çağrının yorumu hangi yöntemin çağrılacağını gösterir.
 
 [!code-csharp[OverloadUsage](~/samples/snippets/csharp/tour/classes-and-objects/Overloading.cs#L3-L41)]
 
@@ -215,9 +215,9 @@ Yöntem *aşırı yüklemesi* , aynı sınıftaki birden çok metodun benzersiz 
 
 ## <a name="other-function-members"></a>Diğer işlev üyeleri
 
-Yürütülebilir kod içeren Üyeler topluca bir sınıfın *işlev üyeleri* olarak bilinir. Yukarıdaki bölümde, işlev üyelerinin birincil türü olan yöntemler açıklanmıştır. Bu bölümde, tarafından C#desteklenen diğer işlev üyesi türleri açıklanmaktadır: oluşturucular, özellikler, Dizin oluşturucular, olaylar, işleçler ve sonlandırıcılar.
+Yürütülebilir kod içeren Üyeler topluca bir sınıfın *işlev üyeleri* olarak bilinir. Yukarıdaki bölümde, işlev üyelerinin birincil türleri olan yöntemler açıklanmıştır. Bu bölümde, tarafından C#desteklenen diğer işlev üyesi türleri açıklanmaktadır: oluşturucular, özellikler, Dizin oluşturucular, olaylar, işleçler ve sonlandırıcılar.
 
-Aşağıda, growable bir nesne listesi uygulayan `MyList<T>`adlı bir genel sınıf gösterilmektedir. Sınıfı, en yaygın işlev üyesi türlerine birkaç örnek içerir.
+Aşağıdaki örnek, bir nesne growable listesi uygulayan `MyList<T>`adlı genel bir sınıfı gösterir. Sınıfı, en yaygın işlev üyesi türlerine birkaç örnek içerir.
 
 > [!NOTE]
 > Bu örnekte, .NET Standard <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>ile aynı olmayan bir `MyList` sınıfı oluşturulur. Bu, bu tur için gereken kavramları gösterir, ancak bu sınıfın yerini almaz.
@@ -234,7 +234,7 @@ Bir Oluşturucu, dönüş türü olmayan bir yöntem ve kapsayan sınıfla aynı
 
 [!code-csharp[ListExample1](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]
 
-Diğer üyelerin aksine, örnek oluşturucular devralınmaz ve bir sınıfın sınıfta tanımlananlardan farklı örnek oluşturucuları yoktur. Bir sınıf için örnek Oluşturucu sağlanmazsa, parametresi olmayan boş bir değer otomatik olarak sağlanır.
+Diğer üyelerin aksine, örnek oluşturucular devralınmaz ve bir sınıfta, aslında sınıfta belirtilen oluşturuculardan başka örnek oluşturucuları yoktur. Bir sınıf için örnek Oluşturucu sağlanmazsa, parametresi olmayan boş bir değer otomatik olarak sağlanır.
 
 ### <a name="properties"></a>Özellikler
 
@@ -246,7 +246,7 @@ Get erişimcisi, özellik türünün dönüş değeri olan parametresiz bir yön
 
 Bir set erişimcisi, value adlı tek parametreli ve dönüş türü olmayan bir yönteme karşılık gelir. Bir atamaya bir atama hedefi olarak veya + + veya--, işleneni olarak başvurulduğunda, yeni değer sağlayan bir bağımsız değişkenle çağrılır.
 
-`MyList<T>` sınıfı, sırasıyla salt okuma ve okuma-yazma olan iki özellik `Count` ve `Capacity`bildirir. Aşağıda bu özelliklerin kullanılmasına bir örnek verilmiştir:
+`MyList<T>` sınıfı, sırasıyla salt okuma ve okuma-yazma olan iki özellik `Count` ve `Capacity`bildirir. Aşağıdaki kod, bu özelliklerin kullanım örneğidir:
 
 [!code-csharp[ListExample2](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L101-L104)]
 
@@ -292,7 +292,7 @@ Bir olayın temeldeki depolamanın denetiminin istendiği Gelişmiş senaryolard
 
 *Sonlandırıcı* , bir sınıfın örneğini tamamlamak için gereken eylemleri uygulayan bir üyesidir. Sonlandırıcılar parametrelere sahip olamaz, erişilebilirlik değiştiricilerine sahip olamaz ve açıkça çağrılamaz. Örnek için Sonlandırıcı çöp toplama sırasında otomatik olarak çağrılır.
 
-Çöp toplayıcısına, nesnelerin toplanması ve Sonlandırıcıların ne zaman toplanacağına karar verirken geniş bir enlem vardır. Özellikle, Sonlandırıcı etkinleştirmeleri zamanlaması belirleyici değildir ve herhangi bir iş parçacığında sonlandırıcılar çalıştırılabilir. Bu ve diğer nedenlerden dolayı sınıfların yalnızca başka hiçbir çözüm uygulanabilir olmadığında sonlandırıcılar uygulaması gerekir.
+Çöp toplayıcısına, nesnelerin toplanması ve Sonlandırıcıların ne zaman toplanacağına karar verirken geniş bir enlem vardır. Özellikle, Sonlandırıcı çağırma zamanlaması belirleyici değildir ve herhangi bir iş parçacığında sonlandırıcılar çalıştırılabilir. Bu ve diğer nedenlerden dolayı sınıfların yalnızca başka hiçbir çözüm uygulanabilir olmadığında sonlandırıcılar uygulaması gerekir.
 
 `using` ifade, nesne yok etme için daha iyi bir yaklaşım sağlar.
 

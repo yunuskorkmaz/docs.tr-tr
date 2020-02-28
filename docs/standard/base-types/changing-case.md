@@ -14,17 +14,17 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.openlocfilehash: 91fc0022eae3f036e0ec046ea12446871926ab27
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 135cfa815c10d1a9dd9056604a4601678da9d5c4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711473"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159357"
 ---
 # <a name="changing-case-in-net"></a>.NET ' te durum değiştirme
 Bir kullanıcıdan girişi kabul eden bir uygulama yazarsanız, ya da kendisinin verileri girerken kullanacağı durumda hiçbir şekilde emin olabilirsiniz. Genellikle, özellikle de Kullanıcı arabiriminde görüntülüyorsanız, dizelerin tutarlı bir şekilde kullanılabilir olmasını istersiniz. Aşağıdaki tabloda üç büyük/küçük harf değiştirme yöntemi açıklanmaktadır. İlk iki yöntem kültürü kabul eden bir aşırı yükleme sağlar.  
   
-|Yöntem adı|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|  
+|Yöntem adı|Kullanım|  
 |-----------------|---------|  
 |<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|Dizedeki tüm karakterleri büyük harfe dönüştürür.|  
 |<xref:System.String.ToLower%2A?displayProperty=nameWithType>|Dizedeki tüm karakterleri küçük harfe dönüştürür.|  
@@ -33,7 +33,7 @@ Bir kullanıcıdan girişi kabul eden bir uygulama yazarsanız, ya da kendisinin
 > [!WARNING]
 > <xref:System.String.ToUpper%2A?displayProperty=nameWithType> ve <xref:System.String.ToLower%2A?displayProperty=nameWithType> yöntemlerinin, bunları karşılaştırmak veya eşitlik için test etmek üzere dizeleri dönüştürmek için kullanılmamalıdır. Daha fazla bilgi için bkz. [karışık büyük/küçük harfe yönelik dizeleri karşılaştırma](#Comparing) bölümü.  
   
-<a name="Comparing"></a>   
+<a name="Comparing"></a>
 ## <a name="comparing-strings-of-mixed-case"></a>Karışık durum dizelerini karşılaştırma  
  Sıralamalarını tespit etmek için karışık durum dizelerini karşılaştırmak için, <xref:System.String.CompareTo%2A?displayProperty=nameWithType> yönteminin aşırı yüklerini bir `comparisonType` parametresiyle çağırın ve <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> bağımsız değişkeni olarak <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>, <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType>veya `comparisonType` değerini sağlayın. Geçerli kültür dışındaki belirli bir kültürü kullanan bir karşılaştırma için, <xref:System.String.CompareTo%2A?displayProperty=nameWithType> yönteminin bir `culture` ve `options` parametresiyle birlikte bir yüklemesini çağırın ve `options` bağımsız değişkeni olarak <xref:System.Globalization.CompareOptions.IgnoreCase?displayProperty=nameWithType> değeri sağlayın.  
   
@@ -41,7 +41,7 @@ Bir kullanıcıdan girişi kabul eden bir uygulama yazarsanız, ya da kendisinin
   
  Daha fazla bilgi için bkz. [dizeleri kullanmak Için En Iyi uygulamalar](../../../docs/standard/base-types/best-practices-strings.md).  
   
-## <a name="toupper"></a>ToUpper  
+## <a name="toupper"></a>toUpper  
  <xref:System.String.ToUpper%2A?displayProperty=nameWithType> yöntemi bir dizedeki tüm karakterleri büyük harfe dönüştürür. Aşağıdaki örnek "Merhaba Dünya!" dizesini dönüştürür Karma durumundan büyük harfe kadar.  
   
  [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
@@ -49,7 +49,7 @@ Bir kullanıcıdan girişi kabul eden bir uygulama yazarsanız, ya da kendisinin
   
  Yukarıdaki örnek, varsayılan olarak kültüre duyarlıdır; geçerli kültürün büyük/küçük harf kurallarını uygular. Kültüre duyarsız bir durum değişikliği gerçekleştirmek veya belirli bir kültürün büyük/küçük harf kurallarını uygulamak için <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> yöntemi aşırı yüklemesini kullanın ve bir <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> değeri ya da belirtilen kültürü temsil eden bir <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> nesnesi *kültür* parametresine girin. Kültüre duyarsız bir durum değişikliği gerçekleştirmek üzere <xref:System.String.ToUpper%2A> yönteminin nasıl kullanılacağını gösteren bir örnek için, bkz. [kültüre duyarsız büyük/küçük harf değişiklikleri gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
   
-## <a name="tolower"></a>ToLower  
+## <a name="tolower"></a>toLower  
  <xref:System.String.ToLower%2A?displayProperty=nameWithType> yöntemi Previous yöntemine benzer, ancak bunun yerine dizedeki tüm karakterleri küçük harfe dönüştürür. Aşağıdaki örnek "Merhaba Dünya!" dizesini dönüştürür küçük harfe Dönüştür.  
   
  [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]

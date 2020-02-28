@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 5cd733d557dabe66145fdbb848c473411d63c62b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 34ffb9923337bbad90b2170a16d610d26c7f6f23
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709627"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160202"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>Stil Sayfası Parametreleri ve Genişletme Nesneleri için XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> sınıfı, dönüşümler (XSLT) parametreleri ve XSLT uzantı nesneleri için Genişletilebilir Stil sayfası dili içerir. <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemine geçirildiğinde, bu parametreler ve uzantı nesneleri stil sayfalarından çağrılabilir.  
@@ -38,11 +38,11 @@ ms.locfileid: "75709627"
   
 |W3C türü|Eşdeğer .NET Framework sınıfı (tür)|XPath türü veya XSLT türü|  
 |--------------|----------------------------------------------|-----------------------------|  
-|Dize|System. String|{1&gt;XPath&lt;1}|  
-|Boole değeri|System. Boolean|{1&gt;XPath&lt;1}|  
-|Sayı|System. Double|{1&gt;XPath&lt;1}|  
+|Dize|System. String|XPath|  
+|Boole|System. Boolean|XPath|  
+|Sayı|System. Double|XPath|  
 |Sonuç ağacı parçası|System. xml. XPath. XPathNavigator|XSLT|  
-|Düğüm kümesi|System.Xml.XPath.XPathNodeIterator|{1&gt;XPath&lt;1}|  
+|Düğüm kümesi|System.Xml.XPath.XPathNodeIterator|XPath|  
   
  Parametre nesnesi yukarıdaki sınıflardan biri değilse, uygun şekilde bir Double veya String öğesine zorlanır. Int16, UInt16, Int32, UInt32, Int64, UInt64, tek ve ondalık türler Double 'a zorlanır. Tüm diğer türler `ToString` yöntemi kullanılarak bir dizeye zorlanır.  
   
@@ -137,7 +137,7 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a>Giriş  
+### <a name="input"></a>Girdi  
  Order. xml  
   
 ```xml  
@@ -169,12 +169,12 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>Çıkış  
+### <a name="output"></a>Çıktı  
   
 ```xml  
 <order>  
-   <total>36.9</total>   
-   15% discount if paid by: 5/6/2001 5:01:15 PM   
+   <total>36.9</total>
+   15% discount if paid by: 5/6/2001 5:01:15 PM
 </order>  
 ```  
   
@@ -305,7 +305,7 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a>Giriş  
+### <a name="input"></a>Girdi  
  Number. xml  
   
 ```xml  
@@ -317,7 +317,7 @@ public class Sample
   <circle>  
     <radius>37.5</radius>  
   </circle>  
-</data>    
+</data>
 ```  
   
  Circle. Xsl  
@@ -332,7 +332,7 @@ public class Sample
     <circle>  
     <xsl:copy-of select="node()"/>  
        <circumference>  
-          <xsl:value-of select="myObj:Circumference(radius)"/>          
+          <xsl:value-of select="myObj:Circumference(radius)"/>
        </circumference>  
     </circle>  
   </xsl:for-each>  
@@ -341,7 +341,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>Çıkış  
+### <a name="output"></a>Çıktı  
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  

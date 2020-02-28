@@ -1,27 +1,29 @@
 ---
 title: C# Kılavuz turu C#
 description: Yeni C#misiniz? Dilin temel bilgilerini öğrenin.
-ms.date: 04/05/2019
-ms.openlocfilehash: b510342f957a259a6c7763441778461b3dd4ef1e
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.date: 02/26/2020
+ms.openlocfilehash: 69651d6233bfaf217366be3850f6b3d9c550d8e2
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673296"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159149"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# Dilin turu
 
-C#("bkz. diyez") basit, modern, nesne odaklı ve tür açısından güvenli bir programlama dilidir. C#C 'nin dil ailesinde köklerine sahiptir ve C, C++, Java ve JavaScript programcıları için hemen tanıdık gelecektir.
+C#("bkz. diyez") modern, nesne odaklı ve tür açısından güvenli bir programlama dilidir. C#C 'nin dil ailesinde köklerine sahiptir ve C, C++, Java ve JavaScript programcıları için hemen tanıdık gelecektir.
 
-Bu tur, C# 7 ve üzeri dilin önemli bileşenlerine genel bakış sunar. Etkileşimli örneklerle dili araştırmak istiyorsanız öğreticilere [giriş C# ](../tutorials/intro-to-csharp/index.md) ' i deneyin.
+Bu tur, C# 8 ve önceki dildeki dilin önemli bileşenlerine genel bakış sunar. Etkileşimli örneklerle dili araştırmak istiyorsanız öğreticilere [giriş C# ](../tutorials/intro-to-csharp/index.md) ' i deneyin.
 
-C#, nesne odaklı bir dildir, ancak C# daha fazla ***bileşen odaklı*** programlama desteğini içerir. Modern yazılım tasarımı giderek, yazılım bileşenlerini, kendi kendine içerilen ve kendi kendine açıklayan işlev paketleri biçiminde kullanır. Bu bileşenlere anahtar, özellikler, Yöntemler ve olaylar içeren bir programlama modeli sunduklarında; Bunlar, bileşen hakkında bildirime dayalı bilgiler sağlayan özniteliklere sahiptir; ve kendi belgelerini içerirler. C#, yazılım bileşenlerinin oluşturulması ve kullanılması için çok doğal bir C# dil sunarak, bu kavramları doğrudan desteklemek için dil yapıları sağlar.
+C#, nesne odaklı bir dildir, ancak C# daha fazla ***bileşen odaklı*** programlama desteğini içerir. Modern yazılım tasarımı giderek, yazılım bileşenlerini, kendi kendine içerilen ve kendi kendine açıklayan işlev paketleri biçiminde kullanır. Bu bileşenlere anahtar, özellikler, Yöntemler ve olaylar içeren bir programlama modeli sundukları özelliklerdir. Bunlar bileşen hakkında bildirime dayalı bilgiler sağlayan özniteliklere sahiptir. Kendi belgelerini içerirler. C#, yazılım bileşenlerinin oluşturulması ve kullanılması için doğal bir dil C# sunarak doğrudan bu kavramları desteklemek için dil yapıları sağlar.
 
-Birçok C# Özellik sağlam ve dayanıklı uygulamalar oluşturmaya yardımcı olur: ***çöp toplama*** , erişilemeyen kullanılmayan nesneler tarafından kullanılan belleği otomatik olarak geri kazanır; ***özel durum işleme*** , hata algılama ve kurtarmaya yönelik yapılandırılmış ve genişletilebilir bir yaklaşım sağlar; dilin ***tür kullanımı uyumlu*** tasarımı, başlatılmamış değişkenlerden okumayı, sınırları ötesinde dizileri dizin haline getirmek veya Denetlenmemiş tür yayınları gerçekleştirmeyi olanaksız hale getirir.
+Birçok C# Özellik sağlam ve dayanıklı uygulamalar oluşturmaya yardımcı olur. ***Çöp toplama*** , erişilemeyen kullanılmayan nesneler tarafından kullanılan belleği otomatik olarak geri kazanır. ***Özel durum işleme*** , hata algılama ve kurtarmaya yönelik yapılandırılmış ve genişletilebilir bir yaklaşım sağlar. Dilin ***tür kullanımı uyumlu*** tasarımı, başlatılmamış değişkenlerden okumayı, sınırları ötesinde dizileri dizin haline getirmek veya Denetlenmemiş tür yayınları gerçekleştirmeyi olanaksız hale getirir.
 
 C#Birleşik bir ***tür sistemine***sahiptir. `int` C# ve `double`gibi temel türler dahil olmak üzere tüm türler tek bir kök `object` türünden devralınır. Bu nedenle, tüm türler ortak işlemler kümesini paylaşır ve herhangi bir türdeki değerler tutarlı bir şekilde depolanabilir, taşınır ve çalıştırılabilir. Ayrıca, C# hem Kullanıcı tanımlı başvuru türlerini hem de değer türlerini destekler, bu da nesnelerin dinamik ayrılmasına ve basit yapıların satır içi depolamamasına olanak tanır.
 
-Programlar ve kitaplıkların zaman içinde zaman içinde gelişebilmesini sağlamak için, tasarımına daha fazla vurgu konulmuştur. C# C# Birçok programlama dili bu sorunla ilgileniyor ve sonuç olarak, bu dillerde yazılmış programlar, bağımlı kitaplıkların daha yeni sürümleri tanıtıldığında gerekenden çok daha fazla. C#Sürüm oluşturma konuları tarafından doğrudan etkilenen tasarımın yönleri, ayrı `virtual` ve `override` değiştiricileri, yöntem aşırı yükleme çözümlemesi kurallarını ve açık arabirim üye bildirimleri için desteği içerir.
+Programlar ve kitaplıkların zaman içinde zaman içinde gelişebilmesini sağlamak için, tasarımına daha fazla vurgu konulmuştur. C# C# Birçok programlama dili bu sorunla ilgilenmeyi çok fazla ödeyin. Sonuç olarak, bu diğer dillerde yazılmış programlar, bağımlı kitaplıkların daha yeni sürümleri tanıtıldığında gerekenden daha sık kesilir. C#Sürüm oluşturma konuları tarafından doğrudan etkilenen tasarımın yönleri, ayrı `virtual` ve `override` değiştiricileri, yöntem aşırı yükleme çözümlemesi kurallarını ve açık arabirim üye bildirimleri için desteği içerir.
+
+Daha yeni sürümlerde C# daha fazla programlama paradigmalarına. C#Lambda ifadeleri gibi işlevsel programlama tekniklerini destekleyen özellikler içerir. Diğer yeni özellikler, model eşleştirme gibi verileri ve algoritmaları ayırmayı destekler.
 
 ## <a name="hello-world"></a>Merhaba dünya
 
@@ -29,20 +31,18 @@ Programlar ve kitaplıkların zaman içinde zaman içinde gelişebilmesini sağl
 
 [!code-csharp[Hello World](~/samples/snippets/csharp/tour/hello/Program.cs)]
 
-C#Kaynak dosyalar genellikle `.cs`dosya uzantısına sahiptir. "Hello, World" programının *Hello.cs*dosyasında depolandığını varsayarsak, program komut satırı kullanılarak derlenmiş olabilir:
+C#Kaynak dosyalar genellikle `.cs`dosya uzantısına sahiptir. Bu programı oluşturmak için önce [.NET Core SDK](https://dotnet.microsoft.com/download)indirip yükleyin. Ardından, yeni bir program ve bir derleme betiği oluşturmak için `dotnet new console -o hello` komutunu yürütün. Program ve derleme betiği, sırasıyla `Program.cs` ve `hello.csproj`dosyalarında bulunur. `run` komutlarıyla uygulamayı derleyin ve çalıştırın:
 
 ```console
-csc hello.cs
+cd hello
+dotnet run
 ```
 
-*Hello. exe*adlı bir yürütülebilir derleme üreten. Bu uygulama tarafından oluşturulan çıktı şu şekilde çalışır:
+Program aşağıdaki çıktıyı üretir: 
 
 ```console
-Hello, World
+Hello, World!
 ```
-
-> [!IMPORTANT]
-> `csc` komutu tam Framework için derlenir ve tüm platformlarda bulunmayabilir.
 
 "Hello, World" programı, `System` ad alanına başvuran bir `using` yönergesi ile başlar. Ad alanları, programları ve kitaplıkları düzenlemek C# için hiyerarşik bir yol sağlar. Ad alanları türler ve diğer ad alanlarını içerir — örneğin, `System` ad alanı, programda başvurulan `Console` sınıfı ve `IO` ve `Collections`gibi birçok farklı ad alanı gibi bir dizi tür içerir. Verilen bir ad alanına başvuran `using` yönergesi, bu ad alanının üyesi olan türlerin nitelenmemiş kullanımını mümkün değildir. `using` yönergesi nedeniyle, program `System.Console.WriteLine`için toplu `Console.WriteLine` kullanabilir.
 

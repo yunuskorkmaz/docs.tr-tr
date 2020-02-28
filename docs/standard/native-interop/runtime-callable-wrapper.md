@@ -8,12 +8,12 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 70ed4176872e18ccafa00808630fcc51337b8479
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0b448379fba965060fdf3bf067e65374f40d1fc2
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123205"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156016"
 ---
 # <a name="runtime-callable-wrapper"></a>Çalışma Zamanı Aranabilir Sarmalayıcısı
 Ortak dil çalışma zamanı, COM nesnelerini, çalışma zamanı çağrılabilir sarmalayıcı (RCW) adlı bir ara sunucu üzerinden kullanıma sunar. RCW, .NET istemcilerine sıradan bir nesne gibi görünse de, birincil işlevi bir .NET istemcisiyle COM nesnesi arasındaki çağrıları sıralayamaz.  
@@ -31,9 +31,9 @@ Aşağıdaki görüntüde, çalışma zamanında çağrılabilir sarmalayıcı a
  Standart sarmalayıcı, yerleşik sıralama kurallarını uygular. Örneğin, bir .NET istemcisi bir dize türünü yönetilmeyen bir nesneye bir bağımsız değişkenin parçası olarak geçirdiğinde, sarmalayıcı dizeyi bir BSTR türüne dönüştürür. COM nesnesi, yönetilen çağıranına bir BSTR döndürmelidir, çağıran bir dize alır. Hem istemci hem de sunucu onlara tanıdık gelen verileri gönderir ve alır. Diğer türler dönüştürme gerektirmez. Örneğin, standart bir sarmalayıcı, türü dönüştürmeden yönetilen ve yönetilmeyen kod arasında her zaman 4 baytlık bir tamsayı geçilecektir.  
   
 ## <a name="marshaling-selected-interfaces"></a>Seçili arabirimler sıralanıyor  
- [Çalışma zamanı çağrılabilir sarmalayıcı](runtime-callable-wrapper.md) (RCW) birincil hedefi, yönetilen ve yönetilmeyen programlama modelleri arasındaki farkları gizmaktır. Sorunsuz bir geçiş oluşturmak için RCW, aşağıdaki çizimde gösterildiği gibi, seçili COM arabirimlerini .NET istemcisine göstermeden tüketir. 
+ [Çalışma zamanı çağrılabilir sarmalayıcı](runtime-callable-wrapper.md) (RCW) birincil hedefi, yönetilen ve yönetilmeyen programlama modelleri arasındaki farkları gizmaktır. Sorunsuz bir geçiş oluşturmak için RCW, aşağıdaki çizimde gösterildiği gibi, seçili COM arabirimlerini .NET istemcisine göstermeden tüketir.
 
- Aşağıdaki görüntüde COM arabirimleri ve çalışma zamanı çağrılabilir sarmalayıcı gösterilmektedir: 
+ Aşağıdaki görüntüde COM arabirimleri ve çalışma zamanı çağrılabilir sarmalayıcı gösterilmektedir:
   
  ![Arabirimleri olan çalışma zamanı çağrılabilir sarmalayıcının ekran görüntüsü.](./media/runtime-callable-wrapper/runtime-callable-wrapper-interfaces.gif)  
   

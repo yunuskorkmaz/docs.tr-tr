@@ -8,22 +8,22 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 8d9b8eb274777a0ed019a207c6e8610cc73ec390
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 301177113f67748b62ea2686615cfe5378fdc2fd
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973308"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157550"
 ---
 # <a name="exposing-net-core-components-to-com"></a>.NET Core bileşenlerini COM 'a gösterme
 
-.NET Core 'da, .NET nesnelerinizi COM 'a sunma süreci, .NET Framework karşılaştırmaya kıyasla önemli ölçüde basitleştirilmiştir. Aşağıdaki süreç, bir sınıfı COM 'a nasıl kullanıma sunabileceğiniz konusunda size yol gösterecektir. Bu öğreticide nasıl yapılacağı gösterilmektedir:
+.NET Core 'da, .NET nesnelerinizi COM 'a sunma süreci, .NET Framework karşılaştırmaya kıyasla önemli ölçüde basitleştirilmiştir. Aşağıdaki süreç, bir sınıfı COM 'a nasıl kullanıma sunabileceğiniz konusunda size yol gösterecektir. Bu öğretici şunların nasıl yapıldığını gösterir:
 
 - .NET Core 'dan COM 'a bir sınıf sunun.
 - .NET Core kitaplığınızı oluşturmanın bir parçası olarak bir COM sunucusu oluşturun.
 - Kayıt defteri ücretsiz COM için otomatik olarak yan yana sunucu bildirimi oluşturun.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 - [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download) veya daha yeni bir sürümü yükler.
 
@@ -32,14 +32,14 @@ ms.locfileid: "73973308"
 İlk adım, kitaplığı oluşturmaktır.
 
 1. Yeni bir klasör oluşturun ve bu klasörde aşağıdaki komutu çalıştırın:
-    
+
     ```dotnetcli
     dotnet new classlib
     ```
 
-2. `Class1.cs`açın.
+2. `Class1.cs` programını açın.
 3. `using System.Runtime.InteropServices;` dosyanın en üstüne ekleyin.
-4. `IServer`adlı bir arabirim oluşturun. Örneğin:
+4. `IServer`adlı bir arabirim oluşturun. Örnek:
 
    [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
 
@@ -55,7 +55,7 @@ ms.locfileid: "73973308"
 ## <a name="generate-the-com-host"></a>COM konağını oluşturma
 
 1. `.csproj` proje dosyasını açın ve bir `<PropertyGroup></PropertyGroup>` etiketinin içine `<EnableComHosting>true</EnableComHosting>` ekleyin.
-2. Projeyi oluşturun.
+2. Projeyi derleyin.
 
 Sonuç çıktısı bir `ProjectName.dll`, `ProjectName.deps.json`, `ProjectName.runtimeconfig.json` ve `ProjectName.comhost.dll` dosyasına sahip olur.
 
@@ -66,7 +66,7 @@ Yükseltilmiş bir komut istemi açın ve `regsvr32 ProjectName.comhost.dll`çal
 ## <a name="enabling-regfree-com"></a>RegFree COM etkinleştiriliyor
 
 1. `.csproj` proje dosyasını açın ve bir `<PropertyGroup></PropertyGroup>` etiketinin içine `<EnableRegFreeCom>true</EnableRegFreeCom>` ekleyin.
-2. Projeyi oluşturun.
+2. Projeyi derleyin.
 
 Elde edilen çıkışın artık `ProjectName.X.manifest` bir dosyası da olacaktır. Bu dosya, kayıt defteri-ücretsiz COM ile kullanılmak üzere yan yana bildirimidir.
 

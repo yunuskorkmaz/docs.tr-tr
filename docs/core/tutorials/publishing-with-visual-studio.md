@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/10/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: a82934fd2ea9568681a3bec82c3b15513decc926
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bdd6e28713bdece2bd144e6763bd84d719e91449
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741570"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156640"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>.NET Core Merhaba Dünya uygulamanızı Visual Studio ile yayımlama
 
@@ -25,15 +25,15 @@ ms.locfileid: "76741570"
 1. **HelloWorld** projesine (HelloWorld çözümüne değil) sağ tıklayın ve menüden **Yayımla** ' yı seçin. (Ana **Yapı** menüsünden **HelloWorld Yayımla** ' yı da seçebilirsiniz.)
 
    ![Visual Studio Yayımla bağlam menüsü](media/publishing-with-visual-studio/publish-context-menu.png)
-   
+
 1. **Bir yayımlama hedefi** seçin sayfasında **klasör**' i seçin ve ardından **Profil oluştur**' u seçin.
 
    ![Visual Studio 'da bir yayımlama hedefi seçin](media/publishing-with-visual-studio/pick-publish-target.png)
-   
+
 1. **Yayımla** sayfasında **Yayımla**' yı seçin.
 
    ![Visual Studio Yayımla penceresi](media/publishing-with-visual-studio/publish-page.png)
-   
+
 ## <a name="inspect-the-files"></a>Dosyaları inceleyin
 
 Yayımlama işlemi, yayımlanmış uygulamanın sistemde .NET Core tarafından desteklenen herhangi bir platformda çalıştığı bir dağıtım türü olan çerçeveye bağlı bir dağıtım oluşturur. Kullanıcılar çalıştırılabilir dosyayı çift tıklayarak veya bir komut isteminden `dotnet HelloWorld.dll` komutunu yayımlayarak, yayımlanan uygulamayı çalıştırabilir.
@@ -59,7 +59,7 @@ Aşağıdaki adımlarda, yayımlama işlemi tarafından oluşturulan dosyalara b
          Bu, uygulamanın [çerçeveye bağımlı dağıtım](../deploying/deploy-with-cli.md#framework-dependent-deployment) sürümüdür. Bu dinamik bağlantı kitaplığını yürütmek için, komut istemine `dotnet HelloWorld.dll` girin.
 
       * *HelloWorld. exe*
-      
+
          Bu, uygulamanın [çerçeveye bağımlı yürütülebilir](../deploying/deploy-with-cli.md#framework-dependent-executable) sürümüdür. Çalıştırmak için, komut istemine `HelloWorld.exe` girin.
 
       * *HelloWorld. pdb* (dağıtım için isteğe bağlı)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - try/finally block
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
-ms.openlocfilehash: 979cd782e5ab094b6dea010fc7a0b27caa390e67
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c5232aa89064c514e71f3a18bc754159e9c9b15b
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141345"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160292"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>IDisposable uygulayan nesneleri kullanma
 
@@ -56,7 +56,7 @@ Aşağıdaki örnek, bir önceki örneğe benzerdir, ancak bir <xref:System.IO.S
 [!code-csharp[Conceptual.Disposable#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using5.cs#6)]
 [!code-vb[Conceptual.Disposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using5.vb#6)]  
   
-Programlama diliniz bir `using` ifadesini desteklemediğinden, ancak <xref:System.IDisposable.Dispose%2A> yöntemine doğrudan çağrılara izin veren bir `try/finally` bloğunu uygulamayı tercih etmeniz veya uygulamanız gerekiyorsa, bu temel kalıbı izleyebilirsiniz. 
+Programlama diliniz bir `using` ifadesini desteklemediğinden, ancak <xref:System.IDisposable.Dispose%2A> yöntemine doğrudan çağrılara izin veren bir `try/finally` bloğunu uygulamayı tercih etmeniz veya uygulamanız gerekiyorsa, bu temel kalıbı izleyebilirsiniz.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

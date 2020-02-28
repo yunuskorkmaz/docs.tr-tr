@@ -3,12 +3,12 @@ title: Docker 'a giriş
 description: Bu makalede bir .NET Core uygulaması bağlamında Docker 'a bir giriş ve genel bakış sunulmaktadır.
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: 40c8a3c8d81d23c621ccb83a283f49aa34a58ac1
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: eedfd1e7c1b361beb9d4f271e739657ef5e894a6
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920817"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157797"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET ve Docker’a Giriş
 
@@ -18,7 +18,7 @@ Docker 'ı yükleme hakkında daha fazla bilgi için bkz. [Docker Desktop için 
 
 ## <a name="docker-basics"></a>Docker temelleri
 
-Bilmeniz gereken birkaç kavram vardır. Docker istemcisinde, görüntüleri ve kapsayıcıları yönetmek için kullanabileceğiniz bir CLı vardır. Daha önce belirtildiği gibi, [Docker genel bakış](https://docs.docker.com/engine/docker-overview/) belgelerini okumak için zaman yapmanız gerekir. 
+Bilmeniz gereken birkaç kavram vardır. Docker istemcisinde, görüntüleri ve kapsayıcıları yönetmek için kullanabileceğiniz bir CLı vardır. Daha önce belirtildiği gibi, [Docker genel bakış](https://docs.docker.com/engine/docker-overview/) belgelerini okumak için zaman yapmanız gerekir.
 
 ### <a name="images"></a>Görüntüler
 
@@ -30,11 +30,11 @@ Resimler görüntülerden oluşturulduğu için görüntüler, kapsayıcı başl
 
 Kapsayıcı bir görüntünün çalıştırılabilir örneğidir. Görüntünüzü oluştururken uygulamanızı ve bağımlılıklarınızı dağıtırsınız. Daha sonra, birden çok kapsayıcı, her biri bir diğerinden yalıtılmış olarak oluşturulabilir. Her kapsayıcı örneğinin kendi dosya sistemi, belleği ve ağ arabirimi vardır.
 
-### <a name="registries"></a>kayıt
+### <a name="registries"></a>Kayıt Defterleri
 
 Kapsayıcı kayıt defterleri, bir görüntü depoları koleksiyonudur. Görüntülerinizi bir kayıt defteri görüntüsünde temel alabilirsiniz. Kapsayıcılardan doğrudan kayıt defterindeki bir görüntüden kapsayıcı oluşturabilirsiniz. [Docker kapsayıcıları, görüntüleri ve kayıt defterleri arasındaki ilişki](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md) , [Kapsayıcılı uygulamaları veya mikro hizmetleri tasarlayarak ve derlerken](../../architecture/microservices/architect-microservice-container-applications/index.md)önemli bir kavramdır. Bu yaklaşım geliştirme ve dağıtım arasındaki süreyi büyük ölçüde kısaltır.
 
-Docker 'da, kullanabileceğiniz [Docker Hub 'ında](https://hub.docker.com/) barındırılan ortak bir kayıt defteri vardır. [.NET Core ile ilgili görüntüler](https://hub.docker.com/_/microsoft-dotnet-core/) Docker Hub 'ında listelenmiştir. 
+Docker 'da, kullanabileceğiniz [Docker Hub 'ında](https://hub.docker.com/) barındırılan ortak bir kayıt defteri vardır. [.NET Core ile ilgili görüntüler](https://hub.docker.com/_/microsoft-dotnet-core/) Docker Hub 'ında listelenmiştir.
 
 Microsoft Container Registry (MCR), Microsoft tarafından sunulan kapsayıcı görüntülerinin resmi kaynağıdır. MCR, genel olarak çoğaltılan görüntüler sağlamak için Azure CDN oluşturulmuştur. Ancak, MCR, herkese açık bir Web sitesine sahip değildir ve Microsoft tarafından sunulan kapsayıcı görüntüleri hakkında bilgi almanın birincil yolu [Microsoft Docker Hub sayfalarıdır](https://hub.docker.com/_/microsoft-dotnet-core/).
 
@@ -44,7 +44,7 @@ Microsoft Container Registry (MCR), Microsoft tarafından sunulan kapsayıcı g�
 
 ## <a name="net-core-images"></a>.NET Core görüntüleri
 
-Resmi .NET Core Docker görüntüleri Microsoft Container Registry (MCR) ' de yayımlanır ve [Microsoft .NET Core Docker Hub deposunda](https://hub.docker.com/_/microsoft-dotnet-core/)bulunabilir. Her depo, .NET (SDK veya çalışma zamanı) ve kullanabileceğiniz farklı .NET birleşimlerinin görüntülerini içerir. 
+Resmi .NET Core Docker görüntüleri Microsoft Container Registry (MCR) ' de yayımlanır ve [Microsoft .NET Core Docker Hub deposunda](https://hub.docker.com/_/microsoft-dotnet-core/)bulunabilir. Her depo, .NET (SDK veya çalışma zamanı) ve kullanabileceğiniz farklı .NET birleşimlerinin görüntülerini içerir.
 
 Microsoft, belirli senaryolar için uyarlanmış görüntüler sağlar. Örneğin, [ASP.NET Core deposu](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) üretimde ASP.NET Core uygulamaları çalıştırmak için oluşturulmuş görüntüler sağlar.
 

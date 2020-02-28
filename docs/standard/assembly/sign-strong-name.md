@@ -11,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 64f3a51b29a7116c736fea0e76465a4a73c640c2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 9998e69e8bf1505bcfc7a9103e9d89616dad9633
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738774"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160319"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Nasıl yapılır: bir derlemeyi güçlü bir adla Imzalama
 
@@ -54,7 +54,7 @@ Bir derlemeyi katı bir adla imzalamak için çeşitli yollar vardır:
 
 **Al** **/Out:** \<*AssemblyName*>  *\<ModuleName >* **/keyfile:** \<*keyfilename*>  
 
-Konum:  
+Konumlar:  
 
 - *AssemblyName* , derleme bağlayıcının Yayladığı, kesin imzalı derlemenin (bir *. dll* veya *. exe* dosyası) adıdır.  
   
@@ -73,9 +73,9 @@ Bu araç hakkında daha fazla bilgi için bkz. [derleme Bağlayıcısı](../../f
 ## <a name="sign-an-assembly-with-a-strong-name-by-using-attributes"></a>Öznitelikleri kullanarak bir derlemeyi tanımlayıcı adla imzalama  
   
 1. <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> veya <xref:System.Reflection.AssemblyKeyNameAttribute> özniteliğini kaynak kodu dosyanıza ekleyin ve derlemeyi tanımlayıcı bir adla imzalarken kullanılacak anahtar çiftini içeren dosya veya kapsayıcının adını belirtin.  
-   
+
 2. Kaynak kodu normal şekilde derleyin.  
-   
+
    > [!NOTE]
    > C# Ve Visual Basic derleyicileri, kaynak kodunda <xref:System.Reflection.AssemblyKeyFileAttribute> veya <xref:System.Reflection.AssemblyKeyNameAttribute> özniteliğiyle karşılaştığında Derleyici Uyarıları (sırasıyla CS1699 ve BC41008) olarak sorun. Uyarıları gözardı edebilirsiniz.  
 

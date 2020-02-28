@@ -13,25 +13,25 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: ae0ba0bf15b6a02df5130d34d277322897826697
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b1ec8cfc0f8c6e660d716c51bf3c3387b73a278f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338519"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159318"
 ---
 # <a name="composite-formatting"></a>Bileşik biçimlendirme
 
 .NET Composite biçimlendirme özelliği, giriş olarak bir nesne listesi ve bileşik biçim dizesi alır. Bir bileşik biçimlendirme dizesi, sabit metinle karışık bir şekilde listedeki nesnelere karşılık gelen, biçim öğeleri adı verilen dizinli yer tutuculardan oluşur. Biçimlendirme işlemi sonuç olarak, orijinal sabit metin ve listedeki nesnelerin dize temsillerinin karışımından oluşan bir dize oluşturur.  
   
 > [!IMPORTANT]
-> Kullandığınız dil ve dil sürümü bunları destekliyorsa, bileşik biçim dizeleri kullanmak yerine, *enterpolasyonlu dizeler* kullanabilirsiniz. İlişkilendirilmiş dize içeren bir dizedir *ilişkilendirilmiş ifade*. Her ilişkilendirilmiş ifade ifadenin değerinin ile çözümlendi ve dize atandığında sonuç dizesinde dahil. Daha fazla bilgi için bkz. [dize ilişkilendirmeC# (başvuru)](../../csharp/language-reference/tokens/interpolated.md) ve [enterpolasyonlu dizeler (Visual Basic Başvurusu)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
+> Kullandığınız dil ve dil sürümü bunları destekliyorsa, bileşik biçim dizeleri kullanmak yerine, *enterpolasyonlu dizeler* kullanabilirsiniz. Enterpolasyonlu dize, *enterpolasyonlu ifadeler*içeren bir dizedir. Her ilişkilendirilmiş ifade ifadenin değerinin ile çözümlendi ve dize atandığında sonuç dizesinde dahil. Daha fazla bilgi için bkz. [dize ilişkilendirmeC# (başvuru)](../../csharp/language-reference/tokens/interpolated.md) ve [enterpolasyonlu dizeler (Visual Basic Başvurusu)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
 
 Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından desteklenir:  
   
 - biçimlendirilen bir sonuç dizesi döndüren <xref:System.String.Format%2A?displayProperty=nameWithType>.  
   
-- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, bir <xref:System.Text.StringBuilder> nesnesine biçimlendirilen bir sonuç dizesi ekler.   
+- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, bir <xref:System.Text.StringBuilder> nesnesine biçimlendirilen bir sonuç dizesi ekler.
 - Konsola biçimlendirilen bir sonuç dizesi görüntüleyen <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> yönteminin bazı aşırı yüklemeleri.  
   
 - <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType> yönteminin bazı aşırı yüklemeleri, biçimlendirilen sonuç dizesini bir akışa veya dosyaya yazar. <xref:System.IO.StreamWriter> ve <xref:System.Web.UI.HtmlTextWriter>gibi <xref:System.IO.TextWriter>türetilen sınıflar da bu işlevi paylaşır.  

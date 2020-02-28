@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 0ce7182af33a795188d01ac457b9d45b8ad305dd
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 46a266849f137076170287aeb10becedf83ccf78
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960392"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160228"
 ---
 # <a name="managed-execution-process"></a>Yönetilen Yürütme İşlemi
 <a name="introduction"></a>Yönetilen yürütme işlemi, bu konunun ilerleyen bölümlerinde ayrıntılı olarak ele alınan aşağıdaki adımları içerir:  
@@ -36,7 +36,7 @@ ms.locfileid: "74960392"
   
      Ortak dil çalışma zamanı, yürütme sırasında kullanılabilecek yürütme ve Hizmetleri yürütmeye olanak tanıyan altyapıyı sağlar.  
   
-<a name="choosing_a_compiler"></a>   
+<a name="choosing_a_compiler"></a>
 ## <a name="choosing-a-compiler"></a>Derleyici seçme  
  Ortak dil çalışma zamanı (CLR) tarafından belirtilen avantajları elde etmek için Visual Basic, C#, görsel C++, F#veya bir Eiffel, Perl veya COBOL derleyicisi gibi birçok üçüncü taraf derleyicisinden birini hedefleyen bir veya daha fazla dil derleyicisini kullanmanız gerekir.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74960392"
   
  [Başa dön](#introduction)  
   
-<a name="compiling_to_msil"></a>   
+<a name="compiling_to_msil"></a>
 ## <a name="compiling-to-msil"></a>MSIL 'e derleme  
  Yönetilen koda derlerken, derleyici kaynak kodunuzu Microsoft ara dili 'ne (MSIL) çevirir ve bu, yerel koda etkin bir şekilde dönüştürülebilecek bir CPU bağımsız yönerge kümesidir. MSIL, nesneler üzerinde Yöntem yükleme, depolama, başlatma ve çağırma yönergelerini, ayrıca aritmetik ve mantıksal işlemler, denetim akışı, doğrudan bellek erişimi, özel durum işleme ve diğer işlemler için yönergeler içerir. Kod çalıştırılmadan önce, MSIL 'nin genellikle [tam zamanında (JIT) derleyicisi](#compiling_msil_to_native_code)tarafından, CPU 'ya özgü koda dönüştürülmesi gerekir. Ortak dil çalışma zamanı, desteklediği her bilgisayar mimarisi için bir veya daha fazla JıT derleyicisi sağladığından, aynı MSIL kümesi JıT derlenebilir ve desteklenen herhangi bir mimaride çalıştırılabilir.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "74960392"
   
  [Başa dön](#introduction)  
   
-<a name="compiling_msil_to_native_code"></a>   
+<a name="compiling_msil_to_native_code"></a>
 ## <a name="compiling-msil-to-native-code"></a>MSIL 'i yerel koda derleme  
  Microsoft ara dili 'ni (MSIL) çalıştırabilmeniz için önce, hedef makine mimarisi için ortak dil çalışma zamanına göre yerel koda derlenmesi gerekir. .NET Framework, bu dönüştürmeyi gerçekleştirmek için iki yol sunar:  
   
@@ -89,7 +89,7 @@ ms.locfileid: "74960392"
   
  [Başa dön](#introduction)  
   
-<a name="running_code"></a>   
+<a name="running_code"></a>
 ## <a name="running-code"></a>Kod çalıştırma  
  Ortak dil çalışma zamanı, yönetilen yürütmenin yürütme sırasında kullanılabilecek bir yerde ve hizmet almasını sağlayan altyapıyı sağlar. Bir yöntem çalıştırılmadan önce, işlemciye özel koda derlenmesi gerekir. MSIL 'nin oluşturulduğu her yöntem, ilk kez çağrıldığında JıT olarak derlenir ve sonra çalıştırılır. Yöntemin bir sonraki çalıştırılışında, var olan JıT derlenmiş yerel kod çalıştırılır. JıT derleme ve sonra kodu çalıştırma işlemi, yürütme tamamlanana kadar yinelenir.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "74960392"
 - [Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler](../../docs/standard/language-independence-and-language-independent-components.md)
 - [Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler](../../docs/standard/metadata-and-self-describing-components.md)
 - [Ilasm.exe (IL Derleyici)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [Security](../../docs/standard/security/index.md)
+- [Güvenlik](../../docs/standard/security/index.md)
 - [Yönetilmeyen Kod ile Birlikte Çalışma](../../docs/framework/interop/index.md)
 - [Dağıtım](../../docs/framework/deployment/net-framework-applications.md)
 - [.NET’te bütünleştirilmiş kodlar](assembly/index.md)

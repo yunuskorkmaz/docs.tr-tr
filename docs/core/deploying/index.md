@@ -2,18 +2,18 @@
 title: Uygulama yayımlama
 description: .NET Core uygulaması yayımlama yolları hakkında bilgi edinin. .NET Core, platforma özgü veya platformlar arası uygulamalar yayımlayabilir. Bir uygulamayı kendi içinde veya çalışma zamanına bağlı olarak yayımlayabilirsiniz. Her mod, bir kullanıcının uygulamanızı nasıl yürüttüğünde etkiler.
 ms.date: 01/31/2020
-ms.openlocfilehash: 696cca436c73601a3e7825033152d43a659a7dce
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448990"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157941"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core uygulama yayımlamaya genel bakış
 
 .NET Core ile oluşturduğunuz uygulamalar iki farklı modda yayımlanabilir ve bu mod, bir kullanıcının uygulamanızı nasıl yürüttüğünde de etkili olur.
 
-Uygulamanızı *kendi içinde* yayımlamak, .NET Core çalışma zamanı ve kitaplıklarını ve uygulamanızı ve onun bağımlılıklarını içeren bir uygulama oluşturur. Uygulamanın kullanıcıları bu uygulamayı .NET Core çalışma zamanı yüklü olmayan bir makinede çalıştırabilir. 
+Uygulamanızı *kendi içinde* yayımlamak, .NET Core çalışma zamanı ve kitaplıklarını ve uygulamanızı ve onun bağımlılıklarını içeren bir uygulama oluşturur. Uygulamanın kullanıcıları bu uygulamayı .NET Core çalışma zamanı yüklü olmayan bir makinede çalıştırabilir.
 
 Uygulamanızı *çalışma zamanına bağlı* olarak yayımlamak, yalnızca uygulamanızın kendisini ve bağımlılıklarını içeren bir uygulama oluşturur. Uygulamanın kullanıcılarının .NET Core çalışma zamanını ayrı olarak yüklemesi gerekir.
 
@@ -132,7 +132,7 @@ Uygulamanız .NET Core çalışma zamanı ve tüm uygulama bağımlılıkların�
   > .NET Core [*Genelleştirme sabit modunu*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)kullanarak Linux sistemlerinde dağıtımınızın boyutunu YAKLAŞıK 28 MB azaltabilirsiniz. Bu, uygulamanızı [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)gibi tüm kültürleri işleyecek şekilde zorlar.
 
 - **.NET Core sürümünü güncelleştirmek daha zordur**\
-.NET Core çalışma zamanı (uygulamanızla birlikte dağıtılır) yalnızca uygulamanızın yeni bir sürümü serbest bırakılarak yükseltilebilir. .NET Core çalışma zamanına yönelik güvenlik düzeltme ekleri için uygulamanızın güncelleştirilmiş bir sürümünü sağlamaktan sorumlu olursunuz. 
+.NET Core çalışma zamanı (uygulamanızla birlikte dağıtılır) yalnızca uygulamanızın yeni bir sürümü serbest bırakılarak yükseltilebilir. .NET Core çalışma zamanına yönelik güvenlik düzeltme ekleri için uygulamanızın güncelleştirilmiş bir sürümünü sağlamaktan sorumlu olursunuz.
 
 ### <a name="examples"></a>Örnekler
 

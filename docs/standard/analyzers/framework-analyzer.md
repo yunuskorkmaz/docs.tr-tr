@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 7e64b00eb6fd2c2dbb12c54a2c725590b4d22e15
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: dd69671e709549fe0ad0f582e4d09b43f7321df2
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345945"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156003"
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework Çözümleyicisi
 
@@ -22,7 +22,8 @@ ms.locfileid: "74345945"
 
 .NET Framework Çözümleyicileri, çalıştırmak istediğiniz her projede bir NuGet paketi olarak yüklenmelidir. Yalnızca bir geliştiricinin projeye eklemesi gerekir. Çözümleyici paketi bir proje bağımlılığıdır ve güncelleştirilmiş çözüme sahip olduktan sonra her geliştiricinin makinesinde çalışır.
 
-.NET Framework Çözümleyicisi, [Microsoft. NetFramework. çözümleyiciler](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/) NuGet paketinde dağıtılır. Bu paket, güvenlik Çözümleyicileri içeren .NET Framework özgü çözümleyiciler sağlar. Çoğu durumda, [Microsoft. CodeAnalysis. Fxcopçözümleyiciler](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet paketini isteyeceksiniz. Fxcopçözümleyiciler toplu paketi, Framework. çözümleyiciler paketinin yanı sıra aşağıdaki çözümleyiciler için de bulunan tüm çerçeve Çözümleyicileri içerir:
+.NET Framework Çözümleyicisi, [Microsoft. NetFramework. çözümleyiciler](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/) NuGet paketinde dağıtılır. Bu paket, güvenlik Çözümleyicileri içeren .NET Framework özgü çözümleyiciler sağlar. Çoğu durumda, [Microsoft. CodeAnalysis. Fxcopçözümleyiciler](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet paketini isteyeceksiniz.
+Fxcopçözümleyiciler toplu paketi, Framework. çözümleyiciler paketinin yanı sıra aşağıdaki çözümleyiciler için de bulunan tüm çerçeve Çözümleyicileri içerir:
 
 - [Microsoft. CodeQuality. çözümleyiciler](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers): .NET Standard API 'leri için genel rehberlik ve rehberlik sağlar
 - [Microsoft. NetCore. çözümleyiciler](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers): .NET Core API 'lerine özgü çözümleyiciler sağlar.
@@ -46,7 +47,7 @@ Herhangi bir sorunun üzerine gelin ve sorun hakkındaki ayrıntıları ve aşa�
 
 ### <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: Türler belli temel türleri genişletmemelidir
 
-.NET Framework doğrudan türetmemelisiniz, çok sayıda tür vardır. 
+.NET Framework doğrudan türetmemelisiniz, çok sayıda tür vardır.
 
 **Kategori:** Tasarıma
 

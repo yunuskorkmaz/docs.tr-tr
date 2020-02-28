@@ -35,12 +35,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: e637b2527ce0f7e1b48b713549cb87b2c13881db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8956be3cf8f96a8dd255f378d4927404c172c908
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124809"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160007"
 ---
 # <a name="the-regular-expression-object-model"></a>Normal İfade Nesnesi Modeli
 <a name="introduction"></a>Bu konuda, .NET normal ifadelerle çalışırken kullanılan nesne modeli açıklanmaktadır. Aşağıdaki bölümleri içerir:  
@@ -57,7 +57,7 @@ ms.locfileid: "73124809"
   
 - [Tek yakalama](#the_individual_capture)  
   
-<a name="Engine"></a>   
+<a name="Engine"></a>
 ## <a name="the-regular-expression-engine"></a>Normal Ifade altyapısı  
  .NET 'teki normal ifade altyapısı <xref:System.Text.RegularExpressions.Regex> sınıfı tarafından temsil edilir. Normal ifade altyapısı, bir normal ifadeyi ayrıştırma ve derleme ve bir giriş dizesiyle normal ifade düzeniyle eşleşen işlemler gerçekleştirme işlemlerinden sorumludur. Motor, .NET normal ifade nesne modelindeki merkezi bileşendir.  
   
@@ -159,11 +159,11 @@ ms.locfileid: "73124809"
 |`\.`|Bir noktayla eşleştirin.|  
 |`\s`|Bir boşluk karakteri ile eşleştirin.|  
   
-<a name="Match_and_MCollection"></a>   
+<a name="Match_and_MCollection"></a>
 ## <a name="the-matchcollection-and-match-objects"></a>MatchCollection ve Match nesneleri  
  Regex yöntemleri, normal ifade nesne modelinin parçası olan iki nesne döndürür: <xref:System.Text.RegularExpressions.MatchCollection> nesnesi ve <xref:System.Text.RegularExpressions.Match> nesnesi.  
   
-<a name="the_match_collection"></a>   
+<a name="the_match_collection"></a>
 ### <a name="the-match-collection"></a>Eşleştirme koleksiyonu  
  <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> yöntemi, normal ifade altyapısının bulduğu tüm eşleşmeleri temsil eden <xref:System.Text.RegularExpressions.Match> nesnelerini giriş dizesinde gerçekleştikleri sırada içeren bir <xref:System.Text.RegularExpressions.MatchCollection> nesnesi döndürür. Eşleşme yoksa, yöntemi üyesi olmayan bir <xref:System.Text.RegularExpressions.MatchCollection> nesnesi döndürür. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> özelliği, koleksiyona göre koleksiyonun tek üyelerine, <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> özelliğinin değerinden bir daha küçük bir değere erişmenizi sağlar. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> koleksiyonun Dizin Oluşturucusu (içinde C#) ve varsayılan özelliktir (Visual Basic).  
   
@@ -174,7 +174,7 @@ ms.locfileid: "73124809"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/matchcollection1.cs#6)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/matchcollection1.vb#6)]  
   
-<a name="the_match"></a>   
+<a name="the_match"></a>
 ### <a name="the-match"></a>Eşleşme  
  <xref:System.Text.RegularExpressions.Match> sınıfı, tek bir normal ifade eşleşmesinden elde edilen sonucu temsil eder. <xref:System.Text.RegularExpressions.Match> nesnelerine iki şekilde erişebilirsiniz:  
   
@@ -228,7 +228,7 @@ ms.locfileid: "73124809"
   
  [Başa dön](#introduction)  
   
-<a name="GroupCollection"></a>   
+<a name="GroupCollection"></a>
 ## <a name="the-group-collection"></a>Grup koleksiyonu  
  <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> özelliği, tek bir eşleşme halinde yakalanan grupları temsil eden <xref:System.Text.RegularExpressions.Group> nesneleri içeren bir <xref:System.Text.RegularExpressions.GroupCollection> nesnesi döndürür. Koleksiyondaki ilk <xref:System.Text.RegularExpressions.Group> nesnesi (Dizin 0 ' da) tüm eşleşmeyi temsil eder. Aşağıdaki her nesne tek bir yakalama grubunun sonuçlarını temsil eder.  
   
@@ -259,7 +259,7 @@ ms.locfileid: "73124809"
   
  [Başa dön](#introduction)  
   
-<a name="the_captured_group"></a>   
+<a name="the_captured_group"></a>
 ## <a name="the-captured-group"></a>Yakalanan grup  
  <xref:System.Text.RegularExpressions.Group> sınıfı, tek bir yakalama grubundan elde edilen sonucu temsil eder. Normal bir ifadede tanımlanan yakalama gruplarını temsil eden Grup nesneleri, <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> özelliği tarafından döndürülen <xref:System.Text.RegularExpressions.GroupCollection> nesnesinin <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> özelliği tarafından döndürülür. <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> özelliği, <xref:System.Text.RegularExpressions.Group> sınıfının Dizin oluşturucudır C#(içinde) ve varsayılan özelliktir (Visual Basic). `foreach` veya `For Each` yapısını kullanarak koleksiyonu yineleerek tek tek üyeleri de alabilirsiniz. Bir örnek için önceki bölüme bakın.  
   
@@ -282,7 +282,7 @@ ms.locfileid: "73124809"
 |`:`|İki nokta üst üste eşleştirin.|  
 |`(?<value>\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu yakalama grubunun adı `value`.|  
   
- <xref:System.Text.RegularExpressions.Group> sınıfının özellikleri yakalanan grup hakkında bilgi sağlar: `Group.Value` özelliği yakalanan alt dizeyi içerir; `Group.Index` özelliği, girdi metninde yakalanan grubun başlangıç konumunu `Group.Length` özelliği gösterir yakalanan metnin uzunluğunu içerir ve `Group.Success` özelliği, bir alt dizenin yakalama grubu tarafından tanımlanan Düzenle eşleştirilip eşleştirmediğini belirtir.  
+ <xref:System.Text.RegularExpressions.Group> sınıfının özellikleri yakalanan grup hakkında bilgi sağlar: `Group.Value` özelliği yakalanan alt dizeyi içerir. `Group.Index` özelliği, yakalanan grubun başlangıç konumunu giriş metninde gösterir, `Group.Length` özelliği yakalanan metnin uzunluğunu içerir ve `Group.Success` özelliği, bir alt dizenin yakalama grubu tarafından tanımlanan Düzenle eşleştiğini gösterir.  
   
  Bir gruba nicelik belirteçleri uygulama (daha fazla bilgi için, bkz. [nicelik belirteçleri](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) yakalama grubu başına bir yakalamanın ilişkisini iki şekilde değiştirir:  
   
@@ -306,7 +306,7 @@ ms.locfileid: "73124809"
   
  [Başa dön](#introduction)  
   
-<a name="CaptureCollection"></a>   
+<a name="CaptureCollection"></a>
 ## <a name="the-capture-collection"></a>Yakalama koleksiyonu  
  <xref:System.Text.RegularExpressions.Group> nesnesi yalnızca son yakalama hakkındaki bilgileri içerir. Ancak, bir yakalama grubu tarafından yapılan tüm yakalama kümesi, <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> özelliği tarafından döndürülen <xref:System.Text.RegularExpressions.CaptureCollection> nesnesinden hala kullanılabilir. Koleksiyonun her üyesi, bu yakalama grubu tarafından, yakalandıkları sırada (ve bu nedenle, yakalanan dizelerin giriş dizesinde soldan sağa eşleştirildiği sırada) yapılan bir yakalamayı temsil eden bir <xref:System.Text.RegularExpressions.Capture> nesnesidir. Tek tek <xref:System.Text.RegularExpressions.Capture> nesneleri koleksiyondan iki şekilde alabilirsiniz:  
   
@@ -328,7 +328,7 @@ ms.locfileid: "73124809"
   
  [Başa dön](#introduction)  
   
-<a name="the_individual_capture"></a>   
+<a name="the_individual_capture"></a>
 ## <a name="the-individual-capture"></a>Tek yakalama  
  <xref:System.Text.RegularExpressions.Capture> sınıfı, tek bir alt ifade yakalamanın sonuçlarını içerir. <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType> özelliği eşleşen metni içerir ve <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType> özelliği, eşleşen alt dizenin başladığı giriş dizesindeki sıfır tabanlı konumu gösterir.  
   

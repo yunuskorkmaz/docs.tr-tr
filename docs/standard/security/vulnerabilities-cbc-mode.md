@@ -3,16 +3,16 @@ title: CBC şifre çözme güvenlik açığı
 description: Doldurma kullanarak şifreleme blok zincirleme (CBC) modu simetrik şifre çözme ile zamanlama güvenlik açıklarını algılamayı ve etkilerini öğrenin.
 ms.date: 06/12/2018
 author: blowdart
-ms.openlocfilehash: 87f8e3c53e4d06f6a4edc7670891ac83ec8d65ab
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4616ef9015b47ff232a17f058c7a0f1449f42e81
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705853"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159968"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Doldurmayı kullanarak CBC modunda simetrik şifre çözmedeki zamanlama açıkları
 
-Microsoft, yalnızca belirli bir durum dışında, şifreli doldurma uygulandığında, şifreli şifrelemenin Şifre blok zincirleme (CBC) moduyla şifrelenmiş verilerin şifresinin çözülmesi için artık güvenli olduğunu düşünmektedir durumlarda. Bu, şu anda bilinen şifreleme araştırmasını temel alır. 
+Microsoft, yalnızca belirli bir durum dışında, şifreli doldurma uygulandığında, şifreli şifrelemenin Şifre blok zincirleme (CBC) moduyla şifrelenmiş verilerin şifresinin çözülmesi için artık güvenli olduğunu düşünmektedir durumlarda. Bu, şu anda bilinen şifreleme araştırmasını temel alır.
 
 ## <a name="introduction"></a>Giriş
 
@@ -68,7 +68,7 @@ Başlangıçta pratik saldırılar, ASP.NET güvenlik açığı [MS10-070](/secu
 
 Şifreleme şeması bir imza kullanır ve imza doğrulamasının belirli bir veri uzunluğu (içeriğinden bağımsız olarak) için sabit bir çalışma zamanı ile gerçekleştirildiğinden, veri bütünlüğü bir saldırgana bir [taraf kanal](https://en.wikipedia.org/wiki/Side-channel_attack)aracılığıyla herhangi bir bilgi yaymadan doğrulanabilir. Bütünlük denetimi, değiştirilen iletileri reddettiğinde, Oracle tehdidi doldurma işlemi azaltılmış olur.
 
-## <a name="guidance"></a>Kılavuz
+## <a name="guidance"></a>Rehber
 
 İlk ve daha önce, Microsoft, gizlilik ihtiyaçlarına sahip tüm verilerin Aktarım Katmanı Güvenliği (TLS) üzerinden aktarılması ve Güvenli Yuva Katmanı (SSL) ' nin ardıl olması önerilir.
 

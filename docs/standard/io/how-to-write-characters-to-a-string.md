@@ -11,23 +11,23 @@ helpviewer_keywords:
 - streams, writing characters to strings
 - I/O [.NET Framework], writing characters to strings
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
-ms.openlocfilehash: b53513ef0b373cdde7703eddcd182ab7fd15cb9b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ecbfa2de2c21ff79df269f74eeddfa0738e7e25c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706627"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160293"
 ---
 # <a name="how-to-write-characters-to-a-string"></a>Nasıl yapılır: bir dizeye karakter yazma
 Aşağıdaki kod örnekleri, bir karakter dizisinden dize içine zaman uyumlu veya zaman uyumsuz karakterler yazar.  
   
 ## <a name="example-write-characters-synchronously-in-a-console-app"></a>Örnek: bir konsol uygulamasında karakterleri eşzamanlı olarak yazma  
- Aşağıdaki örnek, bir <xref:System.Text.StringBuilder> nesnesine beş karakter eşzamanlı olarak yazmak için bir <xref:System.IO.StringWriter> kullanır. 
+ Aşağıdaki örnek, bir <xref:System.Text.StringBuilder> nesnesine beş karakter eşzamanlı olarak yazmak için bir <xref:System.IO.StringWriter> kullanır.
   
  [!code-csharp[Conceptual.StringBuilder#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/example2.cs#9)]
  [!code-vb[Conceptual.StringBuilder#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/example2.vb#9)]  
   
-## <a name="example-write-characters-asynchronously-in-a-wpf-app"></a>Örnek: bir WPF uygulamasında karakterleri zaman uyumsuz olarak yazma 
+## <a name="example-write-characters-asynchronously-in-a-wpf-app"></a>Örnek: bir WPF uygulamasında karakterleri zaman uyumsuz olarak yazma
  Sonraki örnek, bir WPF uygulamasının arkasındaki koddur. Pencere yükleme sırasında, örnek zaman uyumsuz olarak bir <xref:System.Windows.Controls.TextBox> denetimindeki tüm karakterleri okur ve bunları bir dizide depolar. Ardından, her bir harfi veya boşluk karakterini <xref:System.Windows.Controls.TextBlock> denetimin ayrı bir satırına zaman uyumsuz olarak yazar.  
   
  [!code-csharp[StreamReaderWriter](../../../samples/snippets/csharp/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.cs)]

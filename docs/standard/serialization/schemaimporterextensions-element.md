@@ -6,14 +6,14 @@ helpviewer_keywords:
 - schemaImporterExtensions element
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
-ms.openlocfilehash: 43f8439708c73e8e5241a923360caf549bf09d8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ed80ac370e34d6b62bb2b601cb7bd978228a302
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017975"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159825"
 ---
-# <a name="schemaimporterextensions-element"></a>\<schemaImporterExtensions > öğesi
+# <a name="schemaimporterextensions-element"></a>\<SchemaImporterExtensions > öğesi
 Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchemaImporter> için .NET Framework türleri için XSD türü eşleme. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyası şeması](../../../docs/framework/configure-apps/file-schema/index.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -28,23 +28,23 @@ Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchema
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Ekle > öğesi için \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)|Tarafından kullanılan türleri ekler <xref:System.Xml.Serialization.XmlSchemaImporter> eşlemeleri oluşturmak için.|  
+|[\<SchemaImporterExtensions için > öğesi \<ekleyin >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)|Eşleme oluşturmak için <xref:System.Xml.Serialization.XmlSchemaImporter> tarafından kullanılan türleri ekler.|  
   
 ## <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<system.xml.serialization> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)|XML serileştirme denetlemek için üst düzey öğe.|  
+|[System. xml. Serialization > öğesi \<](../../../docs/standard/serialization/system-xml-serialization-element.md)|XML serileştirmesini denetlemek için en üst düzey öğe.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği tarafından kullanılan türlerinizi eklemek üzere gösterir <xref:System.Xml.Serialization.XmlSchemaImporter> XSD türleri için .NET Framework türleri eşlerken.  
+ Aşağıdaki kod örneği, XSD türlerini .NET Framework türlerine eşlerken <xref:System.Xml.Serialization.XmlSchemaImporter> tarafından kullanılan türlerin nasıl ekleneceğini göstermektedir.  
   
 ```xml  
 <system.xml.serialization>  
     <schemaImporterExtensions>  
-        <add name = "MobileCapabilities" type =   
-        "System.Web.Mobile.MobileCapabilities,   
-        System.Web.Mobile, Version - 2.0.0.0, Culture = neutral,   
+        <add name = "MobileCapabilities" type =
+        "System.Web.Mobile.MobileCapabilities,
+        System.Web.Mobile, Version - 2.0.0.0, Culture = neutral,
         PublicKeyToken = b03f5f6f11d40a3a" />  
     </schemaImporterExtensions>  
 </system.xml.serialization>  
@@ -56,5 +56,5 @@ Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchema
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
 - [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<dateTimeSerialization > öğesi](../../../docs/standard/serialization/datetimeserialization-element.md)
-- [\<Ekle > öğesi için \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
-- [\<system.xml.serialization> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [\<SchemaImporterExtensions için > öğesi \<ekleyin >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [System. xml. Serialization > öğesi \<](../../../docs/standard/serialization/system-xml-serialization-element.md)

@@ -4,23 +4,23 @@ description: Eklentileri destekleyen bir .NET Core uygulaması oluşturmayı ö�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 32205a507bc95b2f8a2f75368aab3fde710249ee
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4c03c70edcdba52c4e6029402b92d5478a0d312c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787848"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156653"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Eklentilerle .NET Core uygulaması oluşturma
 
-Bu öğreticide, eklentileri yüklemek için özel bir <xref:System.Runtime.Loader.AssemblyLoadContext> nasıl oluşturacağınız gösterilmektedir. <xref:System.Runtime.Loader.AssemblyDependencyResolver>, eklentinin bağımlılıklarını çözümlemek için kullanılır. Öğretici, eklentinin bağımlılıklarını barındırma uygulamasından doğru şekilde yalıtır. Şunları yapmayı öğreneceksiniz:
+Bu öğreticide, eklentileri yüklemek için özel bir <xref:System.Runtime.Loader.AssemblyLoadContext> nasıl oluşturacağınız gösterilmektedir. <xref:System.Runtime.Loader.AssemblyDependencyResolver>, eklentinin bağımlılıklarını çözümlemek için kullanılır. Öğretici, eklentinin bağımlılıklarını barındırma uygulamasından doğru şekilde yalıtır. Şunları öğrenirsiniz:
 
 - Eklentileri desteklemek için bir proje yapısı yapın.
 - Her eklentiyi yüklemek için özel bir <xref:System.Runtime.Loader.AssemblyLoadContext> oluşturun.
 - Eklentilerin bağımlılıklara sahip olmasını sağlamak için <xref:System.Runtime.Loader.AssemblyDependencyResolver?displayProperty=fullName> türünü kullanın.
 - Yalnızca derleme yapıtları kopyalanarak kolayca dağıtılabilecek olan eklentileri yazar.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 - [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download) veya daha yeni bir sürümünü yükler.
 
@@ -218,7 +218,7 @@ Her eklenti için farklı bir `PluginLoadContext` örneği kullanarak, Eklentile
 Kök klasöre geri döndüğünüzde şunları yapın:
 
 1. `HelloPlugin`adlı yeni bir sınıf kitaplığı projesi oluşturmak için aşağıdaki komutu çalıştırın:
-    
+
     ```dotnetcli
     dotnet new classlib -o HelloPlugin
     ```
@@ -233,7 +233,7 @@ Kök klasöre geri döndüğünüzde şunları yapın:
 
 [!code-csharp[the-hello-plugin](~/samples/core/extensions/AppWithPlugin/HelloPlugin/HelloCommand.cs)]
 
-Şimdi, *Helloplugin. csproj* dosyasını açın. Şuna benzer olmalıdır:
+Şimdi, *Helloplugin. csproj* dosyasını açın. Şunun gibi görünmelidir:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

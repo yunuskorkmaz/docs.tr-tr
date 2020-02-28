@@ -3,12 +3,12 @@ title: Dönüşümlerdeki Sonuç Ağacı Parçası
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
-ms.openlocfilehash: 33d66b0a835be8bacab76ef9295ce8158385d8d1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e454c1194e8c280042857f106e22d0d0509417e3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710264"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156367"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Dönüşümlerdeki Sonuç Ağacı Parçası
 
@@ -111,7 +111,7 @@ Burada, zengin metin biçimi (RTF) ve bu nedenle bir düğüm kümesine Dönüş
 
 Bu stil sayfasıyla herhangi bir XML dönüştürmenin sonucu aşağıdaki çıktıda gösterilmektedir.
 
-## <a name="output"></a>Çıkış
+## <a name="output"></a>Çıktı
 
 ```xml
 <first_book xmlns:user="urn:books">Book1</first_book>
@@ -140,7 +140,7 @@ Aşağıdaki örnekte, `$var` stil sayfasındaki düğüm ağacı olan bir deği
     </xsl:variable>
 
     <xsl:template match="/">
-            <xsl:for-each select="msxsl:node-set($states)"/> 
+            <xsl:for-each select="msxsl:node-set($states)"/>
     </xsl:template>
 </xsl:stylesheet>
 ```
@@ -167,8 +167,8 @@ Burada, RTF 'deki bir değişkene ait başka bir örnek ve bu nedenle, bir komut
 <![CDATA[
     string func(XPathNodeIterator it)
     {
-        it.MoveNext(); 
-        return it.Current.Value; 
+        it.MoveNext();
+        return it.Current.Value;
         //it.Current returns XPathNavigator positioned on the current node
     }
 

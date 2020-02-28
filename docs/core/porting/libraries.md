@@ -3,18 +3,18 @@ title: .NET Core 'a bağlantı noktası kitaplıkları
 description: .NET Framework kitaplığı projelerinin nasıl .NET Core 'a bağlantı sağladığını öğrenin.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 646587120de2e51280c2af4de36bf3a6b0f60c2d
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 68fe36e543d949dc76bdb0c19ef3482936ad9e79
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920615"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157537"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Core 'a bağlantı noktası .NET Framework kitaplıkları
 
 .NET Framework kitaplığı kodunun, platformlar arası çalıştığı ve onu kullanan uygulamaların erişimini genişleten .NET Core 'a bağlantı noktası oluşturma hakkında bilgi edinin.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu makalede şunları kabul edersiniz:
 
@@ -97,7 +97,7 @@ Bu yaklaşım, .NET Core 'u desteklemek için kodun yeniden yapılandırılması
 1. Kullanılamayan .NET Framework API 'niz için kendi uygulamanızı yazmak mantıklı mi?
    [.NET Framework başvuru kaynağından](https://github.com/Microsoft/referencesource)kodu kopyalamayı, değiştirmeyi ve kullanmayı düşünebilirsiniz. Başvuru kaynak kodu, [MIT Lisansı](https://github.com/Microsoft/referencesource/blob/master/LICENSE.txt)kapsamında lisanslanır, bu nedenle kaynağı kendi kodunuz için temel olarak kullanmak için önemli bir özgürlük vardır. Yalnızca kodunuzda Microsoft 'un düzgün şekilde öznitelediğinizden emin olun.
 1. Bu işlemi, farklı projeler için gerektiği şekilde tekrarlayın.
- 
+
 Analiz aşaması, kod tabanınızın boyutuna bağlı olarak biraz zaman alabilir. Bu aşamada, gereken değişikliklerin kapsamını ayrıntılı olarak anlamak ve bir plan geliştirmek için zaman harcamanız, özellikle karmaşık bir kod tabanınız varsa, genellikle uzun çalıştırmaya zaman kazandırır.
 
 Planınız, .NET Framework 4.7.2 ' i hedeflerken, bu, önceki yaklaşımın daha yapılandırılmış bir sürümünü yaparak kod tabanınızda önemli değişiklikler yapmayı gerektirebilir. Planınızı yürütme hakkında nasıl gittiğiniz, kod tabanınıza bağımlıdır.

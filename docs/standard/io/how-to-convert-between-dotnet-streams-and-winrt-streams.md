@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: 3b44b981a65dee5d216f882198a74b5fb61adfad
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7413c3fae7d7189ec8dca43b0c77f6b56158f416
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708048"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159474"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Nasıl yapılır: .NET Framework ve Windows Çalışma Zamanı akışları arasında dönüştürme (yalnızca Windows)
 
@@ -28,7 +28,7 @@ Bir Windows Çalışma Zamanı akışından .NET Framework akışına dönüşt�
   
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType>, Windows Çalışma Zamanı bir giriş akışını UWP uygulamaları için .NET 'teki yönetilen bir akışa dönüştürür.
 
-Windows Çalışma Zamanı, yalnızca okumayı, yalnızca yazmayı veya okumayı ve yazmayı destekleyen akış türleri sunar. Bu yetenekler, bir Windows Çalışma Zamanı akışını .NET Framework akışına dönüştürdüğünüzde sürdürülür. Ayrıca, bir Windows Çalışma Zamanı akışını bir .NET Framework akışına ve sonra geriye dönüştürürseniz, özgün Windows Çalışma Zamanı örneğini geri alırsınız. 
+Windows Çalışma Zamanı, yalnızca okumayı, yalnızca yazmayı veya okumayı ve yazmayı destekleyen akış türleri sunar. Bu yetenekler, bir Windows Çalışma Zamanı akışını .NET Framework akışına dönüştürdüğünüzde sürdürülür. Ayrıca, bir Windows Çalışma Zamanı akışını bir .NET Framework akışına ve sonra geriye dönüştürürseniz, özgün Windows Çalışma Zamanı örneğini geri alırsınız.
 
 Dönüştürmek istediğiniz Windows Çalışma Zamanı akışının özellikleri ile eşleşen dönüştürme yöntemini kullanmak en iyi uygulamadır. Ancak, <xref:Windows.Storage.Streams.IRandomAccessStream> okunabilir ve yazılabilir olduğundan (hem <xref:Windows.Storage.Streams.IOutputStream> hem de <xref:Windows.Storage.Streams.IInputStream>uygular), dönüştürme yöntemleri özgün akışın yeteneklerini korur. Örneğin, bir <xref:Windows.Storage.Streams.IRandomAccessStream> dönüştürmek için <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> kullanmak, dönüştürülen .NET Framework akışını okunabilir olarak sınırlandırmaz. Aynı zamanda yazılabilir.
 
@@ -53,7 +53,7 @@ Bir .NET Framework akışından Windows Çalışma Zamanı akışına dönüşt�
 
 Bir .NET Framework akışını Windows Çalışma Zamanı akışına dönüştürdüğünüzde, dönüştürülen akışın özellikleri orijinal akışa bağlıdır. Örneğin, özgün akış hem okumayı hem yazmayı destekliyorsa ve akışı dönüştürmek için <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A?displayProperty=nameWithType> çağırırsanız, döndürülen tür bir `IRandomAccessStream`. `IRandomAccessStream` `IInputStream` ve `IOutputStream`uygular ve okumayı ve yazmayı destekler.
 
-.NET Framework akışları, dönüştürme işleminden sonra bile kopyalamayı desteklemez. Bir .NET Framework akışı Windows Çalışma Zamanı bir akışa dönüştürürseniz ve <xref:Windows.Storage.Streams.RandomAccessStreamOverStream.CloneStream%2A>çağıran <xref:Windows.Storage.Streams.InMemoryRandomAccessStream.GetInputStreamAt%2A> ya da <xref:Windows.Storage.Streams.IRandomAccessStream.GetOutputStreamAt%2A>ve doğrudan çağrı yaparsanız bir özel durum oluşur.
+.NET Framework akışları, dönüştürme işleminden sonra bile kopyalamayı desteklemez. Bir .NET Framework akışı Windows Çalışma Zamanı bir akışa dönüştürürseniz ve <xref:Windows.Storage.Streams.RandomAccessStreamOverStream.CloneStream%2A>çağıran <xref:Windows.Storage.Streams.InMemoryRandomAccessStream.GetInputStreamAt%2A> ya da <xref:Windows.Storage.Streams.IRandomAccessStream.GetOutputStreamAt%2A>ve doğrudan çağrı yaparsanız bir özel durum oluşur.<xref:Windows.Storage.Streams.RandomAccessStreamOverStream.CloneStream%2A>
 
 ## <a name="example-convert-net-framework-to-windows-runtime-random-access-stream"></a>Örnek: .NET Framework Windows Çalışma Zamanı Rastgele erişimli akışa Dönüştür
 

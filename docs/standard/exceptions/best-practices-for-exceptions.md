@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 6a165c3e0f41603ef7233669d7148dd44b1d3ce6
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 1de231b01e3fa97e78a87ae6b0595a9b5536374e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696759"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160176"
 ---
 # <a name="best-practices-for-exceptions"></a>Özel durumlar için en iyi uygulamalar
 
@@ -56,7 +56,7 @@ Bir sınıf, özel durum tetikleyebilecek bir çağrı yapmaktan kaçınmanızı
 
 Özel durumların önlenmesi için başka bir yol da, özel durum oluşturmak yerine son derece yaygın hata durumları için null (veya varsayılan) döndürmaktır. Çok yaygın olan bir hata durumu, denetiminin normal akışı olarak kabul edilebilir. Bu durumlarda null (veya varsayılan) döndürerek, bir uygulamaya yönelik performans etkisini en aza indirmiş olursunuz.
 
-Değer türleri için, `Nullable<T>` veya varsayılan olarak, hata göstergesi, belirli bir uygulamanız için göz önünde bulundurmanız gereken bir şeydir. `Nullable<Guid>`kullanarak, `default` `Guid.Empty`yerine `null` hale gelir. `Nullable<T>` eklemek, bir değer varsa veya olmadığında daha net hale gelir. Diğer zamanlarda, `Nullable<T>` eklemek, gerekli olmadığını denetlemek için ek durumlar oluşturabilir ve yalnızca olası hata kaynakları oluşturmak için bu hizmeti sunar. 
+Değer türleri için, `Nullable<T>` veya varsayılan olarak, hata göstergesi, belirli bir uygulamanız için göz önünde bulundurmanız gereken bir şeydir. `Nullable<Guid>`kullanarak, `default` `Guid.Empty`yerine `null` hale gelir. `Nullable<T>` eklemek, bir değer varsa veya olmadığında daha net hale gelir. Diğer zamanlarda, `Nullable<T>` eklemek, gerekli olmadığını denetlemek için ek durumlar oluşturabilir ve yalnızca olası hata kaynakları oluşturmak için bu hizmeti sunar.
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Hata kodu döndürmek yerine özel durumlar oluşturun
 
@@ -64,7 +64,7 @@ Değer türleri için, `Nullable<T>` veya varsayılan olarak, hata göstergesi, 
 
 ## <a name="use-the-predefined-net-exception-types"></a>Önceden tanımlanmış .NET özel durum türlerini kullanın
 
-Yalnızca önceden tanımlanmış bir uygulama uygulanmazsa yeni bir özel durum sınıfı tanıtın. Örneğin:
+Yalnızca önceden tanımlanmış bir uygulama uygulanmazsa yeni bir özel durum sınıfı tanıtın. Örnek:
 
 - Bir özellik kümesi veya yöntem çağrısı nesnenin geçerli durumuna uygun değilse <xref:System.InvalidOperationException> bir özel durum oluşturur.
 
@@ -72,7 +72,7 @@ Yalnızca önceden tanımlanmış bir uygulama uygulanmazsa yeni bir özel durum
 
 ## <a name="end-exception-class-names-with-the-word-exception"></a>Word `Exception` özel durum sınıfı adlarını Sonlandır
 
-Özel bir özel durum gerekli olduğunda, bunu uygun şekilde adlandırın ve <xref:System.Exception> sınıfından türetirsiniz. Örneğin:
+Özel bir özel durum gerekli olduğunda, bunu uygun şekilde adlandırın ve <xref:System.Exception> sınıfından türetirsiniz. Örnek:
 
 [!code-cpp[Conceptual.Exception.Handling#4](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
@@ -98,7 +98,7 @@ Kullanıcı tanımlı özel durumlar oluştururken, özel durumlar için meta ve
 
 - Derlemeyi iki uygulama etki alanı tarafından paylaşılan ortak bir uygulama temel dizinine koyun.
 
-    \- veya -
+    \- veya-
 
 - Eğer etki alanları ortak bir uygulama temel dizini paylaşmıyorsa, özel durum bilgisi içeren derlemeyi bir tanımlayıcı ad ile imzalayıp derlemeyi genel bütünleştirilmiş kod önbelleğine dağıtarak.
 
@@ -113,7 +113,7 @@ Kullanıcının gördüğü hata iletisi, özel durum sınıfının adından de�
 Yerelleştirilmiş uygulamalar için, uygulamanızın oluşturabildiğini her özel durum için yerelleştirilmiş bir ileti dizesi sağlamalısınız. Yerelleştirilmiş hata iletileri sağlamak için kaynak dosyalarını kullanırsınız. Uygulamaları Yerelleştirme ve yerelleştirilmiş dizeleri alma hakkında bilgi için aşağıdaki makalelere bakın:
 
 - [Nasıl yapılır: yerelleştirilmiş özel durum iletileriyle Kullanıcı tanımlı özel durumlar oluşturma](how-to-create-localized-exception-messages.md)
-- [Masaüstü Uygulamalarındaki Kaynaklar](../../framework/resources/index.md) 
+- [Masaüstü Uygulamalarındaki Kaynaklar](../../framework/resources/index.md)
 - <xref:System.Resources.ResourceManager?displayProperty=nameWithType>
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>Özel özel durumlarda, gerektiğinde ek özellikler sağlayın
@@ -126,7 +126,7 @@ Yığın izlemesi özel durumun oluşturulduğu deyimden başlar ve özel durumu
 
 ## <a name="use-exception-builder-methods"></a>Özel durum Oluşturucu yöntemlerini kullanın
 
-Bir sınıfın uygulamasında aynı özel durumu farklı yerlerde oluşturması yaygındır. Fazla kodu önlemek için, özel durumu oluşturmak ve döndürmek için yardımcı yöntemler kullanın. Örneğin:
+Bir sınıfın uygulamasında aynı özel durumu farklı yerlerde oluşturması yaygındır. Fazla kodu önlemek için, özel durumu oluşturmak ve döndürmek için yardımcı yöntemler kullanın. Örnek:
 
 [!code-cpp[Conceptual.Exception.Handling#6](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
