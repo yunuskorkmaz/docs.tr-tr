@@ -17,12 +17,12 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: e7922294db1236e697df80203583b2dbb3e41a01
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 1b61cc88de4f73abfe6d8e77f8f32c2c71e70a9d
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124448"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78158070"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Normal İfadelerde Geri Dönüş
 Bir normal ifade deseninin isteğe bağlı [nicelik belirteçleri](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) veya [değişim yapılarını](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)içermesi durumunda geri izleme oluşur ve normal ifade altyapısı, bir eşleşme aramasına devam etmek için önceki kaydedilmiş bir duruma geri döner. Geri izleme, normal ifadelerin gücü bakımından çok önemlidir; ifadelerin güçlü ve esnek olmasına ve çok karmaşık desenlerle eşleşmelerine olanak sağlar. Aynı zamanda, bu güç bir maliyetle birlikte gelir. Geri izleme, genellikle normal ifade altyapısının performansını etkileyen tek önemli etmendir. Neyse ki, geliştirici, normal ifade motorunun davranışını ve geri izlemeyi nasıl kullandığını denetleyebilir. Bu konu, geri izlemenin nasıl çalıştığını ve nasıl kontrol edilebileceğini açıklar.  
@@ -40,9 +40,9 @@ Bir normal ifade deseninin isteğe bağlı [nicelik belirteçleri](../../../docs
   
  Bu normal ifade `{2}`nicelik bilgilerini içerse de, doğrusal bir şekilde değerlendirilir. `{2}` isteğe bağlı bir belirleyici olmadığından, normal ifade altyapısı geri izlememez; Bu, önceki alt ifadenin eşleşmesi gereken değişken sayısı değil, tam bir sayı belirtir. Sonuç olarak, normal ifade altyapısı, aşağıdaki tabloda gösterildiği gibi, normal ifade desenini giriş dizesiyle eşleştirmeye çalışır.  
   
-|Çalışma|Desendeki konum|Dizedeki konum|Sonuç|  
+|İşlem|Desendeki konum|Dizedeki konum|Sonuç|  
 |---------------|-------------------------|------------------------|------------|  
-|1\.|e|"needing a reed" (dizin 0)|Eşleşme yok.|  
+|1|e|"needing a reed" (dizin 0)|Eşleşme yok.|  
 |2|e|"eeding a reed" (dizin 1)|Olası eşleşme.|  
 |3|e{2}|"eding a reed" (dizin 2)|Olası eşleşme.|  
 |4|\w|"al gerekli" (dizin 3)|Olası eşleşme.|  
@@ -62,7 +62,7 @@ Bir normal ifade deseninin isteğe bağlı [nicelik belirteçleri](../../../docs
 |18|\w|"d" (dizin 13)|Olası eşleşme.|  
 |19|\b|"" (dizin 14)|Eşleşme.|  
   
- Bir normal ifade deseni isteğe bağlı miktar niceleyiciler veya değişim yapıları içermiyorsa, normal ifade desenini giriş dizesiyle eşleştirmek için gereken en fazla karşılaştırma sayısı, kabaca giriş dizesindeki karakter sayısına eşittir. Bu durumda, normal ifade altyapısı, 13 karakterlik bu dizedeki olası eşleşmeleri tanımlamak için 19 karşılaştırma kullanır.  Diğer bir deyişle, isteğe bağlı miktar niceleyiciler veya değişim yapıları içermiyorsa, normal ifade altyapısı doğrusala yakın bir zamanda çalışır.   
+ Bir normal ifade deseni isteğe bağlı miktar niceleyiciler veya değişim yapıları içermiyorsa, normal ifade desenini giriş dizesiyle eşleştirmek için gereken en fazla karşılaştırma sayısı, kabaca giriş dizesindeki karakter sayısına eşittir. Bu durumda, normal ifade altyapısı, 13 karakterlik bu dizedeki olası eşleşmeleri tanımlamak için 19 karşılaştırma kullanır.  Diğer bir deyişle, isteğe bağlı miktar niceleyiciler veya değişim yapıları içermiyorsa, normal ifade altyapısı doğrusala yakın bir zamanda çalışır.
 
 ## <a name="backtracking-with-optional-quantifiers-or-alternation-constructs"></a>İsteğe Bağlı Miktar Niceleyiciler veya Değişim Yapıları ile Geri İzleme  
  Normal bir ifade isteğe bağlı miktar niceleyiciler veya değişim yapıları içerdiğinde, giriş dizesinin değerlendirilmesi artık doğrusal değildir. Bir NFA altyapısıyla desen eşleştirme, giriş dizesinde eşleştirilecek karakterlerle değil, normal ifadedeki dil öğeleriyle yönlendirilir. Bu nedenle, normal ifade altyapısı, isteğe bağlı veya alternatif alt ifadeleri tam olarak eşleştirmeye çalışır. Alt ifadede sonraki dil öğesine ilerlediğinde ve eşleştirme başarısız olduğunda, normal ifade altyapısı, normal ifadeyi giriş dizesiyle bir bütün olarak eşleştirmek amacıyla, başarılı eşleştirmesinin bir bölümünü bırakır ve daha önce kaydedilen bir duruma geri döner. Bir eşleştirme bulmak üzere daha önce kaydedilen bir duruma bu şekilde geri dönme işlemi, geri izleme olarak bilinir.  
@@ -84,7 +84,7 @@ Bir normal ifade deseninin isteğe bağlı [nicelik belirteçleri](../../../docs
   
 - Desendeki "s" ile, eşleştirilen "e" karakterini izleyen "s"yi ("expressions"daki ilk "s") karşılaştırır. Eşleştirme başarılıdır.  
   
- Geri izleme kullandığınızda, normal ifade desenini 55 karakter uzunluğundaki giriş dizesiyle eşleştirmek, 67 karşılaştırma işlemi gerektirir. Genellikle, normal bir ifade deseninin tek bir değişim yapısı veya tek bir isteğe bağlı miktar niceleyicisi varsa, deseni eşleştirmek için gereken karşılaştırma işlemlerinin sayısı, giriş dizesindeki karakterlerin sayısının iki katıdır.   
+ Geri izleme kullandığınızda, normal ifade desenini 55 karakter uzunluğundaki giriş dizesiyle eşleştirmek, 67 karşılaştırma işlemi gerektirir. Genellikle, normal bir ifade deseninin tek bir değişim yapısı veya tek bir isteğe bağlı miktar niceleyicisi varsa, deseni eşleştirmek için gereken karşılaştırma işlemlerinin sayısı, giriş dizesindeki karakterlerin sayısının iki katıdır.
 
 ## <a name="backtracking-with-nested-optional-quantifiers"></a>İç İçe Geçmiş İsteğe Bağlı Miktar Niceleyicilerle Geri İzleme  
  Desen çok sayıda değişim yapıları içeriyorsa, iç içe değişim yapıları içeriyorsa veya en yaygın olasılık olarak iç içe isteğe bağlı miktar niceleyiciler içeriyorsa, normal bir ifade desenini eşleştirmek için gereken karşılaştırma işlemlerinin sayısı katlanarak artabilir. Örneğin, `^(a+)+$` normal ifade deseninin bir veya daha fazla "a" karakteri içeren bir dizenin tamamını eşleştirmek üzere tasarlanmıştır. Örnek, aynı uzunlukta iki giriş dizesi sağlar, fakat yalnızca ilk dize desenle eşleşir. <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> sınıfı, eşleşme işleminin ne kadar sürdüğünü belirlemede kullanılır.  
@@ -100,7 +100,7 @@ Bir normal ifade deseninin isteğe bağlı [nicelik belirteçleri](../../../docs
   
 - Daha önce kaydedilen eşleşme 3 ' e döndürür. Ek bir yakalanan gruba atamak için iki ek "a" karakteri olduğunu belirler. Ancak, dize sonu sınaması başarısız olur. Ardından, eşleştirme 3'e geri döner ve yakalanan iki ek gruptaki iki ek "a" karakterini eşleştirmeyi dener. Dize sonu sınaması hala başarısız olur. Bu başarısız eşleştirmeler 12 karşılaştırma gerektirir. Şimdiye kadar, toplam 25 karşılaştırma gerçekleştirildi.  
   
- Giriş dizesinin normal ifadeyle karşılaştırılması, normal ifade altyapısı tüm olası eşleştirme birleşimlerini deneyinceye kadar bu şekilde devam eder ve ardından eşleştirme olmadığı sonucuna ulaşır. İç içe nicelik belirteçleri nedeniyle, bu karşılaştırma bir O (2<sup>n</sup>) veya üstel bir işlemdir; burada *n* , giriş dizesindeki karakter sayısıdır. Bu, en kötü durumda, 30 karakterlik bir giriş dizesinin yaklaşık 1.073.741.824 karşılaştırma gerektirdiği ve 40 karakterlik bir giriş dizesinin yaklaşık 1,099,511,627,776 karşılaştırma gerektirdiği anlamına gelir. Bu uzunluklarda veya daha uzun dizeler kullanırsanız, normal ifade deseniyle eşleşmeyen giriş işlediklerinde, normal ifade yöntemlerinin tamamlanması çok uzun zaman alabilir. 
+ Giriş dizesinin normal ifadeyle karşılaştırılması, normal ifade altyapısı tüm olası eşleştirme birleşimlerini deneyinceye kadar bu şekilde devam eder ve ardından eşleştirme olmadığı sonucuna ulaşır. İç içe nicelik belirteçleri nedeniyle, bu karşılaştırma bir O (2<sup>n</sup>) veya üstel bir işlemdir; burada *n* , giriş dizesindeki karakter sayısıdır. Bu, en kötü durumda, 30 karakterlik bir giriş dizesinin yaklaşık 1.073.741.824 karşılaştırma gerektirdiği ve 40 karakterlik bir giriş dizesinin yaklaşık 1,099,511,627,776 karşılaştırma gerektirdiği anlamına gelir. Bu uzunluklarda veya daha uzun dizeler kullanırsanız, normal ifade deseniyle eşleşmeyen giriş işlediklerinde, normal ifade yöntemlerinin tamamlanması çok uzun zaman alabilir.
 
 ## <a name="controlling-backtracking"></a>Geri İzlemeyi Denetleme  
  Geri izleme, güçlü ve esnek normal ifadeler oluşturmanıza olanak tanır. Ancak, önceki bölümde gösterildiği gibi, bu yararlar kabuk edilemeyecek kadar düşük performansla eşleştirilebilir. Aşırı geri izlemeyi engellemek için bir <xref:System.Text.RegularExpressions.Regex> nesnesi örneklediğinizde veya statik bir normal ifade eşleştirme yöntemini çağırdığınızda bir zaman aşımı aralığı tanımlamanız gerekir. Bu konu, sonraki bölümde açıklanmaktadır. Ayrıca, .NET, geri izlemeyi sınırlayan veya gizleyen ve çok az performans cezası olan karmaşık normal ifadeleri destekleyen üç normal ifade dili öğesini destekler: [atomik gruplar](#atomic-groups), [geriye](#lookbehind-assertions)yönelik onaylar ve [İleri onaylama onayları](#lookahead-assertions). Her dil öğesi hakkında daha fazla bilgi için bkz. [gruplandırma yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
