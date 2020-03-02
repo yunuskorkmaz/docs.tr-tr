@@ -1181,7 +1181,7 @@
           href: walkthrough-authoring-a-composite-control-with-visual-csharp.md
         - name: 'İzlenecek yol: Denetimden Devralma'
           href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md
-        - name: 'İzlenecek yol: Akıllı Etiketleri Kullanarak Ortak Görevleri Gerçekleştirme'
+        - name: 'İzlenecek yol: Tasarım Eylemlerini Kullanarak Ortak Görevleri Gerçekleştirme'
           href: perform-common-tasks-design-actions.md
         - name: 'İzlenecek yol: Standart Türlerin Koleksiyonlarını Serileştirme'
           href: serializing-collections-designerserializationvisibilityattribute.md

@@ -121,5 +121,7 @@
       href: resources/index.md
     - name: Sözlük
       href: resources/glossary.md
+    - name: Azure eğitim kaynakları
+      href: resources/azure-training-concepts-model-builder.md
     - name: CLI telemetrisi
       href: resources/ml-net-cli-telemetry.md
