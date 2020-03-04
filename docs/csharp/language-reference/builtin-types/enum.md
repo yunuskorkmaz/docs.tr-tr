@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 4377d113a18d23c8a0f9a669e6112f1a8223cc79
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 77c7b7bd7f3e59fbe782755c829f18cf1cefc725
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450875"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239826"
 ---
 # <a name="enumeration-types-c-reference"></a>Sabit listesi türleriC# (başvuru)
 
@@ -54,7 +54,7 @@ Birbirini dışlayan bir veya seçenek birleşimi kümesinden seçim göstermek 
 
 Bir sabit listesi türünün bir seçenek birleşimini göstermesini istiyorsanız, bu seçimler için, tek bir seçenek olan bir bit alanı olduğu gibi, numaralandırma üyelerini tanımlayın. Diğer bir deyişle, bu sabit listesi üyelerinin ilişkili değerleri ikinin üsleri olmalıdır. Ardından, sırasıyla seçenekleri veya seçimleri birleştirmek için [bit düzeyinde mantıksal işleçler `|` veya `&`](../operators/bitwise-and-shift-operators.md#enumeration-logical-operators) kullanabilirsiniz. Bir numaralandırma türünün bit alanları bildirdiğini belirtmek için, [Flags](xref:System.FlagsAttribute) özniteliğini buna uygulayın. Aşağıdaki örnekte gösterildiği gibi, bir numaralandırma türünün tanımına bazı tipik birleşimler da dahil edebilirsiniz.
 
-[!code-csharp[enum flags](~/samples/csharp/language-reference/builtin-types/EnumType.cs#Flags)]
+[!code-csharp[enum flags](~/samples/snippets/csharp/language-reference/builtin-types/EnumType.cs#Flags)]
 
 Daha fazla bilgi ve örnek için, <xref:System.Enum?displayProperty=nameWithType> API başvurusu sayfasının <xref:System.FlagsAttribute?displayProperty=nameWithType> API başvurusu sayfasına ve [dışlamalı olmayan üyelere ve Flags özniteliği](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute) bölümüne bakın.
 
@@ -68,7 +68,7 @@ Daha fazla bilgi ve örnek için, <xref:System.Enum?displayProperty=nameWithType
 
 Herhangi bir numaralandırma türü için, sabit listesi türü ve temel alınan integral türü arasında açık dönüştürmeler vardır. Bir sabit listesi değerini temel alınan türüne [çevirebilirsiniz](../operators/type-testing-and-cast.md#cast-operator-) , sonuç bir numaralandırma üyesinin ilişkili integral değeridir.
 
-[!code-csharp[enum conversions](~/samples/csharp/language-reference/builtin-types/EnumType.cs#Conversions)]
+[!code-csharp[enum conversions](~/samples/snippets/csharp/language-reference/builtin-types/EnumType.cs#Conversions)]
 
 Bir sabit listesi türünün, ilişkili belirli değere sahip bir numaralandırma üyesi içerip içermediğini anlamak için <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> yöntemini kullanın.
 

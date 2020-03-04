@@ -4,12 +4,12 @@ description: Null yapılabilir C# değer türleri ve bunların nasıl kullanıla
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: bd90a0b1b77349efe581eb8aae44c58802ba756d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 9b7a1e7e639608248b4b465bd440247b4061f52e
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093194"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239800"
 ---
 # <a name="nullable-value-types-c-reference"></a>Nullable değer türleri (C# başvuru)
 
@@ -26,7 +26,7 @@ Genellikle, temel alınan bir değer türünün tanımsız değerini temsil etme
 
 Değer türü, karşılık gelen null yapılabilir değer türüne örtük olarak dönüştürülebilir olduğundan, onun temel alınan değer türü için yaptığınız gibi, null olabilen değer türünde bir değişkene bir değer atayabilirsiniz. `null` değerini de atayabilirsiniz. Örneğin:
 
-[!code-csharp[declare and assign](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Declaration)]
+[!code-csharp[declare and assign](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#Declaration)]
 
 Null olabilen bir değer türünün varsayılan değeri `null`temsil eder, diğer bir deyişle, <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> özelliği `false`döndüren bir örneğidir.
 
@@ -34,7 +34,7 @@ Null olabilen bir değer türünün varsayılan değeri `null`temsil eder, diğe
 
 7,0 ile C# başlayarak, [`is` işlecini bir tür düzeniyle birlikte](../operators/type-testing-and-cast.md#type-testing-with-pattern-matching) kullanarak `null` için null yapılabilir değer türünün bir örneğini inceleyebilir ve temel alınan bir türün değerini alabilirsiniz:
 
-[!code-csharp-interactive[use pattern matching](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#PatternMatching)]
+[!code-csharp-interactive[use pattern matching](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#PatternMatching)]
 
 Her zaman, null olabilen bir değer türü değişkeninin değerini incelemek ve almak için aşağıdaki salt okunurdur özelliklerini kullanabilirsiniz:
 
@@ -44,23 +44,23 @@ Her zaman, null olabilen bir değer türü değişkeninin değerini incelemek ve
 
 Aşağıdaki örnek, değişkenin görüntülemeden önce bir değer içerip içermediğini test etmek için `HasValue` özelliğini kullanır:
 
-[!code-csharp-interactive[use HasValue](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#HasValue)]
+[!code-csharp-interactive[use HasValue](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#HasValue)]
 
 Ayrıca, aşağıdaki örnekte gösterildiği gibi, null olabilen bir değer türünün değişkenini `HasValue` özelliğini kullanmak yerine `null` ile karşılaştırabilirsiniz:
 
-[!code-csharp-interactive[use comparison with null](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#CompareWithNull)]
+[!code-csharp-interactive[use comparison with null](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#CompareWithNull)]
 
 ## <a name="conversion-from-a-nullable-value-type-to-an-underlying-type"></a>Null yapılabilir bir değer türünden temel alınan bir türe dönüştürme
 
 Null olabilen bir değer türünün değerini null yapılamayan bir değer türü değişkenine atamak istiyorsanız, `null`yerine atanacak değeri belirtmeniz gerekebilir. Bunu yapmak için [null birleşim işleci `??`](../operators/null-coalescing-operator.md) kullanın (aynı amaçla <xref:System.Nullable%601.GetValueOrDefault(%600)?displayProperty=nameWithType> yöntemini de kullanabilirsiniz):
 
-[!code-csharp-interactive[?? operator](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#NullCoalescing)]
+[!code-csharp-interactive[?? operator](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#NullCoalescing)]
 
 `null`yerine temel alınan değer türünün [varsayılan](default-values.md) değerini kullanmak istiyorsanız <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> yöntemini kullanın.
 
 Ayrıca, aşağıdaki örnekte gösterildiği gibi, null olabilen bir değer türünü null yapılamayan bir türe açıkça çevirebilirsiniz:
 
-[!code-csharp[explicit cast](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Cast)]
+[!code-csharp[explicit cast](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#Cast)]
 
 Çalışma zamanında, null yapılabilir bir değer türünün değeri `null`, açık atama bir <xref:System.InvalidOperationException>oluşturur.
 
@@ -70,7 +70,7 @@ Null yapılamayan bir değer türü `T`, örtük olarak karşılık gelen null d
 
 Önceden tanımlanmış birli ve ikili [işleçler](../operators/index.md) veya `T` bir değer türü tarafından desteklenen aşırı yüklenmiş işleçler, karşılık gelen null yapılabilir değer türü `T?`tarafından da desteklenir. *Yükseltilmemiş işleçleri*olarak da bilinen bu işleçler, bir veya her iki işlenen de `null``null` üretir; Aksi takdirde, işleç sonucu hesaplamak için işlenenlerinin kapsanan değerlerini kullanır. Örneğin:
 
-[!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
+[!code-csharp[lifted operators](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
 
 > [!NOTE]
 > `bool?` türü için, önceden tanımlanmış `&` ve `|` işleçleri bu bölümde açıklanan kurallara uymalıdır: işleçlerden biri `null`olsa bile bir operatör değerlendirmesinin sonucu null olmamalıdır. Daha fazla bilgi için, [Boole mantıksal işleçler](../operators/boolean-logical-operators.md) makalesinin [Nullable Boolean mantıksal işleçler](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) bölümüne bakın.
@@ -80,7 +80,7 @@ Null yapılamayan bir değer türü `T`, örtük olarak karşılık gelen null d
 - `null` büyük veya eşit değil
 - `null` ve küçüktür
 
-[!code-csharp-interactive[relational and equality operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#ComparisonOperators)]
+[!code-csharp-interactive[relational and equality operators](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#ComparisonOperators)]
 
 [Eşitlik işleci](../operators/equality-operators.md#equality-operator-) `==`her iki işlenen de `null`, sonuç `true`, yalnızca işlenenleri yalnızca biri `null`ise sonuç `false`olur; Aksi takdirde, kapsanan işlenen değerleri karşılaştırılır.
 
@@ -97,27 +97,27 @@ Null yapılabilir bir değer türü örneği, `T?` aşağıdaki gibi [kutulanır
 
 Aşağıdaki örnekte gösterildiği gibi, bir değer türünün paketlenmiş değerini, karşılık gelen null değer türü `T?``T` bırakabilirsiniz:
 
-[!code-csharp-interactive[boxing and unboxing](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Boxing)]
+[!code-csharp-interactive[boxing and unboxing](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#Boxing)]
 
 ## <a name="how-to-identify-a-nullable-value-type"></a>Null yapılabilir değer türünü belirleme
 
 Aşağıdaki örnek, bir <xref:System.Type?displayProperty=nameWithType> örneğinin oluşturulmuş bir null yapılabilir değer türünü (yani, belirtilen tür parametresine sahip <xref:System.Nullable%601?displayProperty=nameWithType> türü) temsil edip etmediğini gösterir `T`:
 
-[!code-csharp-interactive[whether Type is nullable](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsTypeNullable)]
+[!code-csharp-interactive[whether Type is nullable](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsTypeNullable)]
 
 Örnekte gösterildiği gibi, bir <xref:System.Type?displayProperty=nameWithType> örneği oluşturmak için [typeof](../operators/type-testing-and-cast.md#typeof-operator) işlecini kullanırsınız.
 
 Bir örneğin, null yapılabilir bir değer türünde olup olmadığını anlamak istiyorsanız, yukarıdaki kodla test edilecek bir <xref:System.Type> örneğini almak için <xref:System.Object.GetType%2A?displayProperty=nameWithType> yöntemini kullanmayın. Null olabilen değer türünün bir örneğinde <xref:System.Object.GetType%2A?displayProperty=nameWithType> yöntemini çağırdığınızda, örnek <xref:System.Object>olarak [paketlenmelidir](#boxing-and-unboxing) . Null olabilen bir değer türünün null olmayan bir örneğinin kutulenmesi, temel alınan türün bir değer kutulamasında eşdeğerdir <xref:System.Object.GetType%2A>, null olabilen bir değer türünün temel türünü temsil eden bir <xref:System.Type> örneği döndürür:
 
-[!code-csharp-interactive[GetType example](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#GetType)]
+[!code-csharp-interactive[GetType example](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#GetType)]
 
 Ayrıca, bir örneğin null yapılabilir değer türünde olup olmadığını anlamak için [,](../operators/type-testing-and-cast.md#is-operator) işleç kullanmayın. Aşağıdaki örnekte gösterildiği gibi, null olabilen bir değer türü örneği ve temel alınan tür örneğini `is` işleçle ayırt edemezsiniz:
 
-[!code-csharp-interactive[is operator example](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsOperator)]
+[!code-csharp-interactive[is operator example](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsOperator)]
 
 Bir örneğin null yapılabilir bir değer türünde olup olmadığını anlamak için aşağıdaki örnekte sunulan kodu kullanabilirsiniz:
 
-[!code-csharp-interactive[whether an instance is of a nullable type](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsInstanceNullable)]
+[!code-csharp-interactive[whether an instance is of a nullable type](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsInstanceNullable)]
 
 > [!NOTE]
 > Bu bölümde açıklanan yöntemler, [null yapılabilir başvuru türleri](../../nullable-references.md)durumunda geçerli değildir.

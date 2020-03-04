@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 32784f7d4b9e3a93eb7f81b4829b39c1a06ef949
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 2397bf999ba97fe0c011de180e05be4177894365
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920391"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239891"
 ---
 # <a name="whats-new-in-net-core-21"></a>​.NET Core 2.1’deki yenilikler
 
@@ -177,17 +177,17 @@ Bu türler olmadan, bu tür öğeleri bir dizinin bir bölümü veya bir bellek 
 
 Aşağıdaki örnek, bir dizi 10 öğenin sanal görünümünü sağlamak için bir <xref:System.Span%601> ve <xref:System.Memory%601> örneğini kullanır.
 
-[!code-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+[!code-csharp[Span\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/program.cs)]
 
-[!code-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Brotli sıkıştırma
 
 .NET Core 2,1, Brotli sıkıştırma ve açma için destek ekler. Brotli, [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) ' de tanımlanan ve çoğu Web tarayıcısı ve ana Web sunucusu tarafından desteklenen genel amaçlı kayıpsız bir sıkıştırma algoritmasıdır. Stream tabanlı <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> sınıfını veya yüksek performanslı span tabanlı <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> ve <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> sınıfları kullanabilirsiniz. Aşağıdaki örnekte <xref:System.IO.Compression.BrotliStream> sınıfıyla sıkıştırma gösterilmektedir:
 
-[!code-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+[!code-csharp[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/brotli.cs#1)]
 
-[!code-vb[Brotli compression](~/samples/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
+[!code-vb[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
 
 <xref:System.IO.Compression.BrotliStream> davranış <xref:System.IO.Compression.DeflateStream> ve <xref:System.IO.Compression.GZipStream>aynıdır, bu da bu API 'Leri çağıran kodun <xref:System.IO.Compression.BrotliStream>dönüştürülmesini kolaylaştırır.
 
@@ -244,6 +244,10 @@ Ayrıca, <xref:System.Net.Http.SocketsHttpHandler>dayalı yuva uygulamalarını 
 Windows 'da, bir sınıfın örneğini <xref:System.Net.Http.HttpClient> oluşturucusuna geçirerek yerel bir uygulamaya dayanan <xref:System.Net.Http.WinHttpHandler?displayProperty=nameWithType>kullanmayı veya <xref:System.Net.Http.SocketsHttpHandler> sınıfını da seçebilirsiniz.
 
 Linux ve macOS 'ta yalnızca <xref:System.Net.Http.HttpClient> işlem başına temelinde yapılandırabilirsiniz. Linux 'ta, eski <xref:System.Net.Http.HttpClient> uygulamasını kullanmak istiyorsanız [libkıvrık](https://curl.haxx.se/libcurl/) dağıtım yapmanız gerekir. (.NET Core 2,0 ile yüklenir.)
+
+### <a name="breaking-changes"></a>Yeni değişiklikler
+
+Değişiklikler hakkında daha fazla bilgi için bkz. [sürüm 2,0 ' den 2,1 ' e geçiş Için Son değişiklikler](../compatibility/2.0-2.1.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

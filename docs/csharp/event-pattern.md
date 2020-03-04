@@ -4,12 +4,12 @@ description: .NET olay desenleri ve standart olay kaynakları oluşturma ve kodu
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: a050dc9a11470ff3b71488ce2ab4b92e607aa9b0
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 517e46ffec163a9bd49baa58fc0b37b54b2b2809
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037180"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239865"
 ---
 # <a name="standard-net-event-patterns"></a>Standart .NET olay desenleri
 
@@ -40,7 +40,7 @@ Bir olay modelinin kullanılması bazı tasarım avantajları sağlar. Aranan bi
 
 Aranan bir dosyayı bulmak için ilk olay bağımsız değişkeni bildirimi aşağıda verilmiştir: 
 
-[!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgsV1 "Define event arguments")]
+[!code-csharp[EventArgs](../../samples/snippets/csharp/events/Program.cs#EventArgsV1 "Define event arguments")]
 
 Bu tür küçük, salt veri türü gibi görünse de, kuralı izlemeniz ve bir başvuru (`class`) türü yapmanız gerekir. Diğer bir deyişle, bağımsız değişken nesnesi başvuruya göre geçirilir ve verilerin tüm güncelleştirmeleri tüm aboneler tarafından görüntülenir. İlk sürüm, sabit bir nesnedir. Olay bağımsız değişkeni türünde özellikleri sabit hale getirmek için tercih etmelisiniz. Bu şekilde, bir abone, başka bir abonenin onları görebilmesi için değerleri değiştiremez. (Aşağıda göreceğiniz şekilde bunun için özel durumlar vardır.)  
 
@@ -48,21 +48,21 @@ Sonra, FileSearcher sınıfında olay bildirimini oluşturuyoruz. `EventHandler<
 
 Bir düzeniyle eşleşen dosyaları aramak ve bir eşleşme bulunduğunda doğru olayı yükseltmek için FileSearcher sınıfını dolduralım.
 
-[!code-csharp[FileSearcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
+[!code-csharp[FileSearcher](../../samples/snippets/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
 ## <a name="defining-and-raising-field-like-events"></a>Alan benzeri olayları tanımlama ve oluşturma
 
 Sınıfınıza bir olay eklemenin en kolay yolu, önceki örnekte olduğu gibi bu olayı ortak bir alan olarak bildirkullanmaktır:
 
-[!code-csharp[DeclareEvent](../../samples/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
+[!code-csharp[DeclareEvent](../../samples/snippets/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
 
 Bu, nesne odaklı kötü bir uygulama gibi görünen bir ortak alan bildirmek gibi görünüyor. Özellikler veya yöntemler aracılığıyla veri erişimini korumak istiyorsunuz. Kötü bir uygulama gibi görünebilir ancak derleyici tarafından oluşturulan kod, olay nesnelerine yalnızca güvenli yollarla erişilebilmesi için sarmalayıcılar oluşturur. Alan benzeri bir olayda kullanılabilen tek işlemler ekleme işleyicisidir:
 
-[!code-csharp[DeclareEventHandler](../../samples/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
+[!code-csharp[DeclareEventHandler](../../samples/snippets/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
 
 ve işleyiciyi kaldır:
 
-[!code-csharp[RemoveEventHandler](../../samples/csharp/events/Program.cs#RemoveHandler "Remove the event handler")]
+[!code-csharp[RemoveEventHandler](../../samples/snippets/csharp/events/Program.cs#RemoveHandler "Remove the event handler")]
 
 İşleyici için yerel bir değişken olduğunu unutmayın. Lambda gövdesini kullandıysanız, kaldırma doğru çalışmaz. Bu, temsilcinin farklı bir örneği olur ve sessizce hiçbir şey yapmaz.
 
@@ -86,7 +86,7 @@ Tüm aboneler oluşturulan olayı gördüğünde, FileSearcher bileşeni Boole d
 
 Bu örnek için ilk sürümü uygulayalim. `FileFoundArgs` türüne `CancelRequested` adlı bir Boole alanı eklemeniz gerekir:
 
-[!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgs "Update event arguments")]
+[!code-csharp[EventArgs](../../samples/snippets/csharp/events/Program.cs#EventArgs "Update event arguments")]
 
 Bu yeni alan, bir Boole alanı için varsayılan değer olan `false`için otomatik olarak başlatılır, böylece yanlışlıkla iptal edemezsiniz. Bileşendeki tek bir değişiklik, abonelerden birinin iptal isteğinde bulunup bulunmadığını görmek için olayı oluşturduktan sonra bayrağı denetmektir:
 
@@ -124,25 +124,25 @@ Bu, çok sayıda alt dizine sahip bir dizinde uzun bir işlem olabilir. Her yeni
 
 Yeni dizin ve ilerlemeyi raporlamak için yeni EventArgs türetilmiş sınıfını oluşturarak başlayacaksınız. 
 
-[!code-csharp[DirEventArgs](../../samples/csharp/events/Program.cs#SearchDirEventArgs "Define search directory event arguments")]
+[!code-csharp[DirEventArgs](../../samples/snippets/csharp/events/Program.cs#SearchDirEventArgs "Define search directory event arguments")]
 
 Yine, olay bağımsız değişkenleri için sabit bir başvuru türü oluşturmak üzere önerileri izleyebilirsiniz.
 
 Sonra, olayı tanımlayın. Bu kez, farklı bir sözdizimi kullanacaksınız. Alan söz dizimini kullanmanın yanı sıra, özelliği ekleme ve kaldırma işleyicileri ile açık bir şekilde oluşturabilirsiniz. Bu örnekte, bu işleyicilerde ek kod gerekmez, ancak bunları nasıl oluşturacağınız gösterilmektedir.
 
-[!code-csharp[Declare event with add and remove handlers](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Declare the event with add and remove handlers")]
+[!code-csharp[Declare event with add and remove handlers](../../samples/snippets/csharp/events/Program.cs#DeclareSearchEvent "Declare the event with add and remove handlers")]
 
 Birçok şekilde, yazdığınız kod, daha önce gördüğünüz alan olay tanımları için derleyicinin oluşturduğu kodu yansıtır. [Özellikler](properties.md)için kullanılan için çok benzer sözdizimini kullanarak olayı oluşturursunuz. İşleyicilerin farklı adlara sahip olduğuna dikkat edin: `add` ve `remove`. Bunlar olaya abone olmak ya da olaydan abonelik kaldırmak için çağırılır. Ayrıca, olay değişkenini depolamak için özel bir destek alanı bildirmeniz gerektiğini unutmayın. Null olarak başlatılır.
 
 Sonra, alt dizinlere geçiş yapan `Search` yönteminin aşırı yüklemesini ekleyelim ve her iki olayı da oluşturuyor. Bunu yapmanın en kolay yolu, tüm dizinlerde arama yapmak istediğinizi belirtmek için varsayılan bir bağımsız değişken kullanmaktır:
 
-[!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
+[!code-csharp[SearchImplementation](../../samples/snippets/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 
 Bu noktada, tüm alt dizinleri aramak için aşırı yüklemeyi çağıran uygulamayı çalıştırabilirsiniz. Yeni `ChangeDirectory` olayında abone yoktur, ancak `?.Invoke()` deyim kullanmak bunun doğru şekilde çalıştığından emin olmanızı sağlar.
 
  Konsol penceresinde ilerleme durumunu gösteren bir çizgi yazmak için bir işleyici ekleyelim. 
 
-[!code-csharp[Search](../../samples/csharp/events/Program.cs#Search "Declare event handler")]
+[!code-csharp[Search](../../samples/snippets/csharp/events/Program.cs#Search "Declare event handler")]
 
 .NET ekosisteminin tamamında izlenen desenleri gördünüz.
 Bu desenleri ve kuralları öğrenerek, hızlı bir şekilde C# ve .net ' i hızla yazabileceksiniz.

@@ -3,12 +3,12 @@ title: Sınıflar ve nesneler- C# öğreticiye giriş
 description: İlk C# programınızı oluşturun ve nesne yönelimli kavramları gezin
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 06d1a30abc0d031badcba4ec60f7deb3c670a3ae
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 5715124a307c7b7fe41b584df82dd328c873ae29
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634956"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240086"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Sınıflar ve nesneler ile nesne odaklı programlamayı keşfet
 
@@ -121,11 +121,11 @@ Banka hesabı sınıfınızın, doğru şekilde çalışması için mevdular ve 
 
 Bir işlemi temsil etmek için yeni bir tür oluşturarak başlayalım. Bu, herhangi bir sorumluluğu bulunmayan basit bir türdür. Birkaç özelliğe ihtiyaç duyuyor. *Transaction.cs*adlı yeni bir dosya oluşturun. Buna aşağıdaki kodu ekleyin:
 
-[!code-csharp[Transaction](~/samples/csharp/classes-quickstart/Transaction.cs)]
+[!code-csharp[Transaction](~/samples/snippets/csharp/classes-quickstart/Transaction.cs)]
 
 Şimdi, `BankAccount` sınıfına `Transaction` nesnelerinin <xref:System.Collections.Generic.List%601> ekleyelim. Aşağıdaki bildirimi ekleyin:
 
-[!code-csharp[TransactionDecl](~/samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
+[!code-csharp[TransactionDecl](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
 <xref:System.Collections.Generic.List%601> sınıfı, farklı bir ad alanını içeri aktarmanızı gerektirir. *BankAccount.cs*'nin başlangıcına şunu ekleyin:
 
@@ -135,7 +135,7 @@ using System.Collections.Generic;
 
 Şimdi `Balance` raporlanmasını değiştirelim.  Bu, tüm işlemlerin değerlerini toplayarak bulunabilir. `BankAccount` sınıfındaki `Balance` bildirimini aşağıdaki şekilde değiştirin:
 
-[!code-csharp[BalanceComputation](~/samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
+[!code-csharp[BalanceComputation](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
 
 Bu örnekte, ***özelliklerin***önemli bir yönü gösterilmektedir. Artık, başka bir programcı değer istediğinde bakiyeyi hesaplıyor. Hesaplama tüm işlemleri numaralandırır ve toplamı geçerli Bakiye olarak verir.
 
@@ -143,13 +143,13 @@ Sonra, `MakeDeposit` ve `MakeWithdrawal` yöntemlerini uygulayın. Bu yöntemler
 
 Bu, ***özel durum***kavramını tanıtır. Bir yöntemin işini başarıyla tamamlayamadığını belirten standart yol, bir özel durum oluşturmak şeklindedir. Özel durum türü ve onunla ilişkili ileti hatayı anlatmaktadır. Burada, depozito miktarı negatifse `MakeDeposit` yöntemi bir özel durum oluşturur. `MakeWithdrawal` yöntemi, çekme miktarı negatifse veya çekme sonuçları negatif bir bakiyeye uygulanırsa bir özel durum oluşturur:
 
-[!code-csharp[DepositAndWithdrawal](~/samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
+[!code-csharp[DepositAndWithdrawal](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
 
 [`throw`](../../language-reference/keywords/throw.md) deyimleri bir özel durum **oluşturur** . Geçerli bloğun yürütülmesi sonlanır ve çağrı yığınında bulunan ilk eşleşen `catch` bloğuna denetim aktarımları yapılır. Daha sonra bu kodu test etmek için bir `catch` bloğu ekleyeceksiniz.
 
 Oluşturucunun, bakiyeyi doğrudan güncelleştirmek yerine bir ilk işlem eklemesi için bir değişiklik alması gerekir. `MakeDeposit` yöntemini zaten yazmış olduğunuz için oluşturucudan çağırın. Tamamlanmış Oluşturucu şöyle görünmelidir:
 
-[!code-csharp[Constructor](~/samples/csharp/classes-quickstart/BankAccount.cs#Constructor)]
+[!code-csharp[Constructor](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#Constructor)]
 
 <xref:System.DateTime.Now?displayProperty=nameWithType>, geçerli tarih ve saati döndüren bir özelliktir. `Main` yönteyinizdeki birkaç mevdua ve çekme bilgilerini ekleyerek bunu test edin:
 
@@ -196,7 +196,7 @@ Dosyayı kaydedin ve denemek için `dotnet run` yazın.
 
 Bu öğreticiyi bitirebilmeniz için, işlem geçmişi için bir `string` oluşturan `GetAccountHistory` yöntemi yazabilirsiniz. Bu yöntemi `BankAccount` türüne ekleyin:
 
-[!code-csharp[History](~/samples/csharp/classes-quickstart/BankAccount.cs#History)]
+[!code-csharp[History](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#History)]
 
 Bu, her işlem için bir satır içeren bir dizeyi biçimlendirmek için <xref:System.Text.StringBuilder> sınıfını kullanır. Bu öğreticilerde daha önce dize biçimlendirme kodunu gördünüz. Yeni bir karakter `\t`. Bu, çıktıyı biçimlendirmek için bir sekme ekler.
 

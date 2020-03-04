@@ -4,18 +4,18 @@ description: Bu gelişmiş öğreticide, ayrı olarak oluşturulan verileri ve a
 ms.date: 03/13/2019
 ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: ca7ae63a038fce0b2569e7a4bd1805765bc23d44
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fd08e707402bfcd552997111a9c3fa58841a5466
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039202"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240060"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Öğretici: veri türlerini genişletmek için model eşleştirme özelliklerini kullanma
 
 C#7 temel desenler eşleşen özellikler sunmuştur. Bu özellikler yeni ifadelerle ve C# desenlerle 8 ' de genişletilir. Başka kitaplıklarda olabilecek türleri genişletmekle birlikte davranan işlevselliği yazabilirsiniz. Desenler için başka bir kullanım, uygulamanızın genişletilmekte olan türün temel bir özelliği olmayan bir işlev oluşturmasını gerektirir.
 
-Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -23,7 +23,7 @@ Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 > - Türleri ve özellik değerlerini temel alan davranışı uygulamak için kalıp eşleştirme ifadelerini kullanın.
 > - Tüm algoritmalar oluşturmak için model eşleştirmeyi diğer tekniklerle birleştirin.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Makinenizi, C# 8,0 derleyicisi dahil .NET Core çalıştıracak şekilde ayarlamanız gerekir. 8 C# derleyicisi, [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download)ile başlayarak kullanılabilir.
 
@@ -41,7 +41,7 @@ Trafiği yönetmek için Tolls ve yoğun zaman fiyatlandırması kullanan bir an
 
 Bu kısa açıklamadan, bu sistemi modellemek için bir nesne hiyerarşisinde hızlıca taslak oluşturabilirsiniz. Ancak, verileriniz diğer araç kayıt yönetimi sistemleri gibi birden çok kaynaktan geliyor. Bu sistemler, verileri modellemek için farklı sınıflar sağlar ve kullanabileceğiniz tek bir nesne modeli yoktur. Bu öğreticide, aşağıdaki kodda gösterildiği gibi bu dış sistemlerden araç verilerini modellemek için bu Basitleştirilmiş sınıfları kullanacaksınız:
 
-[!code-csharp[ExternalSystems](~/samples/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
+[!code-csharp[ExternalSystems](~/samples/snippets/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
 
 Başlangıç kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start) GitHub deposundan indirebilirsiniz. Araç sınıflarının farklı sistemlerden olduğunu ve farklı ad alanlarında olduğunu görebilirsiniz. `System.Object` dışındaki ortak bir temel sınıf yararlanılabilir olabilir.
 
@@ -300,22 +300,22 @@ Aşağıdaki tabloda, giriş değerleri ve en yüksek fiyatlandırma çarpanı b
 
 | Gün        | Zaman         | Yön | Premium |
 | ---------- | ------------ | --------- |--------:|
-| HAFTANINGÜNÜ    | sabah aceleniz | Gelen   | x 2,00  |
-| HAFTANINGÜNÜ    | sabah aceleniz | Giden  | x 1,00  |
-| HAFTANINGÜNÜ    | saati      | Gelen   | x 1,50  |
-| HAFTANINGÜNÜ    | saati      | Giden  | x 1,50  |
-| HAFTANINGÜNÜ    | akşam aceleniz | Gelen   | x 1,00  |
-| HAFTANINGÜNÜ    | akşam aceleniz | Giden  | x 2,00  |
-| HAFTANINGÜNÜ    | gece    | Gelen   | x 0,75  |
-| HAFTANINGÜNÜ    | gece    | Giden  | x 0,75  |
-| Hafta    | sabah aceleniz | Gelen   | x 1,00  |
-| Hafta    | sabah aceleniz | Giden  | x 1,00  |
-| Hafta    | saati      | Gelen   | x 1,00  |
-| Hafta    | saati      | Giden  | x 1,00  |
-| Hafta    | akşam aceleniz | Gelen   | x 1,00  |
-| Hafta    | akşam aceleniz | Giden  | x 1,00  |
-| Hafta    | gece    | Gelen   | x 1,00  |
-| Hafta    | gece    | Giden  | x 1,00  |
+| HAFTANINGÜNÜ    | sabah aceleniz | gelen   | x 2,00  |
+| HAFTANINGÜNÜ    | sabah aceleniz | giden  | x 1,00  |
+| HAFTANINGÜNÜ    | saati      | gelen   | x 1,50  |
+| HAFTANINGÜNÜ    | saati      | giden  | x 1,50  |
+| HAFTANINGÜNÜ    | akşam aceleniz | gelen   | x 1,00  |
+| HAFTANINGÜNÜ    | akşam aceleniz | giden  | x 2,00  |
+| HAFTANINGÜNÜ    | gece    | gelen   | x 0,75  |
+| HAFTANINGÜNÜ    | gece    | giden  | x 0,75  |
+| Hafta    | sabah aceleniz | gelen   | x 1,00  |
+| Hafta    | sabah aceleniz | giden  | x 1,00  |
+| Hafta    | saati      | gelen   | x 1,00  |
+| Hafta    | saati      | giden  | x 1,00  |
+| Hafta    | akşam aceleniz | gelen   | x 1,00  |
+| Hafta    | akşam aceleniz | giden  | x 1,00  |
+| Hafta    | gece    | gelen   | x 1,00  |
+| Hafta    | gece    | giden  | x 1,00  |
 
 Üç değişkenin 16 farklı birleşimi vardır. Bazı koşulları birleştirerek son anahtar ifadesini basitleştirirsiniz.
 
@@ -337,17 +337,17 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
 
 Bu yöntem işe yarar, ancak repetitious. Aşağıdaki kodda gösterildiği gibi basitleşebilir:
 
-[!code-csharp[IsWeekDay](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
+[!code-csharp[IsWeekDay](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
 
 Sonra, zaman bloklara zaman kategorize etmek için benzer bir işlev ekleyin:
 
-[!code-csharp[GetTimeBand](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
+[!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
 Önceki yöntem, model eşleştirme kullanmaz. `if` deyimleri tanıdık bir basamakla daha net. Her zaman aralığını ayrı bir değere dönüştürmek için özel bir `enum` eklersiniz.
 
 Bu yöntemleri oluşturduktan sonra, fiyatlandırma Premium 'u hesaplamak için **tanımlama grubu düzeniyle** başka bir `switch` ifadesini kullanabilirsiniz. Tüm 16 kollu bir `switch` ifadesi oluşturabilirsiniz:
 
-[!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
+[!code-csharp[FullTuplePattern](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
 Yukarıdaki kod işe yarar, ancak basitleştirilebilir. Hafta sonu için sekiz kombinasyonun hepsi de aynı ücretli bir. Tüm sekiz değerini aşağıdaki satırla değiştirebilirsiniz:
 
@@ -380,7 +380,7 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
 
 Son olarak, normal fiyatı ödeyerek iki aceleniz saatlik saati kaldırabilirsiniz. Bu kolları kaldırdıktan sonra, `false` son anahtar ARM içindeki bir atma (`_`) ile değiştirebilirsiniz. Aşağıdaki tamamlanmış yönteme sahip olacaksınız:
 
-[!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
+[!code-csharp[SimplifiedTuplePattern](../../../samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
 Bu örnek, düzen eşleştirmesinin avantajlarından birini vurgular: düzen dalları sırayla değerlendirilir. Daha önceki bir dalın daha sonraki durumlardan birini işleyeceği şekilde yeniden ayarlarsanız, derleyici ulaşılamaz kod hakkında sizi uyarır. Bu dil kuralları, önceki basitleştirmeleri kodun değiştirmiyordu güvenle daha kolay hale getirir.
 

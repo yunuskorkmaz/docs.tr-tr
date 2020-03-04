@@ -5,12 +5,12 @@ helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-ms.openlocfilehash: e1deb17dfdfea4c8b66eb8d836a10bf888727e1a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 249d0607ddd280bcb4e9cf3ef34b28ff8ada3b04
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715894"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240499"
 ---
 # <a name="thread-pool-etw-events"></a>İş Parçacığı Havuzu ETW Olayları
 Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.  
@@ -142,7 +142,7 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Count|Win: UInt64|Yeni oluşturulan iş parçacığı dahil olmak üzere g/ç iş parçacıklarının sayısı.|  
+|Sayısı|Win: UInt64|Yeni oluşturulan iş parçacığı dahil olmak üzere g/ç iş parçacıklarının sayısı.|  
 |Numemekli|Win: UInt64|Kullanımdan kaldırılan çalışan iş parçacıklarının sayısı.|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
@@ -163,7 +163,7 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Count|Win: UInt64|İş parçacığı havuzunda kalan g/ç iş parçacığı sayısı.|  
+|Sayısı|Win: UInt64|İş parçacığı havuzunda kalan g/ç iş parçacığı sayısı.|  
 |Numemekli|Win: UInt64|Kullanımdan kaldırılan g/ç iş parçacığı sayısı.|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
@@ -184,7 +184,7 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Count|Win: UInt64|Bu dahil iş parçacığı havuzundaki g/ç iş parçacıklarının sayısı.|  
+|Sayısı|Win: UInt64|Bu dahil iş parçacığı havuzundaki g/ç iş parçacıklarının sayısı.|  
 |Numemekli|Win: UInt64|Kullanımdan kaldırılan g/ç iş parçacığı sayısı.|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
@@ -199,13 +199,13 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
 |Olay|Olay Kimliği|Ne zaman oluşturulur|  
 |-----------|--------------|-----------------|  
-|`IOThreadTerminate`|45|İş parçacığı havuzunda bir g/ç iş parçacığı oluşturulur.|  
+|`IOThreadTerminate`|45|İş parçacığı havuzunda bir g/ç iş parçacığı sonlandırılır.|  
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Count|Win: UInt64|İş parçacığı havuzunda kalan g/ç iş parçacığı sayısı.|  
+|Sayısı|Win: UInt64|İş parçacığı havuzunda kalan g/ç iş parçacığı sayısı.|  
 |Numemekli|Win: UInt64|Kullanımdan kaldırılan g/ç iş parçacığı sayısı.|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   

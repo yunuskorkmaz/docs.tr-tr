@@ -4,12 +4,12 @@ description: Bir türün varsayılan değerini oluşturmak için varsayılan iş
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 651c4698514aee8cf4dab75ea32c98493e19a30b
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: ba4c02caa53a9d532be4012a4543a25cd41b6023
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964616"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239319"
 ---
 # <a name="default-operator-c-reference"></a>Default işleci (C# başvuru)
 
@@ -17,7 +17,7 @@ ms.locfileid: "75964616"
 
 Aşağıdaki örnek `default` işlecinin kullanımını gösterir:
 
-[!code-csharp-interactive[default of T](~/samples/csharp/language-reference/operators/DefaultOperator.cs#WithOperand)]
+[!code-csharp-interactive[default of T](~/samples/snippets/csharp/language-reference/operators/DefaultOperator.cs#WithOperand)]
 
 Ayrıca, bir [`switch` ifadesinde](../keywords/switch.md)varsayılan Case etiketi olarak `default` anahtar sözcüğünü kullanırsınız.
 
@@ -32,7 +32,7 @@ Ayrıca, bir [`switch` ifadesinde](../keywords/switch.md)varsayılan Case etiket
 
 Aşağıdaki örnek `default` değişmez değerinin kullanımını gösterir:
 
-[!code-csharp-interactive[default literal](~/samples/csharp/language-reference/operators/DefaultOperator.cs#DefaultLiteral)]
+[!code-csharp-interactive[default literal](~/samples/snippets/csharp/language-reference/operators/DefaultOperator.cs#DefaultLiteral)]
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

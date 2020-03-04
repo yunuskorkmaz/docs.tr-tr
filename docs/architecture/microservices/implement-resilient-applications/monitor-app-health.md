@@ -1,15 +1,15 @@
 ---
-title: Sistem durumunu izleme
+title: Sistem durumu izleme
 description: Sistem durumu izlemeyi uygulamayla bir yolu bulun.
-ms.date: 01/30/2020
-ms.openlocfilehash: a91e51af66049f9774365cd56b90ab792a4dd4fc
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.date: 03/02/2020
+ms.openlocfilehash: 3b8ba57149061e629bee441672718eba8a79da63
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502674"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241162"
 ---
-# <a name="health-monitoring"></a>Sistem durumunu izleme
+# <a name="health-monitoring"></a>Sistem durumu izleme
 
 Sistem durumu izleme, kapsayıcılarınızın ve mikro hizmetlerinizin durumu hakkında neredeyse gerçek zamanlı bilgilere izin verebilir. Sistem durumu izleme, işletim mikro hizmetlerinin birden çok yönü için kritik öneme sahiptir ve bu, daha sonra açıklandığı gibi, bazı durumlarda, aşamalar halinde kısmi uygulama yükseltmeleri gerçekleştirirken özellikle önemlidir.
 
@@ -19,7 +19,7 @@ Tipik modelde, hizmetler durumları hakkında raporlar gönderir ve uygulamanız
 
 ## <a name="implement-health-checks-in-aspnet-core-services"></a>ASP.NET Core hizmetlerinde sistem durumu denetimleri uygulama
 
-ASP.NET Core mikro hizmet veya Web uygulaması geliştirirken, ASP .NET Core 3,1 ([Microsoft. Extensions. Diagnostics. Healthdenetimleri](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)) içinde Yayınlanan yerleşik sistem durumu denetimleri özelliğini kullanabilirsiniz. Birçok ASP.NET Core özelliği gibi, sistem durumu denetimleri de bir dizi hizmet ve bir ara yazılım ile gelir.
+ASP.NET Core mikro hizmet veya Web uygulaması geliştirirken, ASP .NET Core 2,2 ([Microsoft. Extensions. Diagnostics. Healthdenetimleri](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)) içinde Yayınlanan yerleşik sistem durumu denetimleri özelliğini kullanabilirsiniz. Birçok ASP.NET Core özelliği gibi, sistem durumu denetimleri de bir dizi hizmet ve bir ara yazılım ile gelir.
 
 Sistem durumu denetimi Hizmetleri ve ara yazılımı kullanımı kolaydır ve uygulamanız için gerekli herhangi bir dış kaynak (SQL Server veritabanı veya uzak bir API gibi) düzgün çalışıp çalışmadığını doğrulamanıza olanak sağlayan yetenekler sağlar. Bu özelliği kullandığınızda, daha sonra açıklandığımız için kaynağın sağlıklı ne anlama geldiğini de seçebilirsiniz.
 
@@ -27,7 +27,9 @@ Bu özelliği etkin bir şekilde kullanmak için, önce mikro hizmetinizdeki hiz
 
 ### <a name="use-the-healthchecks-feature-in-your-back-end-aspnet-microservices"></a>Arka uç ASP.NET mikro hizmetlerinizin Healthdenetimleri özelliğini kullanın
 
-Bu bölümde, [Aspnetcore. Diagnostics. healthdenetimlerinin](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks)uygulandığı gibi healthdenetimlerin özelliğinin örnek bir ASP.NET Core 3,1 Web API uygulamasında kullanıldığını öğreneceksiniz. EShopOnContainers gibi büyük ölçekli mikro hizmetlerde bu özelliğin uygulanması, sonraki bölümde açıklanmaktadır. Başlamak için, her mikro hizmet için sağlıklı durumu neyin oluşturduğunu tanımlamanız gerekir. Örnek uygulamada, mikro hizmet API 'sine HTTP üzerinden erişilebiliyorsa ve ilgili SQL Server veritabanı da kullanılabilir olduğunda mikro hizmetler sağlıklı olur.
+Bu bölümde, [Microsoft. Extensions. Diagnostics. healthdenetimleri](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks) paketini kullanırken bir örnek ASP.NET Core 3,1 Web API uygulamasında healthdenetimleri özelliğini nasıl uygulayacağınızı öğreneceksiniz. Bu özelliğin eShopOnContainers gibi büyük ölçekli mikro hizmetlerde uygulanması, sonraki bölümde açıklanmaktadır.
+
+Başlamak için, her mikro hizmet için sağlıklı durumu neyin oluşturduğunu tanımlamanız gerekir. Örnek uygulamada, API 'SI HTTP üzerinden erişilebiliyorsa ve ilgili SQL Server veritabanı da kullanılabilir olduğunda mikro hizmetin sağlıklı olduğunu tanımlayacağız.
 
 .NET Core 3,1 ' de, yerleşik API 'Ler ile hizmetleri yapılandırabilir, mikro hizmet için bir sistem durumu denetimi ve bu şekilde bağımlı SQL Server veritabanı ekleyebilirsiniz:
 
@@ -40,10 +42,11 @@ public void ConfigureServices(IServiceCollection services)
     // Registers required services for health checks
     services.AddHealthChecks()
         // Add a health check for a SQL Server database
-        .AddSqlServer(
-            configuration["ConnectionString"],
-            name: "OrderingDB-check",
-            tags: new string[] { "orderingdb" });
+        .AddCheck(
+            "OrderingDB-check", 
+            new SqlConnectionHealthCheck(Configuration["ConnectionString"]), 
+            HealthStatus.Unhealthy, 
+            new string[] { "orderingdb" });
 }
 ```
 
@@ -114,11 +117,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     app.UseEndpoints(endpoints =>
     {
         //...
-        endpoints.MapHealthChecks("/hc", new HealthCheckOptions()
-        {
-            Predicate = _ => true,
-            ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-        });
+        endpoints.MapHealthChecks("/hc");
         //...
     });
     //…
@@ -131,7 +130,7 @@ Uç nokta `<yourmicroservice>/hc` çağrıldığında, başlangıç sınıfında
 
 EShopOnContainers 'daki mikro hizmetler, görevini gerçekleştirmek için birden çok hizmete bağımlıdır. Örneğin, eShopOnContainers 'dan `Catalog.API` mikro hizmeti, Azure Blob depolama, SQL Server ve Kbbitmq gibi birçok hizmete bağlıdır. Bu nedenle, `AddCheck()` yöntemi kullanılarak birçok sistem durumu denetimi eklenmiştir. Her bağımlı hizmet için, ilgili sistem durumunu tanımlayan özel bir `IHealthCheck` uygulamasının eklenmesi gerekir.
 
-Açık kaynaklı proje [Aspnetcore. Diagnostics. healthcheck](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) , .net Core 3,1 üzerinde oluşturulan bu kurumsal hizmetlerden her biri için özel sistem durumu denetimi uygulamaları sağlayarak bu sorunu çözer. Her bir sistem durumu denetimi, projeye kolaylıkla eklenebilen tek bir NuGet paketi olarak kullanılabilir. eShopOnContainers, bunları tüm mikro hizmetlerinde kapsamlı olarak kullanır.
+Açık kaynaklı proje [Aspnetcore. Diagnostics. Healthdenetimleri](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) , .net Core 3,1 üzerinde oluşturulan bu kurumsal hizmetlerden her biri için özel durum denetimi uygulamaları sağlayarak bu sorunu çözer. Her bir sistem durumu denetimi, projeye kolaylıkla eklenebilen tek bir NuGet paketi olarak kullanılabilir. eShopOnContainers, bunları tüm mikro hizmetlerinde kapsamlı olarak kullanır.
 
 Örneğin, `Catalog.API` mikro hizmetinde aşağıdaki NuGet paketleri eklendi:
 

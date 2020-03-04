@@ -4,12 +4,12 @@ description: Bu öğreticide, Web sitesi açıklamalarında yaklaşımı sınıf
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7a6043f56a2ecaca633ba5545170f27a85a22efc
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 688c5b83cef8f21eef8fa24521a85449a9cfbd48
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092401"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241123"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Öğretici: ML.NET 'de önceden eğitilen bir TensorFlow modeli kullanarak film incelemelerinin yaklaşımını çözümleyin
 
@@ -17,7 +17,7 @@ Bu öğreticide, Web sitesi açıklamalarında yaklaşımı sınıflandırmak i�
 
 Bu öğreticide kullanılan TensorFlow modeli, ıMDB veritabanından Film İncelemeleri kullanılarak eğitildi. Uygulamayı geliştirmeyi bitirdikten sonra, film gözden geçirme metni sağlayabileceksiniz ve uygulama Gözden geçirmedeki pozitif veya negatif bir yaklaşım olup olmadığını söyleyecektir.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > * Önceden eğitilen bir TensorFlow modeli yükleme
@@ -64,11 +64,11 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
 1. Aşağıdaki ek `using` deyimlerini *program.cs* dosyasının en üstüne ekleyin:
 
-   [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TextClassificationTF/Program.cs#AddUsings "Add necessary usings")]
+   [!code-csharp[AddUsings](../../../samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#AddUsings "Add necessary usings")]
 
 1. Kaydedilen model dosyası yolunu ve özellik vektörü uzunluğunu tutmak için `Main` yönteminin üzerinde doğrudan iki genel değişken oluşturun.
 
-   [!code-csharp[DeclareGlobalVariables](../../../samples/machine-learning/tutorials/TextClassificationTF/Program.cs#DeclareGlobalVariables "Declare global variables")]
+   [!code-csharp[DeclareGlobalVariables](../../../samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
     * `_modelPath` eğitilen modelin dosya yoludur.
     * `FeatureLength`, modelin beklediği tamsayı özelliği dizisinin uzunluğudur.
@@ -79,28 +79,28 @@ Film İncelemeleri, ücretsiz form metinlerdir. Uygulamanız, metni bir dizi far
 
 Birincisi, metni ayrı sözcüklere bölmek ve her bir sözcüğü bir tamsayı kodlamasıyla eşlemek için belirtilen eşleme dosyasını kullanmaktır. Bu dönüştürmenin sonucu, tümcedeki sözcüklerin sayısına karşılık gelen uzunluğa sahip bir değişken uzunluklu tamsayı dizisidir.
 
-|Özellik| Value|Tür|
+|Özellik| Değer|Tür|
 |-------------|-----------------------|------|
-|Belgemetinmetni|Bu film gerçekten iyi|string|
+|Belgemetinmetni|Bu film gerçekten iyi|dize|
 |VariableLengthFeatures|14, 22, 9, 66, 78,... |int []|
 
 Değişken uzunluğu özellik dizisi daha sonra sabit 600 uzunluğuna yeniden boyutlandırılır. Bu, TensorFlow modelinin beklediği uzunluktadır.
 
-|Özellik| Value|Tür|
+|Özellik| Değer|Tür|
 |-------------|-----------------------|------|
-|Belgemetinmetni|Bu film gerçekten iyi|string|
+|Belgemetinmetni|Bu film gerçekten iyi|dize|
 |VariableLengthFeatures|14, 22, 9, 66, 78,... |int []|
 |Özellikler|14, 22, 9, 66, 78,... |Tamsayı [600]|
 
 1. `Main` yönteminden sonra giriş verileriniz için bir sınıf oluşturun:
 
-    [!code-csharp[MovieReviewClass](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#MovieReviewClass "Declare movie review type")]
+    [!code-csharp[MovieReviewClass](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#MovieReviewClass "Declare movie review type")]
 
     `MovieReview`giriş veri sınıfı, Kullanıcı yorumları için bir `string` (`ReviewText`) sahiptir.
 
 1. `Main` yönteminden sonra değişken uzunluklu özellikler için bir sınıf oluşturun:
 
-    [!code-csharp[VariableLengthFeatures](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#VariableLengthFeatures "Declare variable length features type")]
+    [!code-csharp[VariableLengthFeatures](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#VariableLengthFeatures "Declare variable length features type")]
 
     `VariableLengthFeatures` özelliği bir vektör olarak belirlemek için bir [Vectortype](xref:Microsoft.ML.Data.VectorTypeAttribute.%23ctor%2A) özniteliğine sahiptir.  Tüm vektör öğeleri aynı türde olmalıdır. Çok sayıda sütun içeren veri kümelerinde, birden fazla sütunu tek bir vektör olarak yüklemek, veri dönüştürmeleri uyguladığınızda veri geçişlerinin sayısını azaltır.
 
@@ -108,7 +108,7 @@ Değişken uzunluğu özellik dizisi daha sonra sabit 600 uzunluğuna yeniden bo
 
 1. `Main` yönteminden sonra sabit uzunluklu özellikler için bir sınıf oluşturun:
 
-    [!code-csharp[FixedLengthFeatures](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#FixedLengthFeatures)]
+    [!code-csharp[FixedLengthFeatures](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#FixedLengthFeatures)]
 
     Bu sınıf `ResizeFeatures` eyleminde kullanılır. Özelliklerinin adları (Bu durumda yalnızca bir tane), DataView içindeki hangi sütunların özel eşleme eyleminin _çıktısı_ olarak kullanılabileceğini göstermek için kullanılır.
 
@@ -116,7 +116,7 @@ Değişken uzunluğu özellik dizisi daha sonra sabit 600 uzunluğuna yeniden bo
 
 1. `Main` yönteminden sonra tahmin için bir sınıf oluşturun:
 
-    [!code-csharp[Prediction](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#Prediction "Declare prediction class")]
+    [!code-csharp[Prediction](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#Prediction "Declare prediction class")]
 
     `MovieReviewSentimentPrediction`, model eğitiminden sonra kullanılan tahmin sınıfıdır. `MovieReviewSentimentPrediction`, tek bir `float` dizisine (`Prediction`) ve bir `VectorType` özniteliğine sahiptir.
 
@@ -126,7 +126,7 @@ Değişken uzunluğu özellik dizisi daha sonra sabit 600 uzunluğuna yeniden bo
 
 1. MlContext değişkenini bildirmek ve başlatmak için `Main` yöntemindeki `Console.WriteLine("Hello World!")` satırı aşağıdaki kodla değiştirin:
 
-   [!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreateMLContext "Create the ML Context")]
+   [!code-csharp[CreateMLContext](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CreateMLContext "Create the ML Context")]
 
 1. Aşağıdaki tabloda görüldüğü gibi, bir dosyadan eşleme verilerini yüklemek için [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A) yöntemini kullanarak sözcükleri tamsayı olarak kodlamak için bir sözlük oluşturun:
 
@@ -140,21 +140,21 @@ Değişken uzunluğu özellik dizisi daha sonra sabit 600 uzunluğuna yeniden bo
 
     Arama eşlemesini oluşturmak için aşağıdaki kodu ekleyin:
 
-    [!code-csharp[CreateLookupMap](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreateLookupMap)]
+    [!code-csharp[CreateLookupMap](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CreateLookupMap)]
 
 1. Değişken uzunluklu kelime tamsayı dizisinin bir sonraki kod satırı ile sabit boyutlu bir tamsayı dizisine yeniden boyutlandırılması için bir `Action` ekleyin:
 
-   [!code-csharp[ResizeFeatures](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#ResizeFeatures)]
+   [!code-csharp[ResizeFeatures](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#ResizeFeatures)]
 
 ## <a name="load-the-pre-trained-tensorflow-model"></a>Önceden eğitilen TensorFlow modelini yükleme
 
 1. TensorFlow modelini yüklemek için kod ekleyin:
 
-    [!code-csharp[LoadTensorFlowModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#LoadTensorFlowModel)]
+    [!code-csharp[LoadTensorFlowModel](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#LoadTensorFlowModel)]
 
     Model yüklendikten sonra, giriş ve çıkış şemasını ayıklayabilirsiniz. Şemalar yalnızca ilgi ve öğrenme için görüntülenir. Son uygulamanın çalışması için bu koda ihtiyacınız yoktur:
 
-    [!code-csharp[GetModelSchema](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#GetModelSchema)]
+    [!code-csharp[GetModelSchema](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#GetModelSchema)]
 
     Giriş şeması, tamsayı kodlamalı sözcüklerin sabit uzunluklu dizisidir. Çıktı şeması, bir gözden geçirme yaklaşımını negatif mi yoksa pozitif mi olduğunu gösteren bir dizi olasılıkların dizisidir. Bu değerler, pozitif olma olasılığı olarak 1 ' e kadar toplamdır.
 
@@ -162,27 +162,27 @@ Değişken uzunluğu özellik dizisi daha sonra sabit 600 uzunluğuna yeniden bo
 
 1. Bir sonraki kod satırı olarak sözcükleri sözcüklere eklemek için, işlem hattını oluşturun ve giriş metnini [Tokenizeıntowords](xref:Microsoft.ML.TextCatalog.TokenizeIntoWords%2A) dönüşümünü kullanarak sözcüklere bölün:
 
-   [!code-csharp[TokenizeIntoWords](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#TokenizeIntoWords)]
+   [!code-csharp[TokenizeIntoWords](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#TokenizeIntoWords)]
 
    [Tokenizeıntowords](xref:Microsoft.ML.TextCatalog.TokenizeIntoWords%2A) dönüşümü, metni/dizeyi sözcüklere ayrıştırmak için boşluk kullanır. Yeni bir sütun oluşturur ve her giriş dizesini Kullanıcı tanımlı ayırıcıya göre alt dizelerin vektörüne böler.
 
 1. Yukarıda bildirdiğiniz arama tablosunu kullanarak kelimeleri tamsayı kodlamasıyla eşleyin:
 
-    [!code-csharp[MapValue](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#MapValue)]
+    [!code-csharp[MapValue](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#MapValue)]
 
 1. Değişken uzunluğu tamsayı kodlamalarını modelin gerektirdiği sabit uzunluğa göre yeniden boyutlandırın:
 
-    [!code-csharp[CustomMapping](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CustomMapping)]
+    [!code-csharp[CustomMapping](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CustomMapping)]
 
 1. Girişi yüklenen TensorFlow modeliyle sınıflandırın:
 
-    [!code-csharp[ScoreTensorFlowModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#ScoreTensorFlowModel)]
+    [!code-csharp[ScoreTensorFlowModel](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#ScoreTensorFlowModel)]
 
     TensorFlow model çıkışı `Prediction/Softmax`olarak adlandırılır. `Prediction/Softmax` adının TensorFlow modeliyle belirlendiğini unutmayın. Bu adı değiştiremezsiniz.
 
 1. Çıkış tahmini için yeni bir sütun oluşturun:
 
-    [!code-csharp[SnippetCopyColumns](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCopyColumns)]
+    [!code-csharp[SnippetCopyColumns](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#SnippetCopyColumns)]
 
     `Prediction/Softmax` sütununu bir C# sınıfta özellik olarak kullanılabilecek bir adla birine kopyalamanız gerekir: `Prediction`. C# Özellik adında `/` karaktere izin verilmez.
 
@@ -190,7 +190,7 @@ Değişken uzunluğu özellik dizisi daha sonra sabit 600 uzunluğuna yeniden bo
 
 1. Ardışık düzen aracılığıyla model oluşturmak için kodu ekleyin:
 
-    [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]
+    [!code-csharp[SnippetCreateModel](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#SnippetCreateModel)]
 
     `Fit` yöntemi çağırarak, işlem hattındaki tahmini zincirinden bir ml.net modeli oluşturulur. Bu durumda, TensorFlow modeli önceden eğitilen için, modeli oluşturmak üzere herhangi bir veri vermedik. `Fit` yönteminin gereksinimlerini karşılamak için boş bir veri görünümü nesnesi sağlıyoruz.
 
@@ -207,7 +207,7 @@ Değişken uzunluğu özellik dizisi daha sonra sabit 600 uzunluğuna yeniden bo
 
 1. `PredictSentiment()` yönteminde ilk satır olarak `PredictionEngine` oluşturmak için aşağıdaki kodu ekleyin:
 
-    [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreatePredictionEngine)]
+    [!code-csharp[CreatePredictionEngine](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CreatePredictionEngine)]
 
     [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) , tek bir veri örneğinde tahmin gerçekleştirmenize olanak tanıyan, KULLANıŞLı bir API 'dir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) , iş parçacığı açısından güvenli değildir. Tek iş parçacıklı veya prototip ortamlarında kullanılması kabul edilebilir. Üretim ortamlarında geliştirilmiş performans ve iş parçacığı güvenliği için, uygulamanız genelinde kullanılmak üzere [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nesnelerinin bir [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) oluşturan `PredictionEnginePool` hizmetini kullanın. [ASP.NET Core Web API 'sindeki `PredictionEnginePool` kullanma](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)hakkında bu kılavuza bakın.
 
@@ -216,25 +216,25 @@ Değişken uzunluğu özellik dizisi daha sonra sabit 600 uzunluğuna yeniden bo
 
 1. Bir `MovieReview`örneği oluşturarak eğitilen modelin `Predict()` yönteminde tahminini test etmek için bir açıklama ekleyin:
 
-    [!code-csharp[CreateTestData](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreateTestData)]
+    [!code-csharp[CreateTestData](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CreateTestData)]
 
 1. `PredictSentiment()` yöntemine sonraki kod satırlarını ekleyerek test açıklama verilerini `Prediction Engine` geçirin:
 
-    [!code-csharp[Predict](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#Predict)]
+    [!code-csharp[Predict](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#Predict)]
 
 1. [Tahmin ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) işlevi, tek bir veri satırı üzerinde bir tahmin yapar:
 
-    |Özellik| Value|Tür|
+    |Özellik| Değer|Tür|
     |-------------|-----------------------|------|
     |Tahmin|[0,5459937, 0,454006255]|float []|
 
 1. Aşağıdaki kodu kullanarak yaklaşım tahminini görüntüleyin:
 
-    [!code-csharp[DisplayPredictions](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#DisplayPredictions)]
+    [!code-csharp[DisplayPredictions](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#DisplayPredictions)]
 
 1. `Main` yönteminin sonundaki `PredictSentiment` bir çağrı ekleyin:
 
-    [!code-csharp[CallPredictSentiment](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CallPredictSentiment)]
+    [!code-csharp[CallPredictSentiment](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CallPredictSentiment)]
 
 ## <a name="results"></a>Sonuçlar
 

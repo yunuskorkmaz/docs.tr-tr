@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 8e4518718d0975f8b4a65870f15d8c52d692c2f5
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 711005479eea2757b4ef18f6710a4453bfca02f9
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77625741"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238844"
 ---
 # <a name="sizeof-operator-c-reference"></a>sizeof işleci (C# başvuru)
 
@@ -20,10 +20,10 @@ ms.locfileid: "77625741"
 
 `sizeof` işleci [güvenli olmayan](../keywords/unsafe.md) bir bağlam gerektiriyor. Ancak, aşağıdaki tabloda sunulan ifadeler derleme zamanında karşılık gelen sabit değerlere değerlendirilir ve güvenli olmayan bir bağlam gerektirmez:
 
-|Expression|Sabit değer|
+|İfade|Sabit değer|
 |---------|---------------|
-|`sizeof(sbyte)`|1|
-|`sizeof(byte)`|1|
+|`sizeof(sbyte)`|1\.|
+|`sizeof(byte)`|1\.|
 |`sizeof(short)`|2|
 |`sizeof(ushort)`|2|
 |`sizeof(int)`|4|
@@ -34,13 +34,13 @@ ms.locfileid: "77625741"
 |`sizeof(float)`|4|
 |`sizeof(double)`|8|
 |`sizeof(decimal)`|16|
-|`sizeof(bool)`|1|
+|`sizeof(bool)`|1\.|
 
 Ayrıca, `sizeof` işlecinin işleneni bir [sabit listesi](../builtin-types/enum.md) türünün adı olduğunda güvenli olmayan bir bağlam kullanmanız gerekmez.
 
 Aşağıdaki örnek `sizeof` işlecinin kullanımını gösterir:
 
-[!code-csharp[sizeof examples](~/samples/csharp/language-reference/operators/SizeOfOperator.cs)]
+[!code-csharp[sizeof examples](~/samples/snippets/csharp/language-reference/operators/SizeOfOperator.cs)]
 
 `sizeof` işleci, yönetilen bellekte ortak dil çalışma zamanı tarafından ayrılacak bayt sayısını döndürür. [Yapı](../builtin-types/struct.md) türleri için bu değer, yukarıdaki örnekte gösterildiği gibi herhangi bir doldurma içerir. `sizeof` işlecinin sonucu, *yönetilmeyen* bellekteki bir türün boyutunu döndüren <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> yönteminin sonuçlarından farklı olur.
 

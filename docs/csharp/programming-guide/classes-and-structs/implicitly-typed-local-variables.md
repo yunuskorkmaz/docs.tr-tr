@@ -5,12 +5,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 692a0f8ad933f3ba4bef50681cb3487fa0a7eea9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d39e4c4dd180ba35b7555d61211a34d696b04f50
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714832"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241006"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Örtük olarak yazılan yerel değişkenlerC# (Programlama Kılavuzu)
 
@@ -68,7 +68,7 @@ Aşağıdaki kısıtlamalar, örtük olarak belirlenmiş değişken bildirimleri
 
 - `var` adlı bir tür kapsamdadır, `var` anahtar sözcüğü bu tür adına çözümlenir ve örtük olarak yazılmış bir yerel değişken bildiriminin parçası olarak değerlendirilmez.
 
-`var` anahtar sözcüğüyle örtük yazma, yalnızca yerel Yöntem kapsamındaki değişkenlere uygulanabilir. C# Derleyici, kodu işlediği bir mantıksal Paradox ile karşılaşacağından, sınıf alanları için örtülü yazma kullanılamaz: derleyicinin alanın türünü bilmesi gerekir, ancak atama ifadesi çözümlenene kadar türü belirleyemez ve ifade türü bilmeden değerlendirilemiyor. Aşağıdaki kodu inceleyin:
+`var` anahtar sözcüğüyle örtük yazma, yalnızca yerel Yöntem kapsamındaki değişkenlere uygulanabilir. C# Derleyici, kodu işlediği bir mantıksal Paradox ile karşılaşacağından, sınıf alanları için örtülü yazma kullanılamaz: derleyicinin alanın türünü bilmesi gerekir, ancak atama ifadesi çözümlenene kadar türü belirleyemez ve ifade türü bilmeden değerlendirilemiyor. Aşağıdaki kodu göz önünde bulundurun:
 
 ```csharp
 private var bookTitles;
@@ -88,7 +88,7 @@ Derleyici kod derleme sırasında alanlarla karşılaştığında, onunla ilişk
 
 [!code-csharp[cscsrefQueryKeywords#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#13)]
 
-Ancak `var` kullanımı, kodunuzun diğer geliştiriciler için anlaşılması daha zor hale getirmek için en az olasılığından oluşur. Bu nedenle, C# belgeler yalnızca gerekli olduğunda `var` kullanır.
+`var` kullanımı, kodunuzun basitleştirilmesine yardımcı olur, ancak kullanımı gereken durumlarda veya kodunuzun daha kolay okunması durumunda kullanılması gerekir. `var` düzgün şekilde kullanılacağı hakkında daha fazla bilgi için, C# kodlama yönergeleri makalesindeki [örtük olarak yazılan yerel değişkenler](../inside-a-program/coding-conventions.md#implicitly-typed-local-variables) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

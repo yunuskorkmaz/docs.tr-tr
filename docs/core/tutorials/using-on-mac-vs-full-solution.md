@@ -2,12 +2,12 @@
 title: Mac için Visual Studio kullanarak tüm .NET Core çözümü oluşturma
 description: Bu makalede, yeniden kullanılabilir bir kitaplık ve birim testi içeren bir .NET Core çözümü oluşturma işlemi adım adım açıklanmaktadır.
 ms.date: 12/19/2019
-ms.openlocfilehash: dea23da33912de849f0dcbe1e2f6fa3edb3a5e24
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 8c9fcca404a3875b6bb7f9cf20551a017ff553c5
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215191"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239969"
 ---
 # <a name="build-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak macOS 'ta kapsamlı bir .NET Core çözümü oluşturun
 
@@ -35,14 +35,14 @@ Bu öğreticide, bir arama sözcüğünü ve kullanıcıdan bir metin dizesini k
    > [!div class="mx-imgBorder"]
    > Yeni proje iletişim kutusunu Mac için Visual Studio ![](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project.png)
 
-1. Projeyi "TextUtils" ("metin yardımcı programları" için kısa bir ad) ve "WordCounter" çözümünü adlandırın. **Çözüm dizini içinde bir proje dizini oluşturma** onay işaretli kalsın. **Oluştur**'u seçin.
+1. Projeyi "TextUtils" ("metin yardımcı programları" için kısa bir ad) ve "WordCounter" çözümünü adlandırın. **Çözüm dizini içinde bir proje dizini oluşturma** onay işaretli kalsın. **Oluştur**’u seçin.
 
    > [!div class="mx-imgBorder"]
    > Yeni ![Mac için Visual Studio proje iletişim seçeneklerini](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project-options.png)
 
 1. **Çözüm** panelinde, *Class1.cs*şablonu tarafından sunulan sınıf dosyasını açığa çıkarmak için `TextUtils` düğümünü genişletin. CTRL-dosyaya tıklayın, bağlam menüsünden **Yeniden Adlandır** ' ı seçin ve dosyayı *WORDCOUNT.cs*olarak yeniden adlandırın. Dosyasını açın ve içeriğini şu kodla değiştirin:
 
-   [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/TextUtils/WordCount.cs)]
+   [!code-csharp[Main](../../../samples/snippets/core/tutorials/using-on-mac-vs-full-solution/csharp/TextUtils/WordCount.cs)]
 
 1. Üç farklı yöntemden birini kullanarak dosyayı kaydedin <kbd>&#8984;</kbd> :+<kbd>s</kbd>klavye kısayolunu kullanın, menüden **Dosya** > **Kaydet** ' i seçin veya dosya sekmesine CTRL tuşunu basılı tutarak bağlam menüsünden **Kaydet** ' i seçin. Aşağıdaki görüntüde IDE penceresi gösterilmektedir:
 
@@ -175,7 +175,7 @@ Birim testleri geliştirme ve yayımlama sırasında otomatik yazılım testi sa
 
 1. *Program.cs* dosyasını açın. Kodu şu kodla değiştirin:
 
-   [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp/Program.cs)]
+   [!code-csharp[Main](../../../samples/snippets/core/tutorials/using-on-mac-vs-full-solution/csharp/WordCounterApp/Program.cs)]
 
 1. `WordCounterApp` projeye CTRL tuşunu basılı ve bağlam menüsünden **projeyi Çalıştır** ' ı seçin. Uygulamayı çalıştırdığınızda, konsol penceresindeki istemlerin sözcük ve giriş dizesi için değerler sağlayın. Uygulama, Arama sözcüğünün dizede kaç kez göründüğünü gösterir.
 

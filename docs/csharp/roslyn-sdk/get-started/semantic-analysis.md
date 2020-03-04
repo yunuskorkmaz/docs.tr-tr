@@ -3,12 +3,12 @@ title: Anlamsal analiz ile çalışmaya başlama
 description: Bu öğreticide, .NET derleyici SDK 'sını kullanarak anlam analizi ile çalışmaya genel bakış sunulmaktadır.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 7bf2f40ea0bc059d9c517780016ca5deb805ceb6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: a6dcaeeb86acb5c0e1602f01dc5952ffd9d5e3f5
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346975"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240518"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Anlamsal analiz ile çalışmaya başlama
 
@@ -46,15 +46,15 @@ Yeni C# bir **tek başına kod analizi araç** projesi oluşturun:
 Temel "Merhaba Dünya!" öğesini çözümleyeceğiz Program daha önce gösteriliyor.
 Merhaba Dünya programın metnini `Program` sınıfınıza bir sabit olarak ekleyin:
 
-[!code-csharp[Declare the program test](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#1 "Declare a constant string for the program text to analyze")]
+[!code-csharp[Declare the program test](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#1 "Declare a constant string for the program text to analyze")]
 
 Daha sonra, `programText` sabitinde kod metni için sözdizimi ağacını derlemek üzere aşağıdaki kodu ekleyin.  Aşağıdaki satırı `Main` yöntemine ekleyin:
 
-[!code-csharp[Create the tree](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#2 "Create the syntax tree")]
+[!code-csharp[Create the tree](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#2 "Create the syntax tree")]
 
 Ardından, zaten oluşturduğunuz ağaçtan bir <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation> oluşturun. "Merhaba Dünya" örneği, <xref:System.String> ve <xref:System.Console> türlerini kullanır. Derlemenizin bu iki türü bildiren derlemeye başvurmanız gerekir. Uygun derlemeye başvuru dahil olmak üzere, sözdizimi ağacınızı oluşturmak için aşağıdaki satırı `Main` yöntemine ekleyin:
 
-[!code-csharp[Create the compilation](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#3 "Create the compilation for the semantic model")]
+[!code-csharp[Create the compilation](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#3 "Create the compilation for the semantic model")]
 
 <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.AddReferences%2A?displayProperty=nameWithType> yöntemi, derlemeye başvurular ekler. <xref:Microsoft.CodeAnalysis.MetadataReference.CreateFromFile%2A?displayProperty=nameWithType> yöntemi bir derlemeyi başvuru olarak yükler.
 
@@ -62,19 +62,19 @@ Ardından, zaten oluşturduğunuz ağaçtan bir <xref:Microsoft.CodeAnalysis.CSh
 
 <xref:Microsoft.CodeAnalysis.Compilation> aldıktan sonra, bu <xref:Microsoft.CodeAnalysis.Compilation>bulunan <xref:Microsoft.CodeAnalysis.SyntaxTree> için <xref:Microsoft.CodeAnalysis.SemanticModel> isteyebilirsiniz. Anlamsal modeli, normalde IntelliSense 'ten alacağınız tüm bilgilerin kaynağı olarak düşünebilirsiniz. Bir <xref:Microsoft.CodeAnalysis.SemanticModel>, "Bu konumdaki kapsam içinde hangi adlar bulunur?", "Bu metin bloğunda hangi değişkenler kullanılır?" ve "Bu ad/ifade neye başvuruyor?" gibi sorulara yanıt verebilir. Anlam modeli oluşturmak için bu ifadeyi ekleyin:
 
-[!code-csharp[Create the semantic model](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#4 "Create the semantic model")]
+[!code-csharp[Create the semantic model](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#4 "Create the semantic model")]
 
 ## <a name="binding-a-name"></a>Ad bağlama
 
 <xref:Microsoft.CodeAnalysis.Compilation>, <xref:Microsoft.CodeAnalysis.SyntaxTree><xref:Microsoft.CodeAnalysis.SemanticModel> oluşturur. Modeli oluşturduktan sonra, ilk `using` yönergesini bulmak için onu sorgulayabilir ve `System` ad alanı için sembol bilgilerini alabilirsiniz. Anlam modeli oluşturmak ve ilk using ifadesinin simgesini almak için bu iki satırı `Main` yöntemine ekleyin:
 
-[!code-csharp[Find the namespace symbol for the first using](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#5 "Find the namespace symbol for the first using")]
+[!code-csharp[Find the namespace symbol for the first using](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#5 "Find the namespace symbol for the first using")]
 
 Yukarıdaki kod, `System` ad alanı için bir <xref:Microsoft.CodeAnalysis.SymbolInfo?displayProperty=nameWithType> almak üzere ilk `using` yönergesinin adının nasıl bağlanacağını gösterir. Yukarıdaki kod ayrıca kodun yapısını bulmak için **sözdizimi modelini** kullanmanızı da gösterir; **anlam modelini** , anlamını anlamak için kullanabilirsiniz. **Sözdizimi modeli** using deyimindeki dize `System` bulur. **Anlam modeli** `System` ad alanında tanımlanan türlerle ilgili tüm bilgilere sahiptir.
 
 <xref:Microsoft.CodeAnalysis.SymbolInfo> nesnesinden <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> özelliğini kullanarak <xref:Microsoft.CodeAnalysis.ISymbol?displayProperty=nameWithType> elde edebilirsiniz. Bu özellik, bu ifadenin başvurduğu simgeyi döndürür. Hiçbir şeye başvurmaz (sayısal değişmez değerler gibi), bu özellik `null`. <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> null olmadığında <xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> simgenin türünü gösterir. Bu örnekte, <xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> özelliği bir <xref:Microsoft.CodeAnalysis.SymbolKind.Namespace?displayProperty=nameWithType>. Aşağıdaki kodu `Main` yöntemine ekleyin. `System` ad alanının sembolünü alır ve `System` ad alanında belirtilen tüm alt ad alanlarını görüntüler:
 
-[!code-csharp[Display all the child namespaces](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#6 "Display all the child namespaces from this compilation")]
+[!code-csharp[Display all the child namespaces](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#6 "Display all the child namespaces from this compilation")]
 
 Programı çalıştırın ve aşağıdaki çıktıyı görmeniz gerekir:
 
@@ -107,33 +107,33 @@ Yukarıdaki kod, bir ada bağlama yoluyla nasıl bir sembol bulunacağını gös
 
 "Hello, World!" öğesini bulursunuz Programda tek dize sabit değerini bularak dize. Ardından, söz dizimi düğümünü bulduktan sonra söz konusu düğümün tür bilgilerini anlamsal modelden alın. `Main` yöntemine aşağıdaki kodu ekleyin:
 
-[!code-csharp[Find the namespace symbol for the only using](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#7 "Find the namespace symbol for the only using")]
+[!code-csharp[Find the namespace symbol for the only using](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#7 "Find the namespace symbol for the only using")]
 
 <xref:Microsoft.CodeAnalysis.TypeInfo?displayProperty=nameWithType> yapısı, değişmez değer türü hakkında anlam bilgisine erişim sağlayan bir <xref:Microsoft.CodeAnalysis.TypeInfo.Type?displayProperty=nameWithType> özelliği içerir. Bu örnekte, `string` türüdür. Bu özelliği yerel bir değişkene atayan bir bildirim ekleyin:
 
-[!code-csharp[Find the semantic information about the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#8 "Use the string literal to access the semantic information in the string type.")]
+[!code-csharp[Find the semantic information about the string type](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#8 "Use the string literal to access the semantic information in the string type.")]
 
 Bu öğreticiyi tamamlaması için, bir `string`döndüren `string` türünde belirtilen tüm ortak yöntemlerin dizisini oluşturan bir LINQ sorgusu oluşturalım. Bu sorgu karmaşıktır, bu yüzden satırı satıra göre oluşturalım ve sonra tek bir sorgu olarak yeniden yapılandırma. Bu sorgunun kaynağı, `string` türünde belirtilen tüm üyelerin sırasıdır:
 
-[!code-csharp[Access the sequence of members on the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#9 "Access the sequence of members on the string type.")]
+[!code-csharp[Access the sequence of members on the string type](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#9 "Access the sequence of members on the string type.")]
 
 Bu kaynak dizisi Özellikler ve alanlar da dahil olmak üzere tüm üyeleri içerir, bu nedenle <xref:Microsoft.CodeAnalysis.IMethodSymbol?displayProperty=nameWithType> nesneleri olan öğeleri bulmak için <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> yöntemini kullanarak filtreleyin:
 
-[!code-csharp[Filter the sequence to only methods](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#10 "Find the subset of the collection that is the methods.")]
+[!code-csharp[Filter the sequence to only methods](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#10 "Find the subset of the collection that is the methods.")]
 
 Sonra, yalnızca ortak olan yöntemleri döndürmek ve bir `string`döndürmek için başka bir filtre ekleyin:
 
-[!code-csharp[Filter on return type and accessibility](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#11 "Find only the public methods that return a string.")]
+[!code-csharp[Filter on return type and accessibility](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#11 "Find only the public methods that return a string.")]
 
 Yalnızca ad özelliğini ve yalnızca herhangi bir aşırı yüklemeyi kaldırarak farklı adları seçin:
 
-[!code-csharp[find the distinct names.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#12 "Use the string literal to access the semantic information in the string type.")]
+[!code-csharp[find the distinct names.](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#12 "Use the string literal to access the semantic information in the string type.")]
 
 Ayrıca, LINQ sorgu söz dizimini kullanarak tam sorgu oluşturabilir ve sonra tüm yöntem adlarını konsolda görüntüleyebilirsiniz:
 
-[!code-csharp[build and display the results of this query.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#13 "Build and display the results of the query.")]
+[!code-csharp[build and display the results of this query.](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#13 "Build and display the results of the query.")]
 
-Programı derleyin ve çalıştırın. Aşağıdaki çıkışı görmeniz gerekir:
+Programı derleyin ve çalıştırın. Aşağıdaki çıktıyı görmeniz gerekir:
 
 ```output
 Join

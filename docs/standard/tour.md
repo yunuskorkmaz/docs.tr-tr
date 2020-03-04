@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f4cd2e47da236d276a42b972265ffd1a2fe27310
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 61d4792b1f1b92dd59442ee38810da96c6cf63bd
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160345"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241149"
 ---
 # <a name="tour-of-net"></a>.NET Turu
 
@@ -41,7 +41,7 @@ Microsoft, üç .NET dilini etkin bir şekilde geliştirir C#ve F#destekler:, ve
 
 Aşağıdaki iki satır, her ikisi de bellek ayırır:
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
 
 Bellek ayırmayı serbest bırakmak için benzer bir anahtar sözcük yoktur, çünkü atık toplayıcı tarafından zamanlanan çalışma üzerinden bellek geri kazanır.
 
@@ -49,7 +49,7 @@ Bellek ayırmayı serbest bırakmak için benzer bir anahtar sözcük yoktur, ç
 
 Aşağıdaki örnekte, çalışma zamanı bellek güvenliğini zorlamak için bir <xref:System.IndexOutOfRangeException> özel durumu oluşturur:
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 ## <a name="working-with-unmanaged-resources"></a>Yönetilmeyen kaynaklarla çalışma
 
@@ -57,7 +57,7 @@ Bazı nesneler *yönetilmeyen kaynaklara*başvurur. Yönetilmeyen kaynaklar, .NE
 
 .NET ' te, yönetilmeyen kaynaklara başvuran nesneler <xref:System.IDisposable> arabirimini uygular. Nesnesini kullanarak işiniz bittiğinde, yönetilmeyen kaynakları serbest bırakmaktan sorumlu olan nesnenin <xref:System.IDisposable.Dispose> yöntemini çağırın. .NET dilleri, aşağıdaki örnekte gösterildiği gibi, bu nesneler için uygun bir [`using` bildirimine](../csharp/language-reference/keywords/using.md) sahiptir:
 
-[!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
+[!code-csharp[UnmanagedResources](../../samples/snippets/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
 `using` bloğu tamamlandığında, .NET çalışma zamanı otomatik olarak `stream` nesnenin <xref:System.IDisposable.Dispose> yöntemini çağırır ve bu dosya tanıtıcısını yayınlar. Ayrıca, bir özel durum denetimin bloğundan ayrılmasına neden olursa, çalışma zamanı bunu yapar.
 
@@ -73,15 +73,15 @@ Bir nesne, belirli bir türün örneğidir. Belirli bir nesne için izin verilen
 
 .NET dilleri, temel ve türetilmiş sınıfların Hiyerarşileriyle nesne yönelimlidir. .NET çalışma zamanı, yalnızca nesne hiyerarşisine göre hizalı nesne yayınlarına ve çağrılarına izin verir. Herhangi bir .NET dilinde tanımlanan her türün temel <xref:System.Object> türünden türetildiğinden emin unutmayın.
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
 
 Tür güvenliği, erişimci anahtar sözcüklerinin aslına uygunluğunu garanti ederek kapsüllemeye yardımcı olmak için de kullanılır. Erişimci anahtar sözcükleri, belirli bir türdeki üyelere diğer kod tarafından erişimi denetleyen yapıtlardır. Bunlar genellikle davranışını yönetmek için kullanılan bir tür içindeki çeşitli veri türleri için kullanılır.
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
 C#, Visual Basic ve F# desteği yerel *tür çıkarımı*. Tür çıkarımı, derleyicinin sağ taraftaki ifadeden sol taraftaki ifadenin türünü akmasıdır. Bu, tür güvenliği kopmuş veya kaçınılmış değildir. Elde edilen türün, her şeyi ifade eden güçlü bir türü vardır. Önceki örnekte, tür çıkarımı tanıtmak için `dog` yeniden yazılır ve örneğin geri kalanı değiştirilmez:
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
 F#, ve Visual Basic ' de C# bulunan yöntem yerel tür çıkarımı dışında daha fazla tür çıkarımı özelliğine sahiptir. Daha fazla bilgi için bkz. [tür çıkarımı](../fsharp/language-reference/type-inference.md).
 
@@ -101,7 +101,7 @@ Yardım geliştirenler genel veri yapıları uygulayan genel türler eklenmişti
 
 Aşağıdaki örnek, bir <xref:System.Collections.Generic.List%601> türleri örneği kullanılarak çalışan temel bir programı göstermektedir:
 
-[!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]
+[!code-csharp[GenericsShort](../../samples/snippets/csharp/snippets/tour/GenericsShort.csx)]
 
 Daha fazla bilgi için [Genel türler (genel türler) genel bakış](generics.md) konusuna bakın.
 
@@ -133,7 +133,7 @@ Dil desteğine bağlı olarak, CLR yerel belleğe erişmenize ve `unsafe` kod ar
 
 Aşağıdaki örnek, `StringBuilder` sınıfından `ToString()` yönteminin değiştirilmiş bir sürümüdür. `unsafe` kodun kullanımını, belleğin öbeklerini doğrudan hareket ettirerek bir algoritmayı verimli bir şekilde nasıl uygulayabileceğinizi gösterir:
 
-[!code-csharp[Unsafe](../../samples/csharp/snippets/tour/Unsafe.csx)]
+[!code-csharp[Unsafe](../../samples/snippets/csharp/snippets/tour/Unsafe.csx)]
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: a9f507ecdfced5b044b9d6338f723f53b1b4c4b7
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: a6319cbbbe8a691f5d2a01a13a5abfa2550b3705
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115838"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239527"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Bit düzeyinde ve kaydırma işleçleriC# (başvuru)
 
@@ -54,7 +54,7 @@ Bit düzeyinde ve kaydırma işlemleri hiçbir şekilde taşmaya neden olmaz ve 
 
 `~` işleci, her biti ters çevirerek işleneni bir bit düzeyinde tamamlayıcı üretir:
 
-[!code-csharp-interactive[bitwise NOT](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseComplement)]
+[!code-csharp-interactive[bitwise NOT](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseComplement)]
 
 Sonlandırıcıları bildirmek için `~` sembolünü de kullanabilirsiniz. Daha fazla bilgi için bkz. [sonlandırıcılar](../../programming-guide/classes-and-structs/destructors.md).
 
@@ -64,11 +64,11 @@ Sonlandırıcıları bildirmek için `~` sembolünü de kullanabilirsiniz. Daha 
 
 Aşağıdaki örnekte gösterildiği gibi, sol SHIFT işlemi, sonuç türü aralığının dışındaki yüksek sıralı bitleri atar ve düşük sıralı boş bit konumlarını sıfıra ayarlar:
 
-[!code-csharp-interactive[left shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
+[!code-csharp-interactive[left shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
 
 SHIFT işleçleri yalnızca `int`, `uint`, `long`ve `ulong` türleri için tanımlandığından, bir işlemin sonucu her zaman en az 32 bit içerir. Sol işlenen başka bir integral türü (`sbyte`, `byte`, `short`, `ushort`veya `char`) ise, aşağıdaki örnekte gösterildiği gibi, değeri `int` türüne dönüştürülür:
 
-[!code-csharp-interactive[left shift with promotion](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
+[!code-csharp-interactive[left shift with promotion](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
 
 `<<` işlecinin sağ işleneninin kaydırma sayısını tanımladığı hakkında daha fazla bilgi için [SHIFT Operators bölümünün kaydırma sayısına](#shift-count-of-the-shift-operators) bakın.
 
@@ -78,17 +78,17 @@ SHIFT işleçleri yalnızca `int`, `uint`, `long`ve `ulong` türleri için tanı
 
 Aşağıdaki örnekte gösterildiği gibi, doğru kaydırma işlemi düşük sıralı bitleri atar:
 
-[!code-csharp-interactive[right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
+[!code-csharp-interactive[right shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
 
 Yüksek sıralı boş bit konumları, sol taraftaki işlenenin türüne göre aşağıdaki gibi ayarlanır:
 
 - Sol işlenen `int` veya `long`türünde ise, sağ SHIFT işleci bir *Aritmetik* kaydırma gerçekleştirir: sol işlenenin en önemli bit (işaret biti) değeri, yüksek sıralı boş bit konumlarına yayılır. Diğer bir deyişle, sol işlenen negatif olmayan ve negatifse bir tane olarak ayarlandıysa, yüksek sıralı boş bit konumları sıfır olarak ayarlanır.
 
-  [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
+  [!code-csharp-interactive[arithmetic right shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
 - Sol işlenen `uint` veya `ulong`türünde ise, sağ SHIFT işleci bir *mantıksal* kaydırma gerçekleştirir: yüksek sıralı boş bit konumları her zaman sıfır olarak ayarlanır.
 
-  [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
+  [!code-csharp-interactive[logical right shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
 `>>` işlecinin sağ işleneninin kaydırma sayısını tanımladığı hakkında daha fazla bilgi için [SHIFT Operators bölümünün kaydırma sayısına](#shift-count-of-the-shift-operators) bakın.
 
@@ -96,7 +96,7 @@ Yüksek sıralı boş bit konumları, sol taraftaki işlenenin türüne göre a�
 
 `&` işleci, işlenenlerinin bit düzeyinde mantıksal ve işlecini hesaplar:
 
-[!code-csharp-interactive[bitwise AND](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
+[!code-csharp-interactive[bitwise AND](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
 
 `bool` işlenenleri için `&` işleci, işlenenlerinin [MANTıKSAL ve](boolean-logical-operators.md#logical-and-operator-) işlecini hesaplar. Birli `&` işleci, [Adres işleçtir](pointer-related-operators.md#address-of-operator-).
 
@@ -104,7 +104,7 @@ Yüksek sıralı boş bit konumları, sol taraftaki işlenenin türüne göre a�
 
 `^` işleci, işlenenlerinin bit düzeyinde mantıksal XOR değeri olarak da bilinen bit düzeyinde mantıksal dışlamalı veya bir şekilde hesaplar:
 
-[!code-csharp-interactive[bitwise XOR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
+[!code-csharp-interactive[bitwise XOR](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
 
 `bool` işlenenleri için `^` işleci, işlenenlerinin [mantıksal dışlamalı veya](boolean-logical-operators.md#logical-exclusive-or-operator-) bir listesini hesaplar.
 
@@ -112,7 +112,7 @@ Yüksek sıralı boş bit konumları, sol taraftaki işlenenin türüne göre a�
 
 `|` işleci, işlenenlerinin bit düzeyinde mantıksal veya işlecini hesaplar:
 
-[!code-csharp-interactive[bitwise OR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
+[!code-csharp-interactive[bitwise OR](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
 
 `bool` işlenenleri için `|` işleci, işlenenlerinin [MANTıKSAL veya](boolean-logical-operators.md#logical-or-operator-) işlecini hesaplar.
 
@@ -134,11 +134,11 @@ x = x op y
 
 Aşağıdaki örnek, bileşik atamanın bit düzeyinde ve kaydırma işleçleriyle kullanımını gösterir:
 
-[!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
+[!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
 
 [Sayısal yükseltmeler](~/_csharplang/spec/expressions.md#numeric-promotions)nedeniyle `op` işleminin sonucu `x``T` türüne örtülü olarak dönüştürülebilir olmayabilir. Böyle bir durumda, `op` önceden tanımlanmış bir işleçse ve işlemin sonucu `x``T` türüne açıkça dönüştürülesiyse, `x = (T)(x op y)`yalnızca bir kez değerlendirilmemesi dışında, form `x op= y` bir bileşik atama ifadesi `x` değerine eşdeğerdir. Aşağıdaki örnekte bu davranış gösterilmektedir:
 
-[!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
+[!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
 
 ## <a name="operator-precedence"></a>İşleç önceliği
 
@@ -152,7 +152,7 @@ Aşağıdaki liste, en yüksek öncelikten en düşüğe başlayarak bit düzeyi
 
 İşleç önceliğine göre uygulanan değerlendirmenin sırasını değiştirmek için parantez, `()`kullanın:
 
-[!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
+[!code-csharp-interactive[operator precedence](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
 
 Öncelik düzeyine göre sıralanan C# işleçlerin tüm listesi için, [ C# işleçler](index.md) makalesinin [operatör önceliği](index.md#operator-precedence) bölümüne bakın.
 
@@ -168,7 +168,7 @@ Aşağıdaki liste, en yüksek öncelikten en düşüğe başlayarak bit düzeyi
 
 Aşağıdaki örnekte bu davranış gösterilmektedir:
 
-[!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
+[!code-csharp-interactive[shift count example](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
 
 > [!NOTE]
 > Yukarıdaki örnekte gösterildiği gibi, sağ işlenenin değeri sol işlenendeki bit sayısından büyük olsa da, bir vardiya işleminin sonucu sıfır olmayan bir değer olabilir.

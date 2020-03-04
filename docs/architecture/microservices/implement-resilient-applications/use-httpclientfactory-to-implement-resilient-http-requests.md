@@ -2,12 +2,12 @@
 title: Dayanıklı HTTP isteklerini uygulamak için HttpClientFactory kullanma
 description: .NET Core 2,1 ' den bu yana sunulan HttpClientFactory ' ı kullanarak `HttpClient` örnekleri oluşturmaya, bunu uygulamalarınızda kullanmanızı kolaylaştırmayı öğrenin.
 ms.date: 08/08/2019
-ms.openlocfilehash: 1a6d65509d669166e73ad907b506bae7fa26536d
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 7028a23a8945802d7ec0129b70b2840d03acfba1
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900320"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241058"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Dayanıklı HTTP isteklerini uygulamak için HttpClientFactory kullanma
 
@@ -198,5 +198,5 @@ Bu noktaya kadar, gösterilen kod yalnızca normal http isteklerini gerçekleşt
   <https://github.com/dotnet/extensions/issues/1345>
 
 >[!div class="step-by-step"]
->[Önceki](explore-custom-http-call-retries-exponential-backoff.md)
+>[Önceki](implement-resilient-entity-framework-core-sql-connections.md)
 >[İleri](implement-http-call-retries-exponential-backoff-polly.md)

@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 1a691ad0c1f8dbfadd642360d7f9629a136ff3ab
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: fe69521a6ac88055e3e8c8502a7e19a72667dbef
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156666"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240863"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>.NET Core CLI kullanarak .NET Core ile çalışmaya başlama
 
@@ -43,7 +43,7 @@ Hızlı bir yol açalım:
 
     *Merhaba. csproj*:
 
-    [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+    [!code-xml[Hello.csproj](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Hello.csproj)]
 
     Proje dosyası, bağımlılıkları geri yüklemek ve programı derlemek için gereken her şeyi belirtir.
 
@@ -52,7 +52,7 @@ Hızlı bir yol açalım:
 
     *Program.cs*:
 
-    [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
+    [!code-csharp[Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Program.cs)]
 
     Program `using System`başlar, bu, "`System` ad alanındaki her şeyi bu dosyanın kapsamına getir" anlamına gelir. `System` ad alanı `Console` sınıfını içerir.
 
@@ -100,7 +100,7 @@ Programı bir bit olarak değiştirelim. Fibonaccı numaraları eğlencelidir. b
 
 01. *Program.cs* dosyanızın içeriğini aşağıdaki kodla değiştirin:
 
-    [!code-csharp[Fibonacci](~/samples/core/console-apps/fibonacci-msbuild/Program.cs)]
+    [!code-csharp[Fibonacci](~/samples/snippets/core/tutorials/cli-create-console-app/fibonacci-msbuild/csharp/Program.cs)]
 
 02. Değişiklikleri derlemek için [DotNet derlemesini](../tools/dotnet-build.md) çalıştırın.
 
@@ -140,11 +140,11 @@ Tek dosyalar basit bir tek başına programlar için uygundur, ancak daha karma�
 
 01. Aşağıdaki kodla *FibonacciGenerator.cs* adlı *Hello* dizininin içine yeni bir dosya ekleyin:
 
-    [!code-csharp[Fibonacci Generator](~/samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
+    [!code-csharp[Fibonacci Generator](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/FibonacciGenerator.cs)]
 
 02. *Program.cs* dosyanızdaki `Main` yöntemini, yeni sınıfı başlatmak ve metodunu aşağıdaki örnekte olduğu gibi çağırmak için değiştirin:
 
-    [!code-csharp[New Program.cs](~/samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+    [!code-csharp[New Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/Program.cs)]
 
 03. Değişiklikleri derlemek için [DotNet derlemesini](../tools/dotnet-build.md) çalıştırın.
 
@@ -174,7 +174,7 @@ Tek dosyalar basit bir tek başına programlar için uygundur, ancak daha karma�
     377
     ```
 
-## <a name="publish-your-app"></a>Uygulamanızı yayımlama
+## <a name="publish-your-app"></a>Uygulamanızı yayınlama
 
 Uygulamanızı dağıtmaya hazırladıktan sonra, _\\,\\netcoreapp 3.1\\hata ayıkla_ (Windows dışı sistemler için\\kullanın) konumundaki _Yayımla_ klasörünü oluşturmak için [DotNet Publish](../tools/dotnet-publish.md) komutunu kullanın.`/` Daha önce DotNet çalışma zamanını yükledikleri sürece _Publish_ klasörünün içeriğini diğer platformlara dağıtabilirsiniz.
 

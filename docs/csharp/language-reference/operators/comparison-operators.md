@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 86f557d0575b440455fd6363f0d0d6783a9e7acc
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5a9235762effef6f9c0ef501a55bca47ef2510cb
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345325"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239426"
 ---
 # <a name="comparison-operators-c-reference"></a>Karşılaştırma işleçleri (C# başvuru)
 
@@ -41,25 +41,25 @@ Numaralandırma türleri de karşılaştırma işleçlerini destekler. Aynı [sa
 
 `<` işleci, sol işlenenin sağ işleneninden daha küçükse `true` döndürür `false` Aksi takdirde:
 
-[!code-csharp-interactive[less than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Less)]
+[!code-csharp-interactive[less than example](~/samples/snippets/csharp/language-reference/operators/ComparisonOperators.cs#Less)]
 
 ## <a name="greater-than-operator-"></a>Büyüktür işleci >
 
 `>` işleci, sol işleneni sağ işleneninden büyükse `true` döndürür `false` Aksi takdirde:
 
-[!code-csharp-interactive[greater than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Greater)]
+[!code-csharp-interactive[greater than example](~/samples/snippets/csharp/language-reference/operators/ComparisonOperators.cs#Greater)]
 
 ## <a name="less-than-or-equal-operator-"></a>Küçüktür veya eşittir işleci \<=
 
 `<=` işleci, sol işlenenin sağ işleneninden küçük veya ona eşit olması durumunda `true` döndürür `false` Aksi takdirde:
 
-[!code-csharp-interactive[less than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#LessOrEqual)]
+[!code-csharp-interactive[less than or equal example](~/samples/snippets/csharp/language-reference/operators/ComparisonOperators.cs#LessOrEqual)]
 
 ## <a name="greater-than-or-equal-operator-"></a>Büyüktür veya eşittir işleci > =
 
 `>=` işleci, sol işlenenin sağ işleneninden büyük veya ona eşit olması durumunda `true` döndürür `false` Aksi takdirde:
 
-[!code-csharp-interactive[greater than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#GreaterOrEqual)]
+[!code-csharp-interactive[greater than or equal example](~/samples/snippets/csharp/language-reference/operators/ComparisonOperators.cs#GreaterOrEqual)]
 
 ## <a name="operator-overloadability"></a>Operatör overloadability
 

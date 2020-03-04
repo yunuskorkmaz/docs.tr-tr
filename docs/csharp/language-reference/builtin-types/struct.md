@@ -8,18 +8,18 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 6113912f176d2d7b68c77ff2e78a361b373ca31a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 523269ffc9de9b750330fcefd15a9026d6dc59b8
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634871"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239787"
 ---
 # <a name="structure-types-c-reference"></a>Yapı türleri (C# başvuru)
 
 *Yapı türü* (veya *Yapı türü*), verileri ve ilgili işlevleri kapsüllemek için bir [değer türüdür](value-types.md) . `struct` anahtar sözcüğünü kullanarak bir yapı türü tanımlayabilirsiniz:
 
-[!code-csharp[struct example](~/samples/csharp/language-reference/builtin-types/StructType.cs#StructExample)]
+[!code-csharp[struct example](~/samples/snippets/csharp/language-reference/builtin-types/StructType.cs#StructExample)]
 
 Yapı türlerinde *değer semantiği*vardır. Diğer bir deyişle, yapı türünün bir değişkeni türünün bir örneğini içerir. Varsayılan olarak, değişken değerleri atamaya kopyalanır, bir yönteme bağımsız değişken geçirme ve bir yöntem sonucu döndürüyor. Yapı türü değişkeni söz konusu olduğunda, türün bir örneği kopyalanır. Daha fazla bilgi için bkz. [değer türleri](value-types.md).
 
@@ -47,7 +47,7 @@ Genellikle, [`new`](../operators/new-operator.md) işleçle uygun bir oluşturuc
 
 Bir yapı türünün tüm örnek alanlarına erişilebiliyorsa, `new` işleci olmadan da örneğini oluşturabilirsiniz. Bu durumda, örneğin ilk kullanmadan önce tüm örnek alanlarını başlatmalısınız. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir:
 
-[!code-csharp[without new](~/samples/csharp/language-reference/builtin-types/StructType.cs#WithoutNew)]
+[!code-csharp[without new](~/samples/snippets/csharp/language-reference/builtin-types/StructType.cs#WithoutNew)]
 
 [Yerleşik değer türleri](value-types.md#built-in-value-types)söz konusu olduğunda, türü bir değer belirtmek için karşılık gelen değişmez değerleri kullanın.
 

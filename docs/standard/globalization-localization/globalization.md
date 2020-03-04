@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: 953d8d3055dff48cd943b748771f20803a4d6573
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1055b10d0e3e971a6b0963c1ed950fef903ac5bd
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120902"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239956"
 ---
 # <a name="globalization"></a>Genelleştirme
 
@@ -66,7 +66,7 @@ Mümkün olduğunda, dizeleri tek bir dizi karakter olarak işlemek yerine dizel
 > [!TIP]
 > Bir dizedeki tek karakterler yerine metin öğeleriyle çalışmak için <xref:System.Globalization.StringInfo> sınıfını kullanabilirsiniz.
 
-Dize aramalarındaki ve karşılaştırmalarda, yaygın bir hata dizeyi, her biri <xref:System.Char> nesne tarafından temsil edilen bir karakter koleksiyonu olarak değerlendirmek olur. Aslında, tek bir karakter bir, iki veya daha fazla <xref:System.Char> nesnesi ile oluşturulabilir. Bu tür karakterler, alfabeller Unicode temel Latin karakter aralığı (U + 0021-U + 007E) dışındaki karakterlerden oluşan kültürlerin dizeleri içinde en sık bulunur. Aşağıdaki örnek, bir dizesinde aksan karakteri (U + 00C0) olan LATIN büyük harf A 'nın dizinini bulmaya çalışır. Ancak, bu karakter iki farklı şekilde temsil edilebilir: tek bir kod birimi (U + 00C0) veya bileşik bir karakter (iki kod birimi: U + 0021 ve U + 007E) olarak. Bu durumda, karakter dize örneğinde, U + 0021 ve U + 007E olmak üzere iki <xref:System.Char> nesne tarafından temsil edilir. Örnek kod, bu karakterin konumunu dize örneğinde bulmak için <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> ve <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> aşırı yüklerini çağırır, ancak bu farklı sonuçlar döndürür. İlk yöntem çağrısı bir <xref:System.Char> bağımsız değişkenine sahiptir; sıralı bir karşılaştırma gerçekleştirir ve bu nedenle bir eşleşme bulamaz. İkinci çağrının bir <xref:System.String> bağımsız değişkeni vardır; kültüre duyarlı bir karşılaştırma yapar ve bu nedenle bir eşleşme bulur.
+Dize aramalarındaki ve karşılaştırmalarda, yaygın bir hata dizeyi, her biri <xref:System.Char> nesne tarafından temsil edilen bir karakter koleksiyonu olarak değerlendirmek olur. Aslında, tek bir karakter bir, iki veya daha fazla <xref:System.Char> nesnesi ile oluşturulabilir. Bu tür karakterler, alfabeller Unicode temel Latin karakter aralığı (U + 0021-U + 007E) dışındaki karakterlerden oluşan kültürlerin dizeleri içinde en sık bulunur. Aşağıdaki örnek, bir dizesinde aksan karakteri (U + 00C0) olan LATIN büyük harf A 'nın dizinini bulmaya çalışır. Ancak, bu karakter iki farklı şekilde temsil edilebilir: tek bir kod birimi (U + 00C0) veya bileşik bir karakter (iki kod birimi: U + 0041 ve U + 0300) olarak. Bu durumda, karakter dize örneğinde, U + 0041 ve U + 0300 nesne <xref:System.Char> tarafından temsil edilir. Örnek kod, bu karakterin konumunu dize örneğinde bulmak için <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> ve <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> aşırı yüklerini çağırır, ancak bu farklı sonuçlar döndürür. İlk yöntem çağrısı bir <xref:System.Char> bağımsız değişkenine sahiptir; sıralı bir karşılaştırma gerçekleştirir ve bu nedenle bir eşleşme bulamaz. İkinci çağrının bir <xref:System.String> bağımsız değişkeni vardır; kültüre duyarlı bir karşılaştırma yapar ve bu nedenle bir eşleşme bulur.
 
 [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
 [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]
@@ -112,7 +112,7 @@ Kültüre duyarlı dize karşılaştırması, her bir kültürün <xref:System.G
 |.NET Framework 4|Tüm işletim sistemleri|Unicode 5,0|
 |Windows 7 ' de .NET Framework 4,5 ve üzeri|Unicode 5,0|
 |Windows 8 ve sonraki işletim sistemlerinde .NET Framework 4,5 ve üzeri|Unicode 6.3.0|
-|.NET Core (tüm sürümler)|, Temel alınan işletim sistemi tarafından desteklenen Unicode standart sürümüne bağlıdır.|
+|.NET core (tüm sürümler)|, Temel alınan işletim sistemi tarafından desteklenen Unicode standart sürümüne bağlıdır.|
 
 .NET Framework 4,5 ve tüm .NET Core sürümlerinde, dize karşılaştırma ve sıralama işletim sistemine bağlıdır. Windows 7 ' de çalışan .NET Framework 4,5 ve üzeri, verileri Unicode 5,0 uygulayan kendi tablolarından alır. Windows 8 ve üzeri sürümlerde çalışan .NET Framework 4,5 ve üzeri, Unicode 6,3 uygulayan işletim sistemi tablolarından veri alır. .NET Core 'da, desteklenen Unicode sürümü temeldeki işletim sistemine bağlıdır. Kültüre duyarlı sıralanmış verileri seri hale getirilebiliyorsanız, serileştirme verilerinizin .NET ve işletim sisteminin sıralama düzeni ile tutarlı olması için ne zaman sıralanması gerektiğini öğrenmek için <xref:System.Globalization.SortVersion> sınıfını kullanabilirsiniz. Bir örnek için <xref:System.Globalization.SortVersion> sınıfı konusuna bakın.
 
@@ -281,7 +281,7 @@ Genellikle, Kullanıcı arabiriminde numaralar görüntülendiğinde, Kullanıc�
 
 - [Bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md) özelliği, sayısal değerlerle kullanıldığında
 
-Aşağıdaki örnek, Paris, Fransa 'daki aylık ortalama sıcaklık sayısını görüntüler. Önce, verileri görüntülemeden önce geçerli kültürü Fransızca (Fransa) olarak ayarlar ve ardından Ingilizce (Birleşik Devletler) olarak ayarlar. Her durumda, ay adları ve sıcaklıklar o kültür için uygun olan biçimde görüntülenir. İki kültürlerin sıcaklık değerinde farklı Ondalık ayırıcılar kullandığına unutmayın. Ayrıca, tam ay adını göstermek için "aaaa" özel tarih ve saat biçim dizesini ve <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> a 'daki en uzun ay adının uzunluğunu belirleyerek sonuç dizesindeki ay adı için uygun alan miktarını ayırdığını unutmayın. rrAy.
+Aşağıdaki örnek, Paris, Fransa 'daki aylık ortalama sıcaklık sayısını görüntüler. Önce, verileri görüntülemeden önce geçerli kültürü Fransızca (Fransa) olarak ayarlar ve ardından Ingilizce (Birleşik Devletler) olarak ayarlar. Her durumda, ay adları ve sıcaklıklar o kültür için uygun olan biçimde görüntülenir. İki kültürlerin sıcaklık değerinde farklı Ondalık ayırıcılar kullandığına unutmayın. Ayrıca, tam ay adını göstermek için "aaaa" özel tarih ve saat biçim dizesini ve <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> dizisindeki en uzun ay adının uzunluğunu belirleyerek sonuç dizesinde ay adı için uygun alan miktarını ayırdığını unutmayın.
 
 [!code-csharp[Conceptual.Globalization#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/numbers1.cs#5)]
 [!code-vb[Conceptual.Globalization#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/numbers1.vb#5)]

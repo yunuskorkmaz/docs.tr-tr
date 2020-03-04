@@ -5,12 +5,12 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 498f8698401e91845b14ee1dbcda84ba7166bd14
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9924009ef4f0f8c512ea9b3da2b0dedeaa97bb9d
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712604"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239033"
 ---
 # <a name="true-and-false-operators-c-reference"></a>true ve false işleçleri (C# başvuru)
 
@@ -31,7 +31,7 @@ Tanımlı `true` ve [`false` işleçlerini içeren bir tür,](operator-overloadi
 
 Aşağıdaki örnek hem `true` hem de `false` işleçlerini tanımlayan türü gösterir. Bu tür Ayrıca, mantıksal ve işleç `&` de, `&&` işlecinin bu türdeki işlenenler için değerlendirilebilecek şekilde de yeniden yükler.
 
-[!code-csharp[true and false operators example](~/samples/csharp/language-reference/operators/TrueFalseOperators.cs)]
+[!code-csharp[true and false operators example](~/samples/snippets/csharp/language-reference/operators/TrueFalseOperators.cs)]
 
 `&&` işlecinin kısa devre dışı davranışına dikkat edin. `GetFuelLaunchStatus` yöntemi `LaunchStatus.Red`döndürdüğünde `&&` işlecinin sağ işleneni değerlendirilmez. Bunun nedeni, `LaunchStatus.Red` kesinlikle false olur. Sonra mantıksal ve sonucu, sağ işlenenin değerine bağlı değildir. Örneğin çıktısı aşağıdaki gibidir:
 

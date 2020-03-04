@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: f37bdca688559236d9b07b97f7ee7459b3be4f39
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 5a38ca94b6df676858e7cb058272e450aaf1572e
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449354"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241045"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core uygulamalarında verilerle çalışma
 
@@ -261,7 +261,7 @@ await strategy.ExecuteAsync(async () =>
 
         // Save to EventLog only if product price changed
         if (raiseProductPriceChangedEvent)
-        await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
+            await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
         transaction.Commit();
     }
 });
@@ -372,7 +372,7 @@ Azure Cosmos DB sorgu dili, JSON belgelerini sorgulamak için basit ancak güçl
 
 - Azure depolama giriş <https://docs.microsoft.com/azure/storage/storage-introduction>
 
-## <a name="caching"></a>Önbelleğe alma
+## <a name="caching"></a>Önbelleğe Alma
 
 Web uygulamalarında, her Web isteği mümkün olan en kısa sürede tamamlanmalıdır. Bunu gerçekleştirmenin bir yolu, sunucunun isteği tamamlaması için yapması gereken dış çağrı sayısını sınırlayacaktır. Önbelleğe alma işlemi, sunucuda verilerin bir kopyasının depolanmasını (veya verilerin kaynağından daha kolay sorgulanan başka bir veri deposu) içerir. Web uygulamaları ve özellikle de non-SPA geleneksel olmayan Web uygulamaları, her istekle birlikte Kullanıcı arabiriminin tamamını oluşturmanız gerekir. Bu sıklıkla, bir Kullanıcı isteğinden bir sonrakine aynı veritabanı sorgularının birçok kez oluşturulmasını içerir. Çoğu durumda, bu veriler nadiren değişir, bu yüzden sürekli olarak veritabanından isteme nedenidir. ASP.NET Core, tüm sayfaların önbelleğe alınması ve daha ayrıntılı önbelleğe alma davranışını destekleyen veri önbelleğe alma işlemleri için yanıt önbelleğe almayı destekler.
 

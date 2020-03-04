@@ -4,12 +4,12 @@ description: Sürüm oluşturma 'nın ve .NET C# 'te nasıl çalıştığını a
 ms.date: 01/08/2017
 ms.technology: csharp-advanced-concepts
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 3fadbc1257ae758fc220685fa074a4fa68b20ba1
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: ee123893ac8baa0a55bdf69ce49fb6fcb87601b4
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039662"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240008"
 ---
 # <a name="versioning-in-c"></a>C\# sürümünde sürüm oluşturma
 
@@ -53,7 +53,7 @@ Kullanıcılarınızın kitaplığınızın yeni sürümüne yükseltme yapması
 ### <a name="application-configuration-file"></a>Uygulama yapılandırma dosyası
 
 Bir .NET geliştiricisi olarak çoğu proje türünde bulunan [`app.config` dosyası](../framework/configure-apps/file-schema/index.md) ile karşılaşmanız çok yüksek bir şansınız vardır.
-Bu basit yapılandırma dosyası, yeni güncelleştirmelerin dağıtımını iyileştirmek için uzun bir yönteme gidebilirler. Genellikle kitaplıklarınızı düzenli olarak değişen bilgiler `app.config` dosyasında depolandığından, bu tür bilgiler güncelleştirilirken, eski sürümlerin yapılandırma dosyasının, yalnızca yeni bir sürüm ile değiştirilmesi gereken bir şekilde tasarlayabilirsiniz. kitaplığın yeniden derlenmesi gereksinimi.
+Bu basit yapılandırma dosyası, yeni güncelleştirmelerin dağıtımını iyileştirmek için uzun bir yönteme gidebilirler. Genellikle kitaplıklarınızı düzenli olarak değişen bilgiler `app.config` dosyasında depolandığından, bu tür bilgiler güncelleştirilirken, daha eski sürümlerin yapılandırma dosyasının, kitaplığın yeniden derlenmesi gerekmeden yeni bir dosya ile değiştirilmesi gerekir, ancak bu şekilde kitaplıkları tasarlamış olmanız gerekir.
 
 ## <a name="consuming-libraries"></a>Kitaplıkları kullanma
 
@@ -82,7 +82,7 @@ Bir temel sınıfın devralınan üyelerini gizlemek için `new` değiştiricisi
 
 Aşağıdaki örneği uygulayın:
 
-[!code-csharp[Sample usage of the 'new' modifier](~/samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](~/samples/snippets/csharp/versioning/new/Program.cs#sample)]
 
 **Output**
 
@@ -100,7 +100,7 @@ Bu, bir kitaplığın yeni sürümündeki bir temel sınıf, türetilmiş sını
 
 `override` değiştirici, türetilmiş bir uygulamanın, bir temel sınıf üyesinin uygulamasını gizliyor yerine genişlettiği anlamına gelir. Temel sınıf üyesine `virtual` değiştiricisine uygulanmış olması gerekir.
 
-[!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'override' modifier](../../samples/snippets/csharp/versioning/override/Program.cs#sample)]
 
 **Output**
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - null-coalescing assignment [C#]
 - ??= operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: b3d56c6c08443d344002b8e780a72fc547c316bb
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ce16f732fae0eec38b2a55af055e51c5fe70773a
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712656"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239163"
 ---
 # <a name="-and--operators-c-reference"></a>?? ve?? = işleçleri (C# başvuru)
 
@@ -23,13 +23,13 @@ Null birleşim işleci `??` `null`değilse, sol taraftaki işlenenin değerini d
 
 C# 8,0 ve sonraki sürümlerde bulunan null birleşim atama işleci `??=` sağ işleneninin değerini sol taraftaki işlenene yalnızca sol işlenen `null`değerlendirirken atar. Sol işlenen, null olmayan olarak değerlendirilirse `??=` işleci sağ işleneni değerlendirmez.
 
-[!code-csharp[null-coalescing assignment](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#Assignment)]
+[!code-csharp[null-coalescing assignment](~/samples/snippets/csharp/language-reference/operators/NullCoalescingOperator.cs#Assignment)]
 
 `??=` işlecinin sol tarafındaki işleneni bir değişken, [özellik](../../programming-guide/classes-and-structs/properties.md)veya [Dizin Oluşturucu](../../programming-guide/indexers/index.md) öğesi olmalıdır.
 
 C# 7,3 ve önceki sürümlerde `??` işlecinin sol işlenenin türü bir [başvuru türü](../keywords/reference-types.md) ya da [null yapılabilir bir değer türü](../builtin-types/nullable-value-types.md)olmalıdır. 8,0 ile C# başlayarak, bu gereksinim aşağıdaki değerle değiştirilmiştir: `??` ve `??=` işleçlerinin sol taraftaki işleneninin türü null yapılamayan bir değer türü olamaz. Özellikle, 8,0 ile C# başlayarak, null birleşim işleçlerini kısıtlanmış olmayan tür parametreleriyle kullanabilirsiniz:
 
-[!code-csharp[unconstrained type parameter](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#UnconstrainedType)]
+[!code-csharp[unconstrained type parameter](~/samples/snippets/csharp/language-reference/operators/NullCoalescingOperator.cs#UnconstrainedType)]
 
 Null birleştirme işleçleri doğru ilişkilendirilebilir. Diğer bir deyişle, formun ifadeleri
 
@@ -51,17 +51,17 @@ d ??= (e ??= f)
 
 - [Null koşullu işleçlere sahip ifadelerde?. ve? []](member-access-operators.md#null-conditional-operators--and-), null koşullu işlemlere sahip ifadenin sonucu `null`olduğunda değerlendirmek için alternatif bir ifade sağlamak üzere `??` işlecini kullanabilirsiniz:
 
-  [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
+  [!code-csharp-interactive[with null-conditional](~/samples/snippets/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
 
 - [Null yapılabilir değer türleriyle](../builtin-types/nullable-value-types.md) çalıştığınızda ve temel alınan değer türünde bir değer sağlamanız gerekiyorsa, null yapılabilir bir tür değeri `null`olduğunda sağlamak üzere değer belirtmek için `??` işlecini kullanın:
 
-  [!code-csharp-interactive[with nullable types](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullableTypes)]
+  [!code-csharp-interactive[with nullable types](~/samples/snippets/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullableTypes)]
 
   Null yapılabilir bir tür değeri `null`, temel alınan değer türünün varsayılan değeri olması durumunda kullanılacak değer <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> yöntemi kullanın.
 
 - 7,0 ' C# den başlayarak bağımsız değişken denetim kodunu daha kısa hale getirmek için `??` işlecinin sağ işleneni olarak bir [`throw` ifadesini](../keywords/throw.md#the-throw-expression) kullanabilirsiniz:
 
-  [!code-csharp[with throw expression](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithThrowExpression)]
+  [!code-csharp[with throw expression](~/samples/snippets/csharp/language-reference/operators/NullCoalescingOperator.cs#WithThrowExpression)]
 
   Yukarıdaki örnek ayrıca bir özelliği tanımlamak için [Expression-Bodied üyelerini](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) nasıl kullanacağınızı gösterir.
 
@@ -94,5 +94,5 @@ d ??= (e ??= f)
 
 - [C#başvurunun](../index.md)
 - [C# işleçleri](index.md)
-- [?. ve ?[] işleçleri](member-access-operators.md#null-conditional-operators--and-)
+- [?. '? [] işleçleri](member-access-operators.md#null-conditional-operators--and-)
 - [?: işleci](conditional-operator.md)

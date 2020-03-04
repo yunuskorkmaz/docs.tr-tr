@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 0c468f0fe56c68a16de660dbb3bd6356b4b6a00f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c8452ab1f90bb2873a591b483b5432311a9f9b79
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712773"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239632"
 ---
 # <a name="-and--operators-c-reference"></a>+ ve + = işleçleri (C# başvuru)
 
@@ -30,17 +30,17 @@ Aritmetik `+` işleci hakkında daha fazla bilgi için, [Aritmetik işleçler](a
 
 Bir veya her iki işlenen de [dize](../builtin-types/reference-types.md#the-string-type)türünde olduğunda, `+` işleci işlenenlerinin dize temsillerini birleştirir:
 
-[!code-csharp-interactive[string concatenation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddStrings)]
+[!code-csharp-interactive[string concatenation](~/samples/snippets/csharp/language-reference/operators/AdditionOperator.cs#AddStrings)]
 
 C# 6 ' dan başlayarak [dize ilişkilendirme](../tokens/interpolated.md) , dizeleri biçimlendirmek için daha kolay bir yol sağlar:
 
-[!code-csharp-interactive[string interpolation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#UseStringInterpolation)]
+[!code-csharp-interactive[string interpolation](~/samples/snippets/csharp/language-reference/operators/AdditionOperator.cs#UseStringInterpolation)]
 
 ## <a name="delegate-combination"></a>Temsilci birleşimi
 
 Aynı [temsilci](../builtin-types/reference-types.md#the-delegate-type) türünün işlenenleri için `+` işleci, çağrıldığında sol işlenen ve sonra sağ işleneni çağıran yeni bir temsilci örneği döndürür. İşlenenlerin herhangi biri `null`ise, `+` işleci başka bir işlenenin değerini döndürür (Bu da `null`olabilir). Aşağıdaki örnek, temsilcilerin `+` işleçle nasıl birleştirilebilme gösterir:
 
-[!code-csharp-interactive[delegate combination](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
+[!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
 
 Temsilci kaldırma işlemini gerçekleştirmek için [`-` işlecini](subtraction-operator.md#delegate-removal)kullanın.
 
@@ -64,7 +64,7 @@ x = x + y
 
 Aşağıdaki örnek `+=` işlecinin kullanımını gösterir:
 
-[!code-csharp-interactive[+= examples](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddAndAssign)]
+[!code-csharp-interactive[+= examples](~/samples/snippets/csharp/language-reference/operators/AdditionOperator.cs#AddAndAssign)]
 
 Bir [olaya](../keywords/event.md)abone olduğunuzda bir olay işleyicisi yöntemi belirtmek için `+=` işlecini de kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: olaylara abone olma ve aboneliği kaldırma](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 

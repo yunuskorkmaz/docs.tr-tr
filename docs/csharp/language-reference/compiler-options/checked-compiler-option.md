@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 4e07698e7abdad00983b61412fa2a57e651d4d46
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 44dc0fc8f50e5248ce2fca17c36f7309a6aca8d1
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606993"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239698"
 ---
 # <a name="-checked-c-compiler-options"></a>-Checked (C# derleyici seçenekleri)
 **-Checked** seçeneği, veri türü aralığının dışında olan ve [denetlenen](../keywords/checked.md) veya [işaretlenmemiş](../keywords/unchecked.md) bir anahtar sözcüğünün kapsamında olmayan bir değer ile sonuçlanan bir tamsayı aritmetik ifadesinin bir çalışma zamanı özel durumuna neden olup olmadığını belirtir.  
@@ -25,9 +25,9 @@ ms.locfileid: "69606993"
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- `checked` Or`unchecked` anahtar sözcüğünün kapsamındaki bir tamsayı aritmetik bildirim, **-Checked** seçeneğinin etkisine tabi değildir.  
+ Bir `checked` veya `unchecked` anahtar sözcüğünün kapsamındaki tamsayı aritmetik bir ifade, **-Checked** seçeneğinin etkisine tabi değildir.  
   
- `checked` Or`unchecked` anahtar sözcüğünün kapsamında olmayan bir tamsayı aritmetik ifade, veri türü aralığı dışında bir değer ile sonuçlanır ve **-Checked +** (veya **-Checked**) derlemede kullanılırsa, bu ifade bir çalışma zamanında özel durum. **-Checked-** derlemede kullanılırsa, bu ifade çalışma zamanında bir özel duruma neden olmaz.  
+ Bir `checked` veya `unchecked` anahtar sözcüğünün kapsamında olmayan bir tamsayı aritmetik bildirim, derlemede bir değer ve **-Checked +** (veya **-Checked**) kullanılırsa, bu ifade çalışma zamanında bir özel duruma neden olur. **-Checked-** derlemede kullanılırsa, bu ifade çalışma zamanında bir özel duruma neden olmaz.  
   
  Bu seçenek için varsayılan değer **-denetlenir-** ; taşma denetimi devre dışı.
  
@@ -41,12 +41,12 @@ ms.locfileid: "69606993"
   
 3. **Gelişmiş** düğmesine tıklayın.  
   
-4. **Aritmetik taşma/yetersiz** yer özelliğinin denetimini değiştirin.  
+4. **Aritmetik taşma Için denetimi** değiştirin özelliği.  
   
- Bu derleyici seçeneğine program aracılığıyla erişmek için bkz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.  
+ Bu derleyici seçeneğine program aracılığıyla erişmek için bkz. <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki komut derlenir `t2.cs`. Komutunda öğesinin `-checked` kullanımı, bir `checked` veya `unchecked` anahtar sözcüğünün kapsamında olmayan dosyada herhangi bir tamsayı aritmetik deyimin olduğunu ve veri türü aralığının dışında bir değer oluşmasına neden olduğunu belirtir ışınızda.  
+ Aşağıdaki komut `t2.cs`derler. Komutunda `-checked` kullanımı, dosyasında bir `checked` veya `unchecked` anahtar sözcüğünün kapsamında olmayan herhangi bir tamsayı aritmetik deyimin olduğunu ve veri türünün aralığı dışında bir değer oluşmasına neden olur, çalışma zamanında bir özel duruma neden olur.  
   
 ```console  
 csc t2.cs -checked  

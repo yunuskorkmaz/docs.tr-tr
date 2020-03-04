@@ -3,18 +3,18 @@ title: Varsayılan arabirim yöntemlerini kullanarak Mixin türleri oluşturma
 description: Varsayılan arabirim üyelerini kullanarak, uygulamaları uygulayıcılar için isteğe bağlı varsayılan uygulamalarla genişletebilirsiniz.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: f97410124a4ca5bbb10972ab5e7942fa4af68d72
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: aaf8d34e27c9c56d95560656eb7a7b24b152c053
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921453"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240112"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Öğretici: varsayılan arabirim yöntemleriyle arabirimleri kullanarak sınıf oluştururken içindeki işlevselliği karıştırma
 
 .NET Core C# 3,0 ' de 8,0 ' den başlayarak, bir arabirimin üyesini bildirdiğinizde bir uygulama tanımlayabilirsiniz. Bu özellik, arabirimlerde belirtilen özellikler için varsayılan uygulamaları tanımlayabileceğiniz yeni yetenekler sağlar. Sınıflar işlevin ne zaman geçersiz kılınacağını, varsayılan işlevselliğin ne zaman kullanılacağını ve ayrık özellikler için ne zaman destek bildirelemeyeceğini seçebilir.
 
-Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -22,7 +22,7 @@ Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 > * Varsayılan uygulamaları kullanan sınıflar oluşturun.
 > * Varsayılan uygulamaların bazılarını veya tümünü geçersiz kılan sınıflar oluşturun.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Makinenizi, C# 8,0 derleyicisi dahil .NET Core çalıştıracak şekilde ayarlamanız gerekir. C# 8,0 derleyicisi, [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)veya [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya sonraki sürümleriyle başlayarak kullanılabilir.
 
@@ -53,21 +53,21 @@ Bu farklılıkları göstermek için kodu oluşturalım.
 
 Tüm ışıklarının davranışını tanımlayan arabirimi oluşturarak başlayın:
 
-[!code-csharp[Declare base interface](~/samples/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetILightInterfaceV1)]
+[!code-csharp[Declare base interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetILightInterfaceV1)]
 
 Temel bir ek yük hafif armakodu, aşağıdaki kodda gösterildiği gibi bu arabirimi uygulayabilir:
 
-[!code-csharp[First overhead light](~/samples/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetOverheadLightV1)]
+[!code-csharp[First overhead light](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetOverheadLightV1)]
 
 Bu öğreticide, kod IoT cihazlarını sürücüden almaz, ancak konsola ileti yazarak bu etkinliklere öykünür. Evinizi otomatikleştirmeden kodu keşfedebilirsiniz.
 
 Daha sonra, bir zaman aşımından sonra otomatik olarak kapatıbir ışığın arabirimini tanımlayalim:
 
-[!code-csharp[pure Timer interface](~/samples/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetPureTimerInterface)]
+[!code-csharp[pure Timer interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetPureTimerInterface)]
 
 Ek yük ışığıyla temel bir uygulama ekleyebilirsiniz, ancak daha iyi bir çözüm, bu arabirim tanımını `virtual` varsayılan bir uygulama sağlamak üzere değiştirmektir:
 
-[!code-csharp[Timer interface](~/samples/csharp/tutorials/mixins-with-interfaces/ITimerLight.cs?name=SnippetTimerLightFinal)]
+[!code-csharp[Timer interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ITimerLight.cs?name=SnippetTimerLightFinal)]
 
 Bu değişikliği ekleyerek `OverheadLight` sınıfı, arabirim için destek bildirerek Zamanlayıcı işlevini uygulayabilir:
 
@@ -77,7 +77,7 @@ public class OverheadLight : ITimerLight { }
 
 Farklı bir ışık türü, daha karmaşık bir protokolü destekleyebilir. Aşağıdaki kodda gösterildiği gibi, `TurnOnFor`için kendi uygulamasını sağlayabilir:
 
-[!code-csharp[Override the timer function](~/samples/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
+[!code-csharp[Override the timer function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
 
 Sanal Sınıf yöntemlerinin geçersiz kılınmasından farklı olarak, `HalogenLight` sınıfındaki `TurnOnFor` bildirimi `override` anahtar sözcüğünü kullanmaz.
 
@@ -85,19 +85,19 @@ Sanal Sınıf yöntemlerinin geçersiz kılınmasından farklı olarak, `Halogen
 
 Daha gelişmiş özellikleri tanıtdığınızda varsayılan arabirim yöntemlerinin avantajları daha net hale gelir. Arabirimleri kullanmak, özellikleri karıştırmanızı ve eşleştirmeye olanak sağlar. Ayrıca, her sınıf yazarının varsayılan uygulama ve özel bir uygulama arasında seçim yapmasına olanak sağlar. Yanıp sönen bir ışık için varsayılan uygulamayla bir arabirim ekleyelim:
 
-[!code-csharp[Define the blinking light interface](~/samples/csharp/tutorials/mixins-with-interfaces/IBlinkingLight.cs?name=SnippetBlinkingLight)]
+[!code-csharp[Define the blinking light interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/IBlinkingLight.cs?name=SnippetBlinkingLight)]
 
 Varsayılan uygulama herhangi bir ışığın yanıp sönmesini sağlar. Ek yük ışığı, varsayılan uygulamayı kullanarak hem Zamanlayıcı hem de yanıp sönme özellikleri ekleyebilir:
 
-[!code-csharp[Use the default blink function](~/samples/csharp/tutorials/mixins-with-interfaces/OverheadLight.cs?name=SnippetOverheadLight)]
+[!code-csharp[Use the default blink function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/OverheadLight.cs?name=SnippetOverheadLight)]
 
 Yeni bir hafif türü, `LEDLight` doğrudan Zamanlayıcı işlevini ve BLINK işlevini destekler. Bu ışık stili hem `ITimerLight` hem `IBlinkingLight` arabirimlerini uygular ve `Blink` yöntemini geçersiz kılar:
 
-[!code-csharp[Override the blink function](~/samples/csharp/tutorials/mixins-with-interfaces/LEDLight.cs?name=SnippetLEDLight)]
+[!code-csharp[Override the blink function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/LEDLight.cs?name=SnippetLEDLight)]
 
 Bir `ExtraFancyLight` doğrudan yanıp sönme ve Zamanlayıcı işlevlerini destekleyebilir:
 
-[!code-csharp[Override the blink and timer function](~/samples/csharp/tutorials/mixins-with-interfaces/ExtraFancyLight.cs?name=SnippetExtraFancyLight)]
+[!code-csharp[Override the blink and timer function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ExtraFancyLight.cs?name=SnippetExtraFancyLight)]
 
 Daha önce oluşturduğunuz `HalogenLight` yanıp sönmesini desteklemez. Bu nedenle, `IBlinkingLight` desteklenen arabirimlerinin listesine eklemeyin.
 
@@ -105,21 +105,21 @@ Daha önce oluşturduğunuz `HalogenLight` yanıp sönmesini desteklemez. Bu ned
 
 Daha sonra bazı test kodu yazalım. Desteklediği arabirimleri inceleyerek ışığın yeteneklerini C#tespit etmek için, [model eşleme](../pattern-matching.md) özelliğinden yararlanabilirsiniz.  Aşağıdaki yöntem her bir ışığın desteklenen yeteneklerini alıştırmaları:
 
-[!code-csharp[Test a light's capabilities](~/samples/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetTestLightFunctions)]
+[!code-csharp[Test a light's capabilities](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetTestLightFunctions)]
 
 `Main` yönteminizin aşağıdaki kodu, her ışık türünü sırayla oluşturur ve bu ışığı sınar:
 
-[!code-csharp[Test a light's capabilities](~/samples/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetMainMethod)]
+[!code-csharp[Test a light's capabilities](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetMainMethod)]
 
 ## <a name="how-the-compiler-determines-best-implementation"></a>Derleyicinin en iyi uygulamayı nasıl belirlediği
 
 Bu senaryo, herhangi bir uygulama olmadan temel bir arabirim gösterir. `ILight` arabirimine bir yöntemi eklemek yeni karmaşıklıkları tanıtır. Varsayılan arabirim yöntemlerini yöneten dil kuralları, birden fazla türetilmiş arabirimi uygulayan somut sınıflarda etkiyi en aza indirir. Bunun nasıl kullanıldığını göstermek için yeni bir yöntemi olan özgün arabirimi geliştirelim. Her gösterge ışığı, güç durumunu numaralandırılmış bir değer olarak rapor edebilir:
 
-[!code-csharp[Enumeration for power status](~/samples/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
+[!code-csharp[Enumeration for power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
 
 Varsayılan uygulama AC gücünü varsayar:
 
-[!code-csharp[Report a default power status](~/samples/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
+[!code-csharp[Report a default power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
 
 Bu değişiklikler, `ExtraFancyLight` `ILight` arabirimi ve hem türetilmiş arabirimler, `ITimerLight` ve `IBlinkingLight`için destek bildirse de düzgün şekilde derlenir. `ILight` arabiriminde belirtilen yalnızca bir "en yakın" uygulama vardır. Bir geçersiz kılma belirten herhangi bir sınıf "en yakın" uygulama haline gelir. Diğer türetilmiş arabirimlerin üyelerini içeren önceki sınıflarda örnekleri gördünüz.
 

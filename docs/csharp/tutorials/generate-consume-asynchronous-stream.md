@@ -4,18 +4,18 @@ description: Bu gelişmiş öğreticide, zaman uyumsuz akışlarının oluşturu
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: 412e5de5d9d73846fe2af36e3def383364389c75
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2fab2917a26a1774ad73866fa0448dbf47c94583
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039219"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240099"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Öğretici: 8,0 ve .NET Core 3,0 kullanarak C# zaman uyumsuz akışlar oluşturma ve kullanma
 
 C#8,0, veri akışındaki öğeler alınabilir veya zaman uyumsuz olarak oluşturulduğunda verilerin akış kaynağını modelleyebilir ve **zaman uyumsuz akışları**tanıtır. Zaman uyumsuz akışlar .NET Standard 2,1 ' de tanıtılan ve .NET Core 3,0 ' de uygulanan yeni arabirimleri kullanır ve zaman uyumsuz akış veri kaynakları için doğal bir programlama modeli sağlar.
 
-Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -23,7 +23,7 @@ Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 > - Bu veri kaynağını zaman uyumsuz olarak tükettin.
 > - Yeni arabirim ve veri kaynağı daha önceki zaman uyumlu veri dizileri için tercih edildiği zaman tanıyın.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Makinenizi, C# 8,0 derleyicisi dahil .NET Core çalıştıracak şekilde ayarlamanız gerekir. 8 C# derleyicisi, [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download)ile başlayarak kullanılabilir.
 
@@ -45,7 +45,7 @@ Bu öğreticide kullanılan başlangıç uygulamasının kodunu [CSharp/öğreti
 
 Başlangıç uygulaması, [DotNet/docs](https://github.com/dotnet/docs) deposunda yazılan son sorunları almak Için [GitHub graphql](https://developer.github.com/v4/) arabirimini kullanan bir konsol uygulamasıdır. Başlangıç uygulaması `Main` yöntemi için aşağıdaki koda bakarak başlayın:
 
-[!code-csharp[StarterAppMain](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#StarterAppMain)]
+[!code-csharp[StarterAppMain](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#StarterAppMain)]
 
 Kişisel erişim belirtecinize bir `GitHubKey` ortam değişkeni ayarlayabilir veya çağrdaki son bağımsız değişkeni kişisel erişim belirtecinizle birlikte `GenEnvVariable` olarak değiştirebilirsiniz. Kaynağı başkalarıyla kaydediyorsanız veya paylaşılan bir kaynak deposuna koymak istiyorsanız, erişim kodunuzu kaynak koda yerleştirmeyin.
 
@@ -57,11 +57,11 @@ Başlangıç uygulamasını çalıştırdığınızda, bu uygulamanın nasıl ç
 
 Uygulama, önceki bölümde ele alınan davranışı neden gözlemlediğinizi ortaya çıkarır. `runPagedQueryAsync`için kodu inceleyin:
 
-[!code-csharp[RunPagedQueryStarter](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
+[!code-csharp[RunPagedQueryStarter](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
 
 Yukarıdaki kodun disk belleği algoritmasına ve zaman uyumsuz yapısına odaklanalım. (GitHub GraphQL API 'SI ile ilgili ayrıntılar için [GitHub graphql belgelerine](https://developer.github.com/v4/guides/) başvurabilirsiniz.) `runPagedQueryAsync` yöntemi en sonuncudan en eskiye doğru olan sorunları numaralandırır. Sayfa başına 25 sorun ister ve önceki sayfaya devam etmek için yanıtın `pageInfo` yapısını inceler. Bu, çok sayfalı yanıtlar için GraphQL 'in standart disk belleği desteğini izler. Yanıt, bir `hasPreviousPages` değeri ve önceki sayfayı istemek için kullanılan bir `startCursor` değeri içeren bir `pageInfo` nesnesi içerir. Sorunlar `nodes` dizidir. `runPagedQueryAsync` yöntemi, tüm sayfalardaki sonuçları içeren bir diziye bu düğümleri ekler.
 
-Bir sonuç sayfasını aldıktan ve geri yükledikten sonra, `runPagedQueryAsync` ilerlemeyi raporlar ve iptal olup olmadığını denetler. İptal isteniyorsa, `runPagedQueryAsync` bir <xref:System.OperationCanceledException> oluşturur.
+Bir sonuç sayfasını aldıktan ve geri yükledikten sonra, `runPagedQueryAsync` ilerlemeyi raporlar ve iptal olup olmadığını denetler. İptal isteniyorsa, `runPagedQueryAsync` bir <xref:System.OperationCanceledException>oluşturur.
 
 Bu kodda iyileştirilen birkaç öğe vardır. En önemlisi `runPagedQueryAsync`, döndürülen tüm sorunlar için depolama alanı ayırmalıdır. Tüm açık sorunların alınması, alınan tüm sorunları depolamak için çok daha fazla bellek gerektirdiğinden, bu örnek 250 sorunlarını durduruyor. Ayrıca, ilerlemeyi destekleme ve iptali destekleme protokolleri, algoritmayı ilk okuma konusunda daha zor hale getirir. İlerleme durumunun nerede bildirileceğini bulmak için ilerleme sınıfına bakmanız gerekir. Ayrıca, İptalin istendiği ve nerede verildiğini anlamak için <xref:System.Threading.CancellationTokenSource> ve ilişkili <xref:System.Threading.CancellationToken> arasındaki iletişimleri izlemeniz gerekir.
 
@@ -106,31 +106,31 @@ Alışkın olabilecek bir tür <xref:System.Threading.Tasks.ValueTask?displayPro
 
 ## <a name="convert-to-async-streams"></a>Zaman uyumsuz akışlara Dönüştür
 
-Sonra, `runPagedQueryAsync` yöntemini bir zaman uyumsuz akış oluşturacak şekilde dönüştürün. İlk olarak, `runPagedQueryAsync` imzasını bir `IAsyncEnumerable<JToken>` döndürecek şekilde değiştirin ve aşağıdaki kodda gösterildiği gibi parametre listesinden iptal belirtecini ve ilerleme nesnelerini kaldırın:
+Sonra, `runPagedQueryAsync` yöntemini bir zaman uyumsuz akış oluşturacak şekilde dönüştürün. İlk olarak, `runPagedQueryAsync` imzasını bir `IAsyncEnumerable<JToken>`döndürecek şekilde değiştirin ve aşağıdaki kodda gösterildiği gibi parametre listesinden iptal belirtecini ve ilerleme nesnelerini kaldırın:
 
-[!code-csharp[FinishedSignature](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#UpdateSignature)]
+[!code-csharp[FinishedSignature](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#UpdateSignature)]
 
 Başlangıç kodu, aşağıdaki kodda gösterildiği gibi her sayfayı sayfa alındığından işler:
 
-[!code-csharp[StarterPaging](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#ProcessPage)]
+[!code-csharp[StarterPaging](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#ProcessPage)]
 
 Bu üç satırı aşağıdaki kodla değiştirin:
 
-[!code-csharp[FinishedPaging](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#YieldReturnPage)]
+[!code-csharp[FinishedPaging](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#YieldReturnPage)]
 
 Ayrıca, bu yöntemin önceki `finalResults` bildirimini ve değiştirdiğiniz döngüyü izleyen `return` bildirimini de kaldırabilirsiniz.
 
 Zaman uyumsuz akış oluşturma değişikliklerini tamamladınız. Tamamlanan yöntem aşağıdaki koda benzemelidir:
 
-[!code-csharp[FinishedGenerate](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#GenerateAsyncStream)]
+[!code-csharp[FinishedGenerate](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#GenerateAsyncStream)]
 
 Daha sonra, zaman uyumsuz akışı kullanmak için koleksiyonu tüketen kodu değiştirirsiniz. Sorun koleksiyonunu işleyen `Main` aşağıdaki kodu bulun:
 
-[!code-csharp[EnumerateOldStyle](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#EnumerateOldStyle)]
+[!code-csharp[EnumerateOldStyle](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#EnumerateOldStyle)]
 
 Bu kodu aşağıdaki `await foreach` döngüsüyle değiştirin:
 
-[!code-csharp[FinishedEnumerateAsyncStream](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#EnumerateAsyncStream)]
+[!code-csharp[FinishedEnumerateAsyncStream](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#EnumerateAsyncStream)]
 
 Tamamlanan öğreticinin kodunu [CSharp/öğreticiler/AsyncStreams](https://github.com/dotnet/samples/tree/master/csharp/tutorials/AsyncStreams/finished) klasöründeki [DotNet/Samples](https://github.com/dotnet/samples) deposundan alabilirsiniz.
 

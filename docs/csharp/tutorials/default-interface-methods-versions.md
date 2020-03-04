@@ -4,18 +4,18 @@ description: Bu gelişmiş öğreticide, var olan arabirim tanımlarına, bu ara
 ms.date: 05/06/2019
 ms.technlogy: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: b9194b769a3ba6d2906d6177c2363d6093b85188
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 0f11c85be6e53d512b3794496db29803c4a10679
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039245"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240395"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>Öğretici: 8,0 içinde C# varsayılan arabirim yöntemleriyle arabirimleri güncelleştirme
 
 .NET Core C# 3,0 ' de 8,0 ' den başlayarak, bir arabirimin üyesini bildirdiğinizde bir uygulama tanımlayabilirsiniz. En yaygın senaryo, önceden yayınlanan ve kullanılmayan istemciler tarafından kullanılan bir arabirime güvenli bir şekilde üye eklemektir.
 
-Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -23,7 +23,7 @@ Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 > * Daha fazla esneklik sağlamak için parametreli uygulamalar oluşturun.
 > * Bir geçersiz kılma biçiminde daha belirli bir uygulama sağlamak için uygulayıcıları etkinleştirin.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Makinenizi, C# 8,0 derleyicisi dahil .NET Core çalıştıracak şekilde ayarlamanız gerekir. 8,0 C# derleyicisi, [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download)ile başlayarak kullanılabilir.
 
@@ -31,17 +31,17 @@ Makinenizi, C# 8,0 derleyicisi dahil .NET Core çalıştıracak şekilde ayarlam
 
 Bu öğretici, bir müşteri ilişkisi kitaplığının 1. sürümüyle başlar. [GitHub 'daki örnek](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/starter/customer-relationship)depolarımızda başlangıç uygulamasını edinebilirsiniz. Bu kitaplığın, kütüphanesini benimsemesini sağlayan, mevcut uygulamalarla müşterileri hedefleyen Şirket. Bunlar, kütüphanesinin kullanıcıları için en az sayıda arabirim tanımı sağladık. Müşterinin arabirim tanımı aşağıda verilmiştir:
 
-[!code-csharp[InitialCustomerInterface](~/samples/csharp/tutorials/default-interface-members-versions/starter/customer-relationship/ICustomer.cs?name=SnippetICustomerVersion1)]
+[!code-csharp[InitialCustomerInterface](~/samples/snippets/csharp/tutorials/default-interface-members-versions/starter/customer-relationship/ICustomer.cs?name=SnippetICustomerVersion1)]
 
 Sıralamayı temsil eden ikinci bir arabirim tanımlarlar:
 
-[!code-csharp[InitialOrderInterface](~/samples/csharp/tutorials/default-interface-members-versions/starter/customer-relationship/IOrder.cs?name=SnippetIorderVersion1)]
+[!code-csharp[InitialOrderInterface](~/samples/snippets/csharp/tutorials/default-interface-members-versions/starter/customer-relationship/IOrder.cs?name=SnippetIorderVersion1)]
 
 Bu arabirimlerde, takım kullanıcılarına müşterilerine daha iyi bir deneyim oluşturmak için bir kitaplık oluşturabilir. Bu kişilerin hedefi, mevcut müşterilerle daha derin bir ilişki oluşturmak ve yeni müşterilerle ilişkilerini geliştirmektir.
 
 Şimdi, bir sonraki sürüm için kitaplığı yükseltmeniz zaman atalım. İstenen özelliklerden biri, çok sayıda siparişi olan müşteriler için bağlılık programı indirimi sunar. Bu yeni bağlılık programı indirimi, bir müşteri sipariş yaptığında uygulanır. Belirli indirim, her müşterinin bir özelliğidir. `ICustomer` her bir uygulama, bağlılık programı indirimi için farklı kurallar ayarlayabilir. 
 
-Bu işlevi eklemenin en doğal yolu, `ICustomer` arabirimini tüm bağlılık programı indirimine uygulanacak bir yöntemle geliştirmektir. Bu tasarım önerisi, deneyimli geliştiriciler arasında sorun oluşmasına neden oldu: "arabirimler yayımlandıklarında sabittir! Bu bir son değişiklik! " C#8,0, arabirimleri yükseltmek için *varsayılan arabirim uygulamalarını* ekler. Kitaplık yazarları arabirime yeni üyeler ekleyebilir ve bu üyeler için varsayılan bir uygulama sağlar.
+Bu işlevi eklemenin en doğal yolu, `ICustomer` arabirimini her türlü bağlılık programı indirimi uygulamak için bir yöntemle geliştirmektir. Bu tasarım önerisi, deneyimli geliştiriciler arasında sorun oluşmasına neden oldu: "arabirimler yayımlandıklarında sabittir! Bu bir son değişiklik! " C#8,0, arabirimleri yükseltmek için *varsayılan arabirim uygulamalarını* ekler. Kitaplık yazarları arabirime yeni üyeler ekleyebilir ve bu üyeler için varsayılan bir uygulama sağlar.
 
 Varsayılan arabirim uygulamaları, geliştiricilerin bu uygulamayı geçersiz kılmak için herhangi bir uygulamayı etkinleştirirken bir arabirimi yükseltmesini sağlar. Kitaplığın kullanıcıları, varsayılan uygulamayı kırılmamış bir değişiklik olarak kabul edebilir. İş kuralları farklıysa, geçersiz kılınabilir.
 
@@ -53,41 +53,41 @@ Yükseltme, iki özellik ayarlama işlevini sağlamalıdır: indirimle uygun olm
 
 Önce, uygulamaya yeni yöntemi ekleyin:
 
-[!code-csharp[InitialOrderInterface](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionOne)]
+[!code-csharp[InitialOrderInterface](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionOne)]
 
 Kitaplık yazarı, uygulamayı denetlemek için bir ilk test yazdı:
 
-[!code-csharp[TestDefaultImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetTestDefaultImplementation)]
+[!code-csharp[TestDefaultImplementation](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetTestDefaultImplementation)]
 
 Testin aşağıdaki kısmına dikkat edin:
 
-[!code-csharp[TestDefaultImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetHighlightCast)]
+[!code-csharp[TestDefaultImplementation](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetHighlightCast)]
 
-Bu `SampleCustomer` `ICustomer` olarak dönüştürme gereklidir. `SampleCustomer` sınıfın `ComputeLoyaltyDiscount`için bir uygulama sağlaması gerekmez; Bu, `ICustomer` arabirimi tarafından sunulur. Ancak `SampleCustomer` sınıfı, arabirimlerinden üyeleri almıyor. Bu kural değiştirilmedi. Arabirimde bildirildiği ve uygulanan herhangi bir yöntemi çağırmak için, bu örnekte, değişken arabirimin türü, `ICustomer` olmalıdır.
+Bu `SampleCustomer` `ICustomer` olarak dönüştürme gereklidir. `SampleCustomer` sınıfın `ComputeLoyaltyDiscount`için bir uygulama sağlaması gerekmez; Bu, `ICustomer` arabirimi tarafından sunulur. Ancak `SampleCustomer` sınıfı, arabirimlerinden üyeleri almıyor. Bu kural değiştirilmedi. Arabirimde tanımlanan ve uygulanan herhangi bir yöntemi çağırmak için, bu örnekte `ICustomer` değişkenin türü arabirimin türü olmalıdır.
 
 ## <a name="provide-parameterization"></a>Parametreleştirme sağlama
 
 Bu iyi bir başlangıç. Ancak, varsayılan uygulama çok kısıtlayıcıdır. Bu sistemin pek çok tüketicisi, satın alma sayısı, farklı üyelik uzunluğu veya farklı bir yüzde indirimi için farklı eşikler seçebilirler. Bu parametreleri ayarlamak için bir yol sağlayarak daha fazla müşteri için daha iyi bir yükseltme deneyimi sağlayabilirsiniz. Varsayılan uygulamayı denetleyen bu üç parametreyi ayarlayan statik bir yöntem ekleyelim:
 
-[!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionTwo)]
+[!code-csharp[VersionTwoImplementation](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionTwo)]
 
 Bu küçük kod parçasında gösterilen birçok yeni dil özelliği vardır. Arabirimler artık alanlar ve yöntemler dahil statik üyeleri içerebilir. Farklı erişim değiştiricileri de etkinleştirilir. Ek alanlar özeldir, yeni yöntem geneldir. Arabirim üyelerinde değiştiricilerin herhangi birine izin verilir.
 
 Bağlılık programı iskontosunu hesaplamak için genel formülü kullanan uygulamalar, ancak farklı parametreler, özel bir uygulama sağlanması gerekmez; bağımsız değişkenleri statik bir yöntem aracılığıyla ayarlayabilirler. Örneğin, aşağıdaki kod, birden fazla aya ait üyeliğe sahip herhangi bir müşteriyi yeniden karşılayan bir "müşteri değer artırma" ayarlıyor:
 
-[!code-csharp[SetLoyaltyThresholds](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetSetLoyaltyThresholds)]
+[!code-csharp[SetLoyaltyThresholds](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetSetLoyaltyThresholds)]
 
 ## <a name="extend-the-default-implementation"></a>Varsayılan uygulamayı genişletme
 
 Şimdiye kadar eklemiş olduğunuz kod, kullanıcıların varsayılan uygulama gibi bir şey istediği veya ilgisiz bir kural kümesi sağladığı senaryolar için uygun bir uygulama sağladı. Son bir özellik için, kullanıcıların varsayılan uygulamada derlemek isteyebileceğiniz senaryolara olanak tanımak için kodu bir bit yeniden düzenleyin. 
 
-Yeni müşterileri çekmek isteyen bir başlatma düşünün. Yeni bir müşterinin ilk siparişi için %50 indirim sağlar. Aksi halde, mevcut müşteriler standart iskontoyu alır. Kitaplık yazarının varsayılan uygulamayı bir `protected static` yöntemine taşıması gerekir; böylece bu arabirimi uygulayan herhangi bir sınıf kendi uygulamalarında kodu yeniden kullanabilir. Arabirim üyesinin varsayılan uygulanması, bu paylaşılan yöntemi de çağırır:
+Yeni müşterileri çekmek isteyen bir başlatma düşünün. Yeni bir müşterinin ilk siparişi için %50 indirim sağlar. Aksi halde, mevcut müşteriler standart iskontoyu alır. Kitaplık yazarının varsayılan uygulamayı bir `protected static` metoduna taşıması gerekir, böylece bu arabirimi uygulayan herhangi bir sınıf kendi uygulamalarında kodu yeniden kullanabilir. Arabirim üyesinin varsayılan uygulanması, bu paylaşılan yöntemi de çağırır:
 
-[!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetFinalVersion)]
+[!code-csharp[VersionTwoImplementation](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetFinalVersion)]
 
 Bu arabirimi uygulayan bir sınıfın uygulamasında, geçersiz kılma statik yardımcı yöntemini çağırabilir ve "yeni müşteri" indirimi sağlamak için bu mantığı genişletebilir:
 
-[!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/SampleCustomer.cs?name=SnippetOverrideAndExtend)]
+[!code-csharp[VersionTwoImplementation](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/SampleCustomer.cs?name=SnippetOverrideAndExtend)]
 
 Tüm tamamlanmış kodu [GitHub 'daki örnek](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship)depoımızda görebilirsiniz. [GitHub 'daki örnek](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/starter/customer-relationship)depolarımızda başlangıç uygulamasını edinebilirsiniz.
 

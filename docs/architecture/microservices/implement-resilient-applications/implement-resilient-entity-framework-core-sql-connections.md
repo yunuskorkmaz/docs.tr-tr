@@ -2,12 +2,12 @@
 title: Dayanıklı Entity Framework Core SQL bağlantıları uygulama
 description: Dayanıklı Entity Framework Core SQL bağlantılarını nasıl uygulayacağınızı öğrenin. Bu teknik, Bulutta Azure SQL veritabanı kullanılırken özellikle önemlidir.
 ms.date: 10/16/2018
-ms.openlocfilehash: 0ded30469bb4985fed7b60938756046531c8feea
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7a047edca21d63a451e90f407b23f3358d461330
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777055"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241071"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>Dayanıklı Entity Framework Core SQL bağlantıları uygulama
 
@@ -49,7 +49,7 @@ Bir EF Execution strateji (yeniden deneme ilkesi) kullanırken bu işlemi yürü
 
 > System. InvalidOperationException: yapılandırılan ' Sqlserverretryingexecutionstrateji ' yürütme stratejisi, Kullanıcı tarafından başlatılan işlemleri desteklemez. İşlemdeki tüm işlemleri yeniden kullanılabilir bir birim olarak yürütmek için ' DbContext. Database. Createexecutionstrateji () ' tarafından döndürülen yürütme stratejisini kullanın.
 
-Çözüm, yürütülmesi gereken her şeyi temsil eden bir temsilciyle EF yürütme stratejisini el ile çağırmalıdır. Geçici bir hata oluşursa, yürütme stratejisi temsilciyi tekrar çağıracaktır. Örneğin, aşağıdaki kod, bir ürünü güncelleştirirken iki birden çok DbContext (\_catalogContext ve ıntegrationeventlogcontext) ile eShopOnContainers içinde nasıl uygulandığını gösterir ve ardından Productpricechangedıntegrationevent nesnesini kaydederek farklı bir DbContext kullanması gerekir.
+Çözüm, yürütülmesi gereken her şeyi temsil eden bir temsilciyle EF yürütme stratejisini el ile çağırmalıdır. Geçici bir hata oluşursa yürütme stratejisi temsilciyi yeniden çağırır. Örneğin, aşağıdaki kod, bir ürünü güncelleştirirken iki birden çok DbContext (\_catalogContext ve ıntegrationeventlogcontext) ile eShopOnContainers içinde nasıl uygulandığını gösterir ve ardından Productpricechangedıntegrationevent nesnesini kaydederek farklı bir DbContext kullanması gerekir.
 
 ```csharp
 public async Task<IActionResult> UpdateProduct(
@@ -154,4 +154,4 @@ public class ResilientTransaction
 
 >[!div class="step-by-step"]
 >[Önceki](implement-retries-exponential-backoff.md)
->[İleri](explore-custom-http-call-retries-exponential-backoff.md)
+>[İleri](use-httpclientfactory-to-implement-resilient-http-requests.md)

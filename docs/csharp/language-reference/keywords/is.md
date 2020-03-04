@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 1a1f539e80f8d843f40640fa798cf6122f316a9f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a72f3b87e7558c594ef8a94bd0eadcc4664206b9
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715231"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239657"
 ---
 # <a name="is-c-reference"></a>is (C# Başvurusu)
 
@@ -106,15 +106,21 @@ Aşağıdaki örnekte `null` denetimlerinin karşılaştırması gösterilmekted
 
 ### <a name="var-pattern"></a>var deseninin
 
-`var` model her tür veya değer için bir catch-all ' dır. *Expr* 'nin değeri her zaman bir yerel değişkene, aynı türde *Expr*'nin derleme zamanı türüyle atanır. `is` ifadesinin sonucu her zaman `true`. Sözdizimi şöyledir:
+`var` düzeniyle bir kalıp eşleşmesi her zaman başarılı olur. Sözdizimi şöyledir:
 
 ```csharp
    expr is var varname
 ```
 
-Aşağıdaki örnek, `obj`adlı bir değişkene bir ifade atamak için var modelini kullanır. Sonra değeri ve `obj`türünü görüntüler.
+Burada, *ifadenin* değeri her zaman *varname*adlı bir yerel değişkene atanır. *varname* , *Expr*'nin derleme zamanı türüyle aynı türde bir değişkendir. 
+
+*İfade* `null`olarak değerlendirilirse `is` ifade `true` üretir ve *varname*öğesine `null` atar. Var olan desenli bir `null` değeri için `true` üreten `is` birkaç kullanımdır.
+
+Aşağıdaki örnekte gösterildiği gibi, bir Boolean ifadesinde geçici bir değişken oluşturmak için `var` modelini kullanabilirsiniz:
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
+
+Önceki örnekte, geçici değişken pahalı bir işlemin sonucunu depolamak için kullanılır. Değişken daha sonra birden çok kez kullanılabilir.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
   

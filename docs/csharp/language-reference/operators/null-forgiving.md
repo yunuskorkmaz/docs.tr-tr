@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 21bbf8e1253641317750b911e052ee5ff0a0d063
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 026c50d1696b29f8498d316ae106bc851ed16f6a
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036168"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239023"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (null-forverme) işleci (C# başvuru)
 
-C# 8,0 ve üzeri sürümlerde bulunan birli sonek `!` işleci null-forverme işleçtir. Etkin bir [null yapılabilir ek açıklama bağlamında](../../nullable-references.md#nullable-annotation-context), bir başvuru türünün ifadesinin `x` `null`olmadığını bildirmek için null-forverme işlecini kullanırsınız: `x!`. Birli önek `!` işleci [mantıksal değilleme işleçtir](boolean-logical-operators.md#logical-negation-operator-).
+C# 8,0 ve sonraki sürümlerde bulunan birli sonek `!` işleci null-forverme işleçtir. Etkin bir [null yapılabilir ek açıklama bağlamında](../../nullable-references.md#nullable-annotation-context), bir başvuru türünün ifadesinin `x` `null`olmadığını bildirmek için null-forverme işlecini kullanırsınız: `x!`. Birli ön ek `!` işleci [mantıksal değilleme işleçtir](boolean-logical-operators.md#logical-negation-operator-).
 
-Null-forverme işlecinin çalışma zamanında hiçbir etkisi yoktur. Yalnızca ifadenin null durumunu değiştirerek derleyicinin statik akış analizini etkiler. Çalışma zamanında, `x!` ifadesi temel alınan `x` ifadesinin sonucu olarak değerlendirilir.
+Null-forverme işlecinin çalışma zamanında hiçbir etkisi yoktur. Yalnızca ifadenin null durumunu değiştirerek derleyicinin statik akış analizini etkiler. Çalışma zamanında ifade `x!`, temel alınan ifade `x`sonucunu değerlendirir.
 
 Null yapılabilir başvuru türleri özelliği hakkında daha fazla bilgi için bkz. [Nullable başvuru türleri](../../nullable-references.md).
 
@@ -25,23 +25,23 @@ Null yapılabilir başvuru türleri özelliği hakkında daha fazla bilgi için 
 
 Null-forverme işlecinin kullanım çalışmalarından biri bağımsız değişken doğrulama mantığını test ediyor. Örneğin, aşağıdaki sınıfı göz önünde bulundurun:
 
-[!code-csharp[Person class](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#PersonClass)]
+[!code-csharp[Person class](~/samples/snippets/csharp/language-reference/operators/NullForgivingOperator.cs#PersonClass)]
 
 [MSTest test çerçevesini](../../../core/testing/unit-testing-with-mstest.md)kullanarak, oluşturucuda doğrulama mantığı için aşağıdaki testi oluşturabilirsiniz:
 
-[!code-csharp[Person test](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#TestPerson)]
+[!code-csharp[Person test](~/samples/snippets/csharp/language-reference/operators/NullForgivingOperator.cs#TestPerson)]
 
 Null-forverme işleci olmadan derleyici, önceki kod için şu uyarıyı üretir: `Warning CS8625: Cannot convert null literal to non-nullable reference type`. Null-forverme işlecini kullanarak, derleyiciye `null` geçtiğini ve hakkında uyarı vermemesini bilgilendirmelisiniz.
 
-Ayrıca, bir ifadenin `null` olamaz, ancak derleyicinin bunu tanıması için yönetmediğini kesin bir şekilde öğrendiğinizde null-forverme işlecini de kullanabilirsiniz. Aşağıdaki örnekte, `IsValid` yöntemi `true` döndürürse, bağımsız değişkeni `null` ' dir ve güvenle başvuru yapabilirsiniz:
+Ayrıca, bir ifadenin `null` olmadığını, ancak derleyicinin bunu tanımak üzere yönetmediğini kesin olarak bildiğiniz zaman, null-forverme işlecini de kullanabilirsiniz. Aşağıdaki örnekte, `IsValid` yöntemi `true`döndürürse, bağımsız değişkeni `null` değildir ve güvenli bir şekilde başvuru yapabilir:
 
-[!code-csharp[Use null-forgiving operator](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#UseNullForgiving)]
+[!code-csharp[Use null-forgiving operator](~/samples/snippets/csharp/language-reference/operators/NullForgivingOperator.cs#UseNullForgiving)]
 
-Null-forverme işleci olmadan derleyici `p.Name` kodu için şu uyarıyı üretir: `Warning CS8602: Dereference of a possibly null reference`.
+Null-forverme işleci olmadan derleyici, `p.Name` kodu için aşağıdaki uyarıyı üretir: `Warning CS8602: Dereference of a possibly null reference`.
 
 `IsValid` yöntemini değiştirebiliyorsanız, derleyiciye `IsValid` yönteminin bir bağımsız değişkeninin Yöntem `true`döndürdüğünde `null` olmadığını bildirmek için [Notnullıf](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute) özniteliğini kullanabilirsiniz:
 
-[!code-csharp[Use an attribute](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#UseAttribute)]
+[!code-csharp[Use an attribute](~/samples/snippets/csharp/language-reference/operators/NullForgivingOperator.cs#UseAttribute)]
 
 Yukarıdaki örnekte, derleyicinin `if` bildiriminde `null` `p` için yeterli bilgi içerdiğinden, null-forverme işlecini kullanmanız gerekmez. Bir değişkenin null durumu hakkında ek bilgi sağlamanıza olanak tanıyan öznitelikler hakkında daha fazla bilgi için bkz. [null beklentilerini tanımlamak Için API 'leri özniteliklerle yükseltme](../../nullable-attributes.md).
 

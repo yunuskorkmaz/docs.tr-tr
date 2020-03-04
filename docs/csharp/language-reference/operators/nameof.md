@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - nameof operator [C#]
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: c1d71d52a9222379adc36479715113b181da7133
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a734cae8fbb944774a4bd1bda9194a548b3d82bc
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712695"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239228"
 ---
 # <a name="nameof-operator-c-reference"></a>NameOf işleci (C# başvuru)
 
 `nameof` işleci, dize sabiti olarak bir değişkenin, türün veya üyenin adını edinir:
 
-[!code-csharp-interactive[nameof operator](~/samples/csharp/language-reference/operators/NameOfOperator.cs#Examples)]
+[!code-csharp-interactive[nameof operator](~/samples/snippets/csharp/language-reference/operators/NameOfOperator.cs#Examples)]
 
 Yukarıdaki örnekte gösterildiği gibi, bir tür ve ad alanı durumunda, oluşturulan ad genellikle [tam olarak nitelenir](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).
 
@@ -26,7 +26,7 @@ Yukarıdaki örnekte gösterildiği gibi, bir tür ve ad alanı durumunda, oluş
 
 Bağımsız değişken denetim kodunu daha sürdürülebilir hale getirmek için `nameof` işlecini kullanabilirsiniz:
 
-[!code-csharp[nameof and argument check](~/samples/csharp/language-reference/operators/NameOfOperator.cs#ExceptionMessage)]
+[!code-csharp[nameof and argument check](~/samples/snippets/csharp/language-reference/operators/NameOfOperator.cs#ExceptionMessage)]
 
 `nameof` işleci C# 6 ve üzeri sürümlerde kullanılabilir.
 

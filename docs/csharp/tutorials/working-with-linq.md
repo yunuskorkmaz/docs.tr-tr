@@ -4,18 +4,18 @@ description: Bu öğreticide LINQ, LINQ sorgularında kullanılmak üzere yazma 
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 8984fdf0ff26726b6d05e8bee8a9e8ae1c350ea7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ece001e82c0aa44a91999bea78d2fd695ff9362b
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345618"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240021"
 ---
 # <a name="work-with-language-integrated-query-linq"></a>Dil ile tümleşik sorgu (LINQ) ile çalışma
 
 ## <a name="introduction"></a>Giriş
 
-Bu öğretici, .NET Core ve C# dil özelliklerini size öğretir. Şunları öğreneceksiniz:
+Bu öğretici, .NET Core ve C# dil özelliklerini size öğretir. Şunları öğrenirsiniz:
 
 - LINQ ile sıralar oluşturun.
 - LINQ sorgularında kolay bir şekilde kullanılabilecek yazma yöntemleri.
@@ -29,7 +29,7 @@ Amacınıza uygun olarak, veri dizilerini işlemek için bir hafif göz atın. O
 
 Bu öğreticide birden çok adım vardır. Her adımdan sonra, uygulamayı çalıştırabilir ve ilerleme durumunu görebilirsiniz. Ayrıca, DotNet/Samples GitHub deposunda [Tamamlanan örneği](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) görebilirsiniz. İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. Yükleme yönergelerini [.NET Core indirme](https://dotnet.microsoft.com/download) sayfasında bulabilirsiniz. Bu uygulamayı Windows, Ubuntu Linux veya OS X 'te veya bir Docker kapsayıcısında çalıştırabilirsiniz. En sevdiğiniz kod düzenleyicinizi yüklemeniz gerekir. Aşağıdaki açıklamalar açık kaynaklı, platformlar arası bir düzenleyici olan [Visual Studio Code](https://code.visualstudio.com/) kullanır. Bununla birlikte, rahat olan her türlü aracı kullanabilirsiniz.
 
@@ -179,7 +179,7 @@ Doğal olarak, desteyi halele böldüğünüz için bu kilitlenenlere birlikte k
 
 Bu yöntemin uygulanması aşağıda verilmiştir:
 
-[!CODE-csharp[InterleaveSequenceWith](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
+[!CODE-csharp[InterleaveSequenceWith](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
 
 Bu yöntemi yazdıktan sonra `Main` yöntemine dönün ve destesi bir kez karışın:
 
@@ -213,7 +213,7 @@ Destesi orijinal sıralarına geri ayarlamak için kaç tane karışık? Bunu ö
 
 İki sıranın eşit olup olmadığını anlamak için bir yöntem yazmak basit olmalıdır. Bu, destesi karıştırmak için yazdığınız yöntemin benzer bir yapısıdır. Her bir öğe `yield return`yerine yalnızca bu kez her bir sıranın eşleşen öğelerini karşılaştırırsınız. Tüm sıra numaralandırılmışsa, her öğe eşleşiyorsa, sıralar aynıdır:
 
-[!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
+[!CODE-csharp[SequenceEquals](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
 Bu, ikinci bir LINQ deyimidir: Terminal yöntemlerini gösterir. Bunlar girdi olarak bir sıra alır (veya bu durumda iki dizi) ve tek bir skaler değer döndürür. Terminal yöntemleri kullanılırken, her zaman bir LINQ sorgusunun Yöntem zincirindeki son yöntem ve bu nedenle "Terminal" adı verilir.
 
@@ -267,7 +267,7 @@ Bir LINQ sorgusu kullanarak özgün destesi oluşturduğumuz unutulmamalıdır. 
 
 `Extensions.cs` dosyanızda, aşağıdaki yöntemi yazın veya kopyalayın. Bu genişletme yöntemi, proje dizininizde `debug.log` adlı yeni bir dosya oluşturur ve şu anda günlük dosyasına yürütülmekte olan sorguyu kaydeder. Bu genişletme yöntemi sorgunun yürütüldüğünü işaretlemek için herhangi bir sorguya eklenebilir.
 
-[!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
+[!CODE-csharp[LogQuery](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
 `File`altında kırmızı renkli bir çizgi görürsünüz, bunun anlamı yoktur. Derleyici `File` ne olduğunu bilmediğinden derlenmez. Bu sorunu çözmek için `Extensions.cs`ilk satırın altına aşağıdaki kod satırını eklediğinizden emin olun:
 
@@ -329,7 +329,7 @@ Her sorguya eriştiğinizde günlüğe kayıt yapmayın. Yalnızca özgün sorgu
 
 Yaptığınız yürütmelerin sayısını azaltmak için kodun performansını buradan geliştirebilirsiniz. Yapabilmeniz gereken basit bir çözüm, kart destesi oluşturan orijinal LINQ sorgusunun sonuçlarını *önbelleğe* almak için kullanılır. Şu anda sorguları yeniden yürütüyorsunuz ve do-while döngüsü bir yinelemeden sonra yeniden oluşturuyor, kartlar ve reshuffling her seferinde yeniden oluşturacağız. Kartların destesi önbelleğe almak için <xref:System.Linq.Enumerable.ToArray%2A> LINQ yöntemlerinden yararlanabilir ve <xref:System.Linq.Enumerable.ToList%2A>; sorguları sorgulara eklediğinizde, onlara söyledikleri aynı eylemleri gerçekleştirir, ancak artık sonuçları çağırmak istediğiniz yönteme bağlı olarak bir dizide veya listede depolayacağız. LINQ metodu <xref:System.Linq.Enumerable.ToArray%2A> her iki sorguya de ekleyin ve programı yeniden çalıştırın:
 
-[!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
+[!CODE-csharp[Main](../../../samples/snippets/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
 Şimdi, karışık karıştırma 30 sorguya kadar. Karıştırma ile birlikte yeniden çalıştırın ve benzer iyileştirmeler görürsünüz: şimdi 162 sorguları yürütür.
 
@@ -351,7 +351,7 @@ LINQ 'ten itibaren, kart püf noktaları için bir teknik Magicians kullanımı 
 LINQ hakkında daha fazla bilgi için bkz.
 
 - [Dil ile Tümleşik Sorgu (LINQ)](../programming-guide/concepts/linq/index.md)
-- [LINQ'ye Giriş](../programming-guide/concepts/linq/index.md)
+- [LINQ'e Giriş](../programming-guide/concepts/linq/index.md)
 - [Temel LINQ sorgu Işlemleri (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
 - [LINQ (C#) Ile veri dönüştürmeleri](../programming-guide/concepts/linq/data-transformations-with-linq.md)
 - [LINQ (C#) Içinde sorgu sözdizimi ve Yöntem sözdizimi](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)

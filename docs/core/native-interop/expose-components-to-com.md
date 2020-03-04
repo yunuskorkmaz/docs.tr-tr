@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 301177113f67748b62ea2686615cfe5378fdc2fd
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: f6665e18e51af96761941e419fabc409e4b9391d
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157550"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240980"
 ---
 # <a name="exposing-net-core-components-to-com"></a>.NET Core bileşenlerini COM 'a gösterme
 
@@ -39,9 +39,23 @@ ms.locfileid: "78157550"
 
 2. `Class1.cs` programını açın.
 3. `using System.Runtime.InteropServices;` dosyanın en üstüne ekleyin.
-4. `IServer`adlı bir arabirim oluşturun. Örnek:
+4. `IServer`adlı bir arabirim oluşturun. Örneğin:
 
-   [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+   ```csharp
+   using System;
+   using System.Runtime.InteropServices;
+
+   [ComVisible(true)]
+   [Guid(ContractGuids.ServerInterface)]
+   [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+   public interface IServer
+   {
+       /// <summary>
+       /// Compute the value of the constant Pi.
+       /// </summary>
+       double ComputePi();
+   }
+   ```
 
 5. `[Guid("<IID>")]` özniteliğini, uyguladığınız COM arabirimi için arabirim GUID 'i ile ekleyin. Örneğin, `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`. Bu GUID 'nin COM için bu arabirimin tek tanımlayıcısı olduğundan, bu GUID 'in benzersiz olması gerektiğini unutmayın. Visual Studio 'da, GUID oluştur ' a giderek bir GUID oluşturabilirsiniz > Guid Oluştur aracını açın.
 6. Arabirimine `[InterfaceType]` özniteliğini ekleyin ve arayüzün hangi temel COM arabirimlerini uygulanacağını belirtin.
@@ -55,7 +69,7 @@ ms.locfileid: "78157550"
 ## <a name="generate-the-com-host"></a>COM konağını oluşturma
 
 1. `.csproj` proje dosyasını açın ve bir `<PropertyGroup></PropertyGroup>` etiketinin içine `<EnableComHosting>true</EnableComHosting>` ekleyin.
-2. Projeyi derleyin.
+2. Projeyi oluşturun.
 
 Sonuç çıktısı bir `ProjectName.dll`, `ProjectName.deps.json`, `ProjectName.runtimeconfig.json` ve `ProjectName.comhost.dll` dosyasına sahip olur.
 
@@ -66,7 +80,7 @@ Yükseltilmiş bir komut istemi açın ve `regsvr32 ProjectName.comhost.dll`çal
 ## <a name="enabling-regfree-com"></a>RegFree COM etkinleştiriliyor
 
 1. `.csproj` proje dosyasını açın ve bir `<PropertyGroup></PropertyGroup>` etiketinin içine `<EnableRegFreeCom>true</EnableRegFreeCom>` ekleyin.
-2. Projeyi derleyin.
+2. Projeyi oluşturun.
 
 Elde edilen çıkışın artık `ProjectName.X.manifest` bir dosyası da olacaktır. Bu dosya, kayıt defteri-ücretsiz COM ile kullanılmak üzere yan yana bildirimidir.
 

@@ -3,12 +3,12 @@ title: Sözdizimi analizini kullanmaya başlama (Roslyn API 'Leri)
 description: Sözdizimi ağaçlarını geçme, sorgulama ve yürüyen bir giriş.
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: d4163e8aadf577a5a5cbed225b26a0ec8390277e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 22d1303c9daa2ae35cf130b0c857cd7a5efdbe76
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347009"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240525"
 ---
 # <a name="get-started-with-syntax-analysis"></a>Sözdizimi analizini kullanmaya başlayın
 
@@ -84,35 +84,35 @@ Yeni C# bir **tek başına kod analizi araç** projesi oluşturun:
 Temel "Merhaba Dünya!" öğesini çözümleyeceğiz Program daha önce gösteriliyor.
 Merhaba Dünya programın metnini `Program` sınıfınıza bir sabit olarak ekleyin:
 
-[!code-csharp[Declare the program text](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
+[!code-csharp[Declare the program text](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
 
 Daha sonra, `programText` sabitinde kod metni için **sözdizimi ağacını** derlemek üzere aşağıdaki kodu ekleyin.  Aşağıdaki satırı `Main` yöntemine ekleyin:
 
-[!code-csharp[Create the tree](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
+[!code-csharp[Create the tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
 
 Bu iki satır ağacı oluşturur ve bu ağacın kök düğümünü alır. Artık ağaçtaki düğümleri inceleyebilirsiniz. Ağaçtaki kök düğümün bazı özelliklerini göstermek için bu satırları `Main` yöntemine ekleyin:
 
-[!code-csharp[Examine the root node](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#3 "Examine the root node")]
+[!code-csharp[Examine the root node](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#3 "Examine the root node")]
 
 Kodunuzun, bu ağaçtaki kök düğüm hakkında nasıl keşfedildiğini görmek için uygulamayı çalıştırın.
 
 Genellikle, kod hakkında bilgi edinmek için ağacı gezirsiniz. Bu örnekte, API 'Leri araştırmak için bildiğiniz kodu çözümlüyorsunuz. `root` düğümünün ilk üyesini incelemek için aşağıdaki kodu ekleyin:
 
-[!code-csharp[Find the first member](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
+[!code-csharp[Find the first member](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
 
 Bu üye bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>. `namespace HelloWorld` bildiriminin kapsamındaki her şeyi temsil eder. `HelloWorld` ad alanı içinde hangi düğümlerin bildirildiği hakkında incelemek için aşağıdaki kodu ekleyin:
 
-[!code-csharp[Find the class declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
+[!code-csharp[Find the class declaration](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
 
 Öğrendiklerinizi görmek için programı çalıştırın.
 
 Artık bildirimin bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax?displayProperty=nameWithType>olduğunu öğrendiğinizden, sınıf bildirimini incelemek için o türde yeni bir değişken bildirin. Bu sınıf yalnızca bir üye içeriyor: `Main` yöntemi. `Main` yöntemini bulmak ve bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax?displayProperty=nameWithType>dönüştürmek için aşağıdaki kodu ekleyin.
 
-[!code-csharp[Find the main declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#6 "Find the main declaration")]
+[!code-csharp[Find the main declaration](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#6 "Find the main declaration")]
 
 Yöntem bildirimi düğümü, yöntemiyle ilgili tüm sözdizimsel bilgileri içerir. `Main` yönteminin dönüş türünü, bağımsız değişkenlerin sayısını ve türlerini ve yönteminin gövde metnini gösterelim. Aşağıdaki kodu ekleyin:
 
-[!code-csharp[Examine the syntax of the main method](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#7 "Display information about the main method")]
+[!code-csharp[Examine the syntax of the main method](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#7 "Display information about the main method")]
 
 Bu program hakkında bulduğunuz tüm bilgileri görmek için programı çalıştırın:
 
@@ -144,7 +144,7 @@ Geçiş ağaçlarına ek olarak, <xref:Microsoft.CodeAnalysis.SyntaxNode?display
 
 Bu sorgu yöntemlerini, ağaca gidilme alternatifi olarak `Main` yönteminin bağımsız değişkenini bulmak için kullanabilirsiniz. `Main` yönteminizin en altına aşağıdaki kodu ekleyin:
 
-[!code-csharp[Query the tree for the arguments to Main](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#8 "Query the tree for the arguments to Main")]
+[!code-csharp[Query the tree for the arguments to Main](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#8 "Query the tree for the arguments to Main")]
 
 İlk deyim bir LINQ ifadesi ve <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A> yöntemi kullanarak önceki örnekteki aynı parametreyi bulur.
 
@@ -164,35 +164,35 @@ Bu örnek için tamamlanmış kodu [GitHub depomuza](https://github.com/dotnet/s
 
 Önceki örnekte olduğu gibi, analiz edilecek programın metnini tutmak için bir dize sabiti tanımlayabilirsiniz:
 
-[!code-csharp[Define the code text to analyzer](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#1 "Define the program text to analyze")]
+[!code-csharp[Define the code text to analyzer](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#1 "Define the program text to analyze")]
 
 Bu kaynak metin, dört farklı konuma dağılmış `using` yönergeler içerir: dosya düzeyi, en üst düzey ad alanı ve iç içe yerleştirilmiş iki ad alanı. Bu örnek, kodu sorgulamak için <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> sınıfını kullanmak üzere temel bir senaryo vurgulamaktadır. Bildirimleri kullanarak bulmak için kök sözdizimi ağacındaki her düğümü ziyaret etmek daha fazla olabilir. Bunun yerine, türetilmiş bir sınıf oluşturur ve yalnızca ağaçtaki geçerli düğüm bir using yönergesi olduğunda çağrılan yöntemi geçersiz kılabilirsiniz. Ziyaretçinizin başka hiçbir düğüm türü üzerinde herhangi bir iş gerçekleştirmez. Bu tek yöntem `using` deyimlerinin her birini inceler ve `System` ad alanında olmayan bir ad alanı koleksiyonu oluşturur. Tüm `using` deyimlerini incelediği bir <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> oluşturursunuz, ancak yalnızca `using` deyimleri.
 
 Program metnini tanımladığınıza göre, bir `SyntaxTree` oluşturmanız ve söz konusu ağacın kökünü almanız gerekir:
 
-[!code-csharp[Create the Syntax tree and access the root](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
+[!code-csharp[Create the Syntax tree and access the root](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
 
 Sonra yeni bir sınıf oluşturun. Visual Studio 'da **proje** > **Yeni öğe Ekle**' yi seçin. **Yeni öğe Ekle** iletişim kutusunda dosya adı olarak *UsingCollector.cs* yazın.
 
 `using` ziyaretçi işlevini `UsingCollector` sınıfında uygulamalısınız. `UsingCollector` sınıfı <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>türeten başlayın.
 
-[!code-csharp[Declare the base class for the using collector](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
+[!code-csharp[Declare the base class for the using collector](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
 
 Topladığınız ad alanı düğümlerini tutmak için depolama gerekir.  `UsingCollector` sınıfında ortak bir salt okunurdur özelliği bildirin; Bu değişkeni, bulduğunuz <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax> düğümlerini depolamak için kullanırsınız:
 
-[!code-csharp[Declare storage for the using syntax nodes](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#4 "Declare storage for the using syntax nodes")]
+[!code-csharp[Declare storage for the using syntax nodes](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#4 "Declare storage for the using syntax nodes")]
 
 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> temel sınıf, sözdizimi ağacındaki her bir düğümü ziyaret etmek için mantığı uygular. Türetilmiş sınıf, ilgilendiğiniz belirli düğümler için çağrılan yöntemleri geçersiz kılar. Bu durumda, herhangi bir `using` yönergesi ile ilgileniyorsunuz. Yani <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)> yöntemi geçersiz kılmalısınız. Bu yöntemin bir bağımsız değişkeni bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType> nesnesidir. Bu, ziyaretçilerin kullanılması için önemli bir avantajdır: geçersiz kılınan yöntemleri, zaten belirli düğüm türüne saçmış bağımsız değişkenlerle çağırır. <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType> sınıfı, içeri aktarılmakta olan ad alanının adını depolayan bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax.Name> özelliğine sahiptir. Bu bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)> geçersiz kılmak için aşağıdaki kodu ekleyin:
 
-[!code-csharp[Examine using nodes for the System namespace](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#5 "Examine all using nodes for the System namespace.")]
+[!code-csharp[Examine using nodes for the System namespace](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#5 "Examine all using nodes for the System namespace.")]
 
 Önceki örnekte olduğu gibi, bu yöntemin anlaşılmasına yardımcı olmak için çeşitli `WriteLine` deyimlerini ekledik. Ne zaman çağrdığını ve her seferinde hangi bağımsız değişkenlerin geçtiğini görebilirsiniz.
 
 Son olarak, `UsingCollector` oluşturmak için iki satır kod eklemeniz ve tüm `using` deyimlerini toplamak için kök düğümü ziyaret etmeniz gerekir. Ardından, toplayıcılarınızın bulduğu tüm `using` deyimlerini göstermek için bir `foreach` döngüsü ekleyin:
 
-[!code-csharp[Create the UsingCollector and visit the root node.](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#6 "Create the UsingCollector and visit the root node.")]
+[!code-csharp[Create the UsingCollector and visit the root node.](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#6 "Create the UsingCollector and visit the root node.")]
 
-Programı derleyin ve çalıştırın. Aşağıdaki çıkışı görmeniz gerekir:
+Programı derleyin ve çalıştırın. Aşağıdaki çıktıyı görmeniz gerekir:
 
 ```console
         VisitUsingDirective called with System.

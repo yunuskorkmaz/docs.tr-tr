@@ -3,12 +3,12 @@ title: Temsilciler için Ortak Desenler
 description: Bileşenleriniz arasında güçlü bir kuponu önlemek için kodunuzda temsilcilerin kullanılmasına yönelik yaygın desenler hakkında bilgi edinin.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 174ae4129464c9d2e787048793cec764121ca4aa
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 40e6ced7337e32d6e9b67b12a15ad7e03a77c4b6
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454075"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239878"
 ---
 # <a name="common-patterns-for-delegates"></a>Temsilciler için Ortak Desenler
 
@@ -54,15 +54,15 @@ Bu tasarımın altında, birincil günlük bileşeni sanal olmayan, hatta kapal�
 
 Küçük bir başlangıç: ilk uygulama yeni iletileri kabul edecek ve ekli temsilciden yazacak. Konsola ileti yazan bir temsilciyle başlayabilirsiniz.
 
-[!code-csharp[LoggerImplementation](../../samples/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
+[!code-csharp[LoggerImplementation](../../samples/snippets/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
 
 Yukarıdaki statik sınıf, kullanılabilecek en basit şeydir. Konsola ileti yazan Yöntem için tek bir uygulama yazmaları gerekir: 
 
-[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
+[!code-csharp[LogToConsole](../../samples/snippets/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
 
 Son olarak, bir temsilciyi, günlükçü içinde belirtilen WriteMessage temsilcisine ekleyerek yedeklemeniz gerekir:
 
-[!code-csharp[ConnectDelegate](../../samples/csharp/delegates-and-events/Program.cs#ConnectDelegate "Connect to the delegate")]
+[!code-csharp[ConnectDelegate](../../samples/snippets/csharp/delegates-and-events/Program.cs#ConnectDelegate "Connect to the delegate")]
 
 ## <a name="practices"></a>Uygulamalarından
 
@@ -78,12 +78,12 @@ Bu ilk sürümü biraz daha sağlam hale gedelim ve ardından diğer günlük me
 
 Daha sonra, günlük sınıfınızın daha yapılandırılmış iletiler oluşturması için `LogMessage()` yöntemine birkaç bağımsız değişken ekleyelim:
 
-[!code-csharp[Severity](../../samples/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
-[!code-csharp[NextLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
+[!code-csharp[Severity](../../samples/snippets/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
+[!code-csharp[NextLogger](../../samples/snippets/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
 
 Daha sonra, günlük çıktısına gönderilen iletileri filtrelemek için bu `Severity` bağımsız değişkenini kullanalım. 
 
-[!code-csharp[FinalLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
+[!code-csharp[FinalLogger](../../samples/snippets/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
 
 ## <a name="practices"></a>Uygulamalarından
 
@@ -97,11 +97,11 @@ Günlük bileşeni de birlikte geliyor. İletileri bir dosyaya kaydeden bir çı
 
 Dosya tabanlı günlükçü şu şekildedir:
 
-[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
+[!code-csharp[FileLogger](../../samples/snippets/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
 
 Bu sınıfı oluşturduktan sonra, onu örnekleyebilirsiniz ve LogMessage metodunu günlükçü bileşenine iliştirir:
 
-[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
+[!code-csharp[FileLogger](../../samples/snippets/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
 
 Bu ikisi birbirini dışlamalı değildir. Her iki günlük yöntemini iliştirebilir ve konsola ve bir dosyaya ileti oluşturabilirsiniz:
 

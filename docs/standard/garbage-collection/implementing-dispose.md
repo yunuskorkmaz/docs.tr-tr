@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: a7e03a833886a1486e0dc081d6ef059791a464b5
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: f3d3269ccf56954f963762503d2bc1c53b9e6b83
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156341"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238994"
 ---
 # <a name="implementing-a-dispose-method"></a>Dispose yöntemi uygulama
 
@@ -33,7 +33,7 @@ Dispose deseninin iki çeşidi vardır:
   
 Kaynakların her zaman uygun şekilde temizlendiğinden emin olmak için bir <xref:System.IDisposable.Dispose%2A> yöntemi özel durum oluşturmadan birden çok kez çağrılabilir olmalıdır.  
   
-<xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> yöntemi için belirtilen kod örneği, ısrarlı çöp toplamanın, geri kazanılan nesnenin bir üyesi hala yürütülürken sonlandırıcının çalışmasına nasıl neden olabileceği gösterilmektedir. Uzun bir <xref:System.IDisposable.Dispose%2A> yönteminin sonunda <xref:System.GC.KeepAlive%2A> yöntemini çağırmak iyi bir fikirdir.  
+<xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> yöntemi için belirtilen kod örneği, çöp toplamanın bir sonlandırıcının nasıl çalışmasına neden olabileceği, nesneye veya üyelerine yönetilmeyen bir başvuru olsa da, hala kullanımda olduğunu gösterir. Nesneyi, geçerli yordamın başından bu yöntemin çağrıldığı noktaya kadar çöp toplama için uygun hale getirmek üzere <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> kullanmak mantıklı olabilir.
   
 <a name="Dispose2"></a>
 ## <a name="dispose-and-disposeboolean"></a>Dispose() ve Dispose(Boolean)  
