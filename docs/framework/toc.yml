@@ -1,46 +1,47 @@
-- name: .NET Framework Kılavuzu
+- name: .NET Framework kılavuzu
   href: index.md
 - name: Yenilikler
   href: whats-new/
-- name: Başlarken
+- name: Kullanmaya başlayın
   href: get-started/
 - name: Yükleme kılavuzu
   href: install/
-- name: Geçiş Kılavuzu
+- name: Geçiş kılavuzu
   href: migration-guide/
-- name: Geliştirme Kılavuzu
+- name: Geliştirme kılavuzu
   href: development-guide.md
   items:
-    - name: Uygulama Etki Alanları ve Derlemeler
+    - name: Uygulama Etki Alanları ve derlemeler
       href: app-domains/
-    - name: Masaüstü Uygulamalarındaki Kaynaklar
+    - name: Masaüstü uygulamalarındaki kaynaklar
       href: resources/
     - name: Erişilebilirlik
       href: ui-automation/
-    - name: Veri ve Modelleme
+    - name: Veri ve modelleme
       href: data/
-    - name: İstemci Uygulamaları
-      href: develop-client-apps.md
+    - name: İstemci uygulamaları
       items:
+        - name: Genel Bakış
+          href: develop-client-apps.md
         - name: Windows Presentation Foundation
           href: wpf/
         - name: Windows Forms
           href: winforms/
-    - name: WCF ile Hizmet Odaklı Uygulamalar
+    - name: WCF ile hizmet odaklı uygulamalar
       href: wcf/
     - name: Windows Workflow Foundation
       href: windows-workflow-foundation/
-    - name: Windows Hizmet Uygulamaları
+    - name: Windows Hizmeti uygulamaları
       href: windows-services/
-    - name: 64 bitlik Uygulamalar
+    - name: 64 bit uygulamalar
       href: 64-bit-apps.md
-    - name: ASP.NET ile Web Uygulamaları
+    - name: ASP.NET ile web uygulamaları
       href: develop-web-apps-with-aspnet.md
-    - name: .NET Framework'te Ağ Programlaması
+    - name: Ağ programlama
       href: network-programming/
-    - name: Uygulamaları Yapılandırma
+    - name: Uygulamaları yapılandırma
       href: configure-apps/
-    - name: .NET Yerel ile Uygulama Derleme
+    - name: .NET Native ile uygulama derleme
       href: net-native/
     - name: 'Hata Ayıklama, İzleme ve Profil Oluşturma'
       href: debug-trace-profile/
@@ -48,17 +49,17 @@
       href: deployment/
     - name: Performans
       href: performance/
-    - name: Dinamik Programlama
+    - name: Dinamik programlama
       href: reflection-and-codedom/
     - name: Managed Extensibility Framework (MEF)
       href: mef/
-    - name: Yönetilmeyen Kod ile Birlikte Çalışma
+    - name: Yönetilmeyen kod ile birlikte çalışma
       href: interop/
-    - name: Yönetilmeyen API Başvurusu
+    - name: Yönetilmeyen API başvurusu
       href: unmanaged-api/
     - name: XAML Hizmetleri
       href: ../desktop-wpf/xaml-services/
 - name: Araçlar
   href: tools/
-- name: Ek Sınıf Kitaplıkları ve API'ler
+- name: Ek sınıf kitaplıkları ve API'ler
   href: additional-apis/
