@@ -1,27 +1,27 @@
 ---
-title: İki konum yolunun birleşimini bulma (XPath-LINQ to XML) (C#)
+title: İki konum yolunun birleşimi (XPath-LINQ - XML) (C#) nasıl bulabilirim?
 ms.date: 07/20/2015
 ms.assetid: 069622d3-2b58-4919-8903-710a564c0788
 ms.openlocfilehash: 17a3310f367cb68b3b80b1a3f30af40428f6d2c7
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141215"
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a><span data-ttu-id="c51ac-102">İki konum yolunun birleşimini bulma (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="c51ac-102">How to find a union of two location paths (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="c51ac-103">XPath, iki XPath konum yolunun sonuçlarının birleşimini bulmanızı sağlar.</span><span class="sxs-lookup"><span data-stu-id="c51ac-103">XPath allows you to find the union of the results of two XPath location paths.</span></span>  
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a><span data-ttu-id="ccf13-102">İki konum yolunun birleşimi (XPath-LINQ - XML) (C#) nasıl bulabilirim?</span><span class="sxs-lookup"><span data-stu-id="ccf13-102">How to find a union of two location paths (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="ccf13-103">XPath, iki XPath konum yolunun sonuçlarının birleşimini bulmanızı sağlar.</span><span class="sxs-lookup"><span data-stu-id="ccf13-103">XPath allows you to find the union of the results of two XPath location paths.</span></span>  
   
- <span data-ttu-id="c51ac-104">XPath ifadesi:</span><span class="sxs-lookup"><span data-stu-id="c51ac-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="ccf13-104">XPath ifadesi:</span><span class="sxs-lookup"><span data-stu-id="ccf13-104">The XPath expression is:</span></span>  
   
  `//Category|//Price`  
   
- <span data-ttu-id="c51ac-105">Aynı sonuçları, <xref:System.Linq.Enumerable.Concat%2A> standart sorgu işlecini kullanarak elde edebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c51ac-105">You can achieve the same results by using the <xref:System.Linq.Enumerable.Concat%2A> standard query operator.</span></span>  
+ <span data-ttu-id="ccf13-105">Standart sorgu işleci kullanarak <xref:System.Linq.Enumerable.Concat%2A> aynı sonuçları elde edebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ccf13-105">You can achieve the same results by using the <xref:System.Linq.Enumerable.Concat%2A> standard query operator.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c51ac-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="c51ac-106">Example</span></span>  
- <span data-ttu-id="c51ac-107">Bu örnek, tüm `Category` öğelerini ve tüm `Price` öğeleri bulur ve bunları tek bir koleksiyona ekler.</span><span class="sxs-lookup"><span data-stu-id="c51ac-107">This example finds all of the `Category` elements and all of the `Price` elements, and concatenates them into a single collection.</span></span> <span data-ttu-id="c51ac-108">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgusunun sonuçları sıralamak için <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> çağırdığına unutmayın.</span><span class="sxs-lookup"><span data-stu-id="c51ac-108">Note that the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query calls <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> to order the results.</span></span> <span data-ttu-id="c51ac-109">XPath ifadesi değerlendirmesi sonuçları da belge sırasıyla bulunur.</span><span class="sxs-lookup"><span data-stu-id="c51ac-109">The results of the XPath expression evaluation are also in document order.</span></span>  
+## <a name="example"></a><span data-ttu-id="ccf13-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="ccf13-106">Example</span></span>  
+ <span data-ttu-id="ccf13-107">Bu örnek, tüm `Category` öğeleri ve `Price` tüm öğeleri bulur ve bunları tek bir koleksiyona dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="ccf13-107">This example finds all of the `Category` elements and all of the `Price` elements, and concatenates them into a single collection.</span></span> <span data-ttu-id="ccf13-108">Sorgunun [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sonuçları <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> sıralamak için çağırdığına dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="ccf13-108">Note that the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query calls <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> to order the results.</span></span> <span data-ttu-id="ccf13-109">XPath ifade değerlendirme sonuçları da belge sırasına göre.</span><span class="sxs-lookup"><span data-stu-id="ccf13-109">The results of the XPath expression evaluation are also in document order.</span></span>  
   
- <span data-ttu-id="c51ac-110">Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: sayısal veri (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="c51ac-110">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="ccf13-110">Bu örnekte aşağıdaki XML belgesi kullanılır: [Örnek XML Dosyası: Sayısal Veriler (LINQ-XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="ccf13-110">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument data = XDocument.Load("Data.xml");  
@@ -48,7 +48,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="c51ac-111">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="c51ac-111">This example produces the following output:</span></span>  
+ <span data-ttu-id="ccf13-111">Bu örnek, aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="ccf13-111">This example produces the following output:</span></span>  
   
 ```output  
 Results are identical  
