@@ -1,79 +1,79 @@
 ---
 title: C# içinde LINQ sorguları yazma
-description: C# içinde LINQ sorguları yazma hakkında bilgi edinin.
+description: C#'da LINQ sorguları nasıl yazılanın öğrenin.
 ms.date: 12/01/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
 ms.openlocfilehash: ed32543b0422e0664a8577f2c27f7c7c00a719a1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "65632885"
 ---
-# <a name="write-linq-queries-in-c"></a>C'de LINQ sorguları yazma\#
+# <a name="write-linq-queries-in-c"></a>C'ye LINQ sorguları yazın\#
 
-Bu makalede, C# LINQ sorgusu yazma kullandığı üç yöntem açıklanır:
+Bu makalede, C#'da bir LINQ sorgusu yazabileceğiniz üç yol gösterilmektedir:
 
-1. Sorgu söz dizimi kullanın.
+1. Sorgu sözdizimini kullanın.
 
 2. Yöntem sözdizimini kullanın.
 
-3. Sorgu sözdizimi ve yöntem sözdizimi bir birleşimini kullanın.
+3. Sorgu sözdizimi ve yöntem sözdizimi nin bir birleşimini kullanın.
 
-Aşağıdaki örnekler, daha önce listelenen her bir yaklaşım kullanarak bazı basit LINQ sorguları gösterir. Genel olarak, kullanım (1) mümkün olduğunda ve Kullan (2) ve (3) gerektiğinde kuralıdır.
+Aşağıdaki örnekler, daha önce listelenen her yaklaşımı kullanarak bazı basit LINQ sorgularını gösterir. Genel olarak, kural (1) mümkün olduğunca kullanmak ve (2) ve (3) gerektiğinde kullanmaktır.
 
 > [!NOTE]
-> Bu sorgular, basit bir bellek içi koleksiyonlarda çalışır; Ancak, temel sözdizimi, LINQ to Entities ve LINQ to XML kullanılıyor aynıdır.
+> Bu sorgular basit bellek içi koleksiyonlarda çalışır; ancak, temel sözdizimi Linq'de Kullanılanvarlıklarla ve LINQ'dan XML'e aynıdır.
 
-## <a name="example---query-syntax"></a>Örnek - sorgu söz dizimi
+## <a name="example---query-syntax"></a>Örnek - Sözdizimini sorgula
 
-Çoğu sorguları yazma için önerilen yöntem kullanmaktır *sorgu söz dizimi* oluşturmak için *sorgu ifadelerinde*. Aşağıdaki örnek, üç sorgu ifadeleri gösterir. İlk sorgu ifadesi filtreleyin veya koşullarla uygulayarak, sonuçları kısıtlama yapmayı gösteren bir `where` yan tümcesi. Değerleri 7 veya 3'ten az büyük olan kaynak dizisindeki tüm öğeleri döndürür. İkinci deyim, döndürülen sonuçların nasıl gösterir. Üçüncü ifade, sonuçları bir anahtar göre gruplandırmak gösterilmektedir. Bu sorgu, sözcüğün ilk harfini üzerinde alan iki gruplar döndürür.
+Çoğu sorgu yazmanın önerilen yolu sorgu *ifadeleri*oluşturmak için *sorgu sözdizimini* kullanmaktır. Aşağıdaki örnekte üç sorgu ifadesi gösterilmektedir. İlk sorgu ifadesi, bir `where` yan tümceyle koşullar uygulayarak sonuçların nasıl filtrelenebildiğini veya kısıtlanın. Değerleri 7'den büyük veya 3'ten küçük olan kaynak dizisindeki tüm öğeleri döndürür. İkinci ifade, döndürülen sonuçların nasıl sıralanın gösterildiğini gösterir. Üçüncü ifade, sonuçların bir anahtara göre nasıl gruplatını gösterir. Bu sorgu, sözcüğün ilk harfini temel alan iki grubu döndürür.
 
 [!code-csharp[csProgGuideLINQ#5](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_1.cs)]
 
-Sorgu türü olduğuna dikkat edin <xref:System.Collections.Generic.IEnumerable%601>. Tüm bu sorguları kullanarak yazılabilir `var` aşağıdaki örnekte gösterildiği gibi:
+Sorguların türü . <xref:System.Collections.Generic.IEnumerable%601> Tüm bu sorgular aşağıdaki `var` örnekte gösterildiği gibi kullanılarak yazılabilir:
 
 `var query = from num in numbers...`
 
-İçindeki sorgu değişkeni üzerinde yineleme kadar her önceki örnekte sorgular gerçekten Yürütülmeyen bir `foreach` deyimi veya diğer deyimi. Daha fazla bilgi için [LINQ sorgularına giriş](../programming-guide/concepts/linq/introduction-to-linq-queries.md).
+Önceki her örnekte, bir deyimveya başka bir `foreach` deyimdeki sorgu değişkeni üzerinde yinelene kadar sorgular gerçekten yürütülmez. Daha fazla bilgi için [LINQ Sorgularına Giriş'e](../programming-guide/concepts/linq/introduction-to-linq-queries.md)bakın.
 
-## <a name="example---method-syntax"></a>Örnek - yöntem sözdizimi
+## <a name="example---method-syntax"></a>Örnek - Yöntem sözdizimi
 
-Bazı sorgu işlemlerinin bir yöntem çağrısının ifade edilmelidir. En yaygın tür yöntemler gibi tekil sayısal değerler döndüren olanlardır <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A>ve benzeri. Yalnızca tek bir değeri temsil eder ve bir ek sorgu işlemi kaynağı olarak hizmet veremez bu yöntemlerin her zaman içinde herhangi bir sorgu son çağrılmalıdır. Aşağıdaki örnek bir sorgu ifadesinde yöntem çağrısı gösterir:
+Bazı sorgu işlemleri bir yöntem çağrısı olarak ifade edilmelidir. En yaygın bu tür yöntemler, singleton sayısal değerleri <xref:System.Linq.Enumerable.Sum%2A>döndüren yöntemlerdir, , , <xref:System.Linq.Enumerable.Max%2A> <xref:System.Linq.Enumerable.Min%2A> <xref:System.Linq.Enumerable.Average%2A>, ve benzeri. Bu yöntemler, yalnızca tek bir değeri temsil ettikleri ve ek bir sorgu işlemi için kaynak olarak hizmet veremedikleri nden, her zaman herhangi bir sorguda sonuncu olarak adlandırılmalıdır. Aşağıdaki örnekte sorgu ifadesinde bir yöntem çağrısı gösterilmektedir:
 
 [!code-csharp[csProgGuideLINQ#6](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_2.cs)]
 
-Yöntem bir eylem veya Func parametrelere sahipse, bunlar biçiminde sağlanır bir [lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md) aşağıdaki örnekte gösterildiği gibi ifade:
+Yöntemde Action veya Func parametreleri varsa, bunlar aşağıdaki örnekte gösterildiği gibi [lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md) ifadesi biçiminde sağlanır:
 
 [!code-csharp[csProgGuideLINQ#7](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_3.cs)]
 
-Önceki sorgular, yalnızca sorgu #4 hemen yürütür. Tek bir değer ve bir genel döndürür olmasıdır <xref:System.Collections.Generic.IEnumerable%601> koleksiyonu. Yöntemin kendisi kullanması gereken `foreach` değerini hesaplamak için.
+Önceki sorgularda, yalnızca Sorgu #4 hemen yürütülür. Bunun nedeni, genel <xref:System.Collections.Generic.IEnumerable%601> bir koleksiyon değil, tek bir değer döndürmesidir. Yöntemin değerini hesaplamak için kendisi kullanmak `foreach` zorundadır.
 
-Her biri, önceki sorgular ile örtülü yazma'yı kullanarak yazılabilir [var](../language-reference/keywords/var.md), aşağıdaki örnekte gösterildiği gibi:
+Önceki sorguların her biri aşağıdaki örnekte gösterildiği [gibi, var](../language-reference/keywords/var.md)ile örtük yazarak yazılabilir:
 
 [!code-csharp[csProgGuideLINQ#8](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_4.cs)]
 
-## <a name="example---mixed-query-and-method-syntax"></a>Örnek - karma sorgu ve yöntem sözdizimi
+## <a name="example---mixed-query-and-method-syntax"></a>Örnek - Karma sorgu ve yöntem sözdizimi
 
-Bu örnek, bir sorgu yan tümcesinin sonuçlarını temel yöntem sözdizimi kullanmayı gösterir. Yalnızca sorgu ifadesi, parantez içine ve ardından nokta işleci uygulamak ve yöntemi çağırın. Aşağıdaki örnekte, sorgu #7, 3 ve 7 arasında bir değeri olan sayıların sayısını döndürür. Genel olarak, ancak bu ikinci bir değişkene yöntem çağrısının sonucunu depolamak için kullanmak en iyisidir. Bu şekilde, sorgu sorgu sonuçlarını kafanız olma olasılığı daha gereklidir.
+Bu örnek, bir sorgu yan tümcesinin sonuçlarında yöntem sözdiziminin nasıl kullanılacağını gösterir. Sorgu ifadesini parantez içine eklemeniz ve nokta işlecini uygulayın ve yöntemi arayın. Aşağıdaki örnekte, sorgu #7 değeri 3 ile 7 arasında olan sayıların sayısını döndürür. Genel olarak, ancak, yöntem çağrısının sonucunu depolamak için ikinci bir değişken kullanmak daha iyidir. Bu şekilde, sorgunun sorgu sonuçlarıyla karıştırılma olasılığı daha düşüktür.
 
 [!code-csharp[csProgGuideLINQ#9](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_5.cs)]
 
-Sorgu, sorgu #7 tek bir değer ve bir koleksiyonu döndürdüğünden, hemen yürütür.
+Sorgu #7 bir koleksiyon değil, tek bir değer döndürdüğünden, sorgu hemen yürütülür.
 
-Önceki sorguya ile örtülü yazma'yı kullanarak yazılabilir `var`gibi:
+Önceki sorgu, aşağıdaki gibi örtülü `var`yazarak yazılabilir:
 
 ```csharp
 var numCount = (from num in numbers...
 ```
 
-Bunu şu şekilde yöntemi sözdiziminde yazılabilir:
+Yöntem sözdiziminde aşağıdaki gibi yazılabilir:
 
 ```csharp
 var numCount = numbers.Where(n => n < 3 || n > 7).Count();
 ```
 
-Açık, şu şekilde yazım kullanarak yazılabilir:
+Aşağıdaki gibi, açık yazarak yazılabilir:
 
 ```csharp
 int numCount = numbers.Where(n => n < 3 || n > 7).Count();
@@ -81,6 +81,6 @@ int numCount = numbers.Where(n => n < 3 || n > 7).Count();
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: Sorguları yazmaC#](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [Walkthrough: C'de Sorgu Yazma #](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
 - [Dil ile Tümleşik Sorgu (LINQ)](index.md)
-- [where yan tümcesi](../language-reference/keywords/where-clause.md)
+- [where tümcesi](../language-reference/keywords/where-clause.md)

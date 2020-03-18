@@ -417,9 +417,9 @@
         - name: İleti Kodlayıcı Genişletilebilirliği
           href: message-encoder-extensibility.md
           items:
-            - name: 'Özel İleti Kodlayıcısı: Özel Metin Kodlayıcısı'
+            - name: 'Özel İleti Kodlayıcı: Özel Metin Kodlayıcı'
               href: custom-message-encoder-custom-text-encoder.md
-            - name: 'Özel İleti Kodlayıcısı: Sıkıştırma Kodlayıcısı'
+            - name: 'Özel İleti Kodlayıcı: Sıkıştırma Kodlayıcısı'
               href: custom-message-encoder-compression-encoder.md
         - name: Meta Veri Genişletilebilirliği
           href: metadata-extensibility.md

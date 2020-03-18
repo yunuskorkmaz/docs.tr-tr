@@ -1,50 +1,50 @@
 ---
-title: C# Etkileşimli öğreticilere giriş
-description: Tarayıcınızda C# öğrenin ve kendi geliştirme ortamınızı kullanmaya başlayın
+title: C# tanıtımı - interaktif öğreticiler
+description: Tarayıcınızda C# öğrenin ve kendi geliştirme ortamınızla başlayın
 ms.date: 08/22/2019
 ms.custom: mvc
 ms.openlocfilehash: 564af21fb0f9b6cf8b5c3591ff5622278a8cbb22
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73423096"
 ---
-# <a name="introduction-to-c"></a>C\# giriş
+# <a name="introduction-to-c"></a>C'ye Giriş\#
 
-C# Öğreticilere giriş konusuna hoş geldiniz. Bu, tarayıcınızda çalıştırabileceğiniz etkileşimli dersler ile başlar. Bu etkileşimli dersleri başlatmadan önce C# [ C# 101 video serisinden](https://aka.ms/dotnet3-csharp) temel bilgileri öğrenebilirsiniz.
+C# eğitimlerine girişe hoş geldiniz. Bunlar, tarayıcınızda çalıştırabileceğiniz etkileşimli derslerle başlar. Bu etkileşimli derslere başlamadan önce [C# video serisinden C#](https://aka.ms/dotnet3-csharp) temellerini öğrenebilirsiniz.
 
 > [!VIDEO https://channel9.msdn.com/Series/CSharp-101/What-is-C/player]
 
-İlk dersler, kodun C# küçük parçacıkları kullanılarak kavramları açıklamaktadır. C# Sözdiziminin temel bilgilerini ve dizeler, sayılar ve Boole değerleri gibi veri türleriyle nasıl çalışacağınızı öğreneceksiniz. Bu, tüm etkileşimlidir ve dakikalar içinde kod yazmak ve çalıştırmak isteyeceksiniz. Bu ilk dersler daha önce programlama veya C# dil bilgisine sahip değildir.
+İlk dersler, C# kavramlarını küçük kod parçacıkları kullanarak açıklar. C# sözdiziminin temellerini ve dizeleri, sayılar ve booleans gibi veri türleri ile nasıl çalışacağınızı öğreneceksiniz. Hepsi etkileşimli ve birkaç dakika içinde kod yazıp çalışıyor olacaksın. Bu ilk dersler programlama veya C# dili hakkında önceden bilgi sahibi olmadığını varsayar.
 
-Merhaba Dünya dersi izleyen tüm giriş öğreticileri, çevrimiçi tarayıcı deneyimi veya [kendi yerel geliştirme ortamınızda](local-environment.md)bulunabilir. Her öğreticinin sonunda, çevrimiçi olarak veya kendi makinenizde bir sonraki ders ile devam etmek istediğinize karar verirsiniz. Ortamınızı ayarlamanıza ve makinenizde bir sonraki öğreticiye devam etmenize yardımcı olacak bağlantılar vardır.
+Hello World dersini takip eden tüm giriş eğitimleri çevrimiçi tarayıcı deneyimini kullanarak veya [kendi yerel geliştirme ortamınızda](local-environment.md)mevcuttur. Her öğreticinin sonunda, bir sonraki derse çevrimiçi olarak mı yoksa kendi makinenizde mi devam etmek istediğinize siz karar verirsiniz. Ortamınızı ayarlamanıza ve makinenizdeki bir sonraki öğreticiye devam etmenize yardımcı olacak bağlantılar vardır.
 
-## <a name="hello-worldhello-worldyml"></a>[Merhaba dünya](hello-world.yml)
+## <a name="hello-world"></a>[Merhaba Dünya](hello-world.yml)
 
-[Merhaba Dünya](hello-world.yml) öğreticisinde en temel C# programı oluşturacaksınız. `string` türünü ve metinle çalışmayı keşfedebilirsiniz.
+Hello [world](hello-world.yml) öğreticisinde, en temel C# programını oluşturacaksınız. Metin le türünü `string` ve nasıl çalışacağınızı araştıracaksınız.
 
-## <a name="numbers-in-cnumbers-in-csharpyml"></a>[C# numaraları](numbers-in-csharp.yml)
+## <a name="numbers-in-c"></a>[C# numaraları](numbers-in-csharp.yml)
 
-Öğreticideki [sayılarda C# ](numbers-in-csharp.yml) , bilgisayarların sayıları nasıl depolayacağınızı ve farklı sayısal türlerle hesaplamaların nasıl gerçekleştirileceğini öğreneceksiniz. Yuvarlama hakkında temel bilgileri ve kullanarak C#matematik hesaplamaları yapmayı öğreneceksiniz. Bu öğretici, [makinenizde yerel olarak çalışmak için](numbers-in-csharp-local.md)de kullanılabilir.
+[C#'daki Sayılar dersinde,](numbers-in-csharp.yml) bilgisayarların sayıları nasıl depoladığını ve farklı sayısal türlerde hesaplamaları nasıl gerçekleştireceğinizi öğreneceksiniz. Yuvarlama nın temellerini ve C# kullanarak matematiksel hesaplamaları nasıl yapacağınızı öğreneceksiniz. Bu öğretici, [makinenizde yerel olarak çalıştırmak için](numbers-in-csharp-local.md)de kullanılabilir.
 
-Bu öğreticide, [Hello World](hello-world.yml) ders 'i tamamladığınız varsayılmaktadır.
+Bu [öğretici, Merhaba dünya](hello-world.yml) dersini bitirdiğinizi varsayar.
 
-## <a name="branches-and-loopsbranches-and-loopsyml"></a>[Dal ve döngüler](branches-and-loops.yml)
+## <a name="branches-and-loops"></a>[Dal ve döngüler](branches-and-loops.yml)
 
-[Dallar ve döngüler](branches-and-loops.yml) öğreticisinde, değişkenlerde depolanan değerlere göre farklı kod yürütme yolları seçmenin temelleri öğretilir. Denetim akışının temel bilgilerini öğrenirsiniz. Bu, programların kararlar alma ve farklı eylemler seçme işlemlerinin temelini oluşturur. Bu öğretici, [makinenizde yerel olarak çalışmak için](branches-and-loops-local.md)de kullanılabilir.
+[Dallar ve döngüler](branches-and-loops.yml) öğretici değişkenlerde depolanan değerleri temel kod yürütme farklı yolları seçerek temellerini öğretir. Programların karar verme ve farklı eylemleri nasıl seçtiğinin temelini oluşturan denetim akışının temellerini öğreneceksiniz. Bu öğretici, [makinenizde yerel olarak çalıştırmak için](branches-and-loops-local.md)de kullanılabilir.
 
-Bu öğreticide, [Merhaba Dünya](hello-world.yml) ve derslerin [numaralarını C# ](numbers-in-csharp.yml) tamamladığınız varsayılmaktadır.
+Bu öğretici, [C# derslerinde](numbers-in-csharp.yml) [Hello dünyasını](hello-world.yml) ve Sayıları bitirdiğinizi varsayar.
 
-## <a name="list-collectionlist-collectionyml"></a>[Liste koleksiyonu](list-collection.yml)
+## <a name="list-collection"></a>[Liste koleksiyonu](list-collection.yml)
 
-[Liste koleksiyonu](list-collection.yml) dersi, veri dizilerini depolayan liste koleksiyonu türünün bir turuna sahip olmanızı sağlar. Öğe ekleme ve kaldırma, öğe arama ve listeleri sıralama hakkında bilgi edineceksiniz. Farklı liste türleri keşfedebilirsiniz. Bu öğretici, [makinenizde yerel olarak çalışmak için](arrays-and-collections.md)de kullanılabilir.
+[Liste toplama](list-collection.yml) dersi, veri dizilerini depolayan Liste koleksiyonu türünü gezmenizi sağlar. Öğeleri eklemeyi ve kaldırmayı, öğeleri aramayı ve listeleri sıralamayı öğreneceksiniz. Farklı listeler keşfedeceksiniz. Bu öğretici, [makinenizde yerel olarak çalıştırmak için](arrays-and-collections.md)de kullanılabilir.
 
-Bu öğreticide, yukarıda listelenen dersleri tamamladığınız varsayılmaktadır.
+Bu öğretici, yukarıda listelenen dersleri bitirdiğinizi varsayar.
 
-## <a name="introduction-to-classesintroduction-to-classesmd"></a>[Sınıflara giriş](introduction-to-classes.md)
+## <a name="introduction-to-classes"></a>[Sınıflara giriş](introduction-to-classes.md)
 
-Bu son öğretici yalnızca kendi yerel geliştirme ortamınız ve .NET Core kullanılarak makinenizde çalıştırılabilir.
-Bir konsol uygulaması oluşturup C# dilin parçası olan temel nesne yönelimli özellikleri görürsünüz.
+Bu son öğretici, kendi yerel geliştirme ortamınızı ve .NET Core'unuzu kullanarak yalnızca makinenizde çalıştırılabilmek için kullanılabilir.
+Bir konsol uygulaması oluşturacak ve C# dilinin bir parçası olan temel nesne yönelimli özellikleri göreceksiniz.
 
-Bu öğreticide, çevrimiçi giriş öğreticilerini tamamladığınız ve [.NET Core SDK](https://dotnet.microsoft.com/download) ve [Visual Studio Code](https://code.visualstudio.com/)yüklediğiniz varsayılmaktadır.
+Bu öğretici, çevrimiçi tanıtım eğitimlerini tamamladığınızı ve [.NET Core SDK](https://dotnet.microsoft.com/download) ve [Visual Studio Code'u](https://code.visualstudio.com/)yüklediğinizi varsayar.
