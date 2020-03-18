@@ -1,53 +1,53 @@
 ---
-title: .NET Core komut satırı araçları mimarisi
-description: .NET Core araç katmanları ve son sürümlerde nelerin değiştiğini öğrenin.
+title: .NET Çekirdek Komut satırı araçları mimarisi
+description: .NET Core araç katmanları ve son sürümlerde nelerin değiştiği hakkında bilgi edinin.
 ms.date: 03/06/2017
 ms.openlocfilehash: fde1a0acb6af9dd65aa3466b4ea37473b2eab6fb
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092921"
 ---
-# <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core araçlarındaki değişikliklere yüksek düzeyde genel bakış
+# <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core araçlarındaki değişikliklere üst düzey genel bakış
 
-Bu belge, .NET Core araçları 'nın katmanlanmasında ve CLı komutlarının uygulanması üzerindeki değişikliklerle ilgili bilgilerle, *Project. JSON* 'dan MSBuild 'e ve *csproj* proje sistemine geçiş ile ilişkili değişiklikleri açıklamaktadır. Bu değişiklikler, 7 Mart 2017 ' de .NET Core SDK 1,0 ve Visual Studio 2017 sürümü ile oluştu, ancak başlangıçta .NET Core SDK [](https://devblogs.microsoft.com/dotnet/announcing-net-core-tools-1-0/)Preview 3 sürümü ile uygulandı.
+Bu belge, .NET Core takımlama ve CLI komutlarının uygulanmasında yapılan değişiklikler hakkında bilgi içeren *project.json'dan* MSBuild'e ve *csproj* proje sisteminden taşınmayla ilişkili değişiklikleri açıklar. Bu değişiklikler 7 Mart 2017 tarihinde .NET Core SDK 1.0 ve Visual Studio 2017'nin yayınlanmasıyla meydana geldi [(duyuruya](https://devblogs.microsoft.com/dotnet/announcing-net-core-tools-1-0/)bakın) ancak başlangıçta .NET Core SDK Preview 3'ün yayınlanmasıyla uygulandı.
 
-## <a name="moving-away-from-projectjson"></a>Project. JSON öğesinden uzağa taşıma
+## <a name="moving-away-from-projectjson"></a>Project.json'dan uzaklaşmak
 
-.NET Core için araçdaki en büyük değişiklik, Project [. JSON 'dan csproj 'a](https://devblogs.microsoft.com/dotnet/changes-to-project-json/) proje sistemi olarak geçilendir. Komut satırı araçlarının en son sürümleri *Project. JSON* dosyalarını desteklemez. Bu, Project. JSON tabanlı uygulamaları ve kitaplıkları derlemek, çalıştırmak veya yayımlamak için kullanılamayan anlamına gelir. Araçların bu sürümünü kullanmak için, mevcut projelerinizi geçirin veya yenilerini başlatın.
+.NET Core için takımlamadaki en büyük değişiklik kesinlikle [project.json'dan proje sistemi olarak csproj'a taşınmaktır.](https://devblogs.microsoft.com/dotnet/changes-to-project-json/) Komut satırı araçlarının en son sürümleri *project.json* dosyalarını desteklemez. Bu, project.json tabanlı uygulamalar ve kitaplıklar oluşturmak, çalıştırmak veya yayımlamak için kullanılamayacağı anlamına gelir. Araçların bu sürümünü kullanmak için, varolan projelerinizi geçirin veya yenilerini başlatın.
 
-Bu taşımanın bir parçası olarak, Project. JSON projelerini derlemek için geliştirilmiş olan özel derleme altyapısı, aynı şekilde [MSBuild](https://github.com/Microsoft/msbuild)adlı ve tam özellikli bir yapı altyapısı ile değiştirilmiştir. MSBuild, .NET Community 'de iyi bilinen bir altyapıdır. Platformun ilk sürümünden bu yana önemli bir teknoloji oldu. .NET Core uygulamaları oluşturması gerektiğinden, MSBuild .NET Core 'a eklenmiştir ve .NET Core 'un üzerinde çalıştığı tüm platformlarda kullanılabilir. .NET Core 'un asıl adedlerinden biri platformlar arası bir geliştirme yığınıdır ve bu taşımanın bu taahhüdünü bozmadığından emin yaptık.
+Bu hareketin bir parçası olarak, project.json projeleri oluşturmak için geliştirilen özel yapı motoru [MSBuild](https://github.com/Microsoft/msbuild)adlı olgun ve tam yetenekli bir yapı motoru ile değiştirildi. MSBuild.NET topluluğunda tanınmış bir motordur. Platformun ilk sürümünden bu yana önemli bir teknoloji olmuştur. .NET Core uygulamaları oluşturması gerektiğinden, MSBuild .NET Core'a taşınabilir ve .NET Core'un çalıştığı herhangi bir platformda kullanılabilir. .NET Core'un ana vaatlerinden biri, platformlar arası geliştirme yığınıdır ve bu hamlenin bu sözü tutmamasını sağladık.
 
 > [!TIP]
-> MSBuild 'e yeni başladıysanız ve bu konuda daha fazla bilgi edinmek istiyorsanız, [MSBuild kavramlarını](/visualstudio/msbuild/msbuild-concepts) okuyun makalesini okuyun.
+> EĞER MSBuild yeni ve bu konuda daha fazla bilgi edinmek istiyorsanız, [MSBuild kavramlar](/visualstudio/msbuild/msbuild-concepts) makale okuyarak başlayabilirsiniz.
 
-## <a name="the-tooling-layers"></a>Araç katmanları
+## <a name="the-tooling-layers"></a>Takım katmanları
 
-Derleme motorunda değişiklik ve mevcut proje sisteminden uzaklaşmak için bazı sorular doğal olarak takip edin. Bu değişikliklerden herhangi biri, .NET Core araçları ekosisteminin genel "katmanlama" düzeyini değiştirir mi? Yeni BITS ve bileşenler var mı?
+Yapı motorundaki değişiklik ve mevcut proje sisteminden uzaklaşmasıyla, bazı sorular doğal olarak takip eder. Bu değişikliklerden herhangi biri .NET Core araç ekosisteminin genel "katmanlama"sını değiştirir mi? Yeni bitler ve bileşenler var mı?
 
-Aşağıdaki resimde gösterildiği gibi Önizleme 2 katmanlarındaki hızlı yenileyici ile başlayalım:
+Aşağıdaki resimde gösterildiği gibi Önizleme 2 katmanında hızlı bir yenileme ile başlayalım:
 
-![Preview 2 araçları üst düzey mimari](media/cli-msbuild-architecture/p2-arch.png)
+![Önizleme 2 araçları üst düzey mimari](media/cli-msbuild-architecture/p2-arch.png)
 
-Preview 2 ' deki araçların katmanlama basittir. En altta, temel .NET Core CLI. Visual Studio veya Visual Studio Code gibi diğer tüm diğer, daha üst düzey araçlar, projeleri oluşturmak, bağımlılıkları geri yüklemek vb. için CLı 'ye bağımlıdır. Örneğin, Visual Studio bir geri yükleme işlemi gerçekleştirmek istiyorsam, CLı 'daki `dotnet restore` ([bkz. Note](#dotnet-restore-note)) komutuna çağrı yapar.
+Önizleme 2'deki araçların katmanlanması basittir. Altta, temel .NET Çekirdek CLI olduğunu. Visual Studio veya Visual Studio Code gibi diğer tüm üst düzey araçlar, projeler oluşturmak, bağımlılıkları geri yüklemek ve benzeri için CLI'ye bağlıdır ve bunlara güvenir. Örneğin, Visual Studio bir geri yükleme işlemi gerçekleştirmek istiyorsa, CLI'deki `dotnet restore` [(nota bakınız)](#dotnet-restore-note)komutuna çağrır.
 
-Yeni proje sistemine taşıma ile önceki diyagramda değişiklik yapılır:
+Yeni proje sistemine geçicisiile, önceki diyagram değişir:
 
 ![.NET Core SDK 1.0.0 üst düzey mimari](media/cli-msbuild-architecture/p3-arch.png)
 
-Temel fark, CLı 'nin temel katman olmadığı bir şekilde değildir; Bu rol artık "paylaşılan SDK bileşeni" tarafından doldurulmuştur. Bu paylaşılan SDK bileşeni, kod derlenirken, yayımlamaktan, NuGet paketlerinde paketlemesinden ve benzeri bir hedef ve ilişkili görev kümesidir. .NET Core SDK açık kaynaktır ve [SDK](https://github.com/dotnet/sdk)deposunda GitHub 'da kullanılabilir.
+Temel fark, CLI artık temel tabaka değildir; bu rol artık "paylaşılan SDK bileşeni" tarafından doldurulur. Bu paylaşılan SDK bileşeni, kodu derlemekten, yayımlamaktan, NuGet paketlerini paketlemekten ve benzeri nedenlerden sorumlu hedefler ve ilişkili görevler kümesidir. .NET Core SDK açık kaynak kodludur ve [GitHub'da SDK repo'da](https://github.com/dotnet/sdk)mevcuttur.
 
 > [!NOTE]
-> "Target", MSBuild 'in çağırabileceği adlandırılmış bir işlemi gösteren bir MSBuild terimidir. Genellikle hedefin yapması gereken bazı mantığı çalıştıran bir veya daha fazla görevle birlikte kullanılır. MSBuild, `Copy` veya `Execute`gibi çok sayıda kullanıma yönelik hedefi destekler; Ayrıca, kullanıcıların yönetilen kod kullanarak kendi görevlerini yazmasına ve bu görevleri yürütmek için hedefleri tanımlamasına olanak tanır. Daha fazla bilgi için bkz. [MSBuild görevleri](/visualstudio/msbuild/msbuild-tasks).
+> "Hedef", MSBuild'in çağırabileceği adlandırılmış bir işlemi gösteren bir MSBuild terimidir. Genellikle hedef yapmak gerekiyordu bazı mantık yürütmek bir veya daha fazla görev ile birleştiğinde. MSBuild gibi `Copy` birçok hazır hedefleri `Execute`destekler; ayrıca, kullanıcıların yönetilen kodu kullanarak kendi görevlerini yazmalarına ve bu görevleri yürütmek için hedefleri tanımlamalarına da olanak tanır. Daha fazla bilgi için [MSBuild görevlerine](/visualstudio/msbuild/msbuild-tasks)bakın.
 
-Tüm araç takımları 'ler artık paylaşılan SDK bileşenini ve bunların hedeflerini kullanır ve CLI dahildir. Örneğin, Visual Studio 2019, .NET Core projelerine yönelik bağımlılıkları geri yüklemek için `dotnet restore` ([bkz. Note](#dotnet-restore-note)) komutuna çağrı yapmaz. Bunun yerine, "Restore" hedefini doğrudan kullanır. Bunlar MSBuild hedefleri olduğundan, [DotNet MSBuild](dotnet-msbuild.md) komutunu kullanarak bunları yürütmek Için ham MSBuild 'i de kullanabilirsiniz.
+CLI dahil olmak üzere tüm araç kümeleri artık paylaşılan SDK bileşenini ve hedeflerini tüketmektedir. Örneğin, Visual Studio 2019 ,NET `dotnet restore` Core projelerinin bağımlılıklarını geri yüklemek için[(nota bakınız)](#dotnet-restore-note)komutunu aramaz. Bunun yerine, doğrudan "Geri Yükleme" hedefini kullanır. Bunlar MSBuild hedefleri olduğundan, [dotnet msbuild](dotnet-msbuild.md) komutunu kullanarak bunları yürütmek için ham MSBuild'i de kullanabilirsiniz.
 
-### <a name="cli-commands"></a>CLı komutları
+### <a name="cli-commands"></a>CLI komutları
 
-Paylaşılan SDK bileşeni, var olan CLı komutlarının çoğunluğunun MSBuild görevleri ve hedefleri olarak yeniden uygulandığı anlamına gelir. Bu, CLı komutları ve araç takımını kullanımınız için ne anlama geliyor?
+Paylaşılan SDK bileşeni, varolan CLI komutlarının çoğunun MSBuild görevleri ve hedefleri olarak yeniden uygulandığı anlamına gelir. Bu, CLI komutları ve araç setini kullanımınız için ne anlama geliyor?
 
-Kullanım perspektifinden, CLı 'yı kullanma yöntemini değiştirmez. CLı hala .NET Core 1,0 Preview 2 sürümünde bulunan temel komutlara sahiptir:
+Kullanım açısından bakıldığında, CLI'yi kullanma şeklinizi değiştirmez. CLI hala .NET Core 1.0 Önizleme 2 sürümünde var olan çekirdek komutları vardır:
 
 - `new`
 - `restore`
@@ -57,21 +57,21 @@ Kullanım perspektifinden, CLı 'yı kullanma yöntemini değiştirmez. CLı hal
 - `test`
 - `pack`
 
-Bu komutlar, bunların ne olduğunu beklediğinizi (bir proje oluşturun, oluşturun, yayımlayın, paketleyebilir, vb.) devam eder. Davranışlarıyla ilgili bilgi almak için komutun yardım ekranına (`dotnet <command> --help`kullanarak) veya bu sitedeki belgelere başvurabilirsiniz.
+Bu komutlar hala yapmalarını beklediğiniz şeyi yapar (bir projeyi yenileyin, oluşturun, yayımlayın, paketleyin, vb.). Davranışlarını tanımak için komutun yardım ekranına (kullanarak) `dotnet <command> --help`veya bu sitedeki belgelere danışabilirsiniz.
 
-Bir yürütme perspektifinden, CLı komutları parametrelerini alır ve gerekli özellikleri ayarlayan ve istenen hedefi çalıştıran "RAW" MSBuild 'e bir çağrı oluşturur. Bunu daha iyi anlamak için aşağıdaki komutu göz önünde bulundurun:
+Yürütme açısından bakıldığında, CLI komutları parametrelerini alır ve gerekli özellikleri belirleyen ve istenen hedefi çalıştıran "ham" MSBuild'e bir çağrı oluşturur. Bunu daha iyi göstermek için aşağıdaki komutu göz önünde bulundurun:
 
    ```dotnetcli
    dotnet publish -o pub -c Release
    ```
 
-Bu komut, bir uygulamayı bir `pub` klasörüne "Release" yapılandırmasını kullanarak yayımlar. Dahili olarak, bu komut aşağıdaki MSBuild çağrısına çevrilir:
+Bu komut, "Release" `pub` yapılandırmasını kullanarak bir uygulamayı klasöre yayımlar. Dahili olarak, bu komut aşağıdaki MSBuild çağırmasına çevrilir:
 
    ```dotnetcli
    dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release
    ```
 
-Bu kurala yönelik Notable özel durumları `new` ve `run` komutlardır. MSBuild hedefleri olarak uygulanmamış.
+Bu kuralın önemli `new` istisnaları `run` ve komutlarıdır. Bunlar MSBuild hedefleri olarak uygulanmamıştır.
 
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

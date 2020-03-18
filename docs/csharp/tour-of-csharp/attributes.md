@@ -1,34 +1,34 @@
 ---
-title: C#Öznitelikler- C# dilin turu
-description: İçindeki öznitelikleri kullanarak bildirim temelli programlama hakkında bilgi edininC#
+title: C# Öznitelikleri - C# dilinde bir tur
+description: "C'deki öznitelikleri kullanarak bildirimsel programlama hakkında bilgi edinin #"
 ms.date: 02/27/2020
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
 ms.openlocfilehash: dc5b194c22fc2746ff8b0ab3e550e560a3666bbe
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159214"
 ---
 # <a name="attributes"></a>Öznitelikler
 
-Bir C# programdaki türler, Üyeler ve diğer varlıklar, davranışlarının belirli yönlerini denetleyen değiştiricilerin özelliklerini destekler. Örneğin, bir yöntemin erişilebilirliği `public`, `protected`, `internal`ve `private` değiştiricileri kullanılarak denetlenir. C#Bu özelliği, bildirim temelli bilgilerin Kullanıcı tanımlı türleri program varlıklarına iliştirilebilecek ve çalışma zamanında alınabilecek şekilde genelleştirir. Programlar, ***öznitelikleri***tanımlayarak ve kullanarak bu ek bildirime dayalı bilgileri belirtir.
+C# programındaki türler, üyeler ve diğer varlıklar, davranışlarının belirli yönlerini denetleyen değiştiricileri destekler. Örneğin, bir yöntemin `public`erişilebilirliği , , `protected` `internal`, ve `private` değiştiriciler kullanılarak denetlenir. C# bu özelliği, kullanıcı tarafından tanımlanan bildirimsel bilgi türlerinin program varlıklarına eklenebilir ve çalışma zamanında alınabilecek şekilde genelleştirir. Programlar ***öznitelikleri***tanımlayarak ve kullanarak bu ek bildirim bilgilerini belirtir.
 
-Aşağıdaki örnek, ilişkili belgelerinin bağlantılarını sağlamak için program varlıklarına yerleştirilebilecek bir `HelpAttribute` özniteliği bildirir.
+Aşağıdaki örnek, ilişkili `HelpAttribute` belgelerine bağlantılar sağlamak için program varlıklarına yerleştirilebilen bir öznitelik bildirir.
 
 [!code-csharp[AttributeDefined](../../../samples/snippets/csharp/tour/attributes/Program.cs#L3-L20)]
 
-Tüm öznitelik sınıfları, standart kitaplık tarafından sunulan <xref:System.Attribute> temel sınıfından türetilir. Öznitelikler, ilişkili bildirimden hemen önceki köşeli parantez içinde, adı ve bağımsız değişkenlerle birlikte uygulanabilir. Bir özniteliğin adı `Attribute`sonlanıyorsa, özniteliğe başvuruluyorsa adın bu bölümü atlanabilir. Örneğin `HelpAttribute` aşağıdaki gibi kullanılabilir.
+Tüm öznitelik sınıfları, <xref:System.Attribute> standart kitaplık tarafından sağlanan taban sınıftan türetilmiştir. Öznitelikler, ilişkili bildirimden hemen önce kare parantez içinde, herhangi bir bağımsız değişkenle birlikte adlarını vererek uygulanabilir. Bir öznitelik adı sona `Attribute`ererse, öznitelik başvurulduğunda adın bu bölümü atlanabilir. Örneğin, `HelpAttribute` aşağıdaki gibi kullanılabilir.
 
 [!code-csharp[AttributeApplied](../../../samples/snippets/csharp/tour/attributes/Program.cs#L22-L28)]
 
-Bu örnek, `Widget` sınıfına bir `HelpAttribute` iliştirir. Bu, sınıfındaki `Display` yöntemine başka bir `HelpAttribute` ekler. Öznitelik sınıfının ortak oluşturucuları, özniteliği bir program varlığına eklendiğinde sağlanması gereken bilgileri denetler. Öznitelik sınıfının genel okuma-yazma özelliklerine (daha önce `Topic` özelliğine başvuru gibi) başvurarak ek bilgiler sunulabilir.
+Bu örnek `HelpAttribute` `Widget` sınıfa a iliştirimi. Sınıftaki `HelpAttribute` yönteme `Display` bir tane daha ekler. Öznitelik sınıfının ortak oluşturucuları, öznitelik bir program varlığına iliştirildiğinde sağlanması gereken bilgileri denetler. Öznitelik sınıfının genel okuma-yazma özelliklerine (daha önce ki `Topic` özelliğe başvuru gibi) başvurarak ek bilgiler sağlanabilir.
 
-Öznitelikler tarafından tanımlanan meta veriler, yansıma kullanılarak çalışma zamanında okunabilir ve değiştirilebilir. Bu tekniği kullanarak belirli bir öznitelik istendiğinde, öznitelik sınıfı için Oluşturucu program kaynağında sağlanan bilgilerle çağrılır ve sonuçta elde edilen öznitelik örneği döndürülür. Özellikler aracılığıyla ek bilgiler sağlanmışsa, öznitelik örneği döndürülmeden önce bu özellikler verilen değerlere ayarlanır.
+Özniteliklertarafından tanımlanan meta veriler, yansıma kullanılarak çalışma zamanında okunabilir ve işlenebilir. Bu teknik kullanılarak belirli bir öznitelik istendiğinde, öznitelik sınıfının oluşturucusu program kaynağında sağlanan bilgilerle çağrılır ve ortaya çıkan öznitelik örneği döndürülür. Özellikler aracılığıyla ek bilgi sağlanmışsa, bu özellikler öznitelik örneği döndürülmeden önce verilen değerlere ayarlanır.
 
-Aşağıdaki kod örneği, `Widget` sınıfı ve `Display` yöntemiyle ilişkili `HelpAttribute` örneklerinin nasıl alınacağını gösterir.
+Aşağıdaki kod `HelpAttribute` `Widget` örneği, sınıfla ve yöntemiyle ilişkili örnekleri `Display` nasıl elde edilebildiğini gösterir.
 
 [!code-csharp[AttributeRead](../../../samples/snippets/csharp/tour/attributes/Program.cs#ReadAttributes)]
 
 >[!div class="step-by-step"]
->[Öncekini](delegates.md)
+>[Önceki](delegates.md)

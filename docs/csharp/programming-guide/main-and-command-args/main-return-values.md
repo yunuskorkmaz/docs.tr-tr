@@ -1,43 +1,43 @@
 ---
-title: Main () dönüş değerleri- C# Programlama Kılavuzu
+title: Ana() İade Değerleri - C# Programlama Kılavuzu
 ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
 ms.openlocfilehash: eaa78c33613093bb0e108870669392d07d346a95
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77504005"
 ---
-# <a name="main-return-values-c-programming-guide"></a>Main () dönüş değerleri (C# Programlama Kılavuzu)
+# <a name="main-return-values-c-programming-guide"></a>Ana() iade değerleri (C# Programlama Kılavuzu)
 
-`Main` yöntemi `void`döndürebilir:
+Yöntem `Main` döndürebilir: `void`
 
  [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
 
-Ayrıca, bir `int`döndürebilir:
+Ayrıca bir `int`döndürebilir:
 
  [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-`Main` dönüş değeri kullanılmazsa, `void` döndürme biraz daha basit bir koda izin verir. Ancak, bir tamsayı döndürmek programın durum bilgilerini yürütülebilir dosyayı çağıran diğer programlarla veya betiklerine iletmesine olanak sağlar. `Main` dönüş değeri, işlem için çıkış kodu olarak değerlendirilir. `Main` `void` döndürüldüğünde çıkış kodu örtük olarak `0`olur. Aşağıdaki örnek, `Main` ' den dönüş değerine nasıl erişildiğini gösterir.
+İade `Main` değeri kullanılmazsa, geri `void` döndürme biraz daha basit bir kod sağlar. Ancak, bir arayıcı döndürülen program, durum bilgilerini yürütülebilir dosyayı çağıran diğer programlara veya komut dosyalarına iletilmesini sağlar. Gelen `Main` iade değeri, işlemin çıkış kodu olarak kabul edilir. Çıkış `void` kodundan `Main` döndürülürse örtülü `0`olarak . Aşağıdaki örnek, geri `Main` dönüş değerinin nasıl erişilebildiğini gösterir.
 
 ## <a name="example"></a>Örnek
 
-Bu örnek [.NET Core](../../../core/index.md) komut satırı araçlarını kullanır. .NET Core komut satırı araçları hakkında bilginiz yoksa [, bu Başlarken konusunda bilgi](../../../core/tutorials/cli-create-console-app.md)edinebilirsiniz.
+Bu örnekte [.NET Core](../../../core/index.md) komut satırı araçları kullanılıyor. .NET Core komut satırı araçlarını bilmiyorsanız, bu [Başlangıç konusu](../../../core/tutorials/cli-create-console-app.md)hakkında bilgi edinebilirsiniz.
 
-*Program.cs* içinde `Main` yöntemini aşağıdaki gibi değiştirin:
+Yöntemi `Main` aşağıdaki *gibi program.cs* değiştirin:
 
  [!code-csharp[csProgGuideMain#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#14)]
 
-Bir program Windows 'da yürütüldüğünde, `Main` işlevinden döndürülen herhangi bir değer bir ortam değişkeninde depolanır. Bu ortam değişkeni bir toplu iş dosyasından `ERRORLEVEL` veya PowerShell 'den `$LastExitCode` kullanılarak alınabilir.
+Bir program Windows'da yürütüldüğünde, `Main` işlevden döndürülen herhangi bir değer bir ortam değişkeninde depolanır. Bu ortam değişkeni bir `ERRORLEVEL` toplu iş dosyasından veya `$LastExitCode` powershell'den alınabilir.
 
-[DotNet clı](../../../core/tools/dotnet.md) `dotnet build` komutunu kullanarak uygulamayı oluşturabilirsiniz.
+Uygulamayı [dotnet CLI](../../../core/tools/dotnet.md) `dotnet build` komutunu kullanarak oluşturabilirsiniz.
 
-Sonra, uygulamayı çalıştırmak için bir PowerShell betiği oluşturun ve sonucu görüntüleyin. Aşağıdaki kodu bir metin dosyasına yapıştırın ve projeyi içeren klasöre `test.ps1` olarak kaydedin. PowerShell komut isteminde `test.ps1` yazarak PowerShell betiğini çalıştırın.
+Ardından, uygulamayı çalıştırmak ve sonucu görüntülemek için bir Powershell komut dosyası oluşturun. Aşağıdaki kodu bir metin dosyasına yapıştırın `test.ps1` ve projeyi içeren klasörde olduğu gibi kaydedin. Powershell komut isteminde `test.ps1` yazarak powershell komut dosyasını çalıştırın.
 
-Kod sıfır döndürdüğünden, toplu iş dosyası başarıyı bildirir. Ancak, MainReturnValTest.cs değerini sıfır olmayan bir değer döndürecek şekilde değiştirip programı yeniden derlerseniz, PowerShell betiğinin sonraki yürütmesi hata bildirir.
+Kod sıfır döndürüldüğünden, toplu işdosyası başlıcayı bildirir. Ancak, MainReturnValTest.cs sıfır olmayan bir değeri döndürmek ve sonra programı yeniden derlemek için değiştirirseniz, powershell komut dosyasının sonraki yürütülmesi hata bildirir.
 
 ```dotnetcli
 dotnet run
@@ -60,9 +60,9 @@ Execution succeeded
 Return value = 0
 ```
 
-## <a name="async-main-return-values"></a>Zaman uyumsuz ana dönüş değerleri
+## <a name="async-main-return-values"></a>Async Ana iade değerleri
 
-Zaman uyumsuz ana dönüş değerleri, derleyici tarafından oluşturulan koda `Main` zaman uyumsuz yöntemleri çağırmak için gereken ortak kodu taşır. Daha önce, zaman uyumsuz kodu çağırmak ve programınızın zaman uyumsuz işlem tamamlanana kadar çalıştığından emin olmak için bu yapıyı yazmanız gerekir:
+Async Main return değerleri, derleyici tarafından oluşturulan `Main` koda eşzamanlı yöntemleri çağırmak için gerekli olan ortak kodu taşır. Daha önce, eşzamanlı kodu çağırmak ve programınızın eşzamanlı işlem tamamlanana kadar çalıştırdığından emin olmak için bu yapıyı yazmanız gerekir:
 
 ```csharp
 public static void Main()
@@ -77,27 +77,27 @@ private static async Task<int> AsyncConsoleWork()
 }
 ```
 
-Şimdi bu, şu şekilde değiştirilebilir:
+Şimdi, bu değiştirilebilir:
 
 [!code-csharp[AsyncMain](../../../../samples/snippets/csharp/main-arguments/program.cs#AsyncMain)]
 
-Yeni sözdiziminin avantajı, derleyicinin her zaman doğru kodu üretmesinin avantajına sahiptir.
+Yeni sözdiziminin avantajı, derleyicinin her zaman doğru kodu oluşturmasıdır.
 
-## <a name="compiler-generated-code"></a>Derleyicinin ürettiği kod
+## <a name="compiler-generated-code"></a>Derleyici oluşturulan kod
 
-Uygulama giriş noktası bir `Task` veya `Task<int>`döndürdüğünde, derleyici uygulama kodunda belirtilen giriş noktası yöntemini çağıran yeni bir giriş noktası oluşturur. Bu giriş noktasının `$GeneratedMain`çağrıldığı kabul edildiğinde, derleyici bu giriş noktaları için aşağıdaki kodu üretir:
+Uygulama giriş noktası a `Task` `Task<int>`veya , derleyici döndürdüğünde, uygulama kodunda bildirilen giriş noktası yöntemini çağıran yeni bir giriş noktası oluşturur. Bu giriş noktasının `$GeneratedMain`çağrıldığını varsayarsak, derleyici bu giriş noktaları için aşağıdaki kodu oluşturur:
 
-- `static Task Main()`, derleyicinin `private static void $GeneratedMain() => Main().GetAwaiter().GetResult();` eşdeğerini yaymasına neden olur
-- `static Task Main(string[])`, derleyicinin `private static void $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();` eşdeğerini yaymasına neden olur
-- `static Task<int> Main()`, derleyicinin `private static int $GeneratedMain() => Main().GetAwaiter().GetResult();` eşdeğerini yaymasına neden olur
-- `static Task<int> Main(string[])`, derleyicinin `private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();` eşdeğerini yaymasına neden olur
+- `static Task Main()`eşdeğeri yayan derleyici sonuçları`private static void $GeneratedMain() => Main().GetAwaiter().GetResult();`
+- `static Task Main(string[])`eşdeğeri yayan derleyici sonuçları`private static void $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`
+- `static Task<int> Main()`eşdeğeri yayan derleyici sonuçları`private static int $GeneratedMain() => Main().GetAwaiter().GetResult();`
+- `static Task<int> Main(string[])`eşdeğeri yayan derleyici sonuçları`private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`
 
 > [!NOTE]
->Örnekler `Main` yönteminde `async` değiştirici kullandıysanız, derleyici aynı kodu oluşturur.
+>Örnekler `Main` yöntemde `async` değiştirici kullanılırsa, derleyici aynı kodu oluşturur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [C#Başvurunun](../index.md)
+- [C# Referans](../index.md)
 - [Ana() ve Komut Satırı Bağımsız Değişkenleri](index.md)
-- [Komut satırı bağımsız değişkenlerini görüntüleme](./how-to-display-command-line-arguments.md)
+- [Komut satırı bağımsız değişkenleri nasıl görüntülenir?](./how-to-display-command-line-arguments.md)
