@@ -9,121 +9,121 @@ helpviewer_keywords:
 - tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 ms.openlocfilehash: 8caea6d8a97b8c0daf7c59718479ea2e12a52d78
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141561"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ ve TPL için Özel Bölümleyiciler
 
-Bir veri kaynağındaki bir işlemi paralel hale getirmek için, temel adımlardan biri kaynağı birden çok iş parçacığı tarafından aynı anda erişilebilen birden çok bölüme *bölümlemesidir* . PLıNQ ve görev paralel kitaplığı (TPL), paralel bir sorgu veya <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngüsü yazdığınızda saydam olarak çalışan varsayılan Bölümleyiciler sağlar. Daha gelişmiş senaryolar için kendi bölümleyici 'nizi takabilirsiniz.
+Bir işlemi veri kaynağındaki bir işlemi paralelleştirmek için, temel adımlardan biri kaynağı aynı anda birden çok iş parçacığı tarafından erişilebilen birden çok bölüme *bölmektir.* PLINQ ve Görev Paralel Kitaplığı (TPL), paralel sorgu veya <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngü yazdığınızda saydam olarak çalışan varsayılan bölümleyiciler sağlar. Daha gelişmiş senaryolar için, kendi bölümleyici takabilirsiniz.
 
-## <a name="kinds-of-partitioning"></a>Bölümleme türleri
+## <a name="kinds-of-partitioning"></a>Bölümleme Türleri
 
-Bir veri kaynağını bölümleyerek birçok yol vardır. En verimli yaklaşımlar içinde, birden çok iş parçacığı kaynağı fiziksel olarak birden çok subsequences ayırmak yerine, özgün kaynak sırasını işlemek üzere çalışır. Uzunluktaki ve uzunluğu önceden bilinen <xref:System.Collections.IList> Koleksiyonlar gibi diziler ve diğer dizinli kaynaklar için, *Aralık bölümleme* en basit bölümleme türüdür. Her iş parçacığı benzersiz başlangıç ve bitiş dizinlerini alır, böylece, başka bir iş parçacığı tarafından üzerine yazmadan veya üzerine yazılmadan kaynak aralığını işleyebilir. Aralık bölümlemeye dahil olan tek ek, aralıkları oluşturmaya yönelik ilk çalışmadır; Bundan sonra ek eşitleme gerekmez. Bu nedenle, iş yükü eşit olarak bölündüğü sürece iyi bir performans sağlayabilir. Aralık bölümlemenin bir dezavantajı, bir iş parçacığının erken sonlandırmasıdır, diğer iş parçacıklarının işlerini bitirmesini yardımcı olamaz.
+Bir veri kaynağını bölmenin birçok yolu vardır. En verimli yaklaşımlarda, birden çok iş parçacığı, kaynağı fiziksel olarak birden çok alt diziye ayırmak yerine özgün kaynak sırasını işlemek için işbirliği yapar. Uzunluk önceden bilinen koleksiyonlar gibi <xref:System.Collections.IList> diziler ve diğer dizilimli kaynaklar için *aralık bölümleme* en basit bölümleme türüdür. Her iş parçacığı benzersiz başlangıç ve bitiş dizinleri alır, böylece kaynak aralığını başka bir iş parçacığı tarafından üzerine yazılmadan veya üzerine yazılmadan işleyebilir. Aralık bölümleme ile ilgili tek ek yükü aralıkları oluşturma nın ilk çalışmasıdır; bundan sonra ek bir eşitleme gerekmez. Bu nedenle, iş yükü eşit olarak bölündüğü sürece iyi performans sağlayabilir. Aralık bölümlemenin bir dezavantajı, bir iş parçacığı erken biterse, diğer iş parçacıklarının işlerini bitirmelerine yardımcı olamaz.
 
-Uzunluğu bilinmeyen bağlantılı listeler veya diğer koleksiyonlar için *öbek bölümleme*kullanabilirsiniz. Öbek bölümlendirme içinde, bir paralel döngü veya sorgudaki her iş parçacığı veya görev, bir öbekte birkaç kaynak öğesi tüketir, bunları işler ve sonra ek öğeleri almaya geri gelir. Bölümleyici tüm öğelerin dağıtılmasını ve yinelenen değer olmamasını sağlar. Bir öbek herhangi bir boyutta olabilir. Örneğin, [nasıl yapılır: dinamik bölümleri uygulama](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md) bölümünde gösterilen bölümleyici yalnızca bir öğe içeren öbekleri oluşturur. Parçalar çok büyük olmadığı sürece, iş parçacıklarındaki öğelerin atanması önceden belirlenmediğinden, bu tür bir bölümleme, kendiliğinden yük dengedir. Ancak, bölümleyici, iş parçacığının başka bir öbeği alması gerektiğinde eşitleme ek yüküne neden olur. Bu durumlarda oluşan eşitleme miktarı, öbeklerin boyutuyla daha seyrek orantılı şekilde yapılır.
+Bağlı listeler veya uzunluğu bilinmeyen diğer koleksiyonlar için *yığın bölümleme*kullanabilirsiniz. Yığın bölümlemede, paralel döngü veya sorgudaki her iş parçacığı veya görev bir yığında bazı kaynak öğelerini tüketir, işler ve ek öğeleri almak için geri gelir. Bölümleyici, tüm öğelerin dağıtılmasını ve yineleyici olmamasını sağlar. Bir yığın herhangi bir boyutta olabilir. Örneğin, [Nasıl Yapılır: Dinamik Bölümleri Uygulama'da](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md) gösterilen bölümleyici, yalnızca bir öğe içeren parçalar oluşturur. Parçalar çok büyük olmadığı sürece, bu tür bölümleme doğal olarak yük dengelemedir, çünkü öğelerin iş parçacıklarına atanması önceden belirlenmemiştir. Ancak, bölümleyici iş parçacığı başka bir yığın almak için her zaman eşitleme yükü tabi yok. Bu gibi durumlarda tahakkuk eden eşitleme miktarı, parçaların boyutuyla ters orantılıdır.
 
-Genel olarak, Aralık bölümleme yalnızca temsilcinin yürütme süresi küçük ve orta arası olduğunda ve kaynakta çok sayıda öğe varsa ve her bölümün toplam çalışması kabaca eşdeğerdir. Çoğu durumda öbek bölümleme genellikle daha hızlıdır. Temsilci için az sayıda öğe veya daha uzun yürütme süresi olan kaynaklarda, öbek ve Aralık bölümlemenin performansı eşittir.
+Genel olarak, aralık bölümleme yalnızca temsilcinin yürütme süresi küçük ve kaynak öğeleri çok sayıda ve her bölümün toplam çalışma kabaca eşdeğerolduğunda daha hızlıdır. Bu nedenle, yığın bölümleme genellikle çoğu durumda daha hızlıdır. Az sayıda öğe veya temsilci için daha uzun yürütme süreleri olan kaynaklarda, yığın ve aralık bölümleme performansı yaklaşık eşittir.
 
-TPL Bölümleyiciler dinamik sayıda bölümü de destekler. Bu, örneğin, <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngüsünün yeni bir görevi oluşturması gibi bölümler oluşturbilecekleri anlamına gelir. Bu özellik, bölümleyici 'nin döngüyle birlikte ölçeklenebilmesini sağlar. Dinamik Bölümleyiciler Ayrıca, doğal olarak yük dengedir. Özel bir bölümleyici oluşturduğunuzda, bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngüsünden tüketilebilir olması için dinamik bölümlendirme desteği gerekir.
+TPL bölümleyiciler de bölümdinamik bir sayı yı destekler. Bu, örneğin <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngü yeni bir görev doğurduğunda, anında bölümler oluşturabilecekleri anlamına gelir. Bu özellik, bölümleyicinin döngünün kendisiyle birlikte ölçeklendirmesini sağlar. Dinamik bölümleyiciler de doğal olarak yük dengeleme vardır. Özel bir bölümleyici oluşturduğunuzda, bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngüden tüketilebilir olması için dinamik bölümlemayı desteklemeniz gerekir.
 
-### <a name="configuring-load-balancing-partitioners-for-plinq"></a>PLıNQ için Yük Dengeleme Bölümleyicilerinin yapılandırılması
+### <a name="configuring-load-balancing-partitioners-for-plinq"></a>PLINQ için Yük Dengeleme Bölümleyicileri Yapılandırma
 
-<xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType> yönteminin bazı aşırı yüklemeleri, bir dizi veya <xref:System.Collections.IList> kaynağı için bir bölümleyici oluşturmanıza ve iş yükünü iş parçacıkları arasında dengelemeye çalışıp çalışmadığını belirtmenize olanak tanır. Bölümleyici, yük dengeleme için yapılandırıldığında, öbek bölümleme kullanılır ve öğeler istenen küçük öbeklerdeki her bölüme dağıtılır. Bu yaklaşım tüm tüm bölümlerin, tüm döngü veya sorgu tamamlanana kadar işlemek için öğelere sahip olduğundan emin olmanıza yardımcı olur. Herhangi bir <xref:System.Collections.IEnumerable> kaynağının Yük Dengeleme bölümlemesini sağlamak için ek bir aşırı yükleme kullanılabilir.
+<xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType> Yöntemin bazı aşırı yükleri, bir dizi veya <xref:System.Collections.IList> kaynak için bir bölümleyici oluşturmanıza ve iş parçacıkları arasındaki iş yükünü dengelemeye çalışıp çalışmayacağını belirtmenize izin verebilirsiniz. Bölümleyici yük dengesi için yapılandırıldığında, yığın bölümleme kullanılır ve öğeler istendiği gibi küçük parçalar halinde her bölüme teslim edilir. Bu yaklaşım, tüm döngü veya sorgu tamamlanana kadar tüm bölümlerin işletilen öğelere sahip olmasını sağlamaya yardımcı olur. Herhangi bir <xref:System.Collections.IEnumerable> kaynağın yük dengeleme bölümleme sağlamak için ek bir aşırı yük kullanılabilir.
 
-Genel olarak, Yük Dengeleme, bölümlerin bölümleyici 'den görece sıklıkta istek istemesine gerek duyar. Buna karşılık, statik bölümlendirme yapan bir bölümleyici her bir bölümleyici öğesine, her türlü veya öbek bölümlendirme kullanarak öğeleri atayabilir. Bu, yük dengelemeden daha az yük gerektirir, ancak bir iş parçacığının diğer diğerlerinden çok daha fazla iş ile sona ermemesi durumunda yürütülmesi daha uzun sürebilir. Varsayılan olarak, bir IList veya Array geçirildiğinde, PLıNQ her zaman yük dengeleme olmadan Aralık bölümlendirme kullanır. PLıNQ için yük dengelemeyi etkinleştirmek üzere, aşağıdaki örnekte gösterildiği gibi `Partitioner.Create` yöntemini kullanın.
+Genel olarak, yük dengeleme bölümleyici nispeten sık öğeleri istemek için bölümleri gerektirir. Buna karşılık, statik bölümleme yapan bir bölümleyici, aralık veya yığın bölümleme kullanarak öğeleri her bölümleyiciye aynı anda atayabilir. Bu, yük dengelemedaha az genel yük gerektirir, ancak bir iş parçacığı diğerlerinden önemli ölçüde daha fazla iş ile biterse yürütülmesi daha uzun sürebilir. Varsayılan olarak bir IList veya dizi geçirildiğinde, PLINQ her zaman yük dengeleme olmadan aralık bölümleme kullanır. PLINQ için yük dengelemesini etkinleştirmek için aşağıdaki örnekte gösterildiği gibi `Partitioner.Create` yöntemi kullanın.
 
 [!code-csharp[TPL_Partitioners#02](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioners.cs#02)]
 [!code-vb[TPL_Partitioners#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_partitioners/vb/partitionsnippets_vb.vb#02)]
 
-Belirli bir senaryoda yük dengelemenin kullanılıp kullanılmayacağını belirlemenin en iyi yolu, temsilci yükleme ve bilgisayar yapılandırması altında işlemin ne kadar sürdüğünü tamamlamaya ve ölçmeye yönelik bir deneymidir. Örneğin, statik bölümlendirme yalnızca birkaç çekirdeğe sahip olan çok çekirdekli bir bilgisayarda önemli bir hızlı yol sunabilir, ancak nispeten fazla çekirdeğe sahip bilgisayarlarda yavaşlamalara neden olabilir.
+Herhangi bir senaryoda yük dengelemesinin kullanılıp kullanılmayacağını belirlemenin en iyi yolu, temsili yükler ve bilgisayar yapılandırmaları altında işlemlerin tamamlanmasının ne kadar sürdüğünü denemek ve ölçmektir. Örneğin, statik bölümleme yalnızca birkaç çekirdekli çok çekirdekli bir bilgisayarda önemli bir hız sağlayabilir, ancak nispeten çok sayıda çekirdek olan bilgisayarlarda yavaşlamalara neden olabilir.
 
-Aşağıdaki tabloda <xref:System.Collections.Concurrent.Partitioner.Create%2A> yönteminin kullanılabilir aşırı yüklemeleri listelenmektedir. Bu bölümleyicilerin yalnızca PLıNQ veya <xref:System.Threading.Tasks.Task>ile kullanılması sınırlı değildir. Ayrıca, özel bir paralel yapı ile de kullanılabilirler.
+Aşağıdaki tabloda yöntemin kullanılabilir <xref:System.Collections.Concurrent.Partitioner.Create%2A> aşırı yükleri listelenir. Bu bölümleyiciler sadece PLINQ veya <xref:System.Threading.Tasks.Task>kullanmak için sınırlı değildir. Onlar da herhangi bir özel paralel yapı ile kullanılabilir.
 
-|Yüklemek|Yük dengelemeyi kullanır|
+|Aşırı|Yük dengeleme kullanır|
 |--------------|-------------------------|
-|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>|Her|
-|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28%60%600%5B%5D%2CSystem.Boolean%29>|Boole bağımsız değişkeni true olarak belirtildiğinde|
-|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IList%7B%60%600%7D%2CSystem.Boolean%29>|Boole bağımsız değişkeni true olarak belirtildiğinde|
-|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%29>|Amaçlan|
-|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%2CSystem.Int32%29>|Amaçlan|
-|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%29>|Amaçlan|
-|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%2CSystem.Int64%29>|Amaçlan|
+|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>|Her zaman|
+|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28%60%600%5B%5D%2CSystem.Boolean%29>|Boolean bağımsız değişkeni doğru olarak belirtildiğinde|
+|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IList%7B%60%600%7D%2CSystem.Boolean%29>|Boolean bağımsız değişkeni doğru olarak belirtildiğinde|
+|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%29>|Hiçbir zaman|
+|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%2CSystem.Int32%29>|Hiçbir zaman|
+|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%29>|Hiçbir zaman|
+|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%2CSystem.Int64%29>|Hiçbir zaman|
 
-### <a name="configuring-static-range-partitioners-for-parallelforeach"></a>Statik Aralık Bölümleyiciler paralel. ForEach için Yapılandırılıyor
+### <a name="configuring-static-range-partitioners-for-parallelforeach"></a>Parallel.ForEach için Statik Aralık Bölümleyicileri Yapılandırma
 
-<xref:System.Threading.Tasks.Parallel.For%2A> döngüsünde, döngünün gövdesi bir temsilci olarak yönteme sağlanır. Bu temsilciyi çağırma maliyeti, sanal yöntem çağrısıyla aynı şekilde yapılır. Bazı senaryolarda, paralel bir döngünün gövdesi, her döngü yinelemesinde temsilci çağrısı maliyetinin önemli hale geldiği kadar küçük olabilir. Bu gibi durumlarda, kaynak öğeler üzerinde Aralık bölümlerinin bir <xref:System.Collections.Generic.IEnumerable%601> oluşturmak için <xref:System.Collections.Concurrent.Partitioner.Create%2A> aşırı yüklerden birini kullanabilirsiniz. Daha sonra, bu aralıklar koleksiyonunu gövde düzenli bir `for` döngüsünden oluşan bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> metoduna geçirebilirsiniz. Bu yaklaşımın avantajı, temsilci çağırma maliyetinin her öğe için bir kez değil, her aralığa yalnızca bir kez tahakkuk etcidir. Aşağıdaki örnekte temel desenler gösterilmektedir.
+Bir <xref:System.Threading.Tasks.Parallel.For%2A> döngüde, döngü gövdesi metoduna temsilci olarak sağlanır. Bu temsilci çağırmanın maliyeti, sanal yöntem çağrısıyla hemen hemen aynıdır. Bazı senaryolarda, paralel döngü gövdesi, her döngü yinelemesindeki temsilci çağırma maliyetinin önemli hale gelmesinden yeterince küçük olabilir. Bu gibi durumlarda, kaynak öğeler <xref:System.Collections.Concurrent.Partitioner.Create%2A> üzerinde bir <xref:System.Collections.Generic.IEnumerable%601> dizi bölümleri oluşturmak için aşırı yüklerden birini kullanabilirsiniz. Daha sonra, bu aralıklar koleksiyonunu, <xref:System.Threading.Tasks.Parallel.ForEach%2A> gövdesi normal `for` bir döngüden oluşan bir yönteme geçirebilirsiniz. Bu yaklaşımın yararı, temsilci çağırma maliyetinin öğe başına bir değil, aralık başına yalnızca bir kez tahakkuk ettirilmesidir. Aşağıdaki örnek, temel deseni göstermektedir.
 
 [!code-csharp[TPL_Partitioners#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioner01.cs#01)]
 [!code-vb[TPL_Partitioners#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_partitioners/vb/partitionercreate01.vb#01)]
 
-Döngüdeki her iş parçacığı, belirtilen alt aralıktaki başlangıç ve bitiş dizini değerlerini içeren kendi <xref:System.Tuple%602> alır. Inner `for` döngüsü `fromInclusive` ve `toExclusive` değerlerini kullanarak dizi üzerinde veya doğrudan <xref:System.Collections.IList>.
+Döngüdeki her iş parçacığı, belirtilen alt aralıktaki başlangıç ve bitiş dizin değerlerini içeren kendi <xref:System.Tuple%602> iş parçacığıalır. `for` İç döngü, `fromInclusive` dizi `toExclusive` veya <xref:System.Collections.IList> doğrudan üzerinde döngü ve değerleri kullanır.
 
-<xref:System.Collections.Concurrent.Partitioner.Create%2A> aşırı yüklemelerin biri bölümlerin boyutunu ve bölüm sayısını belirtmenize olanak tanır. Bu aşırı yükleme, her öğe için, her öğe için bir sanal yöntem çağrısı performansa göre belirgin bir etkiye sahip olduğu durumlarda kullanılabilir.
+<xref:System.Collections.Concurrent.Partitioner.Create%2A> Aşırı yüklemelerden biri, bölümlerin boyutunu ve bölüm sayısını belirtmenizi sağlar. Bu aşırı yük, öğe başına çalışmanın o kadar düşük olduğu senaryolarda kullanılabilir ki, öğe başına bir sanal yöntem çağrısı bile performans üzerinde gözle görülür bir etkiye sahiptir.
 
 ## <a name="custom-partitioners"></a>Özel Bölümleyiciler
 
-Bazı senaryolarda, kendi bölümleyici 'nizi uygulamak için de gerekli olabilir. Örneğin, sınıfın iç yapısına bağlı olarak, varsayılan Bölümleyiciler tarafından daha verimli bir şekilde bölümleyebilir bir özel koleksiyon sınıfınız olabilir. Ya da, kaynak koleksiyondaki farklı konumlarda bulunan öğeleri işlemek için ne kadar süreceğine bağlı olarak değişen boyutlarda Aralık bölümleri oluşturmak isteyebilirsiniz.
+Bazı senaryolarda, değerli olabilir veya hatta kendi bölümleyici uygulamak için gerekli olabilir. Örneğin, sınıfın iç yapısı hakkındaki bilginize bağlı olarak varsayılan bölümleyicilerden daha verimli bir şekilde bölümlere ayrılayabildiğiniz özel bir koleksiyon sınıfınuz olabilir. Veya, kaynak koleksiyonundaki farklı konumlardaki öğeleri işlemenin ne kadar süreceğü hakkında bilginize bağlı olarak farklı boyutlarda aralık bölümleri oluşturmak isteyebilirsiniz.
 
-Temel bir özel bölümleyici oluşturmak için, <xref:System.Collections.Concurrent.Partitioner%601?displayProperty=nameWithType> bir sınıf türetirsiniz ve sanal yöntemleri aşağıdaki tabloda açıklandığı gibi geçersiz kılın.
-
-|||
-|-|-|
-|<xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>|Bu yöntem, ana iş parçacığı tarafından bir kez çağrılır ve bir IList (IEnumerator (TSource)) döndürür. Döngü veya sorgudaki her çalışan iş parçacığı, farklı bir bölüm üzerinde <xref:System.Collections.Generic.IEnumerator%601> almak için listedeki `GetEnumerator` çağırabilir.|
-|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|<xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>uygularsanız `false``true` döndürün.|
-|<xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> `true`ise, bu yöntem <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>yerine isteğe bağlı olarak çağrılabilir.|
-
-Sonuçlar sıralanabilir olmalıdır veya öğelere dizinli erişim istiyorsanız, <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> türetirsiniz ve sanal yöntemlerini aşağıdaki tabloda açıklandığı gibi geçersiz kılın.
+Temel bir özel bölümleyici oluşturmak için, <xref:System.Collections.Concurrent.Partitioner%601?displayProperty=nameWithType> aşağıdaki tabloda açıklandığı gibi bir sınıf türetin ve sanal yöntemleri geçersiz kılın.
 
 |||
 |-|-|
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetPartitions%2A>|Bu yöntem, ana iş parçacığı tarafından bir kez çağrılır ve bir `IList(IEnumerator(TSource))`döndürür. Döngü veya sorgudaki her çalışan iş parçacığı, farklı bir bölüm üzerinde <xref:System.Collections.Generic.IEnumerator%601> almak için listedeki `GetEnumerator` çağırabilir.|
-|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A>uygularsanız `true` döndürün; Aksi takdirde, false.|
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A>|Genellikle bu yalnızca <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A>çağırır.|
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A>|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> `true`ise, bu yöntem <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>yerine isteğe bağlı olarak çağrılabilir.|
+|<xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>|Bu yöntem ana iş parçacığı tarafından bir kez çağrılır ve bir IList(IEnumerator(TSource)) döndürür. Döngü veya sorgudaki her alt `GetEnumerator` iş parçacığı, <xref:System.Collections.Generic.IEnumerator%601> farklı bir bölüm üzerinde almak için listede çağırabilir.|
+|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|Uygularsanız `true` <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>geri dönün, `false`aksi takdirde.|
+|<xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>|Ise, <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> bu yöntem isteğe bağlı olarak yerine <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> `true`|
 
-Aşağıdaki tabloda, üç tür yük dengeleme bölümünün <xref:System.Collections.Concurrent.OrderablePartitioner%601> sınıfını nasıl uygulayan hakkında ek ayrıntılar verilmektedir.
+Sonuçlar sıralanabilir olması gerekiyorsa veya öğelere dizinli erişim gerektiriyorsanız, aşağıdaki tabloda açıklandığı gibi sanal yöntemlerinden <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> türetin ve geçersiz kılın.
 
-|Metot/Özellik|Yük Dengeleme olmadan IList/Array|Yük Dengeleme ile IList/Array|IEnumerable|
+|||
+|-|-|
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetPartitions%2A>|Bu yöntem ana iş parçacığı tarafından `IList(IEnumerator(TSource))`bir kez çağrılır ve bir . Döngü veya sorgudaki her alt `GetEnumerator` iş parçacığı, <xref:System.Collections.Generic.IEnumerator%601> farklı bir bölüm üzerinde almak için listede çağırabilir.|
+|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|Uygularsanız `true` <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A>geri dönün; aksi takdirde, yanlış.|
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A>|Tipik olarak, bu <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A>sadece çağırır .|
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A>|Ise, <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> bu yöntem isteğe bağlı olarak yerine <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> `true`|
+
+Aşağıdaki tablo, üç tür yük dengeleme bölümleyicilerinin <xref:System.Collections.Concurrent.OrderablePartitioner%601> sınıfı nasıl uyguladığı hakkında ek ayrıntılar sağlar.
+
+|Yöntem / Özellik|Yük Dengelemeolmadan IList / Dizi|Yük Dengelemeli IList / Dizi|ıenumerable|
 |----------------------|-------------------------------------------|----------------------------------------|-----------------|
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>|Aralık bölümleme kullanır|Belirtilen partitionCount listeleri için en iyi duruma getirilmiş öbek bölümleme kullanır|Statik sayıda bölüm oluşturarak öbek bölümleme kullanır.|
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A?displayProperty=nameWithType>|Desteklenmeyen özel durum oluşturur|Listeler ve dinamik bölümler için en iyi duruma getirilmiş öbek bölümleme kullanır|Dinamik sayıda bölüm oluşturarak öbek bölümleme kullanır.|
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysOrderedInEachPartition%2A>|`true` döndürür|`true` döndürür|`true` döndürür|
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysOrderedAcrossPartitions%2A>|`true` döndürür|`false` döndürür|`false` döndürür|
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysNormalized%2A>|`true` döndürür|`true` döndürür|`true` döndürür|
-|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|`false` döndürür|`true` döndürür|`true` döndürür|
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>|Aralık bölümleme kullanır|Belirtilen bölümSayısı için Listeler için en iyi duruma getirilmiş yığın bölümleme kullanır|Statik bölüm sayısı oluşturarak yığın bölümleme kullanır.|
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A?displayProperty=nameWithType>|Desteklenmeyen özel durum atar|Listeler ve dinamik bölümler için en iyi duruma getirilmiş yığın bölümleme kullanır|Dinamik bir bölüm sayısı oluşturarak yığın bölümleme kullanır.|
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysOrderedInEachPartition%2A>|Döndürür`true`|Döndürür`true`|Döndürür`true`|
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysOrderedAcrossPartitions%2A>|Döndürür`true`|Döndürür`false`|Döndürür`false`|
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysNormalized%2A>|Döndürür`true`|Döndürür`true`|Döndürür`true`|
+|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|Döndürür`false`|Döndürür`true`|Döndürür`true`|
 
-### <a name="dynamic-partitions"></a>Dinamik bölümler
+### <a name="dynamic-partitions"></a>Dinamik Bölümler
 
-<xref:System.Threading.Tasks.Parallel.ForEach%2A> bir yöntemde kullanılacak olan bölümleyici 'yi düşünüyorsanız, dinamik sayıda bölüm döndürebilmelisiniz. Bu, bölümleyici 'nin döngü yürütme sırasında dilediğiniz zaman isteğe bağlı yeni bir bölüm için bir Numaralandırıcı sağlayabileceği anlamına gelir. Temel olarak, döngü yeni bir paralel görev eklediğinde, bu görev için yeni bir bölüm ister. Verilerin sıralı olmasını istiyorsanız, her bölümdeki her bir öğeye benzersiz bir dizin atanması için <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> türetirsiniz.
+Bölümleyicinin bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> yöntemde kullanılmasını istiyorsanız, dinamik sayıda bölüm döndürebilmelisin. Bu, bölümleyici döngü yürütme sırasında herhangi bir zamanda isteğe bağlı yeni bir bölüm için bir sayısallaştırıcı kaynağı anlamına gelir. Temel olarak, döngü yeni bir paralel görev eklendiğinde, bu görev için yeni bir bölüm ister. Verilerin düzenlenebilir olmasını istiyorsanız, her bölümdeki <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> her öğeye benzersiz bir dizin atanması için türetin.
 
-Daha fazla bilgi ve bir örnek için bkz. [nasıl yapılır: dinamik bölümleri uygulama](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).
+Daha fazla bilgi ve bir örnek için [bkz.](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)
 
-### <a name="contract-for-partitioners"></a>Bölümleyiciler için sözleşme
+### <a name="contract-for-partitioners"></a>Bölümleyiciler için Sözleşme
 
-Özel bir bölümleyici uyguladığınızda, TPL 'de PLıNQ ve <xref:System.Threading.Tasks.Parallel.ForEach%2A> doğru etkileşimi sağlamaya yardımcı olmak için aşağıdaki yönergeleri izleyin:
+Özel bir bölümleyici uyguladığınızda, PLINQ ve <xref:System.Threading.Tasks.Parallel.ForEach%2A> TPL ile doğru etkileşimi sağlamaya yardımcı olmak için aşağıdaki yönergeleri izleyin:
 
-- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, `partitionsCount`için sıfır veya daha az bir bağımsız değişkenle çağrılırsa <xref:System.ArgumentOutOfRangeException>oluşturun. PLıNQ ve TPL, 0 ' a eşit `partitionCount` hiçbir şekilde geçmeyecektir, ancak olasılığa karşı koruma yapmanızı öneririz.
+- Sıfır <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> veya daha az bir argüman `partitionsCount`ile <xref:System.ArgumentOutOfRangeException>çağrılırsa , atmak . PLINQ ve TPL 0'a `partitionCount` eşit olarak asla geçmeyecek olsa da, yine de bu olasına karşı korumanızı öneririz.
 
-- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> ve <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> her zaman `partitionsCount` bölüm sayısını döndürmelidir. Bölümleyici veri tükendiyse ve istenen sayıda bölüm oluşturamaz, bu durumda yöntem kalan bölümlerin her biri için boş bir Numaralandırıcı döndürmelidir. Aksi halde, PLıNQ ve TPL her ikisi de bir <xref:System.InvalidOperationException>oluşturur.
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>ve <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> her `partitionsCount` zaman bölüm sayısını döndürmelidir. Bölümleyici veri biterse ve istenildikçe çok sayıda bölüm oluşturamıyorsa, yöntem kalan bölümlerin her biri için boş bir sayısalatör döndürmelidir. Aksi takdirde, hem PLINQ ve <xref:System.InvalidOperationException>TPL bir atar.
 
-- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>ve <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> hiçbir şekilde `null` döndürmemelidir (`Nothing` Visual Basic). Aksi takdirde PLıNQ/TPL bir <xref:System.InvalidOperationException>oluşturur.
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> , ve `null` `Nothing` asla geri dönmemelidir (Visual Basic'te). Bunu yaparsanız, PLINQ / TPL bir <xref:System.InvalidOperationException>atacaktır .
 
-- Bölüm döndüren yöntemler her zaman veri kaynağını tam ve benzersiz bir şekilde numaralandırmayan bölümler döndürmelidir. Bölümleyici tasarımının özel olarak gerekmediği müddetçe veri kaynağında yineleme olmaması veya atlanan öğeler olması gerekir. Bu kurala uyulmazsa çıkış sırası karıştırılmış olabilir.
+- Bölümleri döndüren yöntemler, veri kaynağını tam ve benzersiz olarak sayısalabilen bölümleri her zaman döndürmelidir. Bölümleyicinin tasarımı tarafından özel olarak gerekmedikçe, veri kaynağında veya atlanan öğelerde yineleme olmamalıdır. Bu kurala uyulmazsa, çıktı sırası karıştırılabilir.
 
-- Aşağıdaki Boole alıcıları, çıkış sırası karıştırılamamasını sağlayacak şekilde aşağıdaki değerleri her zaman doğru döndürmelidir:
+- Aşağıdaki Boolean getters her zaman doğru çıktı sırası şifreli değil, böylece aşağıdaki değerleri döndürmelidir:
 
-  - `KeysOrderedInEachPartition`: her bölüm, artan anahtar dizinlerini içeren öğeleri döndürür.
+  - `KeysOrderedInEachPartition`: Her bölüm, artan anahtar dizinleri olan öğeleri döndürür.
 
-  - `KeysOrderedAcrossPartitions`: döndürülen tüm bölümler Için *, Bölüm ı* *-1*' deki anahtar dizinlerinden daha yüksek.
+  - `KeysOrderedAcrossPartitions`: Döndürülen tüm bölümler için, bölüm *i'deki* anahtar endeksleri bölüm *i*-1'deki anahtar endekslerinden daha yüksektir.
 
-  - `KeysNormalized`: tüm anahtar dizinleri, sıfırdan başlayarak boşluklar olmadan tek bir şekilde artıyor.
+  - `KeysNormalized`: Tüm temel endeksler sıfırdan başlayarak boşluklar olmadan monoton olarak artmaktadır.
 
-- Tüm dizinler benzersiz olmalıdır. Yinelenen dizinler bulunmayabilir. Bu kurala uyulmazsa çıkış sırası karıştırılmış olabilir.
+- Tüm endeksler benzersiz olmalıdır. Yinelenen endeksler olmayabilir. Bu kurala uyulmazsa, çıktı sırası karıştırılabilir.
 
-- Tüm dizinler negatif olmalıdır. Bu kurala uyulmazsa PLıNQ/TPL özel durumlar oluşturabilir.
+- Tüm endeksler negatif olmamalıdır. Bu kurala uyulmazsa, PLINQ/TPL özel durumlar atabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

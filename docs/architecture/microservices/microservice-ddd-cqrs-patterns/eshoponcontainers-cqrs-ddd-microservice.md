@@ -1,55 +1,55 @@
 ---
 title: eShopOnContainers üzerinde bir DDD mikro hizmetine CQRS ve CQS yaklaşımları uygulama
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | CQRS 'nin eShopOnContainers 'daki sıralama mikro hizmetinde uygulanma biçimini anlayın.
-ms.date: 10/08/2018
-ms.openlocfilehash: 0380e759595e8a159e89f858a5ced4dacfa4e9b4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+description: .NET Microservices Mimari Containerized .NET Uygulamaları için | CQRS eShopOnContainers sipariş microservice uygulandığı nı anlayın.
+ms.date: 03/03/2020
+ms.openlocfilehash: 16fe46189a5b43591adebbb764d4acef2f7efbfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295920"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847160"
 ---
-# <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>EShopOnContainers içindeki DDD mikro hizmetinde CQRS ve CQS yaklaşımları uygulama
+# <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>eShopOnContainers bir DDD microservice CQRS ve CQS yaklaşımları uygulayın
 
-EShopOnContainers başvuru uygulamasındaki sıralama mikro hizmetinin tasarımı, CQRS ilkelerine dayanır. Ancak, yalnızca komutlarla sorguları ayıran ve her iki eylem için aynı veritabanını kullanan en basit yaklaşımı kullanır.
+eShopOnContainers referans uygulamasında sipariş microservice tasarımı CQRS ilkelerine dayanmaktadır. Ancak, yalnızca komutları ayıran ve her iki eylem için aynı veritabanını kullanarak basit bir yaklaşım kullanır.
 
-Bu desenlerin özü ve önemli nokta burada, sorguların ıdempotent olduğu, bir sistemi kaç kez Sorgulayabileceğiniz önemli değildir, sistemin durumu değişmez. Diğer bir deyişle, sorgular yan etkilerden ücretsizdir.
+Bu desenlerin özü ve buradaki önemli nokta, sorguların iktidarlı olmasıdır: bir sistemi kaç kez sorgularsanız sorgulayın, bu sistemin durumu değişmez. Başka bir deyişle, sorgular yan etkisi ücretsizdir.
 
-Bu nedenle, mikro hizmetler aynı veritabanını kullanıyor olsa bile, işlem mantığı "yazma" etki alanı modelinden farklı bir "okuma" veri modeli kullanabilirsiniz. Bu nedenle, Bu basitleştirilmiş bir CQRS yaklaşımıdır.
+Bu nedenle, sipariş mikrohizmetleri aynı veritabanını kullanıyor olsa bile, işlem mantığı "yazar" etki alanı modelinden farklı bir "okuma" veri modeli kullanabilirsiniz. Bu nedenle, bu basitleştirilmiş bir CQRS yaklaşımıdır.
 
-Diğer taraftan, işlem ve veri güncelleştirmelerini tetikleyen komutlar, sistemdeki durumu değiştirir. Komutlarla, karmaşıklık ve sürekli değişen iş kuralları ile ilgilenirken dikkatli olmanız gerekir. Bu, daha iyi modellenen bir sisteme sahip olmak için DDD tekniklerini uygulamak istediğiniz yerdir.
+Diğer taraftan, hareketleri ve veri güncelleştirmelerini tetikleyen komutlar, sistemdeki durumu değiştirir. Komutlarla, karmaşıklık ve sürekli değişen iş kuralları ile uğraşırken dikkatli olmanız gerekir. Burada daha iyi bir modellenmiş sistem için DDD teknikleri uygulamak istediğiniz yerdir.
 
-Bu kılavuzda sunulan DDD desenleri, evrensel olarak uygulanmamalıdır. Bunlar, tasarımınızda kısıtlamalar getirir. Bu kısıtlamalar, özellikle komutlarda ve sistem durumunu değiştiren diğer kodda, zaman içinde daha yüksek kalite gibi avantajlar sağlar. Ancak, bu kısıtlamalar verileri okumak ve sorgulamak için daha az avantajlarla karmaşıklık ekler.
+Bu kılavuzda sunulan DDD desenleri evrensel olarak uygulanmamalıdır. Tasarımınızda kısıtlamalar sağlarlar. Bu kısıtlamalar, özellikle komutlarda ve sistem durumunu değiştiren diğer kodlarda zaman içinde daha yüksek kalite gibi avantajlar sağlar. Ancak, bu kısıtlamalar verileri okumak ve sorgulamak için daha az avantajla karmaşıklık ekler.
 
-Bu tür bir model, daha sonraki bölümlerde daha fazla bilgi yaptığımız toplam modeldir. Kısaca, toplama modelinde, etki alanındaki ilişkisinin bir sonucu olarak birçok etki alanı nesnesini tek bir birim olarak değerlendirmiş olursunuz. Sorgularda bu örüntüden her zaman avantaj elde edemeyebilirsiniz; sorgu mantığının karmaşıklığını artırabilir. Salt okuma sorguları için birden çok nesneyi tek bir toplama olarak davranma avantajlarına sahip olursunuz. Yalnızca karmaşıklığı alırsınız.
+Bu desenlerden biri, daha sonraki bölümlerde daha fazla inceleyediğimiz Toplam desenidir. Kısaca, Toplam desen, etki alanında ilişkilerinin bir sonucu olarak tek bir birim olarak birçok etki alanı nesneleri tedavi. Sorgularda her zaman bu modelden avantaj elde emeyebilirsiniz; sorgu mantığının karmaşıklığını artırabilir. Salt okunur sorgular için, birden çok nesneyi tek bir Toplu olarak ele almanın avantajlarını elde etmezsiniz. Sadece karmaşıklığı elde elabilirsiniz.
 
-Şekil 7-2 ' de gösterildiği gibi, bu kılavuz yalnızca mikro hizmetinizin işlem/güncelleştirme alanında (komutları tarafından tetiklenen) DDD desenlerinin kullanılmasını önerir. Sorgular daha basit bir yaklaşımla gelir ve bir CQRS yaklaşımını takip eden komutlardan ayrılmalıdır.
+Önceki bölümde Şekil 7-2'de gösterildiği gibi, bu kılavuz da yalnızca microservice işlem /güncelleme alanında DDD desenleri kullanılmasını önerir (yani komutlar tarafından tetiklenir). Sorgular daha basit bir yaklaşım izleyebilir ve CQRS yaklaşımını izleyerek komutlardan ayrılmalıdır.
 
-"Sorgular tarafını" uygulamak için EF Core, Automaber projeksiyonu, saklı yordamlar, görünümler, gerçekleştirilmiş görünümler veya mikro ORM gibi tam blown ORM arasından birçok yaklaşım arasından seçim yapabilirsiniz.
+"Sorgular tarafını" uygulamak için, EF Core, AutoMapper projeksiyonları, depolanmış yordamlar, görünümler, maddeleştirilmiş görünümler veya mikro ORM gibi tam gelişmiş ORM'ınızdan birçok yaklaşım arasından seçim yapabilirsiniz.
 
-Bu kılavuzda ve eShopOnContainers 'da (özellikle sıralama mikro hizmeti), mikro [bir gibi mikro](https://github.com/StackExchange/dapper-dot-net)bir sorgu kullanarak düz sorgular uygulamayı seçtik. Bu, en iyi performansı elde etmek için SQL deyimlerine dayalı herhangi bir sorgu uygulayıp çok az ek yük içeren bir açık çatı sayesinde uygulamanızı yapmanızı sağlar.
+Bu kılavuzda ve eShopOnContainers (özellikle sipariş microservice) biz [Dapper](https://github.com/StackExchange/dapper-dot-net)gibi bir mikro ORM kullanarak düz sorgular uygulamak için seçti. Bu, çok az yükü olan hafif bir çerçeve sayesinde en iyi performansı elde etmek için SQL deyimlerini temel alan herhangi bir sorgu uygulamanızı sağlar.
 
-Bu yaklaşımı kullandığınızda, modelinizdeki varlıkların bir SQL veritabanına nasıl kalıcı olduğunu etkileyen tüm güncelleştirmeler aynı zamanda, sorgulama için bir veya daha fazla farklı (EF olmayan) yaklaşım tarafından kullanılan SQL sorgularına ayrı güncelleştirmeler de gerekir.
+Bu yaklaşımı kullandığınızda, modelinizde varlıkların bir SQL veritabanında nasıl kalıcı olduğunu etkileyen güncelleştirmelerin, Dapper tarafından kullanılan SQL sorgularında ayrı güncelleştirmeler veya sorgulama için başka bir ayrı (EF dışı) yaklaşım olması gerektiğini unutmayın.
 
 ## <a name="cqrs-and-ddd-patterns-are-not-top-level-architectures"></a>CQRS ve DDD desenleri üst düzey mimariler değildir
 
-CQRS ve en çok DDD desenlerinin (örneğin, DDD katmanları veya toplamalar içeren bir etki alanı modeli) mimari stilleri değil, yalnızca mimari desenler olduğunu anlamak önemlidir. Mikro hizmetler, SOA ve olay odaklı mimari (EDA), mimari stillere örnektir. Birçok mikro hizmet gibi birçok bileşeni bir sistem tanımlarlar. CQRS ve DDD desenleri tek bir sistem veya bileşen içindeki bir şeyi anlatmaktadır; Bu durumda, bir mikro hizmet içindeki bir şeydir.
+CQRS ve çoğu DDD desenlerinin (DDD katmanları veya agregalı bir etki alanı modeli gibi) mimari stillerin değil, yalnızca mimari desenlerin olduğunu anlamak önemlidir. Microservices, SOA ve olay odaklı mimari (EDA) mimari stilleri örnekleridir. Birçok mikro hizmet gibi birçok bileşenden oluşan bir sistemi tanımlarlar. CQRS ve DDD desenleri tek bir sistem veya bileşen içinde bir şey açıklar; Bu durumda, bir microservice içinde bir şey.
 
-Farklı sınırlanmış bağlamlar (IBH) farklı desenler kullanacaktır. Farklı sorumluluklara sahiptir ve bu farklı çözümlere yol açar. Her yerde aynı modele zorlamak, hataya yol açar. CQRS ve DDD düzenlerini her yerde kullanmayın. Birçok alt sistemi, IBH veya mikro hizmet daha basittir ve basit CRUD Hizmetleri kullanılarak veya başka bir yaklaşım kullanarak daha kolay bir şekilde uygulanabilir.
+Farklı Sınırlı Bağlamlar (CCs) farklı desenler kullanır. Farklı sorumlulukları vardır ve bu da farklı çözümlere yol açar. Her yerde aynı modele zorlamanın başarısızlığa yol açtığını vurgulamakta değerlidir. Her yerde CQRS ve DDD desenleri kullanmayın. Birçok alt sistem, CD veya mikro hizmet daha basittir ve basit CRUD hizmetleri kullanılarak veya başka bir yaklaşım kullanılarak daha kolay uygulanabilir.
 
-Yalnızca bir uygulama mimarisi vardır: tasarlamakta olduğunuz sistemin veya uçtan uca uygulamanın mimarisi (örneğin, mikro hizmetler mimarisi). Ancak, bu uygulamadaki her sınırlı bağlam veya mikro hizmetin tasarımı, mimari desenler düzeyinde kendi dengelerini ve iç tasarım kararlarını yansıtır. CQRS veya DDD gibi her yerde aynı mimari desenleri uygulamayı denemeyin.
+Tek bir uygulama mimarisi vardır: tasarladığınız sistemin mimarisi veya uçtan uca uygulama (örneğin, mikro hizmetler mimarisi). Ancak, bu uygulama içindeki her Sınırlı Bağlam veya mikro hizmetin tasarımı, mimari desen düzeyinde kendi tradeoffs ve iç tasarım kararları yansıtır. CQRS veya DDD gibi mimari desenleri her yerde uygulamayı denemeyin.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Marwler. CQRS** \
+- **Martin Fowler' ı. CQRS** \
   <https://martinfowler.com/bliki/CQRS.html>
 
-- **Greg başak. CQRS belgeleri** \
+- **Greg Young' ı. CQRS Belgeleri** \
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf>
 
-- **UDI Dahan. Açıklanan CQRS** \
+- **Udi Dahan. Netleştirilmiş CQRS** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 >[!div class="step-by-step"]
 >[Önceki](apply-simplified-microservice-cqrs-ddd-patterns.md)
->[İleri](cqrs-microservice-reads.md)
+>[Sonraki](cqrs-microservice-reads.md)

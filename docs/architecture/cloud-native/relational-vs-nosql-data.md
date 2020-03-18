@@ -1,28 +1,28 @@
 ---
-title: İlişkisel ve NoSQL verileri karşılaştırması
-description: Bulutta yerel uygulamalarda ilişkisel ve NoSQL verileri hakkında bilgi edinin
+title: İlişkisel ve NoSQL verileri
+description: Bulut ayarı uygulamalarında ilişkisel ve NoSQL verileri hakkında bilgi edinin
 author: robvet
 ms.date: 01/22/2020
-ms.openlocfilehash: 5ca40791f6c6a3d04f3a7d7d9d2dbf0f23196f8f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 04693e30ba3848f1e51f1c69a75be5f18ead4cf1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794921"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141425"
 ---
-# <a name="relational-vs-nosql-data"></a>İlişkisel ve NoSQL verileri karşılaştırması
+# <a name="relational-vs-nosql-data"></a>İlişkisel ve NoSQL verileri
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-İlişkisel ve NoSQL, bulutta yerel uygulamalarda yaygın olarak uygulanan iki tür veritabanı sistemidir. Bunlar farklı şekilde oluşturulmuştur, verileri farklı bir şekilde depolar ve farklı şekilde erişilirler. Bu bölümde, her ikisine de bakacağız. Bu bölümde daha sonra *Newsql*adlı yeni bir veritabanı teknolojisine bakacağız.
+İlişkisel ve NoSQL, bulut ayarı uygulamalarda yaygın olarak uygulanan iki veritabanı sistemi türütür. Farklı olarak oluşturulurlar, verileri farklı şekilde depolarlar ve farklı erişilirler. Bu bölümde, her ikisine de bakacağız. Daha sonra bu bölümde, *newsql*adı verilen gelişmekte olan bir veritabanı teknolojisi bakacağız.
 
-*İlişkisel veritabanları* , Decades için yaygın olarak kullanılan bir teknolojidir. Bunlar, Yetişkin, kanıtlanmış ve yaygın olarak uygulanan bir uygulamalılar. Rekabet veritabanı ürünleri, araçları ve uzmanlığı ABO. İlişkisel veritabanları ilgili veri tablolarının bir deposunu sağlar. Bu tablolar sabit bir şemaya sahiptir, verileri yönetmek için SQL (Yapılandırılmış Sorgu Dili) kullanın ve ACID garantilerini destekler.
+*İlişkisel veritabanları* yıllardır yaygın bir teknoloji olmuştur. Onlar olgun, kanıtlanmış ve yaygın olarak uygulanmaktadır. Rakip veritabanı ürünleri, takım oluşturma ve uzmanlık boldur. İlişkisel veritabanları, ilgili veri tablolarının deposudur. Bu tablolar sabit bir şema var, verileri yönetmek için SQL (Yapılandırılmış Sorgu Dili) kullanın ve ACID garantileri destekler.
 
-*Hayır-SQL veritabanları* , yüksek performanslı, ilişkisel olmayan veri depolarına başvurur. Bu kişiler, kullanım kolaylığı, ölçeklenebilirlik, esnekliği ve kullanılabilirlik özellikleriyle Excel. NoSQL, normalleştirilmiş verilerin tablolarını birleştirmek yerine yapılandırılmamış veya yarı yapılandırılmış verileri genellikle anahtar-değer çiftleri veya JSON belgeleri içinde depolar. Hayır-SQL veritabanları genellikle tek bir veritabanı bölümünün kapsamından fazla ACID garantisi vermez. Alt saniye yanıt süresi gerektiren yüksek hacimli hizmetler NoSQL veri depolarını kabul etmek.
+*NO-SQL veritabanları* yüksek performanslı, ilişkisel olmayan veri depolarını ifade eder. Kullanım kolaylığı, ölçeklenebilirlik, esneklik ve kullanılabilirlik özelliklerinde mükemmeldirler. NoSQL, normalleştirilmiş veri tablolarına katılmak yerine, genellikle anahtar değer çiftleri veya JSON belgelerinde yapılandırılmamış veya yarı yapılandırılmış verileri depolar. No-SQL veritabanları genellikle tek bir veritabanı bölümü kapsamı dışında ACID garantileri sağlamaz. Alt ikinci yanıt süresi gerektiren yüksek hacimli hizmetler NoSQL veri depolarını tercih eder.
 
-Dağıtılmış bulut Yerel sistemlerine yönelik [NoSQL](https://www.geeksforgeeks.org/introduction-to-nosql/) teknolojilerinin etkisi aşırı belirtilemez. Bu alandaki yeni veri teknolojilerinin bir şekilde, ilişkisel veritabanlarına özel olarak bir şekilde güvenilme çözümleri bozulur.
+[NoSQL](https://www.geeksforgeeks.org/introduction-to-nosql/) teknolojilerinin dağıtılmış bulut tabanlı sistemler üzerindeki etkisi abartılamaz. Bu alanda yeni veri teknolojilerinin çoğalması, bir zamanlar sadece ilişkisel veritabanlarına dayanan çözümleri sekteye uğratmıştır.
 
-NoSQL veritabanları, her biri belirli kullanım örneklerine uygun olan verilere erişmek ve bunları yönetmek için birkaç farklı model içerir. Şekil 5-9 dört ortak model sunar.
+NoSQL veritabanları, her biri belirli kullanım örneklerine uygun verilere erişmek ve bunları yönetmek için birkaç farklı model içerir. Şekil 5-9 dört ortak model sunar.
 
 ![NoSQL veri modelleri](./media/types-of-nosql-datastores.png)
 
@@ -30,259 +30,259 @@ NoSQL veritabanları, her biri belirli kullanım örneklerine uygun olan veriler
 
 | Model | Özellikler |
 | :-------- | :-------- |
-| Belge Mağazası | Veriler ve meta veriler, veritabanının içindeki JSON tabanlı belgelerde hiyerarşik olarak depolanır. |
-| Anahtar değer deposu | NoSQL veritabanlarının en basit yolu, verileri anahtar-değer çiftleri koleksiyonu olarak temsil eder. |
-| Geniş sütunlu depo | İlgili veriler tek bir sütunda iç içe anahtar/değer çiftleri kümesi olarak depolanır. |
-| Grafik deposu | Veriler bir grafik yapısında düğüm, kenar ve veri özellikleri olarak depolanır. |
+| Belge Deposu | Veriler ve meta veriler veritabanı içinde JSON tabanlı belgelerde hiyerarşik olarak depolanır. |
+| Anahtar Değer Deposu | NoSQL veritabanlarının en basiti olan veriler, anahtar değer çiftleri topluluğu olarak temsil edilir. |
+| Geniş Sütunlu Mağaza | İlgili veriler, tek bir sütuniçinde iç içe anahtar/değer çiftleri kümesi olarak depolanır. |
+| Grafik Deposu | Veriler, düğüm, kenar ve veri özellikleri olarak grafik yapısında depolanır. |
 
-## <a name="the-cap-theorem"></a>Üst sınır
+## <a name="the-cap-theorem"></a>CAP teoremi
 
-Bu veritabanı türleri arasındaki farklılıkları anlamanın bir yolu olarak, durumu depolayan dağıtılmış sistemlere uygulanan bir ilke kümesi olan üst SıNıRı göz önünde bulundurun. Şekil 5-10, CAP 'in üç özelliğini gösterir.
+Bu veritabanları bu tür arasındaki farkları anlamak için bir yol olarak, CAP teoremi, durum depolanan dağıtılmış sistemlere uygulanan bir dizi ilke düşünün. Şekil 5-10 CAP teoreminin üç özelliğini gösterir.
 
-![CAP 'ler](./media/cap-theorem.png)
+![CAP teoremi](./media/cap-theorem.png)
 
-**Şekil 5-10**. Üst sınır
+**Şekil 5-10**. CAP teoremi
 
-Bu, dağıtılmış veri sistemlerinin tutarlılık, kullanılabilirlik ve bölüm toleransı arasında bir denge sunabileceği durumlar olur. Ancak, herhangi bir veritabanı üç özelliği yalnızca *iki* özelliği garanti edebilir:
+Teorem, dağıtılmış veri sistemlerinin tutarlılık, kullanılabilirlik ve bölüm toleransı arasında bir denge sunacağını belirtir. Ve, herhangi bir veritabanı sadece üç özelliklerinden *ikisini* garanti edebilir:
 
-- *Denetleme.* Kümedeki her düğüm, sistemin tüm çoğaltmalar güncellene kadar isteği engellemeniz gerekir olsa bile en son verilerle yanıt verir. Şu anda güncelleştirilen bir öğe için "tutarlı bir sistem" sorgulerseniz, tüm çoğaltmalar başarıyla güncelleştirilene kadar bu yanıtı beklemelisiniz. Ancak, en güncel verileri alacaksınız.
+- *Tutarlı -lık.* Tüm yinelemeler güncellenene kadar sistem isteği engellemesi gerekse bile kümedeki her düğüm en son verilerle yanıt verir. Şu anda güncelliğini güncelleştirmekte olan bir öğe için "tutarlı bir sistem" sorgularsanız, tüm yinelemeler başarıyla güncelleştirilene kadar bu yanıtı beklersiniz. Ancak, en güncel verileri alırsınız.
 
-- *Sonrası.* Her düğüm, bu yanıt en son veriler olmasa bile anında yanıt döndürür. Güncelleştiren bir öğe için "kullanılabilir sistem" i sorgulayıp, hizmetin bu anda sağlayabilmesini sağlayacak en iyi yanıtı alırsınız.
+- *Kullanılabilir -lik.* Bu yanıt en son veriler olmasa bile, her düğüm anında yanıt verir. Güncelleyen bir öğe için "kullanılabilir bir sistem" sorgularsanız, hizmetin o anda sağlayabileceği en iyi yanıtı alırsınız.
 
-- *Bölüm toleransı.* Çoğaltılan bir veri düğümü başarısız olsa da veya diğer çoğaltılan veri düğümleriyle bağlantıyı kaybederse bile sistemin çalışmaya devam etmesini güvence altına alır.
+- *Bölüm Toleransı.* Çoğaltılan bir veri düğümü başarısız olsa veya diğer çoğaltılan veri düğümleriyle bağlantı kaybetse bile sistemin çalışmaya devam etmesini garanti eder.
 
-İlişkisel veritabanları genellikle tutarlılık ve kullanılabilirlik sağlar ancak bölüm toleransı sağlamaz. Bunlar genellikle tek bir sunucu için sağlanır ve makineye daha fazla kaynak ekleyerek dikey olarak ölçeklenir.
+İlişkisel veritabanları genellikle tutarlılık ve kullanılabilirlik sağlar, ancak bölüm toleransı sağlamaz. Genellikle tek bir sunucuya sağlanır ve makineye daha fazla kaynak ekleyerek dikey olarak ölçeklenirler.
 
-Birçok ilişkisel veritabanı sistemi, birincil veritabanının kopyalarının diğer ikincil sunucu örneklerine yapılabilecek yerleşik çoğaltma özelliklerini destekler. Yazma işlemleri birincil örneğe yapılır ve ikincinin her birine çoğaltılır. Bir hata sonrasında, birincil örnek yüksek kullanılabilirlik sağlamak için ikincil üzerinde yük devreder. İkincil öğeler, okuma işlemlerini dağıtmak için de kullanılabilir. Yazma işlemleri her zaman birincil çoğaltmaya karşı hareket ederken, sistem yükünü azaltmak için okuma işlemleri, ikincilden herhangi birine yönlendirilebilir.
+Birçok ilişkisel veritabanı sistemi, birincil veritabanının kopyalarının diğer ikincil sunucu örneklerine yapılabilir ışıkkopyalama özelliklerini destekler. Yazma işlemleri birincil örneğe yapılır ve ikincilerin her birine çoğaltılır. Bir hata üzerine, birincil örnek yüksek kullanılabilirlik sağlamak için ikincil üzerinde başarısız olabilir. İkinciller okuma işlemlerini dağıtmak için de kullanılabilir. Yazma işlemleri her zaman birincil yinelemeye ters giderken, okuma işlemleri sistem yükünü azaltmak için ikinci basamaklardan herhangi biri için yönlendirilebilir.
 
-Veriler, [parçalı olarak gibi](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-scale-introduction)birden çok düğüm arasında yatay olarak bölümlenebilir. Ancak, parçalama, kolayca iletişim kuramayan birçok parça genelinde Spitting verileri tarafından işlem yükünü önemli ölçüde artırır. Yönetilmesi maliyetli ve zaman alıcı olabilir. Performans, tablo birleştirmeleri ve başvurusal bütünlüğü etkileyen performansı etkileyebilir.
+Veriler, [parçalama](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-scale-introduction)gibi birden çok düğüm arasında yatay olarak bölümlenebilir. Ancak, parçalama, kolayca iletişim kuramayan birçok parçaya veri tükürerek operasyonel yükü önemli ölçüde artırır. Bu pahalı ve yönetmek için zaman alıcı olabilir. Performansı, tablo birleştirmeleri ve başvuru bütünlüğünü etkileyebilir.
 
-Veri çoğaltmaları "yüksek oranda tutarlı" bir ilişkisel veritabanı kümesinde ağ bağlantısını kaybettiyseniz veritabanına yazabilemezsiniz. Sistem, bu değişikliği diğer veri çoğaltmasına çoğaltacağından yazma işlemini reddeder. İşlem tamamlanmadan önce her veri çoğaltmasının güncelleştirilmesi vardır.
+Veri yinelemeleri "son derece tutarlı" bir ilişkisel veritabanı kümesinde ağ bağlantısını kaybederse, veritabanına yazamazsınız. Sistem, bu değişikliği diğer veri çoğaltmaya kopyalayamayacağından yazma işlemini reddeder. İşlem tamamlanmadan önce her veri yinelemesinin güncelleştirisi gerekir.
 
-NoSQL veritabanları genellikle yüksek kullanılabilirliği ve bölüm toleransını destekler. Bunlar, genellikle emtia sunucularında yatay olarak ölçeklenir. Bu yaklaşım, daha düşük bir maliyetle coğrafi bölgeler içinde ve arasında yüksek kullanılabilirlik sağlar. Bu makineler veya düğümler genelinde verileri bölümleyip çoğaltarak, artıklık ve hataya dayanıklılık sağlar. Downsıde, tutardır. Bir NoSQL düğümündeki verilerde yapılan değişikliğin, diğer düğümlere yayılması biraz zaman alabilir. Genellikle, bir NoSQL veritabanı düğümü, sunulan veriler eski ve henüz güncelleştirilmemiş olsa bile, bir sorguya anında yanıt verir.
+NoSQL veritabanları genellikle yüksek kullanılabilirlik ve bölüm toleransını destekler. Bunlar yatay olarak ölçeklendirilir, genellikle emtia sunucuları arasında. Bu yaklaşım, hem coğrafi bölgeler içinde hem de coğrafi bölgeler arasında daha düşük bir maliyetle muazzam bir kullanılabilirlik sağlar. Artıklık ve hata toleransı sağlayarak bu makineler veya düğümler arasında verileri bölümlere ayırıp çoğaltırsınız. Dezavantajı tutarlılık olduğunu. Bir NoSQL düğümündeki verilerde yapılan bir değişikliğin diğer düğümlere yayılması biraz zaman alabilir. Genellikle, bir NoSQL veritabanı düğümü bir sorguya anında yanıt sağlar - sunulan veriler eski olsa ve henüz güncelleştirilmemiş olsa bile.
 
-Veri çoğaltmalarının, "yüksek oranda kullanılabilir" NoSQL veritabanı kümesinde bağlantıyı kaybetmeniz durumunda, veritabanına bir yazma işlemi de tamamlayabilirsiniz. Veritabanı kümesi, yazma işlemine izin verir ve her veri çoğaltmasını kullanılabilir hale geldiğinde güncelleştirebilir.
+Veri yinelemeleri "yüksek oranda kullanılabilir" bir NoSQL veritabanı kümesinde bağlantı kaybederse, veritabanına bir yazma işlemini yine de tamamlayabilirsiniz. Veritabanı kümesi yazma işlemine izin verir ve kullanılabilir olduğunda her veri yinelemesini güncelleştirin.
 
-Bu tür bir sonuç, ACID işlemlerinin desteklenmediği dağıtılmış veri sistemlerinin bir özelliği olan nihai tutarlılık olarak bilinir. Bu, bir veri öğesi güncelleştirmesi ve bu güncelleştirmenin her bir çoğaltma düğümüne yayılması için geçen süre arasında kısa bir gecikmeden oluşur. Normal koşullarda, gecikme genellikle kısa olur, ancak sorunlar ortaya çıktığında artabilir. Örneğin, Birleşik Devletler bir NoSQL veritabanında ürün öğesini güncelleştirmek ve aynı veri öğesini Avrupa 'daki bir çoğaltma düğümünden sorgulamak için ne olur? Küme Avrupa düğümünü ürün değişikliğine güncelleştirene kadar önceki ürün bilgilerini alacaksınız. Hemen bir sorgu sonucu döndürerek ve tüm çoğaltma düğümlerinin güncelleştirilmesini beklemedikten sonra, büyük ölçekli ve hacimde daha eski verileri sunma olasılığa sahip olursunuz.
+Bu tür bir sonuç, ACID işlemlerinin desteklenmediği dağıtılmış veri sistemlerinin bir özelliği olan nihai tutarlılık olarak bilinir. Bu, bir veri öğesinin güncelleştirmesi ile bu güncelleştirmeyi çoğaltma düğümlerinin her birine yaymak için gereken süre arasında kısa bir gecikmedir. Normal koşullarda, gecikme genellikle kısa, ancak sorunlar ortaya çıktığında artabilir. Örneğin, bir ürün öğesini ABD'deki NoSQL veritabanında güncelleştirip aynı veri öğesini Avrupa'daki bir yineleme düğümünden sorgularsanız ne olur? Küme, Avrupa düğümünü ürün değişikliğiyle güncellene kadar önceki ürün bilgilerini alırsınız. Hemen bir sorgu sonucu döndürerek ve tüm yineleme düğümleri güncelleştirmek için beklemeyen, büyük ölçek ve hacim kazanmak, ancak eski verileri sunma olasılığı ile.
 
-Yüksek kullanılabilirlik ve büyük ölçeklenebilirlik genellikle iş açısından güçlü tutarlılığa göre daha önemlidir. Geliştiriciler, son tutarlılığı daha fazla ayraç içine almak için Sagaz, CQRS ve zaman uyumsuz mesajlaşma gibi teknikleri ve desenleri uygulayabilir.
+Yüksek kullanılabilirlik ve büyük ölçeklenebilirlik genellikle iş için güçlü tutarlılıktan daha önemlidir. Geliştiriciler, nihai tutarlılığı benimsemek için Sagas, CQRS ve eşzamanlı mesajlaşma gibi teknikler ve desenler uygulayabilir.
 
-> Günümüzde, bu, üst sınır kısıtlamaları conidering olduğunda gerçekleştirilmelidir. NewSQL adlı yeni bir veritabanı türü, ilişkisel veritabanı altyapısını hem yatay ölçeklenebilirliği hem de NoSQL sistemlerinin ölçeklenebilir performansını destekleyecek şekilde genişleten bir ortaya çıktı.
+> Günümüzde CAP teoremi kısıtlamaları nın kısıtlanmasına özen dilmelidir. NewSQL adı verilen yeni bir veritabanı türü ortaya çıktı ve bu veritabanı altyapısı hem yatay ölçeklenebilirliği hem de NoSQL sistemlerinin ölçeklenebilir performansını destekleyecek şekilde genişletildi.
 
-## <a name="considerations-for-relational-vs-nosql-systems"></a>İlişkisel ve NoSQL sistemlerine yönelik konular
+## <a name="considerations-for-relational-vs-nosql-systems"></a>İlişkisel ve NoSQL sistemleri için dikkat edilecek noktalar
 
-Belirli veri gereksinimlerine bağlı olarak, bulut Yerel tabanlı bir mikro hizmet, ilişkisel, NoSQL veri deposu veya her ikisini de uygulayabilir.
+Belirli veri gereksinimlerine bağlı olarak, bulut tabanlı bir mikro hizmet ilişkisel, NoSQL veri deposu veya her ikisini de uygulayabilir.
 
-|  Şu durumlarda bir NoSQL veri deposu göz önünde bulundurun: | Şu durumlarda ilişkisel bir veritabanını göz önünde bulundurun: | 
+|  Şu anda bir NoSQL veri deposu düşünün: | Şu anda ilişkisel bir veritabanı düşünün: |
 | :-------- | :-------- |
-| Büyük ölçekli olan yüksek hacimli iş yükleriniz var | İş yükü biriminiz tutarlı ve orta ila büyük ölçekli bir ölçeğe ihtiyaç duyuyor |
-| İş yükleriniz ACID garantisi gerektirmez |  ACID garantisi gereklidir |
-| Verileriniz dinamik ve sık sık değişir | Verileriniz öngörülebilir ve yüksek oranda yapılandırılmış |
-| Veriler ilişki olmadan ifade edilebilir | Veriler en iyi şekilde ilişkisel olarak ifade edilir |  
-| Hızlı yazma ve yazma güvenliği önemli değildir | Yazma güvenliği bir gereksinimdir |  
-| Veri alma basittir ve düz olma eğilimi gösterir | Karmaşık sorgular ve raporlarla çalışırsınız|
-| Verileriniz geniş bir coğrafi dağıtım gerektiriyor | Kullanıcılarınız daha merkezileştirilmiş | 
-| Uygulamanız, genel bulutlarla olduğu gibi emtia donanımına dağıtılır | Uygulamanız büyük, yüksek kaliteli donanıma dağıtılacak | 
+| Büyük ölçekli iş yükleri gerektiren yüksek hacimli iş yükleri var | İş yükü hacminiz tutarlıdır ve orta ve büyük ölçekli |
+| İş yüklerinACID garantisi gerektirmez |  ASİt teminatları gereklidir |
+| Verileriniz dinamiktir ve sık sık değişir | Verileriniz tahmin edilebilir ve yüksek yapılı |
+| Veriler ilişkiler olmadan ifade edilebilir | Veriler ilişkisel olarak en iyi şekilde ifade edilir |  
+| Hızlı yazma ve yazma güvenliği önemli değil gerekir | Yazma güvenliği bir gerekliliktir |  
+| Veri alma basittir ve düz olma eğilimindedir | Karmaşık sorgular ve raporlarla çalışırsınız|
+| Verileriniz geniş bir coğrafi dağılım gerektirir | Kullanıcılarınız daha merkezi |
+| Uygulamanız, genel bulutlar gibi emtia donanımına dağıtılacaktır | Uygulamanız büyük, üst düzey donanıma dağıtılacak |
 |||
 
-Sonraki bölümlerde, bulutta yerel verilerinizi depolamak ve yönetmek için Azure bulutu 'nda bulunan seçenekleri araştıracağız.
+Sonraki bölümlerde, buluta özgü verilerinizi depolamak ve yönetmek için Azure bulutunda bulunan seçenekleri inceleyeceğiz.
 
-## <a name="database-as-a-service"></a>Hizmet olarak veritabanı
+## <a name="database-as-a-service"></a>Hizmet Olarak Veritabanı
 
-Başlamak için bir Azure sanal makinesi sağlayıp her hizmet için istediğiniz veritabanını yükleyebilirsiniz. Ortam üzerinde tam denetime sahip olduğunuzda, bulut platformunun birçok yerleşik özelliğine inmelisiniz. Ayrıca, her hizmet için sanal makine ve veritabanının yönetilmesi de sorumludur. Bu yaklaşım hızla zaman alabilir ve pahalı hale gelebilir.
+Başlangıç olarak, bir Azure sanal makinesi sağlayabilir ve her hizmet için seçtiğiniz veritabanını yükleyebilirsiniz. Çevre üzerinde tam denetime sahip olsanız da, bulut platformunun birçok yerleşik özelliğinden göz ardı edersiniz. Ayrıca, her hizmet için sanal makine ve veritabanını yönetmekten de sorumlu olabilirsiniz. Bu yaklaşım hızla zaman alıcı ve pahalı hale gelebilir.
 
-Bunun yerine, bulutta yerel uygulamalar, [hizmet olarak veritabanı (DBaaS)](https://www.stratoscale.com/blog/dbaas/what-is-database-as-a-service/)olarak sunulan veri hizmetlerini tercih bir şekilde tercih. Bir bulut satıcısı tarafından tam olarak yönetilen bu hizmetler yerleşik güvenlik, ölçeklenebilirlik ve izleme sağlar. Hizmet sahibi olmak yerine, bunu bir [yedekleme hizmeti](./definition.md#backing-services)olarak kullanırsınız. Sağlayıcı, kaynağı ölçeklendirerek çalışır ve performans ve bakım sorumluluğunu da üstlenir.
+Bunun yerine, bulut yerel uygulamalar, [Hizmet (DBaaS) olarak Veritabanı](https://www.stratoscale.com/blog/dbaas/what-is-database-as-a-service/)olarak ortaya çıkarılan veri hizmetlerini tercih eder. Tamamen bir bulut satıcısı tarafından yönetilen bu hizmetler yerleşik güvenlik, ölçeklenebilirlik ve izleme sağlar. Hizmete sahip olmak yerine, sadece bir [destek hizmeti](./definition.md#backing-services)olarak tüketirsiniz. Sağlayıcı kaynağı ölçekte çalışır ve performans ve bakım sorumluluğunu üstleniyor.
 
-Yüksek kullanılabilirlik elde etmek için bulut kullanılabilirliği alanları ve bölgeleri arasında yapılandırılabilirler. Hepsi, tam zamanında kapasiteyi ve kullandıkça öde modelini destekler. Azure, her biri belirli avantajları içeren farklı türlerdeki yönetilen veri hizmeti seçeneklerine sahiptir.
+Bunlar, yüksek kullanılabilirlik elde etmek için bulut kullanılabilirliği bölgeleri ve bölgeleri arasında yapılandırılabilir. Hepsi tam zamanında kapasiteyi ve bir öde-as-you-go modelini destekler. Azure, her biri belirli avantajlara sahip farklı türde yönetilen veri hizmeti seçenekleri sunar.
 
-Önce Azure 'da bulunan ilişkisel DBaaS hizmetlerine bakacağız. Microsoft 'un flaggeme SQL Server veritabanının çeşitli açık kaynaklı seçeneklerle birlikte kullanılabildiğini görürsünüz. Daha sonra, Azure 'da NoSQL veri hizmetlerinden bahsereceğiz.
+Öncelikle Azure'da bulunan ilişkisel DBaaS hizmetlerine bakacağız. Microsoft'un amiral gemisi SQL Server veritabanının çeşitli açık kaynak seçenekleriyle birlikte kullanılabildiğini görürsünüz. Ardından Azure'daki NoSQL veri hizmetleri hakkında konuşuruz.
 
 ## <a name="azure-relational-databases"></a>Azure ilişkisel veritabanları
 
-İlişkisel veriler gerektiren bulut Yerel mikro hizmetleri için Azure, Şekil 5-11 ' de gösterilen dört adet yönetilen ilişkisel veritabanı (DBaaS) teklifleri sunar.
+İlişkisel veri gerektiren bulut adaklı mikro hizmetler için Azure, Şekil 5-11'de gösterilen bir hizmet (DBaaS) teklifi olarak yönetilen dört ilişkisel veritabanı sunar.
 
-![Azure 'da yönetilen ilişkisel veritabanları](./media/azure-managed-databases.png)
+![Azure'da yönetilen ilişkisel veritabanları](./media/azure-managed-databases.png)
 
-**Şekil 5-11**. Azure 'da kullanılabilen yönetilen ilişkisel veritabanları
+**Şekil 5-11**. Azure'da kullanılabilen yönetilen ilişkisel veritabanları
 
-Önceki şekilde, her birinin ek bir ücret ödemeden önemli özellikleri sunan ortak bir DBaaS altyapısı üzerinde nasıl yer aldığına değinirsiniz.
+Önceki şekilde, her birinin ek ücret ödemeden temel özelliklere sahip ortak bir DBaaS altyapısına nasıl dayandığına dikkat edin.
 
-Bu özellikler özellikle çok sayıda veritabanı sağlayan kuruluşlar için önemlidir, ancak bunları yönetmek için sınırlı kaynak vardır.
-İşlem çekirdekleri, bellek ve temel depolama miktarını seçerek dakikalar içinde bir Azure veritabanı sağlayabilirsiniz. Veritabanını hareket halindeyken ölçeklendirebilir ve kapalı kalma süresi olmadan kaynakları dinamik olarak ayarlayabilirsiniz.
+Bu özellikler, özellikle çok sayıda veritabanları sağlayan, ancak bunları yönetmek için sınırlı kaynaklara sahip kuruluşlar için önemlidir.
+İşleme çekirdekleri, bellek ve temel depolama miktarını seçerek bir Azure veritabanını dakikalar içinde sağlayabilirsiniz. Veritabanını anında ölçeklendirebilir ve kaynakları çok az veya hiç kesinti olmadan dinamik olarak ayarlayabilirsiniz.
 
-## <a name="azure-sql-database"></a>Azure SQL Database
+## <a name="azure-sql-database"></a>Azure SQL Veritabanı
 
-Microsoft SQL Server uzmanlığa sahip geliştirme ekipleri [Azure SQL veritabanı](https://docs.microsoft.com/azure/sql-database/)'nı göz önünde bulundurmalıdır. Bu, Microsoft SQL Server veritabanı altyapısını temel alan, tam olarak yönetilen bir hizmet olarak ilişkisel veritabanı (DBaaS). Hizmet, SQL Server 'ın şirket içi sürümünde bulunan birçok özelliği paylaşır ve SQL Server veritabanı altyapısının en son kararlı sürümünü çalıştırır.
+Microsoft SQL Server'da uzmanlığa sahip geliştirme ekipleri [Azure SQL Veritabanı'nı](https://docs.microsoft.com/azure/sql-database/)göz önünde bulundurmalıdır. Microsoft SQL Server Database Engine'e dayalı, hizmet olarak tam olarak yönetilen bir ilişkisel veritabanıdır (DBaaS). Hizmet, SQL Server'ın şirket içi sürümünde bulunan birçok özelliği paylaşır ve SQL Server Veritabanı Altyapısının en son kararlı sürümünü çalıştırZ.
 
-Azure SQL veritabanı, bulut Yerel mikro hizmeti ile kullanılmak üzere üç dağıtım seçeneği ile kullanılabilir:
+Azure SQL Veritabanı, bulut ayarı mikro hizmetiyle kullanmak için üç dağıtım seçeneğiyle kullanılabilir:
 
-- Tek Veritabanı, Azure buluttaki bir [Azure SQL veritabanı sunucusunda](https://docs.microsoft.com/azure/sql-database/sql-database-servers) çalışan, tam olarak YÖNETILEN bir SQL veritabanını temsil eder. Veritabanı, temel alınan veritabanı sunucusunda hiç yapılandırma bağımlılığı olmadığından, [*içinde*](https://docs.microsoft.com/sql/relational-databases/databases/contained-databases) olduğu kabul edilir.
+- Tek Veritabanı, Azure bulutundaki bir [Azure SQL Veritabanı sunucusunda](https://docs.microsoft.com/azure/sql-database/sql-database-servers) çalışan tam olarak yönetilen bir SQL Veritabanı'nı temsil eder. Veritabanı, temel veritabanı sunucusunda yapılandırma bağımlılığı olmadığı için [*içerdiği*](https://docs.microsoft.com/sql/relational-databases/databases/contained-databases) kabul edilir.
   
-- [Yönetilen örnek](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) , Microsoft SQL Server veritabanı altyapısının, şirket içi SQL Server yaklaşık %100 uyumluluk sağlayan tam olarak yönetilen bir örneğidir. Bu seçenek, 35 TB 'a kadar daha büyük veritabanlarını destekler ve daha iyi yalıtım için bir [Azure sanal ağına](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) yerleştirilir.
+- [Yönetilen Örnek,](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) Microsoft SQL Server Veritabanı Altyapısının şirket içi bir SQL Server ile %100'e yakın uyumluluk sağlayan tam olarak yönetilen bir örneğidir. Bu seçenek, 35 TB'a kadar daha büyük veritabanlarını destekler ve daha iyi yalıtım için bir [Azure Sanal Ağına](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) yerleştirilir.
 
-- [Azure SQL veritabanı sunucusuz](https://docs.microsoft.com/azure/sql-database/sql-database-serverless) , iş yükü talebine göre otomatik olarak ölçeklenen tek bir veritabanı için bir işlem katmandır. Yalnızca saniyede kullanılan işlem miktarı için faturalandırılır. Hizmet, zaman aralıklı, öngörülemeyen kullanım desenlerine sahip iş yükleri için uygundur, işlem yapılmayan dönemler ile yapılır. Sunucusuz işlem katmanı Ayrıca, etkin olmayan dönemler sırasında veritabanlarını otomatik olarak duraklatarak yalnızca depolama ücretleri faturalandırılır. Etkinlik geri döndüğünde otomatik olarak devam eder.
+- [Azure SQL Veritabanı sunucusuz,](https://docs.microsoft.com/azure/sql-database/sql-database-serverless) iş yükü talebine göre otomatik olarak ölçeklendirilebilen tek bir veritabanı için bir bilgi işlem katmanıdır. Yalnızca saniyede kullanılan işlem miktarı için faturalar. Hizmet, aralıklı, öngörülemeyen kullanım alışkanlıkları olan ve hareketsizlik dönemleriyle serpiştirilmiş iş yükleri için çok uygundur. Sunucusuz bilgi işlem katmanı, yalnızca depolama ücretlerinin faturalanması için etkin olmayan dönemlerde veritabanlarını otomatik olarak duraklatır. Etkinlik döndüğünde otomatik olarak devam eder.
 
-Geleneksel Microsoft SQL Server yığının ötesinde Azure, ayrıca üç popüler açık kaynaklı veritabanının yönetilen sürümlerini de sunar.
+Azure, geleneksel Microsoft SQL Server yığınının ötesinde, üç popüler açık kaynak veritabanının yönetilen sürümlerini de sunar.
 
-## <a name="open-source-databases-in-azure"></a>Azure 'da açık kaynaklı veritabanları
+## <a name="open-source-databases-in-azure"></a>Azure'da açık kaynak veritabanları
 
-Açık kaynaklı ilişkisel veritabanları, bulutta yerel uygulamalar için popüler bir seçenek haline geldi. Birçok kuruluş, özellikle de maliyet tasarrufları için ticari veritabanı ürünleri üzerinden tercih edilir. Birçok geliştirme ekibinin esnekliği, topluluk tarafından desteklenen geliştirme ve araçların ve genişletmeler ekosistemi avantajlarından yararlanın. Açık kaynaklı veritabanları birden çok bulut sağlayıcısı arasında dağıtılabilir ve bu, "satıcı kilidi-ın" kaygısını en aza indirmenize yardımcı olur.
+Açık kaynak ilişkisel veritabanları bulut tabanlı uygulamalar için popüler bir seçim haline gelmiştir. Birçok işletme, özellikle maliyet tasarrufu için ticari veritabanı ürünleri üzerinde onları lehine. Birçok geliştirme ekibi esnekliklerinden, topluluk destekli gelişimlerinden ve araç ve uzantıekosisteminden yararlanır. Açık kaynak veritabanları birden çok bulut sağlayıcısı arasında dağıtılabilir ve bu da "satıcı kilitleme" endişesini en aza indirmeye yardımcı olur.
 
-Geliştiriciler bir Azure VM 'de açık kaynaklı bir veritabanını kolayca kendi kendine barındırabilir. Tam denetim sağlarken, bu yaklaşım veritabanını ve VM 'yi yönetmek, izlemek ve bakımını yapmak için sizi kanca altına koyar.
+Geliştiriciler, azure vm'deki herhangi bir açık kaynak veritabanını kolayca barındırabilir. Bu yaklaşım, tam denetim sağlarken, veritabanının ve VM'nin yönetimi, izlenmesi ve bakımı için sizi kancaya koyar.
 
-Ancak Microsoft, *tam olarak yönetilen* DBaaS Hizmetleri olarak çeşitli popüler açık kaynaklı veritabanları sunarak Azure 'u bir "açık platform" olarak tutma taahhüdüne devam etmektedir.
+Ancak Microsoft, *azure'u tam olarak yönetilen* DBaaS hizmetleri olarak birkaç popüler açık kaynak veritabanı sunarak Azure'u "açık bir platform" olarak tutma taahhüdünü sürdürmektedir.
 
 ### <a name="azure-database-for-mysql"></a>MySQL için Azure Veritabanı
 
-[MySQL](https://en.wikipedia.org/wiki/MySQL) , açık kaynaklı bir ilişkisel veritabanıdır ve [lamba yazılım yığınında](https://en.wikipedia.org/wiki/LAMP_(software_bundle))oluşturulmuş uygulamalar için bir andır. *Okuma ağır* iş yükleri için yaygın olarak seçilen, Facebook, Twitter ve YouTube dahil olmak üzere çok büyük kuruluşlar tarafından kullanılır. Community sürümü ücretsiz olarak kullanılabilir, ancak Enterprise sürümü bir lisans satın alma işlemi gerektirir. Başlangıçta 1995 ' de oluşturulan ürün, Sun Microsystems tarafından 2008 ' de satın alındı. Oracle 2010 ' de Sun ve MySQL aldı.
+[MySQL](https://en.wikipedia.org/wiki/MySQL) açık kaynak ilişkisel bir veritabanı ve [LAMP yazılım yığını](https://en.wikipedia.org/wiki/LAMP_(software_bundle))üzerine inşa uygulamalar için bir sütundur. Yaygın ağır iş yükleri *okumak* için seçilen, Facebook, Twitter ve YouTube dahil olmak üzere birçok büyük kuruluşlar tarafından kullanılır. Topluluk sürümü ücretsiz olarak kullanılabilirken, kurumsal sürüm lisans satın alma gerektirir. İlk olarak 1995 yılında oluşturulan ürün 2008 yılında Sun Microsystems tarafından satın alınmıştır. Oracle, Sun ve MySQL'i 2010 yılında satın aldı.
 
-[MySQL Için Azure veritabanı](https://azure.microsoft.com/services/mysql/) , açık kaynak MySQL sunucu altyapısını temel alan, yönetilen bir ilişkisel veritabanı hizmetidir. MySQL Community sürümünü kullanır. Azure MySQL sunucusu, hizmetin yönetim noktasıdır. Bu, şirket içi dağıtımlar için kullanılan aynı MySQL Server altyapısıdır. Motor, sunucu başına tek bir veritabanı veya kaynakları paylaşan sunucu başına birden çok veritabanı oluşturabilir. Yeni beceriler öğrenmek veya sanal makineleri yönetmek zorunda kalmadan aynı açık kaynaklı araçları kullanarak verileri yönetmeye devam edebilirsiniz.
+[MySQL için Azure Veritabanı,](https://azure.microsoft.com/services/mysql/) açık kaynak MySQL Server altyapısına dayalı yönetilen bir ilişkisel veritabanı hizmetidir. MySQL Community sürümünü kullanır. Azure MySQL sunucusu hizmetin yönetim noktasıdır. Şirket içi dağıtımlar için kullanılan MySQL sunucu altyapısının aynısı. Altyapı, sunucu başına tek bir veritabanı veya kaynakları paylaşan sunucu başına birden çok veritabanı oluşturabilir. Yeni beceriler öğrenmek veya sanal makineleri yönetmek zorunda kalmadan aynı açık kaynak araçlarını kullanarak verileri yönetmeye devam edebilirsiniz.
 
-### <a name="azure-database-for-mariadb"></a>MariaDB için Azure veritabanı
+### <a name="azure-database-for-mariadb"></a>MariaDB için Azure Veritabanı
 
-[MariaDB](https://mariadb.com/) Sunucu, başka bir popüler açık kaynaklı veritabanı sunucusudur. Oracle, MySQL 'e sahip olan Sun Microsystems 'i satın aldığında MySQL 'in bir *çatalı* olarak oluşturulmuştur. Amaç, MariaDB 'nin açık kaynaklı olmasını sağlamaktır. MariaDB, MySQL 'in çatalından, veri ve tablo tanımları uyumludur ve istemci protokolleri, yapıları ve API 'Ler kapalı olur.
+[MariaDB](https://mariadb.com/) Sunucu başka bir popüler açık kaynak veritabanı sunucusudur. Oracle, MySQL'in *fork* sahibi Sun Microsystems'i satın aldığında MySQL'in çatalı olarak oluşturuldu. Amaç MariaDB'nin açık kaynak olarak kalmasını sağlamaktı. MariaDB MySQL'in bir çatalı olduğundan, veri ve tablo tanımları uyumludur ve istemci protokolleri, yapıları ve API'leri birbirine yakındır.
 
-MariaDB güçlü bir topluluğa sahiptir ve birçok büyük kuruluş tarafından kullanılır. Oracle, MySQL 'i korumaya, geliştirmeye ve desteklemeye devam ederken, MariaDB Foundation, MariaDB 'yi yönetir ve ürün ve belgelere genel katkılara izin verir.
+MariaDB güçlü bir topluluğa sahiptir ve birçok büyük işletme tarafından kullanılmaktadır. Oracle MySQL'i korumaya, geliştirmeye ve desteklemeye devam ederken, MariaDB vakfı MariaDB'yi yöneterek ürün ve belgelere genel katkıları sağlar.
 
-[MariaDB Için Azure veritabanı](https://azure.microsoft.com/services/mariadb/) , Azure bulutundaki bir hizmet olarak tam olarak yönetilen bir ilişkisel veritabanıdır. Hizmet, MariaDB Community Edition sunucu altyapısını temel alır. Tahmin edilebilir performans ve dinamik ölçeklenebilirlik sayesinde, görev açısından kritik iş yüklerini işleyebilir.
+[MariaDB için Azure Veritabanı,](https://azure.microsoft.com/services/mariadb/) Azure bulutundaki bir hizmet olarak tam olarak yönetilen bir ilişkisel veritabanıdır. Hizmet MariaDB topluluk sürümü sunucu motoru dayanmaktadır. Öngörülebilir performans ve dinamik ölçeklenebilirlik ile görev açısından kritik iş yüklerini işleyebilir.
 
 ### <a name="azure-database-for-postgresql"></a>PostgreSQL için Azure Veritabanı
 
-[PostgreSQL](https://www.postgresql.org/) , 30 yıldan daha fazla etkin geliştirme içeren açık kaynaklı bir ilişkisel veritabanıdır. PostgresSQL 'in güvenilirlik ve veri bütünlüğü açısından güçlü bir saygınlığı vardır. Özellikle karmaşık sorgular ve ağır yazmaları olan iş yükleri için zengin, SQL uyumlu ve MySQL 'den daha fazla performans kabul edilir. Apple, Red Hat ve Fujitsu gibi birçok büyük kuruluş, PostgreSQL kullanan ürünleri derlediniz.
+[PostgreSQL,](https://www.postgresql.org/) 30 yılı aşkın aktif gelişime sahip açık kaynaklı bir ilişkisel veritabanıdır. PostgresSQL güvenilirlik ve veri bütünlüğü konusunda güçlü bir üne sahiptir. Bu özellik zengin, SQL uyumlu ve MySQL daha performant olarak kabul - özellikle karmaşık sorguları ve ağır yazma ile iş yükleri için. Apple, Red Hat ve Fujitsu gibi birçok büyük işletme PostgreSQL kullanarak ürünler üretmiş.
 
-[PostgreSQL Için Azure veritabanı](https://azure.microsoft.com/services/postgresql/) , açık kaynak Postgres veritabanı altyapısını temel alan, tam olarak yönetilen bir ilişkisel veritabanı hizmetidir. Hizmet, Java, Python, Node, C++C\#ve PHP gibi birçok geliştirme platformunu destekler. PostgreSQL veritabanlarını [komut satırı arabirimi](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1) aracını veya Azure Data Migration hizmetini kullanarak buna geçirebilirsiniz.
+[PostgreSQL için Azure Veritabanı,](https://azure.microsoft.com/services/postgresql/) açık kaynaklı Postgres veritabanı altyapısına dayalı olarak tam olarak yönetilen bir ilişkisel veritabanı hizmetidir. Hizmet, C++, Java, Python, Düğüm, C\#ve PHP gibi birçok geliştirme platformunu destekler. Komut [satırı arabirimi](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1) aracını veya Azure Veri Geçiş Hizmeti'ni kullanarak PostgreSQL veritabanlarını bu veritabanına geçirebilirsiniz.
 
-PostgreSQL için Azure veritabanı iki dağıtım seçeneği ile kullanılabilir: 
+PostgreSQL için Azure Veritabanı iki dağıtım seçeneğiyle kullanılabilir:
 
-- [Tek sunuculu](https://docs.microsoft.com/azure/postgresql/concepts-servers) dağıtım seçeneği, çok sayıda veritabanını dağıtabilmeniz için birden fazla veritabanı için merkezi bir yönetim noktasıdır. Fiyatlandırma, çekirdek ve depolama temelinde sunucu başına yapılandırılır.
+- [Tek Sunucu](https://docs.microsoft.com/azure/postgresql/concepts-servers) dağıtım seçeneği, birçok veritabanı dağıtabileceğiniz birden çok veritabanı için merkezi bir yönetim noktasıdır. Fiyatlandırma, çekirdek ve depolama temel alınarak sunucu başına yapılandırılmıştır.
 
-- [Hyperscale (Citus) seçeneği](https://azure.microsoft.com/blog/get-high-performance-scaling-for-your-azure-database-workloads-with-hyperscale/) Citus veri teknolojisi tarafından desteklenir. Hızlı performans ve ölçek sağlamak için yüzlerce düğüm genelinde tek bir veritabanını *yatay olarak ölçeklendirerek* yüksek performans sağlar. Bu seçenek, altyapının bellekte daha fazla veri sığdırmasını, yüzlerce düğüm üzerinde paralel hale getirmek sorguları ve veri dizinini daha hızlı şekilde erişmesini sağlar. 
+- [Hyperscale (Citus) seçeneği](https://azure.microsoft.com/blog/get-high-performance-scaling-for-your-azure-database-workloads-with-hyperscale/) Citus Data teknolojisi tarafından desteklenmektedir. Hızlı performans ve ölçek lendirmek için yüzlerce düğüm üzerinden tek bir veritabanını *yatay olarak ölçeklendirerek* yüksek performans sağlar. Bu seçenek, motorun belleğe daha fazla veri sığdırmasına, yüzlerce düğüme sorgular paralellemesine ve verileri daha hızlı dizine dahil etmesine olanak tanır.
 
-## <a name="nosql-data-in-azure"></a>Azure 'da NoSQL verileri
+## <a name="nosql-data-in-azure"></a>Azure'da NOSQL verileri
 
-Cosmos DB, Azure bulutu 'nda tamamen yönetilen, küresel olarak dağıtılmış bir NoSQL veritabanı hizmetidir. Ortak CA-Cola, Skype, ExxonMobil ve Liberty karşılıklı dahil olmak üzere dünyanın tamamında çok büyük şirketler tarafından benimsenmiştir.
+Cosmos DB, Azure bulutunda tam olarak yönetilen, küresel olarak dağıtılan bir NoSQL veritabanı hizmetidir. Coca-Cola, Skype, ExxonMobil ve Liberty Mutual gibi dünya çapında birçok büyük şirket tarafından benimsenmiştir.
 
-Hizmetleriniz dünyanın her yerinden, yüksek kullanılabilirliğe veya esnek ölçeklenebilirlik için hızlı yanıt gerektiriyorsa, Cosmos DB harika bir seçimdir. Şekil 5-12 Cosmos DB gösterir.
+Hizmetleriniz dünyanın her yerinden hızlı yanıt gerektiriyorsa, yüksek kullanılabilirlik veya elastik ölçeklenebilirlik, Cosmos DB mükemmel bir seçimdir. Şekil 5-12 Cosmos DB'yi gösteriyor.
 
-![Cosmos DB genel bakış](./media/cosmos-db-overview.png)
+![Cosmos DB'ye Genel Bakış](./media/cosmos-db-overview.png)
 
-**Şekil 5-12**: Cosmos DB genel bakış
+**Şekil 5-12**: Cosmos DB'ye Genel Bakış
 
-Önceki şekil Cosmos DB ' de bulunan yerleşik buluta özgü yeteneklerin çoğunu gösterir. Bu bölümde, bunlara daha yakından bakacağız.
+Önceki şekil, Cosmos DB'de bulunan yerleşik bulut yerel özelliklerinin çoğunu sunar. Bu bölümde, onlara daha yakından bakacağız.
 
 ### <a name="global-support"></a>Küresel destek
 
-Bulutta yerel uygulamalar genellikle küresel bir hedef kitleye sahiptir ve küresel ölçek gerektirir.
+Bulut ait uygulamalar genellikle küresel bir hedef kitleye sahiptir ve genel ölçek gerektirir.
 
-Cosmos veritabanlarını bölgeler arasında ya da dünyanın dört bir yanındaki dağıtabilir, kullanıcılarınıza veri yakınlarını, yanıt süresini geliştirir ve gecikmeyi azaltabilirsiniz. Hizmetlerinizi duraklatmadan veya yeniden dağıtmaya gerek kalmadan bir bölgeden veritabanı ekleyebilir veya kaldırabilirsiniz. Arka planda Cosmos DB, verileri, yapılandırılan bölgelerin her birine saydam olarak çoğaltır.
+Cosmos veritabanlarını bölgelere veya dünyanın dört bir yanına dağıtarak, verileri kullanıcılarınıza yakın bir yere yerleştirebilir, yanıt süresini kısaltabilir ve gecikme süresini azaltabilirsiniz. Hizmetlerinizi duraklatmadan veya yeniden dağıtmadan bir bölgeden veritabanı ekleyebilir veya kaldırabilirsiniz. Arka planda, Cosmos DB verileri yapılandırılan bölgelerin her birine saydam olarak çoğaltır.
 
-Cosmos DB, genel düzeyde [etkin/etkin](https://kemptechnologies.com/white-papers/unfog-confusion-active-passive-activeactive-load-balancing/) kümelendirmeyi destekler, böylece her türlü veritabanı bölgelerinizin *her ikisini de yazmayı ve*okumayı destekleyecek şekilde yapılandırmanıza olanak tanır.
+Cosmos DB, genel düzeyde [etkin/etkin](https://kemptechnologies.com/white-papers/unfog-confusion-active-passive-activeactive-load-balancing/) kümelenmeyi destekler ve veritabanı bölgenizden herhangi birini *hem yazma ları hem de okumaları*destekleyecek şekilde yapılandırmanızı sağlar.
 
-[Çoklu ana](https://docs.microsoft.com/azure/cosmos-db/multi-master-benefits) protokol, Cosmos DB aşağıdaki işlevleri sağlayan önemli bir özelliktir:
+[Multi-Master](https://docs.microsoft.com/azure/cosmos-db/multi-master-benefits) protokolü, Cosmos DB'de aşağıdaki işlevselliği sağlayan önemli bir özelliktir:
 
-- Sınırsız elastik yazma ve okuma ölçeklenebilirliği.
+- Sınırsız elastik yazmak ve ölçeklenebilirlik okuyun.
 
-- dünyanın her yerindeki% 99,999 okuma ve yazma kullanılabilirliği.
+- 99.999% okumak ve tüm dünyada kullanılabilirlik yazmak.
 
-- %99 ' luk yüzdede 10 milisaniyeden kısa bir süre içinde sunulan garantili okuma ve yazma işlemleri.
+- Garantili okuma ve yazma 99 yüzdelik olarak 10 milisaniyeden daha az bir sürede servis edilir.
 
-Cosmos DB çok girişli [API 'ler](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally)sayesinde, mikro hizmetiniz en yakın Azure bölgesini otomatik olarak algılar ve bu sunucuya istek gönderir. En yakın bölge, hiçbir yapılandırma değişikliği yapılmadan Cosmos DB tarafından tanımlanır. Bir bölge kullanılamaz hale gelirse, çoklu barındırma özelliği istekleri otomatik olarak en yakın kullanılabilir bölgeye yönlendirir.
+Cosmos DB [Çoklu Homing API'leri](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally)ile mikro hizmetiniz otomatik olarak en yakın Azure bölgesinden haberdar olur ve bu bölgeye istekler gönderir. En yakın bölge cosmos DB tarafından herhangi bir yapılandırma değişikliği olmadan tanımlanır. Bir bölge kullanılamıyorsa, Çoklu Homing özelliği istekleri otomatik olarak bir sonraki en yakın kullanılabilir bölgeye yönlendirir.
 
-### <a name="multi-model-support"></a>Çoklu model desteği
+### <a name="multi-model-support"></a>Çok modelli destek
 
-Tek parçalı uygulamalar buluta özgü bir mimariye yeniden geliştirmede, geliştirme ekiplerinin bazen açık kaynaklı, NoSQL veri depolarını geçirilmesi gerekir. Cosmos DB, bu NoSQL Veri depolarındaki yatırımınızı *çok modelli* veri platformuyla korumanıza yardımcı olabilir. Şekil 5-13 desteklenen NoSQL [Uyumluluk API 'lerini](https://www.wikiwand.com/en/Cosmos_DB)gösterir.
+Yekpare uygulamaları bulut-yerel mimariye yeniden platformlaaktarırken, geliştirme ekiplerinin bazen açık kaynak kodlu NoSQL veri depolarını geçirmeleri gerekir. Cosmos DB, *çok modelli* veri platformu ile bu NoSQL veri depolarında yaptığınız yatırımı korumanıza yardımcı olabilir. Şekil 5-13 desteklenen NoSQL [uyumluluk API'lerini](https://www.wikiwand.com/en/Cosmos_DB)gösterir.
 
 ![Cosmos DB sağlayıcıları](./media/cosmos-db-providers.png)
 
-**Şekil 5-13**: Cosmos DB sağlayıcılar
+**Şekil 5-13**: Cosmos DB sağlayıcıları
 
-Geliştirme ekipleri, mevcut Mongo, Gremlin veya Cassandra veritabanlarını, veri veya koddaki en az değişiklikle birlikte Cosmos DB geçirebilir. Yeni uygulamalar için, geliştirme ekipleri açık kaynaklı seçenekler veya yerleşik SQL API modeli arasından seçim yapabilir.
+Geliştirme ekipleri, veri veya kodda en az değişiklikle varolan Mongo, Gremlin veya Cassandra veritabanlarını Cosmos DB'ye geçirebilirsiniz. Yeni uygulamalar için geliştirme ekipleri açık kaynak seçenekleri veya yerleşik SQL API modeli arasından seçim yapabilir.
 
-> İçsel olarak, Cosmos verileri temel veri türlerinden oluşan basit bir struct formatında depolar. Her istek için, veritabanı altyapısı temel verileri seçtiğiniz model gösterimine çevirir.
+> Cosmos, verileri ilkel veri türlerinden oluşan basit bir yapı biçiminde dahili olarak saklar. Her istek için veritabanı altyapısı ilkel verileri seçtiğiniz model gösterimine çevirir.
 
-Önceki şekilde 5-13, [tablo API'si](https://docs.microsoft.com/azure/cosmos-db/table-introduction) seçeneğine göz önünde. Bu API, Azure Tablo depolamanın bir gelişmidir. Her ikisi de aynı temel tablo modelini paylaşır, ancak Cosmos DB Tablo API'si Azure Storage API 'sinde bulunmayan Premium geliştirmeler ekler. Bu özellikler Şekil 5-4 ' de maliyetli değildir.
+Önceki şekilde, 5-13, [Tablo API](https://docs.microsoft.com/azure/cosmos-db/table-introduction) seçeneğine dikkat edin. Bu API, Azure Tablo Depolama'nın bir evrimidir. Her ikisi de aynı temel tablo modelini paylaşır, ancak Cosmos DB Table API, Azure Depolama API'sinde bulunmayan premium geliştirmeler ekler. Bu özellikler Şekil 5-4'te karşılaştırılır.
 
 ![Azure Tablo API'si](media/azure-table-api.png)
 
-**Şekil 5-14**: Azure Tablo API'si sağlayıcıları
+**Şekil 5-14**: Azure Tablo API Sağlayıcıları
 
-Azure Tablo Depolamayı kullanan mikro hizmetler Cosmos DB Tablo API'si kolayca geçirebilir. Kod değişikliği gerekli değildir.
+Azure Tablo depolama alanını tüketen mikro hizmetler Cosmos DB Table API'ye kolayca geçiş yapabilir. Kod değişikliği gerekmez.
 
-### <a name="tunable-consistency"></a>Ayarlanabilir tutarlılık
+### <a name="tunable-consistency"></a>Tunable tutarlılık
 
-*İlişkisel ve NoSQL* bölümünde daha önce, *veri tutarlılığı*konusunu tartıştık. Veri tutarlılığı, verilerinizin *bütünlüğünü* ifade eder. Dağıtılmış veriler içeren bulut Yerel hizmetleri, çoğaltmayı kullanır ve okuma tutarlılığı, kullanılabilirliği ve gecikme süresi arasında temel bir zorunluluğunu getirir olmalıdır.
+Daha önce *İlişkisel vs NoSQL* bölümünde, veri *tutarlılığı*konusunu tartıştık. Veri tutarlılığı verilerinizin *bütünlüğünü* ifade eder. Dağıtılmış verilere sahip bulut yerel hizmetler çoğaltmaya dayanır ve okuma tutarlılığı, kullanılabilirlik ve gecikme süresi arasında temel bir denge sağlamalıdır.
 
-Çoğu dağıtılmış veritabanı, geliştiricilerin iki tutarlılık modeli arasından seçim yapmasına imkan tanır: güçlü tutarlılık ve nihai tutarlılık. *Güçlü tutarlılık* , veri programlamasına yönelik altın standarttır. Sistemin, bir güncelleştirmenin tüm veritabanı kopyalarında çoğaltılmasını bekleyen gecikme süresi olması beklense bile, bir sorgunun en güncel verileri her zaman döndürmesini güvence altına alır. *Nihai tutarlılık* için yapılandırılmış bir veritabanı, veri en güncel kopya olmasa bile, verileri hemen geri döndürmeyecektir. İkinci seçenek daha yüksek kullanılabilirlik, daha fazla ölçek ve daha fazla performans sunar.
+Çoğu dağıtılmış veritabanları geliştiricilerin iki tutarlılık modeli arasında seçim yapmalarına olanak tanır: güçlü tutarlılık ve nihai tutarlılık. *Güçlü tutarlılık* veri programlanabilirliğinin altın standardıdır. Sistem tüm veritabanı kopyalarında çoğaltmak için bir güncelleştirme bekliyor gecikme sayılsa bile, sorgunun her zaman en güncel verileri döndüreceğini garanti eder. *Nihai tutarlılık* için yapılandırılan bir veritabanı, bu veriler en güncel kopya olmasa bile verileri hemen döndürecektir. İkinci seçenek daha yüksek kullanılabilirlik, daha büyük ölçek ve daha yüksek performans sağlar.
 
-Azure Cosmos DB Şekil 5-15 ' de gösterilen beş iyi tanımlanmış [tutarlılık modeli](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) sunar.
+Azure Cosmos DB, Şekil 5-15'te gösterilen beş iyi tanımlanmış [tutarlılık modeli](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) sunar.
 
 ![Cosmos DB tutarlılık grafiği](./media/cosmos-consistency-level-graph.png)
 
-**Şekil 5-15**: tutarlılık düzeylerini Cosmos DB
+**Şekil 5-15**: Cosmos DB Tutarlılık Düzeyleri
 
- Bu seçenekler tutarlılık, kullanılabilirlik ve verilerinizin performansı için kesin seçenekler ve ayrıntılı bir denge yapmanızı sağlar. Şekil 5-16 her bir düzeyi açıklamaktadır.
+ Bu seçenekler, tutarlılık, kullanılabilirlik ve verilerinizin performansı için kesin seçimler ve parçalı dengelemeler yapmanızı sağlar. Şekil 5-16 her düzeyi açıklar.
 
-![Tutarlılık düzeylerini Cosmos DB](./media/cosmos-db-consistency-levels.png)
+![Cosmos DB tutarlılık düzeyleri](./media/cosmos-db-consistency-levels.png)
 
-**Şekil 5-16**: Cosmos DB tutarlılık düzeyi açıklaması
+**Şekil 5-16**: Cosmos DB Tutarlılık Düzeyi Açıklaması
 
-[9-Ball ' ın arkasında elde edilen makale: Cosmos DB tutarlılık seviyeleri](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)Microsoft bulut geliştirici Danışmanı, beş modelin mükemmel bir açıklamasını sunmaktadır.
+Makalede [9-Ball Behind Başlarken: Cosmos DB Tutarlılık Düzeyleri Açıkladı](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/), Microsoft Cloud Developer Advocate Jeremy Likeness beş model mükemmel bir açıklama sağlar.
 
-### <a name="partitioning"></a>Bölümlendirme
+### <a name="partitioning"></a>Bölümleme
 
-Azure Cosmos DB, bir veritabanını, bulut Yerel hizmetlerinizin performans ihtiyaçlarını karşılayacak şekilde ölçeklendirmek için otomatik [bölümlendirme](https://docs.microsoft.com/azure/cosmos-db/partitioning-overview) .
+Azure Cosmos DB, bulut ayarı olan hizmetlerinizin performans gereksinimlerini karşılamak için bir veritabanını ölçeklendirmek için otomatik [bölümlemayı](https://docs.microsoft.com/azure/cosmos-db/partitioning-overview) benimser.
 
-Veritabanları, kapsayıcılar ve öğeler oluşturarak verileri Cosmos DB verileri yönetebilirsiniz.
+Veritabanları, kapsayıcılar ve öğeler oluşturarak Cosmos DB verilerindeki verileri yönetirsiniz.
 
-Kapsayıcılar bir Cosmos DB veritabanında canlı ve öğelerin şema belirsiz gruplandırmasını temsil eder. Öğe, kapsayıcıya eklediğiniz veri. Bunlar belge, satır, düğüm veya kenar olarak gösterilir. Bir kapsayıcıya eklenen tüm öğeler otomatik olarak dizinlenir.
+Kapsayıcılar Bir Cosmos DB veritabanında yaşar ve öğelerin şema-agnostik gruplandırmatemsil eder. Öğeler kapsayıcıya eklediğiniz verilerdir. Belgeler, satırlar, düğümler veya kenarlar olarak temsil edilirler. Bir kapsayıcıya eklenen tüm öğeler otomatik olarak dizine eklenir.
 
-Kapsayıcıyı bölümlemek için öğeler mantıksal bölümler adlı farklı alt kümelere bölünür. Mantıksal bölümler, bir kapsayıcıdaki her öğeyle ilişkili bir bölüm anahtarının değerine göre doldurulur. Şekil 5-18, her biri bir bölüm anahtarı değerini temel alan mantıksal bölüme sahip iki kapsayıcıyı gösterir.
+Kapsayıcıyı bölmek için öğeler mantıksal bölümler adı verilen farklı alt kümelere ayrılır. Mantıksal bölümler, bir kapsayıcıdaki her öğeyle ilişkili bir bölüm anahtarının değerine göre doldurulur. Şekil 5-18, her biri bir bölüm anahtar değerine dayalı mantıksal bir bölüme sahip iki kapsayıcıyı gösterir.
 
-![Cosmos DB bölümlendirme mekanizması](./media/cosmos-db-partitioning.png)
+![Cosmos DB bölümleme mekaniği](./media/cosmos-db-partitioning.png)
 
-**Şekil 5-18**: Cosmos DB bölümlendirme mekanizması
+**Şekil 5-18**: Cosmos DB bölümleme mekaniği
 
-Önceki şekilde, her öğenin ' City ' veya ' Havaalanı ' bölüm anahtarını nasıl içerdiğini göz önünde bulun. Anahtar öğenin mantıksal bölümünü belirler. Şehir koduna sahip öğeler, sol taraftaki kapsayıcıya ve Havaalanı koduna sahip öğelere sağdaki kapsayıcıya atanır. Bölüm anahtarı değerini ID değeri ile birleştirmek, öğeyi benzersiz şekilde tanımlayan bir öğenin dizinini oluşturur.
+Önceki şekilde, her öğenin 'şehir' veya 'havaalanı' bölüm anahtarını nasıl içerdiğini not edin. Anahtar öğenin mantıksal bölümleyi belirler. Şehir kodu olan öğeler soldaki kapsayıcıya, havaalanı kodu olan öğeler ise sağdaki konteynere atanır. Bölüm anahtar değerini kimlik değeriyle birleştirmek, öğeyi benzersiz olarak tanımlayan bir öğenin dizinini oluşturur.
 
-Dahili olarak, Cosmos DB kapsayıcının ölçeklenebilirlik ve performans ihtiyaçlarını karşılamak için fiziksel bölümlerin [mantıksal bölümlerinin](https://docs.microsoft.com/azure/cosmos-db/partition-data) yerleşimini otomatik olarak yönetir. Uygulama işleme ve Depolama gereksinimlerinin artması halinde, Azure Cosmos DB mantıksal bölümleri daha fazla sayıda sunucuda yeniden dağıtır. Yeniden dağıtım işlemleri Cosmos DB tarafından yönetilir ve kesinti veya kesinti olmadan çağrılır.
+Dahili olarak, Cosmos DB otomatik olarak kapsayıcının ölçeklenebilirlik ve performans gereksinimlerini karşılamak için fiziksel bölümler üzerinde [mantıksal bölümlerin](https://docs.microsoft.com/azure/cosmos-db/partition-data) yerleşimyönetir. Uygulama çıktısı ve depolama gereksinimleri arttıkça, Azure Cosmos DB mantıksal bölümleri daha fazla sayıda sunucuya yeniden dağıtır. Yeniden dağıtım işlemleri Cosmos DB tarafından yönetilir ve kesintisiz veya kapalı kalma süresi olmadan çağrılır.
 
 ## <a name="newsql-databases"></a>NewSQL veritabanları
 
-*Newsql* , bir ilişkisel veritabanının ACID garantisi Ile NoSQL 'in dağıtılmış ölçeklenebilirliğini birleştiren, gelişmekte olan bir veritabanı teknolojisidir. NewSQL veritabanları, tam işlem desteği ve ACID uyumluluğu sayesinde, yüksek hacimlerde verileri, dağıtılmış ortamlar arasında işlemesi gereken iş sistemleri için önemlidir. NoSQL veritabanı çok büyük ölçeklenebilirlik sağlayabilme olanağı sağlarken, veri tutarlılığını garanti etmez. Tutarsız verilerden oluşan aralıklı sorunlar, geliştirme ekibine bir yük getirebilir. Geliştiricilerin, tutarsız verilerden kaynaklanan sorunları yönetmesi için mikro hizmet koduna karşı korumalar oluşturulması gerekir.
+*NewSQL, NoSQL'in* dağıtılmış ölçeklenebilirliğini ilişkisel bir veritabanının ACID garantileri ile birleştiren yeni ortaya çıkan bir veritabanı teknolojisidir. NewSQL veritabanları, dağıtılmış ortamlarda, tam işlem desteği ve ACID uyumluluğu yla yüksek hacimli verileri işlemesi gereken iş sistemleri için önemlidir. NoSQL veritabanı büyük ölçeklenebilirlik sağlayabilir iken, veri tutarlılığı garanti etmez. Tutarsız verilerden aralıklı sorunlar geliştirme ekibine bir yük getirebilir. Geliştiriciler, tutarsız verilerin neden olduğu sorunları yönetmek için mikro hizmet kodlarına koruma lar oluşturmalıdır.
 
-Cloud Native Computing Foundation (CNCF), çeşitli NewSQL veritabanı projelerini sunar.
+Cloud Native Computing Foundation (CNCF) birkaç NewSQL veritabanı projesine sahiptir.
 
-| {1&gt;Proje (Project)&lt;1} | Özellikler |
+| Project | Özellikler |
 | :-------- | :-------- |
-| Cockroach DB |Küresel olarak ölçeklenen, bir ACID uyumlu ilişkisel veritabanı. Bir kümeye yeni bir düğüm ekleyin ve CockroachDB, verilerin örnekleri ve coğrafi bölgelerde dengelenmesi için gereken bir değer sağlar. Güvenilirliği sağlamak için çoğaltmaları oluşturur, yönetir ve dağıtır. Açık kaynak ve ücretsiz kullanılabilir.  |
-| TiDB | Karma Işlem ve analitik Işleme (HTAP) iş yüklerini destekleyen açık kaynaklı bir veritabanı. MySQL uyumludur ve yatay ölçeklenebilirlik, güçlü tutarlılık ve yüksek kullanılabilirlik özellikleri sunar.  TiDB bir MySQL sunucusu gibi davranır. Uygulamanızda kapsamlı kod değişikliklerine gerek duymadan mevcut MySQL istemci kitaplıklarını kullanmaya devam edebilirsiniz. |
-| Yugabrivtedb | Açık kaynaklı, yüksek performanslı, dağıtılmış SQL veritabanı. Düşük sorgu gecikmesini, esnekliği ve hatalara karşı genel veri dağıtımını destekler. Yugabyıtedb PostgressSQL ile uyumludur ve genişleme RDBMS ve İnternet ölçeğinde OLTP iş yüklerini yönetir. Ürün ayrıca NoSQL 'i de destekler ve Cassandra ile uyumludur. |
-|Vitess | Vitess, büyük MySQL örnekleri kümelerini dağıtmaya, ölçeklendirmeye ve yönetmeye yönelik bir veritabanı çözümüdür. Bu, ortak veya özel bir bulut mimarisinde çalıştırılabilir. Birçok önemli MySQL özelliğini birleştirir ve genişletir ve hem dikey hem de yatay parçalama desteği sunar. YouTube tarafından oluşturulan Vitess, 2011 tarihinden itibaren tüm YouTube veritabanı trafiğini görüyor. |
+| Hamamböceği DB |Küresel olarak ölçeklendirilen ACID uyumlu, ilişkisel bir veritabanı. Kümeye yeni bir düğüm ekleyin ve Hamamböceği verileri örnekler ve coğrafyalar arasında dengelemeyi halleder. Güvenilirliği sağlamak için yinelemeler oluşturur, yönetir ve dağıtır. Açık kaynak kodve serbestçe kullanılabilir.  |
+| TiDB | Karma İşlemsel ve Analitik İşlem (HTAP) iş yüklerini destekleyen açık kaynak veritabanı. MySQL uyumludur ve yatay ölçeklenebilirlik, güçlü tutarlılık ve yüksek kullanılabilirlik özellikleridir.  TiDB bir MySQL sunucusu gibi davranır. Uygulamanızda kapsamlı kod değişiklikleri gerektirmeden varolan MySQL istemci kitaplıklarını kullanmaya devam edebilirsiniz. |
+| YugabyteDB | Açık kaynak kodlu, yüksek performanslı, dağıtılmış SQL veritabanı. Düşük sorgu gecikmesi, hatalara karşı esneklik ve genel veri dağıtım destekler. YugabyteDB PostgressSQL uyumludur ve ölçeklenmiş RDBMS ve internet ölçekli OLTP iş yüklerini işler. Ürün ayrıca NoSQL'i destekler ve Cassandra ile uyumludur. |
+|Vitess | Vitess, büyük MySQL örnek kümelerini dağıtmak, ölçekleme ve yönetmek için bir veritabanı çözümüdür. Genel veya özel bulut mimarisinde çalıştırılabilir. Birçok önemli MySQL özelliğini ve hem dikey hem de yatay parçalama desteğini birleştirir ve genişletir. YouTube tarafından menşeli, Vitess 2011 yılından bu yana tüm YouTube veritabanı trafiği hizmet vermektedir. |
 
-Önceki şekildeki açık kaynaklı projeler, bulut Yerel Bilgi Işlem altyapısı 'nda bulunabilir. Tekliflerinden üçü, .NET Core desteği dahil olmak üzere tam veritabanı ürünlerdir. Diğer, Vitess, büyük MySQL örnekleri kümelerini yatay olarak ölçeklendirilen bir veritabanı kümeleme sistemidir. 
+Önceki rakamdaki açık kaynak projeleri Cloud Native Computing Foundation tarafından kullanılabilir. Tekliflerin üçü .NET Core desteği içeren tam veritabanı ürünleridir. Diğeri, Vitess, MySQL örneklerinin büyük kümelerini yatay olarak ölçeklendiren bir veritabanı kümeleme sistemidir.
 
-NewSQL veritabanları için önemli bir tasarım hedefi, platformun dayanıklılık ve ölçeklenebilirlik avantajlarından yararlanarak Kubernetes 'te yerel olarak çalışacaktır.
+NewSQL veritabanları için önemli bir tasarım hedefi, platformun esnekliğinden ve ölçeklenebilirliğinden yararlanarak Kubernetes'te yerel olarak çalışmaktır.
 
-NewSQL veritabanları, temel alınan sanal makinelerin yeniden başlatılması veya bir süre bildirimde yeniden zamanlanmasında, kısa ömürlü bulut ortamlarında Misyonumuz üzere tasarlanmıştır. Veritabanları, veri kaybı veya kapalı kalma süresi olmadan düğüm arızalarını sürdürmesini sağlayacak şekilde tasarlanmıştır. Örneğin, CockroachDB, bir kümedeki düğümlerde bulunan verilerin üç tutarlı çoğaltmasını tutarak makine kaybını devam edebilir.
+NewSQL veritabanları, temel sanal makinelerin bir anda yeniden başlatılabildiği veya yeniden zamanlanabileceği geçici bulut ortamlarında başarılı olmak üzere tasarlanmıştır. Veritabanları, veri kaybı veya kapalı kalma süresi olmadan düğüm hatalarından kurtulacak şekilde tasarlanmıştır. Örneğin Hamamböceği, bir kümedeki düğümler arasında herhangi bir verinin üç tutarlı kopyasını koruyarak bir makine kaybından kurtulabilir.
 
-Kubernetes, bir istemcinin tek bir DNS girdisinden özdeş bir NewSQL veritabanı işlemi grubuna yönelik bir grup kullanmasına izin vermek için bir *hizmet yapısı* kullanır. Veritabanı örneklerini ilişkilendirildiği hizmetin adresinden ayırarak, var olan uygulama örneklerini kesintiye uğratmadan ölçeklendirebiliriz. Belirli bir zamanda herhangi bir hizmete bir istek gönderilmesi her zaman aynı sonucu verir.
+Kubernetes, istemcinin tek bir DNS girişinden aynı NewSQL veritabanları ndan oluşan bir gruba hitap etmesine izin vermek için bir *Hizmet yapısı* kullanır. Veritabanı örneklerini ilişkili olduğu hizmetin adresinden ayırarak, varolan uygulama örneklerini bozmadan ölçeklendirebiliriz. Belirli bir zamanda herhangi bir hizmete istek göndermek her zaman aynı sonucu verir.
 
-Bu senaryoda, tüm veritabanı örnekleri eşittir. Birincil veya ikincil ilişki yok. CockroachDB içinde *konsensus çoğaltması* gibi teknikler, herhangi bir veritabanı düğümünün herhangi bir isteği işlemesini sağlar. Yük dengeli bir istek alan düğümde yerel olarak gereken veriler varsa, hemen yanıt verir. Aksi takdirde, düğüm bir ağ geçidi haline gelir ve doğru yanıtı almak için isteği uygun düğümlere iletir. İstemcinin perspektifinden, her veritabanı düğümü aynıdır: tek makineli bir sistemin tutarlılık garantisi olan tek bir *mantıksal* veritabanı olarak görünürler ve bu da arka planda çalışan onlarca veya hatta yüzlerce düğüm olmasına rağmen.
+Bu senaryoda, tüm veritabanı örnekleri eşittir. Birincil veya ikincil ilişki yoktur. Hamamböceği'nde bulunan *konsensüs çoğaltma* gibi teknikler herhangi bir veritabanı düğümüherhangi bir istek işlemek için izin verir. Yük dengeli bir istek alan düğüm, yerel olarak ihtiyaç duyduğu verilere sahipse, hemen yanıt verir. Değilse, düğüm bir ağ geçidi olur ve doğru yanıtı almak için isteği uygun düğümlere iletin. İstemcinin bakış açısından, her veritabanı düğümü aynıdır: Perde arkasında çalışan düzinelerce hatta yüzlerce düğümolmasına rağmen, tek bir makine sisteminin tutarlılık garantileri ile tek bir *mantıksal* veritabanı olarak görünürler.
 
-NewSQL veritabanlarının arkasındaki mekanizması ayrıntılı bir bakış için bkz. [Dash: Kubernetes-Native veritabanları makalesinin dört özelliği](https://thenewstack.io/dash-four-properties-of-kubernetes-native-databases/) .
+NewSQL veritabanlarının arkasındaki mekaniği ayrıntılı bir şekilde görmek için [DASH: Dört Kubernetes-Native Databases](https://thenewstack.io/dash-four-properties-of-kubernetes-native-databases/) makalesine bakın.
 
 ## <a name="data-migration-to-the-cloud"></a>Buluta veri geçişi
 
-Daha fazla zaman alan görevlerden biri verileri bir veri platformundan diğerine geçirmektedir. [Azure veri geçiş hizmeti](https://azure.microsoft.com/services/database-migration/) , bu çabalara yardımcı olabilir. Birçok dış veritabanı kaynağından verileri en az kapalı kalma süresiyle Azure veri platformları 'na geçirebilir. Hedef platformlar aşağıdaki hizmetleri içerir:
+Daha fazla zaman alan görevlerden biri, verileri bir veri platformundan diğerine geçirmektir. [Azure Veri Geçiş Hizmeti](https://azure.microsoft.com/services/database-migration/) bu tür çabaların hızlandırılabiliyor. Birkaç dış veritabanı kaynağından gelen verileri en az kapalı kalma süresiyle Azure Veri platformlarına aktarabilir. Hedef platformlar aşağıdaki hizmetleri içerir:
 
-- Azure SQL Database
+- Azure SQL Veritabanı
 - MySQL için Azure Veritabanı
-- MariaDB için Azure veritabanı
+- MariaDB için Azure Veritabanı
 - PostgreSQL için Azure Veritabanı
 - CosmosDB
   
-Hizmet, her ikisi de küçük veya büyük bir geçiş yürütmek için gereken değişikliklere kılavuzluk eden öneriler sağlar.
+Hizmet, küçük veya büyük bir geçiş yürütmek için gereken değişiklikler boyunca size rehberlik etmek için öneriler sağlar.
 
 >[!div class="step-by-step"]
 >[Önceki](Database-per-microservice.md)
->[İleri](azure-caching.md)
+>[Sonraki](azure-caching.md)

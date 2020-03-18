@@ -1,6 +1,6 @@
 ---
-title: "Nasıl yapılır: dizeleri DateTime 'a dönüştürme"
-description: Tarih ve saat dizesinden bir tarih saat oluşturmak için tarihleri ve saatleri temsil eden dizeleri ayrıştırma tekniklerini öğrenin.
+title: "Nasıl: dizeleri DateTime'a dönüştürün"
+description: Tarih ve saat dizesinden bir DateTime oluşturmak için tarihleri ve saatleri temsil eden dizeleri ayrıştırma tekniklerini öğrenin.
 ms.date: 02/15/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,79 +15,79 @@ helpviewer_keywords:
 - DateTime object
 - time strings
 ms.openlocfilehash: 9555304e570226b2ed3b040735cf099b5a018f93
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156549"
 ---
-# <a name="parsing-date-and-time-strings-in-net"></a>.NET 'teki tarih ve saat dizelerini ayrıştırma
+# <a name="parsing-date-and-time-strings-in-net"></a>Tarih ve Saat Dizelerini .NET'te ayrıştama
 
-Nesneleri <xref:System.DateTime> dönüştürmek için ayrıştırma dizeleri, tarihlerin ve saatlerin nasıl metin olarak temsil edildiği hakkında bilgi belirtmenizi gerektirir. Farklı kültürler gün, ay ve yıl için farklı siparişler kullanır. Bazı zaman temsilleri 24 saatlik bir saat kullanır, diğerleri "har" ve "PM" i belirler. Bazı uygulamaların yalnızca tarih olması gerekir. Diğerlerinin yalnızca saat olması gerekir. Hala başkalarının hem tarih hem de saati belirtmesi gerekir. Dizeleri <xref:System.DateTime> nesnelerine dönüştüren Yöntemler, istediğiniz biçimler ve uygulamanızın ihtiyaç duyacağı bir tarih ve saatin öğeleri hakkında ayrıntılı bilgi sağlamanıza olanak tanır. Metni doğru bir <xref:System.DateTime>dönüştürmek için üç alt görev vardır:
+Dizeleri nesnelere dönüştürmek için <xref:System.DateTime> ayrıştMa, tarih ve saatlerin metin olarak nasıl temsil edildiği hakkında bilgi belirtmenizi gerektirir. Farklı kültürler gün, ay ve yıl için farklı siparişler kullanır. Bazı zaman gösterimleri 24 saatlik bir saat kullanırken, diğerleri ve PM belirtir. Bazı uygulamaların yalnızca tarih eihtiyacı vardır. Diğerlerinin sadece zamana ihtiyacı var. Yine de diğerlerinin hem tarih hem de saat belirtmeleri gerekir. Dizeleri nesnelere <xref:System.DateTime> dönüştüren yöntemler, beklediğiniz biçimler ve uygulamanızın ihtiyaç duyduğu tarih ve saatöğeleri hakkında ayrıntılı bilgi sağlamanıza olanak tanır. Metni <xref:System.DateTime>doğru bir şekilde bir
 
 1. Tarih ve saati temsil eden metnin beklenen biçimini belirtmeniz gerekir.
-1. Bir tarih saat biçimi için kültürü belirtebilirsiniz.
-1. Metin temsilindeki eksik bileşenlerin tarih ve saat içinde nasıl ayarlanacağını belirtebilirsiniz.
+1. Bir tarih saatinin biçimi için kültürü belirtebilirsiniz.
+1. Metin gösterimindeki eksik bileşenlerin tarih ve saat içinde nasıl ayarlandığı belirtebilirsiniz.
 
-<xref:System.DateTime.Parse%2A> ve <xref:System.DateTime.TryParse%2A> yöntemleri bir tarih ve saatin birçok yaygın temsilini dönüştürür. <xref:System.DateTime.ParseExact%2A> ve <xref:System.DateTime.TryParseExact%2A> yöntemleri, bir tarih ve saat biçim dizesi tarafından belirtilen düzene uyan bir dize gösterimini dönüştürür. (Ayrıntılar için [Standart Tarih ve saat biçim dizeleri](standard-date-and-time-format-strings.md) ve [özel tarih ve saat biçim dizeleri](custom-date-and-time-format-strings.md) hakkındaki makalelere bakın.)
+Ve <xref:System.DateTime.Parse%2A> <xref:System.DateTime.TryParse%2A> yöntemler, bir tarih ve saatin birçok yaygın temsilini dönüştürür. Ve <xref:System.DateTime.ParseExact%2A> <xref:System.DateTime.TryParseExact%2A> yöntemler, tarih ve saat biçimi dizetarafından belirtilen desene uyan bir dize gösterimini dönüştürür. (Ayrıntılar için [standart tarih ve saat biçimi dizeleri](standard-date-and-time-format-strings.md) ve [özel tarih ve saat biçimi dizeleri](custom-date-and-time-format-strings.md) ile ilgili makalelere bakın.)
 
-Geçerli <xref:System.Globalization.DateTimeFormatInfo> nesnesi, metnin tarih ve saat olarak nasıl yorumlanacağı üzerinde daha fazla denetim sağlar. <xref:System.Globalization.DateTimeFormatInfo> özellikleri, tarih ve saat ayırıcıları ve ay, gün ve eras adlarını ve "har" ve "PM" gösterimlerinin biçimini anlatmaktadır. Geçerli iş parçacığı kültürü geçerli kültürü temsil eden bir <xref:System.Globalization.DateTimeFormatInfo> sağlar. Belirli bir kültür veya özel ayarlar istiyorsanız, ayrıştırma yönteminin <xref:System.IFormatProvider> parametresini belirtirsiniz. <xref:System.IFormatProvider> parametresi için bir kültürü veya <xref:System.Globalization.DateTimeFormatInfo> nesnesini temsil eden bir <xref:System.Globalization.CultureInfo> nesnesi belirtin.
+Geçerli <xref:System.Globalization.DateTimeFormatInfo> nesne, metnin tarih ve saat olarak nasıl yorumlanması gerektiği üzerinde daha fazla denetim sağlar. Tarih <xref:System.Globalization.DateTimeFormatInfo> ve saat ayırıcılarının özelliklerini, ay, gün ve dönem adlarını ve ve PM tanımlamalarının biçimini açıklar. Geçerli iş parçacığı <xref:System.Globalization.DateTimeFormatInfo> kültürü, geçerli kültürü temsil eden bir sözcük sağlar. Belirli bir kültür veya özel ayarlar istiyorsanız, ayrıştma yönteminin parametresini <xref:System.IFormatProvider> belirtirsiniz. Parametre <xref:System.IFormatProvider> için, bir <xref:System.Globalization.CultureInfo> kültürü veya nesneyi temsil <xref:System.Globalization.DateTimeFormatInfo> eden bir nesne belirtin.
 
-Bir tarih veya saati temsil eden metinde bazı bilgiler eksik olabilir. Örneğin, çoğu kişi "Mart 12" tarihini geçerli yılı temsil eder. Benzer şekilde, "Mart 2018", 2018 yılında Mart ayının ayı temsil eder. Süreyi temsil eden metin yalnızca saat, dakika ve bir har/PM belirtimi içerir.  Ayrıştırma yöntemleri, makul Varsayılanları kullanarak bu eksik bilgileri işler:
+Bir tarih veya saati temsil eden metin bazı bilgiler eksik olabilir. Örneğin, çoğu kişi "12 Mart" tarihinin geçerli yılı temsil edeceğini varsayar. Benzer şekilde, "Mart 2018" 2018 yılının Mart ayını temsil eder. Zamanı temsil eden metin genellikle yalnızca saat, dakika ve AM/PM ataması içerir.  Ayrışdırma yöntemleri makul varsayılanları kullanarak bu eksik bilgileri işler:
 
-- Yalnızca saat varsa, tarih kısmı geçerli tarihi kullanır.
-- Yalnızca tarih varsa, saat kısmı gece yarısı olur.
-- Yıl bir tarih içinde belirtilmediğinde, geçerli yıl kullanılır.
-- Ayın günü belirtilmediğinde ayın ilk adı kullanılır.
+- Yalnızca saat mevcut olduğunda, tarih bölümü geçerli tarihi kullanır.
+- Yalnızca tarih bulunduğunda, zaman kısmı gece yarısıdır.
+- Yıl bir tarihte belirtilmediğinde, geçerli yıl kullanılır.
+- Ayın günü belirtilmediğinde, ayın ilk günü kullanılır.
 
-Tarih dizede varsa, bu, ayı ve günü veya yıldan birini içermelidir. Zaman varsa, saat ve dakika ya da har/PM göstergesini içermelidir.
+Tarih dizede varsa, ayı ve gün veya yıldan birini içermelidir. Saat varsa, saati ve dakikaları veya AM/PM atasını içermelidir.
 
-Bu varsayılan değerleri geçersiz kılmak için <xref:System.Globalization.DateTimeStyles.NoCurrentDateDefault> sabiti belirtebilirsiniz. Bu sabiti kullandığınızda, eksik yıl, ay veya gün özellikleri `1`değere ayarlanır. <xref:System.DateTime.Parse%2A> kullanan [son örnek](#styles-example) bu davranışı gösterir.
+Bu varsayılanları <xref:System.Globalization.DateTimeStyles.NoCurrentDateDefault> geçersiz kılmak için sabiti belirtebilirsiniz. Bu sabiti kullandığınızda, eksik yıl, ay veya gün `1`özellikleri değere ayarlanır. Son [örnek](#styles-example) <xref:System.DateTime.Parse%2A> bu davranışı gösterir.
 
-Bir tarih ve saat bileşenine ek olarak, bir tarih ve saatin dize gösterimi, zamanın Eşgüdümlü Evrensel Saat (UTC) ne kadar farklı olduğunu gösteren bir uzaklığa sahip olabilir. Örneğin, "2/14/2007 5:32:00 -7:00" dizesi UTC 'den önceki yedi saat olan bir zamanı tanımlar. Bir zaman içindeki dize gösteriminden bir konum atlanırsa, ayrıştırma, <xref:System.DateTime.Kind%2A> özelliği <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>olarak ayarlanmış bir <xref:System.DateTime> nesnesi döndürür. Bir fark belirtilmişse, ayrıştırma, <xref:System.DateTime.Kind%2A> özelliği <xref:System.DateTimeKind.Local?displayProperty=nameWithType> olarak ayarlanmış ve değeri makinenizin yerel saat dilimine ayarlanmış olarak <xref:System.DateTime> bir nesne döndürür. Ayrıştırma yöntemiyle bir <xref:System.Globalization.DateTimeStyles> değeri kullanarak bu davranışı değiştirebilirsiniz.
+Bir tarih ve saat bileşenine ek olarak, bir tarih ve saatin dize gösterimi, sürenin Eşgüdümlü Evrensel Zaman'dan (UTC) ne kadar farklı olduğunu gösteren bir ofset içerebilir. Örneğin, "14.02.2007 5:32:00 -7:00" dizesi UTC'den yedi saat önce olan bir zamanı tanımlar. Bir ofset, bir zamanın dize gösteriminden atlanırsa, <xref:System.DateTime> ayrıştırma <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>özelliği 'ne ayarlanmış bir nesneyi <xref:System.DateTime.Kind%2A> döndürür. Bir ofset belirtilirse, ayrıştırma <xref:System.DateTime.Kind%2A> özelliği <xref:System.DateTimeKind.Local?displayProperty=nameWithType> ayarlanmış ve değeri makinenizin yerel saat dilimine ayarlanmış bir <xref:System.DateTime> nesneyi döndürür. Ayrıştma yöntemiyle <xref:System.Globalization.DateTimeStyles> bir değer kullanarak bu davranışı değiştirebilirsiniz.
   
-Biçim sağlayıcısı, belirsiz bir sayısal tarihi yorumlamak için de kullanılır. "02/03/04" dizesi ile temsil edilen tarihin hangi bileşenlerinin ay, gün ve yıl olduğunu net değildir. Bileşenler, biçim sağlayıcısındaki benzer Tarih biçimlerinin sırasına göre yorumlanır.
+Biçim sağlayıcısı, belirsiz bir sayısal tarihi yorumlamak için de kullanılır. "02/03/04" dizesinin temsil ettiği tarihin hangi bileşenlerinin ay, gün ve yıl olduğu açık değildir. Bileşenler, biçim sağlayıcısındaki benzer tarih biçimlerinin sırasına göre yorumlanır.
 
-## <a name="parse"></a>MAZ
+## <a name="parse"></a>Ayrıştır
 
-Aşağıdaki örnek, bir `string` <xref:System.DateTime>dönüştürmek için <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> yönteminin kullanımını gösterir. Bu örnek, geçerli iş parçacığıyla ilişkili kültürü kullanır. Geçerli kültür ile ilişkili <xref:System.Globalization.CultureInfo> giriş dizesini ayrıştıramaz, bir <xref:System.FormatException> oluşturulur.
+Aşağıdaki örnekte, <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> a'yı `string` bir . <xref:System.DateTime> Bu örnek, geçerli iş parçacığı ile ilişkili kültür kullanır. Geçerli <xref:System.Globalization.CultureInfo> kültürle ilişkili giriş dizesini ayrıştıramıyorsa, a <xref:System.FormatException> atılır.
 
 > [!TIP]
-> Bu makaledeki C# tüm örnekler tarayıcınızda çalışır. Çıktıyı görmek için **Çalıştır** düğmesine basın. Ayrıca, kendinizi denemek için de düzenleyebilirsiniz.
+> Bu makaledeki tüm C# örnekleri tarayıcınızda çalışır. Çıktıyı görmek için **Çalıştır** düğmesine basın. Ayrıca, bunları kendinizi denemek için de edinebilirsiniz.
 
 > [!NOTE]
-> Bu örnekler, hem hem de [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions)için GitHub docs deposunda mevcuttur. Ya da, projeyi veya [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) [Visual Basic](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip)için bir zip dosyası olarak indirebilirsiniz.
+> Bu örnekler Hem [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) hem de [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions)için GitHub dokümanları repo'sunda mevcuttur. Veya, [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) veya [Visual Basic](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip)için bir zip dosyası olarak proje indirebilirsiniz.
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]
 
-Ayrıca, bir dizeyi ayrıştırdığınızda biçimlendirme kuralları kullanılan kültürü açık bir şekilde tanımlayabilirsiniz. <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> özelliği tarafından döndürülen standart <xref:System.Globalization.DateTimeFormatInfo> nesnelerinden birini belirtirsiniz. Aşağıdaki örnek bir <xref:System.DateTime>bir Alman dizeyi ayrıştırmak için bir biçim sağlayıcısı kullanır. `de-DE` kültürünü temsil eden bir <xref:System.Globalization.CultureInfo> oluşturur. Bu `CultureInfo` nesnesi bu dizenin başarıyla ayrıştırılmasını sağlar. Bu, <xref:System.Threading.Thread.CurrentThread><xref:System.Threading.Thread.CurrentCulture> hangi ayarın olduğunu önceden açar.  
+Ayrıca, bir dizeyi ayrıştırken biçimlendirme kuralları kullanılan kültürü de açıkça tanımlayabilirsiniz. Özellik tarafından döndürülen <xref:System.Globalization.DateTimeFormatInfo> standart nesnelerden <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> birini belirtirsiniz. Aşağıdaki örnekte, bir Alman dizesini ayrıştmak <xref:System.DateTime>için bir biçim sağlayıcısı kullanır. Kültürü temsil <xref:System.Globalization.CultureInfo> eden bir şey yaratır. `de-DE` Bu `CultureInfo` nesne, bu özel dize başarılı ayrışma sağlar. Bu, ne olursa olsun ayarı <xref:System.Threading.Thread.CurrentCulture> <xref:System.Threading.Thread.CurrentThread>engellenir .  
   
 [!code-csharp[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
 [!code-vb[Parsing.DateAndTime#2](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#2)]
 
-Ancak, özel biçim sağlayıcıları belirtmek için <xref:System.DateTime.Parse%2A> yönteminin aşırı yüklerini kullanabilseniz de, yöntem standart olmayan biçimlerin ayrıştırılmasını desteklemez. Standart olmayan biçimde ifade edilen bir tarih ve saati ayrıştırmak için, bunun yerine <xref:System.DateTime.ParseExact%2A> yöntemini kullanın.  
+Ancak, özel biçim sağlayıcılarını <xref:System.DateTime.Parse%2A> belirtmek için yöntemin aşırı yüklerini kullanabilmenize rağmen, yöntem standart dışı biçimleri ayrıştmayı desteklemez. Standart olmayan bir biçimde ifade edilen bir tarih ve <xref:System.DateTime.ParseExact%2A> saati ayrıştmak için yöntemi kullanın.  
 
-<a name="styles-example"></a>Aşağıdaki örnek, belirtilmeyen alanlar için geçerli tarih ve saat bilgilerinin <xref:System.DateTime> eklenmemesi gerektiğini belirtmek için <xref:System.Globalization.DateTimeStyles> numaralandırmayı kullanır.  
+<a name="styles-example"></a>Aşağıdaki örnek, <xref:System.Globalization.DateTimeStyles> geçerli tarih ve saat bilgilerinin belirtilmeyen <xref:System.DateTime> alanlara eklenmemesi gerektiğini belirtmek için numaralandırmayı kullanır.  
 
 [!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
 [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#3)]
 
-## <a name="parseexact"></a>ParseExact
+## <a name="parseexact"></a>Parseexact
 
-<xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> yöntemi, belirtilen dize desenlerinden birine uyuyorsa bir dizeyi <xref:System.DateTime> nesnesine dönüştürür. Belirtilen formlardan biri olmayan bir dize bu yönteme geçirildiğinde, bir <xref:System.FormatException> oluşturulur. Standart Tarih ve saat biçimi belirticilerden birini ya da özel biçim belirticileri birleşimini belirtebilirsiniz. Özel biçim belirticilerini kullanarak, özel bir tanıma dizesi oluşturmanız mümkündür. Belirticilerin açıklaması için [Standart Tarih ve saat biçimi dizeleri](standard-date-and-time-format-strings.md) ve [özel tarih ve saat biçim dizeleri](custom-date-and-time-format-strings.md)hakkındaki konulara bakın.  
+Yöntem, <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> belirtilen dize <xref:System.DateTime> desenlerinden birine uyuyorsa, bir dizeyi nesneye dönüştürür. Belirtilen formlardan biri olmayan bir dize bu yönteme <xref:System.FormatException> geçirildiğinde, bir atılır. Standart tarih ve saat biçimi belirticilerinden birini veya özel biçim belirticilerinin bir birleşimini belirtebilirsiniz. Özel biçim belirteçlerini kullanarak, özel bir tanıma dizesi oluşturmanız mümkündür. Belirteçlerin bir açıklama için, standart [tarih ve saat biçimi dizeleri](standard-date-and-time-format-strings.md) ve [özel tarih ve saat biçimi dizeleri](custom-date-and-time-format-strings.md)konulara bakın.  
 
-Aşağıdaki örnekte <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> yöntemi ayrıştırmak için bir dize nesnesi geçti, ardından bir biçim belirticisi ve ardından bir <xref:System.Globalization.CultureInfo> nesnesi. Bu <xref:System.DateTime.ParseExact%2A> yöntemi yalnızca `en-US` kültürünün uzun tarih modelini izleyen dizeleri ayrıştırabilirler.  
+Aşağıdaki örnekte, <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> yöntem ayrıştırmak için bir dize nesnesi geçirilir, <xref:System.Globalization.CultureInfo> ardından bir biçim belirtimi, ardından bir nesne. Bu <xref:System.DateTime.ParseExact%2A> yöntem yalnızca `en-US` kültürdeki uzun tarih deseni izleyen dizeleri ayrıştabilir.  
 
 [!code-csharp[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
 [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#4)]
 
-<xref:System.DateTime.Parse%2A> ve <xref:System.DateTime.ParseExact%2A> yöntemlerinin her bir aşırı yüklemesinin, dizenin biçimlendirmesi hakkında kültüre özgü bilgiler sağlayan bir <xref:System.IFormatProvider> parametresi de vardır. Bu <xref:System.IFormatProvider> nesnesi, <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> özelliği tarafından döndürülen standart bir kültürü veya <xref:System.Globalization.DateTimeFormatInfo> nesnesini temsil eden bir <xref:System.Globalization.CultureInfo> nesnesidir.  <xref:System.DateTime.ParseExact%2A> Ayrıca bir veya daha fazla özel tarih ve saat biçimi tanımlayan ek bir dize veya dize dizisi bağımsız değişkeni kullanır.  
+Her aşırı yükleme <xref:System.DateTime.Parse%2A> <xref:System.DateTime.ParseExact%2A> ve yöntemler <xref:System.IFormatProvider> de dize biçimlendirme hakkında kültüre özgü bilgi sağlayan bir parametre vardır. Bu <xref:System.IFormatProvider> nesne, <xref:System.Globalization.CultureInfo> standart bir kültürü veya <xref:System.Globalization.DateTimeFormatInfo> <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> özellik tarafından döndürülen bir nesneyi temsil eden bir nesnedir.  <xref:System.DateTime.ParseExact%2A>ayrıca, bir veya daha fazla özel tarih ve saat biçimini tanımlayan ek bir dize veya dize dizi bağımsız değişkeni kullanır.  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dizeleri Ayrıştırma](parsing-strings.md)
 - [Biçimlendirme Türleri](formatting-types.md)
 - [.NET içinde Tür Dönüştürme](type-conversion.md)
-- [Standart Tarih ve saat biçimleri](standard-date-and-time-format-strings.md)
-- [Özel tarih ve saat biçim dizeleri](custom-date-and-time-format-strings.md)
+- [Standart tarih ve saat biçimleri](standard-date-and-time-format-strings.md)
+- [Özel tarih ve saat biçimi dizeleri](custom-date-and-time-format-strings.md)

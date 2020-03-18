@@ -1,31 +1,31 @@
 ---
-title: Yerel birlikte çalışabilirlik-.NET
-description: .NET ' te yerel bileşenlerle arabirim oluşturmayı öğrenin.
+title: Yerel birlikte çalışabilirlik - .NET
+description: .NET'te yerel bileşenlerle nasıl arayüz arayla iletişim etobur sunmayı öğrenin.
 ms.date: 01/18/2019
 ms.openlocfilehash: 330466d74cc268214f74c4f575e6a2961f678972
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75706341"
 ---
 # <a name="native-interoperability"></a>Native ile birlikte çalışma
 
-Aşağıdaki makalelerde .NET içinde "yerel birlikte çalışabilirlik" yapmanın çeşitli yolları gösterilmektedir.
+Aşağıdaki makaleler .NET'te "yerel birlikte çalışabilirlik" yapmanın çeşitli yollarını göstermektedir.
 
-Yerel koda çağrı yapmak istemenizin birkaç nedeni vardır:
+Yerel kodu aramak istemenizin birkaç nedeni vardır:
 
-- İşletim sistemleri, yönetilen sınıf kitaplıklarında bulunmayan büyük bir API hacimiyle gelir. Bu senaryo için bir ana örnek, donanım veya işletim sistemi yönetim işlevlerine erişim sağlar.
-- [Java Native Interface (JNı)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) aracılığıyla veya yerel bir bileşen oluşturabilecek başka bir yönetilen dilde sunulan Java kodu gibi C stili ABR 'leri (yerel absıs) oluşturan veya üreten diğer bileşenlerle iletişim kurma.
-- Windows 'da, Microsoft Office Suite gibi yüklü yazılımların çoğu, programlarını temsil eden COM bileşenlerini kaydettirir ve geliştiricilerin bunları otomatikleştirebilmeleri veya onları kullanmasına izin verir. Bu, yerel birlikte çalışabilirlik de gerektirir.
+- İşletim sistemleri, yönetilen sınıf kitaplıklarında bulunmayan büyük hacimli API'lerle birlikte gelir. Bu senaryo için en önemli örnek donanım veya işletim sistemi yönetim işlevlerine erişim olacaktır.
+- [Java Native Interface (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) veya yerel bir bileşen oluşturabilecek başka bir yönetilen dil aracılığıyla ortaya çıkarılan Java kodu gibi C stili ABI'leri (yerel ABI' ler) olan veya üretebilen diğer bileşenlerle iletişim kurmak.
+- Windows'da, Microsoft Office paketi gibi yüklenen yazılımların çoğu, programlarını temsil eden ve geliştiricilerin bunları otomatikleştirmesine veya kullanmasına izin veren COM bileşenlerini kaydeder. Bu da yerel birlikte çalışabilirlik gerektirir.
 
-Önceki listede, geliştiricinin yerel bileşenlerle arabirim istediğini/beğenmek istediği tüm olası durumlar ve senaryolar ele alınmaktadır. .NET sınıf kitaplığı, örneğin, konsol desteği ve işleme, dosya sistemi erişimi ve diğerleri gibi API 'Lerinin bir dengeli sayısını uygulamak için yerel birlikte çalışabilirlik desteğini kullanır. Ancak, gerekirse bir seçenek olduğuna dikkat edin.
+Önceki liste, geliştiricinin yerel bileşenlerle ara birim yapmak istediği/beğeneceği/ihtiyaç dalacağı tüm olası durumları ve senaryoları kapsamaz. .NET sınıf kitaplığı, örneğin, konsol desteği ve manipülasyon, dosya sistemi erişimi ve diğerleri gibi adil sayıda API'sini uygulamak için yerel birlikte çalışabilirlik desteğini kullanır. Ancak, gerekirse bir seçenek olduğunu unutmayın.
 
 > [!NOTE]
-> Bu bölümdeki örneklerin çoğu, .NET Core için desteklenen üç platformda (Windows, Linux ve macOS) sunulacak. Ancak bazı Short ve tanım örneklerinde, Windows dosya adları ve uzantıları kullanan tek bir örnek gösterilir (yani, kitaplıklar için "dll"). Bu, bu özelliklerin Linux veya macOS üzerinde kullanılamadığı anlamına gelmez, ancak kolay bir sake için yapılmıştı.
+> Bu bölümdeki örneklerin çoğu .NET Core (Windows, Linux ve macOS) için desteklenen üç platform için de sunulacaktır. Ancak, bazı kısa ve açıklayıcı örnekler için, Windows dosya adlarını ve uzantılarını kullanan tek bir örnek gösterilir (diğer bir şekilde kitaplıklar için "dll"). Bu bu özellikleri Linux veya macOS mevcut olmadığı anlamına gelmez, sadece kolaylık uğruna yapıldı.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Platform çağırma (P/Invoke)](pinvoke.md)
-- [Tür sıralaması](type-marshaling.md)
-- [Yerel birlikte çalışabilirlik en iyi uygulamaları](best-practices.md)
+- [Platform Çağırma (P/Invoke)](pinvoke.md)
+- [Tür hazırlama](type-marshaling.md)
+- [Yerel birlikte çalışabilirlik en iyi uygulamalar](best-practices.md)

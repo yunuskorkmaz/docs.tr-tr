@@ -6,10 +6,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], side-by-side execution
 ms.assetid: e42036ee-7590-47d1-b884-cc856e39bd5d
 ms.openlocfilehash: 234efba66d87b520b54d6d113afcc4bba0bfe06a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138650"
 ---
 # <a name="assemblies-and-side-by-side-execution"></a>Derlemeler ve yan yana yürütme
@@ -18,9 +18,9 @@ Yan yana yürütme, aynı bilgisayarda bir uygulama veya bileşenin birden çok 
   
 Aynı derlemenin farklı sürümlerinin yan yana depolanması ve yürütülmesi için sunulan destek, tanımlayıcı adlandırmanın temel bir parçasıdır ve çalışma zamanının altyapısında yerleşik olarak bulunmaktadır. Tanımlayıcı ada sahip olan derlemenin sürüm numarası kimliğinin bir parçası olduğundan, çalışma zamanı aynı derlemenin birden çok sürümünü genel derleme önbelleğinde tutabilir ve çalışma zamanında bu derlemeleri yükleyebilir.  
   
-Çalışma zamanı size yan yana uygulamalar oluşturma olanağı sağlasa da yan yana yürütme otomatik değildir. Yan yana yürütmeye yönelik uygulamalar oluşturma hakkında daha fazla bilgi için bkz. [yan yana yürütme için bileşen oluşturmaya yönelik yönergeler](../../framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md).  
+Çalışma zamanı size yan yana uygulamalar oluşturma olanağı sağlasa da yan yana yürütme otomatik değildir. Yan yana yürütme için uygulama oluşturma hakkında daha fazla bilgi [için, yan yana yürütme için bileşenler oluşturmak için Yönergeler'e](../../framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma zamanının derlemeleri nasıl konumlandırır](../../framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Çalışma zamanı derlemeleri nasıl bulur?](../../framework/deployment/how-the-runtime-locates-assemblies.md)
 - [.NET’te bütünleştirilmiş kodlar](index.md)

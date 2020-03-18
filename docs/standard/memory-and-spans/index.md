@@ -1,5 +1,5 @@
 ---
-title: Bellek ve yayılmalar
+title: Bellek ve yayılma
 ms.date: 10/03/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,42 +8,42 @@ helpviewer_keywords:
 - buffers"
 - pipeline processing
 ms.openlocfilehash: b61b1dbbedf4658fe113986fbb4a792a2f574534
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121994"
 ---
-# <a name="memory--and-span-related-types"></a>Bellek ve yayılma ile ilgili türler
+# <a name="memory--and-span-related-types"></a>Bellek ve yayılma ile ilgili türleri
 
-.NET Core 2,1 ' den itibaren, .NET, isteğe bağlı, kesin olarak belirlenmiş bir bellek bölgesini temsil eden bir dizi ilişkili tür içerir. Bu güncelleştirmeler şunlardır:
+.NET Core 2.1 ile başlayarak,.NET, rasgele belleğin bitişik, güçlü bir şekilde yazılmış bölgesini temsil eden birbiriyle ilişkili bir dizi türü içerir. Bunlar:
 
-- <xref:System.Span%601?displayProperty=nameWithType>, belleğin bitişik bir bölgesine erişmek için kullanılan bir tür. Bir <xref:System.Span%601> örnek, `T`, <xref:System.String>, [stackalloc](../../csharp/language-reference/operators/stackalloc.md)ile ayrılmış bir arabellek veya yönetilmeyen bellek işaretçisi tarafından desteklenen bir dizi tarafından yönetilebilir. Yığına ayrılması gerektiğinden, bir dizi kısıtlamaya sahiptir. Örneğin, bir sınıftaki alan <xref:System.Span%601>türünde olamaz, ya da zaman uyumsuz işlemlerde dağıtılabilir.
+- <xref:System.Span%601?displayProperty=nameWithType>, bitişik bir bellek bölgesine erişmek için kullanılan bir tür. Bir <xref:System.Span%601> örnek `T`türü bir dizi tarafından desteklenebilir , a <xref:System.String>, [stackalloc](../../csharp/language-reference/operators/stackalloc.md)ile ayrılmış bir arabellek , ya da yönetilmeyen bellek için bir işaretçi. Yığına ayrılması gerektiği için, bir dizi kısıtlaması vardır. Örneğin, bir sınıftaki bir alan <xref:System.Span%601>türde olamaz ve asynchronous işlemlerinde kullanılabilir.
 
-- <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, <xref:System.Span%601> yapısının sabit bir sürümüdür.
+- <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, yapının <xref:System.Span%601> değişmez bir sürümü.
 
-- yığın yerine yönetilen yığında ayrılan belleğin bitişik bir bölgesi olan <xref:System.Memory%601?displayProperty=nameWithType>. Bir <xref:System.Memory%601> örneği `T` veya <xref:System.String>türünde bir dizi tarafından yönetilebilir. Yönetilen yığında depolanabileceğinden, <xref:System.Memory%601> <xref:System.Span%601>hiçbir kısıtlama yoktur.
+- <xref:System.Memory%601?displayProperty=nameWithType>, yığın yerine yönetilen yığına ayrılan bitişik bir bellek bölgesi. Bir <xref:System.Memory%601> örnek, bir dizi tür `T` veya <xref:System.String>bir . Yönetilen yığında depolanabildiği için, <xref:System.Memory%601> .'ın hiçbir <xref:System.Span%601>sınırlaması yoktur.
 
-- <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>, <xref:System.Memory%601> yapısının sabit bir sürümüdür.
+- <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>, yapının <xref:System.Memory%601> değişmez bir sürümü.
 
-- bir bellek havuzundan bir sahibe kesin olarak belirlenmiş bellek blokları ayıran <xref:System.Buffers.MemoryPool%601?displayProperty=nameWithType>. <xref:System.Buffers.IMemoryOwner%601> örnekleri, <xref:System.Buffers.MemoryPool%601.Rent%2A?displayProperty=nameWithType> çağırarak ve <xref:System.Buffers.MemoryPool%601.Dispose?displayProperty=nameWithType>çağırarak havuza geri yayınlanan havuzdan yeniden dağıtılabilir.
+- <xref:System.Buffers.MemoryPool%601?displayProperty=nameWithType>, bellek havuzundan bir sahibine güçlü bir şekilde yazılan bellek bloklarını ayırır. <xref:System.Buffers.IMemoryOwner%601>örnekleri arayarak <xref:System.Buffers.MemoryPool%601.Rent%2A?displayProperty=nameWithType> havuzdan kiralanabilir ve arayarak <xref:System.Buffers.MemoryPool%601.Dispose?displayProperty=nameWithType>havuza geri bırakılabilir.
 
-- <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>, bir bellek bloğunun sahibini temsil eder ve ömrü yönetimini denetler.
+- <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>, bellek bloğunun sahibini temsil eder ve yaşam boyu yönetimini denetler.
 
-- <xref:System.Buffers.MemoryManager%601>, <xref:System.Memory%601> <xref:System.Memory%601> uygulanmasını değiştirmek için kullanılabilen, güvenli işleyiciler gibi ek türler tarafından desteklenen bir soyut temel sınıftır. <xref:System.Buffers.MemoryManager%601> gelişmiş senaryolara yöneliktir.
+- <xref:System.Buffers.MemoryManager%601>, güvenli tutamaçları gibi ek türler tarafından <xref:System.Memory%601> desteklenebilir şekilde <xref:System.Memory%601> uygulanması yerine kullanılabilecek soyut bir taban sınıfı. <xref:System.Buffers.MemoryManager%601>gelişmiş senaryolar için tasarlanmıştır.
 
-- belirli bir dizinden başlayarak belirli sayıda dizi öğesi için bir sarmalayıcı <xref:System.ArraySegment%601>.
+- <xref:System.ArraySegment%601>, belirli bir dizinden başlayan belirli sayıda dizi öğesi için bir sarmalayıcı.
 
-- dize, dizi ve dizi segmentlerini <xref:System.Memory%601> bloklara dönüştürmek için uzantı yöntemleri koleksiyonu <xref:System.MemoryExtensions?displayProperty=nameWithType>.
+- <xref:System.MemoryExtensions?displayProperty=nameWithType>, dizeleri, dizileri ve dizi parçalarını bloklara dönüştürmek <xref:System.Memory%601> için uzantı yöntemleri koleksiyonu.
 
 > [!NOTE]
-> Daha önceki çerçeveler için, [System. Memory NuGet paketinde](https://www.nuget.org/packages/System.Memory/)<xref:System.Span%601> ve <xref:System.Memory%601> kullanılabilir.
+> Önceki çerçeveler <xref:System.Span%601> için <xref:System.Memory%601> ve [System.Memory NuGet paketinde](https://www.nuget.org/packages/System.Memory/)mevcuttur.
 
-Daha fazla bilgi için <xref:System.Buffers?displayProperty=nameWithType> ad alanına bakın.
+Daha fazla bilgi <xref:System.Buffers?displayProperty=nameWithType> için ad alanına bakın.
 
-## <a name="working-with-memory-and-span"></a>Bellek ve yayılma ile çalışma
+## <a name="working-with-memory-and-span"></a>Bellek ve yayılma alanı ile çalışma
 
-Bellek ve yayılma ile ilgili türler genellikle verileri bir işlem ardışık düzeninde depolamak için kullanıldığından, geliştiricilerin <xref:System.Span%601>, <xref:System.Memory%601>ve ilgili türleri kullanırken en iyi yöntemler kümesini izlemesi önemlidir. Bu en iyi uygulamalar, [bellek\<t > ve\<t > kullanım yönergelerine](memory-t-usage-guidelines.md)göre belgelenmiştir.
+Bellek ve yayılmayla ilgili türler genellikle verileri bir işleme ardışık alanında depolamak için kullanıldığından, geliştiricilerin <xref:System.Span%601> <xref:System.Memory%601>, ve ilgili türleri kullanırken bir dizi en iyi uygulamaları izlemesi önemlidir. Bu en iyi uygulamalar [Bellek\<T>\<ve Span T> kullanım yönergelerinde](memory-t-usage-guidelines.md)belgelenmiştir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,25 +9,25 @@ helpviewer_keywords:
 - PLINQ queries, how to use merge options
 ms.assetid: 0f33b527-e91a-4550-a39a-e63e396fd831
 ms.openlocfilehash: 40abe2f101f6fa23d804ef30e27d642a36908196
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139274"
 ---
 # <a name="how-to-specify-merge-options-in-plinq"></a>Nasıl yapılır: PLINQ'te Birleştirme Seçeneklerini Belirtme
-Bu örnekte, bir PLıNQ sorgusunda sonraki tüm işleçlere uygulanacak birleştirme seçeneklerinin nasıl ayarlanacağı gösterilmektedir. Birleştirme seçeneklerini açıkça ayarlamanız gerekmez, ancak bunu yapmak performansı iyileştirebilir. Birleştirme seçenekleri hakkında daha fazla bilgi için bkz. [PLıNQ Içindeki birleştirme seçenekleri](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
+Bu örnek, plinq sorgusunda sonraki tüm işleçler için geçerli olacak birleştirme seçeneklerini nasıl belirteceğini gösterir. Birleştirme seçeneklerini açıkça ayarlamanız gerekmez, ancak bunu yapmak performansı artırabilir. Birleştirme seçenekleri hakkında daha fazla bilgi için [PLINQ'da Birleştirme Seçenekleri'ne](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)bakın.  
   
 > [!WARNING]
-> Bu örnek, kullanımı göstermeye yöneliktir ve eşdeğer sıralı LINQ to Objects sorgusundan daha hızlı çalışmayabilir. Hızlı yedekleme hakkında daha fazla bilgi için bkz. [PLıNQ 'Te hızlı hızlandırı anlama](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+> Bu örnek, kullanımı göstermek için tasarlanmıştır ve Nesneler sorgusuna eşdeğer ardışık LINQ'dan daha hızlı çalışmayabilir. Hız hakkında daha fazla bilgi için [PLINQ'da Hızları Anlama'ya](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)bakın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, sıralanmamış bir kaynağı olan temel bir senaryoda birleştirme seçeneklerinin davranışını gösterir ve her öğeye pahalı bir işlev uygular.  
+ Aşağıdaki örnek, sıralanmamış bir kaynağa sahip ve her öğeiçin pahalı bir işlev uygulayan temel bir senaryoda birleştirme seçeneklerinin davranışını gösterir.  
   
  [!code-csharp[PLINQ#23](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#23)]
  [!code-vb[PLINQ#23](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#23)]  
   
- <xref:System.Linq.ParallelMergeOptions.AutoBuffered> seçeneğinin ilk öğeden önce istenmeyen bir gecikme olduğu durumlarda, sonuç öğelerini daha hızlı ve daha sorunsuz şekilde sağlamak için <xref:System.Linq.ParallelMergeOptions.NotBuffered> seçeneğini deneyin.  
+ Seçeneğin <xref:System.Linq.ParallelMergeOptions.AutoBuffered> ilk öğe verilmeden önce istenmeyen bir gecikmeye neden olduğu durumlarda, sonuç öğelerini <xref:System.Linq.ParallelMergeOptions.NotBuffered> daha hızlı ve daha sorunsuz bir şekilde verim verme seçeneğini deneyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,157 +1,157 @@
 ---
 title: ML.NET CLI kullanarak yaklaşımı çözümleme
-description: Bir ML modelini ve bir örnek veri C# kümesinden ilgili kodu otomatik olarak oluştur
+description: Örnek bir veri kümesinden otomatik olarak ml modeli ve ilgili C# kodu oluşturun
 author: cesardl
 ms.author: cesardl
 ms.date: 12/23/2019
 ms.custom: mvc
-ms.topic: tutorial
-ms.openlocfilehash: 38ca93f62a066bade988a89b704fca26368b0b2b
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.topic: tutorial,mlnet-tooling
+ms.openlocfilehash: d817e173239d2848fb16e94cca8ead563bc900a5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504149"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187617"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI kullanarak yaklaşımı çözümleme
 
-ML.NET CLı kullanarak bir ML.NET modeli ve temel alınan C# kodu otomatik olarak oluşturma hakkında bilgi edinin. Veri kümenizi ve uygulamak istediğiniz makine öğrenimi görevini sağlarsınız ve CLı, model oluşturma ve dağıtım kaynak kodu ve ikili modeli oluşturmak için, oto ml altyapısını kullanır.
+otomatik olarak bir ML.NET modeli ve altta yatan C# kodu oluşturmak için cli ML.NET nasıl kullanacağınızı öğrenin. Veri kümenizi ve uygulamak istediğiniz makine öğrenimi görevini sağlarsınız ve CLI, model oluşturma ve dağıtım kaynak kodunun yanı sıra ikili modeli oluşturmak için AutoML altyapısını kullanır.
 
-Bu öğreticide, aşağıdaki adımları kullanacaksınız:
+Bu öğreticide, aşağıdaki adımları yapacaksınız:
 > [!div class="checklist"]
 >
 > - Verilerinizi seçili makine öğrenimi görevi için hazırlayın
-> - CLı 'dan ' mlnet Auto-eğitme ' komutunu çalıştırın
-> - Kalite ölçümü sonuçlarını gözden geçirme
-> - Uygulamanızda modeli kullanmak C# için oluşturulan kodu anlayın
-> - Modeli eğitmek için C# kullanılan üretilen kodu keşfet
+> - CLI'dan 'mlnet otomatik tren' komutunu çalıştırın
+> - Kalite metrik sonuçlarını gözden geçirin
+> - Uygulamanızdaki modeli kullanmak için oluşturulan C# kodunu anlama
+> - Modeli eğitmek için kullanılan oluşturulan C# kodunu keşfedin
 
 > [!NOTE]
-> Bu konu, şu anda önizleme aşamasında olan ML.NET CLı aracına başvurur ve malzemeler değişebilir. Daha fazla bilgi için [ml.net](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) sayfasını ziyaret edin.
+> Bu konu, şu anda Önizleme'de bulunan ML.NET CLI aracını ifade eder ve malzeme değişebilir. Daha fazla bilgi için ML.NET sayfasını ziyaret [edin.](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet)
 
-ML.NET CLı, ML.NET 'in bir parçasıdır ve ana amacı, öğrenimi öğrenirken, kullanmaya başlamak için sıfırdan kod oluşturmanız gerekmeyen .NET geliştiricileri için "herkese" ML.NET.
+cli ML.NET ML.NET bir parçasıdır ve ana hedefi başlamak için sıfırdan kodlamak gerekmez, böylece ML.NET öğrenirken .NET geliştiriciler için ML.NET "demokratikleştirmek" tir.
 
-Sağladığınız eğitim veri kümelerine göre iyi kalitede ML.NET modelleri ve kaynak kodu oluşturmak için ML.NET CLı 'yi herhangi bir komut isteminde (Windows, Mac veya Linux) çalıştırabilirsiniz.
+Sağladığınız eğitim veri kümelerini temel alan kaliteli ML.NET modelleri ve kaynak kodu oluşturmak için cli ML.NET herhangi bir komut isteminde (Windows, Mac veya Linux) çalıştırabilirsiniz.
 
 ## <a name="pre-requisites"></a>Ön koşullar
 
-- [.NET Core 2,2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) veya üzeri
-- Seçim [Visual Studio 2017 veya 2019](https://visualstudio.microsoft.com/vs/)
-- [ML.NET CLı](../how-to-guides/install-ml-net-cli.md)
+- [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) veya sonrası
+- (İsteğe bağlı) [Visual Studio 2017 veya 2019](https://visualstudio.microsoft.com/vs/)
+- [ML.NET CLI](../how-to-guides/install-ml-net-cli.md)
 
-Oluşturulan C# kod projelerini Visual Studio 'dan veya `dotnet run` (.NET Core CLI) ile çalıştırabilirsiniz.
+Oluşturulan C# kodu projelerini Visual Studio'dan `dotnet run` veya (.NET Core CLI) çalıştırabilirsiniz.
 
 ## <a name="prepare-your-data"></a>Verilerinizi hazırlama
 
-İkili sınıflandırma makinesi öğrenimi görevi olan ' Yaklaşım Analizi ' senaryosu için kullanılan mevcut bir veri kümesini kullanacağız. Kendi veri kümenizi benzer bir şekilde kullanabilirsiniz ve model ve kod sizin için oluşturulur.
+İkili sınıflandırma makinesi öğrenme görevi olan 'Sentiment Analysis' senaryosu için kullanılan varolan bir veri kümesini kullanacağız. Kendi veri kümenizi benzer bir şekilde kullanabilirsiniz ve model ve kod sizin için oluşturulur.
 
-1. [(Aşağıdaki notdaki alıntıların bulunduğu) cümleler veri kümesi ZIP dosyasını](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)indirin ve seçtiğiniz herhangi bir klasörde sıkıştırmayı açın.
+1. UCI Sentiment Etiketli Cümleler dataset zip dosyasını indirin [(aşağıdaki nottaki alıntılara bakın)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)ve seçtiğiniz herhangi bir klasörde zip'i açın.
 
     > [!NOTE]
-    > Bu öğreticide veri kümeleri, ' Kimden grubundan, derin özellikleri kullanarak tek tek etiketlere, Kotzıas et al ' ı kullanır. KDD 2015 ve UCI Machine Learning Repository-dua, D. ve karra Taniskidou, E. (2017). UCI Machine Learning deposu [http://archive.ics.uci.edu/ml]. Irvine, CA: California Üniversitesi, bilgi Okulu ve bilgisayar bilimi.
+    > Bu öğreticideki veri kümeleri, Kotzias ve ark.'nın 'Derin Özellikleri Kullanarak Gruptan Bireysel Etiketlere' bir veri kümesi ni kullanır. KDD 2015 ve UCI Machine Learning Deposu - Dua, D. ve Karra Taniskidou, E. (2017) ev sahipliği yaptı. UCI Makine Öğrenme Deposuhttp://archive.ics.uci.edu/ml[ ]. Irvine, CA: Kaliforniya Üniversitesi, Bilgi ve Bilgisayar Bilimleri Fakültesi.
 
-2. `yelp_labelled.txt` dosyasını daha önce oluşturduğunuz herhangi bir klasöre (`/cli-test`gibi) kopyalayın.
+2. Dosyayı `yelp_labelled.txt` daha önce oluşturduğunuz herhangi bir `/cli-test`klasöre kopyalayın (örneğin).
 
-3. Tercih ettiğiniz komut istemi ' ni açın ve veri kümesi dosyasını kopyaladığınız klasöre gidin. Örnek:
+3. Tercih ettiğiniz komut istemini açın ve veri kümesi dosyasını kopyaladığınız klasöre geçin. Örnek:
 
     ```console
     cd /cli-test
     ```
 
-    Visual Studio Code gibi herhangi bir metin düzenleyicisini kullanarak `yelp_labelled.txt` veri kümesi dosyasını açabilir ve inceleyebilirsiniz. Yapının şu olduğunu görebilirsiniz:
+    Visual Studio Code gibi herhangi bir metin düzenleyicisini `yelp_labelled.txt` kullanarak veri kümesi dosyasını açabilir ve keşfedebilirsiniz. Yapının aşağıdaki leri görebilirsiniz:
 
-    - Dosya üst bilgisi yok. Sütunun dizinini kullanacaksınız.
+    - Dosyanın üstbilgisi yok. Sütundizini kullanırsınız.
 
-    - Yalnızca iki sütun vardır:
+    - Sadece iki sütun vardır:
 
-        | Metin (sütun dizini 0) | Etiket (sütun dizini 1)|
+        | Metin (Sütun dizini 0) | Etiket (Sütun dizini 1)|
         |--------------------------|-------|
-        | Wow... Bu yere iner. | 1 |
-        | Crust iyi değil. | 0 |
-        | Nefis değildir ve doku yalnızca Nasty idi. | 0 |
-        | ... ÇOK SAYıDA METIN SATıRı... | ... (1 veya 0)... |
+        | Wow... Burayı çok severdim. | 1 |
+        | Kabuk iyi değil. | 0 |
+        | Lezzetli değil ve doku sadece kötü oldu. | 0 |
+        | ... ÇOK DAHA FAZLA TEKSTİl SATıRLARI... | ... (1 veya 0)... |
 
-    Veri kümesi dosyasını düzenleyiciden kapattığınızdan emin olun.
+    Düzenleyiciden gelen veri kümesi dosyasını kapattığınızdan emin olun.
 
-    Şimdi bu ' Yaklaşım Analizi ' senaryosu için CLı kullanmaya başlamaya hazırsınız.
+    Şimdi, bu 'Duygu Analizi' senaryosu için CLI kullanmaya başlamak için hazırsınız.
 
     > [!NOTE]
-    > Bu Öğreticiyi tamamladıktan sonra, şu anda *' Ikili sınıflandırma ', ' Multi-Class Classification ' ve ' regresyon '* olan ml.net CLI önizlemesi tarafından desteklenen HERHANGI bir ml görevi için kullanılmak üzere hazırlandıkları sürece kendi veri kümelerinizi de deneyebilirsiniz.
+    > Bu öğreticiyi bitirdikten sonra, *'İkili Sınıflandırma', 'Çok sınıflı Sınıflandırma' ve 'Regresyon'* ML.NET CLI Preview tarafından desteklenen ML görevlerinden herhangi biri için kullanılmaya hazır oldukları sürece kendi veri kümelerinizi de deneyebilirsiniz.
 
-## <a name="run-the-mlnet-auto-train-command"></a>' Mlnet otomatik-eğitme ' komutunu çalıştırın
+## <a name="run-the-mlnet-auto-train-command"></a>'mlnet otomatik tren' komutunu çalıştırın
 
-1. Aşağıdaki ML.NET CLı komutunu çalıştırın:
+1. Aşağıdaki ML.NET CLI komutunu çalıştırın:
 
     ```console
     mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
     ```
 
-    Bu komut **`mlnet auto-train` komutunu**çalıştırır:
-    - **`binary-classification`** türünde bir **ml görevi** için
-    - Eğitim ve test veri kümesi olarak **`yelp_labelled.txt`veri kümesi dosyasını** kullanır (DAHILI olarak CLI, çapraz doğrulama kullanır veya biri eğitim ve test için bir tane olmak üzere iki veri kümesinde bölünür)
-    - tahmin etmek istediğiniz **amaç/hedef sütununun** (genellikle **' Label '** olarak adlandırılır) dizin 1 (Dizin sıfır tabanlı olduğundan ikinci sütun) **olan sütundur**
-    - Bu veri kümesi dosyası bir üst bilgisine sahip olmadığından, sütun adlarıyla **bir dosya üstbilgisi kullanmaz**
-    - deneme için **hedeflenen araştırma süresi** **10 saniyedir**
+    Bu komut ** `mlnet auto-train` komutu**çalıştırın:
+    - türünde bir **ML görevi** için**`binary-classification`**
+    - veri **kümesi dosyasını `yelp_labelled.txt` ** eğitim ve test veri seti olarak kullanır (dahili olarak CLI çapraz doğrulama kullanır veya biri eğitim, diğeri test etmek için olmak üzere iki veri kümesine böler)
+    - tahmin etmek istediğiniz **hedef/hedef sütunun** (genellikle **'etiket'** olarak adlandırılır) **dizin 1'li sütun** olduğu yerde (dizin sıfır tabanlı olduğundan, ikinci sütundur)
+    - bu özel veri kümesi dosyasıüstbilgisi olmadığından sütun adları içeren bir **dosya üstbilgisi kullanmaz**
+    - deney için **hedeflenen keşif süresi** **10 saniyedir**
 
-    CLı 'dan aşağıdakine benzer bir çıktı görürsünüz:
+    CLI'den aşağıdakilere benzer çıktılar görürsünüz:
 
     <!-- markdownlint-disable MD023 MD025 -->
 
     # <a name="windows"></a>[Windows](#tab/windows)
 
-    ![PowerShell 'de ML.NET CLı otomatik eğitimi](./media/mlnet-cli/mlnet-auto-train-binary-classification-powershell.gif)
+    ![PowerShell üzerinde ML.NET CLI otomatik tren](./media/mlnet-cli/mlnet-auto-train-binary-classification-powershell.gif)
 
     # <a name="macos-bash"></a>[macOS Bash](#tab/macosbash)
 
-    ![PowerShell 'de ML.NET CLı otomatik eğitimi](./media/mlnet-cli/mlnet-auto-train-binary-classification-bash.gif)
+    ![PowerShell üzerinde ML.NET CLI otomatik tren](./media/mlnet-cli/mlnet-auto-train-binary-classification-bash.gif)
 
-    Bu özel durumda, yalnızca 10 saniye içinde ve küçük veri kümesiyle sunulan CLı Aracı, farklı iç veri dönüştürmeleri ve algoritmaların Hyper-parametreleri ile farklı algoritma/yapılandırma birleşimlerine göre birden çok kez eğitim sağlayan çok sayıda yineleme çalıştırabiliyor.
+    Bu özel durumda, sadece 10 saniye içinde ve sağlanan küçük veri kümesi ile, CLI aracı farklı iç veri dönüşümleri ve algoritma hiper-parametreleri ile algoritma / yapılandırma farklı kombinasyonları dayalı birden çok kez eğitim anlamına gelen oldukça birkaç yineleme çalıştırmak başardı.
 
-    Son olarak, 10 saniye içinde bulunan "en iyi kalite" modeli, belirli bir yapılandırma ile belirli bir oran/algoritma kullanan bir modeldir. Araştırma zamanına bağlı olarak, komut farklı bir sonuç oluşturabilir. Seçim, `Accuracy`gibi, gösterilen birden çok ölçümü temel alır.
+    Son olarak, 10 saniye içinde bulunan "en kaliteli" model belirli bir yapılandırma ile belirli bir eğitmen / algoritma kullanarak bir modeldir. Arama süresine bağlı olarak, komut farklı bir sonuç üretebilir. Seçim, `Accuracy`'.
 
     **Modelin kalite ölçümlerini anlama**
 
-    İkili sınıflandırma modelini değerlendirmek için ilk ve en kolay ölçüm, anlaşılması kolay bir yoldur. "Doğruluk, test veri kümesiyle doğru tahminlerden orandır.". %100 ' e (1,00) yaklaşarak daha iyi.
+    İkili sınıflandırma modelini değerlendirmek için ilk ve en kolay metrik, anlaşılması kolay olan doğruluktır. "Doğruluk, bir test veri kümesi ile doğru tahminlerin oranıdır.". %100'e (1.00) ne kadar yakınsa o kadar iyi.
 
-    Ancak, özellikle de doğruluk ölçümüyle ölçmeniz yeterli değildir, özellikle de (Bu durumda 0 ve 1) etiketi test veri kümesinde dengesiz olur.
+    Ancak, özellikle test veri kümesinde etiket (bu durumda 0 ve 1) dengesizse, Doğruluk ölçümü ile ölçmenin yeterli olmadığı durumlar vardır.
 
-    Farklı modelleri değerlendirmek için kullanılan doğruluk, AUC, AUCPR ve F1-Score gibi ölçümler hakkında ek ölçümler ve daha **ayrıntılı bilgiler** için bkz. [ml.net ölçümlerini anlama](../resources/metrics.md).
-
-    > [!NOTE]
-    > Bu çok satırlı veri kümesini deneyebilir ve bu veri kümesi için farklı bir eğitim işlem hattı yapılandırması (oldukça küçük, 1000 satır) ile sizin için daha iyi bir "en iyi model" bulacak olan `--max-exploration-time` için birkaç dakika belirtebilirsiniz (örneğin, üç 180 dakika).
-
-    Daha büyük veri kümelerini hedefleyen "üretime hazır bir model" olan "en iyi/iyi kalite" modelini bulmak için, CLı ile denemeleri, genellikle veri kümesinin boyutuna bağlı olarak çok daha fazla araştırma süresi belirtmelisiniz. Aslında, çoğu durumda, özellikle veri kümesi satırlar ve sütunlar üzerinde büyükse, birden çok saat araştırma süresi gerekebilir.
-
-1. Önceki komut yürütmesi aşağıdaki varlıkları oluşturdu:
-
-    - Seri hale getirilmiş bir model. zip ("en iyi model") kullanıma hazırlanıyor.
-    - C#oluşturulan model (bu modelle Son Kullanıcı uygulamalarınızda tahmine dayalı hale getirmek Için) çalıştırılacak/puan veren kod.
-    - C#Bu modeli oluşturmak için kullanılan eğitim kodu (öğrenme amaçları).
-    - Her bir algoritmayla ilgili ayrıntılı bilgileri keşfeden tüm yinelemeleri içeren bir günlük dosyası, Hyper-parametreleri ve veri dönüştürmeleri birleşimine çalıştı.
-
-    İlk iki varlık (. ZIP dosya modeli ve C# bu modeli çalıştırmaya yönelik kod), bu oluşturulmuş ml modeliyle tahminler yapmak için doğrudan Son Kullanıcı uygulamalarınızda (ASP.NET Core Web uygulaması, hizmetler, masaüstü uygulaması vb.) kullanılabilir.
-
-    Eğitim kodu olan üçüncü varlık, CLI tarafından oluşturulan modeli eğitemek için hangi ML.NET API kodunun kullanıldığını gösterir. bu sayede, CLı tarafından hangi belirli bir oran/algoritma ve Hyper-parametrelerinin seçili olduğunu araştırabilirsiniz.
-
-Bu numaralandırılabilir varlıklar, öğreticinin aşağıdaki adımlarında açıklanmıştır.
-
-## <a name="explore-the-generated-c-code-to-use-for-running-the-model-to-make-predictions"></a>Tahmine dayalı hale C# getirmek üzere modeli çalıştırmak için kullanılacak oluşturulan kodu keşfet
-
-1. Visual Studio 'da (2017 veya 2019) özgün hedef klasörünüzdeki `SampleBinaryClassification` adlı klasörde oluşturulan çözümü açın (öğreticide `/cli-test`adı verildi). Şuna benzer bir çözüm görmeniz gerekir:
+    Doğruluk, AUC, AUCPR ve Farklı modelleri değerlendirmek için kullanılan F1 puanı gibi ölçümler hakkında ek ölçümler ve daha **ayrıntılı bilgi** için [ML.NET](../resources/metrics.md)bkz.
 
     > [!NOTE]
-    > Visual Studio 'Yu kullanmayı önerdiğimiz öğreticide, tüm metin düzenleyiciyle oluşturulan C# kodu (iki proje) keşfedebilir ve oluşturulan konsol uygulamasını MacOS, Linux veya Windows makinesinde `dotnet CLI` çalıştırabilirsiniz.
+    > Bu çok aynı veri kümesini deneyebilir `--max-exploration-time` ve bu veri kümesi için farklı bir eğitim boru hattı yapılandırması (oldukça küçük, 1000 satır) ile sizin için daha iyi bir "en iyi model" bulacaksınız (örneğin üç dakika, 180 saniye belirtin) için birkaç dakika belirtebilirsiniz.
 
-    ![CLı tarafından oluşturulan VS çözümü](./media/mlnet-cli/generated-csharp-solution-detailed.png)
+    Daha büyük veri kümelerini hedefleyen bir "üretime hazır model" olan "en iyi/kaliteli" modeli bulmak için, genellikle veri kümesinin boyutuna bağlı olarak çok daha fazla keşif süresi belirten CLI ile denemeler yapmalısınız. Aslında, çoğu durumda, özellikle veri kümesi satırve sütunlarda büyükse, birden çok saat arama süresi gerekebilir.
 
-    - Serileştirilmiş ML modeli (. zip dosyası) ve veri sınıfları (veri modelleri) içeren oluşturulmuş **sınıf kitaplığı** , doğrudan bu sınıf kitaplığına (veya istediğiniz şekilde kodu taşıyarak) doğrudan başvuru yaparak, Son Kullanıcı uygulamanızda doğrudan kullanabileceğiniz bir şeydir.
-    - Oluşturulan **konsol uygulaması** , gözden geçirmeniz gereken yürütme kodunu içerir ve ardından genellikle bu basit kodu (yalnızca birkaç satır) tahmine dayalı hale getirmek istediğiniz son kullanıcı uygulamanıza taşıyarak ' Puanlama kodu ' nu (tahminleri yapmak için ml modelini çalıştıran kod) yeniden kullanırsınız.
+1. Önceki komut yürütme aşağıdaki varlıkları oluşturdu:
 
-1. **ModelInput.cs** ve **ModelOutput.cs** sınıf dosyalarını sınıf kitaplığı projesi içinde açın. Bu sınıfların, verileri tutmak için kullanılan ' veri sınıfları ' veya POCO sınıfları olduğunu görürsünüz. Bu, ' ortak kod ', ancak veri kümeniz yüzlerce veya hatta yüzlerce sütun içeriyorsa oluşturulmasını sağlamak için yararlıdır.
-    - `ModelInput` sınıfı veri kümesinden verileri okurken kullanılır.
-    - `ModelOutput` sınıfı, tahmin sonucunu (tahmin verileri) almak için kullanılır.
+    - Serileştirilmiş bir model .zip ("en iyi model") kullanıma hazır.
+    - C# kodu, oluşturulan modeli çalıştırmak/puanlamak için (Bu modelle son kullanıcı uygulamalarınızda öngörülerde bulunmak için).
+    - C# eğitim kodu bu modeli oluşturmak için kullanılır (Öğrenme amaçlı).
+    - Tüm yinelemelerin yer verdiği bir günlük dosyası, hiper parametreler ve veri dönüşümleri birleşimi ile denenmiş her algoritma hakkında belirli ayrıntılı bilgilere sahip olarak araştırılmış.
 
-1. Program.cs dosyasını açın ve kodu araştırın. Yalnızca birkaç satırda modeli çalıştırabilir ve örnek bir tahmin yapabilirsiniz.
+    İlk iki varlık (. Posta dosyası modeli ve C# kodu bu modeli çalıştırmak için) doğrudan son kullanıcı uygulamaları (ASP.NET Core web uygulaması, hizmetler, masaüstü uygulaması, vb) bu oluşturulan ML modeli ile tahminler yapmak için kullanılabilir.
+
+    Üçüncü varlık, eğitim kodu, oluşturulan modeli eğitmek için CLI tarafından ML.NET API kodunun ne ML.NET kullanıldığını gösterir, böylece CLI tarafından hangi özel eğitmen/algoritma ve hiper parametrelerin seçildiğini araştırabilirsiniz.
+
+Numaralandırılmış varlıklar öğreticinin aşağıdaki adımlarında açıklanır.
+
+## <a name="explore-the-generated-c-code-to-use-for-running-the-model-to-make-predictions"></a>Öngörülerde bulunmak için modeli çalıştırmak için kullanılacak oluşturulan C# kodunu keşfedin
+
+1. Visual Studio'da (2017 veya 2019) özgün `SampleBinaryClassification` hedef klasörünüzde (öğreticinin `/cli-test`adı geçen) adlı klasörde oluşturulan çözümü açın. Şuna benzer bir çözüm görmeniz gerekir:
+
+    > [!NOTE]
+    > Eğitimde Visual Studio'yu kullanmanızı öneririz, ancak oluşturulan C# kodunu (iki proje) herhangi bir metin `dotnet CLI` düzenleyicisi ile keşfedebilir ve oluşturulan konsol uygulamasını macOS, Linux veya Windows makinesiyle çalıştırabilirsiniz.
+
+    ![CLI tarafından oluşturulan VS çözümü](./media/mlnet-cli/generated-csharp-solution-detailed.png)
+
+    - Serileştirilmiş ML modelini (.zip dosyası) ve veri sınıflarını (veri modelleri) içeren oluşturulan **sınıf kitaplığı,** sınıf kitaplığını doğrudan başvurarak (veya kodu istediğiniz gibi taşıyarak) son kullanıcı uygulamanızda doğrudan kullanabileceğiniz bir şeydir.
+    - Oluşturulan **konsol uygulaması** gözden geçirmeniz gereken yürütme kodu içerir ve daha sonra genellikle bu basit kodu (yalnızca birkaç satır) öngörüler yapmak istediğiniz son kullanıcı uygulamanıza taşıyarak 'puanlama kodunu' (tahminleri yapmak için ML modelini çalıştıran kod) yeniden kullanırsınız.
+
+1. Sınıf kitaplığı projesinde **ModelInput.cs** ve **ModelOutput.cs** sınıf dosyalarını açın. Bu sınıfların 'veri sınıfları' veya veri tutmak için kullanılan POCO sınıfları olduğunu görürsünüz. Bu 'ortak kod' ancak veri seti onlarca hatta yüzlerce sütun varsa oluşturulan olması yararlıdır.
+    - Sınıf, `ModelInput` veri kümesinden gelen verileri okurken kullanılır.
+    - Sınıf `ModelOutput` tahmin sonucu (tahmin verileri) almak için kullanılır.
+
+1. Program.cs dosyasını açın ve kodu keşfedin. Sadece birkaç satırda, modeli çalıştırabilir ve örnek bir tahmin de yapabilirsiniz.
 
     ```csharp
     static void Main(string[] args)
@@ -174,15 +174,15 @@ Bu numaralandırılabilir varlıklar, öğreticinin aşağıdaki adımlarında a
     }
     ```
 
-    - Kodun ilk satırı, ML.NET kodunu her çalıştırdığınızda gerekli bir `MLContext` nesnesi oluşturur.
+    - İlk kod satırı, ML.NET `MLContext` kodu çalıştırdığınızda gereken bir nesne oluşturur.
 
-    - İkinci kod satırı, CLı aracı tarafından zaten eğitilen ve modelin seri hale getirilmiş olduğundan modeli eğmenize gerek olmadığı için yorumlandı. ZIP dosyası. Ancak CLı tarafından *"modelin eğitilme şekli"* ni görmek isterseniz, söz konusu satırın açıklamasını kaldırın ve söz konusu ml modeli için kullanılan eğitim kodunu çalıştırın/hata ayıklayın.
+    - Zaten CLI aracı tarafından sizin için eğitilmiş ve modelin seri içine kaydedilmiş olduğundan kodun ikinci satırı modeli eğitmek gerekmez çünkü yorumlanır. ZIP dosyası. Ancak CLI tarafından *"modelin nasıl eğitildiğini"* görmek istiyorsanız, bu satırı yorumlayabilir ve söz konusu ML modeli için kullanılan eğitim kodunu çalıştırabilirsiniz/hata ayıklamanız olabilir.
 
-    - Üçüncü kod satırında modeli serileştirilmiş modelden yüklersiniz. Bu modelin yolunu sağlayarak `mlContext.Model.Load()` API 'SI ile ZIP dosyası. ZIP dosyası.
+    - Üçüncü kod satırında, modeli serileştirilmiş modelden yüklersiniz. Bu modele `mlContext.Model.Load()` giden yolu sağlayarak API ile ZIP dosyası. ZIP dosyası.
 
-    - Yüklediğiniz dördüncü kod satırında, `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` API 'siyle `PredictionEngine` nesnesini oluşturun. Tek bir veri örneğini (Bu durumda, kendi yaklaşımını tahmin etmek için tek bir metin parçası) hedefleyen bir tahmin yapmak istediğinizde `PredictionEngine` nesnesine ihtiyacınız vardır.
+    - Dördüncü kod satırında, `PredictionEngine` `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` ösy'yi API ile yükleyin. Tek bir `PredictionEngine` veri örneğini hedefleyen bir tahminde bulunmak istediğinizde nesneye ihtiyacınız vardır (bu durumda, duyarlılığını tahmin etmek için tek bir metin parçası).
 
-    - Beşinci kod satırı, `CreateSingleDataSample()`işlevini çağırarak tahmin için kullanılacak *tek örnek verileri* oluşturduğunuz yerdir. CLı aracı ne tür örnek verileri kullanacağınızı bilmediğinden, bu işlev içinde veri kümesinin ilk satırını yüklüyor. Ancak, bu durumda, bu işlevi uygulayan daha basit kodu güncelleştirerek `CreateSingleDataSample()` işlevinin geçerli uygulaması yerine ' sabit kodlanmış ' verileri de oluşturabilirsiniz:
+    - Beşinci kod satırı, işlevi `CreateSingleDataSample()`çağırarak tahmin için kullanılacak tek örnek *verileri* oluşturduğunuz satırdır. CLI aracı ne tür örnek veri kullanılacağını bilmediğinden, bu işlev içinde veri kümesinin ilk satırını yüklüyor. Ancak, bu durumda, bu `CreateSingleDataSample()` işlevi uygulayan bu basit kodu güncelleştirerek işlevin geçerli uygulaması yerine kendi 'sabit kodlu' verileri de oluşturabilirsiniz:
 
         ```csharp
         private static ModelInput CreateSingleDataSample()
@@ -192,13 +192,13 @@ Bu numaralandırılabilir varlıklar, öğreticinin aşağıdaki adımlarında a
         }
         ```
 
-1. Veri kümesinin ilk satırından yüklenen özgün örnek verileri kullanarak ya da kendi özel sabit kodlanmış örnek verilerinizi sağlayarak projeyi çalıştırın. Şu şekilde bir tahmin almanız gerekir:
+1. Projeyi, veri kümesinin ilk satırından yüklenen özgün örnek verileri kullanarak veya kendi özel sabit kodlanmış örnek verilerinizi sağlayarak çalıştırın. Karşılaştırılabilir bir tahmin almalısınız:
 
     # <a name="windows"></a>[Windows](#tab/windows)
 
-    F5 tuşuna basarak (Play Button) konsol uygulamasını Visual Studio 'dan çalıştırın:
+    F5 (Play tuşu) tuşuna basarak Visual Studio'daki konsol uygulamasını çalıştırın:
 
-    ![PowerShell 'de ML.NET CLı otomatik eğitimi](./media/mlnet-cli/sample-cli-prediction-execution.png))
+    ![PowerShell üzerinde ML.NET CLI otomatik tren](./media/mlnet-cli/sample-cli-prediction-execution.png))
 
     # <a name="macos-bash"></a>[macOS Bash](#tab/macosbash)
 
@@ -211,56 +211,56 @@ Bu numaralandırılabilir varlıklar, öğreticinin aşağıdaki adımlarında a
     dotnet run
     ```
 
-    ![PowerShell 'de ML.NET CLı otomatik eğitimi](./media/mlnet-cli/sample-cli-prediction-execution-bash.png))
+    ![PowerShell üzerinde ML.NET CLI otomatik tren](./media/mlnet-cli/sample-cli-prediction-execution-bash.png))
 
     ---
 
-1. Sabit kodlanmış örnek verileri farklı bir yaklaşım ile diğer cümleler ile değiştirmeyi deneyin ve modelin olumlu veya negatif yaklaşımı nasıl tahmin eder olduğunu görün.
+1. Sabit kodlanmış örnek verileri farklı duygularla diğer cümlelerle değiştirmeyi deneyin ve modelin olumlu veya olumsuz duyguları nasıl öngördüğünü görün.
 
-## <a name="infuse-your-end-user-applications-with-ml-model-predictions"></a>ML modeli tahminleri ile Son Kullanıcı uygulamalarınızı kullanın
+## <a name="infuse-your-end-user-applications-with-ml-model-predictions"></a>Son kullanıcı uygulamalarınızı ML model tahminleri ile aşıla
 
-Modeli son kullanıcı uygulamanızda çalıştırmak ve tahmin yapmak için benzer ' ML model Puanlama kodu ' kullanabilirsiniz.
+Modeli son kullanıcı uygulamanızda çalıştırmak ve öngörülerde bulunmak için benzer 'ML model puanlama kodu' kullanabilirsiniz.
 
-Örneğin, bu kodu doğrudan **WPF** ve **WinForms** gibi herhangi bir Windows masaüstü uygulamasına taşıyabilir ve modeli konsol uygulamasında yapılmayla aynı şekilde çalıştırabilirsiniz.
+Örneğin, bu kodu doğrudan **WPF** ve **WinForms** gibi herhangi bir Windows masaüstü uygulamasına taşıyabilir ve modeli konsol uygulamasında yapılandan aynı şekilde çalıştırabilirsiniz.
 
-Bununla birlikte, bir ML modelini çalıştırmak için bu kod satırlarını uygulama yolu en iyi duruma gelmelidir (yani, model. zip dosyasını önbelleğe alır ve bir kez yükler) ve özellikle uygulamanızın ölçeklenebilir olması gerekiyorsa, her istekte bunları oluşturmak yerine tek nesneleri vardır. Aşağıdaki bölümde açıklandığı gibi bir Web uygulaması veya dağıtılmış hizmeti.
+Ancak, bir ML modeli çalıştırmak için bu kod satırları uygulamak yolu optimize edilmelidir (yani, önbellek modeli .zip dosyası ve bir kez yükleyin) ve her istek bunları oluşturmak yerine singleton nesneleri var, özellikle uygulamanız gibi ölçeklenebilir olması gerekiyorsa aşağıdaki bölümde açıklandığı gibi, bir web uygulaması veya dağıtılmış hizmet.
 
-### <a name="running-mlnet-models-in-scalable-aspnet-core-web-apps-and-services-multi-threaded-apps"></a>Ölçeklenebilir ASP.NET Core Web uygulamaları ve Hizmetleri 'nde ML.NET modellerini çalıştırma (çok kanallı uygulamalar)
+### <a name="running-mlnet-models-in-scalable-aspnet-core-web-apps-and-services-multi-threaded-apps"></a>Ölçeklenebilir ASP.NET Core web uygulamalarında ve hizmetlerinde ML.NET modelleri çalıştırma (çok iş parçacığı uygulamaları)
 
-Model nesnesinin oluşturulması (bir modelin. zip dosyasından yüklenen`ITransformer`) ve `PredictionEngine` nesnesi özellikle ölçeklenebilir Web uygulamaları ve dağıtılmış hizmetler üzerinde çalışırken iyileştirilmelidir. İlk durumda, model nesnesi (`ITransformer`) iyileştirmesi basittir. `ITransformer` nesne iş parçacığı açısından güvenli olduğundan, modeli bir kez yüklemeniz için nesneyi tek veya statik bir nesne olarak önbelleğe alabilirsiniz.
+Model nesnesinin oluşturulması`ITransformer` (modelin .zip dosyasından yüklenen) `PredictionEngine` ve nesne özellikle ölçeklenebilir web uygulamaları ve dağıtılmış hizmetler üzerinde çalışırken en iyi duruma getirilmelidir. İlk durumda, model nesnesi (`ITransformer`) en iyi duruma getirilmesi basittir. `ITransformer` Nesne iş parçacığı için güvenli olduğundan, modeli bir kez yükleyebilmeniz için nesneyi singleton veya statik nesne olarak önbelleğe alabilirsiniz.
 
-İkinci nesne olan `PredictionEngine` nesnesi, `PredictionEngine` nesnesi iş parçacığı açısından güvenli olmadığından, bu nedenle bu nesneyi bir ASP.NET Core uygulamasında tek veya statik nesne olarak örnekleyemezsiniz. Bu iş parçacığı güvenli ve ölçeklenebilirlik sorunu bu [blog gönderisine](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)göre ele alınmıştır.
+İkinci nesne, `PredictionEngine` nesne için, `PredictionEngine` nesne iş parçacığı güvenli olmadığından, bu nedenle bir ASP.NET Core uygulamasında singleton veya statik nesne olarak bu nesneyi anında olamaz, çünkü o kadar kolay değildir. Bu iş parçacığı güvenli ve ölçeklenebilirlik sorunu derinden bu [Blog Yazısı](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)tartışılır .
 
-Ancak, bu blog gönderisinden açıklanamayan şeyler sizin için çok daha kolay. Sizin için daha basit bir yaklaşımda çalıştık ve uygulamayı uygulama ve hizmetASP.NET Core lerinize uygulama dı Hizmetleri 'ne (bağımlılık ekleme Hizmetleri) kaydederek ve sonra doğrudan kodunuzda kullanarak kolayca kullanabileceğiniz iyi bir **' .NET Core Integration Package '** oluşturdunuz. Şunları yapmak için aşağıdaki öğreticiyi ve örneğe bakın:
+Ancak, işler sizin için bu blog yazısı açıklanan ne daha çok daha kolay var. Sizin için daha basit bir yaklaşım üzerinde çalıştık ve uygulama DI hizmetlerine (Bağımlılık Enjeksiyonhizmetleri) kaydederek ve ardından doğrudan kodundan kullanabilirsiniz ASP.NET Core uygulamaları ve hizmetlerinde kolayca kullanabileceğiniz güzel bir **'.NET Çekirdek Entegrasyon Paketi'** oluşturduk. Bunu yapmak için aşağıdaki öğretici ve örnek kontrol edin:
 
-- [Öğretici: ML.NET modellerini ölçeklenebilir ASP.NET Core Web Apps ve WebAPIs üzerinde çalıştırma](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
-- [Örnek: ASP.NET Core WebAPI üzerinde ölçeklenebilir ML.NET modeli](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
+- [Öğretici: Ölçeklenebilir ASP.NET Core web uygulamaları ve WebAPI'lerde ML.NET modelleri çalıştırma](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
+- [Örnek: ASP.NET Core WebAPI'de ölçeklenebilir ML.NET modeli](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
 
-## <a name="explore-the-generated-c-code-that-was-used-to-train-the-best-quality-model"></a>"En iyi C# kalite" modelini eğitmek için kullanılan üretilen kodu keşfet
+## <a name="explore-the-generated-c-code-that-was-used-to-train-the-best-quality-model"></a>"En kaliteli" modeli eğitmek için kullanılan oluşturulan C# kodunu keşfedin
 
-Daha gelişmiş öğrenme amaçlarıyla, oluşturulan modeli eğitebilmeniz için CLı C# aracı tarafından kullanılan oluşturulan kodu da keşfedebilirsiniz.
+Daha gelişmiş öğrenme amaçları için, cli aracı tarafından oluşturulan modeli eğitmek için kullanılan oluşturulan C# kodunu da keşfedebilirsiniz.
 
-' Eğitim modeli kodu ' Şu anda, bu eğitim kodunu araştırmak için `ModelBuilder` adlı özel sınıfta oluşturulmuştur.
+Bu 'eğitim modeli kodu' şu anda `ModelBuilder` bu eğitim kodunu araştırmak böylece oluşturulan özel sınıfta oluşturulur.
 
-Daha önemlisi, bu senaryo (Yaklaşım Analizi modeli) için de, aşağıdaki öğreticide açıklanan kod ile bu üretilen eğitim kodunu karşılaştırabilirsiniz:
+Daha da önemlisi, bu özel senaryo için (Sentiment Analysis modeli) oluşturulan eğitim kodunu aşağıdaki öğreticide açıklanan kodla karşılaştırabilirsiniz:
 
-- Compare: [öğretici: bir yaklaşım Analizi ikili sınıflandırma senaryosunda ml.NET kullanın](sentiment-analysis.md).
+- Karşılaştır: [Öğretici: Bir duygu analizi ikili sınıflandırma senaryosunda ML.NET kullanın.](sentiment-analysis.md)
 
-Öğreticide seçilen algoritma ve işlem hattı yapılandırmasını CLı aracı tarafından oluşturulan kodla karşılaştırmak ilginç. Daha iyi modeller için ne kadar zaman harcadığınıza ve aradığınıza bağlı olarak, seçilen algoritma belirli Hyper-parametreleri ve işlem hattı yapılandırmasıyla birlikte farklı olabilir.
+Seçilen algoritmayı ve ardışık yapı yapılandırmasını öğreticide CLI aracı tarafından oluşturulan kodla karşılaştırmak ilginçtir. Daha iyi modelleri yineleyerek ve aramak için ne kadar zaman harcadığınıza bağlı olarak, seçilen algoritma belirli hiper parametreleri ve ardışık yapı yapılandırmasıyla birlikte farklı olabilir.
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
 >
-> - Verilerinizi seçilen ML görevi için hazırlayın (çözülme sorunu)
-> - CLı aracında ' mlnet Auto-eğitme ' komutunu çalıştırın
-> - Kalite ölçümü sonuçlarını gözden geçirme
-> - Modeli çalıştırmak için C# oluşturulan kodu anlayın (Son Kullanıcı uygulamanızda kullanılacak kod)
-> - "En iyi C# kalite" modelini (öğrenme amaçları) eğitmek için kullanılan üretilen kodu keşfet
+> - Verilerinizi seçili ML görevi (çözülmesi gereken sorun) için hazırlayın
+> - CLI aracında 'mlnet otomatik tren' komutunu çalıştırın
+> - Kalite metrik sonuçlarını gözden geçirin
+> - Modeli çalıştırmak için oluşturulan C# kodunu anlama (Son kullanıcı uygulamanızda kullanılacak kod)
+> - "En kaliteli" modeli (Öğrenme amaçlı) eğitmek için kullanılan oluşturulan C# kodunu keşfedin
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ML.NET CLı ile model eğitimi otomatikleştirin](../automate-training-with-cli.md)
-- [Öğretici: ML.NET modellerini ölçeklenebilir ASP.NET Core Web Apps ve WebAPIs üzerinde çalıştırma](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
-- [Örnek: ASP.NET Core WebAPI üzerinde ölçeklenebilir ML.NET modeli](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
-- [ML.NET CLı otomatik eğitme komut başvuru kılavuzu](../reference/ml-net-cli-reference.md)
-- [ML.NET CLı 'de telemetri](../resources/ml-net-cli-telemetry.md)
+- [ML.NET CLI ile model eğitimini otomatikleştirin](../automate-training-with-cli.md)
+- [Öğretici: Ölçeklenebilir ASP.NET Core web uygulamaları ve WebAPI'lerde ML.NET modelleri çalıştırma](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
+- [Örnek: ASP.NET Core WebAPI'de ölçeklenebilir ML.NET modeli](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
+- [ML.NET CLI otomatik tren komutu başvuru kılavuzu](../reference/ml-net-cli-reference.md)
+- [ML.NET CLI'de telemetri](../resources/ml-net-cli-telemetry.md)

@@ -9,46 +9,46 @@ helpviewer_keywords:
 - PLINQ queries, how to handle exceptions
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 ms.openlocfilehash: 3645f5dc470ef53710aa7f4c78c60431fb27ecfa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123099"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Nasıl yapılır: PLINQ Sorgusunda Özel Durumları İşleme
 
-Bu konudaki ilk örnek, yürütüldüğünde PLıNQ sorgusundan oluşturulabilecek <xref:System.AggregateException?displayProperty=nameWithType> nasıl işleneceğini gösterir. İkinci örnek, temsilcilerin içindeki try-catch bloklarının, özel durumun oluştuğu yere mümkün olduğunca yakın şekilde nasıl yerleştirileceğini gösterir. Bu şekilde, bunları gerçekleştikleri anda yakalayabilir ve muhtemelen sorgu yürütmeye devam edebilirsiniz. Özel durumların katılan iş parçacığına balon ekleme yapmasına izin verildiğinde, bir sorgu özel durum oluşturulduktan sonra bazı öğeleri işlemeye devam edebilir.
+Bu konudaki ilk örnek, bir <xref:System.AggregateException?displayProperty=nameWithType> PLINQ sorgusundan yürütüldüğünde atılabilir nasıl işleyeceğini gösterir. İkinci örnek, özel durum atılacağına mümkün olduğunca yakın, temsilciler içinde try-catch blokları koymak nasıl gösterir. Bu şekilde, bunları en kısa sürede onlar meydana gelir gelmez yakalamak ve büyük olasılıkla sorgu yürütme devam edebilirsiniz. Özel durumların birleştirme iş parçacığına geri dönmesine izin verildiğinde, özel durum yükseltildikten sonra bir sorgunun bazı öğeleri işlemeye devam etmesi mümkündür.
 
-PLıNQ, sıralı yürütmeye geri düştüğünde ve bir özel durum oluştuğunda, özel durum doğrudan dağıtılabilir ve bir <xref:System.AggregateException>sarılamaz. Ayrıca, <xref:System.Threading.ThreadAbortException>s her zaman doğrudan yayılır.
+PlinQ'un sıralı yürütmeye geri düştüğü ve bir özel durum oluştuğu bazı durumlarda, özel durum <xref:System.AggregateException>doğrudan yayılabilir ve bir . Ayrıca, <xref:System.Threading.ThreadAbortException>s her zaman doğrudan yayılır.
 
 > [!NOTE]
-> "Yalnızca kendi kodum" etkinleştirildiğinde, Visual Studio özel durumu oluşturan satıra kesilir ve "özel durum Kullanıcı kodu tarafından işlenmiyor" yazan bir hata mesajı görüntüler. Bu hata zararsız. F5 tuşuna basarak bu uygulamadan devam edebilir ve aşağıdaki örneklerde gösterilen özel durum işleme davranışına bakabilirsiniz. Visual Studio 'Nun ilk hatada kesilmesini engellemek için **Araçlar, Seçenekler, hata ayıklama, genel**altında "yalnızca kendi kodum" onay kutusunun işaretini kaldırmanız yeterlidir.
+> "Yalnızca Kodum" etkinleştirildiğinde, Visual Studio özel durumu atan satırda kırılır ve "kullanıcı kodu tarafından işlenmemiş özel durum" yazan bir hata iletisi görüntüler. Bu hata iyi huylu. Devam etmek için F5 tuşuna basabilir ve aşağıdaki örneklerde gösterilen özel durum işleme davranışını görebilirsiniz. Visual Studio'nun ilk hatayı kırmasını önlemek **için, Araçlar, Seçenekler, Hata Ayıklama, Genel**altında "Sadece Kodum" onay kutusunun işaretlerini kaldırın.
 >
-> Bu örnek, kullanımı göstermeye yöneliktir ve eşdeğer sıralı LINQ to Objects sorgusundan daha hızlı çalışmayabilir. Hızlı yedekleme hakkında daha fazla bilgi için bkz. [PLıNQ 'Te hızlı hızlandırı anlama](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).
+> Bu örnek, kullanımı göstermek için tasarlanmıştır ve Nesneler sorgusuna eşdeğer ardışık LINQ'dan daha hızlı çalışmayabilir. Hız hakkında daha fazla bilgi için [PLINQ'da Hızları Anlama'ya](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)bakın.
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, atılan tüm <xref:System.AggregateException?displayProperty=nameWithType>s 'leri yakalamak için try-catch bloklarının sorguyu yürüten kodun çevresine nasıl yerleştirileceğini gösterir.
+Bu örnek, atılan <xref:System.AggregateException?displayProperty=nameWithType>s'leri yakalamak için sorguyu yürüten kodun etrafına try-catch bloklarının nasıl yerleştirilebildiğini gösterir.
 
 [!code-csharp[PLINQ#41](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#41)]
 [!code-vb[PLINQ#41](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#41)]
 
-Bu örnekte, özel durum oluşturulduktan sonra sorgu devam edemez. Uygulama kodunuzun özel durumu yakalamasına göre PLıNQ, sorguyu tüm iş parçacıklarında zaten durdurdu.
+Bu örnekte, özel durum atıldıktan sonra sorgu devam edemez. Uygulama kodunuz özel durumu yakaladığında, PLINQ tüm iş parçacıklarındaki sorguyu zaten durdurmuştur.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir özel durum yakalamak ve sorgu yürütmeye devam etmek için bir temsilciye bir try-catch bloğunun nasıl yerleştirileceğini gösterir.
+Aşağıdaki örnek, bir özel durum yakalamak ve sorgu yürütme ile devam etmek mümkün kılmak için bir temsilci bir try-catch blok koymak nasıl gösterir.
 
 [!code-csharp[PLINQ#42](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#42)]
 [!code-vb[PLINQ#42](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#42)]
 
 ## <a name="compiling-the-code"></a>Kod Derleniyor
 
-- Bu örnekleri derlemek ve çalıştırmak için onları PLıNQ veri örneği örneğine kopyalayın ve Main 'den yöntemi çağırın.
+- Bu örnekleri derlemek ve çalıştırmak için bunları PLINQ Veri Örneği örneğine kopyalayın ve yöntemi Main'den arayın.
 
 ## <a name="robust-programming"></a>Güçlü Programlama
 
-Programınızın durumunu bozmadığınız için nasıl işleneceğini bilmiyorsanız bir özel durum yakalamayın.
+Programınızın durumunu bozmamak için nasıl işleyeceğinizkonusunda bir özel durum yakalamayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

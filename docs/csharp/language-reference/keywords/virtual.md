@@ -1,5 +1,5 @@
 ---
-title: sanal C# başvuru
+title: sanal - C# Referans
 ms.date: 07/20/2015
 f1_keywords:
 - virtual_CSharpKeyword
@@ -7,53 +7,53 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: 47b77792fd3a2b2700ec0734851fdec534361596
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 883e0a7f833c15d2c1cce6b3d52d16aad01a5cd0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712877"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173464"
 ---
 # <a name="virtual-c-reference"></a>virtual (C# Başvurusu)
 
-`virtual` anahtar sözcüğü, bir yöntemi, özelliği, Dizin Oluşturucuyu veya olay bildirimini değiştirmek ve bir türetilmiş sınıfta geçersiz kılınabilmesi için kullanılır. Örneğin, bu yöntem onu devralan herhangi bir sınıf tarafından geçersiz kılınabilir:
+Anahtar `virtual` kelime, bir yöntemi, özelliği, dizinleyiciyi veya olay bildirimini değiştirmek ve türetilmiş bir sınıfta geçersiz kılınmasını sağlamak için kullanılır. Örneğin, bu yöntem, onu devralan herhangi bir sınıf tarafından geçersiz kılınabilir:
 
 ```csharp
-public virtual double Area() 
+public virtual double Area()
 {
     return x * y;
 }
 ```
 
-Bir sanal üyenin uygulanması türetilmiş bir sınıftaki [geçersiz kılan bir üye](override.md) tarafından değiştirilebilir. `virtual` anahtar sözcüğünü kullanma hakkında daha fazla bilgi için bkz. [geçersiz kılma ve yeni anahtar sözcüklerle sürüm oluşturma](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) ve [geçersiz kılma ve yeni anahtar sözcüklerin ne zaman kullanılacağını bilme](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).
+Sanal bir üyenin uygulanması, türetilmiş bir [sınıftaki geçersiz bir üye](override.md) tarafından değiştirilebilir. Anahtar kelimenin `virtual` nasıl kullanılacağı hakkında daha fazla bilgi için, [Geçersiz Kılma ve Yeni Anahtar Kelimelerle Sürümleme ve](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) Geçersiz Kılma ve Yeni Anahtar Kelimeleri Ne Zaman [Kullanılacağını Bilmek](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)'e bakın.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bir sanal yöntem çağrıldığında, nesnenin çalışma zamanı türü geçersiz kılan üye için denetlenir. Türetilmiş bir sınıf üye tarafından geçersiz kılınmamışsa, en çok türetilen sınıftaki geçersiz kılan üye çağrılır, bu, özgün üye olabilir.
+Sanal bir yöntem çağrıldığında, nesnenin çalışma zamanı türü geçersiz bir üye için denetlenir. En çok türetilmiş sınıftaki geçersiz olan üye, türetilmiş sınıf üyeyi geçersiz kılmamışsa, özgün üye olabilecek çağrılır.
 
-Varsayılan olarak, metotlar sanal değildir. Sanal olmayan bir yöntemi geçersiz kılamazsınız.
+Varsayılan olarak, yöntemler sanal değildir. Sanal olmayan bir yöntemi geçersiz kılamazsınız.
 
-`virtual` değiştiricisini `static`, `abstract`, `private`veya `override` değiştiriciyle kullanamazsınız. Aşağıdaki örnek bir sanal özelliği gösterir:
+`virtual` Değiştiriciyi `static`, `abstract`, `private`veya `override` değiştiriciler ile kullanamazsınız. Aşağıdaki örnekte sanal bir özellik gösterilmektedir:
 
 [!code-csharp[csrefKeywordsModifiers#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#26)]
 
-Sanal özellikler, bildirim ve çağırma söz dizimi farklılıkları dışında sanal yöntemler gibi davranır.
+Sanal özellikler, bildirim ve çağırma sözdiziminde olan farklılıklar dışında sanal yöntemler gibi olur.
 
-- Statik bir özellik üzerinde `virtual` değiştiricisinin kullanılması hatadır.
+- `virtual` Statik bir özellik üzerinde değiştirici kullanmak bir hatadır.
 
-- Bir sanal devralınmış özellik, `override` değiştiricisini kullanan bir özellik bildirimi eklenerek, türetilmiş bir sınıfta geçersiz kılınabilir.
+- Sanal devralınan özellik, `override` değiştiriciyi kullanan bir özellik bildirimi ekleyerek türetilmiş bir sınıfta geçersiz kılınabilir.
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte, `Shape` sınıfı iki koordinat `x`, `y`ve `Area()` sanal yöntemi içerir. `Circle`, `Cylinder`ve `Sphere` gibi farklı şekil sınıfları `Shape` sınıfını miras alır ve yüzey alanı her bir şekil için hesaplanır. Her türetilmiş sınıfın `Area()`geçersiz kılma uygulamasına sahiptir.
+Bu örnekte, `Shape` sınıf iki koordinat `x` `y`, ve `Area()` sanal yöntem içerir. Sınıf , , `Circle` `Cylinder`ve `Sphere` devralma `Shape` gibi farklı şekil sınıfları ve yüzey alanı her şekil için hesaplanır. Her türetilmiş sınıfın kendi `Area()`geçersiz kılma uygulaması vardır.
 
-Devralınan sınıfların `Circle`, `Sphere`ve `Cylinder`, aşağıdaki bildirimde gösterildiği gibi, temel sınıfı başlatacak olan oluşturuculara sahip olduğuna dikkat edin.
+Aşağıdaki bildirimde gösterildiği `Circle` `Sphere`gibi, `Cylinder` devralınan sınıfların ve tüm bunların temel sınıfı açan yapıcılar kullandığına dikkat edin.
 
 ```csharp
 public Cylinder(double r, double h): base(r, h) {}
 ```
 
-Aşağıdaki program, yöntemiyle ilişkili nesneye göre `Area()` yönteminin uygun uygulamasını çağırarak her bir şekil için uygun alanı hesaplar ve görüntüler.
+Aşağıdaki program, `Area()` yöntemle ilişkili nesneye göre yöntemin uygun uygulamasını çağırarak her şekil için uygun alanı hesaplar ve görüntüler.
 
 [!code-csharp[csrefKeywordsModifiers#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#23)]
 
@@ -64,6 +64,6 @@ Aşağıdaki program, yöntemiyle ilişkili nesneye göre `Area()` yönteminin u
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Çok biçimlilik](../../programming-guide/classes-and-structs/polymorphism.md)
-- [abstract](abstract.md)
-- [override](override.md)
-- [Yeni (değiştirici)](new-modifier.md)
+- [Soyut](abstract.md)
+- [Geçersiz kılma](override.md)
+- [yeni (değiştirici)](new-modifier.md)

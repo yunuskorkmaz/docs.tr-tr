@@ -1,31 +1,31 @@
 ---
-title: Kanal kimlik bilgileri-WCF geliştiricileri için gRPC
-description: ASP.NET Core 3,0 ' de gRPC kanal kimlik bilgilerini uygulama ve kullanma.
+title: Kanal kimlik bilgileri - WCF Geliştiricileri için gRPC
+description: Core 3.0'da gRPC kanal kimlik bilgilerinin nasıl uygulanacağı ve kullanılacağı ASP.NET.
 ms.date: 09/02/2019
-ms.openlocfilehash: 133de2c732e72844f249f11bfe22b5980b828b89
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 9ebe0aecb517e4cc2fe280632c4ecb593da9871c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711499"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148211"
 ---
 # <a name="channel-credentials"></a>Kanal kimlik bilgileri
 
-Adından da anlaşılacağı gibi kanal kimlik bilgileri, temeldeki gRPC kanalına eklenir. Kanal kimlik bilgilerinin standart biçimi istemci sertifikası kimlik doğrulamasını kullanır. Bu işlemde, istemci bağlantı yaparken bir TLS sertifikası sağlar ve sonra herhangi bir çağrının yapılmasına izin vermeden önce sunucu bunu doğrular.
+Adından da anlaşılacağı gibi, kanal kimlik bilgileri altta yatan gRPC kanalına eklenir. Kanal kimlik bilgilerinin standart formu istemci sertifikası kimlik doğrulamasını kullanır. Bu işlemde, istemci bağlantıyı yaparken bir TLS sertifikası sağlar ve sunucu herhangi bir arama yapılmasını izin vermeden önce bunu doğrular.
 
-Bir gRPC hizmeti için kapsamlı güvenlik sağlamak amacıyla kanal kimlik bilgilerini çağrı kimlik bilgileriyle birleştirebilirsiniz. Kanal kimlik bilgileri, istemci uygulamanın hizmete erişmesine izin verildiğini kanıtlayın ve çağrı kimlik bilgileri, istemci uygulamasını kullanan kişi hakkında bilgi sağlar.
+GRPC hizmeti için kapsamlı güvenlik sağlamak için kanal kimlik bilgilerini arama kimlik bilgileriyle birleştirebilirsiniz. Kanal kimlik bilgileri, istemci uygulamasının hizmete erişmesine izin verildiğini ve arama kimlik bilgilerinin istemci uygulamasını kullanan kişi hakkında bilgi sağladığını kanıtlamaktadır.
 
-İstemci sertifikası kimlik doğrulaması, gRPC için ASP.NET Core çalıştığı şekilde çalışacaktır. Daha fazla bilgi için bkz. [ASP.NET Core sertifika kimlik doğrulamasını yapılandırma](/aspnet/core/security/authentication/certauth).
+İstemci sertifikası kimlik doğrulaması, gRPC için ASP.NET Core için çalıştığı şekilde çalışır. Daha fazla bilgi için ASP.NET [Core'da sertifika kimlik doğrulamasını yapılandır'a](/aspnet/core/security/authentication/certauth)bakın.
 
-Geliştirme amacıyla kendinden imzalı bir sertifika kullanabilirsiniz, ancak üretim için güvenilen bir yetkili tarafından imzalanmış uygun bir HTTPS sertifikası kullanmanız gerekir.
+Geliştirme amacıyla kendi imzalı bir sertifika kullanabilirsiniz, ancak üretim için güvenilir bir yetkili tarafından imzalanmış uygun bir HTTPS sertifikası kullanmanız gerekir.
 
 ## <a name="add-certificate-authentication-to-the-server"></a>Sunucuya sertifika kimlik doğrulaması ekleme
 
-Sertifika kimlik doğrulamasını hem ana bilgisayar düzeyinde (örneğin, Kestrel sunucusu) hem de ASP.NET Core ardışık düzeninde yapılandırın.
+Sertifika kimlik doğrulamasını hem ana bilgisayar düzeyinde (örneğin, Kestrel sunucusunda) hem de ASP.NET Çekirdek ardışık alanında yapılandırın.
 
-### <a name="configure-certificate-validation-on-kestrel"></a>Kestrel 'de sertifika doğrulamasını yapılandırma
+### <a name="configure-certificate-validation-on-kestrel"></a>Kerkenez'de sertifika doğrulaması yapılandırma
 
-Kestrel (ASP.NET Core HTTP sunucusu) bir istemci sertifikası gerektirecek şekilde yapılandırabilir ve isteğe bağlı olarak, gelen bağlantıları kabul etmeden önce sağlanan sertifika için bazı doğrulama işlemleri gerçekleştirebilirsiniz. Bunu, `Startup`yerine `Program` sınıfının `CreateWebHostBuilder` yönteminde yapabilirsiniz.
+Kestrel'i (ASP.NET Core HTTP sunucusu) istemci sertifikası gerektirecek şekilde ve isteğe bağlı olarak, gelen bağlantıları kabul etmeden önce verilen sertifikanın bazı doğrulamalarını gerçekleştirecek şekilde yapılandırabilirsiniz. Bunu `CreateWebHostBuilder` `Program` sınıf yönteminde değil, 'de `Startup`yaparsınız.
 
 ```csharp
 public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -48,13 +48,13 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 ```
 
-`ClientCertificateMode.RequireCertificate` ayarı, Kestrel istemci sertifikası sağlamayan tüm bağlantı isteklerini hemen reddetmesine neden olur, ancak bu ayar kendisi tarafından belirtilen bir sertifikayı doğrulamaz. ASP.NET Core işlem hattının bağlantısı yapılmadan önce, bağlantının yapıldığı noktada istemci sertifikasını doğrulamak için Kestrel 'i etkinleştirmek üzere `ClientCertificateValidation` geri çağırması ekleyin. (Bu durumda, geri arama, sunucu sertifikasıyla aynı *sertifika yetkilisi* tarafından verilmiş olmasını sağlar.) 
+Ayar, `ClientCertificateMode.RequireCertificate` Kestrel'in istemci sertifikası sağlamayan herhangi bir bağlantı isteğini hemen reddetmesine neden olur, ancak bu ayar tek başına sağlanan bir sertifikayı doğrulamaz. ASP.NET `ClientCertificateValidation` Core ardışık ASP.NET önce, bağlantının yapıldığı noktada, Kestrel'in istemci sertifikasını doğrulayabilmesini sağlamak için geri aramayı ekleyin. (Bu durumda, geri arama, sunucu sertifikasıyla aynı *Sertifika Yetkilisi* tarafından verilmiş olmasını sağlar.)
 
-### <a name="add-aspnet-core-certificate-authentication"></a>ASP.NET Core sertifikası kimlik doğrulaması ekle
+### <a name="add-aspnet-core-certificate-authentication"></a>Core sertifika kimlik doğrulamaASP.NET ekleme
 
-[Microsoft. AspNetCore. Authentication. Certificate](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.Certificate) NuGet paketi sertifika kimlik doğrulaması sağlar.
+[Microsoft.AspNetCore.Authentication.Certificate](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.Certificate) NuGet paketi sertifika kimlik doğrulaması sağlar.
 
-`ConfigureServices` yöntemine sertifika kimlik doğrulama hizmetini ekleyin ve `Configure` yönteminde ASP.NET Core işlem hattına kimlik doğrulaması ve yetkilendirme ekleyin.
+`ConfigureServices` Yönteme sertifika kimlik doğrulama hizmetini ekleyin ve `Configure` yöntemdeki ASP.NET Çekirdek ardışık anlama sına kimlik doğrulama ve yetkilendirme ekleyin.
 
 ```csharp
 public class Startup
@@ -95,7 +95,7 @@ public class Startup
 
 ## <a name="provide-channel-credentials-in-the-client-application"></a>İstemci uygulamasında kanal kimlik bilgilerini sağlama
 
-`Grpc.Net.Client` paketiyle, bağlantı için kullanılan `GrpcChannel` için sunulan <xref:System.Net.Http.HttpClient> bir örnek üzerindeki sertifikaları yapılandırırsınız.
+Paketle, `Grpc.Net.Client` sertifikaları bağlantı için <xref:System.Net.Http.HttpClient> `GrpcChannel` kullanılana sağlanan bir örnekte yapılandırabilirsiniz.
 
 ```csharp
 class Program
@@ -122,11 +122,11 @@ class Program
 }
 ```
 
-## <a name="combine-channelcredentials-and-callcredentials"></a>ChannelCredentials ve CallCredentials 'ı birleştirme
+## <a name="combine-channelcredentials-and-callcredentials"></a>Kanal Kimlik Bilgilerini ve Çağrı Kimlik Bilgilerini Birleştir
 
-Sunucunuzu hem sertifika hem de belirteç kimlik doğrulamasını kullanacak şekilde yapılandırabilirsiniz. Sertifika değişikliklerini Kestrel sunucusuna uygulayarak ve ASP.NET Core ' de JWT taşıyıcı ara yazılımını kullanarak bunu yapın.
+Sunucunuzu hem sertifika hem de belirteç kimlik doğrulaması kullanacak şekilde yapılandırabilirsiniz. Bunu, sertifika değişikliklerini Kestrel sunucusuna uygulayarak ve ASP.NET Core'da JWT taşıyıcı aracını kullanarak yapın.
 
-İstemcide hem `ChannelCredentials` hem de `CallCredentials` sağlamak için, çağrı kimlik bilgilerini uygulamak üzere `ChannelCredentials.Create` metodunu kullanın. Hala <xref:System.Net.Http.HttpClient> örneğini kullanarak sertifika kimlik doğrulaması uygulamanız gerekir. `SslCredentials` oluşturucusuna herhangi bir bağımsız değişken geçirirseniz, iç istemci kodu bir özel durum oluşturur. `SslCredentials` parametresi, `Grpc.Core` paketiyle uyumluluğu sürdürmek için yalnızca `Grpc.Net.Client` paketinin `Create` yöntemine dahil edilmiştir.
+Hem de `ChannelCredentials` `CallCredentials` istemci üzerinde sağlamak `ChannelCredentials.Create` için, arama kimlik bilgilerini uygulamak için yöntemi kullanın. Yine de örneği kullanarak sertifika kimlik <xref:System.Net.Http.HttpClient> doğrulaması uygulamanız gerekir. Herhangi bir bağımsız değişkeni `SslCredentials` oluşturucuya geçirirseniz, iç istemci kodu bir özel durum oluşturur. `SslCredentials` Parametre yalnızca paketle uyumluluğu korumak `Create` için `Grpc.Net.Client` paketin yöntemine `Grpc.Core` dahildir.
 
 ```csharp
 var handler = new HttpClientHandler();
@@ -151,10 +151,10 @@ var grpc = new Portfolios.PortfoliosClient(channel);
 ```
 
 > [!TIP]
-> Sertifika kimlik doğrulaması olmadan istemci için `ChannelCredentials.Create` yöntemini kullanabilirsiniz. Bu, kanalda yapılan her çağrıya belirteç kimlik bilgilerini geçirmek için kullanışlı bir yoldur.
+> Bu `ChannelCredentials.Create` yöntemi, sertifika kimlik doğrulaması olmayan bir istemci için kullanabilirsiniz. Bu, kanalda yapılan her aramada belirteç kimlik bilgilerini geçirmenin yararlı bir yoludur.
 
-[FullStockTicker örnek gRPC uygulamasının sertifika kimlik doğrulaması eklenmiş](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/FullStockTickerSample/grpc/FullStockTickerAuth/FullStockTicker) bir sürümü GitHub üzerinde.
+[FullStockTicker örnek gRPC uygulamasının sertifika kimlik doğrulaması eklenmiş](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/FullStockTickerSample/grpc/FullStockTickerAuth/FullStockTicker) bir sürümü GitHub'dadır.
 
 >[!div class="step-by-step"]
 >[Önceki](call-credentials.md)
->[İleri](encryption.md)
+>[Sonraki](encryption.md)

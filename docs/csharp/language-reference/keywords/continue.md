@@ -1,5 +1,5 @@
 ---
-title: Continue bildirisi- C# başvuru
+title: continue deyimi - C# Reference
 ms.date: 07/20/2015
 f1_keywords:
 - continue_CSharpKeyword
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - continue keyword [C#]
 ms.assetid: 8a5ac96f-f98a-4519-b32d-345847ed7be0
 ms.openlocfilehash: 83b43b31eacf0ed835ee3d7a919538eb9f1dd1e8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713669"
 ---
 # <a name="continue-c-reference"></a>continue (C# Başvurusu)
 
-`continue` ifadesi, denetimin göründüğü [while](./while.md), [Do](./do.md), [for](./for.md)veya [foreach](./foreach-in.md) ifadesinin bir sonraki yinelemesine geçirir.
+İfade, `continue` [denetimi,](./while.md)içinde göründüğü her ifade için , yapmak , [yapmak](./do.md)veya [her biri](./foreach-in.md) [için](./for.md)iken, çevreleyen bir sonraki yinelemeye geçirir.
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte, bir sayaç 1 ile 10 arasında bir sayı olarak başlatılır. `continue` deyimini ifade `(i < 9)`ile birlikte kullanarak, `for` gövdesinin `continue` ve sonundaki deyimler atlanır.
+Bu örnekte, sayaç 1'den 10'a kadar saymak üzere başharfe işlenir. `continue` İfade ile birlikte ifade `(i < 9)`kullanılarak, gövdenin `continue` `for` sonu ile arasındaki ifadeler atlanır.
 
 [!code-csharp[csrefKeywordsJump#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#3)]
 
@@ -30,7 +30,7 @@ Bu örnekte, bir sayaç 1 ile 10 arasında bir sayı olarak başlatılır. `cont
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../index.md)
+- [C# Referans](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Sözcükleri](./index.md)
+- [C# Anahtar Kelimeler](./index.md)
 - [break Deyimi](/cpp/cpp/break-statement-cpp)

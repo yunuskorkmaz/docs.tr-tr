@@ -11,79 +11,79 @@ helpviewer_keywords:
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 ms.openlocfilehash: fb03200c810290c970f7aa56a0e15d385aca7ca8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711356"
 ---
 # <a name="selecting-a-collection-class"></a>Koleksiyon Sınıfı Seçme
 
-Koleksiyon sınıfınızı dikkatle seçtiğinizden emin olun. Yanlış tür kullanımı, koleksiyonun kullanımını kısıtlayabilir.  
+Toplama sınıfınızı dikkatle seçtiğinizden emin olun. Yanlış türü kullanmak koleksiyonu kullanımınızı kısıtlayabilir.  
 
 > [!IMPORTANT]
-> <xref:System.Collections> ad alanındaki türleri kullanmaktan kaçının. Koleksiyonların genel ve eş zamanlı sürümleri, daha yüksek tür güvenliği ve diğer geliştirmeler nedeniyle önerilir.  
+> <xref:System.Collections> Ad alanında türleri kullanmaktan kaçının. Koleksiyonların genel ve eşzamanlı sürümleri, daha büyük tür güvenliği ve diğer iyileştirmeler nedeniyle önerilir.  
 
  Aşağıdaki soruları göz önünde bulundurun:  
   
-- Öğenin genellikle değeri alındıktan sonra atıldığı sıralı bir liste gerekiyor mu?  
+- Öğenin değeri alındıktan sonra genellikle atıldığı sıralı bir listeye mi ihtiyacınız var?  
   
-  - Yanıt Evet ise, ilk kez, ilk çıkar (FıFO) davranışına ihtiyacınız varsa <xref:System.Collections.Queue> sınıfını veya <xref:System.Collections.Generic.Queue%601> genel sınıfını kullanmayı düşünün. En son, ilk çıkar (LıFO) davranışına ihtiyacınız varsa <xref:System.Collections.Stack> sınıfını veya <xref:System.Collections.Generic.Stack%601> genel sınıfını kullanmayı düşünün. Birden çok iş parçacığından güvenli erişim için, <xref:System.Collections.Concurrent.ConcurrentQueue%601> ve <xref:System.Collections.Concurrent.ConcurrentStack%601>eşzamanlı sürümlerini kullanın.  
+  - Evet ise, ilk,ilk çıkan (FIFO) davranışa ihtiyacınız varsa <xref:System.Collections.Queue> sınıfı veya <xref:System.Collections.Generic.Queue%601> genel sınıfı kullanmayı düşünün. Son, <xref:System.Collections.Stack> ilk çıkan <xref:System.Collections.Generic.Stack%601> (LIFO) davranışa ihtiyacınız varsa sınıfı veya genel sınıfı kullanmayı düşünün. Birden çok iş parçacığından güvenli erişim için <xref:System.Collections.Concurrent.ConcurrentQueue%601> <xref:System.Collections.Concurrent.ConcurrentStack%601>eşzamanlı sürümleri kullanın ve.  
   
-  - Aksi takdirde, diğer koleksiyonları kullanmayı göz önünde bulundurun.  
+  - Değilse, diğer koleksiyonları kullanmayı düşünün.  
   
-- Öğelere FıFO, LıFO veya Random gibi belirli bir sırada erişmeniz gerekiyor mu?  
+- FIFO, LIFO veya rasgele gibi belirli bir sırada öğelere erişmeniz gerekiyor mu?  
   
-  - <xref:System.Collections.Queue> sınıfı ve <xref:System.Collections.Generic.Queue%601> veya <xref:System.Collections.Concurrent.ConcurrentQueue%601> genel sınıfı FıFO erişimi sunar. Daha fazla bilgi için bkz. [Iş parçacığı güvenli koleksiyonu ne zaman kullanılır](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)?  
+  - Sınıf <xref:System.Collections.Queue> ve <xref:System.Collections.Generic.Queue%601> genel <xref:System.Collections.Concurrent.ConcurrentQueue%601> sınıf FIFO erişimi sunar. Daha fazla bilgi için, [İş Parçacığı Güvenli Koleksiyonu'nun Ne Zaman Kullanılacağı](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)konusuna bakın.  
   
-  - <xref:System.Collections.Stack> sınıfı ve <xref:System.Collections.Generic.Stack%601> veya <xref:System.Collections.Concurrent.ConcurrentStack%601> genel sınıfı, LıFO erişimi sunar. Daha fazla bilgi için bkz. [Iş parçacığı güvenli koleksiyonu ne zaman kullanılır](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)?  
+  - Sınıf <xref:System.Collections.Stack> ve <xref:System.Collections.Generic.Stack%601> genel <xref:System.Collections.Concurrent.ConcurrentStack%601> sınıf LIFO erişimi sunar. Daha fazla bilgi için, [İş Parçacığı Güvenli Koleksiyonu'nun Ne Zaman Kullanılacağı](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)konusuna bakın.  
   
-  - <xref:System.Collections.Generic.LinkedList%601> genel sınıfı, başa veya kuyruklu bir sıralı erişime izin verir.  
+  - Genel <xref:System.Collections.Generic.LinkedList%601> sınıf, kafadan kuyrağa veya kuyruktan başa sıralı erişim sağlar.  
   
-- Dizine göre her öğeye erişmeniz mi gerekiyor?  
+- Her öğeyi dizin olarak erişmeniz mi gerekiyor?  
   
-  - <xref:System.Collections.ArrayList> ve <xref:System.Collections.Specialized.StringCollection> sınıfları ve <xref:System.Collections.Generic.List%601> genel sınıfı, öğesinin sıfır tabanlı diziniyle öğelerine erişim sağlar.  
+  - Ve <xref:System.Collections.ArrayList> <xref:System.Collections.Specialized.StringCollection> sınıflar ve <xref:System.Collections.Generic.List%601> genel sınıf öğenin sıfır tabanlı dizini tarafından öğelerine erişim sağlar.  
   
-  - <xref:System.Collections.Hashtable>, <xref:System.Collections.SortedList>, <xref:System.Collections.Specialized.ListDictionary>ve <xref:System.Collections.Specialized.StringDictionary> sınıfları ve <xref:System.Collections.Generic.Dictionary%602> ve <xref:System.Collections.Generic.SortedDictionary%602> genel sınıfları öğe anahtarına göre öğelerine erişim sağlar.  
+  - , <xref:System.Collections.Hashtable> <xref:System.Collections.SortedList>, <xref:System.Collections.Specialized.ListDictionary>, <xref:System.Collections.Specialized.StringDictionary> , ve <xref:System.Collections.Generic.Dictionary%602> <xref:System.Collections.Generic.SortedDictionary%602> sınıflar ve genel sınıflar öğenin anahtarı ile kendi öğelerine erişim sağlar.  
   
-  - <xref:System.Collections.Specialized.NameObjectCollectionBase> ve <xref:System.Collections.Specialized.NameValueCollection> sınıfları ve <xref:System.Collections.ObjectModel.KeyedCollection%602> ve <xref:System.Collections.Generic.SortedList%602> genel sınıflar öğelerine sıfır tabanlı dizin ya da öğenin anahtarı ile erişim sağlar.  
+  - Ve <xref:System.Collections.Specialized.NameObjectCollectionBase> <xref:System.Collections.Specialized.NameValueCollection> sınıflar ve <xref:System.Collections.ObjectModel.KeyedCollection%602> genel <xref:System.Collections.Generic.SortedList%602> sınıflar, öğelerine sıfır tabanlı dizin veya öğenin anahtarı yla erişim sağlar.  
   
-- Her öğe bir değer, bir anahtar ve bir değer birleşimi ya da bir anahtar ve birden çok değer birleşimi içerir mi?  
+- Her öğe bir değer, bir anahtar ve bir değerin birleşimi mi, yoksa bir anahtar ve birden çok değerin birleşimini mi içerecek?  
   
-  - Bir değer: <xref:System.Collections.IList> arabirimini veya <xref:System.Collections.Generic.IList%601> genel arabirimini temel alan koleksiyonlardan birini kullanın.  
+  - Bir değer: <xref:System.Collections.IList> Arabirim veya <xref:System.Collections.Generic.IList%601> genel arabirimi temel alan koleksiyonlardan herhangi birini kullanın.  
   
-  - Bir anahtar ve bir değer: <xref:System.Collections.IDictionary> arabirimini veya <xref:System.Collections.Generic.IDictionary%602> genel arabirimini temel alan koleksiyonlardan birini kullanın.  
+  - Bir anahtar ve tek değer: <xref:System.Collections.IDictionary> Arayüze veya <xref:System.Collections.Generic.IDictionary%602> genel arabirime dayalı koleksiyonlardan herhangi birini kullanın.  
   
-  - Gömülü anahtara sahip bir değer: <xref:System.Collections.ObjectModel.KeyedCollection%602> genel sınıfını kullanın.  
+  - Katıştılmış anahtarla <xref:System.Collections.ObjectModel.KeyedCollection%602> bir değer: Genel sınıfı kullanın.  
   
-  - Bir anahtar ve birden çok değer: <xref:System.Collections.Specialized.NameValueCollection> sınıfını kullanın.  
+  - Bir anahtar ve birden <xref:System.Collections.Specialized.NameValueCollection> çok değer: Sınıfı kullanın.  
   
-- Öğeleri girildiklerinde farklı şekilde sıralamak mı gerekiyor?  
+- Öğeleri girilen şekilden farklı sıralamanız gerekiyor mu?  
   
-  - <xref:System.Collections.Hashtable> sınıfı öğelerini karma kodlarına göre sıralar.  
+  - Sınıf, <xref:System.Collections.Hashtable> öğelerini karma kodlarına göre sıralar.  
   
-  - <xref:System.Collections.SortedList> sınıfı ve <xref:System.Collections.Generic.SortedList%602> ve <xref:System.Collections.Generic.SortedDictionary%602> genel sınıfları öğelerini anahtara göre sıralar. Sıralama düzeni, <xref:System.Collections.SortedList> sınıfı için <xref:System.Collections.IComparer> arabiriminin uygulamasına ve <xref:System.Collections.Generic.SortedList%602> ve <xref:System.Collections.Generic.SortedDictionary%602> genel sınıfları için <xref:System.Collections.Generic.IComparer%601> genel arabiriminin uygulamasına göre yapılır. İki genel türün <xref:System.Collections.Generic.SortedDictionary%602>, <xref:System.Collections.Generic.SortedList%602> daha az bellek tüketirken <xref:System.Collections.Generic.SortedList%602>daha iyi performans sunar.  
+  - Sınıf <xref:System.Collections.SortedList> ve <xref:System.Collections.Generic.SortedList%602> <xref:System.Collections.Generic.SortedDictionary%602> genel sınıflar öğelerini anahtara göre sıralar. <xref:System.Collections.IComparer> Sıralama sırası, <xref:System.Collections.SortedList> sınıf için arabirimin uygulanmasına ve genel <xref:System.Collections.Generic.IComparer%601> <xref:System.Collections.Generic.SortedList%602> <xref:System.Collections.Generic.SortedDictionary%602> sınıflar için genel arabirimin uygulanmasına dayanır. İki genel tür, <xref:System.Collections.Generic.SortedDictionary%602> daha iyi <xref:System.Collections.Generic.SortedList%602>performans <xref:System.Collections.Generic.SortedList%602> sunar , daha az bellek tüketir iken.  
   
-  - <xref:System.Collections.ArrayList>, bir <xref:System.Collections.IComparer> uygulamasını parametre olarak alan bir <xref:System.Collections.ArrayList.Sort%2A> yöntemi sağlar. Genel karşılığına sahip olan <xref:System.Collections.Generic.List%601> genel karşılığı, parametre olarak <xref:System.Collections.Generic.IComparer%601> genel arabiriminin bir uygulamasını alan bir <xref:System.Collections.Generic.List%601.Sort%2A> yöntemi sağlar.  
+  - <xref:System.Collections.ArrayList>bir <xref:System.Collections.ArrayList.Sort%2A> <xref:System.Collections.IComparer> uygulamayı parametre olarak alan bir yöntem sağlar. Genel muadili, <xref:System.Collections.Generic.List%601> genel sınıf, bir parametre olarak <xref:System.Collections.Generic.List%601.Sort%2A> <xref:System.Collections.Generic.IComparer%601> genel arabirimin bir uygulama alır bir yöntem sağlar.  
   
-- Bilgilerin hızlı aramalarında ve alınmasına mi ihtiyacınız var?  
+- Hızlı arama ve bilgi alma gerekiyor mu?  
   
-  - <xref:System.Collections.Specialized.ListDictionary> küçük koleksiyonlar için <xref:System.Collections.Hashtable> daha hızlıdır (10 öğe veya daha az). <xref:System.Collections.Generic.Dictionary%602> genel sınıfı, <xref:System.Collections.Generic.SortedDictionary%602> genel sınıfından daha hızlı arama sağlar. Çoklu iş parçacıklı uygulama <xref:System.Collections.Concurrent.ConcurrentDictionary%602>. <xref:System.Collections.Concurrent.ConcurrentBag%601>, sıralanmamış veriler için hızlı çoklu iş parçacıklı ekleme sağlar. Çoklu iş parçacıklı türler hakkında daha fazla bilgi için bkz. [Iş parçacığı güvenli koleksiyonu ne zaman kullanılır](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)?  
+  - <xref:System.Collections.Specialized.ListDictionary>küçük koleksiyonlardan (10 öğe veya daha az) daha <xref:System.Collections.Hashtable> hızlıdır. Genel <xref:System.Collections.Generic.Dictionary%602> sınıf, genel sınıftan <xref:System.Collections.Generic.SortedDictionary%602> daha hızlı arama sağlar. Çok iş parçacığı uygulaması <xref:System.Collections.Concurrent.ConcurrentDictionary%602>. <xref:System.Collections.Concurrent.ConcurrentBag%601>sıralanmamış veriler için hızlı çok iş parçacığı ekleme sağlar. Her iki çok iş parçacığı türü hakkında daha fazla bilgi için, [İş Parçacığı Güvenli Koleksiyonu'nun Ne Zaman Kullanılacağı](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)konusuna bakın.  
   
-- Yalnızca dizeleri kabul eden koleksiyonlara mi ihtiyacınız var?  
+- Yalnızca dizeleri kabul eden koleksiyonlara mı ihtiyacınız var?  
   
-  - <xref:System.Collections.Specialized.StringCollection> (<xref:System.Collections.IList>tabanlı) ve <xref:System.Collections.Specialized.StringDictionary> (<xref:System.Collections.IDictionary>göre) <xref:System.Collections.Specialized> ad alanıdır.  
+  - <xref:System.Collections.Specialized.StringCollection>(dayalı) <xref:System.Collections.IList>ve <xref:System.Collections.Specialized.StringDictionary> <xref:System.Collections.IDictionary>(dayalı) <xref:System.Collections.Specialized> ad alanında bulunmaktadır.  
   
-  - Ayrıca, genel tür bağımsız değişkenleri için <xref:System.String> sınıfını belirterek, <xref:System.Collections.Generic> ad alanındaki genel koleksiyon sınıflarından herhangi birini, türü kesin belirlenmiş dize koleksiyonları olarak kullanabilirsiniz. Örneğin, [liste\<dize >](xref:System.Collections.Generic.List%601) veya [Sözlük < string, dize >](xref:System.Collections.Generic.Dictionary%602)olan bir değişken belirtebilirsiniz.
+  - Buna ek olarak, <xref:System.Collections.Generic> ad alanındaki genel koleksiyon sınıflarından herhangi birini, genel tür bağımsız <xref:System.String> değişkenleri için sınıfı belirterek güçlü bir şekilde yazılan dize koleksiyonları olarak kullanabilirsiniz. Örneğin, bir değişkeni [Liste\<Dizesi>](xref:System.Collections.Generic.List%601) veya [Sözlük<String,String>](xref:System.Collections.Generic.Dictionary%602)türüne ait olarak bildirebilirsiniz.
   
-## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects ve PLıNQ  
- LINQ to Objects, nesne türü <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601>uyguladığı sürece geliştiricilerin, bellek içi nesnelere erişmek için LINQ sorguları kullanmasına olanak sağlar. LINQ sorguları verilere erişim için ortak bir model sağlar, genellikle standart `foreach` döngülerinden daha kısa ve okunabilir ve filtreleme, sıralama ve gruplama özellikleri sağlar. Daha fazla bilgi için bkz. [LINQ to ObjectsC#()](../../csharp/programming-guide/concepts/linq/linq-to-objects.md) ve [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md).  
+## <a name="linq-to-objects-and-plinq"></a>LinQ nesneler ve PLINQ için  
+ LINQ to Objects, geliştiricilerin nesne türü uygulandığı sürece bellek nesneleri için LINQ <xref:System.Collections.IEnumerable> sorgularını kullanmasına olanak tanır. <xref:System.Collections.Generic.IEnumerable%601> LINQ sorguları verilere erişmek için ortak bir desen sağlar, genellikle standart `foreach` döngülere göre daha kısa ve okunabilirdir ve filtreleme, sıralama ve gruplandırma özellikleri sağlar. Daha fazla bilgi için [nesnelere LINQ (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md) ve [Nesnelere LINQ (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)bakın.  
   
- PLıNQ, çok çekirdekli bilgisayarların kullanımını daha verimli bir şekilde kullanarak çok sayıda senaryoda daha hızlı sorgu yürütme sunabilme LINQ to Objects paralel bir uygulamasını sağlar. Daha fazla bilgi için bkz. [Parallel LINQ (PLıNQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ PLINQ, çok çekirdekli bilgisayarların daha verimli kullanımı yoluyla birçok senaryoda daha hızlı sorgu yürütmesi sunabilen Nesnelere LINQ'nin paralel bir şekilde uygulanmasını sağlar. Daha fazla bilgi için [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Collections>
 - <xref:System.Collections.Specialized>
 - <xref:System.Collections.Generic>
-- [İş Parçacığı Güvenli Koleksiyonları](../../../docs/standard/collections/thread-safe/index.md)
+- [İş Parçacığı Koleksiyonları](../../../docs/standard/collections/thread-safe/index.md)

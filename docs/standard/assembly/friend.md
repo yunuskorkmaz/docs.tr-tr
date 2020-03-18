@@ -6,26 +6,26 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: a74d4b74ead8492028a092e090f9281231802a87
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348174"
 ---
 # <a name="friend-assemblies"></a>Arkadaş derlemeleri
 
-*Arkadaş derlemesi* , başka bir derlemenin [iç](../../csharp/language-reference/keywords/internal.md) (C#) veya [arkadaş](../../visual-basic/language-reference/modifiers/friend.md) (Visual Basic) türlerine ve üyelerine erişebilen bir derlemedir. Bir derlemeyi arkadaş derleme olarak belirlerseniz, diğer derlemeler tarafından erişilebilmesi için artık türleri ve üyeleri ortak olarak işaretlemeniz gerekmez. Bu, özellikle aşağıdaki senaryolarda kullanışlıdır:
+*Arkadaş derlemesi,* başka bir derlemenin [dahili](../../csharp/language-reference/keywords/internal.md) (C#) veya [Arkadaş](../../visual-basic/language-reference/modifiers/friend.md) (Visual Basic) türlerine ve üyelerine erişebilen bir derlemedir. Bir derlemeyi arkadaş derlemesi olarak tanımlarsanız, diğer derlemeler tarafından erişilebilmesi için türleri ve üyeleri artık herkese açık olarak işaretlemeniz gerekir. Bu, özellikle aşağıdaki senaryolarda kullanışlıdır:
 
-- Birim testi sırasında, test kodu ayrı bir derlemede çalışırken, ancak test edilen derlemede `internal` olarak işaretlenmiş C# veya Visual Basic içinde `Friend` olarak işaretlenen üyelere erişim gerektirir.
+- Birim testi sırasında, test kodu ayrı bir derlemede çalıştığında, ancak c# `internal` veya `Friend` Visual Basic olarak işaretlenmiş olarak sınanan derlemedeki üyelere erişim gerekir.
 
-- Bir sınıf kitaplığı geliştirirken ve kitaplığa eklemeler ayrı derlemelerde yer alır, ancak Visual Basic içinde C# veya `Friend` `internal` olarak işaretlenen mevcut derlemelerde üyelere erişim gerektirir.
+- Bir sınıf kitaplığı geliştirirken ve kitaplık eklemeleri ayrı derlemelerde bulunur, ancak C# veya `internal` `Friend` Visual Basic olarak işaretlenmiş varolan derlemelerde üyelere erişim gerekir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Belirli bir derleme için bir veya daha fazla Friend derlemesini belirlemek üzere <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğini kullanabilirsiniz. Aşağıdaki örnek, *derleme a* 'daki <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğini kullanır ve bir Friend derlemesi olarak bir derlemeyi *AssemblyB* olarak belirtir. Bu, *bütünleştirilmiş kod '* de `internal` olarak işaretlenen C# veya Visual Basic ' de `Friend` olarak işaretlenen tüm tür ve üyelere derleme *AssemblyB* erişimi sağlar.
+Belirli bir <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> derleme için bir veya daha fazla arkadaş derlemesi tanımlamak için özniteliği kullanabilirsiniz. Aşağıdaki örnek, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> A Derlemesi'ndeki özniteliği kullanır ve *Derleme B'yi* arkadaş derlemesi olarak belirtir. *Assembly A* Bu, *AssemblyB'nin* A Derlemesi'nde C# `internal` veya `Friend` Visual Basic olarak işaretlenmiş tüm tür ve üyelere erişim sağlar. *Assembly A*
 
 > [!NOTE]
-> *Derleme A*gibi başka bir derlemenin iç türlerine veya iç üyelerine erişecek *AssemblyB* gibi bir derlemeyi derlerken, **-Out** derleyici seçeneğini kullanarak çıkış dosyasının ( *. exe* veya *. dll*) adını açıkça belirtmeniz gerekir. Bu gereklidir çünkü derleyici, dış başvurulara bağlama sırasında oluşturmakta olduğu derlemenin adını henüz üretmemiştir. Daha fazla bilgi için bkz. [-OutC#()](../../csharp/language-reference/compiler-options/out-compiler-option.md) veya [-Out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
+> *AssemblyB* *gibi, Assembly A*gibi başka bir derlemenin iç türlerine veya iç üyelerine erişecek bir derleme derlediğinizde, **-out** derleyici seçeneğini kullanarak çıktı dosyasının *(.exe* veya *.dll)* adını açıkça belirtmeniz gerekir. Derleyici, dış başvurulara bağlandığı anda oluşturduğu derlemenin adını henüz oluşturmadığından bu gereklidir. Daha fazla bilgi için bkz: [-out (C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) [veya-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
 
 ```csharp
 using System.Runtime.CompilerServices;
@@ -72,34 +72,34 @@ Public Class ClassWithFriendMethod
 End Class
 ```
 
-Yalnızca arkadaş olarak açıkça belirttiğiniz derlemeler, `internal` (C#) veya `Friend` (Visual Basic) türlerine ve üyelerine erişebilir. Örneğin, *AssemblyB* , *derleme a* 'Nın arkadaşınız ve *derleme c* , *AssemblyB*'ye başvuruyorsa, *derleme c* ,C# *a derlemesinde*`internal` () veya `Friend` (Visual Basic) türlerine erişim sahibi olmaz.
+Yalnızca açıkça arkadaş olarak belirttiğiniz derlemeler (C#) veya `internal` `Friend` (Visual Basic) türlerine ve üyelerine erişebilir. Örneğin, *AssemblyB Assembly* *A'nın* arkadaşıysa ve *C Derlemesi* *AssemblyB'ye*başvuruyorsa, *Derleme C'nin* A `internal` *Derlemesi'ndeki*(C#) veya `Friend` (Visual Basic) türlerine erişimi yoktur.
 
-Derleyici, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğine geçirilen arkadaş derleme adının bazı temel doğrulamasını gerçekleştirir. Eğer *derlemesi bir* Friend derlemesi olarak *AssemblyB* bildirirse, doğrulama kuralları aşağıdaki gibidir:
+Derleyici öznitelik geçirilen <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> arkadaş derleme adının bazı temel doğrulama gerçekleştirir. *A Derlemesi* *AssemblyB'yi* arkadaş derlemesi olarak bildirirse, doğrulama kuralları aşağıdaki gibidir:
 
-- *Derleme A* tanımlayıcı olarak adlandırılmışsa, *AssemblyB* de tanımlayıcı adlandırılmış olmalıdır. Özniteliğine geçirilen arkadaş derleme adı, *AssemblyB*imzalamak için kullanılan tanımlayıcı ad anahtarının derleme adından ve ortak anahtarından oluşmalıdır.
+- *A Derlemesi* güçlü adlandırılmışsa, *AssemblyB* de güçlü adlandırılmış olmalıdır. Öznitelik geçirilen arkadaş derleme adı derleme adı ve *AssemblyB*imzalamak için kullanılan güçlü ad anahtarının ortak anahtarı ndan oluşmalıdır.
 
-     <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğine geçirilen arkadaş derleme adı *AssemblyB*'nin tanımlayıcı adı olamaz. Bütünleştirilmiş kod sürümü, kültür, mimari veya ortak anahtar belirtecini eklemeyin.
+     Özniteliğe <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> geçirilen arkadaş derleme adı *AssemblyB'nin*güçlü adı olamaz. Derleme sürümünü, kültürü, mimariyi veya ortak anahtar belirteci eklemeyin.
 
-- *Derleme A* tanımlayıcı adlandırılmış değilse, arkadaş derleme adı yalnızca derleme adından oluşmalıdır. Daha fazla bilgi için bkz. [nasıl yapılır: imzasız arkadaş derlemeleri oluşturma](create-unsigned-friend.md).
+- *A Derlemesi* güçlü adlandırılmış değilse, arkadaş derleme adı yalnızca derleme adından oluşmalıdır. Daha fazla bilgi için [bkz: İmzalanmamış arkadaş derlemeleri oluşturun.](create-unsigned-friend.md)
 
-- *AssemblyB* tanımlayıcı adlandırılmış ise, proje ayarını veya komut satırı `/keyfile` derleyici seçeneğini kullanarak *AssemblyB* için tanımlayıcı ad anahtarını belirtmeniz gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: imzalı arkadaş derlemeleri oluşturma](create-signed-friend.md).
+- *AssemblyB* güçlü adlandırılmışsa, proje ayarını veya komut satırı `/keyfile` derleyicisi seçeneğini kullanarak *AssemblyB* için güçlü ad anahtarını belirtmeniz gerekir. Daha fazla bilgi için [bkz: İmzalı arkadaş derlemeleri oluşturun.](create-signed-friend.md)
 
- <xref:System.Security.Permissions.StrongNameIdentityPermission> sınıfı, aşağıdaki farklılıklarla türleri paylaşma özelliği de sağlar:
+ Sınıf <xref:System.Security.Permissions.StrongNameIdentityPermission> ayrıca, aşağıdaki farklılıklarla türleri paylaşma olanağı da sağlar:
 
-- <xref:System.Security.Permissions.StrongNameIdentityPermission> tek bir tür için geçerlidir, ancak bir arkadaş derleme tüm derleme için geçerlidir.
+- <xref:System.Security.Permissions.StrongNameIdentityPermission>tek bir tür için geçerlidir, bir arkadaş derlemesi ise tüm derleme için geçerlidir.
 
-- *Bir derlemede* *AssemblyB*ile paylaşmak istediğiniz yüzlerce tür varsa, tümüne <xref:System.Security.Permissions.StrongNameIdentityPermission> eklemeniz gerekir. Bir arkadaş derleme kullanıyorsanız, yalnızca bir defa arkadaş ilişki bildirmeniz gerekir.
+- *Assembly A'da* *AssemblyB*ile paylaşmak istediğiniz yüzlerce tür varsa, <xref:System.Security.Permissions.StrongNameIdentityPermission> bunların tümüne eklemeniz gerekir. Bir arkadaş derlemesi kullanıyorsanız, arkadaş ilişkisini yalnızca bir kez bildirmeniz gerekir.
 
-- <xref:System.Security.Permissions.StrongNameIdentityPermission>kullanıyorsanız, paylaşmak istediğiniz türlerin ortak olarak bildirilmesini gerekir. Bir arkadaş derleme kullanıyorsanız, paylaşılan türler `internal` (C#) veya `Friend` (Visual Basic) olarak belirtilir.
+- <xref:System.Security.Permissions.StrongNameIdentityPermission>Kullanıyorsanız, paylaşmak istediğiniz türlerin herkese açık olarak bildirilmesi gerekir. Bir arkadaş derlemesi kullanıyorsanız, paylaşılan `internal` türler (C#) veya `Friend` (Visual Basic) olarak bildirilir.
 
-Bir modül dosyasından ( *. netmodule* uzantılı bir dosya) birC#derlemenin `internal` () veya `Friend` (Visual Basic) türlerine ve yöntemlerine erişme hakkında daha fazla bilgi için, bkz: [-moduleassemblynameC#()](../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md) veya [-moduleassemblyname (Visual Basic)](../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).
+Bir derlemenin `internal` (C#) veya (Visual `Friend` Basic) türlerine ve yöntemlerine bir modül dosyasından *(.netmodule* uzantılı bir [dosya)](../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md) nasıl erişilir hakkında bilgi için [bkz.](../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - <xref:System.Security.Permissions.StrongNameIdentityPermission>
-- [Nasıl yapılır: imzasız arkadaş derlemeleri oluşturma](create-unsigned-friend.md)
-- [Nasıl yapılır: imzalı arkadaş derlemeleri oluşturma](create-signed-friend.md)
+- [Nasıl yapilir: İmzalanmamış arkadaş derlemeleri oluşturma](create-unsigned-friend.md)
+- [Nasıl yapılsın: İmzalı arkadaş derlemeleri oluşturma](create-signed-friend.md)
 - [.NET’te bütünleştirilmiş kodlar](index.md)
-- [C#Programlama Kılavuzu](../../csharp/programming-guide/index.md)
+- [C# programlama kılavuzu](../../csharp/programming-guide/index.md)
 - [Programlama kavramları (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)

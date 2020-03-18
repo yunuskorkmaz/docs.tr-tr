@@ -1,84 +1,84 @@
 ---
-title: MVC uygulamalarını test ASP.NET Core
-description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın MVC uygulamalarını test ASP.NET Core
+title: Core MVC uygulamalarını test ASP.NET
+description: ASP.NET Core ve Azure ile Mimar Modern Web Uygulamaları | Test ASP.NET Çekirdek MVC Uygulamaları
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 164e820ffa6030b3dcb9180d56e57ce39bb03143
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 2b347442c4a9b7b6cf912ec461248f901dc45417
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503939"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147497"
 ---
-# <a name="test-aspnet-core-mvc-apps"></a>MVC uygulamalarını test ASP.NET Core
+# <a name="test-aspnet-core-mvc-apps"></a>Core MVC uygulamalarını test ASP.NET
 
-> *"Ürününüzün birim testini beğenmezseniz, büyük olasılıkla müşterileriniz test etmek zorunda kalmaz."*
- > \_-anonim-
+> *"Ürününüzü birim olarak test etmek istemiyorsanız, büyük olasılıkla müşterileriniz de bunu test etmek hoşlanmaz."*
+ > \_- Anonim-
 
-Herhangi bir karmaşıklığın yazılımı, değişikliklere yanıt olarak beklenmedik yollarla başarısız olabilir. Bu nedenle, en önemsiz (veya en az kritik) uygulamalar için değişiklik yaptıktan sonra test edilmesi gerekir. El ile test etme, yazılımın test edilmesine yönelik en yavaş ve en ucuz yoldur. Ne yazık ki, uygulamalar test edilebilir olacak şekilde tasarlanmamışsa, kullanılabilir tek yol olabilir. [Bölüm 4](architectural-principles.md) ' te bulunan mimari ilkeleri izlemek için yazılan uygulamalar Unit Instable olmalıdır. ASP.NET Core uygulamalar otomatik tümleştirme ve işlevsel testi destekler.
+Herhangi bir karmaşıklık yazılım değişikliklere yanıt olarak beklenmedik şekillerde başarısız olabilir. Bu nedenle, değişiklik yaptıktan sonra test etmek, en önemsiz (veya en az kritik) uygulamalar hariç herkes için gereklidir. El ile sınama, yazılımı test etmek için en yavaş, en az güvenilir, en pahalı yoludur. Ne yazık ki, uygulamalar test edilebilir olacak şekilde tasarlanmıyorsa, kullanılabilir tek araç bu olabilir. [4. bölümde](architectural-principles.md) belirtilen mimari ilkelere uygun olarak yazılan başvurular ünite test edilebilir olmalıdır. ASP.NET Core uygulamaları otomatik tümleştirme ve işlevsel testleri destekler.
 
-## <a name="kinds-of-automated-tests"></a>Otomatikleştirilmiş test türleri
+## <a name="kinds-of-automated-tests"></a>Otomatik test türleri
 
-Yazılım uygulamaları için birçok tür otomatikleştirilmiş test vardır. En basit, en düşük düzey test birim sınamadır. Biraz daha yüksek bir düzeyde, tümleştirme testleri ve işlevsel testler vardır. UI testleri, yük testleri, stres testleri ve duman testleri gibi diğer test türleri, bu belgenin kapsamı dışındadır.
+Yazılım uygulamaları için birçok türde otomatik test vardır. En basit, en düşük seviye testi birim testidir. Biraz daha yüksek bir düzeyde, entegrasyon testleri ve fonksiyonel testler vardır. UI testleri, yükleme testleri, stres testleri ve duman testleri gibi diğer test türleri bu belgenin kapsamı dışındadır.
 
 ### <a name="unit-tests"></a>Birim testleri
 
-Birim testi, uygulamanızın mantığının tek bir kısmını sınar. Bu, olmadığı bazı şeyleri listeleyerek daha ayrıntılı bir şekilde açıklayabilir. Birim testi, kodunuzun bağımlılıklarla veya altyapıyla nasıl çalıştığını test etmez. Bu, tümleştirme sınamalarıdır. Bir birim testi, kodunuzun yazıldığı çerçeveyi test etmez; Bunun çalıştığını varsaymalı veya buldıysanız, bir hata dosyaz ve bir geçici çözüm kodlayın. Birim testi tamamen bellekte ve işlemde çalışır. Dosya sistemi, ağ veya veritabanıyla iletişim kurmaz. Birim testleri yalnızca kodunuzu test etmelidir.
+Birim testi, uygulamanızın mantığının tek bir parçasını sınar. Bir daha bazı şeyler değil listeleyerek açıklayabilir. Birim testi, kodunuzu bağımlılıklarla veya altyapıyla nasıl çalıştığını test etmez , bu tümleştirme testlerinin ne işe yaradığını belirtir. Birim testi, kodunuzu yazdığınızdaki çerçeveyi sınamaz – çalıştığını varsaymalısınız veya işe yaramazsa hata dosyalayın ve geçici bir çözüm kodlayın. Bir birim testi tamamen bellekte ve işlemde çalışır. Dosya sistemi, ağ veya veritabanı ile iletişim kurmaz. Birim testleri yalnızca kodunuzu test etmelidir.
 
-Birim testleri, dış bağımlılıklar olmadan yalnızca kodunuzun tek bir birimini test ettikleri ve çok hızlı bir şekilde yürütülmesi gerekir. Bu nedenle, birkaç saniye içinde yüzlerce birim testinin test paketlerini çalıştırabilmelisiniz. Her bir paylaşılan kaynak denetimi deposuna her gönderim yapmadan önce ve yapı sunucunuzdaki her bir otomatik derleme ile, bunları sık sık çalıştırın.
+Birim testleri, kodunuzu yalnızca tek bir birim test gerçeği nedeniyle, hiçbir dış bağımlılıkları ile, son derece hızlı bir şekilde yürütülmelidir. Böylece, birkaç saniye içinde birim testleri yüzlerce test paketleri çalıştırmak gerekir. Bunları sık sık, ideal olarak paylaşılan bir kaynak denetim deposuna her itmeden önce ve kesinlikle yapı sunucunuzdaki her otomatik yapıyla çalıştırın.
 
 ### <a name="integration-tests"></a>Tümleştirme testleri
 
-Veritabanları ve dosya sistemleri gibi altyapıyla etkileşim kuran kodunuzu kapsüllemek iyi bir fikir olsa da, bu kodun bir kısmını yine de test etmek isteyeceksiniz. Ayrıca, uygulamanızın bağımlılıkları tamamen çözümlendiğinde kodunuzun katmanlarınızın bekledikleri gibi etkileşimde bulunduğunu doğrulamanız gerekir. Bu, tümleştirme testlerinin sorumluluğundadır. Genellikle dış bağımlılıklara ve altyapıya bağlı olduklarından, tümleştirme testlerinin daha yavaş ve birim testlerinin ayarlanmasından daha zor olma eğilimindedir. Bu nedenle, tümleştirme testlerinde birim testleriyle test edilmiş şeyleri test etmeyi önönüne almalısınız. Belirli bir senaryoyu birim testi ile test edebilirsiniz, onu bir birim testiyle test etmelisiniz. Bu durumda, bir tümleştirme testi kullanmayı göz önünde bulundurun.
+Veritabanları ve dosya sistemleri gibi altyapıyla etkileşimde bulunarak kodunuzu kapsüllemek iyi bir fikir olsa da, bu kodun bir kısmına sahip olmaya devam edecektir ve büyük olasılıkla bunu sınamak isteyeceksiniz. Ayrıca, uygulamanızın bağımlılıkları tam olarak çözüldüğünde kodlarınızın katmanlarının beklediğiniz şekilde etkileşimde olduğunu doğrulamanız gerekir. Bu entegrasyon testlerinin sorumluluğundadır. Tümleştirme testleri genellikle dış bağımlılıklara ve altyapıya bağlı olduğundan, birim testlerinden daha yavaş ve kurulumu daha zor olma eğilimindedir. Bu nedenle, tümleştirme testlerinde birim testleri ile test edilebilir şeyleri test kaçınmalısınız. Belirli bir senaryoyu bir birim testi ile sınayabilirseniz, bunu bir birim testi ile test edebilirsiniz. Eğer yapamazsanız, o zaman bir tümleştirme testi kullanmayı düşünün.
 
-Tümleştirme testlerinde genellikle birim testlerinden daha karmaşık kurulum ve Teari yordamları olur. Örneğin, gerçek bir veritabanına yönelik bir tümleştirme testi, her test çalıştırılmadan önce veritabanını bilinen bir duruma döndürmek için bir yönteme ihtiyaç duyar. Yeni testler eklendikçe ve üretim veritabanı şeması geliştikçe, bu test betikleri boyut ve karmaşıklık bakımından büyümeye eğilimindedir. Birçok büyük sistemde, paylaşılan kaynak denetimi değişikliklerini iade etmeden önce, geliştirici iş istasyonlarında tümleştirme testlerinin tam paketlerinin çalıştırılabilmesi pratik değildir. Bu durumlarda, tümleştirme testleri bir yapı sunucusu üzerinde çalıştırılabilir.
+Tümleştirme testleri genellikle birim testlerinden daha karmaşık kurulum ve yıkma yordamlarına sahip olur. Örneğin, gerçek bir veritabanına karşı olan bir tümleştirme sınaması, veritabanını her test çalıştırmadan önce bilinen bir duruma döndürmenin bir yolunu niçin gerekir. Yeni testler eklendikçe ve üretim veritabanı şeması geliştikçe, bu test komut dosyaları boyut ve karmaşıklık olarak büyüme eğiliminde olacaktır. Birçok büyük sistemde, paylaşılan kaynak denetimindeki değişiklikleri denetlemeden önce geliştirici iş istasyonlarında tam tümleştirme testleri çalıştırmak pratik değildir. Bu gibi durumlarda, tümleştirme testleri bir yapı sunucusunda çalıştırılabilir.
 
-### <a name="functional-tests"></a>İşlevsel testler
+### <a name="functional-tests"></a>Fonksiyonel testler
 
-Tümleştirme testleri, sistemin bazı bileşenlerinin birlikte düzgün çalıştığını doğrulamak için, geliştiricinin perspektifinden yazılır. İşlevsel testler kullanıcının perspektifinden yazılır ve gereksinimlerine göre sistemin doğruluğunu doğrular. Aşağıdaki alıntıda, birim testlerine kıyasla işlevsel testlerin nasıl düşündüğleriyle ilgili yararlı bir benzerleme vurguladı sunulmaktadır:
+Tümleştirme testleri, sistemin bazı bileşenlerinin birlikte doğru çalıştığını doğrulamak için geliştiricinin perspektifinden yazılır. İşlevsel testler kullanıcının bakış açısından yazılır ve gereksinimlerine göre sistemin doğruluğunu doğrular. Aşağıdaki alıntı, birim testleri ile karşılaştırıldığında, fonksiyonel testler hakkında düşünmek için yararlı bir benzetme sunuyor:
 
-> "Bir sistemin geliştirilmesi birçok kez bir evin oluşturulmasına sahiptir. Bu benzerleme vurguladı oldukça doğru olmasa da, birim ve işlev testleri arasındaki farkı anlamak amacıyla onu genişletebiliriz. Birim testi, evin yapım sitesini ziyaret eden bir yapı denetçisine benzerdir. BT, temel, çerçevelendirme, elektrik, sıhhi tesisat gibi çeşitli iç sistemlere odaklanılmıştır. Evin bölümlerinin doğru ve güvenli şekilde çalışmasını sağlar (testler) ve derleme kodunu karşılayın. Bu senaryodaki işlevsel testler, aynı yapı sitesini ziyaret eden Homeowner 'a benzerdir. İç sistemlerin uygun şekilde davrandığını varsayar, derleme denetçisi görevini gerçekleştiriyor. Homeowner, bu evinizde ne kadar canlı hale görüneceğine odaklanılmıştır. Evin nasıl göründüğü, çeşitli odaların rahat bir boyut olduğu konusunda endişe duymaktadır, evin aile ihtiyaçlarına uyum sağlaması, Windows 'un sabah güneyi yakalamak için iyi bir nokta halinde. Homeowner, evinizde işlevsel testler gerçekleştiriyor. Kullanıcının perspektifi vardır. Yapı denetçisi, evinizde birim testlerini gerçekleştiriyor. Oluşturucunun perspektifi vardır. "
+> "Birçok kez bir sistemin geliştirilmesi bir evin inşasına benzetilir. Bu benzetme tam olarak doğru olmasa da, ünite ve fonksiyonel testler arasındaki farkı anlamak amacıyla genişletebiliriz. Birim testi, bir binanın şantiyesini ziyaret eden bir yapı denetçisine benzer. O evin çeşitli iç sistemleri üzerinde durulmaktadır, vakıf, çerçeveleme, elektrik, sıhhi tesisat, ve benzeri. Evin parçalarının doğru ve güvenli bir şekilde çalışmasını, yani bina kodunu karşılamasını sağlar (testler). Bu senaryoda fonksiyonel testler ev sahibi bu aynı şantiye ziyaret benzer. İç sistemlerin uygun şekilde işkuracağını, yapı denetçisinin görevini yerine getireceğini varsayar. Ev sahibi bu evde yaşamanın nasıl bir şey olacağına odaklanmış durumda. O evin nasıl göründüğünü ile ilgilidir, çeşitli odalar rahat bir boyut, evin ailenin ihtiyaçlarına uygun mu, sabah güneşi yakalamak için iyi bir noktada pencereler vardır. Ev sahibi evde fonksiyonel testler yapıyor. Kullanıcının bakış açısına sahip. Yapı denetçisi evde birim testleri yapıyor. O, inşaatçının bakış açısına sahip."
 
-Kaynak: [birim testi ve Işlev testlerine karşı](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
+Kaynak: [Ünite Testi ve Fonksiyonel Testler](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
 
-"Geliştirici olarak" geliştirici olarak söyliyoruz, iki şekilde başarısız oldu: bir şeyi yanlış oluşturacağız veya yanlış bir şey oluşturacağız. " Birim testleri, şeyi doğru bir şekilde oluşturduğunuzu güvence altına alarak, işlevsel sınamalar, doğru şeyi oluşturduğunuzdan emin olmanızı sağlamaktır.
+"Geliştiriciler olarak, iki şekilde başarısız oluruz: ya yanlış bir şey yaparız, ya da yanlış bir şey yaparız." Birim testleri, doğru bir şey inşa emin olun; fonksiyonel testler doğru şeyi oluşturmanızı sağlar.
 
-İşlevsel testler sistem düzeyinde çalıştığından, bazı Kullanıcı Arabirimi Otomasyonu gerektirebilir. Tümleştirme testlerine benzer şekilde, genellikle bir tür test altyapısıyla da çalışırlar. Bu, birim ve tümleştirme sınamalarından daha yavaş ve daha Brittle sağlar. Sistemin kullanıcıların beklediği şekilde davranmakta olduğundan emin olmanız gerektiği için yalnızca birçok işlevsel teste sahip olmanız gerekir.
+İşlevsel testler sistem düzeyinde çalıştığı için, bir dereceye kadar UI otomasyonu gerektirebilir. Entegrasyon testleri gibi, genellikle bir tür test altyapısıyla da çalışırlar. Bu onları birim ve tümleştirme testlerinden daha yavaş ve daha kırılgan hale getirir. Sistemin kullanıcıların beklediği gibi davrandığından emin olmak için gereken kadar işlevsel teste sahip olmalısınız.
 
-### <a name="testing-pyramid"></a>Piramit test ediliyor
+### <a name="testing-pyramid"></a>Test Piramidi
 
-Marwler, Şekil 9-1 ' de gösterilen bir örnek olan test piramit hakkında yazdı.
+Martin Fowler test piramidi hakkında yazdı, bunun bir örneği Şekil 9-1'de gösterilmiştir.
 
-![Piramit test ediliyor](./media/image9-1.png)
+![Test Piramidi](./media/image9-1.png)
 
-**Şekil 9-1**. Piramit test ediliyor
+**Şekil 9-1**. Test Piramidi
 
-Piramit 'in farklı katmanları ve bunların göreli boyutları, farklı test türlerini ve uygulamanız için kaç tane yazmanız gerektiğini temsil eder. Görebileceğiniz gibi, öneri, daha küçük bir tümleştirme testi katmanı tarafından desteklenen, daha küçük bir işlevsel test katmanı ile desteklenen, büyük miktarda birim testi olan bir temeldir. Her katmanın ideal olması için yalnızca daha düşük bir katmanda yeterince gerçekleştirilemediği testlerin olması gerekir. Belirli bir senaryo için hangi tür teste ihtiyacınız olduğuna karar verirken, testi piramit ' i göz önünde bulundurun.
+Piramidin farklı katmanları ve bunların göreli boyutları, farklı türde testleri ve uygulamanız için kaç tane yazmanız gerektiğini temsil eder. Gördüğünüz gibi, öneri, daha küçük bir tümleştirme testi katmanı tarafından desteklenen ve daha da küçük bir işlevsel test katmanıyla birlikte büyük bir birim testi tabanına sahip olmaktır. Her katman ideal olarak sadece yeterli bir alt katmanda gerçekleştirilemez testler olmalıdır. Belirli bir senaryo için hangi test türüne ihtiyacınız olduğuna karar vermeye çalışırken test piramidini aklınızda bulundurun.
 
-### <a name="what-to-test"></a>Test edilecek
+### <a name="what-to-test"></a>Ne test etmek
 
-Otomatikleştirilmiş testler yazma konusunda deneyimli geliştiriciler için sık karşılaşılan bir sorun test edilecek. İyi bir başlangıç noktası, koşullu mantığı test etmek için kullanılır. Bir koşullu ifadeye (Else, Switch, vb.) göre değişen davranışlardan herhangi bir yerde, belirli koşullarda doğru davranışı onaylamak için en az birkaç test ile birlikte gelebilmelisiniz. Kodunuzun hata koşulları varsa, kod aracılığıyla "mutlu yol" için en az bir test yazmak iyi olur (hata olmadan) ve uygulamanın hata durumunda beklendiği gibi davrandığını doğrulamak için en az bir test (hata olmadan) ve "Sad yol" (hatalar veya tipik sonuçlar içeren) Son olarak, kod kapsamı gibi ölçümlere odaklanmak yerine başarısız olan test işlemleri üzerinde odaklanmayı deneyin. Daha fazla kod kapsamı, genellikle daha küçüktür. Ancak, karmaşık ve iş açısından kritik bir yöntemin birkaç testini yazmak genellikle test kod kapsamı ölçümlerini geliştirmek için otomatik özellikler için testlerin yazılmasından daha iyi bir zaman kullanmaktır.
+Otomatik testler yazma konusunda deneyimsiz geliştiriciler için ortak bir sorun ne test etmek için geliyor. İyi bir başlangıç noktası koşullu mantığı test etmektir. Koşullu bir ifadeye (if-else, switch, vb.) dayalı olarak değişen davranışiçeren bir yöntemin olduğu her yerde, belirli koşullar için doğru davranışı onaylayan en az birkaç test bulabilmeniz gerekir. Kodunuzda hata koşulları varsa, kod üzerinden "mutlu yol" için en az bir test (hatasız) ve uygulamanızın hatalar karşısında beklendiği gibi şekilde şekilde olduğunu doğrulamak için "üzücü yol" (hatalar veya atipik sonuçlarla) için en az bir test yazmak iyidir. Son olarak, kod kapsamı gibi ölçümlere odaklanmak yerine başarısız olabilecek şeyleri sınamaya odaklanın. Daha fazla kod kapsamı genellikle, daha az daha iyidir. Ancak, karmaşık ve iş açısından kritik bir yöntemin birkaç test daha yazma genellikle sadece test kodu kapsama ölçümleri geliştirmek için otomatik özellikleri için testler yazma daha zaman daha iyi bir kullanımıdır.
 
-## <a name="organizing-test-projects"></a>Test projelerini düzenleme
+## <a name="organizing-test-projects"></a>Test projelerinin düzenlenmesi
 
-Test projeleri düzenlenebilir, ancak sizin için en iyi şekilde kullanılabilir. Testleri türe (birim testi, tümleştirme testi) ve test ettikleri öğeleri (projeye göre, ad alanına göre) ayırmak iyi bir fikirdir. Bu ayırmaların tek bir test projesi veya birden çok test projesi içindeki klasörlerden oluşan bir tasarım kararı olup olmadığı. Bir proje en basit, ancak birçok test içeren büyük projeler için veya farklı test kümelerini daha kolay çalıştırmak için, farklı test projelerine sahip olmak isteyebilirsiniz. Birçok ekip test projelerini test ettikleri projeye göre düzenler, ancak bu, birkaç projeden daha fazla projeye sahip olan uygulamalar çok sayıda test projesine neden olabilir, ancak bu, özellikle de her projede ne tür testlerin ne olduğuna göre bunları daha düşük bir şekilde kesebilirsiniz. Bir riskli yaklaşım, test projeleri içindeki her bir proje (ve sınıfı) test edilen bir proje (ve sınıf) belirtmek için bir proje türüne sahip olmalıdır.
+Test projeleri ancak sizin için en iyi çalışır organize edilebilir. Testleri türüne (birim testi, tümleştirme testi) ve test ettikleri şeye (projeye göre, ad alanına göre) ayırmak iyi bir fikirdir. Bu ayırmanın tek bir test projesi içindeki klasörlerden veya birden çok test projesinden oluşup oluşmadığı bir tasarım kararıdır. Bir proje en basittir, ancak birçok teste sahip büyük projeler de veya farklı test kümelerini daha kolay çalıştırmak için birkaç farklı test projesine sahip olmak isteyebilirsiniz. Birçok ekip test projelerini test ettikleri projeye göre düzenler, bu da birkaç projeden fazla olan uygulamalar için çok sayıda test projesine neden olabilir, özellikle de bunları her projede ne tür testlerolduğuna göre yıkıyorsanız. Uzlaşmacı bir yaklaşım, test projelerinin içindeki klasörlerin test (ve sınıf) test edildiğini belirtmek için uygulama başına bir tür teste sahip olmasıdır.
 
-Ortak bir yaklaşım, bir ' src ' klasörü altında uygulama projelerini ve uygulamanın test projelerini paralel bir ' test ' klasörü altında düzenlemenize yardımcı olur. Bu kuruluşu kullanışlı buldıysanız, Visual Studio 'da eşleşen çözüm klasörleri oluşturabilirsiniz.
+Yaygın bir yaklaşım bir 'src' klasörü altında uygulama projeleri düzenlemek ve paralel bir 'testler' klasörü altında uygulamanın test projeleri. Bu organizasyonu yararlı bulursanız, Visual Studio'da eşleşen çözüm klasörleri oluşturabilirsiniz.
 
 ![Çözümünüzde test organizasyonu](./media/image9-2.png)
 
 **Şekil 9-2**. Çözümünüzde test organizasyonu
 
-Tercih ettiğiniz test çerçevesini kullanabilirsiniz. XUnit çerçevesi iyi çalışmaktadır ve tüm ASP.NET Core ve EF Core testlerin yazıldığı şeydir. Şekil 9-3 ' de gösterilen şablonu kullanarak Visual Studio 'da bir xUnit test projesi ekleyebilir veya `dotnet new xunit`kullanarak CLı ekleyebilirsiniz.
+Hangi test çerçevesini tercih ederseniz o labilirsiniz. xUnit çerçevesi iyi çalışır ve tüm ASP.NET Core ve EF Core testlerinin yazıldığı şeydir. Şekil 9-3'te gösterilen şablonu kullanarak Visual Studio'da veya CLI'den `dotnet new xunit`xUnit test projesi ekleyebilirsiniz.
 
-![Visual Studio 'da bir xUnit test projesi ekleme](./media/image9-3.png)
+![Visual Studio'da xUnit Test Projesi Ekleme](./media/image9-3.png)
 
-**Şekil 9-3**. Visual Studio 'da bir xUnit test projesi ekleme
+**Şekil 9-3**. Visual Studio'da xUnit Test Projesi Ekleme
 
 ### <a name="test-naming"></a>Test adlandırma
 
-Her testin ne yaptığını belirten adlarla, testlerinizi tutarlı bir biçimde adlandırın. İle harika bir yaklaşım, test sınıflarını test ettikleri sınıfa ve yönteme göre adlandırmalıdır. Bu, birçok küçük test sınıfı ile sonuçlanır, ancak her bir testin sorumlu olduğu son derece net hale getirir. Test sınıfı adı, sınanacak sınıfı ve yöntemi belirlemek üzere ayarlandığında, test yöntemi adı test edilen davranışı belirtmek için kullanılabilir. Bu, beklenen davranışı ve bu davranışı gerektiren tüm giriş veya varsayımları içermelidir. Bazı örnek test adları:
+Testlerinizi, her testin ne yaptığını gösteren adlarla tutarlı bir şekilde adlandırın. Ben büyük bir başarı elde ettik bir yaklaşım sınıf ve yöntem test göre test sınıfları isim etmektir. Bu, birçok küçük test sınıfına neden olur, ancak her testin ne sorumlusu olduğunu son derece açık hale getirir. Test sınıfı adı sınıf ve test edilecek yöntemi tanımlamak için ayarlanmış, test yöntemi adı test edilen davranışı belirtmek için kullanılabilir. Bu beklenen davranışı ve bu davranışı verim gereken herhangi bir girdi veya varsayımlar içermelidir. Bazı örnek test adları:
 
 - `CatalogControllerGetImage.CallsImageServiceWithId`
 
@@ -88,27 +88,27 @@ Her testin ne yaptığını belirten adlarla, testlerinizi tutarlı bir biçimde
 
 - `CatalogControllerGetImage.ReturnsNotFoundResultGivenImageMissingException`
 
-Bu yaklaşımın bir çeşitlemesi, her bir test sınıfı adını "olmalıdır" ile sonlandırır ve zaman hali hafifçe değiştirir:
+Bu yaklaşımın bir varyasyonu her test sınıfı adını "Should" ile bitirir ve zamanı biraz değiştirir:
 
-- `CatalogControllerGetImage` **çağrısı**`.``ImageServiceWithId`
+- `CatalogControllerGetImage`**Aramalı**`.`**Call**`ImageServiceWithId`
 
-- `CatalogControllerGetImage` **`.`** **günlük**`WarningGivenImageMissingException`
+- `CatalogControllerGetImage`**Oturum**`.`**Açmalı**`WarningGivenImageMissingException`
 
-Bazı takımlar ikinci adlandırma yaklaşımını daha net, ancak biraz daha ayrıntılı bir şekilde bulur. Herhangi bir durumda, test davranışına Öngörüler sağlayan bir adlandırma kuralı kullanmayı deneyin, böylece bir veya daha fazla testin başarısız olması durumunda, bazı durumlarda kendi adlarından belirgin olur. Bu teklif, test sonuçlarında gördüğünüz zaman hiçbir değer olmadığı için, ControllerTests. test1 gibi testlerinizi adlandırmaktan kaçının.
+Bazı takımlar ikinci adlandırma yaklaşımını daha net bulurlar, ancak biraz daha ayrıntılıdır. Her durumda, bir veya daha fazla test başarısız olduğunda, hangi durumlarda başarısız olduğu adlarından belli olacak şekilde, test davranışı hakkında bilgi sağlayan bir adlandırma kuralı kullanmaya çalışın. Test sonuçlarını gördüğünüzde hiçbir değer sunamadığınız için, Testlerinizi ControllerTests.Test1 gibi belirsiz bir şekilde adlandırmaktan kaçının.
 
-Yukarıdaki gibi birçok küçük test sınıfı üreten bir adlandırma kuralını izlerseniz, testlerinizi klasörler ve ad alanları kullanarak daha fazla düzenlemek iyi bir fikirdir. Şekil 9-4, birkaç test projesi içindeki testleri klasöre göre düzenlemek için bir yaklaşımı gösterir.
+Yukarıdaki gibi birçok küçük test sınıfı üreten bir adlandırma kuralını izlerseniz, klasörleri ve ad boşluklarını kullanarak testlerinizi daha da düzenlemek iyi bir fikirdir. Şekil 9-4, çeşitli test projeleri içinde testleri klasöre göre düzenlemeye bir yaklaşım gösterir.
 
-![Test sınıflarını, sınanmakta olan sınıfa göre klasöre göre düzenleme](./media/image9-4.png)
+![Test sınıflarını test edilen sınıfa göre klasöre göre düzenleme](./media/image9-4.png)
 
-**Şekil 9-4.** Test sınıflarını, sınanmakta olan sınıfa göre klasöre göre düzenleme.
+**Şekil 9-4.** Test sınıflarını test edilen sınıfa göre klasöre göre düzenleme.
 
-Belirli bir uygulama sınıfının test edilmekte olan çok sayıda yöntemi (ve bu nedenle birçok test sınıfı) varsa, bunları uygulama sınıfına karşılık gelen bir klasöre yerleştirmek mantıklı olabilir. Bu kuruluş, dosyaları başka bir yerde farklı şekilde düzenlemenize göre farklılık gösterebilir. Birçok başka dosya içeren bir klasörde üçten fazla veya dört ilişkili dosya varsa, bunları kendi alt klasörüne taşımak genellikle yararlı olur.
+Belirli bir uygulama sınıfının test edilen birçok yöntemi (ve dolayısıyla birçok test sınıfı) varsa, bunları uygulama sınıfına karşılık gelen bir klasöre yerleştirmek mantıklı olabilir. Bu kuruluş, dosyaları başka bir yerde klasörlere nasıl düzenleyebileceğinizdir. Başka birçok dosya içeren bir klasörde üç veya dörtten fazla ilgili dosya nız varsa, bunları kendi alt klasörlerine taşımak genellikle yararlıdır.
 
-## <a name="unit-testing-aspnet-core-apps"></a>Uygulamalar ASP.NET Core birim testi
+## <a name="unit-testing-aspnet-core-apps"></a>Core uygulamaları ASP.NET birim testi
 
-İyi tasarlanmış bir ASP.NET Core uygulamasında, karmaşıklık ve iş mantığının çoğu iş varlıklarında ve çeşitli hizmetlerde kapsüllenir. ASP.NET Core MVC uygulamasının kendisi, denetleyiciler, filtreler, viewmodeller ve görünümleriyle, çok az sayıda birim testi gerektirmelidir. Belirli bir eylemin işlevselliğinin çoğu eylem yönteminin dışında kalıyor. Yönlendirmenin doğru şekilde çalışıp çalışmadığını test etme veya küresel hata işleme, birim testi ile etkin bir şekilde yapılamaz. Benzer şekilde, model doğrulama ve kimlik doğrulama ve Yetkilendirme filtreleri dahil olmak üzere tüm filtreler, denetleyicinin eylem yöntemini hedefleyen bir test ile birim test edilemez. Bu davranış kaynakları olmadan, çoğu eylem yöntemi, bunları kullanan denetleyiciden bağımsız olarak test edilebilir hizmetler için çalışmanın toplu olarak küçük olması gerekir.
+İyi tasarlanmış bir ASP.NET Core uygulamasında, karmaşıklık ve iş mantığının çoğu iş varlıklarında ve çeşitli hizmetlerde kapsüllenecektir. ASP.NET Core MVC uygulamasının kendisi, denetleyicileri, filtreleri, görüntüleme modelleri ve görünümleri ile çok az birim testi gerektirmelidir. Belirli bir eylemin işlevselliğinin çoğu eylem yönteminin dışındadır. Yönlendirmenin doğru çalışıp çalışmadığını veya genel hata işlemenin bir birim testi ile etkili bir şekilde yapılamayacağını test etmek. Aynı şekilde, model doğrulama, kimlik doğrulama ve yetkilendirme filtreleri de dahil olmak üzere tüm filtreler, denetleyicinin eylem yöntemini hedefleyen bir testle birim test edilemez. Bu davranış kaynakları olmadan, çoğu eylem yöntemi önemsiz derecede küçük olmalı ve çalışmalarının büyük bir kısmını, bunları kullanan denetleyiciden bağımsız olarak sınanabilecek hizmetlere devretilmelidir.
 
-Bazen kodunuzu birim test etmek için yeniden düzenlemeniz gerekir. Genellikle bu, soyutlamaları tanımlamayı ve doğrudan altyapıya yönelik olarak kodlamak yerine test etmek istediğiniz koddaki soyutlamadan erişmek için bağımlılık ekleme kullanımını içerir. Örneğin, görüntüleri görüntülemek için bu basit eylem yöntemini göz önünde bulundurun:
+Bazen birimi test etmek için kodunuzu yeniden düzenlemeniz gerekir. Sık sık bu soyutlamaları tanımlamak ve doğrudan altyapıya karşı kodlama yerine, test etmek istediğiniz koddaki soyutlama erişmek için bağımlılık enjeksiyonu kullanarak içerir. Örneğin, görüntüleri görüntülemek için bu basit eylem yöntemini göz önünde bulundurun:
 
 ```csharp
 [HttpGet("[controller]/pic/{id}")]
@@ -121,9 +121,9 @@ public IActionResult GetImage(int id)
 }
 ```
 
-Birim testi bu yöntemin, dosya sisteminden okumak için kullandığı `System.IO.File`doğrudan bağımlılığı tarafından güçleşir. Beklendiği gibi çalıştığından emin olmak için bu davranışı test edebilirsiniz, ancak bunu gerçek dosyalarla yapmak bir tümleştirme testi olur. Bu yöntemin yolunu birim testi yapamıyoruz. Bu, kısa bir süre içinde bunu nasıl yapacağım hakkında bilgi edineceksiniz.
+Birim testi bu yöntem, dosya sisteminden `System.IO.File`okumak için kullandığı doğrudan bağımlılığı ile zorlanır. Beklendiği gibi çalıştığından emin olmak için bu davranışı sınayabilirsiniz, ancak bunu gerçek dosyalarla yapmak bir tümleştirme testidir. Bu yöntemin rotasını birim olarak test edemezsiniz – bunu kısa süre içinde işlevsel bir testle nasıl yapacağınızı göreceksiniz.
 
-Dosya sistemi davranışını doğrudan birim testi yapamıyoruz ve yolu sınayamıyoruz, ne test etmek istiyorsunuz? Ayrıca, birim testi yapmak için yeniden düzenleme yapıldıktan sonra, bazı test çalışmalarını ve hata işleme gibi eksik davranışları bulabilirsiniz. Bir dosya bulunamadığında Yöntem ne yapar? Ne yapmalıyım? Bu örnekte, yeniden düzenlenmiş yöntemi şöyle görünür:
+Dosya sistemi davranışını doğrudan birim olarak test edemezseniz ve rotayı test edemezseniz, sınamak için ne var? Birim sınamamümkün kılmak için yeniden düzenleme yaptıktan sonra, bazı test örnekleri ve hata işleme gibi eksik davranışları keşfedebilirsiniz. Bir dosya bulunamıyorsa yöntem ne yapar? Ne yapmalı? Bu örnekte, yeniden düzenleme yöntemi aşağıdaki gibi görünür:
 
 ```csharp
 [HttpGet("[controller]/pic/{id}")]
@@ -143,19 +143,19 @@ public IActionResult GetImage(int id)
 }
 ```
 
-`_logger` ve `_imageService` her ikisi de bağımlılıklar olarak eklenir. Artık, eylem yöntemine geçirilen aynı KIMLIğIN `_imageService`geçirilir ve elde edilen baytların FileResult 'nin bir parçası olarak döndürüldüğünden test edebilirsiniz. Ayrıca, hata günlüğü 'nün beklenen şekilde olduğunu ve görüntü eksikse bir `NotFound` sonucunun döndürüldüğünü, bunun önemli uygulama davranışı olduğunu (yani yalnızca bir sorunu tanılamak için geliştiricinin eklediği geçici bir kod değil) kabul ederek test edebilirsiniz. Gerçek dosya mantığı ayrı bir uygulama hizmetine taşındı ve eksik bir dosya olması durumunda uygulamaya özel bir özel durum döndürecek şekilde geliştirilmiştir. Bu uygulamayı bir tümleştirme testi kullanarak bağımsız olarak test edebilirsiniz.
+`_logger`ve `_imageService` her ikisi de bağımlılık olarak enjekte edilir. Artık, eylem yöntemine geçirilen aynı kimliğin `_imageService`,'e geçirildiğini ve elde edilen baytların FileResult'ın bir parçası olarak döndürülderken" test edebilirsiniz. Ayrıca, hata günlüğe kaydetmenin beklendiği gibi `NotFound` gerçekleştiğini ve görüntü eksikse, bunun önemli bir uygulama davranışı olduğunu varsayarak bir sonucun döndürüldürün (diğer bir zamanda geliştiricinin bir sorunu tanılamak için eklenen geçici kodu değil) test edebilirsiniz. Gerçek dosya mantığı ayrı bir uygulama hizmetine taşındı ve eksik bir dosya örneği için uygulamaya özgü bir özel durum döndürmek için artırıldı. Bu uygulamayı bir tümleştirme sınama kullanarak bağımsız olarak sınatabilirsiniz.
 
-Çoğu durumda, denetleyicilerinizde genel özel durum işleyicilerini kullanmak isteyeceksiniz. bu nedenle, içindeki mantık miktarı minimum ve büyük olasılıkla birim testi olmamalıdır. İşlev testlerini ve aşağıda açıklanan `TestServer` sınıfını kullanarak, denetleyici eylemlerinin büyük bir kısmını test etmeniz gerekir.
+Çoğu durumda, denetleyicilerinizde genel özel durum işleyicileri kullanmak isteyeceksiniz, bu nedenle bu durumda mantık miktarı en az düzeyde olmalı ve büyük olasılıkla birim sınamaya değmez. İşlevsel testleri ve aşağıda açıklanan `TestServer` sınıfı kullanarak denetleyici eylemleri test çoğu yapmalısınız.
 
-## <a name="integration-testing-aspnet-core-apps"></a>Tümleştirme testi ASP.NET Core uygulamalar
+## <a name="integration-testing-aspnet-core-apps"></a>Core uygulamaları ASP.NET entegrasyon testi
 
-ASP.NET Core uygulamalarınızın çoğu tümleştirme testi, altyapı projenizde tanımlanmış test hizmetleri ve diğer uygulama türleri olmalıdır. Örneğin, EF Core altyapı projesinde bulunan veri erişim sınıflarınızda [beklediğinizi ve verileri başarıyla güncelleştirdiğini test](https://docs.microsoft.com/ef/core/miscellaneous/testing/) edebilirsiniz. ASP.NET Core MVC projenizin doğru şekilde davrandığının en iyi yolu, bir test ana bilgisayarında çalışan uygulamanıza karşı çalıştırılan işlevsel testlerdir.
+ASP.NET Core uygulamalarınızdaki tümleştirme testlerinin çoğu, Altyapı projenizde tanımlanan hizmetleri ve diğer uygulama türlerini test etmelidir. Örneğin, EF Core'un Altyapı projesinde bulunan veri erişim sınıflarınızdan [beklediğiniz verileri başarıyla güncelleştirip aldığınızı test](https://docs.microsoft.com/ef/core/miscellaneous/testing/) edebilirsiniz. ASP.NET Core MVC projenizin doğru davrandığını test etmenin en iyi yolu, uygulamanız için bir test ana bilgisayarında çalışan işlevsel testlerdir.
 
-## <a name="functional-testing-aspnet-core-apps"></a>Uygulamalar ASP.NET Core işlevsel test
+## <a name="functional-testing-aspnet-core-apps"></a>Core uygulamaları ASP.NET işlevsel test
 
-ASP.NET Core uygulamalar için `TestServer` sınıfı, işlevsel testleri yazma konusunda oldukça kolay hale getirir. Bir `TestServer` `WebHostBuilder` (veya `HostBuilder`) doğrudan (sizin uygulamanız için yaptığınız gibi) veya `WebApplicationFactory` türü (2,1 sürümünden itibaren kullanılabilir) kullanarak yapılandırırsınız. Test ana bilgisayarınızı üretim konağınız için mümkün olduğunca yakından eşleştirmeye çalışmalısınız, bu sayede testleriniz, uygulamanın üretimde ne yapacaklarına benzer davranışlar sağlar. `WebApplicationFactory` sınıfı, TestServer 'ın, görünümler gibi statik kaynağı bulmak için ASP.NET Core tarafından kullanılan ContentRoot 'yi yapılandırmak için yararlıdır.
+ASP.NET Core uygulamaları `TestServer` için, sınıf işlevsel testleri yazmayı oldukça kolaylaştırır. Doğrudan (uygulamanız `WebHostBuilder` için `HostBuilder`yaptığınız gibi) veya `WebApplicationFactory` tür (sürüm 2.1'den beri kullanılabilir) kullanarak bir `TestServer` (veya ) kullanarak yapılandırAbilirsiniz. Test ana bilgisayarınızı üretim ana bilgisayarınızla mümkün olduğunca yakından eşleştirmeyi denemelisiniz, böylece testleriniz uygulamanın üretimde yapacağına benzer davranışlar sergiler. Sınıf, `WebApplicationFactory` ASP.NET Core tarafından Görünümler gibi statik kaynağı bulmak için kullanılan TestServer'ın ContentRoot'unu yapılandırmak için yararlıdır.
 
-Issfixture\<WebApplicationFactory\<TEntry > > uygulayan bir test sınıfı oluşturarak (TEntry Web uygulamanızın başlangıç sınıfı olduğunda) basit işlevsel testler oluşturabilirsiniz. Bu şekilde, test armatürü, fabrika 'nin CreateClient metodunu kullanarak bir istemci oluşturabilir:
+TEntry web uygulamanızın Başlangıç sınıfı olduğu>> IClassFixture\<\<WebApplicationFactory TEntry uygulayan bir test sınıfı oluşturarak basit işlevsel testler oluşturabilirsiniz. Bu durumda, test fikstürfabrikanın CreateClient yöntemini kullanarak bir istemci oluşturabilirsiniz:
 
 ```cs
 public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
@@ -171,7 +171,7 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 }
 ```
 
-Genellikle, her bir test çalıştırılmadan önce sitenizin bazı ek yapılandırmalarını gerçekleştirmek isteyeceksiniz; Örneğin, uygulamayı bellek içi veri deposu kullanacak şekilde yapılandırma ve ardından uygulamayı test verileriyle sağlama. Bunu yapmak için, WebApplicationFactory\<TEntry > kendi alt sınıfını oluşturmanız ve ConfigureWebHost metodunu geçersiz kılmanız gerekir. Aşağıdaki örnek eShopOnWeb FunctionalTests projesinden ve ana Web uygulamasındaki testlerin bir parçası olarak kullanılır.
+Sık sık, her test çalışmadan önce sitenizin bazı ek yapılandırma gerçekleştirmek isteyeceksiniz (örneğin, bellek veri deposunda bir uygulama kullanmak için uygulama yapılandırma ve daha sonra test verileri ile uygulama tohumlama. Bunu yapmak için, WebApplicationFactory\<TEntry> kendi alt sınıf oluşturmanız ve YapılandırmaWebHost yöntemini geçersiz kılmanız gerekir. Aşağıdaki örnek eShopOnWeb FunctionalTests projesinden ve ana web uygulaması üzerinde testlerin bir parçası olarak kullanılır.
 
 ```cs
 using Microsoft.AspNetCore.Hosting;
@@ -202,7 +202,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web
                     .AddEntityFrameworkInMemoryDatabase()
                     .BuildServiceProvider();
 
-                // Add a database context (ApplicationDbContext) using an in-memory 
+                // Add a database context (ApplicationDbContext) using an in-memory
                 // database for testing.
                 services.AddDbContext<CatalogContext>(options =>
                 {
@@ -255,7 +255,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web
 }
 ```
 
-Testler, bu özel WebApplicationFactory 'yi kullanarak bir istemci oluşturup bu istemci örneğini kullanarak uygulamaya istekler yapmasını sağlar. Uygulamanın, test onaylamaları kapsamında kullanılabilecek verileri, çalıştırılabilir. Aşağıdaki test, eShopOnWeb uygulamasının giriş sayfasının doğru şekilde yüklendiğini doğrular ve tohum verilerinin bir parçası olarak uygulamaya eklenen bir ürün listesini içerir.
+Testler, bir istemci oluşturmak için kullanarak ve daha sonra bu istemci örneğini kullanarak uygulamaya istekte bulunarak bu özel WebApplicationFactory'den yararlanabilir. Uygulama, testin iddialarının bir parçası olarak kullanılabilecek verilere sahip olacaktır. Aşağıdaki test, eShopOnWeb uygulamasının ana sayfasının doğru yüklenir ve tohum verilerinin bir parçası olarak uygulamaya eklenen bir ürün listesi içerir doğrular.
 
 ```cs
 using Microsoft.eShopWeb.FunctionalTests.Web;
@@ -290,19 +290,19 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 }
 ```
 
-Bu fonksiyonel test, bir bütün ara yazılım, filtre, cilt, vb. dahil olmak üzere tam ASP.NET Core MVC/Razor Pages uygulama yığınını uygular. Belirli bir yolun ("/") beklenen başarı durum kodunu ve HTML çıkışını döndürdüğünü doğrular. Bu, gerçek bir Web sunucusu ayarlamadan ve bu sayede, test için gerçek bir Web sunucusu kullanan brittın büyük bölümünü önler (örneğin, Güvenlik Duvarı ayarlarıyla ilgili sorunlar). TestServer 'a karşı çalışan işlevsel testler genellikle tümleştirme ve birim testlerinden daha yavaştır, ancak ağ üzerinden bir test Web sunucusuna çalışacak testlerden çok daha hızlıdır. Uygulamanızın ön uç yığınının beklendiği gibi çalıştığından emin olmak için işlevsel testler kullanmanız gerekir. Bu sınamalar, denetleyicilerde veya sayfalarınızda yineleme bulduğunuzda ve filtreler ekleyerek yinelemeyi adresleyerek özellikle yararlıdır. İdeal olarak, bu yeniden düzenleme uygulamanın davranışını değiştirmez ve işlevsel testlerin bir paketi bu durumun olduğunu doğrular.
+Bu işlevsel test, tüm ara yazılımlar, filtreler, bağlayıcılar, vb yerinde olabilir dahil olmak üzere core mvc / Razor Pages uygulama yığını, tam ASP.NET egzersizleri. Belirli bir rotanın ("/") beklenen başarı durum kodunu ve HTML çıktısını döndürür doğrular. Bunu gerçek bir web sunucusu kurmadan yapar ve bu nedenle test etmek için gerçek bir web sunucusu kullanarak (örneğin, güvenlik duvarı ayarları ile ilgili sorunlar) karşılaşabileceğiniz kırılganlık çok önler. TestServer'a karşı çalışan işlevsel testler genellikle tümleştirme ve birim testlerinden daha yavaş, ancak ağ üzerinden bir test web sunucusuna çalışacak testlerden çok daha hızlıdır. Uygulamanızın ön uç yığınının beklendiği gibi çalıştığından emin olmak için işlevsel testler kullanmalısınız. Bu testler, denetleyicilerinizde veya sayfalarınızda yineleme bulduğunuzda ve filtreler ekleyerek yinelemeyi ele aldığınızda özellikle yararlıdır. İdeal olarak, bu yeniden düzenleme uygulamanın davranışını değiştirmez ve bir dizi işlevsel test bunun böyle olduğunu doğrular.
 
-> ### <a name="references--test-aspnet-core-mvc-apps"></a>Başvurular – test ASP.NET Core MVC uygulamaları
+> ### <a name="references--test-aspnet-core-mvc-apps"></a>Referanslar – Test ASP.NET Core MVC uygulamaları
 >
-> - **ASP.NET Core \ test etme**
+> - **ASP.NET Core'da Test** \
 >   <https://docs.microsoft.com/aspnet/core/testing/>
-> - **Birim testi adlandırma kuralı** \
+> - **Ünite Test Adlandırma Sözleşmesi** \
 >   <https://ardalis.com/unit-test-naming-convention>
-> - **Test EF Core** \
+> - **EF Çekirdeğini Test Etme** \
 >   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
-> - **ASP.NET Core \ tümleştirme testleri**
+> - **ASP.NET Core'da entegrasyon testleri** \
 >   <https://docs.microsoft.com/aspnet/core/test/integration-tests>
 
 >[!div class="step-by-step"]
 >[Önceki](work-with-data-in-asp-net-core-apps.md)
->[İleri](development-process-for-azure.md)
+>[Sonraki](development-process-for-azure.md)

@@ -15,25 +15,25 @@ helpviewer_keywords:
 - localizing resources
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 ms.openlocfilehash: 89851c42570f301bee8a3eca744eb5d069347d4e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120868"
 ---
 # <a name="localization"></a>Yerelleştirme
 
-Yerelleştirme, uygulamanın destekleyeceği her kültür için bir uygulamanın kaynaklarını yerelleştirilmiş sürümlere çevirme işlemidir. Genelleştirilmiş uygulamasının yerelleştirme için hazırlanmaya devam ettiğini doğrulamak için yerelleştirme adımına yalnızca [Yerelleştirilebilirlik gözden geçirmesi](../../../docs/standard/globalization-localization/localizability-review.md) adımını tamamladıktan sonra ilerlemeniz gerekir.
+Yerelleştirme, uygulamanın kaynaklarını, uygulamanın destekleyeceği her kültür için yerelleştirilmiş sürümlere çevirme işlemidir. Globalized uygulamanın yerelleştirme için hazır olduğunu doğrulamak için yerelleştirme adımına yalnızca [Yerelleştirilebilirlik Gözden Geçirme](../../../docs/standard/globalization-localization/localizability-review.md) adımını tamamladıktan sonra devam etmelisiniz.
 
-Yerelleştirme için hazırlanma bir uygulama iki kavramsal blok halinde ayrılmıştır: tüm Kullanıcı arabirimi öğelerini ve yürütülebilir kodu içeren bir bloğu içeren bir blok. Kullanıcı arabirimi bloğu, bağımsız kültür için yalnızca dizeler, hata iletileri, iletişim kutuları, menüler, katıştırılmış nesne kaynakları gibi yerelleştirilebilir kullanıcı arabirimi öğelerini içerir. Kod bloğu yalnızca desteklenen tüm kültürler tarafından kullanılacak uygulama kodunu içerir. Ortak dil çalışma zamanı, bir uygulamanın yürütülebilir kodunu kaynaklarından ayıran bir uydu derleme kaynak modeli destekler. Bu modeli uygulama hakkında daha fazla bilgi için bkz. [.net 'Teki kaynaklar](../../../docs/framework/resources/index.md).
+Yerelleştirme için hazır bir uygulama iki kavramsal bloka ayrılır: tüm kullanıcı arabirimi öğelerini içeren bir blok ve yürütülebilir kod içeren bir blok. Kullanıcı arabirimi bloğu, yalnızca dizeleri, hata iletileri, iletişim kutuları, menüler, katıştırılmış nesne kaynakları ve benzeri nötr kültür için gibi yerelleştirilebilir kullanıcı arabirimi öğeleri içerir. Kod bloğu yalnızca desteklenen tüm kültürler tarafından kullanılacak uygulama kodunu içerir. Ortak dil çalışma süresi, bir uygulamanın yürütülebilir kodunu kaynaklarından ayıran bir uydu derleme kaynak modelini destekler. Bu modeli uygulama hakkında daha fazla bilgi için [.NET'teki Kaynaklar'a](../../../docs/framework/resources/index.md)bakın.
 
-Uygulamanızın yerelleştirilmiş her sürümü için, hedef kültür için uygun dile çevrilmiş yerelleştirilmiş kullanıcı arabirimi bloğunu içeren yeni bir uydu derlemesi ekleyin. Tüm kültürlerin kod bloğu aynı kalmalıdır. Kod bloğu ile Kullanıcı arabirimi bloğunun yerelleştirilmiş bir sürümünün birleşimi, uygulamanızın yerelleştirilmiş bir sürümünü oluşturur.
+Uygulamanızın her yerelleştirilmiş sürümü için, hedef kültür için uygun dile çevrilmiş yerelleştirilmiş kullanıcı arabirimi bloğunu içeren yeni bir uydu derlemesi ekleyin. Tüm kültürler için kod bloğu aynı kalmalıdır. Kullanıcı arabirimi bloğunun yerelleştirilmiş bir sürümünün kod bloğuyla birleşimi, uygulamanızın yerelleştirilmiş bir sürümünü oluşturur.
 
-Windows yazılım geliştirme seti (SDK), hedef kültürler için Windows Forms hızlı bir şekilde yerelleştirebilmenizi sağlayan Windows Forms Kaynak Düzenleyicisi 'Ni (Winres. exe) sağlar. Bu aracı kullanma hakkında daha fazla bilgi için bkz. [Winres. exe (Windows Forms Kaynak Düzenleyicisi)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).
+Windows Yazılım Geliştirme Kiti (SDK), hedef kültürler için Windows Formlarını hızla yerelleştirmenize olanak tanıyan Windows Forms Kaynak Düzenleyicisi'ni (Winres.exe) sağlar. Bu aracı kullanma hakkında daha fazla bilgi için [Winres.exe (Windows Forms Resource Editor) (Windows Forms Resource Editor)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Genelleştirme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)
-- [Yerelleştirilebilirlik Gözden Geçirmesi](../../../docs/standard/globalization-localization/localizability-review.md)
+- [Yerelleştirilebilirlik İnceleme](../../../docs/standard/globalization-localization/localizability-review.md)
 - [Genelleştirme](../../../docs/standard/globalization-localization/globalization.md)
-- [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)
+- [Masaüstü Uygulamalarında Kaynaklar](../../../docs/framework/resources/index.md)

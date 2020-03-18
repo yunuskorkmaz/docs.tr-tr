@@ -1,5 +1,5 @@
 ---
-title: .NET normal Ifadelerinde karakter sınıfları
+title: .NET Normal İfadelerde Karakter Sınıfları
 description: .NET normal ifadelerinde bir karakter kümesini temsil etmek için karakter sınıflarını nasıl kullanacağınızı öğrenin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
@@ -13,61 +13,61 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 ms.openlocfilehash: 07bd63c90bc8d78c9831e2007695a232a85111b1
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159344"
 ---
-# <a name="character-classes-in-regular-expressions"></a>Normal ifadelerde karakter sınıfları
+# <a name="character-classes-in-regular-expressions"></a>Normal ifadelerdeki karakter sınıfları
 
-Bir karakter sınıfı, bir eşleşmenin başarılı olması için giriş dizesinde bulunabilecek karakterleri içeren bir karakter kümesi tanımlar. .NET 'teki normal ifade dili aşağıdaki karakter sınıflarını destekler:  
+Bir karakter sınıfı, bir eşleşmenin başarılı olması için giriş dizesinde bulunabilecek karakterleri içeren bir karakter kümesi tanımlar. .NET'teki normal ifade dili aşağıdaki karakter sınıflarını destekler:  
   
-- Pozitif karakter grupları. Giriş dizesindeki bir karakter, belirli bir karakter kümesindekindeki karakterlerden biriyle eşleşmelidir. Daha fazla bilgi için bkz. [pozitif karakter grubu](#PositiveGroup).  
+- Pozitif karakter grupları. Giriş dizesindeki bir karakter, belirli bir karakter kümesindekindeki karakterlerden biriyle eşleşmelidir. Daha fazla bilgi için [Pozitif Karakter Grubu'na](#PositiveGroup)bakın.  
   
-- Negatif karakter grupları. Giriş dizesindeki bir karakter, belirli bir karakter kümesindekindeki karakterlerden biriyle eşleşmemelidir. Daha fazla bilgi için bkz. [negatif karakter grubu](#NegativeGroup).  
+- Negatif karakter grupları. Giriş dizesindeki bir karakter, belirli bir karakter kümesindekindeki karakterlerden biriyle eşleşmemelidir. Daha fazla bilgi için [Negatif Karakter Grubu'na](#NegativeGroup)bakın.  
   
-- Herhangi bir karakter. Normal ifadede `.` (nokta veya nokta) karakteri, `\n`dışında herhangi bir karakterle eşleşen bir joker karakterdir. Daha fazla bilgi için, bkz. [herhangi bir karakter](#AnyCharacter).  
+- Herhangi bir karakter. Normal `.` bir ifadedeki (nokta veya nokta) karakter, `\n`hariç herhangi bir karakterle eşleşen bir joker karakterdir. Daha fazla bilgi için [Herhangi Bir Karakter'e](#AnyCharacter)bakın.  
   
-- Genel bir Unicode kategorisi veya adlandırılmış blok. Giriş dizesindeki bir karakter, eşleşmenin başarılı olması için belirli bir Unicode kategorisinin üyesi veya bir bitişik Unicode karakterleri aralığında olmalıdır. Daha fazla bilgi için bkz. [Unicode kategorisi veya Unicode bloğu](#CategoryOrBlock).  
+- Genel bir Unicode kategorisi veya adlandırılmış blok. Giriş dizesindeki bir karakter, eşleşmenin başarılı olması için belirli bir Unicode kategorisinin üyesi veya bir bitişik Unicode karakterleri aralığında olmalıdır. Daha fazla bilgi için [Unicode Kategorisi veya Unicode Bloğu'na](#CategoryOrBlock)bakın.  
   
-- Negatif bir Unicode kategorisi veya adlandırılmış blok. Giriş dizesindeki bir karakter, eşleşmenin başarılı olması için belirli bir Unicode kategorisinin üyesi veya bir bitişik Unicode karakterleri aralığında olmamalıdır. Daha fazla bilgi için bkz. [negatif Unicode kategorisi veya Unicode bloğu](#NegativeCategoryOrBlock).  
+- Negatif bir Unicode kategorisi veya adlandırılmış blok. Giriş dizesindeki bir karakter, eşleşmenin başarılı olması için belirli bir Unicode kategorisinin üyesi veya bir bitişik Unicode karakterleri aralığında olmamalıdır. Daha fazla bilgi için [Negatif Unicode Kategorisi veya Unicode Bloğu'na](#NegativeCategoryOrBlock)bakın.  
   
-- Bir sözcük karakteri. Giriş dizesindeki bir karakter, sözcüklerdeki karakterler için uygun olan herhangi bir Unicode kategorisine ait olabilir. Daha fazla bilgi için bkz. [sözcük karakteri](#WordCharacter).  
+- Bir sözcük karakteri. Giriş dizesindeki bir karakter, sözcüklerdeki karakterler için uygun olan herhangi bir Unicode kategorisine ait olabilir. Daha fazla bilgi için [Word Karakteri'ne](#WordCharacter)bakın.  
   
-- Sözcük olmayan karakter. Giriş dizesindeki bir karakter, sözcük karakteri olmayan herhangi bir Unicode kategorisine ait olabilir. Daha fazla bilgi için, bkz. [sözcük olmayan karakter](#NonWordCharacter).  
+- Sözcük olmayan karakter. Giriş dizesindeki bir karakter, sözcük karakteri olmayan herhangi bir Unicode kategorisine ait olabilir. Daha fazla bilgi için Word [Olmayan Karakter'e](#NonWordCharacter)bakın.  
   
-- Boşluk karakteri. Giriş dizesindeki bir karakter herhangi bir Unicode ayıraç karakteri veya herhangi bir denetim karakteri olabilir. Daha fazla bilgi için bkz. boşluk [karakteri](#WhitespaceCharacter).  
+- Boşluk karakteri. Giriş dizesindeki bir karakter herhangi bir Unicode ayıraç karakteri veya herhangi bir denetim karakteri olabilir. Daha fazla bilgi için [Beyaz Boşluk Karakteri'ne](#WhitespaceCharacter)bakın.  
   
-- Boşluk olmayan karakter. Giriş dizesindeki bir karakter boşluk karakteri olmayan herhangi bir karakter olabilir. Daha fazla bilgi için bkz. [boşluk olmayan karakter](#NonWhitespaceCharacter).  
+- Boşluk olmayan karakter. Giriş dizesindeki bir karakter boşluk karakteri olmayan herhangi bir karakter olabilir. Daha fazla bilgi için Beyaz [Olmayan Boşluk Karakteri'ne](#NonWhitespaceCharacter)bakın.  
   
-- Ondalık basamak. Giriş dizesindeki bir karakter Unicode ondalık basamakları olarak sınıflandırılan karakterlerden biri olabilir. Daha fazla bilgi için bkz. [ondalık basamak karakteri](#DigitCharacter).  
+- Ondalık basamak. Giriş dizesindeki bir karakter Unicode ondalık basamakları olarak sınıflandırılan karakterlerden biri olabilir. Daha fazla bilgi için bkz: [Ondalık Basamak Karakteri.](#DigitCharacter)  
   
-- Ondalık olmayan basamak. Giriş dizesindeki bir karakter, bir Unicode basamak karakteri dışındaki herhangi bir karakter olabilir. Daha fazla bilgi için bkz. [ondalık basamak karakteri](#NonDigitCharacter).  
+- Ondalık olmayan basamak. Giriş dizesindeki bir karakter, bir Unicode basamak karakteri dışındaki herhangi bir karakter olabilir. Daha fazla bilgi için bkz: [Ondalık Basamak Karakteri.](#NonDigitCharacter)  
   
- .NET, bir karakter sınıfının başka bir karakter sınıfından dışlanması sonucu olarak bir karakter kümesi tanımlamanızı sağlayan karakter sınıfı çıkarma ifadelerini destekler. Daha fazla bilgi için bkz. [karakter sınıfı çıkarma](#CharacterClassSubtraction).  
+ .NET, bir karakter sınıfını başka bir karakter sınıfından dışlamanın sonucu olarak bir karakter kümesi tanımlamanızı sağlayan karakter sınıfı çıkarma ifadelerini destekler. Daha fazla bilgi için [Bkz. Karakter Sınıfı Çıkarma.](#CharacterClassSubtraction)  
   
 > [!NOTE]
-> Bir Unicode kategorisiyle eşleşmek üzere sözcük karakterlerini veya [\p{}](#CategoryOrBlock) eşlemek için [\w](#WordCharacter) gibi karakter sınıfları, karakter kategorileri hakkında bilgi sağlamak için <xref:System.Globalization.CharUnicodeInfo> sınıfına bağımlıdır.  .NET Framework 4.6.2 başlayarak, karakter kategorileri [Unicode standardı, sürüm 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/)' i temel alır. .NET Framework 4.6.1 aracılığıyla .NET Framework 4 ' te, [Unicode standardı, sürüm 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/)tabanlıdır.  
+> Karakter kategorilerine göre eşleşen karakter sınıfları [,sözcük](#WordCharacter) karakterlerini eşleştirmek için \w veya Unicode kategorisiyle eşleşecek [{} \p,](#CategoryOrBlock) karakter kategorileri hakkında bilgi sağlamak için <xref:System.Globalization.CharUnicodeInfo> sınıfa güvenir.  .NET Framework 4.6.2 ile başlayarak, karakter [kategorileri Unicode Standardı, Sürüm 8.0.0'a](https://www.unicode.org/versions/Unicode8.0.0/)göre dir. .NET Framework 4.6.1 ile .NET Framework 4'te, [Unicode Standardı, Sürüm 6.3.0'a](https://www.unicode.org/versions/Unicode6.3.0/)dayanmaktadır.  
   
 <a name="PositiveGroup"></a>
-## <a name="positive-character-group--"></a>Pozitif karakter grubu: []  
+## <a name="positive-character-group--"></a>Pozitif karakter grubu: [ ]  
  Bir pozitif karakter grubu, eşleşme olabilmesi için giriş dizesinde bulunabilecek karakterlerin listesini belirtir. Bu karakterler tek tek, bir aralık olarak veya her iki şekilde de belirtilebilir.  
   
  Karakterlerin tek tek bulunduğu bir listeyi belirtmek için kullanılan söz dizimi aşağıdaki gibidir:  
 
 `[*character_group*]`
 
- Burada *character_group* , bir eşleşmenin başarılı olması için giriş dizesinde görünebilen tek karakterlerin bir listesidir. *character_group* , bir veya daha fazla sabit karakter, [kaçış karakteri](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)veya karakter sınıflarının herhangi bir birleşimini içerebilir.  
+ *character_group* bir eşleşmenin başarılı olması için giriş dizesinde görünebilecek tek tek karakterlerin listesidir. *character_group* bir veya daha fazla edebi karakter, [kaçış karakterleri](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)veya karakter sınıfları herhangi bir kombinasyonu oluşabilir.  
   
  Bir karakter aralığı belirtmek için kullanılan söz dizimi aşağıdaki gibidir:  
   
 `[firstCharacter-lastCharacter]`  
   
- Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralığı sonlandıran karakterdir. Bir karakter aralığı serideki ilk karakter, tire işareti (-) ve ardından serideki son karakterle belirtilen bitişik karakter dizisidir. İki karakter, eğer bitişik Unicode kod noktaları var ise bitişiktir. *Firstcharacter* , alt kod noktası olan karakter olmalıdır ve *lastcharacter* , daha yüksek kod noktası olan karakter olmalıdır.
+ *burada firstCharacter* aralığı başlatan karakter ve *lastCharacter* aralığı sona erdileyen karakterdir. Bir karakter aralığı serideki ilk karakter, tire işareti (-) ve ardından serideki son karakterle belirtilen bitişik karakter dizisidir. İki karakter, eğer bitişik Unicode kod noktaları var ise bitişiktir. *firstCharacter* alt kod noktasına sahip karakter olmalı ve *lastCharacter* daha yüksek kod noktasına sahip karakter olmalıdır.
 
 > [!NOTE]
-> Pozitif bir karakter grubu hem bir karakter kümesi hem de bir karakter aralığı içerebildiğinden, grubun ilk veya son karakteri olmadığı sürece bir tire karakteri (`-`) her zaman Aralık ayırıcısı olarak yorumlanır.
+> Pozitif karakter grubu hem bir karakter kümesini hem de karakter aralığını`-`içerebildiği için, tire karakteri ( ) grubun ilk veya son karakteri olmadığı sürece her zaman aralık ayırıcısı olarak yorumlanır.
 
 Pozitif karakter sınıflarını içeren bazı sık kullanılan normal ifade desenleri aşağıdaki tabloda listelenmiştir.  
   
@@ -75,14 +75,14 @@ Pozitif karakter sınıflarını içeren bazı sık kullanılan normal ifade des
 |-------------|-----------------|  
 |`[aeiou]`|Tüm sesli harflerle eşleş.|  
 |`[\p{P}\d]`|Tüm noktalama işaretleriyle ve ondalık basamak işaretleriyle eşleş.|  
-|`[\s\p{P}]`|Tüm boşluk ve noktalama işaretlerini eşleştirin.|  
+|`[\s\p{P}]`|Tüm beyaz boşluk ve noktalama maç.|  
   
  Aşağıdaki örnek "a" ve "e" karakterlerini içerek bir pozitif karakterler grubu tanımlar ve eşleşmenin gerçekleşmesi için giriş dizesinde "grey" veya "gray" sözcüklerinin ardından bir sözcük daha bulunmasını gerektirir.  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/positivecharclasses.cs#1)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/positivecharclasses.vb#1)]  
   
- `gr[ae]y\s\S+?[\s|\p{P}]` normal ifade aşağıdaki gibi tanımlanır:  
+ Normal ifade `gr[ae]y\s\S+?[\s|\p{P}]` aşağıdaki gibi tanımlanır:  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
@@ -92,12 +92,12 @@ Pozitif karakter sınıflarını içeren bazı sık kullanılan normal ifade des
 |`\S+?`|Bir veya daha fazla boşluk olmayan karakterle, ama olabildiğince az sayıda olanla eşleş.|  
 |`[\s\p{P}]`|Bir boşluk karakteri veya noktalama işaretiyle eşleş.|  
   
- Aşağıdaki örnek büyük harf ile başlayan sözcüklerle eşleşir. A 'dan Z 'ye kadar büyük harflerin aralığını temsil etmek için `[A-Z]` alt ifadeyi kullanır.  
+ Aşağıdaki örnek büyük harf ile başlayan sözcüklerle eşleşir. A'dan Z'ye büyük harf aralığını temsil etmek için alt ifadeyi `[A-Z]` kullanır.  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/range.cs#3)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/range.vb#3)]  
   
- `\b[A-Z]\w*\b` normal ifade aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
+ Normal ifade `\b[A-Z]\w*\b` aşağıdaki tabloda gösterildiği gibi tanımlanır.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
@@ -114,20 +114,20 @@ Karakterlerin tek tek bulunduğu bir listeyi belirtmek için kullanılan söz di
 
 `[*^character_group*]`
 
- Burada *character_group* , bir eşleşmenin başarılı olması için giriş dizesinde görünmeyen tek karakterlerin bir listesidir. *character_group* , bir veya daha fazla sabit karakter, [kaçış karakteri](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)veya karakter sınıflarının herhangi bir birleşimini içerebilir.  
+ *character_group,* bir eşleşmenin başarılı olması için giriş dizesinde görünemeyen tek tek karakterlerin listesidir. *character_group* bir veya daha fazla edebi karakter, [kaçış karakterleri](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)veya karakter sınıfları herhangi bir kombinasyonu oluşabilir.  
   
  Bir karakter aralığı belirtmek için kullanılan söz dizimi aşağıdaki gibidir:  
 
 `[^*firstCharacter*-*lastCharacter*]`
 
-Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralığı sonlandıran karakterdir. Bir karakter aralığı serideki ilk karakter, tire işareti (-) ve ardından serideki son karakterle belirtilen bitişik karakter dizisidir. İki karakter, eğer bitişik Unicode kod noktaları var ise bitişiktir. *Firstcharacter* , alt kod noktası olan karakter olmalıdır ve *lastcharacter* , daha yüksek kod noktası olan karakter olmalıdır.
+*burada firstCharacter* aralığı başlatan karakter ve *lastCharacter* aralığı sona erdileyen karakterdir. Bir karakter aralığı serideki ilk karakter, tire işareti (-) ve ardından serideki son karakterle belirtilen bitişik karakter dizisidir. İki karakter, eğer bitişik Unicode kod noktaları var ise bitişiktir. *firstCharacter* alt kod noktasına sahip karakter olmalı ve *lastCharacter* daha yüksek kod noktasına sahip karakter olmalıdır.
 
 > [!NOTE]
-> Negatif bir karakter grubu hem bir karakter kümesi hem de bir karakter aralığı içerebildiğinden, grubun ilk veya son karakteri olmadığı sürece bir tire karakteri (`-`) her zaman Aralık ayırıcısı olarak yorumlanır.
+> Negatif karakter grubu hem bir karakter kümesini hem de karakter aralığını`-`içerebildiği için, tire karakteri ( ) grubun ilk veya son karakteri olmadığı sürece her zaman aralık ayırıcısı olarak yorumlanır.
   
- İki veya daha fazla karakter aralığı birleştirilebilir. Örneğin, "0" ile "9" arasındaki ondalık basamak aralığını, "a" ile "f" arasındaki küçük harflerin aralığını ve "A" ile "F" arasındaki büyük harflerin aralığını belirtmek için `[0-9a-fA-F]`kullanın.  
+ İki veya daha fazla karakter aralığı birleştirilebilir. Örneğin, ondalık basamak aralığını belirtmek için "0" ile "9" arasında, "a"dan "f"e kadar küçük harflerin aralığı nı ve "A"dan "F"e kadar olan büyük harflerin aralığını kullanın. `[0-9a-fA-F]`  
   
- Negatif bir karakter grubundaki önde gelen giriş işareti karakteri (`^`) zorunludur ve karakter grubunun pozitif karakter grubu yerine negatif bir karakter grubu olduğunu gösterir.  
+ Negatif karakter grubundaki`^`önde gelen caret karakteri ( ) zorunludur ve karakter grubunun pozitif karakter grubu yerine negatif karakter grubu olduğunu gösterir.  
   
 > [!IMPORTANT]
 > Büyük bir normal ifade deseninde bulunan bir negatif karakter grubu, sıfır genişlikli onay değildir. Yani, normal ifade motoru negatif karakter grubunu değerlendirdikten sonra giriş dizesinde bir karakter ilerler.  
@@ -144,7 +144,7 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/negativecharclasses.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/negativecharclasses.vb#2)]  
   
- `\bth[^o]\w+\b` normal ifade aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
+ Normal ifade `\bth[^o]\w+\b` aşağıdaki tabloda gösterildiği gibi tanımlanır.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
@@ -155,43 +155,43 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
 |`\b`|Bir sözcük sınırında bit.|  
   
 <a name="AnyCharacter"></a>
-## <a name="any-character-"></a>Herhangi bir karakter:.  
- Nokta karakteri (.), aşağıdaki iki nitelikle `\n` (yeni satır karakteri, \u000A) dışında herhangi bir karakterle eşleşir:  
+## <a name="any-character-"></a>Herhangi bir karakter: .  
+ Dönem karakteri (.) aşağıdaki `\n` iki nitelik le (yeni çizgi karakteri, \u000A) dışında herhangi bir karakterle eşleşir:  
   
-- Bir normal ifade deseninin <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> seçeneği tarafından değiştirilmesi veya `.` karakter sınıfını içeren deseninin bölümü `s` seçeneği tarafından değiştirilmişse, `.` herhangi bir karakterle eşleşir. Daha fazla bilgi için bkz. [normal Ifade seçenekleri](../../../docs/standard/base-types/regular-expression-options.md).  
+- Normal bir ifade deseni <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> seçenek tarafından değiştirilirse veya `.` karakter sınıfını içeren desen `s` bölümü `.` seçenek tarafından değiştirilirse, herhangi bir karakterle eşleşir. Daha fazla bilgi için [Düzenli İfade Seçenekleri'ne](../../../docs/standard/base-types/regular-expression-options.md)bakın.  
   
-     Aşağıdaki örnek, varsayılan olarak ve <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> seçeneğiyle `.` karakter sınıfının farklı davranışını gösterir. Normal ifade `^.+` dizenin başlangıcında başlar ve her karakterle eşleşir. Varsayılan olarak eşleştirme, ilk satırın sonunda biter; normal ifade deseninin satır dönüş karakteriyle `\r` veya \u000D ile eşleşmesi, ancak `\n`eşleşmez. <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> seçeneği giriş dizesinin tamamını tek bir satır olarak yorumladığından, `\n`dahil olmak üzere giriş dizesindeki her karakterle eşleşir.  
+     Aşağıdaki örnekte, varsayılan olarak `.` ve seçenekle karakter <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> sınıfının farklı davranışını gösterin. Normal ifade `^.+` dize başında başlar ve her karakter eşleşir. Varsayılan olarak, eşleşme ilk satırın sonunda sona erer; normal ifade deseni satır başı `\r` karakteriyle veya \u000D `\n`ile eşleşir, ancak bu durum . <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> Seçenek tüm giriş dizesini tek bir satır olarak yorumladığı için, giriş dizesindeki her karakterle `\n`eşleşir.  
   
      [!code-csharp[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any2.cs#5)]
      [!code-vb[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any2.vb#5)]  
   
 > [!NOTE]
-> `\n`dışında herhangi bir karakterle eşleştiğinden `.` karakter sınıfı da `\r` (satır başı karakteri, \u000D) ile eşleşir.  
+> Dışında herhangi bir `\n`karakter `.` eşleştiğinden, `\r` karakter sınıfı da eşleşir (satır başı karakteri, \u000D).  
   
-- Bir pozitif veya negatif karakter grubunda, nokta bir karakter sınıfı yerine sabit karakter olarak kabul edilir. Daha fazla bilgi için bu konunun önceki kısımlarında yer alarak [pozitif karakter grubu](#PositiveGroup) ve [negatif karakter grubu](#NegativeGroup) konularına bakın. Aşağıdaki örnek, nokta karakterini (`.`) hem bir karakter sınıfı hem de bir pozitif karakter grubunun üyesi olarak içeren bir normal ifade tanımlayarak bir çizim sağlar. Normal ifade `\b.*[.?!;:](\s|\z)` bir sözcük sınırında başlar, bir nokta dahil olmak üzere beş noktalama işaretinden biriyle karşılaşana kadar herhangi bir karakterle eşleşir ve sonra bir boşluk karakteri veya dizenin sonuyla eşleşir.  
+- Bir pozitif veya negatif karakter grubunda, nokta bir karakter sınıfı yerine sabit karakter olarak kabul edilir. Daha fazla bilgi için bu konunun başında [Pozitif Karakter Grubu](#PositiveGroup) ve Negatif Karakter [Grubu'na](#NegativeGroup) bakın. Aşağıdaki örnek, hem karakter sınıfı hem de pozitif karakter`.`grubunun bir üyesi olarak dönem karakterini içeren normal bir ifade tanımlayarak bir illüstrasyon sağlar. Normal ifade `\b.*[.?!;:](\s|\z)` bir sözcük sınırında başlar, bir noktalama işaretinden biriyle karşılaşAna kadar herhangi bir karakterle eşleşir ve sonra bir beyaz boşluk karakteriyle veya dize sonuyla eşleşir.  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
-> Herhangi bir karakterle eşleştiğinden `.` Language öğesi genellikle bir normal ifade deseninin herhangi bir karakteri birden çok kez eşleştirmeye çalışırsa bir yavaş nicelik karakteriyle birlikte kullanılır. Daha fazla bilgi için bkz. [nicelik belirteçleri](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+> Herhangi bir karakterle `.` eşleştiğinden, normal bir ifade deseni herhangi bir karakteri birden çok kez eşleştirmeye çalışırsa, dil öğesi genellikle tembel bir niceleme ile kullanılır. Daha fazla bilgi için, [bkz.](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
   
 <a name="CategoryOrBlock"></a>
-## <a name="unicode-category-or-unicode-block-p"></a>Unicode kategorisi veya Unicode bloğu: \p{}  
- Unicode standardı her karakteri genel bir kategoriye atar. Örneğin, belirli bir karakter büyük harf (`Lu` kategorisi tarafından temsil edilir), ondalık basamak (`Nd` kategorisi), matematik simgesi (`Sm` kategorisi) veya paragraf ayırıcı (`Zl` kategorisi) olabilir. Unicode standardındaki belirli karakter kümeleri ayrıca birbirini izleyen kod noktalarının belirli bir aralığını veya bloğunu kaplar. Örneğin, temel Latin karakter kümesi \u0000 ile \u007F arasındayken, Arapça karakter kümesi \u0600 ile \u06FF arasındadır.  
+## <a name="unicode-category-or-unicode-block-p"></a>Unicode kategori veya Unicode blok: \p{}  
+ Unicode standardı her karakteri genel bir kategoriye atar. Örneğin, belirli bir karakter büyük `Lu` harf (kategoriye göre temsil edilir), ondalık basamak `Nd` (kategori), `Sm` matematik sembolü (kategori) `Zl` veya paragraf ayırıcısı (kategori) olabilir. Unicode standardındaki belirli karakter kümeleri ayrıca birbirini izleyen kod noktalarının belirli bir aralığını veya bloğunu kaplar. Örneğin, temel Latin karakter kümesi \u0000 ile \u007F arasındayken, Arapça karakter kümesi \u0600 ile \u06FF arasındadır.  
   
  Normal ifade yapısı  
   
- `\p{` *adı* `}`  
+ `\p{`*isim*`}`  
   
- bir Unicode genel kategorisine veya adlandırılmış bloğa ait olan herhangi bir karakterle eşleşir; burada *ad* kategori kısaltması veya adlandırılmış blok adıdır. Kategori kısaltmalarının listesi için, bu konunun ilerleyen kısımlarında [desteklenen Unicode genel kategorileri](#SupportedUnicodeGeneralCategories) bölümüne bakın. Adlandırılmış blokların listesi için, bu konunun ilerleyen kısımlarında [desteklenen adlandırılmış bloklar](#SupportedNamedBlocks) bölümüne bakın.  
+ ad kategori kısaltması veya adlandırılmış blok adı *olan* Unicode genel kategorisine veya adlandırılmış bloğa ait herhangi bir karakterle eşleşir. Kategori kısaltmaları listesi için, bu konunun ilerleyen bölümlerinde [desteklenen Unicode Genel Kategoriler](#SupportedUnicodeGeneralCategories) bölümüne bakın. Adlandırılmış blokların listesi için, bu konunun ilerleyen bölümlerinde [desteklenen Adlandırılmış Bloklar](#SupportedNamedBlocks) bölümüne bakın.  
   
- Aşağıdaki örnek, bir Unicode Genel kategorisini (Bu durumda, `Pd`veya noktalama Işareti, Dash kategorisi) ve adlandırılmış bir bloğu (`IsGreek` ve `IsBasicLatin` adlandırılmış bloklar) eşleştirmek için `\p{`*adı*`}` yapısını kullanır.  
+ Aşağıdaki örnek, `\p{`hem Unicode genel kategorisi (bu `Pd`durumda, veya Noktalama, Tire kategorisi) hem de adlandırılmış `IsGreek` `IsBasicLatin` bir bloğu (ve adlı blokları) eşleştirmek için *ad* `}` yapısını kullanır.  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/category1.cs#6)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/category1.vb#6)]  
   
- `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` normal ifade aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
+ Normal ifade `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` aşağıdaki tabloda gösterildiği gibi tanımlanır.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
@@ -206,25 +206,25 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
 |`(\p{IsBasicLatin}+(\s)?)+`|Bir veya daha fazla kere, bir veya daha fazla temel Latin karakterinin ardından sıfır veya bir boşluk karakteri deseniyle eşleş.|  
   
 <a name="NegativeCategoryOrBlock"></a>
-## <a name="negative-unicode-category-or-unicode-block-p"></a>Negatif Unicode kategorisi veya Unicode bloğu: \p{}  
- Unicode standardı her karakteri genel bir kategoriye atar. Örneğin, belirli bir karakter büyük harf (`Lu` kategorisi tarafından temsil edilir), ondalık basamak (`Nd` kategorisi), matematik simgesi (`Sm` kategorisi) veya paragraf ayırıcı (`Zl` kategorisi) olabilir. Unicode standardındaki belirli karakter kümeleri ayrıca birbirini izleyen kod noktalarının belirli bir aralığını veya bloğunu kaplar. Örneğin, temel Latin karakter kümesi \u0000 ile \u007F arasındayken, Arapça karakter kümesi \u0600 ile \u06FF arasındadır.  
+## <a name="negative-unicode-category-or-unicode-block-p"></a>Negatif Unicode kategorisi veya Unicode bloğu: \P{}  
+ Unicode standardı her karakteri genel bir kategoriye atar. Örneğin, belirli bir karakter büyük `Lu` harf (kategoriye göre temsil edilir), ondalık basamak `Nd` (kategori), `Sm` matematik sembolü (kategori) `Zl` veya paragraf ayırıcısı (kategori) olabilir. Unicode standardındaki belirli karakter kümeleri ayrıca birbirini izleyen kod noktalarının belirli bir aralığını veya bloğunu kaplar. Örneğin, temel Latin karakter kümesi \u0000 ile \u007F arasındayken, Arapça karakter kümesi \u0600 ile \u06FF arasındadır.  
   
  Normal ifade yapısı  
   
- `\P{` *adı* `}`  
+ `\P{`*isim*`}`  
   
- bir Unicode genel kategorisine veya adlandırılmış bloğa ait olmayan herhangi bir karakterle eşleşir; burada *ad* kategori kısaltması veya adlandırılmış blok adıdır. Kategori kısaltmalarının listesi için, bu konunun ilerleyen kısımlarında [desteklenen Unicode genel kategorileri](#SupportedUnicodeGeneralCategories) bölümüne bakın. Adlandırılmış blokların listesi için, bu konunun ilerleyen kısımlarında [desteklenen adlandırılmış bloklar](#SupportedNamedBlocks) bölümüne bakın.  
+ ad kategori kısaltması veya adlandırılmış blok adı *olan* Unicode genel kategorisine veya adlandırılmış bloğa ait olmayan herhangi bir karakterle eşleşir. Kategori kısaltmaları listesi için, bu konunun ilerleyen bölümlerinde [desteklenen Unicode Genel Kategoriler](#SupportedUnicodeGeneralCategories) bölümüne bakın. Adlandırılmış blokların listesi için, bu konunun ilerleyen bölümlerinde [desteklenen Adlandırılmış Bloklar](#SupportedNamedBlocks) bölümüne bakın.  
   
- Aşağıdaki örnek, sayısal dizelerdeki herhangi bir para birimi simgesini (Bu örnekte, `Sc`veya symbol, para birimi kategorisi) kaldırmak için `\P{`*adı*`}` yapısını kullanır.  
+ Aşağıdaki örnek, `\P{`sayısal dizelerden herhangi bir para birimi `Sc`simgesini (bu durumda, , veya Sembol, Para Birimi kategorisi) kaldırmak için *ad* `}` yapısını kullanır.  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/notcategory1.cs#7)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/notcategory1.vb#7)]  
   
- Normal ifade deseninin `(\P{Sc})+`, para birimi sembolleri olmayan bir veya daha fazla karakterle eşleşir; Sonuç dizesinden herhangi bir para birimi sembolünü etkin bir şekilde şeritler.  
+ Normal ifade `(\P{Sc})+` deseni, para birimi sembolü olmayan bir veya daha fazla karakterle eşleşir; herhangi bir para birimi simgesini sonuç dizesinden etkili bir şekilde sıyırıyor.  
   
 <a name="WordCharacter"></a>
-## <a name="word-character-w"></a>Sözcük karakteri: \w  
- `\w` herhangi bir kelime karakteriyle eşleşir. Bir sözcük karakteri, aşağıdaki tabloda listelenen Unicode kategorilerinin herhangi birinin üyesidir.  
+## <a name="word-character-w"></a>Kelime karakteri: \w  
+ `\w`herhangi bir kelime karakteri yle eşleşir. Bir sözcük karakteri, aşağıdaki tabloda listelenen Unicode kategorilerinin herhangi birinin üyesidir.  
   
 |Kategori|Açıklama|  
 |--------------|-----------------|  
@@ -237,12 +237,12 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
 |Nd|Sayı, Ondalık Basamak|  
 |Pc|Noktalama, Bağlayıcı. Bu kategori on karakter içerir ve bu karakterlerin en sık kullanılanı alt çizgi karakteridir (_), u+005F.|  
   
- ECMAScript uyumlu davranış belirtilmişse, `\w` `[a-zA-Z_0-9]`eşdeğerdir. ECMAScript normal ifadeleri hakkında daha fazla bilgi için [normal Ifade seçeneklerinde](../../../docs/standard/base-types/regular-expression-options.md)"ECMAScript eşleştirme davranışı" bölümüne bakın.  
+ ECMAScript uyumlu davranış belirtilirse, `\w` `[a-zA-Z_0-9]`'ye eşdeğerdir. ECMAScript normal ifadeleri hakkında bilgi [için, Normal İfade Seçenekleri'ndeki](../../../docs/standard/base-types/regular-expression-options.md)"ECMAScript Eşleştirme Davranışı" bölümüne bakın.  
   
 > [!NOTE]
-> Herhangi bir kelime karakteriyle eşleştiği için, bir normal ifade deseninin her bir sözcük karakterini birden çok kez ve ardından belirli bir sözcük karakteri ile eşleştirmeye çalışırsa, `\w` Language öğesi genellikle bir yavaş belirleyici ile birlikte kullanılır. Daha fazla bilgi için bkz. [nicelik belirteçleri](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+> Herhangi bir sözcük karakteriyle eşleştiğinden, normal bir ifade deseni herhangi bir sözcük karakterini birden çok kez eşleştirmeye çalışırsa ve ardından belirli bir sözcük karakteri yle birlikte `\w` dil öğesi genellikle tembel bir niceleme ile kullanılır. Daha fazla bilgi için, [bkz.](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
   
- Aşağıdaki örnek, bir sözcükteki yinelenen karakterleri eşleştirmek için `\w` Language öğesini kullanır. Örnek, `(\w)\1`bir normal ifade deseninin tanımlar, bu, aşağıdaki şekilde yorumlanabilir.  
+ Aşağıdaki örnek, `\w` sözcükteki yinelenen karakterleri eşleştirmek için dil öğesini kullanır. Örnek, `(\w)\1`aşağıdaki gibi yorumlanabilecek normal bir ifade deseni tanımlar.  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
@@ -253,12 +253,12 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/wordchar1.vb#8)]  
   
 <a name="NonWordCharacter"></a>
-## <a name="non-word-character-w"></a>Sözcük olmayan karakter: \w  
- `\W` sözcük olmayan herhangi bir karakterle eşleşir. \W dil öğesi aşağıdaki karakter sınıfıyla eşdeğerdir:  
+## <a name="non-word-character-w"></a>Sözcük dışı karakter: \W  
+ `\W`sözcük içermeyen karakterlerle eşleşir. \W dil öğesi aşağıdaki karakter sınıfıyla eşdeğerdir:  
   
 `[^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`  
   
- Diğer bir deyişle, aşağıdaki tabloda listelenen Unicode kategorilerindekiler dışında herhangi bir karakterle eşleşir.  
+ Başka bir deyişle, aşağıdaki tabloda listelenen Unicode kategorilerinde olanlar dışında herhangi bir karakter eşleşir.  
   
 |Kategori|Açıklama|  
 |--------------|-----------------|  
@@ -271,12 +271,12 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
 |Nd|Sayı, Ondalık Basamak|  
 |Pc|Noktalama, Bağlayıcı. Bu kategori on karakter içerir ve bu karakterlerin en sık kullanılanı alt çizgi karakteridir (_), u+005F.|  
   
- ECMAScript uyumlu davranış belirtilmişse, `\W` `[^a-zA-Z_0-9]`eşdeğerdir. ECMAScript normal ifadeleri hakkında daha fazla bilgi için [normal Ifade seçeneklerinde](../../../docs/standard/base-types/regular-expression-options.md)"ECMAScript eşleştirme davranışı" bölümüne bakın.  
+ ECMAScript uyumlu davranış belirtilirse, `\W` `[^a-zA-Z_0-9]`'ye eşdeğerdir. ECMAScript normal ifadeleri hakkında bilgi [için, Normal İfade Seçenekleri'ndeki](../../../docs/standard/base-types/regular-expression-options.md)"ECMAScript Eşleştirme Davranışı" bölümüne bakın.  
   
 > [!NOTE]
-> Sözcük olmayan herhangi bir karakterle eşleştiğinden, bir normal ifade deseninin sözcük olmayan herhangi bir karakterle birden çok kez ve ardından belirli bir sözcük olmayan karakterle eşleşmesi deneniyorsa, `\W` Language öğesi genellikle bir yavaş belirleyici ile birlikte kullanılır. Daha fazla bilgi için bkz. [nicelik belirteçleri](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+> Sözcük dışı herhangi bir karakterle eşleştiğinden, normal bir ifade deseni sözcük olmayan herhangi bir karakteri birden çok kez eşleştirmeye çalışırsa, `\W` dil öğesi genellikle tembel bir nicelemeile kullanılır ve ardından belirli bir sözcük dışı karakter kullanılır. Daha fazla bilgi için, [bkz.](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
   
- Aşağıdaki örnekte `\W` karakter sınıfı gösterilmektedir.  Bir sözcüğe ve ardından boşluk veya noktalama gibi bir veya iki sözcük olmayan karakterle eşleşen bir normal ifade deseninin `\b(\w+)(\W){1,2}`tanımlar. Normal ifade aşağıdaki tabloda gösterildiği gibi yorumlanır.  
+ Aşağıdaki örnek, karakter `\W` sınıfını göstermektedir.  Normal bir ifade deseni `\b(\w+)(\W){1,2}`tanımlar, beyaz boşluk veya noktalama gibi bir veya iki sözcük olmayan karakter, ardından bir sözcük eşleşen. Normal ifade aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
@@ -287,11 +287,11 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nonwordchar1.cs#9)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nonwordchar1.vb#9)]  
   
- İkinci yakalama grubunun <xref:System.Text.RegularExpressions.Group> nesnesi yalnızca tek bir yakalanan sözcük olmayan karakter içerdiğinden, örnek, <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> özelliği tarafından döndürülen <xref:System.Text.RegularExpressions.CaptureCollection> nesnesinden yakalanan tüm sözcük olmayan karakterleri alır.  
+ İkinci <xref:System.Text.RegularExpressions.Group> yakalama grubunun nesnesi yalnızca tek bir yakalanan sözcük olmayan karakter içerdiğinden, örnek, <xref:System.Text.RegularExpressions.CaptureCollection> <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> yakalanan tüm sözcük olmayan karakterleri özellik tarafından döndürülen nesneden alır.  
   
 <a name="WhitespaceCharacter"></a>
-## <a name="whitespace-character-s"></a>Boşluk karakteri: \s  
- `\s` herhangi bir boşluk karakteriyle eşleşir. Aşağıdaki tabloda listelenen kaçış dizileri ve Unicode kategorileriyle eşdeğerdir.  
+## <a name="whitespace-character-s"></a>Beyaz boşluk karakteri: \s  
+ `\s`herhangi bir whitespace karakteriyle eşleşir. Aşağıdaki tabloda listelenen kaçış dizileri ve Unicode kategorileriyle eşdeğerdir.  
   
 |Kategori|Açıklama|  
 |--------------|-----------------|  
@@ -303,9 +303,9 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
 |`\x85`|Üç nokta veya sonraki satır (NEL) karakteri (...), \u0085.|  
 |`\p{Z}`|Herhangi bir ayıraç karakterle eşleşir.|  
   
- ECMAScript uyumlu davranış belirtilmişse, `\s` `[ \f\n\r\t\v]`eşdeğerdir. ECMAScript normal ifadeleri hakkında daha fazla bilgi için [normal Ifade seçeneklerinde](../../../docs/standard/base-types/regular-expression-options.md)"ECMAScript eşleştirme davranışı" bölümüne bakın.  
+ ECMAScript uyumlu davranış belirtilirse, `\s` `[ \f\n\r\t\v]`'ye eşdeğerdir. ECMAScript normal ifadeleri hakkında bilgi [için, Normal İfade Seçenekleri'ndeki](../../../docs/standard/base-types/regular-expression-options.md)"ECMAScript Eşleştirme Davranışı" bölümüne bakın.  
   
- Aşağıdaki örnekte `\s` karakter sınıfı gösterilmektedir. "S" veya "es" ile biten bir sözcükle, ardından bir boşluk karakteri veya giriş dizesinin sonu ile eşleşen bir normal ifade deseninin `\b\w+(e)?s(\s|$)`tanımlar. Normal ifade aşağıdaki tabloda gösterildiği gibi yorumlanır.  
+ Aşağıdaki örnek, karakter `\s` sınıfını göstermektedir. "s" veya "es" ile biten bir sözcüğü nsonucu beyaz boşluk karakteri veya giriş dizesinin sonu ile eşleşen normal bir ifade deseni `\b\w+(e)?s(\s|$)`tanımlar. Normal ifade aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
@@ -313,18 +313,18 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
 |\w+|Bir veya daha fazla sözcük karakteri eşleştir.|  
 |(e)?|Sıfır veya bir kez "e" ile eşleş.|  
 |s|Bir "s" ile eşleş.|  
-|(\s&#124;$)|Boşluk karakteri veya giriş dizesinin sonuyla eşleştirin.|  
+|(\s&#124;$)|Bir beyaz boşluk karakterini veya giriş dizesinin sonunu eşleştirin.|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
   
 <a name="NonWhitespaceCharacter"></a>
-## <a name="non-whitespace-character-s"></a>Boşluk olmayan karakter: \s  
- `\S` boşluk olmayan herhangi bir karakterle eşleşir. `[^\f\n\r\t\v\x85\p{Z}]` normal ifade deseninin veya boşluk karakterleriyle eşleşen `\s`eşdeğer olan normal ifade deseninin tersi eşdeğerdir. Daha fazla bilgi için bkz. boşluk [karakteri: \s](#WhitespaceCharacter).  
+## <a name="non-whitespace-character-s"></a>Beyazolmayan karakter: \S  
+ `\S`herhangi bir beyaz boşluk olmayan karakter eşleşir. `[^\f\n\r\t\v\x85\p{Z}]` Normal ifade desenine veya beyaz alan karakterleriyle eşleşen normal `\s`ifade desenine eşdeğerdir. Daha fazla bilgi için [Bkz. Beyaz Boşluk Karakteri: \s.](#WhitespaceCharacter)  
   
- ECMAScript uyumlu davranış belirtilmişse, `\S` `[^ \f\n\r\t\v]`eşdeğerdir. ECMAScript normal ifadeleri hakkında daha fazla bilgi için [normal Ifade seçeneklerinde](../../../docs/standard/base-types/regular-expression-options.md)"ECMAScript eşleştirme davranışı" bölümüne bakın.  
+ ECMAScript uyumlu davranış belirtilirse, `\S` `[^ \f\n\r\t\v]`'ye eşdeğerdir. ECMAScript normal ifadeleri hakkında bilgi [için, Normal İfade Seçenekleri'ndeki](../../../docs/standard/base-types/regular-expression-options.md)"ECMAScript Eşleştirme Davranışı" bölümüne bakın.  
   
- Aşağıdaki örnekte `\S` Language öğesi gösterilmektedir. Normal ifade deseninin `\b(\S+)\s?` boşluk karakterleriyle ayrılmış dizeler eşleşir. Eşleşmenin <xref:System.Text.RegularExpressions.GroupCollection> nesnesindeki ikinci öğe eşleşen dizeyi içerir. Normal ifade aşağıdaki tabloda gösterildiği gibi yorumlanabilir.  
+ Aşağıdaki örnekte `\S` dil öğesi gösterilmektedir. Normal ifade `\b(\S+)\s?` deseni, beyaz alan karakterleri ile sınırlandırılmış dizeleri eşleşir. Eşleşmenin <xref:System.Text.RegularExpressions.GroupCollection> nesnesindeki ikinci öğe eşleşen dizeyi içerir. Normal ifade aşağıdaki tabloda gösterildiği gibi yorumlanabilir.  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
@@ -337,11 +337,11 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
   
 <a name="DigitCharacter"></a>
 ## <a name="decimal-digit-character-d"></a>Ondalık basamak karakteri: \d  
- `\d` herhangi bir ondalık basamakla eşleşir. Standart ondalık basamakları 0-9 ve diğer karakter kümelerinin Ondalık basamaklarının yanı sıra, `\p{Nd}` normal ifade deseninin eşdeğeridir.  
+ `\d`herhangi bir ondalık basamakla eşleşir. Standart ondalık `\p{Nd}` basamak 0-9'un yanı sıra diğer karakter kümelerinin ondalık basamaklarını içeren normal ifade desenine eşdeğerdir.  
   
- ECMAScript uyumlu davranış belirtilmişse, `\d` `[0-9]`eşdeğerdir. ECMAScript normal ifadeleri hakkında daha fazla bilgi için [normal Ifade seçeneklerinde](../../../docs/standard/base-types/regular-expression-options.md)"ECMAScript eşleştirme davranışı" bölümüne bakın.  
+ ECMAScript uyumlu davranış belirtilirse, `\d` `[0-9]`'ye eşdeğerdir. ECMAScript normal ifadeleri hakkında bilgi [için, Normal İfade Seçenekleri'ndeki](../../../docs/standard/base-types/regular-expression-options.md)"ECMAScript Eşleştirme Davranışı" bölümüne bakın.  
   
- Aşağıdaki örnekte `\d` Language öğesi gösterilmektedir. Bir giriş dizesinin Amerika Birleşik Devletleri ve Kanada'da geçerli bir telefon numarası olup olmadığını test eder. `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` normal ifade deseninin aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
+ Aşağıdaki örnekte `\d` dil öğesi gösterilmektedir. Bir giriş dizesinin Amerika Birleşik Devletleri ve Kanada'da geçerli bir telefon numarası olup olmadığını test eder. Normal ifade `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` deseni aşağıdaki tabloda gösterildiği gibi tanımlanır.  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
@@ -358,19 +358,19 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/digit1.vb#12)]  
   
 <a name="NonDigitCharacter"></a>
-## <a name="non-digit-character-d"></a>Basamak olmayan karakter: \d  
- `\D`, rakam olmayan herhangi bir karakterle eşleşir. `\P{Nd}` normal ifade deseninin eşdeğeridir.  
+## <a name="non-digit-character-d"></a>Basamaksız karakter: \D  
+ `\D`herhangi bir rakamsız karakter eşleşir. Normal ifade desenine `\P{Nd}` eşdeğerdir.  
   
- ECMAScript uyumlu davranış belirtilmişse, `\D` `[^0-9]`eşdeğerdir. ECMAScript normal ifadeleri hakkında daha fazla bilgi için [normal Ifade seçeneklerinde](../../../docs/standard/base-types/regular-expression-options.md)"ECMAScript eşleştirme davranışı" bölümüne bakın.  
+ ECMAScript uyumlu davranış belirtilirse, `\D` `[^0-9]`'ye eşdeğerdir. ECMAScript normal ifadeleri hakkında bilgi [için, Normal İfade Seçenekleri'ndeki](../../../docs/standard/base-types/regular-expression-options.md)"ECMAScript Eşleştirme Davranışı" bölümüne bakın.  
   
- Aşağıdaki örnek, \D dil öğesini gösterir. Parça numarası gibi bir dizenin doğru ondalık ve ondalık olmayan karakter birleşimini içerip içermediğini test eder. `^\D\d{1,5}\D*$` normal ifade deseninin aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
+ Aşağıdaki örnek, \D dil öğesini gösterir. Parça numarası gibi bir dizenin doğru ondalık ve ondalık olmayan karakter birleşimini içerip içermediğini test eder. Normal ifade `^\D\d{1,5}\D*$` deseni aşağıdaki tabloda gösterildiği gibi tanımlanır.  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`^`|Giriş dizesinin başında eşleşmeye başla.|  
 |`\D`|Basamak olmayan bir karakterle eşleş.|  
 |`\d{1,5}`|Bir ile beş tane arasında ondalık basamakla eşleş.|  
-|`\D*`|Sıfır, bir veya daha fazla ondalık olmayan karakteri eşleştirin.|  
+|`\D*`|Sıfır, bir veya daha fazla ondalık olmayan karakterleri eşleştirin.|  
 |`$`|Giriş dizesinin sonuyla eşleş.|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nondigit1.cs#13)]
@@ -378,7 +378,7 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
   
 <a name="SupportedUnicodeGeneralCategories"></a>
 ## <a name="supported-unicode-general-categories"></a>Desteklenen Unicode genel kategorileri  
- Unicode aşağıdaki tabloda listelenen genel kategorileri tanımlar. Daha fazla bilgi için, [Unicode karakter veritabanında](https://www.unicode.org/reports/tr44/)"UCD dosya biçimi" ve "genel kategori değerleri" alt konuları bölümüne bakın.  
+ Unicode aşağıdaki tabloda listelenen genel kategorileri tanımlar. Daha fazla bilgi için [Unicode Karakter Veritabanı'ndaki](https://www.unicode.org/reports/tr44/)"UCD Dosya Biçimi" ve "Genel Kategori Değerleri" alt başlıklarına bakın.  
   
 |Kategori|Açıklama|  
 |--------------|-----------------|  
@@ -387,15 +387,15 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
 |`Lt`|Harf, Başlık Düzeni|  
 |`Lm`|Harf, Değiştirici|  
 |`Lo`|Harf, Diğer|  
-|`L`|Tüm harf karakterler. Bu, `Lu`, `Ll`, `Lt`, `Lm`ve `Lo` karakterlerini içerir.|  
+|`L`|Tüm harf karakterler. `Lu`Bu, , `Ll` `Lt`, `Lm`, `Lo` ve karakterleri içerir.|  
 |`Mn`|İşaret, Boşluksuz|  
 |`Mc`|İşaret, Boşluklu Birleşik|  
 |`Me`|İşaret, Çevreleyen|  
-|`M`|Tüm aksan işaretleri. Buna `Mn`, `Mc`ve `Me` kategorileri dahildir.|  
+|`M`|Tüm aksan işaretleri. Bu `Mn`, `Mc`ve `Me` kategorileriçerir.|  
 |`Nd`|Sayı, Ondalık Basamak|  
 |`Nl`|Sayı, Harf|  
 |`No`|Sayı, Diğer|  
-|`N`|Tüm sayılar. Buna `Nd`, `Nl`ve `No` kategorileri dahildir.|  
+|`N`|Tüm sayılar. Bu `Nd`, `Nl`ve `No` kategorileriçerir.|  
 |`Pc`|Noktalama, Bağlayıcı|  
 |`Pd`|Noktalama, Tire|  
 |`Ps`|Noktalama, Açık|  
@@ -403,24 +403,24 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
 |`Pi`|Noktalama, Açılış tırnağı (kullanıma göre Ps veya Pe gibi davranabilir)|  
 |`Pf`|Noktalama, Kapanış tırnağı (kullanıma göre Ps veya Pe gibi davranabilir)|  
 |`Po`|Noktalama, Diğer|  
-|`P`|Tüm noktalama işaretleri. Buna `Pc`, `Pd`, `Ps`, `Pe`, `Pi`, `Pf`ve `Po` kategorileri dahildir.|  
+|`P`|Tüm noktalama işaretleri. `Pc`Bu, , `Pd` `Ps`, `Pe` `Pi`, `Pf`, `Po` , ve kategorileri içerir.|  
 |`Sm`|Sembol, Matematik|  
 |`Sc`|Sembol, Para Birimi|  
 |`Sk`|Sembol, Değiştirici|  
 |`So`|Sembol, Diğer|  
-|`S`|Tüm semboller. Buna `Sm`, `Sc`, `Sk`ve `So` kategorileri dahildir.|  
+|`S`|Tüm semboller. `Sm`Bu, , `Sc` `Sk`, `So` ve kategorileri içerir.|  
 |`Zs`|Ayırıcı, Boşluk|  
 |`Zl`|Ayırıcı, Satır|  
 |`Zp`|Ayırıcı, Paragraf|  
-|`Z`|Tüm ayırıcı karakterlerler. Buna `Zs`, `Zl`ve `Zp` kategorileri dahildir.|  
+|`Z`|Tüm ayırıcı karakterlerler. Bu `Zs`, `Zl`ve `Zp` kategorileriçerir.|  
 |`Cc`|Diğer, Denetim|  
 |`Cf`|Diğer, Biçim|  
 |`Cs`|Diğer, Yedek Karakter|  
 |`Co`|Diğer, Özel Kullanım|  
 |`Cn`|Diğer, Atanmamış (hiçbir karakter bu özelliğe sahip değildir)|  
-|`C`|Tüm denetim karakterleri. Buna `Cc`, `Cf`, `Cs`, `Co`ve `Cn` kategorileri dahildir.|  
+|`C`|Tüm denetim karakterleri. `Cc`Bu, , `Cf` `Cs`, `Co`, `Cn` ve kategorileri içerir.|  
   
- Söz konusu karakteri <xref:System.Char.GetUnicodeCategory%2A> yöntemine geçirerek belirli bir karakterin Unicode kategorisini belirleyebilirsiniz. Aşağıdaki örnek, seçili Latin karakterlerini içeren bir dizideki her öğenin kategorisini belirlemede <xref:System.Char.GetUnicodeCategory%2A> yöntemini kullanır.  
+ Belirli bir karakterin Unicode kategorisini, <xref:System.Char.GetUnicodeCategory%2A> bu karakteri yönteme geçirerek belirleyebilirsiniz. Aşağıdaki örnek, <xref:System.Char.GetUnicodeCategory%2A> seçili Latin karakterleri içeren bir dizideki her öğenin kategorisini belirlemek için yöntemi kullanır.  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/getunicodecategory1.cs#14)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/getunicodecategory1.vb#14)]  
@@ -428,7 +428,7 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
 <a name="SupportedNamedBlocks"></a>
 ## <a name="supported-named-blocks"></a>Desteklenen adlandırılmış bloklar
 
-.NET, aşağıdaki tabloda listelenen adlandırılmış blokları sağlar. Desteklenen adlandırılmış bloklar kümesi Unicode 4.0 ve Perl 5.6'yı temel alır. Adlandırılmış blokları kullanan bir normal ifade için bkz. [Unicode kategorisi veya Unicode bloğu: \\p{}](#unicode-category-or-unicode-block-p) bölümü.  
+.NET aşağıdaki tabloda listelenen adlandırılmış blokları sağlar. Desteklenen adlandırılmış bloklar kümesi Unicode 4.0 ve Perl 5.6'yı temel alır. Adlandırılmış blokları kullanan normal bir ifade için [Unicode kategorisine \\{} veya Unicode bloğuna bakın: p](#unicode-category-or-unicode-block-p) bölümü.  
   
 |Kod noktası aralığı|Blok adı|  
 |----------------------|----------------|  
@@ -539,24 +539,24 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
 |FFF0 - FFFF|`IsSpecials`|  
   
 <a name="CharacterClassSubtraction"></a>
-## <a name="character-class-subtraction-base_group---excluded_group"></a>Karakter sınıfı çıkarma: [base_group-[excluded_group]]  
+## <a name="character-class-subtraction-base_group---excluded_group"></a>Karakter sınıfı çıkarma: [base_group - [excluded_group]]  
  Bir karakter sınıfı bir karakter kümesini tanımlar. Karakter sınıfı çıkarma, bir karakter sınıfındaki karakterlerin başka bir karakter sınıfından dışlanmasının sonucu olan bir karakter kümesi döndürür.  
   
  Bir karakter sınıfı çıkarma ifadesi aşağıdaki biçime sahiptir:  
   
- `[` *base_group* `-[` *excluded_group* `]]`  
+ `[`*base_group* `-[` *excluded_group*`]]`  
   
- Köşeli parantezler (`[]`) ve kısa çizgi (`-`) zorunludur. *Base_group* [pozitif bir karakter grubu](#PositiveGroup) veya [negatif bir karakter grubudur](#NegativeGroup). *Excluded_group* bileşen başka bir pozitif veya negatif karakter grubu ya da başka bir karakter sınıfı çıkarma ifadesi (yani, karakter sınıfı çıkarma ifadelerini iç içe geçirebilirsiniz).  
+ Kare parantez (`[]`) ve`-`tire ( ) zorunludur. *base_group* [pozitif](#PositiveGroup) karakter grubu veya negatif [karakter grubudur.](#NegativeGroup) *excluded_group* bileşeni başka bir pozitif veya negatif karakter grubu veya başka bir karakter sınıfı çıkarma ifadesidir (diğer bir şekilde karakter sınıfı çıkarma ifadelerini iç içe bulabilirsiniz).  
   
- Örneğin, "a" - "z" karakter aralığından oluşan bir temel grubunuz olduğunu varsayalım. "E" karakteri dışında temel gruptan oluşan karakter kümesini tanımlamak için `[a-z-[m]]`kullanın. "D", "j" ve "p" karakter kümesi hariç temel gruptan oluşan karakter kümesini tanımlamak için `[a-z-[djp]]`kullanın. "M" ile "p" arasında karakter aralığı dışında temel gruptan oluşan karakter kümesini tanımlamak için `[a-z-[m-p]]`kullanın.  
+ Örneğin, "a" - "z" karakter aralığından oluşan bir temel grubunuz olduğunu varsayalım. "m" karakteri dışında taban gruptan oluşan karakter kümesini tanımlamak için `[a-z-[m]]`. "d", "j" ve "p" karakterleri kümesi dışında taban gruptan oluşan karakter kümesini tanımlamak `[a-z-[djp]]`için. "m" ile "p" arasında değişen karakter aralığı dışında temel gruptan oluşan karakter `[a-z-[m-p]]`kümesini tanımlamak için.  
   
- `[a-z-[d-w-[m-o]]]`iç içe geçmiş karakter sınıfı çıkarma ifadesini göz önünde bulundurun. İfade en içteki karakter aralığından dışa doğru değerlendirilir. İlk önce, "m" - "o" karakter aralığı "d" - "w" karakter aralığından çıkarılır ve bunun sonucunda "d" ile "l" ve "p" ile "w" arasındaki karakterlerin kümesi oluşur. Bu küme daha sonra, `[abcmnoxyz]`karakter kümesini veren "a"-"z" karakter aralığından çıkarılır.  
+ İç içe karakter sınıfı çıkarma `[a-z-[d-w-[m-o]]]`ifadesini göz önünde bulundurun. İfade en içteki karakter aralığından dışa doğru değerlendirilir. İlk önce, "m" - "o" karakter aralığı "d" - "w" karakter aralığından çıkarılır ve bunun sonucunda "d" ile "l" ve "p" ile "w" arasındaki karakterlerin kümesi oluşur. Bu küme daha sonra karakter aralığından "a" ile "z" arasında çıkarılır ve `[abcmnoxyz]`bu da karakter kümesini verir.  
   
- Karakter sınıfı çıkarma işleminden herhangi bir karakter sınıfını kullanabilirsiniz. Boşluk karakterleri hariç \u0000 ile \uFFFF arasındaki tüm Unicode karakterlerinden oluşan karakter kümesini tanımlamak için (`\s`), noktalama Genel kategorisindeki karakterler (`\p{P}`), `IsGreek` adlı blok (`\p{IsGreek}`) ve Unicode sonrakı satır denetim karakteri (\x85), `[\u0000-\uFFFF-[\s\p{P}\p{IsGreek}\x85]]`kullanın.  
+ Karakter sınıfı çıkarma işleminden herhangi bir karakter sınıfını kullanabilirsiniz. \u0000'den \uFFFF'ye kadar tüm Unicode karakterlerinden oluşan karakter kümesini tanımlamak`\s`için beyaz boşluk karakterleri hariç (`\p{P}`), noktalama işaretleri `IsGreek` genel`\p{IsGreek}`kategorisindeki karakterler ( ), adlandırılmış bloktaki karakterler `[\u0000-\uFFFF-[\s\p{P}\p{IsGreek}\x85]]`( ), ve Unicode NEXT LINE denetim karakteri (\x85), kullanın .  
   
- Karakter sınıflarını yararlı sonuçlar verecek bir karakter sınıfı çıkarma ifadesi için seçin. Hiçbir şeyle eşleşmeyen boş bir karakter kümesi oluşturan veya orijinal temel gruba eşdeğer olan ifadelerden kaçının. Örneğin, boş küme `[\p{IsBasicLatin}-[\x00-\x7F]]`ifadenin sonucudur ve bu, `IsBasicLatin` karakter aralığındaki tüm karakterleri `IsBasicLatin` Genel kategorisinden çıkartır. Benzer şekilde, özgün temel grup `[a-z-[0-9]]`ifadesinin sonucudur.  Bunun sebebi, "a" - "z" arasındaki karakterleri içeren temel grubun, "0" - "9" arasındaki ondalık basamakları içeren çıkarılan gruptaki hiçbir karakteri içermemesidir.  
+ Karakter sınıflarını yararlı sonuçlar verecek bir karakter sınıfı çıkarma ifadesi için seçin. Hiçbir şeyle eşleşmeyen boş bir karakter kümesi oluşturan veya orijinal temel gruba eşdeğer olan ifadelerden kaçının. Örneğin, boş küme, `[\p{IsBasicLatin}-[\x00-\x7F]]` `IsBasicLatin` karakter aralığındaki tüm karakterleri genel kategoriden çıkaran ifadenin `IsBasicLatin` sonucudur. Benzer şekilde, özgün temel grup ifadenin `[a-z-[0-9]]`sonucudur.  Bunun sebebi, "a" - "z" arasındaki karakterleri içeren temel grubun, "0" - "9" arasındaki ondalık basamakları içeren çıkarılan gruptaki hiçbir karakteri içermemesidir.  
   
- Aşağıdaki örnek, bir giriş dizesindeki sıfır ve tek basamakla eşleşen `^[0-9-[2468]]+$`bir normal ifade tanımlar.  Normal ifade aşağıdaki tabloda gösterildiği gibi yorumlanır.  
+ Aşağıdaki örnek, `^[0-9-[2468]]+$`giriş dizesinde sıfır ve tek basamaklarla eşleşen normal bir ifade tanımlar.  Normal ifade aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  

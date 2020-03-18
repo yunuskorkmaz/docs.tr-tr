@@ -9,18 +9,18 @@ helpviewer_keywords:
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 ms.openlocfilehash: f1913f8c41ba4a7b54f7abcdfb97400503da8ac5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73107147"
 ---
 # <a name="assembly-manifest"></a>Derleme bildirimi
-Statik veya dinamik tüm derlemeler, derleme içindeki öğelerin birbirleriyle nasıl ilişkili olduğunu açıklayan bir veri koleksiyonu içerir. Derleme bildirimi, bu derleme metaverilerini içerir. Bir derleme bildirimi, derlemenin sürüm gereksinimlerini ve güvenlik kimliğini belirtmek, derlemenin kapsamını tanımlamak ve kaynaklara, sınıflara yapılan atıfları çözmek için gereken tüm metaverileri içerir. Derleme bildirimi, Microsoft ara dili (MSIL) koduna sahip bir PE dosyasında ( *. exe* veya *. dll*) ya da yalnızca derleme bildirimi bilgilerini IÇEREN tek başına bir pe dosyasında depolanabilir.  
+Statik veya dinamik tüm derlemeler, derleme içindeki öğelerin birbirleriyle nasıl ilişkili olduğunu açıklayan bir veri koleksiyonu içerir. Derleme bildirimi, bu derleme metaverilerini içerir. Bir derleme bildirimi, derlemenin sürüm gereksinimlerini ve güvenlik kimliğini belirtmek, derlemenin kapsamını tanımlamak ve kaynaklara, sınıflara yapılan atıfları çözmek için gereken tüm metaverileri içerir. Derleme bildirimi, Microsoft ara dili (MSIL) koduna sahip bir PE dosyasında *(.exe* veya *.dll)* veya yalnızca derleme bildirimi bilgilerini içeren bağımsız bir PE dosyasında depolanabilir.  
   
  Aşağıdaki görselde, bildirimin saklanabileceği farklı şekilleri gösterilmektedir.  
   
- ![Tek dosyalı derleme ve çok dosyalı derleme yapılandırmasındaki bildirimi gösteren diyagram.](./media/manifest/assembly-types-diagram.gif)  
+ ![Tek dosyalı derleme ve çok dosyalı derleme yapılandırmasında bildirimi gösteren diyagram.](./media/manifest/assembly-types-diagram.gif)  
   
  İlişkili tek bir dosyaya sahip bir derlemede, tek dosyalı derleme oluşturmak amacıyla bildirim PE dosyasına eklenir. Bağımsız bir bildirim dosyasına veya bildirim derlemesindeki PE dosyalarından birine ekli şekilde bir çoklu dosya derlemesi oluşturabilirsiniz.  
   
@@ -36,24 +36,24 @@ Statik veya dinamik tüm derlemeler, derleme içindeki öğelerin birbirleriyle 
   
 - Derlemeyi kendini açıklayan hale getirir.  
   
-## <a name="assembly-manifest-contents"></a>Bütünleştirilmiş kod bildirim içerikleri  
- Aşağıdaki tabloda, derleme bildiriminde bulunan bilgiler gösterilmektedir. İlk dört öğe: derleme adı, sürüm numarası, kültür ve tanımlayıcı ad bilgileri derlemenin kimliğini yapar.  
+## <a name="assembly-manifest-contents"></a>Montaj bildirimi içeriği  
+ Aşağıdaki tabloda, derleme bildiriminde bulunan bilgiler gösterilmektedir. İlk dört öğe: derleme adı, sürüm numarası, kültür ve güçlü ad bilgileri derlemenin kimliğini oluşturan.  
   
-|Bilgiler|Açıklama|  
+|Bilgi|Açıklama|  
 |-----------------|-----------------|  
-|Bütünleştirilmiş kod adı|Derlemenin adını belirten bir metin dizesi.|  
+|Montaj adı|Derlemenin adını belirten bir metin dizesi.|  
 |Sürüm numarası|Bir ana ve alt sürüm numarası ve bir düzeltme ve yapı numarası. Ortak dil çalışma zamanı sürüm ilkesini uygulamak için bu numaraları kullanır.|  
-|ayarı|Derlemenin desteklediği kültür veya dil hakkında bilgi. Bu bilgiler, yalnızca bir derlemeyi kültüre veya dile özel bilgi içeren bir uydu derleme olarak tanımlamak için kullanılmalıdır. (Kültür bilgisine sahip bir derleme, otomatik olarak bir uydu derleme kabul edilir.)|  
+|Kültür|Derlemenin desteklediği kültür veya dil hakkında bilgi. Bu bilgiler, yalnızca bir derlemeyi kültüre veya dile özel bilgi içeren bir uydu derleme olarak tanımlamak için kullanılmalıdır. (Kültür bilgisine sahip bir derleme, otomatik olarak bir uydu derleme kabul edilir.)|  
 |Tanımlayıcı ad bilgisi|Derlemeye tanımlayıcı ad verilmişse yayımcıdan gelen ortak anahtar.|  
 |Derlemedeki tüm dosyaların listesi|Derlemede bulunan her dosyayla bir dosya adının karması. Derlemeyi oluşturan tüm dosyaların, derleme bildirimini içeren dosyayla aynı dizinde olması gerektiğine dikkat edin.|  
 |Tür başvuru bilgisi|Çalışma zamanı tarafından bir tür başvurusu ile bildirimini ve uygulamasını içeren dosyanın eşleştirilmesi için kullanılan bilgiler. Bu, derlemeden dışarı aktarılan türler için kullanılır.|  
 |Atıfta bulunulan derlemeler hakkında bilgi|Derleme tarafından statik olarak atıfta bulunulan diğer derlemelerin listesi. Her başvuru, bağımlı derlemenin adını, derleme metaverilerini (sürüm, kültür, işletim sistemi vb.) ve, derleme tanımlayıcı ada sahipse, ortak anahtarı içerir.|  
   
- Kodunuzda derleme öznitelikleri kullanarak derleme bildirimine bazı bilgiler ekleyebilir veya bazı bilgileri değiştirebilirsiniz. Ticari Marka, Telif Hakkı, Ürün, Şirket ve Bilgilendirme Sürümü dahil olmak üzere sürüm bilgilerini ve bilgilendirme özniteliklerini değiştirebilirsiniz. Derleme özniteliklerinin tüm listesi için bkz. [derleme özniteliklerini ayarlama](set-attributes.md).  
+ Kodunuzda derleme öznitelikleri kullanarak derleme bildirimine bazı bilgiler ekleyebilir veya bazı bilgileri değiştirebilirsiniz. Ticari Marka, Telif Hakkı, Ürün, Şirket ve Bilgilendirme Sürümü dahil olmak üzere sürüm bilgilerini ve bilgilendirme özniteliklerini değiştirebilirsiniz. Derleme özniteliklerinin tam listesi için [bkz.](set-attributes.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bütünleştirilmiş kod içeriği](contents.md)
-- [Derleme sürümü oluşturma](versioning.md)
+- [Montaj içeriği](contents.md)
+- [Montaj sürümü](versioning.md)
 - [Uydu derlemeleri oluşturma](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
-- [Tanımlayıcı adlı derlemeler](strong-named.md)
+- [Güçlü adlandırılmış derlemeler](strong-named.md)

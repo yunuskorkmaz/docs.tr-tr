@@ -1,80 +1,80 @@
 ---
-title: Model Oluşturucu için eğitim verilerini yükleme
-description: ML.NET için model Oluşturucu senaryolarından birinde kullanılmak üzere bir SQL Server veritabanından veya bir dosyadan eğitim verileri yüklemeyi öğrenin.
+title: Model Oluşturucu için yükleme eğitim verileri
+description: ML.NET için Model Oluşturucu senaryolarından birinde kullanılmak üzere bir SQL Server veritabanından veya bir dosyadan eğitim verilerini nasıl yükleyin öğrenin.
 ms.date: 10/29/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to
-ms.openlocfilehash: cc93b3f77284ed283a8d7cbd52b8cd02b4fd9066
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.custom: mvc, how-to, mlnet-tooling
+ms.openlocfilehash: 23de2d06090f4c1eaa2c79178ba4c346698d45e1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977060"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78849165"
 ---
-# <a name="load-training-data-into-model-builder"></a>Eğitim verilerini model Oluşturucu 'ya yükleme
+# <a name="load-training-data-into-model-builder"></a>Eğitim verilerini Model Oluşturucu'ya yükleyin
 
-Eğitim veri kümelerinizi bir dosya veya SQL Server veritabanından, ML.NET için model Oluşturucu senaryolarından birinde kullanmak üzere nasıl yükleyeceğinizi öğrenin. Model Oluşturucu senaryoları, eğitim verileri olarak SQL Server veritabanlarını, görüntü dosyalarını ve CSV 'yi ya da TSV dosya biçimlerini kullanabilir.
+ML.NET için Model Oluşturucu senaryolarından birinde kullanılmak üzere bir dosyadan veya SQL Server veritabanından eğitim veri kümelerinizi nasıl yükleyebilirsiniz öğrenin. Model Oluşturucu senaryoları, SQL Server veritabanlarını, görüntü dosyalarını ve CSV veya TSV dosya biçimlerini eğitim verileri olarak kullanabilir.
 
-## <a name="training-dataset-limitations-in-model-builder"></a>Model Oluşturucu 'da eğitim veri kümesi sınırlamaları
+## <a name="training-dataset-limitations-in-model-builder"></a>Model Oluşturucu'da veri kümesi sınırlamalarını geliştirme
 
 Model Oluşturucu, eğitim modelleri için kullanabileceğiniz veri miktarını ve türünü sınırlar:
 
 - SQL Server verileri: 100.000 satır
-- CSV ve TSV dosyaları: boyut sınırı yok
-- Görüntüler: yalnızca PNG ve JPG.
+- CSV ve TSV dosyaları: Boyut sınırı yok
+- Görüntüler: Sadece PNG ve JPG.
 
 ## <a name="model-builder-scenarios"></a>Model Oluşturucu senaryoları
 
-Model Oluşturucu aşağıdaki makine öğrenimi senaryoları için modeller oluşturmanıza yardımcı olur:
+Model Oluşturucu, aşağıdaki makine öğrenimi senaryoları için modeller oluşturmanıza yardımcı olur:
 
-- Yaklaşım Analizi (ikili sınıflandırma): metinsel verileri iki kategoride sınıflandırın.
-- Sorun sınıflandırması (birden çok Lass sınıflandırması): metinsel verileri 3 veya daha fazla kategoride sınıflandırın.
-- Fiyat tahmini (gerileme): sayısal bir değer tahmin edin.
-- Görüntü sınıflandırması (derin öğrenme): görüntüleri özelliklere göre kategorilere ayırın.
-- Özel senaryo: gerileme, sınıflandırma ve diğer görevleri kullanarak verilerinize özel senaryolar oluşturun.
+- Duyarlılık analizi (ikili sınıflandırma): Metinsel verileri iki kategoriye ayırın.
+- Sorun sınıflandırması (çok sınıflı sınıflandırma): Metin verilerini 3 veya daha fazla kategoriye ayırın.
+- Fiyat tahmini (regresyon): Sayısal bir değeri tahmin edin.
+- Görüntü sınıflandırması (derin öğrenme): Görüntüleri özelliklerine göre kategorilere ayırın.
+- Özel senaryo: Regresyon, sınıflandırma ve diğer görevleri kullanarak verilerinizden özel senaryolar oluşturun.
 
-Bu makale, metin veya sayısal verilerle sınıflandırma ve regresyon senaryolarına ve görüntü sınıflandırma senaryolarıyla birlikte ele alınmaktadır.
+Bu makalede, metinsel veya sayısal verilerle sınıflandırma ve regresyon senaryoları ve görüntü sınıflandırma senaryoları ele alınız.
 
 ## <a name="load-text-or-numeric-data-from-a-file"></a>Dosyadan metin veya sayısal veri yükleme
 
-Bir dosyadaki metin veya sayısal verileri model Oluşturucu 'ya yükleyebilirsiniz. Virgülle ayrılmış (CSV) veya sekmeyle ayrılmış (TSV) dosya biçimlerini kabul eder.
+Bir dosyadaki metin veya sayısal verileri Model Oluşturucu'ya yükleyebilirsiniz. Virgülle sınırlandırılmış (CSV) veya sekme-sınırlandırma (TSV) dosya biçimlerini kabul eder.
 
-1. Model oluşturucunun veri adımında, veri kaynağı açılır listesinden **Dosya** ' yı seçin.
-2. **Dosya seçin** metin kutusunun yanındaki düğmeyi seçin ve veri dosyasına gidip seçmek Için dosya Gezgini 'ni kullanın.
-3. **Tahmin edilecek sütun (etiket)** açılan listesinden bir kategori seçin.
-4. **Giriş sütunları (Özellikler)** açılır listesinden, dahil etmek istediğiniz veri sütunlarının denetlenmesini onaylayın.
+1. Model Oluşturucu'nun veri adımında, veri kaynağı açılır tarafından **Dosya'yı** seçin.
+2. Dosya metin kutusunu **seç'in** yanındaki düğmeyi seçin ve veri dosyasına göz atmak ve seçmek için Dosya Gezgini'ni kullanın.
+3. **Sütunda Tahmin (Etiket)** açılır düşüşünü tahmin etmek için bir kategori seçin.
+4. Giriş **Sütunları (Özellikler)** açılır düşüşünden, eklemek istediğiniz veri sütunlarının denetleniyi onaylayın.
 
-Model Oluşturucu için veri kaynağı dosyanızı ayarlamayı tamamladınız. Model Oluşturucu 'daki sonraki adıma geçmek için **eğitme** bağlantısını seçin.
+Model Oluşturucu için veri kaynağı dosyanızı ayarlamayı bitirdiniz. Model Oluşturucu'da bir sonraki adıma geçmek için **Tren** bağlantısını seçin.
 
 ## <a name="load-data-from-a-sql-server-database"></a>SQL Server veritabanından veri yükleme
 
-Model Oluşturucu, yerel ve uzak SQL Server veritabanlarından veri yüklenmesini destekler.
+Model Oluşturucu, yerel ve uzak SQL Server veritabanlarından veri yüklemeyi destekler.
 
-SQL Server veritabanından modül Oluşturucusu 'na veri yüklemek için:
+SQL Server veritabanından Modül Oluşturucu'ya veri yüklemek için:
 
-1. Model oluşturucunun veri adımında, veri kaynağı açılır listesinden **SQL Server** ' yi seçin.
-1. **SQL Server veritabanına Bağlan** metin kutusunun yanındaki düğmeyi seçin.
-    1. **Veri Seç** iletişim kutusunda **Microsoft SQL Server veritabanı dosyası**' nı seçin.
-    1. **Her zaman bu seçimi kullan** onay kutusunu temizleyin ve **devam** ' ı seçin.
-    1. **Bağlantı özellikleri** iletişim kutusunda, **Araştır** ' ı seçin ve indirilen ' u seçin. MDF dosyası.
-    1. **Tamam 'ı** seçin
-1. **Tablo adı** açılan listesinden veri kümesi adını seçin.
-1. **Sütunun tahmin edilmesi için (etiket)** aşağı açılan listesinden tahmin yapmak istediğiniz veri kategorisini seçin.
-1. **Giriş sütunları (Özellikler)** açılır listesinden, dahil etmek istediğiniz sütunları onaylayın.
+1. Model Oluşturucu'nun veri adımında, veri kaynağı açılır tarafından **SQL Server'ı** seçin.
+1. **SQL Server veritabanına bağlan** metin kutusunun yanındaki düğmeyi seçin.
+    1. Veri **Seç** iletişim kutusunda **Microsoft SQL Server Database File'yi**seçin.
+    1. **Her Zaman bu seçim** onay kutusunu kullan denetiminden kaldırın ve Devam **et'i** seçin
+    1. Bağlantı **Özellikleri** iletişim kutusunda **Gözat'ı** seçin ve indirilenleri seçin. MDF dosyası.
+    1. **Tamam'ı** seçin
+1. **Tablo Adı** açılır toplantısından veri kümesi adını seçin.
+1. **Sütundan Tahmin (Etiket)** açılır goluna kadar, tahmin de bulunmak istediğiniz veri kategorisini seçin.
+1. Giriş **Sütunları (Özellikler)** açılır düşüşünden, eklemek istediğiniz sütunların kontrol edildiğini onaylayın.
 
-Model Oluşturucu için veri kaynağı dosyanızı ayarlamayı tamamladınız. Model Oluşturucu 'daki sonraki adıma geçmek için **eğitme** bağlantısını seçin.
+Model Oluşturucu için veri kaynağı dosyanızı ayarlamayı bitirdiniz. Model Oluşturucu'da bir sonraki adıma geçmek için **Tren** bağlantısını seçin.
 
 ## <a name="set-up-image-data-files"></a>Görüntü veri dosyalarını ayarlama
 
-Model Oluşturucu, sınıflandırma kategorilerine karşılık gelen klasörlerde görüntü verilerinin JPG veya PNG dosyaları olmasını bekler.
+Model Builder, görüntü verilerinin sınıflandırma kategorilerine karşılık gelen klasörlerde düzenlenmiş JPG veya PNG dosyaları olmasını bekler.
 
-Model Oluşturucusu 'na görüntü yüklemek için, tek bir üst düzey dizinin yolunu belirtin:
+Görüntüleri Model Oluşturucu'ya yüklemek için, tek bir üst düzey dizin için yol sağlayın:
 
-- Bu üst düzey dizin, tahmin edilecek kategorilerin her biri için bir alt klasör içerir.
-- Her alt klasör, kategorisine ait olan resim dosyalarını içerir.
+- Bu üst düzey dizin, her kategoriiçin tahmin etmek için bir alt klasör içerir.
+- Her alt klasör kendi kategorisine ait resim dosyalarını içerir.
 
-Aşağıda gösterilen klasör yapısında, en üst düzey dizin *flower_photos*. Tahmin etmek istediğiniz kategorilere karşılık gelen beş alt dizin vardır: daya, Dandelion, Roses, sunçiçekler ve TULIP. Bu alt dizinlerin her biri ilgili kategorisine ait resimleri içerir.
+Aşağıda gösterilen klasör yapısında, üst düzey dizin *flower_photos.* Tahmin etmek istediğiniz kategorilere karşılık gelen beş alt dizin vardır: papatya, karahindiba, gül, ayçiçeği ve lale. Bu alt dizinlerin her biri kendi kategorisine ait görüntüler içerir.
 
 ```text
 \---flower_photos
@@ -106,9 +106,9 @@ Aşağıda gösterilen klasör yapısında, en üst düzey dizin *flower_photos*
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Model Oluşturucu ile makine öğrenimi uygulamaları oluşturmak için bu öğreticileri izleyin:
+Model Builder ile makine öğrenimi uygulamaları oluşturmak için aşağıdaki öğreticileri izleyin:
 
-- [Gerileme kullanarak fiyatları tahmin etme](../tutorials/predict-prices-with-model-builder.md)
-- [İkili sınıflandırma kullanarak bir Web uygulamasındaki yaklaşımı çözümleme](../tutorials/sentiment-analysis-model-builder.md )
+- [Gerileme kullanarak fiyatları tahmin edin](../tutorials/predict-prices-with-model-builder.md)
+- [İkili sınıflandırmayı kullanarak bir web uygulamasında ki duyarlılığı analiz edin](../tutorials/sentiment-analysis-model-builder.md )
 
-Kodu kullanarak bir modele eğitim yapıyorsanız, [ml.NET API 'sini kullanarak nasıl veri yükleneceğini öğrenin](load-data-ml-net.md).
+Kodu kullanarak bir modeli eğittiyseniz, [ML.NET API'yi kullanarak verileri nasıl yükleyeceğimiz öğrenin.](load-data-ml-net.md)

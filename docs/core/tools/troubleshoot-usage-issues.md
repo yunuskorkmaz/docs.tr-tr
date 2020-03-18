@@ -1,29 +1,29 @@
 ---
-title: .NET Core araç kullanımı sorunlarını giderme
-description: .NET Core araçları ve olası çözümleri çalıştırırken sık karşılaşılan sorunları öğrenin.
+title: Sorun Giderme .NET Core araç kullanım sorunları
+description: .NET Core araçlarını ve olası çözümleri çalıştırırken sık karşılaşılan sorunları keşfedin.
 author: kdollard
 ms.date: 02/14/2020
-ms.openlocfilehash: ab5d1be8f201ea283f8537f18886feab46157127
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: ed6243f802c4d3ce56a742916a1a28676e3cd876
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543280"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146456"
 ---
-# <a name="troubleshoot-net-core-tool-usage-issues"></a>.NET Core araç kullanımı sorunlarını giderme
+# <a name="troubleshoot-net-core-tool-usage-issues"></a>Sorun Giderme .NET Core araç kullanım sorunları
 
-Küresel bir araç veya yerel araç olabilecek bir .NET Core aracını yüklemeye veya çalıştırmaya çalışırken sorunlarla karşılaşabilirsiniz. Bu makalede, yaygın temel nedenler ve bazı olası çözümler açıklanmaktadır.
+Genel bir araç veya yerel bir araç olabilecek bir .NET Core aracını yüklemeye veya çalıştırmaya çalışırken sorunlarla karşılaşabilirsiniz. Bu makalede, ortak kök nedenleri ve bazı olası çözümler açıklanır.
 
-## <a name="installed-net-core-tool-fails-to-run"></a>Yüklü .NET Core aracı çalıştırılamıyor
+## <a name="installed-net-core-tool-fails-to-run"></a>Yüklü .NET Core aracı çalışmaz
 
-Bir .NET Core aracı çalışamazsa, büyük olasılıkla aşağıdaki sorunlardan biriyle karşılaşdınız:
+Bir .NET Core aracı çalışmadığında, büyük olasılıkla aşağıdaki sorunlardan biriyle karşılaştınız:
 
-* Aracın yürütülebilir dosyası bulunamadı.
+* Araç için çalıştırılabilir dosya bulunamadı.
 * .NET Core çalışma zamanının doğru sürümü bulunamadı.
 
-### <a name="executable-file-not-found"></a>Yürütülebilir dosya bulunamadı
+### <a name="executable-file-not-found"></a>Çalıştırılabilir dosya bulunamadı
 
-Yürütülebilir dosya bulunamazsa aşağıdakine benzer bir ileti görürsünüz:
+Çalıştırılabilir dosya bulunamazsa, aşağıdakilere benzer bir ileti görürsünüz:
 
 ```console
 Could not execute because the specified command or file was not found.
@@ -33,73 +33,73 @@ Possible reasons for this include:
   * You intended to run a global tool, but a dotnet-prefixed executable with this name could not be found on the PATH.
 ```
 
-Yürütülebilir dosyanın adı, aracı nasıl çağırabileceğinizi belirler. Aşağıdaki tabloda şu biçim açıklanmaktadır:
+Yürütülebilir adı aracı nasıl çağırdığınızı belirler. Aşağıdaki tabloda biçim açıklanmaktadır:
 
-| Yürütülebilir dosya adı biçimi  | Çağırma biçimi   |
+| Çalıştırılabilir ad biçimi  | Çağırma biçimi   |
 |-------------------------|---------------------|
 | `dotnet-<toolName>.exe` | `dotnet <toolName>` |
 | `<toolName>.exe`        | `<toolName>`        |
 
 * Genel araçlar
 
-    Genel araçlar varsayılan dizine veya belirli bir konuma yüklenebilir. Varsayılan dizinler şunlardır:
+  Genel araçlar varsayılan dizine veya belirli bir konuma yüklenebilir. Varsayılan dizinler şunlardır:
 
-    | İşletim Sistemi          | Yol                          |
-    |-------------|-------------------------------|
-    | Linux/macOS | `$HOME/.dotnet/tools`         |
-    | Windows     | `%USERPROFILE%\.dotnet\tools` |
+  | İşletim Sistemi          | Yol                          |
+  |-------------|-------------------------------|
+  | Linux/macOS | `$HOME/.dotnet/tools`         |
+  | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-    Küresel bir araç çalıştırmaya çalışıyorsanız, makinenizde `PATH` ortam değişkeninin genel aracı yüklediğiniz yolu içerdiğini ve yürütülebilir dosyanın o yolda olduğunu kontrol edin.
+  Genel bir araç çalıştırmaya çalışıyorsanız, makinenizdeki ortam değişkeninin `PATH` genel aracı yüklediğiniz yolu içerdiğinden ve yürütülebilir aracın bu yolda olduğundan denetleyin.
 
-    .NET Core CLI, ilk kullanımındaki yol ortam değişkenine varsayılan konumları eklemeye çalışır. Ancak, konumun otomatik olarak yola eklenememesi gereken birkaç senaryo vardır. bu nedenle, aşağıdaki durumlarda yapılandırmak için yolu düzenlemeniz gerekir:
+  .NET Core CLI, ilk kullanımında PATH ortamı değişkenine varsayılan konumu eklemeye çalışır. Ancak, konumun PATH'e otomatik olarak eklenemeyebildiği bazı senaryolar vardır:
 
-  * Linux kullanıyorsanız ve *. tar. gz* dosyalarını kullanarak .NET Core SDK yüklediyseniz ve apt-get veya rpm değil.
-  * MacOS 10,15 "Catalina" veya sonraki sürümlerini kullanıyorsanız.
-  * MacOS 10,14 "Mojave" veya önceki sürümlerini kullanıyorsanız ve. *pkg*değil. *tar. gz* dosyalarını kullanarak .NET Core SDK yüklediyseniz.
-  * .NET Core 3,0 SDK 'sını yüklediyseniz ve `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` ortam değişkenini `false`olarak ayarladıysanız.
-  * .NET Core 2,2 SDK veya önceki sürümlerini yüklediyseniz ve `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` ortam değişkenini `true`olarak ayarladıysanız.
+  * Linux kullanıyorsanız ve .NET Core SDK'yı *.tar.gz* dosyalarını kullanarak yüklediyseniz ve apt-get veya rpm değil.
+  * macOS 10.15 "Catalina" veya daha sonraki sürümleri kullanıyorsanız.
+  * macOS 10.14 "Mojave" veya önceki sürümleri kullanıyorsanız ve *.tar.gz* dosyalarını kullanarak .NET Core SDK'yı yüklediyseniz.pkg . *.pkg*
+  * .NET Core 3.0 SDK'yı yüklediyseniz ve ortam `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` değişkenini '' olarak `false`ayarladıysanız
+  * .NET Core 2.2 SDK veya önceki sürümlerini yüklediyseniz ve `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` ortam `true`değişkenini ' olarak ayarladıysanız.
 
-  Daha fazla bilgi için bkz. [.NET Core araçları](global-tools.md).
+  Bu senaryolarda veya `--tool-path` seçeneği belirttiyseniz, `PATH` makinenizdeki ortam değişkeni genel aracı yüklediğiniz yolu otomatik olarak içermez. Bu durumda, shell'inizin çevre değişkenlerini güncelleştirmek için sağladığı yöntemi kullanarak araç konumunu (örneğin, `$HOME/.dotnet/tools`çevre değişkenine) `PATH` ekleyerek ortam değişkenine eklayın. Daha fazla bilgi için [bkz.](global-tools.md)
 
-* Yerel Araçlar
+* Yerel araçlar
 
-  Yerel bir araç çalıştırmaya çalışıyorsanız, geçerli dizinde veya onun üst dizinlerindeki *DotNet-Tools. JSON* adlı bir bildirim dosyası olduğunu doğrulayın. Bu dosya Ayrıca, kök klasör yerine proje klasörü hiyerarşisinde *. config* adlı bir klasör altında da bulunabilir. *DotNet-Tools. JSON* varsa, dosyayı açın ve çalıştırmaya çalıştığınız aracı denetleyin. Dosya `"isRoot": true`için bir giriş içermiyorsa, ek araç bildirim dosyaları için de dosya hiyerarşisini daha da denetleyin.
+  Yerel bir aracı çalıştırmaya çalışıyorsanız, geçerli dizinde veya ana dizinde *dotnet-tools.json* adında bir bildirim dosyası olduğundan doğrulayın. Bu dosya, kök klasör ü yerine proje klasörü hiyerarşisinde herhangi bir yerde *.config* adlı bir klasör altında da yaşayabilir. *Dotnet-tools.json* varsa açın ve çalıştırmaya çalıştığınız aracı kontrol edin. Dosya için `"isRoot": true`bir giriş içermiyorsa, ek araç bildirimi dosyaları için dosya hiyerarşisini daha da yukarı kontrol edin.
 
-  Belirtilen bir yol ile yüklenmiş bir .NET Core aracını çalıştırmaya çalışıyorsanız, aracı kullanırken bu yolu eklemeniz gerekir. Araç yolu yüklü aracının kullanılmasına bir örnek:
+  Belirli bir yol ile yüklenmiş bir .NET Core aracını çalıştırmaya çalışıyorsanız, aracı kullanırken bu yolu eklemeniz gerekir. Bir araç yolu yüklü araç kullanma nın bir örneği:
 
   ```console
   ..\<toolDirectory>\dotnet-<toolName>
   ```
 
-### <a name="runtime-not-found"></a>Çalışma zamanı bulunamadı
+### <a name="runtime-not-found"></a>Çalışma süresi bulunamadı
 
-.NET Core araçları, [çerçeveye bağlı uygulamalardır](../deploying/index.md#publish-runtime-dependent)ve bu, makinenizde yüklü bir .NET Core çalışma zamanına bağlıdır. Beklenen çalışma zamanı bulunmazsa, normal .NET Core çalışma zamanı alma-iletme kurallarını izler:
+.NET Core araçları [çerçeveye bağımlı uygulamalardır,](../deploying/index.md#publish-runtime-dependent)bu da makinenize yüklenen bir .NET Core çalışma süresine güvendikleri anlamına gelir. Beklenen çalışma süresi bulunamazsa, aşağıdakiler gibi normal .NET Core runtime roll-forward kurallarına uyarlar:
 
-* Bir uygulama, belirtilen birincil ve ikincil sürümün en yüksek düzeltme eki sürümüne ileri kaydedilir.
-* Eşleşen bir ana ve alt sürüm numarasına sahip eşleşen bir çalışma zamanı yoksa, sonraki en düşük sürüm kullanılır.
-* Çalışma zamanının veya önizleme sürümleri ile sürüm sürümlerinin önizleme sürümleri arasında ileri alma gerçekleşmez. Bu nedenle, önizleme sürümleri kullanılarak oluşturulan .NET Core araçlarının, yazar tarafından yeniden oluşturulması ve yeniden yayımlanması ve yeniden yüklenmesi gerekir.
+* Bir uygulama, belirtilen ana ve küçük sürümün en yüksek yama sürümüne doğru ilerler.
+* Eşleşen bir büyük ve küçük sürüm numarasıyla eşleşen çalışma zamanı yoksa, bir sonraki yüksek küçük sürüm kullanılır.
+* Roll forward, çalışma zamanının önizleme sürümleri veya önizleme sürümleri ve sürüm sürümleri arasında gerçekleşmez. Bu nedenle, önizleme sürümleri kullanılarak oluşturulan .NET Core araçlarının yazar tarafından yeniden oluşturulup yeniden yayımlanmalıdır ve yeniden yüklenmelidir.
 
-Geri alma iki yaygın senaryoda varsayılan olarak gerçekleşmez:
+Roll-forward varsayılan olarak iki yaygın senaryoda oluşmaz:
 
-* Çalışma zamanının yalnızca alt sürümleri kullanılabilir. İlet geri alma yalnızca çalışma zamanının sonraki sürümlerini seçer.
-* Çalışma zamanının yalnızca daha yüksek ana sürümleri kullanılabilir. İlet, büyük sürüm sınırları değildir.
+* Yalnızca çalışma zamanının daha düşük sürümleri kullanılabilir. Roll-forward yalnızca çalışma zamanının sonraki sürümlerini seçer.
+* Yalnızca çalışma zamanının daha yüksek ana sürümleri kullanılabilir. Roll-forward ana sürüm sınırlarını geçmez.
 
 Bir uygulama uygun bir çalışma zamanı bulamazsa, çalışmaz ve bir hata bildirir.
 
-Aşağıdaki komutlardan birini kullanarak makinenizde hangi .NET Core çalışma zamanlarının yüklü olduğunu öğrenebilirsiniz:
+Aşağıdaki komutlardan birini kullanarak makinenize hangi .NET Core çalışma saatlerinin takıldığı öğrenebilirsiniz:
 
 ```dotnetcli
 dotnet --list-runtimes
 dotnet --info
 ```
 
-Aracın şu anda yüklü olan çalışma zamanı sürümünü desteklemesi gerektiğini düşünüyorsanız, araç yazarıyla iletişim kurun ve sürüm numarasını veya çoklu hedefi güncelleştirebilir. Araç paketlerini yeniden derlendikten ve güncelleştirilmiş bir sürüm numarasıyla NuGet 'e yeniden yayınladıktan sonra, kopyanızı güncelleştirebilirsiniz. Gerçekleşmediğinden, sizin için en hızlı çözüm, çalıştırmaya çalıştığınız araçla çalışacak çalışma zamanının bir sürümünü yüklemektir. Belirli bir .NET Core çalışma zamanı sürümünü indirmek için [.NET Core indirme sayfasını](https://dotnet.microsoft.com/download/dotnet-core)ziyaret edin.
+Aracın şu anda yüklediğiniz çalışma zamanı sürümünü desteklemesi gerektiğini düşünüyorsanız, araç yazarına başvurabilir ve sürüm numarasını veya çoklu hedefi güncelleştirip güncelleştiremediklerini görebilirsiniz. Araç paketlerini güncelleştirilmiş bir sürüm numarasıyla NuGet'e yeniden derleyip yeniden yayımladıktan sonra kopyanızı güncelleştirebilirsiniz. Bu gerçekleşmese de, sizin için en hızlı çözüm, çalıştırmaya çalıştığınız araçla çalışacak çalışma zamanının bir sürümünü yüklemektir. Belirli bir .NET Core çalışma zamanı sürümünü indirmek için [.NET Core indirme sayfasını](https://dotnet.microsoft.com/download/dotnet-core)ziyaret edin.
 
-.NET Core SDK varsayılan olmayan bir konuma yüklerseniz, ortam değişkenini `DOTNET_ROOT` `dotnet` yürütülebilir dosyasını içeren dizine ayarlamanız gerekir.
+.NET Core SDK'yı varsayılan olmayan bir konuma yüklerseniz, ortam `DOTNET_ROOT` değişkenini `dotnet` yürütülebilir içeren dizine ayarlamanız gerekir.
 
-## <a name="net-core-tool-installation-fails"></a>.NET Core aracı yüklemesi başarısız oluyor
+## <a name="net-core-tool-installation-fails"></a>.NET Core araç kurulumu başarısız oldu
 
-.NET Core küresel veya yerel bir araç yüklemesinin başarısız olması birkaç nedenden kaynaklanabilir. Araç yüklemesi başarısız olduğunda aşağıdakine benzer bir ileti görürsünüz:
+.NET Core global veya yerel bir aracın yüklenmesinin başarısız olmasının birkaç nedeni vardır. Araç yüklemesi başarısız olduğunda, aşağıdakine benzer bir ileti görürsünüz:
 
 ```console
 Tool '{0}' failed to install. This failure may have been caused by:
@@ -112,51 +112,51 @@ Tool '{0}' failed to install. This failure may have been caused by:
 For more reasons, including package naming enforcement, visit https://aka.ms/failure-installing-tool
 ```
 
-Bu hataların tanılanmasına yardımcı olmak için, NuGet iletileri önceki iletiyle birlikte doğrudan kullanıcıya gösterilir. NuGet iletisi sorunu belirlemenize yardımcı olabilir.
+Bu hataları tanılamaya yardımcı olmak için, NuGet iletileri önceki iletiyle birlikte doğrudan kullanıcıya gösterilir. NuGet iletisi sorunu belirlemenize yardımcı olabilir.
 
-### <a name="package-naming-enforcement"></a>Paket adlandırma zorlaması
+### <a name="package-naming-enforcement"></a>Paket adlandırma zorlama
 
-Microsoft, araçların paket KIMLIĞI üzerinde rehberlik değiştirdi, bu da tahmin edilen ada sahip bir dizi araç bulunamamıştır. Yeni kılavuzluk, tüm Microsoft araçlarının ön eki olan "Microsoft" Bu ön ek ayrılmıştır ve yalnızca Microsoft yetkili sertifikasıyla imzalanmış paketler için kullanılabilir.
+Microsoft, araçlar için Paket Kimliği kılavuzunu değiştirerek, bir dizi araçta öngörülen adla birlikte bulunamadı. Yeni kılavuz, tüm Microsoft araçlarının "Microsoft" ile önceden belirlenmiş olmasıdır. Bu önek ayrılmıştır ve yalnızca Microsoft yetkili sertifikasıyla imzalanmış paketler için kullanılabilir.
 
-Geçiş sırasında bazı Microsoft araçları paket KIMLIĞI eski biçiminde olacaktır, diğerleri ise yeni biçime sahip olur:
+Geçiş sırasında, bazı Microsoft araçları paket kimliğinin eski biçimine sahip olurken, diğerleri yeni forma sahip olur:
 
 ```dotnetcli
 dotnet tool install -g Microsoft.<toolName>
 dotnet tool install -g <toolName>
 ```
 
-Paket kimlikleri güncelleştirildiğinden, en son güncelleştirmeleri almak için yeni paket KIMLIĞINE geçmeniz gerekir. Basitleştirilmiş araç adına sahip paketler kullanım dışı olacaktır.
+Paket kimlikleri güncelleştirildikçe, en son güncelleştirmeleri almak için yeni paket kimliğine değiştirmeniz gerekir. Basitleştirilmiş araç adı taşıyan paketler amortismana sokulacaktır.
 
-### <a name="preview-releases"></a>Önizleme yayınları
+### <a name="preview-releases"></a>Önizleme bültenleri
 
-* Bir önizleme sürümü yüklemeye çalışıyorsunuz ve sürümü belirlemek için `--version` seçeneğini kullanmadınız.
+* Bir önizleme sürümü yüklemeye çalışıyorsunuz ve sürümü `--version` belirtme seçeneğini kullanmadınız.
 
-Önizlemedeki .NET Core araçları, önizlemede olduğunu göstermek için adının bir bölümüyle birlikte belirtilmelidir. Tüm önizlemeyi eklemeniz gerekmez. Sürüm numaralarının beklenen biçimde olduğu varsayılarak, aşağıdaki örneğe benzer bir şey kullanabilirsiniz:
+.NET Core araçları önizlemede olduklarını belirtmek için adın bir bölümüyle belirtilmelidir. Önizlemenin tamamını eklemeniz gerekmez. Sürüm numaralarının beklenen biçimde olduğunu varsayarsak, aşağıdaki örnek gibi bir şey kullanabilirsiniz:
 
 ```dotnetcli
 dotnet tool install -g --version 1.1.0-pre <toolName>
 ```
 
-### <a name="package-isnt-a-net-core-tool"></a>Paket bir .NET Core aracı değil
+### <a name="package-isnt-a-net-core-tool"></a>Paket bir .NET Core aracı değildir
 
-* Bu ada sahip bir NuGet paketi bulundu, ancak bir .NET Core aracı değildi.
+* Bu ada göre bir NuGet paketi bulundu, ancak bir .NET Core aracı değildi.
 
-.NET Core aracı olmayan düzenli bir NuGet paketi olan bir NuGet paketini yüklemeye çalışırsanız, aşağıdakine benzer bir hata görürsünüz:
+Bir .NET Core aracı değil de normal bir NuGet paketi yüklemeye çalışırsanız, aşağıdakilere benzer bir hata görürsünüz:
 
-> NU1212: `<ToolName>`için geçersiz proje paketi birleşimi. DotnetToolReference proje stili yalnızca DotnetTool türündeki başvuruları içerebilir.
+> NU1212: Geçersiz proje paketi `<ToolName>`kombinasyonu. DotnetToolReference proje stili yalnızca DotnetTool türüne ait referanslar içerebilir.
 
-### <a name="nuget-feed-cant-be-accessed"></a>NuGet akışına erişilemiyor
+### <a name="nuget-feed-cant-be-accessed"></a>NuGet akışına erişilenemiyor
 
-* Olası bir Internet bağlantısı sorunu nedeniyle, gerekli NuGet akışına erişilemiyor.
+* Gerekli NuGet akışına, internet bağlantısı sorunu nedeniyle erişilememektedir.
 
-Araç yüklemesi için araç paketini içeren NuGet akışına erişim gerekir. Akış kullanılamıyorsa başarısız olur. Akışları `nuget.config`ile değiştirebilir, belirli bir `nuget.config` dosyası isteyebilir veya `--add-source` anahtarı ile ek akışlar belirtebilirsiniz. NuGet, varsayılan olarak, bağlanamaan herhangi bir akış için bir hata oluşturur. Bayrak `--ignore-failed-sources`, ulaşılabilir olmayan bu kaynakları atlayabilir.
+Araç yükleme, araç paketini içeren NuGet akışına erişim gerektirir. Özet akışı kullanılamıyorsa başarısız olur. Akışlarını `nuget.config`değiştirebilir, belirli `nuget.config` bir dosya yı isteyebilir veya `--add-source` anahtarla ek akışlar belirtebilirsiniz. Varsayılan olarak, NuGet bağlanamayan tüm akışlar için bir hata atar. Bayrak `--ignore-failed-sources` bu erişilemez kaynakları atlayabilir.
 
-### <a name="package-id-incorrect"></a>Paket KIMLIĞI yanlış
+### <a name="package-id-incorrect"></a>Paket kimliği yanlış
 
-* Aracın adını yanlış yazmış olursunuz.
+* Aracın adını yanlış yazdınız.
 
-Hatanın yaygın bir nedeni, araç adının doğru olmaması. Bu, yanlış yazma veya araç taşınmış ya da kullanım dışı olduğu için oluşabilir. NuGet.org üzerinde Araçlar için, adın doğru olduğundan emin olmanın bir yolu, NuGet.org adresinde aracı aramak ve yükleme komutunu kopyalamaktır.
+Hatanın yaygın bir nedeni, araç adının doğru olmamasıdır. Bu, yanlış yazım nedeniyle veya araç taşındığı veya küçümdelenmiş olması nedeniyle olabilir. NuGet.org araçlar için, adı doğru olduğundan emin olmak için bir yolu NuGet.org aracı aramak ve yükleme komutunu kopyalamaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [.NET Core araçları](global-tools.md)
+* [.NET Çekirdek araçları](global-tools.md)

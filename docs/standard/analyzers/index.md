@@ -1,38 +1,38 @@
 ---
-title: Roslyn Çözümleyicileri - .NET tabanlı.
-description: Sorunları bulmak ve bu sorunlara yönelik düzeltmeler önerir tabanlı Roslyn Çözümleyicileri hakkında bilgi edinin.
+title: Roslyn tabanlı Analizörler - .NET
+description: Sorunları bulan ve bu sorunlar için düzeltmeler öneren Roslyn tabanlı çözümleyiciler hakkında bilgi edinin.
 author: billwagner
 ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
 ms.openlocfilehash: 436cfb3904f0891f8c18bb5890563a13d65e2d1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "62003060"
 ---
-# <a name="the-roslyn-based-analyzers"></a>Roslyn Çözümleyicilerini tabanlı
+# <a name="the-roslyn-based-analyzers"></a>Roslyn tabanlı Analizörler
 
-Roslyn tabanlı Çözümleyicileri, sorunları bulup düzeltme Öner projenizin kaynak kodunu analiz etmek için .NET derleyici SDK'sı (Roslyn API'leri) kullanın. Farklı Çözümleyicileri sorunları, güvenlik konuları API'sini uyumluluk hataları neden olabilecek uygulamalar arasında değişen farklı sınıflardaki arayın.
+Roslyn tabanlı çözümleyiciler, sorunları bulmak ve düzeltmeler önermek için projenizin kaynak kodunu çözümlemek için .NET Derleyici SDK'yı (Roslyn API'leri) kullanır. Farklı çözümleyiciler, hatalara neden olabilecek uygulamalardan güvenlik kaygılarına ve API uyumluluğuna kadar farklı sorun sınıfları arar.
 
-Roslyn tabanlı Çözümleyicileri, etkileşimli ve yapılar sırasında hem de çalışır. Çözümleyici, Visual Studio'da veya komut satırı derlemeleri farklı konusunda rehberlik yapmaktadır.
+Roslyn tabanlı çözümleyiciler hem etkileşimli hem de yapılar sırasında çalışır. Çözümleyici, Visual Studio'da veya komut satırında oluştururken farklı kılavuzlar sağlar.
 
-Visual Studio'da kod düzenleme yaparken kaygıları tetikleyen kod oluşturma hemen sonra olası sorunları yakalama değişiklik yaptıkça Çözümleyicileri çalıştırın. Herhangi bir sorun, herhangi bir sorun altında dalgalı çizgiler ile vurgulanmıştır. Visual Studio bir ampul görüntüler ve üzerine tıkladığınızda Çözümleyicisi Bu sorun için olası düzeltmeler önerir. Proje oluşturduğunuzda, Visual Studio veya komut satırından, tüm kaynak kodunu analiz edilir ve Çözümleyicisi olası sorunların tam bir listesini sağlar. Aşağıdaki şekilde, bir örnek gösterilmektedir.
+Visual Studio'da kodu edinirken, siz değişiklikler yaptığınızda çözümleyiciler çalışır ve endişeleri tetikleyen kod oluşturur oluşturmaz olası sorunları yakalar. Herhangi bir sorun herhangi bir sorun altında squiggles ile vurgulanır. Visual Studio bir ampul görüntüler, ve üzerine tıkladığınızda analizör bu sorun için olası düzeltmeler önerecektir. Projeyi Visual Studio'da veya komut satırından oluşturduğunuzda, tüm kaynak kodu analiz edilir ve çözümleyici olası sorunların tam bir listesini sağlar. Aşağıdaki şekil bir örnek gösterir.
 
-![framework Çözümleyicisi tarafından bildirilen sorunları](./media/framework-analyzers-2.png)
+![çerçeve çözümleyicisi tarafından bildirilen sorunlar](./media/framework-analyzers-2.png)
 
-Roslyn tabanlı Çözümleyicileri hataları, uyarıları ve sorunun önem derecesine göre bilgi olarak olası sorunları bildirir.
+Roslyn tabanlı çözümleyiciler, sorunun önem derecesine bağlı olarak olası sorunları hatalar, uyarılar veya bilgi olarak bildirir.
 
-Roslyn tabanlı Çözümleyicileri NuGet paketleri olarak projenize yükleyin. Yapılandırılmış Çözümleyicileri ve her Çözümleyicisi ayarları geri ve bu proje için tüm geliştirici makinesinde çalıştırın.
+Projenizde Roslyn tabanlı çözümleyicileri NuGet paketleri olarak yüklersiniz. Yapılandırılan çözümleyiciler ve her çözümleyici için tüm ayarlar geri yüklenir ve bu proje için herhangi bir geliştiricinin makinesinde çalıştırılır.
 
 > [!NOTE]
-> Roslyn tabanlı Çözümleyicileri için kullanıcı deneyimi, kod analiz kitaplıklarını FxCop ve güvenlik analizi araçları daha eski sürümleri gibi çok farklıdır.  Roslyn tabanlı Çözümleyicileri açıkça çalıştırmanız gerekmez. Visual Studio'da "Çözümle" menüsünde "Kod analizini Çalıştır" menü öğelerini kullanmasına gerek yoktur. Roslyn tabanlı Çözümleyicileri, siz çalıştığınız sırada zaman uyumsuz olarak çalışır.
+> Roslyn tabanlı analizörler için kullanıcı deneyimi FxCop eski sürümleri ve güvenlik analiz araçları gibi Kod Analizi kütüphaneleri farklıdır.  Roslyn tabanlı analizörleri açıkça çalıştırmanız gerekmez. Visual Studio'daki "Analiz Et" menüsündeki "Kod Analizini Çalıştır" menüsüöğelerini kullanmaya gerek yoktur. Roslyn tabanlı çözümleyiciler siz çalışırken eş zamanlı olarak çalışırlar.
 
-## <a name="more-information-on-specific-analyzers"></a>Özel çözümleyiciler hakkında daha fazla bilgi
+## <a name="more-information-on-specific-analyzers"></a>Belirli analizörler hakkında daha fazla bilgi
 
-Bu bölümde aşağıdaki Çözümleyicileri ele alınmaktadır:
+Aşağıdaki çözümleyiciler bu bölümde ele alınmıştır:
 
-* [API Çözümleyicisi](api-analyzer.md): Bu çözümleyici inceler, kodunuz için olası uyumluluk riskleri veya kullanımdan kaldırılan API'leri kullanır.
-* [Framework Çözümleyicisi](framework-analyzer.md): Bu Çözümleyici, .NET Framework uygulamaları için yönergelerine uyduğundan emin olmak için kodunuzu inceler. Bu kurallar, çeşitli güvenlik tabanlı önerileri içerir.
-* [.NET portability Analyzer](portability-analyzer.md): Bu çözümleyici ne kadar iş uygulamanızın diğer .NET uygulamaları ve .NET Core, .NET standart, UWP ve Xamarin iOS, Android ve Mac için dahil olmak üzere ile uyumlu hale getirmek için gerekli olduğunu görmek için kodunuzu inceler.
+* [API Çözümleyicisi](api-analyzer.md): Bu çözümleyici, olası uyumluluk riskleri veya amortismana alınan API'lerin kullanımı için kodunuzu inceler.
+* [Çerçeve Çözümleyicisi](framework-analyzer.md): Bu çözümleyici, .NET Framework uygulamaları nın yönergelerine uyduğundan emin olmak için kodunuzu inceler. Bu kurallar, güvenlik tabanlı çeşitli öneriler içerir.
+* [.NET Taşınabilirlik Çözümleyicisi](portability-analyzer.md): Bu çözümleyici, uygulamanızı iOS, Android ve Mac için .NET Core, .NET Standard, UWP ve Xamarin gibi diğer .NET uygulamaları ve profilleriyle uyumlu hale getirmek için ne kadar çalışma gerektiğini görmek için kodunuzu inceler.

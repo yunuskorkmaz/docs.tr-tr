@@ -9,22 +9,22 @@ helpviewer_keywords:
 - PLINQ queries, how to measure performance
 ms.assetid: 491ba43b-2c10-473d-9aab-e2cb96446711
 ms.openlocfilehash: 91b6165be2f4f464626fb25f7152de68de9d86e8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124990"
 ---
 # <a name="how-to-measure-plinq-query-performance"></a>Nasıl yapılır: PLINQ Sorgu Performansını Ölçme
-Bu örnek, bir PLıNQ sorgusunun yürütülmesi için geçen süreyi ölçmek için <xref:System.Diagnostics.Stopwatch> sınıfını nasıl kullanacağınızı gösterir.  
+Bu örnek, bir <xref:System.Diagnostics.Stopwatch> PLINQ sorgusunun yürütülmesi için gereken süreyi ölçmek için sınıfın nasıl kullanıldığını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, sorgunun yürütülmesi için geçen süreyi ölçmek üzere boş bir `foreach` döngüsünü (Visual Basic`For Each`) kullanır. Gerçek dünyada kodda, döngü genellikle toplam sorgu yürütme zamanına eklenen ek işleme adımları içerir. Sorgu yürütme başladığında, kronometre 'un döngüden önce başlamadığına dikkat edin. Daha ayrıntılı ölçüm gerekliyse, `ElapsedMilliseconds`yerine `ElapsedTicks` özelliğini kullanabilirsiniz.  
+ Bu örnek, `foreach` sorgunun`For Each` yürütülmesi için gereken süreyi ölçmek için boş bir döngü (Visual Basic'te) kullanır. Gerçek dünya kodunda, döngü genellikle toplam sorgu yürütme süresine ekleyen ek işleme adımları içerir. Kronometrenin döngüden hemen öncesine kadar başlatılmadığını, çünkü sorgu yürütmesinin başladığı zaman olduğuna dikkat edin. Daha ince taneli ölçüm eihtiyacınız varsa, `ElapsedTicks` özelliği `ElapsedMilliseconds`' nin yerine kullanabilirsiniz.  
   
  [!code-csharp[PLINQ#19](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/measure2.cs#19)]
  [!code-vb[PLINQ#19](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/measure2.vb#19)]  
   
- Toplam yürütme süresi, sorgu uygulamalarıyla denemeler yaparken yararlı bir ölçümdür, ancak her zaman hikayenin tamamına söylemez. Sorgu iş parçacıklarının bir diğeri ve diğer çalışan işlemlerle etkileşimini daha ayrıntılı ve daha zengin bir şekilde görüntülemek için eşzamanlılık görselleştiricisi kullanın. Daha fazla bilgi için bkz. [Eşzamanlılık görselleştiricisi](/visualstudio/profiling/concurrency-visualizer).  
+ Sorgu uygulamalarıyla deneme yaparken toplam yürütme süresi yararlı bir ölçüdür, ancak her zaman tüm hikayeyi anlatmaz. Sorgu iş parçacıklarının birbirleriyle ve diğer çalışan işlemlerle etkileşimini daha derin ve daha zengin bir görünüme sahip etmek için Eşzamanlılık Görselleştiricisini kullanın. Daha fazla bilgi için [Concurrency Visualizer'a](/visualstudio/profiling/concurrency-visualizer)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

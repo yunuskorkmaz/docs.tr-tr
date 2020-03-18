@@ -1,5 +1,6 @@
 ---
 title: Güvenlik ve Yarış Durumları
+'description:': Describes pitfalls to avoid around security holes exploited by race conditions, including dispose methods, constructors, cached objects, and finalizers.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - secure coding, race conditions
 - code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-ms.openlocfilehash: bc0d9f481fd212ede55bffde6cc20c3e080629e4
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 09d8d0d6e85af04fe0fb00f53df408126012081e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159422"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186786"
 ---
 # <a name="security-and-race-conditions"></a>Güvenlik ve Yarış Durumları
-Diğer bir konu alanı, yarış koşullarından yararlanılabilen güvenlik delikleri için olası bir konudur. Bunun gerçekleşebileceği çeşitli yollar vardır. İzleyen alt konu, geliştiricinin oluşmaması gereken önemli konuların bazılarını özetler.  
+Endişe edilen bir diğer konu da ırk koşullarının yararlanmış güvenlik açıkları potansiyeli. Bunun olabileceği çeşitli yollar vardır. İzleyen alt konular, geliştiricinin kaçınması gereken bazı önemli tuzakları sıralar.  
   
-## <a name="race-conditions-in-the-dispose-method"></a>Dispose yönteminde yarış koşulları  
- Bir sınıfın **Dispose** yöntemi (daha fazla bilgi için bkz. [çöp toplama](../../../docs/standard/garbage-collection/index.md)) eşitlenmemişse, **Dispose** içindeki temizleme kodu, aşağıdaki örnekte gösterildiği gibi birden çok kez çalıştırılabilir.  
+## <a name="race-conditions-in-the-dispose-method"></a>Elden Çıkarma Yönteminde Yarış Koşulları  
+ Bir sınıfın **Elden Çıkarma** yöntemi (daha fazla bilgi için bkz. [Çöp Toplama)](../../../docs/standard/garbage-collection/index.md)eşitlenmemişse, Aşağıdaki örnekte gösterildiği **gibi, Elden Çıkarma** içindeki temizleme kodunun birden çok kez çalıştırılması mümkündür.  
   
 ```vb  
 Sub Dispose()  
@@ -44,13 +45,13 @@ void Dispose()
 }  
 ```  
   
- Bu **Dispose** uygulamasının eşitlenmediği için, ilk bir iş parçacığı tarafından `Cleanup` ve ardından `_myObj` **null**olarak ayarlanmadan önce ikinci bir iş parçacığının çağrılması mümkündür. Bunun bir güvenlik sorunu olup olmadığı, `Cleanup` kodu çalıştırıldığında ne olacağı hakkında farklılık gösterir. Eşitlenmemiş **Dispose** uygulamalarıyla ilgili önemli bir sorun, dosyalar gibi kaynak tanıtıcılarının kullanımını içerir. Hatalı bırakma yanlış tanıtıcı kullanılmasına neden olabilir, bu da genellikle güvenlik açıklarına yol açar.  
+ Bu **Elden Çıkarma** uygulaması eşitlenmediği için, `Cleanup` önce bir iş parçacığı tarafından çağrılması ve daha sonra ikinci bir iş parçacığının `_myObj` **null**olarak ayarlanmaması mümkündür. Bunun bir güvenlik sorunu olup `Cleanup` olmadığı, kod çalıştığında ne olduğuna bağlıdır. Eşitlenmemiş **Elden Çıkarma** uygulamalarıyla ilgili önemli bir sorun, dosyalar gibi kaynak iştamaçlarının kullanılmasıdır. Yanlış imha, yanlış tanıtıcının kullanılmasına neden olabilir ve bu da genellikle güvenlik açıklarına yol açar.  
   
-## <a name="race-conditions-in-constructors"></a>Oluşturuculardaki yarış koşulları  
- Bazı uygulamalarda, sınıf oluşturucularının tamamen çalıştırılmasından önce diğer iş parçacıklarının sınıf üyelerine erişmesi mümkün olabilir. Bu durum oluşursa herhangi bir güvenlik sorunu olmadığından emin olmak için tüm sınıf oluşturucularını gözden geçirmeniz ve gerekirse iş parçacıklarını eşitlemeniz gerekir.  
+## <a name="race-conditions-in-constructors"></a>İnşaatçılarda Yarış Koşulları  
+ Bazı uygulamalarda, sınıf oluşturucuları tamamen çalışmadan önce diğer iş parçacıklarının sınıf üyelerine erişebilmeleri mümkün olabilir. Bu olması durumunda güvenlik sorunları olmadığından emin olmak için tüm sınıf oluşturucuları gözden geçirmeniz veya gerekirse iş parçacığı eşitleme niz gerekir.  
   
-## <a name="race-conditions-with-cached-objects"></a>Önbelleğe alınmış nesneleri olan yarış koşulları  
- Aşağıdaki örnekte gösterildiği gibi, güvenlik bilgilerini önbelleğe alan veya kod erişimi güvenlik [onayı](../../../docs/framework/misc/using-the-assert-method.md) işlemini kullanan kod, sınıfın diğer kısımları uygun şekilde eşitlenmiyorsa yarış koşullarına açık de olabilir.  
+## <a name="race-conditions-with-cached-objects"></a>Önbelleğe Alınmış Nesnelerle Yarış Koşulları  
+ Güvenlik bilgilerini önbelleğe alan veya kod erişim güvenliğini kullanan [kod,](../../../docs/framework/misc/using-the-assert-method.md) aşağıdaki örnekte gösterildiği gibi sınıfın diğer bölümleri uygun şekilde eşitlenmezse, ırk koşullarına karşı savunmasız da olabilir.  
   
 ```vb  
 Sub SomeSecureFunction()  
@@ -95,12 +96,12 @@ void DoOtherWork()
 }  
 ```  
   
- Aynı nesneye sahip başka bir iş parçacığından çağrılabilecek `DoOtherWork` başka yollar varsa, güvenilmeyen bir arayan bir talebi geçmiş olabilir.  
+ Aynı nesneye `DoOtherWork` sahip başka bir iş parçacığından çağrılabilen başka yollar varsa, güvenilmeyen bir arayan talebi niçin geçebilir.  
   
- Kodunuz güvenlik bilgilerini önbelleğe alıyorsa, bu güvenlik açığı için gözden geçirdiğinizden emin olun.  
+ Kodunuz güvenlik bilgilerini önbelleğe alırsa, bu güvenlik açığı için bu bilgileri gözden geçirdiğinizden emin olun.  
   
-## <a name="race-conditions-in-finalizers"></a>Sonlandırıcılar içindeki yarış koşulları  
- Yarış koşulları, bir statik veya yönetilmeyen kaynağa başvuruda bulunan bir nesnede, daha sonra sonlandırıcıda boşaldığı bir nesne içinde de gerçekleşebilir. Birden çok nesne, bir sınıfın sonlandırıcıda yönetilen bir kaynağı paylaşıyorsa, nesnelerin bu kaynağa tüm erişimi eşitlemesi gerekir.  
+## <a name="race-conditions-in-finalizers"></a>Finalize'lerde Yarış Koşulları  
+ Yarış koşulları, daha sonra sonlandırıcısında serbest kaldığı statik veya yönetilmeyen bir kaynağa başvuran bir nesnede de oluşabilir. Birden çok nesne, sınıfın sonlandırıcısında manipüle edilen bir kaynağı paylaşıyorsa, nesnelerin bu kaynağa tüm erişimi eşitlemesi gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

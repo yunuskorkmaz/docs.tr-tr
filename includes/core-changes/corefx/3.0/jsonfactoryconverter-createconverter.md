@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: 9052f509ec6df4e4b911e2f33b5c8197adb9a2c3
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 3bce796191e0ebe6dbe4650457abe5a20c383f02
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568155"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147568"
 ---
-### <a name="jsonfactoryconvertercreateconverter-signature-changed"></a>JsonFactoryConverter. CreateConverter imzası değişti
+### <a name="jsonfactoryconvertercreateconverter-signature-changed"></a>JsonFactoryConverter.CreateConverter imzası değiştirildi
 
-<xref:System.Text.Json.Serialization.JsonConverterFactory> sınıflarının kompozisyonunu kolaylaştırmak için, <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter%2A> yöntemi genel hale getirilir ve <xref:System.Text.Json.JsonSerializerOptions>türünde ikinci bir bağımsız değişken verildi.
+Sınıfların <xref:System.Text.Json.Serialization.JsonConverterFactory> bileşimini kolaylaştırmak <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter%2A> için, yöntem genel kullanıma açıklanmış <xref:System.Text.Json.JsonSerializerOptions>ve ikinci bir tür bağımsız değişkeni verilmiştir.
 
-#### <a name="change-description"></a>Açıklamayı Değiştir
+#### <a name="change-description"></a>Açıklamayı değiştir
 
-.NET Core 'da sürüm 3,0 Preview 8 ' den önceki `CreateConverter` yönteminin imzası:
+3.0 `CreateConverter` Önizleme 8 sürümünden önce .NET Core'daki yöntemin imzası:
 
 ```csharp
 namespace System.Text.Json.Serialization
@@ -24,7 +24,7 @@ namespace System.Text.Json.Serialization
 }
 ```
 
-.NET Core 3,0 Preview 8 ve sonraki sürümlerinde, şu şekilde olur:
+.NET Core 3.0 Önizleme 8 ve sonraki sürümlerinde, şu şekildedir:
 
 ```csharp
 namespace System.Text.Json.Serialization
@@ -36,19 +36,19 @@ namespace System.Text.Json.Serialization
 }
 ```
 
-Bu değişiklikten önce, bundan <xref:System.Text.Json.Serialization.JsonConverter%601> almanın kolay bir yolu olmadığından, korumalı fabrika dönüştürücülerini oluşturmak zordur. Fabrika yöntemini genel hale getirme ve geçerli <xref:System.Text.Json.JsonSerializerOptions> geçirme, çok daha esnek bir bileşim için izin verir.
+Bu değişiklikten önce, mühürlü fabrika dönüştürücüleri oluşturmak zordu, çünkü ondan <xref:System.Text.Json.Serialization.JsonConverter%601> almak için kolay bir yol yoktu. Fabrika yöntemini kamuya alenen <xref:System.Text.Json.JsonSerializerOptions> yapmak ve aynı zamanda mevcut geçen çok daha esnek kompozisyon için izin verir.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3,0 Preview 8
+3.0 Önizleme 8
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Türetilmiş sınıfların güncellenmesi ve yeniden derlenmesi gerekiyor.
+Türemiş sınıfların güncelleştirilip yeniden derlenmesi gerekir.
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-<xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter(System.Type,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType>.
+- <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter(System.Type,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType>
 
 <!-- For tool use only
 

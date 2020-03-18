@@ -1,46 +1,46 @@
 ---
-title: Windows, Linux ve macOS-.NET Core 'a .NET Core SDK yüklemesi
-description: Windows, Linux ve macOS 'ta .NET Core 'u yüklemeyi öğrenin. .NET Core uygulamaları geliştirmek için gereken bağımlılıkları bulun.
+title: Windows, Linux ve macOS'a .NET Core SDK'yı yükleyin - .NET Core
+description: .NET Core'u Windows, Linux ve macOS'a nasıl yükleyin öğrenin. .NET Core uygulamalarını geliştirmek için gereken bağımlılıkları keşfedin.
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 0aa323533dd9136372c2bbc330c9c3056fdf428c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 13600ea01e18ad47e6295653ba3b79ce53ff3257
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157577"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399009"
 ---
-# <a name="install-the-net-core-sdk"></a>.NET Core SDK 'i yükler
+# <a name="install-the-net-core-sdk"></a>.NET Core SDK’sını yükleme
 
-Bu makalede, .NET Core SDK nasıl yükleneceğini öğreneceksiniz. .NET Core SDK .NET Core Uygulamaları ve kitaplıkları oluşturmak için kullanılır. .NET Core çalışma zamanı her zaman SDK ile birlikte yüklenir.
+Bu makalede, .NET Core SDK'yı nasıl yükleyeceğinizi öğreneceksiniz. .NET Core SDK ,NET Core uygulamaları ve kitaplıkları oluşturmak için kullanılır. .NET Core çalışma süresi her zaman SDK ile yüklenir.
 
 ::: zone pivot="os-windows"
 
-## <a name="install-with-an-installer"></a>Bir yükleyici ile yükleme
+## <a name="install-with-an-installer"></a>Yükleyiciyle yükleme
 
-Windows, .NET Core 3,1 SDK 'sını yüklemek için kullanılabilecek tek başına yükleyicilere sahiptir:
+Windows'da .NET Core 3.1 SDK'yı yüklemek için kullanılabilecek bağımsız yükleyiciler vardır:
 
-- [x64 (64-bit) CPU 'Lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- [x86 (32 bit) CPU 'Lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [x64 (64-bit) CPU'lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [x86 (32-bit) CPU'lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ::: zone-end
 
 ::: zone pivot="os-macos"
 
-## <a name="install-with-an-installer"></a>Bir yükleyici ile yükleme
+## <a name="install-with-an-installer"></a>Yükleyiciyle yükleme
 
-macOS, .NET Core 3,1 SDK 'sını yüklemek için kullanılabilecek tek başına yükleyicilere sahiptir:
+macOS,.NET Core 3.1 SDK'yı yüklemek için kullanılabilecek bağımsız yükleyicilere sahiptir:
 
-- [x64 (64-bit) CPU 'Lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [x64 (64-bit) CPU'lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-## <a name="download-and-manually-install"></a>İndirme ve el ile yükleme
+## <a name="download-and-manually-install"></a>İndirin ve el ile yükleyin
 
-.NET Core için macOS yükleyicilerine alternatif olarak SDK 'yı indirip el ile yükleyebilirsiniz.
+.NET Core için macOS yükleyicilere alternatif olarak SDK'yı indirebilir ve el ile yükleyebilirsiniz.
 
-SDK 'Yı ayıklamak ve .NET Core CLI komutlarının terminalde kullanılabilir hale getirmek için önce bir .NET Core ikili sürümü [indirin](#all-net-core-downloads) . Ardından, bir Terminal açın ve aşağıdaki komutları çalıştırın. Çalışma zamanının `~/Downloads/dotnet-sdk.pkg` dosyasına indirildiği varsayılır.
+SDK'yı ayıklamak ve .NET Core CLI komutlarını terminalde kullanılabilir hale getirmek için önce bir .NET Core ikili sürüm [indirin.](#all-net-core-downloads) Ardından, bir terminal açın ve aşağıdaki komutları çalıştırın. Çalışma zamanının `~/Downloads/dotnet-sdk.pkg` dosyaya indirilmiş olduğu varsayılır.
 
 ```bash
 mkdir -p $HOME/dotnet
@@ -53,15 +53,15 @@ export PATH=$PATH:$HOME/dotnet
 
 ::: zone pivot="os-linux"
 
-## <a name="install-with-a-package-manager"></a>Paket Yöneticisi ile yüklemesi
+## <a name="install-with-a-package-manager"></a>Paket yöneticisiyle yükleme
 
-.NET Core SDK birçok ortak Linux Paket Yöneticisi ile yükleyebilirsiniz. Daha fazla bilgi için bkz. [Linux Paket Yöneticisi-.NET Core 'U yükler](linux-package-managers.md).
+.NET Core SDK'yı birçok ortak Linux paket yöneticisiyle birlikte yükleyebilirsiniz. Daha fazla bilgi için [Linux Package Manager - Install .NET Core](linux-package-managers.md)'a bakın.
 
-Paket Yöneticisi ile yükleme yalnızca x64 mimarisinde desteklenir. ARM gibi farklı bir mimariye sahip .NET Core SDK yüklüyorsanız, aşağıdaki [indirme ve el ile yükleme](#download-and-manually-install) yönergelerini izleyin. Desteklenen mimariler hakkında daha fazla bilgi için bkz. [.NET Core Dependencies ve Requirements](dependencies.md).
+Paket yöneticisiyle yükleme yalnızca x64 mimarisinde desteklenir. .NET Core SDK'yı ARM gibi farklı bir mimariyle yüklüyorsanız, [İndirme'yi](#download-and-manually-install) izleyin ve aşağıdaki talimatları el ile yükleyin. Hangi mimarilerin desteklendirilip desteklendirildigini daha fazla bilgi için [.NET Core bağımlılıkları ve gereksinimleri](dependencies.md)bölümüne bakın.
 
-## <a name="download-and-manually-install"></a>İndirme ve el ile yükleme
+## <a name="download-and-manually-install"></a>İndirin ve el ile yükleyin
 
-SDK 'Yı ayıklamak ve .NET Core CLI komutlarının terminalde kullanılabilir hale getirmek için önce bir .NET Core ikili sürümü [indirin](#all-net-core-downloads) . Ardından, bir Terminal açın ve aşağıdaki komutları çalıştırın.
+SDK'yı ayıklamak ve .NET Core CLI komutlarını terminalde kullanılabilir hale getirmek için önce bir .NET Core ikili sürüm [indirin.](#all-net-core-downloads) Ardından, bir terminal açın ve aşağıdaki komutları çalıştırın.
 
 ```bash
 mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.1.100-linux-x64.tar.gz -C $HOME/dotnet
@@ -70,68 +70,68 @@ export PATH=$PATH:$HOME/dotnet
 ```
 
 > [!TIP]
-> Yukarıdaki `export` komutları yalnızca .NET Core CLI komutlarını çalıştırıldığı terminal oturumu için kullanılabilir hale getirir.
+> Önceki `export` komutlar yalnızca çalıştırıldığı terminal oturumu için .NET Core CLI komutlarını kullanılabilir hale getirin.
 >
-> Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örnek:
+> Komutları kalıcı olarak eklemek için kabuk profilinizi edebilirsiniz. Linux için farklı kabukları bir dizi vardır ve her biri farklı bir profile sahiptir. Örnek:
 >
-> - **Bash kabuğu**: *~/. bash_profile*, *~/,bashrc*
-> - **Korn kabuğu**: *~/,KSHRC* veya *. Profile*
-> - **Z kabuğu**: *~/,zshrc* veya *. zprofile*
+> - **Bash Kabuk**: *~/.bash_profile*, *~/.bashrc*
+> - **Korn Kabuk**: *~/.kshrc* veya *.profile*
+> - **Z Kabuk**: *~/.zshrc* veya *.zprofile*
 >
-> Kabuğunuz için uygun kaynak dosyayı düzenleyin ve mevcut `PATH` ifadesinin sonuna `:$HOME/dotnet` ekleyin. `PATH` bir ifade dahil yoksa, `export PATH=$PATH:$HOME/dotnet`yeni bir satır ekleyin.
+> Kabuğunuz için uygun kaynak dosyayı `:$HOME/dotnet` edin ve `PATH` varolan ifadenin sonuna ekleyin. Hiçbir `PATH` deyim dahil değilse, `export PATH=$PATH:$HOME/dotnet`yeni bir satır ekleyin.
 >
-> Ayrıca, dosyanın sonuna `export DOTNET_ROOT=$HOME/dotnet` ekleyin.
+> Ayrıca, `export DOTNET_ROOT=$HOME/dotnet` dosyanın sonuna ekleyin.
 
 ::: zone-end
 
 ::: zone pivot="os-windows"
 
-## <a name="install-with-visual-studio"></a>Visual Studio ile Install
+## <a name="install-with-visual-studio"></a>Visual Studio ile yükleyin
 
-.NET Core uygulamaları geliştirmek için Visual Studio kullanıyorsanız, aşağıdaki tabloda, hedef .NET Core SDK sürümüne göre gerekli olan en düşük Visual Studio sürümü açıklanmaktadır.
+.NET Core uygulamaları geliştirmek için Visual Studio kullanıyorsanız, aşağıdaki tabloda Visual Studio'nun hedef .NET Core SDK sürümüne göre en az gerekli sürümünü açıklanır.
 
 | .NET Core SDK sürümü | Visual Studio sürüm                      |
 | --------------------- | ------------------------------------------ |
-| 3.1                   | Visual Studio 2019 sürüm 16,4 veya üzeri. |
-| 3.0                   | Visual Studio 2019 sürüm 16,3 veya üzeri. |
-| 2.2                   | Visual Studio 2017 sürüm 15,9 veya üzeri. |
-| 2.1                   | Visual Studio 2017 sürüm 15,7 veya üzeri. |
+| 3.1                   | Visual Studio 2019 sürüm 16.4 veya üzeri. |
+| 3,0                   | Visual Studio 2019 sürüm 16.3 veya üzeri. |
+| 2,2                   | Visual Studio 2017 sürümü 15.9 veya üzeri. |
+| 2.1                   | Visual Studio 2017 sürüm 15.7 veya üzeri. |
 
-Visual Studio zaten yüklüyse, aşağıdaki adımlarla sürümünüzü kontrol edebilirsiniz.
+Visual Studio zaten yüklüyse, sürümünüzü aşağıdaki adımlarla kontrol edebilirsiniz.
 
-01. Visual Studio’yu açın.
-01. **Microsoft Visual Studio hakkında** **Yardım** > seçin.
-01. **Hakkında** iletişim kutusunda sürüm numarasını okuyun.
+01. Visual Studio'yu açın.
+01. **Microsoft Visual Studio Hakkında** **Yardım'ı** > seçin.
+01. **Hakkında** iletişim kutusundan sürüm numarasını okuyun.
 
-Visual Studio, en son .NET Core SDK ve çalışma zamanını yükleyebilir.
+Visual Studio en son .NET Core SDK'yı ve çalışma süresini yükleyebilir.
 
-- [Visual Studio 'Yu indirin](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
+- [Karşıdan yükleme Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
 
 ### <a name="select-a-workload"></a>İş yükü seçin
 
-Visual Studio 'Yu yüklerken veya değiştirirken, oluşturmakta olduğunuz uygulamanın türüne bağlı olarak aşağıdaki iş yüklerinden birini veya daha fazlasını seçin:
+Visual Studio'yu yüklerken veya değiştirirken, oluşturmakta olduğunuz uygulama türüne bağlı olarak aşağıdaki iş yüklerinden birini veya birkaçını seçin:
 
-- **Diğer Toolsets** bölümünde yer alan **.NET Core platformlar arası geliştirme** iş yükü.
-- **Web & bulut** bölümündeki **ASP.net ve Web geliştirme** iş yükü.
-- **Web & bulut** bölümündeki **Azure geliştirme** iş yükü.
-- **Masaüstü & mobil** bölümündeki **.net masaüstü geliştirme** iş yükü.
+- **Diğer Araç Kümeleri** **bölümündeki .NET Core çapraz platform geliştirme** iş yükü.
+- **Web & Bulut** bölümündeki ASP.NET ve web **geliştirme** iş yükü.
+- **Web & Bulut** **bölümündeki Azure geliştirme** iş yükü.
+- **Masaüstü & Mobil** bölümündeki **.NET masaüstü geliştirme** iş yükü.
 
-[.NET Core iş yüküne sahip Windows Visual Studio 2019 ![](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)
+[![.NET Core iş yükü ile Windows Visual Studio 2019](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)
 
-## <a name="download-and-manually-install"></a>İndirme ve el ile yükleme
+## <a name="download-and-manually-install"></a>İndirin ve el ile yükleyin
 
-Çalışma zamanını ayıklamak ve .NET Core CLI komutlarının terminalde kullanılabilir hale getirmek için önce bir .NET Core ikili sürümü [indirin](#all-net-core-downloads) . Ardından, yüklemek için bir dizin oluşturun, örneğin `%USERPROFILE%\dotnet`. Son olarak, indirilen ZIP dosyasını bu dizine ayıklayın.
+Çalışma süresini ayıklamak ve .NET Core CLI komutlarını terminalde kullanılabilir hale getirmek için önce bir .NET Core ikili sürüm [indirin.](#all-net-core-downloads) Ardından, yüklemek için bir dizin `%USERPROFILE%\dotnet`oluşturun, örneğin. Son olarak, indirilen zip dosyasını bu dizine ayıklayın.
 
-Varsayılan olarak, .NET Core CLI komutları ve uygulamalar .NET Core 'u bu şekilde kullanmaz. Açıkça kullanmayı tercih etmeniz gerekir. Bunu yapmak için, bir uygulamanın başlatıldığı ortam değişkenlerini değiştirin:
+Varsayılan olarak, .NET Core CLI komutları ve uygulamaları bu şekilde yüklenen .NET Core'u kullanmaz. Açıkça kullanmayı seçmelisiniz. Bunu yapmak için, bir uygulamanın başlatıldıği ortam değişkenlerini değiştirin:
 
 ```console
 set DOTNET_ROOT=%USERPROFILE%\dotnet
 set PATH=%USERPROFILE%\dotnet;%PATH%
 ```
 
-Bu yaklaşım, farklı konumlara birden çok sürüm yüklemenize olanak sağlar ve ardından uygulamayı o konuma işaret eden ortam değişkenleriyle çalıştırarak uygulamanın kullanması gereken yüklemeyi açıkça seçebilirsiniz.
+Bu yaklaşım, birden çok sürümü ayrı konumlara yüklemenize olanak tanır, ardından uygulamayı o konumu işaret eden ortam değişkenleri ile çalıştırarak uygulamanın hangi yükleme konumunu kullanması gerektiğini açıkça seçebilirsiniz.
 
-Bu ortam değişkenleri ayarlansa bile, .NET Core uygulamayı çalıştırmak için en iyi çerçeveyi seçerken varsayılan genel yüklemesi konumunu yine de dikkate alır. Varsayılan değer genellikle yükleyicilerin kullanacağı `C:\Program Files\dotnet`. Çalışma zamanına yalnızca bu ortam değişkenini de ayarlayarak özel bir yüklemede kullanmak üzere talimat verebilirsiniz:
+Bu ortam değişkenleri ayarlandığında bile,.NET Core, uygulamayı çalıştırmak için en iyi çerçeveyi seçerken varsayılan genel yükleme konumunu dikkate alır. Varsayılan genellikle `C:\Program Files\dotnet`, yükleyiciler kullanır. Çalışma zamanını yalnızca bu ortam değişkenini ayarlayarak özel yükleme konumunu kullanması için talimat verebilirsiniz:
 
 ```console
 set DOTNET_MULTILEVEL_LOOKUP=0
@@ -141,31 +141,31 @@ set DOTNET_MULTILEVEL_LOOKUP=0
 
 ::: zone pivot="os-macos"
 
-## <a name="install-with-visual-studio-for-mac"></a>Mac için Visual Studio ile yüklensin
+## <a name="install-with-visual-studio-for-mac"></a>Mac için Visual Studio ile yükleyin
 
-**.NET Core** iş yükü seçiliyken Mac için Visual Studio .NET Core SDK yüklenir. MacOS 'ta .NET Core geliştirme ile çalışmaya başlamak için bkz. [Mac Için Visual Studio 2019 'Yi yüklemek](/visualstudio/mac/installation). En son sürüm olan .NET Core 3,1 için Mac için Visual Studio 8,4 Preview ' i kullanmanız gerekir.
+Mac için Visual **Studio,.NET Core** iş yükü seçildiğinde .NET Core SDK'yı yükler. macOS'ta .NET Core geliştirmeye başlamak [için Mac için Visual Studio 2019'u yükle'ye](/visualstudio/mac/installation)bakın. Son sürüm olan .NET Core 3.1 için Mac 8.4 Önizleme için Visual Studio'yu kullanmanız gerekir.
 
-[.NET Core iş yükü özelliği ile Mac için macOS Visual Studio 2019 ![](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)
+[![macOS Visual Studio 2019 mac için .NET Core iş yükü özelliği ile Mac](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)
 
 ::: zone-end
 
-## <a name="install-alongside-visual-studio-code"></a>Visual Studio Code birlikte yüklemeyi
+## <a name="install-alongside-visual-studio-code"></a>Visual Studio Code'un yanına yükleyin
 
-Visual Studio Code, masaüstünüzde çalışan güçlü ve hafif bir kaynak kod düzenleyicisidir. Visual Studio Code Windows, macOS ve Linux için kullanılabilir.
+Visual Studio Code, masaüstünüzde çalışan güçlü ve hafif bir kaynak kod düzenleyicisidir. Visual Studio Code, Windows, macOS ve Linux için kullanılabilir.
 
-Visual Studio Code, Visual Studio gibi otomatikleştirilmiş bir .NET Core yükleyicisi ile birlikte gelmediğinden, .NET Core desteği eklemek basittir.
+Visual Studio Code Visual Studio gibi otomatik bir .NET Core yükleyici ile gelmiyor olsa da, .NET Core desteği eklemek basittir.
 
-01. [Visual Studio Code indirin ve yükleyin](https://code.visualstudio.com/Download).
-01. [.NET Core SDK indirin ve yükleyin](https://dotnet.microsoft.com/download/dotnet-core).
-01. [Uzantıyı Visual Studio Code marketi 'Nden yüklersiniz. C# ](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
+01. [Visual Studio Code'u indirin ve kurun.](https://code.visualstudio.com/Download)
+01. [.NET Core SDK'yı indirin ve kurun.](https://dotnet.microsoft.com/download/dotnet-core)
+01. [Visual Studio Code pazar yerinden C# uzantısını yükleyin.](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 
 ::: zone pivot="os-windows"
 
-## <a name="install-with-powershell-automation"></a>PowerShell otomasyonu ile Install
+## <a name="install-with-powershell-automation"></a>PowerShell otomasyonu ile yükleme
 
-[DotNet yükleme betikleri](../tools/dotnet-install-script.md) , SDK 'nın Otomasyon ve yönetici olmayan yüklemeleri için kullanılır. Betiği, [DotNet yükleme betiği başvuru sayfasından](../tools/dotnet-install-script.md)indirebilirsiniz.
+[Dotnet yükleme komut dosyaları](../tools/dotnet-install-script.md) Otomasyon ve SDK'nın yönetici olmayan yüklemeleri için kullanılır. Komut dosyasını [dotnet yükleme komut dosyası başvuru sayfasından](../tools/dotnet-install-script.md)indirebilirsiniz.
 
-Komut dosyası, .NET Core 3,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. Geçerli .NET Core sürümünü yüklemek için betiği aşağıdaki anahtarla çalıştırın.
+Komut dosyası, .NET Core 3.1 olan en son [uzun vadeli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılandır. .NET Core'un geçerli sürümüne yüklemek için komut dosyasını aşağıdaki anahtarla çalıştırın.
 
 ```powershell
 dotnet-install.ps1 -Channel Current
@@ -175,11 +175,11 @@ dotnet-install.ps1 -Channel Current
 
 ::: zone pivot="os-linux,os-macos"
 
-## <a name="install-with-bash-automation"></a>Bash otomasyonu ile Install
+## <a name="install-with-bash-automation"></a>Bash otomasyonu ile yükleyin
 
-[DotNet yükleme betikleri](../tools/dotnet-install-script.md) , SDK 'nın Otomasyon ve yönetici olmayan yüklemeleri için kullanılır. Betiği, [DotNet yükleme betiği başvuru sayfasından](../tools/dotnet-install-script.md)indirebilirsiniz.
+[Dotnet yükleme komut dosyaları](../tools/dotnet-install-script.md) Otomasyon ve SDK'nın yönetici olmayan yüklemeleri için kullanılır. Komut dosyasını [dotnet yükleme komut dosyası başvuru sayfasından](../tools/dotnet-install-script.md)indirebilirsiniz.
 
-Komut dosyası, .NET Core 3,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. Geçerli .NET Core sürümünü yüklemek için betiği aşağıdaki anahtarla çalıştırın.
+Komut dosyası, .NET Core 3.1 olan en son [uzun vadeli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılandır. .NET Core'un geçerli sürümüne yüklemek için komut dosyasını aşağıdaki anahtarla çalıştırın.
 
 ```bash
 ./dotnet-install.sh -c Current
@@ -187,47 +187,47 @@ Komut dosyası, .NET Core 3,1 olan en son [uzun süreli destek (LTS)](https://do
 
 ::: zone-end
 
-## <a name="all-net-core-downloads"></a>Tüm .NET Core İndirmeleri
+## <a name="all-net-core-downloads"></a>Tüm .NET Core indirmeleri
 
-.NET Core ' u aşağıdaki bağlantılardan biriyle doğrudan indirebilir ve yükleyebilirsiniz:
+.NET Core'u aşağıdaki bağlantılardan biriyle doğrudan indirip yükleyebilirsiniz:
 
-- [.NET Core 3,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- [.NET Core 3,0 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-- [.NET Core 2,2 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.2)
-- [.NET Core 2,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.1)
+- [.NET Core 3.1 indirme](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [.NET Core 3.0 indirme](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [.NET Core 2.2 indirme](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [.NET Core 2.1 indirme](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 
 ## <a name="docker"></a>Docker
 
-Kapsayıcılar, uygulamanızı ana bilgisayar sisteminin geri kalanından yalıtmak için basit bir yol sağlar. Aynı makinedeki kapsayıcılar yalnızca çekirdeği paylaşır ve uygulamanıza verilen kaynakları kullanır.
+Kapsayıcılar, uygulamanızı ana bilgisayar sisteminin geri kalanından yalıtmak için hafif bir yol sağlar. Aynı makinedeki kaplar sadece çekirdeği paylaşır ve uygulamanıza verilen kaynakları kullanır.
 
-.NET Core, Docker kapsayıcısında çalıştırılabilir. Resmi .NET Core Docker görüntüleri Microsoft Container Registry (MCR) ' de yayımlanır ve [Microsoft .NET Core Docker Hub deposunda](https://hub.docker.com/_/microsoft-dotnet-core/)bulunabilir. Her depo, .NET (SDK veya çalışma zamanı) ve kullanabileceğiniz farklı .NET birleşimlerinin görüntülerini içerir.
+.NET Core bir Docker konteynerinde çalıştırılabilir. Resmi .NET Core Docker görüntüleri Microsoft Konteyner Kayıt Defteri'nde (MCR) yayınlanır ve [Microsoft .NET Core Docker Hub deposunda](https://hub.docker.com/_/microsoft-dotnet-core/)keşfedilebilir. Her depo, kullanabilirsiniz .NET (SDK veya Runtime) ve işletim sistemi farklı kombinasyonları için görüntüler içerir.
 
-Microsoft, belirli senaryolar için uyarlanmış görüntüler sağlar. Örneğin, [ASP.NET Core deposu](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) üretimde ASP.NET Core uygulamaları çalıştırmak için oluşturulmuş görüntüler sağlar.
+Microsoft, belirli senaryolar için özel leştirilmiş görüntüler sağlar. Örneğin, [ASP.NET Core deposu,](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) üretimde Core uygulamaları ASP.NET çalıştırmak için oluşturulmuş görüntüler sağlar.
 
-Bir Docker kapsayıcısında .NET Core kullanma hakkında daha fazla bilgi için bkz. [.net ve Docker](../docker/introduction.md) ve [örneklere](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md)giriş.
+Docker konteynerinde .NET Core kullanma hakkında daha fazla bilgi için [.NET ve Docker ve Örneklere Giriş'e](../docker/introduction.md) bakın. [Samples](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 ::: zone pivot="os-windows"
 
-- [Öğretici: Merhaba Dünya öğreticisi](../tutorials/with-visual-studio.md).
-- [Öğretici: Visual Studio Code yeni bir uygulama oluşturun](../tutorials/with-visual-studio-code.md).
-- [Öğretici: bir .NET Core uygulamasını Kapsayıize](../docker/build-container.md)edin.
+- [Öğretici: Merhaba Dünya öğretici](../tutorials/with-visual-studio.md).
+- [Öğretici: Visual Studio Code ile yeni bir uygulama oluşturun.](../tutorials/with-visual-studio-code.md)
+- [Öğretici: Containerize bir .NET Core uygulaması](../docker/build-container.md).
 
 ::: zone-end
 
 ::: zone pivot="os-macos"
 
-- [MacOS Catalina Ile çalışma](macos-notarization-issues.md).
-- [Öğretici: macOS 'u kullanmaya](../tutorials/using-on-mac-vs.md)başlayın.
-- [Öğretici: Visual Studio Code yeni bir uygulama oluşturun](../tutorials/with-visual-studio-code.md).
-- [Öğretici: bir .NET Core uygulamasını Kapsayıize](../docker/build-container.md)edin.
+- [macOS Catalina noterizasyonu ile çalışma.](macos-notarization-issues.md)
+- [Öğretici: macOS'a başlayın.](../tutorials/using-on-mac-vs.md)
+- [Öğretici: Visual Studio Code ile yeni bir uygulama oluşturun.](../tutorials/with-visual-studio-code.md)
+- [Öğretici: Containerize bir .NET Core uygulaması](../docker/build-container.md).
 
 ::: zone-end
 
 ::: zone pivot="os-linux"
 
-- [Öğretici: Visual Studio Code yeni bir uygulama oluşturun](../tutorials/with-visual-studio-code.md).
-- [Öğretici: bir .NET Core uygulamasını Kapsayıize](../docker/build-container.md)edin.
+- [Öğretici: Visual Studio Code ile yeni bir uygulama oluşturun.](../tutorials/with-visual-studio-code.md)
+- [Öğretici: Containerize bir .NET Core uygulaması](../docker/build-container.md).
 
 ::: zone-end

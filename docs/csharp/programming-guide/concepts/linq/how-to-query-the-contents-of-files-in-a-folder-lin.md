@@ -1,16 +1,16 @@
 ---
-title: Bir klasördeki metin dosyalarının içeriğini sorgulama (LINQ) (C#)
+title: Bir klasördeki metin dosyalarının içeriği nasıl sorgulanır (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: 9487e00ac4cb69180ad3744183a3ef8467cbac28
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 998fddd3f59ee64df9adcee1acc720d82861c3d9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347676"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168745"
 ---
-# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Bir klasördeki metin dosyalarının içeriğini sorgulama (LINQ) (C#)
-Bu örnek, belirtilen bir dizin ağacındaki tüm dosyaların üzerinde nasıl sorgu yapılacağını, her bir dosyanın nasıl açılacağını ve içeriğini incelemenizi gösterir. Bu tür bir teknik, dizin ağacı içeriğinin dizinlerini veya ters dizinlerini oluşturmak için kullanılabilir. Bu örnekte basit bir dize araması gerçekleştirilir. Ancak, bir normal ifadeyle, daha karmaşık bir tür model eşleşmesi gerçekleştirilebilir. Daha fazla bilgi için bkz. [LINQ sorgularını normal ifadelerle birleştirme (C#)](./how-to-combine-linq-queries-with-regular-expressions.md).  
+# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Bir klasördeki metin dosyalarının içeriği nasıl sorgulanır (LINQ) (C#)
+Bu örnek, belirtilen bir dizin ağacındaki tüm dosyaların üzerinde nasıl sorgulanır, her dosyayı açın ve içeriğini nasıl inceleyikarşılarız. Bu tür bir teknik, dizin ağacının içeriğinin dizinlerini oluşturmak veya dizinleri tersine çevirmek için kullanılabilir. Bu örnekte basit bir dize araması gerçekleştirilir. Ancak, normal bir ifade yle daha karmaşık desen eşleştirme türleri gerçekleştirilebilir. Daha fazla bilgi için [LINQ sorgularını normal ifadelerle (C#) nasıl birleştirebilirsiniz'](./how-to-combine-linq-queries-with-regular-expressions.md)e bakın.  
   
 ## <a name="example"></a>Örnek  
   
@@ -59,7 +59,7 @@ class QueryContents
     {  
         string fileContents = String.Empty;  
   
-        // If the file has been deleted since we took   
+        // If the file has been deleted since we took
         // the snapshot, ignore it and return the empty string.  
         if (System.IO.File.Exists(name))  
         {  
@@ -70,10 +70,10 @@ class QueryContents
 }  
 ```  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
-System. C# lınq ve System.IO ad alanları için `using` yönergeler içeren bir konsol uygulaması projesi oluşturun.
+## <a name="compiling-the-code"></a>Kod Derleniyor  
+System.Linq ve System.IO `using` ad alanları için yönergeleri içeren bir C# konsolu uygulama projesi oluşturun.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dosya dizinleri (C#)](./linq-and-file-directories.md)
-- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ ve Dosya Dizinleri (C#)](./linq-and-file-directories.md)
+- [Nesnelere LINQ (C#)](./linq-to-objects.md)

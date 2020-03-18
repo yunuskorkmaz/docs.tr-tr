@@ -9,39 +9,39 @@ helpviewer_keywords:
 - PLINQ queries, how to control ordering
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
 ms.openlocfilehash: d38c039fa99433d9476d62c1e96dff7e306fd766
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123117"
 ---
 # <a name="how-to-control-ordering-in-a-plinq-query"></a>Nasıl yapılır: PLINQ Sorgusunda Sıralama Denetimi
-Bu örneklerde, <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> genişletme yöntemi kullanılarak bir PLıNQ sorgusunda sıralamayı denetleme gösterilmektedir.  
+Bu örnekler, uzantı yöntemini kullanarak PLINQ sorgusunda sıralamanın nasıl denetlenebildiğini <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> gösterir.  
   
 > [!WARNING]
-> Bu örnekler öncelikle kullanımı göstermeye yöneliktir ve eşdeğer sıralı LINQ to Objects sorgularından daha hızlı çalışmayabilir.  
+> Bu örnekler öncelikle kullanımı göstermek için tasarlanmıştır ve Nesneler sorgularına eşdeğer ardışık LINQ'dan daha hızlı çalışabilir veya çalışmayabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, kaynak sırasının sıralamasını korur. Bu bazen gereklidir; Örneğin, bazı sorgu işleçleri doğru sonuçlar üretmek için sıralı bir kaynak sırası gerektirir.  
+ Aşağıdaki örnek, kaynak dizinin sırasını korur. Bu bazen gereklidir; örneğin, bazı sorgu işleçleri doğru sonuçlar üretmek için sıralı bir kaynak sıragerektirir.  
   
  [!code-csharp[PLINQ#12](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#12)]
  [!code-vb[PLINQ#12](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#12)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, kaynak sırası büyük olasılıkla sıralanmalıdır beklenen bazı sorgu işleçlerini gösterir. Bu işleçler sıralanmamış diziler üzerinde çalışır, ancak bunlar beklenmedik sonuçlara neden olabilirler.  
+ Aşağıdaki örnek, kaynak sırası büyük olasılıkla sıralanmış olması beklenen bazı sorgu işleçleri gösterir. Bu işleçler sıralanmamış diziler üzerinde çalışır, ancak beklenmeyen sonuçlar üretebilir.  
   
  [!code-csharp[PLINQ#14](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#14)]
  [!code-vb[PLINQ#14](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#14)]  
   
- Bu yöntemi çalıştırmak için, [PLINQ veri örneği](../../../docs/standard/parallel-programming/plinq-data-sample.md) projesindeki PLINQDataSample sınıfına yapıştırın ve F5 tuşuna basın.  
+ Bu yöntemi çalıştırmak için [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) projesinde PLINQDataSample sınıfına yapıştırın ve F5 tuşuna basın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir sorgunun ilk bölümü için sıralamayı nasıl koruyabileceğiniz gösterir, sonra bir JOIN yan tümcesinin performansını artırmak için sıralamayı kaldırır ve sonra sıralamayı son sonuç dizisine yeniden uygular.  
+ Aşağıdaki örnek, sorgunun ilk bölümü için sıralamayı nasıl koruyacağını, ardından birleştirilmiş tümcenin performansını artırmak için sıralamayı nasıl kaldıracağını ve ardından son sonuç dizisine sıralamayı yeniden uygulayacağını gösterir.  
   
  [!code-csharp[PLINQ#15](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#15)]
  [!code-vb[PLINQ#15](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#15)]  
   
- Bu yöntemi çalıştırmak için, [PLINQ veri örneği](../../../docs/standard/parallel-programming/plinq-data-sample.md) projesindeki PLINQDataSample sınıfına yapıştırın ve F5 tuşuna basın.  
+ Bu yöntemi çalıştırmak için [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) projesinde PLINQDataSample sınıfına yapıştırın ve F5 tuşuna basın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

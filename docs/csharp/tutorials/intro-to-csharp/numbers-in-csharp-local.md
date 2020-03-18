@@ -1,30 +1,30 @@
 ---
-title: C# C#
-description: Sayısal C# türleri, özelliklerini ve yöntemlerini inceleyerek bilgi edinin.
+title: C# sayılar - C# eğitimine giriş
+description: Sayısal türleri, özelliklerini ve yöntemlerini inceleyerek C# öğrenin.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 7537bb597665461021946a792e342149f29c0e95
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7e9af4b3b859f74d7e92ff10b3964ddd59d2473b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694666"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156551"
 ---
-# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C\# integral ve kayan nokta numaralarını işleme
+# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C'deki integral ve kayan nokta sayılarını işleme\#
 
-Bu öğretici, size etkileşimli olarak C# sayısal türler öğretir. Küçük miktarlarda kod yazacaksınız, daha sonra bu kodu derleyip çalıştıracaksınız. Öğreticide, içindeki C#sayıları ve matematik işlemlerini keşfettiği bir dizi ders bulunur. Bu dersler size C# dilinin temel özelliklerini öğretir.
+Bu öğretici c # interaktif sayısal türleri hakkında öğretir. Küçük miktarlarda kod yazacaksın, sonra bu kodu derleyip çalıştıracaksın. Öğretici C# numaraları ve matematik işlemleri keşfetmek dersler bir dizi içerir. Bu dersler size C# dilinin temel özelliklerini öğretir.
 
-Bu öğreticide, geliştirme için kullanabileceğiniz bir makineniz olması beklenir. [10 dakika içinde Merhaba Dünya](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) .NET öğreticisi, Windows, Linux veya MacOS 'ta yerel geliştirme ortamınızı ayarlamaya yönelik yönergeler içerir. Kullanacağınız komutlara hızlı bir genel bakış, daha fazla ayrıntı için bağlantılarla birlikte [geliştirme araçları hakkında bilgi sahibi olmaya gelmiştir](local-environment.md) .
+Bu öğretici, geliştirme için kullanabileceğiniz bir makineye sahip olmak için bekliyor. .NET öğretici [Hello World 10 dakika içinde](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) Windows, Linux veya macOS'ta yerel geliştirme ortamınızı ayarlama talimatları na sahiptir. Kullanacağınız komutların hızlı bir genel bakışı, daha fazla ayrıntıya bağlantılar içeren [geliştirme araçlarına aşina olun'da](local-environment.md) dır.
 
 ## <a name="explore-integer-math"></a>Tamsayı matematiğini inceleme
 
-Sayı adlı bir dizin oluşturun *-hızlı başlangıç*. Geçerli dizini yapın ve şu komutu çalıştırın:
+*Numbers-quickstart*adlı bir dizin oluşturun. Geçerli dizinini yapın ve aşağıdaki komutu çalıştırın:
 
 ```dotnetcli
 dotnet new console -n NumbersInCSharp -o .
 ```
 
-En sevdiğiniz düzenleyicide *program.cs* açın ve satır `Console.WriteLine("Hello World!");` aşağıdaki kodla değiştirin:
+En sevdiğiniz düzenleyicide *Program.cs* açın `Console.WriteLine("Hello World!");` ve satırı aşağıdakilerle değiştirin:
 
 ```csharp
 int a = 18;
@@ -35,13 +35,13 @@ Console.WriteLine(c);
 
 Komut pencerenize `dotnet run` yazarak bu kodu çalıştırın.
 
-Az önce tamsayılarla gerçekleştirilen temel matematik işlemlerinden birini gördünüz. `int` türü bir **tamsayıyı**, sıfır, pozitif veya negatif bir tam sayıyı temsil eder. Toplama için `+` sembolünü kullanırsınız. Tamsayılar için sıklıkla kullanılan diğer matematiksel işlemler şunlardır:
+Az önce tamsayılarla gerçekleştirilen temel matematik işlemlerinden birini gördünüz. Tür, `int` sıfır, pozitif veya negatif tam sayı olan bir **tamsayıyı**temsil eder. Toplama için `+` sembolünü kullanırsınız. Tamsayılar için sıklıkla kullanılan diğer matematiksel işlemler şunlardır:
 
 - çıkarma için `-`
 - çarpma için `*`
 - bölme için `/`
 
-Bu farklı işlemleri keşfederek başlayın. `c`değerini yazan satırdan sonra bu satırları ekleyin:
+Bu farklı işlemleri keşfederek başlayın. Değerini yazan satırdan sonra bu `c`satırları ekleyin:
 
 ```csharp
 
@@ -60,13 +60,13 @@ Console.WriteLine(c);
 
 Komut pencerenize `dotnet run` yazarak bu kodu çalıştırın.
 
-Ayrıca dilerseniz aynı satırda birden çok matematik işlemi gerçekleştirerek de deneme yapabilirsiniz. Örneğin `c = a + b - 12 * 17;` deneyin. Değişkenlerin ve sabit sayıların karıştırılmasına izin verilir.
+Ayrıca dilerseniz aynı satırda birden çok matematik işlemi gerçekleştirerek de deneme yapabilirsiniz. Örneğin `c = a + b - 12 * 17;` deneyin. Değişkenleri ve sabit sayıları karıştırmaya izin verilir.
 
 > [!TIP]
-> C# dilini (veya herhangi bir programlama dilini) keşfederken, kod yazdığınızda hatalar yapacaksınız. **Derleyici** bu hataları bulup size bildirir. Çıktı hata iletileri içerdiğinde, nelerin düzeltileceğini görmek için örnek koda ve penceredeki koda yakından bakın.
+> C# dilini (veya herhangi bir programlama dilini) keşfederken, kod yazdığınızda hatalar yapacaksınız. **Derleyici** bu hataları bulup size bildirir. Çıktı hata iletileri içeriyorsa, neyi düzelteceğimize bakmak için örnek koduna ve pencerenizdeki koda yakından bakın.
 > Bu alıştırma, C# kodunun yapısını öğrenmenize yardımcı olur.
 
-İlk adımı tamamladınız. Sonraki bölüme başlamadan önce geçerli kodu ayrı bir yönteme taşıyalim. Bu, yeni bir örnekle çalışmaya başlamasını kolaylaştırır. `Main` yönteminizi `WorkingWithIntegers` olarak yeniden adlandırın ve `WorkingWithIntegers`çağıran yeni bir `Main` yöntemi yazın. Bitirdiğinizde, kodunuzun şöyle görünmesi gerekir:
+İlk adımı bitirdin. Bir sonraki bölümü başlatmadan önce, geçerli kodu ayrı bir yönteme taşıyalım. Bu, yeni bir örnekle çalışmaya başlamayı kolaylaştırır. Metodunuzu `WorkingWithIntegers` yeniden adlandırın `Main` `Main` ve `WorkingWithIntegers`çağıran yeni bir yöntem yazın. Bitirdiğinizde, kodunuz şu şekilde görünmelidir:
 
 ```csharp
 using System;
@@ -79,19 +79,19 @@ namespace NumbersInCSharp
         {
             int a = 18;
             int b = 6;
-            
+
             // addition
             int c = a + b;
             Console.WriteLine(c);
-            
+
             // subtraction
             c = a - b;
             Console.WriteLine(c);
-            
+
             // multiplication
             c = a * b;
             Console.WriteLine(c);
-            
+
             // division
             c = a / b;
             Console.WriteLine(c);
@@ -107,17 +107,17 @@ namespace NumbersInCSharp
 
 ## <a name="explore-order-of-operations"></a>İşlem sırasını inceleme
 
-`WorkingWithIntegers()`çağrısını açıklama. Bu bölümde çalışırken çıktının daha az karışık hale gelir:
+Çağrıyı yorumla. `WorkingWithIntegers()` Bu bölümde çalışırken çıktıdaha az darmadağın yapacaktır:
 
 ```csharp
 //WorkingWithIntegers();
 ```
 
-`//` içinde C#bir **yorum** başlatır. Açıklamalar, kaynak kodunuzda tutmak istediğiniz tüm metinlerdir, ancak kod olarak yürütülmez. Derleyici açıklamalardan herhangi bir yürütülebilir kod oluşturmaz.
+C#'da `//` bir **yorum** başlar. Yorumlar, kaynak kodunuzda tutmak istediğiniz ancak kod olarak yürütülmemek istemediğiniz herhangi bir metindir. Derleyici yorumlardan yürütülebilir bir kod oluşturmaz.
 
 C# dili, farklı matematik işlemlerinin önceliğini matematikte öğrendiğiniz kurallarla tutarlı bir şekilde tanımlar.
 Çarpma ve bölme işlemleri, toplama ve çıkarma işlemlerinden önce gelir.
-`Main` yöntemine aşağıdaki kodu ekleyerek ve `dotnet run`yürüterek bunu keşfedebilirsiniz:
+Yönteminize `Main` aşağıdaki kodu ekleyerek ve aşağıdakileri `dotnet run`gerçekleştirerek bunu keşfedin:
 
 ```csharp
 int a = 5;
@@ -129,14 +129,14 @@ Console.WriteLine(d);
 
 Çıkış, çarpma işleminin toplama işleminden önce gerçekleştiğini gösterir.
 
-Önce gerçekleştirilmesini istediğiniz işlemin veya işlemlerin çevresine parantez ekleyerek farklı bir işlem sırası zorlayabilirsiniz. Aşağıdaki satırları ekleyin ve yeniden çalıştırın:
+Önce yapılmasını istediğiniz işlem veya işlemlerin etrafına parantez ekleyerek farklı bir işlem sırası zorlayabilirsiniz. Aşağıdaki satırları ekleyin ve yeniden çalıştırın:
 
 ```csharp
 d = (a + b) * c;
 Console.WriteLine(d);
 ```
 
-Birçok farklı işlemi birleştirerek daha fazlasını keşfedin. `Main` yönteminizin en altında aşağıdaki satırlara benzer bir şey ekleyin. `dotnet run` komutunu yeniden deneyin.
+Birçok farklı işlemi birleştirerek daha fazlasını keşfedin. Yönteminizin `Main` altındaki aşağıdaki satırları gibi bir şey ekleyin. `dotnet run` komutunu yeniden deneyin.
 
 ```csharp
 d = (a + b) - 6 * c + (12 * 4) / 3 + 12;
@@ -145,7 +145,7 @@ Console.WriteLine(d);
 
 Tamsayılar için farklı bir davranışla karşılaşmış olabilirsiniz. Sonucun ondalık veya kesir bölümü içermesini bekliyor olsanız da tamsayı bölme işlemi her zaman tamsayı sonucu verir.
 
-Bu davranışı görmediyseniz, `Main` yönteminizin sonunda aşağıdaki kodu deneyin:
+Bu davranışı görmediyseniz, yönteminizin `Main` sonunda aşağıdaki kodu deneyin:
 
 ```csharp
 int e = 7;
@@ -155,10 +155,10 @@ int h = (e + f) / g;
 Console.WriteLine(h);
 ```
 
-Sonuçları görmek için yeniden `dotnet run` yazın.
+Sonuçları `dotnet run` görmek için yeniden yazın.
 
-' In üzerine geçmeden önce, bu bölümde yazdığınız tüm kodu alıp yeni bir yönteme koyabilirsiniz. Yeni yöntemin `OrderPrecedence`çağırın.
-Şöyle bir işlem yapmanız gerekir:
+Devam etmeden önce, bu bölümde yazdığınız tüm kodları alıp yeni bir yönteme koyalım. Buna yeni `OrderPrecedence`bir yöntem deyin.
+Böyle bir şeyle bitirmelisin:
 
 ```csharp
 using System;
@@ -171,19 +171,19 @@ namespace NumbersInCSharp
         {
             int a = 18;
             int b = 6;
-            
+
             // addition
             int c = a + b;
             Console.WriteLine(c);
-            
+
             // subtraction
             c = a - b;
             Console.WriteLine(c);
-            
+
             // multiplication
             c = a * b;
             Console.WriteLine(c);
-            
+
             // division
             c = a / b;
             Console.WriteLine(c);
@@ -224,7 +224,7 @@ namespace NumbersInCSharp
 ## <a name="explore-integer-precision-and-limits"></a>Tamsayı duyarlığını ve sınırlarını inceleme
 
 Son örnek, tamsayı bölme işleminin sonucu kestiğini size göstermiştir.
-`%` karakteri olan **Modül** işlecini kullanarak **kalanı** alabilirsiniz. `Main` yönteminde aşağıdaki kodu deneyin:
+Geri **kalanını** **modulo** işleci, `%` karakter kullanarak alabilirsiniz. Yönteminizde `Main` aşağıdaki kodu deneyin:
 
 ```csharp
 int a = 7;
@@ -236,7 +236,7 @@ Console.WriteLine($"quotient: {d}");
 Console.WriteLine($"remainder: {e}");
 ```
 
-C# tamsayı türü diğer bir özelliğiyle matematiksel tamsayılardan farklıdır: `int` türünün alt ve üst sınırları vardır. Bu sınırları görmek için bu kodu `Main` yöntemine ekleyin:
+C# tamsayı türü diğer bir özelliğiyle matematiksel tamsayılardan farklıdır: `int` türünün alt ve üst sınırları vardır. Bu sınırları görmek `Main` için bu kodu yönteminize ekleyin:
 
 ```csharp
 int max = int.MaxValue;
@@ -244,7 +244,7 @@ int min = int.MinValue;
 Console.WriteLine($"The range of integers is {min} to {max}");
 ```
 
-Bir hesaplama, bu sınırları aşan bir değer veriyorsa bu, **aşağı taşma** veya **taşma** koşulunuzun olduğu anlamına gelir. Yanıtın bir sınırdan diğerine kaydığı görülüyor. Örnek görmek için bu iki satırı `Main` yöntemine ekleyin:
+Bir hesaplama, bu sınırları aşan bir değer veriyorsa bu, **aşağı taşma** veya **taşma** koşulunuzun olduğu anlamına gelir. Yanıtın bir sınırdan diğerine kaydığı görülüyor. Bir örnek görmek `Main` için yönteminize bu iki satırı ekleyin:
 
 ```csharp
 int what = max + 3;
@@ -257,12 +257,12 @@ Taşma durumu en büyük olası tamsayı değerinden en küçük olana "kaydığ
 
 `int` türü, gereksinimlerinizi karşılamadığında kullanabileceğiniz farklı sınırlar ve duyarlık içeren başka sayısal türler de mevcuttur. Bir sonraki adımda bunları inceleyelim.
 
-Bir kez daha, bu bölümde yazdığınız kodu ayrı bir yönteme taşıyalim. Bunu, `TestLimits` olarak adlandırın.
+Bir kez daha, bu bölümde yazdığınız kodu ayrı bir yönteme taşıyalım. Bunu, `TestLimits` olarak adlandırın.
 
 ## <a name="work-with-the-double-type"></a>Çift tür ile çalışma
 
 `double` sayısal türü, çift duyarlıklı kayan noktalı bir sayıyı ifade eder. Bu terimler sizin için yeni olabilir. **Kayan noktalı** sayı, büyüklük açısından oldukça büyük veya küçük olabilen, tamsayı olmayan değerleri ifade etmek için kullanılır. **Çift duyarlıklı**, bu sayıların **tek duyarlıktan** daha fazla duyarlık kullanılarak depolandığı anlamına gelir. Modern bilgisayarlarda çift duyarlıklı sayı kullanımı, tek duyarlıklı sayılara göre daha yaygındır.
-İnceleyelim mi? Aşağıdaki kodu ekleyin ve sonucu görüntüleyin:
+İnceleyelim mi? Aşağıdaki kodu ekleyin ve sonucu görün:
 
 ```csharp
 double a = 5;
@@ -282,7 +282,7 @@ double h = (e + f) / g;
 Console.WriteLine(h);
 ```
 
-Çift değerin aralığı, tamsayı değerlerinden çok daha büyüktür. Şu ana kadar yazdıklarınız için aşağıdaki kodu deneyin:
+Çift değerin aralığı, tamsayı değerlerinden çok daha büyüktür. Şimdiye kadar yazdıkların aşağıdaki kodu deneyin:
 
 ```csharp
 double max = double.MaxValue;
@@ -301,15 +301,15 @@ Console.WriteLine(third);
 
 `0.3` yinelemesinin `1/3` ile tam olarak aynı olmadığını fark edersiniz.
 
-***Görev***
+***Sınama***
 
 `double` türünü kullanarak büyük sayılar, küçük sayılar, çarpma işlemi ve bölme işlemi ile diğer hesaplamaları deneyin. Daha karmaşık hesaplamalar deneyin.
 
-Zorluğa bir süre harcadıktan sonra yazdığınız kodu alın ve yeni bir yönteme yerleştirin. Yeni yöntemin `WorkWithDoubles`adı.
+Meydan okumayla biraz zaman geçirdikten sonra, yazdığınız kodu alın ve yeni bir yönteme yerleştirin. Bu yeni `WorkWithDoubles`yöntemi adlandırın.
 
 ## <a name="work-with-fixed-point-types"></a>Sabit nokta türleriyle çalışma
 
-C# dilinde temel sayısal türleri gördünüz: tamsayılar ve çiftler.  Öğrenmeniz gereken bir tür daha vardır: `decimal` türü. `decimal` türü, `double` türünden daha küçük bir aralığa ancak daha fazla duyarlığa sahiptir. **Sabit nokta** terimi, ondalık ayırıcının (veya ikili noktasının) hareket etmediği anlamına gelir. Bir göz atalım:
+C# dilinde temel sayısal türleri gördünüz: tamsayılar ve çiftler.  Öğrenmeniz gereken bir tür daha vardır: `decimal` türü. `decimal` türü, `double` türünden daha küçük bir aralığa ancak daha fazla duyarlığa sahiptir. **Sabit nokta** terimi, ondalık ayırıcının (veya ikili noktasının) hareket etmediği anlamına gelir. Şimdi buna bir göz atalım:
 
 ```csharp
 decimal min = decimal.MinValue;
@@ -333,19 +333,19 @@ Sayılardaki `M` sonekiyle, bir sabit sayının `decimal` türünü nasıl kulla
 
 Ondalık türünün kullanıldığı matematikte, ondalık ayırıcının sağ tarafında daha fazla basamak bulunduğunu görebilirsiniz.
 
-***Görev***
+***Sınama***
 
 Farklı sayısal türleri gördüğünüze göre yarı çapı 2,50 santimetre olan bir dairenin alanını hesaplayan kodu yazın. Bir dairenin alanının, yarı çapın karesinin PI sayısı ile çarpımından elde edildiğini unutmayın. İpucu: .NET, PI sayısı için kullanabileceğiniz <xref:System.Math.PI?displayProperty=nameWithType> sabit değerini içerir.
 
 19 ile 20 arasında bir yanıt almanız gerekir.
-[GitHub 'daki tamamlanmış örnek koda bakarak](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106)yanıtınızı kontrol edebilirsiniz.
+[GitHub'daki bitmiş örnek koda bakarak](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106)yanıtınızı kontrol edebilirsiniz.
 
 Dilerseniz diğer formüllerden de deneme yapabilirsiniz.
 
-"Numaraları C#" hızlı başlangıç adımlarını tamamladınız. Kendi geliştirme ortamınızda [dallar ve döngüler](branches-and-loops-local.md) hızlı başlangıç ile devam edebilirsiniz.
+"C#'daki sayılar" hızlı başlangıcını tamamladınız. Kendi geliştirme ortamınızda [Şubeler ve döngüler](branches-and-loops-local.md) ile hızlı bir şekilde başlatAbilirsiniz.
 
 Aşağıdaki konularda C# dilinde sayılar hakkında daha fazla bilgi edinebilirsiniz:
 
-- [Integral sayısal türleri](../../language-reference/builtin-types/integral-numeric-types.md)
+- [Tamsayı sayısal türler](../../language-reference/builtin-types/integral-numeric-types.md)
 - [Kayan nokta sayısal türleri](../../language-reference/builtin-types/floating-point-numeric-types.md)
 - [Yerleşik sayısal dönüşümler](../../language-reference/builtin-types/numeric-conversions.md)

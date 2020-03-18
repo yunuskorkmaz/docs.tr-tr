@@ -6,14 +6,14 @@ helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 ms.openlocfilehash: 01e9d6b50bd7eeafea792a772ca86a81e40dafd4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708184"
 ---
 # <a name="common-io-tasks"></a>Ortak G/Ç Görevleri
-<xref:System.IO> ad alanı, dosyalar, dizinler ve akışlar üzerinde gerçekleştirilen okuma ve yazma gibi çeşitli eylemlere izin veren birkaç sınıf sağlar. Daha fazla bilgi için bkz. [dosya ve akış g/ç](../../../docs/standard/io/index.md).  
+Ad <xref:System.IO> alanı, okuma ve yazma gibi çeşitli eylemlerin dosyalarda, dizinlerde ve akışlarda gerçekleştirilmesine olanak tanıyan çeşitli sınıflar sağlar. Daha fazla bilgi için [Dosya ve Akış G/Ç'ye](../../../docs/standard/io/index.md)bakın.  
   
 ## <a name="common-file-tasks"></a>Yaygın Dosya Görevleri  
   
@@ -24,9 +24,9 @@ ms.locfileid: "75708184"
 |Bir metin dosyasından okuma|[Nasıl yapılır: Dosyadan Metin Okuma](../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
 |Bir dosyaya metin ekleme|[Nasıl yapılır: Günlük Dosyasını Açma ve Sonuna Ekleme](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)<br /><br /> <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType> yöntemi<br /><br /> <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType> yöntemi|  
 |Bir dosyayı yeniden adlandırma veya taşıma|<xref:System.IO.File.Move%2A?displayProperty=nameWithType> yöntemi<br /><br /> <xref:System.IO.FileInfo.MoveTo%2A?displayProperty=nameWithType> yöntemi|  
-|Bir dosyayı silme|<xref:System.IO.File.Delete%2A?displayProperty=nameWithType> yöntemi<br /><br /> <xref:System.IO.FileInfo.Delete%2A?displayProperty=nameWithType> yöntemi|  
+|Dosyayı silme|<xref:System.IO.File.Delete%2A?displayProperty=nameWithType> yöntemi<br /><br /> <xref:System.IO.FileInfo.Delete%2A?displayProperty=nameWithType> yöntemi|  
 |Bir dosyayı kopyalama|<xref:System.IO.File.Copy%2A?displayProperty=nameWithType> yöntemi<br /><br /> <xref:System.IO.FileInfo.CopyTo%2A?displayProperty=nameWithType> yöntemi|  
-|Bir dosyanın boyutunu alma|<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType> özelliği|  
+|Bir dosyanın boyutunu alma|<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType>Özellik|  
 |Bir dosyanın özniteliklerini alma|<xref:System.IO.File.GetAttributes%2A?displayProperty=nameWithType> yöntemi|  
 |Bir dosyanın özniteliklerini ayarlama|<xref:System.IO.File.SetAttributes%2A?displayProperty=nameWithType> yöntemi|  
 |Bir dosyanın var olup olmadığını belirleme|<xref:System.IO.File.Exists%2A?displayProperty=nameWithType> yöntemi|  
@@ -42,7 +42,7 @@ ms.locfileid: "75708184"
 |Bunu yapmak için...|Bu konudaki örneğe bakın...|  
 |-------------------|--------------------------------------|  
 |Belgelerim gibi özel bir klasördeki bir dosyaya erişme|[Nasıl yapılır: Bir Dosyaya Metin Yazma](../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
-|Bir dizin oluşturma|<xref:System.IO.Directory.CreateDirectory%2A?displayProperty=nameWithType> yöntemi<br /><br /> <xref:System.IO.FileInfo.Directory%2A?displayProperty=nameWithType> özelliği|  
+|Dizin oluşturma|<xref:System.IO.Directory.CreateDirectory%2A?displayProperty=nameWithType> yöntemi<br /><br /> <xref:System.IO.FileInfo.Directory%2A?displayProperty=nameWithType>Özellik|  
 |Bir alt dizin oluşturma|<xref:System.IO.DirectoryInfo.CreateSubdirectory%2A?displayProperty=nameWithType> yöntemi|  
 |Bir dizini yeniden adlandırma veya taşıma|<xref:System.IO.Directory.Move%2A?displayProperty=nameWithType> yöntemi<br /><br /> <xref:System.IO.DirectoryInfo.MoveTo%2A?displayProperty=nameWithType> yöntemi|  
 |Bir dizini kopyalama|[Nasıl yapılır: Dizinleri Kopyalama](../../../docs/standard/io/how-to-copy-directories.md)|  

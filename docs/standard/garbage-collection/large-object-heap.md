@@ -1,5 +1,5 @@
 ---
-title: Windows-.NET üzerinde LOH
+title: Windows'da LOH - .NET
 ms.date: 05/02/2018
 helpviewer_keywords:
 - large object heap (LOH)"
@@ -7,94 +7,94 @@ helpviewer_keywords:
 - garbage collection, large object heap
 - GC [.NET ], large object heap
 ms.openlocfilehash: 5125b76dd26ffa4fb363ecf8449f65b490f57b93
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74283615"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows sistemlerinde büyük nesne yığını
 
-.NET çöp toplayıcı (GC), nesneleri küçük ve büyük nesnelere böler. Bir nesne büyükse, bazı öznitelikleri nesnenin küçük olmasına göre daha önemli hale gelir. Örneğin, bunu sıkıştırmak, diğer bir deyişle, yığın üzerinde başka bir yerde belleğe kopyalamak pahalı olabilir. Bu nedenle, .NET atık toplayıcısı büyük nesne yığınına (LOH) büyük nesneler koyar. Bu konu başlığında, büyük nesne yığınına ayrıntılı olarak bakacağız. Bir nesneyi büyük bir nesne olarak niteleyen, bu büyük nesnelerin nasıl toplandığı ve büyük nesnelerin ne tür performans etkilerine ilişkin olduğunu tartışacağız.
+.NET Çöp Toplayıcı (GC) nesneleri küçük ve büyük nesnelere böler. Bir nesne büyükolduğunda, bazı öznitelikleri nesne küçükse daha önemli hale gelir. Örneğin, sıkıştırmak -- yani yığının başka bir yerinde hafızaya kopyalamak -- pahalıya mal olabilir. Bu nedenle, .NET Çöp Toplayıcı büyük nesne yığını (LOH) üzerinde büyük nesneler yerleştirir. Bu konuda, büyük nesne yığınına derinlemesine bakacağız. Bir nesneyi büyük bir nesne olarak nitelemeyi, bu büyük nesnelerin nasıl toplandığını ve büyük nesnelerin ne tür performans etkileri uyguladığını tartışacağız.
 
 > [!IMPORTANT]
-> Bu konuda, yalnızca Windows sistemlerinde çalışan .NET Framework ve .NET Core 'daki büyük nesne yığını ele alınmaktadır. Diğer platformlarda .NET uygulamalarında çalışan LOH 'yi kapsamaz.
+> Bu konu, .NET Framework ve .NET Core'da yalnızca Windows sistemlerinde çalışan büyük nesne yığınını tartışır. Diğer platformlarda .NET uygulamalarında çalışan LOH'yu kapsamaz.
 
-## <a name="how-an-object-ends-up-on-the-large-object-heap-and-how-gc-handles-them"></a>Bir nesnenin büyük nesne yığınında nasıl sona ereceği ve GC 'nin bunları nasıl işleyeceği
+## <a name="how-an-object-ends-up-on-the-large-object-heap-and-how-gc-handles-them"></a>Bir nesnenin büyük nesne yığınına nasıl son verdiği ve GC'nin bunları nasıl işlediği
 
-Bir nesne boyut olarak 85.000 bayttan büyükse veya eşitse, büyük bir nesne olarak kabul edilir. Bu sayı performans ayarlaması tarafından belirlendi. Bir nesne ayırma isteği 85.000 veya daha fazla bayt için olduğunda, çalışma zamanı onu büyük nesne yığınında ayırır.
+Bir nesne 85.000 bayt boyutundan büyük veya eşitse, büyük bir nesne olarak kabul edilir. Bu sayı performans amıile belirlendi. Bir nesne ayırma isteği 85.000 veya daha fazla bayt için olduğunda, çalışma zamanı onu büyük nesne yığınına ayırır.
 
-Bunun ne anlama geldiğini anlamak için .NET GC ile ilgili bazı temelleri incelemek yararlı olacaktır.
+Bunun ne anlama geldiğini anlamak için .NET GC ile ilgili bazı temel leri incelemek yararlıdır.
 
-.NET atık toplayıcısı, bir genel toplayıcı. Üç nesle sahiptir: nesil 0, 1. nesil ve 2. nesil. 3 nesin olmasının nedeni, iyi ayarlanmış bir uygulamada, çoğu nesne gen0 ' de zar. Örneğin, bir sunucu uygulamasında her bir istekle ilişkili ayırmalar istek bittikten sonra zar almalıdır. Uçuş aşamasında ayırma istekleri bunu gen1 ve zar alacak şekilde yapar. Temelde, Gen1 küçük nesne alanlarıyla uzun süreli nesne alanı arasında bir arabellek işlevi görür.
+.NET Çöp Toplayıcı bir nesil toplayıcıdır. Üç kuşağı vardır: nesil 0, nesil 1 ve nesil 2. 3 nesil olmasının nedeni, iyi ayarlanmış bir uygulamada, çoğu nesnenin gen0'de ölmesidir. Örneğin, bir sunucu uygulamasında, her istekle ilişkili ayırmalar istek tamamlandıktan sonra ölür. Uçuş tahsis talepleri gen1'e dönüşecek ve orada ölecek. Esasen, gen1 genç nesne alanları ve uzun ömürlü nesne alanları arasında bir tampon görevi görür.
 
-Küçük nesneler her zaman 0. kuşak olarak ayrılır ve yaşam süresine bağlı olarak 1. veya generation2 sürümüne yükseltilebilir. Büyük nesneler her zaman 2. nesil olarak ayrılır.
+Küçük nesneler her zaman nesil 0'da ayrılır ve kullanım ömürlerine bağlı olarak nesil 1 veya nesil2'ye yükseltilebilir. Büyük nesneler her zaman nesil 2'de ayrılır.
 
-Büyük nesneler yalnızca 2. nesil bir koleksiyon sırasında toplandıklarından 2. nesil için geçerlidir. Bir oluşturma toplandığında, tüm küçük oluşturma öğeleri de toplanır. Örneğin, 1. nesil bir GC gerçekleştiğinde hem 1. kuşak hem de 0 toplanır. 2\. nesil GC gerçekleştiğinde, tüm yığın toplanır. Bu nedenle, 2. nesil GC 'nin *tam GC*olarak da denir. Bu makale, tam GC yerine 2. nesil GC 'ye başvurur, ancak şartlar aynı şekilde değiştirilebilir.
+Büyük nesneler nesil 2'ye aittir, çünkü yalnızca nesil 2 koleksiyonu sırasında toplanır. Bir nesil toplandığında, tüm genç nesil (ler) de toplanır. Örneğin, bir nesil 1 GC gerçekleştiğinde, hem nesil 1 hem de 0 toplanır. Ve bir nesil 2 GC olduğunda, tüm yığın toplanır. Bu nedenle, bir nesil 2 GC de *tam GC*denir. Bu makalede, tam GC yerine nesil 2 GC anlamına gelir, ancak terimler değiştirilebilir.
 
-Nesiller, GC yığınının mantıksal bir görünümünü sağlar. Fiziksel olarak, nesneler yönetilen yığın kesimlerinde bulunurlar. *Yönetilen bir yığın segmenti* , yönetilen kod adına [VIRTUALALLOC işlevini](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) çağırarak GC 'nin işletim sisteminden ayrılmış bir bellek öbektir. CLR yüklendiğinde, GC iki başlangıç yığın kesimini ayırır: biri küçük nesneler (küçük nesne yığını veya SOH) için, diğeri ise büyük nesneler için (büyük nesne yığını).
+Nesiller GC yığınının mantıksal bir görünümünü sağlar. Fiziksel olarak, nesneler yönetilen yığın segmentlerde yaşar. *Yönetilen yığın kesimi,* Yönetilen kod adına [VirtualAlloc işlevini](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) arayarak GC'nin işletim sistemi tarafından rezerve ettiği bir bellek yığınıdır. CLR yüklendiğinde, GC iki başlangıç yığını ayırır: biri küçük nesneler (küçük nesne yığını veya SOH) ve biri büyük nesneler (büyük nesne yığını) için.
 
-Bu yönetilen yığın kesimlerinde yönetilen nesneler yerleştirilerek, ayırma istekleri karşılanır. Nesne 85.000 bayttan küçükse, SOH için kesime konur; Aksi takdirde, bir LOH segmentine konur. Bölümler, üzerinde daha fazla nesne ayrıldığından (daha küçük öbeklerde) kaydedilir.
-SOH için, GC 'yi sürdüren nesneler bir sonraki oluşturmaya yükseltilir. Nesil 0 koleksiyonunu etkileyen nesneler artık 1. kuşak nesneler olarak kabul edilir. Ancak, en eski üretimi sürdüren nesneler hala en eski nesil olarak kabul edilir. Diğer bir deyişle 2. nesil, 2. nesil nesnelerdir. LOH 'den ve, LOH nesneleri (Gen2 ile toplanan).
+Ayırma istekleri daha sonra yönetilen nesneleri bu yönetilen yığın kesimlerine koyarak karşılanır. Nesne 85.000 bayttan azsa, SOH için segmente konur; aksi takdirde, bir LOH segmenti üzerine konur. Daha fazla nesne onlara ayrıldıkça, segmentler (daha küçük parçalar halinde) işlenir.
+SOH için, bir GC hayatta nesneler sonraki nesile yükseltilir. Bir nesil 0 koleksiyonu hayatta nesneler artık nesil 1 nesneleri olarak kabul edilir, ve benzeri. Ancak, en eski nesil hayatta nesneler hala en eski nesil olarak kabul edilir. Başka bir deyişle, nesil 2'den hayatta kalanlar nesil 2 nesneleridir; ve LOH kurtulanların LOH nesneleri (gen2 ile toplanır).
 
-Kullanıcı kodu yalnızca nesil 0 (küçük nesneler) veya LOH (büyük nesneler) halinde ayrılabilir. Yalnızca GC, 1. nesil nesneleri "ayırabilir" (nesil 0 ' dan kalan VNET 'ler yükselterek) ve 2. nesil (nesilleri 1 ve 2 ' den yükseltmek için).
+Kullanıcı kodu yalnızca nesil 0 (küçük nesneler) veya LOH (büyük nesneler) olarak tahsis edilebilir. Sadece GC, nesil 1'deki nesneleri (nesil 0'dan kurtulanları teşvik ederek) ve nesil 2'de (1 ve 2. nesilden kurtulanları teşvik ederek) "tahsis edebilir".
 
-Bir çöp toplama tetiklendiğinde, GC canlı nesneler aracılığıyla izler ve bunları sıkıştırır. Ancak, sıkıştırma pahalı olduğundan *, GC,* Loh; büyük nesne ayırma isteklerini karşılamak için daha sonra yeniden kullanılabilen, ölü nesnelerden ücretsiz bir liste oluşturur. Bitişik ölü nesneler tek bir ücretsiz nesne içinde yapılır.
+Bir çöp toplama tetiklendiğinde, GC canlı nesneleri izler ve sıkıştırılır. Ama sıkıştırma pahalı olduğu için, GC LOH *süpürür;* daha sonra büyük nesne ayırma isteklerini karşılamak için yeniden kullanılabilecek ölü nesnelerden ücretsiz bir liste yapar. Bitişik ölü nesneler tek bir boş nesne haline getirilir.
 
-.NET Core ve .NET Framework (.NET Framework 4.5.1 ile başlayarak), kullanıcıların bir sonraki tam engelleme GC sırasında LOH 'nin sıkıştırılması gerektiğini belirtmesini sağlayan <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode?displayProperty=nameWithType> özelliğini içerir. Daha sonra .NET, LOH 'yi otomatik olarak sıkıştırmak isteyebilir. Bu, büyük nesneler tahsis ederseniz ve bunların taşınmadığından emin olmak istiyorsanız onları hala sabitlediğinizden emin olmak anlamına gelir.
+.NET Core ve .NET Framework (.NET Framework 4.5.1 ile başlayarak) kullanıcıların bir sonraki tam engelleme GC sırasında LOH sıkıştırılmış olması gerektiğini belirtmelerini sağlayan <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode?displayProperty=nameWithType> özelliği içerir. Ve gelecekte, .NET Otomatik olarak LOH sıkıştırmaya karar verebilir. Bu, büyük nesneleri ayırDığınız ve hareket etmediklerinden emin olmak istiyorsanız, yine de sabitlemeniz gerektiği anlamına gelir.
 
-Şekil 1 ' de, `Obj1` ve `Obj3` ölü ilk 0 ' dan sonra GC form 2 ' nin 1. kuşak bir senaryoyu ve `Obj2` ve `Obj5` 'in ölü ilk nesil 1 GC 'den sonra 2. kuşak olduğunu gösterir. Bu ve aşağıdaki rakamların yalnızca çizim amaçlarıyla olduğunu unutmayın; yığın üzerinde ne olacağını daha iyi göstermek için çok az nesne içerirler. Gerçekte, genellikle bir GC 'ye dahil birçok nesne daha vardır.
+Şekil 1, GC'nin ilk nesil 0 GC'den `Obj1` sonra `Obj3` nesil 1'i oluşturduğu ve nerede ve ölü `Obj2` `Obj5` olduğu ilk nesil 1 GC'den sonra nesil 2'yi oluşturduğu bir senaryoyu göstermektedir. Bu ve aşağıdaki şekillerin yalnızca illüstrasyon amaçlı olduğunu unutmayın; yığında ne olduğunu daha iyi göstermek için çok az nesne içerirler. Gerçekte, çok daha fazla nesne genellikle bir GC yer almaktadır.
 
-![Şekil 1: bir gen 0 GC ve Gen 1 GC](media/loh/loh-figure-1.jpg)\
-Şekil 1: nesil 0 ve 1. nesil GC.
+![Şekil 1: Bir gen 0 GC ve bir gen 1 GC](media/loh/loh-figure-1.jpg)\
+Şekil 1: Bir nesil 0 ve bir nesil 1 GC.
 
-Şekil 2 ' nin, `Obj1` ve `Obj2` yok eden bir 2. nesil GC 'den sonra, GC 'nin `Obj1` ve `Obj2`tarafından kaplanan boş alan olduğunu ve daha sonra `Obj4`için bir ayırma isteğini karşılamak üzere kullanıldığını gösterir. Son nesneden sonraki `Obj3`, segmentin sonuna kadar olan boşluk, ayırma isteklerini karşılamak için de kullanılabilir.
+Şekil 2 bir nesil sonra gösterir 2 `Obj1` `Obj2` GC bu gördüm ve ölü, GC tarafından işgal edildi `Obj1` ve `Obj2`daha sonra bir tahsis isteği karşılamak `Obj4`için kullanılan bellek bitişik boş alan oluşturur . Son nesneden sonraki `Obj3`boşluk, segmentin sonuna kadar ayırma isteklerini karşılamak için de kullanılabilir.
 
-![Şekil 2: bir gen 2 GC 'den sonra](media/loh/loh-figure-2.jpg)\
-Şekil 2:2. nesil GC 'den sonra
+![Şekil 2: Bir gen 2 GC sonra](media/loh/loh-figure-2.jpg)\
+Şekil 2: Bir nesil sonra 2 GC
 
-Büyük nesne ayırma isteklerini barındırmak için yeterli boş alan yoksa, GC ilk olarak IŞLETIM sisteminden daha fazla kesim edinmeyi dener. Bu başarısız olursa, biraz alan boşaltmayı umuyoruz 2. nesil GC 'yi tetikler.
+Büyük nesne ayırma isteklerini karşılamak için yeterli boş alan yoksa, GC önce işletim sistemi'nden daha fazla segment elde etmeye çalışır. Bu başarısız olursa, bir nesil tetikler 2 GC biraz yer boşaltma umuduyla.
 
-1\. nesil veya 2. nesil GC sırasında, atık toplayıcı, [VirtualFree işlevini](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree)çağırarak işletim sistemlerinde canlı nesneleri olmayan kesimleri serbest bırakır. Segmentin sonuna kadar olan son canlı nesneden sonra gelen boşluk, (gen0/Gen1 Live 'un, uygulamanızın doğru bir şekilde ayrıldığı için çöp toplayıcısının bir süre önce tutulması durumunda) yürütüldüğünden çalışır. Ve boş alanlar sıfırlansa da, bu da işletim sisteminin verileri diske geri yazmasına gerek olmadığı anlamına gelir.
+Bir nesil 1 veya nesil 2 GC sırasında, çöp toplayıcı [VirtualFree işlevini](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree)çağırarak işletim sistemi geri üzerinde hiçbir canlı nesne var segmentleri bültenleri. Segmentin sonuna kadar ki son canlı nesneden sonraki boşluk ayrılır (gen0/gen1'in yaşadığı geçici segment dışında, çöp toplayıcının bazı larını bağlı tuttuğu, çünkü uygulamanız hemen içinde tahsis edilecektir). Ve boş alanlar sıfırlanır, yani işletim sistemi diske geri veri yazmak gerekmez kararlı kalır.
 
-LOH yalnızca 2. kuşak sırasında toplandığından, LOH segmenti yalnızca bu tür bir GC sırasında serbest bırakılabilirler. Şekil 3 ' te, çöp toplayıcı 'nın bir kesimi (segment 2) işletim sistemine yeniden yayınlayıp kalan kesimlerde daha fazla alan yürütmelerinin bulunduğu bir senaryo gösterilmektedir. Büyük nesne ayırma isteklerini karşılamak için segmentin sonunda, ayrılan alan seçimini kullanması gerekiyorsa, belleği yeniden kaydeder. (COMMIT/COMMIT hakkında bir açıklama için bkz. [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)belgeleri.
+LOH sadece nesil 2 GCs sırasında toplanır yana, LOH segmenti sadece böyle bir GC sırasında serbest bırakılabilir. Şekil 3, çöp toplayıcının bir kesimi (segment 2) işletim sistemi için geri saldığı ve kalan segmentlerde daha fazla alan ayırdığı bir senaryoyu göstermektedir. Büyük nesne ayırma isteklerini karşılamak için kesimin sonundaki adanmış alanı kullanması gerekiyorsa, belleği yeniden işler. (Commit/decommit bir açıklama için, [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)için belgelere bakın.
 
-![Şekil 3: Gen 2 GC sonrasında LOH](media/loh/loh-figure-3.jpg)\
-Şekil 3:2. nesil GC sonrasında LOH
+![Şekil 3: LOH sonra bir gen 2 GC](media/loh/loh-figure-3.jpg)\
+Şekil 3: Bir nesil 2 GC sonra LOH
 
 ## <a name="when-is-a-large-object-collected"></a>Büyük bir nesne ne zaman toplanır?
 
 Genel olarak, aşağıdaki 3 koşuldan biri gerçekleştiğinde bir GC oluşur:
 
-- Ayırma, 1. kuşak veya büyük nesne eşiğini aşıyor.
+- Ayırma, nesil 0 veya büyük nesne eşiğini aşıyor.
 
-  Eşik, oluşturma özelliğinin bir özelliğidir. Atık toplayıcı nesneleri içine ayırdığı zaman oluşturma için bir eşik ayarlanır. Eşik aşıldığında, bu Neste bir GC tetiklenir. Küçük veya büyük nesneler ayırdığınızda, 1. nesil ve LOH 'nin eşiklerini sırasıyla kullanın. Çöp toplayıcı 1. ve 2. kuşak olarak tahsis edildiğinde, eşiklerini kullanır. Bu eşikler program çalışırken dinamik olarak ayarlanır.
+  Eşik bir neslin özelliğidir. Çöp toplayıcı nesneleri içine ayırdığında bir nesil için bir eşik ayarlanır. Eşik aşıldığında, o nesilde bir GC tetiklenir. Küçük veya büyük nesneleri ayırdığınızda, sırasıyla nesil 0 ve LOH eşiklerini tüketirsiniz. Çöp toplayıcısı nesil 1 ve 2'ye ayrıldıklarında, eşiklerini tüketir. Program çalışırken bu eşikler dinamik olarak ayarlanır.
 
-  Bu tipik durumdur; çoğu GCs, yönetilen yığında ayırmalar nedeniyle gerçekleşir.
+  Bu tipik bir durumdur; çoğu GC, yönetilen yığındaki ayırmalar nedeniyle gerçekleşir.
 
-- <xref:System.GC.Collect%2A?displayProperty=nameWithType> yöntemi çağrılır.
+- Yöntem <xref:System.GC.Collect%2A?displayProperty=nameWithType> denir.
 
-  Parametresiz <xref:System.GC.Collect?displayProperty=nameWithType> yöntemi çağrılırsa veya başka bir aşırı yükleme bir bağımsız değişken olarak <xref:System.GC.MaxGeneration?displayProperty=nameWithType>, LOH, yönetilen yığının geri kalanı ile birlikte toplanır.
+  Parametresiz <xref:System.GC.Collect?displayProperty=nameWithType> yöntem çağrılır veya başka <xref:System.GC.MaxGeneration?displayProperty=nameWithType> bir aşırı yük bir bağımsız değişken olarak geçirilirse, LOH yönetilen yığının geri kalanı ile birlikte toplanır.
 
 - Sistem düşük bellek durumunda.
 
-  Bu durum, çöp toplayıcı IŞLETIM sisteminden yüksek bellek bildirimi aldığında oluşur. 2\. nesil GC 'yi yapan çöp toplayıcı 'nın üretken olması, bir tane tetikler.
+  Bu, çöp toplayıcı işletim sistemi yüksek bellek bildirimi aldığında oluşur. Çöp toplayıcı bir nesil 2 GC yapmanın verimli olacağını düşünüyorsa, bir tetikler.
 
-## <a name="loh-performance-implications"></a>LOH performansı etkileri
+## <a name="loh-performance-implications"></a>LOH Performans Etkileri
 
-Büyük nesne yığını üzerindeki ayırmaların performansı aşağıdaki yollarla etkiler.
+Büyük nesne yığınıüzerindeki ayırmalar performansı aşağıdaki şekillerde etkiler.
 
-- Ayırma maliyeti.
+- Tahsis maliyeti.
 
-  CLR, verdiği her yeni nesne için belleğin temizlenme garantisi verir. Bu, büyük bir nesnenin ayırma maliyetinin, bellek temizleme (bir GC tetiklediği durumlar dışında) tarafından tamamen eşit olduğu anlamına gelir. Bir bayt temizlemek için 2 döngü alırsa, en küçük büyük nesneyi temizlemek için 170.000 döngü sürer. Bir 2GHz makinesindeki 16. nesnenin belleğinin temizlenmesi yaklaşık 16 MS sürer. Bu çok büyük bir maliyettir.
+  CLR, verdiği her yeni nesnenin belleği temizlenir garantisi verir. Bu, büyük bir nesnenin ayırma maliyetinin bellek temizleme tarafından tamamen baskın olduğu anlamına gelir (gc tetiklemediği sürece). Bir bayttemizlemek için 2 döngü gerekiyorsa, en küçük büyük nesneyi temizlemek için 170.000 döngü alır. 2GHz makinedeki 16MB'lık bir nesnenin belleği temizlemek yaklaşık 16 m sürer. Bu oldukça büyük bir bedel.
 
-- Toplama maliyeti.
+- Tahsilat maliyeti.
 
-  LOH ve 2. nesil birlikte toplandığından, birinin eşiği aşılırsa 2. nesil bir koleksiyon tetiklenir. 2\. nesil bir koleksiyon, LOH nedeniyle tetikleniyorsa 2. nesil GC 'den sonra çok daha küçük olmamalıdır. 2\. nesil üzerinde çok fazla veri yoksa, bu en az etkiye sahiptir. Ancak 2. nesil büyükse, çok sayıda nesil 2 GB tetiklendiğinde performans sorunlarına neden olabilir. Birçok büyük nesne çok geçici olarak ayrılmışsa ve büyük bir SOH varsa, GCs 'yi çok fazla zaman harcamış olursunuz. Ayrıca, gerçekten büyük nesneleri ayırmayı ve bunlara izin vermek istiyorsanız ayırma maliyeti gerçekten eklenebilir.
+  LOH ve nesil 2 birlikte toplandığı için, birinin eşiği aşılırsa, bir nesil 2 koleksiyonu tetiklenir. LOH nedeniyle bir nesil 2 koleksiyonu tetiklenirse, nesil 2 mutlaka GC sonra çok daha küçük olmayacaktır. Nesil 2 hakkında çok fazla veri yoksa, bu en az etkiye sahiptir. Ancak nesil 2 büyükse, birçok nesil 2 GC tetiklenirse performans sorunlarına neden olabilir. Birçok büyük nesneler çok geçici olarak tahsis edilir ve büyük bir SOH varsa, GCs yaparken çok fazla zaman harcama olabilir. Buna ek olarak, gerçekten büyük nesneleri ayırmaya ve bırakmaya devam ederseniz, tahsis maliyeti gerçekten ekleyebilirsiniz.
 
 - Başvuru türlerine sahip dizi öğeleri.
 
-  LOH üzerindeki çok büyük nesneler genellikle dizilerdir (gerçekten büyük bir örnek nesnesi olması çok nadir). Bir dizinin öğeleri başvuru açısından zengin ise, öğeler referans açısından zengin değilse, mevcut olmayan bir maliyet doğurur. Öğe herhangi bir başvuru içermiyorsa, çöp toplayıcının dizi içinde herhangi bir diziye gitmesi gerekmez. Örneğin, düğümleri bir ikili ağaçta depolamak için bir dizi kullanırsanız, bunu uygulamanın bir yolu, bir düğümün sağ ve sol düğümüne gerçek düğümlere başvurmanız gerekir:
+  LOH üzerinde çok büyük nesneler genellikle diziler (gerçekten büyük bir örnek nesne olması çok nadirdir). Bir dizinin öğeleri referans açısından zenginse, öğeler referans açısından zengin değilse, bulunmayan bir maliyete neden olur. Öğe herhangi bir başvuru içermiyorsa, çöp toplayıcının diziden geçmesi gerekmez. Örneğin, düğümleri ikili bir ağaçta depolamak için bir dizi kullanıyorsanız, bunu uygulamanın bir yolu, bir düğümün sağ ve sol düğümüne gerçek düğümler tarafından başvurmaktır:
 
   ```csharp
   class Node
@@ -107,7 +107,7 @@ Büyük nesne yığını üzerindeki ayırmaların performansı aşağıdaki yol
   Node[] binary_tr = new Node [num_nodes];
   ```
 
-  `num_nodes` büyükse, çöp toplayıcının öğe başına en az iki başvuruya gitmesi gerekir. Bir alternatif yaklaşım, sağ ve sol düğümlerin dizinini depooluşturmaktır:
+  `num_nodes` Büyükse, çöp toplayıcının öğe başına en az iki başvurudan geçmesi gerekir. Alternatif bir yaklaşım, sağ ve sol düğümdizisini depolamaktır:
 
   ```csharp
   class Node
@@ -118,96 +118,96 @@ Büyük nesne yığını üzerindeki ayırmaların performansı aşağıdaki yol
   } ;
   ```
 
-  Sol düğümün verilerini `left.d`olarak başvurmak yerine, buna `binary_tr[left_index].d`olarak başvurabilirsiniz. Çöp toplayıcı 'nın sol ve sağ düğüm için herhangi bir başvuruya bakmasına gerek yoktur.
+  Sol düğümün verilerini " olarak `left.d` `binary_tr[left_index].d`adlandırmak yerine. Ve çöp toplayıcı sol ve sağ düğüm için herhangi bir referans bakmak gerekmez.
 
-Üç faktörden, ilk ikisi genellikle üçte daha önemdir. Bu nedenle, geçici olanları ayırmak yerine yeniden kullandığınız büyük nesnelerin bir havuzunu ayırmanız önerilir.
+Üç faktörden, ilk ikisi genellikle üçüncüfaktörden daha önemlidir. Bu nedenle, geçici nesneler ayırmak yerine yeniden kullandığınız büyük nesnelerden oluşan bir havuz ayırmanızı öneririz.
 
-## <a name="collecting-performance-data-for-the-loh"></a>LOH için performans verilerini toplama
+## <a name="collecting-performance-data-for-the-loh"></a>LOH için performans verileri toplama
 
-Belirli bir alan için performans verilerini toplamadan önce, aşağıdakileri yapmış olmanız gerekir:
+Belirli bir alan için performans verileri toplamadan önce aşağıdakileri zaten yapmış olmalısınız:
 
-1. Bu alana baktığınız için kanıt bulundu.
+1. Bu bölgeye bakmanız gerektiğine dair kanıt buldum.
 
-2. Gördüğünüz performans sorununu açıklayacak herhangi bir şeyi bulmaksızın, bildiğiniz diğer alanlardan haberdar olabilirsiniz.
+2. Gördüğünüz performans sorununu açıklayabilecek hiçbir şey bulamadan bildiğiniz diğer alanları tükettiniz.
 
-Bellek ve CPU temelleri hakkında daha fazla bilgi için [bir çözüm bulmaya çalışmadan önce blogda sorunu anlama](https://devblogs.microsoft.com/dotnet/understand-the-problem-before-you-try-to-find-a-solution/) bölümüne bakın.
+Bloga bakın Bellek ve CPU temelleri hakkında daha fazla bilgi için [bir çözüm bulmaya çalışmadan önce sorunu anlayın.](https://devblogs.microsoft.com/dotnet/understand-the-problem-before-you-try-to-find-a-solution/)
 
-LOH performansı üzerinde veri toplamak için aşağıdaki araçları kullanabilirsiniz:
+LOH performansı hakkında veri toplamak için aşağıdaki araçları kullanabilirsiniz:
 
-- [.NET CLR bellek performansı sayaçları](#net-clr-memory-performance-counters)
+- [.NET CLR bellek performans sayaçları](#net-clr-memory-performance-counters)
 
 - [ETW olayları](#etw-events)
 
-- [Bir hata ayıklayıcı](#a-debugger)
+- [Hata ayıklama](#a-debugger)
 
-### <a name="net-clr-memory-performance-counters"></a>.NET CLR bellek performansı sayaçları
+### <a name="net-clr-memory-performance-counters"></a>.NET CLR Bellek Performans sayaçları
 
-Bu performans sayaçları genellikle performans sorunlarını araştırmaya yönelik iyi bir ilk adımdır (ancak [ETW olaylarını](#etw-events)kullanmanızı öneririz). Şekil 4 ' ün gösterdiği gibi, istediğiniz sayaçları ekleyerek performans Izleyicisini yapılandırırsınız. LOH ile ilgili olanlar şunlardır:
+Bu performans sayaçları genellikle performans sorunlarını araştırmak için iyi bir ilk adımdır [(etw olaylarını](#etw-events)kullanmanızı öneririmıza rağmen). Şekil 4'ün gösterdiği gibi, istediğiniz sayaçları ekleyerek Performans Monitörü'ne yapılandırırsınız. LOH ile ilgili olanlar şunlardır:
 
-- **Gen 2 toplamaları**
+- **Gen 2 Koleksiyonları**
 
-   İşlem başladıktan sonra 2. nesil oluşturma işleminin kaç kez gerçekleştiğini görüntüler. Sayaç, 2. kuşak koleksiyonun (tam çöp toplama da denir) sonunda artırılır. Bu sayaç, son gözlemlenen değeri görüntüler.
+   İşlemin başlamasından bu yana nesil 2 GC'lerin oluşma sayısını görüntüler. Sayaç, bir nesil 2 koleksiyonunun sonunda (tam çöp toplama olarak da adlandırılır) artıyla şıvlanır. Bu sayaç, gözlenen son değeri görüntüler.
 
-- **Büyük nesne yığın boyutu**
+- **Büyük Nesne Yığını boyutu**
 
-   LOH 'nin boş alanı da dahil olmak üzere geçerli boyutunu bayt cinsinden görüntüler. Bu sayaç her ayırmada değil çöp toplamanın sonunda güncelleştirilir.
+   LOH'un boş alan da dahil olmak üzere geçerli boyutunu baytlar halinde görüntüler. Bu sayaç, her ayırmada değil, çöp toplamanın sonunda güncelleştirilir.
 
-Performans sayaçlarından bakmak için yaygın olarak kullanılan bir yöntem, performans Izleyicisine (Perfmon. exe) sahiptir. İlgilendiğiniz işlemlere yönelik ilginç sayaç eklemek için "Sayaç Ekle" öğesini kullanın. Şekil 4 ' ün gösterdiği gibi, performans sayacı verilerini bir günlük dosyasına kaydedebilirsiniz:
+Performans sayaçlarına bakmanın yaygın bir yolu Performance Monitor (perfmon.exe) iledir. Önemsediğiniz işlemler için ilginç sayacı eklemek için "Sayaç Ekle"yi kullanın. Şekil 4'ün gösterdiği gibi performans sayacı verilerini bir günlük dosyasına kaydedebilirsiniz:
 
-performans sayaçlarını eklemeyi gösteren ekran görüntüsünü ![.](media/large-object-heap/add-performance-counter.png)
-Şekil 4:2. nesil GC sonrasında LOH
+![Performans sayaçları eklemeyi gösteren ekran görüntüsü.](media/large-object-heap/add-performance-counter.png)
+Şekil 4: Bir nesil 2 GC sonra LOH
 
-Performans sayaçları programlama yoluyla da sorgulanabilir. Birçok kişi bu şekilde rutin test sürecinin bir parçası olarak toplanır. Sıradan olmayan değerlere sahip sayaçları fark ettikleri zaman, araştırmaya yardımcı olacak daha ayrıntılı veriler almak için başka bir yöntem kullanır.
+Performans sayaçları da programlı olarak sorgulanabilir. Birçok kişi rutin test sürecinin bir parçası olarak bu şekilde toplamak. Sıra dışı değerlere sahip sayaçları tespit ettiklerinde, soruşturmaya yardımcı olmak için daha ayrıntılı veriler elde etmek için başka araçlar kullanırlar.
 
 > [!NOTE]
-> ETW çok daha zengin bilgi sağladığından performans sayaçları yerine ETW olaylarını kullanmanızı öneririz.
+> ETW çok daha zengin bilgiler sağladığından, performans sayaçları yerine ETW etkinliklerini kullanmanızı öneririz.
 
 ### <a name="etw-events"></a>ETW olayları
 
-Çöp toplayıcı, yığının ne yaptığını ve nedenini anlamanıza yardımcı olmak için zengin bir ETW olayları kümesi sağlar. Aşağıdaki blog gönderileri ETW ile GC olaylarını nasıl toplayacağınızı ve anlayacağını göstermektedir:
+Çöp toplayıcı, yığının ne yaptığını ve neden yaptığını anlamanıza yardımcı olmak için zengin bir ETW olayı kümesi sağlar. Aşağıdaki blog gönderileri, ETW ile GC etkinliklerinin nasıl toplandığını ve anlayacağımı gösterir:
 
-- [GC ETW olayları-1](https://devblogs.microsoft.com/dotnet/gc-etw-events-1/)
+- [GC ETW Etkinlikleri - 1](https://devblogs.microsoft.com/dotnet/gc-etw-events-1/)
 
-- [GC ETW olayları-2](https://devblogs.microsoft.com/dotnet/gc-etw-events-2/)
+- [GC ETW Etkinlikleri - 2](https://devblogs.microsoft.com/dotnet/gc-etw-events-2/)
 
-- [GC ETW olayları-3](https://devblogs.microsoft.com/dotnet/gc-etw-events-3/)
+- [GC ETW Etkinlikleri - 3](https://devblogs.microsoft.com/dotnet/gc-etw-events-3/)
 
-- [GC ETW olayları-4](https://devblogs.microsoft.com/dotnet/gc-etw-events-4/)
+- [GC ETW Etkinlikleri - 4](https://devblogs.microsoft.com/dotnet/gc-etw-events-4/)
 
-Geçici LOH ayırmaları nedeniyle oluşan aşırı nesil 2 GB 'yi belirlemek için, GCs için tetikleyici nedeni sütununa bakın. Yalnızca geçici büyük nesneleri ayıran basit bir test için aşağıdaki [PerfView](https://www.microsoft.com/download/details.aspx?id=28567) komut SATıRı ile ETW olayları hakkında bilgi toplayabilirsiniz:
+Geçici LOH ayırmalarının neden olduğu aşırı nesil 2 GC'leri tanımlamak için, GC'ler için Tetikleme Nedeni sütununa bakın. Yalnızca geçici büyük nesneler ayıran basit bir sınama için, aşağıdaki [PerfView](https://www.microsoft.com/download/details.aspx?id=28567) komut satırıyla ETW olayları hakkında bilgi toplayabilirsiniz:
 
 ```console
 perfview /GCCollectOnly /AcceptEULA /nogui collect
 ```
 
-Sonuç şuna benzer:
+Sonuç şu şekildedir:
 
-PerfView 'da ETW olaylarını gösteren ekran görüntüsü ![.](media/large-object-heap/event-tracing-windows-perfview.png)
+![PerfView'deki ETW olaylarını gösteren ekran görüntüsü.](media/large-object-heap/event-tracing-windows-perfview.png)
 Şekil 5: PerfView kullanılarak gösterilen ETW olayları
 
-Görebileceğiniz gibi, tüm GCs 'ler 2 GB kuşak ve hepsi AllocLarge tarafından tetiklendikleri için, büyük bir nesnenin tahsis edilen bu GC 'yi tetiklediği anlamına gelir. **Loh kalan değer oranı%** sütunu %1 diyor olduğundan bu ayırmaların geçici olduğunu biliyoruz.
+Gördüğünüz gibi, tüm GC'ler nesil 2 GC'lerdir ve hepsi AllocLarge tarafından tetiklenir, bu da büyük bir nesnenin ayrılmasının bu GC'yi tetiklediği anlamına gelir. **LOH Survival Rate %** sütununda %1 yazdığı için bu ayırmaların geçici olduğunu biliyoruz.
 
-Bu büyük nesneleri kimin ayıryacağını söyleyen ek ETW olayları toplayabilirsiniz. Aşağıdaki komut satırı:
+Bu büyük nesneleri kimin ayırdığını söyleyen ek ETW olayları toplayabilirsiniz. Aşağıdaki komut satırı:
 
 ```console
 perfview /GCOnly /AcceptEULA /nogui collect
 ```
 
-ayırmaların yaklaşık olarak her 100.000 değerinde harekete geçen bir allocationtick olayı toplar. Diğer bir deyişle, büyük bir nesne ayrıldığında her seferinde bir olay tetiklenir. Daha sonra, büyük nesneleri ayrılan çağrı yığınlarını gösteren GC yığın ayırma görünümlerinden birine bakabilirsiniz:
+yaklaşık her 100k değerindeki tahsisatları ateşleyen bir TahsisatTick olayı toplar. Başka bir deyişle, büyük bir nesne her tahsis edide bir olay ateşlenir. Daha sonra, büyük nesneleri ayıran çağrı yığınlarını gösteren GC Heap Alloc görünümlerinden birine bakabilirsiniz:
 
-Çöp toplayıcı yığın görünümünü gösteren ![ekran görüntüsü.](media/large-object-heap/garbage-collector-heap.png)
-Şekil 6: GC yığın ayırma görünümü
+![Çöp toplayıcı yığını görünümünü gösteren ekran görüntüsü.](media/large-object-heap/garbage-collector-heap.png)
+Şekil 6: Bir GC Yığın Alloc görünümü
 
-Gördüğünüz gibi bu, `Main` yönteminden büyük nesneleri ayıran çok basit bir sınamadır.
+Gördüğünüz gibi, bu sadece `Main` kendi yönteminden büyük nesneleri ayıran çok basit bir testtir.
 
-### <a name="a-debugger"></a>Bir hata ayıklayıcı
+### <a name="a-debugger"></a>Hata ayıklama
 
-Bir bellek dökümünlükleriniz varsa ve hangi nesnelerin gerçekten LOH üzerinde olduğuna bakmanız gerekiyorsa, .NET tarafından sunulan [sos hata ayıklayıcı uzantısını](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md) kullanabilirsiniz.
+Sahip olduğunuz tek şey bir bellek dökümüyse ve LOH'da gerçekte hangi nesnelere sahip seniz, .NET tarafından sağlanan [SoS hata ayıklama uzantısını](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md) kullanabilirsiniz.
 
 > [!NOTE]
-> Bu bölümde bahsedilen hata ayıklama komutları [Windows hata ayıklayıcıları](https://www.microsoft.com/whdc/devtools/debugging/default.mspx)için geçerlidir.
+> Bu bölümde belirtilen hata ayıklama komutları Windows [Hata Ayıklayıcıları](https://www.microsoft.com/whdc/devtools/debugging/default.mspx)için geçerlidir.
 
-Aşağıda, LOH 'yi analiz etmenin örnek çıktısı gösterilmektedir:
+Aşağıdaki LOH analiz örnek çıktı gösterir:
 
 ```console
 0:003> .loadby sos mscorwks
@@ -238,17 +238,17 @@ MT   Count   TotalSize Class Name
 Total 133 objects
 ```
 
-LOH yığın boyutu (16.754.224 + 16.699.288 + 16.284.504) = 49.738.016 bayttır. 8\.008.736 baytlık adresler, 023e1000 ve 033db630 arasında, bayt bir dizi <xref:System.Object?displayProperty=nameWithType> nesneler, 6.663.696 bayt <xref:System.Byte?displayProperty=nameWithType> nesnelerden oluşan bir dizi ile alınır ve 2.081.792 bayt boş alana sahiptir.
+LOH yığın boyutu (16.754.224 + 16.699.288 + 16.284.504) = 49.738.016 bayt. 023e1000 ve 033db630 adresleri arasında, 8.008.736 bayt <xref:System.Object?displayProperty=nameWithType> bir dizi nesne tarafından işgal edilir, 6.663.696 bayt <xref:System.Byte?displayProperty=nameWithType> nesnelerin bir dizi tarafından işgal edilir ve 2.081.792 bayt boş alan tarafından işgal edilir.
 
-Bazen hata ayıklayıcı, LOH 'nin toplam boyutunun 85.000 bayttan daha az olduğunu gösterir. Bu durum, çalışma zamanının, büyük bir nesneden küçük bazı nesneleri ayırmak için LOH 'yi kullanması nedeniyle oluşur.
+Bazen hata ayıklama, LOH'un toplam boyutunun 85.000 bayttan az olduğunu gösterir. Çalışma zamanının kendisi büyük bir nesneden daha küçük bazı nesneleri ayırmak için LOH'yu kullandığından bu durumda olur.
 
-LOH sıkıştırmadığından, bazen LOH 'nin parçalanma kaynağı olduğu düşünülebilir. Parçalanma anlamı:
+LOH sıkıştırılmış olmadığından, bazen LOH parçalanma kaynağı olduğu düşünülmektedir. Parçalanma nın anlamı:
 
-- Yönetilen yığının, yönetilen nesneler arasındaki boş alan miktarına göre belirtilen parçalanması. SoS 'de, `!dumpheap –type Free` komutu yönetilen nesneler arasındaki boş alan miktarını görüntüler.
+- Yönetilen nesneler arasındaki boş alan miktarıyla gösterilen yönetilen yığının parçalanması. SoS'ta `!dumpheap –type Free` komut, yönetilen nesneler arasındaki boş alan miktarını görüntüler.
 
-- `MEM_FREE`olarak işaretlenen bellek olan sanal bellek (VM) adres alanının parçalanması. WinDbg 'de çeşitli hata ayıklayıcı komutlarını kullanarak edinebilirsiniz.
+- Sanal bellek parçalanma (VM) adres alanı, bellek olarak `MEM_FREE`işaretlenmiş olan . Windbg çeşitli hata ayıklama komutları kullanarak alabilirsiniz.
 
-   Aşağıdaki örnek, VM alanındaki parçalanmayı göstermektedir:
+   Aşağıdaki örnekvm alanında parçalanma gösterir:
 
    ```console
    0:000> !address
@@ -298,18 +298,18 @@ LOH sıkıştırmadığından, bazen LOH 'nin parçalanma kaynağı olduğu dü�
    Largest free region: Base 01432000 - Size 707ee000 (1843128 KB)
    ```
 
-Atık toplayıcısının genellikle IŞLETIM sisteminden yeni yönetilen yığın kesimleri elde etmek ve yeniden işletim sistemine tekrar serbest bırakmak için çöp toplayıcı 'nın neden olduğu geçici büyük nesnelerden kaynaklanan VM parçalanması ' nı görmek daha yaygındır.
+Çöp toplayıcısının işletim sistemi'nden sık sık yeni yönetilen yığın segmentleri edinmesini ve boş olanları işletim sistemi'ne geri salmasını gerektiren geçici büyük nesnelerden kaynaklanan VM parçalanmasını görmek daha yaygındır.
 
-LOH 'nin VM [parçalanmaya](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) neden olup olmadığını doğrulamak Için, [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) üzerinde bir kesme noktası ayarlayabilir ve onları kimlerin çağırabildiğini görebilirsiniz. Örneğin, IŞLETIM sisteminden 8MBB 'den büyük sanal bellek öbekleri ayırmaya çalışan kişileri görmek için şöyle bir kesme noktası ayarlayabilirsiniz:
+LOH VM parçalanma neden olup olmadığını doğrulamak için, onları aramak kim görmek için [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) ve [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) bir kesme noktası ayarlayabilirsiniz. Örneğin, işletim sistemi 8MBB'den daha büyük sanal bellek parçalarını kimin ayırmaya çalıştığını görmek için aşağıdaki gibi bir kesme noktası ayarlayabilirsiniz:
 
 ```console
 bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 ```
 
-Bu komut, hata ayıklayıcıya kesilir ve çağrı yığınını yalnızca, [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 'tan daha büyük bir ayırma boyutuyla (0x800000) çağrıldığında çağrı yığınını gösterir.
+Bu komut hata ayıklayıcıya girer ve yalnızca [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 8MB'dan (0x80000) büyük bir ayırma boyutuyla çağrıldığında çağrı yığınını gösterir.
 
-CLR 2,0, parçaların (büyük ve küçük nesne yığınlarıyla birlikte) sıklıkla alındığı ve yayımlandığı senaryolar için yararlı olabilecek *VM hoarding* adlı bir özellik ekledi. VM hoarding belirtmek için barındırma API 'SI aracılığıyla `STARTUP_HOARD_GC_VM` adlı bir başlangıç bayrağı belirtirsiniz. CLR, boş kesimleri yeniden işletim sistemine serbest bırakmak yerine bu kesimlerdeki belleği kaydeder ve bir bekleme listesine koyar. (CLR 'nin bunu çok büyük kesimler için yapamadığını unutmayın.) CLR daha sonra yeni segment isteklerini karşılamak için bu segmentleri kullanır. Uygulamanız yeni bir kesime bir dahaki sefer ihtiyaç duyduğunda, CLR, yeterince büyük bir bulması durumunda bu bekleme listesinden bir tane kullanır.
+CLR 2.0, segmentlerin (büyük ve küçük nesne yığınları dahil) sık sık alınıp serbest bırakıldığı senaryolar için yararlı olabilecek *VM Hoarding* adlı bir özellik ekledi. VM Istifleme belirtmek için, barındırma `STARTUP_HOARD_GC_VM` API'si üzerinden çağrılan bir başlangıç bayrağı belirtirsiniz. CLR, boş segmentleri işletim sistemi için geri serbest bırakmak yerine, bu segmentlerde bellek decommits ve bekleme listesine koyar. (CLR'nin bunu çok büyük segmentler için yapmadığını unutmayın.) CLR daha sonra bu segmentleri yeni segment isteklerini karşılamak için kullanır. Uygulamanızın yeni bir segmente ihtiyacı olduğunda, CLR yeterince büyük bir segment bulabilirse bu bekleme listesinden bir tane kullanır.
 
-VM hoarding, bellek dışında özel durumların olmaması için sistemde çalışan bir baskın uygulamalar gibi bazı sunucu uygulamaları gibi zaten elde ettikleri kesimlerde tutmak isteyen uygulamalar için de yararlıdır.
+VM istifleme, bellek özel durumları dışında önlemek için sistemde çalışan baskın uygulamalar olan bazı sunucu uygulamaları gibi zaten edindikleri segmentleri tutmak isteyen uygulamalar için de yararlıdır.
 
-Uygulamanızın oldukça kararlı bellek kullanımına sahip olduğundan emin olmak için bu özelliği kullandığınızda uygulamanızı dikkatle test etmenizi kesinlikle öneririz.
+Uygulamanızın oldukça kararlı bellek kullanımına sahip olduğundan emin olmak için bu özelliği kullandığınızda uygulamanızı dikkatle test etmenizi öneririz.

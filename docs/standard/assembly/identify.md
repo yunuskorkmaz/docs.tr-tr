@@ -1,37 +1,37 @@
 ---
-title: 'Nasıl yapılır: bir dosyanın derleme olup olmadığını belirleme'
+title: 'Nasıl Yapılır: Dosyanın derleme olup olmadığını belirleme'
 ms.date: 08/19/2019
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
 dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: 1d66c0c166724f195a3cafd9bcbe3c7414c08ebb
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159513"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly"></a>Nasıl yapılır: bir dosyanın derleme olup olmadığını belirleme
+# <a name="how-to-determine-if-a-file-is-an-assembly"></a>Nasıl Yapılır: Dosyanın derleme olup olmadığını belirleme
 
-Bir dosya, yalnızca yönetilmiyorsa ve meta verilerinde bir derleme girişi içeriyorsa bir derlemedir. Derlemeler ve meta veriler hakkında daha fazla bilgi için bkz. [bütünleştirilmiş kod bildirimi](manifest.md).  
+Dosya, yalnızca yönetiliyorsa ve meta verilerinde bir derleme girişi içeriyorsa, derlemedir. Derlemeler ve meta veriler hakkında daha fazla bilgi için [Derleme bildirimine](manifest.md)bakın.  
   
-## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Bir dosyanın derleme olup olmadığını el ile belirleme  
+## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Dosyanın derleme olup olmadığını el ile belirleme  
   
-1. [Ildadsm. exe ' yi (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md)başlatın.  
+1. [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md)başlatın.  
   
-2. Sınamak istediğiniz dosyayı yükleyin.  
+2. Test etmek istediğiniz dosyayı yükleyin.  
   
-3. **Ildadsm** , dosyanın taşınabilir bir ÇALıŞTıRıLABILIR (PE) dosyası olmadığını bildirirse, bir derleme değildir. Daha fazla bilgi için [nasıl yapılır: derleme Içeriğini görüntüleme](view-contents.md)konusuna bakın.  
+3. **ILDASM,** dosyanın taşınabilir yürütülebilir (PE) dosya olmadığını bildiriyorsa, bu bir derleme değildir. Daha fazla bilgi için [bkz.](view-contents.md)  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Bir dosyanın derleme olup olmadığını programlı olarak belirleme  
   
-1. Test ettiğiniz dosyanın tam dosya yolunu ve adını geçirerek <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> yöntemini çağırın.  
+1. Tam <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> dosya yolunu ve test ettiğiniz dosyanın adını geçerek yöntemi arayın.  
   
-2. <xref:System.BadImageFormatException> bir özel durum oluşturulursa, dosya bir derleme değildir.  
+2. Bir <xref:System.BadImageFormatException> özel durum atılırsa, dosya bir derleme değildir.  
   
 ## <a name="example"></a>Örnek  
-Bu örnek, bir derleme olup olmadığını görmek için bir DLL 'yi sınar.  
+Bu örnek, derleme olup olmadığını görmek için bir DLL sınar.  
 
 ```csharp
 class TestAssembly  
@@ -89,11 +89,11 @@ End Module
 '        Yes, the file is an Assembly.  
 ```
 
-<xref:System.Reflection.AssemblyName.GetAssemblyName%2A> yöntemi test dosyasını yükler ve ardından bilgiler okunduktan sonra serbest bırakır.  
+Yöntem <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> test dosyasını yükler ve bilgiler okunduktan sonra serbest bırakır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Reflection.AssemblyName>
-- [C#Programlama Kılavuzu](../../csharp/programming-guide/index.md)
+- [C# programlama kılavuzu](../../csharp/programming-guide/index.md)
 - [Programlama kavramları (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)
 - [.NET’te bütünleştirilmiş kodlar](index.md)

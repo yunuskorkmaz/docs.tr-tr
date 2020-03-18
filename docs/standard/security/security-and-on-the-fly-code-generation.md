@@ -1,5 +1,6 @@
 ---
 title: Güvenlik ve Çalışma Sırasında Kod Oluşturma
+description: Daha yüksek bir güvenle çalışan daha az güven kodu adına kod oluşturmak, özellikle bir arayan kod oluşturmayı etkileyebiliyorsa, bir güvenlik sorunudur.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,21 +9,21 @@ helpviewer_keywords:
 - security [.NET Framework], on-the-fly code generation
 - secure coding, on-the-fly code generation
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
-ms.openlocfilehash: 64ddcc6a379e5719eb734eede13e576a707696fe
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 34ebda27a81ca29ebb27a721b77b735a12be882e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705892"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186795"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>Güvenlik ve Çalışma Sırasında Kod Oluşturma
-Bazı kitaplıklar kod oluşturarak ve çağıran için bir işlem gerçekleştirmek üzere çalıştırılarak çalışır. Temel sorun, daha az güven kodu adına kod oluşturuyor ve daha yüksek bir güvende çalışıyor. Worsens sorunu, çağıran kod oluşturmayı etkileyebileceğinden, yalnızca güvenli olduğunu düşündüğünüz kodun oluşturulduğundan emin olmanız gerekir.  
+Bazı kitaplıklar kod oluşturarak ve arayan için bazı işlemi gerçekleştirmek için çalıştırarak çalışır. Temel sorun, daha az güven kodu adına kod oluşturmak ve daha yüksek bir güven de çalıştırmaktır. Arayan kod oluşturmayı etkileyebildiği zaman sorun daha da kötüleşir, bu nedenle yalnızca güvenli olduğunu düşündüğünüz kodun oluşturulduğundan emin olmalısınız.  
   
- Her zaman hangi kodu ürettiğinizi tam olarak bilmeniz gerekir. Bu, bir kullanıcıdan aldığınız herhangi bir değer üzerinde katı denetimlere sahip olmanız gerektiği anlamına gelir, bu durumda tırnak içine alınmış dizeler (beklenmeyen kod öğeleri dahil edilemez), tanımlayıcılar (geçerli olduklarını doğrulamak için denetlenmesi gerekir) tanımlayıcılar) veya başka bir şey. Derlenmiş bir bütünleştirilmiş kod, tanımlayıcılarının büyük olasılıkla bir güvenlik açığı olsa da bunları bozabilecek olan garip karakterler içermesi için değiştirilebildiğinden, tanımlayıcılar tehlikeli olabilir.  
+ Her zaman tam olarak hangi kodu ürettiğinizi bilmeniz gerekir. Bu, bir kullanıcıdan aldığınız değerler üzerinde sıkı denetimlere sahip olduğunuz anlamına gelir, bunlar teklif eklenmiş dizeleri (beklenmeyen kod öğeleri içeremez, bu yüzden kaçılmalıdır), tanımlayıcılar (geçerli olup olmadığını doğrulamak için kontrol edilmelidir tanımlayıcılar) veya başka bir şey. Tanımlayıcıları garip karakterler içerecek şekilde değiştirilebilir, çünkü tanımlayıcıları tehlikeli olabilir (bu nadiren bir güvenlik açığı olmasına rağmen).  
   
- Yansıma Yayma ile kod oluşturmanız önerilir, bu da genellikle bu sorunlardan çoğunu önlemenize yardımcı olur.  
+ Genellikle bu sorunların çoğunu önlemenize yardımcı olan yansıma yayıyla kod oluşturmanız önerilir.  
   
- Kodu derlerken bir kötü amaçlı programın değişiklik yapıp görmediğini göz önünde bulundurun. Kötü amaçlı kodun, derleyici onu okumadan önce veya Code. dll dosyasını yüklemeden önce diskteki kaynak kodu değiştirebileceği küçük bir zaman penceresi var mı? Bu durumda, dosya sistemindeki bir Access Control listesini kullanarak bu dosyaları içeren dizini korumanız gerekir.  
+ Kodu derlediğinizde, kötü amaçlı bir programın kodu değiştirmenin bir yolu olup olmadığını göz önünde bulundurun. Derleyici okumadan önce veya kodun .dll dosyasını yüklemeden önce kötü amaçlı kodun diskteki kaynak kodunu değiştirebileceği küçük bir zaman penceresi var mı? Bu durumda, dosya sisteminde ki Bir Erişim Denetim Listesi kullanarak bu dosyaları içeren dizini uygun şekilde korumanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

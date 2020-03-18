@@ -1,28 +1,28 @@
 ---
-title: Protokol arabellekleri-WCF geliştiricileri için gRPC
-description: GRPC ağı için kullanılan protokol arabellekleri hat biçimine giriş.
+title: Protokol Arabellekleri - WCF geliştiricileri için gRPC
+description: gRPC ağ için kullanılan Protokol Arabellekleri tel formatına giriş.
 ms.date: 09/09/2019
-ms.openlocfilehash: cc4ff272a9912d6f2dd8f8ddb1972c7369f980fe
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 35319d299a8bc2866a87954b3e54bfda9314ffe8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503448"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79147938"
 ---
 # <a name="protocol-buffers"></a>Protokol arabellekleri
 
-gRPC Hizmetleri, Windows Communication Foundation (WCF) içindeki veri sözleşmelerine benzer şekilde, verileri *protokol arabelleği (Protobuffer)* olarak gönderir ve alır. Prototip,, XML veya JSON gibi insan tarafından okunabilen biçimlerin yükü olmadan, okuma ve yazma amacıyla makineler için yapılandırılmış verileri serileştirmenin etkili bir yoludur.
+gRPC hizmetleri, Windows Communication Foundation (WCF)'deki veri sözleşmelerine benzer şekilde *Protokol Arabelleği (Protobuf) iletileri*olarak veri gönderir ve alır. Protobuf, XML veya JSON gibi insan tarafından okunabilir biçimlerin maruz kalınması nasibini almadan, makinelerin okuma ve yazma için yapılandırılmış verileri serihale getirmenin etkili bir yoludur.
 
-Bu bölümde, prototipin nasıl çalıştığı ve kendi Prototipsiz iletilerinizin nasıl tanımlanacağı ele alınmaktadır.
+Bu bölümde Protobuf'un nasıl çalıştığı ve kendi Protobuf iletilerinizi nasıl tanımlayılabilmek yer alabilen.
 
-## <a name="how-protobuf-works"></a>Prototiparabelleği çalışma
+## <a name="how-protobuf-works"></a>Protobuf nasıl çalışır?
 
-WCF veri sözleşmeleri de dahil olmak üzere çoğu .NET nesne serileştirme tekniği, çalışma zamanında nesne yapısını çözümlemek için yansıma kullanarak çalışır. Buna karşılık, çoğu prototip kitaplıkları bir `.proto` dosyasında adanmış bir dil (*protokol arabelleği dili*) kullanarak yapıyı tanımlamanızı gerektirir. Daha sonra bir derleyici, Desteklenen platformların herhangi biri için kod oluşturmak üzere bu dosyayı kullanır. Desteklenen platformlar .NET, Java, C/C++, JavaScript ve çok daha fazlasını içerir. 
+WCF'nin veri sözleşmeleri de dahil olmak üzere çoğu .NET nesne serileştirme tekniği, çalışma zamanında nesne yapısını çözümlemek için yansımayı kullanarak çalışır. Bunun aksine, çoğu Protobuf kitaplığı, bir `.proto` dosyada özel bir dil *(Protokol Arabelleği*Dili) kullanarak yapıyı önceden tanımlamanızı gerektirir. Bir derleyici daha sonra desteklenen platformlardan herhangi biri için kod oluşturmak için bu dosyayı kullanır. Desteklenen platformlar .NET, Java, C/C++, JavaScript ve daha birçok içerir.
 
-Prototip derleyicisi, `protoc`, alternatif uygulamalar kullanılabilir olsa da Google tarafından korunur. Oluşturulan kod verimli ve verilerin hızlı serileştirilmesi ve seri durumundan çıkarılması için iyileştirilmiştir.
+Alternatif uygulamalar mevcut olmasına `protoc`rağmen Protobuf derleyicisi, Google tarafından korunur. Oluşturulan kod verimlidir ve verilerin hızlı serileştirilmesi ve deserialization için optimize edin.
 
-Protohat Tel biçimi ikili bir kodlamadır. İletileri temsil etmek için kullanılan bayt sayısını en aza indirmek için bazı zekice püf noktalarını kullanır. İkili kodlama biçimi bilgisi, Protoarabelleğe kullanımı için gerekli değildir. Ancak ilgileniyorsanız, [protokol arabellekleri Web sitesinde](https://developers.google.com/protocol-buffers/docs/encoding)hakkında daha fazla bilgi edinebilirsiniz.
+Protobuf tel biçimi ikili bir kodlamadır. İletileri temsil etmek için kullanılan bayt sayısını en aza indirmek için bazı zekice hileler kullanır. Protobuf'u kullanmak için ikili kodlama biçimi bilgisi ne kadar gerekli değildir. Ancak ilgileniyorsanız, [protokol arabellekleri web sitesinden](https://developers.google.com/protocol-buffers/docs/encoding)bu konuda daha fazla bilgi edinebilirsiniz.
 
 >[!div class="step-by-step"]
 >[Önceki](why-grpc.md)
->[İleri](protobuf-messages.md)
+>[Sonraki](protobuf-messages.md)

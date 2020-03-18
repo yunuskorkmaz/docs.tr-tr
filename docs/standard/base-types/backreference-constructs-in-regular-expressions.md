@@ -1,6 +1,6 @@
 ---
-title: .NET normal Ifadelerinde geri başvuru yapıları
-description: Normal bir ifadede yeniden başvuru yapılarını kullanarak yinelenen metin öğelerini nasıl tanımlayacağınızı öğrenin.
+title: .NET Düzenli İfadelerde Backreference Yapıları
+description: Normal bir ifadede geri başvuru yapılarını kullanarak yinelenen metin öğelerini nasıl tanımlayarak tanımlayın.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,125 +13,125 @@ helpviewer_keywords:
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 ms.openlocfilehash: 905578d763ebe5d5b8eb96a9056fbe11fbfab137
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711538"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Normal İfadelerdeki Yeniden Başvuru Yapıları
 
-Geri başvurular, bir dize içinde yinelenen bir karakter veya alt dizenin tanımlanması için kullanışlı bir yol sağlar. Örneğin, giriş dizesi rastgele bir alt dizenin birden çok oluşumunu içeriyorsa, ilk oluşumu bir yakalama grubuyla eşleştirebilir ve sonra alt dizenin sonraki tekrarlamalarını eşleştirmek için bir geri başvuru kullanabilirsiniz.
+Geri göndermeler, yinelenen bir karakteri veya bir dize içindeki alt dizeyi tanımlamak için kullanışlı bir yol sağlar. Örneğin, giriş dizesi rasgele bir alt dize birden çok olay içeriyorsa, bir yakalama grubu ile ilk oluşumu eşleşebilir ve sonra substring sonraki oluşumları eşleştirmek için bir backreference kullanabilirsiniz.
 
 > [!NOTE]
-> Değiştirme dizelerindeki adlandırılmış ve Numaralandırılmış yakalama gruplarına başvurmak için ayrı bir sözdizimi kullanılır. Daha fazla bilgi için bkz. [Değişimler](substitutions-in-regular-expressions.md).
+> Değiştirme dizelerinde adlandırılmış ve numaralandırılmış yakalama gruplarını ifade etmek için ayrı bir sözdizimi kullanılır. Daha fazla bilgi için [Bkz.](substitutions-in-regular-expressions.md)
 
-.NET, numaralandırılmış ve adlandırılmış yakalama gruplarına başvuracak ayrı dil öğelerini tanımlar. Grupları yakalama hakkında daha fazla bilgi için bkz. [gruplandırma yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+.NET, numaralandırılmış ve adlandırılmış yakalama gruplarına başvurmak için ayrı dil öğeleri tanımlar. Grupları yakalama hakkında daha fazla bilgi için [yapıyı gruplandırma'ya](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)bakın.
 
-## <a name="numbered-backreferences"></a>Numaralandırılmış geri başvurular
+## <a name="numbered-backreferences"></a>Numaralı Referanslar
 
-Numaralandırılmış geri başvuru, aşağıdaki sözdizimini kullanır:
+Numaralı bir geri başvuru aşağıdaki sözdizimini kullanır:
 
-`\` *numarası*
+`\` *number*
 
-Burada *sayı* , normal ifadede yakalama grubunun sıralı konumudur. Örneğin, `\4` dördüncü yakalama grubunun içeriğiyle eşleşir. *Sayı* normal ifade modelinde tanımlanmamışsa, bir ayrıştırma hatası oluşur ve normal ifade altyapısı bir <xref:System.ArgumentException>oluşturur. Örneğin, `\b(\w+)\s\1` normal ifade geçerlidir çünkü `(\w+)` ifadede ilk ve tek yakalama grubudur. Diğer taraftan `\b(\w+)\s\2` geçersizdir ve bir bağımsız değişken özel durumu oluşturur, çünkü `\2`numaralandırılmış bir yakalama grubu yoktur. Ayrıca, varsa *numarası* sıralı belirli bir konumda bir yakalama grubunu tanımlar, yakalama grubu sayısal verildiğine göre ancak sıra konumuna farklı bir ad, normal ifade ayrıştırıcısı bir deoluşturur<xref:System.ArgumentException>.
+*numaranın* normal ifadedeki yakalama grubunun ordinal konumu olduğu yer. Örneğin, `\4` dördüncü yakalama grubunun içeriğiyle eşleşir. Normal ifade deseninde *sayı* tanımlanmamışsa, ayrıştırma hatası oluşur ve <xref:System.ArgumentException>normal ifade altyapısı . Örneğin, ifadedeki `\b(\w+)\s\1` ilk ve `(\w+)` tek yakalama grubu olduğundan, normal ifade geçerlidir. Diğer taraftan, `\b(\w+)\s\2` geçersizdir ve numaralandırılmış `\2`yakalama grubu olmadığından bağımsız değişken özel durumu atar. Buna ek olarak, *sayı* belirli bir ordinal konumda bir yakalama grubu tanımlar, ancak bu yakalama grubu kendi ordinal konumu farklı sayısal <xref:System.ArgumentException>bir ad atanmış sayılsa, normal ifade parer de bir .
 
-Aynı gösterimi kullanan sekizlik kaçış kodları (`\16`gibi) ve `\`*sayı* geribaşvuruları arasındaki belirsizlik olduğunu unutmayın. Bu belirsizlik aşağıdaki şekilde çözümlenir:
+Sekizli kaçış kodları (örneğin) `\16`ve `\`aynı gösterimi kullanan *sayı* geri başvuruları arasındaki belirsizliğe dikkat edin. Bu belirsizlik aşağıdaki gibi çözülür:
 
-- `\9` üzerinden `\1` ifadeleri her zaman, sekizlik kodlar olarak değil, geri başvurular olarak yorumlanır.
+- Üzerinden ifadeler `\1` `\9` her zaman backreferences olarak yorumlanır, değil, sekizkodlar olarak.
 
-- Çok basamaklı bir ifadenin ilk rakamı 8 veya 9 (`\80` veya `\91`gibi) ise, ifade, değişmez değer olarak yorumlanır.
+- Çok basamaklı bir ifadenin ilk basamağı 8 `\80` `\91`veya 9 ise (gibi), ifade tam olarak yorumlanır.
 
-- Bu numaraya karşılık gelen bir geri başvuru varsa `\10` ve daha büyüktür ifadeleri geri başvuru olarak değerlendirilir. Aksi takdirde, sekizlik kodlar olarak yorumlanır.
+- Bu sayıya karşılık gelen bir geri başvuru varsa, gelen `\10` ve daha büyük ifadeler geri başvuru olarak kabul edilir; aksi takdirde, sekizkodlu olarak yorumlanır.
 
-- Normal bir ifade tanımsız bir grup numarasına geri başvuru içeriyorsa, bir ayrıştırma hatası oluşur ve normal ifade altyapısı bir <xref:System.ArgumentException>oluşturur.
+- Normal bir ifade tanımlanmamış bir grup numarasına geri gönderme içeriyorsa, ayrıştırma hatası <xref:System.ArgumentException>oluşur ve normal ifade altyapısı .
 
-Belirsizlik bir sorun ise, belirsiz olan ve sekizlik karakter kodlarıyla karıştırılmamalıdır `\k<`*ad*`>` gösterimini kullanabilirsiniz. Benzer şekilde, `\xdd` gibi onaltılık kodlar ise ve geri başvurularıyla karıştırılmamalıdır.
+Belirsizlik bir sorunsa, açık olan `\k<`ve sekizli karakter kodlarıyla karıştırılamayan *ad* `>` gösterimini kullanabilirsiniz. Benzer şekilde, hexadecimal `\xdd` kodlar gibi kesin ve backreferences ile karıştırılmamalıdır.
 
-Aşağıdaki örnek bir dizedeki iki katına oluşan sözcük karakterlerini bulur. Aşağıdaki öğelerden oluşan bir normal ifade `(\w)\1`tanımlar.
+Aşağıdaki örnekte, bir dizedeki iki katına çıkan sözcük karakterleri bulur. Aşağıdaki öğelerden oluşan `(\w)\1`düzenli bir ifade tanımlar.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
 |`(\w)`|Bir sözcük karakterini eşleştirin ve ilk yakalama grubuna atayın.|
-|`\1`|İlk yakalama grubunun değeriyle aynı olan bir sonraki karakterle eşleştirin.|
+|`\1`|İlk yakalama grubunun değeriyle aynı olan bir sonraki karakteri eşleştirin.|
 
 [!code-csharp[RegularExpressions.Language.Backreferences#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference1.cs#1)]
 [!code-vb[RegularExpressions.Language.Backreferences#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference1.vb#1)]
 
-## <a name="named-backreferences"></a>Adlandırılmış geri başvurular
+## <a name="named-backreferences"></a>İsimli Backreferences
 
-Adlandırılmış bir geri başvuru, aşağıdaki sözdizimi kullanılarak tanımlanır:
+Adlandırılmış bir geri başvuru aşağıdaki sözdizimi kullanılarak tanımlanır:
 
-`\k<` *adı* `>`
+`\k<`*isim*`>`
 
 veya:
 
-`\k'` *adı* `'`
+`\k'`*isim*`'`
 
-Burada *ad* , normal ifade düzeninde tanımlanan yakalama grubunun adıdır. *Ad* normal ifade modelinde tanımlanmamışsa, bir ayrıştırma hatası oluşur ve normal ifade altyapısı bir <xref:System.ArgumentException>oluşturur.
+*adı* normal ifade deseni tanımlanan bir yakalama grubunun adıdır. *Ad* normal ifade deseninde tanımlanmamışsa, ayrıştırma hatası oluşur ve <xref:System.ArgumentException>normal ifade altyapısı bir .
 
-Aşağıdaki örnek bir dizedeki iki katına oluşan sözcük karakterlerini bulur. Aşağıdaki öğelerden oluşan bir normal ifade `(?<char>\w)\k<char>`tanımlar.
+Aşağıdaki örnekte, bir dizedeki iki katına çıkan sözcük karakterleri bulur. Aşağıdaki öğelerden oluşan `(?<char>\w)\k<char>`düzenli bir ifade tanımlar.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|`(?<char>\w)`|Bir sözcük karakterini eşleştirin ve `char`adlı bir yakalama grubuna atayın.|
-|`\k<char>`|`char` yakalama grubunun değeriyle aynı olan bir sonraki karakterle eşleştirin.|
+|`(?<char>\w)`|Bir sözcük karakterini eşleştirin ve onu `char`bir yakalama grubuna atayın.|
+|`\k<char>`|`char` Yakalama grubunun değeriyle aynı olan bir sonraki karakteri eşleştirin.|
 
 [!code-csharp[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference2.cs#2)]
 [!code-vb[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference2.vb#2)]
 
-## <a name="named-numeric-backreferences"></a>Adlandırılmış sayısal geribaşvurular
+## <a name="named-numeric-backreferences"></a>Sayısal geri referanslar adlı
 
-`\k`ile adlandırılmış bir geri başvuru içinde, *ad* bir sayının dize temsili de olabilir. Örneğin, aşağıdaki örnek, bir dizedeki iki katına oluşan sözcük karakterlerini bulmak için `(?<2>\w)\k<2>` normal ifade kullanır. Bu durumda, örnek "2" olarak adlandırılan bir yakalama grubunu tanımlar ve geri başvuru "2" olarak adlandırılmıştır.
+Adlandırılmış bir geri `\k`başvuruda , *adı* da bir sayının dize gösterimi olabilir. Örneğin, aşağıdaki örnek, bir `(?<2>\w)\k<2>` dizede iki katına çıkan sözcük karakterlerini bulmak için normal ifadeyi kullanır. Bu durumda, örnek açıkça "2" adlı bir yakalama grubu tanımlar ve geri başvuru buna karşılık "2" olarak adlandırılır.
 
 [!code-csharp[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference3.cs#3)]
 [!code-vb[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference3.vb#3)]
 
-*Ad* bir sayının dize gösterimiyse ve yakalama grubu bu adı içeriyorsa `\k<`*adı*`>` geri başvuru `\`*numarasıyla*aynıdır, burada *sayı* yakalamanın sıra konumudur. Aşağıdaki örnekte, `char`adlı tek bir yakalama grubu vardır. Geribaşvuru yapısı, `\k<1>`olarak ifade eder. Örnekteki Çıktının gösterdiği gibi, `char` ilk yakalama grubu olduğu için <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> çağrısı başarılı olur.
+*Ad* bir sayının dize gösterimiyse ve hiçbir yakalama `\k<`grubu bu ada `\`sahipdeğilse, *ad,* `>` *numaranın* yakalamanın ordinal konumu olduğu backreference *numarasıyla*aynıdır. Aşağıdaki örnekte, adlı `char`tek bir yakalama grubu vardır. Geri başvuru yapısı ona `\k<1>`. Örnekteki çıktının gösterdiği gibi, ilk <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> yakalama `char` grubu olduğu için başarılı olan çağrı.
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]
 
-Ancak, *ad* bir sayının dize gösterimiyse ve bu konumdaki yakalama grubuna açıkça sayısal bir ad atanmışsa, normal ifade ayrıştırıcısı yakalama grubunu sıra konumuna göre tanımlayamıyor. Bunun yerine, bir <xref:System.ArgumentException>oluşturur. Aşağıdaki örnekteki tek yakalama grubu "2" olarak adlandırılmıştır. `\k` yapısı "1" adlı bir geri başvuru tanımlamak için kullanıldığından, normal ifade ayrıştırıcısı ilk yakalama grubunu tanımlayamıyor ve bir özel durum oluşturuyor.
+Ancak, *ad* bir sayının dize gösterimi yse ve bu konumdaki yakalama grubuna açıkça sayısal bir ad atanmışsa, normal ifade parlayıcısı yakalama grubunu kendi ordinal konumuna göre tanımlayamaz. Bunun yerine, bir <xref:System.ArgumentException>atar . Aşağıdaki örnekteki tek yakalama grubu "2" olarak adlandırılır. `\k` Yapı "1" adlı bir geri başvuru tanımlamak için kullanıldığından, normal ifade parer ilk yakalama grubunu tanımlayamaz ve bir özel durum atar.
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference7.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]
 
-## <a name="what-backreferences-match"></a>Hangi geribaşvuruların eşleşmesi
+## <a name="what-backreferences-match"></a>Backreferences Match Ne
 
-Geri başvuru, bir grubun en son tanımına (soldan sağa eşleştirilirken en yakın bir tanım) başvurur. Bir grup birden çok yakalama yaptığında, geri başvuru en son yakalamayı ifade eder.
+Bir geri başvuru, bir grubun en son tanımına (soldan sağa eşleşirken en çok sola doğru tanım) başvurur. Bir grup birden çok yakalama yaptığında, bir geri başvuru en son yakalama anlamına gelir.
 
-Aşağıdaki örnek, \ 1 adlandırılmış grubunu tekrar tanımlayan `(?<1>a)(?<1>\1b)*`bir normal ifade deseninin yer aldığı bir örnektir. Aşağıdaki tabloda, Normal ifadedeki her bir model açıklanmaktadır.
+Aşağıdaki örnek, `(?<1>a)(?<1>\1b)*`\1 adlı grubu yeniden tanımlayan normal bir ifade deseni içerir. Aşağıdaki tabloda normal ifadedeki her desen açıklanmaktadır.
 
 |Desen|Açıklama|
 |-------------|-----------------|
-|`(?<1>a)`|"A" karakteriyle eşleşir ve sonucu `1`adlı yakalama grubuna atayın.|
-|`(?<1>\1b)*`|Bir "b" ile birlikte `1` adlı grubun sıfır veya daha fazla tekrarlanmasını eşleştirin ve sonucu `1`adlı yakalama grubuna atayın.|
+|`(?<1>a)`|"a" karakterini eşleştirin ve sonucu ' yu `1`adlandırılmış yakalama grubuna atayın.|
+|`(?<1>\1b)*`|"b" ile birlikte adlandırılan `1` grubun sıfır veya daha fazla oluşumlarını eşleştirin ve `1`sonucu ' yu ' adlı yakalama grubuna atayın.|
 
 [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
 [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]
 
-Normal ifadeyi giriş dizesiyle ("aababb") karşılaştırırken, normal ifade altyapısı aşağıdaki işlemleri gerçekleştirir:
+Normal ifadeyi giriş dizesi ("aababb") ile karşılaştırırken, normal ifade altyapısı aşağıdaki işlemleri gerçekleştirir:
 
-1. Bu, dizenin başlangıcında başlar ve `(?<1>a)`ifadesiyle "a" ile başarılı bir şekilde eşleşir. `1` grubunun değeri artık "a" dır.
+1. Bu dize başında başlar ve başarıyla ifade `(?<1>a)`ile "a" eşleşir. `1` Grubun değeri artık "a"dır.
 
-2. İkinci karaktere ilerletir ve `\1b`veya "AB" ifadesiyle "AB" dizesiyle başarıyla eşleşir. Ardından, `\1`"AB" sonucunu atar.
+2. İkinci karaktere ilerler ve "ab" dizesini `\1b`"ab" ifadesi veya "ab" ile başarıyla eşler. Daha sonra sonucu atar, "ab" için `\1`.
 
-3. Dördüncü karaktere ilerletir. `(?<1>\1b)*` ifadesi sıfır veya daha fazla kez eşleştirilecek, bu nedenle "abb" dizesiyle birlikte `\1b`ifadesiyle başarıyla eşleşiyor. "Abb" sonucunu `\1`'e geri atar.
+3. Dördüncü karaktere doğru ilerler. İfade `(?<1>\1b)*` sıfır veya daha fazla kez eşleşecek, bu nedenle başarıyla "abb" `\1b`ifadesi ile dize eşleşir. Bu sonuç atar, "abb", `\1`geri .
 
-Bu örnekte, bir döngü belirleyici `*`, normal ifade altyapısı tanımladığı Düzenle eşleşene kadar sürekli değerlendirilir. Döngü nicelik belirteçleri grup tanımlarını temizlemez.
+Bu örnekte, `*` bir döngü niceleyicisidir -- normal ifade altyapısı tanımladığı desenle eşleştirene kadar tekrar tekrar değerlendirilir. Döngü niceleyicileri grup tanımlarını temizlemez.
 
-Bir grupta herhangi bir alt dize yakalanmadıysa, bu gruba yönelik bir geri başvuru tanımsızdır ve hiçbir şekilde eşleşmez. Bu, aşağıdaki gibi tanımlanan `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`normal ifade deseninin gösterilmektedir:
+Bir grup herhangi bir alt dize yakalamadıysa, bu gruba bir geri gönderme tanımsızdır ve hiçbir zaman eşleşmez. Bu aşağıdaki gibi tanımlanan `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`normal ifade deseni ile gösterilmiştir:
 
 |Desen|Açıklama|
 |-------------|-----------------|
-|`\b`|Eşleşmeyi bir sözcük sınırında başlatın.|
-|`(\p{Lu}{2})`|İki büyük harfi eşleştirin. Bu ilk yakalama grubudur.|
-|`(\d{2})?`|İki ondalık basamağın sıfır veya bir oluşumunu eşleştirin. Bu ikinci yakalama grubudur.|
-|`(\p{Lu}{2})`|İki büyük harfi eşleştirin. Bu, üçüncü yakalama grubudur.|
-|`\b`|Eşleşmeyi bir sözcük sınırında sonlandır.|
+|`\b`|Eşleşmeyi sözcük sınırında başlatın.|
+|`(\p{Lu}{2})`|İki büyük harfle eşleştirin. Bu ilk yakalama grubudur.|
+|`(\d{2})?`|İki ondalık basamaktan sıfır veya bir oluşum eşleştirin. Bu ikinci yakalama grubudur.|
+|`(\p{Lu}{2})`|İki büyük harfle eşleştirin. Bu, üçüncü yakalama grubudur.|
+|`\b`|Eşleşmeyi sözcük sınırında sonla.|
 
-İkinci yakalama grubu tarafından tanımlanan iki ondalık basamak mevcut olmasa bile, bir giriş dizesi bu normal ifadeyle eşleşir. Aşağıdaki örnekte, eşleşme başarılı olsa da, iki başarılı yakalama grubu arasında boş bir yakalama grubu bulunur.
+İkinci yakalama grubu tarafından tanımlanan iki ondalık basamak mevcut olmasa bile, bir giriş dizesi bu normal ifadeyle eşleşebilir. Aşağıdaki örnek, eşleşme başarılı olsa bile, iki başarılı yakalama grubu arasında boş bir yakalama grubu bulunduğunu gösterir.
 
 [!code-csharp[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference5.cs#5)]
 [!code-vb[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference5.vb#5)]

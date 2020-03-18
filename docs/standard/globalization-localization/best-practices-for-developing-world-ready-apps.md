@@ -9,97 +9,97 @@ helpviewer_keywords:
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 ms.openlocfilehash: a2cd1039f95a763002922fc2fa24eff77838de80
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141291"
 ---
-# <a name="best-practices-for-developing-world-ready-applications"></a>Dünya çapında kullanmaya yönelik uygulamalar geliştirmek için en iyi uygulamalar
+# <a name="best-practices-for-developing-world-ready-applications"></a>Dünyaya hazır uygulamalar geliştirmek için en iyi uygulamalar
 
-Bu bölümde, dünya çapında kullanılabilecek uygulamalar geliştirirken izlenecek en iyi uygulamalar açıklanmaktadır.
+Bu bölümde, dünyaya hazır uygulamalar geliştirirken izlenmeyen en iyi uygulamalar açıklanmaktadır.
 
-## <a name="globalization-best-practices"></a>Genelleştirme en iyi uygulamaları
+## <a name="globalization-best-practices"></a>Küreselleşme en iyi uygulamalar
 
 1. Uygulamanızı dahili olarak Unicode yapın.
 
-2. Verileri yönetmek ve biçimlendirmek için <xref:System.Globalization> ad alanı tarafından sunulan kültür kullanan sınıfları kullanın.
+2. Verileri işlemek ve biçimlendirmek <xref:System.Globalization> için ad alanı tarafından sağlanan kültüre duyarlı sınıfları kullanın.
 
-    - Sıralama için <xref:System.Globalization.SortKey> sınıfını ve <xref:System.Globalization.CompareInfo> sınıfını kullanın.
+    - Sıralama için <xref:System.Globalization.SortKey> sınıfı ve <xref:System.Globalization.CompareInfo> sınıfı kullanın.
 
-    - Dize karşılaştırmaları için <xref:System.Globalization.CompareInfo> sınıfını kullanın.
+    - Dize karşılaştırmaları için <xref:System.Globalization.CompareInfo> sınıfı kullanın.
 
-    - Tarih ve saat biçimlendirmesi için <xref:System.Globalization.DateTimeFormatInfo> sınıfını kullanın.
+    - Tarih ve saat biçimlendirmesi için <xref:System.Globalization.DateTimeFormatInfo> sınıfı kullanın.
 
-    - Sayısal biçimlendirme için <xref:System.Globalization.NumberFormatInfo> sınıfını kullanın.
+    - Sayısal biçimlendirme için <xref:System.Globalization.NumberFormatInfo> sınıfı kullanın.
 
-    - Gregoryen ve Gregoryen olmayan takvimler için <xref:System.Globalization.Calendar> sınıfını veya belirli takvim uygulamalarından birini kullanın.
+    - Gregoryen ve Gregoryen olmayan takvimler <xref:System.Globalization.Calendar> için sınıfı veya belirli takvim uygulamalarından birini kullanın.
 
-3. Uygun durumlarda <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> sınıfı tarafından sunulan kültür özelliği ayarlarını kullanın. Tarih ve saat veya sayısal biçimlendirme gibi biçimlendirme görevleri için <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özelliğini kullanın. Kaynakları almak için <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> özelliğini kullanın. `CurrentCulture` ve `CurrentUICulture` özelliklerinin iş parçacığı başına ayarlanabileceğini unutmayın.
+3. <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> Uygun durumlarda sınıf tarafından sağlanan kültür özelliği ayarlarını kullanın. Tarih <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> ve saat veya sayısal biçimlendirme gibi görevleri biçimlendirmek için özelliği kullanın. Kaynakları <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> almak için özelliği kullanın. Ve `CurrentCulture` `CurrentUICulture` özelliklerinin iş parçacığı başına ayarlanabileceğini unutmayın.
 
-4. <xref:System.Text> ad alanındaki kodlama sınıflarını kullanarak, uygulamanızın çeşitli kodlara ve verileri okumasını ve veri yazmasını sağlar. ASCII verilerini kabul etmez. Bir kullanıcının metin girebileceği her yerde Uluslararası karakterlerin sağlanma kabul edilir. Örneğin, uygulama sunucu adları, dizinler, dosya adları, Kullanıcı adları ve URL 'lerde uluslararası karakterleri kabul etmelidir.
+4. Ad alanındaki kodlama sınıflarını kullanarak uygulamanızın çeşitli kodlamalara veri okumasını <xref:System.Text> ve yazmasını etkinleştirin. ASCII verilerini varsaymayın. Uluslararası karakterlerin, kullanıcının metin girebileceği her yerde sağlanacağını varsayalım. Örneğin, uygulama sunucu adlarında, dizinlerde, dosya adlarında, kullanıcı adlarında ve URL'lerde uluslararası karakterleri kabul etmelidir.
 
-5. <xref:System.Text.UTF8Encoding> sınıfını kullanırken, güvenlik nedenleriyle, bu sınıf tarafından sunulan hata algılama özelliğini kullanın. Hata algılama özelliğini etkinleştirmek için, bir `throwOnInvalidBytes` parametresi alan oluşturucuyu kullanarak sınıfın bir örneğini oluşturun ve bu parametrenin değerini `true`olarak ayarlayın.
+5. <xref:System.Text.UTF8Encoding> Sınıfı kullanırken, güvenlik nedenleriyle, bu sınıfın sunduğu hata algılama özelliğini kullanın. Hata algılama özelliğini açmak için, bir parametre alan ve `throwOnInvalidBytes` bu parametrenin değerini `true`'ye ayarlayan oluşturucuyu kullanarak sınıfın bir örneğini oluşturun.
 
-6. Mümkün olduğunda, dizeleri tek bir dizi karakter yerine tüm dizeler olarak işleyin. Bu, alt dizeleri sıralarken veya ararken özellikle önemlidir. Bu, Birleşik karakterlerin ayrıştırılmasından ilişkili sorunları engeller. <xref:System.Globalization.StringInfo?displayProperty=nameWithType> sınıfını kullanarak, tek karakterler yerine metin birimleriyle da çalışabilirsiniz.
+6. Mümkün olduğunda, dizeleri tek tek karakter dizisi yerine tüm dizeleri olarak işleyebilir. Bu, özellikle alt dizeleri sıralarken veya ararken önemlidir. Bu, birleştirilmiş karakterleri ayrıştırma ile ilişkili sorunları önler. Ayrıca <xref:System.Globalization.StringInfo?displayProperty=nameWithType> sınıfı kullanarak tek karakterler yerine metin birimleri yle de çalışabilirsiniz.
 
-7. <xref:System.Drawing> ad alanı tarafından sunulan sınıfları kullanarak metin görüntüler.
+7. Ad alanı tarafından sağlanan <xref:System.Drawing> sınıfları kullanarak metni görüntüleyin.
 
-8. İşletim sistemleri arasında tutarlılık için, Kullanıcı ayarlarının <xref:System.Globalization.CultureInfo>geçersiz kılmasına izin vermeyin. Bir `useUserOverride` parametresini kabul eden `CultureInfo` oluşturucusunu kullanın ve `false`olarak ayarlayın.
+8. İşletim sistemleri arasında tutarlılık için, kullanıcı ayarlarının geçersiz kılınmasını <xref:System.Globalization.CultureInfo>izin vermez. Parametre `CultureInfo` `useUserOverride` kabul eden ve '' olarak `false`ayarlayan oluşturucuyu kullanın.
 
-9. Uluslararası verileri kullanarak, uygulama işlevselliklerinizi Uluslararası işletim sistemi sürümlerinde test edin.
+9. Uluslararası verileri kullanarak uygulama işlevselliğinizi uluslararası işletim sistemi sürümlerinde test edin.
 
-10. Bir güvenlik kararı bir dize karşılaştırma veya örnek değişikliği işleminin sonucunu temel alıyorsa, kültüre duyarsız bir dize işlemi kullanın. Bu uygulama, sonucun `CultureInfo.CurrentCulture`değerden etkilenmemesini sağlar. Kültüre duyarlı dize karşılaştırmalarının nasıl tutarsız sonuçlar üretediğini gösteren bir örnek için [dizeleri kullanmak Için En Iyi Yöntemler](../../../docs/standard/base-types/best-practices-strings.md) konusunun ["geçerli kültürü kullanan dize karşılaştırmaları"](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture) bölümüne bakın.
+10. Bir güvenlik kararı dize karşılaştırması veya büyük/küçük harf değiştirme işleminin sonucuna dayanıyorsa, kültüre duyarlı bir dize işlemi kullanın. Bu uygulama, sonucun değeri etkilenmemesini `CultureInfo.CurrentCulture`sağlar. Kültüre duyarlı dize karşılaştırmalarının tutarsız sonuçlar üretebileceğini gösteren bir örnek için [Dizeleri Kullanmak için En İyi Uygulamalar'ın](../../../docs/standard/base-types/best-practices-strings.md) ["Geçerli Kültürü Kullanan Dize Karşılaştırmaları"](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture) bölümüne bakın.
 
 ## <a name="localization-best-practices"></a>Yerelleştirme en iyi uygulamaları
 
-1. Tüm yerelleştirilebilir kaynakları yalnızca kaynak dll 'Lerine taşıyın. Yerelleştirilebilir kaynaklar, dizeler, hata iletileri, iletişim kutuları, menüler ve katıştırılmış nesne kaynakları gibi kullanıcı arabirimi öğelerini içerir.
+1. Tüm yerelleştirilebilir kaynakları yalnızca kaynak DL'lerini ayırmak için taşıyın. Yerelleştirilebilir kaynaklar, dizeleri, hata iletileri, iletişim kutuları, menüler ve katıştırılmış nesne kaynakları gibi kullanıcı arabirimi öğelerini içerir.
 
-2. Dizeleri veya Kullanıcı arabirimi kaynaklarını hardmayın.
+2. Dizeleri veya kullanıcı arabirimi kaynaklarını kodlamayın.
 
-3. Yerelleştirilemeyen kaynakları yalnızca kaynak dll 'Lerine yerleştirmeyin. Bu, çevirmenler için karışıklık oluşmasına neden olur.
+3. Yalnızca kaynak DL'lerine yerelleştirilebilir olmayan kaynakları koymayın. Bu çevirmenler için karışıklığa neden olur.
 
-4. Birleştirilmiş ifadelerden çalışma zamanında oluşturulan bileşik dizeleri kullanmayın. Birleşik dizelerin yerelleştirilmesi zordur, çünkü genellikle tüm diller için uygun olmayan Ingilizce dilbilgisi sırasını varsayar.
+4. Concatenated tümceciklerden çalışma zamanında oluşturulmuş bileşik dizeleri kullanmayın. Bileşik dizeleri yerelleştirmek zordur, çünkü genellikle tüm diller için geçerli olmayan bir İngilizce dilbilgisi sırasını varsayarlar.
 
-5. Dizelerin, dize bileşenlerinin dilbilgisi rollerine bağlı olarak farklı çevrilebileceği "boş klasör" gibi belirsiz yapıların kaçının. Örneğin, "boş" bir fiil veya sıfata olabilir. Bu, Italyanca veya Fransızca gibi dillerdeki farklı çevirilerine yol açabilir.
+5. Dize bileşenlerinin dilbilgisi rollerine bağlı olarak dizelerin farklı çevrilebileceği "Boş Klasör" gibi belirsiz yapılardan kaçının. Örneğin, "boş" bir fiil veya İtalyanca veya Fransızca gibi dillerde farklı çevirilere yol açabilir bir sıfat olabilir.
 
-6. Uygulamanızda metin içeren görüntüleri ve simgeleri kullanmaktan kaçının. Yerelleştirmeye pahalıdır.
+6. Uygulamanızda metin içeren resimler ve simgeler kullanmaktan kaçının. Onlar yerelleştirmek için pahalıdır.
 
-7. Kullanıcı arabiriminde genişleyebilir dizelerin uzunluğu için çok sayıda odaya izin verin. Bazı dillerde, deyimler diğer dillerde gereksinimlerden daha fazla yüzde 50-75 sürebilir.
+7. Kullanıcı arabiriminde genişletmek için dizeleri uzunluğu için bol yer izin verin. Bazı dillerde, tümcecikler diğer dillerde gereksinim duyduklarından yüzde 50-75 daha fazla alan gerektirebilir.
 
-8. Kültürü temel alan kaynakları almak için <xref:System.Resources.ResourceManager?displayProperty=nameWithType> sınıfını kullanın.
+8. Kültüre <xref:System.Resources.ResourceManager?displayProperty=nameWithType> dayalı kaynakları almak için sınıfı kullanın.
 
-9. [Windows Forms Kaynak Düzenleyicisi (Winres. exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)kullanılarak yerelleştirilebilecek Windows Forms iletişim kutusu oluşturmak Için [Visual Studio 'yu](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) kullanın. Windows Forms iletişim kutularını el ile kodlayın.
+9. Windows Forms [Kaynak Düzenleyicisi (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)kullanılarak yerelleştirilebilmeleri için Windows Forms iletişim kutuları oluşturmak için [Visual Studio'yu](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) kullanın. Windows Forms iletişim kutularını elle kodlamayın.
 
-10. Profesyonel yerelleştirme için düzenleyin (çeviri).
+10. Profesyonel yerelleştirme (çeviri) için düzenleme.
 
-11. Kaynakları oluşturma ve yerelleştirme hakkında ayrıntılı bir açıklama için bkz. [uygulamalardaki kaynaklar](../../../docs/framework/resources/index.md).
+11. Kaynak oluşturma ve yerelleştirmenin tam açıklaması [için, Uygulamalardaki Kaynaklar'a](../../../docs/framework/resources/index.md)bakın.
 
-## <a name="globalization-best-practices-for-aspnet-applications"></a>ASP.NET uygulamaları için Genelleştirme en iyi yöntemleri
+## <a name="globalization-best-practices-for-aspnet-applications"></a>ASP.NET uygulamalar için küreselleşme en iyi uygulamalar
 
-1. Uygulamanızda <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> ve <xref:System.Globalization.CultureInfo.CurrentCulture%2A> özelliklerini açık olarak ayarlayın. Varsayılanlara güvenmeyin.
+1. Uygulamanızdaki <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> özellikleri <xref:System.Globalization.CultureInfo.CurrentCulture%2A> ve özelliklerini açıkça ayarlayın. Varsayılanlara güvenmeyin.
 
-2. ASP.NET uygulamalarının yönetilen uygulamalar olduğunu ve bu nedenle, kültürü temel alan bilgileri alma, görüntüleme ve düzenleme için diğer yönetilen uygulamalarla aynı sınıfları kullanabileceğini unutmayın.
+2. ASP.NET uygulamaların yönetildiğini ve bu nedenle kültüre dayalı bilgileri almak, görüntülemek ve işlemek için diğer yönetilen uygulamalarla aynı sınıfları kullanabileceğini unutmayın.
 
-3. ASP.NET içinde aşağıdaki üç tür kodlamayı belirtabilin farkında olun:
+3. ASP.NET aşağıdaki üç tür kodlamayı belirtebileceğinizi unutmayın:
 
     - requestEncoding, istemcinin tarayıcısından alınan kodlamayı belirtir.
 
-    - responseEncoding, istemci tarayıcısına göndermek için kodlamayı belirtir. Çoğu durumda, bu kodlama requestEncoding için belirtilen ile aynı olmalıdır.
+    - responseKodlama istemci tarayıcıya göndermek için kodlama belirtir. Çoğu durumda, bu kodlama requestEncoding için belirtilen aynı olmalıdır.
 
-    - fileEncoding,. aspx,. asmx ve. asax dosya ayrıştırması için varsayılan kodlamayı belirtir.
+    - fileEncoding ,aspx, .asmx ve .asax dosya ayrıştma için varsayılan kodlama belirtir.
 
-4. Bir ASP.NET uygulamasında aşağıdaki üç yerde requestEncoding, responseEncoding, fileEncoding, Culture ve UICulture özniteliklerinin değerlerini belirtin:
+4. İstek için değerleri belirtinKodlama, yanıtKodlama, fileEncoding, kültür ve uiCulture öznitelikleri ASP.NET bir uygulamada aşağıdaki üç yerde:
 
-    - Bir Web. config dosyasının Genelleştirme bölümünde. Bu dosya ASP.NET uygulamasının dışında. Daha fazla bilgi için bkz. [\<genelleştirme > öğesi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100)).
+    - Bir Web.config dosyasının genelleştirme bölümünde. Bu dosya ASP.NET uygulamasının dışındadır. Daha fazla bilgi [ \<için, küreselleşme> Öğesi'ne](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100))bakın.
 
-    - Bir sayfa yönergesinde. Bir uygulama bir sayfada olduğunda, dosyanın zaten okunup okunmadığını unutmayın. Bu nedenle, fileEncoding ve requestEncoding belirtmek için çok geç. Bir sayfa yönergesinde yalnızca UICulture, Culture ve responseEncoding belirtilebilir.
+    - Bir sayfa yönergesinde. Bir uygulama bir sayfadayken, dosyanın zaten okunduğunu unutmayın. Bu nedenle, fileEncoding ve requestEncoding belirtmek için çok geç. Yalnızca uiCulture, Culture ve responseEncoding bir sayfa yönergesinde belirtilebilir.
 
-    - Uygulama kodunda programlı olarak. Bu ayar, istek başına farklılık gösterebilir. Bir sayfa yönergesinde olduğu gibi, uygulamanın koduna ulaşıldığında, fileEncoding ve requestEncoding belirtmek için çok geç olur. Uygulama kodunda yalnızca UICulture, Culture ve responseEncoding belirtilebilir.
+    - Uygulama kodunda programlı olarak. Bu ayar istek başına değişebilir. Bir sayfa yönergesi olduğu gibi, uygulamanın koduna ulaşılıncaya kadar dosyakodlama ve requestEncoding belirtmek için çok geç. Uygulama kodunda yalnızca uiCulture, Culture ve responseEncoding belirtilebilir.
 
-5. UICulture değerinin tarayıcı kabul diline ayarlanbileceğini unutmayın.
+5. UiCulture değerinin tarayıcı kabul dili olarak ayarlanabileceğini unutmayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Genelleştirme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)
-- [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)
+- [Masaüstü Uygulamalarında Kaynaklar](../../../docs/framework/resources/index.md)

@@ -1,72 +1,72 @@
 ---
-title: Bellek sızıntısı öğreticisinde hata ayıklama
-description: .NET Core 'da Bellek sızıntısını nasıl ayıklayacağınızı öğrenin.
+title: Hata ayıklama bir bellek sızıntısı öğretici
+description: .NET Core'da bellek sızıntısını nasıl hata ayıklayın öğrenin.
 ms.topic: tutorial
 ms.date: 12/17/2019
 ms.openlocfilehash: 014945394f87edd02c94f7c3b28043bd07470d8b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76737733"
 ---
-# <a name="tutorial-debug-a-memory-leak-in-net-core"></a>Öğretici: .NET Core 'da bellek sızıntısı hatalarını ayıklama
+# <a name="tutorial-debug-a-memory-leak-in-net-core"></a>Öğretici: .NET Core'da bellek sızıntısını hata ayıklama
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 3,0 SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 3.0 SDK ve sonraki sürümler
 
-Bu öğreticide, .NET Core Bellek sızıntısını çözümlemek için Araçlar gösterilmektedir.
+Bu öğretici, bir .NET Core bellek sızıntısıanaliz etmek için araçları gösterir.
 
-Bu öğreticide, kasıtlı olarak bellek sızıntısı için tasarlanan örnek bir uygulama kullanılmaktadır. Örnek, bir alıştırma olarak sağlanır. Yanlışlıkla bellek sızdıran bir uygulamayı analiz edebilirsiniz.
+Bu öğretici, kasıtlı olarak bellek sızdırmak için tasarlanmış bir örnek uygulama kullanır. Örnek bir egzersiz olarak sağlanmaktadır. İstemeden bellek sızdıran bir uygulamayı da analiz edebilirsiniz.
 
 Bu öğreticide şunları yapacaksınız:
 
 > [!div class="checklist"]
 >
-> - [DotNet-Counters](dotnet-counters.md)ile yönetilen bellek kullanımını inceleyin.
-> - Döküm dosyası oluştur.
-> - Döküm dosyasını kullanarak bellek kullanımını çözümleyin.
+> - Yönetilen bellek kullanımını [dotnet sayaçları](dotnet-counters.md)ile inceleyin.
+> - Bir döküm dosyası oluşturun.
+> - Döküm dosyasını kullanarak bellek kullanımını çözümle.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
-Öğretici şunları kullanır:
+Öğretici kullanır:
 
-- [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya sonraki bir sürümü.
-- [DotNet-](dotnet-trace.md) liste süreçlerini izleme.
-- [DotNet-](dotnet-counters.md) yönetilen bellek kullanımını denetlemek için sayaçlar.
-- [DotNet-](dotnet-dump.md) döküm dosyasını toplamak ve analiz etmek için döküm.
-- Tanılama için bir [örnek hata ayıklama hedef](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) uygulaması.
+- [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya daha sonraki bir sürüm.
+- [nokta-izleme](dotnet-trace.md) liste işlemleri için.
+- yönetilen bellek kullanımını denetlemek için [dotnet sayaçları.](dotnet-counters.md)
+- bir döküm dosyasını toplamak ve çözümlemek için [dotnet-dökümü.](dotnet-dump.md)
+- Tanılamak için [örnek hata ayıklama hedef](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) uygulaması.
 
-Öğretici, örnek ve araçların yüklendiğini ve kullanıma hazırlandığını varsayar.
+Öğretici, örnek ve araçların yüklü ve kullanıma hazır olduğunu varsayar.
 
-## <a name="examine-managed-memory-usage"></a>Yönetilen bellek kullanımını incele
+## <a name="examine-managed-memory-usage"></a>Yönetilen bellek kullanımını inceleme
 
-Bu senaryonun köke neden olması için tanılama verileri toplamaya başlamadan önce, aslında bir bellek sızıntısı (bellek büyümesi) gördüğünüzü unutmayın. Doğrulamak için [DotNet-Counters](dotnet-counters.md) aracını kullanabilirsiniz.
+Bu senaryoya neden olmamıza yardımcı olacak tanılama verilerini toplamaya başlamadan önce, gerçekten bir bellek sızıntısı (bellek büyümesi) gördüğünüzden emin olmanız gerekir. Bunu doğrulamak için [dotnet sayaçları](dotnet-counters.md) aracını kullanabilirsiniz.
 
-Bir konsol penceresi açın ve [örnek hata ayıklama hedefini](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)indirdiğiniz ve sıkıştırmadan indirdiğiniz dizine gidin. Hedefi Çalıştır:
+Bir konsol penceresi açın ve [örnek hata ayıklama hedefini](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)indirip fermuarını açtığınız dizine gidin. Hedefi çalıştırın:
 
 ```dotnetcli
 dotnet run
 ```
 
-Ayrı bir konsoldan, [DotNet-Trace](dotnet-trace.md) aracını kullanarak işlem kimliğini bulun:
+Ayrı bir konsoldan, [dotnet izleme](dotnet-trace.md) aracını kullanarak işlem kimliğini bulun:
 
 ```console
 dotnet-trace ps
 ```
 
-Çıktı aşağıdakine benzer olmalıdır:
+Çıktı aşağıdakilere benzer olmalıdır:
 
 ```console
 4807 DiagnosticScena /home/user/git/samples/core/diagnostics/DiagnosticScenarios/bin/Debug/netcoreapp3.0/DiagnosticScenarios
 ```
 
-Şimdi, [DotNet-Counters](dotnet-counters.md) aracıyla yönetilen bellek kullanımını kontrol edin. `--refresh-interval` yenilemeler arasındaki saniye sayısını belirtir:
+Şimdi, [dotnet sayaçları](dotnet-counters.md) aracıyla yönetilen bellek kullanımını kontrol edin. Yenilemeler `--refresh-interval` arasındaki saniye sayısını belirtir:
 
 ```console
 dotnet-counters monitor --refresh-interval 1 -p 4807
 ```
 
-Canlı çıktının şuna benzer olması gerekir:
+Canlı çıktı aşağıdakilere benzer olmalıdır:
 
 ```console
 Press p to pause, r to resume, q to quit.
@@ -94,61 +94,61 @@ Press p to pause, r to resume, q to quit.
     Working Set (MB)                                  83
 ```
 
-Bu satıra odaklanma:
+Bu satıra odaklanarak:
 
 ```console
     GC Heap Size (MB)                                  4
 ```
 
-Yönetilen yığın belleğinin başlangıçtan sonra 4 MB olduğunu görebilirsiniz.
+Yönetilen yığın belleği başlatmadan hemen sonra 4 MB olduğunu görebilirsiniz.
 
-Şimdi URL `http://localhost:5000/api/diagscenario/memleak/20000`' a basın.
+Şimdi, URL'ye `http://localhost:5000/api/diagscenario/memleak/20000`vur.
 
-Bellek kullanımının 30 MB 'a kadar büyüdiğini gözlemleyin.
+Bellek kullanımının 30 MB'a kadar büyüdüğünü gözlemleyin.
 
 ```console
     GC Heap Size (MB)                                 30
 ```
 
-Bellek kullanımını izleyerek belleğin büyüdüğünü veya sızmasını güvenli bir şekilde söyleyebilirsiniz. Sonraki adım bellek analizine yönelik doğru verileri toplamaktır.
+Bellek kullanımını izleyerek, belleğin büyüdüğünü veya sızdırdığını rahatlıkla söyleyebilirsiniz. Bir sonraki adım bellek analizi için doğru verileri toplamaktır.
 
-### <a name="generate-memory-dump"></a>Bellek dökümü oluştur
+### <a name="generate-memory-dump"></a>Bellek dökümü oluşturma
 
-Olası bellek sızıntılarını analiz edilirken uygulamanın bellek yığınına erişmeniz gerekir. Daha sonra bellek içeriğini çözümleyebilirsiniz. Nesneler arasındaki ilişkilere bakarak belleğin neden serbest bırakılmadığına ilişkin bir kayıt oluşturursunuz. Ortak bir tanılama veri kaynağı, Windows 'da bellek dökümleridir veya Linux üzerinde eşdeğer çekirdek dökümleridir. .NET Core uygulamasının bir dökümünü oluşturmak için [DotNet-dump)](dotnet-dump.md) aracını kullanabilirsiniz.
+Olası bellek sızıntılarını analiz ederken, uygulamanın bellek yığınına erişmeniz gerekir. Sonra bellek içeriğini analiz edebilirsiniz. Nesneler arasındaki ilişkilere baktığınızda, belleğin neden serbest bırakılmadığını niçin oluşturduğuna dair teoriler oluşturursunuz. Ortak bir tanılama veri kaynağı, Windows'daki bir bellek dökümü veya Linux'taki eşdeğer çekirdek dökümüdür. .NET Core uygulamasının dökümdöküm'ü oluşturmak için [dotnet dökümü aracını](dotnet-dump.md) kullanabilirsiniz.
 
-Önceden başlatılan [örnek hata ayıklama hedefini](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) kullanarak bir Linux core dökümü oluşturmak için aşağıdaki komutu çalıştırın:
+Daha önce başlatılan [örnek hata ayıklama hedefini](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) kullanarak, linux çekirdek dökümü oluşturmak için aşağıdaki komutu çalıştırın:
 
 ```dotnetcli
 dotnet-dump collect -p 4807
 ```
 
-Sonuç, aynı klasörde bulunan temel bir dökümdir.
+Sonuç, aynı klasörde bulunan bir çekirdek dökümüdür.
 
 ```console
 Writing minidump with heap to ./core_20190430_185145
 Complete
 ```
 
-### <a name="restart-the-failed-process"></a>Başarısız olan işlemi yeniden Başlat
+### <a name="restart-the-failed-process"></a>Başarısız işlemi yeniden başlatma
 
-Döküm toplandıktan sonra, başarısız olan işlemi tanılamak için yeterli bilgiye sahip olmanız gerekir. Başarısız işlem bir üretim sunucusunda çalışıyorsa, artık işlemi yeniden başlatarak kısa süreli düzeltmeye yönelik ideal bir süredir.
+Döküm toplandıktan sonra, başarısız işlemi tanılamak için yeterli bilgiye sahip olmalısınız. Başarısız olan işlem bir üretim sunucusunda çalışıyorsa, şimdi işlemi yeniden başlatarak kısa vadeli düzeltme için ideal bir zaman.
 
-Bu öğreticide, şimdi [örnek hata ayıklama hedefini](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) tamamladınız ve kapatabilirsiniz. Sunucuyu başlatan terminale gidin ve `Control-C`' ye basın.
+Bu öğreticide, artık [Örnek hata ayıklama hedefini](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) bitirdiniz ve kapatabilirsiniz. Sunucuyu başlatan terminale gidin `Control-C`ve 'ye basın.
 
-### <a name="analyze-the-core-dump"></a>Çekirdek dökümünü analiz etme
+### <a name="analyze-the-core-dump"></a>Çekirdek dökümünün analizi
 
-Oluşturulan temel bir döküm olduğuna göre, dökümü çözümlemek için [DotNet-dump)](dotnet-dump.md) aracını kullanın:
+Şimdi oluşturulan bir çekirdek dökümü var, dökümü analiz etmek için [dotnet-dump)](dotnet-dump.md) aracını kullanın:
 
 ```dotnetcli
 dotnet-dump analyze core_20190430_185145
 ```
 
-Burada `core_20190430_185145` çözümlemek istediğiniz çekirdek döküm adıdır.
+Analiz `core_20190430_185145` etmek istediğiniz çekirdek dökümünün adı nerede?
 
 > [!NOTE]
-> *Libdl.so* bulunamadığını belirten bir hata görürseniz, *libc6-dev* paketini yüklemek zorunda kalabilirsiniz. Daha fazla bilgi için bkz. [Linux üzerinde .NET Core önkoşulları](../linux-prerequisites.md).
+> *libdl.so* bulunamaz şikayet eden bir hata görürseniz, *libc6-dev* paketini yüklemeniz gerekebilir. Daha fazla bilgi [için Linux'ta .NET Core için Ön koşullara](../linux-prerequisites.md)bakın.
 
-SOS komutları girebileceğiniz bir istem sunulur. Genellikle, bakmak istediğiniz ilk şey, yönetilen yığının genel durumudur:
+SOS komutlarını girebileceğiniz bir istem sunulur. Genellikle, bakmak istediğiniz ilk şey yönetilen yığının genel durumudur:
 
 ```console
 > dumpheap -stat
@@ -168,9 +168,9 @@ Statistics:
 Total 428516 objects
 ```
 
-Burada çoğu nesnenin `String` veya `Customer` nesneleri olduğunu görebilirsiniz.
+Burada çoğu nesnenin veya `String` `Customer` nesnenin olduğunu görebilirsiniz.
 
-Tüm `String` örneklerinin bir listesini almak için yöntem tablosu (MT) ile birlikte `dumpheap` komutunu yeniden kullanabilirsiniz:
+Tüm `String` örneklerin `dumpheap` listesini almak için yöntem tablosu (MT) ile komutu yeniden kullanabilirsiniz:
 
 ```console
 > dumpheap -mt 00007faddaa50f90
@@ -191,7 +191,7 @@ Statistics:
 Total 206770 objects
 ```
 
-Artık nesnenin nasıl ve neden kök olduğunu görmek için bir `System.String` örneğinde `gcroot` komutunu kullanabilirsiniz. Bu komutun 30 MB 'lik bir yığın ile birkaç dakika sürdüğü için sabırlı olun:
+Nesnenin `gcroot` nasıl ve neden `System.String` köksünün dayandığını görmek için artık bir örnekteki komutu kullanabilirsiniz. Bu komut 30 MB'lık bir yığınla birkaç dakika aldığından sabırlı olun:
 
 ```console
 > gcroot -all 00007f6ad09421f8
@@ -220,26 +220,26 @@ HandleTable:
 Found 2 roots.
 ```
 
-`String`, `Customer` nesne tarafından doğrudan tutulduğundan ve bir `CustomerCache` nesnesi tarafından dolaylı olarak tutulduğundan emin olabilirsiniz.
+Doğrudan nesne tarafından `String` tutulduğunu `Customer` ve dolaylı olarak bir `CustomerCache` nesne tarafından tutulduğunu görebilirsiniz.
 
-Birçok `String` nesnesinin benzer bir düzende izlediğinden emin olmak için nesnelerin dökümünü almaya devam edebilirsiniz. Bu noktada, araştırma kodunuzda kök nedenini belirlemek için yeterli bilgi sağladı.
+Çoğu `String` nesnenin benzer bir deseni takip ettiğini görmek için nesneleri boşaltmaya devam edebilirsiniz. Bu noktada, araştırma kodunuzda kök nedeni belirlemek için yeterli bilgi sağladı.
 
-Bu genel yordam, büyük bellek sızıntılarının kaynağını tanımlamanızı sağlar.
+Bu genel yordam, büyük bellek sızıntılarının kaynağını belirlemenize olanak tanır.
 
 ## <a name="clean-up-resources"></a>Kaynakları temizleme
 
-Bu öğreticide, örnek bir Web sunucusu başladıysanız. Bu sunucu, [başarısız Işlem yeniden başlatma](#restart-the-failed-process) bölümünde açıklandığı gibi kapatılmış olmalıdır.
+Bu öğreticide, örnek bir web sunucusu başlattınız. Bu sunucu, başarısız işlemi yeniden [başlat](#restart-the-failed-process) bölümünde açıklandığı gibi kapatılmış olmalıdır.
 
 Oluşturulan döküm dosyasını da silebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Tebrikler, bu öğreticiyi tamamlama.
+Bu öğretici tamamladıktan sonra tebrikler.
 
-Daha fazla tanılama öğreticilerini yayımlamaya devam ediyoruz. [DotNet/Diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial) deposundaki taslak sürümlerini okuyabilirsiniz.
+Hala daha fazla tanı lama eğitimi yayınlıyoruz. Taslak sürümleri [dotnet/teşhis](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial) deposunda okuyabilirsiniz.
 
-Bu öğretici, önemli .NET tanılama araçlarının temellerini ele alınmaktadır. Gelişmiş kullanım için aşağıdaki başvuru belgelerine bakın:
+Bu öğretici, anahtar .NET tanılama araçlarının temellerini kapsamaktadır. Gelişmiş kullanım için aşağıdaki başvuru belgelerine bakın:
 
-* [DotNet-](dotnet-trace.md) liste süreçlerini izleme.
-* [DotNet-](dotnet-counters.md) yönetilen bellek kullanımını denetlemek için sayaçlar.
-* [DotNet-](dotnet-dump.md) döküm dosyasını toplamak ve analiz etmek için döküm.
+* [nokta-izleme](dotnet-trace.md) liste işlemleri için.
+* yönetilen bellek kullanımını denetlemek için [dotnet sayaçları.](dotnet-counters.md)
+* bir döküm dosyasını toplamak ve çözümlemek için [dotnet-dökümü.](dotnet-dump.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, how to return a value
 ms.assetid: c4bc0f44-eba2-4e96-9e03-1cc787461e61
 ms.openlocfilehash: 495f68114bfe960b8182be4ab76b72043b2d0cc7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141663"
 ---
 # <a name="how-to-return-a-value-from-a-task"></a>Nasıl yapılır: Bir Görevden Değer Döndürme
@@ -24,7 +24,7 @@ Bu örnek, <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> �
   
  <xref:System.Threading.Tasks.Task%601.Result%2A> özelliği, görev bitene kadar çağıran iş parçacığını engeller.  
   
- Bir <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> sonucunu bir devamlılık görevine geçirme hakkında bilgi için bkz. [devamlılık görevlerini kullanarak görevleri zincirleme](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).  
+ Bir <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> görevin sonucunu bir devam görevine nasıl geçirilir görmek için, [Devam Görevlerini Kullanarak Görevleri Zincirleme](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)bölümüne bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

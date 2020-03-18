@@ -1,6 +1,6 @@
 - name: .NET Core için Windows Presentation Foundation
   href: overview/index.md
-- name: Kullanmaya başlayın
+- name: Başlangıç
   items:
     - name: WPF uygulaması oluşturma
       href: 'https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json'
@@ -18,7 +18,7 @@
       href: fundamentals/xaml-resources-define.md
     - name: Stiller ve şablonlar
       items:
-        - name: Genel Bakış
+        - name: Genel bakış
           href: fundamentals/styles-templates-overview.md
         - name: Stil oluşturma ve uygulama
           href: fundamentals/styles-templates-create-apply-style.md

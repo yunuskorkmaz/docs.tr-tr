@@ -1,5 +1,5 @@
 ---
-title: .NET 'te tür dönüştürme tabloları
+title: .NET’te Tür Dönüştürme Tabloları
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - data types [.NET Framework], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
 ms.openlocfilehash: aa1ef8397338af949bd147fd3252b2d9ecaf53ef
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73103883"
 ---
-# <a name="type-conversion-tables-in-net"></a>.NET 'te tür dönüştürme tabloları
-Genişleyen dönüştürme, bir türün değeri eşit veya daha büyük boyutta başka bir türe dönüştürüldüğünde gerçekleşir. Bir tür değeri daha küçük boyutta olan başka bir türün değerine dönüştürüldüğünde bir daraltma dönüştürmesi oluşur. Bu konudaki tablolarda her iki tür dönüştürme için de konu gösteren davranışlar gösterilmektedir.  
+# <a name="type-conversion-tables-in-net"></a>.NET’te Tür Dönüştürme Tabloları
+Genişletme dönüştürme, bir türün değeri eşit veya daha büyük boyutta başka bir türe dönüştürüldüğünde oluşur. Daraltma dönüştürme, bir türün değeri daha küçük boyuttaki başka bir türün değerine dönüştürüldüğünde oluşur. Bu konuyla ilgili tablolar, her iki dönüşüm türü tarafından sergilenen davranışları göstermektedir.  
   
 ## <a name="widening-conversions"></a>Dönüştürmeleri Genişletme  
- Aşağıdaki tabloda, bilgi kaybı olmadan gerçekleştirilebilecek genişletme dönüştürmeleri açıklanmaktadır.  
+ Aşağıdaki tabloda, bilgi kaybı olmadan gerçekleştirilebilecek genişletme dönüşümleri açıklanmaktadır.  
   
-|Tür|, Veri kaybı olmadan dönüştürülebilir|  
+|Tür|Veri kaybı olmadan dönüştürülebilir|  
 |----------|-------------------------------------------|  
 |<xref:System.Byte>|<xref:System.UInt16>, <xref:System.Int16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
 |<xref:System.SByte>|<xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
@@ -38,7 +38,7 @@ Genişleyen dönüştürme, bir türün değeri eşit veya daha büyük boyutta 
 |<xref:System.UInt64>|<xref:System.Decimal>|  
 |<xref:System.Single>|<xref:System.Double>|  
   
- <xref:System.Single> veya <xref:System.Double> bazı genişletme dönüştürmeleri duyarlık kaybına neden olabilir. Aşağıdaki tabloda bazen bilgi kaybına neden olan genişletme dönüştürmeleri açıklanmaktadır.  
+ Bazı genişletme dönüşümleri <xref:System.Single> veya <xref:System.Double> hassas bir kaybına neden olabilir. Aşağıdaki tabloda, bazen bilgi kaybına neden olan genişleyen dönüşümler açıklanmaktadır.  
   
 |Tür|Dönüştürülebilir|  
 |----------|-------------------------|  
@@ -48,12 +48,12 @@ Genişleyen dönüştürme, bir türün değeri eşit veya daha büyük boyutta 
 |<xref:System.UInt64>|<xref:System.Single>, <xref:System.Double>|  
 |<xref:System.Decimal>|<xref:System.Single>, <xref:System.Double>|  
   
-## <a name="narrowing-conversions"></a>Daraltma dönüştürmeleri  
- <xref:System.Single> veya <xref:System.Double> bir daraltma dönüştürmesi, bilgi kaybına neden olabilir. Hedef türü kaynağın büyüklüğünü doğru bir şekilde ifade edemez, elde edilen tür sabit `PositiveInfinity` veya `NegativeInfinity`olarak ayarlanır. `PositiveInfinity`, pozitif bir sayıyı sıfıra bölüyor ve bir <xref:System.Single> ya da <xref:System.Double> değeri `MaxValue` alanının değerini aştığında de döndürülür. `NegativeInfinity`, negatif bir sayıyı sıfıra bölüden elde edilecek ve bir <xref:System.Single> veya <xref:System.Double> değeri `MinValue` alanı değerin altına düştüğünde de döndürülür. Bir <xref:System.Double> <xref:System.Single> bir dönüştürme `PositiveInfinity` veya `NegativeInfinity`neden olabilirler.  
+## <a name="narrowing-conversions"></a>Dönüşümleri Daraltma  
+ Daraltma dönüştürme <xref:System.Single> <xref:System.Double> veya bilgi kaybına neden olabilir. Hedef türü kaynağın büyüklüğünü düzgün bir şekilde ifade edemiyorsa, elde `PositiveInfinity` `NegativeInfinity`edilen tür sabit veya . `PositiveInfinity`pozitif bir sayının sıfıra bölünmesinden kaynaklanır ve a <xref:System.Single> <xref:System.Double> değeri veya `MaxValue` alanın değerini aştığında da döndürülür. `NegativeInfinity`negatif bir sayının sıfıra bölünmesinden kaynaklanır ve a <xref:System.Single> <xref:System.Double> değeri veya `MinValue` alanın değerinin altına düştüğünde de döndürülür. A'dan <xref:System.Double> <xref:System.Single> a'ya `PositiveInfinity` dönüşüm, `NegativeInfinity`  
   
- Daraltma dönüştürmesi aynı zamanda diğer veri türleri için bilgi kaybına neden olabilir. Ancak, dönüştürülmüş bir türün değeri hedef türün `MaxValue` ve `MinValue` alanları tarafından belirtilen aralığın dışında kalırsa ve dönüştürme çalışma zamanı tarafından, hedef türü değerinin aşmayacağından emin olmak için işaretlendiğinde bir <xref:System.OverflowException> oluşturulur. `MaxValue` veya `MinValue`. <xref:System.Convert?displayProperty=nameWithType> sınıfıyla gerçekleştirilen dönüşümler her zaman bu şekilde denetlenir.  
+ Daraltma dönüştürme, diğer veri türleri için bilgi kaybına da neden olabilir. <xref:System.OverflowException> Ancak, dönüştürülen bir türün değeri hedef türün `MaxValue` ve `MinValue` alanların belirttiği aralığın dışına düşerse ve dönüşüm, hedef türün değerinin kendi `MaxValue` veya . `MinValue` <xref:System.Convert?displayProperty=nameWithType> Sınıfla gerçekleştirilen dönüşümler her zaman bu şekilde denetlenir.  
   
- Aşağıdaki tabloda, <xref:System.Convert?displayProperty=nameWithType> veya dönüştürülen tür değeri elde edilen türün tanımlı aralığının dışındaysa bir <xref:System.OverflowException> oluşturan dönüşümler listelenmektedir.  
+ Aşağıdaki tablo, dönüştürülen türün değeri elde edilen türün tanımlı aralığının <xref:System.OverflowException> dışındaysa, bir kullanımı <xref:System.Convert?displayProperty=nameWithType> veya denetlenen dönüşüm leri içeren dönüşümleri listeler.  
   
 |Tür|Dönüştürülebilir|  
 |----------|-------------------------|  

@@ -18,22 +18,22 @@ helpviewer_keywords:
 - storing data using isolated storage, finding files and directories
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 ms.openlocfilehash: dfebcc9acf0b699f898c106921d15ce0294bc5d2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75707139"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolamada Mevcut Dosya ve Dizinleri Bulma
 
-Yalıtılmış depolamada bir dizin aramak için <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> yöntemini kullanın. Bu yöntem, bir arama modelini temsil eden bir dize alır. Arama düzeninde tek karakterlik (?) ve çok karakterli (\*) joker karakterler kullanabilirsiniz, ancak joker karakterler adın son bölümünde görünmelidir. Örneğin, `directory1/*ect*` geçerli bir arama dizesidir, ancak `*ect*/directory2` değildir.  
+Yalıtılmış depolamada bir dizin <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> aramak için yöntemi kullanın. Bu yöntem, bir arama deseni temsil eden bir dize alır. Arama deseninde hem tek karakterli (?) hem de çok karakterli (\*) joker karakter kullanabilirsiniz, ancak joker karakterin adın son bölümünde görünmesi gerekir. Örneğin, `directory1/*ect*` geçerli bir arama dizesi, ancak `*ect*/directory2` değildir.  
   
- Bir dosya aramak için <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A?displayProperty=nameWithType> yöntemini kullanın. <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> için geçerli olan arama dizelerindeki joker karakterler için kısıtlama, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>için de geçerlidir.  
+ Bir dosyayı aramak için <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A?displayProperty=nameWithType> yöntemi kullanın. Arama dizeleri için geçerli olan joker karakter <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> kısıtlaması <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>da geçerlidir.  
   
- Bu yöntemlerin hiçbiri özyinelemeli değildir; <xref:System.IO.IsolatedStorage.IsolatedStorageFile> sınıfı, Deponuzdaki tüm dizinleri veya dosyaları listelemek için herhangi bir yöntem sağlamaz. Ancak özyinelemeli yöntemler aşağıdaki kod örneğinde gösterilmiştir.  
+ Bu yöntemlerin hiçbiri özyinelemeli değildir; <xref:System.IO.IsolatedStorage.IsolatedStorageFile> sınıf, mağazanızdaki tüm dizinleri veya dosyaları listelemek için herhangi bir yöntem sağlamaz. Ancak, özyinelemeli yöntemler aşağıdaki kod örneğinde gösterilmiştir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, yalıtılmış bir depoda dosyaların ve dizinlerin nasıl oluşturulacağını göstermektedir. İlk olarak, Kullanıcı, etki alanı ve derleme için yalıtılmış bir mağaza alınır ve `isoStore` değişkenine yerleştirilir. <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A> yöntemi, birkaç farklı dizin ayarlamak için kullanılır ve <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.%23ctor%28System.String%2CSystem.IO.FileMode%2CSystem.IO.IsolatedStorage.IsolatedStorageFile%29> Oluşturucu bu dizinlerde bazı dosyaları oluşturur. Kod daha sonra `GetAllDirectories` yönteminin sonuçları boyunca döngü yapılır. Bu yöntem, geçerli dizindeki tüm dizin adlarını bulmak için <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> kullanır. Bu adlar bir dizide depolanır ve sonra, bulduğu her bir dizine geçerek kendisini çağırır `GetAllDirectories`. Sonuç olarak, tüm dizin adları bir dizide döndürülür. Ardından, kod `GetAllFiles` yöntemini çağırır. Bu yöntem, tüm dizinlerin adlarını bulmak için `GetAllDirectories` çağırır ve sonra <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A> yöntemini kullanarak her bir dizini dosyalar için denetler. Sonuç, görüntüleme için bir dizide döndürülür.  
+ Aşağıdaki kod örneği, yalıtılmış bir depoda dosyaların ve dizinlerin nasıl oluşturulup oluşturulabildiğini göstermektedir. İlk olarak, kullanıcı, etki alanı ve derleme için yalıtılmış `isoStore` bir mağaza alınır ve değişkene yerleştirilir. Yöntem <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A> birkaç farklı dizinler ayarlamak için kullanılır <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.%23ctor%28System.String%2CSystem.IO.FileMode%2CSystem.IO.IsolatedStorage.IsolatedStorageFile%29> ve oluşturucu bu dizinlerde bazı dosyalar oluşturur. Kod daha sonra `GetAllDirectories` yöntemin sonuçları arasında döngüler. Bu yöntem, geçerli dizindeki tüm dizin adlarını bulmak için kullanır. <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> Bu adlar bir dizide depolanır ve bulduğu `GetAllDirectories` her dizide geçerek kendisini çağırır. Sonuç olarak, tüm dizin adları bir dizi döndürülür. Sonra, kod `GetAllFiles` yöntemi çağırır. Bu yöntem, tüm dizinlerin adlarını bulmak için çağırır `GetAllDirectories` ve sonra <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A> yöntemi kullanarak dosyaları için her dizin denetler. Sonuç görüntülenmek için bir dizi döndürülür.  
   
  [!code-cpp[Conceptual.IsolatedStorage#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source8.cpp#9)]
  [!code-csharp[Conceptual.IsolatedStorage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source8.cs#9)]

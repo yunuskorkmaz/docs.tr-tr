@@ -12,23 +12,23 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: aed3b18c154d4b7a4390b28fb1f14536690f6b3a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121323"
 ---
 # <a name="blocking-application-execution-by-ending-an-async-operation"></a>Zaman Uyumsuz bir İşlemi Sonlandırarak Uygulama Yürütmesini Engelleme
-Zaman uyumsuz bir işlemin sonuçlarının, işlem tamamlanana kadar durdurulması gerekir. Zaman uyumsuz bir işlemin tamamlanmasını beklerken uygulamanızın ana iş parçacığını engellemek için aşağıdaki seçeneklerden birini kullanın:  
+Eşzamanlı işlemin sonuçlarını beklerken başka işler yapmaya devam edemeyen uygulamaların işlem tamamlanana kadar engellenmesi gerekir. Asynchronous işleminin tamamlanmasını beklerken uygulamanızın ana iş parçacığını engellemek için aşağıdaki seçeneklerden birini kullanın:  
   
-- Zaman uyumsuz işlemler **bitiş**_OperationName_ yöntemini çağırın. Bu yaklaşım, bu konuda gösterilmiştir.  
+- Eşzamanlı işlemleri **Son**_İşlemName_ yöntemini arayın. Bu yaklaşım bu konuda gösterilmiştir.  
   
-- Zaman uyumsuz işlemin **BEGIN**_OperationName_ yöntemi tarafından döndürülen <xref:System.IAsyncResult> <xref:System.IAsyncResult.AsyncWaitHandle%2A> özelliğini kullanın. Bu yaklaşımı gösteren bir örnek için bkz. [AsyncWaitHandle kullanarak uygulama yürütmeyi engelleme](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
+- Eşzamanlı işlemin **Begin**_OperationName_ yöntemiyle döndürülen <xref:System.IAsyncResult> özelliği kullanın. <xref:System.IAsyncResult.AsyncWaitHandle%2A> Bu yaklaşımı gösteren bir örnek için, [bkz.](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)  
   
- Zaman uyumsuz bir işlem tamamlanana kadar engellemek için **End**_OperationName_ yöntemini kullanan uygulamalar genellikle **BEGIN**_OperationName_ yöntemini çağırır, işlem yapın ve sonra **End**_OperationName_öğesini çağırın.  
+ Bir eşzamanlı işlem tamamlanana kadar engellemeyi engellemek için **Son**_İşlem Adı_ yöntemini kullanan uygulamalar genellikle_İşlemNameyi_ **Başlat**yöntemini çağırır, işlemin sonuçları olmadan yapılabilecek herhangi bir işi gerçekleştirir ve ardından **Son**_İşlem Name'yi_çağırır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, Kullanıcı tarafından belirtilen bir bilgisayar için etki alanı adı sistem bilgilerini almak üzere <xref:System.Net.Dns> sınıfında zaman uyumsuz yöntemleri kullanmayı gösterir. Bu yaklaşım kullanıldığında, bu bağımsız değişkenler gerekli olmadığından, <xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` ve `stateObject` parametreleri için `null` (Visual Basic`Nothing`) geçtiğini unutmayın.  
+ Aşağıdaki kod örneği, kullanıcı tarafından belirtilen bir <xref:System.Net.Dns> bilgisayar için Alan Adı Sistemi bilgilerini almak için sınıfta eşzamanlı yöntemler ini gösterir. `null` Bu yaklaşım`Nothing` kullanılırken bu bağımsız <xref:System.Net.Dns.BeginGetHostByName%2A> `requestCallback` değişkenler gerekli olmadığından ( Visual Basic'te) `stateObject` parametreler için geçirildiğini unutmayın.  
   
  [!code-csharp[AsyncDesignPattern#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_EndBlock.cs#1)]
  [!code-vb[AsyncDesignPattern#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/Async_EndBlock.vb#1)]  

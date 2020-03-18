@@ -7,49 +7,49 @@ helpviewer_keywords:
 - generic collections [.NET Framework]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 ms.openlocfilehash: 7d59259c1cab6842ef62888bf5326225394d8d44
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711213"
 ---
 # <a name="when-to-use-generic-collections"></a>Genel Koleksiyonları Ne Zaman Kullanılacağı
-Genel koleksiyonları kullanmak genellikle önerilir, çünkü bir temel koleksiyon türünden türemeniz ve türe özgü Üyeler uygulamanız gerekmeden tür güvenliği avantajını elde etmeniz gerekir. Genel koleksiyon türleri genellikle karşılık gelen genel olmayan koleksiyon türlerinden (ve genel olmayan temel koleksiyon türlerinden türetilen türlerden daha iyidir), koleksiyon öğeleri değer türleri olduğunda daha iyi bir hale gelir çünkü genel türler öğelerin Box 'a gerek yoktur.  
+Bir temel koleksiyon türünden türetmek ve türe özgü üyeleri uygulamak zorunda kalmadan tür güvenliğinden anında yararlandığınız için genel koleksiyonların kullanılması genellikle önerilir. Genel koleksiyon türleri de genellikle ilgili genel olmayan koleksiyon türlerinden (ve genel olmayan temel toplama türlerinden türetilen türlerden daha iyi) koleksiyon öğeleri değer türleri olduğunda, çünkü genel koleksiyonlarda daha iyi performans gösterir öğeleri kutuya gerek yok.  
   
- .NET Framework 4 veya sonraki sürümlerini hedefleyen programlar için, birden çok iş parçacığı koleksiyona aynı anda öğe ekleme veya kaldırma gibi durumlarda, <xref:System.Collections.Concurrent> ad alanında genel koleksiyon sınıflarını kullanmanız gerekir.  
+ .NET Framework 4 veya sonraki leri hedefleyen programlar için, birden <xref:System.Collections.Concurrent> çok iş parçacığı aynı anda koleksiyondan öğe eklendiğinde veya kaldırılıyor olabilirken ad alanında genel koleksiyon sınıflarını kullanmanız gerekir.  
   
- Aşağıdaki genel türler var olan koleksiyon türlerine karşılık gelir:  
+ Aşağıdaki genel türler varolan toplama türlerine karşılık gelir:  
   
-- <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ArrayList>karşılık gelen genel sınıftır.  
+- <xref:System.Collections.Generic.List%601>'ye <xref:System.Collections.ArrayList>karşılık gelen genel sınıftır.  
   
-- <xref:System.Collections.Generic.Dictionary%602> ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Hashtable>karşılık gelen genel sınıflardır.  
+- <xref:System.Collections.Generic.Dictionary%602>ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602> karşılık gelen genel <xref:System.Collections.Hashtable>sınıflardır.  
   
-- <xref:System.Collections.ObjectModel.Collection%601>, <xref:System.Collections.CollectionBase>karşılık gelen genel sınıftır. <xref:System.Collections.ObjectModel.Collection%601> temel sınıf olarak kullanılabilir, ancak <xref:System.Collections.CollectionBase>aksine soyut değildir. Bu, kullanımını çok daha kolay hale getirir.  
+- <xref:System.Collections.ObjectModel.Collection%601>'ye <xref:System.Collections.CollectionBase>karşılık gelen genel sınıftır. <xref:System.Collections.ObjectModel.Collection%601>bir taban sınıf olarak kullanılabilir, <xref:System.Collections.CollectionBase>ancak aksine, soyut değildir. Bu kullanımı çok daha kolay hale getirir.  
   
-- <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, <xref:System.Collections.ReadOnlyCollectionBase>karşılık gelen genel sınıftır. <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> soyut değildir ve var olan bir <xref:System.Collections.Generic.List%601> salt okunurdur bir koleksiyon olarak açığa çıkarmak kolaylaşır.  
+- <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>'ye <xref:System.Collections.ReadOnlyCollectionBase>karşılık gelen genel sınıftır. <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>soyut değildir ve varolan <xref:System.Collections.Generic.List%601> bir koleksiyonu salt okunur olarak ortaya çıkarmayı kolaylaştıran bir oluşturucuya sahiptir.  
   
-- <xref:System.Collections.Generic.Queue%601>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, <xref:System.Collections.Generic.Stack%601>, <xref:System.Collections.Concurrent.ConcurrentStack%601>ve <xref:System.Collections.Generic.SortedList%602> genel sınıfları aynı adlara sahip ilgili olmayan genel sınıflara karşılık gelir.  
+- , <xref:System.Collections.Generic.Queue%601> <xref:System.Collections.Concurrent.ConcurrentQueue%601>, <xref:System.Collections.Generic.Stack%601> <xref:System.Collections.Concurrent.ConcurrentStack%601>, <xref:System.Collections.Generic.SortedList%602> , ve genel sınıflar aynı adlara sahip ilgili genel olmayan sınıflara karşılık gelir.  
   
-## <a name="additional-types"></a>Ek türler  
- Birkaç genel koleksiyon türü genel olmayan karşılıkiçermez. Bunlar aşağıdakileri içerir:  
+## <a name="additional-types"></a>Ek Türler  
+ Birkaç genel koleksiyon türü, genel olmayan karşılıkları yoktur. Bunlar şunlardır:  
   
-- <xref:System.Collections.Generic.LinkedList%601>, O (1) ekleme ve kaldırma işlemleri sağlayan genel amaçlı bağlantılı bir listesidir.  
+- <xref:System.Collections.Generic.LinkedList%601>O(1) ekleme ve kaldırma işlemlerini sağlayan genel amaçlı bağlantılı bir listedir.  
   
-- <xref:System.Collections.Generic.SortedDictionary%602>, O (günlük `n`) ekleme ve alma işlemleri içeren sıralanmış bir sözlüktür ve bu, <xref:System.Collections.Generic.SortedList%602>yararlı bir alternatif sağlar.  
+- <xref:System.Collections.Generic.SortedDictionary%602>O(log) `n`ekleme ve alma işlemleri ile sıralanmış bir sözlüktür, bu da <xref:System.Collections.Generic.SortedList%602>onu .'a kullanışlı bir alternatif yapar.  
   
-- <xref:System.Collections.ObjectModel.KeyedCollection%602>, kendi anahtarlarını içeren nesneleri depolamanın bir yolunu sağlayan bir liste ve sözlük arasında karma bir yoldur.  
+- <xref:System.Collections.ObjectModel.KeyedCollection%602>kendi anahtarlarını içeren nesneleri depolamak için bir yol sağlayan bir liste ve sözlük arasında bir melezdir.  
   
-- <xref:System.Collections.Concurrent.BlockingCollection%601> sınırlayıcı ve engelleyici işlevlerle bir koleksiyon sınıfı uygular.  
+- <xref:System.Collections.Concurrent.BlockingCollection%601>bağlama ve engelleme işlevi içeren bir toplama sınıfı uygular.  
   
-- <xref:System.Collections.Concurrent.ConcurrentBag%601> Sıralanmamış öğelerin hızlı bir şekilde eklenmesini ve kaldırılmasını sağlar.  
+- <xref:System.Collections.Concurrent.ConcurrentBag%601>hızlı ekleme ve sıralanmamış öğelerin kaldırılmasını sağlar.  
   
 ## <a name="linq-to-objects"></a>Nesnelere LINQ  
- LINQ to Objects özelliği, nesne türü <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> arabirimini uyguladığı sürece, bellek içi nesnelere erişmek için LINQ sorgularını kullanmanıza olanak sağlar. LINQ sorguları verilere erişim için ortak bir model sağlar; genellikle standart `foreach` döngülerinden daha kısa ve okunabilir; ve filtreleme, sıralama ve gruplama özellikleri sağlar. LINQ sorguları da performansı iyileştirebilir. Daha fazla bilgi için bkz. [LINQ to ObjectsC#()](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)ve [paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ LINQ to Objects özelliği, nesne türü <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> arabirimi uyguladığı sürece bellek içi nesnelere erişmek için LINQ sorgularını kullanmanıza olanak tanır. LINQ sorguları verilere erişmek için ortak bir desen sağlar; genellikle standart `foreach` döngülere göre daha kısa ve okunabilir; ve filtreleme, sıralama ve gruplandırma özellikleri sağlar. LINQ sorguları da performansı artırabilir. Daha fazla bilgi için [linq to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)ve [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)konusuna bakın.  
   
-## <a name="additional-functionality"></a>Ek Işlevsellik  
- Genel türlerden bazıları genel olmayan koleksiyon türlerinde bulunmayan işlevlere sahiptir. Örneğin, genel olmayan <xref:System.Collections.ArrayList> sınıfına karşılık gelen <xref:System.Collections.Generic.List%601> sınıfında, listeyi aramak için yöntemler belirtmenize olanak tanıyan <xref:System.Predicate%601> temsilcisi gibi genel temsilcileri kabul eden bir dizi yöntem vardır. Bu, listedeki her öğe üzerinde işlem yapan yöntemleri temsil eden <xref:System.Action%601> temsil ve türler arasında dönüştürmeleri tanımlamanızı sağlayan <xref:System.Converter%602> temsilcisidir.  
+## <a name="additional-functionality"></a>Ek İşlevsellik  
+ Genel türlerden bazıları, genel olmayan koleksiyon türlerinde bulunmayan işlevselliklere sahiptir. Örneğin, genel <xref:System.Collections.Generic.List%601> olmayan <xref:System.Collections.ArrayList> sınıfa karşılık gelen sınıfın, listeyi arama yöntemlerini belirtmenize olanak <xref:System.Predicate%601> tanıyan temsilci, listenin her öğesinde <xref:System.Action%601> hareket eden yöntemleri temsil eden temsilci ve <xref:System.Converter%602> türler arasındaki dönüşümleri tanımlamanıza olanak tanıyan temsilci gibi genel özneleri kabul eden bir dizi yöntemi vardır.  
   
- <xref:System.Collections.Generic.List%601> sınıfı, listeyi sıralamak ve aramak için kendi <xref:System.Collections.Generic.IComparer%601> genel arabirim uygulamalarınızı belirtmenizi sağlar. <xref:System.Collections.Generic.SortedDictionary%602> ve <xref:System.Collections.Generic.SortedList%602> sınıflarında de bu yetenek vardır. Ayrıca, bu sınıflar koleksiyon oluşturulduğunda Karşılaştırıcılar belirtmenizi sağlar. Benzer biçimde, <xref:System.Collections.Generic.Dictionary%602> ve <xref:System.Collections.ObjectModel.KeyedCollection%602> sınıfları kendi eşitlik karşılaştırmalarınızı belirtmenizi sağlar.  
+ Sınıf, <xref:System.Collections.Generic.List%601> listeyi sıralamak <xref:System.Collections.Generic.IComparer%601> ve aramak için kendi genel arabirim uygulamalarınızı belirtmenize olanak tanır. <xref:System.Collections.Generic.SortedDictionary%602> Ve <xref:System.Collections.Generic.SortedList%602> sınıflar da bu yeteneğe sahiptir. Ayrıca, bu sınıflar koleksiyon oluşturulduğunda karşılaştırıcılar belirtmenize izin verilir. Benzer şekilde, <xref:System.Collections.Generic.Dictionary%602> ve <xref:System.Collections.ObjectModel.KeyedCollection%602> sınıflar kendi eşitlik karşılaştırıcıları belirtmenize izin sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

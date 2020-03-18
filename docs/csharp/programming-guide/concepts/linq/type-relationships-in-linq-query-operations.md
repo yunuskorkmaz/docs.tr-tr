@@ -13,54 +13,54 @@ helpviewer_keywords:
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
 ms.openlocfilehash: 41853e6858fae9e8d449aeed95a6a84f343d5874
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635619"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ Sorgu İşlemlerinde Tür İlişkileri (C#)
-Sorguları etkili bir şekilde yazmak için, bir bütün sorgu işlemindeki değişkenlerin türlerinin birbirleriyle ilişkisini anlamalısınız. Bu ilişkileri anladıysanız, belgede LINQ örneklerini ve kod örneklerini daha kolay anlarsınız. Ayrıca, değişkenler `var`kullanılarak örtük olarak yazıldığında, arka planda neler olduğunu anlamış olursunuz.  
+Sorguları etkili bir şekilde yazmak için, tam bir sorgu işlemindeki değişken türlerinin birbiriyle nasıl ilişkili olduğunu anlamanız gerekir. Bu ilişkileri anlarsanız, belgelerdeki LINQ örneklerini ve kod örneklerini daha kolay kavrarsınız. Ayrıca, değişkenler kullanılarak örtülü olarak yazıldığında perde arkasında neler oluştuğunu `var`anlayacaksınız.  
   
- LINQ sorgu işlemleri veri kaynağında, sorgunun kendisinde ve sorgu yürütmesinde kesin olarak türdedir. Sorgudaki değişkenlerin türü, veri kaynağındaki öğelerin türü ile ve `foreach` deyimindeki yineleme değişkeni türüyle uyumlu olmalıdır). Bu güçlü yazma, tür hatalarının Kullanıcı tarafından karşılaşmadan önce düzeltilebilecekleri derleme zamanında yakalanmasını güvence altına alır.  
+ LINQ sorgu işlemleri güçlü veri kaynağı, sorgu kendisi ve sorgu yürütme olarak yazılır. Sorgudaki değişkenlerin türü, veri kaynağındaki öğelerin türüyle ve `foreach` deyimdeki yineleme değişkeninin türüyle uyumlu olmalıdır. Bu güçlü yazım hatası, tür hatalarının, kullanıcılar bunlarla karşılaşmadan önce düzeltilmedikleri zaman derleme zamanında yakalandığını garanti eder.  
   
- Bu tür ilişkilerini göstermek için, aşağıdaki örneklerin çoğu tüm değişkenler için açık yazma kullanır. Son örnek, [var](../../../language-reference/keywords/var.md)kullanarak örtük yazma kullandığınızda bile aynı ilkelerin nasıl uygulanacağını gösterir.  
+ Bu tür ilişkileri göstermek için, izleyen örneklerin çoğu tüm değişkenler için açık yazma kullanır. Son örnek, [var'ı](../../../language-reference/keywords/var.md)kullanarak örtülü yazı yı kullandığınızda bile aynı ilkelerin nasıl uygulandığını gösterir.  
   
-## <a name="queries-that-do-not-transform-the-source-data"></a>Kaynak verileri dönüştürmeksizin sorgular  
- Aşağıdaki çizimde, verilerde dönüştürme gerçekleştirmeyen bir LINQ to Objects sorgu işlemi gösterilmektedir. Kaynak bir dize dizisi içerir ve sorgu çıktısı da dizeler dizisidir.  
+## <a name="queries-that-do-not-transform-the-source-data"></a>Kaynak Verileri Dönüştürmeyan Sorgular  
+ Aşağıdaki resimde, verilerde dönüşüm olmayan nesneler sorgu işlemi için bir LINQ gösterilmektedir. Kaynak dizeleri bir dizi içerir ve sorgu çıktısı da dizeleri bir dizidir.  
   
  ![LINQ sorgusundaki veri türlerinin ilişkisini gösteren diyagram.](./media/type-relationships-in-linq-query-operations/linq-query-data-type-relation.png)  
   
-1. Veri kaynağının tür bağımsız değişkeni, Aralık değişkeninin türünü belirler.  
+1. Veri kaynağının tür bağımsız değişkeni aralık değişkeninin türünü belirler.  
   
-2. Seçilen nesnenin türü, sorgu değişkeninin türünü belirler. Burada `name` bir dizedir. Bu nedenle, sorgu değişkeni bir `IEnumerable<string>`.  
+2. Seçili nesnenin türü sorgu değişkeninin türünü belirler. İşte `name` bir ip. Bu nedenle, sorgu `IEnumerable<string>`değişkeni bir .  
   
-3. Sorgu değişkeni `foreach` bildiriminde tekrarlanıyor. Sorgu değişkeni bir dizeler dizisi olduğundan, yineleme değişkeni de bir dizedir.  
+3. Sorgu değişkeni `foreach` deyimde üzerinde yinelenir. Sorgu değişkeni bir dize dizisi olduğundan, yineleme değişkeni de bir dizedir.  
   
-## <a name="queries-that-transform-the-source-data"></a>Kaynak verileri dönüştüren sorgular  
- Aşağıdaki çizimde, verilerde basit bir dönüşüm gerçekleştiren [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] bir sorgu işlemi gösterilmektedir. Sorgu, girdi olarak `Customer` nesnelerden oluşan bir dizi alır ve yalnızca sonuç içinde `Name` özelliğini seçer. `Name` bir dize olduğundan, sorgu çıktı olarak bir dizi dize üretir.  
+## <a name="queries-that-transform-the-source-data"></a>Kaynak Verileri Dönüştüren Sorgular  
+ Aşağıdaki resimde, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] veriler üzerinde basit bir dönüşüm gerçekleştiren bir sorgu işlemi gösterilmektedir. Sorgu, giriş olarak `Customer` nesnelerin bir dizi alır ve `Name` sonuç yalnızca özelliği seçer. Bir `Name` dize olduğundan, sorgu çıktı olarak dizeleri bir dizi üretir.  
   
- ![Veri türünü dönüştüren bir sorgu gösteren diyagram.](./media/type-relationships-in-linq-query-operations/linq-query-transform-data-type.png)  
+ ![Veri türünü dönüştüren bir sorguyu gösteren diyagram.](./media/type-relationships-in-linq-query-operations/linq-query-transform-data-type.png)  
   
-1. Veri kaynağının tür bağımsız değişkeni, Aralık değişkeninin türünü belirler.  
+1. Veri kaynağının tür bağımsız değişkeni aralık değişkeninin türünü belirler.  
   
-2. `select` ifade, tüm `Customer` nesnesi yerine `Name` özelliğini döndürür. `Name` bir dize olduğundan, `custNameQuery` tür bağımsız değişkeni `Customer`değil `string`.  
+2. İfade, `select` nesnenin `Name` tamamı `Customer` yerine özelliği döndürür. Bir `Name` dize olduğundan, tür `custNameQuery` `string`bağımsız `Customer`değişkeni , değil.  
   
-3. `custNameQuery` bir dizeler dizisi olduğundan, `foreach` döngüsünün yineleme değişkeni de bir `string`olmalıdır.  
+3. Dizeleri bir dizi `custNameQuery` olduğundan, `foreach` döngü yineleme değişkeni de bir `string`.  
   
- Aşağıdaki çizimde biraz daha karmaşık bir dönüştürme gösterilmektedir. `select` ifade, özgün `Customer` nesnesinin yalnızca iki üyesini yakalayan bir anonim tür döndürür.  
+ Aşağıdaki resimde biraz daha karmaşık bir dönüşüm gösterilmektedir. İfade, `select` özgün `Customer` nesnenin yalnızca iki üyesini yakalayan anonim bir türü döndürür.  
   
  ![Veri türünü dönüştüren daha karmaşık bir sorgu gösteren diyagram.](./media/type-relationships-in-linq-query-operations/linq-complex-query-transform-data-type.png)  
   
 1. Veri kaynağının tür bağımsız değişkeni her zaman sorgudaki aralık değişkeninin türüdür.  
   
-2. `select` deyimleri anonim bir tür oluşturduğundan, sorgu değişkeni `var`kullanılarak örtük olarak yazılmalıdır.  
+2. İfade `select` anonim bir tür oluşturduğundan, sorgu değişkeni örtülü `var`olarak yazılmalıdır.  
   
-3. Sorgu değişkeninin türü örtük olduğundan, `foreach` döngüsünde yineleme değişkeni de örtük olmalıdır.  
+3. Sorgu değişkeninin türü örtülü olduğundan, döngüdeki yineleme `foreach` değişkeninin de örtülü olması gerekir.  
   
-## <a name="letting-the-compiler-infer-type-information"></a>Derleyicinin tür bilgilerini çıkarmalarına izin verme  
- Bir sorgu işlemindeki tür ilişkilerini anlamanız gerekse de, derleyicinin tüm işleri gerçekleştirmesini sağlamak için seçeneğiniz vardır. [Var](../../../language-reference/keywords/var.md) anahtar sözcüğü, bir sorgu işlemindeki herhangi bir yerel değişken için kullanılabilir. Aşağıdaki çizim, daha önce açıklanan örnek numarası 2 ' ye benzer. Ancak, derleyici sorgu işlemindeki her değişken için güçlü tür sağlar.  
+## <a name="letting-the-compiler-infer-type-information"></a>Derleyicinin tür bilgilerini çıkarmasını izin verme  
+ Bir sorgu işlemindeki tür ilişkilerini anlamanız gerekirken, derleyicinin tüm işi sizin için yapmasına izin verme seçeneğiniz vardır. [Var](../../../language-reference/keywords/var.md) anahtar sözcüğü, sorgu işlemindeki herhangi bir yerel değişken için kullanılabilir. Aşağıdaki çizim, daha önce tartışılan örnek 2'ye benzer. Ancak, derleyici sorgu işleminde her değişken için güçlü türü sağlar.  
   
- ![Türü örtük olarak yazılan tür akışını gösteren diyagram.](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
+ ![Örtük yazı ile tür akışını gösteren diyagram.](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
   
- `var`hakkında daha fazla bilgi için bkz. [örtülü olarak yazılan yerel değişkenler](../../classes-and-structs/implicitly-typed-local-variables.md).  
+ Hakkında `var`daha fazla bilgi için bkz: [Örtülü Olarak Yazılan Yerel Değişkenler.](../../classes-and-structs/implicitly-typed-local-variables.md)  

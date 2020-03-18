@@ -2,19 +2,19 @@
 title: Dize koleksiyonlarını birleştirme ve karşılaştırma (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 23089835e710a7905693f8e3e3b57173085d0694
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f73a31e109933a4b6dd0078934d89d3bb770de5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141421"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169460"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Dize koleksiyonlarını birleştirme ve karşılaştırma (LINQ) (C#)
-Bu örnekte, metin satırları içeren dosyaların nasıl birleştiriyapılacağı ve sonuçların nasıl sıralanacağını gösterilmektedir. Özellikle, iki metin satırı kümesinde basit bir birleştirme, birleşim ve bir kesişimin nasıl gerçekleştirileceğini gösterir.  
+Bu örnek, metin satırları içeren dosyaların nasıl birleştirilip sonra sonuçları nasıl sıralayabildiğini gösterir. Özellikle, basit bir birleştirme, birleşim ve iki metin satırı kümesi üzerinde bir kesişim nasıl gerçekleştirilip gerçekleştirilip gerçekleştirilmeye yöneliktir.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Projeyi ve metin dosyalarını ayarlamak için  
   
-1. Bu adları names1. txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin:  
+1. Bu adları names1.txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin:  
   
     ```text  
     Bankov, Peter  
@@ -29,7 +29,7 @@ Bu örnekte, metin satırları içeren dosyaların nasıl birleştiriyapılacağ
     Garcia, Debra  
     ```  
   
-2. Bu adları names2. txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin. İki dosyanın bazı adları yaygın olarak olduğunu unutmayın.  
+2. Bu adları names2.txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin. İki dosyanın bazı ortak adları olduğunu unutmayın.  
   
     ```text  
     Liu, Jinghao  
@@ -74,7 +74,7 @@ class MergeStrings
                 fileA.Intersect(fileB);  
             OutputQueryResults(commonNamesQuery, "Merge based on intersect:");  
   
-            // Find the matching fields in each list. Merge the two   
+            // Find the matching fields in each list. Merge the two
             // results by using Concat, and then  
             // sort using the default string comparer.  
             string nameMatch = "Garcia";  
@@ -169,9 +169,9 @@ class MergeStrings
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- System. C# lınq ve System.IO ad alanları için `using` yönergeler içeren bir konsol uygulaması projesi oluşturun.  
+ System.Linq ve System.IO `using` ad alanları için yönergeleri içeren bir C# konsolu uygulama projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (C#)](./linq-and-strings.md)
-- [LINQ ve dosya dizinleri (C#)](./linq-and-file-directories.md)
+- [LINQ ve Dizeleri (C#)](./linq-and-strings.md)
+- [LINQ ve Dosya Dizinleri (C#)](./linq-and-file-directories.md)

@@ -1,5 +1,6 @@
 ---
 title: Güvenlik ve Kullanıcı Girdisi
+description: Kodunuz, kullanıcı tarafından girilen verileri, güvenliği etkileyebilecek diğer kodlara parametre olarak geçirebilir. Sorunlu girişi reddetmek için aralık denetimi yapabilirsiniz.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,54 +9,54 @@ helpviewer_keywords:
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-ms.openlocfilehash: 0d34b06b44241feb7d6e3c8f76447b861563cfdc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: fa9f8d4708e928c51e446d8369c9b4556fc6fb77
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705866"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186101"
 ---
 # <a name="security-and-user-input"></a>Güvenlik ve Kullanıcı Girdisi
 
-Her türlü giriş (bir Web isteği veya URL 'deki veriler, bir Microsoft Windows Forms uygulamasının denetimlerine giriş vb.) olan Kullanıcı verileri, genellikle bu veriler diğer kodu çağırmak için parametre olarak doğrudan kullanıldığı için kodu olumsuz etkileyebilir. Bu durum, kodunuzu garip parametrelerle çağıran kötü amaçlı koda benzer ve aynı önlemler alınmalıdır. Potansiyel olarak güvenilmeyen verilerin varlığını izlemek için yığın çerçevesi bulunmadığından, Kullanıcı girişi gerçekten güvenli hale getirmek daha zordur.
+Her türlü girdi (Web isteği veya URL'den alınan veriler, Microsoft Windows Forms uygulamasının denetimlerine giriş vb.) kullanıcı verileri, genellikle bu veriler diğer kodları aramak için doğrudan parametre olarak kullanıldığından kodu olumsuz etkileyebilir. Bu durum, kodunuzu garip parametrelerle çağıran kötü amaçlı koda benzer ve aynı önlemler alınmalıdır. Kullanıcı girişinin güvenli olması aslında zordur, çünkü güvenilmeyen verilerin varlığını izlemek için yığın çerçevesi yoktur.
 
-Bunlar, güvenlikle ilgili olmayan bir kodda bulunabilseler de, güvenlikle ilgili olan ve diğer koda yönelik hatalı verileri geçirmeye yönelik bir ağ geçidinizin olan alt en uzun ve en yüksek güvenlik hatalarının arasındadır. Bu hataları aramak için, her türlü giriş verilerini izleyin, olası değerlerin aralığının ne olabileceğini düşünün ve bu verileri gördüğü kodun tüm bu durumları işleyebileceğini göz önünde bulundurun. Bu hataları Aralık denetleme ve kodun işleyemeyeceği herhangi bir girişi reddetme yoluyla çözebilirsiniz.
+Bunlar, güvenlikle ilgisi olmayan bir kodda bulunabilseler de, kötü verileri diğer kodlara aktarmak için bir ağ geçidi olduğundan, bulunması en ince ve en zor güvenlik hataları arasındadır. Bu hataları aramak için, her türlü giriş verilerini izleyin, olası değerlerin aralığının ne olabileceğini hayal edin ve bu verileri gören kodun tüm bu servis taleplerini işleyip işlemeyebileceğini düşünün. Bu hataları, kodun işleyemeyeceği herhangi bir girişi aralık denetimi ve reddederek düzeltebilirsiniz.
 
-Kullanıcı verileriyle ilgili bazı önemli noktalar şunlardır:
+Kullanıcı verilerini içeren bazı önemli hususlar şunlardır:
 
-- Sunucu yanıtındaki herhangi bir kullanıcı verisi, istemci üzerindeki sunucunun sitesi bağlamında çalışır. Web sunucunuz kullanıcı verilerini alıp döndürülen Web sayfasına eklediğinde, örneğin, bir **\<betik >** etiketi içerebilir ve sunucuda olduğu gibi çalıştırabilirsiniz.
+- Sunucu yanıtındaki tüm kullanıcı verileri istemcide sunucunun sitesi bağlamında çalışır. Web sunucunuz kullanıcı verilerini alıp döndürülen Web sayfasına eklerse, örneğin ** \<** bir komut dosyası>etiketi ekleyebilir ve sunucudan geliyormuş gibi çalıştırAbilir.
 
-- İstemcinin herhangi bir URL isteyeolabileceğini unutmayın.
+- İstemcinin herhangi bir URL isteyebileceğini unutmayın.
 
-- Karmaşık veya geçersiz yolları göz önünde bulundurun:
+- Zor veya geçersiz yolları göz önünde bulundurun:
 
-  - .. \, son derece uzun yollar.
+  - .. \ , son derece uzun yollar.
 
-  - Joker karakter (*) kullanın.
+  - Joker karakter kullanımı (*).
 
-  - Belirteç genişletmesi (% token%).
+  - Belirteç genişlemesi (%token%).
 
-  - Özel anlamlara sahip garip yol biçimleri.
+  - Özel anlamı olan yolların garip formları.
 
-  - `filename::$DATA`gibi alternatif dosya sistemi akış adları.
+  - Alternatif dosya sistemi akışı `filename::$DATA`adları gibi .
 
-  - `longfilename`için `longfi~1` gibi dosya adlarının kısa sürümleri.
+  - için `longfi~1` `longfilename`gibi dosya adlarının kısa sürümleri.
 
-- Eval (UserData) her şeyi yapabildiği unutulmamalıdır.
+- Eval'in (userdata) her şeyi yapabileceğini unutmayın.
 
-- Bazı Kullanıcı verilerini içeren bir ada geç bağlama konusunda dikkatli olun.
+- Bazı kullanıcı verilerini içeren bir ada geç bağlanmakonusunda dikkatli olun.
 
-- Web verileriyle uğraşıyorsanız, aşağıdakiler de dahil olmak üzere, izin verilen çeşitli kaçış biçimlerini göz önünde bulundurun:
+- Web verileriyle ilgileniyorsanız, aşağıdakiler de dahil olmak üzere izin verilen çeşitli kaçış biçimlerini göz önünde bulundurun:
 
-  - Onaltılı kaçış (% nn).
+  - Hexadecimal kaçışlar (%nn).
 
-  - Unicode kaçış (% nnn).
+  - Unicode kaçar (%nnn).
 
-  - Fazla uzun UTF-8 kaçış (% nn% nn).
+  - Overlong UTF-8 kaçar (%nn%nn).
 
-  - Çift kaçış (% nn,% mm '% ' için kaçış olduğu için% mmnn olur).
+  - Çift kaçış (%nn %mmnn olur, %mm '%') için kaçış olur.
 
-- Birden fazla kurallı biçimi olabilecek kullanıcı adlarına karşı dikkatli olun. Örneğin, çoğunlukla ETKIALANıM\\*Kullanıcı adı* formunu veya *Kullanıcı adı*@mydomain.example.com formunu kullanabilirsiniz.
+- Birden fazla kanonik biçimi olabilecek kullanıcı adlarıyla dikkatli olun. Örneğin,\\mydomain*kullanıcı adı* formunu veya kullanıcı *adı* @mydomain.example.com formunu sık sık kullanabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

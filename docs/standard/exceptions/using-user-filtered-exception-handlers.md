@@ -7,19 +7,19 @@ helpviewer_keywords:
 - exceptions, user-filtered
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
 ms.openlocfilehash: 5537404178b746310f720c5b0c075c77287dda4c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708459"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>Kullanıcı Tarafından Filtrelenmiş Özel Durum İşleyicilerini Kullanma
 
-Şu anda Visual Basic Kullanıcı tarafından filtrelenen özel durumları destekler. Kullanıcı filtrelenmiş özel durum işleyicileri özel durum için tanımladığınız gereksinimlere göre özel durumları yakalar ve işler. Bu işleyiciler **catch** **ifadesini as anahtar** sözcüğüyle birlikte kullanır.  
+Şu anda Visual Basic, kullanıcı tarafından filtre uygulanmış özel durumları destekler. Kullanıcı tarafından filtre uygulanmış özel durum işleyicileri, özel durum için tanımladığınız gereksinimlere göre özel durumları yakalar ve işler. Bu işleyiciler Catch **deyimini** **When** anahtar sözcüğüyle birlikte kullanır.  
   
- Bu teknik, belirli bir özel durum nesnesi birden çok hataya karşılık geldiğinde yararlıdır. Bu durumda, nesnesi genellikle hatayla ilişkili özel hata kodunu içeren bir özelliğe sahiptir. Bu **catch** yan tümcesinde işlemek istediğiniz belirli bir hatayı seçmek için ifadesindeki hata kodu özelliğini kullanabilirsiniz.  
+ Bu teknik, belirli bir özel durum nesnesi birden çok hataya karşılık geldiğinde yararlıdır. Bu durumda, nesne genellikle hata ile ilişkili belirli hata kodu içeren bir özelliği vardır. İfadedeki hata kodu özelliğini yalnızca bu **Catch** yan tümcesinde işlemek istediğiniz belirli hatayı seçmek için kullanabilirsiniz.  
   
- Aşağıdaki Visual Basic örnek, **catch/** while ifadesini gösterir.  
+ Aşağıdaki Visual Basic örneği **Catch/When** deyimini göstermektedir.  
   
 ```vb
 Try  
@@ -29,12 +29,12 @@ Try
 End Try  
 ```  
   
- Kullanıcı filtrelenmiş yan tümcesinin ifadesi herhangi bir şekilde kısıtlanmaz. Kullanıcı tarafından filtrelenen ifadenin yürütülmesi sırasında bir özel durum oluşursa, bu özel durum atılır ve filtre ifadesi yanlış olarak değerlendirilir. Bu durumda, ortak dil çalışma zamanı, geçerli özel durum için bir işleyici aramaya devam eder.  
+ Kullanıcı tarafından filtre uygulanmış yan tümcenin ifadesi hiçbir şekilde kısıtlanmaz. Kullanıcı tarafından filtre uygulanan ifadenin yürütülmesi sırasında bir özel durum oluşursa, bu özel durum atılır ve filtre ifadesi yanlış olarak değerlendirilmiş olarak kabul edilir. Bu durumda, ortak dil çalışma zamanı geçerli özel durum için bir işleyici aramaya devam ediyor.  
   
-## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a>Belirli özel durumu ve kullanıcı filtrelenmiş tümceleri birleştirme  
- Catch ifadesinde hem belirli özel durum hem de Kullanıcı tarafından filtrelenmiş yan tümceler bulunabilir. Çalışma zamanı, önce belirli özel durumu sınar. Belirli özel durum başarılı olursa, çalışma zamanı Kullanıcı filtresini yürütür. Genel filtre, sınıf filtresinde belirtilen değişkene bir başvuru içerebilir. İki filtre yan tümcelerinin sırasının geri çevrilmeyeceğini unutmayın.  
+## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a>Özel Özel Durum ve Kullanıcı Filtreuygulanan Yan Tümceleri Birleştirme  
+ Catch deyimi hem özel özel durum hem de kullanıcı tarafından filtre uygulanmış yan tümceleri içerebilir. Çalışma zamanı önce belirli özel durumu sınar. Belirli bir özel durum başarılı olursa, çalışma zamanı kullanıcı filtresini yürütür. Genel filtre, sınıf filtresinde bildirilen değişkene bir başvuru içerebilir. İki filtre yan tümcesinin sırasının geri alınamayacağını unutmayın.  
   
- Aşağıdaki Visual Basic örnekte, **catch** deyimindeki özel durum **`ClassLoadException` ve WHERE anahtar sözcüğü** kullanılarak kullanıcı filtrelenmiş yan tümce gösterilmektedir.  
+ Aşağıdaki Visual Basic örneği, `ClassLoadException` **Catch** deyimindeki özel özel durumu ve **Zaman** anahtar sözcük lerini kullanarak kullanıcı tarafından filtre uygulanmış yan tümcesini gösterir.  
   
 ```vb
 Try  
@@ -46,4 +46,4 @@ End Try
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özel Durumlar](index.md)
+- [Özel durumlar](index.md)

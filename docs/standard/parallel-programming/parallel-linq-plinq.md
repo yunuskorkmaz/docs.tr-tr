@@ -6,16 +6,16 @@ helpviewer_keywords:
 - PLINQ, overview
 ms.assetid: 3d4d0cd3-bde4-490b-99e7-f4e41be96455
 ms.openlocfilehash: 1ea880c6403a5fc8b26ba67fe21dfce79c4683db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140044"
 ---
 # <a name="parallel-linq-plinq"></a>Paralel LINQ (PLINQ)
-Paralel LINQ (PLıNQ) LINQ to Objects paralel uygulamasıdır. PLıNQ, <xref:System.Linq> ad alanı için uzantı yöntemleri olarak LINQ standart sorgu işleçlerinin tam kümesini uygular ve paralel işlemler için ek işleçlere sahiptir. PLıNQ, LINQ sözdiziminin basitliğini ve okunabilirliğini paralel programlama gücüyle birleştirir. Görev paralel kitaplığını hedefleyen kod gibi, PLıNQ sorguları, ana bilgisayarın özelliklerine göre eşzamanlılık derecesindeki ölçeği de ölçeklendirir.  
+Paralel LINQ (PLINQ), LINQ'nin Nesnelere paralel bir uygulamasıdır. PLINQ, ad alanı için uzantı yöntemleri olarak LINQ standart sorgu işleçlerinin tam kümesini <xref:System.Linq> uygular ve paralel işlemler için ek işleçlere sahiptir. PLINQ, LINQ sözdiziminin basitliğini ve okunabilirliğini paralel programlamanın gücüyle birleştirir. Görev Paralel Kitaplığı hedefleyen kod gibi, PLINQ sorguları da ana bilgisayarın özelliklerine göre eşzamanlılık derecesine göre ölçeklenir.  
   
- Birçok senaryoda PLıNQ, ana bilgisayardaki tüm kullanılabilir çekirdekleri daha verimli bir şekilde kullanarak LINQ to Objects sorgularının hızını önemli ölçüde artırabilir. Bu artış performansı, masaüstü üzerinde yüksek performanslı bilgi işlem gücü sağlar.  
+ Birçok senaryoda PLINQ, ana bilgisayardaki tüm kullanılabilir çekirdekleri daha verimli kullanarak LINQ'nin Nesnelersorgularına hızını önemli ölçüde artırabilir. Bu artan performans, masaüstüne yüksek performanslı bilgi işlem gücü getirir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [PLINQ'e Giriş](../../../docs/standard/parallel-programming/introduction-to-plinq.md)  
@@ -52,5 +52,5 @@ Paralel LINQ (PLıNQ) LINQ to Objects paralel uygulamasıdır. PLıNQ, <xref:Sys
 
 - <xref:System.Linq.ParallelEnumerable>
 - [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)
-- [Dil ile tümleşik sorgu (LINQ)-C#](../../csharp/programming-guide/concepts/linq/index.md)  
-- [Dil ile tümleşik sorgu (LINQ)-Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)  
+- [Dil-Entegre Sorgu (LINQ) - C #](../../csharp/programming-guide/concepts/linq/index.md)  
+- [Dil-Entegre Sorgu (LINQ) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)  

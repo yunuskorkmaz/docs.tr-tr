@@ -9,25 +9,25 @@ helpviewer_keywords:
 - cancellation, how to register callbacks
 ms.assetid: 8838dd75-18ed-4b8b-b322-cd4531faac64
 ms.openlocfilehash: 87ba1ab9ac095c733a53f766d00ebb7530a8d9c4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73137993"
 ---
 # <a name="how-to-register-callbacks-for-cancellation-requests"></a>Nasıl Yapılır: İptal İstekleri için Geri Çağırmaları Kaydetme
-Aşağıdaki örnek, belirteci oluşturan nesnedeki bir <xref:System.Threading.CancellationTokenSource.Cancel%2A> çağrısı nedeniyle <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> özelliği true olduğunda çağrılacak bir temsilcinin nasıl kaydedileceği gösterilmektedir. Birleşik iptal çerçevesini yerel olarak desteklemeyen zaman uyumsuz işlemleri iptal etmek ve zaman uyumsuz bir işlemin tamamlanmasını bekleyen yöntemlerin engellenmesini kaldırma için bu tekniği kullanın.  
+Aşağıdaki örnek, belirteci oluşturan nesneye <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> <xref:System.Threading.CancellationTokenSource.Cancel%2A> yapılan çağrı nedeniyle bir özellik gerçek olduğunda çağrılacak bir temsilcinin nasıl kaydedilemeyeceğini gösterir. Birleşik iptal çerçevesini yerel olarak desteklemeyen eşzamanlı işlemleri iptal etmek ve eşzamanlı işlemin tamamlanmasını bekleyen yöntemleri kaldırmak için bu tekniği kullanın.  
   
 > [!NOTE]
-> "Yalnızca kendi kodum" etkinleştirildiğinde, bazı durumlarda Visual Studio özel durumu oluşturan satıra kesilir ve "özel durum Kullanıcı kodu tarafından işlenmiyor" yazan bir hata mesajı görüntüler. Bu hata zararsız. F5 tuşuna basarak bu uygulamadan devam edebilir ve aşağıdaki örneklerde gösterilen özel durum işleme davranışına bakabilirsiniz. Visual Studio 'Nun ilk hatada kesilmesini engellemek için **Araçlar, Seçenekler, hata ayıklama, genel**altında "yalnızca kendi kodum" onay kutusunun işaretini kaldırmanız yeterlidir.  
+> "Yalnızca Kodum" etkinleştirildiğinde, bazı durumlarda Visual Studio özel durumu oluşturan satırda kırılır ve "kullanıcı kodu tarafından işlenmemiş özel durum" yazan bir hata iletisi görüntüler. Bu hata iyi huylu. Devam etmek için F5 tuşuna basabilir ve aşağıdaki örneklerde gösterilen özel durum işleme davranışını görebilirsiniz. Visual Studio'nun ilk hatayı kırmasını önlemek **için, Araçlar, Seçenekler, Hata Ayıklama, Genel**altında "Sadece Kodum" onay kutusunun işaretlerini kaldırın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, <xref:System.Net.WebClient.CancelAsync%2A> yöntemi iptal belirteci aracılığıyla iptal istendiğinde çağrılacak yöntem olarak kaydedilir.  
+ Aşağıdaki örnekte, <xref:System.Net.WebClient.CancelAsync%2A> iptal belirteci aracılığıyla iptal istendiğinde çağrılacak yöntem olarak yöntem kaydedilir.  
   
  [!code-csharp[Conceptual.Cancellation.Callback#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.cancellation.callback/cs/howtoexample1.cs#1)]
  [!code-vb[Conceptual.Cancellation.Callback#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.cancellation.callback/vb/howtoexample1.vb#1)]  
   
- Geri çağırma kaydedildiğinde iptal işlemi zaten isteniyorsa, geri aramanın çağrılması garanti edilir. Bu durumda, zaman uyumsuz bir işlem devam ederken <xref:System.Net.WebClient.CancelAsync%2A> yöntemi hiçbir şey yapmaz, bu nedenle yöntemi çağırmak her zaman güvenlidir.  
+ Geri arama kaydedildiğinde iptal isteminde bulunulmuşsa, geri aramanın çağrılması garanti edilir. Bu özel durumda, <xref:System.Net.WebClient.CancelAsync%2A> hiçbir eşzamanlı işlem devam ediyorsa yöntem hiçbir şey yapmaz, bu nedenle yöntemi aramak her zaman güvenlidir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

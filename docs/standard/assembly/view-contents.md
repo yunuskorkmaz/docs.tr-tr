@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: derleme içeriğini görüntüleme'
+title: 'Nasıl yapılı: Derleme içeriğini görüntüleme'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, viewing information
@@ -14,28 +14,28 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 72b02209d74b6b183af6c11d9bd037889ea08543
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 179b240bb06a319ff71009e14323d5c8f2740e5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347053"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187382"
 ---
-# <a name="how-to-view-assembly-contents"></a>Nasıl yapılır: derleme içeriğini görüntüleme
+# <a name="how-to-view-assembly-contents"></a>Nasıl yapılı: Derleme içeriğini görüntüleme
 
-Bir dosyadaki Microsoft ara dili (MSIL) bilgilerini görüntülemek için [ıldadsm. exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) kullanabilirsiniz. İncelenen dosya bir derlemedir, bu bilgiler derlemenin özniteliklerini ve diğer modüller ve derlemelere yönelik başvuruları içerebilir. Bu bilgiler, bir dosyanın derleme veya bir derlemenin parçası olup olmadığını ve dosyanın diğer modüllere veya derlemelere başvurular içerip içermediğini belirlemede yardımcı olabilir.
+Bir dosyada Microsoft ara dili (MSIL) bilgilerini görüntülemek için [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) kullanabilirsiniz. İncelenen dosya bir derleme ise, bu bilgiler derlemenin özniteliklerini ve diğer modüllere ve derlemelere yapılan başvuruları içerebilir. Bu bilgiler, bir dosyanın derleme mi yoksa derlemenin bir parçası mı olduğunu ve dosyanın diğer modüllere veya derlemelere başvurup göndermeler göndermediğini belirlemede yararlı olabilir.
 
-*Ildadsm. exe*' yi kullanarak bir derlemenin içeriğini göstermek için, komut istemine **ıldadsm \<bütünleştirilmiş kod adı >** girin. Örneğin, aşağıdaki komut *Hello. exe* derlemesini ayrıştırır.
+*Ildasm.exe*kullanarak bir derlemenin içeriğini görüntülemek için komut istemine **ildasm \<derleme adı>** girin. Örneğin, aşağıdaki komut *Hello.exe* derlemesini söker.
 
 ```cmd
 ildasm Hello.exe
 ```
 
-Derleme bildirimi bilgilerini görüntülemek için MSIL ayrıştırma penceresindeki **bildirim** simgesine çift tıklayın.
+Derleme bildirimi bilgilerini görüntülemek için, MSIL Sökme penceresindeki **Manifest** simgesini çift tıklatın.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, temel bir "Merhaba Dünya" programıyla başlar. Program derlendikten sonra, *Hello. exe* derlemesini ve derleme bildirimini görüntülemek Için *ıldadsm. exe* ' yi kullanın.
+Aşağıdaki örnek temel bir "Hello World" programı ile başlar. Programı derledikten *sonra, Hello.exe* derlemesini sökmek ve derleme bildirimini görüntülemek için *Ildasm.exe'yi* kullanın.
 
 ```cpp
 using namespace System;
@@ -75,7 +75,7 @@ Class MainApp
 End Class
 ```
 
-*Hello. exe* derlemesinde *ıldadsm. exe* komutunu çalıştırmak ve MSIL ayrıştırma penceresindeki **bildirim** simgesine çift tıklamak aşağıdaki çıktıyı üretir:
+*Hello.exe* derlemesinde *ildasm.exe* komutunu çalıştırmak ve MSIL Desassembler **penceresindeki Manifest** simgesine çift tıklayarak aşağıdaki çıktıyı üretir:
 
 ```output
 // Metadata version: v4.0.30319
@@ -102,27 +102,27 @@ End Class
 // Image base: 0x00600000
 ```
 
-Aşağıdaki tabloda, örnekte kullanılan *Hello. exe* derlemesinin derleme bildirimindeki her yönerge açıklanmaktadır:
+Aşağıdaki tabloda, örnekte kullanılan *Hello.exe* derlemesinin derleme bildirimindeki her bir yönerge açıklanmaktadır:
 
 |Yönergesi|Açıklama|
 |---------------|-----------------|
-|**. Assembly extern \<bütünleştirilmiş kod adı >**|Geçerli modülün başvurduğu öğeleri içeren başka bir derlemeyi belirtir (Bu örnekte, `mscorlib`).|
-|**. PublicKeyToken \<belirteci >**|Başvurulan derlemenin gerçek anahtarının belirtecini belirtir.|
-|**. ver \<sürüm numarası >**|Başvurulan derlemenin sürüm numarasını belirtir.|
-|**. Assembly \<bütünleştirilmiş kod adı >**|Derleme adını belirtir.|
-|**. Hash algoritması \<Int32 değeri >**|Kullanılan karma algoritmasını belirtir.|
-|**. ver \<sürüm numarası >**|Derlemenin sürüm numarasını belirtir.|
-|**. Module \<dosya adı >**|Derlemeyi oluşturan modüllerin adını belirtir. Bu örnekte, derleme yalnızca bir dosyadan oluşur.|
-|**. Subsystem \<değeri >**|Program için gereken uygulama ortamını belirtir. Bu örnekte, 3 değeri bu yürütülebilir dosyanın bir konsolundan çalıştırıldığını gösterir.|
-|**. CorFlags**|Şu anda meta verilerde ayrılmış bir alan.|
+|**.assembly extern \<montaj adı>**|Geçerli modül tarafından başvurulan öğeleri içeren başka bir derleme `mscorlib`belirtir (bu örnekte).|
+|**.publickeytoken \<belirteci>**|Başvurulan derlemenin gerçek anahtarının belirteci.|
+|**.ver \<sürüm numarası>**|Başvurulan derlemenin sürüm numarasını belirtir.|
+|**.montaj \<montaj adı>**|Derleme adını belirtir.|
+|**.hash \<algoritmainin int32 değeri>**|Kullanılan karma algoritmayı belirtir.|
+|**.ver \<sürüm numarası>**|Derlemenin sürüm numarasını belirtir.|
+|**.module \<dosya adı>**|Montajı oluşturan modüllerin adını belirtir. Bu örnekte, derleme yalnızca bir dosyadan oluşur.|
+|**.alt \<sistem değeri>**|Program için gerekli olan uygulama ortamını belirtir. Bu örnekte, 3 değeri bu yürütülebilir bir konsoldan çalıştırılır gösterir.|
+|**.corflags**|Şu anda meta verilerde ayrılmış bir alan.|
 
-Bütünleştirilmiş kod bildirimi, derlemenin içeriğine bağlı olarak bir dizi farklı yönergeler içerebilir. Derleme bildirimindeki yönergelerin kapsamlı bir listesi için, bkz. ECMA belgeleri, özellikle "Bölüm II: meta veri tanımı ve semantiği" ve "Bölüm III: CıL yönerge kümesi":
+Derleme bildirimi, derlemenin içeriğine bağlı olarak bir dizi farklı yönerge içerebilir. Derleme bildirimindeki yönergelerin kapsamlı bir listesi için, ecma belgelerine, özellikle "Bölüm II: Meta veri tanımı ve anlam bilimi" ve "Bölüm III: CIL Yönerge Seti"ne bakın:
 
-- [ECMA C# ve ortak dil altyapısı standartları](/dotnet/standard/components#applicable-standards)
-- [Standart ECMA-335-ortak dil altyapısı (CLı)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)
+- [ECMA C# ve Ortak Dil Altyapı standartları](../components.md#applicable-standards)
+- [Standart ECMA-335 - Ortak Dil Altyapısı (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uygulama etki alanları ve derlemeler](../../framework/app-domains/application-domains.md#application-domains-and-assemblies)
-- [Uygulama etki alanları ve derlemeler ile ilgili nasıl yapılır konuları](../../framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
+- [Uygulama Etki Alanları ve derlemeler](../../framework/app-domains/application-domains.md#application-domains-and-assemblies)
+- [Uygulama etki alanları ve derlemeler nasıl konu edilir](../../framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
 - [Ildasm.exe (IL Ayrıştırıcı)](../../framework/tools/ildasm-exe-il-disassembler.md)

@@ -1,6 +1,6 @@
 ---
-title: LINQ (dil ile tümleşik sorgu)
-description: LINQ 'in C# nasıl dil düzeyi sorgulama özellikleri ve bir API sağladığını ve Visual Basic ifade, bildirime dayalı kod yazma yöntemi olarak nasıl sağladığını öğrenin.
+title: LINQ (Dil Tümleşik Sorgu)
+description: LINQ'un anlamlı, bildirimsel kod yazmanın bir yolu olarak c# ve Visual Basic'e dil düzeyinde sorgulama özelliklerini ve API'yi nasıl sağladığını öğrenin.
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -10,19 +10,19 @@ dev_langs:
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
 ms.openlocfilehash: eafd8f78c3d8de1ba064021111f869571d5a570f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160332"
 ---
-# <a name="linq-language-integrated-query"></a>LINQ (dil ile tümleşik sorgu)
+# <a name="linq-language-integrated-query"></a>LINQ (Dil Tümleşik Sorgu)
 
-## <a name="what-is-it"></a>Nedir?
+## <a name="what-is-it"></a>Bu nedir?
 
-LINQ, dil düzeyinde sorgulama özellikleri ve [daha yüksek sıralı bir işlev](https://en.wikipedia.org/wiki/Higher-order_function) API 'si sağlar C# ve ifade, bildirime dayalı kod yazmak için bir yol Visual Basic.
+LINQ, anlamlı, bildirimsel kod yazmanın bir yolu olarak C# ve Visual Basic'e dil düzeyinde sorgulama yetenekleri ve [daha yüksek sıralı bir işlev](https://en.wikipedia.org/wiki/Higher-order_function) API'si sağlar.
 
-Dil düzeyi sorgu sözdizimi:
+Dil düzeyinde sorgu sözdizimi:
 
 ```csharp
 var linqExperts = from p in programmers
@@ -36,7 +36,7 @@ Dim linqExperts = From p in programmers
                   Select New LINQExpert(p)
 ```
 
-`IEnumerable<T>` API 'SI ile aynı örnek:
+`IEnumerable<T>` API kullanarak aynı örnek:
 
 ```csharp
 var linqExperts = programmers.Where(p => p.IsNewToLINQ)
@@ -48,11 +48,11 @@ Dim linqExperts = programmers.Where(Function(p) p.IsNewToLINQ).
                              Select(Function(p) New LINQExpert(p))
 ```
 
-## <a name="linq-is-expressive"></a>LINQ, Ifade
+## <a name="linq-is-expressive"></a>LINQ Etkileyicidir
 
-Evcil hayvan listenizin bir listesini olduğunu düşünün, ancak onu `RFID` değerine göre doğrudan bir evcil hayvan 'ye erişebileceğiniz bir sözlüğe dönüştürmek istiyorsunuz.
+Evcil hayvan bir liste var düşünün, ama doğrudan değeri bir `RFID` evcil hayvan erişebilirsiniz bir sözlük haline dönüştürmek istiyorum.
 
-Geleneksel kesinlik kodu:
+Geleneksel zorunlu kod:
 
 ```csharp
 var petLookup = new Dictionary<int, Pet>();
@@ -71,9 +71,9 @@ For Each pet in pets
 Next
 ```
 
-Kodun arkasındaki amaç yeni bir `Dictionary<int, Pet>` oluşturup bir döngü aracılığıyla buna eklemektir, var olan bir listeyi bir sözlüğe dönüştürmektir! LINQ, zorunlu kod değil, amaç korur.
+Kodun arkasındaki amaç yeni `Dictionary<int, Pet>` bir oluşturmak ve bir döngü üzerinden eklemek değil, bir sözlük içine mevcut bir liste dönüştürmek için! LINQ amacı nı korurken, zorunlu kod korumaz.
 
-Denk LINQ ifadesi:
+Eşdeğer LINQ ifadesi:
 
 ```csharp
 var petLookup = pets.ToDictionary(pet => pet.RFID);
@@ -83,13 +83,13 @@ var petLookup = pets.ToDictionary(pet => pet.RFID);
 Dim petLookup = pets.ToDictionary(Function(pet) pet.RFID)
 ```
 
-LINQ kullanan kod, bir programcı olarak düşünmekte olan amaç ve kod arasında oynatma alanı olduğunu iddia ettiğinden değerlidir. Başka bir ödül kod örneği. Yukarıdaki kod temelinin büyük bölümlerini, yukarıdaki 1/3 göre azaltmayı düşünün. Harika bir anlaşma, doğru mu?
+LINQ'yi kullanan kod değerlidir, çünkü programcı olarak muhakeme yaparken amaç ve kod arasındaki oyun alanını eşitler. Başka bir bonus kod kısalığı olduğunu. Yukarıda yapıldığı gibi bir kod tabanının büyük bölümlerini 1/3 azalttığınızı düşünün. Çok hoş bir anlaşma, değil mi?
 
-## <a name="linq-providers-simplify-data-access"></a>LINQ sağlayıcıları veri erişimini basitleştirir
+## <a name="linq-providers-simplify-data-access"></a>LINQ Sağlayıcıları Veri Erişimini Basitleştirir
 
-Joker karakter üzerinde önemli bir yazılım yığını için, her şey bir kaynaktaki (veritabanları, JSON, XML, vb.) verilerle ilgilenir. Genellikle bu, sinir bozucu olabilecek her bir veri kaynağı için yeni bir API öğrenmesini içerir. LINQ, veri erişiminin ortak öğelerinin, hangi veri kaynağını kullandığınıza bağımsız olarak aynı olduğunu gösteren bir sorgu söz dizimine soyutlayarak bunu basitleştirir.
+Vahşi yazılım önemli bir yığın için, her şey bazı kaynak (Veritabanları, JSON, XML, vb) verileri ile ilgili etrafında döner. Genellikle bu rahatsız edici olabilir her veri kaynağı için yeni bir API öğrenme içerir. LINQ, hangi veri kaynağını seçerseniz seçin aynı görünen bir sorgu sözdizimine ortak veri erişimi öğelerini soyutlayarak bunu basitleştirir.
 
-Aşağıdakileri göz önünde bulundurun: belirli bir öznitelik değeri ile tüm XML öğelerini bulma.
+Aşağıdakileri göz önünde bulundurun: belirli bir öznitelik değeri olan tüm XML öğelerini bulma.
 
 ```csharp
 public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement documentRoot, string elementName,
@@ -111,13 +111,13 @@ End Function
 
 ```
 
-Bu görevi gerçekleştirmek için XML belgesine el ile çapraz geçiş yapmak üzere kod yazmak çok daha zor olabilir.
+Bu görevi gerçekleştirmek için XML belgesini el ile geçmek için kod yazmak çok daha zor olacaktır.
 
-XML ile etkileşim kurmak, LINQ sağlayıcılarıyla yapabileceğiniz tek şey değildir. [LINQ to SQL](../../docs/framework/data/adonet/sql/linq/index.md) , bir MSSQL sunucu veritabanı için oldukça basit bir nesne Ilişkisel eşleyicisidir (ORM). [JSON.net](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) KITAPLıĞı, LINQ aracılığıyla verimli JSON belge geçişi sağlar. Ayrıca, gerek duyduğunuz şeyi belirleyen bir kitaplık yoksa [kendı LINQ sağlayıcınızı de yazabilirsiniz](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))!
+XML ile etkileşim LINQ Sağlayıcıları ile yapabileceğiniz tek şey değildir. [Linq to SQL,](../../docs/framework/data/adonet/sql/linq/index.md) MSSQL Server Veritabanı için oldukça çıplak bir Nesne-İlişkisel Mapper (ORM) dir. [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) kitaplığı LINQ üzerinden verimli JSON Belge geçiş sağlar. Ayrıca, ihtiyacınız olanı yapan bir kütüphane yoksa, [kendi LINQ Sağlayıcınızı](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))da yazabilirsiniz!
 
-## <a name="why-use-the-query-syntax"></a>Sorgu söz dizimini neden kullanmalısınız?
+## <a name="why-use-the-query-syntax"></a>Sorgu Sözdizimini Neden Kullanıyor?
 
-Bu, genellikle gelen bir sorudır. Tümü, bu,
+Bu sık sık gündeme gelen bir sorudur. Ne de olsa, bu,
 
 ```csharp
 var filteredItems = myItems.Where(item => item.Foo);
@@ -127,7 +127,7 @@ var filteredItems = myItems.Where(item => item.Foo);
 Dim filteredItems = myItems.Where(Function(item) item.Foo)
 ```
 
-Bundan çok daha kısa.
+bundan çok daha kısa:
 
 ```csharp
 var filteredItems = from item in myItems
@@ -141,31 +141,31 @@ Dim filteredItems = From item In myItems
                     Select item
 ```
 
-Sorgu söz dizimini yapmak için API sözdizimi yalnızca daha kısa bir yol değil mi?
+API sözdizimi sorgu sözdizimini yapmak için daha kısa bir yol değil mi?
 
-Hayır. Sorgu söz dizimi, ifadenin sonraki parçalarında kullanarak bir değişkeni ifade kapsamındaki bir değişken oluşturmanıza ve bağlamanıza imkan tanıyan **Let** yan tümcesinin kullanılmasına izin verir. Aynı kodun yalnızca API söz dizimi ile tekrar oluşturulması gerçekleştirilebilir, ancak büyük olasılıkla okunması zor olan koda neden olur.
+Hayır. Sorgu sözdizimi, ifadenin sonraki parçalarında kullanarak ifade kapsamında bir değişken ikleyen ve bağlamanızı sağlayan **let** yan tümcesinin kullanılmasına olanak tanır. Yalnızca API sözdizimi ile aynı kodu çoğaltma yapılabilir, ancak büyük olasılıkla okunması zor koda yol açacaktır.
 
-Bu nedenle, bu soruyu **yalnızca sorgu söz dizimini kullanmanız gerekir mi?**
+Yani bu şu soruyu akla getiriyor, **sadece sorgu sözdizimini mi kullanmalısınız?**
 
-Bu sorunun yanıtı **Evet** ...
+Bu sorunun cevabı **evet** eğer ...
 
-* Mevcut kod tabanınız zaten sorgu sözdizimini kullanıyor
-* Karmaşıklık nedeniyle Sorgularınızdaki değişkenlerin kapsamını belirlemeniz gerekir
-* Sorgu söz dizimini tercih edersiniz ve kod tabanınızdan yok olmayacaktır
+* Varolan kod tabanınız sorgu sözdizimini zaten kullanır
+* Karmaşıklık nedeniyle sorgularınızdaki değişkenleri kapsamanız gerekir
+* Sorgu sözdizimini tercih ederseniz, kod tabanınızdan dikkatini dağıtmaz
 
-Bu sorunun **yanıtı şu şekilde değildir.** ..
+Bu sorunun cevabı **hayır** eğer ...
 
-* Mevcut kod tabanınız API sözdizimini zaten kullanıyor
-* Sorgularınızdaki değişkenleri kapsama gerek yok
-* API söz dizimini tercih edersiniz ve kod tabanınızdan yok sayılmaz
+* Varolan kod tabanınız api sözdizimini zaten kullanır
+* Sorgularınızda değişkenleri kapsamanız gerekmez
+* API sözdizimini tercih ederseniz, kod tabanınızın dikkatini dağıtmaz
 
-## <a name="essential-samples"></a>Temel örnekler
+## <a name="essential-samples"></a>Temel Örnekler
 
-LINQ örneklerinin gerçekten kapsamlı bir listesi için, [101 LINQ örnekleri](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)' ni ziyaret edin.
+LINQ örneklerinin gerçekten kapsamlı bir listesi için [101 LINQ Örneği'ni](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)ziyaret edin.
 
-Aşağıda, LINQ 'ın bazı temel parçaları için hızlı bir gösterim verilmiştir. Bu, LINQ olarak daha fazla işlevsellik sağladığından, bu kapsamda önemli değildir.
+Aşağıda LINQ'nun bazı temel parçalarının hızlı bir gösterimi yer almaktadır. LINQ burada sergilenenden çok daha fazla işlevsellik sağladığından, bu hiçbir şekilde kapsamlı değildir.
 
-* İçerik-`Where`, `Select`ve `Aggregate`:
+* Ekmek ve tereyağı `Where` `Select`- `Aggregate`, , ve:
 
 ```csharp
 // Filtering a list.
@@ -209,7 +209,7 @@ Dim seed As Integer = 0
 Dim sumOfStrings As Integer = strings.Aggregate(seed, Function(s1, s2) s1.Length + s2.Length)
 ```
 
-* Liste listesini düzleştirme:
+* Listelerin listesini düzleştirmek:
 
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
@@ -221,7 +221,7 @@ var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 Dim allDogsFromKennels = kennels.SelectMany(Function(kennel) kennel.Dogs)
 ```
 
-* İki küme arasında birleşim (özel karşılaştırıcısı ile):
+* İki küme arasındaki birlik (özel karşılaştırıcı ile):
 
 ```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
@@ -282,7 +282,7 @@ End Class
 Dim allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, New DogHairLengthComparer())
 ```
 
-* İki küme arasında kesişim:
+* İki küme arasındaki kesişme:
 
 ```csharp
 // Gets the volunteers who spend share time with two humane societies.
@@ -296,7 +296,7 @@ Dim volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      New VolunteerTimeComparer())
 ```
 
-* Sıralama
+* Sipariş:
 
 ```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
@@ -312,7 +312,7 @@ Dim results = DirectionsProcessor.GetDirections(start, end).
                 ThenBy(Function(direction) direction.EstimatedTime)
 ```
 
-* Son olarak, daha gelişmiş bir örnek: aynı türde iki örneğin özelliklerinin değerlerinin eşit olup olmadığını belirleme (ödünç alınan ve [Bu StackOverflow Post](https://stackoverflow.com/a/844855)'tan değiştirilmiş):
+* Son olarak, daha gelişmiş bir örnek: aynı türdeki iki örneğin özelliklerinin değerlerinin eşit olup olmadığını belirleme [(Bu StackOverflow gönderisinden](https://stackoverflow.com/a/844855)ödünç alınan ve değiştirilen):
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -352,7 +352,7 @@ End Function
 
 ## <a name="plinq"></a>PLINQ
 
-PLıNQ veya Parallel LINQ, LINQ ifadeleri için bir paralel yürütme altyapısıdır. Diğer bir deyişle, normal bir LINQ ifadesi herhangi bir sayıda iş parçacığı üzerinde oldukça paralelleştirilmiş olabilir. Bu, ifadeden önceki bir `AsParallel()` çağrısıyla gerçekleştirilir.
+PLINQ veya Parallel LINQ, LINQ ifadeleri için paralel bir yürütme motorudur. Başka bir deyişle, normal bir LINQ ifadesi herhangi bir sayıda iş parçacığı arasında önemsiz bir şekilde paralelleştirilebilir. Bu, ifadeden `AsParallel()` önce yapılan bir çağrı ile gerçekleştirilir.
 
 Aşağıdaki topluluklara bir göz atın:
 
@@ -384,16 +384,16 @@ Public Shared GetAllFacebookUserLikesMessage(facebookUsers As IEnumerable(Of Fac
 }
 ```
 
-Bu kod, gerektiği şekilde sistem iş parçacıkları arasında `facebookUsers` bölümlenir, her bir iş parçacığında her iş parçacığı için toplam beğeneni paralel olarak toplayın, her iş parçacığı tarafından hesaplanan sonuçları ve iyi bir dizeye neden olan projeyi toplayın.
+Bu kod `facebookUsers` gerektiğinde sistem iş parçacıkları arasında bölüm, paralel olarak her iş parçacığı üzerinde toplam beğeni toplamı, her iş parçacığı tarafından hesaplanan sonuçları toplamı ve güzel bir dize içine sonuç proje.
 
-Diyagram formu:
+Diyagram şeklinde:
 
-![PLıNQ diyagramı](./media/using-linq/plinq-diagram.png)
+![PLINQ diyagramı](./media/using-linq/plinq-diagram.png)
 
-LINQ aracılığıyla kolayca ifade edebileceğiniz paralelleştirilmiş, CPU 'ya dayalı işler (başka bir deyişle, saf işlevlerdir ve yan etkileri yoktur) PLıNQ için harika bir adaydır. Yan _etkisi olan işler_ Için, [görev paralel kitaplığını](./parallel-programming/task-parallel-library-tpl.md)kullanmayı düşünün.
+Linq ile kolayca ifade edilebilen paralelleştirilebilir CPU'ya bağlı işler (diğer bir deyişle, saf fonksiyonlardır ve yan etkileri yoktur) PLINQ için harika bir adaydır. Yan etkisi _olan_ işler için Görev [Paralel Kitaplığı'nı](./parallel-programming/task-parallel-library-tpl.md)kullanmayı düşünün.
 
-## <a name="further-resources"></a>Daha fazla kaynak:
+## <a name="further-resources"></a>Diğer Kaynaklar:
 
-* [101 LINQ örnekleri](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-* C#/F#/Visual Basic için bir playzemin ortamı ve veritabanı sorgulama altyapısı olan [linqpad](https://www.linqpad.net/)
-* [Uıulinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), LINQ nesnelerinin nasıl uygulandığını öğrenmek için bir e-kitap
+* [101 LINQ Örnekleri](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+* [Linqpad](https://www.linqpad.net/), C#/F#/Visual Basic için bir oyun alanı ortamı ve Veritabanı sorgulama motoru
+* [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), LINQ-to-objects nasıl uygulandığını öğrenmek için bir e-kitap

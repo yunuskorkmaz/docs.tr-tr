@@ -12,19 +12,19 @@ helpviewer_keywords:
 - catch blocks
 ms.assetid: 12af9ff3-8587-4f31-90cf-6c2244e0fdae
 ms.openlocfilehash: 48b450e579263876725f96e0adfc4c16aac1d869
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160163"
 ---
-# <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>Bir catch bloğunda belirli özel durumları kullanma
+# <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>Yakalama bloğunda belirli özel durumlar nasıl kullanılır?
 
-Genel olarak, temel bir `catch` bildiri kullanmak yerine belirli bir özel durum türünü yakalamak iyi bir programlama uygulamasıdır.
+Genel olarak, temel `catch` bir deyim kullanmak yerine belirli bir özel durum türünü yakalamak iyi bir programlama uygulamasıdır.
 
-Bir özel durum oluştuğunda, yığın geçirilir ve her bir catch bloğunun onu işleme fırsatı verilir. Catch deyimlerinin sırası önemlidir. Genel bir özel durum yakalama bloğundan önce belirli özel durumlara hedeflenmiş catch blokları koyun veya derleyici bir hata verebilir. Uygun catch bloğu, özel durumun türü, catch bloğunda belirtilen özel durumun adı ile eşleştirilirken belirlenir. Belirli bir catch bloğu yoksa, özel durum, varsa genel bir catch bloğu tarafından yakalanır.
+Bir özel durum oluştuğunda, yığın alını ve her catch bloğu işlemek için fırsat verilir. Yakalama ifadelerinin sırası önemlidir. Genel bir özel durum yakalama bloğu veya derleyici bir hata sorunu olabilir önce belirli özel durumlara hedeflenen catch blokları koyun. Uygun catch bloğu, özel durum türü yle catch bloğunda belirtilen özel durum adıyla eşleştirilerek belirlenir. Belirli bir catch bloğu yoksa, özel durum varsa genel bir catch bloğu tarafından yakalanır.
 
-Aşağıdaki kod örneği bir <xref:System.InvalidCastException>yakalamak için bir `try`/`catch` bloğu kullanır. Örnek, `Employee` adlı bir sınıf oluşturur, çalışan düzeyi (`Emlevel`). Bir yöntem, `PromoteEmployee`, bir nesnesi alır ve çalışan düzeyini artırır. Bir <xref:System.InvalidCastException>, `PromoteEmployee` yöntemine <xref:System.DateTime> bir örnek geçirildiğinde gerçekleşir.
+Aşağıdaki kod örneği `try` / `catch` bir <xref:System.InvalidCastException>. Örnek, tek bir `Employee` özellik, çalışan düzeyi (`Emlevel`ile adlandırılan bir sınıf oluşturur. Bir yöntem, `PromoteEmployee`bir nesne alır ve çalışan düzeyini yükselter. Bir <xref:System.InvalidCastException> <xref:System.DateTime> örnek `PromoteEmployee` yönteme geçirildiğinde oluşur.
 
 [!code-cpp[CatchException#2](../../../samples/snippets/cpp/VS_Snippets_CLR/CatchException/CPP/catchexception1.cpp#2)]
 [!code-csharp[CatchException#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception1.cs#2)]
@@ -32,4 +32,4 @@ Aşağıdaki kod örneği bir <xref:System.InvalidCastException>yakalamak için 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özel Durumlar](index.md)
+- [Özel durumlar](index.md)

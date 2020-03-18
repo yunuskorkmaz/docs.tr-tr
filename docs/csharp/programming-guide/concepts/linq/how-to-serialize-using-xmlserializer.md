@@ -3,17 +3,17 @@ title: XmlSerializer (C#) kullanarak serileştirme
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
 ms.openlocfilehash: 0ec19e964471382c6f10f07d6d4bb25f88fd532f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347391"
 ---
 # <a name="how-to-serialize-using-xmlserializer-c"></a>XmlSerializer (C#) kullanarak serileştirme
-Bu konuda <xref:System.Xml.Serialization.XmlSerializer>kullanarak seri hale getirilen ve serileştiren bir örnek gösterilmektedir.  
+Bu konu, 'yi kullanarak <xref:System.Xml.Serialization.XmlSerializer>serihale ve deserialize eden bir örnek gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek <xref:System.Xml.Linq.XElement> nesneleri içeren bir dizi nesne oluşturur. Daha sonra bunları bir bellek akışına serileştirir ve sonra bellek akışından serileştirir.  
+ Aşağıdaki örnek, nesneleri içeren <xref:System.Xml.Linq.XElement> bir dizi nesne oluşturur. Daha sonra onları bir bellek akışına serileştirir ve sonra bellek akışından deserialize eder.  
   
 ```csharp  
 using System;  
@@ -78,7 +78,7 @@ class XLinqTest
 }  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```output  
 Testing for type: XElementNullContainer  

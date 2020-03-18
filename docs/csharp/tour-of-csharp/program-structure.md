@@ -1,44 +1,44 @@
 ---
-title: C#Program yapısı- C# dilin turu
-description: Bir C# programın temel yapı taşlarını öğrenin
+title: C# Program Yapısı - C# Dili Turu
+description: C# programının temel yapı taşlarını öğrenin
 ms.date: 02/25/2020
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: 828146ba509daf9427e6dd1a4ebf3ad747ac7c39
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: c09c11a4dd957b29b2adb7aaa8d68a50f30620b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159123"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156837"
 ---
 # <a name="program-structure"></a>Program Yapısı
 
-' Deki C# temel kurumsal kavramlar, ***Programlar***, ***ad alanları***, ***türler***, ***Üyeler***ve ***derlemelerdir***. C#programlar bir veya daha fazla kaynak dosyadan oluşur. Programlar, üyeleri içeren ve ad alanları halinde düzenlenebilen türleri bildirir. Sınıflar ve arabirimler tür örnekleridir. Alanlar, Yöntemler, Özellikler ve olaylar üye örnekleridir. C# Programlar derlendiğinde, fiziksel olarak derlemeler halinde paketlenir. Derlemeler, sırasıyla ***uygulama*** veya ***kitaplık***uygulanıp uygulamadığına bağlı olarak dosya uzantısına `.exe` veya `.dll`sahiptir.
+C#'daki temel kuruluş kavramları ***programlar,*** ***ad alanları,*** ***türleri,*** ***üyeler***ve ***derlemelerdir.*** C# programları bir veya daha fazla kaynak dosyadan oluşur. Programlar, üye içeren ve ad boşlukları halinde düzenlenebilecek türleri bildirir. Sınıflar ve arabirimler türleri örnekleridir. Alanlar, yöntemler, özellikler ve olaylar üye örnekleridir. C# programları derlendiğinde, fiziksel olarak derlemelere paketlenirler. Derlemeler genellikle dosya uzantısı `.exe` `.dll`na sahip veya ***sırasıyla uygulamaları*** veya ***kitaplıkları***uygulayıp uygulamadıklarına bağlı olarak.
 
-`dotnet new` komutunu kullanarak *Acme* adlı bir kitaplık projesi oluşturabilirsiniz:
+Komutu kullanarak acme adlı bir kitaplık projesi oluşturabilirsiniz: *acme* `dotnet new`
 
 ```console
 dotnet new classlib -o acme
 ```
 
-Bu projede, `Acme.Collections`adlı bir ad alanında `Stack` adlı bir sınıf bildirin:
+Bu projede, ad `Stack` alanında adı geçen `Acme.Collections`bir sınıf bildirin:
 
 [!code-csharp[Stack](../../../samples/snippets/csharp/tour/program-structure/program.cs#L1-L34)]
 
-Bu sınıfın tam nitelikli adı `Acme.Collections.Stack`. Sınıf birçok üye içerir: `top`adlı bir alan, `Push` ve `Pop`adlı iki yöntem ve `Entry`adlı bir iç içe sınıf. `Entry` sınıfı üç üye içerir: `next`adlı bir alan, `data`adlı bir alan ve bir Oluşturucu. Komut:
+Bu sınıfın tam nitelikli `Acme.Collections.Stack`adı . Sınıf birkaç üye içerir: `top`adlı bir `Push` alan, adlı iki yöntem ve `Pop`, adlı iç içe sınıf `Entry`. Sınıf `Entry` daha üç üye içerir: `next`adlı bir `data`alan , adlı bir alan , ve bir oluşturucu. Komut:
 
 ```console
-dotnet build 
+dotnet build
 ```
 
-örneği bir kitaplık (`Main` giriş noktası olmayan kod) olarak derler ve `acme.dll`adlı bir derleme oluşturur.
+örneği kitaplık olarak derler `Main` (giriş noktası olmayan kod) `acme.dll`ve adlı bir derleme oluşturur.
 
-Derlemeler, ara dil (IL) yönergeleri biçiminde çalıştırılabilir kodu ve meta veri biçimindeki sembolik bilgileri içerir. Yürütülmeden önce, .NET ortak dil çalışma zamanının tam zamanında (JıT) derleyicisi, bir derlemedeki Il kodunu işlemciye özel koda dönüştürür.
+Derlemeler, Ara Dil (IL) yönergeleri biçiminde yürütülebilir kod ve meta veri biçiminde sembolik bilgiler içerir. Yürütülmeden önce,.NET Ortak Dil Runtime'ın Just-In-Time (JIT) derleyicisi, bir derlemedeki IL kodunu işlemciye özgü koda dönüştürür.
 
-Bir derleme, hem kodu hem de meta verileri içeren bir işlevsellik birimi olduğundan, içinde C#`#include` yönergeler ve başlık dosyaları gerekmez. Belirli bir derlemede yer alan ortak türler ve Üyeler, yalnızca program derlenirken bu derlemeye C# başvurarak bir programda kullanılabilir hale getirilir. Örneğin, bu program `acme.dll` derlemesinden `Acme.Collections.Stack` sınıfını kullanır:
+Derleme, hem kod hem de meta verileri içeren kendi kendini tanımlayan bir `#include` işlevsellik birimi olduğundan, C#'da yönergelere ve üstbilgi dosyalarına gerek yoktur. Belirli bir derlemede yer alan genel türler ve üyeler, yalnızca programı derlerken bu derlemeye başvurarak C# programında kullanılabilir hale getirilir. Örneğin, bu program `Acme.Collections.Stack` `acme.dll` derleme den sınıf kullanır:
 
 [!code-csharp[UsingStack](../../../samples/snippets/csharp/tour/program-structure/Program.cs#L38-L52)]
 
-Önceki programın projesi için *csproj* dosyası, `acme.dll` derlemesindeki sınıfların başvurularını çözümlemek için C# derleyicinin başvuru düğümünü içermelidir:
+Önceki programın projesiiçin *csproj* `acme.dll` dosyası, derlemedeki sınıflara yapılan başvuruları çözmek için C# derleyicisi için bir başvuru düğümü içermelidir:
 
 ```xml
   <ItemGroup>
@@ -46,7 +46,7 @@ Bir derleme, hem kodu hem de meta verileri içeren bir işlevsellik birimi oldu�
   </ItemGroup>
 ```
 
-Bu eklendikten sonra, `dotnet build` `example.exe`adında bir çalıştırılabilir derleme oluşturur ve bu, çalıştırıldığında çıktıyı üretir:
+Bu eklemeden `dotnet build` sonra, çalıştırıldığında `example.exe`çıktıüreten , "çalıştırılabilir" adlı bir yürütülebilir derleme oluşturur:
 
 ```console
 100
@@ -54,8 +54,8 @@ Bu eklendikten sonra, `dotnet build` `example.exe`adında bir çalıştırılabi
 1
 ```
 
-C#bir programın kaynak metninin birkaç kaynak dosyada depolanmasına izin verir. Birden çok dosya C# programı derlendiğinde, tüm kaynak dosyalar birlikte işlenir ve kaynak dosyalar birbirini tamamen başvurabilir — kavramsal olarak, tüm kaynak dosyaları işlenmeden önce bir büyük dosyada birleştirilmiş olur. Bildirim sırası çok önemli olduğundan, C# bazı özel durumlarla birlikte iletme bildirimlerine hiçbir şekilde gerek yoktur. C#kaynak dosyayı yalnızca bir ortak tür bildirmek üzere sınırlamaz veya kaynak dosyanın adının kaynak dosyada belirtilen bir türle eşleşmesi gerekir.
+C# bir programın kaynak metninin çeşitli kaynak dosyalarda depolanabına izin verir. Çok dosyalı bir C# programı derlendiğinde, tüm kaynak dosyaları birlikte işlendiğinde ve kaynak dosyaları serbestçe birbirlerine referans verebilirsiniz-kavramsal olarak, tüm kaynak dosyaları işlenmeden önce büyük bir dosyaya entegre edilmiş gibidir. Birkaç istisna dışında bildirim sırası önemsiz olduğundan, C#'da iletme bildirimleri hiçbir zaman gerekli değildir. C# bir kaynak dosyayı yalnızca bir ortak türü bildirmekle sınırlamaz veya kaynak dosyada bildirilen bir türle eşleşecek şekilde kaynak dosyanın adını gerektirmez.
 
 >[!div class="step-by-step"]
 >[Önceki](index.md)
->[İleri](types-and-variables.md)
+>[Sonraki](types-and-variables.md)

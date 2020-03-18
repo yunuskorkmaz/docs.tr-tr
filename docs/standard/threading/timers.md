@@ -1,6 +1,6 @@
 ---
-title: Süreölçerler
-description: Çok iş parçacıklı bir ortamda kullanılacak .NET zamanlayıcıları hakkında bilgi edinin.
+title: Zamanlayıcılar
+description: .NET zamanlayıcıların çok iş parçacığı ortamında ne kullanacağını öğrenin.
 ms.date: 07/03/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,47 +13,47 @@ helpviewer_keywords:
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
 author: pkulikov
 ms.openlocfilehash: d7d1fa13b02fe7425fa9b4cb81ba20297a23fe4b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73128945"
 ---
-# <a name="timers"></a>Süreölçerler
+# <a name="timers"></a>Zamanlayıcılar
 
-.NET, çok iş parçacıklı bir ortamda kullanmak için iki Zamanlayıcı sağlar:
+.NET, çok iş parçacığı bir ortamda kullanmak üzere iki zamanlayıcı sağlar:
 
-- düzenli aralıklarla <xref:System.Threading.ThreadPool> iş parçacığında tek bir geri çağırma yöntemi yürüten <xref:System.Threading.Timer?displayProperty=nameWithType>.
-- <xref:System.Timers.Timer?displayProperty=nameWithType>, varsayılan olarak düzenli aralıklarla bir <xref:System.Threading.ThreadPool> iş parçacığı üzerinde bir olay oluşturur.
+- <xref:System.Threading.Timer?displayProperty=nameWithType>, düzenli aralıklarla bir iş <xref:System.Threading.ThreadPool> parçacığı üzerinde tek bir geri arama yöntemi yürütür.
+- <xref:System.Timers.Timer?displayProperty=nameWithType>, varsayılan olarak düzenli aralıklarla bir <xref:System.Threading.ThreadPool> iş parçacığı üzerinde bir olay yükseltir.
 
 > [!NOTE]
 > Bazı .NET uygulamaları ek zamanlayıcılar içerebilir:
 >
-> - <xref:System.Windows.Forms.Timer?displayProperty=nameWithType>: düzenli aralıklarla bir olayı harekete uygulayan Windows Forms bir bileşen. Bileşen Kullanıcı arabirimine sahip değildir ve tek iş parçacıklı bir ortamda kullanılmak üzere tasarlanmıştır.  
-> - <xref:System.Web.UI.Timer?displayProperty=nameWithType>: düzenli bir aralıkta zaman uyumsuz veya zaman uyumlu Web sayfası geri göndermeler gerçekleştiren bir ASP.NET bileşeni.
-> - <xref:System.Windows.Threading.DispatcherTimer?displayProperty=nameWithType>: belirli bir zaman aralığında ve belirtilen öncelikte işlenen <xref:System.Windows.Threading.Dispatcher> kuyruğu ile tümleştirilmiş bir zamanlayıcı.
+> - <xref:System.Windows.Forms.Timer?displayProperty=nameWithType>: bir olayı düzenli aralıklarla ateşleyen bir Windows Forms bileşeni. Bileşenin kullanıcı arabirimi yoktur ve tek iş parçacığı ortamında kullanılmak üzere tasarlanmıştır.  
+> - <xref:System.Web.UI.Timer?displayProperty=nameWithType>: düzenli aralıklarla eşzamanlı veya senkron web sayfası postback'leri gerçekleştiren ASP.NET bir bileşendir.
+> - <xref:System.Windows.Threading.DispatcherTimer?displayProperty=nameWithType>: <xref:System.Windows.Threading.Dispatcher> belirli bir zaman aralığında ve belirli bir öncelikte işlenen sıraya entegre edilmiş bir zamanlayıcı.
 
-## <a name="the-systemthreadingtimer-class"></a>System. Threading. Timer sınıfı
+## <a name="the-systemthreadingtimer-class"></a>System.Threading.Timer sınıfı
 
-<xref:System.Threading.Timer?displayProperty=nameWithType> sınıfı, belirli zaman aralıklarında bir temsilciyi sürekli olarak çağırmanızı sağlar. Bu sınıfı, belirli bir zaman aralığındaki bir temsilciye tek bir çağrı zamanlamak için de kullanabilirsiniz. Temsilci <xref:System.Threading.ThreadPool> bir iş parçacığında yürütülür.
+Sınıf, <xref:System.Threading.Timer?displayProperty=nameWithType> belirli zaman aralıklarında sürekli olarak temsilci çağırmanızı sağlar. Ayrıca, belirli bir zaman aralığında bir temsilciye tek bir çağrı zamanlamak için bu sınıfı kullanabilirsiniz. Temsilci bir <xref:System.Threading.ThreadPool> iş parçacığı üzerinde yürütülür.
 
-<xref:System.Threading.Timer?displayProperty=nameWithType> nesnesi oluşturduğunuzda, geri çağırma yöntemini, geri çağrıya geçirilen isteğe bağlı bir durum nesnesini, geri aramanın ilk çağrısından önce gecikme süresini ve arasındaki zaman aralığını tanımlayan bir <xref:System.Threading.TimerCallback> temsilcisi belirtirsiniz. geri çağırma çağırmaları. Bekleyen bir zamanlayıcıyı iptal etmek için <xref:System.Threading.Timer.Dispose%2A?displayProperty=nameWithType> yöntemini çağırın.
+Bir <xref:System.Threading.Timer?displayProperty=nameWithType> nesne oluşturduğunuzda, <xref:System.Threading.TimerCallback> geri arama yöntemini, geri arama için geçirilen isteğe bağlı durum nesnesini, geri aramanın ilk çağrılmadan önce geciktirilmesi gereken süreyi ve geri arama çağrıları arasındaki zaman aralığını tanımlayan bir temsilci belirtirsiniz. Bekleyen bir zamanlayıcıyı iptal <xref:System.Threading.Timer.Dispose%2A?displayProperty=nameWithType> etmek için yöntemi arayın.
 
-Aşağıdaki örnek, belirtilen temsilciyi bir saniyeden sonra ilk kez çağıran bir zamanlayıcı oluşturur (1000 milisaniye) ve ardından iki saniyede bir çağırır. Örnekteki durum nesnesi, temsilcinin kaç kez çağrıldığını saymak için kullanılır. Temsilci, en az 10 kez çağrıldığında Zamanlayıcı durdurulur.
+Aşağıdaki örnek, sağlanan temsilciyi bir saniyeden (1000 milisaniye) sonra ilk kez çağıran ve ardından her iki saniyede bir çağıran bir zamanlayıcı oluşturur. Örnekteki durum nesnesi, temsilcinin kaç kez çağrıldığını saymak için kullanılır. Temsilci en az 10 kez çağrıldığında zamanlayıcı durdurulur.
 
 [!code-cpp[System.Threading.Timer#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Timer/CPP/source2.cpp#2)]
 [!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]
 [!code-vb[System.Threading.Timer#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Timer/VB/source2.vb#2)]
 
-Daha fazla bilgi ve örnek için bkz. <xref:System.Threading.Timer?displayProperty=nameWithType>.
+Daha fazla bilgi ve <xref:System.Threading.Timer?displayProperty=nameWithType>örnekler için bkz.
 
-## <a name="the-systemtimerstimer-class"></a>System. süreölçerler. Timer sınıfı
+## <a name="the-systemtimerstimer-class"></a>System.Timers.Timer sınıfı
 
-Çoklu iş parçacıklı bir ortamda kullanılabilen başka bir zamanlayıcı, varsayılan olarak bir <xref:System.Threading.ThreadPool> iş parçacığında bir olay harekete geçirirse <xref:System.Timers.Timer?displayProperty=nameWithType>.
+Çok iş parçacığı ortamında kullanılabilecek başka bir <xref:System.Timers.Timer?displayProperty=nameWithType> zamanlayıcı, varsayılan olarak <xref:System.Threading.ThreadPool> bir iş parçacığı üzerinde bir olay yükseltir olmasıdır.
 
-Bir <xref:System.Timers.Timer?displayProperty=nameWithType> nesnesi oluşturduğunuzda, bir <xref:System.Timers.Timer.Elapsed> olayının tetikkaydedileceği zaman aralığını belirtebilirsiniz. Bir zamanlayıcının bir <xref:System.Timers.Timer.Elapsed> olayı oluşturup yükseltmeyeceğini göstermek için <xref:System.Timers.Timer.Enabled%2A> özelliğini kullanın. Bir <xref:System.Timers.Timer.Elapsed> olayının, belirtilen Aralık geçtikten sonra yalnızca bir kez ortaya çıkarıldıktan sonra, <xref:System.Timers.Timer.AutoReset%2A> `false`olarak ayarlayın. <xref:System.Timers.Timer.AutoReset%2A> özelliğinin varsayılan değeri `true`ve bu, <xref:System.Timers.Timer.Elapsed> bir olayın <xref:System.Timers.Timer.Interval%2A> özelliği tarafından tanımlanan aralıkta düzenli olarak oluşturulduğu anlamına gelir.
+Bir <xref:System.Timers.Timer?displayProperty=nameWithType> nesne oluşturduğunuzda, bir <xref:System.Timers.Timer.Elapsed> olayı yükseltmek için zaman aralığını belirtebilirsiniz. Bir <xref:System.Timers.Timer.Enabled%2A> zamanlayıcının bir <xref:System.Timers.Timer.Elapsed> olayı yükseltmesi gerekip gerekmediğini belirtmek için özelliği kullanın. Belirtilen aralık <xref:System.Timers.Timer.Elapsed> geçtikten sonra yalnızca bir kez yükseltilecek bir olay <xref:System.Timers.Timer.AutoReset%2A> `false`gerekiyorsa, 'yi ' ye ayarlayın. <xref:System.Timers.Timer.AutoReset%2A> Özelliğin varsayılan `true`değeri, bir <xref:System.Timers.Timer.Elapsed> olayın <xref:System.Timers.Timer.Interval%2A> özellik tarafından tanımlanan aralıkta düzenli olarak yükseltildiği anlamına gelir.
 
-Daha fazla bilgi ve örnek için bkz. <xref:System.Timers.Timer?displayProperty=nameWithType>.
+Daha fazla bilgi ve <xref:System.Timers.Timer?displayProperty=nameWithType>örnekler için bkz.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

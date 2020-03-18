@@ -14,51 +14,51 @@ helpviewer_keywords:
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 ms.openlocfilehash: 3562bd113ae4c9a3f721d8858a5d3625ef548d3a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160085"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Normal İfadelerdeki Değişimler
-Değişimler, yalnızca değişiklik desenleri içinde tanınan dil öğeleridir. Giriş dizesinde eşleşen metnin yerini alacak metnin tümünü veya bir kısmını tanımlamak için normal bir ifade deseni kullanırlar. Değiştirme deseni, değişmez karakterlerin yanı sıra bir veya birden çok değiştirmeden oluşabilir. Değiştirme desenleri, `replacement` parametresine ve <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemine sahip <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> yönteminin aşırı yüklemeleri için sağlanır. Yöntemler, eşleşen deseninin `replacement` parametresi tarafından tanımlanan desenli yerini alır.  
+Değiştirmeler, yalnızca değiştirme desenleri içinde tanınan dil öğeleridir. Giriş dizesinde eşleşen metnin yerini alacak metnin tümünü veya bir kısmını tanımlamak için normal bir ifade deseni kullanırlar. Değiştirme deseni, değişmez karakterlerin yanı sıra bir veya birden çok değiştirmeden oluşabilir. Değiştirme desenleri, <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> `replacement` parametresi olan yöntemin aşırı yüklerine ve yönteme <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> sağlanır. Yöntemler, eşleşen deseni `replacement` parametre yle tanımlanan desenle değiştirir.  
   
  .NET Framework, aşağıdaki tabloda listelenen değişim öğelerini tanımlar.  
   
 |Değiştirme|Açıklama|  
 |------------------|-----------------|  
-|$ *numarası*|*Sayı*ile tanımlanan yakalama grubuyla eşleşen son alt dizeyi içerir; burada *sayı* , değiştirme dizesinde bir ondalık değerdir. Daha fazla bilgi için bkz. [numaralandırılmış bir grubu değiştirme](#substituting-a-numbered-group).|  
-|$ { *Name* }|Değiştirme dizesinde `(?<`*adı*`> )` tarafından belirtilen adlandırılmış grupla eşleşen son alt dizeyi içerir. Daha fazla bilgi için bkz. [adlandırılmış bir grubu değiştirme](#substituting-a-named-group).|  
-|$$|Değiştirme dizesinde tek bir "$" değişmez değerini içerir. Daha fazla bilgi için, bkz. ["$" sembolünü değiştirme](#substituting-a--character).|  
-|$&|Değiştirme dizesinde tüm eşleşmenin bir kopyasını içerir. Daha fazla bilgi için bkz. [tüm eşleşmeyi değiştirme](#substituting-the-entire-match).|  
-|$\`|Giriş dizesinin tüm metini, değiştirme dizininde eşleşmenin önüne ekler. Daha fazla bilgi için, bkz. [metni eşleştirmeden önce değiştirme](#substituting-the-text-before-the-match).|  
-|$'|Giriş dizesinin tüm metini, değiştirme dizininde eşleşmenin sonrasına ekler. Daha fazla bilgi için bkz. [eşleştirmeden sonra metni değiştirme](#substituting-the-text-after-the-match).|  
-|$+|Değiştirme dizesinde yakalanan son grubu içerir. Daha fazla bilgi için bkz. [son yakalanan grubu değiştirme](#substituting-the-last-captured-group).|  
-|$\_|Değiştirme dizesinde tüm giriş dizesinin bir kopyasını içerir. Daha fazla bilgi için, bkz. [tüm giriş dizesini değiştirme](#substituting-the-entire-input-string).|  
+|$ *Numarası*|Değiştirme dizesinde, *sayının* ondalık değer *number*olduğu sayıyla tanımlanan yakalama grubuyla eşleşen son alt dizeyi içerir. Daha fazla bilgi için [bkz.](#substituting-a-numbered-group)|  
+|${ *adı* }|Değiştirilen dizedeki `(?<` *ada* `> )` göre atanan adgrubuyla eşleşen son alt dizeyi içerir. Daha fazla bilgi için [bkz.](#substituting-a-named-group)|  
+|$$|Değiştirme dizesinde tek bir "$" değişmez değerini içerir. Daha fazla bilgi için bkz: ["$" Simgesini Değiştirme.](#substituting-a--character)|  
+|$&|Değiştirme dizesinde tüm eşleşmenin bir kopyasını içerir. Daha fazla bilgi için tüm [eşleşmeyi değiştirme 'ye](#substituting-the-entire-match)bakın.|  
+|$\`|Giriş dizesinin tüm metini, değiştirme dizininde eşleşmenin önüne ekler. Daha fazla bilgi için Bkz. [Eşleşmeden Önce Metni Değiştirme.](#substituting-the-text-before-the-match)|  
+|$'|Giriş dizesinin tüm metini, değiştirme dizininde eşleşmenin sonrasına ekler. Daha fazla bilgi için, [Eşleşmeden Sonra Metni Değiştirme'ye](#substituting-the-text-after-the-match)bakın.|  
+|$+|Değiştirme dizesinde yakalanan son grubu içerir. Daha fazla bilgi için [bkz.](#substituting-the-last-captured-group)|  
+|$\_|Değiştirme dizesinde tüm giriş dizesinin bir kopyasını içerir. Daha fazla bilgi için [bkz.](#substituting-the-entire-input-string)|  
   
 ## <a name="substitution-elements-and-replacement-patterns"></a>Değişim Öğeleri ve Değiştirme Desenleri  
- Değişimler, bir değiştirme deseninde tanınan tek özel yapılarıdır. Karakter kaçışları dahil diğer normal ifade dili öğelerinden hiçbiri ve herhangi bir karakterle eşleşen nokta (`.`) desteklenir. Benzer şekilde, değişim dil öğeleri yalnızca değiştirme desenlerinde tanınır ve normal ifade desenlerinde hiçbir zaman geçerli değildirler.  
+ Değişimler, bir değiştirme deseninde tanınan tek özel yapılarıdır. Karakter kaçışları ve herhangi bir karakterle eşleşen dönem`.`( ) dahil olmak üzere diğer normal ifade dili öğelerinin hiçbiri desteklenmez. Benzer şekilde, değişim dil öğeleri yalnızca değiştirme desenlerinde tanınır ve normal ifade desenlerinde hiçbir zaman geçerli değildirler.  
   
- Bir normal ifade deseninde ya da bir değiştirme içinde görünebilen tek karakter `$` karakterdir, ancak her bağlamda farklı bir anlamı vardır. Normal ifade düzeninde `$`, dizenin sonuyla eşleşen bir bağlantıdır. Değiştirme desenine `$`, bir değiştirme işleminin başlangıcını gösterir.  
+ Her bağlamda farklı bir anlamı olmasına rağmen, normal bir ifade `$` deseni veya değiştirme denizm içinde görünebilen tek karakter karakterdir. Normal bir ifade `$` deseninde, dize sonuna uyan bir çapa dır. Değiştirme deseninde, `$` bir ikame başlangıcını gösterir.  
   
 > [!NOTE]
-> Bir normal ifade içindeki bir değiştirme desenine benzer işlevsellik için, bir yeniden başvuru kullanın. Geri başvurular hakkında daha fazla bilgi için bkz. [Backreference yapıları](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
+> Bir normal ifade içindeki bir değiştirme desenine benzer işlevsellik için, bir yeniden başvuru kullanın. Geri göndermeler hakkında daha fazla bilgi için [Bkz. Backreference Yapıları.](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)  
 
 ## <a name="substituting-a-numbered-group"></a>Numaralandırılmış Bir Grubu Değiştirme  
- `$`*Number* Language öğesi, değişim *dizesindeki yakalama grubuyla* eşleşen son alt dizeyi içerir; burada *sayı* yakalama grubunun dizinidir. Örneğin, değişim deseninin `$1` eşleşen alt dizenin ilk yakalanan grupla değiştirileceğini gösterir. Numaralandırılmış yakalama grupları hakkında daha fazla bilgi için bkz. [gruplandırma yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ `$` *Sayı* dili öğesi, *sayı* yakalama grubunun dizini olan değiştirme dizesindeki *sayı* yakalama grubuyla eşleşen son alt dizeyi içerir. Örneğin, değiştirme deseni `$1` eşleşen substring ilk yakalanan grup tarafından değiştirilecek olduğunu gösterir. Numaralı yakalama grupları hakkında daha fazla bilgi için [yapıyı gruplandırma'ya](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)bakın.  
   
- `$` izleyen tüm basamaklar, *sayı* grubuna ait olarak yorumlanır. Amacınız bu değilse, onun yerine adlandırılmış bir grup kullanabilirsiniz. Örneğin, yerine konacak dizeyi, "1" numarasıyla birlikte yakalanan ilk grubun değeri olarak tanımlamak için `$11` yerine `${1}1` değiştirme dizesini kullanabilirsiniz. Daha fazla bilgi için bkz. [adlandırılmış bir grubu değiştirme](#substituting-a-named-group).  
+ İzleyen `$` tüm basamaklar *sayı* grubuna ait olarak yorumlanır. Amacınız bu değilse, onun yerine adlandırılmış bir grup kullanabilirsiniz. Örneğin, değiştirme dizesini `${1}1` "1" sayısıyla birlikte ilk yakalanan grubun değeri olarak tanımlamak `$11` yerine değiştirme dizesini kullanabilirsiniz. Daha fazla bilgi için [bkz.](#substituting-a-named-group)  
   
- `(?<`*ad*`>)` sözdizimi kullanılarak açıkça atanan grupları yakalama, soldan sağa doğru bir şekilde numaralandırılır. Adlandırılmış gruplar da, son adlandırılmamış grubun dizininin bir büyüğünden başlanarak, soldan sağa doğru numaralandırılır. Örneğin, normal ifadede `(\w)(?<digit>\d)`, `digit` adlı grubun dizini 2 ' dir.  
+ `(?<` *name* Ad`>)` sözdizimini kullanarak açıkça atanmamış olan yakalama grupları, bir andan itibaren soldan sağa numaralandırılır. Adlandırılmış gruplar da, son adlandırılmamış grubun dizininin bir büyüğünden başlanarak, soldan sağa doğru numaralandırılır. Örneğin, normal ifadede, `(\w)(?<digit>\d)` `digit` adlandırılmış grubun dizini 2'dir.  
   
- *Sayı* , normal ifade düzeninde tanımlı geçerli bir yakalama grubu belirtmezse, `$`*sayı* her eşleşmeyi değiştirmek için kullanılan bir sabit karakter dizisi olarak yorumlanır.  
+ *Sayı* normal ifade deseninde tanımlanan geçerli bir yakalama `$`grubu belirtmezse, *sayı* her eşleşmeyi değiştirmek için kullanılan gerçek bir karakter dizisi olarak yorumlanır.  
   
- Aşağıdaki örnek, bir ondalık değerden para birimi sembolünü atmak için `$`*sayı* değişimini kullanır. Bir parasal değerin başında ve sonunda bulunan para birimi simgesini kaldırır ve en yaygın iki ondalık ayırıcıyı ("." ve ",") tanır.  
+ Aşağıdaki örnekte, `$`para birimi simgesini ondalık değerden çıkarmak için *sayı* yerine kullanılır. Bir parasal değerin başında ve sonunda bulunan para birimi simgesini kaldırır ve en yaygın iki ondalık ayırıcıyı ("." ve ",") tanır.  
   
  [!code-csharp[Conceptual.RegEx.Language.Substitutions#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/numberedgroup1.cs#1)]
  [!code-vb[Conceptual.RegEx.Language.Substitutions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/numberedgroup1.vb#1)]  
   
- `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` normal ifade deseninin aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
+ Normal ifade `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` deseni aşağıdaki tabloda gösterildiği gibi tanımlanır.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
@@ -67,21 +67,21 @@ Değişimler, yalnızca değişiklik desenleri içinde tanınan dil öğeleridir
 |`\d+`|Bir veya daha fazla ondalık basamağı eşleştirin.|  
 |`[.,]?`|Sıfır veya bir nokta ya da virgülü eşleştirin.|  
 |`\d*`|Sıfır veya daha fazla ondalık basamağı eşleştirin.|  
-|`(\s?\d+[.,]?\d*)`|Ardından bir veya birden fazla ondalık basamak, sıfır veya bir nokta veya virgül, sıfır veya daha fazla ondalık basamak gelen bir beyaz alanı eşleştirin. Bu ilk yakalama grubudur. Değiştirme deseninin `$1`olduğu için, <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> yöntemine yapılan çağrı, eşleşen alt dizenin tamamını bu yakalanan grupla değiştirir.|  
+|`(\s?\d+[.,]?\d*)`|Ardından bir veya birden fazla ondalık basamak, sıfır veya bir nokta veya virgül, sıfır veya daha fazla ondalık basamak gelen bir beyaz alanı eşleştirin. Bu ilk yakalama grubudur. Değiştirme deseni `$1`olduğundan, yönteme <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> çağrı yakalanan grupla eşleşen tüm substring'in yerini alır.|  
 
 ## <a name="substituting-a-named-group"></a>Adlandırılmış Bir Grubu Değiştirme  
- `${`*adı*`}` Language öğesi, *ad* yakalama grubuyla eşleşen son alt dizenin yerini alır; burada *ad* , `(?<`*adı*`>)` Language öğesi tarafından tanımlanan bir yakalama grubunun adıdır. Adlandırılmış yakalama grupları hakkında daha fazla bilgi için bkz. [gruplandırma yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ `${` *name* Ad`}` dili öğesi, *ad* `(?<` *name* `>)` dil öğesi tarafından tanımlanan bir yakalama grubunun adı olduğu *ad* yakalama grubuyla eşleşen son alt dizenin yerine geçer. Adlandırılmış yakalama grupları hakkında daha fazla bilgi için, [Yapıgruplandırma'ya](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)bakın.  
   
- *Ad* , normal ifade düzeninde tanımlanmış geçerli bir adlandırılmış yakalama grubu belirtmezse ancak rakamlardan oluşuyorsa `${`*ad*`}` numaralandırılmış bir grup olarak yorumlanır.  
+ *Ad,* normal ifade deseninde tanımlanan ancak basamaklardan oluşan geçerli bir `${`adlandırılmış yakalama grubu belirtmezse, *ad* `}` numaralandırılmış bir grup olarak yorumlanır.  
   
- *Ad* , geçerli bir adlandırılmış yakalama grubu veya normal ifade düzeninde tanımlı geçerli bir Numaralandırılmış yakalama grubu belirtmediği takdirde, `${`*Name*`}` her eşleşmeyi değiştirmek için kullanılan bir sabit karakter dizisi olarak yorumlanır.  
+ *Ad,* normal ifade deseninde tanımlanan geçerli bir adlandırılmış yakalama grubu veya geçerli `${`bir numaralandırılmış yakalama grubu belirtmezse, *ad* `}` her eşleşmeyi değiştirmek için kullanılan gerçek bir karakter dizisi olarak yorumlanır.  
   
- Aşağıdaki örnekte, bir ondalık değerden para birimi sembolünü atmak için `${`*adı*`}` değişimi kullanılmıştır. Bir parasal değerin başında ve sonunda bulunan para birimi simgesini kaldırır ve en yaygın iki ondalık ayırıcıyı ("." ve ",") tanır.  
+ Aşağıdaki örnekte, `${`para birimi simgesini ondalık değerden çıkarmak için *ad* `}` ikamesi kullanılır. Bir parasal değerin başında ve sonunda bulunan para birimi simgesini kaldırır ve en yaygın iki ondalık ayırıcıyı ("." ve ",") tanır.  
   
  [!code-csharp[Conceptual.RegEx.Language.Substitutions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/namedgroup1.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.Substitutions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/namedgroup1.vb#2)]  
   
- `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` normal ifade deseninin aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
+ Normal ifade `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` deseni aşağıdaki tabloda gösterildiği gibi tanımlanır.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
@@ -90,17 +90,17 @@ Değişimler, yalnızca değişiklik desenleri içinde tanınan dil öğeleridir
 |`\d+`|Bir veya daha fazla ondalık basamağı eşleştirin.|  
 |`[.,]?`|Sıfır veya bir nokta ya da virgülü eşleştirin.|  
 |`\d*`|Sıfır veya daha fazla ondalık basamağı eşleştirin.|  
-|`(?<amount>\s?\d[.,]?\d*)`|Ardından bir veya birden fazla ondalık basamak, sıfır veya bir nokta veya virgül, sıfır veya daha fazla ondalık basamak gelen bir beyaz alanı eşleştirin. Bu, `amount`adlı yakalama grubudur. Değiştirme deseninin `${amount}`olduğu için, <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> yöntemine yapılan çağrı, eşleşen alt dizenin tamamını bu yakalanan grupla değiştirir.|  
+|`(?<amount>\s?\d[.,]?\d*)`|Ardından bir veya birden fazla ondalık basamak, sıfır veya bir nokta veya virgül, sıfır veya daha fazla ondalık basamak gelen bir beyaz alanı eşleştirin. Bu, ". `amount` Değiştirme deseni `${amount}`olduğundan, yönteme <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> çağrı yakalanan grupla eşleşen tüm substring'in yerini alır.|  
 
 ## <a name="substituting-a--character"></a>Bir "$" Karakterini Değiştirme  
- `$$` değiştirme, değiştirilmiş dizeye bir sabit değer "$" karakteri ekler.  
+ Değiştirme, `$$` değiştirilen dizeye gerçek bir "$" karakteri ekler.  
   
- Aşağıdaki örnek, geçerli kültürün para birimi simgesini ve onun yerleşimini bir para birimi dizesinde belirleme <xref:System.Globalization.NumberFormatInfo> nesnesini kullanır. Ardından, normal bir ifade deseni ve bir değiştirme desenini dinamik olarak oluşturur. Örnek, geçerli kültürü en-US olan bir bilgisayarda çalışıyorsa, normal ifade deseninin `\b(\d+)(\.(\d+))?` ve değiştirme deseninin `$$ $1$2`oluşturur. Değiştirme deseni, eşleşen metni bir para birimi simgesiyle ve ardından birinci ve ikinci yakalanan grupların geldiği bir boşlukla değiştirir.  
+ Aşağıdaki örnek, <xref:System.Globalization.NumberFormatInfo> geçerli kültürün para birimi simgesini ve bir para birimi dizesinde yerleşimini belirlemek için nesneyi kullanır. Ardından, normal bir ifade deseni ve bir değiştirme desenini dinamik olarak oluşturur. Örnek, geçerli kültürü en-ABD olan bir bilgisayarda çalıştırılırsa, normal `\b(\d+)(\.(\d+))?` ifade deseni ve değiştirme deseni `$$ $1$2`oluşturur. Değiştirme deseni, eşleşen metni bir para birimi simgesiyle ve ardından birinci ve ikinci yakalanan grupların geldiği bir boşlukla değiştirir.  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/dollarsign1.cs#8)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/dollarsign1.vb#8)]  
   
- `\b(\d+)(\.(\d+))?` normal ifade deseninin aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
+ Normal ifade `\b(\d+)(\.(\d+))?` deseni aşağıdaki tabloda gösterildiği gibi tanımlanır.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
@@ -111,14 +111,14 @@ Değişimler, yalnızca değişiklik desenleri içinde tanınan dil öğeleridir
 |`(\.(\d+))?`|Bir noktanın sıfır veya bir örneğini, ardından bir veya birden çok ondalık basamak gelecek şekilde eşleştirin. Bu ikinci yakalama grubudur.|  
 
 ## <a name="substituting-the-entire-match"></a>Tüm Eşleştirmeyi Değiştirme  
- `$&` değiştirme, değiştirme dizesinde tüm eşleşmeyi içerir. Genellikle, eşleştirilen dizenin başlangıcına veya sonuna bir alt dize eklemek için kullanılır. Örneğin, `($&)` değiştirme kalıbı her eşleşmenin başına ve sonuna parantez ekler. Eşleşme yoksa `$&` değiştirme hiçbir etkiye sahip olmaz.  
+ Değiştirme, `$&` değiştirme dizesinde tüm eşleşmeyi içerir. Genellikle, eşleştirilen dizenin başlangıcına veya sonuna bir alt dize eklemek için kullanılır. Örneğin, değiştirme `($&)` deseni her eşleşmenin başına ve sonuna parantez ekler. Eşleşme yoksa, ikame `$&` etkisi yoktur.  
   
- Aşağıdaki örnek, bir dize dizisinde depolanan kitap başlıklarının başındaki ve sonundaki tırnak işaretleri eklemek için `$&` değiştirme 'yi kullanır.  
+ Aşağıdaki örnek, `$&` bir dize dizisinde depolanan kitap başlıklarının başında ve sonunda tırnak işaretleri eklemek için ikame kullanır.  
   
  [!code-csharp[Conceptual.RegEx.Language.Substitutions#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/entirematch1.cs#3)]
  [!code-vb[Conceptual.RegEx.Language.Substitutions#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/entirematch1.vb#3)]  
   
- `^(\w+\s?)+$` normal ifade deseninin aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
+ Normal ifade `^(\w+\s?)+$` deseni aşağıdaki tabloda gösterildiği gibi tanımlanır.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
@@ -126,53 +126,53 @@ Değişimler, yalnızca değişiklik desenleri içinde tanınan dil öğeleridir
 |`(\w+\s?)+`|Bir veya birden çok sözcük karakteri desenini, ardından sıfır veya bir beyaz alan karakteri bir veya birden çok kez gelecek şekilde eşleştirin.|  
 |`$`|Giriş dizesinin sonuyla eşleş.|  
   
- `"$&"` değiştirme düzeniyle her eşleşmenin başına ve sonuna bir sabit değer tırnak işareti eklenir.  
+ Değiştirme `"$&"` deseni, her eşleşmenin başına ve sonuna gerçek bir tırnak işareti ekler.  
 
 ## <a name="substituting-the-text-before-the-match"></a>Eşleştirmeden Önceki Metni Değiştirme  
- ``$` `` değiştirme, eşleşen dizeyi eşleştirmede tüm giriş dizesiyle değiştirir. Yani, giriş dizesini eşleştirmeye kadar çoğaltırken, eşleştirilen metni kaldırır. Eşleştirilen metni izleyen metin, sonuç dizesinde değiştirilmez. Bir giriş dizesinde birden çok eşleştirme varsa, değiştirme metni, metnin daha önceki eşleştirmelerle değiştirildiği dizeden değil, özgün giriş dizesinden türetilir. \(örnek bir çizim sağlar.\) eşleşme yoksa, ``$` `` değiştirme hiçbir etkiye sahip değildir.  
+ Değiştirme, ``$` `` eşleşmeden önce eşleşen dizeyle tüm giriş dizesiyle değiştirilir. Yani, giriş dizesini eşleştirmeye kadar çoğaltırken, eşleştirilen metni kaldırır. Eşleştirilen metni izleyen metin, sonuç dizesinde değiştirilmez. Bir giriş dizesinde birden çok eşleştirme varsa, değiştirme metni, metnin daha önceki eşleştirmelerle değiştirildiği dizeden değil, özgün giriş dizesinden türetilir. \(Örnek bir resim sağlar. \) Eşleşme yoksa, ikame ``$` `` etkisi yoktur.  
   
- Aşağıdaki örnek, giriş dizesindeki bir veya daha fazla ondalık basamak dizisiyle eşleştirmek için `\d+` normal ifade deseninin kullanımını kullanır. Değiştirme dizesi ``$` ``, bu basamakları eşleşmesinden önce gelen metinle değiştirir.  
+ Aşağıdaki örnek, giriş dizesinde bir veya daha fazla ondalık basamak tan oluşan bir diziyle eşleştirmek için normal ifade deseni `\d+` kullanır. Değiştirme dizesi, ``$` `` bu basamakları eşleşmeden önce gelen metinle değiştirir.  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/before1.cs#4)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/before1.vb#4)]  
   
- Bu örnekte, giriş dizesi `"aa1bb2cc3dd4ee5"` beş eşleşme içerir. Aşağıdaki tabloda ``$` `` değiştirme 'nin, normal ifade altyapısının giriş dizesindeki her eşleşmeyi nasıl değiştirmesine neden olduğu gösterilmektedir. Eklenen metin, sonuçlar sütununda kalın olarak gösterilir.  
+ Bu örnekte, giriş `"aa1bb2cc3dd4ee5"` dizesi beş eşleşme içerir. Aşağıdaki tablo, ``$` `` ikame giriş dizesinde her eşleşmeyi değiştirmek için normal ifade altyapısı neden nasıl gösterin. Eklenen metin, sonuçlar sütununda kalın olarak gösterilir.  
   
 |Eşleştirme|Konum|Eşleştirmeden önceki dize|Sonuç Dizesi|  
 |-----------|--------------|-------------------------|-------------------|  
-|1|2|aa|aa**AA**bb2cc3dd4ee5|  
+|1|2|aa|aa**aa**bb2cc3d4ee5|  
 |2|5|aa1bb|aaaabb**aa1bb**cc3dd4ee5|  
 |3|8|aa1bb2cc|aaaabbaa1bbcc**aa1bb2cc**dd4ee5|  
-|4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**EE5|  
+|4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd ee5**|  
 |5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**|
 
 ## <a name="substituting-the-text-after-the-match"></a>Eşleştirmeden Sonraki Metni Değiştirme  
- `$'` değiştirme, eşleşen dizeyi eşleştirdikten sonra tüm giriş dizesiyle değiştirir. Yani, giriş dizesini eşleştirmeden sonra çoğaltırken, eşleştirilen metni kaldırır. Eşleştirilen metinden önce gelen metin, sonuç dizesinde değiştirilmez. Eşleşme yoksa `$'` değiştirme hiçbir etkiye sahip olmaz.  
+ Değiştirme, `$'` eşleşen dizeyle eşleşmeden sonra tüm giriş dizesiyle değiştirilir. Yani, giriş dizesini eşleştirmeden sonra çoğaltırken, eşleştirilen metni kaldırır. Eşleştirilen metinden önce gelen metin, sonuç dizesinde değiştirilmez. Eşleşme yoksa, ikame `$'` etkisi yoktur.  
   
- Aşağıdaki örnek, giriş dizesindeki bir veya daha fazla ondalık basamak dizisiyle eşleştirmek için `\d+` normal ifade deseninin kullanımını kullanır. Değiştirme dizesi `$'`, bu basamakları eşleşmeyi izleyen metinle değiştirir.  
+ Aşağıdaki örnek, giriş dizesinde bir veya daha fazla ondalık basamak tan oluşan bir diziyle eşleştirmek için normal ifade deseni `\d+` kullanır. Değiştirme dizesi, `$'` bu basamakları eşleşmeyi izleyen metinle değiştirir.  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/after1.cs#5)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/after1.vb#5)]  
   
- Bu örnekte, giriş dizesi `"aa1bb2cc3dd4ee5"` beş eşleşme içerir. Aşağıdaki tabloda `$'` değiştirme 'nin, normal ifade altyapısının giriş dizesindeki her eşleşmeyi nasıl değiştirmesine neden olduğu gösterilmektedir. Eklenen metin, sonuçlar sütununda kalın olarak gösterilir.  
+ Bu örnekte, giriş `"aa1bb2cc3dd4ee5"` dizesi beş eşleşme içerir. Aşağıdaki tablo, `$'` ikame giriş dizesinde her eşleşmeyi değiştirmek için normal ifade altyapısı neden nasıl gösterin. Eklenen metin, sonuçlar sütununda kalın olarak gösterilir.  
   
 |Eşleştirme|Konum|Eşleşmeden sonraki dize|Sonuç Dizesi|  
 |-----------|--------------|------------------------|-------------------|  
 |1|2|bb2cc3dd4ee5|aa**bb2cc3dd4ee5**bb2cc3dd4ee5|  
 |2|5|cc3dd4ee5|aabb2cc3dd4ee5bb**cc3dd4ee5**cc3dd4ee5|  
-|3|8|dd4ee5|aabb2cc3dd4ee5bbcc3dd4ee5cc**dd4ee5**dd4ee5|  
-|4|11|ee5|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5dd**EE5**EE5|  
+|3|8|dd4ee5|aabb2cc3dd4ee5bbcc3dd4ee5cc**dd4ee5**dd4ee5 dd4ee5|  
+|4|11|ee5|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5dd**ee5**ee5|  
 |5|14|<xref:System.String.Empty?displayProperty=nameWithType>|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5ddee5ee|  
 
 ## <a name="substituting-the-last-captured-group"></a>Yakalanan Son Grubu Değiştirme  
- `$+` değiştirme, eşleşen dizeyi en son yakalanan grupla değiştirir. Yakalanan grup yoksa veya en son yakalanan grubun değeri <xref:System.String.Empty?displayProperty=nameWithType>ise, `$+` değiştirme hiçbir etkiye sahip olmaz.  
+ Değiştirme, `$+` eşleşen dizeilenin yerine yakalanan son grupla birlikte yer alır. Yakalanan grup yoksa veya yakalanan son grubun değeri <xref:System.String.Empty?displayProperty=nameWithType>ise, `$+` ikame etkisi yoktur.  
   
- Aşağıdaki örnek, bir dizedeki yinelenen sözcükleri tanımlar ve `$+` değiştirmesini kullanarak sözcüğün tek bir örneğinden değiştirilir. <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> seçeneği, büyük/küçük harf bakımından farklı kelimelerin yinelenen olarak değerlendirildiğinden emin olmak için kullanılır.  
+ Aşağıdaki örnek, yinelenen sözcükleri bir `$+` dizede tanımlar ve bunları sözcüğün tek bir oluşumuyla değiştirmek için ikame kullanır. Bu <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> seçenek, her durumda farklı olan ancak başka bir şekilde aynı olan sözcüklerin yinede yinelenen olarak kabul edilmesini sağlamak için kullanılır.  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/lastmatch1.cs#6)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/lastmatch1.vb#6)]  
   
- `\b(\w+)\s\1\b` normal ifade deseninin aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
+ Normal ifade `\b(\w+)\s\1\b` deseni aşağıdaki tabloda gösterildiği gibi tanımlanır.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
@@ -183,14 +183,14 @@ Değişimler, yalnızca değişiklik desenleri içinde tanınan dil öğeleridir
 |`\b`|Eşlemeyi bir sözcük sınırında sonlandır.|  
 
 ## <a name="substituting-the-entire-input-string"></a>Tüm Giriş Dizesini Değiştirme  
- `$_` değiştirme, eşleşen dizeyi tüm giriş dizesiyle değiştirir. Diğer bir deyişle, eşleştirilen metni kaldırır ve eşleştirilen metni içeren tüm dize ile değiştirir.  
+ Değiştirme, `$_` eşleşen dizeilenin yerine tüm giriş dizesi ile birlikte konur. Diğer bir deyişle, eşleştirilen metni kaldırır ve eşleştirilen metni içeren tüm dize ile değiştirir.  
   
- Aşağıdaki örnekte, giriş dizesindeki bir veya daha fazla ondalık basamak eşleştirilmektedir. Bu, tüm giriş dizesiyle değiştirmek için `$_` değiştirmesini kullanır.  
+ Aşağıdaki örnekte, giriş dizesindeki bir veya daha fazla ondalık basamak eşleştirilmektedir. Tüm giriş `$_` dizesiyle değiştirmek için ikame kullanır.  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/entire1.cs#7)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/entire1.vb#7)]  
   
- Bu örnekte, giriş dizesi `"ABC123DEF456"` iki eşleşme içerir. Aşağıdaki tabloda `$_` değiştirme 'nin, normal ifade altyapısının giriş dizesindeki her eşleşmeyi nasıl değiştirmesine neden olduğu gösterilmektedir. Eklenen metin, sonuçlar sütununda kalın olarak gösterilir.  
+ Bu örnekte, giriş `"ABC123DEF456"` dizesi iki eşleşme içerir. Aşağıdaki tablo, `$_` ikame giriş dizesinde her eşleşmeyi değiştirmek için normal ifade altyapısı neden nasıl gösterin. Eklenen metin, sonuçlar sütununda kalın olarak gösterilir.  
   
 |Eşleştirme|Konum|Eşleştirme|Sonuç Dizesi|  
 |-----------|--------------|-----------|-------------------|  

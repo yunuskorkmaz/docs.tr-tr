@@ -10,21 +10,21 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, threads
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
 ms.openlocfilehash: db25028e10872cfca08d28518c795414d06c5d49
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124793"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>Normal İfadelerde İş Parçacığı Güvenliği
-<xref:System.Text.RegularExpressions.Regex> sınıfı, iş parçacığı güvenli ve değişmez (salt okunurdur). Diğer bir deyişle, **Regex** nesneleri herhangi bir iş parçacığında oluşturulabilir ve iş parçacıkları arasında paylaşılabilir; eşleşen Yöntemler herhangi bir iş parçacığından çağrılabilir ve hiçbir şekilde hiçbir genel durumu değiştirmez.  
+Sınıfın <xref:System.Text.RegularExpressions.Regex> kendisi iş parçacığı güvenli ve değişmez (salt okunur). Diğer bir diğer nokta, **Regex** nesneleri herhangi bir iş parçacığı üzerinde oluşturulabilir ve iş parçacıkları arasında paylaşılabilir; eşleşen yöntemler herhangi bir iş parçacığı çağrılabilir ve herhangi bir küresel durumu değiştirmek asla.  
   
- Ancak, **Regex** tarafından döndürülen sonuç nesneleri (**Match** ve **MatchCollection**) tek bir iş parçacığında kullanılmalıdır. Bu nesnelerin birçoğu mantıksal olarak sabit olsa da, uygulamaları performansı artırmak için bazı sonuçların hesaplamasını erteleyebilir ve sonuç olarak, arayanların bunlara erişimi serileştirmesi gerekir.  
+ Ancak, **Regex** tarafından döndürülen sonuç nesneleri **(Match** ve **MatchCollection)** tek bir iş parçacığı üzerinde kullanılmalıdır. Bu nesnelerin çoğu mantıksal olarak değişmez olsa da, uygulamaları performansı artırmak için bazı sonuçların hesaplanmasını geciktirebilir ve sonuç olarak arayanların bunlara erişimi seri hale getirmelidir.  
   
- Birden çok iş parçacığında **Regex** sonuç nesnelerini paylaşma gereksinimi varsa, bu nesneler eşitlenmiş yöntemleri çağırarak iş parçacığı açısından güvenli örneklere dönüştürülebilir. Numaralandırıcılar hariç, tüm normal ifade sınıfları iş parçacığı açısından güvenlidir veya eşitlenmiş bir yöntem tarafından iş parçacığı güvenli nesnelerine dönüştürülebilir.  
+ **Regex** sonuç nesnelerini birden çok iş parçacığı üzerinde paylaşma ihtiyacı varsa, bu nesneler eşitlenmiş yöntemlerini çağırarak iş parçacığı güvenli örneklerine dönüştürülebilir. Tümumerators dışında, tüm düzenli ifade sınıfları iş parçacığı güvenli veya eşitlenmiş bir yöntem le iş parçacığı güvenli nesnelere dönüştürülebilir.  
   
- Numaralandırıcılar tek istisnadır. Uygulama, çağrıları koleksiyon numaralandırıcılara serileştirmelidir. Kural, bir koleksiyonun birden fazla iş parçacığında aynı anda numaralandırılabilir olması, Numaralandırıcı tarafından geçilen koleksiyonun kök nesnesindeki Numaralandırıcı yöntemlerini eşitlemeniz gerekir.  
+ Sayısallaştırıcılar tek istisnadır. Bir uygulama toplama sayısalatörler için çağrıları seri hale getirmek gerekir. Kural, bir koleksiyon aynı anda birden fazla iş parçacığı üzerinde numaralandırılabilir, sen enumerator tarafından geçen koleksiyonun kök nesnesi üzerinde numaralandırma yöntemleri eşitlemek gerektiğidir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET normal Ifadeleri](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET Düzenli İfadeler](../../../docs/standard/base-types/regular-expressions.md)

@@ -1,5 +1,5 @@
 ---
-title: iç C# başvuru
+title: dahili - C# Referans
 ms.date: 07/20/2015
 f1_keywords:
 - internal_CSharpKeyword
@@ -7,43 +7,43 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: db653d0ed7f4835348484242b03392a8955c6392
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e5a5ca18828b689241abbb6d80c5adc51efb073c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713435"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173607"
 ---
 # <a name="internal-c-reference"></a>internal (C# Başvurusu)
-`internal` anahtar sözcüğü, türler ve tür üyeleri için bir [erişim değiştiricisidir](./access-modifiers.md) . 
+`internal` Anahtar kelime, türler ve tür üyeleri için bir erişim [değiştiricidir.](./access-modifiers.md)
   
- > Bu sayfa `internal` erişimi içerir. `internal` anahtar sözcüğü ayrıca [`protected internal`](./protected-internal.md) erişim değiştiricisinin bir parçasıdır.
+ > Bu sayfa `internal` erişimi kapsar. Anahtar `internal` kelime de erişim [`protected internal`](./protected-internal.md) değiştiricinin bir parçasıdır.
   
-İç türlere veya üyelere, bu örnekte olduğu gibi, yalnızca aynı derlemede bulunan dosyalar içinde erişilebilir:  
+İç türlere veya üyelere, bu örnekte olduğu gibi, yalnızca aynı derlemedeki dosyalarda erişilebilir:  
   
 ```csharp  
-public class BaseClass   
+public class BaseClass
 {  
     // Only accessible within the same assembly.
     internal static int x = 0;
 }  
 ```  
 
- Diğer erişim değiştiricilerine sahip `internal` bir karşılaştırması için bkz. [Erişilebilirlik düzeyleri](./accessibility-levels.md) ve [erişim değiştiricileri](../../programming-guide/classes-and-structs/access-modifiers.md).  
+ Diğer erişim `internal` değiştiriciler ile karşılaştırma [için, Erişilebilirlik Düzeyleri](./accessibility-levels.md) ve [Erişim Değiştiriciler](../../programming-guide/classes-and-structs/access-modifiers.md)bakın.  
   
- Derlemeler hakkında daha fazla bilgi için bkz. [.net 'Teki derlemeler](../../../standard/assembly/index.md).  
+ Derlemeler hakkında daha fazla bilgi için [.NET'teki Derlemeler'e](../../../standard/assembly/index.md)bakın.  
   
- İç erişimin yaygın olarak kullanılması bileşen tabanlı geliştirmede olduğundan, bir grup bileşenin, uygulama kodunun geri kalanında gösterilmeksizin özel bir biçimde birlikte çalışabilmesine olanak sağlar. Örneğin, grafik kullanıcı arabirimleri oluşturmak için bir çerçeve, iç erişimi olan üyeleri kullanarak birlikte çalışan `Control` ve `Form` sınıfları sağlayabilir. Bu Üyeler iç olduğundan, Framework kullanan koda gösterilmez.  
+ Bir grup bileşenin uygulama kodunun geri kalanına maruz kalmadan özel bir şekilde işbirliği yapmalarını sağladığından, dahili erişimin yaygın kullanımı bileşen tabanlı geliştirmededir. Örneğin, grafik kullanıcı arabirimleri oluşturmak için `Control` bir `Form` çerçeve sağlayabilir ve dahili erişim ile üyeleri kullanarak işbirliği sınıfları. Bu üyeler dahili olduğundan, çerçeveyi kullanan koda maruz kalmamış olurlar.  
   
- Bir tür ya da bir üyeye, tanımlandıkları derlemenin dışında iç erişimle başvurulmaları hatadır.  
+ Bir türe veya dahili erişimi olan bir üyeye, tanımlandığı derleme dışında başvuru yapmak bir hatadır.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, `Assembly1.cs` ve `Assembly1_a.cs`iki dosya içerir. İlk dosya, `BaseClass`iç temel sınıf içerir. İkinci dosyada `BaseClass` örneğini oluşturma girişimi bir hata oluşturacaktır.  
+ Bu örnekte iki `Assembly1.cs` `Assembly1_a.cs`dosya ve . İlk dosya bir iç taban `BaseClass`sınıf içerir. İkinci dosyada, anlık bir hata `BaseClass` üretecektir.  
   
 ```csharp  
 // Assembly1.cs  
 // Compile with: /target:library  
-internal class BaseClass   
+internal class BaseClass
 {  
    public static int intM = 0;  
 }  
@@ -52,9 +52,9 @@ internal class BaseClass
 ```csharp  
 // Assembly1_a.cs  
 // Compile with: /reference:Assembly1.dll  
-class TestAccess   
+class TestAccess
 {  
-   static void Main()   
+   static void Main()
    {  
       var myBase = new BaseClass();   // CS0122  
    }  
@@ -62,12 +62,12 @@ class TestAccess
 ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, örnek 1 ' de kullandığınız dosyaları kullanın ve `BaseClass` erişilebilirlik düzeyini `public`olarak değiştirin. Ayrıca üye `intM` erişilebilirlik düzeyini `internal`olarak değiştirin. Bu durumda, sınıfının örneğini oluşturabilirsiniz, ancak iç üyeye erişemezsiniz.  
+ Bu örnekte, örnek 1'de kullandığınız aynı dosyaları kullanın ve `BaseClass` erişilebilirlik düzeyini `public`' ye göre değiştirin. Ayrıca üyenin `intM` erişilebilirlik düzeyini `internal`de . Bu durumda, sınıfı anında atabilirsiniz, ancak dahili üyeye erişemezsiniz.  
   
 ```csharp  
 // Assembly2.cs  
 // Compile with: /target:library  
-public class BaseClass   
+public class BaseClass
 {  
    internal static int intM = 0;  
 }  
@@ -76,9 +76,9 @@ public class BaseClass
 ```csharp  
 // Assembly2_a.cs  
 // Compile with: /reference:Assembly2.dll  
-public class TestAccess   
+public class TestAccess
 {  
-   static void Main()   
+   static void Main()
    {  
       var myBase = new BaseClass();   // Ok.  
       BaseClass.intM = 444;    // CS0117  
@@ -88,16 +88,16 @@ public class TestAccess
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 
-Daha fazla bilgi için bkz. [ C# dil belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [Erişilebilirlik bildirimi](~/_csharplang/spec/basic-concepts.md#declared-accessibility) . Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için [C# Dil Belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [Bildirilen Erişilebilirlik'e](~/_csharplang/spec/basic-concepts.md#declared-accessibility) bakın. Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../index.md)
+- [C# Referans](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Sözcükleri](./index.md)
+- [C# Anahtar Kelimeler](./index.md)
 - [Erişim Değiştiricileri](./access-modifiers.md)
 - [Erişilebilirlik Düzeyleri](./accessibility-levels.md)
 - [Değiştiriciler](index.md)
-- [public](./public.md)
-- [private](./private.md)
+- [Kamu](./public.md)
+- [Özel](./private.md)
 - [protected](./protected.md)

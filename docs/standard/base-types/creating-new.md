@@ -1,5 +1,5 @@
 ---
-title: .NET ' te yeni dizeler oluşturma
+title: .NET'te Yeni Dizeleri Oluşturma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,66 +14,66 @@ helpviewer_keywords:
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 ms.openlocfilehash: ef65c50111d6ba91ab70d0b9c8cb90c606f9366c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73103825"
 ---
-# <a name="creating-new-strings-in-net"></a>.NET ' te yeni dizeler oluşturma
-.NET Framework, dizelerin basit atama kullanılarak oluşturulmasına izin verir ve ayrıca bir dizi farklı parametre kullanarak dize oluşturmayı desteklemek için bir sınıf oluşturucusunu aşırı yükler. .NET Framework Ayrıca birkaç dizeyi, dize dizilerini veya nesneleri birleştirerek yeni dize nesneleri oluşturan <xref:System.String?displayProperty=nameWithType> sınıfında çeşitli yöntemler sağlar.  
+# <a name="creating-new-strings-in-net"></a>.NET'te Yeni Dizeleri Oluşturma
+.NET Framework dizeleri basit atama kullanılarak oluşturulacak sağlar ve aynı zamanda farklı parametreler bir dizi kullanarak dize oluşturma desteklemek için bir sınıf oluşturucu aşırı yükler. .NET Framework ayrıca, çeşitli <xref:System.String?displayProperty=nameWithType> dizeleri, dize dizileri veya nesneleri birleştirerek yeni dize nesneleri oluşturmak sınıfta çeşitli yöntemler sağlar.  
   
-## <a name="creating-strings-using-assignment"></a>Atama kullanarak dizeler oluşturma  
- Yeni bir <xref:System.String> nesnesi oluşturmanın en kolay yolu, bir <xref:System.String> nesnesine bir dize sabit değeri atamanız yeterlidir.  
+## <a name="creating-strings-using-assignment"></a>Atamayı Kullanarak Dizeleri Oluşturma  
+ Yeni <xref:System.String> bir nesne oluşturmanın en kolay yolu, bir <xref:System.String> nesneye bir dize harfi atamaktır.  
   
-## <a name="creating-strings-using-a-class-constructor"></a>Sınıf Oluşturucusu kullanarak dizeler oluşturma  
- Karakter dizelerinden dizeler oluşturmak için <xref:System.String> sınıf oluşturucusunun aşırı yüklerini kullanabilirsiniz. Belirli bir karakteri belirtilen sayıda çoğaltarak yeni bir dize de oluşturabilirsiniz.  
+## <a name="creating-strings-using-a-class-constructor"></a>Sınıf Oluşturucu sularını kullanarak dizeler oluşturma  
+ Karakter dizilerinden dizeleri <xref:System.String> oluşturmak için sınıf oluşturucu aşırı yüklerini kullanabilirsiniz. Ayrıca, belirli bir karakteri belirli bir sayıda çoğaltarak yeni bir dize oluşturabilirsiniz.  
   
-## <a name="methods-that-return-strings"></a>Dizeleri döndüren yöntemler  
- Aşağıdaki tabloda yeni dize nesneleri döndüren çeşitli yararlı yöntemler listelenmiştir.  
+## <a name="methods-that-return-strings"></a>Dizeleri Döndüren Yöntemler  
+ Aşağıdaki tabloda yeni dize nesneleri döndüren birkaç yararlı yöntem listelenilmiştir.  
   
-|Yöntem adı|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|  
+|Yöntem adı|Kullanım|  
 |-----------------|---------|  
-|<xref:System.String.Format%2A?displayProperty=nameWithType>|Bir giriş nesneleri kümesinden biçimli bir dize oluşturur.|  
-|<xref:System.String.Concat%2A?displayProperty=nameWithType>|İki veya daha fazla dizeden dizeler oluşturur.|  
-|<xref:System.String.Join%2A?displayProperty=nameWithType>|Dizelerin dizisini birleştirerek yeni bir dize oluşturur.|  
+|<xref:System.String.Format%2A?displayProperty=nameWithType>|Giriş nesneleri kümesinden biçimlendirilmiş bir dize oluşturur.|  
+|<xref:System.String.Concat%2A?displayProperty=nameWithType>|İki veya daha fazla dizeden dizeleri oluşturur.|  
+|<xref:System.String.Join%2A?displayProperty=nameWithType>|Bir dizi dizeyi birleştirerek yeni bir dize oluşturur.|  
 |<xref:System.String.Insert%2A?displayProperty=nameWithType>|Varolan bir dizenin belirtilen dizinine bir dize ekleyerek yeni bir dize oluşturur.|  
-|<xref:System.String.CopyTo%2A?displayProperty=nameWithType>|Bir dizedeki belirtilen karakterleri, bir karakter dizisinde belirtilen konuma kopyalar.|  
+|<xref:System.String.CopyTo%2A?displayProperty=nameWithType>|Bir dizedeki belirtilen karakterleri bir dizi karakterde belirtilen konuma kopyalar.|  
   
-### <a name="format"></a>Biçimi  
- Biçimlendirilen dizeler oluşturmak ve birden çok nesneyi temsil eden dizeleri birleştirmek için **String. Format** yöntemini kullanabilirsiniz. Bu yöntem, geçirilen nesneleri otomatik olarak bir dizeye dönüştürür. Örneğin, uygulamanızın kullanıcıya bir **Int32** değeri ve bir **Tarih saat** değeri görüntülemesi gerekiyorsa, **Biçim** yöntemini kullanarak bu değerleri temsil eden bir dizeyi kolayca oluşturabilirsiniz. Bu yöntemle kullanılan biçimlendirme kuralları hakkında daha fazla bilgi için, [Bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md)bölümüne bakın.  
+### <a name="format"></a>Biçimlendir  
+ Biçimlendirilmiş dizeleri oluşturmak ve birden çok nesneyi temsil eden dizeleri birleştirmek için **String.Format** yöntemini kullanabilirsiniz. Bu yöntem, geçirilen herhangi bir nesneyi otomatik olarak bir dize dönüştürür. Örneğin, uygulamanızın kullanıcıya bir **Int32** değeri ve **DateTime** değeri görüntülemesi gerekiyorsa, **Biçim** yöntemini kullanarak bu değerleri temsil edecek bir dize kolayca oluşturabilirsiniz. Bu yöntemle kullanılan biçimlendirme kuralları hakkında bilgi için [bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md)bölümüne bakın.  
   
- Aşağıdaki örnek, bir tamsayı değişkeni kullanan bir dize oluşturmak için **Format** yöntemini kullanır.  
+ Aşağıdaki örnekte, tamsayı değişkeni kullanan bir dize oluşturmak için **Biçim** yöntemi ni kullanır.  
   
  [!code-csharp[Strings.Creating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#1)]
  [!code-vb[Strings.Creating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#1)]  
   
- Bu örnekte, geçerli tarih ve saati geçerli iş parçacığıyla ilişkili kültür tarafından belirtilen şekilde görüntüler<xref:System.DateTime.Now%2A?displayProperty=nameWithType>.  
+ Bu örnekte,<xref:System.DateTime.Now%2A?displayProperty=nameWithType> geçerli tarih ve saati geçerli iş parçacığıyla ilişkili kültür tarafından belirtilen şekilde görüntüler.  
   
 ### <a name="concat"></a>Concat  
- **String. Concat** yöntemi, iki veya daha fazla var olan nesneden kolayca yeni bir dize nesnesi oluşturmak için kullanılabilir. Dizeleri birleştirmek için dile bağımsız bir yol sağlar. Bu yöntem, **System. Object**sınıfından türetilen tüm sınıfları kabul eder. Aşağıdaki örnek, iki var olan dize nesnesinden ve ayırma karakterinden oluşan bir dize oluşturur.  
+ **String.Concat** yöntemi, varolan iki veya daha fazla nesneden kolayca yeni bir dize nesnesi oluşturmak için kullanılabilir. Dizeleri biraraya getirmek için dilden bağımsız bir yol sağlar. Bu yöntem **System.Object**türetilen herhangi bir sınıf kabul eder. Aşağıdaki örnek, varolan iki dize nesnesinden bir dize ve ayıran bir karakter oluşturur.  
   
  [!code-csharp[Strings.Creating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#2)]
  [!code-vb[Strings.Creating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#2)]  
   
-### <a name="join"></a>Birleştirme  
- **String. JOIN** yöntemi bir dize dizisinden ve bir ayırıcı dizeden yeni bir dize oluşturur. Bu yöntem, birden fazla dizeyi birlikte birleştirmek istiyorsanız yararlı olur ve bir listeyi virgülle ayırarak bir liste yapar.  
+### <a name="join"></a>Birleştir  
+ **String.Join** yöntemi, bir dizi dize ve ayırıcı dizeden yeni bir dize oluşturur. Bu yöntem, birden çok dizeleri bir araya getirmek istiyorsanız, belki virgülle ayrılmış bir liste yapmak yararlıdır.  
   
- Aşağıdaki örnek bir dize dizisini bağlamak için bir boşluk kullanır.  
+ Aşağıdaki örnek, bir dize dizisini bağlamak için bir boşluk kullanır.  
   
  [!code-csharp[Strings.Creating#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#3)]
  [!code-vb[Strings.Creating#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#3)]  
   
-### <a name="insert"></a>Ekleme  
- **String. Insert** yöntemi, başka bir dizedeki belirtilen konuma bir dize ekleyerek yeni bir dize oluşturur. Bu yöntem sıfır tabanlı bir dizin kullanır. Aşağıdaki örnek, `MyString` beşinci dizin konumuna bir dize ekler ve bu değere sahip yeni bir dize oluşturur.  
+### <a name="insert"></a>Ekle  
+ **String.Insert** yöntemi, başka bir dizede belirli bir konuma bir dize ekleyerek yeni bir dize oluşturur. Bu yöntem, sıfır tabanlı dizin kullanır. Aşağıdaki örnek, beşinci dizin konumuna bir `MyString` dize ekler ve bu değere sahip yeni bir dize oluşturur.  
   
  [!code-csharp[Strings.Creating#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#4)]
  [!code-vb[Strings.Creating#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#4)]  
   
 ### <a name="copyto"></a>CopyTo  
- **String. CopyTo** yöntemi bir dizenin bölümlerini bir karakter dizisine kopyalar. Hem dizenin başlangıç dizinini hem de kopyalanacak karakter sayısını belirtebilirsiniz. Bu yöntem, kaynak dizinini, bir karakter dizisini, hedef dizini ve kopyalanacak karakter sayısını alır. Tüm dizinler sıfır tabanlıdır.  
+ **String.CopyTo** yöntemi, bir dizebölümlerini bir karakter dizisine kopyalar. Hem dizenin başlangıç dizinini hem de kopyalanacak karakter sayısını belirtebilirsiniz. Bu yöntem kaynak dizini, bir karakter dizisini, hedef dizini ve kopyalanması gereken karakter sayısını alır. Tüm dizinler sıfır tabanlıdır.  
   
- Aşağıdaki örnek, "Hello" sözcüğünün karakterlerini dize nesnesinden bir karakter dizisinin ilk dizin konumuna kopyalamak için **CopyTo** yöntemini kullanır.  
+ Aşağıdaki örnek, "Merhaba" sözcüğünün karakterlerini bir dize nesnesinden bir dizi karakterin ilk dizin konumuna kopyalamak için **CopyTo** yöntemini kullanır.  
   
  [!code-csharp[Strings.Creating#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#5)]
  [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  

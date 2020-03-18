@@ -1,114 +1,114 @@
 ---
 title: .NET mimari bileşenleri
-description: .NET Standard, .NET uygulamaları, .NET çalışma zamanları ve araç araçları gibi .NET mimari bileşenlerini açıklar.
+description: .NET Standardı, .NET uygulamaları, .NET çalışma saatleri ve takımlama gibi .NET mimari bileşenlerini açıklar.
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
 ms.openlocfilehash: eadcf05069edfa32a52c5e73045b4cebd1a9a6ac
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160384"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79400479"
 ---
 # <a name="net-architectural-components"></a>.NET mimari bileşenleri
 
-.NET uygulaması, bir veya daha fazla *.net*uygulamasında geliştirilir ve çalışır.  .NET uygulamaları .NET Framework, .NET Core ve mono 'yı içerir. .NET Standard adı verilen tüm .NET uygulamalarında ortak bir API belirtimi vardır. Bu makalede, bu kavramların her birine kısa bir giriş sunulmaktadır.
+.NET uygulaması için geliştirilmiştir ve *.NET'in*bir veya daha fazla uygulamasında çalışır.  .NET'in uygulamaları .NET Framework, .NET Core ve Mono'yu içerir. .NET'in tüm uygulamalarında ortak olan ve .NET Standardı olarak adlandırılan bir API belirtimi vardır. Bu makalede, bu kavramların her biri için kısa bir giriş verir.
 
 ## <a name="net-standard"></a>.NET Standard
 
-.NET Standard, bir .NET uygulamasının temel sınıf kitaplığı tarafından uygulanan bir API kümesidir. Daha basit bir deyişle, kodunuzu derleyebileceğiniz tek bir sözleşme kümesini oluşturan .NET API 'lerinin bir belirtimidir. Bu sözleşmeler her bir .NET uygulamasında uygulanır. Bu, farklı .NET uygulamalarında taşınabilirliği sağlayarak kodunuzun her yerde çalışmasına olanak tanır.
+.NET Standardı, Bir .NET uygulamasının Taban Sınıf Kitaplığı tarafından uygulanan bir API kümesidir. Daha resmi olarak, kodunuzu derlediğiniz tek tip sözleşmeler kümesini oluşturan .NET API'lerinin belirtimidir. Bu sözleşmeler her .NET uygulamasında uygulanır. Bu, farklı .NET uygulamaları arasında taşınabilirlik sağlayarak kodunuzu her yerde etkin bir şekilde çalıştırarak etkinleştirin.
 
-.NET Standard Ayrıca bir [hedef çerçevedir](glossary.md#target-framework). Kodunuz .NET Standard bir sürümünü hedefliyorsa, bu .NET Standard sürümünü destekleyen tüm .NET uygulamalarında çalıştırılabilir.
+.NET Standardı aynı zamanda bir [hedef çerçevesidir.](glossary.md#target-framework) Kodunuz .NET Standard'ın bir sürümünü hedefliyorsa, .NET Standardının bu sürümünü destekleyen herhangi bir .NET uygulamasında çalıştırılabilir.
 
-.NET Standard ve nasıl hedeflenecek hakkında daha fazla bilgi edinmek için [.NET Standard](net-standard.md) konusuna bakın.
+.NET Standardı ve nasıl hedeflenecek hakkında daha fazla bilgi edinmek için [.NET Standart](net-standard.md) konusuna bakın.
 
 ## <a name="net-implementations"></a>.NET uygulamaları
 
-Her bir .NET uygulamasını aşağıdaki bileşenleri içerir:
+.NET'in her uygulaması aşağıdaki bileşenleri içerir:
 
-- Bir veya daha fazla çalışma zamanı. Örnekler: CLR for .NET Framework, CoreCLR ve CoreRT for .NET Core.
-- .NET Standard uygulayan ve ek API 'Leri uygulayan bir sınıf kitaplığı. Örnekler: .NET Framework temel sınıf kitaplığı, .NET Core temel sınıf kitaplığı.
-- İsteğe bağlı olarak, bir veya daha fazla uygulama çerçevesi. Örnekler: [ASP.net](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md)ve [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) .NET Framework ve .NET Core 'a dahildir.
+- Bir veya daha fazla çalışma saatleri. Örnekler: .NET Framework için CLR, .NET Core için CoreCLR ve CoreRT.
+- .NET Standardını uygulayan ve ek API'ler uygulayabilen bir sınıf kitaplığı. Örnekler: .NET Framework Base Sınıf Kitaplığı, .NET Çekirdek Taban Sınıf Kitaplığı.
+- İsteğe bağlı olarak, bir veya daha fazla uygulama çerçevesi. Örnekler: [ASP.NET,](https://www.asp.net/) [Windows Formları](../framework/winforms/windows-forms-overview.md)ve Windows Presentation Foundation [(WPF)](../framework/wpf/index.md) .NET Framework ve .NET Core'a dahildir.
 - İsteğe bağlı olarak, geliştirme araçları. Bazı geliştirme araçları birden çok uygulama arasında paylaşılır.
 
-Microsoft 'un etkin bir şekilde geliştirdiği ve bakımını yaptığı dört birincil .NET uygulaması vardır: .NET Core, .NET Framework, mono ve UWP.
+Microsoft'un etkin olarak geliştirdiği ve koruduğu dört birincil .NET uygulaması vardır: .NET Core, .NET Framework, Mono ve UWP.
 
 ### <a name="net-core"></a>.NET Core
 
-.NET Core, .NET 'in platformlar arası bir uygulamasıdır ve sunucu ve bulut iş yüklerini ölçekli olarak işleyecek şekilde tasarlanmıştır. Windows, macOS ve Linux üzerinde çalışır. .NET Standard uyguladığı için, .NET Standard hedefleyen kod .NET Core üzerinde çalıştırılabilir. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](../framework/winforms/windows-forms-overview.md)ve [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) tüm .NET Core üzerinde çalışır.
+.NET Core, .NET'in bir platform ötesi uygulamasıdır ve sunucu ve bulut iş yüklerini ölçekte işlemek üzere tasarlanmıştır. Windows, macOS ve Linux'ta çalışır. .NET Standardını uygular, böylece .NET Standardını hedefleyen kod .NET Core'da çalıştırılabilir. [ASP.NET Core,](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core) [Windows Forms](../framework/winforms/windows-forms-overview.md)ve [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) tüm .NET Core üzerinde çalışır.
 
-.NET Core hakkında daha fazla bilgi edinmek için bkz. [.NET Core Kılavuzu](../core/index.md) ve [sunucu uygulamaları için .net Core ve .NET Framework seçme](choosing-core-framework-server.md).
+.NET Core hakkında daha fazla bilgi edinmek [için sunucu uygulamaları için .NET Core](choosing-core-framework-server.md)ve .NET Framework arasında [.NET Core](../core/index.md) ve Seçim Kılavuzu'na bakın.
 
 ### <a name="net-framework"></a>.NET Framework
 
-The.NET Framework, 2002 sonrasında var olan özgün .NET uygulamasıdır. Bu, mevcut .NET geliştiricilerinin her zaman kullandığı .NET Framework aynıdır. 4,5 sürümleri ve üzeri .NET Standard, .NET Standard hedefleyen kod .NET Framework bu sürümlerinde çalıştırılabilir. Windows Forms ve WPF ile Windows masaüstü geliştirme için API 'Ler gibi Windows 'a özgü ek API 'Leri içerir. .NET Framework, Windows Masaüstü uygulamaları oluşturmak için en iyi duruma getirilmiştir.
+The.NET Framework, 2002 yılından beri var olan orijinal .NET uygulamasıdır. Varolan .NET geliştiricilerin her zaman kullandığı .NET Framework ile aynıdır. Sürüm4.5 ve daha sonra .NET Standardını uygulayın, böylece .NET Standardını hedefleyen kod .NET Framework'ün bu sürümlerinde çalıştırılabilir. Windows Forms ve WPF ile Windows masaüstü geliştirme için API'ler gibi Windows'a özgü ek API'ler içerir. .NET Framework, Windows masaüstü uygulamaları oluşturmak için optimize edilebiyi optimize edin.
 
-.NET Framework hakkında daha fazla bilgi edinmek için [.NET Framework kılavuzuna](../framework/index.md)bakın.
+.NET Framework hakkında daha fazla bilgi edinmek için [.NET Framework Guide'a](../framework/index.md)bakın.
 
 ### <a name="mono"></a>Mono
 
-Mono, genellikle küçük bir çalışma zamanı gerektiğinde kullanılan bir .NET uygulamasıdır. Android, macOS, iOS, tvOS ve watchOS üzerinde Xamarin uygulamalarını güçlendirir ve öncelikle küçük bir parmak izine odaklanılmıştır. Mono Ayrıca Unity altyapısı kullanılarak oluşturulan oyunları güçlendirir.
+Mono, küçük bir çalışma süresi gerektiğinde esas olarak kullanılan bir .NET uygulamasıdır. Android, macOS, iOS, tvOS ve watchOS'taki Xamarin uygulamalarına güç veren ve öncelikle küçük bir ayak izine odaklanan çalışma zamanıdır. Mono ayrıca Unity motoru kullanılarak üretilen oyunlara da güç katıyor.
 
-Şu anda yayımlanmış .NET Standard sürümlerinin tümünü destekler.
+Şu anda yayınlanan tüm .NET Standard sürümlerini destekler.
 
-Tarihsel olarak, mono .NET Framework daha büyük API 'sini uyguladık ve UNIX üzerinde en popüler yeteneklerin bazılarını öykünüyler. Bu özellik bazen UNIX üzerinde bu özellikleri kullanan .NET uygulamalarını çalıştırmak için kullanılır.
+Tarihsel olarak, Mono .NET Framework'ün daha büyük API'sini uyguladı ve Unix'teki en popüler yeteneklerden bazılarını taklit etti. Bazen Unix'teki bu özelliklere dayanan .NET uygulamalarını çalıştırmak için kullanılır.
 
-Mono genellikle tam zamanında bir derleyici ile kullanılır, ancak iOS gibi platformlarda kullanılan tam bir statik derleyici (güncel derleme) da sunar.
+Mono genellikle tam zamanında derleyici ile kullanılır, ancak aynı zamanda iOS gibi platformlarda kullanılan tam bir statik derleyici (ileri-zaman derleme) özellikleri.
 
-Mono hakkında daha fazla bilgi edinmek için [mono belgelerine](https://www.mono-project.com/docs/)bakın.
+Mono hakkında daha fazla bilgi edinmek için [Mono belgelerine](https://www.mono-project.com/docs/)bakın.
 
 ### <a name="universal-windows-platform-uwp"></a>Evrensel Windows Platformu (UWP)
 
-UWP, Nesnelerin İnterneti (IoT) için modern, dokunmatik özellikli Windows Uygulamaları ve yazılımları oluşturmak için kullanılan bir .NET uygulamasıdır. Bilgisayar, tabletler, phabizin, telefon ve hatta Xbox dahil olmak üzere hedeflemek isteyebileceğiniz farklı cihaz türlerini birleştirmeleri için tasarlanmıştır. UWP, merkezi bir App Store, bir yürütme ortamı (AppContainer) ve Win32 (WinRT) yerine kullanılacak bir dizi Windows API 'si gibi birçok hizmeti sağlar. Uygulamalar, C#, Visual Basic ve C++JavaScript 'te yazılabilir. C# Ve Visual Basic kullanıldığında .NET API 'Leri .NET Core tarafından sağlanır.
+UWP, Nesnelerin İnterneti (IoT) için modern, dokunmatik özellikli Windows uygulamaları ve yazılımları oluşturmak için kullanılan .NET'in bir uygulamasıdır. Cd'ler, tabletler, phablet'ler, telefonlar ve hatta Xbox dahil olmak üzere hedeflemek isteyebileceğiniz farklı türde aygıtları birletmek üzere tasarlanmıştır. UWP, merkezi bir uygulama deposu, yürütme ortamı (AppContainer) ve Win32 (WinRT) yerine kullanılacak bir dizi Windows API'si gibi birçok hizmet sağlar. Uygulamalar C++, C#, Visual Basic ve JavaScript ile yazılabilir. C# ve Visual Basic kullanırken .NET API'leri .NET Core tarafından sağlanır.
 
-UWP hakkında daha fazla bilgi edinmek için bkz. [Evrensel Windows platformu giriş](/windows/uwp/get-started/universal-application-platform-guide).
+UWP hakkında daha fazla bilgi edinmek [için Evrensel Windows Platformu'na Giriş'e](/windows/uwp/get-started/universal-application-platform-guide)bakın.
 
-## <a name="net-runtimes"></a>.NET çalışma zamanları
+## <a name="net-runtimes"></a>.NET çalışma saatleri
 
-Çalışma zamanı, yönetilen bir programın yürütme ortamıdır. İşletim sistemi çalışma zamanı ortamının bir parçasıdır ancak .NET çalışma zamanının bir parçası değildir. .NET çalışma zamanlarının bazı örnekleri aşağıda verilmiştir:
+Çalışma zamanı, yönetilen bir programın yürütme ortamıdır. İşletim sistemi çalışma zamanı ortamının bir parçasıdır, ancak .NET çalışma zamanının bir parçası değildir. Aşağıda .NET çalışma saatlerine ait bazı örnekler verilmiştir:
 
-- .NET Framework için ortak dil çalışma zamanı (CLR)
-- .NET Core için çekirdek ortak dil çalışma zamanı (CoreCLR)
-- Evrensel Windows Platformu için .NET Native
-- Xamarin. iOS, Xamarin. Android, Xamarin. Mac ve mono masaüstü çerçevesi için mono çalışma zamanı
+- .NET Framework için Ortak Dil Çalışma Süresi (CLR)
+- .NET Core için Çekirdek Ortak Dil Çalışma Süresi (CoreCLR)
+- .NET Evrensel Windows Platformu için Native
+- Xamarin.iOS, Xamarin.Android, Xamarin.Mac ve Mono masaüstü çerçevesi için Mono çalışma süresi
 
-## <a name="net-tooling-and-common-infrastructure"></a>.NET araçları ve ortak altyapı
+## <a name="net-tooling-and-common-infrastructure"></a>.NET takım lama ve ortak altyapı
 
-.NET ' in her uygulamasıyla çalışan kapsamlı bir araç ve altyapı bileşeni kümesine erişirsiniz. Bunlar aşağıdakileri içerir, ancak bunlarla sınırlı değildir:
+.NET'in her uygulamasıyla çalışan kapsamlı bir araç ve altyapı bileşeni kümesine erişebilirsiniz. Bunlar şunlardır, ancak aşağıdakiler ile sınırlı değildir:
 
 - .NET dilleri ve derleyicileri
-- .NET proje sistemi ( *. csproj*, *. vbproj*ve *. fsproj* dosyaları temel alınarak)
-- [MSBuild](/visualstudio/msbuild/msbuild), proje derlemek için kullanılan derleme altyapısı
-- [NuGet](/nuget/), Microsoft 'un .NET için Paket Yöneticisi
-- [Pasta](https://cakebuild.net/) ve [sahte](https://fake.build/) gibi açık kaynaklı derleme düzenleme araçları
+- .NET proje sistemi *(.csproj*, *.vbproj*ve *.fsproj* dosyalarına göre)
+- [MSBuild](/visualstudio/msbuild/msbuild), proje oluşturmak için kullanılan yapı motoru
+- [NuGet](/nuget/), Microsoft'un .NET için paket yöneticisi
+- [CAKE](https://cakebuild.net/) ve [FAKE](https://fake.build/) gibi açık kaynak yapı orkestrasyon araçları
 
-## <a name="applicable-standards"></a>Uygun standartlar
+## <a name="applicable-standards"></a>Geçerli standartlar
 
-C# Dil ve ortak dil ALTYAPıSı (CLI) belirtimleri [Ecma International®](https://www.ecma-international.org/)aracılığıyla standartlaştırılmıştır. Bu standartların ilk sürümleri, Aralık 2001 ' de ECMA tarafından yayımlanmıştır.
+C# Language ve Common Language Infrastructure (CLI) spesifikasyonları [Ecma International®](https://www.ecma-international.org/)aracılığıyla standartlaştırılmıştır. Bu standartların ilk baskıları Aralık 2001'de Ecma tarafından yayınlanmıştır.
 
-Standartlardaki sonraki düzeltmeler, programlama dilleri Technical komite ([TC49](https://www.ecma-international.org/memento/tc49.htm)) içinde TC49C#-tg2 () ve TC49-TG3 (CLI) görev grupları tarafından geliştirilmiştir ve ECMA genel DERLEMESI tarafından ve ardından ISO/IEC JTC 1 tarafından ISO hızlı izleme işlemi aracılığıyla benimsenmiştir.
+Program dilleri Teknik Komitesi[(TC49)](https://www.ecma-international.org/memento/tc49.htm)bünyesindeki TC49-TG2 (C#) ve TC49-TG3 (CLI) görev grupları tarafından standartlarda yapılan sonraki revizyonlar, Ecma Genel Kurulu ve daha sonra ISO/IEC JTC 1 tarafından ISO Fast-Track süreci ile kabul edilmiştir.
 
 ### <a name="latest-standards"></a>En son standartlar
 
-Aşağıdaki resmi ECMA belgeleri ve [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) [CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm) için kullanılabilir ([tr-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)):
+Aşağıdaki resmi Ecma belgeleri [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) ve [CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm) [(TR-84)](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)için mevcuttur:
 
-- **Dil standardı (sürüm 5,0): ECMA-334. PDF C#**  [](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
-- **Ortak dil altyapısı**: Bu, [PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) form ve [ZIP](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) biçiminde kullanılabilir.
-- **Bölüm IV XML dosyasından türetilmiş bilgiler**: Bu, [PDF](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) ve [ZIP](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) biçimlerinde kullanılabilir.
+- **C# Dil Standardı (sürüm 5.0)**: [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
+- **Ortak Dil Altyapısı**: Bu [pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) formu ve [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) şeklinde mevcuttur.
+- **Bölüm IV XML Dosyasından Elde Edilen Bilgiler**: Bu [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) ve [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) formatlarında mevcuttur.
 
-Resmi ISO/ıEC belgeleri ISO/ıEC [genel kullanıma açık standartlar](https://standards.iso.org/ittf/PubliclyAvailableStandards/) sayfasından kullanılabilir. Bu bağlantılar bu sayfadan doğrudan yapılır:
+Resmi ISO/IEC belgeleri, ISO/IEC [Genel Kullanıma Sunulan Standartlar](https://standards.iso.org/ittf/PubliclyAvailableStandards/) sayfasından edinilebilir. Bu bağlantılar doğrudan bu sayfadan:
 
-- **Bilgi teknolojisi-programlama dilleri- C#** : [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
-- **Bilgi teknolojisi — mı Istediğim ortak dil altyapısı (CLI) bölümleri**: [ıso/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
-- **Bilgi teknolojisi — ortak dil altyapısı (CLI) — Bölüm IV XML dosyasından türetilen bilgiler hakkında teknik rapor**: [ISO/IEC tr 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
+- **Bilgi teknolojisi - Programlama dilleri - C#**: [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
+- **Bilgi teknolojisi — Ortak Dil Altyapısı (CLI) Bölümleri I - VI**: [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
+- **Bilgi teknolojisi — Ortak Dil Altyapısı (CLI) — Bölüm IV XML Dosyadan Elde Edilen Bilgilere Ilişkin Teknik Rapor**: [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma](choosing-core-framework-server.md)
 - [.NET Standard](net-standard.md)
 - [.NET Core Kılavuzu](../core/index.md)
-- [.NET Framework Kılavuzu](../framework/index.md)
-- [C# Kılavuzu](../csharp/index.yml)
-- [F# Kılavuzu](../fsharp/index.yml)
+- [.NET Çerçeve Rehberi](../framework/index.md)
+- [C# Rehberi](../csharp/index.yml)
+- [F# Rehberi](../fsharp/index.yml)
 - [Visual Basic Kılavuzu](../visual-basic/index.yml)

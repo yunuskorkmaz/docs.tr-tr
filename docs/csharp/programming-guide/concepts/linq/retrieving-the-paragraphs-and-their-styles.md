@@ -1,47 +1,47 @@
 ---
-title: Paragrafları ve stillerini alma (C#)
+title: Paragrafları ve Stillerinin Alınması (C#)
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: ec59ef0ac36f8691ca93a4c21c5379118ee0491f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 47127b6f1d6bfaa0d8d93333882a0d0b59f1bae6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253068"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168303"
 ---
-# <a name="retrieving-the-paragraphs-and-their-styles-c"></a>Paragrafları ve stillerini alma (C#)
-Bu örnekte, bir WordprocessingML belgesinden paragraf düğümlerini alan bir sorgu yazdık. Ayrıca her bir paragrafın stilini belirler.  
+# <a name="retrieving-the-paragraphs-and-their-styles-c"></a>Paragrafları ve Stillerinin Alınması (C#)
+Bu örnekte, WordprocessingML belgesinden paragraf düğümlerini alan bir sorgu yazarız. Ayrıca her paragrafın stilini tanımlar.  
   
- Bu sorgu, stil listesinden varsayılan stili alan [varsayılan paragraf stilini (C#) bularak](./finding-the-default-paragraph-style.md), önceki örnekteki sorgu üzerinde oluşturulur. Bu bilgiler, sorgunun açıkça ayarlanmış bir stile sahip olmayan paragrafların stilini belirleyebilmesi için gereklidir. Paragraf stilleri `w:pPr` öğe aracılığıyla ayarlanır; bir paragraf bu öğeyi içermiyorsa, varsayılan stille biçimlendirilir.  
+ Bu sorgu, önceki örnekte varsayılan stil stilini stillistesinden alan [Varsayılan Paragraf Stilini (C#) bulma](./finding-the-default-paragraph-style.md)sorgusuüzerine oluşturur. Bu bilgiler, sorgunun açıkça ayarlanmış bir stili olmayan paragrafların stilini tanımlayabilmesi için gereklidir. Paragraf stilleri `w:pPr` öğe üzerinden ayarlanır; bir paragraf bu öğeyi içermiyorsa, varsayılan stil ile biçimlendirilir.  
   
- Bu konuda, sorgunun bazı parçalarının önemi açıklanmakta ve sorgu tam, çalışan bir örnek kapsamında gösteriliyor.  
+ Bu konu, sorgunun bazı parçalarının önemini açıklar, ardından sorguyu tam, çalışan bir örneğin parçası olarak gösterir.  
   
 ## <a name="example"></a>Örnek  
- Belgedeki tüm paragrafları ve bunların stillerini almak için sorgunun kaynağı aşağıdaki gibidir:  
+ Belgedeki tüm paragrafları ve stilleri almak için sorgunun kaynağı aşağıdaki gibidir:  
   
 ```csharp  
 xDoc.Root.Element(w + "body").Descendants(w + "p")  
 ```  
   
- Bu ifade, önceki örnekteki sorgunun kaynağına benzer, [varsayılan paragraf stilini (C#) buluyor](./finding-the-default-paragraph-style.md). Temel fark, <xref:System.Xml.Linq.XContainer.Descendants%2A> <xref:System.Xml.Linq.XContainer.Elements%2A> eksen yerine eksenin kullanıldığı bir değer. Sorgu, bölümleri bulunan <xref:System.Xml.Linq.XContainer.Descendants%2A> belgelerde, paragrafları, gövde öğesinin doğrudan alt öğeleri olmayacak şekilde kullanır; bunun yerine, paragraflar hiyerarşide iki düzey olur. <xref:System.Xml.Linq.XContainer.Descendants%2A> Eksen kullanılarak, kod belgenin bölüm kullanıp kullanmadığını belirtir.  
+ Bu ifade, önceki örnekte, Varsayılan Paragraf [Stilini Bulma (C#)](./finding-the-default-paragraph-style.md)sorgusunun kaynağına benzer. Temel fark, eksen yerine <xref:System.Xml.Linq.XContainer.Descendants%2A> ekseni <xref:System.Xml.Linq.XContainer.Elements%2A> kullanmasıdır. Sorgu ekseni <xref:System.Xml.Linq.XContainer.Descendants%2A> kullanır, çünkü bölümleri olan belgelerde paragraflar gövde öğesinin doğrudan alt öğesi olmayacaktır; bunun yerine, paragraflar hiyerarşide iki düzey aşağı olacaktır. Kodun <xref:System.Xml.Linq.XContainer.Descendants%2A> ekseni kullanarak, belgenin bölümleri kullanıp kullanmadığı üzerinde çalışacağız.  
   
 ## <a name="example"></a>Örnek  
- Sorgu, stil düğümünü `let` içeren öğeyi belirlemede bir yan tümce kullanır. Öğe yoksa, `styleNode` şu şekilde `null`ayarlanır:  
+ Sorgu, stil `let` düğümü içeren öğeyi belirlemek için bir yan tümce kullanır. Eleman yoksa, `styleNode` şu şekilde `null`ayarlanır:  
   
 ```csharp  
 let styleNode = para.Elements(w + "pPr").Elements(w + "pStyle").FirstOrDefault()  
 ```  
   
- `pPr` `pStyle` <xref:System.Linq.Enumerable.FirstOrDefault%2A> Yantümcesi<xref:System.Xml.Linq.Extensions.Elements%2A> ilk olarak adlı <xref:System.Xml.Linq.XContainer.Elements%2A> tüm öğeleri bulmak için eksenini kullanır, ardından adlı tüm alt öğeleri bulmak için genişletme yöntemini kullanır ve son olarak standart sorguyu kullanır `let` koleksiyonu bir tekil öğesine dönüştürecek işleç. Koleksiyon boşsa, `styleNode` olarak `null`ayarlanır. Bu, alt düğümü aramak `pStyle` için kullanışlı bir deyimdir. `pPr` Alt düğüm yoksa, bir özel durum oluşturarak kodun bir istisna olduğunu veya başarısız olduğunu, `styleNode` bunun yerine, bu `let` yan tümcesinin istenen davranışı olan `null`olarak ayarlandığını unutmayın.  
+ Yan `let` tümce <xref:System.Xml.Linq.XContainer.Elements%2A> önce adlı `pPr`tüm öğeleri bulmak <xref:System.Xml.Linq.Extensions.Elements%2A> için ekseni kullanır, `pStyle`sonra adlandırılmış <xref:System.Linq.Enumerable.FirstOrDefault%2A> tüm alt öğeleri bulmak için uzantı yöntemini kullanır ve son olarak koleksiyonu bir singleton'a dönüştürmek için standart sorgu işleci kullanır. Koleksiyon boşsa, `styleNode` '' `null`olarak ayarlanır. `pStyle` Bu, soyundan gelen düğümü aramak için yararlı bir deyimdir. `pPr` Alt düğüm yoksa, kod bir özel durum atarak başarısız ne de yok unutmayın; bunun `styleNode` yerine, `null`bu `let` maddenin istenilen davranışı , olarak ayarlanır.  
   
- Sorgu, `StyleName` iki üyeli anonim bir türün bir koleksiyonunu ve `ParagraphNode`.  
+ Sorgu, iki üyeden `StyleName` oluşan anonim bir `ParagraphNode`türde bir koleksiyon ve .  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, WordprocessingML belgesinden paragraf düğümlerini alarak bir WordprocessingML belgesini işler. Ayrıca her bir paragrafın stilini belirler. Bu örnekte, bu öğreticideki önceki örneklerde derleme yapılır. Yeni sorgu, aşağıdaki koddaki açıklamalarda çağrılır.  
+ Bu örnek, bir WordprocessingML belgesinden paragraf düğümlerini alarak bir WordprocessingML belgesini işler. Ayrıca her paragrafın stilini tanımlar. Bu örnek, bu öğreticide önceki örneklere dayanmaktadır. Yeni sorgu aşağıdaki koddaki açıklamalarda çağrılır.  
   
- Kaynak [Office Open XML belgesiC#() oluşturma](./creating-the-source-office-open-xml-document.md)bölümünde bu örnek için kaynak belge oluşturma yönergelerini bulabilirsiniz.  
+ [Kaynak Office Açık XML Belgesi (C#) oluşturma](./creating-the-source-office-open-xml-document.md)bu örnek için kaynak belge oluşturmak için yönergeleri bulabilirsiniz.  
   
- Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> Ad alanındaki türleri kullanır.  
+ Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> Ad alanında türleri kullanır.  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -78,7 +78,7 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
     }  
 }  
   
-string defaultStyle =   
+string defaultStyle =
     (string)(  
         from style in styleDoc.Root.Elements(w + "style")  
         where (string)style.Attribute(w + "type") == "paragraph"&&  
@@ -109,7 +109,7 @@ foreach (var p in paragraphs)
     Console.WriteLine("StyleName:{0}", p.StyleName);  
 ```  
   
- Bu örnek, [kaynak Office Open XML belgesi (C#) oluşturma](./creating-the-source-office-open-xml-document.md)bölümünde açıklanan belgeye uygulandığında aşağıdaki çıktıyı üretir.  
+ Bu örnek, [Kaynak Office Açık XML Belgesi (C#) oluşturma'da](./creating-the-source-office-open-xml-document.md)açıklanan belgeye uygulandığında aşağıdaki çıktıyı üretir.  
   
 ```output  
 StyleName:Heading1  
@@ -130,8 +130,8 @@ StyleName:Code
 ```  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Bir sonraki konu başlığında, [paragrafların (C#) metnini alırken](./retrieving-the-text-of-the-paragraphs.md), paragrafların metnini almak için bir sorgu oluşturacaksınız.  
+ Bir sonraki konu, [Paragrafmetni (C#) alma,](./retrieving-the-text-of-the-paragraphs.md)paragrafmetni almak için bir sorgu oluşturursunuz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: WordprocessingML belgesinde (C#) içeriği düzenleme](./shape-of-wordprocessingml-documents.md)
+- [Öğretici: WordprocessingML Belgesinde İçeriği Manipüle Etme (C#)](./shape-of-wordprocessingml-documents.md)

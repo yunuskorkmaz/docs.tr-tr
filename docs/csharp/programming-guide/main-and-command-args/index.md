@@ -1,5 +1,5 @@
 ---
-title: Main () ve komut satırı bağımsız değişkenleri- C# Programlama Kılavuzu
+title: Ana() ve komut satırı bağımsız değişkenleri - C# Programlama Kılavuzu
 ms.date: 08/02/2017
 f1_keywords:
 - CS5001
@@ -13,29 +13,29 @@ helpviewer_keywords:
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
 ms.openlocfilehash: 0571ec6dbc42f103ec922a6b2b13a52510640a78
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75700607"
 ---
-# <a name="main-and-command-line-arguments-c-programming-guide"></a>Main () ve komut satırı bağımsız değişkenleri (C# Programlama Kılavuzu)
+# <a name="main-and-command-line-arguments-c-programming-guide"></a>Ana() ve komut satırı bağımsız değişkenleri (C# Programlama Kılavuzu)
 
-`Main` yöntemi, bir C# uygulamanın giriş noktasıdır. (Kitaplıklar ve hizmetler, giriş noktası olarak bir `Main` yöntemi gerektirmez.) Uygulama başlatıldığında `Main` yöntemi çağrılan ilk yöntemdir.
+Yöntem, `Main` C# uygulamasının giriş noktasıdır. (Kitaplıklar ve hizmetler `Main` giriş noktası olarak bir yöntem gerektirmez.) Uygulama başlatıldığında, `Main` yöntem çağrılan ilk yöntemdir.
 
- Bir C# programda yalnızca bir giriş noktası olabilir. `Main` yöntemine sahip birden fazla sınıfınız varsa, giriş noktası olarak hangi `Main` yönteminin kullanılacağını belirtmek için programınızı **/Main** derleyici seçeneğiyle derlemeniz gerekir. Daha fazla bilgi için bkz. [-MainC# (derleyici seçenekleri)](../../language-reference/compiler-options/main-compiler-option.md).
+ C# programında yalnızca bir giriş noktası olabilir. Bir `Main` yöntemi olan birden fazla sınıf varsa, giriş noktası olarak hangi `Main` yöntemi kullanacağınızı belirtmek için programınızı **/main** derleyici seçeneğiyle derlemeniz gerekir. Daha fazla bilgi için bkz: [-main (C# Derleyici Seçenekleri)](../../language-reference/compiler-options/main-compiler-option.md).
 
 [!code-csharp[csProgGuideMain#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#17)]
 
-## <a name="overview"></a>Genel bakış
+## <a name="overview"></a>Genel Bakış
 
-- `Main` yöntemi, çalıştırılabilir programın giriş noktasıdır; Program denetiminin başladığı ve bittiği yerdir.
-- `Main` bir sınıf veya yapı içinde bildirilmiştir. `Main` [statik](../../language-reference/keywords/static.md) olması ve [genel](../../language-reference/keywords/public.md)olmaması gerekir. (Önceki örnekte, [Private](../../language-reference/keywords/private.md)'ın varsayılan erişimini alır.) Kapsayan sınıf veya yapının statik olması gerekmez.
-- `Main`, C# 7,1, `Task`veya `Task<int>` dönüş türünden başlayarak `void`, `int`ya da olabilir.
-- Yalnızca `Main` bir `Task` veya `Task<int>`döndürürse, `Main` bildirimi [`async`](../../language-reference/keywords/async.md) değiştiricisini içerebilir. Bunun özellikle bir `async void Main` yöntemi dışladığı unutulmamalıdır.
-- `Main` yöntemi komut satırı bağımsız değişkenleri içeren bir `string[]` parametresiyle veya bu parametre olmadan bildirilebilecek. Windows uygulamaları oluşturmak için Visual Studio kullanırken, parametresini el ile ekleyebilir veya [komut satırı bağımsız değişkenlerini](command-line-arguments.md)almak için <xref:System.Environment.GetCommandLineArgs> yöntemini kullanabilirsiniz. Parametreler, sıfır dizinli komut satırı bağımsız değişkenleri olarak okunurdur. C ve C++' nin aksine, programın adı `args` dizideki ilk komut satırı bağımsız değişkeni olarak değerlendirilmez, ancak <xref:System.Environment.GetCommandLineArgs> yönteminin ilk öğesidir.
+- Yöntem, `Main` çalıştırılabilir bir programın giriş noktasıdır; program denetiminin başladığı ve bittiği yerdir.
+- `Main`bir sınıf veya yapı içinde bildirilir. `Main`[statik](../../language-reference/keywords/static.md) olmalı ve herkese [açık](../../language-reference/keywords/public.md)olması gerekmez. (Önceki örnekte, [özel](../../language-reference/keywords/private.md)varsayılan erişim alır.) Çevreleyen sınıf veya yapı statik olması gerekmez.
+- `Main`c# `void`7.1 `int` `Task`ile başlayan veya `Task<int>` dönüş türüne sahip olabilir.
+- Eğer ve `Main` sadece `Task` bir `Task<int>`veya döndürür, bildirimi `Main` [`async`](../../language-reference/keywords/async.md) değiştirici içerebilir. Bunun özellikle bir `async void Main` yöntemi dışladığını unutmayın.
+- Yöntem `Main` komut satırı bağımsız değişkenleri içeren bir `string[]` parametre ile veya olmadan bildirilebilir. Windows uygulamaları oluşturmak için Visual Studio kullanırken, parametreyi el <xref:System.Environment.GetCommandLineArgs> ile ekleyebilir veya [komut satırı bağımsız değişkenlerini](command-line-arguments.md)elde etmek için yöntemi kullanabilirsiniz. Parametreler sıfır dizine bizinlenmiş komut satırı bağımsız değişkenleri olarak okunur. C ve C++'Dan farklı olarak, programın adı `args` dizideki ilk komut satırı bağımsız değişkeni olarak <xref:System.Environment.GetCommandLineArgs> kabul edilmez, ancak yöntemin ilk öğesidir.
 
-Geçerli `Main` imzalarının listesi aşağıda verilmiştir:
+Geçerli imzaların listesi `Main` aşağıda veda edilebistir:
 
 ```csharp
 public static void Main() { }
@@ -48,7 +48,7 @@ public static async Task Main(string[] args) { }
 public static async Task<int> Main(string[] args) { }
 ```
 
-`async` ve `Task`ekleme `Task<int>` dönüş türleri, konsol uygulamalarının `Main`zaman uyumsuz işlemlere `await` başlaması gerektiğinde program kodunu basitleştirir.
+Konsol uygulamalarının `Task` `Task<int>` başlatılması gerektiğinde ve , return türlerinin `async` eklenmesi `await` ve , iade `Main`türleri program kodunu basitleştirir.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

@@ -1,43 +1,42 @@
 ---
-title: Sorgu anahtar sözcükleri C# -başvuru
+title: Sorgu anahtar kelimeleri - C# Referans
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: 3c08c2b6ecdaa4b875f118531e7e77f7164dd784
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 01134eda540c5141afbd11b2c89ff779da495a9a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713163"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173529"
 ---
-# <a name="query-keywords-c-reference"></a>Sorgu anahtar sözcükleriC# (başvuru)
+# <a name="query-keywords-c-reference"></a>Sorgu anahtar kelimeleri (C# Reference)
 
-Bu bölüm sorgu ifadelerinde kullanılan bağlamsal anahtar sözcüklerini içerir.
+Bu bölümde sorgu ifadelerinde kullanılan bağlamsal anahtar kelimeler bulunur.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
 |Yan Tümce|Açıklama|
 |------------|-----------------|
-|[from](from-clause.md)|Bir veri kaynağını ve bir Aralık değişkenini (yineleme değişkenine benzer) belirtir.|
-|[olmadığı](where-clause.md)|Mantıksal ve ve veya işleçlerle (`&&` veya <code>&#124;&#124;</code>) ayrılmış bir veya daha fazla Boole ifadesine göre kaynak öğelerine filtre uygular.|
-|[seçin](select-clause.md)|Sorgu yürütüldüğünde döndürülen dizideki öğelerin sahip olacağı türü ve şekli belirtir.|
-|[grubu](group-clause.md)|Sorgu sonuçlarını belirtilen bir anahtar değerine göre gruplandırır.|
-|[into](into.md)|JOIN, Group veya Select yan tümcesinin sonuçlarına başvuru olarak sunacak bir tanımlayıcı sağlar.|
-|[OrderBy](orderby-clause.md)|Sorgu sonuçlarını, öğe türünün varsayılan karşılaştırmasına göre artan veya azalan düzende sıralar.|
-|[join](join-clause.md)|İki veri kaynağını belirtilen iki eşleşen ölçüt arasında bir eşitlik karşılaştırması temelinde birleştirir.|
-|[atalım](let-clause.md)|Bir sorgu ifadesinde alt ifade sonuçlarının depolanması için bir Aralık değişkeni tanıtır.|
-|[in](in.md)|[JOIN](join-clause.md) yan tümcesinde bağlamsal anahtar sözcüğü.|
-|[on](on.md)|[JOIN](join-clause.md) yan tümcesinde bağlamsal anahtar sözcüğü.|
-|[equals](equals.md)|[JOIN](join-clause.md) yan tümcesinde bağlamsal anahtar sözcüğü.|
-|[by](by.md)|Bir [Group](group-clause.md) yan tümcesindeki bağlamsal anahtar sözcüğü.|
-|[ascending](ascending.md)|Bir [OrderBy](orderby-clause.md) yan tümcesindeki bağlamsal anahtar sözcüğü.|
-|[descending](descending.md)|Bir [OrderBy](orderby-clause.md) yan tümcesindeki bağlamsal anahtar sözcüğü.|
+|[Kaynak](from-clause.md)|Bir veri kaynağı ve bir aralık değişkeni (yineleme değişkenine benzer) belirtir.|
+|[Nerede](where-clause.md)|Kaynak öğelerini mantıksal VE ve OR işleçleri (veya) `&&` <code>&#124;&#124;</code> tarafından ayrılmış bir veya daha fazla Boolean ifadesini temel alır.|
+|[Seçin](select-clause.md)|Sorgu yürütüldüğünde döndürülen dizideki öğelerin sahip olacağı türü ve şekli belirtir.|
+|[grup](group-clause.md)|Grupları sorgu sonuçları belirtilen bir anahtar değerine göre.|
+|[içine](into.md)|Birbirle, grupla veya seç yan tümcesinin sonuçlarına başvuru olarak hizmet verebilecek bir tanımlayıcı sağlar.|
+|[Orderby](orderby-clause.md)|Sorgu sonuçlarını, öğe türü için varsayılan karşılayıcıyı temel alan artan veya azalan sırada sıralar.|
+|[Katılın](join-clause.md)|İki veri kaynağını, belirtilen iki eşleşen ölçüt arasındaki eşitlik karşılaştırması temel alınabın.|
+|[Izin](let-clause.md)|Bir sorgu ifadesinde alt ifade sonuçlarını depolamak için bir aralık değişkeni tanır.|
+|[Inç](in.md)|[Birleştirme](join-clause.md) yan tümcesindeki bağlamsal anahtar kelime.|
+|[-ını](on.md)|[Birleştirme](join-clause.md) yan tümcesindeki bağlamsal anahtar kelime.|
+|[equals](equals.md)|[Birleştirme](join-clause.md) yan tümcesindeki bağlamsal anahtar kelime.|
+|[Tarafından](by.md)|[Grup](group-clause.md) yan tümcesindeki bağlamsal anahtar kelime.|
+|[ascending](ascending.md)|[Sıralı](orderby-clause.md) yan tümcedeki bağlamsal anahtar kelime.|
+|[descending](descending.md)|[Sıralı](orderby-clause.md) yan tümcedeki bağlamsal anahtar kelime.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Anahtar Sözcükleri](index.md)
-- [LINQ (dil ile tümleşik sorgu)](../../programming-guide/concepts/linq/index.md)
+- [C# Anahtar Kelimeler](index.md)
+- [LINQ (Dil-Entegre Sorgu)](../../programming-guide/concepts/linq/index.md)
 - [C# üzerinde LINQ](../../linq/index.md)
-- [C#'de LINQ Kullanmaya Başlama](/dotnet/csharp/programming-guide/concepts/linq/)

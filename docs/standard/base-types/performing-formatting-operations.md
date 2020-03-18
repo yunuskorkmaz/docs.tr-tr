@@ -11,20 +11,20 @@ helpviewer_keywords:
 - strings [.NET Framework], formatting
 ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
 ms.openlocfilehash: 70dbb0d8d39abb1252d944e1b3ab9656b9ed6c0a
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75964734"
 ---
 # <a name="performing-formatting-operations"></a>Biçimlendirme İşlemlerini Gerçekleştirme
-Aşağıdaki konularda belirli biçimlendirme işlemlerini gerçekleştirmeye yönelik adım adım yönergeler sağlanmaktadır.  
+Aşağıdaki konular, belirli biçimlendirme işlemleri gerçekleştirmek için adım adım yönergeler sağlar.  
   
 - [Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
   
 - [Nasıl yapılır: Özel Sayısal Biçim Sağlayıcıları Tanımlama ve Kullanma](../../../docs/standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md)  
   
-- [Nasıl yapılır: belirli bir tarihten haftanın gününü ayıklama](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md).  
+- [Nasıl: Belirli bir Tarihten Haftanın Günü ayıklayın.](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md)  
   
 - [Nasıl yapılır: Gidiş Dönüş Tarih ve Saat Değerleri](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: -linkresource (C# derleyici seçenekleri)
+title: -linkresource (C# Derleyici Seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /linkresource
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: 454915454f3faf15933257f3e3e221afec51d0ee
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 41af8e0ba8ffebd07d3cb1d2bc5fbc04b8cd595d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606760"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173737"
 ---
-# <a name="-linkresource-c-compiler-options"></a>-linkresource (C# derleyici seçenekleri)
-Çıkış dosyasındaki bir .NET Framework kaynağına bir bağlantı oluşturur. Kaynak dosyası çıkış dosyasına eklenmez. Bu, çıkış dosyasına bir kaynak dosyası katıştırabilen [-Resource](./resource-compiler-option.md) seçeneğinden farklıdır.  
+# <a name="-linkresource-c-compiler-options"></a>-linkresource (C# Derleyici Seçenekleri)
+Çıktı dosyasındaki bir .NET Framework kaynağına bağlantı oluşturur. Kaynak dosyası çıktı dosyasına eklenmez. Bu, çıktı dosyasına bir kaynak dosyası gömmeyi yapan [-kaynak](./resource-compiler-option.md) seçeneğinden farklıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,38 +27,38 @@ ms.locfileid: "69606760"
 -linkresource:filename[,identifier[,accessibility-modifier]]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  `filename`  
  Derlemeden bağlamak istediğiniz .NET Framework kaynak dosyası.  
   
- `identifier`seçim  
- Kaynağın mantıksal adı; kaynağı yüklemek için kullanılan ad. Varsayılan değer, dosyanın adıdır.  
+ `identifier` (isteğe bağlı)  
+ Kaynak için mantıksal ad; kaynağı yüklemek için kullanılan ad. Varsayılan, dosyanın adıdır.  
   
- `accessibility-modifier`seçim  
- Kaynağın erişilebilirliği: public veya Private. Varsayılan değer geneldir.  
+ `accessibility-modifier` (isteğe bağlı)  
+ Kaynağın erişilebilirliği: ortak veya özel. Varsayılan değer herkese açıktır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsayılan olarak, bağlantılı kaynaklar C# derleyici ile oluşturulduklarında derlemede ortaktır. Kaynakları özel hale getirmek için erişilebilirlik değiştiricisi `private` olarak belirtin. `public` Veya`private` dışında başka bir değiştirici kullanılamaz.  
+ Varsayılan olarak, bağlı kaynaklar C# derleyicisi ile oluşturulduğunda derlemede herkese açıktır. Kaynakları özel yapmak için `private` erişilebilirlik değiştirici olarak belirtin. Başka bir değiştirici `public` dışında `private` veya izin verilir.  
   
- **-linkresource** ,- **target: Module**dışındaki [-target](./target-compiler-option.md) seçeneklerinden birini gerektiriyor.  
+ **-linkresource** **-target:module**dışındaki [-hedef](./target-compiler-option.md) seçeneklerinden birini gerektirir.  
   
- , Örneğin [Resgen. exe](../../../framework/tools/resgen-exe-resource-file-generator.md) veya geliştirme ortamında oluşturulmuş bir .NET Framework kaynak dosyası ise, <xref:System.Resources> ad alanındaki üyelerle erişilebilir. `filename` Daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Diğer tüm kaynaklar için, çalışma zamanında `GetManifestResource` kaynağa erişmek üzere <xref:System.Reflection.Assembly> sınıfındaki yöntemleri kullanın.  
+ Örneğin `filename` [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) veya geliştirme ortamında oluşturulan bir .NET Framework kaynak dosyasıysa, <xref:System.Resources> ad alanındaki üyelerle erişilebilir. Daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Diğer tüm kaynaklar için, çalışma <xref:System.Reflection.Assembly> zamanında kaynağa erişmek için sınıftaki `GetManifestResource` yöntemleri kullanın.  
   
- İçinde `filename` belirtilen dosya herhangi bir biçimde olabilir. Örneğin, genel derleme önbelleğine yüklenebilmesi ve derlemedeki yönetilen koddan erişilebilmesi için derlemenin yerel bir DLL parçası yapmak isteyebilirsiniz. Aşağıdaki örneklerden İkincisi bunun nasıl yapılacağını gösterir. Derleme bağlayıcıda aynı şeyi yapabilirsiniz. Aşağıdaki örneklerden üçüncüsü bunun nasıl yapılacağını gösterir. Daha fazla bilgi için bkz. [al. exe (bütünleştirilmiş kod bağlayıcı)](../../../framework/tools/al-exe-assembly-linker.md) ve [derlemeler ve genel derleme önbelleği ile çalışma](../../../framework/app-domains/working-with-assemblies-and-the-gac.md).  
+ Belirtilen dosya `filename` herhangi bir biçimde olabilir. Örneğin, genel derleme önbelleğine yüklenmesi ve derlemedeki yönetilen koddan erişilebilmesini sağlamak için derlemenin yerel bir DLL parçası olmak isteyebilirsiniz. Aşağıdaki örneklerden ikincisi bunun nasıl yapılacağını gösterir. Aynı şeyi Derleme Linker'da da yapabilirsiniz. Aşağıdaki örneklerin üçüncüsü bunun nasıl yapılacağını gösterir. Daha fazla bilgi için [Al.exe (Derleme Bağlantı Cısı)](../../../framework/tools/al-exe-assembly-linker.md) ve [Derlemeler ve Küresel Montaj Önbelleği ile çalışma](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)'ya bakın.  
   
- **-linkres** , **-linkresource**öğesinin kısa biçimidir.  
+ **-linkres** **-linkresource**kısa şeklidir.  
   
- Bu derleyici seçeneği Visual Studio 'da kullanılamaz ve program aracılığıyla değiştirilemez.  
+ Bu derleyici seçeneği Visual Studio'da kullanılamaz ve programlı olarak değiştirilemez.  
   
 ## <a name="example"></a>Örnek  
- Derle `in.cs` ve kaynak dosyasına `rf.resource`bağla:  
+ Kaynak `in.cs` dosyasını `rf.resource`derleme ve bağlantı:  
   
 ```console  
 csc -linkresource:rf.resource in.cs  
 ```  
   
 ## <a name="example"></a>Örnek  
- Bir `A.cs` dll 'de derleyin, yerel dll N. dll ' ye bağlanın ve çıktıyı genel derleme önbelleği 'ne (GAC) yerleştirin. Bu örnekte, hem. dll hem de N. dll GAC 'de yer alır.  
+ Bir `A.cs` DLL'ye kopyala, yerel bir DLL N.dll'ye bağlantı ve çıktıyı Global Assembly Önbelleğine (GAC) koyun. Bu örnekte, hem A.dll hem de N.dll GAC'de ikamet edecektir.  
   
 ```console  
 csc -linkresource:N.dll -t:library A.cs  
@@ -66,11 +66,11 @@ gacutil -i A.dll
 ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir önceki ile aynı şeyi, ancak derleme bağlayıcı seçeneklerini kullanarak yapar.  
+ Bu örnek, öncekiyle aynı şeyi yapar, ancak Derleme Bağlayıcı sı seçeneklerini kullanarak.  
   
 ```console  
 csc -t:module A.cs  
-al -out:A.dll A.netmodule -link:N.dll   
+al -out:A.dll A.netmodule -link:N.dll
 gacutil -i A.dll  
 ```  
   
@@ -78,5 +78,5 @@ gacutil -i A.dll
 
 - [C# Derleyici Seçenekleri](./index.md)
 - [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../framework/tools/al-exe-assembly-linker.md)
-- [Bütünleştirilmiş Kodlar ve Genel Derleme Önbelleği ile Çalışma](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)
+- [Derlemeler ve Genel Derleme Önbelleği ile Çalışma](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

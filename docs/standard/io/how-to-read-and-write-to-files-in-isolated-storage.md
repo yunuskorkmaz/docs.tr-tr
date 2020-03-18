@@ -17,17 +17,17 @@ helpviewer_keywords:
 - stores, reading and writing to files
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
 ms.openlocfilehash: a1ea65b0b8280faf51595b2fe9edcbf17eaabd8f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75706692"
 ---
 # <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolamadaki Dosyaları Okuma ve Yazma
-Yalıtılmış bir depodaki bir dosyayı okumak veya dosyaya yazmak için, bir <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> nesnesini Stream Reader (<xref:System.IO.StreamReader> nesnesi) veya Stream Writer (<xref:System.IO.StreamWriter> nesnesi) ile kullanın.  
+Yalıtılmış bir depodaki bir dosyadan okumak veya <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> yazmak için,<xref:System.IO.StreamReader> akış okuyucusu (nesne) veya akış yazarı (nesne)<xref:System.IO.StreamWriter> olan bir nesne kullanın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği yalıtılmış bir depo edinir ve mağaza 'da TestStore. txt adlı bir dosyanın var olup olmadığını denetler. Yoksa, dosyayı oluşturur ve dosyaya "Hello yalıtılmış depolama" yazar. TestStore. txt zaten varsa, örnek kod dosyadan okur.  
+ Aşağıdaki kod örneği yalıtılmış bir depo alır ve TestStore.txt adlı bir dosyanın mağazada bulunup bulunmadığına denetler. Yoksa, dosyayı oluşturur ve dosyaya "Hello İzole Depolama" yazar. TestStore.txt zaten varsa, örnek kodu dosyadan okur.  
   
  [!code-csharp[Conceptual.IsolatedStorage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source5.cs#5)]
  [!code-vb[Conceptual.IsolatedStorage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source5.vb#5)]  

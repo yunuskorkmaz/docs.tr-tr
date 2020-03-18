@@ -1,25 +1,25 @@
 ---
 title: Sabit listesi türleri yerine Sabit Listesi sınıfları kullanma
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | İkinci öğesinin bazı sınırlamalarını çözmenin bir yolu olarak, numaralandırmalar yerine numaralandırma sınıflarını nasıl kullanabileceğinizi ortadan kaldırabilirsiniz.
+description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Lear nasıl numaralandırma sınıfları kullanabilirsiniz, yerine numaralandırma, ikincisi bazı sınırlamaları çözmek için bir yol olarak.
 ms.date: 10/08/2018
-ms.openlocfilehash: 82bd80d19b3b73eb2f45ede8cc7ad4593c688277
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: fb2cbcd744f29c70a86e6f3300721934192eb752
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628468"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847186"
 ---
-# <a name="use-enumeration-classes-instead-of-enum-types"></a>Sabit listesi türleri yerine numaralandırma sınıfları kullanın
+# <a name="use-enumeration-classes-instead-of-enum-types"></a>Enum türleri yerine numaralandırma sınıflarını kullanma
 
-[Numaralandırmalar](../../../csharp/language-reference/builtin-types/enum.md) (veya Short için *sabit listesi türleri* ), bir integral türü etrafında ince bir dil sarmalayıcısıdır. Kapalı bir değer kümesinden bir değeri depolarken, kullanımlarını sınırlamak isteyebilirsiniz. Boyutlara göre sınıflandırma (küçük, orta, büyük) iyi bir örnektir. Denetim akışı veya daha güçlü soyutlamalar için Numaralandırmaların kullanılması [kod kokusu](https://deviq.com/code-smells/)olabilir. Bu kullanım türü, numaralandırmanın değerlerini denetleyen birçok denetim akışı deyimi ile fragla kodu doğurur.
+[Sayısallaştırmalar](../../../csharp/language-reference/builtin-types/enum.md) (veya kısaca *şun türleri)* integral bir tür etrafında ince bir dil sarıcıdır. Kapalı bir değer kümesinden bir değer depolarken kullanımlarını sınırlamak isteyebilirsiniz. Boyutlara göre sınıflandırma (küçük, orta, büyük) iyi bir örnektir. Kontrol akışı veya daha sağlam soyutlamalar için enums kullanarak bir [kod kokusu](https://deviq.com/code-smells/)olabilir. Bu tür kullanım, enumun değerlerini kontrol eden birçok kontrol akışı ekstresiyle kırılgan koda yol açar.
 
-Bunun yerine, nesne yönelimli bir dilin tüm zengin özelliklerini etkinleştiren numaralandırma sınıfları oluşturabilirsiniz.
+Bunun yerine, nesne yönelimli bir dilin tüm zengin özelliklerini etkinleştiren Numaralandırma sınıfları oluşturabilirsiniz.
 
-Ancak, bu önemli bir konu değildir ve birçok durumda kolaylık sağlaması için, tercih ettiğiniz takdirde normal [numaralandırma türlerini](../../../csharp/language-reference/builtin-types/enum.md) kullanmaya devam edebilirsiniz. Yine de, sabit listesi sınıflarının kullanımı işle ilgili kavramlarla ilgilidir.
+Ancak, bu kritik bir konu değildir ve birçok durumda, basitlik için, tercihiniz buysa düzenli [enum türlerini](../../../csharp/language-reference/builtin-types/enum.md) kullanmaya devam edebilirsiniz. Her neyse, numaralandırma sınıflarının kullanımı daha çok işle ilgili kavramlarla ilgilidir.
 
-## <a name="implement-an-enumeration-base-class"></a>Numaralandırma temel sınıfı uygulama
+## <a name="implement-an-enumeration-base-class"></a>Numaralandırma taban sınıfı uygulama
 
-EShopOnContainers 'daki sıralama mikro hizmeti, aşağıdaki örnekte gösterildiği gibi bir örnek numaralandırma temel sınıf uygulamasını sağlar:
+eShopOnContainers'daki sipariş microservice, aşağıdaki örnekte gösterildiği gibi örnek bir Numaralandırma taban sınıfı uygulaması sağlar:
 
 ```csharp
 public abstract class Enumeration : IComparable
@@ -64,14 +64,14 @@ public abstract class Enumeration : IComparable
 }
 ```
 
-Bu sınıfı, aşağıdaki `CardType` gibi, herhangi bir varlık veya değer nesnesinde bir tür olarak kullanabilirsiniz: `Enumeration` Sınıfı:
+`CardType` Aşağıdaki: `Enumeration` sınıf gibi, herhangi bir varlık veya değer nesnesinde bu sınıfı bir tür olarak kullanabilirsiniz:
 
 ```csharp
 public class CardType : Enumeration
 {
-    public static CardType Amex = new CardType(1, "Amex");
-    public static CardType Visa = new CardType(2, "Visa");
-    public static CardType MasterCard = new CardType(3, "MasterCard");
+    public static readonly CardType Amex = new CardType(1, "Amex");
+    public static readonly CardType Visa = new CardType(2, "Visa");
+    public static readonly CardType MasterCard = new CardType(3, "MasterCard");
 
     public CardType(int id, string name)
         : base(id, name)
@@ -82,21 +82,21 @@ public class CardType : Enumeration
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Jimmy Bogard. Numaralandırma sınıfları** \
+- **Jimmy Bogard' ı. Numaralandırma sınıfları** \
   <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>
 
-- **Steve Smith. \ sabit listesi C# alternatifleri**
+- **Steve Smith' i. C'de Enum Alternatifleri #** \
   <https://ardalis.com/enum-alternatives-in-c>
 
-- **Enumeration.cs.** EShopOnContainers içindeki temel numaralandırma sınıfı \
+- **Enumeration.cs.** eShopOnContainers 'da Taban Numaralandırma sınıfı \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs>
 
-- **CardType.cs**. EShopOnContainers içinde örnek numaralandırma sınıfı. \
+- **CardType.cs.** Örnek Numaralandırma sınıfı eShopOnContainers. \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs>
 
-- **Smartenum**. .NET ' te kesin olarak belirlenmiş daha akıllı numaralandırmalar üretmeye yardımcı olmak için ardın sınıfları. \
+- **SmartEnum**. Ardalis - .NET'te güçlü bir şekilde yazılan akıllı enumların üretilemelerine yardımcı olacak sınıflar. \
   <https://www.nuget.org/packages/Ardalis.SmartEnum/>
 
 >[!div class="step-by-step"]
 >[Önceki](implement-value-objects.md)
->[İleri](domain-model-layer-validations.md)
+>[Sonraki](domain-model-layer-validations.md)

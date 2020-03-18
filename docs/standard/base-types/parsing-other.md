@@ -1,5 +1,5 @@
 ---
-title: .NET 'teki diğer dizeleri ayrıştırma
+title: .NET'te Diğer Dizeleri Ayrışdırma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,35 +14,35 @@ helpviewer_keywords:
 - Boolean data type, parsing strings
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
 ms.openlocfilehash: 08e891501bbefcf8b32eff10dd7294af9d81adac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127567"
 ---
-# <a name="parsing-other-strings-in-net"></a>.NET 'teki diğer dizeleri ayrıştırma
-Sayısal ve <xref:System.DateTime> dizelerine ek olarak, <xref:System.Char>, <xref:System.Boolean>ve <xref:System.Enum> türlerini temsil eden dizeleri veri türlerine de ayrıştırabilirsiniz.  
+# <a name="parsing-other-strings-in-net"></a>.NET'te Diğer Dizeleri Ayrışdırma
+Sayısal <xref:System.DateTime> ve dizeleri ek olarak, aynı zamanda <xref:System.Char>türleri temsil dizeleri <xref:System.Boolean>ayrıştını , ve <xref:System.Enum> veri türleri içine.  
   
 ## <a name="char"></a>Char  
- **Char** veri türüyle ilişkili statik Parse yöntemi, tek bir karakter içeren bir dizeyi Unicode değerine dönüştürmek için yararlıdır. Aşağıdaki kod örneği bir dizeyi Unicode karakter olarak ayrıştırır.  
+ **Char** veri türüyle ilişkili statik ayrıştırma yöntemi, tek bir karakter içeren bir dizeyi Unicode değerine dönüştürmek için yararlıdır. Aşağıdaki kod örneği, bir dizeyi Unicode karakterine benzeter.  
   
  [!code-cpp[Conceptual.String.Parse#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#2)]
  [!code-csharp[Conceptual.String.Parse#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#2)]
  [!code-vb[Conceptual.String.Parse#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#2)]  
   
-## <a name="boolean"></a>Boole değeri  
- **Boolean** veri türü, bir Boolean değeri temsil eden bir dizeyi gerçek bir **Boolean** türüne dönüştürmek için kullanabileceğiniz bir **Parse** yöntemi içerir. Bu yöntem, büyük/küçük harfe duyarlı değildir ve "true" veya "false" içeren bir dizeyi başarıyla ayrıştırabilirler. **Boolean** türüyle ilişkili **Parse** yöntemi, boşluk ile çevrelenen dizeleri de ayrıştırabilirler. Başka bir dize geçmişse, bir <xref:System.FormatException> oluşturulur.  
+## <a name="boolean"></a>Boole  
+ Boolean veri türü, **Boolean** değerini temsil eden bir dizeyi gerçek **boolean** türüne dönüştürmek için kullanabileceğiniz bir **Ayrışdır** yöntemi içerir. Bu yöntem büyük/küçük harf duyarlı değildir ve "True" veya "False" içeren bir dizeyi başarıyla ayrıştırabilir. **Boolean** türüyle ilişkili **Ayrıştırıcı** yöntemi, beyaz boşluklarla çevrili dizeleri de ayrıştırabilir. Başka bir dize geçilirse, bir <xref:System.FormatException> atılır.  
   
- Aşağıdaki kod örneği bir dizeyi Boole değerine dönüştürmek için **Parse** metodunu kullanır.  
+ Aşağıdaki kod örneği, bir dizeyi Boolean değerine dönüştürmek için **Ayrışma** yöntemini kullanır.  
   
  [!code-cpp[Conceptual.String.Parse#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#3)]
  [!code-csharp[Conceptual.String.Parse#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#3)]
  [!code-vb[Conceptual.String.Parse#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#3)]  
   
 ## <a name="enumeration"></a>Sabit Listesi  
- Statik **Parse** yöntemini bir dize değerine bir sabit listesi türü başlatmak için kullanabilirsiniz. Bu yöntem, ayrıştırma yaptığınız numaralandırma türünü, ayrıştırılacak dizeyi ve ayrıştırmanın büyük/küçük harfe duyarlı olup olmadığını belirten isteğe bağlı bir Boolean bayrağını kabul eder. Ayrıştırıldıkları dize, bir veya daha fazla boş boşluk (boşluk da denir) tarafından öncesinde veya sonra gelen virgüllerle ayrılmış birkaç değer içerebilir. Dize birden çok değer içerdiğinde, döndürülen nesnenin değeri, bir bit düzeyinde veya işlemle birlikte belirtilen tüm değerlerin değeridir.  
+ Bir dizinin değerine numaralandırma türünü başlatmak için statik **Ayrışma** yöntemini kullanabilirsiniz. Bu yöntem, ayrıştırdığınız numaralandırma türünü, ayrıştırmak için dize ve ayrıştırma durumda duyarlı olup olmadığını belirten isteğe bağlı Boolean bayrağı kabul eder. Ayrıştırdığınız dize, virgülle ayrılmış birkaç değer içerebilir ve bu değerler bir veya daha fazla boş boşluk (beyaz boşluk olarak da adlandırılır) tarafından önce veya ardından gelebilir. Dize birden çok değer içeriyorsa, döndürülen nesnenin değeri, bitwise OR işlemiyle birlikte tüm belirtilen değerlerin değeridir.  
   
- Aşağıdaki örnek, bir dize gösterimini bir numaralandırma değerine dönüştürmek için **Parse** metodunu kullanır. <xref:System.DayOfWeek> numaralandırması bir dizeden **Perşembe** olarak başlatılır.  
+ Aşağıdaki örnek, dize gösterimini numaralandırma değerine dönüştürmek için **Parse** yöntemini kullanır. Numaralandırma <xref:System.DayOfWeek> bir dize **perşembeye** başharfle.  
   
  [!code-cpp[Conceptual.String.Parse#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#4)]
  [!code-csharp[Conceptual.String.Parse#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#4)]
@@ -52,4 +52,4 @@ Sayısal ve <xref:System.DateTime> dizelerine ek olarak, <xref:System.Char>, <xr
 
 - [Dizeleri Ayrıştırma](../../../docs/standard/base-types/parsing-strings.md)
 - [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)
-- [.NET 'te tür dönüştürme](../../../docs/standard/base-types/type-conversion.md)
+- [.NET'te Tür Dönüştürme](../../../docs/standard/base-types/type-conversion.md)

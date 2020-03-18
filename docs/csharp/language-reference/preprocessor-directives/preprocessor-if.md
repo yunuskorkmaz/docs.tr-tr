@@ -1,5 +1,5 @@
 ---
-title: '#If Önişlemci yönergesi- C# başvuru'
+title: '#if önişlemci yönergesi - C# Referans'
 ms.date: 10/27/2019
 f1_keywords:
 - '#if'
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
 ms.openlocfilehash: d047b88f202341a795834809d0b601706c30fcb4
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75899850"
 ---
-# <a name="if-c-reference"></a>#if (C# başvuru)
+# <a name="if-c-reference"></a>#if (C# referansı)
 
-C# Derleyici bir `#if` yönergesi ile karşılaştığında, sonunda bir [#endif](preprocessor-endif.md) yönergesi ile, yalnızca belirtilen sembol tanımlanmışsa, yönergeler arasındaki kodu derler. C ve C++' nin aksine, bir simgeye sayısal değer atayamazsınız. İçindeki C# `#if` deyimleri Boolean olur ve yalnızca sembolün tanımlanıp tanımlanmadığını sınar. Örneğin:
+C# derleyicisi bir `#if` yönergeyle karşılaştığında ve ardından [bir #endif](preprocessor-endif.md) yönergesi takip ettiğinde, kodu yalnızca belirtilen sembol tanımlanırsa yönergeler arasında derler. C ve C++'ın aksine, bir sembole sayısal değer atamazsınız. `#if` C# ifadesi Boolean'dır ve yalnızca sembolün tanımlanıp tanımlanmadığını test edin. Örnek:
 
 ```csharp
 #if DEBUG
@@ -23,34 +23,34 @@ C# Derleyici bir `#if` yönergesi ile karşılaştığında, sonunda bir [#endif
 #endif
 ```
 
-[==](../operators/equality-operators.md#equality-operator-) (eşitlik) ve [! =](../operators/equality-operators.md#inequality-operator-) (eşitsizlik) işleçlerini yalnızca [bool](../builtin-types/bool.md) değerleri `true` veya `false`test etmek için kullanabilirsiniz. `true`, simgenin tanımlandığı anlamına gelir. Deyimin `#if DEBUG` `#if (DEBUG == true)`ile aynı anlamı vardır. [& & (Ve)](../operators/boolean-logical-operators.md#conditional-logical-and-operator-), [ &#124; &#124; (veya)](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) [ve ' i kullanabilirsiniz. (Not)](../operators/boolean-logical-operators.md#logical-negation-operator-) birden çok sembolün tanımlanıp tanımlanmadığını değerlendirmek için işleçler. Simgeleri ve işleçleri parantez ile de gruplandırabilirsiniz.
+[==](../operators/equality-operators.md#equality-operator-) İşleçleri (eşitlik) ve [!=](../operators/equality-operators.md#inequality-operator-) (eşitsizlik) yalnızca [bool](../builtin-types/bool.md) değerlerini `true` veya `false`. `true`sembolün tanımlandığı anlamına gelir. İfade `#if DEBUG` , `#if (DEBUG == true)`. [&& (ve)](../operators/boolean-logical-operators.md#conditional-logical-and-operator-)kullanabilirsiniz, [&#124;&#124; (veya)](../operators/boolean-logical-operators.md#conditional-logical-or-operator-), ve [! (değil)](../operators/boolean-logical-operators.md#logical-negation-operator-) birden çok sembolün tanımlanıp tanımlanmadığını değerlendirmek için işleçler. Sembolleri ve işleçleri parantez içinde de gruplayabilirsiniz.
 
 ## <a name="remarks"></a>Açıklamalar
 
-`#if`, [#else](preprocessor-else.md), [#elif](preprocessor-elif.md), [#endif](preprocessor-endif.md), [#define](preprocessor-define.md)ve [#undef](preprocessor-undef.md) yönergeleriyle birlikte, bir veya daha fazla simgenin varlığına göre kodu dahil etmenize veya dışlamanızı sağlar. Bu, hata ayıklama derlemesi için kod derlerken veya belirli bir yapılandırma için derlenirken yararlı olabilir.
+`#if`, [#else,](preprocessor-else.md) [#elif,](preprocessor-elif.md) [#endif,](preprocessor-endif.md) [#define](preprocessor-define.md)ve [#undef](preprocessor-undef.md) yönergeleri yle birlikte, bir veya daha fazla sembolün varlığına bağlı olarak kod eklemenize veya hariç tutmanıza olanak tanır. Bu, hata ayıklama yapısı için kod derlerken veya belirli bir yapılandırma için derleme yaparken yararlı olabilir.
 
-`#if` yönergesiyle başlayan koşullu bir yönerge açıkça bir `#endif` yönergesi ile sonlandırılmalıdır.
+Bir `#if` yönergeyle başlayan koşullu bir yönerge, bir `#endif` yönergeyle açıkça sonlandırılmalıdır.
 
-`#define` bir simge tanımlamanızı sağlar. Sonra, `#if` yönergesine geçirilen ifade olarak sembolünü kullanarak, ifade `true`olarak değerlendirilir.
+`#define`bir sembol tanımlamanızı sağlar. Daha sonra ifade `#if` yönergeye geçti olarak sembolü kullanarak, `true`ifade değerlendirir.
 
-Ayrıca, [-define](../compiler-options/define-compiler-option.md) derleyici seçeneğiyle bir simge tanımlayabilirsiniz. [#Undef](preprocessor-undef.md)bir simge tanımlayabilirsiniz.
+[-define](../compiler-options/define-compiler-option.md) derleyici seçeneğiyle bir sembol de tanımlayabilirsiniz. Bir sembolü [#undef](preprocessor-undef.md)ile tanımlayabilirsiniz.
 
-`-define` veya `#define` ile tanımladığınız bir sembol aynı ada sahip bir değişkenle çakışmaz. Diğer bir deyişle, bir değişken adı bir Önişlemci yönergesine geçirilmemelidir ve bir sembol yalnızca bir Önişlemci yönergesi tarafından değerlendirilebilmelidir.
+Tanımladığınız `-define` veya tanımladığınız `#define` bir sembol, aynı ada sahip bir değişkenle çakışmaz. Diğer bir diğer adıyla, bir değişken adı bir önişlemci yönergesine geçirilmemelidir ve bir sembol yalnızca bir önişlemci yönergesi tarafından değerlendirilebilir.
 
-`#define` ile oluşturulan bir simgenin kapsamı tanımlandığı dosyadır.
+Oluşturulan `#define` bir sembolün kapsamı, oluşturulduğu dosyadır.
 
-Yapı sistemi, SDK stili projelerde farklı [hedef çerçeveleri](../../../standard/frameworks.md) temsil eden önceden tanımlanmış ön işlemci sembolleri de farkındadır. Birden fazla .NET uygulaması veya sürümü hedefleyebilir uygulamalar oluştururken faydalıdır.
+Yapı sistemi, SDK tarzı projelerde farklı [hedef çerçeveleri](../../../standard/frameworks.md) temsil eden önceden tanımlanmış önişlemci sembollerinin de farkındadır. Birden fazla .NET uygulamasını veya sürümünü hedefleyen uygulamalar oluştururken kullanışlıdır.
 
 [!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
 
 > [!NOTE]
-> Geleneksel .NET Framework projelerinde, Visual Studio 'daki farklı hedef çerçeveler için koşullu derleme sembollerini projenin Özellikler sayfaları aracılığıyla el ile yapılandırmanız gerekir.
+> Geleneksel .NET Framework projeleri için, Visual Studio'daki farklı hedef çerçeveler için koşullu derleme sembollerini projenin özellikleri sayfaları üzerinden el ile yapılandırmanız gerekir.
 
-Önceden tanımlanmış diğer semboller, hata ayıklama ve Izleme sabitlerini içerir. `#define`kullanarak proje için ayarlanan değerleri geçersiz kılabilirsiniz. Örneğin, hata ayıklama sembolü, derleme yapılandırma özelliklerine ("hata ayıklama" veya "yayın" modu) göre otomatik olarak ayarlanır.
+Önceden tanımlanmış diğer semboller de BUG ve TRACE sabitlerini içerir. Proje için ayarlanan değerleri kullanarak `#define`geçersiz kılabilirsiniz. Örneğin HATA Ayıklama simgesi, yapı yapılandırma özelliklerinize ("Hata Ayıklama" veya "Sürüm" modu) bağlı olarak otomatik olarak ayarlanır.
 
 ## <a name="examples"></a>Örnekler
 
-Aşağıdaki örnek, bir dosya üzerinde MYTEST sembolünü nasıl tanımlacağınızı ve sonra MYTEST ve hata ayıklama simgelerinin değerlerini test etmek için size gösterir. Bu örneğin çıktısı, projeyi hata ayıklama veya sürüm yapılandırma modunda derdığınıza bağlıdır.
+Aşağıdaki örnek, bir dosyada MYTEST simgesini nasıl tanımlayabileceğinizi ve ardından MYTEST ve Hata Ayıklama simgelerinin değerlerini nasıl sınadığınızı gösterir. Bu örneğin çıktısı, projeyi Hata Ayıklama veya Sürüm yapılandırma modunda oluşturup oluşturamadığınıza bağlıdır.
 
 ```csharp
 #define MYTEST
@@ -72,7 +72,7 @@ public class MyClass
 }
 ```
 
-Aşağıdaki örnekte, mümkünse daha yeni API 'Leri kullanabilmeniz için farklı hedef çerçeveler için nasıl test yapılacağı gösterilmektedir:
+Aşağıdaki örnek, mümkün olduğunda daha yeni API'leri kullanabilmeniz için farklı hedef çerçeveleri nasıl sınadığınızı gösterir:
 
 ```csharp
 public class MyClass
@@ -91,7 +91,7 @@ public class MyClass
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../index.md)
+- [C# Referans](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Ön İşlemci Yönergeleri](index.md)
+- [C# Önİşleme İşlemciler Direktifleri](index.md)
 - [Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)

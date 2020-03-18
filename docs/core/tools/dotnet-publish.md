@@ -1,26 +1,26 @@
 ---
-title: dotnet publish komutu
-description: Dotnet publish komutu bir dizine .NET Core projesi veya çözümü yayımlar.
+title: dotnet yayımlama komutu
+description: Dotnet yayımlama komutu bir .NET Core projesi veya çözüm bir dizine yayımlar.
 ms.date: 02/24/2020
-ms.openlocfilehash: cf41ee09244faad03feb8ccda19135b8c7780106
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: c34618409c9a539043c84c7e03daa8aa249d64f6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157006"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146561"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 2.1 SDK ve sonraki sürümler
 
 ## <a name="name"></a>Adı
 
-`dotnet publish`-uygulamayı ve bağımlılıklarını barındırma sistemine dağıtım için bir klasöre yayımlar.
+`dotnet publish`- Uygulama ve bağımlılıklarını barındırma sistemine dağıtım için bir klasöre yayımlar.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Özet
 
 ```dotnetcli
-dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration] 
+dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration]
     [-f|--framework] [--force] [--interactive] [--manifest]
     [--no-build] [--no-dependencies] [--no-restore] [--nologo]
     [-o|--output] [-r|--runtime] [--self-contained]
@@ -31,104 +31,104 @@ dotnet publish [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet publish` uygulamayı derler, proje dosyasında belirtilen bağımlılıklarını okur ve elde edilen dosya kümesini bir dizine yayınlar. Çıktı aşağıdaki varlıkları içerir:
+`dotnet publish`uygulamayı derler, proje dosyasında belirtilen bağımlılıkları okur ve ortaya çıkan dosya kümesini bir dizine yayınlar. Çıktı aşağıdaki varlıkları içerir:
 
-- *DLL* uzantılı bir derlemede ara DIL (IL) kodu.
-- Projenin tüm bağımlılıklarını içeren bir *. Deps. JSON* dosyası.
-- Uygulamanın beklediği paylaşılan çalışma zamanını belirten *. runtimeconfig. JSON* dosyası ve çalışma zamanına yönelik diğer yapılandırma seçenekleri (örneğin, çöp toplama türü).
-- NuGet önbelleğinden çıkış klasörüne kopyalanmış olan uygulamanın bağımlılıkları.
+- *Dll* uzantılı bir derlemede Ara Dil (IL) kodu.
+- Projenin tüm bağımlılıklarını içeren bir *.deps.json* dosyası.
+- Uygulamanın beklediği paylaşılan çalışma süresini ve çalışma zamanı için diğer yapılandırma seçeneklerini (örneğin, çöp toplama türü) belirten bir *.runtimeconfig.json* dosyası.
+- NuGet önbelleğinden çıktı klasörüne kopyalanan uygulamabağımlılıkları.
 
-`dotnet publish` komutun çıktısı, yürütme için bir barındırma sistemine (örneğin, bir sunucu, PC, Mac, dizüstü bilgisayar) dağıtıma yöneliktir. Uygulamayı dağıtıma hazırlamak için tek resmi olarak desteklenen bir yoldur. Projenin belirttiği dağıtımın türüne bağlı olarak, barındırma sisteminde .NET Core paylaşılan çalışma zamanı yüklü olabilir veya olmayabilir.
+Komutun `dotnet publish` çıktısı yürütme için bir barındırma sistemine (örneğin, bir sunucu, PC, Mac, dizüstü bilgisayar) dağıtım için hazırdır. Uygulamayı dağıtıma hazırlamak için resmi olarak desteklenen tek yol bu. Projenin belirttiği dağıtım türüne bağlı olarak, barındırma sistemi .NET Core paylaşılan çalışma zamanı yüklü olabilir veya olmayabilir.
 
 ## <a name="arguments"></a>Bağımsız Değişkenler
 
 - **`PROJECT|SOLUTION`**
 
-  Yayımlanacak proje veya çözüm.
+  Yayımlanmak için proje veya çözüm.
   
-  * `PROJECT`, veya Visual Basic proje dosyasının yolu ve [C#](csproj.md)dosya F#adıdır ya da C#, F#veya Visual Basic proje dosyası içeren bir dizinin yoludur. Dizin belirtilmemişse, varsayılan olarak geçerli dizine ayarlanır.
+  * `PROJECT`[C#](csproj.md), F#veya Visual Basic proje dosyasının yolu ve dosya adı veya C#, F#veya Visual Basic proje dosyası içeren bir dizine giden yoldur. Dizin belirtilmemişse, geçerli dizine varsayılan olarak.
 
-  * `SOLUTION`, bir çözüm dosyasının ( *. sln* uzantısının) yolu ve dosya adıdır veya çözüm dosyası içeren bir dizinin yoludur. Dizin belirtilmemişse, varsayılan olarak geçerli dizine ayarlanır. **.NET Core 3,0 SDK ile başlayarak kullanılabilir.** 
+  * `SOLUTION`çözüm dosyasının *(.sln* uzantısı) veya çözüm dosyası içeren bir dizine giden yol ve dosya adıdır. Dizin belirtilmemişse, geçerli dizine varsayılan olarak. .NET Core 3.0 SDK'dan beri mevcuttur.
 
 ## <a name="options"></a>Seçenekler
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  Yapı yapılandırmasını tanımlar. Çoğu proje için varsayılan değer `Debug`, ancak projenizde derleme yapılandırma ayarlarını geçersiz kılabilirsiniz.
+  Yapı yapılandırmasını tanımlar. Çoğu proje için `Debug`varsayılan değer, ancak projenizdeki yapı yapılandırma ayarlarını geçersiz kılabilirsiniz.
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Belirtilen [hedef çerçeve](../../standard/frameworks.md)için uygulamayı yayımlar. Hedef çerçeveyi proje dosyasında belirtmeniz gerekir.
+  Belirtilen [hedef çerçeve](../../standard/frameworks.md)için uygulama yayımlar. Proje dosyasındaki hedef çerçeveyi belirtmeniz gerekir.
 
 - **`--force`**
 
-  Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar. Bu bayrağın belirtilmesi, *Project. varlıklar. JSON* dosyasını silme ile aynıdır.
+  Son geri yükleme başarılı olsa bile tüm bağımlılıkları çözüme kavuşturmaya zorlar. Bu bayrağı *belirtmek, project.assets.json* dosyasını silmekle aynıdır.
 
 - **`-h|--help`**
 
   Komut için kısa bir yardım yazdırır.
 
-- **`--interactive`** **.NET Core 3,0 SDK ile başlayarak kullanılabilir.**
+- **`--interactive`**
 
-  Komutun Kullanıcı girişini veya eylemini durdurmasına ve beklemesine izin verir. Örneğin, kimlik doğrulamasını tamamlamaya yönelik. 
+  Komutun durmasını ve kullanıcı girişi veya eylemini beklemesini sağlar. Örneğin, kimlik doğrulamasını tamamlamak için. .NET Core 3.0 SDK'dan beri mevcuttur.
 
 - **`--manifest <PATH_TO_MANIFEST_FILE>`**
 
-  Uygulamayla yayımlanmış paket kümesini kırpmak için kullanılacak bir veya birkaç [hedef bildirimi](../deploying/runtime-store.md) belirtir. Bildirim dosyası [`dotnet store` komutunun](dotnet-store.md)çıktısının bir parçasıdır. Birden çok bildirim belirtmek için her bildirim için bir `--manifest` seçeneği ekleyin.
+  Uygulamayla birlikte yayınlanan paket kümesini kırpmak için kullanılacak bir veya birkaç [hedef bildirimi](../deploying/runtime-store.md) belirtir. Bildirim dosyası [ `dotnet store` komutun](dotnet-store.md)çıktısının bir parçasıdır. Birden çok bildirim belirtmek `--manifest` için, her bildirim için bir seçenek ekleyin.
 
 - **`--no-build`**
 
-  Yayımlamadan önce projeyi oluşturmaz. Ayrıca `--no-restore` bayrağını örtülü olarak ayarlar.
+  Yayımlamadan önce projeyi oluşturmaz. Ayrıca bayrağı da `--no-restore` örtülü olarak ayarlar.
 
 - **`--no-dependencies`**
 
-  Projeden projeye başvuruları yoksayar ve yalnızca kök projeyi geri yükler.
+  Projeden projeye başvuruları yoksa ve yalnızca kök projeyi geri yükler.
 
-- **`--nologo`** **.NET Core 3,0 SDK ile başlayarak kullanılabilir.**
+- **`--nologo`**
 
-  Başlangıç başlığını veya telif hakkı iletisini görüntülemez. 
+  Başlangıç bayrağını veya telif hakkı iletisini görüntülemez. .NET Core 3.0 SDK'dan beri mevcuttur.
 
 - **`--no-restore`**
 
-  Komutu çalıştırılırken örtük geri yükleme yürütülmez.
+  Komutu çalıştırırken örtük bir geri yükleme yürütmez.
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Çıkış dizini için yolu belirtir. Belirtilmemişse, çalışma zamanına bağlı bir yürütülebilir dosya ve platformlar arası ikili dosyalar için *./bin/[Configuration]/[Framework]/Publish/* varsayılan değeri. Otomatik olarak içerilen bir yürütülebilir dosya için *./bin/[Configuration]/[Framework]/[Runtime]/Publish/* varsayılan olarak.
+  Çıktı dizininin yolunu belirtir. Belirtilmemişse, çalışma süresine bağlı yürütülebilir ve çapraz platform ikilileri için *./bin/[configuration]/[framework]/publish/* varsayılan olarak. Kendi kendine yeten bir yürütülebilir için *./bin/[configuration]/[framework]/[runtime]/[runtime]/publish/* olarak varsayılan olarak.
 
-  Yol göreli ise, oluşturulan çıkış dizini geçerli çalışma dizinine değil, proje dosyası konumuna göre belirlenir.
+  Yol göreceliyse, oluşturulan çıktı dizini geçerli çalışma dizinine değil, proje dosyası konumuna göredir.
 
 - **`--self-contained [true|false]`**
 
-  .NET Core çalışma zamanını uygulamanızla yayımlar, böylece çalışma zamanının hedef makinede yüklü olması gerekmez. Bir çalışma zamanı tanımlayıcısı belirtilmişse varsayılan `true`. Daha fazla bilgi için bkz. [.NET Core uygulaması yayımlama](../deploying/index.md) ve [.NET Core CLI .NET Core uygulamaları](../deploying/deploy-with-cli.md)yayımlama.
+  .NET Core çalışma zamanını uygulamanızla birlikte yayınlar, böylece çalışma süresinin hedef makineye yüklenmesi gerekmez. Varsayılan, `true` çalışma zamanı tanımlayıcısı belirtilmişse. Daha fazla bilgi için [.NET Core uygulama yayımlama](../deploying/index.md) ve [.NET Core CLI ile .NET Core uygulamaları yayımlama](../deploying/deploy-with-cli.md)'ya bakın.
 
-- **`--no-self-contained`** **.NET Core 3,0 SDK ile başlayarak kullanılabilir.**
+- **`--no-self-contained`**
 
-  `--self-contained false`eşdeğerdir.
+  `--self-contained false`Eşdeğeri . .NET Core 3.0 SDK'dan beri mevcuttur.
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Uygulamayı belirli bir çalışma zamanı için yayımlar. Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md). Daha fazla bilgi için bkz. [.NET Core uygulaması yayımlama](../deploying/index.md) ve [.NET Core CLI .NET Core uygulamaları](../deploying/deploy-with-cli.md)yayımlama.
+  Belirli bir çalışma zamanı için uygulamayı yayımlar. Runtime Tanımlayıcıları (RID'ler) listesi için RID [kataloğuna](../rid-catalog.md)bakın. Daha fazla bilgi için [.NET Core uygulama yayımlama](../deploying/index.md) ve [.NET Core CLI ile .NET Core uygulamaları yayımlama](../deploying/deploy-with-cli.md)'ya bakın.
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`.
+  Komutun ayrıntılı düzeyini ayarlar. İzin verilen `q[uiet]` `m[inimal]`değerler `n[ormal]` `d[etailed]`, `diag[nostic]`, , , ve . Varsayılan değer. `minimal`
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 
-  Proje dosyasının sürüm alanındaki yıldız işaretini (`*`) değiştirecek sürüm sonekini tanımlar.
+  Proje dosyasının sürüm alanında yıldız işaretini`*`( ) değiştirmek için sürüm soneki tanımlar.
 
 ## <a name="examples"></a>Örnekler
 
-- Geçerli dizindeki proje için [çalışma zamanına bağımlı platformlar arası ikili](../deploying/index.md#produce-a-cross-platform-binary) oluşturun:
+- Geçerli dizinde proje için [çalışma süresine bağımlı çapraz platform ikilisi](../deploying/index.md#produce-a-cross-platform-binary) oluşturun:
 
   ```dotnetcli
   dotnet publish
   ```
 
-  .NET Core 3,0 SDK ile başlayarak bu örnek ayrıca geçerli platform için [çalışma zamanına bağlı bir yürütülebilir dosya](../deploying/index.md#publish-runtime-dependent) oluşturur.
+  .NET Core 3.0 SDK ile başlayarak, bu örnek aynı zamanda geçerli platform için [çalıştırılabilir bir çalışma zamanı bağımlı](../deploying/index.md#publish-runtime-dependent) oluşturur.
 
-- Belirli bir çalışma zamanı için geçerli dizindeki proje için [kendi kendine içerilen bir yürütülebilir dosya](../deploying/index.md#publish-self-contained) oluşturun:
+- Belirli bir çalışma süresi için geçerli dizindeki proje için bağımsız bir [yürütülebilir](../deploying/index.md#publish-self-contained) oluşturun:
 
   ```dotnetcli
   dotnet publish --runtime osx.10.11-x64
@@ -136,27 +136,27 @@ dotnet publish [-h|--help]
 
   RID proje dosyasında olmalıdır.
 
-- Belirli bir platform için geçerli dizindeki proje için [çalışma zamanına bağımlı bir yürütülebilir dosya](../deploying/index.md#publish-runtime-dependent) oluşturun:
+- Belirli bir platform için geçerli dizindeki proje için [çalışma süresine bağlı yürütülebilir bir çalıştırılmaz](../deploying/index.md#publish-runtime-dependent) oluşturun:
 
   ```dotnetcli
   dotnet publish --runtime osx.10.11-x64 --self-contained false
   ```
 
-  RID proje dosyasında olmalıdır. Bu örnek .NET Core 3,0 SDK ve sonraki sürümleri için geçerlidir.
+  RID proje dosyasında olmalıdır. Bu örnek .NET Core 3.0 SDK ve sonraki sürümler için geçerlidir.
 
-- Projeyi, belirli bir çalışma zamanı ve hedef çerçeve için geçerli dizinde yayımlayın:
+- Belirli bir çalışma zamanı ve hedef çerçeve için projeyi geçerli dizinde yayımlayın:
 
   ```dotnetcli
   dotnet publish --framework netcoreapp3.1 --runtime osx.10.11-x64
   ```
 
-- Belirtilen proje dosyasını Yayımla:
+- Belirtilen proje dosyasını yayımlayın:
 
   ```dotnetcli
   dotnet publish ~/projects/app1/app1.csproj
   ```
 
-- Geçerli uygulamayı yayımlayın ancak projeden projeye (P2P) başvurularını geri yüklemeyin, ancak geri yükleme işlemi sırasında yalnızca kök proje:
+- Geçerli uygulamayı yayımlayın, ancak projeden projeye (P2P) başvurularını, yalnızca geri yükleme işlemi sırasındaki kök projeyi geri yüklemeyin:
 
   ```dotnetcli
   dotnet publish --no-dependencies
@@ -164,9 +164,9 @@ dotnet publish [-h|--help]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core uygulama yayımlamaya genel bakış](../deploying/index.md)
-- [.NET Core CLI .NET Core uygulamaları yayımlayın](../deploying/deploy-with-cli.md)
+- [.NET Core uygulama yayıncılığı genel bakış](../deploying/index.md)
+- [.NET Core CLI ile .NET Core uygulamalarını yayımla](../deploying/deploy-with-cli.md)
 - [Hedef çerçeveler](../../standard/frameworks.md)
-- [Çalışma zamanı tanımlayıcı (RID) kataloğu](../rid-catalog.md)
-- [MacOS Catalina notarle çalışma](../install/macos-notarization-issues.md) Daha fazla bilgi için aşağıdaki kaynaklara bakın:
-- [Yayımlanan bir uygulamanın dizin yapısı](/aspnet/core/hosting/directory-structure)
+- [Çalışma Zamanı Tanımlayıcı (RID) kataloğu](../rid-catalog.md)
+- [macOS Catalina Noterizasyonu ile çalışma](../install/macos-notarization-issues.md) Daha fazla bilgi için aşağıdaki kaynaklara bakın:
+- [Yayınlanan bir uygulamanın dizin yapısı](/aspnet/core/hosting/directory-structure)

@@ -1,5 +1,5 @@
 ---
-title: -Checked (C# derleyici seçenekleri)
+title: -kontrol edildi (C# Derleyici Seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /checked
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 44dc0fc8f50e5248ce2fca17c36f7309a6aca8d1
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: cb4dbadfa4efd0750ffd3dea88a3f661e2f85a8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239698"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173776"
 ---
-# <a name="-checked-c-compiler-options"></a>-Checked (C# derleyici seçenekleri)
-**-Checked** seçeneği, veri türü aralığının dışında olan ve [denetlenen](../keywords/checked.md) veya [işaretlenmemiş](../keywords/unchecked.md) bir anahtar sözcüğünün kapsamında olmayan bir değer ile sonuçlanan bir tamsayı aritmetik ifadesinin bir çalışma zamanı özel durumuna neden olup olmadığını belirtir.  
+# <a name="-checked-c-compiler-options"></a>-kontrol edildi (C# Derleyici Seçenekleri)
+**Denetlenen** seçenek, veri türünün kapsamı dışında bir değerle sonuçlanan ve [denetlenen](../keywords/checked.md) veya [işaretlenmemiş](../keywords/unchecked.md) anahtar kelime kapsamında olmayan bir tamsayı aritmetik deyiminin çalışma zamanı özel durum larına neden olup olmadığını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -25,28 +25,28 @@ ms.locfileid: "78239698"
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir `checked` veya `unchecked` anahtar sözcüğünün kapsamındaki tamsayı aritmetik bir ifade, **-Checked** seçeneğinin etkisine tabi değildir.  
+ Bir veya `checked` `unchecked` anahtar kelime kapsamında olan bir tamsayı aritmetik **deyimi- işaretli** seçeneğin etkisine tabi değildir.  
   
- Bir `checked` veya `unchecked` anahtar sözcüğünün kapsamında olmayan bir tamsayı aritmetik bildirim, derlemede bir değer ve **-Checked +** (veya **-Checked**) kullanılırsa, bu ifade çalışma zamanında bir özel duruma neden olur. **-Checked-** derlemede kullanılırsa, bu ifade çalışma zamanında bir özel duruma neden olmaz.  
+ Bir `checked` veya `unchecked` anahtar kelime kapsamında olmayan bir tamsayı aritmetik deyimi, veri türünün aralığı dışında bir değerle sonuçlanır ve **-denetlenmiş+** (veya **-denetlenmiş)** derlemede kullanılırsa, bu ifade çalışma zamanında özel bir özel durum oluşturur. **Derlemede -denetlenen-** kullanılırsa, bu deyim çalışma zamanında özel bir özel durum neden olmaz.  
   
- Bu seçenek için varsayılan değer **-denetlenir-** ; taşma denetimi devre dışı.
- 
- Bazen, büyük uygulamalar oluşturmak için kullanılan otomatikleştirilmiş araçlar + ' a ayarlanır. ' In kullanılmasına yönelik bir senaryo,-Checked-belirterek aracın genel varsayılanını geçersiz kılmalıdır.
- 
+ Bu seçeneğin varsayılan değeri **-işaretli-**; taşma denetimi devre dışı bırakılır.
+
+ Bazen, büyük uygulamalar oluşturmak için kullanılan otomatik araçlar ayarlanır -+' olarak denetlenir. -denetlenen- kullanmak için bir senaryo, -denetlenmiş- belirterek aracın genel varsayılanGeçersiz kılmaktır.
+
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1. Projenin **Özellikler** sayfasını açın. Daha fazla bilgi için bkz. [derleme sayfası, proje TasarımcısıC#()](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1. Projenin **Özellikleri** sayfasını açın. Daha fazla bilgi için Bkz. [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
-2. **Yapı** özelliği sayfasına tıklayın.  
+2. Özellik **Oluştur** sayfasını tıklatın.  
   
-3. **Gelişmiş** düğmesine tıklayın.  
+3. **Gelişmiş** düğmesini tıklatın.  
   
-4. **Aritmetik taşma Için denetimi** değiştirin özelliği.  
+4. **Aritmetik taşma** özelliği için Denetimi değiştirin.  
   
- Bu derleyici seçeneğine program aracılığıyla erişmek için bkz. <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.  
+ Bu derleyici seçeneğine programlı <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>olarak erişmek için bkz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki komut `t2.cs`derler. Komutunda `-checked` kullanımı, dosyasında bir `checked` veya `unchecked` anahtar sözcüğünün kapsamında olmayan herhangi bir tamsayı aritmetik deyimin olduğunu ve veri türünün aralığı dışında bir değer oluşmasına neden olur, çalışma zamanında bir özel duruma neden olur.  
+ Aşağıdaki komut derler. `t2.cs` `-checked` Komutun kullanımı, dosyadaki bir `checked` veya `unchecked` anahtar kelime kapsamında olmayan herhangi bir tamsayı aritmetik deyiminin veri türünün kapsamı dışında bir değerle sonuçlandığını ve çalışma zamanında bir özel durum almasına neden olduğunu belirtir.  
   
 ```console  
 csc t2.cs -checked  

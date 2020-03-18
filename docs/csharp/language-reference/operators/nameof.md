@@ -1,5 +1,5 @@
 ---
-title: NameOf işleci- C# başvuru
+title: işlecinin adı - C# referansı
 ms.date: 07/12/2019
 f1_keywords:
 - nameof_CSharpKeyword
@@ -7,34 +7,34 @@ f1_keywords:
 helpviewer_keywords:
 - nameof operator [C#]
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: a734cae8fbb944774a4bd1bda9194a548b3d82bc
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: ffbc801acf61bf72db1c88912dc2142a478fa280
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239228"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846278"
 ---
-# <a name="nameof-operator-c-reference"></a>NameOf işleci (C# başvuru)
+# <a name="nameof-operator-c-reference"></a>işlecinin adı (C# referansı)
 
-`nameof` işleci, dize sabiti olarak bir değişkenin, türün veya üyenin adını edinir:
+İşleç, `nameof` dize sabiti olarak bir değişkenin, yazın veya üyenin adını alır:
 
-[!code-csharp-interactive[nameof operator](~/samples/snippets/csharp/language-reference/operators/NameOfOperator.cs#Examples)]
+[!code-csharp-interactive[nameof operator](snippets/NameOfOperator.cs#Examples)]
 
-Yukarıdaki örnekte gösterildiği gibi, bir tür ve ad alanı durumunda, oluşturulan ad genellikle [tam olarak nitelenir](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).
+Yukarıdaki örnekte de görüldüğü gibi, bir tür ve ad alanı durumunda, üretilen ad genellikle [tam olarak nitelikli](~/_csharplang/spec/basic-concepts.md#fully-qualified-names)değildir.
 
-`nameof` işleci derleme zamanında değerlendirilir ve çalışma zamanında hiçbir etkiye sahip değildir.
+Operatör `nameof` derleme zamanında değerlendirilir ve çalışma zamanında hiçbir etkisi yoktur.
 
-Bağımsız değişken denetim kodunu daha sürdürülebilir hale getirmek için `nameof` işlecini kullanabilirsiniz:
+Bağımsız değişken `nameof` denetimi kodunu daha koruyabilir hale getirmek için işleci kullanabilirsiniz:
 
-[!code-csharp[nameof and argument check](~/samples/snippets/csharp/language-reference/operators/NameOfOperator.cs#ExceptionMessage)]
+[!code-csharp[nameof and argument check](snippets/NameOfOperator.cs#ExceptionMessage)]
 
-`nameof` işleci C# 6 ve üzeri sürümlerde kullanılabilir.
+Operatör `nameof` C# 6 ve sonrası mevcuttur.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [NameOf ifadeleri](~/_csharplang/spec/expressions.md#nameof-expressions) bölümüne bakın.
+Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [İfadeler](~/_csharplang/spec/expressions.md#nameof-expressions) Bölümü'ne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvurunun](../index.md)
+- [C# başvurusu](../index.md)
 - [C# işleçleri](index.md)

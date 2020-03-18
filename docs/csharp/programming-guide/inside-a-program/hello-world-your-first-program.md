@@ -1,5 +1,5 @@
 ---
-title: Merhaba Dünya--Windows veya Mac 'te Visual Studio 'Yu kullanan ilk programınız- C# Programlama Kılavuzu
+title: Hello World -- Windows veya Mac'te Visual Studio'yu kullanan ilk programınız - C# Programlama Kılavuzu
 ms.date: 09/12/2019
 f1_keywords:
 - cs.program
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
 ms.openlocfilehash: 910fa4af1b4e45ce627b589a06910dc168490047
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712149"
 ---
-# <a name="hello-world----your-first-program"></a>Merhaba Dünya--ilk programınız
+# <a name="hello-world----your-first-program"></a>Hello World -- İlk programınız
 
-Bu makalede, geleneksel "Merhaba Dünya!" öğesini oluşturmak için Visual Studio 'Yu kullanacaksınız programda. Visual Studio, .NET geliştirmesi için tasarlanan çok sayıda özelliği olan profesyonel tümleşik bir geliştirme ortamıdır (IDE). Bu programı oluşturmak için Visual Studio 'daki özelliklerden yalnızca birkaçını kullanacaksınız. Visual Studio hakkında daha fazla bilgi edinmek için bkz. [ C#Visual ile çalışmaya ](/visualstudio/ide/quickstart-csharp-console)başlama.
+Bu makalede, geleneksel "Hello World!" oluşturmak için Visual Studio'yu kullanacaksınız. Program. Visual Studio, .NET geliştirme için tasarlanmış birçok özelliğe sahip profesyonel bir Entegre Geliştirme Ortamıdır (IDE). Bu programı oluşturmak için Visual Studio'daki özelliklerden yalnızca birkaçını kullanırsınız. Visual Studio hakkında daha fazla bilgi edinmek için Visual [C# ile Başlarken'e](/visualstudio/ide/quickstart-csharp-console)bakın.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
@@ -25,22 +25,22 @@ Bu makalede, geleneksel "Merhaba Dünya!" öğesini oluşturmak için Visual Stu
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
-Visual Studio’yu çalıştırın. Windows 'da aşağıdaki görüntüyü görürsünüz:
+Visual Studio’yu çalıştırın. Windows'da aşağıdaki resmi görürsünüz:
 
-![Windows 'da Visual Studio hoş geldiniz ekranı](./media/hello-world-your-first-program/visual-studio-windows-start-screen.png)
+![Windows'da Visual Studio karşılama ekranı](./media/hello-world-your-first-program/visual-studio-windows-start-screen.png)
 
-Görüntünün sağ alt köşesinde **Yeni proje oluştur** ' u seçin. Visual Studio **Yeni proje** iletişim kutusunu görüntüler:
+Görüntünün sağ alt köşesinde **yeni bir proje oluştur'u** seçin. Visual Studio **Yeni Proje** iletişim kutusunu görüntüler:
 
-![Windows 'da Visual Studio yeni proje ekranı](./media/hello-world-your-first-program/visual-studio-windows-new-project.png)
+![Windows'da Visual Studio yeni proje ekranı](./media/hello-world-your-first-program/visual-studio-windows-new-project.png)
 
 > [!NOTE]
-> Visual Studio 'Yu ilk kez başlattıysanız, **son kullanılan proje şablonları** listesi boştur.
+> Visual Studio'yu ilk kez başlattıysanız, **Son proje şablonları** listesi boştur.
 
-Yeni proje iletişim kutusunda, "konsol uygulaması (.NET Core)" öğesini seçin ve ardından **İleri**' ye basın. Projenize "HelloWorld" gibi bir ad verin ve ardından **Oluştur**' a basın.
+Yeni proje iletişim kutusunda "Console App (.NET Core)" seçeneğini belirleyin ve **ardından İleri**tuşuna basın. Projenize "HelloWorld" gibi bir ad verin ve **Oluştur'a**basın.
 
-Visual Studio, projenizi açar. Zaten temel bir "Merhaba Dünya!" örneğinde. Projenizi çalıştırmak için `Ctrl` + `F5` tuşuna basın. Visual Studio, projenizi oluşturup kaynak kodu yürütülebilir dosyaya dönüştürür. Ardından, yeni uygulamanızı çalıştıran bir komut penceresi başlatır. Pencerede aşağıdaki metni görmeniz gerekir:
+Visual Studio projenizi açar. Zaten temel bir "Merhaba Dünya!" Örnek. Projenizi çalıştırmak için basın. `Ctrl`  +  `F5` Visual Studio, kaynak kodu çalıştırılabilir e dönüştürerek projenizi oluşturur. Daha sonra, yeni uygulamanızı çalıştıran bir komut penceresi başlatıyor. Pencerede aşağıdaki metni görmeniz gerekir:
 
 ```console
 Hello World!
@@ -51,22 +51,22 @@ Press any key to close this window . . .
 
 Pencereyi kapatmak için bir tuşa basın.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[Macos](#tab/macos)
 
-Mac için Visual Studio başlatın. Mac üzerinde aşağıdaki görüntüyü görürsünüz:
+Mac için Visual Studio'u başlatın. Mac'te aşağıdaki resmi görürsünüz:
 
-![Mac üzerinde Visual Studio hoş geldiniz ekranı](./media/hello-world-your-first-program/visual-studio-mac-start-screen.png)
+![Mac'te Visual Studio karşılama ekranı](./media/hello-world-your-first-program/visual-studio-mac-start-screen.png)
 
 > [!NOTE]
-> Mac için Visual Studio ilk kez başladıysanız, **son projeler** listesi boştur.
+> Mac için Visual Studio'yu ilk kez başlattıysanız, **Son projeler** listesi boştur.
 
-Görüntünün sağ üst köşesindeki **Yeni** ' yi seçin. **Yeni proje** iletişim kutusunu Mac için Visual Studio görüntüler:
+Görüntünün sağ üst köşesinde **Yeni'yi** seçin. Mac için Visual **Studio, Yeni Proje** iletişim kutusunu görüntüler:
 
-![Mac 'te Visual Studio yeni proje ekranı](./media/hello-world-your-first-program/visual-studio-mac-new-project.png)
+![Mac Visual Studio yeni proje ekranı](./media/hello-world-your-first-program/visual-studio-mac-new-project.png)
 
-Yeni proje iletişim kutusunda ".NET Core" ve "konsol uygulaması" ' nı seçin ve ardından **İleri**' ye basın. Hedef Framework 'ü seçmeniz gerekir. Varsayılan değer iyidir, bu nedenle ileri ' ye basın. Projenize "HelloWorld" gibi bir ad verin ve ardından **Oluştur**' a basın. Varsayılan proje konumunu kullanabilirsiniz. Bu projeyi kaynak denetimine eklemeyin.
+Yeni proje iletişim kutusunda ".NET Core" ve "Console App" seçeneğini belirleyin ve **Ardından İleri**tuşuna basın. Hedef çerçeveyi seçmeniz gerekir. Varsayılan değer gayet iyi, bu yüzden bir sonrakine basın. Projenize "HelloWorld" gibi bir ad verin ve **Oluştur'a**basın. Varsayılan proje konumunu kullanabilirsiniz. Bu projeyi kaynak denetimine eklemeyin.
 
-Mac için Visual Studio projenizi açar. Zaten temel bir "Merhaba Dünya!" örneğinde. Projenizi çalıştırmak için `Ctrl` + `Fn` + `F5` basın. Mac için Visual Studio, projenizi derleme ve kaynak kodu çalıştırılabilir dosyaya dönüştürme. Ardından, yeni uygulamanızı çalıştıran bir komut penceresi başlatır. Pencerede aşağıdaki metni görmeniz gerekir:
+Mac için Visual Studio projenizi açar. Zaten temel bir "Merhaba Dünya!" Örnek. Projenizi çalıştırmak için basın. `Ctrl`  +  `Fn`  +  `F5` Mac için Visual Studio, kaynak kodu çalıştırılabilire dönüştürerek projenizi oluşturur. Daha sonra, yeni uygulamanızı çalıştıran bir komut penceresi başlatıyor. Pencerede aşağıdaki metni görmeniz gerekir:
 
 ```console
 Hello World!
@@ -74,57 +74,57 @@ Hello World!
 Press any key to close this window . . .
 ```
 
-Oturumu sonlandırmak için bir tuşa basın.
+Oturumu sonlamak için bir tuşa basın.
 
 ---
 
-## <a name="elements-of-a-c-program"></a>Bir C# programın öğeleri
+## <a name="elements-of-a-c-program"></a>C# programının öğeleri
 
-Bu programın önemli kısımlarını inceleyelim. İlk satır bir açıklama içerir. Karakterler `//` satırı geri kalanını açıklamaya dönüştürür.
+Bu programın önemli bölümlerini inceleyelim. İlk satır bir yorum içerir. Karakterler satırın geri kalanını yoruma `//` dönüştürür.
 
 [!code-csharp[csProgGuide#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#32)]
 
-Ayrıca, bir metin bloğunu `/*` ve `*/` karakterleri arasına ekleyerek açıklama ekleyebilirsiniz. Bu, aşağıdaki örnekte gösterilir.
+Ayrıca, bir metin bloğunu `/*` karakterlerle `*/` karakterler arasına ekleyerek yorum yapabilirsiniz. Bu, aşağıdaki örnekte gösterilir.
 
 [!code-csharp[csProgGuide#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#33)]
 
-C# Konsol uygulaması, denetimin başladığı ve bittiği `Main` bir yöntem içermelidir. `Main` yöntemi, nesneleri oluşturduğunuz ve diğer yöntemleri yürütebileceğiniz yerdir.
+C# konsol uygulaması, `Main` denetimin başlayıp sona erdiği bir yöntem içermelidir. Yöntem, `Main` nesneleri oluşturduğunuz ve diğer yöntemleri yürüttüğüğün yerdir.
 
-`Main` yöntemi, bir sınıf veya yapı içinde bulunan [statik](../../language-reference/keywords/static.md) bir yöntemdir. Önceki "Merhaba Dünya!" örnek, `Hello`adlı bir sınıfta bulunur. `Main` yöntemini aşağıdaki yöntemlerden biriyle bildirebilirsiniz:
+Yöntem, `Main` bir sınıf veya bir yapı içinde bulunan [statik](../../language-reference/keywords/static.md) bir yöntemdir. Önceki "Hello World!" örneğin, adlı `Hello`bir sınıfta bulunur. `Main` Yöntemi aşağıdaki yollardan biriyle bildirebilirsiniz:
 
-- `void`döndürebilir. Bu, programınızın bir değer döndürmeyeceği anlamına gelir.
+- Geri dönebilir. `void` Bu, programınızın bir değer döndürmediği anlamına gelir.
 
 [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
 
-- Ayrıca, bir tamsayı döndürebilir. Tamsayı, uygulamanız için **Çıkış kodudur** .
+- Ayrıca bir sonda döndürebilir. Sonda, uygulamanızın **çıkış kodudur.**
 
 [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-- Dönüş türlerinden biri ile bağımsız değişken alabilir.
+- İade türlerinden herhangi biriyle, bağımsız değişkenler alabilir.
 
 [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
-veya
+-veya-
 
 [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
-`Main` yönteminin parametresi, `args`, programı çağırmak için kullanılan komut satırı bağımsız değişkenlerini içeren bir `string` dizidir.
+`Main` Yöntemin parametresi, `args`programı `string` çağırmak için kullanılan komut satırı bağımsız değişkenlerini içeren bir dizidir.
 
-Komut satırı bağımsız değişkenlerinin nasıl kullanılacağı hakkında daha fazla bilgi için, [ana () ve komut satırı bağımsız değişkenlerinde](../main-and-command-args/index.md)örneklere bakın.
+Komut satırı bağımsız değişkenleri nasıl kullanılacağı hakkında daha fazla bilgi için [Main() ve Command-Line Bağımsız](../main-and-command-args/index.md)Değişkenleri'ndeki örneklere bakın.
 
 ## <a name="input-and-output"></a>Girdi ve çıktı
 
-C#programlar genellikle .NET Framework çalışma zamanı kitaplığı tarafından sunulan giriş/çıkış hizmetlerini kullanır. Deyimin `System.Console.WriteLine("Hello World!");` <xref:System.Console.WriteLine%2A> yöntemini kullanır. Bu, çalışma zamanı kitaplığındaki <xref:System.Console> sınıfının çıkış yöntemlerinden biridir. Dize parametresini standart çıkış akışında ve ardından yeni bir satırla görüntüler. Diğer <xref:System.Console> Yöntemler farklı giriş ve çıkış işlemleri için kullanılabilir. `using System;` yönergesini programın başına eklerseniz, <xref:System> sınıfları ve yöntemleri tamamen nitelemeden doğrudan kullanabilirsiniz. Örneğin, `System.Console.WriteLine`yerine `Console.WriteLine` çağırabilirsiniz:
+C# programları genellikle .NET Framework'ün çalışma zamanı kitaplığı tarafından sağlanan giriş/çıktı hizmetlerini kullanır. İfade `System.Console.WriteLine("Hello World!");` yöntemini <xref:System.Console.WriteLine%2A> kullanır. Bu, çalışma zamanı kitaplığında <xref:System.Console> sınıfın çıktı yöntemlerinden biridir. Dize parametresini standart çıktı akışında yeni bir çizgi yle görüntüler. Farklı <xref:System.Console> giriş ve çıkış işlemleri için başka yöntemler de mevcuttur. Yönergeyi `using System;` programın başına eklerseniz, <xref:System> sınıfları ve yöntemleri tam olarak nitelemeden doğrudan kullanabilirsiniz. Örneğin, bunun yerine `Console.WriteLine` `System.Console.WriteLine`arayabilirsiniz:
 
 [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
 
 [!code-csharp[csProgGuide#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#23)]
 
-Giriş/çıkış yöntemleri hakkında daha fazla bilgi için bkz. <xref:System.IO>.
+Giriş/çıkış yöntemleri hakkında daha fazla <xref:System.IO>bilgi için bkz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
 - [Örnekler ve öğreticiler](../../../samples-and-tutorials/index.md)
 - [Ana() ve Komut Satırı Bağımsız Değişkenleri](../main-and-command-args/index.md)
-- [Görsele BaşlarkenC#](/visualstudio/ide/quickstart-csharp-console)
+- [Görsel C ile Başlarken #](/visualstudio/ide/quickstart-csharp-console)

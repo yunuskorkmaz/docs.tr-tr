@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir derlemenin tam nitelikli adını bulma'
+title: 'Nasıl yapilir: Bir derlemenin tam nitelikli adını bulma'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
@@ -11,23 +11,23 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 49ebaeabee7a346fb84f09e5a9e34590d1ea9811
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348192"
 ---
-# <a name="how-to-find-an-assemblys-fully-qualified-name"></a>Nasıl yapılır: bir derlemenin tam nitelikli adını bulma
+# <a name="how-to-find-an-assemblys-fully-qualified-name"></a>Nasıl yapilir: Bir derlemenin tam nitelikli adını bulma
 
-Genel derleme önbelleğinde bir .NET Framework derlemesinin tam adını öğrenmek için genel derleme önbelleği aracını ([Gacutil. exe](../../framework/tools/gacutil-exe-gac-tool.md)) kullanın. Bkz. [nasıl yapılır: genel derleme önbelleğinin Içeriğini görüntüleme](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).
+Genel derleme önbelleğinde bir .NET Framework derlemesinin tam nitelikli adını bulmak için Genel Montaj Önbelleği aracını[(Gacutil.exe)](../../framework/tools/gacutil-exe-gac-tool.md)kullanın. Bkz. [Nasıl?](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md)
 
-.NET Core derlemeleri ve genel derleme önbelleğinde olmayan .NET Framework derlemeler için, tam derleme adını çeşitli yollarla alabilirsiniz:
+.NET Core derlemeleri ve küresel montaj önbelleğinde olmayan .NET Framework derlemeleri için tam nitelikli derleme adını çeşitli yollarla alabilirsiniz:
 
-- Bilgileri konsola veya bir değişkene çıkarmak için kodu kullanabilir veya tam nitelikli adı içeren derlemenin meta verilerini incelemek için [ıldadsm. exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) kullanabilirsiniz.
+- Kodu, bilgileri konsola veya bir değişkene çıktıetmek için kullanabilir veya derlemenin tam nitelikli adı içeren meta verilerini incelemek için [Ildasm.exe'yi (IL Desassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) kullanabilirsiniz.
 
-- Derleme uygulama tarafından zaten yüklenmişse, tam adı almak için <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> özelliğinin değerini alabilirsiniz. <xref:System.Reflection.Assembly> nesnesine bir başvuru almak için, bu derlemede tanımlanan bir <xref:System.Type> <xref:System.Type.Assembly> özelliğini kullanabilirsiniz. Örnek, bir gösterim sağlar.
+- Derleme zaten uygulama tarafından yüklenmişse, tam nitelikli <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> adı almak için özelliğin değerini alabilirsiniz. Nesneye <xref:System.Type.Assembly> bir başvuru <xref:System.Type> almak için bu derlemede tanımlı bir özelliği kullanabilirsiniz. <xref:System.Reflection.Assembly> Örnek, bir gösterim sağlar.
 
-- Derlemenin dosya sistemi yolunu biliyorsanız, tam derleme adını almak için `static` (C#) veya `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> yöntemini çağırabilirsiniz. Aşağıda basit bir örnek verilmiştir.
+- Derlemenin dosya sistemi yolunu biliyorsanız, tam `static` nitelikli derleme adını `Shared` almak için <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> (C#) veya (Visual Basic) yöntemini arayabilirsiniz. Aşağıdaki basit bir örnektir.
 
   ```csharp
   using System;
@@ -56,13 +56,13 @@ Genel derleme önbelleğinde bir .NET Framework derlemesinin tam adını öğren
   '   UtilityLibrary, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null
   ```
 
-- Tam nitelikli adı içeren derlemenin meta verilerini incelemek için [ıldadsm. exe ' yi (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) kullanabilirsiniz.
+- Derlemenin tam nitelikli adı içeren meta verilerini incelemek için [Ildasm.exe 'yi (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) kullanabilirsiniz.
 
-Sürüm, kültür ve derleme adı gibi derleme özniteliklerini ayarlama hakkında daha fazla bilgi için bkz. [derleme özniteliklerini ayarlama](set-attributes.md). Bütünleştirilmiş koda tanımlayıcı ad verme hakkında daha fazla bilgi için bkz. [tanımlayıcı adlı derlemeler oluşturma ve kullanma](create-use-strong-named.md).
+Sürüm, kültür ve derleme adı gibi derleme özniteliklerini ayarlama hakkında daha fazla bilgi için [bkz.](set-attributes.md) Derlemeye güçlü bir ad verme hakkında daha fazla bilgi için [bkz.](create-use-strong-named.md)
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, konsoluna belirtilen bir sınıf içeren bir derlemenin tam adının nasıl görüntüleneceğini gösterir. Bu derlemede tanımlanan bir türden derlemeye başvuru almak için <xref:System.Type.Assembly?displayProperty=nameWithType> özelliğini kullanır.
+Aşağıdaki örnek, konsolda belirli bir sınıf içeren bir derlemenin tam nitelikli adının nasıl görüntülenebildiğini gösterir. Bu derleme <xref:System.Type.Assembly?displayProperty=nameWithType> tanımlanan bir tür bir derleme için bir başvuru almak için özelliği kullanır.
 
 ```cpp
 #using <System.dll>
@@ -121,7 +121,7 @@ End Class
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Derleme adları](names.md)
-- [Derlemeler oluştur](create.md)
+- [Derleme oluşturma](create.md)
 - [Tanımlayıcı adlı derlemeler oluşturma ve kullanma](create-use-strong-named.md)
-- [Genel derleme önbelleği](../../framework/app-domains/gac.md)
-- [Çalışma zamanının derlemeleri nasıl konumlandırır](../../framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Genel montaj önbelleği](../../framework/app-domains/gac.md)
+- [Çalışma zamanı derlemeleri nasıl bulur?](../../framework/deployment/how-the-runtime-locates-assemblies.md)

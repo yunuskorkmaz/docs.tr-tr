@@ -1,77 +1,77 @@
 ---
 title: Başvuru derlemeleri
-description: .NET 'teki yalnızca kitaplığın ortak API yüzeyini içeren özel bir derleme türü olan başvuru derlemeleri hakkında bilgi edinin
+description: .NET'te yalnızca kitaplığın genel API yüzeyini içeren özel bir derleme türü olan başvuru derlemeleri hakkında bilgi edinin
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 3b85e51a015cca1e53ee2503c7bfa58c504fc718
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 938942caf81c54a8aa9207dbe87559438ffb252e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156471"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79141074"
 ---
 # <a name="reference-assemblies"></a>Başvuru derlemeleri
 
-*Başvuru derlemeleri* , KITAPLıĞıN ortak API yüzeyini göstermek için gereken en düşük meta veri miktarını içeren özel bir derleme türüdür. Derleme araçlarındaki bir derlemeye başvururken önemli olan tüm Üyeler için bildirimler içerirler, ancak API sözleşmeleri üzerinde herhangi bir observable etkisi olmayan özel üyelerin tüm üye uygulamalarını ve bildirimlerini hariç tutar. Buna karşılık, normal derlemeler *uygulama derlemeleri*olarak adlandırılır.
+*Başvuru derlemeleri,* kitaplığın genel API yüzeyini temsil etmek için gereken yalnızca minimum meta veri miktarını içeren özel bir derleme türüdür. Bunlar, yapı araçlarında bir derlemeye atıfta bulunurken önemli olan tüm üyeler için bildirimler içerir, ancak API sözleşmesi üzerinde gözlemlenebilir bir etkisi olmayan özel üyelerin tüm üye uygulamalarını ve bildirimlerini hariç tutar. Buna karşılık, düzenli derlemeler *uygulama derlemeleri*denir.
 
-Başvuru derlemeleri yürütme için yüklenemez, ancak uygulama Derlemeleriyle aynı şekilde derleyici girişi olarak geçirilebilir. Başvuru derlemeleri genellikle belirli bir platformun veya kitaplığın yazılım geliştirme seti (SDK) ile dağıtılır.
+Başvuru derlemeleri yürütme için yüklenebilir, ancak uygulama derlemeleri ile aynı şekilde derleyici girişi olarak geçirilebilir. Başvuru derlemeleri genellikle belirli bir platformun veya kitaplığın Yazılım Geliştirme Kiti (SDK) ile dağıtılır.
 
-Başvuru derlemesi kullanmak, geliştiricilerin bu sürümü için tam uygulama derlemesine sahip olmadan belirli bir kitaplık sürümünü hedefleyen programlar oluşturmalarına olanak sağlar. Makinenizde yalnızca bir kitaplığın en son sürümüne sahip olduğunuzu, ancak söz konusu kitaplığın önceki bir sürümünü hedefleyen bir program oluşturmak istediğinizi varsayalım. Doğrudan uygulama derlemesine göre derlerseniz, eski sürümde kullanılamayan API üyelerini yanlışlıkla kullanabilirsiniz. Bu hata yalnızca programı hedef makinede sınarken bulursunuz. Önceki sürüm için başvuru derlemesine karşı derlerseniz, hemen bir derleme zamanı hatası alırsınız.
+Başvuru derlemesi kullanmak, geliştiricilerin bu sürüm için tam uygulama derlemesine sahip olmadan belirli bir kitaplık sürümünü hedefleyen programlar oluşturmasına olanak tanır. Makinenizde yalnızca bazı kitaplığın yalnızca en son sürümü ne olduğunu varsayalım, ancak bu kitaplığın önceki bir sürümünü hedefleyen bir program oluşturmak istiyorsunuz. Doğrudan uygulama derlemesi karşı derlerseniz, yanlışlıkla önceki sürümde bulunmayan API üyelerini kullanabilirsiniz. Bu hatayı yalnızca programı hedef makinede test ederken bulabilirsiniz. Önceki sürüm için başvuru derlemesi karşı derlerseniz, hemen bir derleme zamanı hatası alırsınız.
 
-Bir başvuru bütünleştirilmiş kodu ayrıca bir sözleşmeyi, yani somut uygulama derlemesine karşılık gelen bir API kümesini temsil edebilir. *Anlaşma derlemesi*olarak adlandırılan bu tür başvuru derlemeleri, aynı API kümesini destekleyen birden çok platformu hedeflemek için kullanılabilir. Örneğin, .NET Standard, farklı .NET platformları arasında paylaşılan ortak API 'lerin kümesini temsil eden *Netstandard. dll*sözleşme derlemesini sağlar. Bu API 'lerin uygulamaları, .NET Core 'da .NET Framework veya *System. Private. CoreLib. dll* ' deki *mscorlib. dll* gibi farklı platformlarda farklı derlemelerde bulunur. .NET Standard hedefleyen bir kitaplık, .NET Standard destekleyen tüm platformlarda çalıştırılabilir.
+Bir başvuru derlemesi, somut uygulama derlemesine karşılık olmayan bir dizi API'yi de temsil edebilir. *Sözleşme derlemesi*adı verilen bu tür başvuru derlemeleri, aynı API kümesini destekleyen birden çok platformu hedeflemek için kullanılabilir. Örneğin, .NET Standard, farklı .NET platformları arasında paylaşılan ortak API kümesini temsil eden sözleşme derlemesi *netstandard.dll'yi*sağlar. Bu API'lerin uygulamaları ,NET Framework veya *System.Private.CoreLib.dll* üzerinde *mscorlib.dll* gibi farklı platformlarda farklı derlemelerde yer almaktadır. .NET Standard'ı hedefleyen bir kitaplık ,NET Standard'ı destekleyen tüm platformlarda çalıştırılabilir.
 
-## <a name="using-reference-assemblies"></a>Başvuru derlemelerini kullanma
+## <a name="using-reference-assemblies"></a>Referans derlemelerini kullanma
 
-Projenizdeki belirli API 'Leri kullanmak için, derlemelerine başvuruları eklemeniz gerekir. Başvuruları, uygulama derlemelerine veya başvuru derlemelerine ekleyebilirsiniz. Kullanılabilir olduğunda başvuru derlemelerini kullanmanız önerilir. Bunun yapılması, API tasarımcıları tarafından kullanılması amaçlanan hedef sürümde yalnızca desteklenen API üyelerini kullanmanızı sağlar. Başvuru derlemesini kullanmak, uygulama ayrıntılarına bir bağımlılık götürmenizi sağlar.
+Projenizdeki belirli API'leri kullanmak için derlemelerine başvurular eklemeniz gerekir. Uygulama derlemelerine veya başvuru derlemelerine başvurular ekleyebilirsiniz. Kullanılabilir olduklarında referans derlemeleri kullanmanız önerilir. Bunu yapmak, api tasarımcıları tarafından kullanılmak üzere hedef sürümde yalnızca desteklenen API üyelerini kullandığınızdan emin olur. Başvuru derlemesini kullanmak, uygulama ayrıntılarına bağımlı olmadığınızı garanti eder.
 
-.NET Framework kitaplıkları için başvuru bütünleştirilmiş kodları hedefleme paketleriyle dağıtılır. Bunları tek başına yükleyiciyi indirerek veya Visual Studio yükleyicisi 'nde bir bileşeni seçerek edinebilirsiniz. Daha fazla bilgi için bkz. [geliştiriciler için .NET Framework 'ı yüklemeyin](../../framework/install/guide-for-developers.md). .NET Core ve .NET Standard için, başvuru derlemeleri gerektiği şekilde otomatik olarak indirilir (NuGet aracılığıyla) ve başvurulur. .NET Core 3,0 ve üzeri için, çekirdek çerçeve için başvuru derlemeleri [Microsoft. netcore. app. ref](https://www.nuget.org/packages/Microsoft.NETCore.App.Ref) paketidir (3,0 ' den önceki sürümler için bunun yerine [Microsoft. netcore. app](https://www.nuget.org/packages/Microsoft.NETCore.App) Package kullanılır). Daha fazla bilgi için .NET Core kılavuzundaki [paketler, Metapackages ve çerçeveler](../../core/packages.md) bölümüne bakın.
+.NET Framework kitaplıkları için referans derlemeleri hedefleme paketleriyle dağıtılır. Bunları tek başına bir yükleyici indirerek veya Visual Studio yükleyicisinde bir bileşen seçerek elde edebilirsiniz. Daha fazla bilgi için [geliştiriciler için .NET Framework'e yükleyin'](../../framework/install/guide-for-developers.md)e bakın. .NET Core ve .NET Standard için referans derlemeleri gerektiğinde (NuGet üzerinden) otomatik olarak indirilir ve başvurulur. .NET Core 3.0 ve üzeri için, çekirdek çerçeve için başvuru derlemeleri [Microsoft.NETCore.App.Ref](https://www.nuget.org/packages/Microsoft.NETCore.App.Ref) paketindedir (3.0'dan önceki sürümler için [yerine Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) paketi kullanılır). Daha fazla bilgi için .NET Core Guide'daki [Paketler, meta paketler ve çerçevelere](../../core/packages.md) bakın.
 
-**Başvuru Ekle** iletişim kutusunu kullanarak Visual studio 'da .NET Framework derlemelerine başvurular eklediğinizde, listeden bir derleme seçersiniz ve Visual Studio otomatik olarak projenizde seçilen hedef Framework sürümüne karşılık gelen başvuru derlemelerini bulur. Aynı, [başvuru](/visualstudio/msbuild/common-msbuild-project-items#reference) Proje öğesini kullanarak doğrudan MSBuild projesine başvuru eklemek için geçerlidir: tam dosya yolunu değil yalnızca derleme adını belirtmeniz gerekir. Komut satırında, `-reference` derleyici seçeneğini[kullanarak ( C# ve](../../csharp/language-reference/compiler-options/reference-compiler-option.md) [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)) veya Roslyn API 'sindeki <xref:Microsoft.CodeAnalysis.Compilation.AddReferences%2A?displayProperty=nameWithType> yöntemini kullanarak bu derlemelere başvuru eklediğinizde, doğru hedef platform sürümü için el ile başvuru derleme dosyalarını belirtmeniz gerekir. .NET Framework başvuru derleme dosyaları, *Microsoft\\Framework\\\\% ProgramFiles (x86)%\\başvuru Derlemeleriyle bulunur. NETFramework* dizini. .NET Core için, `PreserveCompilationContext` projesi özelliğini `true`olarak ayarlayarak, hedef platformunuzun başvuru derlemelerini çıkış dizininizin *Yayımla/refs* alt dizinine kopyalamak için yayımlama işlemini zorlayabilirsiniz. Daha sonra, bu başvuru derleme dosyalarını derleyiciye geçirebilirsiniz. [Microsoft. Extensions. DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/) paketinden `DependencyContext` kullanmak, yollarının bulunmasına yardımcı olabilir.
+**Başvuru ekle** iletişim kutusunu kullanarak Visual Studio'daki .NET Framework derlemelerine başvuru eklediğinizde, listeden bir derleme seçersiniz ve Visual Studio projenizde seçilen hedef çerçeve sürümüne karşılık gelen başvuru derlemelerini otomatik olarak bulur. Aynı [durum, Başvuru](/visualstudio/msbuild/common-msbuild-project-items#reference) projesi öğesini kullanarak doğrudan MSBuild projesine başvuru eklemek için de geçerlidir: dosya yolunun tamamını değil, yalnızca montaj adını belirtmeniz gerekir. `-reference` Bu derlemelere komut satırında derleyici seçeneğini (C# ve Visual[Basic'te)](../../csharp/language-reference/compiler-options/reference-compiler-option.md) kullanarak veya <xref:Microsoft.CodeAnalysis.Compilation.AddReferences%2A?displayProperty=nameWithType> Roslyn API'deki yöntemi kullanarak referanslar eklediğinizde, doğru hedef platform sürümü için başvuru derleme dosyalarını el ile belirtmeniz gerekir. [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) .NET Framework referans derleme dosyaları *%ProgramFiles(x86)%\\Referans\\Derlemeler Microsoft\\Framework\\bulunur. NETFramework* dizini. .NET Core için, `PreserveCompilationContext` proje özelliğini ' ye ayarlayarak, hedef platformunuz için başvuru derlemelerini çıktı dizininizin *yayımlama/refs* alt dizinine kopyalamak için `true`yayımlama işlemini zorlayabilirsiniz. Daha sonra bu başvuru derleme dosyalarını derleyiciye geçirebilirsiniz. `DependencyContext` [Microsoft.Extensions.DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/) paketinden kullanmak yollarını bulmalarına yardımcı olabilir.
 
-Uygulama içermediği için başvuru derlemeleri yürütme için yüklenemez; Bunun için bir <xref:System.BadImageFormatException?displayProperty=nameWithType>sonuçlanır. Ancak, içeriklerini incelemeniz gerekiyorsa yalnızca yansıma bağlamına (<xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> yöntemi kullanılarak) yüklenebilirler.
+Uygulama içermedikleri için, başvuru derlemeleri yürütme için yüklenebilir. Bunu yapmaya çalışmak bir <xref:System.BadImageFormatException?displayProperty=nameWithType>. Bir başvuru derlemesinin içeriğini incelemek istiyorsanız, bunu .NET Framework'deki <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> (yöntemi kullanarak) veya .NET <xref:System.Reflection.MetadataLoadContext> Core'daki yalnızca yansıma bağlamına yükleyebilirsiniz.
 
-## <a name="generating-reference-assemblies"></a>Başvuru derlemeleri oluşturma
+## <a name="generating-reference-assemblies"></a>Referans derlemeleri oluşturma
 
-Kitaplıklarınız için başvuru derlemeleri oluşturmak, kitaplık tüketicilerinizin, kitaplığın birçok farklı sürümüne karşı programlarını oluşturması gerektiğinde yararlı olabilir. Tüm bu sürümler için uygulama derlemelerinin dağıtılması, büyük boyutları nedeniyle pratik olabilir. Başvuru derlemelerinin boyutu küçüktür ve bunları kitaplığınızın SDK 'sının bir parçası olarak dağıtmak, indirme boyutunu azaltır ve disk alanını kaydeder.
+Kitaplıklarınız için başvuru derlemeleri oluşturmak, kitaplık tüketicilerinizin programlarını kitaplığın birçok farklı sürümüne karşı oluşturmaları gerektiğinde yararlı olabilir. Tüm bu sürümler için uygulama derlemeleri dağıtmak, büyük boyutları nedeniyle pratik olmayabilir. Başvuru derlemelerinin boyutu daha küçüktür ve bunları kitaplığınizin SDK'sının bir parçası olarak dağıtmak indirme boyutunu azaltır ve disk alanı kazandırır.
 
-Ides ve derleme araçları aynı zamanda birden fazla sınıf kütüphanelerinin bulunduğu büyük çözümler söz konusu olduğunda derleme sürelerini azaltmak için başvuru derlemelerinden faydalanabilir. Genellikle, Artımlı derleme senaryolarında, bağımlı olduğu derlemeler dahil olmak üzere herhangi bir giriş dosyası değiştirildiğinde bir proje yeniden oluşturulur. Uygulama derlemesi, programcı her üyenin uygulamasını değiştirdiğinde değişir. Başvuru derlemesi yalnızca ortak API 'SI etkileniyorsa değişir. Bu nedenle, başvuru derlemesini uygulama derlemesi yerine bir giriş dosyası olarak kullanmak bazı durumlarda bağımlı projenin derlemesini atlamaya izin verir.
+IME'ler ve oluşturma araçları, birden çok sınıf kitaplığından oluşan büyük çözümler olması durumunda yapı sürelerini azaltmak için başvuru derlemelerinden de yararlanabilir. Genellikle, artımlı yapı senaryolarında, bir proje, bağlı olduğu derlemeler de dahil olmak üzere giriş dosyalarından herhangi biri değiştirildiğinde yeniden oluşturulur. Programcı herhangi bir üyenin uygulamasını değiştirdiğinde uygulama derlemesi değişir. Başvuru derlemesi yalnızca genel API'si etkilendiğinde değişir. Bu nedenle, başvuru derlemesini uygulama derlemesi yerine giriş dosyası olarak kullanmak, bazı durumlarda bağımlı projenin oluşturulmasını atlamanızı sağlar.
 
 Başvuru derlemeleri oluşturabilirsiniz:
 
-- MSBuild projesinde, [`ProduceReferenceAssembly` projesi özelliğini](/visualstudio/msbuild/common-msbuild-project-properties)kullanarak.
-- Program komut satırından derlenirken, `-refonly`[C#](../../csharp/language-reference/compiler-options/refonly-compiler-option.md) ( / [Visual Basic](../../visual-basic/reference/command-line-compiler/refonly-compiler-option.md) ) veya `-refout` ([C#](../../csharp/language-reference/compiler-options/refout-compiler-option.md) / [Visual Basic](../../visual-basic/reference/command-line-compiler/refout-compiler-option.md)) derleyici seçeneklerini belirterek.
-- Roslyn API kullanırken, <xref:Microsoft.CodeAnalysis.Emit.EmitOptions.EmitMetadataOnly?displayProperty=nameWithType> `true` ve <xref:Microsoft.CodeAnalysis.Compilation.Emit%2A?displayProperty=nameWithType> yöntemine geçirilen bir nesnedeki `false` <xref:Microsoft.CodeAnalysis.Emit.EmitOptions.IncludePrivateMembers?displayProperty=nameWithType> ayarlayarak.
+- Bir MSBuild projesinde, [ `ProduceReferenceAssembly` proje özelliğini](/visualstudio/msbuild/common-msbuild-project-properties)kullanarak.
+- Komut satırından program derlerken,[(C#](../../csharp/language-reference/compiler-options/refonly-compiler-option.md) / [Visual Basic](../../visual-basic/reference/command-line-compiler/refonly-compiler-option.md) ) `-refout` veya ([C#](../../csharp/language-reference/compiler-options/refout-compiler-option.md) / Visual[Basic](../../visual-basic/reference/command-line-compiler/refout-compiler-option.md)) derleyici seçeneklerini belirterek. `-refonly`
+- Roslyn API'sini kullanırken, `true` <xref:Microsoft.CodeAnalysis.Emit.EmitOptions.IncludePrivateMembers?displayProperty=nameWithType> bir `false` nesneye ayar <xref:Microsoft.CodeAnalysis.Compilation.Emit%2A?displayProperty=nameWithType> ve nesneye ayarlayarak <xref:Microsoft.CodeAnalysis.Emit.EmitOptions.EmitMetadataOnly?displayProperty=nameWithType> yönteme geçer.
 
-Başvuru derlemelerini NuGet paketleriyle dağıtmak istiyorsanız, bunları uygulama derlemeleri için kullanılan *lib\\* alt dizininde değil, paket dizini altındaki *ref\\* alt dizinine dahil etmeniz gerekir.
+NuGet paketleriyle başvuru derlemelerini dağıtmak istiyorsanız, bunları uygulama derlemeleri için kullanılan *lib\\ * alt dizini yerine paket dizininin altındaki *ref\\ * alt dizinine eklemeniz gerekir.
 
-## <a name="reference-assemblies-structure"></a>Başvuru derlemeleri yapısı
+## <a name="reference-assemblies-structure"></a>Referans derlemeyapısı
 
-Başvuru derlemeleri, *yalnızca meta veri derlemelerinin*ilgili kavramın bir genişletmesinden oluşur. Yalnızca meta veri bütünleştirilmiş kodlarının yöntem gövdeleri tek bir `throw null` gövdesiyle değiştirilmiştir, ancak anonim türler hariç tüm üyeleri içerir. `throw null` gövdeleri kullanmanın nedeni (gövdeden farklı olarak), **PEVerify** 'ın çalıştırılabilmesi ve geçebilmesi (Bu nedenle meta verilerin tamamlanmasının doğrulanması).
+Başvuru derlemeleri, ilgili kavramın, *yalnızca meta veri derlemelerinin genişletilmesidir.* Yalnızca meta veri derlemelerinin yöntem gövdeleri tek `throw null` bir gövdeyle değiştirilir, ancak anonim türler dışındaki tüm üyeleri içerir. Organları kullanmanın `throw null` nedeni (hiçbir cisimlerin aksine) **PEVerify'in** çalıştırAbilmesi ve geçebildiği (böylece meta verilerin tamlığını doğrulayabilmeniz) dir.
 
-Başvuru derlemeleri meta verileri (özel Üyeler) yalnızca meta veri derlemelerinden daha da kaldırır:
+Başvuru derlemeleri meta verileri (özel üyeler) yalnızca meta veri derlemelerinden daha da kaldırır:
 
-- Bir başvuru derlemesinin yalnızca API yüzeyinde ihtiyacı olan başvurular vardır. Gerçek derlemenin belirli uygulamalarla ilgili ek başvuruları olabilir. Örneğin, `class C { private void M() { dynamic d = 1; ... } }` için başvuru derlemesi `dynamic`için gereken herhangi bir türe başvurmuyor.
-- Özel işlev-Üyeler (Yöntemler, Özellikler ve olaylar) kaldırma işleminin derleme observably etkisi olmadığı durumlarda kaldırılır. [InternalsVisibleTo](xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute) özniteliği yoksa, iç işlev üyeleri de kaldırılır.
+- Bir başvuru derlemesi yalnızca API yüzeyinde ihtiyaç duyduğu referansları vardır. Gerçek derleme, belirli uygulamalarla ilgili ek referanslara sahip olabilir. Örneğin, başvuru derlemesi için `class C { private void M() { dynamic d = 1; ... } }` `dynamic`gerekli türlere başvurulmuyor.
+- Özel işlev üyeleri (yöntemler, özellikler ve olaylar) kaldırma işleminin derlemeyi gözlemlemediği durumlarda kaldırılır. [InternalsVisibleTo](xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute) öznitelikleri yoksa, dahili işlev üyeleri de kaldırılır.
 
-Başvuru derlemelerindeki meta veriler aşağıdaki bilgileri tutmaya devam eder:
+Başvuru derlemelerinde meta veriler aşağıdaki bilgileri tutmaya devam ediyor:
 
-- Özel ve iç içe türler dahil olmak üzere tüm türler.
-- Tüm öznitelikler, hatta iç yorumlar.
+- Özel ve iç içe çeşitli türler de dahil olmak üzere tüm türler.
+- Tüm özellikler, hatta iç sel özellikler.
 - Tüm sanal yöntemler.
 - Açık arabirim uygulamaları.
-- Erişimcileri sanal olduğundan, açıkça uygulanan özellikler ve olaylar.
-- Tüm yapıların alanları.
+- Erişime erişimedenler sanal olduğundan, açıkça uygulanan özellikler ve olaylar.
+- Yapıların tüm alanları.
 
-Başvuru derlemeleri derleme düzeyi [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) özniteliği içerir. Bu öznitelik, kaynakta belirtilebilir; daha sonra derleyicinin bu uygulamayı birleştirmesini gerektirmez. Bu öznitelik nedeniyle, çalışma zamanları yürütme için başvuru derlemelerini yüklemeyi reddeder (ancak bunlar yalnızca yansıma modunda yüklenebilirler).
+Başvuru derlemeleri, derleme düzeyinde bir [Başvuru Derleme](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) özniteliği içerir. Bu öznitelik kaynakta belirtilebilir; sonra derleyicinin sentezlemesine gerek kalmaz. Bu öznitelik nedeniyle, çalışma süreleri yürütme için başvuru derlemeleri yüklemeyi reddeder (ancak yalnızca yansıma modunda yüklenebilir).
 
-Tam başvuru derleme yapısı ayrıntıları derleyici sürümüne bağlıdır. Daha yeni sürümler, ortak API yüzeyini etkilemediğinden, daha fazla meta veri dışlamayı tercih edebilir.
+Tam başvuru derleme yapısı ayrıntıları derleyici sürümüne bağlıdır. Yeni sürümler, genel API yüzeyini etkilemediğinin belirlenmesi durumunda daha fazla meta veri hariç almayı seçebilir.
 
 > [!NOTE]
-> Bu bölümdeki bilgiler, sürüm 7,1 ' den başlayarak Roslyn derleyicileri tarafından oluşturulan başvuru Derlemeleriyle veya Visual Basic sürüm 15,3 ' den C# itibaren geçerlidir. .NET Framework ve .NET Core kitaplıkları için başvuru derlemelerinin yapısı, bazı ayrıntılarda farklılık gösterebilir, çünkü kendi başvuru derlemeleri oluşturma mekanizmalarını kullanırlar. Örneğin, `throw null` gövdesi yerine tamamen boş Yöntem gövdelerinin olması gerekebilir. Ancak genel ilke hala geçerlidir: kullanılabilir yöntem uygulamalarına sahip değildir ve yalnızca ortak API perspektifinden bir observable etkisi olan üyeler için meta veriler içerir.
+> Bu bölümdeki bilgiler yalnızca C# sürüm 7.1 veya Visual Basic sürüm 15.3'ten başlayarak Roslyn derleyicileri tarafından oluşturulan başvuru derlemeleri için geçerlidir. .NET Framework ve .NET Core kitaplıkları için başvuru derlemelerinin yapısı, başvuru derlemeleri oluşturma kendi mekanizmalarını kullandıklarından, bazı ayrıntılarda farklılık görebilir. Örneğin, `throw null` vücut yerine tamamen boş yöntem organları olabilir. Ancak genel ilke hala geçerlidir: kullanılabilir yöntem uygulamaları yoktur ve yalnızca genel API perspektifinden gözlemlenebilir bir etkisi olan üyeler için meta veriler içerirler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET’te bütünleştirilmiş kodlar](index.md)
-- [Çerçeve hedefleme genel bakış](/visualstudio/ide/visual-studio-multi-targeting-overview)
-- [Nasıl yapılır: başvuru Yöneticisi 'ni kullanarak başvuru ekleme veya kaldırma](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)
+- [Çerçeve hedeflemegenel bakış](/visualstudio/ide/visual-studio-multi-targeting-overview)
+- [Nasıl adlandırılır: Başvuru Yöneticisi'ni kullanarak referans ekleme veya kaldırma](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)

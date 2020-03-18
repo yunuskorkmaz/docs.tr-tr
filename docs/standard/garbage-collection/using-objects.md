@@ -11,55 +11,55 @@ helpviewer_keywords:
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 ms.openlocfilehash: c5232aa89064c514e71f3a18bc754159e9c9b15b
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160292"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>IDisposable uygulayan nesneleri kullanma
 
-Ortak dil çalışma zamanının atık toplayıcısı, yönetilen nesneler tarafından kullanılan belleği geri kazanır, ancak yönetilmeyen kaynakları kullanan türler, bu yönetilmeyen kaynaklara ayrılan belleğin geri kazanılmaya izin vermek için <xref:System.IDisposable> arabirimini uygular. <xref:System.IDisposable>uygulayan bir nesneyi kullanmayı bitirdiğinizde nesnenin <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> uygulamasını çağırmanız gerekir. Bunu iki yoldan biriyle yapabilirsiniz:  
+Ortak dil runtime'ın çöp toplayıcısı yönetilen nesneler tarafından kullanılan belleği geri alır, ancak yönetilmeyen kaynakları kullanan türler, bu yönetilmeyen kaynaklara ayrılan belleğin geri alınmasına izin vermek için <xref:System.IDisposable> arabirimi uygular. Uygulayan bir nesneyi kullanmayı <xref:System.IDisposable>bitirdiğinizde, nesnenin <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> uygulamasını aramalısınız. Bunu iki yoldan biriyle yapabilirsiniz:  
   
-- C# `using` ifadesiyle veya Visual Basic `Using` ifadesiyle.  
+- C# `using` deyimi veya Visual `Using` Basic deyimi ile.  
   
-- `try/finally` bir blok uygulayarak.  
+- Bir `try/finally` blok uygulayarak.  
 
 ## <a name="the-using-statement"></a>Using deyimi
 
-İçindeki `using` ve içindeki C# `Using` ifadesinde Visual Basic, bir nesneyi oluşturmak ve temizlemek için yazmanız gereken kodu basitleştirir. `using` deyimi bir veya daha fazla kaynak edinir, belirttiğiniz deyimleri yürütür ve nesneyi otomatik olarak atar. Ancak `using` deyimleri yalnızca oluşturuldukları yöntemin kapsamı içinde kullanılan nesneler için yararlıdır.  
+C# `using` ifadesi ve `Using` Visual Basic'teki deyim, bir nesne oluşturmak ve temizlemek için yazmanız gereken kodu basitleştirir. İfade `using` bir veya daha fazla kaynak elde eder, belirttiğiniz ifadeleri yürütür ve nesneyi otomatik olarak ortadan yıkar. Ancak, `using` deyim yalnızca oluşturuldukları yöntem kapsamında kullanılan nesneler için yararlıdır.  
   
-Aşağıdaki örnek, bir <xref:System.IO.StreamReader?displayProperty=nameWithType> nesnesini oluşturmak ve serbest bırakmak için `using` ifadesini kullanır.  
+Aşağıdaki örnek, `using` bir <xref:System.IO.StreamReader?displayProperty=nameWithType> nesne oluşturmak ve serbest bırakmak için deyimi kullanır.  
   
 [!code-csharp[Conceptual.Disposable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using1.cs#1)]
 [!code-vb[Conceptual.Disposable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using1.vb#1)]  
   
-<xref:System.IO.StreamReader> sınıfı, yönetilmeyen bir kaynak kullandığını gösteren <xref:System.IDisposable> arabirimini uygulasa da, örneğin <xref:System.IO.StreamReader.Dispose%2A?displayProperty=nameWithType> yöntemini açıkça çağırmadığını unutmayın. C# Veya Visual Basic Derleyicisi `using` bildirimiyle karşılaştığında, açıkça bir `try/finally` bloğunu içeren aşağıdaki koda denk olan ara DILI (IL) yayar.  
+<xref:System.IO.StreamReader> Sınıf, yönetilmeyen bir <xref:System.IDisposable> kaynak kullandığını gösteren arabirimi uygulasa da, örnek yöntemi açıkça <xref:System.IO.StreamReader.Dispose%2A?displayProperty=nameWithType> çağırmaz. C# veya Visual Basic derleyicisi ifadeyle `using` karşılaştığında, açıkça bir `try/finally` blok içeren aşağıdaki koda eşdeğer ara dil (IL) yayır.  
   
 [!code-csharp[Conceptual.Disposable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using3.cs#3)]
 [!code-vb[Conceptual.Disposable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using3.vb#3)]  
   
-C# `using` deyimi, iç içe `using` deyimlerine dahili olarak eşdeğer olan tek bir deyimde birden fazla kaynak elde etmenizi sağlar. Aşağıdaki örnek iki farklı dosyanın içeriğini okumak için iki <xref:System.IO.StreamReader> nesnesi oluşturur.  
+C# `using` deyimi, iç içe kullanılan `using` ifadelere eşdeğer olan tek bir deyimde birden çok kaynak elde etmenizi de sağlar. Aşağıdaki örnek, iki farklı <xref:System.IO.StreamReader> dosyanın içeriğini okumak için iki nesneyi anında okur.  
   
 [!code-csharp[Conceptual.Disposable#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using4.cs#4)]
 
 ## <a name="tryfinally-block"></a>Try/finally bloğu
 
-Bir `using` bildiriminde `try/finally` bloğunu sarmalama yerine, `try/finally` bloğunu doğrudan uygulamayı seçebilirsiniz. Bu sizin kişisel kodlama stiliniz olabilir veya bunu aşağıdaki nedenlerden biri dolayısıyla yapmak isteyebilirsiniz:  
+Bir `try/finally` `using` bloğu bir deyimde sarmalamak yerine, `try/finally` bloğu doğrudan uygulamayı seçebilirsiniz. Bu sizin kişisel kodlama stiliniz olabilir veya bunu aşağıdaki nedenlerden biri dolayısıyla yapmak isteyebilirsiniz:  
   
-- `try` bloğunda oluşan tüm özel durumları işlemek üzere bir `catch` bloğu eklemek için. Aksi takdirde, bir `try/catch` bloğu yoksa, `using` bloğunda oluşturulan özel durumlar gibi `using` ifadesiyle oluşturulan özel durumlar da işlenmez.  
+- Blokta `catch` atılan özel durumları işlemek için `try` bir blok eklemek için. Aksi takdirde, `using` bir `using` `try/catch` blok yoksa blok içinde atılan tüm özel durumlar gibi ekstre tarafından atılan tüm özel durumlar işlenmez.  
   
-- Kapsamı, içinde bildirildiği bloğa yerel olmayan <xref:System.IDisposable> uygulayan bir nesne oluşturmak için.  
+- Kapsamı yerel olmayan bir nesneyi, <xref:System.IDisposable> içinde beyan edildiği blok için anında uygulamak için.  
   
-Aşağıdaki örnek, bir önceki örneğe benzerdir, ancak bir <xref:System.IO.StreamReader> nesnesinin örneğini oluşturmak, kullanmak ve atmak ve <xref:System.IO.StreamReader> Oluşturucusu ve <xref:System.IO.StreamReader.ReadToEnd%2A> yöntemi tarafından oluşturulan tüm özel durumları işlemek için `try/catch/finally` bir blok kullanması dışında. `finally` bloğundaki kodun, <xref:System.IDisposable.Dispose%2A> yöntemini çağırmadan önce <xref:System.IDisposable> uygulayan nesnenin `null` olmadığını kontrol ettiğini unutmayın. Bunun yapılmaması, çalışma zamanında <xref:System.NullReferenceException> özel durumuyla sonuçlanabilir.  
+Aşağıdaki `try/catch/finally` örnek, bir <xref:System.IO.StreamReader> nesneyi anlık olarak kullanmak, kullanmak ve elden çıkarmak ve <xref:System.IO.StreamReader> oluşturucu ve <xref:System.IO.StreamReader.ReadToEnd%2A> yöntemi tarafından atılan özel durumları işlemek için bir blok kullanması dışında önceki örneğe benzer. Bloktaki kodun, `finally` uygulayan <xref:System.IDisposable> nesnenin `null` <xref:System.IDisposable.Dispose%2A> yöntemi aramadan önce olmadığını denetlediğine dikkat edin. Bunun yapılmaması, çalışma <xref:System.NullReferenceException> zamanında bir özel durumla sonuçlanabilir.  
   
 [!code-csharp[Conceptual.Disposable#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using5.cs#6)]
 [!code-vb[Conceptual.Disposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using5.vb#6)]  
   
-Programlama diliniz bir `using` ifadesini desteklemediğinden, ancak <xref:System.IDisposable.Dispose%2A> yöntemine doğrudan çağrılara izin veren bir `try/finally` bloğunu uygulamayı tercih etmeniz veya uygulamanız gerekiyorsa, bu temel kalıbı izleyebilirsiniz.
+Programlama diliniz bir `try/finally` `using` deyimi desteklemediği, ancak <xref:System.IDisposable.Dispose%2A> yönteme doğrudan çağrılara izin verdiği için, bir engelleme uygulamayı veya uygulamanız gerekiyorsa bu temel deseni izleyebilirsiniz.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yönetilmeyen Kaynakları Temizleme](../../../docs/standard/garbage-collection/unmanaged.md)
-- [using deyimleri (C# başvuru)](../../csharp/language-reference/keywords/using-statement.md)
-- [Using deyimleri (Visual Basic)](../../visual-basic/language-reference/statements/using-statement.md)
+- [using Deyimi (C# Başvurusu)](../../csharp/language-reference/keywords/using-statement.md)
+- [Using Deyimi (Visual Basic)](../../visual-basic/language-reference/statements/using-statement.md)
