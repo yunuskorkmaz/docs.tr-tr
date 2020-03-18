@@ -11,7 +11,7 @@
       href: async-return-types.md
     - name: Zaman Uyumsuz Programlarda Denetim Akışı
       href: control-flow-in-async-programs.md
-    - name: Zaman Uyumsuz Uygulamanızda Hassas Ayar Yapma
+    - name: Async Uygulamanızda Hassas Ayar Yapma
       href: fine-tuning-your-async-application.md
       items:
         - name: Zaman Uyumsuz bir Görevi veya Görev Listesini İptal Etme
@@ -24,5 +24,5 @@
           href: start-multiple-async-tasks-and-process-them-as-they-complete.md
     - name: Zaman Uyumsuz Uygulamalarda Yeniden Girişi İşleme
       href: handling-reentrancy-in-async-apps.md
-    - name: Dosya Erişimi için Zaman Uyumsuz Kullanma
+    - name: Dosya Erişimi için Async Kullanma
       href: using-async-for-file-access.md

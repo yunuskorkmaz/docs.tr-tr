@@ -21,7 +21,7 @@
       href: metadata/
     - name: Profil Oluşturma
       href: profiling/
-    - name: Kesin adlandırma
+    - name: Tanımlayıcı Ad Oluşturma
       href: strong-naming/
     - name: WMI ve Performans Sayaçları
       href: wmi/

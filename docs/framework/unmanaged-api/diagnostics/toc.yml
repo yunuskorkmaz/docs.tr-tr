@@ -359,7 +359,7 @@
         - name: ISymUnmanagedWriter3 Arabirimi
           href: isymunmanagedwriter3-interface.md
           items:
-            - name: Commit Yöntemi
+            - name: Commit Metodu
               href: isymunmanagedwriter3-commit-method.md
             - name: OpenMethod2 Yöntemi
               href: isymunmanagedwriter3-openmethod2-method.md

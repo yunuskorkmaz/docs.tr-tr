@@ -25,9 +25,9 @@
               href: iceegen-getimaptokeniface-method.md
             - name: GetMethodBuffer Yöntemi
               href: iceegen-getmethodbuffer-method.md
-            - name: GetSectionBlock Yöntemi
+            - name: GetSectionBlock Metodu
               href: iceegen-getsectionblock-method.md
-            - name: GetSectionCreate Yöntemi
+            - name: GetSectionCreate Metodu
               href: iceegen-getsectioncreate-method.md
             - name: GetSectionDataLen Yöntemi
               href: iceegen-getsectiondatalen-method.md
@@ -339,7 +339,7 @@
               href: imetadataimport-getcustomattributeprops-method.md
             - name: GetEventProps Yöntemi
               href: imetadataimport-geteventprops-method.md
-            - name: GetFieldMarshal Yöntemi
+            - name: GetFieldMarshal Metodu
               href: imetadataimport-getfieldmarshal-method.md
             - name: GetFieldProps Yöntemi
               href: imetadataimport-getfieldprops-method.md
@@ -349,11 +349,11 @@
               href: imetadataimport-getmemberprops-method.md
             - name: GetMemberRefProps Yöntemi
               href: imetadataimport-getmemberrefprops-method.md
-            - name: GetMethodProps Yöntemi
+            - name: GetMethodProps Metodu
               href: imetadataimport-getmethodprops-method.md
             - name: GetMethodSemantics Yöntemi
               href: imetadataimport-getmethodsemantics-method.md
-            - name: GetModuleFromScope Yöntemi
+            - name: GetModuleFromScope Metodu
               href: imetadataimport-getmodulefromscope-method.md
             - name: GetModuleRefProps Yöntemi
               href: imetadataimport-getmodulerefprops-method.md
@@ -365,25 +365,25 @@
               href: imetadataimport-getnestedclassprops-method.md
             - name: GetParamForMethodIndex Yöntemi
               href: imetadataimport-getparamformethodindex-method.md
-            - name: GetParamProps Yöntemi
+            - name: GetParamProps Metodu
               href: imetadataimport-getparamprops-method.md
             - name: GetPermissionSetProps Yöntemi
               href: imetadataimport-getpermissionsetprops-method.md
             - name: GetPinvokeMap
               href: imetadataimport-getpinvokemap-method.md
-            - name: GetPropertyProps Yöntemi
+            - name: GetPropertyProps Metodu
               href: imetadataimport-getpropertyprops-method.md
-            - name: GetRVA Yöntemi
+            - name: GetRVA Metodu
               href: imetadataimport-getrva-method.md
             - name: GetScopeProps Yöntemi
               href: imetadataimport-getscopeprops-method.md
             - name: GetSigFromToken Yöntemi
               href: imetadataimport-getsigfromtoken-method.md
-            - name: GetTypeDefProps Yöntemi
+            - name: GetTypeDefProps Metodu
               href: imetadataimport-gettypedefprops-method.md
-            - name: GetTypeRefProps Yöntemi
+            - name: GetTypeRefProps Metodu
               href: imetadataimport-gettyperefprops-method.md
-            - name: GetTypeSpecFromToken Yöntemi
+            - name: GetTypeSpecFromToken Metodu
               href: imetadataimport-gettypespecfromtoken-method.md
             - name: GetUserString Yöntemi
               href: imetadataimport-getuserstring-method.md
@@ -422,17 +422,17 @@
         - name: IMetaDataTables Arabirimi
           href: imetadatatables-interface.md
           items:
-            - name: GetBlob Yöntemi
+            - name: GetBlob Metodu
               href: imetadatatables-getblob-method.md
             - name: GetBlobHeapSize Yöntemi
               href: imetadatatables-getblobheapsize-method.md
             - name: GetCodedTokenInfo Yöntemi
               href: imetadatatables-getcodedtokeninfo-method.md
-            - name: GetColumn Yöntemi
+            - name: GetColumn Metodu
               href: imetadatatables-getcolumn-method.md
             - name: GetColumnInfo Yöntemi
               href: imetadatatables-getcolumninfo-method.md
-            - name: GetGuid Yöntemi
+            - name: GetGuid Metodu
               href: imetadatatables-getguid-method.md
             - name: GetGuidHeapSize Yöntemi
               href: imetadatatables-getguidheapsize-method.md

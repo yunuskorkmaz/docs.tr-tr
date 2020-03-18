@@ -1,4 +1,4 @@
-- name: Genel Bakış
+- name: Genel bakış
   href: index.md
 - name: Bağlantı dizeleri
   href: connection-strings.md
@@ -11,7 +11,7 @@
   href: database-errors.md
 - name: İşlemler
   href: transactions.md
-- name: Toplu İşleme
+- name: Toplu işleme
   href: batching.md
 - name: Meta Veriler
   href: metadata.md

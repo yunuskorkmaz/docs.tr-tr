@@ -12,7 +12,7 @@
       items:
         - name: Gözlemci Tasarım Deseni En İyi Yöntemleri
           href: observer-design-pattern-best-practices.md
-        - name: 'Nasıl yapılır: Sağlayıcı Uygulama'
+        - name: 'Nasıl yapılır: Sağlayıcıyı Uygulama'
           href: how-to-implement-a-provider.md
         - name: 'Nasıl yapılır: Gözlemci Uygulama'
           href: how-to-implement-an-observer.md

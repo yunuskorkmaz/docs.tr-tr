@@ -1,19 +1,19 @@
 ---
-title: Ertelenmiş yürütme örneği (C#)
+title: Ertelenmiş Yürütme Örneği (C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
 ms.openlocfilehash: 0816594ad016f19af4c97198160b4bafb9b4b8b4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204127"
 ---
-# <a name="deferred-execution-example-c"></a><span data-ttu-id="c4a56-102">Ertelenmiş yürütme örneği (C#)</span><span class="sxs-lookup"><span data-stu-id="c4a56-102">Deferred Execution Example (C#)</span></span>
-<span data-ttu-id="c4a56-103">Bu konu, ertelenmiş yürütmenin ve yavaş değerlendirmenin LINQ to XML sorgularının yürütülmesini nasıl etkilediğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="c4a56-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>  
+# <a name="deferred-execution-example-c"></a><span data-ttu-id="96456-102">Ertelenmiş Yürütme Örneği (C#)</span><span class="sxs-lookup"><span data-stu-id="96456-102">Deferred Execution Example (C#)</span></span>
+<span data-ttu-id="96456-103">Bu konu, ertelenmiş yürütme ve tembel değerlendirmenin LINQ'nizin XML sorgularına yürütülmesini nasıl etkilediğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="96456-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c4a56-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="c4a56-104">Example</span></span>  
- <span data-ttu-id="c4a56-105">Aşağıdaki örnek, ertelenmiş yürütmeyi kullanan bir genişletme yöntemi kullanılırken yürütme sırasını gösterir.</span><span class="sxs-lookup"><span data-stu-id="c4a56-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="c4a56-106">Örnek, üç dizeden oluşan bir dizi bildirir.</span><span class="sxs-lookup"><span data-stu-id="c4a56-106">The example declares an array of three strings.</span></span> <span data-ttu-id="c4a56-107">Daha sonra tarafından `ConvertCollectionToUpperCase`döndürülen koleksiyon üzerinden yinelenir.</span><span class="sxs-lookup"><span data-stu-id="c4a56-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>  
+## <a name="example"></a><span data-ttu-id="96456-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="96456-104">Example</span></span>  
+ <span data-ttu-id="96456-105">Aşağıdaki örnekte, ertelenmiş yürütme kullanan bir uzantı yöntemi kullanırken yürütme sırasını gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="96456-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="96456-106">Örnek, üç dizeden oluşan bir dizi bildirir.</span><span class="sxs-lookup"><span data-stu-id="96456-106">The example declares an array of three strings.</span></span> <span data-ttu-id="96456-107">Daha sonra tarafından `ConvertCollectionToUpperCase`döndürülen koleksiyon aracılığıyla iterates .</span><span class="sxs-lookup"><span data-stu-id="96456-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -44,7 +44,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="c4a56-108">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="c4a56-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="96456-108">Bu örnek, aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="96456-108">This example produces the following output:</span></span>  
   
 ```output  
 ToUpper: source abc  
@@ -55,14 +55,14 @@ ToUpper: source ghi
 Main: str GHI  
 ```  
   
- <span data-ttu-id="c4a56-109">Tarafından `ConvertCollectionToUpperCase`döndürülen koleksiyonda yineleme yapıldığında, her öğe kaynak dize dizisinden alınır ve sonraki öğe kaynak dize dizisinden alınmadan önce büyük harfe dönüştürülür.</span><span class="sxs-lookup"><span data-stu-id="c4a56-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>  
+ <span data-ttu-id="96456-109">Döndürülen koleksiyonda `ConvertCollectionToUpperCase`yinelendiğinde, her öğekaynak dize dizisinden alınır ve bir sonraki öğe kaynak dize dizisinden alınmadan önce büyük harfe dönüştürülür.</span><span class="sxs-lookup"><span data-stu-id="96456-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>  
   
- <span data-ttu-id="c4a56-110">Döndürülen koleksiyondaki her öğe, içindeki `foreach` `Main`döngüde işlenmeden önce, tüm dizeler dizisinin büyük harfe dönüştürülmediğine bakabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c4a56-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>  
+ <span data-ttu-id="96456-110">Döndürülen koleksiyondaki her öğe `foreach` döngü içinde `Main`işlenmeden önce dizeleri tüm dizi büyük harfe dönüştürülür olmadığını görebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="96456-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>  
   
- <span data-ttu-id="c4a56-111">Bu öğreticideki sonraki konu, zincirleme sorguları birlikte gösterir:</span><span class="sxs-lookup"><span data-stu-id="c4a56-111">The next topic in this tutorial illustrates chaining queries together:</span></span>  
+ <span data-ttu-id="96456-111">Bu öğreticideki bir sonraki konu, sorguları birbirine zincirlemeyi gösterir:</span><span class="sxs-lookup"><span data-stu-id="96456-111">The next topic in this tutorial illustrates chaining queries together:</span></span>  
   
-- [<span data-ttu-id="c4a56-112">Zincirleme sorguları örneği (C#)</span><span class="sxs-lookup"><span data-stu-id="c4a56-112">Chaining Queries Example (C#)</span></span>](./chaining-queries-example.md)  
+- [<span data-ttu-id="96456-112">Zincirleme Sorgular Örneği (C#)</span><span class="sxs-lookup"><span data-stu-id="96456-112">Chaining Queries Example (C#)</span></span>](./chaining-queries-example.md)  
   
-## <a name="see-also"></a><span data-ttu-id="c4a56-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c4a56-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="96456-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="96456-113">See also</span></span>
 
-- [<span data-ttu-id="c4a56-114">Öğretici: Sorguları birlikte zincirleme (C#)</span><span class="sxs-lookup"><span data-stu-id="c4a56-114">Tutorial: Chaining Queries Together (C#)</span></span>](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [<span data-ttu-id="96456-114">Öğretici: Sorguları Birlikte Zincirleme (C#)</span><span class="sxs-lookup"><span data-stu-id="96456-114">Tutorial: Chaining Queries Together (C#)</span></span>](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

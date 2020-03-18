@@ -1,20 +1,20 @@
 ---
 ms.openlocfilehash: 10811a90887624a731c58d557e1dd196ae2c9207
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/22/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76508556"
 ---
-### <a name="removed-controls"></a><span data-ttu-id="12e25-101">Kaldırılan denetimler</span><span class="sxs-lookup"><span data-stu-id="12e25-101">Removed controls</span></span>
+### <a name="removed-controls"></a><span data-ttu-id="591d8-101">Kaldırılan denetimler</span><span class="sxs-lookup"><span data-stu-id="591d8-101">Removed controls</span></span>
 
-<span data-ttu-id="12e25-102">.NET Core 3,1 ' den başlayarak bazı Windows Forms denetimleri artık kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="12e25-102">Starting in .NET Core 3.1, some Windows Forms controls are no longer available.</span></span>
+<span data-ttu-id="591d8-102">.NET Core 3.1'den başlayarak, bazı Windows Forms denetimleri artık kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="591d8-102">Starting in .NET Core 3.1, some Windows Forms controls are no longer available.</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="12e25-103">Açıklamayı Değiştir</span><span class="sxs-lookup"><span data-stu-id="12e25-103">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="591d8-103">Açıklamayı değiştir</span><span class="sxs-lookup"><span data-stu-id="591d8-103">Change description</span></span>
 
-<span data-ttu-id="12e25-104">.NET Core 3,1 ile başlayarak, çeşitli Windows Forms denetimleri artık kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="12e25-104">Starting with .NET Core 3.1, various Windows Forms controls are no longer available.</span></span> <span data-ttu-id="12e25-105">Daha iyi tasarım ve destek içeren değiştirme denetimleri .NET Framework 2,0 ' de sunulmuştur.</span><span class="sxs-lookup"><span data-stu-id="12e25-105">Replacement controls that have better design and support were introduced in .NET Framework 2.0.</span></span> <span data-ttu-id="12e25-106">Kullanım dışı bırakılan denetimler daha önce Tasarımcı araç kutularından kaldırılmıştır ancak yine de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="12e25-106">The deprecated controls were previously removed from designer toolboxes but were still available to be used.</span></span>
+<span data-ttu-id="591d8-104">.NET Core 3.1'den başlayarak, çeşitli Windows Forms denetimleri artık kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="591d8-104">Starting with .NET Core 3.1, various Windows Forms controls are no longer available.</span></span> <span data-ttu-id="591d8-105">.NET Framework 2.0'da daha iyi tasarım ve desteğe sahip yedek denetimler tanıtıldı.</span><span class="sxs-lookup"><span data-stu-id="591d8-105">Replacement controls that have better design and support were introduced in .NET Framework 2.0.</span></span> <span data-ttu-id="591d8-106">Amortismana alınan denetimler daha önce tasarımcı araç kutularından kaldırılmış, ancak yine de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="591d8-106">The deprecated controls were previously removed from designer toolboxes but were still available to be used.</span></span>
 
-<span data-ttu-id="12e25-107">Aşağıdaki türler artık kullanılamaz:</span><span class="sxs-lookup"><span data-stu-id="12e25-107">The following types are no longer available:</span></span>
+<span data-ttu-id="591d8-107">Aşağıdaki türler artık kullanılamıyor:</span><span class="sxs-lookup"><span data-stu-id="591d8-107">The following types are no longer available:</span></span>
 
 - <xref:System.Windows.Forms.Menu>
 - <xref:System.Windows.Forms.Menu.MenuItemCollection>
@@ -45,29 +45,29 @@ ms.locfileid: "76508556"
 - <xref:System.Windows.Forms.DataGrid.HitTestType>
 - <xref:System.Windows.Forms.Design.IMenuEditorService>
 
-#### <a name="version-introduced"></a><span data-ttu-id="12e25-108">Sunulan sürüm</span><span class="sxs-lookup"><span data-stu-id="12e25-108">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="591d8-108">Sürüm tanıtıldı</span><span class="sxs-lookup"><span data-stu-id="591d8-108">Version introduced</span></span>
 
-<span data-ttu-id="12e25-109">3.1</span><span class="sxs-lookup"><span data-stu-id="12e25-109">3.1</span></span>
+<span data-ttu-id="591d8-109">3.1</span><span class="sxs-lookup"><span data-stu-id="591d8-109">3.1</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="12e25-110">Önerilen eylem</span><span class="sxs-lookup"><span data-stu-id="12e25-110">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="591d8-110">Önerilen eylem</span><span class="sxs-lookup"><span data-stu-id="591d8-110">Recommended action</span></span>
 
-<span data-ttu-id="12e25-111">Her kaldırılan denetimin önerilen bir değiştirme denetimi vardır.</span><span class="sxs-lookup"><span data-stu-id="12e25-111">Each removed control has a recommended replacement control.</span></span> <span data-ttu-id="12e25-112">Aşağıdaki tabloya bakın:</span><span class="sxs-lookup"><span data-stu-id="12e25-112">Refer to the following table:</span></span>
+<span data-ttu-id="591d8-111">Kaldırılan her denetimin önerilen değiştirme denetimi vardır.</span><span class="sxs-lookup"><span data-stu-id="591d8-111">Each removed control has a recommended replacement control.</span></span> <span data-ttu-id="591d8-112">Aşağıdaki tabloya bakın:</span><span class="sxs-lookup"><span data-stu-id="591d8-112">Refer to the following table:</span></span>
 
-| <span data-ttu-id="12e25-113">Kaldırılan denetim (API)</span><span class="sxs-lookup"><span data-stu-id="12e25-113">Removed control (API)</span></span> | <span data-ttu-id="12e25-114">Önerilen değiştirme</span><span class="sxs-lookup"><span data-stu-id="12e25-114">Recommended replacement</span></span> | <span data-ttu-id="12e25-115">Kaldırılan ilişkili API 'Ler</span><span class="sxs-lookup"><span data-stu-id="12e25-115">Associated APIs that are removed</span></span> |
+| <span data-ttu-id="591d8-113">Kaldırılan denetim (API)</span><span class="sxs-lookup"><span data-stu-id="591d8-113">Removed control (API)</span></span> | <span data-ttu-id="591d8-114">Önerilen değiştirme</span><span class="sxs-lookup"><span data-stu-id="591d8-114">Recommended replacement</span></span> | <span data-ttu-id="591d8-115">Kaldırılan İlişkili API'ler</span><span class="sxs-lookup"><span data-stu-id="591d8-115">Associated APIs that are removed</span></span> |
 |-|-|-|
-| <span data-ttu-id="12e25-116">DataGrid</span><span class="sxs-lookup"><span data-stu-id="12e25-116">DataGrid</span></span> | <span data-ttu-id="12e25-117">DataGridView</span><span class="sxs-lookup"><span data-stu-id="12e25-117">DataGridView</span></span> | <span data-ttu-id="12e25-118">DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, DataGridLineStyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType</span><span class="sxs-lookup"><span data-stu-id="12e25-118">DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, DataGridLineStyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType</span></span> |
-| <span data-ttu-id="12e25-119">ToolBar</span><span class="sxs-lookup"><span data-stu-id="12e25-119">ToolBar</span></span> | <span data-ttu-id="12e25-120">ToolStrip</span><span class="sxs-lookup"><span data-stu-id="12e25-120">ToolStrip</span></span> | <span data-ttu-id="12e25-121">Araç Barappearance</span><span class="sxs-lookup"><span data-stu-id="12e25-121">ToolBarAppearance</span></span> |
-| <span data-ttu-id="12e25-122">ToolBarButton</span><span class="sxs-lookup"><span data-stu-id="12e25-122">ToolBarButton</span></span> | <span data-ttu-id="12e25-123">ToolStripButton</span><span class="sxs-lookup"><span data-stu-id="12e25-123">ToolStripButton</span></span> | <span data-ttu-id="12e25-124">Toolbarbuttonkerkeventargs, Toolbarbuttonclick Kerkeventhandler, ToolBarButtonStyle, ToolBarTextAlign</span><span class="sxs-lookup"><span data-stu-id="12e25-124">ToolBarButtonClickEventArgs, ToolBarButtonClickEventHandler, ToolBarButtonStyle, ToolBarTextAlign</span></span>|
-| <span data-ttu-id="12e25-125">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="12e25-125">ContextMenu</span></span> | <span data-ttu-id="12e25-126">ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="12e25-126">ContextMenuStrip</span></span> | |
-| <span data-ttu-id="12e25-127">Menü</span><span class="sxs-lookup"><span data-stu-id="12e25-127">Menu</span></span> | <span data-ttu-id="12e25-128">ToolStripDropDown, ToolStripDropDownMenu</span><span class="sxs-lookup"><span data-stu-id="12e25-128">ToolStripDropDown, ToolStripDropDownMenu</span></span> | <span data-ttu-id="12e25-129">MenuItemCollection</span><span class="sxs-lookup"><span data-stu-id="12e25-129">MenuItemCollection</span></span> |
-| <span data-ttu-id="12e25-130">MainMenu</span><span class="sxs-lookup"><span data-stu-id="12e25-130">MainMenu</span></span> | <span data-ttu-id="12e25-131">MenuStrip</span><span class="sxs-lookup"><span data-stu-id="12e25-131">MenuStrip</span></span> | |
-| <span data-ttu-id="12e25-132">MenuItem</span><span class="sxs-lookup"><span data-stu-id="12e25-132">MenuItem</span></span> | <span data-ttu-id="12e25-133">ToolStripMenuItem</span><span class="sxs-lookup"><span data-stu-id="12e25-133">ToolStripMenuItem</span></span> | |
+| <span data-ttu-id="591d8-116">DataGrid</span><span class="sxs-lookup"><span data-stu-id="591d8-116">DataGrid</span></span> | <span data-ttu-id="591d8-117">Datagridview</span><span class="sxs-lookup"><span data-stu-id="591d8-117">DataGridView</span></span> | <span data-ttu-id="591d8-118">DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, DataGridLineStyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType</span><span class="sxs-lookup"><span data-stu-id="591d8-118">DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, DataGridLineStyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType</span></span> |
+| <span data-ttu-id="591d8-119">ToolBar</span><span class="sxs-lookup"><span data-stu-id="591d8-119">ToolBar</span></span> | <span data-ttu-id="591d8-120">ToolStrip</span><span class="sxs-lookup"><span data-stu-id="591d8-120">ToolStrip</span></span> | <span data-ttu-id="591d8-121">Araç Çubuğu Görünümü</span><span class="sxs-lookup"><span data-stu-id="591d8-121">ToolBarAppearance</span></span> |
+| <span data-ttu-id="591d8-122">Toolbarbutton</span><span class="sxs-lookup"><span data-stu-id="591d8-122">ToolBarButton</span></span> | <span data-ttu-id="591d8-123">Toolstripbutton</span><span class="sxs-lookup"><span data-stu-id="591d8-123">ToolStripButton</span></span> | <span data-ttu-id="591d8-124">ToolBarButtonClickEventArgs, ToolBarButtonClickEventHandler, ToolBarButtonStyle, ToolBarTextAlign</span><span class="sxs-lookup"><span data-stu-id="591d8-124">ToolBarButtonClickEventArgs, ToolBarButtonClickEventHandler, ToolBarButtonStyle, ToolBarTextAlign</span></span>|
+| <span data-ttu-id="591d8-125">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="591d8-125">ContextMenu</span></span> | <span data-ttu-id="591d8-126">ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="591d8-126">ContextMenuStrip</span></span> | |
+| <span data-ttu-id="591d8-127">Menü</span><span class="sxs-lookup"><span data-stu-id="591d8-127">Menu</span></span> | <span data-ttu-id="591d8-128">ToolStripDropDown, ToolStripDropDownMenu</span><span class="sxs-lookup"><span data-stu-id="591d8-128">ToolStripDropDown, ToolStripDropDownMenu</span></span> | <span data-ttu-id="591d8-129">Menuıtemcollection</span><span class="sxs-lookup"><span data-stu-id="591d8-129">MenuItemCollection</span></span> |
+| <span data-ttu-id="591d8-130">Mainmenu</span><span class="sxs-lookup"><span data-stu-id="591d8-130">MainMenu</span></span> | <span data-ttu-id="591d8-131">MenuStrip</span><span class="sxs-lookup"><span data-stu-id="591d8-131">MenuStrip</span></span> | |
+| <span data-ttu-id="591d8-132">MenuItem</span><span class="sxs-lookup"><span data-stu-id="591d8-132">MenuItem</span></span> | <span data-ttu-id="591d8-133">Toolstripmenuıtem</span><span class="sxs-lookup"><span data-stu-id="591d8-133">ToolStripMenuItem</span></span> | |
 
-#### <a name="category"></a><span data-ttu-id="12e25-134">Kategori</span><span class="sxs-lookup"><span data-stu-id="12e25-134">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="591d8-134">Kategori</span><span class="sxs-lookup"><span data-stu-id="591d8-134">Category</span></span>
 
-<span data-ttu-id="12e25-135">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="12e25-135">Windows Forms</span></span>
+<span data-ttu-id="591d8-135">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="591d8-135">Windows Forms</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="12e25-136">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="12e25-136">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="591d8-136">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="591d8-136">Affected APIs</span></span>
 
 - <xref:System.Windows.Forms.Menu?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Menu.MenuItemCollection?displayProperty=nameWithType>

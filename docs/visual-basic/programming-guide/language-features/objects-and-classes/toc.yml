@@ -1,7 +1,7 @@
 - name: Nesneler ve Sınıflar
   href: index.md
   items:
-    - name: 'İzlenecek yol: Sınıfları Tanımlama'
+    - name: 'İzlenecek Yol: Sınıfları Tanımlama'
       href: walkthrough-defining-classes.md
     - name: Aşırı Yüklenmiş Özellikler ve Yöntemler
       href: overloaded-properties-and-methods.md
@@ -12,12 +12,12 @@
     - name: 'Nesne Başlatıcıları: Adlandırılmış ve Anonim Türler'
       href: object-initializers-named-and-anonymous-types.md
       items:
-        - name: 'Nasıl yapılır: Nesne Başlatıcısı Kullanarak Nesne Bildirme'
+        - name: 'Nasıl yapılır: Nesne Başlatıcı Kullanarak Nesne Bildirme'
           href: how-to-declare-an-object-by-using-an-object-initializer.md
     - name: Anonim Türler
       href: anonymous-types.md
       items:
-        - name: 'Nasıl yapılır: Anonim Tip Bildirimlerinden Özellik Adları ve Türlerini Çıkarma'
+        - name: 'Nasıl yapılır: Anonim Türde Bildirimlerden Özellik Adları ve Türlerini Çıkarma'
           href: how-to-infer-property-names-and-types-in-anonymous-type-declarations.md
-        - name: Anonim Tip Tanımı
+        - name: Anonim Tür Tanımı
           href: anonymous-type-definition.md

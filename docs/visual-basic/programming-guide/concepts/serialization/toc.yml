@@ -1,9 +1,9 @@
 - name: Serileştirme
   href: index.md
   items:
-    - name: 'Nasıl yapılır: Nesne Verilerini bir XML Dosyasına Yazma'
+    - name: 'Nasıl Yapılır: Nesne Verilerini bir XML Dosyasına Yazma'
       href: how-to-write-object-data-to-an-xml-file.md
-    - name: 'Nasıl yapılır: Nesne Verilerini bir XML Dosyasından Okuma'
+    - name: 'Nasıl Yapılır: Nesne Verilerini bir XML Dosyasından Okuma'
       href: how-to-read-object-data-from-an-xml-file.md
     - name: 'İzlenecek yol: Bir Nesneyi Kalıcı Kılma'
       href: walkthrough-persisting-an-object-in-visual-studio.md

@@ -1,4 +1,4 @@
-- name: Bellek Yönetimi ve Atık Toplama
+- name: Bellek Yönetimi ve Çöp Toplama
   href: memory-management-and-gc.md
   items:
     - name: Yönetilmeyen Kaynakları Temizleme

@@ -39,9 +39,9 @@
                   href: loader-etw-events.md
                 - name: Yöntem Olayları
                   href: method-etw-events.md
-                - name: Atık Toplama Olayları
+                - name: Çöp Toplama Olayları
                   href: garbage-collection-etw-events.md
-                - name: Olayları Tam Zamanında İzleme
+                - name: Olayları JIT İzleme
                   href: jit-tracing-etw-events.md
                 - name: Birlikte Çalışma Olayları
                   href: interop-etw-events.md

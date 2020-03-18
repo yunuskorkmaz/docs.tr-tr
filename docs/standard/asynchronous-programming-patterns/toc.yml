@@ -30,7 +30,7 @@
     - name: Zaman Uyumsuz Programlama Modeli (APM)
       href: asynchronous-programming-model-apm.md
       items:
-        - name: 'IAsyncResult Kullanarak Zaman Uyumsuz Yöntemleri Çağırma '
+        - name: IAsyncResult Kullanarak Zaman Uyumsuz Yöntemleri Çağırma
           href: calling-asynchronous-methods-using-iasyncresult.md
           items:
             - name: Bir AsyncWaitHandle Kullanarak Uygulamanın Yürütülmesini Engelleme

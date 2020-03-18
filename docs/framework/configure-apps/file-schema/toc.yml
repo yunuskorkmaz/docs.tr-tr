@@ -9,9 +9,9 @@
       href: linkedconfiguration-element.md
     - name: <configSections> Öğesi
       href: configsections-element-for-configuration.md
-    - name: <configSections> için <clear> Öğesi
+    - name: <clear> için <configSections> Öğesi
       href: clear-element-for-configsections.md
-    - name: <configSections> için <remove> Öğesi
+    - name: <remove> için <configSections> Öğesi
       href: remove-element-for-configsections.md
     - name: <sectionGroup> Öğesi
       href: sectiongroup-element-for-configsections.md
