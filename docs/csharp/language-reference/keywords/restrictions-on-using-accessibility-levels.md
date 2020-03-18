@@ -1,44 +1,44 @@
 ---
-title: Erişilebilirlik düzeylerini kullanma kısıtlamaları- C# başvuru
+title: Erişilebilirlik düzeylerini kullanma kısıtlamaları - C# Reference
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 90c76e68ca526106f3a8be6e3db2640edbb2bc80
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 48ab765db7c839ed0dd14df5e6b30f5bd6c0d29b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715157"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173542"
 ---
-# <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Erişilebilirlik düzeylerini kullanma kısıtlamaları (C# başvuru)
+# <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Erişilebilirlik düzeylerinin kullanımına ilişkin kısıtlamalar (C# Reference)
 
-Bir bildirimde bir tür belirttiğinizde, türün erişilebilirlik düzeyinin bir üyenin ya da başka bir türün erişilebilirlik düzeyine bağımlı olup olmadığını kontrol edin. Örneğin, doğrudan temel sınıfı en azından türetilmiş sınıf olarak erişilebilir olmalıdır. Temel sınıf `BaseClass` `MyClass`daha az erişilebilir olduğu için aşağıdaki bildirimler bir derleyici hatasına neden olur:
+Bir bildirimde bir tür belirttiğiniz zaman, türün erişilebilirlik düzeyinin bir üyenin veya başka bir türün erişilebilirlik düzeyine bağlı olup olmadığını denetleyin. Örneğin, doğrudan taban sınıf en az türemiş sınıf kadar erişilebilir olmalıdır. Taban sınıf `BaseClass` aşağıdakilerden daha az erişilebilir olduğundan derleyici `MyClass`hatasına neden olur:
 
 ```csharp
 class BaseClass {...}
 public class MyClass: BaseClass {...} // Error
 ```
 
-Aşağıdaki tablo, belirtilen erişilebilirlik düzeyleri üzerindeki kısıtlamaları özetler.
+Aşağıdaki tablo, bildirilen erişilebilirlik düzeylerine ilişkin kısıtlamaları özetleyin.
 
 |Bağlam|Açıklamalar|
 |-------------|-------------|
-|[Sınıflar](../../programming-guide/classes-and-structs/classes.md)|Bir sınıf türünün doğrudan temel sınıfı en azından sınıf türünün kendisi kadar erişilebilir olmalıdır.|
-|[Arabirimler](../../programming-guide/interfaces/index.md)|Arabirim türünün açık temel arabirimleri en az arabirim türünün kendisi kadar erişilebilir olmalıdır.|
-|[Temsilciler](../../programming-guide/delegates/index.md)|Bir temsilci türünün dönüş türü ve parametre türleri en azından temsilci türünün kendisi kadar erişilebilir olmalıdır.|
-|[Sabitler](../../programming-guide/classes-and-structs/constants.md)|Bir sabit türü en az sabit değer olarak erişilebilir olmalıdır.|
-|[Alanlar](../../programming-guide/classes-and-structs/fields.md)|Alanın türü en azından alanın kendisi kadar erişilebilir olmalıdır.|
-|[Yöntemler](../../programming-guide/classes-and-structs/methods.md)|Bir yöntemin dönüş türü ve parametre türleri en az yöntemin kendisi olarak erişilebilir olmalıdır.|
-|[Veri Erişimi](../../programming-guide/classes-and-structs/properties.md)|Özelliğin türü en az özelliğin kendisi olarak erişilebilir olmalıdır.|
-|[Olaylar](../../programming-guide/events/index.md)|Bir olayın türü en az olayın kendisi olarak erişilebilir olmalıdır.|
-|[Dizin Oluşturucular](../../programming-guide/indexers/index.md)|Bir dizin oluşturucunun türü ve parametre türleri en azından dizin oluşturucunun kendisi olarak erişilebilir olmalıdır.|
-|[İşleçler](../operators/index.md)|Bir işlecin dönüş türü ve parametre türleri en az işlecin kendisi olarak erişilebilir olmalıdır.|
-|[Oluşturucular](../../programming-guide/classes-and-structs/constructors.md)|Bir oluşturucunun parametre türleri en az oluşturucunun kendisi olarak erişilebilir olmalıdır.|
+|[Sınıflar](../../programming-guide/classes-and-structs/classes.md)|Bir sınıf türünün doğrudan taban sınıfı en az sınıf türü kadar erişilebilir olmalıdır.|
+|[Arabirimler](../../programming-guide/interfaces/index.md)|Arabirim türünün açık temel arabirimleri en az arabirim türü kadar erişilebilir olmalıdır.|
+|[Temsilciler](../../programming-guide/delegates/index.md)|Temsilci türünün dönüş türü ve parametre türleri en az temsilci türü kadar erişilebilir olmalıdır.|
+|[Sabitler](../../programming-guide/classes-and-structs/constants.md)|Sabitin türü en az sabitin kendisi kadar erişilebilir olmalıdır.|
+|[Alanlar](../../programming-guide/classes-and-structs/fields.md)|Bir alanın türü en az alanın kendisi kadar erişilebilir olmalıdır.|
+|[Yöntemler](../../programming-guide/classes-and-structs/methods.md)|Bir yöntemin dönüş türü ve parametre türleri en az yöntemin kendisi kadar erişilebilir olmalıdır.|
+|[Özellikler](../../programming-guide/classes-and-structs/properties.md)|Bir özelliğin türü en az özelliğin kendisi kadar erişilebilir olmalıdır.|
+|[Olaylar](../../programming-guide/events/index.md)|Bir olayın türü en az olayın kendisi kadar erişilebilir olmalıdır.|
+|[Dizin Oluşturucular](../../programming-guide/indexers/index.md)|Dizinleyicinin türü ve parametre türleri en az dizinleyicinin kendisi kadar erişilebilir olmalıdır.|
+|[İşleçler](../operators/index.md)|Bir işleçin dönüş türü ve parametre türleri en az operatörün kendisi kadar erişilebilir olmalıdır.|
+|[Oluşturucular](../../programming-guide/classes-and-structs/constructors.md)|Bir oluşturucuparametre türleri en az yapıcının kendisi kadar erişilebilir olmalıdır.|
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek farklı türlerin hatalı bildirimlerini içerir. Her bildirimi izleyen yorum, beklenen derleyici hatasını gösterir.
+Aşağıdaki örnek, farklı türde hatalı bildirimleri içerir. Her bildirimi izleyen açıklama beklenen derleyici hatasını gösterir.
 
 ```csharp
 // Restrictions on Using Accessibility Levels
@@ -71,7 +71,7 @@ public class A
 
     public B MyMethod()
     {
-        // Error: The type B is less accessible 
+        // Error: The type B is less accessible
         // than the method A.MyMethod.
         return new B();
     }
@@ -85,8 +85,8 @@ public class A
     }
 
     MyDelegate d = new MyDelegate(B.MyPrivateMethod);
-    // Even when B is declared public, you still get the error: 
-    // "The parameter B.MyPrivateMethod is not accessible due to 
+    // Even when B is declared public, you still get the error:
+    // "The parameter B.MyPrivateMethod is not accessible due to
     // protection level."
 
     public static B operator +(A m1, B m2)
@@ -109,14 +109,14 @@ public class A
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../../language-reference/index.md)
+- [C# Referans](../../language-reference/index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Sözcükleri](../../language-reference/keywords/index.md)
+- [C# Anahtar Kelimeler](../../language-reference/keywords/index.md)
 - [Erişim Değiştiricileri](../../language-reference/keywords/access-modifiers.md)
 - [Erişilebilirlik Etki Alanı](../../language-reference/keywords/accessibility-domain.md)
 - [Erişilebilirlik Düzeyleri](../../language-reference/keywords/accessibility-levels.md)
 - [Erişim Değiştiricileri](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [public](../../language-reference/keywords/public.md)
-- [private](../../language-reference/keywords/private.md)
+- [Kamu](../../language-reference/keywords/public.md)
+- [Özel](../../language-reference/keywords/private.md)
 - [protected](../../language-reference/keywords/protected.md)
-- [internal](../../language-reference/keywords/internal.md)
+- [Iç](../../language-reference/keywords/internal.md)

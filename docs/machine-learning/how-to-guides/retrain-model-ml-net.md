@@ -1,39 +1,39 @@
 ---
 title: Modeli yeniden eğitme
-description: ML.NET içinde bir modeli yeniden eğitme hakkında bilgi edinin
+description: ML.NET'da bir modeli nasıl yeniden eğitin
 ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
 ms.openlocfilehash: 735782a4a0877a917b6e1885f009aa49d834170f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73976959"
 ---
 # <a name="re-train-a-model"></a>Modeli yeniden eğitme
 
-ML.NET ' de makine öğrenimi modelini yeniden eğitme hakkında bilgi edinin.
+ML.NET'da bir makine öğrenimi modelini nasıl yeniden eğitin.
 
-Dünya ve çevresindeki veriler sabit bir hızda değişir. Bu nedenle, modellerin de değiştirilmesi ve güncelleştirilmesi gerekir. ML.NET, bir başlangıç noktası olarak öğrenilmiş model parametrelerini kullanan yeniden eğitim modellerine, her seferinde sıfırdan başlamak yerine, bir önceki deneyime sürekli olarak derleme yapmak için işlevsellik sağlar.
+Dünya ve etrafındaki veriler sabit bir hızla değişir. Bu nedenle, modellerin de değişmesi ve güncellendirilmesi gerekir. ML.NET, öğrenilen model parametrelerini kullanarak modelleri her seferinde sıfırdan başlamak yerine sürekli olarak önceki deneyimleri temel almak için bir başlangıç noktası olarak yeniden eğitme işlevleri sağlar.
 
-Aşağıdaki algoritmalar ML.NET içinde yeniden eğitiliyor:
+Aşağıdaki algoritmalar ML.NET yeniden eğitilebilir:
 
-- [AveragedPerceptronTrainer](xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer)
+- [OrtalamaPerceptronEğitmen](xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer)
 - [FieldAwareFactorizationMachineTrainer](xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer)
-- [LbfgsLogisticRegressionBinaryTrainer](xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer)
-- [Lbfgsmaximumentropybirden çok Lasstrainer](xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer)
-- [Lbfgspoissongerilesiontrainer](xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer)
-- [Doğrsvmtrainer](xref:Microsoft.ML.Trainers.LinearSvmTrainer)
-- [Onlinegradientharfin Ttrainer](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer)
-- [Sgddtu Oytedtrainer](xref:Microsoft.ML.Trainers.SgdCalibratedTrainer)
-- [Sgdnondtu ırtedtrainer](xref:Microsoft.ML.Trainers.SgdNonCalibratedTrainer)
-- [SymbolicSgdLogisticRegressionBinaryTrainer](xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer)
+- [LbfgsLojistikRegressionBinaryTrainer](xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer)
+- [LbfgsMaximumEntropyMulticlassTrainer](xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer)
+- [LbfgsPoissonRegressionEğitmen](xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer)
+- [LinearSvmTrainer](xref:Microsoft.ML.Trainers.LinearSvmTrainer)
+- [OnlineGradientDescentTrainer](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer)
+- [SgdCalibratedTrainer](xref:Microsoft.ML.Trainers.SgdCalibratedTrainer)
+- [SgdNonCalibratedTrainer](xref:Microsoft.ML.Trainers.SgdNonCalibratedTrainer)
+- [SembolikSgdLojistikRegressionBinaryTrainer](xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer)
 
-## <a name="load-pre-trained-model"></a>Önceden eğitilen modeli yükle
+## <a name="load-pre-trained-model"></a>Önceden eğitilmiş modeli yükleyin
 
-İlk olarak, önceden eğitilen modeli uygulamanıza yükleyin. Eğitim işlem hatlarını ve modellerini yükleme hakkında daha fazla bilgi edinmek için bkz. [eğitilen modeli kaydetme ve yükleme](save-load-machine-learning-models-ml-net.md).
+İlk olarak, önceden eğitilmiş modeli uygulamanıza yükleyin. Eğitim boru hatlarını ve modellerini yükleme hakkında daha fazla bilgi edinmek [için, eğitilen bir modeli kaydet ve yükleyin'](save-load-machine-learning-models-ml-net.md)e bakın.
 
 ```csharp
 // Create MLContext
@@ -49,9 +49,9 @@ ITransformer dataPrepPipeline = mlContext.Model.Load("data_preparation_pipeline.
 ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchema);
 ```
 
-## <a name="extract-pre-trained-model-parameters"></a>Önceden eğitilen model parametrelerini Ayıkla
+## <a name="extract-pre-trained-model-parameters"></a>Önceden eğitilmiş model parametrelerini ayıklayın
 
-Model yüklendikten sonra, önceden eğitilen modelin [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) özelliğine erişerek öğrenilen model parametrelerini ayıklayın. Önceden eğitilen model, [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters)çıkış yapan bir[`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) oluşturan [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) doğrusal regresyon modeli kullanılarak eğitildi. Bu doğrusal regresyon modeli parametreleri, modelin öğrenilen sapma ve ağırlıklarını veya katsayılarını içerir. Bu değerler, yeni yeniden eğitilen model için bir başlangıç noktası olarak kullanılacaktır.
+Model yüklendikten sonra, önceden eğitilmiş modelin [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) özelliğine erişerek öğrenilen model parametrelerini ayıklayın. Önceden eğitilmiş model bir [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) oluşturur doğrusal regresyon modeli kullanılarak [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters)eğitildi. Bu doğrusal regresyon modeli parametreleri, modelin öğrenilen önyargıve ağırlıklarını veya katsayıları içerir. Bu değerler, yeni yeniden eğitilmiş model için bir başlangıç noktası olarak kullanılacaktır.
 
 ```csharp
 // Extract trained model parameters
@@ -59,9 +59,9 @@ LinearRegressionModelParameters originalModelParameters =
     ((ISingleFeaturePredictionTransformer<object>)trainedModel).Model as LinearRegressionModelParameters;
 ```
 
-## <a name="re-train-model"></a>Modeli yeniden eğitme
+## <a name="re-train-model"></a>Yeniden eğitim modeli
 
-Modeli yeniden eğitime işlemi, bir modelin eğitiminden farklı değildir. Tek fark, verilerin yanı sıra [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*) yöntemi de ilk öğrenilen model parametrelerini giriş olarak alır ve bunları yeniden eğitim sürecinde bir başlangıç noktası olarak kullanır.
+Bir modeli yeniden eğitme süreci, bir modeli eğitmekten farklı değildir. Tek fark, veri [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*) ek olarak yöntem de giriş orijinal öğrenilen model parametreleri olarak alır ve yeniden eğitim sürecinde bir başlangıç noktası olarak kullanır.
 
 ```csharp
 // New Data
@@ -99,9 +99,9 @@ RegressionPredictionTransformer<LinearRegressionModelParameters> retrainedModel 
         .Fit(transformedNewData, originalModelParameters);
 ```
 
-## <a name="compare-model-parameters"></a>Model parametrelerini Karşılaştır
+## <a name="compare-model-parameters"></a>Model parametrelerini karşılaştırın
 
-Yeniden eğitimin gerçekten gerçekleştiğini nasıl anlarsınız? Bir yol, yeniden eğitilen model parametrelerinin orijinal modelden farklı olup olmadığını karşılaştırmak olacaktır. Aşağıdaki kod örneği, orijinali yeniden eğitilen model ağırlıklarına karşı karşılaştırır ve bunları konsola çıkarır.
+Yeniden eğitimin gerçekten olup olmadığını nasıl anlarsın? Yeniden eğitilen modelin parametrelerinin orijinal modelden farklı olup olmadığını karşılaştırmanın bir yolu da bu olabilir. Aşağıdaki kod örneği orijinali yeniden eğitilmiş model ağırlıklarıyla karşılaştırır ve bunları konsola çıkar.
 
 ```csharp
 // Extract Model Parameters of re-trained model
@@ -119,11 +119,11 @@ for(int i=0;i < weightDiffs.Count();i++)
 }
 ```
 
-Aşağıdaki tabloda çıktının nasıl görünebileceğini gösterilmektedir.
+Aşağıdaki tablo, çıktının nasıl görünebileceğini gösterir.
 
-|Özgün | Eğitilebileceği | Fark |
+|Özgün | Yeniden eğitildi | Fark |
 |---|---|---|
-| 33039,86 | 56293,76 | -23253,9 |
-| 29099,14 | 49586,03 | -20486,89 |
-| 28938,38 | 48609,23 | -19670,85 |
-| 30484,02 | 53745,43 | -23261,41 |
+| 33039.86 | 56293.76 | -23253.9 |
+| 29099.14 | 49586.03 | -20486.89 |
+| 28938.38 | 48609.23 | -19670.85 |
+| 30484.02 | 53745.43 | -23261.41 |

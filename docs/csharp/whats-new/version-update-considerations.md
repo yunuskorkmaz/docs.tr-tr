@@ -1,39 +1,39 @@
 ---
 title: C# geliştiricileri için sürüm ve güncelleştirme konuları
-description: Kitaplığınızda yeni dil özellikleri ile tanışın, bunu kullanan kod etkileyebilir.
+description: Kitaplığınızda yeni dil özelliklerinin tanıtılması, onu kullanan kodu etkileyebilir.
 ms.date: 09/19/2018
 ms.openlocfilehash: 3ffe2f6fd64a391fddf28233dccb022c95851884
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634485"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399387"
 ---
 # <a name="version-and-update-considerations-for-c-developers"></a>C# geliştiricileri için sürüm ve güncelleştirme konuları
 
-C# dili için yeni özellikler eklendikçe uyumluluk çok önemli bir hedeftir. Hemen hemen tüm durumlarda, herhangi bir sorun olmadan yeni bir derleyici sürümü ile mevcut kodu yeniden derlenmesi.
+C# diline yeni özellikler eklendikçe uyumluluk çok önemli bir hedeftir. Hemen hemen her durumda, varolan kod herhangi bir sorun olmadan yeni bir derleyici sürümü ile yeniden derlenebilir.
 
-Yeni dil özellikleri bir kitaplıkta benimsediğinizde, daha fazla dikkat gerekli olabilir. Yeni bir kitaplık en yeni sürümünde bulunan özellikler ile oluşturduğunuz ve derleyicinin önceki sürümleri kullanılarak oluşturulan uygulamaları sağlamak için kullanabilmesi. Veya varolan bir kitaplığını yükseltme ve kullanıcılarınızın çoğu sürümler henüz yükseltilmemiş. Yeni özellikler benimseme hakkında kararlar gibi uyumluluk iki çeşidi göz önünde bulundurmanız gerekir: kaynak uyumlu ve uyumlu ikili.
+Kitaplıkta yeni dil özelliklerini benimsediğinizde daha fazla özen gerektirebilir. En son sürümde bulunan özelliklere sahip yeni bir kitaplık oluşturuyor olabilirsiniz ve derleyicinin önceki sürümlerini kullanarak oluşturulmuş uygulamaların bu kitaplığı kullanabileceğinden emin olmanız gerekir. Veya varolan bir kitaplığı yükseltiyor olabilirsiniz ve kullanıcılarınızın çoğu henüz sürümlerini yükseltmemiş olabilir. Yeni özellikleri benimseme konusunda karar vererken, iki uyumluluk varyasyonu göz önünde bulundurmanız gerekir: kaynak uyumluluğu ve ikili uyumlu.
 
-## <a name="binary-compatible-changes"></a>İkili uyumlu değişiklikleri
+## <a name="binary-compatible-changes"></a>İkili uyumlu değişiklikler
 
-Değişiklikler kitaplığınıza **uyumlu ikili** zaman güncelleştirilmiş kitaplığınızı kullanılabilir uygulamaları ve kitaplıkları kullanan derlenmeden. Bağımlı derlemelerin yeniden oluşturulması için gerekli değildir ve herhangi bir kaynak kod değişikliği gereklidir. İkili uyumlu değişiklikleri de kaynak uyumlu değişikliklerdir.
+Güncelleştirilmiş kitaplığınız, onu kullanan uygulamaları ve kitaplıkları yeniden oluşturmadan kullanılabildiğinde kitaplığınızdaki değişiklikler **ikili uyumludur.** Bağımlı derlemelerin yeniden oluşturulması gerekmez veya kaynak kodu değişiklikleri gerekmez. İkili uyumlu değişiklikler de kaynak uyumlu değişikliklerdir.
 
-## <a name="source-compatible-changes"></a>Kaynak uyumlu değişiklikleri
+## <a name="source-compatible-changes"></a>Kaynak uyumlu değişiklikler
 
-Değişiklikler kitaplığınıza **kaynak uyumlu** zaman uygulamaları ve kitaplıkları, kitaplığı kullanan kaynak kod değişikliği gerektirmez, ancak kaynak düzgün çalışması için yeni sürümü karşı derlenmesi gerekiyor.
+Kitaplığınızı kullanan uygulamalar ve kitaplıklar kaynak kodu değişiklikleri gerektirmediğinde, kaynağın doğru çalışması için yeni sürüme karşı yeniden derlenmiş olması gerekirken kitaplığınızdaki değişiklikler **kaynak uyumludur.**
 
-## <a name="incompatible-changes"></a>Uyumsuz değişiklikleri
+## <a name="incompatible-changes"></a>Uyumsuz değişiklikler
 
-Bir değişiklik ne ise **kaynak uyumlu** ya da **uyumlu ikili**, bağımlı kitaplıkları ve uygulamaları kaynak kodu değişiklikleri birlikte yeniden derleme gereklidir.
+Bir değişiklik ne **kaynak uyumlu** ne de ikili **uyumlu**ise, bağımlı kitaplıklarda ve uygulamalarda yeniden derleme ile birlikte kaynak kodu değişiklikleri gereklidir.
 
-## <a name="evaluate-your-library"></a>Kitaplığınızı değerlendir
+## <a name="evaluate-your-library"></a>Kitaplığınızı değerlendirin
 
-Bu uyumluluk kavramları için kendi iç uygulama kitaplığınızın ortak ve korunan bildirimleri etkiler. Herhangi bir yeni özellik dahili olarak kullandığı her zaman **uyumlu ikili**.  
+Bu uyumluluk kavramları, iç uygulamasını değil, kitaplığınız için genel ve korumalı bildirimleri etkiler. Herhangi bir yeni özelliği n içini dahili olarak benimsemek her zaman **ikili uyumludur.**  
 
-**İkili uyumlu** değişiklikleri genel bildirimleri eski sözdizimi olarak aynı derlenmiş kodunu üretir yeni söz dizimi sağlar. Örneğin, bir ifade gövdeli üyesine bir yöntemi değiştirme olduğu bir **uyumlu ikili** değiştirin:
+**İkili uyumlu** değişiklikler, eski sözdizimi yle aynı derlenmiş genel bildirimler için derlenmiş kodu oluşturan yeni sözdizimi sağlar. Örneğin, bir yöntemi ifade gövdeli bir üyeye değiştirmek **ikili uyumlu** bir değişikliktir:
 
-Özgün kod:
+Orijinal kod:
 
 ```csharp
 public double CalculateSquare(double value)
@@ -48,9 +48,9 @@ Yeni kod:
 public double CalculateSquare(double value) => value * value;
 ```
 
-**Kaynak uyumlu** değişikliğine neden söz dizimi genel bir üyenin, ancak mevcut çağrı siteleri bir şekilde uyumlu olarak derlenmiş kodunu değiştirir. Örneğin, bir yöntem imzasının değiştirilmesi bir değer parametresi tarafından bir `in` başvuruya göre kaynak uyumlu parametredir, ancak ikili uyumlu:
+**Kaynak uyumlu** değişiklikler, derlenen bir üye için derlenen kodu, ancak varolan arama siteleriyle uyumlu bir şekilde değiştiren sözdizimini sunar. Örneğin, bir yöntem imzasını bir değer parametresi ile referans parametreye `in` değiştirmek kaynak uyumludur, ancak ikili uyumlu değildir:
 
-Özgün kod:
+Orijinal kod:
 
 ```csharp
 public double CalculateSquare(double value) => value * value;
@@ -62,4 +62,4 @@ Yeni kod:
 public double CalculateSquare(in double value) => value * value;
 ```
 
-[Yenilikler](index.md) makaleleri ortak bildirimleri etkileyen bir özellik ile tanışın kaynak uyumlu ya da ikili uyumlu olup olmadığını unutmayın.
+Ortak bildirimleri etkileyen bir özellik tanıtılması kaynak uyumlu veya ikili uyumlu [ise, yeni](index.md) makaleler ne notu.

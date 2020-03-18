@@ -6,27 +6,27 @@ helpviewer_keywords:
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
 ms.openlocfilehash: 15526655de8af6fed464376db1ac761468215210
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75337651"
 ---
-# <a name="how-to-define-constants-in-c"></a>C\# sabitleri tanımlama
-Sabitler, değerleri derleme zamanında ayarlanan alanlardır ve hiçbir zaman değiştirilemez. Özel değerler için sayısal değişmez değerler ("sihirli sayılar") yerine anlamlı adlar sağlamak için sabitleri kullanın.  
+# <a name="how-to-define-constants-in-c"></a>C'de sabitler nasıl tanımlanır?\#
+Sabitler, değerleri derleme zamanında ayarlanan ve asla değiştirilemeyecek alanlardır. Özel değerler için sayısal literaller ("sihirli sayılar") yerine anlamlı adlar sağlamak için sabitleri kullanın.  
   
 > [!NOTE]
-> C# [#Define](../../language-reference/preprocessor-directives/preprocessor-define.md) Önişlemci yönergesinde, sabitleri genellikle C ve C++içinde kullanılan biçimde tanımlamak için kullanılamaz.  
+> C# #define [önişlemci](../../language-reference/preprocessor-directives/preprocessor-define.md) yönergesi, sabitleri c ve c++'da genellikle kullanılan şekilde tanımlamak için kullanılamaz.  
   
- İntegral türlerinin sabit değerlerini (`int`, `byte`vb.) tanımlamak için numaralandırılmış bir tür kullanın. Daha fazla bilgi için bkz. [enum](../../language-reference/builtin-types/enum.md).  
+ İntegral türlerinin`int`sabit `byte`değerlerini tanımlamak için (, , vb.) numaralandırılmış bir tür kullanın. Daha fazla bilgi için [enum' a](../../language-reference/builtin-types/enum.md)bakın.  
   
- Tamsayı olmayan sabitleri tanımlamak için, tek bir yaklaşım onları `Constants`adlı tek bir statik sınıfta gruplandırmaya yönelik bir yaklaşımdır. Bu, aşağıdaki örnekte gösterildiği gibi sabitlerin tüm başvurularının sınıf adı ile önceden görüntülenmesini gerektirir.  
+ İntegral olmayan sabitleri tanımlamak için bir yaklaşım, bunları `Constants`. Bu, aşağıdaki örnekte gösterildiği gibi, sabitlere yapılan tüm başvuruların sınıf adı ile ön karşıkarşıya olmasını gerektirir.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuideObjects#89](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#89)]  
   
- Sınıf adı niteleyicisi kullanımı, siz ve sabit kullanan diğer kişilerin sabit olduğunu ve değiştirilemeyeceğini anlamasını sağlar.  
+ Sınıf adı niteleyicisinin kullanımı, sizin ve sabiti kullanan diğer insanların bunun sabit olduğunu ve değiştirilemeyeceğini anlamanızı sağlamaya yardımcı olur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sınıflar ve Yapılar](./index.md)
+- [Sınıflar ve Structs](./index.md)

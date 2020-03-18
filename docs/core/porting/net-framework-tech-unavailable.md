@@ -1,52 +1,52 @@
 ---
-title: .NET Core 'da .NET Framework teknolojileri kullanılamıyor
+title: .NET Framework teknolojileri .NET Core'da kullanılamıyor
 titleSuffix: ''
-description: .NET Core 'da kullanılamayan .NET Framework teknolojileri hakkında bilgi edinin
+description: .NET Core'da kullanılamayan .NET Framework teknolojileri hakkında bilgi edinin
 author: cartermp
 ms.date: 04/30/2019
 ms.openlocfilehash: bd2488de653ecdfed261100b4c9019bea58fcab3
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092947"
 ---
-# <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core 'da .NET Framework teknolojileri kullanılamıyor
+# <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Framework teknolojileri .NET Core'da kullanılamıyor
 
-.NET Framework kitaplıkları için kullanılabilen çeşitli teknolojiler, uygulama etki alanları, uzaktan Iletişim, kod erişim güvenliği (CAS), güvenlik saydamlığı ve System. EnterpriseServices gibi .NET Core ile birlikte kullanılamaz. Kitaplıklarınız Bu teknolojilerden birini veya birkaçını kullanıyorsa, aşağıda özetlenen diğer yaklaşımları göz önünde bulundurun. API uyumluluğu hakkında daha fazla bilgi için bkz. [.NET Core son değişiklikler](../compatibility/breaking-changes.md).
+.NET Framework kitaplıkları için kullanılabilen AppDomains, Remoting, Code Access Security (CAS), Security Transparency ve System.EnterpriseServices gibi .NET Core ile birlikte kullanılamaz. Kitaplıklarınız bu teknolojilerden birine veya daha fazlasını güveniyorsa, aşağıda özetlenen alternatif yaklaşımları göz önünde bulundurun. API uyumluluğu hakkında daha fazla bilgi için [.NET Core kesme değişiklikleri'ne](../compatibility/breaking-changes.md)bakın.
 
-Bir API veya teknoloji şu anda uygulanmadığından, kasıtlı olarak desteklenmeyen anlamına gelmez. Karşılaştığınız belirli bir sorunun tasarım ile olup olmadığını görmek için GitHub depolarında .NET Core ' u arayın. Böyle bir gösterge bulamazsanız, belirli API 'Ler ve teknolojiler istemek için [DotNet/Runtime deposunda](https://github.com/dotnet/runtime/issues) bir sorun verin. Taşıma istekleri olan sorunlar [bağlantı noktası-çekirdek](https://github.com/dotnet/runtime/labels/port-to-core) etiketiyle işaretlenir.
+Bir API veya teknolojinin şu anda uygulanmamış olması, uygulamanın kasıtlı olarak desteklenmediği anlamına gelmez. Karşılaştığınız belirli bir sorunun tasarım adedi olup olmadığını görmek için .NET Core için GitHub depolarını arayın. Böyle bir gösterge bulamazsanız, belirli API'ler ve teknolojiler istemek için [dotnet/runtime deposunda](https://github.com/dotnet/runtime/issues) bir sorun dosya. İstekleri taşıma [sorunları, bağlantı noktası-çekirdek](https://github.com/dotnet/runtime/labels/port-to-core) etiketiyle işaretlenir.
 
-## <a name="appdomains"></a>Uygulama
+## <a name="appdomains"></a>AppDomains
 
-Uygulama etki alanları (AppDomain), uygulamaları birbirinden ayırır. AppDomain, çalışma zamanı desteği gerektirir ve genellikle oldukça pahalıdır. Ek uygulama etki alanlarının oluşturulması desteklenmez ve gelecekte bu yeteneği eklemek için herhangi bir plan yoktur. Kod yalıtımı için alternatif olarak ayrı süreçler veya kapsayıcılar kullanın. Derlemeleri dinamik olarak yüklemek için <xref:System.Runtime.Loader.AssemblyLoadContext> sınıfını kullanın.
+Uygulama etki alanları (AppDomains) uygulamaları birbirinden yalıtır. AppDomains çalışma zamanı desteği gerektirir ve genellikle oldukça pahalıdır. Ek uygulama etki alanları oluşturma desteklenmez ve gelecekte bu özelliği eklemek için herhangi bir plan yoktur. Kod yalıtımı için alternatif olarak ayrı işlemler veya kapsayıcılar kullanın. Derlemeleri dinamik olarak yüklemek <xref:System.Runtime.Loader.AssemblyLoadContext> için sınıfı kullanın.
 
-.NET Framework daha kolay bir şekilde kod geçişi yapmak için, .NET Core <xref:System.AppDomain> API yüzeyinden bazılarını ortaya çıkarır. API 'lerden bazıları normal olarak çalışır (örneğin, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), bazı Üyeler hiçbir şey yapmaz (örneğin, <xref:System.AppDomain.SetCachePath%2A>) ve bazıları <xref:System.PlatformNotSupportedException> oluşturmaz (örneğin, <xref:System.AppDomain.CreateDomain%2A>). [DotNet/Runtime GitHub deposundaki](https://github.com/dotnet/runtime) [`System.AppDomain` başvuru kaynağına](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs) karşı kullandığınız türleri kontrol edin. Uygulanan sürümünüzle eşleşen dalı seçtiğinizden emin olun.
+.NET Framework'den kod geçişini kolaylaştırmak için .NET <xref:System.AppDomain> Core, API yüzeyinin bir kısmını ortaya çıkarır. API'lerin bazıları normal olarak çalışır <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>(örneğin), bazı üyeler <xref:System.AppDomain.SetCachePath%2A>hiçbir şey yapmaz <xref:System.PlatformNotSupportedException> (örneğin), <xref:System.AppDomain.CreateDomain%2A>bazıları atar (örneğin, ). [Dotnet/runtime GitHub deposundaki](https://github.com/dotnet/runtime) [ `System.AppDomain` başvuru kaynağıyla](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs) karşı kullandığınız türleri denetleyin. Uygulanan sürümünizle eşleşen dalı seçtiğinizden emin olun.
 
-## <a name="remoting"></a>Uzaktan iletişim
+## <a name="remoting"></a>Remoting
 
-.NET uzaktan Iletişim, sorunlu bir mimari olarak tanımlandı. Bu, artık desteklenmeyen ilkeler arası iletişim için kullanılır. Ayrıca, uzaktan Iletişim için, bakım açısından pahalı olan çalışma zamanı desteği gerekir. Bu nedenlerden dolayı, .NET Core 'da .NET uzaktan Iletişim desteklenmez ve gelecekte bu hizmetin desteğini ekleme planlanmıyor.
+.NET Remoting sorunlu bir mimari olarak tanımlanmıştı. Artık desteklenmeyen çapraz AppDomain iletişimi için kullanılır. Ayrıca, Remoting korumak için pahalı çalışma zamanı desteği gerektirir. Bu nedenlerden dolayı,.NET Remoting .NET Core'da desteklenmez ve gelecekte buna destek eklemeyi planlamamayız.
 
-İşlemler arasında iletişim için, <xref:System.IO.Pipes> sınıfı veya <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> sınıfı gibi uzaktan iletişim için bir alternatif olarak işlem temelli iletişim (IPC) mekanizmalarını göz önünde bulundurun.
+Süreçler arası iletişim için, sınıflar veya <xref:System.IO.Pipes> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> sınıf gibi Remoting'e alternatif olarak süreçler arası iletişim (IPC) mekanizmalarını düşünün.
 
-Makineler arasında, alternatif olarak ağ tabanlı bir çözüm kullanın. Tercihen, HTTP gibi düşük yüklü bir düz metin protokolü kullanın. ASP.NET Core tarafından kullanılan Web sunucusu olan [Kestrel Web sunucusu](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), burada bir seçenektir. Ayrıca, ağ tabanlı, makineler arası senaryolar için <xref:System.Net.Sockets> kullanmayı düşünün. Daha fazla seçenek için bkz. [.net açık kaynak geliştirici projeleri: mesajlaşma](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging).
+Makineler arasında, alternatif olarak ağ tabanlı bir çözüm kullanın. Tercihen, HTTP gibi düşük tepeli düz metin protokolü kullanın. [Kestrel web sunucusu](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), ASP.NET Core tarafından kullanılan web sunucusu, burada bir seçenektir. Ayrıca, ağ <xref:System.Net.Sockets> tabanlı, makineler arası senaryolar için kullanmayı düşünün. Daha fazla seçenek için [bkz.](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging)
 
 ## <a name="code-access-security-cas"></a>Kod Erişimi Güvenliği (CAS)
 
-Yönetilen bir uygulamanın veya kitaplığın hangi kaynakları kullanacağını veya çalıştığını kısıtlamak için çalışma zamanına veya çerçeveye dayanan korumalı alana alma, [.NET Framework desteklenmez](../../framework/misc/code-access-security.md) ve bu nedenle de .NET Core üzerinde desteklenmez. .NET Framework ve bir ayrıcalık yükselmesinin bir güvenlik sınırı olarak kabul etmesine devam etmek için ayrıcalıkların yükseltilme gerçekleştiği çalışma zamanında çok fazla durum vardır. Bunlara ek olarak, CA 'LAR uygulamayı daha karmaşık hale getirir ve genellikle onu kullanmayı düşünmediğiniz uygulamalar için doğruluk performansına yönelik etkileri vardır.
+Yönetilen bir uygulamanın veya kitaplığın kullandığı veya çalıştırdığı kaynakları kısıtlamak için çalışma süresine veya çerçeveye dayanan Sandboxing, [.NET Framework'de desteklenmez](../../framework/misc/code-access-security.md) ve bu nedenle .NET Core'da da desteklenmez. .NET Framework'de ve cas'ı güvenlik sınırı olarak ele almaya devam etmek için ayrıcalıkların yükseltilmesinin gerçekleştiği çalışma zamanında çok fazla durum vardır. Buna ek olarak, CAS uygulamayı daha karmaşık hale getirir ve genellikle kullanmak istemeyen uygulamalar için doğruluk-performans etkileri ne kadar dır?
 
-Minimum ayrıcalık kümesi olan süreçler çalıştırmak için sanallaştırma, kapsayıcılar veya Kullanıcı hesapları gibi işletim sistemi tarafından belirtilen güvenlik sınırlarını kullanın.
+İşlemleri en az ayrıcalık kümesiyle çalıştırmak için sanallaştırma, kapsayıcılar veya kullanıcı hesapları gibi işletim sistemi tarafından sağlanan güvenlik sınırlarını kullanın.
 
-## <a name="security-transparency"></a>Güvenlik saydamlığı
+## <a name="security-transparency"></a>Güvenlik Şeffaflığı
 
-CA 'lara benzer şekilde, güvenlik saydamlığı, korumalı kodu bildirimle güvenlik açısından kritik koddan ayırır, ancak [artık güvenlik sınırı olarak desteklenmez](../../framework/misc/security-transparent-code.md). Bu özellik Silverlight tarafından yoğun bir şekilde kullanılır.
+CAS'a benzer şekilde, Güvenlik Saydamlığı da sandboxed kodu güvenlik kritik kodundan bildirimsel bir şekilde ayırır, ancak [artık güvenlik sınırı olarak desteklenmez.](../../framework/misc/security-transparent-code.md) Bu özellik Silverlight tarafından yoğun olarak kullanılmaktadır.
 
-En az ayrıcalık kümesine sahip süreçler çalıştırmak için sanallaştırma, kapsayıcılar veya Kullanıcı hesapları gibi işletim sistemi tarafından belirtilen güvenlik sınırlarını kullanın.
+En az ayrıcalık kümesine sahip işlemleri çalıştırmak için sanallaştırma, kapsayıcılar veya kullanıcı hesapları gibi işletim sistemi tarafından sağlanan güvenlik sınırlarını kullanın.
 
-## <a name="systementerpriseservices"></a>System. EnterpriseServices
+## <a name="systementerpriseservices"></a>Enterpriseservices
 
-System. EnterpriseServices (COM+), .NET Core tarafından desteklenmez.
+System.EnterpriseServices (COM+) .NET Core tarafından desteklenmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework .NET Core 'a taşıma ile genel bakış](../porting/index.md)
+- [.NET Framework'den .NET Core'a taşımaya genel bakış](../porting/index.md)

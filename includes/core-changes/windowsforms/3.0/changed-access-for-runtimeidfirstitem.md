@@ -1,26 +1,26 @@
 ---
 ms.openlocfilehash: 5bbbf9075683b0f124e126b661b4ab85011e6c2e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74644049"
 ---
-### <a name="change-of-access-for-accessibleobjectruntimeidfirstitem"></a>Erişilebilir nesne. Runtimeıdfirtıtem için erişim değişikliği
+### <a name="change-of-access-for-accessibleobjectruntimeidfirstitem"></a>ErişilebilirObject.RuntimeIDFirstItem için erişim değişikliği
 
-.NET Core 3,0 RC1 'den başlayarak `AccessibleObject.RuntimeIDFirstItem` erişilebilirliği `protected` `internal`olarak değiştirilmiştir.
+.NET Core 3.0 RC1'den `AccessibleObject.RuntimeIDFirstItem` `protected` başlayarak erişilebilirlik `internal`.
 
-#### <a name="change-description"></a>Açıklamayı Değiştir
+#### <a name="change-description"></a>Açıklamayı değiştir
 
-.NET Core 3,0 Preview 4 ' te başlayarak `AccessibleObject.RuntimeIDFirstItem` alanı `protected`. .NET Core 3,0 RC1 ile başlayarak, .NET Framework alanın erişilebilirliği ile hizalamak için `protected` `internal` olarak değiştirilmiştir.
+.NET Core 3.0 Preview 4 `AccessibleObject.RuntimeIDFirstItem` ile `protected`başlayarak, alan . .NET Core 3.0 RC1 ile başlayarak, .NET Framework'deki alanın erişilebilirliğiyle hizaya `protected` kadar `internal` değişti.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3,0 RC1
+3.0 RC1
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-<xref:System.Windows.Forms.AccessibleObject> bir .NET Core uygulamasını geliştirdiyseniz ve `RuntimeIDFirstItem` alanına eriştiğinde bu değişiklik sizi etkileyebilir. Bu durumda, yerel bir sabiti şu şekilde tanımlayabilirsiniz:
+Bu değişiklik, <xref:System.Windows.Forms.AccessibleObject> `RuntimeIDFirstItem` alandan türemiş ve alana erişen bir türe sahip bir .NET Core uygulaması geliştirdiyseniz sizi etkileyebilir. Bu durumda, yerel bir sabiti aşağıdaki gibi tanımlayabilirsiniz:
 
 ```csharp
 const int RuntimeIDFirstItem = 0x2a;
@@ -32,7 +32,7 @@ Windows Forms
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-- API analizi aracılığıyla algılanamaz.
+- API analizi ile tespit edilemez.
 
 <!-- 
 

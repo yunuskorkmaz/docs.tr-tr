@@ -1,45 +1,45 @@
 ---
-title: C# 7,1 sürümündeki yenilikler
-description: C# 7,1 sürümündeki yeni özelliklere genel bakış.
+title: C# 7.1 Yenilikleri
+description: C# 7.1'deki yeni özelliklere genel bakış.
 ms.date: 04/09/2019
 ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714588"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399709"
 ---
-# <a name="whats-new-in-c-71"></a>C# 7,1 sürümündeki yenilikler
+# <a name="whats-new-in-c-71"></a>C# 7.1 Yenilikleri
 
-C#7,1, C# dilin ilk nokta sürümüdür. Dil için artan bir sürüm temposunda işaretler. Yeni özellikleri daha erken kullanabilirsiniz, her yeni özellik için idealdir. C#7,1, derleyiciyi belirtilen dilin sürümüyle eşleşecek şekilde yapılandırma yeteneğini ekler. Bu sayede, dil sürümlerini yükseltme kararına araçları yükseltme kararını ayırmanızı sağlayabilirsiniz.
+C# 7.1, C# dilinin ilk noktasıdır. Bu dil için artan bir sürüm cadence işaretler. Yeni özellikleri, ideal olarak her yeni özellik hazır olduğunda daha erken kullanabilirsiniz. C# 7.1, derleyiciyi dilin belirli bir sürümüyle eşleşecek şekilde yapılandırma olanağı ekler. Bu, araçları yükseltme kararını dil sürümlerini yükseltme kararından ayırmanızı sağlar.
 
-C#7,1, [dil sürümü seçimi](../language-reference/configure-language-version.md) yapılandırma öğesini, üç yeni dil özelliğini ve yeni derleyici davranışını ekler.
+C# 7.1 [dil sürümü seçimi](../language-reference/configure-language-version.md) yapılandırma öğesi, üç yeni dil özellikleri ve yeni derleyici davranışı ekler.
 
 Bu sürümdeki yeni dil özellikleri şunlardır:
 
-- [`async` `Main` yöntemi](#async-main)
-  - Bir uygulama için giriş noktası `async` değiştiriciye sahip olabilir.
-- [`default` değişmez ifadesi](#default-literal-expressions)
-  - Hedef türü çıkarsanamıyor varsayılan değer ifadelerinde varsayılan değişmez ifadeleri kullanabilirsiniz.
-- [Gösterilen demet öğesi adları](#inferred-tuple-element-names)
-  - Kayıt düzeni öğelerinin adları, birçok durumda demet başlatmasıyla çıkarsanamıyor.
-- [Genel tür parametrelerinde model eşleştirme](#pattern-matching-on-generic-type-parameters)
-  - Türü genel bir tür parametresi olan değişkenlerde model eşleşme ifadeleri kullanabilirsiniz.
+- [`async``Main` yöntem](#async-main)
+  - Bir uygulama için giriş noktası `async` değiştirici olabilir.
+- [`default`gerçek ifadeler](#default-literal-expressions)
+  - Varsayılan değer ifadelerinde varsayılan gerçek ifadeleri, hedef türü çıkarılabilirken kullanabilirsiniz.
+- [Çıkarılan tuple öğesi adları](#inferred-tuple-element-names)
+  - Tuple elemanlarının adları birçok durumda tuple başlatma çıkarılabilir.
+- [Genel tür parametreleri üzerinde desen eşleştirme](#pattern-matching-on-generic-type-parameters)
+  - Türü genel bir tür parametresi olan değişkenlerde desen eşleştirme ifadeleri kullanabilirsiniz.
 
-Son olarak, derleyici `-refout` iki seçeneğe sahiptir ve bu denetim [Başvuru derleme üretimini](#reference-assembly-generation)`-refonly`.
+Son olarak, derleyici `-refout` iki `-refonly` seçenek vardır ve bu kontrol [referans derleme nesil.](#reference-assembly-generation)
 
-En son özellikleri bir nokta sürümünde kullanmak için, [Derleyici dil sürümünü yapılandırmanız](../language-reference/configure-language-version.md) ve sürümü seçmeniz gerekir.
+Bir nokta sürümündeki en son özellikleri kullanmak için [derleyici dili sürümünü yapılandırmanız](../language-reference/configure-language-version.md) ve sürümü seçmeniz gerekir.
 
-Bu makalenin geri kalanında her özelliğe bir genel bakış sunulmaktadır. Her bir özellik için, arkasında yatan bir düşünme olduğunu öğrenirsiniz. Söz dizimini öğrenirsiniz. Ortamınızdaki bu özellikleri, `dotnet try` genel aracını kullanarak inceleyebilirsiniz:
+Bu makalenin geri kalanı her özelliğin genel bir özetini sağlar. Her özellik için, bunun arkasındaki mantığı öğreneceksiniz. Sözdizimini öğreneceksin. `dotnet try` Bu özellikleri ortamınızda genel aracı kullanarak keşfedebilirsiniz:
 
-1. [DotNet-TRY](https://github.com/dotnet/try/blob/master/README.md#setup) küresel aracını yükler.
-1. [DotNet/TRY-Samples](https://github.com/dotnet/try-samples) deposunu kopyalayın.
-1. *TRY-Samples* deposu için geçerli dizini *csharp7* alt dizinine ayarlayın.
-1. `dotnet try`'i çalıştırın.
+1. [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) global aracını yükleyin.
+1. [Dotnet/try-samples](https://github.com/dotnet/try-samples) deposunu klonla.
+1. *Deneme örnekleri* deposu için geçerli dizini *csharp7* alt dizinine ayarlayın.
+1. `dotnet try` öğesini çalıştırın.
 
-## <a name="async-main"></a>Zaman uyumsuz ana
+## <a name="async-main"></a>Async ana
 
-*Async Main* yöntemi `Main` yönteminde `await` kullanmanıza olanak sağlar.
+Async *ana* yöntemi yönteminizde `await` `Main` kullanmanıza olanak sağlar.
 Daha önce yazmanız gerekir:
 
 ```csharp
@@ -49,7 +49,7 @@ static int Main()
 }
 ```
 
-Artık şunu yazabilirsiniz:
+Şimdi yazabilirsiniz:
 
 ```csharp
 static async Task<int> Main()
@@ -60,7 +60,7 @@ static async Task<int> Main()
 }
 ```
 
-Programınız çıkış kodu döndürmezse, bir <xref:System.Threading.Tasks.Task>döndüren `Main` yöntemi bildirebilirsiniz:
+Programınız bir çıkış kodu döndürmüyorsa, `Main` bir yöntem <xref:System.Threading.Tasks.Task>bildirebilirsiniz:
 
 ```csharp
 static async Task Main()
@@ -69,28 +69,28 @@ static async Task Main()
 }
 ```
 
-Programlama kılavuzundaki [zaman uyumsuz ana](../programming-guide/main-and-command-args/index.md) makaledeki ayrıntılar hakkında daha fazla bilgi edinebilirsiniz.
+Programlama kılavuzundaki [async ana](../programming-guide/main-and-command-args/index.md) makalesinde ayrıntılar hakkında daha fazla bilgi edinebilirsiniz.
 
-## <a name="default-literal-expressions"></a>Varsayılan değişmez değer ifadeleri
+## <a name="default-literal-expressions"></a>Varsayılan gerçek ifadeler
 
-Varsayılan değişmez değer ifadeleri varsayılan değer ifadelerine yönelik bir geliştirmedir.
-Bu ifadeler varsayılan değere bir değişken başlatır. Daha önce yazdığınız yer:
+Varsayılan gerçek ifadeler varsayılan değer ifadeleri için bir geliştirme vardır.
+Bu ifadeler varsayılan değeriçin bir değişken ilerler. Daha önce yazacağınız yer:
 
 ```csharp
 Func<string, bool> whereClause = default(Func<string, bool>);
 ```
 
-Artık başlatmanın sağ tarafındaki türü atlayabilirsiniz:
+Şimdi başbaşlatmanın sağ tarafındaki türü atlayabilirsiniz:
 
 ```csharp
 Func<string, bool> whereClause = default;
 ```
 
-Daha fazla bilgi için [varsayılan işleç](../language-reference/operators/default.md) makalesinin [varsayılan değişmez değeri](../language-reference/operators/default.md#default-literal) bölümüne bakın.
+Daha fazla bilgi için varsayılan [işleç](../language-reference/operators/default.md) makalesinin [varsayılan gerçek](../language-reference/operators/default.md#default-literal) bölümüne bakın.
 
-## <a name="inferred-tuple-element-names"></a>Gösterilen demet öğesi adları
+## <a name="inferred-tuple-element-names"></a>Çıkarılan tuple öğesi adları
 
-Bu özellik 7,0 ' de C# tanıtılan tanımlama grupları özelliği için küçük bir geliştirmedir. Bir tanımlama grubunu başlattığınızda, atamanın sağ tarafında kullanılan değişkenler demet öğeleri için istediğiniz adlarla aynıdır:
+Bu özellik, C# 7.0'da tanıtılan tuples özelliğine küçük bir geliştirmedir. Çoğu zaman bir tuple'ı başharflediğinizde, atamanın sağ tarafı için kullanılan değişkenler, tuple öğeleri için istediğiniz adlarla aynıdır:
 
 ```csharp
 int count = 5;
@@ -98,7 +98,7 @@ string label = "Colors used in the map";
 var pair = (count: count, label: label);
 ```
 
-Kayıt düzeni öğelerinin adları 7,1 içinde C# kayıt kümesini başlatmak için kullanılan değişkenlerden çıkarsanamıyor:
+Tuple elemanlarının adları C# 7.1'deki tuple'ı initiallaştırmak için kullanılan değişkenlerden çıkarılabilir:
 
 ```csharp
 int count = 5;
@@ -106,13 +106,13 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-Bu özellik hakkında daha fazla bilgi için [Tanımlama grupları](../tuples.md) makalesinde bulabilirsiniz.
+Bu özellik hakkında daha fazla bilgi için [Tuples](../tuples.md) makalesinde bulabilirsiniz.
 
-## <a name="pattern-matching-on-generic-type-parameters"></a>Genel tür parametrelerinde model eşleştirme
+## <a name="pattern-matching-on-generic-type-parameters"></a>Genel tür parametreleri üzerinde desen eşleştirme
 
-7,1 ile C# başlayarak, `is` ve `switch` tür deseninin model ifadesi bir genel tür parametresinin türüne sahip olabilir. Bu, `struct` ya da `class` türler olabilecek türler denetlenirken ve kutulamayı önlemek istediğiniz durumlarda yararlı olabilir.
+C# 7.1 ile başlayarak, `is` desen `switch` ifadesi ve tür deseni genel bir tür parametresi türüne sahip olabilir. Bu, ya veya `struct` `class` tür olabilir türleri denetler ve kutulama önlemek istediğiniz de en yararlı olabilir.
 
-## <a name="reference-assembly-generation"></a>Başvuru derlemesi oluşturma
+## <a name="reference-assembly-generation"></a>Referans montaj üretimi
 
-*Yalnızca başvuru derlemeler*üreten iki yeni derleyici seçeneği vardır: [-refout](../language-reference/compiler-options/refout-compiler-option.md) ve [-refonly](../language-reference/compiler-options/refonly-compiler-option.md).
-Bağlantılı makaleler, bu seçenekleri ve başvuru derlemelerini daha ayrıntılı bir şekilde açıklamaktadır.
+*Yalnızca referans derlemeleri*oluşturan iki yeni derleyici seçeneği vardır: [-refout](../language-reference/compiler-options/refout-compiler-option.md) ve [-refonly.](../language-reference/compiler-options/refonly-compiler-option.md)
+Bağlantılı makaleler bu seçenekleri ve başvuru derlemelerini daha ayrıntılı olarak açıklar.

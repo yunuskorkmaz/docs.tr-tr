@@ -1,24 +1,24 @@
 ---
-title: DotNet NuGet Yereller komutu
-description: DotNet NuGet Yereller komutu http-istek önbelleği, geçici önbellek veya makine genelindeki genel paketler klasörü gibi yerel NuGet kaynaklarını temizler veya listeler.
+title: dotnet nuget locals komutu
+description: Dotnet nuget locals komutu, http isteği önbelleği, geçici önbellek veya makine çapında ki genel paketler klasörü gibi yerel NuGet kaynaklarını temizler veya listeler.
 author: karann-msft
 ms.date: 02/14/2020
 ms.openlocfilehash: 3fdd7d946b08b4c18cfaeb65013de259b927a7fa
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503687"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 2.x SDK ve sonraki sürümler
 
 ## <a name="name"></a>Adı
 
-`dotnet nuget locals`-yerel NuGet kaynaklarını temizler veya listeler.
+`dotnet nuget locals`- Yerel NuGet kaynaklarını temizler veya listeler.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Özet
 
 ```dotnetcli
 dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output]
@@ -27,7 +27,7 @@ dotnet nuget locals [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet nuget locals` komutu, http-istek önbelleği, geçici önbellek veya makine genelindeki genel paketler klasöründeki yerel NuGet kaynaklarını temizler veya listeler.
+Komut, `dotnet nuget locals` yerel NuGet kaynaklarını http isteği önbelleği, geçici önbellek veya makine çapında ki genel paketler klasöründe temizler veya listeler.
 
 ## <a name="arguments"></a>Bağımsız Değişkenler
 
@@ -35,16 +35,16 @@ dotnet nuget locals [-h|--help]
 
   Listelemek veya temizlemek için önbellek konumu. Aşağıdaki değerlerden birini kabul eder:
 
-  * `all`-belirtilen işlemin tüm önbellek türlerine uygulandığını gösterir: http-istek önbelleği, genel paketler önbelleği ve geçici önbellek.
-  * `http-cache`-belirtilen işlemin yalnızca http istek önbelleğine uygulanacağını gösterir. Diğer önbellek konumları etkilenmez.
-  * `global-packages`-belirtilen işlemin yalnızca genel paketler önbelleğine uygulanacağını gösterir. Diğer önbellek konumları etkilenmez.
-  * `temp`-belirtilen işlemin yalnızca geçici önbelleğe uygulandığını belirtir. Diğer önbellek konumları etkilenmez.
+  * `all`- Belirtilen işlemin tüm önbellek türlerine uygulandığını gösterir: http-request önbelleği, genel paketler önbelleği ve geçici önbellek.
+  * `http-cache`- Belirtilen işlemin yalnızca http isteği önbelleğine uygulandığını gösterir. Diğer önbellek konumları etkilenmez.
+  * `global-packages`- Belirtilen işlemin yalnızca genel paketler önbelleğine uygulandığını gösterir. Diğer önbellek konumları etkilenmez.
+  * `temp`- Belirtilen işlemin yalnızca geçici önbelleğe uygulandığını gösterir. Diğer önbellek konumları etkilenmez.
 
 ## <a name="options"></a>Seçenekler
 
 - **`--force-english-output`**
 
-  Uygulamayı, sabit, Ingilizce tabanlı bir kültür kullanılarak çalışmaya zorlar.
+  Uygulamayı değişmez, İngilizce tabanlı bir kültür kullanarak çalıştırmaya zorlar.
 
 - **`-h|--help`**
 
@@ -52,27 +52,27 @@ dotnet nuget locals [-h|--help]
 
 - **`-c|--clear`**
 
-  Clear seçeneği, belirtilen önbellek türü üzerinde açık bir işlem yürütür. Önbellek dizinlerinin içeriği yinelemeli olarak silinir. Yürütülen Kullanıcı/Grup, önbellek dizinlerindeki dosyalar üzerinde izne sahip olmalıdır. Aksi takdirde, temizlenmeyen dosyaları/klasörleri gösteren bir hata görüntülenir.
+  Açık seçenek, belirtilen önbellek türünde net bir işlem yürütür. Önbellek dizinlerinin içeriği özyinelemeli olarak silinir. Çalıştıran kullanıcı/grup önbellek dizinlerinde dosyalar için izin olmalıdır. Değilse, temizlenmeyen dosyaları/klasörleri gösteren bir hata görüntülenir.
 
 - **`-l|--list`**
 
-  Liste seçeneği, belirtilen önbellek türünün konumunu göstermek için kullanılır.
+  Liste seçeneği, belirtilen önbellek türünün konumunu görüntülemek için kullanılır.
 
 ## <a name="examples"></a>Örnekler
 
-- Tüm yerel önbellek dizinlerinin (http-önbellek dizini, genel paketler önbellek dizini ve geçici önbellek dizini) yollarını görüntüler:
+- Tüm yerel önbellek dizinlerinin (http önbellek dizini, genel paketler önbellek dizini ve geçici önbellek dizini) yollarını görüntüler:
 
   ```dotnetcli
   dotnet nuget locals all –l
   ```
 
-- Yerel http önbelleği dizininin yolunu görüntüler:
+- Yerel http-önbellek dizininin yolunu görüntüler:
 
   ```dotnetcli
   dotnet nuget locals http-cache --list
   ```
 
-- Tüm yerel önbellek dizinlerindeki tüm dosyaları temizler (http-önbellek dizini, genel paketler önbellek dizini ve geçici önbellek dizini):
+- Tüm yerel önbellek dizinlerinden (http-önbellek dizini, genel paketler önbellek dizini ve geçici önbellek dizini) tüm dosyaları temizler:
 
   ```dotnetcli
   dotnet nuget locals all --clear
@@ -92,4 +92,4 @@ dotnet nuget locals [-h|--help]
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-`dotnet nuget locals` komutunu kullanırken yaygın sorunlar ve hatalar hakkında bilgi için bkz. [NuGet önbelleğini yönetme](/nuget/consume-packages/managing-the-nuget-cache).
+`dotnet nuget locals` Komutu kullanırken sık karşılaşılan sorunlar ve hatalar hakkında bilgi için [NuGet önbelleğini yönetme'ye](/nuget/consume-packages/managing-the-nuget-cache)bakın.

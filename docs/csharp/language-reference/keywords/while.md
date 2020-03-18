@@ -1,5 +1,5 @@
 ---
-title: while- C# Reference
+title: while - C# Referans
 ms.date: 05/28/2018
 f1_keywords:
 - while_CSharpKeyword
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
 ms.openlocfilehash: eb9aa2ea8d6b1c96e0be7d377f7c047194b598de
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712799"
 ---
 # <a name="while-c-reference"></a>while (C# Başvurusu)
 
-`while` deyimi, belirtilen bir Boole ifadesi `true`değerlendirirken bir deyimi veya bir deyim bloğunu yürütür. Bu ifade döngünün her yürütmeden önce değerlendirildiğinden `while` döngüsü sıfır veya daha fazla kez yürütülür. Bu, bir veya daha fazla kez yürütülen [Do](do.md) döngüsünden farklıdır.
+`while` İfade bir deyim veya ifade bloğu yürütürken, belirli bir `true`Boolean ifadesi .'ye göre değerlendirilir. Bu ifade döngünün her yürütülmesinden önce `while` değerlendirildiği için, bir döngü sıfır veya daha fazla kez yürütür. Bu, bir veya daha fazla kez yürüten [do](do.md) döngüsünden farklıdır.
 
-`while` bildiri bloğunun içindeki herhangi bir noktada [Break](break.md) ifadesini kullanarak döngünün dışına kesebilirsiniz.
+`while` İfade bloğu içindeki herhangi bir noktada, [kesme](break.md) deyimini kullanarak döngüden çıkabilirsiniz.
 
-[Continue](continue.md) deyimini kullanarak `while` ifadesinin değerlendirmesine doğrudan ilerleyerek. İfade `true`olarak değerlendirilirse, yürütme döngüdeki ilk deyimde devam eder. Aksi halde, yürütme döngüden sonraki ilk ifadede devam eder.
+Continue deyimini kullanarak ifadenin `while` değerlendirilmesi [continue](continue.md) için doğrudan adım atabilirsiniz. İfade, `true`yürütme yi değerlendirirse, döngüdeki ilk ifadede devam eder. Aksi takdirde, yürütme döngüden sonra ilk deyimde devam ediyor.
 
-Ayrıca, [goto](goto.md), [Return](return.md)veya [throw](throw.md) deyimleriyle bir `while` döngüsünden çıkabilirsiniz.
+Ayrıca `while` [goto,](goto.md) [return](return.md)veya [atmak](throw.md) ifadeleri tarafından bir döngü çıkabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek `while` deyimin kullanımını gösterir. Örnek kodu çalıştırmak için **Çalıştır** ' ı seçin. Bundan sonra kodu değiştirip yeniden çalıştırabilirsiniz.
+Aşağıdaki örnek, `while` deyimin kullanımını gösterir. Örnek kodu çalıştırmak için **Çalıştır'ı** seçin. Bundan sonra kodu değiştirebilir ve yeniden çalıştırabilirsiniz.
 
 [!code-csharp-interactive[while loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#3)]
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için, [ C# dil belirtiminin](/dotnet/csharp/language-reference/language-specification/introduction) [while ifadesinin](~/_csharplang/spec/statements.md#the-while-statement) bölümüne bakın.
+Daha fazla bilgi için [C# dil belirtiminin](/dotnet/csharp/language-reference/language-specification/introduction) [while deyimi](~/_csharplang/spec/statements.md#the-while-statement) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../index.md)
+- [C# Referans](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Sözcükleri](index.md)
-- [do ekstresi](do.md)
+- [C# Anahtar Kelimeler](index.md)
+- [deyimi yapmak](do.md)

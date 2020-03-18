@@ -1,16 +1,16 @@
 ---
-title: Belirli bir sözcük kümesini (LINQ) içeren cümleleri sorgulama (LINQ) (C#)
+title: Belirli bir sözcük kümesi (LINQ) (C#) içeren cümleler için sorgulama
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: efb0eb60a9695c19e16b507d29ef6994e904cff9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: df279f57d9965d796397cbcf7a0f3ba05bf9e5c1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347690"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168862"
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Belirli bir sözcük kümesini (LINQ) içeren cümleleri sorgulama (LINQ) (C#)
-Bu örnek, belirli bir sözcük kümesinin her biri için eşleşmeler içeren bir metin dosyasında Tümcelerin nasıl bulunacağını gösterir. Bu örnekte, arama terimleri dizisi sabit kodlanmış olsa da, çalışma zamanında dinamik olarak doldurulabilir. Bu örnekte sorgu, "tarihsel olarak", "Data" ve "Integrated" sözcüklerini içeren cümleleri döndürür.  
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Belirli bir sözcük kümesi (LINQ) (C#) içeren cümleler için sorgulama
+Bu örnek, belirtilen sözcük kümesinin her biri için eşleşmeler içeren bir metin dosyasındaki cümlelerin nasıl bulunup bulunulacağı gösterilmektedir. Bu örnekte arama terimleri dizisi sabit kodlanmış olsa da, çalışma zamanında dinamik olarak doldurulabilir. Bu örnekte, sorgu "Geçmiş", "veri" ve "tümleşik" sözcüklerini içeren tümceleri döndürür.  
   
 ## <a name="example"></a>Örnek  
   
@@ -46,7 +46,7 @@ class FindSentences
   
         // Execute the query. Note that you can explicitly type  
         // the iteration variable here even though sentenceQuery  
-        // was implicitly typed.   
+        // was implicitly typed.
         foreach (string str in sentenceQuery)  
         {  
             Console.WriteLine(str);  
@@ -62,13 +62,13 @@ Historically, the world of data and the world of objects have not been well inte
 */  
 ```  
   
- Sorgu önce metni cümlelere bölerek ve sonra cümleleri her bir sözcüğü tutan dizeler dizisine bölerek işe yarar. Bu dizilerin her biri için <xref:System.Linq.Enumerable.Distinct%2A> yöntemi tüm yinelenen sözcükleri kaldırır ve sonra sorgu, Word dizisinde ve `wordsToMatch` dizisinde bir <xref:System.Linq.Enumerable.Intersect%2A> işlemi gerçekleştirir. Kesişimin sayısı `wordsToMatch` dizisinin sayısıyla aynıysa, sözcüklerde tüm sözcükler bulunur ve özgün tümce döndürülür.  
+ Sorgu, önce metni cümlelere bölerek, sonra da cümleleri her sözcüğü tutan bir dizi dizeye bölerek çalışır. Bu dizilerin her biri <xref:System.Linq.Enumerable.Distinct%2A> için yöntem tüm yinelenen sözcükleri kaldırır <xref:System.Linq.Enumerable.Intersect%2A> ve sorgu sözcük `wordsToMatch` dizisi ve dizi üzerinde bir işlem gerçekleştirir. Kesişim sayısı `wordsToMatch` dizinin sayısıyla aynıysa, tüm sözcükler sözcüklerde bulunur ve özgün tümce döndürülür.  
   
- <xref:System.String.Split%2A>çağrısında noktalama işaretleri, dizeden kaldırmak için ayırıcılar olarak kullanılır. Bunu yapmadıysanız, örneğin, `wordsToMatch` dizide "tarihsel" olarak eşleşmeyen "tarihsel" bir dizeye sahip olabilirsiniz. Kaynak metinde bulunan noktalama türlerine bağlı olarak ek ayırıcılar kullanmanız gerekebilir.  
+ Çağrıda <xref:System.String.Split%2A>noktalama işaretleri, dizeden kaldırmak için ayırıcı olarak kullanılır. Bunu yapmadıysanız, örneğin `wordsToMatch` dizideki "Tarihsel" dizesini "Tarihsel olarak" eşleştirmez. Kaynak metinde bulunan noktalama işaretleritürlerine bağlı olarak ek ayırıcılar kullanmanız gerekebilir.  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
-System. C# lınq ve System.IO ad alanları için `using` yönergeler içeren bir konsol uygulaması projesi oluşturun.
+## <a name="compiling-the-code"></a>Kod Derleniyor  
+System.Linq ve System.IO `using` ad alanları için yönergeleri içeren bir C# konsolu uygulama projesi oluşturun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (C#)](./linq-and-strings.md)
+- [LINQ ve Dizeleri (C#)](./linq-and-strings.md)

@@ -1,6 +1,6 @@
 ---
-title: Sınıflar ve yapılar- C# Programlama Kılavuzu
-description: İçinde C#sınıfların ve yapıların (yapılar) kullanımını açıklar.
+title: Sınıflar ve Structs - C# Programlama Kılavuzu
+description: C#'da sınıfların ve yapıların (yapıların) kullanımını açıklar.
 ms.date: 01/17/2016
 helpviewer_keywords:
 - structs [C#], about structs
@@ -11,37 +11,37 @@ helpviewer_keywords:
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
 ms.openlocfilehash: afd9e688bd716375bafb370fad4af082a9498411
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673426"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79399856"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Sınıflar ve Yapılar (C# Programlama Kılavuzu)
-Sınıflar ve yapılar, .NET Framework ortak tür sisteminin temel yapılarıdır. Her biri, mantıksal birim olarak birbirine ait bir veri kümesini ve davranışları kapsülleyen bir veri yapısıdır. Veri ve davranışlar, sınıfın veya yapının *üyeleridir* ve bu konuda daha sonra listelendiği gibi yöntemleri, özellikleri ve olayları gibi, vb. içerir.  
+Sınıflar ve yapılar .NET Framework'deki ortak tür sisteminin temel yapılarından ikisidir. Her biri, mantıksal bir birim olarak bir araya gelen bir veri kümesini ve davranışı kapsayan bir veri yapısıdır. Veriler ve davranışlar sınıfın veya yapının *üyeleridir* ve bu konunun ilerleyen saatlerinde listelendikleri gibi yöntemlerini, özelliklerini ve olaylarını vb. içerir.  
   
- Sınıf veya yapı bildirimi, çalışma zamanında örnek veya nesne oluşturmak için kullanılan bir şema gibidir. `Person`adlı bir sınıf veya yapı tanımlarsanız `Person` türün adıdır. `Person`türünde bir değişken `p` bildirir ve başladıysanız `p` bir nesne veya `Person`örneği olarak ifade edilir. Aynı `Person` türünün birden çok örneği oluşturulabilir ve her bir örnek, özelliklerinde ve alanlarında farklı değerlere sahip olabilir.  
+ Sınıf veya yapı bildirimi, çalışma zamanında örnek veya nesne oluşturmak için kullanılan bir plan gibidir. Bir sınıf veya yapı adlı `Person`tanımlarsanız, `Person` türün adıdır. Bir `p` tür `Person`değişkeni beyan ve `p` baş harfe yazarsanız, `Person`bir nesne veya . Aynı `Person` türden birden çok örnek oluşturulabilir ve her örnek kendi özellikleri ve alanlarında farklı değerlere sahip olabilir.  
   
- Sınıf bir başvuru türüdür. Sınıfın bir nesnesi oluşturulduğunda, nesnenin atandığı değişken yalnızca o belleğe yönelik bir başvuru barındırır. Nesne başvurusu yeni bir değişkene atandığında, yeni değişken özgün nesneye başvurur. Her ikisi de aynı verilere başvurduğundan, bir değişken aracılığıyla yapılan değişiklikler diğer değişkene yansıtılır.  
+ Sınıf bir başvuru türüdür. Sınıfın bir nesnesi oluşturulduğunda, nesnenin atandığı değişken yalnızca bu belleğe bir başvuru tutar. Nesne başvurusu yeni bir değişkene atandığında, yeni değişken özgün nesneye başvurur. Her ikisi de aynı verilere atıfta çünkü bir değişken üzerinden yapılan değişiklikler diğer değişkene yansıtılır.  
   
- Struct bir değer türüdür. Bir struct oluşturulduğunda, yapının atandığı değişken yapının gerçek verilerini barındırır. Yapı yeni bir değişkene atandığında, kopyalanır. Bu nedenle, yeni değişken ve özgün değişken aynı verilerin iki ayrı kopyasını içerir. Bir kopyada yapılan değişiklikler diğer kopyayı etkilemez.  
+ Yapı bir değer türüdür. Bir yapı oluşturulduğunda, yapının atandığı değişken yapının gerçek verilerini tutar. Yapı yeni bir değişkene atandığında kopyalanır. Bu nedenle, yeni değişken ve özgün değişken aynı verilerin iki ayrı kopyasını içerir. Bir kopyada yapılan değişiklikler diğer kopyayı etkilemez.  
   
- Genel olarak, sınıflar daha karmaşık davranışı modellemek veya bir sınıf nesnesi oluşturulduktan sonra değiştirilmesi amaçlanan veriler için kullanılır. Yapılar, öncelikle yapı oluşturulduktan sonra değiştirilmesi amaçlanmayan verileri içeren küçük veri yapıları için idealdir.  
+ Genel olarak, sınıflar daha karmaşık davranışı veya bir sınıf nesnesi oluşturulduktan sonra değiştirilmesi amaçlanan verileri modellemek için kullanılır. Structs, öncelikle yapı oluşturulduktan sonra değiştirilmesi amaçlanmayan verileri içeren küçük veri yapıları için en uygun olanlardır.  
   
- Daha fazla bilgi için bkz. [sınıflar](./classes.md), [nesneler](./objects.md)ve [yapı türleri](../../language-reference/builtin-types/struct.md).  
+ Daha fazla bilgi için [Bkz. Sınıflar,](./classes.md) [Nesneler](./objects.md)ve [Yapı türleri.](../../language-reference/builtin-types/struct.md)  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, `ProgrammingGuide` ad alanındaki `CustomClass` üç üyeye sahiptir: bir örnek Oluşturucu, `Number`adlı bir özellik ve `Multiply`adlı bir yöntem. `Program` sınıfındaki `Main` yöntemi, `CustomClass`bir örnek (nesne) oluşturur ve nesnenin yöntemi ile özelliğine nokta gösterimi kullanılarak erişilir.
+ Aşağıdaki örnekte, `CustomClass` `ProgrammingGuide` ad alanında üç üye vardır: bir örnek `Number`oluşturucu, adlı `Multiply`bir özellik , ve adlı bir yöntem . Sınıftayöntem `Main` `Program` bir örnek (nesne) `CustomClass`oluşturur ve nesnenin yöntemi ve özelliği nokta gösterimi kullanılarak erişilir.
   
  [!code-csharp[csProgGuideObjects#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/class1.cs#1)]  
   
-## <a name="encapsulation"></a>Kapsül  
- *Kapsülleme* bazen nesne odaklı programlamanın ilk ve prensibi olarak adlandırılır. Kapsülleme ilkelerine göre, bir sınıf veya yapı, üyelerinin her birinin ne şekilde erişilebilir olduğunu belirtebilir sınıfın veya yapının dışında kod alma. Sınıf veya derleme dışından kullanılması amaçlanmayan Yöntemler ve değişkenler, kodlama hataları veya kötü amaçlı yazılımlar için potansiyelini sınırlamak üzere gizlenebilir.  
+## <a name="encapsulation"></a>Kapsülleme  
+ *Kapsülleme* bazen nesne yönelimli programlamanın ilk ayağı veya ilkesi olarak adlandırılır. Kapsülleme ilkesine göre, bir sınıf veya yapı, üyelerinin her birinin sınıf veya yapı dışında kodlama nın ne kadar erişilebilir olduğunu belirtebilir. Sınıf veya derleme dışından kullanılması amaçlanmayan yöntemler ve değişkenler, kodlama hataları veya kötü amaçlı açıklar potansiyelini sınırlamak için gizlenebilir.  
   
- Sınıflar hakkında daha fazla bilgi için bkz. [sınıflar](./classes.md) ve [nesneler](./objects.md).  
+ Sınıflar [ve](./classes.md) [Nesneler](./objects.md)hakkında daha fazla bilgi için bkz.  
   
 ### <a name="members"></a>Üyeler  
- Tüm Yöntemler, alanlar, sabitler, Özellikler ve olaylar bir tür içinde bildirilmelidir; Bunlara tür *üyeleri* denir. İçinde C#, bazı dillerde olduğu gibi genel değişkenler veya yöntemler yoktur. Bir programın giriş noktası bile, `Main` yöntemi bir sınıf veya yapı içinde bildirilmelidir. Aşağıdaki liste, bir sınıfta veya yapıda bildirilebilecek çeşitli üye türlerini içerir.  
+ Tüm yöntemler, alanlar, sabitler, özellikler ve olaylar bir tür içinde bildirilmelidir; bunlara türünün *üyeleri* denir. C#'da, diğer bazı dillerde olduğu gibi genel değişkenler veya yöntemler yoktur. Hatta bir programın giriş noktası, `Main` yöntem, bir sınıf veya yapı içinde bildirilmelidir. Aşağıdaki liste, bir sınıf veya yapıda bildirilebilecek tüm çeşitli üyeleri içerir.  
   
 - [Alanlar](./fields.md)  
   
@@ -64,39 +64,39 @@ Sınıflar ve yapılar, .NET Framework ortak tür sisteminin temel yapılarıdı
 - [İç içe Geçmiş Türler](./nested-types.md)  
   
 ### <a name="accessibility"></a>Erişilebilirlik  
- Bazı yöntemler ve özellikler, sınıf veya yapı birimi dışında, *istemci kodu*olarak bilinen koddan çağrılmalıdır veya erişilmek üzere tasarlanmıştır. Diğer yöntemler ve özellikler yalnızca sınıfta veya yapıda kullanım için olabilir. Yalnızca amaçlanan istemci kodunun ulaşabilmesi için kodunuzun erişilebilirliğini sınırlandırmamak önemlidir. Türlerinizin ve üyelerinin istemci koduna ne kadar erişilebilir olduğunu, [genel](../../language-reference/keywords/public.md), [korunan](../../language-reference/keywords/protected.md), [dahili](../../language-reference/keywords/internal.md), [korunan iç](../../language-reference/keywords/protected-internal.md), [özel](../../language-reference/keywords/private.md) ve [özel korumalı](../../language-reference/keywords/private-protected.md)erişim değiştiricilerini kullanarak belirtirsiniz. Varsayılan erişilebilirlik `private`. Daha fazla bilgi için bkz. [erişim değiştiricileri](./access-modifiers.md).  
+ Bazı yöntemler ve özellikler çağrılması veya istemci *kodu*olarak bilinen sınıf veya yapı dışında koddan erişilmesi içindir. Diğer yöntemler ve özellikler yalnızca sınıf veya yapının kendisinde kullanılabilir. Yalnızca amaçlanan istemci koduna ulaşabilmesi için kodunuzun erişilebilirliğini sınırlamak önemlidir. Genel, [korumalı,](../../language-reference/keywords/protected.md) [dahili,](../../language-reference/keywords/internal.md) [korumalı dahili,](../../language-reference/keywords/protected-internal.md) [özel](../../language-reference/keywords/private.md) [public](../../language-reference/keywords/public.md)ve [özel korumalı](../../language-reference/keywords/private-protected.md)erişim değiştiriciler kullanarak türünüzün ve üyelerinin istemci koduna ne kadar erişilebilir olduğunu belirtirsiniz. Varsayılan erişilebilirlik. `private` Daha fazla bilgi için [Erişim Değiştiriciler'e](./access-modifiers.md)bakın.  
   
 ### <a name="inheritance"></a>Devralma  
- Sınıflar (ancak yapılar değil) devralma kavramını destekler. Başka bir sınıftan ( *temel sınıf*) türetilen bir sınıf, oluşturucular ve sonlandırıcılar hariç temel sınıfın tüm genel, korunan ve dahili üyelerini otomatik olarak içerir. Daha fazla bilgi için bkz. [Devralma](./inheritance.md) ve çok [biçimlilik](./polymorphism.md).  
+ Sınıflar (ancak yapı değil) kalıtım kavramını destekler. Başka bir sınıftan *(taban sınıf)* türeyen bir sınıf, oluşturucuları ve sonlandırıcıları dışında taban sınıfın tüm ortak, korumalı ve dahili üyelerini otomatik olarak içerir. Daha fazla bilgi için [kalıtım](./inheritance.md) ve [çok biçimlilik](./polymorphism.md)bilgisine bakın.  
   
- Sınıflar [Özet](../../language-reference/keywords/abstract.md)olarak, bir veya daha fazla yönteminin bir uygulama olmadığı anlamına gelir. Soyut sınıflar doğrudan örneklenemez, ancak eksik uygulamayı sağlayan diğer sınıflar için temel sınıf olarak görev yapabilir. Sınıflar, diğer sınıfların bunlardan devralmasını engellemek için [Sealed](../../language-reference/keywords/sealed.md) olarak da bildirilemez. Daha fazla bilgi için bkz. [soyut ve korumalı sınıflar ve sınıf üyeleri](./abstract-and-sealed-classes-and-class-members.md).  
+ Sınıflar [soyut](../../language-reference/keywords/abstract.md)olarak ilan edilebilir, bu da yöntemlerinden birinin veya daha fazlasının uygulanması olmadığı anlamına gelir. Soyut sınıflar doğrudan anında alınamasa da, eksik uygulamayı sağlayan diğer sınıflar için temel sınıflar olarak hizmet verebilirler. Sınıflar, diğer sınıfların bunlardan devralmasını önlemek için [mühürlü](../../language-reference/keywords/sealed.md) olarak da beyan edilebilir. Daha fazla bilgi için [Bkz. Özet ve Mühürlü Sınıflar ve Sınıf Üyeleri.](./abstract-and-sealed-classes-and-class-members.md)  
   
 ### <a name="interfaces"></a>Arabirimler  
- Sınıflar ve yapılar birden çok arabirimi kalýtýmla alabilir. Bir arabirimden devralması için, türün arabirimde tanımlanmış tüm yöntemleri uyguladığı anlamına gelir. Daha fazla bilgi için bkz. [arabirimler](../interfaces/index.md).  
+ Sınıflar ve structs birden çok arabirim devralabilir. Bir arabirimden devralmak, türün arabirimde tanımlanan tüm yöntemleri uyguladığı anlamına gelir. Daha fazla bilgi için [Arabirimler'e](../interfaces/index.md)bakın.  
   
 ### <a name="generic-types"></a>Genel Türler  
- Sınıflar ve yapılar, bir veya daha fazla tür parametresiyle tanımlanabilir. İstemci kodu, türün bir örneğini oluşturduğunda türü sağlar. Örneğin, <xref:System.Collections.Generic> ad alanındaki <xref:System.Collections.Generic.List%601> sınıfı bir tür parametresiyle tanımlanmıştır. İstemci kodu, listenin tutacağız türü belirtmek için bir `List<string>` veya `List<int>` örneği oluşturur. Daha fazla bilgi için bkz. [Genel türler](../generics/index.md).  
+ Sınıflar ve structs bir veya daha fazla tür parametreleri ile tanımlanabilir. İstemci kodu, tür eki bir örnek oluştururken türü sağlar. Örneğin <xref:System.Collections.Generic> ad <xref:System.Collections.Generic.List%601> alanındaki sınıf bir tür parametresi ile tanımlanır. İstemci kodu, bir `List<string>` `List<int>` örneğini oluşturur veya listenin tutacağı türü belirtir. Daha fazla bilgi için [Genel Bilgiler'e](../generics/index.md)bakın.  
   
-### <a name="static-types"></a>Statik türler  
- Sınıflar (ancak yapılar için değil) [statik](../../language-reference/keywords/static.md)olarak bildirilemez. Statik bir sınıf yalnızca statik üyeler içerebilir ve yeni anahtar sözcüğüyle başlatılamaz. Program yüklendiğinde sınıfın bir kopyası belleğe yüklenir ve onun üyelerine sınıf adından erişilir. Sınıfların ve yapıların her ikisi de statik üye içerebilir. Daha fazla bilgi için bkz. [statik sınıflar ve statik sınıf üyeleri](./static-classes-and-static-class-members.md).  
+### <a name="static-types"></a>Statik Türleri  
+ Sınıflar (ancak structs değil) [statik](../../language-reference/keywords/static.md)olarak ilan edilebilir. Statik bir sınıf yalnızca statik üyeler içerebilir ve yeni anahtar kelimeyle anında kullanılamaz. Program yüklendiğinde sınıfın bir kopyası belleğe yüklenir ve üyelerine sınıf adı üzerinden erişilir. Hem sınıflar hem de structs statik üye içerebilir. Daha fazla bilgi için Statik [Sınıflar ve Statik Sınıf Üyeleri'ne](./static-classes-and-static-class-members.md)bakın.  
   
 ### <a name="nested-types"></a>İç içe Geçmiş Türler  
- Bir sınıf veya yapı, başka bir sınıf veya yapı içinde iç içe olabilir. Daha fazla bilgi için bkz. [Iç Içe türler](./nested-types.md).  
+ Bir sınıf veya yapı başka bir sınıf veya yapı içinde iç içe olabilir. Daha fazla bilgi için İç [Içe Türler'e](./nested-types.md)bakın.  
   
-### <a name="partial-types"></a>Kısmi türler  
- Bir sınıf, yapı veya yöntemin bir parçasını bir kod dosyasında ve farklı bir kod dosyasındaki başka bir bölüme tanımlayabilirsiniz. Daha fazla bilgi için bkz. [kısmi sınıflar ve Yöntemler](./partial-classes-and-methods.md).  
+### <a name="partial-types"></a>Kısmi Tipler  
+ Bir kod dosyasında bir sınıfın, yapının veya yöntemin bir bölümünü ve ayrı bir kod dosyasında başka bir bölümü tanımlayabilirsiniz. Daha fazla bilgi için Kısmi [Sınıflar ve Yöntemler'e](./partial-classes-and-methods.md)bakın.  
   
-### <a name="object-initializers"></a>Nesne başlatıcıları  
- Yapıcısını açıkça çağırmadan sınıf veya yapı nesneleri ve nesne koleksiyonları oluşturabilir ve başlatabilir. Daha fazla bilgi için bkz. [nesne ve koleksiyon başlatıcıları](./object-and-collection-initializers.md).  
+### <a name="object-initializers"></a>Nesne Baş harfleri  
+ Sınıf veya yapı nesneleri ve nesnelerin koleksiyonlarını, oluşturucularını açıkça çağırmadan anında ve başlangıç olarak adlandırabilirsiniz. Daha fazla bilgi için [Object ve Collection Initializers'a](./object-and-collection-initializers.md)bakın.  
   
 ### <a name="anonymous-types"></a>Anonim Türler  
- Adlandırılmış bir sınıf oluşturmak için uygun veya gerekli olmadığı durumlarda (örneğin, bir listeyi kalıcı hale getirmek veya başka bir yönteme geçirmek zorunda değilsiniz veri yapıları içeren bir liste doldururken), anonim türler kullanırsınız. Daha fazla bilgi için bkz. [anonim türler](./anonymous-types.md).  
+ Adlandırılmış bir sınıf oluşturmanın uygun olmadığı veya gerekli olmadığı durumlarda, örneğin bir listeyi kalıcı olarak sürdürmek veya başka bir yönteme geçmek zorunda olmadığınız veri yapıları ile dolduruyorsanız, anonim türleri kullanırsınız. Daha fazla bilgi için [Bkz. Anonim Türler.](./anonymous-types.md)  
   
 ### <a name="extension-methods"></a>Genişletme Yöntemleri  
- Metotları özgün türe ait gibi çağrılabilecek ayrı bir tür oluşturarak, türetilmiş sınıf oluşturmadan bir sınıfı "genişletebilirsiniz". Daha fazla bilgi için bkz. [Uzantı yöntemleri](./extension-methods.md).  
+ Türemiş bir sınıf oluşturmadan, yöntemleri özgün türe aitmiş gibi çağrılabilen ayrı bir tür oluşturarak bir sınıfı "genişletebilirsiniz". Daha fazla bilgi için [Uzantı Yöntemleri'ne](./extension-methods.md)bakın.  
   
 ### <a name="implicitly-typed-local-variables"></a>Örtülü Olarak Yazılan Yerel Değişkenler  
- Bir sınıf veya yapı yönteminde, derleyicinin derleme zamanında doğru türü belirlemesini söylemek için örtük yazma kullanabilirsiniz. Daha fazla bilgi için bkz. [örtülü olarak yazılan yerel değişkenler](./implicitly-typed-local-variables.md).  
+ Bir sınıf veya yapı yöntemi içinde, derleme zamanında doğru türü belirlemek için derleyici talimat örtük yazarak kullanabilirsiniz. Daha fazla bilgi için [bkz.](./implicitly-typed-local-variables.md)  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

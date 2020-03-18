@@ -1,5 +1,5 @@
 ---
-title: -bugreport (C# derleyici seçenekleri)
+title: -hata raporu (C# Derleyici Seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /bugreport
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
 ms.openlocfilehash: 0989678be070910c410d71717fe66679e1b70557
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69603074"
 ---
-# <a name="-bugreport-c-compiler-options"></a>-bugreport (C# derleyici seçenekleri)
-Hata ayıklama bilgilerinin daha sonra analiz edilmek üzere bir dosyaya yerleştirilmesi gerektiğini belirtir.  
+# <a name="-bugreport-c-compiler-options"></a>-hata raporu (C# Derleyici Seçenekleri)
+Hata ayıklama bilgilerinin daha sonraki çözümleme için bir dosyaya konulması gerektiğini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -24,37 +24,37 @@ Hata ayıklama bilgilerinin daha sonra analiz edilmek üzere bir dosyaya yerleş
 -bugreport:file  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  `file`  
- Hata raporunuzu içermesini istediğiniz dosyanın adı.  
+ Hata raporunuzu içermek istediğiniz dosyanın adı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- **-Bugreport** seçeneği aşağıdaki bilgilerin yerleştirilmesi `file`gerektiğini belirtir:  
+ **-hata raporu** seçeneği, aşağıdaki bilgilerin yerleştirilmesini `file`belirtir:  
   
-- Derlemedeki tüm kaynak kodu dosyalarının bir kopyası.  
+- Derlemedeki tüm kaynak kod dosyalarının bir kopyası.  
   
-- Derlemede kullanılan derleyici seçeneklerinin bir listesi.  
+- Derlemede kullanılan derleyici seçeneklerinin listesi.  
   
-- Derleyici, çalışma zamanı ve işletim sistemi ile ilgili sürüm bilgileri.  
+- Derleyiciniz, çalışma süreniz ve işletim sisteminiz hakkındaki sürüm bilgileri.  
   
-- Başvurulan derlemeler ve modüller, .NET Framework ve SDK ile birlikte gelen derlemeler hariç, onaltılık basamaklar olarak kaydedilir.  
+- .NET Framework ve SDK ile birlikte sevk edilen derlemeler hariç, hexadecimal basamak olarak kaydedilen başvurulan derlemeler ve modüller.  
   
-- Varsa derleyici çıkışı.  
+- Varsa derleyici çıktısı.  
   
-- Probleme için sizden sorulacak bir açıklama.  
+- Sizden istenecek sorunun açıklaması.  
   
-- Sorunun düzeltilmesi hakkında bir açıklama ve sizden istenir.  
+- Sorunun nasıl çözülmesi gerektiğini düşündüğünüze ve sizden isteneceğinin açıklaması.  
   
- Bu seçenek **-errorreport: Prompt** veya **-errorreport: Send**ile kullanılırsa, dosyadaki bilgiler Microsoft Corporation 'a gönderilir.  
+ Bu seçenek **-errorreport:prompt** veya **-errorreport:send**ile kullanılırsa, dosyadaki bilgiler Microsoft Corporation'a gönderilir.  
   
- Tüm kaynak kodu dosyalarının bir kopyası içine `file`yerleştirilecek, olası en kısa programda şüpheli kod hatasını yeniden oluşturmak isteyebilirsiniz.  
+ Tüm kaynak kodu dosyalarının bir kopyası `file`yerleştirilecektir çünkü, şüpheli kod kusurunu mümkün olan en kısa programda çoğaltmak isteyebilirsiniz.  
   
- Bu derleyici seçeneği Visual Studio 'da kullanılamaz ve program aracılığıyla değiştirilemez.  
+ Bu derleyici seçeneği Visual Studio'da kullanılamaz ve programlı olarak değiştirilemez.  
   
- Oluşturulan dosyanın içeriğinin, yanlışlıkla bilginin açığa çıkmasına neden olabilecek kaynak kodu kullanıma sunduğuna dikkat edin.  
+ Oluşturulan dosyanın içeriğinin, yanlışlıkla bilgi ifşası ile sonuçlabilen kaynak kodu ortaya çıkardığına dikkat edin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Derleyici Seçenekleri](./index.md)
-- [-errorreport (C# derleyici seçenekleri)](./errorreport-compiler-option.md)
+- [-hata raporu (C# Derleyici Seçenekleri)](./errorreport-compiler-option.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

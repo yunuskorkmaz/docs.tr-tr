@@ -1,21 +1,21 @@
 ---
-title: Öznitelikleri kullanarak C/C++ Union oluşturma ()C#
+title: Öznitelikleri kullanarak C/C++ birleşimoluşturma (C#)
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
 ms.openlocfilehash: ff8ce560444581a28b257820573224f89a274cd9
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141580"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Öznitelikleri kullanarak C/C++ Union oluşturma ()C#
+# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Öznitelikleri kullanarak C/C++ birleşimoluşturma (C#)
 
-Öznitelikleri kullanarak, yapıların bellekte nasıl düzenlendiğini özelleştirebilirsiniz. Örneğin, `StructLayout(LayoutKind.Explicit)` ve `FieldOffset` özniteliklerini kullanarak C/C++ içinde birleşim olarak bilinen öğeleri oluşturabilirsiniz.
+Öznitelikleri kullanarak, yapıların bellekte nasıl ortaya konuldurüldüni özelleştirebilirsiniz. Örneğin, C/C++'da birleşim olarak bilinen şeyi `StructLayout(LayoutKind.Explicit)` ve `FieldOffset` özniteliklerini kullanarak oluşturabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
-Bu kod kesiminde, tüm `TestUnion` alanları bellekte aynı konumda başlar.
+Bu kod segmentinde, `TestUnion` tüm alanlar bellekte aynı konumda başlar.
 
 ```csharp
 // Add a using directive for System.Runtime.InteropServices.
@@ -39,7 +39,7 @@ struct TestUnion
 
 ## <a name="example"></a>Örnek
 
-Aşağıda, alanların farklı bir açık küme konumlarında başlayacağı başka bir örnek verilmiştir.
+Aşağıda, alanların farklı şekilde ayarlanmış konumlarda başladığı başka bir örnek verilmiştir.
 
 ```csharp
 // Add a using directive for System.Runtime.InteropServices.
@@ -67,7 +67,7 @@ struct TestExplicit
 }
 ```
 
-İki tamsayı alanı `i1` ve `i2`, `lg` ile aynı bellek konumlarını paylaşır. Yapı düzeni üzerinde bu denetim sıralaması, platform çağırma kullanılırken kullanışlıdır.
+İki tamsayı alanı `i1` ve `i2`, `lg`aynı bellek konumlarını paylaşır. Platform çağırma kullanırken yapı düzeni üzerinde bu tür bir denetim yararlıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -77,5 +77,5 @@ struct TestExplicit
 - [Öznitelikler](../../../../standard/attributes/index.md)
 - [Yansıma (C#)](../reflection.md)
 - [Öznitelikler (C#)](index.md)
-- [Özel öznitelikler (C#) oluşturma](creating-custom-attributes.md)
-- [Yansıma (C#) kullanarak özniteliklere erişme](accessing-attributes-by-using-reflection.md)
+- [Özel Öznitelikler oluşturma (C#)](creating-custom-attributes.md)
+- [Yansıma (C#) kullanarak Özniteliklere Erişim](accessing-attributes-by-using-reflection.md)

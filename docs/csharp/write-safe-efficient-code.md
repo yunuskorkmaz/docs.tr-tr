@@ -1,36 +1,36 @@
 ---
-title: Güvenli ve verimli C# kod yazma
-description: C# Dilde en son geliştirmeler, daha önce güvenli olmayan kodla ilişkili olan doğrulanabilir güvenli kod yazmanızı sağlar.
+title: Güvenli ve verimli C# kodu yazın
+description: C# dilinde yapılan son geliştirmeler, daha önce güvenli olmayan kodla ilişkili performansın doğrulanabilir güvenli kodu yazmanızı sağlar.
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
 ms.openlocfilehash: d4a7916b80e15c7f00fa0a7da213ed0593e0959d
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78239982"
 ---
-# <a name="write-safe-and-efficient-c-code"></a>Güvenli ve verimli C# kod yazma
+# <a name="write-safe-and-efficient-c-code"></a>Güvenli ve verimli C# kodu yazın
 
-' Deki C# yeni özellikler daha iyi performansa sahip doğrulanabilir güvenli kod yazmanızı sağlar. Bu teknikleri dikkatle uygularsanız, daha az senaryo güvenli olmayan kod gerektirir. Bu özellikler, yöntem bağımsız değişkenleri olarak değer türlerine yapılan başvuruların kullanımını kolaylaştırır ve yöntemi döndürür. Güvenli bir şekilde bitince, bu teknikler kopyalama değer türlerini en aza indirir. Değer türlerini kullanarak, ayırma sayısını ve çöp toplama geçişlerini en aza indirmiş olursunuz.
+C#'daki yeni özellikler, daha iyi performansla doğrulanabilir güvenli kod yazmanızı sağlar. Bu teknikleri dikkatle uygularsanız, daha az senaryo güvenli olmayan kod gerektirir. Bu özellikler, yöntem bağımsız değişkenleri ve yöntem döndürür olarak değer türlerine başvuruları kullanmayı kolaylaştırır. Güvenli bir şekilde yapıldığında, bu teknikler kopyalama değer türlerini en aza indirir. Değer türlerini kullanarak, ayırma ve çöp toplama geçişlerinin sayısını en aza indirebilirsiniz.
 
-Bu makaledeki örnek kodun çoğu 7,2 ' de C# eklenen özellikleri kullanır. Bu özellikleri kullanmak için, projenizi 7,2 veya sonraki bir sürümü kullanacak C# şekilde yapılandırmanız gerekir. Dil sürümünü ayarlama hakkında daha fazla bilgi için bkz. [dil sürümünü yapılandırma](language-reference/configure-language-version.md).
+Bu makaledeki örnek kodun çoğu C# 7.2'ye eklenen özellikleri kullanır. Bu özellikleri kullanmak için projenizi C# 7.2 veya daha sonra kullanacak şekilde yapılandırmanız gerekir. Dil sürümünü ayarlama hakkında daha fazla bilgi için [bkz.](language-reference/configure-language-version.md)
 
-Bu makalede, verimli kaynak yönetimine yönelik teknikler ele alınmaktadır. Değer türlerini kullanmanın bir avantajı genellikle yığın ayırmaların önlerinden kaçınmaktır. Dezavantajı, değere göre kopyalanmasıdır. Bu zorunluluğunu getirir, büyük miktarlarda veri üzerinde çalışan algoritmaların iyileştirmesini zorlaştırır. C# 7,2 sürümündeki yeni dil özellikleri, değer türlerine başvurular kullanarak güvenli verimli kod etkinleştiren mekanizmalar sağlar. Her iki ayırma ve kopyalama işlemini en aza indirmek için bu özellikleri daha seyrek kullanın. Bu makalede bu yeni özellikler incelenmektedir.
+Bu makalede, verimli kaynak yönetimi teknikleri üzerinde duruluyor. Değer türlerini kullanmanın bir avantajı da genellikle yığın ayırmalarından kaçınmalarıdır. Dezavantajı, değere göre kopyalanmış olmalarıdır. Bu dengeleme, büyük miktarda veri üzerinde çalışan algoritmaları optimize etmeyi zorlaştırır. C# 7.2'deki yeni dil özellikleri, değer türlerine yapılan atıfları kullanarak güvenli verimli kod sağlayan mekanizmalar sağlar. Hem ayırmaları hem de kopyalama işlemlerini en aza indirmek için bu özellikleri akıllıca kullanın. Bu makalede, bu yeni özellikler inceletir.
 
-Bu makalede aşağıdaki kaynak yönetimi teknikleri ele alınmaktadır:
+Bu makalede, aşağıdaki kaynak yönetimi teknikleri üzerinde duruluyor:
 
-- Bir türün **sabit** olduğunu ifade etmek için bir [`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example) bildirin ve [`in`](language-reference/keywords/in-parameter-modifier.md) parametreleri kullanılırken derleyicinin kopyaları kaydetmesine olanak sağlar.
-- Bir tür sabit olamaz, üyenin durumu değiştirmediğini göstermek için `struct` üyeleri `readonly` bildirin.
-- Dönüş değeri <xref:System.IntPtr.Size?displayProperty=nameWithType> daha büyük bir `struct` olduğunda ve depolama ömrü değeri döndüren yöntemden daha büyük olduğunda bir [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) dönüşü kullanın.
-- `readonly struct` boyutu <xref:System.IntPtr.Size?displayProperty=nameWithType>daha büyük olduğunda, performans nedenleriyle bunu bir `in` parametresi olarak geçirmeniz gerekir.
-- `readonly` değiştiricisi ile bildirilemediği veya yöntem yalnızca yapının `readonly` üyelerini çağırdığı sürece bir `struct` `in` parametresi olarak geçirmeyin. Bu kılavuzun ihlal olması, performansı olumsuz etkileyebilir ve bu da belirsiz bir davranışa yol açabilir.
-- Bellekle bir bayt dizisi olarak çalışmak için [`ref struct`](language-reference/keywords/ref.md#ref-struct-types)veya <xref:System.Span%601> ya da <xref:System.ReadOnlySpan%601> gibi bir `readonly ref struct` kullanın.
+- Bir [`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example) türün **değişmez** olduğunu ve derleyicinin parametreleri kullanırken [`in`](language-reference/keywords/in-parameter-modifier.md) kopyaları kaydetmesini sağladığını ifade etmek için a bildirin.
+- Bir tür değişmez değilse, üyenin `struct` durumu `readonly` değiştirmediğini belirtmek için üye bildirin.
+- İade [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) değeri daha `struct` <xref:System.IntPtr.Size?displayProperty=nameWithType> büyükse ve depolama ömrü değeri döndüren yöntemden daha büyükse bir iade kullanın.
+- A `readonly struct` boyutu daha <xref:System.IntPtr.Size?displayProperty=nameWithType>büyükse, performans nedenleriyle `in` bir parametre olarak geçirmelisiniz.
+- Değiştirici `struct` ile `in` beyan edilmedikçe veya yöntem yalnızca `readonly` yapı nın üyelerini çağırmadığı sürece asla bir parametre olarak geçmeyin. `readonly` Bu kılavuzun ihlal için de performansı olumsuz etkileyebilir ve belirsiz bir davranışa yol açabilir.
+- Bir [`ref struct`](language-reference/keywords/ref.md#ref-struct-types)byte `readonly ref struct` dizisi <xref:System.Span%601> olarak <xref:System.ReadOnlySpan%601> bellekle çalışmak için bir veya benzeri bir şey kullanın.
 
-Bu teknikler, **başvuru** ve **değer**açısından birbiriyle rekabet eden iki hedefi dengelemenize zorlar. [Başvuru türleri](programming-guide/types/index.md#reference-types) olan değişkenler bellekteki konuma bir başvuru tutar. [Değer türleri](programming-guide/types/index.md#value-types) olan değişkenler doğrudan değerlerini içerir. Bu farklılıklar, bellek kaynaklarını yönetmek için önemli olan önemli farklılıkları vurgulamaktadır. **Değer türleri** genellikle bir yönteme geçirildiğinde veya bir yöntemden döndürüldüğünde kopyalanır. Bu davranış, bir değer türünün üyelerini çağırırken `this` değerini kopyalamayı içerir. Kopyanın maliyeti, türün boyutuyla ilgilidir. **Başvuru türleri** yönetilen yığında ayrılır. Her yeni bir nesne için yeni bir ayırma gerekir ve ardından geri kazanılır. Bu işlemlerin her ikisi de zaman alır. Başvuru, bir yönteme bir bağımsız değişken olarak geçirildiğinde veya bir yöntemden döndürüldüğünde kopyalanır.
+Bu teknikler **referanslar** ve **değerler**açısından iki rakip hedefleri dengelemek için zorlar. [Başvuru türleri](programming-guide/types/index.md#reference-types) olan değişkenler bellekteki konuma bir başvuru tutar. [Değer türleri](programming-guide/types/index.md#value-types) olan değişkenler doğrudan değerlerini içerir. Bu farklılıklar, bellek kaynaklarını yönetmek için önemli olan temel farklılıkları vurgular. **Değer türleri** genellikle bir yönteme geçirildiğinde veya bir yöntemden döndürüldüğünde kopyalanır. Bu davranış, bir değer `this` türünün üyelerini ararken değerini kopyalamayı içerir. Kopyanın maliyeti, türün boyutuyla ilgilidir. **Başvuru türleri** yönetilen yığına ayrılır. Her yeni nesne yeni bir ayırma gerektirir ve daha sonra geri alınmalıdır. Bu iki işlem de zaman alır. Başvuru türü bir bağımsız değişken olarak bir yönteme geçirildiğinde veya bir yöntemden döndürüldüğünde başvuru kopyalanır.
 
-Bu makalede, bu önerileri açıklamak için 3B nokta yapısının aşağıdaki örnek kavramı kullanılmaktadır:
+Bu makalede, bu önerileri açıklamak için 3B noktası yapısının aşağıdaki örnek kavramını kullanır:
 
 ```csharp
 public struct Point3D
@@ -43,14 +43,14 @@ public struct Point3D
 
 Farklı örnekler bu kavramın farklı uygulamalarını kullanır.
 
-## <a name="declare-readonly-structs-for-immutable-value-types"></a>Değişmez değer türleri için salt okunur yapılar bildirme
+## <a name="declare-readonly-structs-for-immutable-value-types"></a>Değişmez değer türleri için yalnızca okunan structs'u bildirin
 
-`readonly` değiştiricisini kullanarak bir `struct` bildirmek, derleyiciye sabit bir tür oluşturmak için olduğunu bildirir. Derleyici, aşağıdaki kurallarla bu tasarım kararı uygular:
+`struct` Değiştiricinin `readonly` kullanılmasını bildirmek derleyiciye amacınızın değişmez bir tür oluşturmak olduğunu bildirir. Derleyici bu tasarım kararını aşağıdaki kurallarla zorlar:
 
-- Tüm alan üyeleri `readonly` olmalıdır
-- Otomatik uygulanan özellikler dahil olmak üzere tüm özellikler salt okunabilir olmalıdır.
+- Tüm saha üyeleri,`readonly`
+- Otomatik olarak uygulanan özellikler de dahil olmak üzere tüm özellikler salt okunur olmalıdır.
 
-Bu iki kural, bir `readonly struct` üyesinin bu yapının durumunu değiştirmemesini sağlamak için yeterlidir. `struct` sabittir. `Point3D` yapısı, aşağıdaki örnekte gösterildiği gibi sabit bir yapı olarak tanımlanabilir:
+Bu iki kural, hiçbir `readonly struct` üyenin o yapının durumunu dengelenmediğinden emin olmak için yeterlidir. Değişmez. `struct` Yapı, `Point3D` aşağıdaki örnekte gösterildiği gibi değişmez bir yapı olarak tanımlanabilir:
 
 ```csharp
 readonly public struct ReadonlyPoint3D
@@ -68,11 +68,11 @@ readonly public struct ReadonlyPoint3D
 }
 ```
 
-Tasarım amacınızda sabit değer türü oluşturmak her seferinde bu öneriyi izleyin. Tüm performans geliştirmeleri, ek bir avantajdır. `readonly struct` tasarım amacınızı açıkça ifade eder.
+Tasarım amacınız değişmez bir değer türü oluşturmak olduğunda bu öneriyi uygulayın. Performans iyileştirmeleri ek bir avantajdır. Tasarım `readonly struct` amacınızı açıkça ifade eder.
 
-## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>Bir yapı sabit olamaz, salt okunur Üyeler bildirin
+## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>Bir yapı değişmez olamaz zaman salt okunur üyeleri bildirin
 
-C# 8,0 ve sonraki sürümlerde, bir struct türü değişebilir olduğunda, `readonly`bir şekilde olmasına neden olmayan Üyeler bildirmeniz gerekir. Örneğin, aşağıda 3B nokta yapısının değişebilir bir çeşitlemesi verilmiştir:
+C# 8.0 ve daha sonra, bir yapı türü mutasyona neden olmayan üyeleri beyan `readonly`etmeniz gerekir. Örneğin, aşağıdaki 3B nokta yapısının değişmez bir varyasyonudur:
 
 ```csharp
 public struct Point3D
@@ -111,19 +111,19 @@ public struct Point3D
 }
 ```
 
-Yukarıdaki örnek, `readonly` değiştiricisini uygulayabileceğiniz konumların çoğunu gösterir: Yöntemler, Özellikler ve özellik erişimcileri. Otomatik uygulanan özellikler kullanırsanız, derleyici, okuma-yazma özellikleri için `get` erişimcisine `readonly` değiştiricisini ekler. Derleyici, `readonly` değiştiricisini yalnızca bir `get` erişimcisi olan özellikler için otomatik uygulanan özellik bildirimlerine ekler.
+Önceki örnek, `readonly` değiştiriciyi uygulayabileceğiniz birçok konumu gösterir: yöntemler, özellikler ve özellik erişimcileri. Otomatik olarak uygulanan özellikleri kullanıyorsanız, derleyici `readonly` okuma yazma `get` özellikleri için değiştiriciyi erişime ekler. Derleyici, yalnızca `readonly` `get` bir erişime sahip özellikler için otomatik olarak uygulanan özellik bildirimlerine değiştirici ekler.
 
-`readonly` değiştiricisini bulunmamalıdır olmayan üyelere eklemek, iki ilgili avantaj sağlar. İlk olarak, derleyici amacınızı zorluyor. Bu üye yapının durumunu veya `readonly`de işaretlenmemiş bir üyeye erişim sağlayabilir. İkincisi, derleyici bir `readonly` üyesine erişirken `in` parametrelerinin savunma kopyalarını oluşturmaz. Derleyici, `struct` bir `readonly` üyesi tarafından değiştirilmediğini garanti ettiğinden, bu iyileştirmesi güvenli hale getirir.
+`readonly` Durumu mutasyona uğratmaz üyelere değiştirici nin eklenmesi, ilgili iki avantaj sağlar. İlk olarak, derleyici niyetinizi zorlar. Bu üye yapının durumunu mutasyona uğratamaz ve aynı zamanda işaretlenmemiş `readonly`bir üyeye erişemez. İkinci olarak, derleyici bir `in` `readonly` üyeye erişirken parametrelerin savunma kopyalarını oluşturmaz. Derleyici, bir üye tarafından değiştirilmediğini garanti `struct` ettiği için bu `readonly` optimizasyonu güvenli bir şekilde yapabilir.
 
-## <a name="use-ref-readonly-return-statements-for-large-structures-when-possible"></a>Mümkün olduğunda büyük yapılar için `ref readonly return` deyimlerini kullanın
+## <a name="use-ref-readonly-return-statements-for-large-structures-when-possible"></a>Mümkün `ref readonly return` olduğunda büyük yapılar için ifadeleri kullanma
 
-Döndürülmekte olan değer döndürülen yönteme yerel olmadığında, değerleri başvuruya göre döndürebilirsiniz. Başvuruya göre döndürme, yapıyı değil yalnızca başvurunun kopyalandığı anlamına gelir. Aşağıdaki örnekte, döndürülen değer yerel bir değişken olduğundan, `Origin` özelliği bir `ref` dönüşü kullanamaz:
+Döndürülen değer dönen yönteme yerel olmadığında değerleri referans olarak döndürebilirsiniz. Başvuruyla döndürülme, yapının değil, yalnızca başvurunun kopyalanması anlamına gelir. Aşağıdaki örnekte, `Origin` döndürülen değer yerel `ref` bir değişken olduğundan özellik geri dönüş kullanamaz:
 
 ```csharp
 public Point3D Origin => new Point3D(0,0,0);
 ```
 
-Ancak, döndürülen değer statik bir üye olduğu için aşağıdaki özellik tanımı başvuru ile döndürülebilir:
+Ancak, döndürülen değer statik bir üye olduğundan, aşağıdaki özellik tanımı başvuru yla döndürülebilir:
 
 ```csharp
 public struct Point3D
@@ -137,7 +137,7 @@ public struct Point3D
 }
 ```
 
-Çağıranların kaynağı değiştirmesini istemezsiniz, bu yüzden değeri `ref readonly`döndürmelidir:
+Arayanların kaynağı değiştirmesini istemiyorsanız, değeri aşağıdakilere göre `ref readonly`döndürmeniz gerekir:
 
 ```csharp
 public struct Point3D
@@ -150,119 +150,119 @@ public struct Point3D
 }
 ```
 
-`ref readonly` döndürmek, daha büyük yapıları kopyalamayı ve iç veri üyelerinizin dengeszlik durumunu korumanızı sağlar.
+İade, `ref readonly` daha büyük yapıların kopyalanmasını kaydetmenize ve dahili veri üyelerinizin değişmezliğini korumanızı sağlar.
 
-Çağıran sitede, arayanlar `Origin` özelliğini `ref readonly` veya bir değer olarak kullanma seçeneğini yapar:
+Arama sitesinde, arayanlar `Origin` özelliği bir `ref readonly` değer olarak veya bir değer olarak kullanmayı tercih eder:
 
 [!code-csharp[AssignRefReadonly](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
 
-Yukarıdaki koddaki ilk atama `Origin` sabitinin bir kopyasını oluşturur ve bu kopyayı atar. İkincisi bir başvuru atar. `readonly` değiştiricinin, değişkenin bildiriminin bir parçası olması gerektiğini unutmayın. Başvurduğu başvuru değiştirilemez. Bunun için denemeler, derleme zamanı hatasına neden olacak.
+Önceki koddaki ilk atama, sabitin `Origin` bir kopyasını yapar ve bu kopyayı atar. İkinci bir referans atar. Değiştiricinin `readonly` değişkenin bildiriminin bir parçası olması gerektiğine dikkat edin. Başvuruda bulunduğu başvuru değiştirilemez. Bunu yapmaya çalışır derleme zamanı hatasına neden olabilir.
 
-`readonly` değiştiricisi `originReference`bildiriminde gereklidir.
+Değiştirici `readonly` nin beyanı üzerine `originReference`gereklidir.
 
-Derleyici, çağıranın başvuruyu değiştiremiyorum. Değer atama denemeleri doğrudan derleme zamanı hatası oluşturur. Ancak derleyici, herhangi bir üye yönteminin yapının durumunu değiştirmediğini bilmez.
-Nesnenin değiştirilmediğinden emin olmak için, derleyici bir kopya oluşturur ve bu kopyayı kullanarak üye başvuruları çağırır. Tüm değişiklikler, savunma kopyasına göre yapılır.
+Derleyici, arayanın başvuruyu değiştiremeyebileceğini zorlar. Değeri doğrudan derleme zamanı hatası oluşturmaya çalışır. Ancak derleyici, herhangi bir üye yönteminin yapının durumunu modicimi olduğunu bilemiyor.
+Nesnenin değiştirilmediğinden emin olmak için derleyici bir kopya oluşturur ve bu kopyayı kullanarak üye başvurularını arar. Herhangi bir değişiklik bu savunma kopya vardır.
 
-## <a name="apply-the-in-modifier-to-readonly-struct-parameters-larger-than-systemintptrsize"></a>`in` değiştiricisini `System.IntPtr.Size` daha büyük `readonly struct` parametrelere uygulayın
+## <a name="apply-the-in-modifier-to-readonly-struct-parameters-larger-than-systemintptrsize"></a>`in` Değiştiriciyi daha `readonly struct` büyük parametrelere uygulayın`System.IntPtr.Size`
 
-`in` anahtar sözcüğü, değişkenleri başvuruya göre geçirmek için mevcut `ref` ve `out` anahtar sözcüklerini tamamlar. `in` anahtar sözcüğü, bağımsız değişkeni başvuruya göre geçirmeyi belirtir, ancak çağrılan yöntem değeri değiştirmez.
+`in` Anahtar kelime, varolan `ref` `out` ve anahtar kelimeleri referansa göre bağımsız değişkenler geçirmek için tamamlar. `in` Anahtar kelime, bağımsız değişkeni başvuruyla geçeni belirtir, ancak çağrılan yöntem değeri değiştirmez.
 
-Bu ek, tasarım amacınızı ifade etmek için tam bir sözlük sağlar.
-Değer türleri, yöntem imzasında Aşağıdaki değiştiricilerin hiçbirini belirtmezseniz, çağrılan bir yönteme geçirildiğinde kopyalanır. Bu değiştiricilerin her biri, bir değişkenin başvuruya göre geçtiğini belirtir ve kopyalama önlenir. Her değiştirici farklı bir amacı ifade eder:
+Bu ek, tasarım amacınızı ifade etmek için tam bir kelime dağarcığı sağlar.
+Yöntem imzasında aşağıdaki değiştiricilerden hiçbirini belirtmediğinizde, değer türleri çağrılan yönteme geçildiğinde kopyalanır. Bu değiştiricilerin her biri, kopyadan kaçınarak bir değişkenin başvuru yla geçirildiğini belirtir. Her değiştirici farklı bir amacı ifade eder:
 
 - `out`: Bu yöntem, bu parametre olarak kullanılan bağımsız değişkenin değerini ayarlar.
 - `ref`: Bu yöntem, bu parametre olarak kullanılan bağımsız değişkenin değerini ayarlayabilir.
 - `in`: Bu yöntem, bu parametre olarak kullanılan bağımsız değişkenin değerini değiştirmez.
 
-Bir bağımsız değişkeni başvuruya göre geçirmek için `in` değiştiricisini ekleyin ve gereksiz kopyalama olmaması için bağımsız değişkenleri başvuruya göre iletmek üzere tasarım amacınızı bildirin. Bu bağımsız değişken olarak kullanılan nesneyi değiştirmeyi düşünmüyorsanız.
+Bir `in` bağımsız değişkeni başvuruyla geçirmek için değiştiriciekleyin ve gereksiz kopyalamayı önlemek için tasarım amacınızı bağımsız değişkenleri referans olarak geçirmek üzere bildirin. Bu bağımsız değişken olarak kullanılan nesneyi değiştirmek niyetinde değilsiniz.
 
-Bu uygulama genellikle <xref:System.IntPtr.Size?displayProperty=nameWithType>daha büyük salt okunur değer türleri için performansı geliştirir. Basit türler (`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal` ve `bool`ve `enum` türleri) için olası performans kazançları en düşük düzeydedir. Aslında, <xref:System.IntPtr.Size?displayProperty=nameWithType>' den küçük türler için doğrudan başvuru aracılığıyla performans düşebilir.
+Bu uygulama genellikle <xref:System.IntPtr.Size?displayProperty=nameWithType>yalnızca daha büyük olan salt değer türleri için performansı artırır. Basit türleri`sbyte`için `byte` `short`(, `int` `uint`, `long` `ushort` `ulong`, `char` `float`, `double` `decimal` , `bool`, `enum` , , , ve türleri), herhangi bir potansiyel performans kazançları en azdır. Aslında, performans <xref:System.IntPtr.Size?displayProperty=nameWithType>daha küçük türleri için pass-by-reference kullanarak bozulabilir.
 
-Aşağıdaki kod, 3B alanda iki işaret arasındaki mesafeyi hesaplayan bir yöntem örneği gösterir.
+Aşağıdaki kod, 3B alanda iki nokta arasındaki mesafeyi hesaplayan bir yöntem örneği gösterir.
 
 [!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
-Bağımsız değişkenler, her biri üç Double içeren iki yapıya sahiptir. Çift 8 bayttır, bu nedenle her bağımsız değişken 24 bayttır. `in` değiştiricisini belirterek, makinenin mimarisine bağlı olarak bu bağımsız değişkenlere 4 baytlık veya 8 baytlık bir başvuru geçirirsiniz. Boyut farkı küçüktür, ancak uygulamanız bu yöntemi birçok farklı değer kullanarak sıkı bir döngüde çağırdığında ekler.
+Bağımsız değişkenler, her biri üç çift içeren iki yapıdır. Bir çift 8 bayt, bu yüzden her argüman 24 bayt olduğunu. `in` Değiştirici belirterek, makinenin mimarisine bağlı olarak bu bağımsız değişkenlere 4 bayt veya 8 baytlık bir başvuru geçersiniz. Boyut farkı küçüktür, ancak uygulamanız bu yöntemi birçok farklı değer kullanarak sıkı bir döngü içinde aradığında birikir.
 
-`in` değiştirici `out` ve `ref` başka yollarla da tamamlar. Yalnızca `in`, `out`veya `ref`varlığı farklı olan bir yöntemin aşırı yüklerini oluşturamazsınız. Bu yeni kurallar, `out` ve `ref` parametreleri için her zaman tanımlanan davranışı genişletir. `out` ve `ref` değiştiricilerine benzer şekilde, `in` değiştiricisi uygulandığından değer türleri paketlenmez.
+`in` Değiştirici tamamlar `out` ve `ref` diğer şekillerde de. Yalnızca `in`, `out`veya `ref`. Bu yeni kurallar, her zaman tanımlanmış `out` olan `ref` davranışı ve parametreleri genişletir. `out` Değiştiriciler `ref` ve değiştiriciler gibi, `in` değiştirici uygulandığından değer türleri kutulu değil.
 
-`in` değiştiricisi Parametreler alan herhangi bir üyeye uygulanabilir: Yöntemler, temsilciler, Lambdalar, yerel işlevler, Dizin oluşturucular, işleçler.
+Değiştirici `in` parametreleri alan herhangi bir üyeye uygulanabilir: yöntemler, temsilciler, lambdas, yerel fonksiyonlar, dizinleyiciler, işleçler.
 
-`in` parametrelerinin başka bir özelliği, bir `in` parametresine bağımsız değişken için değişmez değer veya sabitler kullanbiliriz. Ayrıca, bir `ref` veya `out` parametresinden farklı olarak, çağrı sitesinde `in` değiştiricisini uygulamanız gerekmez. Aşağıdaki kod, `CalculateDistance` yöntemini çağırmanın iki örneğini göstermektedir. İlki, başvuruya göre geçirilen iki yerel değişkeni kullanır. İkincisi, yöntem çağrısının bir parçası olarak oluşturulan geçici bir değişken içerir.
+Parametrelerin `in` bir diğer özelliği de, bağımsız değişken için bir `in` parametre için gerçek değerleri veya sabitleri kullanabilmektir. Ayrıca, bir `ref` `out` veya parametrenin aksine, `in` değiştiriciyi çağrı yerinde uygulamanız gerekmez. Aşağıdaki kod, `CalculateDistance` yöntemi arama iki örnek gösterir. İlk başvuru ile geçirilen iki yerel değişken kullanır. İkinci yöntem çağrısının bir parçası olarak oluşturulan geçici bir değişken içerir.
 
 [!code-csharp[UseInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#UseInArgument "Specifying an In argument")]
 
-Derleyicinin `in` bağımsız değişkeninin salt okunurdur yapısını zorladığı çeşitli yollar vardır.  İlki, çağrılan yöntem bir `in` parametresine doğrudan atanamaz. Bu değer `struct` bir tür olduğunda, `in` parametresinin hiçbir alanına doğrudan atanamaz. Ayrıca, `ref` veya `out` değiştiricisini kullanarak herhangi bir yönteme `in` parametresi geçirilemez.
-Bu kurallar, `in` parametresinin herhangi bir alanı için geçerlidir, alan bir `struct` türü ve parametresi de bir `struct` türüdür. Aslında, bu kurallar birçok üye erişimi katmanı için geçerlidir, tüm üye erişimi düzeylerindeki türler `structs`.
-Derleyici, `in` bağımsız değişken olarak geçirilen `struct` türlerini ve `struct` üyelerini diğer yöntemlere bağımsız değişkenler olarak kullanıldığında salt okunurdur.
+Derleyicinin bir `in` bağımsız değişkenin salt okunur doğasını zorladığı çeşitli yollar vardır.  Her şeyden önce, çağrılan yöntem doğrudan bir `in` parametre atamaz. Bu değer bir `in` `struct` tür olduğunda doğrudan bir parametrenin herhangi bir alanına atamaz. Buna ek olarak, bir `in` parametreyi `ref` veya `out` değiştiriyi kullanarak herhangi bir yönteme geçiremezsiniz.
+Bu kurallar, alan bir `in` `struct` tür ve parametre de bir tür olması `struct` koşuluyla, bir parametrenin herhangi bir alan için geçerlidir. Aslında, bu kurallar üye erişim in her düzeyde türleri sağlanan üye `structs`erişim birden çok katman için geçerlidir.
+Derleyici, bağımsız `struct` değişken olarak `in` geçirilen `struct` türleri zorlar ve diğer yöntemlere bağımsız değişken olarak kullanıldığında üyeleri salt okunur değişkenlerdir.
 
-`in` parametrelerinin kullanımı, kopya yapmanın olası performans maliyetlerinden kaçınabilir. Herhangi bir yöntem çağrısının semantiğini değiştirmez. Bu nedenle, çağrı sitesinde `in` değiştiricisini belirtmeniz gerekmez. Çağrı sitesindeki `in` değiştiricinin atlanması derleyicinin aşağıdaki nedenlerden dolayı bağımsız değişkenin bir kopyasını yapmasına izin verildiğini bildirir:
+Parametrelerin `in` kullanımı kopya yapma olası performans maliyetlerini önleyebilirsiniz. Herhangi bir yöntem çağrısının anlambilimini değiştirmez. Bu nedenle, arama yerinde `in` değiştirici belirtmeniz gerekmez. Çağrı yerindeki `in` değiştiricinin atlanması derleyiciye, aşağıdaki nedenlerle bağımsız değişkenin bir kopyasını yapmasına izin verildiğini bildirir:
 
-- Bağımsız değişken türünden parametre türüne bir kimlik dönüştürmesi değil, örtük bir dönüştürme var.
-- Bağımsız değişken bir ifadedir ancak bilinen bir depolama değişkenine sahip değildir.
-- `in`varlığı veya yokluğuna göre farklı bir aşırı yükleme var. Bu durumda, değer olarak aşırı yüklemesi daha iyi bir eşleşmedir.
+- Bağımsız değişken türünden parametre türüne bir kimlik dönüştürmesi yok.
+- Bağımsız değişken bir ifadedir, ancak bilinen bir depolama değişkeni yoktur.
+- Varlığına veya yokluğuna göre farklılık gösteren `in`aşırı yük vardır. Bu durumda, değer aşırı daha iyi bir maç.
 
-Bu kurallar, var olan kodu salt okuma başvuru bağımsız değişkenlerini kullanacak şekilde güncelleştirdiğinizde yararlıdır. Çağrılan yöntemin içinde, değer parametrelerine göre kullanan herhangi bir örnek yöntemini çağırabilirsiniz. Bu örneklerde `in` parametresinin bir kopyası oluşturulur. Derleyici herhangi bir `in` parametresi için geçici bir değişken oluşturabileceğinden, herhangi bir `in` parametresi için varsayılan değerleri de belirtebilirsiniz. Aşağıdaki kod, kaynak (nokta 0, 0) ikinci nokta için varsayılan değer olarak belirtir:
+Bu kurallar, salt okunur başvuru bağımsız değişkenlerini kullanmak üzere varolan kodu güncelleştirirken yararlıdır. Çağrılan yöntemin içinde, değer parametrelerine göre kullanan herhangi bir örnek yöntemi çağırabilirsiniz. Bu gibi durumlarda, parametrenin `in` bir kopyası oluşturulur. Derleyici herhangi `in` bir parametre için geçici bir değişken oluşturabileceğinden, `in` herhangi bir parametre için varsayılan değerleri de belirtebilirsiniz. Aşağıdaki kod, ikinci noktanın varsayılan değeri olarak kaynağı (0,0 noktası) belirtir:
 
 [!code-csharp[InArgumentDefault](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgumentDefault "Specifying defaults for an in parameter")]
 
-Derleyiciye başvuruya göre salt okuma bağımsız değişkenlerini geçirmeye zorlamak için, aşağıdaki kodda gösterildiği gibi, çağrı sitesindeki bağımsız değişkenlerde `in` değiştiricisini belirtin:
+Derleyiciyi başvuru yla salt okunur bağımsız değişkenleri `in` geçirmeye zorlamak için, aşağıdaki kodda gösterildiği gibi çağrı yerindeki bağımsız değişkenlerde değiştirici belirtin:
 
 [!code-csharp[UseInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ExplicitInArgument "Specifying an In argument")]
 
-Bu davranış, performans kazançlarının mümkün olduğu büyük kod tabanlarında zaman içinde `in` parametrelerinin benimsenmesini kolaylaştırır. `in` değiştiricisini öncelikle Yöntem imzalarına eklersiniz. Ardından, çağrı sitelerine `in` değiştiricisini ekleyebilir ve derleyicinin daha fazla konumda `in` parametrelerinin savunma kopyalarını oluşturmaktan kaçınmasını sağlamak için `readonly struct` türleri oluşturabilirsiniz.
+Bu davranış, performans kazançlarının mümkün olduğu büyük kod tabanlarında parametrelerin zaman içinde benimsenmesi `in` kolaylaştırır. Önce yöntem `in` imzalarına değiştirici ekleyin. Daha sonra, çağrı `in` sitelerinde değiştirici ekleyebilir `readonly struct` ve derleyicinin daha fazla konumda `in` parametrelerin savunma kopyalarını oluşturmamasını sağlamak için türler oluşturabilirsiniz.
 
-`in` parametresi ataması, başvuru türleri veya sayısal değerlerle de kullanılabilir. Ancak, her iki durumda da avantajlar, varsa en az düzeydedir.
+`in` Parametre ataması, başvuru türleri veya sayısal değerlerle de kullanılabilir. Ancak, her iki durumda da yararları, varsa, en azdır.
 
-## <a name="never-use-mutable-structs-as-in-in-argument"></a>`in` bağımsız değişkeni olarak hiçbir şekilde kesilebilir yapılar kullanmayın
+## <a name="never-use-mutable-structs-as-in-in-argument"></a>Bağımsız değişkendeki gibi değişken structs asla kullanmayın `in`
 
-Yukarıda açıklanan teknikler, başvuruları döndürerek ve değerlere başvuruya göre geçirerek kopyaların nasıl önleneceğini açıklamaktadır. Bu teknikler, bağımsız değişken türleri `readonly struct` türleri olarak bildirildiğinde en iyi şekilde çalışır. Aksi takdirde, derleyicinin herhangi bir bağımsız değişken için salt okunur hale getirilmesi zorunlu kılmak için birçok durumda **savunma kopyaları** oluşturması gerekir. Bir 3B noktanın kaynaktan uzaklığını hesaplayan aşağıdaki örneği göz önünde bulundurun:
+Yukarıda açıklanan teknikler, referansları döndürerek ve değerleri referansla geçirerek kopyalardan nasıl kaçınılanın açıklar. Bu teknikler, bağımsız değişken türleri `readonly struct` tür olarak bildirilirken en iyi şekilde çalışır. Aksi takdirde, derleyici, herhangi bir bağımsız değişkenin yalnızca okuma sını uygulamak için birçok durumda **savunma kopyaları** oluşturmalıdır. Bir 3B noktanın kaynaktan uzaklığı hesaplayan aşağıdaki örneği göz önünde bulundurun:
 
 [!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
-`Point3D` yapısı ReadOnly bir struct *değil* . Bu yöntemin gövdesinde altı farklı özellik erişim çağrısı vardır. İlk inceleme durumunda bu erişimlerin güvenli olduğunu düşündük. Tüm `get` erişimci nesnenin durumunu değiştirmez. Ancak bunu zorlayan bir dil kuralı yoktur. Yalnızca ortak bir kuraldır. Herhangi bir tür, iç durumu değiştiren bir `get` erişimcisi uygulayabilir. Bazı dil garantisi olmadan, derleyicinin herhangi bir üyeyi çağırmadan önce bağımsız değişkenin geçici bir kopyasını oluşturması gerekir. Geçici depolama, yığında oluşturulur, bağımsız değişkenin değerleri geçici depolamaya kopyalanır ve değer `this` bağımsız değişkeni olarak her üye erişiminde yığına kopyalanır. Birçok durumda, bu kopyalar, bağımsız değişken türü `readonly struct`olmadığında, bu kopya, değere göre geçiş, salt okunur başvuruya göre daha hızlıdır.
+Yapı `Point3D` sadece okunan bir yapı *değildir.* Bu yöntemin gövdesinde altı farklı özellik erişim çağrıları vardır. İlk muayenede, bu erişimlerin güvenli olduğunu düşünmüş olabilirsiniz. Sonuçta, bir `get` erişimci nesnenin durumunu değiştirmemelidir. Ama bunu zorunlu kılacak bir dil kuralı yok. Bu sadece sıradan bir toplantı. Herhangi bir tür `get` iç durumu değiştiren bir erişimci uygulayabilir. Bazı dil garantisi olmadan, derleyici herhangi bir üye aramadan önce bağımsız değişkenin geçici bir kopyasını oluşturmalıdır. Yığında geçici depolama oluşturulur, bağımsız değişkenin değerleri geçici depolama alanına kopyalanır ve değer `this` bağımsız değişken olarak her üye erişim için yığına kopyalanır. Çoğu durumda, bu kopyalar performansa, bağımsız değişken türü bir `readonly struct`' olmadığında yalnızca okunan geçişten daha hızlı olan bir performansa yeterince zarar verir.
 
-Bunun yerine, uzaklık hesaplaması değişmez yapıyı kullanıyorsa `ReadonlyPoint3D`geçici nesneler gerekmez:
+Bunun yerine, mesafe hesaplaması değişmez yapıyı `ReadonlyPoint3D`kullanıyorsa, geçici nesnelergerekmez:
 
 [!code-csharp[readonlyInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
-`readonly struct`üyelerini çağırdığınızda derleyici daha verimli kod üretir: alıcının bir kopyası yerine `this` başvurusu, her zaman üye yöntemine başvuru ile geçirilen bir `in` parametresidir. Bu iyileştirme, bir `readonly struct` `in` bağımsız değişkeni olarak kullandığınızda kopyalamayı kaydeder.
+Derleyici, üye `readonly struct`yi çağırdığınızda daha verimli `this` kod oluşturur : Başvuru, alıcının bir `in` kopyası yerine, her zaman üye yöntemine atıfta bulunularak geçirilen bir parametredir. Bu optimizasyon, bir `readonly struct` `in` bağımsız değişken olarak kullandığınızda kopyalama kaydeder.
 
-Null yapılabilir bir değer türünü `in` bağımsız değişken olarak geçirmemelisiniz. <xref:System.Nullable%601> türü salt okunurdur struct olarak bildirilmemiş. Bu, derleyicinin parametre bildiriminde `in` değiştiricisini kullanarak bir yönteme geçirilen herhangi bir Nullable değer türü bağımsız değişkeni için savunma kopyaları oluşturması gerektiği anlamına gelir.
+`in` Bağımsız değişken olarak geçersiz bir değer türünü geçmemelisin. Tür, <xref:System.Nullable%601> salt okunur yapı olarak bildirilmemiştir. Bu, derleyicinin parametre bildirimindeki `in` değiştiriciyi kullanarak bir yönteme geçirilen herhangi bir geçersiz değer türü bağımsız değişkeni için savunma kopyaları oluşturması gerektiği anlamına gelir.
 
-GitHub 'daki [örnek depolarımızda](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) , [benchmarkdotnet](https://www.nuget.org/packages/BenchmarkDotNet/) kullanarak performans farklarını gösteren bir örnek program görebilirsiniz. Değere ve başvuruya göre değişmez bir struct geçirilerek başvuruya göre kesilebilir bir yapının geçirilmesini karşılaştırır. Değişmez yapının kullanımı ve başvuruya göre Pass en hızlı.
+GitHub'daki [örnek depomuzda](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) [BenchmarkDotNet'i](https://www.nuget.org/packages/BenchmarkDotNet/) kullanarak performans farklarını gösteren bir örnek program görebilirsiniz. Değişmez bir yapıyı değere ve referansa göre ve değere göre sabit bir yapıyla karşılaştırır. Değişmez yapının kullanımı ve referans la geçiş en hızlısi.
 
-## <a name="use-ref-struct-types-to-work-with-blocks-or-memory-on-a-single-stack-frame"></a>Tek bir yığın çerçevesinde bloklarla veya bellekle çalışmak için `ref struct` türlerini kullanın
+## <a name="use-ref-struct-types-to-work-with-blocks-or-memory-on-a-single-stack-frame"></a>Tek `ref struct` bir yığın çerçeveüzerinde bloklarla veya bellekle çalışmak için türleri kullanma
 
-İlgili dil özelliği, tek bir yığın çerçevesiyle sınırlandırılmak zorunda olması gereken bir değer türü bildirebilmesidir. Bu kısıtlama derleyicinin birkaç iyileştirme yapmasına olanak sağlar. Bu özellik için birincil mosyon <xref:System.Span%601> ve ilgili yapılarıdır. <xref:System.Span%601> türünü kullanan yeni ve güncelleştirilmiş .NET API 'Leri kullanarak bu geliştirmelerden performans iyileştirmeleri elde edersiniz.
+İlişkili dil özelliği, tek bir yığın çerçevesiyle sınırlandırılması gereken bir değer türünü bildirme yeteneğidir. Bu kısıtlama derleyicinin birkaç optimizasyon yapmalarını sağlar. Bu özelliğin temel <xref:System.Span%601> motivasyonu ve ilgili yapılardır. Bu <xref:System.Span%601> geliştirmelerden, türünden yararlanan yeni ve güncelleştirilmiş .NET API'lerini kullanarak performans iyileştirmeleri elde eedeceksiniz.
 
-[`stackalloc`](language-reference/operators/stackalloc.md) kullanılarak oluşturulan ve birlikte çalışma API 'lerinden bellek kullanırken benzer gereksinimlerle çalışıyor olabilirsiniz. Bu gereksinimler için kendi `ref struct` türlerinizi tanımlayabilirsiniz.
+Interop API'lerinden bellek [`stackalloc`](language-reference/operators/stackalloc.md) kullanırken veya kullanırken oluşturulan bellekle çalışan benzer gereksinimlere sahip olabilirsiniz. Bu ihtiyaçlar `ref struct` için kendi türlerinizi tanımlayabilirsiniz.
 
-## <a name="readonly-ref-struct-type"></a>`readonly ref struct` türü
+## <a name="readonly-ref-struct-type"></a>`readonly ref struct`Türü
 
-Bir yapının `readonly ref` olarak bildirilmesi, `ref struct` ve `readonly struct` bildirimlerinin avantajlarını ve kısıtlamalarını birleştirir. Salt okunur yayılma alanı tarafından kullanılan bellek tek bir yığın çerçevesiyle kısıtlıdır ve salt okunur olarak kullanılan bellek değiştirilemez.
+Bir yapıyı bir `readonly ref` yapı olarak bildirmek, `ref struct` beyannamelerin yararlarını ve `readonly struct` kısıtlamalarını birleştirir. Yalnızca okuma açıklığı tarafından kullanılan bellek tek bir yığın çerçevesiyle sınırlıdır ve yalnızca okunan yayılma alanı tarafından kullanılan bellek değiştirilemez.
 
 ## <a name="conclusions"></a>Sonuçlar
 
-Değer türlerini kullanmak, ayırma işlemlerinin sayısını en aza indirir:
+Değer türlerinin kullanılması ayırma işlemleri sayısını en aza indirir:
 
-- Değer türleri için depolama, yerel değişkenler ve Yöntem bağımsız değişkenleri için ayrılmış yığındır.
-- Diğer nesnelerin üyesi olan değer türleri için depolama alanı, ayrı bir ayırma olarak değil, bu nesnenin bir parçası olarak ayrılır.
-- Değer türü dönüş değerleri için depolama, yığın olarak ayrıldı.
+- Değer türleri için depolama yerel değişkenler ve yöntem bağımsız değişkenleri için ayrılmış yığın.
+- Diğer nesnelerin üyesi olan değer türleri için depolama ayrı bir ayırma olarak değil, bu nesnenin bir parçası olarak ayrılır.
+- Değer türü iade değerleri için depolama yığın ayrılır.
 
-Aynı durumlarda başvuru türleri ile karşıtlık:
+Bu aynı durumlarda başvuru türleri ile kontrast:
 
-- Başvuru türleri için depolama, yerel değişkenler ve Yöntem bağımsız değişkenleri için ayrılır. Başvuru yığın üzerinde depolanır.
-- Diğer nesnelerin üyesi olan başvuru türleri için depolama, yığın üzerinde ayrı olarak ayrılır. İçerilen nesne başvuruyu depolar.
-- Başvuru türü dönüş değerleri için depolama, yığın olarak ayrıldı. Bu depolamanın başvurusu yığında depolanır.
+- Başvuru türleri için depolama, yerel değişkenler ve yöntem bağımsız değişkenleri için ayrılan yığındır. Başvuru yığınında depolanır.
+- Diğer nesnelerin üyesi olan başvuru türleri için depolama ayrı ayrı yığın aayrılır. İçeren nesne başvuruyu depolar.
+- Referans türü iade değerleri için depolama yığın ayrılır. Bu depolama başvurusu yığında depolanır.
 
-En aza indirme ayırmaları, dengelerle gelir. `struct` boyutu bir başvurunun boyutundan daha büyükse daha fazla bellek kopyalayabilirsiniz. Başvuru genellikle 64 bit veya 32 bittir ve hedef makine CPU 'suna bağlıdır.
+Tahsisatları en aza indirmek, dengelemelerle birlikte gelir. Boyutu başvurunun boyutundan daha `struct` büyük olduğunda daha fazla bellek kopyalarsınız. Bir başvuru genellikle 64 bit veya 32 bittir ve hedef makine CPU'ya bağlıdır.
 
-Bu dengeler genellikle en düşük performans etkisine sahiptir. Ancak, büyük yapılar veya daha büyük koleksiyonlar için performans etkisi artar. Etki, sıkı Döngülerde ve programlar için etkin yollarda büyük olabilir.
+Bu tradeoffs genellikle en az performans etkisi vardır. Ancak, büyük strüktlar veya daha büyük koleksiyonlar için performans etkisi artar. Etkisi sıkı döngüler ve programlar için sıcak yollar büyük olabilir.
 
-Bu C# dilde geliştirmeler, bellek ayırmalarının en aza indirmek için gerekli performansı elde etmek için önemli bir faktör olan performans açısından kritik algoritmalarda tasarlanmıştır. Bu özellikleri genellikle yazdığınız kodda kullanmacağınızı fark edebilirsiniz. Ancak, bu geliştirmeler .NET genelinde benimsenmiştir. Daha fazla API bu özellikleri kullanırken, uygulamalarınızın performansının iyileştireyi görürsünüz.
+C# dilindeki bu geliştirmeler, bellek ayırmalarını en aza indirmenin gerekli performansı elde etmede önemli bir faktör olduğu performans açısından kritik algoritmalar için tasarlanmıştır. Yazdığınız kodda bu özellikleri sık sık kullanmadığınızı görebilirsiniz. Ancak, bu geliştirmeler .NET boyunca benimsenmiştir. Giderek daha fazla API bu özellikleri kullandıkça, uygulamalarınızın performansının iyileştiğini görürsünüz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ref anahtar sözcüğü](language-reference/keywords/ref.md)
+- [ref anahtar kelime](language-reference/keywords/ref.md)
 - [Ref dönüşler ve ref yerel ayarlar](programming-guide/classes-and-structs/ref-returns.md)

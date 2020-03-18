@@ -1,55 +1,55 @@
 ---
-title: DotNet MSBuild komutu
-description: DotNet MSBuild komutu, MSBuild komut satırına erişim sağlar.
+title: dotnet msbuild komutu
+description: dotnet msbuild komutu MSBuild komut satırına erişim sağlar.
 ms.date: 02/14/2020
 ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503668"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 2.x SDK ve sonraki sürümler
 
 ## <a name="name"></a>Adı
 
-`dotnet msbuild`-bir projeyi ve tüm bağımlılıklarını oluşturur.
+`dotnet msbuild`- Bir proje ve tüm bağımlılıkları oluşturur.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Özet
 
 `dotnet msbuild <msbuild_arguments> [-h]`
 
 ## <a name="description"></a>Açıklama
 
-`dotnet msbuild` komutu, tam işlevli MSBuild 'e erişim sağlar.
+Komut, `dotnet msbuild` tamamen işlevsel bir MSBuild erişimi sağlar.
 
-Komutu, yalnızca SDK stilindeki projeler için mevcut MSBuild komut satırı istemcisiyle aynı yeteneklere sahiptir. Seçenekler aynı. Kullanılabilir seçenekler hakkında daha fazla bilgi için bkz. [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference).
+Komut, yalnızca SDK tarzı projeler için varolan MSBuild komut satırı istemcisi ile aynı özelliklere sahiptir. Seçeneklerin hepsi aynı. Kullanılabilir seçenekler hakkında daha fazla bilgi için [MSBuild komut satırı başvurusuna](/visualstudio/msbuild/msbuild-command-line-reference)bakın.
 
-[DotNet derleme](dotnet-build.md) komutu `dotnet msbuild -restore -target:Build`eşdeğerdir. [DotNet derlemesi](dotnet-build.md) , proje oluşturmak için daha yaygın olarak kullanılır, ancak her zaman derleme hedefini çalıştırdığı için, projeyi derlemek istemediğinizde `dotnet msbuild` kullanabilirsiniz. Örneğin, projeyi oluşturmadan çalıştırmak istediğiniz belirli bir hedef varsa `dotnet msbuild` kullanın ve hedefi belirtin.
+[Dotnet yapı](dotnet-build.md) komutu `dotnet msbuild -restore -target:Build`' ya eşdeğerdir. [dotnet yapı](dotnet-build.md) daha yaygın olarak proje oluşturmak için kullanılır, ancak her `dotnet msbuild` zaman yapı hedefini çalıştırdığından, projeyi oluşturmak istemediğinde kullanabilirsiniz. Örneğin, projeyi oluşturmadan çalıştırmak istediğiniz belirli bir hedefiniz `dotnet msbuild` varsa, hedefi kullanın ve belirtin.
 
 ## <a name="examples"></a>Örnekler
 
-- Bir proje ve bağımlılıklarını oluşturun:
+- Bir proje ve bağımlılıkları oluşturun:
 
   ```dotnetcli
   dotnet msbuild
   ```
 
-- Yayın yapılandırması kullanarak bir proje ve bağımlılıklarını oluşturun:
+- Sürüm yapılandırmasını kullanarak bir proje ve bağımlılıkları oluşturun:
 
   ```dotnetcli
   dotnet msbuild -property:Configuration=Release
   ```
 
-- Yayımla hedefini çalıştırın ve RID `osx.10.11-x64` için yayımlayın:
+- Yayımlama hedefini çalıştırın `osx.10.11-x64` ve RID için yayımlayın:
 
   ```dotnetcli
   dotnet msbuild -target:Publish -property:RuntimeIdentifiers=osx.10.11-x64
   ```
 
-- SDK tarafından eklenen tüm hedefleri içeren tüm projeyi görüntüleyin:
+- SDK tarafından dahil edilen tüm hedeflerle tüm projeyi görün:
 
   ```dotnetcli
   dotnet msbuild -preprocess

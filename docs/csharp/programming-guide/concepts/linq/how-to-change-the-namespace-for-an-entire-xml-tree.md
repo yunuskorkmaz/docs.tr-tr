@@ -1,21 +1,21 @@
 ---
-title: Tüm XML ağacının (C#) ad alanını değiştirme
+title: Tüm XML ağacının ad alanını değiştirme (C#)
 ms.date: 07/20/2015
 ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
 ms.openlocfilehash: 6462cbb5001682b6a464c1446f8ae6de3c5669d1
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141516"
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Tüm XML ağacının (C#) ad alanını değiştirme
-Bazen bir öğe veya öznitelik için ad alanını programlı olarak değiştirmeniz gerekebilir. LINQ to XML bu kadar kolay hale gelir. <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> özelliği ayarlanabilir. <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> özelliği ayarlanamaz, ancak öznitelikleri kolayca bir <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>kopyalayabilir, var olan öznitelikleri kaldırabilir ve ardından yeni istenen ad alanındaki yeni öznitelikler ekleyebilirsiniz.  
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Tüm XML ağacının ad alanını değiştirme (C#)
+Bazen bir öğe veya öznitelik için ad alanını programlı olarak değiştirmeniz gerekir. LINQ XML için bu kolaylaştırır. Özellik <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> ayarlanabilir. Özellik <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> ayarlanamıyor, ancak öznitelikleri kolayca bir <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, varolan öznitelikleri kaldırmak ve sonra yeni istenen ad alanında olan yeni öznitelikleri ekleyebilirsiniz kopyalayabilirsiniz.  
   
- Daha fazla bilgi için bkz. [ad alanlarına genel bakış (C#LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
+ Daha fazla bilgi için [Bkz. NameSpaces Genel Bakış (LINQ - XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, ad alanı olmadan iki XML ağacı oluşturur. Daha sonra ağaçların her birinin ad alanını değiştirir ve bunları tek bir ağaçta birleştirir.  
+ Aşağıdaki kod, ad alanında olmayan iki XML ağacı oluşturur. Daha sonra ağaçların her birinin ad alanını değiştirir ve bunları tek bir ağaçta birleştirir.  
   
 ```csharp  
 XElement tree1 = new XElement("Data",  
@@ -64,7 +64,7 @@ XElement root = new XElement("Root",
 Console.WriteLine(root);  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root>  

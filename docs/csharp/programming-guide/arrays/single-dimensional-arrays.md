@@ -1,60 +1,60 @@
 ---
-title: Tek boyutlu diziler- C# Programlama Kılavuzu
+title: Tek Boyutlu Diziler - C# Programlama Kılavuzu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 8f093d22da789c6df750475e47a3b4e4685c5651
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bd4ab53a9cb53e5cf636601bff5ac64a10a310a6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744202"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170357"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Tek Boyutlu Diziler (C# Programlama Kılavuzu)
 
-Aşağıdaki örnekte gösterildiği gibi, beş tamsayının tek boyutlu bir dizisini bildirebilirsiniz:  
+Aşağıdaki örnekte gösterildiği gibi beş tamsayı tek boyutlu bir dizi bildirebilirsiniz:  
   
  [!code-csharp[csProgGuideArrays#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#4)]  
   
- Bu dizi `array[4]``array[0]` öğeleri içerir. [New](../../language-reference/operators/new-operator.md) işleci diziyi oluşturmak için kullanılır ve dizi öğelerini varsayılan değerlerine başlatır. Bu örnekte, tüm dizi öğeleri sıfır olarak başlatılır.  
+ Bu dizi, `array[0]` `array[4]`'den. [Yeni](../../language-reference/operators/new-operator.md) işleç dizioluşturmak ve dizi öğelerini varsayılan değerlerine çıkarmak için kullanılır. Bu örnekte, tüm dizi öğeleri sıfıra başlanır.  
   
- Dize öğelerini depolayan bir dizi aynı şekilde bildirilebilecek. Örneğin:  
+ Dize öğelerini depolayan bir dizi aynı şekilde bildirilebilir. Örnek:  
   
  [!code-csharp[csProgGuideArrays#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#5)]  
   
-## <a name="array-initialization"></a>Dizi başlatma
+## <a name="array-initialization"></a>Dizi Başlatma
 
- Bildirim üzerine bir diziyi başlatmak mümkündür, bu durumda, başlatma listesindeki öğe sayısı tarafından zaten sağlandığı için uzunluk belirleyicisi gerekli değildir. Örneğin:  
+ Bir diziyi bildirim üzerine başlatmayapmak mümkündür, bu durumda, zaten başlatma listesindeki öğe sayısı tarafından sağlandığı için uzunluk belirtici gerekli değildir. Örnek:  
   
  [!code-csharp[csProgGuideArrays#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#6)]  
   
- Dize dizisi aynı şekilde başlatılabilir. Aşağıda her dizi öğesinin bir günün adı ile başlatıldığı bir dize dizisinin bildirimi verilmiştir:  
- 
+ Bir dize dizisi aynı şekilde başharfe bilebilir. Aşağıda, her dizi öğesinin bir gün adı ile başharflere verildiği bir dize dizisi bildirimi vereme sayısı veremeği ve  
+
  ```csharp
  string[] weekDays = new string[] { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
  ```
   
- Bildirim üzerine bir diziyi başlattığınızda, aşağıdaki kısayolları kullanabilirsiniz:  
+ Bir diziyi bildirim üzerine başharfe aldığınızda, aşağıdaki kısayolları kullanabilirsiniz:  
   
  [!code-csharp[csProgGuideArrays#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#8)]  
   
- Başlatma olmadan bir dizi değişkeni bildirmek mümkündür, ancak bu değişkene bir dizi atadığınızda `new` işlecini kullanmanız gerekir. Örneğin:  
+ Bir dizi değişkenini başlatma olmadan bildirmek mümkündür, `new` ancak bu değişkene bir dizi atadığınızda işleci kullanmanız gerekir. Örnek:  
   
  [!code-csharp[csProgGuideArrays#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#9)]  
   
- C#3,0 örtük olarak yazılmış dizileri tanıtır. Daha fazla bilgi için bkz. [örtülü olarak yazılan diziler](./implicitly-typed-arrays.md).  
+ C# 3.0 örtülü olarak yazılan dizileri tanır. Daha fazla bilgi için [bkz.](./implicitly-typed-arrays.md)  
   
-## <a name="value-type-and-reference-type-arrays"></a>Değer türü ve başvuru türü dizileri
+## <a name="value-type-and-reference-type-arrays"></a>Değer Türü ve Referans Türü Dizileri
 
  Aşağıdaki dizi bildirimini göz önünde bulundurun:  
   
  [!code-csharp[csProgGuideArrays#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#10)]  
   
- Bu deyimin sonucu, `SomeType` bir değer türü veya bir başvuru türü olmasına bağlıdır. Değer bir tür ise, ifade, her birinin türü `SomeType`olan 10 öğeden oluşan bir dizi oluşturur. `SomeType` bir başvuru türü ise, ifade her biri null başvuruya başlatılan 10 öğeden oluşan bir dizi oluşturur.  
+ Bu bildirimin sonucu bir `SomeType` değer türü veya bir başvuru türü olup olmadığına bağlıdır. Bir değer türüyse, deyim, her biri türü `SomeType`olan 10 öğeden oluşan bir dizi oluşturur. Bir `SomeType` başvuru türüyse, deyim, her biri null başvurusuna başharfle başharfe verilen 10 öğeden oluşan bir dizi oluşturur.  
   
-Değer türleri ve başvuru türleri hakkında daha fazla bilgi için bkz. [değer türleri](../../language-reference/builtin-types/value-types.md) ve [başvuru türleri](../../language-reference/keywords/reference-types.md).
+Değer türleri ve başvuru türleri hakkında daha fazla bilgi için [Değer türleri](../../language-reference/builtin-types/value-types.md) ve [Başvuru türlerine](../../language-reference/keywords/reference-types.md)bakın.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -62,4 +62,4 @@ Değer türleri ve başvuru türleri hakkında daha fazla bilgi için bkz. [değ
 - [C# Programlama Kılavuzu](../index.md)
 - [Diziler](./index.md)
 - [Çok Boyutlu Diziler](./multidimensional-arrays.md)
-- [Düzensiz Diziler](./jagged-arrays.md)
+- [Basit Diziler](./jagged-arrays.md)

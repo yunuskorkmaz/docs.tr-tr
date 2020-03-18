@@ -1,44 +1,44 @@
 ---
-title: Paketler, Metapackages ve çerçeveler-.NET Core
-description: Paketler, Metapackages ve çerçeveler için terminoloji öğrenin.
+title: Paketler, meta paketler ve çerçeveler - .NET Core
+description: Paketler, meta paketler ve çerçeveler için terminolojiyi öğrenin.
 author: richlander
 ms.date: 06/20/2016
 ms.openlocfilehash: 657519edf1c0860ee3222c71ce85723e19029a9d
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965899"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398981"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Paketler, meta paketler ve çerçeveler
 
-.NET Core, NuGet paketlerinden oluşan bir platformdur. Bazı ürün deneyimleri, başka bir deyişle çok büyük olan paketlerin ayrıntılı tanımlarından faydalanır. Bu kaba uyum sağlamak için, .NET Core, hassas bir paket kümesi ve bir [metapackage](#metapackages)adı verilen bir paket türü olan kaba parçalar halinde dağıtılır.
+.NET Core, NuGet paketlerinden oluşan bir platformdur. Bazı ürün deneyimleri paketlerin ince taneli tanımından yararlanırken, diğerleri kaba taneli paketlerden yararlanır. Bu ikiliği karşılamak için,.NET Core, gayrı resmi olarak [meta paket](#metapackages)olarak adlandırılan bir paket türüne sahip, ince taneli bir paket kümesi ve daha kaba parçalar halinde dağıtılır.
 
-.NET Core paketlerinin her biri, çerçeveler olarak temsil edilen birden çok .NET uygulamasında çalışmayı destekler. Bu çerçevelerin bazıları, .NET Framework temsil eden `net46`gibi geleneksel çerçeveler. Farklı bir küme, çerçeveleri tanımlamak için yeni bir model oluşturan "paket tabanlı çerçeveler" olarak düşünülebilir yeni çerçeveler. Bu paket tabanlı çerçeveler tamamen oluşturulur ve paketler olarak tanımlanır ve paketler ve çerçeveler arasında güçlü bir ilişki oluşturulur.
+.NET Core paketlerinin her biri, çerçeve olarak temsil edilen birden çok .NET uygulamasında çalıştırılmanı destekler. Bu çerçevelerden bazıları ,.NET `net46`Framework'ü temsil eden geleneksel çerçevelerdir. Bir diğer küme de, çerçeveleri tanımlamak için yeni bir model oluşturan "paket tabanlı çerçeveler" olarak düşünülebilecek yeni çerçevelerdir. Bu paket tabanlı çerçeveler tamamen oluşturulur ve paketler olarak tanımlanır ve paketler ve çerçeveler arasında güçlü bir ilişki oluşturur.
 
 ## <a name="packages"></a>Paketler
 
-.NET Core, temel elemanlar, üst düzey veri türleri, uygulama bileşim türleri ve ortak yardımcı programlar sağlayan bir dizi pakete ayrılır. Bu paketlerin her biri aynı ada sahip tek bir derlemeyi temsil eder. Örneğin, [System. Runtime paketi](https://www.nuget.org/packages/System.Runtime) System. Runtime. dll dosyasını içerir.
+.NET Core, ilkel, üst düzey veri türleri, uygulama kompozisyonu türleri ve ortak yardımcı programlar sağlayan bir paket kümesine ayrılmıştır. Bu paketlerin her biri aynı adı taşıyan tek bir derlemeyi temsil eder. Örneğin, [System.Runtime paketi](https://www.nuget.org/packages/System.Runtime) System.Runtime.dll içerir.
 
-Paketleri hassas bir şekilde tanımlamanın avantajları vardır:
+Paketleri ince taneli bir şekilde tanımlamanın avantajları vardır:
 
-- Ayrıntılı paketler, diğer paketlerin görece sınırlı testinde kendi zamanlamalarıyla birlikte sevk edebilir.
-- Hassas paketler, farklı işletim sistemi ve CPU desteği sağlayabilir.
-- Hassas paketler yalnızca bir kitaplığa özgü bağımlılıklara sahip olabilir.
-- Başvurulmayan paketler uygulama dağıtımının bir parçası olmadığından, uygulamalar daha küçüktür.
+- İnce taneli paketler, diğer paketlerin nispeten sınırlı test ile kendi programlarına göre sevk edebilirsiniz.
+- İnce taneli paketler farklı işletim sistemi ve CPU desteği sağlayabilir.
+- İnce taneli paketlerde yalnızca bir kitaplıközel bağımlılıklar olabilir.
+- Başvurulmamış paketler uygulama dağıtımının bir parçası olmadığı için uygulamalar daha küçüktür.
 
-Bu avantajlardan bazıları yalnızca belirli durumlarda kullanılır. Örneğin, NET Core paketleri genellikle aynı platform desteğiyle aynı zamanlamaya göre gönderilir. Bakım durumunda, düzeltmeler dağıtılabilir ve küçük tek paket güncelleştirmeleri olarak yüklenebilir. Değişikliğin dar kapsamı nedeniyle, bir düzeltilmesi gereken doğrulama ve zaman tek bir kitaplık için gerekenlerle sınırlıdır.
+Bu faydaların bazıları sadece belirli durumlarda kullanılır. Örneğin, NET Core paketleri genellikle aynı platform desteği ile aynı zamanlamaüzerinde sevk edilecektir. Servis durumunda, düzeltmeler küçük tek paket güncelleştirmeleri olarak dağıtılabilir ve yüklenebilir. Değişikliğin dar kapsamı nedeniyle, düzeltmeyi kullanılabilir hale getirmek için geçerlilik ve zaman, tek bir kitaplık için gerekenle sınırlıdır.
 
-Aşağıda .NET Core için anahtar NuGet paketlerinin bir listesi verilmiştir:
+Aşağıda .NET Core için anahtar NuGet paketlerinin bir listesi vetir:
 
-- [System. Runtime](https://www.nuget.org/packages/System.Runtime) -<xref:System.Object>, <xref:System.String>, <xref:System.Array>, <xref:System.Action>ve <xref:System.Collections.Generic.IList%601>dahil olmak üzere en temel .NET Core paketi.
-- [System. Collections](https://www.nuget.org/packages/System.Collections) -<xref:System.Collections.Generic.List%601> ve <xref:System.Collections.Generic.Dictionary%602>dahil olmak üzere genel Koleksiyonlar kümesi (birincil).
-- [System .net. http](https://www.nuget.org/packages/System.Net.Http) -<xref:System.Net.Http.HttpClient> ve <xref:System.Net.Http.HttpResponseMessage>dahil olmak üzere http ağ iletişimi için bir tür kümesi.
-- [System. IO. FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) -<xref:System.IO.File> ve <xref:System.IO.Directory>dahil olmak üzere yerel veya ağa bağlı disk tabanlı depolamaya okuma ve yazma için bir tür kümesi.
-- [System. LINQ](https://www.nuget.org/packages/System.Linq) -`Enumerable` ve <xref:System.Linq.ILookup%602>dahil olmak üzere nesneleri sorgulamak için bir tür kümesi.
-- [System. Reflection](https://www.nuget.org/packages/System.Reflection) -<xref:System.Reflection.Assembly>, <xref:System.Reflection.TypeInfo> ve <xref:System.Reflection.MethodInfo>dahil olmak üzere türleri yükleme, İnceleme ve etkinleştirme için bir tür kümesi.
+- [System.Runtime](https://www.nuget.org/packages/System.Runtime) - Dahil olmak üzere en <xref:System.Object>temel <xref:System.String> <xref:System.Array>.NET Core paketi, , , <xref:System.Action>, ve <xref:System.Collections.Generic.IList%601>.
+- [System.Collections](https://www.nuget.org/packages/System.Collections) - Dahil olmak üzere <xref:System.Collections.Generic.List%601> (öncelikle) genel <xref:System.Collections.Generic.Dictionary%602>koleksiyonlar kümesi.
+- [System.Net.Http](https://www.nuget.org/packages/System.Net.Http) - HTTP ağ iletişimi için <xref:System.Net.Http.HttpClient> bir <xref:System.Net.Http.HttpResponseMessage>dizi tür, dahil ve.
+- [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) - Yerel veya ağa bağlı disk tabanlı depolamaya okuma <xref:System.IO.File> ve <xref:System.IO.Directory>yazma türleri kümesi, ve.
+- [System.Linq](https://www.nuget.org/packages/System.Linq) - Nesneleri sorgulamak için bir dizi `Enumerable` <xref:System.Linq.ILookup%602>tür, dahil ve.
+- [System.Reflection](https://www.nuget.org/packages/System.Reflection) - Yükleme, denetleme ve etkinleştirme türleri için bir dizi <xref:System.Reflection.Assembly> <xref:System.Reflection.TypeInfo> tür, dahil olmak üzere , ve <xref:System.Reflection.MethodInfo>.
 
-Genellikle, her paketi eklemek yerine bir [metapackage](#metapackages)dahil edilmesi daha kolay ve daha sağlamdır. Ancak, tek bir pakete ihtiyacınız olduğunda, bu dosyayı [System. Runtime](https://www.nuget.org/packages/System.Runtime/) paketine başvuran aşağıdaki örnekte olduğu gibi ekleyebilirsiniz.
+Genellikle, her paketi dahil etmek yerine, bir [meta paket](#metapackages)eklemek daha kolay ve daha sağlamdır. Ancak, tek bir pakete ihtiyacınız olduğunda, [sistemi System.Runtime](https://www.nuget.org/packages/System.Runtime/) paketine başvuran aşağıdaki örnekte ekleyebilirsiniz.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -51,66 +51,66 @@ Genellikle, her paketi eklemek yerine bir [metapackage](#metapackages)dahil edil
 </Project>
 ```
 
-## <a name="metapackages"></a>Metapackages
+## <a name="metapackages"></a>Meta paketler
 
-Metapackage, birlikte anlamlı olan bir paket kümesini açıklamak için bir NuGet paket kuralıdır. Metapackage, bağımlılıkları yaparak bu paket kümesini temsil eder. Metapackage, isteğe bağlı olarak bir çerçeve belirterek paket kümesi için bir çerçeve oluşturabilir.
+Metapaket, birlikte anlamlı olan bir paket kümesini tanımlamak için bir NuGet paketi kuralıdır. Meta paket, bu paket kümesini bağımlılık yaparak temsil eder. Meta paket isteğe bağlı olarak bir çerçeve belirterek paket kümesi için bir çerçeve oluşturabilirsiniz.
 
-.NET Core araçlarının önceki sürümleri (Project. JSON ve csproj tabanlı araçlar) varsayılan olarak hem çerçeve hem de metapackage ' i belirtti. Ancak şu anda metapackage, her metapackage bir hedef çerçeveye bağlı olması için hedef Framework tarafından örtük olarak başvuruluyor. Örneğin, `netstandard1.6` Framework NetStandard. Library sürüm 1.6.0 metapackage 'e başvurur. Benzer şekilde, `netcoreapp2.1` Framework Microsoft. NETCore. App sürüm 2.1.0 metapackage 'e başvurur. Daha fazla bilgi için bkz. [.NET Core SDK örtük metapackage paket başvurusu](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md).
+.NET Core araçlarının önceki sürümleri (hem project.json hem de csproj tabanlı araçlar) varsayılan olarak hem bir çerçeve hem de bir meta paket belirtilmiştir. Ancak şu anda, metapaket dolaylı olarak hedef çerçeve tarafından başvurulmakta, böylece her meta paket bir hedef çerçeveye bağlıdır. Örneğin, `netstandard1.6` çerçeve NetStandard.Library sürümü 1.6.0 metapaketine başvurur. Benzer şekilde, `netcoreapp2.1` çerçeve Microsoft.NETCore.App Sürüm 2.1.0 metapaketine başvurur. Daha fazla bilgi için [.NET Core SDK'daki Örtük metapaket paket başvurusuna](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md)bakın.
 
-Bir çerçeveyi hedeflemek ve bir metapackage 'e dolaylı olarak başvurmak anlamına gelir, aslında, bağımlı paketlerin her birine bir başvuruyu tek bir hareket olarak eklersiniz. Bu, bu paketlerdeki tüm kitaplıkların IntelliSense (veya benzer deneyim) ve uygulamanızı yayımlaması için kullanılabilir olmasını sağlar.
+Bir çerçeveyi hedeflemek ve bir meta pakete dolaylı olarak başvurmak, aslında bağımlı paketlerinin her birine tek bir hareket olarak bir referans eklediğiniz anlamına gelir. Bu, bu paketlerdeki tüm kitaplıkları IntelliSense (veya benzer bir deneyim) ve uygulamanızı yayınlamak için kullanılabilir hale getirir.
 
-Metapackages kullanmanın avantajları vardır:
+Metapaketleri kullanmanın avantajları vardır:
 
-- Büyük bir hassas paket kümesine başvurmak için kullanışlı bir kullanıcı deneyimi sağlar.
-- Sınanmış ve birlikte çalışan bir paket kümesini (belirli sürümler dahil) tanımlar.
+- Büyük bir ince taneli paket kümesine başvurmak için kullanışlı bir kullanıcı deneyimi sağlar.
+- Sınanan ve birlikte iyi çalışan bir paket kümesini (belirli sürümler dahil) tanımlar.
 
-.NET Standard metapackage:
+.NET Standart metapaketi:
 
-- [Netstandard. Library](https://www.nuget.org/packages/NETStandard.Library) -.NET Standard parçası olan kitaplıkları açıklar. .NET Standard destekleyen tüm .NET uygulamaları için geçerlidir (örneğin, .NET Framework, .NET Core ve mono). `netstandard` çerçevesini belirler.
+- [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) - .NET Standard'ın parçası olan kitaplıkları açıklar. .NET Standard'ı destekleyen tüm .NET uygulamaları (örneğin, .NET Framework, .NET Core ve Mono) için geçerlidir. Çerçeveyi `netstandard` kurar.
 
-Temel .NET Core meta paketleri şunlardır:
+Anahtar .NET Core metapaketleri şunlardır:
 
-- [Microsoft. NETCore. app](https://www.nuget.org/packages/Microsoft.NETCore.App) -.NET Core dağıtımının parçası olan kitaplıkları açıklar. `.NETCoreApp` çerçevesini belirler. Daha küçük `NETStandard.Library`bağlıdır.
-- [Microsoft. AspNetCore. app](https://www.nuget.org/packages/Microsoft.AspNetCore.App) -üçüncü taraf bağımlılıkları içerenler dışında ASP.NET Core ve Entity Framework Core desteklenen tüm paketleri içerir. Daha fazla bilgi için bkz. [Microsoft. AspNetCore. app metapackage ASP.NET Core](/aspnet/core/fundamentals/metapackage-app) .
-- [Microsoft. AspNetCore. All](https://www.nuget.org/packages/Microsoft.AspNetCore.All) -ASP.NET Core ve Entity Framework Core tarafından kullanılan ASP.NET Core, Entity Framework Core ve dahili ve üçüncü taraf bağımlılıklarından desteklenen tüm paketleri içerir. Daha fazla bilgi için bkz. [Microsoft. AspNetCore. tüm metapackage for ASP.NET Core 2. x](/aspnet/core/fundamentals/metapackage) .
-- [Microsoft. NETCore. taşınabilir. uyumluluk](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) -mscorlib tabanlı taşınabilir sınıf kitaplıklarının (PCLS) .NET Core üzerinde çalışmasını sağlayan bir uyumluluk ve uyumluluk listesi kümesi.
+- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) - .NET Core dağıtımının bir parçası olan kitaplıkları açıklar. Çerçeveyi `.NETCoreApp` kurar. Küçük `NETStandard.Library`bağlıdır.
+- [Microsoft.AspNetCore.App](https://www.nuget.org/packages/Microsoft.AspNetCore.App) - Üçüncü taraf bağımlılıkları içerenler hariç, ASP.NET Core ve Entity Framework Core'dan desteklenen tüm paketleri içerir. Daha fazla bilgi [için ASP.NET Core için Microsoft.AspNetCore.App meta paketine](/aspnet/core/fundamentals/metapackage-app) bakın.
+- [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.All) - ASP.NET Core, Entity Framework Core ve ASP.NET Core ve Entity Framework Core tarafından kullanılan dahili ve üçüncü taraf bağımlılıklarından desteklenen tüm paketleri içerir. Daha fazla bilgi [için ASP.NET Core 2.x için Microsoft.AspNetCore.All metapaketine](/aspnet/core/fundamentals/metapackage) bakın.
+- [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) - mscorlib tabanlı Taşınabilir Sınıf Kitaplıkları 'nın (PCL' ler) .NET Core'da çalışmasını sağlayan bir uyumluluk cephesi kümesi.
 
-## <a name="frameworks"></a>Çerçeveler
+## <a name="frameworks"></a>Framework’ler
 
-.NET Core paketlerinin her biri bir çalışma zamanı çerçevesi kümesini destekler. Çerçeveler, belirli bir çerçeveyi hedeflediğinizde kullanabileceğiniz kullanılabilir bir API kümesini (ve potansiyel olarak diğer özellikleri) anlatmaktadır. Yeni API 'Ler eklendikçe bunlar sürümlüdür.
+.NET Core paketlerinin her biri bir çalışma zamanı çerçevelerini destekler. Çerçeveler, belirli bir çerçeveyi hedeflediğinizde güvenebileceğiniz kullanılabilir bir API kümesini (ve potansiyel olarak diğer özellikleri) açıklar. Yeni API'ler eklendikçe sürülürler.
 
-Örneğin, [System. IO. FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) aşağıdaki çerçeveleri destekler:
+Örneğin, [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) aşağıdaki çerçeveleri destekler:
 
-- . NETFramework, sürüm = 4.6
-- . NETStandard, sürüm = 1.3
-- 6 Xamarin Platformu (örneğin, xamarinios10)
+- . NETFramework,Sürüm=4.6
+- . NETStandard,Sürüm=1.3
+- 6 Xamarin platformu (örneğin, xamarinios10)
 
-Çerçevelerin tanımlandığı iki farklı yolu örneklerle aynı olduğundan, bu çerçevelerin ilk ikisini de kontrast açısından yararlı olur:
+Çerçevelerin tanımlandığı iki farklı yönteme örnek olduğundan, bu çerçevelerin ilk ikisinin karşıtlığı yararlıdır:
 
-- `.NETFramework,Version=4.6` Framework, .NET Framework 4,6 ' deki kullanılabilir API 'Leri temsil eder. .NET Framework 4,6 başvuru Derlemeleriyle derlenen kitaplıklar oluşturabilir ve ardından bu kitaplıkları bir net46 lib klasöründeki NuGet paketlerinde dağıtabilirsiniz. Bu, .NET Framework 4,6 ' i hedefleyen veya onunla uyumlu olan uygulamalar için kullanılacaktır. Bu, tüm çerçeveleri geleneksel olarak nasıl çalıştık.
+- Çerçeve,.NET `.NETFramework,Version=4.6` Framework 4.6'daki kullanılabilir API'leri temsil eder. .NET Framework 4.6 başvuru derlemeleri ile derlenmiş kitaplıklar üretebilir ve bu kitaplıkları NuGet paketlerinde net46 lib klasöründe dağıtabilirsiniz. .NET Framework 4.6'yı hedefleyen veya onunla uyumlu uygulamalar için kullanılacaktır. Tüm çerçeveler geleneksel olarak böyle çalışır.
 
-- `.NETStandard,Version=1.3` Framework, paket tabanlı bir çerçevedir. Altyapısı, Framework bakımından API 'Leri tanımlamak ve göstermek için çerçeveyi hedefleyen paketlere bağımlıdır.
+- Çerçeve `.NETStandard,Version=1.3` paket tabanlı bir çerçevedir. Api'leri çerçeve açısından tanımlamak ve ortaya çıkarmak için çerçeveyi hedefleyen paketlere dayanır.
 
 ## <a name="package-based-frameworks"></a>Paket tabanlı çerçeveler
 
-Çerçeveler ve paketler arasında iki yönlü bir ilişki vardır. İlk bölüm, belirli bir çerçeve için kullanılabilir API 'Leri tanımlama, örneğin `netstandard1.3`. `netstandard1.3` (veya `netstandard1.0`gibi uyumlu çerçeveler) hedef paketler `netstandard1.3`için kullanılabilir olan API 'Leri tanımlar. Bu, döngüsel bir tanım gibi kalabilir, ancak değildir. "Paket tabanlı" olan sanallaştırılan, Framework API tanımı paketlerden gelir. Framework hiç API tanımlamaz.
+Çerçeveler ve paketler arasında iki yönlü bir ilişki vardır. İlk bölüm, örneğin `netstandard1.3`belirli bir çerçeve için kullanılabilir API'leri tanımlamaktır. Hedef olan `netstandard1.3` paketler (veya uyumlu `netstandard1.0`çerçeveler, örneğin) `netstandard1.3`için kullanılabilir API'leri tanımlar. Bu dairesel bir tanım gibi gelebilir, ama değil. "Paket tabanlı" olması nedeniyle, çerçeve için API tanımı paketlerden gelir. Çerçevenin kendisi herhangi bir API tanımlamaz.
 
-İlişkinin ikinci bölümü varlık seçiminden oluşur. Paketler, birden çok çerçeve için varlıklar içerebilir. Bir dizi paket ve/veya Metapaket için bir başvuru verildiğinde, Framework hangi varlığın seçilmesi gerektiğini (örneğin `net46` veya `netstandard1.3`) belirlemekte gereklidir. Doğru varlığı seçmek önemlidir. Örneğin, bir `net46` varlık büyük olasılıkla .NET Framework 4,0 veya .NET Core 1,0 ile uyumlu olmayabilir.
+İlişkinin ikinci bölümü varlık seçimidir. Paketler birden çok çerçeve için varlıklar içerebilir. Bir dizi paket ve/veya meta pakete atıfta bulunularak, örneğin `net46` hangi varlığın seçilmesi `netstandard1.3`gerektiğini belirlemek için çerçeve gereklidir. Doğru varlığı seçmek önemlidir. Örneğin, bir `net46` varlığın .NET Framework 4.0 veya .NET Core 1.0 ile uyumlu olması olası değildir.
 
-Bu ilişkiyi aşağıdaki görüntüde görebilirsiniz. *API* , *Framework 'ü*hedefler ve tanımlar. *Çerçeve* , *varlık seçimi*için kullanılır. *Varlık* size API sağlar.
+Bu ilişkiyi aşağıdaki resimde görebilirsiniz. *API,* *çerçeveyi*hedefler ve tanımlar. *Çerçeve* *varlık seçimi*için kullanılır. *Varlık* size API verir.
 
-![Paket tabanlı çerçeve oluşturma](./media/packages/package-framework.png)
+![Paket Tabanlı Çerçeve Kompozisyonu](./media/packages/package-framework.png)
 
-.NET Core ile kullanılan iki birincil paket tabanlı çerçeve şunlardır:
+.NET Core ile kullanılan iki birincil paket tabanlı çerçeveler şunlardır:
 
 - `netstandard`
 - `netcoreapp`
 
 ### <a name="net-standard"></a>.NET Standard
 
-.NET Standard ([hedef çerçeve bilinen](../standard/frameworks.md)adı: `netstandard`) çerçevesi, tarafından tanımlanan ve [.NET Standard](../standard/net-standard.md)üzerine oluşturulan API 'leri temsil eder. Birden çok çalışma zamanında çalıştırılması amaçlanan kitaplıkların bu çerçeveyi hedeflemesi gerekir. .NET Core, .NET Framework ve mono/Xamarin gibi .NET Standard uyumlu herhangi bir çalışma zamanında desteklenecektir. Bu çalışma zamanlarının her biri, uyguladıkları API 'Lere bağlı olarak bir .NET Standard sürümleri kümesini destekler.
+.NET Standardı ([Hedef Çerçeve](../standard/frameworks.md)Adı `netstandard`: ) [çerçevesi,.NET Standardı](../standard/net-standard.md)tarafından tanımlanan ve üzerine inşa edilen API'leri temsil eder. Birden çok çalışma zamanında çalışması amaçlanan kitaplıklar bu çerçeveyi hedeflemelidir. .NET Core, .NET Framework ve Mono/Xamarin gibi .NET Standart uyumlu çalışma zamanında desteklenirler. Bu çalışma sürelerinin her biri, uyguladıkları API'lara bağlı olarak bir dizi .NET Standart sürümü destekler.
 
-`netstandard` Framework [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) metapackage 'e dolaylı olarak başvurur. Örneğin, aşağıdaki MSBuild proje dosyası, projenin, [`NETStandard.Library` sürüm 1,6](https://www.nuget.org/packages/NETStandard.Library/1.6.0) metapackage 'e başvuran `netstandard1.6`hedeflediğini belirtir.
+Çerçeve `netstandard` örtülü [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) meta paketi başvurur. Örneğin, aşağıdaki MSBuild proje dosyası, `netstandard1.6` [ `NETStandard.Library` sürüm 1.6](https://www.nuget.org/packages/NETStandard.Library/1.6.0) metapaketine başvuran proje hedeflerini gösterir.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -120,7 +120,7 @@ Bu ilişkiyi aşağıdaki görüntüde görebilirsiniz. *API* , *Framework 'ü*h
 </Project>
 ```
 
-Ancak, proje dosyasındaki çerçeve ve metapackage başvurularının eşleşmesi gerekmez ve meta paket sürümünden daha düşük bir çerçeve sürümü belirtmek için proje dosyanızdaki `<NetStandardImplicitPackageVersion>` öğesini kullanabilirsiniz. Örneğin, aşağıdaki proje dosyası geçerlidir.
+Ancak, proje dosyasındaki çerçeve ve metapaket başvurularının eşleşmesine gerek `<NetStandardImplicitPackageVersion>` yoktur ve proje dosyanızdaki öğeyi metapaket sürümünden daha düşük bir çerçeve sürümünü belirtmek için kullanabilirsiniz. Örneğin, aşağıdaki proje dosyası geçerlidir.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -131,14 +131,14 @@ Ancak, proje dosyasındaki çerçeve ve metapackage başvurularının eşleşmes
 </Project>
 ```
 
-`netstandard1.3` hedeflemek ve `NETStandard.Library`1.6.0 sürümünü kullanmak garip görünebilir. Metapackage eski `netstandard` sürümleri için destek koruduğundan, bu geçerli bir kullanım durumdur. Bu durum, metapackage 'in 1.6.0 sürümünde standartlaştırılmış ve çeşitli `netstandard` sürümlerini hedefleyen tüm kitaplıklarınız için kullanabilmeniz durumunda olabilir. Bu yaklaşımda, önceki sürümleri değil yalnızca `NETStandard.Library` 1.6.0 geri yüklemeniz gerekir.
+Bu hedef `netstandard1.3` garip görünebilir ama 1.6.0 `NETStandard.Library`sürümünü kullanın . Metapaket eski `netstandard` sürümler için desteği koruduğundan, geçerli bir kullanım örneğidir. Bu, meta paketin 1.6.0 sürümünde standartlaştırdığınız ve çeşitli `netstandard` sürümleri hedefleyen tüm kitaplıklarınız için kullandığınız durum olabilir. Bu yaklaşımla, yalnızca önceki `NETStandard.Library` sürümleri değil, 1.6.0 geri yüklemeniz gerekir.
 
-Tersi geçerli olmaz: `NETStandard.Library`1.3.0 sürümü ile `netstandard1.6` hedefleme. Alt sürüm metapackage, daha yüksek bir Framework için herhangi bir varlık sunmadığından, daha düşük bir alt pakete sahip daha yüksek bir çerçeveyi hedeflenemez. Metapackages için sürüm oluşturma düzeni, meta paketlerin tanımladıkları çerçevenin en yüksek sürümüyle eşleşmesini onaylar. Sürüm oluşturma düzeninin sanallaştırarak, `NETStandard.Library` ilk sürümü v 1.6.0, `netstandard1.6` varlıkları içerir. (Önceki örneğe sahip simetri için, burada v 1.3.0 kullanılır, ancak aslında yoktur.)
+Tersi geçerli olmaz: 1.3.0 sürümü ile `netstandard1.6` hedefleme `NETStandard.Library`. Alt sürüm metapaketi bu daha yüksek çerçeve için herhangi bir varlık ortaya çıkarmaz, çünkü daha düşük bir metapaketi ile daha yüksek bir çerçeve hedefleyemezsiniz. Metapackages için sürüm şeması, metapaketlerin tanımladıkları çerçevenin en yüksek sürümüyle eşleşin. Sürüm şeması sayesinde, varlıkların içerdiği `NETStandard.Library` `netstandard1.6` göz önüne alındığında v1.6.0'ın ilk sürümüdür. (Önceki örnekte simetri için, v1.3.0 burada kullanılır, ancak gerçekte yok.)
 
 ### <a name="net-core-application"></a>.NET Core uygulaması
 
-.NET Core ([hedef çerçeve bilinen](../standard/frameworks.md)adı: `netcoreapp`) çerçevesi, .NET Core dağıtımı ve sağladığı konsol uygulama modeliyle birlikte gelen paketleri ve Ilişkili API 'leri temsil eder. .NET Core Uygulamaları, yalnızca .NET Core üzerinde çalışmasını amaçlanan kitaplıklar olması gerektiği için, konsol uygulama modelini hedeflerken, bu çerçeveyi kullanmalıdır. Bu Framework 'ün kullanılması, uygulamaları ve kitaplıkları yalnızca .NET Core üzerinde çalışır şekilde kısıtlar.
+.NET Core ([Target Framework Moniker](../standard/frameworks.md): `netcoreapp`) çerçevesi, .NET Core dağıtımı ve sağladığı konsol uygulama modeliyle birlikte gelen paketleri ve ilişkili API'leri temsil eder. .NET Core uygulamaları, konsol uygulama modelini hedeflemesi nedeniyle bu çerçeveyi ve yalnızca .NET Core'da çalışması amaçlanan kitaplıkları kullanmalıdır. Bu çerçevenin kullanılması, uygulamaların ve kitaplıkların yalnızca .NET Core'da çalışmasını kısıtlar.
 
-`Microsoft.NETCore.App` metapackage `netcoreapp` çerçevesini hedefler. `NETStandard.Library` paketi tarafından sağlanan ~ 40 ve ek olarak ~ 20 daha fazla ~ 60 kitaplığına erişim sağlar. Ek API 'lere erişim sağlamak için `netstandard`gibi `netcoreapp` veya uyumlu çerçeveleri hedefleyen ek kitaplıklara başvurabilirsiniz.
+Metapaket `Microsoft.NETCore.App` çerçeveyi `netcoreapp` hedefler. Bu ~ 60 kütüphaneler, ~ 40 `NETStandard.Library` paket ve ~ 20 ek olarak daha fazla tarafından sağlanan erişim sağlar. Ek API'lere `netcoreapp` erişmek için hedefleyen `netstandard`veya uyumlu çerçeveler oluşturan ek kitaplıklara başvuruda bulunabilirsiniz.
 
-`Microsoft.NETCore.App` tarafından sağlanan ek kitaplıkların çoğu, bağımlılıklarının diğer `netstandard` kitaplıkları tarafından karşılanıp karşılanmadığı `netstandard` de hedef. Bu da `netstandard` kitaplıklarının bu paketlere bağımlılık olarak başvurmasına yol açabilir.
+Ek kitaplıkların `Microsoft.NETCore.App` çoğu, `netstandard` bağımlılıklarının diğer `netstandard` kitaplıklar tarafından karşılandığı göz önüne alındığında da hedeflenir. Bu, `netstandard` kitaplıkların bu paketleri bağımlılık olarak da gösterebileceği anlamına gelir.

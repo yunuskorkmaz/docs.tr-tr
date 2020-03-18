@@ -1,46 +1,46 @@
 ---
-title: Permütasyon özelliği önem derecesine sahip ML.NET modellerini yorumlama
-description: ML.NET içinde permütasyon özelliği önem derecesine sahip modellerin Özellik önemini anlayın
+title: Permütasyon Özelliği Önemi olan ML.NET modelleri yorumlayın
+description: Permütasyon Özelliği Önemi olan modellerin ML.NET
 ms.date: 01/30/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
 ms.openlocfilehash: c1163a41cd2feb0e8785ae9d4c6a71dfbedf3f12
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77092622"
 ---
-# <a name="interpret-model-predictions-using-permutation-feature-importance"></a>Permütasyon özelliği önem derecesi kullanarak model tahminlerini yorumlama
+# <a name="interpret-model-predictions-using-permutation-feature-importance"></a>Permütasyon Özelliği Önemi kullanarak model tahminlerini yorumlama
 
-Permütasyon özelliği önem derecesi (PFI) kullanarak ML.NET Machine Learning model tahminlerini nasıl yorumlayacağınızı öğrenin. PFI her bir özelliğin bir tahmine göre yaptığı göreli katkıyı sağlar.
+Permütasyon Özelliği Önemi 'ni (PFI) kullanarak, makine öğrenimi modeli tahminlerini nasıl yorumladığınızı öğrenin ML.NET. PFI, her özelliğin bir tahmine yaptığı göreli katkıyı verir.
 
-Makine öğrenimi modelleri genellikle giriş ve çıkış oluşturan siyah kutular olarak düşünülebilir. Çıktıyı etkileyen özellikler arasındaki ara adımlar veya etkileşimler nadiren anlaşılmıştır. Makine öğrenimi, sağlık hizmetleri gibi günlük hayatın daha belirgin yönlerine tanıtıldığında, Machine Learning modelinin neden yaptığı kararları nasıl yaptığını anlamak en önemli öneme sahiptir. Örneğin, bir makine öğrenimi modeliyle tanılar yapılırsa, sağlık uzmanlarının, bu, bu, tanılar haline gelen faktörleri bulmak için bir yol gerekir. Doğru tanısı sağlamak, hasta 'ın hızlı bir şekilde kurtarma yapıp yapmayacağı konusunda harika bir farklılık yapabilir. Bu nedenle, bir modeldeki explainability düzeyi arttıkça, daha yüksek güvenilirlikli sağlık uzmanlarının model tarafından yapılan kararları kabul etmesi veya reddetmesi gerekir.
+Makine öğrenimi modelleri genellikle girdileri almak ve bir çıkış oluşturmak kara kutular olarak düşünülmektedir. Çıktıyı etkileyen özellikler arasındaki ara adımlar veya etkileşimler nadiren anlaşılır. Makine öğrenimi sağlık gibi günlük yaşamın daha fazla yönlerine tanıtıldığı için, bir makine öğrenme modelinin neden karar verebettiğini anlamak son derece önemlidir. Örneğin, tanılar bir makine öğrenme modeli tarafından yapılıyorsa, sağlık profesyonelleri bu tanıları yapmak için gitti faktörleri içine bakmak için bir yol gerekir. Doğru tanının sağlanması, hastanın hızlı bir şekilde iyileşip iyileşmemesi konusunda büyük bir fark yaratabilir. Bu nedenle, bir modeldeki açıklanabilirlik düzeyi ne kadar yüksekse, sağlık profesyonellerinin model tarafından alınan kararları kabul etmesi veya reddetmesi gerekir.
 
-Farklı teknikler, bunlardan biri PFI olan modelleri açıklamak için kullanılır. PFı, [Breiman 'Nın *rastgele orman* kağıdı](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) tarafından ilham olan sınıflandırma ve regresyon modellerini açıklamak için kullanılan bir tekniktir (bkz. Bölüm 10). Yüksek düzeyde, çalışma şekli, veri kümesinin tamamı için bir seferde bir özelliği rastgele karıştırarak ve ilgi çekici performans ölçüsünün ne kadarının azaldığından hesaplama. Değişiklik ne kadar büyükse, bu özellik o kadar önemli olur.
+Biri PFI olan modelleri açıklamak için çeşitli teknikler kullanılır. PFI, [Breiman'ın *Rastgele Ormanlar* makalesine](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) göre sınıflandırma ve regresyon modellerini açıklamak için kullanılan bir tekniktir (bkz. bölüm 10). Yüksek düzeyde, çalışma şekli, tüm veri kümesi için verileri rasgele bir özelliği rasgele karıştırmak ve ilgi performans ölçütü nün ne kadar azaldığını hesaplamaktır. Değişiklik ne kadar büyükse, bu özellik o kadar önemlidir.
 
-Ayrıca, en önemli özellikleri vurgulayarak model oluşturucular, gürültü ve eğitim süresini azaltan daha anlamlı özelliklerin bir alt kümesini kullanmaya odaklanabilir.
+Ayrıca, en önemli özellikleri vurgulayarak, model oluşturucular gürültü ve eğitim süresini potansiyel olarak azaltabilecek daha anlamlı özelliklerden oluşan bir alt küme kullanmaya odaklanabilirler.
 
 ## <a name="load-the-data"></a>Verileri yükleme
 
-Bu örnek için kullanılan veri kümesindeki Özellikler 1-12 sütunlarında bulunur. Amaç `Price`tahmin etmek için kullanılır.
+Bu örnek için kullanılan veri kümesindeki özellikler 1-12 sütunlarında dır. Amaç tahmin `Price`etmektir.
 
 | Sütun | Özellik | Açıklama
 | --- | --- | --- |
-| 1\. | Crimerde | GDP suta hızı başına
-| 2 | ResidentialZones | Kasadaki mesken bölgeleri
-| 3 | Ticari bölgeler | Kasadaki yöresel olmayan bölgeler
-| 4 | Yaklaştığında su | Su gövdesine yakınlık
-| 5 | ToxicWasteLevels | Toxicity düzeyleri (PPM)
-| 6 | AverageRoomNumber | Evin ortalama oda sayısı
-| 7 | HomeAge | Evin yaşı
-| 8 | BusinessCenterDistance | En yakın iş bölgesi uzaklığı
-| 9 | HighwayAccess | Üst yöntemlere yakınlık
-| 10 | Vergilenrate | Özellik vergi oranı
-| 11 | StudentTeacherRatio | Öğrencilerin öğretmenler için oranı
-| 12 | PercentPopulationBelowPoverty | Poverty 'in altında yaşayan popülasyon yüzdesi
-| 13 | Fiyat | Giriş fiyatı
+| 1 | Suç Oranı | Kişi başına suç oranı
+| 2 | Yerleşim Bölgeleri | Şehirdeki yerleşim bölgeleri
+| 3 | Ticari Bölgeler | Kasabadaki yerleşim dışı bölgeler
+| 4 | Yakın Su | Su gövdesine yakınlık
+| 5 | Toksik Atık Seviyeleri | Toksisite düzeyleri (PPM)
+| 6 | Ortalama Oda Sayısı | Evdeki ortalama oda sayısı
+| 7 | HomeAge | Ev yaşı
+| 8 | İşMerkeziMesafesi | En yakın iş bölgesine uzaklık
+| 9 | OtoyolErişim | Otoyollara yakınlık
+| 10 | Vergi Oranı | Emlak vergisi oranı
+| 11 | ÖğrenciÖğretmen Oranı | Öğrencilerin öğretmenlere oranı
+| 12 | Nüfusun YüzdeLeriYoksulluk | Yoksulluğun altında yaşayan nüfusun yüzdesi
+| 13 | Fiyat | Ev fiyatı
 
 Veri kümesinin bir örneği aşağıda gösterilmiştir:
 
@@ -50,7 +50,7 @@ Veri kümesinin bir örneği aşağıda gösterilmiştir:
 2,98,16,1,0.25,10,5,1,8,689,13,36,12
 ```
 
-Bu örnekteki veriler, `HousingPriceData` gibi bir sınıfa göre modellenebilir ve bir [`IDataView`](xref:Microsoft.ML.IDataView)yüklenebilir.
+Bu örnekteki veriler gibi `HousingPriceData` bir sınıf tarafından modellenebilir [`IDataView`](xref:Microsoft.ML.IDataView)ve bir .
 
 ```csharp
 class HousingPriceData
@@ -99,7 +99,7 @@ class HousingPriceData
 
 ## <a name="train-the-model"></a>Modeli eğitme
 
-Aşağıdaki kod örneği, ev fiyatlarını tahmin etmek için bir doğrusal regresyon modeli eğitimi sürecini gösterir.
+Aşağıdaki kod örneği, ev fiyatlarını tahmin etmek için doğrusal bir regresyon modelinin eğitilmesi sürecini göstermektedir.
 
 ```csharp
 // 1. Get the column name of input features.
@@ -126,9 +126,9 @@ var sdcaEstimator = mlContext.Regression.Trainers.Sdca();
 var sdcaModel = sdcaEstimator.Fit(preprocessedTrainData);
 ```
 
-## <a name="explain-the-model-with-permutation-feature-importance-pfi"></a>Modeli permütasyon özelliği önem derecesi (PFı) ile açıklayın
+## <a name="explain-the-model-with-permutation-feature-importance-pfi"></a>Permütasyon Özelliği Önemi (PFI) olan modeli açıklayın
 
-ML.NET içinde, ilgili göreviniz için [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) yöntemini kullanın.
+ML.NET ilgili [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) görev için yöntemi kullanın.
 
 ```csharp
 ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
@@ -137,9 +137,9 @@ ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
         .PermutationFeatureImportance(sdcaModel, preprocessedTrainData, permutationCount:3);
 ```
 
-Eğitim veri kümesindeki [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) kullanmanın sonucu [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) nesnelerinin bir [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray) . [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) , `permutationCount` parametresi tarafından belirtilen permütasyon sayısına eşit olan [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) birden çok gözlemye yönelik ortalama ve standart sapma gibi özet istatistikler sağlar.
+Eğitim veri [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) kümesini kullanmanın sonucu [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray) [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) nesnelerin bir sonucudur. [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics)parametre tarafından belirtilen permütasyon sayısına [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) eşit birden fazla gözlem için ortalama ve standart sapma gibi özet istatistikleri sağlar. `permutationCount`
 
-Önem derecesi veya bu durumda, [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) tarafından hesaplanan R-kare ölçümünde mutlak ortalama azalma, daha sonra en önemli olandan en az önemli olan şekilde sıralanır.
+Önemi, ya da bu durumda, r-kare metrik mutlak [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) ortalama düşüş tarafından hesaplanan sonra en önemli en önemli den en önemli sıralanabilir.
 
 ```csharp
 // Order features by importance
@@ -156,21 +156,21 @@ foreach (var feature in featureImportanceMetrics)
 }
 ```
 
-`featureImportanceMetrics` her bir özelliğin değerlerini yazdırmak, aşağıdakine benzer bir çıktı üretir. Bu değerler verilen verilere göre farklılık gösterdiğinden, farklı sonuçlar görmeyi beklemeniz gerektiğini aklınızda bulundurun.
+Her bir özelliğin değerlerini `featureImportanceMetrics` yazdırmak, aşağıdakine benzer çıktı lar oluşturur. Bu değerler verilen verilere göre değiştiğinden, farklı sonuçlar görmeyi beklemeniz gerektiğini unutmayın.
 
-| Özellik | R-kare olarak değiştir |
+| Özellik | R-Squared olarak değiştirin |
 |:--|:--:|
-HighwayAccess       |   -0,042731
-StudentTeacherRatio |   -0,012730
-BusinessCenterDistance| -0,010491
-Vergilenrate             |   -0,008545
-AverageRoomNumber   |   -0,003949
-Crimerde           |   -0,003665
-Ticari bölgeler     |   0,002749
-HomeAge             |   -0,002426
-ResidentialZones    |   -0,002319
-Yaklaştığında su           |   0,000203
-PercentPopulationLivingBelowPoverty|    0,000031
-ToxicWasteLevels    |   -0,000019
+OtoyolErişim       |   -0.042731
+ÖğrenciÖğretmen Oranı |   -0.012730
+İşMerkeziMesafesi| -0.010491
+Vergi Oranı             |   -0.008545
+Ortalama Oda Sayısı   |   -0.003949
+Suç Oranı           |   -0.003665
+Ticari Bölgeler     |   0.002749
+HomeAge             |   -0.002426
+Yerleşim Bölgeleri    |   -0.002319
+Yakın Su           |   0.000203
+Nüfusun YüzdesiYoksulluk Altında Yaşayanlar|    0.000031
+Toksik Atık Seviyeleri    |   -0.000019
 
-Bu veri kümesi için en önemli beş özelliğe göz atmak için, bu model tarafından tahmin edilen bir evin fiyatı, bir yakınlık, alanda okulların öğrencisi oranı, önemli iş merkezlerine yakınlık, özellik vergi oranı ve giriş alanındaki ortalama oda sayısı.
+Bu veri seti için en önemli beş özelliği göz önünde bulundurarak, bu model tarafından öngörülen bir evin fiyatı karayollarına yakınlığı, bölgedeki okulların öğrenci öğretmen oranı, büyük istihdam merkezlerine yakınlığı, emlak vergisi oranı ve evde oda ortalama sayısı.

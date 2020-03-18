@@ -2,50 +2,50 @@
 title: Öznitelikler (C#)
 ms.date: 04/26/2018
 ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141557"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79399751"
 ---
 # <a name="attributes-c"></a>Öznitelikler (C#)
 
-Öznitelikler, meta verileri veya bildirime dayalı bilgilerin kod (derlemeler, türler, Yöntemler, özellikler, vb.) ile ilişkilendirilmesi için güçlü bir yöntem sağlar. Bir öznitelik bir program varlığıyla ilişkilendirildikten sonra, çalışma zamanında, *yansıma*adlı bir teknik kullanarak öznitelik sorgulanabilir. Daha fazla bilgi için bkz. [yansımaC#()](../reflection.md).
+Öznitelikler, meta verileri veya bildirimsel bilgileri kodla (derlemeler, türler, yöntemler, özellikler vb.) ilişkilendirme güçlü bir yöntem sağlar. Bir öznitelik bir program varlığı ile ilişkilendirildikten sonra, öznitelik *yansıma*adı verilen bir teknik kullanılarak çalışma zamanında sorgulanabilir. Daha fazla bilgi için [Yansıma (C#)](../reflection.md)'ye bakın.
 
-Öznitelikler aşağıdaki özelliklere sahiptir:
+Özniteliklerin aşağıdaki özellikleri vardır:
 
-- Öznitelikler, programınıza meta veri ekler. *Meta veriler* , bir programda tanımlanan türlerle ilgili bilgiler. Tüm .NET derlemeleri, derlemede tanımlanan türleri ve tür üyelerini açıklayan, belirtilen meta veri kümesini içerir. Gerekli ek bilgileri belirtmek için özel öznitelikler ekleyebilirsiniz. Daha fazla bilgi için bkz. [özel öznitelikler (C#) oluşturma](creating-custom-attributes.md).
-- Tüm derlemeler, modüller veya sınıflar ve özellikler gibi daha küçük program öğelerine bir veya daha fazla öznitelik uygulayabilirsiniz.
-- Öznitelikler bağımsız değişkenleri Yöntemler ve özelliklerle aynı şekilde kabul edebilir.
-- Programınız, yansıma kullanarak kendi meta verilerini veya diğer programlardaki meta verileri inceleyebilir. Daha fazla bilgi için bkz. [Reflection (C#) kullanarak özniteliklere erişme](accessing-attributes-by-using-reflection.md).
+- Öznitelikler programınıza meta veri ekler. *Meta veriler,* bir programda tanımlanan türler hakkında bilgidir. Tüm .NET derlemeleri, derlemede tanımlanan tür ve tür üyelerini açıklayan belirli bir meta veri kümesi içerir. Gerekli olan ek bilgileri belirtmek için özel öznitelikler ekleyebilirsiniz. Daha fazla bilgi için bkz: [Özel Öznitelikler oluşturma (C#)](creating-custom-attributes.md).
+- Sınıflar ve özellikler gibi tüm derlemelere, modüllere veya daha küçük program öğelerine bir veya daha fazla öznitelik uygulayabilirsiniz.
+- Öznitelikler, bağımsız değişkenleri yöntem ve özelliklerle aynı şekilde kabul edebilir.
+- Programınız yansımayı kullanarak kendi meta verilerini veya diğer programlardaki meta verileri inceleyebilir. Daha fazla bilgi için bkz: [Yansıma (C#) kullanarak Özniteliklere Erişim.](accessing-attributes-by-using-reflection.md)
 
 ## <a name="using-attributes"></a>Öznitelikleri kullanma
 
-Öznitelikler, her bir bildirime yerleştirilebilecek, ancak belirli bir öznitelik, geçerli olduğu bildirimlerin türlerini kısıtlayabilir. ' C#De, geçerli olduğu varlık bildiriminin üzerine köşeli ayraç ([]) içine alınmış özniteliğin adını yerleştirerek bir özniteliği belirtirsiniz.
+Öznitelikler çoğu bildirime yerleştirilebilir, ancak belirli bir öznitelik geçerli olduğu bildirim türlerini kısıtlayabilir. C#'da, öznitelik adını kare ayraçlarla ([]) uygulandığı varlığın bildiriminin üzerine koyarak bir öznitelik belirtirsiniz.
 
-Bu örnekte, bir sınıfa belirli bir özelliği uygulamak için <xref:System.SerializableAttribute> özniteliği kullanılır:
+Bu örnekte, <xref:System.SerializableAttribute> öznitelik bir sınıfa belirli bir özellik uygulamak için kullanılır:
 
 [!code-csharp[Using the serializable attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
 
-<xref:System.Runtime.InteropServices.DllImportAttribute> özniteliğine sahip bir yöntem aşağıdaki örnekte olduğu gibi bildirilmiştir:
+Öznitelik <xref:System.Runtime.InteropServices.DllImportAttribute> içeren bir yöntem aşağıdaki örnek gibi bildirilir:
 
 [!code-csharp[Declaring a method to import from an external library](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#2)]
 
-Aşağıdaki örnekte gösterildiği gibi, bir bildirime birden fazla öznitelik yerleştirilebilecek:
+Aşağıdaki örnekte görüldüğü gibi bir bildirime birden fazla öznitelik yerleştirilebilir:
 
 [!code-csharp[Including the interop namespace](~/samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
 [!code-csharp[Declaring two way marshaling for arguments](~/samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
 
-Bazı öznitelikler, belirli bir varlık için birden çok kez belirtilebilir. Bu tür bir çok kullanım özniteliğine örnek <xref:System.Diagnostics.ConditionalAttribute>:
+Bazı öznitelikler, belirli bir varlık için birden çok kez belirtilebilir. Böyle bir çok kullanımlı öznitelik bir <xref:System.Diagnostics.ConditionalAttribute>örnek:
 
 [!code-csharp[Using the conditional attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
 
 > [!NOTE]
-> Kurala göre, tüm öznitelik adları, bunları .NET kitaplıklarında diğer öğelerden ayırt etmek için "Attribute" kelimesiyle biter. Ancak, koddaki öznitelikleri kullanırken öznitelik sonekini belirtmeniz gerekmez. Örneğin, `[DllImport]` `[DllImportAttribute]`eşdeğerdir, ancak `DllImportAttribute` özniteliğin .NET Framework sınıf kitaplığındaki gerçek adıdır.
+> Kural kuralına göre, tüm öznitelik adları .NET kitaplıklarındaki diğer öğelerden ayırt etmek için "Öznitelik" sözcüğüyle sona erer. Ancak, kodözleri kullanırken öznitelik soneki belirtmeniz gerekmez. Örneğin, `[DllImport]` `[DllImportAttribute]`.NET `DllImportAttribute` Framework Class Kitaplığı'ndaki özniteliğin gerçek adıdır.
 
 ### <a name="attribute-parameters"></a>Öznitelik parametreleri
 
-Birçok özniteliğin, konumsal, adlandırılmamış veya adlandırılmış olabilecek parametreleri vardır. Herhangi bir Konumsal parametre belirli bir sırada belirtilmelidir ve atlanamaz. Adlandırılmış parametreler isteğe bağlıdır ve herhangi bir sırada belirtilebilir. Konumsal parametreler önce belirtilmiştir. Örneğin, bu üç öznitelik eşdeğerdir:
+Birçok öznitelik, konumsal, adsız veya adlandırılmış parametrelere sahiptir. Herhangi bir konumsal parametreler belirli bir sırada belirtilmelidir ve atlanamaz. Adlandırılmış parametreler isteğe bağlıdır ve herhangi bir sırada belirtilebilir. Önce pozisyonparametreleri belirtilir. Örneğin, bu üç öznitelik eşdeğerdir:
 
 ```csharp
 [DllImport("user32.dll")]
@@ -53,11 +53,11 @@ Birçok özniteliğin, konumsal, adlandırılmamış veya adlandırılmış olab
 [DllImport("user32.dll", ExactSpelling=false, SetLastError=false)]
 ```
 
-İlk parametre olan DLL adı, konumsal ve her zaman ilk olarak gelir; diğerleri olarak adlandırılır. Bu durumda, her ikisi de varsayılan olarak false değerine sahiptir, bu nedenle bu parametreler atlanabilir. Konumsal parametreler öznitelik oluşturucusunun parametrelerine karşılık gelir. Adlandırılmış ya da isteğe bağlı parametreler, özelliğin özelliklerine veya alanlarına karşılık gelir. Varsayılan parametre değerleri hakkında bilgi için bağımsız özniteliğin belgelerine bakın.
+İlk parametre, DLL adı, konumsal ve her zaman önce gelir; diğerleri ne adlandırılmış. Bu durumda, her iki adlandırılmış parametre varsayılan false, bu yüzden atlanabilir. Konumsal parametreler öznitelik oluşturucu parametrelerine karşılık gelir. Adlandırılmış veya isteğe bağlı parametreler özniteliğin özelliklerine veya alanlarına karşılık gelir. Varsayılan parametre değerleri hakkında bilgi almak için tek tek özniteliğin belgelerine bakın.
 
 ### <a name="attribute-targets"></a>Öznitelik hedefleri
 
-Bir özniteliğin *hedefi* , özniteliğin uygulandığı varlıktır. Örneğin, bir öznitelik bir sınıfa, belirli bir yönteme veya bir derlemenin tamamına uygulanabilir. Varsayılan olarak, bir öznitelik, onu izleyen öğesi için geçerlidir. Ancak, bir özniteliğin bir yönteme mi, yoksa parametresine mi, yoksa dönüş değerine mi uygulanacağını de açıkça belirleyebilirsiniz.
+Bir özniteliğin *hedefi,* özniteliğin uygulandığı varlıktır. Örneğin, bir öznitelik bir sınıf, belirli bir yöntem veya tüm derleme için geçerli olabilir. Varsayılan olarak, onu izleyen öğeye bir öznitelik uygulanır. Ancak, örneğin bir öznitelik bir yönteme mi, parametresine mi yoksa geri dönüş değerine mi uygulandığını açıkça belirleyebilirsiniz.
 
 Bir öznitelik hedefini açıkça tanımlamak için aşağıdaki sözdizimini kullanın:
 
@@ -65,23 +65,23 @@ Bir öznitelik hedefini açıkça tanımlamak için aşağıdaki sözdizimini ku
 [target : attribute-list]
 ```
 
-Olası `target` değerleri listesi aşağıdaki tabloda gösterilmiştir.
+Olası `target` değerlerin listesi aşağıdaki tabloda gösterilmiştir.
 
 |Hedef değer|Uygulandığı öğe:|
 |------------------|----------------|
-|`assembly`|Tüm derleme|
-|`module`|Geçerli derleme modülü|
-|`field`|Bir sınıf veya yapı içindeki alan|
+|`assembly`|Tüm montaj|
+|`module`|Geçerli montaj modülü|
+|`field`|Bir sınıftaki veya yapıdaki alan|
 |`event`|Olay|
-|`method`|Yöntem veya `get` ve `set` Özellik erişimcileri|
-|`param`|Yöntem parametreleri veya `set` özellik erişimcisi parametreleri|
+|`method`|Yöntem `get` veya `set` özellik erişime erişim|
+|`param`|Yöntem parametreleri veya `set` özellik aksesuar parametreleri|
 |`property`|Özellik|
-|`return`|Metodun, özellik dizin oluşturucusunun veya `get` Özellik erişimcisinin dönüş değeri|
-|`type`|Struct, Class, Interface, Enum veya Delegate|
+|`return`|Yöntemin, özellik dizinicisinin `get` veya özellik erişime erişiminin iade değeri|
+|`type`|Yapı, sınıf, arayüz, enum veya temsilci|
 
-[Otomatik uygulanan bir özellik](../../../properties.md)için oluşturulan yedekleme alanına bir öznitelik uygulamak üzere `field` Target değerini belirtirsiniz.
+Otomatik olarak `field` uygulanan bir özellik için oluşturulan destek alanına bir öznitelik uygulamak için hedef değeri [belirtirsiniz.](../../../properties.md)
 
-Aşağıdaki örnek, derlemeler ve modüllere özniteliklerin nasıl uygulanacağını gösterir. Daha fazla bilgi için bkz. [ortak özniteliklerC#()](common-attributes.md).
+Aşağıdaki örnek, öznitelikleri derlemelere ve modüllere nasıl uygulayacağımızı gösterir. Daha fazla bilgi için [Ortak Öznitelikler (C#)](common-attributes.md)'ye bakın.
 
 ```csharp
 using System;
@@ -90,42 +90,42 @@ using System.Reflection;
 [module: CLSCompliant(true)]
 ```
 
-Aşağıdaki örnek, içindeki C#yöntemlere, yöntem parametrelerine ve yöntem dönüş değerlerine özniteliklerin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, C#'daki yöntemlere, yöntem parametrelerine ve yöntem döndürme değerlerine öznitelikleri nasıl uygulanacağı gösterilmektedir.
 
 [!code-csharp[Applying attributes to different code elements](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#6)]
 
 > [!NOTE]
-> `ValidatedContract` tanımlanan hedeflerden bağımsız olarak, `ValidatedContract` yalnızca dönüş değerleri uygulamak üzere tanımlansa bile `return` hedefi belirtilmelidir. Diğer bir deyişle, derleyici belirsiz öznitelik hedeflerini çözümlemek için `AttributeUsage` bilgilerini kullanmaz. Daha fazla bilgi için bkz. [AttributeUsageC#()](attributeusage.md).
+> Geçerli olarak tanımlanan hedeflere `ValidatedContract` bakılmaksızın, yalnızca `return` döndürme değerleri için uygulanacak `ValidatedContract` şekilde tanımlanmış olsa bile hedefin belirtilmesi gerekir. Başka bir deyişle, derleyici `AttributeUsage` belirsiz öznitelik hedeflerini çözmek için bilgileri kullanmaz. Daha fazla bilgi için [Bkz. AttributeUsage (C#)](attributeusage.md).
 
 ## <a name="common-uses-for-attributes"></a>Öznitelikler için ortak kullanımlar
 
-Aşağıdaki listede, kod içindeki özniteliklerin yaygın kullanımları yer almaktadır:
+Aşağıdaki liste, koddaki özniteliklerin ortak kullanımlarından birkaçını içerir:
 
-- Metodun SOAP protokolü üzerinden çağrılabilir olması gerektiğini göstermek için Web hizmetlerindeki `WebMethod` özniteliğini kullanarak yöntemleri işaretleme. Daha fazla bilgi için bkz. <xref:System.Web.Services.WebMethodAttribute>.
-- Yerel kodla birlikte çalışırken yöntem parametrelerinin nasıl hazırlanacağını açıklama. Daha fazla bilgi için bkz. <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
-- Sınıflar, Yöntemler ve arabirimler için COM özelliklerini açıklama.
-- Yönetilmeyen kod <xref:System.Runtime.InteropServices.DllImportAttribute> sınıfını kullanarak çağrılıyor.
+- Yöntemin SOAP `WebMethod` protokolü üzerinden çağrılabilir olması gerektiğini belirtmek için Web hizmetlerinde özniteliği kullanarak işaretleme yöntemleri. Daha fazla bilgi için bkz. <xref:System.Web.Services.WebMethodAttribute>.
+- Yerel kodla birlikte çalışırken yöntem parametrelerinin nasıl sıralanır olduğunu açıklar. Daha fazla bilgi için bkz. <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
+- Sınıflar, yöntemler ve arabirimler için COM özelliklerini açıklayan.
+- <xref:System.Runtime.InteropServices.DllImportAttribute> Sınıfı kullanarak yönetilmeyen kodu çağırma.
 - Derlemenizi başlık, sürüm, açıklama veya ticari marka açısından açıklama.
-- Bir sınıfın kalıcılığı için hangi üyelerin serileştirmek gerektiğini açıklama.
-- XML ile serileştirme için sınıf üyeleri ve XML düğümleri arasında nasıl eşleme yapılacağı açıklanır.
-- Yöntemler için güvenlik gereksinimlerini açıklama.
+- Bir sınıfın hangi üyelerinin kalıcılık için seri hale getirmek için açıklanması.
+- XML serileştirme için sınıf üyeleri ve XML düğümleri arasında nasıl eşleneceklerini açıklar.
+- Yöntemler için güvenlik gereksinimlerini açıklayan.
 - Güvenliği zorlamak için kullanılan özellikleri belirtme.
-- Tam zamanında (JıT) derleyicisine yönelik iyileştirmeler denetleniyor, böylece kod hata ayıklama için kolay kalır.
-- Bir yönteme arayan hakkında bilgi alma.
+- Kodun hata ayıklanması kolay kalması için optimizasyonları tam zamanında (JIT) derleyicitarafından denetler.
+- Bir yönteme arayan hakkında bilgi edinme.
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-Daha fazla bilgi için bkz.:
+Daha fazla bilgi için bkz.
 
-- [Özel öznitelikler (C#) oluşturma](creating-custom-attributes.md)  
-- [Yansıma (C#) kullanarak özniteliklere erişme](accessing-attributes-by-using-reflection.md)  
-- [Öznitelikleri kullanarak C/C++ Union oluşturma ()C#](how-to-create-a-c-cpp-union-by-using-attributes.md)  
-- [Ortak öznitelikler (C#)](common-attributes.md)  
-- [Arayan bilgileri (C#)](../caller-information.md)  
+- [Özel Öznitelikler oluşturma (C#)](creating-custom-attributes.md)  
+- [Yansıma (C#) kullanarak Özniteliklere Erişim](accessing-attributes-by-using-reflection.md)  
+- [Öznitelikleri kullanarak C/C++ birleşimoluşturma (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Ortak Öznitelikler (C#)](common-attributes.md)  
+- [Arayan Bilgileri (C#)](../caller-information.md)  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../../index.md)
 - [Yansıma (C#)](../reflection.md)
 - [Öznitelikler](../../../../standard/attributes/index.md)
-- [İçindeki öznitelikleri kullanmaC#](../../../tutorials/attributes.md)
+- [C'de Öznitelikleri Kullanma #](../../../tutorials/attributes.md)

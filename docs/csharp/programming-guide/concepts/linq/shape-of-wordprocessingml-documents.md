@@ -1,26 +1,26 @@
 ---
-title: WordprocessingML belgelerinin şekli (C#)
+title: WordprocessingML Belgelerin şekli (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
 ms.openlocfilehash: 58c028fed465f45fdcf8f63f2119eb8e8b201e32
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76732678"
 ---
-# <a name="shape-of-wordprocessingml-documents-c"></a>WordprocessingML belgelerinin şekli (C#)
-Bu konu, bir WordprocessingML belgesinin XML şeklini tanıtır.  
+# <a name="shape-of-wordprocessingml-documents-c"></a>WordprocessingML Belgelerin şekli (C#)
+Bu konu, WordprocessingML belgesinin XML şeklini tanır.  
   
-## <a name="microsoft-office-formats"></a>Microsoft Office biçimleri  
- 2007 Microsoft Office sistemi için yerel dosya biçimi Office Open XML 'dir (genellikle Open XML olarak adlandırılır). Open XML, bir ECMA Standard ve şu anda ISO-ıEC standartları sürecinden geçen XML tabanlı bir biçimdir. Open XML içindeki sözcük işleme dosyalarının biçimlendirme dili WordprocessingML olarak adlandırılır. Bu öğretici, örnekler için giriş olarak WordprocessingML kaynak dosyalarını kullanır.  
+## <a name="microsoft-office-formats"></a>Microsoft Office Biçimleri  
+ 2007 Microsoft Office sisteminin yerel dosya biçimi Office Open XML 'dir (genellikle Açık XML olarak adlandırılır). Open XML, Bir Ecma standardı olan ve şu anda ISO-IEC standart sürecinden geçmekte olan XML tabanlı bir biçimdir. Açık XML içindeki sözcük işleme dosyalarının biçimlendirme dili WordprocessingML olarak adlandırılır. Bu öğretici, örnekler için giriş olarak WordprocessingML kaynak dosyalarını kullanır.  
   
- Microsoft Office 2003 kullanıyorsanız Word, Excel ve PowerPoint 2007 dosya biçimleri için Microsoft Office Uyumluluk paketini yüklediyseniz Office Open XML biçimindeki belgeleri kaydedebilirsiniz.  
+ Microsoft Office 2003 kullanıyorsanız, Word, Excel ve PowerPoint 2007 Dosya Biçimleri için Microsoft Office Uyumluluk Paketi yüklediyseniz Belgeleri Office Open XML biçiminde kaydedebilirsiniz.  
   
-## <a name="the-shape-of-wordprocessingml-documents"></a>WordprocessingML belgelerinin şekli  
- Anlaşılması gereken ilk şey WordprocessingML belgelerinin şekildir. WordprocessingML belgesi, belgenin paragraflarını içeren bir body öğesi (`w:body`) içerir. Her paragraf bir veya daha fazla metin çalıştırması (`w:r`adlı) içerir. Her metin çalışması bir veya daha fazla metin parçası içerir (`w:t`olarak adlandırılır).  
+## <a name="the-shape-of-wordprocessingml-documents"></a>WordprocessingML Belgelerin Şekli  
+ Anlamak için ilk şey WordprocessingML belgelerin şeklidir. WordprocessingML belgesi, belgenin paragraflarını içeren bir gövde öğesi (adlandırılmış) `w:body`içerir. Her paragraf bir veya daha `w:r`fazla metin çalışır (adlandırılmış) içerir. Her metin çalıştırıcı bir veya `w:t`daha fazla metin parçaları (adlandırılmış) içerir.  
   
- Aşağıda çok basit bir WordprocessingML belgesi verilmiştir:  
+ Aşağıdaki çok basit bir WordprocessingML belgedir:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -51,11 +51,11 @@ xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
 </w:document>  
 ```  
   
- Bu belge iki paragraf içerir. Her ikisi de tek bir metin çalıştırması içerir ve her metin çalışması tek bir metin parçası içerir.  
+ Bu belge iki paragraf içerir. Her ikisi de tek bir metin çalışması içerir ve her metin çalışması tek bir metin parçası içerir.  
   
- XML biçiminde bir WordprocessingML belgesinin içeriğini görmenin en kolay yolu Microsoft Word 'Ü kullanarak bir tane oluşturmak, kaydetmeniz ve ardından XML 'i konsola yazdıran aşağıdaki programı çalıştırmalıdır.  
+ Bir WordprocessingML belgesinin içeriğini XML formunda görmenin en kolay yolu, Microsoft Word'ü kullanarak bir belge oluşturmak, kaydetmek ve ardından XML'yi konsola yazdıran aşağıdaki programı çalıştırmaktır.  
   
- Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanındaki türleri kullanır.  
+ Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> Ad alanında türleri kullanır.  
   
 ```csharp  
 const string documentRelationshipType =  
@@ -89,11 +89,11 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
   
 ## <a name="external-resources"></a>Dış kaynaklar
 
-- [Office (2007) Open XML dosya biçimlerine giriş](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205%28v=office.12%29)
-- [WordprocessingML 'ye Genel Bakış](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29)
-- [WordProcessingML dosyasının anatomi](http://officeopenxml.com/anatomyofOOXML.php)
-- [WordprocessingML 'ye giriş](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)
+- [Office Tanıtımı (2007) Açık XML Dosya Biçimleri](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205%28v=office.12%29)
+- [WordprocessingML'e Genel Bakış](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29)
+- [Bir WordProcessingML Dosyaanatomisi](http://officeopenxml.com/anatomyofOOXML.php)
+- [WordprocessingML'e Giriş](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: bir WordprocessingML belgesinde (C#) içeriği düzenleme](./shape-of-wordprocessingml-documents.md)
+- [Öğretici: WordprocessingML Belgesinde İçeriği Manipüle Etme (C#)](./shape-of-wordprocessingml-documents.md)

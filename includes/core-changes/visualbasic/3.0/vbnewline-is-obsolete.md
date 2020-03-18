@@ -1,30 +1,30 @@
 ---
 ms.openlocfilehash: 95a4c807f5c1077cf52f54b196e904ebc98c32f8
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76116374"
 ---
-### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>Microsoft. VisualBasic. sabitleri. Vbyeni satır artık kullanılmıyor
+### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>Microsoft.VisualBasic.Constants.vbNewLine eski
 
-<xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> sabiti .NET Core 3,0 Preview 8 ' den itibaren [kullanımdan kalkmış\]\[](xref:System.ObsoleteAttribute) olarak işaretlendi.
+Sabit <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> ,NET Core 3.0 Preview 8 ile başlayan [ \[Eski olarak\] ](xref:System.ObsoleteAttribute) işaretlenir.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3,0 Preview 8
+3.0 Önizleme 8
 
-#### <a name="change-description"></a>Açıklamayı Değiştir
+#### <a name="change-description"></a>Açıklamayı değiştir
 
-.NET Core 3,0 Preview 8 ' den itibaren, [eski](xref:System.ObsoleteAttribute) öznitelik <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> sabitine uygulandı. Constant kullanımı bir derleyici uyarısı oluşturur. .NET Core 'un .NET Framework ve önceki sürümlerinde, eski olarak işaretlenmemiştir.
+.NET Core 3.0 Preview 8 ile başlayarak, [eski](xref:System.ObsoleteAttribute) öznitelik <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> sabite uygulanmıştır. Sabitin kullanımı derleyici uyarısı üretir. .NET Framework ve .NET Core'un önceki sürümlerinde eski olarak işaretlenmemiştir.
 
-Bu değişiklik, çok platformlu geliştirme için bir dil olarak Visual Basic desteklemek üzere yapılmıştır. <xref:Microsoft.VisualBasic.Constants.vbNewLine> sabiti, Windows 'ta yeni satır karakteri dizisi olan `\r\n`eşdeğerdir. UNIX tabanlı sistemlerde, yeni satır karakteri `\n`.
+Bu değişiklik, Visual Basic'i çok platformlu geliştirme dili olarak desteklemek için yapılmıştır. Sabit, <xref:Microsoft.VisualBasic.Constants.vbNewLine> Windows'daki yeni satır karakter dizisine `\r\n`eşittir. Unix tabanlı sistemlerde, yeni satır `\n`karakteri .
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-<xref:Microsoft.VisualBasic.Constants.vbNewLine> için [kullanılmayan](xref:System.ObsoleteAttribute) öznitelik iletisi aşağıdaki öneriyi içerir:
+[Eski](xref:System.ObsoleteAttribute) öznitelik iletisi <xref:Microsoft.VisualBasic.Constants.vbNewLine> için aşağıdaki öneri içerir:
 
-Satır başı ve satır besleme için <xref:Microsoft.VisualBasic.Constants.vbCrLf>kullanın. Geçerli platformun yeni satır için <xref:System.Environment.NewLine?displayProperty=nameWithType>kullanın.
+Bir satır başı ve satır <xref:Microsoft.VisualBasic.Constants.vbCrLf>beslemesi için. Geçerli platformun yeni hattı için <xref:System.Environment.NewLine?displayProperty=nameWithType>.
 
 #### <a name="category"></a>Kategori
 

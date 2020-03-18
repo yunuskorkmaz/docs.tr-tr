@@ -1,34 +1,34 @@
 ---
 ms.openlocfilehash: b0c4e9617677cf95e3a059b57f3d50ddfb072f4a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937115"
 ---
-### <a name="default-control-font-changed-to-segoe-ui-9-pt"></a>Varsayılan denetim yazı tipi Segoe UI 9 nk olarak değiştirildi
+### <a name="default-control-font-changed-to-segoe-ui-9-pt"></a>Varsayılan denetim yazı tipi Segoe UI 9 pt olarak değiştirildi
 
-#### <a name="change-description"></a>Açıklamayı Değiştir
+#### <a name="change-description"></a>Açıklamayı değiştir
 
-.NET Framework, <xref:System.Windows.Forms.Control.DefaultFont?displayProperty=nameWithType> özelliği `Microsoft Sans Serif 8 pt`olarak ayarlanmıştır. Aşağıdaki görüntüde varsayılan yazı tipi kullanılan bir pencere gösterilmektedir.
+.NET Framework'de <xref:System.Windows.Forms.Control.DefaultFont?displayProperty=nameWithType> özellik `Microsoft Sans Serif 8 pt`. Aşağıdaki resimde varsayılan yazı tipini kullanan bir pencere gösterilmektedir.
 
-![.NET Framework 'de varsayılan denetim yazı tipi](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-framework.png)
+![.NET Framework'de varsayılan denetim yazı tipi](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-framework.png)
 
-.NET Core 3,0 ' den başlayarak, varsayılan yazı tipi `Segoe UI 9 pt` (<xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType>ile aynı yazı tipi) olarak ayarlanmıştır. Bu değişikliğin sonucu olarak, form ve denetimler yeni varsayılan yazı tipinin daha büyük boyutu için %27 daha büyük hesaba göre boyutlandırılır. Örneğin:
+.NET Core 3.0'dan başlayarak varsayılan `Segoe UI 9 pt` yazı tipi <xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType>(aynı yazı tipi) olarak ayarlanır. Bu değişikliğin bir sonucu olarak, formlar ve denetimler, yeni varsayılan yazı tipinin daha büyük boyutunu hesaba katmak için yaklaşık %27 daha büyük boyutlandırılır. Örnek:
 
-![.NET Core 'da varsayılan denetim yazı tipi](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-core.png)
+![.NET Core'da varsayılan denetim yazı tipi](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-core.png)
 
-Bu değişiklik [Windows Kullanıcı deneyimi (UX) yönergelerine](/windows/win32/uxguide/vis-fonts#fonts-and-colors)göre hizalanmaya çalışıldı.
+Bu [değişiklik, Windows kullanıcı deneyimi (UX) yönergeleriile](/windows/win32/uxguide/vis-fonts#fonts-and-colors)uyumlu olarak yapılmıştır.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3.0
+3,0
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Form ve denetimlerin boyutundaki değişiklik nedeniyle uygulamanızın doğru şekilde işlediğinden emin olun.
+Formların ve denetimlerin boyutundaki değişiklik nedeniyle, uygulamanızın doğru şekilde işlemesini sağlayın.
 
-Özgün yazı tipini sürdürmek için, formunuzun varsayılan yazı tipini `Microsoft Sans Serif 8 pt`olarak ayarlayın. Örneğin:
+Özgün yazı tipini korumak için formunuzun `Microsoft Sans Serif 8 pt`varsayılan yazı tipini . Örnek:
 
 ```csharp
 public MyForm()

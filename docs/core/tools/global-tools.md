@@ -1,83 +1,83 @@
 ---
-title: .NET Core araçları
-description: .NET Core araçları 'nı yüklemek, kullanmak, güncelleştirmek ve kaldırmak. Küresel araçlar, araç yolu araçları ve yerel araçları içerir.
+title: .NET Çekirdek araçları
+description: .NET Core araçlarının nasıl yüklenir, kullanılır, güncellenir ve kaldırılır. Genel araçları, araç yolu araçlarını ve yerel araçları kapsar.
 author: KathleenDollard
 ms.date: 02/12/2020
-ms.openlocfilehash: d8ee30df3fe063fd41a85072d145b1b5eec7d0d0
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 2f0101c6385c41eda49bcb2458428c1f14552617
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543397"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847799"
 ---
-# <a name="how-to-manage-net-core-tools"></a>.NET Core araçlarını yönetme
+# <a name="how-to-manage-net-core-tools"></a>.NET Core araçları nasıl yönetilir?
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 2.1 SDK ve sonraki sürümler
 
-.NET Core Aracı, konsol uygulaması içeren özel bir NuGet paketidir. Aşağıdaki yollarla makinenize bir araç yüklenebilir:
+.NET Core aracı, konsol uygulaması içeren özel bir NuGet paketidir. Bir alet makinenize aşağıdaki yollarla takılabilir:
 
-* Genel bir araç olarak.
+* Küresel bir araç olarak.
 
-  Araç ikilileri, PATH ortam değişkenine eklenen bir varsayılan dizine yüklenir. Aracı, konumunu belirtmeden makinedeki herhangi bir dizinden çağırabilirsiniz. Makinedeki tüm dizinler için bir aracın bir sürümü kullanılır.
+  Araç ikilileri, PATH ortamı değişkenine eklenen varsayılan bir dizine yüklenir. Aracı konumunu belirtmeden makinedeki herhangi bir dizinden çağırabilirsiniz. Bir aletin bir sürümü makinedeki tüm dizinler için kullanılır.
 
-* Özel bir konumda (araç yolu aracı olarak da bilinir) genel bir araç olarak.
+* Özel bir konumda genel bir araç olarak (araç yolu aracı olarak da bilinir).
 
-  Araç ikilileri, belirttiğiniz bir konuma yüklenir. Aracı, yükleme dizininden ya da komut adı ile dizin sağlayarak ya da yolu PATH ortam değişkenine ekleyerek çağırabilirsiniz. Makinedeki tüm dizinler için bir aracın bir sürümü kullanılır.
+  Araç ikilileri belirttiğiniz bir konuma yüklenir. Aracı yükleme dizininden veya komut adı ile dizini sağlayarak veya dizini PATH ortamı değişkenine ekleyerek çağırabilirsiniz. Bir aletin bir sürümü makinedeki tüm dizinler için kullanılır.
 
-* Yerel bir araç olarak (.NET Core SDK 3,0 ve üzeri için geçerlidir).
+* Yerel bir araç olarak (.NET Core SDK 3.0 ve sonrası için geçerlidir).
 
-  Araç ikilileri bir varsayılan dizine yüklenir. Aracı, yükleme dizininden veya alt dizinlerinden herhangi birine çağırabilirsiniz. Farklı dizinler aynı aracın farklı sürümlerini kullanabilir.
+  Araç ikilileri varsayılan bir dizinde yüklenir. Aracı yükleme dizininden veya alt dizinişlerinden çağırırsınız. Farklı dizinler aynı aracın farklı sürümlerini kullanabilir.
   
-  .NET CLı, bir dizine yerel olarak hangi araçların yüklendiğini izlemek için bildirim dosyalarını kullanır. Bildirim dosyası, bir kaynak kod deposunun kök dizininde kaydedildiğinde, bir katkıda bulunan depoyu kopyalayabilir ve bildirim dosyalarında listelenen tüm araçları yükleyen tek bir .NET Core CLI komutu çağırabilirler.
+  .NET CLI, hangi araçların bir dizine yerel olarak yüklenmiş olarak yüklendiğine göre bildirim dosyalarını kullanır. Bildirim dosyası bir kaynak kodu deposunun kök dizinine kaydedildiğinde, katılımcı depoyu klonlayabilir ve bildirim dosyalarında listelenen tüm araçları yükleyen tek bir .NET Core CLI komutunu çağırabilir.
 
 > [!IMPORTANT]
-> .NET Core araçları tam güvende çalışır. Yazara güvenmediğiniz müddetçe .NET Core aracını yüklemeyin.
+> .NET Core araçları tam güven içinde çalışır. Yazara güvenmediğiniz sürece bir .NET Core aracı yüklemeyin.
 
-## <a name="find-a-tool"></a>Araç bulun
+## <a name="find-a-tool"></a>Bir araç bulma
 
-Şimdilik, .NET Core bir araç arama özelliğine sahip değildir. Araç bulmak için bazı yollar şunlardır:
+Şu anda,.NET Core'un bir araç arama özelliği yok. Araçları bulmanın bazı yolları şunlardır:
 
-* [Natemcmaster/DotNet-Tools](https://github.com/natemcmaster/dotnet-tools) GitHub deposundaki araçların listesine bakın.
-* .NET araçları aramak için [araç al](https://www.toolget.net/) 'ı kullanın.
-* [DotNet/aspnetcore GitHub deposunun Araçlar dizininde](https://github.com/dotnet/aspnetcore/tree/master/src/Tools)ASP.NET Core ekibi tarafından oluşturulan araçların kaynak koduna bakın.
-* [.NET Core DotNet tanılama araçları](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools)' nın tanılama araçları hakkında bilgi edinin.
-* [NuGet](https://www.nuget.org) Web sitesinde arama yapın. Ancak, NuGet sitesi henüz araç paketleri için arama yapmanızı sağlayan bir özelliğe sahip değildir.
+* [Natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub deposundaki araçların listesine bakın.
+* .NET araçlarını aramak için [ToolGet'i](https://www.toolget.net/) kullanın.
+* ASP.NET Core ekibi tarafından oluşturulan araçların kaynak koduna [dotnet/aspnetcore GitHub deposunun Araçlar dizininde](https://github.com/dotnet/aspnetcore/tree/master/src/Tools)bakın.
+* [.NET Core dotnet tanılama araçları](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools)hakkında bilgi edinin.
+* [NuGet](https://www.nuget.org) web sitesini arayın. Ancak, NuGet sitesinde henüz yalnızca araç paketleri için arama yapmanızı sağlayan bir özellik yoktur.
 
-## <a name="check-the-author-and-statistics"></a>Yazarı ve istatistikleri denetleme
+## <a name="check-the-author-and-statistics"></a>Yazarı ve istatistikleri kontrol edin
 
-.NET Core araçları tam güvende çalıştırıldıklarından ve küresel araçlar PATH ortam değişkenine eklendiğinden, bunlar çok güçlü olabilir. Güvenmediğiniz kişilerden araç indirmeyin.
+.NET Core araçları tam güven içinde çalıştırıladığından ve genel araçlar PATH ortamı değişkenine eklenmiştir, bunlar çok güçlü olabilir. Güvenmediğiniz kişilerden araçlar indirmeyin.
 
-Araç NuGet üzerinde barındırılıyorsa, aracı arayarak yazarı ve istatistikleri kontrol edebilirsiniz.
+Araç NuGet'de barındırılırsa, aracı arayarak yazarı ve istatistikleri kontrol edebilirsiniz.
 
-## <a name="install-a-global-tool"></a>Küresel bir araç yükler
+## <a name="install-a-global-tool"></a>Genel bir araç yükleme
 
-Bir aracı genel araç olarak yüklemek için, aşağıdaki örnekte gösterildiği gibi [DotNet araç yüklemesinin](dotnet-tool-install.md)`-g` veya `--global` seçeneğini kullanın:
+Bir aracı genel bir araç olarak `-g` `--global` yüklemek için, aşağıdaki örnekte gösterildiği [gibi, dotnet aracı yükleme](dotnet-tool-install.md)seçeneğini veya seçeneğini kullanın:
 
 ```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
-Çıktı, aşağıdaki örneğe benzer şekilde aracı ve yüklü sürümü çağırmak için kullanılan komutu gösterir:
+Çıktı, aracı çağırmak için kullanılan komutu ve yüklenen sürümü aşağıdaki örneğe benzer şekilde gösterir:
 
 ```output
 You can invoke the tool using the following command: dotnetsay
 Tool 'dotnetsay' (version '2.1.4') was successfully installed.
 ```
 
-Bir araç ikililerinin varsayılan konumu işletim sistemine bağlıdır:
+Bir aracın ikilileri için varsayılan konum işletim sistemine bağlıdır:
 
 | İşletim Sistemi          | Yol                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-SDK ilk çalıştırıldığında, bu konum kullanıcının yoluna eklenir, bu nedenle genel araçlar araç konumunu belirtmeden herhangi bir dizinden çağrılabilir.
+Bu konum, SDK ilk çalıştırıldığında kullanıcının yoluna eklenir, böylece araç konumu belirtilmeden herhangi bir dizinden genel araçlar çağrılabilir.
 
-Araç erişimi, makineye genel değil, kullanıcıya özeldir. Genel araç yalnızca aracı yükleyen kullanıcı tarafından kullanılabilir.
+Araç erişimi kullanıcıya özgüdür, makine geneli değildir. Genel bir araç yalnızca aracı yükleyen kullanıcı tarafından kullanılabilir.
 
-### <a name="install-a-global-tool-in-a-custom-location"></a>Özel bir konuma genel araç yükler
+### <a name="install-a-global-tool-in-a-custom-location"></a>Genel bir aracı özel bir konuma yükleme
 
-Bir aracı özel bir konuma genel araç olarak yüklemek için, aşağıdaki örneklerde gösterildiği gibi [DotNet araç yüklemesinin](dotnet-tool-install.md)`--tool-path` seçeneğini kullanın.
+Bir aracı özel bir konumda genel bir araç `--tool-path` olarak yüklemek için, aşağıdaki örneklerde gösterildiği gibi [dotnet aracı yükleme](dotnet-tool-install.md)seçeneğini kullanın.
 
 Windows'da:
 
@@ -85,35 +85,35 @@ Windows'da:
 dotnet tool install dotnetsay --tool-path c:\dotnet-tools
 ```
 
-Linux veya macOS 'ta:
+Linux veya macOS'ta:
 
 ```dotnetcli
 dotnet tool install dotnetsay --tool-path ~/bin
 ```
 
-.NET Core SDK, bu konumu otomatik olarak PATH ortam değişkenine eklemez. [Bir araç yolu aracını çağırmak](#invoke-a-tool-path-tool)için aşağıdaki yöntemlerden birini kullanarak komutun kullanılabilir olduğundan emin olmanız gerekir:
+.NET Core SDK bu konumu PATH ortamı değişkenine otomatik olarak eklemez. [Bir araç yolu aracını çağırmak](#invoke-a-tool-path-tool)için, aşağıdaki yöntemlerden birini kullanarak komutun kullanılabilir olduğundan emin olsanız:
 
-* Yükleme dizinini PATH ortam değişkenine ekleyin.
-* Aracı çağırdığınızda aracın tam yolunu belirtin.
-* Yükleme dizini içinden aracı çağırın.
+* Yükleme dizini PATH ortamı değişkenine ekleyin.
+* Aracı çağırdığınızda araca giden tam yolu belirtin.
+* Aracı yükleme dizininin içinden çağırın.
 
-## <a name="install-a-local-tool"></a>Yerel bir araç yükler
+## <a name="install-a-local-tool"></a>Yerel bir araç yükleme
 
-**.NET Core 3,0 SDK ve üzeri için geçerlidir.**
+**.NET Core 3.0 SDK ve sonrası için geçerlidir.**
 
-Yalnızca yerel erişim için bir araç yüklemek üzere (geçerli dizin ve alt dizinler için), aracın bir araç bildirim dosyasına eklenmesi gerekir. Bir araç bildirim dosyası oluşturmak için `dotnet new tool-manifest` komutunu çalıştırın:
+Yalnızca yerel erişim için bir araç yüklemek için (geçerli dizin ve alt dizinler için), bir araç bildirimi dosyasına eklenmesi gerekir. Bir araç bildirimi dosyası oluşturmak `dotnet new tool-manifest` için komutu çalıştırın:
 
 ```dotnetcli
 dotnet new tool-manifest
 ```
 
-Bu komut, *. config* dizini altında *DotNet-Tools. JSON* adlı bir bildirim dosyası oluşturur. Bildirim dosyasına yerel bir araç eklemek için, [DotNet aracı install](dotnet-tool-install.md) komutunu kullanın ve aşağıdaki örnekte gösterildiği gibi `--global` ve `--tool-path` seçeneklerini **atlayın** :
+Bu *komut,.config* dizininin altında *dotnet-tools.json* adlı bir bildirim dosyası oluşturur. Bildirim dosyasına yerel bir araç eklemek [için, dotnet aracı yükleme](dotnet-tool-install.md) komutunu kullanın ve aşağıdaki örnekte gösterildiği gibi `--global` seçenekleri `--tool-path` **atlayın:**
 
 ```dotnetcli
 dotnet tool install dotnetsay
 ```
 
-Komut çıktısı, aşağıdaki örneğe benzer şekilde, yeni yüklenen aracın hangi bildirim dosyasına olduğunu gösterir:
+Komut çıktısı, yeni yüklenen aracın hangi dosyada olduğunu aşağıdaki örneğe benzer şekilde gösterir:
 
 ```console
 You can invoke the tool from this directory using the following command:
@@ -122,7 +122,7 @@ Tool 'dotnetsay' (version '2.1.4') was successfully installed.
 Entry is added to the manifest file /home/name/botsay/.config/dotnet-tools.json.
 ```
 
-Aşağıdaki örnekte, iki yerel araç yüklü olan bir bildirim dosyası gösterilmektedir:
+Aşağıdaki örnekte, iki yerel araç yüklü bir bildirim dosyası gösterilmektedir:
 
 ```json
 {
@@ -145,13 +145,13 @@ Aşağıdaki örnekte, iki yerel araç yüklü olan bir bildirim dosyası göste
 }
 ```
 
-Genellikle deponun kök dizinine yerel bir araç eklersiniz. Bildirim dosyasını depoya iade ettikten sonra, depodan kod kullanıma alan geliştiriciler en son bildirim dosyasını alır. Bildirim dosyasında listelenen tüm araçları yüklemek için `dotnet tool restore` komutunu çalıştırırlar:
+Genellikle deponun kök dizinine yerel bir araç eklersiniz. Manifesto dosyasını depoya iade ettikten sonra, depodan kodu kullanıma alan geliştiriciler en son bildirim dosyasını alır. Bildirim dosyasında listelenen tüm araçları yüklemek için `dotnet tool restore` aşağıdaki komutu çalıştırın:
 
 ```dotnetcli
 dotnet tool restore
 ```
 
-Çıktı hangi araçların geri yüklendiğini gösterir:
+Çıktı, hangi araçların geri yüklendiğine işaret ediyor:
 
 ```console
 Tool 'botsay' (version '1.0.0') was restored. Available commands: botsay
@@ -159,23 +159,23 @@ Tool 'dotnetsay' (version '2.1.3') was restored. Available commands: dotnetsay
 Restore was successful.
 ```
 
-## <a name="install-a-specific-tool-version"></a>Belirli bir araç sürümünü yükler
+## <a name="install-a-specific-tool-version"></a>Belirli bir araç sürümünü yükleme
 
-Bir aracın yayın öncesi sürümünü veya belirli bir sürümünü yüklemek için, aşağıdaki örnekte gösterildiği gibi `--version` seçeneğini kullanarak sürüm numarasını belirtin:
+Bir ön sürüm sürümünü veya bir aracın belirli bir sürümünü yüklemek `--version` için, aşağıdaki örnekte gösterildiği gibi seçeneği kullanarak sürüm numarasını belirtin:
 
 ```dotnetcli
 dotnet tool install dotnetsay --version 2.1.3
 ```
 
-## <a name="use-a-tool"></a>Araç kullanma
+## <a name="use-a-tool"></a>Bir araç kullanma
 
-Bir aracı çağırmak için kullandığınız komut, yüklediğiniz paketin adından farklı olabilir. Geçerli Kullanıcı için makinede yüklü olan tüm araçları göstermek için [DotNet araç listesi](dotnet-tool-list.md) komutunu kullanın:
+Bir aracı çağırmak için kullandığınız komut, yüklediğiniz paketin adından farklı olabilir. Geçerli kullanıcı için makinede yüklü olan tüm araçları görüntülemek için [dotnet araç listesi](dotnet-tool-list.md) komutunu kullanın:
 
 ```dotnetcli
 dotnet tool list
 ```
 
-Çıktı, aşağıdaki örneğe benzer şekilde her bir aracın sürümünü ve komutunu gösterir:
+Çıktı, aşağıdaki örneğe benzer şekilde her aracın sürümünü ve komutunu gösterir:
 
 ```console
 Package Id      Version      Commands       Manifest
@@ -184,48 +184,48 @@ botsay          1.0.0        botsay         /home/name/repository/.config/dotnet
 dotnetsay       2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
 ```
 
-Bu örnekte gösterildiği gibi listede yerel araçlar gösterilmektedir. Küresel araçları görmek için `--global` seçeneğini kullanın ve araç yolu araçlarını görmek için `--tool-path` seçeneğini kullanın.
+Bu örnekte gösterildiği gibi, liste yerel araçları gösterir. Genel araçları görmek `--global` için, seçeneği kullanın ve araç yolu `--tool-path` araçlarını görmek için bu seçeneği kullanın.
 
-### <a name="invoke-a-global-tool"></a>Küresel bir araç çağır
+### <a name="invoke-a-global-tool"></a>Genel bir araç çağırma
 
-Genel araçlar için, araç komutunu kendi kendine kullanın. Örneğin, komut `dotnetsay` veya `dotnet-doc`, bu, komutu çağırmak için kullandığınız şeydir:
+Genel araçlar için araç komutunu tek başına kullanın. Örneğin, komut, komutu çağırmak için kullandığınız `dotnetsay` komutise: `dotnet-doc`
 
 ```console
 dotnetsay
 dotnet-doc
 ```
 
-Komut `dotnet-`önekiyle başlıyorsa, aracı çağırmak için alternatif bir yol `dotnet` komutunu kullanmak ve araç komut önekini atlamanızı sağlar. Örneğin, komut `dotnet-doc`, aşağıdaki komut aracı çağırır:
+Komut öneki `dotnet-`ile başlarsa, aracı çağırmanın alternatif bir yolu `dotnet` komutu kullanmak ve araç komutu önekini atlamaktır. Örneğin, komut, `dotnet-doc`aşağıdaki komut aracı çağırır:
 
 ```dotnetcli
 dotnet doc
 ```
 
-Ancak, aşağıdaki senaryoda, genel bir araç çağırmak için `dotnet` komutunu kullanamazsınız:
+Ancak, aşağıdaki senaryoda genel bir `dotnet` araç çağırmak için komutu kullanamazsınız:
 
-* Genel bir araç ve yerel bir araç, `dotnet-`önekli aynı komuta sahiptir.
-* Genel aracı yerel araç kapsamında olan bir dizinden çağırmak istiyorsunuz.
+* Genel bir araç ve yerel bir araç `dotnet-`tarafından önceden belirlenmiş aynı komuta sahiptir.
+* Genel aracı yerel araç için kapsamda olan bir dizinden çağırmak istiyorsunuz.
 
-Bu senaryoda, `dotnet doc` ve `dotnet dotnet-doc` yerel aracı çağırın. Genel aracı çağırmak için, komutu kendi başına kullanın:
+Bu `dotnet doc` senaryoda, `dotnet dotnet-doc` ve yerel aracı çağırın. Genel aracı çağırmak için komutu tek başına kullanın:
 
 ```dotnetcli
 dotnet-doc
 ```
 
-### <a name="invoke-a-tool-path-tool"></a>Araç yolu aracı çağırma
+### <a name="invoke-a-tool-path-tool"></a>Araç yolu aracını çağırma
 
-`tool-path` seçeneği kullanılarak yüklenen küresel bir aracı çağırmak için, [Bu makalede daha önce](#install-a-global-tool-in-a-custom-location)anlatıldığı gibi komutun kullanılabilir olduğundan emin olun.
+Seçeneği kullanarak yüklenen genel bir aracı çağırmak için, bu makalede daha [önce](#install-a-global-tool-in-a-custom-location)açıklandığı gibi komutun kullanılabilir olduğundan emin olun. `tool-path`
 
-### <a name="invoke-a-local-tool"></a>Yerel bir araç çağır
+### <a name="invoke-a-local-tool"></a>Yerel bir aracı çağırma
 
-Yerel bir aracı çağırmak için, yükleme dizininden `dotnet` komutunu kullanmanız gerekir. Aşağıdaki örneklerde gösterildiği gibi uzun biçimi (`dotnet tool run <COMMAND_NAME>`) veya kısa biçimi (`dotnet <COMMAND_NAME>`) kullanabilirsiniz:
+Yerel bir aracı çağırmak için yükleme `dotnet` dizininin içinden komutu kullanmanız gerekir. Aşağıdaki örneklerde gösterildiği`dotnet tool run <COMMAND_NAME>`gibi uzun formu`dotnet <COMMAND_NAME>`( ) veya kısa formu ( ) kullanabilirsiniz:
 
 ```dotnetcli
 dotnet tool run dotnetsay
 dotnet dotnetsay
 ```
 
-Komuta `dotnet-`ön eki varsa, aracı çağırdığınızda öneki dahil edebilir veya atlayabilirsiniz. Örneğin, komut `dotnet-doc`, aşağıdaki örneklerden herhangi biri yerel aracı çağırır:
+Komut önceden `dotnet-`belirlenmişse, aracı çağırırken önek'i ekleyebilir veya atlayabilirsiniz. Örneğin, komut `dotnet-doc`, aşağıdaki örneklerden herhangi biri yerel aracı çağırır:
 
 ```dotnetcli
 dotnet tool run dotnet-doc
@@ -233,9 +233,9 @@ dotnet dotnet-doc
 dotnet doc
 ```
 
-## <a name="update-a-tool"></a>Bir aracı güncelleştirme
+## <a name="update-a-tool"></a>Aracı güncelleştirme
 
-Bir aracın güncelleştirilmesi, en son kararlı sürümle birlikte kaldırılıp yeniden yüklenmesini içerir. Bir aracı güncelleştirmek için, bu aracı yüklemek için kullandığınız seçenekle [DotNet araç Update](dotnet-tool-update.md) komutunu kullanın:
+Bir aracı güncelleştirmek, bir aracı en son kararlı sürümle kaldırmayı ve yeniden yüklemeyi içerir. Bir aracı güncelleştirmek için, aracı yüklemek için kullandığınız seçenekle [dotnet araç güncelleştirme](dotnet-tool-update.md) komutunu kullanın:
 
 ```dotnetcli
 dotnet tool update --global <packagename>
@@ -243,11 +243,11 @@ dotnet tool update --tool-path <packagename>
 dotnet tool update <packagename>
 ```
 
-Yerel bir araç için SDK, geçerli dizin ve üst dizinlere bakarak paket KIMLIĞINI içeren ilk bildirim dosyasını bulur. Herhangi bir bildirim dosyasında böyle bir paket KIMLIĞI yoksa, SDK en yakın bildirim dosyasına yeni bir giriş ekler.
+Yerel bir araç için SDK, geçerli dizin ve üst dizinlere bakarak paket kimliğini içeren ilk bildirim dosyasını bulur. Herhangi bir bildirim dosyasında böyle bir paket kimliği yoksa, SDK en yakın bildirim dosyasına yeni bir giriş ekler.
 
-## <a name="uninstall-a-tool"></a>Araç kaldırma
+## <a name="uninstall-a-tool"></a>Aracı kaldırma
 
-Bir aracı, aracı yüklemek için kullandığınız seçenekle [DotNet Aracı kaldırma](dotnet-tool-uninstall.md) komutunu kullanarak kaldırın:
+Aracı yüklemek için kullandığınız aynı seçenekle [dotnet aracı nı kaldır](dotnet-tool-uninstall.md) komutunu kullanarak bir aracı kaldırın:
 
 ```dotnetcli
 dotnet tool uninstall --global <packagename>
@@ -255,21 +255,27 @@ dotnet tool uninstall --tool-path<packagename>
 dotnet tool uninstall <packagename>
 ```
 
-Yerel bir araç için SDK, geçerli dizin ve üst dizinlere bakarak paket KIMLIĞINI içeren ilk bildirim dosyasını bulur.
+Yerel bir araç için SDK, geçerli dizin ve üst dizinlere bakarak paket kimliğini içeren ilk bildirim dosyasını bulur.
 
-## <a name="get-help-and-troubleshoot"></a>Yardım alın ve sorun giderin
+## <a name="get-help-and-troubleshoot"></a>Yardım alın ve sorun giderme
 
-Kullanılabilir `dotnet tool` komutlarının bir listesini almak için aşağıdaki komutu girin:
+Kullanılabilir `dotnet tool` komutların listesini almak için aşağıdaki komutu girin:
 
 ```dotnetcli
 dotnet tool --help
 ```
 
-Araç kullanım yönergelerini almak için aşağıdaki komutlardan birini girin veya aracın Web sitesini görüntüleyin:
+Araç kullanım yönergelerini almak için aşağıdaki komutlardan birini girin veya aracın web sitesine bakın:
 
 ```dotnetcli
 <command> --help
 dotnet <command> --help
 ```
 
-Bir araç yüklenemediğinde veya çalışmazsa, bkz. [.NET Core araç kullanımı sorunlarını giderme](troubleshoot-usage-issues.md).
+Bir araç yüklenmezse veya çalıştıramazsa, [Sorun Giderme .NET Core araç kullanım sorunları](troubleshoot-usage-issues.md)konusuna bakın.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Öğretici: .NET Core CLI'yi kullanarak bir .NET Core aracı oluşturun](global-tools-how-to-create.md)
+- [Öğretici: .NET Core CLI'yi kullanarak bir .NET Core global aracı yükleyin ve kullanın](global-tools-how-to-use.md)
+- [Öğretici: .NET Core CLI'yi kullanarak bir .NET Core yerel aracı nı yükleyin ve kullanın](local-tools-how-to-use.md)

@@ -1,42 +1,42 @@
 ---
-title: Belge açıklamaları için önerilen Etiketler- C# Programlama Kılavuzu
+title: Dokümantasyon yorumları için önerilen etiketler - C# programlama kılavuzu
 ms.date: 01/21/2020
 helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
 ms.openlocfilehash: c746615d0d7a7a3058fbe2f8506a7a7c5c4a8779
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789721"
 ---
-# <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>Belge açıklamaları için önerilen Etiketler (C# Programlama Kılavuzu)
+# <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>Dokümantasyon yorumları için önerilen etiketler (C# programlama kılavuzu)
 
-C# Derleyici kodunuzda belge açıklamalarını işler ve adı **/doc** komut satırı SEÇENEĞINDE belirttiğiniz bir dosyada xml olarak biçimlendirir. Derleyici tarafından oluşturulan dosyayı temel alan son belgeleri oluşturmak için özel bir araç oluşturabilir veya [Docfx](https://dotnet.github.io/docfx/) veya [sandrole](https://github.com/EWSoftware/SHFB)gibi bir araç kullanabilirsiniz.
+C# derleyicisi, **/doc** komut satırı seçeneğinde adını belirttiğiniz bir dosyada belgeleri kodunuzdaki belgeleri işler ve XML olarak biçimlendirin. Derleyici tarafından oluşturulan dosyayı temel alan son belgeleri oluşturmak için özel bir araç oluşturabilir veya [DocFX](https://dotnet.github.io/docfx/) veya [Sandcastle](https://github.com/EWSoftware/SHFB)gibi bir araç kullanabilirsiniz.
 
-Etiketler, türler ve tür üyeleri gibi kod yapıları üzerinde işlenir.
+Etiketler, tür ve tür üyeleri gibi kod yapılarında işlenir.
 
 > [!NOTE]
 > Belge açıklamaları bir ad alanına uygulanamaz.  
   
- Derleyici geçerli XML olan herhangi bir etiketi işleyecek. Aşağıdaki Etiketler kullanıcı belgelerinde genel olarak kullanılan işlevleri sağlar.  
+ Derleyici, geçerli olan herhangi bir etiketi XML'i işler. Aşağıdaki etiketler, kullanıcı belgelerinde genel olarak kullanılan işlevselliği sağlar.  
   
 ## <a name="tags"></a>Etiketler  
   
 |||||  
 |---|---|---|---|
-|[\<c >](./code-inline.md)|[\<paragraf >](./para.md)|[\<bkz. >](./see.md)*|[\<value>](./value.md)  
-|[\<kodu >](./code.md)|[\<param >](./param.md)*|[\<seede >](./seealso.md)*|  
-|[\<örnek >](./example.md)|[\<paramref >](./paramref.md)|[\<summary>](./summary.md)|  
-|[\<özel durum >](./exception.md)*|[\<izin >](./permission.md)*|[\<typeparam >](./typeparam.md)*|  
-|[\<> ekleme](./include.md)*|[\<açıklamalar >](./remarks.md)|[\<typeparamref >](./typeparamref.md)|  
-|[\<listesi >](./list.md)|[\<devralma belgesi >](./inheritdoc.md)|[\<returns>](./returns.md)|
+|[\<c>](./code-inline.md)|[\<para>](./para.md)|[\<bkz.>](./see.md)*|[\<değer>](./value.md)  
+|[\<kod>](./code.md)|[\<param>](./param.md)*|[\<seealso>](./seealso.md)*|  
+|[\<örnek>](./example.md)|[\<paramref>](./paramref.md)|[\<özet>](./summary.md)|  
+|[\<özel durum>](./exception.md)*|[\<izin>](./permission.md)*|[\<typeparam>](./typeparam.md)*|  
+|[\<>dahil](./include.md)*|[\<açıklamalar>](./remarks.md)|[\<typeparamref>](./typeparamref.md)|  
+|[\<liste>](./list.md)|[\<kalıtsal doc>](./inheritdoc.md)|[\<>döndürür](./returns.md)|
   
-(\* derleyicinin söz dizimini doğruladığını gösterir.)
+(\* derleyicinin sözdizimini doğruladığını gösterir.)
 
-Bir belge açıklamasının metninde Açılı ayraçların görünmesini istiyorsanız, `<` ve `>` HTML kodlamasını kullanın `&lt;` ve `&gt;`. Bu kodlama aşağıdaki örnekte gösterilmiştir.
+Bir belge açıklama metninde açı braketlerinin görünmesini istiyorsanız, html `<` kodlamasını `&lt;` ve `&gt;` `>` sırasıyla ve sırasıyla kullanın. Bu kodlama aşağıdaki örnekte gösterilmiştir.
 
 ```csharp
 /// <summary>
@@ -46,6 +46,6 @@ Bir belge açıklamasının metninde Açılı ayraçların görünmesini istiyor
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Programlama Kılavuzu](../index.md)
-- [-Doc (C# derleyici seçenekleri)](../../language-reference/compiler-options/doc-compiler-option.md)
-- [XML belge açıklamaları](./index.md)
+- [C# programlama kılavuzu](../index.md)
+- [-doc (C# derleyici seçenekleri)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [XML belgeleri yorumları](./index.md)

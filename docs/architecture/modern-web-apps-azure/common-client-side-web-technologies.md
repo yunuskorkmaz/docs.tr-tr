@@ -1,90 +1,90 @@
 ---
-title: Ortak istemci tarafı Web teknolojileri
-description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Ortak istemci tarafı Web teknolojileri
+title: Ortak istemci tarafı web teknolojileri
+description: ASP.NET Core ve Azure ile Mimar Modern Web Uygulamaları | Ortak istemci tarafı web teknolojileri
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
 ms.openlocfilehash: 2809c8539b42e8e2250039dceed1389b3cbdcd8a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449380"
 ---
-# <a name="common-client-side-web-technologies"></a>Ortak istemci tarafı Web teknolojileri
+# <a name="common-client-side-web-technologies"></a>Ortak istemci tarafı web teknolojileri
 
-> "Web siteleri, iç ve çıkış arasında iyi görünmelidir."  
-> _-Paul pişirme son_
+> "Web siteleri içeriden ve dışarıdan iyi görünmelidir."  
+> _- Paul Cookson_
 
-ASP.NET Core uygulamalar Web uygulamalardır ve genellikle HTML, CSS ve JavaScript gibi istemci tarafı Web teknolojilerine bağımlıdır. Sayfa (HTML) içeriğini düzen ve stil (CSS) ve davranışını (JavaScript aracılığıyla) ayırarak, karmaşık Web uygulamaları, endişeleri ayrımı özelliğinden yararlanabilir. Uygulamanın yapısı, tasarımı veya davranışında yapılacak değişiklikler, bu konular intertwined olmadığında daha kolay hale getirilebilir.
+ASP.NET Çekirdek uygulamaları web uygulamalarıdır ve genellikle HTML, CSS ve JavaScript gibi istemci tarafındaki web teknolojilerine güvenirler. Karmaşık web uygulamaları, sayfanın (HTML) içeriğini düzeninden ve stilinden (CSS) ve davranışından (JavaScript aracılığıyla) ayırarak, Endişelerin Ayrılması ilkesinden yararlanabilir. Uygulamanın yapısında, tasarımında veya davranışında gelecekteki değişiklikler, bu endişeler iç içe geçtiğinde daha kolay yapılabilir.
 
-HTML ve CSS görece kararlı olsa da, JavaScript, uygulama çerçeveleri ve yardımcı programlar tarafından Web tabanlı uygulamalar oluşturmak için birlikte çalışarak,, Breakneck hızında gelişiyor. Bu bölümde, JavaScript 'in Web geliştiricileri tarafından kullanılması ve angular hakkında üst düzey bir genel bakış ve istemci tarafı kitaplıklarına yanıt verme gibi bazı yollar sunulmaktadır.
+HTML ve CSS nispeten kararlı olsa da, JavaScript, uygulama çerçeveleri ve yardımcı programlar geliştiriciler için ürünün web tabanlı uygulamalar ışıklamak için çalışmaları sayesinde, son derece hızla gelişmekte olmuştur. Bu bölümde, JavaScript'in web geliştiricileri tarafından kullanıldığı birkaç yöntem eðerlenir ve Açıl ve Tepki istemci tarafý kitaplýklarýna üst düzey bir genel bakış sunar.
 
 > [!NOTE]
-> Blazor zengin, etkileşimli istemci kullanıcı arabirimleri oluşturmak için JavaScript çerçevelerine bir alternatif sağlar. İstemci tarafı Blazor desteği hala önizlemededir, bu nedenle artık bu bölüm için kapsam dışındadır.
+> Blazor zengin, etkileşimli istemci kullanıcı arabirimleri oluşturmak için JavaScript çerçeveleri için bir alternatif sağlar. İstemci tarafı Blazor desteği hala önizlemede, bu nedenle şimdilik bu bölümün kapsamı dışında.
 
 ## <a name="html"></a>HTML
 
-HTML, Web sayfaları ve Web uygulamaları oluşturmak için kullanılan standart biçimlendirme dilidir. Öğeleri, biçimlendirilen metin, görüntüler, form girişleri ve diğer yapıları temsil eden sayfa oluşturma blokları oluşturuyor. Bir tarayıcı bir URL 'ye istek yaptığında, bir sayfa veya uygulama döndürmeksizin döndürülen ilk şey bir HTML belgesidir. Bu HTML belgesi, CSS biçimindeki görünüm ve düzen ile ilgili ek bilgilere başvurabilir veya JavaScript biçiminde davranış gösterebilir.
+HTML, web sayfaları ve web uygulamaları oluşturmak için kullanılan standart biçimlendirme dilidir. Öğeleri, biçimlendirilmiş metni, görüntüleri, form girişlerini ve diğer yapıları temsil eden sayfaların yapı taşlarını oluşturur. Bir tarayıcı bir URL'ye istekte bulununca, ister bir sayfa ister uygulama getirin, döndürülen ilk şey bir HTML belgesidir. Bu HTML belgesi, görünümü ve düzeni hakkında CSS biçiminde ek bilgiler veya JavaScript biçiminde ki davranışlara başvurabilir veya ek bilgiler içerebilir.
 
-## <a name="css"></a>{1&gt;CSS&lt;1}
+## <a name="css"></a>CSS
 
-CSS (Geçişli Stil Sayfaları), HTML öğelerinin görünüm ve yerleşimini denetlemek için kullanılır. CSS stilleri, aynı sayfada ayrı olarak tanımlanan veya ayrı bir dosyada tanımlanmış ve sayfa tarafından başvurulan bir HTML öğesine doğrudan uygulanabilir. Stiller, belirli bir HTML öğesini seçmek için nasıl kullanıldığına göre basamaklandırılır. Örneğin, bir stil tüm belgeye uygulanabilir, ancak belirli bir öğeye uygulanan bir stil tarafından geçersiz kılınır. Benzer şekilde, öğeye özgü bir stil, öğesine uygulanan bir CSS sınıfına uygulanan bir stil tarafından geçersiz kılınır. Bu, sırasıyla bu öğenin belirli bir örneğini hedefleyen bir stil tarafından geçersiz kılınır (KIMLIĞI aracılığıyla). Şekil 6-1
+CSS (Basamaklı Stil Sayfaları), HTML öğelerinin görünümünü ve düzenini denetlemek için kullanılır. CSS stilleri, aynı sayfada ayrı olarak tanımlanan veya ayrı bir dosyada tanımlanan ve sayfa tarafından başvurulan bir HTML öğesine doğrudan uygulanabilir. Belirli bir HTML öğesini seçmek için nasıl kullanıldıklarına bağlı olarak stiller basamaklanır. Örneğin, bir stil belgenin tamamına uygulanabilir, ancak belirli bir öğeye uygulanan bir stil tarafından geçersiz kılınabilir. Aynı şekilde, öğeye özgü bir stil, öğeye uygulanan bir CSS sınıfına uygulanan ve bu öğenin belirli bir örneğini (kimliği üzerinden) hedefleyen bir stil tarafından geçersiz kılınan bir stil tarafından geçersiz kılınacak şekilde geçersiz kılınmıştır. Şekil 6-1
 
-![CSS specificity kuralları](./media/image6-1.png)
+![CSS Özgüllük kuralları](./media/image6-1.png)
 
-**Şekil 6-1.** CSS specificity kuralları, sırasıyla.
+**Şekil 6-1.** Sırayla CSS Özgüllük kuralları.
 
-Stilleri kendi ayrı stil sayfası dosyalarında tutmak ve uygulama içinde tutarlı ve yeniden kullanılabilir stilleri uygulamak için seçim tabanlı basamaklama kullanmak en iyisidir. Stil kurallarının HTML içine yerleştirilmesi kaçınılmalıdır ve belirli tek öğelerin (tüm öğelerin sınıfları yerine veya kendilerine uygulanan belirli bir CSS sınıfına sahip olan öğelerin) uygulanması, kural değil özel durum olmalıdır.
+Stilleri kendi ayrı stil sayfası dosyalarında tutmak ve uygulama içinde tutarlı ve yeniden kullanılabilir stilleri uygulamak için seçim tabanlı basamaklama kullanmak en iyisidir. HTML içinde stil kuralları yerleştirmekten kaçınılmalıdır ve stilleri belirli tek tek öğelere (tüm öğe sınıfları veya bunlara uygulanan belirli bir CSS sınıfı olan öğeler yerine) uygulamak kural değil, istisna olmalıdır.
 
-### <a name="css-preprocessors"></a>CSS önişlemcisi
+### <a name="css-preprocessors"></a>CSS ön işlemcileri
 
-CSS stil sayfalarında koşullu mantık, değişkenler ve diğer programlama dili özellikleri için destek yoktur. Bu nedenle, birçok farklı HTML öğesi ve CSS sınıfı çeşitlemelerine aynı renk, yazı tipi veya başka bir ayar uygulandığından, büyük stil sayfaları genellikle tam bir tekrardır. CSS önişlemcisi, stil sayfalarınızın ve mantığa yönelik destek ekleyerek [kurutma ilkesini](https://deviq.com/don-t-repeat-yourself/) takip etmenize yardımcı olabilir.
+CSS stil sayfaları koşullu mantık, değişkenler ve diğer programlama dili özellikleri için destek eksikliği. Bu nedenle, html öğeleri ve CSS sınıflarının birçok farklı varyasyonuna aynı renk, yazı tipi veya başka bir ayar uygulandığından, büyük stil sayfaları genellikle biraz yineleme içerir. CSS önişlemcileri, değişkenler ve mantık desteği ekleyerek stil sayfalarınızın [DRY ilkesini](https://deviq.com/don-t-repeat-yourself/) izlemesine yardımcı olabilir.
 
-En popüler CSS önişlemcisi Sass ve küçüktür. Her ikisi de CSS 'yi genişletir ve bununla birlikte, düz bir CSS dosyasının geçerli bir Sass veya daha az dosya olduğu anlamına gelir. Sass, Ruby tabanlıdır ve JavaScript tabanlıdır ve genellikle yerel geliştirme işleminizin bir parçası olarak çalışır. Hem komut satırı araçlarına hem de Gulp veya Grreksel görevler kullanılarak çalıştırmak üzere Visual Studio 'da yerleşik desteğe sahiptir.
+En popüler CSS önişlemciler Sass ve LESS vardır. Her ikisi de CSS genişletmek ve onunla geriye doğru uyumlu, düz bir CSS dosyası geçerli bir Sass veya LESS dosyası olduğu anlamına gelir. Sass Ruby tabanlı ve DAHA AZ JavaScript tabanlı ve her ikisi de genellikle yerel geliştirme sürecinin bir parçası olarak çalıştırın. Her ikiside de komut satırı araçlarının yanı sıra Visual Studio'da Gulp veya Grunt görevlerini kullanarak çalıştırmak için yerleşik destek bulunmaktadır.
 
 ## <a name="javascript"></a>JavaScript
 
-JavaScript, ECMAScript dil belirtiminde standartlaştırılmış olan dinamik, yorumlanan bir programlama dilidir. Web 'in programlama dilidir. CSS gibi JavaScript, HTML öğeleri içinde, bir sayfa içinde betik blokları olarak veya ayrı dosyalarda öznitelik olarak tanımlanabilir. CSS gibi, JavaScript 'i ayrı dosyalara düzenlemeniz önerilir ve bu, ayrı Web sayfalarında veya uygulama görünümlerinde bulunan HTML 'den mümkün olduğunca ayrılmaya karşı sürer.
+JavaScript, ECMAScript dil belirtiminde standartlaştırılmış dinamik, yorumlanmış bir programlama dilidir. Bu web programlama dilidir. CSS gibi, JavaScript de HTML öğeleri içindeki öznitelikler, bir sayfa içinde veya ayrı dosyalarda komut dosyası blokları olarak tanımlanabilir. CSS gibi, JavaScript'i de ayrı dosyalar halinde düzenlemek ve tek tek web sayfalarında veya uygulama görünümlerinde bulunan HTML'den mümkün olduğunca ayrı tutulması önerilir.
 
-Web uygulamanızda JavaScript ile çalışırken, genellikle gerçekleştirmeniz gereken birkaç görev vardır:
+Web uygulamanızda JavaScript ile çalışırken, sık sık gerçekleştirmeniz gereken birkaç görev vardır:
 
-- Bir HTML öğesi seçme ve değerini alma ve/veya güncelleştirme.
+- Bir HTML öğesi seçmek ve değerini almak ve/veya güncellemek.
 
-- Bir Web API 'sini veri için sorgulama.
+- Veri için Web API'si sorgulama.
 
-- Bir Web API 'sine komut gönderme (ve sonucuyla birlikte geri çağırmaya yanıt verme).
+- Web API'sine komut gönderme (ve sonucuyla birlikte geri arama yanıtı).
 
-- Doğrulama gerçekleştiriliyor.
+- Doğrulama gerçekleştirme.
 
-Bu görevlerin tümünü tek başına JavaScript ile gerçekleştirebilirsiniz, ancak bu görevleri daha kolay hale getirmek için birçok kitaplık vardır. Bu kitaplıkların ilk ve en başarılı olanı, Web sayfalarında bu görevleri basitleştirmek için popüler bir seçenek olmaya devam eden jQuery 'dir. Tek sayfalı uygulamalar (maça 'Lar) için jQuery, istenen özelliklerin çoğunu angular ve tepki veren bir şekilde sunmaz.
+Bu görevlerin tümlerini yalnızca JavaScript ile gerçekleştirebilirsiniz, ancak bu görevleri kolaylaştırmak için birçok kitaplık vardır. Bu kütüphanelerin ilk ve en başarılı biri web sayfalarında bu görevleri basitleştirmek için popüler bir seçim olmaya devam ediyor jQuery vardır. Tek Sayfauygulamaları (SPA'lar) için jQuery, Açısal ve React'in sunduğu istenilen özelliklerin çoğunu sağlamaz.
 
-### <a name="legacy-web-apps-with-jquery"></a>JQuery ile eski Web uygulamaları
+### <a name="legacy-web-apps-with-jquery"></a>jQuery ile eski web uygulamaları
 
-JavaScript Framework standartlarına bağlı olarak, jQuery, HTML/CSS ile çalışmak ve Web API 'Lerine AJAX çağrıları yapan uygulamalar oluşturmak için yaygın olarak kullanılan bir kitaplık olmaya devam eder. Bununla birlikte, jQuery, tarayıcı belgesi nesne modeli (DOM) düzeyinde çalışır ve varsayılan olarak, bildirim temelli model yerine yalnızca bir kesinlik sağlar.
+JavaScript çerçeve standartlarına göre eski olmasına rağmen, jQuery HTML / CSS ve web API'lar IÇIN AJAX aramaları yapmak uygulamaları bina ile çalışmak için yaygın olarak kullanılan bir kütüphane olmaya devam etmektedir. Ancak, jQuery tarayıcı belge nesne modeli (DOM) düzeyinde çalışır ve varsayılan olarak yalnızca bir zorunluluk sunuyor, yerine bildirimsel, model.
 
-Örneğin, bir TextBox değeri 10 ' u aşarsa sayfadaki bir öğenin görünür hale getirilmesinin gerektiği hakkında düşünün. JQuery 'ta bu, genellikle TextBox 'ın değerini inceleyerek ve hedef öğenin görünürlüğünü bu değere göre ayarlayabilecek kodla bir olay işleyicisi yazılarak uygulanır. Bu, zorunlu, kod tabanlı bir yaklaşımdır. Bunun yerine başka bir çerçeve, öğesinin görünürlüğünü bildirimli olarak metin değerine bağlamak için veri bağlamayı kullanabilir. Bu, herhangi bir kod yazmayı gerektirmez, ancak bunun yerine yalnızca veri bağlama öznitelikleriyle ilgili öğeleri dekoratmayı gerektirir. İstemci tarafı davranışları daha karmaşık büyürken, veri bağlama yaklaşımları genellikle daha az kod ve koşullu karmaşıklıkla daha basit çözümlere neden olacak.
+Örneğin, bir textbox'ın değeri 10'u aşarsa, sayfadaki bir öğenin görünür hale getirilmesi gerektiğini düşünün. jQuery'de bu genellikle textbox değerini denetleyecek ve hedef öğenin görünürlüğünü bu değere göre ayarlayan kodlu bir olay işleyicisi yazılarak uygulanır. Bu zorunlu, kod tabanlı bir yaklaşımdır. Başka bir çerçeve bunun yerine, öğenin görünürlüğünü bildirimsel olarak textbox değerine bağlamak için veri bağlama yı kullanabilir. Bu herhangi bir kod yazmayı gerektirmez, ancak bunun yerine yalnızca veri bağlama öznitelikleri ile ilgili öğeleri dekorasyon gerektirir. İstemci tarafı davranışları daha karmaşık hale geldikçe, veri bağlama yaklaşımları sıklıkla daha az kod ve koşullu karmaşıklıkla daha basit çözümlerle sonuçlanır.
 
-### <a name="jquery-vs-a-spa-framework"></a>jQuery ile SPA çerçevesi karşılaştırması
+### <a name="jquery-vs-a-spa-framework"></a>jQuery vs bir SPA Çerçevesi
 
-| **Çarpan** | **jQuery** | **Angular**|
+| **Faktörü** | **jQuery** | **Angular**|
 |--------------------------|------------|-------------|
-| DOM 'ı soyutlar | **Evet** | **Evet** |
-| AJAX desteği | **Evet** | **Evet** |
-| Bildirime dayalı veri bağlama | **Hayır** | **Evet** |
-| MVC stili yönlendirme | **Hayır** | **Evet** |
-| Örneğine | **Hayır** | **Evet** |
-| Derin bağlantı yönlendirme | **Hayır** | **Evet** |
+| SOYUTLAR DOM | **Evet** | **Evet** |
+| AJAX Desteği | **Evet** | **Evet** |
+| Bildirimsel Veri Bağlama | **Hayır** | **Evet** |
+| MVC tarzı Yönlendirme | **Hayır** | **Evet** |
+| Templating | **Hayır** | **Evet** |
+| Derin Bağlantı Yönlendirme | **Hayır** | **Evet** |
 
-JQuery eksik doğası gereği özelliklerinin çoğu diğer kitaplıkların eklenmesiyle eklenebilir. Ancak, angular gibi bir SPA çerçevesi, başlangıçtan itibaren göz önünde bulundurularak tasarlandığından, bu özellikleri daha tümleşik bir biçimde sunar. Ayrıca, jQuery, jQuery ile herhangi bir şey yapmak için jQuery işlevlerini çağırmanız gereken anlamına gelen, zorunlu bir kitaplıktır. SPA çerçevelerinin sağladığı iş ve işlevselliğin çoğu bildirimli olarak yapılabilir ve hiçbir gerçek kod yazılmasına gerek yoktur.
+JQuery'nin eksik olduğu özelliklerin çoğu diğer kütüphanelerin eklenmesiyle eklenebilir. Ancak, Açısal gibi bir SPA çerçevesi, başından beri hepsi göz önünde bulundurularak tasarlandığı için bu özellikleri daha entegre bir şekilde sunar. Ayrıca, jQuery zorunlu bir kütüphane, jQuery ile bir şey yapmak için jQuery işlevleri aramak gerekir anlamına gelir. SPA çerçevelerinin sağladığı iş ve işlevlerin çoğu, gerçek bir kod yazılmayı gerektirmeyerek bildirimsel olarak yapılabilir.
 
-Veri bağlama buna harika bir örnektir. JQuery 'de, genellikle bir DOM öğesinin değerini almak veya bir öğenin değerini ayarlamak için yalnızca bir kod satırı alır. Ancak, bu kodu, her zaman, öğenin değerini değiştirmeniz gerekir ve bazen bu, bir sayfada birden çok işlev ile gerçekleşir. Diğer bir yaygın örnek, öğe görünürlüğüne sahiptir. JQuery 'de, belirli öğelerin görünür olup olmadığını denetlemek için kod yazacağınız birçok farklı yer olabilir. Bu durumların her birinde, veri bağlamayı kullanırken, hiçbir kodun yazılması gerekmez. Söz konusu öğelerin değerini veya görünürlüğünü sayfadaki bir *ViewModel* ' e bağlamanız yeterlidir ve bu ViewModel üzerindeki değişiklikler otomatik olarak bağlı öğelerde yansıtılır.
+Veri bağlama bunun büyük bir örneğidir. jQuery'de, bir DOM öğesinin değerini almak veya bir öğenin değerini ayarlamak için genellikle yalnızca bir kod satırı alır. Ancak, öğenin değerini değiştirmeniz gerektiğinde bu kodu yazmanız gerekir ve bazen bu bir sayfadaki birden çok işlevde oluşur. Başka bir yaygın örnek eleman görünürlüğüdür. jQuery'de, belirli öğelerin görünür olup olmadığını denetlemek için kod yazacağınız birçok farklı yer olabilir. Bu durumların her birinde, veri bağlama kullanırken, hiçbir kod yazılması gerekmez. Söz konusu öğelerin değerini veya görünürlüğünü sayfadaki bir *görünüm modeline* bağlamanız yeterlidir ve bu görünüm modelindeki değişiklikler bağlı öğelere otomatik olarak yansıtılır.
 
-### <a name="angular-spas"></a>Angular maça 'Ları
+### <a name="angular-spas"></a>Açısal SP'ler
 
-Angular dünyanın en popüler JavaScript çerçevelerinden biri olarak kalır. Angular 2 ' den itibaren, ekip çerçeveyi baştan sona yeniden oluşturur ( [TypeScript](https://www.typescriptlang.org/)kullanarak) ve özgün AngularJS adından yalnızca angular olarak yeniden markalı olur. Artık birkaç yıldır, yeniden tasarlanan angular tek sayfalı uygulamalar oluşturmaya yönelik sağlam bir çerçeve olmaya devam etmektedir.
+Açısal dünyanın en popüler JavaScript çerçevelerinden biri olmaya devam etmektedir. Açısal 2'den bu yana, ekip çerçeveyi sıfırdan yeniden [(TypeScript](https://www.typescriptlang.org/)kullanarak) yeniden oluşturmuş ve orijinal Açısal JS adından yalnızca Açısal olarak yeniden markalaşmıştır. Şimdi birkaç yaşında, yeniden tasarlanmış Açısal Tek Sayfa Uygulamaları oluşturmak için sağlam bir çerçeve olmaya devam ediyor.
 
-Angular uygulamaları bileşenlerden oluşturulmuştur. Bileşenler, HTML şablonlarını özel nesnelerle birleştirir ve sayfanın bir bölümünü kontrol edin. Angular belgelerinden basit bir bileşen aşağıda gösterilmiştir:
+Açısal uygulamalar bileşenlerden oluşturulur. Bileşenler HTML şablonlarını özel nesnelerle birleştirir ve sayfanın bir bölümünü denetler. Açısal'ın dokümanlarından basit bir bileşen burada gösterilmiştir:
 
 ```js
 import { Component } from '@angular/core';
@@ -97,21 +97,21 @@ import { Component } from '@angular/core';
 export class AppComponent { name = 'Angular'; }
 ```
 
-Bileşenler, bileşeni hakkında meta veriler alan @Component dekoratör işlevi kullanılarak tanımlanır. Selector özelliği, bu bileşenin görüntüleneceği sayfadaki öğenin KIMLIĞINI tanımlar. Şablon özelliği, son satırda tanımlanan bileşen adı özelliğine karşılık gelen bir yer tutucu içeren basit bir HTML şablonudur.
+Bileşenler, bileşen @Component hakkında meta veri alan dekoratör işlevi kullanılarak tanımlanır. Seçici özellik, bu bileşenin görüntüleneceği sayfadaki öğenin kimliğini tanımlar. Şablon özelliği, bileşenin son satırda tanımlanan ad özelliğine karşılık gelen bir yer tutucu içeren basit bir HTML şablonudur.
 
-DOM öğeleri yerine bileşenler ve şablonlar ile çalışarak, angular uygulamaları daha yüksek bir soyutlama düzeyinde ve yalnızca JavaScript ("Vanilla JS" olarak da bilinir) kullanılarak yazılmış uygulamalardan veya jQuery ile daha az genel kodla çalışabilir. Angular Ayrıca, istemci tarafı betik dosyalarınızı düzenleme konusunda bir sıralama uygular. Kurala göre, angular uygulamaları, bir uygulama klasöründe bulunan modül ve bileşen komut dosyaları ile ortak bir klasör yapısı kullanır. Uygulama oluşturma, dağıtma ve test etme ile ilgili angular betikleri genellikle daha yüksek düzey bir klasörde bulunur.
+Dom öğeleri yerine bileşenler ve şablonlarla çalışarak, Açısal uygulamalar daha yüksek bir soyutlama düzeyinde ve yalnızca JavaScript ("vanilya JS" olarak da adlandırılır) veya jQuery ile yazılmış uygulamalardan daha az genel kodla çalışabilir. Açısal ayrıca istemci tarafındaki komut dosyası dosyalarınızı nasıl düzenlediğinize ilişkin bazı komut dosyaları da uygular. Kuralına göre, Açısal uygulamalar, bir uygulama klasöründe bulunan modül ve bileşen komut dosyası dosyalarıyla ortak bir klasör yapısı kullanır. Uygulamayı oluşturma, dağıtma ve sınama ile ilgili açısal komut dosyaları genellikle daha üst düzey bir klasörde bulunur.
 
-CLı kullanarak angular uygulamaları geliştirebilirsiniz. Angular geliştirmeyi yerel olarak kullanmaya başlama (git ve NPM 'nin yüklü olduğu varsayılarak), GitHub 'dan bir depoyu kopyalamayı ve `npm install` ve `npm start`çalıştırmayı içerir. Bunun ötesinde, angular, proje oluşturabileceğiniz, dosya ekleyebilen ve test, paketleme ve dağıtım görevlerine yardımcı olan kendi CLı 'yı dağıtırın. Bu CLı daha yakından, büyük CLı desteğini de kapsayan ASP.NET Core özellikle uyumlu hale getirir.
+Bir CLI kullanarak Açısal uygulamalar geliştirebilirsiniz. Yerel Açısal geliştirme ile başlarken (zaten git ve npm yüklü varsayarak) sadece GitHub bir `npm install` `npm start`repo klonlama ve çalışan ve oluşur . Bunun ötesinde, Açısal gemiler projeler oluşturabilir, dosya ekleyebilir ve sınama, birleştirme ve dağıtım görevlerine yardımcı olabilir. Bu CLI dostu, Açısal'ı özellikle harika CLI desteğine sahip ASP.NET Core ile uyumlu hale getirir.
 
-Microsoft, angular SPA uygulaması içeren bir başvuru uygulaması ( [Eshoponcontainers](https://aka.ms/MicroservicesArchitecture)) geliştirmiştir. Bu uygulama, çevrimiçi mağaza alışveriş sepetini yönetmek, kataloğundan öğeleri yüklemek ve göstermek ve sipariş oluşturmayı işlemek için angular modüllerini içerir. Örnek uygulamayı [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA)' dan görüntüleyebilir ve indirebilirsiniz.
+Microsoft bir referans uygulaması geliştirdi, [eShopOnContainers](https://aka.ms/MicroservicesArchitecture), Açısal SPA uygulaması içeren. Bu uygulama, çevrimiçi mağazanın alışveriş sepetini yönetmek, kataloğundan öğeleri yüklemek ve görüntülemek ve sipariş oluşturma yı işlemek için Açısal modüller içerir. Örnek uygulamayı [GitHub'dan](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA)görüntüleyebilir ve indirebilirsiniz.
 
 ### <a name="react"></a>React
 
-Tam model-görünüm-denetleyici modeli uygulamasını sunan angular 'ın aksine, yanıt verme yalnızca görünümlerle ilgilidir. Yalnızca bir kitaplık değildir, bu nedenle bir SPA oluşturmak için ek kitaplıkların olması gerekir. Zengin tek sayfa uygulamaları oluşturmak için tepki vererek kullanılmak üzere tasarlanan çeşitli kitaplıklar vardır.
+Tam bir Model-View-Controller desen uygulaması sunan Açısal'ın aksine, React yalnızca görünümlerle ilgilidir. Bu bir çerçeve değil, sadece bir kütüphane, bu nedenle ek kütüphaneler kaldıraç gerekir bir SPA oluşturmak için gerekir. Zengin tek sayfauygulamaları üretmek için React ile kullanılmak üzere tasarlanmış kütüphaneler vardır.
 
-Yanıt verme 'nın en önemli özelliklerinden biri, sanal DOM 'ın kullanımı. Sanal DOM, performans dahil olmak üzere çeşitli avantajlar sağlar (sanal DOM gerçek DOM 'ın hangi bölümlerinin güncelleştirileceğini en iyi hale getirebilir) ve tekararlılığı (yanıt verme ve sanal DOM ile etkileşimlerini test etmek için bir tarayıcıya gerek yoktur).
+React'in en önemli özelliklerinden biri sanal BIR DOM kullanmasıdır. Sanal DOM performans (sanal DOM gerçek DOM hangi bölümleri güncellenmesi gerekir optimize edebilirsiniz) ve test edilebilirlik (gerek React ve sanal DOM ile etkileşimleri test etmek için bir tarayıcı olması gerekmez) dahil olmak üzere çeşitli avantajlar ile React sağlar.
 
-Ayrıca, HTML ile nasıl çalıştığı konusunda da olağan dışı tepki verir. Kod ve biçimlendirme arasında (Belki de HTML özniteliklerde görünen JavaScript başvuruları ile) kesin bir ayrım yapmak yerine, yanıt olarak HTML 'yi doğrudan kendi JavaScript kodu içinde JSX olarak ekler. JSX, saf JavaScript 'e derleyemeyen HTML benzeri bir sözdizimidir. Örneğin:
+Tepki html ile nasıl çalıştığını da alışılmadık. Kod ve biçimlendirme arasında katı bir ayrım yapmak yerine (HTML özniteliklerinde görünen JavaScript'e yapılan atıflar ile), React HTML'yi doğrudan JavaScript koduna JSX olarak ekler. JSX, saf JavaScript'e kadar derlenebilen HTML benzeri sözdizimidir. Örnek:
 
 ```js
 <ul>
@@ -121,22 +121,22 @@ Ayrıca, HTML ile nasıl çalıştığı konusunda da olağan dışı tepki veri
 </ul>
 ```
 
-JavaScript 'ı zaten biliyorsanız, öğrenme tepki verme kolay olmalıdır. Neredeyse çok fazla öğrenme eğrisi veya angular veya diğer popüler kitaplıklarla ilgili özel söz dizimi yoktur.
+Zaten JavaScript biliyorsanız, React öğrenme kolay olmalıdır. Açısal veya diğer popüler kütüphaneler ile ilgili neredeyse çok fazla öğrenme eğrisi veya özel sözdizimi yoktur.
 
-Yanıt verme tam bir çerçeve olmadığından, genellikle diğer kitaplıkların yönlendirme, Web API çağrıları ve bağımlılık yönetimi gibi işlemleri işlemesini isteyeceksiniz. Her biri için en iyi kitaplığı seçebilirsiniz, ancak bu kararların hepsini yapmanız ve seçtiğiniz tüm kitaplıkların tümünü doğrulamanız gerektiğinde tüm bu kararları vermeniz gerekir. İyi bir başlangıç noktası isterseniz, bir dizi uyumlu kitaplığı tepki vererek, yanıt veren bir yük görüntüsü gibi bir başlatıcı kiti kullanabilirsiniz.
+React tam bir çerçeve olmadığından, genellikle yönlendirme, web API çağrıları ve bağımlılık yönetimi gibi şeyleri diğer kitaplıkların işlemesini istersiniz. Güzel şey, bunların her biri için en iyi kütüphane seçebilirsiniz, ama dezavantajı tüm bu kararları almak ve işiniz bittiğinde seçtiğiniz tüm kütüphaneler birlikte iyi çalıştığını doğrulamak gerekir. İyi bir başlangıç noktası istiyorsanız, React Slingshot gibi bir başlangıç kiti kullanabilirsiniz, bu da react ile birlikte uyumlu kitaplıklar kümesini önceden paketler.
 
 ### <a name="vue"></a>Vue
 
-Başlangıç kılavuzuyla, "Vue, Kullanıcı arabirimleri oluşturmaya yönelik aşamalı bir çerçevedir. Diğer tek parçalı çerçevelerden farklı olarak, Vue, baştan sona artımlı olarak kullanılacak şekilde tasarlanmıştır. Çekirdek kitaplık yalnızca görünüm katmanına odaklanılmıştır ve diğer kitaplıklarla veya mevcut projelerle tümleştirilebilen ve tümleştirilebilen kolay bir işlemdir. Öte yandan, Vue modern araç ve destekleyici kitaplıklarla birlikte kullanıldığında Gelişmiş tek sayfalı uygulamaları güçlendirme özelliğine sahiptir. "
+Onun başlangıç kılavuzu itibaren, "Vue kullanıcı arayüzleri oluşturmak için ilerici bir çerçevedir. Diğer yekpare çerçevelerin aksine, Vue sıfırdan kademeli olarak benimsenebilir olarak tasarlanmıştır. Çekirdek kitaplık yalnızca görünüm katmanına odaklanmıştır ve diğer kitaplıkları veya varolan projelerle kolayca karşılanır ve bu katmanla tümleştirebilirsiniz. Öte yandan Vue, modern takım ve destekleyici kütüphanelerle birlikte kullanıldığında gelişmiş Tek Sayfauygulamaları'na mükemmel bir şekilde güç verebilmiştir."
 
-Vue ile çalışmaya başlamak, komut dosyasının bir HTML dosyası içine dahil edilmesi için gereklidir:
+Vue ile başlarken sadece bir HTML dosyası içinde komut dosyası dahil gerektirir:
 
 ```html
 <!-- development version, includes helpful console warnings -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 ```
 
-Framework eklendiğinde, Vue 'in doğrudan şablon oluşturma söz dizimini kullanarak verileri geçici olarak DOM 'a işleyebileceksiniz:
+Eklenen çerçeveyle, Vue'nun basit cezbedici sözdizimini kullanarak DOM'a bildirimsel olarak veri işleebilirsiniz:
 
 ```html
 <div id="app">
@@ -144,7 +144,7 @@ Framework eklendiğinde, Vue 'in doğrudan şablon oluşturma söz dizimini kull
 </div>
 ```
 
-ve sonra aşağıdaki betiği ekleyin:
+ve sonra aşağıdaki komut dosyası ekleyerek:
 
 ```js
 var app = new Vue({
@@ -155,37 +155,37 @@ var app = new Vue({
 })
 ```
 
-Bu, "Hello Vue!" öğesini işlemek için yeterlidir sayfasında. Ancak, Vue 'in iletiyi div öğesine bir kez oluşturmadığını unutmayın. Veri bağlamayı ve dinamik güncelleştirmeleri destekler, çünkü `message` değeri değişirse `<div>` değeri onu yansıtacak şekilde hemen güncelleştirilir.
+Bu "Merhaba Vue!" işlemek için yeterlidir. sayfada. Ancak, Vue'nun mesajı sadece bir kez div'e iletmediğine dikkat edin. Veri bağlama ve dinamik güncelleştirmeleri destekler, `message` örneğin değişikliklerin değeri, değeri yansıtacak şekilde hemen `<div>` güncelleştirilir.
 
-Tabii ki bu, yalnızca Vue 'nin sahip olduğu yüzey yüzeyini çiziyor. Bu, son birkaç yıl içinde çok sayıda popülerlik kazanmıştır ve büyük bir topluluğa sahiptir. Vue ile birlikte çalışan [destekleyici bileşenlerin ve kitaplıkların büyük ve artan bir listesi](https://github.com/vuejs/awesome-vue#redux) vardır. Web uygulamanıza istemci tarafı davranışı eklemek veya tam bir SPA oluşturmayı düşünüyorsanız, Vue 'nin araştırılması gerekir.
+Tabii ki, bu sadece Vue'nun yapabileceklerinin yüzeyini çizer. Bu son birkaç yıl içinde popülerlik büyük bir kazandı ve büyük bir topluluk var. Vue ile birlikte çalışarak bunu genişletmek için çalışan [büyük ve büyüyen bir destek bileşenleri ve kütüphaneler listesi](https://github.com/vuejs/awesome-vue#redux) vardır. Web uygulamanıza istemci tarafı davranışı eklemek veya tam bir SPA oluşturmayı düşünüyorsanız, Vue araştırmaya değer.
 
-### <a name="choosing-a-spa-framework"></a>SPA çerçevesi seçme
+### <a name="choosing-a-spa-framework"></a>SPA Çerçevesi Seçimi
 
-Hangi JavaScript çerçevesinin, SPA 'nizi destekleyecek en iyi şekilde çalıştığını düşünürken aşağıdaki noktalara dikkat edin:
+Spa'nızı desteklemek için hangi JavaScript çerçevesinin en iyi şekilde çalışacağını düşünürken, aşağıdaki hususları göz önünde bulundurun:
 
-- Takımınız Framework 'ü ve bağımlılıklarını (bazı durumlarda TypeScript dahil) biliyor musunuz?
+- Ekibiniz çerçeveyi ve bağımlılıklarını biliyor mu (bazı durumlarda TypeScript dahil)?
 
-- Ne kadar kolay bir çatı çerçevesidir ve bunu yapmanın varsayılan yolunu kabul etmiş olursunuz?
+- Çerçeve ne kadar dik kafalı ve onun varsayılan şeyler yapma şekline katılıyor musunuz?
 
-- Uygulamanızın gerektirdiği tüm özellikleri (veya bir yardımcı Kitaplık) içeriyor mu?
+- Uygulamanızın gerektirdiği tüm özellikleri içeriyor mu (veya bir yardımcı kitaplık) içeriyor mu?
 
 - İyi belgelenmiş mi?
 
-- Topluluk nasıl etkin? Yeni projeler ile derlenmekte mi?
+- Topluluğu ne kadar aktif? Yeni projeler bununla mı inşa ediliyor?
 
-- Etkin olan temel ekibi nedir? Sorun çözümlenmekte ve yeni sürümler düzenli olarak sevk ediliyor mu?
+- Çekirdek ekibi ne kadar aktif? Sorunlar çözülür ve yeni sürümler düzenli olarak sevk ediliyor mu?
 
-JavaScript çerçeveleri Breakneck hızında gelişmeye devam eder. Daha sonra bağımlı olmaya başlayacaksınız bir çerçeve seçme riskini azaltmaya yardımcı olması için yukarıda listelenen konuları kullanın. Özellikle risk-karşıtı, ticari destek sunan ve/veya büyük bir kuruluş tarafından geliştirilen bir çerçeveyi düşünün.
+JavaScript çerçeveleri aşırı hız ile gelişmeye devam ediyor. Daha sonra bağımlı olmaktan pişman olacağınız bir çerçeve seçme riskini azaltmaya yardımcı olmak için yukarıda listelenen hususları kullanın. Özellikle riskten kaçınıyorsanız, ticari destek sunan ve/veya büyük bir kuruluş tarafından geliştirilmekte olan bir çerçeve düşünün.
 
-> ### <a name="references--client-web-technologies"></a>Başvurular – Istemci Web teknolojileri
+> ### <a name="references--client-web-technologies"></a>Referanslar – Müşteri Web Teknolojileri
 >
 > - **HTML ve CSS**  
 > <https://www.w3.org/standards/webdesign/htmlcss>
-> - **Sass ile daha az**  
+> - **Sass vs DAHA AZ**  
 > <https://www.keycdn.com/blog/sass-vs-less/>
-> - **DAHA az, Sass ve yazı tipi harika olan uygulamaları ASP.NET Core Stillendirme**  
+> - **Daha AZ, Sass ve Font Awesome ile ASP.NET Core Apps Şekillendirme**  
 > <https://docs.microsoft.com/aspnet/core/client-side/less-sass-fa>
-> - **ASP.NET Core 'de istemci tarafı geliştirme**  
+> - **ASP.NET Çekirdekte Müşteri-Yan Geliştirme**  
 > <https://docs.microsoft.com/aspnet/core/client-side/>
 > - **jQuery**  
 > <https://jquery.com/>
@@ -197,11 +197,11 @@ JavaScript çerçeveleri Breakneck hızında gelişmeye devam eder. Daha sonra b
 > <https://reactjs.org/>
 > - **Vue**  
 > <https://vuejs.org/>
-> - **Angular ile yanıt veren vs Vue: 2020
-> Içinde seçebileceğiniz çerçeve** <https://www.codeinwp.com/blog/angular-vs-vue-vs-react/>
-> - **2020 sürümünde ön uç geliştirme için En Iyi JavaScript çerçeveleri**  
+> - **Açısal vs Tepki vs Vue: 2020 yılında hangi Çerçeve seçilecek**
+> <https://www.codeinwp.com/blog/angular-vs-vue-vs-react/>
+> - **2020'de Ön Uç Geliştirme için En İyi JavaScript Çerçeveleri**  
 > <https://www.freecodecamp.org/news/complete-guide-for-front-end-developers-javascript-frameworks-2019/>
 
 >[!div class="step-by-step"]
 >[Önceki](common-web-application-architectures.md)
->[İleri](develop-asp-net-core-mvc-apps.md)
+>[Sonraki](develop-asp-net-core-mvc-apps.md)

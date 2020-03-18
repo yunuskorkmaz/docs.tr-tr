@@ -1,79 +1,79 @@
 ---
-title: Ortak öznitelikler (C#)
+title: Ortak Öznitelikler (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
 ms.openlocfilehash: 7988dad410c6e51869ec9d7e40d94e874443a5f8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595466"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399758"
 ---
-# <a name="common-attributes-c"></a>Ortak öznitelikler (C#)
-Bu konuda, C# programlarda en yaygın olarak kullanılan öznitelikler açıklanmaktadır.  
+# <a name="common-attributes-c"></a>Ortak Öznitelikler (C#)
+Bu konu, C# programlarında en sık kullanılan öznitelikleri açıklar.  
   
-- [Genel öznitelikler](#Global)  
+- [Genel Özellikler](#Global)  
   
-- [Kullanımdan kaldırılmış öznitelik](#Obsolete)  
+- [Eski Öznitelik](#Obsolete)  
   
-- [Koşullu öznitelik](#Conditional)  
+- [Koşullu Öznitelik](#Conditional)  
   
-- [Arayan bilgileri öznitelikleri](#CallerInfo)  
+- [Arayan Bilgi Öznitelikleri](#CallerInfo)  
   
-## <a name="Global"></a>Genel öznitelikler  
- Çoğu öznitelik sınıflar veya yöntemler gibi belirli dil öğelerine uygulanır; Ancak, bazı öznitelikler geneldir, tüm derleme veya modül için geçerlidir. Örneğin, <xref:System.Reflection.AssemblyVersionAttribute> özniteliği aşağıdaki gibi bir derlemeye sürüm bilgisi eklemek için kullanılabilir:  
+## <a name="Global"></a>Genel Özellikler  
+ Özniteliklerin çoğu sınıflar veya yöntemler gibi belirli dil öğelerine uygulanır; ancak, bazı öznitelikler geneldir— tüm derleme veya modül için geçerlidir. Örneğin, <xref:System.Reflection.AssemblyVersionAttribute> öznitelik sürüm bilgilerini aşağıdaki gibi bir derlemeye yerleştirmek için kullanılabilir:  
   
 ```csharp  
 [assembly: AssemblyVersion("1.0.0.0")]  
 ```  
   
- Genel öznitelikler, herhangi bir üst düzey `using` yönergelerden sonra ve herhangi bir tür, modül veya ad alanı bildirimlerinden sonra kaynak kodunda görünür. Genel öznitelikler birden çok kaynak dosyasında görünebilir, ancak dosyaların tek bir derleme geçişinde derlenmesi gerekir. C# Projelerde, genel öznitelikler AssemblyInfo.cs dosyasına konur.  
+ Genel öznitelikler kaynak kodunda herhangi `using` bir üst düzey yönergeden sonra ve herhangi bir tür, modül veya ad alanı bildirimlerinden önce görünür. Genel öznitelikler birden çok kaynak dosyada görünebilir, ancak dosyaların tek bir derleme geçişinde derlenmiş olması gerekir. C# projelerinde, genel öznitelikler AssemblyInfo.cs dosyasına konur.  
   
- Derleme öznitelikleri, bir derleme hakkında bilgi sağlayan değerlerdir. Bunlar aşağıdaki kategorilere ayrılır:  
+ Derleme öznitelikleri, derleme hakkında bilgi sağlayan değerlerdir. Aşağıdaki kategorilere ayrılırlar:  
   
-- Bütünleştirilmiş kod kimliği öznitelikleri  
+- Montaj kimlik öznitelikleri  
   
-- Bilgilendirici öznitelikler  
+- Bilgilendirme özellikleri  
   
-- Bütünleştirilmiş kod bildirim öznitelikleri  
+- Derleme bildirim öznitelikleri  
   
-### <a name="assembly-identity-attributes"></a>Bütünleştirilmiş kod kimliği öznitelikleri  
- Üç öznitelik (varsa, güçlü bir ad varsa) bir derlemenin kimliğini belirleme: ad, sürüm ve kültür. Bu öznitelikler, derlemenin tam adını oluşturur ve kodda başvuru yaptığınızda gereklidir. Öznitelikleri kullanarak bir derlemenin sürümünü ve kültürünü ayarlayabilirsiniz. Bununla birlikte, ad değeri derleyici tarafından, derleme [bilgileri Iletişim kutusunda](/visualstudio/ide/reference/assembly-information-dialog-box)VISUAL Studio IDE veya derleme oluşturulduğunda derleme Bağlayıcısı (al. exe) tarafından ayarlanır. <xref:System.Reflection.AssemblyFlagsAttribute> Özniteliği, derlemenin birden çok kopyasının birlikte kullanılıp kullanılamayacağını belirtir.  
+### <a name="assembly-identity-attributes"></a>Montaj Kimlik Öznitelikleri  
+ Üç öznitelik (varsa güçlü bir adla) bir derlemenin kimliğini belirler: ad, sürüm ve kültür. Bu öznitelikler derlemenin tam adını oluşturur ve kodda başvuru yaptığınızda gereklidir. Öznitelikleri kullanarak derlemenin sürümünü ve kültürünü ayarlayabilirsiniz. Ancak, ad değeri derleyici tarafından ayarlanır, Assembly Information [Dialog Box](/visualstudio/ide/reference/assembly-information-dialog-box)Visual Studio IDE , veya Derleme Bağlayıcı (Al.exe) derleme bildirimi içeren dosyaya dayalı oluşturulur. Öznitelik, <xref:System.Reflection.AssemblyFlagsAttribute> derlemenin birden çok kopyasının bir arada bulunup bulunamayacağını belirtir.  
   
- Aşağıdaki tabloda kimlik öznitelikleri gösterilmektedir.  
+ Aşağıdaki tablo kimlik özniteliklerini gösterir.  
   
 |Öznitelik|Amaç|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyName>|Bir derlemenin kimliğini tam olarak açıklar.|  
-|<xref:System.Reflection.AssemblyVersionAttribute>|Bir derlemenin sürümünü belirtir.|  
-|<xref:System.Reflection.AssemblyCultureAttribute>|Derlemenin desteklediği kültürü belirtir.|  
-|<xref:System.Reflection.AssemblyFlagsAttribute>|Bir derlemenin aynı bilgisayarda, aynı işlemde veya aynı uygulama etki alanında yan yana yürütmeyi destekleyip desteklemediğini belirtir.|  
+|<xref:System.Reflection.AssemblyVersionAttribute>|Derlemenin sürümünü belirtir.|  
+|<xref:System.Reflection.AssemblyCultureAttribute>|Derlemenin hangi kültürü desteklediğini belirtir.|  
+|<xref:System.Reflection.AssemblyFlagsAttribute>|Derlemenin aynı bilgisayarda, aynı işlemde veya aynı uygulama etki alanında yan yana yürütmeyi destekleyip desteklemediğini belirtir.|  
   
-### <a name="informational-attributes"></a>Bilgilendirici öznitelikler  
- Bir derlemeye ek şirket veya ürün bilgileri sağlamak için bilgilendirici öznitelikleri kullanabilirsiniz. Aşağıdaki tabloda, <xref:System.Reflection?displayProperty=nameWithType> ad alanında tanımlanan bilgilendirici öznitelikler gösterilmektedir.  
-  
-|Öznitelik|Amaç|  
-|---------------|-------------|  
-|<xref:System.Reflection.AssemblyProductAttribute>|Bir derleme bildirimi için bir ürün adı belirten özel bir özniteliği tanımlar.|  
-|<xref:System.Reflection.AssemblyTrademarkAttribute>|Bir derleme bildirimi için ticari marka belirten özel bir özniteliği tanımlar.|  
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Bir derleme bildirimi için bilgilendirici bir sürüm belirten özel bir özniteliği tanımlar.|  
-|<xref:System.Reflection.AssemblyCompanyAttribute>|Bir derleme bildirimi için bir şirket adı belirten özel bir özniteliği tanımlar.|  
-|<xref:System.Reflection.AssemblyCopyrightAttribute>|Bir derleme bildirimi için bir telif hakkı belirten özel bir özniteliği tanımlar.|  
-|<xref:System.Reflection.AssemblyFileVersionAttribute>|Derleyiciye Win32 dosya sürümü kaynağı için belirli bir sürüm numarası kullanmasını söyler.|  
-|<xref:System.CLSCompliantAttribute>|Derlemenin ortak dil belirtimi (CLS) ile uyumlu olup olmadığını gösterir.|  
-  
-### <a name="assembly-manifest-attributes"></a>Bütünleştirilmiş kod bildirim öznitelikleri  
- Derleme bildiriminde bilgi sağlamak için bütünleştirilmiş kod bildirim özniteliklerini kullanabilirsiniz. Buna Başlık, açıklama, varsayılan diğer ad ve yapılandırma dahildir. Aşağıdaki tabloda, <xref:System.Reflection?displayProperty=nameWithType> ad alanında tanımlanan derleme bildirimi öznitelikleri gösterilmektedir.  
+### <a name="informational-attributes"></a>Bilgi Özellikleri  
+ Bir derleme için ek şirket veya ürün bilgileri sağlamak için bilgi özniteliklerini kullanabilirsiniz. Aşağıdaki tabloda <xref:System.Reflection?displayProperty=nameWithType> ad alanında tanımlanan bilgi öznitelikleri gösterilmektedir.  
   
 |Öznitelik|Amaç|  
 |---------------|-------------|  
-|<xref:System.Reflection.AssemblyTitleAttribute>|Bir derleme bildirimi için derleme başlığını belirten özel bir özniteliği tanımlar.|  
-|<xref:System.Reflection.AssemblyDescriptionAttribute>|Bir derleme bildirimi için derleme açıklamasını belirten özel bir özniteliği tanımlar.|  
-|<xref:System.Reflection.AssemblyConfigurationAttribute>|Derleme bildirimi için bir derleme yapılandırması (perakende veya hata ayıklama) belirten özel bir öznitelik tanımlar.|  
-|<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Bir derleme bildirimi için kolay bir varsayılan diğer ad tanımlar|  
+|<xref:System.Reflection.AssemblyProductAttribute>|Derleme bildirimi için bir ürün adı belirten özel bir öznitelik tanımlar.|  
+|<xref:System.Reflection.AssemblyTrademarkAttribute>|Derleme bildirimi için bir ticari marka belirten özel bir öznitelik tanımlar.|  
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Derleme bildirimi için bir bilgi sürümü belirten özel bir öznitelik tanımlar.|  
+|<xref:System.Reflection.AssemblyCompanyAttribute>|Bir derleme bildirimi için şirket adını belirten özel bir öznitelik tanımlar.|  
+|<xref:System.Reflection.AssemblyCopyrightAttribute>|Derleme bildiriminin telif hakkını belirten özel bir öznitelik tanımlar.|  
+|<xref:System.Reflection.AssemblyFileVersionAttribute>|Derleyiciye Win32 dosya sürümü kaynağı için belirli bir sürüm numarası kullanmasını bildirir.|  
+|<xref:System.CLSCompliantAttribute>|Derlemenin Ortak Dil Belirtimi (CLS) ile uyumlu olup olmadığını gösterir.|  
   
-## <a name="Obsolete"></a>Kullanımdan kaldırılmış öznitelik  
- Özniteliği `Obsolete` , bir program varlığını artık kullanım için önerilmeyen bir şekilde işaretler. Kullanımdan kalktı olarak işaretlenen bir varlığın her kullanımı, özniteliğin nasıl yapılandırıldığına bağlı olarak bir uyarı veya hata oluşturur. Örneğin:  
+### <a name="assembly-manifest-attributes"></a>Derleme Bildirimi Öznitelikleri  
+ Derleme bildiriminde bilgi sağlamak için derleme bildirimi özniteliklerini kullanabilirsiniz. Bu başlık, açıklama, varsayılan takma ad ve yapılandırma içerir. Aşağıdaki tablo, ad alanında tanımlanan <xref:System.Reflection?displayProperty=nameWithType> derleme bildirimi özniteliklerini gösterir.  
+  
+|Öznitelik|Amaç|  
+|---------------|-------------|  
+|<xref:System.Reflection.AssemblyTitleAttribute>|Derleme bildirimi için derleme başlığı belirten özel bir öznitelik tanımlar.|  
+|<xref:System.Reflection.AssemblyDescriptionAttribute>|Derleme bildirimi için derleme açıklaması belirten özel bir öznitelik tanımlar.|  
+|<xref:System.Reflection.AssemblyConfigurationAttribute>|Derleme bildirimi için derleme yapılandırması (perakende veya hata ayıklama gibi) belirten özel bir öznitelik tanımlar.|  
+|<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Derleme bildirimi için uygun bir varsayılan takma ad tanımlar|  
+  
+## <a name="Obsolete"></a>Eski Öznitelik  
+ Öznitelik artık `Obsolete` kullanım için önerilen biri olarak bir program varlık işaretler. Eski işaretlenmiş bir varlığın her kullanımı, özniteliğin nasıl yapılandırıldığına bağlı olarak daha sonra bir uyarı veya hata oluşturur. Örnek:  
   
 ```csharp  
 [System.Obsolete("use class B")]  
@@ -89,9 +89,9 @@ class B
 }  
 ```  
   
- Bu örnekte, `Obsolete` özniteliği sınıfa `A` ve yöntemine `B.OldMethod`uygulanır. Öğesine `B.OldMethod` uygulanan öznitelik oluşturucusunun ikinci bağımsız değişkeni olarak `true`ayarlandığından, bu yöntem bir derleyici hatasına neden olur, ancak sınıf `A` kullanımı yalnızca bir uyarı oluşturur. Ancak `B.NewMethod`çağırma, hiçbir uyarı veya hata üretir.  
+ Bu örnekte `Obsolete` öznitelik sınıfa `A` ve `B.OldMethod`yönteme uygulanır. Öznitelik oluşturucu uygulanan ikinci bağımsız `B.OldMethod` değişken için `true`ayarlanmış olduğundan, bu yöntem derleyici hatasına neden olurken, sınıf `A` kullanarak sadece bir uyarı üretecektir. Ancak `B.NewMethod`arama, hiçbir uyarı veya hata üretir.  
   
- Öznitelik oluşturucusuna ilk bağımsız değişken olarak girilen dize, uyarının veya hatanın bir parçası olarak görüntülenir. Örneğin, önceki tanımlarla birlikte kullandığınızda, aşağıdaki kod iki uyarı ve bir hata oluşturur:  
+ Oluşturucuatörü atfetmek için ilk bağımsız değişken olarak sağlanan dize uyarı veya hatanın bir parçası olarak görüntülenir. Örneğin, önceki tanımlarla kullandığınızda, aşağıdaki kod iki uyarı ve bir hata oluşturur:  
   
 ```csharp  
 // Generates 2 warnings:  
@@ -105,16 +105,16 @@ b.NewMethod();
 // b.OldMethod();  
 ```  
   
- Sınıf `A` için iki uyarı oluşturulur: biri sınıf başvurusunun bildirimi ve diğeri sınıf oluşturucusu içindir.  
+ Sınıf `A` için iki uyarı oluşturulur: biri sınıf başvuru bildirimi için, diğeri sınıf oluşturucusu için.  
   
- `Obsolete` Öznitelik bağımsız değişkenler olmadan kullanılabilir, ancak öğenin neden kullanımdan kalkdığına ve bunun yerine ne tür bir açıklama dahil edilmesi önerilir.  
+ Öznitelik `Obsolete` bağımsız değişkenler olmadan kullanılabilir, ancak öğenin neden eski olduğu ve bunun yerine ne kullanılacağı bir açıklama da dahil olmak üzere önerilir.  
   
- `Obsolete` Özniteliği tek kullanım özniteliğidir ve özniteliklere izin veren herhangi bir varlığa uygulanabilir. `Obsolete`, için <xref:System.ObsoleteAttribute>bir diğer addır.  
+ Öznitelik `Obsolete` tek kullanımlık bir özniteliktir ve özniteliklere izin veren herhangi bir varlığa uygulanabilir. `Obsolete`<xref:System.ObsoleteAttribute>için bir takma addır.  
   
-## <a name="Conditional"></a>Koşullu öznitelik  
- `Conditional` Özniteliği bir işlem ön işleme tanımlayıcısına bağımlı bir yöntemin yürütülmesini sağlar. `Conditional` Özniteliği için<xref:System.Diagnostics.ConditionalAttribute>bir diğer addır ve bir yönteme veya öznitelik sınıfına uygulanabilir.  
+## <a name="Conditional"></a>Koşullu Öznitelik  
+ Öznitelik, `Conditional` bir yöntemin yürütülmesini bir ön işleme tanımlayıcısı bağımlı hale getirir. Öznitelik, `Conditional` <xref:System.Diagnostics.ConditionalAttribute>bir diğer adıdır ve bir yönteme veya öznitelik sınıfına uygulanabilir.  
   
- Bu örnekte, `Conditional` programa özgü tanılama bilgilerinin görüntülenmesini etkinleştirmek veya devre dışı bırakmak için bir yönteme uygulanır:  
+ Bu örnekte, `Conditional` programa özgü tanılama bilgilerinin görüntülenmesini etkinleştirmek veya devre dışı etmek için bir yöntem uygulanır:  
   
 ```csharp  
 #define TRACE_ON  
@@ -140,9 +140,9 @@ public class ProgramClass
 }  
 ```  
   
- `TRACE_ON` Tanımlayıcı tanımlanmamışsa, hiçbir izleme çıkışı gösterilmez.  
+ `TRACE_ON` Tanımlayıcı tanımlanmamışsa, hiçbir izleme çıktısı görüntülenmez.  
   
- Öznitelik, genellikle hata ayıklama derlemeleri için `DEBUG` izleme ve günlüğe kaydetme özelliklerini etkinleştirmek için tanımlayıcı ile birlikte kullanılır, ancak bunun gibi sürüm yapılarında desteklenmez: `Conditional`  
+ Öznitelik `Conditional` genellikle hata ayıklama yapılar için izleme ve günlük özelliklerini etkinleştirmek için tanımlayıcı ile `DEBUG` kullanılır, ancak sürüm yapılarda değil, aşağıdaki gibi:  
   
 ```csharp  
 [Conditional("DEBUG")]  
@@ -151,7 +151,7 @@ static void DebugMethod()
 }  
 ```  
   
- Koşullu olarak işaretlenen bir yöntem çağrıldığında, belirtilen ön işleme simgesinin varlığı veya yokluğu, çağrının eklenip eklenmeyeceğini veya atlanmadığını belirler. Sembol tanımlanmışsa, çağrı dahil edilir; Aksi takdirde, çağrı atlanır. Kullanılarak `Conditional` , blokların içindeki yöntemlerin içine yerleştirilmesi `#if…#endif` için aşağıdaki gibi bir temizleyici, daha zarif ve daha az hataya açık bir alternatiftir:  
+ Koşullu olarak işaretlenmiş bir yöntem çağrıldığında, belirtilen ön işleme sembolünün varlığı veya yokluğu çağrının dahil edilip edilmeyeceğini veya atlanıp atlanmayacağını belirler. Sembol tanımlanırsa, çağrı dahil edilir; aksi takdirde, arama atlanır. Kullanma, `Conditional` daha temiz, daha zarif ve daha az hata `#if…#endif` yatkın bir alternatif blokların içinde yöntemleri çevreleyen, bu gibi:  
   
 ```csharp  
 #if DEBUG  
@@ -161,10 +161,10 @@ static void DebugMethod()
 #endif  
 ```  
   
- Koşullu Yöntem bir sınıf veya yapı bildiriminde bir yöntem olmalıdır ve dönüş değeri içermemelidir.  
+ Koşullu yöntem, bir sınıf veya yapı bildiriminde bir yöntem olmalı ve iade değerine sahip olmamalıdır.  
   
-### <a name="using-multiple-identifiers"></a>Birden çok tanımlayıcı kullanma  
- Bir yöntemin birden çok `Conditional` özniteliği varsa, koşullu simgelerden en az biri tanımlanmışsa yöntemine bir çağrı dahil edilir (başka bir deyişle, semboller or işleci kullanılarak mantıksal olarak birbirlerine bağlanır). Bu örnekte, ya da `A` `B` birinin varlığı bir yöntem çağrısına neden olur:  
+### <a name="using-multiple-identifiers"></a>Birden Çok Tanımlayıcı Kullanma  
+ Bir yöntemin `Conditional` birden çok özniteliği varsa, koşullu sembollerden en az biri tanımlanırsa (diğer bir deyişle, semboller OR işleci kullanılarak mantıksal olarak birbirine bağlanır). Bu örnekte, ya `A` da `B` bir yöntem arama neden olur:  
   
 ```csharp  
 [Conditional("A"), Conditional("B")]  
@@ -174,7 +174,7 @@ static void DoIfAorB()
 }  
 ```  
   
- VE işlecini kullanarak sembolleri mantıksal olarak bağlama etkisini elde etmek için, seri koşullu yöntemleri tanımlayabilirsiniz. Örneğin, aşağıdaki ikinci yöntem yalnızca `A` ve `B` tanımlanırsa yürütülür:  
+ AND işleci kullanarak sembolleri mantıksal olarak bağlama efektini elde etmek için seri koşullu yöntemler tanımlayabilirsiniz. Örneğin, aşağıdaki ikinci yöntem yalnızca her `A` `B` ikisi de ve tanımlanmışsa yürütülecektir:  
   
 ```csharp
 [Conditional("A")]  
@@ -190,8 +190,8 @@ static void DoIfAandB()
 }  
 ```  
   
-### <a name="using-conditional-with-attribute-classes"></a>Öznitelik sınıfları ile koşullu kullanma  
- Öznitelik `Conditional` , öznitelik sınıfı tanımına da uygulanabilir. Bu örnekte, özel öznitelik `Documentation` yalnızca hata ayıklama tanımlanmışsa meta verilere bilgi ekler.  
+### <a name="using-conditional-with-attribute-classes"></a>Öznitelik Sınıfları ile Koşullu Kullanma  
+ Öznitelik, `Conditional` öznitelik sınıfı tanımına da uygulanabilir. Bu örnekte, özel `Documentation` öznitelik yalnızca HATA Ayıklama tanımlanırsa meta verilere bilgi ekler.  
   
 ```csharp  
 [Conditional("DEBUG")]  
@@ -216,18 +216,18 @@ class SampleClass
 }  
 ```  
   
-## <a name="CallerInfo"></a>Arayan bilgileri öznitelikleri  
- Arayan Bilgisi özniteliklerini kullanarak bir yöntemin arayanı hakkında bilgi edinebilirsiniz. Kaynak kodun dosya yolunu, kaynak kodundaki satır numarasını ve arayanın üye adını elde edebilirsiniz.  
+## <a name="CallerInfo"></a>Arayan Bilgi Öznitelikleri  
+ Arayan Bilgisi özniteliklerini kullanarak bir yöntemin arayanı hakkında bilgi edinebilirsiniz. Kaynak kodun dosya yolunu, kaynak kodundaki satır numarasını ve arayanın üye adını alabilirsiniz.  
   
- Üye çağıran bilgilerini almak için, isteğe bağlı parametrelere uygulanan öznitelikleri kullanırsınız. Her isteğe bağlı parametre varsayılan bir değer belirtir. Aşağıdaki tabloda, <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanında tanımlanan arayan bilgileri öznitelikleri listelenmektedir:  
+ Üye arayan bilgilerini elde etmek için isteğe bağlı parametrelere uygulanan öznitelikleri kullanırsınız. Her isteğe bağlı parametre varsayılan değer belirtir. Aşağıdaki <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> tabloda, ad alanında tanımlanan Arayan Bilgileri öznitelikleri listelenir:  
   
 |Öznitelik|Açıklama|Tür|  
 |---|---|---|  
-|<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Kaynak dosyasının arayanı içeren tam yolu. Bu, derleme zamanının yoludur.|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Kaynak dosyasının arayanı içeren tam yolu. Bu derleme zamanda yoldur.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Yöntemin çağrıldığı kaynak dosyadaki satır numarası.|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Çağıranın Yöntem adı veya özellik adı. Daha fazla bilgi için bkz. [arayan bilgileriC#()](../caller-information.md).|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Arayanın yöntem adı veya özellik adı. Daha fazla bilgi için [Bkz. Arayan Bilgileri (C#)](../caller-information.md).|`String`|  
   
- Arayan bilgileri öznitelikleri hakkında daha fazla bilgi için bkz. [arayan bilgileri (C#)](../caller-information.md).  
+ Arayan Bilgileri öznitelikleri hakkında daha fazla bilgi [için, Bkz. Arayan Bilgileri (C#)](../caller-information.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -236,4 +236,4 @@ class SampleClass
 - [C# Programlama Kılavuzu](../../index.md)
 - [Öznitelikler](../../../../standard/attributes/index.md)
 - [Yansıma (C#)](../reflection.md)
-- [Yansıma (C#) kullanarak özniteliklere erişme](./accessing-attributes-by-using-reflection.md)
+- [Yansıma (C#) kullanarak Özniteliklere Erişim](./accessing-attributes-by-using-reflection.md)

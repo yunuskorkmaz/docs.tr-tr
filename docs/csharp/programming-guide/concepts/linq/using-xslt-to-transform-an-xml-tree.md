@@ -1,16 +1,16 @@
 ---
-title: XML ağacını dönüştürmek için XSLT kullanma (C#)
+title: XML Ağacını Dönüştürmek için XSLT kullanma (C#)
 ms.date: 07/20/2015
 ms.assetid: 373a2699-d4c5-471b-9bda-c1f0ab73b477
 ms.openlocfilehash: 7ebcfbd6be86fdd5e12bfc48a0fe80a084c6f9b5
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74140918"
 ---
-# <a name="using-xslt-to-transform-an-xml-tree-c"></a>XML ağacını dönüştürmek için XSLT kullanma (C#)
-XML ağacı oluşturabilir, XML ağacından bir <xref:System.Xml.XmlReader> oluşturabilir, yeni bir belge oluşturabilir ve yeni belgeye yazılacak bir <xref:System.Xml.XmlWriter> oluşturabilirsiniz. Sonra XSLT dönüşümünü çağırabilirsiniz, <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> dönüştürmeye taşıyabilirsiniz. Dönüştürme başarıyla tamamlandıktan sonra, yeni XML ağacı dönüştürmenin sonuçlarıyla doldurulur.  
+# <a name="using-xslt-to-transform-an-xml-tree-c"></a>XML Ağacını Dönüştürmek için XSLT kullanma (C#)
+Bir XML ağacı oluşturabilir, <xref:System.Xml.XmlReader> XML ağacından bir oluşturma, yeni bir <xref:System.Xml.XmlWriter> belge oluşturabilir ve yeni belgeye yazacak bir belge oluşturabilirsiniz. Daha sonra, XSLT dönüşümve dönüşüm <xref:System.Xml.XmlReader> <xref:System.Xml.XmlWriter> geçirerek çağırabilirsiniz. Dönüşüm başarıyla tamamlandıktan sonra, yeni XML ağacı dönüşümün sonuçlarıyla doldurulur.  
   
 ## <a name="example"></a>Örnek  
   
@@ -58,7 +58,7 @@ string result = newDocument.ToString();
 Console.WriteLine(result);
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root>  

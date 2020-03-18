@@ -1,21 +1,21 @@
 ---
-title: Belirli bir alt öğe (C#) ile bir öğe bulma
+title: Belirli bir alt öğe (C#) ile bir öğeyi bulma
 ms.date: 07/20/2015
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
 ms.openlocfilehash: 0536b1b92d4d7fc18b5d406bbcd24aefc6a840c6
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141152"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>Belirli bir alt öğe (C#) ile bir öğe bulma
-Bu konu, belirli bir değere sahip bir alt öğesi olan belirli bir öğenin nasıl bulunacağını gösterir.  
+# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>Belirli bir alt öğe (C#) ile bir öğeyi bulma
+Bu konu, belirli bir değere sahip bir alt öğeye sahip belirli bir öğeyi nasıl bulabileceğinizi gösterir.  
   
 ## <a name="example"></a>Örnek  
- Örnek, "Examp2. EXE" değerine sahip bir `CommandLine` alt öğesi olan `Test` öğesi bulur.  
+ Örnek, "Examp2.EXE" değerine sahip bir `Test` `CommandLine` alt öğeye sahip öğeyi bulur.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: test yapılandırması (LINQ to XML)](./sample-xml-file-test-configuration-linq-to-xml.md).  
+ Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Test Yapılandırması (LINQ -XML)](./sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Load("TestConfig.xml");  
@@ -35,9 +35,9 @@ foreach (XElement el in tests)
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (C#LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
+ Aşağıdaki örnek, ad alanında olan XML için aynı sorguyu gösterir. Daha fazla bilgi için [Bkz. NameSpaces Genel Bakış (LINQ - XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanında test yapılandırması](./sample-xml-file-test-configuration-in-a-namespace1.md).  
+ Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Ad alanında Test Yapılandırması.](./sample-xml-file-test-configuration-in-a-namespace1.md)  
   
 ```csharp  
 XElement root = XElement.Load("TestConfigInNamespace.xml");  
@@ -61,5 +61,5 @@ foreach (XElement el in tests)
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Standart sorgu Işleçlerine genelC#bakış ()](./standard-query-operators-overview.md)
-- [Projeksiyon Işlemleri (C#)](./projection-operations.md)
+- [Standart Sorgu Operatörlerine Genel Bakış (C#)](./standard-query-operators-overview.md)
+- [Projeksiyon İşlemleri (C#)](./projection-operations.md)

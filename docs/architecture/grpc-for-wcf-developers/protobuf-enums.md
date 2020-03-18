@@ -1,21 +1,21 @@
 ---
-title: Prototipsiz numaralandırmalar-WCF geliştiricileri için gRPC
-description: Prototipte numaralandırmalar bildirme ve kullanma hakkında bilgi edinin.
+title: Protobuf hesaplamaları - WCF geliştiricileri için gRPC
+description: Protobuf'ta sayısallaştırmaları nasıl beyan edin ve kullanacağınızı öğrenin.
 ms.date: 09/09/2019
-ms.openlocfilehash: 01cf4a4e5e0eda1e7ddff2a6780119fcb3120dad
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 2177f568a671fa0e651625c6e025ac70c243feb5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543150"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148081"
 ---
 # <a name="protobuf-enumerations"></a>Protobuf sabit listeleri
 
-Prototip, numaralandırma türlerini destekler. Bu desteği, bir `Oneof` alanının türünü belirlemekte bir sabit listesinin kullanıldığı önceki bölümde gördünüz. Kendi numaralandırma türlerinizi tanımlayabilir ve Protoda bunları sabit listesi türleri için C# derler. 
+Protobuf numaralandırma türlerini destekler. Bu desteği, bir `Oneof` alanın türünü belirlemek için bir enumun kullanıldığı önceki bölümde gördünuz. Kendi numaralandırma türlerinizi tanımlayabilirsiniz ve Protobuf bunları C# enum türlerine derler.
 
-Prototip ' i çeşitli dillerle birlikte kullanabilmeniz için, numaralandırmalar için adlandırma kuralları C# kurallardan farklıdır. Ancak, kod Oluşturucu adları geleneksel C# harfe dönüştürür. Alan adının Pascal-case eşdeğerini, numaralandırma adıyla başlıyorsa, kaldırılır.
+Protobuf'u çeşitli dillerde kullanabileceğinizden, numaralandırmaiçin adlandırma kuralları C# kurallarından farklıdır. Ancak, kod üreteci adları geleneksel C# örneğine dönüştürür. Alan adının Pascal-case eşdeğeri numaralandırma adı ile başlarsa, o zaman kaldırılır.
 
-Örneğin, aşağıdaki prototip numaralandırmasında, alanlar `ACCOUNT_STATUS`ön ekine sahiptir. Bu ön ek, `AccountStatus`Pascal-case numaralandırma adına eşdeğerdir.
+Örneğin, aşağıdaki Protobuf numaralandırmasında, alanlar `ACCOUNT_STATUS`. Bu önek Pascal-case enum adı, `AccountStatus`eşdeğerdir.
 
 ```protobuf
 enum AccountStatus {
@@ -27,7 +27,7 @@ enum AccountStatus {
 }
 ```
 
-Oluşturucu aşağıdaki koda denk C# bir sabit listesi oluşturur:
+Jeneratör aşağıdaki koda eşdeğer bir C# enum oluşturur:
 
 ```csharp
 public enum AccountStatus
@@ -40,7 +40,7 @@ public enum AccountStatus
 }
 ```
 
-Prototip numaralandırma tanımlarının ilk alanları olarak sıfır sabiti *olmalıdır* . İçinde C#olduğu gibi, aynı değere sahip birden fazla alan bildirebilirsiniz. Ancak, bu seçeneği numaralandırmasında `allow_alias` seçeneğini kullanarak açıkça etkinleştirmeniz gerekir:
+Protobuf numaralandırma tanımları ilk alanları olarak sıfır *sabitolmalıdır.* C#'da olduğu gibi, aynı değere sahip birden çok alanı bildirebilirsiniz. Ancak, enumdaki `allow_alias` seçeneği kullanarak bu seçeneği açıkça etkinleştirmelisiniz:
 
 ```protobuf
 enum AccountStatus {
@@ -54,9 +54,9 @@ enum AccountStatus {
 }
 ```
 
-Numaralandırmalar `.proto` bir dosyanın en üst düzeyinde ya da bir ileti tanımı içinde iç içe bildirebilirsiniz. İç içe geçmiş mesajlar gibi iç içe yerleştirilmiş numaralandırmalar, oluşturulan ileti sınıfındaki `.Types` statik sınıf içinde bildirilecektir.
+Bir `.proto` dosyada en üst düzeyde ki tümumerations'ı bildirebilir veya ileti tanımı içinde iç içe. İç içe geçmiş iletiler gibi iç içe geçmiş yinelemeler, oluşturulan ileti sınıfındaki `.Types` statik sınıf içinde bildirilir.
 
-[[Flags]](xref:System.FlagsAttribute) özniteliğini prototipsel olarak üretilen bir numaralandırmaya uygulamanın bir yolu yoktur ve protoarabellek, bit düzeyinde sabit listesi birleşimlerini anlamaz. Aşağıdaki örneğe bakın:
+[[Bayraklar]](xref:System.FlagsAttribute) özniteliğini Protobuf tarafından oluşturulan bir enuma uygulamanın bir yolu yoktur ve Protobuf bitwise enum kombinasyonlarını anlamaz. Aşağıdaki örneğe bakın:
 
 ```protobuf
 enum Region {
@@ -72,10 +72,10 @@ message Product {
 }
 ```
 
-`product.AvailableIn` `Region.NorthAmerica | Region.SouthAmerica`olarak ayarlarsanız, `3`tamsayı değer olarak serileştirilir. Bir istemci veya sunucu değeri seri durumdan çıkarmaya çalıştığında, `3`için enum tanımında bir eşleşme bulamaz. Sonuç `Region.None`olacaktır.
+Ayarlarsanız, `product.AvailableIn` bu sayı, tümsado değeri `3`olarak serihale edilir. `Region.NorthAmerica | Region.SouthAmerica` Bir istemci veya sunucu değeri deserialize etmeye çalıştığında, enum tanımında bir `3`eşleşme bulamaz. Sonuç. `Region.None`
 
-Prototipte birden çok Enum değeri ile çalışmanın en iyi yolu, sabit listesi türünde bir `repeated` alanı kullanmaktır.
+Protobuf'ta birden çok enum değeriyle çalışmanın `repeated` en iyi yolu, enum türünde bir alan kullanmaktır.
 
 >[!div class="step-by-step"]
 >[Önceki](protobuf-any-oneof.md)
->[İleri](protobuf-maps.md)
+>[Sonraki](protobuf-maps.md)

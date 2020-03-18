@@ -1,42 +1,42 @@
 ---
-title: Arabirim özellikleri- C# Programlama Kılavuzu
+title: Arayüz Özellikleri - C# Programlama Kılavuzu
 ms.date: 01/31/2020
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
 ms.openlocfilehash: 5798b80526f34e923e2eaab43847b98f6c64e14b
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626626"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Arabirim Özellikleri (C# Programlama Kılavuzu)
 
-Özellikler, bir [arabirimde](../../language-reference/keywords/interface.md)bildirilemez. Aşağıdaki örnek bir arabirim özelliği erişimcisi bildirir:
+Özellikler bir [arabirimde](../../language-reference/keywords/interface.md)bildirilebilir. Aşağıdaki örnek, arabirim özelliği neresini bildiren bir özellik bildirir:
 
 [!code-csharp[DeclareProperties](~/samples/snippets/csharp/interfaces/properties.cs#DeclareInterfaceProperties)]
 
-Arabirim özelliklerinin genellikle gövdesi yoktur. Erişimciler, özelliğin okuma-yazma, salt okunurdur veya salt yazılır olduğunu gösterir. Sınıfların ve yapıların aksine, bir gövde olmadan erişimcileri bildirmek [Otomatik uygulanan bir özellik](auto-implemented-properties.md)bildirmez. 8,0 ile C# başlayarak, bir arabirim, özellikler dahil olmak üzere Üyeler için varsayılan bir uygulama tanımlayabilir. Arabirimler örnek veri alanlarını tanımlayamadığından, bir arabirimdeki özellik için varsayılan bir uygulamanın tanımlanması nadir bir durumdur.
+Arabirim özellikleri genellikle bir gövdeye sahip değildir. Erişime girenler, özelliğin okuma-yazma, salt okuma veya yalnızca yazma olup olmadığını gösterir. Sınıflar ve structs aksine, bir vücut olmadan erişimini bildiren [otomatik uygulanan bir özellik](auto-implemented-properties.md)bildirmez. C# 8.0 ile başlayarak, bir arabirim özellikleri de dahil olmak üzere üyeler için varsayılan bir uygulama tanımlayabilir. Arabirimler örnek veri alanlarını tanımlamayabileceğinden, arabirimdeki bir özellik için varsayılan bir uygulama tanımlamak nadirdir.
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte, `IEmployee` arabirim, bir okuma-yazma özelliğine, `Name`ve salt okunurdur bir özelliğe sahiptir `Counter`. Sınıf `Employee` `IEmployee` arabirimini uygular ve bu iki özelliği kullanır. Program yeni bir çalışanın adını ve geçerli çalışan sayısını okur ve çalışan adını ve hesaplanan çalışan numarasını görüntüler.
+Bu örnekte, `IEmployee` arabirimde okuma-yazma `Name`özelliği ve salt okunur `Counter`özelliği vardır. Sınıf `Employee` `IEmployee` arabirimi uygular ve bu iki özelliği kullanır. Program yeni bir çalışanın adını ve geçerli çalışan sayısını okur ve çalışan adını ve hesaplanan çalışan numarasını görüntüler.
 
-Özelliğin, üyenin bildirildiği arabirime başvuruda bulunduğu tam nitelikli adını kullanabilirsiniz. Örnek:
-
-[!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#ExplicitImplementation)]
-
-Yukarıdaki örnekte [Açık arabirim uygulamaları](../interfaces/explicit-interface-implementation.md)gösterilmektedir. Örneğin, sınıfı `Employee` iki arabirimi `ICitizen` ve `IEmployee` ve her iki arabirimde de `Name` özelliği varsa, açık arabirim üye uygulaması gerekli olacaktır. Diğer bir deyişle, aşağıdaki özellik bildirimi:
+Üyenin beyan edildiği arabirime başvuran özelliğin tam nitelikli adını kullanabilirsiniz. Örnek:
 
 [!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#ExplicitImplementation)]
 
-, aşağıdaki bildirim sırasında `IEmployee` arabirimindeki `Name` özelliğini uygular:
+Önceki [örnek, Açık Arabirim Uygulamasını](../interfaces/explicit-interface-implementation.md)gösterir. Örneğin, `Employee` sınıf iki arabirim `ICitizen` uyguluyorsa `IEmployee` ve her iki `Name` arabirim de özelliğe sahipse, açık arabirim üyesi uygulaması gerekir. Diğer bir şey, aşağıdaki özellik bildirimidir:
+
+[!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#ExplicitImplementation)]
+
+aşağıdaki bildirimde bulunurken, `Name` özelliği arabirimde uygular: `IEmployee`
 
 [!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#CitizenImplementation)]
 
-`ICitizen` arabirimindeki `Name` özelliğini uygular.
+`Name` özelliği arabirimde `ICitizen` uygular.
 
 [!code-csharp[Example](~/samples/snippets/csharp/interfaces/properties.cs#PropertyExample)]
 [!code-csharp[Example](~/samples/snippets/csharp/interfaces/properties.cs#UseProperty)]

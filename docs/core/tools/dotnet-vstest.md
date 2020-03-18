@@ -1,23 +1,23 @@
 ---
-title: DotNet VSTest komutu
-description: DotNet VSTest komutu bir proje ve tüm bağımlılıklarını oluşturur.
+title: dotnet vstest komutu
+description: Dotnet vstest komutu bir proje ve tüm bağımlılıklarını oluşturur.
 ms.date: 02/27/2020
 ms.openlocfilehash: 88e5b6a8966d78d0746f9ea5ccbccab142a2e0f6
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156939"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 2.1 SDK ve sonraki sürümler
 
 ## <a name="name"></a>Adı
 
-`dotnet-vstest`, belirtilen dosyalardan testleri çalıştırır.
+`dotnet-vstest`- Belirtilen dosyalardan testleri çalıştırın.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Özet
 
 ```dotnetcli
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
@@ -29,43 +29,43 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet-vstest` komutu, otomatik birim testlerini çalıştırmak için `VSTest.Console` komut satırı uygulamasını çalıştırır.
+Komut, `dotnet-vstest` otomatik `VSTest.Console` birim testlerini çalıştırmak için komut satırı uygulamasını çalıştırAr.
 
 ## <a name="arguments"></a>Bağımsız Değişkenler
 
 - **`TEST_FILE_NAMES`**
 
-  Belirtilen derlemelerdeki testleri çalıştırın. Birden çok test derleme adını boşluklarla ayırın. Joker karakterler desteklenir.
+  Belirtilen derlemelerden testleri çalıştırın. Birden çok test derleme adını boşluklarla ayırın. Joker karakterler desteklenir.
 
 ## <a name="options"></a>Seçenekler
 
 - **`--Settings <Settings File>`**
 
-  Testler çalıştırılırken kullanılacak ayarlar.
+  Testleri çalıştırırken kullanılacak ayarlar.
 
 - **`--Tests <Test Names>`**
 
-  Testleri, belirtilen değerlerle eşleşen adlarla çalıştırın. Birden çok değeri virgülle ayırın.
+  Sağlanan değerlerle eşleşen adlarla testleri çalıştırın. Birden çok değeri virgülle ayırın.
 
 - **`--TestAdapterPath`**
 
-  Test çalıştırmasında belirli bir yoldan (varsa) özel test bağdaştırıcıları kullanın.
+  Test çalışmasında belirli bir yoldan (varsa) özel test bağdaştırıcıları kullanın.
 
 - **`--Platform <Platform type>`**
 
-  Test yürütmesi için kullanılan hedef platform mimarisi. Geçerli değerler `x86`, `x64`ve `ARM`.
+  Test yürütme için kullanılan hedef platform mimarisi. Geçerli değerler `x86` `x64`, `ARM`ve .
 
 - **`--Framework <Framework Version>`**
 
-  Test yürütmesi için kullanılan hedef .NET Framework sürümü. Geçerli değer örnekleri `.NETFramework,Version=v4.6` veya `.NETCoreApp,Version=v1.0`. Desteklenen diğer değerler `Framework40`, `Framework45`, `FrameworkCore10`ve `FrameworkUap10`.
+  Test yürütmesi için kullanılan Hedef .NET Framework sürümü. Geçerli değerlere `.NETFramework,Version=v4.6` örnek `.NETCoreApp,Version=v1.0`olarak . Desteklenen diğer değerler `Framework40` `Framework45`, `FrameworkCore10`, `FrameworkUap10`, ve .
 
 - **`--Parallel`**
 
-  Testleri paralel olarak çalıştırın. Varsayılan olarak, makinedeki tüm kullanılabilir çekirdekler kullanılabilir. *Runsettings* dosyasındaki `RunConfiguration` düğümü altında `MaxCpuCount` özelliğini ayarlayarak, açık sayıda çekirdek belirtin.
+  Testleri paralel olarak çalıştırın. Varsayılan olarak, makinedeki tüm kullanılabilir çekirdekler kullanılabilir. Runsettings dosyasındaki `MaxCpuCount` `RunConfiguration` düğümün altındaki özelliği ayarlayarak açık *runsettings* sayıda çekirdek belirtin.
 
 - **`--TestCaseFilter <Expression>`**
 
-  Verilen ifadeyle eşleşen testleri çalıştırın. `<Expression>` biçim `<property>Operator<value>[|&<Expression>]`, burada Işleç `=`, `!=`veya `~`biridir. İşleç `~` ' Contains ' semantiğine sahiptir ve `DisplayName`gibi dize özellikleri için geçerlidir. Parantez `()` alt ifadeleri gruplandırmak için kullanılır.
+  Verilen ifadeyle eşleşen testler çalıştırın. `<Expression>`biçimindedir `<property>Operator<value>[|&<Expression>]`, Operatör biri olduğu `=` `!=`, `~`, veya . İşleç `~` 'içerir' semantik ve gibi `DisplayName`dize özellikleri için geçerlidir. `()` Alt ifadeleri gruplandırmak için parantez kullanılır.
 
 - **`-?|--Help`**
 
@@ -73,9 +73,9 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
 
 - **`--logger <Logger Uri/FriendlyName>`**
 
-  Test sonuçları için bir günlükçü belirtin.
+  Test sonuçları için bir logger belirtin.
 
-  - Test sonuçlarını Team Foundation Server yayımlamak için `TfsPublisher` günlükçü sağlayıcısını kullanın:
+  - Test sonuçlarını Team Foundation Server'da `TfsPublisher` yayımlamak için kaydedici sağlayıcıyı kullanın:
 
     ```console
     /logger:TfsPublisher;
@@ -87,7 +87,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
         [;RunTitle=<title>]
     ```
 
-  - Sonuçları bir Visual Studio Test Sonuçları dosyasına (TRX) kaydetmek için `trx` günlükçü sağlayıcısını kullanın. Bu anahtar, test sonuçları dizininde verilen günlük dosyası adına sahip bir dosya oluşturur. `LogFileName` sağlanmazsa, test sonuçlarını tutmak için benzersiz bir dosya adı oluşturulur.
+  - Sonuçları Visual Studio Test Sonuçları Dosyasına (TRX) kaydetmek için logger sağlayıcısını `trx` kullanın. Bu anahtar, test sonuçları dizininde verilen günlük dosyası adı içeren bir dosya oluşturur. Sağlanmadıysa, `LogFileName` test sonuçlarını tutmak için benzersiz bir dosya adı oluşturulur.
 
     ```console
     /logger:trx [;LogFileName=<Defaults to unique file name>]
@@ -95,63 +95,63 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
 
 - **`-lt|--ListTests <File Name>`**
 
-  Verilen test kapsayıcısından tüm bulunan testleri listeler.
+  Verilen test kabından keşfedilen tüm testleri listeler.
 
 - **`--ParentProcessId <ParentProcessId>`**
 
-  Geçerli işlemin başlatmasından sorumlu olan üst işlemin işlem KIMLIĞI.
+  Geçerli işlemin başlatılmasından sorumlu ana işlemin işlem kimliği.
 
 - **`--Port <Port>`**
 
-  Yuva bağlantısı ve olay iletilerini alma bağlantı noktasını belirtir.
+  Soket bağlantısı ve olay iletileri almak için bağlantı noktasını belirtir.
 
 - **`--Diag <Path to log file>`**
 
-  Test platformu için ayrıntılı günlükleri etkinleştirilir. Günlükler, belirtilen dosyaya yazılır.
+  Test platformu için ayrıntılı günlükleri sağlar. Günlükler sağlanan dosyaya yazılır.
 
 - **`--Blame`**
 
-  Testleri sorumluyu modunda çalıştırır. Bu seçenek, test ana bilgisayarının kilitlenmesine neden olan sorunlu testleri yalıtmak için yararlıdır. Geçerli dizinde, kilitlenmeden önce yürütülen testlerin sırasını yakalayan *Sequence. xml* olarak bir çıktı dosyası oluşturur.
+  Testleri suçlama modunda çalıştırır. Bu seçenek, test ana bilgisayar çökmesine neden sorunlu testleri yalıtmak yararlıdır. Bu, çökmeden önce testlerin yürütülmesi sırasını yakalayan *Sequence.xml* olarak geçerli dizinde bir çıktı dosyası oluşturur.
 
 - **`--InIsolation`**
 
-  Testleri yalıtılmış bir işlemde çalıştırır. Bu, *VSTest. Console. exe* işleminin testlerin bir hata üzerinde durdurulması olasılığını azaltır, ancak testler daha yavaş çalışabilir.
+  Testleri yalıtılmış bir işlemle çalıştırın. Bu, *vstest.console.exe* işleminin testlerdeki bir hata da durdurulmasını daha az sağlar, ancak testler daha yavaş çalışabilir.
 
 - **`@<file>`**
 
-  Daha fazla seçenek için yanıt dosyasını okur.
+  Daha fazla seçenek için yanıt dosyalarını okur.
 
 - **`args`**
 
-  Bağdaştırıcıya geçirilecek ek bağımsız değişkenleri belirtir. Bağımsız değişkenler `<n>=<v>`biçim-değer çiftleri olarak belirtilir; burada `<n>` bağımsız değişken adıdır ve `<v>` bağımsız değişken değeridir. Birden çok bağımsız değişkeni ayırmak için boşluk kullanın.
+  Bağdaştırıcıya geçmek için fazladan bağımsız değişkenler belirtir. Bağımsız değişkenler formun `<n>=<v>`ad değeri çiftleri `<n>` olarak belirtilir, `<v>` bağımsız değişken adı ve bağımsız değişken değeridir. Birden çok bağımsız değişkeni ayırmak için bir boşluk kullanın.
 
 ## <a name="examples"></a>Örnekler
 
-Testleri *MyTestProject. dll*içinde Çalıştır:
+*mytestproject.dll*testleri çalıştırın :
 
 ```dotnetcli
 dotnet vstest mytestproject.dll
 ```
 
-Testleri *MyTestProject. dll*içinde çalıştırın, özel adla özel klasöre dışarı aktarma:
+*Mytestproject.dll'de*testleri çalıştırın, özel adla özel klasöre dışa aktarın:
 
 ```dotnetcli
 dotnet vstest mytestproject.dll --logger:"trx;LogFileName=custom_file_name.trx" --ResultsDirectory:custom/file/path
 ```
 
-*Testprojem. dll* ve *myothertestproject. exe*' de testleri çalıştırın:
+*mytestproject.dll* ve *myothertestproject.exe*testleri çalıştırın :
 
 ```dotnetcli
 dotnet vstest mytestproject.dll myothertestproject.exe
 ```
 
-`TestMethod1` testlerini Çalıştır:
+Testleri `TestMethod1` çalıştırın:
 
 ```dotnetcli
 dotnet vstest /Tests:TestMethod1
 ```
 
-`TestMethod1` Çalıştır ve Testleri `TestMethod2`:
+Çalıştır `TestMethod1` `TestMethod2` ve testler:
 
 ```dotnetcli
 dotnet vstest /Tests:TestMethod1,TestMethod2

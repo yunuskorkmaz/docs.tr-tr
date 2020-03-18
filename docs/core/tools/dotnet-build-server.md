@@ -1,23 +1,23 @@
 ---
-title: DotNet Build-Server komutu
-description: DotNet Build-Server komutu, bir derleme tarafından başlatılan sunucularla etkileşime girer.
+title: dotnet build-server komutu
+description: Dotnet build-server komutu, bir yapı tarafından başlatılan sunucularla etkileşime girerek etkileşime girer.
 ms.date: 02/14/2020
 ms.openlocfilehash: a6a9cd6de66371caef66d1101b3f844dffc771ef
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503784"
 ---
 # <a name="dotnet-build-server"></a>dotnet build-server
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 2.1 SDK ve sonraki sürümler
 
 ## <a name="name"></a>Adı
 
-`dotnet build-server`-bir derleme tarafından başlatılan sunucularla etkileşime girer.
+`dotnet build-server`- Bir yapı tarafından başlatılan sunucularla etkileşime girerek.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Özet
 
 ```dotnetcli
 dotnet build-server shutdown [--msbuild] [--razor] [--vbcscompiler]
@@ -29,7 +29,7 @@ dotnet build-server [-h|--help]
 
 - **`shutdown`**
 
-  DotNet 'ten başlatılan yapı sunucularını kapatır. Varsayılan olarak, tüm sunucular kapanır.
+  Dotnet'ten başlatılan yapı sunucularını kapatır. Varsayılan olarak, tüm sunucular kapatılır.
 
 ## <a name="options"></a>Seçenekler
 
@@ -39,12 +39,12 @@ dotnet build-server [-h|--help]
 
 - **`--msbuild`**
 
-  MSBuild yapı sunucusunu kapatır.
+  MSBuild build sunucusunu kapatır.
 
 - **`--razor`**
 
-  Razor derleme sunucusunu kapatır.
+  Razor build sunucusunu kapatır.
 
 - **`--vbcscompiler`**
 
-  VB/C# derleyici yapı sunucusunu kapatır.
+  VB/C# derleyici derleme sunucusunu kapatır.

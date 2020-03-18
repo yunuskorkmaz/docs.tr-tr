@@ -3,22 +3,22 @@ title: Başvuru (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 815b45e2-3527-4dee-9986-b1277a693cde
 ms.openlocfilehash: b33e1ddbecb6be46f2ee9b6ce043c12c345fcf21
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69591277"
 ---
 # <a name="reference-linq-to-xml"></a>Başvuru (LINQ to XML)
-Bu konu, LINQ to XML başvuru konularına bağlantılar içerir.  
+Bu konu, LINQ-XML başvuru konularının bağlantılarını içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- LINQ to XML sınıfları için başvuru belgeleri için bkz <xref:System.Xml.Linq>.  
+ LINQ to XML sınıfları için <xref:System.Xml.Linq>başvuru belgeleri için bkz.  
   
- XML ağaçlarını bir XSD dosyasına karşı doğrulamanıza yardımcı olan uzantı yöntemlerine ilişkin başvuru belgeleri için, bkz <xref:System.Xml.Schema.Extensions?displayProperty=nameWithType>.  
+ XML ağaçlarını XSD dosyasına karşı doğrulamanıza yardımcı olan <xref:System.Xml.Schema.Extensions?displayProperty=nameWithType>uzantı yöntemleri için başvuru belgeleri için bkz.  
   
- Bir XML ağacındaki XPath sorgularını değerlendirmenizi sağlayan uzantı yöntemlerine ilişkin başvuru belgeleri için, bkz <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
+ XML ağacında XPath sorgularını değerlendirmenizi sağlayan uzantı yöntemleri için <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>başvuru belgeleri için bkz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML (C#)](./linq-to-xml-overview.md)
+- [LinQ xml (C#) için](./linq-to-xml-overview.md)

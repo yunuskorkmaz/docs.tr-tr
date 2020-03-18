@@ -1,31 +1,31 @@
 ---
-title: Ad alanı öneklerini denetleme (C#) (LINQ to XML)
+title: Ad alanı önekleri (C#) (LINQ - XML) nasıl kontrol ediletilir?
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
 ms.openlocfilehash: 9f43c0804d8c830fa75f1e1390cb578c5f5d5106
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141387"
 ---
-# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Ad alanı öneklerini denetleme (C#) (LINQ to XML)
-Bu konu, bir XML ağacını serileştirilirken ad alanı öneklerini nasıl denetleyebileceğinizi açıklar.  
+# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Ad alanı önekleri (C#) (LINQ - XML) nasıl kontrol ediletilir?
+Bu konu, bir XML ağacını seri hale alırken ad alanı öneklerini nasıl denetebileceğinizi açıklar.  
   
- Birçok durumda, ad alanı öneklerini denetlemek gerekli değildir.  
+ Birçok durumda, ad alanı önekleri denetlemek gerekli değildir.  
   
- Ancak bazı XML programlama araçları, ad alanı önekleri için belirli bir denetim gerektirir. Örneğin, bir XSLT stil sayfasını veya belirli ad alanı öneklerine başvuran gömülü XPath ifadeleri içeren bir XAML belgesini düzenleme Bu durumda, belgenin bu özel öneklerle serileştirilmesi önemlidir.  
+ Ancak, bazı XML programlama araçları ad alanı önekleri belirli bir denetim gerektirir. Örneğin, bir XSLT stil sayfasını veya belirli ad alanı öneklerine başvuran katıştırılmış XPath ifadeleri içeren bir XAML belgesini manipüle ediyor olabilirsiniz; bu durumda, belgenin bu özel öneklerle serihale edilmesi önemlidir.  
   
- Bu, ad alanı öneklerini denetlemenin en yaygın nedenidir.  
+ Ad alanı öneklerini denetlemenin en yaygın nedeni budur.  
   
- Ad alanı öneklerini denetlemenin bir diğer yaygın nedeni, kullanıcıların XML belgesini el ile düzenlemesini ve kullanıcının yazması için uygun olan ad alanı önekleri oluşturmasını istemesidir. Örneğin, bir XSD belgesi oluşturuluyor olabilirsiniz. Şemaların kuralları, şema ad alanı öneki olarak `xs` veya `xsd` kullanmanızı önerir.  
+ Ad alanı öneklerini denetlemenin bir diğer yaygın nedeni de, kullanıcıların XML belgesini el ile yeniden oluşturmasını ve kullanıcının yazması için uygun ad alanı önekleri oluşturmasını istemenizdir. Örneğin, bir XSD belgesi oluşturuyor olabilirsiniz. Şemalar için sözleşmeler, şema `xs` `xsd` ad alanı için önek olarak veya kullanmanızı öneririz.  
   
- Ad alanı öneklerini denetlemek için ad alanlarını bildiren öznitelikleri eklersiniz. Ad alanlarını belirli öneklerle bildirirseniz [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] serileştirilirken ad alanı öneklerini kabul etmeye çalışır.  
+ Ad alanı öneklerini denetlemek için, ad alanlarını bildiren öznitelikler eklersiniz. Ad alanlarını belirli öneklerle bildirirseniz, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] seri hale getirilirken ad alanı öneklerini onurlandırmaya çalışırsınız.  
   
- Önekiyle bir ad alanı bildiren bir öznitelik oluşturmak için, özniteliğin adının ad alanının <xref:System.Xml.Linq.XNamespace.Xmlns%2A>olduğu ve özniteliğin adının ad alanı öneki olduğu bir öznitelik oluşturursunuz. Özniteliğin değeri, ad alanının URI 'sidir.  
+ Önek ile bir ad alanı bildiren bir öznitelik oluşturmak için, öznitelik adının ad alanı ve <xref:System.Xml.Linq.XNamespace.Xmlns%2A>öznitelik adı ad alanı ad alanı öneki olduğu bir öznitelik oluşturun. Özniteliğin değeri ad alanının URI'sidir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek iki ad alanı bildirir. `http://www.adventure-works.com` ad alanının `aw`öneki olduğunu ve `www.fourthcoffee.com` ad alanının `fc`ön ekine sahip olduğunu belirtir.  
+ Bu örnekte iki ad alanı bildirir. Ad alanının `http://www.adventure-works.com` önekinin olduğunu ve `aw` `www.fourthcoffee.com` ad alanının '' önekinin `fc`olduğunu belirtir.  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -42,7 +42,7 @@ XElement root = new XElement(aw + "Root",
 Console.WriteLine(root);  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com" xmlns:fc="www.fourthcoffee.com">  
@@ -56,4 +56,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ad alanlarına genel bakış (LINQ to XMLC#) ()](namespaces-overview-linq-to-xml.md)
+- [İsim Alanlarına Genel Bakış (LINQ - XML) (C#)](namespaces-overview-linq-to-xml.md)

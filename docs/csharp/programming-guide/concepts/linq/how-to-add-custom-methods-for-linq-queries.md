@@ -3,23 +3,23 @@ title: LINQ sorguları için özel yöntemler ekleme (C#)
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
 ms.openlocfilehash: e16175d3332b6ce36458eaa78af093e4f8772723
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141476"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>LINQ sorguları için özel yöntemler ekleme (C#)
 
-<xref:System.Collections.Generic.IEnumerable%601> arabirimine uzantı yöntemleri ekleyerek, LINQ sorguları için kullanabileceğiniz yöntemlerin kümesini genişletebilirsiniz. Örneğin, standart ortalama veya en yüksek işlemlere ek olarak, bir dizi değerden tek bir değeri hesaplamak için özel bir toplama yöntemi oluşturabilirsiniz. Ayrıca, bir dizi değer için özel bir filtre veya belirli bir veri dönüştürmesi olarak çalışacak bir yöntem oluşturabilirsiniz ve yeni bir dizi döndürür. Bu tür yöntemlere örnek olarak <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A>ve <xref:System.Linq.Enumerable.Reverse%2A>verilebilir.
+Arabirime uzantı yöntemleri ekleyerek LINQ sorguları için kullanabileceğiniz <xref:System.Collections.Generic.IEnumerable%601> yöntem kümesini genişletebilirsiniz. Örneğin, standart ortalama veya maksimum işlemlere ek olarak, bir değer dizisinden tek bir değer hesaplamak için özel bir toplama yöntemi oluşturabilirsiniz. Ayrıca, bir değer dizisi için özel bir filtre veya belirli bir veri dönüşümü olarak çalışan ve yeni bir sıra döndüren bir yöntem de oluşturabilirsiniz. Bu tür yöntemlere <xref:System.Linq.Enumerable.Skip%2A>örnek <xref:System.Linq.Enumerable.Reverse%2A>olarak <xref:System.Linq.Enumerable.Distinct%2A>, , ve .
 
-<xref:System.Collections.Generic.IEnumerable%601> arabirimini genişlettiğinizde, özel yöntemlerinizi herhangi bir sıralanabilir koleksiyona uygulayabilirsiniz. Daha fazla bilgi için bkz. [Uzantı yöntemleri](../../classes-and-structs/extension-methods.md).
+<xref:System.Collections.Generic.IEnumerable%601> Arabirimi genişletdiğinizde, özel yöntemlerinizi herhangi bir sayısal koleksiyona uygulayabilirsiniz. Daha fazla bilgi için [Uzantı Yöntemleri'ne](../../classes-and-structs/extension-methods.md)bakın.
 
-## <a name="adding-an-aggregate-method"></a>Toplama yöntemi ekleme
+## <a name="adding-an-aggregate-method"></a>Toplama Yöntemi Ekleme
 
-Toplama yöntemi bir değer kümesinden tek bir değeri hesaplar. LINQ, <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Min%2A>ve <xref:System.Linq.Enumerable.Max%2A>dahil olmak üzere birkaç toplama yöntemi sağlar. <xref:System.Collections.Generic.IEnumerable%601> arabirimine bir genişletme yöntemi ekleyerek kendi toplama yönteminizi oluşturabilirsiniz.
+Toplu yöntem, bir değer kümesinden tek bir değer hesaplar. LINQ, <xref:System.Linq.Enumerable.Average%2A>, , <xref:System.Linq.Enumerable.Min%2A>ve <xref:System.Linq.Enumerable.Max%2A>. Arabirime bir uzantı yöntemi ekleyerek kendi <xref:System.Collections.Generic.IEnumerable%601> toplama yönteminizi oluşturabilirsiniz.
 
-Aşağıdaki kod örneği, `double`tür bir sayı dizisi için ortanca hesaplamak üzere `Median` adlı bir genişletme yönteminin nasıl oluşturulacağını gösterir.
+Aşağıdaki kod örneği, bir tür `Median` `double`sayısı dizisi için ortanca yı hesaplamak için çağrılan bir uzantı yönteminin nasıl oluşturulurunun gösteriş olduğunu gösterir.
 
 ```csharp
 public static class LINQExtension
@@ -51,9 +51,9 @@ public static class LINQExtension
 }
 ```
 
-Bu genişletme yöntemini, her türlü sıralanabilir koleksiyon için <xref:System.Collections.Generic.IEnumerable%601> arabiriminden diğer toplama yöntemlerini çağırdığınız şekilde çağırabilirsiniz.
+Bu uzantı yöntemini, <xref:System.Collections.Generic.IEnumerable%601> arabirimden diğer toplu yöntemleri çağırdığınız şekilde numaralandırma yöntemiolarak çağırırsınız.
 
-Aşağıdaki kod örneği, `double`türünde bir dizi için `Median` yönteminin nasıl kullanılacağını gösterir.
+Aşağıdaki kod örneği, yöntemin `Median` bir tür `double`dizisi için nasıl kullanılacağını gösterir.
 
 ```csharp
 double[] numbers1 = { 1.9, 2, 8, 4, 5.7, 6, 7.2, 0 };
@@ -71,13 +71,13 @@ Console.WriteLine("double: Median = " + query1);
 */
 ```
 
-### <a name="overloading-an-aggregate-method-to-accept-various-types"></a>Çeşitli türleri kabul etmek için bir toplama yöntemini aşırı yükleme
+### <a name="overloading-an-aggregate-method-to-accept-various-types"></a>Çeşitli Türleri Kabul Etmek Için Bir Agrega Yöntemini Aşırı Yükleme
 
-Toplama yönteminizi çeşitli türlerde dizileri kabul edecek şekilde aşırı yükleyebilirsiniz. Standart yaklaşım, her tür için bir aşırı yükleme oluşturmaktır. Başka bir yaklaşım ise genel bir tür alacak ve bir temsilciyi kullanarak belirli bir türe dönüştürecek bir aşırı yükleme oluşturmaktır. Her iki yaklaşımı de birleştirebilirsiniz.
+Çeşitli türdeki dizileri kabul etmek için toplu yönteminizi aşırı yükleyebilirsiniz. Standart yaklaşım, her tür için aşırı yük oluşturmaktır. Başka bir yaklaşım, genel bir tür alacak ve bir temsilci kullanarak belirli bir türe dönüştürmek bir aşırı yük oluşturmaktır. Ayrıca her iki yaklaşımı da birleştirebilirsiniz.
 
-#### <a name="to-create-an-overload-for-each-type"></a>Her tür için bir aşırı yükleme oluşturmak için
+#### <a name="to-create-an-overload-for-each-type"></a>Her tür için aşırı yük oluşturmak için
 
-Desteklemek istediğiniz her tür için belirli bir aşırı yükleme oluşturabilirsiniz. Aşağıdaki kod örneğinde, `integer` türü için `Median` yönteminin aşırı yüklemesi gösterilmektedir.
+Desteklemek istediğiniz her tür için belirli bir aşırı yükleme oluşturabilirsiniz. Aşağıdaki kod `Median` `integer` örneği, tür için yöntemin aşırı yüklenmesini gösterir.
 
 ```csharp
 //int overload
@@ -88,7 +88,7 @@ public static double Median(this IEnumerable<int> source)
 }
 ```
 
-Artık aşağıdaki kodda gösterildiği gibi `integer` ve `double` türleri için `Median` aşırı yüklerini çağırabilirsiniz:
+Artık aşağıdaki kodda gösterildiği `integer` gibi, hem de `double` türler için `Median` aşırı yüklemeleri arayabilirsiniz:
 
 ```csharp
 double[] numbers1 = { 1.9, 2, 8, 4, 5.7, 6, 7.2, 0 };
@@ -115,11 +115,11 @@ Console.WriteLine("int: Median = " + query2);
 */
 ```
 
-#### <a name="to-create-a-generic-overload"></a>Genel aşırı yükleme oluşturmak için
+#### <a name="to-create-a-generic-overload"></a>Genel bir aşırı yük oluşturmak için
 
-Ayrıca, genel nesne dizisini kabul eden bir aşırı yükleme de oluşturabilirsiniz. Bu aşırı yükleme bir temsilciyi parametre olarak alır ve bir genel türdeki nesne dizisini belirli bir türe dönüştürmek için kullanır.
+Ayrıca, genel nesnelerin bir dizi kabul eden bir aşırı yük oluşturabilirsiniz. Bu aşırı yük bir temsilciyi parametre olarak alır ve genel bir türdeki nesnelerin dizisini belirli bir türe dönüştürmek için kullanır.
 
-Aşağıdaki kod, <xref:System.Func%602> temsilcisini bir parametre olarak alan `Median` yönteminin aşırı yüklemesini gösterir. Bu temsilci, T genel türünde bir nesne alır ve `double`türünde bir nesne döndürür.
+Aşağıdaki kod, `Median` <xref:System.Func%602> temsilciyi parametre olarak alan yöntemin aşırı yüklenmesini gösterir. Bu temsilci genel t türünde bir nesne `double`alır ve türünde bir nesne döndürür.
 
 ```csharp
 // Generic overload.
@@ -131,9 +131,9 @@ public static double Median<T>(this IEnumerable<T> numbers,
 }
 ```
 
-Artık herhangi bir türdeki nesne dizisi için `Median` yöntemini çağırabilirsiniz. Türün kendi yöntem aşırı yüklemesi yoksa, bir temsilci parametresi geçirmeniz gerekir. ' C#De, bu amaçla bir lambda ifadesi kullanabilirsiniz. Ayrıca, yalnızca Visual Basic içinde yöntem çağrısı yerine `Aggregate` veya `Group By` yan tümcesini kullanırsanız, bu yan tümce kapsamındaki herhangi bir değer veya ifade geçirebilirsiniz.
+Artık herhangi bir `Median` türdeki nesnelerin bir dizi için yöntemi arayabilirsiniz. Türün kendi yöntemi aşırı yüklemesi yoksa, bir temsilci parametresini geçmeniz gerekir. C#'da, bu amaçla lambda ifadesini kullanabilirsiniz. Ayrıca, yalnızca Visual Basic'te, `Aggregate` `Group By` yöntem çağrısı yerine veya yan tümcesini kullanırsanız, bu yan tümce kapsamında ki herhangi bir değeri veya ifadeyi geçirebilirsiniz.
 
-Aşağıdaki örnek kod, bir tamsayılar dizisi ve dizeler dizisi için `Median` yönteminin nasıl çağrılacağını gösterir. Dizeler için, dizideki dizelerin uzunluklarının ortancası hesaplanır. Örnek, <xref:System.Func%602> temsilci parametresinin her durum için `Median` yöntemine nasıl geçirileceğini gösterir.
+Aşağıdaki örnek kod, bir `Median` dizi bir karşıcı ve dize dizisi için yöntemin nasıl çağrılmasını gösterir. Dizeleri için, dizideki dizelerin uzunluklarının ortancası hesaplanır. Örnek, <xref:System.Func%602> her servis talebi için `Median` yönteme temsilci parametresinin nasıl geçirilen gösterilmektedir.
 
 ```csharp
 int[] numbers3 = { 1, 2, 3, 4, 5 };
@@ -164,11 +164,11 @@ Console.WriteLine("String: Median = " + query4);
 */
 ```
 
-## <a name="adding-a-method-that-returns-a-collection"></a>Koleksiyon döndüren bir yöntem ekleme
+## <a name="adding-a-method-that-returns-a-collection"></a>Koleksiyon Döndüren Yöntem Ekleme
 
-<xref:System.Collections.Generic.IEnumerable%601> arabirimini bir değer dizisi döndüren özel bir sorgu yöntemiyle genişletebilirsiniz. Bu durumda, yöntemin <xref:System.Collections.Generic.IEnumerable%601>türünde bir koleksiyon döndürmesi gerekir. Bu tür yöntemler, bir değerler dizisine filtre veya veri dönüştürmeleri uygulamak için kullanılabilir.
+<xref:System.Collections.Generic.IEnumerable%601> Bir değer dizisi döndüren özel bir sorgu yöntemiyle arabirimi genişletebilirsiniz. Bu durumda, yöntem türünden <xref:System.Collections.Generic.IEnumerable%601>bir koleksiyon döndürmelidir. Bu tür yöntemler, filtreleri veya veri dönüşümlerini bir değer dizisine uygulamak için kullanılabilir.
 
-Aşağıdaki örnek, ilk öğeden başlayarak bir koleksiyondaki her öğeyi döndüren `AlternateElements` adlı bir genişletme yönteminin nasıl oluşturulacağını gösterir.
+Aşağıdaki örnek, ilk öğeden başlayarak bir koleksiyondaki diğer tüm öğeyi döndüren adlandırılmış `AlternateElements` bir uzantı yönteminin nasıl oluşturulurdu gösterilmektedir.
 
 ```csharp
 // Extension method for the IEnumerable<T> interface.
@@ -194,7 +194,7 @@ public static IEnumerable<T> AlternateElements<T>(this IEnumerable<T> source)
 }
 ```
 
-Aşağıdaki kodda gösterildiği gibi, diğer yöntemleri <xref:System.Collections.Generic.IEnumerable%601> arabiriminden çağırdığınız gibi, herhangi bir sıralanabilir koleksiyon için bu genişletme yöntemini çağırabilirsiniz:
+Aşağıdaki kodda gösterildiği gibi, <xref:System.Collections.Generic.IEnumerable%601> arabirimden diğer yöntemleri çağıracağınız gibi, herhangi bir numaralandırma için bu uzantılı yöntemi arayabilirsiniz:
 
 ```csharp
 string[] strings = { "a", "b", "c", "d", "e" };

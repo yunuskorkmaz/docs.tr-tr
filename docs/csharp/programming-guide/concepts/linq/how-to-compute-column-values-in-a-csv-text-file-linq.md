@@ -1,20 +1,20 @@
 ---
-title: CSV metin dosyasında (LINQ) sütun değerlerini hesaplama (LINQ) (C#)
+title: CSV metin dosyasındaki sütun değerlerini nasıl hesaplar (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: a48850e8f6229b80ebd9207bb1b7353f8b0c9e02
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 458950d58b15dcd572329228d76d85881043e07a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141362"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169356"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>CSV metin dosyasında (LINQ) sütun değerlerini hesaplama (LINQ) (C#)
-Bu örnek, bir. csv dosyasının sütunlarında Sum, Average, min ve Max gibi toplam hesaplamaların nasıl gerçekleştirileceğini gösterir. Burada gösterilen örnek ilkeler diğer yapılandırılmış metin türlerine uygulanabilir.  
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>CSV metin dosyasındaki sütun değerlerini nasıl hesaplar (LINQ) (C#)
+Bu örnek, .csv dosyasının sütunlarında Toplam, Ortalama, Min ve Max gibi toplu hesaplamaların nasıl gerçekleştirildirilebildiğini gösterir. Burada gösterilen örnek ilkeler diğer yapılandırılmış metin türlerine uygulanabilir.  
   
 ## <a name="to-create-the-source-file"></a>Kaynak dosyayı oluşturmak için  
   
-1. Aşağıdaki satırları puanlarını. csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. İlk sütunun bir öğrenci KIMLIĞINI temsil ettiğini ve sonraki sütunlarda dört sınavın puanlarını temsil ettiğini varsayın.  
+1. Aşağıdaki satırları scores.csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. İlk sütunun bir öğrenci kimliğini, sonraki sütunların ise dört sınavdan alınan puanları temsil ettiğini varsayalım.  
   
     ```csv
     111, 97, 92, 81, 60  
@@ -61,14 +61,14 @@ class SumColumns
     {  
         Console.WriteLine("Single Column Query:");  
   
-        // Parameter examNum specifies the column to   
+        // Parameter examNum specifies the column to
         // run the calculations on. This value could be  
-        // passed in dynamically at runtime.               
+        // passed in dynamically at runtime.
   
         // Variable columnQuery is an IEnumerable<int>.  
         // The following query performs two steps:  
-        // 1) use Split to break each row (a string) into an array   
-        //    of strings,   
+        // 1) use Split to break each row (a string) into an array
+        //    of strings,
         // 2) convert the element at position examNum to an int  
         //    and select it.  
         var columnQuery =  
@@ -95,17 +95,17 @@ class SumColumns
         Console.WriteLine("Multi Column Query:");  
   
         // Create a query, multiColQuery. Explicit typing is used  
-        // to make clear that, when executed, multiColQuery produces   
+        // to make clear that, when executed, multiColQuery produces
         // nested sequences. However, you get the same results by  
         // using 'var'.  
   
         // The multiColQuery query performs the following steps:  
-        // 1) use Split to break each row (a string) into an array   
-        //    of strings,   
-        // 2) use Skip to skip the "Student ID" column, and store the   
+        // 1) use Split to break each row (a string) into an array
+        //    of strings,
+        // 2) use Skip to skip the "Student ID" column, and store the
         //    rest of the row in scores.  
         // 3) convert each score in the current row from a string to  
-        //    an int, and select that entire sequence as one row   
+        //    an int, and select that entire sequence as one row
         //    in the results.  
         IEnumerable<IEnumerable<int>> multiColQuery =  
             from line in strs  
@@ -115,7 +115,7 @@ class SumColumns
                     select Convert.ToInt32(str));  
   
         // Execute the query and cache the results to improve  
-        // performance.   
+        // performance.
         // ToArray could be used instead of ToList.  
         var results = multiColQuery.ToList();  
   
@@ -123,11 +123,11 @@ class SumColumns
         int columnCount = results[0].Count();  
   
         // Perform aggregate calculations Average, Max, and  
-        // Min on each column.              
-        // Perform one iteration of the loop for each column   
+        // Min on each column.
+        // Perform one iteration of the loop for each column
         // of scores.  
-        // You can use a for loop instead of a foreach loop   
-        // because you already executed the multiColQuery   
+        // You can use a for loop instead of a foreach loop
+        // because you already executed the multiColQuery
         // query by calling ToList.  
         for (int column = 0; column < columnCount; column++)  
         {  
@@ -156,12 +156,12 @@ class SumColumns
  */  
 ```  
   
- Sorgu, her metin satırını bir diziye dönüştürmek için <xref:System.String.Split%2A> yöntemi kullanılarak işe yarar. Her dizi öğesi bir sütunu temsil eder. Son olarak, her sütundaki metin sayısal gösterimine dönüştürülür. Dosyanız sekmeyle ayrılmış bir dosya ise, `\t` için `Split` yöntemindeki bağımsız değişkeni güncelleştirmeniz yeterlidir.  
+ Sorgu, her metin <xref:System.String.Split%2A> satırını bir diziye dönüştürmek için yöntemi kullanarak çalışır. Her dizi öğesi bir sütunu temsil eder. Son olarak, her sütundaki metin sayısal gösterimine dönüştürülür. Dosyanız sekmeyle ayrılmış bir dosyaysa, yöntemdeki bağımsız değişkeni `Split` şu şekilde `\t`güncelleştirmeniz  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- System. C# lınq ve System.IO ad alanları için `using` yönergeler içeren bir konsol uygulaması projesi oluşturun.  
+ System.Linq ve System.IO `using` ad alanları için yönergeleri içeren bir C# konsolu uygulama projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (C#)](./linq-and-strings.md)
-- [LINQ ve dosya dizinleri (C#)](./linq-and-file-directories.md)
+- [LINQ ve Dizeleri (C#)](./linq-and-strings.md)
+- [LINQ ve Dosya Dizinleri (C#)](./linq-and-file-directories.md)

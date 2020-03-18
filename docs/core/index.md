@@ -1,44 +1,44 @@
 ---
 title: .NET Core kılavuzu
-description: .NET Core, Windows, Linux ve macOS uygulamaları oluşturmaya yönelik modüler ve yüksek performanslı bir uygulamasıdır. Başlamak için .NET Core hakkında bilgi edinin.
+description: .NET Core, Windows, Linux ve macOS uygulamaları oluşturmak için .NET'in modüler, yüksek performanslı bir uygulamasıdır. Başlamak için .NET Core hakkında bilgi edinin.
 author: richlander
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 ms.openlocfilehash: 3db98d21a7cdc80d8a98b23782a81ffa37520937
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75740749"
 ---
 # <a name="net-core-guide"></a>.NET Core kılavuzu
 
-[.NET Core](about.md) , [GitHub](https://github.com/dotnet/core)'da Microsoft ve .net Community tarafından sürdürülen [Açık kaynaklı](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT), genel amaçlı bir geliştirme platformudur. Platformlar arası bir platformdur (Windows, macOS ve Linux 'u destekleme) ve cihaz, bulut ve IoT uygulamaları oluşturmak için kullanılabilir.
+[.NET Core,](about.md) Microsoft ve [GitHub'daki](https://github.com/dotnet/core).NET topluluğu tarafından korunan [açık kaynak kodlu,](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)genel amaçlı bir geliştirme platformudur. Bu çapraz platform (Windows, macOS ve Linux destekleyen) ve cihaz, bulut ve IoT uygulamaları oluşturmak için kullanılabilir.
 
-.NET Core hakkında özellikler, desteklenen diller ve çerçeveler ve anahtar API 'Leri dahil olmak üzere .NET Core hakkında daha fazla bilgi için bkz. [.NET Core hakkında](about.md) .
+Özellikleri, desteklenen dilleri ve çerçeveleri ve önemli API'leri de dahil olmak üzere .NET Core hakkında daha fazla bilgi edinmek için [.NET Core](about.md) hakkında bilgi edinin.
 
-[.NET Core öğreticilerine](tutorials/index.md) göz atın ve basit bir .NET Core uygulaması oluşturma hakkında bilgi edinin. İlk uygulamanızı çalışır duruma getirmek için yalnızca birkaç dakika sürer. Tarayıcınızda .NET Core 'u denemek istiyorsanız çevrimiçi öğreticideki [numaralara C# ](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml) bakın.
+Basit bir .NET Core uygulaması nın nasıl oluşturulacağımı öğrenmek için [.NET Core Eğitimlerine](tutorials/index.md) göz atın. İlk uygulamanızı çalışır hale getirmek yalnızca birkaç dakika nızı alır. Tarayıcınızda .NET Core'u denemek istiyorsanız, [C#](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml) online öğreticideki Sayılar'a bakın.
 
-## <a name="download-net-core"></a>.NET Core indirin
+## <a name="download-net-core"></a>Karşıdan yükleme .NET Core
 
-Windows, macOS veya Linux makinenizde .NET Core 'u denemek için [.NET Core SDK](https://www.microsoft.com/net/download) indirin. Docker Kapsayıcıları kullanmayı tercih ediyorsanız, [.NET Core Docker Hub](https://hub.docker.com/_/microsoft-dotnet-core/)' ı ziyaret edin.
+Windows, macOS veya Linux makinenizde .NET Core'u denemek için [.NET Core SDK'yı](https://www.microsoft.com/net/download) indirin. Docker konteynerlerini kullanmayı tercih ederseniz [,NET Core Docker Hub'ı](https://hub.docker.com/_/microsoft-dotnet-core/)ziyaret edin.
 
-Başka bir .NET Core sürümü arıyorsanız, tüm .NET Core sürümleri [.NET Core İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core) ile kullanılabilir.
+Başka bir .NET Core sürümü arıyorsanız tüm .NET Core sürümleri [.NET Core İndirme sürümlerinde](https://dotnet.microsoft.com/download/dotnet-core) mevcuttur.
 
-## <a name="net-core-31"></a>.NET Core 3,1
+## <a name="net-core-31"></a>.NET Çekirdek 3.1
 
-En son sürüm .NET Core 3,1 ' dir. 3,1, .NET Core 3,0 üzerinde küçük geliştirmeler içerir, ancak .NET Core 3,1 [uzun süreli desteklenen bir sürümdür](https://dotnet.microsoft.com/platform/support/policy/dotnet-core). .NET Core 3,1 sürümü hakkında daha fazla bilgi için bkz. [.net core 3,1 ' deki](./whats-new/dotnet-core-3-1.md)yenilikler.
+En son sürümü .NET Core 3.1 olduğunu. 3.1 .NET Core 3.0 üzerinde küçük iyileştirmeler içerir, ancak, .NET Core 3.1 [uzun vadeli desteklenen bir sürümdür.](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) .NET Core 3.1 sürümü hakkında daha fazla bilgi için [.NET Core 3.1'deki yeniliklere](./whats-new/dotnet-core-3-1.md)bakın.
 
 ## <a name="create-your-first-application"></a>İlk uygulamanızı oluşturun
 
-.NET Core SDK yükledikten sonra bir komut istemi açın. Bir C# uygulamayı oluşturmak ve çalıştırmak için aşağıdaki `dotnet` komutlarını girin:
+.NET Core SDK'yı yükledikten sonra bir komut istemi açın. C# `dotnet` uygulaması oluşturmak ve çalıştırmak için aşağıdaki komutları girin:
 
 ```dotnetcli
 dotnet new console
 dotnet run
 ```
 
-Aşağıdaki çıkışı görmeniz gerekir:
+Aşağıdaki çıktıyı görmeniz gerekir:
 
 ```output
 Hello World!
@@ -46,8 +46,8 @@ Hello World!
 
 ## <a name="support"></a>Destek
 
-.NET Core, [Microsoft](https://dotnet.microsoft.com/platform/support/policy), Windows, MacOS ve Linux 'ta desteklenmektedir. Genellikle ayda bir yılda birkaç kez güvenlik ve kalite için güncelleştirilir.
+.NET Core, Windows, macOS ve Linux'ta [Microsoft tarafından desteklenir.](https://dotnet.microsoft.com/platform/support/policy) Genellikle aylık olarak yılda birkaç kez güvenlik ve kalite için güncelleştirilir.
 
-.NET Core ikili dağıtımları, Azure 'da Microsoft tarafından korunan sunucularda oluşturulup test edilir ve tıpkı tüm Microsoft ürünleri gibi desteklenir.
+.NET Core ikili dağıtımları, Azure'da Microsoft tarafından korunan sunucularda oluşturulur ve test edilir ve tıpkı herhangi bir Microsoft ürünü gibi desteklenir.
 
-[Red Hat](http://redhatloves.net/) Red Hat Enterprise Linux (RHEL) üzerinde .NET Core 'u destekler. Red hat, kaynaktan .NET Core 'u oluşturur ve [Red Hat yazılım koleksiyonlarında](https://developers.redhat.com/products/softwarecollections/overview/)kullanılabilir hale getirir. Red Hat ve Microsoft, .NET Core 'un RHEL üzerinde iyi çalıştığından emin olmak için işbirliği sağlar.
+Red Hat, Red Hat Enterprise Linux (RHEL) üzerinde [.NET Core'u destekler.](http://redhatloves.net/) Red Hat kaynaktan .NET Core oluşturur ve [Red Hat Yazılım Koleksiyonları'nda](https://developers.redhat.com/products/softwarecollections/overview/)kullanılabilir hale getirir. Red Hat ve Microsoft, .NET Core'un RHEL'de iyi çalışmasını sağlamak için işbirliği içindedir.

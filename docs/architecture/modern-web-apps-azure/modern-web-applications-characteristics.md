@@ -1,89 +1,89 @@
 ---
 title: Modern web uygulamalarının özellikleri
-description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Modern Web uygulamalarının özellikleri
+description: ASP.NET Core ve Azure ile Mimar Modern Web Uygulamaları | Modern web uygulamalarının özellikleri
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
 ms.openlocfilehash: d70fa54adeb505fd37807399402281dfda67cf52
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451570"
 ---
-# <a name="characteristics-of-modern-web-applications"></a>Modern Web uygulamalarının özellikleri
+# <a name="characteristics-of-modern-web-applications"></a>Modern Web Uygulamalarının Özellikleri
 
-> "… uygun tasarımla, özellikler de birlikte gelir. Bu yaklaşım, bir dizi değildir ancak başarılı olmaya devam eder. "  
-> _\- dennıs Ritchie_
+> "… uygun tasarımı ile, özellikleri ucuza gelir. Bu yaklaşım çetin, ama başarılı olmaya devam ediyor."  
+> _\-Dennis Ritchie_
 
-Modern Web uygulamalarının daha fazla Kullanıcı beklentileri ve daha önce her zamankinden daha fazla olması gerekir. Bugünün Web uygulamalarının dünyanın herhangi bir yerinden 24/7 kullanılabilir olması ve neredeyse tüm cihazlardan veya ekran boyutundan kullanılabilir olması beklenmektedir. Web uygulamaları, istek üzerine ani artışları karşılamak için güvenli, esnek ve ölçeklenebilir olmalıdır. Giderek karmaşık senaryolar, JavaScript kullanılarak istemci üzerinde oluşturulmuş zengin kullanıcı deneyimleri tarafından işlenmeli ve Web API 'Leri aracılığıyla etkin bir şekilde iletişim edilmelidir.
+Modern web uygulamaları, kullanıcı beklentilerinin her zamankinden daha yüksek olması ve daha fazla talep Günümüzün web uygulamalarının dünyanın herhangi bir yerinden 7/24 kullanıma sunulması ve hemen hemen her cihaz veya ekran boyutundan kullanılabilmesi beklenmektedir. Web uygulamaları, talepteki ani artışları karşılamak için güvenli, esnek ve ölçeklenebilir olmalıdır. Giderek daha karmaşık senaryolar, JavaScript kullanarak istemci üzerine inşa edilmiş zengin kullanıcı deneyimleri tarafından ele alınmalıdır ve web API'leri aracılığıyla verimli bir şekilde iletişim kurmalıdır.
 
-ASP.NET Core, modern web uygulamaları ve bulut tabanlı barındırma senaryoları için iyileştirilmiştir. Modüler tasarımı, uygulamaların yalnızca gerçekten kullandıkları özelliklere bağlı olmasına olanak tanılarken, barındırma kaynağı gereksinimlerini azaltırken uygulama güvenliğini ve performansını geliştirir.
+ASP.NET Core modern web uygulamaları ve bulut tabanlı barındırma senaryoları için optimize edilebiyi kullansın. Modüler tasarımı, uygulamaların yalnızca gerçekte kullandıkları özelliklere bağlı olmasını sağlarken, barındırma kaynağı gereksinimlerini azaltırken uygulama güvenliğini ve performansını artırır.
 
-## <a name="reference-application-eshoponweb"></a>Başvuru uygulaması: eShopOnWeb
+## <a name="reference-application-eshoponweb"></a>Referans uygulaması: eShopOnWeb
 
-Bu kılavuz, bazı ilkeleri ve önerileri gösteren bir başvuru uygulaması olan _Eshoponweb_içerir. Uygulama, Shirts, kahve Mug 'ler ve diğer pazarlama öğelerinin bir kataloğuna göz atmayı destekleyen basit bir çevrimiçi depodur. Daha kolay anlaşılır olması için başvuru uygulaması kasıtlı olarak basittir.
+Bu kılavuz, bazı ilke ve önerileri gösteren bir referans uygulaması, _eShopOnWeb_içerir. Uygulama gömlek, kahve kupaları ve diğer pazarlama öğeleri bir katalog üzerinden tarama destekleyen basit bir online mağaza. Başvuru uygulaması, anlaşılmasını kolaylaştırmak için kasıtlı olarak basittir.
 
 ![eShopOnWeb](./media/image2-1.png)
 
 **Şekil 2-1.** eShopOnWeb
 
-> ### <a name="reference-application"></a>Başvuru uygulaması
+> ### <a name="reference-application"></a>Başvuru Başvurusu
 >
 > - **eShopOnWeb**  
 >   <https://github.com/dotnet/eShopOnWeb>
 
-## <a name="cloud-hosted-and-scalable"></a>Bulutta barındırılan ve ölçeklenebilir
+## <a name="cloud-hosted-and-scalable"></a>Bulut barındırılan ve ölçeklenebilir
 
-ASP.NET Core, düşük bellek ve yüksek aktarım hızı olduğundan bulut (genel bulut, özel bulut, tüm bulut) için iyileştirilmiştir. ASP.NET Core uygulamaların daha küçük bir şekilde kapladığı alanı, bunları aynı donanımda barındırabilmeniz ve kullandıkça öde bulut barındırma hizmetleri 'ni kullanırken daha az kaynak ödemenize yol açabilir. Daha yüksek aktarım hızı, aynı donanıma verilen bir uygulamadan daha fazla müşteriye, sunuculara ve barındırma altyapısına yatırım ihtiyacını azaltmaya daha fazla bilgi verebileceğiniz anlamına gelir.
+ASP.NET Core bulut (genel bulut, özel bulut, herhangi bir bulut) için optimize edilsin, çünkü düşük bellekli ve yüksek iş çıkışlıdır. ASP.NET Core uygulamalarının daha küçük ayak izi, aynı donanımda daha fazla sayıda uygulama barındırabileceğiniz ve kullandıkça öde bulut barındırma hizmetlerini kullanırken daha az kaynak için ödeme yapabileceğiniz anlamına gelir. Yüksek iş gücü, aynı donanımı verilen bir uygulamadan daha fazla müşteriye hizmet verebileceğiniz ve sunuculara yatırım yapma ve altyapı barındırma ihtiyacını daha da azaltabileceğiniz anlamına gelir.
 
-## <a name="cross-platform"></a>Platformlar arası
+## <a name="cross-platform"></a>Çapraz platform
 
-ASP.NET Core platformlar arası ve Linux, macOS ve Windows üzerinde çalışabilir. Bu, ASP.NET Core ile oluşturulmuş uygulamaların geliştirilmesi ve dağıtılması için birçok yeni seçenek açar. Docker Kapsayıcıları-hem Linux hem de Windows-ASP.NET Core uygulamalarını barındırabilir ve bu da [kapsayıcıların ve mikro hizmetlerin](../microservices/index.md)avantajlarından yararlanmasını sağlar.
+ASP.NET Core çapraz platformdur ve Linux, macOS ve Windows'da çalıştırılabilir. Bu, ASP.NET Core ile oluşturulmuş uygulamaların hem geliştirilmesi hem de dağıtımı için birçok yeni seçenek sunar. Docker konteynerleri - hem Linux hem de Windows - ASP.NET Core uygulamalarına ev sahipliği yapabilir ve bu [uygulamalarkapların ve mikro hizmetlerin](../microservices/index.md)avantajlarından yararlanmalarını sağlar.
 
-## <a name="modular-and-loosely-coupled"></a>Modüler ve gevşek olarak bağlanmış
+## <a name="modular-and-loosely-coupled"></a>Modüler ve gevşek birleştirilmiş
 
-NuGet paketleri .NET Core 'da birinci sınıf vatandaşları ve ASP.NET Core uygulamalar, NuGet aracılığıyla birçok Kitaplığı temel alarak oluşur. Bu işlevsellik ayrıntı düzeyi, uygulamaların yalnızca gerçekten ihtiyaç duydukları işlevlere bağlı olarak, parmak izi ve güvenlik güvenlik açığı yüzeyi alanını azalttığından emin olmanıza yardımcı olur.
+NuGet paketleri .NET Core'da birinci sınıf vatandaşlardır ve ASP.NET Core uygulamaları NuGet aracılığıyla birçok kütüphaneden oluşur. Bu işlevsellik ayrıntılılığı, uygulamaların yalnızca gerçekten gereksinim duydukları işlevlere bağımlı olmalarını ve dağıtmalarını, ayak izlerini ve güvenlik açığı yüzey alanını azaltmalarına yardımcı olur.
 
-ASP.NET Core Ayrıca, hem dahili olarak hem de uygulama düzeyinde [bağımlılık ekleme](https://deviq.com/dependency-injection/)işlemini tam olarak destekler. Arabirimlerde, gerektiğinde değiştirilebilen birden fazla uygulama olabilir. Bağımlılık ekleme, uygulamaların belirli uygulamalar yerine, bu arabirimlere gevşek bir şekilde çift olmasını sağlar, bu sayede genişletmeyi, bakımını ve testi kolaylaştırır.
+ASP.NET Core ayrıca hem dahili hem de uygulama düzeyinde [bağımlılık enjeksiyonuna](https://deviq.com/dependency-injection/)tam olarak destek ver. Arabirimler, gerektiğinde değiştirilebilen birden çok uygulama olabilir. Bağımlılık enjeksiyonu, uygulamaların belirli uygulamalar yerine bu arabirimlere gevşek bir şekilde çift olarak çift olmasını sağlayarak, uygulamaların genişletmesini, bakımını ve test ini kolaylaştırır.
 
-## <a name="easily-tested-with-automated-tests"></a>Otomatikleştirilmiş testlerle kolayca test edilmiştir
+## <a name="easily-tested-with-automated-tests"></a>Otomatik testler ile kolayca test edilebilir
 
-ASP.NET Core uygulamalar birim testini destekler ve bağımlılık ekleme için gevşek bir SLA ve destek sayesinde altyapı sorunları, test amacıyla sahte uygulamalarla takas edilmesini kolaylaştırır. ASP.NET Core Ayrıca, uygulamaları bellekte barındırmak için kullanılabilecek bir TestServer ile birlikte gelir. İşlevsel testler daha sonra bu bellek içi sunucuya istek yapabilir, tüm uygulama yığınını (ara yazılım, yönlendirme, model bağlama, filtreler vb. dahil) kullanabilir ve bir yanıt alarak, uygulamayı gerçek bir sunucuda barındırmak için gereken sürenin bir kesilişinde ve ağ katmanı üzerinden istekler yapın. Modern Web uygulamalarında daha fazla önem taşıyan API 'Ler için bu testlerin yazılması ve değerli olması özellikle kolaydır.
+ASP.NET Core uygulamaları birim testini destekler ve bunların gevşek bağlantı ve bağımlılık enjeksiyonu desteği, altyapı endişelerini test amacıyla sahte uygulamalarla değiştirmeyi kolaylaştırır. ASP.NET Core ayrıca bellekte uygulamaları barındırmak için kullanılabilecek bir TestServer ile gemi. İşlevsel testler daha sonra bu bellek içi sunucuya istekte bulunarak, tam uygulama yığınını (ara yazılım, yönlendirme, model bağlama, filtreler vb. dahil) uygulayabilir ve yanıt alabilir, hepsi de uygulamayı gerçek bir sunucuda barındırmak için gereken sürenin çok kısa bir kısmında ve ağ katmanı üzerinden istekte bulunun. Bu testlerin yazılması özellikle kolaydır ve modern web uygulamalarında giderek daha önemli hale gelen API'ler için değerlidir.
 
-## <a name="traditional-and-spa-behaviors-supported"></a>Geleneksel ve SPA davranışları destekleniyor
+## <a name="traditional-and-spa-behaviors-supported"></a>Desteklenen geleneksel ve SPA davranışları
 
-Geleneksel web uygulamaları çok sayıda istemci tarafı davranışına sahiptir, ancak bunun yerine uygulamanın yapması gerekebilecek tüm gezinme, sorgu ve güncelleştirmelerin sunucusuna güvenmesi gerekir. Kullanıcı tarafından yapılan her yeni işlem, son kullanıcının tarayıcısına tam sayfa yeniden yükleme işlemi ile yeni bir Web isteğine çevrilir. Klasik model-görünüm-denetleyicisi (MVC) çerçeveleri genellikle bu yaklaşımı, farklı bir denetleyici eylemine karşılık gelen her yeni istekle birlikte çalışarak, bir modelle birlikte çalışarak bir görünüm döndürecek şekilde izler. Belirli bir sayfadaki bazı ayrı işlemler AJAX (zaman uyumsuz JavaScript ve XML) işlevselliğiyle geliştirilebilir, ancak uygulamanın genel mimarisi birçok farklı MVC görünümü ve URL uç noktası kullandı. Ayrıca, ASP.NET Core MVC, MVC stili sayfaları düzenlemenin daha basit bir yolunu da Razor Pages destekler.
+Geleneksel web uygulamaları çok az istemci tarafı davranışı içeriyordu, ancak bunun yerine uygulamanın yapması gerekebilecek tüm gezinme, sorgular ve güncelleştirmeler için sunucuya güvendi. Kullanıcı tarafından yapılan her yeni işlem yeni bir web isteğine dönüştürülür ve sonuç son kullanıcının tarayıcısında tam sayfa yeniden yüklenir. Klasik Model Görünümü-Denetleyicisi (MVC) çerçeveleri genellikle bu yaklaşımı izler, her yeni istek farklı bir denetleyici eylemine karşılık gelir, bu da bir modelle çalışır ve bir görünüm döndürer. Belirli bir sayfadaki bazı bireysel işlemler AJAX (Asynchronous JavaScript ve XML) işlevleriyle geliştirilebilir, ancak uygulamanın genel mimarisinde birçok farklı MVC görünümü ve URL bitiş noktası kullanılmıştır. Buna ek olarak, ASP.NET Core MVC de Razor Pages, MVC tarzı sayfaları düzenlemek için daha basit bir yolu destekler.
 
-Tek sayfalı uygulamalar (maça), aksine, dinamik olarak üretilen çok sayıda sunucu tarafı sayfa yükü (varsa) içerir. Birçok Spaon, uygulamayı başlatmak ve çalıştırmak için gerekli JavaScript kitaplıklarını yükleyen statik bir HTML dosyası içinde başlatılır. Bu uygulamalar, veri ihtiyaçları için Web API 'lerinin yoğun bir şekilde kullanılmasını sağlar ve çok daha zengin kullanıcı deneyimleri sağlayabilir.
+Tek Sayfa uygulamaları (SPA'lar), bunun aksine, çok az dinamik olarak oluşturulan sunucu tarafı sayfa yüklerini içerir (varsa). Birçok SCA, uygulamayı başlatmak ve çalıştırmak için gerekli JavaScript kitaplıklarını yükleyen statik bir HTML dosyası nda başlatılır. Bu uygulamalar, veri ihtiyaçları için web API'lerini yoğun olarak kullanır ve çok daha zengin kullanıcı deneyimleri sağlayabilir.
 
-Birçok Web uygulaması geleneksel Web uygulaması davranışının (genellikle içerik için) ve maça (etkileşim için) bir birleşimini içerir. ASP.NET Core, aynı araç ve temel çerçeve kitaplıklarını kullanarak aynı uygulamadaki MVC (görünümler veya sayfa tabanlı) ve Web API 'Lerini destekler.
+Birçok web uygulaması, geleneksel web uygulaması davranışı (genellikle içerik için) ve SCA'ların (etkileşim için) bir birleşimini içerir. ASP.NET Core, aynı araç kümesini ve temel çerçeve kitaplıklarını kullanarak aynı uygulamada hem MVC 'yi (Görünümler veya Sayfa tabanlı) hem de web API'lerini destekler.
 
 ## <a name="simple-development-and-deployment"></a>Basit geliştirme ve dağıtım
 
-ASP.NET Core uygulamalar basit metin düzenleyicileri, komut satırı arabirimleri veya Visual Studio gibi tam özellikli geliştirme ortamları kullanılarak yazılabilir. Tek parçalı uygulamalar genellikle tek bir uç noktaya dağıtılır. Dağıtımlar sürekli tümleştirme (CI) ve sürekli teslim (CD) işlem hattının parçası olarak kolayca otomatikleştirilebilir. Geleneksel CI/CD araçlarına ek olarak, Microsoft Azure Git depoları için tümleşik desteğe sahiptir ve belirli bir git dalında veya etiketinde yapılan güncelleştirmeleri otomatik olarak dağıtabilir. Azure DevOps, tam özellikli bir CI/CD derleme ve dağıtım Işlem hattı sağlar ve GitHub eylemleri orada barındırılan projeler için başka bir seçenek sağlar.
+ASP.NET Core uygulamaları basit metin editörleri ve komut satırı arabirimleri veya Visual Studio gibi tam özellikli geliştirme ortamları kullanılarak yazılabilir. Monolitik uygulamalar genellikle tek bir uç noktaya dağıtılır. Dağıtımlar, sürekli tümleştirme (CI) ve sürekli teslimat (CD) ardışık hattının bir parçası olarak kolayca otomatikleştirilebilir. Microsoft Azure, geleneksel CI/CD araçlarına ek olarak git depoları için tümleşik desteğe sahiptir ve güncelleştirmeleri belirli bir git dalı veya etiketinde yapıldıkça otomatik olarak dağıtabilir. Azure DevOps tam özellikli bir CI/CD oluşturma ve dağıtım ardışık hattı sağlarken, GitHub Eylemleri burada barındırılan projeler için başka bir seçenek sunar.
 
-## <a name="traditional-aspnet-and-web-forms"></a>Geleneksel ASP.NET ve Web Forms
+## <a name="traditional-aspnet-and-web-forms"></a>Geleneksel ASP.NET ve Web Formları
 
-ASP.NET Core buna ek olarak, geleneksel ASP.NET 4. x Web uygulamaları oluşturmaya yönelik sağlam ve güvenilir bir platform olmaya devam etmektedir. ASP.NET, MVC ve Web API Geliştirme modellerini destekler, ayrıca zengin sayfa tabanlı uygulama geliştirmeye uygun olan ve zengin bir üçüncü taraf bileşen ekosistemi özelliklerine sahip olan Web Forms. Microsoft Azure, ASP.NET 4. x uygulamaları için harika bir destek içerir ve bu platformda çok sayıda geliştirici tanıdık gelecektir.
+ASP.NET Core'a ek olarak, geleneksel ASP.NET 4.x, web uygulamaları oluşturmak için sağlam ve güvenilir bir platform olmaya devam etmektedir. ASP.NET, MVC ve Web API geliştirme modellerinin yanı sıra zengin sayfa tabanlı uygulama geliştirme için çok uygun olan ve zengin bir üçüncü taraf bileşen ekosistemine sahip Web Formlarını destekler. Microsoft Azure, ASP.NET 4.x uygulamaları için uzun zamandır devam eden büyük bir desteğe sahiptir ve birçok geliştirici bu platforma aşinadır.
 
 ## <a name="blazor"></a>Blazor
 
-Blazor ASP.NET Core 3,0 ve üzeri bir sürüme dahildir. Razor, C#ve ASP.NET Core kullanarak zengin etkileşimli Web istemcisi uygulamaları oluşturmaya yönelik yeni bir mekanizma sağlar. Modern Web uygulamaları geliştirirken göz önünde bulundurmanız gereken başka bir çözüm sunar. Göz önünde bulundurmanız gereken iki Blazor sürümü vardır: sunucu tarafı ve istemci tarafı.
+Blazor core 3.0 ve daha sonra ASP.NET ile dahildir. Razor, C#ve ASP.NET Core kullanarak zengin etkileşimli web istemcisi uygulamaları oluşturmak için yeni bir mekanizma sağlar. Modern web uygulamaları geliştirirken göz önünde bulundurulması gereken başka bir çözüm sunar. Blazor'un göz önünde bulundurulması gereken iki sürümü vardır: sunucu tarafı ve istemci tarafı.
 
-Sunucu tarafı Blazor ASP.NET Core 3,0 ile 2019 ' de yayımlanmıştır. Adından da anlaşılacağı gibi, sunucu üzerinde çalışır ve değişiklikler istemci belgesinde ağ üzerinden tarayıcıya geri getirilir. Sunucu tarafı Blazor, istemci tarafı JavaScript gerekmeden ve her istemci sayfa etkileşimi için ayrı sayfa yükleri gerekmeden zengin bir istemci deneyimi sağlar. Yüklenen sayfadaki değişiklikler sunucu tarafından istenir ve işlenir ve ardından SignalR kullanılarak istemciye geri gönderilir.
+Sunucu tarafı Blazor, 2019 yılında ASP.NET Core 3.0 ile piyasaya sürüldü. Adından da anlaşılacağı gibi, sunucuda çalışır ve istemci belgesindeki değişiklikleri ağ üzerinden tarayıcıya geri döndürer. Sunucu tarafı Blazor, istemci tarafı JavaScript gerektirmeden ve her istemci sayfası etkileşimi için ayrı sayfa yükleri gerektirmeden zengin bir istemci deneyimi sağlar. Yüklenen sayfadaki değişiklikler sunucudan istenir ve sunucu tarafından işlenir ve SignalR kullanılarak istemciye geri gönderilir.
 
-İstemci tarafı Blazor 2020 ' de yayımlanacak ve sunucudaki değişiklikleri işleme gereksinimini ortadan kaldıracak. Bunun yerine, istemci içinde .NET kodu çalıştırmak için WebAssembly 'ten faydalanır. İstemci, veri istemek için gerekliyse sunucuya API çağrıları yapmaya devam edebilir, ancak tüm istemci tarafı davranışı, tüm büyük tarayıcılarda zaten desteklenen ve yalnızca bir JavaScript kitaplığı olduğu WebAssembly aracılığıyla istemcide çalışır.
+İstemci tarafı Blazor 2020 yılında piyasaya sürülecek ve sunucuda değişiklik oluşturma ihtiyacını ortadan kaldıracaktır. Bunun yerine, istemci içinde .NET kodunu çalıştırmak için WebAssembly kaldıraç olacaktır. İstemci, veri istemek için gerekirse sunucuya API çağrıları yapmaya devam edebilir, ancak tüm istemci tarafı davranışı zaten tüm büyük tarayıcılar tarafından desteklenen ve yalnızca bir Javascript kitaplığı olan WebAssembly üzerinden istemcide çalışır.
 
-> ### <a name="references--modern-web-applications"></a>Başvurular – Modern Web uygulamaları
+> ### <a name="references--modern-web-applications"></a>Referanslar – Modern Web Uygulamaları
 >
-> - **ASP.NET Core giriş**  
+> - **ASP.NET Core’a Giriş**  
 >   <https://docs.microsoft.com/aspnet/core/>
-> - **ASP.NET Core 'de test etme**  
+> - **ASP.NET Core'da Test**  
 >   <https://docs.microsoft.com/aspnet/core/testing/>
-> - **Blazor-kullanmaya başlama**  
+> - **Blazor - Başlayın**  
 >   <https://blazor.net/docs/get-started.html>
 
 >[!div class="step-by-step"]
 >[Önceki](index.md)
->[İleri](choose-between-traditional-web-and-single-page-apps.md)
+>[Sonraki](choose-between-traditional-web-and-single-page-apps.md)

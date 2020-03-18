@@ -1,30 +1,30 @@
 ---
-title: Belirli bir ada sahip eşdüzey öğelerinin özniteliklerini bulma (XPath-LINQ to XML) (C#)
+title: Belirli bir ada sahip kardeşlerin özniteliklerini bulma (XPath-LINQ- XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: c3133d64-523f-422d-8838-73d36b945ca0
-ms.openlocfilehash: 788945232874ed5c1ba9a8a43c10eaf012320cbb
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 331e1a7f432f4d06b697180b1594106ec6842c9a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141133"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169265"
 ---
-# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>Belirli bir ada sahip eşdüzey öğelerinin özniteliklerini bulma (XPath-LINQ to XML) (C#)
-Bu konu, bağlam düğümünün eşdüzey öğelerinin tüm özniteliklerinin nasıl bulunacağını gösterir. Koleksiyonda yalnızca belirli bir ada sahip öznitelikler döndürülür.  
+# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>Belirli bir ada sahip kardeşlerin özniteliklerini bulma (XPath-LINQ- XML) (C#)
+Bu konu, bağlam düğümünün kardeşlerinin tüm özniteliklerini nasıl bulabileceğinizi gösterir. Yalnızca belirli bir ada sahip öznitelikler koleksiyonda döndürülür.  
   
  XPath ifadesi:  
   
  `../Book/@id`  
   
 ## <a name="example"></a>Örnek  
- Bu örnek öncelikle bir `Book` öğesi bulur ve sonra `Book`adlı tüm eşdüzey öğeleri bulur ve ardından `id`adlı tüm öznitelikleri bulur. Sonuç, özniteliklerin koleksiyonudur.  
+ Bu örnekte `Book` önce bir öğe yi bulur, sonra adlı `Book`tüm `id`kardeş öğeleri bulur ve sonra adlı tüm öznitelikleri bulur. Sonuç özniteliklerin bir koleksiyondur.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: kitaplar (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
+ Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Kitaplar (LINQ-XML)](./sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
   
-XElement book =   
+XElement book =
     books  
     .Root  
     .Element("Book");  
@@ -47,7 +47,7 @@ foreach (XAttribute el in list1)
     Console.WriteLine(el);  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```output  
 Results are identical  

@@ -1,42 +1,42 @@
 ---
 ms.openlocfilehash: 494e792d63a611cdaedf3e40aa607cfbb0420ae4
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75902044"
 ---
-### <a name="authentication-newtonsoftjson-types-replaced"></a>Kimlik doğrulaması: Newtonsoft. JSON türleri değişti
+### <a name="authentication-newtonsoftjson-types-replaced"></a>Kimlik doğrulama: Newtonsoft.Json türleri değiştirildi
 
-ASP.NET Core 3,0 ' de, kimlik doğrulama API 'Lerinde kullanılan `Newtonsoft.Json` türler `System.Text.Json` türleriyle değiştirilmiştir. Aşağıdaki durumlar hariç, kimlik doğrulama paketlerinin temel kullanımı etkilenmemiştir:
+Core 3.0ASP.NET, `Newtonsoft.Json` Kimlik Doğrulama API'lerinde kullanılan `System.Text.Json` türler türleri ile değiştirilmiştir. Aşağıdaki durumlar dışında, Kimlik Doğrulama paketlerinin temel kullanımı etkilenmez:
 
-* , [ASPNET-contrib](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers)gibi OAuth sağlayıcılardan türetilmiş sınıflar.
-* Gelişmiş talep işleme uygulamaları.
+* [Aspnet-contrib'den](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers)olanlar gibi OAuth sağlayıcılarından türetilen sınıflar.
+* Gelişmiş talep manipülasyon uygulamaları.
 
-Daha fazla bilgi için bkz. [DotNet/aspnetcore # 7105](https://github.com/dotnet/aspnetcore/pull/7105). Tartışma için bkz. [DotNet/aspnetcore # 7289](https://github.com/dotnet/aspnetcore/issues/7289).
+Daha fazla bilgi için [dotnet/aspnetcore#7105'e](https://github.com/dotnet/aspnetcore/pull/7105)bakın. Tartışma için [dotnet/aspnetcore#7289'a](https://github.com/dotnet/aspnetcore/issues/7289)bakın.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3.0
+3,0
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Türetilmiş OAuth uygulamaları için en yaygın değişiklik, [burada](https://github.com/dotnet/aspnetcore/pull/7105/files?utf8=%E2%9C%93&diff=unified&w=1#diff-e1c9f9740a6fe8021020a6f249c589b0L40)gösterildiği gibi `CreateTicketAsync` geçersiz kılmada `JsonDocument.Parse` `JObject.Parse`. `JsonDocument` `IDisposable`uygular.
+Türemiş OAuth uygulamaları için, en `JObject.Parse` yaygın `JsonDocument.Parse` değişiklik `CreateTicketAsync` [burada](https://github.com/dotnet/aspnetcore/pull/7105/files?utf8=%E2%9C%93&diff=unified&w=1#diff-e1c9f9740a6fe8021020a6f249c589b0L40)gösterildiği gibi geçersiz kılma ile değiştirmektir. `JsonDocument``IDisposable`uygular.
 
-Aşağıdaki listede bilinen değişiklikler özetlenmektedir:
+Aşağıdaki liste bilinen değişiklikleri özetleyerek:
 
-- <xref:Microsoft.AspNetCore.Authentication.OAuth.Claims.ClaimAction.Run(Newtonsoft.Json.Linq.JObject,System.Security.Claims.ClaimsIdentity,System.String)?displayProperty=nameWithType> `ClaimAction.Run(JsonElement userData, ClaimsIdentity identity, string issuer)`olur. `ClaimAction` türetilen tüm uygulamalar benzer şekilde etkilenir.
-- <xref:Microsoft.AspNetCore.Authentication.ClaimActionCollectionMapExtensions.MapCustomJson(Microsoft.AspNetCore.Authentication.OAuth.Claims.ClaimActionCollection,System.String,System.Func{Newtonsoft.Json.Linq.JObject,System.String})?displayProperty=nameWithType> `MapCustomJson(this ClaimActionCollection collection, string claimType, Func<JsonElement, string> resolver)` olur
-- <xref:Microsoft.AspNetCore.Authentication.ClaimActionCollectionMapExtensions.MapCustomJson(Microsoft.AspNetCore.Authentication.OAuth.Claims.ClaimActionCollection,System.String,System.String,System.Func{Newtonsoft.Json.Linq.JObject,System.String})?displayProperty=nameWithType> `MapCustomJson(this ClaimActionCollection collection, string claimType, string valueType, Func<JsonElement, string> resolver)` olur
-- <xref:Microsoft.AspNetCore.Authentication.OAuth.OAuthCreatingTicketContext> eski bir Oluşturucu kaldırılmıştır ve diğer `JObject` `JsonElement`ile değiştirilmiştir. `User` özelliği ve `RunClaimActions` yöntemi eşleşecek şekilde güncelleştirildi.
-- <xref:Microsoft.AspNetCore.Authentication.OAuth.OAuthTokenResponse.Success(Newtonsoft.Json.Linq.JObject)> artık `JObject`yerine `JsonDocument` türünde bir parametre kabul eder. `Response` özelliği eşleşecek şekilde güncelleştirildi. `OAuthTokenResponse` artık atılabilir ve `OAuthHandler`tarafından bırakılacak. `ExchangeCodeAsync` geçersiz kılan türetilmiş OAuth uygulamalarının `JsonDocument` veya `OAuthTokenResponse`atma gereksinimi yoktur.
-- <xref:Microsoft.AspNetCore.Authentication.OpenIdConnect.UserInformationReceivedContext.User?displayProperty=nameWithType> `JObject` `JsonDocument`olarak değiştirildi.
-- <xref:Microsoft.AspNetCore.Authentication.Twitter.TwitterCreatingTicketContext.User?displayProperty=nameWithType> `JObject` `JsonElement`olarak değiştirildi.
-- <xref:Microsoft.AspNetCore.Authentication.Twitter.TwitterHandler.CreateTicketAsync(System.Security.Claims.ClaimsIdentity,Microsoft.AspNetCore.Authentication.AuthenticationProperties,Microsoft.AspNetCore.Authentication.Twitter.AccessToken,Newtonsoft.Json.Linq.JObject)?displayProperty=nameWithType>, `JObject` kabul `JsonElement`olarak değiştirildi.
+- <xref:Microsoft.AspNetCore.Authentication.OAuth.Claims.ClaimAction.Run(Newtonsoft.Json.Linq.JObject,System.Security.Claims.ClaimsIdentity,System.String)?displayProperty=nameWithType>olur. `ClaimAction.Run(JsonElement userData, ClaimsIdentity identity, string issuer)` Tüm türetilmiş `ClaimAction` uygulamalar benzer şekilde etkilenir.
+- <xref:Microsoft.AspNetCore.Authentication.ClaimActionCollectionMapExtensions.MapCustomJson(Microsoft.AspNetCore.Authentication.OAuth.Claims.ClaimActionCollection,System.String,System.Func{Newtonsoft.Json.Linq.JObject,System.String})?displayProperty=nameWithType>Olur`MapCustomJson(this ClaimActionCollection collection, string claimType, Func<JsonElement, string> resolver)`
+- <xref:Microsoft.AspNetCore.Authentication.ClaimActionCollectionMapExtensions.MapCustomJson(Microsoft.AspNetCore.Authentication.OAuth.Claims.ClaimActionCollection,System.String,System.String,System.Func{Newtonsoft.Json.Linq.JObject,System.String})?displayProperty=nameWithType>Olur`MapCustomJson(this ClaimActionCollection collection, string claimType, string valueType, Func<JsonElement, string> resolver)`
+- <xref:Microsoft.AspNetCore.Authentication.OAuth.OAuthCreatingTicketContext>eski bir yapıcı kaldırıldı ve diğer `JObject` ile `JsonElement`değiştirildi . Özellik `User` ve `RunClaimActions` yöntem eşleşecek şekilde güncelleştirildi.
+- <xref:Microsoft.AspNetCore.Authentication.OAuth.OAuthTokenResponse.Success(Newtonsoft.Json.Linq.JObject)>şimdi yerine tür `JsonDocument` bir parametre `JObject`kabul eder. Özellik `Response` eşleşecek şekilde güncelleştirildi. `OAuthTokenResponse`şimdi tek kullanımlık ve `OAuthHandler`tarafından bertaraf edilecektir . Türetilmiş OAuth `ExchangeCodeAsync` uygulamaları geçersiz veya elden `JsonDocument` `OAuthTokenResponse`çıkarmak gerekmez.
+- <xref:Microsoft.AspNetCore.Authentication.OpenIdConnect.UserInformationReceivedContext.User?displayProperty=nameWithType>'den' `JsonDocument`e `JObject` değiştirildi.
+- <xref:Microsoft.AspNetCore.Authentication.Twitter.TwitterCreatingTicketContext.User?displayProperty=nameWithType>'den' `JsonElement`e `JObject` değiştirildi.
+- <xref:Microsoft.AspNetCore.Authentication.Twitter.TwitterHandler.CreateTicketAsync(System.Security.Claims.ClaimsIdentity,Microsoft.AspNetCore.Authentication.AuthenticationProperties,Microsoft.AspNetCore.Authentication.Twitter.AccessToken,Newtonsoft.Json.Linq.JObject)?displayProperty=nameWithType>kabul `JObject` etmekten `JsonElement`' e değiştirildi.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Core
+ASP.NET Çekirdeği
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

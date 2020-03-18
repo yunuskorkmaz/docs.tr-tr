@@ -1,18 +1,18 @@
 ---
-title: Anonim bir tür (C#) proje
+title: Anonim bir tür (C#) nasıl yansıtılatır?
 ms.date: 07/20/2015
 ms.assetid: 5cb9be13-5ac4-4373-a034-b3520a5b2dec
 ms.openlocfilehash: 7797c8bfb12943af1ce7f975b170bf002aa7d6fc
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345728"
 ---
-# <a name="how-to-project-an-anonymous-type-c"></a>Anonim bir tür (C#) proje
-Bazı durumlarda, bu türü yalnızca kısa bir süre kullanacağınızı bildiğiniz halde yeni bir türe bir sorgu için proje yapmak isteyebilirsiniz. Projeksiyon içinde kullanmak için yeni bir tür oluşturmaya yönelik çok fazla iş vardır. Bu örnekte daha verimli bir yaklaşım, bir anonim türe projem değildir. Anonim türler sınıfı tanımlamanızı sağlar, sonra sınıfa bir ad vermeden bu sınıfın bir nesnesini bildirip başlatabilir.  
+# <a name="how-to-project-an-anonymous-type-c"></a>Anonim bir tür (C#) nasıl yansıtılatır?
+Bazı durumlarda, bu türü yalnızca kısa bir süre için kullanacağınızı biliyor olsanız bile, sorguyabilir. Sadece projeksiyon kullanmak için yeni bir tür oluşturmak için ekstra iş bir sürü. Bu durumda daha verimli bir yaklaşım anonim bir tür proje etmektir. Anonim türler, sınıfa bir ad vermeden bir sınıf tanımlamanıza ve bu sınıfın bir nesnesini bildirmenize ve başlatmanıza olanak sağlar.  
   
- Anonim türler, bir C# *tanımlama*grubunun matematik kavramının uygulamasıdır. Matematiksel terim tanımlama grubu, tek, Çift, Üçlü, dörtlü, quintuple, n-Tuple dizisinden kaynakdır. Belirli bir türün her biri, sınırlı bir nesne dizisine başvurur. Bazen buna ad/değer çiftleri listesi denir. Örneğin, [örnek XML dosyasındaki bir adresin içeriği: tipik satın alma siparişi (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML belgesi şu şekilde ifade edilebilir:  
+ Anonim türleri bir *tuple*matematiksel kavramının C # uygulamasıdır. Matematiksel terim tuple dizi tek, çift, üçlü, dörtlü, beşli, n-tuple kökenlidir. Her biri belirli bir türde olan sonlu bir nesne dizisini ifade eder. Bazen bu ad/değer çiftleri listesi olarak adlandırılır. Örneğin, Örnek XML Dosyasındaki bir adresin [içeriği: Tipik SatınAlma Siparişi (LINQ - XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML belgesi aşağıdaki gibi ifade edilebilir:  
   
 ```text  
 Name: Ellen Adams  
@@ -23,12 +23,12 @@ Zip: 90952
 Country: USA  
 ```  
   
- Anonim bir türün bir örneğini oluşturduğunuzda, bunu bir sıra n grubu oluşturarak düşünmek kullanışlıdır. `select` yan tümcesinde bir tanımlama grubu oluşturan bir sorgu yazarsanız sorgu, tanımlama grubunun bir `IEnumerable` döndürür.  
+ Anonim bir türbir örnek oluşturduğunuzda, bunu n sırasının bir tuple'ı oluşturmak olarak düşünmek uygundur. `select` Yan tümcede bir tuple oluşturan bir sorgu yazarsanız, sorgu bir `IEnumerable` tuple döndürür.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, `select` yan tümcesi anonim bir tür. Örnek daha sonra `IEnumerable` nesnesini oluşturmak için `var` kullanır. `foreach` döngüsünün içinde, yineleme değişkeni sorgu ifadesinde oluşturulan anonim türün bir örneği haline gelir.  
+ Bu örnekte, `select` yan tümce anonim bir türü projeleri. Örnek daha `var` sonra nesneyi `IEnumerable` oluşturmak için kullanır. `foreach` Döngü içinde, yineleme değişkeni sorgu ifadesinde oluşturulan anonim türbir örneği olur.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Müşteriler ve Siparişler (LINQ-XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  

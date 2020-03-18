@@ -1,5 +1,5 @@
 ---
-title: Belge etiketleri için sınırlayıcılar- C# Programlama Kılavuzu
+title: Dokümantasyon etiketleri için sınır dışı layıcılar - C# programlama kılavuzu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [C#], delimiters
@@ -7,38 +7,38 @@ helpviewer_keywords:
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
 ms.openlocfilehash: dd4ddb3b324bd6d235efb541c90875dbe9ed4c2d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789827"
 ---
-# <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Belge etiketleri için sınırlayıcılar (C# Programlama Kılavuzu)
+# <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Belge etiketleri için sınır layıcılar (C# programlama kılavuzu)
 
-XML belgesi açıklamalarının kullanılması, bir belge açıklamasının başladığı ve bittiği derleyicisine işaret eden sınırlayıcıları gerektirir. XML belge etiketleriyle aşağıdaki tür sınırlayıcıları kullanabilirsiniz:
+XML doküman açıklamalarının kullanımı, belge leme yorumunun başladığı ve bittiği derleyiciye işaret eden sınırlayıcılar gerektirir. Aşağıdaki tür delimiterleri XML belge etiketleri ile kullanabilirsiniz:
 
 - `///`
 
-  Tek satırlık sınırlayıcı. Bu, belge örneklerinde gösterilen ve görsel C# proje şablonları tarafından kullanılan formdur. Sınırlayıcıyı izleyen bir boşluk karakteri varsa, bu karakter XML çıktısına dahil edilmez.
+  Tek satırlı sınırlayıcı. Bu, dokümantasyon örneklerinde gösterilen ve Visual C# proje şablonları tarafından kullanılan formdur. Delimiter'ı izleyen bir beyaz boşluk karakteri varsa, bu karakter XML çıkışına dahil edilmez.
 
   > [!NOTE]
-  > Visual Studio IDE, akıllı yorum düzenleme adlı bir özelliğe sahiptir. Bu, \<Özet > \<ve/Summary > etiketlerini otomatik olarak ekler ve kod düzenleyicisinde `///` ayırıcısını yazdıktan sonra imlecinizi bu etiketlerin içine taşımıştır. [Seçenekler iletişim kutusunda](/visualstudio/ide/reference/options-text-editor-csharp-advanced)bu özelliği etkinleştirebilir veya devre dışı bırakabilirsiniz.
+  > Visual Studio IDE, Kod Düzenleyicisi'nde \< \< `///` sınır çözücüyazdıktan sonra özet> ve/özet> etiketleri otomatik olarak ekleyen ve imlecinizi bu etiketlere sokan Smart Comment Editing adlı bir özelliğe sahiptir. Bu özelliği [Seçenekler iletişim kutusunda](/visualstudio/ide/reference/options-text-editor-csharp-advanced)açabilir veya kapatabilirsiniz.
   
 - `/** */`
 
-  Çok satırlı sınırlayıcılar.
+  Çok hatlı sınırlayıcılar.
 
-  `/** */` sınırlayıcılarını kullanırken izlenecek bazı biçimlendirme kuralları vardır:
+  `/** */` Sınır aşanları kullandığınızda uymanız gereken bazı biçimlendirme kuralları vardır:
   
-  - `/**` sınırlayıcısı içeren satırda, satırın geri kalanı boşluk ise, satır Yorumlar için işlenmez. `/**` sınırlayıcısından sonraki ilk karakter boşluk ise, bu boşluk karakteri yok sayılır ve satırın geri kalanı işlenir. Aksi takdirde, `/**` sınırlayıcısından sonra çizginin tüm metni açıklamanın bir parçası olarak işlenir.
+  - `/**` Sınır dışılayıcıyı içeren satırda, satırın geri kalanı beyaz boşluksa, satır açıklamalar için işlenmez. `/**` Delimiter'dan sonraki ilk karakter beyaz boşluksa, bu beyaz boşluk karakteri yoksayılır ve satırın geri kalanı işlenir. Aksi takdirde, `/**` delimiter sonra satırın tüm metin açıklamanın bir parçası olarak işlenir.
 
-  - `*/` sınırlayıcısı içeren satırda, `*/` sınırlayıcısına yalnızca beyaz boşluk varsa, bu satır yok sayılır. Aksi takdirde, `*/` sınırlayıcısı olan satırdaki metin, açıklama parçası olarak işlenir ve bu, aşağıdaki madde işaretinde açıklanan desenler ile eşleşen kurallara tabidir.
+  - `*/` Delimiter içeren satırda, `*/` delimiter kadar yalnızca beyaz boşluk varsa, bu satır yoksayılır. Aksi takdirde, satırdaki delimiter'a `*/` kadar olan metin, aşağıdaki madde işaretinde açıklanan desen eşleştirme kurallarına tabi olarak yorumun bir parçası olarak işlenir.
   
-  - `/**` sınırlayıcısıyla başlayan satırlar için, derleyici her bir satırın başlangıcında ortak bir model arar. Bu kalıp, isteğe bağlı boşluk ve bir yıldız işareti (`*`) ve ardından daha isteğe bağlı boşluk içerebilir. Derleyici, `/**` sınırlayıcısı veya `*/` sınırlayıcısıyla başlamayan her satırın başlangıcında ortak bir model bulursa, her satır için bu kalıbı yoksayar.
+  - `/**` Delimiter ile başlayan satırlardan sonraki satırlar için derleyici, her satırın başında ortak bir desen arar. Desen isteğe bağlı beyaz alan ve yıldız`*`(), daha isteğe bağlı beyaz alan takip oluşabilir. Derleyici, her satırın başında `/**` delimiter veya `*/` delimiter ile başlamayan ortak bir desen bulursa, her satır için bu deseni yok sayar.
 
   Aşağıdaki örneklerde bu kurallar gösterilmektedir.
 
-  - Aşağıdaki açıklamanın işlenecek tek bir kısmı `<summary>`ile başlayan satırdır. Üç etiket biçimi aynı açıklamaları üretir.
+  - Aşağıdaki yorumun işlenecek tek bölümü `<summary>`ile başlayan satırdır. Üç etiket biçimi aynı yorumları üretir.
 
     ```csharp
     /** <summary>text</summary> */
@@ -52,7 +52,7 @@ XML belgesi açıklamalarının kullanılması, bir belge açıklamasının baş
     */
     ```
 
-  - Derleyici, ikinci ve üçüncü çizgilerin başındaki "\*" ortak bir modelini tanımlar. Bu kalıp çıkışa dahil değildir.
+  - Derleyici, ikinci ve üçüncü \* satırbaşında " " ortak bir desen tanımlar. Desen çıktıya dahil edilmez.
 
     ```csharp
     /**
@@ -60,7 +60,7 @@ XML belgesi açıklamalarının kullanılması, bir belge açıklamasının baş
      * text </summary>*/
     ```
 
-  - Derleyici, aşağıdaki açıklamada ortak bir model bulmadığından, üçüncü satırdaki ikinci karakter bir yıldız işareti değildir. Bu nedenle, ikinci ve üçüncü satırlardaki tüm metinler açıklamanın bir parçası olarak işlenir.
+  - Üçüncü satırdaki ikinci karakter bir yıldız işareti olmadığından derleyici aşağıdaki yorumda ortak bir desen bulamayın. Bu nedenle, ikinci ve üçüncü satırdaki tüm metin yorumun bir parçası olarak işlenir.
 
     ```csharp
     /**
@@ -69,7 +69,7 @@ XML belgesi açıklamalarının kullanılması, bir belge açıklamasının baş
     */
     ```
 
-  - Derleyici, aşağıdaki açıklamada iki nedenden dolayı hiçbir model bulmamalıdır. İlk olarak, yıldız işaretiyle önceki boşluk sayısı tutarlı değil. İkincisi, beşinci satır boşluk ile eşleşmeyen bir sekme ile başlar. Bu nedenle, metnin ikinci ile beş arasındaki tüm metinler, açıklamanın bir parçası olarak işlenir.
+  - Derleyici iki nedenden dolayı aşağıdaki yorumda desen bulaçalışmaz. İlk olarak, yıldız işaretinden önceki boşluk sayısı tutarlı değildir. İkinci olarak, beşinci satır boşluklarla eşleşmeyen bir sekmeyle başlar. Bu nedenle, ikinci satırdan beşe kadar olan tüm metin, yorumun bir parçası olarak işlenir.
 
     <!-- markdownlint-disable MD010 -->
     ```csharp
@@ -84,6 +84,6 @@ XML belgesi açıklamalarının kullanılması, bir belge açıklamasının baş
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Programlama Kılavuzu](../index.md)
-- [XML belge açıklamaları](./index.md)
-- [-Doc (C# derleyici seçenekleri)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [C# programlama kılavuzu](../index.md)
+- [XML belgeleri yorumları](./index.md)
+- [-doc (C# derleyici seçenekleri)](../../language-reference/compiler-options/doc-compiler-option.md)

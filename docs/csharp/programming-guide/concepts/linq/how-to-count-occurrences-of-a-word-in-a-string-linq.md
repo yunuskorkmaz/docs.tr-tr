@@ -1,16 +1,16 @@
 ---
-title: Dizedeki bir sözcüğün tekrarlamalarını sayma (LINQ) (C#)
+title: Bir dizedeki bir sözcüğün oluşumları nasıl sayilir (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
-ms.openlocfilehash: 0411b0c17b57a49e031f078412b9e45692c619fe
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 9c3ac2e0d44d52e437586a4d105a022f75c1dc54
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141345"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169331"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a>Dizedeki bir sözcüğün tekrarlamalarını sayma (LINQ) (C#)
-Bu örnek, bir dizedeki belirli bir sözcüğün tekrarlamalarını saymak için bir LINQ sorgusunun nasıl kullanılacağını gösterir. Sayıyı tamamlamak için öncelikle <xref:System.String.Split%2A> yönteminin bir dizi sözcük oluşturmak için çağrıldığını unutmayın. <xref:System.String.Split%2A> yönteminin performans maliyeti vardır. Dizedeki tek işlem kelimeleri saymaya ise bunun yerine <xref:System.Text.RegularExpressions.Regex.Matches%2A> veya <xref:System.String.IndexOf%2A> yöntemlerini kullanmayı düşünmelisiniz. Ancak, performans kritik bir sorun değilse veya tümceyi zaten böldüğünüz takdirde, diğer sorgu türlerini kullanmak için tümceyi daha önce ayırdıysanız, LINQ 'ı kullanarak sözcükleri veya tümceleri de saymanız mantıklıdır.  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a>Bir dizedeki bir sözcüğün oluşumları nasıl sayilir (LINQ) (C#)
+Bu örnek, bir dize de belirtilen bir sözcüğün oluşumları saymak için linq sorgusu nasıl kullanılacağını gösterir. Sayımı gerçekleştirmek için önce <xref:System.String.Split%2A> bir sözcük dizisi oluşturmak için yöntemin çağrıldığını unutmayın. Yöntemin <xref:System.String.Split%2A> bir performans maliyeti vardır. Dizedeki tek işlem sözcükleri saymaksa, bunun <xref:System.Text.RegularExpressions.Regex.Matches%2A> <xref:System.String.IndexOf%2A> yerine yöntemleri kullanmayı düşünmelisiniz. Ancak, performans kritik bir sorun değilse veya üzerinde başka tür de sorguları gerçekleştirmek için cümleyi zaten böldüyseniz, sözcükleri veya tümcecikleri de saymak için LINQ'yi kullanmak mantıklıdır.  
   
 ## <a name="example"></a>Örnek  
   
@@ -35,7 +35,7 @@ class CountWords
         //Convert the string into an array of words  
         string[] source = text.Split(new char[] { '.', '?', '!', ' ', ';', ':', ',' }, StringSplitOptions.RemoveEmptyEntries);  
   
-        // Create the query.  Use ToLowerInvariant to match "data" and "Data"   
+        // Create the query.  Use ToLowerInvariant to match "data" and "Data"
         var matchQuery = from word in source  
                          where word.ToLowerInvariant() == searchTerm.ToLowerInvariant()  
                          select word;  
@@ -55,8 +55,8 @@ class CountWords
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- System. C# lınq ve System.IO ad alanları için `using` yönergeler içeren bir konsol uygulaması projesi oluşturun.  
+ System.Linq ve System.IO `using` ad alanları için yönergeleri içeren bir C# konsolu uygulama projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (C#)](./linq-and-strings.md)
+- [LINQ ve Dizeleri (C#)](./linq-and-strings.md)

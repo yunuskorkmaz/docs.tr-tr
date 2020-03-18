@@ -1,21 +1,21 @@
 ---
-title: Projeksiyon türünü denetleme (C#)
+title: Projeksiyon türü nasıl kontrol edilebilen (C#)
 ms.date: 07/20/2015
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
 ms.openlocfilehash: cb7c272fbe67c0700b5740691befc483993f4e29
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141357"
 ---
-# <a name="how-to-control-the-type-of-a-projection-c"></a>Projeksiyon türünü denetleme (C#)
-Projeksiyon, tek bir veri kümesini alma, filtreleme, şeklini değiştirme ve hatta türünü değiştirme işlemidir. Çoğu sorgu ifadesi tahminleri gerçekleştirir. Bu bölümde gösterilen sorgu ifadelerinin çoğu, <xref:System.Xml.Linq.XElement><xref:System.Collections.Generic.IEnumerable%601> değerlendirin, ancak başka türden Koleksiyonlar oluşturmak için projeksiyonun türünü kontrol edebilirsiniz. Bu konuda bunun nasıl yapılacağı gösterilmektedir.  
+# <a name="how-to-control-the-type-of-a-projection-c"></a>Projeksiyon türü nasıl kontrol edilebilen (C#)
+Projeksiyon, bir veri kümesini alma, filtreleme, şeklini değiştirme ve hatta türünü değiştirme işlemidir. Sorgu ifadelerinin çoğu projeksiyonlar gerçekleştirir. Bu bölümde gösterilen sorgu ifadelerinin çoğu <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement>, ancak diğer tür koleksiyonları oluşturmak için projeksiyon türünü denetleyebilirsiniz. Bu konu, bunun nasıl yapılacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, `Customer`yeni bir türü tanımlar. Sorgu ifadesi daha sonra `Select` yan tümcesinde yeni `Customer` nesneleri başlatır. Bu, sorgu ifadesinin türünün `Customer`<xref:System.Collections.Generic.IEnumerable%601> olmasına neden olur.  
+ Aşağıdaki örnekte yeni bir `Customer`tür tanımlanır. Sorgu ifadesi daha sonra `Customer` `Select` yan tümcedeki yeni nesneleri anında inceler. Bu, sorgu ifadesinin türüne <xref:System.Collections.Generic.IEnumerable%601> `Customer`neden olur.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Müşteriler ve Siparişler (LINQ-XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 public class Customer  

@@ -1,78 +1,78 @@
 ---
-title: Dize içeriğini değiştirme- C# kılavuz
+title: Dize içeriği nasıl değiştirilir - C# Guide
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
 ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543267"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>C\# dize içeriklerini değiştirme
+# <a name="how-to-modify-string-contents-in-c"></a>C'de dize içeriği nasıl değiştirilir?\#
 
-Bu makalede, var olan bir `string`değiştirerek `string` oluşturmak için çeşitli teknikler gösterilmektedir. Gösterilen tüm teknikler, değişikliklerin sonucunu yeni bir `string` nesne olarak döndürür. Bunu açıkça göstermek için örneklerin hepsi, sonucu yeni bir değişkende depolar. Ardından, her bir örneği çalıştırdığınızda hem özgün `string` hem de değişiklikten kaynaklanan `string` inceleyebilirsiniz.
+Bu makalede, varolan `string` `string`bir değiştirerek bir üretmek için çeşitli teknikler gösterir. Tüm teknikler yeni `string` bir nesne olarak değişikliklerin sonucu nu döndürtün gösterdi. Bunu açıkça göstermek için, örneklerin tümü sonucu yeni bir değişkende saklar. Daha sonra her örneği `string` çalıştırdığınızda hem orijinali hem de değişiklikten `string` kaynaklanan sonucu inceleyebilirsiniz.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-Bu makalede çeşitli teknikler verilmiştir. Varolan metni değiştirebilirsiniz. Desen arayabilir ve eşleşen metni başka metinle değiştirebilirsiniz. Bir dizeyi bir karakter dizisi olarak kabul edebilirsiniz. Beyaz alanı kaldırmak için kullanışlı yöntemler de kullanabilirsiniz. Senaryonuza en yakından eşleşen teknikleri seçmeniz gerekir.
+Bu makalede gösterilen çeşitli teknikler vardır. Varolan metni değiştirebilirsiniz. Desenleri arayabilir ve eşleşen metni diğer metinlerle değiştirebilirsiniz. Bir dizeyi bir karakter dizisi olarak değerlendirebilirsiniz. Ayrıca, beyaz alanı kaldıran kolaylık yöntemleri de kullanabilirsiniz. Senaryonuzla en yakından eşleşen teknikleri seçmelisiniz.
 
-## <a name="replace-text"></a>Metni Değiştir
+## <a name="replace-text"></a>Metni değiştirme
 
-Aşağıdaki kod, var olan metni bir değiştirme ile değiştirerek yeni bir dize oluşturur.
+Aşağıdaki kod, varolan metni bir yedekle değiştirerek yeni bir dize oluşturur.
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#1)]
 
-Yukarıdaki kod, dizelerin bu *sabit* özelliğini gösterir. Önceki örnekte, `source`özgün dizesinin değiştirilmediğini görebilirsiniz. <xref:System.String.Replace%2A?displayProperty=nameWithType> yöntemi, değişiklikleri içeren yeni bir `string` oluşturur.
+Önceki kod dizeleri bu *değişmez* özelliğini gösterir. Yukarıdaki örnekte, özgün dize, `source`, , değiştirilmediğini görebilirsiniz. Yöntem, <xref:System.String.Replace%2A?displayProperty=nameWithType> değişiklikleri içeren `string` yeni bir yöntem oluşturur.
 
-<xref:System.String.Replace%2A> yöntemi dizeleri ya da tek karakterleri değiştirebilir. Her iki durumda da, aranan metnin her oluşumu değiştirilmiştir.  Aşağıdaki örnek tüm ' ' karakterlerini '\_' ile değiştirir:
+Yöntem <xref:System.String.Replace%2A> dizeleri veya tek karakter değiştirebilirsiniz. Her iki durumda da, aranan metnin her oluşumu değiştirilir.  Aşağıdaki örnektüm ' ' karakterlerinin\_yerine ' ' ile '
 
 [!code-csharp-interactive[replace characters](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#2)]
 
-Kaynak dize değiştirilmez ve yeni bir dize değiştirme ile birlikte döndürülür.
+Kaynak dize değişmez ve yeni bir dize değiştirimle döndürülür.
 
-## <a name="trim-white-space"></a>Boşluğu Kırp
+## <a name="trim-white-space"></a>Beyaz alanı kırpın
 
-Baştaki veya sondaki boşlukları kaldırmak için <xref:System.String.Trim%2A?displayProperty=nameWithType>, <xref:System.String.TrimStart%2A?displayProperty=nameWithType>ve <xref:System.String.TrimEnd%2A?displayProperty=nameWithType> yöntemlerini kullanabilirsiniz.  Aşağıdaki kod, her birine bir örnek gösterir. Kaynak dize değişmez; Bu yöntemler, değiştirilen içeriğe sahip yeni bir dize döndürür.
+Herhangi bir <xref:System.String.Trim%2A?displayProperty=nameWithType>satır <xref:System.String.TrimStart%2A?displayProperty=nameWithType>veya <xref:System.String.TrimEnd%2A?displayProperty=nameWithType> sondaki beyaz alanı kaldırmak için , ve yöntemleri kullanabilirsiniz.  Aşağıdaki kod her birinin bir örneğini gösterir. Kaynak dize değişmez; bu yöntemler değiştirilmiş içeriği ile yeni bir dize döndürün.
 
 [!code-csharp-interactive[trim white space](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#3)]
 
-## <a name="remove-text"></a>Metni kaldır
+## <a name="remove-text"></a>Metni kaldırma
 
-<xref:System.String.Remove%2A?displayProperty=nameWithType> yöntemi kullanarak bir dizeden metin kaldırabilirsiniz. Bu yöntem, belirli bir dizinden başlayarak birkaç karakteri kaldırır. Aşağıdaki örnek, bir dizeden metin kaldırmak için <xref:System.String.Remove%2A> tarafından izlenen <xref:System.String.IndexOf%2A?displayProperty=nameWithType> nasıl kullanacağınızı gösterir:
+<xref:System.String.Remove%2A?displayProperty=nameWithType> Yöntemi kullanarak metni bir dizeden kaldırabilirsiniz. Bu yöntem, belirli bir dizin başlayarak karakter bir dizi kaldırır. Aşağıdaki örnekte, bir <xref:System.String.IndexOf%2A?displayProperty=nameWithType> dizeden metni kaldırmak <xref:System.String.Remove%2A> için nasıl kullanılacağı gösterilmektedir:
 
 [!code-csharp-interactive[remove text](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#4)]
 
-## <a name="replace-matching-patterns"></a>Eşleşen desenleri Değiştir
+## <a name="replace-matching-patterns"></a>Eşleşen desenleri değiştirme
 
-Metin eşleştirme desenlerini, büyük olasılıkla bir desenle tanımlanan yeni metinle değiştirmek için [Normal ifadeleri](../../standard/base-types/regular-expressions.md) kullanabilirsiniz. Aşağıdaki örnek, bir kaynak dizesindeki bir düzeni bulmak ve uygun büyük harfle değiştirmek için <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıfını kullanır. <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType> yöntemi, bağımsız değişkenlerinden biri olarak değiştirme mantığını sağlayan bir işlevi alır. Bu örnekte, `LocalReplaceMatchCase` işlevi örnek yöntemin içinde belirtilen **yerel bir işlevdir** . `LocalReplaceMatchCase`, doğru büyük küçük harfe sahip değiştirme dizesini oluşturmak için <xref:System.Text.StringBuilder?displayProperty=nameWithType> sınıfını kullanır.
+Metin eşleştirme [desenlerini](../../standard/base-types/regular-expressions.md) büyük olasılıkla bir desentarafından tanımlanan yeni metinle değiştirmek için normal ifadeler kullanabilirsiniz. Aşağıdaki örnek, <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> kaynak dizesinde bir desen bulmak ve uygun büyük harfle değiştirmek için sınıfı kullanır. Yöntem, <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType> bağımsız değişkenlerinden biri olarak değiştirme mantığını sağlayan bir işlev alır. Bu örnekte, bu `LocalReplaceMatchCase` işlev, örnek yöntem içinde bildirilen yerel bir **işlevdir.** `LocalReplaceMatchCase`uygun <xref:System.Text.StringBuilder?displayProperty=nameWithType> büyük harfle değiştirme dizesi oluşturmak için sınıfı kullanır.
 
-Normal ifadeler, bilinen metinler yerine bir kalıbı izleyen metni aramak ve değiştirmek için kullanışlıdır. Daha fazla ayrıntı için bkz. [dizeleri arama](search-strings.md) . "The\s" arama deseninin "The" sözcüğünü ve ardından bir boşluk karakteri arar. Bu düzenin bu bölümü, kaynak dizede "orada" ile eşleşmemesini sağlar. Normal ifade dili öğeleri hakkında daha fazla bilgi için bkz. [normal Ifade dili-hızlı başvuru](../../standard/base-types/regular-expression-language-quick-reference.md).
+Normal ifadeler, bilinen metin yerine bir deseni izleyen metni aramak ve değiştirmek için en yararlıdır. Daha fazla ayrıntı için [dizeleri arama ya da arama](search-strings.md) Arama deseni, "the\s" sözcüğün "the" sözcüğüne ve ardından bir beyaz boşluk karakterini arar. Desenin bu bölümü, kaynak dizedeki "orada" ile eşleşmemesini sağlar. Normal ifade dili öğeleri hakkında daha fazla bilgi için [Bkz. Normal İfade Dili - Hızlı Başvuru](../../standard/base-types/regular-expression-language-quick-reference.md).
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#5)]
 
-<xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithType> yöntemi, <xref:System.Text.StringBuilder> nesnesindeki içeriğe sahip sabit bir dize döndürür.
+Yöntem, <xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithType> <xref:System.Text.StringBuilder> nesnedeki içeriği içeren değişmez bir dize döndürür.
 
-## <a name="modifying-individual-characters"></a>Tek karakterleri değiştirme
+## <a name="modifying-individual-characters"></a>Tek tek karakterleri değiştirme
 
-Dizeden bir karakter dizisi oluşturabilir, dizinin içeriğini değiştirebilir ve sonra dizinin değiştirilen içeriğinden yeni bir dize oluşturabilirsiniz.
+Bir dizeden bir karakter dizisi oluşturabilir, dizinin içeriğini değiştirebilir ve ardından dizinin değiştirilmiş içeriğinden yeni bir dize oluşturabilirsiniz.
 
-Aşağıdaki örnek, bir dizedeki bir karakter kümesinin nasıl değiştirileceğini gösterir. İlk olarak, bir karakter dizisi oluşturmak için <xref:System.String.ToCharArray?displayProperty=nameWithName> yöntemini kullanır. "Fox" sözcüğünün başlangıç dizinini bulmak için <xref:System.String.IndexOf%2A> yöntemini kullanır. Sonraki üç karakter, farklı bir sözcükle değiştirilmiştir. Son olarak, güncelleştirilmiş karakter dizisinden yeni bir dize oluşturulur.
+Aşağıdaki örnek, dizedeki bir karakter kümesinin nasıl değiştirilebildiğini gösterir. İlk olarak, <xref:System.String.ToCharArray?displayProperty=nameWithName> bir karakter dizisi oluşturmak için yöntemi kullanır. "Tilki" <xref:System.String.IndexOf%2A> kelimesinin başlangıç indeksini bulmak için yöntemi kullanır. Sonraki üç karakter farklı bir sözcük ile değiştirilir. Son olarak, güncelleştirilmiş karakter dizisinden yeni bir dize oluşturulur.
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
-## <a name="programmatically-build-up-string-content"></a>Program aracılığıyla dize içeriği oluşturma
+## <a name="programmatically-build-up-string-content"></a>Programlı bir şekilde dize içeriği oluşturmak
 
-Dizeler sabit olduğundan, önceki örneklerin tümü geçici dizeler veya karakter dizileri oluşturur. Yüksek performans senaryolarında bu yığın ayırmalarının oluşmaması istenebilir. .NET Core, ara geçici dize ayırmalarını önleyerek bir dizenin karakter içeriğini bir geri çağırma yoluyla programlama yoluyla doldurmanıza olanak sağlayan bir <xref:System.String.Create%2A?displayProperty=nameWithType> yöntemi sağlar.
+Dizeleri değişmez olduğundan, önceki örneklerin tümü geçici dizeleri veya karakter dizileri oluşturur. Yüksek performanslı senaryolarda, bu yığın ayırmaları önlemek için istenebilir. .NET Core, <xref:System.String.Create%2A?displayProperty=nameWithType> ara geçici dize ayırmalarından kaçınırken bir geri arama yoluyla bir dizenin karakter içeriğini programlı olarak doldurmanızı sağlayan bir yöntem sağlar.
 
 [!code-csharp[using string.Create to programmatically build the string content for a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 
-Güvenli olmayan koda sahip sabit bir blokta bir dizeyi değiştirebilirsiniz ancak dize oluşturulduktan sonra dize içeriğinin değiştirilmesi **kesinlikle** önerilmez. Bunun yapılması, işlemleri öngörülemeyen yollarla bozacaktır. Örneğin, birisi sizinki ile aynı içeriğe sahip bir dizeyi birbirine kaydetirse, sizin kopyanızı alır ve dizenizi her zaman değiştirmenizi beklemez.
+Sabit bir bloktaki bir dizeyi güvenli olmayan kodla değiştirebilirsiniz, ancak dize oluşturulduktan sonra dize içeriğini değiştirmeniz **şiddetle** önerilmez. Bunu yapmak, olayları tahmin edilemeyecek şekillerde kırar. Örneğin, birisi sizinkiyle aynı içeriğe sahip bir dize yi interns, kopyanızı alır ve dizesini hiç değiştirmenizi beklemez.
 
-Bu örnekleri, [GitHub deponuzdaki](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)koda bakarak deneyebilirsiniz. Ya da örnekleri [zip dosyası olarak](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)indirebilirsiniz.
+Bu örnekleri [GitHub depomuzdaki](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)koda bakarak deneyebilirsiniz. Veya bir zip [dosyası olarak](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)örnekleri indirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Normal Ifadeleri .NET Framework](../../standard/base-types/regular-expressions.md)
+- [.NET Framework Normal İfadeleri](../../standard/base-types/regular-expressions.md)
 - [Normal İfade Dili - Hızlı Başvuru](../../standard/base-types/regular-expression-language-quick-reference.md)

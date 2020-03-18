@@ -1,5 +1,5 @@
 ---
-title: Örtük olarak yazılan diziler C# -Programlama Kılavuzu
+title: Örtülü Daktino Dizileri - C# Programlama Kılavuzu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], implicitly-typed
@@ -7,27 +7,27 @@ helpviewer_keywords:
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
 ms.openlocfilehash: 943760af30422cd333fdff65cdf678108c9d9564
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705723"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>Türü Örtük Olarak Belirlenmiş Diziler (C# Programlama Kılavuzu)
 
-Dizi başlatıcısında belirtilen öğelerden dizi örneği türünün Çıkarsanan türü örtük olarak belirlenmiş bir dizi oluşturabilirsiniz. Örtük olarak yazılmış herhangi bir değişken için kurallar, örtülü olarak belirlenmiş diziler için de geçerlidir. Daha fazla bilgi için bkz. [örtülü olarak yazılan yerel değişkenler](../classes-and-structs/implicitly-typed-local-variables.md).
+Dizi örneği türünün dizi initializer'inde belirtilen öğelerden çıkarıldığı örtülü olarak yazılmış bir dizi oluşturabilirsiniz. Herhangi bir örtülü olarak yazılan değişkeniçin kurallar, örtülü olarak yazılan diziler için de geçerlidir. Daha fazla bilgi için [bkz.](../classes-and-structs/implicitly-typed-local-variables.md)
 
-Örtük olarak yazılmış diziler genellikle anonim türler ve nesne ve koleksiyon başlatıcıları ile birlikte sorgu ifadelerinde kullanılır.
+Dolaylı olarak yazılan diziler genellikle sorgu ifadelerinde anonim türler ve nesne ve koleksiyon başlatmalayıcılarıyla birlikte kullanılır.
 
-Aşağıdaki örneklerde, örtülü olarak yazılmış bir dizinin nasıl oluşturulacağı gösterilmektedir:
+Aşağıdaki örnekler, örtülü olarak yazılan bir dizinin nasıl oluşturulabildiğini gösterir:
 
 [!code-csharp[csProgGuideLINQ#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#37)]
 
-Önceki örnekte, örtük olarak yazılmış diziler ile, başlatma ifadesinin sol tarafında bir köşeli ayraç kullanılmaması fark edilir. Ayrıca, tek boyutlu diziler gibi `new []` kullanılarak pürüzlü Diziler başlatılmış olduğunu unutmayın.
+Önceki örnekte, örtülü olarak yazılan dizilerde, başlatma deyiminin sol tarafında kare ayraç kullanılmadığını unutmayın. Pürüzlü dizilerin tek boyutlu diziler gibi kullanılarak `new []` baş harflere batmış olduğunu da unutmayın.
 
-## <a name="implicitly-typed-arrays-in-object-initializers"></a>Nesne başlatıcılarında örtük olarak yazılmış diziler
+## <a name="implicitly-typed-arrays-in-object-initializers"></a>Nesne Başharflerinde Örtülü Olarak Yazılan Diziler
 
-Bir dizi içeren anonim bir tür oluşturduğunuzda, dizi türün nesne başlatıcısında örtük olarak yazılmalıdır. Aşağıdaki örnekte `contacts`, her biri `PhoneNumbers`adlı bir dizi içeren anonim türlerin örtük olarak yazılmış bir dizisidir. `var` anahtar sözcüğünün nesne başlatıcıları içinde kullanılmadığını unutmayın.
+Bir dizi içeren anonim bir tür oluşturduğunuzda, dizi örtülü olarak tür nesnesi baş harflerine yazılmalıdır. Aşağıdaki örnekte, `contacts` her biri .. `PhoneNumbers` Anahtar kelimenin `var` nesne baş harflerini içinde kullanılmadığını unutmayın.
 
 [!code-csharp[csProgGuideLINQ#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#38)]
 
@@ -36,7 +36,7 @@ Bir dizi içeren anonim bir tür oluşturduğunuzda, dizi türün nesne başlat�
 - [C# Programlama Kılavuzu](../index.md)
 - [Örtülü Olarak Yazılan Yerel Değişkenler](../classes-and-structs/implicitly-typed-local-variables.md)
 - [Diziler](./index.md)
-- [Anonim Tipler](../classes-and-structs/anonymous-types.md)
+- [Anonim Türler](../classes-and-structs/anonymous-types.md)
 - [Nesne ve Koleksiyon Başlatıcıları](../classes-and-structs/object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)
 - [C# üzerinde LINQ](../../linq/index.md)

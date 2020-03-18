@@ -1,35 +1,35 @@
 ---
-title: Ağ yapılandırması ayarları
-description: .NET Core uygulamaları için ağı yapılandıran çalışma zamanı ayarları hakkında bilgi edinin.
+title: Ağ config ayarları
+description: .NET Core uygulamaları için ağ yapılandırması yapan çalışma zamanı ayarları hakkında bilgi edinin.
 ms.date: 11/27/2019
 ms.topic: reference
 ms.openlocfilehash: 622c4afbd36d3d9004edbd9219145fa9e5d326ae
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74802773"
 ---
 # <a name="run-time-configuration-options-for-networking"></a>Ağ için çalışma zamanı yapılandırma seçenekleri
 
-## <a name="http2-protocol"></a>HTTP/2 Protokolü
+## <a name="http2-protocol"></a>HTTP/2 protokolü
 
-- HTTP/2 Protokolü desteğinin etkin olup olmadığını yapılandırır.
-- Varsayılan: devre dışı (`false`).
-- .NET Core 3,0 ' de kullanıma sunulmuştur.
+- HTTP/2 protokolü için desteğin etkin olup olmadığını yapılandırır.
+- Varsayılan: Devre`false`Dışı ( ).
+- .NET Core 3.0 ile tanıtıldı.
 
 | | Ayar adı | Değerler |
 | - | - |
-| **runtimeconfig. JSON** | `System.Net.Http.SocketsHttpHandler.Http2Support` | `false`-devre dışı<br/>`true` etkin |
-| **Ortam değişkeni** | `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT` | `0`-devre dışı<br/>`1` etkin |
+| **runtimeconfig.json** | `System.Net.Http.SocketsHttpHandler.Http2Support` | `false`- engelli<br/>`true`- etkin |
+| **Ortam değişkeni** | `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT` | `0`- engelli<br/>`1`- etkin |
 
-## <a name="sockets-http-handler"></a>Sockets HTTP işleyicisi
+## <a name="sockets-http-handler"></a>Soketler HTTP işleyicisi
 
-- <xref:System.Net.Http.HttpClient>gibi yüksek düzey ağ API 'Lerinin, <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType> veya <xref:System.Net.Http.HttpClientHandler?displayProperty=nameWithType> uygulanmasını ve bu nesnelerin [Libon](https://curl.haxx.se/libcurl/)'u temel alarak uygulanmasını yapılandırır.
-- Varsayılan: <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType> (`true`) kullanın.
-- Bu ayarı, <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> yöntemini çağırarak programlı bir şekilde yapılandırabilirsiniz.
+- [Libcurl'e](https://curl.haxx.se/libcurl/)dayalı, kullanımı <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType> veya <xref:System.Net.Http.HttpClientHandler?displayProperty=nameWithType> uygulanması <xref:System.Net.Http.HttpClient>gibi üst düzey ağ API'lerinin olup olmadığını yapılandırır.
+- Varsayılan: <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType> Kullanım`true`( ).
+- Yöntemi çağırarak <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> bu ayarı programlı olarak yapılandırabilirsiniz.
 
 | | Ayar adı | Değerler |
 | - | - | - |
-| **runtimeconfig. JSON** | `System.Net.Http.UseSocketsHttpHandler` | `true`-<xref:System.Net.Http.SocketsHttpHandler> kullanımını etkinleştirilir<br/>`false`-<xref:System.Net.Http.HttpClientHandler> kullanımını etkinleştirilir |
-| **Ortam değişkeni** | `DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER` | `1`-<xref:System.Net.Http.SocketsHttpHandler> kullanımını etkinleştirilir<br/>`0`-<xref:System.Net.Http.HttpClientHandler> kullanımını etkinleştirilir |
+| **runtimeconfig.json** | `System.Net.Http.UseSocketsHttpHandler` | `true`- kullanımını sağlar<xref:System.Net.Http.SocketsHttpHandler><br/>`false`- kullanımını sağlar<xref:System.Net.Http.HttpClientHandler> |
+| **Ortam değişkeni** | `DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER` | `1`- kullanımını sağlar<xref:System.Net.Http.SocketsHttpHandler><br/>`0`- kullanımını sağlar<xref:System.Net.Http.HttpClientHandler> |

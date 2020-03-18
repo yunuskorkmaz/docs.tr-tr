@@ -1,5 +1,5 @@
 ---
-title: C# başvuru
+title: is - C# Referans
 ms.date: 06/21/2019
 f1_keywords:
 - is_CSharpKeyword
@@ -7,116 +7,116 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: a72f3b87e7558c594ef8a94bd0eadcc4664206b9
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: e64b690482419963a92764b2c97a42dbb231fbfc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239657"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399639"
 ---
 # <a name="is-c-reference"></a>is (C# Başvurusu)
 
-`is` işleci, bir ifadenin sonucunun verilen türle uyumlu olup olmadığını denetler veya (7,0 ile C# başlayarak) bir ifadeyi bir düzene göre sınar. Tür-test `is` işleci hakkında daha fazla bilgi için, [tür-test ve atama işleçleri](../operators/type-testing-and-cast.md) makalesinin [işleç](../operators/type-testing-and-cast.md#is-operator) bölümüne bakın.
+İşleç, `is` bir ifadenin sonucunun belirli bir türle uyumlu olup olmadığını denetler veya (C# 7.0 ile başlayarak) bir ifadeyi desenle test eder. Tür testi `is` işleci hakkında daha fazla bilgi [için, Tür testi ve döküm işleçleri](../operators/type-testing-and-cast.md) makalesinin [operatör](../operators/type-testing-and-cast.md#is-operator) bölümüne bakın.
 
-## <a name="pattern-matching-with-is"></a>`is` ile eşleşen desenler
+## <a name="pattern-matching-with-is"></a>Desen ile eşleşen`is`
 
-7,0 ile C# başlayarak, `is` ve [Switch](switch.md) deyimleri, model eşleştirmeyi destekler. `is` anahtar sözcüğü aşağıdaki desenleri destekler:
+C# 7.0 ile `is` başlayarak, ve [anahtar](switch.md) ifadeleri deseni eşleştirmeyi destekler. Anahtar `is` kelime aşağıdaki desenleri destekler:
 
-- Bir ifadenin belirtilen türe dönüştürülüp dönüştürülebileceğini test eden [tür stili](#type-pattern), bu, bir ifadenin bu türden bir değişkene dönüştürülmesini sağlar.
+- Bir ifadenin belirli bir türe dönüştürülüp dönüştürülemeyeceğini sınayan ve olabilirse, bu tür bir değişkene dönüştüren [tür deseni.](#type-pattern)
 
-- Bir ifadenin belirtilen sabit değer olarak değerlendirilip değerlendirilmediğini test eden [sabit bir model](#constant-pattern).
+- Bir ifadenin belirli bir sabit değere değerlendirilip değerlendirmediğini sınayan [sabit desen.](#constant-pattern)
 
-- [var olan model](#var-pattern), her zaman başarılı olan ve bir ifadenin değerini yeni bir yerel değişkene bağlayan bir eşleşme.
+- [var deseni,](#var-pattern)her zaman başarılı olan ve bir ifadenin değerini yeni bir yerel değişkene bağlayan bir eşleşmedir.
 
-### <a name="type-pattern"></a>Tür stili
+### <a name="type-pattern"></a>Tür deseni
 
-Model eşleştirmeyi gerçekleştirmek için tür deseninin kullanıldığı zaman `is`, bir ifadenin belirtilen bir türe dönüştürülüp dönüştürülmeyeceğini test eder ve bu şekilde, bu tür bir değişkene bu değeri verebilir. Bu, kısa tür değerlendirmesi ve dönüştürmeyi sağlayan `is` deyimin basit bir uzantısıdır. `is` Type deseninin genel formu:
+Desen eşleştirmesini gerçekleştirmek için tür `is` deseni kullanırken, bir ifadenin belirli bir türe dönüştürülüp dönüştürülemeyeceğini sınar ve olabilirse, bu tür bir değişkene dönüştürür. Kısa tür değerlendirmesi ve `is` dönüştürme sağlayan ifadenin basit bir uzantısıdır. Tür deseninin `is` genel biçimi:
 
 ```csharp
    expr is type varname
 ```
 
-Burada *Expr* , bir türün bir örneğini değerlendiren bir ifadedir, *tür* , *ifadenin* sonucunun dönüştürülecek türün adı, *varname* ise `is` testi `true`olduğunda, *ifadenin* sonucunun dönüştürüldüğü nesnedir. 
+*Expr'ın* bazı türde bir örneği değerlendiren bir ifade olduğu durumlarda, *tür,* *expr* sonucunun dönüştürüldüğü türün adıdır ve *varname,* `is` test ise *expr* sonucunun dönüştürüldüğü `true`nesnedir.
 
-`is` ifadesi, *expr* `null`değilse `true` ve aşağıdakilerden herhangi biri true 'dur:
+`is` İfade, `true` *expr* değilse `null`ve aşağıdakilerden herhangi biri doğrudur:
 
-- *Expr* , *türü*ile aynı türde bir örneğidir.
+- *expr* *türü*olarak aynı türde bir örnektir.
 
-- *Expr* *türünden*türetilen bir türün örneğidir. Diğer bir deyişle, *ifadenin* sonucu *türünde*bir örneğe eklenebilir.
+- *expr* *türünden*türetilen bir tür örneğidir. Başka bir deyişle, *expr* sonucu *türü*bir örnek için upcast olabilir.
 
-- *ifadenin* *türünde bir*temel sınıf olan bir derleme zamanı türü vardır ve *Expr* *türü* *veya türünden türetilmiş*bir çalışma zamanı türü vardır. Bir değişkenin *derleme zamanı türü* , bildiriminde tanımlanan değişkenin türüdür. Bir değişkenin *çalışma zamanı türü* , bu değişkene atanan örneğin türüdür.
+- *expr* *türü*bir taban sınıf olan bir derleme-zaman türü vardır ve *expr* *türü* veya *türünden*türetilen bir çalışma zamanı türü vardır. Bir değişkenin *derleme zamanı türü,* değişkenin bildiriminde tanımlandığı şekilde türüdür. Bir değişkenin *çalışma zamanı türü,* bu değişkene atanan örneğin türüdür.
 
-- *Expr* , *tür* arabirimini uygulayan bir türün örneğidir.
+- *expr* *türü* arabirimi uygulayan bir tür örneğidir.
 
-7,1 ile C# başlayarak, *Expr* genel bir tür parametresi ve kısıtlamaları tarafından tanımlanan bir derleme zamanı türüne sahip olabilir.
+C# 7.1 ile başlayarak, *expr* genel bir tür parametresi ve kısıtlamaları tarafından tanımlanan bir derleme-zaman türü ne olabilir.
 
-*Expr* `true` ve `is` bir `if` ifadesiyle kullanılırsa, *varname* yalnızca `if` ifadesinde atanır. *Varname* kapsamı `is` ifadeden `if` deyimini kapsayan bloğun sonuna kadar olur. Başka bir konumda *varname* kullanılması atanmamış bir değişkenin kullanımı için derleme zamanı hatası oluşturur.
+*Expr* bir `true` `if` `is` deyimle kullanılıyorsa ve deyimle `if` kullanılıyorsa, *varname* yalnızca deyim içinde atanır. *Varnamenin* kapsamı `is` ifadeden `if` ifadeyi çevreleyen bloğun sonuna kadardır. *Varname'nin* başka bir konumda kullanılması, atanmamış bir değişkenin kullanımı için derleme zamanı hatası oluşturur.
 
-Aşağıdaki örnek, bir türün <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> yönteminin uygulanmasını sağlamak için `is` tür modelini kullanır.
+Aşağıdaki örnek, `is` bir tür <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> yönteminin uygulanmasını sağlamak için tür deseni kullanır.
 
 [!code-csharp[is#5](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern5.cs#5)]
 
-Model eşleştirmesi olmadan bu kod aşağıdaki gibi yazılabilir. Tür deseninin kullanımı, dönüştürmenin sonucunun `null`olup olmadığını test etme gereksinimini ortadan kaldırarak daha kompakt, okunabilir kod üretir.  
+Desen eşleştirme olmadan, bu kod aşağıdaki gibi yazılabilir. Tür deseni eşleştirmekullanımı, bir dönüştürmenin sonucunun bir `null`.  
 
 [!code-csharp[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]
 
-`is` tür deseninin değeri, bir değer türünün türü belirlenirken daha Compact kod da üretir. Aşağıdaki örnek, uygun bir özelliğin değerini görüntülemeden önce bir nesnenin `Person` mi yoksa bir `Dog` örneği mi olduğunu anlamak için `is` tür modelini kullanır.
+Tür `is` deseni, değer türünün türünü belirlerken daha kompakt kod da üretir. Aşağıdaki örnek, `is` uygun bir özelliğin değerini `Person` görüntülemeden `Dog` önce bir nesnenin bir örnek mi yoksa örnek mi olduğunu belirlemek için tür deseni kullanır.
 
 [!code-csharp[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]
 
-Desenler eşleşmesi olmayan eşdeğer kod, açık bir dönüştürme içeren ayrı bir atama gerektirir.
+Desen eşleştirmesi olmayan eşdeğer kod, açık bir döküm içeren ayrı bir atama gerektirir.
 
 [!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="constant-pattern"></a>Sabit model
+### <a name="constant-pattern"></a>Sabit desen
 
-Sabit örüntüyle eşleşen desenler gerçekleştirirken, bir ifadenin belirtilen bir sabit değere eşit olup olmadığını sınar `is`. C# 6 ve önceki sürümlerde, sabit model [Switch](switch.md) ifadesiyle desteklenir. 7,0 ' C# den başlayarak `is` bildiri de desteklenir. Sözdizimi şöyledir:
+Sabit desenle eşleşen desen `is` gerçekleştirirken, bir ifadenin belirtilen bir sabite eşit olup olmadığını sınar. C# 6 ve önceki sürümlerde, sabit desen [anahtar](switch.md) deyimi tarafından desteklenir. C# 7.0 ile başlayarak, `is` ifade tarafından da desteklenir. Sözdizimi:
 
 ```csharp
    expr is constant
 ```
 
-Burada *Expr* , değerlendirilecek ifadedir ve *sabitin* test edilecek değerdir. *sabit* , aşağıdaki sabit ifadelerden herhangi biri olabilir:
+*expr* değerlendirmek için ifade ve *sabit* için test etmek için değerdir. *sabit* aşağıdaki sabit ifadelerden biri olabilir:
 
-- Değişmez değer.
+- Gerçek bir değer.
 
-- Belirtilen bir `const` değişkeninin adı.
+- Bildirilen `const` değişkenin adı.
 
-- Bir numaralandırma sabiti.
+- Numaralandırma sabiti.
 
 Sabit ifade aşağıdaki gibi değerlendirilir:
 
-- *Expr* ve *Constant* integral türse, C# eşitlik işleci ifadenin `true` (yani `expr == constant`) döndürüp döndürmeyeceğini belirler.
+- *Expr* ve *constant* integral türleri ise, C# eşitlik işleci `true` ifadenin döndürüp döndürülmediğini (yani, olup olmadığını) `expr == constant`belirler.
 
-- Aksi takdirde, ifadenin değeri static [Object. Equals (Expr, Constant)](xref:System.Object.Equals(System.Object,System.Object)) yöntemi çağrısıyla belirlenir.  
+- Aksi takdirde, ifadenin değeri statik [Object.Equals (expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) yöntemine yapılan bir çağrı ile belirlenir.  
 
-Aşağıdaki örnek, bir nesnenin `Dice` bir örnek olup olmadığını test etmek için tür ve sabit desenleri, bir zar rulosu değerinin 6 olup olmadığını anlamak için birleştirir.
+Aşağıdaki örnek, bir nesnenin bir `Dice` örnek olup olmadığını sınamak ve bir zar rulosu değerinin 6 olup olmadığını belirlemek için türü ve sabit desenleri birleştirir.
 
 [!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
 
-`null` denetimi, sabit model kullanılarak gerçekleştirilebilir. `null` anahtar sözcüğü `is` ifadesiyle desteklenir. Sözdizimi şöyledir:
+Kontrol `null` sabit desen kullanılarak yapılabilir. Anahtar `null` kelime `is` deyim tarafından desteklenir. Sözdizimi:
 
 ```csharp
    expr is null
 ```
 
-Aşağıdaki örnekte `null` denetimlerinin karşılaştırması gösterilmektedir:
+Aşağıdaki örnek, denetimlerin `null` karşılaştırılmasını gösterir:
 
 [!code-csharp[is#11](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern11.cs#11)]
 
-### <a name="var-pattern"></a>var deseninin
+### <a name="var-pattern"></a>var deseni
 
-`var` düzeniyle bir kalıp eşleşmesi her zaman başarılı olur. Sözdizimi şöyledir:
+Desenile eşleşen `var` bir desen her zaman başarılı dır. Sözdizimi:
 
 ```csharp
    expr is var varname
 ```
 
-Burada, *ifadenin* değeri her zaman *varname*adlı bir yerel değişkene atanır. *varname* , *Expr*'nin derleme zamanı türüyle aynı türde bir değişkendir. 
+Expr değeri *expr* her zaman *varname*adlı yerel bir değişkene atanır nerede. *varname,* *expr*derleme-zaman türü ile aynı türde bir değişkendir.
 
-*İfade* `null`olarak değerlendirilirse `is` ifade `true` üretir ve *varname*öğesine `null` atar. Var olan desenli bir `null` değeri için `true` üreten `is` birkaç kullanımdır.
+*Expr* değerlendirirse `null`, `is` ifade `true` üretir `null` ve *varname*ye atar. Var deseni, bir `is` `true` `null` değer için üreten birkaç kullanımdan biridir.
 
-Aşağıdaki örnekte gösterildiği gibi, bir Boolean ifadesinde geçici bir değişken oluşturmak için `var` modelini kullanabilirsiniz:
+Aşağıdaki örnekte `var` görüldüğü gibi, Boolean ifadesi içinde geçici bir değişken oluşturmak için deseni kullanabilirsiniz:
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
 
@@ -124,13 +124,13 @@ Aşağıdaki örnekte gösterildiği gibi, bir Boolean ifadesinde geçici bir de
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
   
-Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) ve aşağıdaki C# dil tekliflerinin [işleç](~/_csharplang/spec/expressions.md#the-is-operator) bölümüne bakın:
+Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [operatör](~/_csharplang/spec/expressions.md#the-is-operator) bölümüne ve aşağıdaki C# dil önerilerine bakın:
 
 - [Desen eşleştirme](~/_csharplang/proposals/csharp-7.0/pattern-matching.md)
 - [Genel türler ile desen eşleştirme](~/_csharplang/proposals/csharp-7.1/generics-pattern-match.md)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvurunun](../index.md)
+- [C# başvurusu](../index.md)
 - [C# anahtar sözcükleri](index.md)
 - [Tür testi ve atama işleçleri](../operators/type-testing-and-cast.md)

@@ -1,113 +1,113 @@
 ---
-title: Visual Studio 'da Roslyn sözdizimi görselleştiricisi ile kodu araştırma
-description: Sözdizimi görselleştiricisi .NET Compiler Platform SDK 'nın kod için oluşturduğu modelleri araştırmak için görsel bir araç sağlar.
+title: Visual Studio'da Roslyn sözdizimi görselleştiricisi ile kodu keşfedin
+description: Sözdizimi görselleştiricisi, .NET Derleyici Platformu SDK'nın kod için oluşturduğu modelleri keşfetmek için görsel bir araç sağlar.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: c4b4414dabcb6c9749a23d726e4a69334376d988
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 27e5a1f0b31dd2af2ac779223538b03cdb4db0c5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346962"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156993"
 ---
-# <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Visual Studio 'da Roslyn sözdizimi görselleştiricisi ile kodu araştırma
+# <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Visual Studio'da Roslyn sözdizimi görselleştiricisi ile kodu keşfedin
 
-Bu makalede, .NET Compiler Platform ("Roslyn") SDK 'sının bir parçası olarak gönderilen Syntax Visualizer aracına genel bakış sunulmaktadır. Syntax Visualizer, sözdizimi ağaçlarını incelemenize ve keşfetmenize yardımcı olan bir araç penceresidir. Analiz etmek istediğiniz kod modellerini anlamak için gerekli olan bir araçtır. Ayrıca, .NET Compiler Platform ("Roslyn") SDK 'sını kullanarak kendi uygulamalarınızı geliştirirken hata ayıklama yardımıdır. İlk çözümleyicinizi oluştururken bu aracı açın. Görselleştiricisi API 'Ler tarafından kullanılan modelleri anlamanıza yardımcı olur. Kod incelemek ve sözdizimi ağaçlarını anlamak için, [parça](https://sharplab.io) veya [linqpad](https://www.linqpad.net/) gibi araçları da kullanabilirsiniz.
+Bu makalede, .NET Derleyici Platformu ("Roslyn") SDK'nın bir parçası olarak gönderen Sözdizimi Görselleştirici aracına genel bir bakış sağlanmaktadır. Sözdizimi Görselleştiricisi, sözdizimi ağaçlarını incelemenize ve keşfetmenize yardımcı olan bir araç penceresidir. Çözümlemek istediğiniz kod modellerini anlamak için önemli bir araçtır. .NET Derleyici Platformu ("Roslyn") SDK'yı kullanarak kendi uygulamalarınızı geliştirdiğinizde de hata ayıklama yardımı olur. İlk çözümleyicilerinizi oluştururken bu aracı açın. Görselleştirici, API'ler tarafından kullanılan modelleri anlamanıza yardımcı olur. Kodu incelemek ve sözdizimi ağaçlarını anlamak için [SharpLab](https://sharplab.io) veya [LINQPad](https://www.linqpad.net/) gibi araçları da kullanabilirsiniz.
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
-[Genel bakış](compiler-api-model.md) makalesini okuyarak .net Compiler Platform SDK 'sında kullanılan kavramları öğrenmeye çalışın. Sözdizimi ağaçları, düğümleri, belirteçleri ve trivia için bir giriş sağlar.
+Genel [bakış](compiler-api-model.md) makalesini okuyarak .NET Derleyici Platformu SDK'da kullanılan kavramları yakından tanıtın. Sözdizimi ağaçları, düğümler, belirteçler ve ıvır zıvır için bir giriş sağlar.
 
-## <a name="syntax-visualizer"></a>Syntax Visualizer
+## <a name="syntax-visualizer"></a>Sözdizimi Görselleştiricisi
 
-**Syntax Visualizer** , VISUAL Studio IDE içindeki geçerli etkin düzenleyici penceresinde C# veya Visual Basic kod dosyası için sözdizimi ağacının incelemesini mümkün. Görselleştirici, **diğer Windows** > **Syntax Visualizer** > **görüntüle** ' ye tıklanarak başlatılabilir.  Sağ üst köşedeki **Hızlı başlatma** araç çubuğunu da kullanabilirsiniz. "Sözdizimi" yazın ve **Syntax Visualizer** açmak için komut görünmelidir.
+**Sözdizimi Görselleştiricisi,** Visual Studio IDE'nin içindeki geçerli etkin düzenleyici penceresinde C# veya Visual Basic kod dosyası için sözdizimi ağacının incelenmesini sağlar. **Görselleştirici, Diğer Windows** > **Sözdizimini Görselleştiricisini** **Görüntüle'ye** > tıklayarak başlatılabilir.  Sağ üst köşedeki **Hızlı Başlatma** araç çubuğunu da kullanabilirsiniz. "Sözdizimi" yazın ve **Sözdizimi Görselleştiricisini** açmak için komut görünmelidir.
 
-Bu komut Syntax Visualizer kayan bir araç penceresi olarak açar. Bir kod Düzenleyicisi penceresi açık değilse, aşağıdaki şekilde gösterildiği gibi görüntü boştur. 
+Bu komut, Sözdizimi Görselleştiricisini kayan bir araç penceresi olarak açar. Açık bir kod düzenleyicipencereniz yoksa, aşağıdaki şekilde gösterildiği gibi ekran boştur.
 
-![Syntax Visualizer araç penceresi](media/syntax-visualizer/syntax-visualizer.png)
+![Sözdizimi Görselleştirici araç penceresi](media/syntax-visualizer/syntax-visualizer.png)
 
-Bu araç penceresini, Visual Studio içinde, sol taraftaki gibi uygun bir konuma yerleştirin. Görselleştirici, geçerli kod dosyası hakkındaki bilgileri gösterir.
+Bu araç penceresini Visual Studio'nun sol tarafı gibi uygun bir konuma sabitle. Visualizer geçerli kod dosyası yla ilgili bilgileri gösterir.
 
-**Yeni proje** komutunu > **dosyayı** kullanarak yeni bir proje oluşturun. Bir Visual Basic ya C# da proje oluşturabilirsiniz. Visual Studio bu proje için ana kod dosyasını açtığında Görselleştirici kendisi için sözdizimi ağacını görüntüler. Bu Visual Studio örneğindeki herhangi C# bir mevcut/Visual Basic dosyasını açabilirsiniz ve Görselleştirici bu dosyanın sözdizimi ağacını görüntüler. Visual Studio içinde açık olan birden çok kod dosyanız varsa, Görselleştirici geçerli etkin kod dosyası (klavye odağına sahip kod dosyası) için sözdizimi ağacını görüntüler.
+**Yeni Dosya Komutunu** > **New Project** kullanarak yeni bir proje oluşturun. Visual Basic veya C# projesi oluşturabilirsiniz. Visual Studio bu projenin ana kod dosyasını açtığında, görselleştirici bunun için sözdizimi ağacını görüntüler. Bu Visual Studio örneğinde varolan herhangi bir C# / Visual Basic dosyasını açabilirsiniz ve görselleştirici bu dosyanın sözdizimi ağacını görüntüler. Visual Studio'da birden çok kod dosyanız açıksa, görselleştirici şu anda etkin olan kod dosyasının sözdizimi ağacını (klavye odağı olan kod dosyası) görüntüler.
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
-![Bir C# sözdizimi ağacını görselleştirme](media/syntax-visualizer/visualize-csharp.png)
+# <a name="c"></a>[C #](#tab/csharp)
+![C# sözdizimi ağacını görselleştirme](media/syntax-visualizer/visualize-csharp.png)
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 ![Visual Basic sözdizimi ağacını görselleştirme](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
 
-Önceki görüntülerde gösterildiği gibi, Görselleştirici araç penceresi üstteki sözdizimi ağacını ve alt kısımdaki bir özellik kılavuzunu görüntüler. Özellik Kılavuzu, öğenin .NET *türü* ve *türü* (ağacın syntaxkind içeren) dahil olmak üzere ağaçta seçili olan öğenin özelliklerini görüntüler.
+Önceki resimlerde gösterildiği gibi, görselleştirici araç penceresi üstteki sözdizimi ağacını ve alttaki özellik ızgarasını görüntüler. Özellik ızgarası, .NET *Türü* ve maddenin *Türü* (Sözdizimi) de dahil olmak üzere ağaçta şu anda seçili olan öğenin özelliklerini görüntüler.
 
-Sözdizimi ağaçları, *düğüm*, *belirteç*ve *bilgi*olmak üzere üç öğe türünü kapsar. [Söz dizimi Ile çalışma](work-with-syntax.md) makalesinde bu türler hakkında daha fazla bilgi edinebilirsiniz. Her türün öğeleri farklı bir renk kullanılarak temsil edilir. Kullanılan renklere genel bakış için ' gösterge ' düğmesine tıklayın.
+Sözdizimi ağaçları üç tür öğeden oluşur – *düğümler,* *belirteçler*ve *ıvır zıvır.* [Sözdizimi](work-with-syntax.md) makalesi ile Work'te bu türler hakkında daha fazla bilgi edinebilirsiniz. Her türdeki öğeler farklı bir renk kullanılarak temsil edilir. Kullanılan renklere genel bakış için 'Gösterge' düğmesine tıklayın.
 
-Ağaçtaki her öğe ayrıca kendi **yayılma alanını**da görüntüler. **Yayılma** , metin dosyasındaki bu düğümün indekslerini (başlangıç ve bitiş konumu).  Yukarıdaki C# örnekte, seçili "usinganahtar sözcüğü [0.. 5)" belirtecinin, beş karakter genişliğinde, [0.. 5) bir **yayılımı** vardır. "[..)" Gösterimi Başlangıç dizininin yayılma alanının parçası olduğu, ancak bitiş dizininin olmadığı anlamına gelir.
+Ağaçtaki her öğe de kendi **açıklığını**görüntüler. **Açıklık,** metin dosyasındaki düğümün endeksleridir (başlangıç ve bitiş konumu).  Önceki C# örneğinde, seçili "Anahtar Kelime Kullanma [0..5)" belirteci beş karakter genişliğinde bir **Yayılma Alanı** vardır, [0.5). "[..)" gösterimi, başlangıç dizininin açıklının bir parçası olduğu, ancak bitiş dizininin olmadığı anlamına gelir.
 
-Ağaçta gezinmek için iki yol vardır:
+Ağaçta gezinmenin iki yolu vardır:
 
-* Ağaçtaki öğeler ' i genişletin veya tıklayın. Görselleştirici, kod düzenleyicisinde bu öğenin alanına karşılık gelen metni otomatik olarak seçer.
-* Kod düzenleyicisinde metin ' e tıklayın veya seçin. Yukarıdaki Visual Basic örneğinde, kod düzenleyicisinde "Module Module1" içeren satırı seçerseniz, Görselleştirici otomatik olarak ağaçta karşılık gelen Moduledeyimdüğümüne gider. 
+* Ağaçtaki öğeleri genişletin veya tıklatın. Görselleştirici, kod düzenleyicisinde bu öğenin yayılma süresine karşılık gelen metni otomatik olarak seçer.
+* Kod düzenleyicisindeki metni tıklatın veya seçin. Önceki Visual Basic örneğinde, kod düzenleyicisinde "Modül Modülü1" içeren satırı seçerseniz, görselleştirici otomatik olarak ağaçtaki ilgili ModuleStatement düğümüne yönlendirilir.
 
-Görselleştirici, alanı düzenleyicide seçili olan metnin yayılımının en iyi şekilde eşleştiği ağaçtaki öğeyi vurgular.
+Görselleştirici, açıklığı düzenleyicide seçilen metnin açıklığıyla en iyi eşleşen ağaçtaki öğeyi vurgular.
 
-Görselleştirici, etkin kod dosyasındaki değişikliklerle eşleşecek şekilde ağacı yeniler. `Main()`içinde `Console.WriteLine()` bir çağrı ekleyin. Siz yazarken, görselleştiricisi ağacı yeniler.
+Görselleştirici, etkin kod dosyasındaki değişiklikleri eşleştirmek için ağacı yeniler. İçeriye `Console.WriteLine()` `Main()`bir çağrı ekleyin. Siz yazarken, görselleştirici ağacı yeniler.
 
-`Console.`yazdıktan sonra yazmayı duraklatın. Ağaçta, pembe renkte renkli bazı öğeler vardır. Bu noktada, yazılan koddaki hatalar (' Tanılama ' olarak da bilinir) vardır. Bu hatalar, söz dizimi ağacındaki düğümlere, belirteçlere ve üçlü öğesine eklenir. Görselleştirici, arka planı pembe olarak vurgulamada hangi öğelerin ekli hatalara sahip olduğunu gösterir. Öğenin üzerine gelerek pembe renkte renklendirilmiş hataları inceleyebilirsiniz. Görselleştirici yalnızca sözdizimsel hataları (yazılan kodun sözdizimiyle ilgili hatalar) görüntüler; hiçbir semantik hata görüntülemez.
- 
-## <a name="syntax-graphs"></a>Sözdizimi grafikleri
+Yazdıktan sonra yazmayı `Console.`duraklatın. Ağaç pembe renkli bazı öğeleri vardır. Bu noktada, yazılan kodda hatalar ('Tanılama' olarak da adlandırılır) vardır. Bu hatalar sözdizimi ağacındaki düğümlere, belirteçlere ve ıvır zıvıra eklenir. Görselleştirici, arka planı pembe yle vurgulayan öğelerin hangiöğelere eklenmiş olduğunu gösterir. Pembe renkli herhangi bir öğedeki hataları, öğenin üzerinde gezinerek inceleyebilirsiniz. Görselleştirici yalnızca sözdizimhataları (türüyazılan kodun sözdizimiyle ilgili hatalar) görüntüler; herhangi bir anlamsal hata görüntülemez.
 
-Ağaçtaki herhangi bir öğeye sağ tıklayın ve **yönlendirilmiş sözdizimi grafiğini görüntüle**' ye tıklayın. 
+## <a name="syntax-graphs"></a>Sözdizimi Grafikleri
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+Ağaçtaki herhangi bir öğeye sağ tıklayın ve **Yönlendirilen Sözdizimini Görüntüle Grafiği'ni görüntüle'ye**tıklayın.
 
-Görselleştirici, seçili öğede kökü belirtilen alt ağacın grafik temsilini görüntüler. C# Örnekteki `Main()` yöntemine karşılık gelen **MethodDeclaration** düğümü için aşağıdaki adımları deneyin. Görselleştiricisi aşağıdaki gibi görünen bir sözdizimi grafiği görüntüler:
+# <a name="c"></a>[C #](#tab/csharp)
 
-![Bir C# sözdizimi grafiğini görüntüleme](media/syntax-visualizer/csharp-syntax-graph.png)
+Görselleştirici, seçili öğede köksünün alt ağacının grafiksel bir gösterimini görüntüler. C# örneğindeki `Main()` **yönteme** karşılık gelen Yöntem Bildirimi düğümü için aşağıdaki adımları deneyin. Görselleştirici aşağıdaki gibi görünen bir sözdizimi grafiği görüntüler:
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+![C# sözdizimi grafiğini görüntüleme](media/syntax-visualizer/csharp-syntax-graph.png)
 
-Önceki Visual Basic örneğinde `Main()` yöntemine karşılık gelen **alt blok** düğümü için aynısını deneyin. Görselleştiricisi aşağıdaki gibi görünen bir sözdizimi grafiği görüntüler:
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
-![Visual Basic söz dizimi grafiğini görüntüleme](media/syntax-visualizer/visual-basic-syntax-graph.png)
+Önceki Visual Basic **SubBlock** örneğinde `Main()` yönteme karşılık gelen Alt Blok düğümü için de aynısını deneyin. Görselleştirici aşağıdaki gibi görünen bir sözdizimi grafiği görüntüler:
+
+![Visual Basic sözdizimi grafiğini görüntüleme](media/syntax-visualizer/visual-basic-syntax-graph.png)
 
 ---
 
-Söz dizimi grafik görüntüleyicisinde gösterge renklendirme şeması görüntüleme seçeneği vardır. Ayrıca söz konusu öğeye karşılık gelen özellikleri görüntülemek için, söz dizimi grafiğinde tek tek öğelerin üzerine gelin.
+Sözdizimi grafik görüntüleyici, bir göstergenin boyama düzenini görüntüleme seçeneğine sahiptir. Sözdizimi grafiğindeki tek tek öğelerin üzerine fareyle birlikte sözdizimine karşılık gelen özellikleri görüntüleyebilirsiniz.
 
-Ağaçtaki farklı öğeler için sözdizimi grafiklerini art arda görüntüleyebilirsiniz ve grafikler her zaman Visual Studio içindeki aynı pencerede görüntülenir. Bu pencereyi Visual Studio içinde uygun bir konuma yerleştirebilirsiniz, böylece yeni bir sözdizimi grafiğini görüntülemek için sekmeler arasında geçiş yapmanız gerekmez. En alttaki kod Düzenleyicisi pencereleri, genellikle kullanışlıdır.
+Ağaçtaki farklı öğelerin sözdizimi grafiklerini art arda görüntüleyebilirsiniz ve grafikler her zaman Visual Studio'nun içindeki aynı pencerede görüntülenir. Yeni bir sözdizimi grafiğini görüntülemek için sekmeler arasında geçiş yapmak zorunda kalmamak için bu pencereyi Visual Studio'da uygun bir konuma sabitleyebilirsiniz. Alt, kod düzenleyicisi pencerelerin altında, genellikle uygundur.
 
-Görselleştiricisi araç penceresi ve söz dizimi grafik penceresi ile kullanılacak yerleştirme düzeni aşağıda verilmiştir:
+Visualizer araç penceresi ve sözdizimi grafik penceresi ile kullanılacak yerleştirme düzeni aşağıda veda edebilirsiniz:
 
-![Görselleştirici ve söz dizimi grafik penceresi için bir yerleştirme düzeni](media/syntax-visualizer/docking-layout.png)
+![Görselleştirici ve sözdizimi grafik penceresi için bir yerleştirme düzeni](media/syntax-visualizer/docking-layout.png)
 
-Diğer bir seçenek de, sözdizimi grafik penceresini ikinci bir monitöre bir çift izleyici kurulumuna koyulamıyor.
+Başka bir seçenek, sözdizimi grafik penceresini ikinci bir monitöre, çift monitör kurulumuna koymaktır.
 
-## <a name="inspecting-semantics"></a>Semantiğini İnceleme
+## <a name="inspecting-semantics"></a>Semantik inceleme
 
-Syntax Visualizer, sembolleri ve anlam bilgilerini ilkel denetlemesini mümkün. C# Örnekteki Main () içine `double x = 1 + 1;` yazın. Ardından, kod Düzenleyicisi penceresinde `1 + 1` ifadeyi seçin. Görselleştirici, görselleştiricide **AddExpression** düğümünü vurgular. Bu **AddExpression** öğesine sağ tıklayın ve **Görünüm simgesine (varsa)** tıklayın. Menü öğelerinin çoğunda "varsa" niteleyicisi olduğuna dikkat edin. Syntax Visualizer, tüm düğümler için mevcut olmayan özellikler de dahil olmak üzere bir düğümün özelliklerini inceler. 
+Sözdizimi Görselleştiricisi sembollerin ve anlamsal bilgilerin temel olarak incelenmesini sağlar. C# örneğinde Main() içinde yazın. `double x = 1 + 1;` Ardından, kod `1 + 1` düzenleyicisi penceresindeki ifadeyi seçin. Görselleştirici, visualizer'daki **AddExpression** düğümlerini vurgular. Bu **AddExpression'a** sağ tıklayın ve **Görünüm Simgesi'ne (varsa)** tıklayın. Menü öğelerinin çoğunun "varsa" niteleyicisi olduğuna dikkat edin. Sözdizimi Görselleştiricisi, tüm düğümler için bulunamayan özellikler de dahil olmak üzere düğümün özelliklerini denetler.
 
-Aşağıdaki şekilde gösterildiği gibi görselleştiricisi güncelleştirmelerinde bulunan Özellik Kılavuzu: ifade sembolü, **Kind = yöntemi**Içeren bir **SynthesizedIntrinsicOperatorSymbol** .
+Aşağıdaki şekilde gösterildiği gibi görselleştirici güncelleştirmeleri özellik ızgarası: Ifade sembolü **Kind = Yöntemi**ile **SynthesizedIntrinsicOperatorSymbol** olduğunu.
 
 ![Sembol özellikleri](media/syntax-visualizer/symbol-properties.png)
 
-Aynı **AddExpression** düğümü için **TypeSymbol (varsa) görüntülemeyi** deneyin. Aşağıdaki şekilde gösterildiği gibi, Görselleştirici güncelleştirmelerinde bulunan Özellik Kılavuzu, seçili ifadenin türünün `Int32`olduğunu gösterir.
+Aynı **AddExpression** düğümü için **TypeSymbol'ı (varsa) görünüm** dene. Aşağıdaki şekilde gösterildiği gibi görselleştirici güncelleştirmeleri özellik ızgara, seçili ifade türü `Int32`olduğunu belirten .
 
 ![TypeSymbol özellikleri](media/syntax-visualizer/type-symbol-properties.png)
 
-Aynı **AddExpression** düğümü Için **dönüştürülmüş TypeSymbol (varsa) görüntülemeyi** deneyin. Özellik Kılavuzu, ifadenin türü `Int32`olsa da, ifadenin dönüştürülmüş türünün, aşağıdaki şekilde gösterildiği gibi `Double` olduğunu gösterir. Bu düğüm dönüştürülmüş tür sembol bilgisini içerir çünkü `Int32` ifadesi bir `Double`dönüştürülmesi gereken bir bağlamda meydana gelir. Bu dönüştürme, atama işlecinin sol tarafındaki `x` değişkeni için belirtilen `Double` türünü karşılar.
+Aynı **AddExpression** düğümü için **Dönüştürülmüş TypeSymbol'ı (varsa)** görüntüleyin'i deneyin. Özellik ızgarası, ifadenin türü olmasına `Int32`rağmen, ifadenin dönüştürülmüş türünün `Double` aşağıdaki şekilde gösterildiği gibi olduğunu belirten güncelleştirmelerdir. İfade bir `Int32` `Double`. dönüştürülmesi gereken bir bağlamda oluşur, çünkü bu düğüm dönüştürülmüş tür sembolü bilgileri içerir Bu dönüştürme, atama işlecinin `Double` sol `x` tarafındaki değişken için belirtilen türü karşılar.
 
-![Dönüştürülen TypeSymbol özellikleri](media/syntax-visualizer/converted-type-symbol-properties.png)
+![Dönüştürülmüş TypeSymbol özellikleri](media/syntax-visualizer/converted-type-symbol-properties.png)
 
-Son olarak, aynı **AddExpression** düğümü Için **sabit değeri (varsa) görüntülemeyi** deneyin. Özellik Kılavuzu, ifadenin değerinin `2`değeri olan bir derleme zamanı sabiti olduğunu gösterir.
+Son olarak, aynı **AddExpression** düğümü için **Sabit Değeri Görüntüle'yi (varsa)** deneyin. Özellik ızgarası, ifadenin değerinin değeri `2`olan bir derleme zaman sabiti olduğunu gösterir.
 
-![Sabit değer](media/syntax-visualizer/constant-value.png)
+![Sabit bir değer](media/syntax-visualizer/constant-value.png)
 
-Yukarıdaki örnek, Visual Basic de çoğaltılabilir. Visual Basic bir dosyaya `Dim x As Double = 1 + 1` yazın. Kod Düzenleyicisi penceresinde `1 + 1` ifade seçin. Görselleştirici, görselleştiricide karşılık gelen **AddExpression** düğümünü vurgular. Bu **AddExpression** için önceki adımları tekrarlayın ve özdeş sonuçlar görmeniz gerekir.
+Önceki örnek Visual Basic'te de çoğaltılabilir. Visual `Dim x As Double = 1 + 1` Basic dosyasini yazın. Kod düzenleyicisi penceresindeki ifadeyi `1 + 1` seçin. Görselleştirici, visualizer'daki ilgili **AddExpression** düğümlerini vurgular. Bu **AddExpression** için önceki adımları yineleyin ve aynı sonuçları görmeniz gerekir.
 
-Visual Basic daha fazla kod inceleyin. Ana Visual Basic dosyanızı aşağıdaki kodla güncelleştirin:
+Visual Basic'te daha fazla kodu inceleyin. Ana Visual Basic dosyanızı aşağıdaki kodla güncelleyin:
 
 ```vb
 Imports C = System.Console
@@ -119,24 +119,24 @@ Module Program
 End Module
 ```
 
-Bu kod, dosyanın üst kısmında `System.Console` tür ile eşleyen `C` adlı bir diğer ad tanıtır ve bu diğer adı `Main()`içinde kullanır. Bu diğer adın kullanımını, `Main()` yönteminin içindeki `C.WriteLine()``C` seçin. Görselleştiricisi görselleştiricide karşılık gelen **IdentifierName** düğümünü seçer. Bu düğüme sağ tıklayın ve **Görünüm simgesine (varsa)** tıklayın. Özellik Kılavuzu, Bu tanımlayıcının aşağıdaki şekilde gösterildiği gibi tür `System.Console` bağlandığını gösterir:
+Bu kod, dosyanın `C` üst kısmındaki `System.Console` türle eşleyen ve bu diğer `Main()`adı içinde kullanan bir takma ad tanılar. Bu diğer adın kullanımını `C` seçin, `C.WriteLine()`in `Main()` , yöntemin içinde. Görselleştirici, visualizer'daki ilgili **TanımlayıcıName** düğümünü seçer. Bu düğüme sağ tıklayın ve **Görünüm Simgesi'ne tıklayın (varsa)**. Özellik ızgarası, bu tanımlayıcının aşağıdaki şekilde gösterildiği `System.Console` gibi türe bağlı olduğunu gösterir:
 
 ![Sembol özellikleri](media/syntax-visualizer/symbol-visual-basic.png)
 
-Aynı **IdentifierName** düğümü için **bir diğer simge (varsa) görüntülemeyi** deneyin. Özellik Kılavuzu, tanımlayıcının `System.Console` hedefine bağlanan `C` adlı bir diğer ad olduğunu gösterir. Diğer bir deyişle, özellik Kılavuzu `C`tanımlayıcı **sembolüyle** ilgili bilgiler sağlar.
+Aynı **IdentifierName** düğümü için **AliasSymbol'u (varsa)** görüntüleyin'i deneyin. Özellik ızgarası, tanımlayıcının `C` `System.Console` hedefe bağlı adı olan bir diğer ad olduğunu gösterir. Başka bir deyişle, özellik ızgarası tanımlayıcıya karşılık gelen **AliasSymbol** `C`ile ilgili bilgiler sağlar.
 
-![Diğerad sembol özellikleri](media/syntax-visualizer/alias-symbol.png)
+![AliasSymbol özellikleri](media/syntax-visualizer/alias-symbol.png)
 
-Her türlü tanımlanmış türe, yönteme ve özelliğe karşılık gelen sembolü inceleyin. Görselleştirici içinde karşılık gelen düğümü seçin ve **Görünüm simgesine (varsa)** tıklayın. Yöntemin gövdesi dahil `Sub Main()`yöntemini seçin. Görselleştirici içindeki karşılık gelen **alt blok** düğümü Için **Görünüm simgesine (varsa)** tıklayın. Özellik Kılavuzu, bu **alt blok** Için **methodsymbol** 'ın `Void`dönüş türü `Main` adına sahip olduğunu gösterir.
+Beyan edilen herhangi bir türe, yönteme, özelliğe karşılık gelen sembolü inceleyin. Görselleştiricideki karşılık gelen düğümü seçin ve **Görünüm Simgesi'ni (varsa)** tıklatın. Yöntemin `Sub Main()`gövdesi de dahil olmak üzere yöntemi seçin. Görselleştiricideki ilgili **Alt Blok** düğümü için Görünüm Simgesi'ni **(varsa)** tıklatın. Özellik ızgarası, bu **Alt Blok** için `Main` `Void` **MethodSymbol'un** iade türüne sahip adı olduğunu gösterir.
 
-![Yöntem bildirimi için simge görüntüleme](media/syntax-visualizer/method-symbol.png)
+![Yöntem bildirimi için görüntüleme simgesi](media/syntax-visualizer/method-symbol.png)
 
-Yukarıdaki Visual Basic örnekleri ' de C#kolayca çoğaltılabilir. Diğer ad için `Imports C = System.Console` yerine `using C = System.Console;` yazın. Yukarıdaki adımlar, Görselleştirici penceresinde özdeş sonuçlar elde ediyor C# .
+Yukarıdaki Visual Basic örnekleri C# ile kolayca çoğaltılabilir. Takma `using C = System.Console;` ad `Imports C = System.Console` yerine yazın. C#'daki önceki adımlar görselleştirici penceresinde aynı sonuçları verir.
 
-Anlamsal İnceleme işlemleri yalnızca düğümlerde kullanılabilir. Belirteçler veya trivia üzerinde kullanılamaz. Tüm düğümlerin incelemeye yönelik ilginç anlam bilgileri yoktur. Bir düğüm ilginç anlam bilgisine sahip olmadığında **görünüm \* simgesine tıklamak (varsa)** boş bir özellik kılavuzunu gösterir.
+Anlamsal denetim işlemleri sadece düğümlerde mevcuttur. Jeton veya ıvır zıvır da mevcut değildir. Tüm düğümleri incelemek için ilginç semantik bilgiler var. Bir düğümün ilginç anlamsal bilgileri yoksa, **Görünüm \* Simgesi'ni tıklattığınızda (varsa)** boş bir özellik ızgarası gösterilir.
 
-[Semantiğe](work-with-semantics.md) genel bakış belgesinde semantik analizler gerçekleştirmek Için API 'ler hakkında daha fazla bilgi edinebilirsiniz.
+Semantik genel bakış [belgesiyle Work'te](work-with-semantics.md) anlamsal analiz yapmak için API'ler hakkında daha fazla bilgi edinebilirsiniz.
 
-## <a name="closing-the-syntax-visualizer"></a>Sözdizimi Görselleştiricisini kapatma
+## <a name="closing-the-syntax-visualizer"></a>Sözdizimi görselleştiricisini kapatma
 
-Kaynak kodu incelemek için kullanmıyorsanız Görselleştirici penceresini kapatabilirsiniz. Sözdizimi görselleştiricisi, kod içinde gezinerek, kaynak düzenlenirken ve değiştirirken görüntüsünü günceller. Bu, kullanmadığınız durumlarda dikkat dağıtıcı alabilir. 
+Kaynak kodu incelemek için kullanmadığınızda görselleştirici pencereyi kapatabilirsiniz. Sözdizimi görselleştiricisi, kod, düzenleme ve kaynak değiştirme arasında gezinirken ekranını güncelleştirir. Kullanmadığınız zaman dikkat dağıtıcı olabilir.

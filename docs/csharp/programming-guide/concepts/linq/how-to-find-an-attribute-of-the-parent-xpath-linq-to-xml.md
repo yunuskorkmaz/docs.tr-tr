@@ -1,17 +1,17 @@
 ---
-title: Üst öğenin bir özniteliğini bulma (XPath-LINQ to XML) (C#)
+title: Üst öğenin özniteliği (XPath-LINQ'dan XML'e) (C#) nasıl bulabilirim?
 ms.date: 07/20/2015
 ms.assetid: dbef9d89-a5c4-431f-80cc-7a2ebf323f86
 ms.openlocfilehash: bfe7554a5c767adde5e7170c8e1ea0537155f6df
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141170"
 ---
-# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a>Üst öğenin bir özniteliğini bulma (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a>Üst öğenin özniteliği (XPath-LINQ'dan XML'e) (C#) nasıl bulabilirim?
 
-Bu konu başlığı altında, üst öğeye gitme ve bir özniteliği bulma gösterilmektedir.
+Bu konu, üst öğeye nasıl gidilir ve bir özniteliğini nasıl bulacağını gösterir.
 
 XPath ifadesi:
 
@@ -19,9 +19,9 @@ XPath ifadesi:
 
 ## <a name="example"></a>Örnek
 
-Bu örnek öncelikle bir `Author` öğesi bulur. Daha sonra üst öğenin `id` özniteliğini bulur.
+Bu örnekte `Author` ilk önce bir öğe bulur. Daha sonra `id` üst öğenin özniteliğini bulur.
 
-Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: kitaplar (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).
+Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Kitaplar (LINQ-XML)](./sample-xml-file-books-linq-to-xml.md).
 
 ```csharp
 XDocument books = XDocument.Load("Books.xml");
@@ -48,7 +48,7 @@ else
 Console.WriteLine(att1);
 ```
 
-Bu örnek aşağıdaki çıktıyı üretir:
+Bu örnek, aşağıdaki çıktıyı üretir:
 
 ```output
 Results are identical

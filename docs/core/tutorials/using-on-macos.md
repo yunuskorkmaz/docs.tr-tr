@@ -1,54 +1,54 @@
 ---
-title: "Öğretici: Visual Studio Code kullanarak macOS 'ta .NET Core çözümü oluşturma"
-description: Bu belge, Visual Studio Code kullanarak bir .NET Core çözümü oluşturmak için adımlar ve iş akışı sağlar.
+title: "Öğretici: Visual Studio Code kullanarak macOS'ta bir .NET Core çözümü oluşturun"
+description: Bu belge, Visual Studio Code kullanarak bir .NET Core Solution oluşturmak için adımlar ve iş akışı sağlar.
 ms.date: 12/19/2019
 ms.openlocfilehash: f5da16d413ddc25587ff35550fe9f308dc87f4bb
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156601"
 ---
-# <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak macOS 'ta .NET Core çözümü oluşturma
+# <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak macOS'ta bir .NET Core çözümü oluşturun
 
-Bu belge, macOS için .NET Core çözümü oluşturmaya yönelik adımları ve iş akışını sağlar. Projeler, birim testleri oluşturma, hata ayıklama araçlarını kullanma ve [NuGet](https://www.nuget.org/)aracılığıyla üçüncü taraf kitaplıklarını birleştirme hakkında bilgi edinin.
+Bu belge, macOS için bir .NET Core çözümü oluşturmak için adımları ve iş akışını sağlar. [NuGet](https://www.nuget.org/)aracılığıyla proje oluşturmayı, birim testleri yapmayı, hata ayıklama araçlarını nasıl kullanacağınızı ve üçüncü taraf kitaplıklarını nasıl birleştirerek nasıl kullanacağınızı öğrenin.
 
 > [!NOTE]
-> Bu makale macOS üzerinde [Visual Studio Code](https://code.visualstudio.com) kullanır.
+> Bu makalede, macOS'ta [Visual Studio Kodu](https://code.visualstudio.com) kullanılır.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-[.NET Core SDK](https://dotnet.microsoft.com/download)'i yükler. .NET Core SDK .NET Core Framework ve çalışma zamanının en son sürümünü içerir.
+[.NET Çekirdek SDK'yı](https://dotnet.microsoft.com/download)yükleyin. .NET Core SDK, .NET Core çerçevesinin ve çalışma zamanının en son sürümüne yer verilmiştir.
 
-[Visual Studio Code](https://code.visualstudio.com)'i yükler. Bu makalenin kursu sırasında, .NET Core geliştirme deneyimini geliştiren Visual Studio Code uzantıları da yüklersiniz.
+[Visual Studio Kodunu](https://code.visualstudio.com)Yükleyin. Bu makale nin seyri sırasında,.NET Core geliştirme deneyimini geliştiren Visual Studio Code uzantılarını da yüklersiniz.
 
-Visual Studio Code açıp C# <kbd>FN</kbd>+<kbd>F1</kbd> tuşlarına basarak Visual Studio Code uzantısını yükleyip Visual Studio Code paleti açın. Uzantı listesini görmek için **EXT Install** yazın. C# Uzantıyı seçin. Uzantıyı etkinleştirmek için Visual Studio Code yeniden başlatın. Daha fazla bilgi için [ C# Visual Studio Code uzantısı belgelerine](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)bakın.
+Visual Studio Code Kodunu açarak ve Visual Studio Code paletini açmak için <kbd>Fn</kbd>+<kbd>F1</kbd> tuşuna basarak Visual Studio Code C# uzantısını yükleyin. Uzantıların listesini görmek için **ext yükleme** yazın. C# uzantısını seçin. Uzantıyı etkinleştirmek için Visual Studio Code'u yeniden başlatın. Daha fazla bilgi için [Visual Studio Code C# Extension belgelerine](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)bakın.
 
-## <a name="get-started"></a>başlarken
+## <a name="get-started"></a>Başlarken
 
-Bu öğreticide, üç proje oluşturursunuz: bir kitaplık projesi, bu kitaplık projesi için testler ve kitaplığı kullanan bir konsol uygulaması. Bu makalenin kaynağını GitHub 'daki DotNet/Samples deposunda [görüntüleyebilir veya indirebilirsiniz](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) . İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Bu öğreticide, üç proje oluşturursunuz: bir kitaplık projesi, kitaplık projesi için testler ve kitaplığı kullanan bir konsol uygulaması. Bu [makalenin kaynağını](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) GitHub'daki dotnet/samples deposundan görüntüleyebilir veya indirebilirsiniz. İndirme talimatları için [Örnekler ve Öğreticiler'e](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)bakın.
 
-Visual Studio Code başlatın. Visual Studio Code yerleşik bir terminal açmak için <kbd>Ctrl</kbd> <kbd>\`</kbd> (backquote veya backtick karakteri) ya da menüden > **Terminal** **görüntüle** ' yi seçin. Visual Studio Code dışında çalışmayı tercih ediyorsanız, bir dış kabuğu, **komut istemi** komutunda aç (MacOS veya Linux 'ta**terminalde aç** ) ile açabilirsiniz.
+Visual Studio Code'u başlatın. Visual Studio Code'da gömülü bir terminal açmak için <kbd>Ctrl</kbd> <kbd>\`</kbd> 'ye (backquote veya backtick karakteri) basın veya menüden**Terminali** **Görüntüle'yi** > seçin. Visual Studio Code dışında çalışmayı tercih ederseniz Explorer **Open in Command Prompt** komutu (macOS veya**Linux'ta Terminal'de açık)** ile harici bir kabuk açabilirsiniz.
 
-Bir veya daha fazla .NET Core projesi için kapsayıcı görevi gören bir çözüm dosyası oluşturarak başlayın. Terminalde, *altın*adlı yeni bir klasörde *altın. sln* yeni bir çözüm oluşturmak için [`dotnet new`](../tools/dotnet-new.md) komutunu çalıştırın:
+Bir veya daha fazla .NET Core projesi için kapsayıcı görevi gören bir çözüm dosyası oluşturarak başlayın. Terminalde, golden [`dotnet new`](../tools/dotnet-new.md) adlı yeni bir klasör içinde yeni bir çözüm *golden* *golden.sln* oluşturmak için komutu çalıştırın:
 
 ```dotnetcli
 dotnet new sln -o golden
 ```
 
-New *altın* klasörüne gidin ve Kitaplık klasöründe,*Library. csproj* ve *Class1.cs*olmak üzere iki dosya üreten *bir kitaplık projesi* oluşturmak için aşağıdaki komutu yürütün:
+Kitaplık klasöründe*library.csproj* ve *Class1.cs*olmak üzere iki dosya üreten bir kitaplık projesi *library* oluşturmak için yeni *altın* klasöre gidin ve aşağıdaki komutu çalıştırın:
 
 ```dotnetcli
 dotnet new classlib -o library
 ```
 
-Yeni oluşturulan *Library. csproj* projesini çözüme eklemek için [`dotnet sln`](../tools/dotnet-sln.md) komutunu yürütün:
+Yeni [`dotnet sln`](../tools/dotnet-sln.md) oluşturulan *library.csproj* projesini çözüme eklemek için komutu uygulayın:
 
 ```dotnetcli
 dotnet sln add library/library.csproj
 ```
 
-*Library. csproj* dosyası aşağıdaki bilgileri içerir:
+*Library.csproj* dosyası aşağıdaki bilgileri içerir:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -60,13 +60,13 @@ dotnet sln add library/library.csproj
 </Project>
 ```
 
-Kitaplık yöntemlerimiz JSON biçimindeki nesneleri serileştirmek ve serisini kaldıramıyor. JSON serileştirme ve serisini kaldırma desteği için `Newtonsoft.Json` NuGet paketine bir başvuru ekleyin. `dotnet add` komutu bir projeye yeni öğeler ekler. Bir NuGet paketine başvuru eklemek için, [`dotnet add package`](../tools/dotnet-add-package.md) komutunu kullanın ve paketin adını belirtin:
+Kitaplık yöntemlerimiz json formatında nesneleri seri hale ve deserialize eder. JSON serileştirme ve deserialization desteklemek için `Newtonsoft.Json` NuGet paketine bir başvuru ekleyin. Komut, `dotnet add` projeye yeni öğeler ekler. NuGet paketine başvuru eklemek için [`dotnet add package`](../tools/dotnet-add-package.md) komutu kullanın ve paketin adını belirtin:
 
 ```dotnetcli
 dotnet add library package Newtonsoft.Json
 ```
 
-Bu, `Newtonsoft.Json` ve bağımlılıklarını kitaplık projesine ekler. Alternatif olarak, *Library. csproj* dosyasını el ile düzenleyin ve aşağıdaki düğümü ekleyin:
+Bu, `Newtonsoft.Json` kitaplık projesine bağımlılıkları ve bağımlılıklarını ekler. Alternatif olarak, *library.csproj* dosyasını el ile edin ve aşağıdaki düğümü ekleyin:
 
 ```xml
 <ItemGroup>
@@ -74,13 +74,13 @@ Bu, `Newtonsoft.Json` ve bağımlılıklarını kitaplık projesine ekler. Alter
 </ItemGroup>
 ```
 
-Bağımlılıkları geri yükleyen [`dotnet restore`](../tools/dotnet-restore.md)yürütün ([bkz. Note](#dotnet-restore-note)) ve içinde bir *Project. varlıklar. JSON* dosyası dahil olmak üzere üç dosya içeren *kitaplık* içinde bir *obj* klasörü oluşturur:
+Bağımlılıkları geri [`dotnet restore`](../tools/dotnet-restore.md)yükleyen ve içinde *project.assets.json* dosyası da dahil olmak üzere üç dosya içeren *kitaplık* içinde bir *obj* klasörü oluşturan Yürütme , ([bkz.](#dotnet-restore-note)
 
 ```dotnetcli
 dotnet restore
 ```
 
-*Kitaplık* klasöründe, *Class1.cs* dosyasını *Thing.cs*olarak yeniden adlandırın. Kodu aşağıdaki kodla değiştirin:
+*Kitaplık* klasöründe, dosyayı *Class1.cs* *Thing.cs'* e yeniden adlandırın. Kodu aşağıdakilerle değiştirin:
 
 ```csharp
 using static Newtonsoft.Json.JsonConvert;
@@ -95,15 +95,15 @@ namespace Library
 }
 ```
 
-`Thing` sınıfı, iki sayının toplamını döndüren ve sonra toplamı bir dizeye dönüştürerek ve sonra bir tamsayı olarak seri durumdan çıkarmak için bir genel yöntem içerir, `Get`. C# Bu, [`using static` yönergeleri](../../csharp/language-reference/keywords/using-static.md), [ifade-Bodied Üyeler](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members)ve [dize ilişkilendirme](../../csharp/language-reference/tokens/interpolated.md)gibi birçok modern özelliği kullanır.
+Sınıf, `Thing` iki sayının `Get`toplamını döndüren, ancak toplamı bir dize dönüştürüp sonra bir tamsayıya dönüştürerek bunu yapan bir ortak yöntem içerir. Bu, [ `using static` yönergeler,](../../csharp/language-reference/keywords/using-static.md) [ifade gövdeli üyeler](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members)ve [dize enterpolasyonu](../../csharp/language-reference/tokens/interpolated.md)gibi bir dizi modern C# özelliğinden yararlanır.
 
-[`dotnet build`](../tools/dotnet-build.md) komutuyla kitaplığı oluşturun. Bu, *altın/Library/bin/Debug/Netstandard 1.4*altında bir *Library. dll* dosyası üretir:
+[`dotnet build`](../tools/dotnet-build.md) Komutla kitaplığı oluşturun. Bu *altın/kütüphane/bin/Debug/netstandard1.4*altında bir *library.dll* dosyası oluşturur:
 
 ```dotnetcli
 dotnet build
 ```
 
-## <a name="create-the-test-project"></a>Test projesi oluşturma
+## <a name="create-the-test-project"></a>Test projesini oluşturma
 
 Kitaplık için bir test projesi oluşturun. *Altın* klasörden yeni bir test projesi oluşturun:
 
@@ -111,19 +111,19 @@ Kitaplık için bir test projesi oluşturun. *Altın* klasörden yeni bir test p
 dotnet new xunit -o test-library
 ```
 
-Çözüme test projesi ekleyin:
+Test projesini çözüme ekleyin:
 
 ```dotnetcli
 dotnet sln add test-library/test-library.csproj
 ```
 
-Önceki bölümde oluşturduğunuz kitaplığa bir proje başvurusu ekleyerek derleyicinin kitaplık projesini bulup kullanmasını sağlayabilirsiniz. [`dotnet add reference`](../tools/dotnet-add-reference.md) komutunu kullanın:
+Derleyicinin kitaplık projesini bulup kullanabilmesi için önceki bölümde oluşturduğunuz kitaplık bir proje başvurusu ekleyin. Komutu [`dotnet add reference`](../tools/dotnet-add-reference.md) kullanın:
 
 ```dotnetcli
 dotnet add test-library/test-library.csproj reference library/library.csproj
 ```
 
-Alternatif olarak, *Test-Library. csproj* dosyasını el ile düzenleyin ve aşağıdaki düğümü ekleyin:
+Alternatif olarak, *test-library.csproj* dosyasını el ile edin ve aşağıdaki düğümü ekleyin:
 
 ```xml
 <ItemGroup>
@@ -131,7 +131,7 @@ Alternatif olarak, *Test-Library. csproj* dosyasını el ile düzenleyin ve aşa
 </ItemGroup>
 ```
 
-Bağımlılıklar düzgün şekilde yapılandırıldığına göre, kitaplığınız için testler oluşturun. *UnitTest1.cs* açın ve içeriğini şu kodla değiştirin:
+Bağımlılıklar düzgün şekilde yapılandırıldığına göre, kitaplığınız için testleri oluşturun. *UnitTest1.cs* açın ve içeriğini aşağıdaki kodla değiştirin:
 
 ```csharp
 using Library;
@@ -150,28 +150,28 @@ namespace TestApp
 }
 ```
 
-Birim testini (`Assert.NotEqual`) ilk oluşturduğunuzda 42 değerini 19 + 23 (veya 42) değerine eşit olduğunu unutmayın. Birim testlerini oluştururken önemli bir adım testi, öncelikle mantığını onaylamak için bir kez başarısız olacak şekilde oluşturmaktır.
+42 değerinin 19+23 'e (veya 42)'ye eşit olmadığını, birim`Assert.NotEqual`testini ilk oluşturduğunuzda (veya 42) başarısız olacağını unutmayın. Birim testleri oluşturmada önemli bir adım, testin mantığını doğrulamak için ilk önce başarısız olmasını sağlamaktır.
 
-*Altın* klasöründen aşağıdaki komutları yürütün:
+*Altın* klasörden aşağıdaki komutları uygulayın:
 
 ```dotnetcli
 dotnet restore
 dotnet test test-library/test-library.csproj
 ```
 
-Bu komutlar, bağımlılıkları geri yüklemek, onları derlemek ve testleri çalıştırmak için xUnit Test Çalıştırıcısı 'nı etkinleştirmek için tüm projeleri yinelemeli olarak bulur. Beklenen şekilde tek test başarısız olur.
+Bu komutlar, bağımlılıkları geri yüklemek, bunları oluşturmak ve testleri çalıştırmak için xUnit test koşucusunu etkinleştirmek için tüm projeleri özyinelemeli olarak bulur. Beklediğiniz gibi, tek bir test başarısız olur.
 
-*UnitTest1.cs* dosyasını düzenleyin ve onaylama `Assert.NotEqual` `Assert.Equal`olarak değiştirin. Bu saati geçen testi yeniden çalıştırmak için *altın* klasöründen aşağıdaki komutu yürütün:
+*UnitTest1.cs* dosyasını edin ve `Assert.NotEqual` iddiayı ' dan ' a `Assert.Equal`değiştirin Bu kez geçen testi yeniden çalıştırmak için *altın* klasörden aşağıdaki komutu çalıştırın:
 
 ```dotnetcli
 dotnet test test-library/test-library.csproj
 ```
 
-## <a name="create-the-console-app"></a>Konsol uygulaması oluşturma
+## <a name="create-the-console-app"></a>Konsol uygulamasını oluşturma
 
-Aşağıdaki adımlar üzerinden oluşturduğunuz konsol uygulaması, daha önce oluşturduğunuz kitaplık projesine bir bağımlılık alır ve çalıştırıldığında kitaplık yöntemini çağırır. Bu geliştirme modelini kullanarak birden çok proje için yeniden kullanılabilir kitaplıklar oluşturmayı görürsünüz.
+Aşağıdaki adımlar da oluşturduğunuz konsol uygulaması, daha önce oluşturduğunuz kitaplık projesine bağımlı hale getirir ve çalıştığında kitaplık yöntemini çağırır. Bu geliştirme modelini kullanarak, birden çok proje için yeniden kullanılabilir kitaplıklar oluşturmanın nasıl olduğunu görürsünüz.
 
-*Altın* klasöründen yeni bir konsol uygulaması oluşturun:
+*Altın* klasörden yeni bir konsol uygulaması oluşturun:
 
 ```dotnetcli
 dotnet new console -o app
@@ -183,26 +183,26 @@ Konsol uygulaması projesini çözüme ekleyin:
 dotnet sln add app/app.csproj
 ```
 
-`dotnet add reference` komutunu çalıştırarak kitaplıkta bağımlılığı oluşturun:
+`dotnet add reference` Komutu çalıştırarak kitaplığa bağımlılık oluşturun:
 
 ```dotnetcli
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
-Çözümdeki üç projenin bağımlılıklarını geri yüklemek için `dotnet restore` ([bkz. Note](#dotnet-restore-note)) ' i çalıştırın. *Program.cs* ' i açın ve `Main` yönteminin içeriğini aşağıdaki satırla değiştirin:
+Çözümdeki üç projenin bağımlılıklarını geri yüklemek için çalıştırın `dotnet restore` ([bkz. nota bakınız).](#dotnet-restore-note) *Program.cs* açın ve yöntemin `Main` içeriğini aşağıdaki satırla değiştirin:
 
 ```csharp
 WriteLine($"The answer is {new Thing().Get(19, 23)}");
 ```
 
-*Program.cs* dosyasının en üstüne iki `using` yönergesi ekleyin:
+Program.cs `using` dosyasının üst bölümüne *Program.cs* iki yönerge ekleyin:
 
 ```csharp
 using static System.Console;
 using Library;
 ```
 
-Yürütülebilir dosyayı çalıştırmak için aşağıdaki `dotnet run` komutunu yürütün; burada, `dotnet run` `-p` seçeneği, ana uygulamanın projesini belirtir. Uygulama "Yanıt 42" dizesini üretir.
+Ana uygulama `dotnet run` için projeyi `-p` belirtebilme `dotnet run` seçeneğinin bulunduğu, yürütülebilir'i çalıştırmak için aşağıdaki komutu çalıştırın. Uygulama "Yanıt 42"dir dizesini üretir.
 
 ```dotnetcli
 dotnet run -p app/app.csproj
@@ -210,13 +210,13 @@ dotnet run -p app/app.csproj
 
 ## <a name="debug-the-application"></a>Uygulamada hata ayıklama
 
-`Main` yönteminde `WriteLine` bildiriminde bir kesme noktası ayarlayın. İmleç `WriteLine` çizginin üzerindeyken ya da kesme noktasını ayarlamak istediğiniz satırdaki sol kenar boşluğunda fareyle tıklanarak, <kbd>Fn</kbd>+<kbd>F9</kbd> tuşuna basarak bunu yapın. Kod satırının yanındaki kenar boşluğunda kırmızı bir daire görünür. Kesme noktasına ulaşıldığında, kesme noktası çizgisi yürütülmeden *önce* kod yürütme durur.
+`Main` Yöntemdeki deyimde `WriteLine` bir kesme noktası ayarlayın. İmleç `WriteLine` çizginin üzerindeyken <kbd>Fn</kbd>+<kbd>F9</kbd> tuşuna basarak veya kesme noktasını ayarlamak istediğiniz çizginin sol kenar boşluğundaki fareyi tıklatarak bunu yapın. Kod satırının yanındaki kenar boşluğunda kırmızı bir daire görüntülenir. Kesme noktasına ulaşıldığında, kesme noktası satırı yürütülmeden *önce* kod yürütme durdurulur.
 
-Visual Studio Code araç çubuğunda hata ayıklama simgesini seçerek hata ayıklayıcı sekmesini açın, menü çubuğundan >  **hata ayıklamayı** görüntüle ' yi seçin veya <kbd>&#8679;</kbd> <kbd>&#8984;</kbd> <kbd>klavye kısayolunu kullanın</kbd>:
+Visual Studio Code araç çubuğundaki Hata Ayıklama simgesini seçerek, menü çubuğundan**Hata Ayıklama'yı** **Görüntüle'yi** > seçerek veya klavye kısayolu <kbd>&#8679;</kbd> <kbd>D</kbd> <kbd>&#8984;</kbd>kullanarak hata ayıklama sekmesini açın:
 
-![Visual Studio Code hata ayıklayıcı](./media/using-on-macos/visual-studio-code-debugger.png)
+![Görsel Stüdyo Kodu Debugger](./media/using-on-macos/visual-studio-code-debugger.png)
 
-Uygulamayı hata ayıklayıcı altında başlatmak için Yürüt düğmesine basın. Bu projede hem bir test projesi hem de bir uygulama oluşturdunuz. Hata ayıklayıcı hangi projeyi başlatmak istediğinizi sorar. "Uygulama" projesini seçin. Uygulama yürütme işlemini başlatır ve kesme noktasında çalışır. `Get` yöntemine adımla ve doğru bağımsız değişkenleri geçirdiğinizden emin olun. Yanıtın 42 olduğunu doğrulayın.
+Hata ayıklamanın altındaki uygulamayı başlatmak için Oynat düğmesine basın. Bu projede hem bir test projesi hem de bir uygulama oluşturdunuz. Hata ayıklayan hangi projeyi başlatmak istediğinizi sorar. "Uygulama" projesini seçin. Uygulama yürütmeye başlar ve kesme noktasına kadar çalışır ve burada durur. Yönteme `Get` adım atın ve doğru bağımsız değişkenleri geçtiğinden emin olun. Cevabın 42 olduğunu doğrulayın.
 
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

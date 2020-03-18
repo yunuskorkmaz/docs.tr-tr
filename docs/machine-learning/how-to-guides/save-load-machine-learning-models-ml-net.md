@@ -1,22 +1,22 @@
 ---
-title: Eğitilen modelleri kaydetme ve yükleme
-description: Eğitilen modelleri kaydetme ve yükleme hakkında bilgi edinin
+title: Eğitimli modelleri kaydetme ve yükleme
+description: Eğitimli modelleri nasıl kaydedin ve yükleyin
 ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
 ms.openlocfilehash: e3cebe979b5c279ce8cb90db5510f8758c24c2b4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73977004"
 ---
-# <a name="save-and-load-trained-models"></a>Eğitilen modelleri kaydetme ve yükleme
+# <a name="save-and-load-trained-models"></a>Eğitimli modelleri kaydetme ve yükleme
 
-Uygulamanıza eğitilen modelleri kaydetmeyi ve yüklemeyi öğrenin.
+Uygulamanızda eğitimli modelleri nasıl kaydedin ve yükleyin öğrenin.
 
-Model oluşturma işlemi boyunca, bir model bellekte bulunur ve uygulamanın yaşam döngüsü boyunca erişilebilir. Ancak, uygulama çalışmayı durdurduktan sonra, model yerel olarak veya uzaktan kaydedilmezse artık erişilebilir değildir. Genellikle modeller, diğer uygulamalarda eğitim sonrasında, çıkarım veya yeniden eğitim için bir noktada kullanılır. Bu nedenle, modelin depolanması önemlidir. Veri hazırlama ve model eğitimi işlem hatlarını kullanırken aşağıda açıklandığı gibi, bu belgenin sonraki bölümlerinde açıklanan adımları kullanarak modelleri kaydedin ve yükleyin. Bu örnek bir doğrusal regresyon modeli kullansa da, aynı işlem diğer ML.NET algoritmaları için de geçerlidir.
+Model oluşturma işlemi boyunca, bir model bellekte yaşar ve uygulamanın yaşam döngüsü boyunca erişilebilir. Ancak, uygulama çalışmayı durdurduktan sonra, model yerel veya uzaktan bir yere kaydedilmezse, artık erişilemez. Genellikle modeller çıkarım veya yeniden eğitim için diğer uygulamalarda eğitimden sonra bir noktada kullanılır. Bu nedenle, modeli depolamak önemlidir. Aşağıda ayrıntılı olarak açıklanan veri hazırlama ve model eğitim boru hatlarını kullanırken bu belgenin sonraki bölümlerinde açıklanan adımları kullanarak modelleri kaydedin ve yükleyin. Bu örnek doğrusal bir regresyon modeli kullansa da, aynı işlem diğer ML.NET algoritmaları için de geçerlidir.
 
 ```csharp
 HousingData[] housingData = new HousingData[]
@@ -60,16 +60,16 @@ ITransformer trainedModel = pipelineEstimator.Fit(data);
 mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 ```
 
-Çoğu model ve veri hazırlama işlem hattı aynı sınıf kümesinden devraldığı için, bu bileşenlere yönelik Save ve Load Yöntem imzaları aynıdır. Kullanım durumunuza bağlı olarak, veri hazırlama işlem hattını ve modelini tek bir [`ITransformer`](xref:Microsoft.ML.ITransformer) çıkarmak veya ayrı bir [`ITransformer`](xref:Microsoft.ML.ITransformer) oluşturmak için ayrı bir [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601) birleştirebilirsiniz.
+Çoğu model ve veri hazırlama ardışık lığı aynı sınıf kümesinden devraldığından, bu bileşenler için kaydetme ve yükleme yöntemi imzaları aynıdır. Kullanım durumunuza bağlı olarak, veri hazırlama ardışık lığını ve [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601) modelini [`ITransformer`](xref:Microsoft.ML.ITransformer) tek bir çıktı da [`ITransformer`](xref:Microsoft.ML.ITransformer) elde edecek veya bunları birbirinden ayıran tek bir şekilde birleştirerek her biri için ayrı bir ayrı oluşturabilirsiniz.
 
-## <a name="save-a-model-locally"></a>Modeli yerel olarak kaydetme
+## <a name="save-a-model-locally"></a>Bir modeli yerel olarak kaydetme
 
-Bir modeli kaydederken iki şey olması gerekir:
+Bir modeli kaydederken iki şeye ihtiyacınız var:
 
-1. Modelin [`ITransformer`](xref:Microsoft.ML.ITransformer) .
-2. [`ITransformer`](xref:Microsoft.ML.ITransformer)beklenen girdinin [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) .
+1. Modelin. [`ITransformer`](xref:Microsoft.ML.ITransformer)
+2. [`ITransformer`](xref:Microsoft.ML.ITransformer)'beklenen [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) giriş.
 
-Modeli eğitdikten sonra, eğitim modelini giriş verilerinin `DataViewSchema` kullanarak `model.zip` adlı bir dosyaya kaydetmek için [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) yöntemini kullanın.
+Modeli eğittikten sonra, eğitilen [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) modeli giriş `model.zip` verilerini `DataViewSchema` kullanarak adlandırılan bir dosyaya kaydetmek için yöntemi kullanın.
 
 ```csharp
 // Save Trained Model
@@ -78,9 +78,9 @@ mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 
 ## <a name="load-a-model-stored-locally"></a>Yerel olarak depolanan bir modeli yükleme
 
-Yerel olarak depolanan modeller, `ASP.NET Core` ve `Serverless Web Applications`gibi diğer işlemlerde veya uygulamalarda kullanılabilir. Daha fazla bilgi edinmek için bkz. [Web API 'de ml.NET kullanma](./serve-model-web-api-ml-net.md) ve [ml.net sunucusuz Web uygulaması](./serve-model-serverless-azure-functions-ml-net.md) nasıl yapılır makaleleri dağıtma.
+Yerel olarak depolanan modeller, diğer işlemlerde `ASP.NET Core` veya `Serverless Web Applications`uygulamalarda kullanılabilir. Bkz. [Web API'sında ML.NET kullanın](./serve-model-web-api-ml-net.md) ve daha fazla bilgi edinmek için sunucusuz web uygulaması ML.NET nasıl kullanılır makalelerini [dağıtın.](./serve-model-serverless-azure-functions-ml-net.md)
 
-Ayrı bir uygulama veya işlemde, eğitilen modeli uygulamanıza almak için [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) yöntemini dosya yoluyla birlikte kullanın.
+Ayrı bir uygulama veya işlemde, eğitilmiş modeli uygulamanıza sokmak için dosya yolu ile birlikte [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) yöntemi kullanın.
 
 ```csharp
 //Define DataViewSchema for data preparation pipeline and trained model
@@ -92,7 +92,7 @@ ITransformer trainedModel = mlContext.Model.Load("model.zip", out modelSchema);
 
 ## <a name="load-a-model-stored-remotely"></a>Uzaktan depolanan bir modeli yükleme
 
-Uygulamanıza uzak bir konumda depolanan veri hazırlama işlem hatlarını ve modellerini yüklemek için [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) yönteminde dosya yolu yerine bir [`Stream`](xref:System.IO.Stream) kullanın.
+Uzak bir konumda depolanan veri hazırlama ardışık lıklarını ve [`Stream`](xref:System.IO.Stream) modelleri uygulamanıza yüklemek [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) için yöntemde dosya yolu yerine bir dosya yolu kullanın.
 
 ```csharp
 // Create MLContext
@@ -111,14 +111,14 @@ using (HttpClient client = new HttpClient())
 }
 ```
 
-## <a name="working-with-separate-data-preparation-and-model-pipelines"></a>Ayrı veri hazırlama ve model işlem hatları ile çalışma
+## <a name="working-with-separate-data-preparation-and-model-pipelines"></a>Ayrı veri hazırlama ve model boru hatları ile çalışma
 
 > [!NOTE]
-> Ayrı veri hazırlama ve model eğitimi işlem hatları ile çalışma isteğe bağlıdır. İşlem hatları ayrımı, öğrenilen model parametrelerini incelemeyi kolaylaştırır. Tahmin için, veri hazırlama ve model eğitimi işlemlerini içeren tek bir işlem hattını kaydetmek ve yüklemek daha kolay.
+> Ayrı veri hazırlama ve model eğitim boru hatları ile çalışma isteğe bağlıdır. Boru hatlarının ayrılması, öğrenilen model parametrelerinin incelenmesini kolaylaştırır. Öngörüler için, veri hazırlama ve model eğitim işlemlerini içeren tek bir ardışık işlemi kaydetmek ve yüklemek daha kolaydır.
 
-Ayrı veri hazırlama işlem hatları ve modelleriyle çalışırken, tek işlem hatları ile aynı işlem geçerlidir; Artık her iki işlem hattı da aynı anda kaydedilip yüklenmelidir.
+Ayrı veri hazırlama boru hatları ve modelleri ile çalışırken, tek boru hatları ile aynı süreç geçerlidir; şimdi her iki boru hattı nın da aynı anda kaydedilmesi ve yüklenmesi gerekiyor.
 
-Verilen ayrı veri hazırlama ve model eğitimi işlem hatları:
+Ayrı veri hazırlama ve model eğitim boru hatları verilir:
 
 ```csharp
 // Define data preparation estimator
@@ -139,9 +139,9 @@ IDataView transformedData = dataPrepTransformer.Transform(data);
 RegressionPredictionTransformer<LinearRegressionModelParameters> trainedModel = sdcaEstimator.Fit(transformedData);
 ```
 
-### <a name="save-data-preparation-pipeline-and-trained-model"></a>Veri hazırlama işlem hattını ve eğitilen modeli kaydetme
+### <a name="save-data-preparation-pipeline-and-trained-model"></a>Veri hazırlama boru hattını ve eğitimli modeli kaydetme
 
-Hem veri hazırlama işlem hattı hem de eğitilen modeli kaydetmek için aşağıdaki komutları kullanın:
+Hem veri hazırlama ardışıklığını hem de eğitilmiş modeli kaydetmek için aşağıdaki komutları kullanın:
 
 ```csharp
 // Save Data Prep transformer
@@ -151,9 +151,9 @@ mlContext.Model.Save(dataPrepTransformer, data.Schema, "data_preparation_pipelin
 mlContext.Model.Save(trainedModel, transformedData.Schema, "model.zip");
 ```
 
-### <a name="load-data-preparation-pipeline-and-trained-model"></a>Veri hazırlama işlem hattı ve eğitilen model yükleme
+### <a name="load-data-preparation-pipeline-and-trained-model"></a>Yük veri hazırlama boru hattı ve eğitimli model
 
-Ayrı bir süreç veya uygulamada, veri hazırlama işlem hattını ve eğitilen modeli şu anda aşağıdaki gibi yükleyin:
+Ayrı bir işlem veya uygulamada, veri hazırlama ardışık hattını ve eğitilmiş modeli aynı anda aşağıdaki gibi yükleyin:
 
 ```csharp
 // Create MLContext

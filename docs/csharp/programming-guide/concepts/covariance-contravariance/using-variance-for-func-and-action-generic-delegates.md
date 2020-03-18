@@ -1,21 +1,21 @@
 ---
-title: Func ve eylem genel temsilcileri için varyans kullanma (C#)
+title: Func ve Action Generic Delegeler için Varyans Kullanma (C#)
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: bbfc41fb8ab3e7d800f1eb03098e02056e694872
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 17f55d594ad4364fd29c8f6e41bd6ad2445b0986
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659916"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169798"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Func ve eylem genel temsilcileri için varyans kullanma (C#)
-Bu örnekler, `Func` ve ' de yöntemlerin yeniden kullanımını etkinleştirmek ve kodunuzda daha `Action` fazla esneklik sağlamak için ve genel temsilcilerde kovaryans ve değişken varyans kullanımını gösterir.  
+# <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Func ve Action Generic Delegeler için Varyans Kullanma (C#)
+Bu örnekler, yöntemlerin `Func` yeniden kullanılmasını sağlamak ve kodunuzda `Action` daha fazla esneklik sağlamak için genel temsilcilerde tutarlılık ve kontrayansın nasıl kullanılacağını gösterir.  
   
- Kovaryans ve değişken varyans hakkında daha fazla bilgi için bkz. [temsilcilerin varyansı (C#)](./variance-in-delegates.md).  
+ Covariance ve contravariance hakkında daha fazla bilgi için, [Temsilciler (C#) Varyans](./variance-in-delegates.md)bakın.  
   
-## <a name="using-delegates-with-covariant-type-parameters"></a>Birlikte değişken tür parametrelerine sahip temsilciler kullanma  
- Aşağıdaki örnekte, genel `Func` temsilcilerde kovaryans desteğinin avantajları gösterilmektedir. Yöntemi, `String` türünün bir parametresini alır ve `Employee` türünün bir nesnesini döndürür. `FindByTitle` Ancak, devraldığından `Func<String, Person>` `Employee` `Person`bu yöntemi temsilciye atayabilirsiniz.  
+## <a name="using-delegates-with-covariant-type-parameters"></a>Eşdeğişken Türü Parametreleri olan Temsilcileri Kullanma  
+ Aşağıdaki örnek, genel `Func` temsilcilerdeki covariance desteğinin faydalarını göstermektedir. Yöntem, `FindByTitle` türün bir `String` parametresini alır ve `Employee` türün bir nesnesini döndürür. Ancak, `Employee` devraldığı `Person`için bu `Func<String, Person>` yöntemi temsilciye atayabilirsiniz.  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -39,8 +39,8 @@ class Program
         // but you can assign it a method that returns Employee.  
         Func<String, Person> findPerson = FindByTitle;  
   
-        // You can also assign a delegate   
-        // that returns a more derived type   
+        // You can also assign a delegate
+        // that returns a more derived type
         // to a delegate that returns a less derived type.  
         findPerson = findEmployee;  
   
@@ -48,8 +48,8 @@ class Program
 }  
 ```  
   
-## <a name="using-delegates-with-contravariant-type-parameters"></a>Değişken karşıtı tür parametreleriyle temsilciler kullanma  
- Aşağıdaki örnekte, genel `Action` Temsilcilerde değişken varyans desteğinin avantajları gösterilmektedir. Yöntemi, `Person` türünün bir parametresini alır. `AddToContacts` Ancak, devraldığından `Action<Employee>` `Employee` `Person`bu yöntemi temsilciye atayabilirsiniz.  
+## <a name="using-delegates-with-contravariant-type-parameters"></a>Karşıt Tür Parametreleri Olan Delegeleri Kullanma  
+ Aşağıdaki örnek, genel `Action` temsilcilerdeki kontravariance desteğinin faydalarını göstermektedir. Yöntem, `AddToContacts` türün bir `Person` parametresini alır. Ancak, `Employee` devraldığı `Person`için bu `Action<Employee>` yöntemi temsilciye atayabilirsiniz.  
   
 ```csharp  
 public class Person { }  
@@ -67,14 +67,14 @@ class Program
         // Create an instance of the delegate without using variance.  
         Action<Person> addPersonToContacts = AddToContacts;  
   
-        // The Action delegate expects   
+        // The Action delegate expects
         // a method that has an Employee parameter,  
         // but you can assign it a method that has a Person parameter  
         // because Employee derives from Person.  
         Action<Employee> addEmployeeToContacts = AddToContacts;  
   
-        // You can also assign a delegate   
-        // that accepts a less derived parameter to a delegate   
+        // You can also assign a delegate
+        // that accepts a less derived parameter to a delegate
         // that accepts a more derived parameter.  
         addEmployeeToContacts = addPersonToContacts;  
     }  
@@ -83,5 +83,5 @@ class Program
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kovaryans ve değişken varyans (C#)](./index.md)
+- [Covariance ve Contravariance (C#)](./index.md)
 - [Genel Türler](../../../../standard/generics/index.md)

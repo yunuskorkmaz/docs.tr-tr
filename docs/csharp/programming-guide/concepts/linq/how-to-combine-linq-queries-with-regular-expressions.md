@@ -2,15 +2,15 @@
 title: LINQ sorgularını normal ifadelerle birleştirme (C#)
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: 97551f7d9d8cf13f05449c2f825ed4d29eb3d86e
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 104e63adb9c07a75077b92654afd791b6c82d8de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141404"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169435"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>LINQ sorgularını normal ifadelerle birleştirme (C#)
-Bu örnek, metin dizelerinde daha karmaşık eşleştirme için bir normal ifade oluşturmak üzere <xref:System.Text.RegularExpressions.Regex> sınıfını nasıl kullanacağınızı gösterir. LINQ sorgusu, normal ifadeyle arama yapmak istediğiniz dosyaları tam olarak filtrelemenizi ve sonuçları şekillendirmenizi kolaylaştırır.  
+Bu örnek, metin <xref:System.Text.RegularExpressions.Regex> dizelerinde daha karmaşık eşleştirme için normal bir ifade oluşturmak için sınıfın nasıl kullanılacağını gösterir. LINQ sorgusu, normal ifadeyle aramak istediğiniz dosyalara tam olarak filtre uygulamanızı ve sonuçları şekillendirmeyi kolaylaştırır.  
   
 ## <a name="example"></a>Örnek  
   
@@ -36,7 +36,7 @@ class QueryWithRegEx
         // This query produces a list of files where a match  
         // was found, and a list of the matchedValues in that file.  
         // Note: Explicit typing of "Match" in select clause.  
-        // This is required because MatchCollection is not a   
+        // This is required because MatchCollection is not a
         // generic IEnumerable collection.  
         var queryMatchingFiles =  
             from file in fileList  
@@ -56,7 +56,7 @@ class QueryWithRegEx
   
         foreach (var v in queryMatchingFiles)  
         {  
-            // Trim the path a bit, then write   
+            // Trim the path a bit, then write
             // the file name in which a match was found.  
             string s = v.name.Substring(startFolder.Length - 1);  
             Console.WriteLine(s);  
@@ -73,7 +73,7 @@ class QueryWithRegEx
         Console.ReadKey();  
     }  
   
-    // This method assumes that the application has discovery   
+    // This method assumes that the application has discovery
     // permissions for all folders under the specified path.  
     static IEnumerable<System.IO.FileInfo> GetFiles(string path)  
     {  
@@ -93,12 +93,12 @@ class QueryWithRegEx
 }  
 ```  
   
- Ayrıca, bir `RegEx` arama tarafından döndürülen <xref:System.Text.RegularExpressions.MatchCollection> nesnesini sorgulayabileceğinizi unutmayın. Bu örnekte, sonuçlarda yalnızca her bir eşleşmenin değeri üretilir. Ancak, bu koleksiyonda tüm filtreleme, sıralama ve gruplama türlerini gerçekleştirmek için LINQ kullanmak da mümkündür. <xref:System.Text.RegularExpressions.MatchCollection> genel olmayan bir <xref:System.Collections.IEnumerable> koleksiyonu olduğundan, sorgudaki aralık değişkeninin türünü açıkça belirtmelisiniz.  
+ Arama tarafından döndürülen <xref:System.Text.RegularExpressions.MatchCollection> nesneyi de sorgulayabildiğinizi unutmayın. `RegEx` Bu örnekte sonuçlarda yalnızca her eşleşmenin değeri üretilir. Ancak, linq'i kullanarak bu koleksiyonda her türlü filtreleme, sıralama ve gruplandırma yı gerçekleştirmek de mümkündür. Genel <xref:System.Text.RegularExpressions.MatchCollection> <xref:System.Collections.IEnumerable> olmayan bir koleksiyon olduğundan, sorgudaki aralık değişkeninin türünü açıkça belirtmeniz gerekir.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- System. C# lınq ve System.IO ad alanları için `using` yönergeleriyle bir konsol uygulaması projesi oluşturun.  
+ System.Linq ve System.IO `using` ad alanları için yönergeleri içeren bir C# konsolu uygulama projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (C#)](./linq-and-strings.md)
-- [LINQ ve dosya dizinleri (C#)](./linq-and-file-directories.md)
+- [LINQ ve Dizeleri (C#)](./linq-and-strings.md)
+- [LINQ ve Dosya Dizinleri (C#)](./linq-and-file-directories.md)

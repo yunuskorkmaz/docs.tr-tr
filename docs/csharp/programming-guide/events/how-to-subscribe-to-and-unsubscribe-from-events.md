@@ -1,5 +1,5 @@
 ---
-title: Olaylara abone olma ve aboneliği kaldırma- C# Programlama Kılavuzu
+title: Etkinliklere abone olunve aboneliğinizi iptal e-Çıkış - C# Programlama Kılavuzu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
@@ -7,36 +7,36 @@ helpviewer_keywords:
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
 ms.openlocfilehash: 3df357cb15f7f77cefbf360dd9615ce246afe2ea
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705333"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Olaylara abone olma ve olayları kaldırma (C# Programlama Kılavuzu)
-Bu olay ortaya çıktığında çağrılan özel kod yazmak istediğinizde, başka bir sınıf tarafından yayımlanan bir olaya abone olursunuz. Örneğin, Kullanıcı düğmeye tıkladığında uygulamanızı yararlı hale getirmek için bir düğmenin `click` olayına abone olabilirsiniz.  
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Etkinliklere abone olunve abonelikten çıkılmaz (C# Programlama Kılavuzu)
+Bu olay yükseltildiğinde çağrılan özel kod yazmak istediğinizde başka bir sınıf tarafından yayımlanan bir olaya abone olabilirsiniz. Örneğin, kullanıcı düğmeyi tıklattığında `click` uygulamanızın yararlı bir şey yapmasını sağlamak için bir düğmenin etkinliğine abone olabilirsiniz.  
   
-### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Visual Studio IDE kullanarak olaylara abone olma  
+### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Visual Studio IDE'yi kullanarak etkinliklere abone olmak için  
   
-1. **Özellikler** penceresini göremiyorsanız, **Tasarım** görünümü ' nde, olay işleyicisi oluşturmak istediğiniz form veya denetime sağ tıklayın ve **Özellikler**' i seçin.  
+1. **Özellikler** penceresini göremiyorsanız, **Tasarım** görünümünde, olay işleyicisi oluşturmak istediğiniz formu veya denetimi sağ tıklatın ve **Özellikler'i**seçin.  
   
-2. **Özellikler** penceresinin üstünde **Olaylar** simgesine tıklayın.  
+2. **Özellikler** penceresinin üstünde, **Etkinlikler** simgesini tıklatın.  
   
-3. Oluşturmak istediğiniz olaya çift tıklayın, örneğin `Load` olayı.  
+3. Oluşturmak istediğiniz olayı ( örneğin `Load` olay) çift tıklatın.  
   
-     Visual C# , boş bir olay işleyici yöntemi oluşturur ve bunu kodunuza ekler. Alternatif olarak, **Kod görünümünde kodu el ile de ekleyebilirsiniz** . Örneğin, aşağıdaki kod satırları `Form` sınıfı `Load` olayını harekete geçirirse çağrılacak bir olay işleyicisi yöntemi bildirir.  
+     Visual C# boş bir olay işleyicisi yöntemi oluşturur ve kodunuza ekler. Alternatif olarak **kodu Kod** görünümüne el ile ekleyebilirsiniz. Örneğin, aşağıdaki kod `Form` satırları, sınıf `Load` olayı yükselttiğinde çağrılacak bir olay işleyicisi yöntemini bildirir.  
   
      [!code-csharp[csProgGuideEvents#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#11)]  
   
-     Olaya abone olmak için gereken kod satırı, projenizdeki Form1.Designer.cs dosyasındaki `InitializeComponent` yönteminde de otomatik olarak oluşturulur. Şuna benzer:  
+     Etkinliğe abone olmak için gereken kod satırı da projenizdeki `InitializeComponent` Form1.Designer.cs dosyasındaki yöntemde otomatik olarak oluşturulur. Buna benziyor:  
   
     ```csharp
     this.Load += new System.EventHandler(this.Form1_Load);  
     ```  
   
-### <a name="to-subscribe-to-events-programmatically"></a>Olaylara programlı bir şekilde abone olmak için  
+### <a name="to-subscribe-to-events-programmatically"></a>Etkinliklere programlı abone olmak için  
   
-1. İmzası, olayın temsilci imzasıyla eşleşen bir olay işleyici yöntemi tanımlayın. Örneğin, olay <xref:System.EventHandler> temsilci türünü temel alıyorsa, aşağıdaki kod yöntem saplaması ' nı temsil eder:  
+1. İmzası olay için temsilci imzasıyla eşleşen bir olay işleyicisi yöntemi tanımlayın. Örneğin, olay <xref:System.EventHandler> temsilci türünü temel alırsa, aşağıdaki kod yöntem saplamasını temsil eder:  
   
     ```csharp
     void HandleCustomEvent(object sender, CustomEventArgs a)  
@@ -45,19 +45,19 @@ Bu olay ortaya çıktığında çağrılan özel kod yazmak istediğinizde, baş
     }  
     ```  
   
-2. Olaya bir olay işleyicisi iliştirmek için ekleme atama işlecini (`+=`) kullanın. Aşağıdaki örnekte, `publisher` adlı bir nesnenin `RaiseCustomEvent`adlı bir olaya sahip olduğunu varsayalım. Abone sınıfının olaylarına abone olmak için yayımcı sınıfına bir başvuru ihtiyacı olduğunu unutmayın.  
+2. Olay için bir`+=`olay işleyicisi eklemek için ekleme atama işleci ( ) kullanın. Aşağıdaki örnekte, adlı `publisher` bir nesnenin . `RaiseCustomEvent`adlı bir olayı olduğunu varsayalım Abone sınıfının etkinliklerine abone olmak için yayımcı sınıfına bir başvuruyapması gerektiğini unutmayın.  
   
     ```csharp
     publisher.RaiseCustomEvent += HandleCustomEvent;  
     ```  
   
-     Önceki sözdiziminin 2,0 ' de C# yeni olduğunu unutmayın. Bu, kapsülleme temsilcisinin `new` anahtar C# sözcüğü kullanılarak açıkça oluşturulması gereken 1,0 sözdizimine tam olarak eşdeğerdir:  
+     Önceki sözdiziminin C# 2.0'da yeni olduğunu unutmayın. Tam olarak c# 1.0 sözdizimi olan kapsülleme temsilci açıkça `new` anahtar sözcüğü kullanılarak oluşturulmalıdır eşdeğerdir:  
   
     ```csharp
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
-     Bir olay işleyicisi belirtmek için de bir [lambda ifadesi](../statements-expressions-operators/lambda-expressions.md) kullanabilirsiniz:
+     Ayrıca bir olay işleyicisi belirtmek için bir [lambda ifadesi](../statements-expressions-operators/lambda-expressions.md) kullanabilirsiniz:
   
     ```csharp
     public Form1()  
@@ -70,9 +70,9 @@ Bu olay ortaya çıktığında çağrılan özel kod yazmak istediğinizde, baş
     }  
     ```  
   
-### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>Anonim bir yöntem kullanarak olaylara abone olma  
+### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>Anonim bir yöntem kullanarak olaylara abone olmak için  
   
-- Bir olayı daha sonra kaldırmak zorunda değilseniz, olaya anonim bir yöntem iliştirmek için ekleme atama işlecini (`+=`) kullanabilirsiniz. Aşağıdaki örnekte, `publisher` adlı bir nesnenin `RaiseCustomEvent` adlı bir olaya sahip olduğunu ve bir `CustomEventArgs` sınıfının de bazı özel olay bilgilerini taşıması için tanımlandığını varsayalım. Abone sınıfının olaylarına abone olmak için `publisher` bir başvuruya ihtiyacı olduğunu unutmayın.  
+- Daha sonra bir etkinliğe aboneliğinizi iptal etmek zorunda kalmazsanız, olaya anonim bir yöntem eklemek için ekleme atama işlecini ()`+=`kullanabilirsiniz. Aşağıdaki örnekte, adlı `publisher` bir nesnenin adında `RaiseCustomEvent` bir `CustomEventArgs` olayı olduğunu ve bir sınıfın da bir tür özel olay bilgisi taşımak üzere tanımlandığını varsayalım. Abone sınıfının etkinliklerine abone `publisher` olmak için bir başvuruya ihtiyacı olduğunu unutmayın.  
   
     ```csharp
     publisher.RaiseCustomEvent += delegate(object o, CustomEventArgs e)  
@@ -82,25 +82,25 @@ Bu olay ortaya çıktığında çağrılan özel kod yazmak istediğinizde, baş
     };  
     ```  
   
-     Abone olmak için anonim bir işlev kullandıysanız, bir olaydan kolayca abonelik yapamayacağını fark etmeniz önemlidir. Bu senaryoda aboneliğinizi kaldırmak için, olaya abone olduğunuz koda geri dönmek, anonim yöntemi bir temsilci değişkeninde depolamak ve ardından temsilciyi olaya eklemek gereklidir. Genel olarak, kodunuzda daha sonraki bir noktada olay aboneliğinizi kaldırmak zorunda olmanız durumunda olaylara abone olmak için anonim işlevler kullanmayın. Anonim işlevler hakkında daha fazla bilgi için bkz. [Anonim işlevler](../statements-expressions-operators/anonymous-functions.md).  
+     Abone olmak için anonim bir işlev kullandıysanız, bir etkinlikten kolayca aboneliğinizi kaldıramayacağınızı fark etmek önemlidir. Bu senaryoda aboneliği iptal etmek için, olaya abone olduğunuz koda geri dönmek, anonim yöntemi bir temsilci değişkeninde depolamak ve ardından temsilciyi olaya eklemek gerekir. Genel olarak, kodunuzda daha sonraki bir noktada etkinlikten aboneliğinizi iptal etmek zorunda kalacaksanız, olaylara abone olmak için anonim işlevler kullanmamanızı öneririz. Anonim işlevler hakkında daha fazla bilgi için [Bkz. Anonim Fonksiyonlar.](../statements-expressions-operators/anonymous-functions.md)  
   
-## <a name="unsubscribing"></a>Abonelik kaldırılıyor  
- Olay işleyicinizin olay ortaya çıktığında çağrılmasını engellemek için, olaydan aboneliği kaldırın. Kaynak sızıntılarını engellemek için, bir abone nesnesini atmadan önce etkinliklerden aboneliğinizi iptal etmelisiniz. Bir olaydan abonelik aboneliğini kaldırana kadar, yayımlama nesnesindeki olayı oluşturan çok noktaya yayın temsilcisi, abonenin olay işleyicisini kapsülleyen temsilciye bir başvuruya sahiptir. Yayımlama nesnesi bu başvuruyu taşıdığı sürece çöp toplama işlemi abone nesneniz silinmez.  
+## <a name="unsubscribing"></a>Aboneliği kaldır  
+ Olay yükseltildiğinde olay işleyicinizin çağrılmasını önlemek için etkinlikten aboneliğinizi iptal edin. Kaynak sızıntılarını önlemek için, bir abone nesnesini elden çıkarmadan önce olaylardan aboneliğinizi iptal etmelisiniz. Bir etkinlikten aboneliğinizi iptal edene kadar, yayımlama nesnesindeki olayın altında yatan çok noktaya yayın temsilcisinin, abonenin olay işleyicisini kapsülleyen temsilciye bir başvurusu vardır. Yayımlama nesnesi bu başvuruyu tuttuğu sürece, çöp toplama abone nesnenizi silmez.  
   
-#### <a name="to-unsubscribe-from-an-event"></a>Bir olaydan aboneliğinizi kaldırmak için  
+#### <a name="to-unsubscribe-from-an-event"></a>Bir etkinlikten aboneliğinizi iptal etmek için  
   
-- Bir olaydan aboneliği kaldırmak için çıkarma atama işlecini (`-=`) kullanın:  
+- Bir olaydan aboneliğini`-=`iptal etmek için çıkarma atama işleci ( ) kullanın:  
   
     ```csharp
     publisher.RaiseCustomEvent -= HandleCustomEvent;  
     ```  
   
-     Tüm aboneler bir olaydan aboneliği kaldırdığınızda, yayımcı sınıfındaki olay örneği `null`olarak ayarlanır.  
+     Tüm aboneler bir etkinlikten aboneliğini iptal ettiğinde, yayımcı sınıfındaki olay örneği `null`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Olaylar](./index.md)
-- [event](../../language-reference/keywords/event.md)
-- [.NET Framework yönergeleriyle uyumlu olayları yayımlama](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
-- [-ve-= işleçleri](../../language-reference/operators/subtraction-operator.md)
-- [+ ve + = işleçleri](../../language-reference/operators/addition-operator.md)
+- [Olay](../../language-reference/keywords/event.md)
+- [.NET Framework Yönergeleriyle uyumlu olayları yayımlama](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [- ve -= operatörler](../../language-reference/operators/subtraction-operator.md)
+- [+ ve += işleçleri](../../language-reference/operators/addition-operator.md)

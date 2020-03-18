@@ -1,23 +1,23 @@
 ---
-title: Eksen yöntemi çağrılarının zinciri oluşturma (LINQ to XML) (C#)
+title: Eksen yöntemi çağrıları (LINQ- XML) (C#) nasıl zincirilir?
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: ccfbf516a7fddbef357bfb0072288e250768616b
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 56fa5c9e8358883d838b68e99664240aa97f347f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141439"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169473"
 ---
-# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Eksen yöntemi çağrılarının zinciri oluşturma (LINQ to XML) (C#)
-Kodunuzda kullanacağınız ortak bir model, bir eksen yöntemi çağırmak ve sonra uzantı yöntemi eksenlerinden birini çağırmalıdır.  
+# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Eksen yöntemi çağrıları (LINQ- XML) (C#) nasıl zincirilir?
+Kodunuzda kullanacağınız yaygın bir desen, eksen yöntemini çağırmak, ardından uzantı yöntemi eksenlerinden birini çağırmaktır.  
   
- Bir öğe koleksiyonu döndüren `Elements` adında iki eksen vardır: <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> yöntemi ve <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> yöntemi. Ağaçta verilen bir derinlikte belirtilen bir adın tüm öğelerini bulmak için bu iki ekseni birleştirebilirsiniz.  
+ Bu döndürme öğeleri bir `Elements` koleksiyon adı ile iki <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> eksen <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> vardır: yöntem ve yöntem. Ağaçta belirli bir derinlikte belirli bir adın tüm öğelerini bulmak için bu iki ekseni birleştirebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> ve <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> kullanarak tüm `PurchaseOrder` öğelerindeki tüm `Address` öğelerinde tüm `Name` öğelerini bulur.  
+ <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> Bu örnek, <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> tüm `Name` `Address` `PurchaseOrder` öğelerdeki tüm öğelerdeki tüm öğeleri kullanır.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birden fazla satın alma siparişi (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Birden Çok SatınAlma Siparişi (LINQ-XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XElement purchaseOrders = XElement.Load("PurchaseOrders.xml");  
@@ -31,7 +31,7 @@ foreach (XElement e in names)
     Console.WriteLine(e);  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Name>Ellen Adams</Name>  
@@ -42,10 +42,10 @@ foreach (XElement e in names)
 <Name>Jessica Arnold</Name>  
 ```  
   
- Bu, `Elements` ekseninin uygulamalarından biri <xref:System.Xml.Linq.XContainer><xref:System.Collections.Generic.IEnumerable%601> bir genişletme yöntemi olduğundan bu işe yarar. <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XContainer>türetilir, böylece <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> yöntemine yapılan çağrının sonuçlarında <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> yöntemini çağırabilirsiniz.  
+ `Elements` Eksenin uygulamalarından biri üzerinde <xref:System.Collections.Generic.IEnumerable%601> bir uzantı yöntemi olarak olduğu için bu <xref:System.Xml.Linq.XContainer>çalışır. <xref:System.Xml.Linq.XElement><xref:System.Xml.Linq.XContainer>türetilmiştir, böylece <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> yönteme yapılan bir çağrının sonuçlarında metodu arayabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Bazı durumlarda, üst öğelerinden oluşan veya aradaki bir işlem olduğunda, belirli bir öğe derinliğinde tüm öğeleri almak istersiniz. Örneğin, aşağıdaki belgede, `Root` öğesinin bir alt öğesi olan `ConfigParameter` değil, `Customer` öğesinin alt öğesi olan tüm `ConfigParameter` öğelerini almak isteyebilirsiniz.  
+ Bazen, müdahale eden atalar olabilir veya olmayabilir belirli bir öğe derinliğinde tüm öğeleri almak istiyorum. Örneğin, aşağıdaki `ConfigParameter` belgede, `Customer` öğenin alt öğeleri olan tüm öğeleri almak isteyebilirsiniz, `ConfigParameter` ancak `Root` öğenin bir alt değil.  
   
 ```xml  
 <Root>  
@@ -69,18 +69,18 @@ foreach (XElement e in names)
 </Root>  
 ```  
   
- Bunu yapmak için <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> eksenini aşağıda gösterildiği gibi kullanabilirsiniz:  
+ Bunu yapmak için ekseni <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> aşağıdaki gibi kullanabilirsiniz:  
   
 ```csharp  
 XElement root = XElement.Load("Irregular.xml");  
-IEnumerable<XElement> configParameters =   
+IEnumerable<XElement> configParameters =
     root.Elements("Customer").Elements("Config").  
     Elements("ConfigParameter");  
 foreach (XElement cp in configParameters)  
     Console.WriteLine(cp);  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <ConfigParameter>FirstConfigParameter</ConfigParameter>  
@@ -88,9 +88,9 @@ foreach (XElement cp in configParameters)
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir ad alanında bulunan XML için aynı tekniği gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (C#LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
+ Aşağıdaki örnek, xml için bir ad alanında olan aynı tekniği gösterir. Daha fazla bilgi için [Bkz. NameSpaces Genel Bakış (LINQ - XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanında birden fazla satın alma siparişi](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
+ Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Ad alanında birden çok Satınalma Siparişi.](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md)  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -105,7 +105,7 @@ foreach (XElement e in names)
     Console.WriteLine(e);  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <aw:Name xmlns:aw="http://www.adventure-works.com">Ellen Adams</aw:Name>  
@@ -118,4 +118,4 @@ foreach (XElement e in names)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML eksenleri (C#)](linq-to-xml-axes-overview.md)
+- [LINQ - XML Eksenleri (C#)](linq-to-xml-axes-overview.md)

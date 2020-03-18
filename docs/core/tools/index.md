@@ -1,73 +1,73 @@
 ---
 title: .NET Core CLI
 titleSuffix: ''
-description: .NET Core CLI ve özelliklerine genel bir bakış.
+description: .NET Core CLI ve özelliklerine genel bakış.
 ms.date: 02/13/2020
-ms.openlocfilehash: d84f96889cabc3fb4521e39db25050aacdd11546
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 45a40063f70a621e807abf5e01ceecb125aecd7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156718"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79399121"
 ---
 # <a name="net-core-cli-overview"></a>.NET Core CLI genel bakış
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 2.1 SDK ve sonraki sürümler
 
-.NET Core komut satırı arabirimi (CLı), .NET Core uygulamaları geliştirmeye, oluşturmaya, çalıştırmaya ve yayımlamaya yönelik platformlar arası bir araç zinciridir.
+.NET Core komut satırı arabirimi (CLI), .NET Core uygulamalarını geliştirmek, oluşturmak, çalıştırmak ve yayınlamak için bir çapraz platform araç zinciridir.
 
-.NET Core CLI, [.NET Core SDK](../sdk.md)dahil edilir. .NET Core SDK nasıl yükleneceğini öğrenmek için bkz. [.NET Core SDK yüklemesi](../install/sdk.md).
+.NET Çekirdek CLI [.NET Çekirdek SDK](../sdk.md)ile birlikte verilir. .NET Core SDK'yı nasıl yükleyin, [bkz.](../install/sdk.md)
 
-## <a name="cli-commands"></a>CLı komutları
+## <a name="cli-commands"></a>CLI komutları
 
 Aşağıdaki komutlar varsayılan olarak yüklenir:
 
 ### <a name="basic-commands"></a>Temel komutlar
 
-- [new](dotnet-new.md)
-- [restore](dotnet-restore.md)
-- [derlemeyi](dotnet-build.md)
-- [publish](dotnet-publish.md)
-- [çalışmaz](dotnet-run.md)
-- [sınamanız](dotnet-test.md)
-- [VSTest](dotnet-vstest.md)
-- [pack](dotnet-pack.md)
-- [geçirme](dotnet-migrate.md)
-- [temizlenemedi](dotnet-clean.md)
-- [sln](dotnet-sln.md)
-- [Yardım](dotnet-help.md)
-- [saklayabilir](dotnet-store.md)
+- [`new`](dotnet-new.md)
+- [`restore`](dotnet-restore.md)
+- [`build`](dotnet-build.md)
+- [`publish`](dotnet-publish.md)
+- [`run`](dotnet-run.md)
+- [`test`](dotnet-test.md)
+- [`vstest`](dotnet-vstest.md)
+- [`pack`](dotnet-pack.md)
+- [`migrate`](dotnet-migrate.md)
+- [`clean`](dotnet-clean.md)
+- [`sln`](dotnet-sln.md)
+- [`help`](dotnet-help.md)
+- [`store`](dotnet-store.md)
 
 ### <a name="project-modification-commands"></a>Proje değişikliği komutları
 
-- [Paket ekle](dotnet-add-package.md)
-- [Başvuru Ekle](dotnet-add-reference.md)
-- [paketi kaldır](dotnet-remove-package.md)
-- [başvuruyu kaldır](dotnet-remove-reference.md)
-- [liste başvurusu](dotnet-list-reference.md)
+- [`add package`](dotnet-add-package.md)
+- [`add reference`](dotnet-add-reference.md)
+- [`remove package`](dotnet-remove-package.md)
+- [`remove reference`](dotnet-remove-reference.md)
+- [`list reference`](dotnet-list-reference.md)
 
 ### <a name="advanced-commands"></a>Gelişmiş komutlar
 
-- [NuGet silme](dotnet-nuget-delete.md)
-- [NuGet Yereller](dotnet-nuget-locals.md)
-- [NuGet gönderim](dotnet-nuget-push.md)
-- [MSBUILD](dotnet-msbuild.md)
-- [DotNet install betiği](dotnet-install-script.md)
+- [`nuget delete`](dotnet-nuget-delete.md)
+- [`nuget locals`](dotnet-nuget-locals.md)
+- [`nuget push`](dotnet-nuget-push.md)
+- [`msbuild`](dotnet-msbuild.md)
+- [`dotnet install script`](dotnet-install-script.md)
 
 ### <a name="tool-management-commands"></a>Araç yönetimi komutları
 
-- [Araç yüklemesi](dotnet-tool-install.md)
-- [araç listesi](dotnet-tool-list.md)
-- [Araç güncelleştirmesi](dotnet-tool-update.md)
-- [araç geri yükleme](global-tools.md#install-a-local-tool) **.NET Core SDK 3,0 ile başlayarak kullanılabilir**
-- **.NET Core SDK 3,0 ' den başlayarak** [araç çalıştırma](global-tools.md#invoke-a-local-tool) kullanılabilir
-- [araç kaldırma](dotnet-tool-uninstall.md)
+- [`tool install`](dotnet-tool-install.md)
+- [`tool list`](dotnet-tool-list.md)
+- [`tool update`](dotnet-tool-update.md)
+- [`tool restore`](global-tools.md#install-a-local-tool).NET Çekirdek SDK 3.0'dan beri mevcuttur.
+- [`tool run`](global-tools.md#invoke-a-local-tool).NET Çekirdek SDK 3.0'dan beri mevcuttur.
+- [`tool uninstall`](dotnet-tool-uninstall.md)
 
-Araçlar, NuGet paketlerinden yüklenen ve komut isteminden çağrılan konsol uygulamalarıdır. Araçları kendiniz yazabilir veya üçüncü taraflarca yazılmış Araçları yükleyebilirsiniz. Araçlar genel araçlar, araç yolu araçları ve yerel araçlar olarak da bilinir. Daha fazla bilgi için bkz. [.NET Core araçlarına genel bakış](global-tools.md).
+Araçlar, NuGet paketlerinden yüklenen ve komut isteminden çağrılan konsol uygulamalarıdır. Araçları kendiniz yazabilir veya üçüncü şahıslar tarafından yazılmış araçları yükleyebilirsiniz. Araçlar, genel araçlar, araç yolu araçları ve yerel araçlar olarak da bilinir. Daha fazla bilgi için [.NET Core araçlarına genel bakış](global-tools.md)ala.
 
 ## <a name="command-structure"></a>Komut yapısı
 
-CLı komut yapısı, [sürücüden ("DotNet")](#driver), [komuttan](#command)ve muhtemelen komut [bağımsız değişkenlerinden](#arguments) ve [seçeneklerden](#options)oluşur. Bu kalıbı, yeni bir konsol uygulaması oluşturma ve aşağıdaki komutlar *my_app*adlı bir dizinden yürütüldüğünde gösterildiği gibi komut satırından çalıştırma gıbı birçok CLI işlemi içinde görürsünüz:
+CLI komut yapısı [sürücü ("dotnet")](#driver)oluşur, [komutu](#command)ve muhtemelen komut [bağımsız değişkenleri](#arguments) ve [seçenekleri](#options). Bu deseni, yeni bir konsol uygulaması oluşturma ve komut satırından çalıştırmak gibi çoğu CLI işlemlerinde *my_app*adlı bir dizinden yürütüldüğünde aşağıdaki komutların gösterdiği gibi görürsünüz:
 
 ```dotnetcli
 dotnet new console
@@ -77,31 +77,31 @@ dotnet /build_output/my_app.dll
 
 ### <a name="driver"></a>Sürücü
 
-Sürücü [DotNet](dotnet.md) olarak adlandırılır ve [çerçeveye bağlı bir uygulama](../deploying/index.md) çalıştırarak ya da bir komut yürüten iki sorumluluklara sahiptir.
+Sürücü [dotnet](dotnet.md) olarak adlandırılır ve iki sorumlulukları vardır, ya [bir çerçeve bağımlı uygulama](../deploying/index.md) çalıştırarak veya bir komut yürütme.
 
-Çerçeveye bağımlı bir uygulama çalıştırmak için, uygulamayı sürücüden sonra belirtin, örneğin, `dotnet /path/to/my_app.dll`. Uygulamanın DLL 'sinin bulunduğu klasörden komutu yürütürken `dotnet my_app.dll`yürütmek yeterlidir. .NET Core çalışma zamanının belirli bir sürümünü kullanmak istiyorsanız, `--fx-version <VERSION>` seçeneğini kullanın ( [DotNet komut](dotnet.md) başvurusuna bakın).
+Çerçeveye bağımlı bir uygulamayı çalıştırmak için, uygulamayı sürücüden `dotnet /path/to/my_app.dll`sonra belirtin, örneğin. Uygulamayın DLL'sinin bulunduğu klasörden komutu çalıştırırken, `dotnet my_app.dll`yürütmenizi yeterli .NET Core Runtime'ın belirli bir sürümünü kullanmak `--fx-version <VERSION>` istiyorsanız, seçeneği kullanın [(dotnet komut](dotnet.md) başvurusuna bakın).
 
-Sürücüye bir komut sağlarsanız, `dotnet.exe` CLı komutu yürütme işlemini başlatır. Örnek:
+Sürücüye bir komut verdiyseniz, `dotnet.exe` CLI komut yürütme işlemini başlatır. Örnek:
 
 ```dotnetcli
 dotnet build
 ```
 
-İlk olarak, sürücü kullanılacak SDK sürümünü belirler. [Global. JSON](global-json.md) dosyası yoksa, kullanılabilir SDK 'nın en son sürümü kullanılır. Bu, makinede en son nelerin olduğuna bağlı olarak önizleme veya kararlı bir sürüm olabilir.  SDK sürümü belirlendikten sonra, komutunu yürütür.
+İlk olarak, sürücü SDK'nın kullanacağı sürümü belirler. [Global.json](global-json.md) dosyası yoksa, Kullanılabilir SDK'nın en son sürümü kullanılır. Bu, makinede en son ne olduğuna bağlı olarak bir önizleme veya kararlı sürüm olabilir.  SDK sürümü belirlendikten sonra komutu yürütür.
 
 ### <a name="command"></a>Komut
 
-Komut bir eylem gerçekleştirir. Örneğin, `dotnet build` derleme kodu. `dotnet publish` kodu yayınlar. Komutlar bir `dotnet {command}` kuralı kullanılarak konsol uygulaması olarak uygulanır.
+Komut bir eylem gerçekleştirir. Örneğin, `dotnet build` kod oluşturur. `dotnet publish`kod yayımlar. Komutlar bir `dotnet {command}` kuralkuralı kullanılarak konsol uygulaması olarak uygulanır.
 
 ### <a name="arguments"></a>Bağımsız Değişkenler
 
-Komut satırında geçirdiğiniz bağımsız değişkenler çağrılan komutun bağımsız değişkenlerdir. Örneğin, `dotnet publish my_app.csproj`yürüttüğünüzde, `my_app.csproj` bağımsız değişkeni yayımlanacak projeyi belirtir ve `publish` komutuna geçirilir.
+Komut satırında geçirdiğiniz bağımsız değişkenler çağrılan komutun bağımsız değişkenleridir. Örneğin, yürüttuğunuzda, `dotnet publish my_app.csproj` `my_app.csproj` bağımsız değişken yayımlanacak projeyi gösterir ve `publish` komuta geçirilir.
 
 ### <a name="options"></a>Seçenekler
 
-Komut satırında geçirdiğiniz seçenekler çağrılan komuta yönelik seçeneklerdir. Örneğin `dotnet publish --output /build_output`yürüttüğünüzde, `--output` seçeneği ve değeri `publish` komutuna geçirilir.
+Komut satırında geçirdiğiniz seçenekler, çağrılan komutun seçenekleridir. Örneğin, `dotnet publish --output /build_output`çalıştırdığınızda, `--output` seçenek ve değeri komuta `publish` geçirilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DotNet/SDK GitHub deposu](https://github.com/dotnet/sdk/)
-- [.NET Core yükleme kılavuzu](../install/sdk.md)
+- [dotnet/sdk GitHub deposu](https://github.com/dotnet/sdk/)
+- [.NET Core kurulum kılavuzu](../install/sdk.md)

@@ -1,5 +1,5 @@
 ---
-title: <list> - C# Programlama Kılavuzu
+title: <list> - C# programlama kılavuzu
 ms.date: 07/20/2015
 f1_keywords:
 - list
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
 ms.openlocfilehash: cb289b26e9bc12d561892c421fb40da18d8c3513
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789746"
 ---
-# <a name="list-c-programming-guide"></a>\<listesi > (C# Programlama Kılavuzu)
+# <a name="list-c-programming-guide"></a>\<liste> (C# programlama kılavuzu)
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,21 +40,21 @@ ms.locfileid: "76789746"
 
 - `term`
 
-  `description`tanımlanacak bir terim.
+  Tanımlanacak bir terim, hangi `description`olarak tanımlanır.
 
 - `description`
 
-  Bir madde işareti veya numaralandırılmış listedeki bir öğe ya da bir `term`tanımı.
+  Madde işareti veya numaralanmış listedeki bir öğe `term`veya bir .
   
 ## <a name="remarks"></a>Açıklamalar
 
-\<listheader > bloğu, bir tablo ya da tanım listesinin başlık satırını tanımlamak için kullanılır. Bir tablo tanımlarken, yalnızca başlıktaki terim için bir giriş sağlamanız gerekir.
+> \<engeli, tablo veya tanım listesinin başlık satırını tanımlamak için kullanılır. Bir tablo tanımlarken, yalnızca başlıkta dönem için bir giriş sağlamanız gerekir.
 
-Listedeki her öğe, bir \<öğesi > bloğu ile belirtilir. Tanım listesi oluştururken hem `term` hem de `description`belirtmeniz gerekir. Ancak, bir tablo, madde işaretli liste veya numaralandırılmış liste için yalnızca `description`için bir giriş sağlamanız gerekir.
+Listedeki her öğe bir \<öğe> blokile belirtilir. Tanım listesi oluştururken, hem de `term` `description`. Ancak, bir tablo, madde işaretli liste veya numaralanmış liste için `description`yalnızca .
 
-Bir liste veya tablo, gereken sayıda \<öğe > bloğunu içerebilir.
+Bir liste veya tablo, \<gerektiğinde sayıda öğe> ye sahip olabilir.
 
-Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
+Belge yorumlarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derle.
 
 ## <a name="example"></a>Örnek
 
@@ -62,5 +62,5 @@ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-refere
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Programlama Kılavuzu](../index.md)
-- [Belge açıklamaları için önerilen Etiketler](./recommended-tags-for-documentation-comments.md)
+- [C# programlama kılavuzu](../index.md)
+- [Belge açıklamaları için önerilen etiketler](./recommended-tags-for-documentation-comments.md)

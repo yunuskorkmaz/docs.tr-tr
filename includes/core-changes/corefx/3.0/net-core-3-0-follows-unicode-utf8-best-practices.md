@@ -1,40 +1,40 @@
 ---
 ms.openlocfilehash: db1d09c8c9e606b5327a42977a74a74703282d84
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568230"
 ---
-### <a name="net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences"></a>.NET Core 3,0 hatalı biçimlendirilmiş UTF-8 bayt dizilerini değiştirirken Unicode en iyi yöntemlerini izler
+### <a name="net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences"></a>.NET Core 3.0, kötü biçimlendirilmiş UTF-8 bayt dizilerini değiştirirken Unicode en iyi uygulamalarını takip eder
 
-<xref:System.Text.UTF8Encoding> sınıfı, bir bayt karakter dönüştürme işlemi sırasında hatalı biçimlendirilmiş bir UTF-8 bayt dizisiyle karşılaştığında, bu diziyi çıkış dizesindeki bir ' ' (U + FFFD DEĞIŞTIRME KARAKTERI) karakteriyle değiştirecek. .NET Core 3,0, .NET Core 'un önceki sürümlerinden ve .NET Framework dönüştürme işlemi sırasında bu değişikliği gerçekleştirmek için en iyi Unicode yöntemi izleyerek farklıdır.
+<xref:System.Text.UTF8Encoding> Sınıf, bayt-karakter transkodlama işlemi sırasında kötü biçimlendirilmiş bir UTF-8 bayt dizisiyle karşılaştığında, bu diziyi çıkış dizesinde ' ' (U+FFFD REPLACEMENT CHARACTER) karakteriyle değiştirir. .NET Core 3.0, transkodlama işlemi sırasında bu değişikliği gerçekleştirmek için Unicode en iyi uygulama aşağıdaki .NET Core ve .NET Framework önceki sürümlerinden farklıdır.
 
-Bu, yeni <xref:System.Text.Unicode.Utf8?displayProperty=nameWithType> ve <xref:System.Text.Rune?displayProperty=nameWithType> türleri dahil olmak üzere .NET genelinde UTF-8 işlemesini geliştirmenin daha büyük bir çaba parçasıdır. <xref:System.Text.UTF8Encoding> türüne, Yeni tanıtılan türlerle tutarlı bir çıkış üretmesi için, bir hata işleme mekanizması sağlanmadı.
+Bu, yeni <xref:System.Text.Unicode.Utf8?displayProperty=nameWithType> ve <xref:System.Text.Rune?displayProperty=nameWithType> türler de dahil olmak üzere .NET boyunca UTF-8 işleme geliştirmek için daha büyük bir çabanın bir parçasıdır. Tür, <xref:System.Text.UTF8Encoding> yeni tanıtılan türlerle tutarlı çıktı üretecek şekilde geliştirilmiş hata işleme mekaniği verildi.
 
-#### <a name="change-description"></a>Açıklamayı Değiştir
+#### <a name="change-description"></a>Açıklamayı değiştir
 
-.NET Core 3,0 ile başlayarak, baytları karakterlere dönüştürme sırasında <xref:System.Text.UTF8Encoding> sınıfı, Unicode en iyi uygulamalarına göre karakter değiştirme işlemini gerçekleştirir. Kullanılan değiştirme mekanizması, _U + FFFD Substitution alt bölümlerinin_başlığı altında bulunan başlık Içindeki [Unicode standart, sürüm 12,0, sec. 3,9 (PDF)](https://www.unicode.org/versions/Unicode12.0.0/ch03.pdf) ile açıklanmıştır.
+.NET Core 3.0 ile başlayarak, karakterlere baytlar transcoding yaparken, <xref:System.Text.UTF8Encoding> sınıf Unicode en iyi uygulamaları dayalı karakter değiştirme gerçekleştirir. Kullanılan ikame mekanizması [Unicode Standard, Sürüm 12.0, Sec. 3.9 (PDF)](https://www.unicode.org/versions/Unicode12.0.0/ch03.pdf) tarafından _Maksimal Alt Parçaların U+FFFD Ikamesi_başlığıaltında tanımlanmıştır.
 
-Bu davranış _yalnızca_ , giriş bayt dizisi hatalı biçimlendirilmiş UTF-8 verileri içerdiğinde geçerlidir. Ek olarak, <xref:System.Text.UTF8Encoding> örneği `throwOnInvalidBytes: true` ile oluşturulmuşsa (bkz. [UTF8Encoding Oluşturucu belgeleri] (<xref:System.Text.UTF8Encoding.%23ctor(System.Boolean,System.Boolean)>, `UTF8Encoding` örneği U + FFFD değişimi gerçekleştirmek yerine geçersiz giriş üzerinde throw 'e devam edecektir.
+Bu _davranış_ yalnızca giriş bayt dizisi kötü biçimlendirilmiş UTF-8 verileri içeriyorsa geçerlidir. Ayrıca, <xref:System.Text.UTF8Encoding> örnek ([UTF8Encoding constructor documentation] ile `throwOnInvalidBytes: true` <xref:System.Text.UTF8Encoding.%23ctor(System.Boolean,System.Boolean)>oluşturulmuşsa, `UTF8Encoding` örnek U+FFFD değiştirme gerçekleştirmek yerine geçersiz giriş atmaya devam edecektir.
 
-Aşağıda, bu değişikliğin geçerli bir 3 baytlık giriş ile etkisi gösterilmektedir:
+Aşağıda, bu değişikliğin geçersiz bir 3 bayt girişiyle etkisi gösteriş ve gösteriş gösteriş ve
 
-|Hatalı biçimlendirilmiş 3 baytlık giriş|.NET Core 3,0 öncesi çıkış|.NET Core 3,0 ile başlayan çıkış|
+|Kötü biçimlendirilmiş 3 bayt girişi|.NET Core 3.0'dan önceki çıktı|.NET Core 3.0 ile başlayan çıktı|
 |---|---|---|
-| `[ ED A0 90 ]` | `[ FFFD FFFD ]` (2 karakterlik çıkış)| `[ FFFD FFFD FFFD ]` (3 karakterlik çıkış)|
+| `[ ED A0 90 ]` | `[ FFFD FFFD ]`(2 karakterçıkış)| `[ FFFD FFFD FFFD ]`(3 karakterçıkış)|
 
-Bu 3-char çıktısı, daha önce bağlantılı Unicode standart PDF 'nin _3-9 tablosuna_ göre tercih edilen çıktıdır.
+Bu 3-char çıktı, tablo _3-9'a_ göre daha önce bağlı olan Unicode Standart PDF'ye göre tercih edilen çıktıdır.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
 3,0
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Geliştiricinin bölümünde herhangi bir eylem gerekmez.
+Geliştirici adına herhangi bir eylem gerekmez.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Kategori
 
 CoreFx
 

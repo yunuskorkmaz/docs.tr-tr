@@ -1,21 +1,21 @@
 ---
-title: Ara değerleri hesaplama (C#)
+title: Ara değerler nasıl hesaplanır (C#)
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
 ms.openlocfilehash: 3ead3bfb02f7c9192db96996c1f1e01a86a4191a
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141441"
 ---
-# <a name="how-to-calculate-intermediate-values-c"></a>Ara değerleri hesaplama (C#)
-Bu örnek, sıralama, filtreleme ve seçme için kullanılabilen ara değerlerin nasıl hesaplanacağını gösterir.  
+# <a name="how-to-calculate-intermediate-values-c"></a>Ara değerler nasıl hesaplanır (C#)
+Bu örnek, sıralama, filtreleme ve seçmede kullanılabilecek ara değerlerin nasıl hesaplanacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek `Let` yan tümcesini kullanır.  
+ Aşağıdaki örnekte `Let` yan tümce kullanılır.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: sayısal veri (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
+ Bu örnekte aşağıdaki XML belgesi kullanılır: [Örnek XML Dosyası: Sayısal Veriler (LINQ-XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -40,9 +40,9 @@ foreach (decimal ex in extensions)
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (C#LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
+ Aşağıdaki örnek, ad alanında olan XML için aynı sorguyu gösterir. Daha fazla bilgi için [Bkz. NameSpaces Genel Bakış (LINQ - XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanında sayısal veri](./sample-xml-file-numerical-data-in-a-namespace.md).  
+ Bu örnekte aşağıdaki XML belgesi kullanılır: [Örnek XML Dosyası: Ad alanında Sayısal Veriler.](./sample-xml-file-numerical-data-in-a-namespace.md)  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  

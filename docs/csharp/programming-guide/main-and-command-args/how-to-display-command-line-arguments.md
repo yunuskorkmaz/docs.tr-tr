@@ -1,30 +1,30 @@
 ---
-title: Komut satırı bağımsız değişkenlerini görüntüleme- C# Programlama Kılavuzu
+title: Komut satırı bağımsız değişkenleri nasıl görüntülenir - C# Programlama Kılavuzu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
 ms.openlocfilehash: 210dad71220572535a0325fac925b0453b0d4e03
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712032"
 ---
-# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Komut satırı bağımsız değişkenlerini görüntüleme (C# Programlama Kılavuzu)
-Komut satırındaki bir yürütülebilir dosyaya sunulan bağımsız değişkenlere `Main`için isteğe bağlı bir parametre üzerinden erişilebilir. Bağımsız değişkenler, dizeler dizisi biçiminde sağlanır. Dizinin her öğesi bir bağımsız değişken içerir. Bağımsız değişkenler arasındaki beyaz boşluk kaldırılır. Örneğin, kurgusal bir yürütülebilirin şu komut satırı çağırmaları göz önünde bulundurun:  
+# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Komut satırı bağımsız değişkenleri nasıl görüntülenir (C# Programlama Kılavuzu)
+Komut satırında yürütülebilir bir bağımsız değişkene `Main`isteğe bağlı bir parametre ile erişilebilir. Bağımsız değişkenler bir dizi dize biçiminde sağlanır. Dizinin her öğesi bir bağımsız değişken içerir. Bağımsız değişkenler arasındaki beyaz boşluk kaldırılır. Örneğin, hayali bir yürütülebilir bu komut satırı çağrıları düşünün:  
   
-|Komut satırında giriş|Main 'e geçirilen dizelerin dizisi|  
+|Komut satırına Giriş|Main'e geçirilen dizeleri dizisi|  
 |----------------------------|-------------------------------------|  
-|**çalıştırılabilir. exe a b c**|a<br /><br /> kenarı<br /><br /> ,|  
-|**yürütülebilir. exe 1 2**|biriyle<br /><br /> ikiye|  
-|**yürütülebilir. exe "1 2" üç**|"one two"<br /><br /> ünden|  
+|**icra edilebilir.exe a b c**|"a"<br /><br /> "b"<br /><br /> "c"|  
+|**executable.exe bir iki**|"bir"<br /><br /> "iki"|  
+|**executable.exe "bir iki" üç**|"one two"<br /><br /> "üç"|  
   
 > [!NOTE]
-> Visual Studio 'da bir uygulama çalıştırırken, [hata ayıklama sayfasında, proje Tasarımcısı](/visualstudio/ide/reference/debug-page-project-designer)' nda komut satırı bağımsız değişkenlerini belirtebilirsiniz.  
+> Visual Studio'da bir uygulama çalıştırırken Hata [Ayıklama Sayfasında, Proje Tasarımcısı'nda](/visualstudio/ide/reference/debug-page-project-designer)komut satırı bağımsız değişkenlerini belirtebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, komut satırı uygulamasına geçirilen komut satırı bağımsız değişkenlerini görüntüler. Gösterilen çıktı, yukarıdaki tablodaki ilk giriş içindir.  
+ Bu örnek, komut satırı uygulamasına geçirilen komut satırı bağımsız değişkenlerini görüntüler. Gösterilen çıktı yukarıdaki tablodaki ilk giriş içindir.  
   
  [!code-csharp[csProgGuideMain#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#9)]  
   

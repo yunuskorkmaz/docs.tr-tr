@@ -1,176 +1,176 @@
 ---
-title: 'Öğretici: ürün satışlardaki anormallikleri algılama'
-description: Ürün satış verileri için anomali algılama uygulaması oluşturmayı öğrenin. Bu öğretici, Visual Studio 2019 ' de kullanarak C# bir .NET Core konsol uygulaması oluşturur.
+title: 'Öğretici: Ürün satışlarındaki anormallikleri tespit edin'
+description: Ürün satış verileri için bir anomali algılama uygulaması oluşturmayı öğrenin. Bu öğretici, Visual Studio 2019'da C# kullanarak bir .NET Core konsol uygulaması oluşturur.
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
 ms.openlocfilehash: c3fd4aa715a64a20f1eff9b789f6a87eaa749163
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78239995"
 ---
-# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Öğretici: ML.NET ile ürün satışlardaki anormallikleri algılama
+# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Öğretici: ML.NET ile ürün satışlarında anormallikleri tespit
 
-Ürün satış verileri için anomali algılama uygulaması oluşturmayı öğrenin. Bu öğretici, Visual Studio 'da kullanarak C# bir .NET Core konsol uygulaması oluşturur.
+Ürün satış verileri için bir anomali algılama uygulaması oluşturmayı öğrenin. Bu öğretici Visual Studio'da C# kullanarak bir .NET Core konsol uygulaması oluşturur.
 
-Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
 > [!div class="checklist"]
 >
 > * Verileri yükleme
-> * Ani anomali algılama için bir dönüşüm oluşturun
-> * Dönüşümle birlikte ani bozukluklar Algıla
-> * Değişiklik noktası anomali algılama için bir dönüşüm oluşturun
-> * Dönüşümle değişiklik noktası bozuklularını Algıla
+> * Ani anomali tespiti için dönüşüm oluşturun
+> * Dönüşüm ile ani anomalileri tespit edin
+> * Değişim noktası anomali tespiti için dönüşüm oluşturma
+> * Dönüşüm ile değişim noktası anomalileri tespit
 
-Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection) deposunda bulabilirsiniz.
+Bu öğreticinin kaynak kodunu [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection) deposunda bulabilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* [Visual Studio 2017 sürüm 15,6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
+* [Visual Studio 2017 sürüm 15.6 veya daha sonra](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ".NET Core çapraz platform geliştirme" iş yükü yüklendi.
 
-* [Product-Sales. csv veri kümesi](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
+* [Product-sales.csv veri kümesi](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
 
 >[!NOTE]
-> `product-sales.csv` ' deki veri biçimi, ilk olarak DataMarket 'ten kaynaklıdır ve Ramiz Hyndman tarafından oluşturulan zaman serisi veri kitaplığı (TSDL) tarafından sağlanmış olan "üç yıllık dönem Içinde" Shampoo Sales "veri kümesini temel alır.
-> "Üç yıllık dönem Içinde Shampoo Sales" veri kümesi, varsayılan DataMarket açık lisansı kapsamında lisanslanır.
+> Veri formatı, `product-sales.csv` "Şampuan Satışları Üç Yıllık Bir Dönem Boyunca" veri setine dayanmaktadır ve başlangıçta DataMarket'ten temin edilir ve Rob Hyndman tarafından oluşturulan Time Series Data Library (TSDL) tarafından sağlanır.
+> "Üç Yıllık Bir Süre Boyunca Şampuan Satışları" Dataset DataMarket Varsayılan Açık Lisans altında lisanslı.
 
 ## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 
-1. "Productsalesanomalyıdetection" adlı bir **.NET Core konsol uygulaması** oluşturun.
+1. "ProductSalesAnomalyDetection" adlı bir **.NET Çekirdek Konsol Uygulaması** oluşturun.
 
-2. Veri kümesi dosyalarınızı kaydetmek için projenizde *veri* adlı bir dizin oluşturun.
+2. Veri kümesi dosyalarınızı kaydetmek için projenizde *Veri* adlı bir dizin oluşturun.
 
-3. **Microsoft.ml NuGet paketini**yükler:
+3. Microsoft.ML **NuGet Paketini**Yükleyin:
 
-    Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin, gözden geçirme sekmesini seçin, **Microsoft.ml** araması yapın ve **yüklemeyi** seçin. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin. **Microsoft. ml. TimeSeries**için bu adımları tekrarlayın.
+    Çözüm Gezgini'nde projenize sağ tıklayın ve **NuGet Paketlerini Yönet'i**seçin. Paket kaynağı olarak "nuget.org" seçeneğini belirleyin, Gözat sekmesini seçin, **Microsoft.ML** arayın ve **Yükle** düğmesini seçin. **Değişiklikler Önizleme** iletişim kutusundaki **Tamam** düğmesini seçin ve listelenen paketlerin lisans koşullarını kabul ederseniz Lisans Kabul iletişim kutusundaki **Kabul** **Et** düğmesini seçin. **Microsoft.ML.TimeSeries**için bu adımları yineleyin.
 
-4. Aşağıdaki `using` deyimlerini *program.cs* dosyanızın üst kısmına ekleyin:
+4. `using` *Program.cs* dosyanızın üst kısmında aşağıdaki ifadeleri ekleyin:
 
     [!code-csharp[AddUsings](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#AddUsings "Add necessary usings")]
 
 ### <a name="download-your-data"></a>Verilerinizi indirin
 
-1. Veri kümesini indirin ve daha önce oluşturduğunuz *veri* klasörüne kaydedin:
+1. Veri kümesini indirin ve daha önce oluşturduğunuz *Veri* klasörüne kaydedin:
 
-   * [*Product-Sales. csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv) ' ye sağ tıklayın ve "bağlantıyı (veya hedefi) farklı kaydet" i seçin.
+   * [*Product-sales.csv'ye*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv) sağ tıklayın ve "Bağlantıyı Kaydet (veya Hedef) Olarak..." seçeneğini belirleyin.
 
-     \*. csv dosyasını *veri* klasörüne kaydettiğinizden ya da başka bir yere kaydettikten sonra, \*. csv dosyasını *veri* klasörüne taşıyın.
+     .csv dosyasını \* *Veri* klasörüne kaydettiğinizi veya başka bir yere kaydettikten sonra .csv dosyasını \* *Veri* klasörüne taşıdığınızdan emin olun.
 
-2. Çözüm Gezgini ' de, \*. csv dosyasına sağ tıklayın ve **Özellikler**' i seçin. **Gelişmiş**' in altında, **Çıkış Dizinine Kopyala** değerini **daha yeniyse kopyala**olarak değiştirin.
+2. Çözüm Gezgini'nde .csv dosyasına \*sağ tıklayın ve **Özellikler'i**seçin. **Gelişmiş**altında, **daha yeniyse**Kopyala'dan **Çıktı Dizini'ne Kopya** değerini değiştirin.
 
-Aşağıdaki tabloda \*. csv dosyanızdaki bir veri önizlemesi verilmiştir:
+Aşağıdaki tablo .csv \*dosyanızdan bir veri önizlemesidir:
 
-|Ay  |ProductSales |
+|Ay  |Ürün Satışları |
 |-------|-------------|
-|1-Jan  |    271      |
-|2-Jan  |    150,9    |
+|1-Ocak  |    271      |
+|2-Ocak  |    150.9    |
 |.....  |    .....    |
-|1-Şub  |    199,3    |
+|1-Şubat  |    199.3    |
 |.....  |    .....    |
 
-### <a name="create-classes-and-define-paths"></a>Sınıf oluşturma ve yollar tanımlama
+### <a name="create-classes-and-define-paths"></a>Sınıflar oluşturma ve yolları tanımlama
 
-Sonra, giriş ve tahmin sınıfı veri yapılarınızı tanımlayın.
+Ardından, giriş ve tahmin sınıfı veri yapılarınızı tanımlayın.
 
 Projenize yeni bir sınıf ekleyin:
 
-1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **> yeni öğe Ekle**' yi seçin.
+1. **Çözüm Gezgini'nde**projeyi sağ tıklatın ve ardından **Yeni Öğe > ekle'yi**seçin.
 
-2. **Yeni öğe Ekle iletişim kutusunda** **sınıf** ' ı seçin ve **ad** alanını *ProductSalesData.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin.
+2. Yeni **Öğe Ekle iletişim kutusunda,** **Sınıf'ı** seçin ve **Ad** alanını *ProductSalesData.cs*olarak değiştirin. Ardından **Ekle** düğmesini seçin.
 
-   *ProductSalesData.cs* dosyası kod düzenleyicisinde açılır.
+   ProductSalesData.cs *ProductSalesData.cs* dosyası kod düzenleyicisinde açılır.
 
-3. Aşağıdaki `using` ifadesini *ProductSalesData.cs*öğesinin en üstüne ekleyin:
+3. ProductSalesData.cs üstüne `using` aşağıdaki ifadeyi *ProductSalesData.cs*ekleyin:
 
    ```csharp
    using Microsoft.ML.Data;
    ```
 
-4. Mevcut sınıf tanımını kaldırın ve *ProductSalesData.cs* dosyasına `ProductSalesData` ve `ProductSalesPrediction`iki sınıfa sahip aşağıdaki kodu ekleyin:
+4. Varolan sınıf tanımını kaldırın ve iki sınıfı `ProductSalesData` `ProductSalesPrediction`ve ProductSalesData.cs *dosyasına* aşağıdaki kodu ekleyin:
 
     [!code-csharp[DeclareTypes](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/ProductSalesData.cs#DeclareTypes "Declare data record types")]
 
-    `ProductSalesData` bir giriş verileri sınıfını belirtir. [Loadcolumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) özniteliği, veri kümesindeki hangi sütunların (sütun dizinine göre) yükleneceğini belirtir.
+    `ProductSalesData`bir giriş veri sınıfı belirtir. [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) özniteliği, veri kümesindeki hangi sütunların (sütun dizinine göre) yüklenmesi gerektiğini belirtir.
 
-    `ProductSalesPrediction`, tahmin verileri sınıfını belirtir. Anomali algılama için tahmin, bir anomali, ham puan ve p değeri olup olmadığını belirten bir uyarıdan oluşur. P değeri 0 ' a yaklaşarak daha büyük bir anomali meydana geldi.
+    `ProductSalesPrediction`tahmin veri sınıfını belirtir. Anomali tespiti için, tahmin bir anomali, ham skor ve p-değeri olup olmadığını belirtmek için bir uyarı oluşur. P değeri 0'a ne kadar yakınsa, bir anomali oluşma olasılığı da o kadar artar.
 
-5. Son indirilen veri kümesi dosya yolunu ve kaydedilen model dosyası yolunu tutmak için iki genel alan oluşturun:
+5. En son indirilen veri kümesi dosya yolunu ve kaydedilen model dosya yolunu tutmak için iki genel alan oluşturun:
 
-    * `_dataPath`, modeli eğitmek için kullanılan veri kümesinin yoludur.
-    * `_docsize`, veri kümesi dosyasındaki kayıt sayısına sahiptir. `pvalueHistoryLength`hesaplamak için `_docSize` kullanacaksınız.
+    * `_dataPath`modeli eğitmek için kullanılan veri kümesine giden yola sahiptir.
+    * `_docsize`dataset dosyasındaki kayıt sayısına sahiptir. Hesaplamak `pvalueHistoryLength`için `_docSize` kullanacaksın.
 
-6. Aşağıdaki kodu, bu yolları belirtmek için `Main` yönteminin hemen üstüne ekleyin:
+6. Bu yolları belirtmek için yöntemin `Main` hemen üstündeki satıra aşağıdaki kodu ekleyin:
 
     [!code-csharp[Declare global variables](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
-### <a name="initialize-variables-in-main"></a>Değişkenleri ana olarak Başlat
+### <a name="initialize-variables-in-main"></a>Main'deki değişkenleri başlatma
 
-1. `mlContext` değişkenini bildirmek ve başlatmak için `Main` yöntemindeki `Console.WriteLine("Hello World!")` satırı aşağıdaki kodla değiştirin:
+1. Değişkeni `Console.WriteLine("Hello World!")` `Main` bildirmek ve başlatmak için yöntemdeki satırı `mlContext` aşağıdaki kodla değiştirin:
 
     [!code-csharp[CreateMLContext](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CreateMLContext "Create the ML Context")]
 
-    [Mlcontext sınıfı](xref:Microsoft.ML.MLContext) tüm ml.NET işlemleri için bir başlangıç noktasıdır ve `mlContext` başlatmak, model oluşturma iş akışı nesneleri genelinde paylaşılabilen yeni bir ml.net ortamı oluşturur. Benzer, kavramsal olarak, Entity Framework `DBContext`.
+    [MLContext sınıfı](xref:Microsoft.ML.MLContext) tüm ML.NET işlemleri için bir başlangıç `mlContext` noktasıdır ve başlatma, model oluşturma iş akışı nesneleri arasında paylaşılabilen yeni bir ML.NET ortamı oluşturur. Kavramsal olarak Varlık Çerçevesi'ne `DBContext` benzer.
 
 ### <a name="load-the-data"></a>Verileri yükleme
 
-ML.NET içindeki veriler [ıdataview sınıfı](xref:Microsoft.ML.IDataView)olarak temsil edilir. `IDataView`, tablo verilerini (sayısal ve metin) tanımlamaya yönelik esnek ve verimli bir yoldur. Veriler bir metin dosyasından veya diğer kaynaklardan (örneğin, SQL veritabanı veya günlük dosyaları) bir `IDataView` nesnesine yüklenebilir.
+ML.NET'daki veriler [IDataView sınıfı](xref:Microsoft.ML.IDataView)olarak temsil edilir. `IDataView`tabular verileri (sayısal ve metin) tanımlamanın esnek ve etkili bir yoludur. Veriler bir metin dosyasından veya başka kaynaklardan (örneğin, SQL veritabanı `IDataView` veya günlük dosyaları) bir nesneye yüklenebilir.
 
-1. `Main()` yönteminin sonraki satırı olarak aşağıdaki kodu ekleyin:
+1. `Main()` Yöntemin bir sonraki satırı olarak aşağıdaki kodu ekleyin:
 
     [!code-csharp[LoadData](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#LoadData "loading dataset")]
 
-    [Loadfromtextfile ()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) , veri şemasını ve dosyadaki okumaları tanımlar. Veri yolu değişkenlerini alır ve bir `IDataView`döndürür.
+    [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) veri şemasını tanımlar ve dosyada okur. Veri yolu değişkenlerini alır ve `IDataView`bir .
 
-## <a name="time-series-anomaly-detection"></a>Zaman serisi anomali algılama
+## <a name="time-series-anomaly-detection"></a>Zaman serisi anomali tespiti
 
-Anomali algılama, olağan dışı ya da beklenmeyen olaylar veya davranışları işaretler. Sorunları nerede aramak ve "Bu tuhaf?" sorusunu cevaplamanıza yardımcı olacak ipuçları verir.
+Anomali algılama, beklenmeyen veya olağandışı olaylar veya davranışlar alabını işaretler. Nerede sorunları aramak için ipuçları verir ve sorusuna cevap yardımcı olur "Bu garip mi?".
 
-!["Bu tuhaf" anomali algılama örneğidir.](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
+!["Bu garip" anomali tespiti örneği.](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
 
-Anomali algılama, zaman serisi veri aykırı durumları algılama işlemidir; belirli bir giriş zaman serisini, davranışın beklenmediği veya "tuhaf" olduğunu gösterir.
+Anomali tespiti, zaman serisi veri aykırılıklarını tespit etme işlemidir; davranışın beklendiği gibi olmadığı veya "garip" olmadığı belirli bir giriş zaman serisine işaret edin.
 
-Anomali algılama çok sayıda şekilde yararlı olabilir. Örneğin:
+Anomali tespiti birçok yönden yararlı olabilir. Örneğin:
 
-Bir otomobil varsa şunları bilmeniz gerekebilir: Bu yağ ölçer normal okunuyor mu yoksa bir sızıntı var mı?
-Güç tüketimini izliyorsanız şunları öğrenmek istersiniz: bir kesinti mi var?
+Eğer bir araba varsa, bilmek isteyebilirsiniz: Bu yağ göstergesi normal okuma, ya da bir sızıntı var mı?
+Eğer güç tüketimini izliyorsanız, şunu bilmek istersiniz: Bir kesinti var mı?
 
-Tespit edilebilir iki tür zaman serisi bozukluklar vardır:
+Algılanabilen iki tür zaman serisi anomalileri vardır:
 
-* **Ani artışlar** , sistemde anormal davranıştaki geçici bir davranış gösterir.
+* **Ani artışlar** sistemde geçici anormal davranış patlamaları olduğunu gösteriyor.
 
-* **Değişiklik noktaları** , sistemdeki zaman içindeki kalıcı değişikliklerin başlangıcını belirtir.
+* **Değişiklik noktaları,** sistemde zaman içinde kalıcı değişikliklerin başlangıcını gösterir.
 
-ML.NET ' de, IID depo algılama veya IID değişiklik noktası algılama algoritmaları [bağımsız ve benzer şekilde dağıtılmış veri kümelerine](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables)uygundur.
+ML.NET, IID Spike Detection veya IID Change nokta Algılama algoritmaları [bağımsız ve aynı şekilde dağıtılan veri kümeleri](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables)için uygundur.
 
-Diğer öğreticilerdeki modellerin aksine, anomali algılayıcı dönüştürmeleri doğrudan giriş verilerinde çalışır. `IEstimator.Fit()` yöntemi, dönüştürmeyi üretmek için eğitim verileri gerektirmez. Boş bir `ProductSalesData`listesinden oluşturulan veri görünümü tarafından sağlanmış olan veri şeması da gerekir.
+Diğer öğreticilerde modellerin aksine, zaman serisi anomali dedektörü dönüşümleri doğrudan giriş verileri üzerinde çalışır. Dönüştürmeyi `IEstimator.Fit()` üretmek için yöntemin eğitim verilerine ihtiyacı yoktur. Boş bir listeden oluşturulan bir veri görünümü tarafından sağlanan olsa da, `ProductSalesData`veri şeması gerekir.
 
-Artışlar ve değişiklik noktalarını algılamak için aynı ürün satış verilerini analiz edersiniz. Derleme ve eğitim modeli işlemi, ani algılama ve değişiklik noktası algılama için aynıdır; Ana fark, kullanılan belirli bir algılama algoritmasıdır.
+Ani artışları ve noktaları değiştirmek için aynı ürün satış verilerini analiz ememezsiniz. Bina ve eğitim modeli süreci başak algılama ve değişim noktası algılama için aynıdır; ana fark kullanılan özel algılama algoritmasıdır.
 
-## <a name="spike-detection"></a>Depo algılama
+## <a name="spike-detection"></a>Başak algılama
 
-Ani algılamanın amacı, zaman serisi veri değerlerinin çoğunluğunun önemli ölçüde farklı olduğu ani, geçici bir artışlarıyla 'yi belirlemektir. Bu şüpheli nadir öğe, olay veya gözlemlerin en aza indirme zamanında algılanması önemlidir. Aşağıdaki yaklaşım,: kesintiler, Cyber saldırıları veya viral web içeriği gibi çeşitli anormallikleri algılamak için kullanılabilir. Aşağıdaki görüntü, zaman serisi veri kümesindeki ani artışlar örneğidir:
+Başak algılamanın amacı, zaman serisi veri değerlerinin çoğundan önemli ölçüde farklı olan ani ama geçici patlamaları belirlemektir. Bu şüpheli nadir öğeleri, olayları veya gözlemleri en aza indirilecek şekilde zamanında tespit etmek önemlidir. Aşağıdaki yaklaşım, kesintiler, siber saldırılar veya viral web içeriği gibi çeşitli anormallikleri tespit etmek için kullanılabilir. Aşağıdaki resim, bir zaman serisi veri kümesindeki ani artışlara bir örnektir:
 
 ![İki ani algılama gösteren ekran görüntüsü.](./media/sales-anomaly-detection/two-spike-detections.png)
 
-### <a name="add-the-createemptydataview-method"></a>CreateEmptyDataView () yöntemi ekleme
+### <a name="add-the-createemptydataview-method"></a>CreateEmptyDataView() yöntemini ekleyin
 
-`Program.cs`için aşağıdaki yöntemi ekleyin:
+Aşağıdaki yöntemi `Program.cs`ekleyin:
 
 [!code-csharp[CreateEmptyDataView](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CreateEmptyDataView)]
 
-`CreateEmptyDataView()`, `IEstimator.Fit()` yöntemine giriş olarak kullanılacak doğru şemaya sahip boş bir veri görünümü nesnesi oluşturur.
+Yönteme `CreateEmptyDataView()` giriş olarak kullanılacak doğru şemaya sahip boş bir veri `IEstimator.Fit()` görünümü nesnesi üretir.
 
-### <a name="create-the-detectspike-method"></a>Detectani () yöntemini oluşturma
+### <a name="create-the-detectspike-method"></a>DetectSpike() yöntemini oluşturma
 
-`DetectSpike()` yöntemi:
+Yöntem: `DetectSpike()`
 
-* Estimator 'dan dönüşüm oluşturur.
-* Geçmiş satış verilerine göre ani artışları algılar.
+* Tahminciden dönüşümü oluşturur.
+* Geçmiş satış verilerine göre ani artışlar algılar.
 * Sonuçları görüntüler.
 
-1. Aşağıdaki kodu kullanarak, `Main()` yönteminden hemen sonra `DetectSpike()` yöntemini oluşturun:
+1. Yöntemden `DetectSpike()` `Main()` hemen sonra, aşağıdaki kodu kullanarak yöntemi oluşturun:
 
     ```csharp
     static void DetectSpike(MLContext mlContext, int docSize, IDataView productSales)
@@ -179,45 +179,45 @@ Ani algılamanın amacı, zaman serisi veri değerlerinin çoğunluğunun öneml
     }
     ```
 
-1. Modeli ani algılamayı eğitmek için [ııdspikeestimator](xref:Microsoft.ML.Transforms.TimeSeries.IidSpikeEstimator) 'ı kullanın. `DetectSpike()` yöntemine aşağıdaki kodla ekleyin:
+1. Modeli ani algılama için eğitmek için [IidSpikeEstimator'u](xref:Microsoft.ML.Transforms.TimeSeries.IidSpikeEstimator) kullanın. Yönteme `DetectSpike()` aşağıdaki kodla ekleyin:
 
     [!code-csharp[AddSpikeTrainer](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#AddSpikeTrainer)]
 
-1. `DetectSpike()` yöntemine sonraki kod satırı olarak aşağıdakileri ekleyerek depo algılama dönüşümü oluşturun:
+1. `DetectSpike()` Yöntemde bir sonraki kod satırı olarak aşağıdakileri ekleyerek başak algılama dönüşümü oluşturun:
 
     [!code-csharp[TrainModel1](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#TrainModel1)]
 
-1. `productSales` verileri `DetectSpike()` yönteminin sonraki satırı olarak dönüştürmek için aşağıdaki kod satırını ekleyin:
+1. Yöntemde `productSales` verileri bir sonraki satır olarak dönüştürmek için `DetectSpike()` aşağıdaki kod satırını ekleyin:
 
     [!code-csharp[TransformData1](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#TransformData1)]
 
-    Önceki kod, bir veri kümesinin birden çok giriş satırına ilişkin tahminleri yapmak için [Transform ()](xref:Microsoft.ML.ITransformer.Transform%2A) yöntemini kullanır.
+    Önceki kod, bir veri kümesinin birden çok giriş satırı için öngörüler yapmak için [Dönüştür()](xref:Microsoft.ML.ITransformer.Transform%2A) yöntemini kullanır.
 
-1. Aşağıdaki kodla [Createsıralanabilir ()](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) yöntemini kullanarak daha kolay görüntülenmesi için `transformedData` türü kesin belirlenmiş bir `IEnumerable` dönüştürün:
+1. `transformedData` Aşağıdaki kodla [CreateEnumerable()](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) yöntemini kullanarak daha kolay görüntü için güçlü bir şekilde yazılan `IEnumerable` bir ekrana dönüştürün:
 
     [!code-csharp[CreateEnumerable1](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CreateEnumerable1)]
 
-1. Aşağıdaki <xref:System.Console.WriteLine?displayProperty=nameWithType> kodunu kullanarak bir görüntüleme üst bilgisi satırı oluşturun:
+1. Aşağıdaki <xref:System.Console.WriteLine?displayProperty=nameWithType> kodu kullanarak bir ekran üstbilgi satırı oluşturun:
 
     [!code-csharp[DisplayHeader1](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#DisplayHeader1)]
 
-    Aşağıdaki bilgileri, depo algılama sonuçlarında görüntüleriz:
+    Başak algılama sonuçlarınızda aşağıdaki bilgileri görüntülersiniz:
 
-    * `Alert`, belirli bir veri noktası için ani bir uyarı gösterir.
-    * `Score`, veri kümesindeki belirli bir veri noktası için `ProductSales` değerdir.
-    * "P" `P-Value` olasılık anlamına gelir. P değerinin 0 olması, büyük olasılıkla veri noktasının bir anomali olması olabilir.
+    * `Alert`belirli bir veri noktası için ani bir uyarı gösterir.
+    * `Score`veri `ProductSales` kümesindeki belirli bir veri noktasının değeridir.
+    * `P-Value`"P" olasılık anlamına gelir. P değeri 0'a ne kadar yakınsa, veri noktası nın anomali olma olasılığı da o kadar yüksektir.
 
-1. `predictions` `IEnumerable` üzerinden yinelemek ve sonuçları göstermek için aşağıdaki kodu kullanın:
+1. Aşağıdaki kodu kullanarak aşağıdaki kodu `predictions` `IEnumerable` kullanarak sonuçları yineleyin ve görüntüleyin:
 
     [!code-csharp[DisplayResults1](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#DisplayResults1)]
 
-1. `Main()` yönteminde `DetectSpike()`metoduna çağrıyı ekleyin:
+1. Yöntemde `DetectSpike()`yönteme çağrı `Main()` ekleyin:
 
     [!code-csharp[CallDetectSpike](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CallDetectSpike)]
 
-## <a name="spike-detection-results"></a>Depo algılama sonuçları
+## <a name="spike-detection-results"></a>Başak algılama sonuçları
 
-Sonuçlarınız aşağıdakine benzer olmalıdır. İşlem sırasında iletiler görüntülenir. Uyarıları görebilir veya iletileri işleme alabilirsiniz. Bazı iletiler, açıklık açısından aşağıdaki sonuçlardan kaldırılmıştır.
+Sonuçlarınız aşağıdakilere benzer olmalıdır. İşlem sırasında iletiler görüntülenir. Uyarılar veya iletileri işleme görebilirsiniz. Bazı iletiler netlik için aşağıdaki sonuçlardan kaldırıldı.
 
 ```console
 Detect temporary changes in pattern
@@ -262,21 +262,21 @@ Alert   Score   P-Value
 0       651.90  0.14
 ```
 
-## <a name="change-point-detection"></a>Değişiklik noktası algılama
+## <a name="change-point-detection"></a>Nokta algılamayı değiştirme
 
-`Change points`, bir zaman serisi olay akışı, düzey değişiklikler ve eğilimler gibi değerlerin dağıtımında kalıcı değişikliklerdir. Bu kalıcı değişiklikler `spikes` son olarak çok daha uzun ve çok zararlı olay (ler) i gösteriyor olabilir. `Change points`, genellikle çıplak gözle görünmez, ancak verilerinizde aşağıdaki yöntemde olduğu gibi yaklaşımlar kullanılarak algılanabilir.  Aşağıdaki görüntü, değişiklik noktası algılamayı bir örneğidir:
+`Change points`düzey değişiklikleri ve eğilimleri gibi değerlerin zaman serisi olay akışı dağıtımında kalıcı değişikliklerdir. Bu kalıcı değişiklikler çok `spikes` daha uzun sürer ve felaket olay (lar) gösterebilir. `Change points`genellikle çıplak gözle görülemez, ancak aşağıdaki yöntemdeki gibi yaklaşımlar kullanılarak verilerinizde algılanabilir.  Aşağıdaki resim bir değişim noktası algılama örneğidir:
 
 ![Değişiklik noktası algılamayı gösteren ekran görüntüsü.](./media/sales-anomaly-detection/change-point-detection.png)
 
-### <a name="create-the-detectchangepoint-method"></a>DetectChangepoint () metodunu oluşturma
+### <a name="create-the-detectchangepoint-method"></a>DetectChangepoint() yöntemini oluşturma
 
-`DetectChangepoint()` yöntemi aşağıdaki görevleri yürütür:
+Yöntem `DetectChangepoint()` aşağıdaki görevleri yürütür:
 
-* Estimator 'dan dönüşüm oluşturur.
-* Geçmiş satış verilerine göre değişiklik noktalarını algılar.
+* Tahminciden dönüşümü oluşturur.
+* Geçmiş satış verilerine dayalı değişim noktalarını algılar.
 * Sonuçları görüntüler.
 
-1. Aşağıdaki kodu kullanarak, `Main()` yönteminden hemen sonra `DetectChangepoint()` yöntemini oluşturun:
+1. Yöntemden `DetectChangepoint()` `Main()` hemen sonra, aşağıdaki kodu kullanarak yöntemi oluşturun:
 
     ```csharp
     static void DetectChangepoint(MLContext mlContext, int docSize, IDataView productSales)
@@ -285,44 +285,44 @@ Alert   Score   P-Value
     }
     ```
 
-1. `DetectChangepoint()` yönteminde aşağıdaki kodla [ııdchangepointestiyıtor](xref:Microsoft.ML.Transforms.TimeSeries.IidChangePointEstimator) öğesini oluşturun:
+1. `DetectChangepoint()` Yöntemde aşağıdaki kodla [iidChangePointEstimator'u](xref:Microsoft.ML.Transforms.TimeSeries.IidChangePointEstimator) oluşturun:
 
     [!code-csharp[AddChangepointTrainer](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#AddChangepointTrainer)]
 
-1. Daha önce yaptığınız gibi, aşağıdaki kod satırını `DetectChangePoint()` yöntemine ekleyerek tahmin aracı 'dan dönüştürmeyi oluşturun:
+1. Daha önce yaptığınız gibi, yönteme aşağıdaki kod satırını ekleyerek tahminciden dönüştürmeyi `DetectChangePoint()` oluşturun:
 
     [!code-csharp[TrainModel2](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#TrainModel2)]
 
-1. Aşağıdaki kodu `DetectChangePoint()`ekleyerek verileri dönüştürmek için `Transform()` yöntemini kullanın:
+1. Aşağıdaki `Transform()` kodu ekleyerek verileri dönüştürmek için `DetectChangePoint()`yöntemi kullanın:
 
     [!code-csharp[TransformData2](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#TransformData2)]
 
-1. Daha önce yaptığınız gibi, aşağıdaki kodla `CreateEnumerable()`yöntemini kullanarak daha kolay görüntülenmesi için `transformedData` kesin olarak yazılmış bir `IEnumerable` dönüştürün:
+1. Daha önce yaptığınız gibi, `transformedData` aşağıdaki kodu kullanarak `IEnumerable` `CreateEnumerable()`yöntemi kullanarak daha kolay görüntü için güçlü bir şekilde yazılan bir görüntüye dönüştürün:
 
     [!code-csharp[CreateEnumerable2](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CreateEnumerable2)]
 
-1. `DetectChangePoint()` yönteminde sonraki satır olarak aşağıdaki kodla bir görüntüleme üstbilgisi oluşturun:
+1. Yöntemde bir sonraki satır olarak aşağıdaki kodu `DetectChangePoint()` içeren bir ekran üstbilgisi oluşturun:
 
     [!code-csharp[DisplayHeader2](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#DisplayHeader2)]
 
-    Değişiklik noktası algılama sonuçlarında aşağıdaki bilgileri görüntüleyebilirsiniz:
+    Değişim noktası algılama sonuçlarınızda aşağıdaki bilgileri görüntülersiniz:
 
-    * `Alert`, belirli bir veri noktası için bir değişiklik noktası uyarısı olduğunu gösterir.
-    * `Score`, veri kümesindeki belirli bir veri noktası için `ProductSales` değerdir.
-    * "P" `P-Value` olasılık anlamına gelir. P değerinin 0 olması, büyük olasılıkla veri noktasının bir anomali olması olabilir.
-    * `Martingale value`, bir veri noktasının P-değerleri dizisine göre nasıl olduğunu belirlemek için kullanılır.
+    * `Alert`belirli bir veri noktası için bir değişim noktası uyarısı gösterir.
+    * `Score`veri `ProductSales` kümesindeki belirli bir veri noktasının değeridir.
+    * `P-Value`"P" olasılık anlamına gelir. P değeri 0'a ne kadar yakınsa, veri noktası nın anomali olma olasılığı da o kadar yüksektir.
+    * `Martingale value`P-değerlerinin sırasına göre bir veri noktasının ne kadar "garip" olduğunu belirlemek için kullanılır.
 
-1. `predictions` `IEnumerable` üzerinden yineleyin ve sonuçları aşağıdaki kodla görüntüleyin:
+1. Sonuçları aşağıdaki kodla titretin `predictions` `IEnumerable` ve görüntüleyin:
 
     [!code-csharp[DisplayResults2](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#DisplayResults2)]
 
-1. Aşağıdaki çağrıyı `Main()` yönteminde `DetectChangepoint()`yöntemine ekleyin:
+1. Yöntemde yönteme `DetectChangepoint()`aşağıdaki çağrıyı `Main()` ekleyin:
 
     [!code-csharp[CallDetectChangepoint](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CallDetectChangepoint)]
 
 ## <a name="change-point-detection-results"></a>Nokta algılama sonuçlarını değiştirme
 
-Sonuçlarınız aşağıdakine benzer olmalıdır. İşlem sırasında iletiler görüntülenir. Uyarıları görebilir veya iletileri işleme alabilirsiniz. Bazı iletiler, açıklık açısından aşağıdaki sonuçlardan kaldırılmıştır.
+Sonuçlarınız aşağıdakilere benzer olmalıdır. İşlem sırasında iletiler görüntülenir. Uyarılar veya iletileri işleme görebilirsiniz. Bazı iletiler netlik için aşağıdaki sonuçlardan kaldırıldı.
 
 ```console
 Detect Persistent changes in pattern
@@ -367,21 +367,21 @@ Alert   Score   P-Value Martingale value
 0       651.90  0.14    0.09
 ```
 
-Tebrikler! Artık, satış verilerinde ani artışları ve değişiklik noktası bozukluklarını algılamak için makine öğrenimi modellerini başarıyla oluşturdunuz.
+Tebrikler! Şimdi başarıyla ani tespit ve satış verilerinde nokta anomalileri değiştirmek için makine öğrenme modelleri oluşturduk.
 
-Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection) deposunda bulabilirsiniz.
+Bu öğreticinin kaynak kodunu [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection) deposunda bulabilirsiniz.
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
 >
 > * Verileri yükleme
-> * Modeli, ani anomali algılama için eğitme
-> * Eğitilen modeliyle ani bozukluklar algılama
-> * Modeli değişiklik noktası anomali algılama için eğitme
-> * Eğitilen mod ile değişiklik noktası bozuklulıkları Algıla
+> * Ani anomali tespiti için modeli eğitin
+> * Eğitimli model ile başak anomalileri tespit
+> * Değişim noktası anomali tespiti için modeli eğitin
+> * Eğitilmiş mod ile değişim noktası anomalilerini tespit
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Güç tüketimi anomali algılama örneğini araştırmak için Machine Learning örnekleri GitHub deposuna göz atın.
+Güç Tüketimi Anomali Algılama örneğini keşfetmek için GitHub deposundaki Machine Learning örneklerine göz atın.
 > [!div class="nextstepaction"]
-> [DotNet/machinöğrenim-Samples GitHub deposu](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings)
+> [dotnet/machinelearning-örnekleri GitHub deposu](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings)

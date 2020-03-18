@@ -1,56 +1,56 @@
 ---
-title: LINQ to XML diğer XML Technologies3 karşılaştırması
+title: LINQ - XML ve Diğer XML Teknolojileri3
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
 ms.openlocfilehash: 4cade6ecbee95ee288db34246986858609697731
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635684"
 ---
-# <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML ve diğer XML Teknolojileri
-Bu konu, aşağıdaki XML teknolojilerine [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] karşılaştırır: <xref:System.Xml.XmlReader>, XSLT, MSXML ve XmlLite. Bu bilgiler hangi teknolojiyi kullanacağınızı belirlemenize yardımcı olabilir.  
+# <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ ve XML ve Diğer XML Teknolojileri
+Bu konu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aşağıdaki XML teknolojileri <xref:System.Xml.XmlReader>ile karşılaştırılır: , XSLT, MSXML ve XmlLite. Bu bilgiler, hangi teknolojiyi kullanacağınıza karar vermenize yardımcı olabilir.  
   
- Belge Nesne Modeli (DOM) [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir karşılaştırması için, bkz. [LINQ to XML vs. DomC#()](./linq-to-xml-vs-dom.md).  
+ Belge Nesnesi Modeli (DOM) ile karşılaştırma [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] yapmak için LINQ ile [XML ve DOM (C#)](./linq-to-xml-vs-dom.md)bölümüne bakın.  
   
-## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML vs. XmlReader  
- <xref:System.Xml.XmlReader> hızlı, salt ileri, önbelleğe alınmamış bir ayrıştırıcıdır.  
+## <a name="linq-to-xml-vs-xmlreader"></a>LINQ xml vs XmlReader için  
+ <xref:System.Xml.XmlReader>hızlı, ileriye dönük, önbelleğe olmayan bir parşerdir.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], <xref:System.Xml.XmlReader>üzerine uygulanır ve sıkı bir şekilde tümleşiktir. Ancak, <xref:System.Xml.XmlReader> kendisi de kullanabilirsiniz.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]üzerine <xref:System.Xml.XmlReader>uygulanır ve sıkıca entegre edilmiştir. Ancak, kendi başına <xref:System.Xml.XmlReader> da kullanabilirsiniz.  
   
- Örneğin, saniyede yüzlerce XML belgesini ayrıştıracak bir Web hizmeti oluşturduğunuzu ve belgeler aynı yapıya sahip olduğundan, yalnızca XML 'i ayrıştırmak için kodun bir uygulamasını yazmanız gerekir. Bu durumda muhtemelen <xref:System.Xml.XmlReader> kendisini kullanmak isteyeceksiniz.  
+ Örneğin, saniyede yüzlerce XML belgesini ayrıştıracak bir Web hizmeti oluşturuyorsunuz ve belgeler aynı yapıya sahip, yani XML'i ayrıştırmak için kodun yalnızca bir uygulamasını yazmanız gerekiyor. Bu durumda, muhtemelen kendisi tarafından <xref:System.Xml.XmlReader> kullanmak istiyorum.  
   
- Buna karşılık, birçok küçük XML belgesini çözümleyen bir sistem oluşturuyorsanız ve her biri farklıysa, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sağladığı üretkenlik geliştirmelerinden faydalanmak isteyebilirsiniz.  
+ Buna karşılık, çok daha küçük XML belgeleri parses bir sistem oluşturuyorsanız ve her biri farklı, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sağlayan verimlilik iyileştirmeleri yararlanmak istiyorum.  
   
-## <a name="linq-to-xml-vs-xslt"></a>LINQ to XML ile XSLT karşılaştırması  
- Hem [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] hem de XSLT, kapsamlı XML belge dönüştürme özellikleri sağlar. XSLT, kural tabanlı, bildirime dayalı bir yaklaşımdır. Gelişmiş XSLT programcıları, XSLT 'nin durum bilgisi olmayan bir yaklaşımı vurgulayarak işlevsel programlama stilinde yazar. Dönüşümler, yan etkileri olmadan uygulanan saf işlevleri kullanılarak yazılabilir. Bu kural tabanlı veya işlevsel yaklaşım birçok geliştiricilere tanıdık değildir ve öğrenmesi zor ve zaman alıcı olabilir.  
+## <a name="linq-to-xml-vs-xslt"></a>LINQ - XML ve XSLT  
+ Hem [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] de XSLT kapsamlı XML belge dönüştürme özellikleri sağlar. XSLT kural tabanlı, bildirimsel bir yaklaşımdır. Gelişmiş XSLT programcıları, benzersiz bir yaklaşımı vurgulayan işlevsel bir programlama stilinde XSLT yazar. Dönüşümler yan etkileri olmadan uygulanan saf fonksiyonlar kullanılarak yazılabilir. Bu kural tabanlı veya işlevsel yaklaşım birçok geliştirici için yabancıdır ve öğrenmesi zor ve zaman alıcı olabilir.  
   
- XSLT, yüksek performanslı uygulamalar veren çok üretken bir sistem olabilir. Örneğin, bazı büyük Web şirketleri XSLT 'yi çeşitli veri depolarından çekilen XML 'den HTML oluşturmak için bir yol olarak kullanır. Yönetilen XSLT altyapısı XSLT koduna XSLT derler ve yerel XSLT altyapısından daha iyi bir şekilde çalışır.  
+ XSLT, yüksek performanslı uygulamalar sağlayan çok üretken bir sistem olabilir. Örneğin, bazı büyük Web şirketleri XML'den çeşitli veri depolarından çekilen HTML oluşturmak için XSLT'yi kullanır. Yönetilen XSLT motoru XSLT'yi CLR koduna kadar derler ve bazı senaryolarda yerel XSLT motorundan daha iyi performans gösterir.  
   
- Ancak XSLT, birçok geliştiricinin sahip olduğu C# ve Visual Basic bilgilerden yararlanır. Geliştiricilerin farklı ve karmaşık bir programlama dilinde kod yazmasını gerektirir. C# (Veya Visual Basic) gibi tümleşik olmayan iki geliştirme SISTEMINI ve XSLT 'nin geliştirilmesi ve bakımının daha zor olduğu yazılım sistemlerinde sonuçları.  
+ Ancak XSLT, birçok geliştiricinin sahip olduğu C# ve Visual Basic bilgilerinden yararlanmaz. Geliştiricilerin farklı ve karmaşık bir programlama dilinde kod yazmalarını gerektirir. C# (veya Visual Basic) ve XSLT gibi entegre olmayan iki geliştirme sisteminin kullanılması, geliştirilmesi ve bakımı daha zor olan yazılım sistemlerinin sonuçlarıdır.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgu ifadelerini ana bir şekilde oluşturduktan sonra, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dönüştürmeleri kullanımı kolay güçlü bir teknolojidir. Temel olarak, işlevsel oluşturma, çeşitli kaynaklardan veri çekme, <xref:System.Xml.Linq.XElement> nesneleri dinamik olarak oluşturma ve tümünü yeni bir XML ağacına çevirme kullanarak XML belgenizi oluşturursunuz. Dönüştürme tamamen yeni bir belge oluşturabilir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dönüşümler oluşturmak nispeten kolay ve sezgisel ve elde edilen kod okunabilir olur. Bu, geliştirme ve bakım maliyetlerini azaltır.  
+ Sorgu ifadelerinde [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ustalaştıktan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sonra, dönüşümler kullanımı kolay güçlü bir teknolojidir. Temel olarak, işlevsel yapı kullanarak, çeşitli kaynaklardan veri çekerek, <xref:System.Xml.Linq.XElement> nesneleri dinamik olarak oluşturarak ve bütünüskile yeni bir XML ağacına birleştirerek XML belgenizi oluşturursunuz. Dönüştürme tamamen yeni bir belge oluşturabilir. Dönüşümleri oluşturmak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nispeten kolay ve sezgiseldir ve ortaya çıkan kod okunabilir. Bu, geliştirme ve bakım maliyetlerini azaltır.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XSLT 'yi değiştirmek için tasarlanmamıştır. XSLT, özellikle de belgenin yapısı iyi tanımlanmamışsa, karmaşık ve belge merkezli XML dönüştürmeleri için seçim aracı olmaya devam etmektedir.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]XSLT'nin yerini almak için tasarlanmamıştır. XSLT, özellikle belgenin yapısı iyi tanımlanmamışsa, karmaşık ve belge merkezli XML dönüşümleri için hala tercih edilen araçtır.  
   
- XSLT, World Wide Web Konsorsiyumu (W3C) standardı olmasının avantajına sahiptir. Yalnızca standartları olan teknolojileri kullandığınız bir gereksinime sahipseniz, XSLT daha uygun olabilir.  
+ XSLT, World Wide Web Konsorsiyumu (W3C) standardı olma avantajına sahiptir. Yalnızca standart olan teknolojileri kullanmanız için bir gereksiniminiz varsa, XSLT daha uygun olabilir.  
   
- XSLT XML 'dir ve bu nedenle programlı bir şekilde yönetilebilir.  
+ XSLT XML'dir ve bu nedenle programlı olarak değiştirilebilir.  
   
-## <a name="linq-to-xml-vs-msxml"></a>LINQ to XML vs. MSXML  
- MSXML, Microsoft Windows 'a dahil edilen XML 'yi işlemeye yönelik COM tabanlı teknolojisidir. MSXML, XPath ve XSLT desteğiyle DOM 'ın yerel bir uygulamasını sağlar. Ayrıca, SAX2 önbelleğe alınmamış olay tabanlı ayrıştırıcısı da içerir.  
+## <a name="linq-to-xml-vs-msxml"></a>LINQ - XML vs. MSXML  
+ MSXML, Microsoft Windows ile birlikte verilen XML'i işlemek için COM tabanlı bir teknolojidir. MSXML, XPath ve XSLT desteği ile DOM'un yerel bir uygulamasını sağlar. Ayrıca SAX2 önbelleğe olmayan, olay tabanlı parser içerir.  
   
- MSXML iyi çalışır, Çoğu senaryoda varsayılan olarak güvenlidir ve AJAX stili uygulamalarda istemci tarafı XML işleme gerçekleştirmek için Internet Explorer 'da erişilebilir. MSXML, JavaScript ve Visual Basic 6,0 dahil olmak üzere C++com desteği olan herhangi bir programlama dilinden kullanılabilir.  
+ MSXML iyi performans gösterir, çoğu senaryoda varsayılan olarak güvenlidir ve AJAX tarzı uygulamalarda istemci tarafı XML işlemesi için Internet Explorer'a erişilebilir. MSXML, C++, JavaScript ve Visual Basic 6.0 dahil olmak üzere COM'u destekleyen tüm programlama dillerinden kullanılabilir.  
   
- MSXML, ortak dil çalışma zamanı (CLR) temelinde yönetilen kodda kullanım için önerilmez.  
+ MSXML, ortak dil çalışma süresine (CLR) dayalı yönetilen kodda kullanılması önerilmez.  
   
-## <a name="linq-to-xml-vs-xmllite"></a>LINQ to XML ve XmlLite karşılaştırması  
- XmlLite önbelleğe alma, iletme, çekme ayrıştırıcısıdır. Geliştiriciler öncelikle ile C++XmlLite kullanır. Geliştiricilerin yönetilen kodla XmlLite kullanması önerilmez.  
+## <a name="linq-to-xml-vs-xmllite"></a>LINQ xml vs XmlLite için  
+ XmlLite olmayan bir önbelleğe alma, ileri sadece, parser çekin. Geliştiriciler öncelikle C++ ile XmlLite kullanın. Geliştiricilerin XmlLite'ı yönetilen kodla kullanmaları önerilmez.  
   
- XmlLite 'ın başlıca avantajı, Çoğu senaryoda güvenli olan hafif ve hızlı bir XML ayrıştırıcısıdır. Tehdit yüzeyi alanı çok küçük. Güvenilmeyen belgeleri ayrıştırmanıza ve hizmet reddi ya da veri pozlaması gibi saldırılara karşı korunmak istiyorsanız, XmlLite iyi bir seçenek olabilir.  
+ XmlLite'In en büyük avantajı, çoğu senaryoda güvenli olan hafif, hızlı bir XML parser olmasıdır. Tehdit yüzey alanı çok küçüktür. Güvenilmeyen belgeleri ayrışdırmak zorunda ysanız ve hizmet reddi veya verilerin açığa çıkması gibi saldırılara karşı korumak istiyorsanız, XmlLite iyi bir seçenek olabilir.  
   
- XmlLite, dil ile tümleşik sorgu (LINQ) ile tümleştirilebilir. Bu, LINQ 'ın arkasındaki zorlamaya yönelik programcı üretkenlik geliştirmelerini vermez.  
+ XmlLite, Dil-Entegre Sorgu (LINQ) ile bütünleşmedi. LINQ'un arkasındaki motive edici güç olan programcı üretkenliği iyileştirmelerini sağlamaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,45 +1,45 @@
 ---
-title: 'Öğretici: .NET Core aracı oluşturma'
-description: .NET Core aracı oluşturmayı öğrenin. Araç, .NET Core CLI kullanılarak yüklenen bir konsol uygulamasıdır.
+title: 'Öğretici: Bir .NET Core aracı oluşturma'
+description: Bir .NET Core aracını nasıl oluşturabilirsiniz öğrenin. Bir araç .NET Core CLI kullanılarak yüklenen bir konsol uygulamasıdır.
 ms.date: 02/12/2020
 ms.openlocfilehash: 88cc3be7b149834ace0c5f3ba8ac8c039199908f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156731"
 ---
-# <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>Öğretici: .NET Core CLI kullanarak bir .NET Core aracı oluşturma
+# <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>Öğretici: .NET Core CLI'yi kullanarak bir .NET Core aracı oluşturun
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 2.1 SDK ve sonraki sürümler
 
-Bu öğreticide bir .NET Core aracı oluşturma ve paketleme öğretilir. .NET Core CLI, diğer kullanıcıların yükleyebileceği ve çalıştırabileceği bir araç olarak konsol uygulaması oluşturmanızı sağlar. .NET Core araçları, .NET Core CLI yüklenen NuGet paketlerdir. Araçlar hakkında daha fazla bilgi için bkz. [.NET Core araçlarına genel bakış](global-tools.md).
+Bu öğretici, bir .NET Core aracını nasıl oluşturup paketlediğinizi öğretir. .NET Core CLI, başkalarının yükleyip çalıştırabileceği bir araç olarak bir konsol uygulaması oluşturmanıza olanak tanır. .NET Core araçları, .NET Core CLI'den yüklenen NuGet paketleridir. Araçlar hakkında daha fazla bilgi için [.NET Core araçlarına genel bakış](global-tools.md)ala.
 
-Oluşturacağınız araç, girdi olarak bir ileti alıp iletiyi bir robot görüntüsünü oluşturan metin satırlarıyla birlikte görüntüleyen bir konsol uygulamasıdır.
+Oluşturacağınız araç, bir iletiyi girdi olarak alan ve iletiyi bir robot görüntüsünü oluşturan metin çizgileri ile birlikte görüntüleyen bir konsol uygulamasıdır.
 
-Bu, bir dizi üç öğreticiden ilkdir. Bu öğreticide bir araç oluşturur ve paketleyin. Sonraki iki öğreticilerde [, aracı genel araç olarak kullanır](global-tools-how-to-use.md) ve [Aracı yerel bir araç olarak kullanabilirsiniz](local-tools-how-to-use.md).
+Bu üç öğreticiler bir dizi ilkidir. Bu öğreticide, bir araç oluşturur ve paketlersiniz. Sonraki iki öğreticide [aracı genel bir araç olarak kullanırsınız](global-tools-how-to-use.md) ve [aracı yerel bir araç olarak kullanırsınız.](local-tools-how-to-use.md)
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- [.NET Core SDK 3,1](https://dotnet.microsoft.com/download) veya sonraki bir sürümü.
+- [.NET Core SDK 3.1](https://dotnet.microsoft.com/download) veya daha sonraki bir sürüm.
 
-  Bu öğreticide, genel [araçlar .NET Core SDK](global-tools-how-to-use.md) 2,1 ve üzeri sürümler için bu öğretici ve bu sürümden itibaren küresel araçlar geçerlidir. Ancak bu öğreticide, [Yerel araçlar öğreticisine](local-tools-how-to-use.md)devam etme seçeneğine sahip olmanız için 3,1 veya sonraki bir sürümü yüklemiş olduğunuz varsayılmaktadır. Yerel araçlar .NET Core SDK 3,0 ' den başlayarak kullanılabilir. Bir araç oluşturma yordamları, bunu küresel bir araç olarak veya yerel bir araç olarak kullanıp kullanmayacağınızı de aynıdır.
+  Bu öğretici ve [genel araçlar için](global-tools-how-to-use.md) aşağıdaki öğretici .NET Core SDK 2.1 ve sonraki sürümlere uygulanır, çünkü bu sürümden başlayarak genel araçlar mevcuttur. Ama bu öğretici [yerel araçlar öğretici](local-tools-how-to-use.md)devam seçeneği ne var böylece 3.1 veya daha sonra yüklü varsayar. Yerel araçlar .NET Core SDK 3.0'dan başlayarak mevcuttur. Bir araç oluşturma yordamları, ister genel bir araç olarak ister yerel bir araç olarak kullanın aynıdır.
   
 - Tercih ettiğiniz bir metin veya kod düzenleyicisi.
 
 ## <a name="create-a-project"></a>Proje oluşturma
 
-1. Bir komut istemi açın ve *Depo*adlı bir klasör oluşturun.
+1. Komut istemini açın ve *depo*adlı bir klasör oluşturun.
 
-1. *Depo* klasörüne gidin ve şu komutu girin:
+1. *Depo* klasörüne gidin ve aşağıdaki komutu girin:
 
    ```dotnetcli
    dotnet new console -n microsoft.botsay
    ```
 
-   Komut, *Depo* klasörü altında *Microsoft. botdeyin* adlı yeni bir klasör oluşturur.
+   Komut, *depo* klasörü altında *microsoft.botsay* adlı yeni bir klasör oluşturur.
 
-1. *Microsoft. botsay* klasörüne gidin.
+1. *microsoft.botsay* klasörüne gidin.
 
    ```console
    cd microsoft.botsay
@@ -47,15 +47,15 @@ Bu, bir dizi üç öğreticiden ilkdir. Bu öğreticide bir araç oluşturur ve 
 
 ## <a name="add-the-code"></a>Kod ekleme
 
-1. `Program.cs` dosyasını kod düzenleyicinizle açın.
+1. Kodu `Program.cs` düzenleyicinizle dosyayı açın.
 
-1. Aşağıdaki `using` yönergesini dosyanın en üstüne ekleyin:
+1. Dosyanın `using` üst bölümüne aşağıdaki yönergeyi ekleyin:
 
    ```csharp
    using System.Reflection;
    ```
 
-1. Uygulama için komut satırı bağımsız değişkenlerini işlemek üzere `Main` yöntemini aşağıdaki kodla değiştirin.
+1. Uygulama `Main` için komut satırı bağımsız değişkenlerini işlemek için yöntemi aşağıdaki kodla değiştirin.
 
    ```csharp
    static void Main(string[] args)
@@ -78,9 +78,9 @@ Bu, bir dizi üç öğreticiden ilkdir. Bu öğreticide bir araç oluşturur ve 
    }
    ```
 
-   Hiçbir bağımsız değişken geçirilmezse, kısa bir yardım iletisi görüntülenir. Aksi takdirde, tüm bağımsız değişkenler tek bir dizeye birleştirilir ve bir sonraki adımda oluşturduğunuz `ShowBot` yöntemi çağırarak yazdırılır.
+   Bağımsız değişken geçirilmezse, kısa bir yardım iletisi görüntülenir. Aksi takdirde, tüm bağımsız değişkenler tek bir dize içine sıkıştırılır ve bir sonraki adımda oluşturduğunuz `ShowBot` yöntem çağırArak yazdırılır.
 
-1. Dize parametresi alan `ShowBot` adlı yeni bir yöntem ekleyin. Yöntemi, metin satırlarını kullanarak iletiyi ve bir robot görüntüsünü yazdırır.
+1. Dize parametresi alan yeni bir yöntem ekleyin. `ShowBot` Yöntem, metin satırlarını kullanarak bir robotun iletisini ve görüntüsünü yazdırır.
 
    ```csharp
    static void ShowBot(string message)
@@ -133,7 +133,7 @@ Bu, bir dizi üç öğreticiden ilkdir. Bu öğreticide bir araç oluşturur ve 
 
 ## <a name="test-the-application"></a>Uygulamayı test etme
 
-Projeyi çalıştırın ve çıktıyı görüntüleyin. Farklı sonuçları görmek için komut satırında bu çeşitlemeleri deneyin:
+Projeyi çalıştırın ve çıktıyı görün. Farklı sonuçlar görmek için komut satırında bu varyasyonları deneyin:
 
 ```dotnetcli
 dotnet run
@@ -141,13 +141,13 @@ dotnet run -- "Hello from the bot"
 dotnet run -- Hello from the bot
 ```
 
-`--` sınırlayıcısından sonraki tüm bağımsız değişkenler uygulamanıza geçirilir.
+`--` Delimiter sonra tüm bağımsız değişkenler uygulamanıza geçirilir.
 
-## <a name="package-the-tool"></a>Aracı paketleyin
+## <a name="package-the-tool"></a>Aracı paketle
 
-Uygulamayı bir araç olarak paketleyebilir ve dağıtabilmeniz için önce proje dosyasını değiştirmeniz gerekir.
+Uygulamayı bir araç olarak paketleyip dağıtabilmeniz için proje dosyasını değiştirmeniz gerekir.
 
-1. *Microsoft. botsöyleyin. csproj* dosyasını açın ve `<PropertyGroup>` düğümünün sonuna üç yeni XML düğümü ekleyin:
+1. *microsoft.botsay.csproj* dosyasını açın ve `<PropertyGroup>` düğümün sonuna üç yeni XML düğümü ekleyin:
 
    ```xml
    <PackAsTool>true</PackAsTool>
@@ -155,11 +155,11 @@ Uygulamayı bir araç olarak paketleyebilir ve dağıtabilmeniz için önce proj
    <PackageOutputPath>./nupkg</PackageOutputPath>
    ```
 
-   `<ToolCommandName>`, yüklendikten sonra aracı çağıracağı komutu belirten isteğe bağlı bir öğedir. Bu öğe sağlanmazsa, araç için komut adı *. csproj* uzantısı olmayan proje dosyası adıdır.
+   `<ToolCommandName>`yüklendikten sonra aracı çağıracak komutu belirten isteğe bağlı bir öğedir. Bu öğe sağlanmadıysa, aracın komut adı *.csproj* uzantısı olmayan proje dosya adıdır.
 
-   `<PackageOutputPath>`, NuGet paketinin nerede üretileceği belirleyen isteğe bağlı bir öğedir. NuGet paketi, .NET Core CLI aracınızı yüklemek için kullandığı şeydir.
+   `<PackageOutputPath>`NuGet paketinin nerede üretileceğini belirleyen isteğe bağlı bir öğedir. NuGet paketi .NET Core CLI'nin aracınızı yüklemek için kullandığı pakettir.
 
-   Proje dosyası artık aşağıdaki örneğe benzer şekilde görünür:
+   Proje dosyası şimdi aşağıdaki örnek gibi görünüyor:
 
    ```xml
    <Project Sdk="Microsoft.NET.Sdk">
@@ -178,28 +178,28 @@ Uygulamayı bir araç olarak paketleyebilir ve dağıtabilmeniz için önce proj
    </Project>
    ```
 
-1. [DotNet Pack](dotnet-pack.md) komutunu çalıştırarak bir NuGet paketi oluşturun:
+1. [dotnet paketi](dotnet-pack.md) komutunu çalıştırarak bir NuGet paketi oluşturun:
 
    ```dotnetcli
    dotnet pack
    ```
 
-   *Microsoft. botı. 1.0.0. nupkg* dosyası, bu örnekte *./nupkg* klasörü olan *Microsoft. botsöyleyin. csproj* dosyasındaki `<PackageOutputPath>` değeri tarafından tanımlanan klasörde oluşturulur.
+   *microsoft.botsay.1.0.0.nupkg* dosyası, `<PackageOutputPath>` *microsoft.botsay.csproj* dosyasından alınan değerle tanımlanan klasörde oluşturulur ve bu örnekte *./nupkg* klasörü bulunur.
   
-   Bir aracı herkese açık bir şekilde yayınlamak istediğinizde, `https://www.nuget.org`yükleyebilirsiniz. Araç NuGet 'de kullanılabilir olduğunda, geliştiriciler [DotNet aracı install](dotnet-tool-install.md) komutunu kullanarak aracı yükleyebilir. Bu öğreticide, paketini doğrudan yerel *nupkg* klasöründen yüklersiniz, bu nedenle paketi NuGet 'e yüklemeye gerek yoktur.
+   Bir aracı herkese açık olarak serbest bırakmak istediğinizde, aracı ' ya `https://www.nuget.org`yükleyebilirsiniz. Araç NuGet'de kullanılabilir hale getirinince, geliştiriciler [dotnet aracı yükleme](dotnet-tool-install.md) komutunu kullanarak aracı yükleyebilir. Bu öğretici için paketi doğrudan yerel *nupkg* klasöründen yüklersiniz, böylece paketi NuGet'e yüklemenize gerek yoktur.
 
 ## <a name="troubleshoot"></a>Sorun giderme
 
-Öğreticiyi takip ederken bir hata mesajı alırsanız bkz. [.NET Core araç kullanımı sorunlarını giderme](troubleshoot-usage-issues.md).
+Öğreticiyi izlerken bir hata iletisi alırsanız, [Sorun Giderme .NET Core araç kullanım sorunlarına](troubleshoot-usage-issues.md)bakın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, bir konsol uygulaması oluşturdunuz ve bunu bir araç olarak paketlediyseniz. Aracın genel bir araç olarak nasıl kullanılacağını öğrenmek için bir sonraki öğreticiye ilerleyin.
+Bu eğitimde, bir konsol uygulaması oluşturdunuz ve bir araç olarak paketlediniz. Aracı genel bir araç olarak nasıl kullanacağınızı öğrenmek için bir sonraki öğreticiye ilerleyin.
 
 > [!div class="nextstepaction"]
-> [Küresel bir araç yükleyip kullanma](global-tools-how-to-use.md)
+> [Genel araç yükleyip kullanma](global-tools-how-to-use.md)
 
-İsterseniz küresel araçlar öğreticisini atlayabilir ve doğrudan yerel araçlar öğreticisine gidebilirsiniz.
+İsterseniz, genel araçlar öğretici atlayabilir ve doğrudan yerel araçlar öğretici gidin.
 
 > [!div class="nextstepaction"]
-> [Yerel bir araç yükleyip kullanma](local-tools-how-to-use.md)
+> [Yerel araç yükleyip kullanma](local-tools-how-to-use.md)

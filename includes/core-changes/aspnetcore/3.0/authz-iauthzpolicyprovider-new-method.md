@@ -1,40 +1,40 @@
 ---
 ms.openlocfilehash: 58dbb73902c0226fa81acf1a70de2160f406f6c6
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901773"
 ---
-### <a name="authorization-iauthorizationpolicyprovider-implementations-require-new-method"></a>Yetkilendirme: ıauthorizationpolicyprovider uygulamaları için yeni yöntem gerekir
+### <a name="authorization-iauthorizationpolicyprovider-implementations-require-new-method"></a>Yetkilendirme: IAuthorizationPolicyProvider uygulamaları yeni bir yöntem gerektirir
 
-ASP.NET Core 3,0 ' de, `IAuthorizationPolicyProvider`yeni bir `GetFallbackPolicyAsync` yöntemi eklenmiştir. Bu geri dönüş ilkesi, ilke belirtilmediğinde yetkilendirme ara yazılımı tarafından kullanılır.
+core 3.0ASP.NETde `IAuthorizationPolicyProvider`yeni `GetFallbackPolicyAsync` bir yöntem eklendi. Bu geri dönüş ilkesi, hiçbir ilke belirtilmediğinde yetkilendirme aracı tarafından kullanılır.
 
-Daha fazla bilgi için bkz. [DotNet/aspnetcore # 9759](https://github.com/dotnet/aspnetcore/pull/9759).
+Daha fazla bilgi için [dotnet/aspnetcore#9759'a](https://github.com/dotnet/aspnetcore/pull/9759)bakın.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-`IAuthorizationPolicyProvider` uygulamalarında `GetFallbackPolicyAsync` yöntemi gerekli değildir.
+Uygulamaları bir `IAuthorizationPolicyProvider` `GetFallbackPolicyAsync` yöntem gerektirmedi.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-`IAuthorizationPolicyProvider` uygulamaları `GetFallbackPolicyAsync` bir yöntem gerektirir.
+Uygulamaları bir `IAuthorizationPolicyProvider` `GetFallbackPolicyAsync` yöntem gerektirir.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Yeni `AuthorizationMiddleware` bir ilke belirtilmediğinde kullanması için yeni bir yöntem gerekiyordu.
+İlke belirtilmediğinde yeninin `AuthorizationMiddleware` kullanması için yeni bir yöntem gerekiyordu.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-`GetFallbackPolicyAsync` yöntemini `IAuthorizationPolicyProvider`uygulamanıza ekleyin.
+Uygulamalarınıza `GetFallbackPolicyAsync` yöntemi `IAuthorizationPolicyProvider`ekleyin.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Core
+ASP.NET Çekirdeği
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

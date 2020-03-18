@@ -1,5 +1,5 @@
 ---
-title: Yerleşik sayısal dönüşümler- C# başvuru
+title: Yerleşik sayısal dönüşümler - C# başvurusu
 ms.date: 10/22/2019
 helpviewer_keywords:
 - implicit numeric conversions [C#]
@@ -9,105 +9,105 @@ helpviewer_keywords:
 - conversions [C#], implicit numeric
 - conversions [C#], explicit numeric
 ms.openlocfilehash: 5380e8480c39d1940df13b2ecb50a0f394367388
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72776035"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399604"
 ---
-# <a name="built-in-numeric-conversions-c-reference"></a>Yerleşik sayısal dönüşümler (C# başvuru)
+# <a name="built-in-numeric-conversions-c-reference"></a>Yerleşik sayısal dönüşümler (C# başvurusu)
 
-C#[integral](integral-numeric-types.md) ve [kayan nokta](floating-point-numeric-types.md) sayısal türleri kümesi sağlar. Örtük veya açık olmak üzere iki sayısal tür arasında bir dönüştürme var. Açık bir dönüştürme çağırmak için [`()`cast işlecini](../operators/type-testing-and-cast.md#cast-operator-) kullanmanız gerekir.
+C# [integral](integral-numeric-types.md) ve [kayan nokta](floating-point-numeric-types.md) sayısal türleri kümesi sağlar. Örtük veya açık olan iki sayısal tür arasında bir dönüşüm vardır. Açık bir dönüştürme çağırmak için [döküm işleci `()` ](../operators/type-testing-and-cast.md#cast-operator-) kullanmanız gerekir.
 
-## <a name="implicit-numeric-conversions"></a>Örtük Sayısal dönüştürmeler
+## <a name="implicit-numeric-conversions"></a>Örtük sayısal dönüşümler
 
-Aşağıdaki tabloda, yerleşik sayısal türler arasında önceden tanımlanmış örtük dönüştürmeler gösterilmektedir:
+Aşağıdaki tablo, yerleşik sayısal türler arasındaki önceden tanımlanmış örtük dönüşümleri gösterir:
 
-|Başlangıç|Bitiş|
+|Başlangıç|Alıcı|
 |----------|--------|
-|[sbyte](integral-numeric-types.md)|`short`, `int`, `long`, `float`, `double`veya `decimal`|
-|[byte](integral-numeric-types.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`veya `decimal`|
-|[short](integral-numeric-types.md)|`int`, `long`, `float`, `double`veya `decimal`|
-|[ushort](integral-numeric-types.md)|`int`, `uint`, `long`, `ulong`, `float`, `double`veya `decimal`|
-|[int](integral-numeric-types.md)|`long`, `float`, `double`veya `decimal`|
-|[uint](integral-numeric-types.md)|`long`, `ulong`, `float`, `double`veya `decimal`|
-|[long](integral-numeric-types.md)|`float`, `double`veya `decimal`|
-|[ulong](integral-numeric-types.md)|`float`, `double`veya `decimal`|
+|[Sbyte](integral-numeric-types.md)|`short`, `int` `long`, `float` `double`, , veya`decimal`|
+|[Bayt](integral-numeric-types.md)|`short`, `ushort` `int`, `uint` `long`, `ulong` `float`, `double`, , veya`decimal`|
+|[short](integral-numeric-types.md)|`int`, `long` `float`, `double`, veya`decimal`|
+|[ushort](integral-numeric-types.md)|`int`, `uint` `long`, `ulong` `float`, `double`, , veya`decimal`|
+|[int](integral-numeric-types.md)|`long`, `float` `double`, veya`decimal`|
+|[Uint](integral-numeric-types.md)|`long`, `ulong` `float`, `double`, veya`decimal`|
+|[long](integral-numeric-types.md)|`float`, `double`veya`decimal`|
+|[ulong](integral-numeric-types.md)|`float`, `double`veya`decimal`|
 |[float](floating-point-numeric-types.md)|`double`|
 
 > [!NOTE]
-> `int`, `uint`, `long`ya da `ulong` 'den `float` ve `long` `ulong` ya da `double` arasında örtük dönüştürmeler, duyarlık kaybına neden olabilir, ancak hiçbir şekilde bir büyüklük kaybı olmaz. Diğer örtük sayısal dönüştürmeler hiçbir bilgiyi hiçbir şekilde kaybetmez.
+> `int`' `uint` `ulong` `float` `long` `ulong` `double` den, , veya gelen veya ya da gelen örtük dönüşümler kesinlik kaybına neden olabilir, ancak büyüklük bir sipariş kaybı asla. `long` Diğer örtük sayısal dönüşümler hiçbir zaman bilgi kaybetmez.
 
-Ayrıca,
+Ayrıca unutmayın
 
-- Tüm [integral sayısal türleri](integral-numeric-types.md) örtük olarak herhangi bir [kayan nokta sayısal türüne](floating-point-numeric-types.md)dönüştürülebilir.
+- Herhangi bir [integral sayısal türü](integral-numeric-types.md) örtülü olarak herhangi bir [kayan nokta sayısal türüne](floating-point-numeric-types.md)dönüştürülebilir.
 
-- `byte` ve `sbyte` türlerine örtük dönüştürmeler yok. `double` ve `decimal` türlerinden örtük dönüştürmeler yok.
+- Örtük dönüşümler `byte` ve `sbyte` türleri vardır. Ve `double` `decimal` türlerden örtülü dönüşümler yoktur.
 
-- `decimal` türü ile `float` veya `double` türleri arasında örtük dönüştürme yok.
+- `decimal` Tür ve `float` tür veya `double` türleri arasında örtülü dönüşüm yoktur.
 
-- `int` türünde sabit bir ifadenin değeri (örneğin, bir tamsayı değişmez değeri ile temsil edilen bir değer), hedef türün aralığı içindeyse örtülü olarak `sbyte`, `byte`, `short`, `ushort`, `uint`veya `ulong`dönüştürülebilir :
+- Türünün `int` sabit bir ifadesinin değeri (örneğin, bir tamsayı ile temsil edilen bir değer) `sbyte` `byte`dolaylı `short` `ushort`olarak `uint`, `ulong`, , , veya , hedef türünün aralığında ysa dönüştürülebilir:
 
   ```csharp
   byte a = 13;
   byte b = 300;  // CS0031: Constant value '300' cannot be converted to a 'byte'
   ```
 
-  Yukarıdaki örnekte gösterildiği gibi, sabit değer hedef türünün aralığı içinde değilse, bir derleyici hatası [CS0031](../../misc/cs0031.md) oluşur.
+  Yukarıdaki örnekte de görüldüğü gibi, sabit değer hedef türü aralığında değilse, [cs0031](../../misc/cs0031.md) derleyici hatası oluşur.
 
-## <a name="explicit-numeric-conversions"></a>Açık sayısal dönüştürmeler
+## <a name="explicit-numeric-conversions"></a>Açık sayısal dönüşümler
 
-Aşağıdaki tabloda, [örtük dönüştürme](#implicit-numeric-conversions)olmayan yerleşik sayısal türler arasında önceden tanımlanmış açık dönüştürmeler gösterilmektedir:
+Aşağıdaki tablo, [örtülü dönüştürme](#implicit-numeric-conversions)bulunmayan yerleşik sayısal türler arasındaki önceden tanımlanmış açık dönüşümleri gösterir:
 
-|Başlangıç|Bitiş|
+|Başlangıç|Alıcı|
 |----------|--------|
-|[sbyte](integral-numeric-types.md)|`byte`, `ushort`, `uint`veya `ulong`|
-|[byte](integral-numeric-types.md)|`sbyte`|
-|[short](integral-numeric-types.md)|`sbyte`, `byte`, `ushort`, `uint`veya `ulong`|
-|[ushort](integral-numeric-types.md)|`sbyte`, `byte`veya `short`|
-|[int](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`veya `ulong`|
-|[uint](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`veya `int`|
-|[long](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`veya `ulong`|
-|[ulong](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`veya `long`|
-|[float](floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`veya `decimal`|
-|[double](floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`veya `decimal`|
-|[decimal](floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`veya `double`|
+|[Sbyte](integral-numeric-types.md)|`byte`, `ushort` `uint`, veya`ulong`|
+|[Bayt](integral-numeric-types.md)|`sbyte`|
+|[short](integral-numeric-types.md)|`sbyte`, `byte` `ushort`, `uint`, veya`ulong`|
+|[ushort](integral-numeric-types.md)|`sbyte`, `byte`veya`short`|
+|[int](integral-numeric-types.md)|`sbyte`, `byte` `short`, `ushort` `uint`, , veya`ulong`|
+|[Uint](integral-numeric-types.md)|`sbyte`, `byte` `short`, `ushort`, veya`int`|
+|[long](integral-numeric-types.md)|`sbyte`, `byte` `short`, `ushort` `int`, `uint`, , veya`ulong`|
+|[ulong](integral-numeric-types.md)|`sbyte`, `byte` `short`, `ushort` `int`, `uint`, , veya`long`|
+|[float](floating-point-numeric-types.md)|`sbyte`, `byte` `short`, `ushort` `int`, `uint` `long`, `ulong`, , veya`decimal`|
+|[double](floating-point-numeric-types.md)|`sbyte`, `byte` `short`, `ushort` `int`, `uint` `long`, `ulong` `float`, , , veya`decimal`|
+|[decimal](floating-point-numeric-types.md)|`sbyte`, `byte` `short`, `ushort` `int`, `uint` `long`, `ulong` `float`, , , veya`double`|
 
 > [!NOTE]
-> Açık bir sayısal dönüştürme, veri kaybına neden olabilir veya genellikle bir <xref:System.OverflowException>özel durum oluşturabilir.
+> Açık bir sayısal dönüştürme veri kaybına neden olabilir veya genellikle <xref:System.OverflowException>bir özel durum atabilir.
 
-Ayrıca,
+Ayrıca unutmayın
 
-- İntegral türdeki bir değeri başka bir integral türüne dönüştürdüğünüzde, sonuç taşma [Denetim bağlamına](../keywords/checked-and-unchecked.md)bağlıdır. Denetlenen bir bağlamda, kaynak değer hedef türünün aralığı içindeyse dönüştürme başarılı olur. Aksi takdirde, bir <xref:System.OverflowException> oluşturulur. İşaretlenmemiş bir bağlamda, dönüştürme her zaman başarılı olur ve şu şekilde devam eder:
+- İntegral türündeki bir değeri başka bir integral türüne dönüştürdüğünüzde, sonuç taşma [denetimi bağlamına](../keywords/checked-and-unchecked.md)bağlıdır. Denetlenen bir bağlamda, kaynak değeri hedef türün aralığındaysa dönüştürme başarılı olur. Aksi takdirde, bir <xref:System.OverflowException> atılır. Denetlenmemiş bir bağlamda, dönüştürme her zaman başarılı dır ve aşağıdaki gibi devam eder:
 
-  - Kaynak türü hedef türünden büyükse, "ekstra" en önemli bitleri atarak kaynak değer kesilir. Sonuç daha sonra hedef türünün bir değeri olarak değerlendirilir.
+  - Kaynak türü hedef kinden daha büyükse, kaynak değeri "ekstra" en önemli bitleri atılarak kesilir. Sonuç daha sonra hedef türünün bir değeri olarak kabul edilir.
 
-  - Kaynak türü hedef türünden küçükse, hedef türle aynı boyutta olması için, kaynak değeri ya imza veya sıfır genişletilmiş ya da sıfır genişletilmiş olur. Kaynak türü imzalanmışsa, oturum açma uzantısı kullanılır; Kaynak türü işaretsiz ise sıfır uzantı kullanılır. Sonuç daha sonra hedef türünün bir değeri olarak değerlendirilir.
+  - Kaynak türü hedef türünden küçükse, kaynak değeri işaretle genişletilmiş veya hedef türüyle aynı boyutta olacak şekilde sıfır uzatılır. Kaynak türü imzalanırsa işaret uzantısı kullanılır; kaynak türü imzalanmamışsa sıfır uzantısı kullanılır. Sonuç daha sonra hedef türünün bir değeri olarak kabul edilir.
 
-  - Kaynak türü hedef türle aynı boyutta ise, kaynak değer hedef türün bir değeri olarak değerlendirilir.
+  - Kaynak türü hedef türüyle aynı boyuttaysa, kaynak değeri hedef türün değeri olarak kabul edilir.
 
-- Bir `decimal` değerini bir integral türüne dönüştürdüğünüzde, bu değer en yakın tamsayı değerine sıfır doğru yuvarlanır. Elde edilen integral değeri, hedef türü aralığının dışındaysa bir <xref:System.OverflowException> oluşturulur.
+- Bir `decimal` değeri integral türüne dönüştürdüğünüzde, bu değer en yakın integral değerine sıfıra yuvarlanır. Elde edilen integral değeri hedef türün aralığının <xref:System.OverflowException> dışındaysa, bir atılır.
 
-- Bir `double` veya `float` değerini bir integral türüne dönüştürdüğünüzde, bu değer en yakın tamsayı değerine sıfır doğru yuvarlanır. Elde edilen integral değeri, hedef türü aralığının dışındaysa sonuç, taşma [denetimi bağlamına](../keywords/checked-and-unchecked.md)bağlıdır. Denetlenen bir bağlamda, bir <xref:System.OverflowException> atılır, ancak işaretlenmemiş bir bağlamda sonuç, hedef türünün belirtilmeyen bir değeridir.
+- Bir `double` veya `float` değeri integral türüne dönüştürdüğünüzde, bu değer en yakın integral değerine sıfıra yuvarlanır. Elde edilen integral değeri hedef türünün aralığının dışındaysa, sonuç taşma [denetimi bağlamına](../keywords/checked-and-unchecked.md)bağlıdır. Denetlenen bir bağlamda, <xref:System.OverflowException> işaretlenmemiş bir bağlamda sonuç hedef türünün belirtilmemiş bir değeri iken, bir atılmıştır.
 
-- `double` `float`dönüştürdüğünüzde `double` değeri en yakın `float` değerine yuvarlanır. `double` değeri çok küçük veya `float` türüne sığmayacak kadar büyükse, sonuç sıfır veya sonsuzluk olur.
+- Dönüştürüldüğünüzde `double` `float` `double` , değer en yakın `float` değere yuvarlanır. `double` Değer türe sığmayacak kadar küçük veya `float` çok büyükse, sonuç sıfır veya sonsuzdur.
 
-- `float` veya `double` `decimal`'e dönüştürdüğünüzde, kaynak değer `decimal` gösterimine dönüştürülür ve gerekirse 28 ondalık haneli, en yakın sayıya yuvarlanır. Kaynak değerin değerine bağlı olarak, aşağıdaki sonuçlardan biri meydana gelebilir:
+- Dönüştürdüğünüzde `float` `double` veya `decimal`dönüştürdüğüzde, kaynak `decimal` değeri temsile dönüştürülür ve gerekirse 28. Kaynak değerin değerine bağlı olarak, aşağıdaki sonuçlardan biri oluşabilir:
 
-  - Kaynak değeri `decimal`olarak gösterilemeyecek kadar küçükse, sonuç sıfır olur.
+  - Kaynak değeri temsil edilemeyecek kadar `decimal`küçükse, sonuç sıfır olur.
 
-  - Kaynak değeri NaN (sayı değil), sonsuz veya `decimal`olarak temsil edilebilmesi için çok büyük ise, bir <xref:System.OverflowException> oluşturulur.
+  - Kaynak değeri NaN ise (sayı değil), sonsuzluk veya bir `decimal`, bir <xref:System.OverflowException> olarak temsil edilemeyecek kadar büyük.
 
-- `decimal` `float` veya `double`dönüştürdüğünüzde, kaynak değer sırasıyla en yakın `float` veya `double` değere yuvarlanır.
+- Kaynak değeri `decimal` `float` `double`sırasıyla en yakın `float` veya `double` değere yuvarlanır.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md)aşağıdaki bölümlerine bakın:
+Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)aşağıdaki bölümlerine bakın:
 
-- [Örtük Sayısal dönüştürmeler](~/_csharplang/spec/conversions.md#implicit-numeric-conversions)
-- [Açık sayısal dönüştürmeler](~/_csharplang/spec/conversions.md#explicit-numeric-conversions)
+- [Örtük sayısal dönüşümler](~/_csharplang/spec/conversions.md#implicit-numeric-conversions)
+- [Açık sayısal dönüşümler](~/_csharplang/spec/conversions.md#explicit-numeric-conversions)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvurunun](../index.md)
-- [Atama ve tür dönüşümleri](../../programming-guide/types/casting-and-type-conversions.md)
+- [C# başvurusu](../index.md)
+- [Döküm ve tür dönüşümleri](../../programming-guide/types/casting-and-type-conversions.md)

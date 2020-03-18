@@ -4,36 +4,36 @@ description: .NET Core projeleri oluşturmak için kullanılan bir dizi kitaplı
 ms.date: 07/31/2019
 ms.technology: dotnet-cli
 ms.openlocfilehash: c2723e0e28c889f91f79ea3c0b26aa38f69fb41c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157472"
 ---
 # <a name="net-core-sdk-overview"></a>.NET Core SDK’sına genel bakış
 
-.NET Core SDK, geliştiricilerin .NET Core Uygulamaları ve kitaplıkları oluşturmalarına izin veren bir kitaplıklar ve araçlar kümesidir. Uygulama derlemek ve çalıştırmak için kullanılan aşağıdaki bileşenleri içerir:
+.NET Core SDK, geliştiricilerin .NET Core uygulamaları ve kitaplıkları oluşturmasına olanak tanıyan bir dizi kitaplık ve araçtır. Uygulamaları oluşturmak ve çalıştırmak için kullanılan aşağıdaki bileşenleri içerir:
 
-- .NET Core CLI.
-- .NET Core kitaplıkları ve çalışma zamanı.
-- `dotnet` [sürücüsü](tools/index.md#driver).
+- .NET Çekirdek CLI.
+- .NET Çekirdek kitaplıkları ve çalışma zamanı.
+- `dotnet` [Sürücü.](tools/index.md#driver)
 
-## <a name="acquiring-the-net-core-sdk"></a>.NET Core SDK alınıyor
+## <a name="acquiring-the-net-core-sdk"></a>.NET Çekirdek SDK'nın Satın Alınması
 
-Herhangi bir araç ile olduğu gibi, ilk şey makinenize araçları almak için kullanılır. Senaryonuza bağlı olarak, aşağıdaki yöntemlerden birini kullanarak SDK 'Yı yükleyebilirsiniz:
+Herhangi bir takım olduğu gibi, ilk şey makinenize araçları almaktır. Senaryonuza bağlı olarak, Aşağıdaki yöntemlerden birini kullanarak SDK'yı yükleyebilirsiniz:
 
 - Yerel yükleyicileri kullanın.
-- Yükleme kabuğu betiğini kullanın.
+- Yükleme kabuğu komut dosyasını kullanın.
 
-Yerel yükleyiciler öncelikle geliştirici makinelerine yöneliktir. SDK, Windows üzerinde Ubuntu veya MSI paketlerinde DEB paketleri gibi desteklenen her platformun yerel yüklemesi mekanizması kullanılarak dağıtılır. Bu yükleyiciler, kullanıcının yüklemeden hemen sonra SDK 'Yı kullanması için gerektiğinde ortamı yükler ve ayarlar. Ancak, makine üzerinde yönetici ayrıcalıklarına de gereksinim duyar. [.Net İndirmeleri](https://dotnet.microsoft.com/download) sayfasına yüklemek için SDK 'yı bulabilirsiniz.
+Yerel yükleyiciler öncelikle geliştirici makineleri içindir. SDK, desteklenen her platformun Ubuntu'daki DEB paketleri veya Windows'daki MSI paketleri gibi yerel yükleme mekanizması kullanılarak dağıtılır. Bu yükleyiciler, kullanıcının yüklemeden hemen sonra SDK'yı kullanması için gereken ortamı yükler ve ayarlar. Ancak, makineüzerinde idari ayrıcalıklar da gerektirir. [.NET indirmeler](https://dotnet.microsoft.com/download) sayfasında kurulacak SDK'yı bulabilirsiniz.
 
-Diğer yandan, yönetim ayrıcalıkları gerektirmeyen betikleri yükler. Bununla birlikte, makineye hiçbir önkoşul de yüklemez; tüm önkoşulları el ile yüklemeniz gerekir. Betikler genellikle derleme sunucularını ayarlamak için veya araçları yönetici ayrıcalıkları olmadan yüklemek istediğinizde (yukarıdaki önkoşulları desteklenmediği uyarısıyla). Daha fazla bilgi için [komut dosyası başvurusunu yükleyebilirsiniz](tools/dotnet-install-script.md) makalesine ulaşabilirsiniz. CI yapı sunucunuzda SDK 'Yı ayarlama hakkında bilgi edinmek istiyorsanız [sürekli tümleştirme (CI) makalesinde .NET Core SDK ve araçları kullanma](tools/using-ci-with-cli.md) makalesine bakın.
+Diğer taraftan, komut dosyalarını yükleyin, yönetim ayrıcalıkları gerektirmez. Ancak, makineye herhangi bir ön koşul da yüklemezler; tüm ön koşulları el ile yüklemeniz gerekir. Komut dosyaları çoğunlukla yapı sunucuları kurmak veya yönetici ayrıcalıkları olmadan araçları yüklemek istediğinizde (yukarıdaki ön koşullar uyarıya dikkat edin) içindir. [Komut dosyası başvuru](tools/dotnet-install-script.md) makalesinde daha fazla bilgi bulabilirsiniz. SDK'yı CI build sunucunuzda nasıl kurabileceğinizle ilgileniyorsanız, [Sürekli Tümleştirme (CI) makalesinde Kullanarak .NET Core SDK ve araçları](tools/using-ci-with-cli.md) nabakını görün.
 
-SDK varsayılan olarak "yan yana" (SxS) şekilde yüklenir. Bu, birden fazla sürümün tek bir makinede belirli bir zamanda bir arada olması anlamına gelir. CLı komutlarını çalıştırırken sürümün nasıl çekilmesi, [kullanılacak .NET Core sürümünü Seç](versions/selection.md) makalesinde daha ayrıntılı olarak açıklanmıştır.
+Varsayılan olarak, SDK "yan yana" (SxS) bir şekilde yükler, bu da birden çok sürümün tek bir makinede herhangi bir zamanda bir arada bulunabileceği anlamına gelir. CLI komutlarını çalıştırırken sürümün nasıl seçiliş yaptığı makaleyi [kullanmak için .NET Core sürümünü seç'te](versions/selection.md) daha ayrıntılı olarak açıklanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET Core CLI genel bakış](tools/index.md)
-- [.NET Core sürüm oluşturmaya genel bakış](versions/index.md)
-- [.NET Core çalışma zamanı ve SDK 'sını kaldırma](versions/remove-runtime-sdk-versions.md)
-- [Kullanılacak .NET Core sürümünü seçin](versions/selection.md)
+- [.NET Core sürüm genel bakış](versions/index.md)
+- [.NET Core çalışma süresi ve SDK nasıl kaldırılır?](versions/remove-runtime-sdk-versions.md)
+- [Kullanmak için .NET Core sürümünü seçin](versions/selection.md)

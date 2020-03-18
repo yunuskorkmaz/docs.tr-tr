@@ -24,7 +24,7 @@
           href: how-to-write-characters-to-a-string.md
         - name: 'Nasıl yapılır: Erişim Denetimi Listesi Girdileri Ekleme veya Kaldırma'
           href: how-to-add-or-remove-access-control-list-entries.md
-        - name: 'Nasıl yapılır: Dosya Sıkıştırma ve Çıkarma'
+        - name: 'Nasıl Yapılır: Dosya Sıkıştırma ve Çıkarma'
           href: how-to-compress-and-extract-files.md
         - name: Akışlar Oluşturma
           href: composing-streams.md

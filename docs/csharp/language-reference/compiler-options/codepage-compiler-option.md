@@ -1,5 +1,5 @@
 ---
-title: -CodePage (C# derleyici seçenekleri)
+title: -kod sayfası (C# Derleyici Seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /codepage
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - codepage compiler option [C#]
 - -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
-ms.openlocfilehash: c85cd8935bcefd1353707624052b62ee982f7b07
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3352e7fc446ace391540360a3b6b36d604ca5f13
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69603057"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173763"
 ---
-# <a name="-codepage-c-compiler-options"></a>-CodePage (C# derleyici seçenekleri)
-Bu seçenek, gerekli sayfa sistem için geçerli varsayılan kod sayfası değilse, derleme sırasında kullanılacak kod sayfasını belirtir.  
+# <a name="-codepage-c-compiler-options"></a>-kod sayfası (C# Derleyici Seçenekleri)
+Bu seçenek, gerekli sayfa sistem için geçerli varsayılan kod sayfası değilse, derleme sırasında hangi kod sayfasının kullanılacağını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -24,16 +24,16 @@ Bu seçenek, gerekli sayfa sistem için geçerli varsayılan kod sayfası değil
 -codepage:id  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  `id`  
- Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasının kimliği.  
+ Derlemedeki tüm kaynak kod dosyaları için kullanılacak kod sayfasının kimliği.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Derleyici önce tüm kaynak dosyalarını UTF-8 olarak yorumlamaya çalışacaktır. Kaynak kodu dosyalarınız UTF-8 dışındaki bir kodlamadeyse ve 7 bit ASCII karakterlerden farklı karakterler kullanıyorsa, hangi kod sayfasının kullanılacağını belirtmek için **-CodePage** seçeneğini kullanın. **-CodePage** , derinizdeki tüm kaynak kodu dosyaları için geçerlidir.  
-    
- Sisteminizde hangi kod sayfalarının desteklendiğini bulma hakkında bilgi için bkz. [Getcpınfo](/windows/desktop/api/winnls/nf-winnls-getcpinfo) .  
+ Derleyici ilk olarak tüm kaynak dosyaları UTF-8 olarak yorumlamaya çalışır. Kaynak kod dosyalarınız UTF-8 dışındaki bir kodlamadaysa ve 7 bit ASCII karakterleri dışındaki karakterleri kullanıyorsa, hangi kod sayfasının kullanılması gerektiğini belirtmek için **-codepage** seçeneğini kullanın. **-codepage** derlemenizdeki tüm kaynak kod dosyaları için geçerlidir.  
+
+ Sisteminizde hangi kod sayfalarının desteklendiği hakkında bilgi için [GetCPInfo'ya](/windows/desktop/api/winnls/nf-winnls-getcpinfo) bakın.  
   
- Bu derleyici seçeneği Visual Studio 'da kullanılamaz ve program aracılığıyla değiştirilemez.  
+ Bu derleyici seçeneği Visual Studio'da kullanılamaz ve programlı olarak değiştirilemez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

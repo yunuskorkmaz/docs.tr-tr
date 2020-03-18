@@ -1,35 +1,35 @@
 ---
-title: NUnit C# ve .NET Core ile birim testi
-description: DotNet test ve NUnit C# kullanarak bir örnek çözüm oluşturma adlı etkileşimli bir deneyim aracılığıyla ve .NET Core 'daki birim testi kavramlarını öğrenin.
+title: C# nunit ve .NET Core ile birim testi
+description: Noktanet testi ve NUnit kullanarak adım adım örnek bir çözüm oluşturma etkileşimli bir deneyim le C# ve .NET Core'daki birim test kavramlarını öğrenin.
 author: rprouse
 ms.date: 08/31/2018
 ms.openlocfilehash: 283aa5a28ed213d4290eb3c73a98af56ec074ad0
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240889"
 ---
-# <a name="unit-testing-c-with-nunit-and-net-core"></a>NUnit C# ve .NET Core ile birim testi
+# <a name="unit-testing-c-with-nunit-and-net-core"></a>C# nunit ve .NET Core ile birim testi
 
-Bu öğreticide, birim testi kavramlarını öğrenmek için bir örnek çözüm oluşturma adım adım yönergeler sunarak etkileşimli bir deneyim sağlanır. Önceden oluşturulmuş bir çözüm kullanarak öğreticiyi izlemeyi tercih ediyorsanız, başlamadan önce [örnek kodu görüntüleyin veya indirin](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/) . İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Bu öğretici, birim test kavramlarını öğrenmek için adım adım örnek bir çözüm oluşturma etkileşimli bir deneyim sunar. Önceden oluşturulmuş bir çözüm kullanarak öğreticiyi izlemeyi tercih ederseniz, başlamadan önce [örnek kodu görüntüleyin veya indirin.](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/) İndirme talimatları için [Örnekler ve Öğreticiler'e](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)bakın.
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- [.NET Core 2,1 SDK](https://dotnet.microsoft.com/download) veya sonraki sürümleri.
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) veya sonraki sürümler.
 - Tercih ettiğiniz bir metin veya kod düzenleyicisi.
 
 ## <a name="creating-the-source-project"></a>Kaynak proje oluşturma
 
-Bir kabuk penceresi açın. Çözümü tutmak için *birim-test-using-NUnit* adlı bir dizin oluşturun. Bu yeni dizin içinde, sınıf kitaplığı ve test projesi için yeni bir çözüm dosyası oluşturmak üzere aşağıdaki komutu çalıştırın:
+Bir kabuk penceresi açın. Çözümü tutmak için *birim-test-using-nunit* adlı bir dizin oluşturun. Bu yeni dizinin içinde, sınıf kitaplığı ve test projesi için yeni bir çözüm dosyası oluşturmak için aşağıdaki komutu çalıştırın:
 
 ```dotnetcli
 dotnet new sln
 ```
 
-Ardından, bir *Primeservice* dizini oluşturun. Aşağıdaki ana hat şu ana kadar dizin ve dosya yapısını gösterir:
+Ardından, bir *PrimeService* dizini oluşturun. Aşağıdaki anahat şimdiye kadar dizin ve dosya yapısını gösterir:
 
 ```console
 /unit-testing-using-nunit
@@ -37,13 +37,13 @@ Ardından, bir *Primeservice* dizini oluşturun. Aşağıdaki ana hat şu ana ka
     /PrimeService
 ```
 
-Kaynak projeyi oluşturmak için *Primeservice* 'i geçerli dizin yapın ve şu komutu çalıştırın:
+*PrimeService'i* geçerli dizini yapın ve kaynak projeyi oluşturmak için aşağıdaki komutu çalıştırın:
 
 ```dotnetcli
 dotnet new classlib
 ```
 
-*Class1.cs* *olarak yeniden*adlandırın. `PrimeService` sınıfının başarısız bir uygulamasını oluşturursunuz:
+*Class1.cs* *PrimeService.cs*yeniden adlandırın. `PrimeService` Sınıfın başarısız bir uygulamasını oluşturursunuz:
 
 ```csharp
 using System;
@@ -60,15 +60,15 @@ namespace Prime.Services
 }
 ```
 
-Dizini *birim-test-NUnit* dizinine geri doğru değiştirin. Çözüme Sınıf Kitaplığı projesini eklemek için aşağıdaki komutu çalıştırın:
+Dizin geri *birim-test-kullanarak-nunit* dizini değiştirin. Sınıf kitaplığı projesini çözüme eklemek için aşağıdaki komutu çalıştırın:
 
 ```dotnetcli
 dotnet sln add PrimeService/PrimeService.csproj
 ```
 
-## <a name="creating-the-test-project"></a>Test projesi oluşturma
+## <a name="creating-the-test-project"></a>Test projesini oluşturma
 
-Ardından, *Primeservice. Tests* dizinini oluşturun. Aşağıdaki ana hat dizin yapısını gösterir:
+Ardından, *PrimeService.Tests* dizinini oluşturun. Aşağıdaki anahat dizin yapısını gösterir:
 
 ```console
 /unit-testing-using-nunit
@@ -79,25 +79,25 @@ Ardından, *Primeservice. Tests* dizinini oluşturun. Aşağıdaki ana hat dizin
     /PrimeService.Tests
 ```
 
-*Primeservice. test* dizinini geçerli dizini yapın ve aşağıdaki komutu kullanarak yeni bir proje oluşturun:
+*PrimeService.Tests* dizinini geçerli dizini oluşturun ve aşağıdaki komutu kullanarak yeni bir proje oluşturun:
 
 ```dotnetcli
 dotnet new nunit
 ```
 
-[DotNet New](../tools/dotnet-new.md) komutu, test kitaplığı olarak NUnit kullanan bir test projesi oluşturur. Oluşturulan şablon, *Primeservice. Tests. csproj* dosyasındaki Test Çalıştırıcısı 'nı yapılandırır:
+[Dotnet yeni](../tools/dotnet-new.md) komutu, test kitaplığı olarak NUnit kullanan bir test projesi oluşturur. Oluşturulan şablon *PrimeService.Tests.csproj* dosyasında test koşucusu yapılandırır:
 
 [!code-xml[Packages](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
 
-Test projesi, birim testlerini oluşturmak ve çalıştırmak için diğer paketlerin kullanılmasını gerektirir. önceki adımda `dotnet new` Microsoft Test SDK 'Sı, NUnit test Framework ve NUnit test bağdaştırıcısı eklenmiştir. Şimdi, `PrimeService` sınıf kitaplığını projeye başka bir bağımlılık olarak ekleyin. [`dotnet add reference`](../tools/dotnet-add-reference.md) komutunu kullanın:
+Test projesi, birim testleri oluşturmak ve çalıştırmak için diğer paketler gerektirir. `dotnet new`önceki adımda Microsoft test SDK, NUnit test çerçevesi ve NUnit test bağdaştırıcısı eklendi. Şimdi, `PrimeService` sınıf kitaplığını projeye başka bir bağımlılık olarak ekleyin. Komutu [`dotnet add reference`](../tools/dotnet-add-reference.md) kullanın:
 
 ```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
-GitHub 'daki [örnekler deposunda](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj) dosyanın tamamını görebilirsiniz.
+Tüm dosyayı GitHub'daki [örnek deposunda](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj) görebilirsiniz.
 
-Aşağıdaki ana hat, son çözüm yerleşimini göstermektedir:
+Aşağıdaki anahat son çözüm düzenini gösterir:
 
 ```console
 /unit-testing-using-nunit
@@ -110,23 +110,23 @@ Aşağıdaki ana hat, son çözüm yerleşimini göstermektedir:
         PrimeService.Tests.csproj
 ```
 
-*Birim-test-NUnit* dizininde aşağıdaki komutu yürütün:
+*Birim-test-using-nunit* dizininde aşağıdaki komutu çalıştırın:
 
 ```dotnetcli
 dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 
-## <a name="creating-the-first-test"></a>İlk test oluşturma
+## <a name="creating-the-first-test"></a>İlk testi oluşturma
 
-Başarısız bir test yazdığınızda, geçişi yapıp işlemi tekrarlayabilirsiniz. *Primeservice. Tests* dizininde, *UnitTest1.cs* dosyasını *PrimeService_IsPrimeShould. cs* olarak yeniden adlandırın ve tüm içeriğini aşağıdaki kodla değiştirin:
+Başarısız bir test yazarsın, geçer ve işlemi tekrarlarsın. *PrimeService.Tests* dizininde, *UnitTest1.cs* dosyasını *PrimeService_IsPrimeShould.cs* olarak yeniden adlandırın ve tüm içeriğini aşağıdaki kodla değiştirin:
 
 [!code-csharp[Sample_FirstTest](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_FirstTest)]
 
-`[TestFixture]` özniteliği, birim testlerini içeren bir sınıfı gösterir. `[Test]` özniteliği bir yöntemin test yöntemi olduğunu gösterir.
+Öznitelik `[TestFixture]` birim testleri içeren bir sınıf gösterir. Öznitelik `[Test]` bir yöntem bir test yöntemi olduğunu gösterir.
 
-Testleri ve sınıf kitaplığını oluşturmak için bu dosyayı kaydedin ve [`dotnet test`](../tools/dotnet-test.md) yürütün ve ardından testleri çalıştırın. NUnit Test Çalıştırıcısı, testlerinizi çalıştırmak için program giriş noktasını içerir. `dotnet test`, oluşturduğunuz birim test projesini kullanarak Test Çalıştırıcısı başlatır.
+Bu dosyayı [`dotnet test`](../tools/dotnet-test.md) kaydedin ve testleri ve sınıf kitaplığını oluşturmak ve testleri çalıştırmak için çalıştırın. NUnit test koşucusu, testlerinizi çalıştırmak için program giriş noktasını içerir. `dotnet test`oluşturduğunuz birim test projesini kullanarak test koşucusu başlatın.
 
-Testiniz başarısız oluyor. Uygulamayı henüz oluşturmadınız. Aşağıdaki `PrimeService` sınıfında en basit kodu yazarak bu test geçişini yapın:
+Sınavın başarısız oldu. Uygulamayı henüz oluşturmadın. Bu testin çalışmasını sağlayan `PrimeService` sınıftaki en basit kodu yazarak geçmesini sağla:
 
 ```csharp
 public bool IsPrime(int candidate)
@@ -139,22 +139,22 @@ public bool IsPrime(int candidate)
 }
 ```
 
-*Birim-test-using-NUnit* dizininde, `dotnet test` yeniden çalıştırın. `dotnet test` komutu, `PrimeService` projesi için bir derleme ve sonra `PrimeService.Tests` projesi için çalışır. Her iki proje de oluşturulduktan sonra bu tek testi çalıştırır. Geçirir.
+*Birim-test-using-nunit* dizininde, yeniden `dotnet test` çalıştırın. Komut, `dotnet test` proje ve ardından `PrimeService.Tests` proje için bir yapı çalışır. `PrimeService` Her iki projeyi de yaptıktan sonra, bu tek testi çalıştırAr. Geçiyor.
 
 ## <a name="adding-more-features"></a>Daha fazla özellik ekleme
 
-Artık bir test geçişi yapmış olduğunuza göre daha fazla yazma zamanı vardır. Asal sayıların diğer birkaç basit durumu vardır: 0,-1. `[Test]` özniteliğiyle yeni testler ekleyebilirsiniz, ancak bu hızlı bir şekilde sıkıcı hale gelir. Benzer testlerin bir paketini yazmanızı sağlayan başka NUnit öznitelikleri vardır.  Bir `[TestCase]` özniteliği, aynı kodu çalıştıran ancak farklı giriş bağımsız değişkenlerine sahip olan testlerin bir paketini oluşturmak için kullanılır. Bu girişlerin değerlerini belirtmek için `[TestCase]` özniteliğini kullanabilirsiniz.
+Artık bir test sınavını geçtiğine göre, daha fazla yazma nın zamanı. Asal sayılar için birkaç basit durum daha vardır: 0, -1. Öznitelik ile `[Test]` yeni testler ekleyebilirsiniz, ancak bu hızla sıkıcı olur. Benzer testler paketi yazmanızı sağlayan başka NUnit öznitelikleri de vardır.  Öznitelik, `[TestCase]` aynı kodu çalıştıran ancak farklı giriş bağımsız değişkenleri olan bir test paketi oluşturmak için kullanılır. Bu girişler `[TestCase]` için değerleri belirtmek için özniteliği kullanabilirsiniz.
 
-Yeni test oluşturmak yerine, tek bir veri temelli test oluşturmak için bu özniteliği uygulayın. Veri temelli test, en düşük asal sayı olan iki değerden küçük birkaç değeri sınayan bir yöntemdir:
+Yeni testler oluşturmak yerine, tek bir veri odaklı test oluşturmak için bu özniteliği uygulayın. Veri odaklı test, ikiden küçük birkaç değeri sınayan ve en düşük asal sayı olan bir yöntemdir:
 
 [!code-csharp[Sample_TestCode](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
-`dotnet test`çalıştırın, bu testlerin ikisi de başarısız olur. Tüm testlerin geçişini yapmak için *PrimeService.cs* dosyasındaki `Main` yönteminin başındaki `if` yan tümcesini değiştirin:
+Çalıştır `dotnet test`Ve bu testlerin iki başarısız. Tüm testlerin geçmesi için, `if` `Main` *PrimeService.cs* dosyasındaki yöntemin başındaki yan tümceyi değiştirin:
 
 ```csharp
 if (candidate < 2)
 ```
 
-Ana kitaplıkta daha fazla test, daha fazla yer ve daha fazla kod ekleyerek yinelemek için devam edin. [Testlerin tamamlanmış sürümüne](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs) ve [kitaplığın tüm uygulamasına](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService/PrimeService.cs)sahipsiniz.
+Ana kitaplığa daha fazla test, daha fazla teori ve daha fazla kod ekleyerek yinelemeye devam edin. [Testlerin tamamlanmış sürümüne](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs) ve [kitaplığın tam uygulamasına](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService/PrimeService.cs)sahipsiniz.
 
-Bu kitaplık için küçük bir kitaplık ve birim testleri kümesi oluşturdunuz. Çözümü, yeni paket ve test eklemek normal iş akışının bir parçası olacak şekilde öğrendiniz. Uygulamanın hedeflerini çözme konusunda zaman ve çaba harcamanızı en iyi şekilde gördünüz.
+O kitaplık için küçük bir kitaplık ve bir dizi birim testi inşa ettin. Yeni paketler ve testler eklemek normal iş akışının bir parçası olacak şekilde çözümü yapılandırdınız. Zamanınızın ve çabanızın çoğunu uygulamanın hedeflerini çözmeye yoğunlaşmışsınız.

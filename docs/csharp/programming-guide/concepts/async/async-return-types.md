@@ -1,86 +1,86 @@
 ---
-title: Zaman uyumsuz dönüş türleriC#()
+title: Async İade Türleri (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 2c0dae6b4357ce89325ecb9b7d70ffd79f4e9417
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 9926fea5308f9088ad924bcc98d8deed319c6300
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168394"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170045"
 ---
-# <a name="async-return-types-c"></a>Zaman uyumsuz dönüş türleriC#()
-Zaman uyumsuz metotlar aşağıdaki dönüş türlerine sahip olabilir:
+# <a name="async-return-types-c"></a>Async İade Türleri (C#)
+Async yöntemleri aşağıdaki iade türlerine sahip olabilir:
 
-- <xref:System.Threading.Tasks.Task%601>, bir değer döndüren zaman uyumsuz bir yöntem için. 
- 
-- <xref:System.Threading.Tasks.Task>, bir işlem gerçekleştiren ancak değer döndüren zaman uyumsuz bir yöntem için.
+- <xref:System.Threading.Tasks.Task%601>, bir değer döndüren bir async yöntemi için.
 
-- `void`, bir olay işleyicisi için. 
+- <xref:System.Threading.Tasks.Task>, bir işlemi gerçekleştiren ancak değer döndüren bir async yöntemi için.
 
-- 7,0 ile C# başlayarak, erişilebilir `GetAwaiter` bir yöntemi olan herhangi bir tür. `GetAwaiter` Yöntemi tarafından döndürülen nesne <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType> arabirimini uygulamalıdır.
+- `void`, bir olay işleyicisi için.
+
+- C# 7.0 ile başlayarak, erişilebilir `GetAwaiter` bir yönteme sahip herhangi bir tür. `GetAwaiter` Yöntem tarafından döndürülen nesne <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType> arabirimi uygulamalıdır.
   
-Zaman uyumsuz yöntemler hakkında daha fazla bilgi için bkz. [Async ve await (C#) Ile zaman uyumsuz programlama](./index.md).  
+Async yöntemleri hakkında daha fazla bilgi için, [async ile Asynchronous Programming'e bakın ve (C#) bekleyin.](./index.md)  
   
-Her dönüş türü aşağıdaki bölümlerden birinde incelenir ve konunun sonunda her üç türü kullanan tam bir örnek bulabilirsiniz.  
+Her dönüş türü aşağıdaki bölümlerden birinde incelenir ve konunun sonunda üç türü de kullanan tam bir örnek bulabilirsiniz.  
   
-## <a name="BKMK_TaskTReturnType"></a>Görev\<tSonuç\> dönüş türü  
-Dönüş türü, `TResult`işlenenin türü olan bir [Return](../../../language-reference/keywords/return.md) (C#) ifadesini içeren zaman uyumsuz bir yöntem için kullanılır. <xref:System.Threading.Tasks.Task%601>  
+## <a name="BKMK_TaskTReturnType"></a>Görev\<Sonuç\> İade Türü  
+İade <xref:System.Threading.Tasks.Task%601> türü, operand'ın türüne [return](../../../language-reference/keywords/return.md) `TResult`sahip olduğu bir return (C#) deyimini içeren bir async yöntemi için kullanılır.  
   
-Aşağıdaki örnekte, `GetLeisureHours` async yöntemi bir tamsayı döndüren bir `return` ifade içerir. Bu nedenle, metot bildiriminin bir dönüş türü `Task<int>`belirtmesi gerekir.  <xref:System.Threading.Tasks.Task.FromResult%2A> Async yöntemi, bir dize döndüren bir işlem için yer tutucudur.
+Aşağıdaki örnekte, `GetLeisureHours` async yöntemi `return` bir tamsayı döndüren bir deyim içerir. Bu nedenle, yöntem bildirimi bir `Task<int>`dönüş türü belirtmelidir.  Async <xref:System.Threading.Tasks.Task.FromResult%2A> yöntemi, dize döndüren bir işlem için bir yer tutucudur.
   
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1.cs)]
 
-Yöntemi içindeki bir `leisureHours`await ifadesi `GetLeisureHours` içinden çağrıldığında, await ifadesi yöntemi tarafından döndürülen görevde depolanan tamsayı değerini (değeri) alır. `GetLeisureHours` `ShowTodaysInfo` Await ifadeleri hakkında daha fazla bilgi için bkz. [await](../../../language-reference/operators/await.md).  
+Yöntemdeki bekleyen ifadesinin içinden `GetLeisureHours` çağrıldığında, bekleyen ifade `GetLeisureHours` yöntem tarafından döndürülen `leisureHours`görevde depolanan hesaplaç değerini (değeri) alır. `ShowTodaysInfo` Bekleyen ifadeler hakkında daha fazla bilgi için, [bkz.](../../../language-reference/operators/await.md)  
   
-Aşağıdaki kodda gösterildiği gibi `GetLeisureHours` `await`, çağrısını uygulamasından ayırarak bunun nasıl gerçekleştiğini daha iyi anlayabilirsiniz. Yönteminin bildiriminden bekleyebileceğiniz `GetLeisureHours` için hemen beklenen bir yönteme çağrı bir `Task<int>`döndürür. Görev örnekteki `integerTask` değişkenine atanır. Bir olduğundan, <xref:System.Threading.Tasks.Task%601.Result> türünde bir`TResult`özelliğiiçerir. <xref:System.Threading.Tasks.Task%601> `integerTask` Bu durumda, `TResult` bir tamsayı türünü temsil eder. Öğesine uygulandığında, <xref:System.Threading.Tasks.Task%601.Result%2A> await ifadesi öğesinin `integerTask`özelliğinin içeriğini değerlendirir. `integerTask` `await` Değer `ret` değişkenine atanır.  
+Aşağıdaki kodun gösterdiği `GetLeisureHours` `await`gibi, aramayı uygulamadan ayırarak bunun nasıl olduğunu daha iyi anlayabilirsiniz. Hemen beklenmeyen `GetLeisureHours` yöntem çağrısı, yöntemin bildiriminden beklediğiniz gibi bir `Task<int>`döndürür. Görev örnekteki `integerTask` değişkene atanır. Çünkü `integerTask` bir <xref:System.Threading.Tasks.Task%601>, bu <xref:System.Threading.Tasks.Task%601.Result> tür `TResult`bir özellik içerir. Bu durumda, `TResult` bir tamsayı türünü temsil eder. Uygulandığında `await` `integerTask`, bekleme ifadesi <xref:System.Threading.Tasks.Task%601.Result%2A> özelliğinin içeriğini `integerTask`değerlendirir. Değer `ret` değişkene atanır.  
   
 > [!IMPORTANT]
-> <xref:System.Threading.Tasks.Task%601.Result%2A> Özelliği engelleyici bir özelliktir. Görevi tamamlanmadan önce ona erişmeye çalışırsanız, etkin olan iş parçacığı, görev tamamlanana ve değer kullanılabilir olana kadar engellenir. Çoğu durumda, özelliğine doğrudan erişmek yerine kullanarak `await` değere erişmeniz gerekir. <br/> Önceki örnek, uygulamanın sonlandırılmadan önce yürütmeyi tamamlayabilmesi <xref:System.Threading.Tasks.Task%601.Result%2A> `ShowTodaysInfo` için ana iş parçacığını engellemek üzere özelliğinin değerini almıştır.  
+> Tesis, <xref:System.Threading.Tasks.Task%601.Result%2A> engelleyici bir özelliktir. Görevi tamamlanmadan önce erişmeye çalışırsanız, görev tamamlanana ve değer kullanılabilir olana kadar şu anda etkin olan iş parçacığı engellenir. Çoğu durumda, doğrudan özelliğine erişmek `await` yerine kullanarak değere erişmelisiniz. <br/> Önceki örnek, <xref:System.Threading.Tasks.Task%601.Result%2A> `ShowTodaysInfo` yöntemin uygulama sona ermeden önce yürütmeyi bitirebilmeleri için ana iş parçacığı engellemek için özelliğin değerini aldı.  
 
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   
-## <a name="BKMK_TaskReturnType"></a>Görev dönüş türü  
-Bir `return` ifade içermeyen veya bir işleneni döndürmeyen bir `return` ifade içeren zaman uyumsuz yöntemler genellikle dönüş türüne <xref:System.Threading.Tasks.Task>sahiptir. Bu tür yöntemler `void` zaman uyumlu olarak çalıştırıldıklarında döndürülür. Zaman uyumsuz bir yöntem <xref:System.Threading.Tasks.Task> için dönüş türü kullanırsanız, çağıran zaman uyumsuz yöntem bitene kadar çağıranın tamamlanmasını `await` askıya almak için bir operatör kullanabilirsiniz.  
+## <a name="BKMK_TaskReturnType"></a>Görev İade Türü  
+İfade `return` içermeyen veya oper return olmayan ve `return` genellikle bir dönüş türüne sahip bir deyim <xref:System.Threading.Tasks.Task>içermeyen async yöntemleri. Bu tür `void` yöntemler eşzamanlı çalıştırılırsa geri döner. Async yöntemi <xref:System.Threading.Tasks.Task> için bir iade türü kullanıyorsanız, bir `await` arama yöntemi çağrılan async yöntemi tamamlanana kadar arayanın tamamlanmasını askıya almak için bir işleç kullanabilirsiniz.  
   
-Aşağıdaki örnekte, `WaitAndApologize` async yöntemi bir `return` ifade içermez, bu nedenle Yöntem bir <xref:System.Threading.Tasks.Task> nesne döndürür. Bu, `WaitAndApologize` beklemenize olanak sağlar. Dönüş değeri olmadığından <xref:System.Threading.Tasks.Task> türün bir `Result` özellik içermediğini unutmayın.  
+Aşağıdaki örnekte, `WaitAndApologize` async yöntemi bir `return` deyim içermez, bu nedenle <xref:System.Threading.Tasks.Task> yöntem bir nesne döndürür. `WaitAndApologize` Bu beklenen sağlar. İade değeri <xref:System.Threading.Tasks.Task> olmadığından türün `Result` bir özellik içermediğini unutmayın.  
 
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2.cs)]  
   
-`WaitAndApologize`, zaman uyumlu void döndüren bir yöntem için çağırma deyimine benzer bir await ifadesi yerine await deyimi kullanılarak bekletildi. Bu durumda await işlecinin uygulaması bir değer üretmez.  
+`WaitAndApologize`senkron boşluk döndürme yöntemi için çağrı deyimine benzer bir bekleme ifadesi yerine bir bekleme ifadesi kullanılarak beklenen bir ifadedir. Bu durumda bekleyen bir işleç uygulaması bir değer üretmez.  
   
-Önceki <xref:System.Threading.Tasks.Task%601> örnekte olduğu gibi, aşağıdaki kodda gösterildiği gibi, `WaitAndApologize` çağrısını await işlecinin uygulamasından ayırabilirsiniz. Ancak, bir `Task` `Result` özelliğine sahip olmadığını ve bir `Task`Await işleci uygulandığında hiçbir değer üretilmediğini unutmayın.  
+Önceki <xref:System.Threading.Tasks.Task%601> örnekte olduğu gibi, aşağıdaki `WaitAndApologize` kodun gösterdiği gibi, aramayı bekleyen bir işlecinin uygulamasından ayırabilirsiniz. Ancak, a'nın `Task` bir `Result` özelliği olmadığını ve bekleyen bir işleç bir `Task`.'e uygulandığında hiçbir değer inanMadığını unutmayın.  
   
-Aşağıdaki kod, yöntemi çağıran `WaitAndApologize` görevin döndürdüğü görevi bekleten ayırır.  
- 
+Aşağıdaki kod, `WaitAndApologize` metod çağırma yöntemini yöntemin döndürdettiği görevi beklemekten ayırır.  
+
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
- 
-## <a name="BKMK_VoidReturnType"></a>Void dönüş türü
 
-Dönüş türünü, `void` `void` dönüş türü gerektiren zaman uyumsuz olay işleyicilerde kullanırsınız. Değer döndürmeyen olay işleyicileri dışındaki yöntemler için, döndüren <xref:System.Threading.Tasks.Task> `void` zaman uyumsuz bir yöntem beklenmediği için bir yerine döndürmelidir. Bu tür bir yöntemi çağıran, çağrılan zaman uyumsuz yöntemin tamamlanmasını beklemeden tamamlamaya devam edebilmelidir ve çağıranın, zaman uyumsuz yöntemin ürettiği herhangi bir değerden veya özel durumlardan bağımsız olması gerekir.  
+## <a name="BKMK_VoidReturnType"></a>Geçersiz dönüş türü
+
+`void` İade türünü, iade türü gerektiren eşsenkronize olay işleyicilerinde kullanırsınız. `void` Bir değer döndürmeyen olay işleyicileri dışındaki yöntemler için, <xref:System.Threading.Tasks.Task> döndüren `void` bir async yöntemi beklenemediği için bunun yerine bir döndürmeniz gerekir. Böyle bir yöntemin herhangi bir arayan, çağrılan async yönteminin tamamlanmasını beklemeden tamamlamaya devam edebilmeli ve arayanın async yönteminin oluşturduğu değerlerden veya özel durumlardan bağımsız olması gerekir.  
   
-Void döndüren zaman uyumsuz bir yöntemi çağıran, yöntemden oluşturulan özel durumları yakalayabilir ve bu tür işlenmemiş özel durumlar uygulamanızın başarısız olmasına neden olabilir. Bir <xref:System.Threading.Tasks.Task> veya<xref:System.Threading.Tasks.Task%601>döndüren zaman uyumsuz bir yöntemde özel durum oluşursa, özel durum döndürülen görevde depolanır ve görev beklendiğinde yeniden oluşturulur. Bu nedenle, bir özel durum üretemeyen herhangi bir zaman uyumsuz metodun, <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> dönüş türüne sahip olduğundan ve metoda yapılan çağrıların beklenmediğinden emin olun.  
+Geçersiz döndüren bir async yöntemini arayan yöntemden atılan özel durumları yakalayamaz ve bu tür işlenmemiş özel durumlar uygulamanızın başarısız olması muhtemeldir. Bir özel durum a veya <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601>döndüren bir özel durum yönteminde oluşursa, özel durum döndürülen görevde depolanır ve görev baran yeniden atılır. Bu nedenle, bir özel durum oluşturabilen herhangi bir <xref:System.Threading.Tasks.Task> async yönteminin bir dönüş türü olduğundan veya <xref:System.Threading.Tasks.Task%601> yönteme çağrı beklediğinden emin olun.  
   
-Zaman uyumsuz yöntemlerde özel durumları yakalama hakkında daha fazla bilgi için, [try-catch](../../../language-reference/keywords/try-catch.md) konusunun [zaman uyumsuz metotlar bölümünde özel durumlar](../../../language-reference/keywords/try-catch.md#exceptions-in-async-methods) bölümüne bakın.  
+Async yöntemlerindeki özel durumları nasıl yakalayacakları hakkında daha fazla bilgi için, [try-catch](../../../language-reference/keywords/try-catch.md) konusunun [Async Yöntemleri](../../../language-reference/keywords/try-catch.md#exceptions-in-async-methods) bölümündeki Özel Durumlar bölümüne bakın.  
   
-Aşağıdaki örnek, zaman uyumsuz bir olay işleyicisinin davranışını gösterir. Örnek kodda, zaman uyumsuz bir olay işleyicisinin ana iş parçacığının tamamlandığında bunu bilmesini sağlamalıdır. Ardından, ana iş parçacığı programdan çıkmadan zaman uyumsuz bir olay işleyicisinin tamamlanmasını bekleyebilir.
- 
+Aşağıdaki örnek, bir async olay işleyicisi davranışını gösterir. Örnek kodda, bir async olay işleyicisinin ana iş parçacığının ne zaman bitacağını bilmesi gerektiğini unutmayın. Daha sonra ana iş parçacığı programdan çıkmadan önce tamamlanması için bir async olay işleyicisi için bekleyebilirsiniz.
+
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
- 
-## <a name="generalized-async-return-types-and-valuetasktresult"></a>Genelleştirilmiş zaman uyumsuz dönüş türleri ve valuetask\<TResult\>
 
-7,0 ile C# başlayarak, zaman uyumsuz bir yöntem erişilebilir `GetAwaiter` bir yöntemi olan herhangi bir tür döndürebilir.
- 
-<xref:System.Threading.Tasks.Task> Ve<xref:System.Threading.Tasks.Task%601> başvuru türleri olduğundan, performans açısından kritik yollarda bellek ayırma, özellikle de ayırmalar sıkı Döngülerde gerçekleşiyorsa performansı olumsuz etkileyebilir. Genelleştirilmiş dönüş türleri için destek, ek bellek ayırmalarını önlemek için bir başvuru türü yerine hafif değer türü döndürebilmeniz anlamına gelir. 
+## <a name="generalized-async-return-types-and-valuetasktresult"></a>Genelleştirilmiş async dönüş türleri\<ve ValueTask TResult\>
 
-.Net, <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> genelleştirilmiş bir görev döndüren değerin hafif bir uygulama olarak yapısını sağlar. <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> Türünü kullanmak için, `System.Threading.Tasks.Extensions` NuGet paketini projenize eklemeniz gerekir. Aşağıdaki örnek, iki zarın değerini almak için <xref:System.Threading.Tasks.ValueTask%601> yapısını kullanır. 
+C# 7.0 ile başlayarak, bir async yöntemi `GetAwaiter` erişilebilir bir yöntem eki olan herhangi bir türü döndürebilir.
+
+Başvuru <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> türleri olduğundan ve kaynak türleri olduğundan, performans açısından kritik yollarda bellek ayırma, özellikle de ayırmalar sıkı döngülerde gerçekleştiğinde, performansı olumsuz etkileyebilir. Genelleştirilmiş iade türleri için destek, ek bellek ayırmalarını önlemek için başvuru türü yerine hafif bir değer türü döndürebileceğiniz anlamına gelir.
+
+.NET, <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> genelleştirilmiş görev döndüren değerin hafif bir uygulaması olarak yapıyı sağlar. <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> Türü kullanmak için Projenize `System.Threading.Tasks.Extensions` NuGet paketini eklemeniz gerekir. Aşağıdaki örnek, <xref:System.Threading.Tasks.ValueTask%601> iki zar rulo değerini almak için yapıyı kullanır.
   
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
-- [İzlenecek yol: Async ve await (C#) kullanarak Web 'e erişme](./walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Zaman uyumsuz programlarda denetim akışı (C#)](./control-flow-in-async-programs.md)
+- [Walkthrough: Async kullanarak Web'e erişim ve bekleme (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async Programlarında Kontrol Akışı (C#)](./control-flow-in-async-programs.md)
 - [async](../../../language-reference/keywords/async.md)
 - [await](../../../language-reference/operators/await.md)

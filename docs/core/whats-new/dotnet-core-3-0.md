@@ -1,42 +1,42 @@
 ---
 title: ​.NET Core 3.0’daki yenilikler
-description: .NET Core 3.0 ' de bulunan yeni özellikler hakkında bilgi edinin.
+description: .NET Core 3.0'da bulunan yeni özellikler hakkında bilgi edinin.
 dev_langs:
 - csharp
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
 ms.openlocfilehash: 6e85c2c3e796ae59a13f944bd4913e4b7316c56a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156575"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398813"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
-Bu makalede .NET Core 3.0 ' deki yenilikler açıklanır. En büyük geliştirmelerden biri, Windows Masaüstü uygulamaları için destek içerir (yalnızca Windows). .NET Core 3.0 SDK bileşeni Windows Masaüstü 'Nü kullanarak Windows Forms ve Windows Presentation Foundation (WPF) uygulamalarınızın bağlantı noktası oluşturabilirsiniz. Temiz olması için, Windows Masaüstü bileşeni yalnızca Windows 'da desteklenir ve Windows 'a dahildir. Daha fazla bilgi için bu makalenin devamındaki [Windows Masaüstü](#windows-desktop) bölümüne bakın.
+Bu makalede, .NET Core 3.0'da yeni olan açıklanmaktadır. En büyük geliştirmelerden biri Windows masaüstü uygulamaları için destektir (yalnızca Windows). .NET Core 3.0 SDK bileşeni Windows Desktop'ı kullanarak Windows Formlarınızı ve Windows Sunu Vakfı (WPF) uygulamalarınızı taşıabilirsiniz. Açık olmak gerekirse, Windows Masaüstü bileşeni yalnızca desteklenir ve Windows'a dahil edilir. Daha fazla bilgi için bu makalenin ilerleyen bölümlerinde [Windows masaüstü](#windows-desktop) bölümüne bakın.
 
-.NET Core 3.0, 8.0 için C# destek ekler. [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya daha yeni bir sürümünü, [Mac için Visual Studio 8,3](/visualstudio/mac/install-preview) veya daha yenisini veya en son  **C# uzantıya**sahip [Visual Studio Code](https://code.visualstudio.com/) kullanmanız kesinlikle önerilir.
+.NET Core 3.0 C# 8.0 için destek ekler. [Visual Studio 2019 sürüm 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya daha yeni, [Mac 8.3](/visualstudio/mac/install-preview) veya daha yeni için Visual Studio veya en son **C# uzantılı** [Visual Studio Code](https://code.visualstudio.com/) kullanmanız önerilir.
 
-Şimdi Windows, macOS veya Linux 'ta [.NET Core 3,0 'Yi indirin ve](https://aka.ms/netcore3download) kullanmaya başlayın.
+Şu anda Windows, macOS veya Linux'ta [.NET Core 3.0'ı indirin](https://aka.ms/netcore3download) ve başlayın.
 
-Yayın hakkında daha fazla bilgi için bkz. [.NET Core 3,0 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
+Sürüm hakkında daha fazla bilgi için [.NET Core 3.0 duyurusuna](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/)bakın.
 
-.NET Core RC1, Microsoft tarafından önceden hazırlanmıştı ve tam olarak desteklenmektedir. Önizleme sürümü kullanıyorsanız, devam eden destek için RTM sürümüne geçmeniz gerekir.
+.NET Core RC1, Microsoft tarafından üretime hazır kabul edildi ve tam olarak desteklendi. Bir önizleme sürümü kullanıyorsanız, sürekli destek için RTM sürümüne geçmeniz gerekir.
 
-## <a name="language-improvements-c-80"></a>Dil geliştirmeleri C# 8,0
+## <a name="language-improvements-c-80"></a>Dil geliştirmeleri C# 8.0
 
-C#8,0 Ayrıca, [null yapılabilir başvuru türleri](../../csharp/tutorials/nullable-reference-types.md) özelliği, [zaman uyumsuz akışlar](../../csharp/tutorials/generate-consume-asynchronous-stream.md)ve [daha fazla desen](../../csharp/tutorials/pattern-matching.md)içeren bu sürümün bir parçasıdır. 8,0 özellikleri hakkında C# daha fazla bilgi için bkz. [ C# 8,0](../../csharp/whats-new/csharp-8.md)sürümündeki yenilikler.
+C# 8.0 da [nullable başvuru türleri](../../csharp/tutorials/nullable-reference-types.md) özelliği, [async akışları](../../csharp/tutorials/generate-consume-asynchronous-stream.md)ve daha fazla desen içeren bu sürümün [bir](../../csharp/tutorials/pattern-matching.md)parçasıdır. C# 8.0 özellikleri hakkında daha fazla bilgi için [C# 8.0'daki yeniliklere](../../csharp/whats-new/csharp-8.md)bakın.
 
-Aşağıda ayrıntılı olarak açıklanan aşağıdaki API özelliklerini desteklemek için dil geliştirmeleri eklenmiştir:
+Aşağıda ayrıntılı olarak belirtilen aşağıdaki API özelliklerini desteklemek için dil geliştirmeleri eklendi:
 
-- [Aralıklar ve dizinler](#ranges-and-indices)
-- [Zaman uyumsuz akışlar](#async-streams)
+- [Aralıklar ve endeksler](#ranges-and-indices)
+- [Async akışları](#async-streams)
 
-## <a name="net-standard-21"></a>.NET Standard 2,1
+## <a name="net-standard-21"></a>.NET Standart 2.1
 
-.NET Core 3,0 **.NET Standard 2,1**uygular. Ancak, varsayılan `dotnet new classlib` şablonu, hala **2,0 .NET Standard**hedefleyen bir proje oluşturur. **.NET Standard 2,1**' i hedeflemek için proje dosyanızı düzenleyin ve `TargetFramework` özelliğini `netstandard2.1`olarak değiştirin:
+.NET Core 3.0 uygular **.NET Standart 2.1**. Ancak, varsayılan `dotnet new classlib` şablon hala **.NET Standart 2.0**hedefleyen bir proje oluşturur. **.NET Standart 2.1'i**hedeflemek için proje `TargetFramework` dosyanızı düzenlemesi ve özelliği `netstandard2.1`ni :
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -48,30 +48,30 @@ Aşağıda ayrıntılı olarak açıklanan aşağıdaki API özelliklerini deste
 </Project>
 ```
 
-Visual Studio kullanıyorsanız, Visual Studio 2017 **.NET Standard 2,1** veya **.NET Core 3,0**' i desteklemediğinden [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)gerekir.
+Visual Studio kullanıyorsanız Visual [Studio 2019'a](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)ihtiyacınız vardır, çünkü Visual Studio 2017 **.NET Standard 2.1** veya **.NET Core 3.0'ı**desteklemez.
 
-## <a name="compiledeploy"></a>Derle/dağıt
+## <a name="compiledeploy"></a>Derle/Dağıt
 
-### <a name="default-executables"></a>Varsayılan yürütülebilir dosyalar
+### <a name="default-executables"></a>Varsayılan yürütülebilir
 
-.NET Core artık [çalışma zamanına bağımlı yürütülebilir dosyaları](../deploying/index.md#publish-runtime-dependent) varsayılan olarak oluşturur. Bu davranış, .NET Core 'un küresel olarak yüklenen bir sürümünü kullanan uygulamalar için yenidir. Daha önce yalnızca [kendi kendine kapsanan dağıtımlar](../deploying/index.md#publish-self-contained) yürütülebilir bir dosya üretecektir.
+.NET Core artık varsayılan olarak [çalışma süresine bağlı yürütülebilir ler](../deploying/index.md#publish-runtime-dependent) oluşturur. Bu davranış, .NET Core'un genel olarak yüklenmiş sürümünü kullanan uygulamalar için yenidir. Önceden, yalnızca [bağımsız dağıtımlar](../deploying/index.md#publish-self-contained) yürütülebilir bir üretebilme yi doğurabilir.
 
-`dotnet build` veya `dotnet publish`sırasında, kullanmakta olduğunuz SDK ortamı ve platformuyla eşleşen bir çalıştırılabilir ( **appHost**olarak bilinir) oluşturulur. Bu yürütülebilir dosyalarla aynı şeyleri, diğer yerel yürütülebilir dosyaları gibi bekleyebilir, örneğin:
+Sırasında `dotnet build` `dotnet publish`veya, bir yürütülebilir **(appHost**olarak da bilinir) kullandığınız SDK ortamı ve platformu eşleşen oluşturulur. Bu yürütülebilir kişilerle, aşağıdakiler gibi diğer yerel yürütülebilir kişilerle aynı şeyleri bekleyebilirsiniz:
 
-- Yürütülebilir dosyaya çift tıklayabilirsiniz.
-- Uygulamayı Windows üzerinde `myapp.exe`, Linux ve macOS 'ta `./myapp` gibi doğrudan bir komut isteminden başlatabilirsiniz.
+- Çalıştırılabilir'e çift tıklayabilirsiniz.
+- Uygulamayı doğrudan Windows ve Linux ve `myapp.exe` `./myapp` macOS'ta olduğu gibi bir komut isteminden başlatabilirsiniz.
 
-### <a name="macos-apphost-and-notarization"></a>macOS appHost ve notarlama
+### <a name="macos-apphost-and-notarization"></a>macOS appHost ve noterizasyon
 
 *yalnızca macOS*
 
-MacOS için .NET Core SDK 3,0 ' den başlayarak, varsayılan bir yürütülebilir dosya (appHost olarak bilinir) oluşturma ayarı varsayılan olarak devre dışıdır. Daha fazla bilgi için bkz. [MacOS Catalina Notarleştirme ve .NET Core indirmeleri ve projeleri üzerindeki etki](../install/macos-notarization-issues.md).
+macOS için noterize .NET Core SDK 3.0 ile başlayarak, varsayılan yürütülebilir (appHost olarak da bilinir) üretmek için ayar varsayılan olarak devre dışı bırakılır. Daha fazla bilgi için [macOS Catalina Notarization ve .NET Core indirme ve projeleri üzerindeki etkisine](../install/macos-notarization-issues.md)bakın.
 
-AppHost ayarı etkinleştirildiğinde, .NET Core, oluşturduğunuzda veya yayımladığınızda yerel bir MAK-O çalıştırılabilir dosyası oluşturur. Uygulamanız, `dotnet run` komutuyla kaynak koddan çalıştırıldığında veya mak-O yürütülebilir dosyasını doğrudan başlatarak appHost bağlamında çalışır.
+appHost ayarı etkinleştirildiğinde, .NET Core, oluşturduğunuzda veya yayımladığınızda yerel bir Mach-O çalıştırılabilir oluşturur. `dotnet run` Uygulamanız, komutla kaynak kodundan çalıştırıldığında veya doğrudan Yürütülebilir Mach-O'yu başlatarak appHost bağlamında çalışır.
 
-AppHost olmadan, bir kullanıcıya [çalışma zamanına bağımlı](../deploying/index.md#publish-runtime-dependent) bir uygulama başlatabilir tek yol `dotnet <filename.dll>` komuttur. Uygulamanızı [kendi içinde](../deploying/index.md#publish-self-contained)yayımladığınızda her zaman bir appHost oluşturulur.
+appHost olmadan, bir kullanıcının çalışma [süresine bağlı](../deploying/index.md#publish-runtime-dependent) bir uygulamayı `dotnet <filename.dll>` başlatmasının tek yolu komuttur. Uygulamanızı [bağımsız](../deploying/index.md#publish-self-contained)olarak yayımladığınızda her zaman bir appHost oluşturulur.
 
-AppHost 'yi proje düzeyinde yapılandırabilir ya da `-p:UseAppHost` parametresiyle belirli bir `dotnet` komutu için appHost ' yi değiştirebilirsiniz:
+Ya proje düzeyinde appHost yapılandırabilirsiniz, ya da `dotnet` `-p:UseAppHost` parametre ile belirli bir komut için appHost geçiş:
 
 - Proje dosyası
 
@@ -87,13 +87,13 @@ AppHost 'yi proje düzeyinde yapılandırabilir ya da `-p:UseAppHost` parametres
   dotnet run -p:UseAppHost=true
   ```
 
-`UseAppHost` ayarı hakkında daha fazla bilgi için bkz. [Microsoft. net. SDK Için MSBuild özellikleri](../project-sdk/msbuild-props.md#useapphost).
+`UseAppHost` Ayar hakkında daha fazla bilgi için [Microsoft.NET.Sdk için MSBuild özelliklerine](../project-sdk/msbuild-props.md#useapphost)bakın.
 
-### <a name="single-file-executables"></a>Tek dosya yürütülebilir dosyaları
+### <a name="single-file-executables"></a>Tek dosyalı yürütülebilir
 
-`dotnet publish` komutu, uygulamanızı platforma özgü tek dosya yürütülebilir dosyasına paketlemeyi destekler. Yürütülebilir dosya kendiliğinden ayıklanıyor ve uygulamanızı çalıştırmak için gerekli tüm bağımlılıkları (yerel dahil) içerir. Uygulama ilk kez çalıştırıldığında uygulama adı ve derleme tanımlayıcısı temelinde bir dizine çıkarılır. Uygulama yeniden çalıştırıldığında başlatma daha hızlıdır. Yeni bir sürüm kullanılmadığı takdirde uygulamanın kendisi ikinci kez ayıklanmasına gerek yoktur.
+Komut, `dotnet publish` uygulamanızı platforma özgü tek dosyalı yürütülebilir bir şekilde paketlemenizi destekler. Yürütülebilir kendi kendini ayıklama ve uygulamanızı çalıştırmak için gerekli olan tüm bağımlılıkları (yerel dahil) içerir. Uygulama ilk çalıştırıldığında, uygulama uygulama adına ve yapı tanımlayıcısına göre bir dizine ayıklanır. Uygulama yeniden çalıştırıldığında başlatma daha hızlıdır. Yeni bir sürüm kullanılmadığı sürece uygulamanın kendisini ikinci kez ayıklaması gerekmez.
 
-Tek dosya yürütülebiliri yayımlamak için, projenizdeki `PublishSingleFile` veya komut satırında `dotnet publish` komutuyla ayarlayın:
+Tek dosyalı yürütülebilir yayımlamak `PublishSingleFile` için, projenizdeki veya komut `dotnet publish` satırında komut satırında komut satırında komut u belirleyin:
 
 ```xml
 <PropertyGroup>
@@ -108,17 +108,17 @@ Tek dosya yürütülebiliri yayımlamak için, projenizdeki `PublishSingleFile` 
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
 ```
 
-Tek dosya yayınlama hakkında daha fazla bilgi için bkz. [tek dosya paketcisi tasarım belgesi](https://github.com/dotnet/designs/blob/master/accepted/single-file/design.md).
+Tek dosyalı yayımlama hakkında daha fazla bilgi için [tek dosyalı paketleyici tasarım belgesine](https://github.com/dotnet/designs/blob/master/accepted/single-file/design.md)bakın.
 
-### <a name="assembly-linking"></a>Bütünleştirilmiş kod bağlama
+### <a name="assembly-linking"></a>Montaj bağlama
 
-.NET Core 3.0 SDK, Il 'yi çözümleyerek ve kullanılmayan derlemeleri kırparak uygulamaların boyutunu azaltan bir araçla birlikte gelir.
+.NET core 3.0 SDK, IL'yi analiz ederek ve kullanılmayan derlemeleri kırparak uygulamaların boyutunu küçültebilen bir araçla birlikte gelir.
 
-Bağımsız uygulamalar, kodunuzun çalıştırılması için gereken her şeyi, ana bilgisayara .NET yüklenmesini gerektirmeden içerir. Ancak, çoğu zaman uygulamanın çalışması için yalnızca küçük bir çerçeve alt kümesi gerekir ve kullanılmayan diğer kitaplıklar da kaldırılabilir.
+Bağımsız uygulamalar, .NET'in ana bilgisayara yüklenmesini gerektirmeden kodunuzu çalıştırmak için gereken her şeyi içerir. Ancak, çoğu zaman uygulama yalnızca işlev için çerçevenin küçük bir alt kümesi gerektirir ve diğer kullanılmayan kitaplıklar kaldırılabilir.
 
-.NET Core artık uygulamanızın Il 'sini taramak için [Il bağlayıcı](https://github.com/mono/linker) aracını kullanacak bir ayar içeriyor. Bu araç hangi kodun gerekli olduğunu algılar ve ardından kullanılmayan kitaplıkları kırpar. Bu araç bazı uygulamaların dağıtım boyutunu önemli ölçüde azaltabilir.
+.NET Core artık uygulamanızın IL'sini tmak için [IL bağlayıcı](https://github.com/mono/linker) aracını kullanacak bir ayar içerir. Bu araç hangi kodun gerekli olduğunu algılar ve kullanılmayan kitaplıkları kırpar. Bu araç, bazı uygulamaların dağıtım boyutunu önemli ölçüde azaltabilir.
 
-Bu aracı etkinleştirmek için projenize `<PublishTrimmed>` ayarını ekleyin ve kendi içinde olan bir uygulamayı yayımlayın:
+Bu aracı etkinleştirmek `<PublishTrimmed>` için projenize ayarı ekleyin ve bağımsız bir uygulama yayımlayın:
 
 ```xml
 <PropertyGroup>
@@ -130,30 +130,30 @@ Bu aracı etkinleştirmek için projenize `<PublishTrimmed>` ayarını ekleyin v
 dotnet publish -r <rid> -c Release
 ```
 
-Örnek olarak, yayımlanan temel "Merhaba Dünya" yeni konsol projesi şablonu, yayımlandığında 70 MB ile çarpılır. `<PublishTrimmed>`kullanarak, bu boyut yaklaşık 30 MB 'ye indirilir.
+Örnek olarak, yayınlandığında, yaklaşık 70 MB boyutuna isabet eden temel "merhaba dünya" yeni konsol proje şablonu. Kullanılarak, `<PublishTrimmed>`bu boyut yaklaşık 30 MB azalır.
 
-Yansıma veya ilgili dinamik özellikleri kullanan uygulamaların veya çerçevelerin (ASP.NET Core ve WPF dahil) genellikle kırpıldığına göre kesilmesini göz önünde bulundurmanız önemlidir. Bu ayırıcı, bağlayıcının bu dinamik davranış hakkında bilgi sahibi olmadığı ve yansıma için hangi çerçeve türlerinin gerekli olduğunu belirleyemediği için oluşur. Il bağlayıcı aracı, bu senaryonun farkında olacak şekilde yapılandırılabilir.
+Yansıma veya ilgili dinamik özellikleri kullanan uygulamaların veya çerçevelerin (ASP.NET Core ve WPF dahil) genellikle kırıldığında kırılacak larını göz önünde bulundurmanız önemlidir. Bağlayıcının bu dinamik davranışı bilmediği ve yansıma için hangi çerçeve türlerinin gerekli olduğunu belirleyemediği için bu kırılma oluşur. IL Bağlayıcı aracı bu senaryonun farkında olacak şekilde yapılandırılabilir.
 
-Tüm diğerleri üzerinde, kırpdıktan sonra uygulamanızı test ettiğinizden emin olun.
+Her şeyden önce, kırpma sonra uygulamatest emin olun.
 
-Il bağlayıcı aracı hakkında daha fazla bilgi için [belgelere](https://aka.ms/dotnet-illink) bakın veya [mono/bağlayıcı]( https://github.com/mono/linker) deposunu ziyaret edin.
+IL Bağlayıcı aracı hakkında daha fazla bilgi için [belgelere](https://aka.ms/dotnet-illink) bakın veya [mono/linker]( https://github.com/mono/linker) repo'yu ziyaret edin.
 
 ### <a name="tiered-compilation"></a>Katmanlı derleme
 
-[Katmanlı derleme](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md) (TC), .net Core 3,0 ile varsayılan olarak açık olur. Bu özellik, çalışma zamanının daha iyi performans elde etmek için tam zamanında (JıT) derleyicisini daha kolay bir şekilde kullanmasına olanak sağlar.
+[Katmanlı derleme](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md) (TC) varsayılan olarak .NET Core 3.0 ile açıktır. Bu özellik, daha iyi performans elde etmek için çalışma süresinin tam zamanında (JIT) derleyiciyi daha uyumlu bir şekilde kullanmasını sağlar.
 
-Katmanlı derlemenin başlıca avantajı, daha düşük kalitede, ancak daha hızlı bir katmanda ya da daha yüksek kalitede, ancak daha yavaş bir katmanda çeşitli yöntemler elde etmenin iki yolunu sağlamaktır. Kalite, yöntemin en iyi duruma getirilmiş olduğunu gösterir. TC, düzenli bir durum aracılığıyla başlangıçtan itibaren çeşitli yürütme aşamalarından geçen bir uygulamanın performansını artırmaya yardımcı olur. Katmanlı derleme devre dışı bırakıldığında, her yöntem, başlangıç performansı üzerinden düzenli durum performansına yol gösteren tek bir şekilde derlenir.
+Katmanlı derlemenin temel avantajı, daha düşük kaliteli ama daha hızlı bir katmanda veya daha yüksek kalitede ama daha yavaş bir katmanda iki farklı jitting yöntemi sağlamaktır. Kalite, yöntemin ne kadar iyi optimize edildiklerine işaret eder. TC, başlangıçtan sabit duruma kadar yürütmenin çeşitli aşamalarından geçerken bir uygulamanın performansını artırmaya yardımcı olur. Katmanlı derleme devre dışı bırakıldığında, her yöntem başlangıç performansına göre sabit durum performansına bağlı tek bir şekilde derlenir.
 
-TC etkinleştirildiğinde, bir uygulama başlatıldığında Yöntem derlemesi için aşağıdaki davranış geçerlidir:
+TC etkinleştirildiğinde, bir uygulama başlatıldığında yöntem derlemesi için aşağıdaki davranış uygulanır:
 
-- Metodun önceden derlenen kodu veya [Readytorun](#readytorun-images)varsa, önceden oluşturulan kod kullanılır.
-- Aksi halde, yöntemi jmesdir. Genellikle, bu yöntemler değer türleri üzerinde genel türlerdir.
-  - *Hızlı JIT* daha hızlı (veya daha az iyileştirilmiş) kod üretir. .NET Core 3,0 ' de hızlı JıT, döngüler içermeyen ve başlangıç sırasında tercih edilen yöntemler için varsayılan olarak etkindir.
-  - JıT 'i tamamen en iyi duruma getirmek daha yavaş daha yavaş (veya daha iyileştirilmiş) kod üretir. Hızlı JıT 'in kullanılacağı yöntemler için (örneğin, yöntem <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>ile ilişkilendirilebildiği), JıT tam olarak iyileştiriliyor kullanılır.
+- Yöntemde zaman önceden derlenmiş kod veya [ReadyToRun](#readytorun-images)varsa, önceden oluşturulmuş kod kullanılır.
+- Aksi takdirde, yöntem jitted. Genellikle, bu yöntemler değer türleri üzerinde genel vardır.
+  - *Hızlı JIT* daha hızlı düşük kaliteli (veya daha az optimize edilmiş) kod üretir. .NET Core 3.0'da, Quick JIT döngü içermeyen yöntemler için varsayılan olarak etkinleştirilir ve başlangıç sırasında tercih edilir.
+  - Tam olarak optimize edilen JIT daha yüksek kaliteli (veya daha iyi optimize edilmiş) kod üretir. Hızlı JIT'nin kullanılmayacağı yöntemler için (örneğin, yöntem <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>atfedilirse), tam olarak optimize edilen JIT kullanılır.
 
-Sık çağrılan yöntemler için, tam zamanında derleyici arka planda tamamen iyileştirilmiş kod oluşturur. En iyi duruma getirilmiş kod daha sonra bu yöntem için önceden derlenmiş kodun yerini alır.
+Sık çağrılan yöntemler için, tam zamanında derleyici sonunda arka planda tam olarak optimize edilmiş kod oluşturur. Daha sonra en iyi duruma getirilmiş kod, bu yöntem için önceden derlenmiş kodun yerini alır.
 
-Hızlı JıT tarafından oluşturulan kod daha yavaş çalışabilir, daha fazla bellek ayırabilir veya daha fazla yığın alanı kullanabilir. Sorunlar varsa, proje dosyasında bu MSBuild özelliğini kullanarak hızlı JıT 'i devre dışı bırakabilirsiniz:
+Hızlı JIT tarafından oluşturulan kod daha yavaş çalışabilir, daha fazla bellek tahsis edebilir veya daha fazla yığın alanı kullanabilir. Sorunlar varsa, proje dosyasındaki bu MSBuild özelliğini kullanarak Hızlı JIT'yi devre dışı kullanabilirsiniz:
 
 ```xml
 <PropertyGroup>
@@ -161,7 +161,7 @@ Hızlı JıT tarafından oluşturulan kod daha yavaş çalışabilir, daha fazla
 </PropertyGroup>
 ```
 
-TC 'yi tamamen devre dışı bırakmak için, proje dosyanızda bu MSBuild özelliğini kullanın:
+TC'yi tamamen devre dışı kullanabilirsiniz, proje dosyanızdaki bu MSBuild özelliğini kullanın:
 
 ```xml
 <PropertyGroup>
@@ -170,19 +170,19 @@ TC 'yi tamamen devre dışı bırakmak için, proje dosyanızda bu MSBuild özel
 ```
 
 > [!TIP]
-> Bu ayarları proje dosyasında değiştirirseniz, yeni ayarların yansıtılması için temiz bir derleme gerçekleştirmeniz gerekebilir (`obj` ve dizinleri `bin` ve yeniden derle).
+> Proje dosyasındaki bu ayarları değiştirirseniz, yeni ayarların yansıtılması için temiz bir yapı `obj` gerçekleştirmeniz gerekebilir (ve `bin` dizinleri silin ve yeniden oluşturun).
 
-Çalışma zamanında derlemeyi yapılandırma hakkında daha fazla bilgi için bkz. [derleme Için çalışma zamanı yapılandırma seçenekleri](../run-time-config/compilation.md).
+Derlemeyi çalışma zamanında yapılandırma hakkında daha fazla bilgi [için derleme için Çalışma zamanı yapılandırma seçeneklerine](../run-time-config/compilation.md)bakın.
 
 ### <a name="readytorun-images"></a>ReadyToRun görüntüleri
 
-Uygulama derlemelerinizi ReadyToRun (R2R) biçiminde derleyerek .NET Core uygulamanızın başlama süresini geliştirebilirsiniz. R2R, bir süre öncesi (AOT) derleme biçimidir.
+.NET Core uygulamanızın başlangıç süresini ReadyToRun (R2R) formatında uygulama derlemelerinizi derleyerek geliştirebilirsiniz. R2R, ileri zaman (AOT) derlemesinin bir şeklidir.
 
-R2R ikilileri, tam zamanında (JıT) derleyicisinin uygulamanız yüklenirken yapması gereken iş miktarını azaltarak başlangıç performansını geliştirir. İkililer, JıT 'in üretmesine kıyasla benzer yerel kod içerir. Ancak, R2R ikilileri, bazı senaryolar için hala gerekli olan hem ara dil (IL) kodunu hem de aynı kodun yerel sürümünü içerdiğinden, daha büyüktür. R2R yalnızca, Linux x64 veya Windows x64 gibi belirli çalışma zamanı ortamlarını (RID) hedefleyen bir kendi içinde bulunan uygulamayı yayımladığınızda kullanılabilir.
+R2R ikilileri, uygulamanız yüklerken tam zamanında (JIT) derleyicisinin yapması gereken iş miktarını azaltarak başlangıç performansını artırır. İkili, JIT'nin üreteceği kodla karşılaştırıldığında benzer yerel kodlar içerir. Ancak, R2R ikilileri, bazı senaryolar için hala gerekli olan ara dil (IL) kodu ve aynı kodun yerel sürümünü içerdiğinden daha büyüktür. R2R yalnızca Linux x64 veya Windows x64 gibi belirli çalışma zamanı ortamlarını (RID) hedefleyen bağımsız bir uygulama yayımladığınızda kullanılabilir.
 
 Projenizi ReadyToRun olarak derlemek için aşağıdakileri yapın:
 
-01. `<PublishReadyToRun>` ayarını projenize ekleyin:
+01. Projenize `<PublishReadyToRun>` ayarı ekleyin:
 
     ```xml
     <PropertyGroup>
@@ -190,15 +190,15 @@ Projenizi ReadyToRun olarak derlemek için aşağıdakileri yapın:
     </PropertyGroup>
     ```
 
-01. Kendi içinde bir uygulama yayımlayın. Örneğin, bu komut Windows 'un 64 bit sürümü için kendi kendine içerilen bir uygulama oluşturur:
+01. Bağımsız bir uygulama yayımlayın. Örneğin, bu komut Windows'un 64 bit sürümü için bağımsız bir uygulama oluşturur:
 
     ```dotnetcli
     dotnet publish -c Release -r win-x64 --self-contained
     ```
 
-#### <a name="cross-platformarchitecture-restrictions"></a>Platformlar arası/mimari kısıtlamaları
+#### <a name="cross-platformarchitecture-restrictions"></a>Çapraz platform/mimari kısıtlamaları
 
-ReadyToRun derleyicisi Şu anda çapraz hedefleme 'yi desteklememektedir. Belirli bir hedefte derleme yapmanız gerekir. Örneğin, R2R görüntülerini Windows x64 için istiyorsanız, bu ortamda Yayımla komutunu çalıştırmanız gerekir.
+ReadyToRun derleyicisi şu anda çapraz hedeflemeyi desteklemiyor. Belirli bir hedef üzerinde derlemek gerekir. Örneğin, Windows x64 için R2R görüntüleri istiyorsanız, bu ortamda yayımlama komutunu çalıştırmanız gerekir.
 
 Çapraz hedefleme için özel durumlar:
 
@@ -206,87 +206,87 @@ ReadyToRun derleyicisi Şu anda çapraz hedefleme 'yi desteklememektedir. Belirl
 - Windows x86, Windows ARM32 görüntülerini derlemek için kullanılabilir.
 - Linux x64, Linux ARM32 ve ARM64 görüntülerini derlemek için kullanılabilir.
 
-## <a name="runtimesdk"></a>Çalışma zamanı/SDK
+## <a name="runtimesdk"></a>Çalışma Süresi/SDK
 
-### <a name="major-version-runtime-roll-forward"></a>Büyük sürüm çalışma zamanı ileri
+### <a name="major-version-runtime-roll-forward"></a>Ana sürüm runtime roll forward
 
-.NET Core 3.0, uygulamanızın .NET Core 'un en son ana sürümüne iletmesini sağlayan bir katılım özelliği sunar. Ayrıca, geri alma 'nın uygulamanıza nasıl uygulandığını denetlemek için yeni bir ayar eklenmiştir. Bu, aşağıdaki yollarla yapılandırılabilir:
+.NET Core 3.0, uygulamanızın .NET Core'un en son ana sürümüne ilerlemesini sağlayan bir tercih özelliği sunar. Ayrıca, uygulamanıza nasıl ileri sarma uygulandığını denetlemek için yeni bir ayar eklendi. Bu, aşağıdaki şekillerde yapılandırılabilir:
 
-- Proje dosyası özelliği: `RollForward`
-- Çalışma zamanı yapılandırma dosyası özelliği: `rollForward`
-- Ortam değişkeni: `DOTNET_ROLL_FORWARD`
-- Komut satırı bağımsız değişkeni: `--roll-forward`
+- Proje dosyası özelliği:`RollForward`
+- Çalışma zamanı yapılandırma dosyası özelliği:`rollForward`
+- Ortam değişkeni:`DOTNET_ROLL_FORWARD`
+- Komut satırı bağımsız değişkeni:`--roll-forward`
 
-Aşağıdaki değerlerden biri belirtilmelidir. Ayar atlanırsa, **İkincil** varsayılandır.
+Aşağıdaki değerlerden biri belirtilmelidir. Ayar atlanırsa, **Küçük** varsayılandır.
 
-- **Latestpatch**\
-En yüksek düzeltme eki sürümüne ilet. Bu, ikincil sürüm iletmeyi devre dışı bırakır.
+- **En Son Yama**\
+En yüksek yama sürümüne doğru yuvarlan. Bu, küçük sürümün devrilmelerini devre dışı kılabilir.
 - **Küçük**\
-İstenen alt sürüm eksikse, en düşük düzeydeki sürüme ilet. İstenen ikincil sürüm varsa, **Latestpatch** ilkesi kullanılır.
-- **Ana**\
-İstenen ana sürüm eksikse, en düşük büyük sürüme ve en düşük alt sürüme ileri doğru alın. İstenen ana sürüm varsa, **İkincil** ilke kullanılır.
-- **Latestminor**\
-İstenen alt sürüm mevcut olsa bile en yüksek düzeyde alt sürüme ilet. Bileşen barındırma senaryolarına yöneliktir.
-- **Latestana**\
-İstenen ana mevcut olsa bile, en yüksek büyük ve en yüksek düzeyde alt sürüme ilet. Bileşen barındırma senaryolarına yöneliktir.
-- \ **devre dışı bırak**
-İleri alma. Yalnızca belirtilen sürüme bağlayın. Bu ilke, en son düzeltme eklerine iletme özelliğini devre dışı bıraktığından genel kullanım için önerilmez. Bu değer yalnızca test için önerilir.
+İstenen küçük sürüm eksikse, en düşük yüksek küçük sürüme ilerleyin. İstenen küçük sürüm varsa, **En Son Yama** ilkesi kullanılır.
+- **Büyük**\
+İstenen ana sürüm eksikse, en düşük yüksek ana sürüme ve en düşük küçük sürüme ilerleyin. İstenen ana sürüm varsa, **Küçük** ilke kullanılır.
+- **Son Küçük**\
+İstenen küçük sürüm mevcut olsa bile, en yüksek küçük sürüme ilerleyin. Bileşen barındırma senaryoları için tasarlanmıştır.
+- **Son Major**\
+İstenen büyük sürüm mevcut olsa bile, en yüksek majör ve en yüksek minör sürüme ilerleyin. Bileşen barındırma senaryoları için tasarlanmıştır.
+- **Devre dışı bırakmak**\
+Öne doğru yuvarlanma. Yalnızca belirtilen sürüme bağla. Bu ilke, en son düzeltme ekilerine ilerleme yitirme özelliğini devre dışı kattığı için genel kullanım için önerilmez. Bu değer yalnızca sınama için önerilir.
 
-**Devre dışı bırak** ayarının yanı sıra, tüm ayarlar kullanılabilir en yüksek düzeltme eki sürümünü kullanacaktır.
+Devre **Dışı Atanın** yanı sıra, tüm ayarlar kullanılabilir en yüksek yama sürümünü kullanır.
 
-### <a name="build-copies-dependencies"></a>Derleme kopyaları bağımlılıkları
+### <a name="build-copies-dependencies"></a>Kopya bağımlılıkları oluşturma
 
-`dotnet build` komutu artık, NuGet önbelleğinden uygulamanızın NuGet bağımlılıklarını yapı çıkış klasörüne kopyalar. Daha önce bağımlılıklar yalnızca `dotnet publish`bir parçası olarak kopyalandı.
+Komut `dotnet build` artık NuGet önbelleğinden yapı çıktıklasörüne uygulamanız için NuGet bağımlılıklarını kopyalar. Daha önce, bağımlılıklar yalnızca `dotnet publish`bir parçası olarak kopyalandı.
 
-Bağlama ve Razor sayfası yayımlama gibi bazı işlemler, yayımlamayı gerektirecek şekilde devam eder.
+Bağlantı ve jilet sayfası yayımlama gibi hala yayımlama gerektiren bazı işlemler vardır.
 
-### <a name="local-tools"></a>Yerel Araçlar
+### <a name="local-tools"></a>Yerel araçlar
 
-.NET Core 3.0 yerel araçları tanıtır. Yerel Araçlar [genel araçlara](../tools/global-tools.md) benzerdir, ancak diskte belirli bir konum ile ilişkilendirilir. Yerel araçlar küresel olarak kullanılabilir değildir ve NuGet paketleri olarak dağıtılır.
+.NET Core 3.0 yerel araçları tanıttı. Yerel araçlar [genel araçlara](../tools/global-tools.md) benzer, ancak diskteki belirli bir konumla ilişkilidir. Yerel araçlar genel olarak kullanılamaz ve NuGet paketleri olarak dağıtılır.
 
 > [!WARNING]
-> .NET Core 3,0 Preview 1 ' de `dotnet tool restore` veya `dotnet tool install`çalıştırma gibi yerel araçlar denemediyseniz, yerel araçlar önbellek klasörünü silin. Aksi takdirde, yerel araçlar yeni bir sürümde çalışmaz. Bu klasör şu konumda bulunur:
+> .NET Core 3.0 Preview 1'de yerel araçları `dotnet tool restore` `dotnet tool install`denediyseniz, örneğin çalışma veya yerel araçlar önbelleği klasörünü silin. Aksi takdirde, yerel araçlar daha yeni sürümde çalışmaz. Bu klasör şu adreste bulunur:
 >
-> MacOS 'ta Linux: `rm -r $HOME/.dotnet/toolResolverCache`
+> macOS,Linux'ta:`rm -r $HOME/.dotnet/toolResolverCache`
 >
-> Windows üzerinde: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
+> Windows'da:`rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
 
-Yerel araçlar, geçerli dizininizde `dotnet-tools.json` bir bildirim dosyası adına güvenir. Bu bildirim dosyası, bu klasörde ve altında kullanılabilecek araçları tanımlar. Kodunuzla çalışan herkesin aynı araçları geri yükleyip kullanabilmesini sağlamak için, bildirim dosyasını kodunuzla dağıtabilirsiniz.
+Yerel araçlar, geçerli dizininizdeki bir bildirim dosya adına `dotnet-tools.json` dayanır. Bu bildirim dosyası, o klasörde ve aşağıda bulunabilecek araçları tanımlar. Kodunla çalışan herkesin aynı araçları geri yükleyip kullanabileceğinden emin olmak için bildirim dosyasını kodunuzla birlikte dağıtabilirsiniz.
 
-Hem genel hem de yerel araçlar için, çalışma zamanının uyumlu bir sürümü gereklidir. Şu anda NuGet.org hedef .NET Core çalışma zamanı 2.1 ' de birçok araç. Bu araçları küresel olarak veya yerel olarak yüklemek için, hala [NET Core 2,1 çalışma zamanını](https://dotnet.microsoft.com/download/dotnet-core/2.1)yüklemeniz gerekir.
+Hem genel hem de yerel araçlar için çalışma zamanının uyumlu bir sürümü gereklidir. Şu anda hedef NuGet.org .NET Core Runtime 2.1'de birçok araç. Bu araçları genel olarak veya yerel olarak yüklemek için [NET Core 2.1 Çalışma Zamanı'nı](https://dotnet.microsoft.com/download/dotnet-core/2.1)yüklemeniz gerekir.
 
-### <a name="new-globaljson-options"></a>Yeni Global. JSON seçenekleri
+### <a name="new-globaljson-options"></a>Yeni global.json seçenekleri
 
-*Global. JSON* dosyası, hangi .NET Core SDK sürümünün kullanıldığını tanımlamaya çalışırken daha fazla esneklik sağlayan yeni seçeneklere sahiptir. Yeni seçenekler şunlardır:
+*global.json* dosyası, .NET Core SDK'nın hangi sürümünün kullanıldığını tanımlamaya çalışırken daha fazla esneklik sağlayan yeni seçeneklere sahiptir. Yeni seçenekler şunlardır:
 
-- `allowPrerelease`: SDK Çözümleyicisinin kullanılacak SDK sürümünü seçerken yayın öncesi sürümlerini düşünmesinin gerekip gerekmediğini belirtir.
-- `rollForward`: bir SDK sürümü seçerken kullanılacak yuvarlama ilkesini, belirli bir SDK sürümü eksik olduğunda geri dönüş olarak veya daha yüksek bir sürümü kullanmak için bir yönerge olarak gösterir.
+- `allowPrerelease`: SDK çözümleyicisinin kullanılacak SDK sürümünü seçerken yayın öncesi sürümleri ni göz önünde bulundurması gerekip gerekmediğini gösterir.
+- `rollForward`: Belirli bir SDK sürümü eksikolduğunda veya daha yüksek bir sürümü kullanma yönergesi olarak bir geri dönüş olarak, bir SDK sürümünü seçerken kullanılacak roll-forward ilkesini gösterir.
 
-Varsayılan değerler, desteklenen değerler ve yeni eşleştirme kuralları gibi değişiklikler hakkında daha fazla bilgi için bkz. [Global. JSON genel bakış](../tools/global-json.md).
+Varsayılan değerler, desteklenen değerler ve yeni eşleşen kurallar gibi değişiklikler hakkında daha fazla bilgi için [global.json genel bakış](../tools/global-json.md)bilgisine bakın.
 
-### <a name="smaller-garbage-collection-heap-sizes"></a>Daha küçük atık toplama yığın boyutları
+### <a name="smaller-garbage-collection-heap-sizes"></a>Küçük Çöp Toplama yığın boyutları
 
-Atık toplayıcısının varsayılan yığın boyutu daha az bellek kullanan .NET Core ile sonuçlanır. Bu değişiklik, modern işlemci önbelleği boyutları ile nesil 0 ayırma bütçesine göre daha iyi hizalanır.
+Çöp Toplayıcı'nın varsayılan yığın boyutu azaltıldı ve daha az bellek kullanılarak .NET Core'a neden oldu. Bu değişiklik, modern işlemci önbelleği boyutlarıyla nesil 0 ayırma bütçesiyle daha iyi hizalanır.
 
-### <a name="garbage-collection-large-page-support"></a>Çöp toplama büyük sayfa desteği
+### <a name="garbage-collection-large-page-support"></a>Çöp Toplama Büyük Sayfa desteği
 
-Büyük sayfalar (Linux 'ta çok büyük sayfalar olarak da bilinir), işletim sisteminin bu büyük sayfaları isteyen uygulamanın performansını artırmak için yerel sayfa boyutundan (genellikle 4K) daha büyük bellek bölgeleri ayarlayabildiği bir özelliktir.
+Büyük Sayfalar (Linux'taki Büyük Sayfalar olarak da bilinir), işletim sisteminin bu büyük sayfaları isteyen uygulamanın performansını artırmak için yerel sayfa boyutundan (genellikle 4K) daha büyük bellek bölgeleri oluşturabildiği bir özelliktir.
 
-Çöp toplayıcı artık Windows üzerinde büyük sayfalar ayırmayı seçmek için bir katılım özelliği olarak **Gclargepages** ayarıyla yapılandırılabilir.
+Çöp Toplayıcı artık Windows'da büyük sayfaları ayırmayı seçmek için bir opt-in özelliği olarak **GCLargePages** ayarı ile yapılandırılabilir.
 
 ## <a name="windows-desktop--com"></a>Windows Masaüstü & COM
 
-### <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
+### <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Yükleyici
 
-Windows için MSI Yükleyicisi, .NET Core 3.0 ile başlayarak değiştirilmiştir. SDK yükleyicileri artık SDK özelliği bant sürümlerini yerinde yükseltecektir. Özellik bantları, sürüm numarasının *Patch* bölümündeki *yüzlerce* grupta tanımlanmıştır. Örneğin, **3,0. _101_**  ve **3,0. _201_**  , 3,0 sırasında iki farklı özellik bantlarındaki sürümleridir **. _101_**  ve **3,0. _199_**  aynı özellik bandında. .NET Core SDK **3,0 olduğunda. _101_**  .NET Core SDK yüklendi, **3,0. _100_**  , varsa makineden kaldırılacak. .NET Core SDK **3,0. _200_**  , .NET Core SDK 3,0 ' de aynı makineye yüklendi **. _101_**  kaldırılmaz.
+Windows için MSI yükleyicisi .NET Core 3.0 ile başlayarak değişti. SDK yükleyiciler artık SDK özellik bant sürümlerini yerinde yükseltecektir. Özellik bantları, sürüm numarasının *yama* bölümündeki *yüzlerce* grupta tanımlanır. Örneğin, **3.0._ 101_ ** ve **3.0._ 201_ ** iki farklı özellik bantları sürümleri ise **3.0 vardır._ 101_ ** ve **3.0._ 199_ ** aynı özellik grubunda. Ve, ne zaman .NET Çekirdek SDK **3.0._ 101_ ** yüklü, .NET Çekirdek SDK **3.0._ Varsa 100_ ** makineden çıkarılır. Ne zaman .NET Çekirdek SDK **3.0._ 200_ ** aynı makineye yüklenir, .NET Core SDK **3.0._ 101_ ** kaldırılmayacak.
 
-Sürüm oluşturma hakkında daha fazla bilgi için bkz. [.NET Core 'un sürümü oluşturma konusuna genel bakış](../versions/index.md).
+Sürüm hakkında daha fazla bilgi için [.NET Core'un nasıl sürümlendirilebildiğini](../versions/index.md)öğrenin.
 
 ### <a name="windows-desktop"></a>Windows masaüstü
 
-.NET Core 3.0, Windows Presentation Foundation (WPF) ve Windows Forms kullanarak Windows masaüstü uygulamalarını destekler. Bu çerçeveler ayrıca, Windows UI XAML kitaplığı 'ndan (WinUI) [xaml Adaları](/windows/uwp/xaml-platform/xaml-host-controls)aracılığıyla modern denetimleri ve akıcı stil oluşturmayı da destekler.
+.NET Core 3.0, Windows Presentation Foundation (WPF) ve Windows Formlarını kullanarak Windows masaüstü uygulamalarını destekler. Bu çerçeveler aynı zamanda [XAML adaları](/windows/uwp/xaml-platform/xaml-host-controls)üzerinden Windows UI XAML Kütüphanesi (WinUI) modern denetimler ve Akıcı stil kullanarak destek.
 
-Windows Masaüstü bileşeni, Windows .NET Core 3.0 SDK 'sının bir parçasıdır.
+Windows Desktop bileşeni, Windows .NET Core 3.0 SDK'nın bir parçasıdır.
 
 Aşağıdaki `dotnet` komutlarla yeni bir WPF veya Windows Forms uygulaması oluşturabilirsiniz:
 
@@ -295,15 +295,15 @@ dotnet new wpf
 dotnet new winforms
 ```
 
-Visual Studio 2019, .NET Core 3,0 Windows Forms ve WPF için **Yeni proje** şablonları ekler.
+Visual Studio 2019 ,NET Core 3.0 Windows Forms ve WPF için **Yeni Proje** şablonları ekler.
 
-Mevcut bir .NET Framework uygulamasının bağlantı noktası hakkında daha fazla bilgi için bkz. [bağlantı noktası WPF projeleri](../../desktop-wpf/migration/convert-project-from-net-framework.md) ve [bağlantı noktası Windows Forms projeleri](../porting/winforms.md).
+Varolan bir .NET Framework uygulamasının bağlantı noktası hakkında daha fazla bilgi için Port [WPF projeleri](../../desktop-wpf/migration/convert-project-from-net-framework.md) ve [Bağlantı Noktası Windows Formları projelerine](../porting/winforms.md)bakın.
 
-#### <a name="winforms-high-dpi"></a>WinForms yüksek DPı
+#### <a name="winforms-high-dpi"></a>WinForms yüksek DPI
 
-.NET Core Windows Forms uygulamaları, <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType>yüksek DPı modunu ayarlayabilir. `SetHighDpiMode` yöntemi `Application.Run`önce `App.Manifest` veya P/Invoke gibi başka yollarla ayarlanmamışsa, karşılık gelen yüksek DPı modunu ayarlar.
+.NET Core Windows Forms uygulamaları ile yüksek <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType>DPI modu ayarlayabilirsiniz. Yöntem, `SetHighDpiMode` ayarı daha önce `App.Manifest` `Application.Run`P/Invoke gibi başka yollarla ayarlanmadıkça ilgili yüksek DPI modunu ayarlar.
 
-<xref:System.Windows.Forms.HighDpiMode?displayProperty=nameWithType> numaralandırmasında gösterildiği gibi olası `highDpiMode` değerleri şunlardır:
+Enum `highDpiMode` tarafından ifade edilen olası değerler şunlardır: <xref:System.Windows.Forms.HighDpiMode?displayProperty=nameWithType>
 
 - `DpiUnaware`
 - `SystemAware`
@@ -311,27 +311,27 @@ Mevcut bir .NET Framework uygulamasının bağlantı noktası hakkında daha faz
 - `PerMonitorV2`
 - `DpiUnawareGdiScaled`
 
-Yüksek DPı modları hakkında daha fazla bilgi için bkz. [Windows 'Da yüksek DPI Masaüstü uygulama geliştirme](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows).
+Yüksek DPI modları hakkında daha fazla bilgi için [Windows'da Yüksek DPI Masaüstü Uygulama Geliştirme'ye](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows)bakın.
 
 ### <a name="create-com-components"></a>COM bileşenleri oluşturma
 
-Windows 'ta artık COM çağrılabilir yönetilen bileşenler oluşturabilirsiniz. Bu özellik, .NET Core 'un COM eklenti modelleriyle kullanılması ve ayrıca .NET Framework eşlik sağlanması açısından önemlidir.
+Windows'da artık COM çağrılabilir yönetilen bileşenler oluşturabilirsiniz. Bu özellik, .NET Core'u COM eklenti modelleri ile kullanmak ve aynı zamanda .NET Framework ile eşlik sağlamak için çok önemlidir.
 
-*Mscoree. dll* ' nin com sunucusu olarak kullanıldığı .NET Framework aksine, .NET Core, com bileşenini oluştururken *bin* dizinine yerel bir başlatıcı dll 'si ekler.
+*Mscoree.dll'nin* COM sunucusu olarak kullanıldığı .NET Framework'ün aksine, .NET Core, COM bileşeninizi oluşturduğunuzda *depo* gözüne yerel bir başlatıcı dll ekler.
 
-COM bileşeni oluşturma ve kullanma hakkında bir örnek için bkz. [com tanıtımı](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo).
+Com bileşeninin nasıl oluşturulup tüketilmesine bir örnek [için, COM](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)Demosu'na bakın.
 
-### <a name="windows-native-interop"></a>Windows yerel birlikte çalışma
+### <a name="windows-native-interop"></a>Windows Native Interop
 
-Windows, düz C API 'Leri, COM ve WinRT biçiminde zengin bir yerel API sunar. .NET Core **P/Invoke**'ı destekleirken, .net Core 3,0, **com API 'Leri oluşturma** ve **WinRT API 'leri etkinleştirme**özelliğini ekler. Kod örneği için bkz. [Excel tanıtımı](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).
+Windows düz C API'leri, COM ve WinRT şeklinde zengin bir yerel API sunar. .NET Core **P/Invoke'ı**desteklerken , .NET Core 3.0, **COM API'lerini CoCreate** ve **Activate WinRT API'lerini**etkinleştirme özelliğini ekler. Kod örneği için [Excel Demosu'na](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo)bakın.
 
-### <a name="msix-deployment"></a>MSIX dağıtımı
+### <a name="msix-deployment"></a>MSIX Dağıtım
 
-[Msix](https://docs.microsoft.com/windows/msix/) yeni bir Windows uygulama paketi biçimidir. .NET Core 3.0 masaüstü uygulamalarını Windows 10 ' a dağıtmak için kullanılabilir.
+[MSIX](https://docs.microsoft.com/windows/msix/) yeni bir Windows uygulama paketi biçimidir. .NET Core 3.0 masaüstü uygulamalarını Windows 10'a dağıtmak için kullanılabilir.
 
-Visual Studio 2019 ' de bulunan [Windows uygulama paketleme projesi](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), [kendi kendine içerilen](../deploying/index.md#publish-self-contained) .NET Core uygulamalarıyla msix paketi oluşturmanıza olanak sağlar.
+Visual Studio 2019'da bulunan [Windows Uygulama Paketleme Projesi,](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net) [bağımsız](../deploying/index.md#publish-self-contained) .NET Core uygulamalarıyla MSIX paketleri oluşturmanıza olanak tanır.
 
-.NET Core proje dosyası `<RuntimeIdentifiers>` özelliğindeki desteklenen çalışma zamanlarını belirtmelidir:
+.NET Core proje `<RuntimeIdentifiers>` dosyasında, özellikteki desteklenen çalışma sürelerini belirtilmelidir:
 
 ```xml
 <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
@@ -341,96 +341,96 @@ Visual Studio 2019 ' de bulunan [Windows uygulama paketleme projesi](https://doc
 
 ### <a name="serialport-for-linux"></a>Linux için SerialPort
 
-.NET Core 3,0, Linux üzerinde <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> için temel destek sağlar.
+.NET Core 3.0 Linux <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> için temel destek sağlar.
 
-Daha önce .NET Core yalnızca Windows üzerinde `SerialPort` kullanılarak desteklenir.
+Daha önce,.NET Core yalnızca `SerialPort` Windows'da kullanılarak desteklenirdi.
 
-Linux 'ta seri bağlantı noktası için sınırlı destek hakkında daha fazla bilgi için bkz. [GitHub sorun #33146](https://github.com/dotnet/corefx/issues/33146).
+Linux'taki seri bağlantı noktası için sınırlı destek hakkında daha fazla bilgi için [#33146 GitHub sorununa](https://github.com/dotnet/corefx/issues/33146)bakın.
 
-### <a name="docker-and-cgroup-memory-limits"></a>Docker ve cgroup bellek sınırları
+### <a name="docker-and-cgroup-memory-limits"></a>Docker ve cgroup bellek Sınırları
 
-Docker ile Linux üzerinde .NET Core 3.0 çalıştırmak, cgroup bellek limitleriyle daha iyi çalışır. `docker run -m`gibi bellek limitleriyle Docker kapsayıcısını çalıştırmak, .NET Core 'un davranış şeklini değiştirir.
+Docker ile Linux'ta .NET Core 3.0'ı çalıştırmak cgroup bellek limitleri ile daha iyi çalışır. .NET Core gibi bellek sınırları `docker run -m`içeren bir Docker kapsayıcısı çalıştırmak, .NET Core'un nasıl çalıştığını değiştirir.
 
-- Varsayılan atık toplayıcı (GC) yığın boyutu: kapsayıcıda bellek sınırının en fazla 20 MB veya %75 ' si.
-- Açık Boyut, mutlak bir sayı veya cgroup sınırının yüzdesi olarak ayarlanabilir.
-- GC yığını başına en düşük ayrılmış kesim boyutu 16 MB 'tır. Bu boyut, makinelerde oluşturulan Heap sayısını azaltır.
+- Varsayılan Çöp Toplayıcı (GC) yığın boyutu: en fazla 20 mb veya kapsayıcıdaki bellek sınırının %75'i.
+- Açık boyut mutlak bir sayı veya cgroup sınırı yüzdesi olarak ayarlanabilir.
+- GC yığını başına en az ayrılmış segment boyutu 16 mb'dır. Bu boyut, makinelerde oluşturulan yığın sayısını azaltır.
 
-### <a name="gpio-support-for-raspberry-pi"></a>Raspberry PI için GıO desteği
+### <a name="gpio-support-for-raspberry-pi"></a>Raspberry Pi için GPIO Desteği
 
-NuGet 'e GıO programlama için kullanabileceğiniz iki paket yayımlanmıştır:
+GPIO programlama için kullanabileceğiniz NuGet'e iki paket yayımlanmıştır:
 
-- [System. Device. GIO](https://www.nuget.org/packages/System.Device.Gpio)
-- [IoT. Device. Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
+- [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
+- [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
 
-GPıO paketleri, *GIO*, *SPI*, *I2C*ve *PWM* cihazları için API 'ler içerir. IoT bağlamaları paketi cihaz bağlamalarını içerir. Daha fazla bilgi için bkz. [cihaz GitHub deposu](https://github.com/dotnet/iot/blob/master/src/devices/).
+GPIO paketleri *GPIO,* *SPI,* *I2C*ve *PWM* cihazları için API'leri içerir. IoT bağlama paketi aygıt bağlamalarını içerir. Daha fazla bilgi için [GitHub repo cihazlarına](https://github.com/dotnet/iot/blob/master/src/devices/)bakın.
 
 ### <a name="arm64-linux-support"></a>ARM64 Linux desteği
 
-.NET Core 3.0, Linux için ARM64 desteği ekler. ARM64 için birincil kullanım örneği şu anda IoT senaryolarıyla birlikte. Daha fazla bilgi için bkz. [.NET Core ARM64 Status](https://github.com/dotnet/announcements/issues/82).
+.NET Core 3.0, Linux için ARM64 desteği ne kadar ekler. ARM64 için birincil kullanım örneği şu anda IoT senaryoları ile. Daha fazla bilgi için [bkz.](https://github.com/dotnet/announcements/issues/82)
 
-[ARM64 üzerinde .NET Core Için Docker görüntüleri](https://hub.docker.com/r/microsoft/dotnet/) alp, de, ve Ubuntu için kullanılabilir.
+[ARM64'teki .NET Core için Docker görüntüleri](https://hub.docker.com/r/microsoft/dotnet/) Alpine, Debian ve Ubuntu için kullanılabilir.
 
 > [!NOTE]
 > **ARM64** Windows desteği henüz kullanılamıyor.
 
 ## <a name="security"></a>Güvenlik
 
-### <a name="tls-13--openssl-111-on-linux"></a>TLS 1.3 & Linux üzerinde OpenSSL 1.1.1
+### <a name="tls-13--openssl-111-on-linux"></a>TLS 1.3 & Linux'ta OpenSSL 1.1.1
 
-.NET Core artık, belirli bir ortamda kullanılabildiği [OpenSSL 1.1.1 Içindeki TLS 1,3 desteğinin](https://www.openssl.org/blog/blog/2018/09/11/release111/)avantajlarından yararlanır. TLS 1.3:
+.NET Core artık [OpenSSL 1.1.1'de belirli](https://www.openssl.org/blog/blog/2018/09/11/release111/)bir ortamda mevcut olduğunda TLS 1.3 desteğinden yararlanıyor. TLS 1.3 ile:
 
-- İstemci ve sunucu arasında gereken azaltılan gidiş dönüşlerle bağlantı süreleri geliştirildi.
-- Kullanılmayan ve güvenli olmayan şifreleme algoritmalarının kaldırılması nedeniyle güvenlik geliştirildi.
+- Bağlantı süreleri, istemci ve sunucu arasında gereken azaltılmış gidiş dönüşlerle iyileştirilir.
+- Çeşitli eski ve güvensiz şifreleme algoritmalarının kaldırılması nedeniyle geliştirilmiş güvenlik.
 
-Kullanılabilir olduğunda, .NET Core 3,0 bir Linux sisteminde **OpenSSL 1.1.1**, **OpenSSL 1.1.0**veya **OpenSSL 1.0.2** kullanır. **OpenSSL 1.1.1** kullanılabilir olduğunda, hem <xref:System.Net.Security.SslStream?displayProperty=nameWithType> hem de <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> türleri **TLS 1,3** kullanır (istemci ve sunucunun **TLS 1,3**' i desteklediği varsayılır).
+Kullanılabilir olduğunda, .NET Core 3.0, Linux sisteminde **OpenSSL 1.1.1**, **OpenSSL 1.1.0**veya **OpenSSL 1.0.2** kullanır. **OpenSSL 1.1.1** kullanılabilir <xref:System.Net.Security.SslStream?displayProperty=nameWithType> olduğunda, <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> hem **tls 1.3'ü** hem de türleri kullanır (hem istemci hem de sunucu nun **TLS 1.3'ü**desteklediğini varsayarsak).
 
 > [!IMPORTANT]
-> Windows ve macOS henüz **TLS 1,3**' i desteklemez. .NET Core 3,0, destek kullanılabilir hale geldiğinde bu işletim sistemlerinde **TLS 1,3** ' i destekleyecektir.
+> Windows ve macOS henüz **TLS 1.3'u**destekletmiyor. .NET Core 3.0, destek sunulduğunda bu işletim sistemlerinde **TLS 1.3'u** destekleyecektir.
 
-Aşağıdaki C# 8,0 örneği, <https://www.cloudflare.com>bağlanan Ubuntu 18,10 üzerinde .net Core 3,0 ' i göstermektedir:
+Aşağıdaki C# 8.0 örneği Ubuntu 18.10'da .NET Core <https://www.cloudflare.com>3.0'ı gösterir:
 
 [!code-csharp[TLSExample](~/samples/snippets/core/whats-new/whats-new-in-30/cs/TLS.cs#TLS)]
 
-### <a name="cryptography-ciphers"></a>Şifreleme şifrelemeleri
+### <a name="cryptography-ciphers"></a>Şifreleme şifreleri
 
-.NET 3,0, sırasıyla <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> ve <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType> ile uygulanan **AES-GCM** ve **AES-CCM** şifrelemeleri için destek ekler. Bu algoritmalar, [Ilişki verileri (AEAD) algoritmalarıyla kimliği doğrulanmış şifrelemedir](https://en.wikipedia.org/wiki/Authenticated_encryption).
+.NET <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> 3.0, <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType> sırasıyla ve sırasıyla uygulanan **AES-GCM** ve **AES-CCM** şifreleri için destek ekler. Bu algoritmalar, [ilişkilendirme verileri (AEAD) algoritmaları ile kimlik doğrulaması şifreleme vardır.](https://en.wikipedia.org/wiki/Authenticated_encryption)
 
-Aşağıdaki kod, rastgele verileri şifrelemek ve şifrelerini çözmek için `AesGcm` şifre kullanımını gösterir.
+Aşağıdaki kod, rasgele `AesGcm` verileri şifrelemek ve çözmek için şifreyi kullanarak gösterir.
 
 [!code-csharp[AesGcm](~/samples/snippets/core/whats-new/whats-new-in-30/cs/Cipher.cs#AesGcm)]
 
-### <a name="cryptographic-key-importexport"></a>Şifreleme anahtarı Içeri/dışarı aktarma
+### <a name="cryptographic-key-importexport"></a>Şifreleme Anahtarı İthalat/Verme
 
-.NET Core 3.0, asimetrik ortak ve özel anahtarların standart biçimlerden içeri ve dışarı aktarılmasını destekler. X. 509.440 sertifikası kullanmanız gerekmez.
+.NET Core 3.0, standart biçimlerden asimetrik ortak ve özel anahtarların ithalat ve dışa aktarını destekler. X.509 sertifikası kullanmanız gerekmez.
 
-*RSA*, *dsa*, *ECDSA*ve *ecdıfıfiehellman*gibi tüm anahtar türleri aşağıdaki biçimleri destekler:
+*RSA,* *DSA,* *ECDsa*ve *ECDiffieHellman*gibi tüm anahtar türleri aşağıdaki biçimleri destekler:
 
-- **Ortak anahtar**
-  - X. 509.440 Subjectpublickeyınfo
-
-- **Özel anahtar**
-  - PKCS # 8 Privatekeyınfo
-  - PKCS # 8 Encryptedprivatekeyınfo
-
-RSA anahtarları da şunları destekler:
-
-- **Ortak anahtar**
-  - PKCS # 1 RSAPublicKey
+- **Ortak Anahtar**
+  - X.509 KonuPublicKeyInfo
 
 - **Özel anahtar**
-  - PKCS # 1 RSAPrivateKey
+  - PKCS#8 PrivateKeyInfo
+  - PKCS#8 ŞifreliPrivateKeyInfo
 
-Dışarı aktarma yöntemleri DER kodlu ikili veriler oluşturur ve içeri aktarma yöntemleri aynı şekilde bekler. Bir anahtar, metin kullanımı kolay pek biçiminde depolanıyorsa, bir içeri aktarma yöntemi çağrılmadan önce çağıranın içerik Base64 olarak çözülmesi gerekecektir.
+RSA tuşları da destekler:
+
+- **Ortak Anahtar**
+  - PKCS#1 RSAPublicKey
+
+- **Özel anahtar**
+  - PKCS#1 RSAPrivateKey
+
+Dışa aktarma yöntemleri DER kodlu ikili veri üretir ve alma yöntemleri de aynı şeyi bekler. Bir anahtar metin dostu PEM biçiminde depolanırsa, arayanın alma yöntemini aramadan önce içeriği temel olarak 64-decode'u çözmesi gerekir.
 
 [!code-csharp[RSA](~/samples/snippets/core/whats-new/whats-new-in-30/cs/RSA.cs#Rsa)]
 
-**PKCS # 8** dosyaları <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo?displayProperty=nameWithType> ile incelenebilir ve **PFX/PKCS # 12** dosyaları <xref:System.Security.Cryptography.Pkcs.Pkcs12Info?displayProperty=nameWithType>ile incelenebilir. **PFX/PKCS # 12** dosyaları <xref:System.Security.Cryptography.Pkcs.Pkcs12Builder?displayProperty=nameWithType>ile yönetilebilir.
+**PKCS#8** dosyaları ile <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo?displayProperty=nameWithType> kontrol edilebilir ve **PFX/PKCS#12** dosyaları <xref:System.Security.Cryptography.Pkcs.Pkcs12Info?displayProperty=nameWithType>ile kontrol edilebilir. **PFX/PKCS#12** dosyaları ile <xref:System.Security.Cryptography.Pkcs.Pkcs12Builder?displayProperty=nameWithType>manipüle edilebilir.
 
-## <a name="net-core-30-api-changes"></a>.NET Core 3,0 API değişiklikleri
+## <a name="net-core-30-api-changes"></a>.NET Core 3.0 API değişiklikleri
 
-### <a name="ranges-and-indices"></a>Aralıklar ve dizinler
+### <a name="ranges-and-indices"></a>Aralıklar ve endeksler
 
-Yeni <xref:System.Index?displayProperty=nameWithType> türü dizin oluşturmak için kullanılabilir. Baştan itibaren sayı olan bir `int` veya sonuna kadar olan önek `^` işleci (C#) ile bir tane oluşturabilirsiniz:
+Yeni <xref:System.Index?displayProperty=nameWithType> tür dizin oluşturma için kullanılabilir. En başından veya `int` sondan sayılan bir önek `^` işlecinden (C#) bir tane oluşturabilirsiniz:
 
 ```csharp
 Index i1 = 3;  // number 3 from beginning
@@ -439,19 +439,19 @@ int[] a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 Console.WriteLine($"{a[i1]}, {a[i2]}"); // "3, 6"
 ```
 
-Ayrıca, biri başlangıç ve diğeri son için olmak üzere iki `Index` değerinden oluşan <xref:System.Range?displayProperty=nameWithType> türü de vardır ve bir `x..y` Range ifadesiyle (C#) yazılabilir. Daha sonra bir dilim üreten `Range`dizin oluşturabilirsiniz:
+Ayrıca, <xref:System.Range?displayProperty=nameWithType> biri başlangıç, diğeri bitiş `Index` için olmak üzere iki değerden oluşan ve `x..y` aralık ifadesi (C#) ile yazılabilir. Daha sonra bir `Range`dilim üreten bir , ile dizine yapabilirsiniz:
 
 ```csharp
 var slice = a[i1..i2]; // { 3, 4, 5 }
 ```
 
-Daha fazla bilgi için [aralıklar ve dizinler öğreticisine](../../csharp/tutorials/ranges-indexes.md)bakın.
+Daha fazla bilgi [için, aralıkları ve endeksleri öğretici](../../csharp/tutorials/ranges-indexes.md)bakın.
 
 ### <a name="async-streams"></a>Zaman uyumsuz akışlar
 
-<xref:System.Collections.Generic.IAsyncEnumerable%601> türü, <xref:System.Collections.Generic.IEnumerable%601>yeni bir zaman uyumsuz sürümüdür. Dil, öğelerini tüketmek için `IAsyncEnumerable<T>` `await foreach` ve öğeleri oluşturmak için `yield return` kullanmayı sağlar.
+Türü <xref:System.Collections.Generic.IAsyncEnumerable%601> yeni bir asynchronous <xref:System.Collections.Generic.IEnumerable%601>sürümüdür. Dil, `await foreach` öğelerini `IAsyncEnumerable<T>` tüketmenizi ve `yield return` bunları kullanarak öğeleri oluşturmanızı sağlar.
 
-Aşağıdaki örnek, zaman uyumsuz akışların hem üretimini hem de tüketimini gösterir. `foreach` deyimleri zaman uyumsuz ve kendisi çağıranlar için zaman uyumsuz akış üretmek için `yield return` kullanır. Bu model (`yield return`kullanarak), zaman uyumsuz akışlar üretmek için önerilen modeldir.
+Aşağıdaki örnek, async akışlarının hem üretimini hem de tüketimini göstermektedir. `foreach` İfade async ve kendisi `yield return` arayanlar için bir async akışı oluşturmak için kullanır. Bu desen `yield return`(kullanarak) async akışları üretmek için önerilen modeldir.
 
 ```csharp
 async IAsyncEnumerable<int> GetBigResultsAsync()
@@ -463,54 +463,54 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 }
 ```
 
-`await foreach`Ayrıca, zaman uyumsuz yineleyiciler oluşturabilirsiniz, örneğin, hem `await` hem de `yield` `IAsyncEnumerable/IAsyncEnumerator` döndüren bir yineleyici. Atılmalıdır nesneler için, `Stream` ve `Timer`gibi çeşitli BCL türlerini uygulayan `IAsyncDisposable`kullanabilirsiniz.
+Yapabilmenin `await foreach`yanı sıra, async yineleyicileri de oluşturabilirsiniz, örneğin, hem de `IAsyncEnumerable/IAsyncEnumerator` `await` `yield` içinde oluşturabileceğiniz bir yineleme yi döndürebilir. Atılması gereken nesneler için, `IAsyncDisposable`çeşitli BCL türlerinin uyguladığı `Stream` ve . `Timer`
 
-Daha fazla bilgi için bkz. [zaman uyumsuz akışlar öğreticisi](../../csharp/tutorials/generate-consume-asynchronous-stream.md).
+Daha fazla bilgi [için, async akışları öğretici](../../csharp/tutorials/generate-consume-asynchronous-stream.md)bakın.
 
-### <a name="ieee-floating-point"></a>IEEE kayan nokta
+### <a name="ieee-floating-point"></a>IEEE Kayan nokta
 
-Kayan nokta API 'Leri, [ıeee 754-2008 düzeltmesine](https://en.wikipedia.org/wiki/IEEE_754-2008_revision)uymak üzere güncelleştiriliyor. Bu değişikliklerin amacı, tüm **gerekli** işlemleri kullanıma sunmaktır ve DAVRANıŞSAL 'in IEEE spec ile uyumlu olduklarından emin olmaktır. Kayan nokta iyileştirmeleri hakkında daha fazla bilgi için bkz. [.NET Core 3,0 blog gönderisine kayan nokta ayrıştırma ve biçimlendirme geliştirmeleri](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) .
+Kayan nokta API'leri [IEEE 754-2008 revizyonuna](https://en.wikipedia.org/wiki/IEEE_754-2008_revision)uyacak şekilde güncellenmektedir. Bu değişikliklerin amacı, **gerekli** tüm işlemleri ortaya çıkarmak ve iEEE spec ile davranışsal olarak uyumlu olduğundan emin olmaktır. Kayan nokta iyileştirmeleri hakkında daha fazla bilgi için [.NET Core 3.0 blog gönderisindeki Kayan Nokta Ayrıştırma ve Biçimlendirme geliştirmelerine](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) bakın.
 
-Ayrıştırma ve biçimlendirme düzeltmeleri şunları içerir:
+Ayrışma ve biçimlendirme düzeltmeleri şunlardır:
 
-- Her uzunlukta doğru şekilde ayrıştırma ve yuvarlama girişleri.
-- Doğru şekilde ayrıştırır ve negatif sıfır biçimlendirir.
-- Büyük/küçük harfe duyarsız bir denetim yaparak `Infinity` ve `NaN` doğru bir şekilde ayrıştırarak uygun yerlerde daha önce isteğe bağlı bir `+` sağlar.
+- Herhangi bir uzunluktaki girişleri doğru bir şekilde ayrıştın ve yuvarlatın.
+- Doğru ayrışdırın ve biçim negatif sıfır.
+- Doğru `Infinity` ayrışdırma `NaN` ve büyük/küçük harf duyarsız kontrol yaparak `+` ve varsa isteğe bağlı bir önceki izin.
 
-Yeni <xref:System.Math?displayProperty=nameWithType> API 'Leri şunlardır:
+Yeni <xref:System.Math?displayProperty=nameWithType> API'ler şunlardır:
 
-- <xref:System.Math.BitIncrement(System.Double)> ve <xref:System.Math.BitDecrement(System.Double)>\
-`nextUp` ve `nextDown` IEEE işlemlerine karşılık gelir. Bunlar, girdiden daha büyük veya daha az (sırasıyla) karşılaştıran en küçük kayan nokta numarasını döndürür. Örneğin, `Math.BitIncrement(0.0)` `double.Epsilon`döndürür.
+- <xref:System.Math.BitIncrement(System.Double)>Ve<xref:System.Math.BitDecrement(System.Double)>\
+IEEE `nextDown` ve `nextUp` IEEE işlemlerine karşılık gelir. Girişten (sırasıyla) daha büyük veya daha az olan en küçük kayan nokta numarasını döndürerler. Örneğin, `Math.BitIncrement(0.0)` döndürecek. `double.Epsilon`
 
-- <xref:System.Math.MaxMagnitude(System.Double,System.Double)> ve <xref:System.Math.MinMagnitude(System.Double,System.Double)>\
-`maxNumMag` ve `minNumMag` IEEE işlemlerine karşılık gelir, iki girişin (sırasıyla) büyüklüğüne eşit veya daha küçük olan değeri döndürür. Örneğin, `Math.MaxMagnitude(2.0, -3.0)` `-3.0`döndürür.
+- <xref:System.Math.MaxMagnitude(System.Double,System.Double)>Ve<xref:System.Math.MinMagnitude(System.Double,System.Double)>\
+Ve `minNumMag` IEEE `maxNumMag` işlemlerine karşılık gelir, iki girdinin (sırasıyla) büyüklüğü daha büyük veya daha az olan değeri döndürerler. Örneğin, `Math.MaxMagnitude(2.0, -3.0)` döndürecek. `-3.0`
 
 - <xref:System.Math.ILogB(System.Double)>\
-Bir integral değer döndüren `logB` IEEE işlemine karşılık gelir, giriş parametresinin tamsayı tabanı 2 günlüğünü döndürür. Bu yöntem `floor(log2(x))`ile aynı şekilde, ancak en az yuvarlama hatasıyla yapılır.
+İntegral `logB` değeri döndüren IEEE işlemine karşılık gelir, giriş parametresinin integral taban-2 log'u verir. Bu yöntem, etkili olarak `floor(log2(x))`aynıdır , ancak en az yuvarlama hatası ile yapılır.
 
 - <xref:System.Math.ScaleB(System.Double,System.Int32)>\
-Tamsayı değer alan `scaleB` IEEE işlemine karşılık gelir, etkin `x * pow(2, n)`döndürür, ancak en az yuvarlama hatasıyla yapılır.
+Ayrılmaz bir `scaleB` değer alan IEEE işlemine karşılık gelir, etkili bir şekilde `x * pow(2, n)`döner, ancak en az yuvarlama hatası ile yapılır.
 
 - <xref:System.Math.Log2(System.Double)>\
-`log2` IEEE işlemine karşılık gelen, Base-2 logaritmasını döndürür. Yuvarlama hatasını en aza indirir.
+`log2` IEEE işlemine karşılık gelir, baz-2 logaritmasını döndürür. Yuvarlama hatalarını en aza indirir.
 
 - <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
-`fma` IEEE işlemine karşılık gelir, bir fkullanılan çarpma eklemesi gerçekleştirir. Yani, tek bir işlem olarak `(x * y) + z`, böylece yuvarlama hatasını en aza indirir. Örnek, `1e308`döndüren `FusedMultiplyAdd(1e308, 2.0, -1e308)`. Normal `(1e308 * 2.0) - 1e308` `double.PositiveInfinity`döndürür.
+`fma` IEEE işlemine karşılık gelir, erimiş çarpma ekleme gerçekleştirir. Diğer bir şey, tek bir işlem olarak, `(x * y) + z` yuvarlama hatasını en aza indirir. Bir örnek `FusedMultiplyAdd(1e308, 2.0, -1e308)`, `1e308`hangi döner . Düzenli `(1e308 * 2.0) - 1e308` döner `double.PositiveInfinity`.
 
 - <xref:System.Math.CopySign(System.Double,System.Double)>\
-`copySign` IEEE işlemine karşılık gelen `x`değerini, ancak `y`işaretini döndürür.
+`copySign` IEEE işlemine karşılık gelir, değerini `x`döndürür, ancak `y`işareti ile .
 
-### <a name="net-platform-dependent-intrinsics"></a>.NET platforma bağımlı Iç bilgiler
+### <a name="net-platform-dependent-intrinsics"></a>.NET Platformuna Bağımlı İçsel
 
-**SIMD** veya **bit işleme yönergesi** kümeleri gıbı belirli performans yönelimli CPU yönergelerine erişime izin veren API 'ler eklenmiştir. Bu yönergeler, verileri paralel şekilde işleme gibi belirli senaryolarda önemli performans geliştirmeleri elde etmenize yardımcı olabilir.
+**SIMD** veya **Bit İşleme yönergesi** kümeleri gibi belirli perf odaklı CPU yönergelerine erişime izin veren API'ler eklendi. Bu yönergeler, verileri paralel olarak verimli bir şekilde işleme gibi belirli senaryolarda önemli performans iyileştirmeleri elde edilebilebilir.
 
-Uygun durumlarda, .NET kitaplıkları performansı artırmak için bu yönergeleri kullanmaya başlamıştır.
+Uygun olduğu durumlarda, .NET kitaplıkları performansı artırmak için bu yönergeleri kullanmaya başladı.
 
-Daha fazla bilgi için bkz. [.NET platformu bağımlı iç](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md)öğeleri.
+Daha fazla bilgi için [bkz.](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md)
 
-### <a name="improved-net-core-version-apis"></a>Geliştirilmiş .NET Core sürümü API 'Leri
+### <a name="improved-net-core-version-apis"></a>Geliştirilmiş .NET Çekirdek Sürüm API'leri
 
-.NET Core 3.0 ile başlayarak, .NET Core ile birlikte sunulan sürüm API 'Leri artık istediğiniz bilgileri döndürür. Örnek:
+.NET Core 3.0 ile başlayarak,.NET Core ile sağlanan sürüm API'leri artık beklediğiniz bilgileri döndürün. Örnek:
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");
@@ -533,35 +533,35 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 ```
 
 > [!WARNING]
-> Son değişiklik. Bu teknik açıdan önemli bir değişiklik olduğundan, sürüm oluşturma düzeni değişti.
+> Değişimi bozuyor. Sürüm düzeni değiştiğinden, bu teknik olarak bir son landırma değişikliğidir.
 
-### <a name="fast-built-in-json-support"></a>Hızlı yerleşik JSON desteği
+### <a name="fast-built-in-json-support"></a>Hızlı dahili JSON desteği
 
-.NET Kullanıcıları [Newtonsoft. JSON](https://www.newtonsoft.com/json) ve DIĞER popüler JSON kitaplıklarına büyük ölçüde güvendi ve bu da iyi seçimler olmaya devam eder. `Newtonsoft.Json`, temel veri türü olarak .NET dizelerini kullanır, bu da arada bulunan UTF-16 ' dır.
+.NET kullanıcıları büyük ölçüde [newtonsoft.Json](https://www.newtonsoft.com/json) ve diğer popüler JSON kütüphaneler, iyi seçimler olmaya devam güvendi. `Newtonsoft.Json`kaputun altındaki UTF-16 olan temel veri türü olarak .NET dizeleri kullanır.
 
-Yeni yerleşik JSON desteği yüksek performanslı, düşük ayırma, UTF-8 kodlu JSON metniyle birlikte çalışıyor. <xref:System.Text.Json> ad alanı ve türleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
+Yeni yerleşik JSON desteği yüksek performanslı, düşük tahsisat ve UTF-8 kodlanmış JSON metni ile çalışır. <xref:System.Text.Json> Ad alanı ve türleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-* [.NET 'te JSON serileştirme-genel bakış](../../standard/serialization/system-text-json-overview.md)
-* [.Net 'TE JSON serileştirmek ve serisini kaldırma](../../standard/serialization/system-text-json-how-to.md).
-* [Newtonsoft. JSON 'dan System. Text. JSON 'a geçiş](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
+* [.NET'te JSON serileştirme - genel bakış](../../standard/serialization/system-text-json-overview.md)
+* [JSON'u .NET'te seri hale getirmek ve deserialize etmek için .](../../standard/serialization/system-text-json-how-to.md)
+* [Newtonsoft.Json'dan System.Text.Json'a nasıl göç edilir?](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
 
 ### <a name="http2-support"></a>HTTP/2 desteği
 
-<xref:System.Net.Http.HttpClient?displayProperty=nameWithType> türü HTTP/2 protokolünü destekler. HTTP/2 etkinse HTTP protokol sürümü TLS/ALPN aracılığıyla görüşülür ve sunucunun bunu kullanabilmesi durumunda HTTP/2 kullanılır.
+Tür <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> HTTP/2 protokolünü destekler. HTTP/2 etkinse, HTTP protokol sürümü TLS/ALPN üzerinden görüşülür ve sunucu kullanmayı seçerse HTTP/2 kullanılır.
 
-Varsayılan protokol HTTP/1.1 olarak kalır, ancak HTTP/2 iki farklı şekilde etkinleştirilebilir. İlk olarak http istek iletisini HTTP/2 kullanacak şekilde ayarlayabilirsiniz:
+Varsayılan protokol HTTP/1.1 olarak kalır, ancak HTTP/2 iki farklı şekilde etkinleştirilebilir. İlk olarak, HTTP/2'yi kullanacak şekilde HTTP istek iletisini ayarlayabilirsiniz:
 
 [!code-csharp[Http2Request](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Request)]
 
-İkinci olarak, <xref:System.Net.Http.HttpClient> varsayılan olarak HTTP/2 kullanacak şekilde değiştirebilirsiniz:
+İkinci olarak, <xref:System.Net.Http.HttpClient> varsayılan olarak HTTP/2'yi kullanmak üzere değiştirebilirsiniz:
 
 [!code-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
 
-Uygulama geliştirirken birçok kez şifrelenmemiş bağlantı kullanmak istersiniz. Hedef uç noktanın HTTP/2 kullanacağınızı biliyorsanız, HTTP/2 için şifrelenmemiş bağlantıları açabilirsiniz. `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT` ortam değişkenini `1` ya da uygulama bağlamında etkinleştirerek etkinleştirebilirsiniz:
+Çoğu zaman bir uygulama geliştirirken, şifrelenmemiş bir bağlantı kullanmak istersiniz. Hedef uç noktanın HTTP/2'yi kullandığını biliyorsanız, HTTP/2 için şifrelenmemiş bağlantıları açabilirsiniz. Ortam değişkenini `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT` ayarlayarak `1` veya uygulama bağlamında etkinleştirerek açabilirsiniz:
 
 [!code-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [.NET Core 2,2 ve 3,0 arasındaki son değişiklikleri gözden geçirin.](../compatibility/2.2-3.0.md)
-- [Windows Forms uygulamalar için .NET Core 3,0 'deki son değişiklikleri gözden geçirin.](../compatibility/winforms.md#net-core-30)
+- [.NET Core 2.2 ve 3.0 arasındaki kesme değişikliklerini gözden geçirin.](../compatibility/2.2-3.0.md)
+- [Windows Forms uygulamaları için .NET Core 3.0'daki son dakika değişikliklerini gözden geçirin.](../compatibility/winforms.md#net-core-30)

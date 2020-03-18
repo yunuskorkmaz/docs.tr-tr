@@ -1,21 +1,21 @@
 ---
-title: CSV dosyalarından XML oluşturma (C#)
+title: CSV dosyalarından XML nasıl üretilir (C#)
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
 ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635814"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a>CSV dosyalarından XML oluşturma (C#)
-Bu örnek, bir virgülle ayrılmış değer (CSV) dosyasından bir XML dosyası oluşturmak için dil ile tümleşik sorgu (LINQ) ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kullanmayı gösterir.  
+# <a name="how-to-generate-xml-from-csv-files-c"></a>CSV dosyalarından XML nasıl üretilir (C#)
+Bu örnek, Dil-Tümleşik Sorgu 'nun [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] (LINQ) nasıl kullanılacağını ve virgülle ayrılmış bir değer (CSV) dosyasından bir XML dosyası oluşturmayı gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, bir dize dizisi üzerinde bir LINQ sorgusu gerçekleştirir.  
+ Aşağıdaki kod dizeleri bir dizi bir LINQ sorgusu gerçekleştirir.  
   
- Sorgu, her dizeyi bir alan dizisine bölmek için `let` yan tümcesini kullanır.  
+ Sorgu, her `let` dizeyi bir dizi alana bölmek için yan tümceyi kullanır.  
   
 ```csharp  
 // Create the text file.  

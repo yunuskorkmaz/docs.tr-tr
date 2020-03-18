@@ -1,28 +1,28 @@
 ---
 ms.openlocfilehash: 9583d868ee01117d7bd6e465e7d89a734489d1a8
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449238"
 ---
-### <a name="boolean-parameter-of-signedcmscomputesignature-is-respected"></a>SignedCms. ComputeSignature Boolean parametresi dikkate alındı
+### <a name="boolean-parameter-of-signedcmscomputesignature-is-respected"></a>İmzaCms.ComputeSignature boolean parametre saygı duyulur
 
-.NET Core 'da <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> yönteminin Boole `silent` parametresi kullanılır. Bu parametre `true`olarak ayarlandıysa bir PIN istemi gösterilmez.
+.NET Core'da yöntemin `silent` Boolean <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> parametresi saygı duyulur. Bu parametre ' ye `true`ayarlanmışsa PIN istemi gösterilmez.
 
-#### <a name="change-description"></a>Açıklamayı Değiştir
+#### <a name="change-description"></a>Açıklamayı değiştir
 
-.NET Framework, <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> yönteminin `silent` parametresi yok sayılır ve sağlayıcı tarafından gerekliyse bir PIN istemi her zaman gösterilir. .NET Core 'da `silent` parametresi dikkate alınsa da, `true`olarak ayarlanırsa, sağlayıcı için gerekli olsa bile bir PIN istemi gösterilmez.
+.NET Framework'de `silent` yöntemin <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> parametresi yoksayılır ve sağlayıcı tarafından gerekirse her zaman pin istemi gösterilir. .NET Core'da `silent` parametreye saygı gösterilir ve `true`ayarlanmışsa, sağlayıcı tarafından gerekli olsa bile pin istemi hiçbir zaman gösterilmez.
 
-CMS/PKCS #7 iletileri için destek, sürüm 2,1 ' de .NET Core ' a eklenmiştir.
+CMS/PKCS #7 mesajları için destek .NET Core sürüm 2.1'de tanıtıldı.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
 2.1
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Gerektiğinde bir PIN isteminin göründüğünden emin olmak için, masaüstü uygulamaları <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> çağırmalıdır ve Boole parametresini `false`olarak ayarlar. Elde edilen davranış, sessiz bağlamın orada devre dışı bırakılıp bırakılmadığına bakılmaksızın .NET Framework.
+Gerekirse PIN isteminin görüntülediğinden emin olmak <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> için masaüstü uygulamaları Boolean `false`parametresini aramalı ve 'ye ayarlamalıdır. Ortaya çıkan davranış, sessiz bağlamın devre dışı kalıp olmadığına bakılmaksızın .NET Framework'dekiyle aynıdır.
 
 ### <a name="category"></a>Kategori
 

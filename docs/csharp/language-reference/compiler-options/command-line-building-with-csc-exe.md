@@ -1,101 +1,101 @@
 ---
-title: Csc. exe ile komut satırı oluşturma
+title: komut satırı csc.exe ile inşa
 ms.date: 04/19/2017
 helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
 ms.openlocfilehash: f692e66672b1804a309c6ac04c158af948a1b1ab
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789866"
 ---
-# <a name="command-line-build-with-cscexe"></a>Csc. exe ile komut satırı oluşturma
+# <a name="command-line-build-with-cscexe"></a>komut satırı csc.exe ile inşa
 
-Bir komut isteminde yürütülebilir C# dosyasının adını (*CSC. exe*) yazarak derleyiciyi çağırabilirsiniz.
+C# derleyicisini komut istemine çalıştırılabilir dosyasının *(csc.exe)* adını yazarak çağırabilirsiniz.
 
-**Visual Studio için geliştirici komut istemi** kullanıyorsanız, tüm gerekli ortam değişkenleri sizin için ayarlanır. Bu araca erişme hakkında daha fazla bilgi için bkz. [Visual Studio için geliştirici komut istemi](../../../framework/tools/developer-command-prompt-for-vs.md) konusu.
+Visual Studio **için Geliştirici Komut İstemi** penceresini kullanıyorsanız, gerekli tüm ortam değişkenleri sizin için ayarlanır. Bu araca nasıl erişiğihakkında bilgi için [Visual Studio için Geliştirici Komut Komut Istem konusuna](../../../framework/tools/developer-command-prompt-for-vs.md) bakın.
 
-Standart bir komut Istemi penceresi kullanıyorsanız, bilgisayarınızdaki herhangi bir alt dizinden *CSC. exe* ' yi çağırabilmeniz için önce yolunu ayarlamanız gerekir. Ayrıca, komut satırı yapılarını desteklemek üzere uygun ortam değişkenlerini ayarlamak için *vsvars32. bat* dosyasını çalıştırmanız gerekir. *Vsvars32. bat*hakkında daha fazla bilgi için, bkz. [Visual Studio komut satırı için ortam değişkenlerini ayarlama](./how-to-set-environment-variables-for-the-visual-studio-command-line.md).
+Standart bir Komut İstem penceresi kullanıyorsanız, bilgisayarınızdaki herhangi bir alt dizinden *csc.exe'yi* çağırmadan önce yolunuzu ayarlamanız gerekir. Ayrıca komut satırı yapılarını desteklemek için uygun ortam değişkenlerini ayarlamak için *vsvars32.bat* çalıştırmalısınız. *vsvars32.bat*hakkında daha fazla bilgi için , nasıl bulup çalıştırılacağı yla ilgili talimatlar da dahil olmak üzere, [Visual Studio Komut Satırı için ortam değişkenlerinin nasıl ayarlanmasına](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)bakın.
 
-Yalnızca Windows yazılım geliştirme seti (SDK) olan bir bilgisayarda çalışıyorsanız, C# **Microsoft .NET Framework SDK** menü seçeneğinden açtığınız **SDK komut isteminde**derleyiciyi kullanabilirsiniz.
+Yalnızca Windows Yazılım Geliştirme Kiti 'ne (SDK) sahip bir bilgisayarda çalışıyorsanız, **Microsoft .NET Framework SDK** menü seçeneğinden açtığınız **SDK Komut İstemi'nde**C# derleyicisini kullanabilirsiniz.
 
-Ayrıca C# programlarını program aracılığıyla oluşturmak için MSBuild'i kullanabilirsiniz. Daha fazla bilgi için bkz. [MSBuild](/visualstudio/msbuild/msbuild).
+Ayrıca C# programlarını program aracılığıyla oluşturmak için MSBuild'i kullanabilirsiniz. Daha fazla bilgi için [MSBuild'e](/visualstudio/msbuild/msbuild)bakın.
 
-*CSC. exe* yürütülebilir dosyası genellikle *Windows* dizini altındaki Microsoft. NET\Framework\\ *\<sürüm >* klasöründedir. Bu dosyanın yeri, belirli bir bilgisayarın tam yapılandırmasına bağlı olarak değişebilir. Bilgisayarınızda .NET Framework'ün birden fazla sürümü yüklüyse, bu dosyanın birden fazla sürümünü bulacaksınız. Bu tür yüklemeler hakkında daha fazla bilgi için bkz. [nasıl yapılır: hangi .NET Framework sürümlerinin yüklendiğini belirleme](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+*csc.exe* yürütülebilir dosya genellikle *Windows* dizininin altındaki\\Microsoft.NET\Framework*\<Version>* klasöründe bulunur. Bu dosyanın yeri, belirli bir bilgisayarın tam yapılandırmasına bağlı olarak değişebilir. Bilgisayarınızda .NET Framework'ün birden fazla sürümü yüklüyse, bu dosyanın birden fazla sürümünü bulacaksınız. Bu tür yüklemeler hakkında daha fazla bilgi için [bkz: .NET Framework'ün hangi sürümlerinin yüklü olduğunu belirleyin.](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)
 
 > [!TIP]
-> Visual Studio IDE kullanarak bir proje oluşturduğunuzda, **CSC** komutunu ve ilgili derleyici seçeneklerini **Çıkış** penceresinde görüntüleyebilirsiniz. Bu bilgileri görüntülemek için nasıl yapılır: günlük verilerinin ayrıntı düzeyini **normal** veya **ayrıntılı**olarak değiştirmek üzere [derleme günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) konusundaki yönergeleri izleyin. Projenizi yeniden oluşturduktan sonra, C# derleyicinin çağrılmasını bulmak Için **CSC** **Çıkış** penceresinde arama yapın.
+> Visual Studio IDE'yi kullanarak bir proje oluşturduğunuzda, **CSC** komutunu ve ilişkili derleyici seçeneklerini **Çıkış** penceresinde görüntüleyebilirsiniz. Bu bilgileri görüntülemek için, günlük verilerinin ayrıntılılık düzeyini **Normal** veya **Ayrıntılı**olarak değiştirmek için [Yapı Günlüğü Dosyalarını Görüntüleme, Kaydet ve Yapılandırma](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) yönergelerini izleyin. Projenizi yeniden yaptıktan sonra C# derleyicisinin çağrısını bulmak için **CSC** için **Çıktı** penceresinde arama yapın.
 
- **Bu konudaki**
+ **Bu konuda**
 
-- [Komut satırı söz dizimi için kurallar](#rules-for-command-line-syntax-for-the-c-compiler)
+- [Komut satırı sözdizimi için kurallar](#rules-for-command-line-syntax-for-the-c-compiler)
 
 - [Örnek komut satırları](#sample-command-lines-for-the-c-compiler)
 
-- [Derleyici ve C# C++ derleyici çıkışı arasındaki farklılıklar](#differences-between-c-compiler-and-c-compiler-output)
+- [C# derleyicisi ile C++ derleyici çıkışı arasındaki farklar](#differences-between-c-compiler-and-c-compiler-output)
 
-## <a name="rules-for-command-line-syntax-for-the-c-compiler"></a>C# Derleyici komut satırı sözdizimi için kurallar
+## <a name="rules-for-command-line-syntax-for-the-c-compiler"></a>C# derleyicisi için komut satırı sözdizimi kuralları
 
-C# Derleyici, işletim sistemi komut satırında verilen bağımsız değişkenleri yorumladığı zaman aşağıdaki kuralları kullanır:
+C# derleyicisi, işletim sistemi komut satırında verilen bağımsız değişkenleri yorumlarken aşağıdaki kuralları kullanır:
 
-- Bağımsız değişkenler boşluk veya sekme olan boşluk ile sınırlandırılmıştır.
+- Bağımsız değişkenler, bir boşluk veya sekme olan beyaz boşlukla sınırlandırılır.
 
-- Giriş işareti karakteri (^) bir kaçış karakteri veya sınırlayıcı olarak tanınmıyor. Karakter, programdaki `argv` dizisine geçirilmeden önce, işletim sistemindeki komut satırı ayrıştırıcısı tarafından işlenir.
+- Caret karakteri (^) bir kaçış karakteri veya sınır layıcı olarak tanınmıyor. Karakter, programdaki `argv` diziye geçirilmeden önce işletim sistemindeki komut satırı parertarafından işlenir.
 
-- Çift tırnak işaretleri ("String") içine alınmış bir dize, içinde yer alan boşluklardan bağımsız olarak tek bir bağımsız değişken olarak yorumlanır. Tırnak içine alınmış bir dize bir bağımsız değişkene gömülebilir.
+- Çift tırnak işaretleri ("string") içine bir dize, içinde bulunan beyaz boşluk ne olursa olsun, tek bir bağımsız değişken olarak yorumlanır. Alıntı yapılan bir dize bir bağımsız değişkene katıştı.
 
-- Önünde ters eğik çizgi (\\") olan çift tırnak işareti, sabit değer çift tırnak işareti karakteri (") olarak yorumlanır.
+- Bir ters eğik çizgiden önce\\gelen çift tırnak işareti ( ") gerçek bir çift tırnak işareti karakteri (") olarak yorumlanır.
 
-- Ters eğik çizgiler, bir çift tırnak işaretinden hemen önce gelmedikleri takdirde tam olarak yorumlanır.
+- Ters eğik çizgiler, hemen çift tırnak işaretinden önce olmadıkça, kelimenin tam anlamıyla yorumlanır.
 
-- İki ters eğik çizgi daha sonra çift tırnak işaretiyle, bir ters eğik çizgi, her ters eğik çizgi çifti için `argv` dizisine konur ve çift tırnak işareti bir dize sınırlayıcısı olarak yorumlanır.
+- Çift etek li bir çift tırnak işareti takip edilirse, her çift `argv` eğik çizgi için diziye bir ters eğik çizgi konur ve çift tırnak işareti dize delimiter olarak yorumlanır.
 
-- Tek bir ters eğik çizgiden sonra çift tırnak işareti varsa, her ters eğik çizgi çiftinin `argv` dizisine bir ters eğik çizgi konur ve çift tırnak işareti geri kalan ters eğik çizgi ile "kaçışdır". Bu, `argv`bir sabit değer çift tırnak işareti (") eklenmesine neden olur.
+- Tek sayıda ters eğik çizgi çift tırnak işareti takip edilirse, bir `argv` ters çizgi diziye her çift ters eğik çizgi için konur ve çift tırnak işareti kalan ters eğik çizgi tarafından "kaçtı". Bu, bir çift tırnak işaretinin (") `argv`eklenmesine neden olur.
 
-## <a name="sample-command-lines-for-the-c-compiler"></a>C# Derleyici için örnek komut satırları
+## <a name="sample-command-lines-for-the-c-compiler"></a>C# derleyicisi için örnek komut satırları
 
-- *File.cs* üreten *dosya. exe*' yi derler:
+- *File.exe* *üreten File.cs* derler:
 
   ```console
   csc File.cs
   ```
 
-- *File.cs* üreten *dosyayı derler. dll*:
+- *Dosya.dll* *File.cs* derler:
 
   ```console
   csc -target:library File.cs
   ```
 
-- *File.cs* derler ve *My. exe dosyasını*oluşturur:
+- *derlemeler File.cs* ve *My.exe*oluşturur:
 
   ```console
   csc -out:My.exe File.cs
   ```
 
-- Geçerli dizindeki tüm C# dosyaları iyileştirmeler etkin olacak şekilde derler ve hata ayıklama sembolünü tanımlar. Çıktı, *dosya2. exe*' dir:
+- Geçerli dizindeki tüm C# dosyalarını etkinleştirilmiş en iyi duruma sahip dosyaları derler ve HATA Ayıklama simgesini tanımlar. Çıktı *File2.exe:*
 
   ```console
   csc -define:DEBUG -optimize -out:File2.exe *.cs
   ```
 
-- Geçerli dizindeki tüm C# dosyaları, *dosya2. dll*' nin hata ayıklama sürümünü üreten şekilde derler. Amblem yoktur ve hiçbir uyarı gösterilmez:
+- *File2.dll'nin*hata ayıklama sürümünü üreten geçerli dizindeki tüm C# dosyalarını derler. Logo ve uyarı görüntülenmez:
 
   ```console
   csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
   ```
 
-- Geçerli dizindeki tüm C# dosyaları *bir. xyz* (bir dll) olarak derler:
+- *Bir Şey.xyz* (bir DLL) için geçerli dizindeki tüm C# dosyalarını derler:
 
   ```console
   csc -target:library -out:Something.xyz *.cs
   ```
 
-## <a name="differences-between-c-compiler-and-c-compiler-output"></a>Derleyici ve C# C++ derleyici çıkışı arasındaki farklılıklar
+## <a name="differences-between-c-compiler-and-c-compiler-output"></a>C# derleyicisi ile C++ derleyici çıkışı arasındaki farklar
 
-Derleyiciyi çağırma sonucu olarak oluşturulan nesne ( *. obj*) dosyaları yoktur; C# çıktı dosyaları doğrudan oluşturulur. Bunun sonucunda, C# derleyicinin bir bağlayıcıya ihtiyacı yoktur.
+C# derleyicisinin çağırılanması sonucu oluşturulan nesne (*.obj*) dosyaları yoktur; çıktı dosyaları doğrudan oluşturulur. Bunun bir sonucu olarak, C# derleyicisinin bir bağlayıcıya ihtiyacı yoktur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

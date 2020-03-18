@@ -1,5 +1,5 @@
 ---
-title: Erişimci erişilebilirliği kısıtlama- C# Programlama Kılavuzu
+title: Erişime Erişimin Kısıtlanması - C# Programlama Kılavuzu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - read-only properties [C#]
@@ -10,54 +10,54 @@ helpviewer_keywords:
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
 ms.openlocfilehash: a332fef814f0c81914eb7b8c308de68f719fbaac
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714689"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Erişimci Erişilebilirliğini Kısıtlama (C# Programlama Kılavuzu)
-Bir özelliğin veya dizin oluşturucunun [Get](../../language-reference/keywords/get.md) ve [set](../../language-reference/keywords/set.md) bölümlerine *erişimciler*denir. Varsayılan olarak, bu erişimciler ait oldukları özelliğin veya dizin oluşturucunun aynı görünürlük veya erişim düzeyine sahiptir. Daha fazla bilgi için bkz. [Erişilebilirlik düzeyleri](../../language-reference/keywords/accessibility-levels.md). Ancak, bu Erişimcilerde erişimi kısıtlamak bazen yararlı olur. Genellikle, bu, `get` erişimcinin genel olarak erişilebilir tutulması sırasında `set` erişimcisinin erişilebilirliğini kısıtlamayı içerir. Örneğin:  
+Bir özelliğin veya dizinleyicinin [alın](../../language-reference/keywords/get.md) ve [ayarla](../../language-reference/keywords/set.md) *bölümlerine erişimci*denir. Varsayılan olarak bu erişimedenler, ait oldukları özellik veya dizinleyicinin aynı görünürlüğüne veya erişim düzeyine sahiptir. Daha fazla bilgi için [erişilebilirlik düzeylerine](../../language-reference/keywords/accessibility-levels.md)bakın. Ancak, bazen bu erişime erişimin kısıtlanması yararlıdır. Genellikle, bu, `set` erişime erişimin kısıtlanmasıve erişimin `get` herkese açık tutulmasını içerir. Örnek:  
   
  [!code-csharp[csProgGuideIndexers#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#6)]  
   
- Bu örnekte, `Name` adlı bir özellik `get` ve `set` erişimcisini tanımlar. `get` erişimcisi özelliğin erişilebilirlik düzeyini alır, bu durumda `public` `set` erişimci, erişimci kendisine [korumalı](../../language-reference/keywords/protected.md) erişim değiştiricisi uygulanarak açıkça kısıtlanır.  
+ Bu örnekte, adlı `Name` bir `get` özellik `set` a ve erişimci tanımlar. Bu `get` durumda, erişimci, [korumalı](../../language-reference/keywords/protected.md) erişim `public` değiştiriciyi erişimsahibinin kendisine uygulanarak açıkça kısıtlanırken, `set` erişimsahibi özelliğin erişilebilirlik düzeyini alır.  
   
-## <a name="restrictions-on-access-modifiers-on-accessors"></a>Erişimcilerde erişim değiştiricilerine yönelik kısıtlamalar  
- Özelliklerde veya dizin oluşturucularda erişimci değiştiricilerin kullanılması şu koşullara tabidir:  
+## <a name="restrictions-on-access-modifiers-on-accessors"></a>Erişimcilere Erişim Kısıtlamaları  
+ Özellik veya dizinleyiciler üzerinde aksesuar değiştiricilerin kullanılması aşağıdaki koşullara tabidir:  
   
-- Bir arabirimde veya açık [arabirim](../../language-reference/keywords/interface.md) üyesi uygulamasında erişimci değiştiricileri kullanamazsınız.  
+- Bir arabirimde veya açık [arabirim](../../language-reference/keywords/interface.md) üyesi uygulamasında erişim değiştirici leri kullanamazsınız.  
   
-- Erişimci değiştiricilerini yalnızca özellik veya dizin oluşturucunun hem `set` hem de `get` erişimcileri varsa kullanabilirsiniz. Bu durumda, değiştiriciye yalnızca iki erişimcinin yalnızca birinde izin verilir.  
+- Erişim değiştiricileri yalnızca özellik veya dizinleyicihem `set` de `get` erişimciler varsa kullanabilirsiniz. Bu durumda, değiştirici yalnızca iki erişimcilerin birinde izin verilir.  
   
-- Özelliğin veya dizin oluşturucunun bir [geçersiz kılma](../../language-reference/keywords/override.md) değiştiricisi varsa, erişimci değiştiricisi, varsa geçersiz kılınan erişimcinin erişimcisi ile eşleşmelidir.  
+- Özellik veya dizinleyicibir [geçersiz kılma](../../language-reference/keywords/override.md) değiştirici varsa, erişimdeğiştirici geçersiz kılınan erişime sahip, varsa, geçersiz kılınan erişime sahip olanla eşleşmelidir.  
   
-- Erişimcinin erişilebilirlik düzeyi, özelliğin veya dizin oluşturucunun kendi erişilebilirlik düzeyinden daha kısıtlayıcı olmalıdır.  
+- Erişilebilirlik düzeyi, özellik veya dizinleyicinin kendisindeki erişilebilirlik düzeyinden daha kısıtlayıcı olmalıdır.  
   
-## <a name="access-modifiers-on-overriding-accessors"></a>Geçersiz kılma erişimcileri üzerindeki erişim değiştiricileri  
- Bir özelliği veya dizin oluşturucuyu geçersiz kıldığınızda geçersiz kılınan erişimcilere geçersiz kılma kodu tarafından erişilebilir olması gerekir. Ayrıca, hem Property/Indexer hem de erişimcilerinin erişilebilirliği karşılık gelen geçersiz kılınan Özellik/Dizin Oluşturucu ve erişimcileri ile eşleşmelidir. Örneğin:  
+## <a name="access-modifiers-on-overriding-accessors"></a>Access'i Geçersiz Kılanlar'da Değiştiricilere Erişin  
+ Bir özelliği veya dizinleyiciyi geçersiz kaldığınızda, geçersiz kılınan erişime erişilenler için geçersiz kılınan koda erişilebilmelidir. Ayrıca, hem özellik/dizinleyicinin hem de erişime girenlerin ilgili geçersiz kılınan özellik/dizinleyici ile ve erişime girenlerle eşleşmesi gerekir. Örnek:  
   
  [!code-csharp[csProgGuideIndexers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#7)]  
   
-## <a name="implementing-interfaces"></a>Arabirimleri uygulama  
- Bir arabirim uygulamak için erişimci kullandığınızda, erişimci bir erişim değiştiricisine sahip olmayabilir. Ancak, `get`gibi bir erişimci kullanarak arabirimi uygularsanız, diğer erişimci aşağıdaki örnekte olduğu gibi bir erişim değiştiricisine sahip olabilir:  
+## <a name="implementing-interfaces"></a>Arayüzleri Uygulama  
+ Arabirimi uygulamak için bir erişimci kullandığınızda, erişimsahibinin bir erişim değiştiricisi olmayabilir. Ancak, arabirimi aşağıdaki örnekte olduğu gibi, diğer erişimcinin bir erişim değiştiricisi olabilir gibi `get`bir erişimci kullanarak uygularsanız:  
   
  [!code-csharp[csProgGuideIndexers#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#8)]  
   
-## <a name="accessor-accessibility-domain"></a>Erişimci erişilebilirlik etki alanı  
- Erişimci üzerinde bir erişim değiştiricisi kullanırsanız, erişimcinin [erişilebilirlik etki alanı](../../language-reference/keywords/accessibility-domain.md) bu değiştiriciye göre belirlenir.  
+## <a name="accessor-accessibility-domain"></a>Erişilebilirlik Etki Alanı  
+ Erişim değiştiriciüzerinde bir erişim değiştiricisi kullanıyorsanız, erişime [erişim etki alanı](../../language-reference/keywords/accessibility-domain.md) bu değiştirici tarafından belirlenir.  
   
- Erişimci üzerinde bir erişim değiştiricisi kullanmıyorsanız, erişimcinin erişilebilirlik etki alanı, özelliğin veya dizin oluşturucunun erişilebilirlik düzeyine göre belirlenir.  
+ Erişim değiştiriciüzerinde bir erişim değiştirici kullanmadıysanız, erişime erişim etki alanı özellik veya dizinleyicinin erişilebilirlik düzeyine göre belirlenir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, `BaseClass`, `DerivedClass`ve `MainClass`üç sınıf içerir. `BaseClass`, `Name` ve `Id` her iki sınıfta da iki özellik vardır. Örnek, [korumalı](../../language-reference/keywords/protected.md) veya [özel](../../language-reference/keywords/private.md)gibi kısıtlayıcı bir erişim değiştiricisi kullandığınızda, `DerivedClass` üzerindeki özelliğin `Id` Özellik `BaseClass` `Id` nasıl gizlenemeyeceğini gösterir. Bu nedenle, bu özelliğe değer atadığınızda, bunun yerine `BaseClass` sınıfındaki özellik çağrılır. Erişim değiştiricisinin [genel](../../language-reference/keywords/public.md) olarak değiştirilmesi, özelliği erişilebilir hale getirir.  
+ Aşağıdaki örnekte üç `BaseClass`sınıf `DerivedClass`ve `MainClass`. `BaseClass` `Name` Ve `Id` her iki sınıfta iki özellik vardır. Örnek, [korumalı](../../language-reference/keywords/protected.md) [veya](../../language-reference/keywords/private.md)özel gibi kısıtlayıcı `Id` `BaseClass` bir erişim değiştirici kullandığınızda üzerindeki `Id` `DerivedClass` özelliğin özellik tarafından nasıl gizlenebileceğini gösterir. Bu nedenle, bu özelliğe değer atadığınızda, `BaseClass` sınıfüzerindeki özellik bunun yerine çağrılır. Erişim değiştiricinin [genel](../../language-reference/keywords/public.md) tarafından değiştirilmesi özelliği erişilebilir hale getirecektir.  
   
- Örnek ayrıca, `private` veya `protected`gibi kısıtlayıcı bir erişim değiştiricisinin, `DerivedClass` 'teki `Name` özelliğinin `set` erişimcisinde, erişimciye erişimi önlediği ve kendisine atarken bir hata oluşturduğu bir hata üreten bir hata üretir.  
+ Örnek ayrıca, `private` `protected` `set` `Name` özellik erişimcisi gibi kısıtlayıcı bir erişim değiştiricinin erişime erişimi `DerivedClass` engellediğini ve ona atadığınızda bir hata oluşturduğunu da gösterir.  
   
  [!code-csharp[csProgGuideIndexers#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#5)]  
   
-## <a name="comments"></a>Açıklamalar  
- Bildirim `new private string Id` `new public string Id`ile değiştirirseniz, çıktıyı alırsınız:  
+## <a name="comments"></a>Yorumlar  
+ Bildirimi `new private string Id` değiştirirseniz `new public string Id`çıktıyı alırsınız:  
   
  `Name and ID in the base class: Name-BaseClass, ID-BaseClass`  
   
@@ -66,6 +66,6 @@ Bir özelliğin veya dizin oluşturucunun [Get](../../language-reference/keyword
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Veri Erişimi](./properties.md)
+- [Özellikler](./properties.md)
 - [Dizin Oluşturucular](../indexers/index.md)
 - [Erişim Değiştiricileri](./access-modifiers.md)

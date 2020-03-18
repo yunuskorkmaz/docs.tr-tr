@@ -1,23 +1,23 @@
 ---
-title: DotNet Run komutu
-description: DotNet Run komutu, uygulamanızı kaynak koddan çalıştırmak için uygun bir seçenek sağlar.
+title: dotnet çalıştır komutu
+description: Dotnet çalıştır komutu, uygulamanızı kaynak kodundan çalıştırmak için kullanışlı bir seçenek sağlar.
 ms.date: 02/19/2020
 ms.openlocfilehash: e442ed56d676ffd189ef6d394d840cea671c2dc6
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157082"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 2.x SDK ve sonraki sürümler
 
 ## <a name="name"></a>Adı
 
-`dotnet run`-herhangi bir açık derleme veya başlatma komutu olmadan kaynak kodu çalıştırır.
+`dotnet run`- Kaynak kodunu açık bir derleme veya başlatma komutları olmadan çalıştırın.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Özet
 
 ```dotnetcli
 dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile]
@@ -28,21 +28,21 @@ dotnet run [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet run` komutu, uygulamanızı kaynak koddan tek bir komutla çalıştırmak için uygun bir seçenek sağlar. Komut satırından hızlı yinelemeli geliştirme için faydalıdır. Komut, kodu derlemek için [`dotnet build`](dotnet-build.md) komutuna bağımlıdır. Projenin önce geri yüklenmesi gerektiği gibi, derleme için tüm gereksinimler, `dotnet run` için de geçerlidir.
+Komut, `dotnet run` uygulamanızı kaynak koddan tek bir komutla çalıştırmak için kullanışlı bir seçenek sağlar. Komut satırından hızlı yinelemeli geliştirme için yararlıdır. Komut, kodu oluşturmak [`dotnet build`](dotnet-build.md) için komuta bağlıdır. Yapı için, projenin önce geri yükedilmesi gibi tüm gereksinimler `dotnet run` de geçerlidir.
 
-Çıktı dosyaları varsayılan konuma yazılır, bu `bin/<configuration>/<target>`. Örneğin, bir `netcoreapp2.1` uygulamanız varsa ve `dotnet run`çalıştırırsanız, çıktı `bin/Debug/netcoreapp2.1`yerleştirilir. Dosyalar gerektiği gibi üzerine yazılır. Geçici dosyalar `obj` dizinine yerleştirilir.
+Çıktı dosyaları varsayılan konuma yazılır, `bin/<configuration>/<target>`yani. Örneğin bir `netcoreapp2.1` uygulamanız varsa ve `dotnet run`çalıştırın, çıktı `bin/Debug/netcoreapp2.1`. Dosyalar gerektiği gibi üzerine yazılır. Geçici dosyalar dizine `obj` yerleştirilir.
 
-Proje birden çok çerçeve belirtiyorsa, Framework 'ü belirtmek için `-f|--framework <FRAMEWORK>` seçeneği kullanılmadığı müddetçe `dotnet run` yürütülerek hata oluşur.
+Proje birden çok çerçeve belirtirse, `dotnet run` çerçeveyi belirtmek `-f|--framework <FRAMEWORK>` için seçenek kullanılmadığı sürece bir hatayla sonuçlanır.
 
-`dotnet run` komutu, oluşturulan derlemeler değil, proje bağlamında kullanılır. Bunun yerine Framework 'e bağımlı bir uygulama DLL 'sini çalıştırmaya çalışıyorsanız, bir komut olmadan [DotNet](dotnet.md) kullanmanız gerekir. Örneğin, `myapp.dll`çalıştırmak için şunu kullanın:
+Komut, `dotnet run` derlemeler değil, projeler bağlamında kullanılır. Bunun yerine çerçeveye bağımlı bir uygulama olan DLL'yi çalıştırmaya çalışıyorsanız, komut olmadan [dotnet](dotnet.md) kullanmanız gerekir. Örneğin, çalıştırmak `myapp.dll`için, kullanmak:
 
 ```dotnetcli
 dotnet myapp.dll
 ```
 
-`dotnet` sürücüsü hakkında daha fazla bilgi için bkz. [.NET Core komut satırı araçları (CLI)](index.md) konusu.
+Sürücü hakkında daha `dotnet` fazla bilgi için [.NET Core Komut Satırı Araçları (CLI)](index.md) konusuna bakın.
 
-Uygulamayı çalıştırmak için `dotnet run` komutu, paylaşılan çalışma zamanının dışındaki uygulamanın tüm bağımlılıklarını NuGet önbelleğinden çözer. Önbelleğe alınmış bağımlılıkları kullandığından, üretimde uygulamaları çalıştırmak için `dotnet run` kullanılması önerilmez. Bunun yerine, [`dotnet publish`](dotnet-publish.md) komutunu kullanarak [bir dağıtım oluşturun](../deploying/index.md) ve yayımlanan çıktıyı dağıtın.
+Uygulamayı çalıştırmak için `dotnet run` komut, NuGet önbelleğinden paylaşılan çalışma süresinin dışında olan uygulamanın bağımlılıklarını giderir. Önbelleğe alınmış bağımlılıklar kullandığından, üretimdeki `dotnet run` uygulamaları çalıştırmak için kullanılması önerilmez. Bunun [create a deployment](../deploying/index.md) yerine, komutu [`dotnet publish`](dotnet-publish.md) kullanarak bir dağıtım oluşturun ve yayımlanmış çıktıyı dağıtın.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -50,19 +50,19 @@ Uygulamayı çalıştırmak için `dotnet run` komutu, paylaşılan çalışma z
 
 - **`--`**
 
-  Çalıştırılmakta olan uygulamanın bağımsız değişkenlerinden `dotnet run` için bağımsız değişkenleri ayırır. Bu sınırlayıcıdan sonraki tüm bağımsız değişkenler uygulama çalıştırmasına geçirilir.
+  Çalıştırılmakta `dotnet run` olan uygulama için bağımsız değişkenleri sınırlandırın. Bu delimiter sonra tüm bağımsız değişkenler uygulama çalışmasına geçirilir.
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  Yapı yapılandırmasını tanımlar. Çoğu proje için varsayılan değer `Debug`, ancak projenizde derleme yapılandırma ayarlarını geçersiz kılabilirsiniz.
+  Yapı yapılandırmasını tanımlar. Çoğu proje için `Debug`varsayılan değer, ancak projenizdeki yapı yapılandırma ayarlarını geçersiz kılabilirsiniz.
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Belirtilen [Framework 'ü](../../standard/frameworks.md)kullanarak uygulamayı oluşturur ve çalıştırır. Çerçeve proje dosyasında belirtilmelidir.
+  Belirtilen [çerçeveyi](../../standard/frameworks.md)kullanarak uygulamayı oluşturur ve çalıştırın. Çerçeve proje dosyasında belirtilmelidir.
 
 - **`--force`**
 
-  Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar. Bu bayrağın belirtilmesi, *Project. varlıklar. JSON* dosyasını silme ile aynıdır.
+  Son geri yükleme başarılı olsa bile tüm bağımlılıkları çözüme kavuşturmaya zorlar. Bu bayrağı *belirtmek, project.assets.json* dosyasını silmekle aynıdır.
 
 - **`-h|--help`**
 
@@ -70,61 +70,61 @@ Uygulamayı çalıştırmak için `dotnet run` komutu, paylaşılan çalışma z
 
 - **`--interactive`**
 
-  Komutun, Kullanıcı girişini veya eylemini durdurmasına ve beklemesine izin verir (örneğin, kimlik doğrulamasını tamamlamaya yönelik). .NET Core 3,0 SDK 'dan beri kullanılabilir.
+  Komutun durmasına ve kullanıcı girişinin veya eylemini beklemesine (örneğin, kimlik doğrulamasını tamamlamak için) izin verir. .NET Core 3.0 SDK'dan beri mevcuttur.
 
 - **`--launch-profile <NAME>`**
 
-  Uygulamayı başlatırken kullanılacak başlatma profilinin adı (varsa). Başlatma profilleri, *Launchsettings. JSON* dosyasında tanımlanır ve genellikle `Development`, `Staging`ve `Production`olarak adlandırılır. Daha fazla bilgi için bkz. [birden çok ortamla çalışma](/aspnet/core/fundamentals/environments).
+  Uygulamayı başlatırken kullanılacak başlatma profilinin adı (varsa). Başlatma profilleri *launchSettings.json* dosyasında tanımlanır ve genellikle `Development` `Staging`, `Production`, ve . Daha fazla bilgi için bkz: [Birden çok ortamla çalışma.](/aspnet/core/fundamentals/environments)
 
 - **`--no-build`**
 
-  Çalıştırmadan önce projeyi oluşturmaz. Ayrıca `--no-restore` bayrağını örtülü olarak ayarlar.
+  Çalıştırmadan önce projeyi oluşturmaz. Ayrıca örtük `--no-restore` bayrağı ayarlar.
 
 - **`--no-dependencies`**
 
-  Projeden projeye (P2P) başvuruları olan bir projeyi geri yüklerken, başvuruları değil kök projeyi geri yükler.
+  Projeden projeye (P2P) başvurularla projeyi geri yüklediğinizde, başvuruları değil, kök projeyi geri yükler.
 
 - **`--no-launch-profile`**
 
-  Uygulamayı yapılandırmak için *Launchsettings. JSON* kullanmaya çalışmayın.
+  Uygulamayı yapılandırmak için *launchSettings.json* kullanmaya çalışmaz.
 
 - **`--no-restore`**
 
-  Komutu çalıştırılırken örtük geri yükleme yürütülmez.
+  Komutu çalıştırırken örtük bir geri yükleme yürütmez.
 
 - **`-p|--project <PATH>`**
 
-  Çalıştırılacak proje dosyasının yolunu belirtir (klasör adı veya tam yol). Belirtilmezse, varsayılan olarak geçerli dizini alır.
+  Proje dosyasının çalışma yolunu (klasör adı veya tam yol) belirtir. Belirtilmemişse, varsayılan olarak geçerli dizine göre olur.
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Paketlerinin geri yükleneceği hedef çalışma zamanını belirtir. Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md). `-r` Short seçeneği .NET Core 3,0 SDK 'dan beri kullanılabilir.
+  Paketleri geri yüklemek için hedef çalışma süresini belirtir. Runtime Tanımlayıcıları (RID'ler) listesi için RID [kataloğuna](../rid-catalog.md)bakın. `-r`.NET Core 3.0 SDK'dan beri kısa seçenek mevcuttur.
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`. Varsayılan değer: `m`. .NET Core 2,1 SDK 'dan beri kullanılabilir.
+  Komutun ayrıntılı düzeyini ayarlar. İzin verilen `q[uiet]` `m[inimal]`değerler `n[ormal]` `d[etailed]`, `diag[nostic]`, , , ve . Varsayılan değer: `m`. .NET Core 2.1 SDK'dan beri mevcuttur.
 
 ## <a name="examples"></a>Örnekler
 
-- Projeyi geçerli dizinde Çalıştır:
+- Projeyi geçerli dizinde çalıştırın:
 
   ```dotnetcli
   dotnet run
   ```
 
-- Belirtilen projeyi Çalıştır:
+- Belirtilen projeyi çalıştırın:
 
   ```dotnetcli
   dotnet run --project ./projects/proj1/proj1.csproj
   ```
 
-- Projeyi geçerli dizinde çalıştırın (boş `--` seçeneği kullanıldığından bu örnekteki `--help` bağımsız değişkeni uygulamaya geçirilir):
+- Projeyi geçerli dizinde çalıştırın `--help` (boş `--` seçenek kullanıldığından, bu örnekteki bağımsız değişken uygulamaya geçirilir):
 
   ```dotnetcli
   dotnet run --configuration Release -- --help
   ```
 
-- Geçerli dizindeki proje için bağımlılıkları ve araçları geri yükleme yalnızca minimum çıktıyı gösterir ve ardından projeyi (.NET Core SDK 2,0 ve sonraki sürümleri) çalıştırır:
+- Geçerli dizinde proje için bağımlılıkları ve araçları yalnızca en az çıktıyı gösteren geri yüklenir ve projeyi çalıştırın: (.NET Core SDK 2.0 ve sonraki sürümler):
 
   ```dotnetcli
   dotnet run --verbosity m

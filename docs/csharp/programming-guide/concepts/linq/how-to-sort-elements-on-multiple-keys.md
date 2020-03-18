@@ -1,23 +1,23 @@
 ---
-title: Birden çok anahtar üzerinde öğeleri sıralama (C#)
+title: Birden çok tuşdaki öğeleri sıralama (C#)
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
 ms.openlocfilehash: ddfeab4bf9b67231296ca90df1244a3b8a441440
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347378"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-c"></a>Birden çok anahtar üzerinde öğeleri sıralama (C#)
+# <a name="how-to-sort-elements-on-multiple-keys-c"></a>Birden çok tuşdaki öğeleri sıralama (C#)
 
-Bu konu başlığı altında, birden çok anahtar üzerinde nasıl sıralama yapılacağı gösterilmektedir.
+Bu konu, birden çok anahtarda nasıl sıralanır gösteriş gösterir.
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte, sonuçlar önce sevkiyat posta kodu tarafından, ardından sipariş tarihine göre sıralanır.
+Bu örnekte, sonuçlar önce sevkiyat posta kodu, ardından sipariş tarihi tarafından sıralanır.
 
-Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).
+Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Müşteriler ve Siparişler (LINQ-XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).
 
 ```csharp
 XElement co = XElement.Load("CustomersOrders.xml");
@@ -65,9 +65,9 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (C#LINQ to XML) ()](namespaces-overview-linq-to-xml.md).
+Aşağıdaki örnek, ad alanında olan XML için aynı sorguyu gösterir. Daha fazla bilgi için [Bkz. NameSpaces Genel Bakış (LINQ - XML) (C#)](namespaces-overview-linq-to-xml.md).
 
-Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanındaki müşteriler ve siparişler](./sample-xml-file-customers-and-orders-in-a-namespace.md).
+Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Ad alanında müşteriler ve Siparişler.](./sample-xml-file-customers-and-orders-in-a-namespace.md)
 
 ```csharp
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");

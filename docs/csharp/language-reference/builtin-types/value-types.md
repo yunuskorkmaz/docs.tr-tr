@@ -1,5 +1,5 @@
 ---
-title: Değer türleri- C# başvuru
+title: Değer türleri - C# referansı
 ms.date: 01/22/2020
 f1_keywords:
 - cs.valuetypes
@@ -8,59 +8,59 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: a2b9dce3b0ca5e66cfc0fbdbbf8f341abca0b636
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 406e5b8bbe0802146a65bb4b9a053e753a7827ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239735"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399583"
 ---
-# <a name="value-types-c-reference"></a>Değer türleri (C# başvuru)
+# <a name="value-types-c-reference"></a>Değer türleri (C# başvurusu)
 
-*Değer türleri* ve [başvuru türleri](../keywords/reference-types.md) , C# türlerin iki ana kategorileridir. Değer türünde bir değişken türün bir örneğini içerir. Bu, bir tür örneğine başvuru içeren bir başvuru türü değişkeninden farklıdır. Varsayılan olarak, [atama](../operators/assignment-operator.md), bir yönteme bir bağımsız değişken geçirme ve bir yöntem sonucu döndürme, değişken değerleri kopyalanır. Değer türü değişkenler söz konusu olduğunda, karşılık gelen tür örnekleri kopyalanır. Aşağıdaki örnekte bu davranış gösterilmektedir:
+*Değer türleri* ve [başvuru türleri](../keywords/reference-types.md) C# türlerinin iki ana kategorisidir. Değer türünden bir değişken, türün bir örneğini içerir. Bu, türünün bir örneğine başvuru içeren bir başvuru türünün değişkeninden farklıdır. Varsayılan olarak, [atama,](../operators/assignment-operator.md)bir yönteme bir argüman geçen ve bir yöntem sonucu döndürerek, değişken değerleri kopyalanır. Değer türü değişkenleri söz konusu olduğunda, karşılık gelen tür örnekleri kopyalanır. Aşağıdaki örnek, davranışı gösterir:
 
-[!code-csharp[copy of values](~/samples/snippets/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
+[!code-csharp[copy of values](snippets/ValueTypes.cs#ValueTypeCopied)]
 
-Yukarıdaki örnekte gösterildiği gibi, bir değer türü değişkeni üzerindeki işlemler, değişkende depolanan yalnızca değer türü örneğini etkiler.
+Önceki örnekte de görüldüğü gibi, değer türündeki bir değişkendeki işlemler yalnızca değişkende depolanan değer türü örneğini etkiler.
 
-Değer türü bir başvuru türünün veri üyesini içeriyorsa, bir değer türü örneği kopyalandığında yalnızca başvuru türü örneğine başvuru kopyalanır. Hem Copy hem de orijinal değer türü örneğinin aynı başvuru türü örneğine erişimi vardır. Aşağıdaki örnekte bu davranış gösterilmektedir:
+Bir değer türü bir başvuru türünün veri üyesini içeriyorsa, değer türü örneği kopyalandığında yalnızca başvuru türü örneğine yapılan başvuru kopyalanır. Hem kopya hem de özgün değer türü örneği aynı başvuru türü örneğine erişebilir. Aşağıdaki örnek, davranışı gösterir:
 
-[!code-csharp[shallow copy](~/samples/snippets/csharp/language-reference/builtin-types/ValueTypes.cs#ShallowCopy)]
+[!code-csharp[shallow copy](snippets/ValueTypes.cs#ShallowCopy)]
 
 > [!NOTE]
-> Kodunuzu daha az hataya açık ve daha sağlam hale getirmek için, değişmez değer türlerini tanımlayın ve kullanın. Bu makale yalnızca gösterim amacıyla kesilebilir değer türlerini kullanır.
+> Kodunuzu daha az hataya yatkın ve daha sağlam hale getirmek için değişmez değer türlerini tanımlayın ve kullanın. Bu makalede, yalnızca gösterim amacıyla mutable değer türleri kullanır.
 
-## <a name="kinds-of-value-types"></a>Değer türü türleri
+## <a name="kinds-of-value-types"></a>Değer türleri türleri
 
 Değer türü aşağıdaki iki türden biri olabilir:
 
-- veri ve ilgili işlevleri kapsülleyen bir [Yapı türü](struct.md)
-- bir adlandırılmış sabitler kümesi tarafından tanımlanan ve bir seçimi veya seçenek bileşimini temsil eden bir [numaralandırma türü](enum.md)
+- verileri ve ilgili işlevselliği kapsayan bir [yapı türü](struct.md)
+- bir [numaralandırma türü](enum.md), adlı sabitler kümesi tarafından tanımlanan ve bir seçim veya seçenek bir arada temsil eden
 
-[Null olabilen bir değer türü](nullable-value-types.md) `T?` temel alınan değer `T` türünün tüm değerlerini ve ek bir [null](../keywords/null.md) değeri temsil eder. Null atanabilir bir değer türü olmadığı takdirde, değer türü değişkenine `null` atayamazsınız.
+[Nullable değer türü,](nullable-value-types.md) `T?` temel değer türünün `T` tüm değerlerini ve ek bir [null](../keywords/null.md) değerini temsil eder. Nullable değer `null` türü olmadığı sürece, değer türünden bir değişkene atayamazsınız.
 
 ## <a name="built-in-value-types"></a>Yerleşik değer türleri
 
-C#, *basit türler*olarak da bilinen aşağıdaki yerleşik değer türlerini sağlar:
+C# *basit türleri*olarak da bilinen aşağıdaki yerleşik değer türlerini sağlar:
 
-- [Integral sayısal türleri](integral-numeric-types.md)
+- [Tamsayı sayısal türler](integral-numeric-types.md)
 - [Kayan nokta sayısal türleri](floating-point-numeric-types.md)
-- Boole değeri temsil eden [bool](bool.md)
-- Unicode UTF-16 karakterini temsil eden [karakter](char.md)
+- boolean değerini temsil eden [bool](bool.md)
+- unicode UTF-16 karakterini temsil eden [char](char.md)
 
-Tüm basit türler yapı türlerdir ve bazı ek işlemlere izin veren diğer yapı türlerinden farklıdır:
+Tüm basit türler yapı türleridir ve belirli ek işlemlere izin verdikleri için diğer yapı türlerinden farklıdır:
 
-- Basit bir tür değeri sağlamak için sabit değerler kullanabilirsiniz. Örneğin, `'A'` türü `char` bir değişmez değerdir ve `2001` `int`türü bir değişmez değerdir.
+- Basit bir tür değeri sağlamak için literals kullanabilirsiniz. Örneğin, `'A'` `char` türünün bir harfidir `2001` ve türünün `int`bir harfidir.
 
-- [Const](../keywords/const.md) anahtar sözcüğüyle basit türlerin sabitlerini bildirebilirsiniz. Diğer yapı türlerinde sabitler olması mümkün değildir.
+- [Const](../keywords/const.md) anahtar sözcüğüyle basit türlerin sabitlerini bildirebilirsiniz. Diğer yapı türlerinin sabitlerinin olması mümkün değildir.
 
-- İşlenenleri basit türlerin tüm sabitleri olan sabit ifadeler, derleme zamanında değerlendirilir.
+- Operandları basit türlerin tüm sabitleri olan sabit ifadeler derleme zamanında değerlendirilir.
 
-7,0 ' C# C# den başlayarak [değer tanımlama gruplarını](../../tuples.md)destekler. Değer tanımlama grubu bir değer türüdür, ancak basit bir tür değildir.
+C# 7.0 ile başlayarak, C# [değer tuples](../../tuples.md)destekler. Değer tuple bir değer türüdür, ancak basit bir tür değildir.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md)aşağıdaki bölümlerine bakın:
+Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)aşağıdaki bölümlerine bakın:
 
 - [Değer türleri](~/_csharplang/spec/types.md#value-types)
 - [Basit türler](~/_csharplang/spec/types.md#simple-types)
@@ -68,6 +68,6 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvurunun](../index.md)
+- [C# başvurusu](../index.md)
 - <xref:System.ValueType?displayProperty=nameWithType>
 - [Başvuru türleri](../keywords/reference-types.md)

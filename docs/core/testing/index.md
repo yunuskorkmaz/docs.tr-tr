@@ -1,67 +1,67 @@
 ---
 title: .NET Core ve .NET Standard birim testi
-description: Bu makalede, .NET Core ve .NET Standard projelerine yönelik birim testi hakkında kısa bir genel bakış sunulmaktadır.
+description: Bu makalede, .NET Core ve .NET Standard projeleri için birim testine kısa bir genel bakış verebilirsiniz.
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.openlocfilehash: 1263bfe337b9d6609c0ca7df70aa299a61a7f1a0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78157407"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core ve .NET Standard birim testi
 
-.NET Core, birim testlerini oluşturmayı kolaylaştırır. Bu makale, birim testlerini tanıtır ve diğer test türlerinden farklı şekilde nasıl farklılık gösterir. Sayfanın alt kısmındaki bağlantılı kaynaklar çözümünüze bir test projesi nasıl ekleneceğini gösterir. Test projenizi ayarladıktan sonra, komut satırını veya Visual Studio 'Yu kullanarak birim testlerinizi çalıştırabileceksiniz.
+.NET Core, birim testleri oluşturmayı kolaylaştırır. Bu makalede, birim testleri tanınır ve diğer test türlerinden nasıl farklı olduklarını göstermektedir. Sayfanın altındaki bağlı kaynaklar, çözümünüze nasıl bir test projesi ekleyeceğinizgösteriz. Test projenizi ayarladıktan sonra, komut satırını veya Visual Studio'yu kullanarak birim testlerinizi çalıştırabilirsiniz.
 
-Bir **ASP.NET Core** projesi test ediyorsanız bkz. [ASP.NET Core tümleştirme testleri](/aspnet/core/test/integration-tests#test-app-prerequisites).
+**Bir ASP.NET Core** projesini test ediyorsanız, ASP.NET [Core'daki Tümleştirme testlerine](/aspnet/core/test/integration-tests#test-app-prerequisites)bakın.
 
-.NET Core 2,0 ve üzeri [.NET Standard 2,0](../../standard/net-standard.md)' i destekler. Bu, birim testlerini göstermek için kitaplıklarını kullanacağız.
+.NET Core 2.0 ve daha sonra [.NET Standart 2.0'ı](../../standard/net-standard.md)destekler ve birim testlerini göstermek için kitaplıklarını kullanırız.
 
-İçin C# F# yerleşik .NET Core 2,0 ve üzeri birim test projesi şablonlarını ve kişisel projeniz için bir başlangıç noktası olarak Visual Basic kullanabilirsiniz.
+C#, F# ve Visual Basic için dahili .NET Core 2.0 ve daha sonra birim test proje şablonlarını kişisel projeniz için başlangıç noktası olarak kullanabilirsiniz.
 
-## <a name="what-are-unit-tests"></a>Birim testi nedir?
+## <a name="what-are-unit-tests"></a>Birim testleri nedir?
 
-Otomatikleştirilmiş testlerin olması, bir yazılım uygulamasının yazarlarını yapmak için yaptığı şeyleri yaptığını sağlamak için harika bir yoldur. Yazılım uygulamaları için birden çok test türü vardır. Bu, tümleştirme testlerini, Web testlerini, yük testlerini ve diğerlerini içerir. **Birim testleri** , bireysel yazılım bileşenlerini ve yöntemlerini test eder. Birim testleri yalnızca geliştiricinin denetimindeki kodu test etmelidir. Altyapı sorunlarını test etmez. Altyapı sorunları veritabanları, dosya sistemleri ve ağ kaynaklarıdır.
+Otomatik testler olması, bir yazılım uygulamasının yazarlarının yapmak istediği şeyi yapmasını sağlamanın harika bir yoludur. Yazılım uygulamaları için birden çok türde test vardır. Bunlar tümleştirme testleri, web testleri, yükleme testleri ve diğerleri içerir. Birim testleri tek tek yazılım bileşenlerini ve yöntemlerini **test eder.** Birim testleri yalnızca geliştiricinin denetiminde kodu test etmelidir. Altyapı endişelerini test etmemeliler. Altyapı yla ilgili endişeler veritabanlarını, dosya sistemlerini ve ağ kaynaklarını içerir.
 
-Ayrıca, testlerin yazılması için en iyi uygulamaları aklınızda bulundurun. Örneğin, [test odaklı geliştirme (TDD)](https://deviq.com/test-driven-development/) , bir birim testinin denetlenecek kodun önüne yazıldığı bir birimdir. TDD yazmadan önce kitap için bir ana hat oluşturma gibidir. Geliştiricilerin daha basit, daha okunabilir ve verimli bir kod yazmasına yardımcı olmak için tasarlanmıştır.
+Ayrıca, testler yazmak için en iyi uygulamalar olduğunu unutmayın. Örneğin, [Test Odaklı Geliştirme (TDD),](https://deviq.com/test-driven-development/) bir birim testinin, denetlemesi gereken koddan önce yazıldığı zaman dır. TDD, biz yazmadan önce bir kitap için bir anahat oluşturmak gibidir. Geliştiricilerin daha basit, daha okunabilir ve verimli kod yazmalarına yardımcı olmak içindir.
 
 > [!NOTE]
-> ASP.NET ekibi, geliştiricilerin test sınıfları ve yöntemleri için iyi adlarla karşılaşmalarına yardımcı olmak için [Bu kuralları](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#unit-tests-and-functional-tests) izler.
+> ASP.NET ekibi, geliştiricilerin test [sınıfları](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#unit-tests-and-functional-tests) ve yöntemleri için iyi adlar bulabına yardımcı olmak için bu kuralları izler.
 
-Birim testlerini yazarken altyapıya bağımlılıklar tanıtmamanızda deneyin. Bunlar testleri yavaş ve Brittle yapar ve tümleştirme testleri için ayrılmış olmalıdır. [Açık bağımlılıklar ilkesini](https://deviq.com/explicit-dependencies-principle/) Izleyerek ve [bağımlılık ekleme](/aspnet/core/fundamentals/dependency-injection)'yi kullanarak uygulamanızdaki bu bağımlılıklardan kaçınabilirsiniz. Ayrıca, birim testlerinizi tümleştirme testlerinizden ayrı bir projede tutabilirsiniz. Bu, birim testi projenizin altyapı paketlerine yönelik başvuruları veya bağımlılıkları olmamasını sağlar.
+Birim testleri yazarken altyapıya bağımlılık lar getirmemeye çalışın. Bunlar testleri yavaş ve kırılgan hale getirmek ve tümleştirme testleri için ayrılmış olmalıdır. [Açık Bağımlılıklar İlkesi'ni](https://deviq.com/explicit-dependencies-principle/) izleyerek ve Bağımlılık [Enjeksiyonu'nu](/aspnet/core/fundamentals/dependency-injection)kullanarak uygulamanızdaki bu bağımlılıkları önleyebilirsiniz. Birim testlerinizi tümleştirme testlerinizden ayrı bir projede de saklayabilirsiniz. Bu, birim test projenizin altyapı paketlerine referansları veya bunlara bağlı olmamasını sağlar.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 .NET Core projelerinde birim testi hakkında daha fazla bilgi:
 
-.NET Core birim testi projeleri için desteklenir:
+.NET Çekirdek birim test projeleri için desteklenir:
 
-- [C#](../../csharp/index.yml)
+- [C #](../../csharp/index.yml)
 - [F#](../../fsharp/index.yml)
 - [Visual Basic](../../visual-basic/index.yml)
 
-Şunları da seçebilirsiniz:
+Ayrıca aralarından seçim yapabilirsiniz:
 
-- [xUnit](https://xunit.github.io)
+- [xBirim](https://xunit.github.io)
 - [NUnit](https://nunit.org)
-- ['I](https://github.com/Microsoft/testfx-docs)
+- [MSTest](https://github.com/Microsoft/testfx-docs)
 
-Aşağıdaki izlenecek yollarda daha fazla bilgi edinebilirsiniz:
+Aşağıdaki izlenebilir liklerde daha fazla bilgi edinebilirsiniz:
 
-- [ *XUnit* *C#* ve .NET Core CLI](unit-testing-with-dotnet-test.md)kullanarak birim testleri oluşturun.
-- [ *NUnit* *C#* ve .NET Core CLI](unit-testing-with-nunit.md)kullanarak birim testleri oluşturun.
-- [ *MSTest* ve *C#* .NET Core CLI](unit-testing-with-mstest.md)kullanarak birim testleri oluşturun.
-- [ *XUnit* *F#* ve .NET Core CLI](unit-testing-fsharp-with-dotnet-test.md)kullanarak birim testleri oluşturun.
-- [ *NUnit* *F#* ve .NET Core CLI](unit-testing-fsharp-with-nunit.md)kullanarak birim testleri oluşturun.
-- [ *MSTest* ve *F#* .NET Core CLI](unit-testing-fsharp-with-mstest.md)kullanarak birim testleri oluşturun.
-- [ *XUnit* kullanarak birim testleri oluşturun ve .NET Core CLI *Visual Basic* ](unit-testing-visual-basic-with-dotnet-test.md).
-- [ *NUnit* ve .NET Core CLI *Visual Basic* ](unit-testing-visual-basic-with-nunit.md)kullanarak birim testleri oluşturun.
-- [ *MSTest* ve *Visual Basic* ](unit-testing-visual-basic-with-mstest.md)kullanarak birim testleri oluşturun .NET Core CLI.
+- [.NET Core CLI ile *xUnit* ve *C#* ](unit-testing-with-dotnet-test.md)kullanarak birim testleri oluşturun.
+- [.NET Core CLI ile *NUnit* ve *C#* kullanarak](unit-testing-with-nunit.md)birim testleri oluşturun.
+- [.NET Core CLI ile *MSTest* ve *C#* kullanarak](unit-testing-with-mstest.md)birim testleri oluşturun.
+- [.NET Core CLI ile *xUnit* ve *F#* kullanarak](unit-testing-fsharp-with-dotnet-test.md)birim testleri oluşturun.
+- [.NET Core CLI ile *NUnit* ve *F#* kullanarak](unit-testing-fsharp-with-nunit.md)birim testleri oluşturun.
+- [.NET Core CLI ile *MSTest* ve *F#* kullanarak](unit-testing-fsharp-with-mstest.md)birim testleri oluşturun.
+- [ *.NET* Core CLI ile xUnit ve *Visual Basic* kullanarak](unit-testing-visual-basic-with-dotnet-test.md)birim testleri oluşturun.
+- [.NET Core CLI ile *NUnit* ve *Visual Basic* kullanarak](unit-testing-visual-basic-with-nunit.md)birim testleri oluşturun.
+- [ *.NET* Core CLI ile MSTest ve *Visual Basic* kullanarak](unit-testing-visual-basic-with-mstest.md)birim testleri oluşturun.
 
 Aşağıdaki makalelerde daha fazla bilgi edinebilirsiniz:
 
-- Visual Studio Enterprise .NET Core için harika test araçları sunmaktadır. Daha fazla bilgi edinmek için [Live Unit Testing](/visualstudio/test/live-unit-testing) veya [kod kapsamına](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage) göz atın.
-- Seçmeli birim testlerini çalıştırma hakkında daha fazla bilgi için bkz. [Seçmeli birim testlerini çalıştırma](selective-unit-tests.md)veya [Testleri Visual Studio ile dahil etme ve hariç tutma](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods).
-- [.NET Core ve Visual Studio Ile xUnit kullanma](https://xunit.github.io/docs/getting-started-dotnet-core.html).
+- Visual Studio Enterprise ,NET Core için harika test araçları sunar. Daha fazla bilgi edinmek için [Canlı Birim Testi'ne](/visualstudio/test/live-unit-testing) veya [kod kapsamına](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage) göz atın.
+- Seçici birim testlerinin nasıl çalıştırılabildiğini hakkında daha [including and excluding tests with Visual Studio](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods)fazla bilgi için [bkz.](selective-unit-tests.md)
+- [.NET Core ve Visual Studio ile xUnit nasıl kullanılır.](https://xunit.github.io/docs/getting-started-dotnet-core.html)

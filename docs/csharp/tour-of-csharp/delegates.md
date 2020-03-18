@@ -1,33 +1,33 @@
 ---
-title: C#Temsilciler- C# dilin turu
-description: Temsilcilerle C# geç bağlamayı öğrenin
+title: C# Delegeleri - C# dilinde bir tur
+description: C# temsilcileriyle geç bağlanmayı öğrenin
 ms.date: 02/27/2020
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
 ms.openlocfilehash: b1740ddc65dcb0ee8775f4cbaa8356293ea55fae
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159175"
 ---
 # <a name="delegates"></a>Temsilciler
 
-Bir ***temsilci türü*** , belirli bir parametre listesi ve dönüş türü olan yöntemlere yapılan başvuruları temsil eder. Temsilciler, yöntemleri değişkenlere atanabilecek ve parametre olarak geçirilen varlıklar olarak işleme olanağı tanır. Temsilciler, bazı diğer dillerde bulunan işlev işaretçileri kavramına benzerdir. İşlev işaretçilerinden farklı olarak, temsilciler nesne odaklı ve tür açısından güvenlidir.
+***Temsilci türü,*** belirli bir parametre listesi ve dönüş türüne sahip yöntemlere yapılan başvuruları temsil eder. Temsilciler, yöntemleri değişkenlere atanabilen ve parametre olarak geçirilebilen varlıklar olarak ele alabilen varlıklar olarak ele alabilmektir. Temsilciler, diğer bazı dillerde bulunan işlev işaretçileri kavramına benzer. Işlev işaretçilerinaksine, temsilciler nesne yönelimli ve tür güvenlidir.
 
-Aşağıdaki örnek, `Function`adlı bir temsilci türü bildirir ve kullanır.
+Aşağıdaki örnek, .. `Function`
 
 [!code-csharp[DelegateExample](../../../samples/snippets/csharp/tour/delegates/Program.cs#L3-L37)]
 
-`Function` temsilci türünün bir örneği, `double` bağımsız değişken alan ve `double` bir değer döndüren herhangi bir yönteme başvurabilir. `Apply` yöntemi, belirli bir Işlevi bir `double[]`öğelerine uygular, sonuçlarla bir `double[]` döndürüyor. `Main` yönteminde, bir `double[]`üç farklı işlevi uygulamak için `Apply` kullanılır.
+`Function` Temsilci türünün bir örneği, bağımsız değişken alan ve bir değer döndüren herhangi bir `double` `double` yönteme başvurur. Yöntem, `Apply` bir , sonuçları ile a `double[]` `double[]` dönen elemanları için verilen bir İşlev uygular. `Main` Yöntemde, `Apply` bir `double[]`üç farklı işlevleri uygulamak için kullanılır.
 
-Bir temsilci, statik bir yönteme (örneğin, `Square` veya önceki örnekteki `Math.Sin`) veya bir örnek yöntemine (önceki örnekte `m.Multiply` gibi) başvurabilir. Aynı zamanda bir örnek yöntemine başvuran bir temsilci belirli bir nesneye başvurur ve örnek yöntemi temsilci aracılığıyla çağrıldığında, bu nesne çağrıdan `this` olur.
+Temsilci, statik bir yönteme `Square` (önceki `Math.Sin` örnekte gibi) veya örnek yöntemine (önceki örnekte olduğu gibi) `m.Multiply` başvuru yapabilir. Örnek bir yönteme başvuran bir temsilci de belirli bir nesneye başvurur ve örnek `this` yöntemi temsilci aracılığıyla çağrıldığında, bu nesne çağırmada olur.
 
-Temsilciler, bildirildiği sırada oluşturulan "satır içi Yöntemler" olan anonim işlevler kullanılarak da oluşturulabilir. Anonim işlevler, çevresindeki yöntemlerin yerel değişkenlerini görebilir. Aşağıdaki örnek bir sınıf oluşturmaz:
+Temsilciler, beyan edildiğinde oluşturulan "satır dışı yöntemler" olan anonim işlevler kullanılarak da oluşturulabilir. Anonim işlevler, çevreleyen yöntemlerin yerel değişkenlerini görebilir. Aşağıdaki örnek bir sınıf oluşturmaz:
 
 [!code-csharp[LambdaExample](../../../samples/snippets/csharp/tour/delegates/Program.cs#L44-L44)]
 
-Bir temsilci, başvurduğu yöntemin sınıfını bilmez veya ilgilenmez; her önemli şey, başvurulan yöntemin aynı parametrelere sahip olması ve temsilciyle aynı türde dönüş türüdür.
+Bir temsilci, başvurulmadığı yöntemin sınıfını bilmez veya önemsemaz; önemli olan tek şey, başvurulan yöntemin temsilciyle aynı parametrelere ve dönüş türüne sahip olmasıdır.
 
 >[!div class="step-by-step"]
 >[Önceki](interfaces.md)
->[İleri](attributes.md)
+>[Sonraki](attributes.md)

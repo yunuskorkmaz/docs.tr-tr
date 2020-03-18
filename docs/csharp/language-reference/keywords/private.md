@@ -1,5 +1,5 @@
 ---
-title: private anahtar sözcüğü C# başvurusu
+title: özel anahtar kelime - C# Reference
 ms.date: 07/20/2015
 f1_keywords:
 - private_CSharpKeyword
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
 ms.openlocfilehash: a13e9ef18b0f6452c3ff1497dc97110bc21c433d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715193"
 ---
 # <a name="private-c-reference"></a>private (C# Başvurusu)
 
-`private` anahtar sözcüğü bir üye erişim değiştiricisidir.
+Anahtar `private` kelime bir üye erişim değiştiricidir.
 
-> Bu sayfa `private` erişimi içerir. `private` anahtar sözcüğü ayrıca [`private protected`](./private-protected.md) erişim değiştiricisinin bir parçasıdır.
+> Bu sayfa `private` erişimi kapsar. Anahtar `private` kelime de erişim [`private protected`](./private-protected.md) değiştiricinin bir parçasıdır.
 
-Özel erişim en az izin veren erişim düzeyidir. Özel üyelere, bu örnekte olduğu gibi, yalnızca sınıfın gövdesinde veya bildirildiği yapı içinde erişilebilir:
+Özel erişim en az izin verilen erişim düzeyidir. Özel üyelere, bu örnekte olduğu gibi, yalnızca sınıfın gövdesi nde veya beyan edildikleri yapı içinde erişilebilir:
 
 ```csharp
 class Employee
@@ -30,30 +30,30 @@ class Employee
 }
 ```
 
-Aynı gövdedeki iç içe türler Ayrıca bu özel üyelere de erişebilir.
+Aynı gövdedeki iç içe geçen türler de bu özel üyelere erişebilir.
 
-Bu, sınıf veya bildirildiği yapı dışında özel bir üyeye başvuruda bulunmak için derleme zamanı hatasıdır.
+Sınıf veya beyan edildiği yapı dışında özel bir üyeye başvurmak için bir derleme zamanı hatasıdır.
 
-Diğer erişim değiştiricilerine sahip `private` bir karşılaştırması için bkz. [Erişilebilirlik düzeyleri](accessibility-levels.md) ve [erişim değiştiricileri](../../programming-guide/classes-and-structs/access-modifiers.md).
+Diğer erişim `private` değiştiriciler ile karşılaştırma [için, Erişilebilirlik Düzeyleri](accessibility-levels.md) ve [Erişim Değiştiriciler](../../programming-guide/classes-and-structs/access-modifiers.md)bakın.
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte, `Employee` sınıfı iki özel veri üyesi içerir, `name` ve `salary`. Özel Üyeler olarak, üye yöntemleri dışında erişilemez. `GetName` ve `Salary` adlı ortak Yöntemler, Özel üyelere denetimli erişime izin verecek şekilde eklenir. `name` üyesine ortak bir yöntem yoluyla erişilir ve `salary` üyesine ortak bir salt okunurdur özelliği tarafından erişilir. (Daha fazla bilgi için bkz. [Özellikler](../../programming-guide/classes-and-structs/properties.md) .)
+Bu örnekte, `Employee` sınıf iki özel `name` veri `salary`üyesi içerir ve . Özel üyeler olarak, üye yöntemleri dışında erişilemezler. Özel üyelere kontrollü erişim sağlamak için adlandırılmış `GetName` ve `Salary` eklenen genel yöntemler. Üyeye `name` genel bir yöntemle erişilir ve `salary` üyeye herkese açık salt okunur bir özellik ile erişilir. (Daha fazla bilgi için [Özellikler'e](../../programming-guide/classes-and-structs/properties.md) bakın.)
 
 [!code-csharp[csrefKeywordsModifiers#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#10)]
 
 ## <a name="c-language-specification"></a>C# dili belirtimi  
 
-Daha fazla bilgi için bkz. [ C# dil belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [Erişilebilirlik bildirimi](~/_csharplang/spec/basic-concepts.md#declared-accessibility) . Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için [C# Dil Belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [Bildirilen Erişilebilirlik'e](~/_csharplang/spec/basic-concepts.md#declared-accessibility) bakın. Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../index.md)
+- [C# Referans](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Sözcükleri](index.md)
+- [C# Anahtar Kelimeler](index.md)
 - [Erişim Değiştiricileri](access-modifiers.md)
 - [Erişilebilirlik Düzeyleri](accessibility-levels.md)
 - [Değiştiriciler](index.md)
-- [public](public.md)
+- [Kamu](public.md)
 - [protected](protected.md)
-- [internal](internal.md)
+- [Iç](internal.md)

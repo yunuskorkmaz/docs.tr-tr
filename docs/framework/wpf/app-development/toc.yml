@@ -14,7 +14,7 @@
           href: how-to-use-an-application-scope-resource-dictionary.md
         - name: Uygulama Oturumları Arasında Uygulama Kapsamı Özelliklerini Koruma ve Geri Yükleme
           href: persist-and-restore-application-scope-properties.md
-    - name: WPF’de Windows
+    - name: WPF İçinde Pencereler
       href: windows-in-wpf-applications.md
       items:
         - name: WPF Windows'a Genel Bakış
@@ -58,7 +58,7 @@
               href: how-to-stop-a-page-from-loading.md
             - name: Gezinme Geçmişinde Geriye Doğru Gitme
               href: how-to-navigate-back-through-navigation-history.md
-            - name: Sayfa İşlevinden Geri Dönme
+            - name: Sayfa İşlevinden Dönme
               href: how-to-return-from-a-page-function.md
             - name: Sayfa İşlevinin Dönüş Değerini Alma
               href: how-to-get-the-return-value-of-a-page-function.md
@@ -121,7 +121,7 @@
       items:
         - name: WPF Uygulaması Oluşturma
           href: building-a-wpf-application-wpf.md
-        - name: WPF Uygulaması Dağıtma
+        - name: Bir WPF Uygulamasını Dağıtma
           href: deploying-a-wpf-application-wpf.md
         - name: Nasıl Yapılır Konuları
           href: build-and-deploy-how-to-topics.md

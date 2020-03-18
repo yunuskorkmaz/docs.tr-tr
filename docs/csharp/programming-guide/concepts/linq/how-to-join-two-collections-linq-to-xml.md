@@ -1,39 +1,39 @@
 ---
-title: İki koleksiyon nasıl katılır (LINQ to XML) (C#)
+title: İki koleksiyona (LINQ - XML) (C#) nasıl katılanın?
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
 ms.openlocfilehash: a5044778bbfd9529faf5fe63c72076f6a973c815
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345855"
 ---
-# <a name="how-to-join-two-collections-linq-to-xml-c"></a>İki koleksiyon nasıl katılır (LINQ to XML) (C#)
+# <a name="how-to-join-two-collections-linq-to-xml-c"></a>İki koleksiyona (LINQ - XML) (C#) nasıl katılanın?
 
-XML belgesindeki bir öğe veya öznitelik, bazen başka bir öğe veya özniteliğe başvurabilir. Örneğin, [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) XML belgesi, müşterilerin ve siparişlerin listesinin bir listesini içerir. Her `Customer` öğesi bir `CustomerID` özniteliği içerir. Her `Order` öğesi bir `CustomerID` öğesi içerir. Her sırada `CustomerID` öğesi bir müşterinin `CustomerID` özniteliğine başvurur.
+XML belgesindeki bir öğe veya öznitelik bazen başka bir öğeye veya özniteliğe başvurabilir. Örneğin, [Örnek XML Dosyası: Müşteriler ve Siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) XML belgesi, bir müşteri listesi ve sipariş listesi içerir. Her `Customer` öğe `CustomerID` bir öznitelik içerir. Her `Order` öğe `CustomerID` bir öğe içerir. Her `CustomerID` siparişteki öğe, `CustomerID` müşterideki özniteliğe başvurur.
 
-[Örnek xsd dosyası: müşteriler ve siparişler](./sample-xsd-file-customers-and-orders1.md) , bu belgeyi doğrulamak için KULLANıLABILECEK bir xsd içerir. `Customer` öğesinin `CustomerID` özniteliğinin bir anahtar olduğunu ve her `CustomerID` öğesindeki `Order` öğesi ile her `CustomerID` öğesi arasında bir ilişki kurmayı oluşturmak için XSD 'nin `xs:key` ve `xs:keyref` özelliklerini kullanır.
+Konu [Örnek XSD Dosyası: Müşteriler ve Siparişler,](./sample-xsd-file-customers-and-orders1.md) bu belgeyi doğrulamak için kullanılabilecek bir XSD içerir. XSD'nin `xs:key` `xs:keyref` özelliklerini, `CustomerID` `Customer` öğenin özniteliğinin bir anahtar olduğunu belirlemek ve her `CustomerID` `Order` öğedeki `CustomerID` öğe ile öznitelik `Customer` arasında bir ilişki kurmak için kullanır.
 
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], `join` yan tümcesini kullanarak bu ilişkinin avantajlarından yararlanabilirsiniz.
+Ile, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]bu ilişkiden yan tümceyi `join` kullanarak yararlanabilirsiniz.
 
-Kullanılabilir dizin olmadığından, bu tür bir katılım düşük çalışma zamanı performansına sahip olacaktır.
+Kullanılabilir dizin olmadığından, bu tür birleştirmeler çalışma süresi performansı nın düşük olacaktır.
 
-`join`hakkında daha ayrıntılı bilgi için bkz. [JOIN Operations (C#)](./join-operations.md).
+Hakkında `join`daha ayrıntılı bilgi için bkz: [Join Operations (C#)](./join-operations.md).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek `Customer` öğelerini `Order` öğelerine birleştirir ve siparişlerde `CompanyName` öğesini içeren yeni bir XML belgesi oluşturur.
+Aşağıdaki örnek, `Customer` `Order` öğelere öğeleri birleştirir ve siparişlerde `CompanyName` öğeiçeren yeni bir XML belge oluşturur.
 
-Sorguyu yürütmeden önce örnek, belgenin örnek XSD dosyasındaki şemayla uyumlu olduğunu doğrular [: müşteriler ve siparişler](./sample-xsd-file-customers-and-orders1.md). Bu, JOIN yan tümcesinin her zaman çalışmasına de sağlar.
+Sorguyu yürütmeden önce, örnek belgenin [Örnek XSD Dosyasındaki](./sample-xsd-file-customers-and-orders1.md)şema ile uyumlu olduğunu doğrular: Müşteriler ve Siparişler. Bu, birleştirme yan tümcesinin her zaman çalışmasını sağlar.
 
-Bu sorgu ilk olarak tüm `Customer` öğelerini alır ve sonra bunları `Order` öğelerine birleştirir. Yalnızca, "K" dan büyük `CustomerID` olan müşterilere ait siparişleri seçer. Ardından, her bir sırada müşteri bilgilerini içeren yeni bir `Order` öğesini projeler.
+Bu sorgu önce `Customer` tüm öğeleri alır ve sonra `Order` öğelere katılır. Yalnızca "K"den `CustomerID` büyük müşteriler için siparişleri seçer. Daha sonra her `Order` sipariş içinde müşteri bilgilerini içeren yeni bir öğe yi yitir.
 
-Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).
+Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Müşteriler ve Siparişler (LINQ-XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).
 
-Bu örnek şu XSD şemasını kullanır: [örnek xsd dosyası: müşteriler ve siparişler](./sample-xsd-file-customers-and-orders1.md).
+Bu örnekte aşağıdaki XSD şeması kullanır: [Örnek XSD Dosyası: Müşteriler ve Siparişler.](./sample-xsd-file-customers-and-orders1.md)
 
-Bu şekilde katılabilmek iyi bir işlem yapmaz. Birleşimler, doğrusal bir arama yoluyla yapılır. Performansla ilgili yardım için hiçbir karma tablo veya dizin yok.
+Bu şekilde katılmak iyi bir performans sergilemeyecektir. Birleştirmeler doğrusal bir arama ile gerçekleştirilir. Performansa yardımcı olacak karma tablolar veya dizinler yoktur.
 
 ```csharp
 XmlSchemaSet schemas = new XmlSchemaSet();

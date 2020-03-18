@@ -1,35 +1,35 @@
 ---
-title: Windows, Linux ve macOS-.NET Core 'da yüklü .NET Core sürümlerini denetleyin
-description: Bilgisayarınızda hangi .NET Core sürümlerinin yüklü olduğunu nasıl listeleyeceğinizi öğrenin. Buna .NET Core çalışma zamanı ve SDK dahildir.
+title: Windows, Linux ve macOS'ta yüklü .NET Core sürümlerini kontrol edin - .NET Core
+description: .NET Core'un bilgisayarınıza hangi sürümlerinin yüklendiği listelenmeyi öğrenin. Buna .NET Core çalışma zamanı ve SDK dahildir.
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
 ms.openlocfilehash: 3efc54cea7e10bc21a472a7fa9d4026e305be79a
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503840"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399037"
 ---
-# <a name="how-to-check-that-net-core-is-already-installed"></a>.NET Core 'un zaten yüklü olduğunu denetleme
+# <a name="how-to-check-that-net-core-is-already-installed"></a>.NET Core'un zaten yüklü olduğunu kontrol etme
 
-Bu makalede, hangi .NET Core çalışma zamanı ve SDK sürümlerinin bilgisayarınızda yüklü olduğunu nasıl denetleriz öğretilir. Visual Studio veya Mac için Visual Studio gibi tümleşik bir geliştirme ortamınız varsa .NET Core zaten yüklü olabilir.
+Bu makalede, .NET Core çalışma zamanı ve SDK'nın hangi sürümlerinin bilgisayarınıza yüklendiği kontrol edilir. .NET core, Mac için Visual Studio veya Visual Studio gibi tümleşik bir geliştirme ortamınız varsa zaten yüklenmiş olabilir.
 
-SDK yükleme, ilgili çalışma zamanını yüklenir.
+Bir SDK yükleme ilgili çalışma süresini yükler.
 
-Bu makaledeki herhangi bir komut başarısız olursa, çalışma zamanı veya SDK yüklü değildir. Daha fazla bilgi için bkz. [.NET Core 'U indirme ve yükleme](index.md).
+Bu makaledeki herhangi bir komut başarısız olursa, çalışma saatini veya SDK yüklü değil. Daha fazla bilgi için [.NET Core'u İndirve yükleyin.](index.md)
 
-## <a name="check-sdk-versions"></a>SDK sürümlerini denetle
+## <a name="check-sdk-versions"></a>SDK sürümlerini kontrol edin
 
-Hangi .NET Core SDK sürümlerinin bir terminalle yüklü olduğunu görebilirsiniz. Bir Terminal açın ve aşağıdaki komutu çalıştırın.
+.NET Core SDK'nın hangi sürümlerinin şu anda bir terminalle yüklü olduğunu görebilirsiniz. Bir terminal açın ve aşağıdaki komutu çalıştırın.
 
 ```dotnetcli
 dotnet --list-sdks
 ```
 
-Aşağıdakine benzer bir çıktı alırsınız.
+Aşağıdakine benzer çıktı alırsınız.
 
 ::: zone pivot="os-windows"
 
@@ -76,15 +76,15 @@ Aşağıdakine benzer bir çıktı alırsınız.
 
 ::: zone-end
 
-## <a name="check-runtime-versions"></a>Çalışma zamanı sürümlerini denetle
+## <a name="check-runtime-versions"></a>Çalışma zamanı sürümlerini denetleyin
 
-Aşağıdaki komutla .NET Core çalışma zamanının hangi sürümlerinin yüklü olduğunu görebilirsiniz.
+.NET Core çalışma zamanının hangi sürümlerinin şu anda aşağıdaki komutla yüklenmiş olduğunu görebilirsiniz.
 
 ```dotnetcli
 dotnet --list-runtimes
 ```
 
-Aşağıdakine benzer bir çıktı alırsınız.
+Aşağıdakine benzer çıktı alırsınız.
 
 ::: zone pivot="os-windows"
 
@@ -168,9 +168,9 @@ Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-Komut `dotnet --info`hem SDK sürümlerini hem de çalışma zamanı sürümlerini görebilirsiniz. Ayrıca, işletim sistemi sürümü ve çalışma zamanı tanımlayıcısı (RID) gibi diğer çevresel ilgili bilgileri de alacaksınız.
+Hem SDK sürümlerini hem de çalışma zamanı `dotnet --info`sürümlerini komutla görebilirsiniz. Ayrıca, işletim sistemi sürümü ve çalışma zamanı tanımlayıcısı (RID) gibi çevreyle ilgili diğer bilgileri de alırsınız.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [.NET Core çalışma zamanını yükler](runtime.md).
-- [.NET Core SDK 'ı yükler](sdk.md).
+- [.NET Çekirdek Çalışma Süresini yükleyin.](runtime.md)
+- [.NET Çekirdek SDK'yı yükleyin.](sdk.md)

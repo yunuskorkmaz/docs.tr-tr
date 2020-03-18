@@ -1,5 +1,5 @@
 ---
-title: Dizeleri arama (C# kılavuz)
+title: Dizeleri arama (C# Guide)
 ms.date: 02/21/2018
 helpviewer_keywords:
 - searching strings [C#]
@@ -7,79 +7,79 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.openlocfilehash: 15ea77d13a93d88bd996a22b6fe1aaad81df572d
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74959708"
 ---
 # <a name="how-to-search-strings"></a>Dizeleri arama
 
-Dizelerde metin aramak için iki ana strateji kullanabilirsiniz. <xref:System.String> sınıfının yöntemleri belirli metni arar. Normal ifadeler metin halinde desenler arar.
+Dizelerdeki metni aramak için iki ana strateji kullanabilirsiniz. <xref:System.String> Belirli bir metin için sınıf arama yöntemleri. Normal ifadeler metindeki desenleri arar.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-<xref:System.String?displayProperty=nameWithType> sınıfı için bir diğer ad olan [dize](../language-reference/builtin-types/reference-types.md#the-string-type) türü, bir dizenin içeriğini aramak için bir dizi yararlı yöntem sağlar. Bunlar arasında <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, <xref:System.String.IndexOf%2A><xref:System.String.LastIndexOf%2A>. <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıfı, metinlerdeki desenleri aramak için zengin bir sözlük sağlar. Bu makalede, bu teknikleri ve gereksinimleriniz için en iyi yöntemi nasıl seçebileceğinizi öğreneceksiniz.
+<xref:System.String?displayProperty=nameWithType> Sınıfın diğer adı olan [dize](../language-reference/builtin-types/reference-types.md#the-string-type) türü, bir dize içeriğini aramak için yararlı yöntemler bir dizi sağlar. Aralarında <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A> <xref:System.String.IndexOf%2A>, <xref:System.String.LastIndexOf%2A>, . Sınıf <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> metindesenleri aramak için zengin bir kelime sağlar. Bu makalede, bu teknikleri ve nasıl ihtiyaçlarınız için en iyi yöntemi seçmek için öğrenirler.
 
 ## <a name="does-a-string-contain-text"></a>Dize metin içeriyor mu?
 
-<xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.StartsWith%2A?displayProperty=nameWithType> ve <xref:System.String.EndsWith%2A?displayProperty=nameWithType> yöntemleri belirli metin için bir dize arar. Aşağıdaki örnek, bu yöntemlerin ve büyük/küçük harfe duyarsız arama kullanan bir varyasyonın her birini göstermektedir:
+, <xref:System.String.Contains%2A?displayProperty=nameWithType> <xref:System.String.StartsWith%2A?displayProperty=nameWithType> ve <xref:System.String.EndsWith%2A?displayProperty=nameWithType> yöntemler belirli bir metin için bir dize arama. Aşağıdaki örnek, bu yöntemlerin her birini ve duyarlı olmayan bir arama örneği kullanan bir varyasyonu gösterir:
 
 [!code-csharp-interactive[search strings using methods](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#1)]
 
-Yukarıdaki örnekte bu yöntemlerin kullanılması için önemli bir nokta gösterilmektedir. Aramalar, varsayılan olarak **büyük/küçük harfe duyarlıdır** . Büyük/küçük harfe duyarsız arama belirtmek için <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> enum değerini kullanırsınız.
+Önceki örnek, bu yöntemleri kullanmak için önemli bir nokta göstermektedir. Aramalar varsayılan olarak **büyük/küçük harf duyarlıdır.** <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> Enum değerini, hassas olmayan bir arama örneği belirtmek için kullanırsınız.
 
-## <a name="where-does-the-sought-text-occur-in-a-string"></a>Aranan metin bir dizede nerede oluşuyor?
+## <a name="where-does-the-sought-text-occur-in-a-string"></a>Aranan metin bir dizede nerede oluşur?
 
-<xref:System.String.IndexOf%2A> ve <xref:System.String.LastIndexOf%2A> yöntemleri, dizelerde metin de arar. Bu yöntemler, aranan metnin konumunu döndürür. Metin bulunmazsa `-1`döndürür. Aşağıdaki örnek, "Methods" sözcüğünün ilk ve son oluşumu için bir arama gösterir ve içindeki metni görüntüler.
+Ve <xref:System.String.IndexOf%2A> <xref:System.String.LastIndexOf%2A> yöntemler de dizeleri metin aramak. Bu yöntemler, aranan metnin konumunu döndürer. Metin bulunmazsa, geri dönerler. `-1` Aşağıdaki örnekte, "yöntemler" sözcüğünün ilk ve son oluşumunu gösteren bir arama görüntülenir ve aradaki metni görüntüler.
   
 [!code-csharp-interactive[search strings for indices](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#2)]
 
-## <a name="finding-specific-text-using-regular-expressions"></a>Normal ifadeler kullanarak belirli bir metni bulma
+## <a name="finding-specific-text-using-regular-expressions"></a>Normal ifadeleri kullanarak belirli bir metni bulma
 
-<xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıfı, dizelerde arama yapmak için kullanılabilir. Bu aramalar, basit ve karmaşık metin desenlerinden karmaşıklığa göre değişebilir.
+Sınıf <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> dizeleri aramak için kullanılabilir. Bu aramalar basitten karmaşık metin desenlerine kadar karmaşıklık taslayabilir.
 
-Aşağıdaki kod örneği, bir tümcede "The" veya "onların" sözcüğünü arar, büyük/küçük harf durumunu yoksayar. Statik yöntem <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> aramayı gerçekleştirir. Aranacak dizeyi ve arama düzenlerini verirsiniz. Bu durumda, üçüncü bir bağımsız değişken büyük/küçük harfe duyarsız arama belirler. Daha fazla bilgi için bkz. <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
+Aşağıdaki kod örneği, bir cümledeki "the" veya "their" sözcüklerini arar ve büyük/küçük harf göz ardı eder. Statik yöntem <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> aramayı gerçekleştirir. Arama için dize ve arama deseni verirsiniz. Bu durumda, üçüncü bir bağımsız değişken büyük/küçük harf duyarsız arama belirtir. Daha fazla bilgi için bkz. <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
 
-Arama deseninin aranacağı metin açıklanır. Aşağıdaki tabloda, arama deseninin her bir öğesi açıklanmaktadır. (Aşağıdaki tablo, bir C# dizede `\\` olarak kaçılması gereken tek `\` kullanır).
+Arama deseni, aradığınız metni açıklar. Aşağıdaki tabloda arama deseninin her öğesi açıklanmaktadır. (Aşağıdaki tabloda C# dizesinde `\\` olduğu gibi kaçması gereken tek `\` limadde kullanır).
 
-| kalıp  | Açıklama     |
+| Desen  | Anlamı     |
 | -------- |-------------|
-| the      | "The" metni Eşleştir |
-| (EIR)?   | 0 veya 1 "EIR" tekrarını Eşleştir |
-| \s       | boşluk karakteriyle Eşleştir    |
+| şunu      | "the" metnini eşleştirin |
+| (eir)?   | maç 0 veya 1 "eir" oluşumu |
+| \s       | bir boşluk karakterini eşleştirme    |
   
 [!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]
   
 > [!TIP]
-> Tam bir dizeyi ararken `string` yöntemler genellikle daha iyi seçimlerdir. Normal ifadeler, bir kaynak dizesindeki bazı desenler aranırken daha iyidir.
+> Tam `string` bir dize ararken yöntemler genellikle daha iyi seçeneklerdir. Bir kaynak dizesinde bazı desenler ararken normal ifadeler daha iyidir.
 
-## <a name="does-a-string-follow-a-pattern"></a>Bir dize bir düzene uyar mi?
+## <a name="does-a-string-follow-a-pattern"></a>Bir dize bir desen izler mi?
 
-Aşağıdaki kod, dizideki her bir dizenin biçimini doğrulamak için normal ifadeleri kullanır. Doğrulama, her bir dizenin üç basamaklı rakam ile ayrıldığı bir telefon numarası biçimine sahip olmasını gerektirir, ilk iki grup üç basamak içerir ve üçüncü grup dört basamak içerir. Arama deseninin `^\\d{3}-\\d{3}-\\d{4}$`normal ifadesi kullanılır. Daha fazla bilgi için bkz. [normal Ifade dili-hızlı başvuru](../../standard/base-types/regular-expression-language-quick-reference.md).
+Aşağıdaki kod, bir dizideki her dizenin biçimini doğrulamak için düzenli ifadeler kullanır. Doğrulama, her dize, üç basamak grubunun tirelerle ayrıldığı, ilk iki grubun üç basamak içerdiği ve üçüncü grubun dört basamak içerdiği bir telefon numarası biçimine sahip olması gerekir. Arama deseni normal `^\\d{3}-\\d{3}-\\d{4}$`ifadeyi kullanır. Daha fazla bilgi için [Bkz. Normal İfade Dili - Hızlı Başvuru](../../standard/base-types/regular-expression-language-quick-reference.md).
 
-| kalıp  | Açıklama                             |
+| Desen  | Anlamı                             |
 | -------- |-------------------------------------|
-| ^        | dizenin başlangıcını eşleştirir |
-| \d{3}    | tam 3 basamaklı karakterle eşleşir  |
+| ^        | dize başlangıcıyla eşleşir |
+| \d{3}    | tam olarak 3 basamaklı karakterlerle eşleşir  |
 | -        | '-' karakteriyle eşleşir           |
-| \d{3}    | tam 3 basamaklı karakterle eşleşir  |
+| \d{3}    | tam olarak 3 basamaklı karakterlerle eşleşir  |
 | -        | '-' karakteriyle eşleşir           |
-| \d{4}    | tam 4 basamaklı karakterle eşleşir  |
-| $        | dizenin sonuyla eşleşir       |
+| \d{4}    | tam 4 basamaklı karakterlerle eşleşir  |
+| $        | dize sonu eşleşir       |
 
 [!code-csharp-interactive[csProgGuideStrings#4](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#4)]
 
-Bu tek arama deseninin birçok geçerli dizesi eşleşiyor. Normal ifadeler, tek bir metin dizesi yerine bir düzene göre arama veya doğrulama için daha iyidir.
+Bu tek arama deseni birçok geçerli dizeyle eşleşir. Normal ifadeler, tek bir metin dizesini aramak veya bir desene karşı doğrulamak için daha iyidir.
 
-Bu örnekleri, [GitHub deponuzdaki](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)koda bakarak deneyebilirsiniz. Ya da örnekleri [zip dosyası olarak](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)indirebilirsiniz.
+Bu örnekleri [GitHub depomuzdaki](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)koda bakarak deneyebilirsiniz. Veya bir zip [dosyası olarak](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)örnekleri indirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../programming-guide/index.md)
-- [Dizeler](../programming-guide/strings/index.md)
+- [Dize](../programming-guide/strings/index.md)
 - [LINQ ve Dizeler](../programming-guide/concepts/linq/linq-and-strings.md)
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
-- [Normal Ifadeleri .NET Framework](../../standard/base-types/regular-expressions.md)
+- [.NET Framework Normal İfadeleri](../../standard/base-types/regular-expressions.md)
 - [Normal İfade Dili - Hızlı Başvuru](../../standard/base-types/regular-expression-language-quick-reference.md)
-- [.NET 'teki dizeleri kullanmak için en iyi uygulamalar](../../standard/base-types/best-practices-strings.md)
+- [.NET'te dizeleri kullanmak için en iyi uygulamalar](../../standard/base-types/best-practices-strings.md)

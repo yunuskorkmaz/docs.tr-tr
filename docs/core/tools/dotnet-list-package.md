@@ -1,23 +1,23 @@
 ---
-title: DotNet List paket komutu
-description: "' DotNet List Package ' komutu bir proje veya çözümün paket başvurularını listelemek için uygun bir seçenek sağlar."
+title: dotnet liste paket komutu
+description: "'Dotnet list package' komutu, bir proje veya çözüm için paket başvurularını listelemek için kullanışlı bir seçenek sağlar."
 ms.date: 02/14/2020
 ms.openlocfilehash: 1cb52b8de10b2eef2ef7465f04316e9446318763
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157238"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,2 SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 2.2 SDK ve sonraki sürümler
 
 ## <a name="name"></a>Adı
 
-`dotnet list package`-bir proje veya çözüm için paket başvurularını listeler.
+`dotnet list package`- Proje veya çözüm için paket referanslarını listeler.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Özet
 
 ```dotnetcli
 dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch]
@@ -27,7 +27,7 @@ dotnet list package [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet list package` komutu, belirli bir proje veya çözüm için tüm NuGet paket başvurularını listelemek için uygun bir seçenek sağlar. Bu komutun işlemesi için gereken varlıkların olması için öncelikle projeyi derlemeniz gerekir. Aşağıdaki örnek, [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) projesi için `dotnet list package` komutunun çıkışını gösterir:
+Komut, `dotnet list package` belirli bir proje veya çözüm için tüm NuGet paket başvurularını listelemek için kullanışlı bir seçenek sağlar. Öncelikle bu komutun işlemesi için gereken varlıklara sahip olmak için projeyi oluşturmanız gerekir. Aşağıdaki örnek, [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) `dotnet list package` projesi için komutçıktısını gösterir:
 
 ```output
 Project 'SentimentAnalysis' has the following package references
@@ -39,9 +39,9 @@ Project 'SentimentAnalysis' has the following package references
 (A) : Auto-referenced package.
 ```
 
-**İstenen** sütun, proje dosyasında belirtilen paket sürümünü ifade eder ve bir Aralık olabilir. **Çözümlenen** sütun, projenin şu anda kullandığı sürümü listeler ve her zaman tek bir değerdir. Adlarının hemen yanında bir `(A)` görüntüleyen paketler, proje ayarlarından (`Sdk` türü, `<TargetFramework>` veya `<TargetFrameworks>` özelliği vb.) çıkarılan [örtük paket başvurularını](csproj.md#implicit-package-references) temsil eder.
+**İstenen** sütun, proje dosyasında belirtilen paket sürümüne başvurur ve bir aralık olabilir. **Çözümlenen** sütun, projenin şu anda kullanmakta olduğu sürümü listeler ve her zaman tek bir değerdir. Adlarının yanında `(A)` bir hakkı görüntüleyen paketler, proje ayarlarınızdan (tür `<TargetFramework>` `<TargetFrameworks>` veya`Sdk` özellik, vb.) çıkarılan [örtük paket başvurularını](csproj.md#implicit-package-references) temsil eder.
 
-Projelerinizde kullanmakta olduğunuz paketlerin yeni sürümlerinin olup olmadığını öğrenmek için `--outdated` seçeneğini kullanın. Varsayılan olarak, çözümlenmiş sürüm aynı zamanda bir ön sürüm sürümü olmadığı takdirde, `--outdated` en son kararlı paketleri listeler. Yeni sürümler listelenirken ön sürüm sürümlerini dahil etmek için `--include-prerelease` seçeneğini de belirtin. Aşağıdaki örneklerde, önceki örnekle aynı proje için `dotnet list package --outdated --include-prerelease` komutunun çıktısı gösterilmektedir:
+Projelerinizde `--outdated` kullanmakta olduğunuz paketlerin daha yeni sürümlerinin olup olmadığını öğrenmek için seçeneği kullanın. Varsayılan olarak, `--outdated` çözülen sürüm de bir ön sürüm olmadığı sürece en son kararlı paketleri listeler. Yeni sürümleri listelerken yayın öncesi sürümleri eklemek `--include-prerelease` için de seçeneği belirtin. Aşağıdaki örnekler, önceki örnekle aynı proje için `dotnet list package --outdated --include-prerelease` komutun çıktısını gösterir:
 
 ```output
 The following sources were used:
@@ -54,7 +54,7 @@ Project `SentimentAnalysis` has the following updates to its packages
    > Microsoft.ML         1.4.0       1.4.0      1.5.0-preview
 ```
 
-Projenizin geçişli bağımlılıklara sahip olup olmadığını bulmanız gerekiyorsa `--include-transitive` seçeneğini kullanın. Daha sonra başka bir pakete bağımlı olan bir paketi projenize eklediğinizde geçişli bağımlılıklar oluşur. Aşağıdaki örnek, üst düzey paketleri ve bağımlı oldukları paketleri görüntüleyen [Helloplugin](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin) projesi için `dotnet list package --include-transitive` komutunu çalıştırmanın çıkışını gösterir:
+Projenizin geçişli bağımlılıkları olup olmadığını öğrenmeniz gerekiyorsa, `--include-transitive` seçeneği kullanın. Geçişli bağımlılıklar, projenize başka bir pakete dayanan bir paket eklediğinizde oluşur. Aşağıdaki örnek, üst düzey `dotnet list package --include-transitive` paketleri ve bağlı oldukları paketleri görüntüleyen [HelloPlugin](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin) projesi nin komutunu çalıştıran çıktıyı gösterir:
 
 ```output
 Project 'HelloPlugin' has the following package references
@@ -67,17 +67,17 @@ Project 'HelloPlugin' has the following package references
 
 `PROJECT | SOLUTION`
 
-Üzerinde çalışılacak proje veya çözüm dosyası. Belirtilmemişse, komut geçerli dizinde bir arama yapar. Birden fazla çözüm veya proje bulunursa bir hata oluşur.
+İşletilmesi gereken proje veya çözüm dosyası. Belirtilmemişse, komut geçerli dizini arar. Birden fazla çözüm veya proje bulunursa, bir hata atılır.
 
 ## <a name="options"></a>Seçenekler
 
 - **`--config <SOURCE>`**
 
-  Yeni paketler aranırken kullanılacak NuGet kaynakları. `--outdated` seçeneğini gerektirir.
+  NuGet kaynakları yeni paketler ararken kullanmak için. `--outdated` Seçeneği gerektirir.
 
 - **`--framework <FRAMEWORK>`**
 
-  Yalnızca belirtilen [hedef çerçeve](../../standard/frameworks.md)için geçerli olan paketleri görüntüler. Birden çok çerçeve belirtmek için seçeneğini birden çok kez tekrarlayın. Örneğin: `--framework netcoreapp2.2 --framework netstandard2.0`.
+  Yalnızca belirtilen [hedef çerçeve](../../standard/frameworks.md)için geçerli paketleri görüntüler. Birden çok çerçeve belirtmek için seçeneği birden çok kez yineleyin. Örneğin: `--framework netcoreapp2.2 --framework netstandard2.0`.
 
 - **`-h|--help`**
 
@@ -85,47 +85,47 @@ Project 'HelloPlugin' has the following package references
 
 - **`--highest-minor`**
 
-  Daha yeni paketler aranırken yalnızca eşleşen bir ana sürüm numarası olan paketleri dikkate alır. `--outdated` seçeneğini gerektirir.
+  Yeni paketleri ararken yalnızca eşleşen bir ana sürüm numarasına sahip paketleri dikkate alır. `--outdated` Seçeneği gerektirir.
 
 - **`--highest-patch`**
 
-  Yeni paketleri ararken yalnızca eşleşen büyük ve küçük sürüm numaralarına sahip paketleri dikkate alır. `--outdated` seçeneğini gerektirir.
+  Yeni paketleri ararken yalnızca eşleşen büyük ve küçük sürüm numaralarına sahip paketleri dikkate alır. `--outdated` Seçeneği gerektirir.
 
 - **`--include-prerelease`**
 
-  Yeni paketleri ararken paketleri ön sürüm sürümlerini kabul eder. `--outdated` seçeneğini gerektirir.
+  Yeni paketler ararken yayın öncesi sürümsürümlerine sahip paketleri dikkate alır. `--outdated` Seçeneği gerektirir.
 
 - **`--include-transitive`**
 
-  Üst düzey paketlerin yanı sıra geçişli paketleri listeler. Bu seçeneği belirtirken, üst düzey paketlerin bağımlı olduğu paketlerin bir listesini alırsınız.
+  Üst düzey paketlere ek olarak geçişli paketleri listeler. Bu seçeneği belirtirken, üst düzey paketlerin bağlı olduğu paketlerin bir listesini alırsınız.
 
 - **`--interactive`**
 
-  Komutun Kullanıcı girişini veya eylemini durdurmasına ve beklemesine izin verir. Örneğin, kimlik doğrulamasını tamamlamaya yönelik. .NET Core 3,0 SDK 'dan beri kullanılabilir.
+  Komutun durmasını ve kullanıcı girişi veya eylemini beklemesini sağlar. Örneğin, kimlik doğrulamasını tamamlamak için. .NET Core 3.0 SDK'dan beri mevcuttur.
 
 - **`--outdated`**
 
-  Daha yeni sürümleri bulunan paketleri listeler.
+  Yeni sürümleri olan paketleri listeler.
 
 - **`-s|--source <SOURCE>`**
 
-  Yeni paketler aranırken kullanılacak NuGet kaynakları. `--outdated` seçeneğini gerektirir.
+  NuGet kaynakları yeni paketler ararken kullanmak için. `--outdated` Seçeneği gerektirir.
 
 ## <a name="examples"></a>Örnekler
 
-- Belirli bir projenin paket başvurularını listeleyin:
+- Belirli bir projenin paket başvurularını listele:
 
   ```dotnetcli
   dotnet list SentimentAnalysis.csproj package
   ```
 
-- Ön sürüm sürümleri dahil olmak üzere daha yeni sürümlere sahip paket başvurularını listeleyin:
+- Sürüm öncesi sürümler de dahil olmak üzere daha yeni sürümleri olan paket başvurularını listele:
 
   ```dotnetcli
   dotnet list package --outdated --include-prerelease
   ```
 
-- Belirli bir hedef çerçeve için paket başvurularını listeleyin:
+- Belirli bir hedef çerçeve için paket başvurularını listele:
 
   ```dotnetcli
   dotnet list package --framework netcoreapp3.0

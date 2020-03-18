@@ -1,5 +1,5 @@
 ---
-title: <value> - C# Programlama Kılavuzu
+title: <value> - C# programlama kılavuzu
 ms.date: 07/20/2015
 f1_keywords:
 - <value>
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - value C# XML tag
 ms.assetid: 08dbadaf-9ab6-43d9-9493-98e43bed199a
 ms.openlocfilehash: 120805346672738e614743ab8c98388b8dbac0f7
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76793347"
 ---
-# <a name="value-c-programming-guide"></a>\<değeri > (C# Programlama Kılavuzu)
+# <a name="value-c-programming-guide"></a>\<değer> (C# programlama kılavuzu)
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -26,13 +26,13 @@ ms.locfileid: "76793347"
 
 - `property-description`
 
-  Özelliği için bir açıklama.
+  Mülk için bir açıklama.
 
 ## <a name="remarks"></a>Açıklamalar
 
-\<Value > etiketi, bir özelliğin temsil ettiği değeri açıklamanıza olanak sağlar. Visual Studio .NET geliştirme ortamında kod Sihirbazı aracılığıyla bir özellik eklediğinizde, yeni özellik için bir [\<summary >](./summary.md) etiketi ekleneceğini unutmayın. Sonra özelliğin temsil ettiği değeri tanımlayan bir \<değer > etiketi eklemeniz gerekir.
+Etiket \<> değer, bir özelliğin temsil ettiği değeri açıklamanızı sağlar. Visual Studio .NET geliştirme ortamında kod sihirbazı aracılığıyla bir özellik eklediğinizde, yeni özellik için [ \<bir özet>](./summary.md) etiketi ekleyeceğini unutmayın. Daha sonra, özelliğin \<temsil ettiği değeri açıklamak için el ile bir değer> etiketi eklemeniz gerekir.
 
-Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
+Belge yorumlarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derle.
 
 ## <a name="example"></a>Örnek
 
@@ -40,5 +40,5 @@ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-refere
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Programlama Kılavuzu](../index.md)
-- [Belge açıklamaları için önerilen Etiketler](./recommended-tags-for-documentation-comments.md)
+- [C# programlama kılavuzu](../index.md)
+- [Belge açıklamaları için önerilen etiketler](./recommended-tags-for-documentation-comments.md)

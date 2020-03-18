@@ -10,19 +10,19 @@ helpviewer_keywords:
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
 ms.openlocfilehash: de40369a661c347a2125075e820420af4eb71cac
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75337251"
 ---
-# <a name="c-programming-guide"></a>C#Programlama Kılavuzu
+# <a name="c-programming-guide"></a>C# programlama kılavuzu
 
-Bu bölüm .NET Framework C# C# aracılığıyla erişilebilen temel dil özellikleri ve özellikleri hakkında ayrıntılı bilgi sağlar.  
+Bu bölümde,.NET Framework aracılığıyla C# için erişilebilir anahtar C# dil özellikleri ve özellikleri hakkında ayrıntılı bilgi verilmektedir.  
   
- Bu bölümün çoğu, C# ve genel programlama kavramlarını daha önce bildiğiniz varsayılmaktadır. Programlama veya ile C#birlikte tam bir başlangıç yapıyorsanız, önceden programlama bilgisi gerekli olmayan öğreticiler veya [.net-tarayıcı öğreticisini](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)ziyaret [etmek C# ](../tutorials/intro-to-csharp/index.md) isteyebilirsiniz.  
+ Bu bölümün çoğu zaten C # ve genel programlama kavramları hakkında bir şeyler bildiğinizi varsayar. Programlama veya C# ile tam bir acemi iseniz, [c# Öğreticiler](../tutorials/intro-to-csharp/index.md) veya [.NET Tarayıcı İçi Öğretici](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)Giriş ziyaret etmek isteyebilirsiniz , hiçbir önceki programlama bilgisi gereklidir.  
   
- Belirli anahtar sözcükler, işleçler ve Önişlemci yönergeleri hakkında daha fazla bilgi [ C# ](../language-reference/index.md)için bkz. başvuru. C# Dil belirtimi hakkında daha fazla bilgi için bkz [ C# . dil belirtimi](/dotnet/csharp/language-reference/language-specification/introduction).  
+ Belirli anahtar kelimeler, operatörler ve önişlemci yönergeleri hakkında bilgi için [C# Referans'a](../language-reference/index.md)bakın. C# Dil Belirtimi hakkında bilgi için [C# Language Specification'a](/dotnet/csharp/language-reference/language-specification/introduction)bakın.  
   
 ## <a name="program-sections"></a>Program bölümleri
 
@@ -30,13 +30,13 @@ Bu bölüm .NET Framework C# C# aracılığıyla erişilebilen temel dil özelli
   
 [Ana() ve Komut Satırı Bağımsız Değişkenleri](./main-and-command-args/index.md)  
 
-## <a name="language-sections"></a>Dil bölümleri
+## <a name="language-sections"></a>Dil Bölümleri
 
-[Deyimler, İfadeler ve İşleçler](./statements-expressions-operators/index.md)  
+[İfadeler, İfadeler ve Operatörler](./statements-expressions-operators/index.md)  
 
  [Türler](./types/index.md)  
 
- [Sınıflar ve Yapılar](./classes-and-structs/index.md)  
+ [Sınıflar ve Structs](./classes-and-structs/index.md)  
   
  [Arabirimler](./interfaces/index.md)  
 
@@ -44,9 +44,9 @@ Bu bölüm .NET Framework C# C# aracılığıyla erişilebilen temel dil özelli
 
  [Diziler](./arrays/index.md)  
   
- [Dizeler](./strings/index.md)  
+ [Dize](./strings/index.md)  
   
- [Veri Erişimi](./classes-and-structs/properties.md)  
+ [Özellikler](./classes-and-structs/properties.md)  
   
  [Dizin Oluşturucular](./indexers/index.md)  
   
@@ -56,17 +56,17 @@ Bu bölüm .NET Framework C# C# aracılığıyla erişilebilen temel dil özelli
   
  [Yineleyiciler](./concepts/iterators.md)
   
- [LINQ sorgu Ifadeleri](../linq/index.md)  
+ [LINQ Sorgu İfadeleri](../linq/index.md)  
   
- [Lambda İfadeleri](./statements-expressions-operators/lambda-expressions.md)  
+ [Lambda İfadeler](./statements-expressions-operators/lambda-expressions.md)  
   
  [Ad Alanları](./namespaces/index.md)  
   
  [Güvenli Olmayan Kod ve İşaretçiler](./unsafe-code-pointers/index.md)  
   
- [XML Belge Açıklamaları](./xmldoc/index.md)  
+ [XML Dokümantasyon Yorumları](./xmldoc/index.md)  
   
-## <a name="platform-sections"></a>Platform bölümleri
+## <a name="platform-sections"></a>Platform Bölümleri
 
  [Uygulama Etki Alanları](../../framework/app-domains/application-domains.md)  
   
@@ -76,9 +76,9 @@ Bu bölüm .NET Framework C# C# aracılığıyla erişilebilen temel dil özelli
   
  [Koleksiyonlar](./concepts/collections.md)  
   
- [Özel Durumlar ve Özel Durum İşleme](./exceptions/index.md)  
+ [Özel Durumlar ve Özel Durum Kullanımı](./exceptions/index.md)  
   
- [Dosya sistemi ve kayıt defteri (C# Programlama Kılavuzu)](./file-system/index.md)  
+ [Dosya Sistemi ve Kayıt Defteri (C# Programlama Kılavuzu)](./file-system/index.md)  
   
  [Birlikte çalışabilirlik](./interop/index.md)  
   
@@ -86,4 +86,4 @@ Bu bölüm .NET Framework C# C# aracılığıyla erişilebilen temel dil özelli
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../language-reference/index.md)
+- [C# Referans](../language-reference/index.md)

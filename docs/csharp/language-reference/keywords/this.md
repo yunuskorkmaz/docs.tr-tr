@@ -1,6 +1,6 @@
 ---
-title: this anahtar sözcüğü C# başvurusu
-description: this anahtar sözcüğüC# (başvuru)
+title: bu anahtar kelime - C# Reference
+description: bu anahtar kelime (C# Reference)
 ms.date: 07/20/2015
 f1_keywords:
 - this
@@ -9,40 +9,40 @@ helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
 ms.openlocfilehash: 2a2c487ad93e6fc75ecf95c541e859b8b60bb5b5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715104"
 ---
 # <a name="this-c-reference"></a>this (C# Başvurusu)
 
-`this` anahtar sözcüğü, sınıfın geçerli örneğine başvurur ve bir genişletme yönteminin ilk parametresi için bir değiştirici olarak da kullanılır.
+`this` Anahtar kelime sınıfın geçerli örneğine başvurur ve bir uzantı yönteminin ilk parametresini değiştirici olarak da kullanılır.
 
 > [!NOTE]
-> Bu makalede, sınıf örnekleriyle `this` kullanımı ele alınmaktadır. Uzantı yöntemlerinde kullanımı hakkında daha fazla bilgi için bkz. [Uzantı yöntemleri](../../programming-guide/classes-and-structs/extension-methods.md).
+> Bu makalede sınıf örnekleri `this` ile kullanımı anlatılmaktadır. Uzantı yöntemlerinin kullanımı hakkında daha fazla bilgi için [Uzantı Yöntemleri'ne](../../programming-guide/classes-and-structs/extension-methods.md)bakın.
 
-Aşağıda `this`yaygın kullanımları verilmiştir:
+Aşağıdaki ortak kullanımları `this`şunlardır:
 
-- Benzer adlarla gizlenen üyeleri nitelemek için, örneğin:
+- Benzer adlarla gizlenen üyeleri nitelemek için:
 
   [!code-csharp[csrefKeywordsAccess#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#4)]  
 
-- Bir nesneyi diğer yöntemlere parametre olarak geçirmek için, örneğin:
+- Bir nesneyi parametre olarak diğer yöntemlere aktarmak için, örneğin:
 
   ```csharp
   CalcTax(this);
   ```
 
-- Dizin oluşturucular bildirmek için örneğin:
+- Dizinleyicileri bildirmek için, örneğin:
 
   [!code-csharp[csrefKeywordsAccess#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#5)]
 
-Statik üye işlevleri, sınıf düzeyinde olduklarından ve bir nesnenin parçası olarak olmadığından, `this` işaretçisine sahip değildir. Statik bir yöntemde `this` başvurmak hatadır.
+Statik üye işlevler, bir nesnenin parçası olarak değil, sınıf düzeyinde `this` var olduğundan, bir işaretçi yok. Statik bir `this` yöntemde başvurmak bir hatadır.
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte `this`, benzer adlarla gizlenen `name` ve `alias``Employee` sınıf üyelerini nitelemek için kullanılır. Ayrıca, bir nesneyi başka bir sınıfa ait `CalcTax`yönteme geçirmek için de kullanılır.
+`this` Bu örnekte, `Employee` sınıf üyelerini nitelemek `name` `alias`için kullanılır ve benzer adlarla gizlenir. Ayrıca, başka bir sınıfa ait yönteme `CalcTax`bir nesne geçirmek için kullanılır.
 
 [!code-csharp[csrefKeywordsAccess#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#3)]
 
@@ -52,8 +52,8 @@ Bu örnekte `this`, benzer adlarla gizlenen `name` ve `alias``Employee` sınıf 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../index.md)
+- [C# Referans](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Sözcükleri](index.md)
+- [C# Anahtar Kelimeler](index.md)
 - [base](base.md)
 - [Yöntemler](../../programming-guide/classes-and-structs/methods.md)

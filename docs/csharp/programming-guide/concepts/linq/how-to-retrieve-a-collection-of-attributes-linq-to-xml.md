@@ -1,19 +1,19 @@
 ---
-title: Öznitelik koleksiyonu alma (LINQ to XML) (C#)
+title: Özniteliklerin bir koleksiyonunu (LINQ- XML) (C#) nasıl alınır?
 ms.date: 07/20/2015
 ms.assetid: a49ee7a3-b2c2-4d49-9b5c-b7c6c41f4f13
 ms.openlocfilehash: 02871b38c3b1a1ed64fa6ca808e193811cd7f721
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347639"
 ---
-# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a>Öznitelik koleksiyonu alma (LINQ to XML) (C#)
-Bu konuda <xref:System.Xml.Linq.XElement.Attributes%2A> yöntemi tanıtılmaktadır. Bu yöntem bir öğenin özniteliklerini alır.  
+# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a>Özniteliklerin bir koleksiyonunu (LINQ- XML) (C#) nasıl alınır?
+Bu konu <xref:System.Xml.Linq.XElement.Attributes%2A> yöntemi tanır. Bu yöntem, bir öğenin özniteliklerini alır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir öğenin özniteliklerinin toplanması arasında nasıl yineleme yapılacağını gösterir.  
+ Aşağıdaki örnek, bir öğenin özniteliklerinin toplanması yoluyla nasıl yinelenebildiğini gösterir.  
   
 ```csharp  
 XElement val = new XElement("Value",  
@@ -38,4 +38,4 @@ ConvertableTo="double"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML eksenleri (C#)](./linq-to-xml-axes-overview.md)
+- [LINQ - XML Eksenleri (C#)](./linq-to-xml-axes-overview.md)

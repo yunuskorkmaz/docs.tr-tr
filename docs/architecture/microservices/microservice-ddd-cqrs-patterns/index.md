@@ -1,76 +1,76 @@
 ---
 title: Bir Mikro Hizmetteki İş Karmaşıklığını DDD ve CQRS Desenleriyle Giderme
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | DDD ve CQRS desenleri uygulayan karmaşık iş senaryolarına nasıl karar vermek istediğinizi anlayın
+description: .NET Microservices Mimari Containerized .NET Uygulamaları için | DDD ve CQRS Desenleri uygulayan karmaşık iş senaryoları ile nasıl başa çılayacağımı anlama
 ms.date: 10/08/2018
 ms.openlocfilehash: 88b105b68307c8587f877bb9ddf370e143d8539b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73739842"
 ---
-# <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>DDD ve CQRS desenleriyle mikro hizmette Iş karmaşıklığı
+# <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>DDD ve CQRS Desenleri ile Microservice'te İş Karmaşıklığıyla Mücadele
 
-*Her mikro hizmet için veya iş etki alanının anlaşılmasına ilişkin sınırlı bağlam için bir etki alanı modeli tasarlayın.*
+*Her microservice veya Bounded Context için iş etki alanının anlaşılmasını yansıtan bir etki alanı modeli tasarla.*
 
-Bu bölüm, karmaşık alt sistemleri veya sürekli değişen iş kurallarıyla etki alanı uzmanlarından oluşan mikro hizmetleri bir arada açmak istediğinizde uyguladığınız daha gelişmiş mikro hizmetlere odaklanır. Bu bölümde kullanılan mimari desenleri, Şekil 7-1 ' de gösterildiği gibi etki alanı odaklı tasarım (DDD) ve Komut ve Sorgu Sorumluluklarının Ayrılığı (CQRS) yaklaşımlarına dayanır.
+Bu bölümde, karmaşık alt sistemlerle başa çıkmak için gereken de uyguladığınız daha gelişmiş mikro hizmetler veya sürekli değişen iş kurallarına sahip etki alanı uzmanlarının bilgisinden elde edilen mikro hizmetler üzerinde duruluyor. Bu bölümde kullanılan mimari desenler, Şekil 7-1'de gösterildiği gibi etki alanı odaklı tasarım (DDD) ve Komut ve Sorgu Sorumluluğu Ayrımı (CQRS) yaklaşımlarına dayanmaktadır.
 
-:::image type="complex" source="./media/index/internal-versus-external-architecture.png" alt-text="Dış ve iç mimari desenlerini karşılaştıran diyagram.":::
-Dış mimari arasındaki fark: mikro hizmet desenleri, API ağ geçitleri, dayanıklı iletişimler, yayın/alt, vb. ve dahili mimari: veri odaklı/CRUD, DDD desenleri, bağımlılık ekleme, birden çok kitaplık, vb.
+:::image type="complex" source="./media/index/internal-versus-external-architecture.png" alt-text="Dış ve iç mimari desenleri karşılaştıran diyagram.":::
+Dış mimari arasındaki fark: mikrohizmet kalıpları, API ağ geçitleri, esnek iletişim, pub/alt, vb. ve dahili mimari: veri odaklı/CRUD, DDD desenleri, bağımlılık enjeksiyonu, birden fazla kitaplık, vb.
 :::image-end:::
 
-**Şekil 7-1**. Her mikro hizmet için dış mikro hizmet mimarisi, iç mimari desenlerine karşı
+**Şekil 7-1**. Her mikro hizmet için harici microservice mimarisi ve iç mimari desenleri
 
-Ancak, ASP.NET Core Web API hizmeti uygulama ya da swashbuckle veya NSwag ile Swagger meta verilerini kullanıma sunma gibi veri odaklı mikro hizmetlere yönelik tekniklerin çoğu, ile dahili olarak uygulanan daha gelişmiş mikro hizmetler için de geçerlidir. DDD desenleri. Bu bölüm önceki bölümlerin bir uzantısıdır, çünkü daha önce açıklanan uygulamaların çoğu, burada veya herhangi bir mikro hizmet türü için de geçerlidir.
+Ancak, ASP.NET Core Web API hizmetinin nasıl uygulanacağı veya Swagger meta verilerinin Swashbuckle veya NSwag ile nasıl ifşa edilecek gibi veri odaklı mikro hizmetler için tekniklerin çoğu, dahili olarak uygulanan daha gelişmiş mikro hizmetler için de geçerlidir. DDD desenleri. Daha önce açıklanan uygulamaların çoğu burada veya her türlü mikro hizmet için de geçerli olduğundan, bu bölüm önceki bölümlerin bir uzantısıdır.
 
-Bu bölüm öncelikle eShopOnContainers başvuru uygulamasında kullanılan Basitleştirilmiş CQRS desenleriyle ilgili ayrıntıları sağlar. Daha sonra, uygulamalarınızda yeniden kullanabileceğiniz ortak desenleri bulmanızı sağlayan DDD tekniklerine genel bir bakış alacaksınız.
+Bu bölümde ilk olarak eShopOnContainers başvuru uygulamasında kullanılan basitleştirilmiş CQRS desenleri hakkında ayrıntılı bilgi verilmektedir. Daha sonra, uygulamalarınızda yeniden kullanabileceğiniz ortak desenleri bulmanızı sağlayan DDD tekniklerine genel bir bakış elde elabilirsiniz.
 
-DDD, öğrenme için zengin kaynak kümesi içeren büyük bir konudur. Eric Evans tarafından [etki alanı odaklı tasarım](https://domainlanguage.com/ddd/) ve Vaughn versuz, Jimmy Nilsson, Greg Başak, UDI Dahan, Jimmy Bogard ve bırçok başka ddd/CQRS uzmanından ek malzemeler gibi kitaplarla başlayabilirsiniz. Ancak bunların çoğu, somut iş etki alanındaki uzmanlar ile konuşmalar, beyaz taslak ve etki alanı modelleme oturumlarından DDD tekniklerini nasıl uygulayacağınızı öğrenmeyi denemeniz gerekir.
+DDD öğrenme için kaynakların zengin bir dizi ile büyük bir konudur. Eric Evans'ın [Domain-Driven Design](https://domainlanguage.com/ddd/) gibi kitaplarla ve Vaughn Vernon, Jimmy Nilsson, Greg Young, Udi Dahan, Jimmy Bogard ve diğer birçok DDD/CQRS uzmanından ek materyallerle başlayabilirsiniz. Ama en önemlisi nasıl konuşmaları, whiteboarding ve etki alanı modelleme oturumları somut iş alanında uzmanlarla DDD teknikleri uygulamak için öğrenmek için denemek gerekir.
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-##### <a name="ddd-domain-driven-design"></a>DDD (etki alanı odaklı tasarım)
+##### <a name="ddd-domain-driven-design"></a>DDD (Etki Alanı Odaklı Tasarım)
 
-- **Eric Evans. Etki alanı dili** \
+- **Eric Evans' ı. Etki Alanı Dili** \
   <https://domainlanguage.com/>
 
-- **Marwler. Etki alanı odaklı tasarım** \
+- **Martin Fowler' ı. Etki Alanı Odaklı Tasarım** \
   <https://martinfowler.com/tags/domain%20driven%20design.html>
 
-- **Jimmy Bogard. Etki alanınızı güçlendirerek: bir öncü** \
+- **Jimmy Bogard' ı. Etki alanınızı güçlendirme: bir astar** \
   <https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/>
 
-##### <a name="ddd-books"></a>DDD kitapları
+##### <a name="ddd-books"></a>DDD kitaplar
 
-- **Eric Evans. Etki alanı odaklı tasarım: yazılım \ kalp halinde karmaşıklık karmaşıklığı**
+- **Eric Evans' ı. Etki Alanı Odaklı Tasarım: Yazılımın Kalbinde karmaşıklıkla mücadele** \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
-- **Eric Evans. Etki alanı odaklı tasarım başvurusu: tanımlar ve desenli özetler** \
+- **Eric Evans' ı. Etki Alanı Odaklı Tasarım Referansı: Tanımlar ve Örüntü Özetleri** \
   <https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/>
 
-- **Vaughn versuz. Etki alanı odaklı tasarım \ uygulama**
+- **Vaughn Vernon' u. Etki Alanı Odaklı Tasarımın Uygulanması** \
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
-- **Vaughn versuz. Etki alanı odaklı tasarım** \
+- **Vaughn Vernon' u. Etki Alanı Odaklı Tasarım Distile** \
   <https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/>
 
-- **Jimmy Nilsson. Etki alanı odaklı tasarım ve desenleri uygulama** \
+- **Jimmy Nilsson' ı. Etki Alanına Dayalı Tasarım ve Desenleruygulama** \
   <https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/>
 
-- **Cesar de La Torre. N katmanlı etki alanı odaklı mimari Kılavuzu .NET** \
+- **Cesar de la Torre. .NET ile N Katmanlı Etki Alanı Odaklı Mimari Rehberi** \
   <https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/>
 
-- **Abel Avram ve Floyd Marinescu. Etki alanı odaklı tasarım hızlı** \
+- **Abel Avram ve Floyd Marinescu. Etki Alanı Odaklı Tasarım Hızlı** \
   <https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/>
 
-- **Scott Millett, Nick ayarlama-etki alanı odaklı tasarım \ desenler, ilkeler ve uygulamalar**
+- **Scott Millett, Nick Tune - Etki Alanı Odaklı Tasarım Desenleri, İlkeleri ve Uygulamaları** \
   <http://www.wrox.com/WileyCDA/WroxTitle/Patterns-Principles-and-Practices-of-Domain-Driven-Design.productCd-1118714709.html>
 
 ##### <a name="ddd-training"></a>DDD eğitimi
 
-- **Julie Lerman ve Steve Smith. Etki alanı odaklı tasarım temelleri** \
+- **Julie Lerman ve Steve Smith. Etki Alanı Odaklı Tasarım Temelleri** \
   <https://bit.ly/PS-DDD>
 
 >[!div class="step-by-step"]
 >[Önceki](../multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md)
->[İleri](apply-simplified-microservice-cqrs-ddd-patterns.md)
+>[Sonraki](apply-simplified-microservice-cqrs-ddd-patterns.md)

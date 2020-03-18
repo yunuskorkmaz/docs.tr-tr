@@ -1,20 +1,20 @@
 ---
 ms.openlocfilehash: 79901d0b57816915ca7ea73cfe7fa3d40820434e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568075"
 ---
 ### <a name="jsonelement-api-changes"></a>JsonElement API değişiklikleri
 
-.NET Core 3,0 Preview 7 ' den itibaren, bazı <xref:System.Text.Json.JsonElement> API 'Leri daha kolay bulma ve daha fazla kullanılabilirlik için izin verecek şekilde değiştirilmiştir.
+.NET Core 3.0 Preview 7 <xref:System.Text.Json.JsonElement> ile başlayarak, bazı API'ler daha kolay keşfe ve daha fazla kullanılabilirliğe olanak sağlayacak şekilde değişti.
 
-#### <a name="change-description"></a>Açıklamayı Değiştir
+#### <a name="change-description"></a>Açıklamayı değiştir
 
-.NET Core 3,0 Preview 7 ' de, daha kolay bulma ve daha fazla kullanılabilirlik sağlamak için <xref:System.Text.Json.JsonElement> API 'Leri aşağıdaki şekilde değiştirilmiştir.
+.NET Core 3.0 Preview <xref:System.Text.Json.JsonElement> 7'de, API'ler daha kolay keşfe ve daha fazla kullanılabilirliğe olanak sağlamak için aşağıdaki gibi değişti.
 
-1. Tüm `WriteProperty` yöntemi aşırı yüklemeleri <xref:System.Text.Json.JsonElement>kaldırıldı. Bu, aşağıdaki gibi kodu etkiler:
+1. Tüm `WriteProperty` yöntem aşırı yükleri <xref:System.Text.Json.JsonElement>kaldırıldı. Bu, aşağıdaki gibi kodu etkiler:
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -31,7 +31,7 @@ ms.locfileid: "74568075"
    }
    ```
 
-1. `WriteValue` <xref:System.Text.Json.JsonElement.WriteTo%2A>olarak yeniden adlandırıldı. Bu, aşağıdaki gibi kodu etkiler:
+1. `WriteValue`olarak yeniden <xref:System.Text.Json.JsonElement.WriteTo%2A>adlandırıldı. Bu, aşağıdaki gibi kodu etkiler:
 
    ```csharp
     using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -41,17 +41,17 @@ ms.locfileid: "74568075"
     }
     ```
 
-1. <xref:System.Text.Json.JsonElement.WriteTo%2A> artık yöntem parametresi `null`olduğunda bir <xref:System.ArgumentNullException> oluşturur.
+1. <xref:System.Text.Json.JsonElement.WriteTo%2A>şimdi yöntem <xref:System.ArgumentNullException> parametresi olduğunda `null`bir atar.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3,0 Preview 7
+3.0 Önizleme 7
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Kodunuz bu değişikliklerden etkileniyorsa, şunları yapabilirsiniz:
+Kodunuz bu değişikliklerden etkileniyorsa, aşağıdakileri yapabilirsiniz:
 
-- <xref:System.Text.Json.JsonElement>`WriteProperty` aşırı yüklemeler için bir değiştirme API 'si yoktur. Bunun yerine, aynı sonuca ulaşmak için <xref:System.Text.Json.JsonElement.WriteTo%2A> yöntemi ile birlikte <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> aşırı yüklerden birini çağırabilirsiniz. Örneğin:
+- 'deki aşırı yüklemeler `WriteProperty` için yedek <xref:System.Text.Json.JsonElement>API yoktur. Bunun yerine, aynı sonucu <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> elde etmek <xref:System.Text.Json.JsonElement.WriteTo%2A> için yöntemle birlikte aşırı yüklerden birini arayabilirsiniz. Örnek:
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -62,7 +62,7 @@ Kodunuz bu değişikliklerden etkileniyorsa, şunları yapabilirsiniz:
    }
    ```
 
-- `WriteValue` yöntemini <xref:System.Text.Json.JsonElement.WriteTo(System.Text.Json.Utf8JsonWriter)>olarak yeniden adlandırın. Yöntem parametresi değişmeden kalır. Örneğin, önceki kodun aşağıdaki şekilde değiştirilmesi gerekir:
+- Yöntemi ' `WriteValue` ye <xref:System.Text.Json.JsonElement.WriteTo(System.Text.Json.Utf8JsonWriter)>yeniden adlandırın. Yöntem parametresi değişmeden kalır. Örneğin, önceki kod aşağıdaki gibi değiştirilmelidir:
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -72,7 +72,7 @@ Kodunuz bu değişikliklerden etkileniyorsa, şunları yapabilirsiniz:
    }
    ```
 
-- <xref:System.Text.Json.JsonElement.WriteTo%2A> yöntemine yapılan çağrılarındaki <xref:System.ArgumentNullException> işleyin.
+- <xref:System.Text.Json.JsonElement.WriteTo%2A> Yönteme <xref:System.ArgumentNullException> yapılan çağrıları ele alın.
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

@@ -1,51 +1,51 @@
 ---
-title: out anahtar sözcüğü (genel değiştirici) C# -başvuru
+title: anahtar kelime (genel değiştirici) - C# Başvuru
 ms.date: 07/20/2015
 helpviewer_keywords:
 - covariance, out keyword [C#]
 - out keyword [C#]
 ms.assetid: f8c20dec-a8bc-426a-9882-4076b1db1e00
 ms.openlocfilehash: 97ddae2efe55be89840f7a483c18d61259020283
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713283"
 ---
-# <a name="out-generic-modifier-c-reference"></a>Out (genel değiştirici) (C# başvuru)
+# <a name="out-generic-modifier-c-reference"></a>out (genel değiştirici) (C# Reference)
 
-Genel tür parametreleri için `out` anahtar sözcüğü, tür parametresinin birlikte değişken olduğunu belirtir. Genel arabirimlerde ve temsilcilerde `out` anahtar sözcüğünü kullanabilirsiniz.
+Genel tür parametreleri `out` için, anahtar kelime tür parametresinin ortak olduğunu belirtir. Anahtar kelimeyi `out` genel arabirimlerde ve temsilcilerde kullanabilirsiniz.
 
-Kovaryans, genel parametre ile belirtilenden daha fazla türetilmiş bir tür kullanmanıza olanak sağlar. Bu, covaryant arabirimlerini uygulayan sınıfların örtük dönüştürülmesini ve temsilci türlerinin örtük dönüştürülmesini sağlar. Kovaryans ve değişken Varyans, başvuru türleri için desteklenir, ancak değer türleri için desteklenmez.
+Covariance, genel parametre tarafından belirtilenden daha türemiş bir tür kullanmanıza olanak tanır. Bu, ortak değişken arabirimleri uygulayan sınıfların örtülü olarak dönüştürülmesine ve temsilci türlerinin örtülü olarak dönüştürülmesine olanak tanır. Tutarlılık ve kontravariance başvuru türleri için desteklenir, ancak değer türleri için desteklenmez.
 
-Covaryant türü parametresine sahip bir arabirim, yöntemlerinin tür parametresiyle belirtenlerden daha fazla türetilmiş tür döndürmesini sağlar. Örneğin, .NET Framework 4 ' te, <xref:System.Collections.Generic.IEnumerable%601>' de T yazın ve bir özel dönüştürme yöntemi kullanmadan `IEnumerable(Of String)` türünün bir nesnesini `IEnumerable(Of Object)` türünün bir nesnesine atayabilirsiniz.
+Eşdeğişken türü parametresi olan bir arabirim, yöntemlerinin tür parametresi tarafından belirtilenlerden daha fazla tür döndürmesini sağlar. Örneğin, .NET Framework 4'te, <xref:System.Collections.Generic.IEnumerable%601>T türü nde ortak olduğundan, özel `IEnumerable(Of String)` dönüştürme yöntemleri kullanmadan `IEnumerable(Of Object)` türün bir nesnesini türün nesnesine atayabilirsiniz.
 
-Birlikte değişken temsilcisine aynı türde başka bir temsilci atanabilir, ancak daha türetilmiş bir genel tür parametresi olabilir.
+Ortak değişken temsilcisine aynı türden, ancak daha türetilmiş genel tür parametresi olan başka bir temsilci atanabilir.
 
-Daha fazla bilgi için bkz. [Kovaryans ve değişken varyans](../../programming-guide/concepts/covariance-contravariance/index.md).
+Daha fazla bilgi için Bkz. [Covariance ve Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md).
 
-## <a name="example---covariant-generic-interface"></a>Örnek-birlikte değişken genel arabirimi
+## <a name="example---covariant-generic-interface"></a>Örnek - ortak genel arabirim
 
-Aşağıdaki örnek, bir covaryant genel arabiriminin nasıl bildirileceği, genişletileceği ve uygulanacağını gösterir. Ayrıca, birlikte değişken arabirimi uygulayan sınıflar için örtük dönüştürmeyi nasıl kullanacağınızı gösterir.
+Aşağıdaki örnek, bir birlikte varyant genel arabirimi nasıl bildirecek, genişletecek ve uygulayacağınızı gösterir. Ayrıca, bir birlikte varyant arabirimi uygulayan sınıflar için örtülü dönüştürmenin nasıl kullanılacağını da gösterir.
 
 [!code-csharp[csVarianceKeywords#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csvariancekeywords/cs/program.cs#3)]
 
-Bir genel arabirimde, bir tür parametresi aşağıdaki koşullara uygunsa birlikte değişken olarak bildirilemez:
+Genel bir arabirimde, bir tür parametresi aşağıdaki koşulları karşılarsa eş değişken olarak bildirilebilir:
 
-- Tür parametresi yalnızca Arabirim yöntemlerinin dönüş türü olarak kullanılır ve Yöntem bağımsız değişkenlerinin türü olarak kullanılmaz.
+- Tür parametresi yalnızca arabirim yöntemlerinin dönüş türü olarak kullanılır ve yöntem bağımsız değişkenleri türü olarak kullanılmaz.
 
     > [!NOTE]
-    > Bu kural için bir özel durum var. Bir covaryant arayüzünde bir yöntem parametresi olarak bir değişken karşıtı genel temsilciniz varsa, bu temsilci için ortak tür parametresi olarak covaryant türü ' ni kullanabilirsiniz. Covaryant ve değişken karşıtı genel Temsilciler hakkında daha fazla bilgi için bkz. [Temsilcilerde varyans](../../programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) ve [Func ve eylem genel temsilcileri için varyans kullanma](../../programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+    > Bu kuralın bir istisnası vardır. Bir eşvaryant arabiriminde yöntem parametresi olarak karşıt bir genel temsilciniz varsa, bu temsilci için genel tür parametresi olarak ortak değişken türünü kullanabilirsiniz. Ortak ve karşıt genel temsilciler hakkında daha fazla bilgi için, [Temsilcilerde Varyans](../../programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) ve [Func ve Action Generic Delegates için Varyans kullanma'ya](../../programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)bakın.
 
-- Tür parametresi, arabirim yöntemleri için genel kısıtlama olarak kullanılmaz.
+- Tür parametresi arabirim yöntemleri için genel bir kısıtlama olarak kullanılmaz.
 
-## <a name="example---covariant-generic-delegate"></a>Örnek-birlikte değişken genel temsilcisi
+## <a name="example---covariant-generic-delegate"></a>Örnek - ortak varyant genel temsilci
 
-Aşağıdaki örnek, bir covaryant genel temsilcisinin nasıl bildirilemeyeceğini, örneklendirilemeyeceğini ve çağıralınacağını gösterir. Ayrıca, temsilci türlerini örtük olarak nasıl dönüştürebileceğiniz gösterilmektedir.
+Aşağıdaki örnek, ortak değişken bir genel temsilcinin nasıl bildirilen, anlık olarak bildirilen ve çağırılabildiğini gösterir. Ayrıca, temsilci türlerinin nasıl dönüştürüldüğünü de gösterir.
 
 [!code-csharp[csVarianceKeywords#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csvariancekeywords/cs/program.cs#4)]
 
-Genel bir temsilcisinde, bir tür yalnızca bir yöntem dönüş türü olarak kullanılıyorsa ve Yöntem bağımsız değişkenleri için kullanılmazsa, birlikte değişken olarak bildirilemez.
+Genel bir temsilcide, yalnızca yöntem dönüş türü olarak kullanılırsa ve yöntem bağımsız değişkenleri için kullanılmazsa, bir tür ortak değişken olarak bildirilebilir.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -54,5 +54,5 @@ Genel bir temsilcisinde, bir tür yalnızca bir yöntem dönüş türü olarak k
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Genel Arabirimlerde Varyans](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [in](in-generic-modifier.md)
+- [Inç](in-generic-modifier.md)
 - [Değiştiriciler](index.md)

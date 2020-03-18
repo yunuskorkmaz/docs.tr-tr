@@ -1,21 +1,21 @@
 ---
-title: Benzer olmayan dosyalardaki (LINQ) (C#) içerik ekleme
+title: Farklı dosyalardan (LINQ) (C#) içerik birleştirme
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 49b70c15b3be2efea5cf6a9e7d85df944a67c730
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: efe11c31873f21841c28bd393b295eea117d1e46
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345883"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169096"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Benzer olmayan dosyalardaki (LINQ) (C#) içerik ekleme
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Farklı dosyalardan (LINQ) (C#) içerik birleştirme
 
-Bu örnek, eşleşen anahtar olarak kullanılan ortak bir değeri paylaşan, virgülle ayrılmış iki dosyadan verilerin nasıl birleştirileceğini gösterir. Bu teknik, iki elektronik tablodan veya bir elektronik tabloda ve başka bir biçime sahip bir dosyadan yeni bir dosyaya veri birleştirmek istiyorsanız yararlı olabilir. Örneği herhangi bir tür yapılandırılmış metinle çalışacak şekilde değiştirebilirsiniz.  
+Bu örnek, eşleşen bir anahtar olarak kullanılan ortak bir değeri paylaşan iki virgülle sınırlandırılmış dosyadaki verileri nasıl birleştirirken gösterir. Bu teknik, iki elektronik tablodan veya elektronik tablodan ve başka bir biçime sahip bir dosyadan gelen verileri yeni bir dosyada birleştirmeniz gerekiyorsa yararlı olabilir. Örneği, her türlü yapılandırılmış metinle çalışacak şekilde değiştirebilirsiniz.  
   
 ## <a name="to-create-the-data-files"></a>Veri dosyalarını oluşturmak için
   
-1. Aşağıdaki satırları *puanlarını. csv* adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya, elektronik tablo verilerini temsil eder. 1\. sütun, öğrencinin KIMLIĞIDIR ve 2 ile 5 arasındaki sütunlar test puanlarıdır.  
+1. Aşağıdaki satırları *scores.csv* adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya elektronik tablo verilerini temsil eder. Sütun 1 öğrencinin kimliğidir ve 2'den 5'e kadar olan sütunlar test puanlarıdır.  
   
     ```csv  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ Bu örnek, eşleşen anahtar olarak kullanılan ortak bir değeri paylaşan, vir
     122, 94, 92, 91, 91  
     ```  
   
-2. Aşağıdaki satırları *Names. csv* adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya, öğrencinin Soyadı, adı ve öğrenci KIMLIĞINI içeren bir elektronik tabloyu temsil eder.  
+2. Aşağıdaki satırları *names.csv* adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya, öğrencinin soyadını, adını ve öğrenci kimliğini içeren bir elektronik tabloyu temsil eder.  
   
     ```csv  
     Omelchenko,Svetlana,111  
@@ -62,7 +62,7 @@ class JoinStrings
     {  
         // Join content from dissimilar files that contain  
         // related information. File names.csv contains the student  
-        // name plus an ID number. File scores.csv contains the ID   
+        // name plus an ID number. File scores.csv contains the ID
         // and a set of four test scores. The following query joins  
         // the scores to the student names by using ID as a  
         // matching key.  
@@ -84,7 +84,7 @@ class JoinStrings
             from id in scores  
             let scoreFields = id.Split(',')  
             where Convert.ToInt32(nameFields[2]) == Convert.ToInt32(scoreFields[0])
-            select nameFields[0] + "," + scoreFields[1] + "," + scoreFields[2]   
+            select nameFields[0] + "," + scoreFields[1] + "," + scoreFields[2]
                    + "," + scoreFields[3] + "," + scoreFields[4];  
   
         // Pass a query variable to a method and execute it  
@@ -126,5 +126,5 @@ Tucker, 94, 92, 91, 91
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (C#)](./linq-and-strings.md)
-- [LINQ ve dosya dizinleri (C#)](./linq-and-file-directories.md)
+- [LINQ ve Dizeleri (C#)](./linq-and-strings.md)
+- [LINQ ve Dosya Dizinleri (C#)](./linq-and-file-directories.md)

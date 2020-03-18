@@ -1,35 +1,35 @@
 ---
 ms.openlocfilehash: e6e10b2ec451c07bf397cbdcac51ef57c29dab47
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568184"
 ---
-### <a name="json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception"></a>JSON serileştirici özel durum türü `JsonException` `NotSupportedException` olarak değiştirildi
+### <a name="json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception"></a>Json serializer özel `JsonException` durum türü nden`NotSupportedException`
 
-.NET Core 3,0 Preview 6 ile 8 ' de, seri hale getirici desteklenmeyen bir türetilmiş koleksiyon türüyle karşılaştığı zaman bir <xref:System.Text.Json.JsonException> oluşturur. .NET Core 3,0 Preview 9 ' dan başlayarak, serileştirici bunun yerine bir <xref:System.NotSupportedException> oluşturur.
+.NET Core 3.0 Preview 6 ile 8'de, <xref:System.Text.Json.JsonException> serileştirici desteklenmeyen türemiş bir koleksiyon türüyle karşılaştığında bir atar. .NET Core 3.0 Preview 9'dan başlayarak, <xref:System.NotSupportedException> serileştirici yerine bir atar.
 
-#### <a name="change-description"></a>Açıklamayı Değiştir
+#### <a name="change-description"></a>Açıklamayı değiştir
 
-.NET Core 3,0 Preview 6 ' da Preview 8 ' de, seri hale getirici desteklenmeyen bir türetilen koleksiyon türüyle karşılaşıldığında bir <xref:System.Text.Json.JsonException> oluşturur. *Desteklenmeyen bir türetilmiş koleksiyon türü* , aşağıdaki türlerden birine atanabilir olmayan herhangi bir koleksiyon türüdür:
+.NET Core 3.0 Preview 6 ile Preview 8'de, serileştirici desteklenmeyen türemiş bir koleksiyon türüyle karşılaştığında bir <xref:System.Text.Json.JsonException> atar. *Desteklenmeyen türemiş koleksiyon türü,* aşağıdaki türlerden birine atayılamayan herhangi bir koleksiyon türüdür:
 
 - <xref:System.Collections.IList>
 - <xref:System.Collections.Generic.ICollection%601>
 - <xref:System.Collections.Generic.Stack%601>
 - <xref:System.Collections.Generic.Queue%601>
 - <xref:System.Collections.IDictionary>
-- [IDictionary\<dize, T >](xref:System.Collections.Generic.IDictionary%602)
+- [IDictionary\<Dize,T>](xref:System.Collections.Generic.IDictionary%602)
 
-.NET Core 3,0 Preview 9 ' dan itibaren, seri hale getirici desteklenmeyen bir koleksiyon türüyle karşılaşıldığında bir <xref:System.NotSupportedException> oluşturur. Yeni özel durum türü, serisini kaldırma işleminin başarısız olduğunu daha iyi yansıtır.
+.NET Core 3.0 Preview 9 ile başlayarak, <xref:System.NotSupportedException> serializer desteklenmeyen bir koleksiyon türüyle karşılaştığında bir a atar. Yeni özel durum türü, deserialization işleminin neden başarısız olduğunu daha iyi yansıtır.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3,0 Preview 9
+3.0 Önizleme 9
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Seri durumdan çıkarma sırasında <xref:System.Text.Json.JsonException> bulundursanız, <xref:System.NotSupportedException>de yakalamak isteyebilirsiniz.
+Deserializing yaparken <xref:System.Text.Json.JsonException> yakalamak iseniz, aynı zamanda yakalamak <xref:System.NotSupportedException>düşünebilirsiniz.
 
 #### <a name="category"></a>Kategori
 
