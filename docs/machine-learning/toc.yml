@@ -11,7 +11,7 @@
       items:
         - name: ML.NET Model Oluşturucu aracı
           href: automate-training-with-model-builder.md
-        - name: ML.NET Komut Satırı Arabirimi
+        - name: ML.NET Komut satırı arabirimi
           href: automate-training-with-cli.md
 - name: Öğreticiler
   items:

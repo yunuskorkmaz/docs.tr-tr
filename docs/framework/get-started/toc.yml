@@ -3,9 +3,9 @@
   items:
     - name: Genel Bakış
       href: overview.md
-    - name: .NET Framework ve Bant Dışı Yayınlar
+    - name: .NET Framework ve bant dışı yayınlar
       href: the-net-framework-and-out-of-band-releases.md
-    - name: .NET Core ve Açık Kaynak
+    - name: .NET Core ve açık kaynak
       href: net-core-and-open-source.md
-    - name: Sistem Gereksinimleri
+    - name: Sistem gereksinimleri
       href: system-requirements.md

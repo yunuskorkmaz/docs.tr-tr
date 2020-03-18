@@ -136,9 +136,7 @@
           href: implement-resilient-applications/implement-retries-exponential-backoff.md
         - name: Dayanıklı Entity Framework Core SQL bağlantıları uygulama
           href: implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md
-        - name: Üstel geri alma ile özel HTTP çağrı yeniden denemelerini inceleme
-          href: implement-resilient-applications/explore-custom-http-call-retries-exponential-backoff.md
-        - name: Dayanıklı HTTP isteklerini uygulamak için HttpClientFactory kullanma
+        - name: Dayanıklı HTTP isteklerini uygulamak için IHttpClientFactory kullanma
           href: implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md
         - name: Polly üstel geri alma ile HTTP çağrı yeniden denemelerini uygulama
           href: implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md

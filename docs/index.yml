@@ -1,0 +1,246 @@
+### YamlMime:Hub
+title: .NET belgeleri
+summary: C#, Visual Basic ve F# kullanarak tüm platformlarda uygulama oluşturmak için .NET kullanmayı öğrenin. API başvurusuna, örnek koda, öğreticilere ve daha fazlasına göz atın.
+brand: dotnet
+metadata:
+  title: .NET belgeleri
+  description: C#, Visual Basic ve F# kullanarak tüm platformlarda uygulama oluşturmak için .NET kullanmayı öğrenin. API başvurusuna, örnek koda, öğreticilere ve daha fazlasına göz atın.
+  ms.product: dotnet
+  ms.topic: hub-page
+  ms.collection: collection
+  author: BillWagner
+  ms.author: wiwagn
+  ms.date: 12/19/2019
+  ms.openlocfilehash: 6b23ab2f0214f23d45499fcf8ab7c3f2771be15c
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 03/16/2020
+  ms.locfileid: "79416328"
+highlightedContent:
+  items:
+  - title: C# diline giriş. Hızlı etkileşimli başlangıç.
+    itemType: get-started
+    url: csharp/tutorials/intro-to-csharp/hello-world.yml
+  - title: İlk konsol uygulamanızı oluşturun.
+    itemType: tutorial
+    url: core/get-started.md
+  - title: İlk web uygulamanızı oluşturun.
+    itemType: learn
+    url: https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro
+  - title: ​.NET belgelerindeki yenilikler
+    itemType: whats-new
+    url: whats-new/index.yml
+conceptualContent:
+  title: '.NET: Ücretsiz. Platformlar arası. Açık kaynak.'
+  summary: Tüm uygulamalarınızı (web, mobil, masaüstü, oyun, IoT ve daha fazlası) oluşturmaya yönelik geliştirici platformu. Windows, Linux ve macOS’de desteklenir.
+  items:
+  - title: Açık kaynak .NET
+    summary: .NET Core hakkında bilgi edinin
+    links:
+    - url: core/index.md
+      itemType: overview
+      text: .NET Core’a genel bakış
+    - url: core/whats-new/dotnet-core-3-1.md
+      itemType: whats-new
+      text: ​.NET Core 3.1’deki yenilikler
+    - url: standard/tour.md
+      itemType: overview
+      text: .NET Turu
+    - url: core/deploying/index.md
+      itemType: deploy
+      text: .NET Core uygulamaları dağıtma
+    - url: core/docker/build-container.md
+      itemType: tutorial
+      text: Docker ile .NET Core uygulamalarını kapsayıcılı hale getirme
+    - url: core/tutorials/index.md
+      itemType: tutorial
+      text: Öğreticiler
+  - title: .NET kavramları
+    summary: .NET’in temel kavramlarını öğrenin
+    links:
+    - url: https://channel9.msdn.com/Series/NET-Core-101/What-is-NET
+      itemType: video
+      text: .NET nedir?
+    - url: standard/index.md
+      itemType: overview
+      text: .NET’e genel bakış
+    - url: standard/net-standard.md
+      itemType: overview
+      text: .NET Standard
+    - url: /aspnet/core/
+      itemType: overview
+      text: ASP.NET Core
+    - url: /ef/core/
+      itemType: overview
+      text: Entity Framework Core
+    - url: standard/get-started.md
+      itemType: get-started
+      text: Kullanmaya başlayın
+    - url: standard/components.md
+      itemType: concept
+      text: .NET mimari bileşenleri
+    - url: framework/index.md
+      itemType: overview
+      text: .NET Framework (Windows) uygulamaları
+  - title: .NET uygulamaları geliştirme
+    summary: .NET ile geliştirmeye başlama
+    links:
+    - url: core/sdk.md
+      itemType: download
+      text: .NET Core SDK’sını indirin
+    - url: core/tools/index.md
+      itemType: overview
+      text: .NET Core CLI’ya genel bakış
+    - url: core/porting/index.md
+      itemType: how-to-guide
+      text: .NET Framework’ten .NET Core’a taşıma
+    - url: core/compatibility/index.md
+      itemType: concept
+      text: .NET Core’daki yeni değişiklikler
+    - url: desktop-wpf/overview/index.md
+      itemType: overview
+      text: Windows için .NET Core masaüstü uygulamaları oluşturma
+    - url: standard/library-guidance/index.md
+      itemType: concept
+      text: Açık kaynak kitaplık kılavuzu
+  - title: .NET mimari kavramları
+    summary: .NET’e yönelik temel geliştirme ve mimari kılavuzunu okuyun
+    links:
+    - url: architecture/microservices/index.md
+      itemType: architecture
+      text: '.NET Mikro Hizmetleri: Kapsayıcılı .NET uygulamalarına yönelik mimari'
+    - url: architecture/modern-web-apps-azure/index.md
+      itemType: architecture
+      text: ASP.NET Core ve Azure ile modern web uygulamaları tasarlama
+    - url: architecture/containerized-lifecycle/index.md
+      itemType: architecture
+      text: Microsoft platformu ve araçları ile kapsayıcılı Docker uygulaması yaşam döngüsü
+    - url: architecture/modernize-with-azure-containers/index.md
+      itemType: architecture
+      text: Azure bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme
+    footerLink:
+      url: architecture/index.yml
+      text: Tüm mimari kılavuzları
+tools:
+  title: Programlama dilleri
+  summary: .NET uygulamalarını C#, F# veya Visual Basic kullanarak yazabilirsiniz.
+  items:
+  - title: C ailesinin modern, nesneye dayalı ve tür kullanımı uyumlu üyesi
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Csharp.svg
+    url: csharp/index.yml
+  - title: .NET için işlevsel bir programlama dili
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Fsharp.svg
+    url: fsharp/index.yml
+  - title: Okunabilir söz dizimine sahip ulaşılabilir bir dil
+    imageSrc: https://docs.microsoft.com/media/logos/logo_VB.svg
+    url: visual-basic/index.yml
+additionalContent:
+  sections:
+  - title: Uygulamanızı oluşturma
+    summary: Web, mobil, masaüstü, oyun, IoT ve daha fazla seçenek arasından seçim yapabilirsiniz.
+    items:
+    - title: Web
+      links:
+      - url: /aspnet/core/getting-started
+        text: İlk web uygulamanızı oluşturun
+      - url: /aspnet/core/tutorials
+        text: ASP.NET Core öğreticileri
+      - url: /aspnet/core
+        text: ASP.NET Core nedir?
+      - url: /aspnet/core/tutorials/first-mvc-app/start-mvc
+        text: Visual Studio'da ASP.NET Core
+      - url: /aspnet/mvc/overview/deployment/docker-aspnetmvc
+        text: Windows kapsayıcılarında ASP.NET MVC uygulamaları
+      - url: /aspnet/core/blazor/
+        text: 'Blazor: .NET ile etkileşimli istemci tarafı web kullanıcı arabirimi'
+    - title: Buluta özel ve mikro hizmetler
+      links:
+      - url: /dotnet/azure/
+        text: .NET için Azure belgeleri
+      - url: /azure/storage
+        text: Depolama
+      - url: /dotnet/fsharp/using-fsharp-on-azure/
+        text: Azure’da F# Kullanma
+      - url: architecture/serverless/index.md
+        text: 'Sunucusuz uygulamalar: Mimari, desenler ve Azure’ı uygulama'
+      - url: architecture/microservices/index.md
+        text: '.NET Mikro Hizmetleri: Kapsayıcılı .NET Uygulamaları Mimarisi'
+    - title: Mobil
+      links:
+      - url: /xamarin/ios/
+        text: Xamarin.iOS
+      - url: /xamarin/android
+        text: Xamarin.Android
+      - url: /xamarin/xamarin-forms
+        text: Xamarin.Forms
+    - title: Masaüstü
+      links:
+      - url: /uwp
+        text: Evrensel Windows uygulamaları
+      - url: desktop-wpf/index.md
+        text: Windows Presentation Foundation (.NET Core)
+      - url: framework/wpf/index.md
+        text: Windows Presentation Foundation (.NET Framework)
+      - url: framework/winforms/index.md
+        text: Windows Forms
+      - url: /xamarin/mac
+        text: macOS için Xamarin
+    - title: Oyun
+      links:
+      - url: https://visualstudio.microsoft.com/vs/features/game-development/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link
+        text: Visual Studio ile oyun geliştirme
+      - url: https://docs.cryengine.com/display/CEPROG/C%23+Programming
+        text: C# ile oyun oluşturmak için CRYENGINE kullanmayı öğrenin
+      - url: http://www.monogame.net/documentation/?page=main
+        text: MonoGame kitaplığını kullanarak C# ile oyun derleyin
+      - url: https://docs.unity3d.com/Manual/index.html
+        text: C# dilinde 2B ve 3B oyunlar oluşturmak için Unity’yi kullanmayı öğrenin
+    - title: Makine öğrenmesi ve yapay zeka
+      links:
+      - url: machine-learning/index.yml
+        text: ML.NET ile özel yapay zeka çözümleri oluşturun
+      - url: /azure/cognitive-services/
+        text: Azure Bilişsel Hizmetler
+      - url: /azure/machine-learning
+        text: Azure Machine Learning
+      - url: spark/index.yml
+        text: Apache Spark için .NET
+    - title: Nesnelerin interneti (IoT)
+      links:
+      - url: https://channel9.msdn.com/Shows/On-NET/IoT-support-for-NET-Core
+        text: '.NET’te: .NET Core’da sunulan IoT desteği hakkında bilgi edinin'
+      - url: https://docs.microsoft.com/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0
+        text: .NET Core 3.0 ile Çoklu Platform IoT Programlama
+      - url: https://github.com/dotnet/iot
+        text: .NET Core IoT kitaplıkları
+      - url: https://www.nuget.org/packages/System.Device.Gpio
+        text: System.Device.Gpio NuGet paketi
+  - title: API başvurusu bölümleri
+    summary: İlgi alanınıza ilişkin .NET API’si başvurusuna yönelik belgeleri arayın.
+    items:
+    - title: .NET Core API başvurusu
+      summary: .NET Core için API başvurusu belgeleri
+      url: https://docs.microsoft.com/dotnet/api/?view=netcore-3.1
+    - title: .NET Framework API başvurusu
+      summary: .NET Framework için API başvurusu belgeleri
+      url: https://docs.microsoft.com/dotnet/api/?view=netframework-4.8
+    - title: ASP.NET Core API başvurusu
+      summary: ASP.NET Core için API başvurusu belgeleri
+      url: https://docs.microsoft.com/dotnet/api/?view=aspnetcore-3.1
+    - title: ML.NET API başvurusu
+      summary: ML.NET için API başvurusu belgeleri
+      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
+    - title: Apache Spark API başvurusu için .NET
+      summary: Apache Spark için .NET için API başvurusu belgeleri
+      url: https://docs.microsoft.com/dotnet/api/?view=spark-dotnet
+    - title: C# dili başvurusu
+      summary: C# dili başvurusu ve belirtimi
+      url: csharp/language-reference/index.md
+    - title: F# dil başvurusu
+      summary: F# dil başvurusu
+      url: fsharp/language-reference/index.md
+    - title: Visual Basic dili başvurusu
+      summary: Visual Basic dili başvurusu ve belirtimi
+      url: visual-basic/language-reference/index.md
+  footer: .NET belgelerine katkıda bulunun. [Katkıda bulunan kılavuzunu](https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md) okuyun.
