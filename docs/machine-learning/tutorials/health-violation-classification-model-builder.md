@@ -1,140 +1,140 @@
 ---
-title: 'Öğretici: model Oluşturucu ile sistem durumu ihlallerini sınıflandırma'
-description: Bu öğreticide, San Francisco 'da Restoran sistem durumu ihlali önem derecesine göre sınıflandırmak için ML.NET model Oluşturucu kullanılarak birden çok Lass sınıflandırma modelinin nasıl oluşturulduğu gösterilmektedir.
+title: 'Öğretici: Model Oluşturucu ile sağlık ihlallerini sınıflandırma'
+description: Bu öğretici, San Francisco'daki restoran sağlık ihlali şiddetini sınıflandırmak için ML.NET Model Builder kullanarak çok sınıflı bir sınıflandırma modelinin nasıl oluşturulabildiğini göstermektedir.
 author: luisquintanilla
 ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 90abbc9ffe5765880d18d0d29c8e13bc1330ddc3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.custom: mvc,mlnet-tooling
+ms.openlocfilehash: e94313277a025d482105a6d78b6608d4df442c43
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341562"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185829"
 ---
-# <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Öğretici: model Oluşturucu ile Restoran sistem durumu ihlallerinin önem derecesini sınıflandırma
+# <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Öğretici: Model Builder ile restoran sağlık ihlallerinin şiddetini sınıflandırmak
 
-Sistem durumu incelemeleri sırasında bulunan restoran ihlallerinin risk düzeyini kategorilere ayırmak için model Oluşturucu kullanarak birden çok Lass sınıflandırma modeli oluşturmayı öğrenin.
+Sağlık denetimleri sırasında bulunan restoran ihlallerinin risk düzeyini kategorilere ayırmak için Model Builder'ı kullanarak çok sınıflı bir sınıflandırma modeli oluşturmayı öğrenin.
 
-Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
 
 > [!div class="checklist"]
 >
 > - Verileri hazırlama ve anlama
-> - Senaryo seçin
+> - Bir senaryo seçin
 > - Veritabanından veri yükleme
 > - Modeli eğitme
 > - Modeli değerlendirme
-> - Tahmin için modeli kullanma
+> - Öngörüler için modeli kullanma
 
 > [!NOTE]
-> Model Oluşturucu Şu anda önizleme aşamasındadır.
+> Model Oluşturucu şu anda Önizleme'de.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
-Önkoşul ve Yükleme yönergelerinin bir listesi için [model Oluşturucu Yükleme Kılavuzu](../how-to-guides/install-model-builder.md)' nu ziyaret edin.
+Ön koşullar ve yükleme yönergeleri listesi için [Model Oluşturucu yükleme kılavuzunu ziyaret edin.](../how-to-guides/install-model-builder.md)
 
-## <a name="model-builder-multiclass-classification-overview"></a>Model Oluşturucu birden çok Lass sınıflandırmasına genel bakış
+## <a name="model-builder-multiclass-classification-overview"></a>Model Builder çok sınıflı sınıflandırmaya genel bakış
 
-Bu örnek, model C# Oluşturucu ile oluşturulmuş bir makine öğrenimi modeli kullanarak sistem durumu ihlalleri riskini kategorilere ayırır ve bir .NET Core konsol uygulaması oluşturur. Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) GitHub deposunda bulabilirsiniz.
+Bu örnek, Model Builder ile oluşturulmuş bir makine öğrenme modeli kullanarak sistem durumu ihlali riskini kategorize eden bir C# .NET Core konsol uygulaması oluşturur. Bu öğreticinin kaynak kodunu [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) GitHub deposunda bulabilirsiniz.
 
 ## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 
-1. "Restoran antihlalleri" adlı bir  **C# .NET Core konsol uygulaması** oluşturun. **Çözümün ve projenin aynı dizine yerleştirdiğinizden** emin **olun (vs** 2019) veya **çözüm için dizin oluşturma** **denetlenir** (vs 2017).
+1. "RestaurantViolations" adlı bir **C# .NET Core konsol uygulaması** oluşturun. Çözüm **ve projeyi aynı dizindeki yerleştir** çözümve proje **işaretsiz** olduğundan emin olun (VS 2019) veya **çözüm için create directory** (VS 2017) **işaretlenir.**
 
 ## <a name="prepare-and-understand-the-data"></a>Verileri hazırlama ve anlama
 
-> Machine Learning modelini eğmekte ve değerlendirmek için kullanılan veri kümesi, başlangıçta [genel sağlık restoranın güvenlik puanlarından oluşan San Francisco departmanından](https://www.sfdph.org/dph/EH/Food/score/default.asp). Kolaylık olması için veri kümesi, yalnızca modeli eğmeyle ilgili sütunları içerecek şekilde yoğunlaştırılmış ve tahmin edilebilir. [Veri kümesi](https://data.sfgov.org/Health-and-Social-Services/Restaurant-Scores-LIVES-Standard/pyih-qa8i?row_index=0)hakkında daha fazla bilgi edinmek için aşağıdaki Web sitesini ziyaret edin.
+> Makine öğrenimi modelini eğitmek ve değerlendirmek için kullanılan veri seti aslında [San Francisco Halk Sağlığı Restoran Güvenlik Puanları Bölümü'ndendir.](https://www.sfdph.org/dph/EH/Food/score/default.asp) Kolaylık sağlamak için, veri kümesi yalnızca modeli eğitmek ve tahminlerde bulunmak la ilgili sütunları içerecek şekilde yoğunlaştırılmıştır. [Veri kümesi](https://data.sfgov.org/Health-and-Social-Services/Restaurant-Scores-LIVES-Standard/pyih-qa8i?row_index=0)hakkında daha fazla bilgi edinmek için aşağıdaki web sitesini ziyaret edin.
 
-[Restoran güvenlik puanları veri kümesini indirin](https://github.com/luisquintanilla/machinelearning-samples/raw/AB1608219/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantScores.zip) ve sıkıştırmayı açın.
+[Restoran Güvenlik Puanları veri setini indirin](https://github.com/luisquintanilla/machinelearning-samples/raw/AB1608219/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantScores.zip) ve zip'ini çıkarın.
 
-Veri kümesindeki her bir satır, sistem durumu departmanından bir inceleme sırasında gözlemlendiği ihlallerle ilgili bilgiler ve bu ihlallerin genel durum ve güvenlik konusunda yer aldığı tehdidi risk değerlendirmesi hakkında bilgi içerir.
+Veri kümesindeki her satır, Sağlık Bakanlığı'nın teftişi sırasında gözlemlenen ihlallerle ilgili bilgiler ve bu ihlallerin halk sağlığı ve güvenliği nezdinde mevcut olduğu tehdidin risk değerlendirmesini içerir.
 
-| Inspectiontype | ViolationDescription | RiskCategory |
+| Denetim Tipi | İhlal Açıklaması | Risk Kategorisi |
 | --- | --- | --- |
-| Rutin-zamanlanmamış | Yetersiz Temizlenen veya ayıklanmış yiyecek iletişim yüzeyleri | Orta risk |
-| Yeni sahiplik | Yüksek riskli Vermin ve daha fazla bildirim | Yüksek riskli |
-| Rutin-zamanlanmamış | Temizleyen giyme yok veya düzgün şekilde depolanmıyor ya da yetersiz bir temizleme işlemi | Düşük risk |
+| Rutin - Planlanmamış | Yetersiz olarak temizlenmiş veya dezenfekte edilmiş gıda temas yüzeyleri | Orta Risk |
+| Yeni Sahiplik | Yüksek riskli haşarat istilası | Yüksek Risk |
+| Rutin - Planlanmamış | Temiz olmayan veya düzgün depolanmayan veya yetersiz dezenfektan olmayan bezleri silme | Düşük Risk |
 
-- **Inspectiontype**: inceleme türü. Bu, yeni bir oluşturma, bir denetim, bir şikayet denetimi ve birçok diğer tür için ilk kez inceleme olabilir.
-- **ViolationDescription**: İnceleme sırasında bulunan ihlalin bir açıklaması.
-- **RiskCategory**: risk önem derecesi, bir ihlalin genel sistem durumu ve güvenliği doğurur.
+- **InspectionType**: denetim türü. Bu ya yeni bir kuruluş, rutin bir denetim, bir şikayet muayene ve diğer birçok tür için ilk kez muayene olabilir.
+- **İhlal Açıklaması**: Denetim sırasında bulunan ihlalin açıklaması.
+- **RiskKategorisi**: bir ihlalin halk sağlığı ve güvenliği için oluşturduğu risk şiddeti.
 
-`label`, tahmin etmek istediğiniz sütundur. Bir sınıflandırma görevi gerçekleştirirken, hedef bir kategori (metin veya sayısal) olarak atanır. Bu sınıflandırma senaryosunda, ihlalin önem derecesine düşük, orta veya yüksek riskli değer atanır. Bu nedenle, **RiskCategory** etikettir. `features`, modele `label`tahmin etmek için verdiğiniz girişlerdir. Bu durumda, **ınspectiontype** ve **ViolationDescription** , **RiskCategory**tahmin etmek için özellik veya giriş olarak kullanılır.
+Tahmin `label` etmek istediğiniz sütundur. Bir sınıflandırma görevi gerçekleştirirken, amaç bir kategori (metin veya sayısal) atamaktır. Bu sınıflandırma senaryosunda, ihlalin önem derecesidüşük, orta veya yüksek risk değeria atanır. Bu nedenle, **RiskKategorisi** etikettir. Modeli `features` tahmin etmek için verdiğiniz `label`girdiler. Bu durumda, **Denetim Türü** ve **İhlal Açıklaması** **RiskKategorisi'ni**tahmin etmek için özellik veya girdi olarak kullanılır.
 
-## <a name="choose-a-scenario"></a>Senaryo seçin
+## <a name="choose-a-scenario"></a>Bir senaryo seçin
 
-![Visual Studio 'da model Oluşturucu Sihirbazı](./media/sentiment-analysis-model-builder/model-builder-screen.png)
+![Model Oluşturucu sihirbazı Visual Studio'da](./media/sentiment-analysis-model-builder/model-builder-screen.png)
 
-Modelinize eğitebilmeniz için, model Oluşturucu tarafından sağlanan kullanılabilir makine öğrenimi senaryoları listesinden seçin. Bu durumda senaryo, *sorun sınıflandırması*olur.
+Modelinizi eğitmek için Model Oluşturucu tarafından sağlanan kullanılabilir makine öğrenimi senaryoları listesinden seçim inizi seçin. Bu durumda, senaryo *Sorun*Sınıflandırmasıdır.
 
-1. **Çözüm Gezgini**, *Restoran antihlalleri* projesine sağ tıklayın ve > **Ekle** **Machine Learning**' yi seçin.
-1. Bu örnek için, senaryo birden çok sınıf sınıflandırmasıdır. Model oluşturucunun *senaryo* adımında, **sorun sınıflandırması** senaryosunu seçin.
+1. **Solution Explorer'da** *RestaurantViolations* projesine sağ tıklayın ve**Machine Learning** **Ekle'yi** > seçin.
+1. Bu örnek için senaryo çok sınıflı sınıflandırmadır. Model Oluşturucu'nun *Senaryo* adımında, **Sorun Sınıflandırma** senaryosunu seçin.
 
 ## <a name="load-the-data"></a>Verileri yükleme
 
-Model Oluşturucu `csv` veya `tsv` biçimindeki bir SQL Server veritabanından veya yerel bir dosyadan verileri kabul eder.
+Model Oluşturucu, SQL Server veritabanından veya `csv` yerel `tsv` bir dosyadaki veya biçimdeki verileri kabul eder.
 
-1. Model Oluşturucu aracının veri adımında veri kaynağı açılır listesinden **SQL Server** ' yi seçin.
-1. **SQL Server veritabanına Bağlan** metin kutusunun yanındaki düğmeyi seçin.
-    1. **Veri Seç** iletişim kutusunda **Microsoft SQL Server veritabanı dosyası**' nı seçin.
-    1. **Her zaman bu seçimi kullan** onay kutusunu temizleyin ve **devam**' ı seçin.
-    1. **Bağlantı özellikleri** iletişim kutusunda, **Araştır** ' ı seçin ve indirilen *restoranın. mdf* dosyasını seçin.
-    1. Seçin **Tamam**.
-1. **Tablo adı** açılır listesinden **ihlaller** ' i seçin.
-1. **Tahmin edilecek (etiket)** aşağı açılan sütunda **RiskCategory** öğesini seçin.
-1. Varsayılan sütun seçimlerini, **ınspectiontype** ve **ViolationDescription** **giriş sütunları (Özellikler)** açılır listesine iade edin.
-1. Model Oluşturucu 'daki sonraki adıma geçmek için **eğitme** bağlantısını seçin.
+1. Model Oluşturucu aracının veri adımında, veri kaynağı açılır tarafından **SQL Server'ı** seçin.
+1. **SQL Server veritabanına bağlan** metin kutusunun yanındaki düğmeyi seçin.
+    1. Veri **Seç** iletişim kutusunda **Microsoft SQL Server Database File'yi**seçin.
+    1. **Her Zaman bu seçim** onay kutusunu kullan denetiminden kaldırın ve Devam **et'i**seçin.
+    1. Bağlantı **Özellikleri** iletişim kutusunda **Gözat'ı** seçin ve indirilen *RestaurantScores.mdf* dosyasını seçin.
+    1. **Tamam'ı**seçin.
+1. **Tablo Adı** açılır tarafından **Ihlaller'i** seçin.
+1. **Açılan düşüşü tahmin etmek (Etiketlemek) için Sütundaki RiskKategorisi'ni** seçin. **RiskCategory**
+1. **Giriş Sütunları (Özellikler)** açılır durumda denetlenen varsayılan sütun seçimlerini, **Denetim Türü** ve **ViolationDescription'ı**bırakın.
+1. Model Oluşturucu'da bir sonraki adıma geçmek için **Tren** bağlantısını seçin.
 
 ## <a name="train-the-model"></a>Modeli eğitme
 
-Bu öğreticide sorun sınıflandırma modelini eğitmek için kullanılan makine öğrenimi görevi birden çok Lass sınıflandırmasıdır. Model oluşturma işlemi sırasında model Oluşturucu, veri kümeniz için en iyi işlem modelini bulmak üzere farklı bir çok Lass sınıflandırma algoritması ve ayarı kullanarak modelleri ayrı ayrı işler.
+Bu öğreticide konu sınıflandırma modelini eğitmek için kullanılan makine öğrenimi görevi çok sınıflı sınıflandırmadır. Model eğitim süreci sırasında Model Builder, veri setiniz için en iyi performans gösteren modeli bulmak için farklı çok sınıflı sınıflandırma algoritmaları ve ayarları kullanarak ayrı modeller eğitir.
 
-Modelin eğmesi için gereken süre, veri miktarıyla orantılıdır. Model Oluşturucu, veri kaynağınızın boyutuna bağlı olarak, **tren süresi (saniye)** için varsayılan bir değer seçer.
+Modelin eğitilmesi için gereken süre veri miktarıyla orantılıdır. Model Oluşturucu, veri kaynağınızın boyutuna bağlı **olarak, eğitme Süresi (saniye)** için varsayılan bir değer seçer.
 
-1. Model Oluşturucu değeri, " **saniye)** ila 10 saniye arasında bir süre olarak ayarlasa da, 30 saniyeye yükseltin. Daha uzun bir süre için eğitim, model oluşturucunun en iyi modeli aramada daha fazla sayıda algoritmaların ve parametrelerin birleşimini keşfetmesine olanak tanır.
-1. **Eğitimi Başlat**' ı seçin.
+1. Model Oluşturucu, **(saniye) eğitmek için Zamanın** değerini 10 saniyeye ayarlasa da, bunu 30 saniyeye yükseltin. Daha uzun bir süre için eğitim Model Builder algoritmaları ve en iyi modeli arama parametrelerinin kombinasyonu daha fazla sayıda keşfetmek için izin verir.
+1. **Start Training'i**seçin.
 
-    Eğitim süreci boyunca, ilerleme verileri eğitme adımının `Progress` bölümünde görüntülenir.
+    Eğitim süreci boyunca, ilerleme verileri tren `Progress` adımı bölümünde görüntülenir.
 
-    - **Durum** , eğitim sürecinin tamamlanma durumunu görüntüler.
-    - **En iyi doğruluk** model Oluşturucu tarafından şu ana kadar bulunan en iyi şekilde oluşan modelin doğruluğunu gösterir. Daha yüksek doğruluk, modelin test verilerinde daha doğru tahmin edilen anlamına gelir.
-    - **En iyi algoritma** , o ana kadar model Oluşturucu tarafından bulunan en iyi şekilde gerçekleştiren algoritmanın adını gösterir.
-    - **Son algoritma** modeli eğitmek Için model Oluşturucu tarafından en son kullanılan algoritmanın adını görüntüler.
+    - **Durum,** eğitim sürecinin tamamlanma durumunu görüntüler.
+    - **En iyi doğruluk,** Model Builder tarafından şimdiye kadar bulunan en iyi performans gösteren modelin doğruluğunu görüntüler. Daha yüksek doğruluk, modelin test verilerinde daha doğru tahmin ettiği anlamına gelir.
+    - **En iyi algoritma,** Model Builder tarafından şimdiye kadar bulunan en iyi performans gösteren algoritmanın adını görüntüler.
+    - **Son algoritma,** modeli eğitmek için Model Oluşturucu tarafından en son kullanılan algoritmanın adını görüntüler.
 
-1. Eğitim tamamlandıktan sonra bir sonraki adıma geçmek için bağlantıyı **değerlendir** ' i seçin.
+1. Eğitim tamamlandıktan sonra, bir sonraki adıma geçmek için **Değerlendir** bağlantısını seçin.
 
 ## <a name="evaluate-the-model"></a>Modeli değerlendirme
 
-Eğitim adımının sonucu en iyi performansa sahip bir modeldir. Model oluşturucunun değerlendir adımında çıkış bölümü **, en iyi model girişinde en** iyi şekilde kullanılan model tarafından kullanılan algoritmayı ve **En Iyi model doğruluğunun**ölçümlerini içerir. Ayrıca, araştırılan en fazla beş model içeren bir Özet tablosu ve bunların ölçümleri görüntülenir.
+Eğitim adımının sonucu en iyi performansa sahip bir modeldir. Model Oluşturucu'nun değerlendirme adımında, çıkış **bölümü, Best Model** **Doğruluğu'ndaki**ölçümlerle birlikte En İyi Model girişinde en iyi performans gösteren model tarafından kullanılan algoritmayı içerir. Ayrıca, keşfedilen ve ölçümleri görüntülenen en fazla beş model içeren bir özet tablo.
 
-Doğruluk ölçümlerinizi tatmin ediyorsanız, model doğruluğunu artırmak için bazı kolay yollar, modelin eğilmesi veya daha fazla veri kullanmak için zaman miktarını artırmaktır. Aksi takdirde, model Oluşturucu 'daki son adıma geçmek için **kod** bağlantısını seçin.
+Doğruluk ölçümlerinizden memnun değilseniz, model doğruluğunu iyileştirmeyi denemenin bazı kolay yolları, modeli eğitmek veya daha fazla veri kullanmak için gereken süreyi artırmakiçindir. Aksi takdirde, Model Oluşturucu'da son adıma geçmek için **kod** bağlantısını seçin.
 
-## <a name="add-the-code-to-make-predictions"></a>Tahminleri yapmak için kodu ekleyin
+## <a name="add-the-code-to-make-predictions"></a>Tahminlerde bulunmak için kodu ekleme
 
-Eğitim sürecinin bir sonucu olarak iki proje oluşturulur.
+Eğitim süreci sonucunda iki proje oluşturulur.
 
-- RestaurantViolationsML. ConsoleApp: model C# eğitimi ve örnek tüketim kodu içeren bir .NET Core konsol uygulaması.
-- RestaurantViolationsML. Model: giriş ve çıkış modeli verilerinin şemasını tanımlayan veri modellerini, eğitim sırasında en iyi hale getirme modelinin kaydedilmiş sürümünü ve tahmin etmek için `ConsumeModel` adlı bir yardımcı sınıfı içeren .NET Standard bir sınıf kitaplığı.
+- RestaurantViolationsML.ConsoleApp: Model eğitimi ve örnek tüketim kodunu içeren bir C# .NET Core Console uygulaması.
+- RestaurantViolationsML.Model: Giriş ve çıktı modeli verilerinin şemasını tanımlayan veri modellerini, eğitim sırasında en iyi performans gösteren modelin kaydedilmiş sürümünü `ConsumeModel` ve tahminde bulunmak için çağrılan yardımcı sınıfı içeren bir .NET Standart sınıf kitaplığı.
 
-1. Model oluşturucunun kod adımında, otomatik olarak oluşturulan projeleri çözüme eklemek için **Proje Ekle** ' yi seçin.
-1. *Program.cs* dosyasını *Losoantihlalleri* projesinde açın.
-1. *RestaurantViolationsML. model* projesine başvurmak için aşağıdaki using ifadesini ekleyin:
+1. Model Oluşturucu'nun kod adımında, çözüme otomatik oluşturulan projeleri eklemek için **Projeler Ekle'yi** seçin.
+1. *RestaurantViolations* projesinde *Program.cs* dosyasını açın.
+1. *RestaurantViolationsML.Model* projesine başvurmak için aşağıdaki ifadesini ekleyin:
 
     [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L2)]
 
-1. Modeli kullanarak yeni verileri tahmin etmek için, uygulamanızın `Main` yöntemi içinde `ModelInput` sınıfının yeni bir örneğini oluşturun. Risk kategorisinin girişin bir parçası olmadığına dikkat edin. Bunun nedeni, modelin tahmin oluşturması.
+1. Modeli kullanarak yeni veriler üzerinde bir tahminde bulunmak `ModelInput` için, `Main` uygulama yöntemi içinde sınıfın yeni bir örneğini oluşturun. Risk kategorisinin girişin bir parçası olmadığını unutmayın. Bunun nedeni, modelin bunun için tahmin oluşturmasıdır.
 
     [!code-csharp [TestData](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L11-L15)]
 
-1. `ConsumeModel` sınıfındaki `Predict` yöntemi kullanın. `Predict` yöntemi eğitilen modeli yükler, model için bir [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) oluşturur ve yeni verilerde tahmine dayalı hale getirmek için onu kullanır.
+1. Sınıftaki `Predict` `ConsumeModel` yöntemi kullanın. Yöntem, `Predict` eğitilen modeli yükler, model için bir model [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) oluşturur ve yeni veriler üzerinde öngörülerde bulunmak için kullanır.
 
     [!code-csharp [Prediction](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L17-L24)]
 
 1. Uygulamayı çalıştırın.
 
-    Program tarafından oluşturulan çıkış aşağıdaki kod parçacığına benzemelidir:
+    Program tarafından oluşturulan çıktı aşağıdaki snippet benzer görünmelidir:
 
     ```bash
     Inspection Type: Complaint
@@ -142,14 +142,14 @@ Eğitim sürecinin bir sonucu olarak iki proje oluşturulur.
     Risk Category: Moderate Risk
     ```
 
-Oluşturulan projelere başka bir çözümün içinde daha sonraki bir zamanda başvurmanız gerekirse, bunları `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` dizininde bulabilirsiniz.
+Oluşturulan projeleri başka bir çözüm içinde daha sonra göndermeniz gerekiyorsa, bunları `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` dizinin içinde bulabilirsiniz.
 
-Tebrikler! Model Oluşturucu kullanarak sistem durumu ihlallerinin riskini kategorize etmek için bir makine öğrenimi modelini başarıyla oluşturdunuz. Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) GitHub deposunda bulabilirsiniz.
+Tebrikler! Model Oluşturucu'yu kullanarak sağlık ihlali riskini kategorilere ayırmak için başarılı bir makine öğrenme modeli oluşturmuşsunuz. Bu öğreticinin kaynak kodunu [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) GitHub deposunda bulabilirsiniz.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-Bu öğreticide bahsedilen konular hakkında daha fazla bilgi edinmek için aşağıdaki kaynakları ziyaret edin:
+Bu eğitimde bahsedilen konular hakkında daha fazla bilgi edinmek için aşağıdaki kaynakları ziyaret edin:
 
-- [Model Oluşturucu senaryoları](../automate-training-with-model-builder.md#scenarios)
-- [Birden çok Lass sınıflandırması](../resources/glossary.md#multiclass-classification)
-- [Birden çok Lass sınıflandırma modeli ölçümleri](../resources/metrics.md#evaluation-metrics-for-multi-class-classification)
+- [Model Oluşturucu Senaryolar](../automate-training-with-model-builder.md#scenarios)
+- [Çok Sınıflı Sınıflandırma](../resources/glossary.md#multiclass-classification)
+- [Çok Sınıflı Sınıflandırma Modeli Ölçümleri](../resources/metrics.md#evaluation-metrics-for-multi-class-classification)

@@ -8,28 +8,28 @@ helpviewer_keywords:
 - garbage collection, shared Web hosting
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
 ms.openlocfilehash: 07a100e2cd6aaff2b54b99144c9d762c8979fb47
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140275"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>Paylaşılan Web Barındırma için İyileştirme
-Birkaç küçük Web sitesini barındırmakla paylaşılan bir sunucunun yöneticisiyseniz, .NET dizinindeki Aspnet. config dosyasındaki `runtime` düğümüne aşağıdaki `gcTrimCommitOnLowMemory` ayarını ekleyerek performansı iyileştirir ve site kapasitesini artırabilirsiniz. :  
+Birkaç küçük Web sitesini barındırarak paylaşılan bir sunucunun yöneticisiyseniz, .NET dizinindeki Aspnet.config dosyasındaki `gcTrimCommitOnLowMemory` `runtime` düğüme aşağıdaki ayarı ekleyerek performansı en iyi duruma getirebilir ve site kapasitesini artırabilirsiniz:  
   
  `<gcTrimCommitOnLowMemory enabled="true|false"/>`  
   
 > [!NOTE]
-> Bu ayar yalnızca paylaşılan web barındırma senaryolarında önerilir.  
+> Bu ayar yalnızca paylaşılan Web barındırma senaryoları için önerilir.  
   
- Çöp toplayıcı gelecek ayırmalar için belleği koruduğundan, onun ayrılan alanı kesinlikle gerekenden daha fazla olabilir. Sistem belleğinde ağır bir yük olduğunda bu alanı azaltabilirsiniz. Bu ayrılan alanın azaltılması performansı iyileştirir ve daha fazla siteyi barındırmak için kapasiteyi genişletir.  
+ Çöp toplayıcı gelecekteki ayırmalar için bellek sakladığından, taahhüt edilen alanı kesinlikle gerekenden daha fazla olabilir. Sistem belleğinde ağır bir yük olduğu zamanları karşılamak için bu alanı azaltabilirsiniz. Bu taahhüt edilen alanı azaltmak performansı artırır ve daha fazla siteyi barındırma kapasitesini artırır.  
   
- `gcTrimCommitOnLowMemory` ayarı etkinleştirildiğinde, atık Toplayıcısı sistem belleği yükünü değerlendirir ve yük %90 ' a ulaştığında bir kırpma modu girer. Yük %85 altına düşene kadar kırpma modunu korur.  
+ `gcTrimCommitOnLowMemory` Ayar etkinleştirildiğinde, çöp toplayıcı sistem bellek yükünü değerlendirir ve yük %90'a ulaştığında bir kırpma moduna girer. Yük %85'in altına düşene kadar kesme modunu korur.  
   
- Koşulların izin vermesi durumunda çöp toplayıcı, `gcTrimCommitOnLowMemory` ayarının geçerli uygulamayı ve yok saymasını sağlamamasına karar verebilir.  
+ Koşullar izin verdiğinde, çöp toplayıcı `gcTrimCommitOnLowMemory` ayarın geçerli uygulamaya yardımcı olmadığına karar verebilir ve bunu yoksayabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki XML parçasında `gcTrimCommitOnLowMemory` ayarının nasıl etkinleştirileceği gösterilmektedir. Üç nokta, `runtime` düğümünde olacak diğer ayarları gösterir.  
+ Aşağıdaki XML parçası `gcTrimCommitOnLowMemory` ayarı nasıl etkinleştirecek lerini gösterir. Elipsler `runtime` düğümde olacak diğer ayarları gösterir.  
   
 ```xml  
 <?xml version="1.0" encoding="UTF-8"?>  
@@ -44,4 +44,4 @@ Birkaç küçük Web sitesini barındırmakla paylaşılan bir sunucunun yöneti
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Atık Toplama](../../../docs/standard/garbage-collection/index.md)
+- [Çöp Toplama](../../../docs/standard/garbage-collection/index.md)

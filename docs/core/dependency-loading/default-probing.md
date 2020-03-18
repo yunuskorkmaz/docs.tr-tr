@@ -1,75 +1,75 @@
 ---
-title: Varsayılan yoklama-.NET Core
-description: Bağımlılıkları bulmak için .NET Core 'un System. Runtime. Loader. AssemblyLoadContext. Default araştırma mantığına genel bakış.
+title: Varsayılan sondalama - .NET Core
+description: .NET Core's System.Runtime.Loader.AssemblyLoadContext.Default sondalama mantığı bağımlılıkları bulmak için genel bakış.
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: 500ee6ee863b1f311970a9e718936f57f7d4efd6
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031831"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399093"
 ---
-# <a name="default-probing"></a>Varsayılan yoklama
+# <a name="default-probing"></a>Varsayılan sondalama
 
-<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> örneği, bir derlemenin bağımlılıklarını bulmaktan sorumludur. Bu makalede <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> örneğinin yoklama mantığı açıklanmaktadır.
+Örnek, <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> bir derlemenin bağımlılıklarını bulmakla yükümlüdür. Bu <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> makalede, örneğin sondalama mantığı açıklanmaktadır.
 
-## <a name="host-configured-probing-properties"></a>Konak yapılandırılmış yoklama özellikleri
+## <a name="host-configured-probing-properties"></a>Barındırış yapılandırılmış sondalama özellikleri
 
-Çalışma zamanı başlatıldığında, çalışma zamanı ana bilgisayarı <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> araştırma yollarını yapılandıran adlandırılmış bir yoklama özellikleri kümesi sağlar.
+Çalışma zamanı başlatıldığında, çalışma zamanı ana bilgisayarı <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> sonda yollarını yapılandıran adlandırılmış sonda özellikleri kümesi sağlar.
 
-Her yoklama özelliği isteğe bağlıdır. Varsa, her özellik mutlak yolların ayrılmış bir listesini içeren bir dize değeridir. Sınırlayıcı, Windows üzerinde '; ' ve diğer tüm platformlarda ': '.
+Her sondalama özelliği isteğe bağlıdır. Varsa, her özellik, salt yolların sınırlı bir listesini içeren bir dize değeridir. Delimiter, Windows'da ';' ve diğer tüm platformlarda ':' olarak bilinir.
 
 |Özellik Adı                 |Açıklama  |
 |------------------------------|---------|
-|`TRUSTED_PLATFORM_ASSEMBLIES`   | Platform ve uygulama derleme dosyası yollarının listesi. |
-|`PLATFORM_RESOURCE_ROOTS`       | Uydu kaynak derlemelerinin aranacağı Dizin yollarının listesi. |
-|`NATIVE_DLL_SEARCH_DIRECTORIES` | Yönetilmeyen (yerel) kitaplıkları aramak için Dizin yollarının listesi.        |
-|`APP_PATHS`                     | Yönetilen derlemeleri aramak için Dizin yollarının listesi. |
-|`APP_NI_PATHS`                  | Yönetilen derlemelerin yerel görüntülerini aramak için Dizin yollarının listesi. |
+|`TRUSTED_PLATFORM_ASSEMBLIES`   | Platform ve uygulama derleme dosya yollarının listesi. |
+|`PLATFORM_RESOURCE_ROOTS`       | Uydu kaynak derlemelerini aramak için dizin yolları listesi. |
+|`NATIVE_DLL_SEARCH_DIRECTORIES` | Yönetilmeyen (yerel) kitaplıkları aramak için dizin yolları listesi.        |
+|`APP_PATHS`                     | Yönetilen derlemeleri aramak için dizin yolları listesi. |
+|`APP_NI_PATHS`                  | Yönetilen derlemelerin yerel görüntülerini aramak için dizin yolları listesi. |
 
-### <a name="how-are-the-properties-populated"></a>Özellikler nasıl doldurulur?
+### <a name="how-are-the-properties-populated"></a>Mülkler nasıl doldurulur?
 
-*\<myapp >. Deps. JSON* dosyasının var olup olmadığına bağlı olarak özelliklerin doldurulmasına yönelik iki ana senaryo vardır.
+* \<Myapp>.deps.json* dosyasının var olup olmadığına bağlı olarak özellikleri doldurmak için iki ana senaryo vardır.
 
-- *\*. Deps. JSON* dosyası mevcut olduğunda, araştırma özelliklerini doldurmak için ayrıştırılır.
-- *\*. Deps. JSON* dosyası mevcut olmadığında, uygulamanın dizininin tüm bağımlılıkları içermesi varsayılır. Dizin içeriği, araştırma özelliklerini doldurmak için kullanılır.
+- .deps.json dosyası bulunduğunda, sonlama özelliklerini doldurmak için ayrıştırılır. * \**
+- .deps.json dosyası yoksa, uygulamanın dizininin tüm bağımlılıkları içerdiği varsayılır. * \** Dizin içeriği sondalama özelliklerini doldurmak için kullanılır.
 
-Ayrıca, başvurulan tüm çerçeveler için *\*. Deps. JSON* dosyaları benzer şekilde ayrıştırılmaz.
+Ayrıca, başvurulan çerçeveler için * \*.deps.json* dosyaları benzer şekilde ayrıştı.
 
-Son olarak, `ADDITIONAL_DEPS` ortam değişkeni ek bağımlılıklar eklemek için kullanılabilir.
+Son olarak `ADDITIONAL_DEPS` ortam değişkeni ek bağımlılıklar eklemek için kullanılabilir.
 
-### <a name="how-do-i-see-the-probing-properties-from-managed-code"></a>Nasıl yaparım? yönetilen koddan yoklama özelliklerini görmek mi istiyorsunuz?
+### <a name="how-do-i-see-the-probing-properties-from-managed-code"></a>Yönetilen koddaki sondalama özelliklerini nasıl görebiliyorum?
 
-Her özelliğe, yukarıdaki tablodaki Özellik adı ile <xref:System.AppContext.GetData(System.String)?displayProperty=nameWithType> işlevi çağırarak ulaşılabilir.
+Her özellik yukarıdaki tablodan özellik adı ile <xref:System.AppContext.GetData(System.String)?displayProperty=nameWithType> işlevi çağırarak kullanılabilir.
 
-### <a name="how-do-i-debug-the-probing-properties-construction"></a>Nasıl yaparım? araştırma özelliklerinin oluşturulması hata ayıklaması yapılsın mı?
+### <a name="how-do-i-debug-the-probing-properties-construction"></a>Sonlama özelliklerinin inşaatını nasıl ayıka ait olurum?
 
-.NET Core çalışma zamanı ana bilgisayarı, belirli ortam değişkenleri etkinleştirildiğinde yararlı izleme iletilerini çıktı olarak izler:
+.NET Core çalışma zamanı ana bilgisayarı, belirli ortam değişkenleri etkinleştirildiğinde yararlı izleme iletileri çıkaracaktır:
 
-|Ortam değişkeni        |Açıklama  |
+|Çevre Değişkeni        |Açıklama  |
 |----------------------------|---------|
-|`COREHOST_TRACE=1`          |İzlemeyi etkinleştirilir.|
-|`COREHOST_TRACEFILE=<path>` |Varsayılan `stderr`yerine bir dosya yolu izler.|
-|`COREHOST_TRACE_VERBOSITY`  |Ayrıntı düzeyini 1 ' den (en düşük) 4 ' e (en yüksek) ayarlar.|
+|`COREHOST_TRACE=1`          |İzlemeyi sağlar.|
+|`COREHOST_TRACEFILE=<path>` |Varsayılan `stderr`yerine bir dosya yoluna izler.|
+|`COREHOST_TRACE_VERBOSITY`  |Ayrıntılılığı 1 (en düşük) ile 4 (en yüksek) arasında ayarlar.|
 
-## <a name="managed-assembly-default-probing"></a>Yönetilen derleme varsayılan yoklama
+## <a name="managed-assembly-default-probing"></a>Yönetilen derleme varsayılan sondalama
 
-Yönetilen bir derlemeyi bulma konusunda yoklama yaparken <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> şu zamanda sırayla görünür:
+Yönetilen bir derlemeyi bulmak için <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> sondalama yaparken, aşağıdakileri sırayla bakar:
 
-- `TRUSTED_PLATFORM_ASSEMBLIES` <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> eşleşen dosyalar (dosya uzantıları kaldırıldıktan sonra).
-- Ortak dosya uzantılarıyla `APP_NI_PATHS` içindeki yerel görüntü derleme dosyaları.
-- Ortak dosya uzantılarına sahip `APP_PATHS` içindeki derleme dosyaları.
+- <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> In `TRUSTED_PLATFORM_ASSEMBLIES` ile eşleşen dosyalar (dosya uzantılarını kaldırdıktan sonra).
+- Ortak dosya uzantıları `APP_NI_PATHS` ile yerel görüntü derleme dosyaları.
+- Ortak dosya `APP_PATHS` uzantıları ile derleme dosyaları.
 
-## <a name="satellite-resource-assembly-probing"></a>Uydu (kaynak) derlemeyi yoklama
+## <a name="satellite-resource-assembly-probing"></a>Uydu (kaynak) montaj sondalama
 
-Belirli bir kültürün uydu derlemesini bulmak için bir dosya yolları kümesi oluşturun.
+Belirli bir kültür için uydu derlemesi bulmak için bir dosya yolu kümesi oluşturun.
 
-`PLATFORM_RESOURCE_ROOTS` içindeki her yol için, `APP_PATHS`<xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> dizesini, Dizin ayırıcısını, <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> dizeyi ve '. dll ' uzantısını ekleyin.
+Her yol `PLATFORM_RESOURCE_ROOTS` için `APP_PATHS`ve sonra <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> , dize, bir dizin ayırıcı, <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> dize ve uzantısı '.dll' ekler.
 
-Eşleşen herhangi bir dosya varsa, yüklemeyi ve döndürmeyi deneyin.
+Eşleşen bir dosya varsa, yüklemeyi ve döndürmeyi dene.
 
-## <a name="unmanaged-native-library-probing"></a>Yönetilmeyen (yerel) kitaplık yoklama
+## <a name="unmanaged-native-library-probing"></a>Yönetilmeyen (yerel) kitaplık sondalama
 
-Yönetilmeyen bir kitaplığı bulmaya yönelik yoklama yaparken, `NATIVE_DLL_SEARCH_DIRECTORIES` eşleşen bir kitaplığı arayarak aranır.
+Yönetilmeyen bir kitaplığı bulmak için `NATIVE_DLL_SEARCH_DIRECTORIES` araştırma yaparken, eşleşen bir kitaplık aranır.

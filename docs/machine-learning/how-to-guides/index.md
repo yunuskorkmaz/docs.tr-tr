@@ -1,50 +1,50 @@
 ---
-title: ML.NET nasıl yapılır kılavuzlarını
-description: Özel AI çözümleri oluşturma ve .NET uygulamalarınıza tümleştirme Machine Learning konusunda yardımcı olmak üzere belirli görevleri nasıl gerçekleştireceğinizi öğrenin.
+title: ML.NET nasıl yapılacağını kılavuzları
+description: Özel Yapay AI çözümleri oluşturma ve Machine Learning entegrasyonuile .NET uygulamalarınıza yardımcı olmak için belirli görevleri nasıl yapacağınızı öğrenin.
 ms.date: 03/01/2019
 ms.openlocfilehash: 4ce2de77c35062aa19449e3ba6bb3d5abd003d60
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715663"
 ---
-# <a name="net-machine-learning-how-to-guides"></a>.NET Machine Learning nasıl yapılır kılavuzlarından
+# <a name="net-machine-learning-how-to-guides"></a>.NET Machine öğrenme nasıl yapılacağını kılavuzları
 
-ML.NET kılavuzunun nasıl yapılır bölümünde yaygın soruların hızlı yanıtlarını bulabilirsiniz. Bazı durumlarda, makaleleri bulmayı kolaylaştırmak için birden çok bölümde listelenebilir.
+ML.NET Kılavuzu'nun nasıl yapılacağını bölümünde, sık sorulan sorulara hızlı yanıtlar bulabilirsiniz. Bazı durumlarda, makalelerin bulunmasını kolaylaştırmak için birden çok bölümde listelenebilir.
 
 ## <a name="load-data"></a>Veri yükleme
 
-* [Dosyaları ve SQL veritabanlarından verileri yükleyin.](load-data-ml-net.md)
+* [Dosyalardan ve SQL veritabanlarından veri yükleyin.](load-data-ml-net.md)
 
 ### <a name="prepare-the-data"></a>Verileri hazırlama
 
-* [Veri işlemede kullanılacak normalde eğitim verilerini önceden işleyin.](normalizers-preprocess-data-ml-net.md)
+* [Veri işlemede kullanılacak normalleştiricilerle önişlem eğitim verileri.](normalizers-preprocess-data-ml-net.md)
 
 ## <a name="train-the-model"></a>Modeli eğitme
 
-* [Çapraz doğrulama kullanarak makine öğrenimi modelini eğitme.](train-machine-learning-model-cross-validation-ml-net.md)
+* [Çapraz doğrulama kullanarak bir makine öğrenme modeli eğitin.](train-machine-learning-model-cross-validation-ml-net.md)
 
-* [ML.NET kullanarak bir değer tahmin etmek için regresyon modeli eğitme.](train-machine-learning-model-ml-net.md)
+* [ML.NET kullanarak bir değeri tahmin etmek için bir regresyon modeli eğitin.](train-machine-learning-model-ml-net.md)
 
-### <a name="evaluate-the-model-quality"></a>Model kalitesini değerlendirin
+### <a name="evaluate-the-model-quality"></a>Model kalitesini değerlendirme
 
 * [Model kalitesini değerlendirmek için ölçümleri hesaplayın.](verify-model-quality-ml-net.md)
 
-### <a name="model-explainability"></a>Model explainability
+### <a name="model-explainability"></a>Model açıklanabilirliği
 
-* [Permütasyon özelliği önem derecesine sahip modellerin Özellik önemini saptayın.](explain-machine-learning-model-permutation-feature-importance-ml-net.md)
+* [Permütasyon Özelliği Önemi olan modellerin özelliğinin önemini belirleyin.](explain-machine-learning-model-permutation-feature-importance-ml-net.md)
 
-* [Explainability modeli için genelleştirilmiş ekleme modellerini ve şekil işlevlerini kullanın.](use-gams-for-model-explainability.md)
+* [Model açıklanabilirliği için Genelleştirilmiş Katkı Modelleri ve şekil işlevlerini kullanın.](use-gams-for-model-explainability.md)
 
-## <a name="run"></a>Çalıştır
+## <a name="run"></a>Çalıştırın
 
-* [ML.NET işlem hattı işleme sırasında Ara veri değerlerini inceleyin.](inspect-intermediate-data-ml-net.md)
+* [ML.NET boru hattı işleme sırasında ara veri değerlerini inceleyin.](inspect-intermediate-data-ml-net.md)
 
-* [Eğitilen bir makine öğrenme modeli yükleyin.](save-load-machine-learning-models-ml-net.md)
+* [Eğitimli bir makine öğrenme modeli yükleyin.](save-load-machine-learning-models-ml-net.md)
 
-* [Eğitilen bir modelle tahminlere sahip olun.](machine-learning-model-predictions-ml-net.md)
+* [Eğitimli bir modelle tahminlerde bulunun.](machine-learning-model-predictions-ml-net.md)
 
-## <a name="probabilistic-infernet"></a>Dayalı (Infer.NET)
+## <a name="probabilistic-infernet"></a>Olasılıksal (Infer.NET)
 
-* [Infer.NET ve dayalı programlamasında bir oyun eşleşmesi liste uygulaması oluşturun.](matchup-app-infer-net.md)
+* [Infer.NET ve olasılıksal programlama ile bir oyun maç listesi uygulaması oluşturun.](matchup-app-infer-net.md)

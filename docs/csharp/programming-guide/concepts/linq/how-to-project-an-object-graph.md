@@ -1,19 +1,19 @@
 ---
-title: Bir nesne grafiğini (C#) proje
+title: Nesne grafiği nasıl yansıtılatır (C#)
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: 93fabe26fd3d9ff0b61d8b8dfc33425715452c88
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: eafb3d9064159c43fc98e0b241f0045465fca824
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635697"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168966"
 ---
-# <a name="how-to-project-an-object-graph-c"></a>Bir nesne grafiğini (C#) proje
-Bu konu, XML 'deki bir nesne grafiğinin nasıl proje veya doldurma yapılacağını gösterir.  
+# <a name="how-to-project-an-object-graph-c"></a>Nesne grafiği nasıl yansıtılatır (C#)
+Bu konu, XML'den bir nesne grafiğinin nasıl yansıtılabildiğini veya doldurulmasını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, bir nesne grafiğini örnek XML dosyasındaki `Address`, `PurchaseOrder`ve `PurchaseOrderItem` sınıflarıyla doldurur [: tipik satın alma siparişi (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML belgesi.  
+ Aşağıdaki `Address`kod, Örnek XML Dosyasından , ve `PurchaseOrder` `PurchaseOrderItem` sınıflarla bir nesne grafiğini doldurur: Tipik [Satınalma Siparişi (LINQ - XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML belgesi.  
   
 ```csharp  
 class Address  
@@ -185,7 +185,7 @@ class Program {
                             from a in po.Elements("Address")  
                             select new Address {  
                                 AddressType = ((string)a.Attribute("Type") == "Shipping") ?  
-                                    Address.AddressUse.Shipping :   
+                                    Address.AddressUse.Shipping :
                                     Address.AddressUse.Billing,  
                                 Name = (string)a.Element("Name"),  
                                 Street = (string)a.Element("Street"),  
@@ -214,7 +214,7 @@ class Program {
 }  
 ```  
   
- Bu örnekte, LINQ sorgusunun sonucu `PurchaseOrderItem`<xref:System.Collections.Generic.IEnumerable%601> olarak döndürülür. `PurchaseOrder` sınıfındaki öğeler `PurchaseOrderItem`<xref:System.Collections.Generic.IEnumerable%601> türüdür. Kod, sorgu sonuçlarından bir <xref:System.Collections.Generic.List%601> koleksiyonu oluşturmak için <xref:System.Linq.Enumerable.ToList%2A> uzantısı yöntemini kullanır.  
+ Bu örnekte, LINQ sorgusunun sonucu bir <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem`' nin olarak döndürülür. Sınıftaki `PurchaseOrder` <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem`öğeler. Kod, sorgunun sonuçlarından <xref:System.Linq.Enumerable.ToList%2A> <xref:System.Collections.Generic.List%601> bir koleksiyon oluşturmak için uzantı yöntemini kullanır.  
   
  Örnek aşağıdaki çıktıyı üretir:  
   

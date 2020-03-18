@@ -1,88 +1,88 @@
 ---
-title: Çok biçimlilik- C# Programlama Kılavuzu
+title: Polimorfizm - C# Programlama Kılavuzu
 ms.date: 02/08/2020
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 169ba2a1307a301c80b3d9ccac45f4ac9f707921
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 58980bd0d70d8a778cdb208f56d31ee8465871a4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626294"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170175"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Çok Biçimlilik (C# Programlama Kılavuzu)
 
-Çok biçimlilik, kapsülleme ve devralma sonrasında nesne odaklı programlama için genellikle üçüncü olarak adlandırılır. Çok biçimlilik, "çoktan şekillendirilmiş" anlamına gelen ve iki ayrı yönü bulunan bir Yunan kelimedir:
+Polimorfizm genellikle kapsülleme ve kalıtım sonra, nesne yönelimli programlama üçüncü ayağı olarak adlandırılır. Polimorfizm Yunanca "çok şekilli" anlamına gelen bir kelimedir ve iki farklı yönü vardır:
   
-- Çalışma zamanında, türetilmiş bir sınıfın nesneleri Yöntem parametreleri ve koleksiyonlar ya da diziler gibi yerlerde bir temel sınıfın nesneleri olarak kabul edilebilir. Bu çok biçimlilik gerçekleştiğinde, nesnenin bildirildiği tür artık çalışma zamanı türüyle aynı değildir.
-- Temel sınıflar [sanal](../../language-reference/keywords/virtual.md) *yöntemleri*tanımlayabilir ve uygulayabilir ve türetilmiş sınıflar bunları [geçersiz kılabilir](../../language-reference/keywords/override.md) , bu da kendi tanım ve uygulamasını sağlar. Çalışma zamanında, istemci kodu yöntemi çağırdığında, CLR nesnenin çalışma zamanı türünü arar ve sanal yöntemin geçersiz kılmasını çağırır. Kaynak kodunuzda bir temel sınıfta bir yöntemi çağırabilir ve türetilmiş sınıfın yönteminin yürütülmesine neden olabilirsiniz.
+- Çalışma zamanında, türemiş bir sınıfın nesneleri yöntem parametreleri ve koleksiyonlar veya diziler gibi yerlerde bir taban sınıfın nesneleri olarak kabul edilebilir. Bu çok biçimlilik oluştuğunda, nesnenin bildirilen türü artık çalışma zamanı türüyle aynı değildir.
+- Temel sınıflar sanal [virtual](../../language-reference/keywords/virtual.md) *yöntemleri*tanımlayabilir ve uygulayabilir ve türetilmiş sınıflar bunları [geçersiz kılabilir,](../../language-reference/keywords/override.md) bu da kendi tanımlarını ve uygulamalarını sağladıkları anlamına gelir. Çalışma zamanında, istemci kodu yöntemi aradığında, CLR nesnenin çalışma zamanı türünü arar ve sanal yöntemin geçersiz kılınan çağrılarını çağırır. Kaynak kodunuzda, taban sınıfta bir yöntem çağırabilir ve yöntemin türetilmiş sınıf sürümünün yürütülmesine neden olabilirsiniz.
 
-Sanal yöntemler, ilişkili nesneler gruplarıyla tek bir şekilde çalışmanıza olanak sağlar. Örneğin, bir kullanıcının çizim yüzeyinde çeşitli şekil türlerini oluşturmalarına olanak tanıyan bir çizim uygulamanız olduğunu varsayalım. Kullanıcı tarafından oluşturulacak belirli şekil türlerini derleme sırasında bilemezsiniz. Bununla birlikte, uygulamanın oluşturulan çeşitli şekil türlerini izlemesi gerekir ve Kullanıcı fare eylemlerine yanıt olarak onları güncelleştirmek zorunda olur. Bu sorunu çözmek için iki temel adımda çok biçimlilik kullanabilirsiniz:
+Sanal yöntemler, ilgili nesne gruplarıyla tek düze bir şekilde çalışmanızı sağlar. Örneğin, bir kullanıcının çizim yüzeyinde çeşitli şekiller oluşturmasına olanak tanıyan bir çizim uygulamanız olduğunu varsayalım. Derle diğiniz zaman, kullanıcının hangi belirli türde şekiller oluşturacağını bilemezsin. Ancak, uygulama oluşturulan şekillerin tüm çeşitli türlerini izlemek zorunda ve kullanıcı fare eylemleri yanıt olarak bunları güncelleştirmek zorundadır. Bu sorunu çözmek için çok biçimliliği iki temel adımda kullanabilirsiniz:
 
-1. Her belirli şekil sınıfının ortak bir temel sınıftan türetildiği bir sınıf hiyerarşisi oluşturun.
-1. Temel sınıf yöntemine tek bir çağrı aracılığıyla herhangi bir türetilmiş sınıfta uygun yöntemi çağırmak için bir sanal yöntem kullanın.
+1. Her belirli şekil sınıfının ortak bir taban sınıftan türediği bir sınıf hiyerarşisi oluşturun.
+1. Taban sınıf yöntemine tek bir çağrı yoluyla türemiş herhangi bir sınıftauygun yöntemi çağırmak için sanal bir yöntem kullanın.
 
-İlk olarak, `Shape`adlı bir temel sınıf ve `Rectangle`, `Circle`ve `Triangle`gibi türetilmiş sınıflar oluşturun. `Shape` sınıfına `Draw`adlı sanal bir yöntem verin ve sınıfın temsil ettiği belirli şekli çizmek için her türetilmiş sınıfta bunu geçersiz kılın. `List<Shape>` nesne oluşturun ve buna bir `Circle`, `Triangle`ve `Rectangle` ekleyin. 
+İlk olarak, ,, `Shape`ve türemiş `Rectangle` `Circle`sınıflar `Triangle`, ve . `Shape` Sınıfa sanal `Draw`bir yöntem verin ve sınıfın temsil ettiği belirli şekli çizmek için her türetilmiş sınıfta geçersiz kılın. Bir `List<Shape>` nesne oluşturun `Circle`ve `Triangle`bir `Rectangle` , , ve ekleyin.
 
 [!code-csharp[Polymorphism overview](~/samples/snippets/csharp/objectoriented/Inheritance.cs#PolymorphismOverview)]
 
-Çizim yüzeyini güncelleştirmek için, listeyi yinelemek ve listedeki her bir `Shape` nesnesinde `Draw` yöntemini çağırmak için bir [foreach](../../language-reference/keywords/foreach-in.md) döngüsü kullanın. Listedeki her bir nesne, belirtilen `Shape`türüne sahip olsa da, çağrılacak çalışma zamanı türü (türetilen her sınıfta yöntemin geçersiz kılınan sürümü).
+Çizim yüzeyini güncelleştirmek için, liste boyunca yinelemek için [foreach](../../language-reference/keywords/foreach-in.md) döngüsü `Shape` kullanın ve listedeki her nesnenin yöntemini `Draw` arayın. Listedeki her nesnenin beyan edilmiş `Shape`bir türü olsa da, çağrılacak çalışma zamanı türüdür (her türetilmiş sınıfta yöntemin geçersiz sürümü).
 
 [!code-csharp[Polymorphism overview](~/samples/snippets/csharp/objectoriented/Inheritance.cs#UsePolymorphism)]
 
-' C#De, Kullanıcı tanımlı türler dahil olmak üzere tüm türler <xref:System.Object>' den devraldığı için her tür polimorfik olur.  
+C#'da her tür polimorfiktir, çünkü kullanıcı tanımlı türler <xref:System.Object>de dahil olmak üzere tüm türler .  
 
-## <a name="polymorphism-overview"></a>Çok biçimlilik genel bakış
+## <a name="polymorphism-overview"></a>Polimorfizme genel bakış
 
-### <a name="virtual-members"></a>Sanal Üyeler
+### <a name="virtual-members"></a>Sanal üyeler
 
-Türetilmiş bir sınıf temel sınıftan devraldığında, temel sınıfın tüm yöntemlerini, alanlarını, özelliklerini ve olaylarını alır. Türetilmiş sınıfın Tasarımcısı, Sanal yöntemlerin davranışı için farklı seçeneklere sahip olabilir:
+Türetilen bir sınıf bir taban sınıftan devraldığında, taban sınıfın tüm yöntemlerini, alanlarını, özelliklerini ve olaylarını kazanır. Türemiş sınıfın tasarımcısı sanal yöntemlerin davranışı için farklı seçimler yapabilir:
 
-- Türetilmiş sınıf, yeni davranışı tanımlayarak temel sınıftaki sanal üyeleri geçersiz kılabilir.
-- Türetilmiş sınıf, var olan davranışı koruyarak ve daha fazla türetilmiş sınıfların yöntemi geçersiz kılmasını etkinleştirerek, en yakın temel sınıf yöntemini geçersiz kılmadan devralınır.
-- Türetilmiş sınıf, temel sınıf uygulamalarını gizleyen bu üyelerin sanal olmayan yeni uygulamasını tanımlayabilir.
+- Türetilen sınıf, yeni davranış tanımlayarak taban sınıftaki sanal üyeleri geçersiz kılabilir.
+- Türetilen sınıf, varolan davranışı koruyarak, ancak daha fazla türetilmiş sınıfın yöntemi geçersiz kılmasını sağlayarak en yakın taban sınıf yöntemini geçersiz kılmadan devralır.
+- Türemiş sınıf, taban sınıf uygulamalarını gizleyen bu üyelerin yeni sanal olmayan uygulamalarını tanımlayabilir.
 
-Türetilmiş bir sınıf, yalnızca temel sınıf üyesi [sanal](../../language-reference/keywords/virtual.md) veya [soyut](../../language-reference/keywords/abstract.md)olarak bildirilirse bir temel sınıf üyesini geçersiz kılabilir. Türetilmiş üye, metodun sanal çağrıya katılmayı amaçladığı kesin olarak belirtmek için [override](../../language-reference/keywords/override.md) anahtar sözcüğünü kullanmalıdır. Aşağıdaki kod bir örnek sağlar:
+Türetilen bir sınıf, taban sınıf [üyesinin sanal](../../language-reference/keywords/virtual.md) veya [soyut](../../language-reference/keywords/abstract.md)olarak bildirilmiş olması durumunda taban sınıf üyesini geçersiz kılabilir. Türemiş üye, yöntemin sanal çağırmaya katılmak üzere tasarlandığını açıkça belirtmek için [geçersiz kılma](../../language-reference/keywords/override.md) anahtar sözcük anahtar sözcüklerini kullanmalıdır. Aşağıdaki kod bir örnek sağlar:
 
 [!code-csharp[Virtual overview](~/samples/snippets/csharp/objectoriented/Inheritance.cs#VirtualMethods)]
 
-Alanlar sanal olamaz; yalnızca Yöntemler, özellikler, olaylar ve Dizin oluşturucular sanal olabilir. Türetilmiş bir sınıf sanal üyeyi geçersiz kıldığında, bu üye, bu sınıfın bir örneği temel sınıfın bir örneği olarak erişildiği zaman bile çağırılır. Aşağıdaki kod bir örnek sağlar:
+Alanlar sanal olamaz; yalnızca yöntemler, özellikler, olaylar ve dizinleyiciler sanal olabilir. Türetilmiş bir sınıf sanal bir üyeyi geçersiz kıldığında, bu sınıfın bir örneğine taban sınıfın bir örneği olarak erişilse bile bu üye çağrılır. Aşağıdaki kod bir örnek sağlar:
 
 [!code-csharp[Virtual overview example](~/samples/snippets/csharp/objectoriented/Inheritance.cs#VirtualMethods)]
 
-Sanal yöntemler ve özellikler, türetilmiş sınıfların bir yöntemin temel sınıf uygulamasını kullanmaya gerek kalmadan bir temel sınıfı genişletmesine imkan tanır. Daha fazla bilgi için bkz. [geçersiz kılma ve yeni anahtar sözcüklerle sürüm oluşturma](./versioning-with-the-override-and-new-keywords.md). Bir arabirim, bir yöntemi veya uygulamasının türetilmiş sınıflara ayrılmakta olduğu yöntemler kümesini tanımlamak için başka bir yol sağlar. Daha fazla bilgi için bkz. [arabirimler](../interfaces/index.md).
+Sanal yöntemler ve özellikler, türemiş sınıfların bir yöntemin taban sınıf uygulamasını kullanmaya gerek kalmadan taban sınıfı genişletmesini sağlar. Daha fazla bilgi için, [Override ve Yeni Anahtar Kelimeler ile Sürümleme'ye](./versioning-with-the-override-and-new-keywords.md)bakın. Arabirim, uygulama türetilmiş sınıflara bırakılan bir yöntem veya yöntem kümesini tanımlamak için başka bir yol sağlar. Daha fazla bilgi için [Arabirimler'e](../interfaces/index.md)bakın.
 
-### <a name="hide-base-class-members-with-new-members"></a>Temel sınıf üyelerini yeni üyelerle gizle
+### <a name="hide-base-class-members-with-new-members"></a>Yeni üyelerle taban sınıf üyelerini gizleme
 
-Türetilmiş sınıfınızın bir temel sınıftaki üye ile aynı ada sahip bir üyeye sahip olmasını istiyorsanız, temel sınıf üyesini gizlemek için [New](../../language-reference/keywords/new-modifier.md) anahtar sözcüğünü kullanabilirsiniz. `new` anahtar sözcüğü, değiştirilmekte olan bir sınıf üyesinin dönüş türünden önce konur. Aşağıdaki kod bir örnek sağlar:
+Türemiş sınıfınızın taban sınıftaki bir üyeyle aynı ada sahip bir üyeye sahip olmasını istiyorsanız, taban sınıf üyesini gizlemek için [yeni](../../language-reference/keywords/new-modifier.md) anahtar sözcüğü kullanabilirsiniz. `new` Anahtar kelime, değiştirilen bir sınıf üyesinin dönüş türünden önce konur. Aşağıdaki kod bir örnek sağlar:
 
 [!code-csharp[New method overview example](~/samples/snippets/csharp/objectoriented/Inheritance.cs#NewMethods)]
 
-Gizli temel sınıf üyelerine türetilmiş sınıfın örneğini bir temel sınıfın örneğine aktararak istemci kodundan erişilebilir. Örnek:
+Gizli taban sınıf üyeleri, türetilen sınıfın örneğini taban sınıfın bir örneğine atarak istemci kodundan erişilebilir. Örnek:
 
 [!code-csharp[New method overview usage](~/samples/snippets/csharp/objectoriented/Inheritance.cs#UseNewMethods)]
 
-### <a name="prevent-derived-classes-from-overriding-virtual-members"></a>Türetilmiş sınıfların sanal üyeleri geçersiz kılmasını engelle  
+### <a name="prevent-derived-classes-from-overriding-virtual-members"></a>Türetilen sınıfların sanal üyeleri geçersiz kılmasını önleme  
 
-Sanal üyeler, sanal üye ile ilk olarak tarafından tanımlanan sınıf arasında kaç sınıf bildirildiği dikkate almaksızın sanal olarak kalır. Sınıf `A` bir sanal üye bildiriyorsa ve sınıf `B` `A`türetiliyor ve sınıf `C` `B`türetiliyor, sınıf `C` sanal üyeyi devralır ve bu üye için bir geçersiz kılma bildirmediğine bakılmaksızın onu geçersiz kılabilir.`B` Aşağıdaki kod bir örnek sağlar:
+Sanal üyeler, sanal üye ile onu ilk bildiren sınıf arasında kaç sınıf beyan edildiğine bakılmaksızın sanal olarak kalır. Sınıf `A` `B` sanal bir üye bildirirse ve `A`sınıf, `C` sınıftan `B`türetilmiştir `C` ve sınıf, sanal üyeyi devralır ve sınıfın `B` o üye için geçersiz kılma ilan edip etmediğine bakılmaksızın onu geçersiz kılar. Aşağıdaki kod bir örnek sağlar:
 
 [!code-csharp[Basic hierarchy](~/samples/snippets/csharp/objectoriented/Hierarchy.cs#FirstHierarchy)]
 
-Türetilmiş bir sınıf, bir geçersiz kılma [korumalı](../../language-reference/keywords/sealed.md)olarak bildirerek sanal devralmayı durdurabilir. Devralma durdurulduğunda, sınıf üyesi bildirimindeki `override` anahtar sözcüğünden önce `sealed` anahtar sözcüğünü koymak gerekir. Aşağıdaki kod bir örnek sağlar:
+Türetilen bir [sınıf, geçersiz](../../language-reference/keywords/sealed.md)kılmayı mühürlü olarak beyan ederek sanal devralmayı durdurabilir. Devralmayı durdurmak `sealed` için anahtar `override` kelimenin sınıf üye bildiriminde anahtar kelimenin önüne konulması gerekir. Aşağıdaki kod bir örnek sağlar:
 
 [!code-csharp[A sealed overridden member](~/samples/snippets/csharp/objectoriented/Hierarchy.cs#SealedOverride)]
 
-Önceki örnekte, `DoWork` yöntemi artık `C`türetilmiş hiçbir sınıfta sanal değildir. `B` türüne saçılması veya `A`yazmanız durumunda bile `C`örnekleri için hala sanal olur. Sealed yöntemleri, aşağıdaki örnekte gösterildiği gibi `new` anahtar sözcüğü kullanılarak türetilmiş sınıflar tarafından değiştirilebilir:
+Önceki örnekte, yöntem `DoWork` artık türetilen herhangi bir `C`sınıf için sanal değil. Bu tür veya tür `C` `B` `A`döküm olsa bile, örnekleri için hala sanal. Mühürlü yöntemler, aşağıdaki örnekte görüldüğü `new` gibi, anahtar kelime kullanılarak türetilmiş sınıflar tarafından değiştirilebilir:
 
 [!code-csharp[New method declaration](~/samples/snippets/csharp/objectoriented/Hierarchy.cs#NewDeclaration)]
 
-Bu durumda, `DoWork` `D`türünde bir değişken kullanılarak `D` çağrılırsa, yeni `DoWork` çağırılır. Bir `D`örneğine erişmek için `C`, `B`veya `A` türünde bir değişken kullanılırsa, `DoWork` çağrısı, sanal devralmayla ilgili çağrıları izler ve bu çağrıları, `DoWork` sınıfında `C`uygulamasına yönlendirirsiniz.
+Bu durumda, `DoWork` tür `D` `D`bir değişken kullanılarak çağrılırsa, yeni `DoWork` denir. Türünde `C`bir değişken `B`, `A` veya bir örneğine `D`erişmek için `DoWork` kullanılırsa , bir çağrı sanal devralma kurallarına `DoWork` uyacak, sınıf `C`üzerinde uygulanmasına bu çağrıları yönlendirme .
 
-### <a name="access-base-class-virtual-members-from-derived-classes"></a>Türetilmiş sınıflardan temel sınıf sanal üyelerine erişin
+### <a name="access-base-class-virtual-members-from-derived-classes"></a>Türemiş sınıflardan temel sınıf sanal üyelerine erişin
 
-Bir yöntemi veya özelliği değiştirilmiş veya geçersiz kılan türetilmiş bir sınıf, `base` anahtar sözcüğünü kullanarak temel sınıftaki yönteme veya özelliğe erişmeye devam edebilir. Aşağıdaki kod bir örnek sağlar:
+Bir yöntemin veya özelliğin yerini alan veya geçersiz kılınan türemiş bir `base` sınıf, anahtar sözcüğü kullanarak taban sınıftaki yönteme veya özelliğe erişebilir. Aşağıdaki kod bir örnek sağlar:
 
 ```csharp
 public class Base
@@ -101,10 +101,10 @@ public class Derived : Base
 }
 ```
 
-Daha fazla bilgi için bkz. [Base](../../language-reference/keywords/base.md).
+Daha fazla bilgi için [temele](../../language-reference/keywords/base.md)bakın.
 
 > [!NOTE]
-> Sanal üyelerin, kendi uygulamalarında bu üyenin temel sınıf uygulamasını çağırmak için `base` kullanması önerilir. Temel sınıf davranışının oluşmasına izin vermek, türetilmiş sınıfın türetilmiş sınıfa özgü davranış uygulamaya odaklanmalarını sağlar. Temel sınıf uygulama çağrılıp, davranışını temel sınıfın davranışıyla uyumlu hale getirmek için türetilmiş sınıfa kadar olur.
+> Sanal üyelerin, bu `base` üyenin taban sınıf uygulamasını kendi uygulamalarında çağırmak için kullanmaları önerilir. Taban sınıf davranışının oluşmasına izin vermek, türemiş sınıfın türemiş sınıfa özgü davranışı uygulamaya odaklanmasını sağlar. Taban sınıf uygulaması çağrılmazsa, davranışlarını taban sınıfın davranışıyla uyumlu hale getirmek türemiş sınıfa kaçar.
 
 ## <a name="in-this-section"></a>Bu bölümde
 

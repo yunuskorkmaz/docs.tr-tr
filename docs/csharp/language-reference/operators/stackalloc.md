@@ -1,66 +1,66 @@
 ---
-title: stackalloc işleci- C# başvuru
+title: stackalloc operatörü - C# referans
 ms.date: 09/20/2019
 f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: b2188bc94db42ab6d581c339f046ed81eb42d297
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 9c9767e0c9945a9589d049fa7abba192cb928ad5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239007"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846264"
 ---
-# <a name="stackalloc-operator-c-reference"></a>stackalloc işleci (C# başvuru)
+# <a name="stackalloc-operator-c-reference"></a>stackalloc operatörü (C# referansı)
 
-`stackalloc` işleci, yığında bir bellek bloğu ayırır. Yöntem yürütme sırasında oluşturulan bir yığın ayrılmış bellek bloğu, bu yöntem döndüğünde otomatik olarak atılır. `stackalloc` işleçle ayrılan belleği açık olarak serbest bırakılamaz. Yığın tarafından ayrılan bellek bloğu [çöp toplamaya](../../../standard/garbage-collection/index.md) tabi değildir ve bir [`fixed` ifadesiyle](../keywords/fixed-statement.md)sabitlenmemelidir.
+İşleç `stackalloc` yığına bir bellek bloğu ayırır. Yöntem yürütülmesi sırasında oluşturulan bir yığın ayrılmış bellek bloğu, yöntem döndüğünde otomatik olarak atılır. `stackalloc` İşleç ile ayrılan belleği açıkça boşaltamazsınız. Yığın ayrılmış bellek bloğu çöp [toplama](../../../standard/garbage-collection/index.md) tabi değildir ve bir [ `fixed` deyim](../keywords/fixed-statement.md)ile sabitlenmiş olması gerekmez.
 
-`stackalloc` işlecinin sonucunu aşağıdaki türlerden birinin değişkenine atayabilirsiniz:
+İşleticinin `stackalloc` sonucunu aşağıdaki türlerden birinin değişkenine atayabilirsiniz:
 
-- Aşağıdaki örnekte C# gösterildiği gibi 7,2, <xref:System.Span%601?displayProperty=nameWithType> veya <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>ile başlayarak:
+- C# 7.2 <xref:System.Span%601?displayProperty=nameWithType> ile <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>başlayarak veya aşağıdaki örnekte görüldüğü gibi:
 
-  [!code-csharp[stackalloc span](~/samples/snippets/csharp/language-reference/operators/StackallocOperator.cs#AssignToSpan)]
+  [!code-csharp[stackalloc span](snippets/StackallocOperator.cs#AssignToSpan)]
 
-  Bir <xref:System.Span%601> veya <xref:System.ReadOnlySpan%601> değişkenine bir yığın ayrılmış bellek bloğu atadığınızda, [güvenli olmayan](../keywords/unsafe.md) bir bağlam kullanmanız gerekmez.
+  Bir yığın ayrılmış bellek [unsafe](../keywords/unsafe.md) bloğu bir <xref:System.Span%601> veya <xref:System.ReadOnlySpan%601> değişkenata atadığınızda güvenli olmayan bir bağlam kullanmanız gerekmez.
 
-  Bu türlerle çalışırken, aşağıdaki örnekte gösterildiği gibi, [koşullu](conditional-operator.md) veya atama ifadelerinde `stackalloc` bir ifade kullanabilirsiniz:
+  Bu türlerle çalışırken, aşağıdaki örnekte görüldüğü gibi `stackalloc` [koşullu](conditional-operator.md) veya atama ifadelerinde bir ifade kullanabilirsiniz:
 
-  [!code-csharp[stackalloc expression](~/samples/snippets/csharp/language-reference/operators/StackallocOperator.cs#AsExpression)]
+  [!code-csharp[stackalloc expression](snippets/StackallocOperator.cs#AsExpression)]
 
-  8,0 ' C# den başlayarak, aşağıdaki örnekte gösterildiği gibi, bir <xref:System.Span%601> veya <xref:System.ReadOnlySpan%601> değişkenine izin verildiğinde diğer ifadelerin içinde `stackalloc` bir ifade kullanabilirsiniz:
+  C# 8.0 ile başlayarak, `stackalloc` aşağıdaki örnekte görüldüğü <xref:System.Span%601> gibi, bir veya <xref:System.ReadOnlySpan%601> değişkene izin verildiğinde diğer ifadelerin içinde bir ifade kullanabilirsiniz:
 
-  [!code-csharp[stackalloc in nested expressions](~/samples/snippets/csharp/language-reference/operators/StackallocOperator.cs#Nested)]
+  [!code-csharp[stackalloc in nested expressions](snippets/StackallocOperator.cs#Nested)]
 
   > [!NOTE]
-  > Mümkün olduğunda yığın tarafından ayrılan bellekle çalışmak için <xref:System.Span%601> veya <xref:System.ReadOnlySpan%601> türlerini kullanmanızı öneririz.
+  > Mümkün olduğunda <xref:System.Span%601> <xref:System.ReadOnlySpan%601> yığın ayrılmış bellekle çalışmak için kullanmanızı veya türleri kullanmanızı öneririz.
 
-- Aşağıdaki örnekte gösterildiği gibi bir [işaretçi türü](../../programming-guide/unsafe-code-pointers/pointer-types.md):
+- Aşağıdaki örnekte görüldüğü gibi bir [işaretçi türü:](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 
-  [!code-csharp[stackalloc pointer](~/samples/snippets/csharp/language-reference/operators/StackallocOperator.cs#AssignToPointer)]
+  [!code-csharp[stackalloc pointer](snippets/StackallocOperator.cs#AssignToPointer)]
 
-  Yukarıdaki örnekte gösterildiği gibi, işaretçi türleriyle çalışırken `unsafe` bağlamı kullanmanız gerekir.
+  Önceki örnekte de görüldüğü gibi, `unsafe` işaretçi türleri ile çalışırken bir bağlam kullanmanız gerekir.
 
-  İşaretçi türleri söz konusu olduğunda, değişkeni başlatmak için yalnızca yerel değişken bildiriminde bir `stackalloc` ifadesini kullanabilirsiniz.
+  İşaretçi türleri söz konusu olduğunda, `stackalloc` değişkeni başlatmak için yalnızca yerel bir değişken bildiriminde bir ifade kullanabilirsiniz.
 
-Yeni ayrılan belleğin içeriği tanımlı değil. 7,3 ile C# başlayarak, yeni ayrılan belleğin içeriğini tanımlamak için dizi başlatıcısı sözdizimini kullanabilirsiniz. Aşağıdaki örnek bunu yapmak için çeşitli yollar göstermektedir:
+Yeni ayrılan belleğin içeriği tanımsız. C# 7.3 ile başlayarak, yeni ayrılan belleğin içeriğini tanımlamak için dizi başlandırıcı sözdizimini kullanabilirsiniz. Aşağıdaki örnek, bunu yapmanın çeşitli yollarını göstermektedir:
 
-[!code-csharp[stackalloc initialization](~/samples/snippets/csharp/language-reference/operators/StackallocOperator.cs#StackallocInit)]
+[!code-csharp[stackalloc initialization](snippets/StackallocOperator.cs#StackallocInit)]
 
-İfade `stackalloc T[E]`, `T` [yönetilmeyen bir tür](../builtin-types/unmanaged-types.md) olmalıdır ve `E` [int](../builtin-types/integral-numeric-types.md)türünde bir ifade olmalıdır.
+`stackalloc T[E]`İfadede, `T` [yönetilmeyen](../builtin-types/unmanaged-types.md) bir tür `E` olmalı ve yazı [int](../builtin-types/integral-numeric-types.md)bir ifadesi olmalıdır.
 
 ## <a name="security"></a>Güvenlik
 
-`stackalloc` kullanımı, ortak dil çalışma zamanında (CLR) arabellek taşması algılama özelliklerini otomatik olarak sunar. Bir arabellek taşması algılanırsa, kötü amaçlı kodun yürütülmesi olasılığını en aza indirmek için işlem mümkün olduğunca hızlı bir şekilde sonlandırılır.
+Otomatik `stackalloc` olarak kullanılması, ortak dil çalışma zamanında (CLR) arabellek taşma algılama özelliklerini etkinleştirir. Arabellek taşması algılanırsa, kötü amaçlı kod yürütülme olasılığını en aza indirmek için işlem mümkün olduğunca çabuk sonlandırılır.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [yığın ayırma](~/_csharplang/spec/unsafe-code.md#stack-allocation) bölümüne ve [iç içe bağlamlardaki `stackalloc` izin ver](~/_csharplang/proposals/csharp-8.0/nested-stackalloc.md) Özellik teklifi notuna bakın.
+Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Yığın ayırma](~/_csharplang/spec/unsafe-code.md#stack-allocation) bölümüne ve iç içe [alınan bağlamlarda `stackalloc` İzin'e](~/_csharplang/proposals/csharp-8.0/nested-stackalloc.md) ilişkin teklif notuna bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvurunun](../index.md)
+- [C# başvurusu](../index.md)
 - [C# işleçleri](index.md)
-- [İşaretçiyle ilgili işleçler](pointer-related-operators.md)
+- [İşaretçi bağlantılı işleçler](pointer-related-operators.md)
 - [İşaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Bellek ve aralıkla ilgili türler](../../../standard/memory-and-spans/index.md)

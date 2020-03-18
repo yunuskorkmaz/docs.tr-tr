@@ -1,82 +1,82 @@
 ---
-title: ASP.NET Core son değişiklikler
+title: ASP.NET Çekirdek kırma değişiklikleri
 titleSuffix: ''
-description: ASP.NET Core 'deki son değişiklikleri listeler.
+description: ASP.NET Core'daki kırılma değişikliklerini listeler.
 ms.date: 01/10/2020
 author: scottaddie
 ms.author: scaddie
 ms.openlocfilehash: c54735cd53fb9cb48eb84045791ccc559fe683cd
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093181"
 ---
-# <a name="aspnet-core-breaking-changes"></a>ASP.NET Core son değişiklikler
+# <a name="aspnet-core-breaking-changes"></a>ASP.NET Çekirdek kırma değişiklikleri
 
-ASP.NET Core .NET Core tarafından kullanılan Web uygulaması geliştirme özelliklerini sağlar.
+ASP.NET Core, .NET Core tarafından kullanılan web uygulaması geliştirme özelliklerini sağlar.
 
-Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
+Aşağıdaki kesme değişiklikleri bu sayfada belgelenmiştir:
 
-- [HTTP: Browser SameSite değişikliklerinin etkisi kimlik doğrulaması](#http-browser-samesite-changes-impact-authentication)
-- [Kullanılmayan Antiforgery, CORS, tanılama, MVC ve yönlendirme API 'Leri kaldırıldı](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
-- [Kimlik doğrulaması: Google + kullanımdan kaldırma](#authentication-google-deprecated-and-replaced)
-- [Kimlik doğrulaması: HttpContext. Authentication özelliği kaldırıldı](#authentication-httpcontextauthentication-property-removed)
-- [Kimlik doğrulaması: Newtonsoft. JSON türleri değişti](#authentication-newtonsoftjson-types-replaced)
-- [Kimlik doğrulaması: OAuthHandler ExchangeCodeAsync imzası değişti](#authentication-oauthhandler-exchangecodeasync-signature-changed)
-- [Yetkilendirme: Addaduthorleştirme aşırı yüklemesi farklı bir derlemeye taşındı](#authorization-addauthorization-overload-moved-to-different-assembly)
-- [Yetkilendirme: ıallowanonymous, AuthorizationFilterContext. Filters öğesinden kaldırıldı](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
-- [Yetkilendirme: ıauthorizationpolicyprovider uygulamaları için yeni yöntem gerekir](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [HTTP: Tarayıcı SameSite değişiklikleri kimlik doğrulamayı etkiler](#http-browser-samesite-changes-impact-authentication)
+- [Eski Antiforgery, CORS, Teşhis, MVC ve Yönlendirme API'leri kaldırıldı](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
+- [Kimlik doğrulama: Google+ amortismanı](#authentication-google-deprecated-and-replaced)
+- [Kimlik doğrulama: HttpContext.Authentication özelliği kaldırıldı](#authentication-httpcontextauthentication-property-removed)
+- [Kimlik doğrulama: Newtonsoft.Json türleri değiştirildi](#authentication-newtonsoftjson-types-replaced)
+- [Kimlik doğrulama: OAuthHandler ExchangeCodeAsync imza değiştirildi](#authentication-oauthhandler-exchangecodeasync-signature-changed)
+- [Yetkilendirme: AddAuthorization aşırı yükü farklı derlemeye taşındı](#authorization-addauthorization-overload-moved-to-different-assembly)
+- [Yetkilendirme: IAllowAnonymous YetkilendirmeFilterContext.Filters kaldırıldı](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
+- [Yetkilendirme: IAuthorizationPolicyProvider uygulamaları yeni bir yöntem gerektirir](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
 - [Önbelleğe alma: CompactOnMemoryPressure özelliği kaldırıldı](#caching-compactonmemorypressure-property-removed)
-- [Önbelleğe alma: Microsoft. Extensions. Caching. SqlServer yeni SqlClient paketini kullanır](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
-- [Önbelleğe alma: ResponseCaching "pubternal" türleri iç olarak değiştirildi](#caching-responsecaching-pubternal-types-changed-to-internal)
-- [Veri koruma: DataProtection. AzureStorage yeni Azure depolama API 'Lerini kullanır](#data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis)
-- [Barındırma: AspNetCoreModule v1 Windows barındırma paketinden kaldırıldı](#hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle)
-- [Barındırma: genel ana bilgisayar, başlangıç Oluşturucu ekleme işlemini kısıtlar](#hosting-generic-host-restricts-startup-constructor-injection)
-- [Barındırma: IIS işlem dışı uygulamalar için HTTPS yönlendirmesi etkinleştirildi](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
-- [Barındırma: ıhostingenvironment ve ıapplicationlifetime türleri değişti](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
-- [Barındırma: ObjectPoolProvider WebHostBuilder bağımlılıklarından kaldırıldı](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
-- [HTTP: DefaultHttpContext genişletilebilirliği kaldırıldı](#http-defaulthttpcontext-extensibility-removed)
-- [HTTP: HeaderNames alanları statik ReadOnly olarak değiştirildi](#http-headernames-constants-changed-to-static-readonly)
-- [HTTP: yanıt gövdesi altyapı değişiklikleri](#http-response-body-infrastructure-changes)
-- [HTTP: bazı tanımlama bilgisi SameSite varsayılan değerleri değiştirildi](#http-some-cookie-samesite-defaults-changed-to-none)
-- [HTTP: zaman uyumlu GÇ varsayılan olarak devre dışıdır](#http-synchronous-io-disabled-in-all-servers)
-- [Kimlik: Adddefaultuı yöntemi aşırı yüklemesi kaldırıldı](#identity-adddefaultui-method-overload-removed)
-- [Kimlik: UI önyükleme sürümü değişikliği](#identity-default-bootstrap-version-of-ui-changed)
-- [Kimlik: Signınasync kimliği doğrulanmamış kimlik için özel durum oluşturur](#identity-signinasync-throws-exception-for-unauthenticated-identity)
-- [Kimlik: SignInManager Oluşturucusu yeni parametreyi kabul ediyor](#identity-signinmanager-constructor-accepts-new-parameter)
-- [Kimlik: UI statik Web varlıkları özelliğini kullanır](#identity-ui-uses-static-web-assets-feature)
-- [Kestrel: bağlantı bağdaştırıcıları kaldırıldı](#kestrel-connection-adapters-removed)
-- [Kestrel: boş HTTPS derlemesi kaldırıldı](#kestrel-empty-https-assembly-removed)
-- [Kestrel: yeni koleksiyona taşınan artbilgisi üstbilgileri ıste](#kestrel-request-trailer-headers-moved-to-new-collection)
-- [Kestrel: aktarım soyutlama katmanı değişiklikleri](#kestrel-transport-abstractions-removed-and-made-public)
-- [Yerelleştirme: kullanım dışı olarak işaretlenen API 'Ler](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
-- [Günlüğe kaydetme: Debuggünlükçü sınıfı iç oluşturulmuş](#logging-debuglogger-class-made-internal)
-- [MVC: denetleyici eylemi zaman uyumsuz son ek kaldırıldı](#mvc-async-suffix-trimmed-from-controller-action-names)
-- [MVC: JsonResult, Microsoft. AspNetCore. Mvc. Core 'a taşındı](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
-- [MVC: ön derleme aracı kullanım dışı](#mvc-precompilation-tool-deprecated)
-- [MVC: türler internal olarak değiştirildi](#mvc-pubternal-types-changed-to-internal)
-- [MVC: Web API 'SI uyumluluk dolgusu kaldırıldı](#mvc-web-api-compatibility-shim-removed)
-- [Razor: çalışma zamanı derlemesi bir pakete taşındı](#razor-runtime-compilation-moved-to-a-package)
-- [Oturum durumu: kullanılmayan API 'Ler kaldırıldı](#session-state-obsolete-apis-removed)
-- [Paylaşılan çerçeve: Microsoft. AspNetCore. app 'ten derleme kaldırma](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
-- [Paylaşılan çerçeve: Microsoft. AspNetCore. All kaldırıldı](#shared-framework-removed-microsoftaspnetcoreall)
-- [SignalR: HandshakeProtocol. Başarıkıandshakedata değişti](#signalr-handshakeprotocolsuccesshandshakedata-replaced)
+- [Önbelleğe alma: Microsoft.Extensions.Caching.SqlServer yeni SqlClient paketi kullanır](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
+- [Önbelleğe alma: YanıtCaching "pubternal" türleri iç değiştirildi](#caching-responsecaching-pubternal-types-changed-to-internal)
+- [Veri Koruması: DataProtection.AzureStorage yeni Azure Depolama API'leri kullanır](#data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis)
+- [Hosting: AspNetCoreModule V1 Windows Hosting Paketi kaldırıldı](#hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle)
+- [Barındırma: Genel ana bilgisayar Başlangıç yapıcı enjeksiyonu kısıtlar](#hosting-generic-host-restricts-startup-constructor-injection)
+- [Barındırma: IIS işlem dışı uygulamalar için HTTPS yeniden yönlendirmesi etkin](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
+- [Hosting: IHostingEnvironment ve IApplicationLifetime türleri değiştirildi](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
+- [Barındırma: ObjectPoolProvider WebHostBuilder bağımlılıkları kaldırıldı](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
+- [HTTP: VarsayılanHttpContext genişletilebilirlik kaldırıldı](#http-defaulthttpcontext-extensibility-removed)
+- [HTTP: Başlıkadları alanları yalnızca statik olarak değiştirildi](#http-headernames-constants-changed-to-static-readonly)
+- [HTTP: Yanıt gövde altyapı değişiklikleri](#http-response-body-infrastructure-changes)
+- [HTTP: Bazı çerez SameSite varsayılan değerleri değişti](#http-some-cookie-samesite-defaults-changed-to-none)
+- [HTTP: Synchronous IO varsayılan olarak devre dışı](#http-synchronous-io-disabled-in-all-servers)
+- [Kimlik: AddDefaultUI yöntemi aşırı kaldırıldı](#identity-adddefaultui-method-overload-removed)
+- [Kimlik: UI Bootstrap sürüm değişikliği](#identity-default-bootstrap-version-of-ui-changed)
+- [Kimlik: SignInAsync kimliği doğrulanmamış kimlik için özel durum atar](#identity-signinasync-throws-exception-for-unauthenticated-identity)
+- [Kimlik: SignInManager constructor yeni parametre kabul eder](#identity-signinmanager-constructor-accepts-new-parameter)
+- [Kimlik: UI statik web varlıkları özelliğini kullanır](#identity-ui-uses-static-web-assets-feature)
+- [Kerkenez: Bağlantı bağdaştırıcıları kaldırıldı](#kestrel-connection-adapters-removed)
+- [Kerkenez: Boş HTTPS derlemesi kaldırıldı](#kestrel-empty-https-assembly-removed)
+- [Kerkenez: İstek römork başlıkları yeni koleksiyona taşındı](#kestrel-request-trailer-headers-moved-to-new-collection)
+- [Kerkenez: Taşıma soyutlama katmanı değişiklikleri](#kestrel-transport-abstractions-removed-and-made-public)
+- [Yerelleştirme: API'ler eski olarak işaretlenmiş](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
+- [Günlük: DebugLogger sınıfı dahili yaptı](#logging-debuglogger-class-made-internal)
+- [MVC: Denetleyici eylem Async soneki kaldırıldı](#mvc-async-suffix-trimmed-from-controller-action-names)
+- [MVC: JsonResult Microsoft.AspNetCore.Mvc.Core taşındı](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
+- [MVC: Precompilation aracı amortismana](#mvc-precompilation-tool-deprecated)
+- [MVC: Türleri dahili olarak değiştirildi](#mvc-pubternal-types-changed-to-internal)
+- [MVC: Web API uyumluluk şim kaldırıldı](#mvc-web-api-compatibility-shim-removed)
+- [Razor: Runtime derleme bir paket taşındı](#razor-runtime-compilation-moved-to-a-package)
+- [Oturum durumu: Eski API'ler kaldırıldı](#session-state-obsolete-apis-removed)
+- [Paylaşılan çerçeve: Microsoft.AspNetCore.App'ten derleme kaldırma](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
+- [Paylaşılan çerçeve: Microsoft.AspNetCore.All kaldırıldı](#shared-framework-removed-microsoftaspnetcoreall)
+- [SignalR: HandshakeProtocol.SuccessHandshakeData değiştirildi](#signalr-handshakeprotocolsuccesshandshakedata-replaced)
 - [SignalR: HubConnection yöntemleri kaldırıldı](#signalr-hubconnection-resetsendping-and-resettimeout-methods-removed)
-- [SignalR: HubConnectionContext oluşturucuları değişti](#signalr-hubconnectioncontext-constructors-changed)
+- [SignalR: HubConnectionContext yapıcılar değişti](#signalr-hubconnectioncontext-constructors-changed)
 - [SignalR: JavaScript istemci paketi adı değişikliği](#signalr-javascript-client-package-name-changed)
-- [SignalR: kullanılmayan API 'Ler](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
-- [Maça 'Lar: gereksiz olarak işaretlenen SpaServices ve NodeServices](#spas-spaservices-and-nodeservices-marked-obsolete)
-- [Maça 'Lar: SpaServices ve NodeServices konsol günlükçü geri dönüş varsayılan değişikliği](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
-- [Hedef Framework: .NET Framework desteklenmiyor](#target-framework-net-framework-support-dropped)
+- [SignalR: Eski API'ler](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
+- [STA'lar: SpaServices ve NodeServices eski işaretlenmiş](#spas-spaservices-and-nodeservices-marked-obsolete)
+- [SP'ler: SpaServices ve NodeServices logger geri dönüş varsayılan değişikliği konsol](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
+- [Hedef çerçeve: .NET Framework desteklenmiyor](#target-framework-net-framework-support-dropped)
 
-## <a name="aspnet-core-31"></a>ASP.NET Core 3,1
+## <a name="aspnet-core-31"></a>ASP.NET Çekirdek 3.1
 
 [!INCLUDE[HTTP: Browser SameSite changes impact authentication](~/includes/core-changes/aspnetcore/3.1/http-cookie-samesite-authn-impacts.md)]
 
 ***
 
-## <a name="aspnet-core-30"></a>ASP.NET Core 3,0
+## <a name="aspnet-core-30"></a>ASP.NET Çekirdek 3.0
 
 [!INCLUDE[Obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
 

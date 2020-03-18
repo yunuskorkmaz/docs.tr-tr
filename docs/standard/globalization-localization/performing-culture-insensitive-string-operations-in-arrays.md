@@ -8,18 +8,18 @@ helpviewer_keywords:
 - comparer parameter
 ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
 ms.openlocfilehash: 051ee77ae5d6552e26e0216d58734d90188475f9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120801"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>Dizilerde Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme
 
-<xref:System.Array.Sort%2A?displayProperty=nameWithType> ve <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> yöntemlerinin aşırı yüklemeleri, <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliğini kullanarak varsayılan olarak kültüre duyarlı sıralar gerçekleştirir. Bu yöntemler tarafından döndürülen kültüre duyarlı sonuçlar, sıralama emirlerindeki farklılıklar nedeniyle kültüre göre farklılık gösterebilir. Kültüre duyarlı davranışı ortadan kaldırmak için, bu metodun bir `comparer` parametresi kabul eden aşırı yüklemelerinin birini kullanın. `comparer` parametresi dizideki öğeleri karşılaştırırken kullanılacak <xref:System.Collections.IComparer> uygulamasını belirtir. Parametresi için <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>kullanan özel bir sabit karşılaştırıcı sınıfı belirtin. [Koleksiyonlarda kültüre duyarsız dize Işlemlerini gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) konusundaki "SortedList sınıfı kullanma" alt konusunun özel bir sabit karşılaştırıcı sınıfına bir örnek verilmiştir.
+Aşırı yükler <xref:System.Array.Sort%2A?displayProperty=nameWithType> ve <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> yöntemler <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliği kullanarak varsayılan olarak kültüre duyarlı sıralamaları gerçekleştirir. Bu yöntemlerle döndürülen kültüre duyarlı sonuçlar, sıralama emirlerindeki farklılıklara bağlı olarak kültüre göre değişiklik gösterebilir. Kültüre duyarlı davranışı ortadan kaldırmak için, parametre `comparer` kabul eden bu yöntemin aşırı yüklerinden birini kullanın. Parametre, `comparer` dizideki <xref:System.Collections.IComparer> öğeleri karşılaştırırken kullanılacak uygulamayı belirtir. Parametre için, kullanan özel değişmez karşılayıcı <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>sınıf belirtin. Özel değişmez karşılaştırıcı sınıfın bir örneği, [Koleksiyonlarda Performans Kültürü-Duyarsız Dize İşlemleri](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) konusunun "Sıralamalı Liste Sınıfını Kullanma" alt başlığında verilmiştir.
 
 > [!NOTE]
-> Bir karşılaştırma yöntemine **CultureInfo. InvariantCulture** geçirilmesi, kültüre duyarsız bir karşılaştırma gerçekleştirir. Ancak, dosya yolları, kayıt defteri anahtarları ve ortam değişkenleri gibi dil olmayan bir karşılaştırmaya neden olmaz. , Karşılaştırma sonucuna göre güvenlik kararlarını desteklemez. Dil olmayan bir karşılaştırma veya sonuç tabanlı güvenlik kararları için destek için, uygulamanın <xref:System.StringComparison> değeri kabul eden bir karşılaştırma yöntemi kullanması gerekir. Uygulamanın <xref:System.StringComparison.Ordinal>geçmesi gerekir.
+> **CultureInfo.InvariantCulture'ı** bir karşılaştırma yöntemine geçirmek kültüre duyarsız bir karşılaştırma yapar. Ancak, dosya yolları, kayıt defteri anahtarları ve ortam değişkenleri gibi dilsel olmayan bir karşılaştırmaya neden olmaz. Karşılaştırma sonucuna göre güvenlik kararlarını da desteklemez. Dilbilimsel olmayan bir karşılaştırma veya sonuç tabanlı güvenlik kararları desteği için, uygulama bir <xref:System.StringComparison> değer kabul eden bir karşılaştırma yöntemi kullanmalıdır. Uygulama daha sonra <xref:System.StringComparison.Ordinal>geçmelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

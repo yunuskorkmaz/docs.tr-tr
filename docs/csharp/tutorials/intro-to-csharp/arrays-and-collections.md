@@ -1,26 +1,26 @@
 ---
-title: Koleksiyonlarla çalışma- C# öğreticiye giriş
-description: Bu C# öğreticide liste koleksiyonunu inceleyerek öğrenin.
+title: Koleksiyonlarla çalışma - C# eğitimine giriş
+description: Bu öğreticide Liste koleksiyonunu inceleyerek C# öğrenin.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: b80225cf1614a7c25ac9011acd39e74032465ca3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 25d20de2eae8ad1f544fa17553c173a6141ae464
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834142"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156695"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Genel liste türünü kullanarak veri koleksiyonlarını yönetmeyi öğrenin
 
-Bu giriş öğreticisi, C# dile ve <xref:System.Collections.Generic.List%601> sınıfının temel bilgilerine bir giriş sağlar.
+Bu giriş öğretici c# dili ve <xref:System.Collections.Generic.List%601> sınıfın temelleri için bir giriş sağlar.
 
-Bu öğreticide, geliştirme için kullanabileceğiniz bir makineniz olması beklenir. [10 dakika içinde Merhaba Dünya](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) .NET öğreticisi, Windows, Linux veya MacOS 'ta yerel geliştirme ortamınızı ayarlamaya yönelik yönergeler içerir. Kullanacağınız komutlara hızlı bir genel bakış, daha fazla ayrıntı bağlantılarıyla birlikte [geliştirme araçları hakkında bilgi sahibi](local-environment.md)olmak için kullanılır.
+Bu öğretici, geliştirme için kullanabileceğiniz bir makineye sahip olmak için bekliyor. .NET öğretici [Hello World 10 dakika içinde](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) Windows, Linux veya macOS'ta yerel geliştirme ortamınızı ayarlama talimatları na sahiptir. Kullanacağınız komutların hızlı bir genel bakışı, daha fazla ayrıntıya bağlantılar içeren [geliştirme araçlarına aşina olun'da](local-environment.md)dır.
 
-## <a name="a-basic-list-example"></a>Temel liste örneği
+## <a name="a-basic-list-example"></a>Temel bir liste örneği
 
-*List-öğreticisi*adlı bir dizin oluşturun. Geçerli dizini yapıp `dotnet new console`çalıştırın.
+*Liste öğretici*adlı bir dizin oluşturun. Geçerli dizini ve çalıştır `dotnet new console`ın.
 
-En sevdiğiniz düzenleyicide *program.cs* açın ve mevcut kodu aşağıdaki kodla değiştirin:
+Sık kullanılan düzenleyicide *Program.cs* açın ve varolan kodu aşağıdakilerle değiştirin:
 
 ```csharp
 using System;
@@ -42,19 +42,19 @@ namespace list_tutorial
 }
 ```
 
-`<name>`, adınızla değiştirin. *Program.cs*Kaydet. Denemek için konsol pencerenize `dotnet run` yazın.
+Adınız ile değiştirin. `<name>` *Program.cs* dosyasını kaydedin. Denemek `dotnet run` için konsol pencerenizi yazın.
 
-Yalnızca bir dize listesi oluşturdunuz, bu listeye üç ad ekledik ve adları tüm büyük harfler içinde yazdırdınız. Önceki öğreticilerde, listede döngü gerçekleştirmek için öğrenmiş olduğunuz kavramları kullanıyorsunuz.
+Dizeleri bir liste oluşturdunuz, bu listeye üç ad eklediniz ve tüm CAPS'lerde adları yazdırdın. Listeyi gözden geçirmek için önceki öğreticilerde öğrendiğiniz kavramları kullanıyorsunuz.
 
-Adları görüntülenecek kod, [dize ilişkilendirme](../../language-reference/tokens/interpolated.md) özelliğini kullanır.  Bir `string` `$` karakteri ile önce kullandığınızda, C# kodu String bildiriminde ekleyebilirsiniz. Gerçek dize, bu C# kodun oluşturduğu değerle değiştirir. Bu örnekte, <xref:System.String.ToUpper%2A> yöntemini çağırdığı için `{name.ToUpper()}` her bir adla değiştirir ve büyük harflere dönüştürülür.
+Adları görüntülemek için kod [dize enterpolasyon](../../language-reference/tokens/interpolated.md) özelliğini kullanır.  `$` Karakterle bir `string` önce olduğunuzda, dize bildirimine C# kodunu katıştırabilirsiniz. Gerçek dize, c# kodunu oluşturduğu değerle değiştirir. Bu örnekte, `{name.ToUpper()}` <xref:System.String.ToUpper%2A> yöntemi çağırdığınız için büyük harfe dönüştürülen her adla değiştirilir.
 
-Araştırma devam edelim.
+Keşfetmeye devam edelim.
 
 ## <a name="modify-list-contents"></a>Liste içeriğini değiştirme
 
-Oluşturduğunuz koleksiyon <xref:System.Collections.Generic.List%601> türünü kullanır. Bu tür öğe dizilerini depolar. Açılı ayraçlar arasındaki öğelerin türünü belirtirsiniz.
+Oluşturduğunuz koleksiyon <xref:System.Collections.Generic.List%601> türünü kullanır. Bu tür öğelerin dizileri depolar. Açı braketleri arasındaki öğelerin türünü belirtirsiniz.
 
-Bu <xref:System.Collections.Generic.List%601> türünün önemli bir yönü büyümenin veya küçülebileceği, böylece öğe eklemenize veya kaldırmanıza olanak tanır. `Main` yönteminde kapanış `}` önce bu kodu ekleyin:
+Bu <xref:System.Collections.Generic.List%601> türün önemli bir yönü, öğeleri eklemenize veya kaldırmanıza olanak sağlayarak büyüyebilir veya küçülebilir. `Main` Yöntemde kapanışönce `}` bu kodu ekleyin:
 
 ```csharp
 Console.WriteLine();
@@ -67,26 +67,26 @@ foreach (var name in names)
 }
 ```
 
-Listenin sonuna iki ad daha eklediniz. Ayrıca bir tane de kaldırmış olursunuz. Dosyayı kaydedin ve `dotnet run` yazarak deneyin.
+Listenin sonuna iki ad daha eklediniz. Bir tanesini de kaldırdın. Dosyayı kaydedin `dotnet run` ve denemek için yazın.
 
-<xref:System.Collections.Generic.List%601>, tek tek öğeleri **dizine** göre de başvurmanızı sağlar. Dizini liste adından sonra `[` ve `]` belirteçleri arasına yerleştirebilirsiniz. C#ilk dizin için 0 kullanır. Bu kodu, yeni eklediğiniz kodun hemen altına ekleyin ve deneyin:
+<xref:System.Collections.Generic.List%601> Dizin bazında tek tek **index** öğelere başvurmanızı sağlar. Dizini liste `[` adını `]` izleyen belirteçler arasına yerebilirsiniz. C# ilk dizin için 0 kullanır. Bu kodu eklediğiniz kodun hemen altına ekleyin ve deneyin:
 
 ```csharp
 Console.WriteLine($"My name is {names[0]}");
 Console.WriteLine($"I've added {names[2]} and {names[3]} to the list");
 ```
 
-Liste sonunun ötesinde bir dizine erişemezsiniz. Dizinlerin 0 ' dan başlayıp, en büyük geçerli dizinin listedeki öğe sayısından bir daha az olması gerektiğini unutmayın. Listenin <xref:System.Collections.Generic.List%601.Count%2A> özelliğini ne kadar süreyle kullandığını kontrol edebilirsiniz. Main yönteminin sonuna aşağıdaki kodu ekleyin:
+Listenin sonundan sonra bir dizin erişemezsiniz. Endekslerin 0'dan başladığını unutmayın, bu nedenle en büyük geçerli dizin listedeki öğe sayısından bir azdır. Listenin <xref:System.Collections.Generic.List%601.Count%2A> özelliği ne kadar süreyle kullandığını kontrol edebilirsiniz. Ana yöntemin sonuna aşağıdaki kodu ekleyin:
 
 ```csharp
 Console.WriteLine($"The list has {names.Count} people in it");
  ```
 
-Dosyayı kaydedin ve sonuçları görmek için `dotnet run` yeniden yazın.
+Dosyayı kaydedin `dotnet run` ve sonuçları görmek için yeniden yazın.
 
-## <a name="search-and-sort-lists"></a>Arama ve sıralama listeleri
+## <a name="search-and-sort-lists"></a>Listeleri arama ve sıralama
 
-Örneklerimizde görece küçük listeler kullanılıyor, ancak uygulamalarınız genellikle binlerce numaralandırma olan çok sayıda öğesi olan listeler oluşturabilir. Bu daha büyük koleksiyonlardaki öğeleri bulmak için listede farklı öğeler için arama yapmanız gerekir. <xref:System.Collections.Generic.List%601.IndexOf%2A> yöntemi bir öğe arar ve öğenin dizinini döndürür. Bu kodu `Main` yönteminizin en altına ekleyin:
+Örneklerimiz nispeten küçük listeler kullanır, ancak uygulamalarınız genellikle daha fazla öğeiçeren listeler oluşturabilir ve bazen binlercesini numaralandırmak gerekir. Bu büyük koleksiyonlarda öğeleri bulmak için, farklı öğeler için listearama nız gerekir. Yöntem <xref:System.Collections.Generic.List%601.IndexOf%2A> bir öğeyi arar ve öğenin dizinini döndürür. Bu kodu yönteminizin `Main` altına ekleyin:
 
 ```csharp
 var index = names.IndexOf("Felipe");
@@ -111,7 +111,7 @@ else
 }
 ```
 
-Listenizdeki öğeler de sıralanmış olabilir. <xref:System.Collections.Generic.List%601.Sort%2A> yöntemi, listedeki tüm öğeleri normal sıralarına göre sıralar (dizeler söz konusu olduğunda alfabetik olarak). Bu kodu `Main` yönteminizin en altına ekleyin:
+Listenizdeki öğeler de sıralanabilir. Yöntem, <xref:System.Collections.Generic.List%601.Sort%2A> listedeki tüm öğeleri normal sıralarına göre sıralar (dizeleri durumunda alfabetik olarak). Bu kodu yöntemimizin `Main` altına ekleyin:
 
 ```csharp
 names.Sort();
@@ -121,9 +121,9 @@ foreach (var name in names)
 }
 ```
 
-Bu en son sürümü denemek için dosyayı kaydedin ve `dotnet run` yazın.
+Bu son sürümü `dotnet run` denemek için dosyayı kaydedin ve yazın.
 
-Sonraki bölüme başlamadan önce geçerli kodu ayrı bir yönteme taşıyalim. Bu, yeni bir örnekle çalışmaya başlamasını kolaylaştırır. `Main` yönteminizi `WorkingWithStrings` olarak yeniden adlandırın ve `WorkingWithStrings`çağıran yeni bir `Main` yöntemi yazın. İşiniz bittiğinde kodunuzun şöyle görünmesi gerekir:
+Bir sonraki bölümü başlatmadan önce, geçerli kodu ayrı bir yönteme taşıyalım. Bu, yeni bir örnekle çalışmaya başlamayı kolaylaştırır. Metodunuzu `WorkingWithStrings` yeniden adlandırın `Main` `Main` ve `WorkingWithStrings`çağıran yeni bir yöntem yazın. Bitirdikten sonra, kodunuz şu şekilde görünmelidir:
 
 ```csharp
 using System;
@@ -138,7 +138,7 @@ namespace list_tutorial
             WorkingWithStrings();
         }
 
-        public static void WorkingWithStrings()
+        static void WorkingWithStrings()
         {
             var names = new List<string> { "<name>", "Ana", "Felipe" };
             foreach (var name in names)
@@ -161,10 +161,25 @@ namespace list_tutorial
             Console.WriteLine($"The list has {names.Count} people in it");
 
             var index = names.IndexOf("Felipe");
-            Console.WriteLine($"The name {names[index]} is at index {index}");
+            if (index == -1)
+            {
+                Console.WriteLine($"When an item is not found, IndexOf returns {index}");
+            }
+            else
+            {
+                Console.WriteLine($"The name {names[index]} is at index {index}");
+            }
 
-            var notFound = names.IndexOf("Not Found");
-            Console.WriteLine($"When an item is not found, IndexOf returns {notFound}");
+            index = names.IndexOf("Not Found");
+            if (index == -1)
+            {
+                Console.WriteLine($"When an item is not found, IndexOf returns {index}");
+            }
+            else
+            {
+                Console.WriteLine($"The name {names[index]} is at index {index}");
+
+            }
 
             names.Sort();
             foreach (var name in names)
@@ -176,17 +191,17 @@ namespace list_tutorial
 }
 ```
 
-## <a name="lists-of-other-types"></a>Diğer türlerin listeleri
+## <a name="lists-of-other-types"></a>Diğer türler deki listeler
 
-Şu ana kadar listelerde `string` türü kullanıyorsunuz. <xref:System.Collections.Generic.List%601> farklı bir tür kullanalım. Bir sayı kümesi oluşturalım.
+Şu ana kadar `string` listelerdeki türü kullanıyorsunuz. Farklı bir <xref:System.Collections.Generic.List%601> tür kullanarak yapalım. Bir dizi sayı oluşturalım.
 
-Aşağıdakileri yeni `Main` yönteminizin altına ekleyin:
+Yeni `Main` yönteminizin altına aşağıdakileri ekleyin:
 
 ```csharp
 var fibonacciNumbers = new List<int> {1, 1};
 ```
 
-Bu, tamsayıların bir listesini oluşturur ve ilk iki tamsayının değerini 1 değerine ayarlar. Bunlar bir *Fibonaccı sırasının*ilk iki değeri, bir dizi sayı. Her bir sonraki Fibonaccı numarası, önceki iki sayının toplamı alınarak bulunur. Şu kodu ekleyin:
+Bu, tamsayılar listesi oluşturur ve ilk iki tamsayıdeğerini 1 değerine ayarlar. Bunlar *fibonacci dizisinin*ilk iki değeridir, bir sayı dizisi. Sonraki her Fibonacci numarası önceki iki sayının toplamı alınarak bulunur. Şu kodu ekleyin:
 
 ```csharp
 var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
@@ -198,21 +213,21 @@ foreach (var item in fibonacciNumbers)
     Console.WriteLine(item);
 ```
 
-Sonuçları görmek için dosyayı kaydedin ve `dotnet run` yazın.
+Sonuçları görmek için `dotnet run` dosyayı kaydedin ve yazın.
 
 > [!TIP]
-> Yalnızca bu bölüme odaklanmak için `WorkingWithStrings();`çağıran kodu açıklama olarak ayarlayabilirsiniz. Çağrının önüne şu şekilde iki `/` karakteri koymanız yeterlidir: `// WorkingWithStrings();`.
+> Sadece bu bölüme odaklanmak için, çağıran `WorkingWithStrings();`kodu yorumlayabilirsiniz. Sadece bu `/` gibi arama önünde iki karakter `// WorkingWithStrings();`koyun: .
 
-## <a name="challenge"></a>Sına
+## <a name="challenge"></a>Sınama
 
-Bu ve önceki derslerden bazılarını bir araya getirebilirsiniz. Fibonaccı numaralarına en fazla ne kadar derlediğiniz hakkında ' yı genişletin. Dizideki ilk 20 sayıyı oluşturmak için kodu yazmayı deneyin. (İpucu olarak, 20 fibonaccı numarası 6765 ' dir.)
+Bu ve daha önceki derslerden bazı kavramları bir araya getirebilecek olup olmadığını görün. Fibonacci Numbers ile şimdiye kadar inşa ettiğiniz şeyi genişletin. Dizideki ilk 20 sayıyı oluşturmak için kodu yazmaya çalışın. (İpucu olarak, 20 Fibonacci sayısı 6765'tir.)
 
-## <a name="complete-challenge"></a>Sınama Tamam
+## <a name="complete-challenge"></a>Görevi tamamlama
 
-[GitHub 'daki tamamlanmış örnek koda bakarak](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L13-L23)örnek bir çözüm görebilirsiniz.
+[GitHub'da bitmiş örnek koduna bakarak](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L13-L23)örnek bir çözüm görebilirsiniz.
 
-Döngünün her tekrarında, listedeki son iki tamsayının yerine getiriyorsunuz ve bu değeri listeye ekliyor olursunuz. Döngü, listeye 20 öğe ekleyinceye kadar yinelenir.
+Döngünün her yinelemesinde, listedeki son iki sondayı alıp, bunları özetliyor ve bu değeri listeye ekliyorsunuz. Listeye 20 öğe ekleyene kadar döngü yineler.
 
-Tebrikler, liste öğreticisini tamamladınız. Kendi geliştirme ortamınızda [sınıflarla tanışın](introduction-to-classes.md) öğreticisine devam edebilirsiniz.
+Tebrikler, liste eğitimini tamamladınız. Kendi geliştirme ortamınızda [sınıflara Giriş](introduction-to-classes.md) eğitimi ile devam edebilirsiniz.
 
-[Koleksiyonlar](../../../standard/collections/index.md)hakkında [.net Kılavuzu](../../../standard/index.md) konusundaki `List` türüyle çalışma hakkında daha fazla bilgi edinebilirsiniz. Diğer birçok koleksiyon türünü de öğreneceksiniz.
+[Koleksiyonlarla](../../../standard/collections/index.md)ilgili [.NET](../../../standard/index.md) `List` Guide konusunun türüyle çalışma hakkında daha fazla bilgi edinebilirsiniz. Ayrıca diğer birçok koleksiyon türü hakkında da bilgi edineceksiniz.

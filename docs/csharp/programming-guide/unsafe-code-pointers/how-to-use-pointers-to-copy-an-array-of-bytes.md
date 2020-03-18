@@ -1,24 +1,24 @@
 ---
-title: Bir bayt dizisini kopyalamak için işaretçiler kullanma- C# Programlama Kılavuzu
+title: Bayt dizisi kopyalamak için işaretçiler nasıl kullanılır - C# Programlama Kılavuzu
 ms.date: 04/20/2018
 helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
 ms.openlocfilehash: 4929699c2d1e07b16d4694cff79f9b1394b1de38
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75698462"
 ---
-# <a name="how-to-use-pointers-to-copy-an-array-of-bytes-c-programming-guide"></a>Bir bayt dizisini kopyalamak için işaretçiler kullanma (C# Programlama Kılavuzu)
+# <a name="how-to-use-pointers-to-copy-an-array-of-bytes-c-programming-guide"></a>Bir dizi bayt kopyalamak için işaretçiler nasıl kullanılır (C# Programlama Kılavuzu)
 
-Aşağıdaki örnek, baytları bir diziden diğerine kopyalamak için işaretçileri kullanır.
+Aşağıdaki örnek, bir diziden diğerine bayt kopyalamak için işaretçiler kullanır.
 
-Bu örnek, `Copy` yönteminde işaretçiler kullanmanıza olanak sağlayan [unsafe](../../language-reference/keywords/unsafe.md) anahtar sözcüğünü kullanır. [Fixed](../../language-reference/keywords/fixed-statement.md) deyimleri, kaynak ve hedef dizilere işaretçiler bildirmek için kullanılır. `fixed` bildiri, kaynak ve hedef dizilerin konumunu çöp toplama tarafından taşınamayacak şekilde *sabitler* . `fixed` bloğu tamamlandığında diziler için bellek blokları sabitlenemez. Bu örnekteki `Copy` yöntemi `unsafe` anahtar sözcüğünü kullandığından, [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) derleyici seçeneğiyle derlenmesi gerekir.
+Bu örnek, [unsafe](../../language-reference/keywords/unsafe.md) `Copy` yöntemde işaretçileri kullanmanıza olanak tanıyan güvenli olmayan anahtar sözcüğü kullanır. [Sabit](../../language-reference/keywords/fixed-statement.md) deyim, işaretçileri kaynak ve hedef dizilerine bildirmek için kullanılır. İfade, `fixed` kaynak ve hedef dizilerinin konumunu bellekte *sabitler,* böylece çöp toplama tarafından taşınmaz. `fixed` Blok tamamlandığında dizilerin bellek blokları sabitlenmez. Bu `Copy` örnekteki yöntem anahtar `unsafe` sözcüğü kullandığından, [-güvenli olmayan](../../language-reference/compiler-options/unsafe-compiler-option.md) derleyici seçeneğiyle derlenmiş olması gerekir.
 
-Bu örnek, ikinci bir yönetilmeyen işaretçi yerine dizinler kullanılarak her iki dizinin öğelerine erişir. `pSource` ve `pTarget` işaretçilerinin bildirimi dizileri sabitler. Bu özellik 7,3 ile C# başlayarak kullanılabilir.
+Bu örnek, ikinci bir yönetilmeyen işaretçi yerine endeksleri kullanarak her iki dizinin öğelerine erişer. Ve `pSource` `pTarget` işaretçilerin bildirimi dizileri sabitler. Bu özellik C# 7.3 ile başlayarak kullanılabilir.
 
 ## <a name="example"></a>Örnek
 
@@ -28,5 +28,5 @@ Bu örnek, ikinci bir yönetilmeyen işaretçi yerine dizinler kullanılarak her
 
 - [C# Programlama Kılavuzu](../index.md)
 - [Güvenli Olmayan Kod ve İşaretçiler](index.md)
-- [-unsafe (C# derleyici seçenekleri)](../../language-reference/compiler-options/unsafe-compiler-option.md)
-- [Atık Toplama](../../../standard/garbage-collection/index.md)
+- [-güvenli değil (C# Derleyici Seçenekleri)](../../language-reference/compiler-options/unsafe-compiler-option.md)
+- [Çöp Toplama](../../../standard/garbage-collection/index.md)

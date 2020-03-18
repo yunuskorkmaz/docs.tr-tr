@@ -1,31 +1,31 @@
 ---
-title: Microsoft. NET. SDK için MSBuild özellikleri
-description: .NET Core SDK anlayan MSBuild özelliklerine yönelik başvuru.
+title: Microsoft.NET.Sdk için MSBuild özellikleri
+description: .NET Core SDK tarafından anlaşılan MSBuild özellikleri için başvuru.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 00d9152d864ac0727a511f4c3c15abba82aab904
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: d4a204a1e0216313418d278ec3bd333f72db8751
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503815"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399184"
 ---
 # <a name="msbuild-properties-for-net-core-sdk-projects"></a>.NET Core SDK projeleri için MSBuild özellikleri
 
-Bu sayfa, .NET Core projelerini yapılandırmaya yönelik MSBuild özelliklerini açıklar.
+Bu sayfada .NET Core projelerini yapılandırmak için MSBuild özellikleri açıklanmaktadır.
 
 > [!NOTE]
-> Bu sayfa devam eden bir çalışmadır ve .NET Core SDK için tüm yararlı MSBuild özelliklerini listelemez. Ortak MSBuild özelliklerinin bir listesi için bkz. [Ortak MSBuild özellikleri](/visualstudio/msbuild/common-msbuild-project-properties).
+> Bu sayfa devam eden bir çalışmadır ve .NET Core SDK için yararlı MSBuild özelliklerinin tümlerini listelemiyor. Ortak MSBuild özelliklerinin listesi [için](/visualstudio/msbuild/common-msbuild-project-properties)bkz.
 
 ## <a name="framework-properties"></a>Çerçeve özellikleri
 
-- [TargetFramework](#targetframework)
-- [Targetçerçeveler](#targetframeworks)
-- [Netstandardımplicitpackageversion](#netstandardimplicitpackageversion)
+- [Hedef Çerçeve](#targetframework)
+- [Hedef Çerçeveler](#targetframeworks)
+- [NetStandardimplicitPackageVersion](#netstandardimplicitpackageversion)
 
-### <a name="targetframework"></a>targetFramework
+### <a name="targetframework"></a>Hedef Çerçeve
 
-`TargetFramework` özelliği, uygulamanın hedef Framework sürümünü belirtir ve bu, dolaylı olarak bir [metapackage](../packages.md#metapackages)'e başvurur. Geçerli hedef çerçeve takma adların listesi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md#supported-target-framework-versions).
+Özellik, `TargetFramework` uygulamanın hedef çerçeve sürümünü belirtir ve bu sürüm de örtülü olarak bir [meta pakete](../packages.md#metapackages)başvurur. Geçerli hedef çerçeve monikers listesi için, [SDK tarzı projelerde Hedef çerçeveleri](../../standard/frameworks.md#supported-target-framework-versions)bakın.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -35,14 +35,14 @@ Bu sayfa, .NET Core projelerini yapılandırmaya yönelik MSBuild özelliklerini
 </Project>
 ```
 
-Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md).
+Daha fazla bilgi için, [SDK tarzı projelerde Hedef çerçeveleri'ne](../../standard/frameworks.md)bakın.
 
-### <a name="targetframeworks"></a>Targetçerçeveler
+### <a name="targetframeworks"></a>Hedef Çerçeveler
 
-Uygulamanızın birden çok platformu hedeflemesini istediğinizde `TargetFrameworks` özelliğini kullanın. Geçerli hedef çerçeve takma adların listesi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md#supported-target-framework-versions).
+Uygulamanızın `TargetFrameworks` birden çok platformu hedeflemesini istediğinizde özelliği kullanın. Geçerli hedef çerçeve monikers listesi için, [SDK tarzı projelerde Hedef çerçeveleri](../../standard/frameworks.md#supported-target-framework-versions)bakın.
 
 > [!NOTE]
-> `TargetFramework` (tekil) belirtilmişse bu özellik yoksayılır.
+> (Tekil) `TargetFramework` belirtilmişse bu özellik yoksayılır.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -52,14 +52,14 @@ Uygulamanızın birden çok platformu hedeflemesini istediğinizde `TargetFramew
 </Project>
 ```
 
-Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md).
+Daha fazla bilgi için, [SDK tarzı projelerde Hedef çerçeveleri'ne](../../standard/frameworks.md)bakın.
 
-### <a name="netstandardimplicitpackageversion"></a>Netstandardımplicitpackageversion
+### <a name="netstandardimplicitpackageversion"></a>NetStandardimplicitPackageVersion
 
 > [!NOTE]
-> Bu özellik yalnızca `netstandard1.x`kullanan projeler için geçerlidir. `netstandard2.x`kullanan projeler için uygulanmaz.
+> Bu özellik yalnızca `netstandard1.x`. Bu kullanan `netstandard2.x`projeler için geçerli değildir.
 
-[Metapackage](../packages.md#metapackages) sürümünden daha düşük bir çerçeve sürümü belirtmek istediğinizde `NetStandardImplicitPackageVersion` özelliğini kullanın. Aşağıdaki örnekteki proje dosyası `netstandard1.3` hedefler, ancak `NETStandard.Library`1.6.0 sürümünü kullanır.
+`NetStandardImplicitPackageVersion` [Metapackage](../packages.md#metapackages) sürümünden daha düşük bir çerçeve sürümü belirtmek istediğinizde özelliği kullanın. Aşağıdaki örnekteki proje dosyası `netstandard1.3` hedefleri, ancak 1.6.0 sürümünü `NETStandard.Library`kullanır.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -70,15 +70,15 @@ Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../stan
 </Project>
 ```
 
-## <a name="publish-properties"></a>Özellikleri Yayımla
+## <a name="publish-properties"></a>Özellikleri yayımlama
 
-- [Runtimeıdentifier](#runtimeidentifier)
-- [Runtimetanımlayıcıtanımlayıcıları](#runtimeidentifiers)
+- [RuntimeIdentifier](#runtimeidentifier)
+- [RuntimeIdentifiers](#runtimeidentifiers)
 - [UseAppHost](#useapphost)
 
-### <a name="runtimeidentifier"></a>Runtimeıdentifier
+### <a name="runtimeidentifier"></a>RuntimeIdentifier
 
-`RuntimeIdentifier` özelliği, proje için tek bir [çalışma zamanı tanımlayıcısı (RID)](../rid-catalog.md) belirtmenize olanak tanır. RID, kendi kendine içerilen bir dağıtımı yayımlamayı mümkün.
+Özellik, `RuntimeIdentifier` proje için tek bir [çalışma zamanı tanımlayıcısı (RID)](../rid-catalog.md) belirtmenize olanak tanır. RID, bağımsız bir dağıtımyayımlanmasını sağlar.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -88,12 +88,12 @@ Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../stan
 </Project>
 ```
 
-### <a name="runtimeidentifiers"></a>Runtimetanımlayıcıtanımlayıcıları
+### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
 
-`RuntimeIdentifiers` özelliği, proje için bir [çalışma zamanı tanımlayıcıları (RID 'ler)](../rid-catalog.md) için noktalı virgülle ayrılmış bir liste belirtmenize olanak tanır. Birden çok çalışma zamanı için yayımlamanız gerekiyorsa bu özelliği kullanın. `RuntimeIdentifiers`, doğru varlıkların grafikte olduğundan emin olmak için geri yükleme sırasında kullanılır.
+Özellik, `RuntimeIdentifiers` proje için yarı sütunlu sınırlı bir [çalışma zamanı tanımlayıcıları (RIDs)](../rid-catalog.md) listesini belirtmenize olanak tanır. Birden çok çalışma süreleri için yayımlamanız gerekiyorsa bu özelliği kullanın. `RuntimeIdentifiers`doğru varlıkların grafikte olduğundan emin olmak için geri yükleme zamanında kullanılır.
 
 > [!TIP]
-> `RuntimeIdentifier` (tekil), yalnızca tek bir çalışma zamanı gerektiğinde daha hızlı derlemeler sağlayabilir.
+> `RuntimeIdentifier`(tekil) yalnızca tek bir çalışma süresi gerektiğinde daha hızlı yapılar sağlayabilir.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -105,9 +105,9 @@ Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../stan
 
 ### <a name="useapphost"></a>UseAppHost
 
-`UseAppHost` özelliği .NET Core SDK 2.1.400 sürümünde tanıtılmıştı. Dağıtım için yerel bir yürütülebilir dosyanın oluşturulup oluşturulmayacağını denetler. Kendi kendine kapsanan dağıtımlar için yerel bir yürütülebilir dosya gereklidir.
+Özellik `UseAppHost` .NET Core SDK'nın 2.1.400 sürümünde tanıtıldı. Bir dağıtım için yerel yürütülebilir oluşturulup oluşturulmadığını denetler. Kendi kendine yeten dağıtımlar için yerel yürütülebilir bir işlem gereklidir.
 
-.NET Core 3,0 ve sonraki sürümlerinde, çerçeveye bağlı bir yürütülebilir dosya varsayılan olarak oluşturulur. Yürütülebilir dosyanın üretilmesini devre dışı bırakmak için `UseAppHost` özelliğini `false` olarak ayarlayın.
+.NET Core 3.0 ve sonraki sürümlerinde, varsayılan olarak çerçeveye bağımlı bir yürütülebilir oluşturulur. `UseAppHost` Özelliği, yürütülebilir nesli devre dışı bırakacak şekilde `false` ayarlayın.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -117,13 +117,13 @@ Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../stan
 </Project>
 ```
 
-Dağıtım hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md).
+Dağıtım hakkında daha fazla bilgi için [bkz.](../deploying/index.md)
 
-## <a name="compile-properties"></a>Derleme özellikleri
+## <a name="compile-properties"></a>Özellikleri derleme
 
 ### <a name="langversion"></a>LangVersion
 
-`LangVersion` özelliği, belirli bir programlama dili sürümü belirtmenizi sağlar. Örneğin, C# önizleme özelliklerine erişmek istiyorsanız `LangVersion` `preview`olarak ayarlayın.
+Özellik, `LangVersion` belirli bir programlama dili sürümünü belirtmenize olanak tanır. Örneğin, C# önizleme özelliklerine erişmek istiyorsanız, `LangVersion` `preview`' e ayarlayın.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -133,15 +133,16 @@ Dağıtım hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtım�
 </Project>
 ```
 
-Daha fazla bilgi için bkz [ C# . dil sürümü oluşturma](../../csharp/language-reference/configure-language-version.md#override-a-default).
+Daha fazla bilgi için [C# dil sürümüne](../../csharp/language-reference/configure-language-version.md#override-a-default)bakın.
 
 ## <a name="nuget-packages"></a>NuGet paketleri
 
-- [PackageReference](#packagereference)
+- [PaketReferans](#packagereference)
+- [VarlıkTargetFallback](#assettargetfallback)
 
-### <a name="packagereference"></a>PackageReference
+### <a name="packagereference"></a>PaketReferans
 
-`PackageReference` öğesi bir NuGet bağımlılığı belirtmenizi sağlar. Örneğin, [metapackage](../packages.md#metapackages)yerine tek bir pakete başvurmak isteyebilirsiniz. `Include` özniteliği paket KIMLIĞINI belirtir. Aşağıdaki örnekteki proje dosyası kod parçacığı [System. Runtime](https://www.nuget.org/packages/System.Runtime/) paketine başvurur.
+Öğe, `PackageReference` bir NuGet bağımlılığı belirtmenize olanak tanır. Örneğin, [meta paket](../packages.md#metapackages)yerine tek bir pakete başvurmak isteyebilirsiniz. Öznitelik `Include` paket kimliğini belirtir. Aşağıdaki örnekteki proje dosyası snippet [System.Runtime](https://www.nuget.org/packages/System.Runtime/) paketine başvurur.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -152,16 +153,31 @@ Daha fazla bilgi için bkz [ C# . dil sürümü oluşturma](../../csharp/languag
 </Project>
 ```
 
-Daha fazla bilgi için bkz. [Proje dosyalarındaki paket başvuruları](/nuget/consume-packages/package-references-in-project-files).
+Daha fazla bilgi için [proje dosyalarındaki Paket başvurularına](/nuget/consume-packages/package-references-in-project-files)bakın.
 
-### <a name="pack-and-restore-targets"></a>Paket ve geri yükleme hedefleri
+### <a name="assettargetfallback"></a>VarlıkTargetFallback
 
-MSBuild 15,1, bir derleme kapsamında NuGet paketleri oluşturmak ve geri yüklemek için `pack` ve `restore` hedeflerinin tanıtılmıştır. `PackageTargetFallback`da dahil olmak üzere bu hedeflerin MSBuild özellikleri hakkında bilgi için bkz. [NuGet Pack ve geri yükleme MSBuild hedefleri olarak](/nuget/reference/msbuild-targets).
+Özellik, `AssetTargetFallback` projenizin başvurulup tükettiği projeler ve NuGet paketleri için ek uyumlu çerçeve sürümleri belirtmenize olanak tanır. Örneğin, bir paket bağımlılığı nı `PackageReference` kullanarak belirtirseniz, ancak bu paket projelerinizinkiyle `TargetFramework`uyumlu `AssetTargetFallback` varlıklar içermiyorsa, özellik devreye girer. Başvurulan paketin uyumluluğu, ''' `AssetTargetFallback`'de belirtilen her hedef çerçeve kullanılarak yeniden denetlenir.
+
+Özelliği bir veya daha fazla [hedef çerçeve sürümüne](../../standard/frameworks.md#supported-target-framework-versions)ayarlayabilirsiniz. `AssetTargetFallback`
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  ...
+  <PropertyGroup>
+    <AssetTargetFallback>net461</AssetTargetFallback>
+  </PropertyGroup>
+</Project>
+```
+
+### <a name="pack-and-restore-targets"></a>Hedefleri paketleme ve geri yükleme
+
+MSBuild 15.1 `pack` tanıtıldı `restore` ve nuget paketleri oluşturmak ve bir yapının parçası olarak geri için hedefler. Bu hedefler için MSBuild özellikleri hakkında `PackageTargetFallback`bilgi için, [bkz.](/nuget/reference/msbuild-targets)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [MSBuild şema başvurusu](/visualstudio/msbuild/msbuild-project-file-schema-reference)
 - [Ortak MSBuild özellikleri](/visualstudio/msbuild/common-msbuild-project-properties)
 - [NuGet paketi için MSBuild özellikleri](/nuget/reference/msbuild-targets#pack-target)
-- [NuGet geri yükleme için MSBuild özellikleri](/nuget/reference/msbuild-targets#restore-properties)
-- [Bir derlemeyi özelleştirme](/visualstudio/msbuild/customize-your-build)
+- [NuGet geri yüklemesi için MSBuild özellikleri](/nuget/reference/msbuild-targets#restore-properties)
+- [Yapıyı özelleştirme](/visualstudio/msbuild/customize-your-build)

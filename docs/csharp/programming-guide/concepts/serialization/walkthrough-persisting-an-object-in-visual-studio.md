@@ -1,57 +1,57 @@
 ---
-title: 'İzlenecek yol: kullanarak bir nesneyi kalıcı hale getirmeC#'
+title: 'Walkthrough: C kullanarak bir Nesneyi Kalıcı #'
 ms.date: 04/26/2018
-ms.openlocfilehash: 9531909bdf1ed61305c292411ef2cd08b7b67465
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 85c5d1b711180eda5734d5860d996242c6bc89d1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240473"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167576"
 ---
-# <a name="walkthrough-persisting-an-object-using-c"></a>İzlenecek yol: C\# kullanarak bir nesneyi kalıcı hale getirme
+# <a name="walkthrough-persisting-an-object-using-c"></a>Walkthrough: C kullanarak bir nesneyi kalıcı\#
 
-Nesneleri, değerleri depolamanızı ve nesnenin bir sonraki açılışında bunları almanızı sağlayan örnekler arasında bir nesnenin verilerini kalıcı hale getirmek için serileştirme kullanabilirsiniz.
+Bir nesnenin verilerini örnekler arasında kalıcı kılmak için serileştirmeyi kullanabilirsiniz, bu da değerleri depolamanızı ve nesnenin bir sonraki anında elde edildiği nde bunları almanızı sağlar.
 
-Bu kılavuzda, temel bir `Loan` nesnesi oluşturacak ve verilerini bir dosyaya kalıcı hale getirilecektir. Daha sonra nesneyi yeniden oluşturduğunuzda dosyadaki verileri buradan alırsınız.
-
-> [!IMPORTANT]
-> Bu örnek, dosya henüz yoksa yeni bir dosya oluşturur. Bir uygulamanın bir dosya oluşturması gerekiyorsa, bu uygulamanın klasör için `Create` izni olması gerekir. İzinler, erişim denetim listeleri kullanılarak ayarlanır. Dosya zaten mevcutsa, uygulamanın daha az bir izin `Write` izni olması gerekir. Mümkün olduğunda, dağıtım sırasında dosyayı oluşturmak ve yalnızca tek bir dosyaya `Read` izinleri vermek (bir klasör için izinler oluşturmak yerine) için daha güvenlidir. Ayrıca, Kullanıcı klasörlerine veri yazmak, kök klasör veya Program Files klasöründen daha güvenlidir.
+Bu gözden geçirmede, temel `Loan` bir nesne oluşturur ve verilerini bir dosyada devam ettirmeye devam erecektir. Nesneyi yeniden oluşturduğunuzda dosyadaki verileri alırsınız.
 
 > [!IMPORTANT]
-> Bu örnek, verileri bir ikili biçim dosyasında depolar. Bu biçimler, parolalar veya kredi kartı bilgileri gibi hassas veriler için kullanılmamalıdır.
+> Bu örnek, dosya zaten yoksa yeni bir dosya oluşturur. Bir uygulamanın bir dosya oluşturması gerekiyorsa, bu uygulamanın klasör için `Create` izni olmalıdır. İzinler erişim denetim listeleri kullanılarak ayarlanır. Dosya zaten varsa, uygulamanın `Write` yalnızca izin, daha az izin gerekir. Mümkün olduğunda, dosyayı dağıtım sırasında oluşturmak ve yalnızca `Read` tek bir dosyaya izin vermek (klasör için izin oluşturma yerine) daha güvenlidir. Ayrıca, kullanıcı klasörlerine veri yazmak kök klasöre veya Program Dosyaları klasörüne yazmaktan daha güvenlidir.
+
+> [!IMPORTANT]
+> Bu örnek, verileri ikili biçim dosyasında depolar. Bu biçimler parolalar veya kredi kartı bilgileri gibi hassas veriler için kullanılmamalıdır.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Derlemek ve çalıştırmak için [.NET Core SDK](https://dotnet.microsoft.com/download)' yi çalıştırın.
+- Oluşturmak ve çalıştırmak için [.NET Core SDK'yı](https://dotnet.microsoft.com/download)yükleyin.
 
-- Henüz yapmadıysanız, en sevdiğiniz kod düzenleyicinizi yükleyebilirsiniz.
+- Daha önce yapmadıysanız, en sevdiğiniz kod düzenleyicisini yükleyin.
 
 > [!TIP]
-> Bir kod Düzenleyicisi yüklemeniz mı gerekiyor? [Visual Studio 'yu](https://visualstudio.com/downloads)deneyin!
+> Bir kod düzenleyicisi yüklemeniz mi gerekiyor? [Visual Studio'yı](https://visualstudio.com/downloads)deneyin!
 
-- Örnek 7,3 gerektirir C# . Bkz [. C# dil sürümünü seçme](../../../language-reference/configure-language-version.md) 
+- Örnek, C# 7.3 gerektirir. Bkz. [C# dil sürümünü seçin](../../../language-reference/configure-language-version.md)
 
-Örnek kodu, [.NET örnekleri GitHub deposunda](https://github.com/dotnet/samples/tree/master/csharp/serialization)çevrimiçi olarak inceleyebilirsiniz.
+Örnek kodu [.NET örnekleri GitHub deposundan](https://github.com/dotnet/samples/tree/master/csharp/serialization)online olarak inceleyebilirsiniz.
 
-## <a name="creating-the-loan-object"></a>Kredi nesnesi oluşturma
+## <a name="creating-the-loan-object"></a>Kredi nesnesini oluşturma
 
-İlk adım, sınıfı kullanan bir `Loan` sınıfı ve konsol uygulaması oluşturmaktır:
+İlk adım, sınıfı `Loan` kullanan bir sınıf ve konsol uygulaması oluşturmaktır:
 
-1. Yeni bir uygulama oluşturun. `serialization`adlı bir alt dizinde yeni bir konsol uygulaması oluşturmak için `dotnet new console -o serialization` yazın.
-1. Düzenleyicinizde uygulamayı açın ve `Loan.cs`adlı yeni bir sınıf ekleyin.
-1. `Loan` Sınıfınıza aşağıdaki kodu ekleyin:
+1. Yeni bir uygulama oluşturun. Adlı `dotnet new console -o serialization` `serialization`bir alt dizinde yeni bir konsol uygulaması oluşturmak için yazın.
+1. Düzenleyicinizde uygulamayı açın ve '' adlı `Loan.cs`yeni bir sınıf ekleyin.
+1. Sınıfınıza `Loan` aşağıdaki kodu ekleyin:
 
 [!code-csharp[Loan class definition](../../../../../samples/snippets/csharp/serialization/Loan.cs#1)]
 
-Ayrıca, `Loan` sınıfını kullanan bir uygulama da oluşturmanız gerekir.
+Ayrıca sınıfı kullanan bir uygulama oluşturmanız `Loan` gerekir.
 
-## <a name="serialize-the-loan-object"></a>Kredi nesnesini seri hale getirme
+## <a name="serialize-the-loan-object"></a>Ödünç nesneyi seri hale
 
-1. `Program.cs` programını açın. Aşağıdaki kodu ekleyin:
+1. `Program.cs` dosyasını açın. Aşağıdaki kodu ekleyin:
 
 [!code-csharp[Create a loan object](../../../../../samples/snippets/csharp/serialization/Program.cs#1)]
 
-`PropertyChanged` olayı için bir olay işleyicisi ve `Loan` nesnesini değiştirmek ve değişiklikleri göstermek için birkaç satır ekleyin. Eklemeleri aşağıdaki kodda görebilirsiniz:
+Olay için bir olay `PropertyChanged` işleyicisi ve `Loan` nesneyi değiştirmek ve değişiklikleri görüntülemek için birkaç satır ekleyin. Eklemeleri aşağıdaki kodda görebilirsiniz:
 
 [!code-csharp[Listening for the PropertyChanged event](../../../../../samples/snippets/csharp/serialization/Program.cs#2)]
 
@@ -63,43 +63,43 @@ New customer value: Henry Clay
 7.1
 ```
 
-Bu uygulamayı sürekli olarak çalıştırmak her zaman aynı değerleri yazar. Programı her çalıştırdığınızda yeni bir kredi nesnesi oluşturulur. Gerçek dünyada, faiz oranları düzenli aralıklarla değişir, ancak uygulama her çalıştırıldığında her zaman gerekli değildir. Serileştirme kodu, uygulamanın örnekleri arasındaki en son faiz oranını koruduğunuzdan anlamına gelir. Bir sonraki adımda, yalnızca kredi sınıfına serileştirme ekleyerek bunu yapacaksınız.
+Bu uygulamayı tekrar tekrar çalıştırmak her zaman aynı değerleri yazar. Programı her çalıştırdığınızda yeni bir Kredi nesnesi oluşturulur. Gerçek dünyada, faiz oranları periyodik olarak değişir, ancak uygulama çalıştırıldığı her zaman mutlaka değil. Serileştirme kodu, uygulama örnekleri arasındaki en son faiz oranını koruduğunuz anlamına gelir. Bir sonraki adımda, Kredi sınıfına serileştirme ekleyerek bunu yapacaksınız.
 
-## <a name="using-serialization-to-persist-the-object"></a>Nesneyi kalıcı hale getirmek için serileştirme kullanma
+## <a name="using-serialization-to-persist-the-object"></a>Nesneyi Kalıcı Hale Getirmek için Serileştirme kullanma
 
-Kredi sınıfının değerlerini kalıcı hale getirmek için önce sınıfı `Serializable` özniteliğiyle işaretlemeniz gerekir. Aşağıdaki kodu ödünç verme sınıfı tanımının üzerine ekleyin:
+Kredi sınıfının değerlerini devam ettirebilmek için, önce sınıfı `Serializable` öznitelikile işaretlemeniz gerekir. Kredi sınıfı tanımının üzerine aşağıdaki kodu ekleyin:
 
 [!code-csharp[Loan class definition](../../../../../samples/snippets/csharp/serialization/Loan.cs#2)]
 
-<xref:System.SerializableAttribute> derleyiciye sınıftaki her şeyin bir dosyaya kalıcı hale, olduğunu söyler. `PropertyChanged` olay depolanması gereken nesne grafiğinin bir parçasını temsil etmediğinden, serileştirilmemelidir. Bunun yapılması, bu olaya eklenmiş tüm nesneleri serileştirilir. <xref:System.NonSerializedAttribute> `PropertyChanged` olay işleyicisi için alan bildirimine ekleyebilirsiniz.
+Derleyiciye <xref:System.SerializableAttribute> sınıftaki her şeyin bir dosyada kalıcı olarak kalıcı olabileceğini söyler. `PropertyChanged` Olay nesne grafiğinin depolanacak bir bölümünü temsil etmediğinden seri hale getirilmemelidir. Bunu yapmak, bu olaya eklenen tüm nesneleri seri hale getirecektir. Olay işleyicisi için alan `PropertyChanged` bildirimine ekleyebilirsiniz. <xref:System.NonSerializedAttribute>
 
 [!code-csharp[Disable serialization for the event handler](../../../../../samples/snippets/csharp/serialization/Loan.cs#3)]
 
-7,3 ' C# den başlayarak, `field` Target değerini kullanarak otomatik uygulanan bir özelliğin yedekleme alanına öznitelikler ekleyebilirsiniz. Aşağıdaki kod `TimeLastLoaded` bir özelliği ekler ve onu seri hale getirilebilir değil olarak işaretler:
+C# 7.3 ile başlayarak, `field` hedef değeri kullanarak otomatik olarak uygulanan bir özelliğin destek alanına öznitelikleri ekleyebilirsiniz. Aşağıdaki kod bir `TimeLastLoaded` özellik ekler ve serileştirilebilir değil olarak işaretler:
 
 [!code-csharp[Disable serialization for an auto-implemented property](../../../../../samples/snippets/csharp/serialization/Loan.cs#4)]
 
-Sonraki adım, ödünç uygulama uygulamasına serileştirme kodu eklemektir. Sınıfını seri hale getirmek ve bir dosyaya yazmak için <xref:System.IO> ve <xref:System.Runtime.Serialization.Formatters.Binary> ad alanlarını kullanırsınız. Tam nitelikli adları yazmayı önlemek için, aşağıdaki kodda gösterildiği gibi gerekli ad alanlarına başvurular ekleyebilirsiniz:
+Bir sonraki adım LoanApp uygulamasına serileştirme kodunu eklemektir. Sınıfı seri hale getirmek ve bir dosyaya yazmak <xref:System.IO> için, ve <xref:System.Runtime.Serialization.Formatters.Binary> ad boşluklarını kullanırsınız. Tam nitelikli adları yazmaktan kaçınmak için, aşağıdaki kodda gösterildiği gibi gerekli ad alanlarına referanslar ekleyebilirsiniz:
 
 [!code-csharp[Adding namespaces for serialization](../../../../../samples/snippets/csharp/serialization/Program.cs#3)]
 
-Sonraki adım, nesne oluşturulduğunda nesnenin serisini kaldırmak için kod eklemektir. Aşağıdaki kodda gösterildiği gibi serileştirilmiş verilerin dosya adı sınıfına bir sabit ekleyin:
+Bir sonraki adım, nesne oluşturulduğunda dosyadan nesneyi deserialize etmek için kod eklemektir. Serileştirilmiş verilerin dosya adı için sınıfa aşağıdaki kodda gösterildiği gibi sabit ekleyin:
 
 [!code-csharp[Define the name of the saved file](../../../../../samples/snippets/csharp/serialization/Program.cs#4)]
 
-Sonra, `TestLoan` nesnesini oluşturan satırdan sonra aşağıdaki kodu ekleyin:
+Ardından, `TestLoan` nesneyi oluşturan satırdan sonra aşağıdaki kodu ekleyin:
 
 [!code-csharp[Read from a file if it exists](../../../../../samples/snippets/csharp/serialization/Program.cs#5)]
 
-Önce dosyanın var olduğunu denetlemeniz gerekir. Varsa, dosyayı çevirmek için ikili dosyayı ve bir <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> sınıfını okumak üzere bir <xref:System.IO.Stream> sınıfı oluşturun. Akış türünden kredi nesne türüne de dönüştürmeniz gerekir.
+Önce dosyanın var olup olmadığını denetlemeniz gerekir. Varsa, ikili dosyayı okumak için bir <xref:System.IO.Stream> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> sınıf ve dosyayı çevirmek için bir sınıf oluşturun. Ayrıca akış türünden Kredi nesnetürüne dönüştürmeniz gerekir.
 
-Daha sonra, sınıfı bir dosyaya seri hale getirmek için kod eklemeniz gerekir. `Main` yönteminde Varolan koddan sonra aşağıdaki kodu ekleyin:
+Daha sonra bir dosyaya sınıf serileştirmek için kod eklemeniz gerekir. `Main` Yöntemde varolan koddan sonra aşağıdaki kodu ekleyin:
 
 [!code-csharp[Save the existing Loan object](../../../../../samples/snippets/csharp/serialization/Program.cs#6)]
 
-Bu noktada, uygulamayı derleyip çalıştırabilirsiniz. İlk kez çalıştırıldığında, faiz oranlarının 7,5 ' de başlayacağını ve sonra 7,1 olarak değiştiğine dikkat edin. Uygulamayı kapatın ve sonra yeniden çalıştırın. Artık uygulama, kaydedilen dosyayı okudığı iletiyi yazdırır ve faiz oranı, kodu değiştiren koddan önce bile 7,1 olur.
+Bu noktada, uygulamayı yeniden oluşturabilir ve çalıştırabilirsiniz. İlk çalıştığında, faiz oranlarının 7,5'ten başlayıp 7,1'e değiştiğine dikkat edin. Uygulamayı kapatın ve yeniden çalıştırın. Şimdi, uygulama kaydedilen dosyayı okuduğu mesajını yazdırır ve faiz oranı, kodu değiştiren koddan önce bile 7,1'dir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Serileştirme (C#)](index.md)
+- [Serileştirme (C# )](index.md)
 - [C# Programlama Kılavuzu](../..//index.md)

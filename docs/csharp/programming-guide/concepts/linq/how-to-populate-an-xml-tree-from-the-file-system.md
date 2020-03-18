@@ -1,19 +1,19 @@
 ---
-title: Dosya sisteminden bir XML ağacını doldurma (C#)
+title: Dosya sisteminden bir XML ağacı nasıl doldurulur (C#)
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
 ms.openlocfilehash: beb44be1a787fa09b091aa48022dbb5b10c4632b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345779"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Dosya sisteminden bir XML ağacını doldurma (C#)
-XML ağaçlarının ortak ve yararlı bir uygulaması, hiyerarşik ad/değer veri deposu olarak kullanılır. Bir XML ağacını hiyerarşik verilerle doldurabilir ve sonra sorgulayabilir, dönüştürebilir ve gerekirse serileştirin. Bu kullanım senaryosunda, ad alanları ve boşluk davranışı gibi XML 'e özgü semantik birçoğu önemli değildir. Bunun yerine, XML ağacını küçük, bellekte, tek bir Kullanıcı hiyerarşik veritabanı olarak kullanıyorsunuz.  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Dosya sisteminden bir XML ağacı nasıl doldurulur (C#)
+XML ağaçlarının yaygın ve yararlı bir uygulaması hiyerarşik bir ad/değer veri deposu olarak kullanılır. Bir XML ağacını hiyerarşik verilerle doldurabilir ve sorgulayabilir, dönüştürebilir ve gerekirse seri hale getirebilirsiniz. Bu kullanım senaryosunda, ad alanları ve beyaz alan davranışı gibi XML'e özgü semantiklerin çoğu önemli değildir. Bunun yerine, XML ağacını küçük, bellekte tek kullanıcı hiyerarşik veritabanı olarak kullanıyorsunuz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, özyineleme kullanarak bir XML ağacını yerel dosya sisteminden doldurur. Ardından ağacı sorgular ve ağaçtaki tüm dosyaların boyutlarının toplamını hesaplıyor.  
+ Aşağıdaki örnek, özyineleme kullanarak yerel dosya sisteminden bir XML ağacını doldurur. Daha sonra, ağaçtaki tüm dosyaların boyutlarını hesaplayarak ağacı sorgular.  
   
 ```csharp  
 class Program  
@@ -46,7 +46,7 @@ class Program
 }  
 ```  
   
- Bu örnek aşağıdakine benzer bir çıktı üretir:  
+ Bu örnek, aşağıdakilere benzer çıktı üretir:  
   
 ```xml  
 <Dir Name="Tmp">  

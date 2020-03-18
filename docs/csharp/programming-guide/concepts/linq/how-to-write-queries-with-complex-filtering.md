@@ -1,29 +1,29 @@
 ---
-title: Karmaşık filtrelemeye (C#) sahip sorguları yazma
+title: Karmaşık filtreleme (C#) ile sorgu yazma
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: a4918631fed21967b402c5c56cfb8a211d44c139
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: bc85d7f1e5c5305407ad22f3ada908523313d964
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337356"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168524"
 ---
-# <a name="how-to-write-queries-with-complex-filtering-c"></a>Karmaşık filtrelemeye (C#) sahip sorguları yazma
-Bazen karmaşık filtrelerle LINQ to XML sorguları yazmak isteyebilirsiniz. Örneğin, belirli bir ada ve değere sahip bir alt öğesi olan tüm öğeleri bulmanız gerekebilir. Bu konu, karmaşık filtrelemeye sahip sorgu yazma örneği sağlar.  
+# <a name="how-to-write-queries-with-complex-filtering-c"></a>Karmaşık filtreleme (C#) ile sorgu yazma
+Bazen karmaşık filtrelerle XML sorgularına LINQ yazmak istersiniz. Örneğin, belirli bir ada ve değere sahip bir alt öğeye sahip tüm öğeleri bulmanız gerekebilir. Bu konu karmaşık filtreleme ile bir sorgu yazma bir örnek verir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir `Type` özniteliği "Shipping" ve bir alt `State` öğesi "NY" değerine eşit olan bir alt `Address` öğesi olan tüm `PurchaseOrder` öğelerinin nasıl bulunacağını gösterir. `Where` yan tümcesinde iç içe geçmiş bir sorgu kullanır ve koleksiyonda herhangi bir öğe varsa `Any` işleci `true` döndürür. Yöntem tabanlı sorgu söz dizimini kullanma hakkında daha fazla bilgi için bkz. [LINQ 'Te sorgu sözdizimi ve Yöntem sözdizimi](./query-syntax-and-method-syntax-in-linq.md).  
+ Bu örnek, "Gönderim" ile `PurchaseOrder` `Address` eşit bir `Type` özniteliği olan bir alt öğeye `State` sahip tüm öğeleri ve "NY" ile eşit bir alt öğeyi nasıl bulabileceğinizi gösterir. Yan tümcede iç içe bir `Any` sorgu kullanır ve koleksiyonda herhangi bir öğe varsa işleç döndürür. `true` `Where` Yöntem tabanlı sorgu sözdizimini kullanma hakkında bilgi [için, LINQ'da Sorgu Sözdizimi ve Yöntem Sözdizimi'ne](./query-syntax-and-method-syntax-in-linq.md)bakın.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birden fazla satın alma siparişi (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Birden Çok SatınAlma Siparişi (LINQ-XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
- `Any` işleci hakkında daha fazla bilgi için bkz. [nicelik belirteci işlemleriC#()](./quantifier-operations.md).  
+ `Any` Operatör hakkında daha fazla bilgi için [Quantifier Operations (C#)](./quantifier-operations.md)bakın.  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrders.xml");  
 IEnumerable<XElement> purchaseOrders =  
     from el in root.Elements("PurchaseOrder")  
-    where   
+    where
         (from add in el.Elements("Address")  
         where  
             (string)add.Attribute("Type") == "Shipping" &&  
@@ -42,9 +42,9 @@ foreach (XElement el in purchaseOrders)
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (C#LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
+ Aşağıdaki örnek, ad alanında olan XML için aynı sorguyu gösterir. Daha fazla bilgi için [Bkz. NameSpaces Genel Bakış (LINQ - XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanında birden fazla satın alma siparişi](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
+ Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Ad alanında birden çok Satınalma Siparişi.](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md)  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrdersInNamespace.xml");  
@@ -73,5 +73,5 @@ foreach (XElement el in purchaseOrders)
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Projeksiyon Işlemleri (C#)](./projection-operations.md)
-- [Nicelik belirteci IşlemleriC#()](./quantifier-operations.md)
+- [Projeksiyon İşlemleri (C#)](./projection-operations.md)
+- [Niceleyici İşlemleri (C#)](./quantifier-operations.md)

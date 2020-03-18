@@ -1,46 +1,46 @@
 ---
 title: Hangi .NET Core sürümünün kullanılacağını seçin
-description: .NET Core 'un programınızın çalışma zamanı sürümlerini otomatik olarak bulduğu ve seçtiği hakkında bilgi edinin. Ayrıca, bu makalede belirli bir sürümün nasıl zorlanacağı öğretilir.
+description: .NET Core'un programınız için çalışma zamanı sürümlerini otomatik olarak nasıl bulduğunu ve seçtiğini öğrenin. Ayrıca, bu makalede nasıl belirli bir sürümünü zorlamak için öğretir.
 author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
 ms.openlocfilehash: 55f04ce81f63753831fca8fa2e44811c44049733
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451005"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398827"
 ---
-# <a name="select-the-net-core-version-to-use"></a>Kullanılacak .NET Core sürümünü seçin
+# <a name="select-the-net-core-version-to-use"></a>Kullanmak için .NET Core sürümünü seçin
 
-Bu makalede, .NET Core araçları, SDK ve sürümleri seçme çalışma zamanı tarafından kullanılan ilkeler açıklanmaktadır. Bu ilkeler, belirtilen sürümleri kullanarak çalışan uygulamalar arasında bir denge sağlar ve hem geliştirici hem de Son Kullanıcı makinelerini yükseltme kolaylığını etkinleştirir. Bu ilkeler aşağıdaki eylemleri gerçekleştirir:
+Bu makalede, .NET Core araçları, SDK ve sürümleri seçmek için çalışma zamanı tarafından kullanılan ilkeler açıklanmaktadır. Bu ilkeler, belirtilen sürümleri kullanarak uygulamaları çalıştırma ve hem geliştirici hem de son kullanıcı makinelerini yükseltme kolaylığı sağlamak arasında bir denge sağlar. Bu ilkeler aşağıdaki eylemleri gerçekleştirir:
 
-- Güvenlik ve güvenilirlik güncelleştirmeleri dahil olmak üzere .NET Core 'un kolay ve verimli dağıtımı.
+- Güvenlik ve güvenilirlik güncelleştirmeleri de dahil olmak üzere .NET Core'un kolay ve verimli dağıtımı.
 - Hedef çalışma zamanından bağımsız olarak en son araçları ve komutları kullanın.
 
-Sürüm seçimi meydana gelir:
+Sürüm seçimi oluşur:
 
-- SDK komutunu çalıştırdığınızda, [SDK en son yüklenen sürümü kullanır](#the-sdk-uses-the-latest-installed-version).
-- Bir derleme oluşturduğunuzda, [hedef çerçeve takma adları derleme süresi API 'lerini tanımlar](#target-framework-monikers-define-build-time-apis).
-- .NET Core uygulaması çalıştırdığınızda, [hedef çerçeveye bağımlı uygulamalar ileri sarma](#framework-dependent-apps-roll-forward).
-- Kendi içinde olan bir uygulamayı yayımladığınızda, [kendi içinde kapsanan dağıtımlar seçili çalışma zamanını içerir](#self-contained-deployments-include-the-selected-runtime).
+- Bir SDK komutu çalıştırdığınızda, [SDK en son yüklenen sürümü kullanır.](#the-sdk-uses-the-latest-installed-version)
+- Bir derleme oluşturduğunuzda, [hedef çerçeve monikers yapı süresi API'leri tanımlar.](#target-framework-monikers-define-build-time-apis)
+- Bir .NET Core uygulaması çalıştırdığınızda, [hedef çerçeveye bağımlı uygulamalar ileri ye doğru yuvarlanıyor.](#framework-dependent-apps-roll-forward)
+- Bağımsız bir uygulama yayımladığınızda, [bağımsız dağıtımlar seçili çalışma süresini içerir.](#self-contained-deployments-include-the-selected-runtime)
 
-Bu belgenin geri kalanında bu dört senaryo incededir.
+Bu belgenin geri kalanı bu dört senaryoyu inceler.
 
-## <a name="the-sdk-uses-the-latest-installed-version"></a>SDK en son yüklü sürümü kullanıyor
+## <a name="the-sdk-uses-the-latest-installed-version"></a>SDK en son yüklenen sürümü kullanır
 
-SDK komutları `dotnet new` ve `dotnet run`içerir. .NET Core CLI her `dotnet` komutu için bir SDK sürümü seçmelidir. Şu durumlarda bile varsayılan olarak makinede yüklü olan en son SDK 'yi kullanır:
+SDK komutları `dotnet new` `dotnet run`içerir ve . .NET Core CLI her `dotnet` komut için bir SDK sürümü seçmelidir. Aşağıdakiler olsa bile, varsayılan olarak makineye yüklenen en son SDK'yı kullanır:
 
-- Proje .NET Core çalışma zamanının önceki bir sürümünü hedefliyor.
-- .NET Core SDK en son sürümü bir önizleme sürümüdür.
+- Proje,.NET Core çalışma zamanının önceki bir sürümünü hedefler.
+- .NET Core SDK'nın en son sürümü bir önizleme sürümüdür.
 
-Önceki .NET Core çalışma zamanı sürümlerini hedeflerken en son SDK özelliklerinden ve geliştirmelerinden yararlanabilirsiniz. .NET Core 'un birden fazla çalışma zamanı sürümünü, tüm projeler için aynı SDK araçlarını kullanarak farklı projelerde hedefleyebilirsiniz.
+Önceki .NET Core çalışma zamanı sürümlerini hedefalırken en son SDK özelliklerinden ve geliştirmelerinden yararlanabilirsiniz. Tüm projeler için aynı SDK araçlarını kullanarak .NET Core'un birden çok çalışma zamanı sürümlerini farklı projelerde hedefleyebilirsiniz.
 
-Nadir durumlarda, SDK 'nın önceki bir sürümünü kullanmanız gerekebilir. Bu sürümü bir [ *Global. JSON* dosyasında](../tools/global-json.md)belirtirsiniz. "En son kullanım" ilkesi, en son yüklenen sürümden daha eski bir .NET Core SDK sürümünü belirtmek için yalnızca *Global. JSON* kullanacağınızı gösterir.
+Nadir durumlarda, SDK'nın önceki bir sürümünü kullanmanız gerekebilir. Bu sürümü [ *global.json* dosyasında](../tools/global-json.md)belirtirsiniz. "En son kullan" ilkesi, *global.json'ı* yalnızca .NET Core SDK sürümünü en son yüklenen sürümden daha erken belirtmek için kullandığınız anlamına gelir.
 
-*Global. JSON* dosya hiyerarşisinde herhangi bir yere yerleştirilebilir. CLı, bulduğu ilk *Global. JSON* için proje dizininden yukarı doğru arama yapar. Verilen bir *Global. JSON* dosyası, dosya sistemindeki yerine hangi projelerin uygulanacağını kontrol edersiniz. .NET CLı, yolu geçerli çalışma dizininden yukarı doğru gezerek bir *Global. JSON* dosyası arar. Bulunan ilk *Global. JSON* dosyası kullanılan sürümü belirtiyor. Bu SDK sürümü yüklüyse, bu sürüm kullanılır. *Global. JSON* IÇINDE belirtilen SDK bulunamazsa, .net CLI uyumlu bir SDK seçmek için [eşleşen kuralları](../tools/global-json.md#matching-rules) kullanır veya Hiçbiri bulunmazsa başarısız olur.
+*global.json* dosya hiyerarşisinde herhangi bir yere yerleştirilebilir. CLI, bulduğu ilk *global.json* için proje dizininden yukarı doğru arama lar arar. Belirli bir *global.json'Un* dosya sistemindeki yeri ile hangi projelere uygulanabilen bir proje olduğunu siz denetlersiniz. .NET CLI, bir *global.json* dosyasını arar ve yolu geçerli çalışma dizininden yukarı doğru geziner. Bulunan ilk *global.json* dosyası, kullanılan sürümü belirtir. Bu SDK sürümü yüklenmişse, bu sürüm kullanılır. *global.json'da* belirtilen SDK bulunamazsa, .NET CLI uyumlu bir SDK seçmek için [eşleşen kurallar](../tools/global-json.md#matching-rules) kullanır veya yoksa başarısız olur.
 
-Aşağıdaki örnek, *Global. JSON* sözdizimini göstermektedir:
+Aşağıdaki *örnekglobal.json* sözdizimini gösterir:
 
 ``` json
 {
@@ -50,67 +50,67 @@ Aşağıdaki örnek, *Global. JSON* sözdizimini göstermektedir:
 }
 ```
 
-SDK sürümü seçme işlemi şu şekilde yapılır:
+SDK sürümünü seçme işlemi:
 
-1. `dotnet`, geçerli çalışma dizininden yukarı doğru bir şekilde geri gidilerek bir *Global. JSON* dosyasını arar.
-1. `dotnet`, bulunan ilk *Global. JSON* içinde belirtilen SDK 'yı kullanır.
-1. `dotnet`, *Global. JSON* bulunmazsa, en son yüklenen SDK 'yı kullanır.
+1. `dotnet`*global.json* dosyası için arama lar, geçerli çalışma dizininden yukarı doğru yol üzerinde yinelemeli olarak ters gezinme.
+1. `dotnet`bulunan ilk *global.json* belirtilen SDK kullanır.
+1. `dotnet`*global.json* bulunamazsa en son yüklenen SDK'yı kullanır.
 
-*Genel. JSON*' daki makalenin [eşleştirme KURALLARı](../tools/global-json.md#matching-rules) bölümünde bir SDK sürümü seçme hakkında daha fazla bilgi edinebilirsiniz.
+*Global.json*hakkındaki makalenin [Eşleşen kurallar](../tools/global-json.md#matching-rules) bölümünde bir SDK sürümü seçme hakkında daha fazla bilgi edinebilirsiniz.
 
-## <a name="target-framework-monikers-define-build-time-apis"></a>Hedef çerçeve takma adları derleme süresi API 'Lerini tanımlar
+## <a name="target-framework-monikers-define-build-time-apis"></a>Hedef Çerçeve Monikers yapı süresi API'leri tanımlamak
 
-Projenizi bir **hedef çerçeve bilinen** adı 'nda (tfd) tanımlanan API 'lerle derleyin. [Hedef çerçevesini](../../standard/frameworks.md) proje dosyasında belirtirsiniz. Proje dosyanızdaki `TargetFramework` öğesini aşağıdaki örnekte gösterildiği gibi ayarlayın:
+Projenizi **Hedef Çerçeve Takma Adı** 'nda (TFM) tanımlanan API'ler'e karşı oluşturursunuz. Proje dosyasındaki [hedef çerçeveyi](../../standard/frameworks.md) belirtirsiniz. Proje `TargetFramework` dosyanızdaki öğeyi aşağıdaki örnekte gösterildiği şekilde ayarlayın:
 
 ``` xml
 <TargetFramework>netcoreapp2.0</TargetFramework>
 ```
 
-Projenizi birden çok TFMs 'ye karşı derleyebilirsiniz. Birden çok hedef çerçeveyi ayarlamak kitaplıklar için daha yaygındır, ancak uygulamalarla da gerçekleştirilebilir. Bir `TargetFrameworks` özelliği (`TargetFramework`çoğul) belirtirsiniz. Hedef çerçeveler, aşağıdaki örnekte gösterildiği gibi noktalı virgülle ayrılmıştır:
+Projenizi birden çok TFM'ye karşı oluşturabilirsiniz. Birden çok hedef çerçeveleri ayarlama kitaplıklar için daha yaygındır, ancak uygulamalarla da yapılabilir. Bir `TargetFrameworks` özellik (çoğul) belirtirsiniz. `TargetFramework` Hedef çerçeveler aşağıdaki örnekte gösterildiği gibi yarı kolon-delimited vardır:
 
 ``` xml
 <TargetFrameworks>netcoreapp2.0;net47</TargetFrameworks>
 ```
 
-Belirli bir SDK, birlikte geldiği çalışma zamanının hedef çerçevesine katıp sabit bir çerçeve kümesini destekler. Örneğin, .NET Core 2,0 SDK, `netcoreapp2.0` hedef çerçevesinin bir uygulamasıdır .NET Core 2,0 çalışma zamanını içerir. .NET Core 2,0 SDK `netcoreapp1.0`, `netcoreapp1.1`ve `netcoreapp2.0` destekler, ancak `netcoreapp2.1` (veya üzeri) değil. `netcoreapp2.1`için derlemek üzere .NET Core 2,1 SDK 'sını yüklersiniz.
+Belirli bir SDK, birlikte sevk edilen çalışma zamanının hedef çerçevesine kapaklı sabit bir çerçeve kümesini destekler. Örneğin, .NET Core 2.0 SDK `netcoreapp2.0` hedef çerçevenin bir uygulamasıdır .NET Core 2.0 çalışma süresini içerir. .NET Core 2.0 `netcoreapp1.0`SDK `netcoreapp1.1`destekler `netcoreapp2.0` , `netcoreapp2.1` ve ama değil (veya daha yüksek). .NET Core 2.1 SDK'yı `netcoreapp2.1`kurmak için yüklersiniz.
 
-.NET Standard hedef çerçeveler, SDK 'nın birlikte geldiği çalışma zamanının hedef çerçevesine de dönüştürülür. .NET Core 2,0 SDK `netstandard2.0`.
+.NET Standart hedef çerçeveleri de SDK gemilerinin çalışma zamanının hedef çerçevesine kapaklanır. .NET Core 2.0 SDK `netstandard2.0`ile kapatılır.
 
-## <a name="framework-dependent-apps-roll-forward"></a>Çerçeveye bağımlı uygulamalar ileri alma
+## <a name="framework-dependent-apps-roll-forward"></a>Çerçeveye bağımlı uygulamalar ileri sarma
 
-Bir uygulamayı [`dotnet run`](../tools/dotnet-run.md), [**çerçeveye bağlı bir dağıtımdan**](../deploying/index.md#publish-runtime-dependent) [`dotnet myapp.dll`](../tools/dotnet.md#description)veya `myapp.exe`olan [**çerçeveye bağlı bir yürütülebilirden**](../deploying/index.md#publish-runtime-dependent) çalıştırdığınızda, `dotnet` çalıştırılabilir dosya uygulamanın **ana bilgisayarı** olur.
+Bir [`dotnet run`](../tools/dotnet-run.md)uygulamayı kaynaktan , [**framework'e bağımlı**](../deploying/index.md#publish-runtime-dependent) bir [`dotnet myapp.dll`](../tools/dotnet.md#description)dağıtımdan veya framework'e `myapp.exe`bağımlı `dotnet` bir [**yürütülebilir**](../deploying/index.md#publish-runtime-dependent) ile çalıştırdığınızda çalıştırılabilir uygulamanın **ana bilgisayarı** dır.
 
-Konak makinede yüklü en son düzeltme eki sürümünü seçer. Örneğin, proje dosyanızda `netcoreapp2.0` belirttiyseniz ve en son .NET çalışma zamanı yüklü `2.0.4`, `2.0.4` çalışma zamanı kullanılır.
+Ana bilgisayar, makineye yüklenen en son yama sürümünü seçer. Örneğin, proje dosyanızda belirttiyseniz `netcoreapp2.0` ve `2.0.4` en son .NET çalışma zamanı `2.0.4` yüklüyse, çalışma zamanı kullanılır.
 
-Kabul edilebilir `2.0.*` sürümü bulunamazsa yeni bir `2.*` sürümü kullanılır. Örneğin, `netcoreapp2.0` belirttiyseniz ve yalnızca `2.1.0` yüklüyse, uygulama `2.1.0` çalışma zamanını kullanarak çalışır. Bu davranış, "ikincil sürüm alma" olarak adlandırılır. Alt sürümler de göz önünde bulundurulmaz. Kabul edilebilir çalışma zamanı yüklü olmadığında uygulama çalıştırılmaz.
+Kabul edilebilir `2.0.*` bir sürüm bulunamazsa, yeni `2.*` bir sürüm kullanılır. Örneğin, belirttiyseniz `netcoreapp2.0` ve `2.1.0` yalnızca yüklüyse, uygulama `2.1.0` çalışma süresini kullanarak çalışır. Bu davranışa "küçük sürüm roll-forward" adı verilir. Alt sürümler de dikkate alınmaz. Kabul edilebilir bir çalışma zamanı yüklenmiyorsa, uygulama çalışmaz.
 
-Birkaç kullanım örneği, 2,0 hedefliyorsanız davranışı gösterir:
+2.0'ı hedefliyorsanız, davranışı gösteren birkaç kullanım örneği:
 
-- 2,0 belirtildi. 2.0.5, en yüksek düzeltme eki sürümüdür. 2.0.5 kullanılır.
-- 2,0 belirtildi. 2,0. * sürüm yüklendi. 1.1.1, en yüksek çalışma zamanının yüklü olduğunu. Bir hata iletisi görüntülenir.
-- 2,0 belirtildi. 2,0. * sürüm yüklendi. 2.2.2, en yüksek 2. x çalışma zamanı sürümü yüklenir. 2.2.2 kullanılır.
-- 2,0 belirtildi. 2\. x sürümü yüklü değil. 3.0.0 yüklendi. Bir hata iletisi görüntülenir.
+- 2.0 belirtilir. 2.0.5 en yüksek yama sürümü yüklenir. 2.0.5 kullanılır.
+- 2.0 belirtilir. 2.0.* sürümü yok. 1.1.1 en yüksek çalışma süresi yüklenir. Bir hata iletisi görüntülenir.
+- 2.0 belirtilir. 2.0.* sürümü yok. 2.2.2 en yüksek 2.x çalışma zamanı sürümüdür. 2.2.2 kullanılır.
+- 2.0 belirtilir. 2.x sürümü yok. 3.0.0 yüklenir. Bir hata iletisi görüntülenir.
 
-İkincil sürüm al-ileri, son kullanıcıları etkileyebilecek bir yan etkiye sahiptir. Şu senaryoyu göz önünde bulundurun:
+Küçük sürüm roll-forward son kullanıcıları etkileyebilecek bir yan etkisi vardır. Şu senaryoyu göz önünde bulundurun:
 
-1. Uygulama, 2,0 'in gerekli olduğunu belirtir.
-2. Çalıştırıldığında, 2,0. * sürümü yüklü değildir, ancak 2.2.2. Sürüm 2.2.2 kullanılacak.
-3. Daha sonra, Kullanıcı 2.0.5 yükleyip uygulamayı yeniden çalıştırdığında 2.0.5 artık kullanılacaktır.
+1. Uygulama 2.0 gerekli olduğunu belirtir.
+2. Çalıştırıldığında, sürüm 2.0.* yüklenmez, ancak 2.2.2'dir. Sürüm 2.2.2 kullanılacaktır.
+3. Daha sonra, kullanıcı 2.0.5 yükler ve uygulamayı yeniden çalıştırın, 2.0.5 şimdi kullanılacaktır.
 
-Özellikle ikili verileri serileştirme gibi senaryolar için 2.0.5 ve 2.2.2 farklı şekilde davranması olasıdır.
+2.0.5 ve 2.2'nin, özellikle ikili verileri serileştirme gibi senaryolarda farklı davranması mümkündür.
 
-## <a name="self-contained-deployments-include-the-selected-runtime"></a>Kendi içindeki dağıtımlar seçili çalışma zamanını içerir
+## <a name="self-contained-deployments-include-the-selected-runtime"></a>Bağımsız dağıtımlar, seçili çalışma süresini içerir
 
-Bir uygulamayı [**kendi kendine dahil**](../deploying/index.md#publish-self-contained)edilen bir dağıtım olarak yayımlayabilirsiniz. Bu yaklaşım, uygulamanızla birlikte .NET Core çalışma zamanı ve kitaplıklarını paketler. Kendi içinde olan dağıtımlar çalışma zamanı ortamlarına bağımlılığı yoktur. Çalışma zamanı sürüm seçimi yayımlama zamanında gerçekleşir, çalışma zamanı değildir.
+Bir uygulamayı bağımsız bir dağıtım olarak [**yayımlayabilirsiniz.**](../deploying/index.md#publish-self-contained) Bu yaklaşım, .NET Core çalışma zamanını ve kitaplıklarını uygulamanızla bir araya alır. Bağımsız dağıtımların çalışma zamanı ortamlarına bağımlılığı yoktur. Çalışma zamanı sürüm seçimi, çalışma zamanında değil, yayımlama zamanında gerçekleşir.
 
-Yayımlama işlemi, belirtilen çalışma zamanı ailesinin en son düzeltme eki sürümünü seçer. Örneğin, .NET Core 2,0 çalışma zamanı ailesindeki en son düzeltme eki sürümüdür `dotnet publish` .NET Core 2.0.4 ' yi seçmeyecektir. Hedef Framework (en son yüklenen güvenlik düzeltme ekleri dahil) uygulamayla birlikte paketlenir.
+Yayımlama işlemi, verilen çalışma zamanı ailesinin en son yama sürümünü seçer. Örneğin, `dotnet publish` .NET Core 2.0 çalışma zamanı ailesindeki en son yama sürümüyse .NET Core 2.0.4'u seçer. Hedef çerçeve (en son yüklenen güvenlik yamaları dahil) uygulama ile birlikte paketlenir.
 
-Bir uygulama için belirtilen minimum sürüm karşılanmazsa, bu bir hatadır. `dotnet publish`, en son çalışma zamanı düzeltme eki sürümüne bağlar (belirli bir ana. ikincil sürüm ailesi içinde). `dotnet publish`, `dotnet run`'ın geri alma semantiğini desteklemez. Düzeltme ekleri ve bağımsız dağıtımlar hakkında daha fazla bilgi için .NET Core Uygulamaları Dağıtma konusundaki [çalışma zamanı düzeltme eki seçimi](../deploying/runtime-patch-selection.md) başlıklı makaleye bakın.
+Bir uygulama için belirtilen minimum sürüm karşılanmamışsa bu bir hatadır. `dotnet publish`en son çalışma zamanı yama sürümüne bağlanır (belirli bir major.minor sürüm ailesi içinde). `dotnet publish`roll-forward semantikini `dotnet run`desteklemez. Yamalar ve bağımsız dağıtımlar hakkında daha fazla bilgi için .NET Core uygulamalarını dağıtan [çalışma zamanı düzeltme eki seçimi](../deploying/runtime-patch-selection.md) yle ilgili makaleye bakın.
 
-Kendi içinde olan dağıtımlar belirli bir düzeltme eki sürümü gerektirebilir. Aşağıdaki örnekte gösterildiği gibi, proje dosyasında en düşük çalışma zamanı düzeltme eki sürümünü (daha yüksek veya daha düşük sürümlere) geçersiz kılabilirsiniz:
+Bağımsız dağıtımlar belirli bir yama sürümü gerektirebilir. Aşağıdaki örnekte gösterildiği gibi proje dosyasındaki minimum çalışma zamanı düzeltme ekini (daha yüksek veya daha düşük sürümlere) geçersiz kılabilirsiniz:
 
 ``` xml
 <RuntimeFrameworkVersion>2.0.4</RuntimeFrameworkVersion>
 ```
 
-`RuntimeFrameworkVersion` öğesi varsayılan sürüm ilkesini geçersiz kılar. Kendi içinde olan dağıtımlar için `RuntimeFrameworkVersion`, *tam* çalışma zamanı Framework sürümünü belirtir. Çerçeveye bağımlı uygulamalar için `RuntimeFrameworkVersion`, gereken *En düşük* çalışma zamanı çerçevesi sürümünü belirtir.
+Öğe `RuntimeFrameworkVersion` varsayılan sürüm ilkesini geçersiz kılar. Bağımsız dağıtımlar için, `RuntimeFrameworkVersion` *tam* çalışma zamanı çerçeve sürümünü belirtir. Çerçeveye bağımlı uygulamalar için, gerekli `RuntimeFrameworkVersion` *en az* çalışma zamanı çerçeve sürümünü belirtir.

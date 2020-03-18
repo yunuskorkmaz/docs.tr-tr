@@ -1,64 +1,64 @@
 ---
-title: Birim testlerini yazmak için en iyi uygulamalar
-description: .NET Core ve .NET Standard projeleri için Code Quality ve esnekliği çalıştıran birim testlerini yazmak için en iyi yöntemleri öğrenin.
+title: Birim testleri yazmak için en iyi uygulamalar
+description: .NET Core ve .NET Standard projeleri için kod kalitesini ve esnekliğini artıran birim testleri yazmak için en iyi uygulamaları öğrenin.
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.openlocfilehash: 586373381bcb18384cbf29bb2ca2bd220a2b2d3d
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240967"
 ---
-# <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core ve .NET Standard ile birim testi en iyi uygulamaları
+# <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core ve .NET Standard ile en iyi uygulamaları test etme birimi
 
-Birim testlerini yazmanın çok sayıda avantajı vardır; gerileme sayesinde, belge sağlar ve iyi tasarımı kolaylaştırır. Ancak, okuma ve Brittle birim testleri, kod tabanınız üzerinde wreak düzensizliğe olabilir. Bu makalede, .NET Core ve .NET Standard projeleriniz için birim testi tasarımı ile ilgili bazı en iyi yöntemler açıklanmaktadır.
+Birim testleri yazmanın sayısız faydası vardır; gerilemeye yardımcı olurlar, dokümantasyon sağlarlar ve iyi tasarımı kolaylaştırırlar. Ancak, okunması zor ve kırılgan birim testleri kod tabanınızda hasara yol açabilir. Bu makalede, .NET Core ve .NET Standard projeleriniz için birim test tasarımıyla ilgili en iyi bazı uygulamalar açıklanmaktadır.
 
-Bu kılavuzda, testlerinizi dayanıklı ve kolay bir şekilde anlamak için birim testlerini yazarken bazı en iyi yöntemleri öğreneceksiniz.
+Bu kılavuzda, testlerinizi esnek ve kolay anlaşılır tutmak için birim testleri yazarken bazı en iyi uygulamaları öğreneceksiniz.
 
-[John Reese](https://reese.dev) tarafından, [Roy Osherove](https://osherove.com/) için teşekkürler
+John [Reese](https://reese.dev) tarafından [Roy Osherove](https://osherove.com/) için özel teşekkür
 
-## <a name="why-unit-test"></a>Birim testi neden?
+## <a name="why-unit-test"></a>Neden birim testi?
 
-### <a name="less-time-performing-functional-tests"></a>İşlevsel testleri daha az zaman gerçekleştiriyor
-İşlevsel testler pahalıdır. Genellikle uygulamayı açıp, beklenen davranışı doğrulamak için sizin (ya da başka birinin) izlemeniz gereken bir dizi adımı gerçekleştirerek. Bu adımlar, her zaman sınayıcı tarafından bilinmeyebilir, bu da testi yürütmek için alana daha bilgili bir kişiye ulaşmaları gerektiği anlamına gelir. Kendisini test etmek, önemsiz değişiklikler için saniye veya daha büyük değişiklikler için dakikalar alabilir. Son olarak, bu işlem sistemde yaptığınız her değişiklik için tekrarlanmış olmalıdır.
+### <a name="less-time-performing-functional-tests"></a>İşlevsel testler gerçekleştirmede daha az zaman
+Fonksiyonel testler pahalıdır. Bunlar genellikle uygulamayı açmayı ve beklenen davranışı doğrulamak için sizin (veya başka birinin) izlemesi gereken bir dizi adımı gerçekleştirmeyi içerir. Bu adımlar her zaman test eden tarafından bilinmeyebilir, bu da testi gerçekleştirmek için bölgede daha bilgili birine ulaşmaları gerektiği anlamına gelir. Test in kendisi önemsiz değişiklikler için saniyeler, daha büyük değişiklikler için dakikalar sürebilir. Son olarak, bu işlem sistemde yaptığınız her değişiklik için yinelenmelidir.
 
-Diğer yandan birim testleri, diğer taraftan, bir düğmeye basarak çalıştırılabilir ve çok büyük bir sistem bilgisi gerektirmez. Testin başarılı veya başarısız olmasına bakılmaksızın, bireysel olarak değil Test Çalıştırıcısına.
+Birim testleri, diğer taraftan, milisaniye sürebilir, bir düğmeye basarak çalıştırılabilir ve mutlaka büyük sistem herhangi bir bilgi gerektirmez. Testin geçip geçmediği tek tek değil, test koşucusudur.
 
-### <a name="protection-against-regression"></a>Gerileme karşı koruma
-Gerileme hataları, uygulamada bir değişiklik yapıldığında ortaya çıkan arızalardır. Test ediciler için, yalnızca yeni özelliklerini test etmek ve daha önce uygulanan özelliklerin beklendiği gibi çalıştığını doğrulamak için önceden varolan özellikleri test etmek yaygın bir özelliktir.
+### <a name="protection-against-regression"></a>Regresyona karşı koruma
+Regresyon kusurları, uygulamada değişiklik yapıldığında ortaya çıkan kusurlardır. Test edenlerin, daha önce uygulanan özelliklerin beklendiği gibi çalıştığını doğrulamak için yalnızca yeni özelliklerini değil, önceden var olan özellikleri de sınaması yaygındır.
 
-Birim testinde, her derlemeden sonra veya bir kod satırını değiştirdikten sonra bile tüm test paketlerinizi yeniden çalıştırmak mümkündür. Yeni kodunuzun mevcut işlevselliği bozmadığından emin olabilirsiniz.
+Birim testi ile, her yapıdan sonra veya hatta bir kod satırını değiştirdikten sonra tüm test paketinizi yeniden çalıştırmak mümkündür. Yeni kodunuzu varolan işlevselliği bozmaz güven verir.
 
-### <a name="executable-documentation"></a>Yürütülebilir belge
-Belirli bir yöntemin ne yaptığını veya belirli bir giriş verilen bir girişi nasıl davranacağını her zaman açık olmayabilir. Kendinize şunu sorabilirsiniz: boş bir dize geçirdiğimde bu yöntem nasıl davranır? Değer?
+### <a name="executable-documentation"></a>Çalıştırılabilir belgeler
+Belirli bir yöntemin ne yaptığı veya belirli bir girdi verildiğinde nasıl çalıştığı her zaman açık olmayabilir. Kendinize sorabilirsiniz: Boş bir dize geçersem bu yöntem nasıl olur? Null?
 
-Bir iyi adlı birim testi paketiniz olduğunda, her bir test, belirli bir giriş için beklenen çıktıyı açıkça açıklayabilmelidir. Ayrıca, aslında gerçekten çalıştığını doğrulayabilmelidir.
+İyi adlandırılmış birim testleri paketiniz olduğunda, her test belirli bir giriş için beklenen çıktıyı açıkça açıklayabilmelidir. Buna ek olarak, gerçekten çalıştığını doğrulamak gerekir.
 
-### <a name="less-coupled-code"></a>Daha az bağlanmış kod
-Kod sıkı bir şekilde birleştirildiğinde, birim testi zor olabilir. Yazmakta olduğunuz kod için birim testleri oluşturmadan, bağlantısı daha az görünebilir.
+### <a name="less-coupled-code"></a>Daha az birleştirilmiş kod
+Kod sıkıca birleştiğinde, testi birleştirmek zor olabilir. Yazdığınız kod için birim testleri oluşturmadan, bağlantı daha az belirgin olabilir.
 
-Kodunuz için yazma testleri doğal olarak kodunuzu ayırır, çünkü aksi takdirde test daha zordur.
+Kodunuz için testler yazmak doğal olarak kodunuzu ayıracaktır, çünkü aksi takdirde test etmek daha zor olacaktır.
 
-## <a name="characteristics-of-a-good-unit-test"></a>İyi birim testinin özellikleri
+## <a name="characteristics-of-a-good-unit-test"></a>İyi bir birim testinin özellikleri
 
-- **Hızlı**. Yetişkinlere yönelik projelerin binlerce birim testi olması için bu, yaygın olmayan bir durumdur. Birim testlerinin çalışması çok az zaman almalıdır. Mayacak.
-- **Yalıtılmıştır**. Birim testleri tek başına, yalıtımıyla çalıştırılabilir ve dosya sistemi veya veritabanı gibi herhangi bir dış faktörde bağımlılığı yoktur.
-- **Yinelenebilir**. Bir birim testinin çalıştırılması sonuçlarıyla tutarlı olmalıdır, diğer bir deyişle, çalışma arasındaki herhangi bir şeyi değiştirmemelisiniz, her zaman aynı sonucu döndürür.
-- **Kendi kendine denetim**. Testin, herhangi bir insan etkileşimi olmadan başarılı veya başarısız olup olmadığını otomatik olarak algılayabilmesi gerekir.
-- **Zamanında**. Bir birim testinin, test edilmekte olan koda kıyasla yazılması, ne zaman orantılı bir şekilde sürmemelidir. Kodu yazmaya kıyasla kodun büyük bir süre sürmesi sınamasını fark ederseniz, daha fazla test edilen bir tasarıma göz önünde bulundurun.
+- **Hızlı.** Olgun projelerin binlerce birim testi olması nadir değildir. Birim testleri çalıştırmak için çok az zaman almalısınız. Milisaniye.
+- **İzole edilmiş.** Birim testleri tek başınadır, yalıtımda çalıştırılabilir ve dosya sistemi veya veritabanı gibi dış etkenlere hiçbir bağımlılığı yoktur.
+- **Tekrarlanabilir.** Bir birim testi çalıştırmak sonuçlarıyla tutarlı olmalıdır, yani, çalıştırmalar arasında hiçbir şeyi değiştirmezseniz her zaman aynı sonucu döndürür.
+- **Kendi kendini kontrol etme.** Test, herhangi bir insan etkileşimi olmadan geçip geçemediğini veya başarısız olup olmadığını otomatik olarak algılayabilmelidir.
+- **Zamanında.** Bir birim testi, test edilen kodla karşılaştırıldığında yazmak için orantısız olarak uzun bir zaman almamalıdır. Kodu yazmaya kıyasla büyük miktarda zaman alarak kodu sınamayı bulursanız, daha sınanabilir bir tasarım düşünün.
 
-## <a name="lets-speak-the-same-language"></a>Aynı dili konuşalım
-Test hakkında konuşurken, *sahte* terimi çok yanlış bir şekilde görülür. Aşağıda birim testlerini yazarken en yaygın *Fakes* türleri tanımlanmaktadır:
+## <a name="lets-speak-the-same-language"></a>Aynı dili konuşalım.
+Terim *mock* ne yazık ki çok test hakkında konuşurken yanlış. Birim testleri yazarken en yaygın *sahte* türleri aşağıda tanımlanır:
 
-*Sahte* -sahte, bir saplama ya da bir sahte nesne tanımlamakta kullanılabilecek genel bir terimdir. Bunun bir saplama veya bir sahte olup olmadığı, kullanıldığı bağlama göre değişir. Diğer bir deyişle, sahte bir saplama veya bir sahte olabilir.
+*Sahte* - Sahte bir saplama veya sahte bir nesne tanımlamak için kullanılabilecek genel bir terimdir. Bir saplama veya bir alay olup olmadığını kullanılan bağlam bağlıdır. Yani başka bir deyişle, sahte bir saplama ya da bir alay olabilir.
 
-*Sahte nesne* , sistem içindeki bir birim testinin geçtiğini veya başarısız olduğunu belirten sahte bir nesnedir. Bir sahte, bir öne çıkana kadar sahte olarak başlatılır.
+*Mock* - Sahte nesne, birim testinin geçip geçmediğine karar veren sistemdeki sahte bir nesnedir. Bir sahte karşı iddia edilene kadar bir Sahte olarak başlar.
 
-*Saplama* -bir saplama, sistemdeki mevcut bir bağımlılık (veya ortak çalışan) için denetlenebilir bir değiştirme işlemi olur. Bir saplama kullanarak, doğrudan bağımlılık ile ilgilenmeden kodunuzu test edebilirsiniz. Varsayılan olarak, sahte bir saplama olarak başlatılır.
+*Saplama* - Saplama, sistemdeki varolan bir bağımlılık (veya ortak layıcı) için denetlenebilir bir değiştirmedir. Bir saplama kullanarak, doğrudan bağımlılık ile uğraşmadan kodunuzu sınayabilirsiniz. Varsayılan olarak, sahte bir saplama olarak başlar.
 
-Aşağıdaki kod parçacığını göz önünde bulundurun:
+Aşağıdaki kod parçacıklarını göz önünde bulundurun:
 
 ```csharp
 var mockOrder = new MockOrder();
@@ -69,9 +69,9 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Bu, sahte olarak başvurulan bir saplama örneği olacaktır. Bu durumda, bir saplama olur. Siparişi, `Purchase` (test altındaki sistem) örneklendirilecek bir yol olarak geçiriyoruz. `MockOrder` adı da çok yanıltıcı olduğundan, sıra bir sahte değildir.
+Bu saplama bir mock olarak anılacaktır bir örnek olacaktır. Bu durumda, bir saplama olduğunu. Anında `Purchase` (test altındaki sistem) yapabilmek için Sipariş'i sadece geçiyorsunuz. Adı `MockOrder` da çok yanıltıcı dır, çünkü yine, sipariş bir alay değildir.
 
-Daha iyi bir yaklaşım
+Daha iyi bir yaklaşım olurdu
 
 ```csharp
 var stubOrder = new FakeOrder();
@@ -82,9 +82,9 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Sınıfı `FakeOrder`olarak yeniden adlandırarak, sınıfı çok daha genel hale getirdiğiniz için sınıf, bir sahte veya saplama olarak kullanılabilir. Test çalışması için ne olursa daha iyidir. Yukarıdaki örnekte `FakeOrder` bir saplama olarak kullanılır. Onaylama sırasında herhangi bir şekil veya formda `FakeOrder` kullanmıyoruz. `FakeOrder`, oluşturucunun gereksinimlerini karşılamak için `Purchase` sınıfına geçildi.
+Sınıfı yeniden `FakeOrder`adlandırarak, sınıfı çok daha genel hale getirdiniz, sınıf sahte veya saplama olarak kullanılabilir. Hangisi test çalışması için daha iyi. Yukarıdaki örnekte, `FakeOrder` saplama olarak kullanılır. İddia sırasında herhangi `FakeOrder` bir şekil veya biçimde kullanmıyorsunuz. `FakeOrder`sadece yapıcı gereksinimlerini `Purchase` karşılamak için sınıfa geçti.
 
-Bunu bir sahte olarak kullanmak için şöyle bir şey yapabilirsiniz
+Sahte olarak kullanmak için böyle bir şey yapabilirsin.
 
 ```csharp
 var mockOrder = new FakeOrder();
@@ -95,123 +95,123 @@ purchase.ValidateOrders();
 Assert.True(mockOrder.Validated);
 ```
 
-Bu durumda, bir özelliği sahte (buna karşı ele alınır) olarak denetlemekte, yukarıdaki kod parçacığında `mockOrder` bir sahte olur.
+Bu durumda, Sahte bir özelliği kontrol (buna karşı iddia), bu yüzden yukarıdaki kod `mockOrder` snippet, bir Mock olduğunu.
 
 > [!IMPORTANT]
-> Bu terminolojinin doğru olması önemlidir. Saplailerinizi "izlerinizi" çağırırsanız, diğer geliştiriciler sizin amacınızla ilgili yanlış varsayımlar yapar.
+> Bu terminolojiyi doğru yapmak önemlidir. Saplamalarınıza "alay" diyorsanız, diğer geliştiriciler niyetiniz hakkında yanlış varsayımlarda bulunurlar.
 
-Her şeyi ve saplamalar hakkında hatırlayabilmeniz gereken ana şey, her bir saplamaya benzer ancak sahte nesne ile ilgili olarak sizin için onay almanız gerekir.
+Alaylar ve saplamalar hakkında hatırlanması gereken en önemli şey, alayların saplamalar gibi olduğudur, ama siz sahte nesneye karşı iddiada bulunmaktadırsınız, oysa siz bir saplama ya karşı iddiada yoktur.
 
-## <a name="best-practices"></a>Önerilen uygulamalar
+## <a name="best-practices"></a>En iyi uygulamalar
 
 ### <a name="naming-your-tests"></a>Testlerinizi adlandırma
 Testinizin adı üç bölümden oluşmalıdır:
 
-- Test edilmekte olan yöntemin adı.
-- Altında test edilmekte olan senaryo.
+- Test edilen yöntemin adı.
+- Test edildiği senaryo.
 - Senaryo çağrıldığında beklenen davranış.
 
 #### <a name="why"></a>Neden?
 
-- Adlandırma standartları, testin amacını açıkça ifade ettiğinden önemlidir.
+- Adlandırma standartları önemlidir, çünkü testin amacını açıkça ifade ederler.
 
-Testler yalnızca kodunuzun çalıştığından emin olmanızı sağlamaktan daha fazla. Yalnızca birim testleri paketine bakarak, kodun kendisini araymaksızın bile kodunuzun davranışını çıkarsanbilmelisiniz. Ayrıca, testler başarısız olduğunda, beklentilerinizi tam olarak hangi senaryoların karşılayabileceğini görebilirsiniz.
+Testler, kodunuzu çalıştığından emin olmaktan çok daha fazlasıdır, ayrıca belgeler de sağlar. Birim testleri paketine bakarak, kodunuzun davranışını kodun uzun bir bölümüne bakmadan çıkarabilmelisiniz. Ayrıca, testler başarısız olduğunda, tam olarak hangi senaryoların beklentilerinizi karşılamadığını görebilirsiniz.
 
-#### <a name="bad"></a>Hatalı
+#### <a name="bad"></a>Kötü:
 [!code-csharp[BeforeNaming](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeNaming)]
 
-#### <a name="better"></a>Görünmesi
+#### <a name="better"></a>Iyi:
 [!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="arranging-your-tests"></a>Testlerinizi düzenleme
-Birim testi yaparken, **düzenleme, Yasası, onaylama** ortak bir modeldir. Adından da anlaşılacağı gibi, üç ana eylemden oluşur:
+**Düzenleme, Hareket, Assert** birim test edildiğinde ortak bir desendir. Adından da anlaşılacağı gibi, üç ana eylemden oluşur:
 
-- Nesnelerinizi *düzenleyin* , oluşturma ve bunları gerektiği şekilde ayarlama.
-- Bir nesne üzerinde *işlem* yapın.
-- Bir şeyin beklenildiği konusunda bir *onaylama* .
+- Nesnelerinizi *düzenleyin,* bunları oluşturup gerektiği gibi ayarlayın.
+- Bir nesneye göre *hareket* edin.
+- Bir şeyin beklendiği gibi olduğunu *iddia edin.*
 
 #### <a name="why"></a>Neden?
 
-- , *Düzenleme* ve *onaylama* adımlarından ne test edildiğini açıkça ayırır.
-- "Yasası" kodu ile onayların nasıl karıştıracağından daha az şans vardır.
+- Test edilenleri *düzenleme* ve ileri *sayıliş* adımlarından açıkça ayırır.
+- "Act" kodu ile iddiaları karıştırmak için daha az şans.
 
-Okunabilirlik, bir testi yazarken en önemli yönlerden biridir. Test içindeki bu eylemlerin her birini, kodunuzun çağrılması için gereken bağımlılıkları, kodunuzun nasıl çağrılacağını ve ne yapmaya çalıştığınız hakkında açık bir şekilde vurgulayın. Bazı adımları birleştirmek ve testinizin boyutunu azaltmak mümkün olsa da, birincil hedef, testi mümkün olduğunca okunabilir hale getirmek olacaktır.
+Okunabilirlik, bir test yazarken en önemli yönlerinden biridir. Testteki bu eylemlerin her birini ayırmak, kodunuzu aramak için gereken bağımlılıkları, kodunuzun nasıl çağrıldığını ve ne iddia etmeye çalıştığınızı açıkça vurgular. Bazı adımları birleştirmek ve testinizin boyutunu küçültmek mümkün olsa da, birincil amaç testi olabildiğince okunabilir hale getirmektir.
 
-#### <a name="bad"></a>Hatalı
+#### <a name="bad"></a>Kötü:
 [!code-csharp[BeforeArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeArranging)]
 
-#### <a name="better"></a>Görünmesi
+#### <a name="better"></a>Iyi:
 [!code-csharp[AfterArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterArranging)]
 
-### <a name="write-minimally-passing-tests"></a>Testleri en düşük düzeyde geçirmeyi yaz
-Bir birim testinde kullanılacak giriş, şu anda sınamakta olduğunuz davranışı doğrulamak için en basit olabilmelidir.
+### <a name="write-minimally-passing-tests"></a>Minimum geçen testleri yazma
+Birim testinde kullanılacak giriş, şu anda test ettiğiniz davranışı doğrulamak için mümkün olan en basit giriş olmalıdır.
 
 #### <a name="why"></a>Neden?
 
-- Testler, kod temelinin gelecekteki değişikliklerine daha dayanıklı hale gelir.
-- Uygulama üzerinde test davranışına daha yakın.
+- Testler, kod tabanındaki gelecekteki değişikliklere karşı daha esnek hale gelir.
+- Uygulama üzerinde davranışı sınamaya daha yakın.
 
-Testi geçirmek için gerekenden daha fazla bilgi içeren testlerin, teste hata ekleme şansı daha yüksektir ve testin amacını daha az net hale getirebilirsiniz. Testleri yazarken, davranışa odaklanmak istediğiniz zaman. Modellerdeki ek özellikleri ayarlama veya gerekmediği zaman sıfır olmayan değerler kullanma, yalnızca kanıtlamaya çalıştığınız kadar olan özelliklerden arının.
+Testi geçmek için gerekenden daha fazla bilgi içeren testler, teste hata getirme olasılığı daha yüksektir ve testin amacını daha az net hale getirebilir. Testleri yazarken davranışa odaklanmak istersiniz. Modellerde fazladan özellikler ayarlama veya gerekli olmadığında sıfır olmayan değerleri kullanma, yalnızca kanıtlamaya çalıştığınız şeyi bozar.
 
-#### <a name="bad"></a>Hatalı
+#### <a name="bad"></a>Kötü:
 [!code-csharp[BeforeMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
 
-#### <a name="better"></a>Görünmesi
+#### <a name="better"></a>Iyi:
 [!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
-### <a name="avoid-magic-strings"></a>Sihirli dizelerinden kaçının
-Birim testlerinde adlandırma değişkenleri, daha önemli değilse, üretim kodundaki adlandırma değişkenlerinden daha önemli değildir. Birim testleri sihirli dizeler içermemelidir.
+### <a name="avoid-magic-strings"></a>Sihirli dizeleri kaçının
+Birim testlerde değişkenleri adlandırma, üretim kodundaki değişkenleri adlandırmak kadar önemlidir. Birim testleri sihirli dizeleri içermemelidir.
 
 #### <a name="why"></a>Neden?
 
-- , Değeri özel hale getiren şeyi anlamak için test okuyucunun üretim kodunu incelemesi gereksinimini ortadan önler.
-- *Gerçekleştirmeyi*denemek yerine açıkça *kanıtlamaya* çalıştığınız öğeleri gösterir.
+- Değeri özel kılanın ne olduğunu anlamak için test okuyucusunun üretim kodunu incelemesi gereğini önler.
+- *Başarmaya*çalışmaktansa *neyi kanıtlamaya* çalıştığınızı açıkça gösterir.
 
-Sihirli dizeler, testlerinizin okuyucularına karışmasına neden olabilir. Bir dize sıradan görünüyorsa, bir parametre veya dönüş değeri için belirli bir değerin seçili olduğunu merak edebilir. Bu, bunlara, teste odaklanmak yerine uygulama ayrıntılarına daha yakından bakmasına neden olabilir.
+Sihirli dizeleri testlerinizi okuyucu için karışıklığa neden olabilir. Bir dize olağan dışı görünüyorsa, bir parametre veya geri dönüş değeri için neden belirli bir değerin seçildiğini merak edebilirler. Bu, teste odaklanmak yerine uygulama ayrıntılarına daha yakından bakmalarına neden olabilir.
 
 > [!TIP]
-> Testleri yazarken, mümkün olduğunca çok amaç ifade etmeniz gerekir. Sihirli dizeler söz konusu olduğunda, bu değerleri sabitlere atamak iyi bir yaklaşımdır.
+> Testleri yazarken, mümkün olduğunca çok niyet ifade etmek amaçlamalısınız. Sihirli dizeleri söz konusu olduğunda, iyi bir yaklaşım sabitlere bu değerleri atamaktır.
 
-#### <a name="bad"></a>Hatalı
+#### <a name="bad"></a>Kötü:
 [!code-csharp[BeforeMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMagicString)]
 
-#### <a name="better"></a>Görünmesi
+#### <a name="better"></a>Iyi:
 [!code-csharp[AfterMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMagicString)]
 
-### <a name="avoid-logic-in-tests"></a>Sınamalarda mantığın
-Birim testlerinizi yazarken, `if`, `while`, `for`, `switch`vb. gibi el ile dize birleştirme ve mantıksal koşullar kullanmaktan kaçının.
+### <a name="avoid-logic-in-tests"></a>Testlerde mantıktan kaçının
+Birim testleri yazarken manuel dize concatenation `if`ve `while` `for`mantıksal `switch`koşullar gibi kaçının , , , , vb.
 
 #### <a name="why"></a>Neden?
 
-- Testlerinizin içindeki bir hatayı tanıtmak için daha az şans.
-- Uygulama ayrıntıları yerine son sonuca odaklanın.
+- Testlerinizin içinde bir hata tanıtmak için daha az şans.
+- Uygulama ayrıntıları yerine sonuca odaklanın.
 
-Test paketiniz için mantık tanıdığınızda, hataya bir hata tanıtma olasılığı önemli ölçüde artar. Bir hata bulmak istediğiniz son yer, test paketinizin içindedir. Testlerinizin çalışması için yüksek düzeyde bir güveniniz olması gerekir, aksi takdirde bunlara güvenmemelisiniz. Güvenmediğiniz testler, hiçbir değer sağlamaz. Bir test başarısız olduğunda, kodunuzun kodunuzda gerçekten yanlış olduğunu ve yoksayılıp yoksayılmayacağını belirten bir fikir sahibi olmak istersiniz.
+Test paketinize mantık kattığında, içine bir hata girme şansı önemli ölçüde artar. Hata bulmak istediğiniz son yer test paketinizdedir. Testlerinizin işe yarayacağına dair yüksek düzeyde bir güvene sahip olmalısınız, aksi takdirde onlara güvenmezsiniz. Güvenmediğiniz testler, herhangi bir değer sağlamaz. Bir test başarısız olduğunda, bir şeyin kodunuzda gerçekten yanlış olduğunu ve göz ardı edilemeyeceğini hissetmek istersiniz.
 
 > [!TIP]
-> Testinizin mantığı kaçınılmaz görünüyorsa, testi iki veya daha fazla farklı teste bölmeyi göz önünde bulundurun.
+> Testinizdeki mantık kaçınılmaz görünüyorsa, testi iki veya daha fazla farklı teste bölmeyi düşünün.
 
-#### <a name="bad"></a>Hatalı
+#### <a name="bad"></a>Kötü:
 [!code-csharp[LogicInTests](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#LogicInTests)]
 
-#### <a name="better"></a>Görünmesi
+#### <a name="better"></a>Iyi:
 [!code-csharp[AfterTestLogic](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterTestLogic)]
 
-### <a name="prefer-helper-methods-to-setup-and-teardown"></a>Kurulum ve test etmek için yardımcı yöntemleri tercih etme
-Testleriniz için benzer bir nesne veya durum gerekiyorsa, kurulum ve Tearı özniteliklerini kullanmaktan önce bir yardımcı yöntemi tercih edin.
+### <a name="prefer-helper-methods-to-setup-and-teardown"></a>Kurulum ve yıkma için yardımcı yöntemleri tercih etme
+Testleriniz için benzer bir nesne veya durum gerekiyorsa, varsa Kurulum ve Yıkıntı özniteliklerinden yararlanmak yerine yardımcı yöntemi tercih edin.
 
 #### <a name="why"></a>Neden?
 
-- Tüm kod her test içinde görünür olduğundan testleri okurken daha az karışıklık vardır.
-- Verilen test için çok fazla veya çok az olma olasılığı daha düşüktür.
-- Aralarında istenmeyen bağımlılıklar oluşturan testler arasında durum paylaşma şansı daha düşüktür.
+- Kodun tümü her testin içinden görülebildiğinden testleri okurken daha az karışıklık.
+- Verilen test için çok fazla veya çok az ayarlama şansı daha az.
+- Aralarında istenmeyen bağımlılıklar yaratan testler arasında durum paylaşımı daha az şansı.
 
-Birim testi çerçeveleri ' nde, `Setup` her bir test paketinizde ve her birim testinin önüne çağırılır. Bazıları bunu yararlı bir araç olarak görebilir, ancak testleri okumak için genellikle önde gelen ve zor olacak şekilde sona erer. Her test, testi çalıştırmak ve çalıştırmak için genellikle farklı gereksinimlere sahip olur. Ne yazık ki, `Setup` her test için tam olarak aynı gereksinimleri kullanmanıza zorlar.
+Birim test çerçevelerinde, `Setup` test paketinizdeki her birim testiöncesinde çağrılır. Bazı yararlı bir araç olarak görebilirsiniz, genellikle şişirilmiş ve testleri okumak zor yol biter. Her test, testi çalışır hale getirmek için genellikle farklı gereksinimlere sahip olacaktır. Ne `Setup` yazık ki, her test için tam olarak aynı gereksinimleri kullanmaya zorlar.
 
 > [!NOTE]
-> xUnit, sürüm 2. x itibariyle kurulum ve test düzeyini kaldırdı
+> xUnit sürüm 2.x olarak hem SetUp ve TearDown kaldırdı
 
-#### <a name="bad"></a>Hatalı
+#### <a name="bad"></a>Kötü:
 [!code-csharp[BeforeSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeSetup)]
 
 ```csharp
@@ -220,7 +220,7 @@ Birim testi çerçeveleri ' nde, `Setup` her bir test paketinizde ve her birim t
 
 [!code-csharp[BeforeHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeHelperMethod)]
 
-#### <a name="better"></a>Görünmesi
+#### <a name="better"></a>Iyi:
 [!code-csharp[AfterHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterHelperMethod)]
 
 ```csharp
@@ -229,33 +229,33 @@ Birim testi çerçeveleri ' nde, `Setup` her bir test paketinizde ve her birim t
 
 [!code-csharp[AfterSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterSetup)]
 
-### <a name="avoid-multiple-asserts"></a>Çoklu Onaylamalar kullanmaktan kaçının
-Testlerinizi yazarken, her test için yalnızca bir onaylama eklemeyi deneyin. Yalnızca bir onay kullanımı için yaygın yaklaşımlar şunlardır:
+### <a name="avoid-multiple-asserts"></a>Birden fazla iddiadan kaçının
+Testlerinizi yazarken, test başına yalnızca bir Assert eklemeyi deneyin. Yalnızca bir assert kullanarak ortak yaklaşımlar şunlardır:
 
-- Her onaylama için ayrı bir test oluşturun.
-- Parametreli testleri kullanın.
+- Her assert için ayrı bir test oluşturun.
+- Parametreli testler kullanın.
 
 #### <a name="why"></a>Neden?
 
-- Bir onaylama başarısız olursa, sonraki onaylar değerlendirilmeyecektir.
-- Testlerinizde birden çok durumu ele almanızı sağlar.
-- Testlerinizin neden başarısız olduğuna ilişkin tüm resmi verir.
+- Bir Assert başarısız olursa, sonraki Asserts değerlendirilmez.
+- Testlerinizde birden çok servis vakası iddia etmemenizi sağlar.
+- Testlerinizin neden başarısız olduğuna ilgili resmin tamamını verir.
 
-Bir test çalışması için birden fazla onay tanıtımı yaparken, tüm Onaylamalar yürütülecektir. Çoğu birim testi çerçevesi içinde, bir onaylama işlemi bir birim testinde başarısız olduktan sonra, devam eden testler otomatik olarak başarısız sayılır. Bu, gerçekten çalışmakta olan bir işlev kadar kafa karıştırıcı olabilir, ancak başarısız olarak gösterilir.
+Bir test çalışmasına birden çok assert sayılırken, tüm ileri bulguların yürütüleceği garanti edilmez. Çoğu birim test çerçevesinde, bir birim testinde bir iddia başarısız olduğunda, devam eden testler otomatik olarak başarısız olarak kabul edilir. Bu, gerçekten çalışan işlevsellik olarak kafa karıştırıcı olabilir, başarısız olarak gösterilecek.
 
 > [!NOTE]
-> Bu kural için genel bir özel durum, bir nesneye yönelik olarak ele geçmiştir. Bu durumda, nesnenin içinde olmasını istediğiniz durumda olduğundan emin olmak için her bir özelliğe karşı birden fazla onay sağlamak kabul edilebilir.
+> Bu kuralın yaygın bir istisnası, bir nesneye karşı ileri sayılmaktır. Bu durumda, nesnenin içinde olmasını beklediğiniz durumda olduğundan emin olmak için her özellik aleyhinde birden çok iddia olması genellikle kabul edilebilir.
 
-#### <a name="bad"></a>Hatalı
+#### <a name="bad"></a>Kötü:
 [!code-csharp[BeforeMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
 
-#### <a name="better"></a>Görünmesi
+#### <a name="better"></a>Iyi:
 [!code-csharp[AfterMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
 
-### <a name="validate-private-methods-by-unit-testing-public-methods"></a>Özel metotları birim testi genel yöntemlerine göre doğrula
-Çoğu durumda, özel bir yöntemi test etmek zorunda değildir. Özel yöntemler bir uygulama ayrıntısıyla yapılır. Bunu şu şekilde düşünebilirsiniz: özel yöntemler hiçbir şekilde yalıtımına yok. Bir noktada, uygulamasının bir parçası olarak özel yöntemi çağıran bir genel kullanıma yönelik yöntem olacaktır. İlgilenmelisiniz, özel bir yönteme çağrı yapan genel metodun nihai sonucudur.
+### <a name="validate-private-methods-by-unit-testing-public-methods"></a>Ortak yöntemleri birim test ederek özel yöntemleri doğrulama
+Çoğu durumda, özel bir yöntemi sınamaya gerek olmamalıdır. Özel yöntemler bir uygulama ayrıntısIdir. Şöyle düşünebilirsiniz: özel yöntemler asla izole olarak bulunmaz. Bir noktada, uygulanmasının bir parçası olarak özel yöntem çağıran bir kamu bakan yöntem olacak. Dikkat etmesi gereken şey, özel yönteme çağıran genel yöntemin sonucudur.
 
-Aşağıdaki durumu göz önünde bulundurun
+Aşağıdaki örneği göz önünde bulundurun
 
 ```csharp
 public string ParseLogLine(string input)
@@ -270,9 +270,9 @@ private string TrimInput(string input)
 }
 ```
 
-Metodun beklendiği gibi çalıştığından emin olmak istediğiniz için, ilk yeniden eyleminiz `TrimInput` bir test yazmaya başlayabilir. Ancak, `ParseLogLine` `sanitizedInput`, bir testi beklemediği bir şekilde `TrimInput`, hiçbir şekilde kullanılamaz.
+İlk tepkiniz, yöntemin beklendiği `TrimInput` gibi çalıştığından emin olmak istediğiniz için bir test yazmaya başlamak olabilir. Ancak, hiç beklemediğiniz `ParseLogLine` şekilde `sanitizedInput` manipüle etmek, yararsız aleyhine `TrimInput` bir test oluşturmatamamen mümkündür.
 
-Gerçek test, en sonunda ilgilenmelisiniz çünkü `ParseLogLine` genel kullanıma yönelik yönteme karşı yapılmalıdır.
+Gerçek test kamu bakan yönteme `ParseLogLine` karşı yapılmalıdır, çünkü sonuçta ne hakkında bakım olmalıdır.
 
 ```csharp
 public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
@@ -285,10 +285,10 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 }
 ```
 
-Bu görüş açısından, özel bir yöntem görürseniz ortak yöntemi bulun ve testlerinizi bu yönteme göre yazın. Özel bir yöntem beklenen sonucu döndürdüğünden, sonuçta özel yöntemi çağıran sistem sonucu doğru bir şekilde kullanır.
+Bu bakış açısıyla, özel bir yöntem görürseniz, ortak yöntemi bulun ve testlerinizi bu yönteme karşı yazın. Özel bir yöntemin beklenen sonucu döndürmesi, sonunda özel yöntemi çağıran sistemin sonucu doğru kullandığı anlamına gelmez.
 
-### <a name="stub-static-references"></a>Saplama statik başvuruları
-Bir birim testinin prensipleri, test altındaki sistem üzerinde tam denetime sahip olması gerekir. Bu, üretim kodu statik başvurulara çağrı içerdiğinde (örn. `DateTime.Now`) sorunlu olabilir. Aşağıdaki kodu göz önünde bulundurun
+### <a name="stub-static-references"></a>Stub statik referanslar
+Bir birim testinin ilkelerinden biri, test altında sistemin tam denetimine sahip olması gerektiğidir. Üretim kodu statik başvurulara çağrı içeriyorsa (örn. `DateTime.Now` Aşağıdaki kodu göz önünde bulundurun
 
 ```csharp
 public int GetDiscountedPrice(int price)
@@ -304,7 +304,7 @@ public int GetDiscountedPrice(int price)
 }
 ```
 
-Bu kod büyük olasılıkla birim test edilebilir mi? Şöyle bir yaklaşım deneyebilirsiniz
+Bu kod nasıl birim test edilebilir? Gibi bir yaklaşım deneyebilirsiniz
 
 ```csharp
 public void GetDiscountedPrice_ByDefault_ReturnsFullPrice()
@@ -326,12 +326,12 @@ public void GetDiscountedPrice_OnTuesday_ReturnsHalfPrice()
 }
 ```
 
-Ne yazık ki testlerinizde birkaç sorun olduğunu hızla fark edersiniz.
+Ne yazık ki, hızlı bir şekilde testleri ile bir çift sorun olduğunu fark edecektir.
 
-- Test paketi bir Salı üzerinde çalışıyorsa ikinci test geçer, ancak ilk test başarısız olur.
-- Test paketi başka bir gün üzerinde çalışıyorsa, ilk test geçer, ancak ikinci test başarısız olur.
+- Test paketi Salı günü çalıştırılırsa, ikinci test geçer, ancak ilk test başarısız olur.
+- Test paketi başka bir gün çalıştırılırsa, ilk test geçer, ancak ikinci test başarısız olur.
 
-Bu sorunları gidermek için, üretim kodunuzda bir *yhar* belirlemeniz gerekir. Bir yaklaşım, bir arabirimde denetim yapmanız gereken kodu sarmanın ve üretim kodunun bu arabirime bağlı olmasını kullanmaktır.
+Bu sorunları çözmek için, üretim kodunuza bir *dikiş* girmeniz gerekir. Bir yaklaşım, bir arabirimde denetlemeniz gereken kodu sarmak ve üretim kodunun bu arabirime bağlı olmasıdır.
 
 ```csharp
 public interface IDateTimeProvider
@@ -378,4 +378,4 @@ public void GetDiscountedPrice_OnTuesday_ReturnsHalfPrice()
 }
 ```
 
-Artık test paketi `DateTime.Now` üzerinde tam denetime sahiptir ve yöntemine çağrı yapıldığında herhangi bir değer üzerinde bulunabilir.
+Artık test paketi üzerinde `DateTime.Now` tam kontrole sahiptir ve yönteme araverirken herhangi bir değer saplayabilir.

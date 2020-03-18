@@ -1,56 +1,56 @@
 ---
-title: SDK stilindeki projelerde hedef çerçeveler-.NET
-description: .NET Core Uygulamaları ve kitaplıkları için hedef çerçeveler hakkında bilgi edinin.
+title: SDK tarzı projelerde hedef çerçeveler - .NET
+description: .NET Core uygulamaları ve kitaplıkları için hedef çerçeveler hakkında bilgi edinin.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
 ms.openlocfilehash: 33beb5606cbf857cc41b739f256482b0298f1fb1
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124604"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79400556"
 ---
-# <a name="target-frameworks-in-sdk-style-projects"></a>SDK stilindeki projelerde hedef çerçeveler
+# <a name="target-frameworks-in-sdk-style-projects"></a>SDK tarzı projelerde hedef çerçeveler
 
-Bir uygulamayı veya kitaplığı içinde bir çerçeveyi hedeflediğinizde, uygulama veya kitaplık için kullanılabilir hale getirmek istediğiniz API kümesini belirtirsiniz. Hedef Framework 'ü hedef Framework takma adları 'nı (TFMs) kullanarak proje dosyanızda belirtirsiniz.
+Bir uygulama veya kitaplıktaki bir çerçeveyi hedeflediğinizde, uygulama veya kitaplık için kullanılabilir hale getirmek istediğiniz API kümesini belirtirsiniz. Hedef Çerçeve Monikers (TFM) kullanarak proje dosyanızda hedef çerçeveyi belirtirsiniz.
 
-Bir uygulama veya kitaplık [.NET Standard](net-standard.md)bir sürümünü hedefleyebilir. .NET Standard sürümler tüm .NET uygulamalarında standartlaştırılmış API kümelerini temsil eder. Örneğin, bir kitaplık .NET Standard 1,6 ' i hedefleyebilir ve aynı kod tabanını kullanarak .NET Core ve .NET Framework üzerinde çalışır olan API 'lere erişim elde edebilir.
+Bir uygulama veya kitaplık [.NET Standard'ın](net-standard.md)bir sürümünü hedefleyebilir. .NET Standart sürümleri, tüm .NET uygulamalarında standartlaştırılmış API kümelerini temsil eder. Örneğin, bir kitaplık .NET Standart 1.6'yı hedefleyebilir ve aynı kod tabanını kullanarak .NET Core ve .NET Framework genelinde işlev gören API'lere erişebilir.
 
-Uygulama veya kitaplık, uygulamaya özel API 'lere erişim kazanmak için belirli bir .NET uygulamasını da hedefleyebilir. Örneğin, Xamarin. iOS 'u hedefleyen bir uygulama (örneğin, `Xamarin.iOS10`) iOS 10 için Xamarin tarafından sunulan iOS API sarmalayıcılarını veya Evrensel Windows Platformu hedefleyen bir uygulamayı (UWP, `uap10.0`) Windows 10 çalıştıran cihazlar için derleme yapan API 'lere erişim içerir.
+Uygulama veya kitaplık, uygulamaya özgü API'lere erişmek için belirli bir .NET uygulamasını da hedefleyebilir. Örneğin, Xamarin.iOS'u hedefleyen bir uygulama `Xamarin.iOS10`(örneğin,) iOS 10 için Xamarin tarafından sağlanan iOS API paketleyicilerine veya `uap10.0`Evrensel Windows Platformu'nu (UWP, UWP) hedefleyen bir uygulamanın Windows 10 çalıştıran aygıtlar için derlenen API'lere erişimi vardır.
 
-Bazı hedef çerçeveler için (örneğin, .NET Framework), API 'Ler Framework 'ün bir sisteme yüklediği derlemeler tarafından tanımlanır ve uygulama çerçevesi API 'Lerini (örneğin, ASP.NET) içerebilir.
+Bazı hedef çerçeveler için (örneğin, .NET Framework), API'ler çerçevenin bir sisteme yükettiği derlemeler tarafından tanımlanır ve uygulama çerçevesi API'leri içerebilir (örneğin, ASP.NET).
 
-Paket tabanlı hedef çerçeveler için (örneğin, .NET Standard ve .NET Core), API 'Ler uygulamaya veya kitaplığa dahil edilen paketler tarafından tanımlanır. *Metapackage* , kendi içeriğine sahip olmayan ancak bağımlılıklar (diğer paketler) listesi olan bir NuGet paketidir. NuGet paket tabanlı bir hedef çerçeve, bir arada çerçeveyi oluşturan tüm paketlere başvuran bir metapackage öğesini örtülü olarak belirler.
+Paket tabanlı hedef çerçeveler (örneğin, .NET Standard ve .NET Core) için API'ler uygulama veya kitaplıkta yer alan paketler tarafından tanımlanır. *Metapaket,* kendi içeriği olmayan ancak bağımlılıkların (diğer paketler) bir listesi olan bir NuGet paketidir. NuGet paket tabanlı hedef çerçevesi, çerçeveyi oluşturan tüm paketlere atıfta bulunan bir meta paketi dolaylı olarak belirtir.
 
-## <a name="latest-target-framework-versions"></a>En son hedef Framework sürümleri
+## <a name="latest-target-framework-versions"></a>En son hedef çerçeve sürümleri
 
-Aşağıdaki tablo, en yaygın hedef çerçeveleri, nasıl başvurulduğunu ve [.NET Standard](net-standard.md) hangi sürümünün uygulandığını tanımlar. Bu hedef Framework sürümleri, en son kararlı sürümleridir. Yayın öncesi sürümler gösterilmez. Hedef çerçeve bilinen adı (tfd), bir .NET uygulaması veya kitaplığının hedef çerçevesini belirtmek için standartlaştırılmış bir belirteç biçimidir.
+Aşağıdaki tabloda en yaygın hedef çerçeveler, nasıl başvuruldıkları ve [.NET Standard'ın](net-standard.md) hangi sürümünü uyguladıkları tanımlanır. Bu hedef çerçeve sürümleri en son kararlı sürümleridir. Ön sürüm sürümleri gösterilmez. Hedef Çerçeve Takma Adı (TFM), bir .NET uygulamasının veya kitaplığın hedef çerçevesini belirtmek için standartlaştırılmış bir belirteç biçimidir.
 
-| Hedef Çerçeve      | En son <br/> Kararlı sürüm | Hedef çerçeve bilinen adı (tfd) | Uygulanan <br/> .NET Standard sürümü |
+| Hedef Çerçeve      | En son <br/> Kararlı Sürüm | Hedef Çerçeve Takma (TFM) | Uygulanan <br/> .NET Standart Sürüm |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
-| .NET Standard         | 2.1                         | Netstandard 2.1                 | Yok                                     |
-| .NET Core             | 3.1                         | netcoreapp 3.1                  | 2.1                                     |
+| .NET Standard         | 2.1                         | netstandard2.1                 | Yok                                     |
+| .NET Core             | 3.1                         | netcoreapp3.1                  | 2.1                                     |
 | .NET Framework        | 4.8                         | net48                          | 2,0                                     |
 
-## <a name="supported-target-framework-versions"></a>Desteklenen hedef Framework sürümleri
+## <a name="supported-target-framework-versions"></a>Desteklenen hedef çerçeve sürümleri
 
-Bir hedef çerçeveye genellikle tfd tarafından başvurulur. Aşağıdaki tabloda .NET Core SDK ve NuGet istemcisi tarafından desteklenen hedef çerçeveler gösterilmektedir. Eşdeğerleri köşeli ayraç içinde gösterilir. Örneğin, `win81` `netcore451`eşdeğer bir tfd 'dir.
+Hedef çerçeve genellikle bir TFM tarafından başvurulan. Aşağıdaki tabloda .NET Core SDK ve NuGet istemcisi tarafından desteklenen hedef çerçeveler gösterilmektedir. Eşdeğerleri parantez içinde gösterilir. Örneğin, `win81` eşdeğer bir TFM `netcore451`olduğunu .
 
-| Hedef Çerçeve           | TFM |
+| Hedef Çerçeve           | Tfm |
 | -------------------------- | --- |
-| .NET Standard              | Netstandard 1.0<br>Netstandard 1.1<br>Netstandard 1.2<br>Netstandard 1.3<br>Netstandard 1.4<br>Netstandard 1.5<br>Netstandard 1.6<br>Netstandard 2.0<br>Netstandard 2.1 |
-| .NET Core                  | netcoreapp 1.0<br>netcoreapp 1.1<br>netcoreapp2.0<br>netcoreapp 2.1<br>netcoreapp 2.2<br>netcoreapp 3.0<br>netcoreapp 3.1 |
+| .NET Standard              | netstandard1.0<br>netstandart1.1<br>netstandart1.2<br>netstandart1.3<br>netstandart1.4<br>netstandart1.5<br>netstandart1.6<br>netstandard2.0<br>netstandard2.1 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp3.0<br>netcoreapp3.1 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
-| Windows Mağazası              | netcore [netcore45]<br>netcore45 [Win] [Win8]<br>netcore451 [win81] |
-| .NET mikro Framework       | netmf |
+| Windows Mağazası              | netcore [netcore45]<br>netcore45 [kazanmak] [win8]<br>netcore451 [win81] |
+| .NET Mikro Çerçeve       | netmf |
 | Silverlight                | sl4<br>sl5 |
-| Windows Phone              | WP [WP7]<br>wp7<br>wp75<br>WP8<br>wp81<br>wpa81 |
-| Evrensel Windows Platformu | UAP [UAP 10.0]<br>UAP 10.0 [win10] [netcore50] |
+| Windows Phone              | wp [wp7]<br>wp7<br>wp75<br>wp8<br>wp81<br>wpa81 |
+| Evrensel Windows Platformu | uap [uap10.0]<br>uap10.0 [win10] [netcore50] |
 
-## <a name="how-to-specify-target-frameworks"></a>Hedef çerçeveleri belirtme
+## <a name="how-to-specify-target-frameworks"></a>Hedef çerçeveler nasıl belirtilir?
 
-Hedef çerçeveler, proje dosyanızda belirtilir. Tek bir hedef çerçeve belirtildiğinde, **TargetFramework** öğesini kullanın. Aşağıdaki konsol uygulaması proje dosyası, .NET Core 3,0 ' nin nasıl hedefleyeceğinizi göstermektedir:
+Hedef çerçeveler proje dosyanızda belirtilir. Tek bir hedef çerçevesi belirtildiğinde, **TargetFramework** öğesini kullanın. Aşağıdaki konsol uygulaması proje dosyası ,NET Core 3.0'ı nasıl hedeflenebildiğini gösterir:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -63,9 +63,9 @@ Hedef çerçeveler, proje dosyanızda belirtilir. Tek bir hedef çerçeve belirt
 </Project>
 ```
 
-Birden çok hedef çerçeve belirttiğinizde, her bir hedef çerçeve için derlemelere koşullu başvuru yapabilirsiniz. Kodunuzda, *if-then-else* mantığıyla önişlemci sembolleri kullanarak bu derlemelerde koşullu olarak derleyebilirsiniz.
+Birden çok hedef çerçevesi belirttiğiniz zaman, her hedef çerçeve için koşullu başvuru derlemeleri olabilir. Kodunuzda, *if-then-else* mantığına sahip önişlemci sembolleri kullanarak bu derlemelere karşı koşullu olarak derleyebilirsiniz.
 
-Aşağıdaki kitaplık proje dosyası .NET Standard (`netstandard1.4`) API 'Lerini ve .NET Framework API 'Lerini (`net40` ve `net45`) hedefler. Birden çok hedef çerçeve ile çoğul **Targetçerçeveler** öğesini kullanın. Kitaplık iki .NET Framework TFMs için derlendikten sonra `Condition` özniteliklerinin uygulamaya özgü paketleri nasıl dahil edileceğini aklınızda bulundurun:
+Aşağıdaki kitaplık proje dosyası ,NET Standard`netstandard1.4`( ) api'lerini`net40` ve `net45`.NET Framework (ve) API'lerini hedefler. Birden çok hedef çerçevesi olan çoğul **TargetFrameworks** öğesini kullanın. Kitaplık `Condition` iki .NET Framework TFMs için derlendiğinde özniteliklerin uygulamaya özgü paketleri nasıl içerdiğine dikkat edin:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -88,7 +88,7 @@ Aşağıdaki kitaplık proje dosyası .NET Standard (`netstandard1.4`) API 'Leri
 </Project>
 ```
 
-Kitaplığınızın veya uygulamanızın içinde her bir hedef çerçeve için derlemek üzere koşullu kod yazarsınız:
+Kitaplığınız veya uygulamanızda, her hedef çerçeve için derlemek üzere koşullu kod yazarsınız:
 
 ```csharp
 public class MyClass
@@ -106,33 +106,33 @@ public class MyClass
 }
 ```
 
-Yapı sistemi, SDK stili projeler kullanırken [desteklenen hedef Framework sürümleri](#supported-target-framework-versions) tablosunda gösterilen hedef çerçeveleri temsil eden Önişlemci sembollerinin farkındadır. .NET Standard veya .NET Core tfd 'yi temsil eden bir sembol kullanırken, noktayı alt çizgiyle değiştirin ve küçük harfleri büyük harfe değiştirin (örneğin, `netstandard1.4` sembolü `NETSTANDARD1_4`).
+Yapı sistemi, SDK tarzı projeleri kullanırken [Desteklenen hedef çerçeve sürümleri](#supported-target-framework-versions) tablosunda gösterilen hedef çerçeveleri temsil eden önişlemci simgelerinin farkındadır. .NET Standard veya .NET Core TFM'yi temsil eden bir simge kullanırken, noktayı alt bir alt noktayla `netstandard1.4` `NETSTANDARD1_4`değiştirin ve küçük harfleri büyük harfe çevirin (örneğin, sembolü.
 
-.NET Core hedef çerçeveleri için Önişlemci simgelerinin tüm listesi şunlardır:
+.NET Core hedef çerçeveleri için önişlemci sembollerinin tam listesi:
 
 [!INCLUDE [Preprocessor symbols](../../includes/preprocessor-symbols.md)]
 
-## <a name="deprecated-target-frameworks"></a>Kullanım dışı hedef çerçeveler
+## <a name="deprecated-target-frameworks"></a>Amortismana yönelik hedef çerçeveler
 
-Aşağıdaki hedef çerçeveler kullanım dışıdır. Bu hedef çerçeveleri hedefleyen paketlerin belirtilen değişikliklere geçirilmesi gerekir.
+Aşağıdaki hedef çerçeveler amortismana alınır. Bu hedef çerçeveleri hedefleyen paketler belirtilen değiştirmelere geçirilmelidir.
 
-| Kullanımdan kaldırılan TFA                                                                             | Başka |
+| Amortismana uyan TFM                                                                             | Değiştirme |
 | ------------------------------------------------------------------------------------------ | ----------- |
-| aspnet50<br>aspnetcore50<br>adlar<br>DNX<br>dnx45<br>dnx451<br>dnx452                  | netcoreapp  |
-| dotnet<br>dotnet50<br>dotnet51<br>dotnet52<br>dotnet53<br>dotnet54<br>dotnet55<br>dotnet56 | Netstandard |
-| netcore50                                                                                  | UAP 10.0     |
-| kazanırsınız                                                                                        | netcore45   |
-| Win8                                                                                       | netcore45   |
+| aspnet50<br>aspnetcore50<br>dnxcore50<br>Dnx<br>dnx45<br>dnx451<br>dnx452                  | netcoreapp  |
+| dotnet<br>dotnet50<br>dotnet51<br>dotnet52<br>dotnet53<br>dotnet54<br>dotnet55<br>dotnet56 | netstandart |
+| netcore50                                                                                  | uap10.0     |
+| Kazanmak                                                                                        | netcore45   |
+| win8                                                                                       | netcore45   |
 | win81                                                                                      | netcore451  |
-| win10                                                                                      | UAP 10.0     |
-| wınrt                                                                                      | netcore45   |
+| kazanmak10                                                                                      | uap10.0     |
+| winrt                                                                                      | netcore45   |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Paketler, Meta Paketler ve Çerçeveler](../core/packages.md)
+- [Paketler, Metapaketler ve Çerçeveler](../core/packages.md)
 - [Platformlar Arası Araçlarla Kitaplık Geliştirme](../core/tutorials/libraries.md)
 - [.NET Standard](net-standard.md)
-- [.NET Core sürümü oluşturma](../core/versions/index.md)
-- [DotNet/standart GitHub deposu](https://github.com/dotnet/standard)
-- [NuGet araçları GitHub deposu](https://github.com/joelverhagen/NuGetTools)
-- [.NET 'teki Framework profilleri](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)
+- [.NET Çekirdek Versiyon](../core/versions/index.md)
+- [dotnet/standart GitHub deposu](https://github.com/dotnet/standard)
+- [NuGet Araçları GitHub Deposu](https://github.com/joelverhagen/NuGetTools)
+- [.NET'teki Çerçeve Profiller](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)

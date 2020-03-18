@@ -1,6 +1,6 @@
 ---
-title: Birden çok dizeyi birleştirme (C# kılavuz)
-description: İçindeki C#dizeleri birleştirme için birden çok yol vardır. Seçenekleri ve farklı seçimlerin arkasındaki nedenleri öğrenin.
+title: Birden çok dize nasıl işlenir (C# Guide)
+description: C#'da dizeleri birleştirmeye birden çok yol vardır. Seçenekleri ve farklı seçeneklerin arkasındaki nedenleri öğrenin.
 ms.date: 02/20/2018
 helpviewer_keywords:
 - joining strings [C#]
@@ -8,54 +8,54 @@ helpviewer_keywords:
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
 ms.openlocfilehash: 9a0640a7ce73fa8454442cd301157bf5c265f9de
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713895"
 ---
-# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Birden çok dizeyi birleştirme (C# kılavuz)
+# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Birden çok dize nasıl işlenir (C# Guide)
 
-*Birleştirme* , bir dizeyi başka bir dizenin sonuna ekleme işlemidir. Dizeleri `+` işlecini kullanarak birleştirebilirsiniz. Dize sabit değerleri ve dize sabitleri için birleştirme, derleme zamanında oluşur; çalışma zamanı birleştirme gerçekleşmez. Dize değişkenleri için, birleştirme yalnızca çalışma zamanında gerçekleşir.
+*Birleştirme,* bir dizeyi başka bir dizesonuna bağlama işlemidir. `+` İşleç kullanarak dizeleri birleştirirsiniz. Dize literals ve dize sabitleri için, concatenation derleme zamanda oluşur; çalışma zamanı bir araya gelme gerçekleşmez. Dize değişkenleri için, concatenation yalnızca çalışma zamanında gerçekleşir.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-Aşağıdaki örnek, kaynak kodda okunabilirliğini geliştirmek için bir uzun dize sabit değerini daha küçük dizelere bölmek için birleştirme kullanır. Bu parçalar, derleme zamanında tek bir dizeye birleştirilir. Dahil edilen dizelerin sayısından bağımsız olarak, çalışma zamanı performans maliyeti yoktur.  
+Aşağıdaki örnek, kaynak kodundaki okunabilirliği artırmak için uzun bir dize edebi sini daha küçük dizeleri bölmek için yapılan bir araya getiriyi kullanır. Bu parçalar derleme zamanda tek bir dize içine sıkıştırılır. İlgili dizeleri sayısıne bakılmaksızın çalışma zamanı performans maliyeti yoktur.  
   
  [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
 
-Dize değişkenlerini birleştirmek için `+` veya `+=` işleçlerini, [dize ilişkilendirmeyi](../language-reference/tokens/interpolated.md) veya <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> veya <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> yöntemlerini kullanabilirsiniz. `+` işleci kullanımı kolaydır ve sezgisel kod sağlar. Tek bir ifadede birkaç `+` işleç kullansanız bile, dize içeriği yalnızca bir kez kopyalanır. Aşağıdaki kod, dizeleri birleştirmek için `+` ve `+=` işleçlerini kullanma örneklerini gösterir:
+Dize değişkenlerini birleştirmek için, `+` veya `+=` işleçleri, [dize enterpolasyonunu](../language-reference/tokens/interpolated.md) <xref:System.String.Format%2A?displayProperty=nameWithType>veya yöntemleri <xref:System.String.Concat%2A?displayProperty=nameWithType> <xref:System.String.Join%2A?displayProperty=nameWithType> <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> kullanabilirsiniz. Operatör `+` kullanımı kolaydır ve sezgisel kod için yapar. Bir deyimde `+` birden fazla işleç kullansanız bile, dize içeriği yalnızca bir kez kopyalanır. Aşağıdaki kod, dizeleri `+` birleştirmek için ve `+=` işleçleri kullanma örneklerini gösterir:
 
 [!code-csharp-interactive[combining strings using +](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#2)]  
 
-Bazı ifadelerde, aşağıdaki kodda gösterildiği gibi dize ilişkilendirmeyi kullanarak dizeleri birleştirmek daha kolay olur:
+Bazı ifadelerde, aşağıdaki kodun gösterdiği gibi dize enterpolasyonu kullanarak dizeleri birleştirmek daha kolaydır:
   
 [!code-csharp-interactive[building strings using string interpolation](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#3)]  
   
 > [!NOTE]
-> Dize birleştirme işlemlerinde, C# derleyici null bir dizeyi boş bir dize ile aynı şekilde değerlendirir.
+> Dize ayırma işlemlerinde, C# derleyicisi boş bir dize yle aynı null dizeyi ele alır.
 
-Dizeleri birleştirme yöntemi <xref:System.String.Format%2A?displayProperty=nameWithType>. Bu yöntem, az sayıda bileşen dizesinden bir dize oluştururken iyi sonuç verir.
+Dizeleri birleştirmeye başka bir <xref:System.String.Format%2A?displayProperty=nameWithType>yöntem de . Bu yöntem, az sayıda bileşen dizesinden bir dize oluşturuyorsanız iyi çalışır.
 
-Diğer durumlarda dizeleri bir döngüde birleştiriyor olabilirsiniz; burada, hangi kaynak dizeleri birleştirmiş olduğunuzu ve kaynak dizelerinin gerçek sayısı çok büyük olabilir. <xref:System.Text.StringBuilder> sınıfı bu senaryolar için tasarlanmıştır. Aşağıdaki kod dizeleri birleştirmek için <xref:System.Text.StringBuilder> sınıfının <xref:System.Text.StringBuilder.Append%2A> yöntemini kullanır.  
+Diğer durumlarda dizeleri, kaç kaynak dizesini birleştirdiğinizi bilmediğiniz ve gerçek kaynak dizeleri sayısının oldukça büyük olabileceği bir döngüde birleştiriyor olabilirsiniz. Sınıf <xref:System.Text.StringBuilder> bu senaryolar için tasarlanmıştır. Aşağıdaki kod dizeleri birleştirmek için sınıfın <xref:System.Text.StringBuilder.Append%2A> yöntemini <xref:System.Text.StringBuilder> kullanır.  
   
 [!code-csharp-interactive[string concatenation using string builder](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#4)]  
 
-[Dize bitiştirilmesi veya `StringBuilder` sınıfını seçme nedenleri](xref:System.Text.StringBuilder#StringAndSB)hakkında daha fazla bilgi edinebilirsiniz.
+[Dize concatenation veya sınıf seçmek için `StringBuilder` nedenler](xref:System.Text.StringBuilder#StringAndSB)hakkında daha fazla bilgi edinebilirsiniz.
 
-Bir koleksiyondaki dizeleri birleştirmek için başka bir seçenek de <xref:System.String.Concat%2A?displayProperty=nameWithType> yöntemi kullanmaktır. Kaynak dizelerin bir delikile ayrılması gerekiyorsa <xref:System.String.Join%2A?displayProperty=nameWithType> yöntemi kullanın. Aşağıdaki kod her iki yöntemi kullanarak bir sözcük dizisini birleştirir:
+Bir koleksiyondan dizeleri birleştirmek için <xref:System.String.Concat%2A?displayProperty=nameWithType> başka bir seçenek yöntemi kullanmaktır. Kaynak <xref:System.String.Join%2A?displayProperty=nameWithType> dizeleri bir delimetre ile ayrılmış olmalıdır yöntemi kullanın. Aşağıdaki kod, her iki yöntemi kullanarak bir sözcük dizisini birleştirir:
 
 [!code-csharp-interactive[concatenation of string collection](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#5)]
 
-En sonda, bir koleksiyondaki dizeleri birleştirmek için [LINQ](../programming-guide/concepts/linq/index.md) ve <xref:System.Linq.Enumerable.Aggregate%2A?displayProperty=nameWithType> yöntemi kullanabilirsiniz. Bu yöntem, kaynak dizelerini bir lambda ifadesi kullanarak birleştirir. Lambda ifadesi, her bir dizeyi var olan birikme ekleme işini yapar. Aşağıdaki örnek, dizideki her sözcük arasına bir boşluk ekleyerek bir sözcük dizisini birleştirir:
+Sonunda, bir koleksiyondan dizeleri <xref:System.Linq.Enumerable.Aggregate%2A?displayProperty=nameWithType> birleştirmek için [LINQ](../programming-guide/concepts/linq/index.md) ve yöntemi kullanabilirsiniz. Bu yöntem, bir lambda ifadesi kullanarak kaynak dizeleri birleştirir. Lambda ifadesi, her dizeyi varolan birikime eklemek için çalışır. Aşağıdaki örnek, dizideki her sözcük arasına bir boşluk ekleyerek bir sözcük dizisini birleştirir:
 
 [!code-csharp-interactive[string concatenation using LINQ expressions](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#6)]  
 
-Bu örnekleri, [GitHub deponuzdaki](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)koda bakarak deneyebilirsiniz. Ya da örnekleri [zip dosyası olarak](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)indirebilirsiniz.
+Bu örnekleri [GitHub depomuzdaki](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)koda bakarak deneyebilirsiniz. Veya bir zip [dosyası olarak](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)örnekleri indirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.String>
 - <xref:System.Text.StringBuilder>
 - [C# Programlama Kılavuzu](../programming-guide/index.md)
-- [Dizeler](../programming-guide/strings/index.md)
+- [Dize](../programming-guide/strings/index.md)

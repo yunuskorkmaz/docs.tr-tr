@@ -1,5 +1,5 @@
 ---
-title: <include> - C# Programlama Kılavuzu
+title: <include> - C# programlama kılavuzu
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 1e3722cbed02775d0ad4f392840ea10275c96be1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 22d87559766c04e53141e843ee8768c8aab89a85
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793426"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156980"
 ---
-# <a name="include-c-programming-guide"></a>\<içerme > (C# Programlama Kılavuzu)
+# <a name="include-c-programming-guide"></a>\<> (C# programlama kılavuzu) dahil
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -27,33 +27,33 @@ ms.locfileid: "76793426"
 
 - `filename`
 
-  Belgeleri içeren XML dosyasının adı. Dosya adı, kaynak kodu dosyası ile ilişkili bir yol ile nitelenme yapılabilir. `filename` tek tırnak işaretleri (' ') içine alın.
+  Belgeleri içeren XML dosyasının adı. Dosya adı, kaynak kod dosyasına göre bir yol ile nitelikli olabilir. Tek `filename` tırnak işaretleri (' ') içine ala.
 
 - `tagpath`
 
-  `filename` etiket `name`yol gösteren etiketlerin yolu. Yolu tek tırnak işaretleri (' ') içine alın.
+  Etiketlerin etiketine `filename` yol açan `name`yolu. Yolu tek tırnak işaretlerine (' ') içine ala.
 
 - `name`
 
-  Yorumlarla önce gelen etiketteki ad Belirleyicisi; `name` bir `id`olacaktır.
+  Yorumlardan önce etikette ad belirtici; `name` bir `id`.
 
 - `id`
 
-Açıklamaların önündeki etiketin KIMLIĞI. KIMLIĞI çift tırnak işareti ("") içine alın.
+Yorumlardan önce etiketin kimliği. Kimliği çift tırnak işaretlerine (" ") ekin.
 
 ## <a name="remarks"></a>Açıklamalar
 
-\<içerme > etiketi, kaynak kodunuzda türleri ve üyeleri tanımlayan başka bir dosyadaki açıklamalara başvurmanıza olanak sağlar. Bu, belge açıklamalarını doğrudan kaynak kodu dosyanıza yerleştirmeye alternatiftir. Belgeler ayrı bir dosyaya yerleştirilerek, kaynak denetimini belgelere kaynak koddan ayrı olarak uygulayabilirsiniz. Bir kişinin kaynak kodu dosyası kullanıma alınmış olabilir ve başka birisinin belge dosyası kullanıma alınmış olabilir.
+Include \<> etiketi, kaynak kodunuzdaki türleri ve üyeleri açıklayan başka bir dosyadaki yorumlara başvurmanızı sağlar. Bu, belge yorumlarını doğrudan kaynak kod dosyanıza yerleştirmek için bir alternatiftir. Belgeleri ayrı bir dosyaya koyarak, kaynak denetimi kaynak kodundan ayrı olarak belgelere uygulayabilirsiniz. Bir kişi kaynak kodu dosyasının kullanıma ait olması ve başka birinin belge dosyasının kullanıma ait olması olabilir.
 
-\<içerme > etiketi XML XPath söz dizimini kullanır. \<özelleştirme yolları için XPath belgelerine başvurun > kullanımı dahil edin.
+Include \<> etiketi XML XPath sözdizimini kullanır. Dahil> kullanımınızı \<özelleştirmenin yolları için XPath belgelerine bakın.
 
 ## <a name="example"></a>Örnek
 
-Bu çok dosyalı bir örnektir. Aşağıda, \<> kullanılan ilk dosya yer alır.
+Bu çok dosyalı bir örnektir. Aşağıdaki,> içeren \<ilk dosyadır.
 
 [!code-csharp[csProgGuideDocComments#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#5)]
 
-İkinci dosya olan *xml_include_tag. doc*, aşağıdaki belge açıklamalarını içerir.
+İkinci dosya, *xml_include_tag.doc*, aşağıdaki dokümantasyon yorumlarını içerir.
 
 ```xml
 <MyDocs>
@@ -75,7 +75,7 @@ The summary for this other type.
 
 ## <a name="program-output"></a>Program çıktısı
 
-Aşağıdaki komut satırı ile test ve test2 sınıflarını derlerken aşağıdaki çıktı oluşturulur: Visual Studio 'Da `-doc:DocFileName.xml.`, proje tasarımcısının Build bölmesinde XML doc Comments seçeneğini belirtirsiniz. C# Derleyici \<içerme > etiketini gördüğünde, geçerli kaynak dosya yerine xml_include_tag. doc içinde belge açıklamalarını arar. Daha sonra derleyici DocFileName. xml oluşturur ve bu, son belgeleri oluşturmak için [Docfx](https://dotnet.github.io/docfx/) ve [sandrole](https://github.com/EWSoftware/SHFB) gibi belge araçları tarafından tüketilen dosyadır.  
+Aşağıdaki çıktı, Test ve Test2 sınıflarını aşağıdaki komut satırıyla `-doc:DocFileName.xml.` derlediğinizde oluşturulur: Visual Studio'da, Proje Tasarımcısı'nın Yapı bölmesinde XML doc yorum seçeneğini belirtirsiniz. C# derleyicisi \<include> etiketini gördüğünde, geçerli kaynak dosyası yerine xml_include_tag.doc'da belge yorumlarını arar. Derleyici daha sonra DocFileName.xml oluşturur ve bu son belgeleri üretmek için [DocFX](https://dotnet.github.io/docfx/) ve [Sandcastle](https://github.com/EWSoftware/SHFB) gibi dokümantasyon araçları tarafından tüketilen dosyadır.  
   
 ```xml
 <?xml version="1.0"?>
@@ -86,19 +86,19 @@ Aşağıdaki komut satırı ile test ve test2 sınıflarını derlerken aşağı
     <members>
         <member name="T:Test">
             <summary>
-The summary for this type.   
-</summary>   
-        </member>   
-        <member name="T:Test2">   
-            <summary>   
-The summary for this other type.   
-</summary>   
-        </member>   
-    </members>   
-</doc>   
+The summary for this type.
+</summary>
+        </member>
+        <member name="T:Test2">
+            <summary>
+The summary for this other type.
+</summary>
+        </member>
+    </members>
+</doc>
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Belge Açıklamaları için Önerilen Etiketler](./recommended-tags-for-documentation-comments.md)
+- [Dokümantasyon Yorumları için Önerilen Etiketler](./recommended-tags-for-documentation-comments.md)

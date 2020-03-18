@@ -12,86 +12,86 @@ helpviewer_keywords:
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
 ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091597"
 ---
 # <a name="numerics-in-net"></a>.NET Sayısal Değerleri
 
-.NET, bir dizi sayısal tamsayı ve kayan nokta temel noktaları ve <xref:System.Numerics.BigInteger?displayProperty=nameWithType>, teorik bir üst veya alt sınır olmadan bir integral türü, karmaşık sayıları temsil eden <xref:System.Numerics.Complex?displayProperty=nameWithType>ve <xref:System.Numerics> ad alanında bir SIMD özellikli türler kümesi sağlar .
+.NET, teorik üst veya alt sınıra sahip olmayan, <xref:System.Numerics.BigInteger?displayProperty=nameWithType> <xref:System.Numerics.Complex?displayProperty=nameWithType>karmaşık sayıları temsil eden ve <xref:System.Numerics> ad alanında SIMD özellikli bir dizi türü olan sayısal tamsayı ve kayan nokta ilkellerinin yanı sıra bir dizi sayısal tamsayı sağlar.
   
 ## <a name="integer-types"></a>Tam sayı türleri
 
-.NET, aşağıdaki tabloda listelenen hem imzalı hem de imzasız 8, 16-, 32-ve 64 bit tamsayı türlerini destekler:
+.NET, aşağıdaki tabloda listelenen imzalı ve imzasız 8, 16, 32 ve 64 bit'lik tümseger türlerini destekler:
   
-|Tür|İmzalandı/Imzasız|Boyut (bayt)|En küçük değer|En büyük değer|  
+|Tür|İmzalı/İmzasız|Boyut (bayt olarak)|En küçük değer|En büyük değer|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
-|<xref:System.Byte?displayProperty=nameWithType>|İşaretlenmemiş|1\.|0|255|  
-|<xref:System.Int16?displayProperty=nameWithType>|İmza|2|-32.768|32.767|  
-|<xref:System.Int32?displayProperty=nameWithType>|İmza|4|-2.147.483.648|2\.147.483.647|  
-|<xref:System.Int64?displayProperty=nameWithType>|İmza|8|-9223372036854775808|9\.223.372.036.854.775.807|  
-|<xref:System.SByte?displayProperty=nameWithType>|İmza|1\.|-128|127|  
-|<xref:System.UInt16?displayProperty=nameWithType>|İşaretlenmemiş|2|0|65.535|  
-|<xref:System.UInt32?displayProperty=nameWithType>|İşaretlenmemiş|4|0|4\.294.967.295|  
-|<xref:System.UInt64?displayProperty=nameWithType>|İşaretlenmemiş|8|0|18446744073709551615|  
+|<xref:System.Byte?displayProperty=nameWithType>|Imzasız|1|0|255|  
+|<xref:System.Int16?displayProperty=nameWithType>|Imzalı|2|-32,768|32.767|  
+|<xref:System.Int32?displayProperty=nameWithType>|Imzalı|4|-2,147,483,648|2,147,483,647|  
+|<xref:System.Int64?displayProperty=nameWithType>|Imzalı|8|-9,223,372,036,854,775,808|9,223,372,036,854,775,807|  
+|<xref:System.SByte?displayProperty=nameWithType>|Imzalı|1|-128|127|  
+|<xref:System.UInt16?displayProperty=nameWithType>|Imzasız|2|0|65,535|  
+|<xref:System.UInt32?displayProperty=nameWithType>|Imzasız|4|0|4,294,967,295|  
+|<xref:System.UInt64?displayProperty=nameWithType>|Imzasız|8|0|18,446,744,073,709,551,615|  
   
-Her tamsayı türü bir standart aritmetik işleçler kümesini destekler. <xref:System.Math?displayProperty=nameWithType> sınıfı, daha geniş bir matematik işlevleri kümesi için yöntemler sağlar.
+Her tamsayı türü standart aritmetik işleçleri kümesini destekler. Sınıf, <xref:System.Math?displayProperty=nameWithType> daha geniş bir matematiksel işlev ler kümesi için yöntemler sağlar.
 
-Ayrıca, <xref:System.BitConverter?displayProperty=nameWithType> sınıfını kullanarak bir tamsayı değerindeki tek bir bitler ile de çalışabilirsiniz.  
+Sınıfı kullanarak <xref:System.BitConverter?displayProperty=nameWithType> bir sonda değerindeki tek tek bitlerle de çalışabilirsiniz.  
 
 > [!NOTE]  
-> İşaretsiz tamsayı türleri CLS uyumlu değildir. Daha fazla bilgi için bkz. [Dil bağımsızlığı ve dilden bağımsız bileşenler](language-independence-and-language-independent-components.md).
+> İmzalanmamış tümsader türleri CLS uyumlu değildir. Daha fazla bilgi için [bkz.](language-independence-and-language-independent-components.md)
 
 ## <a name="biginteger"></a>BigInteger
 
-<xref:System.Numerics.BigInteger?displayProperty=nameWithType> yapısı, teorik içindeki değeri üst veya alt sınır olmadan rastgele büyük bir tamsayıyı temsil eden sabit bir türdür. <xref:System.Numerics.BigInteger> türünün yöntemleri, diğer integral türlerin birbirlerine yakın bir şekilde paraleldir.
+Yapı, <xref:System.Numerics.BigInteger?displayProperty=nameWithType> teoride değeri üst veya alt sınırları olmayan rasgele büyük bir sayayı temsil eden değişmez bir türdür. <xref:System.Numerics.BigInteger> Türün yöntemleri diğer integral türlerinin yöntemlerine yakından paraleldir.
   
 ## <a name="floating-point-types"></a>Kayan nokta türleri
 
-.NET, aşağıdaki tabloda listelenen üç temel kayan nokta türü içerir:
+.NET, aşağıdaki tabloda listelenen üç ilkel kayan nokta türü içerir:
   
-|Tür|Boyut (bayt)|Yaklaşık Aralık|Duyarlık|  
+|Tür|Boyut (bayt olarak)|Yaklaşık aralık|Duyarlık|  
 |----------|--------|---------------------|--------------------|  
-|<xref:System.Single?displayProperty=nameWithType>|4|± 1,5 x 10<sup>− 45</sup> ila ± 3,4 x 10<sup>38</sup>|~ 6-9 basamak|  
-|<xref:System.Double?displayProperty=nameWithType>|8|± 5,0 × 10<sup>− 324</sup> ila ± 1,7 × 10<sup>308</sup>|~ 15-17 basamak|  
-|<xref:System.Decimal?displayProperty=nameWithType>|16|± 1,0 x 10<sup>-28</sup> ila ± 7,9228 x 10<sup>28</sup>|28-29 basamak|  
+|<xref:System.Single?displayProperty=nameWithType>|4|±1,5 x 10<sup>−45</sup> ila ±3,4 x 10<sup>38</sup>|~6-9 basamak|  
+|<xref:System.Double?displayProperty=nameWithType>|8|±5,0 × 10<sup>−324</sup> ile ±1,7 ×<sup>10 308</sup>|~15-17 basamak|  
+|<xref:System.Decimal?displayProperty=nameWithType>|16|±1,0 x 10<sup>-28</sup> ile ±7,9228 x 10<sup>28</sup>|28-29 basamak|  
   
-Hem <xref:System.Single> hem de <xref:System.Double> türleri bir sayı değil ve sonsuz olmayan özel değerleri destekler. Örneğin, <xref:System.Double> türü şu değerleri sağlar: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>ve <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>. Bu özel değerleri sınamak için <xref:System.Double.IsNaN%2A?displayProperty=nameWithType>, <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>, <xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType>ve <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType> yöntemlerini kullanırsınız.
+Hem <xref:System.Single> <xref:System.Double> de türler, sayı olmayan ve sonsuzluğu temsil eden özel değerleri destekler. <xref:System.Double> Örneğin, tür aşağıdaki değerleri <xref:System.Double.NaN?displayProperty=nameWithType>sağlar: <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>, <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>ve . Bu özel <xref:System.Double.IsNaN%2A?displayProperty=nameWithType> <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>değerleri <xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType>test <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType> etmek için , , ve yöntemleri kullanırsınız.
 
-Her kayan nokta türü bir standart aritmetik işleçler kümesini destekler. <xref:System.Math?displayProperty=nameWithType> sınıfı, daha geniş bir matematik işlevleri kümesi için yöntemler sağlar. .NET Core 2,0 ve üzeri, <xref:System.Single> türünün bağımsız değişkenlerini kabul eden yöntemler sağlayan <xref:System.MathF?displayProperty=nameWithType> sınıfını içerir.
+Her kayan nokta türü standart aritmetik işleçleri kümesini destekler. Sınıf, <xref:System.Math?displayProperty=nameWithType> daha geniş bir matematiksel işlev ler kümesi için yöntemler sağlar. .NET Core 2.0 ve <xref:System.MathF?displayProperty=nameWithType> daha sonra <xref:System.Single> türünün bağımsız değişkenlerini kabul eden yöntemleri sağlayan sınıfı içerir.
 
-Ayrıca, <xref:System.BitConverter?displayProperty=nameWithType> sınıfını kullanarak <xref:System.Double> ve <xref:System.Single> değerlerinde tek bir bit ile çalışabilirsiniz. <xref:System.Decimal?displayProperty=nameWithType> yapısının kendi yöntemlerine, <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> ve <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>, Ondalık değerin tek tek bitleri ile çalışmaya ve bazı ek matematiksel işlemler gerçekleştirmeye yönelik kendi yöntem kümesine sahip olduğu bir yöntem vardır.
+Ayrıca <xref:System.BitConverter?displayProperty=nameWithType> sınıfı kullanarak tek tek <xref:System.Double> bit <xref:System.Single> ve değerlerle de çalışabilirsiniz. Yapının <xref:System.Decimal?displayProperty=nameWithType> kendi yöntemleri <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> vardır <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>ve ondalık değerin bireysel bitleriyle çalışmak için, bazı ek matematiksel işlemleri gerçekleştirmek için kendi yöntem kümesini de kullanır.
   
-<xref:System.Double> ve <xref:System.Single> türlerinin, doğası (iki yıldız arasındaki uzaklık) ve yüksek derecede duyarlık ve küçük yuvarlama hatası olması gereken uygulamalar için kullanılmak üzere tasarlanmıştır. Daha büyük duyarlık gerektiren durumlar için <xref:System.Decimal?displayProperty=nameWithType> türünü kullanmanız gerekir ve yuvarlama hataları en aza indirilir.
+Ve <xref:System.Double> <xref:System.Single> türleri, doğası gereği kesin olmayan değerler (örneğin, iki yıldız arasındaki mesafe) ve yüksek derecede kesinlik ve küçük yuvarlama hatası gerektirmediği uygulamalar için kullanılmak üzere tasarlanmıştır. Daha fazla <xref:System.Decimal?displayProperty=nameWithType> kesinlik gerektiren ve yuvarlama hatalarının en aza indirilmesi gereken durumlar için türü kullanmalısınız.
 
 > [!NOTE]
-> <xref:System.Decimal> türü, yuvarlama gereksinimini ortadan kaldırmaz. Bunun yerine, yuvarlama nedeniyle hataları en aza indirir.
+> Tür <xref:System.Decimal> yuvarlama ihtiyacını ortadan kaldırmaz. Bunun yerine, yuvarlama nedeniyle hataları en aza indirir.
   
 ## <a name="complex"></a>Complex
 
-<xref:System.Numerics.Complex?displayProperty=nameWithType> yapısı karmaşık bir sayıyı, yani gerçek sayı bölümü ve sanal sayı bölümünü temsil eden bir sayıyı temsil eder. Matematiksel, Algebraic ve trigonometrik yöntemlerin yanı sıra standart bir aritmetik, karşılaştırma, eşitlik, açık ve örtük dönüştürme işleçleri kümesini destekler.  
+Yapı <xref:System.Numerics.Complex?displayProperty=nameWithType> karmaşık bir sayıyı, yani gerçek sayı yı ve hayali bir sayı parçasını temsil eder. Standart bir aritmetik, karşılaştırma, eşitlik, açık ve örtülü dönüştürme işleçlerinin yanı sıra matematiksel, cebirsel ve trigonometrik yöntemleri destekler.  
   
-## <a name="simd-enabled-types"></a>SıMD özellikli türler
+## <a name="simd-enabled-types"></a>SIMD özellikli türleri
 
-<xref:System.Numerics> ad alanı, .NET SıMD özellikli türler kümesi içerir. SıMD (Tek Yönerge Birden Çok Veri) işlemleri donanım düzeyinde paralelleştirilmiş olabilir. Bu, matematiksel, bilimsel ve grafik uygulamalarda ortak olan vektörleştirilmiş hesaplamaların verimini artırır.
+Ad <xref:System.Numerics> alanı .NET SIMD özellikli türleri kümesini içerir. SIMD (Tek Öğretim Çoklu Veri) işlemleri donanım düzeyinde paralellenebilir. Bu, matematiksel, bilimsel ve grafik uygulamalarında yaygın olan vektörel hesaplamaların iş bilgililiğini artırır.
   
-.NET SıMD özellikli türler şunları içerir:
+.NET SIMD özellikli türleri şunlardır:
 
-- 2, 3 ve 4 <xref:System.Single> değeri olan vektörleri temsil eden <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3>ve <xref:System.Numerics.Vector4> türleri.
+- 2, <xref:System.Numerics.Vector3>3 <xref:System.Numerics.Vector4> ve 4 <xref:System.Single> değerleri ile vektörleri temsil eden <xref:System.Numerics.Vector2>, , ve türleri.
 
-- İki matris türü, bir 3X2 matrisini temsil eden <xref:System.Numerics.Matrix3x2>ve bir 4x4 matrisini temsil eden <xref:System.Numerics.Matrix4x4>.
+- 3x2 <xref:System.Numerics.Matrix3x2>matrisi temsil eden ve <xref:System.Numerics.Matrix4x4>4x4 matrisi temsil eden iki matris türü.
 
-- Üç boyutlu alanda bir düzlemi temsil eden <xref:System.Numerics.Plane> türü.
+- Üç <xref:System.Numerics.Plane> boyutlu uzayda bir düzlemi temsil eden tür.
 
-- Üç boyutlu fiziksel döndürmeler kodlamak için kullanılan bir vektörü temsil eden <xref:System.Numerics.Quaternion> türü.
+- Üç <xref:System.Numerics.Quaternion> boyutlu fiziksel döndürmeleri kodlamak için kullanılan bir vektörü temsil eden tür.
 
-- Belirtilen bir sayısal türün vektörünü temsil eden <xref:System.Numerics.Vector%601> türü ve SıMD desteğinden yararlanan geniş bir işleç kümesi sağlar. Bir <xref:System.Numerics.Vector%601> örneğinin sayısı sabittir, ancak değeri <xref:System.Numerics.Vector%601.Count%2A?displayProperty=nameWithType>, kodun yürütüldüğü makinenin CPU 'suna bağlıdır.
+- Belirli <xref:System.Numerics.Vector%601> bir sayısal türün vektörü temsil eden ve SIMD desteğinden yararlanan geniş bir işleç kümesi sağlayan tür. Bir <xref:System.Numerics.Vector%601> örneğin sayısı sabittir, ancak <xref:System.Numerics.Vector%601.Count%2A?displayProperty=nameWithType> değeri makinenin CPU bağlıdır, hangi kod yürütülür.
   > [!NOTE]
-  > <xref:System.Numerics.Vector%601> türü .NET Framework dahil değildir. Bu türe erişim sağlamak için [System. Numerics. vektörleri](https://www.nuget.org/packages/System.Numerics.Vectors) NuGet paketini yüklemelisiniz.
+  > Tür <xref:System.Numerics.Vector%601> .NET Framework'e dahil edilmez. Bu türe erişmek için [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors) NuGet paketini yüklemeniz gerekir.
   
-SıMD özellikli türler, SıMD özellikli olmayan donanımla veya JıT derleyicilerle kullanılabilecek şekilde uygulanır. SıMD yönergelerinden yararlanmak için 64 bitlik uygulamalarınızın, .NET Core 'a ve .NET Framework 4,6 ve sonraki sürümlere dahil olan RyuJIT derleyicisini kullanan çalışma zamanı tarafından çalıştırılması gerekir. 64 bitlik işlemcileri hedeflerken SıMD desteği ekler.
+SIMD özellikli türler, SIMD etkin olmayan donanım veya JIT derleyicileriyle kullanılabilecek şekilde uygulanır. SIMD yönergelerinden yararlanmak için, 64 bit uygulamalarınızın .NET Core ve .NET Framework 4.6 ve sonraki sürümlerde yer alan RyuJIT derleyicisini kullanan çalışma süresine göre çalıştırılması gerekir. 64 bit işlemcileri hedefalırken SIMD desteği ekler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

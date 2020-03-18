@@ -1,50 +1,50 @@
 ---
-title: Açık kaynaklı .NET kitaplığı Kılavuzu
-description: Geliştiricilerin yüksek kaliteli .NET kitaplıkları oluşturmalarına yönelik en iyi yöntem önerileri.
+title: Açık kaynak .NET kitaplık kılavuzu
+description: Geliştiricilerin yüksek kaliteli .NET kitaplıkları oluşturması için en iyi uygulama önerileri.
 ms.date: 10/17/2018
 ms.openlocfilehash: 4c76dfae6ffc39df7f15381be64e33657067d79d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76731429"
 ---
 # <a name="open-source-library-guidance"></a>Açık kaynak kitaplık kılavuzu
 
-Bu kılavuz, geliştiricilerin yüksek kaliteli .NET kitaplıkları oluşturmalarına yönelik öneriler sağlar. Bu belgeler, *nasıl*bir .NET kitaplığı oluşturamadığına göre değil, *neden* ve ne *olduğuna* odaklanmaktadır.
+Bu kılavuz, geliştiricilerin yüksek kaliteli .NET kitaplıkları oluşturması için öneriler sağlar. Bu dokümantasyon, bir .NET kitaplığı oluştururken *ne* ve *neden* değil, *nasıl*odaklanır.
 
-Yüksek kaliteli açık kaynaklı .NET kitaplıklarının yönleri:
+Yüksek kaliteli açık kaynak .NET kitaplıklarının yönleri:
 
 > [!div class="checklist"]
 >
-> * **Kapsamlı** .NET kitaplıkları birçok platformu, programlama dilini ve uygulamayı desteklemek için çaba harcar.
-> * **Kararlı** -iyi .NET kitaplıkları, çok sayıda kitaplıklarla oluşturulmuş uygulamalarda çalışan .net ekosisteminde birlikte yer vardır.
-> * **Geliştirecek şekilde tasarlanan** .NET kitaplıkları, mevcut kullanıcıları desteklerken zaman içinde iyileştirmeli ve gelişmelidir.
-> * **Hata ayıklanabilir** -.NET kitaplıkları, kullanıcılar için harika bir hata ayıklama deneyimi oluşturmak üzere en son araçları kullanmalıdır.
-> * **Güvenilen** -.net kitaplıklarında, en iyi güvenlik uygulamalarını kullanarak NuGet 'e yayımlayarak geliştiricilerin güveni vardır.
+> * **Kapsayıcı** - İyi .NET kitaplıkları birçok platformu, programlama dilini ve uygulamayı desteklemeye çalışır.
+> * **Kararlı** - İyi .NET kitaplıkları .NET ekosisteminde bir arada bulunur ve birçok kitaplıkla oluşturulmuş uygulamalarda çalışır.
+> * **Gelişmeye yönelik** - .NET kitaplıkları, mevcut kullanıcıları desteklerken zaman içinde gelişmeli ve gelişmelidir.
+> * **Hata ayıklanabilir** - .NET kitaplıkları, kullanıcılar için harika bir hata ayıklama deneyimi oluşturmak için en son araçları kullanmalıdır.
+> * **Güvenilen** - .NET kitaplıkları, güvenlik en iyi uygulamalarını kullanarak NuGet'e yayımlayarak geliştiricilerin güvenine sahiptir.
 
 > [!div class="nextstepaction"]
-> [Başlarken](./get-started.md)
+> [Başlayın](./get-started.md)
 
 ## <a name="types-of-recommendations"></a>Öneri türleri
 
-Her makalede dört tür öneri sunulmaktadır: **Do**, **düþünün**, **önleyin**ve **Not**. Öneri türü, ne kadar önemli olduğunu gösterir.
+Her makale dört tür öneri sunar: **Do**, **Göz at**, **Kaçın**, ve **etmeyin**. Öneri türü, ne kadar güçlü bir şekilde izlenmesi gerektiğini gösterir.
 
-Neredeyse her zaman bir **Do** önerisi izlemeniz gerekir. Örneğin:
+Hemen hemen her zaman bir **Do** önerisi takip etmelidir. Örnek:
 
-✔️, bir NuGet paketi kullanarak kitaplığınızı dağıtır.
+✔️ DO kitaplığınızı bir NuGet paketi kullanarak dağıtın.
 
-Diğer yandan, önerilerin genellikle izlenmesi gerektiğine **dikkat** edin, ancak kuralın meşru özel durumları vardır ve bu kılavuzdan sonra da kötü bir sorun olmaz:
+Diğer taraftan, **düşünün** önerileri genellikle takip edilmelidir, ancak kuralın meşru istisnaları vardır ve kılavuzu izlemediğiniz için kendinizi kötü hissetmemelisiniz:
 
-✔️ NuGet paketinizi sürüm için [Semver 2.0.0](https://semver.org/) kullanmayı düşünün.
+✔️ NuGet paketinizi kullanmak için [SemVer 2.0.0'ı](https://semver.org/) kullanmayı düşünün.
 
-Genellikle iyi bir fikir olmayan ancak kuralın bölünmesi bazen anlamlı hale getirmeyen önerilerden **kaçının** :
+Öneriler genellikle iyi bir fikir değildir şeyler söz **kaçının,** ancak kuralı ihlal bazen mantıklı:
 
-❌, tam bir sürümü talep eden NuGet paket başvurularını ÖNLEYIN.
+❌Kaçının NuGet paket başvuruları tam bir sürümünü talep.
 
-Son **olarak, önermeyin,** neredeyse asla yapmanız gereken bir şeyi gösterir:
+Ve son olarak, öneriler hemen hemen hiç yapmamanız gereken bir şey gösterir **etmeyin:**
 
-❌, kitaplığınızın güçlü adlandırılmış ve tanımlayıcı olmayan sürümlerini yayımlamaz. Örneğin, `Contoso.Api` ve `Contoso.Api.StrongNamed`.
+❌Kitaplığınızın güçlü adlandırılmış ve güçlü olmayan adlandırılmış sürümlerini yayımlamayın. Örneğin, `Contoso.Api` ve `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
->[Next](get-started.md)
+>[Sonraki](get-started.md)

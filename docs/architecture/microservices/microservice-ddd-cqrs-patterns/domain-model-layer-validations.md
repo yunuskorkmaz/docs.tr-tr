@@ -1,31 +1,31 @@
 ---
 title: Etki alanı model katmanında doğrulamaları tasarlama
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Etki alanı modeli doğrulamaları için temel kavramları anlayın.
+description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Etki alanı modeli doğrulamalarının temel kavramlarını anlayın.
 ms.date: 10/08/2018
 ms.openlocfilehash: 98ccc5df84c9f6f402ecbee83b077c806d6a76fc
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75899675"
 ---
-# <a name="design-validations-in-the-domain-model-layer"></a>Etki alanı model katmanında tasarım doğrulamaları
+# <a name="design-validations-in-the-domain-model-layer"></a>Etki alanı modeli katmanında tasarım doğrulamaları
 
-DDD 'da, doğrulama kuralları ınvarıant olarak düşünülebilir. Bir toplamanın ana sorumluluğu, bu toplamanın içindeki tüm varlıkların durum değişikliklerinde iç varyantları zorlayamalarıdır.
+DDD'de doğrulama kuralları değişmez olarak düşünülebilir. Bir agreganın temel sorumluluğu, bu toplamdaki tüm varlıklar için durum değişiklikleri arasında değişmezlikleri uygulamaktır.
 
-Etki alanı varlıkları her zaman geçerli varlıklar olmalıdır. Her zaman doğru olması gereken bir nesne için belirli sayıda ınvaryantlar vardır. Örneğin, bir order Item nesnesi her zaman pozitif bir tamsayı ve ayrıca bir makale adı ve fiyat olması gereken bir miktara sahip olmalıdır. Bu nedenle, ınvarıant zorlaması etki alanı varlıklarının sorumluluğundadır (özellikle toplama köküdür) ve bir varlık nesnesi geçerli olmadan mevcut olamaz. Sabit kurallar yalnızca sözleşmeler olarak ifade edilir ve ihlal edildiğinde özel durumlar veya bildirimler tetiklenir.
+Etki alanı varlıkları her zaman geçerli varlıklar olmalıdır. Her zaman doğru olması gereken bir nesne için belirli sayıda değişmez vardır. Örneğin, bir sipariş öğesi nesnesi her zaman pozitif tamsayı olması gereken bir miktar, artı bir makale adı ve fiyat olması gerekir. Bu nedenle, değişmezlerin uygulanması etki alanı varlıklarının (özellikle toplam kök) sorumluluğundadır ve bir varlık nesnesi geçerli olmadan var olmamalıdır. Değişmez kurallar yalnızca sözleşme olarak ifade edilir ve ihlal edildiklerinde özel durumlar veya bildirimler yükseltilir.
 
-Bunun arkasındaki nedenler birçok hatanın meydana gelir çünkü nesneler hiçbir zaman bir durumda olmamalıdır. Aşağıda, bir [çevrimiçi tartışmadaki](https://jeffreypalermo.com/2009/05/the-fallacy-of-the-always-valid-entity/)Greg başak 'dan iyi bir açıklama verilmiştir:
+Bunun arkasındaki mantık, nesnelerin asla içinde olmaması gereken bir durumda olması nedeniyle birçok hatanın oluşmasıdır. Aşağıdaki greg Young bir [online tartışma](https://jeffreypalermo.com/2009/05/the-fallacy-of-the-always-valid-entity/)iyi bir açıklama:
 
-Şimdi de bir kullanıcı profili alan bir SendUserCreationEmailService sunuyoruz... Bu hizmette adı null olmayan bir şekilde nasıl korkutuz? Yeniden denetliyoruz mi? Veya daha olası olabilir... "sizin için en iyi" onay ve "umuyoruz" gibi bir göz atın. size göndermeden önce birisinin bothered doğrulaması gerektiğini umuyoruz. Tabii ki, bir hatayı oluşturması gereken null bir ada sahip bir müşteriyi gönderdiğimde, yazılması gereken ilk testlerin bir kısmını kullanma. Ancak, bu tür testleri yeniden yazmaya başladığımızda bir kez daha... "adın null olmasına izin verdiğimiz takdirde bu testlerin tümüne sahip olmadığımızda bekleyin"
+Şimdi bir UserProfile alır SendUserCreationEmailService var önerelim ... Adın null olmadığını bu hizmette nasıl rasyonalize edebiliriz? Tekrar kontrol ediyor muyum? Ya da daha büyük olasılıkla ... sadece kontrol etmek için rahatsız etmeyin ve "en iyi" için umut-birinin size göndermeden önce doğrulamak için rahatsız umuyoruz. Tabii ki, TDD kullanarak biz yazmalı gereken ilk testlerden biri eğer bir hata yükseltmek gerektiğini bir null adı ile bir müşteri göndermek olduğunu. Ama bir kez tekrar tekrar bu tür testler yazmaya başlamak biz fark ... "Eğer ismin geçersiz olmasına izin vermeseydik, bu testlerin hepsine sahip olamazdık"
 
-## <a name="implement-validations-in-the-domain-model-layer"></a>Etki alanı model katmanında doğrulamaları uygulama
+## <a name="implement-validations-in-the-domain-model-layer"></a>Etki alanı modeli katmanında doğrulamaları uygulama
 
-Doğrulamalar genellikle etki alanı varlık oluşturucularında veya varlığı güncelleştirebilme metotlarında uygulanır. Doğrulama işleminin başarısız olması durumunda, verileri doğrulama ve özel durum oluşturma gibi doğrulamaları uygulamak için birden çok yol vardır. Ayrıca, doğrulamalar için belirtim desenini kullanma gibi daha gelişmiş desenler ve her doğrulama için bir özel durum döndürmek yerine bir hata koleksiyonu döndürmek için bildirim deseni de vardır.
+Doğrulamalar genellikle etki alanı varlık oluşturucuları veya varlığı güncelleştirebilecek yöntemlerde uygulanır. Doğrulama başarısız olursa, verileri doğrulama ve özel durumları artırma gibi doğrulamaları uygulamanın birden çok yolu vardır. Ayrıca, doğrulamalar için Belirtim deseni ve bildirim deseni, oluştukça her doğrulama için bir özel durum döndürmek yerine bir hata koleksiyonunu döndürmek gibi daha gelişmiş desenler de vardır.
 
-### <a name="validate-conditions-and-throw-exceptions"></a>Koşulları doğrulama ve özel durum throw
+### <a name="validate-conditions-and-throw-exceptions"></a>Koşulları doğrulayın ve özel durumlar atın
 
-Aşağıdaki kod örneğinde bir özel durum oluşturarak bir etki alanı varlığındaki doğrulamaya yönelik en basit yaklaşım gösterilmektedir. Bu bölümün sonundaki başvurular tablosunda, daha önce ele aldığımız desenleri temel alarak daha gelişmiş uygulamaların bağlantılarını görebilirsiniz.
+Aşağıdaki kod örneği, bir özel durum oluşturarak bir etki alanı varlığında doğrulamaya en basit yaklaşımı gösterir. Bu bölümün sonundaki başvurular tablosunda, daha önce tartıştığımız desenlere dayalı olarak daha gelişmiş uygulamalara bağlantılar görebilirsiniz.
 
 ```csharp
 public void SetAddress(Address address)
@@ -34,7 +34,7 @@ public void SetAddress(Address address)
 }
 ```
 
-Daha iyi bir örnek, iç durumun değişmediğinden ya da bir yöntemin tüm mutasyonun gerçekleşmediğinden emin olmak için gerekli olduğunu gösterir. Örneğin, aşağıdaki uygulama nesneyi geçersiz bir durumda bırakır:
+Daha iyi bir örnek, iç durumunun değişmediğinden veya bir yöntemiçin tüm mutasyonların meydana geldiğini sağlama gereğini ortaya koymaktadır. Örneğin, aşağıdaki uygulama nesneyi geçersiz bir durumda bırakır:
 
 ```csharp
 public void SetAddress(string line1, string line2,
@@ -47,65 +47,65 @@ public void SetAddress(string line1, string line2,
 }
 ```
 
-Durumun değeri geçersizse, ilk adres satırı ve şehir zaten değiştirilmiştir. Bu durum, adresi geçersiz hale getirir.
+Devletin değeri geçersizse, ilk adres satırı ve şehir zaten değiştirildi. Bu adresi geçersiz kılabilecek.
 
-Varlığın oluşturucusunda benzer bir yaklaşım kullanılabilir ve varlığın oluşturulduktan sonra geçerli olduğundan emin olmak için bir özel durum oluşturabilir.
+Benzer bir yaklaşım varlığın oluşturucusunda da kullanılabilir ve oluşturulduktan sonra varlığın geçerli olduğundan emin olmak için bir özel durum oluşturur.
 
-### <a name="use-validation-attributes-in-the-model-based-on-data-annotations"></a>Veri ek açıklamalarına göre modelde doğrulama özniteliklerini kullanma
+### <a name="use-validation-attributes-in-the-model-based-on-data-annotations"></a>Veri ek açıklamalarını temel alan modelde doğrulama öznitelikleri kullanma
 
-Gerekli veya MaxLength öznitelikleri gibi veri ek açıklamaları, [Tablo eşleme](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping) bölümünde ayrıntılı olarak açıklandığı gibi EF Core veritabanı alanı özelliklerini yapılandırmak için kullanılabilir, ancak [artık EF Core varlık doğrulaması için](https://github.com/dotnet/efcore/issues/3680) (<xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> yöntemi değil), .NET Framework içinde EF 4. x bu yana gerçekleştirdikleri şekilde,
+Gerekli veya MaxLength öznitelikleri gibi veri ek açıklamaları, [Tablo eşleme](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping) bölümünde ayrıntılı olarak açıklandığı gibi EF Core veritabanı alanı özelliklerini yapılandırmak için kullanılabilir, <xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> ancak artık EF [Core'da varlık doğrulaması için çalışmaz](https://github.com/dotnet/efcore/issues/3680) (yöntem de yok), .NET Framework'deki EF 4.x'ten beri yaptıkları gibi.
 
-Veri ek açıklamaları ve <xref:System.ComponentModel.DataAnnotations.IValidatableObject> arabirimi, model bağlama sırasında, denetleyicinin her zamanki gibi işlem yapılmadan önce model doğrulama için de kullanılabilir, ancak bu modelin bir ViewModel veya DTO olması amaçlanmıştır ve bir etki alanı modeli sorunu olmadığı bir MVC veya API.
+Veri ek açıklamaları <xref:System.ComponentModel.DataAnnotations.IValidatableObject> ve arabirim hala model bağlama sırasında model doğrulama için kullanılabilir, her zamanki gibi denetleyicinin eylemleri çağırma önce, ama bu model bir ViewModel veya DTO olması gerekiyordu ve bir MVC veya API endişe değil bir etki alanı modeli endişe.
 
-Kavramsal farkı açık hale getirdiğiniz, eylemleriniz bir varlık sınıfı nesne parametresi alıyorsa, doğrulama için varlık sınıfında veri ek açıklamalarını ve `IValidatableObject` kullanmaya devam edebilirsiniz, ancak bu önerilmez. Bu durumda, işlem model bağlama sonrasında, eylem çağırmadan önce oluşur ve denetleyicinin ModelState. IsValid özelliğini denetleyerek sonucu denetleyebilir, ancak daha sonra yeniden, bu durum DbContext, EF 4. x bu yana yapıldığı gibi.
+Kavramsal farkı net hale getirdikten sonra, eylemleriniz `IValidatableObject` önerilmeyen bir varlık sınıfı nesnesi parametresi alıyorsa, veri ek açıklamalarını ve varlık sınıfında doğrulama için kullanmaya devam edebilirsiniz. Bu durumda, doğrulama modeli bağlama üzerine, hemen eylem çağıran önce oluşur ve sonucu kontrol etmek için denetleyicinin ModelState.IsValid özelliğini kontrol edebilirsiniz, ama sonra tekrar, denetleyici olur, varlık nesnesi devam etmeden önce değil DbContext, EF 4.x'ten beri yaptığı gibi.
 
-DbContext 'in SaveChanges metodunu geçersiz kılarak veri açıklamalarını ve `IValidatableObject.Validate` yöntemini kullanarak varlık sınıfında özel doğrulama uygulayabilirsiniz.
+DbContext'ın SaveChanges yöntemini geçersiz kılarak, `IValidatableObject.Validate` veri ek açıklamalarını ve yöntemi kullanarak varlık sınıfında özel doğrulama yı yine de uygulayabilirsiniz.
 
-[GitHub 'da bu açıklamada](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539)`IValidatableObject` varlıkları doğrulamak için örnek bir uygulama görebilirsiniz. Bu örnek, öznitelik tabanlı doğrulamalar yapmaz, ancak aynı geçersiz kılmada yansıma kullanarak uygulanması kolay olmalıdır.
+`IValidatableObject` [GitHub'daki bu yorumda](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539)varlıkları doğrulamak için örnek bir uygulama görebilirsiniz. Bu örnek öznitelik tabanlı doğrulamalar yapmaz, ancak aynı geçersiz kılma yansıması kullanarak uygulamak kolay olmalıdır.
 
-Bununla birlikte, bir DDD görünümünde, etki alanı modeli, varlıklarınızın davranış yöntemlerinde özel durumların kullanımı ile veya doğrulama kurallarını zorlamak için belirtim ve bildirim desenleri uygulayarak en iyi şekilde korunur.
+Ancak, DDD bakış açısından, etki alanı modeli en iyi varlık davranış yöntemleri özel durumlar kullanımı ile yalın tutulur veya doğrulama kuralları zorlamak için Belirtim ve Bildirim desenleri uygulanarak.
 
-Veri açıklamalarını, Kullanıcı arabirimi katmanında model doğrulamaya izin vermek için girişi kabul edecek şekilde, ViewModel sınıflarında (etki alanı varlıkları yerine) uygulama katmanında kullanmak mantıklı olabilir. Ancak, bu, etki alanı modeli içinde doğrulamanın dışlamasıyla yapılmamalıdır.
+Kullanıcı Arabirimi katmanında model doğrulamasına izin vermek için girişi kabul edecek ViewModel sınıflarında (etki alanı varlıkları yerine) uygulama katmanında veri ek açıklamaları kullanmak mantıklı olabilir. Ancak, bu etki alanı modeli içinde doğrulama hariç yapılmalıdır.
 
-### <a name="validate-entities-by-implementing-the-specification-pattern-and-the-notification-pattern"></a>Belirtim modelini ve bildirim modelini uygulayarak varlıkları doğrulama
+### <a name="validate-entities-by-implementing-the-specification-pattern-and-the-notification-pattern"></a>Belirtim deseni ve Bildirim deseni uygulayarak varlıkları doğrulayın
 
-Son olarak, etki alanı modelinde doğrulamaları uygulamaya yönelik daha ayrıntılı bir yaklaşım, daha sonra listelenen ek kaynaklarda açıklandığı gibi belirtim deseninin bildirim düzeniyle birlikte uygulanmasıyla yapılır.
+Son olarak, etki alanı modelinde doğrulamaları uygulamak için daha ayrıntılı bir yaklaşım, daha sonra listelenen ek kaynakların bazılarında açıklandığı gibi, Bildirim deseni ile birlikte Belirtim deseni uygulayarak olur.
 
-Bu modellerden yalnızca birini de kullanabilirsiniz. Örneğin, denetim deyimleriyle el ile doğrulama, ancak yığın için bildirim desenini kullanma ve doğrulama hatalarının bir listesini döndürme.
+Bu desenlerden yalnızca birini de kullanabileceğinizi belirtmekte yarar vardır(örneğin, denetim deyimleriyle el ile doğrulama, ancak doğrulama hatalarının listesini yığını ve döndürebilir için Bildirim deseni kullanılır.
 
-### <a name="use-deferred-validation-in-the-domain"></a>Etki alanında Ertelenmiş doğrulama kullan
+### <a name="use-deferred-validation-in-the-domain"></a>Etki alanında ertelenmiş doğrulama kullanma
 
-Etki alanındaki ertelenmiş doğrulamalarla uğraşmak için çeşitli yaklaşımlar vardır. [Etki alanı odaklı tasarımı uygulayan](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577)kitapta, Vaughn verunbu, doğrulama konusundaki bölümünde ele alınmaktadır.
+Etki alanında ertelenmiş doğrulamaları ele almak için çeşitli yaklaşımlar vardır. [Kitabında Etki Alanı Odaklı Tasarım Uygulama](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577), Vaughn Vernon doğrulama bölümünde bu tartışıyor.
 
-### <a name="two-step-validation"></a>İki aşamalı doğrulama
+### <a name="two-step-validation"></a>İki adımlı doğrulama
 
-Ayrıca iki aşamalı doğrulamayı de göz önünde bulundurun. Komut Veri Aktarımı nesneleri (DTOs) ve varlıklarınızdaki etki alanı düzeyinde doğrulama üzerinde alan düzeyinde doğrulama kullanın. Doğrulama hatalarıyla daha kolay hale getirmek için özel durumlar yerine bir sonuç nesnesi döndürerek bunu yapabilirsiniz.
+Ayrıca iki adımlı doğrulama düşünün. Komutveri aktarım nesnelerinde (DTO'lar) alan düzeyinde doğrulama yı ve varlıklarınız içinde etki alanı düzeyinde doğrulamayı kullanın. Doğrulama hatalarıyla başa çıkmanın daha kolay olabilmesi için bunu özel durumlar yerine bir sonuç nesnesi döndürerek yapabilirsiniz.
 
-Veri açıklamaları ile alan doğrulamayı kullanma örneğin, doğrulama tanımını çoğaltmayın. Ancak yürütme, DTOs (örneğin, komut ve ViewModel) durumunda sunucu tarafı ve istemci tarafı olabilir.
+Örneğin, veri ek açıklamalarıyla alan doğrulaması kullanarak doğrulama tanımını yinelemezsiniz. Ancak yürütme, DT'ler (örneğin komutlar ve Görünüm Modelleri) durumunda hem sunucu tarafı hem de istemci tarafı olabilir.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Oychel Appel. ASP.NET Core MVC 'de model doğrulamasına giriş** \
+- **Rachel Appel. Core MVC'de model doğrulamaya giriş ASP.NET** \
   <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 
-- **Rick Anderson. Doğrulama \ ekleniyor**
+- **Rick Anderson' ı. Doğrulama ekleme** \
   <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
-- **Marwler. Doğrulamalardaki özel durumları bildirim ile değiştirme** \
+- **Martin Fowler' ı. Doğrulamalarda Bildirimle Özel Durumlar Atma nın Değiştirilmesi** \
   <https://martinfowler.com/articles/replaceThrowWithNotification.html>
 
-- **Belirtim ve bildirim desenleri** \
+- **Şartname ve Bildirim Desenleri** \
   <https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns>
 
-- **Lev Gorodinski. Etki alanı odaklı tasarımda doğrulama (DDD)**  \
+- **Lev Gorodinski. Etki Alanı Odaklı Tasarımda Doğrulama (DDD)** \
   <http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/>
 
-- **Colın jakı. Etki alanı modeli doğrulama** \
+- **Colin Jack' i. Etki Alanı Modeli Doğrulama** \
   <https://colinjack.blogspot.com/2008/03/domain-model-validation.html>
 
-- **Jimmy Bogard. DDD dünyasında doğrulama** \
+- **Jimmy Bogard' ı. DDD dünyasında doğrulama** \
   <https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/>
 
 > [!div class="step-by-step"]
 > [Önceki](enumeration-classes-over-enum-types.md)
-> [İleri](client-side-validation.md)
+> [Sonraki](client-side-validation.md)

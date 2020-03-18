@@ -2,17 +2,17 @@
 title: 'Örnek XML Dosyası: Bir Ad Alanında Tipik Satın Alma Siparişi'
 ms.date: 07/20/2015
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
-ms.openlocfilehash: 59ef22c73345fa13278795a6363871b3657e5b8f
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 001a12210c2252d9718425d0d4013bdbdf25b996
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868685"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167970"
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>Örnek XML Dosyası: Bir Ad Alanında Tipik Satın Alma Siparişi
-Aşağıdaki XML dosyası [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgelerindeki çeşitli örneklerde kullanılır. Bu dosya tipik bir satın alma siparişi. XML bir ad alanıdır.  
+Aşağıdaki XML dosyası [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgelerdeki çeşitli örneklerde kullanılır. Bu dosya tipik bir satınalma siparişidir. XML bir ad alanında.  
   
-## <a name="purchaseorderinnamespacexml"></a>PurchaseOrderInNamespace. xml  
+## <a name="purchaseorderinnamespacexml"></a>Satın AlmaSiparişNamespace.xml  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -53,4 +53,3 @@ Aşağıdaki XML dosyası [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 
   </aw:Items>  
 </aw:PurchaseOrder>  
 ```  
- 

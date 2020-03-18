@@ -13,71 +13,71 @@ helpviewer_keywords:
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
 ms.openlocfilehash: 7ab795cd4c6e0ff5e1451c05987848c41bd69577
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741741"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400605"
 ---
 # <a name="constructor-design"></a>Oluşturucu Tasarımı
 
-İki tür Oluşturucu vardır: tür oluşturucular ve örnek oluşturucular.
+İki tür yapıcı vardır: tip yapıcılar ve örnek yapıcılar.
 
-Tür oluşturucuları statiktir ve tür kullanılmadan önce CLR tarafından çalıştırılır. Örnek oluşturucular, bir tür örneği oluşturulduğunda çalışır.
+Tür oluşturucular statiktir ve tür kullanılmadan önce CLR tarafından çalıştırılır. Örnek oluşturucular, bir tür örneği oluşturulduğunda çalışır.
 
-Tür oluşturucular hiçbir parametre alamaz. Örnek oluşturucular olabilir. Parametre kullanmayan örnek oluşturucular genellikle parametresiz oluşturucular olarak adlandırılır.
+Tür oluşturucular herhangi bir parametre alamaz. Örnek yapıcılar yapabilir. Herhangi bir parametre almayan örnek yapıcılar genellikle parametresiz yapıcılar olarak adlandırılır.
 
-Oluşturucular, bir türün örneklerini oluşturmanın en doğal yoludur. Çoğu geliştirici, örnek oluşturma (örneğin, Factory yöntemleri) için alternatif yolları düşünmeleri için bir oluşturucuyu arar ve kullanmayı dener.
+Yapıcılar, bir tür örnekleri oluşturmanın en doğal yoludur. Çoğu geliştirici, örnek oluşturmanın alternatif yollarını (fabrika yöntemleri gibi) düşünmeden önce bir oluşturucuüzerinde arama yapar ve kullanmaya çalışır.
 
-✔️ basit, ideal varsayılan oluşturucular sağlamayı düşünün.
+✔️ basit, ideal varsayılan, yapıcılar sağlayan düşünün.
 
-Basit bir oluşturucunun çok az sayıda parametresi vardır ve tüm parametreler temel elemanlar veya Numaralandırmalar. Bu tür basit oluşturucular Framework kullanılabilirliğini artırır.
+Basit bir oluşturucu nun çok az sayıda parametresi vardır ve tüm parametreler ilkel veya enumdur. Bu tür basit yapıcılar çerçevenin kullanılabilirliğini artırır.
 
-✔️, istenen işlemin semantiğini yeni bir örneğin yapıcıya doğrudan eşlenmiyorsa veya oluşturucunun tasarım yönergeleri doğal olarak yoksa, Oluşturucu yerine bir statik fabrika yöntemi kullanmayı düşünün.
+✔️, istenilen işlemin anlambilimi doğrudan yeni bir örneğin yapımıyla eşleninmiyorsa veya konstrüktör tasarım yönergelerini izleyerek doğal değilse, yapıcı yerine statik bir fabrika yöntemi kullanmayı düşünün.
 
-✔️ Oluşturucu parametrelerini, ana özellikleri ayarlamak için kısayollar olarak kullanın.
+✔️ DO, ana özellikleri ayarlamak için kısayol olarak oluşturucu parametreleri kullanır.
 
-Boş oluşturucuyu, ardından bazı özellik kümelerini ve birden çok bağımsız değişkenle bir oluşturucuyu kullanarak, semantik bir farklılık olmamalıdır.
+Boş yapıcıyı ve ardından bazı özellik kümelerini kullanmakla birden çok bağımsız değişkeni olan bir oluşturucu kullanmak arasında anlam ayrımı olmamalıdır.
 
-✔️, Oluşturucu parametreleri için aynı adı ve Oluşturucu parametreleri özelliği ayarlamak için kullanılırsa özelliğini kullanın.
+✔️ Yapı parametreleri için aynı adı ve bir özellik için yapı parametreleri yalnızca özelliği ayarlamak için kullanılırsa kullanın.
 
-Bu parametre ve özellikler arasındaki tek fark büyük küçük harf olmalıdır.
+Bu parametreler ve özellikleri arasındaki tek fark kasa olmalıdır.
 
-✔️ oluşturucuda en az iş YAPıN.
+✔️ yapıcı minimum iş yapmak.
 
-Oluşturucular, Oluşturucu parametrelerini yakalamaya göre çok daha fazla çalışmamalıdır. Diğer bir işleme maliyeti, gerekli olana kadar Gecikmeli olmalıdır.
+Yapıcılar, yapıcı parametreleri yakalamak dışında çok fazla iş yapmamalıdır. Başka bir işlemin maliyeti gerekli olana kadar geciktirilmelidir.
 
-✔️, uygunsa örnek oluşturuculardan özel durumlar oluşturur.
+✔️ DO, uygunsa örnek oluşturuculardan özel durumlar atar.
 
-Bu tür bir Oluşturucu gerekliyse, sınıflarda Ortak parametresiz oluşturucuyu açıkça bildirin ✔️.
+✔️ DO, böyle bir oluşturucu gerekliyse, sınıflardaki kamu parametresiz oluşturucuyu açıkça beyan edin.
 
-Bir tür üzerinde açıkça herhangi bir Oluşturucu bildirmezseniz, birçok dil (gibi C#) otomatik olarak ortak parametresiz bir Oluşturucu ekler. (Soyut sınıflar korumalı bir Oluşturucu alır.)
+Bir türde herhangi bir oluşturucuaçıkça beyan etmezseniz, birçok dil (C# gibi) otomatik olarak bir kamu parametresiz oluşturucu ekler. (Soyut sınıflar korunan bir yapıcı alır.)
 
-Bir sınıfa parametreli Oluşturucu eklemek derleyicinin parametresiz oluşturucuyu eklemesini önler. Bu genellikle yanlışlıkla önemli değişikliklere neden olur.
+Bir sınıfa parametreli oluşturucu eklemek derleyicinin parametresiz oluşturucuyu eklemesini engeller. Bu genellikle kazara kırılma değişikliklerine neden olur.
 
-❌ yapı birimlerinde açıkça parametresiz oluşturucular tanımlamayı ÖNLEYIN.
+❌Yapılar üzerinde parametresiz yapıcıları açıkça tanımlamaktan kaçının.
 
-Bu, parametresiz Oluşturucu tanımlanmamışsa, dizideki her yuvada çalıştırılması gerekmediğinden, dizi oluşturmayı daha hızlı hale getirir. Birçok derleyicilerin C#, bu nedenle yapıların parametresiz oluşturuculara sahip olduğuna izin vermez.
+Bu, parametresiz oluşturucu tanımlanmamışsa, dizideki her yuvada çalıştırılması gerekmedığından, dizi oluşturmayı hızlandırır. C# da dahil olmak üzere birçok derleyicinin bu nedenle yapı oluşturuculara sahip olması izin vermeyin.
 
-❌ oluşturucusunun içindeki bir nesne üzerinde sanal üye çağırmaktan KAÇıNıN.
+❌Oluşturucusu içindeki bir nesneye sanal üyeleri çağırmaktan kaçının.
 
-En türetilmiş türün Oluşturucusu henüz tam olarak çalıştırılmasa bile, sanal bir üyenin çağrılması en fazla türetilmiş geçersiz kılmanın çağrılmasına neden olur.
+En çok türetilmiş türün oluşturucusu henüz tam olarak çalıştırılmasa bile, sanal bir üyeyi çağırmak en çok türetilmiş geçersiz kılmanın çağrılmasını sağlar.
 
-## <a name="type-constructor-guidelines"></a>Tür Oluşturucu yönergeleri
+## <a name="type-constructor-guidelines"></a>Tip Oluşturucu Yönergeleri
 
-statik oluşturucuları özel hale getirmek ✔️.
+✔️ statik yapıcılar özel yapmak.
 
-Sınıf oluşturucusu olarak da adlandırılan statik bir Oluşturucu, bir türü başlatmak için kullanılır. CLR, türün ilk örneği oluşturulmadan veya bu türdeki herhangi bir statik üye çağrılmadan önce statik oluşturucuyu çağırır. Statik Oluşturucu çağrıldığında kullanıcının denetimi yoktur. Statik bir Oluşturucu özel değilse, CLR dışındaki kodla çağrılabilir. Oluşturucuda gerçekleştirilen işlemlere bağlı olarak, bu beklenmeyen davranışlara neden olabilir. C# Derleyici statik oluşturucuları özel olmaya zorlar.
+Bir tür e-baş harflerini almak için sınıf oluşturucu olarak da adlandırılan statik bir oluşturucu kullanılır. CLR, türün ilk örneği oluşturulmadan veya bu türdeki statik üyeler çağrılmadan önce statik oluşturucuyu çağırır. Statik oluşturucu çağrıldığında kullanıcının denetimi yoktur. Statik bir oluşturucu özel değilse, CLR dışındaki kodla çağrılabilir. Oluşturucuda gerçekleştirilen işlemlere bağlı olarak, bu beklenmeyen davranışlara neden olabilir. C# derleyicisi statik yapıcıları özel olmaya zorlar.
 
-❌ statik oluşturuculardan özel durumlar oluşturmaz.
+❌Statik oluşturuculardan özel durumlar ATMAYIN.
 
-Bir tür oluşturucusundan bir özel durum oluşturulursa, tür geçerli uygulama etki alanında kullanılamaz.
+Bir tür oluşturucudan bir özel durum atılırsa, tür geçerli uygulama etki alanında kullanılabilir değildir.
 
-✔️, çalışma zamanı açıkça tanımlanmış bir statik oluşturucuya sahip olmayan türlerin performansını iyileştirebildiğinden, statik oluşturucuları açıkça kullanmak yerine, statik alanları satır içi olarak başlatmayı düşünün.
+✔️, çalışma zamanı açıkça tanımlanmış statik oluşturucusu olmayan türlerin performansını en iyi duruma getirebildiği için, statik alanları açıkça statik oluşturucukullanmak yerine satır satır da başlatmayı düşünün.
 
-*© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
+*2005, 2009 Microsoft Corporation © bölümleri. Tüm hakları saklıdır.*
 
-*, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
+*Pearson Education, Inc.'in izniyle [Framework Design Guidelines: Conventions, Idioms and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina ve Brad Abrams tarafından 22 Ekim 2008'de Addison-Wesley Professional tarafından Microsoft Windows Geliştirme Serisi'nin bir parçası olarak yayımlandı.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,43 +1,43 @@
 ---
-title: delegate işleci- C# başvuru
+title: temsilci operatörü - C# referansı
 ms.date: 07/18/2019
 helpviewer_keywords:
 - delegate [C#]
 - anonymous method [C#]
-ms.openlocfilehash: 02b0bfaccbd727b1f86a1668012f02b315fd88d1
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 1dd27fe5fdfdc1bc8a63e1298da00d252e800a72
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239306"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847345"
 ---
-# <a name="delegate-operator-c-reference"></a>delegate işleci (C# başvuru)
+# <a name="delegate-operator-c-reference"></a>temsilci işleci (C# referansı)
 
-`delegate` işleci, bir temsilci türüne dönüştürülebilen anonim bir yöntem oluşturur:
+İşleç, `delegate` temsilci türüne dönüştürülebilecek anonim bir yöntem oluşturur:
 
-[!code-csharp-interactive[anonymous method](~/samples/snippets/csharp/language-reference/operators/DelegateOperator.cs#AnonymousMethod)]
+[!code-csharp-interactive[anonymous method](snippets/DelegateOperator.cs#AnonymousMethod)]
 
 > [!NOTE]
-> 3 ile C# başlayarak lambda ifadeleri anonim bir işlev oluşturmak için daha kısa ve açıklayıcı bir yol sağlar. Lambda ifadesi oluşturmak için [= > işlecini](lambda-operator.md) kullanın:
+> C# 3 ile başlayarak lambda ifadeleri anonim bir işlev oluşturmak için daha kısa ve anlamlı bir yol sağlar. Lambda ifadesini oluşturmak için [=> işleci](lambda-operator.md) kullanın:
 >
-> [!code-csharp-interactive[lambda expression](~/samples/snippets/csharp/language-reference/operators/DelegateOperator.cs#Lambda)]
+> [!code-csharp-interactive[lambda expression](snippets/DelegateOperator.cs#Lambda)]
 >
-> Lambda ifadelerinin özellikleri hakkında daha fazla bilgi için örneğin, dış değişkenleri yakalama, bkz. [lambda ifadeleri](../../programming-guide/statements-expressions-operators/lambda-expressions.md).
+> Lambda ifadelerinin özellikleri hakkında daha fazla bilgi için, örneğin, dış değişkenleri yakalama, [Lambda ifadeleri](../../programming-guide/statements-expressions-operators/lambda-expressions.md)bakın.
 
-`delegate` işlecini kullandığınızda parametre listesini atlayabilirsiniz. Bunu yaparsanız, oluşturulan anonim yöntem, aşağıdaki örnekte gösterildiği gibi, herhangi bir parametre listesiyle bir temsilci türüne dönüştürülebilir:
+İşleç `delegate` kullandığınızda, parametre listesini atlaabilirsiniz. Bunu yaparsanız, oluşturulan anonim yöntem, aşağıdaki örnekte görüldüğü gibi, herhangi bir parametre listesi içeren bir temsilci türüne dönüştürülebilir:
 
-[!code-csharp-interactive[no parameter list](~/samples/snippets/csharp/language-reference/operators/DelegateOperator.cs#WithoutParameterList)]
+[!code-csharp-interactive[no parameter list](snippets/DelegateOperator.cs#WithoutParameterList)]
 
-Bu, lambda ifadeleri tarafından desteklenmeyen anonim yöntemlerin tek işlevsellikleridir. Diğer tüm durumlarda, bir lambda ifadesi satır içi kod yazmak için tercih edilen bir yoldur.
+Lambda ifadeleri tarafından desteklenmeyen anonim yöntemlerin tek işlevselliği bu. Diğer tüm durumlarda, lambda ifadesi satır içinde kod yazmak için tercih edilen bir yoldur.
 
-Ayrıca, bir [temsilci türü](../builtin-types/reference-types.md#the-delegate-type)bildirmek için `delegate` anahtar sözcüğünü kullanırsınız.
+Ayrıca bir `delegate` [temsilci türü](../builtin-types/reference-types.md#the-delegate-type)bildirmek için anahtar kelime kullanın.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [anonim işlev ifadeleri](~/_csharplang/spec/expressions.md#anonymous-function-expressions) bölümüne bakın.
+Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Anonim işlev ifadeleri](~/_csharplang/spec/expressions.md#anonymous-function-expressions) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvurunun](../index.md)
+- [C# başvurusu](../index.md)
 - [C# işleçleri](index.md)
-- [= > işleci](lambda-operator.md)
+- [=> operatörü](lambda-operator.md)

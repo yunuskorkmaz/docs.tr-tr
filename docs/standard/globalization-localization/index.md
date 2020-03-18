@@ -1,5 +1,5 @@
 ---
-title: .NET uygulamalarını genelleştirmek ve yerelleştirme
+title: Küreselleştirme ve yerelleştirme .NET uygulamaları
 ms.date: 06/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 ms.openlocfilehash: eae1c38c2383d13bfb4dab83f2fe9551970b39f4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120880"
 ---
-# <a name="globalizing-and-localizing-net-applications"></a>.NET uygulamalarını genelleştirmek ve yerelleştirme
+# <a name="globalizing-and-localizing-net-applications"></a>Küreselleştirme ve yerelleştirme .NET uygulamaları
 
-Bir veya daha fazla dilde yerelleştirilebilecek bir uygulama da dahil olmak üzere dünya çapında kullanılabilir bir uygulama geliştirme, üç adımdan oluşur: Genelleştirme, Yerelleştirilebilirlik incelemesi ve yerelleştirme.
+Bir veya daha fazla dile yerelleştirilebilen bir uygulama da dahil olmak üzere, dünyaya hazır bir uygulama geliştirmek üç adım içerir: küreselleşme, yerelleştirilebilirlik incelemesi ve yerelleştirme.
 
 [Genelleştirme](globalization.md)
 
@@ -40,9 +40,9 @@ Aşağıdaki üç adımı izlemenin iki avantajı vardır:
 
 - Daha kararlı ve daha az hatası olan yerelleştirilmiş uygulamalar olarak sonuçlanır.
 
-.NET, dünya çapında ve yerelleştirilmiş uygulamaların geliştirilmesi için kapsamlı destek sağlar. Özellikle, .NET sınıf kitaplığındaki birçok üye türü, geçerli kullanıcının kültürünün veya belirtilen kültürün kurallarını yansıtan değerler döndürerek Genelleştirme 'ye yardımcı olur. Ayrıca, .NET, bir uygulamayı yerelleştirme işlemini kolaylaştıran uydu derlemelerini destekler.
+.NET, dünya çapında hazır ve yerelleştirilmiş uygulamaların geliştirilmesi için kapsamlı destek sağlar. Özellikle,.NET sınıf kitaplığındaki birçok tür üyesi, geçerli kullanıcı kültürünün veya belirli bir kültürün kurallarını yansıtan değerleri döndürerek küreselleşmeye yardımcı olabilir. Ayrıca, .NET, bir uygulamayı yerelleştirme işlemini kolaylaştıran uydu derlemelerini destekler.
 
-Daha fazla bilgi için bkz. [Genelleştirme belgeleri](/globalization/).
+Daha fazla bilgi [için, Küreselleşme belgelerine](/globalization/)bakın.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
@@ -60,23 +60,23 @@ Yerelleştirmede potansiyel bariyerler tanımlamayı da içeren yerelleştirilmi
 
 [Kültüre duyarsız dize işlemleri](culture-insensitive-string-operations.md)
 
-Kültüre duyarsız sonuçlar elde etmek için varsayılan olarak kültüre duyarlı olan .NET yöntemlerinin ve sınıflarının nasıl kullanılacağını açıklar.
+Kültüre duyarlı sonuçlar elde etmek için varsayılan olarak kültüre duyarlı .NET yöntemlerinin ve sınıflarının nasıl kullanılacağını açıklar.
 
-[Dünya çapında kullanmaya yönelik uygulamalar geliştirmek için en iyi uygulamalar](best-practices-for-developing-world-ready-apps.md)
+[Dünyaya hazır uygulamalar geliştirmek için en iyi uygulamalar](best-practices-for-developing-world-ready-apps.md)
 
 Genelleştirme, yerelleştirme ve dünya çapında kullanılmaya hazır ASP.NET uygulamaları geliştirmek için izlenebilecek en iyi uygulamaları açıklar.
 
 ## <a name="reference"></a>Başvuru
 
-- <xref:System.Globalization?displayProperty=nameWithType> ad alanı
+- <xref:System.Globalization?displayProperty=nameWithType>Namespace
 
    Bu ad alanındaki, dil, ülke/bölge, kullanılan takvimler, tarihler için biçim desenleri, para birimi, sayılar ve dizeler için sıralama düzeni gibi kültürle ilişkili bilgileri tanımlayan sınıflar içerir
 
-- <xref:System.Resources> ad alanı
+- <xref:System.Resources>Namespace
 
    Kaynaklar oluşturmak, düzenlemek ve kullanmak için sınıflar sağlar.
 
-- <xref:System.Text> ad alanı
+- <xref:System.Text>Namespace
 
    ASCII, ANSI, Unicode ve diğer karakter kodlamalarını temsil eden sınıfları içerir.
 

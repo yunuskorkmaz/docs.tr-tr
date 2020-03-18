@@ -1,16 +1,16 @@
 ---
-title: Bir dizin ağacında (LINQ) yinelenen dosyaları sorgulama (LINQ) (C#)
+title: Dizin ağacında yinelenen dosyalar için sorgulama (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 7c84dba3e87077077f28bc2e665ea3774cf44d3b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 0578d6c85c7d2e38c840c278c7ad2775467ac741
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347872"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168888"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Bir dizin ağacında (LINQ) yinelenen dosyaları sorgulama (LINQ) (C#)
-Bazen aynı ada sahip dosyalar birden fazla klasörde bulunabilir. Örneğin, Visual Studio yükleme klasörü altında, birkaç klasör Readme. htm dosyasına sahiptir. Bu örnek, belirtilen bir kök klasör altında bu tür yinelenen dosya adlarının nasıl sorgulanalınacağını gösterir. İkinci örnek, boyutu ve LastWrite süreleri de aynı olan dosyaların nasıl sorgulanacağı gösterilmektedir.  
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Dizin ağacında yinelenen dosyalar için sorgulama (LINQ) (C#)
+Bazen aynı ada sahip dosyalar birden fazla klasörde bulunabilir. Örneğin, Visual Studio yükleme klasörü altında, birkaç klasörde readme.htm dosyası bulunur. Bu örnek, bu tür yinelenen dosya adlarının belirli bir kök klasör altında nasıl sorgulanır olduğunu gösterir. İkinci örnek, boyutu ve LastWrite süreleri de eşleşen dosyalar için nasıl sorgulanır gösterir.  
   
 ## <a name="example"></a>Örnek  
   
@@ -99,7 +99,7 @@ class QueryDuplicateFileNames
         // A named type is used to enable the query to be  
         // passed to another method. Anonymous types can also be used  
         // for composite keys but cannot be passed across method boundaries  
-        //   
+        //
         var queryDupFiles =  
             from file in fileList  
             group file.FullName.Substring(charsToSkip) by  
@@ -167,12 +167,12 @@ class QueryDuplicateFileNames
 }  
 ```  
   
- İlk sorgu, bir eşleşmeyi tespit etmek için basit bir anahtar kullanır; Bu, aynı ada sahip ancak içeriği farklı olabilecek olan dosyaları bulur. İkinci sorgu <xref:System.IO.FileInfo> nesnesinin üç özellikleriyle eşleştirmek için bir bileşik anahtar kullanır. Bu sorgu, aynı ada ve benzer veya özdeş içeriğe sahip dosyaları bulmak çok daha olasıdır.  
+ İlk sorgu, eşleşmeyi belirlemek için basit bir anahtar kullanır; bu, aynı ada sahip ancak içeriği farklı olabilecek dosyaları bulur. İkinci sorgu, nesnenin üç özelliğiyle <xref:System.IO.FileInfo> eşleştirmek için bileşik bir anahtar kullanır. Bu sorgu, aynı ada ve benzer veya aynı içeriğe sahip dosyaları bulmak için çok daha olasıdır.  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
- System. C# lınq ve System.IO ad alanları için `using` yönergeler içeren bir konsol uygulaması projesi oluşturun.  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
+ System.Linq ve System.IO `using` ad alanları için yönergeleri içeren bir C# konsolu uygulama projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to Objects (C#)](./linq-to-objects.md)
-- [LINQ ve dosya dizinleri (C#)](./linq-and-file-directories.md)
+- [Nesnelere LINQ (C#)](./linq-to-objects.md)
+- [LINQ ve Dosya Dizinleri (C#)](./linq-and-file-directories.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir dosyaya metin yazma'
+title: 'Nasıl yazılır: Dosyaya metin yazma'
 ms.date: 01/04/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,52 +12,52 @@ helpviewer_keywords:
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 ms.openlocfilehash: ba1c1815f0e49c02d1f0ee3c48ba01b7c2f5e727
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160254"
 ---
-# <a name="how-to-write-text-to-a-file"></a>Nasıl yapılır: bir dosyaya metin yazma
-Bu konu başlığı altında, bir .NET uygulaması için bir dosyaya metin yazmanın farklı yolları gösterilmektedir.
+# <a name="how-to-write-text-to-a-file"></a>Nasıl yazılır: Dosyaya metin yazma
+Bu konu, bir .NET uygulaması için bir dosyaya metin yazmanın farklı yollarını gösterir.
 
 Aşağıdaki sınıflar ve yöntemler genellikle bir dosyaya metin yazmak için kullanılır:  
   
-- <xref:System.IO.StreamWriter>, bir dosyaya (<xref:System.IO.StreamWriter.Write%2A> ve <xref:System.IO.TextWriter.WriteLine%2A>) ya da zaman uyumsuz (<xref:System.IO.StreamWriter.WriteAsync%2A> ve <xref:System.IO.StreamWriter.WriteLineAsync%2A>) yazma yöntemlerini içerir.  
+- <xref:System.IO.StreamWriter>bir dosyaya eşzamanlı olarak<xref:System.IO.StreamWriter.Write%2A> (ve) <xref:System.IO.TextWriter.WriteLine%2A>veya eşzamanlı olarak<xref:System.IO.StreamWriter.WriteAsync%2A> (ve) <xref:System.IO.StreamWriter.WriteLineAsync%2A>yazma yöntemleri içerir.  
   
-- <xref:System.IO.File>, <xref:System.IO.File.WriteAllLines%2A> ve <xref:System.IO.File.WriteAllText%2A>gibi bir dosyaya metin yazmak ya da <xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A>ve <xref:System.IO.File.AppendText%2A>gibi bir dosyaya metin eklemek için statik yöntemler sağlar.  
+- <xref:System.IO.File>gibi bir dosyaya metin yazmak <xref:System.IO.File.WriteAllLines%2A> için <xref:System.IO.File.WriteAllText%2A>statik yöntemler sağlar ve , veya <xref:System.IO.File.AppendAllLines%2A>bir <xref:System.IO.File.AppendAllText%2A>dosyaya metin eklemek için , , ve <xref:System.IO.File.AppendText%2A>.  
   
-- <xref:System.IO.Path>, dosya veya dizin yolu bilgilerine sahip dizeler içindir. <xref:System.IO.Path.Combine%2A> yöntemi ve .NET Core 2,1 ve üzeri sürümlerinde, dizelerin bitiştirilmesi için bir dosya veya dizin yolu oluşturma izni veren <xref:System.IO.Path.Join%2A> ve <xref:System.IO.Path.TryJoin%2A> yöntemleri içerir.
+- <xref:System.IO.Path>dosya veya dizin yolu bilgilerine sahip dizeleri içindir. Bir dosya <xref:System.IO.Path.Combine%2A> veya dizin yolu oluşturmak için dizeleri <xref:System.IO.Path.Join%2A> <xref:System.IO.Path.TryJoin%2A> biraraya getiren yöntem ve .NET Core 2.1 ve daha sonra, ve daha sonra, ve yöntemleri içerir.
 
 > [!NOTE]
-> Aşağıdaki örneklerde yalnızca gereken minimum kod miktarı gösterilmektedir. Gerçek dünya uygulaması genellikle daha sağlam hata denetimi ve özel durum işleme sağlar.  
+> Aşağıdaki örnekler, yalnızca gereken minimum kod miktarını gösterir. Gerçek bir uygulama genellikle daha sağlam hata denetimi ve özel durum işleme sağlar.  
   
-## <a name="example-synchronously-write-text-with-streamwriter"></a>Örnek: StreamWriter ile eşzamanlı olarak metin yazma
+## <a name="example-synchronously-write-text-with-streamwriter"></a>Örnek: StreamWriter ile eşzamanlı metin yazma
 
-Aşağıdaki örnek, bir kerede bir satırı yeni bir dosyaya zaman uyumlu olarak yazmak için <xref:System.IO.StreamWriter> sınıfını nasıl kullanacağınızı gösterir. <xref:System.IO.StreamWriter> nesne `using` bildiriminde bildirildiği ve örneklendiği için, <xref:System.IO.StreamWriter.Dispose%2A> yöntemi çağrılır, bu da akışı otomatik olarak boşaltır ve kapatır.  
+Aşağıdaki örnek, bir seferde <xref:System.IO.StreamWriter> yeni bir dosyaya eşit olarak metin yazmak için sınıfın nasıl kullanılacağını gösterir. <xref:System.IO.StreamWriter> Nesne bir `using` deyimde beyan edilip anında çağrıldığı için, <xref:System.IO.StreamWriter.Dispose%2A> yöntem çağrılır ve bu yöntem akışı otomatik olarak temizler ve kapatır.  
 
 [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/write.cs)]
 [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/write.vb)]  
 
 [!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
 
-## <a name="example-synchronously-append-text-with-streamwriter"></a>Örnek: bir StreamWriter ile eşzamanlı olarak metin ekleme
+## <a name="example-synchronously-append-text-with-streamwriter"></a>Örnek: StreamWriter ile eşzamanlı olarak metin ekle
 
-Aşağıdaki örnek, <xref:System.IO.StreamWriter> sınıfının, ilk örnekte oluşturulan metin dosyasına zaman uyumlu olarak metin ekleme için nasıl kullanılacağını gösterir.
+Aşağıdaki örnekte, ilk <xref:System.IO.StreamWriter> örnekte oluşturulan metin dosyasına eşit olarak metin eklemek için sınıfın nasıl kullanılacağı gösterilmektedir.
 
 [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/append.cs)]
 [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/append.vb)]  
 
-## <a name="example-asynchronously-write-text-with-streamwriter"></a>Örnek: StreamWriter ile zaman uyumsuz olarak metin yazma
+## <a name="example-asynchronously-write-text-with-streamwriter"></a>Örnek: StreamWriter ile eşzamanlı metin yazmak
 
-Aşağıdaki örnek, <xref:System.IO.StreamWriter> sınıfını kullanarak nasıl zaman uyumsuz olarak yeni bir dosyaya metin yazılacağını gösterir. <xref:System.IO.StreamWriter.WriteAsync%2A> yöntemini çağırmak için yöntem çağrısı bir `async` yöntemi içinde olmalıdır. C# Örnek, program C# giriş noktasındaki `async` değiştiricisi için destek ekleyen 7,1 veya sonraki bir sürümü gerektirir.
+Aşağıdaki örnek, sınıfı kullanarak yeni bir dosyaya eş <xref:System.IO.StreamWriter> senkronize metin yazmanın nasıl yapılacağını gösterir. <xref:System.IO.StreamWriter.WriteAsync%2A> Yöntemi çağırmak için yöntem çağrısının bir `async` yöntem içinde olması gerekir. C# örneği C# 7.1 veya daha sonra `async` gerektirir, bu da program giriş noktasındaki değiştirici için destek ekler.
 
 [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/async.cs)]
 [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/async.vb)]  
 
-## <a name="example-write-and-append-text-with-the-file-class"></a>Örnek: dosya sınıfıyla metin yazın ve ekleyin
+## <a name="example-write-and-append-text-with-the-file-class"></a>Örnek: Dosya sınıfıyla metin yazma ve ekle
 
-Aşağıdaki örnek, yeni bir dosyaya nasıl metin yazılacağını ve <xref:System.IO.File> sınıfını kullanarak aynı dosyaya yeni metin satırları ekleneceğini gösterir. <xref:System.IO.File.WriteAllText%2A> ve <xref:System.IO.File.AppendAllLines%2A> yöntemleri açıp dosyayı otomatik olarak kapatır. <xref:System.IO.File.WriteAllText%2A> metoduna sağladığınız yol zaten varsa, dosyanın üzerine yazılır.  
+Aşağıdaki örnek, yeni bir dosyaya metin yazmanın ve sınıfı kullanarak aynı <xref:System.IO.File> dosyaya yeni metin satırlarının nasıl eklenilen olduğunu gösterir. Ve <xref:System.IO.File.WriteAllText%2A> <xref:System.IO.File.AppendAllLines%2A> yöntemleri dosyayı otomatik olarak açıp kapatır. <xref:System.IO.File.WriteAllText%2A> Yönteme sağladığınız yol zaten varsa, dosya üzerine yazılır.  
 
 [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/file.cs)]
 [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/file.vb)]  
@@ -67,8 +67,8 @@ Aşağıdaki örnek, yeni bir dosyaya nasıl metin yazılacağını ve <xref:Sys
 - <xref:System.IO.StreamWriter>
 - <xref:System.IO.Path>
 - <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>
-- [Nasıl yapılır: dizinleri ve dosyaları numaralandırma](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
-- [Nasıl yapılır: yeni oluşturulan bir veri dosyasını okuma ve yazma](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
-- [Nasıl yapılır: günlük dosyasını açma ve ekleme](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)
-- [Nasıl yapılır: dosyadan metin okuma](../../../docs/standard/io/how-to-read-text-from-a-file.md)
-- [Dosya ve akış g/ç](../../../docs/standard/io/index.md)
+- [Nasıl yapılır: Dizinleri ve dosyaları sayısal](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
+- [Nasıl kullanılır: Yeni oluşturulan bir veri dosyasını okuma ve yazma](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
+- [Nasıl yapılı: Günlük dosyasını açma ve ekle](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)
+- [Nasıl yapilir: Dosyadaki metni okuma](../../../docs/standard/io/how-to-read-text-from-a-file.md)
+- [Dosya ve akış G/Ç](../../../docs/standard/io/index.md)

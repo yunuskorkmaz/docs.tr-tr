@@ -7,28 +7,28 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 ms.openlocfilehash: dd9b7b8cb194353d0a1c285af10d54dc7366896e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73128967"
 ---
 # <a name="threading-objects-and-features"></a>İş parçacığı nesneleri ve özellikleri
 
-.NET <xref:System.Threading.Thread?displayProperty=nameWithType> sınıfıyla birlikte çok iş parçacıklı uygulamalar geliştirmenize yardımcı olan bir dizi sınıf sağlar. Aşağıdaki makaleler, bu sınıflara genel bakış sağlar:
+<xref:System.Threading.Thread?displayProperty=nameWithType> .NET, sınıfla birlikte çok iş parçacığı uygulamaları geliştirmenize yardımcı olan bir dizi sınıf sağlar. Aşağıdaki makaleler bu sınıflara genel bakış sağlar:
 
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Yönetilen iş parçacığı havuzu](the-managed-thread-pool.md)|.NET tarafından yönetilen bir çalışan iş parçacığı havuzu sağlayan <xref:System.Threading.ThreadPool?displayProperty=nameWithType> sınıfını açıklar.|  
-|[Süreölçerler](timers.md)|Çoklu iş parçacıklı bir ortamda kullanılabilen .NET zamanlayıcıları açıklanmaktadır.|
-|[Eşitleme temelleri 'ne genel bakış](overview-of-synchronization-primitives.md)|Paylaşılan bir kaynağa veya denetim iş parçacığı etkileşimine erişimi eşzamanlı hale getirmek için kullanılabilecek türleri açıklar.|
-|[EventWaitHandle](eventwaithandle.md)|Bir iş parçacığı eşitleme olayını temsil eden <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType> sınıfını açıklar.|
-|[CountdownEvent](countdownevent.md)|Sayısı sıfır olduğunda ayarlanan bir iş parçacığı eşitleme olayını temsil eden <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> sınıfını açıklar.|
-|[Karşılıklı dışlamalar](mutexes.md)|Paylaşılan bir kaynağa özel erişim veren <xref:System.Threading.Mutex?displayProperty=nameWithType> sınıfını açıklar.|
-|[Semaphore ve SemaphoreSlim](semaphore-and-semaphoreslim.md)|Paylaşılan bir kaynağa veya bir kaynak havuzuna eşzamanlı olarak erişebilen iş parçacığı sayısını sınırlayan <xref:System.Threading.Semaphore?displayProperty=nameWithType> sınıfını açıklar.|
-|[Engel](barrier.md)|Aşamalı işlemlerde iş parçacıklarının koordinasyonu için engel modelini uygulayan <xref:System.Threading.Barrier?displayProperty=nameWithType> sınıfını açıklar.|
-|[SpinLock](spinlock.md)|Bazı düşük düzey kilitleme senaryoları için <xref:System.Threading.Monitor?displayProperty=nameWithType> sınıfına hafif bir alternatif olan <xref:System.Threading.SpinLock?displayProperty=nameWithType> yapısını açıklar.|
-|[SpinWait](spinwait.md)|, Döndürme tabanlı bekleme desteği sağlayan <xref:System.Threading.SpinWait?displayProperty=nameWithType> yapısını açıklar.|
+|[Yönetilen iş parçacığı havuzu](the-managed-thread-pool.md)|.NET <xref:System.Threading.ThreadPool?displayProperty=nameWithType> tarafından yönetilen bir alt iş parçacığı havuzu sağlayan sınıfı açıklar.|  
+|[Zamanlayıcılar](timers.md)|Çok iş parçacığı ortamında kullanılabilen .NET zamanlayıcılarını açıklar.|
+|[Eşitleme temellerine genel bakış](overview-of-synchronization-primitives.md)|Paylaşılan bir kaynağa erişimi eşitlemek veya iş parçacığı etkileşimini denetlemek için kullanılabilecek türleri açıklar.|
+|[EventWaitHandle](eventwaithandle.md)|İş <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType> parçacığı eşitleme olayını temsil eden sınıfı açıklar.|
+|[CountdownEvent](countdownevent.md)|Sayısı <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> sıfır olduğunda ayarlanan bir iş parçacığı eşitleme olayını temsil eden sınıfı açıklar.|
+|[Karşılıklı dışlamalar](mutexes.md)|Paylaşılan <xref:System.Threading.Mutex?displayProperty=nameWithType> kaynağa özel erişim sağlayan sınıfı açıklar.|
+|[Semafor ve SemaphoreSlim](semaphore-and-semaphoreslim.md)|Paylaşılan <xref:System.Threading.Semaphore?displayProperty=nameWithType> bir kaynağa veya aynı anda bir kaynak havuzuna erişebilen iş parçacığı sayısını sınırlayan sınıfı açıklar.|
+|[Engel](barrier.md)|Aşamalı <xref:System.Threading.Barrier?displayProperty=nameWithType> işlemlerde iş parçacıklarının koordinasyonu için bariyer deseni uygulayan sınıfı açıklar.|
+|[SpinLock](spinlock.md)|Belirli <xref:System.Threading.SpinLock?displayProperty=nameWithType> düşük düzeyli kilitleme senaryoları <xref:System.Threading.Monitor?displayProperty=nameWithType> için sınıfa hafif bir alternatif olan yapıyı açıklar.|
+|[SpinWait](spinwait.md)|Spin <xref:System.Threading.SpinWait?displayProperty=nameWithType> tabanlı bekleme desteği sağlayan yapıyı açıklar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -37,7 +37,7 @@ ms.locfileid: "73128967"
 - <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
-- [İş parçacıkları ve iş parçacığı kullanma](using-threads-and-threading.md)
+- [İş parçacıkları ve iş parçacığı oluşturmayı kullanma](using-threads-and-threading.md)
 - [Zaman Uyumsuz Dosya G/Ç](../io/asynchronous-file-i-o.md)
 - [Paralel Programlama](../parallel-programming/index.md)
 - [Görev Paralel Kitaplığı (TPL)](../parallel-programming/task-parallel-library-tpl.md)

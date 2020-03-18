@@ -11,34 +11,34 @@ helpviewer_keywords:
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
 ms.openlocfilehash: 284be7789b6411055a6421fd07cc1b0605f6ea0c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139864"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>İzlenecek Yol: Veri Akışı Ardışık Düzeni Oluşturma
-Kaynak bloklarında ileti almak için <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType>ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> yöntemlerini kullanabilseniz de, bir *veri akışı işlem hattı*oluşturmak için ileti blokları da bağlayabilirsiniz. Veri akışı işlem hattı, her biri daha büyük bir hedefe katkıda bulunan belirli bir görevi gerçekleştiren bir dizi bileşenden veya *veri akışı bloklarıdır*. Bir veri akışı ardışık düzeninde bulunan her veri akışı bloğu, başka bir veri akışı bloğundan bir ileti aldığında iş gerçekleştirir. Buna bir benzerleme vurguladı, otomobil üretimi için bir derleme satırdır. Her bir araç derleme satırından geçtiğinde, bir istasyon çerçeveyi ayrıştırır, bir sonraki altyapı altyapıyı yüklerse ve bu şekilde devam eder. Bir derleme çizgisi birden çok taşıtın aynı anda birleştirilmesini sağladığından, her seferinde bir tane olmak üzere tüm araçlar derlenenden daha iyi bir aktarım hızı sağlar.
+Kaynak bloklardan <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>ileti <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType>almak <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> için , ve yöntemleri kullanabiliyor olsada, ileti bloklarını *da bir veri akışı ardışık alanı*oluşturmak için bağlayabilirsiniz. Veri akışı ardışık bir dizi bileşen veya *veri akışı blokları,* her biri daha büyük bir hedefe katkıda bulunan belirli bir görev gerçekleştirir. Veri akışı ardışık bir veri akışı bloğundaki her veri akışı bloğu, başka bir veri akışı bloğundan ileti aldığında işi gerçekleştirir. Buna benzetme otomobil üretimi için bir montaj hattıdır. Her araç montaj hattından geçerken, bir istasyon çerçeveyi monte eder, bir sonraki motor ayükler, ve saire. Montaj hattı birden fazla aracın aynı anda monte edilmesini sağladığından, tüm araçların birer birer monte edilmesinden daha iyi iş elde edilmesini sağlar.
 
- Bu belgede, bir Web sitesinden *Homer 'in* bulunduğu kitabı yükleyen ve metni, ilk sözcüğün karakterlerini tersine çevrilmiş sözcüklerle tek tek sözcüklerle eşleşecek şekilde arayan bir veri akışı işlem hattı gösterilmektedir. Bu belgedeki veri akışı işlem hattının konusu aşağıdaki adımlardan oluşur:  
+ Bu belge, *Homer'ın İlilia* kitabını bir web sitesinden indiren ve metni tek tek sözcükleri ilk sözcüğün karakterlerini tersine çeviren sözcüklerle eşleştirmek için arayan bir veri akışı ardışık hattını gösterir. Bu belgede veri akışı ardışık düzeninin oluşturulması aşağıdaki adımlardan oluşur:  
   
-1. Ardışık düzene katılan veri akışı bloklarını oluşturun.  
+1. Ardışık akatoya katılan veri akışı bloklarını oluşturun.  
   
-2. Her veri akışı bloğunu ardışık düzendeki bir sonraki bloğa bağlayın. Her blok, işlem hattındaki önceki bloğun çıkışını girdi olarak alır.  
+2. Her veri akışı bloğunu ardışık ardışık alandaki bir sonraki bloya bağlayın. Her blok, ardışık ardışık ardışık alan önceki bloğun çıktısını girdi olarak alır.  
   
-3. Her veri akışı bloğu için, önceki blok bittikten sonra sonraki bloğu tamamlandı durumuna ayarlayan bir devam görevi oluşturun.  
+3. Her veri akışı bloğu için, önceki blok tamamlandıktan sonra tamamlanan duruma sonraki bloğu ayarlayan bir devam görevi oluşturun.  
   
-4. İşlem hattının baş bir yanındaki verileri gönderin.  
+4. Veri boru hattının başına gönderin.  
   
-5. İşlem hattının başını tamamlandı olarak işaretleyin.  
+5. Boru hattının başını tamamlanmış olarak işaretleyin.  
   
-6. İşlem hattının tüm işleri tamamlamasını bekleyin.  
+6. Boru hattının tüm işleri tamamlamasını bekleyin.  
   
-## <a name="prerequisites"></a>Prerequisites  
- Bu yönergeyi başlamadan önce [veri akışını](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) okuyun.  
+## <a name="prerequisites"></a>Önkoşullar  
+ Bu izbiyi başlatmadan önce [Veri Akışı'nı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) okuyun.  
   
-## <a name="creating-a-console-application"></a>Konsol uygulaması oluşturma  
- Visual Studio 'da bir görsel C# veya Visual Basic konsol uygulaması projesi oluşturun. System. Threading. Tasks. Dataflow NuGet paketini yükler.
+## <a name="creating-a-console-application"></a>Konsol Uygulaması Oluşturma  
+ Visual Studio'da Visual C# veya Visual Basic Console Application projesi oluşturun. System.Threading.Tasks.Dataflow NuGet paketini yükleyin.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
@@ -47,66 +47,66 @@ Kaynak bloklarında ileti almak için <xref:System.Threading.Tasks.Dataflow.Data
  [!code-csharp[TPLDataflow_Palindromes#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#2)]
  [!code-vb[TPLDataflow_Palindromes#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromesemptymain.vb#2)]  
   
-## <a name="creating-the-dataflow-blocks"></a>Veri akışı blokları oluşturma  
- Ardışık düzene katılan veri akışı bloklarını oluşturmak için `Main` yöntemine aşağıdaki kodu ekleyin. Aşağıdaki tablo, işlem hattının her üyesinin rolünü özetler.  
+## <a name="creating-the-dataflow-blocks"></a>Veri Akışı Bloklarını Oluşturma  
+ Ardışık yapıya `Main` katılan veri akışı blokları oluşturmak için yönteme aşağıdaki kodu ekleyin. Aşağıdaki tablo, ardışık hattın her üyesinin rolünü özetler.  
   
  [!code-csharp[TPLDataflow_Palindromes#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#3)]
  [!code-vb[TPLDataflow_Palindromes#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#3)]  
   
 |Üye|Tür|Açıklama|  
 |------------|----------|-----------------|  
-|`downloadString`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Web 'den kitap metnini indirir.|  
-|`createWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Kitap metnini bir sözcük dizisine ayırır.|  
-|`filterWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Sözcük dizisinden kısa kelimeleri ve yinelenenleri kaldırır.|  
-|`findReversedWords`|<xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>|Filtrelenmiş sözcük dizisi koleksiyonundaki tüm kelimeleri, tersi de sözcük dizisinde gerçekleşen tüm sözcükleri bulur.|  
-|`printReversedWords`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Konsola kelimeleri ve karşılık gelen geri doğru sözcükleri görüntüler.|  
+|`downloadString`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Kitap metnini Web'den indirir.|  
+|`createWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Kitap metnini bir dizi sözcük olarak ayırır.|  
+|`filterWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Sözcük dizisinden kısa sözcükleri ve yinelenenleri kaldırır.|  
+|`findReversedWords`|<xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>|Terssözcüğü sözcük dizisinde de yer alan filtre uygulanmış sözcük dizisi koleksiyonundaki tüm sözcükleri bulur.|  
+|`printReversedWords`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Sözcükleri ve karşılık gelen ters sözcükleri konsola görüntüler.|  
   
- Bu örnekteki veri akışı ardışık düzeninde birden çok adımı tek bir adımda birleştirebilseniz de, örnek daha büyük bir görevi gerçekleştirmek için birden çok bağımsız veri akışı görevi oluşturma kavramını gösterir. Örnek, işlem hattının her üyesini giriş verilerinde bir işlem gerçekleştirmek ve sonuçları ardışık düzen içindeki bir sonraki adıma göndermek için <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> kullanır. İşlem hattının `findReversedWords` üyesi, her giriş için birden çok bağımsız çıkış oluşturduğundan bir <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> nesnesidir. `printReversedWords`işlem hattının kuyruğu, girişi üzerinde bir eylem gerçekleştirdiğinden ve sonuç üretmediğinden bir <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> nesnesidir.  
+ Bu örnekte veri akışı ardışık ardışık birden çok adımı tek bir adımda birleştirebilseniz de, örnek, daha büyük bir görevi gerçekleştirmek için birden çok bağımsız veri akışı görevi oluşturma kavramını göstermektedir. Örnek, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> ardışık her üyenin giriş verilerinde bir işlem gerçekleştirmesini ve sonuçları ardışık ardışık işlemdeki bir sonraki adıma göndermesini sağlamak için kullanılır. Her `findReversedWords` giriş için birden <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> çok bağımsız çıkış ürettiği için ardışık hattın üyesi bir nesnedir. Boru hattının kuyruğu, `printReversedWords`girdisi üzerinde bir eylem gerçekleştirdiği ve bir sonuç oluşturmadığı için bir <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> nesnedir.  
   
-## <a name="forming-the-pipeline"></a>İşlem hattını oluşturan  
- Her bloğu ardışık düzendeki bir sonraki bloğa bağlamak için aşağıdaki kodu ekleyin.  
+## <a name="forming-the-pipeline"></a>Boru Hattının Oluşturulması  
+ Her bloğu ardışık ardışık alandaki bir sonraki bloya bağlamak için aşağıdaki kodu ekleyin.  
   
- Kaynak veri akışı bloğunu bir hedef veri akışı bloğuna bağlamak için <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> yöntemini çağırdığınızda, veriler kullanılabilir hale geldiğinde kaynak veri akışı bloğu verileri hedef bloğa yayar. Ayrıca, <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions.PropagateCompletion> doğru olarak ayarlanan <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions> sağlarsanız, işlem hattındaki bir bloğun başarılı veya başarısız tamamlanması, ardışık düzendeki bir sonraki bloğun tamamlanmasına neden olur.
+ Bir kaynak <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> veri akışı bloğunu hedef veri akışı bloğuna bağlama yöntemini çağırdığınızda, kaynak veri akışı bloğu veri kullanılabilir hale geldikçe verileri hedef bloya yalar. Ayrıca, ardışık hatlar bir blok doğru, başarılı veya başarısız tamamlanması ayarlanmış sağlarsanız, <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions> ardışık bir sonraki blok tamamlanmasına neden olacaktır. <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions.PropagateCompletion>
   
  [!code-csharp[TPLDataflow_Palindromes#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#4)]
  [!code-vb[TPLDataflow_Palindromes#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#4)]  
   
-## <a name="posting-data-to-the-pipeline"></a>İşlem hattına veri postalama  
- Veri akışı ardışık düzeninin baş adına *Homer 'nin* bulunduğu kitabın URL 'sini göndermek için aşağıdaki kodu ekleyin.  
+## <a name="posting-data-to-the-pipeline"></a>Veri Boru Hattına Gönderme  
+ Veri akışı boru hattının başına *Homer Iliad* kitabının URL'sini göndermek için aşağıdaki kodu ekleyin.  
   
  [!code-csharp[TPLDataflow_Palindromes#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#6)]
  [!code-vb[TPLDataflow_Palindromes#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#6)]  
   
- Bu örnek, işlem hattının baş bir kısmını eşzamanlı olarak veri göndermek için <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A?displayProperty=nameWithType> kullanır. Verileri bir veri akışı düğümüne zaman uyumsuz olarak göndermek gerektiğinde <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> yöntemini kullanın.  
+ Bu örnek, ardışık hattın başına eşzamanlı olarak veri göndermek için kullanılır. <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A?displayProperty=nameWithType> Veri <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> akışı düğümüne eş senkronize bir şekilde göndermeniz gerektiğinde yöntemi kullanın.  
   
-## <a name="completing-pipeline-activity"></a>Ardışık düzen etkinliği Tamamlanıyor  
- İşlem hattının başını tamamlandı olarak işaretlemek için aşağıdaki kodu ekleyin. İşlem hattının kafa, tüm arabellekli iletileri tamamladıktan sonra tamamlanmasını yayar.
+## <a name="completing-pipeline-activity"></a>Boru Hattı Faaliyetinin Tamamlanması  
+ Tamamlanan ardışık ardışık başlığı işaretlemek için aşağıdaki kodu ekleyin. Boru hattının başı, tüm arabelleğe alınan iletileri işledikten sonra tamamlanmasını yayar.
   
  [!code-csharp[TPLDataflow_Palindromes#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#7)]
  [!code-vb[TPLDataflow_Palindromes#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#7)]  
   
- Bu örnek, işlenecek veri akışı işlem hattı aracılığıyla bir URL gönderir. Bir işlem hattı aracılığıyla birden fazla girdi gönderirseniz, tüm girişi gönderdikten sonra <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A?displayProperty=nameWithType> yöntemini çağırın. Uygulamanızın verilerin artık kullanılamadığı bir iyi tanımlanmış noktası yoksa veya uygulamanın işlem hattının bitmesini beklemek zorunda olmaması durumunda bu adımı atlayabilirsiniz.  
+ Bu örnek, işlenecek veri akışı ardışık ardışık aracılığıyla bir URL gönderir. Bir ardışık sistem aracılığıyla birden fazla giriş <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A?displayProperty=nameWithType> gönderirseniz, tüm girişi gönderdikten sonra yöntemi arayın. Uygulamanızın verilerin artık kullanılamadığı iyi tanımlanmış bir noktası yoksa veya uygulamanın ardışık noktanın tamamlanmasını beklemesi gerekmiyorsa bu adımı atlayabilirsiniz.  
   
-## <a name="waiting-for-the-pipeline-to-finish"></a>İşlem hattının bitmesi bekleniyor  
- İşlem hattının bitmesini beklemek için aşağıdaki kodu ekleyin. İşlem hattının kuyruğu tamamlandığında genel işlem tamamlanmıştır.  
+## <a name="waiting-for-the-pipeline-to-finish"></a>Boru Hattının Bitmesini Bekliyor  
+ Ardışık nedenin bitmesini beklemek için aşağıdaki kodu ekleyin. Boru hattının kuyruğu bittiğinde genel işlem tamamlanır.  
   
  [!code-csharp[TPLDataflow_Palindromes#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#8)]
  [!code-vb[TPLDataflow_Palindromes#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#8)]  
   
- Aynı anda herhangi bir iş parçacığından veya birden çok iş parçacığından veri akışı tamamlanmasını bekleyebilirsiniz.  
+ Herhangi bir iş parçacığından veya aynı anda birden çok iş parçacığından veri akışının tamamlanmasını bekleyebilirsiniz.  
   
 ## <a name="the-complete-example"></a>Tam Örnek  
- Aşağıdaki örnekte bu izlenecek yol için tüm kod gösterilmektedir.  
+ Aşağıdaki örnek, bu izbin tam kodunu gösterir.  
   
  [!code-csharp[TPLDataflow_Palindromes#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#1)]
  [!code-vb[TPLDataflow_Palindromes#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#1)]  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Bu örnek, veri akışı ardışık düzeninde işlemek için bir URL gönderir. Bir işlem hattı aracılığıyla birden fazla giriş değeri gönderirseniz, uygulamanızın bir otomobil fabrikası aracılığıyla nasıl taşınabileceğine benzer bir paralellik biçimini uygulamanıza ekleyebilirsiniz. İşlem hattının ilk üyesi, sonucunu ikinci üyeye gönderdiğinde, ikinci üye ilk sonucu işlediği için başka bir öğeyi paralel olarak işleyebilir.  
+ Bu örnek, veri akışı ardışık aracılığıyla işlemek için bir URL gönderir. Bir boru hattı üzerinden birden fazla giriş değeri gönderirseniz, uygulamanıza parçaların bir otomobil fabrikasında nasıl hareket edebileceğini andıran bir paralellik biçimi getirebilirsiniz. Ardışık işlemin ilk üyesi sonucunu ikinci üyeye gönderdiğinde, ikinci üye ilk sonucu işlerken başka bir öğeyi paralel olarak işleyebilir.  
   
- Veri akışı işlem hatları kullanılarak elde edilen paralellik, genellikle daha az, daha büyük görevlerden oluştuğu için *kaba paralellik* olarak bilinir. Ayrıca, bir veri akışı ardışık düzeninde daha *hassas* , kısa süreli görevler de kullanabilirsiniz. Bu örnekte, işlem hattının `findReversedWords` üyesi, iş listesindeki birden çok öğeyi paralel olarak işlemek için [PLINQ](parallel-linq-plinq.md) kullanır. Büyük bir işlem hattındaki hassas paralellik kullanımı genel performansı iyileştirebilir.  
+ Veri akışı ardışık lıkları kullanılarak elde edilen paralellik kaba *taneli paralellik* olarak bilinir, çünkü genellikle daha az, daha büyük görevlerden oluşur. Ayrıca, veri akışı ardışık bir işlem de küçük, kısa çalışan görevlerin daha *ince taneli paralellikkk.* Bu örnekte, `findReversedWords` ardışık yapının üyesi, çalışma listesindeki birden çok öğeyi paralel olarak işlemek için [PLINQ](parallel-linq-plinq.md) kullanır. Kaba taneli bir boru hattında ince taneli paralellik kullanımı genel iş ortalığını artırabilir.  
   
- Ayrıca bir *veri akışı ağı*oluşturmak için, bir kaynak veri akışı bloğunu birden çok hedef bloğuna bağlayabilirsiniz. <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> yönteminin aşırı yüklenmiş sürümü, hedef bloğunun, her iletiyi değerine göre kabul edip etmediğini tanımlayan bir <xref:System.Predicate%601> nesnesi alır. Kaynak olarak davranan çoğu veri akışı blok türü, herhangi bir blok iletiyi kabul edene kadar, bağlı oldukları sırada tüm bağlı hedef bloklara iletiler sunar. Bu filtreleme mekanizmasını kullanarak, başka bir yol aracılığıyla bir yol ve diğer veriler aracılığıyla belirli verileri yönlendirerek bağlantılı veri akışı blokları sistemleri oluşturabilirsiniz. Veri akışı ağı oluşturmak için filtreleme kullanan bir örnek için, bkz. [Izlenecek yol: Windows Forms uygulamasında veri akışı kullanma](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
+ Ayrıca, *veri akışı ağı*oluşturmak için bir kaynak veri akışı bloğunu birden çok hedef bloğuna bağlayabilirsiniz. <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> Yöntemin aşırı yüklenen sürümü, <xref:System.Predicate%601> hedef bloğun her iletiyi değerine göre kabul edip etmediğini tanımlayan bir nesne alır. Kaynak olarak hareket eden çoğu veri akışı bloğu türü, bloklardan biri bu iletiyi kabul edene kadar bağlı hedef bloklara bağlı oldukları sırada ileti sunar. Bu filtreleme mekanizmasını kullanarak, belirli verileri bir yol ve diğer veriler üzerinden başka bir yol üzerinden yönlendiren bağlı veri akışı blokları sistemleri oluşturabilirsiniz. Veri akışı ağı oluşturmak için filtreleme kullanan [bir](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)örnek için bkz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

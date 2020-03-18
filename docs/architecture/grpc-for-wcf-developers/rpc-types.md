@@ -1,36 +1,36 @@
 ---
-title: WCF geliştiricileri için RPC-gRPC türleri
-description: WCF tarafından desteklenen uzak yordam çağrısı türlerinin ve gRPC 'de eşdeğerleri gözden geçirme
+title: WCF geliştiricileri için RPC - gRPC türleri
+description: WCF tarafından desteklenen uzaktan yordam çağrısı türlerinin ve bunların gRPC'deki eşdeğerlerinin gözden geçirilmesi
 ms.date: 09/02/2019
-ms.openlocfilehash: 58f097bac61395e6810155e8ae9a6bbf2219ec5e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: b9d4ce7cae693ed7904229483cbccfe3b299b640
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503436"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401685"
 ---
 # <a name="types-of-rpc"></a>RPC türleri
 
-Windows Communication Foundation (WCF) geliştiricisi olarak, büyük olasılıkla şu türde uzak yordam çağrısı (RPC) ile ilgilenirken kullanılır:
+Bir Windows Communication Foundation (WCF) geliştiricisi olarak, büyük olasılıkla aşağıdaki uzaktan yordam çağrısı (RPC) türleri ile başa çıkmak için kullanılır:
 
-- İstek/yanıt
-- Duplex
-  - Oturumla tek yönlü çift yönlü
-  - Oturumla tam çift yönlü
+- İstek/yanıtla
+- Çift yönlü:
+  - Oturumlu tek yönlü çift yönlü
+  - Oturumile tam çift yönlü
 - Tek yönlü
 
-Bu RPC türlerini, doğal olarak mevcut gRPC kavramlarıyla eşleştirmek mümkündür. Bu bölüm, bu alanların her birine sırayla bakar. [5. Bölüm](migrate-wcf-to-grpc.md) , benzer örnekleri daha ayrıntılı bir şekilde keşfedebilir.
+Bu RPC türlerini oldukça doğal olarak mevcut gRPC kavramlarıyla haritalamak mümkündür. Bu bölümde sırayla bu alanların her biri bakacağız. [Bölüm 5](migrate-wcf-to-grpc.md) daha derinlemesine benzer örnekler inceleyecektir.
 
 | WCF | gRPC |
 | --- | ---- |
-| Normal istek/yanıt | Li |
-| İstemci geri çağırma arabirimi kullanarak oturum ile çift yönlü hizmet | Sunucu akışı |
-| Oturumla tam çift yönlü hizmet | Çift yönlü akış |
+| Düzenli istek/yanıt | Tekli |
+| İstemci geri arama arabirimi kullanarak oturumlu çift yönlü hizmet | Sunucu akışı |
+| Oturumlu tam çift yönlü hizmet | Çift yönlü akış |
 | Tek yönlü işlemler | İstemci akışı |
 
-## <a name="requestreply"></a>İstek/yanıt
+## <a name="requestreply"></a>İstek/yanıtla
 
-Küçük miktarlarda veri alıp döndüren basit istek/yanıt yöntemleri için, birli RPC olan en basit gRPC modelini kullanın.
+Küçük miktarda veri alan ve döndüren basit istek/yanıt yöntemleri için en basit gRPC deseni olan unary RPC'yi kullanın.
 
 ```protobuf
 service Things {
@@ -57,21 +57,21 @@ public async Task ShowThing(int thingId)
 }
 ```
 
-Gördüğünüz gibi, bir gRPC birli RPC hizmeti yöntemi uygulamak, WCF işlemi uygulamaya benzer. Aradaki fark, gRPC ile bir arabirim uygulamak yerine bir temel sınıf yöntemini geçersiz kılmanızdır. Sunucuda, gRPC temel yöntemleri her zaman <xref:System.Threading.Tasks.Task%601>döndürür, ancak istemci hizmeti çağırmak için hem zaman uyumsuz hem de engelleme yöntemleri sağlar.
+Gördüğünüz gibi, bir gRPC unary RPC hizmet yöntemi uygulamak bir WCF işlemi uygulamaya benzer. Fark, gRPC ile bir arabirim uygulamak yerine bir taban sınıf yöntemigeçersiz kılmak. Sunucuda, istemci hizmeti çağırmak için <xref:System.Threading.Tasks.Task%601>hem eşitleme hem de engelleme yöntemleri sağlasa da, gRPC temel yöntemleri her zaman geri döner.
 
-## <a name="wcf-duplex-one-way-to-client"></a>WCF çift yönlü, istemciye bir yol
+## <a name="wcf-duplex-one-way-to-client"></a>WCF dubleks, istemciye tek yönlü
 
-WCF uygulamaları (belirli bağlamalarla birlikte), istemci ve sunucu arasında kalıcı bir bağlantı oluşturabilir. Sunucu, <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> özelliğinde belirtilen bir *geri çağırma arabirimi* kullanılarak, bağlantı kapatılana kadar istemciye zaman uyumsuz olarak veri gönderebilir.
+WCF uygulamaları (belirli bağlamalarla) istemci ve sunucu arasında kalıcı bir bağlantı oluşturabilir. Sunucu, <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> özellikte belirtilen bir *geri arama arabirimi* kullanarak bağlantı kapanana kadar istemciye eşzamanlı olarak veri gönderebilir.
 
-gRPC Hizmetleri, ileti akışlarıyla benzer işlevler sağlar. Akışlar, uygulama açısından *tam olarak* WCF çift yönlü hizmetlerine eşlenmiyor, ancak aynı sonuçları elde edebilirsiniz.
+gRPC hizmetleri ileti akışları ile benzer işlevsellik sağlar. Akışlar uygulama açısından WCF çift yönlü hizmetlerine *tam olarak* eş vermez, ancak aynı sonuçları elde edebilirsiniz.
 
 ### <a name="grpc-streaming"></a>gRPC akışı
 
-gRPC, istemciden sunucuya ve sunucudan istemciye kalıcı akış oluşturulmasını destekler. Her iki akış türü de aynı anda etkin olabilir. Bu özellik çift yönlü akış olarak adlandırılır. 
+gRPC istemciden sunucuya ve sunucudan istemciye kalıcı akışların oluşturulmasını destekler. Her iki akış türü de aynı anda etkin olabilir. Bu yeteneğe çift yönlü akış denir.
 
-Akışları zaman içinde rastgele, zaman uyumsuz mesajlaşma için kullanabilirsiniz. Ya da bunları tek bir istekte veya yanıtta oluşturmak ve göndermek için çok büyük veri kümelerini geçirmek için kullanabilirsiniz.
+Akışları zaman içinde rasgele, eşzamanlı mesajlaşma için kullanabilirsiniz. Veya bunları, tek bir istek veya yanıt oluşturamayacak ve gönderilemeyecek kadar büyük büyük veri kümelerini geçirmek için kullanabilirsiniz.
 
-Aşağıdaki örnekte bir sunucu akış RPC gösterilmektedir.
+Aşağıdaki örnekte bir sunucu akışı RPC gösterir.
 
 ```protobuf
 service ClockStreamer {
@@ -96,7 +96,7 @@ public class ClockStreamerService : ClockStreamer.ClockStreamerBase
 }
 ```
 
-Bu sunucu akışı, aşağıdaki kodda gösterildiği gibi bir istemci uygulamasından tüketilebilir:
+Bu sunucu akışı, aşağıdaki kodda gösterildiği gibi istemci uygulamasından tüketilebilir:
 
 ```csharp
 public async Task TellTheTimeAsync(CancellationToken token)
@@ -115,19 +115,19 @@ public async Task TellTheTimeAsync(CancellationToken token)
 ```
 
 > [!NOTE]
-> Sunucu akış RPC 'ler, abonelik stili hizmetler için faydalıdır. Ayrıca, veri kümesinin tamamını bellekte oluşturmak verimsiz veya imkansız olduğunda büyük veri kümeleri göndermek için de kullanışlıdır. Ancak, akış yanıtları, tek bir iletide `repeated` alanları göndermek kadar hızlı değildir. Bir kural olarak, küçük veri kümeleri için akış kullanılmamalıdır.
+> Sunucu akışı RPC'leri abonelik tarzı hizmetler için yararlıdır. Ayrıca, tüm veri kümesini bellekte oluşturmak verimsiz veya imkansız olduğunda büyük veri kümeleri göndermek için de yararlıdır. Ancak, yanıt akışı tek bir `repeated` iletideki alanları göndermek kadar hızlı değildir. Kural olarak, akış küçük veri kümeleri için kullanılmamalıdır.
 
-### <a name="differences-from-wcf"></a>WCF farkları
+### <a name="differences-from-wcf"></a>WCF'den Farklar
 
-WCF çift yönlü hizmeti, birden çok metodu olan bir istemci geri çağırma arabirimi kullanır. GRPC sunucu akışı hizmeti yalnızca tek bir akış üzerinden ileti gönderebilir. Birden çok yöntem gerekiyorsa, farklı iletiler göndermek için [herhangi bir alan veya bir alan](protobuf-any-oneof.md) içeren bir ileti türü kullanın ve bunları işlemek için istemciye kod yazın.
+WCF çift yönlü hizmeti, birden çok yöntemi olan bir istemci geri arama arabirimi kullanır. Bir gRPC sunucu akış hizmeti yalnızca tek bir akış üzerinden ileti gönderebilir. Birden çok yönteme ihtiyacınız varsa, farklı iletiler göndermek için [herhangi bir alana veya alandan birine](protobuf-any-oneof.md) sahip bir ileti türü kullanın ve bunları işlemek için istemciye kod yazın.
 
-WCF 'de, oturum içeren [ServiceContract](xref:System.ServiceModel.ServiceContractAttribute) sınıfı bağlantı kapatılana kadar canlı tutulur. Oturum içinde birden çok yöntem çağrılabilir. GRPC 'de, uygulama yönteminin döndürdüğü `Task` bağlantı kapatılana kadar tamamlanmamalıdır.
+WCF'de, oturumlu [ServiceContract](xref:System.ServiceModel.ServiceContractAttribute) sınıfı bağlantı kapanana kadar canlı tutulur. Oturum içinde birden çok yöntem çağrılabilir. gRPC'de, `Task` uygulama yönteminin döndürülmesi bağlantı kapatılana kadar bitmez.
 
 ## <a name="wcf-one-way-operations-and-grpc-client-streaming"></a>WCF tek yönlü işlemler ve gRPC istemci akışı
 
-WCF, aktarıma özgü bir onay döndüren tek yönlü işlemler (`[OperationContract(IsOneWay = true)]`ile işaretlenir) sağlar. gRPC hizmeti yöntemleri, boş olsa bile her zaman bir yanıt döndürür. İstemci her zaman bu yanıtı bekler. GRPC 'de "yangın-unut" stili için bir istemci akış hizmeti oluşturabilirsiniz.
+WCF, aktarıma özgü `[OperationContract(IsOneWay = true)]`bir onay döndüren tek yönlü işlemler (işaretli) sağlar. gRPC hizmet yöntemleri boş olsa bile her zaman yanıt verir. İstemci her zaman bu yanıtı beklemelidir. gRPC'de "ateş ve unut" mesajlaşma stili için bir istemci akış hizmeti oluşturabilirsiniz.
 
-### <a name="thing_logproto"></a>thing_log. proto
+### <a name="thing_logproto"></a>thing_log.proto
 
 ```protobuf
 service ThingLog {
@@ -189,13 +189,13 @@ public class ThingLogger : IAsyncDisposable
 }
 ```
 
-Önceki örnekte gösterildiği gibi, yangın ve unutma mesajlaşması için istemci akış RPC 'ler kullanabilirsiniz. Ayrıca, sunucuya çok büyük veri kümeleri göndermek için de kullanabilirsiniz. Performans için geçerli uyarı: daha küçük veri kümeleri için normal iletilerde `repeated` alanları kullanın.
+Önceki örnekte gösterildiği gibi, yangın ve unut iletisi için istemci akışı RPC'lerini kullanabilirsiniz. Bunları sunucuya çok büyük veri kümeleri göndermek için de kullanabilirsiniz. Performans la ilgili aynı uyarı geçerlidir: `repeated` daha küçük veri kümeleri için, normal iletilerde alanları kullanın.
 
 ## <a name="wcf-full-duplex-services"></a>WCF tam çift yönlü hizmetler
 
-WCF çift yönlü bağlama, hem hizmet arabiriminde hem de istemci geri çağırma arabiriminde birden çok tek yönlü işlemleri destekler. Bu destek, istemci ve sunucu arasında devam eden konuşmaları sağlar. gRPC, iki parametrenin `stream` değiştiriciyle işaretlendiği çift yönlü akış RPC 'ler ile benzer bir şeyi destekler.
+WCF çift yönlü bağlama, hem hizmet arabiriminde hem de istemci geri çağırma arabiriminde birden çok tek yönlü işlemi destekler. Bu destek, istemci ve sunucu arasında devam eden konuşmalara izin verir. gRPC, her iki parametrenin `stream` değiştirici ile işaretlendiği çift yönlü akış RPC'leri ile benzer bir şeyi destekler.
 
-### <a name="chatproto"></a>sohbet. proto
+### <a name="chatproto"></a>chat.proto
 
 ```protobuf
 service Chatter {
@@ -228,9 +228,9 @@ public class ChatterService : Chatter.ChatterBase
 }
 ```
 
-Önceki örnekte, uygulama yönteminin hem istek akışını (`IAsyncStreamReader<MessageRequest>`) hem de yanıt akışını (`IServerStreamWriter<MessageResponse>`) aldığını görebilirsiniz. Yöntemi, bağlantı kapatılana kadar iletileri okuyabilir ve yazabilir.
+Önceki örnekte, uygulama yönteminin hem istek akışı (`IAsyncStreamReader<MessageRequest>`) hem de`IServerStreamWriter<MessageResponse>`yanıt akışı ( ) aldığını görebilirsiniz. Yöntem, bağlantı kapanana kadar iletileri okuyabilir ve yazabilir.
 
-### <a name="chatter-client"></a>Chatter istemcisi
+### <a name="chatter-client"></a>Geveze istemci
 
 ```csharp
 public class Chat : IAsyncDisposable
@@ -272,4 +272,4 @@ public class Chat : IAsyncDisposable
 
 >[!div class="step-by-step"]
 >[Önceki](wcf-bindings.md)
->[İleri](metadata.md)
+>[Sonraki](metadata.md)

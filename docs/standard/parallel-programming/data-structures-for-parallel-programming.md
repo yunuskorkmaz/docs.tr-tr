@@ -6,65 +6,65 @@ helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 ms.openlocfilehash: a2271feae78100940b4ecac3c42c9bfefa7e1769
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123144"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Paralel Programlama için Veri Yapıları
-.NET Framework sürüm 4 ' te, bir dizi eşzamanlı koleksiyon sınıfı, hafif eşitleme temelleri ve yavaş başlatma türleri dahil olmak üzere, paralel programlamada yararlı olan çeşitli yeni türler tanıtılmaktadır. Bu türleri, paralel kitaplığı ve PLıNQ görevi dahil, çok iş parçacıklı uygulama kodu ile birlikte kullanabilirsiniz.  
+.NET Framework sürüm 4, eşzamanlı toplama sınıfları kümesi, hafif eşitleme ilkelleri ve tembel başlatma türleri de dahil olmak üzere paralel programlamada yararlı olan birkaç yeni tür sunar. Görev Paralel Kitaplığı ve PLINQ dahil olmak üzere herhangi bir çok iş parçacığı uygulama kodu ile bu türleri kullanabilirsiniz.  
   
-## <a name="concurrent-collection-classes"></a>Eşzamanlı koleksiyon sınıfları  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanındaki koleksiyon sınıfları iş parçacığı güvenli ekleme ve kaldırma işlemleri sağlar ve bu işlemler, mümkün olan yerlerde kilitleri ortadan kaldırır ve kilitlerin gerekli olduğu hassas bir kilitleme kullanır. 1,0 ve 2,0 .NET Framework sürümlerinde tanıtılan koleksiyonların aksine, eşzamanlı bir koleksiyon sınıfı, öğelere eriştiğinde kullanıcı kodunun herhangi bir kilit geçirmesine gerek yoktur. Eşzamanlı koleksiyon sınıfları, birden çok iş parçacığının bir koleksiyondaki öğeleri eklemesi ve kaldırması için <xref:System.Collections.ArrayList?displayProperty=nameWithType> ve <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> (Kullanıcı tarafından uygulanan kilitleme ile) gibi türlerin performansını önemli ölçüde iyileştirebilir.  
+## <a name="concurrent-collection-classes"></a>Eşzamanlı Toplama Sınıfları  
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType> Ad alanındaki koleksiyon sınıfları, mümkün olan her yerde kilitlenmeleri önleyen ve kilitlerin gerekli olduğu yerlerde ince taneli kilitleme kullanan iş parçacığı güvenli ekleme ve kaldırma işlemleri sağlar. .NET Framework sürümleri 1.0 ve 2.0'da tanıtılan koleksiyonlardan farklı olarak, eşzamanlı bir koleksiyon sınıfı öğelere erişirken kullanıcı kodunun kilit almasını gerektirmez. Eşzamanlı toplama sınıfları, birden çok iş <xref:System.Collections.ArrayList?displayProperty=nameWithType> <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> parçacığının bir koleksiyondan öğe ekleyip kaldırdığı senaryolarda ve (kullanıcı tarafından uygulanan kilitleme yle) gibi türler üzerindeki performansı önemli ölçüde artırabilir.  
   
- Aşağıdaki tabloda, yeni eşzamanlı koleksiyon sınıfları listelenmektedir:  
+ Aşağıdaki tabloda yeni eşzamanlı toplama sınıfları listelenebvardır:  
   
 |Tür|Açıklama|  
 |----------|-----------------|  
-|<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|<xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>uygulayan iş parçacığı güvenli koleksiyonlar için engelleme ve sınırlayıcı yetenekler sağlar. Üretici iş parçacıkları, kullanılabilir yuva yoksa veya koleksiyon doluysa engellenir. Koleksiyon boşsa, tüketici iş parçacıkları engeller. Bu tür Ayrıca, tüketiciler ve üreticileri tarafından engellenmeyen erişimi de destekler. <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Generic.IEnumerable%601>destekleyen herhangi bir koleksiyon sınıfı için engelleme ve sınırlama sağlamak üzere bir temel sınıf veya yedekleme deposu olarak kullanılabilir.|  
-|<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Ölçeklenebilir ekleme ve Get işlemleri sağlayan iş parçacığı güvenli bir paket uygulamasıdır.|  
+|<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|Uygulayan <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>iş parçacığı güvenli koleksiyonları için engelleme ve sınırlama yetenekleri sağlar. Yuva yoksa veya koleksiyon doluysa üretici iş parçacıkları bloke olur. Koleksiyon boşsa tüketici iş parçacıkları blok. Bu tür, tüketicilerin ve üreticilerin engellememe erişimini de destekler. <xref:System.Collections.Concurrent.BlockingCollection%601>destekleyen <xref:System.Collections.Generic.IEnumerable%601>herhangi bir toplama sınıfı için engelleme ve sınırlandırma sağlamak için bir taban sınıf veya destek deposu olarak kullanılabilir.|  
+|<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Ölçeklenebilir ekleme ve alma işlemleri sağlayan iş parçacığı güvenli bir torba uygulaması.|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>|Eşzamanlı ve ölçeklenebilir sözlük türü.|  
-|<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>|Eşzamanlı ve ölçeklenebilir bir FıFO kuyruğu.|  
-|<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType>|Eşzamanlı ve ölçeklenebilir bir LıFO yığını.|  
+|<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>|Eşzamanlı ve ölçeklenebilir FIFO sırası.|  
+|<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType>|Eşzamanlı ve ölçeklenebilir LIFO yığını.|  
   
- Daha fazla bilgi için bkz. [Iş parçacığı güvenli koleksiyonlar](../../../docs/standard/collections/thread-safe/index.md).  
+ Daha fazla bilgi için [İş Parçacığı Güvenli Koleksiyonları'na](../../../docs/standard/collections/thread-safe/index.md)bakın.  
   
-## <a name="synchronization-primitives"></a>Eşitleme temelleri  
- <xref:System.Threading?displayProperty=nameWithType> ad alanındaki yeni eşitleme temelleri, eski çoklu iş parçacıklı kodda bulunan pahalı kilitleme mekanizmalarından kaçınarak hassas eşzamanlılık ve daha hızlı performans sağlar. <xref:System.Threading.Barrier?displayProperty=nameWithType> ve <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> gibi yeni türlerden bazıları .NET Framework önceki sürümlerinde hiçbir karşılıksız değildir.  
+## <a name="synchronization-primitives"></a>Senkronizasyon İlkelleri  
+ <xref:System.Threading?displayProperty=nameWithType> Ad alanındaki yeni eşitleme ilkelleri, eski çok iş parçacığı kodunda bulunan pahalı kilitleme mekanizmalarından kaçınarak ince taneli eşzamanlılık ve daha hızlı performans sağlar. .NET Framework'ün önceki <xref:System.Threading.Barrier?displayProperty=nameWithType> <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> sürümlerinde benzerleri yoktur ve benzerleri yoktur.  
   
- Aşağıdaki tabloda yeni eşitleme türleri listelenmektedir:  
+ Aşağıdaki tabloda yeni eşitleme türleri listelenir:  
   
 |Tür|Açıklama|  
 |----------|-----------------|  
-|<xref:System.Threading.Barrier?displayProperty=nameWithType>|Birden çok iş parçacığının paralel bir algoritma üzerinde çalışmasını, her görevin gelişini işaret edip bir miktar veya tüm görevler gelene kadar engellemesini sağlar. Daha fazla bilgi için bkz. [engeli](../../../docs/standard/threading/barrier.md).|  
-|<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Kolay bir buluşma mekanizması sağlayarak çatalını ve katılmayı basitleştirir. Daha fazla bilgi için bkz. [CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
-|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|<xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>benzer bir eşitleme temel. <xref:System.Threading.ManualResetEventSlim> daha hafif, ancak yalnızca işlem içi iletişim için kullanılabilir.|  
-|<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|Bir kaynağa veya kaynak havuzuna eşzamanlı olarak erişebilen iş parçacığı sayısını sınırlayan bir eşitleme temel. Daha fazla bilgi için bkz. [semafor ve SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).|  
-|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Kilidi almaya çalışan iş parçacığının, bir döngü veya döndürme için, bir süre içinde, bir süre boyunca, bir zaman için bir döngü veya *döndürme*için beklemesini sağlayan bir karşılıklı dışlama kilit temel türü. Kilit bekleme işleminin Short olması beklenildiği senaryolarda, <xref:System.Threading.SpinLock> diğer kilitleme biçimlerinden daha iyi performans sunar. Daha fazla bilgi için bkz. [SpinLock](../../../docs/standard/threading/spinlock.md).|  
-|<xref:System.Threading.SpinWait?displayProperty=nameWithType>|Belirli bir süre için döngü uygulanacak küçük, hafif bir tür ve sonuç sayısı aşılırsa iş parçacığını bekleme durumuna yerleştirir.  Daha fazla bilgi için bkz. [SpinWait](../../../docs/standard/threading/spinwait.md).|  
+|<xref:System.Threading.Barrier?displayProperty=nameWithType>|Her görevin gelişini işaret edebileceği ve bazı veya tüm görevler gelene kadar engelleyebileceği bir nokta sağlayarak birden çok iş parçacığının bir algoritma üzerinde paralel olarak çalışmasını sağlar. Daha fazla bilgi için [Barrier'e](../../../docs/standard/threading/barrier.md)bakın.|  
+|<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Kolay bir buluşma mekanizması sağlayarak çatalı basitleştirir ve senaryoları birleştirir. Daha fazla bilgi için [CountdownEvent'e](../../../docs/standard/threading/countdownevent.md)bakın.|  
+|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Bir senkronizasyon ilkel <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>benzer . <xref:System.Threading.ManualResetEventSlim>daha hafiftir, ancak yalnızca işlem içi iletişim için kullanılabilir.|  
+|<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|Aynı anda bir kaynağa veya kaynak havuzuna erişebilen iş parçacığı sayısını sınırlayan eşitleme ilkel. Daha fazla bilgi için [Semaphore ve SemaphoreSlim'e](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)bakınız.|  
+|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Bir döngü içinde beklemek için kilit elde etmek için çalışıyor iş parçacığı neden olan bir karşılıklı dışlama kilidi ilkel, ya da *spin*, kuantum verim önce bir süre için. Kilidin beklemesüresinin kısa olması beklenen senaryolarda, <xref:System.Threading.SpinLock> diğer kilitleme biçimlerine göre daha iyi performans sunar. Daha fazla bilgi için [Bkz. SpinLock.](../../../docs/standard/threading/spinlock.md)|  
+|<xref:System.Threading.SpinWait?displayProperty=nameWithType>|Belirli bir süre boyunca dönecek ve spin sayısı aşıldığında iş parçacığının bekleme durumuna getirilecek küçük, hafif bir tür.  Daha fazla bilgi için [SpinWait'e](../../../docs/standard/threading/spinwait.md)bakın.|  
   
- Daha fazla bilgi için bkz.:  
+ Daha fazla bilgi için bkz.  
   
 - [Nasıl yapılır: Düşük Düzeyli Eşitleme için SpinLock Kullanma](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
-- [Nasıl yapılır: eş zamanlı işlemleri bir engel Ile eşitler](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
+- [Nasıl?](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)  
   
-## <a name="lazy-initialization-classes"></a>Yavaş başlatma sınıfları  
- Yavaş başlatma sayesinde bir nesne için bellek, gerekli olana kadar ayrılmaz. Yavaş başlatma, nesne ayırmalarını bir programın kullanım ömrü boyunca eşit bir şekilde dağıtarak performansı iyileştirebilir. <xref:System.Lazy%601>türünü sarmalayarak, herhangi bir özel tür için yavaş başlatmayı etkinleştirebilirsiniz.  
+## <a name="lazy-initialization-classes"></a>Tembel Başlatma Sınıfları  
+ Tembel başlatma ile, bir nesnenin belleği gerekli olunana kadar ayrılmaz. Tembel başlatma, nesne ayırmalarını bir programın ömrü boyunca eşit olarak yayarak performansı artırabilir. Türü sararak herhangi bir özel tür için <xref:System.Lazy%601>tembel başlatmayı etkinleştirebilirsiniz.  
   
- Aşağıdaki tabloda, yavaş başlatma türleri listelenmektedir:  
+ Aşağıdaki tabloda tembel başlatma türleri listelenir:  
   
 |Tür|Açıklama|  
 |----------|-----------------|  
-|<xref:System.Lazy%601?displayProperty=nameWithType>|Hafif, iş parçacığı açısından güvenli yavaş başlatma sağlar.|  
-|<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Her bir iş parçacığı geç-başlatma işlevini çağırarak, iş parçacığı başına temelinde geç tarafından başlatılan bir değer sağlar.|  
-|<xref:System.Threading.LazyInitializer?displayProperty=nameWithType>|Adanmış, yavaş başlatma örneği ayırma gereksinimini ortadan kaldırmak için statik yöntemler sağlar. Bunun yerine, erişilmesi durumunda hedeflerin başlatılmış olduğundan emin olmak için başvuruları kullanırlar.|  
+|<xref:System.Lazy%601?displayProperty=nameWithType>|Hafif, iş parçacığı güvenli tembel başlatma sağlar.|  
+|<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Her iş parçacığı laily-başlatma işlevi çağıran, iş parçacığı başına bazda bir tembel-başharfdeğeri sağlar.|  
+|<xref:System.Threading.LazyInitializer?displayProperty=nameWithType>|Özel, tembel-başlatma örneğini ayırma gereksinimini önleyen statik yöntemler sağlar. Bunun yerine, hedeflere erişildikçe başlatılan olduğundan emin olmak için başvuruları kullanırlar.|  
   
- Daha fazla bilgi için bkz. [yavaş başlatma](../../../docs/framework/performance/lazy-initialization.md).  
+ Daha fazla bilgi [için, Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md)bakın.  
   
-## <a name="aggregate-exceptions"></a>Özel durumları topla  
- <xref:System.AggregateException?displayProperty=nameWithType> türü, ayrı iş parçacıklarında aynı anda oluşturulan birden çok özel durumu yakalamak ve bunları birleştirme iş parçacığına tek bir özel durum olarak döndürmek için kullanılabilir. <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> türleri ve PLıNQ kullanımı, bu amaçla yoğun olarak <xref:System.AggregateException>. Daha fazla bilgi için bkz. [özel durum işleme](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) ve [nasıl yapılır: PLINQ sorgusunda özel durumları işleme](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
+## <a name="aggregate-exceptions"></a>Toplam Özel Durumlar  
+ Tür, <xref:System.AggregateException?displayProperty=nameWithType> ayrı iş parçacıklarıüzerinde aynı anda atılan birden çok özel durum yakalamak ve bunları tek bir özel durum olarak birleştirme iş parçacığına döndürmek için kullanılabilir. Ve <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> türleri ve PLINQ bu amaç için yoğun olarak kullanın. <xref:System.AggregateException> Daha fazla bilgi için bkz: [Özel Durum İşleme](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) ve [Nasıl Yapılır: PLINQ Sorgusunda Özel Durumları İşleyin.](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

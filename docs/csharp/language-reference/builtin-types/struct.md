@@ -1,5 +1,5 @@
 ---
-title: Yapı türleri- C# başvuru
+title: Yapı türleri - C# başvurusu
 ms.date: 02/24/2020
 f1_keywords:
 - struct_CSharpKeyword
@@ -8,64 +8,64 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 523269ffc9de9b750330fcefd15a9026d6dc59b8
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: b85d0df086f3ca65ed995594dd374286e1c3ba5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239787"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847735"
 ---
-# <a name="structure-types-c-reference"></a>Yapı türleri (C# başvuru)
+# <a name="structure-types-c-reference"></a>Yapı türleri (C# başvurusu)
 
-*Yapı türü* (veya *Yapı türü*), verileri ve ilgili işlevleri kapsüllemek için bir [değer türüdür](value-types.md) . `struct` anahtar sözcüğünü kullanarak bir yapı türü tanımlayabilirsiniz:
+*Yapı türü* (veya *yapı türü),* verileri ve ilgili işlevselliği kapsülleyebilen bir [değer türüdür.](value-types.md) Bir yapı `struct` türünü tanımlamak için anahtar sözcüğü kullanırsınız:
 
-[!code-csharp[struct example](~/samples/snippets/csharp/language-reference/builtin-types/StructType.cs#StructExample)]
+[!code-csharp[struct example](snippets/StructType.cs#StructExample)]
 
-Yapı türlerinde *değer semantiği*vardır. Diğer bir deyişle, yapı türünün bir değişkeni türünün bir örneğini içerir. Varsayılan olarak, değişken değerleri atamaya kopyalanır, bir yönteme bağımsız değişken geçirme ve bir yöntem sonucu döndürüyor. Yapı türü değişkeni söz konusu olduğunda, türün bir örneği kopyalanır. Daha fazla bilgi için bkz. [değer türleri](value-types.md).
+Yapı türleri *değer semantik*var. Diğer bir zamanda, bir yapı türü değişkeni türünün bir örneğini içerir. Varsayılan olarak, değişken değerleri atamada kopyalanır, bir bağımsız değişkeni bir yönteme geçirilir ve yöntem sonucunu döndürür. Yapı türünde bir değişken olması durumunda, türün bir örneği kopyalanır. Daha fazla bilgi için [Değer türlerine](value-types.md)bakın.
 
-Genellikle, çok az davranış sağlayan küçük veri merkezli türler tasarlamak için yapı türlerini kullanırsınız. Örneğin, .NET bir sayıyı (hem [tamsayı](integral-numeric-types.md) hem de [gerçek](floating-point-numeric-types.md)), bir [Boole değerini](bool.md), bir [Unicode karakteri](char.md), bir [zaman örneğini](xref:System.DateTime)temsil etmek için yapı türlerini kullanır. Bir türün davranışına odaklandıysanız bir [sınıf](../keywords/class.md)tanımlamayı düşünün. Sınıf türlerinde *başvuru semantiği*vardır. Diğer bir deyişle, bir sınıf türünün değişkeni, örneğin kendisi değil, türün bir örneğine bir başvuru içerir.
+Genellikle, çok az veya hiç davranış sağlayan küçük veri merkezli türler tasarlamak için yapı türleri kullanırsınız. Örneğin, .NET bir sayıyı (hem [tamsayı](integral-numeric-types.md) hem de [gerçek),](floating-point-numeric-types.md) [Boolean değeri,](bool.md) [Unicode karakterini,](char.md)bir [zaman örneğini](xref:System.DateTime)temsil etmek için yapı türlerini kullanır. Bir türün davranışına odaklanmışsanız, bir [sınıf](../keywords/class.md)tanımlamayı düşünün. Sınıf türleri *referans semantik*var. Diğer bir zamanda, sınıf türünden bir değişken, örneğin kendisi değil, tür örneğinin bir örneğine başvuruda bulunun.
 
-## <a name="limitations-with-the-design-of-a-structure-type"></a>Yapı türünün tasarımıyla ilgili sınırlamalar
+## <a name="limitations-with-the-design-of-a-structure-type"></a>Bir yapı türünün tasarımıile sınırlamalar
 
-Bir yapı türü tasarlarken, aşağıdaki özel durumlarla birlikte bir [sınıf](../keywords/class.md) türüyle aynı olanaklara sahip olursunuz:
+Bir yapı türü tasarlarken, aşağıdaki özel durumlar dışında, [sınıf](../keywords/class.md) türüyle aynı özelliklere sahip olursunuz:
 
-- Parametresiz bir Oluşturucu bildiremezsiniz. Her yapı türü zaten türün [varsayılan değerini](default-values.md) üreten örtük parametresiz bir oluşturucu sağlar.
+- Parametresiz bir oluşturucu bildiremezsiniz. Her yapı türü zaten türün [varsayılan değerini](default-values.md) üreten örtülü parametresiz bir oluşturucu sağlar.
 
-- Bildiriminde bir örnek alanı veya özelliği başlatamıyor. Ancak, bir [statik](../keywords/static.md) veya [const](../keywords/const.md) alanı veya bildiriminde statik bir özellik başlatabilirsiniz.
+- Bir örnek alanını veya özelliği beyannamesinde başharfe ait olamazsınız. Ancak, bir [statik](../keywords/static.md) veya [const](../keywords/const.md) alanı veya statik bir özelliği bildiriminde başharfe döndürebilirsiniz.
 
-- Yapı türünde bir Oluşturucu, türün tüm örnek alanlarını başlatmalıdır.
+- Yapı türünden bir oluşturucu, türün tüm örnek alanlarını başlatmalıdır.
 
-- Yapı türü, diğer sınıf veya yapı türünden devralınabilir ve bir sınıfın temeli olamaz. Ancak, bir yapı türü [arabirimler](../keywords/interface.md)uygulayabilir.
+- Bir yapı türü diğer sınıf veya yapı türünden devralınamaz ve bir sınıfın temeli olamaz. Ancak, bir yapı türü [arabirimleri](../keywords/interface.md)uygulayabilirsiniz.
 
-- Bir yapı türü içinde [sonlandırıcıyı](../../programming-guide/classes-and-structs/destructors.md) bildiremezsiniz.
+- Bir yapı türü içinde [bir sonlandırıcı](../../programming-guide/classes-and-structs/destructors.md) bildiremezsiniz.
 
-## <a name="instantiation-of-a-structure-type"></a>Yapı türünü örnekleme
+## <a name="instantiation-of-a-structure-type"></a>Bir yapı türünün anında
 
-' C#De, kullanılmadan önce, belirtilen bir değişkeni başlatmalısınız. Bir yapı türü değişkeni `null` olamaz ( [null yapılabilir değer türünde](nullable-value-types.md)bir değişken olmadığı takdirde), karşılık gelen türün bir örneğini örneklemelisiniz. Bunu yapmak için birkaç yol vardır.
+C#'da, kullanılmadan önce bildirilen bir değişkeni başlatmanız gerekir. Yapı türünde bir değişken `null` olamayacağından [(nullable değer türünde](nullable-value-types.md)bir değişken olmadığı sürece), ilgili türdeki bir örneği anında alabilmeniz gerekir. Bunu yapmanın birkaç yolu vardır.
 
-Genellikle, [`new`](../operators/new-operator.md) işleçle uygun bir oluşturucuyu çağırarak bir yapı türü örnekleyebilirsiniz. Her yapı türünün en az bir Oluşturucusu vardır. Bu, türün [varsayılan değerini](default-values.md) üreten örtük parametresiz bir Oluşturucu. Bir türün varsayılan değerini oluşturmak için [varsayılan](../operators/default.md) işleci veya hazır değeri de kullanabilirsiniz.
+Genellikle, [`new`](../operators/new-operator.md) işleç ile uygun bir yapıcı çağırarak bir yapı türü anında. Her yapı türünde en az bir oluşturucu vardır. Bu, türün [varsayılan değerini](default-values.md) üreten örtük bir parametresiz oluşturucu. Bir türün [varsayılan](../operators/default.md) değerini üretmek için varsayılan işleci veya literal de kullanabilirsiniz.
 
-Bir yapı türünün tüm örnek alanlarına erişilebiliyorsa, `new` işleci olmadan da örneğini oluşturabilirsiniz. Bu durumda, örneğin ilk kullanmadan önce tüm örnek alanlarını başlatmalısınız. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir:
+Yapı türünün tüm örnek alanlarına erişilebilirse, `new` operatör olmadan da anında ekleyebilirsiniz. Bu durumda, örneğin ilk kullanımından önce tüm örnek alanları başlatmanız gerekir. Aşağıdaki örnek, bunun nasıl yapılacağını gösterir:
 
-[!code-csharp[without new](~/samples/snippets/csharp/language-reference/builtin-types/StructType.cs#WithoutNew)]
+[!code-csharp[without new](snippets/StructType.cs#WithoutNew)]
 
-[Yerleşik değer türleri](value-types.md#built-in-value-types)söz konusu olduğunda, türü bir değer belirtmek için karşılık gelen değişmez değerleri kullanın.
+[Yerleşik değer türleri](value-types.md#built-in-value-types)söz konusu olduğunda, türün bir değerini belirtmek için karşılık gelen literals kullanın.
 
-## <a name="passing-structure-type-variables-by-reference"></a>Başvuruya göre yapı türü değişkenleri geçirme
+## <a name="passing-structure-type-variables-by-reference"></a>Yapı tipi değişkenleri referansa göre geçirme
 
-Bir yapı türü değişkenini bir bağımsız değişken olarak bir yönteme geçirdiğinizde veya bir yöntemden yapı türü değer döndürmeniz durumunda, bir yapı türünün tüm örneği kopyalanır. Bu, büyük yapı türlerini içeren yüksek performanslı senaryolarda kodunuzun performansını etkileyebilir. Bir yapı türü değişkenini başvuruya göre geçirerek değer kopyalamaya engel olabilirsiniz. Bir bağımsız değişkenin başvuruya göre geçirilmesi gerektiğini göstermek için [`ref`](../keywords/ref.md#passing-an-argument-by-reference), [`out`](../keywords/out-parameter-modifier.md)veya [`in`](../keywords/in-parameter-modifier.md) Yöntem parametre değiştiricilerini kullanın. Başvuruya göre bir yöntem sonucu döndürmek için [ref dönüşleri](../../programming-guide/classes-and-structs/ref-returns.md) kullanın. Daha fazla bilgi için bkz. [yazma güvenli ve C# verimli kod](../../write-safe-efficient-code.md).
+Bir yapı türü değişkenini bağımsız değişken olarak bir yönteme geçtiğinde veya bir yöntemden yapı türü değeri döndürdüğünde, yapı türünün tüm örneği kopyalanır. Bu, büyük yapı türleri içeren yüksek performanslı senaryolarda kodunuzu performansını etkileyebilir. Bir yapı türü değişkenini referans aylaaktararak değer kopyalamayı önleyebilirsiniz. Bir [`ref`](../keywords/ref.md#passing-an-argument-by-reference)bağımsız [`out`](../keywords/out-parameter-modifier.md)değişkenin başvuru yla geçirilmesi gerektiğini belirtmek için , veya [`in`](../keywords/in-parameter-modifier.md) yöntem parametre değiştiriciler kullanın. Referans bir yöntem sonucu döndürmek için [ref döner](../../programming-guide/classes-and-structs/ref-returns.md) kullanın. Daha fazla bilgi için bkz: [Güvenli ve verimli C# kodu yaz.](../../write-safe-efficient-code.md)
 
 ## <a name="conversions"></a>Dönüşümler
 
-Herhangi bir yapı türü için, <xref:System.ValueType?displayProperty=nameWithType> ve <xref:System.Object?displayProperty=nameWithType> türlerine ve öğesinden, ve bu türlerden bir [paketleme ve kutudan](../../programming-guide/types/boxing-and-unboxing.md) çıkarma dönüştürmeleri mevcuttur. Ayrıca, yapı türü ve uyguladığı herhangi bir arabirim arasında kutulama ve kutudan çıkarma dönüştürmeleri de mevcuttur.
+Herhangi bir yapı türü için, [kutulama ve unboxing](../../programming-guide/types/boxing-and-unboxing.md) dönüşümleri var ve <xref:System.ValueType?displayProperty=nameWithType> ve <xref:System.Object?displayProperty=nameWithType> türleri. Ayrıca, bir yapı türü ve uyguladığı herhangi bir arabirim arasında kutulama ve unboxing dönüşümleri de vardır.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [yapılar](~/_csharplang/spec/structs.md) bölümüne bakın.
+Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Structs](~/_csharplang/spec/structs.md) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvurunun](../index.md)
-- [Tasarım yönergeleri-sınıf ve yapı arasında seçim yapma](../../../standard/design-guidelines/choosing-between-class-and-struct.md)
-- [Tasarım yönergeleri-yapı tasarımı](../../../standard/design-guidelines/struct.md)
+- [C# başvurusu](../index.md)
+- [Tasarım yönergeleri - Sınıf ve yapı arasında seçim](../../../standard/design-guidelines/choosing-between-class-and-struct.md)
+- [Tasarım yönergeleri - Yapı tasarımı](../../../standard/design-guidelines/struct.md)
 - [Sınıflar ve yapılar](../../programming-guide/classes-and-structs/index.md)

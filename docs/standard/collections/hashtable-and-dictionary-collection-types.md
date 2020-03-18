@@ -11,28 +11,28 @@ helpviewer_keywords:
 - collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
 ms.openlocfilehash: a6f234b6205fd30507b9342d9839db6adcddfc2e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711382"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Karma Tablo ve Sözlük Koleksiyon Türleri
-<xref:System.Collections.Hashtable?displayProperty=nameWithType> sınıfı ve <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> genel sınıfları, <xref:System.Collections.IDictionary?displayProperty=nameWithType> arabirimini uygular. <xref:System.Collections.Generic.Dictionary%602> genel sınıfı, <xref:System.Collections.Generic.IDictionary%602> genel arabirimini de uygular. Bu nedenle, bu koleksiyonlardaki her öğe bir anahtar ve değer çiftidir.  
+Sınıf <xref:System.Collections.Hashtable?displayProperty=nameWithType> ve <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> genel sınıflar <xref:System.Collections.IDictionary?displayProperty=nameWithType> arabirimi uygular. Genel <xref:System.Collections.Generic.Dictionary%602> sınıf da <xref:System.Collections.Generic.IDictionary%602> genel arabirimi uygular. Bu nedenle, bu koleksiyonlarda her öğe bir anahtar ve değer çiftidir.  
   
- <xref:System.Collections.Hashtable> nesnesi, koleksiyonun öğelerini içeren demetlerden oluşur. Demet, <xref:System.Collections.Hashtable>içindeki öğelerin bir sanal alt grubudur ve bu, arama ve alma işlemlerini birçok koleksiyondan daha kolay ve hızlı bir şekilde gerçekleştirir. Her demet, bir karma işlev kullanılarak oluşturulan ve öğesinin anahtarını temel alan bir karma kodla ilişkilendirilir.  
+ Nesne, <xref:System.Collections.Hashtable> koleksiyonun öğelerini içeren kovalardan oluşur. <xref:System.Collections.Hashtable>Kova, çoğu koleksiyondan daha kolay ve hızlı arama ve alma yapan, içindeki öğelerin sanal bir alt grubudur. Her kova, karma işlev kullanılarak oluşturulan ve öğenin anahtarına dayanan bir karma koduyla ilişkilidir.  
   
- Genel <xref:System.Collections.Generic.HashSet%601> sınıfı, benzersiz öğeleri kapsayan sıralanmamış bir koleksiyondur.  
+ Genel <xref:System.Collections.Generic.HashSet%601> sınıf, benzersiz öğeler içeren sıralanmamış bir koleksiyondur.  
   
- Karma işlevi, bir anahtara dayalı sayısal bir karma kodu döndüren algoritmadır. Anahtar, depolanan nesnenin bazı özelliğinin değeridir. Karma işlev her zaman aynı anahtar için aynı karma kodu döndürmelidir. Bir karma işlevin iki farklı anahtar için aynı karma kodu oluşturması mümkündür, ancak her benzersiz anahtar için benzersiz bir karma kod üreten bir karma işlev, karma tablodaki öğeleri alırken daha iyi performans elde edilir.  
+ Karma işlev, bir anahtara dayalı sayısal karma kodu döndüren bir algoritmadır. Anahtar, depolanan nesnenin bazı özelliğinin değeridir. Karma işlev her zaman aynı anahtar için aynı karma kodu döndürmelidir. Bir karma işlevin iki farklı anahtar için aynı karma kodu oluşturması mümkündür, ancak karma tablodan öğeleri alırken her benzersiz anahtar sonuçları için benzersiz bir karma kod oluşturan karma işlev.  
   
- Bir <xref:System.Collections.Hashtable> öğe olarak kullanılan her nesne, <xref:System.Object.GetHashCode%2A> yönteminin bir uygulamasını kullanarak kendisi için bir karma kod oluşturabilmelidir. Ancak, parametrelerinden biri olarak <xref:System.Collections.IHashCodeProvider> uygulamasını kabul eden bir <xref:System.Collections.Hashtable> Oluşturucusu kullanarak bir <xref:System.Collections.Hashtable> tüm öğeleri için bir karma işlevi de belirtebilirsiniz.  
+ A <xref:System.Collections.Hashtable> öğesi olarak kullanılan her nesne yöntemin <xref:System.Object.GetHashCode%2A> bir uygulama kullanarak kendisi için bir karma kod oluşturmak gerekir. Ancak, bir uygulamayı parametrelerinden biri olarak <xref:System.Collections.Hashtable> kabul eden <xref:System.Collections.Hashtable> bir oluşturucu <xref:System.Collections.IHashCodeProvider> kullanarak bir deki tüm öğeler için karma işlev de belirtebilirsiniz.  
   
- Bir <xref:System.Collections.Hashtable>bir nesne eklendiğinde, nesnenin karma koduyla eşleşen karma kodla ilişkili demet 'de depolanır. <xref:System.Collections.Hashtable>için bir değer aranmakta olduğunda, bu değer için karma kodu oluşturulur ve bu karma kodla ilişkili demet aranır.  
+ Bir nesne , bir <xref:System.Collections.Hashtable>, bu nesnenin karma kodu eşleşen karma kodu ile ilişkili kova saklanır. Bir değer <xref:System.Collections.Hashtable>aranırken, karma kodu bu değer için oluşturulur ve bu karma koduyla ilişkili kova aranır.  
   
- Örneğin, bir dize için bir karma işlevi dizedeki her bir karakterin ASCII kodlarını alabilir ve bir karma kod oluşturmak için bunları birlikte ekleyebilir. "Picnic" dizesinin "Sepet" dizesinin karma kodundan farklı bir karma kodu olmalıdır; Bu nedenle, "Picnic" ve "Sepet" dizeleri farklı demetlere ait olacaktır. Buna karşılık "stthere" ve "destts" aynı karma koda sahip olur ve aynı demet içinde olur.  
+ Örneğin, bir dize için karma işlevi dizedeki her karakterin ASCII kodlarını alabilir ve karma kod oluşturmak için bunları bir araya getirebilir. Dize "piknik" dize "sepet" için karma kodu farklı bir karma kodu olurdu; bu nedenle, dizeleri "piknik" ve "sepet" farklı kovalar olacaktır. Buna karşılık, "stresli" ve "tatlılar" aynı karma kodu olurdu ve aynı kova olurdu.  
   
- <xref:System.Collections.Generic.Dictionary%602> ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602> sınıfları <xref:System.Collections.Hashtable> sınıfıyla aynı işlevselliğe sahiptir. Belirli bir türün <xref:System.Collections.Generic.Dictionary%602> (<xref:System.Object>dışında), değer türleri için <xref:System.Collections.Hashtable> göre daha iyi performans sağlar. Bunun nedeni, <xref:System.Collections.Hashtable> öğelerinin <xref:System.Object>türünde olması. Bu nedenle, kutulama ve kutudan çıkarma genellikle bir değer türünü depoladığınızda veya aldığınızda oluşur. Birden çok iş parçacığı koleksiyona aynı anda erişildiğinde <xref:System.Collections.Concurrent.ConcurrentDictionary%602> sınıfı kullanılmalıdır.  
+ Ve sınıflar sınıfla aynı işlevsellik vardır. <xref:System.Collections.Hashtable> <xref:System.Collections.Generic.Dictionary%602> <xref:System.Collections.Concurrent.ConcurrentDictionary%602> <xref:System.Collections.Generic.Dictionary%602> Belirli bir tür (dışında) <xref:System.Object>bir değer türleri için daha <xref:System.Collections.Hashtable> iyi performans sağlar. Bunun nedeni, tür <xref:System.Collections.Hashtable> deki <xref:System.Object>öğelerin; bu nedenle, bir değer türünü depolarken veya aldığınızda genellikle kutulama ve kutulamayı çıkarma oluşur. Birden <xref:System.Collections.Concurrent.ConcurrentDictionary%602> çok iş parçacığı koleksiyona aynı anda erişiyor olabilir sınıf kullanılmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

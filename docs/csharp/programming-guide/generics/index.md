@@ -1,47 +1,47 @@
 ---
-title: Genel türler C# -Programlama Kılavuzu
+title: Jenerikler - C# Programlama Kılavuzu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: 330aa74538ab15d1de19d80b0f57b3d0921c5c55
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c7252180c9c98a8ca99c8cc6b3faaf8b1b8f0749
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712162"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79167499"
 ---
 # <a name="generics-c-programming-guide"></a>Genel Türler (C# Programlama Kılavuzu)
 
-Genel türler, sınıf veya yöntem istemci kodu tarafından bildirilene ve örneklendirilene kadar bir veya daha fazla türün belirtimini erteleme sınıfları ve yöntemleri tasarlamak için .NET Framework parametre türü kavramını ortaya çıkarabilir. Örneğin, bir genel tür parametresi kullanarak `T`, diğer istemci kodunun, çalışma zamanı yayınları veya paketleme işlemlerinin maliyetini ya da riskini göstermeden, burada gösterildiği gibi, kullanabileceği tek bir sınıf yazabilirsiniz:
+Jenerikler, bir veya daha fazla türünün belirtimini, sınıf veya yöntem istemci kodu tarafından bildirilene ve anında yapılana kadar erteleyen sınıflar ve yöntemler tasarlamayı mümkün kılmaktadır. Örneğin, genel bir tür parametresi `T`kullanarak, burada gösterildiği gibi, diğer istemci kodunun çalışma zamanı dökümleri veya kutulama işlemleri maliyetini veya riskine maruz kalmadan kullanabileceği tek bir sınıf yazabilirsiniz:
 
 [!code-csharp[csProgGuideGenerics#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#1)]
 
-Genel sınıflar ve Yöntemler, yeniden kullanılabilirlik, tür güvenliği ve verimliliği genel olmayan karşılıklarının bir şekilde birleştirir. Genel türler, koleksiyonlarla ve bunlarla çalışan yöntemlerle en sık kullanılır. <xref:System.Collections.Generic> ad alanı, genel tabanlı birkaç koleksiyon sınıfı içerir. <xref:System.Collections.ArrayList> gibi genel olmayan koleksiyonlar önerilmez ve uyumluluk amacıyla korunur. Daha fazla bilgi için bkz. [.net 'Teki genel türler](../../../standard/generics/index.md).
+Genel sınıflar ve yöntemler yeniden kullanılabilirliği, tür güvenliğini ve verimliliği, genel olmayan karşılıklarının yapamayacağı şekilde birleştirir. Jenerikler en sık koleksiyonlar ve bunlar üzerinde çalışan yöntemlerle kullanılır. Ad <xref:System.Collections.Generic> alanı birkaç genel tabanlı koleksiyon sınıfları içerir. Genel olmayan koleksiyonlar, örneğin <xref:System.Collections.ArrayList> önerilmez ve uyumluluk amacıyla korunur. Daha fazla bilgi için [.NET'teki Jenerik'e](../../../standard/generics/index.md)bakın.
 
-Kuşkusuz, özel genel türler ve Yöntemler oluşturarak tür açısından güvenli ve verimli bir şekilde kendi Genelleştirilmiş çözümlerinizi ve tasarım düzenlerini sağlayabilirsiniz. Aşağıdaki kod örneğinde, tanıtım amacıyla basit bir genel bağlantılı liste sınıfı gösterilmektedir. (Çoğu durumda, kendinizinkini oluşturmak yerine .NET Framework sınıf kitaplığı tarafından sunulan <xref:System.Collections.Generic.List%601> sınıfını kullanmanız gerekir.) Tür parametresi `T`, somut bir türün genellikle listede depolanan öğenin türünü belirtmek için kullanıldığı çeşitli konumlarda kullanılır. Aşağıdaki yollarla kullanılır:
+Tabii ki, aynı zamanda kendi genelleştirilmiş çözümler ve tür güvenli ve verimli tasarım desenleri sağlamak için özel genel türleri ve yöntemleri oluşturabilirsiniz. Aşağıdaki kod örneği, gösteri amacıyla basit bir genel bağlantılı liste sınıfını gösterir. (Çoğu durumda, kendi kitabınızı oluşturmak yerine .NET Framework sınıf kitaplığı tarafından sağlanan <xref:System.Collections.Generic.List%601> sınıfı kullanmanız gerekir.) Tür parametresi, `T` listede depolanan maddenin türünü belirtmek için normalde somut bir türün kullanılacağı çeşitli konumlarda kullanılır. Aşağıdaki şekillerde kullanılır:
 
-- `AddHead` yönteminde bir yöntem parametresinin türü olarak.
-- İç içe `Node` sınıfındaki `Data` özelliğinin dönüş türü olarak.
-- Özel üyenin türü, iç içe yerleştirilmiş sınıfta `data`.
+- `AddHead` Yöntemde yöntem parametresi türü olarak.
+- İç içe sınıftaki `Data` `Node` özelliğin dönüş türü olarak.
+- İç içe sınıftaki `data` özel üyenin türü olarak.
 
- `T` iç içe `Node` sınıfı için kullanılabilir olduğunu unutmayın. `GenericList<T>`, `GenericList<int>`gibi somut bir türle başlatıldığında `T` her oluşumu `int`ile yerine geçer.
+ İç `T` içe sınıf `Node` için kullanılabilir olduğunu unutmayın. Bir `GenericList<T>` beton türü ile instantiated olduğunda, `GenericList<int>`örneğin bir `T` , her `int`olay ile değiştirilecektir .
 
-[!code-csharp[csProgGuideGenerics#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#2)] 
+[!code-csharp[csProgGuideGenerics#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#2)]
 
-Aşağıdaki kod örneği, istemci kodunun tamsayılar listesini oluşturmak için genel `GenericList<T>` sınıfını nasıl kullandığını gösterir. Yalnızca tür bağımsız değişkenini değiştirerek aşağıdaki kod, dizelerin veya diğer özel türün listesini oluşturmak için kolayca değiştirilebilir:
+Aşağıdaki kod örneği, istemci kodunun `GenericList<T>` tamsayılar listesi oluşturmak için genel sınıfı nasıl kullandığını gösterir. Yalnızca tür bağımsız değişkenini değiştirerek, aşağıdaki kod dizeleri veya başka bir özel tür listeleri oluşturmak için kolayca değiştirilebilir:
 
 [!code-csharp[csProgGuideGenerics#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#3)]
 
-## <a name="generics-overview"></a>Genel bakışa genel bakış
+## <a name="generics-overview"></a>Genel genel bakış
 
-- Kod yeniden kullanımını en üst düzeye çıkarmak için genel türleri kullanın, güvenlik ve performans yazın.
-- Genel türlerin en yaygın kullanımı koleksiyon sınıfları oluşturmaktır.
-- .NET Framework sınıf kitaplığı, <xref:System.Collections.Generic> ad alanında birkaç yeni genel koleksiyon sınıfı içerir. Bunlar, <xref:System.Collections> ad alanındaki <xref:System.Collections.ArrayList> gibi sınıflar yerine mümkün olduğunda kullanılmalıdır.
-- Kendi genel arabirimlerinizi, sınıflarınızı, yöntemlerinizi, olaylarınızı ve temsilcilerinizi oluşturabilirsiniz.
+- Kodun yeniden kullanımını, tür güvenliğini ve performansı en üst düzeye çıkarmak için genel türleri kullanın.
+- Generics en yaygın kullanımı toplama sınıfları oluşturmaktır.
+- .NET Framework sınıf kitaplığı <xref:System.Collections.Generic> ad alanında birkaç yeni genel koleksiyon sınıfı içerir. Bunlar, ad alanı gibi <xref:System.Collections.ArrayList> sınıflar yerine mümkün olduğunda kullanılmalıdır. <xref:System.Collections>
+- Kendi genel arabirimlerinizi, sınıflarınızı, yöntemlerinizi, etkinliklerinizi ve temsilcilerinizi oluşturabilirsiniz.
 - Genel sınıflar, belirli veri türlerindeki yöntemlere erişimi etkinleştirmek için kısıtlanabilir.
-- Genel veri türünde kullanılan türlerle ilgili bilgiler, yansıma kullanılarak çalışma zamanında elde edilebilir.
+- Genel bir veri türünde kullanılan türler hakkındaki bilgiler, yansıma kullanılarak çalışma zamanında elde edilebilir.
 
 ## <a name="related-sections"></a>İlgili bölümler
 
@@ -64,6 +64,6 @@ Daha fazla bilgi edinmek için, bkz. [C# Dil Belirtimi](~/_csharplang/spec/types
 - <xref:System.Collections.Generic>
 - [C# Programlama Kılavuzu](../index.md)
 - [Türler](../types/index.md)
-- [\<typeparam >](../xmldoc/typeparam.md)
-- [\<typeparamref >](../xmldoc/typeparamref.md)
-- [.NET 'teki genel türler](../../../standard/generics/index.md)
+- [\<typeparam>](../xmldoc/typeparam.md)
+- [\<typeparamref>](../xmldoc/typeparamref.md)
+- [.NET içindeki Genel Türler](../../../standard/generics/index.md)

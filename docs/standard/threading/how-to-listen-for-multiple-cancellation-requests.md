@@ -10,27 +10,27 @@ helpviewer_keywords:
 - LinkedTokenSource, how to
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
 ms.openlocfilehash: e35472040b6ee1263ebc4c4968fa1822045a2064
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138004"
 ---
 # <a name="how-to-listen-for-multiple-cancellation-requests"></a>Nasıl Yapılır: Birden Çok İptal İsteğini Dinleme
-Bu örnek, herhangi bir belirteç istediğinde bir işlemi iptal edebilmeniz için iki iptal belirtecinin aynı anda nasıl dinleneceğini gösterir.  
+Bu örnek, iki iptal jetonunun aynı anda nasıl dinleyeceğinigösterir, böylece belirteç isterse işlemi iptal edebilirsiniz.  
   
 > [!NOTE]
-> "Yalnızca kendi kodum" etkinleştirildiğinde, bazı durumlarda Visual Studio özel durumu oluşturan satıra kesilir ve "özel durum Kullanıcı kodu tarafından işlenmiyor" yazan bir hata mesajı görüntüler. Bu hata zararsız. F5 tuşuna basarak bu uygulamadan devam edebilir ve aşağıdaki örneklerde gösterilen özel durum işleme davranışına bakabilirsiniz. Visual Studio 'Nun ilk hatada kesilmesini engellemek için **Araçlar, Seçenekler, hata ayıklama, genel**altında "yalnızca kendi kodum" onay kutusunun işaretini kaldırmanız yeterlidir.  
+> "Yalnızca Kodum" etkinleştirildiğinde, bazı durumlarda Visual Studio özel durumu oluşturan satırda kırılır ve "kullanıcı kodu tarafından işlenmemiş özel durum" yazan bir hata iletisi görüntüler. Bu hata iyi huylu. Devam etmek için F5 tuşuna basabilir ve aşağıdaki örneklerde gösterilen özel durum işleme davranışını görebilirsiniz. Visual Studio'nun ilk hatayı kırmasını önlemek **için, Araçlar, Seçenekler, Hata Ayıklama, Genel**altında "Sadece Kodum" onay kutusunun işaretlerini kaldırın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.Threading.CancellationTokenSource.CreateLinkedTokenSource%2A> yöntemi, iki belirteci tek bir belirteçte birleştirmek için kullanılır. Bu, belirtecin bağımsız değişken olarak yalnızca bir iptal belirteci alan yöntemlere geçirilmesini sağlar. Örnek, bir yöntemin, sınıfın dışından geçirilen bir belirteci ve sınıf içinde oluşturulan bir belirteci gözlemleyecek ortak bir senaryoyu gösterir.  
+ Aşağıdaki örnekte, <xref:System.Threading.CancellationTokenSource.CreateLinkedTokenSource%2A> yöntem bir belirteç içine iki belirteçleri birleştirmek için kullanılır. Bu, belirteci bir argüman olarak sadece bir iptal belirteci almak yöntemleri geçirilebilir sağlar. Örnek, bir yöntemin hem sınıfın dışından geçirilen bir belirteci hem de sınıf içinde oluşturulan bir belirteci gözlemlemesi gereken ortak bir senaryoyu gösterir.  
   
  [!code-csharp[Cancellation#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex13.cs#13)]
  [!code-vb[Cancellation#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex13.vb#13)]  
   
- Bağlantılı belirteç bir <xref:System.OperationCanceledException>oluşturduğunda, özel duruma geçirilen belirteç, öncül belirteçlerden biri değil bağlı belirteçtir. Belirteçlerin hangilerinin iptal edildiğini öğrenmek için, öncül belirteçlerin durumunu doğrudan denetleyin.  
+ Bağlı belirteç bir <xref:System.OperationCanceledException>, özel durum geçirilir belirteci, önceki belirteçleri ya da bağlantılı belirteçleri atar. Belirteçlerden hangisinin iptal edildiğini belirlemek için, doğrudan öncül belirteçlerin durumunu denetleyin.  
   
- Bu örnekte, <xref:System.AggregateException> hiçbir şekilde oluşturulmamalıdır, ancak gerçek dünyada senaryolar, görev temsilcisinden oluşturulan <xref:System.OperationCanceledException> diğer tüm özel durumlar <xref:System.AggregateException>sarmalandığı için burada yakalanmalıdır.  
+ Bu örnekte, <xref:System.AggregateException> asla atılmamalıdır, ancak burada yakalanır çünkü gerçek dünya senaryolarında <xref:System.OperationCanceledException> görev temsilcisinden atılan diğer özel <xref:System.AggregateException>durumlar bir .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
