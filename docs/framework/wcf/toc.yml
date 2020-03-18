@@ -121,7 +121,7 @@
                   href: how-to-restrict-access-with-the-principalpermissionattribute-class.md
                 - name: 'Nasıl yapılır: Bir Hizmette İstemci Kimliğine Bürünme'
                   href: how-to-impersonate-a-client-on-a-service.md
-                - name: 'Nasıl yapılır: Güvenlik Bağlamını İnceleme'
+                - name: 'Nasıl Yapılır: Güvenlik Bağlamını İnceleme'
                   href: how-to-examine-the-security-context.md
                 - name: Koruma Düzeylerini Anlama
                   href: understanding-protection-level.md
@@ -134,7 +134,7 @@
           items:
             - name: 'Nasıl yapılır: Yönetilen Bir Uygulamada Bir WCF Hizmeti Barındırma'
               href: how-to-host-a-wcf-service-in-a-managed-application.md
-            - name: 'Nasıl yapılır: .NET Framework 4 Altında Çalışan IIS .NET Framework 3.5 ile Yazılmış Bir WCF Hizmetini Barındırma'
+            - name: 'Nasıl yapılır: .NET Framework 4 Altında Çalışan IIS .NET Framework 3.5 ile ile Yazılmış Bir WCF Hizmetini Barındırma'
               href: host-a-wcf-service-net-framework-3-5-iis--net-framework-4.md
         - name: İstemci Derleme
           href: building-clients.md
@@ -170,9 +170,9 @@
     - name: Yönergeler ve En İyi Yöntemler
       href: guidelines-and-best-practices.md
       items:
-        - name: 'En İyi Yöntemler: Veri Sözleşmesi Sürümü Oluşturma'
+        - name: 'En İyi Uygulamalar: Veri Sözleşmesi Sürümü Oluşturma'
           href: best-practices-data-contract-versioning.md
-        - name: 'En İyi Yöntemler: Aracılar'
+        - name: 'En İyi Uygulamalar: Aracılar'
           href: best-practices-intermediaries.md
         - name: Hizmet Sürümü Oluşturma
           href: service-versioning.md
