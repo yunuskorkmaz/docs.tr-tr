@@ -1,19 +1,19 @@
 ---
-title: Zincirleme sorgularının performansı (LINQ to XML) (C#)
+title: Zincirli Sorguların Performansı (LINQ - XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
 ms.openlocfilehash: 7deff9205e6535877efabd85257baa5b3906f41a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253117"
 ---
-# <a name="performance-of-chained-queries-linq-to-xml-c"></a>Zincirleme sorgularının performansı (LINQ to XML) (C#)
+# <a name="performance-of-chained-queries-linq-to-xml-c"></a>Zincirli Sorguların Performansı (LINQ - XML) (C#)
 
-LINQ 'in (ve LINQ to XML) en önemli avantajlarından biri, zincir sorgularının ve çok daha karmaşık bir sorgunun gerçekleştirebildiği bir işlemdir.
+LINQ'un (ve LINQ'dan XML'e) en önemli avantajlarından biri, zincirli sorguların yanı sıra tek bir daha büyük, daha karmaşık sorguyu gerçekleştirebiliyor olmasıdır.
 
-Zincirleme sorgu, kaynağı olarak başka bir sorgu kullanan bir sorgudur. Örneğin, aşağıdaki basit kodda `query2` kaynağına sahiptir: `query1`
+Zincirlenmiş sorgu, kaynağı olarak başka bir sorgu kullanan bir sorgudur. Örneğin, aşağıdaki basit kod, `query2` `query1` kaynağı olarak vardır:
 
 ```csharp
 XElement root = new XElement("Root",
@@ -35,24 +35,24 @@ foreach (var i in query2)
     Console.WriteLine("{0}", (int)i);
 ```
 
-Bu örnek aşağıdaki çıktıyı üretir:
+Bu örnek, aşağıdaki çıktıyı üretir:
 
 ```output
 4
 ```
 
-Bu zincirleme sorgu, bağlantılı bir liste ile yineleme ile aynı performans profilini sağlar.
+Bu zincirleme sorgu, bağlantılı bir liste üzerinden yinelenen aynı performans profilini sağlar.
 
-- <xref:System.Xml.Linq.XContainer.Elements%2A> Eksen temelde, bağlantılı bir liste ile yineleme ile aynı performansa sahiptir. <xref:System.Xml.Linq.XContainer.Elements%2A>, ertelenmiş yürütme ile bir yineleyici olarak uygulanır. Bu, yineleyici nesnesini ayırma ve yürütme durumunu izleme gibi bağlantılı listede yineleme yapmak için ek olarak bir iş yaptığı anlamına gelir. Bu iş iki kategoriye ayrılabilir: yineleyicinin ayarlandığı sırada gerçekleştirilen iş ve her yineleme sırasında gerçekleştirilen iş. Kurulum işi küçük, sabit bir iş miktarı ve her yineleme sırasında yapılan iş, kaynak koleksiyondaki öğelerin sayısıyla orantılıdır.
+- Eksen, <xref:System.Xml.Linq.XContainer.Elements%2A> bağlantılı bir liste boyunca yinelenmeyle temelde aynı performansa sahiptir. <xref:System.Xml.Linq.XContainer.Elements%2A>ertelenmiş yürütme ile bir yineleyici olarak uygulanır. Bu, yineleyici nesnesini ayırma ve yürütme durumunu izleme gibi bağlantılı liste yi yinelemeye ek olarak bazı işler yaptığı anlamına gelir. Bu çalışma iki kategoriye ayrılabilir: yineleyicinin ayarlandığı anda yapılan iş ve her yineleme sırasında yapılan iş. Kurulum çalışması küçük, sabit bir çalışma miktarıdır ve her yineleme sırasında yapılan iş kaynak koleksiyonundaki madde sayısıyla orantılıdır.
 
-- İçinde `query1` <xref:System.Linq.Enumerable.Where%2A> , yantümcesorgununyöntemiçağırmasınısağlar.`where` Bu yöntem ayrıca bir yineleyici olarak uygulanır. Kurulum işi, lambda ifadesine başvuracak temsilciyi örnekledikten ve bir yineleyici için normal kuruluma oluşur. Her yinelemeyle, bu temsilci, koşulu yürütmek için çağırılır. Kurulum işi ve her yineleme sırasında yapılan iş, eksen boyunca yineleme sırasında yapılan işe benzer.
+- In `query1`, `where` yan tümcesi <xref:System.Linq.Enumerable.Where%2A> sorgu yöntemi aramak için neden olur. Bu yöntem aynı zamanda bir yineleyici olarak da uygulanır. Kurulum çalışması, lambda ifadesine başvurulacak temsilcinin yanı sıra bir yineleyici için normal kurulumun anlık olarak düzenlenmesinden oluşur. Her yinelemede, temsilci yüklemi yürütmek için çağrılır. Kurulum çalışması ve her yineleme sırasında yapılan iş, eksen üzerinden yineleme yaparken yapılan işe benzer.
 
-- ' `query1`De, select yan tümcesi sorgunun <xref:System.Linq.Enumerable.Select%2A> yöntemi çağırmasını sağlar. Bu yöntem, <xref:System.Linq.Enumerable.Where%2A> yöntemiyle aynı performans profiline sahiptir.
+- 'de, `query1`select yan tümcesi sorgunun yöntemi ni aramasına <xref:System.Linq.Enumerable.Select%2A> neden olur. Bu yöntem, yöntemle aynı <xref:System.Linq.Enumerable.Where%2A> performans profiline sahiptir.
 
-- ' `query2`De, `where` yan tümcesi ve `select` `query1`yan tümcesi, ile aynı performans profiline sahiptir.
+- In `query2`, `where` hem yan `select` tümcesi hem `query1`de yan tümcesi aynı performans profiline sahiptir.
 
-Bu nedenle yineleme `query2` , diğer bir deyişle, doğrusal saat olan ilk sorgunun kaynağındaki öğe sayısıyla doğrudan orantılıdır. Karşılık gelen bir Visual Basic örneği aynı performans profiline sahip olabilir.
+Bu nedenle yineleme, ilk sorgunun kaynağındaki madde sayısıyla, başka bir deyişle doğrusal zamanla doğrusal olarak doğrusal olarak `query2` orantılıdır. İlgili Visual Basic örneği aynı performans profiline sahip olur.
 
-Yineleyiciler hakkında daha fazla bilgi için bkz. [yield](../../../language-reference/keywords/yield.md).
+Yineleyiciler hakkında daha fazla bilgi için [bkz.](../../../language-reference/keywords/yield.md)
 
-Sorguları birlikte zincirlemeye yönelik daha ayrıntılı bir öğretici için bkz [. Öğretici: Sorguları birlikte](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)zincirleme.
+Sorguları birbirine zincirleme konusunda daha ayrıntılı bir öğretici için [Bkz. Öğretici: Sorguları Birlikte Zincirleme.](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

@@ -4,7 +4,7 @@
     - name: İş Akışı Hizmetleri
       href: workflow-services.md
       items:
-        - name: İş Akışı Hizmetlerine Genel Bakış
+        - name: İş Akışı Hizmetleri Genel Bakış
           href: workflow-services-overview.md
         - name: Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma
           href: creating-a-long-running-workflow-service.md
@@ -94,7 +94,7 @@
               href: duplex-services.md
             - name: 'Nasıl yapılır: Çift Yönlü Sözleşme Oluşturma'
               href: how-to-create-a-duplex-contract.md
-            - name: 'Nasıl yapılır: Anlaşma Sınıfı ile Hizmet Oluşturma'
+            - name: 'Nasıl yapılır: Sözleşme Sınıfı ile Hizmet Oluşturma'
               href: how-to-create-a-wcf-contract-with-a-class.md
             - name: 'Nasıl yapılır: Sözleşme Arabirimi ile Hizmet Oluşturma'
               href: how-to-create-a-service-with-a-contract-interface.md
@@ -322,7 +322,7 @@
               href: internet-unsecured-client-and-service.md
             - name: Intranet Güvenli Olmayan Hizmet ve İstemci
               href: intranet-unsecured-client-and-service.md
-            - name: Anonim İstemci ile Aktarım Güvenliği
+            - name: Anonim İstemci ile Taşıma Güvenliği
               href: transport-security-with-an-anonymous-client.md
             - name: Temel Kimlik Doğrulama ile Taşıma Güvenliği
               href: transport-security-with-basic-authentication.md
@@ -393,14 +393,14 @@
                   href: understanding-http-authentication.md
                 - name: Taşıma Güvenliği ile Kimliğe Bürünme Kullanma
                   href: using-impersonation-with-transport-security.md
-                - name: 'Nasıl yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma'
+                - name: 'Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma'
                   href: how-to-configure-a-port-with-an-ssl-certificate.md
                 - name: 'Nasıl yapılır: IIS Tarafından Barındırılan Bir WCF Hizmetini SSL ile Yapılandırma'
                   href: how-to-configure-an-iis-hosted-wcf-service-with-ssl.md
             - name: İleti Güvenliği
               href: message-security-in-wcf.md
               items:
-                - name: 'Nasıl yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme'
+                - name: 'Nasıl Yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme'
                   href: how-to-secure-a-service-with-an-x-509-certificate.md
                 - name: 'Nasıl yapılır: Taşıma Güveniği ve İleti Kimlik Bilgilerini Kullanma'
                   href: how-to-use-transport-security-and-message-credentials.md
@@ -420,7 +420,7 @@
             - name: Sertifikalarla Çalışma
               href: working-with-certificates.md
               items:
-                - name: 'Nasıl yapılır: Sertifika Edinme'
+                - name: 'Nası yapılır: Sertifika Edinme'
                   href: how-to-obtain-a-certificate-wcf.md
                 - name: 'Nasıl yapılır: MMC Ek Bileşeni ile Sertifikaları Görüntüleme'
                   href: how-to-view-certificates-with-the-mmc-snap-in.md
@@ -668,7 +668,7 @@
               href: configuring-the-wpa--service-for-use-with-wcf.md
             - name: 'Nasıl yapılır: WCF Etkinleştirme Bileşenlerini Yükleme ve Yapılandırma'
               href: how-to-install-and-configure-wcf-activation-components.md
-            - name: 'Nasıl yapılır: WAS''de WCF Hizmeti Barındırma'
+            - name: 'Nasıl yapılır: WAS''ta WCF Hizmeti Barındırma'
               href: how-to-host-a-wcf-service-in-was.md
         - name: Windows Hizmet Uygulamasında Barındırma
           href: hosting-in-a-windows-service-application.md
@@ -731,7 +731,7 @@
               href: how-to-use-the-com-service-model-configuration-tool.md
             - name: 'Nasıl yapılır: COM+ Hizmet Ayarlarını Yapılandırma'
               href: how-to-configure-com-service-settings.md
-            - name: 'Nasıl yapılır: COM+ Tümleştirme Uygulaması Dağıtma'
+            - name: 'Nasıl Yapılır: COM+ Tümleştirme Uygulaması Dağıtma'
               href: how-to-deploy-a-com-integration-application.md
         - name: COM Uygulamaları ile Tümleştirme
           href: integrating-with-com-applications.md
@@ -773,7 +773,7 @@
               href: comparing-aspnet-web-services-to-wcf-based-on-development.md
             - name: 'Windows Communication Foundation''ı Benimsemeyi Bekleme: Gelecekteki Tümleştirmeyi Kolaylaştırma'
               href: anticipating-adopting-the-wcf-easing-future-integration.md
-            - name: 'Windows Communication Foundation''ı Benimsemeyi Bekleme: Gelecekteki Geçişi Kolaylaştırma'
+            - name: 'Windows Communication Foundation''ı Benimsemeyi Bekleme: Gelecekteki Taşınmayı Kolaylaştırma'
               href: anticipating-adopting-wcf-migration.md
             - name: Windows Communication Foundation'ı Benimseme
               href: adopting-wcf.md
@@ -817,9 +817,9 @@
           href: architecture-of-syndication.md
         - name: WCF Dağıtım Nesnesi Modeli Atom ve RSS Eşlemelerini Nasıl Yapar?
           href: how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md
-        - name: 'Nasıl yapılır: Temel Bir RSS Akışı Oluşturma'
+        - name: 'Nasıl Yapılır: Temel Bir RSS Akışı Oluşturma'
           href: how-to-create-a-basic-rss-feed.md
-        - name: 'Nasıl yapılır: Temel Bir Atom Akışı Oluşturma'
+        - name: 'Nasıl Yapılır: Temel Bir Atom Akışı Oluşturma'
           href: how-to-create-a-basic-atom-feed.md
         - name: 'Nasıl yapılır: Bir Akışı Hem Atom Hem de RSS Olarak Kullanıma Sunma'
           href: how-to-expose-a-feed-as-both-atom-and-rss.md
@@ -915,7 +915,7 @@
               href: how-to-service-versioning.md
             - name: 'Nasıl yapılır: Hizmet Verilerini Bölümlendirme'
               href: how-to-service-data-partitioning.md
-            - name: 'Nasıl yapılır: Dinamik Güncelleştirme'
+            - name: 'Nasıl yapılır: Dinamik Güncelleme'
               href: how-to-dynamic-update.md
             - name: 'Nasıl yapılır: Hata İşleme'
               href: how-to-error-handling.md

@@ -1,5 +1,5 @@
 ---
-title: <remarks> - C# Programlama Kılavuzu
+title: <remarks> - C# programlama kılavuzu
 ms.date: 07/20/2015
 f1_keywords:
 - remarks
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
 ms.openlocfilehash: e37dac9cb9fed1df6ca027f09f2c95dbbc8ea66d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76793379"
 ---
-# <a name="remarks-c-programming-guide"></a>\<açıklamalar > (C# Programlama Kılavuzu)
+# <a name="remarks-c-programming-guide"></a>\<açıklamalar> (C# programlama kılavuzu)
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,9 +31,9 @@ ms.locfileid: "76793379"
 
 ## <a name="remarks"></a>Açıklamalar
 
-\<açıklamalar > etiketi, [\<özet >](./summary.md)ile belirtilen bilgileri kullanarak bir tür hakkında bilgi eklemek için kullanılır. Bu bilgiler Nesne Tarayıcısı penceresinde görüntülenir.
+Etiketler> \<açıklamalar, [ \<özet>](./summary.md)ile belirtilen bilgileri tamamlayarak, bir tür hakkında bilgi eklemek için kullanılır. Bu bilgiler Nesne Tarayıcı penceresinde görüntülenir.
 
-Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
+Belge yorumlarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derle.
 
 ## <a name="example"></a>Örnek
 
@@ -42,4 +42,4 @@ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-refere
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Belge açıklamaları için önerilen Etiketler](./recommended-tags-for-documentation-comments.md)
+- [Belge açıklamaları için önerilen etiketler](./recommended-tags-for-documentation-comments.md)

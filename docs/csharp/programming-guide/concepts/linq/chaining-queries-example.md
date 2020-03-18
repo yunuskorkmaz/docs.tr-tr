@@ -1,19 +1,19 @@
 ---
-title: Zincirleme sorguları örneği (C#)
+title: Zincirleme Sorgular Örneği (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
 ms.openlocfilehash: 45e3a4f341ca8eb06ff0f553e0f933956e6c6546
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70205420"
 ---
-# <a name="chaining-queries-example-c"></a>Zincirleme sorguları örneği (C#)
-Bu örnek, önceki örnekte oluşturulur ve hem ertelenmiş yürütme hem de yavaş değerlendirme kullanan iki sorguyu zincirleyen ne olacağını gösterir.  
+# <a name="chaining-queries-example-c"></a>Zincirleme Sorgular Örneği (C#)
+Bu örnek, önceki örnekte birdiziliş oluşturur ve hem ertelenmiş yürütme hem de tembel değerlendirme kullanan iki sorguyu bir araya zincirlediğinizde ne olduğunu gösterir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, belirtilen bir dizeyi kaynak koleksiyondaki her dizeye `AppendString`bağlayan ve ardından yeni dizeleri veren başka bir genişletme yöntemi tanıtılmıştır.  
+ Bu örnekte, kaynak koleksiyonundaki `AppendString`her dize ye belirli bir dize ekleyen ve sonra yeni dizeleri veren başka bir uzantı yöntemi getirilir.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -62,7 +62,7 @@ class Program
 }  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```output  
 ToUpper: source >abc<  
@@ -78,14 +78,14 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
- Bu örnekte, her bir genişletme yönteminin, kaynak koleksiyondaki her öğe için tek bir kez çalıştığını görebilirsiniz.  
+ Bu örnekte, her uzantı yönteminin kaynak koleksiyonundaki her öğe için birer birer çalıştığını görebilirsiniz.  
   
- Bu örnekte ne kadar net bir şekilde gruplandık, ancak koleksiyonları oluşturan sorguları birbirine zincirlediğimiz halde ara koleksiyonlar gerçekleştirilmiş değildir. Bunun yerine, her öğe bir geç yönteminden bir sonrakine geçirilir. Bu, ilk olarak bir dize dizisi alacak bir yaklaşımdan çok daha küçük bir bellek parmak izine neden olur, ardından büyük harfe dönüştürülmüş bir ikinci dize dizisi oluşturur ve son olarak her bir dizenin ünlem işareti bulunan üçüncü bir dizi dizeyi oluşturur Buna eklenen noktaları.  
+ Bu örnekten açıkça anlaşılan şey, koleksiyonlar oluşturan sorguları birbirine zincirleme olsa kılmış olsak da, hiçbir ara koleksiyon gerçekleşmemiş olmasıdır. Bunun yerine, her öğe bir tembel yöntemden diğerine geçirilir. Bu, ilk olarak bir dizi dize alacak, sonra büyük harfe dönüştürülmüş ikinci bir dize dizisi oluşturacak ve son olarak her dizeün ünlem aldığı üçüncü bir dize dizisi oluşturacak bir yaklaşımdan çok daha küçük bir bellek ayak izi ile sonuçlanır puanlar eklenir.  
   
- Bu öğreticideki sonraki konu, ara materialization gösterir:  
+ Bu öğreticibir sonraki konu ara maddeleştirme göstermektedir:  
   
-- [Ara materialization (C#)](./intermediate-materialization.md)  
+- [Ara Maddeizasyon (C#)](./intermediate-materialization.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: Sorguları birlikte zincirleme (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Öğretici: Sorguları Birlikte Zincirleme (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

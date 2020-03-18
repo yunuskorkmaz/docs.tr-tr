@@ -1,6 +1,6 @@
 ---
-title: Base anahtar sözcüğü C# -başvurusu
-description: İçindeki C#türetilmiş bir sınıftan temel sınıfın üyelerine erişmek için kullanılan temel anahtar sözcüğü hakkında bilgi edinin.
+title: temel anahtar kelime - C# Başvuru
+description: C#'da türetilmiş bir sınıfın içinden taban sınıfın üyelerine erişmek için kullanılan temel anahtar kelime hakkında bilgi edinin.
 ms.date: 07/20/2015
 f1_keywords:
 - base
@@ -10,37 +10,37 @@ helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
 ms.openlocfilehash: a4686fc5d4245a50de5d77dc0e71c231772f40ef
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713763"
 ---
 # <a name="base-c-reference"></a>base (C# Başvurusu)
 
-`base` anahtar sözcüğü, türetilmiş bir sınıfın içindeki temel sınıfın üyelerine erişmek için kullanılır:
+Anahtar `base` kelime, türemiş bir sınıfın içinden taban sınıfın üyelerine erişmek için kullanılır:
 
-- Temel sınıfta, başka bir yöntem tarafından geçersiz kılınan bir yöntemi çağırın.
+- Taban sınıfta başka bir yöntem tarafından geçersiz kılınan bir yöntem çağırın.
 
-- Türetilmiş sınıfın örneklerini oluştururken hangi temel sınıf oluşturucunun çağrılması gerektiğini belirtin.
+- Türemiş sınıfın örneklerini oluştururken hangi taban sınıf oluşturucunun çağrılması gerektiğini belirtin.
 
-Temel sınıf erişimine yalnızca bir oluşturucuda, örnek yönteminde veya örnek özellik erişimcisinde izin verilir.
+Taban sınıf erişimine yalnızca bir oluşturucu, örnek yöntemi veya örnek özellik erişimcisi olarak izin verilir.
 
-Statik bir yöntem içinden `base` anahtar sözcüğünü kullanmak hatadır.
+Bu statik bir yöntem `base` içinde anahtar kelime kullanmak için bir hatadır.
 
-Erişilen temel sınıf, sınıf bildiriminde belirtilen temel sınıftır. Örneğin, `class ClassB : ClassA`belirtirseniz ClassA 'nın üyelerine, ClassA 'nın temel sınıfına bakılmaksızın ClassB 'den erişilir.
+Erişilen taban sınıf, sınıf bildiriminde belirtilen taban sınıftır. Örneğin, SınıfA'nın taban sınıfından bağımsız olarak, ClassA üyelerine B sınıfından erişilir. `class ClassB : ClassA`
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte, hem temel sınıf, `Person`hem de türetilmiş sınıf `Employee`, `Getinfo`adlı bir yöntemi vardır. `base` anahtar sözcüğünü kullanarak, türetilmiş sınıfın içindeki temel sınıfta `Getinfo` yöntemi çağırmak mümkündür.
+Bu örnekte, hem taban `Person`sınıf, hem `Employee`de türemiş `Getinfo`sınıf, adlı bir yöntem var. `base` Anahtar sözcüğü kullanarak, türemiş `Getinfo` sınıf içinden, taban sınıfta yöntemi aramak mümkündür.
 
 [!code-csharp[csrefKeywordsAccess#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#1)]
 
-Daha fazla örnek için bkz. [New](new-modifier.md), [Virtual](virtual.md)ve [override](override.md).
+Ek örnekler için, [bkz. yeni](new-modifier.md), [sanal](virtual.md), ve [geçersiz kılma.](override.md)
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, türetilmiş bir sınıfın örneklerini oluştururken çağrılan temel sınıf oluşturucunun nasıl ekleneceğini gösterir.
+Bu örnek, türemiş bir sınıfın örneklerini oluştururken çağrılan taban sınıf oluşturucunun nasıl belirtileceği gösterilmektedir.
 
 [!code-csharp[csrefKeywordsAccess#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#2)]
 
@@ -50,7 +50,7 @@ Bu örnek, türetilmiş bir sınıfın örneklerini oluştururken çağrılan te
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../index.md)
+- [C# Referans](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Sözcükleri](./index.md)
-- [this](./this.md)
+- [C# Anahtar Kelimeler](./index.md)
+- [bu](./this.md)

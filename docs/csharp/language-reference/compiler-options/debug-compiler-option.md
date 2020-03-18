@@ -1,5 +1,5 @@
 ---
-title: -Debug (C# derleyici seçenekleri)
+title: -hata ayıklama (C# Derleyici Seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /debug
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
 ms.openlocfilehash: 8bb2b411dc867b6a43e52058dccf2ac980cf0b1e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69922507"
 ---
-# <a name="-debug-c-compiler-options"></a>-Debug (C# derleyici seçenekleri)
-**-Debug** seçeneği derleyicinin hata ayıklama bilgileri oluşturmasına ve bunu çıkış dosyasına veya dosyalarına yerleştirmesine neden olur.  
+# <a name="-debug-c-compiler-options"></a>-hata ayıklama (C# Derleyici Seçenekleri)
+**Hata ayıklama** seçeneği derleyicinin hata ayıklama bilgilerini oluşturmasına ve çıktı dosyasına veya dosyalarına yerleştirmesine neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -25,39 +25,39 @@ ms.locfileid: "69922507"
 -debug:{full | pdbonly}  
 ```  
   
-## <a name="arguments"></a>Arguments  
- `+` &#124; `-`  
- Veya `+`yalnızca **hata ayıklama**belirtildiğinde, derleyicinin hata ayıklama bilgileri oluşturmasına ve bir program veritabanına (. pdb dosyası) yerleştirmesine neden olur. `-` **Hata ayıklama**belirtmezseniz, etkin olan ve hata ayıklama bilgilerinin oluşturulmasına neden olan öğesini belirtme.  
+## <a name="arguments"></a>Bağımsız Değişkenler  
+ `+`&#124;`-`  
+ Belirtilmesi, `+`veya yalnızca **hata ayıklama,** derleyicinin hata ayıklama bilgileri oluşturmasına ve bunu bir program veritabanına (.pdb dosyası) yerleştirmesine neden olur. `-` **-hata ayıklama**belirtmezseniz geçerli olan , geçerli olan belirtilmesi, hata ayıklama bilgisi nin oluşturulmamasını neden olur.  
   
- `full` &#124; `pdbonly`  
- Derleyici tarafından oluşturulan hata ayıklama bilgilerinin türünü belirtir. **-Debug: pdbonly**belirtmezseniz geçerli olan tam bağımsız değişken, çalışan programa hata ayıklayıcı iliştirmeyi sağlar. Yalnızca program hata ayıklayıcıda başlatıldığında, pdbyalnızca kaynak kodu hata ayıklamasına izin verir, ancak çalışan program hata ayıklayıcıya eklendiğinde yalnızca assembler görüntülenir.  
+ `full`&#124;`pdbonly`  
+ Derleyici tarafından oluşturulan hata ayıklama bilgilerinin türünü belirtir. **-debug:pdbonly**belirtmezseniz geçerli olan tam bağımsız değişken, çalışan programa bir hata ayıklama eklemeyi sağlar. Pdbonly belirtilmesi, program hata ayıklayıcıda başlatıldığında kaynak kodunun hata ayıklanmasına izin verir, ancak yalnızca çalışan program hata ayıklayıcıya eklendiğinde assembler görüntülenir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hata ayıklama derlemeleri oluşturmak için bu seçeneği kullanın. **-** Debug, **-Debug +** veya **-Debug: Full** belirtilmemişse, programınızın çıkış dosyasında hata ayıklayamazsınız.  
+ Hata ayıklama yapılarını oluşturmak için bu seçeneği kullanın. **-hata ayıklama,** **-hata ayıklama+** veya **-hata ayıklama:tam** belirtilmemişse, programınızın çıktı dosyasını hata ayıklama nız mümkün olmayacaktır.  
   
- **-Debug: Full**KULLANıRSANıZ, JIT ile iyileştirilmiş kodun hız ve boyutunu ve **-Debug: Full**ile kod kalitesiyle ilgili küçük bir etkisi olduğunu unutmayın. **Hata ayıklamanızı öneririz: yalnızca pdbonly** veya sürüm kodu oluşturmak için pdb yok.  
+ **-debug:full**kullanıyorsanız, JIT optimize edilmiş kodun hızı ve boyutu üzerinde bazı etkiler ve **-hata ayıklama:tam**ile kod kalitesi üzerinde küçük bir etkisi olduğunu unutmayın. Sürüm kodu oluşturmak için **-debug:pdbonly** veya pdb'yi öneririz.  
   
 > [!NOTE]
-> **-Debug: pdbonly** ve **-Debug: Full** arasında bir farklılık vardır **-hata** ayıklama: Full derleyici, JIT derleyicisine <xref:System.Diagnostics.DebuggableAttribute>hata ayıklama bilgilerinin kullanılabilir olduğunu bildirmek için kullanılan bir yayar. Bu nedenle, <xref:System.Diagnostics.DebuggableAttribute> **-Debug: Full**kullanırsanız kodunuz false olarak ayarla ' yı içeriyorsa bir hata alırsınız.  
+> **-debug:pdbonly** ve **-debug:full** arasındaki farklardan biri, **-debug:full** derleyicinin hata ayıklama bilgilerinin kullanılabilir olduğunu JIT derleyicisine söylemek için kullanılan bir <xref:System.Diagnostics.DebuggableAttribute>, yayar. Bu nedenle, <xref:System.Diagnostics.DebuggableAttribute> **-debug:full**kullanırsanız kodunuz yanlış kümesi içeriyorsa bir hata alırsınız.  
   
- Bir uygulamanın hata ayıklama performansını yapılandırma hakkında daha fazla bilgi için bkz. [bir görüntüyü hata ayıklamayı kolaylaştırın](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
+ Bir uygulamanın hata ayıklama performansını yapılandırma hakkında daha fazla bilgi için [bkz.](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md)  
   
- . Pdb dosyasının konumunu değiştirmek için, bkz: [-pdb (C# derleyici seçenekleri)](./pdb-compiler-option.md).  
+ .pdb dosyasının konumunu değiştirmek için bkz. [-pdb (C# Derleyici Seçenekleri)](./pdb-compiler-option.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1. Projenin **Özellikler** sayfasını açın.  
+1. Projenin **Özellikleri** sayfasını açın.  
   
-2. **Yapı** özelliği sayfasına tıklayın.  
+2. Özellik **Oluştur** sayfasını tıklatın.  
   
-3. **Gelişmiş** düğmesine tıklayın.  
+3. **Gelişmiş** düğmesini tıklatın.  
   
-4. **Hata ayıklama bilgisi** özelliğini değiştirin.  
+4. Hata **Ayıklama Bilgileri** özelliğini değiştirin.  
   
- Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>.  
+ Bu derleyici seçeneğini programlı olarak nasıl ayarlayıştırılabildiğini öğrenmek için bkz. <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>  
   
 ## <a name="example"></a>Örnek  
- Hata ayıklama bilgilerini çıkış dosyasına `app.pdb`Yerleştir:  
+ Çıktı dosyasına `app.pdb`hata ayıklama bilgilerini yerleştirin:  
   
 ```console  
 csc -debug -pdb:app.pdb test.cs  

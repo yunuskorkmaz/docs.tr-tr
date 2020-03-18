@@ -1,4 +1,4 @@
-- name: Kesin adlandırma
+- name: Tanımlayıcı Ad Oluşturma
   href: index.md
   items:
     - name: GetHashFromAssemblyFile İşlevi

@@ -1,61 +1,61 @@
 ---
-title: "Öğretici: .NET Core küresel aracı 'nı yükleyip kullanma"
-description: .NET aracını genel araç olarak yüklemeyi ve kullanmayı öğrenin.
+title: 'Öğretici: Bir .NET Core global aracı nı yükleyin ve kullanın'
+description: Bir .NET aracını genel bir araç olarak nasıl yükleyip kullanacağınızı öğrenin.
 ms.date: 02/12/2020
 ms.openlocfilehash: 9f8378e50fd2544eedbbaaeffb89d67800ec6880
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156744"
 ---
-# <a name="tutorial-install-and-use-a-net-core-global-tool-using-the-net-core-cli"></a>Öğretici: .NET Core CLI kullanarak .NET Core küresel aracı 'nı yükleyip kullanın
+# <a name="tutorial-install-and-use-a-net-core-global-tool-using-the-net-core-cli"></a>Öğretici: .NET Core CLI'yi kullanarak bir .NET Core global aracı yükleyin ve kullanın
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 2.1 SDK ve sonraki sürümler
 
-Bu öğreticide, genel bir aracın nasıl yükleneceği ve kullanılacağı öğretilir. [Bu serinin ilk öğreticisinde](global-tools-how-to-create.md)oluşturduğunuz bir aracı kullanırsınız.
+Bu öğretici, genel bir aracı nasıl yükleyip kullanacağınızı öğretir. [Bu serinin ilk öğretici](global-tools-how-to-create.md)oluşturduğunuz bir araç kullanın.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* [Bu serinin ilk öğreticisini](global-tools-how-to-create.md)doldurun.
+* Bu [serinin ilk öğretici](global-tools-how-to-create.md)tamamlayın.
 
-## <a name="use-the-tool-as-a-global-tool"></a>Aracı genel araç olarak kullanma
+## <a name="use-the-tool-as-a-global-tool"></a>Aracı genel bir araç olarak kullanma
 
-1. *Microsoft. botsay* proje klasöründeki [DotNet aracı install](dotnet-tool-install.md) komutunu çalıştırarak aracı paketten çalıştırın:
+1. *microsoft.botsay* proje klasöründe [dotnet aracı yükleme](dotnet-tool-install.md) komutunu çalıştırarak paketi paketten aracı yükleyin:
 
    ```dotnetcli
    dotnet tool install --global --add-source ./nupkg microsoft.botsay
    ```
 
-   `--global` parametresi, .NET Core CLI araç ikililerini, PATH ortam değişkenine otomatik olarak eklenen varsayılan bir konuma yüklemesini söyler.
+   Parametre ,NET `--global` Core CLI'ye araç ikililerini PATH ortamı değişkenine otomatik olarak eklenen varsayılan bir konuma yüklemesini söyler.
 
-   `--add-source` parametresi, .NET Core CLI, NuGet paketleri için ek bir kaynak akışı olarak *./nupkg* dizinini geçici olarak kullanmasını söyler. Paketinize, Nuget.org sitesinde değil, yalnızca *./nupkg* dizininde bulunduğunuzdan emin olmak için benzersiz bir ad verirsiniz.
+   Parametre .NET `--add-source` Core CLI'ye *./nupkg* dizinini NuGet paketleri için ek kaynak akışı olarak geçici olarak kullanmasını söyler. Paketinize, paketinizin Nuget.org sitesinde değil, yalnızca *./nupkg* dizininde bulunduğundan emin olmak için benzersiz bir ad verdiniz.
 
-   Çıktı, aracı ve yüklü sürümü çağırmak için kullanılan komutu gösterir:
+   Çıktı, aracı çağırmak için kullanılan komutu ve yüklenen sürümü gösterir:
 
    ```console
    You can invoke the tool using the following command: botsay
    Tool 'microsoft.botsay' (version '1.0.0') was successfully installed.
    ```
 
-1. Aracı çağır:
+1. Aracı çağırın:
 
    ```console
    botsay hello from the bot
    ```
 
    > [!NOTE]
-   > Bu komut başarısız olursa, yolu yenilemek için yeni bir Terminal açmanız gerekebilir.
+   > Bu komut başarısız olursa, PATH'i yenilemek için yeni bir terminal açmanız gerekebilir.
 
-1. [DotNet Aracı kaldırma](dotnet-tool-uninstall.md) komutunu çalıştırarak aracı kaldırın:
+1. [Dotnet aracını kaldır](dotnet-tool-uninstall.md) komutunu çalıştırarak aracı kaldırın:
 
    ```dotnetcli
    dotnet tool uninstall -g microsoft.botsay
    ```
 
-## <a name="use-the-tool-as-a-global-tool-installed-in-a-custom-location"></a>Aracı özel bir konumda yüklü olan küresel bir araç olarak kullanın
+## <a name="use-the-tool-as-a-global-tool-installed-in-a-custom-location"></a>Aracı özel bir konuma yüklenen genel bir araç olarak kullanma
 
-1. Aracı paketten yükler.
+1. Paketi yükleyin.
 
    Windows'da:
 
@@ -63,22 +63,22 @@ Bu öğreticide, genel bir aracın nasıl yükleneceği ve kullanılacağı öğ
    dotnet tool install --tool-path c:\dotnet-tools --add-source ./nupkg microsoft.botsay
    ```
 
-   Linux veya macOS 'ta:
+   Linux veya macOS'ta:
 
    ```dotnetcli
    dotnet tool install --tool-path ~/bin --add-source ./nupkg microsoft.botsay
    ```
 
-   `--tool-path` parametresi, .NET Core CLI araç ikililerini belirtilen konuma yüklemesini söyler. Dizin yoksa, oluşturulur. Bu dizin, PATH ortam değişkenine otomatik olarak eklenmez.
+   `--tool-path` Parametre .NET Core CLI'ye takım ikililerini belirtilen konuma yüklemesini söyler. Dizin yoksa oluşturulur. Bu dizin, PATH ortamı değişkenine otomatik olarak eklenmez.
 
-   Çıktı, aracı ve yüklü sürümü çağırmak için kullanılan komutu gösterir:
+   Çıktı, aracı çağırmak için kullanılan komutu ve yüklenen sürümü gösterir:
 
    ```console
    You can invoke the tool using the following command: botsay
    Tool 'microsoft.botsay' (version '1.0.0') was successfully installed.
    ```
 
-1. Aracı çağır:
+1. Aracı çağırın:
 
    Windows'da:
 
@@ -86,13 +86,13 @@ Bu öğreticide, genel bir aracın nasıl yükleneceği ve kullanılacağı öğ
    c:\dotnet-tools\botsay hello from the bot
    ```
 
-   Linux veya macOS 'ta:
+   Linux veya macOS'ta:
 
    ```console
    ~/bin/botsay hello from the bot
    ```
 
-1. [DotNet Aracı kaldırma](dotnet-tool-uninstall.md) komutunu çalıştırarak aracı kaldırın:
+1. [Dotnet aracını kaldır](dotnet-tool-uninstall.md) komutunu çalıştırarak aracı kaldırın:
 
    Windows'da:
 
@@ -100,7 +100,7 @@ Bu öğreticide, genel bir aracın nasıl yükleneceği ve kullanılacağı öğ
    dotnet tool uninstall --tool-path c:\dotnet-tools microsoft.botsay
    ```
 
-   Linux veya macOS 'ta:
+   Linux veya macOS'ta:
 
    ```dotnetcli
    dotnet tool uninstall --tool-path ~/bin microsoft.botsay
@@ -108,11 +108,11 @@ Bu öğreticide, genel bir aracın nasıl yükleneceği ve kullanılacağı öğ
 
 ## <a name="troubleshoot"></a>Sorun giderme
 
-Öğreticiyi takip ederken bir hata mesajı alırsanız bkz. [.NET Core araç kullanımı sorunlarını giderme](troubleshoot-usage-issues.md).
+Öğreticiyi izlerken bir hata iletisi alırsanız, [Sorun Giderme .NET Core araç kullanım sorunlarına](troubleshoot-usage-issues.md)bakın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, bir aracı bir genel araç olarak yüklediniz ve kullandınız. Aynı aracı yerel bir araç olarak yüklemek ve kullanmak için sonraki öğreticiye ilerleyin.
+Bu öğreticide, bir aracı genel bir araç olarak yüklemiş ve kullanmışsınız. Yerel bir araçla aynı aracı yüklemek ve kullanmak için bir sonraki öğreticiye ilerleyin.
 
 > [!div class="nextstepaction"]
-> [Yerel araçları yükleyip kullanma](local-tools-how-to-use.md)
+> [Yerel araçları yükleme ve kullanma](local-tools-how-to-use.md)

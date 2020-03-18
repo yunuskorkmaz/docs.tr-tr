@@ -1,48 +1,48 @@
 ---
 ms.openlocfilehash: a4e20e0468d861138ad801c9dbfa15340b3f388c
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394239"
 ---
-### <a name="authentication-oauthhandler-exchangecodeasync-signature-changed"></a>Kimlik doğrulaması: OAuthHandler ExchangeCodeAsync imzası değişti
+### <a name="authentication-oauthhandler-exchangecodeasync-signature-changed"></a>Kimlik doğrulama: OAuthHandler ExchangeCodeAsync imza değiştirildi
 
-ASP.NET Core 3,0 ' de, `OAuthHandler.ExchangeCodeAsync` imzası şu şekilde değiştirildi:
+core 3.0ASP.NETde imzası `OAuthHandler.ExchangeCodeAsync` aşağıdakilerden değiştirilmiştir:
 
 ```csharp
 protected virtual System.Threading.Tasks.Task<Microsoft.AspNetCore.Authentication.OAuth.OAuthTokenResponse> ExchangeCodeAsync(string code, string redirectUri) { throw null; }
 ```
 
-Bitiş:
+Hedef:
 
 ```csharp
 protected virtual System.Threading.Tasks.Task<Microsoft.AspNetCore.Authentication.OAuth.OAuthTokenResponse> ExchangeCodeAsync(Microsoft.AspNetCore.Authentication.OAuth.OAuthCodeExchangeContext context) { throw null; }
 ```
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
 3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-`code` ve `redirectUri` dizeleri ayrı bağımsız değişkenler olarak geçirildi.
+`code` Ve `redirectUri` dizeleri ayrı bağımsız değişkenler olarak geçirildi.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-`Code` ve `RedirectUri`, `OAuthCodeExchangeContext` `OAuthCodeExchangeContext` Oluşturucusu aracılığıyla ayarlayabileceği özelliklerdir. Yeni `OAuthCodeExchangeContext` türü `OAuthHandler.ExchangeCodeAsync`geçirilen tek bağımsız değişkendir.
+`Code`ve `RedirectUri` `OAuthCodeExchangeContext` `OAuthCodeExchangeContext` konstrüktör aracılığıyla ayarlanabilen özelliklerdir. Yeni `OAuthCodeExchangeContext` tür, `OAuthHandler.ExchangeCodeAsync`''ye geçirilen tek bağımsız değişkendir.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Bu değişiklik, ek parametrelerin kırılmamış bir şekilde sağlanmasını sağlar. Yeni `ExchangeCodeAsync` aşırı yüklemeleri oluşturmanız gerekmez.
+Bu değişiklik, ek parametrelerin kırılmaz bir şekilde sağlanmasına olanak tanır. Yeni `ExchangeCodeAsync` aşırı yüklemeler yaratmaya gerek yok.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Uygun `code` ve `redirectUri` değerleriyle bir `OAuthCodeExchangeContext` oluşturun. <xref:Microsoft.AspNetCore.Authentication.AuthenticationProperties> bir örnek sağlanmalıdır. Bu tek `OAuthCodeExchangeContext` örneği, birden çok bağımsız değişken yerine `OAuthHandler.ExchangeCodeAsync` geçirilebilir.
+Uygun `OAuthCodeExchangeContext` `code` ve `redirectUri` değerlerle bir yapı inşa edin. Bir <xref:Microsoft.AspNetCore.Authentication.AuthenticationProperties> örnek sağlanmalıdır. Bu `OAuthCodeExchangeContext` tek örnek, `OAuthHandler.ExchangeCodeAsync` birden çok bağımsız değişken yerine geçirilebilir.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Core
+ASP.NET Çekirdeği
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

@@ -1,44 +1,44 @@
 ---
 ms.openlocfilehash: ae5a5fbf97ed4a03de7d35b9d5d5ca8de3aebc39
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393969"
 ---
-### <a name="caching-responsecaching-pubternal-types-changed-to-internal"></a>Önbelleğe alma: ResponseCaching "pubternal" türleri iç olarak değiştirildi
+### <a name="caching-responsecaching-pubternal-types-changed-to-internal"></a>Önbelleğe alma: YanıtCaching "pubternal" türleri iç değiştirildi
 
-ASP.NET Core 3,0 ' de, `ResponseCaching` ' daki "pubternal" türleri `internal` olarak değiştirilmiştir.
+core 3.0 ASP.NET, "pubternal" `ResponseCaching` türleri `internal`değiştirildi.
 
-Ayrıca, `IResponseCachingPolicyProvider` ve `IResponseCachingKeyProvider` ' in varsayılan uygulamaları artık `AddResponseCaching` yönteminin bir parçası olarak hizmetlere eklenmez.
+Buna ek olarak, `IResponseCachingPolicyProvider` varsayılan `IResponseCachingKeyProvider` uygulamaları ve artık yöntemin `AddResponseCaching` bir parçası olarak hizmetlere eklenir.
 
-#### <a name="change-description"></a>Açıklamayı Değiştir
+#### <a name="change-description"></a>Açıklamayı değiştir
 
-ASP.NET Core, "pubternal" türleri `public` olarak belirtilir, ancak `.Internal` ile düzeltilen bir ad alanı soneki içinde bulunur. Bu türler genel olsa da, destek ilkesi yoktur ve bu değişiklikler önemli değişikliklere tabidir. Ne yazık ki, bu türlerin yanlışlıkla kullanılması yaygındır ve bu projelerde oluşan değişikliklere neden olacak ve Framework 'ün bakımını yapma yeteneğini sınırlandırmıştır.
+ASP.NET Core'da "pubternal" türleri `public` olarak bildirilir, ancak bir ad `.Internal`alanı içinde yer almaktadır. Bu tür ler herkese açık olsa da, destek politikaları yoktur ve kırılma değişikliklerine tabidirler. Ne yazık ki, bu tür kazara kullanımı, bu projelerde değişiklikler kırma ve çerçeve korumak için yeteneği sınırlayan sonuçlanan yaygın olmuştur.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-Bu türler herkese açık olarak görünür, ancak desteklenmez.
+Bu türler genel olarak görünür, ancak desteklenmez.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Bu türler artık `internal` ' dır.
+Bu tür `internal`şimdi .
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-@No__t-0 kapsamı, desteklenmeyen ilkeyi daha iyi yansıtır.
+`internal` Kapsam, desteklenmeyen ilkeyi daha iyi yansıtır.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Uygulamanız veya kitaplığınız tarafından kullanılan türleri kopyalayın.
+Uygulamanız veya kitaplığınız tarafından kullanılan kopya türleri.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Core
+ASP.NET Çekirdeği
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

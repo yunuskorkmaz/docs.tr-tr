@@ -1,29 +1,29 @@
 ---
-title: (C# üzerinde LINQ) sol dış birleştirmeler gerçekleştirme
-description: C# içinde LINQ kullanarak sol dış birleştirmeler gerçekleştirme konusunda bilgi edinin.
+title: Sol dış birleştirmeleri gerçekleştirin (C#'da LINQ)
+description: C#'da LINQ'u kullanarak sol dış birleştirmeleri nasıl gerçekleştireceklerini öğrenin.
 ms.date: 12/01/2016
 ms.assetid: f542cee6-3169-4dcf-a631-3a6a79ccd473
 ms.openlocfilehash: cc08a1c8670623a10d1e0bf10221d02037a8d7bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "61688585"
 ---
 # <a name="perform-left-outer-joins"></a>Sol dış birleşimler gerçekleştirme
 
-Sol dış birleşim bir birleşim olduğunu, hangi ilk koleksiyonun her öğesine, bunu herhangi bir bağlantılı öğe ikinci koleksiyonda olup bağımsız olarak döndürülür. LINQ çağırarak bir sol dış birleşim gerçekleştirmek için kullanabileceğiniz <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> Grup birleştirme sonuçlarının yöntemi.
+Sol dış birleştirme, ikinci koleksiyonda ilişkili öğeler olup olmadığına bakılmaksızın, ilk koleksiyonun her öğesinin döndürüldildiği bir birleştirmedir. Bir grup birleştirme sonuçları <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> üzerinde yöntem çağırarak sol dış birleştirme gerçekleştirmek için LINQ kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> bir grup birleşimin sol dış birleşim sonuçlara göre yöntemi.
+Aşağıdaki örnek, sol dış <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> birleştirme gerçekleştirmek için bir grup birleştirme sonuçlarında yöntemin nasıl kullanılacağını gösterir.
 
-Bir sol dış birleşim iki koleksiyon oluşturmayı ilk adımı, bir grup birleşim kullanarak bir iç birleştirme gerçekleştirmektir. (Bkz [iç birleştirmeler gerçekleştirme](perform-inner-joins.md) bu işlemin açıklaması.) Bu örnekte, listesini `Person` nesneleri, iç katılmış listesine `Pet` nesneleri temel alan bir `Person` eşleşen nesne `Pet.Owner`.
+İki koleksiyonun sol dış birliğini oluşturmanın ilk adımı, grup birleştirme kullanarak bir iç birleştirme gerçekleştirmektir. (Bkz. Bu işlemin bir açıklaması için [iç birleştirmeleri](perform-inner-joins.md) gerçekleştirin.) Bu `Person` örnekte, nesnelerin listesi eşleşen `Pet` `Person` `Pet.Owner`bir nesneye dayalı nesnelerin listesine iç-joined .
 
-İkinci adım sonuç o öğenin sağ koleksiyondaki herhangi bir eşleşme olsa bile kümesinde (soldaki) ilk koleksiyonun her öğesine eklemektir. Bu çağrılarak gerçekleştirilir <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> group JOIN öğelerden eşleşen her dizisi üzerinde. Bu örnekte, <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> eşleşen her sırası adlı `Pet` nesneleri. Yöntemi, tek bir varsayılan değer içeren bir koleksiyon döndürür eşleşen dizisi `Pet` nesneleri için boş `Person` nesne, böylece, her sağlama `Person` nesne sonucu koleksiyonda temsil edilir.
+İkinci adım, ilk (sol) koleksiyonun her öğesini, bu öğenin doğru koleksiyonda eşleşmesi olmasa bile sonuç kümesine eklemektir. Bu grup birleştirme <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> eşleşen öğelerin her dizi çağırarak gerçekleştirilir. Bu örnekte, <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> eşleşen `Pet` nesnelerin her dizisinde çağrılır. Yöntem, eşleşen `Pet` nesnelerin sırası herhangi `Person` bir nesne için boşsa tek bir varsayılan değer içeren `Person` bir koleksiyon döndürür ve böylece her nesnenin sonuç koleksiyonunda temsil edilmesini sağlar.
 
 > [!NOTE]
-> Bir başvuru türü için varsayılan değerdir `null`; bu nedenle, her birinin her öğe erişmeden önce bir null başvuru için örnek denetler `Pet` koleksiyonu.
+> Bir başvuru türü için `null`varsayılan değer; bu nedenle, örnek, her `Pet` koleksiyonun her öğesine erişmeden önce null başvuru için denetler.
 
 [!code-csharp[CsLINQProgJoining#7](~/samples/snippets/csharp/concepts/linq/how-to-perform-left-outer-joins_1.cs)]
 
@@ -33,4 +33,4 @@ Bir sol dış birleşim iki koleksiyon oluşturmayı ilk adımı, bir grup birle
 - <xref:System.Linq.Enumerable.GroupJoin%2A>
 - [İç birleşimler gerçekleştirme](perform-inner-joins.md)
 - [Gruplanmış birleşimler gerçekleştirme](perform-grouped-joins.md)
-- [Anonim türler](../programming-guide/classes-and-structs/anonymous-types.md)
+- [Anonim türleri](../programming-guide/classes-and-structs/anonymous-types.md)

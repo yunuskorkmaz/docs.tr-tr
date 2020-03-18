@@ -1,86 +1,86 @@
 ---
-title: Atma- C# kılavuz
-description: Atanmamış C#, discardable değişkenleri ve atma 'un kullanılabileceği yollarla ilgili olarak, atma desteği açıklanmaktadır.
+title: Atar - C# Kılavuzu
+description: Atanamayan, atılabilir değişkenler olan c#'ın atıliş desteğini ve atılların nasıl kullanılabileceğini açıklar.
 ms.technology: csharp-fundamentals
 ms.date: 07/21/2017
 ms.openlocfilehash: a76e7fc13f92ec0de87153bb35eb3924bb317616
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73100633"
 ---
-# <a name="discards---c-guide"></a>Atma- C# kılavuz
+# <a name="discards---c-guide"></a>Atar - C# Kılavuzu
 
-7,0 ile C# başlayarak, C# uygulama kodunda kasıtlı olarak kullanılmamış olan geçici ve kukla değişkenler olan atma 'yı destekler. Atma, atanmamış değişkenlere eşdeğerdir; Bunlar bir değere sahip değildir. Yalnızca tek bir atma değişkeni olduğundan ve bu değişkene ayrılan depolama alanı bulunmayabilir, atma işlemi bellek ayırmalarını azaltabilir. Kodunuzun amacını açık hale yaptığından, okunabilirliği ve bakım yapamazı geliştirir.
+C# 7.0 ile başlayarak C#, uygulama kodunda kasıtlı olarak kullanılmayan geçici, sahte değişkenler olan atları destekler. Atıllar atanmamış değişkenlere eşdeğerdir; bir değeri yoktur. Yalnızca tek bir atma değişkeni olduğundan ve bu değişken depolama alanı bile tahsis edilemeyebileceğinden, atarlar bellek ayırmalarını azaltabilir. Kodunuzu açıkça belirttikleri için, kodun okunabilirliğini ve korunabilirliğini artırırlar.
 
-Bir değişkenin, adı olarak alt çizgi (`_`) atayarak bir atma olduğunu belirtirsiniz. Örneğin, aşağıdaki yöntem çağrısı, ilk ve ikinci değerlerin dıştığı 3 tanımlama grubu döndürür ve *alan* , daha önce bildirildiği bir değişken *Getcityınformation*tarafından döndürülen karşılık gelen üçüncü bileşene ayarlanır:
+Bir değişkenin, alt puanını (`_`) adı olarak atayarak bir attırMa olduğunu belirtirsiniz. Örneğin, aşağıdaki yöntem çağrısı, birinci ve ikinci değerlerin atıldığı ve *alanın* *GetCityInformation*tarafından döndürülen ilgili üçüncü bileşene ayarlanacak daha önce bildirilen bir değişken olduğu bir 3-tuple döndürür:
 
 ```csharp
 (_, _, area) = city.GetCityInformation(cityName);
 ```
 
-7,0 C# ' de, atma aşağıdaki bağlamlarda atamalar içinde desteklenir:
+C# 7.0'da, atamalar aşağıdaki bağlamlarda desteklenir:
 
-- Kayıt düzeni ve nesne [oluşturma](deconstruct.md).
-- Ve [anahtarı](language-reference/keywords/switch.md)ile [eşleşen](language-reference/keywords/is.md) model.
-- `out` parametreli yöntemlere çağrılar.
-- Kapsamda `_` olmadığında tek başına `_`.
+- Tuple ve nesne [yapısızlaştırma.](deconstruct.md)
+- Desen [ile](language-reference/keywords/is.md) eşleşen ve [anahtar](language-reference/keywords/switch.md).
+- Parametreleri ile `out` yöntemleri çağırır.
+- Kapsam da `_` hayır `_` olduğunda bağımsız bir.
 
-`_` geçerli bir atıldığında, değerini alma veya atama işleminde kullanma girişimi, "\_' adı geçerli bağlamda yok" hatasını üretir. Bunun nedeni `_` bir değer atanmamıştır ve hatta bir depolama konumu atanmayabilir. Gerçek bir değişkense, önceki örnekte olduğu gibi birden fazla değeri atlamadınız.
+Geçerli `_` bir atama olduğunda, değerini almaya veya bir atama işleminde kullanmaya çalışırken cs0301 derleyici\_hatası oluşturur, "Ad ' ' ' geçerli bağlamda yok". Bunun nedeni, `_` bir değer atanmamış olması ve hatta bir depolama konumu atanmamış olmasıdır. Gerçek bir değişken olsaydı, önceki örnekte olduğu gibi birden fazla değer atamadınız.
 
-## <a name="tuple-and-object-deconstruction"></a>Demet ve nesne oluşturmayı kaldırma
+## <a name="tuple-and-object-deconstruction"></a>Tuple ve nesne yapısızlaştırma
 
-Atma, uygulama kodunuz bazı demet öğeleri kullandığında ancak diğerlerini yoksaytığında tanımlama grupları ile çalışırken özellikle yararlıdır. Örneğin, aşağıdaki `QueryCityDataForYears` yöntemi, şehir adı, alanı, yıl, bu yıl için şehir popülasyonu, ikinci yıl ve bu ikinci yıl için şehir popülasyonu olan 6 tanımlama grubu döndürür. Örnek, bu iki yıl arasındaki popülasyondaki değişikliği gösterir. Kayıt kümesinden kullanılabilen veriler, şehir alanıyla ilgilentik ve tasarım zamanında şehir adını ve iki tarihi biliyoruz. Sonuç olarak, yalnızca kayıt düzeninde depolanan iki popülasyon değeri ile ilgileniyoruz ve kalan değerlerini atma olarak işleyebilir.  
+Uygulama kodunuz bazı tuple öğeleri kullanır ken diğerlerini yok sayar, özellikle tuples ile çalışırken yararlıdır. Örneğin, aşağıdaki `QueryCityDataForYears` yöntem bir şehir, alanı, bir yıl, o yıl, ikinci yıl için şehrin nüfusu ve ikinci yıl için şehrin nüfusu adı ile 6-tuple döndürür. Örnek, bu iki yıl arasındaki nüfus değişimini göstermektedir. Tuple'dan elde edilen verilerden şehir alanıyla ilgilenmiyoruz ve şehir adını ve iki tarihi tasarım zamanında biliyoruz. Sonuç olarak, yalnızca tuple'da depolanan iki popülasyon değeriyle ilgileniyoruz ve kalan değerlerini atılarak işleyebiliriz.  
 
 [!code-csharp[Tuple-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
-Atma ile tanımlama gruplarını kaldırma hakkında daha fazla bilgi için bkz. [tanımlama gruplarını ve diğer türleri kaldırma](deconstruct.md#deconstructing-tuple-elements-with-discards).
+Atlayışlarla tuples deconstructing hakkında daha fazla bilgi için, [deconstructing tuples ve diğer türleri](deconstruct.md#deconstructing-tuple-elements-with-discards)bakın.
 
-Bir sınıf, yapı veya arabirimin `Deconstruct` yöntemi, bir nesneden belirli bir veri kümesini almanıza ve oluşturmanıza da olanak sağlar. Yalnızca ayrıştırılmış değerlerin yalnızca bir alt kümesiyle çalışmayı düşünüyorsanız, atma ' yı kullanabilirsiniz. Aşağıdaki örnek, bir `Person` nesnesini dört dizeye (ilk ve son adlar, şehir ve eyalet) ayırır, ancak son adı ve durumu atar.
+Bir `Deconstruct` sınıfın, yapının veya arabirimin yöntemi, bir nesneden belirli bir veri kümesini almanızı ve dekonstrükte etmenizi de sağlar. Deconstructed değerlerin yalnızca bir alt kümesi ile çalışmak istediğinizde atar kullanabilirsiniz. Aşağıdaki örnek, bir `Person` nesneyi dört dize (ad ve soyad, şehir ve devlet) olarak belirtir, ancak soyadını ve durumu atar.
 
 [!code-csharp[Class-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/class-discard1.cs)]
 
-Kullanıcı tanımlı türleri atma ile kaldırma hakkında daha fazla bilgi için bkz. [tanımlama gruplarını ve diğer türleri kaldırma](deconstruct.md#deconstructing-a-user-defined-type-with-discards).
+Atar ile kullanıcı tanımlı türleri deconstructing hakkında daha fazla bilgi için [bkz.](deconstruct.md#deconstructing-a-user-defined-type-with-discards)
 
-## <a name="pattern-matching-with-switch-and-is"></a>`switch` ve `is` ile eşleşen desenler
+## <a name="pattern-matching-with-switch-and-is"></a>Desen ile `switch` eşleşen ve`is`
 
-*Atma stili* [, ın](language-reference/keywords/is.md) ve [anahtar](language-reference/keywords/switch.md) anahtar sözcükleriyle birlikte eşleşen düzende kullanılabilir. Her ifade her zaman atma düzeniyle eşleşir.
+*Atma deseni,* [is](language-reference/keywords/is.md) ve [anahtar](language-reference/keywords/switch.md) anahtar kelimeleri ile eşleşen desende kullanılabilir. Her ifade her zaman atma desenine eşleşir.
 
-Aşağıdaki örnek, bir nesnenin bir <xref:System.IFormatProvider> uygulama verip içermediğini ve nesnenin `null`olup olmadığını test etmek için [,,](language-reference/keywords/is.md) bir nesnesinin bir `ProvidesFormatInfo` yöntemini tanımlar. Ayrıca, başka bir türdeki null olmayan nesneleri işlemek için de atma modelini kullanır.
+Aşağıdaki örnek, `ProvidesFormatInfo` bir nesnenin [is](language-reference/keywords/is.md) <xref:System.IFormatProvider> bir uygulama sağlayıp sağlamadığını belirlemek ve nesnenin `null`. Ayrıca, başka bir türdeki null olmayan nesneleri işlemek için atma deseni kullanır.
 
 [!code-csharp[discard-pattern](../../samples/snippets/csharp/programming-guide/discards/discard-pattern2.cs)]
 
-## <a name="calls-to-methods-with-out-parameters"></a>Out parametreleri ile yöntemlere çağrılar
+## <a name="calls-to-methods-with-out-parameters"></a>Parametreleri dışa doğru olan yöntemlere çağrı
 
-Kullanıcı tanımlı bir türü (bir sınıf, yapı veya arabirim örneği) oluşturmak için `Deconstruct` yöntemi çağrılırken, bağımsız `out` bağımsız değişkenlerin değerlerini atabilirsiniz. Ancak, Out parametresiyle herhangi bir yöntemi çağırırken `out` bağımsız değişkenlerin değerini de atabilirsiniz.
+Kullanıcı tanımlı bir türü (bir sınıf, yapı veya arabirim örneği) yapısızlaştırılması için `Deconstruct` `out` yöntemi çağırırken, bağımsız değişkenlerin değerlerini atabilirsiniz. Ancak, herhangi bir yöntemi `out` dış parametreyle ararken bağımsız değişkenlerin değerini de atabilirsiniz.
 
-Aşağıdaki örnek, bir tarihin dize temsilinin geçerli kültür içinde geçerli olup olmadığını belirlemek için [DateTime. Trypari (dize, Out DateTime)](<xref:System.DateTime.TryParse(System.String,System.DateTime@)>) yöntemini çağırır. Örnek yalnızca tarih dizesini doğrulamaya ve tarihi ayıklamak için ayrıştırılmaya karşı düşünüldüğünde, yönteme `out` bağımsız değişkeni atılır.
+Aşağıdaki örnek, bir tarihin dize gösteriminin geçerli kültürde geçerli olup olmadığını belirlemek için [DateTime.TryParse (String, out DateTime)](<xref:System.DateTime.TryParse(System.String,System.DateTime@)>) yöntemini çağırır. Örnek yalnızca tarih dizesini doğrulamakla ilgili olduğundan ve tarihi ayıklamak için `out` ayrıştırma ile değil, yöntemin bağımsız değişkeni bir attır.
 
 [!code-csharp[discard-with-out](../../samples/snippets/csharp/programming-guide/discards/discard-out1.cs)]
 
 ## <a name="a-standalone-discard"></a>Tek başına atma
 
-Yok saymayı seçtiğiniz herhangi bir değişkeni belirtmek için tek başına atmayı kullanabilirsiniz. Aşağıdaki örnek, zaman uyumsuz bir işlem tarafından döndürülen <xref:System.Threading.Tasks.Task> nesnesini yoksaymak için tek başına atmayı kullanır. Bu, işlemin tamamlanana kadar yaptığı özel durumu gizlemeyi etkiler.
+Yoksaymayı seçtiğiniz herhangi bir değişkeni belirtmek için tek başına bir atma kullanabilirsiniz. Aşağıdaki örnek, eşyoklama işlemi <xref:System.Threading.Tasks.Task> yle döndürülen nesneyi yok saymak için tek başına bir atma kullanır. Bu, işlemin tamamlanmak üzere olduğu gibi attığı özel durumu bastırma etkisine sahiptir.
 
 [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard1.cs)]
 
-`_` de geçerli bir tanımlayıcı olduğunu unutmayın. Desteklenen bir bağlam dışında kullanıldığında `_`, atma olarak kabul edilir ancak geçerli bir değişken olarak değerlendirilir. `_` adlı bir tanımlayıcı zaten kapsamda ise, tek başına bir atma olarak `_` kullanılması şu şekilde olabilir:
+Bunun `_` da geçerli bir tanımlayıcı olduğunu unutmayın. Desteklenen bir bağlam Dışında kullanıldığında, bir atma olarak değil, `_` geçerli bir değişken olarak kabul edilir. Adı verilen `_` bir tanımlayıcı zaten kapsamdaysa, `_` tek başına atma olarak kullanımı aşağıdakileri yapabilir:
 
-- İstenen atma değeri atanarak, kapsam içi `_` değişkeninin değerini yanlışlıkla değiştirme. Örneğin:
+- Amaçlanan atın değerini atayarak `_` kapsam içi değişkenin değerinin yanlışlıkla değiştirilmesi. Örnek:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
 
-- Tür güvenliğini ihlal eden bir derleyici hatası. Örneğin:
+- Tür güvenliğini ihlal etmek için derleyici hatası. Örnek:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
 
-- Derleyici hatası CS0136, "Bu ad bir yerel veya parametre tanımlamak için kapsayan bir yerel kapsamda kullanıldığından,"\_' adlı bir yerel veya parametre bu kapsamda bildirilemez. " Örneğin:
+- Derleyici hatası CS0136, "' '\_adlı yerel veya parametre bu kapsamda bildirilemez, çünkü bu ad yerel veya parametre tanımlamak için çevreleyen bir yerel kapsamda kullanılır." Örnek:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Demetleri ve diğer türleri ayrıştırma](deconstruct.md)
-- [`is` anahtar sözcüğü](language-reference/keywords/is.md)
-- [`switch` anahtar sözcüğü](language-reference/keywords/switch.md)
+- [`is`Anahtar kelime](language-reference/keywords/is.md)
+- [`switch`Anahtar kelime](language-reference/keywords/switch.md)

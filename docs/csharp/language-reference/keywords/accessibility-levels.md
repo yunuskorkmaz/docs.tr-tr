@@ -1,62 +1,62 @@
 ---
-title: Erişilebilirlik düzeyleri- C# başvuru
+title: Erişilebilirlik Düzeyleri - C# Referans
 ms.date: 12/06/2017
 helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
 ms.openlocfilehash: 26fbc2a6d86aead537465c304146630f8bcd3ad4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713823"
 ---
 # <a name="accessibility-levels-c-reference"></a>Erişilebilirlik Düzeyleri (C# Başvurusu)
 
-Üyeler için aşağıdaki tanımlı erişilebilirlik düzeylerinden birini belirtmek için erişim değiştiricilerini `public`, `protected`, `internal`veya `private`kullanın.  
+Üyeler için aşağıdaki bildirilen `public` `protected`erişilebilirlik düzeylerinden birini belirtmek için erişim değiştiriciler, , , `internal`, veya `private`, kullanın.  
   
-|Tanımlanan erişilebilirlik|Açıklama|  
+|Bildirilen erişilebilirlik|Anlamı|  
 |----------------------------|-------------|  
-|[`public`](public.md)|Erişim kısıtlı değil.|  
-|[`protected`](protected.md)|Erişim, kapsayan sınıftan türetilmiş kapsayan sınıf veya türlerle sınırlıdır.|  
-|[`internal`](internal.md)|Erişim, geçerli derleme ile sınırlıdır.|  
-|[`protected internal`](protected-internal.md)|Erişim, geçerli derleme veya kapsayan sınıftan türetilmiş türlerle sınırlıdır.|  
-|[`private`](private.md)|Erişim, kapsayan tür ile sınırlıdır.|  
-|[`private protected`](private-protected.md)|Erişim, geçerli derleme içindeki içeren sınıftan türetilmiş kapsayan sınıf veya türlerle sınırlıdır. 7,2 sürümünden C# itibaren kullanılabilir. |  
+|[`public`](public.md)|Erişim sınırlı değildir.|  
+|[`protected`](protected.md)|Erişim, içeren sınıfveya içeren sınıftan türetilen türlerle sınırlıdır.|  
+|[`internal`](internal.md)|Erişim geçerli derleme ile sınırlıdır.|  
+|[`protected internal`](protected-internal.md)|Erişim, geçerli derleme yle veya içeren sınıftan türetilen türlerle sınırlıdır.|  
+|[`private`](private.md)|Erişim, içeren türle sınırlıdır.|  
+|[`private protected`](private-protected.md)|Erişim, geçerli derleme içindeki içeren sınıftan türetilen sınıf veya türlerle sınırlıdır. C# 7.2'den beri mevcuttur. |  
   
- Bir üye veya tür için yalnızca bir erişim değiştiricisine, `protected internal` veya `private protected` birleşimlerini kullandığınızda izin verilir.  
+ Bir üye veya tür için, bir üye `protected internal` veya `private protected` kombinasyonları kullandığınız zamanlar dışında yalnızca bir erişim değiştiricisine izin verilir.  
   
- Ad alanlarında erişim değiştiricilerine izin verilmez. Ad alanlarının erişim kısıtlamaları yoktur.  
+ Ad alanlarında erişim değiştiricilere izin verilmez. Ad alanlarının erişim kısıtlaması yoktur.  
   
- Üye bildiriminin gerçekleştiği içeriğe bağlı olarak, yalnızca belirli olarak tanımlanmış erişilebilirlik izin verilir. Üye bildiriminde erişim değiştiricisi belirtilmemişse, varsayılan bir erişilebilirlik kullanılır.  
+ Üye bildiriminin gerçekleştiği içeriğe bağlı olarak, yalnızca belirli bildirilen erişimlere izin verilir. Üye bildiriminde erişim değiştirici belirtilmemişse, varsayılan erişilebilirlik kullanılır.  
   
- Diğer türlerde iç içe olmayan en üst düzey türler yalnızca `internal` veya `public` erişilebilirliği olabilir. Bu türler için varsayılan erişilebilirlik `internal`.  
+ Diğer türlerde iç içe olmayan üst düzey türler `internal` yalnızca `public` erişebilirveya erişilebilirolabilir. Bu türler için varsayılan erişilebilirlik. `internal`  
   
- Diğer türlerin üyeleri olan iç içe türler, aşağıdaki tabloda gösterildiği gibi, erişilebilir olarak bildirilebilecek.  
+ Diğer türlerin üyesi olan iç içe geçen türler, aşağıdaki tabloda belirtildiği gibi erişilebilirliklerini bildirmiş olabilir.  
   
-|Üyeleri|Varsayılan üye erişilebilirliği|Üyenin izin verilen erişilebilirliği|  
+|Üyeleri|Varsayılan üye erişilebilirliği|Üyenin bildirilen erişilebilirliğine izin verilen|  
 |----------------|----------------------------------|--------------------------------------------------|  
-|`enum`|`public`|Yok.|  
+|`enum`|`public`|None|  
 |`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
-|`interface`|`public`|Yok.|  
+|`interface`|`public`|None|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
- İç içe bir türün erişilebilirliği, hem belirtilen üyenin hem de hem de hem de kapsayan türdeki erişilebilirlik etki alanı tarafından belirlenen [erişilebilirlik etki alanına](./accessibility-domain.md)bağlıdır. Ancak, iç içe geçmiş bir türün erişilebilirlik etki alanı, kapsayan türden bu türü aşamaz.  
+ İç içe geçen bir türün [erişilebilirliği,](./accessibility-domain.md)hem üyenin bildirilen erişilebilirliği hem de hemen içeren türün erişilebilirlik etki alanı tarafından belirlenen erişilebilirlik etki alanına bağlıdır. Ancak, iç içe bir türün erişilebilirlik etki alanı, içeren türü aşamaz.  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../index.md)
+- [C# Referans](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Sözcükleri](./index.md)
+- [C# Anahtar Kelimeler](./index.md)
 - [Erişim Değiştiricileri](./access-modifiers.md)
 - [Erişilebilirlik Etki Alanı](./accessibility-domain.md)
 - [Erişilebilirlik Düzeylerinin Kullanılmasındaki Kısıtlamalar](./restrictions-on-using-accessibility-levels.md)
 - [Erişim Değiştiricileri](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [public](./public.md)
-- [private](./private.md)
+- [Kamu](./public.md)
+- [Özel](./private.md)
 - [protected](./protected.md)
-- [internal](./internal.md)
+- [Iç](./internal.md)

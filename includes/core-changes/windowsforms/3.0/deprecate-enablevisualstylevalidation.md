@@ -1,28 +1,28 @@
 ---
 ms.openlocfilehash: 75baa4f23eae838defafd3ce9b3907a187982a18
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937069"
 ---
-### <a name="enablevisualstylevalidation-compatibility-switch-not-supported"></a>EnableVisualStyleValidation uyumluluk anahtarı desteklenmiyor
+### <a name="enablevisualstylevalidation-compatibility-switch-not-supported"></a>EtkinleştirVisualStyleValidation uyumluluk anahtarı desteklenmiyor
 
-`Switch.System.Windows.Forms.EnableVisualStyleValidation` uyumluluk anahtarı .NET Core 3,0 üzerinde Windows Forms desteklenmez.
+Uyumluluk `Switch.System.Windows.Forms.EnableVisualStyleValidation` anahtarı .NET Core 3.0'daki Windows Formlar'da desteklenmez.
 
-#### <a name="change-description"></a>Açıklamayı Değiştir
+#### <a name="change-description"></a>Açıklamayı değiştir
 
-.NET Framework, `Switch.System.Windows.Forms.EnableVisualStyleValidation` uyumluluk anahtarı bir uygulamanın sayısal bir biçimde sağlanan görsel stillerin doğrulanmasını geri açmasına izin verilir.
+.NET Framework'de `Switch.System.Windows.Forms.EnableVisualStyleValidation` uyumluluk anahtarı, bir uygulamanın sayısal biçimde sağlanan görsel stillerin doğrulanmasını devre dışı bırakmasına olanak sağladı.
 
-.NET Core 'da `Switch.System.Windows.Forms.EnableVisualStyleValidation` anahtarı desteklenmez.
+.NET Core'da `Switch.System.Windows.Forms.EnableVisualStyleValidation` anahtar desteklenmez.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3,0 Preview 9
+3.0 Önizleme 9
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Anahtarı kaldırın. Anahtar desteklenmez ve alternatif bir işlev kullanılamaz.
+Anahtarı çıkarın. Anahtar desteklenmez ve alternatif bir işlevsellik yok.
 
 #### <a name="category"></a>Kategori
 
@@ -30,7 +30,7 @@ Windows Forms
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-- Yok.
+- None
 
 <!-- 
 

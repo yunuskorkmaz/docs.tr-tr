@@ -1,70 +1,70 @@
 ---
-title: Mevcut .NET uygulamalarını buluta Iyileştirilmiş uygulamalarla modernleştirin nedenleri
-description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Mevcut .NET uygulamalarını buluta Iyileştirilmiş uygulamalarla modernleştirin nedenleri
+title: Bulut Tarafından Optimize Edilmiş uygulamalara mevcut .NET uygulamalarını modernize etme nedenleri
+description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernize edin | Bulut Tarafından Optimize Edilmiş uygulamalara mevcut .NET uygulamalarını modernize etme nedenleri
 ms.date: 04/28/2018
 ms.openlocfilehash: 55eb3fb9b0b6c91e25bcdb23056a8a8e51463ef7
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73093628"
 ---
-# <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Mevcut .NET uygulamalarını buluta Iyileştirilmiş uygulamalarla modernleştirin nedenleri
+# <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Bulut Tarafından Optimize Edilmiş uygulamalara mevcut .NET uygulamalarını modernize etme nedenleri
 
-Buluta Iyileştirilmiş bir uygulamayla, müşterilerinize hızlı ve sürekli olarak güvenilir uygulamalar gönderebilirsiniz. Uygulamanızın işlemsel karmaşıklığını çok fazla erteleyerek önemli çeviklik ve güvenilirlik elde edersiniz.
+Bulut tarafından optimize edilmiş bir uygulama ile müşterilerinize hızlı ve sürekli olarak güvenilir uygulamalar sunabilirsiniz. Uygulamanızın operasyonel karmaşıklığının çoğunu platforma erteleyerek temel çeviklik ve güvenilirlik kazanırsınız.
 
-Uygulamalarınızın hızla pazara sunabilmenize izin alamazsanız, uygulamanızı sevk etmeniz sırasında hedeflediğiniz Pazar gelişmiş olacaktır. Uygulamanın ne kadar iyi bir şekilde tasarlanmış veya uygulanan ne kadar iyi olduğuna bakılmaksızın, çok geç olabilirsiniz. Market ihtiyaçlarına göre uygulama dağıtımını eşitleyemediği için, başarısız olabilir veya tam potansiyeline ulaşamıyoruz.
+Uygulamalarınızı hızlı bir şekilde pazara sunamıyorsanız, uygulamanızı gönderene kadar hedeflediğiniz pazar gelişmiş olur. Uygulama ne kadar iyi tasarlanmış veya tasarlanmış olursa olsun, çok geç olabilirsiniz. Uygulama dağıtımını pazarın gereksinimleriyle senkronize edemediğiniz için başarısız olabilir veya tam potansiyelinize ulaşamaz.
 
-Sürekli iş yeniliği gereksinimi, geliştirme ve operasyon ekiplerini limite gönderir. Sürekli iş yeniliği için ihtiyaç duyduğunuz çevikliği elde etmenin tek yolu, uygulamalarınızı kapsayıcılar gibi teknolojiler ve bulut için Iyileştirilmiş belirli uygulama ilkeleri ile modernleştirmelidir.
+Sürekli iş inovasyonuna duyulan ihtiyaç, geliştirme ve operasyon ekiplerini sınıra kadar zorlar. Sürekli iş inovasyonunda ihtiyacınız olan çevikliği elde etmenin tek yolu, uygulamalarınızı kapsayıcılar ve belirli Bulut Optimize edilmiş uygulama ilkeleri gibi teknolojilerle modernize etmektir.
 
-En alttaki satır, bir kuruluşun bulut için optimize edilmiş uygulamaları oluşturup yönettiğine göre, çözümleri daha önce müşterilere yerleştirebilir ve ilgili olduklarında pazara yeni fikirler getirebilir.
+Sonuç olarak, bir kuruluş Bulut Tarafından Optimize Edilmiş uygulamalar oluşturup yönettiğinde, çözümleri daha erken müşterilerin eline verebilir ve ilgili olduklarında yeni fikirleri pazara sunabilir.
 
-## <a name="cloud-optimized-application-principles-and-tenets"></a>Buluta Iyileştirilmiş uygulama ilkeleri ve tenetler
+## <a name="cloud-optimized-application-principles-and-tenets"></a>Bulut tarafından optimize edilmiş uygulama ilkeleri ve ilkeleri
 
-Buluttaki geliştirmeler genellikle iki hedefi karşılamaya odaklanılmıştır: çevikliği artırarak maliyetleri azaltın ve iş artışını geliştirebilirsiniz. Bu hedefler, uygulamaları serbest bırakma ve sevk ettiğiniz sırada süreçler basitleştirilerek ve uçuşmadan elde edilir.
+Buluttaki gelişmeler çoğunlukla iki hedefi karşılamaya odaklanmıştır: Çevikliği artırarak maliyetleri azaltın ve iş büyümesini geliştirin. Bu hedeflere, uygulamaları serbest bırakıp sevk ettiğinizde süreçleri basitleştirerek ve sürtünmeyi azaltarak ulaşılır.
 
-Uygulamanızı bulutta En Iyi duruma getirilmiş bir şekilde, diğer şirket içi uygulamalardan uygulamanızı olarak çalışabilen geliştirin ve ardından bulutta uygulamanızı serbest bırakma, dağıtma, otomatik ölçeklendirme, izleme ve sorun giderme işlemleri yapabilirsiniz.
+Uygulamanızı çevik bir şekilde diğer şirket içi uygulamalardan bağımsız olarak geliştirebilirseniz ve ardından uygulamanızı bulutta serbest bırakabilir, dağıtabilir, otomatik ölçeklendirebilir, izleyebilir ve sorun giderebilirseniz, uygulamanız Bulut Için Optimize Edilmiştir.
 
-Anahtar *çeviklik*. En az bir dağıtım-üretim sorunları ve geliştirme/test ortamı sorunlarını azaltmadığınız müddetçe çevikiyle birlikte gönderim yapamazsınız. Kapsayıcılar (özellikle de bir de standart olarak Docker) ve yönetilen hizmetler bu amaçla özel olarak tasarlanmıştır.
+Anahtar *çeviklik.* Dağıtımdan üretime dağıtım sorunlarını ve geliştirme/test ortamı sorunlarını mutlak minimuma düşürmediğiniz sürece çeviklikle gönderi yapamazsınız. Konteynerler (özellikle, Docker, fiili bir standart olarak) ve yönetilen hizmetler bu amaç için özel olarak tasarlanmıştır.
 
-Çeviklik sağlamak için, buluttaki ölçeklenebilir platformları oluşturan CI/CD işlem hatlarını temel alan otomatik DevOps işlemlerine de ihtiyacınız vardır. Ölçeklenebilir ve dayanıklı bir bulut platformuna (Azure App Service ya da Azure Kubernetes hizmeti gibi) dağıtan CI/CD platformları (Azure DevOps Services veya Jenkins gibi), bulutta çeviklik sağlamak için önemli teknolojilerdir.
+Çeviklik elde etmek için, bulutta ölçeklenebilir platformlara serbest bırakılabilen CI/CD ardışık hatlar hattını temel alan otomatik DevOps işlemlerine de ihtiyacınız vardır. Ölçeklenebilir ve esnek bir bulut platformuna (Azure Uygulama Hizmeti veya Azure Kubernetes Hizmeti gibi) dağıtılan CI/CD platformları (Azure DevOps Services veya Jenkins gibi) bulutta çeviklik elde etmek için önemli teknolojilerdir.
 
-Aşağıdaki listede, bulutta Iyileştirilmiş uygulamalar için ana taraf veya uygulamalar açıklanmaktadır. Bu ilkelerin tümünü veya yalnızca bazılarını aşamalı veya artımlı bir yaklaşımda benimseyebileceğinizi unutmayın:
+Aşağıdaki listede Bulut Için Optimize Edilmiş uygulamalar için ana ilkeler veya uygulamalar açıklanmaktadır. Aşamalı veya artımlı bir yaklaşımla bu ilkelerin tümlerini veya yalnızca bazılarını benimseyebileceğinizi unutmayın:
 
-- **Kapsayıcılar**. Kapsayıcılar, uygulama bağımlılıklarını uygulamanın kendisiyle birlikte dahil etme olanağı sunar. Kapsayıcılama, üretim ortamlarına dağıtırken veya hazırlama ortamlarında test ettiğinizde karşılaşabileceğiniz sorun sayısını önemli ölçüde azaltır. Son olarak, kapsayıcılar uygulama tesliminin çevikliğini geliştirir.
+- **Konteynerler**. Kapsayıcılar, uygulama bağımlılıklarını uygulamanın kendisine ekleme olanağı sağlar. Kapsayıcılık, üretim ortamlarına dağıtTığınızda veya hazırlama ortamlarında test ettiğinizde karşılaşabileceğiniz sorunların sayısını önemli ölçüde azaltır. Sonuç olarak, kapsayıcılar uygulama teslim çevikliğini artırır.
 
-- Dayanıklı **ve ölçeklenebilir bulut**. Bulut, yönetilen, elastik, ölçeklenebilir ve esnek bir platform sağlar. Bu özellikler, maliyet iyileştirmeleri kazanmak ve sürekli olarak kullanılabilir ve güvenilir uygulamalar elde etmek için temel düzeyde kullanıma sunulmuştur. Yönetilen veritabanları gibi yönetilen hizmetler, bir hizmet olarak yönetilen önbellek (CaaS) ve yönetilen depolama, uygulamanızın bakım maliyetlerini hafifletmesini içinde temel parçalardır.
+- **Esnek ve ölçeklenebilir bulut**. Bulut yönetilen, elastik, ölçeklenebilir ve esnek bir platform sağlar. Bu özellikler maliyet iyileştirmeleri kazanmak ve sürekli teslimatta yüksek kullanılabilir ve güvenilir uygulamalar geliştirmek için temel dir. Yönetilen veritabanları, hizmet olarak yönetilen önbellek (CaaS) ve yönetilen depolama gibi yönetilen hizmetler, uygulamanızın bakım maliyetlerini hafifletmede temel parçalardır.
 
-- **İzleme**. Özel durumları ve uygulama performansı sorunlarını tespit etmek ve tanılamak için iyi bir yöntem olmadan güvenilir bir uygulamanız olamaz. Uygulama performansı yönetimi ve anında analiz aracılığıyla eyleme dönüştürülebilir Öngörüler almanız gerekir.
+- **İzleme**. Özel durumları ve uygulama performansı sorunlarını algılamak ve tanılamak için iyi bir yol olmadan güvenilir bir uygulama olamaz. Uygulama performansı yönetimi ve anında analitik aracılığıyla eyleme geçirilebilir öngörüler elde edebilirsiniz.
 
-- **DevOps kültürü ve sürekli teslim**. DevOps uygulamalarını benimseme, takımlarının bağımsız silolarda artık çalışmadıkları kültürel değişikliği gerektirir. CI/CD işlem hatları yalnızca geliştirme ve BT operasyon takımları arasında, kapsayıcılar ve CI/CD araçları tarafından desteklenen bir işbirliği olduğunda mümkündür.
+- **DevOps kültür ve sürekli teslimat**. DevOps uygulamalarını benimsemek, ekiplerin artık bağımsız silolarda çalışmadığı kültürel bir değişim gerektirir. CI/CD boru hatları, yalnızca geliştirme ve BT operasyon ekipleri arasında kapsayıcılar ve CI/CD araçları tarafından desteklenen daha fazla işbirliği olduğunda mümkündür.
 
-Şekil 4-2, buluta Iyileştirilmiş bir uygulamanın ana isteğe bağlı ananlarına gösterir. Uyguladığınız daha fazla sayıda işlem, müşterilerinizin beklentilerini karşıladığı için uygulamanızın başarılı olması için readier.
+Şekil 4-2, Bulut Tarafından Optimize Edilmiş bir uygulamanın isteğe bağlı temel direklerini gösterir. Ne kadar çok direği uygularsanız, uygulamanız müşterilerinizin beklentilerini karşılamada o kadar kolay olacaktır.
 
-![Bir buluta Iyileştirilmiş uygulamanın ana pillerinden oluşan şema.](./media/main-pillars-cloud-optimized-application.png)
+![Bulut Tarafından Optimize Edilmiş bir uygulamanın ana sütunlarını adlandırma diyagramı.](./media/main-pillars-cloud-optimized-application.png)
 
-**Şekil 4-2.** Bulut için Iyileştirilmiş uygulamanın ana paragraf oluşturma
+**Şekil 4-2.** Bulut Tarafından Optimize Edilmiş bir uygulamanın temel direkleri
 
-Özetlemek gerekirse, bulut ile Iyileştirilmiş bir uygulama, bulut bilgi işlem modelinden faydalanan uygulamalar oluşturma ve yönetmeye yönelik bir yaklaşım, bir kapsayıcı birleşimi, yönetilen bulut altyapısı, dayanıklı uygulama teknikleri, izleme, sürekli teslim ve DevOps, mevcut uygulamalarınızın yeniden mimari ve yeniden kodlenmesi gerekmeden.
+Özetlemek gerekirse, Bulut Tarafından Optimize Edilmiş bir uygulama, kapsayıcılar, yönetilen bulut altyapısı, esnek uygulama teknikleri, kapsayıcılar, yönetilen uygulama teknikleri bir arada kullanırken, bulut bilgi işlem modelinden yararlanan uygulamalar oluşturma ve yönetme yaklaşımıdır. izleme, sürekli teslimat ve DevOps, tüm yeniden mimarlık ve mevcut uygulamaları yeniden kodlamak gerek kalmadan.
 
-Kuruluşunuz bu teknolojileri benimseyebileceği gibi, yavaş bir yaklaşımlar alabilir. Hepsi bir kez olmak üzere tümünü tek tek ayraç içine almanız gerekmez. Kurumsal önceliklere ve kullanıcı gereksinimlerine bağlı olarak bunları artımlı olarak benimseyebilirsiniz.
+Kuruluşunuz bu teknolojileri ve yaklaşımları kademeli olarak benimseyebilir. Hepsini aynı anda kucaklamak zorunda değilsin. Bunları, kurumsal önceliklere ve kullanıcı gereksinimlerine bağlı olarak kademeli olarak benimseyebilirsiniz.
 
-## <a name="benefits-of-a-cloud-optimized-application"></a>Bulut için Iyileştirilmiş uygulamanın avantajları
+## <a name="benefits-of-a-cloud-optimized-application"></a>Bulut Için Optimize Edilmiş bir uygulamanın avantajları
 
-Mevcut bir uygulamayı buluta Iyileştirilmiş bir uygulamaya dönüştürerek (yeniden mimari veya kodlama yapmadan) aşağıdaki avantajları elde edebilirsiniz:
+Varolan bir uygulamayı Bulut Için Optimize Edilmiş bir uygulamaya dönüştürerek (yeniden architectyon veya kodlama yapmadan) aşağıdaki avantajlardan yararlanabilirsiniz:
 
-- **Daha düşük maliyetler, yönetilen altyapı bulut sağlayıcısı tarafından işlenir**. Bulutun En Iyi duruma getirilmiş uygulamalar, bulutun kullanıma hazır esneklik, otomatik ölçeklendirme ve yüksek kullanılabilirlik özelliğini kullanarak bulutun avantajlarını elde edin. Avantajlar yalnızca işlem özelliklerine (VM 'Ler ve kapsayıcılar) değil, aynı zamanda buluttaki kaynaklara da (örneğin, DBaaS, CaaS) ve bir uygulamanın gereksinim duyabileceği herhangi bir altyapıya bağlıdır.
+- **Yönetilen altyapı bulut sağlayıcısı tarafından işlenir, çünkü daha düşük maliyetler.** Bulut için optimize edilmiş uygulamalar, bulutun hazır elastikiyetini, otomatik ölçeklendirmesini ve yüksek kullanılabilirliğini kullanarak bulutun avantajlarından yararlanır. Avantajlar yalnızca bilgi işlem özellikleriyle (VM'ler ve kapsayıcılar) değil, aynı zamanda DBaaS, CaaS ve bir uygulamanın ihtiyaç duyulabileceği altyapı gibi buluttaki kaynaklara da bağlıdır.
 
-- Dayanıklı **uygulama ve altyapı**. Buluta geçiş yaptığınızda, geçici hatalardan yararlanın; bulutta sorunlar meydana gelir. Ayrıca, bulut altyapısı ve donanımı, geçici kapalı kalma süresi için fırsatları artıran "değiştirilebilir". Aynı zamanda, iç bulut özellikleri ve dayanıklılık ve otomatik kurtarma uygulayan bazı uygulama geliştirme teknikleri, buluttaki beklenmedik hatalardan kurtulmayı çok daha kolay hale getirir.
+- **Esnek uygulama ve altyapı.** Buluta geçiş yaptığınızda, geçici hataları benimsemeniz gerekir; hatalar bulutta meydana gelecektir. Ayrıca, bulut altyapısı ve donanımı "değiştirilebilir", bu da geçici kapalı kalma sürelerini artırır. Aynı zamanda, iç bulut yetenekleri ve esnekliği uygulayan ve kurtarmayı otomatikleştiren belirli uygulama geliştirme teknikleri, buluttaki beklenmeyen hatalardan kurtulmayı çok daha kolay hale getirir.
 
-- **Uygulama performansına daha derin Öngörüler**. Azure Application Insights gibi bulut izleme araçları, sistem durumu yönetimi, günlüğe kaydetme ve bildirimler için görselleştirme sağlar. Denetim günlükleri, uygulamaların hata ayıklamayı ve denetlenmesini, güvenilir bir bulut uygulaması için temel hale getirme işlemlerini kolaylaştırır.
+- **Uygulama performansına ilişkin daha derin bilgiler.** Azure Application Insights gibi bulut izleme araçları, sistem durumu yönetimi, günlüğe kaydetme ve bildirimler için görselleştirme sağlar. Denetim günlükleri, güvenilir bir bulut uygulaması için temel olan uygulamaları hata ayıklamayı ve denetimi kolaylaştırır.
 
-- **Çevik dağıtımlar Ile uygulama taşınabilirliği**. Kapsayıcılar (Docker altyapısını temel alan Linux veya Windows kapsayıcıları), bulut kilitli bir uygulamanın önünden kaçınmak için en iyi çözümü sunmaktadır. Kapsayıcıları, Docker konaklarını ve çok bulut düzenleyicilerinden birini kullanarak bir ortamdan veya buluttan diğerine kolayca geçebilirsiniz. Kapsayıcılar, genellikle her türlü ortama yönelik dağıtımlarda gerçekleşen, bu işlemi ortadan kaldırır (aşama/test/üretim).
+- **Uygulama taşınabilirliği, çevik dağıtımlar ile**. Kapsayıcılar (Docker Engine tabanlı Linux veya Windows kapsayıcıları) bulut kilitli bir uygulamadan kaçınmak için en iyi çözümü sunar. Kapsayıcıları, Docker ana bilgisayarlarını ve çok bulutlu orkestratörleri kullanarak bir ortamdan veya buluttan diğerine kolayca geçebilirsiniz. Kapsayıcılar, genellikle herhangi bir ortama (aşama/test/üretim) dağıtımlarda oluşan sürtünmeyi ortadan kaldırır.
 
-Bu avantajların hepsi son olarak uçtan uca uygulama yaşam döngüleriniz için önemli maliyet indirimleri sağlar.
+Tüm bu avantajlar sonuçta uçtan uca uygulama yaşam döngüsü için önemli maliyet indirimleri sağlar.
 
-Aşağıdaki bölümlerde, bu avantajlar daha ayrıntılı olarak açıklanmıştır ve belirli teknolojilere bağlanır.
+Aşağıdaki bölümlerde, bu avantajlar daha ayrıntılı olarak açıklanır ve belirli teknolojilere bağlanır.
 
 >[!div class="step-by-step"]
 >[Önceki](index.md)
->[İleri](microsoft-technologies-in-cloud-optimized-applications.md)
+>[Sonraki](microsoft-technologies-in-cloud-optimized-applications.md)

@@ -1,53 +1,53 @@
 ---
-title: Yeni değiştirici C# başvurusu
+title: yeni değiştirici - C# Referans
 ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
 ms.openlocfilehash: 6c4fedd469efb79f91780dff26da89b586de2d1c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713339"
 ---
-# <a name="new-modifier-c-reference"></a>Yeni değiştirici (C# başvuru)
+# <a name="new-modifier-c-reference"></a>yeni değiştirici (C# Reference)
 
-Bir bildirim değiştiricisi olarak kullanıldığında, `new` anahtar sözcüğü bir taban sınıftan devralınan bir üyeyi açıkça gizler. Devralınmış bir üyeyi gizlediğinizde, üyenin türetilmiş sürümü temel sınıf sürümünün yerini alır. `new` değiştiricisini kullanmadan üyeleri gizleyebilseniz de bir derleyici uyarısı alırsınız. Bir üyeyi açıkça gizlemek için `new` kullanıyorsanız, bu uyarıyı bastırır.
+Bildirim değiştiricisi olarak kullanıldığında, `new` anahtar kelime taban sınıftan devralınan bir üyeyi açıkça gizler. Devralınan bir üyeyi gizlediğinizde, üyenin türetilmiş sürümü taban sınıf sürümünün yerini alır. Değiştiriciyi kullanmadan `new` üyeleri gizleyebilirsiniz, ancak derleyici uyarısı alırsınız. Bir üyeyi açıkça gizlemek için kullanırsanız, `new` bu uyarıyı bastırır.
 
-Ayrıca, [bir tür örneği](../operators/new-operator.md) veya [genel tür kısıtlaması](./new-constraint.md)oluşturmak için `new` anahtar sözcüğünü kullanabilirsiniz.
+Anahtar kelimeyi, `new` bir [tür örneğini oluşturmak](../operators/new-operator.md) veya genel bir [tür kısıtlaması](./new-constraint.md)olarak da kullanabilirsiniz.
 
-Devralınan bir üyeyi gizlemek için, aynı üye adını kullanarak türetilmiş sınıfta bildirin ve `new` anahtar sözcüğüyle değiştirin. Örneğin:
+Devralınan bir üyeyi gizlemek için, aynı üye adını kullanarak türetilmiş `new` sınıfta bildirin ve anahtar kelimeyle değiştirin. Örnek:
 
 [!code-csharp[csrefKeywordsOperator#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#8)]
 
-Bu örnekte, `BaseC.Invoke` `DerivedC.Invoke`gizlenir. `x` alan, benzer bir adla gizlenmediği için etkilenmez.
+Bu örnekte, `BaseC.Invoke` `DerivedC.Invoke`tarafından gizlidir. `x` Alan, benzer bir adla gizlenmediği için etkilenmez.
 
-Devralma yoluyla ad gizleme aşağıdaki biçimlerden birini alır:
+Devralma yoluyla gizlenen ad aşağıdaki formlardan birini alır:
 
-- Genellikle, bir sınıfta veya yapıda tanıtılan bir sabit, alan, özellik veya tür, adını paylaşan tüm temel sınıf üyelerini gizler. Özel durumlar vardır. Örneğin, adı `N` olan yeni bir alanı, çağrılamayan bir türe sahip olacak şekilde bildirirseniz ve temel tür bir yöntem olarak `N` bildirirse, yeni alan, çağırma sözdiziminde temel bildirimi gizlemez. Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [üye arama](~/_csharplang/spec/expressions.md#member-lookup) bölümüne bakın.
+- Genellikle, bir sınıfveya yapıda tanıtılan bir sabit, alan, özellik veya tür, adını paylaşan tüm taban sınıf üyelerini gizler. Özel durumlar var. Örneğin, adı `N` olan yeni bir alanı, çağrılamayan bir türe sahip olarak bildirirseniz ve bir taban türü bir yöntem olarak bildirirse, `N` yeni alan temel bildirimi çağırma sözdiziminde gizlemez. Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Üye arama](~/_csharplang/spec/expressions.md#member-lookup) bölümüne bakın.
 
-- Bir sınıf veya yapı içinde tanıtılan bir yöntem, temel sınıfta bu adı paylaşan özellikleri, alanları ve türleri gizler. Aynı imzaya sahip tüm temel sınıf yöntemlerini de gizler.
+- Bir sınıf veya yapıda tanıtılan bir yöntem, bu adı taban sınıfta paylaşan özellikleri, alanları ve türleri gizler. Ayrıca, aynı imzaya sahip tüm taban sınıf yöntemlerini gizler.
 
-- Bir sınıf veya yapı içinde tanıtılan bir Dizin Oluşturucu, aynı imzaya sahip olan tüm temel sınıf dizin oluşturucularının gizlenmesini gösterir.
+- Bir sınıf veya yapıda tanıtılan bir dizinleyici, aynı imzaya sahip tüm taban sınıf dizinleyicilerini gizler.
 
-İki değiştiricinin birbirini dışlamalı anlamları olduğundan hem `new` hem de aynı üye üzerinde [geçersiz kılmak](override.md) için bir hatadır. `new` değiştiricisi aynı ada sahip yeni bir üye oluşturur ve orijinal üyenin gizli hale gelmesine neden olur. `override` değiştiricisi devralınan bir üyenin uygulamasını genişletir.
+İki değiştiricinin birbirini `new` dışlayan anlamları olduğundan, her ikisini de kullanmak ve aynı üyeüzerinde [geçersiz kılmak](override.md) bir hatadır. `new` Değiştirici aynı ada sahip yeni bir üye oluşturur ve özgün üyenin gizlenmesine neden olur. `override` Değiştirici, devralınan bir üyeiçin uygulamayı genişletir.
 
-Devralınan bir üyeyi gizlemez bir bildirimde `new` değiştiricisinin kullanılması bir uyarı oluşturur.
+Devralınan `new` bir üyeyi gizlemeyen bir bildirimde değiştiricinin kullanılması bir uyarı oluşturur.
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte, bir temel sınıf, `BaseC`ve türetilmiş bir sınıf `DerivedC`, devralınan alanın değerini gizleyen `x`aynı alan adını kullanır. Örnek, `new` değiştiricinin kullanımını gösterir. Ayrıca, temel sınıfın gizli üyelerine tam nitelikli adlarını kullanarak nasıl erişileceğini gösterir.
+Bu örnekte, bir `BaseC`taban sınıf ve `DerivedC`türetilmiş sınıf, `x`devralınan alanın değerini gizleyen aynı alan adını kullanır. `new` Örnek, değiştiricinin kullanımını gösterir. Ayrıca, tam nitelikli adlarını kullanarak taban sınıfın gizli üyelerine nasıl erişeceklerini de gösterir.
 
 [!code-csharp[csrefKeywordsOperator#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#9)]
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte, iç içe yerleştirilmiş bir sınıf, temel sınıfta aynı ada sahip bir sınıfı gizler. Örnek, uyarı iletisini ortadan kaldırmak ve tam nitelikli adlarını kullanarak gizli sınıf üyelerine erişmek için `new` değiştiricisinin nasıl kullanılacağını gösterir.
+Bu örnekte, iç içe geçen bir sınıf, taban sınıfta aynı ada sahip bir sınıfı gizler. Örnek, uyarı iletisini `new` ortadan kaldırmak için değiştiricinin nasıl kullanılacağını ve tam nitelikli adlarını kullanarak gizli sınıf üyelerine nasıl erişeceklerini gösterir.
 
 [!code-csharp[csrefKeywordsOperator#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#10)]
 
-`new` değiştiricisini kaldırırsanız, program derleme ve çalıştırmaya devam eder, ancak şu uyarıyı alırsınız:
+`new` Değiştiriyi kaldırırsanız, program yine derleyip çalışır, ancak aşağıdaki uyarıyı alırsınız:
 
 ```text
 The keyword new is required on 'MyDerivedC.x' because it hides inherited member 'MyBaseC.x'.
@@ -55,13 +55,13 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Yeni değiştirici](~/_csharplang/spec/classes.md#the-new-modifier) bölümüne bakın.
+Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [yeni değiştirici](~/_csharplang/spec/classes.md#the-new-modifier) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../../language-reference/index.md)
+- [C# Referans](../../language-reference/index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Sözcükleri](index.md)
+- [C# Anahtar Kelimeler](index.md)
 - [Değiştiriciler](index.md)
 - [Geçersiz Kılma ve Yeni Anahtar Sözcüklerle Sürüm Oluşturma](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
 - [Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)

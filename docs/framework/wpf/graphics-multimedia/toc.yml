@@ -424,7 +424,7 @@
           href: hit-testing-in-the-visual-layer.md
         - name: DrawingVisual Nesnelerini Kullanma
           href: using-drawingvisual-objects.md
-        - name: 'Öğretici: Win32 Uygulamasında Görsel Nesneler Barındırma'
+        - name: 'Eğitmen: Win32 Uygulamasında Görsel Nesneler Barındırma'
           href: tutorial-hosting-visual-objects-in-a-win32-application.md
         - name: Nasıl Yapılır Konuları
           href: visual-layer-programming-how-to-topics.md

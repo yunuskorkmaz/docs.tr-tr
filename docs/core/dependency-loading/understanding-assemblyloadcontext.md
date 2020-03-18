@@ -1,102 +1,102 @@
 ---
-title: AssemblyLoadContext-.NET Core 'ı anlama
-description: .NET Core 'da AssemblyLoadContext 'in amacını ve davranışını anlamak için temel kavramlar.
+title: AssemblyLoadContext'ı Anlama - .NET Core
+description: .NET Core'da AssemblyLoadContext'ın amacını ve davranışını anlamak için temel kavramlar.
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: 8a73a432bf8cc72cced77cf6c62a785b72032913
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72291255"
 ---
-# <a name="understanding-systemruntimeloaderassemblyloadcontext"></a>System. Runtime. Loader. AssemblyLoadContext 'i anlama
+# <a name="understanding-systemruntimeloaderassemblyloadcontext"></a>Anlama Sistemi.Runtime.Loader.AssemblyLoadContext
 
-<xref:System.Runtime.Loader.AssemblyLoadContext> sınıfı .NET Core için benzersizdir. Bu makale, <xref:System.Runtime.Loader.AssemblyLoadContext> API belgelerini kavramsal bilgilerle tamamlayacak şekilde çalışır.
+Sınıf <xref:System.Runtime.Loader.AssemblyLoadContext> .NET Core'a özgüdür. Bu makalede, API dokümantasyonlarını <xref:System.Runtime.Loader.AssemblyLoadContext> kavramsal bilgilerle tamamlamaya çalışır.
 
-Bu makale, dinamik yükleme, özellikle dinamik yükleme çerçevesi geliştiricileri uygulayan geliştiricilerle ilgilidir.
+Bu makale, dinamik yükleme, özellikle dinamik yükleme çerçeve geliştiricileri uygulayan geliştiriciler için ilgilidir.
 
 ## <a name="what-is-the-assemblyloadcontext"></a>AssemblyLoadContext nedir?
 
-Her .NET Core uygulaması, <xref:System.Runtime.Loader.AssemblyLoadContext>örtülü olarak kullanır.
-Bağımlılıkları bulmak ve yüklemek için çalışma zamanının sağlayıcısıdır. Her bağımlılık yüklendiğinde, bunu bulmak için bir <xref:System.Runtime.Loader.AssemblyLoadContext> örneği çağırılır.
+Her .NET Core uygulaması <xref:System.Runtime.Loader.AssemblyLoadContext>örtülü olarak .
+Bağımlılıkları bulmak ve yüklemek için çalışma zamanı sağlayıcısıdır. Bir bağımlılık yüklendiğinde, onu <xref:System.Runtime.Loader.AssemblyLoadContext> bulmak için bir örnek çağrılır.
 
 - Yönetilen derlemeleri ve diğer bağımlılıkları bulma, yükleme ve önbelleğe alma hizmeti sağlar.
 
-- Dinamik kod yüklemeyi ve kaldırmayı desteklemek için, kodu ve onun bağımlılıklarını kendi <xref:System.Runtime.Loader.AssemblyLoadContext> örneğine yüklemek için yalıtılmış bir bağlam oluşturur.
+- Dinamik kod yükleme ve boşaltmayı desteklemek için, kod yükleme ve kendi <xref:System.Runtime.Loader.AssemblyLoadContext> örneğindeki bağımlılıkları için yalıtılmış bir bağlam oluşturur.
 
 ## <a name="when-do-you-need-multiple-assemblyloadcontext-instances"></a>Birden çok AssemblyLoadContext örneğine ne zaman ihtiyacınız var?
 
-Tek bir <xref:System.Runtime.Loader.AssemblyLoadContext> örneği, bir <xref:System.Reflection.Assembly> basit derleme adı başına tam olarak bir sürümünü yüklemek için sınırlıdır <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>.
+Tek <xref:System.Runtime.Loader.AssemblyLoadContext> bir örnek, basit bir montaj <xref:System.Reflection.Assembly> adı başına <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>tam bir sürümünü yüklemekle sınırlıdır.
 
-Bu kısıtlama, kod modüllerini dinamik olarak yüklerken bir sorun olabilir. Her modül bağımsız olarak derlenir ve <xref:System.Reflection.Assembly>farklı sürümlerine bağlı olabilir. Bu sorun genellikle farklı modüller yaygın olarak kullanılan bir kitaplığın farklı sürümlerine bağımlıysa oluşur.
+Kod modüllerini dinamik olarak yüklerken bu kısıtlama sorun haline gelebilir. Her modül bağımsız olarak derlenir ve bir <xref:System.Reflection.Assembly>.'ün farklı sürümlerine bağlı olabilir. Bu sorun genellikle farklı modüller yaygın olarak kullanılan kitaplığın farklı sürümlerine bağlı olduğunda oluşur.
 
-Kodu dinamik olarak yüklemeyi desteklemek için <xref:System.Runtime.Loader.AssemblyLoadContext> API 'SI, aynı uygulamada bir <xref:System.Reflection.Assembly> çakışan sürümlerini yüklemeyi sağlar. Her bir <xref:System.Runtime.Loader.AssemblyLoadContext> örneği, belirli bir <xref:System.Reflection.Assembly> örneğine her <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> benzersiz bir sözlük eşlemesi sağlar.
+Dinamik yükleme kodunu desteklemek <xref:System.Runtime.Loader.AssemblyLoadContext> için API, aynı uygulamadaki <xref:System.Reflection.Assembly> bir uygulamanın çakışan sürümlerini yüklemeyi sağlar. Her <xref:System.Runtime.Loader.AssemblyLoadContext> örnek, her <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> biri belirli <xref:System.Reflection.Assembly> bir örneğin eşlemesini benzersiz bir sözlük sağlar.
 
-Ayrıca, daha sonra kaldırmak üzere bir kod modülüyle ilişkili bağımlılıkları gruplandırmak için kullanışlı bir mekanizma sağlar.
+Ayrıca, daha sonra boşaltmak için bir kod modülü ile ilgili bağımlılıkları gruplandırmak için kullanışlı bir mekanizma sağlar.
 
-## <a name="what-is-special-about-the-assemblyloadcontextdefault-instance"></a>AssemblyLoadContext. Default örneği hakkında özel nedir?
+## <a name="what-is-special-about-the-assemblyloadcontextdefault-instance"></a>AssemblyLoadContext.Default örneğinin özel özelliği nedir?
 
-<xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> örneği başlangıçta çalışma zamanına göre otomatik olarak doldurulur.  Tüm statik bağımlılıkları bulmak ve bulmak için [Varsayılan yoklama](default-probing.md) kullanır.
+Örnek, <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> başlangıçtaçalışma süresine göre otomatik olarak doldurulur.  Tüm statik bağımlılıkları bulmak ve bulmak için [varsayılan sondalama](default-probing.md) kullanır.
 
 En yaygın bağımlılık yükleme senaryolarını çözer.
 
 ## <a name="how-does-assemblyloadcontext-support-dynamic-dependencies"></a>AssemblyLoadContext dinamik bağımlılıkları nasıl destekler?
 
-<xref:System.Runtime.Loader.AssemblyLoadContext>, geçersiz kılınabilen çeşitli olaylara ve sanal işlevlere sahiptir.
+<xref:System.Runtime.Loader.AssemblyLoadContext>geçersiz kılınabilecek çeşitli olaylara ve sanal işlevlere sahiptir.
 
-<xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> örneği yalnızca olayları geçersiz kılmayı destekler.
+Örnek <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> yalnızca olayları geçersiz kılmayı destekler.
 
-Makale [yönetilen derleme yükleme algoritması](loading-managed.md), [uydu derleme yükleme algoritması](loading-resources.md)ve [yönetilmeyen (yerel) kitaplık yükleme algoritması](loading-unmanaged.md) , tüm kullanılabilir olaylara ve sanal işlevlere başvurur.  Makaleler, yükleme algoritmalarında her bir olay ve işlevin göreli konumunu gösterir. Bu makale, bu bilgileri yeniden oluşturmaz.
+Makaleler [Yönetilen montaj yükleme algoritması,](loading-managed.md) [Uydu montaj yükleme algoritması](loading-resources.md)ve [Yönetilmeyen (yerel) kitaplık yükleme algoritması](loading-unmanaged.md) tüm kullanılabilir olaylar ve sanal işlevleri bakın.  Makaleler, yükleme algoritmalarında her olay ve işlevin göreli konumunu gösterir. Bu makale, bu bilgileri çoğaltmaz.
 
-Bu bölüm, ilgili olaylar ve işlevler için genel ilkeleri ele alır.
+Bu bölüm, ilgili olaylar ve işlevler için genel ilkeleri kapsar.
 
-- **Tekrarlanabilir**. Belirli bir bağımlılık sorgusu her zaman aynı yanıta neden olmalıdır. Aynı yüklü bağımlılık örneğinin döndürülmesi gerekir. Bu gereksinim, önbellek tutarlılığı için temel bir gereksinimdir. Özellikle yönetilen derlemeler için <xref:System.Reflection.Assembly> önbelleği oluşturacağız. Önbellek anahtarı basit bir derleme adıdır, <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>.
-- **Genellikle oluşturmayın**.  İstenen bağımlılığı bulamadığınızda bu işlevlerin throw yerine `null` döndürmesi beklenir. Oluşturma, aramayı erken sona erdirmek ve çağırana bir özel durum yaymaya çalışır. Oluşturma, bozuk bir derleme veya bellek yetersiz durumu gibi beklenmeyen hatalarla sınırlandırılmalıdır.
-- **Özyineleme kullanmaktan kaçının**. Bu işlevlerin ve işleyicilerin bağımlılıkları bulmak için yükleme kurallarını uyguladığının farkında olun. Uygulamanız özyineleme tetikleyen API 'Leri çağırmalıdır. Kodunuz, genellikle belirli bir yol veya bellek başvuru bağımsız değişkeni gerektiren **Assemblyloadcontext** yükleme işlevlerini çağırmalıdır.
-- **Doğru AssemblyLoadContext Içine yükleyin**. Bağımlılıkların nereye yükleneceğini seçme seçeneği uygulamaya özgüdür.  Bu seçenek, bu olaylar ve işlevler tarafından uygulanır. Kodunuz **Assemblyloadcontext** load-path işlevlerini çağırdığında, kodu kodun yüklenmesini istediğiniz örnekte çağırır. `null` döndürmesinin ve <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> tanıtıcısına izin vermenin en basit seçeneği olabilir.
-- **İş parçacığı rampalarından haberdar olun**. Yükleme birden çok iş parçacığı tarafından tetiklenebilir. AssemblyLoadContext, kendi önbelleğine derleme ekleyerek iş parçacığı parçacıklarını işler. Yarış Loser 'ın örneği atılır. Uygulama mantığınızdaki birden çok iş parçacığını düzgün bir şekilde işlemeyen ek mantık eklemeyin.
+- **Tekrarlanabilir olun.** Belirli bir bağımlılık için bir sorgu her zaman aynı yanıt neden olmalıdır. Aynı yüklenen bağımlılık örneği döndürülmelidir. Bu gereksinim, önbellek tutarlılığı için temeldir. Özellikle yönetilen derlemeler için bir <xref:System.Reflection.Assembly> önbellek oluşturuyoruz. Önbellek anahtarı basit bir derleme <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>adıdır.
+- **Genellikle atmayın.**  İstenen bağımlılık bulamadığında bu işlevlerin atmak yerine dönmesi `null` beklenir. Atma erken arama sona erecek ve arayan için bir özel durum yaymak olacaktır. Atma bozuk bir derleme veya bellek dışı bir durum gibi beklenmeyen hatalarla sınırlı olmalıdır.
+- **Özyinelemeden kaçının.** Bu işlevlerin ve işleyicilerin bağımlılıkları bulmak için yükleme kurallarını uyguladığını unutmayın. Uygulamanız, özyinelemeyi tetikleyen API'leri aramamalıdır. Kodunuz genellikle belirli bir yol veya bellek başvuru argümanı gerektiren **AssemblyLoadContext** yük işlevlerini çağırmalıdır.
+- **Doğru AssemblyLoadContext'a yükleyin.** Bağımlılıkların yüklendiği yerin seçimi uygulamaya özgüdür.  Seçim bu olaylar ve işlevler tarafından uygulanır. Kodunuz **AssemblyLoadContext** load-by-path işlevlerini aradığında, kodun yüklenmesini istediğiniz durumda bunları arayın. Bazen geri `null` dönen ve <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> yükün işlemesine izin vermek en basit seçenek olabilir.
+- **Konu yarışları farkında olun.** Yükleme birden çok iş parçacığı tarafından tetiklenebilir. AssemblyLoadContext, önbelleğine atomik olarak derlemeler ekleyerek iş parçacığı yarışlarını işler. Yarış kaybedeninin örneği atılır. Uygulama mantığınızda, birden çok iş parçacığı düzgün işlemeyen ekstra mantık eklemeyin.
 
-## <a name="how-are-dynamic-dependencies-isolated"></a>Dinamik bağımlılıklar nasıl yalıtılmalıdır?
+## <a name="how-are-dynamic-dependencies-isolated"></a>Dinamik bağımlılıklar nasıl yalıtılır?
 
-Her bir <xref:System.Runtime.Loader.AssemblyLoadContext> örneği, <xref:System.Reflection.Assembly> örnekleri ve <xref:System.Type> tanımları için benzersiz bir kapsamı temsil eder.
+Her <xref:System.Runtime.Loader.AssemblyLoadContext> örnek, örnekler <xref:System.Reflection.Assembly> ve <xref:System.Type> tanımlar için benzersiz bir kapsamı temsil eder.
 
-Bu bağımlılıklar arasında ikili yalıtım yoktur. Bunlar yalnızca adı tarafından birbirini bulmayan yalıtılırlar.
+Bu bağımlılıklar arasında ikili izolasyon yok. Sadece birbirlerini isme göre bulamadıkları için izole edilmişler.
 
-Her <xref:System.Runtime.Loader.AssemblyLoadContext>:
+Her <xref:System.Runtime.Loader.AssemblyLoadContext>birinde:
 
-- <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>, farklı bir <xref:System.Reflection.Assembly> örneğine başvurabilir.
-- <xref:System.Type.GetType%2A?displayProperty=nameWithType> aynı `name`türü için farklı bir tür örneği döndürebilir.
+- <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>farklı <xref:System.Reflection.Assembly> bir örneğe başvurabilir.
+- <xref:System.Type.GetType%2A?displayProperty=nameWithType>aynı tür `name`için farklı bir tür örneği döndürebilir.
 
 ## <a name="how-are-dependencies-shared"></a>Bağımlılıklar nasıl paylaşılır?
 
-Bağımlılıklar, <xref:System.Runtime.Loader.AssemblyLoadContext> örnekleri arasında kolayca paylaşılabilir. Genel model, bir bağımlılığı yüklemek için bir <xref:System.Runtime.Loader.AssemblyLoadContext>.  Diğeri, yüklenen derlemeye bir başvuru kullanarak bağımlılığı paylaşır.
+Bağımlılıklar örnekler arasında <xref:System.Runtime.Loader.AssemblyLoadContext> kolayca paylaşılabilir. Genel model bir <xref:System.Runtime.Loader.AssemblyLoadContext> bağımlılık yüklemek için bir.  Diğer, yüklenen derlemeye bir başvuru kullanarak bağımlılığı paylaşır.
 
-Bu paylaşım, çalışma zamanı derlemeleri için gereklidir. Bu derlemeler yalnızca <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>yüklenebilir. `ASP.NET`, `WPF`veya `WinForms`gibi çerçeveler için de aynı gereklidir.
+Bu paylaşım çalışma zamanı derlemeleri için gereklidir. Bu derlemeler yalnızca <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>. Aynı şey `ASP.NET`, `WPF`, veya `WinForms`.
 
-Paylaşılan bağımlılıkların <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>' ye yüklenmesi önerilir. Bu paylaşım, ortak tasarım modelidir.
+Paylaşılan bağımlılıkların <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>' a yüklenmesi önerilir. Bu paylaşım ortak tasarım desenidir.
 
-Paylaşım, özel <xref:System.Runtime.Loader.AssemblyLoadContext> örneğinin kodlamasına uygulanır. <xref:System.Runtime.Loader.AssemblyLoadContext>, geçersiz kılınabilen çeşitli olaylara ve sanal işlevlere sahiptir. Bu işlevlerden herhangi biri başka bir <xref:System.Runtime.Loader.AssemblyLoadContext> örneğinde yüklenmiş bir <xref:System.Reflection.Assembly> örneğine başvuru geri döndürzaman, <xref:System.Reflection.Assembly> örneği paylaşılır. Standart yük algoritması, ortak paylaşım modelini basitleştirmek üzere yükleme için <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> erteler.  Bkz. [yönetilen derleme yükleme algoritması](loading-managed.md).
+Paylaşım, özel <xref:System.Runtime.Loader.AssemblyLoadContext> örneğin kodlanmasında uygulanır. <xref:System.Runtime.Loader.AssemblyLoadContext>geçersiz kılınabilecek çeşitli olaylara ve sanal işlevlere sahiptir. Bu işlevlerden herhangi biri başka <xref:System.Reflection.Assembly> <xref:System.Runtime.Loader.AssemblyLoadContext> bir örnekte yüklenen bir <xref:System.Reflection.Assembly> örne başvuru döndürdüğünde, örnek paylaşılır. Standart yükleme algoritması, <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> ortak paylaşım deseni basitleştirmek için yüklemeiçin erteler.  Bkz. [Yönetilen montaj yükleme algoritması.](loading-managed.md)
 
 ## <a name="complications"></a>Zorluk Grubu
 
 ### <a name="type-conversion-issues"></a>Tür dönüştürme sorunları
 
-İki <xref:System.Runtime.Loader.AssemblyLoadContext> örneği aynı `name`sahip tür tanımlarını içerdiğinde, aynı türde değildir. Bunlar yalnızca aynı <xref:System.Reflection.Assembly> örneğinden geliyorsa aynı türdür.
+İki <xref:System.Runtime.Loader.AssemblyLoadContext> örnek aynı `name`tür tanımları içeriyorsa, aynı türde değildir. Aynı <xref:System.Reflection.Assembly> örnekten geliyorsa aynı tipteler.
 
-Önemli bir karmaşıklaşmak için, bu eşleşmeyen türler hakkındaki özel durum iletileri kafa karıştırıcı olabilir. Türler, özel durum iletilerinde basit tür adlarına göre adlandırılır. Bu durumda ortak özel durum iletisi şu biçimdedir:
+Sorunları karmaşıklaştırmak için, bu eşleşmemiş türleri hakkında özel durum iletileri kafa karıştırıcı olabilir. Türler, özel durum iletilerinde basit tür adlarıyla adlandırılır. Bu durumda ortak özel durum iletisi formolacaktır:
 
-> ' IsolatedType ' türündeki nesne ' IsolatedType ' türüne dönüştürülemez.
+> 'Yalıtılmış Tip' türünden bir nesne 'Yalıtılmış Yazı' türüne dönüştürülemez.
 
-### <a name="debugging-type-conversion-issues"></a>Tür dönüştürme sorunlarını ayıklama
+### <a name="debugging-type-conversion-issues"></a>Tür dönüştürme sorunlarını hata ayıklama
 
-Eşleşmeyen türlerin çifti verildiğinde şunları da bilmelidir:
+Uyumsuz türleri bir çift göz önüne alındığında da bilmek önemlidir:
 
-- Her türün <xref:System.Type.Assembly?displayProperty=nameWithType>
-- Her türün <xref:System.Runtime.Loader.AssemblyLoadContext>, <xref:System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(System.Reflection.Assembly)?displayProperty=nameWithType> işlevi aracılığıyla elde edilebilir.
+- Her tür<xref:System.Type.Assembly?displayProperty=nameWithType>
+- Her <xref:System.Runtime.Loader.AssemblyLoadContext>tür, <xref:System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(System.Reflection.Assembly)?displayProperty=nameWithType> hangi fonksiyonu ile elde edilebilir.
 
-`a` ve `b`verilen iki nesne, hata ayıklayıcıda aşağıdakilerin değerlendirilmesi yararlı olacaktır:
+Verilen iki `a` nesne `b`ve , hata ayıklama aşağıdaki değerlendirilmesi yararlı olacaktır:
 
 ```csharp
 // In debugger look at each assembly's instance, Location, and FullName
@@ -109,8 +109,8 @@ System.Runtime.AssemblyLoadContext.GetLoadContext(b.GetType().Assembly)
 
 ### <a name="resolving-type-conversion-issues"></a>Tür dönüştürme sorunlarını çözme
 
-Bu tür dönüştürme sorunlarını çözmek için iki tasarım deseni vardır.
+Bu tür dönüştürme sorunlarını çözmek için iki tasarım delemi vardır.
 
-1. Ortak paylaşılan türleri kullanın. Bu paylaşılan tür, temel bir çalışma zamanı türü olabilir veya paylaşılan bir derlemede yeni bir paylaşılan tür oluşturulmasını içerebilir.  Genellikle paylaşılan tür, uygulama derlemesinde tanımlanan bir [arabirimdir](../../csharp/language-reference/keywords/interface.md) . Ayrıca bkz: [Bağımlılıklar nasıl paylaşılır?](#how-are-dependencies-shared).
+1. Ortak paylaşılan türleri kullanın. Bu paylaşılan tür ilkel bir çalışma zamanı türü olabilir veya paylaşılan bir derlemede yeni bir paylaşılan tür oluşturmayı içerebilir.  Genellikle paylaşılan tür, bir uygulama derlemesinde tanımlanan bir [arabirimdir.](../../csharp/language-reference/keywords/interface.md) Ayrıca bakınız: [Bağımlılıklar nasıl paylaşılır?](#how-are-dependencies-shared)
 
-2. Bir türden diğerine dönüştürmek için sıralama tekniklerini kullanın.
+2. Bir türden diğerine dönüştürmek için mareşalleme tekniklerini kullanın.

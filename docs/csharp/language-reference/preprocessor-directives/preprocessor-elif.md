@@ -1,5 +1,5 @@
 ---
-title: '#elif- C# başvuru'
+title: '#elif - C# Referans'
 ms.date: 07/20/2015
 f1_keywords:
 - '#elif'
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - '#elif directive [C#]'
 ms.assetid: 731d78df-08e0-4d51-b8c8-f193c27de13f
 ms.openlocfilehash: c78818f40b76414d289af6c704ff019b63befe37
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712578"
 ---
 # <a name="elif-c-reference"></a>#elif (C# Başvurusu)
-`#elif`, bileşik bir koşullu yönerge oluşturmanıza imkan tanır. `#elif` ifadesi, önceki [#if](./preprocessor-if.md) ne de önceki, isteğe bağlı `#elif` yönerge ifadelerinin `true`olarak değerlendirilmediği takdirde değerlendirilir. `#elif` bir ifade `true`değerlendirilirse, derleyici `#elif` ve sonraki koşullu yönerge arasındaki tüm kodu değerlendirir. Örneğin:  
+`#elif`bileşik koşullu yönerge oluşturmanıza olanak sağlar. İfade, `#elif` ne önceki [#if](./preprocessor-if.md) ne de önceki, isteğe `#elif` bağlı, yönerge `true`ifadeleri değerlendirilmezse değerlendirilecektir. Bir `#elif` ifade , `true`derleyici ve sonraki koşullu yönerge arasındaki `#elif` tüm kodu değerlendirirse. Örnek:  
   
 ```csharp
 #define VC7  
@@ -26,22 +26,22 @@ ms.locfileid: "75712578"
 #endif  
 ```  
   
- Birden çok simgeyi değerlendirmek için `==` (eşitlik), `!=` (eşitsizlik), `&&` (ve) ve `||` (ya da) işleçlerini kullanabilirsiniz. Simgeleri ve işleçleri parantez ile de gruplandırabilirsiniz.  
+ Birden çok sembolü `==` değerlendirmek için `!=` işleçleri `&&` (eşitlik), `||` (eşitsizlik), (ve) ve (veya) kullanabilirsiniz. Sembolleri ve işleçleri parantez içinde de gruplayabilirsiniz.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `#elif` ile eşdeğerdir:  
+ `#elif`kullanmaya eşdeğerdir:  
   
 ```csharp
 #else  
 #if  
 ```  
   
- Her `#if` [#endif](./preprocessor-endif.md)gerektirdiğinden `#elif` kullanımı basittir, ancak bir `#elif` eşleşen bir `#endif`olmadan kullanılabilir.  
+ Her `#elif` `#if` biri bir [#endif](./preprocessor-endif.md)gerektirdiğinden, `#elif` bir eşleneme `#endif`olmadan kullanılabilir.  
   
- `#elif`nasıl kullanılacağına ilişkin bir örnek için bkz. [#if](./preprocessor-if.md) .  
+ Nasıl [#if](./preprocessor-if.md) kullanılacağına bir örnek `#elif`için #if bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../index.md)
+- [C# Referans](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Ön İşlemci Yönergeleri](./index.md)
+- [C# Önİşleme İşlemciler Direktifleri](./index.md)

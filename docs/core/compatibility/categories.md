@@ -1,57 +1,57 @@
 ---
 title: Hataya neden olan değişiklik kategorileri
-description: .NET Core 'da önemli değişiklikler sınıflandırılan yollar hakkında bilgi edinin.
+description: .NET Core'da kesme değişikliklerinin nasıl kategorize edildiği hakkında bilgi edinin.
 ms.date: 06/10/2019
 ms.openlocfilehash: b273ebbb82da803cde66ea34760aa1779c6c1ca5
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093051"
 ---
 # <a name="breaking-change-categories"></a>Hataya neden olan değişiklik kategorileri
 
-*Uyumluluk* , kodun ilk olarak geliştirildiği bir .NET uygulaması sürümünde kod derleme veya yürütme imkanını ifade eder. Belirli bir değişiklik, altı farklı şekilde uyumluluğu etkileyebilir. Uyumluluk düşüşü aşağıdaki kategorilere değerlendirirken dikkate alınan [her değişiklik türü](index.md) :
+*Uyumluluk,* kodun ilk geliştirildiği uygulama dışında bir .NET uygulamasının sürümünde kod derleme veya yürütme olanağı anlamına gelir. Belirli bir değişiklik altı farklı şekilde uyumluluğu etkileyebilir. Uyumluluğu değerlendirirken göz önünde bulundurulan [tek tek değişiklik türleri](index.md) aşağıdaki kategorilere girer:
 
 - [davranış değişikliği](#behavioral-change)
 - [ikili uyumluluk](#binary-compatibility)
-- [Kaynak uyumluluğu](#source-compatibility)
-- [Tasarım zamanı uyumluluğu](#design-time-compatibility)
+- [kaynak uyumluluğu](#source-compatibility)
+- [tasarım-zaman uyumluluğu](#design-time-compatibility)
 - [geriye dönük uyumluluk](#backwards-compatibility)
-- [ileriye dönük uyumluluk](#forward-compatibility) (.NET Core 'un hedefi değil)
+- [ileri uyumluluk](#forward-compatibility) (.NET Core hedefi değil)
 
 ## <a name="behavioral-change"></a>Davranış değişikliği
 
-Davranış değişikliği, üyenin davranışındaki bir değişikliği temsil eder. Değişiklik dışarıdan görünür olabilir (örneğin, bir yöntem farklı bir özel durum oluşturabilir) veya değiştirilmiş bir uygulamayı temsil edebilir (örneğin, bir dönüş değeri hesaplandığında bir değişiklik, iç yöntem çağrılarının eklenmesi veya kaldırılması veya hatta bir önemli performans iyileştirmesi).
+Davranış değişikliği, bir üyenin davranışındaki değişikliği temsil eder. Değişiklik dışarıdan görülebilir (örneğin, bir yöntem farklı bir özel durum açabilir) veya değiştirilmiş bir uygulamayı temsil edebilir (örneğin, iade değerinin hesaplanma şeklindeki bir değişiklik, dahili yöntem çağrılarının eklenmesi veya kaldırılması, hatta önemli performans artışı).
 
-Davranış değişiklikleri dışarıdan görünür olduğunda ve bir türün ortak sözleşmesini değiştirirken, ikili uyumluluğu etkilediklerinden beri değerlendirilmesi kolaydır. Uygulama değişikliklerinin değerlendirilmesi çok daha zordur; değişikliğin doğasına ve API kullanmanın sıklığı ve desenlerine bağlı olarak, bir değişikliğin etkisi önemli olan zararsız ile değişebilir.
+Davranış değişiklikleri dışarıdan görünür olduğunda ve bir türün ortak sözleşmesini değiştirdiğinde, ikili uyumluluğu etkilediği için değerlendirilmesi kolaydır. Uygulama değişikliklerini değerlendirmek çok daha zordur; değişikliğin doğasına ve API'nin kullanım sıklığına ve şekillerine bağlı olarak, bir değişikliğin etkisi şiddetliden zararsıza kadar değişebilir.
 
 ## <a name="binary-compatibility"></a>İkili uyumluluk
 
-İkili uyumluluk, API 'nin bir tüketicinin yeniden derleme gerekmeden daha yeni bir sürümde API 'yi kullanma becerisini ifade eder. Bu tür değişiklikler ekleme veya bir türe yeni arabirim uygulama ekleme gibi değişiklikler ikili uyumluluğu etkilemez. Bununla birlikte, bir derlemenin ortak imzalarını kaldırmak veya değiştirmek, tüketicilerin derleme tarafından sunulan aynı arabirime artık erişememesi için ikili uyumluluğu etkiler. Bu türden bir değişiklik, *ikili uyumsuz bir değişikliğe göre değişiklik*görmez.
+İkili uyumluluk, bir API tüketicisinin API'yi yeniden derleme olmadan yeni bir sürümde kullanabilme yeteneğini ifade eder. Yöntem ekleme veya bir türe yeni bir arabirim uygulaması ekleme gibi değişiklikler ikili uyumluluğu etkilemez. Ancak, tüketicilerin derleme tarafından açığa çıkarılan aynı arabirime artık erişebilmeleri için bir derlemenin ortak imzalarını kaldırmak veya değiştirmek ikili uyumluluğu etkiler. Bu tür bir değişiklik *ikili uyumsuz değişiklik*denir.
 
 ## <a name="source-compatibility"></a>Kaynak uyumluluğu
 
-Kaynak uyumluluğu, bir API 'nin mevcut tüketicilerinin hiçbir kaynak değişiklik yapmadan daha yeni bir sürüme göre yeniden derlenme yeteneğini ifade eder. Bir tüketicinin bir API 'nin daha yeni bir sürümünde başarıyla derlenmesi için kaynak kodu değiştirmesi gerektiğinde, *kaynak uyumsuz bir değişiklik* oluşur.
+Kaynak uyumluluğu, bir API'nin mevcut tüketicilerinin kaynak değişikliği olmadan yeni bir sürüme karşı yeniden derleme yeteneğini ifade eder. Bir *kaynağın uyumsuz bir değişikliği,* bir tüketicinin API'nin daha yeni bir sürümüne karşı başarılı bir şekilde oluşturabilmesi için kaynak kodunu değiştirmesi gerektiğinde oluşur.
 
 ## <a name="design-time-compatibility"></a>Tasarım zamanı uyumluluğu
 
-Tasarım zamanı uyumluluğu, Visual Studio ve diğer tasarım zamanı ortamlarının sürümleri arasında tasarım zamanı deneyimini korumayı ifade eder. Bu durum, tasarımcı veya tasarımcı kullanıcı arabirimini içerebilir, ancak tasarım zamanı uyumluluğuna ilişkin en önemli boyut, proje uyumluluğuna aittir. Proje veya çözüm açılayabilmelidir ve tasarım zamanı ortamının daha yeni bir sürümünde kullanılabilir.
+Tasarım zamanı uyumluluğu, Visual Studio ve diğer tasarım zamanı ortamlarının sürümlerinde tasarım zamanı deneyiminin korunması anlamına gelir. Bu davranış veya tasarımcıların UI içerebilir iken, tasarım-zaman uyumluluğu en önemli yönü proje uyumluluğu ile ilgilidir. Bir proje veya çözüm, tasarım zamanı ortamının daha yeni bir sürümünde açılabilir ve kullanılabilmelidir.
 
 ## <a name="backwards-compatibility"></a>Geriye dönük uyumluluk
 
-Geriye dönük uyumluluk, bir API 'nin mevcut bir tüketicisinin aynı şekilde davranırken yeni bir sürüme karşı çalışmasına karşılık gelmektedir. Hem davranış değişiklikleri hem de ikili uyumlulukta yapılan değişiklikler geriye dönük uyumluluğu etkiler. Bir tüketici, API 'nin daha yeni bir sürümüne karşı çalışırken farklı şekilde çalışmayabilir veya davranmayabilir, API geri *uyumsuzdur*.
+Geriye dönük uyumluluk, bir API'nin varolan bir tüketicisinin aynı şekilde davranarak yeni bir sürüme karşı çalışma yeteneğini ifade eder. Hem davranış değişiklikleri hem de ikili uyumluluktaki değişiklikler geriye dönük uyumluluğu etkiler. Bir tüketici API'nin yeni sürümüne karşı çalışırken farklı şekilde çalıştıramazsa veya farklı davranamazsa, API *geriye doğru uyumsuzdur.*
 
-Geliştiriciler bir API 'nin daha yeni sürümlerinde geriye dönük uyumluluğu beklediği için geriye dönük uyumluluğu etkileyen değişiklikler önerilmez.
+Geliştiriciler bir API'nin yeni sürümlerinde geriye dönük uyumluluk beklediğinden, geriye dönük uyumluluğu etkileyen değişiklikler önerilmez.
 
 ## <a name="forward-compatibility"></a>İleriye dönük uyumluluk
 
-İleriye dönük uyumluluk, bir API 'nin mevcut bir tüketicisinin aynı davranışı sergileyen eski bir sürüme karşı çalışmasına karşılık gelmektedir. Bir tüketici, API 'nin eski bir sürümüne karşı çalıştırıldığında farklı bir şekilde çalıştırılamaz veya davranmayabilir, API *İleri doğru uyumsuzdur*.
+İleriye dönük uyumluluk, bir API'nin varolan bir tüketicisinin aynı davranışı sergilerken eski bir sürüme karşı çalışma yeteneğini ifade eder. Bir tüketici API'nin eski bir sürümüne karşı çalıştırıldığında farklı şekilde çalıştırılamazsa veya farklı davranamazsa, API *ileri uyumsuzdur.*
 
-İleri uyumluluğun sürdürülmesi, daha sonraki bir sürümün daha önceki bir sürümü altında çalışmasını engelleyen bir tüketiciyi engellediği için, sürümden sürümden herhangi bir değişikliği veya eklemeleri neredeyse önler. Geliştiriciler, daha yeni bir API 'yi temel alan bir tüketicinin eski API 'ye karşı düzgün şekilde çalışmayabilir.
+İleriye dönük uyumluluğu korumak, bu değişiklikler daha sonraki bir sürümün önceki bir sürüm altında çalışmasını hedefleyen bir tüketiciyi engellediğinden, sürümden sürüme herhangi bir değişiklik veya eklemeyi neredeyse engeller. Geliştiriciler, yeni bir API'ye dayanan bir tüketicinin eski API'ye karşı doğru şekilde çalışmamasını bekler.
 
-İleri uyumluluğun sürdürülmesi .NET Core 'un hedefi değildir.
+İleriye uyumluluğu korumak .NET Core'un bir hedefi değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core 'daki kırılmaya karşı değişiklikleri değerlendir](index.md)
+- [.NET Core'daki kırılma değişikliklerini değerlendirme](index.md)

@@ -1,49 +1,49 @@
 ---
 title: Mikro hizmet uygulama katmanı ve Web API’sini tasarlama
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Uygulama katmanını tasarlamaya yönelik katı ilkelere ilişkin kısa bir açıklama.
+description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Uygulama katmanının tasarımına ilişkin SOLID ilkelerinden kısa bir söz.
 ms.date: 10/08/2018
 ms.openlocfilehash: 3c3b9f74e76e01deafa1f97de5d3250d57716014
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70296740"
 ---
-# <a name="design-the-microservice-application-layer-and-web-api"></a>Mikro hizmet uygulama katmanını ve Web API 'sini tasarlama
+# <a name="design-the-microservice-application-layer-and-web-api"></a>Mikro hizmet uygulama katmanını ve Web API'sini tasarlayın
 
-## <a name="use-solid-principles-and-dependency-injection"></a>KATı ilkeler ve bağımlılık ekleme kullanma
+## <a name="use-solid-principles-and-dependency-injection"></a>SOLID prensipleri ve Bağımlılık Enjeksiyonu kullanın
 
-KATı ilkeler, DDD desenleriyle mikro hizmet geliştirme gibi tüm modern ve görev açısından kritik bir uygulamada kullanılması için kritik tekniklerdir. SOLID, beş temel ilkeden oluşan bir kısaltmakta:
+SOLID ilkeleri, DDD desenli bir mikro hizmet geliştirmek gibi her türlü modern ve görev açısından kritik uygulamada kullanılacak kritik tekniklerdir. SOLID, beş temel ilkeyi bir arada gösteren bir kısaltmadır:
 
-- Tek sorumluluk ilkesi
+- Tek Sorumluluk ilkesi
 
 - Açık/kapalı ilke
 
-- Lizkov değiştirme ilkesi
+- Liskov ikame ilkesi
 
-- Arabirim ayırma ilkesi
+- Arayüz Ayrımı ilkesi
 
-- Bağımlılık Inversion ilkesi
+- Bağımlılık Ters Çevirme ilkesi
 
-SOLID, uygulamanızı veya mikro hizmet iç Katmanlarınızı tasarlama ve bunlar arasındaki bağımlılıkları çözme hakkında daha fazla bilgi. Bu, etki alanı ile ilgili değil, uygulamanın teknik tasarımına yönelik değildir. Son ilke olan bağımlılık sürümü prensibi, altyapı katmanını katmanların geri kalanından ayırarak, DDD katmanlarının daha iyi ayrılmış bir uygulamasına olanak tanır.
+SOLID, uygulamanızı veya microservice iç katmanlarınızı nasıl tasarladığınız ve aralarındaki bağımlılıkları nasıl ayırdığınızla ilgilidir. Etki alanıyla değil, uygulamanın teknik tasarımıyla ilgilidir. Son ilke, Bağımlılık Inversion ilkesi, DDD katmanlarıdaha iyi bir ayrılmış uygulama sağlar katmanları, geri kalanından altyapı katmanı ayırmak için izin verir.
 
-Bağımlılık ekleme (dı), bağımlılık Inversion ilkesini uygulamak için bir yoldur. Nesneler ve bunların bağımlılıkları arasında gevşek bir bağlantısı elde etmek için bir tekniktir. Ortak çalışanların doğrudan örneklendiği veya statik başvuruların (yani, New...) kullanılması yerine, bir sınıfın eylemlerini gerçekleştirmek için ihtiyaç duyacağı nesneler sınıfına (veya "eklenen") sunulur. Çoğu zaman, sınıflar kendi bağımlılıklarıyla kendi bağımlılıklarını bildirir ve bu kullanıcıların açık bağımlılıklar ilkesini izlemesini sağlar. Bağımlılık ekleme, genellikle Denetim (IOC) kapsayıcılarının belirli bir INVERSION tabanlıdır. ASP.NET Core basit bir yerleşik IOC kapsayıcısı sağlar, ancak Autofac veya Neklemesine benzer şekilde, en sevdiğiniz IOC kapsayıcısını de kullanabilirsiniz.
+Bağımlılık Enjeksiyon (DI) Bağımlılık Inversion ilkesini uygulamak için bir yoldur. Bu nesneler ve onların bağımlılıkları arasında gevşek bağlantı elde etmek için bir tekniktir. İşbirlikçileri doğrudan anında kullanmak veya statik başvuruları kullanmak (diğer bir deyişle yeni...) kullanmak yerine, bir sınıfın eylemlerini gerçekleştirmek için ihtiyaç duyduğu nesneler sınıfa sağlanır (veya "enjekte edilir"). Çoğu zaman, sınıflar bağımlılıklarını yapıcıları aracılığıyla beyan ederek Açık Bağımlılıklar ilkesine uymalarını sağlarlar. Bağımlılık Enjeksiyonu genellikle kontrol (IoC) kaplarının belirli ters çevrilmelerine dayanır. ASP.NET Core basit bir dahili IoC konteyner sağlar, ancak autofac veya Ninject gibi en sevdiğiniz IoC konteyner kullanabilirsiniz.
 
-DÜZ ilkeleri izleyerek, sınıflarınız doğal olarak küçük, iyi bir şekilde ve kolayca test edilir. Ancak sınıflarınıza çok fazla bağımlılık eklediyseniz nasıl emin olabilirsiniz? Oluşturucuyu Oluşturucu aracılığıyla kullanırsanız, yalnızca kurucularınızın parametre sayısına bakarak bunu tespit etmek kolay olur. Çok fazla bağımlılık varsa, bu genellikle sınıfınızın çok fazla yapmaya çalıştığı ve muhtemelen tek sorumluluk ilkesini ihlal eden bir imzadır ( [kod kokusu](https://deviq.com/code-smells/)).
+SOLID ilkelerini izleyerek, sınıflarınız doğal olarak küçük, iyi faktörlü ve kolayca test edilebilir olma eğiliminde olacaktır. Ama sınıflarınıza çok fazla bağımlılık enjekte edilip edilip edilmeyişemelerini nasıl bilebilirsiniz? Di'yi oluşturucu aracılığıyla kullanırsanız, bunu sadece oluşturucunuz için parametrelerin sayısına bakarak algılamak kolay olacaktır. Çok fazla bağımlılık varsa, bu genellikle bir işaret [(kod kokusu)](https://deviq.com/code-smells/)sınıf çok fazla yapmaya çalışıyor ve büyük olasılıkla Tek Sorumluluk ilkesini ihlal ediyor.
 
-Ayrıntılı bir şekilde ele almak için başka bir kılavuz alır. Bu nedenle bu kılavuzda, bu konularda yalnızca en az bilgiye sahip olmanız gerekir.
+Bu ayrıntılı olarak SOLID kapsayacak şekilde başka bir rehber alacaktı. Bu nedenle, bu kılavuz, bu konular hakkında yalnızca en az bilgiye sahip olmayı gerektirir.
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-- **SOLID: temel OOP ilkeleri** \
+- **SOLID: Temel OOP İlkeleri** \
   <https://deviq.com/solid/>
 
-- **Denetim kapsayıcıları ve bağımlılık ekleme deseninin Inversion 'ı** \
+- **Kontrol Kaplarının Ters Çevrilmesi ve Bağımlılık Enjeksiyonu deseni** \
   <https://martinfowler.com/articles/injection.html>
 
-- **Steve Smith. Yeni bir tutkalla** \
+- **Steve Smith' i. Yeni Tutkal olduğunu** \
   <https://ardalis.com/new-is-glue>
 
 > [!div class="step-by-step"]
 > [Önceki](nosql-database-persistence-infrastructure.md)
-> [İleri](microservice-application-layer-implementation-web-api.md)
+> [Sonraki](microservice-application-layer-implementation-web-api.md)

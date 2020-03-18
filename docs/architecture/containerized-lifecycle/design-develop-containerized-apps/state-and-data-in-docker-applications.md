@@ -1,70 +1,70 @@
 ---
 title: Docker uygulamalarında durum ve veriler
-description: Kapsayıcılı uygulamalarda durumu kaydetmek için kullanılabilir seçeneğini öğrenin.
+description: Kapsayıcı uygulamalarda durum kaydetmek için kullanılabilir seçeneği öğrenin.
 ms.date: 02/15/2019
 ms.openlocfilehash: b2368efb0eff2bdce48b77b2addcc4de89822c74
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394627"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker uygulamalarında durum ve veriler
 
-Çoğu durumda, bir kapsayıcıyı bir işlem örneği olarak düşünebilirsiniz. Bir işlem kalıcı durumu korumaz. Bir kapsayıcı yerel depolama alanına yazabilirken, bir örneğin süresiz olarak, bellekteki tek bir konumun dayanıklı olacağını varsayarsak. İşlem gibi kapsayıcı görüntüleri, birden çok örneğe sahip olduğu ve sonunda sonlandırdığı varsayılacaktır. bir kapsayıcı Orchestrator ile yönetiliyorsa, bir düğümden veya VM 'den diğerine taşınabileceği varsayılır.
+Çoğu durumda, bir kapsayıcı bir işlem örneği olarak düşünebilirsiniz. Bir işlem kalıcı durumu korumaz. Bir kapsayıcı yerel depolama yazabilir iken, bir örnek süresiz olarak etrafında olacağını varsayarak bellekte tek bir konumu dayanıklı olacağını varsayarak gibidir. Kapsayıcı görüntülerinin, süreçler gibi, birden çok örneği olduğu ve sonunda öldürüleceği varsayılmalıdır; bir konteyner orchestrator ile yönetilirse, bir düğüm veya VM'den diğerine taşınabilecekleri varsayılmalıdır.
 
 Docker uygulamalarında kalıcı verileri yönetmek için aşağıdaki çözümler kullanılır:
 
-Docker ana bilgisayarında [Docker birimleri](https://docs.docker.com/engine/admin/volumes/)olarak:
+Docker ev sahibinden, [Docker Volumes](https://docs.docker.com/engine/admin/volumes/)olarak:
 
-- **Birimler** , Docker tarafından yönetilen ana bilgisayar FileSystem ' ın bir alanında depolanır.
+- **Birimler,** docker tarafından yönetilen ana bilgisayar dosya sisteminin bir alanında depolanır.
 
-- **BIND takar** , ana bilgisayar dosya sisteminde herhangi bir klasöre eşlenir, bu nedenle Access bir Docker işleminden denetlenemez ve bir kapsayıcı hassas işletim sistemi klasörlerine erişebiliyorsa güvenlik riskine neden olabilir.
+- **Bağlama yuvaları** ana bilgisayar dosya sistemindeki herhangi bir klasöre eşleyebilir, bu nedenle erişim Docker işleminden denetlenebilir ve bir kapsayıcı hassas işletim sistemi klasörlerine erişebildiği için güvenlik riski oluşturabilir.
 
-- **tmpfs takar** , yalnızca konağın belleğinde bulunan ve dosya sistemine hiçbir şekilde yazılmakta olan sanal klasörlere benzer.
+- **tmpfs bağlar** yalnızca ana bilgisayar belleğinde var olan ve dosya sistemine asla yazılmayan sanal klasörler gibidir.
 
-Uzak depolama 'dan:
+Uzak depolamadan:
 
-- [Azure depolama](https://azure.microsoft.com/documentation/services/storage/) , kapsayıcılar için iyi bir uzun süreli kalıcı çözüm sağlayan coğrafi dağıtılabilir depolama sağlar.
+- [Azure Depolama,](https://azure.microsoft.com/documentation/services/storage/) kapsayıcılar için iyi bir uzun vadeli kalıcılık çözümü sağlayarak coğrafi olarak dağıtılabilir depolama sağlar.
 
-- [Azure SQL veritabanı](https://azure.microsoft.com/services/sql-database/)gibi uzak ilişkisel veritabanları, [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction)gibi NoSQL veritabanları veya [redin](https://redis.io/)gibi önbellek hizmetleri.
+- [Azure SQL Veritabanı](https://azure.microsoft.com/services/sql-database/)gibi uzak ilişkisel veritabanları, Azure [Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction)gibi NoSQL veritabanları veya [Redis](https://redis.io/)gibi önbellek hizmetleri.
 
-Docker kapsayıcısından:
+Docker konteynerinden:
 
-- Docker, *kaplama dosya sistemi*adlı bir özellik sağlar. Bu özellik, güncelleştirilmiş bilgileri kapsayıcının kök dosya sistemine depolayan bir yazma kopyalama görevi uygular. Bu bilgiler, kapsayıcının temel aldığı orijinal görüntünün "üzerine yerleştirir". Kapsayıcı sistemden silinirse, bu değişiklikler kaybolur. Bu nedenle, bir kapsayıcının durumunu yerel depolama alanına kaydetmek mümkün olsa da, bu özelliği temel alan bir sistem tasarlamak kapsayıcı tasarımı Şirket adıyla çakışarak varsayılan olarak durum bilgisiz olur.
+- Docker, *bindirme dosya sistemi*adlı bir özellik sağlar. Bu özellik, güncelleştirilmiş bilgileri kapsayıcının kök dosya sistemine depolayan bir yazma üzerine kopyalama görevi uygular. Bu bilgiler, kapsayıcının temel aldığı orijinal görüntünün "üstüne" yerleştirir. Kapsayıcı sistemden silinirse, bu değişiklikler kaybolur. Bu nedenle, bir kapsayıcının durumunu yerel depolama alanı içinde kaydetmek mümkün olsa da, bu özelliğe dayalı bir sistem tasarlamak, varsayılan olarak durum dışı olan kapsayıcı tasarımıöncüsüyle çakışacak.
 
-- Ancak Docker birimleri artık Docker 'daki yerel verileri işlemek için tercih edilen yoldur. Kapsayıcılarda depolama hakkında daha fazla bilgiye ihtiyacınız varsa [Docker depolama sürücülerini](https://docs.docker.com/engine/userguide/storagedriver/) ve [görüntüler, kapsayıcılar ve depolama sürücüleri hakkında](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/)' yı denetleyin.
+- Ancak, Docker Volumes artık Docker'daki yerel verileri işlemenin tercih edilen yoludur. Kapsayıcılarda depolama hakkında daha fazla bilgiye ihtiyacınız varsa, [Docker depolama sürücüleri](https://docs.docker.com/engine/userguide/storagedriver/) ve [görüntüler, kapsayıcılar ve depolama sürücüleri hakkında](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/)kontrol edin.
 
-Aşağıdakiler, bu seçenekler hakkında ek ayrıntılar sağlar.
+Aşağıda, bu seçenekler hakkında ek ayrıntı sağlar.
 
-**Birimler** , konak işletim sisteminden kapsayıcılardaki dizinlere eşlenmiş dizinlerdir. Kapsayıcıdaki kodun dizine erişimi olduğunda, bu erişim aslında ana bilgisayar IŞLETIM sistemindeki bir dizin olur. Bu dizin kapsayıcının kullanım ömrüne bağlı değildir ve Dizin Docker tarafından yönetilir ve konak makinenin temel işlevselliğinden yalıtılmıştır. Bu nedenle, veri birimleri kapsayıcının ömründen bağımsız olarak verileri kalıcı hale getirmek için tasarlanmıştır. Docker ana bilgisayarındaki bir kapsayıcıyı veya görüntüyü silerseniz, veri biriminde kalıcı olan veriler silinmez.
+**Birimler,** barındırılan işletim sisteminden kapsayıcıdaki dizinlere eşlenen dizinlerdir. Kapsayıcıdaki kod dizine erişesahipse, bu erişim aslında ana bilgisayar işletim sistemi üzerindeki bir dizine erişimdir. Bu dizin kapsayıcının ömrüne bağlı değildir ve dizin Docker tarafından yönetilir ve ana makinenin temel işlevselliğinden izole edilir. Böylece, veri hacimleri, verileri kapsayıcının ömründen bağımsız olarak devam etmek üzere tasarlanmıştır. Docker ana bilgisayarından bir kapsayıcıyı veya görüntüyü silerseniz, veri hacminde kalıcı veriler silinmez.
 
-Birimler adlandırılmış veya anonim olabilir (varsayılan). Adlandırılmış birimler, **veri hacmi kapsayıcıları** evrimi ve kapsayıcılar arasında veri paylaşmayı kolaylaştırır. Birimler ayrıca, diğer seçenekler arasında, uzak konaklarda veri depolamanıza olanak tanıyan birim sürücülerini destekler.
+Birimler adlandırılmış veya anonim (varsayılan). Adlandırılmış **birimler, Veri Hacmi Kapsayıcılarının** evrimidir ve verileri kapsayıcılar arasında paylaşmayı kolaylaştırır. Birimler, diğer seçeneklerin yanı sıra uzak ana bilgisayarlarda veri depolamanızı sağlayan birim sürücülerini de destekler.
 
-**Bağlama bağlamalarda** uzun bir süre kullanılabilir ve bir kapsayıcıdaki bağlama noktasına herhangi bir klasörün eşlenmesiyle izin veriyor. BIND takmalar, birimlerden ve bazı önemli güvenlik sorunlarından daha fazla sınırlamalara sahiptir, bu nedenle birimler önerilen seçenektir.
+**Bağlama bağları** uzun zamandır kullanılabilir ve herhangi bir klasörün bir konteynerdeki montaj noktasına eşlemesine izin verir. Bağlama bağları, birimlerden ve bazı önemli güvenlik sorunlarından daha fazla sınırlamaya sahiptir, bu nedenle birimler önerilen seçenektir.
 
-**`tmpfs` takar** yalnızca konağın belleğinde yaşayan ve dosya sistemine hiçbir şekilde yazılmakta olan sanal klasörlerdir. Bunlar hızlı ve güvenlidir, ancak bellek kullanır ve yalnızca kalıcı olmayan veriler için tasarlanmıştır.
+bağlar, yalnızca ana bilgisayarbelleğinde yaşayan ve dosya sistemine asla yazılmayan sanal klasörlerdir. ** `tmpfs` ** Onlar hızlı ve güvenli ama bellek kullanımı ve sadece kalıcı olmayan veri içindir.
 
-Şekil 4-5 ' de gösterildiği gibi, normal Docker birimleri kapsayıcı dışında, ancak konak sunucusunun veya VM 'nin fiziksel sınırları içinde depolanabilir. Ancak, Docker Kapsayıcıları bir birime bir konak sunucusundan veya VM 'den diğerine erişemez. Diğer bir deyişle, bu birimlerle, farklı Docker konaklarında çalışan kapsayıcılar arasında paylaşılan verileri yönetmek mümkün değildir, ancak uzak konakları destekleyen bir birim sürücüsüyle elde edilebilir.
+Şekil 4-5'te gösterildiği gibi, normal Docker hacimleri kapsayıcıların dışında, ancak ana bilgisayar sunucusunun veya VM'nin fiziksel sınırları içinde depolanabilir. Ancak, Docker kapsayıcıları bir ana bilgisayar sunucusundan veya VM'den diğerine bir birim erişemez. Başka bir deyişle, bu birimlerile, farklı Docker ana bilgisayarlarında çalışan kapsayıcılar arasında paylaşılan verileri yönetmek mümkün değildir, ancak uzak ana bilgisayarları destekleyen bir ses düzeyi sürücüsüyle elde edilebilir.
 
-![Kapsayıcılar dışında depolanan Docker birimlerinin gösterildiği diyagram.](./media/state-and-data-in-docker-applications/container-based-application-external-data-sources.png)
+![Kapsayıcıların dışında depolanan Docker birimlerini gösteren diyagram.](./media/state-and-data-in-docker-applications/container-based-application-external-data-sources.png)
 
 **Şekil 4-5**. Kapsayıcı tabanlı uygulamalar için birimler ve dış veri kaynakları
 
-Ayrıca, Docker Kapsayıcıları bir Orchestrator tarafından yönetildiğinde, küme tarafından gerçekleştirilen iyileştirmelere bağlı olarak kapsayıcılar, konaklar arasında "taşıyabilir". Bu nedenle, iş verileri için veri birimleri kullanmanız önerilmez. Ancak, iş verilerinin tutarlılığını etkilemeyecek izleme dosyaları, zamana bağlı dosyalar veya benzer şekilde çalışmak için iyi bir mekanizmadır.
+Buna ek olarak, Docker kapsayıcıları bir orkestratör tarafından yönetildiğinde, kapsayıcılar küme tarafından gerçekleştirilen optimizasyonlara bağlı olarak ana bilgisayarlar arasında "taşınabilir". Bu nedenle, iş verileri için veri birimleri kullanmanız önerilmez. Ancak, iş veri tutarlılığını etkilemeyen izleme dosyaları, zamansal dosyalar veya benzerleriyle çalışmak için iyi bir mekanizmadır.
 
-Azure SQL veritabanı, Azure Cosmos DB veya redde gibi uzak bir önbellek gibi **uzak veri kaynakları ve önbellek** araçları, kapsayıcısız geliştirilirken aynı şekilde Kapsayıcılı uygulamalarda kullanılabilir. Bu, iş uygulaması verilerinin depolanması için kendini kanıtlamış bir yoldur.
+Azure SQL Veritabanı, Azure Cosmos DB veya Redis gibi uzak **veri kaynakları ve önbellek** araçları, kapsayıcılı uygulamalarda kapsayıcıolmadan geliştirilirken kullanıldıkları gibi kullanılabilir. Bu, iş uygulama verilerini depolamanın kanıtlanmış bir yoludur.
 
-**Azure depolama.** İş verilerinin genellikle Azure depolama gibi dış kaynaklara veya veritabanlarına yerleştirilmesi gerekir. Azure depolama, bulutta aşağıdaki hizmetleri sağlar:
+**Azure Depolama.** İş verilerinin genellikle Azure Depolama gibi dış kaynaklara veya veritabanlarına yerleştirilmesi gerekir. Azure Depolama bulutta aşağıdaki hizmetleri sağlar:
 
-- Blob Storage yapılandırılmamış nesne verilerini depolar. Blob, belge veya medya dosyaları (görüntüler, ses ve video dosyaları) gibi herhangi bir tür metin veya ikili veri olabilir. BLOB depolama alanı da nesne depolama olarak adlandırılır.
+- Blob depolama, yapılandırılmamış nesne verilerini depolar. Bir blob, belge veya medya dosyaları (resim, ses ve video dosyaları) gibi her tür metin veya ikili veri olabilir. Blob Storage ayrıca Nesne depolama olarak adlandırılır.
 
-- Dosya depolama, standart SMB protokolünü kullanarak eski uygulamalar için paylaşılan depolama alanı sağlar. Azure sanal makineleri ve bulut Hizmetleri, bağlı paylaşımlar aracılığıyla uygulama bileşenleri arasında dosya verilerini paylaşabilir. Şirket içi uygulamalar dosya hizmeti REST API aracılığıyla bir paylaşımdaki dosya verilerine erişebilir.
+- Dosya depolama, standart SMB protokolünü kullanarak eski uygulamalar için paylaşılan depolama alanı sunar. Azure sanal makineleri ve bulut hizmetleri, dosya verilerini monte edilmiş paylaşımlar aracılığıyla uygulama bileşenleri arasında paylaşabilir. Şirket içi uygulamalar, Dosya Hizmeti REST API aracılığıyla bir paylaşımdaki dosya verilerine erişebilir.
 
-- Tablo depolama, yapılandırılmış veri kümelerini depolar. Tablo depolama, çok büyük miktarlarda veriye hızlı geliştirme ve hızlı erişim sağlayan bir NoSQL anahtar özniteliği veri deposudur.
+- Tablo depolama, yapılandırılmış veri kümelerini depolar. Tablo depolama, hızlı geliştirme ve büyük miktarlarda verilere hızlı erişim sağlayan bir NoSQL anahtar öznitelik veri deposudur.
 
-**İlişkisel veritabanları ve NoSQL veritabanları.** Dış veritabanları için SQL Server, PostgreSQL, Oracle veya Azure Cosmos DB, MongoDB gibi NoSQL veritabanları gibi çok sayıda seçenek vardır. Bu veritabanları, farklı bir konu olduğundan, bu kılavuzun bir parçası olarak açıklanmıyor.
+**İlişkisel veritabanları ve NoSQL veritabanları.** SQL Server, PostgreSQL, Oracle veya Azure Cosmos DB, MongoDB gibi NoSQL veritabanları gibi ilişkisel veritabanlarından harici veritabanları için birçok seçenek vardır. Bu veritabanları tamamen farklı bir konu olduğu için bu kılavuzun bir parçası olarak açıklanmaz.
 
 >[!div class="step-by-step"]
 >[Önceki](monolithic-applications.md)
->[İleri](soa-applications.md)
+>[Sonraki](soa-applications.md)

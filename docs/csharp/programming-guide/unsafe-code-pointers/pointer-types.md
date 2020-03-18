@@ -1,14 +1,14 @@
 ---
-title: İşaretçi türleri- C# Programlama Kılavuzu
+title: İşaretçi türleri - C# Programlama Kılavuzu
 ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.openlocfilehash: dc03744559a87a2548c5bee9452c22cd20f337b8
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77627716"
 ---
 # <a name="pointer-types-c-programming-guide"></a>İşaretçi türleri (C# Programlama Kılavuzu)
@@ -20,9 +20,9 @@ type* identifier;
 void* identifier; //allowed but not recommended
 ```
 
-Bir işaretçi türündeki `*` önce belirtilen tür, **başvurulan tür**olarak adlandırılır. Yalnızca [yönetilmeyen bir tür](../../language-reference/builtin-types/unmanaged-types.md) , başvurulan bir tür olabilir.
+İşaretçi türünden `*` önce belirtilen türe **başvuru türü**denir. Yalnızca [yönetilmeyen](../../language-reference/builtin-types/unmanaged-types.md) bir tür başvuru türü olabilir.
 
-İşaretçi türleri [nesneden](../../language-reference/builtin-types/reference-types.md) devralma ve işaretçi türleri ve `object`arasında dönüştürme yok. Ayrıca, kutulama ve kutudan çıkarma işaretçileri desteklemez. Ancak, farklı işaretçi türleri ve işaretçi türleri ve tamsayı türleri arasında dönüştürme yapabilirsiniz.
+İşaretçi türleri [nesneden](../../language-reference/builtin-types/reference-types.md) devralmaz ve işaretçi `object`türleri arasında dönüşüm yoktur ve . Ayrıca, kutulama ve kutudan çıkarma işaretçileri desteklemez. Ancak, farklı işaretçi türleri ve işaretçi türleri ve tamsayı türleri arasında dönüştürme yapabilirsiniz.
 
 Aynı bildirimde birden çok işaretçi bildirdiğinizde, yıldız işareti (*) yalnızca altı çizili türle birlikte yazılır; her bir işaretçi adı için önek olarak kullanılmaz. Örnek:
 
@@ -31,17 +31,17 @@ int* p1, p2, p3;   // Ok
 int *p1, *p2, *p3;   // Invalid in C#
 ```
 
-Bir işaretçi, bir işaretçiye işaret eden bir nesne başvurusu atık olarak toplanabileceğinden, bir başvuruya veya başvuru içeren bir [yapıya](../../language-reference/builtin-types/struct.md) işaret edemez. Çöp toplayıcı, bir nesneye herhangi bir işaretçi türü tarafından işaret edilip edilmediğini izlemez.
+Bir işaretçi başvuruyu veya başvuru içeren bir [yapıyı](../../language-reference/builtin-types/struct.md) işaret edemez, çünkü bir nesne başvurusu işaret çikarsa bile bir nesne başvurusu çöp olarak toplanabilir. Çöp toplayıcı, bir nesneye herhangi bir işaretçi türü tarafından işaret edilip edilmediğini izlemez.
 
-`myType*` türündeki işaretçi değişkeninin değeri, `myType`türünde bir değişkenin adresidir. Aşağıda, işaretçi türü bildirimi örnekleri verilmiştir:
+Tür işaretçi değişkeninin `myType*` değeri, türdeki `myType`bir değişkenin adresidir. Aşağıda, işaretçi türü bildirimi örnekleri verilmiştir:
 
 |Örnek|Açıklama|
 |-------------|-----------------|
-|`int* p`|`p`, tamsayıya yönelik bir işaretçidir.|
-|`int** p`|`p`, tamsayıya yönelik işaretçinin bir işaretçisidir.|
-|`int*[] p`|`p`, tamsayılara yönelik işaretçilerin tek boyutlu bir dizisidir.|
-|`char* p`|`p`, Char için bir işaretçidir.|
-|`void* p`|`p`, bilinmeyen bir türe yönelik bir işaretçidir.|
+|`int* p`|`p`bir tamsayı için bir işaretçidir.|
+|`int** p`|`p`bir tamsayı için işaretçi dir.|
+|`int*[] p`|`p`tamsayılar için işaretçilerin tek boyutlu bir dizidir.|
+|`char* p`|`p`bir char için bir işaretçidir.|
+|`void* p`|`p`bilinmeyen bir türe işaretçidir.|
 
 İşaretçi yöneltme işleci *, işaretçi değişkeninin işaret ettiği yerdeki içeriğe erişebilir. Örneğin, aşağıdaki bildirimi ele alalım:
 
@@ -49,17 +49,17 @@ Bir işaretçi, bir işaretçiye işaret eden bir nesne başvurusu atık olarak 
 int* myVariable;
 ```
 
-İfade `*myVariable`, `myVariable`bulunan adreste bulunan `int` değişkenini gösterir.
+İfade, `*myVariable` `myVariable`'' `int` adresinde bulunan değişkeni gösterir.
 
-Konular [Sabit bildiriminde](../../language-reference/keywords/fixed-statement.md) ve [işaretçi dönüştürmelerinde birçok işaretçiye](./pointer-conversions.md)örnek vardır. Aşağıdaki örnek `unsafe` anahtar sözcüğünü ve `fixed` ifadesini kullanır ve iç işaretçinin nasıl artırılacağını gösterir.  Bu kodu çalıştırmak için bir konsolun Ana işlevine yapıştırabilirsiniz. Bu örneklerin [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) derleyici seçenek kümesiyle derlenmesi gerekir.
+Konular [sabit İfade](../../language-reference/keywords/fixed-statement.md) ve [İşaretçi Dönüşümleri](./pointer-conversions.md)işaretçileri birkaç örnek vardır. Aşağıdaki örnekte `unsafe` anahtar kelime `fixed` ve deyim kullanır ve bir iç işaretçi nasıl artış gösterir.  Bu kodu çalıştırmak için bir konsolun Ana işlevine yapıştırabilirsiniz. Bu örnekler [-güvenli olmayan](../../language-reference/compiler-options/unsafe-compiler-option.md) derleyici seçeneği kümesi ile derlenmelidir.
 
 [!code-csharp[Using pointer types](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#5)]
 
-Yöneltme işlecini `void*`türünde bir işaretçiye uygulayamazsınız. Ancak, boş bir işaretçiyi başka herhangi bir türü dönüştürmek veya bunun tersini yapmak için bir yayın kullanabilirsiniz.
+Yön işleci, bir tür `void*`işaretçisine uygulayamazsınız. Ancak, boş bir işaretçiyi başka herhangi bir türü dönüştürmek veya bunun tersini yapmak için bir yayın kullanabilirsiniz.
 
 Bir işaretçi `null`olabilir. Yönlendirme işlecini bir null işaretçiye uygulamak, uygulama tarafından tanımlanan bir davranışa neden olur.
 
-Yöntemler arasında işaretçiler geçirmek tanımsız davranışlara neden olabilir. Bir `in`, `out`veya `ref` parametresi ya da işlev sonucu olarak yerel bir değişkene bir işaretçi döndüren bir yöntem düşünün. İşaretçi sabit bir blokta ayarlandıysa, işaret ettiği değişken artık sabit olamaz.
+İşaretçileri yöntemler arasında geçirme, tanımlanmamış davranışlara neden olabilir. Bir işaretçiyi yerel bir değişkene `in`, `out`bir `ref` parametre veya işlev sonucu olarak döndüren bir yöntem düşünün. İşaretçi sabit bir blokta ayarlandıysa, işaret ettiği değişken artık sabit olamaz.
 
 Aşağıdaki tabloda, güvenli olmayan bir bağlamda işaretçiler üzerinde işlem yapabilecek işleçler ve deyimler listelenmektedir:
 
@@ -71,15 +71,15 @@ Aşağıdaki tabloda, güvenli olmayan bir bağlamda işaretçiler üzerinde iş
 |`&`|Bir değişkenin adresini alır.|
 |`++` ve `--`|İşaretçileri artırır ve azaltır.|
 |`+` ve `-`|İşaretçi aritmetiği gerçekleştirir.|
-|`==`, `!=`, `<`, `>`, `<=`ve `>=`|İşaretçileri karşılaştırır.|
-|[`stackalloc` işleci](../../language-reference/operators/stackalloc.md)|Yığında bellek ayırır.|
-|[`fixed` ekstresi](../../language-reference/keywords/fixed-statement.md)|Adresinin bulunamaması için bir değişkeni geçici olarak sabitler.|
+|`==`, `!=` `<`, `>` `<=`, , ve`>=`|İşaretçileri karşılaştırır.|
+|[`stackalloc`Işleç](../../language-reference/operators/stackalloc.md)|Yığında bellek ayırır.|
+|[`fixed`Deyim](../../language-reference/keywords/fixed-statement.md)|Adresinin bulunamaması için bir değişkeni geçici olarak sabitler.|
 
-İşaretçi ile ilgili işleçler hakkında daha fazla bilgi için bkz. [işaretçi ile ilgili işleçler](../../language-reference/operators/pointer-related-operators.md).
+İşaretçi yle ilgili işleçler hakkında daha fazla bilgi için [Işaretçi ile ilgili işleçler'e](../../language-reference/operators/pointer-related-operators.md)bakın.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [işaretçi türleri](~/_csharplang/spec/unsafe-code.md#pointer-types) bölümüne bakın.
+Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Pointer türleri](~/_csharplang/spec/unsafe-code.md#pointer-types) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -88,4 +88,4 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 - [İşaretçi Dönüştürmeler](pointer-conversions.md)
 - [Başvuru türleri](../../language-reference/keywords/reference-types.md)
 - [Değer türleri](../../language-reference/builtin-types/value-types.md)
-- [unsafe](../../language-reference/keywords/unsafe.md)
+- [Güvenli olmayan](../../language-reference/keywords/unsafe.md)

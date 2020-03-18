@@ -1,48 +1,48 @@
 ---
-title: Özel birleştirme işlemleri (C# üzerinde LINQ)
-description: C# dilinde özel LINQ birleştirme işlemleri gerçekleştirmeyi öğreneceksiniz.
+title: Özel birleştirme işlemleri gerçekleştirin (C#'da LINQ)
+description: C#'da özel LINQ birleştirme işlemlerini nasıl gerçekleştireceklerini öğrenin.
 ms.date: 12/01/2016
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
 ms.openlocfilehash: 7051007c67bd64cd11ede2f4d5352ce3d497255f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "61659858"
 ---
 # <a name="perform-custom-join-operations"></a>Özel birleştirme işlemleri gerçekleştirme
 
-Bu örnek ile mümkün olmayan birleştirme işlemleri gerçekleştirme işlemini gösterir `join` yan tümcesi. Bir sorgu ifadesinde `join` yan tümcesi ile sınırlıdır ve en iyi duruma getirilmiş, birleştirme işlemi arayla en yaygın olan equijoins yazın. Equijoin gerçekleştirirken, büyük olasılıkla her zaman en iyi performansı kullanarak erişmenizi sağlayacak `join` yan tümcesi.
+Bu örnek, `join` yan tümceyle mümkün olmayan birleştirme işlemlerinin nasıl gerçekleştirildiğini gösterir. Sorgu ifadesinde, `join` yan tümce, açık ara en yaygın birleştirme işlemi türü olan equijoins ile sınırlıdır ve bunlar için en iyi duruma getirilir. Bir equijoin gerçekleştirirken, büyük olasılıkla her zaman `join` yan tümceyi kullanarak en iyi performansı alırsınız.
 
-Ancak, `join` yan tümcesi aşağıdaki durumlarda kullanılamaz:
+Ancak, `join` yan tümce aşağıdaki durumlarda kullanılamaz:
 
-- Ne zaman eşitsizlik (bir olmayan-equijoin) bir ifade üzerinde birleştirme predicated.
+- Birleştirme eşitsizlik ifadesine (eşit olmayan bir şey) dayanıyorsa.
 
-- Ne zaman birleştirme eşitlik ve eşitsizlik birden fazla deyimde de predicated.
+- Birleştirme birden fazla eşitlik veya eşitsizlik ifadesine dayanıyorsa.
 
-- Ne zaman, birleştirme işleminden önce sağ tarafındaki (iç) dizisi için bir geçici aralık değişkeni Ekle gerekir.
+- Birleştirme işleminden önce sağ taraf (iç) dizisi için geçici bir aralık değişkeni getirmeniz gerektiğinde.
 
- Equijoins olmayan birleştirmeler gerçekleştirme için birden çok kullanabilirsiniz `from` bağımsız olarak her bir veri kaynağı tanıtmak amacıyla yan tümceler. Ardından bir koşul ifadesinde geçerli bir `where` yan tümcesinin aralık değişkeni için her kaynak. İfade bir yöntem çağrısının form da yararlanabilirsiniz.
+ Denk olmayan birleştirmeler gerçekleştirmek için, her veri kaynağını `from` bağımsız olarak tanıtmak için birden çok yan tümce kullanabilirsiniz. Daha sonra her kaynak için `where` aralık değişkenine bir yan tümcedeki yüklem ifadesini uygularsınız. İfade de bir yöntem çağrısı şeklinde alabilir.
 
 > [!NOTE]
-> Bu tür özel birleştirme işlemi birden çok kullanımıyla karıştırmayın `from` iç koleksiyonlara erişmek için yan tümcesi. Daha fazla bilgi için [JOIN yan tümcesi](../language-reference/keywords/join-clause.md).
+> Bu tür özel birleştirme işlemini iç koleksiyonlara `from` erişmek için birden çok yan tümcenin kullanılmasıyla karıştırmayın. Daha fazla bilgi için [ara yan tümcesi'ne](../language-reference/keywords/join-clause.md)bakın.
 
 ## <a name="example"></a>Örnek
 
-İlk yöntem aşağıdaki örnekte basit bir çapraz birleştirme gösterir. Çok büyük sonuç kümelerinin oluşturmadığından arası birleştirmeler dikkatli kullanılmalıdır. Ancak, bunlar karşı ek sorgular çalıştırdığınız kaynak dizileri oluşturmak için bazı senaryolarda yararlı olabilir.
+Aşağıdaki örnekteki ilk yöntem basit bir çapraz birleştirme gösterir. Çapraz birleştirmeler, çok büyük sonuç kümeleri oluşturabildiklerinden dikkatli kullanılmalıdır. Ancak, ek sorguların çalıştırıldığı kaynak dizileri oluşturmak için bazı senaryolarda yararlı olabilir.
 
-İkinci yöntem, bir dizi Kategori Kimliği Kategori listesinden sol tarafta listelenen tüm ürünlerin üretir. Kullanımına dikkat edin `let` yan tümcesi ve `Contains` geçici bir dizi oluşturmak için yöntemi. Sorgu önce bir dizi oluşturun ve ilk ortadan kaldırmak da mümkündür `from` yan tümcesi.
+İkinci yöntem, kategori kimliği sol taraftaki kategori listesinde listelenen tüm ürünlerin bir dizisini üretir. Geçici bir dizi `let` oluşturmak `Contains` için yan tümcenin ve yöntemin kullanımına dikkat edin. Ayrıca, sorgudan önce dizi oluşturmak ve ilk `from` yan tümceyi ortadan kaldırmak da mümkündür.
 
 [!code-csharp[csProgGuideLINQ#64](~/samples/snippets/csharp/concepts/linq/how-to-perform-custom-join-operations_1.cs)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte sorgu iç (sağ taraf) dizisi söz konusu olduğunda join tümcesi kendisini önce alınamıyor, anahtarların eşleşmesi temeline göre iki diziyi eklemeniz gerekir. Bu birleştirme ile gerçekleştirilmişse bir `join` yan tümcesi, ardından `Split` her öğe için çağrılacak yöntem sahip. Birden çok kullanımı `from` yinelenen yöntem çağrısının ek yükten kaçınmak sorgu yan tümceleri sağlar. Ancak, bu yana `join` hala olabilir kullanarak birden çok daha hızlı bu özel durumda iyileştirilmiş `from` yan tümceleri. Sonuçlar, öncelikli olarak nasıl pahalı yöntem çağrısında olduğuna bağlı olarak değişir.
+Aşağıdaki örnekte, sorgunun, iç (sağ taraf) dizisinde birleştirme yan tümcesi kendisinden önce alınamayan eşleşen tuşlara dayalı iki diziyi birleştirmesi gerekir. Bu birleştirme bir `join` yan tümceyle `Split` gerçekleştirildiyse, yöntemin her öğe için çağrılması gerekir. Birden çok `from` yan tümcenin kullanılması, sorgunun yinelenen yöntem çağrısının ek yükünden kaçınmasını sağlar. Ancak, `join` en iyi duruma geldiğinden, bu özel durumda `from` yine de birden çok yan tümce yi kullanmaktan daha hızlı olabilir. Sonuçlar, öncelikle yöntem çağrısının ne kadar pahalı olduğuna bağlı olarak değişir.
 
 [!code-csharp[csProgGuideLINQ#13](~/samples/snippets/csharp/concepts/linq/how-to-perform-custom-join-operations_2.cs)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dil ile Tümleşik Sorgu (LINQ)](index.md)
-- [join yan tümcesi](../language-reference/keywords/join-clause.md)
+- [birleştirme yan tümcesi](../language-reference/keywords/join-clause.md)
 - [Join yan tümcesinin sonuçlarını sıralama](order-the-results-of-a-join-clause.md)

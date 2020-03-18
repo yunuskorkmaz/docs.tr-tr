@@ -9,7 +9,7 @@
       href: core-communications-channel-framework.md
     - name: 'Temel İletişimler: Bağlantı Çerçevesi'
       href: core-communications-connection-framework.md
-    - name: 'Temel İletişimler: HTTP/HTTPS Taşıma Kanalları'
+    - name: 'Çekirdek İletişimler: HTTP/HTTPS Taşıma Kanalları'
       href: core-communications-http-https-transport-channels.md
     - name: 'Temel İletişimler: Dahili Çift Yönlü Taşıma Kanalları'
       href: core-communications-internal-duplex-transport-channels.md

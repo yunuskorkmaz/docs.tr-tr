@@ -1,5 +1,5 @@
 ---
-title: -Out (C# derleyici seçenekleri)
+title: -out (C# Derleyici Seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /out
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
 ms.openlocfilehash: 6c8408c0c613e361dae0c1db19f854e9421ca467
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70970373"
 ---
-# <a name="-out-c-compiler-options"></a>-Out (C# derleyici seçenekleri)
-**-Out** seçeneği, çıktı dosyasının adını belirtir.  
+# <a name="-out-c-compiler-options"></a>-out (C# Derleyici Seçenekleri)
+**-out** seçeneği çıktı dosyasının adını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -24,41 +24,41 @@ ms.locfileid: "70970373"
 -out:filename  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  `filename`  
- Derleyici tarafından oluşturulan çıkış dosyasının adı.  
+ Derleyici tarafından oluşturulan çıktı dosyasının adı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Komut satırında, derlemeniz için birden çok çıkış dosyası belirtmek mümkündür. Derleyici, **-Out** seçeneğinden sonra bir veya daha fazla kaynak kodu dosyası bulmayı bekler. Ardından, tüm kaynak kodu dosyaları **, bu seçenek** tarafından belirtilen çıkış dosyasına derlenir.  
+ Komut satırında, derlemeniz için birden çok çıktı dosyası belirtmek mümkündür. **Derleyici- out** seçeneğini izleyen bir veya daha fazla kaynak kodu dosyasını bulmayı bekler. Daha sonra, tüm kaynak kodu dosyaları bu **-out** seçeneği tarafından belirtilen çıktı dosyasına derlenir.  
   
  Oluşturmak istediğiniz dosyanın tam adını ve uzantısını belirtin.  
   
- Çıkış dosyasının adını belirtmezseniz:  
+ Çıktı dosyasının adını belirtmezseniz:  
   
-- Bir. exe, **ana** yöntemi içeren kaynak kodu dosyasından adını alır.  
+- Bir .exe adını **Ana** yöntemi içeren kaynak kod dosyasından alır.  
   
-- Bir. dll veya. netmodule adı ilk kaynak kodu dosyasından alır.  
+- Bir .dll veya .netmodule adını ilk kaynak kodu dosyasından alır.  
   
- Bir çıkış dosyası derlemek için kullanılan bir kaynak kodu dosyası, başka bir çıkış dosyasının derlenmesi için aynı derlemede kullanılamaz.  
+ Bir çıktı dosyasını derlemek için kullanılan bir kaynak kodu dosyası, başka bir çıktı dosyasının derlemesi için aynı derlemede kullanılamaz.  
   
- Bir komut satırı derlemesinde birden çok çıkış dosyası üretilirken, yalnızca bir tane çıkış dosyası derleme olabileceğini ve yalnızca ilk çıkış dosyasının (örtük veya açık **olarak ile)** derleme olabileceğini aklınızda bulundurun.  
+ Komut satırı derlemesinde birden çok çıktı dosyası üretirken, çıktı dosyalarından yalnızca birinin derleme olabileceğini ve yalnızca belirtilen ilk çıktı dosyasının (örtülü veya açıkça **-out**ile) derleme olabileceğini unutmayın.  
   
- Bir derlemenin parçası olarak üretilen tüm modüller, derlemede oluşturulan herhangi bir derlemeyle ilişkili dosyalar olur. İlişkili dosyaları görmek üzere derleme bildirimini görüntülemek için [ıldadsm. exe](../../../framework/tools/ildasm-exe-il-disassembler.md) ' yi kullanın.  
+ Derlemenin bir parçası olarak üretilen tüm modüller, derlemede üretilen herhangi bir derlemeyle ilişkili dosyalar haline gelir. İlişkili dosyaları görmek için derleme bildirimini görüntülemek için [ildasm.exe'yi](../../../framework/tools/ildasm-exe-il-disassembler.md) kullanın.  
   
- Bir exe 'nin bir arkadaş derlemenin hedefi olması için-out derleyici seçeneği gereklidir. Daha fazla bilgi için bkz. [Friend derlemeleri](../../../standard/assembly/friend.md).  
+ Exe'nin bir arkadaş derlemesinin hedefi olabilmesi için -out derleyici seçeneği gereklidir. Daha fazla bilgi için [Arkadaş Derlemeleri'ne](../../../standard/assembly/friend.md)bakın.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1. Projenin **Özellikler** sayfasını açın.  
+1. Projenin **Özellikleri** sayfasını açın.  
   
-2. **Uygulama** Özellik sayfasına tıklayın.  
+2. **Uygulama** özelliği sayfasını tıklatın.  
   
-3. **Derleme adı** özelliğini değiştirin.  
+3. Derleme **adı** özelliğini değiştirin.  
   
-     Bu derleyici seçeneğini program aracılığıyla ayarlamak için: <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> , proje türünün (exe, kitaplık, vb.) ve derleme adının bir birleşimiyle belirlenen salt okunurdur. Bu özelliklerden birinin veya her ikisinin de değiştirilmesi, çıkış dosyası adını ayarlamak için gerekli olacaktır.  
+     Bu derleyici seçeneğini programlı olarak <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> ayarlamak için: proje türü (exe, kitaplık vb.) ve derleme adının birleşimi ile belirlenen salt okunur bir özelliktir. Çıktı dosya adını ayarlamak için bu özelliklerden birinin veya her ikisinin değiştirilmesi gerekir.  
   
 ## <a name="example"></a>Örnek  
- Çıkış `t.cs` dosyasını `t.exe`derleyin ve oluşturun `t2.cs` , Ayrıca modül çıkış dosyası `mymodule.netmodule`oluşturup oluşturun:  
+ Derlemek `t.cs` ve çıktı `t.exe`dosyası oluşturmak `t2.cs` gibi oluşturmak ve `mymodule.netmodule`modül çıktı dosyası oluşturmak:  
   
 ```console  
 csc t.cs -out:mymodule.netmodule -target:module t2.cs  

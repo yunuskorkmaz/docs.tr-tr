@@ -1,50 +1,50 @@
 ---
-title: 'Öğretici: .NET Core yerel araçlarını yükleyip kullanın'
-description: .NET aracını yerel bir araç olarak yüklemeyi ve kullanmayı öğrenin.
+title: 'Öğretici: .NET Core yerel araçlarını yükleyin ve kullanın'
+description: Yerel bir araç olarak bir .NET aracını nasıl yükleyip kullanacağınızı öğrenin.
 ms.date: 02/12/2020
 ms.openlocfilehash: a4355886513040e2436bdbd87905e5baee2dd7a5
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156705"
 ---
-# <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>Öğretici: .NET Core CLI kullanarak bir .NET Core yerel aracı yükleyip kullanın
+# <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>Öğretici: .NET Core CLI'yi kullanarak bir .NET Core yerel aracı nı yükleyin ve kullanın
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 3,0 SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 3.0 SDK ve sonraki sürümler
 
-Bu öğretici, yerel bir araç yüklemeyi ve kullanmayı öğretir. [Bu serinin ilk öğreticisinde](global-tools-how-to-create.md)oluşturduğunuz bir aracı kullanırsınız.
+Bu öğretici, yerel bir aracı nasıl yükleyip kullanacağınızı öğretir. [Bu serinin ilk öğretici](global-tools-how-to-create.md)oluşturduğunuz bir araç kullanın.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* [Bu serinin ilk öğreticisini](global-tools-how-to-create.md)doldurun.
-* .NET Core 2,1 çalışma zamanını yükler.
+* Bu [serinin ilk öğretici](global-tools-how-to-create.md)tamamlayın.
+* .NET Core 2.1 çalışma süresini yükleyin.
 
-  Bu öğreticide, .NET Core 2,1 ' i hedefleyen bir araç yükleyip kullanacaksınız, bu yüzden çalışma zamanının makinenizde yüklü olması gerekir. 2,1 çalışma zamanını yüklemek için [.NET Core 2,1 indirme sayfasına](https://dotnet.microsoft.com/download/dotnet-core/2.1) gidin ve **Çalıştır-çalışma zamanı** sütununda çalışma zamanı yükleme bağlantısını bulun.
+  Bu öğretici için .NET Core 2.1'i hedefleyen bir araç yükler ve kullanırsınız, bu nedenle makinenizde çalışma zamanının yüklü olması gerekir. 2.1 çalışma süresini yüklemek için [.NET Core 2.1 indirme sayfasına](https://dotnet.microsoft.com/download/dotnet-core/2.1) gidin ve **Run uygulamaları - Runtime** sütununda çalışma zamanı yükleme bağlantısını bulun.
 
-## <a name="create-a-manifest-file"></a>Bildirim dosyası oluşturma
+## <a name="create-a-manifest-file"></a>Bir bildirim dosyası oluşturma
 
-Yalnızca yerel erişim için bir araç yüklemek üzere (geçerli dizin ve alt dizinler için), bir bildirim dosyasına eklenmelidir.
+Yalnızca yerel erişim için bir araç yüklemek için (geçerli dizin ve alt dizinler için), bir bildirim dosyasına eklenmesi gerekir.
 
-*Microsoft. botsay* klasöründen, *Depo* klasörü için bir düzey yukarı gidin:
+*microsoft.botsay* klasöründen, bir düzeyyukarı depo *klasörüne* gidin:
 
 ```console
 cd ..
 ```
 
-[DotNet yeni](dotnet-new.md) komutunu çalıştırarak bir bildirim dosyası oluşturun:
+[dotnet yeni](dotnet-new.md) komutunu çalıştırarak bir bildirim dosyası oluşturun:
 
 ```dotnetcli
 dotnet new tool-manifest
 ```
 
-Çıktı, dosyanın başarıyla oluşturulmasını gösterir.
+Çıktı, dosyanın başarılı bir şekilde oluşturuldurunan kısmı gösterir.
 
 ```console
 The template "Dotnet local tool manifest file" was created successfully.
 ```
 
-*. Config/DotNet-Tools. JSON* dosyasında henüz araç yok:
+*.config/dotnet-tools.json* dosyasında henüz hiçbir araç bulunmamaktadır:
 
 ```json
 {
@@ -54,19 +54,19 @@ The template "Dotnet local tool manifest file" was created successfully.
 }
 ```
 
-Bir bildirim dosyasında listelenen araçlar geçerli dizin ve alt dizinler için kullanılabilir. Geçerli dizin, bildirim dosyası ile *. config* dizinini içeren bir dizindir.
+Bir bildirim dosyasında listelenen araçlar geçerli dizin ve alt dizinler tarafından kullanılabilir. Geçerli dizin, *.config* dizinini içeren dizindir.
 
-Yerel bir araca başvuran bir CLı komutu kullandığınızda, SDK geçerli dizin ve üst dizinlerde bir bildirim dosyası arar. Bir bildirim dosyası bulursa, ancak dosya başvurulan aracı içermiyorsa, üst dizinlere göre aramaya devam eder. Arama, başvurulan aracı bulduğunda sona erer veya `true`olarak ayarlanmış `isRoot` bir bildirim dosyası bulur.
+Yerel bir araca atıfta bulunan bir CLI komutu kullandığınızda, SDK geçerli dizinde ve üst dizinde bir bildirim dosyası arar. Bir bildirim dosyası bulursa, ancak dosya başvurulan aracı içermiyorsa, ana dizinler aracılığıyla aramaya devam eder. Başvurulan aracı bulduğunda veya `isRoot` `true`'' için ayarlanmış bir manifesto dosyası bulduğunda arama sona erer.
 
-## <a name="install-botsay-as-a-local-tool"></a>Botsay 'ı yerel araç olarak yükler
+## <a name="install-botsay-as-a-local-tool"></a>Botsay'ı yerel bir araç olarak yükleyin
 
-Aracı ilk öğreticide oluşturduğunuz paketten yükleyebilirsiniz:
+Aracı ilk öğreticide oluşturduğunuz paketten yükleyin:
 
 ```dotnetcli
 dotnet tool install --add-source ./microsoft.botsay/nupkg microsoft.botsay
 ```
 
-Bu komut, önceki adımda oluşturduğunuz bildirim dosyasına aracı ekler. Komut çıktısı, yeni yüklenen aracın hangi bildirim dosyasında olduğunu gösterir:
+Bu komut, aracı önceki adımda oluşturduğunuz bildirim dosyasına ekler. Komut çıktısı, yeni yüklenen aracın hangi bildirim dosyasında olduğunu gösterir:
 
  ```console
  You can invoke the tool from this directory using the following command:
@@ -75,7 +75,7 @@ Bu komut, önceki adımda oluşturduğunuz bildirim dosyasına aracı ekler. Kom
  Entry is added to the manifest file /home/name/repository/.config/dotnet-tools.json
  ```
 
-*. Config/DotNet-Tools. JSON* dosyasında artık bir araç vardır:
+*.config/dotnet-tools.json* dosyasının artık bir aracı vardır:
 
 ```json
 {
@@ -94,17 +94,17 @@ Bu komut, önceki adımda oluşturduğunuz bildirim dosyasına aracı ekler. Kom
 
 ## <a name="use-the-tool"></a>Aracı kullanma
 
-*Depo* klasöründen `dotnet tool run` komutunu çalıştırarak aracı çağırın:
+`dotnet tool run` *Depo* klasöründen komutu çalıştırarak aracı çağırın:
 
 ```dotnetcli
 dotnet tool run botsay hello from the bot
 ```
 
-## <a name="restore-a-local-tool-installed-by-others"></a>Başkaları tarafından yüklenen bir yerel aracı geri yükleme
+## <a name="restore-a-local-tool-installed-by-others"></a>Başkaları tarafından yüklenen yerel bir aracı geri yükleme
 
-Genellikle deponun kök dizinine yerel bir araç yüklersiniz. Bildirim dosyasını depoya iade ettikten sonra, diğer geliştiriciler en son bildirim dosyasını alabilir. Bildirim dosyasında listelenen tüm araçları yüklemek için, tek bir `dotnet tool restore` komutu çalıştırabilirler.
+Genellikle deponun kök dizinine yerel bir araç yüklersiniz. Manifesto dosyasını depoya iade ettikten sonra, diğer geliştiriciler en son bildirim dosyasını alabilir. Bildirim dosyasında listelenen tüm araçları yüklemek için tek `dotnet tool restore` bir komut çalıştırabilirsiniz.
 
-1. *. Config/DotNet-Tools. JSON* dosyasını açın ve IÇERIĞINI aşağıdaki JSON ile değiştirin:
+1. *.config/dotnet-tools.json* dosyasını açın ve içindekileri aşağıdaki JSON ile değiştirin:
 
    ```json
    {
@@ -127,11 +127,11 @@ Genellikle deponun kök dizinine yerel bir araç yüklersiniz. Bildirim dosyası
    }
    ```
 
-1. `<name>`, projeyi oluşturmak için kullandığınız adla değiştirin.
+1. Projeyi oluşturmak için kullandığınız adla değiştirin. `<name>`
 
 1. Yaptığınız değişiklikleri kaydedin.
 
-   Bu değişikliğin yapılması, proje dizini için `dotnetsay` başka birisi yüklendikten sonra depodan en son sürümü alma ile aynıdır.
+   Bu değişikliği yapmak, başka biri proje dizininin paketini `dotnetsay` yükledikten sonra depodan en son sürümü almakla aynıdır.
 
 1. `dotnet tool restore` komutunu çalıştırın.
 
@@ -139,7 +139,7 @@ Genellikle deponun kök dizinine yerel bir araç yüklersiniz. Bildirim dosyası
    dotnet tool restore
    ```
 
-   Komut aşağıdaki örnekte olduğu gibi bir çıktı üretir:
+   Komut aşağıdaki örnek gibi çıktı üretir:
 
    ```console
    Tool 'microsoft.botsay' (version '1.0.0') was restored. Available commands: botsay
@@ -147,13 +147,13 @@ Genellikle deponun kök dizinine yerel bir araç yüklersiniz. Bildirim dosyası
    Restore was successful.
    ```
 
-1. Araçların kullanılabilir olduğunu doğrulayın:
+1. Araçların kullanılabilir olduğundan doğrulayın:
 
    ```dotnetcli
    dotnet tool list
    ```
 
-   Çıktı, aşağıdaki örneğe benzer şekilde paketlerin ve komutların listesidir:
+   Çıktı, aşağıdaki örneğe benzer şekilde paketlerin ve komutların bir listesidir:
 
    ```console
    Package Id      Version      Commands       Manifest
@@ -162,7 +162,7 @@ Genellikle deponun kök dizinine yerel bir araç yüklersiniz. Bildirim dosyası
    dotnetsay        2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
    ```
 
-1. Araçları test etme:
+1. Araçları test edin:
 
    ```dotnetcli
    dotnet tool run dotnetsay hello from dotnetsay
@@ -171,24 +171,24 @@ Genellikle deponun kök dizinine yerel bir araç yüklersiniz. Bildirim dosyası
 
 ## <a name="update-a-local-tool"></a>Yerel bir aracı güncelleştirme
 
-Yerel aracın yüklü sürümü `dotnetsay` 2.1.3.  En son sürüm 2.1.4 ' dir. Aracı en son sürüme güncelleştirmek için [DotNet araç Güncelleştir](dotnet-tool-update.md) komutunu kullanın.
+Yerel aracın `dotnetsay` yüklü sürümü 2.1.3'tür.  En son sürümü 2.1.4 olduğunu. Aracı en son sürüme güncellemek için [dotnet araç güncelleştirme](dotnet-tool-update.md) komutunu kullanın.
 
 ```dotnetcli
 dotnet tool update dotnetsay
 ```
 
-Çıkış, yeni sürüm numarasını gösterir:
+Çıktı yeni sürüm numarasını gösterir:
 
 ```console
 Tool 'dotnetsay' was successfully updated from version '2.1.3' to version '2.1.4'
 (manifest file /home/name/repository/.config/dotnet-tools.json).
 ```
 
-Update komutu, paket KIMLIĞINI içeren ilk bildirim dosyasını bulur ve güncelleştirir. Arama kapsamındaki herhangi bir bildirim dosyasında böyle bir paket KIMLIĞI yoksa, SDK en yakın bildirim dosyasına yeni bir giriş ekler. Arama kapsamı, `isRoot = true` bir bildirim dosyası bulunana kadar üst dizinler aracılığıyla çalışır.
+Güncelleştirme komutu, paket kimliğini içeren ilk bildirim dosyasını bulur ve güncelleştirir. Arama kapsamında ki herhangi bir bildirim dosyasında böyle bir paket kimliği yoksa, SDK en yakın bildirim dosyasına yeni bir giriş ekler. Arama kapsamı, bir `isRoot = true` bildirim dosyası bulunana kadar üst dizinler aracılığıyla tamamlanır.
 
-## <a name="remove-local-tools"></a>Yerel araçları kaldır
+## <a name="remove-local-tools"></a>Yerel araçları kaldırma
 
-[DotNet Aracı kaldırma](dotnet-tool-uninstall.md) komutunu çalıştırarak yüklü araçları kaldırın:
+Yüklü araçları [dotnet aracını kaldır](dotnet-tool-uninstall.md) komutunu çalıştırarak kaldırın:
 
 ```dotnetcli
 dotnet tool uninstall microsoft.botsay
@@ -200,8 +200,8 @@ dotnet tool uninstall dotnetsay
 
 ## <a name="troubleshoot"></a>Sorun giderme
 
-Öğreticiyi takip ederken bir hata mesajı alırsanız bkz. [.NET Core araç kullanımı sorunlarını giderme](troubleshoot-usage-issues.md).
+Öğreticiyi izlerken bir hata iletisi alırsanız, [Sorun Giderme .NET Core araç kullanım sorunlarına](troubleshoot-usage-issues.md)bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-Daha fazla bilgi için bkz. [.NET Core araçları](global-tools.md)
+Daha fazla bilgi için [bkz.](global-tools.md)

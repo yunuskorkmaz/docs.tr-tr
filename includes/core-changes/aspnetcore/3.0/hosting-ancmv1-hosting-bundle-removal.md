@@ -1,53 +1,53 @@
 ---
 ms.openlocfilehash: 82103d82a6f68c62f3532608718bc71b0ba126bf
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901985"
 ---
-### <a name="hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle"></a>Barındırma: AspNetCoreModule v1 Windows barındırma paketinden kaldırıldı
+### <a name="hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle"></a>Hosting: AspNetCoreModule V1 Windows Hosting Paketi kaldırıldı
 
-ASP.NET Core 3,0 ' den itibaren Windows barındırma paketi, AspNetCoreModule (ANCM) v1 'yi içermez.
+Core 3.0 ASP.NET başlayarak, Windows Hosting Paketi AspNetCoreModule (ANCM) V1 içermez.
 
-ANCM v2, ANCM OutOfProcess ile geriye dönük olarak uyumludur ve ASP.NET Core 3,0 uygulamalarıyla birlikte kullanılması önerilir.
+ANCM V2, ANCM OutOfProcess ile geriye doğru uyumludur ve ASP.NET Core 3.0 uygulamalarıyla kullanılması önerilir.
 
-Tartışma için bkz. [DotNet/aspnetcore # 7095](https://github.com/dotnet/aspnetcore/issues/7095).
+Tartışma için [dotnet/aspnetcore#7095'e](https://github.com/dotnet/aspnetcore/issues/7095)bakın.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-ANCM v1, Windows barındırma paketi 'ne dahildir.
+ANCM V1, Windows Barındırma Paketi'ne dahildir.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-ANCM v1, Windows barındırma paketi 'ne dahil değildir.
+ANCM V1, Windows Barındırma Paketi'ne dahil değildir.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-ANCM v2, ANCM OutOfProcess ile geriye dönük olarak uyumludur ve ASP.NET Core 3,0 uygulamalarıyla birlikte kullanılması önerilir.
+ANCM V2, ANCM OutOfProcess ile geriye doğru uyumludur ve ASP.NET Core 3.0 uygulamalarıyla kullanılması önerilir.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-ASP.NET Core 3,0 uygulamalarıyla birlikte ANCM v2 kullanın.
+ASP.NET Core 3.0 uygulamalarıyla ANCM V2 kullanın.
 
-ANCM v1 gerekliyse, ASP.NET Core 2,1 veya 2,2 Windows barındırma paketi kullanılarak yüklenebilir.
+ANCM V1 gerekirse, ASP.NET Core 2.1 veya 2.2 Windows Hosting Paketi kullanılarak yüklenebilir.
 
-Bu değişiklik, şu şekilde ASP.NET Core 3,0 uygulamalarını keser:
+Bu değişiklik, Core 3.0 uygulamaları ASP.NET kıracak:
 
-- `<AspNetCoreModuleName>AspNetCoreModule</AspNetCoreModuleName>`ile birlikte ANCM v1 kullanarak açık bir şekilde kabul edildi.
-- `<add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModule" resourceType="Unspecified" />`olan özel bir *Web. config* dosyası olmalıdır.
+- Açıkça ILE ANCM V1 kullanarak `<AspNetCoreModuleName>AspNetCoreModule</AspNetCoreModuleName>`tercih etti.
+- Özel bir *web.config* `<add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModule" resourceType="Unspecified" />`dosyası var.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Core
+ASP.NET Çekirdeği
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-Yok.
+None
 
 <!-- 
 

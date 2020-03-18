@@ -1,20 +1,20 @@
 ---
 title: Docker ve Microsoft Azure kullanarak kapsayıcı uygulamaları tasarlama ve geliştirme
-description: Docker uygulamalarının yaşam döngüsünde geliştirme/tasarım iş yüküne bakalım.
+description: Docker uygulamalarının yaşam döngüsünde Geliştirme/Tasarım iş yükünü n içine alalım.
 ms.date: 02/15/2019
 ms.openlocfilehash: ad7f635feab21cd6e6b31c0b5d43fb2598ffa16c
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70295297"
 ---
-# <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a>Docker ve Microsoft Azure kullanarak Kapsayıcılı uygulamalar tasarlama ve geliştirme
+# <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a>Docker ve Microsoft Azure'u kullanarak kapsayıcı uygulamaları tasarlama ve geliştirme
 
-*Vizyon: Docker ile ölçeklenebilir çözümler tasarlayın ve geliştirin.*
+*Vizyon: Docker'ı göz önünde bulundurarak ölçeklenebilir çözümler tasarlar ve geliştirin.*
 
-*Yalnızca mikro hizmetlere dayalı mimarilere değil, kapsayıcılar için çok sayıda çok büyük kullanım durumu vardır, ancak aynı zamanda çalıştırmak için düzenli hizmetler veya Web uygulamalarınız olduğunda ve geliştirme ve üretim ortamı arasındaki kesintileri azaltmak istediğinizde dağıtımlar.*
+*Konteynerler için çok uygun kullanım örnekleri vardır, sadece mikrohizmetler odaklı mimariler için değil, aynı zamanda sadece düzenli hizmetler veya web uygulamaları çalıştırmak için var ve geliştirme ve üretim ortamı arasındaki sürtüşmeleri azaltmak istiyorum Dağıtım.*
 
 >[!div class="step-by-step"]
 >[Önceki](../Microsoft-platform-tools-containerized-apps/index.md)
->[İleri](design-docker-applications.md)
+>[Sonraki](design-docker-applications.md)

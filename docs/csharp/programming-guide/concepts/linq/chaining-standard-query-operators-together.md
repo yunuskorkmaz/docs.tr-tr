@@ -1,29 +1,29 @@
 ---
-title: Standart sorgu Işleçlerini birlikte zincirleme (C#)
+title: Standart Sorgu Operatörlerini Birlikte Zincirleme (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
 ms.openlocfilehash: 37df654b2bfdcc135460e5ded2ceec1eca33b35a
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204209"
 ---
-# <a name="chaining-standard-query-operators-together-c"></a>Standart sorgu Işleçlerini birlikte zincirleme (C#)
-Bu, [öğreticideki son konudur: Sorguları birlikte sorgulama (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) öğreticisi.  
+# <a name="chaining-standard-query-operators-together-c"></a>Standart Sorgu Operatörlerini Birlikte Zincirleme (C#)
+Bu Öğretici son [konu: Zincirleme Sorgular Birlikte (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) öğretici.  
   
- Standart sorgu işleçleri de birlikte zincirlenebilir. Örneğin, <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> işlecini birbirine bağlayabilirsiniz ve aynı zamanda bir geç şekilde çalışır. Hiçbir ara sonuç tarafından gerçekleştirilmeyeceğini.  
+ Standart sorgu işleçleri de birbirine zincirlenebilir. Örneğin, <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> operatörü arayabilirsiniz ve aynı zamanda tembel bir şekilde çalışır. Hiçbir ara sonuç onun tarafından somutlaştırılamaktadır.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, <xref:System.Linq.Enumerable.Where%2A> yöntemi çağrılmadan `ConvertCollectionToUpperCase`önce çağrılır. Yöntemi, bu `ConvertCollectionToUpperCase` öğreticideki `AppendString`önceki örneklerde kullanılan Lazy yöntemleriyle neredeyse tam olarak aynı şekilde çalışır. <xref:System.Linq.Enumerable.Where%2A>  
+ Bu örnekte, <xref:System.Linq.Enumerable.Where%2A> yöntem aramadan `ConvertCollectionToUpperCase`önce çağrılır. Yöntem, <xref:System.Linq.Enumerable.Where%2A> bu öğreticide önceki örneklerde kullanılan tembel yöntemlerle hemen `ConvertCollectionToUpperCase` `AppendString`hemen aynı şekilde çalışır ve .  
   
- Bunun farkı, bu durumda <xref:System.Linq.Enumerable.Where%2A> yöntem kaynak koleksiyonu aracılığıyla yinelenir, ilk öğenin koşulu geçirmediğini belirler ve sonra geçecek bir sonraki öğeyi alır. Daha sonra ikinci öğeyi verir.  
+ Bir fark, bu durumda, <xref:System.Linq.Enumerable.Where%2A> yöntem in kaynak koleksiyonu üzerinden iterates, ilk öğe nin yüklem geçmiyor belirler ve daha sonra geçmek bir sonraki öğe, alır. Daha sonra ikinci öğeyi verir.  
   
- Ancak, temel düşünce aynıdır: Ara koleksiyonlar, olmaları gerekmedikçe gerçekleştirilmez.  
+ Ancak, temel fikir aynıdır: Ara koleksiyonlar olması gerekmedikçe gerçekleşmez.  
   
- Sorgu ifadeleri kullanıldığında, bunlar standart sorgu işleçleri çağrılarına dönüştürülür ve aynı ilkeler geçerlidir.  
+ Sorgu ifadeleri kullanıldığında, bunlar standart sorgu işleçlerine çağrılara dönüştürülür ve aynı ilkeler uygulanır.  
   
- Bu bölümdeki Office Open XML belgelerini sorgulayan tüm örnekler aynı ilkeyi kullanır. Ertelenmiş yürütme ve yavaş değerlendirme, LINQ (ve LINQ to XML) etkin bir şekilde kullanmak için anlamanız gereken temel kavramlardır.  
+ Office Open XML belgelerini sorgulayan bu bölümdeki tüm örnekler aynı ilkeyi kullanır. Ertelenmiş yürütme ve tembel değerlendirme, LINQ'yi (ve Linq'den XML'e) etkili bir şekilde kullanmak için anlamanız gereken temel kavramlardan bazılarıdır.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -73,7 +73,7 @@ class Program
 }  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```output  
 ToUpper: source >abc<  

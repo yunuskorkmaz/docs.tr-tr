@@ -1,69 +1,69 @@
 ---
-title: using deyimleri- C# başvuru
+title: deyimi kullanarak - C# Reference
 ms.date: 10/15/2019
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
 ms.openlocfilehash: 52cde99fd029ce50f159b2a87fbfbf47fc79dccc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712968"
 ---
-# <a name="using-statement-c-reference"></a>using deyimleri (C# başvuru)
+# <a name="using-statement-c-reference"></a>deyimi kullanarak (C# Reference)
 
-<xref:System.IDisposable> nesnelerinin doğru kullanımını sağlayan uygun bir sözdizimi sağlar.
+<xref:System.IDisposable> Nesnelerin doğru kullanımını sağlayan kullanışlı bir sözdizimi sağlar.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `using` deyimin nasıl kullanılacağını göstermektedir.
+Aşağıdaki örnek, deyimin `using` nasıl kullanılacağını gösterir.
 
 [!code-csharp[csrefKeywordsNamespace#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#4)]
 
-8,0 ile C# başlayarak, küme ayraçları gerektirmeyen `using` bildiri için aşağıdaki alternatif sözdizimini kullanabilirsiniz:
+C# 8.0 ile başlayarak, ayraç gerektirmeyen `using` ifade için aşağıdaki alternatif sözdizimini kullanabilirsiniz:
 
 [!code-csharp[csrefKeywordsNamespace#New](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#ModernUsing)]
 
 ## <a name="remarks"></a>Açıklamalar
 
-<xref:System.IO.File> ve <xref:System.Drawing.Font>, yönetilmeyen kaynaklara erişen yönetilen türlerin örnekleridir (Bu durumda dosya tutamaçları ve cihaz bağlamları). Birçok farklı türde yönetilmeyen kaynak ve bunları kapsülleyen sınıf kitaplığı türleri vardır. Bu tür türler <xref:System.IDisposable> arabirimini gerçekleştirmelidir.
+<xref:System.IO.File>ve <xref:System.Drawing.Font> yönetilmeyen kaynaklara erişen yönetilen türlere örneklerdir (bu durumda dosya işletmek ve aygıt bağlamları). Yönetilmeyen kaynakların ve bunları kapsülleyen sınıf kitaplık türlerinin başka türleri de vardır. Tüm bu tür <xref:System.IDisposable> arabirimi uygulamak gerekir.
 
-Bir `IDisposable` nesnesinin kullanım ömrü tek bir yöntemle sınırlıysa, bunu `using` bildiriminde bildirmeniz ve oluşturmanız gerekir. `using` ifade, nesne üzerinde <xref:System.IDisposable.Dispose%2A> yöntemini doğru şekilde çağırır ve (daha önce gösterildiği gibi kullandığınızda), <xref:System.IDisposable.Dispose%2A> çağrıldığında nesnenin kendisinin kapsam dışına geçmesine da neden olur. `using` bloğunda, nesnesi salt okunurdur ve değiştirilemez ya da yeniden atanamaz.
+Bir `IDisposable` nesnenin ömrü tek bir yöntemle sınırlıysa, `using` bunu ifadede beyan etmeli ve anında bildirmelisiniz. Deyim, `using` nesne <xref:System.IDisposable.Dispose%2A> üzerindeki yöntemi doğru şekilde çağırır ve (daha önce gösterildiği gibi kullandığınızda) nesnenin kendisini de <xref:System.IDisposable.Dispose%2A> çağrıldığı anda kapsam dışına çıkmasına neden olur. `using` Blok içinde, nesne salt okunur ve değiştirilemez veya yeniden atanamaz.
 
-`using` bildiri, `using` bloğunda bir özel durum gerçekleşse bile <xref:System.IDisposable.Dispose%2A> çağırılmasını sağlar. Nesneyi `try` bloğunun içine yerleştirerek ve sonra <xref:System.IDisposable.Dispose%2A> bir `finally` bloğunda çağırarak aynı sonucu elde edebilirsiniz; Aslında `using` deyimin derleyici tarafından çevrilme yöntemi budur. Kod örneği, derleme zamanında aşağıdaki koda genişletilir (nesne için sınırlı kapsam oluşturmak için ek küme ayraçları aklınızda):
+İfade, `using` `using` blok <xref:System.IDisposable.Dispose%2A> içinde bir özel durum oluşsa bile bunun çağrılmasını sağlar. Nesneyi bir `try` bloğun içine koyup bir <xref:System.IDisposable.Dispose%2A> `finally` bloğu arayarak aynı sonuca ulaşabilirsiniz; aslında, `using` bu nasıl ifade derleyici tarafından tercüme edilir. Kod örneği daha önce derleme zamanında aşağıdaki koda genişletir (nesne için sınırlı kapsamı oluşturmak için ekstra kıvırcık ayraçlara dikkat edin):
 
 [!code-csharp[csrefKeywordsNamespace#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#5)]
 
-Yeni `using` deyimin sözdizimi, çok benzer bir koda çevrilir. `try` bloğu, değişkenin bildirildiği yerde açılır. `finally` bloğu, genellikle bir yöntemin sonunda kapsayan bloğun yakın bir tarafında eklenir.
+Yeni `using` ifade sözdizimi çok benzer koda çevirir. Blok, `try` değişkenin beyan edildiği yerde açılır. Blok, `finally` genellikle bir yöntemin sonunda, çevreleyen bloğun kapanışına eklenir.
 
-`try`-`finally` ifadesiyle ilgili daha fazla bilgi için, [try-finally](try-finally.md) konusuna bakın.
+İfade hakkında `try` - daha fazla bilgi [için, try-finally](try-finally.md) konusuna bakın. `finally`
 
-Aşağıdaki örnekte gösterildiği gibi, bir türün birden çok örneği `using` bildiriminde bildirilebilecek:
+Aşağıdaki örnekte gösterildiği gibi, `using` bir türün birden çok örneği deyimde bildirilebilir:
 
 [!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#6)]
 
-Aynı türde birden çok bildirimi, C# 8 ' in yanı sıra sunulan yeni sözdizimini kullanarak birleştirebilirsiniz. Bu, aşağıdaki örnekte gösterilmiştir:
+C# 8 ile tanıtılan yeni sözdizimini kullanarak aynı türdeki birden çok bildirimi de birleştirebilirsiniz. Bu, aşağıdaki örnekte gösterilmiştir:
 
 [!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#MultipleUsing)]
 
-Kaynak nesnesini örnekleyebilirsiniz ve sonra değişkeni `using` ifadesine geçirebilirsiniz, ancak bu en iyi yöntem değildir. Bu durumda, denetim `using` bloğundan ayrıldıktan sonra nesne kapsamda kalır, büyük olasılıkla yönetilmeyen kaynaklarına erişemez. Diğer bir deyişle, artık tam olarak başlatılamaz. Nesneyi `using` bloğunun dışında kullanmaya çalışırsanız, bir özel durumun bir istisna olmasına neden olur. Bu nedenle, `using` deyimindeki nesnenin örneğini oluşturmak ve kapsamını `using` bloğu ile sınırlandırmak genellikle daha iyidir.
+Kaynak nesnesini anında anlayabilir ve sonra değişkeni `using` ifadeye geçirebilirsiniz, ancak bu en iyi uygulama değildir. Bu durumda, denetim `using` bloğu terk ettikten sonra, nesne kapsamda kalır, ancak büyük olasılıkla yönetilmeyen kaynaklarına erişimi yoktur. Başka bir deyişle, artık tam olarak başharfe biçilemedi. Nesneyi `using` bloğun dışında kullanmaya çalışırsanız, bir özel durum atılmasını göze alabilirsiniz. Bu nedenle, `using` genellikle ifadedeki nesneyi anında anlayıp kapsamını blokla `using` sınırlamak genellikle daha iyidir.
 
 [!code-csharp[csrefKeywordsNamespace#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#7)]
 
-`IDisposable` nesnelerini elden atma hakkında daha fazla bilgi için, bkz. [IDisposable uygulayan nesneleri kullanma](../../../standard/garbage-collection/using-objects.md).
+`IDisposable` Nesnelerin atılması hakkında daha fazla bilgi için [bkz.](../../../standard/garbage-collection/using-objects.md)
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için, [ C# dil belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [using ifadesine](~/_csharplang/spec/statements.md#the-using-statement) bakın. Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için [C# Language Specification'daki](/dotnet/csharp/language-reference/language-specification/introduction) [using deyimine](~/_csharplang/spec/statements.md#the-using-statement) bakın. Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../index.md)
+- [C# Referans](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Sözcükleri](index.md)
+- [C# Anahtar Kelimeler](index.md)
 - [using Yönergesi](using-directive.md)
-- [Atık Toplama](../../../standard/garbage-collection/index.md)
+- [Çöp Toplama](../../../standard/garbage-collection/index.md)
 - [IDisposable uygulayan nesneleri kullanma](../../../standard/garbage-collection/using-objects.md)
-- [IDisposable arabirimi](xref:System.IDisposable)
-- [8,0 içinde C# using deyimleri](~/_csharplang/proposals/csharp-8.0/using.md)
+- [IDisposable arayüzü](xref:System.IDisposable)
+- [C# 8.0'da ifade kullanma](~/_csharplang/proposals/csharp-8.0/using.md)

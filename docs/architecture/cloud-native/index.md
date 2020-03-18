@@ -1,82 +1,82 @@
 ---
-title: Azure için Cloud Native .NET uygulamaları tasarlama
-description: Kapsayıcılardan, mikro hizmetlerden ve sunucusuz özelliklerden yararlanarak bulutta yerel uygulamalar oluşturmaya yönelik bir kılavuz.
+title: Azure için Cloud Native .NET Uygulamalarını Temel Alma
+description: Azure'un kapsayıcıları, mikro hizmetler ve sunucusuz özelliklerinden yararlanan bulut tasimi uygulamaları oluşturma kılavuzu.
 author: ardalis
 ms.date: 03/07/2019
 ms.openlocfilehash: 7f14a690d0153edc43f0ce7f4e91c9e9cd2c6858
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71696787"
 ---
-# <a name="architecting-cloud-native-net-applications-for-azure"></a>Azure için Cloud Native .NET uygulamaları tasarlama
+# <a name="architecting-cloud-native-net-applications-for-azure"></a>Azure için Cloud Native .NET Uygulamalarını Temel Alma
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ![kapak resmi](./media/cover.png)
 
-YAYıMLAYAN
+YAYIMLAYAN
 
-Microsoft Geliştirici bölümü, .NET ve Visual Studio ürün ekipleri
+Microsoft Developer Division, .NET ve Visual Studio ürün ekipleri
 
-Microsoft Corporation 'ın bir bölümü
+Microsoft Corporation'ın bir bölümü
 
 One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Telif hakkı © 2019 Microsoft Corporation
+Telif Hakkı © 2019 Microsoft Corporation tarafından
 
-Tüm hakları saklıdır. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
+Tüm hakları saklıdır. Bu kitabın içeriğinin hiçbir bölümü, yayımcının yazılı izni olmadan herhangi bir biçimde veya herhangi bir şekilde çoğaltılamaz veya aktarılamaz.
 
-Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi ifade eder. URL ve diğer Internet Web sitesi başvuruları dahil olmak üzere bu kitapta ifade edilen görünümler, eklentiler ve bilgiler bildirimde bulunmadan değiştirilebilir.
+Bu kitap "olduğu gibi" sağlanır ve yazarın görüş ve görüşlerini ifade eder. URL ve diğer Internet web sitesi referansları da dahil olmak üzere bu kitapta ifade edilen görüşler, görüşler ve bilgiler önceden haber verilmeden değişebilir.
 
-Burada gösterilen bazı örnekler yalnızca gösterim amaçlıdır ve hayal ürünüdür. Hiçbir gerçek ilişkilendirme veya bağlantı amaçlanmaz veya çıkarsanmamalıdır.
+Burada tarif edilen bazı örnekler yalnızca açıklama için sağlanmıştır ve kurgusaldır. Gerçek bir ilişki veya bağlantı amaçlanmamıştır veya böyle bir bağlantı olduğu sonucuna varılmamalıdır.
 
-Microsoft ve "ticari markalar" Web sayfasında https://www.microsoft.com konumunda listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
+Microsoft ve "Ticari https://www.microsoft.com Markalar" web sayfasında listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
 
-Mac ve macOS, Apple Inc. ' in ticari markalarıdır.
+Mac ve macOS, Apple Inc. şirketinin ticari markalarıdır.
 
-Docker balina logosu,, izin tarafından kullanılan Docker, Inc. ' in tescilli ticari markasıdır.
+Docker balina logosu, Docker, Inc. şirketinin izni yle kullanılan tescilli ticari markasıdır.
 
-Diğer tüm işaretler ve amblemler kendi sahiplerinin mülkiyetindedir.
+Diğer tüm işaretler ve logolar ilgili sahiplerinin mülkiyetindedir.
 
-Düzenliyor
+Yazar:
 
-> **Steve "ardalış" Smith** -yazılım mimarı ve trainer- [Ardalis.com](https://ardalis.com)
+> **Steve "ardalis" Smith** - Yazılım Mimarı ve Eğitmen - [Ardalis.com](https://ardalis.com)
 >
-> **Ramiz Vettor** -Microsoft-asıl bulut sistem MIMARı/IP mimarı- [RobVettor.com](https://robvettor.com)
+> **Rob Vettor** - Microsoft - Baş Bulut Sistemi Mimarı/IP Mimarı - [RobVettor.com](https://robvettor.com)
 
-Katılımcılar ve gözden geçirenler:
+Katılımcılar ve Gözden Geçirenler:
 
-> **Cesar de La Torre**, sorumlu Program Yöneticisi, .NET ekibi, Microsoft
+> **Cesar De la Torre**, Baş Program Yöneticisi, .NET ekibi, Microsoft
 >
-> **Hayvan anıl**, SR. Program Yöneticisi, .NET ekibi, Microsoft
+> **Nish Anıl**, Sr. Program Yöneticisi, .NET ekibi, Microsoft
 
-Edit
+Editörler:
 
-> **Maira Wenzel**, SR. Content Developer, .NET ekibi, Microsoft
+> **Maira Wenzel**, Sr. İçerik Geliştirici, .NET ekibi, Microsoft
 
-## <a name="who-should-use-this-guide"></a>Bu kılavuzu kimler kullanmalıdır?
+## <a name="who-should-use-this-guide"></a>Bu kılavuzu kimler kullanmalı?
 
-Bu kılavuzun hedef kitlesi, bulut için tasarlanan uygulamaları oluşturmayı öğrenmede ilgilenen geliştiriciler, geliştirme liderleri ve mimarilere yöneliktir.
+Bu kılavuzun hedef kitlesi ağırlıklı olarak geliştiriciler, geliştirme yol gösterici ve bulut için tasarlanmış uygulamaların nasıl inşa edilebildiğini öğrenmek isteyen mimarlardır.
 
-İkincil hedef kitle, bulut Yerel bir yaklaşım kullanarak uygulamalarını oluşturmayı planlayan teknik karar mekanizmalarıdır.
+İkinci bir hedef kitle, bulut açi tabanlı bir yaklaşım kullanarak uygulamalarını oluşturup oluşturmayacağını seçmeyi planlayan teknik karar vericilerdir.
 
-## <a name="how-you-can-use-this-guide"></a>Bu Kılavuzu nasıl kullanabileceğiniz
+## <a name="how-you-can-use-this-guide"></a>Bu kılavuzu nasıl kullanabilirsiniz?
 
-Bu kılavuz, bulut Native 'i tanımlayarak başlar ve bulut Yerel ilkeleri ve teknolojileri kullanılarak oluşturulan bir başvuru uygulaması ile tanışın. Bu ilk iki bölüm dışında, kitabın geri kalanı, bulut Yerel uygulamalarının çoğunda ortak olan konulara odaklanan belirli bölümlere ayrılır. Aşağıdaki gibi, buluta özgü yaklaşımlar hakkında bilgi edinmek için şu bölümlerden birine atlayabilirsiniz:
+Bu kılavuz, bulut ayarı tanımlayan ve bulut adajilkeleri ve teknolojileri kullanılarak oluşturulmuş bir başvuru uygulaması sunarak başlar. Bu ilk iki bölümün ötesinde, kitabın geri kalanı bulut tabanlı uygulamaların çoğunda ortak olan konulara odaklanan belirli bölümlere ayrılmıştır. Bulut ait yaklaşımlar hakkında bilgi edinmek için bu bölümlerden herhangi biri için atlayabilirsiniz:
 
 - Veri ve veri erişimi
-- İletişim desenleri
-- Ölçeklendirme ve ölçeklenebilirlik
-- Uygulama dayanıklılığı
+- Kimlik doğrulaması desenleri
+- Ölçekleme ve ölçeklenebilirlik
+- Uygulama esnekliği
 - İzleme ve sistem durumu
 - Kimlik ve güvenlik
 - DevOps
 
-Bu kılavuz hem PDF form hem de çevrimiçi olarak kullanılabilir. Bu konu başlıklarının yaygın olarak anlaşılmasına yardımcı olmak için bu belgeyi veya çevrimiçi sürümünün bağlantısını ekibinize iletmekten çekinmeyin. Bu konuların çoğu, temel ilkelerin ve desenlerin tutarlı bir şekilde anlaşılmasından ve bu konularla ilgili kararlara dahil olan kararların dengelerinden yararlanır. Bu belge ile olan amacınız, donatı ekiplerine ve liderlerine, uygulamalarının mimarisine, geliştirmeye ve barındırılmasına yönelik iyi bilinçli kararlar vermek için ihtiyaç duydukları bilgileri sunmaktır.
+Bu kılavuz hem PDF formunda hem de çevrimiçi olarak mevcuttur. Bu konuların ortak bir şekilde anlaşılmasını sağlamaya yardımcı olmak için bu belgeyi veya çevrimiçi sürümüne bağlantılar iletmekten çekinmeyin. Bu konuların çoğu, temel ilke ve örüntülerin tutarlı bir şekilde anlaşılmasının yanı sıra, bu konularla ilgili kararlarda yer alan dengelerden yararlanır. Bu belge ile amacımız, takımları ve liderlerini, uygulamalarının mimarisi, gelişimi ve barındırması için bilinçli kararlar almak için ihtiyaç duydukları bilgilerle donatmaktır.
 
 >[!div class="step-by-step"]
->[Next](introduction.md)
+>[Sonraki](introduction.md)

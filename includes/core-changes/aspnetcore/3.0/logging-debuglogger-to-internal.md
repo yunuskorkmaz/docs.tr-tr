@@ -1,33 +1,33 @@
 ---
 ms.openlocfilehash: 958dede03e1c15f69f4ee676f13713ff43c29e96
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393920"
 ---
-### <a name="logging-debuglogger-class-made-internal"></a>Günlüğe kaydetme: Debuggünlükçü sınıfı iç oluşturulmuş
+### <a name="logging-debuglogger-class-made-internal"></a>Günlük: DebugLogger sınıfı dahili yaptı
 
-ASP.NET Core 3,0 ' dan önce `DebugLogger` ' dan `public` ' e kadar olan erişim değiştiricisi. ASP.NET Core 3,0 ' de, erişim değiştiricisi `internal` olarak değiştirilmiştir.
+Core 3.0ASP.NET önce, `DebugLogger`'erişim değiştirici `public`oldu. ASP.NET Core 3.0'da erişim değiştirici `internal`.'
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3.0
+3,0
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Değişiklik şu şekilde yapılıyor:
+Değişiklik şu şekilde yapılmaktadır:
 
-* @No__t-0 gibi diğer günlükçü uygulamalarıyla tutarlılığı zorunlu tutun.
-* API yüzeyini küçültün.
+* `ConsoleLogger`Diğer logger uygulamaları yla tutarlılığı zorlar.
+* API yüzeyini azaltın.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Hata ayıklama günlüğünü etkinleştirmek için <xref:Microsoft.Extensions.Logging.DebugLoggerFactoryExtensions.AddDebug%2A> `ILoggingBuilder` genişletme yöntemini kullanın. <xref:Microsoft.Extensions.Logging.Debug.DebugLoggerProvider>, hizmetin el ile kaydedilmesi gereken olayda hala `public` ' i de.
+Hata <xref:Microsoft.Extensions.Logging.DebugLoggerFactoryExtensions.AddDebug%2A> `ILoggingBuilder` ayıklama günlüğe kaydetmeyi etkinleştirmek için uzantı yöntemini kullanın. <xref:Microsoft.Extensions.Logging.Debug.DebugLoggerProvider>hizmetin `public` el ile kaydedilmesi gerektiğinde de devam etmektedir.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Core
+ASP.NET Çekirdeği
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

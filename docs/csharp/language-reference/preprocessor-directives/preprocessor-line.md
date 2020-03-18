@@ -1,5 +1,5 @@
 ---
-title: '#satır C# başvurusu'
+title: '#çizgi - C# Referans'
 ms.date: 07/20/2015
 f1_keywords:
 - '#line'
@@ -7,17 +7,17 @@ helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
 ms.openlocfilehash: 79033fa652af62c76d54737fbf0a0b47cf3aae99
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712500"
 ---
 # <a name="line-c-reference"></a>#line (C# Başvurusu)
 
-`#line`, derleyicinin satır numaralandırmasını ve (isteğe bağlı olarak) dosya adı çıktısını hatalar ve uyarılar için değiştirmenize olanak sağlar.
+`#line`hatalar ve uyarılar için derleyicinin satır numaralandırmasını ve (isteğe bağlı olarak) dosya adı çıktısını değiştirmenizi sağlar.
 
-Aşağıdaki örnek, satır numaralarıyla ilişkili iki uyarıyı nasıl bildirekullanacağınızı gösterir. `#line 200` yönergesi sonraki satırın numarasını 200 olarak zorlar (varsayılan değer #6 olur) ve sonraki `#line` yönergesine kadar dosya adı "özel" olarak raporlanır. `#line default` yönergesi, önceki yönerge tarafından yeniden numaralandırılmış satırları sayan varsayılan numaralandırmaya satır numaralandırmayı döndürür.
+Aşağıdaki örnek, satır numaralarıyla ilişkili iki uyarının nasıl raporedilen gösteriş olduğunu gösterir. Yönerge, `#line 200` bir sonraki satırın numarasını 200 olmaya zorlar (varsayılan `#line` #6 olmasına rağmen) ve bir sonraki yönergeye kadar dosya adı "Özel" olarak bildirilir. Yönerge, `#line default` satır numarasını varsayılan numaralandırmasına döndürür ve bu satırlar önceki yönerge tarafından yeniden numaralandırılır.
 
 ```csharp
 class MainClass
@@ -50,19 +50,19 @@ MainClass.cs(13,16): warning CS0168: The variable 'd' is declared but never used
 
 ## <a name="remarks"></a>Açıklamalar
 
-`#line` yönergesi, yapı işlemindeki otomatik, ara bir adımda kullanılabilir. Örneğin, satır orijinal kaynak kodu dosyasından kaldırılmışsa, ancak derleyicinin dosyadaki özgün satır numaralandırmasını temel alarak çıkış oluşturmasını istiyorsanız, satırları kaldırabilir ve ardından `#line`orijinal satır numaralandırmasının benzetimini yapabilirsiniz.
+Yönerge, `#line` yapı işleminde otomatik, ara adımda kullanılabilir. Örneğin, satırlar özgün kaynak kodu dosyasından kaldırıldıysa, ancak yine de derleyicinin dosyadaki özgün satır numaralandırmasına dayalı çıktı oluşturmasını istediyseniz, satırları kaldırabilir ve özgün satır numaralandırmasını simüle `#line`edebilirsiniz.
 
-`#line hidden` yönergesi, hata ayıklayıcıdan ardışık satırları gizler, örneğin, geliştirici kodda, bir `#line hidden` ve bir sonraki `#line` yönergesi arasındaki herhangi bir satır (başka bir `#line hidden` yönergesi olmadığı varsayılırsa), bu yana bir adım daha alınır. Bu seçenek, ASP.NET 'in Kullanıcı tanımlı ve makine tarafından oluşturulan kodla ayırt edilmesine imkan tanımak için de kullanılabilir. ASP.NET bu özelliğin birincil tüketicisi olsa da, büyük olasılıkla daha fazla kaynak oluşturanlar bunu kullanacaktır.
+Yönerge, `#line hidden` geliştirici kod boyunca adım attığında, a `#line hidden` ve sonraki `#line` yönerge arasındaki tüm satırların (başka bir `#line hidden` yönerge olmadığını varsayarak) üzerine adım atacağı şekilde, ardışık satırları hata ayıklayıcıdan gizler. Bu seçenek, ASP.NET kullanıcı tanımlı ve makine tarafından oluşturulan kod arasında ayrım yapmak için de kullanılabilir. ASP.NET bu özelliğin birincil tüketici olmasına rağmen, daha fazla kaynak jeneratörleri bunu kullanmak olasıdır.
 
-`#line hidden` yönergesi, hata raporlamadaki dosya adlarını veya satır numaralarını etkilemez. Diğer bir deyişle, gizli bir blokta bir hata ile karşılaşılırsa, derleyici geçerli dosya adı ve hatanın satır numarasını bildirir.
+Yönerge, `#line hidden` hata bildiriminde dosya adlarını veya satır numaralarını etkilemez. Diğer bir deyişle, gizli bir blokta bir hatayla karşılaşılırsa, derleyici geçerli dosya adını ve hatanın satır numarasını bildirir.
 
-`#line filename` yönergesi, derleyici çıkışında görünmesini istediğiniz dosya adını belirtir. Varsayılan olarak, kaynak kodu dosyasının gerçek adı kullanılır. Dosya adı çift tırnak işareti ("") içinde olmalı ve önünde bir satır numarası gelmelidir.
+Yönerge, `#line filename` derleyici çıktısında görünmesini istediğiniz dosya adını belirtir. Varsayılan olarak, kaynak kodu dosyasının gerçek adı kullanılır. Dosya adı çift tırnak işaretleri ("") olmalıdır ve bir satır numarası önce olmalıdır.
 
-Kaynak kodu dosyasında herhangi bir sayıda `#line` yönergesi olabilir.
+Kaynak kod dosyasında `#line` herhangi bir sayıda yönerge olabilir.
 
 ## <a name="example-1"></a>Örnek 1
 
-Aşağıdaki örnek, hata ayıklayıcının koddaki gizli satırları nasıl yoksaydığı gösterilmektedir. Örneği çalıştırdığınızda üç satırlık metin görüntülenir. Ancak, örnekte gösterildiği gibi bir kesme noktası ayarladığınızda ve kodun içinde ilerlemek için F10 'e bastığınızda, hata ayıklayıcının gizli çizgiyi yoksaydığına dikkat edin. Ayrıca, gizli satırda bir kesme noktası ayarlasanız bile hata ayıklayıcının yok saymaya devam ettiğini unutmayın.
+Aşağıdaki örnek, hata ayıklayıcının koddaki gizli satırları nasıl yoksaydığını gösterir. Örneği çalıştırdığınızda, üç metin satırı görüntülenir. Ancak, örnekte gösterildiği gibi bir kesme noktası ayarladığınızda ve kodu geçmek için F10 tuşuna bastığınızda, hata ayıklayıcının gizli satırı yok saydığını fark esiniz. Gizli çizgide bir kesme noktası ayarlasanız bile hata ayıklamanın yine de yok sayacağına dikkat edin.
 
 ```csharp
 // preprocessor_linehidden.cs
@@ -82,6 +82,6 @@ class MainClass
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../index.md)
+- [C# Referans](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Ön İşlemci Yönergeleri](./index.md)
+- [C# Önİşleme İşlemciler Direktifleri](./index.md)

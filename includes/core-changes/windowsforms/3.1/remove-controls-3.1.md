@@ -1,20 +1,20 @@
 ---
 ms.openlocfilehash: 10811a90887624a731c58d557e1dd196ae2c9207
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/22/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76508556"
 ---
 ### <a name="removed-controls"></a>Kaldırılan denetimler
 
-.NET Core 3,1 ' den başlayarak bazı Windows Forms denetimleri artık kullanılamaz.
+.NET Core 3.1'den başlayarak, bazı Windows Forms denetimleri artık kullanılamaz.
 
-#### <a name="change-description"></a>Açıklamayı Değiştir
+#### <a name="change-description"></a>Açıklamayı değiştir
 
-.NET Core 3,1 ile başlayarak, çeşitli Windows Forms denetimleri artık kullanılamaz. Daha iyi tasarım ve destek içeren değiştirme denetimleri .NET Framework 2,0 ' de sunulmuştur. Kullanım dışı bırakılan denetimler daha önce Tasarımcı araç kutularından kaldırılmıştır ancak yine de kullanılabilir.
+.NET Core 3.1'den başlayarak, çeşitli Windows Forms denetimleri artık kullanılamaz. .NET Framework 2.0'da daha iyi tasarım ve desteğe sahip yedek denetimler tanıtıldı. Amortismana alınan denetimler daha önce tasarımcı araç kutularından kaldırılmış, ancak yine de kullanılabilir.
 
-Aşağıdaki türler artık kullanılamaz:
+Aşağıdaki türler artık kullanılamıyor:
 
 - <xref:System.Windows.Forms.Menu>
 - <xref:System.Windows.Forms.Menu.MenuItemCollection>
@@ -45,23 +45,23 @@ Aşağıdaki türler artık kullanılamaz:
 - <xref:System.Windows.Forms.DataGrid.HitTestType>
 - <xref:System.Windows.Forms.Design.IMenuEditorService>
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
 3.1
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Her kaldırılan denetimin önerilen bir değiştirme denetimi vardır. Aşağıdaki tabloya bakın:
+Kaldırılan her denetimin önerilen değiştirme denetimi vardır. Aşağıdaki tabloya bakın:
 
-| Kaldırılan denetim (API) | Önerilen değiştirme | Kaldırılan ilişkili API 'Ler |
+| Kaldırılan denetim (API) | Önerilen değiştirme | Kaldırılan İlişkili API'ler |
 |-|-|-|
-| DataGrid | DataGridView | DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, DataGridLineStyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType |
-| ToolBar | ToolStrip | Araç Barappearance |
-| ToolBarButton | ToolStripButton | Toolbarbuttonkerkeventargs, Toolbarbuttonclick Kerkeventhandler, ToolBarButtonStyle, ToolBarTextAlign|
+| DataGrid | Datagridview | DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, DataGridLineStyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType |
+| ToolBar | ToolStrip | Araç Çubuğu Görünümü |
+| Toolbarbutton | Toolstripbutton | ToolBarButtonClickEventArgs, ToolBarButtonClickEventHandler, ToolBarButtonStyle, ToolBarTextAlign|
 | ContextMenu | ContextMenuStrip | |
-| Menü | ToolStripDropDown, ToolStripDropDownMenu | MenuItemCollection |
-| MainMenu | MenuStrip | |
-| MenuItem | ToolStripMenuItem | |
+| Menü | ToolStripDropDown, ToolStripDropDownMenu | Menuıtemcollection |
+| Mainmenu | MenuStrip | |
+| MenuItem | Toolstripmenuıtem | |
 
 #### <a name="category"></a>Kategori
 

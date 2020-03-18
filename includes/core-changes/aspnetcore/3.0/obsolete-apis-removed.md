@@ -1,34 +1,34 @@
 ---
 ms.openlocfilehash: b4a20599ce6b7d8fd642e4f0e5b5f7d3fbcdac92
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394164"
 ---
-### <a name="obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed"></a>Kullanılmayan Antiforgery, CORS, tanılama, MVC ve yönlendirme API 'Leri kaldırıldı
+### <a name="obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed"></a>Eski Antiforgery, CORS, Teşhis, MVC ve Yönlendirme API'leri kaldırıldı
 
-ASP.NET Core 2,2 ' deki eski Üyeler ve uyumluluk anahtarları kaldırılmıştır.
+ASP.NET Core 2.2'deki eski üyeler ve uyumluluk anahtarları kaldırıldı.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3.0
+3,0
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Zaman içinde API yüzeyi geliştirmesi.
+Zaman içinde API yüzeyinin iyileştirilmesi.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-.NET Core 2,2 hedeflenirken, yeni API 'Leri benimsemek için eski derleme iletilerinde yer alan yönergeleri izleyin.
+.NET Core 2.2'yi hedeflerken, yeni API'leri benimsemek için eski yapı iletilerinde kılavuzu izleyin.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Core
+ASP.NET Çekirdeği
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-Aşağıdaki türler ve Üyeler ASP.NET Core 2,1 ve 2,2 için eski olarak işaretlendi:
+Aşağıdaki türleri ve üyeleri ASP.NET Core 2.1 ve 2.2 için eski olarak işaretlenmiştir:
 
 **Türler**
 
@@ -79,7 +79,7 @@ Aşağıdaki türler ve Üyeler ASP.NET Core 2,1 ve 2,2 için eski olarak işare
 - <xref:Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.%23ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Caching.Memory.IMemoryCache,System.Text.Encodings.Web.HtmlEncoder,System.Text.Encodings.Web.JavaScriptEncoder,Microsoft.AspNetCore.Mvc.Routing.IUrlHelperFactory)?displayProperty=fullName>
 - <xref:Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.RazorPageAdapter.%23ctor(Microsoft.AspNetCore.Mvc.Razor.RazorPageBase)?displayProperty=fullName>
 
-**Veri Erişimi**
+**Özellikler**
 
 - <xref:Microsoft.AspNetCore.Antiforgery.AntiforgeryOptions.CookieDomain?displayProperty=fullName>
 - <xref:Microsoft.AspNetCore.Antiforgery.AntiforgeryOptions.CookieName?displayProperty=fullName>

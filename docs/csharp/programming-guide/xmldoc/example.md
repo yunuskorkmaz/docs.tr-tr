@@ -1,5 +1,5 @@
 ---
-title: <example> - C# Programlama Kılavuzu
+title: <example> - C# programlama kılavuzu
 ms.date: 07/20/2015
 f1_keywords:
 - <example>
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
 ms.openlocfilehash: 615eccbc427b6a5bbbed061acd0c8b0b9be7f46c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789812"
 ---
-# <a name="example-c-programming-guide"></a>\<örnek > (C# Programlama Kılavuzu)
+# <a name="example-c-programming-guide"></a>\<örnek> (C# programlama kılavuzu)
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,9 +31,9 @@ ms.locfileid: "76789812"
 
 ## <a name="remarks"></a>Açıklamalar
 
-\<örnek > etiketi, bir yöntemin veya diğer kitaplık üyesinin nasıl kullanılacağına ilişkin bir örnek belirtmenize olanak tanır. Bu genellikle [\<kodu >](./code.md) etiketinin kullanılmasını içerir.
+Örnek \<> etiketi, bir yöntemin veya diğer kitaplık üyesinin nasıl kullanılacağına ilgili bir örnek belirtmenize olanak tanır. Bu genellikle [ \<kod>](./code.md) etiketini kullanmayı içerir.
 
-Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
+Belge yorumlarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derle.
 
 ## <a name="example"></a>Örnek
 
@@ -42,4 +42,4 @@ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-refere
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Belge açıklamaları için önerilen Etiketler](./recommended-tags-for-documentation-comments.md)
+- [Belge açıklamaları için önerilen etiketler](./recommended-tags-for-documentation-comments.md)

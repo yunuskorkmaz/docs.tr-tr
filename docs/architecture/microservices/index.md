@@ -1,96 +1,96 @@
 ---
-title: .NET mikro hizmetleri. Kapsayıcılı .NET Uygulamaları Mimarisi
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmetler modüler ve bağımsız olarak dağıtılabilir hizmetlerdir. Docker Kapsayıcıları (Linux ve Windows için), bir hizmet ve bağımlılıklarını tek bir birim halinde paketleyerek dağıtım ve test etmeyi basitleştirir. Bu, daha sonra yalıtılmış bir ortamda çalıştırılır.
+title: .NET MikroHizmetler. Kapsayıcılı .NET Uygulamaları Mimarisi
+description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Mikro hizmetler modüler ve bağımsız olarak dağıtılabilir hizmetlerdir. Docker kapsayıcıları (Linux ve Windows için), bir hizmeti ve bağımlılıklarını tek bir birime birleştirerek dağıtım ve sınamayı basitleştirir ve bu da daha sonra yalıtılmış bir ortamda çalıştırılır.
 ms.date: 01/30/2020
 ms.openlocfilehash: 1337fe56e78e03a85627737bd52a089fd946b842
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77543540"
 ---
-# <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET mikro hizmetleri: Kapsayıcılı .NET uygulamaları için mimari
+# <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET Mikro Hizmetleri: Kapsayıcılı .NET Uygulamaları Mimarisi
 
 ![Kitap kapağı](./media/cover-small.png)
 
-**Sürüm v 3.1** -ASP.NET Core 3,1 ' ye güncelleştirildi
+**EDITION v3.1** - Core 3.1 ASP.NET güncellendi
 
-Bu kılavuz, mikro hizmet tabanlı uygulamalar geliştirmeye ve kapsayıcıları kullanarak bunları yönetmeye yönelik bir giriş niteliğindedir. .NET Core ve Docker Kapsayıcıları kullanılarak mimari tasarımı ve uygulama yaklaşımlarını ele alır.
+Bu kılavuz, mikrohizmetlere dayalı uygulamalar geliştirmeye ve bunları kapsayıcılar kullanarak yönetmeye giriştir. .NET Core ve Docker kaplarını kullanarak mimari tasarım ve uygulama yaklaşımlarını tartışır.
 
-Daha kolay çalışmaya başlamak için kılavuz, keşfedebileceğiniz bir başvuru Kapsayıcılı ve mikro hizmet tabanlı uygulamaya odaklanır. Başvuru uygulaması [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers) GitHub deposunda mevcuttur.
+Daha kolay başlamak için, kılavuz keşfedebilirsiniz bir referans konteyner ve mikrohizmet tabanlı uygulama odaklanır. Referans uygulaması [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) GitHub repo mevcuttur.
 
 ## <a name="action-links"></a>Eylem bağlantıları
 
-- Bu e-kitap ayrıca bir PDF biçiminde (Yalnızca Ingilizce sürüm) [indirilebilir](https://aka.ms/microservicesebook)
+- Bu e-kitap pdf formatında da mevcuttur (yalnızca İngilizce sürüm) [İndirin](https://aka.ms/microservicesebook)
 
-- [GitHub 'daki başvuru uygulaması Eshoponcontainers 'ı](https://github.com/dotnet-architecture/eShopOnContainers) kopyalama/çatal
+- Clone / Fork github üzerinde referans uygulaması [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
 
-- [Kanal 9 ' da tanıtım videosunu](https://aka.ms/microservices-video) izleyin
+- Kanal [9'da tanıtım videosunu](https://aka.ms/microservices-video) izleyin
 
-- [Mikro hizmet mimarisini](https://aka.ms/MicroservicesArchitecture) hemen öğrenin
+- [Microservices Mimarisini](https://aka.ms/MicroservicesArchitecture) hemen tanıyın
 
 ## <a name="introduction"></a>Giriş
 
-Kuruluşlar daha fazla maliyet tasarrufu, dağıtım sorunlarını çözme ve kapsayıcıları kullanarak DevOps ve üretim işlemlerini geliştirme. Microsoft, Azure Kubernetes hizmeti ve Azure Service Fabric gibi ürünler oluşturarak ve Docker, Mesosphere ve Kubernetes gibi sektör liderleriyle işbirliği yaparak Windows ve Linux için kapsayıcı yenilikleri yayımlamaktadır. Bu ürünler, şirketlerin bulut hızında ve ölçekte uygulama oluşturup dağıtmalarına yardımcı olan kapsayıcı çözümleri sunar.
+İşletmeler giderek maliyet tasarrufu gerçekleştirerek, dağıtım sorunlarını çözüyor ve devops ve üretim operasyonlarını kapsayıcılar kullanarak geliştiriyor. Microsoft, Azure Kubernetes Service ve Azure Service Fabric gibi ürünler oluşturarak ve Docker, Mezossphere ve Kubernetes gibi sektör liderleriyle ortaklık kurarak Windows ve Linux için kapsayıcı yenilikleri yayımlamaktadır. Bu ürünler, şirketlerin platform veya araç seçenekleri ne olursa olsun bulut hızında ve ölçekte uygulamalar oluşturmalarına ve dağıtmalarına yardımcı olan konteyner çözümleri sunar.
 
-Docker, Windows ve Linux ekosistemlerindeki en önemli satıcılar tarafından desteklenen kapsayıcı sektöründe standart bir standart haline geliyor. (Microsoft, Docker destekleyen ana bulut satıcılarından biridir.) Gelecekte Docker, büyük olasılıkla buluttaki veya Şirket içindeki herhangi bir veri merkezinde yer alır.
+Docker, Windows ve Linux ekosistemlerinin en önemli satıcıları tarafından desteklenen konteyner endüstrisinde fiili standart haline gelmektedir. (Microsoft, Docker'ı destekleyen ana bulut satıcılarından biridir.) Gelecekte, Docker muhtemelen bulut veya şirket içinde herhangi bir veri merkezinde her yerde olacak.
 
-Ayrıca, [mikro hizmetler](https://martinfowler.com/articles/microservices.html) mimarisi, dağıtılmış görev açısından kritik uygulamalar için önemli bir yaklaşım olarak gelişmekte. Mikro hizmet tabanlı bir mimaride, uygulama, bağımsız olarak geliştirilen, test edilmiş, dağıtılan ve sürümü tutulan bir hizmetler koleksiyonu üzerine kurulmuştur.
+Buna ek olarak, [mikro hizmetler](https://martinfowler.com/articles/microservices.html) mimarisi dağıtılmış görev kritik uygulamalar için önemli bir yaklaşım olarak ortaya çıkmaktadır. Mikro hizmet tabanlı bir mimaride uygulama, geliştirilebilen, sınanabilen, dağıtılabilen ve bağımsız olarak sürülenebilen hizmetler koleksiyonu üzerine inşa edilmiştir.
 
 ## <a name="about-this-guide"></a>Bu kılavuz hakkında
 
-Bu kılavuz, mikro hizmet tabanlı uygulamalar geliştirmeye ve kapsayıcıları kullanarak bunları yönetmeye yönelik bir giriş niteliğindedir. .NET Core ve Docker Kapsayıcıları kullanılarak mimari tasarımı ve uygulama yaklaşımlarını ele alır. Kapsayıcılar ve mikro hizmetlerle çalışmaya başlamanızı kolaylaştırmak için, rehber, keşfedebileceğiniz bir başvuru Kapsayıcılı ve mikro hizmet tabanlı uygulamaya odaklanır. Örnek uygulama [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers) GitHub deposunda mevcuttur.
+Bu kılavuz, mikrohizmetlere dayalı uygulamalar geliştirmeye ve bunları kapsayıcılar kullanarak yönetmeye giriştir. .NET Core ve Docker kaplarını kullanarak mimari tasarım ve uygulama yaklaşımlarını tartışır. Konteynerler ve mikro hizmetlerle daha kolay başlamak için kılavuz, keşfedebileceğiniz bir referans konteynerve mikrohizmet tabanlı bir uygulamaya odaklanır. Örnek uygulama [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) GitHub repo mevcuttur.
 
-Bu kılavuzda, temel olarak iki teknolojiyi içeren bir geliştirme ortamı düzeyinde temel geliştirme ve mimari yönergeler sunulmaktadır: Docker ve .NET Core. Amaç, üretim ortamınızın altyapısına (bulut veya şirket içi) odaklanmadan uygulama tasarımınız hakkında düşünce yaparken bu kılavuzu okuduğunuzdan emin olur. Daha sonra, üretime yönelik uygulamalar oluşturduğunuzda altyapınızla ilgili kararlar alırsınız. Bu nedenle, bu kılavuzun altyapı belirsiz ve daha fazla geliştirme ortamı merkezli olması amaçlanmıştır.
+Bu kılavuz, temel geliştirme ve mimari rehberlik temel iki teknoloji: Docker ve .NET Core odaklanarak bir geliştirme ortamı düzeyinde öncelikle sağlar. Amacımız, üretim ortamınızın altyapısına (bulut veya şirket içi) odaklanmadan uygulama tasarımınızı düşünürken bu kılavuzu okumanızdır. Üretime hazır uygulamalarınızı oluşturduğunuzda altyapınızla ilgili kararları daha sonra vereceksiniz. Bu nedenle, bu kılavuz altyapı agnostik ve daha fazla geliştirme-çevre merkezli olması amaçlanmıştır.
 
-Bu kılavuzu araştırdık aldıktan sonra, bir sonraki adımınız Microsoft Azure üzerinde üretime Ready mikro hizmetler hakkında bilgi almak için olacaktır.
+Bu kılavuzu inceledikten sonra, bir sonraki adımınız Microsoft Azure'da üretime hazır mikro hizmetler hakkında bilgi edinmek olacaktır.
 
 ## <a name="version"></a>Sürüm
 
-Bu kılavuz, .NET Core 3,1 sürümüyle aynı "Wave" teknolojileri (Azure ve ek üçüncü taraf teknolojileri) ile ilgili birçok ek güncelleştirme ile birlikte **.net core 3,1** sürümünü kapsayacak şekilde değiştirilmiştir. Kitap sürümü de **3,1**sürümüne güncelleştirilmiştir.
+Bu kılavuz, **.NET Core 3.1** sürümüyle birlikte aynı "teknoloji dalgası" (yani Azure ve ek üçüncü taraf teknolojileri) ile ilgili birçok ek güncelleştirmeyle birlikte .NET Core 3.1 sürümüyle aynı zamana denk gelecek şekilde revize edilmiştir. Bu nedenle kitap sürümü de sürüm **3.1**güncellendi.
 
-## <a name="what-this-guide-does-not-cover"></a>Bu kılavuzun kapsamayan
+## <a name="what-this-guide-does-not-cover"></a>Bu kılavuzun kapsamadığı
 
-Bu kılavuz uygulama yaşam döngüsü, DevOps, CI/CD işlem hatları veya takım çalışmasına odaklanmaz. [Microsoft platformu ve araçları ile tamamlayıcı kılavuz Kapsayıcılı Docker uygulaması yaşam döngüsü](https://aka.ms/dockerlifecycleebook) ilgili konuya odaklanır. Geçerli kılavuz Ayrıca, belirli düzenleyiciler hakkında bilgi gibi Azure altyapısında uygulama ayrıntıları sağlamaz.
+Bu kılavuz, uygulama yaşam döngüsü, DevOps, CI/CD ardışık hatları veya takım çalışmasına odaklanmaz. Microsoft Platform [ve Tools ile](https://aka.ms/dockerlifecycleebook) tamamlayıcı kılavuz Konteyner Docker Uygulama Yaşam Döngüsü bu konuya odaklanır. Geçerli kılavuz, azure altyapısıyla ilgili belirli orkestratörler hakkındaki bilgiler gibi uygulama ayrıntıları da sağlamaz.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Microsoft platformu ve araçları Ile Kapsayıcılı Docker uygulaması yaşam döngüsü** (indirilebilir e-kitap)  
+- **Microsoft Platform ve Araçları ile Containerized Docker Uygulama Yaşam Döngüsü** (indirilebilir e-kitap)  
     <https://aka.ms/dockerlifecycleebook>
 
-## <a name="who-should-use-this-guide"></a>Bu kılavuzu kimler kullanmalıdır?
+## <a name="who-should-use-this-guide"></a>Bu kılavuzu kimler kullanmalı?
 
-Docker tabanlı uygulama geliştirmeye ve mikro hizmet tabanlı mimariye yönelik yeni olan geliştiriciler ve çözüm mimarları için bu kılavuzu yazdık. Bu kılavuz, Microsoft geliştirme teknolojileri (.NET Core 'ta özel odak ile) ve Docker kapsayıcılarıyla kavram kanıtı uygulamalarının nasıl mimarilerini, tasarlanacağını ve uygulandığını öğrenmek istiyorsanız size yöneliktir.
+Bu kılavuzu, Docker tabanlı uygulama geliştirme ve mikro hizmetler tabanlı mimaride yeni olan geliştiriciler ve çözüm mimarları için yazdık. Bu kılavuz, Microsoft geliştirme teknolojileri (.NET Core'a özel olarak odaklanarak) ve Docker kapsayıcılarıyla kavram kanıtı uygulamalarını nasıl tasarlayıp tasarlaacağınızı ve uygulayacağınızı öğrenmek istiyorsanız tam size göre dir.
 
-Ayrıca, yeni ve modern dağıtılmış uygulamalar için seçilecek yaklaşıma karar vermeden önce bir mimari ve teknolojiye genel bakış isteyen bir kuruluş mimarı gibi teknik bir karar veren bu kılavuzu da bulabilirsiniz.
+Yeni ve modern dağıtılmış uygulamalar için hangi yaklaşımı seçeceğiniz konusunda karar vermeden önce mimari ve teknolojiye genel bakış isteyen bir kurumsal mimar gibi teknik bir karar vericiyseniz, bu kılavuzu da yararlı bulacaksınız.
 
 ### <a name="how-to-use-this-guide"></a>Bu kılavuz nasıl kullanılır?
 
-Bu kılavuzun ilk bölümü Docker kapsayıcılarını tanıtır, .NET Core ve .NET Framework bir geliştirme çerçevesi olarak arasından nasıl seçim yapılacağını açıklar ve mikro hizmetlere genel bir bakış sağlar. Bu içerik, genel bakış isteyen, ancak kod uygulama ayrıntılarına odaklanmayı gerektirmeyen mimarlar ve teknik karar mekanizmaları içindir.
+Bu kılavuzun ilk bölümünde Docker kapsayıcıları tanıtılır, geliştirme çerçevesi olarak .NET Core ve .NET Framework arasında nasıl seçim yapılacağını tartışır ve mikro hizmetlere genel bir bakış sağlar. Bu içerik, genel bir bakış isteyen ancak kod uygulama ayrıntılarına odaklanması gerekmeyen mimarlar ve teknik karar vericiler içindir.
 
-Kılavuzun ikinci bölümü, [Docker tabanlı uygulamalar Için geliştirme süreci](./docker-application-development-process/index.md) bölümüne başlar. .NET Core ve Docker kullanarak uygulama uygulamaya yönelik geliştirme ve mikro hizmet desenlerine odaklanır. Bu bölüm, kod ve düzen ve uygulama ayrıntılarına odaklanmak isteyen geliştiricilere ve mimarlara yönelik en çok ilgi çekici olacaktır.
+Kılavuzun ikinci bölümü Docker [tabanlı uygulamalar](./docker-application-development-process/index.md) bölümü için Geliştirme süreci ile başlar. .NET Core ve Docker kullanarak uygulama uygulamak için geliştirme ve mikrohizmet kalıplarına odaklanır. Bu bölüm, kod ve desenler ve uygulama ayrıntıları üzerinde odaklanmak isteyen geliştiriciler ve mimarlar için en çok ilgi olacaktır.
 
-## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>İlgili mikro hizmet ve kapsayıcı tabanlı başvuru uygulaması: eShopOnContainers
+## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>İlgili microservice ve konteyner tabanlı referans uygulaması: eShopOnContainers
 
-EShopOnContainers uygulaması, Docker Kapsayıcıları kullanılarak dağıtılacak şekilde tasarlanan .NET Core ve mikro hizmetlere yönelik açık kaynaklı bir başvuru uygulamasıdır. Uygulama, birkaç e-mağaza Kullanıcı arabirimi ön uçları (bir Web MVC uygulaması, Web SPA ve yerel bir mobil uygulama) dahil olmak üzere birden çok alt sistemi içerir. Ayrıca, tüm gerekli sunucu tarafı işlemler için arka uç mikro hizmetleri ve kapsayıcıları da içerir.
+eShopOnContainers uygulaması ,NET Core ve Docker konteynerleri kullanılarak dağıtılmak üzere tasarlanmış mikro hizmetler için bir açık kaynak referans uygulamasıdır. Uygulama, birden fazla e-mağaza Kullanıcı UI ön uçları (Bir Web MVC uygulaması, bir Web SPA ve yerel bir mobil uygulama) dahil olmak üzere birden çok alt sistemden oluşur. Ayrıca, gerekli tüm sunucu tarafı işlemleri için arka uç mikro hizmetleri ve kapsayıcıları içerir.
 
-Uygulamanın amacı, mimari desenleri göstersağlamaktır. Gerçek dünyada uygulamaları başlatmak için ÜRETIME yönelik olarak **hazırlanmayan BIR şablon değildir** . Aslında, yeni ilginç teknolojileri göründükleri gibi test etmek için de kullanıldığından, uygulama kalıcı bir beta durumundadır.
+Uygulamanın amacı mimari desenleri sergilemektir. GERÇEK UYGULAMA YILI BAŞLATMAK İçİn **ÜRETİmHAZIR Bİr ŞABLON Değİl.** Aslında, uygulama kalıcı bir beta durumundadır, aynı zamanda yeni potansiyel olarak ilginç teknolojileri test etmek için kullanılır gibi onlar göstermek gibi.
 
-## <a name="send-us-your-feedback"></a>Görüşlerinizi bize gönderin!
+## <a name="send-us-your-feedback"></a>Geri bildiriminizi bize gönderin!
 
-.NET 'teki Kapsayıcılı uygulamaların ve mikro hizmetlerin mimarisini anlamanıza yardımcı olması için bu kılavuzu yazdık. Kılavuz ve ilgili başvuru uygulaması geliştireceğiz, bu nedenle geri bildirimlerinize hoş geldiniz! Bu kılavuzun nasıl iyileştirilen hakkında açıklamalarınız varsa <https://aka.ms/ebookfeedback>adresinden geri bildirimde bulunun.
+Bu kılavuzu , .NET'te konteyner uygulamalarının ve mikro hizmetlerin mimarisini anlamanıza yardımcı olmak için yazdık. Kılavuz ve ilgili referans uygulaması gelişmekte olacak, bu yüzden geribildirim bekliyoruz! Bu kılavuzun nasıl geliştirilebileceği hakkında yorumlarınız <https://aka.ms/ebookfeedback>varsa, 'den geri bildirim gönderin.
 
 ## <a name="credits"></a>Krediler
 
 Ortak Yazarlar:
 
-> **Cesar de La Torre**, SR. PM, .net ürün ekibi, Microsoft Corp.
+> **Cesar de la Torre**, Sr. PM, .NET ürün ekibi, Microsoft Corp.
 >
-> **Bill Wagner**, SR. Content geliştirici, C + E, Microsoft Corp.
+> **Bill Wagner**, Sr. İçerik Geliştirici, C +E, Microsoft Corp.
 >
-> **Mike Rousos**, sorumlu yazılım mühendisi, DEVDIV Cat ekibi, Microsoft
+> **Mike Rousos**, Baş Yazılım Mühendisi, DevDiv CAT ekibi, Microsoft
 
-Edit
+Editörler:
 
 > **Mike Pope**
 >
@@ -98,81 +98,81 @@ Edit
 
 Katılımcılar ve gözden geçirenler:
 
-> **Jeffrey Richter**, Iş ortağı yazılım eng, Azure ekibi, Microsoft
+> **Jeffrey Richter**, İş Ortağı Yazılım Müg, Azure ekibi, Microsoft
 >
-> **Jimmy Bogard**, yay Başkan mimarı
+> **Jimmy Bogard**, Headspring Baş Mimarı
 >
-> **UDI Dahan**, & CEO, belirli yazılımlar
+> **Udi Dahan**, Kurucu & CEO'su, Özel Yazılım
 >
-> **Jimmy Nilsson**, Co-foin ve CEO of Factor10
+> **Jimmy Nilsson**, Factor10'un kurucu ortağı ve CEO'su
 >
-> **Glenn CONDRON**, SR. program yöneticisi, ASP.NET ekibi
+> **Glenn Condron**, Sr. Program Yöneticisi, ASP.NET takım
 >
-> **Mark Fussell**, sorumlu PM lideri, Azure Service Fabric ekibi, Microsoft
+> **Mark Fussell**, Baş PM Müşteri Adayı, Azure Hizmet Kumaşı ekibi, Microsoft
 >
-> **Diego Vega**, PM lideri, Entity Framework ekibi, Microsoft
+> **Diego Vega**, PM Kurşun, Varlık Çerçeve ekibi, Microsoft
 >
-> **Barry Dorrans**, SR. Security Program Yöneticisi
+> **Barry Dorrans**, Sr. Güvenlik Programı Yöneticisi
 >
-> **Rowa Miller**, SR. Program Yöneticisi, Microsoft
+> **Rowan Miller**, Sr. Program Yöneticisi, Microsoft
 >
-> **Ankit Asthana**, ana PM Yöneticisi, .NET ekibi, Microsoft
+> **Ankit Asthana**, Baş PM Yöneticisi, .NET ekibi, Microsoft
 >
-> **Scott Hunter**, Iş ortağı Direktörü, .NET ekibi, Microsoft
+> **Scott Hunter**, İş Ortağı Direktörü PM, .NET ekibi, Microsoft
 >
-> **Hayvan anıl**, SR. Program Yöneticisi, .NET ekibi, Microsoft
+> **Nish Anıl**, Sr. Program Yöneticisi, .NET ekibi, Microsoft
 >
-> **Dylan Reisenberger**, mimarı ve dev lideri, Polly
+> **Dylan Reisenberger**, Polly'de Mimar ve Dev Kurşun
 >
-> **Steve "ardalış" Smith** -yazılım mimarı ve trainer- [Ardalis.com](https://ardalis.com)
+> **Steve "ardalis" Smith** - Yazılım Mimarı ve Eğitmen - [Ardalis.com](https://ardalis.com)
 >
-> **Ian Cooper**, kod mimarı parlaktır
+> **Ian Cooper**, Brighter'da Kodlama Mimarı
 >
-> Düz kavramlarda **Unaı Zorrilla**, mimar ve dev lideri
+> **Unai Zorrilla**, Mimar ve Dev Kurşun Düz Kavramlar at
 >
-> **Eğitik Tomas**, geliştirme lideri, düz kavramlar
+> **Eduard Tomas**, Düz Kavramlar dev kurşun
 >
-> **Vamon Tomas**, geliştirici basit kavramlar
+> **Ramon Tomas**, Düz Kavramlar Geliştirici
 >
-> **David Sanz**, basit kavramlarda geliştirici
+> **David Sanz**, Geliştirici Düz Kavramlar at
 >
-> **Javier Valero**, çalışma müdürü, Grupo 'da
+> **Javier Valero**, Grupo Solutio'da Operasyon Müdürü
 >
-> **Pierre millet**, SR. danışman, Microsoft
+> **Pierre Millet**, Sr. Danışman, Microsoft
 >
-> **Michael Fri,** Ürün Yöneticisi, Docker Inc
+> **Michael Friis,** Ürün Müdürü, Docker Inc
 >
-> **Charles Lowell**, yazılım mühendısı, vs Cat ekibi, Microsoft
+> **Charles Lowell**, Yazılım Mühendisi, VS CAT ekibi, Microsoft
 >
-> **MIGUEL Veloso**, düz kavramlarda yazılım geliştirme mühendisi
+> **Miguel Veloso**, Düz Kavramlar Yazılım Geliştirme Mühendisi
 
-## <a name="copyright"></a>Yaptırımlar
+## <a name="copyright"></a>Telif Hakkı
 
-YAYıMLAYAN
+YAYIMLAYAN
 
-Microsoft Geliştirici bölümü, .NET ve Visual Studio ürün ekipleri
+Microsoft Developer Division, .NET ve Visual Studio ürün ekipleri
 
-Microsoft Corporation 'ın bir bölümü
+Microsoft Corporation'ın bir bölümü
 
 One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Telif hakkı © 2020 Microsoft Corporation
+Telif hakkı © 2020 Microsoft Corporation tarafından
 
-Tüm hakları saklıdır. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
+Tüm hakları saklıdır. Bu kitabın içeriğinin hiçbir bölümü, yayımcının yazılı izni olmadan herhangi bir biçimde veya herhangi bir şekilde çoğaltılamaz veya aktarılamaz.
 
-Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi ifade eder. Bu kitapta ifade edilen görünümler, eklentiler ve bilgiler, URL ve diğer Internet Web sitesi başvuruları da dahil olmak üzere bildirimde bulunmaksızın değiştirilebilir.
+Bu kitap "olduğu gibi" sağlanır ve yazarın görüş ve görüşlerini ifade eder. URL ve diğer Internet web sitesi referansları da dahil olmak üzere bu kitapta ifade edilen görüşler, görüşler ve bilgiler önceden haber verilmeden değişebilir.
 
-Burada gösterilen bazı örnekler yalnızca gösterim amaçlıdır ve hayal ürünüdür. Hiçbir gerçek ilişkilendirme veya bağlantı amaçlanmaz veya çıkarsanmamalıdır.
+Burada tarif edilen bazı örnekler yalnızca açıklama için sağlanmıştır ve kurgusaldır. Gerçek bir ilişki veya bağlantı amaçlanmamıştır veya böyle bir bağlantı olduğu sonucuna varılmamalıdır.
 
-Microsoft ve "ticari markalar" Web sayfasındaki <https://www.microsoft.com> listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
+Microsoft ve "Ticari <https://www.microsoft.com> Markalar" web sayfasında listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
 
-Mac ve macOS, Apple Inc. ' in ticari markalarıdır.
+Mac ve macOS, Apple Inc. şirketinin ticari markalarıdır.
 
-Docker balina logosu,, izin tarafından kullanılan Docker, Inc. ' in tescilli ticari markasıdır.
+Docker balina logosu, Docker, Inc. şirketinin izni yle kullanılan tescilli ticari markasıdır.
 
-Diğer tüm işaretler ve amblemler kendi sahiplerinin mülkiyetindedir.
+Diğer tüm işaretler ve logolar ilgili sahiplerinin mülkiyetindedir.
 
 >[!div class="step-by-step"]
->[Next](container-docker-introduction/index.md)
+>[Sonraki](container-docker-introduction/index.md)

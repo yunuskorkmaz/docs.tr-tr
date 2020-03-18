@@ -24,9 +24,9 @@
           href: importfile-method.md
         - name: SetAssemblyFile Yöntemi
           href: setassemblyfile-method.md
-        - name: AddFile Metodu
+        - name: AddFile Yöntemi
           href: addfile-method.md
-        - name: AddImport Metodu
+        - name: AddImport Yöntemi
           href: addimport-method.md
         - name: GetScope Metodu
           href: getscope-method.md

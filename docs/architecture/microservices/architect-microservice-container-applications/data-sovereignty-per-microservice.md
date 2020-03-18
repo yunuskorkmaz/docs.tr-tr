@@ -1,66 +1,66 @@
 ---
 title: Mikro hizmet başına veri hakimiyeti
-description: Mikro hizmet başına veri egementy, mikro hizmetlerin önemli noktalarından biridir. Her mikro hizmet veritabanının tek sahibi olmalıdır ve onu başka hiçbir olmadan paylaşmalıdır. Tabii ki, bir mikro hizmetin tüm örnekleri aynı yüksek kullanılabilirlik veritabanına bağlanır.
+description: Mikro hizmet başına veri egemenliği, mikro hizmetlerin kilit noktalarından biridir. Her microservice kendi veritabanının tek sahibi olmalı, başka bir ile paylaşan. Tabii ki bir microservice tüm örnekleri aynı yüksek kullanılabilirlik veritabanına bağlayın.
 ms.date: 09/20/2018
 ms.openlocfilehash: f606d6314f38bf3e2c163871af432806dddc7446
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73191912"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Mikro hizmet başına veri hakimiyeti
 
-Mikro hizmetler mimarisi için önemli bir kural, her mikro hizmetin kendi etki alanı verilerine ve mantığına sahip olması gerekir. Tam bir uygulamanın Logic ve verilerinin sahibi olduğu için, her mikro hizmetin kendi mantığını ve verileri, mikro hizmet başına bağımsız dağıtım ile bir otonom yaşam döngüsü altında sahip olması gerekir.
+Mikro hizmetler mimarisi için önemli bir kural, her microservice kendi etki alanı veri ve mantık sahibi olması gerektiğidir. Tam bir uygulamanın kendi mantığına ve verilerine sahip olması gibi, her mikro hizmet in kendi mantığına ve verilerine, mikro hizmet başına bağımsız dağıtımla özerk bir yaşam döngüsü altında sahip olmalıdır.
 
-Bu, etki alanı kavramsal modelinin alt sistemler veya mikro hizmetler arasında farklı olacağı anlamına gelir. Müşteri ilişkileri yönetimi (CRM) uygulamaları, işlem satın alma alt sistemleri ve müşteri destek alt sistemlerinin her biri benzersiz müşteri varlığı öznitelikleri ve verileri üzerinde her çağrının ve her birinin farklı bir şekilde kullanıldığı kurumsal uygulamaları göz önünde bulundurun. Sınırlanmış bağlam (BC).
+Bu, etki alanının kavramsal modelinin alt sistemler veya mikro hizmetler arasında farklılık olacağı anlamına gelir. Müşteri ilişkileri yönetimi (CRM) uygulamalarının, işlemsel satın alma alt sistemlerinin ve müşteri destek alt sistemlerinin her birinin benzersiz müşteri varlık öznitelikleri ve verilerini aradığı ve her birinin farklı bir Sınırlanmış Bağlam (BC).
 
-Bu ilke, her [sınırlanmış bağlam](https://martinfowler.com/bliki/BoundedContext.html) veya özerk alt sistem ya da hizmetin kendi etki alanı modeline sahip olması gerektiği [etki alanı ODAKLı tasarım (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design)ile benzerdir (veri ve mantık ve davranış). Her DDD sınırlı bağlam, bir iş mikro hizmeti (bir veya birkaç hizmet) ile ilişkili. Sınırlanmış bağlam deseninin bu noktası sonraki bölümde genişletilir.
+Bu ilke, her [Sınırlı Bağlam](https://martinfowler.com/bliki/BoundedContext.html) veya özerk alt sistem veya hizmetin etki alanı modeline (veri artı mantık ve davranış) sahip olması gereken Etki Alanı [tabanlı tasarımda (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design)benzerdir. Her DDD Sınırlı Bağlam, bir iş microservice (bir veya birkaç hizmet) ile ilişkilidir. Bağlı Bağlam deseni yle ilgili bu nokta sonraki bölümde genişletilir.
 
-Diğer taraftan, birçok uygulamada kullanılan geleneksel (tek parçalı veriler) yaklaşımının tek bir merkezi veritabanı veya yalnızca birkaç veritabanı olması gerekir. Bu genellikle Şekil 4-7 ' de gösterildiği gibi, tüm uygulama ve tüm iç alt sistemleri için kullanılan normalleştirilmiş bir SQL veritabanıdır.
+Öte yandan, birçok uygulamada kullanılan geleneksel (yekpare veri) yaklaşımı tek bir merkezi veritabanı veya sadece birkaç veritabanları olmasıdır. Bu genellikle Şekil 4-7'de gösterildiği gibi, tüm uygulama ve tüm dahili alt sistemleri için kullanılan normalleştirilmiş bir SQL veritabanıdır.
 
-![İki veritabanı yaklaşımının gösterildiği diyagram.](./media/data-sovereignty-per-microservice/data-sovereignty-comparison.png)
+![İki veritabanı yaklaşımını güsteren diyagram.](./media/data-sovereignty-per-microservice/data-sovereignty-comparison.png)
 
-**Şekil 4-7**. Veri egemenlik karşılaştırması: tek parçalı veritabanı ve mikro hizmetler karşılaştırması
+**Şekil 4-7**. Veri egemenliği karşılaştırması: monolitik veritabanı ve mikrohizmetler
 
-Geleneksel yaklaşımda, genellikle katmanlı bir mimaride tüm hizmetler genelinde paylaşılan tek bir veritabanı vardır. Mikro hizmetler yaklaşımında, her mikro hizmet modelin/verilerinin sahibi olur. Merkezi veritabanı yaklaşımı başlangıçta daha basit bir şekilde görünür ve her şeyi tutarlı hale getirmek için farklı alt sistemlerde varlıkların yeniden kullanımını etkinleştirmek gibi görünüyor. Ancak gerçekliği, birçok farklı alt sistemi sunan ve çoğu durumda gerekmeyen öznitelikleri ve sütunları içeren çok büyük tablolar ile sona erdirmek ister. Kısa bir izleme için aynı fiziksel eşlemeyi kullanmaya çalışmak, gün uzunluğunda bir otomobil yolculuğu ve öğrenme Coğrafya almak gibidir.
+Geleneksel yaklaşımda, genellikle katmanlı mimaride tüm hizmetler arasında paylaşılan tek bir veritabanı vardır. Mikro hizmetler yaklaşımında, her microservice kendi modeline/verilerine sahip. Merkezi leştirilmiş veritabanı yaklaşımı başlangıçta daha basit görünür ve her şeyi tutarlı hale getirmek için farklı alt sistemlerdeki varlıkların yeniden kullanılmasını sağlar gibi görünür. Ama gerçek şu ki, birçok farklı alt sistemlere hizmet veren ve çoğu durumda gerekli olmayan öznitelikleri ve sütunları içeren büyük tablolarla sonuçlanır. Kısa bir patikada yürüyüş yapmak, bir günlük araba gezisi yapmak ve coğrafya öğrenmek için aynı fiziksel haritayı kullanmaya çalışmak gibi.
 
-Tek bir ilişkisel veritabanına sahip tek parçalı bir uygulamanın iki önemli avantajı vardır: [ACID işlemleri](https://en.wikipedia.org/wiki/ACID) ve SQL dili, her ikisi de uygulamanızla ilgili tüm tablolar ve veriler üzerinde çalışır. Bu yaklaşım, birden çok tablodan verileri birleştiren bir sorguyu kolayca yazmak için bir yol sağlar.
+Genellikle tek bir ilişkisel veritabanına sahip yekpare bir uygulamanın iki önemli faydası vardır: [ASİt hareketleri](https://en.wikipedia.org/wiki/ACID) ve SQL dili, hem uygulamanızla ilgili tüm tablolarda hem de verilerde çalışır. Bu yaklaşım, birden çok tablodaki verileri birleştiren bir sorguyazmak için kolayca bir yol sağlar.
 
-Ancak, bir mikro hizmet mimarisine geçtiğinizde veri erişimi çok daha karmaşık hale gelir. Bir mikro hizmet veya sınırlı bağlam içindeki ACID işlemlerini kullanırken bile, her bir mikro hizmetin sahip olduğu verilerin bu mikro hizmete özel olduğunu ve yalnızca API uç noktaları (REST, gRPC, SOAP, vb.) veya ileti aracılığıyla zaman uyumsuz (AMQP veya benzeri).
+Ancak, bir mikro hizmetler mimarisine geçtikçe veri erişimi çok daha karmaşık hale gelir. Bir microservice veya Bounded Context içinde ACID işlemleri kullanırken bile, her bir mikro hizmete ait verilerin bu mikro hizmete özel olduğunu ve yalnızca API uç noktaları üzerinden eşzamanlı olarak erişilmesi gerektiğini göz önünde bulundurmak önemlidir (REST, gRPC, SOAP, vb) veya mesajlaşma (AMQP veya benzeri) yoluyla eşzamanlı olarak.
 
-Verilerin kapsüllenmesi, mikro hizmetlerin gevşek bir şekilde bağlanmış olmasını sağlar ve birbirinden bağımsız olarak gelişebilirler. Aynı verilere birden çok hizmet erişiyorsa, şema güncelleştirmeleri tüm hizmetlere yönelik Eşgüdümlü güncelleştirmeler gerektirir. Bu, mikro hizmet yaşam döngüsü bağımsız çalışma sınırı kesintiye uğratır. Ancak dağıtılmış veri yapıları, mikro hizmetler genelinde tek bir ACID işlemi yapamayacağınız anlamına gelir. Buna karşılık, bir iş süreci birden çok mikro hizmete yayıldığında nihai tutarlılığı kullanmanız gerekir. Bu, daha sonra açıklandığımız gibi, bütünlük kısıtlamaları oluşturamadığından veya ayrı veritabanları arasında dağıtılmış işlemler kullanamadığından basit SQL birleştirmelere uygulama çok daha zordur. Benzer şekilde, çok sayıda diğer ilişkisel veritabanı özelliği birden fazla mikro hizmette kullanılamaz.
+Verilerin kapsüllemesi, mikro hizmetlerin gevşek bir şekilde birleştiğini ve birbirinden bağımsız olarak evrimleşebilmesini sağlar. Birden çok hizmet aynı verilere erişiyorsa, şema güncelleştirmeleri tüm hizmetler için eşgüdümlü güncelleştirmeler gerektirir. Bu mikrohizmet yaşam döngüsü özerkliğini kıracak. Ancak dağıtılmış veri yapıları, mikro hizmetler arasında tek bir ASİt işlemi yapamadığınız anlamına gelir. Bu da, bir iş süreci birden çok mikro hizmeti kapsadığında nihai tutarlılığı kullanmanız gerektiği anlamına gelir. Bunu uygulamak basit SQL birleşimlerinden çok daha zordur, çünkü daha sonra açıklayacağımız gibi, bütünlük kısıtlamaları oluşturamaz veya ayrı veritabanları arasında dağıtılmış hareketler kullanamazsınız. Benzer şekilde, diğer birçok ilişkisel veritabanı özelliği birden çok mikro hizmette kullanılamaz.
 
-Daha da farklı mikro hizmetler, genellikle farklı *türlerde* veritabanları kullanır. Modern uygulamalar çeşitli veri türlerini depolar ve işler ve ilişkisel veritabanı her zaman en iyi seçenektir. Bazı kullanım durumları için, Azure CosmosDB veya MongoDB gibi bir NoSQL veritabanının daha uygun bir veri modeli olabilir ve SQL Server veya Azure SQL veritabanı gibi bir SQL veritabanından daha iyi performans ve ölçeklenebilirlik sunar. Diğer durumlarda, ilişkisel bir veritabanı hala en iyi yaklaşımdır. Bu nedenle, mikro hizmet tabanlı uygulamalar genellikle [çok yönlü Kalıcılık](https://martinfowler.com/bliki/PolyglotPersistence.html) yaklaşımı olarak adlandırılan SQL ve NoSQL veritabanlarının bir karışımını kullanır.
+Daha da ileri giderek, farklı mikro hizmetler genellikle farklı *veritabanları kullanır.* Modern uygulamalar çeşitli veri türlerini depolar ve işlenir ve ilişkisel veritabanı her zaman en iyi seçim değildir. Bazı kullanım durumlarında, Azure CosmosDB veya MongoDB gibi bir NoSQL veritabanı daha kullanışlı bir veri modeline sahip olabilir ve SQL Server veya Azure SQL Veritabanı gibi bir SQL veritabanından daha iyi performans ve ölçeklenebilirlik sunabilir. Diğer durumlarda, ilişkisel bir veritabanı hala en iyi yaklaşımdır. Bu nedenle, mikrohizmet tabanlı uygulamalar genellikle bazen [çokdilli kalıcılık](https://martinfowler.com/bliki/PolyglotPersistence.html) yaklaşımı olarak adlandırılan SQL ve NoSQL veritabanlarının bir karışımını kullanır.
 
-Veri depolama için bölümlenmiş, çok yönlü kalıcı mimarinin birçok avantajı vardır. Bunlar arasında gevşek olarak bağlanmış hizmetler, daha iyi performans, ölçeklenebilirlik, maliyetler ve yönetilebilirlik bulunur. Ancak, bu bölümün devamındaki "[etki alanı model sınırlarını tanımlama](identify-microservice-domain-model-boundaries.md)" bölümünde açıklandığı gibi bazı dağıtılmış veri yönetimi sorunlarını ortaya çıkarabilir.
+Veri depolama için bölümlenmiş, çok dilli kalıcı mimarinin birçok faydası vardır. Bunlar arasında gevşek birleştirilmiş hizmetler ve daha iyi performans, ölçeklenebilirlik, maliyetler ve yönetilebilirlik yer almaktadır. Ancak, bu bölümün ilerleyen bölümlerinde " Etki[alanı modeli sınırlarını belirleme"](identify-microservice-domain-model-boundaries.md)bölümünde açıklandığı gibi, bazı dağıtılmış veri yönetimi zorlukları getirebilir.
 
-## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>Mikro hizmetler ve sınırlanmış bağlam deseninin arasındaki ilişki
+## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>Mikro hizmetler ve Sınırlı Bağlam deseni arasındaki ilişki
 
-Mikro hizmet kavramı, [etki alanı odaklı tasarımda (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design) [SıNıRLANMıŞ bağlam (BC)](https://martinfowler.com/bliki/BoundedContext.html) düzeninden türetilir. DDD, büyük modellerle anlaşmalar yaparak bunları birden çok BCs dönüştürür ve sınırları hakkında açık bir şekilde yapılır. Her bir BC kendi modeli ve veritabanına sahip olmalıdır; benzer şekilde, her mikro hizmet ilgili verilerin sahibidir. Ayrıca, her bir BC yazılım geliştiricileri ve etki alanı uzmanları arasındaki iletişime yardımcı olmak için genellikle kendi [ubititous diline](https://martinfowler.com/bliki/UbiquitousLanguage.html) sahiptir.
+Mikrohizmet [kavramı, etki alanı odaklı tasarımda (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design) [Sınırlı Bağlam (BC) deseninden](https://martinfowler.com/bliki/BoundedContext.html) türetilmiştir. DDD, büyük modelleri birden çok BC'ye bölerek ve sınırları hakkında açık olarak ele alar. Her BC'nin kendi modeli ve veritabanı olmalıdır; aynı şekilde, her microservice kendi ilgili verilere sahip. Buna ek olarak, her BC genellikle yazılım [geliştiricileri](https://martinfowler.com/bliki/UbiquitousLanguage.html) ve etki alanı uzmanları arasındaki iletişimyardımcı olmak için kendi her yerde dil vardır.
 
-Ubititous dilinde söz konusu şartlar (genellikle etki alanı varlıkları) farklı sınırlanmış bağlamlarda farklı adlara sahip olabilir, farklı etki alanı varlıkları aynı kimliği paylaşır (yani, varlığı depolamadan okumak için kullanılan benzersiz KIMLIK). Örneğin, Kullanıcı profili sınırlı bağlamında, Kullanıcı etki alanı varlığı, kimlik sıralama bağlantılı bağlamdaki alıcı etki alanı varlığı ile kimlik paylaşabilir.
+Her yerde bulunan dildeki bu terimler (özellikle etki alanı varlıkları), farklı etki alanı varlıkları aynı kimliği paylaşsa bile (diğer bir deyişle, varlığı depolamadan okumak için kullanılan benzersiz kimlik) farklı Bağlı Bağlamlarda farklı adlara sahip olabilir. Örneğin, kullanıcı profili Sınırlanmış Bağlam'da, Kullanıcı etki alanı varlığı, Sınırlı Bağlam'ı sıralayan alan varlığında kimliği Alıcı etki alanı varlığıyla paylaşabilir.
 
-Bu nedenle, bir mikro hizmet sınırlanmış bir bağlam gibidir, ancak aynı zamanda dağıtılmış bir hizmet olduğunu da belirtir. Her sınırlanmış bağlam için ayrı bir işlem olarak oluşturulmuştur ve HTTP/HTTPS, WebSockets veya [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol)gibi daha önce belirtilen dağıtılmış protokolleri kullanmalıdır. Bununla sınırlı bağlam deseninin, bir tek parçalı dağıtım uygulaması içinde, sınırlanmış bağlamın dağıtılmış bir hizmet olup olmadığını ya da yalnızca bir mantıksal sınır (genel alt sistem gibi) belirtilmediğini belirtmez.
+Bir microservice bu nedenle Sınırlı Bağlam gibidir, ancak dağıtılmış bir hizmet olduğunu da belirtir. Her Bağlı Bağlam için ayrı bir işlem olarak oluşturulmuştur ve http/HTTPS, WebSockets veya [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol)gibi daha önce belirtilen dağıtılmış protokolleri kullanmalıdır. Ancak, Sınırlandırılmış Bağlam deseni, Sınırlandırılmış Bağlam'ın dağıtılmış bir hizmet olup olmadığını veya tek şey liyakatli dağıtım uygulaması içinde yalnızca mantıksal bir sınır (genel bir alt sistem gibi) olup olmadığını belirtmez.
 
-Her sınırlanmış bağlam için bir hizmet tanımlamanın başlamak için iyi bir yerdir. Ancak tasarımınızı buna karşı kısıtlamak zorunda değilsiniz. Bazen, birkaç fiziksel hizmetten oluşan sınırlı bir bağlam veya iş mikro hizmeti tasarlamanız gerekir. Ancak, her ikisi de desenler ile sınırlanmış bağlam ve mikro hizmet ile yakından ilgilidir.
+Her Bağlı Bağlam için bir hizmet tanımlamanın başlamak için iyi bir yer olduğunu vurgulamak önemlidir. Ama tasarımınızı buna kısıtlamak zorunda değilsiniz. Bazen, çeşitli fiziksel hizmetlerden oluşan Bir Sınırlı Bağlam veya iş microservice tasarlamanız gerekir. Ama sonuçta, her iki desen -Sınırlı Bağlam ve microservice- yakından ilişkilidir.
 
-, Dağıtılmış mikro hizmetler biçiminde gerçek sınırlar alarak mikro hizmetlerden faydalanır. Bununla birlikte, mikro hizmetler arasında modeli paylaşmayan fikirler da sınırlanmış bir bağlamda olmasını istediğiniz şeydir.
+DDD, dağıtılmış mikro hizmetler şeklinde gerçek sınırlar elde ederek mikro hizmetlerden yararlanır. Ancak modeli mikro hizmetler arasında paylaşmamak gibi fikirler, Sınırlı Bağlamda da istediğiniz şeydir.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Chris Richardson. Model: hizmet başına \ veritabanı**
+- **Chris Richardson' ı. Desen: Hizmet başına veritabanı** \
   <https://microservices.io/patterns/data/database-per-service.html>
 
-- **Marwler. BoundedContext** \
+- **Martin Fowler' ı. Sınırlı Bağlam** \
   <https://martinfowler.com/bliki/BoundedContext.html>
 
-- **Marwler. PolyglotPersistence** \
+- **Martin Fowler' ı. PoliglotKalıcılık** \
   <https://martinfowler.com/bliki/PolyglotPersistence.html>
 
-- **Alberto Brandolini. Bağlam eşleme \ stratejik etki alanı odaklı tasarım**
+- **Alberto Brandolini. Bağlam Haritalama ile Stratejik Etki Alanı Odaklı Tasarım** \
   <https://www.infoq.com/articles/ddd-contextmapping>
 
 >[!div class="step-by-step"]
 >[Önceki](microservices-architecture.md)
->[İleri](logical-versus-physical-architecture.md)
+>[Sonraki](logical-versus-physical-architecture.md)

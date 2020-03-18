@@ -1,76 +1,76 @@
 ---
-title: Sorgu sonuçlarını gruplandırma (C# üzerinde LINQ)
-description: Grup C# içinde LINQ kullanarak sonuçları öğrenin.
+title: Grup sorgu sonuçları (C#'da LINQ)
+description: C#'da LINQ kullanarak sonuçları nasıl gruplatacağız öğrenin.
 ms.date: 12/01/2016
 ms.assetid: 2e4ec27f-06fb-4de7-8973-0189906d4520
 ms.openlocfilehash: 577a358c31fcf5346e7aab7a2e2b6be10fd1beff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "61688468"
 ---
 # <a name="group-query-results"></a>Sorgu sonuçlarını gruplandırma
 
-Gruplandırma LINQ en güçlü özelliklerinden biridir. Aşağıdaki örnekler, çeşitli yollarla verilerin nasıl gruplanacağını gösterir:
+Gruplandırma, LINQ'un en güçlü özelliklerinden biridir. Aşağıdaki örnekler, verilerin çeşitli şekillerde nasıl gruplatını göstereceğimi gösterir:
 
-- Tek bir özelliğe göre.
+- Tek bir mülkle.
 
-- Bir dize özelliği ilk harfi ile.
+- Bir dize özelliğinin ilk harfiyle.
 
-- Tarafından hesaplanan bir sayısal aralık.
+- Sayısal olarak hesaplanmış bir aralıkla.
 
-- Boole koşulu veya diğer ifade.
+- Boolean edicate veya başka bir ifade ile.
 
-- Bileşik bir anahtar.
+- Bileşik bir anahtarla.
 
-Ayrıca, son iki sorguların sonuçlarını Öğrenci ilk yalnızca içeriyor ve Soyadı yeni bir anonim tür proje. Daha fazla bilgi için [group yan tümcesi](../language-reference/keywords/group-clause.md).
+Buna ek olarak, son iki sorgu, sonuçlarını yalnızca öğrencinin adını ve soyadını içeren yeni bir anonim türe yansıttır. Daha fazla bilgi için [grup yan tümcesi'ne](../language-reference/keywords/group-clause.md)bakın.
 
 ## <a name="example"></a>Örnek
 
-Bu konunun tüm örnekleri aşağıdaki yardımcı sınıflar ve veri kaynaklarını kullanın.
+Bu konudaki tüm örnekleraşağıdaki yardımcı sınıfları ve veri kaynaklarını kullanır.
 
 [!code-csharp[csProgGuideLINQ#15](~/samples/snippets/csharp/concepts/linq/how-to-group-query-results_1.cs)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, tek bir özellik öğesinin Grup anahtarı kullanarak kaynak öğeleri gruplandırmak gösterilmektedir. Bu durumda bu anahtar, bir `string`, öğrencinin soyadı. Anahtar için bir alt dizesi kullanmak da mümkündür. Gruplandırma işlemi türü için varsayılan eşitlik karşılaştırıcısını kullanır.
+Aşağıdaki örnek, grup anahtarı olarak öğenin tek bir özelliğini kullanarak kaynak öğelerinin nasıl gruplayaalın yapılacağını gösterir. Bu durumda `string`anahtar, öğrencinin soyadıdır. Anahtar için bir alt dize kullanmak da mümkündür. Gruplandırma işlemi türü için varsayılan eşitlik karşılayıcısı kullanır.
 
-Aşağıdaki yönteme yapıştırın `StudentClass` sınıfı. Arama deyiminde değiştirme `Main` yönteme `sc.GroupBySingleProperty()`.
+Aşağıdaki yöntemi sınıfa `StudentClass` yapıştırın. Yöntemdeki çağrı deyimini `sc.GroupBySingleProperty()`' ' ' olarak değiştirin `Main`
 
 [!code-csharp[csProgGuideLINQ#17](~/samples/snippets/csharp/concepts/linq/how-to-group-query-results_2.cs)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, nesnenin bir özelliğini dışında bir şey için Grup anahtarı kullanarak kaynak öğeleri gruplandırmak gösterilmektedir. Bu örnekte, öğrencinin son adının ilk harfi bir anahtardır.
+Aşağıdaki örnek, grup anahtarı için nesnenin özelliği dışında bir şey kullanarak kaynak öğelerinasıl gruplendirilir gösterir. Bu örnekte anahtar, öğrencinin soyadının ilk harfidir.
 
-Aşağıdaki yönteme yapıştırın `StudentClass` sınıfı. Arama deyiminde değiştirme `Main` yönteme `sc.GroupBySubstring()`.
+Aşağıdaki yöntemi sınıfa `StudentClass` yapıştırın. Yöntemdeki çağrı deyimini `sc.GroupBySubstring()`' ' ' olarak değiştirin `Main`
 
 [!code-csharp[csProgGuideLINQ#18](~/samples/snippets/csharp/concepts/linq/how-to-group-query-results_3.cs)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, sayısal aralık bir Grup anahtarı kullanarak kaynak öğeleri gruplandırmak gösterilmektedir. Sorgu sonuçları yalnızca ilk ve son adı ve Öğrenci ait olduğu yüzdebirlik aralığı içeren bir anonim tür ardından yansıtıyor. Anonim bir tür, tam olarak kullanmak için gerekli olmadığından kullanılan `Student` sonuçları görüntülemek için nesne. `GetPercentile` yüzde hesaplayan bir yardımcı işlevi, öğrencinin ortalama puanına göre temel alır. Yöntemi, 0 ile 10 arasında bir tamsayı döndürür.
+Aşağıdaki örnekte, grup anahtarı olarak sayısal aralık kullanılarak kaynak öğelerinin nasıl gruplaşılaşı yapılacağını gösterilmektedir. Sorgu daha sonra sonuçları yalnızca ad ve soyad ve öğrencinin ait olduğu yüzdelik aralığını içeren anonim bir türe dönüştürür. Sonuçları görüntülemek için tam `Student` nesneyi kullanmak gerekli olmadığından anonim bir tür kullanılır. `GetPercentile`öğrencinin ortalama puanına göre yüzdelik bir artış hesaplayan bir yardımcı işlevdir. Yöntem 0 ile 10 arasında bir arayla bir sonda döndürür.
 
 [!code-csharp[csProgGuideLINQ#50](~/samples/snippets/csharp/concepts/linq/how-to-group-query-results_4.cs)]
 
-Aşağıdaki yönteme yapıştırın `StudentClass` sınıfı. Arama deyiminde değiştirme `Main` yönteme `sc.GroupByRange()`.
+Aşağıdaki yöntemi sınıfa `StudentClass` yapıştırın. Yöntemdeki çağrı deyimini `sc.GroupByRange()`' ' ' olarak değiştirin `Main`
 
 [!code-csharp[csProgGuideLINQ#19](~/samples/snippets/csharp/concepts/linq/how-to-group-query-results_5.cs)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir Boolean karşılaştırma ifadesi kullanarak kaynak öğeleri gruplandırmak gösterilmektedir. Bu örnekte, bir öğrencinin ortalama sınavı puanı 75 büyük olup Boole ifadesi test eder. Önceki örneklerde olduğu gibi tam kaynak öğesi gerekli değildir çünkü sonuçları anonim bir tür yansıtılan. Anonim tür özellikleri Özellikler üzerinde hale geleceğini unutmayın `Key` üyesi ve sorgu yürütüldüğünde adı tarafından erişilebilir.
+Aşağıdaki örnek, boolean karşılaştırma ifadesini kullanarak kaynak öğelerinin nasıl gruplandırılabildiğini gösterir. Bu örnekte, Boolean ifadesi bir öğrencinin ortalama sınav puanının 75'ten fazla olup olmadığını test eder. Önceki örneklerde olduğu gibi, tam kaynak öğesi gerekli olmadığından sonuçlar anonim bir türe yansıtılır. Anonim türdeki özelliklerin `Key` üyeüzerinde özellik haline geldiğini ve sorgu yürütüldüğünde adıyla erişilenebileni unutmayın.
 
-Aşağıdaki yönteme yapıştırın `StudentClass` sınıfı. Arama deyiminde değiştirme `Main` yönteme `sc.GroupByBoolean()`.
+Aşağıdaki yöntemi sınıfa `StudentClass` yapıştırın. Yöntemdeki çağrı deyimini `sc.GroupByBoolean()`' ' ' olarak değiştirin `Main`
 
 [!code-csharp[csProgGuideLINQ#20](~/samples/snippets/csharp/concepts/linq/how-to-group-query-results_6.cs)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, birden çok değer içeren bir anahtar yalıtılacak anonim bir tür kullanmayı gösterir. Bu örnekte, ilk anahtar değeri öğrencinin Soyadı İlk harfidir. İkinci anahtar değeri Öğrenci 85 üzerinde ilk sınavı üzerinde puanlanmış olup olmadığını belirten Boolean bir değer var. Grupları anahtarında herhangi bir özelliğe göre sıralayabilirsiniz.
+Aşağıdaki örnek, birden çok değer içeren bir anahtarı kapsüllemek için anonim bir türün nasıl kullanılacağını gösterir. Bu örnekte, ilk anahtar değeri öğrencinin soyadının ilk harfidir. İkinci anahtar değer, öğrencinin ilk sınavda 85 üzerinden puan alıp almadığına dair bir Boolean'dır. Gruplara anahtardaki herhangi bir özelliğe göre sipariş verebilirsiniz.
 
-Aşağıdaki yönteme yapıştırın `StudentClass` sınıfı. Arama deyiminde değiştirme `Main` yönteme `sc.GroupByCompositeKey()`.
+Aşağıdaki yöntemi sınıfa `StudentClass` yapıştırın. Yöntemdeki çağrı deyimini `sc.GroupByCompositeKey()`' ' ' olarak değiştirin `Main`
 
 [!code-csharp[csProgGuideLINQ#21](~/samples/snippets/csharp/concepts/linq/how-to-group-query-results_7.cs)]
 
@@ -80,7 +80,7 @@ Aşağıdaki yönteme yapıştırın `StudentClass` sınıfı. Arama deyiminde d
 - <xref:System.Linq.IGrouping%602>
 - [Dil ile Tümleşik Sorgu (LINQ)](index.md)
 - [group yan tümcesi](../language-reference/keywords/group-clause.md)
-- [Anonim Tipler](../programming-guide/classes-and-structs/anonymous-types.md)
-- [Gruplandırma işleminde alt sorgu gerçekleştirme](perform-a-subquery-on-a-grouping-operation.md)
-- [İç içe geçmiş grup oluşturma](create-a-nested-group.md)
+- [Anonim Türler](../programming-guide/classes-and-structs/anonymous-types.md)
+- [Gruplandırma İşleminde Alt Sorgu Yap](perform-a-subquery-on-a-grouping-operation.md)
+- [İç Içe Grup Oluşturma](create-a-nested-group.md)
 - [Verileri Gruplandırma](../programming-guide/concepts/linq/grouping-data.md)

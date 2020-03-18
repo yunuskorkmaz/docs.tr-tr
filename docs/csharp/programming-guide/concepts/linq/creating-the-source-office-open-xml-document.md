@@ -1,25 +1,25 @@
 ---
-title: Kaynak Office Open XML belgesi (C#) oluşturuluyor
+title: Kaynak Office Açık XML Belgesioluşturma (C#)
 ms.date: 07/20/2015
 ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
 ms.openlocfilehash: d6c4d8866bba58e86735099a62041894a9faa9b1
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204159"
 ---
-# <a name="creating-the-source-office-open-xml-document-c"></a>Kaynak Office Open XML belgesi (C#) oluşturuluyor
+# <a name="creating-the-source-office-open-xml-document-c"></a>Kaynak Office Açık XML Belgesioluşturma (C#)
 
-Bu konu başlığında, bu öğreticideki diğer örneklerin kullandığı Office Open XML WordprocessingML belgesinin nasıl oluşturulacağı gösterilmektedir. Bu yönergeleri izlerseniz, çıktılarınız her örnekte girilen çıktıyla eşleşir.
+Bu konu, bu öğreticideki diğer örneklerin kullandığı Office Open XML WordprocessingML belgesinin nasıl oluşturulacağımı gösterir. Bu yönergeleri izlerseniz, çıktınız her örnekte sağlanan çıktıyla eşleşir.
 
-Ancak, bu öğreticideki örnekler geçerli bir WordprocessingML belgesiyle çalışacaktır.
+Ancak, bu öğreticideki örnekler geçerli bir WordprocessingML belgesiyle çalışır.
 
-Bu öğreticinin kullandığı belgeyi oluşturmak için Microsoft Office 2007 veya sonraki bir sürümü yüklemiş olmanız ya da Word, Excel ve PowerPoint 2007 dosya biçimleri için Microsoft Office Uyumluluk Paketi ile Microsoft Office 2003 olmalıdır.
+Bu öğreticinin kullandığı belgeyi oluşturmak için Microsoft Office 2007 veya daha sonra yüklü olması veya Microsoft Office 2003'e Word, Excel ve PowerPoint 2007 Dosya Biçimleri için Microsoft Office Uyumluluk Paketi'ne sahip olması gerekir.
 
-## <a name="creating-the-wordprocessingml-document"></a>WordprocessingML belgesi oluşturma
+## <a name="creating-the-wordprocessingml-document"></a>WordprocessingML Belgesioluşturma
 
-#### <a name="to-create-the-wordprocessingml-document"></a>WordprocessingML belgesi oluşturmak için
+#### <a name="to-create-the-wordprocessingml-document"></a>WordprocessingML belgesini oluşturmak için
 
 1. Yeni bir Microsoft Word belgesi oluşturun.
 
@@ -45,11 +45,11 @@ Bu öğreticinin kullandığı belgeyi oluşturmak için Microsoft Office 2007 v
 
 3. İlk satırı "Başlık 1" stiliyle biçimlendirin.
 
-4. C# Kodu içeren satırları seçin. İlk satır `using` anahtar sözcüğüyle başlar. Son satır son kapanış ayracı. Çizgileri Courier yazı tipiyle biçimlendirin. Bunları yeni bir stille biçimlendirin ve yeni "Code" stilini adlandırın.
+4. C# kodunu içeren satırları seçin. İlk satır `using` anahtar kelime ile başlar. Son satır son kapanış ayraçtır. Satırları kurye yazı tipiyle biçimlendirin. Bunları yeni bir stille biçimlendirin ve yeni stili "Kod" olarak adlandırın.
 
-5. Son olarak, çıktıyı içeren satırın tamamını seçin ve `Code` stille biçimlendirin.
+5. Son olarak, çıktıiçeren tüm satırı seçin ve `Code` stil ile biçimlendirin.
 
-6. Belgeyi kaydedin ve SampleDoc. docx olarak adlandırın.
+6. Belgeyi kaydedin ve sampledoc.docx adını verin.
 
     > [!NOTE]
-    > Microsoft Word 2003 kullanıyorsanız, **farklı kaydet türü** açılan listesinde **Word 2007 belgesi** ' ni seçin.
+    > Microsoft Word 2003 kullanıyorsanız, Tür açılır listesinde **Kaydet'te** **Word 2007 Belgesi'ni** seçin.

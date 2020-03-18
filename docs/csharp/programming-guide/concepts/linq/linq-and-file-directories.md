@@ -3,44 +3,44 @@ title: LINQ ve dosya dizinleri (C#)
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
 ms.openlocfilehash: fe503584e7d14e8d1dd281eb644f0723782feb4a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714620"
 ---
 # <a name="linq-and-file-directories-c"></a>LINQ ve dosya dizinleri (C#)
 
-Birçok dosya sistemi işlemi aslında sorgular ve bu nedenle LINQ yaklaşımına uygundur.  
+Birçok dosya sistemi işlemleri aslında sorgulardır ve bu nedenle LINQ yaklaşımına çok uygundur.  
   
- Bu bölümdeki sorgular bozucu değildir. Özgün dosyaların veya klasörlerin içeriğini değiştirmek için kullanılmaz. Bu, sorguların hiçbir yan etkiye neden olmaması gerektiğine yönelik kuralı izler. Genel olarak, kaynak verileri değiştiren tüm kodlar (oluşturma/güncelleştirme/silme işleçleri de dahil olmak üzere) yalnızca verileri sorgulayan koddan ayrı tutulmalıdır.  
+ Bu bölümdeki sorgular tahrip edici değildir. Bunlar orijinal dosya veya klasörlerin içeriğini değiştirmek için kullanılmaz. Bu, sorguların herhangi bir yan etkiye neden olmaması gerektiği kuralını izler. Genel olarak, kaynak verileri değiştiren tüm kodlar (oluşturma / güncelleştirme / silme işleçleri gerçekleştiren sorgular dahil) yalnızca verileri sorgulayan koddan ayrı tutulmalıdır.  
   
  Bu bölüm aşağıdaki konular içerir:  
   
- [Belirtilen öznitelik veya ada sahip dosyaları sorgulama (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)\
- <xref:System.IO.FileInfo> nesnesinin bir veya daha fazla özelliğini inceleyerek dosyaların nasıl aranacağını gösterir.  
+ [Belirli bir öznitelik veya ada sahip dosyalar için sorgulama (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)\
+ <xref:System.IO.FileInfo> Nesnesinin bir veya daha fazla özelliğini inceleyerek dosyaların nasıl arandığını gösterir.  
   
- [Dosyaları uzantıya göre gruplama (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)\
- <xref:System.IO.FileInfo> nesne gruplarının dosya adı uzantısına göre nasıl geri alınacağını gösterir.  
+ [Uzantıya göre dosya gruplandırma (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)\
+ Dosya adı uzantısına <xref:System.IO.FileInfo> göre nesne gruplarının nasıl döndürüleceklerini gösterir.  
   
- [Bir klasör kümesindeki toplam bayt sayısını sorgulama (LINQ) (C#)](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)\
- Belirtilen bir dizin ağacındaki tüm dosyalardaki toplam bayt sayısının nasıl geri yükleneceğini gösterir.  
+ [Klasörler kümesindeki toplam bayt sayısı (LINQ) (C#) için sorgulama](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)\
+ Belirtilen bir dizin ağacındaki tüm dosyalardaki toplam bayt sayısını nasıl döndüreceklerini gösterir.  
   
- [İki klasörün içeriğini karşılaştırma (LINQ) (C#)](./how-to-compare-the-contents-of-two-folders-linq.md)s  
- Belirtilen iki klasörde bulunan tüm dosyaları ve aynı zamanda bir klasörde bulunan ancak diğeri olmayan tüm dosyaları döndürmeyi gösterir.  
+ [Nasıl iki klasör (LINQ) (C#)](./how-to-compare-the-contents-of-two-folders-linq.md)s içeriğini karşılaştırmak için  
+ Belirtilen iki klasörde bulunan tüm dosyaların ve ayrıca bir klasörde bulunan ancak diğerinde bulunmayan tüm dosyaların nasıl döndürüleceklerini gösterir.  
   
- [Bir dizin ağacındaki en büyük dosya veya dosyalar için sorgu (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)\
- Bir dizin ağacında en büyük veya en küçük dosyanın veya belirli bir sayıdaki dosyanın nasıl döndürülmeli olduğunu gösterir.  
+ [Dizin ağacındaki (LINQ) (C#) en büyük dosya veya dosyaları sorgulama](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)\
+ Dizin ağacındaki en büyük veya en küçük dosyanın veya belirli sayıda dosyanın nasıl döndürüleceklerini gösterir.  
   
- [Bir dizin ağacında (LINQ) yinelenen dosyaları sorgulama (LINQ) (C#)](./how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)\
- Belirtilen bir dizin ağacındaki birden fazla konumda gerçekleşen tüm dosya adlarının nasıl gruplandıralınacağını gösterir. Ayrıca, özel bir karşılaştırıcıyı temel alan daha karmaşık karşılaştırmalar yapmayı gösterir.  
+ [Dizin ağacında yinelenen dosyalar için sorgulama (LINQ) (C#)](./how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)\
+ Belirli bir dizin ağacında birden fazla konumda oluşan tüm dosya adları için nasıl gruplanın yapılacağını gösterir. Ayrıca, özel bir karşılayıcıya dayalı daha karmaşık karşılaştırmaların nasıl gerçekleştirildirilebildiğini de gösterir.  
   
- [Bir klasördeki dosyaların içeriğini sorgulama (LINQ) (C#)](./how-to-query-the-contents-of-files-in-a-folder-lin.md)\
- Bir ağaçtaki klasörlerin nasıl tekrarlanması, her dosyanın nasıl açılacağı ve dosyanın içeriğini sorgulama işlemlerinin nasıl yapılacağını gösterir.  
+ [Klasördeki dosyaların içeriği nasıl sorgulanır (LINQ) (C#)](./how-to-query-the-contents-of-files-in-a-folder-lin.md)\
+ Bir ağaçtaki klasörler arasında nasıl ayin yapılacağını, her dosyayı nasıl açacağını ve dosyanın içeriğini nasıl sorgulayılacağını gösterir.  
   
-## <a name="comments"></a>Açıklamalar  
- Dosya sisteminin içeriğini doğru bir şekilde temsil eden bir veri kaynağı oluşturma konusunda bazı karmaşıklıklar vardır ve özel durumları düzgün bir şekilde işler. Bu bölümdeki örneklerde, belirtilen bir kök klasörü ve tüm alt klasörleri altındaki tüm dosyaları temsil eden <xref:System.IO.FileInfo> nesnelerinin bir anlık görüntü koleksiyonu oluşturulur. Her bir <xref:System.IO.FileInfo> gerçek durumu, bir sorgu yürütme ve sonlandırma arasındaki sürede değişebilir. Örneğin, bir veri kaynağı olarak kullanmak üzere <xref:System.IO.FileInfo> nesnelerinin bir listesini oluşturabilirsiniz. Bir sorgudaki `Length` özelliğine erişmeyi denerseniz, <xref:System.IO.FileInfo> nesnesi `Length`değerini güncelleştirmek için dosya sistemine erişmeye çalışır. Dosya artık yoksa, dosya sistemini doğrudan sorguladığınız halde sorgunuzda bir <xref:System.IO.FileNotFoundException> alırsınız. Bu bölümdeki bazı sorgular belirli durumlarda bu özel durumları tüketen ayrı bir yöntem kullanır. Diğer bir seçenek de <xref:System.IO.FileSystemWatcher>kullanarak veri kaynağınızı dinamik olarak güncel tutkullanmaktır.  
+## <a name="comments"></a>Yorumlar  
+ Dosya sisteminin içeriğini doğru bir şekilde temsil eden ve özel durumları incelikle işleyen bir veri kaynağı oluşturmada bazı karmaşıklıklar söz konusudur. Bu bölümdeki örnekler, belirtilen <xref:System.IO.FileInfo> kök klasörün altındaki tüm dosyaları ve tüm alt klasörlerini temsil eden nesnelerin anlık görüntüsü koleksiyonunu oluşturur. Her <xref:System.IO.FileInfo> birinin gerçek durumu, bir sorguyu yürütmeye başladığınız ve son gördüğünüz zaman arasındaki süre içinde değişebilir. Örneğin, veri kaynağı olarak <xref:System.IO.FileInfo> kullanılacak nesnelerin bir listesini oluşturabilirsiniz. Bir sorgudaki `Length` özelliğe erişmeye çalışırsanız, <xref:System.IO.FileInfo> nesne değerini güncelleştirmek için dosya `Length`sistemine erişmeye çalışır. Dosya artık yoksa, doğrudan dosya <xref:System.IO.FileNotFoundException> sistemini sorgulamasanız bile, sorgunuzda bir soru alırsınız. Bu bölümdeki bazı sorgular, bazı durumlarda bu özel özel durumları kullanan ayrı bir yöntem kullanır. Başka bir seçenek kullanarak veri kaynağınızı dinamik <xref:System.IO.FileSystemWatcher>olarak güncel tutmaktır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [Nesnelere LINQ (C#)](./linq-to-objects.md)

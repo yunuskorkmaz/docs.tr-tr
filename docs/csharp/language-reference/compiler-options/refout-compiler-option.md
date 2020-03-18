@@ -1,5 +1,5 @@
 ---
-title: -refout (C# derleyici seçenekleri)
+title: -refout (C# Derleyici Seçenekleri)
 ms.date: 08/08/2017
 f1_keywords:
 - /refout
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - /refout compiler option [C#]
 - -refout compiler option [C#]
 ms.openlocfilehash: f48316a1e6f657e3bd0190d269dfe0e875a833d9
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72771755"
 ---
-# <a name="-refout-c-compiler-options"></a>-refout (C# derleyici seçenekleri)
+# <a name="-refout-c-compiler-options"></a>-refout (C# Derleyici Seçenekleri)
 
-**-Refout** seçeneği, başvuru derlemesinin çıkış olması gereken bir dosya yolunu belirtir. Bu, yayma API 'sindeki `metadataPeStream` çevirir. Bu seçenek, MSBuild 'in [ProduceReferenceAssembly](/visualstudio/msbuild/common-msbuild-project-properties) Project özelliğine karşılık gelir.
+**-refout** seçeneği, başvuru derlemesinin çıktı olması gereken bir dosya yolu belirtir. Bu Emit API `metadataPeStream` çevirir. Bu seçenek, MSBuild'in [ProduceReferenceAssembly](/visualstudio/msbuild/common-msbuild-project-properties) proje özelliğine karşılık gelir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -24,15 +24,15 @@ ms.locfileid: "72771755"
 -refout:filepath
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
- başvuru derlemesi için FilePath `filepath`. Genellikle birincil derlemenin ile eşleşmelidir. Önerilen kural (MSBuild tarafından kullanılır), başvuru derlemesini birincil derlemeye göre bir "ref/" alt klasörüne yerleştirmelidir.
+ `filepath`Başvuru derlemesi için dosya yolu. Genellikle birincil derleme ile eşleşmelidir. Önerilen kural kuralı (MSBuild tarafından kullanılan) birincil derlemeye göre bir "ref/" alt klasörüne başvuru derlemesi yerleştirmektir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Başvuru derlemeleri, kitaplığın ortak API yüzeyini göstermek için gereken en düşük meta veri miktarını içeren özel bir derleme türüdür. Derleme araçlarındaki bir derlemeye başvururken önemli olan tüm Üyeler için bildirimler içerirler, ancak API sözleşmeleri üzerinde herhangi bir observable etkisi olmayan özel üyelerin tüm üye uygulamalarını ve bildirimlerini hariç tutar. Daha fazla bilgi için bkz. .NET kılavuzundaki [başvuru derlemeleri](../../../standard/assembly/reference-assemblies.md) .
+Başvuru derlemeleri, kitaplığın genel API yüzeyini temsil etmek için gereken yalnızca minimum meta veri miktarını içeren özel bir derleme türüdür. Bunlar, yapı araçlarında bir derlemeye atıfta bulunurken önemli olan tüm üyeler için bildirimler içerir, ancak API sözleşmesi üzerinde gözlemlenebilir bir etkisi olmayan özel üyelerin tüm üye uygulamalarını ve bildirimlerini hariç tutar. Daha fazla bilgi için .NET Kılavuzu'ndaki [Başvuru derlemelerine](../../../standard/assembly/reference-assemblies.md) bakın.
 
-@No__t_0 ve [`-refonly`](refonly-compiler-option.md) seçenekleri birbirini dışlıyor.
+`-refout` Ve [`-refonly`](refonly-compiler-option.md) seçenekler birbirini dışlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

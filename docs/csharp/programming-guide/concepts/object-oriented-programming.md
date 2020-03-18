@@ -1,27 +1,27 @@
 ---
-title: Nesne odaklı programlama (C#)
+title: Nesne Yönelimli Programlama (C#)
 ms.date: 02/08/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
 ms.openlocfilehash: 01d6f55bf0752f902f351675c4596abbb8ac85c2
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77627896"
 ---
-# <a name="object-oriented-programming-c"></a>Nesne odaklı programlama (C#)
+# <a name="object-oriented-programming-c"></a>Nesne Yönelimli programlama (C#)
 
-C#Kapsülleme, devralma ve çok biçimlilik dahil olmak üzere nesne odaklı programlama için tam destek sağlar.
+C#, kapsülleme, kalıtım ve çok biçimlilik gibi nesne yönelimli programlama için tam destek sağlar.
 
-- *Kapsülleme* , ilişkili özellikler, Yöntemler ve diğer üyelerin bir grubunun tek bir birim veya nesne olarak kabul edildiği anlamına gelir.
-- *Devralma* , mevcut bir sınıfı temel alan yeni sınıflar oluşturma özelliğini açıklar.
-- Çok *biçimlilik* , her bir sınıf farklı yollarla aynı özellikleri veya yöntemleri uyguladığından bile, birbirinin yerine kullanılabilecek birden fazla sınıfa sahip olabileceği anlamına gelir.
+- *Kapsülleme,* ilgili özellikler, yöntemler ve diğer üyelerden oluşan bir grubun tek bir birim veya nesne olarak kabul edilsi anlamına gelir.
+- *Devralma,* varolan bir sınıfa dayalı yeni sınıflar oluşturma yeteneğini açıklar.
+- *Çok biçimlilik,* her sınıf aynı özellikleri veya yöntemleri farklı şekillerde uygulasa bile, birbirinin yerine kullanılabilecek birden çok sınıfa sahip olabileceğiniz anlamına gelir.
 
 ## <a name="classes-and-objects"></a>Sınıflar ve nesneler
 
-Terimleri, sırasıyla nesnelerin *türünü* ve sınıfların *örneklerini* betimleyen *sınıf* ve *nesne* . Bu nedenle, bir nesne oluşturma konusuna *örnek*oluşturma denir. Şema benzerleme vurguladı kullanarak bir sınıf şeması bir şema, bir nesne ise bu şema tarafından oluşturulan bir derleme.
+Terim *sınıf* ve *nesne,* sırasıyla nesnelerin *türünü* ve sınıf *örneklerini* açıklar. Yani, bir nesne oluşturma eylemine *anlık hareket*denir. Plan benzetmesini kullanarak, sınıf bir plandır ve bir nesne de bu plandan yapılmış bir binadır.
 
-Bir sınıf tanımlamak için:
+Bir sınıfı tanımlamak için:
 
 ```csharp
 class SampleClass
@@ -29,9 +29,9 @@ class SampleClass
 }
 ```
 
-C#Ayrıca, devralma veya çok biçimlilik için desteğe ihtiyacınız olmadığında yararlı olan *yapılar* olarak adlandırılan türler de sağlar.
+C# ayrıca kalıtım veya çok biçimlilik için desteğe ihtiyacınız olmadığında yararlı olan *yapılar* olarak adlandırılan türleri de sağlar.
 
-Bir yapı tanımlamak için:
+Bir yapıtanımlamak için:
 
 ```csharp
 struct SampleStruct
@@ -39,17 +39,17 @@ struct SampleStruct
 }
 ```
 
-Daha fazla bilgi için [sınıf](../../language-reference/keywords/class.md) ve [Yapı](../../language-reference/builtin-types/struct.md) anahtar kelimeleri makalesine bakın.
+Daha fazla bilgi için [sınıf](../../language-reference/keywords/class.md) ve [yapı](../../language-reference/builtin-types/struct.md) anahtar kelimeleri hakkındaki makalelere bakın.
 
 ### <a name="class-members"></a>Sınıf üyeleri
 
-Her sınıf, sınıf verilerini tanımlayan özellikleri, sınıf davranışını tanımlayan yöntemleri ve farklı sınıflar ve nesneler arasında iletişim sağlayan olayları içeren farklı *sınıf üyelerine* sahip olabilir.
+Her *sınıfın,* sınıf verilerini açıklayan özellikleri, sınıf davranışını tanımlayan yöntemleri ve farklı sınıflar ve nesneler arasında iletişim sağlayan olayları içeren farklı sınıf üyeleri olabilir.
 
 #### <a name="properties-and-fields"></a>Özellikler ve alanlar
 
-Alanlar ve özellikler bir nesnenin içerdiği bilgileri temsil eder. Alanlar, uygun erişim değiştiricilerine bağlı olarak doğrudan okunabildikleri veya ayarlanabileceğinden değişkenlere benzer.
+Alanlar ve özellikler, nesnenin içerdiği bilgileri temsil ediyor. Alanlar, uygulanabilir erişim değiştiricilere tabi olarak doğrudan okunabildikleri veya ayarlanabildikleri için değişkenler gibidir.
 
-Sınıfın örnekleri içinden erişilebilen bir alan tanımlamak için:
+Sınıfın örnekleri içinden erişilebilen bir alanı tanımlamak için:
 
 ```csharp
 public class SampleClass
@@ -58,11 +58,11 @@ public class SampleClass
 }
 ```
 
-Özelliklerde, değerlerin nasıl ayarlandığı veya döndürüldüğü üzerinde daha fazla denetim sağlayan `get` ve `set` erişimcileri bulunur.
+Özelliklerin `get` `set` ve erişime sahip olan ve değerlerin nasıl ayarlandığı veya döndürüldek hakkında daha fazla denetim sağlayan.
 
-C#Özellik değerini depolamak için özel bir alan oluşturmanıza ya da bu alanı arka planda otomatik olarak oluşturan otomatik uygulanan özellikleri ve özellik yordamları için temel mantığı kullanmayı sağlar.
+C# özellik değerini depolamak için özel bir alan oluşturmanıza veya bu alanı otomatik olarak arka planda oluşturan otomatik olarak uygulanan özellikleri kullanmanıza ve özellik yordamları için temel mantığı sağlamanıza olanak tanır.
 
-Otomatik uygulanan bir özellik tanımlamak için:
+Otomatik olarak uygulanan bir özelliği tanımlamak için:
 
 ```csharp
 class SampleClass
@@ -71,7 +71,7 @@ class SampleClass
 }
 ```
 
-Özellik değerini okumak ve yazmak için bazı ek işlemler gerçekleştirmeniz gerekiyorsa, özellik değerini depolamak için bir alan tanımlayın ve bunu depolamak ve almak için temel mantığı sağlayın:
+Özellik değerini okumak ve yazmak için bazı ek işlemler gerçekleştirmeniz gerekiyorsa, özellik değerini depolamak için bir alan tanımlayın ve depolamak ve almak için temel mantığı sağlayın:
 
 ```csharp
 class SampleClass
@@ -87,17 +87,17 @@ class SampleClass
 }
 ```
 
-Çoğu özelliğin, özellik değerini ayarlamak ve almak için yöntemleri ya da yordamları vardır. Ancak, bunları değiştirilmesini veya okumayı kısıtlamak için salt okunurdur veya salt yazılır özellikler oluşturabilirsiniz. İçinde C#, `get` veya `set` özellik yöntemini atlayabilirsiniz. Ancak otomatik uygulanan özellikler salt yazılır olamaz. Salt okuma otomatik uygulanmış özellikler, kapsayan sınıfın oluşturucuları içinde ayarlanabilir.
+Çoğu özelliğin hem ayarlayıp hem de özellik değerini almak için yöntemleri veya yordamları vardır. Ancak, değiştirilmelerini veya okunmasını kısıtlamak için salt okunur veya yalnızca yazma özellikleri oluşturabilirsiniz. C#'da, özelliği veya `get` `set` özelliği yöntemini atlayabilirsiniz. Ancak, otomatik olarak uygulanan özellikler yalnızca yazılamaz. Yalnızca okunan otomatik uygulanan özellikler, içeren sınıfın oluşturucularında ayarlanabilir.
 
 Daha fazla bilgi için bkz.
 
 - [get](../../language-reference/keywords/get.md)
 
-- [set](../../language-reference/keywords/set.md)
+- [Ayarlamak](../../language-reference/keywords/set.md)
 
 #### <a name="methods"></a>Yöntemler
 
-Bir *Yöntem* , bir nesnenin gerçekleştirebileceği bir eylemdir.
+*Yöntem,* bir nesnenin gerçekleştirebileceği bir eylemdir.
 
 Bir sınıfın yöntemini tanımlamak için:
 
@@ -111,7 +111,7 @@ class SampleClass
 }
 ```
 
-Bir sınıf, parametrelerin veya parametre türlerinin sayısında farklı olan aynı yöntemin çeşitli uygulamalarına veya *aşırı*yüküne sahip olabilir.
+Bir sınıfın, parametre veya parametre türlerinin sayısında farklılık gösteren aynı yöntemin birkaç uygulaması veya *aşırı yüklemesi*olabilir.
 
 Bir yöntemi aşırı yüklemek için:
 
@@ -120,7 +120,7 @@ public int sampleMethod(string sampleParam) {}
 public int sampleMethod(int sampleParam) {}
 ```
 
-Çoğu durumda, bir sınıf tanımı içinde bir yöntemi bildirirsiniz. Ancak, C# sınıfının gerçek tanımının dışında mevcut bir sınıfa Yöntemler eklemenize olanak tanıyan *genişletme yöntemlerini* de destekler.
+Çoğu durumda bir sınıf tanımı içinde bir yöntem bildirirsiniz. Ancak C# ayrıca, sınıfın gerçek tanımı dışında varolan bir sınıfa yöntem eklemenize olanak tanıyan *uzantı yöntemlerini* de destekler.
 
 Daha fazla bilgi için bkz.
 
@@ -129,9 +129,9 @@ Daha fazla bilgi için bkz.
 
 #### <a name="constructors"></a>Oluşturucular
 
-Oluşturucular, belirli bir türden bir nesne oluşturulduğunda otomatik olarak yürütülen sınıf yöntemleridir. Oluşturucular genellikle yeni nesnenin veri üyelerini başlatır. Bir Oluşturucu, bir sınıf oluşturulduğunda yalnızca bir kez çalıştırılabilir. Ayrıca, kurucudaki kod her zaman bir sınıftaki diğer koddan önce çalışır. Ancak, başka bir yöntemle aynı şekilde birden çok Oluşturucu aşırı yüklemesi oluşturabilirsiniz.
+Oluşturucular, belirli bir türdeki bir nesne oluşturulduğunda otomatik olarak yürütülen sınıf yöntemleridir. Oluşturucular genellikle yeni nesnenin veri üyelerini başlangıç olarak karşılarlar. Bir oluşturucu, bir sınıf oluşturulduğunda yalnızca bir kez çalıştırılabilir. Ayrıca, oluşturucudaki kod her zaman bir sınıftaki başka bir koddan önce çalışır. Ancak, birden çok oluşturucu başka bir yöntemle aynı şekilde aşırı yüklemeler oluşturabilirsiniz.
 
-Bir sınıf için bir Oluşturucu tanımlamak için:
+Bir sınıf için bir oluşturucu tanımlamak için:
 
 ```csharp
 public class SampleClass
@@ -143,27 +143,27 @@ public class SampleClass
 }
 ```
 
-Daha fazla bilgi için bkz. [oluşturucular](../classes-and-structs/constructors.md).
+Daha fazla bilgi için [Constructors'a](../classes-and-structs/constructors.md)bakın.
 
 #### <a name="finalizers"></a>Sonlandırıcılar
 
-Sonlandırıcılar sınıfların örneklerini deketmek için kullanılır. .NET Framework, çöp toplayıcı uygulamanızdaki yönetilen nesneler için bellek ayırmayı ve serbest bırakma işlemini otomatik olarak yönetir. Ancak, uygulamanızın oluşturduğu yönetilmeyen kaynakları temizlemek için sonlandırıcılardan yine de ihtiyacınız olabilir. Bir sınıf için yalnızca bir sonlandırıcılar olabilir.
+Sonlandırıcılar sınıfların örneklerini yok etmek için kullanılır. .NET Framework'de, çöp toplayıcı, uygulamanızdaki yönetilen nesneler için bellek tahsisini ve serbest bırakılmasını otomatik olarak yönetir. Ancak, uygulamanızın oluşturduğu yönetilmeyen kaynakları temizlemek için yine de sonlandırıcılara ihtiyacınız olabilir. Bir ders için sadece bir finalizatör olabilir.
 
-.NET Framework sonlandırıcılar ve çöp toplama hakkında daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).
+.NET Framework'de sonlandırıcılar ve çöp toplama hakkında daha fazla bilgi için [Bkz.](../../../standard/garbage-collection/index.md)
 
 #### <a name="events"></a>Olaylar
 
-Olaylar, bir sınıf ya da nesnenin, ilgi çekici bir şeyler gerçekleştiğinde diğer sınıflara veya nesnelere bildirilmesini sağlar. Olayı gönderen (veya Başlatan) sınıf *Yayımcı* olarak adlandırılır ve olayı alan (veya işleyen) sınıflar *aboneler*olarak adlandırılır. Olaylar, nasıl oluşturulur ve işlenir hakkında daha fazla bilgi için bkz. [Olaylar](../../../standard/events/index.md).
+Olaylar, ilgi çekici bir şey oluştuğunda bir sınıfın veya nesnenin diğer sınıfları veya nesneleri bildirmesini sağlar. Olayı gönderen (veya yükselten) sınıfa *yayımcı,* olayı alan (veya işleyen) sınıflara *abone*denir. Olaylar hakkında daha fazla bilgi için, bunların nasıl yükseltildiği ve işlendiği [hakkında](../../../standard/events/index.md)bkz.
 
-- Bir sınıfında bir olay bildirmek için [Event](../../language-reference/keywords/event.md) anahtar sözcüğünü kullanın.
+- Bir sınıfta olay bildirmek için [olay](../../language-reference/keywords/event.md) anahtar sözcük'ünden yararlanın.
 
 - Bir olayı yükseltmek için olay temsilcisini çağırın.
 
-- Bir olaya abone olmak için `+=` işlecini kullanın; bir olayın aboneliğini kaldırmak için `-=` işlecini kullanın.
+- Bir etkinliğe abone olmak `+=` için operatörü kullanın; bir etkinlikten aboneliğinizi iptal `-=` etmek için işleci kullanın.
 
-#### <a name="nested-classes"></a>İç içe geçmiş sınıflar
+#### <a name="nested-classes"></a>İç içe sınıflar
 
-Başka bir sınıf içinde tanımlı bir sınıf *iç içe*çağırılır. Varsayılan olarak, iç içe yerleştirilmiş sınıf özeldir.
+Başka bir sınıf içinde tanımlanan bir sınıf *iç içe*denir. Varsayılan olarak, iç içe sınıf özeldir.
 
 ```csharp
 class Container
@@ -175,38 +175,38 @@ class Container
 }
 ```
 
-İç içe yerleştirilmiş sınıfın bir örneğini oluşturmak için, container sınıfının adını ve ardından nokta ve ardından iç içe geçmiş sınıfın adını kullanın:
+İç içe sınıf bir örnek oluşturmak için, nokta ardından kapsayıcı sınıfın adını ve ardından iç içe sınıf adını kullanın:
 
 ```csharp
 Container.Nested nestedInstance = new Container.Nested()
 ```
 
-### <a name="access-modifiers-and-access-levels"></a>Erişim değiştiricileri ve erişim düzeyleri
+### <a name="access-modifiers-and-access-levels"></a>Değiştiricilere ve erişim düzeylerine erişin
 
-Tüm sınıflar ve sınıf üyeleri, *erişim değiştiricilerini*kullanarak diğer sınıflara hangi erişim düzeyini sundukları belirler.
+Tüm sınıflar ve sınıf *üyeleri, erişim değiştiriciler*kullanarak diğer sınıflara hangi erişim düzeyini sağladıklarını belirtebilir.
 
 Aşağıdaki erişim değiştiriciler kullanılabilir:
 
-|C#İcisi|Tanım|
+|C# Değiştirici|Tanım|
 |------------------|----------------|
-|[public](../../language-reference/keywords/public.md)|Türe veya üyeye aynı derlemedeki veya buna başvuran başka bir derlemede bir veya daha fazla kod tarafından erişilebilir.|
-|[private](../../language-reference/keywords/private.md)|Türe veya üyeye yalnızca aynı sınıftaki kodla erişilebilir.|
-|[protected](../../language-reference/keywords/protected.md)|Türe veya üyeye yalnızca aynı sınıftaki veya türetilmiş bir sınıftaki kodla erişilebilir.|
-|[internal](../../language-reference/keywords/internal.md)|Türe veya üyeye aynı derlemedeki kod tarafından erişilebilir, ancak başka bir derlemeden erişilebilir.|
-|[protected internal](../../language-reference/keywords/protected-internal.md)|Türe veya üyeye aynı derlemedeki herhangi bir kod ya da başka bir derlemedeki türetilmiş bir sınıf tarafından erişilebilir.|
-|[private protected](../../language-reference/keywords/private-protected.md)|Türe veya üyeye aynı sınıftaki veya temel sınıf derlemesi içindeki türetilmiş bir sınıftaki kodla erişilebilir.|
+|[Kamu](../../language-reference/keywords/public.md)|Türe veya üyeye, aynı derlemedeki veya ona başvuran başka bir derlemedeki başka bir kod erişebilir.|
+|[Özel](../../language-reference/keywords/private.md)|Türe veya üyeye yalnızca aynı sınıftaki kodla erişilebilir.|
+|[protected](../../language-reference/keywords/protected.md)|Türe veya üyeye yalnızca aynı sınıftaveya türemiş bir sınıfta kodla erişilebilir.|
+|[Iç](../../language-reference/keywords/internal.md)|Türe veya üyeye aynı derlemedeki herhangi bir kod erişebilir, ancak başka bir derlemeden erişilemez.|
+|[protected internal](../../language-reference/keywords/protected-internal.md)|Türe veya üyeye aynı derlemedeki herhangi bir kod veya başka bir derlemedeki herhangi bir türemiş sınıf erişebilir.|
+|[özel korumalı](../../language-reference/keywords/private-protected.md)|Türe veya üyeye aynı sınıftaki kodla veya taban sınıf derlemesi içinde türetilmiş bir sınıfta erişilebilir.|
 
-Daha fazla bilgi için bkz. [erişim değiştiricileri](../classes-and-structs/access-modifiers.md).
+Daha fazla bilgi için [Erişim Değiştiriciler'e](../classes-and-structs/access-modifiers.md)bakın.
 
-### <a name="instantiating-classes"></a>Sınıfları örnekleme
+### <a name="instantiating-classes"></a>Anında sınıflar
 
-Bir nesne oluşturmak için bir sınıf örneği oluşturmanız veya bir sınıf örneği oluşturmanız gerekir.
+Bir nesne oluşturmak için, bir sınıfı anında oluşturmanız veya bir sınıf örneği oluşturmanız gerekir.
 
 ```csharp
 SampleClass sampleObject = new SampleClass();
 ```
 
-Bir sınıfı örnekledikten sonra, örneğin özelliklerine ve alanlarına değerler atayabilir ve sınıf yöntemlerini çağırabilirsiniz.
+Bir sınıfı anında yaptıktan sonra, örnek özelliklerine ve alanlarına değerler atayabilir ve sınıf yöntemlerini çağırabilirsiniz.
 
 ```csharp
 // Set a property value.
@@ -215,7 +215,7 @@ sampleObject.sampleProperty = "Sample String";
 sampleObject.sampleMethod();
 ```
 
-Sınıf örnek oluşturma işlemi sırasında özelliklere değer atamak için, nesne başlatıcıları kullanın:
+Sınıf anlık işlem sırasında özelliklerine değer atamak için nesne baş harflerini kullanın:
 
 ```csharp
 // Set a property value.
@@ -228,11 +228,11 @@ Daha fazla bilgi için bkz.
 - [new İşleci](../../language-reference/operators/new-operator.md)
 - [Nesne ve Koleksiyon Başlatıcıları](../classes-and-structs/object-and-collection-initializers.md)
 
-### <a name="static-classes-and-members"></a>Statik sınıflar ve Üyeler
+### <a name="static-classes-and-members"></a>Statik Sınıflar ve Üyeler
 
-Sınıfının statik üyesi, bir sınıfın tüm örnekleri tarafından paylaşılan bir özellik, yordam veya alandır.
+Sınıfın statik bir üyesi, sınıfın tüm örnekleri tarafından paylaşılan bir özellik, yordam veya alandır.
 
-Statik üye tanımlamak için:
+Statik bir üye tanımlamak için:
 
 ```csharp
 static class SampleClass
@@ -241,21 +241,21 @@ static class SampleClass
 }
 ```
 
-Statik üyeye erişmek için, sınıfın adını bu sınıfın bir nesnesi oluşturmadan kullanın:
+Statik üyeye erişmek için, bu sınıfın bir nesnesini oluşturmadan sınıfın adını kullanın:
 
 ```csharp
 Console.WriteLine(SampleClass.SampleString);
 ```
 
-İçindeki C# statik sınıfların yalnızca statik üyeleri vardır ve örneklenemez. Statik Üyeler ayrıca statik olmayan özelliklere, alanlara veya yöntemlere erişemez
+C#'daki statik sınıflar yalnızca statik üyelere sahiptir ve anında alınamaz. Statik üyeler de statik olmayan özelliklere, alanlara veya yöntemlere erişemez
 
-Daha fazla bilgi için bkz: [static](../../language-reference/keywords/static.md).
+Daha fazla bilgi için bkz: [statik](../../language-reference/keywords/static.md).
 
-### <a name="anonymous-types"></a>Anonim türler
+### <a name="anonymous-types"></a>Anonim türleri
 
-Anonim türler, veri türü için bir sınıf tanımı yazmadan nesneler oluşturmanızı sağlar. Bunun yerine, derleyici sizin için bir sınıf oluşturur. Sınıfın kullanılabilir adı yok ve nesneyi bildirirken belirttiğiniz özellikleri içerir.
+Anonim türler, veri türü için sınıf tanımı yazmadan nesneler oluşturmanıza olanak tanır. Bunun yerine, derleyici sizin için bir sınıf oluşturur. Sınıfın kullanılabilir bir adı yoktur ve nesneyi bildirirken belirttiğiniz özellikleri içerir.
 
-Anonim türün bir örneğini oluşturmak için:
+Anonim bir tür örneği oluşturmak için:
 
 ```csharp
 // sampleObject is an instance of a simple anonymous type.
@@ -263,30 +263,30 @@ var sampleObject =
     new { FirstProperty = "A", SecondProperty = "B" };
 ```
 
-Daha fazla bilgi için bkz: [anonim türler](../classes-and-structs/anonymous-types.md).
+Daha fazla bilgi için bkz: [Anonim Türleri](../classes-and-structs/anonymous-types.md).
 
 ## <a name="inheritance"></a>Devralma
 
-Devralma, başka bir sınıfta tanımlanan davranışı yeniden kullanan, genişleten ve değiştiren yeni bir sınıf oluşturmanıza olanak sağlar. Üyeleri devralınmış olan sınıfa *temel sınıf*denir ve bu üyeleri devralan sınıfa *türetilmiş sınıf*denir. Ancak, içindeki C# tüm sınıflar, .NET sınıf hiyerarşisini destekleyen <xref:System.Object> sınıfından dolaylı olarak devralınır ve tüm sınıflara alt düzey hizmetler sağlar.
+Devralma, başka bir sınıfta tanımlanan davranışı yeniden kullanan, genişleten ve değiştiren yeni bir sınıf oluşturmanıza olanak tanır. Üyeleri devralınan *sınıfa taban sınıf,* bu üyeleri devralan sınıfa *ise türemiş sınıf*denir. Ancak, C#'daki tüm sınıflar <xref:System.Object> ,.NET sınıf hiyerarşisini destekleyen ve tüm sınıflara düşük düzeyli hizmetler sağlayan sınıftan örtülü olarak devralır.
 
 > [!NOTE]
-> C#birden çok devralmayı desteklemez. Diğer bir deyişle, türetilmiş bir sınıf için yalnızca bir temel sınıf belirtebilirsiniz.
+> C# birden fazla mirası desteklemez. Diğer bir tanesi, türemiş bir sınıf için yalnızca bir taban sınıf belirtebilirsiniz.
 
-Temel sınıftan devralması için:
+Taban sınıftan devralmak için:
 
 ```csharp
 class DerivedClass:BaseClass {}
 ```
 
-Varsayılan olarak, tüm sınıflar devralınabilir. Ancak, bir sınıfın temel sınıf olarak kullanılması gerekip gerekmediğini belirtebilir veya yalnızca temel sınıf olarak kullanılabilecek bir sınıf oluşturmanız gerekir.
+Varsayılan olarak tüm sınıflar devralınabilir. Ancak, bir sınıfın taban sınıf olarak kullanılmaması mı yoksa yalnızca taban sınıf olarak kullanılabilecek bir sınıf oluşturup oluşturmayacağını belirtebilirsiniz.
 
-Bir sınıfın temel sınıf olarak kullanılamayacağını belirtmek için:
+Bir sınıfın taban sınıf olarak kullanılamayacağını belirtmek için:
 
 ```csharp
 public sealed class A { }
 ```
 
-Bir sınıfın yalnızca temel sınıf olarak kullanılabileceğini ve örneklenemez olduğunu belirtmek için:
+Bir sınıfın yalnızca taban sınıf olarak kullanılabileceğini ve anında kullanılamayacağını belirtmek için:
 
 ```csharp
 public abstract class B { }
@@ -296,26 +296,26 @@ Daha fazla bilgi için bkz.
 
 - [sealed](../../language-reference/keywords/sealed.md)
 
-- [abstract](../../language-reference/keywords/abstract.md)
+- [Soyut](../../language-reference/keywords/abstract.md)
 
-### <a name="overriding-members"></a>Üyeleri geçersiz kılma
+### <a name="overriding-members"></a>Üyeleri Geçersiz Kılma
 
-Varsayılan olarak, türetilmiş bir sınıf kendi temel sınıfından tüm üyeleri devralır. Devralınan üyenin davranışını değiştirmek istiyorsanız, onu geçersiz kılmanız gerekir. Diğer bir deyişle, türetilmiş sınıfta yöntemin, özelliğin veya olayın yeni bir uygulamasını tanımlayabilirsiniz.
+Varsayılan olarak, türetilmiş bir sınıf tüm üyeleri taban sınıfından devralır. Devralınan üyenin davranışını değiştirmek istiyorsanız, bunu geçersiz kılmanız gerekir. Diğer bir deyişle, türemiş sınıfta yöntem, özellik veya olay yeni bir uygulama tanımlayabilirsiniz.
 
-Özelliklerin ve yöntemlerin nasıl geçersiz kılınabileceğini denetlemek için aşağıdaki değiştiriciler kullanılır:
+Aşağıdaki değiştiriciler özelliklerin ve yöntemlerin nasıl geçersiz kılındığını denetlemek için kullanılır:
 
-|C#İcisi|Tanım|
+|C# Değiştirici|Tanım|
 |------------------|----------------|
 |[virtual](../../language-reference/keywords/virtual.md)|Bir sınıf üyesinin türetilmiş bir sınıfta geçersiz kılınmasına izin verir.|
-|[override](../../language-reference/keywords/override.md)|Temel sınıfta tanımlanan bir sanal (geçersiz kılınabilir) üyeyi geçersiz kılar.|
-|[abstract](../../language-reference/keywords/abstract.md)|Türetilmiş sınıfta bir sınıf üyesinin geçersiz kılınmasını gerektirir.|
-|[new Değiştiricisi](../../language-reference/keywords/new-modifier.md)|Temel sınıftan devralınan bir üyeyi gizler|
+|[Geçersiz kılma](../../language-reference/keywords/override.md)|Taban sınıfta tanımlanan sanal (geçersiz kılınabilir) bir üyeyi geçersiz kılar.|
+|[Soyut](../../language-reference/keywords/abstract.md)|Bir sınıf üyesinin türemiş sınıfta geçersiz kılınmasını gerektirir.|
+|[new Değiştiricisi](../../language-reference/keywords/new-modifier.md)|Taban sınıftan devralınan bir üyeyi gizler|
 
 ## <a name="interfaces"></a>Arabirimler
 
-Sınıflar gibi arabirimler, özellikler, Yöntemler ve olaylar kümesi tanımlar. Ancak sınıfların aksine arabirimler uygulama sağlamaz. Sınıflar tarafından uygulanır ve sınıflardan ayrı varlıklar olarak tanımlanır. Arabirim, bir arabirimi uygulayan bir sınıfın, bu arabirimin her yönünü tam olarak tanımlandığı gibi uygulaması gerektiğini belirten bir sözleşmeyi temsil eder.
+Arabirimler, sınıflar gibi, özellikler, yöntemler ve olaylar kümesi tanımlar. Ancak sınıfların aksine, arabirimler uygulama sağlamaz. Sınıflar tarafından uygulanır ve sınıflardan ayrı varlıklar olarak tanımlanır. Arabirim, arabirimi uygulayan bir sınıfın bu arabirimin her yönünü tam olarak tanımlandığı şekilde uygulaması gerektiğinden, bir sözleşmeyi temsil eder.
 
-Bir arabirim tanımlamak için:
+Arabirimi tanımlamak için:
 
 ```csharp
 interface ISampleInterface
@@ -324,7 +324,7 @@ interface ISampleInterface
 }
 ```
 
-Bir sınıfa bir arabirim uygulamak için:
+Bir sınıfta arabirim uygulamak için:
 
 ```csharp
 class SampleClass : ISampleInterface
@@ -336,11 +336,11 @@ class SampleClass : ISampleInterface
 }
 ```
 
-Daha fazla bilgi için [arabirim](../../language-reference/keywords/interface.md) anahtar sözcüğünün [arabirimler](../interfaces/index.md) ve dil başvurusu makalesindeki Programlama Kılavuzu makalesine bakın.
+Daha fazla bilgi [için, Arabirimler](../interfaces/index.md) ve [arayüz](../../language-reference/keywords/interface.md) anahtar kelimesi ndeki dil başvuru makalesi hakkındaki programlama kılavuzu makalesine bakın.
 
 ## <a name="generics"></a>Genel Türler
 
-.NET Framework sınıflar, yapılar, arabirimler ve Yöntemler, depolayabilecekleri veya kullanabileceği nesne türlerini tanımlayan *tür parametreleri* içerebilir. En yaygın genel türler örneği, bir koleksiyonda depolanacak nesne türlerini belirtebileceğiniz bir koleksiyondur.
+.NET Framework'deki sınıflar, yapılar, arabirimler ve yöntemler, depolayabildikleri veya kullanabilecekleri nesne türlerini tanımlayan *tür parametreleri* içerebilir. Jeneriklerin en yaygın örneği, koleksiyonda depolanacak nesnelerin türünü belirtebileceğiniz bir koleksiyondur.
 
 Genel bir sınıf tanımlamak için:
 
@@ -351,7 +351,7 @@ public class SampleGeneric<T>
 }
 ```
 
-Genel sınıfın bir örneğini oluşturmak için:
+Genel bir sınıfın örneğini oluşturmak için:
 
 ```csharp
 SampleGeneric<string> sampleObject = new SampleGeneric<string>();
@@ -366,10 +366,10 @@ Daha fazla bilgi için bkz.
 
 ## <a name="delegates"></a>Temsilciler
 
-*Temsilci* , yöntem imzasını tanımlayan bir türdür ve uyumlu imzaya sahip herhangi bir yönteme başvuru sağlayabilir. Yöntemi temsilci aracılığıyla çağırabilir (veya çağırabilirsiniz). Temsilciler, yöntemleri bağımsız değişkenler olarak diğer yöntemlere geçirmek için kullanılır.
+*Temsilci,* yöntem imzasını tanımlayan ve uyumlu imzası olan herhangi bir yönteme başvuru sağlayan bir türdür. Temsilci aracılığıyla yöntemi çağırabilir (veya çağırabilirsiniz). Temsilciler, yöntemleri bağımsız değişkenler olarak diğer yöntemlere geçirmek için kullanılır.
 
 > [!NOTE]
-> Olay işleyicileri, temsilciler aracılığıyla çağrılan yöntemlerden başka bir şey değildir. Olay İşlemede temsilciler kullanma hakkında daha fazla bilgi için bkz. [Olaylar](../../../standard/events/index.md).
+> Olay işleyicileri, temsilciler aracılığıyla çağrılan yöntemlerden başka bir şey değildir. Etkinlik işlemede temsilci kullanma hakkında daha fazla bilgi için [Etkinlikler'e](../../../standard/events/index.md)bakın.
 
 Bir temsilci oluşturmak için:
 
@@ -396,7 +396,7 @@ class SampleClass
 }
 ```
 
-Daha fazla bilgi için [temsilci](../../language-reference/builtin-types/reference-types.md) anahtar kelimesiyle ilgili [Temsilciler](../delegates/index.md) ve dil başvurusu makalesindeki Programlama Kılavuzu makalesine bakın.
+Daha fazla bilgi [için, Temsilciler](../delegates/index.md) hakkındaki programlama kılavuzu makalesine ve [temsilci](../../language-reference/builtin-types/reference-types.md) anahtar kelimesindeki dil başvuru makalesine bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

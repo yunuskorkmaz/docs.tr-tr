@@ -1,45 +1,45 @@
 ---
 title: Bir mikro hizmete CQRS ve DDD desenlerini uygulama
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | CQRS ve DDD desenleri arasındaki genel ilişkiyi anlayın.
+description: .NET Microservices Mimari Containerized .NET Uygulamaları için | CQRS ve DDD desenleri arasındaki genel ilişkiyi anlayın.
 ms.date: 10/08/2018
 ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834310"
 ---
-# <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Mikro hizmette Basitleştirilmiş CQRS ve DDD desenleri uygulama
+# <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Basitleştirilmiş CQRS ve DDD desenlerini microservice'e uygulayın
 
-CQRS, verileri okuma ve yazma modellerini ayıran mimari bir modeldir. İlgili terim [komut sorgu ayrımı (CQS)](https://martinfowler.com/bliki/CommandQuerySeparation.html) başlangıçta, kitap *nesne yönelimli yazılım oluşturma*bölümünde bertrve Meyer tarafından tanımlanmıştır. Temel düşünce, bir sistemin işlemlerini iki keskin ayrı kategoriye bölememektir:
+CQRS, veri okuma ve yazma modellerini birbirinden ayıran mimari bir desendir. İlgili terim [Komut Sorgusu Ayırma (CQS)](https://martinfowler.com/bliki/CommandQuerySeparation.html) aslında Bertrand Meyer tarafından kitabında Nesne *Yönelimli Yazılım İnşaat*tanımlanmıştır. Temel fikir, bir sistemin işlemlerini keskin bir şekilde ayrılmış iki kategoriye bölebilirsiniz:
 
-- Lardır. Bu bir sonuç döndürür ve sistemin durumunu değiştirmez ve yan etkileri ücretsizdir.
+- Sorgu. Bu bir sonuç dönmek ve sistemin durumunu değiştirmez, ve yan etkileri ücretsizdir.
 
-- Komut. Bu, bir sistemin durumunu değiştirir.
+- Komut. Bunlar sistemin durumunu değiştirir.
 
-CQS basit bir kavramdır; aynı nesne içindeki Yöntemler ya da komutlar. Her yöntem durum döndürür veya durumu değiştirmez, ancak ikisini birden etmez. Tek bir depo deseninin bir nesnesi de CQS ile uyumlu olabilir. CQS 'ler, CQRS için temel bir ilke olarak düşünülebilir.
+CQS basit bir kavramdır-aynı nesne içinde sorgular veya komutlar olan yöntemler hakkında. Her yöntem durumu döndürür veya durumu mutasyona uğratsa da her ikisini birden döndürmez. Tek bir depo deseni nesnesi bile CQS ile uyumlu olabilir. CQS, CQRS için temel bir ilke olarak kabul edilebilir.
 
-[Komut ve sorgu sorumluluklarının ayrılığı (CQRS)](https://martinfowler.com/bliki/CQRS.html) , Greg başak tarafından sunulmuştur ve UDI Dahan ve diğerleri tarafından güçlü bir şekilde yükseltildi. Daha ayrıntılı olsa da, CQS ilkesini temel alır. Komutların ve olayların yanı sıra zaman uyumsuz iletilerde isteğe bağlı olarak bir model olarak düşünülebilir. Birçok durumda, CQRS, yazma (güncelleştirme) için farklı bir fiziksel veritabanı okuma (sorgular) gibi daha gelişmiş senaryolar ile ilgilidir. Üstelik, daha gelişmiş bir CQRS sistemi, güncelleştirmeler veritabanınız için [olay kaynağını (es)](https://martinfowler.com/eaaDev/EventSourcing.html) uygulayabilir, bu nedenle olayları yalnızca geçerli durum verilerini depolamak yerine etki alanı modelinde depolarsınız. Ancak, bu kılavuzda kullanılan yaklaşım değildir; yalnızca komutlardan oluşan sorguları ayıran en basit CQRS yaklaşımını kullanıyoruz.
+[Komut ve Sorgu Sorumluluk Ayrımı (CQRS)](https://martinfowler.com/bliki/CQRS.html) Greg Young tarafından tanıtıldı ve kuvvetle Udi Dahan ve diğerleri tarafından teşvik. Daha ayrıntılı olmasına rağmen, CQS ilkesine dayanmaktadır. Komutlara ve olaylara ve isteğe bağlı olarak eşzamanlı iletilere dayalı bir desen olarak kabul edilebilir. Çoğu durumda, CQRS daha gelişmiş senaryolar ile ilgilidir, okumalar için farklı bir fiziksel veritabanı olması gibi (sorgular) yazma (güncelleştirmeler). Ayrıca, daha gelişmiş bir CQRS sistemi güncelleştirme veritabanınız için [Olay Kaynağı (ES)](https://martinfowler.com/eaaDev/EventSourcing.html) uygulayabilir, böylece olayları geçerli durum verilerini depolamak yerine yalnızca etki alanı modelinde depolarsınız. Ancak, bu kılavuzda kullanılan yaklaşım bu değildir; sorguları komutlardan ayırmaktan oluşan en basit CQRS yaklaşımını kullanıyoruz.
 
-CQRS 'nin ayrım yönü, sorgu işlemlerini bir katmanda ve komutları başka bir katmanda gruplandırarak elde edilir. Her katmanın kendi veri modeli vardır (model, farklı bir veritabanı olmak üzere değil) ve kendi desen ve teknolojilerin birleşimi kullanılarak oluşturulmuştur. Daha da önemlisi, bu kılavuz için kullanılan örnekte olduğu gibi iki katman aynı katmanda veya mikro hizmette olabilir (sıralama mikro hizmeti). Ya da farklı mikro hizmetlere veya süreçlere uygulanabilmeniz için, bunların bir diğeri etkilenmeden ayrı olarak iyileştirilebilir ve ölçeklenmesini sağlayabilirsiniz.
+CQRS ayırma yönü bir katmanda sorgu işlemleri gruplandırma ve başka bir katmanda komutları elde edilir. Her katmanın kendi veri modeli vardır (model dediğimize dikkat edin, farklı bir veritabanı değil) ve kendi desen ve teknoloji kombinasyonu kullanılarak oluşturulmuştur. Daha da önemlisi, iki katman, bu kılavuz için kullanılan örnekte (sipariş mikroservice) olduğu gibi, aynı katman veya microservice içinde olabilir. Ya da farklı mikro hizmetler de veya süreçlerde uygulanabilir, böylece birbirlerini etkilemeden ayrı ayrı optimize edilebilir ve ölçeklendirilebilir.
 
-CQRS, diğer bağlamlarda bir okuma/yazma işlemi için iki nesneye sahip olduğu anlamına gelir. Daha gelişmiş CQRS belgeleriyle ilgili bilgi edinmek için, daha fazla sayıda okuma veritabanına sahip olma nedenleri vardır. Ancak bu yaklaşımı burada kullandığımızda, hedefin toplamalar gibi DDD desenlerinden gelen sorguları sınırlamak yerine sorgularda daha fazla esneklik elde eteceğiz.
+CQRS, diğer bağlamlarda bir tane nin bulunduğu bir okuma/yazma işlemi için iki nesneye sahip olmak anlamına gelir. Daha gelişmiş CQRS literatüründe öğrenebileceğiniz normalleştirilmiş okuma veritabanına sahip olmak için nedenler vardır. Ancak burada, amacın sorgularda daha fazla esnekliğe sahip olmak yerine, sorguları agrega gibi DDD desenleri kısıtlamalarıyla sınırlamak olduğu bu yaklaşımı kullanmıyoruz.
 
-Bu tür bir hizmet örneği, eShopOnContainers başvuru uygulamasından sipariş eden mikro hizmettir. Bu hizmet, Basitleştirilmiş bir CQRS yaklaşımını temel alan bir mikro hizmet uygular. Tek bir veri kaynağını veya veritabanını kullanır, ancak Şekil 7-2 ' de gösterildiği gibi, işlem etki alanı için iki mantıksal model ve ggg desenleri.
+Bu tür bir hizmet örneği eShopOnContainers referans uygulamasından sipariş microservice olduğunu. Bu hizmet basitleştirilmiş bir CQRS yaklaşımına dayalı bir microservice uygular. Tek bir veri kaynağı veya veritabanı kullanır, ancak şekil 7-2'de gösterildiği gibi, işlem etki alanı için iki mantıksal model ve DDD desenleri kullanır.
 
-![Yüksek düzey basitleştirilmiş bir CQRS ve DDD mikro hizmetini gösteren diyagram.](./media/apply-simplified-microservice-cqrs-ddd-patterns/simplified-cqrs-ddd-microservice.png)
+![Yüksek düzeyde Basitleştirilmiş CQRS ve DDD microservice gösteren diyagram.](./media/apply-simplified-microservice-cqrs-ddd-patterns/simplified-cqrs-ddd-microservice.png)
 
-**Şekil 7-2**. Basitleştirilmiş CQRS ve DDD tabanlı mikro hizmet
+**Şekil 7-2**. Basitleştirilmiş CQRS ve DDD tabanlı mikrohizmet
 
-Mantıksal "sıralama" mikro hizmeti sıralama veritabanını içerir, ancak aynı Docker ana bilgisayarı olması gerekmez. Veritabanının aynı Docker ana bilgisayarında olması, geliştirme için iyi, ancak üretim için değil.
+Mantıksal "Sipariş" Microservice olabilir, ancak aynı Docker ana bilgisayar olmak zorunda değildir Sipariş veritabanı içerir. Veritabanının aynı Docker ana bilgisayarda olması geliştirme için iyidir, ancak üretim için değildir.
 
-Uygulama katmanı Web API 'SI olabilir. Buradaki önemli tasarım, mikro hizmetin sorguları ve Viewmodellerini (istemci uygulamalar için özel olarak oluşturulan veri modelleri), CQRS deseninin altındaki komutlardan, etki alanı modelinden ve işlemlerden ayırmıştır. Bu yaklaşım, sonraki bölümlerde açıklandığı gibi, yalnızca işlemler ve güncelleştirmeler için anlamlı olan DDD desenlerinden gelen kısıtlamaların ve kısıtlamalardan bağımsız olarak sorguları korur.
+Uygulama katmanı Web API'nin kendisi olabilir. Burada önemli tasarım yönü microservice komutları, etki alanı modeli ve CQRS desen aşağıdaki işlemlerden sorguları ve ViewModels (özellikle istemci uygulamaları için oluşturulan veri modelleri) bölünmüş olmasıdır. Bu yaklaşım, sorguları, sonraki bölümlerde açıklandığı gibi yalnızca hareketler ve güncelleştirmeler için anlamlı olan DDD desenlerinden gelen kısıtlamalardan ve kısıtlamalardan bağımsız tutar.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Greg başak. Olay kaynağını alınmış bir sistemde sürüm oluşturma** (çevrimiçi e-kitabı okumak için ücretsiz) \
+- **Greg Young' ı. Bir Olay Kaynaklı Sistemde Sürüm** (Online e-kitap okumak için ücretsiz) \
    <https://leanpub.com/esversioning/read>
 
 >[!div class="step-by-step"]
 >[Önceki](index.md)
->[İleri](eshoponcontainers-cqrs-ddd-microservice.md)
+>[Sonraki](eshoponcontainers-cqrs-ddd-microservice.md)

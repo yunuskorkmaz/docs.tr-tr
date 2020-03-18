@@ -1,101 +1,101 @@
 ---
-title: Mimari Yaklaşımlar-sunucusuz uygulamalar
-description: N katmanlı mimarilerin sunucusuz 'e kadar bulut tabanlı kurumsal uygulamalar oluşturmaya yönelik mimariye bir giriş.
+title: Mimari yaklaşımlar - Sunucusuz uygulamalar
+description: N katmanlı mimarilerden sunucusuzlara bulut tabanlı kurumsal uygulamalar oluşturmak için mimari yaklaşımlarına giriş.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 74de96bef48f16ced4adf82855a740aa0afcdf1d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522904"
 ---
 # <a name="architecture-approaches"></a>Mimari yaklaşımları
 
-Kurumsal uygulamaları mimarmaya yönelik mevcut yaklaşımların anlaşılması sunucusuz tarafından yürütülen rolü açıklığa kavuşturmaya yardımcı olur. Yazılım geliştirme ve tüm uzmanlarının kendi uzmanlarına ve dezavantajlarına sahip birçok yaklaşım ve desen vardır. Çoğu durumda, en son çözüm tek bir yaklaşım üzerinde karar vermeyebilir ancak çeşitli yaklaşımları tümleştirebilir. Geçiş senaryoları genellikle bir mimarinin bir karma yaklaşım aracılığıyla bir mimariden diğerine kaydırılmasıyla ilgilidir.
+Kurumsal uygulamaların mimarlanmasına yönelik varolan yaklaşımların anlaşılması, sunucusuzların oynadığı rolün açıklığa kavuşturulmasına yardımcı olur. Yazılım geliştirme onlarca yıl içinde gelişti birçok yaklaşım ve desenler vardır, ve tüm kendi artıları ve eksileri var. Çoğu durumda, nihai çözüm tek bir yaklaşım üzerinde karar içermeyebilir, ancak çeşitli yaklaşımlar entegre edebilir. Geçiş senaryoları genellikle bir mimari yaklaşımdan diğerine hibrit bir yaklaşımla geçiş yapmayı içerir.
 
-Bu bölümde, kurumsal uygulamalar için hem mantıksal hem de fiziksel mimari desenlerine genel bir bakış sağlanmaktadır.
+Bu bölümde, kurumsal uygulamalar için hem mantıksal hem de fiziksel mimari desenlere genel bir bakış sağlanmıştır.
 
 ## <a name="architecture-patterns"></a>Mimari desenleri
 
-Modern iş uygulamaları çeşitli mimari desenlerini izler. Bu bölüm ortak desenlerin bir anketini temsil eder. Burada listelenen desenler tüm en iyi uygulamalar değildir, ancak farklı yaklaşımlar gösterir.
+Modern iş uygulamaları çeşitli mimari desenleri izler. Bu bölüm, ortak desenlerin bir anketini temsil eder. Burada listelenen desenler mutlaka tüm en iyi uygulamalar değildir, ancak farklı yaklaşımlar göstermektedir.
 
-Daha fazla bilgi için bkz. [Azure Uygulama Mimarisi Kılavuzu](https://docs.microsoft.com/azure/architecture/guide/).
+Daha fazla bilgi için [Azure uygulama mimarisi kılavuzuna](https://docs.microsoft.com/azure/architecture/guide/)bakın.
 
-## <a name="monoliths"></a>Tek tek
+## <a name="monoliths"></a>Yekpare
 
-Birçok iş uygulaması tek bir düzende izler. Eski uygulamalar genellikle tek tek olarak uygulanır. Tek bir düzende, tüm uygulama kaygıları tek bir dağıtımda bulunur. Kullanıcı arabiriminden veritabanı çağrılarına olan her şey aynı kod tabanına dahildir.
+Birçok iş uygulamaları monolit desen izleyin. Eski uygulamalar genellikle monolit olarak uygulanır. Monolit desende, tüm uygulama sorunları tek bir dağıtımda bulunur. Kullanıcı arabiriminden veritabanı aramalarına kadar her şey aynı kod tabanına dahildir.
 
-![Monolith mimarisi](./media/monolith-architecture.png)
+![Monolit mimarisi](./media/monolith-architecture.png)
 
-Tek tek yaklaşımın çeşitli avantajları vardır. Tek bir kod temelini çekmek ve çalışmaya başlamak genellikle kolaydır. Artırma süresi daha az olabilir ve test ortamları oluşturmak, yeni bir kopya sağlamak kadar basittir. MONOLITH birden çok bileşeni ve uygulamayı kapsayacak şekilde tasarlanmış olabilir.
+Monolit yaklaşımın çeşitli avantajları vardır. Genellikle tek bir kod tabanını aşağı çekmek ve çalışmaya başlamak kolaydır. Rampa süresi daha az olabilir ve test ortamları oluşturmak yeni bir kopya sağlamak kadar basittir. Monolit, birden çok bileşen ve uygulama içerecek şekilde tasarlanabilir.
 
-Ne yazık ki, tek bir model ölçeklendirmeye göre daha fazla eğilimi gösterir. Tek tek yaklaşımın önemli dezavantajları şunlardır:
+Ne yazık ki, monolit desen ölçekte yıkmak eğilimindedir. Monolit yaklaşımın başlıca dezavantajları şunlardır:
 
-- Aynı kod tabanında paralel çalışmayı zorlaştırıyor.
-- Tüm değişiklikler, ne kadar önemsiz olsun, tüm uygulamanın yeni bir sürümünü dağıtmanız gerekir.
-- Yeniden düzenleme büyük olasılıkla uygulamanın tamamını etkiler.
-- Genellikle ölçeklendirmeye yönelik tek çözüm, tek başına birden çok, yoğun kaynak yoğunluklu kopya oluşturmaktır.
-- Sistemler Genişlemeden veya diğer sistemler alındığından, tümleştirme zor olabilir.
-- Tek bir tam yapılandırma gereksiniminden dolayı test edilmesi zor olabilir.
-- Kod yeniden kullanımı zor ve genellikle diğer uygulamalar kendi kod kopyalarına sahip olur.
+- Aynı kod tabanında paralel olarak çalışmak zordur.
+- Herhangi bir değişiklik, ne kadar önemsiz olursa olsun, tüm uygulamanın yeni bir sürümünü dağıtmayı gerektirir.
+- Yeniden düzenleme, tüm uygulamayı etkileyebilecek şekilde etkiler.
+- Genellikle ölçeklendirmek için tek çözüm monolitin birden çok, kaynak yoğun kopyasını oluşturmaktır.
+- Sistemler genişledikçe veya diğer sistemler elde edilsinkçe, tümleştirme zor olabilir.
+- Tüm monoliti yapılandırma gereksinimi nedeniyle test etmek zor olabilir.
+- Kod yeniden kullanımı zordur ve genellikle diğer uygulamalar kendi kod kopyalarına sahip olmak zorunda kalırlar.
 
-Birçok işletme, tek bir uygulamayı geçirme fırsatı olarak buluta bakar ve aynı zamanda bunları daha kullanılabilir desenlere yeniden düzenleyin. Ayrı ayrı uygulamaları ve bileşenleri, bunların korunmasını, dağıtılmasını ve ayrı olarak ölçeklendirilmesine olanak tanımak için yaygın olarak kullanılır.
+Birçok işletme bulutu monolit uygulamaları geçirmek ve aynı zamanda bunları daha kullanılabilir desenlere yeniden düzenleme fırsatı olarak görmek. Ayrı ayrı bakımı, dağıtılması ve ölçeklendirilmesine izin vermek için tek tek uygulamaları ve bileşenleri ayırmak yaygındır.
 
-## <a name="n-layer-applications"></a>N katmanlı uygulamalar
+## <a name="n-layer-applications"></a>N-Katman uygulamaları
 
-N katmanlı uygulama bölümü uygulama mantığını belirli katmanlara dönüştürür. En yaygın katmanlar şunlardır:
+N-katmanlı uygulama bölüm uygulama mantığı belirli katmanlara. En yaygın katmanlar şunlardır:
 
 - Kullanıcı arabirimi
 - İş mantığı
 - Veri erişimi
 
-Diğer katmanlar, ara yazılım, toplu işlem ve API içerebilir. Katmanların mantıklı olduğunu unutmamak önemlidir. Yalıtılmış olarak geliştirilse de, hepsi aynı hedef platforma dağıtılabilir.
+Diğer katmanlar ara yazılım, toplu işişleme ve API içerebilir. Katmanların mantıklı olduğunu unutmayın. Her ne kadar izole edilmiş olsalar da, hepsi aynı hedef platforma konuşlandırılabilir.
 
-![N katmanlı mimari](./media/n-layer-architecture.png)
+![N-Layer mimarisi](./media/n-layer-architecture.png)
 
-N katmanlı yaklaşımda aşağıdakiler de dahil olmak üzere birkaç avantaj vardır:
+N-Layer yaklaşımının çeşitli avantajları vardır:
 
-- Yeniden düzenleme bir katmana yalıtılmış.
-- Takımlar bağımsız olarak ayrı katmanları oluşturabilir, test edebilir, dağıtabilir ve koruyabilir.
-- Katmanlar dışarı değiştirilebilir, örneğin veri katmanı, Kullanıcı arabirimi katmanında değişiklik gerektirmeden birden çok veritabanına erişebilir.
+- Yeniden düzenleme bir katmana izole edilmiştir.
+- Takımlar ayrı katmanlar oluşturabilir, sınayabilir, dağıtabilir ve koruyabilir.
+- Katmanlar değiştirilebilir, örneğin veri katmanı UI katmanında değişiklik gerektirmeden birden çok veritabanına erişebilir.
 
-Sunucusuz, bir veya daha fazla katmanı uygulamak için kullanılabilir.
+Sunucusuz bir veya daha fazla katmanları uygulamak için kullanılabilir.
 
 ## <a name="microservices"></a>Mikro hizmetler
 
-**[Mikro hizmet](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)** mimarileri, aşağıdakiler dahil olmak üzere ortak özellikler içerir:
+**[Microservices](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)** mimarileri şunlardır:
 
-- Uygulamalar çeşitli küçük hizmetlerden oluşur.
+- Uygulamalar birkaç küçük hizmetlerden oluşur.
 - Her hizmet kendi sürecinde çalışır.
-- Hizmetler, iş etki alanları etrafında hizalanır.
-- Hizmetler, genellikle aktarım olarak HTTP kullanarak basit API 'Ler üzerinden iletişim kurar.
-- Hizmetler bağımsız olarak dağıtılabilir ve yükseltilebilir.
-- Hizmetler tek bir veri deposuna bağımlı değil.
-- Sistem, sorun göz önünde bulundurularak tasarlanmıştır ve bazı hizmetler başarısız olduğunda bile uygulama çalışmaya devam edebilir.
+- Hizmetler iş alanları etrafında hizalanır.
+- Hizmetler genellikle taşıma olarak HTTP kullanarak hafif API'ler üzerinden iletişim kurar.
+- Hizmetler dağıtılabilir ve bağımsız olarak yükseltilebilir.
+- Hizmetler tek bir veri deposuna bağlı değildir.
+- Sistem hata göz önünde bulundurularak tasarlanmıştır ve uygulama bazı hizmetler başarısız olsa bile yine de çalışabilir.
 
-Mikro hizmetlerin diğer mimari yaklaşımlar için birbirini dışlamalı olması gerekmez. Örneğin, N katmanlı bir mimaride, orta katman için mikro hizmetler kullanılabilir. Mikro Hizmetleri, IIS konaklarındaki sanal dizinlerden kapsayıcılara çok çeşitli yollarla uygulamak da mümkündür. Mikro hizmetlerin özellikleri, özellikle sunucusuz uygulamalar için idealdir.
+Mikro hizmetler diğer mimari yaklaşımlara özel olmak zorunda değildir. Örneğin, Bir N-Tier mimarisi orta katman için mikro hizmetleri kullanabilir. IIS ana bilgisayarlarındaki sanal dizinlerden konteynerlere kadar çeşitli şekillerde mikro hizmetler uygulamak da mümkündür. Mikro hizmetlerin özellikleri, bunları özellikle sunucusuz uygulamalar için ideal kalmaktadır.
 
 ![Mikro hizmetler mimarisi](./media/microservices-architecture.png)
 
-Mikro hizmet mimarilerinin uzmanları şunlardır:
+Mikrohizmet mimarilerinin artıları şunlardır:
 
-- Yeniden düzenleme, genellikle tek bir hizmet olarak yalıtılır.
+- Yeniden düzenleme genellikle tek bir hizmete yalıtılır.
 - Hizmetler birbirinden bağımsız olarak yükseltilebilir.
-- Dayanıklılık ve esneklik, bireysel hizmet taleplerine ayarlanabilir.
-- Geliştirme, farklı ekipler ve platformlar arasında paralel olarak gerçekleşebilir.
-- Yalıtılmış hizmetler için kapsamlı testler yazmak daha kolay.
+- Esneklik ve esneklik bireysel hizmetlerin taleplerine göre ayarlanabilir.
+- Geliştirme birbirinden farklı takımlar ve platformlar arasında paralel olarak gerçekleşebilir.
+- Yalıtılmış hizmetler için kapsamlı testler yazmak daha kolaydır.
 
-Mikro hizmetler aşağıdakiler dahil olmak üzere kendi güçlüklarıyla birlikte gelir:
+Mikro hizmetler, şunları dahil olmak üzere kendi zorluklarıyla birlikte gelir:
 
-- Hangi hizmetlerin kullanılabilir olduğunu ve bunların nasıl çağrılacağını belirleme.
-- Hizmet yaşam döngüsünü yönetme.
-- Hizmetlerin genel uygulamada nasıl bir araya uyduğunu anlama.
-- Farklı hizmetler genelinde yapılan çağrıların tam sistem testi.
+- Hangi hizmetlerin kullanılabilip çağırılabildiğini belirleme.
+- Hizmetlerin yaşam döngüsünü yönetme.
+- Hizmetlerin genel uygulamada nasıl bir araya geldiğini anlama.
+- Birbirinden farklı hizmetler arasında yapılan aramaların tam sistem testi.
 
-Son olarak, daha sonra ele alınan sunucusuz avantajlarına dokunma dahil olmak üzere tüm bu zorlukları ele alan çözümler vardır.
+Sonuç olarak, daha sonra tartışılan sunucusuzların avantajlarından yararlanmak da dahil olmak üzere tüm bu zorlukları ele alacak çözümler vardır.
 
 >[!div class="step-by-step"]
 >[Önceki](index.md)
->[İleri](architecture-deployment-approaches.md)
+>[Sonraki](architecture-deployment-approaches.md)

@@ -1,108 +1,108 @@
 ---
-title: Günlüğe kaydetme ve izleme-.NET Core
-description: .NET Core günlüğe kaydetme ve izlemeye giriş.
+title: Günlük ve izleme - .NET Core
+description: .NET Core günlüğe kaydetme ve izleme için bir giriş.
 ms.date: 08/05/2019
 ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714417"
 ---
-# <a name="net-core-logging-and-tracing"></a>.NET Core günlüğe kaydetme ve izleme
+# <a name="net-core-logging-and-tracing"></a>.NET Core günlük ve izleme
 
-Günlüğe kaydetme ve izleme aynı teknik için gerçekten iki isimdir. Basit teknik, bilgisayarların erken günlerinde bu yana kullanılmıştır. Bu, daha sonra tüketilen çıktıyı yazmak için bir uygulamanın seçilmesini içerir.
+Günlük ve izleme gerçekten aynı teknik için iki isim vardır. Basit teknik bilgisayarların ilk günlerinden beri kullanılmaktadır. Sadece daha sonra tüketilecek çıktı yazmak için bir uygulama enstrümante içerir.
 
-## <a name="reasons-to-use-logging-and-tracing"></a>Günlüğe kaydetme ve izlemeyi kullanma nedenleri
+## <a name="reasons-to-use-logging-and-tracing"></a>Günlüğe kaydetme ve izleme yi kullanma nedenleri
 
-Bu basit teknik, her ne kadar güçlü bir işlemdir. Bir hata ayıklayıcının başarısız olduğu durumlarda kullanılabilir:
+Bu basit teknik şaşırtıcı derecede güçlüdür. Hata ayıklamanın başarısız olduğu durumlarda kullanılabilir:
 
-- Uzun süreler boyunca oluşan sorunlar, geleneksel hata ayıklayıcı ile hata ayıklama zor olabilir. Günlükler, uzun sürelerle ilgili ayrıntılı son mortem incelemesi için izin verir. Buna karşılık, hata ayıklayıcılar gerçek zamanlı Analize göre kısıtlanmıştır.
-- Çok iş parçacıklı uygulamalar ve dağıtılmış uygulamalar genellikle hata ayıklama için zordur.  Hata ayıklayıcı eklemek, davranışları değiştirme eğilimindedir. Ayrıntılı Günlükler, karmaşık sistemleri anlamak için gerektiği şekilde analiz edilebilir.
-- Dağıtılmış uygulamalardaki sorunlar birçok bileşen arasındaki karmaşık bir etkileşime neden olabilir ve bir hata ayıklayıcıyı sistemin her bölümüne bağlamak mantıklı olmayabilir.
-- Birçok hizmet durdurulmuş olmamalıdır. Hata ayıklayıcı iliştirmek genellikle zaman aşımı hatalarıyla neden olur.
-- Sorunlar her zaman öngörülemeyen değildir. Günlüğe kaydetme ve izleme düşük yük için tasarlanmıştır, böylece bir sorun oluşması durumunda programlar her zaman kaydedebilir.
+- Uzun süreler boyunca meydana gelen sorunlar, geleneksel bir hata ayıklama ile hata ayıklamak zor olabilir. Günlükler, uzun sürelere yayılan ayrıntılı otopsi incelemesine olanak sağlar. Buna karşılık, hata ayıklayıcılar gerçek zamanlı analiz için sınırlıdır.
+- Çok iş parçacığı uygulamaları ve dağıtılmış uygulamalar genellikle hata ayıklamak zordur.  Hata ayıklama ekleme, davranışları değiştirme eğilimindedir. Karmaşık sistemleri anlamak için gerektiğinde ayrıntılı günlükler analiz edilebilir.
+- Dağıtılmış uygulamalardaki sorunlar birçok bileşen arasındaki karmaşık etkileşimden kaynaklanabilir ve bir hata ayıkıcıyı sistemin her bölümüne bağlamak makul olmayabilir.
+- Birçok hizmet oyalanmış olmamalıdır. Hata ayıklama eklemek genellikle zaman arızası hatalarına neden olur.
+- Sorunlar her zaman öngörülmüyor. Günlüğe kaydetme ve izleme, bir sorun oluşması durumunda programların her zaman kaydedilebilmeleri için düşük ek iş yükü için tasarlanmıştır.
 
-## <a name="net-core-apis"></a>.NET Core API 'Leri
+## <a name="net-core-apis"></a>.NET Çekirdek API'leri
 
-### <a name="print-style-apis"></a>Yazdırma stili API 'Leri
+### <a name="print-style-apis"></a>Yazdırma stili API'leri
 
-<xref:System.Console?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace?displayProperty=nameWithType>ve <xref:System.Diagnostics.Debug?displayProperty=nameWithType> sınıflarının her biri günlüğe kaydetmeye uygun benzer yazdırma stili API 'Leri sağlar.
+, <xref:System.Console?displayProperty=nameWithType> <xref:System.Diagnostics.Trace?displayProperty=nameWithType>ve <xref:System.Diagnostics.Debug?displayProperty=nameWithType> sınıfların her biri günlük için uygun benzer yazdırma stili API'leri sağlar.
 
-Hangi yazdırma stili API 'sinin kullanılması tercih edilir. Temel farklılıklar şunlardır:
+Hangi yazdırma stili API'sini kullanacağınız seçim size kalmış. Önemli farklar şunlardır:
 
 - <xref:System.Console?displayProperty=nameWithType>
-  - Her zaman etkin ve her zaman konsola yazar.
-  - Müşterinizin yayında görmeniz gerekebilecek bilgiler için faydalıdır.
-  - En basit yaklaşım olduğundan, genellikle geçici geçici hata ayıklama için kullanılır. Bu hata ayıklama kodu genellikle kaynak denetimine hiçbir zaman iade edilmedi.
+  - Her zaman etkin ve her zaman konsola yazıyor.
+  - Müşterinizin sürümde görmesi gerekebileceği bilgiler için yararlıdır.
+  - En basit yaklaşım olduğu için, genellikle geçici hata ayıklama için kullanılır. Bu hata ayıklama kodu genellikle kaynak denetimi için iade asla.
 - <xref:System.Diagnostics.Trace?displayProperty=nameWithType>
-  - Yalnızca `TRACE` tanımlandığında etkinleştirilir.
-  - Eklenen <xref:System.Diagnostics.Trace.Listeners>, varsayılan olarak <xref:System.Diagnostics.DefaultTraceListener>yazar.
-  - Çoğu derlemelerde etkinleştirilecek günlükleri oluştururken bu API 'YI kullanın.
+  - Yalnızca tanımlandığında `TRACE` etkindir.
+  - Ekli yazar <xref:System.Diagnostics.Trace.Listeners>, varsayılan <xref:System.Diagnostics.DefaultTraceListener>olarak .
+  - Çoğu yapıda etkin olacak günlükleri oluştururken bu API'yi kullanın.
 - <xref:System.Diagnostics.Debug?displayProperty=nameWithType>
-  - Yalnızca `DEBUG` tanımlandığında etkinleştirilir.
-  - Ekli bir hata ayıklayıcıya yazar.
-  - `COMPlus_DebugWriteToStdErr` ayarlandıysa `*nix` stderr 'e yazar.
-  - Yalnızca hata ayıklama yapılarında etkinleştirilecek günlükleri oluştururken bu API 'YI kullanın.
+  - Yalnızca tanımlandığında `DEBUG` etkindir.
+  - Ekli hata ayıklama için yazıyor.
+  - `COMPlus_DebugWriteToStdErr` Ayarlanırsa `*nix` stderr'a yazar.
+  - Yalnızca hata ayıklama yapılarında etkinleştirilecek günlükleri oluştururken bu API'yi kullanın.
 
-### <a name="logging-events"></a>Olayları günlüğe kaydetme
+### <a name="logging-events"></a>Olayları kaydetme
 
-Aşağıdaki API 'Ler daha fazla olay yönelimlidir. Basit dizeleri günlüğe kaydetmek yerine olay nesnelerini günlüğe kaydeder.
+Aşağıdaki API'ler daha fazla olay odaklıdır. Basit dizeleri günlüğe kaydetmek yerine olay nesnelerini kaydederler.
 
 - <xref:System.Diagnostics.Tracing.EventSource?displayProperty=nameWithType>
-  - EventSource birincil kök .NET Core izleme API 'sidir.
-  - Tüm .NET Standard sürümlerde kullanılabilir.
-  - Yalnızca seri hale getirilebilir nesnelerin izlenmesini sağlar.
+  - EventSource birincil kök .NET Çekirdek izleme API'si.
+  - Tüm .NET Standart sürümlerinde mevcuttur.
+  - Yalnızca seri leştirilebilir nesnelerin izlenmesine izin verir.
   - Ekli [olay dinleyicilerine](xref:System.Diagnostics.Tracing.EventListener)yazar.
-  - .NET Core için dinleyicileri sağlar:
-    - Tüm platformlarda .NET Core EventPipe
-    - [Windows için olay Izleme (ETW)](/windows/win32/etw/event-tracing-portal)
-    - [Linux için LTTng izleme çerçevesi](https://lttng.org/)
+  - .NET Core dinleyici sağlar:
+    - .NET Core'un EventPipe'ı tüm platformlarda
+    - [Windows için Olay İzleme (ETW)](/windows/win32/etw/event-tracing-portal)
+    - [LTTng Linux için izleme çerçevesi](https://lttng.org/)
 
 - <xref:System.Diagnostics.DiagnosticSource?displayProperty=nameWithType>
-  - .NET Core 'a ve .NET Framework için bir [NuGet paketi](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource) olarak eklenmiştir.
-  - Seri hale getirilebilir olmayan nesnelerin işlem içi izlenmesini sağlar.
-  - Günlüğe kaydedilen nesnelerin seçili alanlarının bir <xref:System.Diagnostics.Tracing.EventSource>yazılmasına izin veren bir köprü içerir.
+  - .NET Core'a ve .NET Framework için [NuGet paketine](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource) dahildir.
+  - Seri olmayan nesnelerin işlem içinde izlenmesini sağlar.
+  - Günlüğe kaydedilmiş nesnelerin seçili alanlarının bir 'e <xref:System.Diagnostics.Tracing.EventSource>yazılmasına izin veren bir köprü içerir.
 
 - <xref:System.Diagnostics.Activity?displayProperty=nameWithType>
-  - Belirli bir etkinlik veya işlemden kaynaklanan günlük iletilerini belirlemek için kesin bir yol sağlar. Bu nesne, farklı hizmetlerde günlükleri ilişkilendirmek için kullanılabilir.
+  - Belirli bir etkinlik veya işlemden kaynaklanan günlük iletilerini tanımlamak için kesin bir yol sağlar. Bu nesne, farklı hizmetler arasında günlükleri ilişkilendirmek için kullanılabilir.
 
 - <xref:System.Diagnostics.EventLog?displayProperty=nameWithType>
   - Yalnızca Windows.
-  - İletileri Windows olay günlüğü 'ne yazar.
-  - Sistem yöneticileri, önemli uygulama hata iletilerinin Windows olay günlüğünde görünmesini bekler.
+  - Windows Olay Günlüğü'ne ileti yazar.
+  - Sistem yöneticileri, Windows Olay Günlüğü'nde önemli uygulama hatası iletilerinin görünmesini bekler.
 
 ## <a name="ilogger-and-logging-frameworks"></a>ILogger ve günlük çerçeveleri
 
-Düşük düzey API 'Ler, günlük gereksinimleriniz için doğru seçim olmayabilir. Bir günlük çerçevesini düşünmek isteyebilirsiniz.
+Düşük düzeyli API'ler günlük gereksinimleriniz için doğru seçim olmayabilir. Bir günlük çerçevesi düşünebilirsiniz.
 
-<xref:Microsoft.Extensions.Logging.ILogger> arabirimi, günlükçülerin bağımlılık ekleme yoluyla eklenebileceği ortak bir günlüğe kaydetme arabirimi oluşturmak için kullanılır.
+Arabirim, <xref:Microsoft.Extensions.Logging.ILogger> loggers bağımlılık enjeksiyonu ile takılabilir ortak bir günlük arabirimi oluşturmak için kullanılmıştır.
 
-Örneğin, uygulamanız için en iyi seçimi yapmanıza olanak tanımak için `ASP.NET` yerleşik ve üçüncü taraf çerçeveler için destek sunar:
+Örneğin, uygulamanız `ASP.NET` için en iyi seçimi yapabilmenize izin vermek için yerleşik ve üçüncü taraf çerçeveleri bir seçim için destek sunar:
 
-- [ASP.NET yerleşik günlük sağlayıcıları](/aspnet/core/fundamentals/logging/#built-in-logging-providers)
-- [ASP.NET üçüncü taraf günlüğü sağlayıcıları](/aspnet/core/fundamentals/logging/#third-party-logging-providers)
+- [ASP.NET günlük sağlayıcılar yerleşik](/aspnet/core/fundamentals/logging/#built-in-logging-providers)
+- [ASP.NET Üçüncü taraf günlük sağlayıcıları](/aspnet/core/fundamentals/logging/#third-party-logging-providers)
 
-## <a name="logging-related-references"></a>Günlüğe kaydetme ilgili başvurular
+## <a name="logging-related-references"></a>İlgili başvuruları günlüğe kaydetme
 
 - [Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme](../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 
 - [Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 
-- [ASP.net günlüğü](/aspnet/core/fundamentals/logging) , desteklediği günlük tekniklerine genel bir bakış sağlar.
+- [ASP.NET Günlük,](/aspnet/core/fundamentals/logging) desteklediği günlük leme tekniklerine genel bir bakış sağlar.
 
-- Dize ilişkilendirme, günlük kodu yazmayı kolaylaştırabilir. [ C# ](../../csharp/language-reference/tokens/interpolated.md)
+- [C# String Enterpolasyonu](../../csharp/language-reference/tokens/interpolated.md) günlük kodu yazmayı basitleştirebilir.
 
-- <xref:System.Exception.Message?displayProperty=nameWithType> özelliği, özel durumları günlüğe kaydetmek için yararlıdır.
+- Özellik, <xref:System.Exception.Message?displayProperty=nameWithType> özel durumlar günlüğe kaydetme için yararlıdır.
 
-- <xref:System.Diagnostics.StackTrace?displayProperty=nameWithType> sınıfı günlüklerinizi yığın bilgileri sağlamak için yararlı olabilir.
+- Sınıf <xref:System.Diagnostics.StackTrace?displayProperty=nameWithType> günlükleri yığın bilgi sağlamak için yararlı olabilir.
 
-## <a name="performance-considerations"></a>Performans değerlendirmeleri
+## <a name="performance-considerations"></a>Performansla ilgili önemli noktalar
 
-Dize biçimlendirmesi, fark edilebilir CPU işlem süresini alabilir.
+Dize biçimlendirme fark edilir CPU işleme süresi alabilir.
 
-Performans açısından kritik uygulamalarda şunları yapmanız önerilir:
+Performans açısından kritik uygulamalarda şunları önermeniz önerilir:
 
-- Hiç kimse dinlemediğinde çok fazla günlük tutulmasını önleyin. Önce günlük kaydının etkin olup olmadığını denetleyerek maliyetli günlük mesajları oluşturmaktan kaçının.
-- Yalnızca yararlı olanları günlüğe kaydedin.
-- Süslü biçimlendirmeyi analiz aşamasına erteleyin.
+- Kimse dinlemezken çok sayıda günlüğe kaydetmekten kaçının. Önce günlüğe kaydetme nin etkin olup olmadığını denetleyerek maliyetli günlük iletileri oluşturmaktan kaçının.
+- Yalnızca yararlı olanı kaydedin.
+- Süslü biçimlendirmeyi analiz aşamasına erteler.

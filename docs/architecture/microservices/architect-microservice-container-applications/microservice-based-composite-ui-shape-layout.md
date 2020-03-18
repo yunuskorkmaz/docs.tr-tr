@@ -1,65 +1,65 @@
 ---
-title: Mikro hizmetlere dayalı bileşik UI oluşturma
-description: Mikro hizmetler mimarisi yalnızca arka uç için değil. Ön uçta kullanmak için bir göz atma görünümü alın.
+title: Mikro hizmetlere dayalı bileşik u-u ui oluşturma
+description: Microservices mimarisi sadece arka uç için değildir. Ön uçta kullanarak bir göz görünümü alın.
 ms.date: 09/20/2018
 ms.openlocfilehash: 1861d3bb6e5d4a0226aa8f3f72a2e0d3e83be56f
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72275734"
 ---
-# <a name="creating-composite-ui-based-on-microservices"></a>Mikro hizmetlere dayalı bileşik UI oluşturma
+# <a name="creating-composite-ui-based-on-microservices"></a>Mikro hizmetlere dayalı bileşik u-u ui oluşturma
 
-Mikro hizmetler mimarisi genellikle sunucu tarafı işleme verileriyle ve mantığıyla başlar, ancak çoğu durumda Kullanıcı arabirimi hala tek bir şekilde ele alınır. Ancak, [mikro ön uçlar](https://martinfowler.com/articles/micro-frontends.html)adlı daha gelişmiş bir yaklaşım da mikro hizmetlere göre uygulama kullanıcı arabirimini tasarlayamalıdır. Bu, sunucu üzerinde mikro hizmetler ve mikro hizmetleri kullanan tek parçalı bir istemci uygulaması yerine mikro hizmetler tarafından oluşturulan bileşik bir kullanıcı arabirimine sahip olma anlamına gelir. Bu yaklaşımda, oluşturduğunuz mikro hizmetler hem Logic hem de görsel gösterimiyle tamamlanabilir.
+Microservices mimarisi genellikle sunucu tarafı işleme verileri ve mantığı ile başlar, ancak, birçok durumda, uI hala bir monolit olarak işlenir. Ancak, daha gelişmiş bir yaklaşım, [mikro frontends](https://martinfowler.com/articles/micro-frontends.html)denilen, de mikro hizmetlere dayalı uygulama kullanıcı arabirimi tasarlamaktır. Bu, sunucuda mikro hizmetler ve mikro hizmetleri tüketen tek bir istemci uygulaması yerine, mikro hizmetler tarafından üretilen kompozit bir ui'ye sahip olmak anlamına gelir. Bu yaklaşımla oluşturduğunuz mikro hizmetler hem mantık hem de görsel gösterim ile tamamlanabilir.
 
-Şekil 4-20, tek parçalı bir istemci uygulamasından yalnızca mikro hizmetlerin tüketen daha basit bir yaklaşım gösterir. Kuşkusuz, HTML ve JavaScript üreten bir ASP.NET MVC hizmetine sahip olabilirsiniz. Bu şekilde, mikro hizmetleri kullanan tek bir (tek parçalı) istemci kullanıcı arabirimine sahip olduğunuz ve Kullanıcı arabirimi şeklinin (HTML ve JavaScript) değil Logic ve verilere odaklandığınız bir basitlik basitleştirılmıştır.
+Şekil 4-20, yekpare bir istemci uygulamasından sadece mikro hizmetleri tüketen daha basit bir yaklaşımı gösterir. Tabii ki, HTML ve JavaScript üreten arasında bir ASP.NET MVC hizmeti olabilir. Şekil, sadece mantık ve veri değil, UI şekli (HTML ve JavaScript) odaklanmak mikrohizmetleri tüketen tek bir (yekpare) istemci UI olduğunu vurgulayan bir basitleştirme olduğunu.
 
-![Mikro hizmetlere bağlanan bir tek parçalı kullanıcı arabirimi uygulamasının diyagramı.](./media/microservice-based-composite-ui-shape-layout/monolith-ui-consume-microservices.png)
+![Mikro hizmetlere bağlanan yekpare bir UI uygulamasının diyagramı.](./media/microservice-based-composite-ui-shape-layout/monolith-ui-consume-microservices.png)
 
-**Şekil 4-20**. Arka uç mikro hizmetlerini kullanan tek parçalı bir kullanıcı arabirimi uygulaması
+**Şekil 4-20**. Arka uç mikro hizmetleri tüketen yekpare bir kullanıcı arası bilgi bir uygulama
 
-Buna karşılık, karma bir kullanıcı arabirimi tam olarak oluşturulur ve mikro hizmetler tarafından oluşturulur. Mikro hizmetlerden bazıları, Kullanıcı arabiriminin belirli alanlarının görsel şeklini barındırır. Temel fark, şablonları temel alan istemci kullanıcı arabirimi bileşenleri (örneğin TypeScript sınıfları) ve bu şablonlar için veri şekillendirme-UI ViewModel her mikro hizmetten gelir.
+Buna karşılık, kompozit bir ui tam olarak oluşturulur ve mikrohizmetler kendileri tarafından oluşturulur. Bazı mikro hizmetler, UI'nin belirli alanlarının görsel şeklini kullanır. Temel fark, şablonlara dayalı istemci ara birimi bileşenlerine (örneğin TypeScript sınıfları) sahip olması ve bu şablonlar için veri şekillendirme-UI ViewModel'in her mikro hizmetten gelmesidir.
 
-İstemci uygulaması Başlangıç zamanında istemci kullanıcı arabirimi bileşenleri (örneğin, TypeScript sınıfları), belirli bir senaryo için ViewModel sağlayabilen bir altyapı mikro hizmeti ile kendisini kaydeder. Mikro hizmet şekli değiştirirse, Kullanıcı arabirimi de değişir.
+İstemci uygulaması başlatma zamanında, istemci kullanıcı arabirimi bileşenlerinin her biri (örneğin TypeScript sınıfları), kendisini belirli bir senaryo için Görünüm Modelleri sağlama yeteneğine sahip bir altyapı mikro hizmetiyle kaydeder. Mikro hizmet şekli değiştirirse, UI de değişir.
 
-Şekil 4-21, bu bileşik UI yaklaşımının bir sürümünü gösterir. Bu basitleştirilerek, farklı tekniklerin temel alınarak parçalı parçalar oluşturan başka mikro hizmetlerden sahip olabilirsiniz. Bu, geleneksel bir Web yaklaşımı (ASP.NET MVC) veya SPA (tek sayfalı uygulama) oluşturmaya göre değişir.
+Şekil 4-21 bu bileşik UI yaklaşımının bir sürümünü gösterir. Bu, farklı tekniklere dayanan parçalı parçaları biraraya getiren başka mikro hizmetleriniz olabileceğinden basitleştirilmiştir. Geleneksel bir web yaklaşımı (ASP.NET MVC) veya SPA (Tek Sayfa Uygulaması) oluşturmanıza bağlıdır.
 
-![Birçok görünüm modelinden oluşan bileşik bir kullanıcı arabirimi diyagramı.](./media/microservice-based-composite-ui-shape-layout/microservice-generate-composite-ui.png)
+![Birçok görünüm modelinden oluşan bileşik bir ui diyagramı.](./media/microservice-based-composite-ui-shape-layout/microservice-generate-composite-ui.png)
 
-**Şekil 4-21**. Arka uç mikro hizmetleri tarafından şekillendirilmiş bir bileşik UI uygulaması örneği
+**Şekil 4-21**. Arka uç mikro hizmetler tarafından şekillendirilen kompozit kullanıcı bir kullanıcı bir kullanıcı bir uygulama örneği
 
-Bu UI Composition mikro hizmetlerinin her biri, küçük bir API ağ geçidine benzer. Ancak bu durumda, her biri küçük bir kullanıcı arabirimi alanından sorumludur.
+Bu UI kompozisyon mikro hizmetlerinin her biri küçük bir API Ağ Geçidi'ne benzer. Ama bu durumda, her biri küçük bir uI alan sorumludur.
 
-Mikro hizmetler tarafından yönetilen bileşik bir kullanıcı arabirimi yaklaşımı, kullanmakta olduğunuz UI teknolojilerine bağlı olarak daha zor veya daha az olabilir. Örneğin, bir SPA veya yerel mobil uygulama oluşturmak için kullandığınız geleneksel bir Web uygulaması oluşturmak için aynı teknikleri kullanamazsınız (Bu yaklaşım için daha zor olabilecek Xamarin uygulamaları geliştirilirken olduğu gibi).
+Kullandığınız UI teknolojilerine bağlı olarak, mikro hizmetler tarafından yönlendirilen kompozit bir UI yaklaşımı daha zor veya daha az zor olabilir. Örneğin, bir SPA oluşturmak veya yerel mobil uygulama için kullandığınız geleneksel bir web uygulaması oluşturmak için aynı teknikleri kullanmazsınız (bu yaklaşım için daha zor olabilecek Xamarin uygulamaları geliştirirken olduğu gibi).
 
-[Eshoponcontainers](https://aka.ms/MicroservicesArchitecture) örnek uygulaması, birden çok nedenden dolayı tek parçalı kullanıcı arabirimi yaklaşımını kullanır. İlk olarak, mikro hizmetler ve kapsayıcılar için bir giriş niteliğindedir. Bileşik bir kullanıcı arabirimi daha gelişmiş olmakla kalmaz, Kullanıcı arabirimini tasarlarken ve geliştirirken de daha fazla karmaşıklık gerektirir. İkinci olarak, eShopOnContainers, Xamarin 'e dayalı yerel bir mobil uygulama de sağlar ve bu da istemci C\# tarafında daha karmaşık hale gelir.
+[eShopOnContainers](https://aka.ms/MicroservicesArchitecture) örnek uygulama birden çok nedenden dolayı monolitik Kullanıcı Arabirimi yaklaşımını kullanır. İlk olarak, mikro hizmetler ve konteynerler için bir giriş. Kompozit bir web sitesi daha gelişmiştir, ancak ui tasarlarken ve geliştirirken daha fazla karmaşıklık gerektirir. İkincisi, eShopOnContainers da Xamarin dayalı bir yerli mobil uygulama sağlar, hangi\# istemci C tarafında daha karmaşık hale getirecek.
 
-Ancak, mikro hizmetlere dayalı bileşik UI hakkında daha fazla bilgi edinmek için aşağıdaki başvuruları kullanmanız önerilir.
+Ancak, mikro hizmetlere dayalı kompozit u-kullanım hizmeti hakkında daha fazla bilgi edinmek için aşağıdaki referansları kullanmanızı öneririz.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Mikro ön uçlar (Marwler 'in blogu)**  
+- **Mikro Frontends (Martin Fowler günlüğü)**  
   <https://martinfowler.com/articles/micro-frontends.html>
   
-- **Mikro ön uçlar (Michael geers sitesi)**  
+- **Mikro Frontends (Michael Geers sitesi)**  
   <https://micro-frontends.org/>
   
-- **ASP.NET kullanarak bileşik Kullanıcı arabirimi (belirli bir Atölyesi)**  
+- **ASP.NET kullanarak Kompozit UI (Özellikle Atölye)**  
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
-- **Ruben Oostinga. Mikro hizmetler mimarisinde tek parçalı ön uç**  
+- **Ruben Oostinga. Microservices Mimarisinde Monolitik Cephe**  
   <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
-- **Mauro Servienti. Daha iyi kullanıcı arabirimi kompozisyonunun gizli dizisi**  
+- **Mauro Servienti. Daha iyi ui kompozisyon sırrı**  
   <https://particular.net/blog/secret-of-better-ui-composition>
 
-- **Viktor Farcic. Ön uç Web bileşenlerini mikro hizmetlere ekleme**  
+- **Viktor Farciç. Front-End Web Bileşenleri microservices içine dahil**  
   <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
-- **Mikro hizmet mimarisinde ön uç yönetimi**  
+- **Microservices Mimarisinde Frontend'i Yönetme**  
   <https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html>
 
 >[!div class="step-by-step"]
 >[Önceki](microservices-addressability-service-registry.md)
->[İleri](resilient-high-availability-microservices.md)
+>[Sonraki](resilient-high-availability-microservices.md)

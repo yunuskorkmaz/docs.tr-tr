@@ -1,5 +1,5 @@
 ---
-title: -errorreport (C# derleyici seçenekleri)
+title: -hata raporu (C# Derleyici Seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /errorreport
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
 ms.openlocfilehash: 52b58aac5e82d4228dfda9c4d77c1d1c5de3e0cd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253887"
 ---
-# <a name="-errorreport-c-compiler-options"></a>-errorreport (C# derleyici seçenekleri)
-Bu seçenek, Microsoft 'a C# iç derleyici hatası bildirmek için kullanışlı bir yol sağlar.
+# <a name="-errorreport-c-compiler-options"></a>-hata raporu (C# Derleyici Seçenekleri)
+Bu seçenek, C# dahili derleyici hatasını Microsoft'a bildirmek için kullanışlı bir yol sağlar.
 
 > [!NOTE]
-> Windows Vista ve Windows Server 2008 ' de, Visual Studio için yaptığınız hata raporlama ayarları Windows Hata Bildirimi (WER) ile yapılan ayarları geçersiz kılmaz. WER ayarları her zaman Visual Studio hata raporlama ayarlarından önceliklidir.
+> Windows Vista ve Windows Server 2008'de Visual Studio için yaptığınız hata raporlama ayarları, Windows Hata Raporlama (WER) aracılığıyla yapılan ayarları geçersiz kılmaz. WER ayarları her zaman Visual Studio hata raporlama ayarlarını önceliklidir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -27,34 +27,34 @@ Bu seçenek, Microsoft 'a C# iç derleyici hatası bildirmek için kullanışlı
 -errorreport:{ none | prompt | queue | send }
 ```
 
-## <a name="arguments"></a>Arguments
- **seçim**  
- İç derleyici hataları hakkında raporlar toplanmayacak veya Microsoft 'a gönderilmez.
+## <a name="arguments"></a>Bağımsız Değişkenler
+ **yok**  
+ Dahili derleyici hatalarıyla ilgili raporlar toplanmaz veya Microsoft'a gönderilmez.
 
- **komut istemi** İç derleyici hatası aldığınızda rapor göndermenizi ister. geliştirme ortamında bir uygulama derlerken varsayılan değer, **istem** varsayılandır.
+ **istemi** Dahili derleyici hatası aldığınızda rapor göndermenizi ister. geliştirme ortamında bir uygulama derlediğinizde **varsayılan dır.**
 
- **kuyruk** Hata raporunu sıralar. Yönetici kimlik bilgileriyle oturum açtığınızda, son oturum açtığınız zamandan bu yana tüm sorunları bildirebilirsiniz. Her üç günde birden çok kez rapor göndermeniz istenmez. komut satırında bir uygulama derlerken varsayılan **kuyruk** varsayılandır.
+ **sıra** Hata raporunu sıralar. Yönetim kimlik bilgileriyle oturum açtığınızda, son oturum açıldığınızı beri tüm hataları bildirebilirsiniz. Hatalar için üç günde bir birden fazla rapor göndermeniz istenmez. **komut** satırında bir uygulama derlediğinizde sıra varsayılandır.
 
- **Gönder** , İç derleyici hatalarının raporlarını otomatik olarak Microsoft 'a gönderir. Bu seçeneği etkinleştirmek için öncelikle Microsoft veri toplama ilkesini kabul etmelisiniz. Bir bilgisayarda **-errorreport: Send** ' i ilk kez belirttiğinizde, bir derleyici Iletisi sizi Microsoft veri toplama ilkesini Içeren bir Web sitesine başvuracaktır.
+ **gönder** Dahili derleyici hatalarıyla ilgili raporları otomatik olarak Microsoft'a gönderir. Bu seçeneği etkinleştirmek için öncelikle Microsoft veri toplama ilkesini kabul etmelisiniz. -hata **raporu:bilgisayarda gönder:'yi** ilk kez belirttiğinde, derleyici iletisi sizi Microsoft veri toplama ilkesini içeren bir Web sitesine yönlendirir.
 
 ## <a name="remarks"></a>Açıklamalar
- Derleyici bir kaynak kodu dosyasını işleyeişce bir iç derleyici hatası (ıCE) oluşur. Bir buz gerçekleştiğinde, derleyici bir çıkış dosyası ya da kodunuzu onarmak için kullanabileceğiniz yararlı bir tanılama üretmez.
+ Derleyici bir kaynak kodu dosyasını işleyemediğinde dahili derleyici hatası (ICE) sonuçları. Bir ICE oluştuğunda, derleyici bir çıktı dosyası veya kodunuzu düzeltmek için kullanabileceğiniz yararlı bir tanılama üretmez.
 
- Önceki sürümlerde, bir buz aldığınızda sorunu bildirmek için Microsoft Ürün Destek Hizmetleri 'ne başvurmanız önerilir. **-Errorreport**kullanarak, görsel C# ekibe buz bilgileri sağlayabilirsiniz. Hata raporlarınız, gelecekteki derleyici sürümlerinin artırılmasına yardımcı olabilir.
+ Önceki sürümlerde, bir ICE aldığınızda, sorunu bildirmek için Microsoft Ürün Destek Hizmetleri'ne başvurmanız tavsiye edildi. **-errorreport**kullanarak Visual C# ekibine ICE bilgileri sağlayabilirsiniz. Hata raporlarınız gelecekteki derleyici sürümlerini geliştirmeye yardımcı olabilir.
 
- Kullanıcının raporları gönderebilme özelliği bilgisayar ve Kullanıcı ilkesi izinlerine bağlıdır.
+ Kullanıcının rapor gönderme yeteneği bilgisayara ve kullanıcı ilkesi izinlerine bağlıdır.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için
 
-1. Projenin **Özellikler** sayfasını açın. Daha fazla bilgi için bkz. [derleme sayfası, proje TasarımcısıC#()](/visualstudio/ide/reference/build-page-project-designer-csharp).
+1. Projenin **Özellikleri** sayfasını açın. Daha fazla bilgi için Bkz. [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).
 
-2. **Yapı** özelliği sayfasına tıklayın.
+2. Özellik **Oluştur** sayfasını tıklatın.
 
-3. **Gelişmiş** düğmesine tıklayın.
+3. **Gelişmiş** düğmesini tıklatın.
 
-4. **Iç derleyici hata raporlama** özelliğini değiştirin.
+4. İç **Derleyici Hata Raporlama** özelliğini değiştirin.
 
- Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>.
+ Bu derleyici seçeneğini programlı olarak nasıl ayarlayıştırılabilen ler hakkında bilgi için bkz. <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

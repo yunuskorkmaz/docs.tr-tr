@@ -1,32 +1,32 @@
 ---
-title: Kapsayıcı ve mikro hizmet tabanlı uygulamaları tasarlama
-description: Kapsayıcı ve mikro hizmet tabanlı uygulamaların mimarisi, küçük bir Fede değildir ve çok daha fazla alınmamalıdır. Bu bölümdeki temel kavramları öğrenin.
+title: Konteyner ve mikrohizmet tabanlı uygulamaların mimarlanması
+description: Konteyner ve mikro hizmet tabanlı uygulamaların mimaredilmesi küçük bir başarı değildir ve hafife alınmamalıdır. Bu bölümdeki temel kavramları öğrenin.
 ms.date: 09/20/2018
 ms.openlocfilehash: aff30c907f1140b94dbcae330ed7cb633b0a744b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70295520"
 ---
-# <a name="architecting-container-and-microservice-based-applications"></a>Kapsayıcı ve mikro hizmet tabanlı uygulamaları tasarlama
+# <a name="architecting-container-and-microservice-based-applications"></a>Konteyner ve mikrohizmet tabanlı uygulamaların mimarlanması
 
-*Mikro hizmetler harika avantajlar sunar, ancak büyük ölçüde yeni zorluk da sunar. Mikro hizmet mimarisi desenleri, mikro hizmet tabanlı bir uygulama oluştururken temel değerler oluşturur.*
+*Microservices büyük faydalar sunmak la birlikte, aynı zamanda büyük yeni zorluklar alametidir. Microservice mimari desenleri, microservice tabanlı bir uygulama oluştururken temel sütunlardır.*
 
-Bu kılavuzda daha önce kapsayıcılar ve Docker hakkında temel kavramları öğrendiniz. Bu, kapsayıcıları kullanmaya başlamak için gereken en az bilgi. Kapsayıcılar, kapsayıcılar, mikro hizmetler için çok büyük olsa da, mikro hizmet mimarisi için zorunlu değildir ve bu mimari bölümünde çok sayıda mimari kavram, kapsayıcılar olmadan da uygulanabilir. Ancak, bu kılavuz, kapsayıcıların zaten tanıtılmasından kaynaklanan her ikisinin de kesişimine odaklanır.
+Daha önce bu kılavuzda, konteynerler ve Docker hakkında temel kavramları öğrendim. Konteynerlerle başlamak için gereken minimum bilgi buydu. Konteynerler etkinleştirici ve mikro hizmetler için mükemmel bir uyum olsa bile, bir mikrohizmet mimarisi için zorunlu değildir ve bu mimari bölümündebirçok mimari kavramlar da kapsayıcıolmadan uygulanabilir. Ancak, bu kılavuz zaten kapların tanıtılan önemi nedeniyle her ikisinin de kesiştiği üzerinde duruluyor.
 
-Kurumsal uygulamalar karmaşık olabilir ve genellikle tek hizmet tabanlı bir uygulama yerine birden çok hizmetten oluşur. Bu gibi durumlarda, mikro hizmetler ve bazı etki alanı odaklı tasarım (DDD) desenleri ve kapsayıcı düzenleme kavramları gibi ek mimari yaklaşımları anlamanız gerekir. Bu bölümde, kapsayıcılar üzerinde yalnızca mikro hizmetler değil, Kapsayıcılı herhangi bir uygulama de açıklanmaktadır.
+Kurumsal uygulamalar karmaşık olabilir ve genellikle tek bir hizmet tabanlı uygulama yerine birden çok hizmetten oluşur. Bu gibi durumlarda, mikro hizmetler ve belirli Etki Alanı Odaklı Tasarım (DDD) desenleri ve konteyner orkestrasyon kavramları gibi ek mimari yaklaşımları anlamanız gerekir. Bu bölümde sadece kapsayıcılarda mikro hizmetler değil, konteyner uygulamaları da açıklanmaktadır.
 
-## <a name="container-design-principles"></a>Kapsayıcı tasarım ilkeleri
+## <a name="container-design-principles"></a>Konteyner tasarım ilkeleri
 
-Kapsayıcı modelinde bir kapsayıcı görüntüsü örneği tek bir işlemi temsil eder. Bir kapsayıcı görüntüsünü işlem sınırı olarak tanımlayarak, işlemi ölçeklendirmek veya toplu işlem yapmak için kullanılabilen temel öğeler oluşturabilirsiniz.
+Kapsayıcı modelinde, kapsayıcı görüntü örneği tek bir işlemi temsil eder. Kapsayıcı görüntüsünü bir işlem sınırı olarak tanımlayarak, işlemi ölçeklendirmek veya toplu iş yapmak için kullanılabilecek ilkel bilgiler oluşturabilirsiniz.
 
-Bir kapsayıcı görüntüsü tasarladığınızda Dockerfile dosyasında bir [giriş noktası](https://docs.docker.com/engine/reference/builder/#entrypoint) tanımı görürsünüz. Bu işlem ömrü kapsayıcının ömrünü denetleyen işlemi tanımlar. İşlem tamamlandığında kapsayıcı yaşam döngüsü sona erer. Kapsayıcılar Web sunucuları gibi uzun süreli işlemleri temsil edebilir, ancak daha önce Azure [WebJobs](https://github.com/Azure/azure-webjobs-sdk/wiki)olarak uygulanan toplu işler gibi kısa süreli işlemleri de temsil edebilir.
+Bir kapsayıcı görüntüsü tasarlarken, Dockerfile'da bir [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#entrypoint) tanımı görürsünüz. Bu, kullanım ömrü kapsayıcının ömrünü kontrol eden işlemi tanımlar. İşlem tamamlandığında, kapsayıcı yaşam döngüsü sona erer. Kapsayıcılar web sunucuları gibi uzun süren işlemleri temsil edebilir, ancak daha önce Azure [Web İşleri](https://github.com/Azure/azure-webjobs-sdk/wiki)olarak uygulanmış olabilecek toplu iş işleri gibi kısa ömürlü işlemleri de temsil edebilir.
 
-İşlem başarısız olursa, kapsayıcı sonlanır ve Orchestrator üzerinde sürer. Orchestrator beş örneği çalışır durumda tutmak üzere yapılandırıldıysa ve bir hata başarısız olursa, Orchestrator başarısız işlemi değiştirmek için başka bir kapsayıcı örneği oluşturacaktır. Batch işinde, işlem parametrelerle başlatılır. İşlem tamamlandığında, çalışma tamamlanmıştır. Bu kılavuz, daha sonra, bu kılavuzda daha sonra detaya gider.
+İşlem başarısız olursa, kapsayıcı sona erer ve orkestratör devralır. Orkestratör beş örneği çalışır durumda tutacak şekilde yapılandırılırsa ve biri başarısız olursa, orkestratör başarısız olan işlemi değiştirmek için başka bir kapsayıcı örneği oluşturur. Toplu iş işinde, işlem parametrelerle başlatılır. İşlem tamamlandığında, çalışma tamamlanır. Bu kılavuz, daha sonra orkestratörleri deşer.
 
-Tek bir kapsayıcıda birden çok işlemin çalışmasını istediğiniz bir senaryo bulabilirsiniz. Bu senaryo için, kapsayıcı başına yalnızca bir giriş noktası olduğundan, kapsayıcıda gereken sayıda programı başlatan bir betiği çalıştırabilirsiniz. Örneğin, tek bir kapsayıcı içinde birden çok işlem başlatmaya dikkat çekmek için [Gözetmen](http://supervisord.org/) veya benzer bir araç kullanabilirsiniz. Ancak, kapsayıcı başına birden çok işlem tutan mimariler bulabilse de, bu yaklaşım çok yaygın değildir.
+Tek bir kapsayıcıda birden çok işlem çalışmasını istediğiniz bir senaryo bulabilirsiniz. Bu senaryo için, kapsayıcı başına yalnızca bir giriş noktası olabileceğinden, gerektiğinde çok sayıda program başlatan kapsayıcıiçinde bir komut dosyası çalıştırabilirsiniz. Örneğin, tek bir kapsayıcı içinde birden çok işlemi başlatmayı halletmek için [Supervisor](http://supervisord.org/) veya benzer bir aracı kullanabilirsiniz. Ancak, kapsayıcı başına birden çok işlem tutan mimariler bulsanız bile, bu yaklaşım çok yaygın değildir.
 
 >[!div class="step-by-step"]
 >[Önceki](../net-core-net-framework-containers/official-net-docker-images.md)
->[İleri](containerize-monolithic-applications.md)
+>[Sonraki](containerize-monolithic-applications.md)

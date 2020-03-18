@@ -1,51 +1,51 @@
 ---
 ms.openlocfilehash: b0e1d6d720a1c9b827fb4585606e64b545d395d7
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394373"
 ---
-### <a name="kestrel-request-trailer-headers-moved-to-new-collection"></a>Kestrel: yeni koleksiyona taşınan artbilgisi üstbilgileri ıste
+### <a name="kestrel-request-trailer-headers-moved-to-new-collection"></a>Kerkenez: İstek römork başlıkları yeni koleksiyona taşındı
 
-Önceki sürümlerde, istek gövdesi sonuna kadar okurken istek üstbilgileri koleksiyonuna HTTP/1.1 öbekli treyler üst bilgileri eklenmiş Kestrel. Bu davranış, üstbilgiler ve tanıtımları arasındaki belirsizlik hakkında kaygılara neden oldu. Tanıtım listesini yeni bir koleksiyona taşımak için karar yapıldı.
+Önceki sürümlerde Kestrel, istek gövdesi sonuna kadar okunduğunda istek üstbilgikoleksiyonuna HTTP/1.1 ötücü römork başlıklarını eklenmiştir. Bu davranış, üstbilgi ve römorklar arasındaki belirsizlik le ilgili endişelere neden oldu. Römorkların yeni bir koleksiyona taşınmasına karar verildi.
 
-HTTP/2 istek fragmanları ASP.NET Core 2,2 ' de yoktu, ancak artık ASP.NET Core 3,0 ' de bu yeni koleksiyonda de kullanılabiliyor.
+HTTP /2 istek römorkASP.NET Core 2.2 kullanılamaz ama şimdi de ASP.NET Core 3.0 bu yeni koleksiyonda mevcuttur.
 
-Bu treylara erişmek için yeni istek uzantısı yöntemleri eklenmiştir.
+Bu fragmanlara erişmek için yeni istek uzatma yöntemleri eklendi.
 
-İstek gövdesinin tamamı okunduktan sonra HTTP/1.1 Treyi kullanılabilir.
+TÜM istek gövdesi okunduktan sonra HTTP/1.1 fragmanları mevcuttur.
 
-HTTP/2 treyler istemciden alındıkları bir kez kullanılabilir. İstemci, tüm istek gövdesinin sunucu tarafından en az arabelleğe alınana kadar Treyi göndermez. Arabellek alanını boşaltmak için istek gövdesini okumanız gerekebilir. İstek gövdesini sonuna okuduğunuzda, Treyi her zaman kullanılabilir. Treyi, gövdenin sonunu işaret eden bir değer.
+HTTP/2 römorkları istemciden alındıktan sonra kullanılabilir. İstemci, tüm istek gövdesi en azından sunucu tarafından arabelleğe alana gelene kadar römorkları göndermez. Arabellek alanını boşaltmak için istek gövdesini okumanız gerekebilir. İstek gövdesini sonuna kadar okursanız, römorklar her zaman kullanılabilir. Römorklar vücudun sonunu işaret ediyor.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-@No__t-0 koleksiyonuna istek fragme üstbilgileri eklenecektir.
+İstek römork başlıkları koleksiyona `HttpRequest.Headers` eklenecek.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-@No__t-1 koleksiyonunda istek Fragmanı üstbilgileri **yok** . Bunlara erişmek için `HttpRequest` ' da aşağıdaki genişletme yöntemlerini kullanın:
+İstek römork üstbilgisi `HttpRequest.Headers` koleksiyonda **bulunmaz.** Bunlara erişmek `HttpRequest` için aşağıdaki uzantı yöntemlerini kullanın:
 
-- `GetDeclaredTrailers()`-gövdeden sonra beklenme hakkında bilgi içeren "artbilgisi" üst bilgisini alır.
-- `SupportsTrailers()`-isteğin treyler üst bilgilerini almayı destekleyip desteklemediğini gösterir.
-- `CheckTrailersAvailable()`-isteğin treyleri destekleyip desteklemediğini ve okuma için kullanılabilir olup olmadığını belirler.
-- `GetTrailer(string trailerName)`-yanıtın sonunda istenen üst bilgiyi alır.
+- `GetDeclaredTrailers()`- Hangi römorklar vücut sonra beklemek listeler istek "Römork" başlık alır.
+- `SupportsTrailers()`- İsteğin römork üstbilgisini almayı destekleyip desteklemeyin gösterir.
+- `CheckTrailersAvailable()`- İsteğin römorkları destekleyip desteklemediklerini ve okumaya uygun olup olmadıklarını belirler.
+- `GetTrailer(string trailerName)`- İstenilen sondaki üstbilgiyanıttan alır.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Treyde gRPC gibi senaryolarda önemli bir özelliktir. İstek üst bilgilerinde tanıtımları birleştirme, kullanıcılar için kafa karıştırıcı.
+Römorklar gRPC gibi senaryolarda önemli bir özelliktir. Römorkları üstbilgi istemek için birleştirmek kullanıcılar için kafa karıştırıcıydı.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Treyleri erişmek için `HttpRequest` ' da artılgili uzantı yöntemlerini kullanın.
+Römorklara erişmek `HttpRequest` için römorkla ilgili uzatma yöntemlerini kullanın.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Core
+ASP.NET Çekirdeği
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

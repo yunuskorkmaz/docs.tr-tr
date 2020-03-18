@@ -1,38 +1,39 @@
 ---
-title: DotNet aracı Run komutu
-description: DotNet aracı Run komutu, yerel bir araç çağırır.
+title: dotnet aracı çalıştırma komutu
+description: Dotnet araç çalıştırma komutu yerel bir aracı çağırır.
 ms.date: 02/14/2020
-ms.openlocfilehash: 76830b8a8088fbf21f14ab0722b9547eabde7ba4
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: a088cd0b7f4bba014234a8189a42a63aa6d88f4e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156965"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847852"
 ---
-# <a name="dotnet-tool-run"></a>DotNet aracı çalıştırması
+# <a name="dotnet-tool-run"></a>dotnet tool run
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 3,0 SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 3.0 SDK ve sonraki sürümler
 
 ## <a name="name"></a>Adı
 
-`dotnet tool run`-yerel bir araç çağırır.
+`dotnet tool run`- Yerel bir aracı çağırır.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Özet
 
 ```dotnetcli
 dotnet tool run <COMMAND NAME>
+
 dotnet tool run <-h|--help>
 ```
 
 ## <a name="description"></a>Açıklama
 
-`dotnet tool run` komutu, geçerli dizinin kapsamındaki araç bildirimi dosyalarını arar. Belirtilen araca bir başvuru bulduğunda, aracı çalıştırır. Daha fazla bilgi için bkz. [yerel bir araç çağırma](global-tools.md#invoke-a-local-tool).
+Komut, `dotnet tool run` geçerli dizinin kapsamı içinde olan araç bildirimi dosyalarını arar. Belirtilen araca bir başvuru bulduğunda, aracı çalıştırZ. Daha fazla bilgi için yerel [bir aracı Çağır'a](global-tools.md#invoke-a-local-tool)bakın.
 
 ## <a name="arguments"></a>Bağımsız Değişkenler
 
 - **`COMMAND_NAME`**
 
-  Çalıştırılacak aracın komut adı.
+  Çalıştırılabilmek için aracın komut adı.
 
 ## <a name="options"></a>Seçenekler
 
@@ -44,8 +45,9 @@ dotnet tool run <-h|--help>
 
 - **`dotnet tool run dotnetsay`**
 
-  `dotnetsay` yerel aracını çalıştırır.
+  `dotnetsay` Yerel aracı çalıştırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core araçları](global-tools.md)
+- [.NET Çekirdek araçları](global-tools.md)
+- [Öğretici: .NET Core CLI'yi kullanarak bir .NET Core yerel aracı nı yükleyin ve kullanın](local-tools-how-to-use.md)

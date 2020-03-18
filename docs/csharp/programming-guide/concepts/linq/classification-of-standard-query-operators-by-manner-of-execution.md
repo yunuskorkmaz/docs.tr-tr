@@ -1,42 +1,42 @@
 ---
-title: Standart sorgu Işleçleri yürütme (C#) yöntemine göre sınıflandırması
+title: Standart Sorgu Operatörlerinin Yürütme Şekline Göre Sınıflandırılması (C#)
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
 ms.openlocfilehash: ccf8fced5c92ceaaf84f9240e235da0e2b56ac1e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69924287"
 ---
-# <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Standart sorgu Işleçleri yürütme (C#) yöntemine göre sınıflandırması
-Standart sorgu işleci yöntemlerinin LINQ to Objects uygulamaları iki ana yöntemden biriyle yürütülür: ımımor ertelenmiş. Ertelenmiş yürütmeyi kullanan sorgu işleçleri Ayrıca iki kategoriye ayrılabilir: akış ve akış olmayan. Farklı sorgu işleçlerinin nasıl yürütüleceğini biliyorsanız, belirli bir sorgudan aldığınız sonuçları anlamanıza yardımcı olabilir. Bu, veri kaynağı değiştirilirken veya başka bir sorgunun üstünde bir sorgu oluşturuyorsanız özellikle doğrudur. Bu konu, standart sorgu işleçlerini yürütme tarzlarına göre sınıflandırır.  
+# <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Standart Sorgu Operatörlerinin Yürütme Şekline Göre Sınıflandırılması (C#)
+Standart sorgu işleci yöntemlerinin Nesnelere LINQ uygulamaları iki ana yoldan biriyle yürütülür: hemen veya ertelenmiş. Ertelenmiş yürütme kullanan sorgu işleçleri ayrıca iki kategoriye ayrılabilir: akış ve akış dışı. Farklı sorgu işleçleri nasıl yürütülür biliyorsanız, belirli bir sorgudan elde ettiğiniz sonuçları anlamanıza yardımcı olabilir. Bu, özellikle veri kaynağı değişiyorsa veya başka bir sorgunun üstüne bir sorgu oluşturuyorsanız geçerlidir. Bu konu, standart sorgu işleçlerini yürütme biçimlerine göre sınıfa alır.  
   
-## <a name="manners-of-execution"></a>Yürütme mananlar  
+## <a name="manners-of-execution"></a>İdam Görgüleri  
   
 ### <a name="immediate"></a>Hemen  
- Anında yürütme, veri kaynağının okunduğu ve işlemin sorgunun bildirildiği noktada gerçekleştirildiği anlamına gelir. Tek, Numaralandırılmamış bir sonuç döndüren tüm standart sorgu işleçleri hemen yürütülür.  
+ Hemen yürütme, veri kaynağının okunduğu ve işlemin sorgunun bildirildiği koddaki noktada gerçekleştirildiği anlamına gelir. Tek bir, sayısal olmayan sonuç döndüren tüm standart sorgu işleçleri hemen yürütülür.  
   
-### <a name="deferred"></a>Ertelenmiş  
- Ertelenmiş yürütme, işlemin sorgunun bildirildiği noktada gerçekleştirilmediği anlamına gelir. İşlem yalnızca sorgu değişkeni numaralandırıldıktan sonra, örneğin bir `foreach` ifade kullanılarak yapılır. Bu, sorguyu yürütmenin sonuçlarının sorgu tanımlandığında değil, sorgu yürütüldüğünde veri kaynağının içeriğine bağlı olduğunu gösterir. Sorgu değişkeni birden çok kez numaralandırıldıktan sonra sonuçlar her seferinde farklılık gösterebilir. Dönüş türü <xref:System.Collections.Generic.IEnumerable%601> veya <xref:System.Linq.IOrderedEnumerable%601> ertelenmiş bir şekilde yürütülen tüm standart sorgu işleçleri neredeyse hepsi.  
+### <a name="deferred"></a>Ertelen -miş  
+ Ertelenmiş yürütme, işlemin sorgunun bildirildiği koddaki noktada gerçekleştirilmediği anlamına gelir. İşlem yalnızca sorgu değişkeni numaralandırıldığında, örneğin bir `foreach` deyim kullanılarak gerçekleştirilir. Bu, sorgutanımlandığında değil, sorgu yürütüldüğünde sorgunun yürütülmesinin sonuçlarının veri kaynağının içeriğine bağlı olduğu anlamına gelir. Sorgu değişkeni birden çok kez numaralandırılırsa, sonuçlar her seferinde farklı olabilir. İade türü ertelenmiş bir şekilde <xref:System.Collections.Generic.IEnumerable%601> olan <xref:System.Linq.IOrderedEnumerable%601> veya çalıştırılan hemen hemen tüm standart sorgu işleçleri.  
   
- Ertelenmiş yürütmeyi kullanan sorgu işleçleri ayrıca akış veya akış olmayan olarak sınıflandırılabilirler.  
+ Ertelenmiş yürütme kullanan sorgu işleçleri ayrıca akış veya akış dışı olarak sınıflandırılabilir.  
   
 #### <a name="streaming"></a>Akış  
- Akış işleçleri, öğeleri almadan önce tüm kaynak verileri okumak zorunda değildir. Yürütme sırasında, bir akış işleci her kaynak öğe okunışında işlemini gerçekleştirir ve uygunsa öğeyi verir. Bir akış işleci, bir sonuç öğesi üretilene kadar kaynak öğeleri okumaya devam eder. Bu, bir sonuç öğesi oluşturmak için birden fazla kaynak öğesinin okunabileceğini gösterir.  
+ Akış işleçleri, öğeleri verim önce tüm kaynak verileri okumak zorunda değildir. Yürütme sırasında, bir akış işleci okundukça her kaynak öğesi üzerinde işlemini gerçekleştirir ve uygunsa öğeyi verir. Bir akış işleci, sonuç öğesi üretilene kadar kaynak öğeleriokumaya devam ediyor. Bu, bir sonuç öğesi oluşturmak için birden fazla kaynak öğesinin okunabileceği anlamına gelir.  
   
-#### <a name="non-streaming"></a>Akış olmayan  
- Akış olmayan operatörler, bir sonuç öğesi elde etmeden önce tüm kaynak verileri okummalıdır. Sıralama veya gruplama gibi işlemler bu kategoriye girer. Yürütme sırasında akış olmayan sorgu işleçleri tüm kaynak verileri okur, veri yapısına koyar, işlemi gerçekleştirir ve sonuçta elde edilen öğeleri verir.  
+#### <a name="non-streaming"></a>Akış Dışı  
+ Akış dışı işleçler, bir sonuç öğesi verebilmeleri için tüm kaynak verileri okumalıdır. Sıralama veya gruplandırma gibi işlemler bu kategoriye girer. Yürütme sırasında, akış sızak sorgu işleçleri tüm kaynak verileri okur, bir veri yapısına koyar, işlemi gerçekleştirir ve elde edilen öğeleri verir.  
   
-## <a name="classification-table"></a>Sınıflandırma tablosu  
- Aşağıdaki tabloda, her standart sorgu operatörü yöntemi yürütme yöntemine göre sınıflandırılırdı.  
+## <a name="classification-table"></a>Sınıflandırma Tablosu  
+ Aşağıdaki tablo, her standart sorgu işleci yöntemini yürütme yöntemine göre sınıflanır.  
   
 > [!NOTE]
-> Bir işleç iki sütunda işaretlenmişse, işleme iki giriş dizisi dahil edilir ve her sıra farklı şekilde değerlendirilir. Bu durumlarda, parametre listesindeki her zaman, ertelenmiş, akış halinde değerlendirilen ilk dizidir.  
+> Bir işleç iki sütunda işaretlenirse, işlemde iki giriş dizisi yer aldı ve her dizi farklı şekilde değerlendirilir. Bu gibi durumlarda, parametre listesinde her zaman ertelenmiş, akışlı bir şekilde değerlendirilen ilk sıradır.  
   
-|Standart sorgu Işleci|Dönüş Türü|Hemen Yürütme|Ertelenmiş akış yürütme|Ertelenmiş akış olmayan yürütme|  
+|Standart Sorgu Operatörü|Dönüş Türü|Hemen Yürütme|Ertelenmiş Akış Yürütme|Ertelenmiş Akışsız Yürütme|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  
-|<xref:System.Linq.Enumerable.Aggregate%2A>|TSource|X|||  
+|<xref:System.Linq.Enumerable.Aggregate%2A>|Tsource|X|||  
 |<xref:System.Linq.Enumerable.All%2A>|<xref:System.Boolean>|X|||  
 |<xref:System.Linq.Enumerable.Any%2A>|<xref:System.Boolean>|X|||  
 |<xref:System.Linq.Enumerable.AsEnumerable%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
@@ -47,18 +47,18 @@ Standart sorgu işleci yöntemlerinin LINQ to Objects uygulamaları iki ana yön
 |<xref:System.Linq.Enumerable.Count%2A>|<xref:System.Int32>|X|||  
 |<xref:System.Linq.Enumerable.DefaultIfEmpty%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.Distinct%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.ElementAt%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|TSource|X|||  
+|<xref:System.Linq.Enumerable.ElementAt%2A>|Tsource|X|||  
+|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|Tsource|X|||  
 |<xref:System.Linq.Enumerable.Empty%2A>|<xref:System.Collections.Generic.IEnumerable%601>|X|||  
 |<xref:System.Linq.Enumerable.Except%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X|X|  
-|<xref:System.Linq.Enumerable.First%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.FirstOrDefault%2A>|TSource|X|||  
+|<xref:System.Linq.Enumerable.First%2A>|Tsource|X|||  
+|<xref:System.Linq.Enumerable.FirstOrDefault%2A>|Tsource|X|||  
 |<xref:System.Linq.Enumerable.GroupBy%2A>|<xref:System.Collections.Generic.IEnumerable%601>|||X|  
 |<xref:System.Linq.Enumerable.GroupJoin%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X|X|  
 <xref:System.Linq.Enumerable.Intersect%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X|X|  
 |<xref:System.Linq.Enumerable.Join%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X|X|  
-|<xref:System.Linq.Enumerable.Last%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.LastOrDefault%2A>|TSource|X|||  
+|<xref:System.Linq.Enumerable.Last%2A>|Tsource|X|||  
+|<xref:System.Linq.Enumerable.LastOrDefault%2A>|Tsource|X|||  
 |<xref:System.Linq.Enumerable.LongCount%2A>|<xref:System.Int64>|X|||  
 |<xref:System.Linq.Enumerable.Max%2A>|Tek sayısal değer, TSource veya TResult|X|||  
 |<xref:System.Linq.Enumerable.Min%2A>|Tek sayısal değer, TSource veya TResult|X|||  
@@ -71,8 +71,8 @@ Standart sorgu işleci yöntemlerinin LINQ to Objects uygulamaları iki ana yön
 |<xref:System.Linq.Enumerable.Select%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.SelectMany%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.SequenceEqual%2A>|<xref:System.Boolean>|X|||  
-|<xref:System.Linq.Enumerable.Single%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.SingleOrDefault%2A>|TSource|X|||  
+|<xref:System.Linq.Enumerable.Single%2A>|Tsource|X|||  
+|<xref:System.Linq.Enumerable.SingleOrDefault%2A>|Tsource|X|||  
 |<xref:System.Linq.Enumerable.Skip%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.SkipWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.Sum%2A>|Tek sayısal değer|X|||  
@@ -90,6 +90,6 @@ Standart sorgu işleci yöntemlerinin LINQ to Objects uygulamaları iki ana yön
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq.Enumerable>
-- [Standart sorgu Işleçlerine genelC#bakış ()](./standard-query-operators-overview.md)
-- [Standart sorgu Işleçleri için sorgu Ifadesi sözdizimi (C#)](./query-expression-syntax-for-standard-query-operators.md)
-- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [Standart Sorgu Operatörlerine Genel Bakış (C#)](./standard-query-operators-overview.md)
+- [Standart Sorgu Operatörleri için Sorgu İfade Sözdizimi (C#)](./query-expression-syntax-for-standard-query-operators.md)
+- [Nesnelere LINQ (C#)](./linq-to-objects.md)

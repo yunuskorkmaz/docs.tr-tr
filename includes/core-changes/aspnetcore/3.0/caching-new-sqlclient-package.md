@@ -1,42 +1,42 @@
 ---
 ms.openlocfilehash: 771238c53dc97f4cf4068968f3c68500ba9f87da
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198593"
 ---
-### <a name="caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package"></a>Önbelleğe alma: Microsoft. Extensions. Caching. SqlServer yeni SqlClient paketini kullanır
+### <a name="caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package"></a>Önbelleğe alma: Microsoft.Extensions.Caching.SqlServer yeni SqlClient paketi kullanır
 
-`Microsoft.Extensions.Caching.SqlServer` paketi `System.Data.SqlClient` paketi yerine yeni `Microsoft.Data.SqlClient` paketini kullanır. Bu değişiklik küçük davranışsal davranış değişikliklerine neden olabilir. Daha fazla bilgi için bkz. [Yeni Microsoft. Data. SqlClient tanıtımı](https://devblogs.microsoft.com/dotnet/introducing-the-new-microsoftdatasqlclient/).
+Paket, `Microsoft.Extensions.Caching.SqlServer` `System.Data.SqlClient` paket yerine `Microsoft.Data.SqlClient` yeni paketi kullanacaktır. Bu değişiklik hafif davranışsal kırılma değişikliklerine neden olabilir. Daha fazla bilgi için [bkz.](https://devblogs.microsoft.com/dotnet/introducing-the-new-microsoftdatasqlclient/)
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-`Microsoft.Extensions.Caching.SqlServer` paketi `System.Data.SqlClient` paketini kullandı.
+Paket `Microsoft.Extensions.Caching.SqlServer` `System.Data.SqlClient` paketi kullandı.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-`Microsoft.Extensions.Caching.SqlServer` artık `Microsoft.Data.SqlClient` paketini kullanıyor.
+`Microsoft.Extensions.Caching.SqlServer`şimdi `Microsoft.Data.SqlClient` paketi kullanıyor.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-`Microsoft.Data.SqlClient`, `System.Data.SqlClient` ' den oluşturulan yeni bir pakettir. Bu, tüm yeni özellik işinin bundan sonra yapıldığı yerdir.
+`Microsoft.Data.SqlClient`kapalı inşa edilmiş yeni bir `System.Data.SqlClient`pakettir. Bundan sonra tüm yeni özellik çalışmaları burada yapılacak.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Müşterilerin, `Microsoft.Extensions.Caching.SqlServer` paketi tarafından döndürülen türleri kullanmadıkları ve bunları `System.Data.SqlClient` türlerine dönüştürmedikleri müddetçe, bu son değişiklik hakkında kaygılanmaması gerekmez. Örneğin, birisi [eski SqlConnection türüne](xref:System.Data.SqlClient.SqlConnection)bir `DbConnection` dönüştürrsa, yeni `Microsoft.Data.SqlClient.SqlConnection` türüne dönüştürmeyi değiştirmesi gerekir.
+`Microsoft.Extensions.Caching.SqlServer` Müşteriler, paket tarafından döndürülen türleri kullanmadıkları ve bunları türe dönüştürmedikleri `System.Data.SqlClient` sürece bu kırılma değişikliği hakkında endişelenmelerine gerek yoktur. Örneğin, birisi [eski SqlConnection türüne](xref:System.Data.SqlClient.SqlConnection)a `DbConnection` atıyorduysa, kalıbı `Microsoft.Data.SqlClient.SqlConnection` yeni türe değiştirmesi gerekir.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Core
+ASP.NET Çekirdeği
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-Yok.
+None
 
 <!-- 
 

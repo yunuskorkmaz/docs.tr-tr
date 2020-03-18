@@ -1,48 +1,48 @@
 ---
-title: Zaman uyumsuz görevleri bir süre sonra iptal et (C#)
+title: Bir Süre Sonra Async Görevlerini İptal Etme (C#)
 ms.date: 07/20/2015
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
 ms.openlocfilehash: 110c4700d0d2afc87f9144bf258cdd4991f107f4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204341"
 ---
-# <a name="cancel-async-tasks-after-a-period-of-time-c"></a>Zaman uyumsuz görevleri bir süre sonra iptal et (C#)
+# <a name="cancel-async-tasks-after-a-period-of-time-c"></a>Belirli bir süre sonra async görevlerini iptal etme (C#)
 
-İşlemin bitmesini beklemek istemiyorsanız <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> yöntemini kullanarak bir süre sonra zaman uyumsuz bir işlemi iptal edebilirsiniz. Bu yöntem, `CancelAfter` ifadesi tarafından belirlenen süre içinde tamamlanmamış olan ilişkili görevlerin iptalini zamanlar.
+İşlemin tamamlanmasını beklemek istemiyorsanız <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> yöntemi kullanarak bir süre sonra bir eşzamanlı işlemi iptal edebilirsiniz. Bu yöntem, ifade tarafından belirlenen süre içinde tamamlanmamış ilişkili görevlerin iptalini `CancelAfter` planlar.
 
-Bu örnek, bir Web sitesi listesini indirmek ve her birinin içerik uzunluğunu göstermek için [zaman uyumsuz bir görevi veyaC#görev listesini () iptal](./cancel-an-async-task-or-a-list-of-tasks.md) etmek üzere geliştirilmiş koda ekler.
+Bu örnek, web sitelerinin listesini indirmek ve her birinin içeriğinin uzunluğunu görüntülemek için [Bir Async Görevi İptal'de veya Görev Listesi'nde (C#)](./cancel-an-async-task-or-a-list-of-tasks.md) geliştirilen koda eklenir.
 
 > [!NOTE]
-> Örnekleri çalıştırmak için, bilgisayarınızda Visual Studio 2012 veya daha yeni bir sürümü ve .NET Framework 4,5 ya da daha yeni bir sürümü yüklü olmalıdır.
+> Örnekleri çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 veya daha yeni bilgisayarınıza yüklü olması gerekir.
 
 ## <a name="download-the-example"></a>Örneği indirin
 
-Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten indirebilirsiniz: Uygulamanızı](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) hassas ayarlamalar yapın ve ardından aşağıdaki adımları izleyin.
+Windows Presentation Foundation (WPF) projesinin tamamını [Async Sample: Fine Tuning Application'dan](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) indirebilir ve ardından aşağıdaki adımları izleyebilirsiniz.
 
-1. İndirdiğiniz dosyayı sıkıştırmasını açın ve ardından Visual Studio 'Yu başlatın.
+1. İndirdiğiniz dosyayı sıkıştırın ve Visual Studio'yu başlatın.
 
-2. Menü çubuğunda **Dosya** > **Aç** > **Proje/çözüm**' ı seçin.
+2. Menü çubuğunda **Dosya** > **Aç** > **Projesi/Çözümü'nü**seçin.
 
-3. **Proje Aç** iletişim kutusunda, açtığınız örnek kodu tutan klasörü açın ve ardından AsyncFineTuningCS için çözüm (. sln) dosyasını açın.
+3. **Projeyi Aç** iletişim kutusunda, sıkıştırdığınız örnek kodu tutan klasörü açın ve ardından AsyncFineTuningCS için çözüm (.sln) dosyasını açın.
 
-4. **Çözüm Gezgini**, **zaman** hatası ve ardından **Başlangıç projesi olarak ayarla**' yı seçin.
+4. **Solution**Explorer'da, **CancelAfterTime** projesinin kısayol menüsünü açın ve ardından **StartUp Project olarak ayarla'yı**seçin.
 
-5. Projeyi çalıştırmak için **F5** tuşunu seçin. (Veya, projeyi hata ayıklamadan çalıştırmak için **CTRL**+**F5** tuşuna basın).
+5. Projeyi çalıştırmak için **F5** tuşunu seçin. (Veya, hata ayıklama olmadan projeçalıştırmak için **Ctrl**+**F5** tuşuna basın).
 
-6. Çıktının tüm Web siteleri, Web sitesi veya bazı Web siteleri için çıktıyı gösterebileceğini doğrulamak için programı birkaç kez çalıştırın.
+6. Çıktının tüm web siteleri, hiçbir web sitesi veya bazı web siteleri için çıktı gösterebileceğini doğrulamak için programı birkaç kez çalıştırın.
 
 Projeyi indirmek istemiyorsanız, bu konunun sonundaki MainWindow.xaml.cs dosyasını gözden geçirebilirsiniz.
 
-## <a name="build-the-example"></a>Örneği oluşturun
+## <a name="build-the-example"></a>Örneği derleme
 
-Bu konudaki örnek, bir görev listesini iptal etmek için [zaman uyumsuz bir görevi veya görev listesini (C#) iptal](./cancel-an-async-task-or-a-list-of-tasks.md) etmek üzere geliştirilmiş projeye ekler. Örnek, aynı kullanıcı arabirimini kullanır, ancak **iptal** düğmesi açıkça kullanılmaz.
+Bu konuyla ilgili örnek, görev listesini iptal etmek için Bir Async Görevi İptal Etme [veya Görev Listesi (C#)](./cancel-an-async-task-or-a-list-of-tasks.md) olarak geliştirilen projeye eklenir. **İptal** düğmesi açıkça kullanılmasa da, örnek aynı UI'yi kullanır.
 
-Örneği kendiniz oluşturmak için, "örneği Indirme" bölümündeki yönergeleri izleyin, ancak **Başlangıç projesi**olarak iptal eden ınlıftasks ' ı seçin. Bu konudaki değişiklikleri bu projeye ekleyin.
+Örneği adım adım oluşturmak için, "Örneği İndirme" bölümündeki yönergeleri izleyin, ancak **StartUp Project**olarak **CancelAListOfTasks'i** seçin. Bu konudaki değişiklikleri bu projeye ekleyin.
 
-Görevler iptal edildi olarak işaretlenmeden önce en uzun süreyi belirtmek için, aşağıdaki örnekte gösterildiği gibi `CancelAfter` öğesine `startButton_Click`bir çağrı ekleyin. Toplama, yıldız işareti ile işaretlenir.
+Görevler iptal edildiolarak işaretlenmeden önce en büyük süreyi `startButton_Click`belirtmek için, `CancelAfter` aşağıdaki örnekte görüldüğü gibi bir çağrı ekleyin. Ek yıldız işaretleri ile işaretlenir.
 
 ```csharp
 private async void startButton_Click(object sender, RoutedEventArgs e)
@@ -74,7 +74,7 @@ private async void startButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
- Çıktının tüm Web siteleri, Web sitesi veya bazı Web siteleri için çıktıyı gösterebileceğini doğrulamak için programı birkaç kez çalıştırın. Aşağıdaki çıktı bir örnektir.
+ Çıktının tüm web siteleri, hiçbir web sitesi veya bazı web siteleri için çıktı gösterebileceğini doğrulamak için programı birkaç kez çalıştırın. Aşağıdaki çıktı bir örnektir.
 
 ```output
 Length of the downloaded string: 35990.
@@ -86,13 +86,13 @@ Length of the downloaded string: 226091.
 Downloads canceled.
 ```
 
-## <a name="complete-example"></a>Örnek Tamam
+## <a name="complete-example"></a>Tam örnek
 
-Aşağıdaki kod, örnek için MainWindow.xaml.cs dosyasının tüm metinkodudur. Yıldız işaretleri bu örnek için eklenen öğeleri işaretler.
+Aşağıdaki kod, örnek için MainWindow.xaml.cs dosyasının tam metnidir. Yıldız işaretleri, bu örnek için eklenen öğeleri işaretler.
 
-İçin <xref:System.Net.Http>bir başvuru eklemeniz gerektiğini unutmayın.
+Için bir başvuru eklemeniz <xref:System.Net.Http>gerektiğine dikkat edin.
 
-Projeyi [zaman uyumsuz örnekten indirebilirsiniz: Uygulamanızı](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)hassas bir şekilde ayarlama.
+Projeyi [Async Sample: Fine Tuning Application'dan](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)indirebilirsiniz.
 
 ```csharp
 using System;
@@ -217,8 +217,8 @@ namespace CancelAfterTime
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Async ve await (C#) ile zaman uyumsuz programlama](./index.md)
-- [İzlenecek yol: Async ve await (C#) kullanarak Web 'e erişme](./walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Zaman uyumsuz bir görevi veya görev listesini iptal etme (C#)](./cancel-an-async-task-or-a-list-of-tasks.md)
-- [Zaman uyumsuz uygulamanızda ince ayar yapma (C#)](./fine-tuning-your-async-application.md)
-- [Zaman uyumsuz örnek: Uygulamanızda ince ayar yapma](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async ve await ile Asynchronous Programlama (C#)](./index.md)
+- [Walkthrough: Async kullanarak Web'e erişim ve bekleme (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Bir Async Görevi veya Görev Listesini İptal Etme (C#)](./cancel-an-async-task-or-a-list-of-tasks.md)
+- [Async Uygulamanızda İnce Ayar (C#)](./fine-tuning-your-async-application.md)
+- [Async Örnek: Uygulamanızı İyi Ayar](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
