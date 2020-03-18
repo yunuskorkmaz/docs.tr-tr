@@ -1,19 +1,19 @@
 ---
-title: XSD kullanarak doğrulama (LINQ to XML) (C#)
+title: XSD (LINQ - XML) (C#) kullanımı nasıl doğrulanır?
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
 ms.openlocfilehash: 29830457b63f36dd401a412364060339344f35cb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347247"
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a><span data-ttu-id="dd60c-102">XSD kullanarak doğrulama (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="dd60c-102">How to validate using XSD (LINQ to XML) (C#)</span></span>
-<span data-ttu-id="dd60c-103"><xref:System.Xml.Schema> ad alanı, bir xml ağacının bir XML şeması tanım dili (XSD) dosyasına göre doğrulanmasını kolaylaştıran uzantı yöntemleri içerir.</span><span class="sxs-lookup"><span data-stu-id="dd60c-103">The <xref:System.Xml.Schema> namespace contains extension methods that make it easy to validate an XML tree against an XML Schema Definition Language (XSD) file.</span></span> <span data-ttu-id="dd60c-104">Daha fazla bilgi için <xref:System.Xml.Schema.Extensions.Validate%2A> yöntemi belgelerine bakın.</span><span class="sxs-lookup"><span data-stu-id="dd60c-104">For more information, see the <xref:System.Xml.Schema.Extensions.Validate%2A> method documentation.</span></span>  
+# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a><span data-ttu-id="eee85-102">XSD (LINQ - XML) (C#) kullanımı nasıl doğrulanır?</span><span class="sxs-lookup"><span data-stu-id="eee85-102">How to validate using XSD (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="eee85-103">Ad <xref:System.Xml.Schema> alanı, xml şema tanım dili (XSD) dosyasına karşı bir XML ağacını doğrulamayı kolaylaştıran uzantı yöntemleri içerir.</span><span class="sxs-lookup"><span data-stu-id="eee85-103">The <xref:System.Xml.Schema> namespace contains extension methods that make it easy to validate an XML tree against an XML Schema Definition Language (XSD) file.</span></span> <span data-ttu-id="eee85-104">Daha fazla bilgi <xref:System.Xml.Schema.Extensions.Validate%2A> için yöntem belgelerine bakın.</span><span class="sxs-lookup"><span data-stu-id="eee85-104">For more information, see the <xref:System.Xml.Schema.Extensions.Validate%2A> method documentation.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dd60c-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="dd60c-105">Example</span></span>  
- <span data-ttu-id="dd60c-106">Aşağıdaki örnek bir <xref:System.Xml.Schema.XmlSchemaSet>oluşturur ve sonra iki <xref:System.Xml.Linq.XDocument> nesnesini şema kümesine göre doğrular.</span><span class="sxs-lookup"><span data-stu-id="dd60c-106">The following example creates an <xref:System.Xml.Schema.XmlSchemaSet>, then validates two <xref:System.Xml.Linq.XDocument> objects against the schema set.</span></span> <span data-ttu-id="dd60c-107">Belgelerden biri geçerli, diğeri değildir.</span><span class="sxs-lookup"><span data-stu-id="dd60c-107">One of the documents is valid, the other is not.</span></span>  
+## <a name="example"></a><span data-ttu-id="eee85-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="eee85-105">Example</span></span>  
+ <span data-ttu-id="eee85-106">Aşağıdaki örnek, şema <xref:System.Xml.Schema.XmlSchemaSet>kümesine <xref:System.Xml.Linq.XDocument> karşı iki nesneyi doğrular.</span><span class="sxs-lookup"><span data-stu-id="eee85-106">The following example creates an <xref:System.Xml.Schema.XmlSchemaSet>, then validates two <xref:System.Xml.Linq.XDocument> objects against the schema set.</span></span> <span data-ttu-id="eee85-107">Belgelerden biri geçerli, diğeri geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="eee85-107">One of the documents is valid, the other is not.</span></span>  
   
 ```csharp  
 string xsdMarkup =  
@@ -64,7 +64,7 @@ doc2.Validate(schemas, (o, e) =>
 Console.WriteLine("doc2 {0}", errors ? "did not validate" : "validated");  
 ```  
   
- <span data-ttu-id="dd60c-108">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="dd60c-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="eee85-108">Bu örnek, aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="eee85-108">This example produces the following output:</span></span>  
   
 ```output  
 Validating doc1  
@@ -75,12 +75,12 @@ The element 'Root' has invalid child element 'Child3'. List of possible elements
 doc2 did not validate  
 ```  
   
-## <a name="example"></a><span data-ttu-id="dd60c-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="dd60c-109">Example</span></span>  
- <span data-ttu-id="dd60c-110">Aşağıdaki örnek, XML belgesinin [örnek XML dosyasından bulunduğunu doğrular: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) [örnek xsd dosyasından şema başına geçerlidir: müşteriler ve siparişler](./sample-xsd-file-customers-and-orders1.md).</span><span class="sxs-lookup"><span data-stu-id="dd60c-110">The following example validates that the XML document from [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) is valid per the schema from [Sample XSD File: Customers and Orders](./sample-xsd-file-customers-and-orders1.md).</span></span> <span data-ttu-id="dd60c-111">Sonra kaynak XML belgesini değiştirir.</span><span class="sxs-lookup"><span data-stu-id="dd60c-111">It then modifies the source XML document.</span></span> <span data-ttu-id="dd60c-112">İlk müşterinin `CustomerID` özniteliğini değiştirir.</span><span class="sxs-lookup"><span data-stu-id="dd60c-112">It changes the `CustomerID` attribute on the first customer.</span></span> <span data-ttu-id="dd60c-113">Değişiklik sonrasında, siparişler var olmayan bir müşteriye başvuracaktır, bu nedenle XML belgesi artık doğrulanmaz.</span><span class="sxs-lookup"><span data-stu-id="dd60c-113">After the change, orders will then refer to a customer that does not exist, so the XML document will no longer validate.</span></span>  
+## <a name="example"></a><span data-ttu-id="eee85-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="eee85-109">Example</span></span>  
+ <span data-ttu-id="eee85-110">Aşağıdaki örnek, Örnek XML Dosyasından XML belgesinin geçerli olduğunu [doğrular: Müşteriler ve Siparişler (LINQ-XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) Örnek [XSD Dosyasından](./sample-xsd-file-customers-and-orders1.md)şema başına geçerlidir: Müşteriler ve Siparişler.</span><span class="sxs-lookup"><span data-stu-id="eee85-110">The following example validates that the XML document from [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) is valid per the schema from [Sample XSD File: Customers and Orders](./sample-xsd-file-customers-and-orders1.md).</span></span> <span data-ttu-id="eee85-111">Daha sonra kaynak XML belgedeğiştirir.</span><span class="sxs-lookup"><span data-stu-id="eee85-111">It then modifies the source XML document.</span></span> <span data-ttu-id="eee85-112">İlk müşterideki `CustomerID` özniteliği değiştirir.</span><span class="sxs-lookup"><span data-stu-id="eee85-112">It changes the `CustomerID` attribute on the first customer.</span></span> <span data-ttu-id="eee85-113">Değişiklikten sonra, siparişler var olmayan bir müşteriye başvurur, böylece XML belgesi artık doğrulanmaz.</span><span class="sxs-lookup"><span data-stu-id="eee85-113">After the change, orders will then refer to a customer that does not exist, so the XML document will no longer validate.</span></span>  
   
- <span data-ttu-id="dd60c-114">Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="dd60c-114">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
+ <span data-ttu-id="eee85-114">Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Müşteriler ve Siparişler (LINQ-XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="eee85-114">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
- <span data-ttu-id="dd60c-115">Bu örnek şu XSD şemasını kullanır: [örnek xsd dosyası: müşteriler ve siparişler](./sample-xsd-file-customers-and-orders1.md).</span><span class="sxs-lookup"><span data-stu-id="dd60c-115">This example uses the following XSD schema: [Sample XSD File: Customers and Orders](./sample-xsd-file-customers-and-orders1.md).</span></span>  
+ <span data-ttu-id="eee85-115">Bu örnekte aşağıdaki XSD şeması kullanır: [Örnek XSD Dosyası: Müşteriler ve Siparişler.](./sample-xsd-file-customers-and-orders1.md)</span><span class="sxs-lookup"><span data-stu-id="eee85-115">This example uses the following XSD schema: [Sample XSD File: Customers and Orders](./sample-xsd-file-customers-and-orders1.md).</span></span>  
   
 ```csharp  
 XmlSchemaSet schemas = new XmlSchemaSet();  
@@ -109,7 +109,7 @@ custOrdDoc.Validate(schemas, (o, e) =>
 Console.WriteLine("custOrdDoc {0}", errors ? "did not validate" : "validated");  
 ```  
   
- <span data-ttu-id="dd60c-116">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="dd60c-116">This example produces the following output:</span></span>  
+ <span data-ttu-id="eee85-116">Bu örnek, aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="eee85-116">This example produces the following output:</span></span>  
   
 ```output  
 Attempting to validate  
@@ -120,7 +120,7 @@ The key sequence 'AAAAA' in Keyref fails to refer to some key.
 custOrdDoc did not validate  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="dd60c-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dd60c-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eee85-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="eee85-117">See also</span></span>
 
 - <xref:System.Xml.Schema.Extensions.Validate%2A>
-- [<span data-ttu-id="dd60c-118">XML ağaçları oluşturma (C#)</span><span class="sxs-lookup"><span data-stu-id="dd60c-118">Creating XML Trees (C#)</span></span>](creating-xml-trees-linq-to-xml-2.md)
+- [<span data-ttu-id="eee85-118">XML Ağaçları Oluşturma (C#)</span><span class="sxs-lookup"><span data-stu-id="eee85-118">Creating XML Trees (C#)</span></span>](creating-xml-trees-linq-to-xml-2.md)

@@ -266,7 +266,7 @@
             - name: Docker ile .NET Framework uygulamaları dağıtma
               tocHref: /dotnet/framework/docker/
               topicHref: /dotnet/framework/docker/index
-            - name: Kullanmaya başlayın
+            - name: Başlangıç
               tocHref: /dotnet/framework/get-started/
               topicHref: /dotnet/framework/get-started/index
             - name: Yükleme kılavuzu
@@ -423,7 +423,7 @@
           tocHref: /dotnet/desktop-wpf/
           topicHref: /dotnet/desktop-wpf/index
           items:
-            - name: Kullanmaya başlayın
+            - name: Başlangıç
               tocHref: /visualstudio/get-started/csharp/tutorial-wpf
               topicHref: /dotnet/desktop-wpf/getting-started/index
             - name: Geçiş
@@ -439,7 +439,7 @@
             - name: 'C# diline giriş'
               tocHref: /dotnet/csharp/tutorials/intro-to-csharp/
               topicHref: /dotnet/csharp/tutorials/intro-to-csharp/index
-            - name: Kullanmaya başlayın
+            - name: Başlangıç
               tocHref: /dotnet/csharp/getting-started/
               topicHref: /dotnet/csharp/getting-started/index
             - name: Öğreticiler
@@ -587,7 +587,7 @@
           tocHref: /dotnet/visual-basic/
           topicHref: /dotnet/visual-basic/index
           items:
-            - name: Kullanmaya başlayın
+            - name: Başlangıç
               tocHref: /dotnet/visual-basic/getting-started/
               topicHref: /dotnet/visual-basic/getting-started/index
             - name: Uygulama geliştirme

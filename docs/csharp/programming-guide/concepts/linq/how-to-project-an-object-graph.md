@@ -1,19 +1,19 @@
 ---
-title: Bir nesne grafiğini (C#) proje
+title: Nesne grafiği nasıl yansıtılatır (C#)
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: 93fabe26fd3d9ff0b61d8b8dfc33425715452c88
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: eafb3d9064159c43fc98e0b241f0045465fca824
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635697"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168966"
 ---
-# <a name="how-to-project-an-object-graph-c"></a><span data-ttu-id="e477b-102">Bir nesne grafiğini (C#) proje</span><span class="sxs-lookup"><span data-stu-id="e477b-102">How to project an object graph (C#)</span></span>
-<span data-ttu-id="e477b-103">Bu konu, XML 'deki bir nesne grafiğinin nasıl proje veya doldurma yapılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="e477b-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
+# <a name="how-to-project-an-object-graph-c"></a><span data-ttu-id="6200c-102">Nesne grafiği nasıl yansıtılatır (C#)</span><span class="sxs-lookup"><span data-stu-id="6200c-102">How to project an object graph (C#)</span></span>
+<span data-ttu-id="6200c-103">Bu konu, XML'den bir nesne grafiğinin nasıl yansıtılabildiğini veya doldurulmasını gösterir.</span><span class="sxs-lookup"><span data-stu-id="6200c-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e477b-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="e477b-104">Example</span></span>  
- <span data-ttu-id="e477b-105">Aşağıdaki kod, bir nesne grafiğini örnek XML dosyasındaki `Address`, `PurchaseOrder`ve `PurchaseOrderItem` sınıflarıyla doldurur [: tipik satın alma siparişi (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML belgesi.</span><span class="sxs-lookup"><span data-stu-id="e477b-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML document.</span></span>  
+## <a name="example"></a><span data-ttu-id="6200c-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="6200c-104">Example</span></span>  
+ <span data-ttu-id="6200c-105">Aşağıdaki `Address`kod, Örnek XML Dosyasından , ve `PurchaseOrder` `PurchaseOrderItem` sınıflarla bir nesne grafiğini doldurur: Tipik [Satınalma Siparişi (LINQ - XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML belgesi.</span><span class="sxs-lookup"><span data-stu-id="6200c-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML document.</span></span>  
   
 ```csharp  
 class Address  
@@ -185,7 +185,7 @@ class Program {
                             from a in po.Elements("Address")  
                             select new Address {  
                                 AddressType = ((string)a.Attribute("Type") == "Shipping") ?  
-                                    Address.AddressUse.Shipping :   
+                                    Address.AddressUse.Shipping :
                                     Address.AddressUse.Billing,  
                                 Name = (string)a.Element("Name"),  
                                 Street = (string)a.Element("Street"),  
@@ -214,9 +214,9 @@ class Program {
 }  
 ```  
   
- <span data-ttu-id="e477b-106">Bu örnekte, LINQ sorgusunun sonucu `PurchaseOrderItem`<xref:System.Collections.Generic.IEnumerable%601> olarak döndürülür.</span><span class="sxs-lookup"><span data-stu-id="e477b-106">In this example, the result of the LINQ query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="e477b-107">`PurchaseOrder` sınıfındaki öğeler `PurchaseOrderItem`<xref:System.Collections.Generic.IEnumerable%601> türüdür.</span><span class="sxs-lookup"><span data-stu-id="e477b-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="e477b-108">Kod, sorgu sonuçlarından bir <xref:System.Collections.Generic.List%601> koleksiyonu oluşturmak için <xref:System.Linq.Enumerable.ToList%2A> uzantısı yöntemini kullanır.</span><span class="sxs-lookup"><span data-stu-id="e477b-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
+ <span data-ttu-id="6200c-106">Bu örnekte, LINQ sorgusunun sonucu bir <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem`' nin olarak döndürülür.</span><span class="sxs-lookup"><span data-stu-id="6200c-106">In this example, the result of the LINQ query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="6200c-107">Sınıftaki `PurchaseOrder` <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem`öğeler.</span><span class="sxs-lookup"><span data-stu-id="6200c-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="6200c-108">Kod, sorgunun sonuçlarından <xref:System.Linq.Enumerable.ToList%2A> <xref:System.Collections.Generic.List%601> bir koleksiyon oluşturmak için uzantı yöntemini kullanır.</span><span class="sxs-lookup"><span data-stu-id="6200c-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
   
- <span data-ttu-id="e477b-109">Örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="e477b-109">The example produces the following output:</span></span>  
+ <span data-ttu-id="6200c-109">Örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="6200c-109">The example produces the following output:</span></span>  
   
 ```output  
 PurchaseOrderNumber: 99503  
@@ -255,7 +255,7 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e477b-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e477b-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6200c-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6200c-110">See also</span></span>
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>
