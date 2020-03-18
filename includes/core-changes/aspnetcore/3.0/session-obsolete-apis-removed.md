@@ -1,26 +1,26 @@
 ---
 ms.openlocfilehash: 4dcb357570cb6597fde86c9e8f2acb74364cfaa3
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198590"
 ---
-### <a name="session-state-obsolete-apis-removed"></a><span data-ttu-id="7af8e-101">Oturum durumu: kullanılmayan API 'Ler kaldırıldı</span><span class="sxs-lookup"><span data-stu-id="7af8e-101">Session state: Obsolete APIs removed</span></span>
+### <a name="session-state-obsolete-apis-removed"></a><span data-ttu-id="aa1cb-101">Oturum durumu: Eski API'ler kaldırıldı</span><span class="sxs-lookup"><span data-stu-id="aa1cb-101">Session state: Obsolete APIs removed</span></span>
 
-<span data-ttu-id="7af8e-102">Oturum tanımlama bilgilerini yapılandırmak için kullanılmayan API 'Ler kaldırılmıştır.</span><span class="sxs-lookup"><span data-stu-id="7af8e-102">Obsolete APIs for configuring session cookies were removed.</span></span> <span data-ttu-id="7af8e-103">Daha fazla bilgi için bkz. [ASPNET/Duyurular # 257](https://github.com/aspnet/Announcements/issues/257).</span><span class="sxs-lookup"><span data-stu-id="7af8e-103">For more information, see [aspnet/Announcements#257](https://github.com/aspnet/Announcements/issues/257).</span></span>
+<span data-ttu-id="aa1cb-102">Oturum tanımlama bilgilerini yapılandırmak için eski API'ler kaldırıldı.</span><span class="sxs-lookup"><span data-stu-id="aa1cb-102">Obsolete APIs for configuring session cookies were removed.</span></span> <span data-ttu-id="aa1cb-103">Daha fazla bilgi için [aspnet/Announcements#257'ye](https://github.com/aspnet/Announcements/issues/257)bakın.</span><span class="sxs-lookup"><span data-stu-id="aa1cb-103">For more information, see [aspnet/Announcements#257](https://github.com/aspnet/Announcements/issues/257).</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="7af8e-104">Sunulan sürüm</span><span class="sxs-lookup"><span data-stu-id="7af8e-104">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="aa1cb-104">Sürüm tanıtıldı</span><span class="sxs-lookup"><span data-stu-id="aa1cb-104">Version introduced</span></span>
 
-<span data-ttu-id="7af8e-105">3.0</span><span class="sxs-lookup"><span data-stu-id="7af8e-105">3.0</span></span>
+<span data-ttu-id="aa1cb-105">3,0</span><span class="sxs-lookup"><span data-stu-id="aa1cb-105">3.0</span></span>
 
-#### <a name="reason-for-change"></a><span data-ttu-id="7af8e-106">Değişiklik nedeni</span><span class="sxs-lookup"><span data-stu-id="7af8e-106">Reason for change</span></span>
+#### <a name="reason-for-change"></a><span data-ttu-id="aa1cb-106">Değişiklik nedeni</span><span class="sxs-lookup"><span data-stu-id="aa1cb-106">Reason for change</span></span>
 
-<span data-ttu-id="7af8e-107">Bu değişiklik, tanımlama bilgilerini kullanan özellikleri yapılandırmak için API 'lerde tutarlılığı zorlar.</span><span class="sxs-lookup"><span data-stu-id="7af8e-107">This change enforces consistency across APIs for configuring features that use cookies.</span></span>
+<span data-ttu-id="aa1cb-107">Bu değişiklik, tanımlama bilgileri kullanan özellikleri yapılandırmak için API'ler arasında tutarlılık zorlar.</span><span class="sxs-lookup"><span data-stu-id="aa1cb-107">This change enforces consistency across APIs for configuring features that use cookies.</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="7af8e-108">Önerilen eylem</span><span class="sxs-lookup"><span data-stu-id="7af8e-108">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="aa1cb-108">Önerilen eylem</span><span class="sxs-lookup"><span data-stu-id="aa1cb-108">Recommended action</span></span>
 
-<span data-ttu-id="7af8e-109">Kaldırılan API 'lerin kullanımını daha yeni değişikliklere geçirin.</span><span class="sxs-lookup"><span data-stu-id="7af8e-109">Migrate usage of the removed APIs to their newer replacements.</span></span> <span data-ttu-id="7af8e-110">`Startup.ConfigureServices`içinde aşağıdaki örneği göz önünde bulundurun:</span><span class="sxs-lookup"><span data-stu-id="7af8e-110">Consider the following example in `Startup.ConfigureServices`:</span></span>
+<span data-ttu-id="aa1cb-109">Kaldırılan API'lerin kullanımını yeni değiştirmelerine geçirin.</span><span class="sxs-lookup"><span data-stu-id="aa1cb-109">Migrate usage of the removed APIs to their newer replacements.</span></span> <span data-ttu-id="aa1cb-110">Aşağıdaki örneği göz `Startup.ConfigureServices`önünde bulundurun:</span><span class="sxs-lookup"><span data-stu-id="aa1cb-110">Consider the following example in `Startup.ConfigureServices`:</span></span>
 
 ```csharp
 public void ConfigureServices(ServiceCollection services)
@@ -44,11 +44,11 @@ public void ConfigureServices(ServiceCollection services)
 }
 ```
 
-#### <a name="category"></a><span data-ttu-id="7af8e-111">Kategori</span><span class="sxs-lookup"><span data-stu-id="7af8e-111">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="aa1cb-111">Kategori</span><span class="sxs-lookup"><span data-stu-id="aa1cb-111">Category</span></span>
 
-<span data-ttu-id="7af8e-112">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="7af8e-112">ASP.NET Core</span></span>
+<span data-ttu-id="aa1cb-112">ASP.NET Çekirdeği</span><span class="sxs-lookup"><span data-stu-id="aa1cb-112">ASP.NET Core</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="7af8e-113">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="7af8e-113">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="aa1cb-113">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="aa1cb-113">Affected APIs</span></span>
 
 - <xref:Microsoft.AspNetCore.Builder.SessionOptions.CookieDomain?displayProperty=fullName>
 - <xref:Microsoft.AspNetCore.Builder.SessionOptions.CookieHttpOnly?displayProperty=fullName>
