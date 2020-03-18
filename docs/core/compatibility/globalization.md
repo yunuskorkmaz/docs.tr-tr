@@ -1,19 +1,19 @@
 ---
-title: Genelleştirme son değişiklikleri
-description: .NET Core 'da Genelleştirme 'deki son değişiklikleri listeler.
+title: Küreselleşme kırılma değişiklikleri
+description: .NET Core'da küreselleşmedeki kırılma değişikliklerini listeler.
 ms.date: 09/20/2019
 ms.openlocfilehash: eebab2b43c1fc852cd728636518c6ac2ceef2d74
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093012"
 ---
-# <a name="globalization-breaking-changes"></a>Genelleştirme son değişiklikleri
+# <a name="globalization-breaking-changes"></a>Küreselleşme kırılma değişiklikleri
 
-Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
+Aşağıdaki kesme değişiklikleri bu sayfada belgelenmiştir:
 
-- ["C" yerel ayarı, sabit yerel ayara eşlenir](#c-locale-maps-to-the-invariant-locale)
+- [Değişmez yerel ekiyle "C" yerel eşlemleri](#c-locale-maps-to-the-invariant-locale)
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 

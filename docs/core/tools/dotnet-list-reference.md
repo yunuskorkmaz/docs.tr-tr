@@ -1,35 +1,35 @@
 ---
-title: DotNet liste başvurusu komutu
-description: DotNet liste başvurusu komutu, projeyi Proje başvurularına göre listelemek için kullanışlı bir seçenek sağlar.
+title: dotnet listesi referans komutu
+description: Dotnet listesi başvuru komutu, proje başvurularını projeye listelemek için kullanışlı bir seçenek sağlar.
 ms.date: 02/14/2020
 ms.openlocfilehash: 43c4dbc94b33e717c6ba0a1c1c5317ac006f5bba
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503710"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 2.x SDK ve sonraki sürümler
 
 ## <a name="name"></a>Adı
 
-`dotnet list reference`-projeden projeye başvuruları listeler.
+`dotnet list reference`- Projeden projeye referansları listeler.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Özet
 
 `dotnet list [<PROJECT>|<SOLUTION>] reference [-h|--help]`
 
 ## <a name="description"></a>Açıklama
 
-`dotnet list reference` komutu, belirli bir proje veya çözümün proje başvurularını listelemek için uygun bir seçenek sağlar.
+Komut, `dotnet list reference` belirli bir proje veya çözüm için proje başvurularını listelemek için kullanışlı bir seçenek sağlar.
 
 ## <a name="arguments"></a>Bağımsız Değişkenler
 
 * **`PROJECT | SOLUTION`**
 
-  Başvuruları listelemek için kullanılacak proje veya çözüm dosyasını belirtir. Belirtilmemişse, komut geçerli dizinde bir proje dosyası arar.
+  Başvuruları listeleme için kullanılacak proje veya çözüm dosyasını belirtir. Belirtilmemişse, komut bir proje dosyası için geçerli dizini arar.
 
 ## <a name="options"></a>Seçenekler
 
@@ -39,13 +39,13 @@ ms.locfileid: "77503710"
 
 ## <a name="examples"></a>Örnekler
 
-* Belirtilen proje için proje başvurularını listeleyin:
+* Belirtilen proje için proje başvurularını listele:
 
   ```dotnetcli
   dotnet list app/app.csproj reference
   ```
 
-* Geçerli dizindeki projenin proje başvurularını listeleyin:
+* Proje başvurularını geçerli dizindeki listele:
 
   ```dotnetcli
   dotnet list reference

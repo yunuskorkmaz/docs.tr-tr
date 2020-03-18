@@ -1,22 +1,22 @@
 ---
-title: Ayrılmış bir dosyanın (LINQ) alanlarını yeniden sıralama (LINQ) (C#)
+title: Sınırlandırılmış bir dosyanın (LINQ) (C#) alanlarını yeniden sıralama
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
 ms.openlocfilehash: 6bc502ff12a908edf43f9ff7f5f63f98c3ff29c4
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347649"
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Ayrılmış bir dosyanın (LINQ) alanlarını yeniden sıralama (LINQ) (C#)
-Virgülle ayrılmış değer (CSV) dosyası, elektronik tablo verilerini veya satırlar ve sütunlar tarafından temsil edilen diğer tablo verilerini depolamak için genellikle kullanılan bir metin dosyasıdır. Alanları ayırmak için <xref:System.String.Split%2A> yöntemini kullanarak, LINQ kullanarak CSV dosyalarını sorgulamak ve işlemek çok kolaydır. Aslında, yapılandırılmış herhangi bir metin satırının parçalarını yeniden sıralamak için aynı teknik de kullanılabilir; CSV dosyalarıyla sınırlı değildir.  
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Sınırlandırılmış bir dosyanın (LINQ) (C#) alanlarını yeniden sıralama
+Virgülle ayrılmış değer (CSV) dosyası, genellikle elektronik tablo verilerini veya satır lar ve sütunlarla temsil edilen diğer tabloverilerini depolamak için kullanılan bir metin dosyasıdır. Alanları ayırmak <xref:System.String.Split%2A> için yöntemi kullanarak, LINQ kullanarak CSV dosyalarını sorgulamak ve işlemek çok kolaydır. Aslında, aynı teknik metin herhangi bir yapılandırılmış satırın parçalarını yeniden sipariş etmek için kullanılabilir; CSV dosyaları ile sınırlı değildir.  
   
- Aşağıdaki örnekte, üç sütunun öğrencileri ' "soyadı," "First Name" ve "ID" temsil ettiğini varsayın. Alanlar, öğrencilerin son adlarına göre alfabetik sıralardır. Sorgu önce KIMLIK sütununun ilk göründüğü yeni bir dizi oluşturur, ardından öğrencinin adı ve soyadı birleştiren ikinci bir sütun gelir. Satırlar KIMLIK alanına göre yeniden sıralanabilir. Sonuçlar yeni bir dosyaya kaydedilir ve özgün veriler değiştirilmez.  
+ Aşağıdaki örnekte, üç sütunun öğrencilerin "soyadı", "adı" ve "Kimliği" temsil ettiğini varsayalım. Alanlar, öğrencilerin soyadlarına göre alfabetik sıraya göre sırayla yapılır. Sorgu, kimlik sütununun önce göründüğü, ardından öğrencinin adı ve soyadını birleştiren ikinci bir sütunun bulunduğu yeni bir sıra üretir. Satırlar kimlik alanına göre yeniden sıralanır. Sonuçlar yeni bir dosyaya kaydedilir ve özgün veriler değiştirilmez.  
   
-### <a name="to-create-the-data-file"></a>Veri dosyası oluşturmak için  
+### <a name="to-create-the-data-file"></a>Veri dosyasını oluşturmak için  
   
-1. Aşağıdaki satırları spreadsheet1. csv adlı bir düz metin dosyasına kopyalayın. Dosyayı proje klasörünüze kaydedin.  
+1. Aşağıdaki satırları, elektronik tablo1.csv olarak adlandırılan düz bir metin dosyasına kopyalayın. Dosyayı proje klasörünüze kaydedin.  
   
     ```csv  
     Adams,Terry,120  
@@ -75,11 +75,11 @@ class CSVFiles
  */  
 ```  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
-System. C# lınq ve System.IO ad alanları için `using` yönergeler içeren bir konsol uygulaması projesi oluşturun.
+## <a name="compiling-the-code"></a>Kod Derleniyor  
+System.Linq ve System.IO `using` ad alanları için yönergeleri içeren bir C# konsolu uygulama projesi oluşturun.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (C#)](./linq-and-strings.md)
-- [LINQ ve dosya dizinleri (C#)](./linq-and-file-directories.md)
-- [CSV dosyalarından XML oluşturma (C#)](./how-to-generate-xml-from-csv-files.md)
+- [LINQ ve Dizeleri (C#)](./linq-and-strings.md)
+- [LINQ ve Dosya Dizinleri (C#)](./linq-and-file-directories.md)
+- [CSV dosyalarından XML nasıl üretilir (C#)](./how-to-generate-xml-from-csv-files.md)

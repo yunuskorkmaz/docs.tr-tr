@@ -1,48 +1,48 @@
 ---
-title: XDocument sınıfına genel bakışC#()
+title: XDocument Sınıf Genel Bakış (C#)
 ms.date: 07/20/2015
 ms.assetid: 63305603-ab54-49fc-84e4-f76eecc59549
 ms.openlocfilehash: de49dc071d22dd77dddea29ca114663261e3edda
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69590848"
 ---
-# <a name="xdocument-class-overview-c"></a>XDocument sınıfına genel bakışC#()
-Bu konu <xref:System.Xml.Linq.XDocument> sınıfı tanıtır.  
+# <a name="xdocument-class-overview-c"></a>XDocument Sınıf Genel Bakış (C#)
+Bu konu <xref:System.Xml.Linq.XDocument> sınıf tanıttı.  
   
 ## <a name="overview-of-the-xdocument-class"></a>XDocument sınıfına genel bakış  
- Sınıfı <xref:System.Xml.Linq.XDocument> , geçerli bir XML belgesi için gereken bilgileri içerir. Buna bir XML bildirimi, işleme yönergeleri ve açıklamalar dahildir.  
+ Sınıf, <xref:System.Xml.Linq.XDocument> geçerli bir XML belgesi için gerekli bilgileri içerir. Buna bir XML bildirimi, işleme yönergeleri ve açıklamalar dahildir.  
   
- Yalnızca <xref:System.Xml.Linq.XDocument> sınıf<xref:System.Xml.Linq.XDocument> tarafından sunulan belirli işlevselliğe ihtiyacınız varsa nesneler oluşturmanız gerektiğini unutmayın. Birçok durumda, doğrudan ile <xref:System.Xml.Linq.XElement>çalışabilirsiniz. İle <xref:System.Xml.Linq.XElement> doğrudan çalışmak daha basit bir programlama modelidir.  
+ Yalnızca <xref:System.Xml.Linq.XDocument> sınıf tarafından sağlanan <xref:System.Xml.Linq.XDocument> belirli işlevselliği gerekiyorsa nesneler oluşturmanız gerektiğini unutmayın. Birçok durumda, doğrudan . <xref:System.Xml.Linq.XElement> Doğrudan çalışmak <xref:System.Xml.Linq.XElement> daha basit bir programlama modelidir.  
   
- <xref:System.Xml.Linq.XDocument>türetiliyor <xref:System.Xml.Linq.XContainer>. Bu nedenle, alt düğümler içerebilir. Ancak, <xref:System.Xml.Linq.XDocument> nesneler yalnızca bir alt <xref:System.Xml.Linq.XElement> düğüme sahip olabilir. Bu, bir XML belgesinde yalnızca bir kök öğe olabilecek XML standardını yansıtır.  
+ <xref:System.Xml.Linq.XDocument><xref:System.Xml.Linq.XContainer>türetilmiştir. Bu nedenle, alt düğümleri içerebilir. Ancak, <xref:System.Xml.Linq.XDocument> nesnelerin yalnızca bir <xref:System.Xml.Linq.XElement> alt düğüm olabilir. Bu, bir XML belgesinde yalnızca bir kök öğesi olabileceği yönündeki XML standardını yansıtır.  
   
 ## <a name="components-of-xdocument"></a>XDocument bileşenleri  
- <xref:System.Xml.Linq.XDocument> , Aşağıdaki öğeleri içerebilir:  
+ An <xref:System.Xml.Linq.XDocument> aşağıdaki öğeleri içerebilir:  
   
-- Bir <xref:System.Xml.Linq.XDeclaration> nesne. <xref:System.Xml.Linq.XDeclaration>XML bildiriminin ilgili parçalarını belirtmenizi sağlar: XML sürümü, belgenin kodlaması ve XML belgesinin tek başına olup olmadığı.  
+- Bir <xref:System.Xml.Linq.XDeclaration> nesne. <xref:System.Xml.Linq.XDeclaration>XML bildiriminin ilgili bölümlerini belirtmenizi sağlar: XML sürümü, belgenin kodlanması ve XML belgesinin tek başına olup olmadığı.  
   
 - Bir <xref:System.Xml.Linq.XElement> nesne. Bu, XML belgesinin kök düğümüdür.  
   
-- Herhangi bir sayıda <xref:System.Xml.Linq.XProcessingInstruction> nesne. Bir işleme yönergesi, XML 'i işleyen bir uygulamayla ilgili bilgiler iletir.  
+- Herhangi bir <xref:System.Xml.Linq.XProcessingInstruction> sayıda nesne. İşleme yönergesi, bilgileri XML'i işleyen bir uygulamaya iletir.  
   
-- Herhangi bir sayıda <xref:System.Xml.Linq.XComment> nesne. Yorumlar, kök öğesi için eşdüzey olacak. <xref:System.Xml.Linq.XComment> Nesne, bir XML belgesinin bir açıklama ile başlaması için geçerli olmadığından, listedeki ilk bağımsız değişken olamaz.  
+- Herhangi bir <xref:System.Xml.Linq.XComment> sayıda nesne. Yorumlar kök öğesine kardeş olacaktır. Bir <xref:System.Xml.Linq.XComment> XML belgesinin bir açıklamayla başlaması geçerli olmadığından, nesne listedeki ilk bağımsız değişken olamaz.  
   
-- DTD <xref:System.Xml.Linq.XDocumentType> için bir tane.  
+- DTD için bir tane. <xref:System.Xml.Linq.XDocumentType>  
   
- Bir <xref:System.Xml.Linq.XDocument> `Writer.Settings.OmitXmlDeclaration` `false` seri hale getirmek istediğinizde,, yazıcı olarak ayarlandıysa çıkış bir XML bildirimine sahip olacaktır (varsayılan). `XDocument.Declaration` `null`  
+ Bir <xref:System.Xml.Linq.XDocument>, olsa `XDocument.Declaration` `null`bile, yazar `Writer.Settings.OmitXmlDeclaration` `false` (varsayılan) olarak ayarlanmışsa çıktıbir XML bildirimi olacaktır serialize zaman.  
   
- Varsayılan olarak, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sürümü "1,0" olarak ayarlar ve kodlamayı "UTF-8" olarak ayarlar.  
+ Varsayılan olarak, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sürümü "1.0" olarak ayarlar ve kodlamayı "utf-8" olarak ayarlar.  
   
 ## <a name="using-xelement-without-xdocument"></a>XDocument olmadan XElement kullanma  
- Daha önce belirtildiği gibi, <xref:System.Xml.Linq.XElement> sınıfı [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] programlama arabirimindeki ana sınıftır. Çoğu durumda, uygulamanız bir belge oluşturmanızı gerektirmez. <xref:System.Xml.Linq.XElement> Sınıfını kullanarak bir XML ağacı oluşturabilir, buna başka xml ağaçları ekleyebilir, xml ağacını değiştirebilir ve kaydedebilirsiniz.  
+ Daha önce de belirtildiği <xref:System.Xml.Linq.XElement> gibi, sınıf [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] programlama arabiriminde ana sınıftır. Çoğu durumda, uygulamanız bir belge oluşturmanızı gerektirmez. <xref:System.Xml.Linq.XElement> Sınıfı kullanarak, bir XML ağacı oluşturabilir, diğer XML ağaçları ekleyebilir, XML ağacını değiştirebilir ve kaydedebilirsiniz.  
   
-## <a name="using-xdocument"></a>XDocument kullanma  
- Oluşturmak <xref:System.Xml.Linq.XDocument>için, nesneleri oluşturmak <xref:System.Xml.Linq.XElement> için yaptığınız gibi işlevsel oluşturma kullanın.  
+## <a name="using-xdocument"></a>XDocument'ı Kullanma  
+ Nesneleri oluşturmak <xref:System.Xml.Linq.XDocument>için yaptığınız gibi, işlevsel bir <xref:System.Xml.Linq.XElement> yapı oluşturmak için kullanın.  
   
- Aşağıdaki kod bir <xref:System.Xml.Linq.XDocument> nesne ve ilişkili içerilen nesneleri oluşturur.  
+ Aşağıdaki kod bir <xref:System.Xml.Linq.XDocument> nesne oluşturur ve ilişkili içerdiği nesneleri.  
   
 ```csharp  
 XDocument d = new XDocument(  
@@ -67,7 +67,7 @@ Console.WriteLine(d);
 d.Save("test.xml");  
 ```  
   
- Test. xml dosyasını incelediğinizde aşağıdaki çıktıyı alırsınız:  
+ Dosya test.xml'i incelediğinizde, aşağıdaki çıktıyı alırsınız:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -88,4 +88,4 @@ d.Save("test.xml");
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML programlamaya genel bakışC#()](./linq-to-xml-overview.md)
+- [LINQ - XML Programlamaya Genel Bakış (C#)](./linq-to-xml-overview.md)

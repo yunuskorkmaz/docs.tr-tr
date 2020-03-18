@@ -1,26 +1,26 @@
 ---
 title: Hizmet odaklı mimari
-description: Mikro hizmetler ile hizmet odaklı mimari (SOA) arasındaki temel farklılıkları öğrenin.
+description: Mikro hizmetler ile Hizmet odaklı mimari (SOA) arasındaki temel farkları öğrenin.
 ms.date: 09/20/2018
 ms.openlocfilehash: 84786539fbac0e8b38a81a2580232474774cd355
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70296217"
 ---
 # <a name="service-oriented-architecture"></a>Hizmet odaklı mimari
 
-Hizmet odaklı mimari (SOA), aşırı kullanılan bir terimdir ve farklı kişilere farklı şeyler sunmaktır. Ancak, ortak paydası olarak, SOA, alt sistemler veya Katmanlar gibi farklı türler olarak sınıflandırılabilen birden fazla hizmete (en yaygın olarak HTTP Hizmetleri) oluşturarak uygulamanızı yapılandıracağı anlamına gelir.
+Hizmet odaklı mimari (SOA) aşırı kullanılan bir terim di ve farklı insanlar için farklı şeyler anlamına geliyordu. Ancak ortak bir payda olarak SOA, uygulamanızı alt sistemler veya katmanlar gibi farklı türler olarak sınıflandırılabilen birden çok hizmete (en yaygın olarak HTTP hizmetleri olarak) ayrıştırarak yapılandırdığınız anlamına gelir.
 
-Bu hizmetler artık, dağıtım sorunlarını çözen Docker Kapsayıcıları olarak dağıtılabilir, çünkü tüm bağımlılıklar kapsayıcı görüntüsüne dahil edilmiştir. Ancak, SOA uygulamalarını ölçeklendirmeniz gerektiğinde, tek Docker konaklarına dayalı dağıtım yapıyorsanız ölçeklenebilirlik ve kullanılabilirlik güçlüklerine sahip olabilirsiniz. Bu, daha sonraki bölümlerde, mikro hizmetler için dağıtım yaklaşımlarının açıklandığı gibi Docker kümeleme yazılımının veya bir Orchestrator tarafından size yardımcı olabilir.
+Tüm bağımlılıklar kapsayıcı görüntüsüne dahil olduğundan, bu hizmetler artık dağıtım sorunlarını çözen Docker kapsayıcıları olarak dağıtılabilir. Ancak, SOA uygulamalarını ölçeklendirmeniz gerektiğinde, tek Docker ana bilgisayarlarına göre dağıtım yapıyorsanız ölçeklenebilirlik ve kullanılabilirlik zorluklarına sahip olabilirsiniz. Burası Docker kümeleme yazılımının veya bir orkestratörün, mikro hizmetler için dağıtım yaklaşımlarının açıklandığı sonraki bölümlerde açıklandığı gibi size yardımcı olabileceği yerdir.
 
-Docker Kapsayıcıları hem geleneksel hizmet yönelimli mimariler hem de daha gelişmiş mikro hizmet mimarileri için yararlıdır (ancak gerekli değildir).
+Docker kapsayıcıları hem geleneksel hizmet odaklı mimariler hem de daha gelişmiş microservices mimarileri için kullanışlıdır (ancak gerekli değildir).
 
-Mikro hizmetler SOA 'den türetilir, ancak SOA, mikro hizmetler mimarisinden farklıdır. Büyük merkezi aracılar, kuruluş düzeyindeki merkezi düzenleyiciler ve [kurumsal Service Bus (ESB)](https://en.wikipedia.org/wiki/Enterprise_service_bus) gibi özellikler Ise genellikle SOA 'de bulunur. Ancak çoğu durumda bunlar, mikro hizmet topluluğundaki daha etkili bir alışkanlığa sahiptir. Aslında, bazı kişiler "mikro hizmet mimarisi SOA tamamlandı."
+Microservices SOA türetilmiştir, ancak SOA microservices mimarisi farklıdır. Büyük merkezi brokerlar, organizasyon düzeyinde merkezi orkestrasyonlar ve [Enterprise Service Bus (ESB)](https://en.wikipedia.org/wiki/Enterprise_service_bus) gibi özellikler SOA'da tipiktir. Ama çoğu durumda, bu mikro hizmet toplumda anti-desenler vardır. Aslında, bazı insanlar "microservice mimarisi SOA doğru yapılır" savunuyorlar.
 
-Bu kılavuz, mikro hizmetlere odaklandığı için, bir SOA yaklaşımı mikro hizmet mimarisinde kullanılan gereksinimlerden ve tekniklerin daha az bir şekilde düşüktür. Mikro hizmet tabanlı bir uygulamanın nasıl oluşturulduğunu biliyorsanız, daha basit bir hizmet yönelimli uygulama oluşturmayı da bilirsiniz.
+Soa yaklaşımı, mikro hizmet mimarisinde kullanılan gereksinimve tekniklerden daha az açıklayıcı olduğundan, bu kılavuz mikro hizmetlere odaklanır. Mikro hizmet tabanlı bir uygulama oluşturmayı biliyorsanız, daha basit bir hizmet odaklı uygulamayı nasıl oluşturabileceğinizi de bilirsiniz.
 
 >[!div class="step-by-step"]
 >[Önceki](docker-application-state-data.md)
->[İleri](microservices-architecture.md)
+>[Sonraki](microservices-architecture.md)

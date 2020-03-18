@@ -1,46 +1,49 @@
 ---
-title: DotNet araç listesi komutu
-description: DotNet araç listesi komutu, makinenizde yüklü olan .NET Core araçlarını listeler.
+title: dotnet araç listesi komutu
+description: Dotnet araç listesi komutu, makinenize yüklenen .NET Core araçlarını listeler.
 ms.date: 02/14/2020
-ms.openlocfilehash: f231dcfe64a925f75f948d508e7a2d83befd9a00
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: def3c345a775e5a65ec3d37718d207c80ca7ceee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156991"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847878"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 2.1 SDK ve sonraki sürümler
 
 ## <a name="name"></a>Adı
 
-`dotnet tool list`-makinenizde yüklü olan belirtilen türdeki tüm [.NET Core araçları](global-tools.md) listelenir.
+`dotnet tool list`- Şu anda makinenizde yüklü olan belirtilen türdeki tüm [.NET Core araçlarını](global-tools.md) listeler.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Özet
 
 ```dotnetcli
 dotnet tool list <-g|--global>
+
 dotnet tool list <--tool-path>
+
 dotnet tool list
+
 dotnet tool list <-h|--help>
 ```
 
 ## <a name="description"></a>Açıklama
 
-`dotnet tool list` komutu, makinenizde yüklü olan tüm .NET Core genel, araç yolu veya yerel araçlarını listeetmeniz için bir yol sağlar. Komut, paket adını, yüklü sürümü ve araç komutunu listeler.  Komutunu kullanmak için aşağıdakilerden birini belirtin:
+Komut, `dotnet tool list` makinenizde yüklü olan tüm .NET Core global, araç yolu veya yerel Araçları listele etmeniz için bir yol sağlar. Komut, paket adını, yüklenen sürümü ve araç komutunu listeler.  Komutu kullanmak için aşağıdakilerden birini belirtin:
 
-* Varsayılan konumda yüklü olan küresel bir araç. `--global` seçeneğini kullanın
-* Özel bir konumda yüklü olan küresel bir araç. `--tool-path` seçeneğini kullanın.
-* Yerel bir araç. `--global` ve `--tool-path` seçeneklerini atlayın.
+* Varsayılan konuma yüklenen genel bir araç. `--global` Seçeneği kullanma
+* Özel bir konuma yüklenen genel bir araç. `--tool-path` Seçeneği kullanın.
+* Yerel bir araç. Ve `--tool-path` seçenekleri `--global` atla.
 
-**Yerel araçlar .NET Core SDK 3,0 ' den başlayarak kullanılabilir.**
+**Yerel araçlar .NET Core SDK 3.0 ile başlayarak kullanılabilir.**
 
 ## <a name="options"></a>Seçenekler
 
 - **`-g|--global`**
 
-  Kullanıcı genelindeki genel araçları listeler. `--tool-path` seçeneği ile birleştirilemez. Hem `--global` hem de `--tool-path`, yerel araçları listeler.
+  Kullanıcı çapında genel araçları listeler. `--tool-path` Seçenekle birleştirilemeyiz. Her ikisini `--global` de `--tool-path` atlayarak yerel araçları listeler.
 
 - **`-h|--help`**
 
@@ -48,21 +51,21 @@ dotnet tool list <-h|--help>
 
 - **`--tool-path <PATH>`**
 
-  Genel araçların bulunacağı bir özel konum belirtir. YOL mutlak veya göreli olabilir. `--global` seçeneği ile birleştirilemez. Hem `--global` hem de `--tool-path`, yerel araçları listeler.
+  Genel araçları bulabileceğiniz özel bir konum belirtir. PATH mutlak veya göreceli olabilir. `--global` Seçenekle birleştirilemeyiz. Her ikisini `--global` de `--tool-path` atlayarak yerel araçları listeler.
 
 ## <a name="examples"></a>Örnekler
 
 - **`dotnet tool list -g`**
 
-  Makinenizde Kullanıcı genelinde yüklenen tüm genel araçları listeler (geçerli kullanıcı profili).
+  Makinenizde kullanıcı çapında yüklenen tüm genel araçları listeler (geçerli kullanıcı profili).
 
 - **`dotnet tool list --tool-path c:\global-tools`**
 
-  Belirli bir Windows dizininden küresel araçları listeler.
+  Belirli bir Windows dizinindeki genel araçları listeler.
 
 - **`dotnet tool list --tool-path ~/bin`**
 
-  Belirli bir Linux/macOS dizininden küresel araçları listeler.
+  Belirli bir Linux/macOS dizinindeki genel araçları listeler.
 
 - **`dotnet tool list`**
 
@@ -70,4 +73,6 @@ dotnet tool list <-h|--help>
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core araçları](global-tools.md)
+- [.NET Çekirdek araçları](global-tools.md)
+- [Öğretici: .NET Core CLI'yi kullanarak bir .NET Core global aracı yükleyin ve kullanın](global-tools-how-to-use.md)
+- [Öğretici: .NET Core CLI'yi kullanarak bir .NET Core yerel aracı nı yükleyin ve kullanın](local-tools-how-to-use.md)

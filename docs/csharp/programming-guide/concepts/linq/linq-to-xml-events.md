@@ -1,40 +1,40 @@
 ---
-title: LINQ to XML olayları (C#)
+title: LINQ - XML Olayları (C#)
 ms.date: 07/20/2015
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
 ms.openlocfilehash: 8e0cb4519dd0fc2bed443d9a62b9a2545d10e161
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253168"
 ---
-# <a name="linq-to-xml-events-c"></a>LINQ to XML olayları (C#)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]olaylar, bir XML ağacı değiştiğinde size bildirim gönderilmesini sağlar.  
+# <a name="linq-to-xml-events-c"></a>LINQ - XML Olayları (C#)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]olaylar, bir XML ağacı değiştirildiğinde bilgilendirilmenizi sağlar.  
   
- Herhangi <xref:System.Xml.Linq.XObject>bir örneğine olay ekleyebilirsiniz. Olay işleyicisi daha sonra bu <xref:System.Xml.Linq.XObject> ve alt öğelerinden herhangi birine değişiklikler için olaylar alır. Örneğin, ağacın köküne bir olay işleyicisi ekleyebilir ve ağaçtaki tüm değişiklikleri bu olay işleyicisinden işleyebilirsiniz.  
+ Herhangi bir örneğine olaylar <xref:System.Xml.Linq.XObject>ekleyebilirsiniz. Olay işleyicisi daha sonra bu <xref:System.Xml.Linq.XObject> ve onun torunları herhangi bir değişiklik için olaylar alırsınız. Örneğin, ağacın köküne bir olay işleyicisi ekleyebilir ve bu olay işleyicisinden ağaca yapılan tüm değişiklikleri işleyebilirsiniz.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Olay örnekleri için bkz <xref:System.Xml.Linq.XObject.Changing> . ve <xref:System.Xml.Linq.XObject.Changed>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Olay örnekleri için <xref:System.Xml.Linq.XObject.Changing> bkz. <xref:System.Xml.Linq.XObject.Changed>  
   
-## <a name="types-and-events"></a>Türler ve olaylar  
- Olaylarla çalışırken aşağıdaki türleri kullanın:  
+## <a name="types-and-events"></a>Türleri ve Etkinlikler  
+ Olaylarla çalışırken aşağıdaki türleri kullanırsınız:  
   
 |Tür|Açıklama|  
 |----------|-----------------|  
-|<xref:System.Xml.Linq.XObjectChange>|Bir <xref:System.Xml.Linq.XObject>olay oluşturulduğunda olay türünü belirtir.|  
-|<xref:System.Xml.Linq.XObjectChangeEventArgs>|<xref:System.Xml.Linq.XObject.Changing> Ve<xref:System.Xml.Linq.XObject.Changed> olayları için veri sağlar.|  
+|<xref:System.Xml.Linq.XObjectChange>|Bir olay için yükseltildiğinde olay türünü <xref:System.Xml.Linq.XObject>belirtir.|  
+|<xref:System.Xml.Linq.XObjectChangeEventArgs>|Olaylar <xref:System.Xml.Linq.XObject.Changing> ve olaylar <xref:System.Xml.Linq.XObject.Changed> için veri sağlar.|  
   
- Bir XML ağacını değiştirirken aşağıdaki olaylar oluşturulur:  
+ Bir XML ağacını değiştirdiğinizde aşağıdaki olaylar yükseltilir:  
   
 |Olay|Açıklama|  
 |-----------|-----------------|  
-|<xref:System.Xml.Linq.XObject.Changing>|Bu <xref:System.Xml.Linq.XObject> veya alt öğelerinden herhangi birinin değişmesinden hemen önce gerçekleşir.|  
-|<xref:System.Xml.Linq.XObject.Changed>|Bir <xref:System.Xml.Linq.XObject> değiştiğinde veya alt öğelerinden herhangi biri değiştiğinde gerçekleşir.|  
+|<xref:System.Xml.Linq.XObject.Changing>|Şu <xref:System.Xml.Linq.XObject> ya da onun soyundan herhangi biri değişmeden hemen önce meydana gelir.|  
+|<xref:System.Xml.Linq.XObject.Changed>|Bir <xref:System.Xml.Linq.XObject> değişti veya onun torunlarından herhangi biri değişti oluşur.|  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Olaylar, bir XML ağacındaki bazı toplu bilgileri korumak istediğinizde faydalıdır. Örneğin, faturanın satır öğelerinin toplamı olan bir fatura toplamı korumak isteyebilirsiniz. Bu örnek, karmaşık öğe `Items`altındaki tüm alt öğelerinin toplamını korumak için olayları kullanır.  
+ Olaylar, bir XML ağacında bazı toplu bilgileri korumak istediğinizde yararlıdır. Örneğin, faturanın satır maddelerinin toplamı olan bir fatura toplamını korumak isteyebilirsiniz. Bu örnek, karmaşık öğe `Items`altında tüm alt öğelerin toplamını korumak için olayları kullanır.  
   
 ### <a name="code"></a>Kod  
   
@@ -75,7 +75,7 @@ Console.WriteLine("Total:{0}", (int)total);
 Console.WriteLine(root);  
 ```  
   
-### <a name="comments"></a>Açıklamalar  
+### <a name="comments"></a>Yorumlar  
  Bu kod aşağıdaki çıktıyı üretir:  
   
 ```output  

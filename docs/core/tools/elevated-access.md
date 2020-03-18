@@ -1,45 +1,45 @@
 ---
-title: DotNet komutları için yükseltilmiş erişim
-description: Yükseltilmiş erişim gerektiren DotNet komutları için en iyi uygulamaları öğrenin.
+title: dotnet komutları için yüksek erişim
+description: Yüksek erişim gerektiren dotnet komutları için en iyi uygulamaları öğrenin.
 author: wli3
 ms.date: 06/26/2019
 ms.openlocfilehash: 4aff9badfa8ad9b83adc4496d4ebd6df29252e36
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156770"
 ---
-# <a name="elevated-access-for-dotnet-commands"></a>DotNet komutları için yükseltilmiş erişim
+# <a name="elevated-access-for-dotnet-commands"></a>dotnet komutları için yüksek erişim
 
-Yazılım geliştirme en iyi uygulamaları, geliştiricilerin en az ayrıcalık gerektiren yazılımları yazmasını sağlar. Ancak, performans izleme araçları gibi bazı yazılımlar, işletim sistemi kuralları nedeniyle yönetici izni gerektirir. Aşağıdaki kılavuzda .NET Core ile bu tür yazılımları yazmaya yönelik desteklenen senaryolar açıklanmaktadır.
+Yazılım geliştirme en iyi uygulamaları ayrıcalık en az miktarda gerektiren yazılım yazma geliştiricileri rehberlik eder. Ancak, performans izleme araçları gibi bazı yazılımlar, işletim sistemi kuralları nedeniyle yönetici izni gerektirir. Aşağıdaki kılavuzda, bu tür yazılımları .NET Core ile yazmak için desteklenen senaryolar açıklanmaktadır.
 
-Aşağıdaki komutlar yükseltilmiş olarak çalıştırılabilir:
+Aşağıdaki komutlar yükseltilebilir:
 
-- [DotNet aracı yüklemesi](dotnet-tool-install.md)gibi `dotnet tool` komutlar.
+- `dotnet tool`[komutları, dotnet aracı yükleme](dotnet-tool-install.md)gibi .
 - `dotnet run --no-build`
 
-Diğer komutların yükseltilme çalıştırılmasını önermiyoruz. Özellikle, [DotNet restore](dotnet-restore.md), [DotNet Build](dotnet-build.md)ve [DotNet Run](dotnet-run.md)gibi MSBuild kullanan komutlarla yükseltmeyi önermiyoruz. Birincil sorun, bir Kullanıcı DotNet komutları verdikten sonra kök ve kısıtlanmış bir hesap arasında geri ve ileri geçiş yaptığında izin yönetimi sorunlardır. Bir kök kullanıcı tarafından oluşturulan dosyaya erişiminizin olmadığı kısıtlı bir kullanıcı olarak bulunabilir. Bu durumu çözmek için bazı yollar vardır, ancak ilk yerde içine aktarılmaları gereksizdir.
+Diğer komutları yükseltmenizi önermiyoruz. Özellikle, [biz dotnet geri yükleme, dotnet](dotnet-restore.md) [yapı](dotnet-build.md)ve [dotnet çalıştırmak](dotnet-run.md)gibi MSBuild kullanan komutları ile yükseklik önermiyoruz. Birincil sorun, bir kullanıcı dotnet komutları verdikten sonra kök ve kısıtlı bir hesap arasında ileri ve geri geçiş yaptığında izin yönetimi sorunlarıdır. Kısıtlanmış bir kullanıcı olarak, bir kök kullanıcı tarafından oluşturulmuş dosyaya erişiminiz olmadığını görebilirsiniz. Bu durumu çözmenin yolları var, ama en başta içine girmek için gereksiz.
 
-Kök ve sınırlı hesap arasında geri geçiş yapmıyorsanız ve komutları kök olarak çalıştırabilirsiniz. Örneğin, Docker Kapsayıcıları varsayılan olarak kök olarak çalışır, bu nedenle bu özelliğe sahiptirler.
+Kök ve kısıtlı bir hesap arasında geçiş yapmadığınız sürece komutları kök olarak çalıştırabilirsiniz. Örneğin, Docker kapsayıcıları varsayılan olarak kök olarak çalıştırın, bu nedenle bu özelliğe sahiptirler.
 
-## <a name="global-tool-installation"></a>Küresel araç yüklemesi
+## <a name="global-tool-installation"></a>Genel takım kurulumu
 
-Aşağıdaki yönergelerde, yürütme için yükseltilmiş izinler gerektiren .NET Core araçlarını yüklemek, çalıştırmak ve kaldırmak için önerilen yol gösterilmektedir.
+Aşağıdaki yönergeler, yürütmek için yüksek izinler gerektiren .NET Core araçlarını yükleme, çalıştırma ve kaldırmanın önerilen yolunu gösterir.
 
 <!-- markdownlint-disable MD025 -->
 
 # <a name="windows"></a>[Windows](#tab/windows)
 
-### <a name="install-the-tool"></a>Aracı 'nı yükler
+### <a name="install-the-tool"></a>Aracı yükleme
 
-`%ProgramFiles%\dotnet-tools` klasör zaten mevcutsa, "kullanıcılar" grubunun bu dizini yazma veya değiştirme izni olup olmadığını denetlemek için aşağıdakileri yapın:
+Klasör `%ProgramFiles%\dotnet-tools` zaten varsa, "Kullanıcılar" grubunun bu dizini yazma veya değiştirme izni olup olmadığını denetlemek için aşağıdakileri yapın:
 
-- `%ProgramFiles%\dotnet-tools` klasörüne sağ tıklayın ve **Özellikler**' i seçin. **Ortak özellikler** iletişim kutusu açılır.
-- **Güvenlik** sekmesini seçin. **Grup veya Kullanıcı adları**altında "kullanıcılar" grubunun dizini yazma veya değiştirme izni olup olmadığını denetleyin.
-- "Kullanıcılar" grubu dizini yazabilir veya değiştirebiliyorsanız, *DotNet araçları*yerine araçları yüklerken farklı bir dizin adı kullanın.
+- Klasöre `%ProgramFiles%\dotnet-tools` sağ tıklayın ve **Özellikler'i**seçin. **Ortak Özellikler** iletişim kutusu açılır.
+- **Güvenlik** sekmesini seçin. **Grup veya kullanıcı adları**altında, "Kullanıcılar" grubunun dizini yazma veya değiştirme izni olup olmadığını kontrol edin.
+- "Kullanıcılar" grubu dizini yazabilir veya değiştirebiliyorsa, *araçları dotnet araçları*yerine yüklerken farklı bir dizin adı kullanın.
 
-Araçları yüklemek için, yükseltilmiş komut isteminde aşağıdaki komutu çalıştırın. Yükleme sırasında *DotNet araçları* klasörünü oluşturur.
+Araçları yüklemek için aşağıdaki komutu yükseltilmiş komut isteminde çalıştırın. Yükleme sırasında *dotnet-tools* klasörünü oluşturur.
 
 ```dotnetcli
 dotnet tool install PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools".
@@ -47,27 +47,27 @@ dotnet tool install PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools".
 
 ### <a name="run-the-global-tool"></a>Genel aracı çalıştırma
 
-**Seçenek 1** Tam yolu yükseltilmiş istemle kullanın:
+**Seçenek 1** Yükseltilmiş komut istemi ile tam yolu kullanın:
 
 ```cmd
 "%ProgramFiles%\dotnet-tools\TOOLCOMMAND"
 ```
 
-**Seçenek 2** Yeni oluşturulan klasörü `%Path%`ekleyin. Bu işlemi yalnızca bir kez yapmanız gerekir.
+**Seçenek 2** Yeni oluşturulan klasörü `%Path%`. Bu işlemi sadece bir kez yapmanız gerekir.
 
 ```cmd
 setx Path "%Path%;%ProgramFiles%\dotnet-tools\"
 ```
 
-Ve şunu çalıştırın:
+Ve ile çalıştırın:
 
 ```cmd
 TOOLCOMMAND
 ```
 
-### <a name="uninstall-the-global-tool"></a>Genel aracı kaldır
+### <a name="uninstall-the-global-tool"></a>Genel aracı kaldırma
 
-Yükseltilmiş bir komut isteminde aşağıdaki komutu yazın:
+Yükseltilmiş bir istemi olarak, aşağıdaki komutu yazın:
 
 ```dotnetcli
 dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
@@ -77,28 +77,28 @@ dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
-# <a name="macos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[Macos](#tab/macos)
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
 ---
 
-## <a name="local-tools"></a>Yerel Araçlar
+## <a name="local-tools"></a>Yerel araçlar
 
-Yerel araçlar, Kullanıcı başına alt dizin ağacı başına kapsamlandırılır. Yükseltilmiş olarak çalıştırıldığında yerel araçlar, kısıtlı bir Kullanıcı ortamını yükseltilmiş ortamda paylaşır. Linux ve macOS 'ta bu, dosyaların yalnızca kök kullanıcı erişimiyle ayarlanmasına neden olur. Kullanıcı kısıtlı bir hesaba geri geçtiğinde, Kullanıcı artık dosyalara erişemez veya dosyalara yazamaz. Bu nedenle, yerel araçlar olarak yükseltme gerektiren araçların yüklenmesi önerilmez. Bunun yerine, genel araçlar için `--tool-path` seçeneğini ve önceki yönergeleri kullanın.
+Yerel araçlar, kullanıcı başına alt dizin ağacı başına kapsamlıdır. Yüksek çalıştırıldığında, yerel araçlar kısıtlı bir kullanıcı ortamını yükseltilmiş ortamla paylaşır. Linux ve macOS'ta bu, yalnızca root kullanıcı erişimine sahip dosyaların ayarlandığına neden olur. Kullanıcı kısıtlı bir hesaba geri dönerse, kullanıcı artık dosyalara erişemez veya dosyalara yazamaz. Bu nedenle, yerel araçlar olarak yükseklik gerektiren araçların yüklenmesi önerilmez. Bunun yerine, `--tool-path` genel araçlar için seçeneği ve önceki yönergeleri kullanın.
 
-## <a name="elevation-during-development"></a>Geliştirme sırasında yükseltme
+## <a name="elevation-during-development"></a>Geliştirme sırasında yükseklik
 
-Geliştirme sırasında uygulamanızı test etmek için yükseltilmiş erişime sahip olabilirsiniz. Bu senaryo, IoT uygulamaları için yaygın olarak kullanılan bir örnektir. Uygulamayı yükseltme olmadan oluşturmanızı ve ardından yükseltme ile çalıştırmayı öneririz. Aşağıda gösterildiği gibi birkaç desen vardır:
+Geliştirme sırasında, uygulamanızı test etmek için yüksek erişim gerekebilir. Bu senaryo, örneğin IoT uygulamaları için yaygındır. Uygulamayı yükseklik olmadan oluşturmanızı ve yükseklik ile çalıştırmanızı öneririz. Aşağıdaki gibi birkaç desen vardır:
 
-- Oluşturulan yürütülebiliri kullanma (en iyi başlangıç performansını sağlar):
+- Oluşturulan çalıştırılabilir (en iyi başlangıç performansını sağlar) kullanarak:
 
    ```dotnetcli
    dotnet build
    sudo ./bin/Debug/netcoreapp3.0/APPLICATIONNAME
    ```
 
-- Yeni ikili dosyaları üretmemek için `—no-build` bayrağıyla [DotNet Run](dotnet-run.md) komutunu kullanma:
+- Yeni ikililer oluşturmamak için `—no-build` [bayrakla dotnet çalıştırma](dotnet-run.md) komutunu kullanma:
 
    ```dotnetcli
    dotnet build
@@ -107,4 +107,4 @@ Geliştirme sırasında uygulamanızı test etmek için yükseltilmiş erişime 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core genel araçlarına genel bakış](global-tools.md)
+- [.NET Core Global Tools genel bakış](global-tools.md)

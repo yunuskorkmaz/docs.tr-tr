@@ -1,40 +1,40 @@
 ---
 ms.openlocfilehash: 06d5f48566c239e37355496c3f27163d952602c6
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901714"
 ---
-### <a name="kestrel-connection-adapters-removed"></a>Kestrel: bağlantı bağdaştırıcıları kaldırıldı
+### <a name="kestrel-connection-adapters-removed"></a>Kerkenez: Bağlantı bağdaştırıcıları kaldırıldı
 
-"Pubternal" API 'Lerini `public`'a taşıma kapsamında, bir `IConnectionAdapter` kavramı Kestrel ' den kaldırılmıştır. Bağlantı bağdaştırıcıları bağlantı ara yazılımı ile değiştiriliyor (ASP.NET Core işlem hattındaki HTTP ara hattına benzer ancak alt düzey bağlantılar için). HTTPS ve bağlantı günlüğü bağlantı bağdaştırıcılarından bağlantı ara yazılıma taşındı. Bu uzantı yöntemleri sorunsuz şekilde çalışmaya devam etmelidir, ancak uygulama ayrıntıları değişmiştir.
+"Pubternal" API'leri taşımak için `public`hareketin bir `IConnectionAdapter` parçası olarak, bir kavramı Kerkenez kaldırıldı. Bağlantı bağdaştırıcıları bağlantı ara yazılımları ile değiştirilmektedir (ASP.NET Core ardışık lıktaki HTTP ara yazılımlarına benzer, ancak alt düzey bağlantılar için). HTTPS ve bağlantı günlüğü bağlantı bağdaştırıcılarından bağlantı ara yazılımlarına geçti. Bu uzantı yöntemleri sorunsuz çalışmaya devam etmelidir, ancak uygulama ayrıntıları değişti.
 
-Daha fazla bilgi için bkz. [DotNet/aspnetcore # 11412](https://github.com/dotnet/aspnetcore/pull/11412). Tartışma için bkz. [DotNet/aspnetcore # 11475](https://github.com/dotnet/aspnetcore/issues/11475).
+Daha fazla bilgi için [dotnet/aspnetcore#11412'ye](https://github.com/dotnet/aspnetcore/pull/11412)bakın. Tartışma için [dotnet/aspnetcore#11475'e](https://github.com/dotnet/aspnetcore/issues/11475)bakın.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-`IConnectionAdapter`kullanılarak Kestrel genişletilebilirlik bileşenleri oluşturuldu.
+Kerkenez ekstensibilite `IConnectionAdapter`bileşenleri kullanılarak oluşturuldu.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Kestrel genişletilebilirlik bileşenleri, [Ara yazılım](https://github.com/dotnet/aspnetcore/pull/11412/files#diff-89acc06acf1b2e96bbdb811ce523619f)olarak oluşturulur.
+Kerkenez ekstensibilite bileşenleri [ara yazılım](https://github.com/dotnet/aspnetcore/pull/11412/files#diff-89acc06acf1b2e96bbdb811ce523619f)olarak oluşturulur.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Bu değişiklik, daha esnek bir genişletilebilirlik mimarisi sağlamaya yöneliktir.
+Bu değişiklik, daha esnek bir genişletilebilirlik mimarisi sağlamak için tasarlanmıştır.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-`IConnectionAdapter` tüm uygulamalarını, [burada](https://github.com/dotnet/aspnetcore/pull/11412/files#diff-89acc06acf1b2e96bbdb811ce523619f)gösterildiği gibi yeni ara yazılım düzenlerini kullanacak şekilde dönüştürün.
+Burada gösterildiği gibi `IConnectionAdapter` yeni ara yazılım deseni [here](https://github.com/dotnet/aspnetcore/pull/11412/files#diff-89acc06acf1b2e96bbdb811ce523619f)kullanmak için herhangi bir uygulama dönüştürün.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Core
+ASP.NET Çekirdeği
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

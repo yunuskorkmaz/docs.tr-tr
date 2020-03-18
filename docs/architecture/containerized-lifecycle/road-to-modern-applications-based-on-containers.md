@@ -1,32 +1,32 @@
 ---
 title: Kapsayıcıları temel alan modern uygulamalara giden yol
-description: Docker, kapsayıcılar ve mikro hizmetler mimarisinin tek boyutlu bir-hepsi çözümü olduğunu anlayın. Burada, karar vermenize yardımcı olacak bazı başvurular bulacaksınız.
+description: Docker, konteynerler ve Microservices mimarisinin her şeye uyan tek boyutlu bir çözüm olmadığını anlayın. Burada karar vermenize yardımcı olacak bazı referanslar bulacaksınız.
 ms.date: 11/23/2018
 ms.openlocfilehash: 0bc1adcd89c19b512032ee8fdf1a6e28cea96ee8
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72770702"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>Kapsayıcıları temel alan modern uygulamalara giden yol
 
-Bu kitabı, yeni uygulamaların geliştirilmesini planladığınızı veya Docker, kapsayıcıları ve şirketinizde mikro hizmetler gibi yeni yaklaşımları kullanmanın etkilerini değerlendirmediğiniz için büyük olasılıkla okuyorsunuzdur.
+Muhtemelen bu kitabı okuyorsunuzçünkü yeni uygulamalar geliştirmeyi planlıyorsunuz veya Docker, Konteynerler ve şirketinizdeki Microservices gibi yeni yaklaşımları kullanmanın etkisini değerlendiriyorsunuz.
 
-Yeni geliştirme paradigmalarına benimseme, bir projeyi başlatmadan önce, geliştirme ekipleriniz, bütçeniz veya altyapınızın üzerindeki etkiyi değerlendirmek için dikkatli bir şekilde alınmalıdır.
+Dev takımlarınız, bütçeniz veya altyapınız üzerindeki etkisini değerlendirmek için, bir projeye başlamadan önce yeni geliştirme paradigmalarının benimsenmesi dikkatle yapılmalıdır.
 
-Microsoft zengin kılavuzlarda, örnek uygulamalarda ve yeni uygulamalarınızın başarılı bir geliştirmesi, dağıtımı ve işlemleri aracılığıyla ekibinize kılavuzluk etmenize yardımcı olabilecek bir e-kitap paketi ile çalışmaktadır.
+Microsoft, bilinçli bir karar vermenize ve yeni uygulamalarınızın başarılı bir geliştirme, dağıtım ve işlemlerinde ekibinize rehberlik edebilirsiniz zengin rehberlik, örnek uygulamalar ve bir dizi e-kitap üzerinde çalışmaktadır.
 
-Bu kitap, kapsayıcılara göre yeni modern uygulamalar geliştirme işlemi sırasında her birini ve birçok zorluğu kapsayan bir Microsoft Kılavuzu paketine aittir.
+Bu kitap, kapsayıcılara dayalı yeni modern uygulamalar geliştirme sürecinde karşılaşacağınız birçok gereksinimleri ve zorlukları kapsayan bir Microsoft kılavuz paketine aittir.
 
-Aşağıdaki listede Docker kapsayıcılarıyla ilgili ek Microsoft e-kitapları bulabilirsiniz:
+Docker kapsayıcıları ile ilgili ek Microsoft e-kitaplarını aşağıdaki listede bulabilirsiniz:
 
-- **.Net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için mimari** \
+- **.NET Microservices: Konteynerleştirilmiş .NET Uygulamaları için Mimari** \
   [https://docs.microsoft.com/dotnet/architecture/microservices/](../microservices/index.md)
 
-- **Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin** \
+- **Azure bulutu ve Windows Kapsayıcıları ile mevcut .NET uygulamalarını modernize edin** \
   [https://docs.microsoft.com/dotnet/architecture/modernize-with-azure-containers/](../modernize-with-azure-containers/index.md)
 
 >[!div class="step-by-step"]
 >[Önceki](docker-containers-images-and-registries.md)
->[İleri](docker-application-lifecycle/index.md)
+>[Sonraki](docker-application-lifecycle/index.md)

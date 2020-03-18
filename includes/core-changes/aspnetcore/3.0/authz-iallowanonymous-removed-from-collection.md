@@ -1,34 +1,34 @@
 ---
 ms.openlocfilehash: 0c88d40e34d2d6458bb463a09d716dea42b711fe
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901635"
 ---
-### <a name="authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters"></a>Yetkilendirme: ıallowanonymous, AuthorizationFilterContext. Filters öğesinden kaldırıldı
+### <a name="authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters"></a>Yetkilendirme: IAllowAnonymous YetkilendirmeFilterContext.Filters kaldırıldı
 
-ASP.NET Core 3,0 itibariyle, MVC, denetleyiciler ve eylem yöntemlerinde bulunan [[AllowAnonymous]](xref:Microsoft.AspNetCore.Authorization.AllowAnonymousAttribute) öznitelikleri Için [allowanonymousfilters](xref:Microsoft.AspNetCore.Mvc.Authorization.AllowAnonymousFilter) eklemez. Bu değişiklik, <xref:Microsoft.AspNetCore.Authorization.AuthorizeAttribute>türevleri için yerel olarak adreslenir, ancak <xref:Microsoft.AspNetCore.Mvc.Filters.IAsyncAuthorizationFilter> ve <xref:Microsoft.AspNetCore.Mvc.Filters.IAuthorizationFilter> uygulamalarına yönelik bir son değişiklik. Bir [[TypeFilter]](xref:Microsoft.AspNetCore.Mvc.TypeFilterAttribute) özniteliğinde Sarmalanan uygulamalar, hem yapılandırma hem de bağımlılık ekleme gerektiğinde kesin olarak belirlenmiş, öznitelik tabanlı yetkilendirme elde etmenin [popüler](https://stackoverflow.com/a/41348219/608220) ve desteklenen bir yoludur.
+Core 3.0ASP.NET itibariyle MVC, denetleyiciler ve eylem yöntemleri üzerinde keşfedilen [[AllowAnonymous]](xref:Microsoft.AspNetCore.Authorization.AllowAnonymousAttribute) öznitelikleri için [AllowAnonymousFilters](xref:Microsoft.AspNetCore.Mvc.Authorization.AllowAnonymousFilter) eklemez. Bu değişiklik <xref:Microsoft.AspNetCore.Authorization.AuthorizeAttribute>türevleri için yerel olarak ele alınmıştır, ancak <xref:Microsoft.AspNetCore.Mvc.Filters.IAsyncAuthorizationFilter> <xref:Microsoft.AspNetCore.Mvc.Filters.IAuthorizationFilter> bu ve uygulamalar için bir kırılma değişiklik' s. [[TypeFilter]](xref:Microsoft.AspNetCore.Mvc.TypeFilterAttribute) özelliğine sarılmış bu tür uygulamalar, hem yapılandırma hem de bağımlılık enjeksiyonu gerektiğinde güçlü bir şekilde yazılmış, öznitelik tabanlı yetkilendirme elde etmenin [popüler](https://stackoverflow.com/a/41348219/608220) ve desteklenen bir yoludur.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-<xref:Microsoft.AspNetCore.Authorization.IAllowAnonymous> [Authorizationfiltercontext. Filters](xref:Microsoft.AspNetCore.Mvc.Filters.FilterContext.Filters%2A) koleksiyonunda göründü. Arabirim varlığına yönelik test, tek tek denetleyici yöntemlerinde filtreyi geçersiz kılmak veya devre dışı bırakmak için geçerli bir yaklaşımdır.
+<xref:Microsoft.AspNetCore.Authorization.IAllowAnonymous>[AuthorizationFilterContext.Filters](xref:Microsoft.AspNetCore.Mvc.Filters.FilterContext.Filters%2A) koleksiyonunda yer aldı. Arabirimin varlığını sınamak, filtreyi tek tek denetleyici yöntemlerini geçersiz kılmak veya devre dışı etmek için geçerli bir yaklaşımdı.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-`IAllowAnonymous` artık `AuthorizationFilterContext.Filters` koleksiyonunda görünmüyor. Eski davranışa bağlı `IAsyncAuthorizationFilter` uygulamalar genellikle aralıklı HTTP 401 Yetkisiz veya HTTP 403 Yasak yanıtlara neden olur.
+`IAllowAnonymous``AuthorizationFilterContext.Filters` koleksiyonda artık görünmez. `IAsyncAuthorizationFilter`eski davranışa bağlı olan uygulamalar genellikle aralıklı HTTP 401 Yetkisiz veya HTTP 403 Yasak yanıtlarına neden olur.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-ASP.NET Core 3,0 ' de yeni bir uç nokta yönlendirme stratejisi sunuldu.
+Core 3.0'ASP.NET yeni bir uç nokta yönlendirme stratejisi tanıtıldı.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-`IAllowAnonymous`için uç nokta meta verilerinde arama yapın. Örneğin:
+Uç nokta meta verilerini `IAllowAnonymous`arama . Örnek:
 
 ```csharp
 var endpoint = context.HttpContext.GetEndpoint();
@@ -37,15 +37,15 @@ if (endpoint?.Metadata?.GetMetadata<IAllowAnonymous>() != null)
 }
 ```
 
-Bu [HasAllowAnonymous yönteminde](https://github.com/dotnet/aspnetcore/blob/bd65275148abc9b07a3b59797a88d485341152bf/src/Mvc/Mvc.Core/src/Authorization/AuthorizeFilter.cs#L236)bu tekniğin bir örneği görülür.
+Bu tekniğin bir örneği [bu HasAllowAnonymous yönteminde](https://github.com/dotnet/aspnetcore/blob/bd65275148abc9b07a3b59797a88d485341152bf/src/Mvc/Mvc.Core/src/Authorization/AuthorizeFilter.cs#L236)görülmektedir.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Core
+ASP.NET Çekirdeği
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-Yok.
+None
 
 <!--
 

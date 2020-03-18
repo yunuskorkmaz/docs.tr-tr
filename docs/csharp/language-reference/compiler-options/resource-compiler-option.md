@@ -1,5 +1,5 @@
 ---
-title: -Resource (C# derleyici seçenekleri)
+title: -kaynak (C# Derleyici Seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /resource
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
 ms.openlocfilehash: e14bf59f5922a918b627af22c052c8efd9081e84
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602531"
 ---
-# <a name="-resource-c-compiler-options"></a>-Resource (C# derleyici seçenekleri)
-Belirtilen kaynağı çıkış dosyasına katıştırır.  
+# <a name="-resource-c-compiler-options"></a>-kaynak (C# Derleyici Seçenekleri)
+Belirtilen kaynağı çıktı dosyasına gömer.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,41 +27,41 @@ Belirtilen kaynağı çıkış dosyasına katıştırır.
 -resource:filename[,identifier[,accessibility-modifier]]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  `filename`  
- Çıkış dosyasına eklemek istediğiniz .NET Framework kaynak dosyası.  
+ Çıktı dosyasına katıştırmak istediğiniz .NET Framework kaynak dosyası.  
   
- `identifier`seçim  
- Kaynağın mantıksal adı; kaynağı yüklemek için kullanılan ad. Varsayılan değer, dosya adının adıdır.  
+ `identifier` (isteğe bağlı)  
+ Kaynak için mantıksal ad; kaynağı yüklemek için kullanılan ad. Varsayılan, dosya adının adıdır.  
   
- `accessibility-modifier`seçim  
- Kaynağın erişilebilirliği: public veya Private. Varsayılan değer geneldir.  
+ `accessibility-modifier` (isteğe bağlı)  
+ Kaynağın erişilebilirliği: ortak veya özel. Varsayılan değer herkese açıktır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kaynağı bir derlemeye bağlamak ve kaynak dosyasını çıkış dosyasına eklemek için [-linkresource](./linkresource-compiler-option.md) kullanın.  
+ Kaynağı derlemeye bağlamak ve kaynak dosyasını çıktı dosyasına eklememek için [-linkresource'ı](./linkresource-compiler-option.md) kullanın.  
   
- Varsayılan olarak, kaynaklar C# derleyici kullanılarak oluşturulduğunda derlemede ortaktır. Kaynakları özel hale getirmek için erişilebilirlik değiştiricisi `private` olarak belirtin. `public` Veya`private` dışında başka bir erişilebilirliği olamaz.  
+ Varsayılan olarak, c# derleyicisi kullanılarak oluşturulan kaynaklar derlemede geneldir. Kaynakları özel yapmak için `private` erişilebilirlik değiştirici olarak belirtin. İzin verilen `public` veya `private` izin verilen başka bir erişilebilirlik yoktur.  
   
- , Örneğin [Resgen. exe](../../../framework/tools/resgen-exe-resource-file-generator.md) veya geliştirme ortamında oluşturulmuş bir .NET Framework kaynak dosyası ise, <xref:System.Resources> ad alanındaki üyelerle erişilebilir. `filename` Daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Diğer tüm kaynaklar için, çalışma zamanında `GetManifestResource` kaynağa erişmek üzere <xref:System.Reflection.Assembly> sınıfındaki yöntemleri kullanın.  
+ Örneğin `filename` [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) veya geliştirme ortamında oluşturulan bir .NET Framework kaynak dosyasıysa, <xref:System.Resources> ad alanındaki üyelerle erişilebilir. Daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Diğer tüm kaynaklar için, çalışma <xref:System.Reflection.Assembly> zamanında kaynağa erişmek için sınıftaki `GetManifestResource` yöntemleri kullanın.  
   
- **-res** , **-Resource**' in kısa biçimidir.  
+ **-res** **-kaynak**kısa şeklidir.  
   
- Çıkış dosyasındaki kaynakların sırası, komut satırında belirtilen sırada belirlenir.  
+ Çıktı dosyasındaki kaynakların sırası komut satırında belirtilen sırada belirlenir.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
 1. Projenize bir kaynak dosyası ekleyin.  
   
-2. **Çözüm Gezgini**eklemek istediğiniz dosyayı seçin.  
+2. **Çözüm Gezgini'ne**katıştırmak istediğiniz dosyayı seçin.  
   
-3. **Özellikler** penceresinde dosya Için **derleme eylemi** ' ni seçin.  
+3. **Özellikler** penceresindedosya için **Eylem Oluştur'u** seçin.  
   
-4. **Derleme eylemini** **gömülü kaynağa**ayarlayın.  
+4. **Yapı Eylemini** **Katıştırılmış Kaynağa**ayarlayın.  
   
- Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.FileProperties2.BuildAction%2A>.  
+ Bu derleyici seçeneğini programlı olarak nasıl ayarlayıştırılabilen ler hakkında bilgi için bkz. <xref:VSLangProj80.FileProperties2.BuildAction%2A>  
   
 ## <a name="example"></a>Örnek  
- Derleme `in.cs` ve kaynak dosyası `rf.resource`iliştirme:  
+ Kaynak `in.cs` dosyayı `rf.resource`derleme ve ekleme:  
   
 ```console  
 csc -resource:rf.resource in.cs  

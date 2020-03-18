@@ -1,39 +1,39 @@
 ---
-title: Işlevsel dönüşümün (C#) uygulanabilirliği
+title: Fonksiyonel Dönüşümün Uygulanabilirliği (C#)
 ms.date: 07/20/2015
 ms.assetid: c78107bd-b006-4574-a3d4-bbf808388ff3
 ms.openlocfilehash: bc2678354bb45f1ed0a4076f278f52d0ee7d350e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69594877"
 ---
-# <a name="applicability-of-functional-transformation-c"></a>Işlevsel dönüşümün (C#) uygulanabilirliği
-Saf işlevsel dönüşümler çok çeşitli durumlarda geçerlidir.  
+# <a name="applicability-of-functional-transformation-c"></a>Fonksiyonel Dönüşümün Uygulanabilirliği (C#)
+Saf fonksiyonel dönüşümler çok çeşitli durumlarda uygulanabilir.  
   
- İşlev dönüştürme yaklaşımı, yapılandırılmış verileri sorgulamak ve işlemek için idealdir; Bu nedenle, LINQ teknolojileriyle iyi uyum vardır. Ancak işlevsel dönüşümde LINQ ile kullanmaktan çok daha geniş bir uygulanabilirlik vardır. Ana odağın bir formdan diğerine veri dönüştürmesiyle ilgili herhangi bir işlem, büyük olasılıkla işlevsel dönüşüm için aday olarak kabul edilmelidir.  
+ İşlevsel dönüşüm yaklaşımı, yapılandırılmış verileri sorgulamak ve işlemek için idealdir; bu nedenle LINQ teknolojilerine çok uygundur. Ancak, fonksiyonel dönüşüm LINQ ile kullanımdan çok daha geniş bir uygulanabilirliğe sahiptir. Ana odak bir formdan diğerine veri dönüştürme üzerinde olduğu herhangi bir süreç muhtemelen işlevsel dönüşüm için bir aday olarak kabul edilmelidir.  
   
- Bu yaklaşım, ilk bakışta aday olarak görünmeyebilir çok sayıda sorun için geçerlidir. LINQ ile birlikte veya LINQ 'tan ayrı olarak kullanıldığında, işlevsel dönüşümde aşağıdaki alanlarda göz önünde bulundurulmalıdır:  
+ Bu yaklaşım, ilk bakışta aday olarak görünmeyen birçok sorun için geçerlidir. LINQ ile birlikte veya LINQ ile ayrı olarak kullanıldığında, fonksiyonel dönüşüm aşağıdaki alanlar için düşünülmelidir:  
   
-- XML tabanlı belgeler. Her XML diyalekti için iyi biçimlendirilmiş veriler, işlevsel dönüşümde kolayca değiştirilebilir. Daha fazla bilgi için bkz. [XML (C#) işlevsel dönüşümü](./functional-transformation-of-xml.md).  
+- XML tabanlı belgeler. Herhangi bir XML lehçesinin iyi biçimlendirilmiş verileri işlevsel dönüşüm yoluyla kolayca işlenebilir. Daha fazla bilgi için Bkz. [XML (C#) Fonksiyonel Dönüşümü.](./functional-transformation-of-xml.md)  
   
-- Diğer yapılandırılmış dosya biçimleri. Windows. ini dosyalarından düz metin belgelerine, çoğu dosya çözümleme ve dönüştürme için kendisini hedefleyen bir yapıya sahiptir.  
+- Diğer yapılandırılmış dosya biçimleri. Windows.ini dosyalarından düz metin belgelerine kadar, çoğu dosyanın çözümleme ve dönüştürmeye katkıda bulunan bir yapısı vardır.  
   
-- Veri akışı protokolleri. İletişim protokollerinden verileri içine ve kod çözmede verileri kodlama, genellikle basit bir işlevsel dönüşümle temsil edilebilir.  
+- Veri akışı protokolleri. Verilerin iletişim protokollerine kodlanması ve verilerin çözülmesi genellikle basit bir işlevsel dönüşümle temsil edilebilir.  
   
-- RDBMS ve OODBMS verileri. XML gibi ilişkisel ve nesne odaklı veritabanları, yaygın olarak kullanılan yapılandırılmış veri kaynaklarıdır.  
+- RDBMS ve OODBMS verileri. İlişkisel ve nesne yönelimli veritabanları, xml gibi, yaygın olarak kullanılan yapılandırılmış veri kaynaklarıdır.  
   
-- Matematik ve bilimmatik, istatistiksel ve bilimi çözümleri. Bu alanlar, kullanıcının önemsiz olmayan sorunları görselleştirirken, tahmin etmeye veya çözmeye yardımcı olmak için büyük veri kümelerini işlemeyi eğilimlidir.  
+- Matematik, istatistik ve bilim çözümleri. Bu alanlar, kullanıcının önemsiz olmayan sorunları görselleştirmesine, tahmin etmesine veya gerçekten çözmesine yardımcı olmak için büyük veri kümelerini işleme eğilimindedir.  
   
- [Saf işlevlerde yeniden düzenleme (C#)](./refactoring-into-pure-functions.md)bölümünde açıklandığı gibi, saf işlevleri kullanmak fonksiyonel programlamaya bir örnektir. Kendi anında avantajlarına ek olarak, saf işlevleri kullanmak işlevsel bir dönüşüm perspektifinden ilgili sorunları düşünmeye yönelik değerli deneyim sağlar. Bu yaklaşım ayrıca program ve sınıf tasarımına önemli bir etkiye sahip olabilir. Bu, özellikle bir sorun yukarıda açıklanan bir veri dönüştürme çözümüne ait olduğunda geçerlidir.  
+ [Refactoring Into Pure Functions (C#)](./refactoring-into-pure-functions.md)olarak açıklandığı gibi, saf işlevleri kullanarak işlevsel programlama bir örnektir. Onların hemen yararları ek olarak, saf işlevleri kullanarak fonksiyonel bir dönüşüm perspektifinden sorunları düşünme değerli deneyim sağlar. Bu yaklaşım aynı zamanda program ve sınıf tasarımı üzerinde büyük etkisi olabilir. Bu, özellikle bir sorun, yukarıda açıklandığı gibi bir veri dönüştürme çözümüne katkıda olduğunda doğrudur.  
   
- Bu öğreticinin kapsamına aşmakla birlikte, işlevsel dönüştürme perspektifinden etkilenen tasarımlar, nesnelerin aktörlere göre daha fazla işlem üzerinde ortalayarak, sonuçta elde edilen çözüm büyük ölçekli seriler olarak uygulanabilmeye eğilimlidir tek tek nesne durumu değişiklikleri yerine dönüşümler.  
+ Bu öğreticinin kapsamı dışında olmalarına rağmen, işlevsel dönüşüm perspektifinden etkilenen tasarımlar, aktörler den çok süreçlere odaklanma eğilimindedir ve ortaya çıkan çözüm büyük ölçekli bir dizi olarak uygulanma eğilimindedir. dönüşümleri yerine tek tek nesne durumu değişiklikleri.  
   
- Bu durumda, hem C# zorunlu hem de işlevsel yaklaşımların destekleyeceğini unutmayın. bu nedenle, uygulamanız için en iyi tasarımın her ikisinin de öğeleri bulunabilir.  
+ Yine, C#'ın hem zorunlu hem de işlevsel yaklaşımları desteklediğini unutmayın, böylece uygulamanız için en iyi tasarım her iki sinin de öğelerini içerebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Saf Işlevsel Dönüştürmelere giriş (C#)](./introduction-to-pure-functional-transformations.md)
-- [XML (C#) işlevsel dönüştürmesi](./functional-transformation-of-xml.md)
-- [Saf IŞLEVLERE yeniden düzenleme (C#)](./refactoring-into-pure-functions.md)
+- [Saf İşlevsel Dönüşümlere Giriş (C#)](./introduction-to-pure-functional-transformations.md)
+- [XML'nin Fonksiyonel Dönüşümü (C#)](./functional-transformation-of-xml.md)
+- [Saf Fonksiyonlara Yeniden Düzenleme (C#)](./refactoring-into-pure-functions.md)

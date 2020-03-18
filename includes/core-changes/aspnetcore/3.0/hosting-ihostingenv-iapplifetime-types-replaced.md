@@ -1,36 +1,36 @@
 ---
 ms.openlocfilehash: be1fad236dd3eed047b010e93285aec8bc607b61
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394335"
 ---
-### <a name="hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced"></a>Barındırma: ıhostingenvironment ve ıapplicationlifetime türleri artık kullanılmıyor ve değiştirilmiş olarak işaretlendi
+### <a name="hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced"></a>Hosting: IHostingEnvironment ve IApplicationLifetime türleri eski işaretlenmiş ve değiştirildi
 
-Var olan `IHostingEnvironment` ve `IApplicationLifetime` türlerini değiştirmek için yeni türler sunulmuştur.
+Varolan ve `IHostingEnvironment` `IApplicationLifetime` türleri değiştirmek için yeni türler tanıtıldı.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-@No__t-2 ve `Microsoft.AspNetCore.Hosting` ' ten iki farklı `IHostingEnvironment` ve `IApplicationLifetime` türü vardı.
+İki farklı `IHostingEnvironment` ve `IApplicationLifetime` türleri `Microsoft.Extensions.Hosting` `Microsoft.AspNetCore.Hosting`vardı ve .
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Eski türler kullanım dışı olarak işaretlendi ve yeni türlerle değiştirildi.
+Eski türler eski olarak işaretlenmiş ve yeni türlerle değiştirilmiştir.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-@No__t-0 ASP.NET Core 2,1 ' de tanıtıldığında, `IHostingEnvironment` ve `IApplicationLifetime` gibi bazı türler `Microsoft.AspNetCore.Hosting` ' ten kopyalandı. Bazı ASP.NET Core 3,0 değişiklikleri, uygulamaların hem `Microsoft.Extensions.Hosting` hem de `Microsoft.AspNetCore.Hosting` ad alanlarını içermesini sağlar. Bu yinelenen türlerin herhangi bir kullanımı, her iki ad alanına de başvuruluyorsa "belirsiz başvuru" derleyici hatasına neden olur.
+Core `Microsoft.Extensions.Hosting` 2.1ASP.NET de sunulduğunda, bazı `IHostingEnvironment` `IApplicationLifetime` türleri gibi `Microsoft.AspNetCore.Hosting`ve kopyalandı . Bazı ASP.NET Core 3.0 değişiklikleri uygulamaların `Microsoft.Extensions.Hosting` `Microsoft.AspNetCore.Hosting` hem ad alanlarını hem de ad alanlarını içermesine neden olur. Bu yinelenen türlerin herhangi bir kullanımı, her iki ad alanı başvurulduğunda bir "belirsiz başvuru" derleyici hatasına neden olur.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Eski türlerin tüm kullanımları, Yeni tanıtılan türlerle aşağıda gösterildiği gibi değiştirilmiştir:
+Aşağıdaki gibi yeni tanıtılan türleri ile eski türlerin herhangi bir kullanımları değiştirildi:
 
-**Kullanılmayan türler (uyarı):**
+**Eski türleri (uyarı):**
 
 - <xref:Microsoft.Extensions.Hosting.IHostingEnvironment?displayProperty=nameWithType>
 - <xref:Microsoft.AspNetCore.Hosting.IHostingEnvironment?displayProperty=nameWithType>
@@ -46,11 +46,11 @@ Eski türlerin tüm kullanımları, Yeni tanıtılan türlerle aşağıda göste
 - <xref:Microsoft.Extensions.Hosting.IHostApplicationLifetime?displayProperty=nameWithType>
 - <xref:Microsoft.Extensions.Hosting.Environments?displayProperty=nameWithType>
 
-Yeni `IHostEnvironment` `IsDevelopment` ve `IsProduction` uzantı yöntemleri `Microsoft.Extensions.Hosting` ad alanıdır. Bu ad alanının projenize eklenmesi gerekebilir.
+Yeni `IHostEnvironment` `IsDevelopment` ve `IsProduction` uzantı yöntemleri `Microsoft.Extensions.Hosting` ad alanındadır. Bu ad alanının projenize eklenmesi gerekebilir.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Core
+ASP.NET Çekirdeği
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

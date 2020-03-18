@@ -1,40 +1,40 @@
 ---
-title: Ad-değer çiftlerini koruma (C#)
+title: Ad Değeri Çiftlerini Koruma (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
 ms.openlocfilehash: 9c42a154a4c3ed1463e428faab4c7d33197ef4a5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69591704"
 ---
-# <a name="maintaining-namevalue-pairs-c"></a>Ad/değer çiftlerini koruma (C#)
-Birçok uygulamanın ad/değer çiftleri olarak en iyi şekilde tutulan bilgileri tutması gerekir. Bu bilgiler yapılandırma bilgileri veya genel ayarlar olabilir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]bir ad/değer çiftleri kümesini saklamayı kolaylaştıran bazı yöntemler içerir. Bilgileri öznitelik olarak veya bir alt öğe kümesi olarak tutabilirsiniz.  
+# <a name="maintaining-namevalue-pairs-c"></a>Ad/Değer Çiftlerinin Bakımı (C#)
+Birçok uygulama, ad/değer çiftleri olarak en iyi tutulan bilgileri korumak zorunda. Bu bilgiler yapılandırma bilgileri veya genel ayarlar olabilir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]ad/değer çiftleri kümesini tutmayı kolaylaştıran bazı yöntemler içerir. Bilgileri öznitelik olarak veya alt öğeler kümesi olarak saklayabilirsiniz.  
   
- Bilgileri öznitelik veya alt öğe olarak tutma arasındaki tek fark, özniteliklerin bir öğe için yalnızca belirli bir ada sahip tek bir öznitelik olabilecek kısıtlamaya sahip olduğu kısıtlamadır. Bu sınırlama alt öğeler için geçerlidir.  
+ Bilgileri öznitelik olarak veya alt öğe olarak tutmak arasındaki fark, özniteliklerin bir öğe için belirli bir ada sahip yalnızca bir öznitelik olabileceği kısıtlaması olmasıdır. Bu sınırlama alt öğeler için geçerli değildir.  
   
 ## <a name="setattributevalue-and-setelementvalue"></a>SetAttributeValue ve SetElementValue  
- Ad/değer çiftlerini tutmaya yardımcı olan iki yöntem ve ' <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> <xref:System.Xml.Linq.XElement.SetElementValue%2A>dir. Bu iki yöntem benzer anlamlara sahiptir.  
+ Ad/değer çiftleri tutmayı kolaylaştıran <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> iki <xref:System.Xml.Linq.XElement.SetElementValue%2A>yöntem ve . Bu iki yöntem benzer semantik var.  
   
- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>bir öğenin özniteliklerini ekleyebilir, değiştirebilir veya kaldırabilir.  
+ <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>öğenin özniteliklerini ekleyebilir, değiştirebilir veya kaldırabilir.  
   
-- Varolmayan bir özniteliğin <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> adıyla çağırırsanız, yöntemi yeni bir öznitelik oluşturur ve belirtilen öğeye ekler.  
+- Var olmayan <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> bir öznitelik adı ile çağırırsanız, yöntem yeni bir öznitelik oluşturur ve belirtilen öğeye ekler.  
   
-- Var olan bir <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> özniteliğin adı ile ve belirtilen içeriklerde bir çağrı yaparsanız, özniteliğin içeriği belirtilen içerikle değiştirilmiştir.  
+- Varolan <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> bir özniteliğin adı ve bazı belirtilen içerikle arama yaptığınızda, özniteliğin içeriği belirtilen içerikle değiştirilir.  
   
-- Varolan bir özniteliğin <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> adıyla çağrı yaparsanız ve içerik için null belirtirseniz, öznitelik üst öğesinden kaldırılır.  
+- Varolan <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> bir özniteliğin adı ile çağırır ve içerik için null belirtirseniz, öznitelik üst öğesinden kaldırılır.  
   
- <xref:System.Xml.Linq.XElement.SetElementValue%2A>bir öğenin alt öğelerini ekleyebilir, değiştirebilir veya kaldırabilir.  
+ <xref:System.Xml.Linq.XElement.SetElementValue%2A>öğenin alt öğelerini ekleyebilir, değiştirebilir veya kaldırabilir.  
   
-- Var olmayan bir <xref:System.Xml.Linq.XElement.SetElementValue%2A> alt öğe adı ile çağırırsanız, yöntemi yeni bir öğesi oluşturur ve belirtilen öğeye ekler.  
+- Var olmayan <xref:System.Xml.Linq.XElement.SetElementValue%2A> bir alt öğenin adı ile çağırırsanız, yöntem yeni bir öğe oluşturur ve belirtilen öğeye ekler.  
   
-- Var olan bir <xref:System.Xml.Linq.XElement.SetElementValue%2A> öğenin adı ile ve belirtilen içeriklerle çağırırsanız, öğenin içeriği belirtilen içerikle değiştirilmiştir.  
+- Varolan <xref:System.Xml.Linq.XElement.SetElementValue%2A> bir öğenin adı ve bazı belirtilen içerikle arama yaptığınızda, öğenin içeriği belirtilen içerikle değiştirilir.  
   
-- Varsa, varolan <xref:System.Xml.Linq.XElement.SetElementValue%2A> bir öğenin adıyla çağrı yaparsanız ve içerik için null belirtirseniz, öğe üst öğesinden kaldırılır.  
+- Varolan <xref:System.Xml.Linq.XElement.SetElementValue%2A> bir öğenin adı ile çağırır ve içerik için null belirtirseniz, öğe üst öğesinden kaldırılır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, öznitelikleri olmayan bir öğesi oluşturur. Daha sonra bir ad <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> /değer çiftleri listesi oluşturmak ve korumak için yöntemini kullanır.  
+ Aşağıdaki örnek, öznitelik olmayan bir öğe oluşturur. Daha sonra <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> ad/değer çiftleri listesi oluşturmak ve korumak için yöntemi kullanır.  
   
 ```csharp  
 // Create an element with no content.  
@@ -57,7 +57,7 @@ root.SetAttributeValue("DefaultColor", null);
 Console.WriteLine(root);  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root Top="22" Left="20" Bottom="122" Right="300" DefaultColor="Color.Red" />  
@@ -66,7 +66,7 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, alt öğeleri olmayan bir öğe oluşturur. Daha sonra bir ad <xref:System.Xml.Linq.XElement.SetElementValue%2A> /değer çiftleri listesi oluşturmak ve korumak için yöntemini kullanır.  
+ Aşağıdaki örnek, alt öğe olmayan bir öğe oluşturur. Daha sonra <xref:System.Xml.Linq.XElement.SetElementValue%2A> ad/değer çiftleri listesi oluşturmak ve korumak için yöntemi kullanır.  
   
 ```csharp  
 // Create an element with no content.  
@@ -91,7 +91,7 @@ root.SetElementValue("DefaultColor", null);
 Console.WriteLine(root);  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root>  
@@ -122,4 +122,4 @@ Console.WriteLine(root);
 
 - <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>
 - <xref:System.Xml.Linq.XElement.SetElementValue%2A>
-- [XML ağaçlarını değiştirme (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)
+- [XML Ağaçlarının Değiştirilmesi (LINQ - XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)

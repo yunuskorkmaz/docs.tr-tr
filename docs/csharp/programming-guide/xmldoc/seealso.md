@@ -1,5 +1,5 @@
 ---
-title: <seealso> - C# Programlama Kılavuzu
+title: <seealso> - C# programlama kılavuzu
 ms.date: 07/20/2015
 f1_keywords:
 - cref
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
 ms.openlocfilehash: e24d5910ab21f01aebb5a32ce7646cf56886a81a
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093467"
 ---
-# <a name="seealso-c-programming-guide"></a>\<SeeAlso > (C# Programlama Kılavuzu)
+# <a name="seealso-c-programming-guide"></a>\<seealso> (C# programlama kılavuzu)
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -29,23 +29,23 @@ ms.locfileid: "77093467"
 
 ## <a name="parameters"></a>Parametreler
 
-- cref = "`member`"
+- cref = `member`" "
 
-  Geçerli derleme ortamından çağrılabilen bir üyeye veya alana başvuru. Derleyici verilen kod öğesinin var olduğunu denetler ve çıkış XML dosyasında öğe adına `member` geçirir.`member` Çift tırnak işaretleri ("") içinde yer almalıdır.
+  Geçerli derleme ortamından çağrılabilecek bir üye veya alana başvuru. Derleyici, verilen kod öğesinin var `member` olduğunu denetler ve XML çıkışındaki öğe adına geçer.`member` çift tırnak işaretleri içinde görünmelidir (" ").
 
-  Genel bir türe cref başvurusu oluşturma hakkında daha fazla bilgi için bkz. [cref özniteliği](./cref-attribute.md).
+  Genel bir türe nasıl bir cref başvurusu oluşturabilirsiniz hakkında bilgi için [bkz.](./cref-attribute.md)
 
 ## <a name="remarks"></a>Açıklamalar
 
-\<seede > etiketi, Ayrıca bkz. bölümünde görünmesini isteyebileceğiniz metni belirtmenize olanak tanır. Metin içinden bir bağlantı belirtmek için [\<> bakın](./see.md) .
+Seealso> etiketi, \<Bkz. Ayrıca bölümünde görünmesini isteyebileceğiniz metni belirtmenize olanak tanır. Metin içinden bir bağlantı belirtmek için [ \<bkz.>](./see.md) kullanın.
 
-Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
+Belge yorumlarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derle.
 
 ## <a name="example"></a>Örnek
 
-Bkz. \<SeeAlso > kullanımı örneği için [\<özet >](./summary.md) .
+Seealso> kullanma \<örneği için özet [ \<>](./summary.md) bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Programlama Kılavuzu](../index.md)
-- [Belge açıklamaları için önerilen Etiketler](./recommended-tags-for-documentation-comments.md)
+- [C# programlama kılavuzu](../index.md)
+- [Belge açıklamaları için önerilen etiketler](./recommended-tags-for-documentation-comments.md)

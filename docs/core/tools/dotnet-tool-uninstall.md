@@ -1,52 +1,55 @@
 ---
-title: DotNet Aracı kaldırma komutu
-description: DotNet Aracı kaldırma komutu, belirtilen .NET Core aracını makinenizden kaldırır.
+title: dotnet aracı kaldırma komutu
+description: Dotnet aracı kaldırma komutu, belirtilen .NET Core aracını makinenizden kaldırz.
 ms.date: 02/14/2020
-ms.openlocfilehash: 7a15c169c73cf5a743e0fa6f47645d6bccedbde3
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 82799404c40baa3a39f4e2a5fdb414fb745ef448
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157051"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847839"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 2.1 SDK ve sonraki sürümler
 
 ## <a name="name"></a>Adı
 
-`dotnet tool uninstall`-belirtilen [.NET Core aracını](global-tools.md) makinenizden kaldırır.
+`dotnet tool uninstall`- Belirtilen [.NET Core aracını](global-tools.md) makinenizden kaldırın.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Özet
 
 ```dotnetcli
 dotnet tool uninstall <PACKAGE_NAME> <-g|--global>
+
 dotnet tool uninstall <PACKAGE_NAME> <--tool-path>
+
 dotnet tool uninstall <PACKAGE_NAME>
+
 dotnet tool uninstall <-h|--help>
 ```
 
 ## <a name="description"></a>Açıklama
 
-`dotnet tool uninstall` komutu, makinenizden .NET Core araçlarını kaldırmanız için bir yol sağlar. Komutunu kullanmak için aşağıdaki seçeneklerden birini belirtin:
+Komut, `dotnet tool uninstall` makinenizden .NET Core araçlarını kaldırmanız için bir yol sağlar. Komutu kullanmak için aşağıdaki seçeneklerden birini belirtirsiniz:
 
-* Varsayılan konumda yüklü olan küresel bir aracı kaldırmak için `--global` seçeneğini kullanın.
-* Özel bir konuma yüklenmiş olan küresel bir aracı kaldırmak için `--tool-path` seçeneğini kullanın.
-* Yerel bir aracı kaldırmak için `--global` ve `--tool-path` seçeneklerini atlayın.
+* Varsayılan konumda yüklü olan genel bir aracı kaldırmak için `--global` seçeneği kullanın.
+* Özel bir konumda yüklenen genel bir aracı kaldırmak için `--tool-path` seçeneği kullanın.
+* Yerel bir aracı kaldırmak için, `--global` seçenekleri `--tool-path` ve seçenekleri atleyin.
 
-**Yerel araçlar .NET Core SDK 3,0 ' den başlayarak kullanılabilir.**
+**Yerel araçlar .NET Core SDK 3.0 ile başlayarak kullanılabilir.**
 
 ## <a name="arguments"></a>Bağımsız Değişkenler
 
 - **`PACKAGE_NAME`**
 
-  Kaldırılacak .NET Core aracını içeren NuGet paketinin adı/KIMLIĞI. [DotNet araç listesi](dotnet-tool-list.md) komutunu kullanarak paket adını bulabilirsiniz.
+  Kaldırılmak için .NET Core aracını içeren NuGet paketinin adı/kimliği. Paket adını [dotnet araç listesi](dotnet-tool-list.md) komutunu kullanarak bulabilirsiniz.
 
 ## <a name="options"></a>Seçenekler
 
 - **`-g|--global`**
 
-  Kaldırılacak aracın Kullanıcı genelindeki bir yüklemeden olduğunu belirtir. `--tool-path` seçeneği ile birleştirilemez. `--global` ve `--tool-path` her ikisi de kullanılmazsa, kaldırılacak aracın yerel bir araç olduğunu belirtir.
+  Kaldırılacak aracın kullanıcı çapındaki bir yüklemeden olduğunu belirtir. `--tool-path` Seçenekle birleştirilemeyiz. Her ikisini `--global` de `--tool-path` atlayan ve kaldırılacak aracın yerel bir araç olduğunu belirtir.
 
 - **`-h|--help`**
 
@@ -54,26 +57,28 @@ dotnet tool uninstall <-h|--help>
 
 - **`--tool-path <PATH>`**
 
-  Aracının kaldırılacağı konumu belirtir. YOL mutlak veya göreli olabilir. `--global` seçeneği ile birleştirilemez. `--global` ve `--tool-path` her ikisi de kullanılmazsa, kaldırılacak aracın yerel bir araç olduğunu belirtir.
+  Aracın kaldırılabildiği yeri belirtir. PATH mutlak veya göreceli olabilir. `--global` Seçenekle birleştirilemeyiz. Her ikisini `--global` de `--tool-path` atlayan ve kaldırılacak aracın yerel bir araç olduğunu belirtir.
 
 ## <a name="examples"></a>Örnekler
 
 - **`dotnet tool uninstall -g dotnetsay`**
 
-  [Dotnetdeyin](https://www.nuget.org/packages/dotnetsay/) küresel aracını kaldırır.
+  [Dotnetsay](https://www.nuget.org/packages/dotnetsay/) global aracını yükler.
 
 - **`dotnet tool uninstall dotnetsay --tool-path c:\global-tools`**
 
-  [Dotnetsöyleme](https://www.nuget.org/packages/dotnetsay/) genel aracını belirli bir Windows dizininden kaldırır.
+  Belirli bir Windows dizininden [noktanetsay](https://www.nuget.org/packages/dotnetsay/) global aracını kaldır.
 
 - **`dotnet tool uninstall dotnetsay --tool-path ~/bin`**
 
-  Belirli bir Linux/macOS dizininden [dotnetsöyleyin](https://www.nuget.org/packages/dotnetsay/) genel aracını kaldırır.
+  Belirli bir Linux/macOS dizininden [dotnetsay](https://www.nuget.org/packages/dotnetsay/) global aracını kaldırır.
 
 - **`dotnet tool uninstall dotnetsay`**
 
-  Geçerli dizinden [dotnetdeyin](https://www.nuget.org/packages/dotnetsay/) yerel aracını kaldırır.
+  Geçerli dizinden [dotnetsay](https://www.nuget.org/packages/dotnetsay/) yerel aracını kaldır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core araçları](global-tools.md)
+- [.NET Çekirdek araçları](global-tools.md)
+- [Öğretici: .NET Core CLI'yi kullanarak bir .NET Core global aracı yükleyin ve kullanın](global-tools-how-to-use.md)
+- [Öğretici: .NET Core CLI'yi kullanarak bir .NET Core yerel aracı nı yükleyin ve kullanın](local-tools-how-to-use.md)

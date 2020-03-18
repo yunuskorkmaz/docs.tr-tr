@@ -1,5 +1,5 @@
 ---
-title: '#pragma sağlama toplamı C# -başvuru'
+title: '#pragma checksum - C# Referans'
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma checksum'
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
 ms.openlocfilehash: 1bbb404e1183daa5e68e512e7439b6ae52abd605
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712487"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma sağlama toplamı (C# Başvurusu)
-ASP.NET sayfalarında hata ayıklamaya yardımcı olmak için kaynak dosyaları için sağlama toplamı üretir.  
+Hata ayıklama ASP.NET sayfalarına yardımcı olmak için kaynak dosyaları için denetimler oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -24,22 +24,22 @@ ASP.NET sayfalarında hata ayıklamaya yardımcı olmak için kaynak dosyaları 
   
 ## <a name="parameters"></a>Parametreler  
  `"filename"`  
- Değişiklik veya güncelleştirme için izlemeyi gerektiren dosyanın adı.  
+ Değişiklikler veya güncelleştirmeler için izleme gerektiren dosyanın adı.  
   
  `"{guid}"`  
- Karma algoritma için genel benzersiz tanımlayıcı (GUID).  
+ Karma algoritmaiçin Genel Olarak Benzersiz Tanımlayıcı (GUID).  
   
  `"checksum_bytes"`  
- Sağlama toplamı baytlarını temsil eden onaltılık basamakların dizesi. Çift sayıda onaltılık basamak olmalıdır. Tek sayıda basamak derleme zamanı uyarısına neden olur ve yönerge yok sayılır.  
+ Çeklerin baytlarını temsil eden hexadecimal basamaklar dizesi. Hexadecimal basamakların çift sayısı olmalı. Tek sayıda basamak, derleme zamanı uyarısı ile sonuçlanır ve yönerge yoksayılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Visual Studio hata ayıklayıcı, her zaman doğru kaynağı bulmasını sağlamak için bir sağlama toplamı kullanır. Derleyici, kaynak dosya için sağlama toplamını hesaplar ve sonra çıktıyı program veritabanı (PDB) dosyasına yayar. Hata ayıklayıcı daha sonra kaynak dosya için hesapladığı sağlama toplamıyla karşılaştırmak için PDB 'yi kullanır.  
+ Visual Studio hata ayıklama her zaman doğru kaynağı bulduğundan emin olmak için bir checksum kullanır. Derleyici bir kaynak dosya için denetim umunu hesaplar ve çıktıyı program veritabanı (PDB) dosyasına yalar. Hata ayıklama, kaynak dosyayı hesapladığını denetler karşıkarşılaştırmak için PDB'yi kullanır.  
   
- Hesaplanan sağlama toplamı,. aspx dosyası yerine oluşturulan kaynak dosya için olduğundan, bu çözüm ASP.NET projelerinde çalışmaz. Bu sorunu gidermek için, `#pragma checksum` ASP.NET sayfaları için sağlama toplamı desteği sağlar.  
+ Bu çözüm, ASP.NET projelerde çalışmaz, çünkü hesaplanmış denetimler .aspx dosyası yerine oluşturulan kaynak dosya içindir. Bu sorunu gidermek `#pragma checksum` için, ASP.NET sayfaları için checksum desteği sağlar.  
   
- Görselde C#bir ASP.NET projesi oluşturduğunuzda oluşturulan kaynak dosya, kaynağın oluşturulduğu. aspx dosyası için bir sağlama toplamı içerir. Derleyici daha sonra bu bilgileri PDB dosyasına yazar.  
+ Visual C#'da bir ASP.NET projesi oluşturduğunuzda, oluşturulan kaynak dosyası,.kaynak dosyanın oluşturulduğu .aspx dosyası için bir denetim umumu içerir. Derleyici daha sonra bu bilgileri PDB dosyasına yazar.  
   
- Derleyici dosyada `#pragma checksum` yönergeyle karşılaşırsa, sağlama toplamını hesaplar ve değeri PDB dosyasına yazar.  
+ Derleyici dosyada yönergeyle `#pragma checksum` karşılaşmazsa, denetimleri hesaplar ve değeri PDB dosyasına yazar.  
   
 ## <a name="example"></a>Örnek  
   
@@ -55,6 +55,6 @@ class TestClass
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../index.md)
+- [C# Referans](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Ön İşlemci Yönergeleri](./index.md)
+- [C# Önİşleme İşlemciler Direktifleri](./index.md)

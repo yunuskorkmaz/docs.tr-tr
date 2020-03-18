@@ -8,64 +8,64 @@ helpviewer_keywords:
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
 ms.openlocfilehash: f2135c6c3649ba2fc87e3b49770439688a58269b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73418062"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>İzlenecek yol: C#'de Sorgu Yazma (LINQ)
-Bu izlenecek yol, C# LINQ sorgu ifadeleri yazmak için kullanılan dil özelliklerini gösterir.  
+Bu gözden geçirme, LINQ sorgu ifadeleri yazmak için kullanılan C# dil özelliklerini gösterir.  
   
 ## <a name="create-a-c-project"></a>Bir C# Projesi Oluşturma  
   
 > [!NOTE]
-> Aşağıdaki yönergeler Visual Studio içindir. Farklı bir geliştirme ortamı kullanıyorsanız, System. Core. dll başvurusu ve <xref:System.Linq?displayProperty=nameWithType> ad alanı için bir `using` yönergesine sahip bir konsol projesi oluşturun.  
+> Aşağıdaki talimatlar Visual Studio içindir. Farklı bir geliştirme ortamı kullanıyorsanız, System.Core.dll'ye başvuru içeren `using` bir konsol <xref:System.Linq?displayProperty=nameWithType> projesi ve ad alanı için bir yönerge oluşturun.  
   
-#### <a name="to-create-a-project-in-visual-studio"></a>Visual Studio 'da bir proje oluşturmak için  
+#### <a name="to-create-a-project-in-visual-studio"></a>Visual Studio'da proje oluşturmak için  
   
-1. Visual Studio 'Yu başlatın.  
+1. Visual Studio’yu çalıştırın.  
   
-2. Menü çubuğunda **Dosya**, **Yeni**, **Proje**' yi seçin.  
+2. Menü çubuğunda **Dosya**, **Yeni**, **Proje'yi**seçin.  
   
-     **Yeni proje** iletişim kutusu açılır.  
+     **Yeni Proje** iletişim kutusu açılır.  
   
-3. **Yüklü**' i genişletin, **Şablonlar**' ı genişletin, **C#görsel**' i genişletin ve **konsol uygulaması**' nı  
+3. **Yüklü**genişletin, **Şablonları**genişletin, **Visual C#** seçeneğini genişletin ve ardından **Konsol Uygulamasını**seçin.  
   
-4. **Ad** metin kutusuna, farklı bir ad girin veya varsayılan adı kabul edin ve **Tamam** düğmesini seçin.  
+4. **Ad** metin kutusuna farklı bir ad girin veya varsayılan adı kabul edin ve ardından **Tamam** düğmesini seçin.  
   
-     Yeni proje **Çözüm Gezgini**görüntülenir.  
+     Yeni proje Çözüm **Gezgini'nde**görünür.  
   
-5. Projenizin System. Core. dll dosyasına ve <xref:System.Linq?displayProperty=nameWithType> ad alanı için bir `using` yönergesine başvurduğuna dikkat edin.  
+5. Projenizin System.Core.dll'ye bir başvurusu `using` ve <xref:System.Linq?displayProperty=nameWithType> ad alanı için bir yönergesi olduğuna dikkat edin.  
   
 ## <a name="create-an-in-memory-data-source"></a>Bellek İçi Veri Kaynağı Oluşturma  
- Sorgular için veri kaynağı `Student` nesnelerinin basit bir listesidir. Her `Student` kaydı, sınıf içindeki test puanlarını temsil eden bir ad, soyadı ve bir tamsayılar dizisi içerir. Bu kodu projenize kopyalayın. Aşağıdaki özelliklere göz önünde edin:  
+ Sorgular için veri kaynağı `Student` nesnelerin basit bir listesidir. Her `Student` kaydın bir adı, soyadı ve sınıftaki test puanlarını temsil eden bir tamsayı dizisi vardır. Bu kodu projenize kopyalayın. Aşağıdaki özelliklere dikkat edin:  
   
-- `Student` sınıfı otomatik uygulanan özelliklerden oluşur.  
+- Sınıf `Student` otomatik olarak uygulanan özelliklerden oluşur.  
   
-- Listedeki her öğrenci bir nesne başlatıcısı ile başlatılır.  
+- Listedeki her öğrenci bir nesne baş harfer ile başharfe işlenir.  
   
-- Listenin kendisi bir koleksiyon başlatıcısı ile başlatılır.  
+- Listenin kendisi bir koleksiyon baş harfer ile başharfe getirilir.  
   
- Bu bütün veri yapısı, herhangi bir oluşturucuya veya açık üye erişimine açık çağrılar olmadan başlatılır ve oluşturulur. Bu yeni özellikler hakkında daha fazla bilgi için bkz. [Otomatik uygulanan özellikler](../../classes-and-structs/auto-implemented-properties.md) ve [nesne ve koleksiyon başlatıcıları](../../classes-and-structs/object-and-collection-initializers.md).  
+ Tüm bu veri yapısı, herhangi bir oluşturucu ya da açık üye erişimine açık çağrılar yapılmadan başharflere alınacak ve anında elde edilecektir. Bu yeni özellikler hakkında daha fazla bilgi için Otomatik [Uygulanan Özellikler](../../classes-and-structs/auto-implemented-properties.md) ve Nesne ve Koleksiyon [Başlangıç Layıcıları'na](../../classes-and-structs/object-and-collection-initializers.md)bakın.  
   
 #### <a name="to-add-the-data-source"></a>Veri kaynağını eklemek için  
   
-- `Student` sınıfını ve başlatılan öğrenciler listesini projenizdeki `Program` sınıfına ekleyin.  
+- Projenizdeki `Student` sınıf ve öğrencilerin başlangıç listesini `Program` sınıfa ekleyin.  
   
      [!code-csharp[CsLinqGettingStarted#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#11)]  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>Öğrenciler listesine yeni bir Öğrenci eklemek için  
   
-1. `Students` listesine yeni bir `Student` ekleyin ve tercih ettiğiniz bir ad ve test puanlarını kullanın. Nesne başlatıcısının sözdizimini daha iyi öğrenmek için tüm yeni öğrenci bilgilerini yazmayı deneyin.  
+1. `Students` Listeye yeni `Student` bir yeni ekleyin ve seçtiğiniz bir ad ve test puanları kullanın. Nesne başharfini daha iyi öğrenmek için tüm yeni öğrenci bilgilerini yazmayı deneyin.  
   
 ## <a name="create-the-query"></a>Sorgu Oluşturma  
   
 #### <a name="to-create-a-simple-query"></a>Basit bir sorgu oluşturmak için  
   
-- Uygulamanın `Main` yönteminde, ilk testteki puanı 90 'den büyük olan tüm öğrencilerin bir listesini üretecek basit bir sorgu oluşturun. `Student` nesnesinin tamamı seçili olduğundan, sorgunun türü `IEnumerable<Student>`. Kod aynı zamanda [var](../../../language-reference/keywords/var.md) anahtar sözcüğünü kullanarak örtük yazma da kullanabilir, ancak sonuçları açıkça göstermek için açık yazma kullanılır. (`var`hakkında daha fazla bilgi için bkz. [örtülü olarak yazılan yerel değişkenler](../../classes-and-structs/implicitly-typed-local-variables.md).)  
+- Uygulamanın `Main` yönteminde, yürütüldüğünde ilk testteki puanı 90'dan büyük olan tüm öğrencilerin listesini oluşturacak basit bir sorgu oluşturun. Tüm `Student` nesne seçildiğinden, sorgunun türü `IEnumerable<Student>`. Kod, [var](../../../language-reference/keywords/var.md) anahtar sözcüğü kullanılarak örtük yazıyazmakda da kullanılabilse de, sonuçları açıkça göstermek için açık yazı yazmak kullanılır. (Hakkında `var`daha fazla bilgi için bkz: [Örtülü Olarak Yazılan Yerel Değişkenler](../../classes-and-structs/implicitly-typed-local-variables.md).)  
   
-     Ayrıca, sorgunun Aralık değişkeni `student`, kaynaktaki her bir `Student` başvuru işlevi görür ve her nesne için üye erişimi sağlar.  
+     Ayrıca, sorgunun aralık değişkeni, `student`kaynaktaki her `Student` biri için bir başvuru görevi görehizmet ederek her nesne için üye erişimi sağladığını da unutmayın.  
   
  [!code-csharp[CsLINQGettingStarted#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#12)]  
   
@@ -73,116 +73,116 @@ Bu izlenecek yol, C# LINQ sorgu ifadeleri yazmak için kullanılan dil özellikl
   
 #### <a name="to-execute-the-query"></a>Sorguyu yürütmek için  
   
-1. Şimdi sorgunun yürütülmesine neden olacak `foreach` döngüsünü yazın. Kod hakkında aşağıdakilere göz önünde edin:  
+1. Şimdi sorguyürütmek için neden olacak `foreach` döngü yazın. Kod hakkında aşağıdakileri not edin:  
   
-    - Döndürülen dizideki her öğeye, `foreach` döngüsünde yineleme değişkeni üzerinden erişilir.  
+    - Döndürülen dizideki her elemana `foreach` döngüdeki yineleme değişkeninden erişilir.  
   
-    - Bu değişkenin türü `Student`ve sorgu değişkeninin türü uyumlu, `IEnumerable<Student>`.  
+    - Bu değişkenin türü `Student`ve sorgu değişkeninin türü `IEnumerable<Student>`uyumludur.  
   
-2. Bu kodu ekledikten sonra, sonuçları **konsol** penceresinde görmek için uygulamayı derleyin ve çalıştırın.  
+2. Bu kodu ekledikten sonra, **konsol** penceresinde sonuçları görmek için uygulamayı oluşturun ve çalıştırın.  
   
  [!code-csharp[CsLINQGettingStarted#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#13)]  
   
 #### <a name="to-add-another-filter-condition"></a>Başka bir filtre koşulu eklemek için  
   
-1. Bir sorguyu daha da belirginleştirmek için `where` yan tümcesinde birden çok Boolean koşulu birleştirebilirsiniz. Aşağıdaki kod, sorgunun ilk puanı 90 üzerinde olan ve son puanı 80 ' den az olan bu öğrencileri döndüren bir koşul ekler. `where` yan tümcesi aşağıdaki koda benzemelidir.  
+1. Bir sorguyu `where` daha da hassaslaştırmak için yan tümcedeki birden çok Boolean koşullarını birleştirebilirsiniz. Aşağıdaki kod, ilk puanı 90'ın üzerinde olan ve son puanı 80'den az olan öğrencileri döndüren bir koşul ekler. Yan `where` tümce aşağıdaki koda benzemelidir.  
   
     ```csharp
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
-     Daha fazla bilgi için bkz. [WHERE yan tümcesi](../../../language-reference/keywords/where-clause.md).  
+     Daha fazla bilgi için [bkz.](../../../language-reference/keywords/where-clause.md)  
   
 ## <a name="modify-the-query"></a>Sorguyu Değiştirme  
   
 #### <a name="to-order-the-results"></a>Sonuçları sıralamak için  
   
-1. Belirli bir sıra türünde olmaları durumunda sonuçların taranması daha kolay olacaktır. Döndürülen sırayı, kaynak öğelerde erişilebilir olan herhangi bir alana göre sıraya alabilirsiniz. Örneğin, aşağıdaki `orderby` yan tümcesi sonuçları alfabetik sırada her öğrencinin son adına göre bir ile Z 'ye sıralar. Sorgunuz için aşağıdaki `orderby` yan tümcesini, `where` deyiminize ve `select` deyimden önce ekleyin:  
+1. Bir tür sıradaysa, sonuçları taramayapmak daha kolay olacaktır. Döndürülen sırayı kaynak öğelerdeki erişilebilir herhangi bir alana göre sipariş edebilirsiniz. Örneğin, aşağıdaki `orderby` yan tümce, sonuçları her öğrencinin soyadına göre A'dan Z'ye alfabetik sırayla sıralar. İfadeden `orderby` hemen sonra ve deyimden `select` önce, sorgunuza aşağıdaki yan tümceyi ekleyin: `where`  
   
     ```csharp
     orderby student.Last ascending  
     ```  
   
-2. Şimdi `orderby` yan tümcesini, en yüksek puanın en düşük puanına kadar ilk testteki puana göre ters sırada sipariş verecek şekilde değiştirin.  
+2. `orderby` Şimdi, sonuçları ilk testteki puana göre, en yüksek puandan en düşük puana göre ters sırayla sipariş edebilmesi için tümceyi değiştirin.  
   
     ```csharp
     orderby student.Scores[0] descending  
     ```  
   
-3. Puanları görebilmeniz için `WriteLine` biçim dizesini değiştirin:  
+3. Puanları `WriteLine` görebilmeniz için biçim dizesini değiştirin:  
   
     ```csharp
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
-     Daha fazla bilgi için bkz. [OrderBy tümcesi](../../../language-reference/keywords/orderby-clause.md).  
+     Daha fazla bilgi için [orderby yan tümcesi'ne](../../../language-reference/keywords/orderby-clause.md)bakın.  
   
 #### <a name="to-group-the-results"></a>Sonuçları gruplandırmak için  
   
-1. Gruplandırma, sorgu ifadelerinde güçlü bir özelliktir. Group yan tümcesi içeren bir sorgu bir grup sırası üretir ve her bir grubun kendisi bir `Key` ve bu grubun tüm üyelerinden oluşan bir dizi içerir. Aşağıdaki yeni sorgu, en son adının ilk harfini anahtar olarak kullanarak öğrencileri gruplandırır.  
+1. Gruplandırma sorgu ifadelerinde güçlü bir yetenektir. Grup yan tümcesi olan bir sorgu bir grup `Key` dizisi üretir ve her grubun kendisi, o grubun tüm üyelerinden oluşan bir dizi içerir. Aşağıdaki yeni sorgu, anahtar olarak soyadlarının ilk harfini kullanarak öğrencileri gruplandırmaktır.  
   
      [!code-csharp[CsLINQGettingStarted#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#14)]  
   
-2. Sorgu türünün artık değiştiğini unutmayın. Artık anahtar olarak `char` türüne ve `Student` nesne dizisine sahip bir grup sırası oluşturur. Sorgunun türü değiştiği için aşağıdaki kod `foreach` yürütme döngüsünü de değiştirir:  
+2. Sorgunun türünün artık değiştiğini unutmayın. Şimdi bir anahtar olarak türü `char` ve `Student` nesnelerin bir dizi grup bir dizi üretir. Sorgunun türü değiştiğinden, aşağıdaki kod yürütme `foreach` döngüsünde de değişiklik gösterir:  
   
      [!code-csharp[CsLINQGettingStarted#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#15)]  
   
-3. Uygulamayı çalıştırın ve sonuçları **konsol** penceresinde görüntüleyin.  
+3. Uygulamayı çalıştırın ve sonuçları **Konsol** penceresinde görüntüleyin.  
   
-     Daha fazla bilgi için bkz. [Group yan tümcesi](../../../language-reference/keywords/group-clause.md).  
+     Daha fazla bilgi için [grup yan tümcesi'ne](../../../language-reference/keywords/group-clause.md)bakın.  
   
 #### <a name="to-make-the-variables-implicitly-typed"></a>Değişkenlerin dolaylı olarak yazılmasını sağlamak için  
   
-1. `IGroupings` `IEnumerables` açıkça kodlanması hızla sıkıcı hale gelebilir. `var`kullanarak aynı sorgu ve `foreach` döngüsünü çok daha kolay bir şekilde yazabilirsiniz. `var` anahtar sözcüğü, nesnelerinizin türlerini değiştirmez; yalnızca derleyiciye tür çıkarması talimatını verir. `studentQuery` türünü ve `group` yineleme değişkenini `var` olarak değiştirin ve sorguyu yeniden çalıştırın. Inner `foreach` döngüsünde, yineleme değişkeninin hala `Student`olarak yazıldığı ve sorgunun daha önce olduğu gibi çalıştığından emin olmanız gerektiğini unutmayın. `s` yineleme değişkenini `var` olarak değiştirip sorguyu yeniden çalıştırın. Tam olarak aynı sonuçları elde edersiniz.  
+1. Açıkça kodlama `IEnumerables` `IGroupings` hızla sıkıcı olabilir. Aynı sorguyu yazabilir `foreach` ve döngüyü çok `var`daha rahat bir şekilde kullanarak. Anahtar `var` kelime nesnelerinizin türlerini değiştirmez; sadece derleyici türleri çıkarmak için talimat verir. Tür ve `studentQuery` yineleme değişkenini `group` değiştirin `var` ve sorguyu yeniden çalıştırın. İç `foreach` döngüde yineleme değişkeninin hala "olarak" `Student`olarak yazılması gerektiğini ve sorgunun eskisi gibi çalıştığını unutmayın. Yineleme `s` değişkenini değiştirin `var` ve sorguyu yeniden çalıştırın. Aynı sonuçları aldığınızı görüyorsunuz.  
   
      [!code-csharp[CsLINQGettingStarted#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#16)]  
   
-     [Var](../../../language-reference/keywords/var.md)hakkında daha fazla bilgi için bkz. [örtülü olarak yazılan yerel değişkenler](../../classes-and-structs/implicitly-typed-local-variables.md).  
+     [Var](../../../language-reference/keywords/var.md)hakkında daha fazla bilgi için [bkz.](../../classes-and-structs/implicitly-typed-local-variables.md)  
   
 #### <a name="to-order-the-groups-by-their-key-value"></a>Grupları anahtar değerlerine göre sıralamak için  
   
-1. Önceki sorguyu çalıştırdığınızda grupların alfabetik sırada olmadığına dikkat edin. Bunu değiştirmek için, `group` yan tümcesinden sonra bir `orderby` yan tümcesi sağlamanız gerekir. Ancak, bir `orderby` yan tümcesi kullanmak için, önce `group` yan tümcesi tarafından oluşturulan gruplara başvuru olarak hizmet veren bir tanımlayıcıya ihtiyacınız vardır. Tanımlayıcıyı, aşağıdaki gibi `into` anahtar sözcüğünü kullanarak sağlarsınız:  
+1. Önceki sorguyu çalıştırdığınızda, grupların alfabetik sırada olmadığını fark esiniz. Bunu değiştirmek için, yan `orderby` tümceden `group` sonra bir yan tümce sağlamanız gerekir. Ancak bir `orderby` yan tümce kullanmak için öncelikle yan tümcetarafından oluşturulan gruplara `group` başvuru görevi görebilen bir tanımlayıcıgerekir. Anahtar kelimeyi kullanarak tanımlayıcıyı `into` aşağıdaki gibi sağlarsınız:  
   
      [!code-csharp[csLINQGettingStarted#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#17)]  
   
-     Bu sorguyu çalıştırdığınızda, grupların artık alfabetik sırada sıralanacağını görürsünüz.  
+     Bu sorguyu çalıştırdığınızda, grupların artık alfabetik sıraya göre sıralanmış olduğunu görürsünüz.  
   
 #### <a name="to-introduce-an-identifier-by-using-let"></a>Bir tanımlayıcıyı let kullanarak tanıtmak için  
   
-1. Sorgu ifadesindeki herhangi bir ifade sonucu için bir tanımlayıcı tanıtmak üzere `let` anahtar sözcüğünü kullanabilirsiniz. Bu tanımlayıcı, aşağıdaki örnekte olduğu gibi kolaylık olabilir veya bir ifadenin sonuçlarını birden çok kez hesaplanmak zorunda kalmayacak şekilde depolayarak performansı geliştirebilir.  
+1. `let` Sorgu ifadesinde herhangi bir ifade sonucu için bir tanımlayıcı tanıtmak için anahtar kelimekullanabilirsiniz. Bu tanımlayıcı, aşağıdaki örnekte olduğu gibi kolaylık sağlayabilir veya bir ifadenin sonuçlarını birden çok kez hesaplanması gerekmeyecek şekilde depolayarak performansı artırabilir.  
   
      [!code-csharp[csLINQGettingStarted#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#18)]  
   
-     Daha fazla bilgi için bkz. [Let yan tümcesi](../../../language-reference/keywords/let-clause.md).  
+     Daha fazla bilgi için [bkz.](../../../language-reference/keywords/let-clause.md)  
   
 #### <a name="to-use-method-syntax-in-a-query-expression"></a>Bir sorgu ifadesinde yöntem sözdizimini kullanmak için  
   
-1. [Sorgu söz dizimi ve LINQ 'Teki yöntem sözdiziminde](./query-syntax-and-method-syntax-in-linq.md)açıklandığı gibi, bazı sorgu işlemleri yalnızca Yöntem sözdizimi kullanılarak ifade edilebilir. Aşağıdaki kod, kaynak dizideki her bir `Student` için toplam puanı hesaplar ve sonra sınıfın ortalama Puanını hesaplamak için bu sorgunun sonuçlarında `Average()` yöntemini çağırır.
+1. [Linq'te Sorgu Sözdizimi ve Yöntem Sözdizimi'nde](./query-syntax-and-method-syntax-in-linq.md)açıklandığı gibi, bazı sorgu işlemleri yalnızca yöntem sözdizimi kullanılarak ifade edilebilir. Aşağıdaki kod kaynak sıradaki her `Student` biri için toplam puanı `Average()` hesaplar ve sonra sınıfın ortalama puanını hesaplamak için bu sorgunun sonuçlarında yöntemi çağırır.
   
      [!code-csharp[csLINQGettingStarted#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#19)]  
   
 #### <a name="to-transform-or-project-in-the-select-clause"></a>Select yan tümcesinde dönüştürmek ya da planlamak için  
   
-1. Bir sorgu için, öğeleri kaynak dizideki öğelerden farklı olan bir sıra üretmek çok yaygındır. Önceki sorgunuzu ve yürütme döngünüzü silin veya bir yorum yapın ve aşağıdaki kodla değiştirin. Sorgunun bir dizi dizeyi (`Students`değil) döndürdüğünü ve bu olguyu `foreach` döngüsünde yansıtıldığını unutmayın.  
+1. Bir sorgunun, öğeleri kaynak dizideki öğelerden farklı olan bir dizi oluşturması çok yaygındır. Önceki sorgu ve yürütme döngünüzün silin veya yorumunuzu yapın ve aşağıdaki kodla değiştirin. Sorgunun bir dize sırasını döndürtettiğini (değil) `Students`ve `foreach` bu gerçeğin döngüye yansıttığını unutmayın.  
   
      [!code-csharp[csLINQGettingStarted#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#20)]  
   
-2. Bu kılavuzda daha önce bahsedilen kod, Ortalama sınıf puanının yaklaşık 334 olduğunu gösterdi. Toplam puanı, `Student ID`olan ve ortalamasının `Students` bir dizisini oluşturmak için `select` deyimindeki anonim bir tür kullanabilirsiniz:  
+2. Bu gözden geçirmede daha önceki kod, ortalama sınıf puanının yaklaşık 334 olduğunu belirtmiştir. Toplam puanı sınıf `Students` ortalamasından büyük olan bir dizi oluşturmak `Student ID`için, onların , `select` deyiminde anonim bir tür kullanabilirsiniz:  
   
      [!code-csharp[csLINQGettingStarted#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#21)]  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- İçindeki C#sorgularla çalışmanın temel yönleri hakkında bilgi sahibi olduktan sonra, ilgilendiğiniz LINQ sağlayıcısı türü için belge ve örnekleri okumaya hazırsınızdır:  
+ C#'daki sorgularla çalışmanın temel yönlerini tanıdıktan sonra, ilgilendiğiniz belirli türde LINQ sağlayıcısına ait belgeleri ve örnekleri okumaya hazırsınız:  
   
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
- [LINQ to XML (C#)](./linq-to-xml-overview.md)  
+ [LinQ xml (C#) için](./linq-to-xml-overview.md)  
   
- [LINQ to Objects (C#)](./linq-to-objects.md)  
+ [Nesnelere LINQ (C#)](./linq-to-objects.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dil ile tümleşik sorgu (LINQ) (C#)](./index.md)
-- [LINQ sorgu Ifadeleri](../../../linq/index.md)
+- [Dil-Tümleşik Sorgu (LINQ) (C#)](./index.md)
+- [LINQ Sorgu İfadeleri](../../../linq/index.md)

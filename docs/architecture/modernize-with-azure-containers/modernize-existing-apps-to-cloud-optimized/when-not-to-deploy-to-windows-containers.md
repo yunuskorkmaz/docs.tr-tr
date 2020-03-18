@@ -1,46 +1,46 @@
 ---
 title: Windows Kapsayıcıları ne zaman dağıtılmaz?
-description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Windows kapsayıcılarına dağıtılmayan
+description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernize edin | Windows Kapsayıcılarına dağıtılmadığında
 ms.date: 04/28/2018
 ms.openlocfilehash: 65e793b846b495e9a1be6db9ddfa38bbf0d49445
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68676915"
 ---
 # <a name="when-not-to-deploy-to-windows-containers"></a>Windows Kapsayıcıları ne zaman dağıtılmaz?
 
-Bazı Windows teknolojileri Windows kapsayıcıları tarafından desteklenmez. Bu durumlarda, genellikle yalnızca Windows ve IIS ile standartları VM 'lerine geçiş yapmanız gerekir.
+Bazı Windows teknolojileri Windows Kapsayıcıları tarafından desteklenmez. Bu gibi durumlarda, genellikle sadece Windows ve IIS ile standartlara VM'lere geçiş yapmanız gerekir.
 
-Durum 2018 itibariyle Windows kapsayıcılarında desteklenmeyen durumlar:
+Mayıs 2018 itibariyle Windows Kapsayıcılarında desteklenmeyen durumlar:
 
-- Microsoft Message Queuing (MSMQ) Şu anda yalnızca Windows Server v1803 Release 'e dayalı, diğer önceki sürümlerde bulunmayan Windows kapsayıcılarında kullanılabilir.
+- Microsoft İleti Sıralaması (MSMQ) şu anda yalnızca Windows Server v1803 sürümüne dayalı windows kapsayıcılarında kullanılabilir, ancak önceki sürümlerde kullanılamaz.
 
-  - [UserVoice istek Forumu](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/15719031-create-base-container-image-with-msmq-server)
+  - [UserVoice istek forumu](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/15719031-create-base-container-image-with-msmq-server)
 
   - [Tartışma forumu](https://social.msdn.microsoft.com/Forums/bce99a7d-aa60-44fa-a348-450855650810/msmqserver-is-it-supported?forum=windowscontainers)
 
-- Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) Şu anda Windows kapsayıcılarında desteklenmemektedir.
+- Microsoft Dağıtılmış İşlem Koordinatörü (MSDTC) şu anda Windows Kapsayıcılarında desteklenmez.
 
   - [GitHub sorunu](https://github.com/MicrosoftDocs/Virtualization-Documentation/issues/494)
 
-- Microsoft Office şu anda kapsayıcıları desteklemiyor.
+- Microsoft Office şu anda kapsayıcıları desteklemez.
 
-  - [UserVoice istek Forumu](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/19686220-provide-office-support-for-containers)
+  - [UserVoice istek forumu](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/19686220-provide-office-support-for-containers)
 
-- UI uygulamaları (bir görsel kullanıcı arabirimine sahip istemci uygulamaları), desteklenen senaryolar değildir.
+- Kullanıcı arabirimi uygulamaları (görsel kullanıcı arabirimine sahip istemci uygulamaları) desteklenmez.
 
-- Windows altyapı rolleri (DNS, DHCP, DC, NTP, yazdırma, dosya sunucusu, ıAM vb.), desteklenen senaryolar değildir.
+- Windows altyapı rolleri (DNS, DHCP, DC, NTP, PRINT, File server, IAM vb.) desteklenmez.
 
-Topluluktaki desteklenmeyen ek senaryolar ve istekler için bkz. Windows kapsayıcıları için UserVoice Forumu: <https://windowsserver.uservoice.com/forums/304624-containers>.
+Topluluktan desteklenmeyen ek senaryolar ve istekler için Windows Kapsayıcıları <https://windowsserver.uservoice.com/forums/304624-containers>için UserVoice forumuna bakın: .
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Azure 'daki sanal makineler ve kapsayıcılar**
+- **Azure'da sanal makineler ve konteynerler**
 
     <https://azure.microsoft.com/overview/containers/>
 
 > [!div class="step-by-step"]
 > [Önceki](deploy-existing-net-apps-as-windows-containers.md)
-> [İleri](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)
+> [Sonraki](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)

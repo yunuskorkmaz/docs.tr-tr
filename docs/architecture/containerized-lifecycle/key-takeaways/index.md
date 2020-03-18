@@ -1,27 +1,27 @@
 ---
 title: Anahtar paketleri
-description: Kılavuzun anahtar devrmalarını gözden geçirin.
+description: Kılavuz için anahtar paketlerini gözden geçirin.
 ms.date: 02/15/2019
 ms.openlocfilehash: d28739a87e5c7c7e6c9304c36e1ec2a73cf0d0db
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70295651"
 ---
 # <a name="key-takeaways"></a>Anahtar paketleri
 
-- Kapsayıcı tabanlı çözümler, üretim ortamlarındaki bağımlılık hatalarından kaynaklanan dağıtım sorunlarını çözmesine, böylece DevOps ve üretim işlemlerini önemli ölçüde geliştirtiğinden, önemli maliyet tasarrufu avantajları sağlar.
+- Kapsayıcı tabanlı çözümler, üretim ortamlarında bağımlılık hatalarından kaynaklanan dağıtım sorunlarını çözerek DevOps'leri ve üretim işlemlerini önemli ölçüde iyileştirdiği için önemli maliyet tasarrufu sağlar.
 
-- Docker, kapsayıcı sektöründe standart bir standart haline geliyor ve Linux ve Windows ekosistemlerindeki en önemli satıcılar tarafından Microsoft dahil olmak üzere desteklenir. Gelecekte, Docker, buluttaki veya Şirket içindeki herhangi bir veri merkezinde bizde olacak.
+- Docker konteyner endüstrisinde fiili standart haline geliyor ve Microsoft da dahil olmak üzere Linux ve Windows ekosistemlerinde en önemli satıcılar tarafından desteklenmektedir. Gelecekte, Docker buluttaki veya şirket içi herhangi bir veri merkezinde her yerde bulunacaktır.
 
-- Bir Docker kapsayıcısı, herhangi bir sunucu tabanlı uygulama veya hizmet için standart dağıtım birimidir.
+- Docker kapsayıcısı, sunucu tabanlı herhangi bir uygulama veya hizmet için standart dağıtım birimi haline gelmektedir.
 
-- Azure Kubernetes Service (AKS) ve Azure Service Fabric tarafından sağlananlara benzer Docker yöneticileri, önemli karmaşıklık ve ölçeklenebilirlik gereksinimlerine sahip tüm mikro hizmet tabanlı veya çok Kapsayıcılı uygulamalar için temel ve olmazdır.
+- Azure Kubernetes Service (AKS) ve Azure Service Fabric'te sağlananlar gibi docker orkestratörleri, önemli karmaşıklık ve ölçeklenebilirlik gereksinimleri olan mikro hizmet tabanlı veya çok konteynerli uygulamalar için temel ve vazgeçilmezdir.
 
-- Sürekli tümleştirme/sürekli dağıtımı destekleyen ve üretim Docker ortamlarına bağlanan uçtan uca bir DevOps ortamı, çeviklik sağlayabilir ve sonuç olarak uygulamalarınızın pazarına göre iyileşme süresini iyileştirir.
+- Sürekli Tümleştirme/Sürekli Dağıtım'ı destekleyen ve üretim Docker ortamlarına bağlanan uçtan uca DevOps ortamı çeviklik sağlayabilir ve sonuçta uygulamalarınızın pazara sunma süresini artırabilir.
 
-- Azure DevOps Services, CI/CD işlem hatlarınızdaki Docker ortamlarına dağıtarak DevOps ortamınızı büyük ölçüde basitleştirir. Bu ifade, basit Docker ortamları ve Azure 'a bağlı olarak gelişmiş mikro hizmet ve kapsayıcı yöneticileri için geçerlidir.
+- Azure DevOps Hizmetleri, CI/CD ardışık hatlar için Docker ortamlarına dağıtarak DevOps ortamınızı büyük ölçüde basitleştirer. Bu bildirim, basit Docker ortamları ve Azure'a dayalı gelişmiş mikro hizmet ve konteyner orkestratörleri için geçerlidir.
 
 >[!div class="step-by-step"]
 >[Önceki](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

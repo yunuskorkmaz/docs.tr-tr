@@ -1,27 +1,27 @@
 ---
-title: Bellek içi XML Ağacı Değişikliği ve İşlevsel oluşturma (LINQ to XML) (C#)
+title: Bellek İçi XML Ağaç Modifikasyonu vs Fonksiyonel Yapı (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b5afc31d-a325-4ec6-bf17-0ff90a20ffca
 ms.openlocfilehash: 55eb95585bdd5d2c52175cacae2e6d049bd06f69
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66484560"
 ---
-# <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>Bellek içi XML Ağacı Değişikliği ve İşlevsel oluşturma (LINQ to XML) (C#)
-Bir XML ağacı yerde değiştirme, bir XML belgesi şeklini değiştirmek için geleneksel bir yaklaşımdır. Tipik bir uygulama bir belge DOM gibi bir veri deposuna yükler ya da [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]; düğümleri eklediğinizde, düğümleri silin veya düğümler; içeriğini değiştirmek için bir programlama arabirimi kullanır ve ardından XML bir dosyaya kaydeder veya bir ağ üzerinden iletir.  
+# <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>Bellek İçi XML Ağaç Modifikasyonu vs Fonksiyonel Yapı (LINQ to XML) (C#)
+Bir XML ağacını yerinde değiştirmek, Bir XML belgesinin şeklini değiştirmek için geleneksel bir yaklaşımdır. Tipik bir uygulama, belgeyi DOM veya [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]dom gibi bir veri deposuna yükler; düğümleri eklemek, düğümleri silmek veya düğümlerin içeriğini değiştirmek için bir programlama arabirimi kullanır; ve sonra XML'i bir dosyaya kaydeder veya ağ üzerinden iletir.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] pek çok senaryoda kullanışlıdır başka bir yaklaşım sağlar: *işlevsel oluşturma*. İşlevsel oluşturma, değiştirme veri dönüşümünün bir sorun, yerine ayrıntılı işleme bir veri deposu olarak değerlendirir. Bir veri temsilini alın ve verimli bir şekilde bir formdan başka bir dönüştürme, bir veri deposu sürdü ve başka bir şekil gerçekleştirilecek şekilde yönetilebilir gibi sonuç aynıdır. İşlevsel oluşturma yaklaşımını anahtarı için sorguların sonuçlarını geçirmektir <xref:System.Xml.Linq.XDocument> ve <xref:System.Xml.Linq.XElement> oluşturucular.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]birçok senaryoda yararlı olan başka bir yaklaşım sağlar: *fonksiyonel yapı*. İşlevsel yapı, verileri değiştirmeyi bir veri deposunun ayrıntılı manipülasyonu olarak değil, bir dönüşüm sorunu olarak ele alır. Verilerin bir temsilini alıp bir formdan diğerine verimli bir şekilde dönüştürebilirseniz, sonuç, bir veri deposunu alıp başka bir şekil almak için bir şekilde manipüle etmişsiniz gibi aynıdır. İşlevsel yapı yaklaşımının anahtarı, sorguların <xref:System.Xml.Linq.XDocument> ve <xref:System.Xml.Linq.XElement> oluşturucuların sonuçlarını aktarmaktır.  
   
- Çoğu durumda veri deposu işlemek için harcadığım süreyi kesir dönüşümsel kodu yazabilirsiniz ve bu kodu daha sağlam ve bakımı kolay. Daha fazla işlemci gücü, dönüşümsel yaklaşım sürebilir olsa bile bu gibi durumlarda, bu verileri değiştirmek için bir daha etkili yoludur. Bir geliştirici işlevsel yaklaşım ile ilgili bilgi sahibi ise, çoğu durumda Sonuç kodu anlamak daha kolay olur. Her ağacın parçası değiştiren bir kodun bulmak daha kolaydır.  
+ Çoğu durumda dönüşüm kodunu veri deposunu işlemek için gereken sürenin çok kısa bir kısmında yazabilirsiniz ve bu kodun daha sağlam ve bakımı daha kolaydır. Bu gibi durumlarda, dönüşüm yaklaşımı daha fazla işlem gücü gerektirebilir, ancak verileri değiştirmek için daha etkili bir yoldur. Bir geliştirici işlevsel yaklaşıma aşinaysa, birçok durumda ortaya çıkan kodu anlamak daha kolaydır. Ağacın her parçasını değiştiren kodu bulmak kolaydır.  
   
- İşlevsel yaklaşım kullanılarak yazılmış kod henüz bu yaklaşımı anlamıyor bir geliştirici için tanıdık gelmiyor ancak burada bir XML ağacı yerinde değişiklik birçok DOM programcıları için daha tanıdık bir yaklaşımdır. Yalnızca büyük bir XML ağacı için küçük bir değişiklik yapmak varsa, burada, çoğu durumda bir yerde bir ağaç değişiklik yaklaşım daha az CPU zaman alabilir.  
+ Bir XML ağacını yerinde değiştirdiğiniz yaklaşım birçok DOM programcısı na daha tanıdık geliyor, oysa işlevsel yaklaşım kullanılarak yazılan kod, henüz bu yaklaşımı anlamayan bir geliştiriciye yabancı görünebilir. Yalnızca büyük bir XML ağacında küçük bir değişiklik yapmak zorundaysanız, birçok durumda bir ağacı yerinde değiştirdiğiniz yaklaşım daha az CPU süresi alır.  
   
- Bu konu, her iki yaklaşım ile uygulanan bir örnek sağlar.  
+ Bu konu, her iki yaklaşımla da uygulanan bir örnek sağlar.  
   
-## <a name="transforming-attributes-into-elements"></a>Öğelerine dönüştürme öznitelikleri  
- Bu örnekte, böylece öznitelikleri öğelerine haline gelir. aşağıdaki basit XML belgesi değiştirmek istediğiniz varsayalım. Bu konuda, ilk yerinde değişikliği geleneksel yaklaşım sunulmaktadır. Ardından, bir işlev oluşturma yaklaşımı da gösterir.  
+## <a name="transforming-attributes-into-elements"></a>Öznitelikleri Öğelere Dönüştürme  
+ Bu örnekte, özniteliklerin öğe haline gelmesi için aşağıdaki basit XML belgesini değiştirmek istediğinizi varsayalım. Bu konu ilk olarak geleneksel yerinde modifikasyon yaklaşımını sunar. Daha sonra fonksiyonel inşaat yaklaşımını gösterir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -30,8 +30,8 @@ Bir XML ağacı yerde değiştirme, bir XML belgesi şeklini değiştirmek için
 </Root>  
 ```  
   
-### <a name="modifying-the-xml-tree"></a>XML ağacı değiştirme  
- Öznitelikleri öğeleri oluşturmak için yordam kod yazma ve öznitelikleri gibi silin:  
+### <a name="modifying-the-xml-tree"></a>XML Ağacını Değiştirme  
+ Özniteliklerden öğeler oluşturmak için bazı yordam kodu yazabilir ve ardından öznitelikleri aşağıdaki gibi silebilirsiniz:  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -52,8 +52,8 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
-### <a name="functional-construction-approach"></a>İşlevsel oluşturma yaklaşımı  
- Bunun aksine, işlevsel bir yaklaşım çekme ve öğeler ve öznitelikler kaynak ağacından seçme ve bunları yeni ağacına eklendikçe uygun şekilde dönüştürme yeni bir ağaç oluşturmak için kod oluşur. İşlevsel yaklaşım aşağıdaki gibi görünür:  
+### <a name="functional-construction-approach"></a>Fonksiyonel İnşaat Yaklaşımı  
+ Bunun aksine, işlevsel bir yaklaşım, kaynak ağaçtan öğeleri ve öznitelikleri seçmek ve yeni ağaca eklendikleri kadar uygun şekilde dönüştürmek için koddan oluşur. İşlevsel yaklaşım aşağıdaki gibi görünür:  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -65,11 +65,11 @@ XElement newTree = new XElement("Root",
 Console.WriteLine(newTree);  
 ```  
   
- Bu örnekte, ilk örnekle aynı XML çıkarır. Ancak, elde edilen işlevsel yaklaşım yeni XML yapısını gerçekten görebilirsiniz dikkat edin. Oluşturulmasını gördüğünüz `Root` öğesinde, kodu çeker `Child1` kaynak ağacının ve kaynak ağacının öznitelikleri öğelere yeni ağacında dönüştüren kod öğesi.  
+ Bu örnek, ilk örnekle aynı XML çıktıları. Ancak, işlevsel yaklaşımda yeni XML'in ortaya çıkan yapısını gerçekten görebildiğinize dikkat edin. Öğenin oluşturulmasını, `Root` öğeyi `Child1` kaynak ağaçtan çeken kodu ve öznitelikleri kaynak ağaçtan yeni ağaçtaki öğelere dönüştüren kodu görebilirsiniz.  
   
- İşlevsel örneği bu durumda ilk örnek kısa herhangi değil ve gerçekten daha kolay değildir. Ancak, bir XML ağacına yapmak için birçok değişiklik varsa, işlev olmayan bir yaklaşım oldukça karmaşık ve biraz geniş açılı olur. Buna karşılık, işlevsel yaklaşım kullanırken, yalnızca form istenen XML, sorguları ve ifadeler, istenen içeriği çekmek uygun olarak eklemeye devam. İşlevsel yaklaşım oluşturmanın kod üretir.  
+ Bu durumda işlevsel örnek herhangi bir ilk örnek daha kısa değildir ve gerçekten herhangi bir basit değildir. Ancak, bir XML ağacında yapmak için birçok değişiklik varsa, işlevsel olmayan yaklaşım oldukça karmaşık ve biraz kalın olacak. Buna karşılık, işlevsel yaklaşımı kullanırken, istenen içeriği çekmek için sorguları ve ifadeleri uygun şekilde katıştırarak, yine de yalnızca istenen XML'yi oluşturursunuz. İşlevsel yaklaşım, bakımı daha kolay olan kod verir.  
   
- Bu durumda işlevsel yaklaşım büyük olasılıkla oldukça ağaç işleme yaklaşım yanı sıra gerçekleştirecek değil dikkat edin. Ana sorunu işlevsel yaklaşım daha kısa süreli nesneleri oluşturmasıdır. Ancak işlevsel yaklaşım kullanarak büyük Programcı verimliliği için izin veriyorsa etkili bir düşüş olur.  
+ Bu durumda fonksiyonel yaklaşım muhtemelen oldukça iyi ağaç manipülasyon yaklaşımı olarak gerçekleştirmek olmaz dikkat edin. Ana sorun, işlevsel yaklaşımın daha kısa ömürlü nesneler oluşturmasıdır. Ancak, fonksiyonel yaklaşımın kullanılması daha fazla programcı üretkenliğine olanak sağlıyorsa, denge etkili dir.  
   
- Bu çok basit bir örneği, ancak felsefesi iki yaklaşım arasındaki farkı göstermek için kullanılır. İşlevsel yaklaşım daha büyük XML belgelerini dönüştürmek için büyük üretkenlik artışı sağlar.  
+ Bu çok basit bir örnektir, ancak iki yaklaşım arasındaki felsefe farkı göstermek için hizmet vermektedir. İşlevsel yaklaşım, daha büyük XML belgelerini dönüştürmek için daha fazla üretkenlik artışı elde eder.  
   

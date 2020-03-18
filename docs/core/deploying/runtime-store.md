@@ -3,17 +3,17 @@ title: Çalışma zamanı paket deposu
 description: .NET Core tarafından kullanılan bildirimleri hedeflemek için çalışma zamanı paket deposunu nasıl kullanacağınızı öğrenin.
 ms.date: 08/12/2017
 ms.openlocfilehash: 7a833ed95147608c6fb403f8f0dec179d2a73833
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77448964"
 ---
 # <a name="runtime-package-store"></a>Çalışma zamanı paket deposu
 
-.NET Core 2,0 ' den itibaren, uygulamaları paketleyebilir ve hedef ortamda mevcut olan bilinen bir paket kümesine dağıtabilirsiniz. Avantajlar, bazı durumlarda daha hızlı dağıtımlar, daha düşük disk alanı kullanımı ve geliştirilmiş başlangıç performanslarıdır.
+.NET Core 2.0 ile başlayarak, uygulamaları hedef ortamda bulunan bilinen paketlere karşı paketleyip dağıtmak mümkündür. Avantajları daha hızlı dağıtımlar, daha düşük disk alanı kullanımı ve bazı durumlarda geliştirilmiş başlangıç performansıdır.
 
-Bu özellik, paketlerin depolandığı disk üzerindeki bir dizin olan bir *çalışma zamanı paket deposu*olarak uygulanır (genellikle MacOS/Linux ve *C:/Program Files/Windows üzerinde/Program Files/DotNet/Store* *üzerinde/* Bu dizin altında mimariler ve [hedef çerçeveler](../../standard/frameworks.md)için alt dizinler vardır. Dosya düzeni, [NuGet varlıklarının diskte düzenlendiği](/nuget/create-packages/supporting-multiple-target-frameworks#framework-version-folder-structure)yönteme benzer:
+Bu özellik, paketlerin depolandığı diskteki bir dizin olan *çalışma zamanı paket deposu*olarak uygulanır (genellikle macOS/Linux ve *C:/Program Files/dotnet/store* on Windows'da */usr/local/share/dotnet/store* adresinde). Bu dizin altında, mimariler ve [hedef çerçeveler](../../standard/frameworks.md)için alt dizinler vardır. Dosya [düzeni, NuGet varlıklarının diskte düzenlenmesine](/nuget/create-packages/supporting-multiple-target-frameworks#framework-version-folder-structure)benzer:
 
 ```
 \dotnet
@@ -30,13 +30,13 @@ Bu özellik, paketlerin depolandığı disk üzerindeki bir dizin olan bir *çal
                 ...
 ```
 
-Bir *hedef bildirim* dosyası, çalışma zamanı paket deposundaki paketleri listeler. Geliştiriciler, uygulamasını yayımlarken bu bildirimi hedefleyebilir. Hedef bildirim genellikle hedeflenen üretim ortamının sahibi tarafından sağlanır.
+*Hedef bildirim* dosyası, çalışma zamanı paket deposundaki paketleri listeler. Geliştiriciler uygulamalarını yayınlarken bu bildirimi hedefleyebilirler. Hedef bildirim genellikle hedeflenen üretim ortamının sahibi tarafından sağlanır.
 
 ## <a name="preparing-a-runtime-environment"></a>Çalışma zamanı ortamı hazırlama
 
-Bir çalışma zamanı ortamının Yöneticisi, bir çalışma zamanı paket deposu ve ilgili hedef bildirimi oluşturarak daha hızlı dağıtımlar ve daha düşük disk alanı kullanımı için uygulamaları iyileştirebilirler.
+Çalışma zamanı ortamının yöneticisi, bir çalışma zamanı paket deposu ve ilgili hedef bildirimi oluşturarak uygulamaları daha hızlı dağıtımlar ve daha düşük disk alanı kullanımı için optimize edebilir.
 
-İlk adım, çalışma zamanı paket deposunu oluşturan paketleri listeleyen bir *paket deposu bildirimi* oluşturmaktır. Bu dosya biçimi, proje dosyası biçimi (*csproj*) ile uyumludur.
+İlk adım, çalışma zamanı paket deposunu oluşturan paketleri listeleyen bir *paket deposu bildirimi* oluşturmaktır. Bu dosya biçimi proje dosya biçimi *(csproj)* ile uyumludur.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -49,7 +49,7 @@ Bir çalışma zamanı ortamının Yöneticisi, bir çalışma zamanı paket dep
 
 **Örnek**
 
-Aşağıdaki örnek paket deposu bildirimi (*Packages. csproj*), bir çalışma zamanı paketi deposuna [`Newtonsoft.Json`](https://www.nuget.org/packages/Newtonsoft.Json/) ve [`Moq`](https://www.nuget.org/packages/moq/) eklemek için kullanılır:
+Aşağıdaki örnek paket deposu bildirimi *(packages.csproj)* [`Newtonsoft.Json`](https://www.nuget.org/packages/Newtonsoft.Json/) [`Moq`](https://www.nuget.org/packages/moq/) eklemek ve bir çalışma zamanı paket deposuna kullanılır:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -60,7 +60,7 @@ Aşağıdaki örnek paket deposu bildirimi (*Packages. csproj*), bir çalışma 
 </Project>
 ```
 
-Paket deposu bildirimi, çalışma zamanı ve Framework ile `dotnet store` yürüterek çalışma zamanı paket deposunu sağlayın:
+Paket deposu bildirimi, çalışma `dotnet store` zamanı ve çerçeve ile yürütülerek çalışma zamanı paket deposunu sağlama:
 
 ```dotnetcli
 dotnet store --manifest <PATH_TO_MANIFEST_FILE> --runtime <RUNTIME_IDENTIFIER> --framework <FRAMEWORK>
@@ -72,13 +72,13 @@ dotnet store --manifest <PATH_TO_MANIFEST_FILE> --runtime <RUNTIME_IDENTIFIER> -
 dotnet store --manifest packages.csproj --runtime win10-x64 --framework netcoreapp2.0 --framework-version 2.0.0
 ```
 
-Komutta bir seçenek ve yolu tekrarlayarak birden fazla hedef paket deposu bildirim yolunu tek bir [`dotnet store`](../tools/dotnet-store.md) komutuna geçirebilirsiniz.
+Komuttaki seçeneği ve yolu yineleyerek [`dotnet store`](../tools/dotnet-store.md) birden çok hedef paket deposu bildirim yolunu tek bir komuta geçirebilirsiniz.
 
-Varsayılan olarak, komutun çıktısı Kullanıcı profilinin *. DotNet/Store* alt dizininin altında bulunan bir paket deposudur. `--output <OUTPUT_DIRECTORY>` seçeneğini kullanarak farklı bir konum belirtebilirsiniz. Deponun kök dizini bir hedef bildirim *yapıtı. xml* dosyası içeriyor. Bu dosya indirilmek üzere kullanılabilir hale getirilebilir ve yayımlarken bu depoyu hedeflemek isteyen uygulama yazarları tarafından kullanılabilir.
+Varsayılan olarak, komutun çıktısı kullanıcıprofilinin *.dotnet/store* alt dizini altında bir paket deposudur. `--output <OUTPUT_DIRECTORY>` Seçeneği kullanarak farklı bir konum belirtebilirsiniz. Mağazanın kök dizini bir hedef bildirimi *artifakı.xml* dosyası içerir. Bu dosya indirilebilmek için kullanılabilir hale getirilebilir ve yayımlarken bu mağazayı hedeflemek isteyen uygulama yazarları tarafından kullanılabilir.
 
 **Örnek**
 
-Önceki örnek çalıştırıldıktan sonra aşağıdaki *yapıt. xml* dosyası oluşturulur. [`Castle.Core`](https://www.nuget.org/packages/Castle.Core/) `Moq`bağımlılığı olduğunu ve bu nedenle otomatik olarak dahil edildiğini ve *yapılar. xml* bildirim dosyasında göründüğünü unutmayın.
+Aşağıdaki *artifact.xml* dosyası önceki örnek çalıştırdıktan sonra üretilir. Bu [`Castle.Core`](https://www.nuget.org/packages/Castle.Core/) bir bağımlılık olduğunu `Moq`unutmayın , bu yüzden otomatik olarak dahil ve *artifakı.xml* bildirim dosyasında görünür.
 
 ```xml
 <StoreArtifacts>
@@ -88,9 +88,9 @@ Varsayılan olarak, komutun çıktısı Kullanıcı profilinin *. DotNet/Store* 
 </StoreArtifacts>
 ```
 
-## <a name="publishing-an-app-against-a-target-manifest"></a>Hedef bildiriminde uygulama yayımlama
+## <a name="publishing-an-app-against-a-target-manifest"></a>Bir uygulamayı hedef bildirime karşı yayımlama
 
-Diskte bir hedef bildirim dosyanız varsa, [`dotnet publish`](../tools/dotnet-publish.md) komutuyla uygulamanızı yayımlarken dosyanın yolunu belirtirsiniz:
+Diskte bir hedef bildirim dosyanız varsa, uygulamanızı [`dotnet publish`](../tools/dotnet-publish.md) komutla yayınlarken dosyaya giden yolu belirtirsiniz:
 
 ```dotnetcli
 dotnet publish --manifest <PATH_TO_MANIFEST_FILE>
@@ -102,13 +102,13 @@ dotnet publish --manifest <PATH_TO_MANIFEST_FILE>
 dotnet publish --manifest manifest.xml
 ```
 
-Ortaya çıkan yayımlanmış uygulamayı, hedef bildiriminde tanımlanan paketlere sahip bir ortama dağıtırsınız. Bunun başarısız olması, uygulamanın başlamamasına neden olur.
+Ortaya çıkan yayınlanmış uygulamayı, hedef bildirimde açıklanan paketlerin olduğu bir ortama dağıtırsınız. Bunu yapamamak, uygulamanın başlayamamasına neden oluyor.
 
-Bir uygulamayı yayımlarken, seçeneğini ve yolunu yineleyerek birden çok hedef bildirimi belirtin (örneğin, `--manifest manifest1.xml --manifest manifest2.xml`). Bunu yaptığınızda, uygulama, komuta sunulan hedef bildirim dosyalarında belirtilen paketlerin birleşimi için kırpılır.
+Seçeneği ve yolu yineleyerek bir uygulamayı yayınlarken birden çok `--manifest manifest1.xml --manifest manifest2.xml`hedef bildirimi belirtin (örneğin, ). Bunu yaptığınızda, uygulama komuta sağlanan hedef bildirim dosyalarında belirtilen paketlerin birleşimi için kırpılır.
 
-## <a name="specifying-target-manifests-in-the-project-file"></a>Proje dosyasında hedef bildirimleri belirtme
+## <a name="specifying-target-manifests-in-the-project-file"></a>Proje dosyasında hedef bildirimlerinin belirtilmesi
 
-[`dotnet publish`](../tools/dotnet-publish.md) komutuyla hedef bildirimleri belirtmenin bir alternatifi, bunları proje dosyasında, **\<targetmanifestfiles >** etiketi altındaki noktalı virgülle ayrılmış bir yol listesi olarak belirtmektir.
+Komutla hedef bildirimleri belirtmenin [`dotnet publish`](../tools/dotnet-publish.md) alternatifi, bunları proje dosyasında ** \<TargetManifestFiles>** etiketi altında yarı sütunlu ayrılmış bir yol listesi olarak belirtmektir.
 
 ```xml
 <PropertyGroup>
@@ -116,17 +116,17 @@ Bir uygulamayı yayımlarken, seçeneğini ve yolunu yineleyerek birden çok hed
 </PropertyGroup>
 ```
 
-Yalnızca uygulamanın hedef ortamı, .NET Core projeleri için gibi iyi bilindiğinde, hedef bildirimleri proje dosyasında belirtin. Bu, açık kaynaklı projelerde bu durum değildir. Açık kaynaklı bir projenin kullanıcıları genellikle farklı üretim ortamlarına dağıtır. Bu üretim ortamları genellikle önceden yüklenmiş farklı paket kümelerine sahiptir. Bu tür ortamlarda hedef bildirimle ilgili varsayımlar yapamazsınız, bu nedenle [`dotnet publish`](../tools/dotnet-publish.md)`--manifest` seçeneğini kullanmanız gerekir.
+Proje dosyasındaki hedef bildirimlerini yalnızca uygulamanın hedef ortamı .NET Core projeleri gibi iyi bilindiğinde belirtin. Bu açık kaynak projeleri için durum böyle değildir. Açık kaynak proje kullanıcıları genellikle farklı üretim ortamlarına dağıtılır. Bu üretim ortamları genellikle önceden yüklenmiş farklı paket kümeleri vardır. Bu tür ortamlarda hedef bildirimi hakkında varsayımlarda bulunamazsınız, `--manifest` bu [`dotnet publish`](../tools/dotnet-publish.md)nedenle .
 
-## <a name="aspnet-core-implicit-store"></a>ASP.NET Core örtük mağaza
+## <a name="aspnet-core-implicit-store"></a>ASP.NET Çekirdek örtük mağaza
 
-ASP.NET Core örtük depo yalnızca ASP.NET Core 2,0 için geçerlidir. Uygulamaların, örtük mağazayı kullanmayan ASP.NET Core 2,1 ve **üstünü kullanmasını önemle** öneririz. ASP.NET Core 2,1 ve üzeri, paylaşılan çerçeveyi kullanır.
+ASP.NET Core örtülü deposu yalnızca core 2.0 ASP.NET için geçerlidir. Uygulamaların core 2.1 ve sonrası ASP.NET kullanmalarını şiddetle öneririz, bu da örtük depoyu **kullanmaz.** ASP.NET Core 2.1 ve daha sonra paylaşılan çerçeveyi kullanın.
 
-Çalışma zamanı paket deposu özelliği, uygulama [Framework 'e bağımlı bir dağıtım (FDD)](index.md#publish-runtime-dependent) uygulaması olarak dağıtıldığında ASP.NET Core bir uygulama tarafından örtük olarak kullanılır. [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) hedefler, hedef sistemdeki örtük paket deposuna başvuran bildirimleri içerir. Ayrıca, `Microsoft.AspNetCore.All` pakete bağlı olan tüm FDD uygulamaları, `Microsoft.AspNetCore.All` metapackage içinde listelenen paketleri değil, yalnızca uygulamayı ve varlıklarını içeren yayımlanmış bir uygulamayla sonuçlanır. Bu paketlerin hedef sistemde bulunduğu varsayılır.
+Çalışma zamanı paket deposu özelliği, uygulama [çerçeveye bağımlı dağıtım (FDD)](index.md#publish-runtime-dependent) uygulaması olarak dağıtıldığında, ASP.NET Core uygulaması tarafından örtülü olarak kullanılır. Hedefler, [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) hedef sistemdeki örtülü paket deposuna atıfta bulunan bildirimleri içerir. Ayrıca, `Microsoft.AspNetCore.All` paket sonuçlarına bağlı olan herhangi bir FDD uygulaması, meta pakette listelenen paketleri değil, `Microsoft.AspNetCore.All` yalnızca uygulamayı ve varlıklarını içeren yayınlanmış bir uygulamadır. Bu paketlerin hedef sistemde olduğu varsayılıyor.
 
-Çalışma zamanı paket deposu, .NET Core SDK yüklendiği zaman konağa yüklenir. Diğer yükleyiciler, .NET Core SDK, `apt-get`, Red Hat Yıum, .NET Core Windows Server barındırma paketi ve el ile çalışma zamanı paket deposu yüklemelerinin ZIP/tarbol yüklemeleri de dahil olmak üzere çalışma zamanı paket deposunu sağlayabilir.
+.NET Core SDK yüklendiğinde çalışma zamanı paket deposu ana bilgisayara yüklenir. Diğer yükleyiciler,.NET Core SDK, Red Hat Yum, `apt-get`.NET Core Windows Server Hosting paketi ve manuel çalışma zamanı paket mağaza yüklemeleri zip/tarball yüklemeleri de dahil olmak üzere çalışma zamanı paket deposu sağlayabilir.
 
-[Çerçeveye bağımlı bir dağıtım (FDD)](index.md#publish-runtime-dependent) uygulaması dağıttığınızda, hedef ortamda .NET Core SDK yüklü olduğundan emin olun. Uygulama, ASP.NET Core içermeyen bir ortama dağıtılırsa, aşağıdaki örnekte olduğu gibi **\<PublishWithAspNetCoreTargetManifest >** öğesini proje dosyasında `false` olarak belirterek örtük depoyu devre dışı bırakabilirsiniz:
+Çerçeveye bağımlı bir [dağıtım (FDD)](index.md#publish-runtime-dependent) uygulaması dağıtırken, hedef ortamın .NET Core SDK yüklü olduğundan emin olun. Uygulama ASP.NET Core içermeyen bir ortama dağıtılırsa, aşağıdaki örnekte olduğu gibi proje `false` dosyasında>** \<PublishWithAspNetCoreTargetManifest'i** belirterek örtülü mağazayı devre dışı bırakabilirsiniz:
 
 ```xml
 <PropertyGroup>
@@ -135,15 +135,15 @@ ASP.NET Core örtük depo yalnızca ASP.NET Core 2,0 için geçerlidir. Uygulama
 ```
 
 > [!NOTE]
-> [Kendi kendine içerilen dağıtım (SCD)](index.md#publish-self-contained) uygulamaları için, hedef sistemin gerekli bildirim paketlerini içermesi gerekmediği varsayılır. Bu nedenle, bir SCD uygulaması için **PublishWithAspNetCoreTargetManifest >\<** `true` olarak ayarlanamaz.
+> [Bağımsız dağıtım (SCD)](index.md#publish-self-contained) uygulamaları için, hedef sistemin gerekli bildirim paketlerini içermediği varsayılır. Bu nedenle, ** \<PublishWithAspNetCoreTargetManifest**>`true` bir SCD uygulaması için ayarlanamaz.
 
-Dağıtımda mevcut olan bir bildirim bağımlılığıyla bir uygulama dağıtırsanız (derleme *bin* klasöründe bulunur), çalışma zamanı paket deposu bu derleme için konakta *kullanılmaz* . *Bin* klasörü derlemesi, konaktaki çalışma zamanı paket deposundaki varlığına bakılmaksızın kullanılır.
+Dağıtımda bulunan bir bildirim bağımlılığı olan bir uygulama dağıtırsanız (derleme *çöp kutusu* klasöründe bulunur), çalışma zamanı paket deposu bu derlemeiçin ana bilgisayarda *kullanılmaz.* *Depo kutusu* klasörü derlemesi, ana bilgisayardaki çalışma zamanı paket deposundaki varlığından bağımsız olarak kullanılır.
 
-Bildirimde belirtilen bağımlılığın sürümü, çalışma zamanı paket deposundaki bağımlılığın sürümüyle eşleşmelidir. Hedef bildirimde bağımlılık ile çalışma zamanı paket deposunda bulunan sürüm arasında bir sürüm uyumsuzluğu varsa ve uygulama, dağıtımda paketin gerekli sürümünü içermiyorsa, uygulama başlatılamaz. Özel durum, uyuşmazlığın giderilmesine yardımcı olan çalışma zamanı paket deposu derlemesi için çağıran hedef bildirimin adını içerir.
+Bildirimde belirtilen bağımlılığın sürümü, çalışma zamanı paket deposundaki bağımlılığın sürümüyle eşleşmelidir. Hedef bildirimdeki bağımlılık ile çalışma zamanı paket deposunda bulunan sürüm arasında bir sürüm uyuşmazlığı varsa ve uygulama dağıtımında paketin gerekli sürümünü içermiyorsa, uygulama başlatılamıyorsa. Özel durum, çalışma zamanı paket deposu montajını çağıran hedef bildiriminin adını içerir ve bu da uyuşmazlığı gidermenize yardımcı olur.
 
-Dağıtım yayımlandığında *kırpıldıysa* , yalnızca belirttiğiniz bildirim paketlerinin belirli sürümleri, yayımlanan çıktıdan alınır. Uygulamanın başlaması için belirtilen sürümlerdeki paketlerin konakta mevcut olması gerekir.
+Dağıtım yayımlamada *kırpıldığında,* yalnızca belirttiğiniz bildirim paketlerinin belirli sürümleri yayımlanmış çıktıdan uzak tutulur. Uygulamanın başlatabilmesi için belirtilen sürümlerde paketler inanılması için ana bilgisayarda bulunmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DotNet-Yayımla](../tools/dotnet-publish.md)
-- [DotNet-mağaza](../tools/dotnet-store.md)
+- [dotnet-yayımla](../tools/dotnet-publish.md)
+- [dotnet mağaza](../tools/dotnet-store.md)

@@ -1,36 +1,36 @@
 ---
 ms.openlocfilehash: 60ebcd9fc9ca18c33d31b82ba5020426d22a7d5a
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901704"
 ---
-### <a name="authentication-httpcontextauthentication-property-removed"></a>Kimlik doğrulaması: HttpContext. Authentication özelliği kaldırıldı
+### <a name="authentication-httpcontextauthentication-property-removed"></a>Kimlik doğrulama: HttpContext.Authentication özelliği kaldırıldı
 
-`HttpContext` üzerinde kullanım dışı `Authentication` özelliği kaldırılmıştır.
+Üzerinde `HttpContext` amortismana `Authentication` alınan özellik kaldırıldı.
 
-#### <a name="change-description"></a>Açıklamayı Değiştir
+#### <a name="change-description"></a>Açıklamayı değiştir
 
-[DotNet/aspnetcore # 6504](https://github.com/dotnet/aspnetcore/pull/6504)bir parçası olarak, `HttpContext` üzerinde kullanım dışı `Authentication` özelliği kaldırılmıştır. `Authentication` özelliği 2,0 tarihinden itibaren kullanımdan kaldırılmıştır. Kullanım dışı bırakılan bu özelliği kullanarak kodu yeni değiştirme API 'Lerine geçirmek için bir [Geçiş Kılavuzu](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions) yayımlandı. Eski ASP.NET Core 1. x kimlik doğrulama yığını ile ilgili kalan kullanılmayan sınıflar/API 'Ler, COMMIT [dotnet/aspnetcore@d7a7c65](https://github.com/dotnet/aspnetcore/commit/d7a7c65)kaldırılmıştır.
+[dotnet/aspnetcore#6504'ün](https://github.com/dotnet/aspnetcore/pull/6504)bir parçası olarak, `Authentication` amortismana `HttpContext` alınan özellik kaldırıldı. Mülk `Authentication` 2,0'dan beri amortismana uymuş. Bu amortismana neden olan özelliği kullanarak kodu yeni yedek API'lere geçirmek için bir [geçiş kılavuzu](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions) yayımlandı. Eski ASP.NET Core 1.x kimlik doğrulama yığınıile ilgili kalan kullanılmayan sınıflar [dotnet/aspnetcore@d7a7c65](https://github.com/dotnet/aspnetcore/commit/d7a7c65)/ API'ler commit'de kaldırıldı.
 
-Tartışma için bkz. [DotNet/aspnetcore # 6533](https://github.com/dotnet/aspnetcore/issues/6533).
+Tartışma için [dotnet/aspnetcore#6533'e](https://github.com/dotnet/aspnetcore/issues/6533)bakın.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3.0
+3,0
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-ASP.NET Core 1,0 API 'Leri, <xref:Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions?displayProperty=fullName>uzantı yöntemleriyle değiştirilmiştir.
+ASP.NET Core 1.0 API'leri <xref:Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions?displayProperty=fullName>uzantısı yöntemleri ile değiştirilmiştir.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-[Geçiş kılavuzuna](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions)bakın.
+Geçiş [kılavuzuna](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions)bakın.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Core
+ASP.NET Çekirdeği
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

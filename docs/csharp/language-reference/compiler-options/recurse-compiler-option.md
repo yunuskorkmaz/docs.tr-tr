@@ -1,5 +1,5 @@
 ---
-title: -recurse (C# derleyici seçenekleri)
+title: -recurse (C# Derleyici Seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /recurse
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - -recurse compiler option [C#]
 ms.assetid: 4e8212e5-04e3-45b1-8a42-41bc50e683b0
 ms.openlocfilehash: c82e3019e1a1e3ba45a7000312b54b9d7f64a2db
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606746"
 ---
-# <a name="-recurse-c-compiler-options"></a>-recurse (C# derleyici seçenekleri)
--Recurse seçeneği, belirtilen dizinin (dir) veya proje dizininin tüm alt dizinlerindeki kaynak kodu dosyalarını derlemenize olanak sağlar.  
+# <a name="-recurse-c-compiler-options"></a>-recurse (C# Derleyici Seçenekleri)
+-recurse seçeneği, belirtilen dizinin (dir) veya proje dizininin tüm alt dizilişlerinde kaynak kodu dosyalarını derlemenize olanak tanır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -24,28 +24,28 @@ ms.locfileid: "69606746"
 -recurse:[dir\]file  
 ```  
   
-## <a name="arguments"></a>Arguments  
- `dir`seçim  
- Aramanın başlamasını istediğiniz dizin. Bu belirtilmemişse, arama proje dizininde başlar.  
+## <a name="arguments"></a>Bağımsız Değişkenler  
+ `dir` (isteğe bağlı)  
+ Aramanın başlamasını istediğiniz dizini. Bu belirtilmemişse, arama proje dizininde başlar.  
   
  `file`  
- Aranacak dosya (lar). Joker karakterlere izin verilir.  
+ Dosya(lar) aramak için. Joker karaktere izin verilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- **-Recurse** seçeneği, kaynak kodu dosyalarını belirtilen dizinin (`dir`) veya proje dizininin tüm alt dizinlerinde derlemenize olanak tanır.  
+ **-recurse** seçeneği, belirtilen dizinin tüm alt dizilişlerinde (`dir`) veya proje dizininin kaynak kodu dosyalarını derlemenize olanak tanır.  
   
- Proje dizinindeki tüm eşleşen dosyaları **-Recurse**kullanmadan derlemek için dosya adında joker karakterler kullanabilirsiniz.  
+ Proje dizinindeki eşleşen tüm dosyaları **-recurse**kullanmadan derlemek için dosya adındaki joker karakterleri kullanabilirsiniz.  
   
- Bu derleyici seçeneği Visual Studio 'da kullanılamaz ve program aracılığıyla değiştirilemez.  
+ Bu derleyici seçeneği Visual Studio'da kullanılamaz ve programlı olarak değiştirilemez.  
   
 ## <a name="example"></a>Örnek  
- Geçerli dizindeki C# tüm dosyaları derler:  
+ Geçerli dizindeki tüm C# dosyalarını derler:  
   
 ```console  
 csc *.cs  
 ```  
   
- Dir1\dir2 dizinindeki tüm C# dosyaları ve bunun altındaki dizinleri derler ve dir2. dll oluşturur:  
+ Dir1\dir2 dizinindeki tüm C# dosyalarını ve altındaki dizinleri derler ve dir2.dll oluşturur:  
   
 ```console  
 csc -target:library -out:dir2.dll -recurse:dir1\dir2\*.cs  

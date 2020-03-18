@@ -1,23 +1,23 @@
 ---
-title: DotNet derleme komutu
-description: DotNet derleme komutu bir projeyi ve tüm bağımlılıklarını oluşturur.
+title: dotnet yapı komutu
+description: Dotnet build komutu bir proje ve tüm bağımlılıklarını oluşturur.
 ms.date: 02/14/2020
 ms.openlocfilehash: 9f9a78ec0a6a25c54c8a727c05081ce6835514ee
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503768"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 2.x SDK ve sonraki sürümler
 
 ## <a name="name"></a>Adı
 
-`dotnet build`-bir projeyi ve tüm bağımlılıklarını oluşturur.
+`dotnet build`- Bir proje ve tüm bağımlılıkları oluşturur.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Özet
 
 ```dotnetcli
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force]
@@ -29,23 +29,23 @@ dotnet build [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet build` komutu projeyi ve onun bağımlılıklarını bir ikili dosya kümesine oluşturur. İkili dosyalar, projenin kodunu *. dll* uzantılı ara DIL (IL) dosyalarına dahil eder.  Proje türü ve ayarlarına bağlı olarak, şu gibi diğer dosyalar dahil edilebilir:
+Komut, `dotnet build` projeyi ve bağımlılıklarını bir dizi ikili ye dönüştürür. İkili dosyalar, projenin kodlarını *.dll* uzantılı Orta Dil (IL) dosyalarında içerir.  Proje türüne ve ayarlarına bağlı olarak, aşağıdakiler gibi başka dosyalar da eklenebilir:
 
-- Proje türü, .NET Core 3,0 veya üstünü hedefleyen bir yürütülebilir dosya ise, uygulamayı çalıştırmak için kullanılabilecek bir çalıştırılabilir dosya.
-- Bir *. pdb* uzantısıyla hata ayıklama için kullanılan sembol dosyaları.
-- Uygulamanın veya kitaplığın bağımlılıklarını listeleyen *. Deps. JSON* dosyası.
-- Paylaşılan çalışma zamanını ve bir uygulamanın sürümünü belirten *. runtimeconfig. JSON* dosyası.
-- Projenin bağımlı olduğu diğer kitaplıklar (proje başvuruları veya NuGet paket başvuruları aracılığıyla).
+- Proje türü yürütülebilir bir hedefleme .NET Core 3.0 veya daha sonra ise, uygulamayı çalıştırmak için kullanılabilecek bir yürütülebilir.
+- *.pdb* uzantılı hata ayıklama için kullanılan simge dosyaları.
+- Uygulamanın veya kitaplığın bağımlılıklarını listeleyen bir *.deps.json* dosyası.
+- Bir uygulama için paylaşılan çalışma süresini ve sürümünü belirten bir *.runtimeconfig.json* dosyası.
+- Projenin bağlı olduğu diğer kitaplıklar (proje referansları veya NuGet paket başvuruları yoluyla).
 
-.NET Core 3,0 ' den önceki sürümleri hedefleyen yürütülebilir projeler için, NuGet 'deki kitaplık bağımlılıkları genellikle çıkış klasörüne kopyalanmaz.  Bunlar, çalışma zamanında NuGet genel paketler klasöründen çözümlenirler. Bu şekilde `dotnet build` ürünü, çalıştırmak için başka bir makineye aktarılmaya hazırlanmıyor. Uygulamasının dağıtılabilecek bir sürümünü oluşturmak için (örneğin, [DotNet Publish](dotnet-publish.md) komutuyla) yayımlamanız gerekir. Daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md).
+.NET Core 3.0'dan önceki sürümleri hedefleyen çalıştırılabilir projeler için, NuGet'in kitaplık bağımlılıkları genellikle çıktı klasörüne kopyalanmaz.  Bunlar, çalışma zamanında NuGet global paketler klasöründen çözülür. Bunu göz önünde bulundurarak, ürün `dotnet build` çalıştırmak için başka bir makineye transfer için hazır değildir. Uygulamanın dağıtılabilen bir sürümünü oluşturmak için, uygulamayı yayımlamanız gerekir (örneğin, [dotnet yayımlama](dotnet-publish.md) komutuyla). Daha fazla bilgi için [bkz.](../deploying/index.md)
 
-.NET Core 3,0 ve üstünü hedefleyen yürütülebilir projelerde, kitaplık bağımlılıkları çıkış klasörüne kopyalanır. Bu, başka bir yayınla özel mantık (örneğin, Web projeleri) yoksa, yapı çıkışının dağıtılabilir olması anlamına gelir.
+.NET Core 3.0 ve sonrası hedeflemesi yapılan yürütülebilir projeler için kitaplık bağımlılıkları çıktı klasörüne kopyalanır. Bu, yayımlamaya özgü başka bir mantık yoksa (Web projeleri gibi), yapı çıktısının dağıtılabilir olması gerektiği anlamına gelir.
 
-Oluşturma, uygulamanızın bağımlılıklarını listeleyen *Project. varlıklar. JSON* dosyasını gerektirir. [`dotnet restore`](dotnet-restore.md) yürütüldüğünde dosya oluşturulur. Varlıklar dosyası olmadan, Araçlar başvuru derlemelerini çözemez, bu da hatalara neden olur. .NET Core 1. x SDK ile `dotnet build`çalıştırmadan önce `dotnet restore` açık olarak çalıştırmanız gerekir. .NET Core 2,0 SDK ile başlayarak, `dotnet build`çalıştırdığınızda `dotnet restore` örtülü olarak çalışır. Build komutunu çalıştırırken örtük geri yüklemeyi devre dışı bırakmak istiyorsanız `--no-restore` seçeneğini geçirebilirsiniz.
+Bina, uygulamanızın bağımlılıklarını listeleyen *project.assets.json* dosyasını gerektirir. Dosya yürütüldüğünde [`dotnet restore`](dotnet-restore.md) oluşturulur. Varlıklar dosyası yerinde olmadan, takım başvuru derlemelerini çözemez ve bu da hatalara neden olabilir. .NET Core 1.x SDK ile çalıştırmadan `dotnet restore` `dotnet build`önce açıkça çalıştırmanız gerekir. .NET Core 2.0 SDK `dotnet restore` ile başlayarak, `dotnet build`çalıştırdığınızda örtülü olarak çalışır. Yapı komutunu çalıştırırken örtülü geri yüklemeyi devre dışı `--no-restore` kalmak istiyorsanız, seçeneği geçebilirsiniz.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-Projenin yürütülebilir olup olmadığı veya proje dosyasındaki `<OutputType>` özelliği tarafından belirlenmediği. Aşağıdaki örnekte yürütülebilir kod üreten bir proje gösterilmektedir:
+Projenin yürütülüp yürütülemeyeceği proje `<OutputType>` dosyasındaki özellik tarafından belirlenir. Aşağıdaki örnek, yürütülebilir kod üreten bir projeyi gösterir:
 
 ```xml
 <PropertyGroup>
@@ -53,35 +53,35 @@ Projenin yürütülebilir olup olmadığı veya proje dosyasındaki `<OutputType
 </PropertyGroup>
 ```
 
-Bir kitaplık oluşturmak için `<OutputType>` özelliğini atlayın veya değerini `Library`olarak değiştirin. Bir kitaplığın Il DLL 'SI giriş noktaları içermiyor ve yürütülemiyor.
+Kitaplık oluşturmak için, özelliği `<OutputType>` atlaveya değerini `Library`' ye değdirin. Kitaplık için IL DLL giriş noktaları içermez ve yürütülemez.
 
 ### <a name="msbuild"></a>MSBuild
 
-`dotnet build`, projeyi derlemek için MSBuild kullanır, bu nedenle hem paralel hem de artımlı yapıları destekler. Daha fazla bilgi için bkz. [Artımlı derlemeler](/visualstudio/msbuild/incremental-builds).
+`dotnet build`projeyi oluşturmak için MSBuild'i kullanır, böylece hem paralel hem de artımlı yapıyı destekler. Daha fazla bilgi için [Bkz. Artımlı Yapılar.](/visualstudio/msbuild/incremental-builds)
 
-`dotnet build` komutu, seçeneklerine ek olarak, özellikleri ayarlamak için `-p` veya bir günlükçü tanımlamak için `-l` gibi MSBuild seçeneklerini kabul eder. Bu seçenekler hakkında daha fazla bilgi için bkz. [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference). Ayrıca [DotNet MSBuild](dotnet-msbuild.md) komutunu da kullanabilirsiniz.
+Komut, seçeneklerine ek `dotnet build` olarak, özellikleri ayarlama veya `-p` `-l` logger tanımlama gibi MSBuild seçeneklerini de kabul eder. Bu seçenekler hakkında daha fazla bilgi için [MSBuild Komut Satırı Başvurusu'na](/visualstudio/msbuild/msbuild-command-line-reference)bakın. Veya [dotnet msbuild](dotnet-msbuild.md) komutunu da kullanabilirsiniz.
 
-Çalışan `dotnet build`, çalışan `dotnet msbuild -restore`eşdeğerdir; Ancak, çıktının varsayılan ayrıntı düzeyi farklıdır.
+Koşmak `dotnet build` koşmaya `dotnet msbuild -restore`eşdeğerdir; ancak, çıktının varsayılan ayrıntılılığı farklıdır.
 
 ## <a name="arguments"></a>Bağımsız Değişkenler
 
 `PROJECT | SOLUTION`
 
-Derlenecek proje veya çözüm dosyası. Bir proje veya çözüm dosyası belirtilmemişse, MSBuild, *proj* veya *sln* 'de biten bir dosya uzantısına sahip bir dosya için geçerli çalışma dizinini arar ve bu dosyayı kullanır.
+Oluşturmak için proje veya çözüm dosyası. Bir proje veya çözüm dosyası belirtilmemişse, MSBuild *proj* veya *sln* ile biten ve bu dosyayı kullanan bir dosya uzantısı olan bir dosya için geçerli çalışma dizinini arar.
 
 ## <a name="options"></a>Seçenekler
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  Yapı yapılandırmasını tanımlar. Çoğu proje için varsayılan değer `Debug`, ancak projenizde derleme yapılandırma ayarlarını geçersiz kılabilirsiniz.
+  Yapı yapılandırmasını tanımlar. Çoğu proje için `Debug`varsayılan değer, ancak projenizdeki yapı yapılandırma ayarlarını geçersiz kılabilirsiniz.
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Belirli bir [çerçeve](../../standard/frameworks.md)için derlenir. Çerçeve [Proje dosyasında](csproj.md)tanımlanmalıdır.
+  Belirli bir [çerçeve](../../standard/frameworks.md)için derler. Çerçeve [proje dosyasında](csproj.md)tanımlanmalıdır.
 
 - **`--force`**
 
-  Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar. Bu bayrağın belirtilmesi, *Project. varlıklar. JSON* dosyasını silme ile aynıdır.
+  Son geri yükleme başarılı olsa bile tüm bağımlılıkları çözüme kavuşturmaya zorlar. Bu bayrağı *belirtmek, project.assets.json* dosyasını silmekle aynıdır.
 
 - **`-h|--help`**
 
@@ -89,67 +89,67 @@ Derlenecek proje veya çözüm dosyası. Bir proje veya çözüm dosyası belirt
 
 - **`--interactive`**
 
-  Komutun Kullanıcı girişini veya eylemini durdurmasına ve beklemesine izin verir. Örneğin, kimlik doğrulamasını tamamlamaya yönelik. .NET Core 3,0 SDK 'dan beri kullanılabilir.
+  Komutun durmasını ve kullanıcı girişi veya eylemini beklemesini sağlar. Örneğin, kimlik doğrulamasını tamamlamak için. .NET Core 3.0 SDK'dan beri mevcuttur.
 
 - **`--no-dependencies`**
 
-  Projeden projeye (P2P) başvurularını yoksayar ve yalnızca belirtilen kök projeyi oluşturur.
+  Projeden projeye (P2P) başvurularını yoksa ve yalnızca belirtilen kök projeyi oluşturur.
 
 - **`--no-incremental`**
 
-  Derlemeyi Artımlı derleme için güvenli değil olarak işaretler. Bu bayrak, artımlı derlemeyi kapatır ve projenin bağımlılık grafiğinin temiz bir yeniden oluşturulmasına zorlar.
+  Artımlı yapı için yapıyı güvenli olmayan olarak işaretler. Bu bayrak artımlı derlemeyi kapatır ve projenin bağımlılık grafiğini temiz bir yeniden oluşturmaya zorlar.
 
 - **`--no-restore`**
 
-  Derleme sırasında örtük geri yükleme yürütmez.
+  Yapı sırasında örtük bir geri yükleme yürütmez.
 
 - **`--nologo`**
 
-  Başlangıç başlığını veya telif hakkı iletisini görüntülemez. .NET Core 3,0 SDK 'dan beri kullanılabilir.
+  Başlangıç bayrağını veya telif hakkı iletisini görüntülemez. .NET Core 3.0 SDK'dan beri mevcuttur.
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Oluşturulan ikililerin yerleştirileceği dizin. Belirtilmemişse, varsayılan yol `./bin/<configuration>/<framework>/`.  Birden çok hedef çerçevesi olan projeler için (`TargetFrameworks` özelliği aracılığıyla), bu seçeneği belirttiğinizde de `--framework` tanımlamanız gerekir.
+  Yapılı ikililerin yerleştirilen dizin. Belirtilmemişse, varsayılan `./bin/<configuration>/<framework>/`yol .  Birden çok hedef çerçevesi olan `TargetFrameworks` projelerde (özellik üzerinden), bu seçeneği belirttiğinizi de tanımlamanız `--framework` gerekir.
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Hedef çalışma zamanını belirtir. Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md).
+  Hedef çalışma süresini belirtir. Runtime Tanımlayıcıları (RID'ler) listesi için RID [kataloğuna](../rid-catalog.md)bakın.
 
 - **`-v|--verbosity <LEVEL>`**
 
-  MSBuild ayrıntı düzeyi düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`. Varsayılan değer: `minimal`.
+  MSBuild ayrıntılı düzeyini ayarlar. İzin verilen `q[uiet]` `m[inimal]`değerler `n[ormal]` `d[etailed]`, `diag[nostic]`, , , ve . Varsayılan değer: `minimal`.
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 
-  Projeyi oluştururken kullanılacak `$(VersionSuffix)` özelliğinin değerini ayarlar. Bu yalnızca `$(Version)` özelliği ayarlanmamışsa işe yarar. Daha sonra, `$(Version)`, bir çizgiyle ayırarak `$(VersionSuffix)`ile Birleşik `$(VersionPrefix)` ayarlanır.
+  Projeyi `$(VersionSuffix)` yaparken kullanılacak özelliğin değerini ayarlar. Bu yalnızca `$(Version)` özellik ayarlı değilse çalışır. Daha `$(Version)` sonra, bir `$(VersionPrefix)` çizgi `$(VersionSuffix)`ile ayrılmış ile birleştirilir.
 
 ## <a name="examples"></a>Örnekler
 
-- Bir proje ve bağımlılıklarını oluşturun:
+- Bir proje ve bağımlılıkları oluşturun:
 
   ```dotnetcli
   dotnet build
   ```
 
-- Yayın yapılandırması kullanarak bir proje ve bağımlılıklarını oluşturun:
+- Sürüm yapılandırmasını kullanarak bir proje ve bağımlılıkları oluşturun:
 
   ```dotnetcli
   dotnet build --configuration Release
   ```
 
-- Belirli bir çalışma zamanı için bir proje ve bağımlılıklarını oluşturun (Bu örnekte Ubuntu 18,04):
+- Belirli bir çalışma zamanı için proje ve bağımlılıkları oluşturun (bu örnekte, Ubuntu 18.04):
 
   ```dotnetcli
   dotnet build --runtime ubuntu.18.04-x64
   ```
 
-- Projeyi derleyin ve geri yükleme işlemi sırasında belirtilen NuGet paket kaynağını kullanın (.NET Core 2,0 SDK ve sonraki sürümleri):
+- Projeyi oluşturun ve geri yükleme işlemi sırasında belirtilen NuGet paket kaynağını kullanın (.NET Core 2.0 SDK ve sonraki sürümler):
 
   ```dotnetcli
   dotnet build --source c:\packages\mypackages
   ```
 
-- `-p` [MSBuild seçeneğini](#msbuild)kullanarak projeyi derleyin ve derleme parametresi olarak 1.2.3.4 olarak ayarlayın:
+- PROJEYI oluşturun ve `-p` [MSBuild seçeneğini](#msbuild)kullanarak sürüm 1.2.3.4'u yapı parametresi olarak ayarlayın:
 
   ```dotnetcli
   dotnet build -p:Version=1.2.3.4

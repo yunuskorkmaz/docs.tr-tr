@@ -1,42 +1,42 @@
 ---
-title: Ubuntu 16,04 paket yöneticisi 'ne .NET Core 'u yükler-.NET Core
-description: Ubuntu 16,04 ' de .NET Core SDK ve çalışma zamanı yüklemek için bir paket Yöneticisi kullanın.
+title: Ubuntu 16.04 paket yöneticisine .NET Core yükle - .NET Core
+description: .NET Core SDK'yı ve çalışma süresini Ubuntu 16.04'e yüklemek için bir paket yöneticisi kullanın.
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.openlocfilehash: 6038e64a2aa50d09923454e346f05c58a6c1e2fb
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920707"
 ---
-# <a name="ubuntu-1604-package-manager---install-net-core"></a>Ubuntu 16,04 paket yöneticisi-.NET Core 'ı yükler
+# <a name="ubuntu-1604-package-manager---install-net-core"></a>Ubuntu 16.04 Paket Yöneticisi - Install .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-Bu makalede, Ubuntu 16,04 ' de .NET Core yüklemek için bir paket yöneticisi 'nin nasıl kullanılacağı açıklanır. Çalışma zamanını yüklüyorsanız, hem .NET Core 'u hem de ASP.NET Core çalışma zamanlarını içerdiğinden [ASP.NET Core çalışma zamanını](#install-the-aspnet-core-runtime)yüklemenizi öneririz.
+Bu makalede, Ubuntu 16.04'e .NET Core yüklemek için bir paket yöneticisinin nasıl kullanılacağı açıklanmaktadır. Çalışma süresini yüklüyorsanız, hem .NET Core hem de ASP.NET Core [çalışma sürelerini içerdiğinden, ASP.NET Core çalışma süresini](#install-the-aspnet-core-runtime)yüklemenizi öneririz.
 
-## <a name="register-microsoft-key-and-feed"></a>Microsoft anahtar ve akışını Kaydet
+## <a name="register-microsoft-key-and-feed"></a>Microsoft anahtarını ve akışını kaydetme
 
-.NET yüklemeden önce şunları yapmanız gerekir:
+.NET'i yüklemeden önce şunları yapmanız gerekir:
 
-- Microsoft anahtarını kaydettirin.
+- Microsoft anahtarını kaydedin.
 - Ürün deposunu kaydedin.
-- Gerekli bağımlılıkları yükler.
+- Gerekli bağımlılıkları yükleyin.
 
-Bu, makine başına yalnızca bir kez yapılmalıdır.
+Bu işlemin makine başına tek bir kez yapılması yeterlidir.
 
-Bir Terminal açın ve aşağıdaki komutları çalıştırın.
+Bir terminal açın ve aşağıdaki komutları çalıştırın.
 
 ```bash
 wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-## <a name="install-the-net-core-sdk"></a>.NET Core SDK 'i yükler
+## <a name="install-the-net-core-sdk"></a>.NET Core SDK’sını yükleme
 
-Yükleme için kullanılabilen ürünleri güncelleştirin, ardından .NET Core SDK yükleme. Terminalinizde aşağıdaki komutları çalıştırın.
+Yükleme için kullanılabilen ürünleri güncelleştirin ve sonra .NET Core SDK'yı yükleyin. Terminalinizde aşağıdaki komutları çalıştırın.
 
 ```bash
 sudo apt-get update
@@ -46,11 +46,11 @@ sudo apt-get install dotnet-sdk-3.1
 ```
 
 > [!IMPORTANT]
-> **DotNet-SDK-3,1**' i bulamıyor gibi bir hata iletisi alırsanız, bkz. [Paket Yöneticisi sorunlarını giderme](#troubleshoot-the-package-manager) bölümü.
+> **Paket dotnet-sdk-3.1'i bulamayınca**benzer bir hata iletisi alırsanız, [sorun giderme bölümüne](#troubleshoot-the-package-manager) bakın.
 
-## <a name="install-the-aspnet-core-runtime"></a>ASP.NET Core çalışma zamanını yükler
+## <a name="install-the-aspnet-core-runtime"></a>ASP.NET Core çalışma süresini yükleme
 
-Yükleme için kullanılabilen ürünleri güncelleştirin, ardından ASP.NET Core çalışma zamanını yüklemeniz gerekir. Terminalinizde aşağıdaki komutları çalıştırın.
+Yükleme için kullanılabilen ürünleri güncelleştirin ve ardından ASP.NET Core çalışma süresini yükleyin. Terminalinizde aşağıdaki komutları çalıştırın.
 
 ```bash
 sudo apt-get update
@@ -60,11 +60,11 @@ sudo apt-get install aspnetcore-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> Bir hata iletisi alırsanız, **aspnetcore-Runtime-3,1 paketini bulamazsanız**, bkz. [Package Manager sorunlarını giderme](#troubleshoot-the-package-manager) bölümü.
+> **Aspnetcore-runtime-3.1 paketini bulamayınca**benzer bir hata iletisi alırsanız, [Sorun Giderme Bölümü'ne](#troubleshoot-the-package-manager) bakın.
 
-## <a name="install-the-net-core-runtime"></a>.NET Core çalışma zamanını yükler
+## <a name="install-the-net-core-runtime"></a>.NET Core çalışma süresini yükleme
 
-Yükleme için kullanılabilen ürünleri güncelleştirin ve ardından .NET Core çalışma zamanı 'nı yükleme. Terminalinizde aşağıdaki komutları çalıştırın.
+Yükleme için kullanılabilen ürünleri güncelleştirin ve .NET Core çalışma süresini yükleyin. Terminalinizde aşağıdaki komutları çalıştırın.
 
 ```bash
 sudo apt-get update
@@ -74,19 +74,19 @@ sudo apt-get install dotnet-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> **DotNet-Runtime-3,1 bulunamadı**hatasıyla benzer bir hata iletisi alırsanız, [Paket Yöneticisi sorunlarını giderme](#troubleshoot-the-package-manager) bölümüne bakın.
+> **Paket dotnet-runtime-3.1'i bulamayınca**benzer bir hata iletisi alırsanız, [sorun giderme bölümüne](#troubleshoot-the-package-manager) bakın.
 
-## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir
+## <a name="how-to-install-other-versions"></a>Diğer sürümler nasıl yüklenir?
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
-## <a name="troubleshoot-the-package-manager"></a>Paket yöneticisinin sorunlarını giderme
+## <a name="troubleshoot-the-package-manager"></a>Paket yöneticisinin sorun giderme
 
-Bu bölüm, .NET Core 'u yüklemek için Paket Yöneticisi 'ni kullanırken karşılaşabileceğiniz yaygın hatalarla ilgili bilgiler sağlar.
+Bu bölümde, .NET Core'u yüklemek için paket yöneticisini kullanırken karşılaşabileceğiniz sık karşılaşılan hatalar hakkında bilgi verilmektedir.
 
 ### <a name="unable-to-locate"></a>Bulunamıyor
 
-**{.NET Core Package} paketi bulunamadı**hatasıyla benzer bir hata iletisi alırsanız aşağıdaki komutları çalıştırın.
+**{.NET Core paketi} paketini bulamayıncabenzer**bir hata iletisi alırsanız, aşağıdaki komutları çalıştırın.
 
 ```bash
 sudo dpkg --purge packages-microsoft-prod && sudo dpkg -i packages-microsoft-prod.deb
@@ -94,7 +94,7 @@ sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
 
-Bu işe yaramazsa, aşağıdaki komutlarla el ile yüklemeyi çalıştırabilirsiniz.
+Bu işe yaramazsa, aşağıdaki komutları içeren bir el ile yükleme çalıştırabilirsiniz.
 
 ```bash
 sudo apt-get install -y gpg

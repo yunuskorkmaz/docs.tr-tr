@@ -1,24 +1,24 @@
 ---
-title: özel korumalı C# başvuru
+title: özel korumalı - C# Referans
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: a73d61712075cf24d2b94c505104df1fade629e9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713215"
 ---
-# <a name="private-protected-c-reference"></a>özel korumalı (C# başvuru)
+# <a name="private-protected-c-reference"></a>özel korumalı (C# Reference)
 
-`private protected` anahtar sözcük birleşimi bir üye erişim değiştiricisidir. Özel korumalı bir üyeye, kapsayan sınıftan türetilmiş türler tarafından erişilebilir, ancak yalnızca kendi kapsayıcı bütünleştirilmiş kodu içinde erişilebilir. Diğer erişim değiştiricilerine sahip `private protected` bir karşılaştırması için bkz. [Erişilebilirlik düzeyleri](accessibility-levels.md).
+`private protected` Anahtar kelime birleşimi bir üye erişim değiştiricidir. Özel korumalı bir üye, içerdiği sınıftan türetilen türlere, ancak yalnızca kendi içderlemesi içinde erişilebilir. Diğer erişim `private protected` değiştiriciler ile karşılaştırma için [Erişilebilirlik Düzeyleri'ne](accessibility-levels.md)bakın.
 
 > [!NOTE]
-> `private protected` erişim değiştiricisi C# sürüm 7,2 ve üzeri sürümlerde geçerlidir.
+> Erişim `private protected` değiştirici C# sürüm 7.2 ve sonraki sürümlerinde geçerlidir.
 
 ## <a name="example"></a>Örnek
 
-Bir temel sınıfın özel korumalı bir üyesine, yalnızca değişkenin statik türü türetilmiş sınıf türü ise, kendisini kapsayan derlemede bulunan türetilmiş türlerden erişilebilir. Örneğin, aşağıdaki kod kesimini göz önünde bulundurun:  
+Taban sınıfın özel korumalı üyesine, yalnızca değişkenin statik türü türetilmiş sınıf türüyse, içerdiği derlemedeki türetilmiş türlerden erişilebilir. Örneğin, aşağıdaki kod kesimini göz önünde bulundurun:  
 
 ```csharp
 // Assembly1.cs  
@@ -58,11 +58,11 @@ class DerivedClass2 : BaseClass
 }
 ```
 
-Bu örnek, `Assembly1.cs` ve `Assembly2.cs`iki dosya içerir.
-İlk dosya, bir ortak temel sınıf, `BaseClass`ve ondan türetilmiş bir tür içerir, `DerivedClass1`. `BaseClass`, `myValue``DerivedClass1` iki şekilde erişmeye çalıştığı özel korumalı bir üyeye sahip. Bir `BaseClass` örneği üzerinden `myValue` ilk kez erişme girişimi bir hata üretir. Ancak, bunu `DerivedClass1` devralınmış üye olarak kullanma girişimi başarılı olur.
-İkinci dosyada, `DerivedClass2` devralınmış bir `myValue` erişme girişimi yalnızca Assembly1 içindeki türetilmiş türler tarafından erişilebilir olduğundan bir hata üretir.
+Bu örnekte iki `Assembly1.cs` `Assembly2.cs`dosya ve .
+İlk dosya, ortak taban `BaseClass`sınıf ve ondan türetilen `DerivedClass1`bir tür içerir. `BaseClass`iki şekilde erişmeye `myValue`çalışan `DerivedClass1` özel bir korumalı üyesi ne sahiptir. Bir örnek üzerinden `myValue` erişmek için `BaseClass` ilk girişimi bir hata üretecek. Ancak, kalıtsal bir üye olarak kullanma `DerivedClass1` girişimi başarılı olacaktır.
+İkinci dosyada, devralınan `myValue` bir üye `DerivedClass2` olarak erişme girişimi, yalnızca Derleme1'de türetilen türler tarafından erişilebilir olduğundan bir hata üretir.
 
-Struct devralınamadığı için yapı üyeleri `private protected` olamaz.  
+Yapı üyeleri, yapının devralınamayacağı için olamaz. `private protected`  
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -70,13 +70,13 @@ Struct devralınamadığı için yapı üyeleri `private protected` olamaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../index.md)
+- [C# Referans](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Sözcükleri](index.md)
+- [C# Anahtar Kelimeler](index.md)
 - [Erişim Değiştiricileri](access-modifiers.md)
 - [Erişilebilirlik Düzeyleri](accessibility-levels.md)
 - [Değiştiriciler](index.md)
-- [public](public.md)
-- [private](private.md)
-- [internal](internal.md)
-- [İç sanal anahtar sözcüklere yönelik güvenlik sorunları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))
+- [Kamu](public.md)
+- [Özel](private.md)
+- [Iç](internal.md)
+- [Dahili sanal anahtar kelimeler için güvenlik endişeleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

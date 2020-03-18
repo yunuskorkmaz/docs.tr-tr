@@ -1,5 +1,5 @@
 ---
-title: Bağlamsal anahtar sözcüğe göre C# -başvuru
+title: bağlamsal anahtar kelimeye göre - C# Reference
 ms.date: 07/20/2015
 f1_keywords:
 - by
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - by keyword [C#]
 ms.assetid: efe6f0e3-be40-4df2-a144-c7db968ae052
 ms.openlocfilehash: 4fa32a0dbfd8210ef8537aee849a55414b107a7b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713728"
 ---
 # <a name="by-c-reference"></a>by (C# Başvurusu)
 
-`by` bağlamsal anahtar sözcüğü, döndürülen öğelerin nasıl gruplanacağını belirtmek için bir sorgu ifadesindeki `group` yan tümcesinde kullanılır. Daha fazla bilgi için bkz. [Group yan tümcesi](./group-clause.md).
+İçeriksel `by` anahtar kelime, iade `group` edilen öğelerin nasıl gruplandırılmak gerektiğini belirtmek için sorgu ifadesindeki yan tümcede kullanılır. Daha fazla bilgi için [grup yan tümcesi'ne](./group-clause.md)bakın.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, öğrencilerin her öğrencinin son adının ilk harfine göre gruplanacağını belirtmek için bir `group` yan tümcesinde `by` bağlamsal anahtar sözcüğünün kullanımını gösterir.
+Aşağıdaki örnek, öğrencilerin her `by` öğrencinin soyadının `group` ilk harfine göre gruplandırılmak gerektiğini belirtmek için bir yan tümcedeki bağlamsal anahtar kelimenin kullanımını gösterir.
 
 [!code-csharp[csrefKeywordsContextual#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#10)]
 

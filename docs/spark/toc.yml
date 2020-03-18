@@ -1,6 +1,6 @@
 - name: Apache Spark için .NET Kılavuzu
   href: index.yml
-- name: Genel Bakış
+- name: Genel bakış
   expanded: true
   items:
     - name: Apache Spark nedir?
@@ -9,7 +9,7 @@
       href: what-is-apache-spark-dotnet.md
 - name: Öğreticiler
   items:
-    - name: Kullanmaya başlayın
+    - name: Başlangıç
       href: tutorials/get-started.md
     - name: Azure HDInsight’a dağıtma
       href: tutorials/hdinsight-deployment.md

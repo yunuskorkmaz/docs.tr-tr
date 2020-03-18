@@ -1,109 +1,109 @@
 ---
 title: Mimari ilkeleri
-description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Mimari ilkeler
+description: ASP.NET Core ve Azure ile Mimar Modern Web Uygulamaları | Mimari ilkeler
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
 ms.openlocfilehash: ffc890bf8cd6b07bd70d8fc7b2b8cfeaf474ae35
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77450277"
 ---
 # <a name="architectural-principles"></a>Mimari ilkeleri
 
-> "Oluşturucular, programcıların programlar yazdığı şekilde bina gerçekleştirmişse, birlikte gelen ilk Woodpecker, Civil 'ı yok eder."  
-> _\- Gerald Weinberg_
+> "Eğer inşaatçılar programcıların program yazdığı gibi binalar inşa ederlerse, o zaman ortaya çıkan ilk ağaçkakan uygarlığı yok ederdi."  
+> _\-Gerald Weinberg_
 
-Bakım yaparken yazılım çözümlerini mimariyle mimarın ve tasarlayabilmelisiniz. Bu bölümde özetlenen ilkeler, temiz ve sürdürülebilir uygulamalara yol açacak mimari kararlara kılavuzluk etmenize yardımcı olabilir. Genellikle, bu ilkeler, uygulamanızın diğer bölümlerine sıkı bir şekilde bağlı olmayan, ancak açık arabirimler veya mesajlaşma sistemleri aracılığıyla iletişim kuran ayrık bileşenlerden uygulamalar oluşturmaya nasıl kılavuzluk eder.
+Yazılım çözümlerini akılda takılmalı ve tasarlamalısınız. Bu bölümde özetlenen ilkeler, temiz ve bakımı yla sonuçlanacak mimari kararlara doğru size rehberlik edebilir. Genel olarak, bu ilkeler, uygulamanızın diğer bölümleriyle sıkı bir şekilde birleşen, ancak açık arabirimler veya ileti sistemleri aracılığıyla iletişim kuramayan ayrı bileşenlerden uygulamalar oluşturmanıza yönelik tir.
 
 ## <a name="common-design-principles"></a>Ortak tasarım ilkeleri
 
-### <a name="separation-of-concerns"></a>Kaygıları ayırma
+### <a name="separation-of-concerns"></a>Endişelerin ayrılması
 
-Geliştirme, **kaygılara ayrımı**olduğunda bir temel ilke. Bu ilke, yazılımın gerçekleştirdiği iş türlerine göre ayrılması gerektiğini onaylar. Örneğin, kullanıcıya görüntülenecek önemli öğeleri tanımlamaya yönelik mantığı ve bu tür öğeleri daha dikkat çekici hale getirmek için belirli bir şekilde biçimlendiren bu uygulamayı düşünün. Yalnızca birbirleriyle ilişkili olan ayrı konular olduğundan, hangi öğelerin biçimlendirileceğini seçmekten sorumlu davranış, öğelerin biçimlendirmesinden sorumlu davranışlardan ayrı tutulmalıdır.
+Geliştirirken yol gösterici bir ilke **Kaygıların Ayrılmasıdır.** Bu ilke, yazılımın gerçekleştirdiği çalışma türlerine göre ayrılması gerektiğini ileri sürmelidir. Örneğin, kayda değer öğeleri kullanıcıya görüntülemek için tanımlama mantığı içeren ve bu tür öğeleri daha belirgin hale getirmek için belirli bir şekilde biçimlendiren bir uygulama düşünün. Biçimlendirilecek öğelerin seçilmesinden sorumlu davranış, öğeleri biçimlendirmekten sorumlu davranıştan ayrı tutulmalıdır, çünkü bunlar yalnızca tesadüfen birbiriyle ilişkili olan ayrı kaygılardır.
 
-Mimari türsel uygulamalar, temel iş davranışını altyapı ve Kullanıcı arabirimi mantığından ayırarak bu ilkeyi izlemek üzere mantıksal olarak derlenebilir. İdeal olarak, iş kuralları ve Logic, uygulamadaki diğer projelere bağlı olmaması gereken ayrı bir projede yer almalıdır. Bu, iş modelinin test etmek kolay olduğundan ve alt düzey uygulama ayrıntılarına sıkı bir şekilde yönlendirilmeden geliştirilebilen sağlanmasına yardımcı olur. Kaygıları ayrımı, uygulama mimarilerinde katmanların kullanımı arkasında önemli bir noktadır.
+Mimari olarak, uygulamalar temel iş davranışını altyapı ve kullanıcı arabirimi mantığından ayırarak bu ilkeyi takip etmek için mantıksal olarak oluşturulabilir. İdeal olarak, iş kuralları ve mantığı, uygulamadaki diğer projelere bağlı olmayan ayrı bir projede yer almalıdır. Bu, iş modelinin test edilmesinin kolay olmasını ve düşük düzeyli uygulama ayrıntılarıyla sıkı bir şekilde birleştirilmeden gelişebilmesini sağlamaya yardımcı olur. Endişelerin ayrılması, uygulama mimarilerinde katmanların kullanımının ardındaki önemli bir husustur.
 
-### <a name="encapsulation"></a>Kapsül
+### <a name="encapsulation"></a>Kapsülleme
 
-Uygulamanın farklı bölümlerinin uygulamanın diğer bölümlerinden yalıtılmış olması için **kapsülleme** kullanması gerekir. Dış sözleşmelerin ihlal olmaması koşuluyla, uygulama bileşenleri ve katmanları, kendi ortak bileşenlerini bozmadan iç uygulamasını ayarlayabilmelidir. Doğru kapsülleme kullanımı, nesne ve paketlerin farklı uygulamalarla değiştirilmesini sağlamak için uygulama tasarımlarında gevşek Pave modülerlik sağlamaya yardımcı olur.
+Bir uygulamanın farklı bölümleri, uygulamanın diğer bölümlerinden izole etmek için **kapsülleme** kullanmalıdır. Uygulama bileşenleri ve katmanları, dış sözleşmeler ihlal edilmedikçe, işbirlikçilerini bozmadan kendi iç uygulamalarını ayarlayabilmelidir. Nesneler ve paketler aynı arabirim korununca alternatif uygulamalarla değiştirilebildiği için, kapsüllemenin doğru kullanımı uygulama tasarımlarında gevşek bağlantı ve modülerlik elde edilmesine yardımcı olur.
 
-Sınıflarda, sınıfın iç durumuna erişimi dışarıdan kısıtlamak için kapsülleme elde edilir. Bir dış aktör nesnenin durumunu işlemek istiyorsa, nesnenin özel durumuna doğrudan erişim sağlamak yerine iyi tanımlanmış bir işlev (veya özellik ayarlayıcısı) aracılığıyla bunu yapması gerekir. Benzer şekilde, uygulama bileşenlerinin ve uygulamaların kendisi, durumunun doğrudan değiştirilmesine izin vermek yerine, kendi ortak çalışanları için iyi tanımlanmış arabirimler kullanıma sunmalıdır. Bu, uygulamanın dahili tasarımını zaman içinde geliştikçe, genel sözleşmelerin bakımını yaptığı sürece iş çalışanları kesintiye uğratır.
+Sınıflarda kapsülleme, sınıfın iç durumuna dışarıdan erişimsınırılarak elde edilir. Dışarıdan bir aktör nesnenin durumunu işlemek istiyorsa, bunu nesnenin özel durumuna doğrudan erişim yerine iyi tanımlanmış bir işlev (veya özellik ayarlayıcısı) aracılığıyla yapmalıdır. Aynı şekilde, uygulama bileşenleri ve uygulamaları kendilerini kendi durumu doğrudan değiştirilmesine izin yerine, kendi ortak kullanmak için iyi tanımlanmış arabirimleri ortaya çıkarmalıdır. Bu, kamu sözleşmeleri sürdürülde kadar, uygulamanın iç tasarımının zaman içinde gelişmesini sağlar.
 
-### <a name="dependency-inversion"></a>Bağımlılık Inversion
+### <a name="dependency-inversion"></a>Bağımlılık inversiyon
 
-Uygulamanın içindeki bağımlılığın yönü, uygulama ayrıntıları değil soyutlama yönünde olmalıdır. Çoğu uygulama, çalışma zamanı yürütme yönündeki derleme zamanı bağımlılığı akışları gibi yazılır. Bu, doğrudan bağımlılık grafiği oluşturur. Diğer bir deyişle, A modülü C modülünde bir işlevi çağıran Modül B 'de bir işlev çağırırsa, sonra da şekil 4-1 ' de gösterildiği gibi C 'ye bağlı olan B 'ye bağlı olur.
+Uygulama içindeki bağımlılık yönü, uygulama ayrıntıları değil, soyutlama yönünde olmalıdır. Çoğu uygulama, çalışma zamanı yürütme yönünde zaman bağımlılık akışlarını derleyen şekilde yazılır. Bu, doğrudan bağımlılık grafiği üretir. Diğer bir deyişle, A modülü B modülünde bir işlev çağırırsa, c modülünde bir işlev çağırırsa, derleme zamanında A, Şekil 4-1'de gösterildiği gibi C'ye bağlı olacak olan B'ye bağlıdır.
 
 ![Doğrudan bağımlılık grafiği](./media/image4-1.png)
 
 **Şekil 4-1.** Doğrudan bağımlılık grafiği.
 
-Bağımlılık Inversion ilkesini uygulamak, bir soyutlamalarda b 'nin uyguladığı bir soyutlama üzerinde Yöntemler çağırmasının yanı, bir A 'nın çalışma zamanında B çağrısı yapmasını olanaklı hale getirir, ancak B için derleme zamanında bir tarafından denetlenen arabirime bağımlı olur (Bu nedenle, tipik derleme zamanı bağımlılığını *tersine çevirme* ). Çalışma zamanında, program yürütme akışı değişmeden kalır, ancak arabirimlerin tanıtımı bu arabirimlerin farklı uygulamalarının kolayca takılmasına yol açabilir.
+Bağımlılık inversiyon ilkesinin uygulanması, A'nın B'nin uyguladığı bir soyutlama üzerinde metod lar çağırmasına olanak tanır, bu da A'nın çalışma zamanında B'yi aramasını, ancak B'nin derleme zamanında A tarafından denetlenen bir arabirime (böylece tipik derleme zamanı bağımlılığını *tersine çevirme)* bağlı olmasını sağlar. Çalışma zamanında, program yürütme akışı değişmeden kalır, ancak arabirimlerin giriş bu arabirimlerin farklı uygulamaları kolayca takılabilir anlamına gelir.
 
 ![Ters bağımlılık grafiği](./media/image4-2.png)
 
 **Şekil 4-2.** Ters bağımlılık grafiği.
 
-**Bağımlılık Inversion** , gevşek olarak bağlanmış uygulamalar oluşturmanın önemli bir parçasıdır. bu sayede uygulama ayrıntıları, diğer bir yöntem yerine daha yüksek düzeyli soyutlamalar uygulamak üzere yazılabilir. Elde edilen uygulamalar daha kararlı, modüler ve sonuç olarak sürdürülebilir. Bağımlılık/sürüm prensibi ile *bağımlılık ekleme* yöntemi mümkündür.
+**Bağımlılık ters çevirme,** uygulama ayrıntıları başka bir yol yerine, daha üst düzey soyutlamalara bağlı olacak ve uygulayacak şekilde yazılabilir olduğundan, gevşek birleştirilmiş uygulamalar oluşturmanın önemli bir parçasıdır. Ortaya çıkan uygulamalar daha test edilebilir, modüler ve sonuç olarak korunabilir. *Bağımlılık enjeksiyonu* uygulaması bağımlılık inversiyon prensibini izleyerek mümkün kılınır.
 
 ### <a name="explicit-dependencies"></a>Açık bağımlılıklar
 
-**Yöntemler ve sınıflar, doğru çalışması için ihtiyaç duydukları tüm işbirliği nesneleri açıkça gerektirmelidir.** Sınıf oluşturucular, sınıfların geçerli bir durumda olması ve düzgün çalışması için ihtiyaç duydukları şeyleri belirlemesine yönelik bir fırsat sağlar. Oluşturulabilecek ve çağrılabilen sınıflar tanımlarsanız ancak bu, yalnızca belirli küresel veya altyapı bileşenleri mevcutsa düzgün şekilde çalışır, ancak bu sınıflar *istemcilerle birlikte kabul* edilir. Oluşturucu sözleşmesi, istemciye yalnızca belirtilen şeyleri (sınıf parametresiz bir Oluşturucu kullanıyorsa Nothing) ister, daha sonra çalışma zamanında nesneyi, başka bir şeye ihtiyaç duyması durumunda olduğunu bildiriyor.
+**Yöntemler ve sınıflar, düzgün çalışabilmek için ihtiyaç duydukları ortak nesneleri açıkça gerektirmelidir.** Sınıf oluşturucuları, sınıfların geçerli bir durumda olmak ve düzgün bir şekilde çalışabilmeleri için ihtiyaç duydukları şeyleri tanımlamaları için bir fırsat sağlar. Oluşturulabilen ve çağrılabilen, ancak yalnızca belirli genel veya altyapı bileşenleri yerindeyse düzgün çalışacak sınıfları tanımlarsanız, bu sınıflar istemcilerine *karşı dürüst olmaktan* değildir. Oluşturucu sözleşme yalnızca belirtilen şeyler (sınıf sadece parametresiz bir yapıcı kullanıyorsa muhtemelen hiçbir şey) ihtiyacı istemci söylüyor, ama sonra çalışma zamanında nesne gerçekten başka bir şey ihtiyacı olduğu ortaya çıkıyor.
 
-Açık bağımlılıklar ilkesini izleyerek, sınıflarınız ve yöntemleriniz, işlevleri çalışması için ihtiyaç duydukları gibi istemcilerle birlikte kullanılır. Bu, kodunuzun daha kolay belgelendikleri ve kodlarınızın, yöntem veya Oluşturucu parametreleri biçiminde gerekli olanları sağladıklarında güveneceği ve üzerinde çalıştıkları nesneler olduğu sürece daha fazla Kullanıcı dostu hale gelmesine neden olur. çalışma zamanında düzgün şekilde.
+Açık bağımlılıklar ilkesini izleyerek, sınıflarınız ve yöntemleriniz, işleyebilmek için ihtiyaç duydukları şey konusunda müşterilerine karşı dürüst oluyorlar. Bu, kodunuzu daha kendi kendine belgeleme ve kodlama sözleşmelerinizi daha kullanıcı dostu hale getirir, çünkü kullanıcılar yöntem veya yapıcı parametreleri şeklinde gerekli olan şeyi sağladıkları sürece, çalıştıkları nesnelerin çalışacağına güvenirler çalışma zamanında doğru bir şekilde.
 
 ### <a name="single-responsibility"></a>Tek sorumluluk
 
-Tek sorumluluk ilkesi, nesne odaklı tasarım için geçerlidir, ancak sorunların ayrılılmasına benzer bir mimari prensibi olarak da düşünülebilir. Nesnelerin yalnızca bir sorumluluğu olması gerektiğini ve yalnızca bir sorumluluğun olması gerektiğini belirtir. Özellikle, nesnenin değiştirilmesi gereken tek durum, bir sorumluluğu tek bir sorumluluğu gerçekleştirmelidir. Bu prensibi, daha gevşek bir şekilde bağlanmış ve modüler sistemler oluşturulmasına yardımcı olur, çünkü birçok yeni davranış, mevcut sınıflara ek sorumluluk eklemek yerine yeni sınıflar olarak uygulanırlar. Yeni sınıflar eklemek, hiçbir kod henüz yeni sınıflara bağlı olmadığından, her zaman var olan sınıfları değiştirmekle daha güvenlidir.
+Tek sorumluluk ilkesi nesne yönelimli tasarım için geçerlidir, ancak aynı zamanda kaygıların ayrılmasına benzer bir mimari ilke olarak da düşünülebilir. Nesnelerin tek bir sorumluluğu olması gerektiğini ve değişmek için tek bir nedenleri olması gerektiğini belirtir. Özellikle, nesnenin değişmesi gereken tek durum, tek bir sorumluluğu gerçekleştirme biçiminin güncellenmesi gerektiğidir. Bu ilkeyi izleyerek daha gevşek birleştirilmiş ve modüler sistemler üretmek için yardımcı olur, yeni davranış birçok türde yeni sınıflar olarak uygulanabilir, yerine mevcut sınıflara ek sorumluluk ekleyerek. Yeni sınıflar eklemek, henüz yeni sınıflara bağlı olmadığından, varolan sınıfları değiştirmekten her zaman daha güvenlidir.
 
-Tek parçalı bir uygulamada, tek sorumluluk ilkesini uygulamadaki katmanlara yüksek düzeyde uygulayabiliriz. Sunum sorumluluğu, veri erişimi sorumluluğunun bir altyapı projesi içinde tutulması gerektiği sırada, Kullanıcı arabirimi projesinde kalmalıdır. İş mantığı, kolayca test edileceği ve diğer sorumluluklardan bağımsız olarak gelişebilecekleri uygulama çekirdeği projesinde tutulmalıdır.
+Yekpare bir uygulamada, uygulamadaki katmanlara yüksek düzeyde tek sorumluluk ilkesini uygulayabiliriz. Sunum sorumluluğu UI projesinde kalırken, veri erişim sorumluluğu bir altyapı projesi içinde tutulmalıdır. İş mantığı, kolayca test edilebildiği ve diğer sorumluluklardan bağımsız olarak gelişebildiği uygulama temel projesinde tutulmalıdır.
 
-Bu ilke uygulama mimarisine uygulandığında ve mantıksal uç noktasına götürülürsünüz, mikro hizmetleri alırsınız. Belirli bir mikro hizmet tek bir sorumluluğa sahip olmalıdır. Bir sistemin davranışını genişletmenize ihtiyacınız varsa, var olan bir sorumluluğu eklemek yerine daha fazla mikro hizmet ekleyerek bunu yapmak genellikle daha iyidir.
+Bu ilke uygulama mimarisine uygulandığında ve mantıksal bitiş noktasına alındığında, mikro hizmetler alırsınız. Belirli bir mikro hizmetin tek bir sorumluluğu olmalıdır. Bir sistemin davranışını genişletmeniz gerekiyorsa, varolan bir sisteme sorumluluk eklemek yerine ek mikro hizmetler ekleyerek bunu yapmak genellikle daha iyidir.
 
-[Mikro hizmet mimarisi hakkında daha fazla bilgi edinin](https://aka.ms/MicroservicesEbook)
+[Mikro hizmetler mimarisi hakkında daha fazla bilgi edinin](https://aka.ms/MicroservicesEbook)
 
-### <a name="dont-repeat-yourself-dry"></a>Kendinizi yinelemeyin (kuru)
+### <a name="dont-repeat-yourself-dry"></a>Kendinizi tekrar etmeyin (DRY)
 
-Uygulama, sık karşılaşılan hataların bir kaynağı olduğundan, birden çok yerde belirli bir kavram ile ilgili davranışları belirtmekten kaçınmalıdır. Bir noktada, gereksinimlerde bir değişiklik bu davranışın değiştirilmesini gerektirir ve davranışın en az bir örneğinin güncelleştirilemeyebilir, sistemin tutarsız davranışına neden olur.
+Uygulama, sık karşılaşılan bir hata kaynağı olduğundan, belirli bir kavramla ilgili davranışı birden çok yerde belirtmekten kaçınmalıdır. Bir noktada, gereksinimlerde bir değişiklik bu davranışın değiştirilmesini gerektirir ve davranışın en az bir örneğinin güncelleştirileme olasılığı sistemin tutarsız davranışına neden olur.
 
-Mantığı çoğaltmak yerine bir programlama yapısında kapsülleyebilirsiniz. Bu davranış üzerinde tek bir yetki oluşturun ve uygulamanın bu davranışı gerektiren başka bir bölümü yeni yapıyı kullanın.
+Mantığı çoğaltmak yerine, bir programlama yapısına dahil edin. Bu yapıyı bu davranış üzerinde tek bir yetki oluşturmayı ve bu davranışı gerektiren uygulamanın başka bir bölümünün yeni yapıyı kullanmasını sağlayabilir.
 
 > [!NOTE]
-> Yalnızca tesadüfen yinelenen bir davranışı bağlamaktan kaçının. Örneğin, yalnızca iki farklı sabit değerin aynı değere sahip olması nedeniyle, kavramsal olarak farklı şeylere başvurduklarında yalnızca bir sabit değeri olması gerekir.
+> Yalnızca tesadüfen yinelenen birlikte davranışı bağlamaktan kaçının. Örneğin, iki farklı sabitin her ikisinin de aynı değere sahip olması, kavramsal olarak farklı şeylere atıfta bulunarak yalnızca bir sabitiniz olması gerektiği anlamına gelmez.
 
-### <a name="persistence-ignorance"></a>Kalıcılık Ignorance
+### <a name="persistence-ignorance"></a>Sebat cehalet
 
-**Kalıcılık Ignorance** (PI), kalıcı olması gereken türlere başvurur, ancak kodu Kalıcılık teknolojisi seçimi tarafından etkilenmemiştir. .NET 'teki bu tür türler, belirli bir temel sınıftan devralması veya belirli bir arabirim uygulamak zorunda olmadıkları için bazen düz eski CLR nesneleri (POCOs) olarak adlandırılır. Aynı iş modelinin birden çok şekilde kalıcı olmasını sağladığından, uygulama için ek esneklik sunarak Kalıcılık kalıcılığı önem taşır. Kalıcılık seçimleri zaman içinde, bir veritabanı teknolojisinden diğerine değişebilir ya da uygulamanın başladığı her şeyi (örneğin, bir Redsıs önbelleği veya Azure Cosmos DB ek olarak ilişkisel veritabanı).
+**Kalıcılık cehaleti** (PI), kalıcı olması gereken, ancak kodu kalıcılık teknolojisinin seçiminden etkilenmeyen türleri ifade eder. .NET'teki bu tür türler bazen Düz Eski CLR Nesneleri (POCOs) olarak adlandırılır, çünkü belirli bir taban sınıftan devralmaları veya belirli bir arabirim uygulamaları gerekmez. Aynı iş modelinin birden fazla şekilde devam etmesine izin verdiği için kalıcı lık cehaleti değerlidir ve uygulamaya ek esneklik sağlar. Kalıcılık seçenekleri zaman içinde değişebilir, bir veritabanı teknolojisinden diğerine veya uygulamanın başladığı şeye ek olarak ek kalıcılık biçimleri gerekebilir (örneğin, bir Redis önbelleği veya Azure Cosmos DB'si ilişkisel veritabanı).
 
-Bu ilkeye yönelik ihlallere örnek olarak şunlar verilebilir:
+Bu ilkenin ihlaline örnek olarak şunlar verilebilir:
 
-- Gerekli bir temel sınıf.
+- Gerekli bir taban sınıf.
 
-- Gerekli bir arabirim uygulamasıdır.
+- Gerekli bir arayüz uygulaması.
 
-- Kendilerini kaydetmekten sorumlu sınıflar (örneğin, etkin kayıt deseninin).
+- Kendilerini kaydetmekten sorumlu sınıflar (Etkin Kayıt deseni gibi).
 
-- Parametresiz Oluşturucu gerekli.
+- Gerekli parametresiz yapıcı.
 
-- Sanal anahtar sözcük gerektiren özellikler.
+- Sanal anahtar kelime gerektiren özellikler.
 
 - Kalıcılığa özgü gerekli öznitelikler.
 
-Sınıfların yukarıdaki özelliklerden veya davranışların herhangi birine sahip olması, kalıcı hale getirilmesi gereken türler ve kalıcılık teknolojileri seçimi arasında bir kuponu ekleyerek yeni veri erişim stratejilerini daha da benimsemeyi daha kolay hale getirir.
+Sınıfların yukarıdaki özelliklerden veya davranışlardan herhangi birine sahip olması gereksinimi, kalıcılık teknolojisinin seçimi ile kalıcılık teknolojisinin seçimi arasındaki bağlantıyı ekler ve gelecekte yeni veri erişim stratejilerinin benimsenmesini zorlaştırır.
 
-### <a name="bounded-contexts"></a>Sınırlanmış bağlamlar
+### <a name="bounded-contexts"></a>Sınırlı bağlamlar
 
-**Sınırlanmış bağlamlar** , etki alanı odaklı tasarımda merkezi bir modeldir. Bu kişiler, büyük uygulamalarda veya kuruluşlarda, farklı kavramsal modüllere kadar bölmek için bir yol sağlar. Her kavramsal modül daha sonra diğer bağlamlardan ayrılan (Bu nedenle, sınırlı) bir bağlamı temsil eder ve bağımsız olarak gelişebilirler. Her sınırlanmış bağlam, içindeki kavramlar için kendi adlarını seçmek üzere ideal olmalıdır ve kendi kalıcılık deposuna özel erişime sahip olmalıdır.
+**Sınırlı bağlamlar** Etki Alanı Odaklı Tasarım'da merkezi bir desendir. Büyük uygulamalarda veya kuruluşlarda karmaşıklığı ayrı kavramsal modüllere ayırarak karmaşıklıkla başa çıkmanın bir yolunu sağlarlar. Her kavramsal modül daha sonra diğer bağlamlardan (dolayısıyla sınırlanmış) ayrılan ve bağımsız olarak evrimleşebilen bir bağlamı temsil eder. Her sınırlı bağlam ideal olarak içindeki kavramlar için kendi adlarını seçmekte özgür olmalı ve kendi kalıcılık deposuna özel erişime sahip olmalıdır.
 
-En azından, bireysel Web uygulamaları, bir veritabanını diğer uygulamalarla paylaşmak yerine kendi iş modeliyle ilgili kendi Kalıcılık depolarıyla birlikte kendi sınırlı bağlamlarına sahip olmaya devam etmelidir. Sınırlanmış bağlamlar arasındaki iletişim, paylaşılan bir veritabanı yerine, iş mantığı ve olayların gerçekleşen değişikliklere yanıt olarak gerçekleşmesini sağlayan, paylaşılan bir veritabanı yerine programlı arabirimler aracılığıyla oluşur. Sınırlanmış bağlamlar, mikro hizmetlere yakın bir şekilde eşlenir ve ayrıca kendi kendine sınırlanmış bağlamlar olarak ideal şekilde uygulanır.
+En azından, tek tek web uygulamaları, diğer uygulamalarla bir veritabanı paylaşmak yerine, kendi iş modeli için kendi kalıcılık deposu ile kendi sınırlı bağlamı olmak için çaba göstermelidir. Sınırlı bağlamlar arasındaki iletişim, iş mantığının ve olayların gerçekleşen değişikliklere yanıt olarak gerçekleşmesine olanak tanıyan paylaşılan bir veritabanı yerine programlı arabirimler aracılığıyla gerçekleşir. Sınırlı bağlamlar, ideal olarak kendi bireysel sınırlı bağlamları olarak da uygulanan mikro hizmetlerle yakından eşlenir.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- [JAVA tasarım desenleri: Ilkeler](https://java-design-patterns.com/principles/)
-- [Sınırlanmış bağlam](https://martinfowler.com/bliki/BoundedContext.html)
+- [JAVA Tasarım Desenleri: İlkeler](https://java-design-patterns.com/principles/)
+- [Sınırlı Bağlam](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
 >[Önceki](choose-between-traditional-web-and-single-page-apps.md)
->[İleri](common-web-application-architectures.md)
+>[Sonraki](common-web-application-architectures.md)

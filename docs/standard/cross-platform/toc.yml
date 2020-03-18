@@ -1,4 +1,4 @@
-- name: Çoklu Platformlar için Geliştirme
+- name: Birden Çok Platform için Geliştirme
   href: index.md
   items:
     - name: Taşınabilir Sınıf Kitaplığı

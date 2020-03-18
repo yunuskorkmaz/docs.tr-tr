@@ -1,21 +1,21 @@
 ---
-title: Belirli bir özniteliğe (C#) sahip bir öğe bulma
+title: Belirli bir özniteliğe (C#) sahip bir öğe yi bulma
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
 ms.openlocfilehash: 106885b8658c493caab3101e6b4ce921589076eb
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141156"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Belirli bir özniteliğe (C#) sahip bir öğe bulma
-Bu konu, belirli bir değere sahip bir özniteliğe sahip olan bir öğenin nasıl bulunacağını gösterir.  
+# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Belirli bir özniteliğe (C#) sahip bir öğe yi bulma
+Bu konu, belirli bir değere sahip bir özniteliğe sahip bir öğeyi nasıl bulacağımı gösterir.  
   
 ## <a name="example"></a>Örnek  
- Örnek, "Faturalandırma" değerine sahip bir `Type` özniteliğine sahip `Address` öğesinin nasıl bulunacağını gösterir.  
+ Örnek, "Faturalama" `Address` değeri olan `Type` bir özniteliği olan öğeyi nasıl bulabileceğinizi gösterir.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: tipik satın alma siparişi (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Tipik SatınAlma Siparişi (LINQ-XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrder.xml");  
@@ -41,9 +41,9 @@ foreach (XElement el in address)
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (C#LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
+ Aşağıdaki örnek, ad alanında olan XML için aynı sorguyu gösterir. Daha fazla bilgi için [Bkz. NameSpaces Genel Bakış (LINQ - XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanında tipik satın alma siparişi](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Ad alanında Tipik Satın Alma Siparişi.](./sample-xml-file-typical-purchase-order-in-a-namespace.md)  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrderInNamespace.xml");  
@@ -73,5 +73,5 @@ foreach (XElement el in address)
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Standart sorgu Işleçlerine genelC#bakış ()](./standard-query-operators-overview.md)
-- [Projeksiyon Işlemleri (C#)](./projection-operations.md)
+- [Standart Sorgu Operatörlerine Genel Bakış (C#)](./standard-query-operators-overview.md)
+- [Projeksiyon İşlemleri (C#)](./projection-operations.md)

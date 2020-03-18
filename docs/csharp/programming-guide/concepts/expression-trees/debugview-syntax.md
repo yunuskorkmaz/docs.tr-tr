@@ -1,6 +1,6 @@
 ---
 title: DebugView özelliği tarafından kullanılan sözdizimi (C#)
-description: İfade ağaçları bir dize temsilini üretmek için DebugView özelliği tarafından kullanılan özel bir sözdizimi açıklar
+description: İfade ağaçlarının dize gösterimini oluşturmak için DebugView özelliği tarafından kullanılan özel sözdizimini açıklar
 author: zspitz
 ms.author: wiwagn
 ms.date: 05/22/2019
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - expression trees
 - debugview
 ms.openlocfilehash: ba695fc808108c49a4eee3c70a305b24c91769d8
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "67661722"
 ---
-# <a name="debugview-syntax"></a>`DebugView` Söz dizimi
+# <a name="debugview-syntax"></a>`DebugView`Sözdizimi
 
-`DebugView` Özelliği (yalnızca hata ayıklama sırasında kullanılabilir) ifade ağaçları dize işlenmesini sağlar. Çoğu söz dizimini anlamak oldukça açıktır; özel durumlar aşağıdaki bölümlerde açıklanmıştır.
+Özellik `DebugView` (yalnızca hata ayıklama olduğunda kullanılabilir) ifade ağaçlarının dize oluşturmasını sağlar. Sözdiziminin çoğu anlamak oldukça basittir; özel durumlar aşağıdaki bölümlerde açıklanmıştır.
 
-Her örneğin bir blok açıklama tarafından izlenir içeren `DebugView`.
+Her örnek, `DebugView`'yi içeren bir blok açıklama yla takip edilir.
 
-## <a name="parameterexpression"></a>ParameterExpression
+## <a name="parameterexpression"></a>Parameterexpression
 
-<xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType> değişken adları ile görüntülenir bir `$` simge başlangıcındaki.
+<xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType>değişken adları başında `$` bir sembolle görüntülenir.
 
-Parametre bir adı yoksa, otomatik olarak oluşturulmuş bir adı gibi atandıktan `$var1` veya `$var2`.
+Bir parametrenin bir adı yoksa, otomatik olarak oluşturulan bir `$var1` ad `$var2`olarak atanır veya .
 
 ### <a name="examples"></a>Örnekler
 
@@ -41,15 +41,15 @@ ParameterExpression numParam =  Expression.Parameter(typeof(int));
 */
 ```
 
-## <a name="constantexpression"></a>SabitDeyim'in
+## <a name="constantexpression"></a>Constantexpression
 
-İçin <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> dize, tamsayı değerlerini temsil eden nesneleri ve `null`, sabit değeri görüntülenir.
+İntesayı <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> değerlerini, dizeleri ve `null`, sabitin değerini temsil eden nesneler için görüntülenir.
 
-C# sabit değer olarak standart sonekleri olan sayısal türleri için sonek değerine eklenir. Aşağıdaki tabloda, çeşitli sayısal türler ile ilişkili soneklerini gösterir.
+Standart soneklerine C# literals olarak sahip sayısal türler için, sonek değere eklenir. Aşağıdaki tablo, çeşitli sayısal türleri ile ilişkili sonekleri gösterir.
 
-| Tür | Anahtar sözcüğü | Son eki |
+| Tür | Anahtar kelime | Soneki |
 |--|--|--|
-| <xref:System.UInt32?displayProperty=nameWithType> | [uint](../../../language-reference/builtin-types/integral-numeric-types.md) | U |
+| <xref:System.UInt32?displayProperty=nameWithType> | [Uint](../../../language-reference/builtin-types/integral-numeric-types.md) | U |
 | <xref:System.Int64?displayProperty=nameWithType> | [long](../../../language-reference/builtin-types/integral-numeric-types.md) | L |
 | <xref:System.UInt64?displayProperty=nameWithType> | [ulong](../../../language-reference/builtin-types/integral-numeric-types.md) | UL |
 | <xref:System.Double?displayProperty=nameWithType> | [double](../../../language-reference/builtin-types/floating-point-numeric-types.md) | D |
@@ -72,9 +72,9 @@ ConstantExpression expr = Expression.Constant(num);
 */
 ```
 
-## <a name="blockexpression"></a>BlockExpression
+## <a name="blockexpression"></a>Blockexpression
 
-Varsa türünü bir <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> bloğundaki son ifadenin türü nesne farklıdır, açılı ayraçlar içinde türü görüntülenir (`<` ve `>`). Aksi halde, türünü <xref:System.Linq.Expressions.BlockExpression> nesne görüntülenmez.
+Bir <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> nesnenin türü bloktaki son ifadenin türünden farklıysa, tür açı ayraçları `>`(ve)`<` içinde görüntülenir. Aksi takdirde, <xref:System.Linq.Expressions.BlockExpression> nesnenin türü görüntülenmez.
 
 ### <a name="examples"></a>Örnekler
 
@@ -94,11 +94,11 @@ BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("t
 */
 ```
 
-## <a name="lambdaexpression"></a>LambdaExpression
+## <a name="lambdaexpression"></a>Lambdaexpression
 
-<xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType> nesneler, temsilci türleri ile birlikte görüntülenir.
+<xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType>nesneler, temsilci türleri ile birlikte görüntülenir.
 
-Bir lambda ifadesi bir adı yoksa, otomatik olarak oluşturulmuş bir adı gibi atandıktan `#Lambda1` veya `#Lambda2`.
+Lambda ifadesinin bir adı yoksa, otomatik olarak oluşturulan bir ad `#Lambda1` `#Lambda2`olarak atanır veya .
 
 ### <a name="examples"></a>Örnekler
 
@@ -118,13 +118,13 @@ LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1), 
 */
 ```
 
-## <a name="labelexpression"></a>LabelExpression
+## <a name="labelexpression"></a>Labelexpression
 
-İçin varsayılan bir değer belirtirseniz <xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType> nesnesi, bu değer, önce görüntülenir <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType> nesne.
+<xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType> Nesne için varsayılan bir değer belirtirseniz, bu <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType> değer nesnenin önünde görüntülenir.
 
-`.Label` Belirteci etiketi başlangıcını gösterir. `.LabelTarget` Belirteci atlamak için hedef hedefinin gösterir.
+Belirteç, `.Label` etiketin başlangıcını gösterir. Belirteç, `.LabelTarget` atlayacak hedefin hedefini gösterir.
 
-Bir etiket bir ad yoksa otomatik olarak oluşturulmuş bir adı gibi atandıktan `#Label1` veya `#Label2`.
+Bir etiketin adı yoksa, otomatik olarak oluşturulan bir ad `#Label1` olarak `#Label2`atanır.
 
 ### <a name="examples"></a>Örnekler
 
@@ -157,9 +157,9 @@ BlockExpression block = Expression.Block(
 */
 ```
 
-## <a name="checked-operators"></a>İşaretli işleçleri
+## <a name="checked-operators"></a>Denetlenen Operatörler
 
-İşaretli işleçleri ile görüntülenir `#` işleci önünde simge. Örneğin, işaretli Toplama işleci olarak görüntülenir `#+`.
+Denetlenen işleçler `#` operatörün önündeki sembolle görüntülenir. Örneğin, denetlenen ek işleç `#+`.
 
 ### <a name="examples"></a>Örnekler
 

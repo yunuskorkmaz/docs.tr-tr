@@ -1,34 +1,34 @@
 ---
 ms.openlocfilehash: 2a65caedea2af65796267aa145e275ebff814bf8
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394008"
 ---
-### <a name="signalr-usesignalr-and-useconnections-methods-marked-obsolete"></a>SignalR: UseSignalR ve UseConnections yöntemleri kullanılmıyor olarak işaretlendi
+### <a name="signalr-usesignalr-and-useconnections-methods-marked-obsolete"></a>SignalR: UseSignalR ve UseConnections yöntemleri eski olarak işaretlenmiş
 
-@No__t-0 ve `UseSignalR` yöntemleri ve `ConnectionsRouteBuilder` ve `HubRouteBuilder` sınıfları ASP.NET Core 3,0 ' de kullanılmıyor olarak işaretlenir.
+Yöntemleri `UseConnections` ve `UseSignalR` sınıfları `ConnectionsRouteBuilder` `HubRouteBuilder` ve ASP.NET Core 3.0 eski olarak işaretlenir.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-SignalR hub yönlendirmesi `UseSignalR` veya `UseConnections` kullanılarak yapılandırıldı.
+SignalR hub yönlendirmesi kullanılarak `UseSignalR` `UseConnections`yapılandırıldı veya .
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Yönlendirmeyi yapılandırmanın eski yolu kullanımdan kaldırılmıştır ve uç nokta yönlendirme ile değiştirilmiştir.
+Yönlendirmeyi yapılandırmanın eski yolu obsoleted ve uç nokta yönlendirme ile değiştirildi.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Ara yazılım yeni uç nokta yönlendirme sistemine taşınıyor. Ara yazılım eklemenin eski yolu kullanımdan kaldırılıyor.
+Middleware yeni uç nokta yönlendirme sistemine taşınıyor. Middleware eklemenin eski yolu obsoleted ediliyor.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-@No__t-0 ' i `UseEndpoints` ile değiştirin:
+`UseSignalR` Değiştir: `UseEndpoints`
 
 **Eski kod:**
 
@@ -50,7 +50,7 @@ app.UseEndpoints(endpoints =>
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Core
+ASP.NET Çekirdeği
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

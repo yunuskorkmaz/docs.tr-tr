@@ -1,89 +1,89 @@
 ---
 title: Visual Studio’da bir .NET Standard kitaplığını kullanma
-description: Visual Studio 2019 ile başka bir sınıf kitaplığının üyelerini çağıran bir .NET Core uygulaması oluşturun.
+description: Visual Studio 2019 ile başka bir sınıf kitaplığı üyelerini çağıran bir .NET Core uygulaması oluşturun.
 ms.date: 12/20/2019
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
 ms.openlocfilehash: 4eb75f23359334ea483cba1498f1804c4b24c80c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920450"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio"></a>Visual Studio’da bir .NET Standard kitaplığını kullanma
 
-Bir .NET Standard sınıf kitaplığı oluşturduktan, sınadıktan ve kitaplığın bir yayın sürümünü oluşturduktan sonra, bir sonraki adım, çağıranlar için kullanılabilir hale gelir. Bunu iki şekilde yapabilirsiniz:
+Bir .NET Standart sınıf kitaplığı oluşturduktan, test ettikten ve kitaplığın sürüm sürümünü oluşturduktan sonra, bir sonraki adım arayanların kullanımına açmaktır. Bunu iki şekilde yapabilirsiniz:
 
-- Kitaplık tek bir çözüm tarafından kullanılacaksa (örneğin, tek bir büyük uygulamadaki bir bileşen ise) çözümünüze bir proje olarak dahil edebilirsiniz.
-- Kitaplık herkese açık hale gelir, bir NuGet paketi olarak dağıtabilirsiniz.
+- Kitaplık tek bir çözüm tarafından kullanılacaksa (örneğin, tek bir büyük uygulamada bir bileşense), bunu çözüme proje olarak ekleyebilirsiniz.
+- Kitaplık herkese açık olacaksa, bunu NuGet paketi olarak dağıtabilirsiniz.
 
-Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
 > [!div class="checklist"]
 >
-> - Çözümünüze bir .NET Standard kitaplığı projesine başvuran bir konsol uygulaması ekleyin.
-> - .NET Standard kitaplığı projesi içeren bir NuGet paketi oluşturun.
+> - Çözüme bir .NET Standart kitaplık projesine atıfta bulunulan bir konsol uygulaması ekleyin.
+> - .NET Standart kitaplık projesi içeren bir NuGet paketi oluşturun.
 
-## <a name="add-a-console-app-to-your-solution"></a>Çözümünüze bir konsol uygulaması ekleme
+## <a name="add-a-console-app-to-your-solution"></a>Çözümünüze konsol uygulaması ekleme
 
-Birim testlerini, [Visual Studio 'da bir .NET Standard kitaplığı test](testing-library-with-visual-studio.md)etme bölümünde yer alan sınıf kitaplısınız ile aynı çözümde bulundurmadığınız gibi, uygulamanızı bu çözümün bir parçası olarak dahil edebilirsiniz. Örneğin, sınıf kitaplığınızı, kullanıcıdan ilk karakterinin büyük harf olup olmadığını belirten bir dize ve rapor girmesini isteyen bir konsol uygulamasında kullanabilirsiniz:
+[Visual Studio'daki Test a .NET Standart kitaplığında](testing-library-with-visual-studio.md)sınıf kitaplığınız ile aynı çözüme birim testleri eklediğiniz gibi, uygulamanızı da bu çözümün bir parçası olarak ekleyebilirsiniz. Örneğin, sınıf kitaplığınızı, kullanıcıdan bir dize girmesini gerektiren ve ilk karakterinin büyük harf olup olmadığını bildiren bir konsol uygulamasında kullanabilirsiniz:
 
-1. [Visual Studio 'da bir .NET Standard kitaplığı oluşturun](library-with-visual-studio.md) makalesindeki oluşturduğunuz `ClassLibraryProjects` çözümünü açın.
+1. Visual `ClassLibraryProjects` Studio makalesinde [Bir .NET Standart kitaplığı oluştur'da](library-with-visual-studio.md) oluşturduğunuz çözümü açın.
 
-1. Çözüme "gösterimi" adlı yeni bir .NET Core konsol uygulaması ekleyin.
+1. Çözüme "ShowCase" adlı yeni bir .NET Core konsol uygulaması ekleyin.
 
-   1. **Çözüm Gezgini** çözüme sağ tıklayın ve > **Yeni proje** **Ekle** ' yi seçin.
+   1. **Solution Explorer'da** çözüme sağ tıklayın ve**Yeni proje** **Ekle'yi** > seçin.
 
-   1. **Yeni Proje Ekle** sayfasında, arama kutusuna **konsol** girin. Dil **C#** listesinden seçin veya **Visual Basic** ve ardından platform listesinden **tüm platformlar** ' ı seçin. **Konsol uygulaması (.NET Core)** şablonunu seçin ve ardından **İleri**' yi seçin.
+   1. Yeni **proje** ekle sayfasında, arama kutusuna **konsolgirin.** Dil listesinden **C#** veya **Visual Basic'i** seçin ve ardından Platform listesindeki **tüm platformları** seçin. Konsol **Uygulaması (.NET Core)** şablonunu seçin ve ardından **İleri'yi**seçin.
 
-   1. **Yeni projenizi yapılandırın** sayfasında, **Proje adı** kutusuna **gösterimi** girin. Ardından **Oluştur**' u seçin.
+   1. Yeni **proje sayfanızı Yapılandır'da** Proje **adı** kutusuna **ShowCase'i** girin. Ardından **Oluştur'u**seçin.
 
-1. **Çözüm Gezgini** **, Gösterim projesine sağ** tıklayın ve bağlam menüsünde **Başlangıç projesi olarak ayarla** ' yı seçin.
+1. **Solution**Explorer'da, **ShowCase** projesini sağ tıklatın ve bağlam menüsünde **Başlangıç Projesi olarak ayarla'yı** seçin.
 
    ![Başlangıç projesini ayarlamak için Visual Studio proje bağlam menüsü](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
-1. Başlangıçta, projenizin sınıf kitaplığınıza erişimi yoktur. Sınıf kitaplığınızdaki yöntemleri çağırmasına izin vermek için, sınıf kitaplığına bir başvuru oluşturursunuz. **Çözüm Gezgini**, `ShowCase` projenin **Bağımlılıklar** düğümüne sağ tıklayın ve **Başvuru Ekle**' yi seçin.
+1. Başlangıçta, projenizin sınıf kitaplığınıza erişimi yoktur. Sınıf kitaplığınızda yöntemleri aramasına izin vermek için sınıf kitaplığına bir başvuru oluşturursunuz. **Çözüm Gezgini'nde,** `ShowCase` projenin **Bağımlılıklar** düğümünü sağ tıklatın ve **Başvuru Ekle'yi**seçin.
 
-   ![Visual Studio 'da başvuru bağlam menüsü Ekle](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
+   ![Visual Studio'da referans bağlam menüsü ekleme](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
-1. **Başvuru Yöneticisi** Iletişim kutusunda **StringLibrary**, sınıf kitaplığı projeniz ' i seçin ve **Tamam** düğmesini seçin.
+1. Başvuru **Yöneticisi** iletişim kutusunda **StringLibrary'yi,** sınıf kitaplığı projenizi seçin ve **Tamam** düğmesini seçin.
 
-   ![StringLibrary seçiliyken başvuru Yöneticisi iletişim kutusu](./media/consuming-library-with-visual-studio/manage-project-references.png)
+   ![StringLibrary seçili Başvuru Yöneticisi iletişim kutusu](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
-1. *Program.cs* veya *program. vb* dosyasının kod penceresinde, tüm kodu aşağıdaki kodla değiştirin:
+1. *Program.cs* veya *Program.vb* dosyasının kod penceresinde, kodun tümünün yerine aşağıdaki kod la değiştirin:
 
    [!code-csharp[UsingClassLib#1](~/samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs)]
    [!code-vb[UsingClassLib#1](~/samples/snippets/core/tutorials/vb-library-with-visual-studio/showcase.vb)]
 
-   Kod, konsol penceresine yazılan veri satırlarının sayısını korumak için `row` değişkenini kullanır. 25 ' e eşit veya daha büyük olduğunda, kod konsol penceresini temizler ve kullanıcıya bir ileti görüntüler.
+   Kod, konsol `row` penceresine yazılan veri satırlarının sayısını korumak için değişkeni kullanır. 25'ten büyük veya eşit olduğunda, kod konsol penceresini temizler ve kullanıcıya bir ileti görüntüler.
 
-   Program kullanıcıdan bir dize girmesini ister. Dizenin büyük harfle başlatılıp başlatılmayacağını gösterir. Kullanıcı bir dize girmeden ENTER tuşuna basarsa, uygulama sonlanır ve konsol penceresi kapanır.
+   Program, kullanıcıdan bir dize girmesini ister. Dize bir büyük harf karakteri ile başlayıp başlamadığını gösterir. Kullanıcı dize girmeden Enter tuşuna basarsa, uygulama biter ve konsol penceresi kapanır.
 
-1. Gerekirse, `ShowCase` projesinin **hata ayıklama** sürümünü derlemek için araç çubuğunu değiştirin. **Gösterimi** düğmesindeki yeşil oku seçerek programı derleyin ve çalıştırın.
+1. Gerekirse, projenin **Hata Ayıklama** yayınını derlemek `ShowCase` için araç çubuğunu değiştirin. **ShowCase** düğmesindeki yeşil oku seçerek programı derleyin ve çalıştırın.
 
-   ![Hata ayıklama düğmesini gösteren Visual Studio proje araç çubuğu](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+   ![Hata Ayıklama düğmesini gösteren Visual Studio proje araç çubuğu](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 
-[Visual Studio 'yu kullanarak C# veya Visual Basic .NET Core Merhaba Dünya uygulamanızda hata ayıklama](debugging-with-visual-studio.md) ve [.NET Core Merhaba Dünya uygulamanızı Visual Studio ile yayımlama](publishing-with-visual-studio.md)bölümündeki adımları izleyerek, bu kitaplığı kullanan uygulamayı ayıklayabilir ve yayımlayabilirsiniz.
+[Visual Studio'yu kullanarak C# veya Visual Basic .NET Core Hello World uygulamanızı hata ayıklama](debugging-with-visual-studio.md) adımlarını izleyerek bu kitaplığı kullanan uygulamayı hata ayıklayabilir ve yayımlayabilir ve [.NET Core Hello World uygulamanızı Visual Studio ile](publishing-with-visual-studio.md)yayınlayabilirsiniz.
 
 ## <a name="create-a-nuget-package"></a>NuGet paketi oluşturma
 
-Sınıf kitaplığınızı, bir NuGet paketi olarak yayımlayarak geniş oranda kullanılabilir hale getirebilirsiniz. Visual Studio, NuGet paketlerinin oluşturulmasını desteklemez. Bir tane oluşturmak için .NET Core CLI komutlarını kullanmanız gerekir:
+Sınıf kitaplığınızı NuGet paketi olarak yayımlayarak yaygın olarak kullanılabilir hale getirebilirsiniz. Visual Studio, NuGet paketlerinin oluşturulmasını desteklemez. Bir tane oluşturmak için .NET Core CLI komutlarını kullanmanız gerekir:
 
-1. Bir konsol penceresi açın.
+1. Konsol pencereyi açın.
 
-   Örneğin, Windows görev çubuğundaki arama kutusuna **komut istemi** yazın. **Komut istemi** masaüstü uygulamasını seçin veya arama sonuçlarında zaten seçiliyse **ENTER** tuşuna basın.
+   Örneğin, Windows görev çubuğundaki arama kutusuna **Komut İstemi** girin. Komut **İstem** masaüstü uygulamasını seçin veya arama sonuçlarında zaten seçiliyse **Enter** tuşuna basın.
 
-1. Kitaplığınızın proje dizinine gidin. Dizin, kaynak kodunuzu ve *StringLibrary. csproj* veya *StringLibrary. vbproj*proje dosyasını içerir.
+1. Kitaplığınızın proje dizinine gidin. Dizin kaynak kodunuzu ve bir proje dosyası, *StringLibrary.csproj* veya *StringLibrary.vbproj*içerir.
 
-1. *. Nupkg* uzantılı bir paket oluşturmak için [DotNet Pack](../tools/dotnet-pack.md) komutunu çalıştırın:
+1. *.nupkg* uzantılı bir paket oluşturmak için [dotnet paketi](../tools/dotnet-pack.md) komutunu çalıştırın:
 
    ```dotnetcli
    dotnet pack --no-build
    ```
 
    > [!TIP]
-   > *DotNet. exe* IÇEREN Dizin yolunuzda değilse, konsol penceresine `where dotnet.exe` girerek konumunu bulabilirsiniz.
+   > *dotnet.exe* içeren dizin PATH'inizde değilse, konsol penceresine girerek `where dotnet.exe` konumunu bulabilirsiniz.
 
-NuGet paketleri oluşturma hakkında daha fazla bilgi için bkz. [.NET Core CLI bir NuGet paketi oluşturma](../deploying/creating-nuget-packages.md).
+NuGet paketleri oluşturma hakkında daha fazla bilgi için [.NET Core CLI ile NuGet paketi nasıl oluşturulur.](../deploying/creating-nuget-packages.md)

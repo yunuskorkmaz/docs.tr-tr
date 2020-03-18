@@ -1,49 +1,49 @@
 ---
-title: Dil ile tümleşik sorgu (LINQ) (C#)
+title: Dil-Tümleşik Sorgu (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
 ms.openlocfilehash: 07a9d68c042d524ee9faba8122b406a81e816378
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73418235"
 ---
 # <a name="language-integrated-query-linq"></a>Dil ile Tümleşik Sorgu (LINQ)
 
-Dil ile tümleşik sorgu (LINQ), sorgu yeteneklerinin doğrudan C# dile tümleştirilmesine dayalı bir teknoloji kümesinin adıdır. Geleneksel olarak, verilere karşı sorgular derleme zamanında veya IntelliSense desteğiyle tür denetlemesi olmadan basit dizeler olarak ifade edilir. Ayrıca, her veri kaynağı türü için farklı bir sorgu dili öğrenirsiniz: SQL veritabanları, XML belgeleri, çeşitli Web Hizmetleri ve benzeri. LINQ ile sorgu, sınıflar, Yöntemler ve olaylar gibi birinci sınıf bir dil yapısıdır. Dil anahtar sözcükleri ve tanıdık işleçleri kullanarak, türü kesin belirlenmiş nesne koleksiyonlara karşı sorgular yazarsınız. LINQ teknolojileri, nesneler (LINQ to Objects), ilişkisel veritabanları (LINQ to SQL) ve XML (LINQ to XML) için tutarlı bir sorgu deneyimi sağlar.
+Dil-Tümleşik Sorgu (LINQ), sorgu yeteneklerinin doğrudan C# diline entegrasyonuna dayalı bir dizi teknolojinin adıdır. Geleneksel olarak, verilere karşı sorgular derleme zamanında veya IntelliSense desteğinde tür denetimi olmadan basit dizeleri olarak ifade edilir. Ayrıca, her veri kaynağı türü için farklı bir sorgu dili öğrenmeniz gerekir: SQL veritabanları, XML belgeleri, çeşitli Web hizmetleri ve benzeri. LINQ ile sorgu, sınıflar, yöntemler, olaylar gibi birinci sınıf bir dil yapısıdır. Dil anahtar kelimeleri ve tanıdık işleçler kullanarak nesnelerin güçlü bir şekilde yazılan koleksiyonlarına karşı sorgular yazarsınız. LINQ teknoloji ailesi nesneler (LINQ to Objects), ilişkisel veritabanları (LINQ-SQL) ve XML (LINQ-XML) için tutarlı bir sorgu deneyimi sağlar.
 
-Sorgu yazan bir geliştirici için, LINQ 'nin en görünür "dil ile tümleşik" bir kısmı sorgu ifadesidir. Sorgu ifadeleri bildirime dayalı bir *sorgu söz dizimine*yazılır. Sorgu söz dizimini kullanarak veri kaynaklarında en az kodla filtreleme, sıralama ve gruplama işlemlerini gerçekleştirebilirsiniz. SQL veritabanlarındaki verileri sorgulamak ve dönüştürmek için aynı temel sorgu ifadesi desenlerini, ADO .NET veri kümelerini, XML belgelerini ve akışlarını ve .NET koleksiyonlarını kullanırsınız.
+Sorgu yazan bir geliştirici için LINQ'nun en görünür "dil tümleşik" bölümü sorgu ifadesidir. Sorgu ifadeleri bildirimsel sorgu *sözdiziminde*yazılır. Sorgu sözdizimini kullanarak, veri kaynaklarında en az kodla filtreleme, sıralama ve gruplandırma işlemleri gerçekleştirebilirsiniz. SQL veritabanlarında, ADO .NET Veri kümelerinde, XML belgelerinde ve akışlarında ve .NET koleksiyonlarında verileri sorgulamak ve dönüştürmek için aynı temel sorgu ifade desenlerini kullanırsınız.
 
-SQL Server veritabanları, XML belgeleri, C# ADO.NET veri kümeleri ve <xref:System.Collections.IEnumerable> ya da genel <xref:System.Collections.Generic.IEnumerable%601> arabirimini destekleyen herhangi bir nesne KOLEKSIYONU için LINQ sorguları yazabilirsiniz. Ayrıca, LINQ desteği birçok Web hizmeti ve diğer veritabanı uygulamaları için üçüncü taraflar tarafından da sağlanır.
+SQL Server veritabanları, XML belgeleri, ADO.NET Datasets ve destekleyen <xref:System.Collections.IEnumerable> nesnelerin veya genel <xref:System.Collections.Generic.IEnumerable%601> arabirimin herhangi bir koleksiyon için C# linq sorguları yazabilirsiniz. LINQ desteği, birçok Web hizmeti ve diğer veritabanı uygulamaları için üçüncü taraflarca da sağlanır.
 
-Aşağıdaki örnek, tüm sorgu işlemini gösterir. Tamamlanmış işlem, bir veri kaynağı oluşturmayı, sorgu ifadesini tanımlamayı ve sorguyu `foreach` deyiminde yürütmeyi içerir.
+Aşağıdaki örnekte tam sorgu işlemi gösterilmektedir. Tam işlem, bir veri kaynağı oluşturmayı, sorgu ifadesini tanımlamayı `foreach` ve bir deyimdeki sorguyu yürütmeyi içerir.
 
 [!code-csharp[csProgGuideLINQ#11](~/samples/snippets/csharp/concepts/linq/index_1.cs)]
 
-Visual Studio 'dan aşağıdaki çizimde, hem SQL Server hem C# de tam tür denetimi ve ıntellisense desteğiyle Visual Basic bir veritabanına karşı kısmen tamamlanmış bir LINQ sorgusu gösterilmektedir:
+Visual Studio'dan alınan aşağıdaki resimde, tam tür denetimi ve IntelliSense desteğiyle hem C# hem de Visual Basic veritabanında bir SQL Server veritabanına karşı kısmen tamamlanmış bir LINQ sorgusu gösterilmektedir:
 
-![IntelliSense ile bir LINQ sorgusu gösteren diyagram.](./media/introduction-to-linq/linq-query-intellisense.png)
+![Intellisense ile linq sorgusunu gösteren diyagram.](./media/introduction-to-linq/linq-query-intellisense.png)
 
-## <a name="query-expression-overview"></a>Sorgu ifadesine genel bakış
+## <a name="query-expression-overview"></a>Sorgu ifadeye genel bakış
 
-- Sorgu ifadeleri, LINQ özellikli herhangi bir veri kaynağından verileri sorgulamak ve dönüştürmek için kullanılabilir. Örneğin, tek bir sorgu bir SQL veritabanından veri alabilir ve çıkış olarak bir XML akışı üretebilir.
-- Sorgu ifadeleri çok tanıdık C# dil yapıları kullandıkları için kolayca ana öğe kullanmaktır.
-- Bir sorgu ifadesindeki değişkenlerin hepsi kesin olarak türlidir, ancak çoğu durumda derleyici onu çıkardığı için türü açıkça sağlamak zorunda değilsiniz. Daha fazla bilgi için bkz. [LINQ sorgu Işlemlerinde tür ilişkileri](type-relationships-in-linq-query-operations.md).
-- Sorgu değişkeni üzerinde yineleme yapana kadar sorgu yürütülmez, örneğin, bir `foreach` bildiriminde. Daha fazla bilgi için bkz. [LINQ Sorgularına Giriş](introduction-to-linq-queries.md).
-- Derleme zamanında sorgu ifadeleri, C# belirtimde belirtilen kurallara göre standart sorgu operatörü yöntemi çağrılarına dönüştürülür. Sorgu söz dizimi kullanılarak ifade edilebilir herhangi bir sorgu, yöntem sözdizimi kullanılarak da ifade edilebilir. Ancak çoğu durumda sorgu sözdizimi daha okunabilir ve kısadır. Daha fazla bilgi için bkz [ C# . dil belirtimi](~/_csharplang/spec/expressions.md#query-expressions) ve [Standart sorgu işleçlerine genel bakış](standard-query-operators-overview.md).
-- LINQ sorguları yazdığınızda bir kural olarak, gerektiğinde sorgu söz dizimini ve Yöntem sözdizimini kullanmanızı öneririz. İki farklı form arasında anlam veya performans farkı yoktur. Sorgu ifadeleri genellikle yöntem sözdiziminde yazılan denk ifadelerden daha okunabilir.
-- <xref:System.Linq.Enumerable.Count%2A> veya <xref:System.Linq.Enumerable.Max%2A>gibi bazı sorgu işlemlerinde denk bir sorgu ifadesi yan tümcesi yoktur ve bu nedenle bir yöntem çağrısı olarak ifade edilmesi gerekir. Yöntem sözdizimi, sorgu söz dizimi ile çeşitli şekillerde birleştirilebilir. Daha fazla bilgi için bkz. [LINQ 'Te sorgu sözdizimi ve Yöntem sözdizimi](query-syntax-and-method-syntax-in-linq.md).
-- Sorgu ifadeleri, sorgu uygulanmış türe bağlı olarak ifade ağaçlarına veya temsilcilere derlenebilir. <xref:System.Collections.Generic.IEnumerable%601> sorguları temsilcilere derlenir. <xref:System.Linq.IQueryable> ve <xref:System.Linq.IQueryable%601> sorguları, ifade ağaçlarına derlenir. Daha fazla bilgi için bkz. [ifade ağaçları](../../../expression-trees.md).
+- Sorgu ifadeleri, linq özellikli herhangi bir veri kaynağından gelen verileri sorgulamak ve dönüştürmek için kullanılabilir. Örneğin, tek bir sorgu bir SQL veritabanından veri alabilir ve çıktı olarak bir XML akışı üretebilir.
+- Sorgu ifadelerinde ustalaşmak kolaydır, çünkü birçok tanıdık C# dil yapısı kullanırlar.
+- Bir sorgu ifadesindeki değişkenlerin tümü güçlü bir şekilde yazılır, ancak çoğu durumda derleyici bunu çıkarabileceğinden türü açıkça sağlamanız gerekmez. Daha fazla bilgi için [LINQ sorgu işlemlerinde tür ilişkileri'ne](type-relationships-in-linq-query-operations.md)bakın.
+- Bir sorgu, örneğin bir `foreach` deyimdeki sorgu değişkeni üzerinde yinelene kadar yürütülmez. Daha fazla bilgi için [LINQ sorgularına giriş etüt ünt.'e](introduction-to-linq-queries.md)bakın.
+- Derleme zamanında, sorgu ifadeleri C# belirtiminde belirtilen kurallara göre Standart Sorgu Operatörü yöntemi çağrılarına dönüştürülür. Sorgu sözdizimi kullanılarak ifade edilebilen herhangi bir sorgu, yöntem sözdizimi kullanılarak da ifade edilebilir. Ancak, çoğu durumda sorgu sözdizimi daha okunabilir ve kısadır. Daha fazla bilgi için [C# dil belirtimi](~/_csharplang/spec/expressions.md#query-expressions) ve [Standart sorgu operatörlerine genel bakış alabakın.](standard-query-operators-overview.md)
+- KURAL olarak LINQ sorgularını yazarken, sorgu sözdizimini mümkün olduğunda kullanmanızı ve gerektiğinde sözdizimini kullanmanızı öneririz. İki farklı form arasında anlamsal veya performans farkı yoktur. Sorgu ifadeleri genellikle yöntem sözdiziminde yazılmış eşdeğer ifadelerden daha okunabilir.
+- Bazı sorgu işlemleri, <xref:System.Linq.Enumerable.Count%2A> <xref:System.Linq.Enumerable.Max%2A>gibi veya , eşdeğer sorgu ifade yan tümcesi var ve bu nedenle bir yöntem çağrısı olarak ifade edilmelidir. Yöntem sözdizimi sorgu sözdizimi ile çeşitli şekillerde birleştirilebilir. Daha fazla bilgi için [LINQ'daki Sorgu sözdizimi ve yöntem sözdizimi'ne](query-syntax-and-method-syntax-in-linq.md)bakın.
+- Sorgu ifadeleri, sorgunun uygulandığı türe bağlı olarak ifade ağaçlarına veya temsilcilere derlenebilir. <xref:System.Collections.Generic.IEnumerable%601>sorgular temsilcilere derlenir. <xref:System.Linq.IQueryable>ve <xref:System.Linq.IQueryable%601> sorgular ifade ağaçları için derlenir. Daha fazla bilgi için Bkz. [İfade ağaçları.](../../../expression-trees.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-LINQ hakkında daha fazla bilgi edinmek için [sorgu ifadesi temel](../../../linq/query-expression-basics.md)kavramları konusundaki bazı temel kavramları öğrenerek başlayın ve ardından ilgilendiğiniz LINQ teknolojisinin belgelerini okuyun:
+LINQ hakkında daha fazla bilgi edinmek için Sorgu [ifade temelleri'ndeki](../../../linq/query-expression-basics.md)bazı temel kavramlara aşina olarak başlayın ve ardından ilgilendiğiniz LINQ teknolojisine ait belgeleri okuyun:
 
-- XML belgeleri: [LINQ to XML](linq-to-xml-overview.md)  
-- ADO.NET Entity Framework: [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
-- .NET koleksiyonları, dosyalar, dizeler ve benzeri: [LINQ to Objects](linq-to-objects.md)
+- XML belgeleri: [LINQ xml için](linq-to-xml-overview.md)  
+- ADO.NET Entity Framework: [LINQ varlıklara](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- .NET koleksiyonları, dosyalar, dizeleri vb: [LINQ nesnelere](linq-to-objects.md)
 
-Genel olarak LINQ hakkında daha ayrıntılı bilgi edinmek için bkz. [LINQ ın C# ](../../../linq/linq-in-csharp.md).
+Genel olarak LINQ hakkında daha derin bir anlayış kazanmak için [C# 'daki LINQ'ya](../../../linq/linq-in-csharp.md)bakın.
 
-LINQ C#ile çalışmaya başlamak için bkz. [LINQ ile çalışma](../../../tutorials/working-with-linq.md)öğreticisi.
+C#'da LINQ ile çalışmaya başlamak için, [LINQ ile çalışma](../../../tutorials/working-with-linq.md)öğreticisine bakın.

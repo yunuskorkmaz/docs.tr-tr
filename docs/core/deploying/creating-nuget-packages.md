@@ -1,42 +1,42 @@
 ---
-title: .NET Core CLI bir NuGet paketi oluşturun
-description: "' DotNet Pack ' komutuyla bir NuGet paketi oluşturmayı öğrenin."
+title: .NET Core CLI ile NuGet paketi oluşturun
+description: "'dotnet paketi' komutuyla bir NuGet paketi oluşturmayı öğrenin."
 author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.openlocfilehash: 3f8e75a501cfc48e1c416f71e91290cab1a4ffae
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920913"
 ---
-# <a name="how-to-create-a-nuget-package-with-the-net-core-cli"></a>.NET Core CLI bir NuGet paketi oluşturma
+# <a name="how-to-create-a-nuget-package-with-the-net-core-cli"></a>.NET Core CLI ile NuGet paketi nasıl oluşturulur?
 
 > [!NOTE]
-> Aşağıda UNIX kullanan komut satırı örnekleri gösterilmektedir. Burada gösterildiği gibi `dotnet pack` komutu, Windows 'ta aynı şekilde çalışmaktadır.
+> Aşağıdaki Unix kullanarak komut satırı örnekleri gösterir. Burada `dotnet pack` gösterildiği gibi komut Windows'da da aynı şekilde çalışır.
 
-.NET Standard ve .NET Core kitaplıklarının NuGet paketleri olarak dağıtılması beklenmektedir. Bu, tüm .NET Standard kitaplıklarının dağıtılma ve tüketilme olgusuna sahiptir. Bu, `dotnet pack` komutuyla kolayca yapılır.
+.NET Standard ve .NET Core kitaplıklarının NuGet paketleri olarak dağıtılması beklenmektedir. Bu aslında tüm .NET Standart kitaplıklarının nasıl dağıtıldığı ve tüketildiğini. Bu en kolay `dotnet pack` komutu ile yapılır.
 
-NuGet üzerinden dağıtmak istediğiniz harika yeni bir kitaplığı yazdığınız hakkında düşünün. Tek yapmanız gereken, platformlar arası araçlarla bir NuGet paketi oluşturabilirsiniz! Aşağıdaki örnek, `netstandard1.0`hedefleyen **Superawesomelibrary** adlı bir kitaplık olduğunu varsayar.
+NuGet üzerinden dağıtmak istediğiniz harika bir yeni kütüphane yazdığınızı düşünün. Bunu tam olarak yapmak için çapraz platform araçları ile bir NuGet paketi oluşturabilirsiniz! Aşağıdaki örnek, **SuperAwesomeLibrary** adlı bir `netstandard1.0`kitaplığı hedefler varsayar.
 
-Başka bir pakete bağlı bir proje olan geçişli bağımlılıklarınız varsa, bir NuGet paketi oluşturmadan önce `dotnet restore` komutuyla tüm çözüme yönelik paketleri geri yüklediğinizden emin olun. Bunun başarısız olması, `dotnet pack` komutunun düzgün şekilde çalışmamasını sağlar.
+Geçişli bağımlılıklarınız varsa, yani başka bir pakete dayanan bir projevarsa, bir NuGet `dotnet restore` paketi oluşturmadan önce komutla tüm çözüm için paketleri geri yüklediğinden emin olun. Aksi takdirde komutun `dotnet pack` düzgün çalışmaması durumunda.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Paketlerin geri yüklenmesini sağlamaktan sonra, kitaplığın yaşadığı dizine gidebilirsiniz:
+Paketlerin geri yüklendiğinden emin olduktan sonra, kitaplığın yaşadığı dizine gidebilirsiniz:
 
 ```console
 cd src/SuperAwesomeLibrary
 ```
 
-Bu durumda, komut satırından yalnızca tek bir komuttur:
+O zaman komut satırından sadece tek bir komut:
 
 ```dotnetcli
 dotnet pack
 ```
 
-*/Bin/Debug* klasörünüz şimdi şöyle görünür:
+*/bin/Hata Ayıklama* klasörünüz şimdi şu şekilde görünecektir:
 
 ```console
 $ ls bin/Debug
@@ -45,13 +45,13 @@ SuperAwesomeLibrary.1.0.0.nupkg
 SuperAwesomeLibrary.1.0.0.symbols.nupkg
 ```
 
-Bu, hata ayıklama yapabilen bir paket oluşturur. Yayın ikilileriyle bir NuGet paketi oluşturmak istiyorsanız, tüm yapmanız gereken `--configuration` (veya `-c`) anahtarını ekleyip bağımsız değişken olarak `release` kullanmaktır.
+Bu debugged olma yeteneğine sahip bir paket üretir. Sürüm ikilileri içeren bir NuGet paketi oluşturmak istiyorsanız, tek yapmanız `--configuration` gereken `-c`(veya) `release` anahtarını eklemek ve bağımsız değişken olarak kullanmaktır.
 
 ```dotnetcli
 dotnet pack --configuration release
 ```
 
-*/Bin* klasörünüz artık sürüm Ikilileriyle NuGet paketinizi içeren bir *Sürüm* klasörüne sahip olur:
+*/bin* klasörünüz artık Sürüm ikilileriyle birlikte NuGet paketinizi içeren bir *sürüm* klasörüne sahip olacaktır:
 
 ```console
 $ ls bin/release
@@ -60,12 +60,12 @@ SuperAwesomeLibrary.1.0.0.nupkg
 SuperAwesomeLibrary.1.0.0.symbols.nupkg
 ```
 
-Artık bir NuGet paketi yayımlamak için gerekli dosyalara sahipsiniz!
+Ve şimdi bir NuGet paketi yayınlamak için gerekli dosyaları var!
 
-## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>`dotnet pack` `dotnet publish` karıştırmayın
+## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>Ile karıştırmayın `dotnet pack``dotnet publish`
 
-Dahil edilen `dotnet publish` komut olmadığı unutulmamalıdır. `dotnet publish` komutu, aynı paket içindeki tüm bağımlılıklarıyla uygulama dağıtmaya yöneliktir; NuGet ile dağıtılacak ve tüketilecek bir NuGet paketi oluşturmak için değildir.
+Hiçbir noktada ilgili `dotnet publish` komut olduğunu unutmayın. Komut, `dotnet publish` tüm bağımlılıkları olan uygulamaları aynı pakette dağıtmak içindir -- NuGet üzerinden dağıtılacak ve tüketilecek bir NuGet paketi oluşturmak için değil.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hızlı başlangıç: paket oluşturma ve yayımlama](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
+- [Quickstart: Bir paket oluşturma ve yayımlama](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)

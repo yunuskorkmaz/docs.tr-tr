@@ -1,54 +1,55 @@
 ---
-title: ML.NET CLı komut başvurusu
-description: ML.NET CLı aracında otomatik eğitme komutuna genel bakış, örnekler ve başvuru.
+title: ML.NET CLI Komut Başvurusu
+description: ML.NET CLI aracındaki otomatik tren komutu için genel bakış, örnekler ve başvuru.
 ms.date: 12/18/2019
-ms.openlocfilehash: 537f8d361c170378f5fe8cf454320831d7c8cbf2
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.custom: mlnet-tooling
+ms.openlocfilehash: bb161c596a76134876ee2bf0a6229bc551e0dad2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449705"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78848931"
 ---
-# <a name="the-mlnet-cli-command-reference"></a>ML.NET CLı komut başvurusu
+# <a name="the-mlnet-cli-command-reference"></a>cli komut başvurusu ML.NET
 
-`auto-train` komutu, ML.NET CLı aracı tarafından sunulan ana komuttur. Komut otomatik makine öğrenimi (Otomatikml) kullanarak iyi bir kalite ML.NET modeli oluşturmanıza ve bu modeli çalıştırmak/skor yapmak için C# örnek kodu oluşturmanızı sağlar. Ayrıca, modelin eğiteme C# kodu, modelin algoritmasını ve ayarlarını araştırmanız için oluşturulur.
+Komut, `auto-train` cli aracının ML.NET tarafından sağlanan ana komutdur. Komut, otomatik makine öğrenimi (AutoML) yanı sıra bu modeli çalıştırmak / puan için örnek C# kodu kullanarak iyi bir kaliteli ML.NET modeli oluşturmanıza olanak sağlar. Buna ek olarak, modeli eğitmek için C# kodu, modelin algoritmasını ve ayarlarını araştırmanız için oluşturulur.
 
 > [!NOTE]
-> Bu konu, şu anda önizleme aşamasında olan ML.NET CLı ve ML.NET oto ml 'ye başvurur ve malzemeler değişebilir.
+> Bu konu, şu anda Önizleme'de olan cli ve ML.NET AutoML'ML.NET anlamına gelir ve malzeme değişebilir.
 
 ## <a name="overview"></a>Genel Bakış
 
-Örnek kullanım:
+Örnek kullanım: 
 
 ```console
 mlnet auto-train --task regression --dataset "cars.csv" --label-column-name price
 ```
 
-`mlnet auto-train` komutu aşağıdaki varlıkları üretir:
+Komut `mlnet auto-train` aşağıdaki varlıkları oluşturur:
 
-- Seri hale getirilmiş bir model. zip ("en iyi model") kullanıma hazırlanıyor.
-- C#oluşturulan modeli çalıştırmak/skor kodu.
-- C#Bu modeli oluşturmak için kullanılan eğitim koduna sahip kod.
+- Serileştirilmiş bir model .zip ("en iyi model") kullanıma hazır.
+- C# kodu modeli oluşturulan çalıştırmak / puan.
+- Bu modeli oluşturmak için kullanılan eğitim kodu ile C# kodu.
 
-İlk iki varlık, model ile tahmine dayalı hale getirmek için Son Kullanıcı uygulamalarınızda (ASP.NET Core Web uygulaması, hizmetler, masaüstü uygulaması ve daha fazlası) doğrudan kullanılabilir.
+İlk iki varlık, modelle ilgili öngörülerde bulunmak için doğrudan son kullanıcı uygulamalarınızda (ASP.NET Core web uygulaması, hizmetler, masaüstü uygulaması ve daha fazlası) kullanılabilir.
 
-Eğitim kodu olan üçüncü varlık, CLı tarafından oluşturulan modeli eğitemek için hangi ML.NET API kodunun kullanıldığını gösterir. böylece modelin belirli algoritmasını ve ayarlarını araştırabilirsiniz.
+Üçüncü varlık, eğitim kodu, oluşturulan modeli eğitmek için CLI tarafından ML.NET API kodunun ne ML.NET kullanıldığını gösterir, böylece modelin belirli algoritmasını ve ayarlarını inceleyebilirsiniz.
 
 ## <a name="examples"></a>Örnekler
 
-İkili sınıflandırma sorunu için en basit CLı komutu (Oto ml, belirtilen verilerden çoğu yapılandırmanın çoğunu):
+İkili sınıflandırma sorunu için en basit CLI komutu (AutoML, sağlanan verilerden yapılandırmanın çoğunu çıkartır):
 
 ```console
 mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
 ```
 
-Gerileme sorunu için başka bir basit CLı komutu:
+Bir gerileme sorunu için başka bir basit CLI komutu:
 
 ``` console
 mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price
 ```
 
-Bir tren veri kümesiyle, test veri kümesiyle ve daha fazla özelleştirme açık bağımsız değişkenlerle bir ikili sınıflandırma modeli oluşturun ve eğitme:
+Bir tren veri kümesi, test veri kümesi ve daha fazla özelleştirme açık bağımsız değişkenleri ile bir ikili sınıflandırma modeli oluşturun ve train:
 
 ```console
 mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
@@ -56,7 +57,7 @@ mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-
 
 ## <a name="command-options"></a>Komut seçenekleri
 
-`mlnet auto-train`, belirtilen veri kümesine bağlı olarak birden çok model ve son olarak en iyi modeli seçer, bunu serileştirilmiş bir. zip dosyası olarak kaydeder ve Puanlama C# ve eğitim için ilgili kodu oluşturur.
+`mlnet auto-train`sağlanan veri kümesine göre birden çok modeli eğitir ve son olarak en iyi modeli seçer, serileştirilmiş .zip dosyası olarak kaydeder artı puanlama ve eğitim için ilgili C# kodu oluşturur.
 
 ```console
 mlnet auto-train
@@ -92,176 +93,176 @@ mlnet auto-train
 
 ```
 
-Geçersiz giriş seçenekleri, CLı aracının geçerli girişlerin bir listesini ve bir hata iletisini yaymasına neden olur.
+Geçersiz giriş seçenekleri, CLI aracının geçerli girdilerin ve bir hata iletisinin listesini yarayabmasını neden olur.
 
 ## <a name="task"></a>Görev
 
-`--task | --mltask | -T` (dize)
+`--task | --mltask | -T`(dize)
 
-Çözülecek ML sorununu sağlayan tek bir dize. Örneğin, aşağıdaki görevlerden herhangi biri (CLı, sonunda, her zaman oto ml 'de desteklenen tüm görevleri destekleyecektir):
+Ml sorunu çözmek için sağlayan tek bir dize. Örneğin, aşağıdaki görevlerden herhangi biri (CLI sonunda AutoML'de desteklenen tüm görevleri destekler):
 
-- `regression`-bir sayısal değeri tahmin etmek için ML modelinin kullanılacağını seçin
-- `binary-classification`-ML modeli sonucunun iki olası kategorik Boole değeri (0 veya 1) olup olmadığını seçin.
-- `multiclass-classification`-ML modeli sonucunda birden çok kategorik olası değer olup olmadığını seçin.
+- `regression`- ML Modeli'nin sayısal bir değeri tahmin etmek için kullanIlip kullanılmeyeceğini seçin
+- `binary-classification`- ML Model sonucunun iki olası kategorik boolean değeri (0 veya 1) olup olmadığını seçin.
+- `multiclass-classification`- ML Model sonucunun birden çok kategorik olası değeri olup olmadığını seçin.
 
 Bu bağımsız değişkende yalnızca bir ML görevi sağlanmalıdır.
 
 ## <a name="dataset"></a>Veri kümesi
 
-`--dataset | -d` (dize)
+`--dataset | -d`(dize)
 
-Bu bağımsız değişken, FilePath öğesini aşağıdaki seçeneklerden birine sağlar:
+Bu bağımsız değişken, aşağıdaki seçeneklerden birine dosya yolunu sağlar:
 
-- Y *: tüm veri kümesi dosyası:* Bu seçenek kullanılıyorsa ve Kullanıcı `--test-dataset` ve `--validation-dataset`sağlamadıysanız, modelin doğrulanması için çapraz doğrulama (k-katlama, vb.) veya otomatik veri bölünmüş yaklaşımlar dahili olarak kullanılır. Bu durumda, kullanıcının DataSet FilePath 'i sağlaması yeterlidir.
+- *C: Tüm veri kümesi dosyası:* Bu seçeneği kullanarak ve kullanıcı `--test-dataset` sağmıyorsa `--validation-dataset`ve sonra çapraz doğrulama (k-fold, vb) veya otomatik veri bölme yaklaşımları modeli doğrulamak için dahili olarak kullanılacaktır. Bu durumda, kullanıcının yalnızca veri kümesi dosya yolunu sağlaması gerekir.
 
-- *B: eğitim veri kümesi dosyası:* Kullanıcı ayrıca model doğrulaması için (`--test-dataset` kullanarak ve isteğe bağlı `--validation-dataset`) veri kümeleri sağladıysanız `--dataset` bağımsız değişkeni yalnızca "eğitim veri kümesi" olması anlamına gelir. Örneğin, modelin kalitesini doğrulamak ve doğruluk ölçümlerini elde etmek için %80-%20 yaklaşımını kullanırken, "eğitim veri kümesi" verilerin %80 ' sini alacak ve "test veri kümesi" verilerin %20 ' sini alacak.
+- *B: Eğitim veri seti dosyası:* Kullanıcı ayrıca model doğrulama (kullanarak `--test-dataset` ve isteğe bağlı `--validation-dataset`olarak) `--dataset` için veri kümeleri sağlıyorsa, bağımsız değişken yalnızca "eğitim veri kümesine" sahip olmak anlamına gelir. Örneğin, modelin kalitesini doğrulamak ve doğruluk ölçümleri elde etmek için %80 - %20'lik bir yaklaşım kullanırken, "eğitim veri kümesi" verilerin %80'ine ve "test veri kümesi" verilerin %20'sine sahip olacaktır.
 
 ## <a name="test-dataset"></a>Test veri kümesi
 
-`--test-dataset | -t` (dize)
+`--test-dataset | -t`(dize)
 
-Test veri kümesi dosyasına işaret eden dosya yolu; Örneğin, doğruluk ölçümlerini elde etmek için düzenli doğrulamalar yaparken %80-%20 yaklaşım kullanma.
+Doğruluk ölçümleri elde etmek için düzenli doğrulama yaparken örneğin %80 - %20'lik bir yaklaşım kullanırken, test veri kümesi dosyasını gösteren dosya yolu.
 
-`--test-dataset`kullanıyorsanız, `--dataset` de gereklidir.
+Kullanıyorsanız, `--test-dataset` `--dataset` o zaman da gereklidir.
 
---Validation-DataSet kullanılmadığı müddetçe `--test-dataset` bağımsız değişkeni isteğe bağlıdır. Bu durumda, kullanıcının üç bağımsız değişkenini kullanması gerekir.
+--doğrulama-veri kümesi kullanılmadığı sürece `--test-dataset` bağımsız değişken isteğe bağlıdır. Bu durumda, kullanıcı üç bağımsız değişkeni kullanmalıdır.
 
 ## <a name="validation-dataset"></a>Doğrulama veri kümesi
 
-`--validation-dataset | -v` (dize)
+`--validation-dataset | -v`(dize)
 
-Doğrulama veri kümesi dosyasına işaret eden dosya yolu. Doğrulama veri kümesi, her durumda isteğe bağlıdır.
+Doğrulama veri kümesi dosyasını gösteren dosya yolu. Doğrulama veri kümesi her durumda isteğe bağlıdır.
 
-`validation dataset`kullanılıyorsa, davranış şu şekilde olmalıdır:
+Bir `validation dataset`kullanıyorsanız, davranış olmalıdır:
 
-- `test-dataset` ve `--dataset` bağımsız değişkenleri de gereklidir.
+- Ve `test-dataset` `--dataset` bağımsız değişkenler de gereklidir.
 
-- `validation-dataset` veri kümesi, model seçiminde tahmin hatasını tahmin etmek için kullanılır.
+- Veri `validation-dataset` kümesi, model seçimi için tahmin hatasını tahmin etmek için kullanılır.
 
-- `test-dataset`, son seçilen modeldeki Genelleştirme hatası değerlendirmesi için kullanılır. İdeal olarak, test kümesinin bir "kasa" içinde tutulması ve yalnızca veri analizinin sonunda getirilmesi gerekir.
+- Son `test-dataset` seçilen modelin genelleme hatasının değerlendirilmesi için kullanılır. İdeal olarak, test seti bir "kasada" tutulmalı ve yalnızca veri analizinin sonunda çıkarılmalıdır.
 
-Temel olarak, bir `validation dataset` ve `test dataset`kullanılırken, doğrulama aşaması iki parçaya bölünür:
+Temel olarak, `validation dataset` bir `test dataset`artı kullanırken , doğrulama aşaması iki bölüme ayrılır:
 
-1. İlk bölümde, modellerinize göz atadınız ve doğrulama verilerini kullanarak en iyi şekilde gerçekleştirdiğiniz yaklaşımı seçersiniz (= doğrulama)
-2. Ardından seçili yaklaşımın doğruluğunu tahmin edersiniz (= test).
+1. İlk bölümde, sadece modelleribakmak ve doğrulama verileri (= doğrulama) kullanarak en iyi performans yaklaşım seçin
+2. Daha sonra seçili yaklaşımın (=test) doğruluğunu tahmin emzebilirsiniz.
 
-Bu nedenle, verilerin ayrımı 80/10/10 veya 75/15/10 olabilir. Örnek:
+Bu nedenle, veri ayırma 80/10/10 veya 75/15/10 olabilir. Örnek:
 
-- `training-dataset` dosya verilerin %75 ' i olmalıdır.
-- `validation-dataset` dosya verilerin %15 ' i olmalıdır.
-- `test-dataset` dosya verilerin %10 ' a sahip olmalıdır.
+- `training-dataset`dosya verilerin% 75 olmalıdır.
+- `validation-dataset`dosya verilerin% 15 olmalıdır.
+- `test-dataset`dosya verilerin% 10 olmalıdır.
 
-Herhangi bir durumda, bu yüzdeleri Kullanıcı tarafından zaten bölünmüş dosyaları sağlayacak CLı kullanarak kararlanacaktır.
+Her durumda, bu yüzdeler zaten bölünmüş dosyaları sağlayacak CLI kullanarak kullanıcı tarafından karar verilecektir.
 
 ## <a name="label-column-name"></a>Etiket sütun adı
 
-`--label-column-name | -n` (dize)
+`--label-column-name | -n`(dize)
 
-Bu bağımsız değişkenle, belirli bir amaç/hedef sütunu (tahmin etmek istediğiniz değişken) veri kümesinin üst bilgisinde ayarlanan sütunun adı kullanılarak belirtilebilir.
+Bu bağımsız değişkenle, belirli bir hedef/hedef sütunu (tahmin etmek istediğiniz değişken) veri kümesinin üstbilgisinde sütunun ad kümesi kullanılarak belirtilebilir.
 
-Bu bağımsız değişken yalnızca bir *Sınıflandırma sorunu*gıbı denetimli ml görevleri için kullanılır. *Kümeleme*gıbı denetimli ml görevleri için kullanılamaz.
+Bu bağımsız değişken yalnızca *sınıflandırma sorunu*gibi denetlenen ML görevleri için kullanılır. *Kümeleme*gibi denetimsiz ML Görevleri için kullanılamaz.
 
 ## <a name="label-column-index"></a>Etiket sütun dizini
 
-`--label-column-index | -i` (int)
+`--label-column-index | -i`(int)
 
-Bu bağımsız değişkenle, belirli bir amaç/hedef sütunu (tahmin etmek istediğiniz değişken) veri kümesinin dosyasındaki sayısal dizin kullanılarak belirtilebilir (sütun dizini değerleri 1 ' den başlar).
+Bu bağımsız değişkenle, belirli bir hedef/hedef sütunu (tahmin etmek istediğiniz değişken) veri kümesinin dosyasındaki sütunun sayısal dizini kullanılarak belirtilebilir (Sütun dizin değerleri 1'den başlar).
 
-*Note:* Kullanıcı `--label-column-name`de kullanıyorsa, `--label-column-name` kullanılan bir.
+*Not:* Kullanıcı da `--label-column-name`kullanıyorsa, `--label-column-name` kullanılan biridir.
 
-Bu bağımsız değişken yalnızca bir *Sınıflandırma sorunu*gıbı denetimli ml görevi için kullanılır. *Kümeleme*gıbı denetimli ml görevleri için kullanılamaz.
+Bu bağımsız değişken yalnızca bir sınıflandırma *sorunu*gibi denetlenen ML görevi için kullanılır. *Kümeleme*gibi denetimsiz ML Görevleri için kullanılamaz.
 
 ## <a name="ignore-columns"></a>Sütunları yoksay
 
-`--ignore-columns | -I` (dize)
+`--ignore-columns | -I`(dize)
 
-Bu bağımsız değişkenle, veri kümesi dosyasında var olan sütunları yoksayabilirsiniz ve bu sayede eğitim işlemleriyle birlikte kullanılmaz.
+Bu bağımsız değişkenle, veri kümesi dosyasındaki varolan sütunları, eğitim işlemleri tarafından yüklenmedikleri ve kullanılmaması için yok sayabilirsiniz.
 
-Yoksaymak istediğiniz sütun adlarını belirtin. Birden çok sütun adını ayırmak için ', ' (boşluk ile virgül) veya ' ' (boşluk) kullanın. Boşluk içeren sütun adları için tırnak işareti kullanabilirsiniz (örneğin, "oturum açmış").
+Yoksaymak istediğiniz sütun adlarını belirtin. Birden çok sütun adını ayırmak için ',' (boşlukla virgül) veya ' ' (boşluk) kullanın. Beyaz boşluk içeren sütun adları için tırnak işaretleri kullanabilirsiniz (örn. "oturum açmış").
 
 Örnek:
 
 `--ignore-columns email, address, id, logged_in`
 
-## <a name="has-header"></a>Üst bilgisi vardır
+## <a name="has-header"></a>Üstbilgi var
 
-`--has-header | -h` (bool)
+`--has-header | -h`(bool)
 
-Veri kümesi dosyalarının bir üst bilgi satırına sahip olup olmadığını belirtin.
+Veri kümesi dosyasının üstbilgi satırı olup olmadığını belirtin.
 Olası değerler şunlardır:
 
 - `true`
 - `false`
 
-Bu bağımsız değişken Kullanıcı tarafından belirtilmemişse, varsayılan değer olarak `true`.
+Varsayılan değer, `true` bu bağımsız değişkenin kullanıcı tarafından belirtilmemiş olmasıdır.
 
-`--label-column-name` bağımsız değişkenini kullanmak için, veri kümesi dosyasında bir üst bilgiye sahip olmanız ve `--has-header` `true` (varsayılan olarak) olarak ayarlamanız gerekir.
+Bağımsız değişkeni `--label-column-name` kullanmak için, veri kümesi dosyasında bir üstbilgi nin olması ve `--has-header` `true` (varsayılan olarak) ayarlanabilmesi gerekir.
 
-## <a name="max-exploration-time"></a>En fazla araştırma süresi
+## <a name="max-exploration-time"></a>Maksimum arama süresi
 
-`--max-exploration-time | -x` (dize)
+`--max-exploration-time | -x`(dize)
 
-Varsayılan olarak, en fazla araştırma süresi 30 dakikadır.
+Varsayılan olarak, maksimum arama süresi 30 dakikadır.
 
-Bu bağımsız değişken, birden fazla taş ve yapılandırmayı araştırmak için işlem için en uzun süreyi (saniye cinsinden) ayarlar. Belirtilen süre çok kısaysa (2 saniye), tek bir yineleme için yapılandırılan saat kesilebilir. Bu durumda, gerçek süre, tek bir yinelemede tek bir model yapılandırması üretmek için gereken süredir.
+Bu bağımsız değişken, işlemin birden çok eğitmeni ve yapılandırmayı keşfetmesi için en fazla zamanı (saniye cinsinden) ayarlar. Sağlanan süre tek bir yineleme için çok kısaysa (örneğin 2 saniye) yapılandırılan süre aşılabilir. Bu durumda, gerçek zaman tek bir yinelemede bir model yapılandırması üretmek için gerekli zamandır.
 
-Yinelemeler için gereken süre, veri kümesinin boyutuna bağlı olarak farklılık gösterebilir.
+Yinelemeler için gereken süre, veri kümesinin boyutuna bağlı olarak değişebilir.
 
 ## <a name="cache"></a>Önbellek
 
-`--cache | -c` (dize)
+`--cache | -c`(dize)
 
-Önbelleğe alma kullanırsanız, tüm eğitim veri kümesi bellek içinde yüklenir.
+Önbelleğe alma kullanırsanız, tüm eğitim veri kümesi bellekte yüklenir.
 
-Küçük ve orta ölçekli veri kümelerinde, önbelleğin kullanılması eğitim performansını önemli ölçüde iyileştirebilir, bu da eğitim süresi önbelleği kullanmadığınız zamandan daha kısa olabilir.
+Küçük ve orta veri kümeleri için önbellek kullanmak eğitim performansını önemli ölçüde artırabilir, bu da eğitim süresinin önbelleği kullanmadığınız zamankinden daha kısa olabileceği anlamına gelir.
 
-Ancak, büyük veri kümeleri için bellekteki tüm verilerin yüklenmesi, bellek yetersiz olduğundan olumsuz etkileyebilir. Büyük veri kümesi dosyalarıyla eğitim yaparken ve önbellek kullanmayan ML.NET, eğitim sırasında daha fazla veri yüklemesi gerektiğinde sürücüdeki veri öbeklerini akışa alabilir.
+Ancak, büyük veri kümeleri için bellekteki tüm verilerin yüklenmesi, bellekten çıkabileceğiniz için olumsuz etki gösterebilir. Büyük veri kümesi dosyalarıyla eğitim alırken ve önbellek kullanmazken, ML.NET, eğitim sırasında daha fazla veri yüklemesi gerektiğinde sürücüden veri yığınları akışı olacaktır.
 
 Aşağıdaki değerleri belirtebilirsiniz:
 
-`on`: eğitim sırasında önbelleğin kullanılmasına zorlar.
-`off`: eğitim sırasında önbelleğin kullanılmamaya zorlar.
-`auto`:, oto ml buluşsal lerine bağlı olarak, önbellek kullanılır veya değildir. Genellikle, küçük/orta veri kümeleri önbelleği kullanır ve büyük veri kümeleri `auto` seçeneğini kullanırsanız önbelleği kullanmaz.
+`on`: Eğitim de kullanılacak önbelleği zorlar.
+`off`: Eğitim de kullanılmaması için önbelleği zorlar.
+`auto`: AutoML sezgisel bağlı olarak, önbellek kullanılacak veya kullanılmaz. Genellikle, küçük/orta veri kümeleri önbellek kullanır ve `auto` seçimi kullanırsanız büyük veri kümeleri önbellek kullanmaz.
 
-`--cache` parametresini belirtmezseniz, varsayılan olarak önbellek `auto` yapılandırması kullanılacaktır.
+Parametreyi `--cache` belirtmezseniz, önbellek `auto` yapılandırması varsayılan olarak kullanılır.
 
 ## <a name="name"></a>Adı
 
-`--name | -N` (dize)
+`--name | -N`(dize)
 
-Oluşturulan çıkış projesinin veya çözümünün adı. Ad belirtilmemişse, `sample-{mltask}` adı kullanılır.
+Oluşturulan çıktı projesinin veya çözümün adı. Ad belirtilmemişse, `sample-{mltask}` ad kullanılır.
 
-ML.NET model dosyası (. ZIP dosyası) de aynı adı alır.
+ML.NET modeli dosyası (. ZIP dosyası) de aynı adı alırsınız.
 
 ## <a name="output-path"></a>Çıkış yolu
 
-`--output-path | -o` (dize)
+`--output-path | -o`(dize)
 
-Oluşturulan çıkışın yerleştirileceği kök konumu/klasörü. Geçerli dizin varsayılandır.
+Oluşturulan çıktıyı yerleştirmek için kök konumu/klasörü. Geçerli dizin varsayılandır.
 
 ## <a name="verbosity"></a>Ayrıntı Düzeyi
 
-`--verbosity | -V` (dize)
+`--verbosity | -V`(dize)
 
-Standart çıkışın ayrıntı düzeyini ayarlar.
+Standart çıktının ayrıntılı düzeyini ayarlar.
 
 İzin verilen değerler şunlardır:
 
 - `q[uiet]`
-- `m[inimal]` (varsayılan olarak)
-- `diag[nostic]` (günlüğe kaydetme bilgileri düzeyi)
+- `m[inimal]`(varsayılan olarak)
+- `diag[nostic]`(günlük bilgi düzeyi)
 
-Varsayılan olarak, CLı aracı çalışırken, çalıştığı ve ne kadar süre kaldığını ya da zamanın ne kadar tamamlandığını belirten en düşük geri bildirimleri (en az) göstermelidir.
+Varsayılan olarak, CLI aracı çalışırken, çalıştığını ve mümkünse ne kadar zaman kaldığını veya %ne kadar Zaman'ın tamamlandığını belirtmek gibi bazı minimum geri bildirimleri (minimal) göstermelidir.
 
 ## <a name="help"></a>Yardım
 
 `-h|--help`
 
-Komut için, her komutun parametresi için bir açıklama içeren yardımı yazdırır.
+Her komutun parametresi için bir açıklama içeren komut için yardım yazdırır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ML.NET CLı aracını yüklemek](../how-to-guides/install-ml-net-cli.md)
-- [ML.NET CLı 'ye Genel Bakış](../automate-training-with-cli.md)
-- [Öğretici: ML.NET CLı kullanarak yaklaşımı çözümleme](../tutorials/sentiment-analysis-cli.md)
-- [ML.NET CLı 'de telemetri](../resources/ml-net-cli-telemetry.md)
+- [ML.NET CLI aracı nasıl yüklenir?](../how-to-guides/install-ml-net-cli.md)
+- [ML.NET CLI'ye Genel Bakış](../automate-training-with-cli.md)
+- [Öğretici: CLI ML.NET kullanarak duyguları analiz edin](../tutorials/sentiment-analysis-cli.md)
+- [ML.NET CLI'de telemetri](../resources/ml-net-cli-telemetry.md)

@@ -1,28 +1,28 @@
 ---
 ms.openlocfilehash: 3272dc562981269b868df4ca9d3a5806918aba5f
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937011"
 ---
 ### <a name="dontsupportreentrantfiltermessage-compatibility-switch-not-supported"></a>DontSupportReentrantFilterMessage uyumluluk anahtarı desteklenmiyor
 
-.NET Framework 4.6.1 içinde tanıtılan `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` uyumluluk anahtarı .NET Core 3,0 ' de Windows Forms desteklenmez.
+.NET Framework 4.6.1'de tanıtılan `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` uyumluluk anahtarı ,NET Core 3.0'daki Windows Formlar'da desteklenmez.
 
-#### <a name="change-description"></a>Açıklamayı Değiştir
+#### <a name="change-description"></a>Açıklamayı değiştir
 
-.NET Framework 4.6.1 ile başlayarak, `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` uyumluluk anahtarı, <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> ileti özel bir <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> uygulamasıyla çağrıldığında olası <xref:System.IndexOutOfRangeException> özel durumları ele alınmaktadır. Daha fazla bilgi için bkz. [azaltma: Custom IMessageFilter. PreFilterMessage uygulamaları](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md).
+.NET Framework 4.6.1'den `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` başlayarak, <xref:System.IndexOutOfRangeException> <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> ileti özel <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> bir uygulamayla çağrıldığında uyumluluk anahtarı olası özel durumları giderer. Daha fazla bilgi için [bkz: Azaltma: Özel IMessageFilter.PreFilterMessage Uygulamaları.](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md)
 
-.NET Core 'da `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` anahtarı desteklenmez.
+.NET Core'da `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` anahtar desteklenmez.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3,0 Preview 9
+3.0 Önizleme 9
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Anahtarı kaldırın. Anahtar desteklenmez ve alternatif bir işlev kullanılamaz.
+Anahtarı çıkarın. Anahtar desteklenmez ve alternatif bir işlevsellik yok.
 
 #### <a name="category"></a>Kategori
 

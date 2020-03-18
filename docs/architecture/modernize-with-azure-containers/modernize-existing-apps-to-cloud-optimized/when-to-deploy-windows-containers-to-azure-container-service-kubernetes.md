@@ -1,26 +1,26 @@
 ---
-title: Windows kapsayıcıları Azure Container Service dağıtım zaman (yani, Kubernetes)
-description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Windows kapsayıcıları Azure Container Service dağıtım zaman (yani, Kubernetes)
+title: Windows Kapsayıcıları Azure Kapsayıcı Hizmetine ne zaman dağıtılır (diğer bir şekilde, Kubernetes)
+description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernize edin | Windows Kapsayıcıları Azure Kapsayıcı Hizmetine ne zaman dağıtılır (diğer bir şekilde, Kubernetes)
 ms.date: 04/30/2018
 ms.openlocfilehash: 903082deba635dd0dfc22d0186fbc589f8d05b92
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68676912"
 ---
-# <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Windows kapsayıcıları Azure Container Service dağıtım zaman (yani, Kubernetes)
+# <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Windows Kapsayıcıları Azure Kapsayıcı Hizmetine ne zaman dağıtılır (diğer bir şekilde, Kubernetes)
 
-Azure Container Service, popüler açık kaynaklı araçların ve teknolojilerin yapılandırmasını özellikle Azure için iyileştirir. Kapsayıcılar ve uygulama yapılandırmanız için taşınabilirlik sağlayan açık bir çözüm alırsınız. Boyut, ana bilgisayar sayısı ve Orchestrator Araçları ' nı seçersiniz. Azure Container Service altyapıyı sizin için işler.
+Azure Kapsayıcı Hizmeti, azure için özel olarak popüler açık kaynak araçları nın ve teknolojilerin yapılandırmasını optimize eder. Hem kapsayıcılarınız hem de uygulama yapılandırmanız için taşınabilirlik sunan açık bir çözüme sahip olursunuz. Boyutu, ana bilgisayar sayısını ve orkestratör araçlarını seçersiniz. Azure Kapsayıcı Hizmeti, altyapıyı sizin için işler.
 
-Kubernetes, Docker Sısınma veya DC/OS gibi açık kaynaklı düzenleyiciler ile zaten çalışıyorsanız, kapsayıcı iş yüklerini buluta taşımak için mevcut yönetim uygulamalarınızı değiştirmeniz gerekmez. Zaten bildiğiniz uygulama yönetimi araçlarını kullanın ve seçtiğiniz Orchestrator için Standart API uç noktaları aracılığıyla bağlanın.
+Zaten Kubernetes, Docker Swarm veya DC/OS gibi açık kaynak kodlu orkestratörlerle çalışıyorsanız, kapsayıcı iş yüklerini buluta taşımak için mevcut yönetim uygulamalarınızı değiştirmeniz gerekmez. Zaten aşina olduğunuz uygulama yönetim araçlarını kullanın ve seçtiğiniz orkestratör için standart API uç noktaları üzerinden bağlanın.
 
-Linux Docker Kapsayıcıları kullanıyorsanız, ancak yalnızca Windows kapsayıcıları önizleme durumunda olabilir.
+Linux Docker kapsayıcıları kullanıyorsanız, tüm bu orkestratörler olgun ortamlardır, ancak yalnızca Windows Kapsayıcıları için Önizleme durumunda olabilir.
 
-Örneğin, Kubernetes 'te kapsayıcılar için destek yerel (birinci sınıf vatandaşlık), bu nedenle Kubernetes üzerinde Windows kapsayıcıları kullanmak da etkilidir (ACS 'nin erken 2018 itibariyle önizlemesi için).
+Örneğin, Kubernetes'te kapsayıcıdesteği yereldir (birinci sınıf vatandaştır), bu nedenle Kubernetes'te Windows Kapsayıcıları kullanmak da etkilidir (2018'in başlarından itibaren ACS'de önizlemede).
 
-Önemli Not: Kubernetes için ACS (Azure Container Service) ile ilgili ve "daha PaaS" sürümü AKS (Azure Kubernetes hizmeti), ancak Windows kapsayıcıları, S2 2018 itibariyle hala desteklenmiyordur, ancak yakında desteklenecektir.
+Önemli not: Kubernetes için ACS'nin (Azure Konteyner Hizmeti) gelişmiş ve "daha fazla PaaS" sürümü AKS 'dir (Azure Kubernetes Hizmeti), Ancak Windows Kapsayıcıları Q2 2018 itibariyle hala desteklenmez, ancak yakında desteklenir.
 
 >[!div class="step-by-step"]
 >[Önceki](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)
->[İleri](choosing-azure-compute-options-for-container-based-applications.md)
+>[Sonraki](choosing-azure-compute-options-for-container-based-applications.md)

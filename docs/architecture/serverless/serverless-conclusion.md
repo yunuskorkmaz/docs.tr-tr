@@ -1,33 +1,33 @@
 ---
-title: Anahtar sunucuları-sunucusuz uygulamalar
-description: Sunucusuz birçok avantaj sağlar ve kendi güçlüklerine sahiptir. Bu kılavuzdaki önemli nesnelerin Özeti.
+title: Anahtar paketler - Sunucusuz uygulamalar
+description: Serverless birçok faydalar sağlar ve kendi zorlukları vardır. Bu kılavuzdan önemli paketlerin bir özeti.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: ae9fc47bf07a7e28688942b856b4743ae7aadc36
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68676690"
 ---
 # <a name="conclusion"></a>Sonuç
 
-Aşağıdaki anahtar, bu kılavuzun en önemli ekibinizle.
+Aşağıdaki anahtar takeaways bu kılavuzdan en önemli sonuçlar vardır.
 
-**Sunucusuz kullanmanın avantajları.** Sunucusuz çözümler maliyet tasarruflarının önemli avantajını sağlar çünkü sunucusuz, kullanım başına ödeme modelinde uygulanır. Sunucusuz, uygulamanızın bağımsız bileşenlerini bağımsız olarak ölçeklendirmenizi, test etmelerini ve dağıtmayı mümkün kılar. Sunucusuz, mikro hizmet mimarileri uygulamak ve tamamen bir DevOps ardışık düzenine sahip olmak için benzersiz bir şekilde uygundur.
+**Sunucusuz kullanmanın yararları.** Sunucusuz bir kullanım başına ödeme modelinde uygulandığından, sunucusuz çözümler maliyet tasarrufunun önemli bir yararı sağlar. Sunucusuz, uygulamanızın tek tek bileşenlerini bağımsız olarak ölçeklendirmeyi, sınamayı ve dağıtmayı mümkün kılar. Serverless, mikrohizmet mimarilerini uygulamak için benzersiz bir şekilde uygundur ve DevOps boru hattına tam olarak entegre edilir.
 
-**Dağıtım birimi olarak kod.** Sunucusuz, donanım, işletim sistemi ve çalışma zamanını uygulamadan uzağa soyutlar. Sunucusuz, dağıtım birimi olarak koddaki iş mantığına odaklanmaya izin vermez.
+**Dağıtım birimi olarak kod.** Sunucusuz, donanımı, işletim sistemi'ni ve çalışma süresini uygulamadan soyutlar. Sunucusuz, dağıtım birimi olarak koddaki iş mantığına odaklanmayı sağlar.
 
-**Tetikleyiciler ve bağlamalar.** Sunucusuz, depolama, API 'Ler ve diğer bulut kaynaklarıyla tümleştirmeyi kolaylaştırır. Azure Işlevleri, kaynaklarla etkileşim kurmak için kod ve bağlamaları yürütmeye yönelik Tetikleyiciler sağlar.
+**Tetikleyiciler ve bağlamalar.** Sunucusuz, depolama, API'ler ve diğer bulut kaynaklarıyla tümleştirmeyi kolaylaştırır. Azure İşlevler, kod yürütmek için tetikleyiciler ve kaynaklarla etkileşimkurmak için bağlamalar sağlar.
 
-**Mikro hizmetler.** Mikro hizmetler mimarisi, özerk hizmetler biçiminde birden çok bağımsız alt sistemi temel alan dağıtılmış ve büyük veya karmaşık görev açısından kritik uygulamalar için tercih edilen yaklaşım haline geliyor. Mikro hizmet tabanlı bir mimaride, uygulama geliştirilebilen, test edilmiş, sürümlü, dağıtılan ve bağımsız olarak ölçeklendirilen bir hizmetler koleksiyonu olarak oluşturulmuştur. Sunucusuz, bu hizmetleri oluşturmaya uygun bir mimaridir.
+**Mikro hizmetler.** Mikro hizmetler mimarisi, otonom hizmetler biçiminde birden fazla bağımsız alt sistemi temel alan dağıtılmış ve büyük veya karmaşık görev açısından kritik uygulamalar için tercih edilen bir yaklaşım haline gelmektedir. Mikro hizmet tabanlı bir mimaride uygulama, geliştirilebilen, sınanabilen, sürümlendirilebilen, dağıtılabilen ve bağımsız olarak ölçeklendirilebilen hizmetler topluluğu olarak oluşturulur. Serverless bu hizmetleri oluşturmak için uygun bir mimaridir.
 
-**Sunucusuz platformlar.** Sunucusuz yalnızca kodla ilgili değildir. Sunucusuz mimariler destekleyen platformlar sunucusuz iş akışları ve düzenleme, sunucusuz mesajlaşma ve olay Hizmetleri ve sunucusuz veritabanları içerir.
+**Sunucusuz platformlar.** Sunucusuz sadece kod la ilgili değildir. Sunucusuz mimarileri destekleyen platformlar arasında sunucusuz iş akışları ve orkestrasyon, sunucusuz mesajlaşma ve olay hizmetleri ve sunucusuz veritabanları yer alır.
 
-**Sunucusuz sorunlar.** Sunucusuz, parçalanmış ve bağımsız veri modelleri, dayanıklılık, sürüm oluşturma ve hizmet bulma gibi dağıtılmış uygulama geliştirmeyle ilgili güçlükleri tanıtır. Sunucusuz, daha sıkı bir biçimde çalışan uzun süreli işlemlere veya bileşenlere idealdir.
+**Sunucusuz zorluklar.** Sunucusuz, parçalanmış ve bağımsız veri modelleri, esneklik, sürüm ve hizmet bulma gibi dağıtılmış uygulama geliştirmeyle ilgili zorluklar getirir. Sunucusuz, uzun süren işlemler veya daha sıkı bağlantıdan yararlanan bileşenler için ideal olmayabilir.
 
-**Araç kutusu değil, araç olarak sunucusuz.** Sunucusuz, uygulama mimarisine özel çözüm değildir. Geleneksel katmanlar, tek bir arka ucu ve kapsayıcılar içerebilen bir karma uygulamanın parçası olarak yararlanılabilir olabilecek bir araçtır. Sunucusuz, mevcut çözümleri geliştirmek için kullanılabilir ve uygulama geliştirmeye yönelik bir bütün veya bir yaklaşım değildir.
+**Araç olarak sunucusuz, araç kutusu olarak değil.** Serverless uygulama mimarisi için özel bir çözüm değildir. Geleneksel katmanlar, monolit arka uçlar ve kapsayıcılar içerebilen karma bir uygulamanın parçası olarak yararlanılabilen bir araçtır. Sunucusuz varolan çözümleri geliştirmek için kullanılabilir ve uygulama geliştirme için bir all-or-nothing yaklaşımı değildir.
 
 >[!div class="step-by-step"]
->[Öncekini](serverless-business-scenarios.md)
+>[Önceki](serverless-business-scenarios.md)

@@ -1,49 +1,49 @@
 ---
 ms.openlocfilehash: 31e7f84a787d255a474f4c2b1fa3068903dbed52
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901700"
 ---
-### <a name="http-headernames-constants-changed-to-static-readonly"></a>HTTP: HeaderNames sabitleri statik ReadOnly olarak değiştirildi
+### <a name="http-headernames-constants-changed-to-static-readonly"></a>HTTP: BaşlıkAdları sabitleri yalnızca statik okunur olarak değiştirildi
 
-ASP.NET Core 3,0 Preview 5 ' ten başlayarak, <xref:Microsoft.Net.Http.Headers.HeaderNames?displayProperty=fullName> alan `const` `static readonly`olarak değişir.
+Core 3.0 Preview 5ASP.NET'den <xref:Microsoft.Net.Http.Headers.HeaderNames?displayProperty=fullName> `const` başlayarak, `static readonly`'deki alanlar .
 
-Tartışma için bkz. [DotNet/aspnetcore # 9514](https://github.com/dotnet/aspnetcore/issues/9514).
+Tartışma için [dotnet/aspnetcore#9514'e](https://github.com/dotnet/aspnetcore/issues/9514)bakın.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-Bu alanlar `const`için kullanılır.
+Bu alanlar `const`eskiden.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Bu alanlar artık `static readonly`.
+Bu alanlar `static readonly`artık.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
 Değişiklik:
 
-* Değerlerin, gerektiğinde değer düzeltmeleri için derleme sınırları arasında gömülmesini önler.
-* Daha hızlı başvuru eşitlik denetimleri sağlar.
+* Değerlerin montaj sınırları nın ötesine gömülmesini önler ve gerektiğinde değer düzeltmelerine olanak sağlar.
+* Daha hızlı başvuru eşitliği denetimleri sağlar.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-3,0 ile yeniden derleyin. Aşağıdaki yollarla bu alanları kullanan kaynak kodu bundan böyle devam edebilir:
+3.0'a karşı yeniden derle. Bu alanları aşağıdaki yollarla kullanan kaynak kodu artık bunu yapamaz:
 
 * Öznitelik bağımsız değişkeni olarak
-* `switch` bildiriminde `case` olarak
-* Başka bir `const` tanımlarken
+* `case` Bir `switch` açıklamada olduğu gibi
+* Başka bir tanımlama`const`
 
-Son değişikliği geçici olarak çözmek için, kendi kendine tanımlanmış üst bilgi adı sabitleri veya dize sabit değerlerini kullanmaya geçin.
+Kesme değişikliğini aşmak için, kendi tanımladığı üstbilgi adı sabitlerini veya dize gerçeklerini kullanmaya geçin.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Core
+ASP.NET Çekirdeği
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

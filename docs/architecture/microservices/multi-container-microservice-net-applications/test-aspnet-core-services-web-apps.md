@@ -1,37 +1,37 @@
 ---
 title: ASP.NET Core hizmetlerini ve web uygulamalarını test etme
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Kapsayıcılarda ASP.NET Core Hizmetleri ve Web uygulamalarını test etmek için bir mimari bulun.
+description: .NET Microservices Mimari Containerized .NET Uygulamaları için | ASP.NET Core hizmetlerini ve web uygulamalarını kapsayıcılarda test etmek için bir mimari keşfedin.
 ms.date: 01/30/2020
 ms.openlocfilehash: ab3ae6276ea4e4c741731f050913d956046271ca
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501983"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core hizmetlerini ve web uygulamalarını test etme
 
-Denetleyiciler, tüm ASP.NET Core API Service ve ASP.NET MVC web uygulamalarının merkezi bir parçasıdır. Bu nedenle, uygulamanız için amaçlanan gibi davrandıklarından emin olmanız gerekir. Otomatikleştirilmiş testler size bu güvenilirliği sağlayabilir ve üretime ulaşmadan önce hataları tespit edebilir.
+Denetleyiciler, herhangi bir ASP.NET Core API hizmetinin ve MVC Web uygulaması ASP.NETnın merkezi bir parçasıdır. Bu nedenle, uygulamanız için amaçlandığı gibi çalıştıklarına güvenmelisiniz. Otomatik testler size bu güveni sağlayabilir ve üretime ulaşmadan önce hataları algılayabilir.
 
-Denetleyicinin geçerli veya geçersiz girişlere göre nasıl davranacağını ve gerçekleştirdiği iş işleminin sonucuna bağlı olarak test denetleyicisi yanıtlarını test etmeniz gerekir. Ancak, mikro hizmetlerinizde bu tür testlerin olması gerekir:
+Denetleyicinin geçerli veya geçersiz girişlere göre nasıl hareket edeceğini sınamak ve gerçekleştirdiği iş işleminin sonucuna göre denetleyici yanıtlarını test etmeniz gerekir. Ancak, mikro hizmetleriniz için bu tür testler olmalıdır:
 
-- Birim testleri. Bu, uygulamanın ayrı bileşenlerinin beklenen şekilde çalışmasını güvence altına aldığından emin olun. Onaylar bileşen API 'sini test etme.
+- Birim testleri. Bunlar, uygulamanın tek tek bileşenlerinin beklendiği gibi çalışmasını sağlar. İddialar bileşen API sına.
 
-- Tümleştirme testleri. Bu, bileşen etkileşimlerin veritabanları gibi dış yapılara karşı beklendiği gibi çalışmasını güvence altına aldığından emin olun. Onaylar, bileşen API 'sini, Kullanıcı arabirimini veya veritabanı g/ç, günlüğe kaydetme vb. gibi eylemlerin yan etkilerini test edebilir.
+- Entegrasyon testleri. Bunlar, bileşen etkileşimlerinin veritabanları gibi dış yapılara karşı beklendiği gibi çalışmasını sağlar. İddialar bileşen API,UI veya veritabanı G/Ç, günlük, vb. gibi eylemlerin yan etkilerini test edebilir.
 
-- Her mikro hizmet için işlevsel testler. Bu, uygulamanın kullanıcının perspektifinden beklendiği gibi çalıştığından emin olun.
+- Her mikro hizmet için fonksiyonel testler. Bunlar, uygulamanın kullanıcının bakış açısından beklendiği gibi çalışmasını sağlar.
 
-- Hizmet testleri. Bu, birden çok hizmetin aynı anda test edilmesi de dahil olmak üzere uçtan uca hizmet kullanım örneklerinin test edilmesine olanak sağlar. Bu test türü için öncelikle ortamı hazırlamanız gerekir. Bu durumda, hizmetler (örneğin, Docker-Compose kullanarak) başlatılıyor demektir.
+- Servis testleri. Bunlar, aynı anda birden çok hizmeti test etmek de dahil olmak üzere uçlardan uca hizmet kullanım örneklerinin sınanmasını sağlar. Bu tür bir test için önce ortamı hazırlamanız gerekir. Bu durumda, hizmetleri başlatmak anlamına gelir (örneğin, docker-comto up kullanarak).
 
-### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>ASP.NET Core Web API 'Leri için birim testlerini uygulama
+### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>ASP.NET Çekirdek Web API'leri için birim testleri uygulama
 
-Birim testi, bir uygulamanın bir bölümünün altyapısından ve bağımlılıklarından yalıtımıyla test edilmesini içerir. Birim test denetleyicisi mantığınızı kullandığınızda yalnızca tek bir eylemin veya metodun içeriği test edilir, bağımlılıkları veya çerçevenin kendisi değildir. Birim testleri, tümleştirme testi amacı olan bileşenler arasındaki etkileşimle ilgili sorunları algılamaz.
+Birim testi, bir uygulamanın bir bölümünü altyapısından ve bağımlılıklarından izole olarak test etmektir. Test denetleyicisi mantığını birim lediğinizde, yalnızca tek bir eylemin veya yöntemin içeriği sınanır, bağımlılıklarının veya çerçevenin kendisinin davranışı değil. Birim testleri, bileşenler arasındaki etkileşimdeki sorunları algılamaz, bu da tümleştirme testinin amacıdır.
 
-Denetleyici eylemlerinizi birim testi yaparken, yalnızca davranışlarını odakladığınızdan emin olun. Denetleyici birimi testi, filtreler, yönlendirme veya model bağlama (istek verilerinin bir ViewModel veya DTO) gibi şeyleri önler. Yalnızca bir şeyi test etmeye odaklandığından, birim testlerinin genellikle yazma ve hızlı çalışma için basit olması gerekir. İyi yazılmış bir birim testleri kümesi, çok fazla yük olmadan sık çalıştırılabilir.
+Denetleyici eylemlerinizi bir araya getirerken, yalnızca davranışlarına odaklandığınızdan emin olun. Denetleyici birim testi filtreler, yönlendirme veya model bağlama (istek verilerinin ViewModel veya DTO ile eşleştirilmesi) gibi şeyleri önler. Onlar sadece bir şey test odaklanmak çünkü, birim testleri genellikle yazmak ve çalıştırmak için hızlı basittir. İyi yazılmış birim testleri kümesi çok fazla yükü olmadan sık sık çalıştırılabilir.
 
-Birim testleri xUnit.net, MSTest, moq veya NUnit gibi test çerçeveleri temelinde uygulanır. EShopOnContainers örnek uygulaması için xUnit kullandık.
+Birim testleri xUnit.net, MSTest, Moq veya NUnit gibi test çerçevelerine göre uygulanır. eShopOnContainers örnek uygulaması için xUnit kullanıyoruz.
 
-Bir Web API denetleyicisi için bir birim testi yazdığınızda, test, mümkün olduğunca hızlı çalışacak şekilde, C\#içindeki New anahtar sözcüğünü kullanarak doğrudan denetleyici sınıfını örnekleyebilirsiniz. Aşağıdaki örnek, [xUnit](https://xunit.github.io/) 'i test çerçevesi olarak kullanırken nasıl yapılacağını gösterir.
+Bir Web API denetleyicisi için bir birim testi yazdığınızda, testin mümkün olduğunca\#hızlı çalışması için C'deki yeni anahtar sözcüğü kullanarak denetleyici sınıfını doğrudan anında alabilirsiniz. Aşağıdaki örnek, test çerçevesi olarak [xUnit](https://xunit.github.io/) kullanırken bunu nasıl yapacağını gösterir.
 
 ```csharp
 [Fact]
@@ -58,19 +58,19 @@ public async Task Get_order_detail_success()
 }
 ```
 
-### <a name="implementing-integration-and-functional-tests-for-each-microservice"></a>Her mikro hizmet için tümleştirme ve işlevsel testleri uygulama
+### <a name="implementing-integration-and-functional-tests-for-each-microservice"></a>Her mikro hizmet için entegrasyon ve işlevsel testlerin uygulanması
 
-Belirtildiği gibi, tümleştirme testleri ve işlevsel testlerin farklı amaçları ve hedefleri vardır. Ancak, ASP.NET Core denetleyicileri test edilirken her ikisini de aynı şekilde uyguladığınızda, bu bölümde tümleştirme testlerine odaklanıyoruz.
+Belirtildiği gibi, entegrasyon testleri ve fonksiyonel testler farklı amaç ve hedefleri vardır. Ancak, Core denetleyicileri ASP.NET test ederken her ikisini de uygulama şekliniz benzerdir, bu nedenle bu bölümde tümleştirme testlerine odaklanırız.
 
-Tümleştirme testi, bir uygulamanın bileşenlerinin, bir araya geldiğinde doğru şekilde çalışmasını sağlar. ASP.NET Core, birim test çerçeveleri ve ağ yükü olmadan istekleri işlemek için kullanılabilen yerleşik bir test Web ana bilgisayarı kullanılarak tümleştirme testini destekler.
+Tümleştirme sınama, bir uygulamanın bileşenlerinin monte edildiğinde düzgün çalışmasını sağlar. ASP.NET Core, birim test çerçevelerini ve ağ yükü olmadan istekleri işlemek için kullanılabilecek yerleşik bir test web ana bilgisayarlarını kullanarak tümleştirme testini destekler.
 
-Birim testinin aksine, tümleştirme sınamaları genellikle veritabanı, dosya sistemi, ağ kaynakları veya Web istekleri ve yanıtları gibi uygulama altyapısı sorunlarını kapsar. Birim testleri, bu endişeler yerine Fakes veya sahte nesneler kullanır. Ancak tümleştirme testlerinin amacı, sistemin bu sistemlerle beklendiği gibi çalıştığından emin olmak için, tümleştirme testi için Fakes veya sahte nesneler kullanmayın. Bunun yerine, diğer hizmetlerden veritabanı erişimi veya hizmet çağrısı gibi altyapıyı dahil edersiniz.
+Birim sınamanın aksine, tümleştirme testleri genellikle veritabanı, dosya sistemi, ağ kaynakları veya web istekleri ve yanıtları gibi uygulama altyapısı yla ilgili endişeleri içerir. Birim testleri bu endişeler yerine sahte veya sahte nesneler kullanır. Ancak tümleştirme testlerinin amacı, sistemin beklendiği gibi çalıştığını doğrulamaktır, bu nedenle tümleştirme testi için sahte veya sahte nesneler kullanmayın. Bunun yerine, veritabanı erişimi veya diğer hizmetlerden hizmet çağırma gibi altyapıyı eklersiniz.
 
-Tümleştirme sınamaları, kod segmentlerinin birim testlerine göre daha büyük kesimlebildiğinden ve tümleştirme testleri altyapı öğelerini kullandığından, birim testlerinden daha yavaş bir şekilde sıra daha yavaş bir şekilde ücretlidir. Bu nedenle, kaç tane tümleştirme testini yazıp çalıştıracağınızı kısıtlamak iyi bir fikirdir.
+Tümleştirme testleri birim testlerinden daha büyük kod bölümlerini uyguladığından ve tümleştirme testleri altyapı öğelerine dayandığından, birim testlerinden daha yavaş büyüklük emirleri olma eğilimindedirler. Bu nedenle, kaç tümleştirme testi yazıp çalıştırdığınızı sınırlamak iyi bir fikirdir.
 
-ASP.NET Core, ağ yükü olmadan HTTP isteklerini işlemek için kullanılabilen yerleşik bir test Web ana bilgisayarı içerir, yani bu testleri gerçek bir Web ana bilgisayarı kullanmaktan daha hızlı çalıştırabilmeniz anlamına gelir. Test Web ana bilgisayarı (TestServer), bir NuGet bileşeninde Microsoft. AspNetCore. TestHost olarak kullanılabilir. Tümleştirme test projelerine eklenebilir ve ASP.NET Core uygulamalarını barındırmak için kullanılır.
+ASP.NET Core, ağ yükü olmadan HTTP isteklerini işlemek için kullanılabilecek yerleşik bir test web ana bilgisayar içerir, yani bu testleri gerçek bir web ana bilgisayar kullanırken daha hızlı çalıştırabilirsiniz. Test web ana bilgisayarı (TestServer), Microsoft.AspNetCore.TestHost olarak NuGet bileşeninde kullanılabilir. Tümleştirme test projelerine eklenebilir ve ASP.NET Çekirdek uygulamalarını barındırmak için kullanılabilir.
 
-Aşağıdaki kodda görebileceğiniz gibi, ASP.NET Core denetleyicileri için tümleştirme testleri oluşturduğunuzda, denetleyicileri test ana bilgisayarı aracılığıyla örnekleyebilirsiniz. Bu bir HTTP isteğine benzer, ancak daha hızlı çalışır.
+Aşağıdaki kodda görebileceğiniz gibi, ASP.NET Çekirdek denetleyicileri için tümleştirme testleri oluşturduğunuzda, denetleyicileri test ana bilgisayarı üzerinden anında alabilirsiniz. Bu, bir HTTP isteğiyle karşılaştırılabilir, ancak daha hızlı çalışır.
 
 ```csharp
 public class PrimeWebDefaultRequestShould
@@ -101,54 +101,54 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Steve Smith. Test denetleyicileri** (ASP.NET Core) \
+- **Steve Smith' i. Test denetleyicileri** (ASP.NET Core) \
     [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](/aspnet/core/mvc/controllers/testing)
 
-- **Steve Smith. Tümleştirme testi** (ASP.NET Core) \
+- **Steve Smith' i. Entegrasyon testi** (ASP.NET Core) \
     [https://docs.microsoft.com/aspnet/core/test/integration-tests](/aspnet/core/test/integration-tests)
 
-- **DotNet test \ kullanarak .NET Core 'Da birim testi**
+- **Dotnet testi kullanarak .NET Core'da birim testi** \
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
-- **xUnit.net**. Resmi site. \
+- **xUnit.net.** Resmi site. \
     <https://xunit.github.io/>
 
-- **Birim testi temelleri.** \
+- **Ünite Test Temelleri.** \
     [https://docs.microsoft.com/visualstudio/test/unit-test-basics](/visualstudio/test/unit-test-basics)
 
-- **Moq**. GitHub deposu. \
+- **Güve**. GitHub deposu. \
     <https://github.com/moq/moq>
 
 - **NUnit**. Resmi site. \
     <https://www.nunit.org/>
 
-### <a name="implementing-service-tests-on-a-multi-container-application"></a>Çok kapsayıcılı bir uygulamada hizmet testlerini uygulama
+### <a name="implementing-service-tests-on-a-multi-container-application"></a>Çoklu kapsayıcı uygulamasında servis testleri uygulama
 
-Daha önce belirtildiği gibi, çok Kapsayıcılı uygulamaları test ettiğinizde, tüm mikro hizmetlerin Docker konağı veya kapsayıcı kümesi içinde çalışıyor olması gerekir. Birkaç mikro hizmeti içeren birden çok işlem içeren uçtan uca hizmet testleri, Docker-Compose ' i (veya bir Orchestrator kullanıyorsanız karşılaştırılabilir bir mekanizmayı) çalıştırarak tüm uygulamayı Docker konağında dağıtmanızı ve başlatmanız gerekir. Tüm uygulama ve tüm hizmetleri çalışır olduktan sonra, uçtan uca tümleştirmeyi ve işlevsel testleri çalıştırabilirsiniz.
+Daha önce de belirtildiği gibi, çoklu kapsayıcı uygulamalarını test ettiğinizde, tüm mikro hizmetlerin Docker ana bilgisayar veya konteyner kümesi içinde çalışıyor olması gerekir. Birden fazla mikro hizmeti içeren birden fazla işlemi içeren uçtan uca hizmet testleri, docker-comto'yu çalıştırarak (veya bir orkestratör kullanıyorsanız karşılaştırılabilir bir mekanizma) çalıştırarak docker ana bilgisayarda tüm uygulamayı dağıtmanızı ve başlatmanızı gerektirir. Tüm uygulama ve tüm hizmetleri çalıştırdıktan sonra uçuça tümleştirme ve işlevsel testler gerçekleştirebilirsiniz.
 
-Kullanabileceğiniz birkaç yaklaşım vardır. Uygulamayı çözüm düzeyinde dağıtmak için kullandığınız Docker-Compose. yıml dosyasında, [DotNet testini](../../../core/tools/dotnet-test.md)kullanmak için giriş noktasını genişletebilirsiniz. Ayrıca, hedeflediğiniz görüntüde testlerinizi çalıştıracak başka bir oluşturma dosyası da kullanabilirsiniz. Mikro hizmetlerinizi ve kapsayıcılarındaki veritabanlarını içeren tümleştirme testleri için başka bir oluşturma dosyası kullanarak, testleri çalıştırmadan önce ilgili verilerin her zaman özgün durumuna sıfırlandığını unutmayın.
+Kullanabileceğiniz birkaç yaklaşım vardır. Çözümüz düzeyinde uygulamayı dağıtmak için kullandığınız docker-compose.yml dosyasında [dotnet testini](../../../core/tools/dotnet-test.md)kullanmak için giriş noktasını genişletebilirsiniz. Ayrıca, testlerinizi hedeflediğiniz resimde çalıştıracak başka bir oluşturma dosyası da kullanabilirsiniz. Kapsayıcılar üzerinde mikrohizmetler ve veritabanları içeren tümleştirme testleri için başka bir oluşturma dosyası kullanarak, ilgili verilerin testleri çalıştırmadan önce her zaman özgün durumuna sıfırlanır emin olabilirsiniz.
 
-Oluşturma uygulaması çalışır duruma getirildikten sonra, Visual Studio çalıştırıyorsanız kesme noktalarından ve özel durumların avantajlarından yararlanabilirsiniz. Veya Azure DevOps Services veya Docker kapsayıcılarını destekleyen herhangi bir CI/CD sisteminde bulunan CI işlem hattınızda tümleştirme testlerini otomatik olarak çalıştırabilirsiniz.
+Oluşturma uygulaması çalışmaya başladığında, Visual Studio'yu çalıştırıyorsanız kesme noktalarından ve özel durumlardan yararlanabilirsiniz. Veya azure DevOps Hizmetlerinde veya Docker kapsayıcılarını destekleyen diğer CI/CD sisteminde, tümleştirme testlerini CI ardışık ardışık sisteminizde otomatik olarak çalıştırabilirsiniz.
 
-## <a name="testing-in-eshoponcontainers"></a>EShopOnContainers 'da test etme
+## <a name="testing-in-eshoponcontainers"></a>eShopOnContainers test
 
-Başvuru uygulaması (eShopOnContainers) testleri yakın zamanda yeniden yapılandırılmış ve şu anda dört kategori var:
+Referans uygulama (eShopOnContainers) testleri yakın zamanda yeniden yapılandırıldı ve şimdi dört kategori vardır:
 
-1. **Birim** testleri, **{mikro ServiceName} içinde yer alan yalnızca düz eski normal birim testleri. UnitTests** projeleri
+1. **Birim** testleri, {MicroserviceName} içinde yer alan sadece düz eski normal birim **testleri. UnitTests** projeleri
 
-2. **Mikro hizmet işlevsel/tümleştirme testleri**, her bir mikro hizmetin altyapısını içeren, ancak diğerlerinden yalıtılmış ve **{mikro ServiceName} içinde yer alan test çalışmaları. FunctionalTests** projeleri.
+2. **Microservice fonksiyonel/tümleştirme testleri,** her bir microservice için altyapı içeren ancak diğerlerinden izole ve **{MicroserviceName} bulunan test durumlarda. FunctionalTests** projeleri.
 
-3. Birkaç mikro hizmet sunan test çalışmaları ile mikro hizmet tümleştirmesine odaklanarak **uygulama işlevsel/tümleştirme sınamaları**. Bu testler Project **Application. FunctionalTests**içinde bulunur.
+3. Mikro hizmet entegrasyonuna odaklanan **uygulama işlevsel/tümleştirme testleri,** çeşitli mikro hizmetler uygulayan test çalışmaları ile birlikte. Bu testler project **Application.FunctionalTests**bulunur.
 
-Mikro hizmet başına birim ve tümleştirme testi, her mikro hizmette bir test klasöründe bulunur ve uygulama, Şekil 6-25 ' de gösterildiği gibi çözüm klasöründeki test klasörü altında bir yük testi içerir.
+Mikrohizmet başına birim ve entegrasyon testi her microservice bir test klasöründe yer almaktadır ve Uygulama bir Yük testleri Şekil 6-25'te gösterildiği gibi çözüm klasöründeki test klasörü altında yer almaktadır.
 
-![Çözümdeki test projelerinin bazılarını gösteren ekran görüntüsü.](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
+![VS'nin çözümdeki bazı test projelerini işaret eden ekran görüntüsü.](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
 
-**Şekil 6-25**. EShopOnContainers 'daki test klasörü yapısı
+**Şekil 6-25**. eShopOnContainers test klasörü yapısı
 
-Mikro hizmet ve uygulama işlev/tümleştirme testleri, normal testler Çalıştırıcısı kullanılarak Visual Studio 'dan çalıştırılır, ancak önce çözüm sınama klasöründe yer alan bir Docker-Compose dosyaları kümesi aracılığıyla gerekli altyapı hizmetlerini başlatmanız gerekir:
+Microservice ve Uygulama fonksiyonel/tümleştirme testleri Visual Studio'dan düzenli test koşucusu kullanılarak çalıştırılır, ancak öncelikle çözüm test klasöründe yer alan bir dizi docker-compose dosyası ile gerekli altyapı hizmetlerini başlatmanız gerekir:
 
-**Docker-Compose-test. yıml**
+**docker-beste-test.yml**
 
 ```yml
 version: '3.4'
@@ -164,7 +164,7 @@ services:
     image: mongo
 ```
 
-**Docker-Compose-test. override. yıml**
+**docker-compose-test.override.yml**
 
 ```yml
 version: '3.4'
@@ -188,22 +188,22 @@ services:
       - "27017:27017"
 ```
 
-Bu nedenle, işlev/tümleştirme testlerini çalıştırmak için önce bu komutu çözüm test klasöründen çalıştırmanız gerekir:
+Bu nedenle, işlevsel/tümleştirme testlerini çalıştırmak için öncelikle çözüm test klasöründen bu komutu çalıştırmanız gerekir:
 
 ```console
 docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 ```
 
-Gördüğünüz gibi, bu Docker-Compose dosyaları yalnızca Redsıs, Kbbitmq, SQL Server ve MongoDB mikro hizmetlerini başlatır.
+Gördüğünüz gibi, bu docker-beste dosyaları sadece Redis, RabbitMQ, SQL Server ve MongoDB microservices başlatın.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- GitHub 'daki eShopOnContainers deposunda **README dosyasını sınar**
+- GitHub üzerinde eShopOnContainers repo testleri **README dosyası** \
     <https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test>
 
-- GitHub 'daki eShopOnContainers deposunda **yükleme Testlerı Benioku dosyası**
+- **GitHub** üzerinde eShopOnContainers repo üzerinde Yük testleri README dosyası \
     <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/>
 
 > [!div class="step-by-step"]
 > [Önceki](subscribe-events.md)
-> [İleri](background-tasks-with-ihostedservice.md)
+> [Sonraki](background-tasks-with-ihostedservice.md)

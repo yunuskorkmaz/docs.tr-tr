@@ -1,23 +1,23 @@
 ---
-title: Alt öğelerin bir listesini bulma (XPath-LINQ to XML) (C#)
+title: Alt öğelerin listesini bulma (XPath-LINQ - XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589dd8-f680-4cdb-9d6a-78d57e2555e8
 ms.openlocfilehash: 2b6f6031441e7d1bd015e25a8debad7dd7f3b261
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141219"
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a>Alt öğelerin bir listesini bulma (XPath-LINQ to XML) (C#)
-Bu konu, XPath alt öğeleri eksenini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> ekseni ile karşılaştırır.  
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a>Alt öğelerin listesini bulma (XPath-LINQ - XML) (C#)
+Bu konu, XPath alt öğeleri [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> eksenini eksenle karşılaştırır.  
   
- XPath ifadesi: `./*`  
+ XPath ifadesi:`./*`  
   
 ## <a name="example"></a>Örnek  
- Bu örnek `Address` öğesinin tüm alt öğelerini bulur.  
+ Bu örnek, öğenin tüm `Address` alt öğelerini bulur.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birden fazla satın alma siparişi (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Birden Çok SatınAlma Siparişi (LINQ-XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");  
@@ -38,7 +38,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```output  
 Results are identical  

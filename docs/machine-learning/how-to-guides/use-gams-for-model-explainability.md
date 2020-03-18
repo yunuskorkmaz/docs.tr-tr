@@ -1,20 +1,20 @@
 ---
-title: Genelleştirilmiş eklenebilir modellerle ML.NET modellerini yorumlama
-description: ML.NET içinde model yorumlenebilirliği için genelleştirilmiş ek modeller ve şekil işlevlerini kullanın
+title: Genelleştirilmiş Katkı Modelleri ile ML.NET modelleri yorumlayın
+description: ML.NET model yorumlanabilirliği için Genelleştirilmiş Katkı Modelleri ve şekil fonksiyonlarını kullanın
 ms.date: 01/30/2020
 ms.custom: mvc,how-to
 ms.openlocfilehash: 6df19eff4fec98c5815a9f8f4d8e4e9a80cba6ed
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77092479"
 ---
-# <a name="use-generalized-additive-models-and-shape-functions-for-model-interpretability-in-mlnet"></a>ML.NET içinde model yorumlenebilirliği için genelleştirilmiş ek modeller ve şekil işlevlerini kullanın
+# <a name="use-generalized-additive-models-and-shape-functions-for-model-interpretability-in-mlnet"></a>ML.NET model yorumlanabilirliği için Genelleştirilmiş Katkı Modelleri ve şekil fonksiyonlarını kullanın
 
-Makine öğrenimi modelleri oluştururken, genellikle tahmin yapmak için yeterli değildir. Genellikle, makine öğrenimi geliştiricilerinin, karar mekanizmalarının ve modellerden etkilenen kullanıcıların, makine öğrenimi modellerinin kararlar vermesini ve hangi özelliklerin performansına katkıda bulunduğunu anlaması gerekir. **Genelleştirilmiş ek modeller (GAMs)** , makine öğrenimi geliştiricilerin başkaları tarafından kolayca yorumlanabilecek yüksek kapasiteli modeller oluşturmalarına yardımcı olmak üzere model yorumlanabilir için dahili olarak Microsoft 'ta kullanılır.
+Makine öğrenme modelleri oluştururken, genellikle sadece tahminler yapmak için yeterli değildir. Genellikle, makine öğrenimi geliştiricileri, karar vericiler ve modellerden etkilenenlerin, makine öğrenimi modellerinin nasıl karar lar verdiği ve hangi özelliklerin performanslarına katkıda bulunduğu anlamak gerekir. **Genelleştirilmiş Katkı Modelleri (GAM'ler),** makine öğrenimi geliştiricilerin başkaları tarafından kolayca yorumlanabilecek yüksek kapasiteli modeller oluşturmalarına yardımcı olmak için model yorumlanabilirliği için Microsoft'ta dahili olarak kullanılır.
 
-GAMs, koşulların tek bir değişkenin "şekil işlevleri" olarak adlandırılan doğrusal olmayan işlevler olduğu doğrusal modeller olan bir **yorumlı modellerden** oluşan bir sınıftır. Doğrusal modeller olarak kolayca yorumlanır, ancak modeller tek bir ağırlığa değil özelliklerin işlevlerini öğrendiklerinden basit bir doğrusal modelden daha karmaşık ilişkiler modelleyebilir. Elde edilen GAM tahmini, eğitim kümesi üzerinden ortalama tahminleri ve ortalama tahmine ait sapmayı temsil eden şekil işlevlerini temsil eden bir kesme dönemi içerir. Şekil işlevleri, bir özelliğin farklı değerlerine modelin yanıtını görmek için göz önünde görünebilir ve kod örneği sonunda oluşturulan aşağıdaki grafik gibi görselleştirilir. ML.net ' deki gam eğitmen, basit olmayan şekil işlevlerini öğrenmek için (örneğin Tree Stumps) ve Lou, Caruana ve Gehrke tarafından [sınıflandırma ve gerileme için okunaklı modellerle](https://www.cs.cornell.edu/~yinlou/papers/lou-kdd12.pdf) tanımlanan yöntemi temel alır.
+GAM'lar, terimlerin tek bir değişkenin "şekil işlevleri" olarak adlandırılan doğrusal olmayan işlevler olduğu doğrusal modeller olan **yorumlanabilir modeller** sınıfıdır. Doğrusal modeller olarak kolayca yorumlanırlar, ancak modeller tek bir ağırlık yerine özelliklerin işlevlerini öğrendikleri için, basit bir doğrusal modelden daha karmaşık ilişkiler modelleyebilirler. Elde edilen GAM tahmincisi, eğitim kümesi üzerindeki ortalama tahmini temsil eden bir kesme terimine ve ortalama tahminden sapmayı temsil eden şekil işlevlerine sahiptir. Şekil işlevleri, modelin bir özelliğin farklı değerlerine verdiği yanıtı görmek için gözle incelenebilir ve kod örneğinin sonunda oluşturulan aşağıdaki grafik gibi görselleştirilebilir. ML.NET'daki GAM eğitmeni, parametrik olmayan şekil fonksiyonlarını öğrenmek için sığ degrade artırılmış ağaçlar (örneğin ağaç kütükleri) kullanılarak uygulanır ve Lou, Caruana ve Gehrke tarafından [Sınıflandırma ve Regresyon için Intelligible Modeller'de](https://www.cs.cornell.edu/~yinlou/papers/lou-kdd12.pdf) açıklanan yönteme dayanır.
 
 ```csharp
 // Train the Generalized Additive Model
@@ -48,6 +48,6 @@ for (int i = 0; i < myFeatureBins.Length; i++)
 }
 ```
 
-![Genelleştirilmiş eklenebilir modeller şekil işlevi grafiği](./media/use-gams-for-model-explainability/gam-shape-function-graph.png)
+![Jeneralize Katkı Modelleri şekil fonksiyonu grafiği](./media/use-gams-for-model-explainability/gam-shape-function-graph.png)
 
-GAM modelini eğitme ve sonuçları İnceleme ve yorumlama hakkında bir örnek için bkz. [DotNet/machinöğrenim GitHub deposu](https://github.com/dotnet/machinelearning/blob/master/docs/samples/Microsoft.ML.Samples/Dynamic/GeneralizedAdditiveModels.cs).
+Gam modelini nasıl eğiteceğimiz ve sonuçları nasıl inceleyip yorumlanacağına bir örnek [için, dotnet/machinelearning GitHub deposuna](https://github.com/dotnet/machinelearning/blob/master/docs/samples/Microsoft.ML.Samples/Dynamic/GeneralizedAdditiveModels.cs)bakın.

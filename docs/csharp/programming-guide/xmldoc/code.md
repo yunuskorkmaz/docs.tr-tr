@@ -9,13 +9,13 @@ helpviewer_keywords:
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
 ms.openlocfilehash: 1b292f0e1f93f815cc31ef3dfb7015b8950bf8a6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789843"
 ---
-# <a name="code-c-programming-guide"></a>\<kodu > (C# Programlama Kılavuzu)
+# <a name="code-c-programming-guide"></a>\<kod> (C# programlama kılavuzu)
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -27,19 +27,19 @@ ms.locfileid: "76789843"
 
 - `content`
 
-  Kod olarak işaretlenmesini istediğiniz metin.
+  Kod olarak işaretlenolmasını istediğiniz metin.
 
 ## <a name="remarks"></a>Açıklamalar
 
-\<kodu > etiketi, birden fazla satırı kod olarak göstermek için bir yol sağlar. Bir açıklama içindeki metnin kod olarak işaretlenmesi gerektiğini göstermek için [\<c >](./code-inline.md) kullanın.
+Kod \<> etiketi, birden çok satırı kod olarak göstermeniz için bir yol sağlar. Açıklama içindeki metnin kod olarak işaretlemesi gerektiğini belirtmek için [ \<c>](./code-inline.md) kullanın.
 
-Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
+Belge yorumlarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derle.
 
 ## <a name="example"></a>Örnek
 
-\<Code > etiketinin nasıl kullanılacağına ilişkin bir örnek için [\<örnek >](./example.md) konusuna bakın.
+Kod> etiketinin nasıl kullanılacağına \<bir örnek için>konuya bakın. [ \<](./example.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Programlama Kılavuzu](../index.md)
-- [Belge açıklamaları için önerilen Etiketler](./recommended-tags-for-documentation-comments.md)
+- [C# programlama kılavuzu](../index.md)
+- [Belge açıklamaları için önerilen etiketler](./recommended-tags-for-documentation-comments.md)

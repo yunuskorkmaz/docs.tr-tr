@@ -1,51 +1,51 @@
 ---
 title: Karma bulut senaryolarına geçiş
-description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Karma bulut senaryolarına geçiş
+description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernize edin | Karma bulut senaryolarına geçiş
 ms.date: 04/30/2018
 ms.openlocfilehash: dcbb799a45609f8bb811866c4041951abf1fda8b
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937372"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Karma bulut senaryolarına geçiş
 
-Bazı kuruluşlar ve kuruluşlar, bazı uygulamalarını, düzenlemeler veya kendi ilkeleri nedeniyle Microsoft Azure veya başka bir genel bulut gibi genel bulutlara geçiremez. Ancak, herhangi bir kuruluşun bazı uygulamalarını genel bulutta ve şirket içi diğer uygulamalarda sahip olma olasılığı yüksektir. Ancak, karma bir ortam, genel bulutlarda kullanılan farklı platformlar ve teknolojiler ve şirket içi ortamlardan dolayı ortamlarda aşırı karmaşıklığa yol açabilir.
+Bazı kuruluşlar ve kuruluşlar, düzenlemeler veya kendi ilkeleri nedeniyle bazı uygulamalarını Microsoft Azure veya başka bir genel bulut gibi genel bulutlara geçiremez. Ancak, herhangi bir kuruluşun bazı uygulamalarının genel bulutta ve diğer uygulamalarda şirket içinde olması ndan yararlanabileceği olasıdır. Ancak karışık bir ortam, genel bulutlarda kullanılan farklı platformlar ve teknolojiler ve şirket içi ortamlar nedeniyle ortamlarda aşırı karmaşıklığa yol açabilir.
 
-Microsoft, bir Azure hibrit bulutu 'nda tutarlılığın sağladığından, mevcut varlıklarınızı şirket içinde ve genel bulutta iyileştirilebilmenizi sağlayan en iyi karma bulut çözümünü sağlar. Var olan becerileri en üst düzeye çıkarabilir ve bulutta veya şirket içinde çalışabilen uygulamalar oluşturmaya yönelik esnek ve birleştirilmiş bir yaklaşım edinebilirsiniz (Şirket içi) ve Azure (genel bulut) Azure Stack sayesinde.
+Microsoft, bir Azure karma bulutta tutarlılık sağlarken, varolan varlıklarınızı şirket içinde ve genel bulutta optimize edebileceğiniz en iyi karma bulut çözümlerini sağlar. Azure Yığını (şirket içi) ve Azure (genel bulut) sayesinde varolan becerileri en üst düzeye çıkarabilir ve bulutta veya şirket içinde çalıştırılabilen uygulamalar oluşturmak için esnek ve birleşik bir yaklaşım elde edebilirsiniz.
 
-Güvenlik 'e geldiğinde, karma bulutunuz genelinde yönetim ve güvenliği merkezileştirme sağlayabilirsiniz. Şirket içi ve bulut uygulamaları için çoklu oturum açma olanağı sunarak, veri merkezinizden buluta kadar tüm varlıklar üzerinde denetim edinebilirsiniz. Bunu, karma buluta Active Directory genişleterek ve kimlik yönetimi 'ni kullanarak gerçekleştirirsiniz.
+Güvenlik söz konusu olduğunda, yönetim ve güvenliği karma bulutunuzda merkezileştirebilirsiniz. Şirket içi ve bulut uygulamalarına tek oturum açma sağlayarak veri merkezinizden buluta kadar tüm varlıkların kontrolünü edinebilirsiniz. Bunu, Active Directory'yi karma buluta genişleterek ve kimlik yönetimini kullanarak gerçekleştirebilirsiniz.
 
-Son olarak, verileri sorunsuzca dağıtabilir ve analiz edebilir, bulut ve şirket içi varlıklar için aynı sorgu dillerini kullanabilir ve Azure 'da, kaynağına bakılmaksızın verilerinizi zenginleştirmek için analiz ve derin öğrenme uygulayabilirsiniz.
+Son olarak, verileri sorunsuz bir şekilde dağıtabilir ve analiz edebilir, bulut ve şirket içi varlıklar için aynı sorgu dillerini kullanabilir ve kaynağıne bakılmaksızın verilerinizi zenginleştirmek için Azure'da analitik ve derin öğrenme uygulayabilirsiniz.
 
 ## <a name="azure-stack"></a>Azure Stack
 
-Azure Stack, kuruluşunuzun veri merkezinden Azure hizmetleri sunmanıza olanak tanıyan bir karma bulut platformudur. Azure Stack, kenar ve bağlı olmayan ortamlar gibi önemli senaryolarda modern uygulamalarınızın yeni seçeneklerini destekleyecek şekilde tasarlanmıştır veya belirli güvenlik ve uyumluluk gereksinimlerini karşılayarak.
+Azure Yığını, kuruluşunuzun veri merkezinden Azure hizmetleri sunmanıza olanak tanıyan karma bir bulut platformudur. Azure Yığını, kenar ve bağlantısız ortamlar veya belirli güvenlik ve uyumluluk gereksinimlerini karşılama gibi önemli senaryolarda modern uygulamalarınız için yeni seçenekleri desteklemek üzere tasarlanmıştır.
 
-Şekil 4-13, Microsoft 'un sunduğu gerçek hibrit bulut platformunun bir genel görünümünü gösterir.
+Şekil 4-13, Microsoft'un sunduğu gerçek karma bulut platformuna genel bir bakış gösterir.
 
-![Azure Stack ve Azure ile Microsoft hibrit bulut platformu diyagramı.](./media/migrate-to-hybrid-cloud-scenarios/microsoft-hybrid-cloud-platform.png)
+![Azure Yığını ve Azure ile Microsoft karma bulut platformu diyagramı.](./media/migrate-to-hybrid-cloud-scenarios/microsoft-hybrid-cloud-platform.png)
 
-**Şekil 4-13.** Azure Stack ve Azure ile Microsoft hibrit bulut platformu
+**Şekil 4-13.** Azure Yığını ve Azure ile Microsoft karma bulut platformu
 
-Azure Stack, gereksinimlerinizi karşılamak için iki dağıtım seçeneği sunulur:
+Azure Yığını, gereksinimlerinizi karşılamak için iki dağıtım seçeneğinde sunulur:
 
-- Azure Stack tümleşik sistemleri
+- Azure Yığını tümleşik sistemleri
 
-- Azure Stack Geliştirme Seti
+- Azure Yığını Geliştirme Kiti
 
-### <a name="azure-stack-integrated-systems"></a>Azure Stack tümleşik sistemleri
+### <a name="azure-stack-integrated-systems"></a>Azure Yığını tümleşik sistemleri
 
-Azure Stack tümleşik sistemler, Microsoft ve donanım iş ortaklarının bir ortaklığı aracılığıyla sunulur. İş ortaklığı, yönetimin basitliği ile dengeli bulut adımlı yenilik sunan bir çözüm oluşturur. Azure Stack, donanım ve yazılım tümleştirilmiş bir sistem olarak sunulduğundan, doğru esneklik ve denetim elde edersiniz, ancak yine de buluttan yeniliği benimsemiş olursunuz. 4 ile 12 düğümden oluşan tümleşik sistemleri Azure Stack ve donanım ortağı ve Microsoft tarafından ortaklaşa desteklenir. Üretim iş yükleriniz için yeni senaryolar uygulamak üzere Azure Stack tümleşik sistemleri kullanın.
+Azure Stack tümleşik sistemleri, Microsoft ve donanım iş ortaklarının ortaklığı yla sunulur. Ortaklık, yönetimde basitlikle dengelenmiş bulut tempolu bir yenilik sunan bir çözüm oluşturur. Azure Yığını entegre bir donanım ve yazılım sistemi olarak sunulduğundan, buluttan inovasyonu benimsemeye devam ederken doğru miktarda esneklik ve denetim elde edersiniz. Azure Stack tümleşik sistemlerinin boyutları 4 ile 12 arasında değişir ve donanım ortağı ve Microsoft tarafından ortaklaşa desteklenir. Üretim iş yükleriniçin yeni senaryolar uygulamak için Azure Yığını tümleşik sistemlerini kullanın.
 
-### <a name="azure-stack-development-kit"></a>Azure Stack Geliştirme Seti
+### <a name="azure-stack-development-kit"></a>Azure Yığını Geliştirme Kiti
 
-Microsoft Azure Stack Development Kit, Azure Stack hakkında değerlendirmek ve bilgi edinmek için kullanabileceğiniz Azure Stack tek düğümlü bir dağıtımdır. Azure ile tutarlı olan API 'Leri ve araçları kullanarak geliştirebileceğiniz bir geliştirici ortamı olarak Azure Stack Geliştirme Seti de kullanabilirsiniz. Azure Stack Geliştirme Seti, üretim ortamı olarak kullanılmak üzere tasarlanmamıştır.
+Microsoft Azure Yığını Geliştirme Kiti, Azure Yığını'nı değerlendirmek ve Azure Yığını hakkında bilgi edinmek için kullanabileceğiniz tek düğümlü bir Azure Yığını dağıtımıdır. Azure Yığını Geliştirme Kiti'ni, ApI'leri ve Azure ile tutarlı araçlar kullanarak geliştirebileceğiniz bir geliştirici ortamı olarak da kullanabilirsiniz. Azure Yığını Geliştirme Kiti'nin üretim ortamı olarak kullanılması amaçlanmamıştır.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Azure hibrit bulutu**
+- **Azure karma bulut**
 
     <https://azure.microsoft.com/overview/hybrid-cloud/>
 
@@ -53,18 +53,18 @@ Microsoft Azure Stack Development Kit, Azure Stack hakkında değerlendirmek ve 
 
     <https://azure.microsoft.com/overview/azure-stack/>
 
-- **Windows kapsayıcıları için hizmet hesaplarını Active Directory**
+- **Windows Kapsayıcıları için Etkin Dizin Hizmet Hesapları**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts>
 
-- **Active Directory desteğiyle kapsayıcı oluşturma**
+- **Active Directory desteğine sahip bir kapsayıcı oluşturma**
 
     <https://docs.microsoft.com/archive/blogs/containerstuff/create-a-container-with-active-directory-support>
 
-- **Azure Hibrit Avantajı lisanslama**
+- **Azure Karma Avantaj lisanslama**
 
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 
 >[!div class="step-by-step"]
 >[Önceki](life-cycle-ci-cd-pipelines-devops-tools.md)
->[İleri](../walkthroughs-technical-get-started-overview.md)
+>[Sonraki](../walkthroughs-technical-get-started-overview.md)

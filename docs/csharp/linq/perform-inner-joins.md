@@ -1,66 +1,66 @@
 ---
-title: (C# üzerinde LINQ) iç birleştirmeler gerçekleştirme
-description: C# içinde LINQ kullanarak iç birleştirmeler gerçekleştirme konusunda bilgi edinin.
+title: İç birleştirmeleri gerçekleştirin (C#'da LINQ)
+description: C#'da LINQ'u kullanarak iç birleştirmeleri nasıl gerçekleştireceklerini öğrenin.
 ms.date: 12/01/2016
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
 ms.openlocfilehash: a3e8e9bd97ec630797bc48a3302b27ed45d9103e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "61659845"
 ---
 # <a name="perform-inner-joins"></a>İç birleşimler gerçekleştirme
 
-İlişkisel veritabanı koşullarında bir *INNER JOIN* bir sonuç kümesi her hangi bir öğedeki ilk koleksiyonun ikinci koleksiyon eşleşen her öğe için bir kez görünür üretir. İlk koleksiyondaki bir öğe eşleşen bir öğe varsa, sonuç kümesinde görünmüyor. <xref:System.Linq.Enumerable.Join%2A> Tarafından çağrılan yöntem `join` yan tümcesinde C# ' ta, bir iç birleştirme uygular.
+İlişkisel veritabanı terimlerinde, *iç birleştirme,* ilk koleksiyonun her öğesinin ikinci koleksiyondaki her eşleşen öğe için bir kez göründüğü bir sonuç kümesi üretir. İlk koleksiyondaki bir öğeeşleşen öğe yoksa, sonuç kümesinde görünmez. C#'daki <xref:System.Linq.Enumerable.Join%2A> `join` yan tümceyle çağrılan yöntem, bir iç birleştirme uygular.
 
-Bu makalede, dört çözümlenmeyebileceği iç birleşim gerçekleştirme gösterir:
+Bu makalede, bir iç birleştirme dört varyasyonları gerçekleştirmek için nasıl gösterir:
 
-- Basit bir anahtarına göre iki veri kaynağı öğelerinden karşılık gelen basit bir iç birleştirme.
+- Basit bir anahtara dayalı olarak iki veri kaynağındaki öğeleri ilişkilendiren basit bir iç birleştirme.
 
-- İki veri kaynaklarından alınan öğeleri karşılık gelen bir iç birleştirme temel alan bir *bileşik* anahtarı. Birden fazla değerini içeren bir anahtarı olan bir bileşik anahtarı birden fazla özelliğe dayalı öğeleri bağıntısını kurmanızı sağlar.
+- *Bileşik* anahtara dayalı iki veri kaynağındaki öğeleri ilişkilendiren bir iç birleştirme. Birden fazla değerden oluşan bir anahtar olan bileşik anahtar, birden fazla özelliği temel alan öğeleri ilişkilendirmenizi sağlar.
 
-- A *birden fazla birleşim* hangi art arda gelen birleştirme işlemleri birbirine eklenir.
+- Birbirini izleyen birleştirme işlemlerinin birbirine eklendiği *birden çok birleştirme.*
 
-- Bir iç birleştirme group JOIN kullanılarak gerçekleştirilir.
+- Grup birleşimi kullanılarak uygulanan bir iç birleştirme.
 
-## <a name="example---simple-key-join"></a>Örnek - basit anahtar birleştirme
+## <a name="example---simple-key-join"></a>Örnek - Basit tuş birleştirme
 
-Aşağıdaki örnek, iki tür, kullanıcı tanımlı nesneler içeren iki koleksiyonları oluşturur `Person` ve `Pet`. Sorgu kullanan `join` yan tümcesinde eşleştirmek için C# `Person` nesnelerini `Pet` ayarlanmış nesneleri `Owner` olan `Person`. `select` Yan tümcesinde C#, elde edilen nesnelerin nasıl görüneceğini tanımlar. Bu örnekte, sonuçta elde edilen sahibinin adı ve Evcil hayvanınızın adı oluşur anonim türler nesneleridir.
+Aşağıdaki örnek, kullanıcı tanımlı iki türnesneleri içeren iki `Person` koleksiyon `Pet`oluşturur ve. Sorgu c# `join` tümcesini nesneleri `Person` nesneleri `Pet` olan `Owner` nesnelerle `Person`eşleştirmek için kullanır. C# yan `select` tümcesi, elde edilen nesnelerin nasıl görüneceğini tanımlar. Bu örnekte ortaya çıkan nesneler, sahibinin adı ve evcil hayvanın adını oluşturan anonim türleridir.
 
 [!code-csharp[CsLINQProgJoining#1](~/samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]
 
-Unutmayın `Person` nesnesi `LastName` "Huff" sonuç olduğundan kümesine görünmez olduğundan hiçbir `Pet` nesnesi `Pet.Owner` eşit `Person`.
+"Huff" `Person` olan `LastName` nesnenin sonuç kümesinde görünmediğini, çünkü `Pet` buna `Pet.Owner` `Person`eşit olan bir nesne olmadığını unutmayın.
 
-## <a name="example---composite-key-join"></a>Örnek - bileşik anahtar birleştirme
+## <a name="example---composite-key-join"></a>Örnek - Kompozit tuşu birleştirme
 
-Öğeleri yalnızca bir özelliğe dayalı bağıntı yerine birden fazla özelliğe göre öğeleri karşılaştırılacak bir bileşik anahtarı kullanabilirsiniz. Bunu yapmak için karşılaştırmak istediğiniz özellikleri içeren bir anonim tür dönmek her bir koleksiyon için anahtar Seçici işlevi belirtin. Özellikleri etiketi, aynı etiketi her anahtarın anonim türünde olmalıdır. Özellikleri de aynı sırada yer almalıdır.
+Öğeleri tek bir özelliğe dayalı ilişkilendirmek yerine, birden çok özelliğe dayalı öğeleri karşılaştırmak için bileşik bir anahtar kullanabilirsiniz. Bunu yapmak için, karşılaştırmak istediğiniz özelliklerden oluşan anonim bir türü döndürmek için her koleksiyon için anahtar seçici işlevini belirtin. Özellikleri etiketlerseniz, her anahtarın anonim türünde aynı etikete sahip olmaları gerekir. Özellikler de aynı sırada görünmelidir.
 
-Aşağıdaki örnek, bir listesini kullanır `Employee` nesneleri ve listesini `Student` hangi çalışanların da Öğrenciler olduğunu belirlemek için nesneleri. Bu tür hem de bir `FirstName` ve `LastName` türünün özelliği <xref:System.String>. Join anahtarlar her listenin öğeleri oluşturan işlevler içeren bir anonim bir tür döndürür `FirstName` ve `LastName` her öğenin özellikleri. Birleştirme işlemi, bu bileşik anahtarlar eşitliği karşılaştırır ve hem ad ve Soyadı eşleştiği her listeden çiftleri nesne döndürür.
+Aşağıdaki örnekte, hangi `Employee` çalışanların da öğrenci `Student` olduğunu belirlemek için nesnelerin listesi ve nesnelerin listesi kullanır. Bu tür her `FirstName` ikisi `LastName` de bir <xref:System.String>ve türü bir özelliği vardır. Her listenin öğelerinden birleştirme anahtarlarını oluşturan işlevler, her `FirstName` öğenin ve `LastName` özelliklerinden oluşan anonim bir tür döndürür. Birleştirme işlemi, eşitlik için bu bileşik anahtarları karşılaştırır ve hem ad hem de soyadının eşleştiği her listeden nesne çiftleri döndürür.
 
 [!code-csharp[CsLINQProgJoining#2](~/samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]
 
-## <a name="example---multiple-join"></a>Örnek - birden çok birleştirme
+## <a name="example---multiple-join"></a>Örnek - Çoklu birleştirme
 
-Herhangi bir sayıda birleştirme işlemleri birden fazla birleşim gerçekleştirmek için birbirlerine eklenmiş. Her `join` yan tümcesinde C# belirtilen veri kaynağı önceki birleştirme sonuçlarının ile ilişkilendirir.
+Birden çok birleştirme işlemi gerçekleştirmek için birbirinin yanına eklenebilir. C#'daki her `join` yan tümce, belirli bir veri kaynağını önceki birleştirme nin sonuçlarıyla ilişkilendirer.
 
-Aşağıdaki örnek, üç koleksiyonu oluşturur: bir listesini `Person` nesneleri, listesini `Cat` nesneleri ve listesini `Dog` nesneleri.
+Aşağıdaki örnekte üç koleksiyon oluşturulur: `Person` nesnelerin listesi, `Cat` nesnelerin listesi ve `Dog` nesnelerin listesi.
 
-İlk `join` yan tümcesinde C#, kişiler ve temel kediler eşleşen bir `Person` nesne eşleşen `Cat.Owner`. Bir dizi içeren bir anonim türleri döndürür `Person` nesne ve `Cat.Name`.
+C#'daki ilk `join` tümce, eşleşen `Person` bir `Cat.Owner`nesneye göre kişilerle kedilerle eşleşir. Nesneyi ve `Person` `Cat.Name`.
 
-İkinci `join` yan tümcesinde C# ile ilk birleşimi tarafından döndürülen anonim türler karşılık gelen `Dog` köpekler, sağlanan listesi nesneleri içeren bir bileşik anahtarı tabanlı `Owner` türünün özelliği `Person`ilk Harf donatarak'ın adı. Bir dizi içeren bir anonim türleri döndürür `Cat.Name` ve `Dog.Name` eşleşen her çift özellikleri. Bu bir iç birleştirme olduğundan, yalnızca bir eşleşme ikinci veri kaynağına sahip ilk veri kaynağı nesnelerden döndürülür.
+`join` C#'daki ikinci tümce, ilk olarak verilen köpekler `Dog` listesindeki nesnelerle birlikte döndürülen anonim türleri, türün `Owner` `Person`özelliğinden ve hayvanadının ilk harfinden oluşan bileşik anahtara dayalı olarak ilişkilendirer. Her eşleşen çiftin `Cat.Name` özelliklerini ve özelliklerini `Dog.Name` içeren bir dizi anonim türü döndürür. Bu bir iç birleştirme olduğundan, yalnızca ikinci veri kaynağında eşleşme sayılsa ilk veri kaynağındaki nesneler döndürülür.
 
 [!code-csharp[CsLINQProgJoining#3](~/samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]
 
-## <a name="example---inner-join-by-using-grouped-join"></a>Örnek - kullanarak iç birleştirmesi birleştirme gruplandırılır.
+## <a name="example---inner-join-by-using-grouped-join"></a>Örnek - Gruplanmış birleştirme kullanarak iç birleştirme
 
-Aşağıdaki örnek bir iç birleştirme group JOIN uygulamak gösterilmektedir.
+Aşağıdaki örnek, bir grup birleştirme kullanarak bir iç birleştirme nasıl uygulanacağını gösterir.
 
-İçinde `query1`, listesini `Person` nesneleri, Grup katılmış listesine `Pet` nesneleri temel alarak `Person` eşleşen `Pet.Owner` özelliği. Grup birleştirme olduğu her grubu oluşur Ara grubun bir koleksiyonunu oluşturur bir `Person` nesne ve sıralamadaki eşleşen `Pet` nesneleri.
+In, `query1` `Person` nesnelerin listesi `Pet` `Person` grup eşleşen `Pet.Owner` özelliğine dayalı nesneler listesine katıldı. Grup birleştirme, her grubun bir `Person` nesne ve eşleşen `Pet` nesnelerden oluşan bir diziden oluştuğu ara gruplardan oluşan bir koleksiyon oluşturur.
 
-İkinci ekleyerek `from` dizileri bu dizi sorgu yan tümcesinin birleştirilmiş (veya düzleştirilmiş) bir uzun dizi. Son sırasının öğelerin türü tarafından belirtilen `select` yan tümcesi. Bu örnekte, türü içeren bir anonim tür olduğunu `Person.FirstName` ve `Pet.Name` eşleşen her çift özellikleri.
+Sorguya ikinci `from` bir yan tümce eklenerek, bu dizi dizisi daha uzun bir dizide birleştirilir (veya düzleştirilmiştir). Son sıranın öğelerinin türü yan tümcetarafından `select` belirtilir. Bu örnekte, bu tür, her eşleşen `Person.FirstName` `Pet.Name` çift için ve özellikleri nden oluşan anonim bir türüdür.
 
-Sonucu `query1` kullanılarak elde sonuç kümesi eşdeğerdir `join` yan tümcesi olmadan `into` iç birleşim gerçekleştirmek için yan tümcesi. `query2` Eşdeğer bu sorgu değişkeni gösterir.
+Bunun `query1` sonucu, bir iç birleştirme gerçekleştirmek için `join` `into` yan tümcesi kullanılarak elde edilen sonuç kümesine eşdeğerdir. `query2` Değişken bu eşdeğer sorguyu gösterir.
 
 [!code-csharp[CsLINQProgJoining#4](~/samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]
 
@@ -69,5 +69,5 @@ Sonucu `query1` kullanılarak elde sonuç kümesi eşdeğerdir `join` yan tümce
 - <xref:System.Linq.Enumerable.Join%2A>
 - <xref:System.Linq.Enumerable.GroupJoin%2A>
 - [Gruplanmış birleşimler gerçekleştirme](perform-grouped-joins.md)
-- [Sol dış birleştirmeler gerçekleştirme](perform-left-outer-joins.md)
-- [Anonim türler](../programming-guide/classes-and-structs/anonymous-types.md)
+- [Sol dış birleşimler gerçekleştirme](perform-left-outer-joins.md)
+- [Anonim türleri](../programming-guide/classes-and-structs/anonymous-types.md)

@@ -6,53 +6,53 @@ dev_langs:
 - vb
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
 ms.openlocfilehash: e9bf192a2075653802f0c5a8b4e44ff0ceacb975
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66487537"
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>XPath ile LINQ to XML Karşılaştırması
-XPath ile LINQ to XML benzer bir işlevsellik sağlar. Her ikisi de öğelerinin bir koleksiyonunu, özniteliklerin bir koleksiyonu, düğümlerin koleksiyonunu veya bir öğe veya öznitelik değeri olarak böyle sonuçları döndüren bir XML ağacı sorgulamak için kullanılabilir. Ancak, aynı zamanda bazı farklar vardır.  
+XPath ve LINQ XML bazı benzer işlevsellik sunuyoruz. Her ikisi de bir XML ağacını sorgulamak için kullanılabilir, öğeler topluluğu, özniteliklertopluluğu, düğümler koleksiyonu veya bir öğe nin veya öznitelik değeri gibi sonuçları döndürür. Ancak, bazı farklılıklar da vardır.  
   
-## <a name="differences-between-xpath-and-linq-to-xml"></a>XML için XPath ile LINQ arasındaki farklar  
- XPath yeni tür projeksiyonu izin vermez. LINQ to XML bir sorgu yürütme ve bir nesne grafiğinin ya da yeni bir şekil içinde bir XML ağacı proje, düğüm koleksiyonlarının ağacından yalnızca döndürebilir. LINQ to XML sorgularında kapsayabilir ve çok daha fazla işlevsellik ve XPath ifadeleri çok daha güçlü.  
+## <a name="differences-between-xpath-and-linq-to-xml"></a>XPath ve LINQ ile XML arasındaki farklar  
+ XPath yeni türlerin projeksiyonuna izin vermez. Yalnızca ağaçtan düğüm koleksiyonlarını döndürebilir, linq'den XML'e bir sorgu yürütebilir ve bir nesne grafiği veya XML ağacını yeni bir şekilde yansıtabilir. LINQ xml sorguları çok daha fazla işlevselliği kapsar ve XPath ifadelerinden çok daha güçlüdür.  
   
- XPath ifadeleri bir dize içinde yalıtımı yok. C# Derleyici derleme zamanında XPath ifadesi ayrıştırılamıyor yardımcı olamaz. Bunun aksine, LINQ to XML sorgularında ayrıştırılır ve C# derleyicisi tarafından derlenir. Derleyici, çok sayıda sorgu hataları yakaladığınızdan kuramıyor.  
+ XPath ifadeleri bir dize içinde yalıtılmış olarak bulunur. C# derleyicisi, XPath ifadesini derleme zamanında ayrışdırma yardımcı olamaz. Buna karşılık, LINQ xml sorguları ayrıştı ve C # derleyici tarafından derlenir. Derleyici birçok sorgu hatasını yakalayabilir.  
   
- XPath sonuçları kesin türlü yapılır değil. Koşullar sayısı, bir XPath ifadesi değerlendirme sonucu bir nesnedir ve uygun türde belirlemek ve sonucu gerekli olarak atama için geliştirici kadar olan. Buna karşılık gelen bir LINQ projeksiyonlar XML sorgusu için kesin türlü yapılır.  
+ XPath sonuçları güçlü bir şekilde yazılmıyor. Bir dizi durumda, bir XPath ifadesini değerlendirmenin sonucu bir nesnedir ve uygun türü belirlemek ve sonucu gerektiği gibi atmak geliştiriciye katılır. Bunun aksine, bir LINQ'dan XML sorgusuna kadar olan projeksiyonlar güçlü bir şekilde yazılır.  
   
-## <a name="result-ordering"></a>Sıralama neden  
- XPath 1.0 öneri, bir XPath ifadesi değerlendirme sonucu olan bir koleksiyon sırasız olduğunu belirtir.  
+## <a name="result-ordering"></a>Sonuç Sıralama  
+ XPath 1.0 Önerisi, Bir XPath ifadesini değerlendirme nin sonucu olan bir koleksiyonun sırasız olduğunu belirtir.  
   
- Ancak, XPath XML eksen yöntemi bir LINQ tarafından döndürülen bir koleksiyon üzerinden yineleme yapma, koleksiyon düğümleri Belge düzeninde döndürülür. Bu XPath eksenleri bile erişirken burada doğrulamaları ters belge sırayla açısından, gibi ifade edilir durumda `preceding` ve `preceding-sibling`.  
+ Ancak, bir LINQ tarafından XML XPath ekseni yöntemine döndürülen bir koleksiyon aracılığıyla yinelendiğinde, koleksiyondaki düğümler belge sırasına göre döndürülür. Bu durum, yüklemlerin ters belge sırası açısından ifade edildiği XPath eksenlerine erişirken `preceding-sibling`bile durum böyledir. `preceding`  
   
- Belge sırada ancak iki tanesi, LINQ to XML eksenleri çoğunu koleksiyonları aksine, iade <xref:System.Xml.Linq.XNode.Ancestors%2A> ve <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>, belge ters sırada koleksiyonlarını döndürür. Aşağıdaki tabloda, eksen numaralandırır ve her koleksiyon sırasını gösterir:  
+ Bunun aksine, LINQ'dan XML eksenlerine kadar olan eksenlerin çoğu <xref:System.Xml.Linq.XNode.Ancestors%2A> koleksiyonları <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>belge sırasına göre döndürer, ancak bunlardan ikisi ve koleksiyonları ters belge sırasına göre döndürer. Aşağıdaki tablo eksenleri sıralar ve her biri için toplama sırasını gösterir:  
   
-|LINQ to XML eksen|Sıralama|  
+|LINQ - XML ekseni|Sıralama|  
 |----------------------|--------------|  
-|XContainer.DescendantNodes|Belge sırada|  
-|XContainer.Descendants|Belge sırada|  
-|XContainer.Elements|Belge sırada|  
-|XContainer.Nodes|Belge sırada|  
-|XContainer.NodesAfterSelf|Belge sırada|  
-|XContainer.NodesBeforeSelf|Belge sırada|  
-|XElement.AncestorsAndSelf|Ters belge sırayla|  
-|XElement.Attributes|Belge sırada|  
-|XElement.DescendantNodesAndSelf|Belge sırada|  
-|XElement.DescendantsAndSelf|Belge sırada|  
-|XNode.Ancestors|Ters belge sırayla|  
-|XNode.ElementsAfterSelf|Belge sırada|  
-|XNode.ElementsBeforeSelf|Belge sırada|  
-|XNode.NodesAfterSelf|Belge sırada|  
-|XNode.NodesBeforeSelf|Belge sırada|  
+|XContainer.DescendantNodes|Belge sırası|  
+|XContainer.Descendants|Belge sırası|  
+|XContainer.Elements|Belge sırası|  
+|XContainer.Nodes|Belge sırası|  
+|XContainer.NodesAfterSelf|Belge sırası|  
+|XContainer.NodesBeforeSelf|Belge sırası|  
+|xelement.atalarandself|Ters belge sırası|  
+|xelement.öznitelikler|Belge sırası|  
+|XElement.DescendantNodesAndSelf|Belge sırası|  
+|XElement.DescendantsAndSelf|Belge sırası|  
+|XNode.Atalar|Ters belge sırası|  
+|XNode.ElementsAfterSelf|Belge sırası|  
+|XNode.ElementsBeforeSelf|Belge sırası|  
+|XNode.NodesAfterSelf|Belge sırası|  
+|XNode.DüğümlerKendinden Önce|Belge sırası|  
   
-## <a name="positional-predicates"></a>Konumsal doğrulamaları  
- Bir XPath ifadesi içinde konumsal koşullar açısından birçok eksenleri için belge sırada ifade edilir, ancak olan ters eksenleri ters belge sırayla ifade `preceding`, `preceding-sibling`, `ancestor`, ve `ancestor-or-self`. Örneğin, XPath ifadesi `preceding-sibling::*[1]` hemen önceki eşdüzey öğeyi döndürür. Son sonuç kümesi belge sırada sunulur olsa bile bu durum geçerlidir.  
+## <a name="positional-predicates"></a>Pozisyonel Yüklemler  
+ Bir XPath ifadesi içinde, konumsal yüklemler birçok eksen için belge sırası açısından ifade edilir, ancak ters `preceding`eksenler `ancestor`için `ancestor-or-self`ters belge sırasına göre ifade edilir, hangi , , `preceding-sibling`, ve . Örneğin, XPath ifadesi `preceding-sibling::*[1]` hemen önceki kardeş döndürür. Nihai sonuç kümesi belge sırasına göre sunulsa da durum böyledir.  
   
- Bunun aksine, tüm konumsal koşullarda LINQ to XML eksen sırası açısından her zaman ifade edilir. Örneğin, `anElement.ElementsBeforeSelf().ElementAt(0)` değil önceki eşdüzeyi sorgulanan öğenin üst ilk alt öğesini döndürür. Başka bir örnek: `anElement.Ancestors().ElementAt(0)` üst öğesini döndürür.  
+ Buna karşılık, LINQ'dan XML'e kadar olan tüm konumsal yüklemler her zaman eksenin sırası açısından ifade edilir. Örneğin, `anElement.ElementsBeforeSelf().ElementAt(0)` sorgulandı öğenin üst ilk alt öğesi değil, hemen önceki kardeş döndürür. Başka bir `anElement.Ancestors().ElementAt(0)` örnek: üst öğeyi döndürür.  
   
- LINQ to XML hemen önceki öğeyi bulmak istiyorsanız, aşağıdaki ifade'ı yazmalısınız:  
+ Linq'te XML'de hemen önceki öğeyi bulmak isterseniz, aşağıdaki ifadeyi yazarsınız:  
   
 ```csharp
 ElementsBeforeSelf().Last()
@@ -62,13 +62,13 @@ ElementsBeforeSelf().Last()
 ElementsBeforeSelf().Last()
 ```
   
-## <a name="performance-differences"></a>Performans farkları  
- LINQ to XML XPath işlevleri kullanın XPath sorguları, XML sorgularında LINQ yanı sıra gerçekleştirmez.  
+## <a name="performance-differences"></a>Performans Farklılıkları  
+ LINQ'dan XML'e XPath işlevini kullanan XPath sorguları, LINQ'dan XML sorgularına kadar performans göstermez.  
   
-## <a name="comparison-of-composition"></a>Birleşim karşılaştırması  
- Bir LINQ to XML sorgusu söz dizimi içinde çok farklı olsa bir XPath ifadesi, oluşumunu için biraz paralel bileşimiyse.  
+## <a name="comparison-of-composition"></a>Kompozisyon Karşılaştırması  
+ LinQ'dan XML sorgusuna kompozisyon, sözdiziminde çok farklı olsa da, xpath ifadesinin bileşimine biraz paraleldir.  
   
- Örneğin, bir öğenin adlı bir değişkende varsa `customers`, ve adlı en alt öğe bulmak istediğiniz `CompanyName` adlı tüm alt öğeleri altında `Customer`, bir XPath ifadesi şu şekilde yazmalısınız:  
+ Örneğin, adlı `customers`bir değişkende bir öğeniz varsa ve tüm alt `CompanyName` öğelerin altında `Customer`adı geçen bir torun öğesi bulmak istiyorsanız, aşağıdaki gibi bir XPath ifadesi yazarsınız:  
   
 ```csharp  
 customers.XPathSelectElements("./Customer/CompanyName")
@@ -78,7 +78,7 @@ customers.XPathSelectElements("./Customer/CompanyName")
 customers.XPathSelectElements("./Customer/CompanyName")
 ```
 
- Eşdeğer LINQ to XML sorgu aşağıdaki gibidir:  
+ XML sorgusuna eşdeğer LINQ:  
   
 ```csharp  
 customers.Elements("Customer").Elements("CompanyName")
@@ -88,19 +88,19 @@ customers.Elements("Customer").Elements("CompanyName")
 customers.Elements("Customer").Elements("CompanyName")
 ```  
 
- Her bir XPath eksenleri için benzer parallels vardır.  
+ XPath eksenlerinin her biri için benzer paralellikler vardır.  
   
-|XPath eksen|LINQ to XML eksen|  
+|XPath ekseni|LINQ - XML ekseni|  
 |----------------|----------------------|  
-|Alt (varsayılan eksen)|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>|  
-|Üst (.)|<xref:System.Xml.Linq.XObject.Parent%2A?displayProperty=nameWithType>|  
-|öznitelik eksen (@)|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType><br /><br /> veya<br /><br /> <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|  
-|üst öğe ekseni|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|  
-|üst veya self ekseni|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=nameWithType>|  
-|alt eksen (/ /)|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType><br /><br /> veya<br /><br /> <xref:System.Xml.Linq.XContainer.DescendantNodes%2A?displayProperty=nameWithType>|  
-|alt öğesi veya kendi kendine|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=nameWithType><br /><br /> veya<br /><br /> <xref:System.Xml.Linq.XElement.DescendantNodesAndSelf%2A?displayProperty=nameWithType>|  
-|Aşağıdaki eşdüzey|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=nameWithType><br /><br /> veya<br /><br /> <xref:System.Xml.Linq.XNode.NodesAfterSelf%2A?displayProperty=nameWithType>|  
-|Önceki eşdüzey|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType><br /><br /> veya<br /><br /> <xref:System.Xml.Linq.XNode.NodesBeforeSelf%2A?displayProperty=nameWithType>|  
-|Aşağıdaki|Doğrudan eşdeğeri.|  
-|önceki|Doğrudan eşdeğeri.|  
+|alt (varsayılan eksen)|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>|  
+|Veli (..)|<xref:System.Xml.Linq.XObject.Parent%2A?displayProperty=nameWithType>|  
+|öznitelik ekseni (@)|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType><br /><br /> or<br /><br /> <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|  
+|ata ekseni|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|  
+|ata ya da benlik ekseni|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=nameWithType>|  
+|soyundan gelen eksen (//)|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType><br /><br /> or<br /><br /> <xref:System.Xml.Linq.XContainer.DescendantNodes%2A?displayProperty=nameWithType>|  
+|soyundan gelen ya da kendi kendine|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=nameWithType><br /><br /> or<br /><br /> <xref:System.Xml.Linq.XElement.DescendantNodesAndSelf%2A?displayProperty=nameWithType>|  
+|aşağıdaki kardeş|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=nameWithType><br /><br /> or<br /><br /> <xref:System.Xml.Linq.XNode.NodesAfterSelf%2A?displayProperty=nameWithType>|  
+|önceki kardeş|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType><br /><br /> or<br /><br /> <xref:System.Xml.Linq.XNode.NodesBeforeSelf%2A?displayProperty=nameWithType>|  
+|Aşağıdaki|Doğrudan eşdeğeri yok.|  
+|Önceki|Doğrudan eşdeğeri yok.|  
   

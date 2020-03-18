@@ -1,22 +1,22 @@
 ---
-title: (C# üzerinde LINQ) bileşik anahtarlar kullanarak birleştirme
-description: LINQ to bileşik anahtarlar kullanarak birleştirme hakkında bilgi edinin.
+title: Bileşik tuşları kullanarak katılın (C#'da LINQ)
+description: LINQ'da bileşik tuşları kullanarak nasıl katılacağınızı öğrenin.
 ms.date: 12/01/2016
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
 ms.openlocfilehash: 460a52da7e0c0a47b77d4c64e76641bae9da7cd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "61659884"
 ---
 # <a name="join-by-using-composite-keys"></a>Bileşik anahtarlar kullanarak birleştirme
 
-Bu örnek, birden fazla anahtar bir eşleşme tanımlamak için kullanmak istediğiniz birleştirme işlemleri gerçekleştirme gösterilmektedir. Bu, bir bileşik anahtarı kullanılarak gerçekleştirilir. Bir bileşik anahtarı anonim bir tür olarak veya adlandırılmış karşılaştırmak istediğiniz değerlerle yazılı oluşturursunuz. Sorgu değişkeni yöntemi sınırlarında geçirilir, geçersiz kılmalar adlandırılmış bir tür kullanın. <xref:System.Object.Equals%2A> ve <xref:System.Object.GetHashCode%2A> anahtarı. Özellikler ve, bunlar, sırayla adları içindeki her anahtarın aynı olmalıdır.
+Bu örnek, bir eşleşmetanımlamak için birden fazla anahtar kullanmak istediğiniz birleştirme işlemlerini nasıl gerçekleştireceklerini gösterir. Bu, bileşik anahtar kullanılarak gerçekleştirilir. Karşılaştırmak istediğiniz değerlerle anonim bir tür olarak bileşik bir anahtar oluşturursunuz veya adlandırılmış bir anahtar oluşturursunuz. Sorgu değişkeni yöntem sınırları nın ötesine geçilecekse, <xref:System.Object.Equals%2A> <xref:System.Object.GetHashCode%2A> geçersiz kılan ve anahtar için adlandırılmış bir tür kullanın. Özelliklerin adları ve bunların oluştuğu sıra, her anahtarda aynı olmalıdır.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, üç tablolardaki verileri birleştirmek için bir bileşik anahtarı kullanacak şekilde gösterilmiştir:
+Aşağıdaki örnek, üç tablodaki verileri birleştirmek için bileşik anahtarın nasıl kullanılacağını gösterir:
 
 ```csharp
 var query = from o in db.Orders
@@ -27,17 +27,17 @@ var query = from o in db.Orders
         select new {o.OrderID, p.ProductID, d.UnitPrice};
 ```
 
-Anahtarlar ve, bunlar sırayla özelliklerinde adlarını bileşik anahtarlar tür çıkarımı bağlıdır. Kaynak dizileri özelliklerinde aynı ada sahip değilseniz, yeni anahtarları adlarında atamanız gerekir. Örneğin, varsa `Orders` tablo ve `OrderDetails` her tabloda kullanılan kendilerine ait sütunların için farklı adlar, anonim türde aynı ada atayarak bileşik anahtarlar oluşturabilirsiniz:
+Bileşik anahtarlara yazı çıkarımı, anahtarlarda bulunan özelliklerin adlarına ve bunların oluşma sırasına bağlıdır. Kaynak dizideki özellikler aynı adlara sahip değilse, anahtarlara yeni adlar atamanız gerekir. Örneğin, `Orders` tablo ve `OrderDetails` tablo nun her biri sütunları için farklı adlar kullanılıyorsa, anonim türlere aynı adlar atayarak bileşik anahtarlar oluşturabilirsiniz:
 
 ```csharp
 join...on new {Name = o.CustomerName, ID = o.CustID} equals
     new {Name = d.CustName, ID = d.CustID }
 ```
 
-Bileşik anahtarlar da kullanılabilir bir `group` yan tümcesi.
+Bileşik tuşlar bir `group` yan tümcede de kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dil ile Tümleşik Sorgu (LINQ)](index.md)
-- [join yan tümcesi](../language-reference/keywords/join-clause.md)
+- [birleştirme yan tümcesi](../language-reference/keywords/join-clause.md)
 - [group yan tümcesi](../language-reference/keywords/group-clause.md)

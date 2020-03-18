@@ -1,28 +1,28 @@
 ---
-title: DotNet NuGet Delete komutu
-description: DotNet-NuGet-Delete komutu sunucudan bir paketi siler veya listesini kaldırır.
+title: dotnet nuget silme komutu
+description: Dotnet-nuget-delete komutu bir paketi sunucudan siler veya listeler.
 author: karann-msft
 ms.date: 06/26/2019
 ms.openlocfilehash: 0950f03c0986bde17ae3e2e7170d402ea8222853
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76733128"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 1. x SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 1.x SDK ve sonraki sürümler
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Adı
 
-`dotnet nuget delete`-sunucudan bir paketi siler veya listesini kaldırır.
+`dotnet nuget delete`- Bir paketi sunucudan siler veya listeler.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Özet
 
 ```dotnetcli
 dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [--interactive] [-k|--api-key] [--no-service-endpoint]
@@ -32,23 +32,23 @@ dotnet nuget delete [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet nuget delete` komutu sunucudan bir paketi siler veya listesini kaldırır. [NuGet.org](https://www.nuget.org/)için eylem, paketin listesini kaldırdır.
+Komut, `dotnet nuget delete` bir paketi sunucudan siler veya boşaltıyor. [nuget.org](https://www.nuget.org/)için, eylem paketi unlist etmektir.
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
 * **`PACKAGE_NAME`**
 
-  Silinecek paketin ad/KIMLIĞI.
+  Silmek için paketin adı/kimliği.
 
 * **`PACKAGE_VERSION`**
 
-  Silinecek paketin sürümü.
+  Paketin sürümü silinecek.
 
 ## <a name="options"></a>Seçenekler
 
 * **`--force-english-output`**
 
-  Uygulamayı, sabit, Ingilizce tabanlı bir kültür kullanılarak çalışmaya zorlar.
+  Uygulamayı değişmez, İngilizce tabanlı bir kültür kullanarak çalıştırmaya zorlar.
 
 * **`-h|--help`**
 
@@ -56,7 +56,7 @@ dotnet nuget delete [-h|--help]
 
 * **`--interactive`**
 
-  Komutun, kimlik doğrulaması gibi işlemler için el ile eylem yapmasına izin verir. .NET Core 2,2 SDK 'dan beri kullanılabilir seçeneği.
+  Komutun engellenmesine izin verir ve kimlik doğrulama gibi işlemler için el ile eylem gerektirir. Seçenek .NET Core 2.2 SDK'dan beri mevcuttur.
 
 * **`-k|--api-key <API_KEY>`**
 
@@ -64,25 +64,25 @@ dotnet nuget delete [-h|--help]
 
 * **`--no-service-endpoint`**
 
-  Kaynak URL 'ye "API/v2/Package" eklemeyin. .NET Core 2,1 SDK 'dan beri kullanılabilir seçeneği.
+  Kaynak URL'ye "api/v2/package" eklenmemiştir. Seçenek .NET Core 2.1 SDK'dan beri mevcuttur.
 
 * **`--non-interactive`**
 
-  Kullanıcı giriş veya teyitlerini istemez.
+  Kullanıcı girişi veya onayları istenmez.
 
 * **`-s|--source <SOURCE>`**
 
-  Sunucu URL 'sini belirtir. Nuget.org için desteklenen URL 'Ler `https://www.nuget.org`, `https://www.nuget.org/api/v3`ve `https://www.nuget.org/api/v2/package`içerir. Özel akışlar için ana bilgisayar adını (örneğin, `%hostname%/api/v3`) değiştirin.
+  Sunucu URL'sini belirtir. nuget.org için desteklenen URL'ler `https://www.nuget.org/api/v3`, `https://www.nuget.org/api/v2/package` `https://www.nuget.org`ve . Özel akışlar için ana bilgisayar adını `%hostname%/api/v3`değiştirin (örneğin, ).
 
 ## <a name="examples"></a>Örnekler
 
-* `Microsoft.AspNetCore.Mvc`paketinin 1,0 sürümünü siler:
+* Paketin `Microsoft.AspNetCore.Mvc`sürüm 1.0'ını siler:
 
   ```dotnetcli
   dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0
   ```
 
-* `Microsoft.AspNetCore.Mvc`paket 1,0 sürümünü siler, kullanıcıdan kimlik bilgilerini veya diğer girişleri sorma:
+* Paketin `Microsoft.AspNetCore.Mvc`sürüm 1.0'ını siler, kullanıcıdan kimlik bilgileri veya diğer girişler için istenmez:
 
   ```dotnetcli
   dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive

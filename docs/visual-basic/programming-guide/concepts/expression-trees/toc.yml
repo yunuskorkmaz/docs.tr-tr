@@ -1,9 +1,9 @@
 - name: İfade Ağaçları
   href: index.md
   items:
-    - name: 'Nasıl yapılır: İfade Ağaçlarını Yürütme'
+    - name: 'Nasıl Yapılır: İfade Ağaçlarını Yürütme'
       href: how-to-execute-expression-trees.md
-    - name: 'Nasıl yapılır: İfade Ağaçlarını Değiştirme'
+    - name: 'Nasıl Yapılır: İfade Ağaçlarını Değiştirme'
       href: how-to-modify-expression-trees.md
     - name: 'Nasıl yapılır: Dinamik Sorgular Derlemek için İfade Ağaçları Kullanma'
       href: how-to-use-expression-trees-to-build-dynamic-queries.md

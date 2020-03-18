@@ -1,49 +1,49 @@
 ---
 title: Altyapı kalıcılık katmanını tasarlama
-description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Altyapı kalıcılığı katmanının tasarımında depo modelini keşfet.
+description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Altyapı kalıcılık katmanının tasarımındaki depo deseni keşfedin.
 ms.date: 10/08/2018
-ms.openlocfilehash: f1c5df1cc5672760374610a416ae22b45cd76c25
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e10c8c1569089d5c8274df655ad7a12f2ebb7c22
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737930"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846815"
 ---
-# <a name="design-the-infrastructure-persistence-layer"></a>Altyapı kalıcılığı katmanını tasarlama
+# <a name="design-the-infrastructure-persistence-layer"></a>Altyapı kalıcılık katmanını tasarlama
 
-Veri kalıcılığı bileşenleri, bir mikro hizmetin sınırları içinde (bir mikro hizmetin veritabanı) barındırılan verilere erişim sağlar. Bunlar, özel Entity Framework (EF) <xref:Microsoft.EntityFrameworkCore.DbContext> nesneleri gibi depolar ve [iş sınıfları birimi](https://martinfowler.com/eaaCatalog/unitOfWork.html) gibi bileşenlerin gerçek uygulamasını içerirler. EF DbContext, hem depoyu hem de çalışma birimi düzenlerini uygular.
+Veri kalıcılığı bileşenleri, bir microservice(microservice veritabanı) sınırları içinde barındırılan verilere erişim sağlar. Bunlar, özel Entity Framework (EF) <xref:Microsoft.EntityFrameworkCore.DbContext> nesneleri gibi depolar ve Çalışma Birimi sınıfları gibi [bileşenlerin](https://martinfowler.com/eaaCatalog/unitOfWork.html) gerçek uygulamasını içerir. EF DbContext, Depo ve Çalışma Birimi kalıplarını her ikisini de uygular.
 
-## <a name="the-repository-pattern"></a>Depo deseninin
+## <a name="the-repository-pattern"></a>Depo deseni
 
-Depolar, veri kaynaklarına erişmek için gereken mantığı kapsülleyen sınıflardır veya bileşenlerdir. Daha iyi bakım sağlar ve etki alanı modeli katmanından veritabanlarına erişmek için kullanılan altyapıyı veya teknolojiyi ayırır. Entity Framework gibi bir nesne Ilişkisel Eşleyici (ORM) kullanıyorsanız, uygulanması gereken kod, LINQ ve güçlü yazma sayesinde basitleştirilmiştir. Bu, veri erişimi sıhhi tesisat yerine veri Kalıcılık mantığına odaklanmanızı sağlar.
+Depolar, veri kaynaklarına erişmek için gereken mantığı kapsülleyen sınıflar veya bileşenlerdir. Ortak veri erişim işlevselliğini merkezileştirerek daha iyi sürdürülebilirlik sağlar ve etki alanı modeli katmanından veritabanlarına erişmek için kullanılan altyapı veya teknolojiyi ayrışturarak. Varlık Çerçevesi gibi bir Nesne İlişkisel Haritalayıcı (ORM) kullanıyorsanız, LINQ ve güçlü yazma sayesinde uygulanması gereken kod basitleştirilmiştir. Bu, veri erişim tesisatı yerine veri kalıcılığı mantığına odaklanmanızı sağlar.
 
-Depo stili, bir veri kaynağıyla çalışma konusunda iyi belgelenmiş bir yoldur. [Kurumsal uygulama mimarisinin kitap desenlerinde](https://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/), Marwler, bir depoyu aşağıda gösterildiği gibi açıklar:
+Depo deseni, bir veri kaynağıyla çalışmanın iyi belgelenmiş bir yoludur. [Kitap Patterns kurumsal Uygulama Mimarisi,](https://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/)Martin Fowler aşağıdaki gibi bir depo açıklar:
 
-> Bir depo, etki alanı modeli katmanları ve veri eşleme arasında bir aracı görevleri gerçekleştirerek, bellekteki bir etki alanı nesnesi kümesine benzer bir şekilde davranır. İstemci nesneleri bildirimli olarak sorgu oluşturma ve yanıtlar için depolara gönderme. Kavramsal olarak, bir depo veritabanında depolanan bir nesne kümesini ve bunlar üzerinde gerçekleştirilebilecek işlemleri, kalıcılık katmanına daha yakın bir şekilde sunar. Depolar, Ayrıca, iş etki alanı ve veri ayırma veya eşleme arasındaki bağımlılığı açıkça ve tek bir yönde ayırma amacını destekler.
+> Depo, etki alanı modeli katmanları ve veri eşleme arasında bir aracının görevlerini gerçekleştirir ve bellekteki etki alanı nesneleri kümesine benzer şekilde hareket eder. İstemci nesneleri bildirimsel olarak sorgular oluşturur ve bunları yanıtlar için depolara gönderir. Kavramsal olarak, bir depo veritabanında depolanan bir nesne kümesini ve bunlar üzerinde gerçekleştirilebilecek işlemleri kapsülleyerek kalıcılık katmanına daha yakın bir yol sağlar. Depolar, aynı zamanda, açıkça ve tek bir yönde, iş etki alanı ve veri ayırma veya eşleme arasındaki bağımlılığı ayırma amacını destekler.
 
-### <a name="define-one-repository-per-aggregate"></a>Toplama başına bir depo tanımla
+### <a name="define-one-repository-per-aggregate"></a>Toplam başına bir depo tanımlama
 
-Her toplama veya toplama kökünde, bir depo sınıfı oluşturmalısınız. Etki alanı odaklı tasarım (DDD) desenlerine dayanan bir mikro hizmette, veritabanını güncelleştirmek için kullanmanız gereken tek kanal depolar olmalıdır. Bunun nedeni, toplamanın ıntürevlerini ve işlemsel tutarlılığını denetleyen toplam kökle bire bir ilişkiye sahip olmaleridir. Sorgular veritabanının durumunu değiştirmediğinden, veritabanını diğer kanallar aracılığıyla (CQRS yaklaşımını takip edebilirsiniz) sorgulamak çok normaldir. Ancak, işlem alanı (diğer bir deyişle, güncelleştirmeler) her zaman depolar ve toplam köklerle denetlenmelidir.
+Her bir toplu veya toplam kök için bir depo sınıfı oluşturmanız gerekir. Etki Alanı Tabanlı Tasarım (DDD) desenlerine dayalı bir mikro hizmette, veritabanını güncelleştirmek için kullanmanız gereken tek kanal depolar olmalıdır. Bunun nedeni, agreganın değişmezlerini ve işlem tutarlılığını kontrol eden toplam kökle bire bir ilişki içinde olmalarıdır. Sorgular veritabanının durumunu değiştirmedığından, veritabanını diğer kanallar (CQRS yaklaşımını izleyerek yapabileceğiniz gibi) sorgulayabilir. Ancak, işlem alanı (diğer bir başkası güncelleştirmeler) her zaman depolar ve toplam kökler tarafından denetlenmelidir.
 
-Temel olarak, bir depo, verileri etki alanı varlıkları biçimindeki veritabanından gelen bellekte doldurmanıza olanak sağlar. Varlıklar belleğe alındıktan sonra, bunlar değiştirilebilir ve sonra işlemler aracılığıyla veritabanına kalıcı olarak geri alınabilir.
+Temel olarak, bir depo etki alanı varlıkları şeklinde veritabanından gelen bellekte veri doldurmak için izin verir. Varlıklar bellekte bir kez, değiştirilebilir ve daha sonra işlemler yoluyla veritabanına geri kalıcı.
 
-Daha önce belirtildiği gibi, CQS/CQRS mimari modelini kullanıyorsanız, ilk sorgular, baber kullanılarak basit SQL deyimleriyle gerçekleştirilen, etki alanı modelinden yan sorgular tarafından gerçekleştirilir. İhtiyacınız olan tabloları sorgulayabilir ve birleştiremezsiniz ve bu sorgular toplamaların kuralları tarafından kısıtlanmadığından, bu yaklaşım depolardan çok daha esnektir. Bu veriler Sunu katmanına veya istemci uygulamasına gider.
+Daha önce de belirtildiği gibi, CQS/CQRS mimari deseni kullanıyorsanız, ilk sorgular etki alanı modelinin dışında yan sorgularla gerçekleştirilir ve Dapper kullanılarak basit SQL deyimleri tarafından gerçekleştirilir. Bu yaklaşım, gereksinim duyduğunuz tabloları sorgulayıp birleştirebileceğinizden ve bu sorguların toplamlardan gelen kurallarla sınırlandırılamadığından, depolardan çok daha esnektir. Bu veriler sunu katmanına veya istemci uygulamasına gider.
 
-Kullanıcı değişiklik yaptığında, görüntülenecek veriler istemci uygulamasından veya sunu katmanından uygulama katmanına (örneğin, bir Web API hizmeti) gönderilir. Komut işleyicisinde bir komut aldığınızda, veritabanından güncelleştirmek istediğiniz verileri almak için depoları kullanırsınız. Komutları ile geçilen verilerle birlikte güncelleştirir ve sonra bir işlem aracılığıyla veritabanındaki verileri (etki alanı varlıkları) eklersiniz veya güncelleyebilirsiniz.
+Kullanıcı değişiklik yaparsa, güncellenecek veriler istemci uygulamasından veya uygulama katmanına sunu katmanından (Web API hizmeti gibi) gelir. Komut işleyicisi bir komut aldığınızda, veritabanından güncelleştirmek istediğiniz verileri almak için depoları kullanırsınız. Komutlarla geçirilen verilerle bellekte güncellersiniz ve ardından bir işlem aracılığıyla veritabanındaki verileri (etki alanı varlıkları) ekler veya güncellersiniz.
 
-Şekil 7-17 ' de gösterildiği gibi, her bir toplama kökü için yalnızca bir depoyu tanımlamanız gerektiğini bir kez daha vurgulamak önemlidir. Toplama içindeki tüm nesneler arasında işlem tutarlılığı sağlamak üzere toplama kökünün amacını elde etmek için, veritabanındaki her tablo için asla bir depo oluşturmanız gerekir.
+Şekil 7-17'de gösterildiği gibi, her bir toplam kök için yalnızca bir depo tanımlamanız gerektiğini tekrar vurgulamak önemlidir. Toplam kök hedefine ulaşmak için, toplamdaki tüm nesneler arasında işlem tutarlılığını korumak için, veritabanındaki her tablo için hiçbir zaman bir depo oluşturmamalısınız.
 
-![Etki alanı ve diğer altyapının ilişkilerini gösteren diyagram.](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
+![Etki alanı ve diğer altyapı ilişkilerini gösteren diyagram.](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
 
-**Şekil 7-17**. Depolar, Toplamalar ve veritabanı tabloları arasındaki ilişki
+**Şekil 7-17**. Depolar, toplamlar ve veritabanı tabloları arasındaki ilişki
 
-Yukarıdaki diyagramda, etki alanı ve altyapı katmanları arasındaki ilişkiler gösterilmektedir: alıcı toplamı, Ibuygurca ve sıra toplama, ıorderrepository arabirimlerine göre değişir, bu arabirimler altyapı katmanında uygulanır UnitOfWork 'e bağlı olan ilgili depolarda, veri katmanındaki tablolara erişen, orada de uygulanmış olan depolar.
+Yukarıdaki diyagram Etki Alanı ve Altyapı katmanları arasındaki ilişkileri gösterir: Alıcı Toplam IBuyerRepository bağlıdır ve Sipariş Toplam IOrderRepository arayüzleri bağlıdır, bu arayüzler Altyapı katmanında uygulanır UnitOfWork'e bağlı olan ve veri katmanındaki tablolara erişen ilgili depolar tarafından.
 
-### <a name="enforce-one-aggregate-root-per-repository"></a>Her depo için bir toplama kökünü zorla
+### <a name="enforce-one-aggregate-root-per-repository"></a>Depo başına bir toplam kök uygulayın
 
-Depo tasarımınızın, yalnızca toplam köklerin depolara sahip olması için kuralı zorunlu kıldığı şekilde uygulanması yararlı olabilir. `IAggregateRoot` işaretleyici arabirimine sahip olduklarından emin olmak için, çalıştığı varlıkların türünü kısıtlayan genel veya temel bir depo türü oluşturabilirsiniz.
+Depo tasarımınızı, yalnızca toplu köklerin depoları olması gerektiği kuralını zorlar gibi uygulamak değerli olabilir. `IAggregateRoot` İşaretçi arabirimine sahip olduğundan emin olmak için birlikte çalıştığı varlıkların türünü kısıtlayan genel veya temel depo türü oluşturabilirsiniz.
 
-Bu nedenle, altyapı katmanında uygulanan her depo sınıfı, aşağıdaki kodda gösterildiği gibi kendi sözleşmesini veya arabirimini uygular:
+Böylece, altyapı katmanında uygulanan her depo sınıfı, aşağıdaki kodda gösterildiği gibi kendi sözleşmesini veya arabirimini uygular:
 
 ```csharp
 namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositories
@@ -55,7 +55,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 }
 ```
 
-Her belirli depo arabirimi genel ırepository arabirimini uygular:
+Her özel depo arabirimi genel IRepository arabirimini uygular:
 
 ```csharp
 public interface IOrderRepository : IRepository<Order>
@@ -65,7 +65,7 @@ public interface IOrderRepository : IRepository<Order>
 }
 ```
 
-Ancak, kodun her deponun tek bir toplama ile ilgili olduğunu bir şekilde zorlayacağından daha iyi bir yol, genel depo türünü uygulamaktır. Bu şekilde, belirli bir toplamı hedeflemek için bir depo kullandığınızı açıktır. Bu, aşağıdaki kodda olduğu gibi genel bir `IRepository` temel arabirimi uygulayarak kolayca yapılabilir:
+Ancak, kodun her deponun tek bir toplamla ilişkili olduğu kuralı zorlamasının daha iyi bir yolu genel bir depo türü uygulamaktır. Bu şekilde, belirli bir toplamı hedeflemek için bir depo kullandığınız açıktır. Bu, aşağıdaki kodda olduğu `IRepository` gibi genel bir temel arabirim uygulanarak kolayca yapılabilir:
 
 ```csharp
 public interface IRepository<T> where T : IAggregateRoot
@@ -74,62 +74,59 @@ public interface IRepository<T> where T : IAggregateRoot
 }
 ```
 
-### <a name="the-repository-pattern-makes-it-easier-to-test-your-application-logic"></a>Depo deseninin test etme, Uygulama mantığınızı daha kolay hale getirir
+### <a name="the-repository-pattern-makes-it-easier-to-test-your-application-logic"></a>Depo deseni, uygulama mantığınızı test etmeyi kolaylaştırır
 
-Depo deseninin, uygulamanızı birim testlerle kolayca test etmenizi sağlar. Birim testlerinin altyapıyı değil yalnızca kodunuzu test eder, bu nedenle depo soyutlamaları bu amaca ulaşmak için daha kolay hale gelir.
+Depo deseni, ünite testleri ile uygulamanızı kolayca test etmenizi sağlar. Birim testlerinin altyapıyı değil, yalnızca kodunuzu sınadığını unutmayın, böylece depo soyutlamaları bu amaca ulaşmayı kolaylaştırır.
 
-Önceki bölümde belirtildiği gibi, Web API mikro hizmetiniz gibi uygulama katmanının, uyguladığınız altyapı katmanına doğrudan bağlı olmaması için, depo arabirimlerini etki alanı modeli katmanına tanımlamanız ve yerleştirmeniz önerilir gerçek depo sınıfları. Bunu yaparak ve Web API 'nizin denetleyicilerine bağımlılık ekleme işlemini kullanarak, veritabanından veri yerine sahte veriler döndüren sahte depolar uygulayabilirsiniz. Bu ayrılmış yaklaşım, veritabanına bağlantı gerektirmeden uygulamanızın mantığını odaklan birim testleri oluşturmanıza ve çalıştırmanıza olanak tanır.
+Daha önceki bir bölümde belirtildiği gibi, web API mikro hizmetiniz gibi uygulama katmanının doğrudan uyguladığınız altyapı katmanına bağlı olmaması için depo arabirimlerini etki alanı modeli katmanına tanımlamanız ve yerleştirmeniz önerilir gerçek depo sınıfları. Bunu yaparak ve Web API'nızın denetleyicilerinde Bağımlılık Enjeksiyonu'nu kullanarak, veritabanından veri yerine sahte veri döndüren sahte depolar uygulayabilirsiniz. Bu ayrılmış yaklaşım, veritabanına bağlantı gerektirmeden uygulamanızın mantığını odaklayan birim testleri oluşturmanıza ve çalıştırmanıza olanak tanır.
 
-Veritabanlarına bağlantılar başarısız olabilir ve daha da önemlisi, bir veritabanında yüzlerce testi çalıştırmak iki nedenden dolayı hatalı olur. İlk olarak, çok sayıda test yüzünden uzun zaman alabilir. İkincisi, veritabanı kayıtları, testlerin sonuçlarını değiştirebilir ve etkileyebilir, bu sayede tutarlı olmayabilir. Veritabanına karşı test etmek, bir tümleştirme testi değil, bir birim testi değildir. Hızlı bir şekilde çalışan çok sayıda birim testiniz olması gerekir, ancak veritabanlarına göre daha az tümleştirme testi olmalıdır.
+Veritabanlarına bağlantılar başarısız olabilir ve daha da önemlisi, bir veritabanına karşı yüzlerce test çalıştırmak iki nedenden dolayı kötüdür. İlk olarak, testlerin çok sayıda nedeniyle uzun bir zaman alabilir. İkinci olarak, veritabanı kayıtları değişebilir ve testlerinizin sonuçlarını etkileyebilir, böylece tutarlı olmayabilirler. Veritabanına karşı sınama bir birim testi değil, bir tümleştirme testidir. Hızlı çalışan birçok birim testleri, ancak veritabanlarına karşı daha az tümleştirme testleri olmalıdır.
 
-Birim testleriyle ilgili sorunların ayrılması açısından, mantığınızın belleği içindeki etki alanı varlıkları üzerinde çalışır. Depo sınıfının bu şekilde teslim edildiğini varsayar. Mantığınızın etki alanı varlıklarını değiştirdiğine göre, depo sınıfının bunları doğru depolayabileceği varsayılır. Buradaki önemli nokta, etki alanı modelinize ve etki alanı mantığınıza göre birim testleri oluşturmaktır. Toplama kökleri, DDD 'daki ana tutarlılık sınırlardır.
+Birim testleri için endişelerin ayrılması açısından, mantığınız bellekteki etki alanı varlıklarında çalışır. Depo sınıfının bunları teslim ettiği varsayar. Mantığınız etki alanı varlıklarını modifiye ettikten sonra, depo sınıfının bunları doğru şekilde depolaacağını varsayar. Burada önemli nokta etki alanı modeli ve etki alanı mantığı karşı birim testleri oluşturmaktır. Toplam kökler DDD'deki ana tutarlılık sınırlarıdır.
 
-EShopOnContainers 'da uygulanan depolar, değişiklik İzleyicisini kullanarak deponun ve Iş desenlerinin DbContext uygulamasını EF Core kullanır, bu nedenle bu işlevi yinelemeler.
+eShopOnContainers'da uygulanan depolar, ef core'un değişim izleyicisini kullanarak Depo ve İş Birimi desenlerinin DbContext uygulamasına dayanır, bu nedenle bu işlevselliği yinelemiyorlar.
 
-### <a name="the-difference-between-the-repository-pattern-and-the-legacy-data-access-class-dal-class-pattern"></a>Depo deseninin ve eski veri erişim sınıfı (DAL sınıfı) deseninin farkı
+### <a name="the-difference-between-the-repository-pattern-and-the-legacy-data-access-class-dal-class-pattern"></a>Depo deseni ile eski Veri Erişimi sınıfı (DAL sınıfı) deseni arasındaki fark
 
-Veri erişim nesnesi doğrudan depolamaya karşı veri erişimi ve Kalıcılık işlemleri gerçekleştirir. Bir depo, verileri iş nesnesi birimi (<xref:Microsoft.EntityFrameworkCore.DbContext> sınıfı kullanılırken EF olarak) bellekte gerçekleştirmek istediğiniz işlemlere işaret ediyor, ancak bu güncelleştirmeler veritabanına hemen yapılmaz.
+Veri erişim nesnesi doğrudan depolamaya karşı veri erişimi ve kalıcılık işlemleri gerçekleştirir. Depo, verileri bir çalışma nesnesi biriminin belleğinde gerçekleştirmek istediğiniz işlemlerle <xref:Microsoft.EntityFrameworkCore.DbContext> (sınıfı kullanırken EF'de olduğu gibi) işaretler, ancak bu güncelleştirmeler hemen veritabanına gerçekleştirilmez.
 
-Bir iş birimi, birden çok INSERT, Update veya delete işlemi içeren tek bir işlem olarak adlandırılır. Basit koşullarda, bir Web sitesindeki kayıt gibi belirli bir kullanıcı eyleminin, tüm ekleme, güncelleştirme ve silme işlemlerinin tek bir işlemde işlendiği anlamına gelir. Bu, birden çok veritabanı hareketini bir chattier şekilde işlemeye kıyasla daha etkilidir.
+Çalışma birimi, birden çok ekleme, güncelleştirme veya silme işlemi içeren tek bir işlem olarak adlandırılır. Basit bir ifadeyle, web sitesindeki bir kayıt gibi belirli bir kullanıcı eylemi için, tüm ekleme, güncelleştirme ve silme işlemleri tek bir işlemde işlendiği anlamına gelir. Bu, birden çok veritabanı işlemini chattier bir şekilde işlemekten daha verimlidir.
 
-Bu birden çok kalıcılık işlemi daha sonra, uygulama katmanından kodunuz onu komutdaysa tek bir eylemde gerçekleştirilir. Gerçek veritabanı depolamasına bellek içi değişiklikleri uygulama kararı genellikle [iş deseninin birimi](https://martinfowler.com/eaaCatalog/unitOfWork.html)temel alınarak hesaplanır. EF 'de Iş deseninin birimi <xref:Microsoft.EntityFrameworkCore.DbContext>olarak uygulanır.
+Bu çoklu kalıcılık işlemleri, uygulama katmanındaki kodunuz bunu emrettiğinde daha sonra tek bir eylemde gerçekleştirilir. Bellek içi değişiklikleri gerçek veritabanı depolamasına uygulama kararı genellikle Çalışma [Birimi deseni'ne](https://martinfowler.com/eaaCatalog/unitOfWork.html)dayanır. EF'de, Çalışma Birimi deseni <xref:Microsoft.EntityFrameworkCore.DbContext>.
 
-Çoğu durumda, bu model veya depolamaya yönelik işlemler uygulamanın yolu uygulama performansını artırabilir ve tutarsızlıklar olasılığını azaltabilir. Ayrıca, tüm amaçlanan işlemler bir işlemin parçası olarak yapıldığından veritabanı tablolarında işlem engellemeyi azaltır. Bu, veritabanında birçok yalıtılmış işlemi yürütmeye yönelik karşılaştırmada daha etkilidir. Bu nedenle, seçilen ORM birçok küçük ve ayrı işlem yürütmelerinin aksine, aynı işlem içinde birkaç güncelleştirme eylemini gruplandırarak veritabanına karşı yürütmeyi en iyileştirebilir.
+Çoğu durumda, bu desen veya depolamaya karşı işlem uygulama şekli uygulama performansını artırabilir ve tutarsızlık olasılığını azaltabilir. Tüm amaçlanan işlemler tek bir işlemin parçası olarak işlendiğinden, veritabanı tablolarında işlem engellemeyi de azaltır. Bu, veritabanına karşı birçok yalıtılmış işlemi yürütmeye kıyasla daha etkilidir. Bu nedenle, seçili ORM, birçok küçük ve ayrı işlem yürütmesi yerine, aynı işlem içinde birkaç güncelleştirme eylemi gruplayarak veritabanına karşı yürütme optimize edebilirsiniz.
 
-### <a name="repositories-shouldnt-be-mandatory"></a>Depoların zorunlu olmaması gerekir
+### <a name="repositories-shouldnt-be-mandatory"></a>Depolar zorunlu olmamalıdır
 
-Özel depolar daha önce alıntı yapılan nedenlerle faydalıdır ve bu, eShopOnContainers 'da bir sıralama mikro hizmeti için yaklaşım olur. Ancak, bir DDD tasarımında veya genel .NET geliştirmede bile uygulamak için önemli bir model değildir.
+Özel depolar daha önce belirtilen nedenlerle yararlıdır ve bu eShopOnContainers sipariş microservice için bir yaklaşımdır. Ancak, bir DDD tasarımında ve hatta genel olarak .NET geliştirmede uygulanması gereken önemli bir desen değildir.
 
-Örneğin, cemy Bogard, bu kılavuz için doğrudan geri bildirim sağlarken, aşağıdakileri diyor:
+Örneğin, Jimmy Bogard, bu kılavuz için doğrudan geribildirim sağlarken, şunları söyledi:
 
-> Büyük olasılıkla en büyük geri bildirimim olacaktır. Aslında depoların bir fanı değil, temel Kalıcılık mekanizmanın önemli ayrıntılarını gizlemiyor. Bu nedenle, komutları için de MediatR 'ye gitmem gerekir. Kalıcılık katmanının tam gücünü kullanabilir ve tüm etki alanı davranışlarını toplam köklerim halinde gönderebilirsiniz. Genellikle depolarımı hayata almak istemiyorum; yine de gerçek bir tümleştirme testinin olması gerekir. CQRS 'ye devam etmek, gerçekten de depolar için ihtiyaç duymadığımızdan geliyordu.
+> Bu muhtemelen benim en büyük geribildirim olacak. Ben gerçekten depoları hayranı değilim, esas olarak altta yatan kalıcılık mekanizmasının önemli ayrıntılarını gizlemek çünkü. Bu yüzden ben de komutlar için MediatR'a gidiyorum. Kalıcılık katmanının tüm gücünü kullanabilir ve tüm bu etki alanı davranışını toplu köklerime itebilirim. Ben genellikle benim depoları alay etmek istemiyorum - Ben hala gerçek bir şey ile entegrasyon testi olması gerekir. CQRS'nin olması, artık depolara ihtiyacımız olmadığı anlamına geliyordu.
 
-Depolar kullanışlı olabilir, ancak toplama deseninin ve zengin etki alanı modelinin olduğu şekilde DDD tasarımınız için kritik değildir. Bu nedenle, uygun gördüğünüz gibi depo düzenini kullanın. Yine de EF Core kullandığınızda depo deseninin kullanılması gerekir, ancak bu durumda depo tüm mikro hizmet veya sınırlanmış bağlamı kapsamaktadır.
+Depolar yararlı olabilir, ancak Toplam desen ve zengin etki alanı modeli gibi, DDD tasarım için kritik değildir. Bu nedenle, uygun gördüğünüz gibi Depo deseni kullanın veya kullanmayın. Her neyse, bu durumda, depo tüm microservice veya sınırlı bağlam kapsar rağmen, bu durumda, EF Core kullandığınızda depo deseni kullanıyor olacaksınız.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-### <a name="repository-pattern"></a>Depo stili
+### <a name="repository-pattern"></a>Depo deseni
 
-- **Depo deseninin** \
-  <https://deviq.com/repository-pattern/>
-
-- **Edward Hieatt ve Ramiz Me. Depo stili.** \
+- **Edward Hieatt ve Rob beni. Depo deseni.** \
   <https://martinfowler.com/eaaCatalog/repository.html>
 
-- **Depo deseninin** \
+- **Depo deseni** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
-- **Eric Evans. Etki alanı odaklı tasarım: yazılım Kalbunda karmaşıklık karmaşıklığı.** (Kitap; depo deseninin bir tartışmasını içerir) \
+- **Eric Evans' ı. Etki Alanı Odaklı Tasarım: Yazılımın Kalbinde Karmaşıklıkla Mücadele.** (Kitap; Depo deseni bir tartışma içerir) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
-### <a name="unit-of-work-pattern"></a>Çalışma birimi stili
+### <a name="unit-of-work-pattern"></a>Çalışma deseni Birimi
 
-- **Marwler. Çalışma birimi stili.** \
+- **Martin Fowler' ı. İş deseni birimi.** \
   <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
-- **Bir ASP.NET MVC uygulamasında depo ve Iş deseni birimi uygulama** \
+- **ASP.NET MVC Uygulamasında Çalışma Düzenlerinin Depo ve Biriminin Uygulanması** \
   <https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
 >[!div class="step-by-step"]
 >[Önceki](domain-events-design-implementation.md)
->[İleri](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[Sonraki](infrastructure-persistence-layer-implemenation-entity-framework-core.md)

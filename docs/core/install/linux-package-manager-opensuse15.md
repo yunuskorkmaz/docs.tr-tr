@@ -1,33 +1,33 @@
 ---
-title: OpenSUSE 15-Package Manager-.NET Core 'a .NET Core 'u yükler
-description: OpenSUSE 15 üzerinde .NET Core SDK ve çalışma zamanı yüklemek için bir paket Yöneticisi kullanın.
+title: openSUSE 15 'e install .NET Core - paket yöneticisi - .NET Core
+description: OpenSUSE 15'e .NET Core SDK ve çalışma süresini yüklemek için bir paket yöneticisi kullanın.
 author: thraka
 ms.author: adegeo
 ms.date: 12/26/2019
 ms.openlocfilehash: aaece5e3554ab567cf82c23265c8fba1656298d8
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920766"
 ---
-# <a name="opensuse-15-package-manager---install-net-core"></a>openSUSE 15 Paket Yöneticisi-.NET Core 'ı yükler
+# <a name="opensuse-15-package-manager---install-net-core"></a>openSUSE 15 Paket Yöneticisi - Install .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-Bu makalede, openSUSE 15 ' te .NET Core yüklemek için bir paket yöneticisi 'nin nasıl kullanılacağı açıklanır. Çalışma zamanını yüklüyorsanız, hem .NET Core 'u hem de ASP.NET Core çalışma zamanlarını içerdiğinden [ASP.NET Core çalışma zamanını](#install-the-aspnet-core-runtime)yüklemenizi öneririz.
+Bu makalede, openSUSE 15'e .NET Core yüklemek için paket yöneticisinin nasıl kullanılacağı açıklanmaktadır. Çalışma süresini yüklüyorsanız, hem .NET Core hem de ASP.NET Core [çalışma sürelerini içerdiğinden, ASP.NET Core çalışma süresini](#install-the-aspnet-core-runtime)yüklemenizi öneririz.
 
-## <a name="register-microsoft-key-and-feed"></a>Microsoft anahtar ve akışını Kaydet
+## <a name="register-microsoft-key-and-feed"></a>Microsoft anahtarını ve akışını kaydetme
 
-.NET yüklemeden önce şunları yapmanız gerekir:
+.NET'i yüklemeden önce şunları yapmanız gerekir:
 
-- Microsoft anahtarını kaydettirin.
+- Microsoft anahtarını kaydedin.
 - Ürün deposunu kaydedin.
-- Gerekli bağımlılıkları yükler.
+- Gerekli bağımlılıkları yükleyin.
 
-Bu, makine başına yalnızca bir kez yapılmalıdır.
+Bu işlemin makine başına tek bir kez yapılması yeterlidir.
 
-Bir Terminal açın ve aşağıdaki komutları çalıştırın.
+Bir terminal açın ve aşağıdaki komutları çalıştırın.
 
 ```bash
 sudo zypper install libicu
@@ -37,37 +37,37 @@ sudo mv prod.repo /etc/zypp/repos.d/microsoft-prod.repo
 sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 ```
 
-## <a name="install-the-net-core-sdk"></a>.NET Core SDK 'i yükler
+## <a name="install-the-net-core-sdk"></a>.NET Core SDK’sını yükleme
 
-Yükleme için kullanılabilen ürünleri güncelleştirin, ardından .NET Core SDK yükleme. Terminalinizde aşağıdaki komutu çalıştırın.
+Yükleme için kullanılabilen ürünleri güncelleştirin ve sonra .NET Core SDK'yı yükleyin. Terminalinizde aşağıdaki komutu çalıştırın.
 
 ```bash
 sudo zypper install dotnet-sdk-3.1
 ```
 
-## <a name="install-the-aspnet-core-runtime"></a>ASP.NET Core çalışma zamanını yükler
+## <a name="install-the-aspnet-core-runtime"></a>ASP.NET Core çalışma süresini yükleme
 
-Yükleme için kullanılabilen ürünleri güncelleştirin, sonra ASP.NET çalışma zamanını yükleme. Terminalinizde aşağıdaki komutu çalıştırın.
+Yükleme için kullanılabilir ürünleri güncelleştirin ve ASP.NET çalışma süresini yükleyin. Terminalinizde aşağıdaki komutu çalıştırın.
 
 ```bash
 sudo zypper install aspnetcore-runtime-3.1
 ```
 
-## <a name="install-the-net-core-runtime"></a>.NET Core çalışma zamanını yükler
+## <a name="install-the-net-core-runtime"></a>.NET Core çalışma süresini yükleme
 
-Yükleme için kullanılabilen ürünleri güncelleştirin ve ardından .NET Core çalışma zamanı 'nı yükleme. Terminalinizde aşağıdaki komutu çalıştırın.
+Yükleme için kullanılabilen ürünleri güncelleştirin ve .NET Core çalışma süresini yükleyin. Terminalinizde aşağıdaki komutu çalıştırın.
 
 ```bash
 sudo zypper install dotnet-runtime-3.1
 ```
 
-## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir
+## <a name="how-to-install-other-versions"></a>Diğer sürümler nasıl yüklenir?
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
-## <a name="troubleshoot-the-package-manager"></a>Paket yöneticisinin sorunlarını giderme
+## <a name="troubleshoot-the-package-manager"></a>Paket yöneticisinin sorun giderme
 
-Bu bölüm, .NET Core 'u yüklemek için Paket Yöneticisi 'ni kullanırken karşılaşabileceğiniz yaygın hatalarla ilgili bilgiler sağlar.
+Bu bölümde, .NET Core'u yüklemek için paket yöneticisini kullanırken karşılaşabileceğiniz sık karşılaşılan hatalar hakkında bilgi verilmektedir.
 
 ### <a name="failed-to-fetch"></a>Getirilemedi
 

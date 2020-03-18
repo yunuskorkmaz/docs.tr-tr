@@ -1,22 +1,22 @@
 ---
 ms.openlocfilehash: 8979b7ffc09726c6588fe3ba60b916202697648f
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522708"
 ---
-### <a name="signalr-hubconnectioncontext-constructors-changed"></a>SignalR: HubConnectionContext oluşturucuları değişti
+### <a name="signalr-hubconnectioncontext-constructors-changed"></a>SignalR: HubConnectionContext yapıcılar değişti
 
-SignalR 'nin `HubConnectionContext` oluşturucuları, daha sonra düzeltme ekleme seçeneklerine daha fazla parametre yerine bir seçenek türü kabul edecek şekilde değiştirilmiştir. Bu değişiklik, iki Oluşturucuyu bir seçenek türü kabul eden tek bir Oluşturucu ile değiştirir.
+SignalR'in `HubConnectionContext` oluşturucuları, birden çok parametre yerine bir seçenek türünü kabul etmek için değiştirildi. Bu değişiklik, iki oluşturucunun yerine bir seçenek türünü kabul eden tek bir oluşturucu ile değiştirilir.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-`HubConnectionContext` iki oluşturucuya sahiptir:
+`HubConnectionContext`iki yapıcısı vardır:
 
 ```csharp
 public HubConnectionContext(ConnectionContext connectionContext, TimeSpan keepAliveInterval, ILoggerFactory loggerFactory);
@@ -25,7 +25,7 @@ public HubConnectionContext(ConnectionContext connectionContext, TimeSpan keepAl
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-İki Oluşturucu kaldırılmıştır ve bir Oluşturucu ile değiştirilmiştir:
+İki yapıcı kaldırıldı ve bir yapıcı ile değiştirildi:
 
 ```csharp
 public HubConnectionContext(ConnectionContext connectionContext, HubConnectionContextOptions contextOptions, ILoggerFactory loggerFactory)
@@ -33,7 +33,7 @@ public HubConnectionContext(ConnectionContext connectionContext, HubConnectionCo
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Yeni Oluşturucu yeni bir seçenekler nesnesi kullanır. Sonuç olarak, `HubConnectionContext` ' ın özellikleri daha fazla Oluşturucu ve son değişiklikler yapılmadan gelecekte genişletilebilir.
+Yeni oluşturucu yeni bir seçenek nesnesi kullanır. Sonuç olarak, özellikleri `HubConnectionContext` daha fazla yapıcı lar yapmadan ve değişiklikler kırmadan gelecekte genişletilebilir.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
@@ -60,7 +60,7 @@ HubConnectionContext connectionContext = new HubConnectionContext(connectionCont
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Core
+ASP.NET Çekirdeği
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

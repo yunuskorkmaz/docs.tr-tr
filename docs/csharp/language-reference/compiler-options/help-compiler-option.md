@@ -1,5 +1,5 @@
 ---
-title: -help, -? (C# Derleyici seçenekleri)
+title: -help, -? (C# Derleyici Seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /?
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - -? compiler option [C#]
 ms.assetid: 8d53f6ba-5c3b-4183-976e-9c0f26fd3680
 ms.openlocfilehash: bbf4fd6fd13ee267dcbc80568577d5f8aa7d625e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602912"
 ---
-# <a name="-help---c-compiler-options"></a>-help, -? (C# Derleyici seçenekleri)
-Bu seçenek, derleyici seçeneklerinin bir listesini ve STDOUT 'a her bir seçeneğin kısa bir açıklamasını gönderir.  
+# <a name="-help---c-compiler-options"></a>-help, -? (C# Derleyici Seçenekleri)
+Bu seçenek, derleyici seçeneklerinin bir listesini ve her seçeneğin kısa bir açıklamasını stdout'a gönderir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -30,9 +30,9 @@ Bu seçenek, derleyici seçeneklerinin bir listesini ve STDOUT 'a her bir seçen
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu seçenek bir derlemede yer alıyorsa, hiçbir çıkış dosyası oluşturulmaz ve hiçbir derleme gerçekleşmeyecektir.  
+ Bu seçenek bir derlemeye eklenirse, hiçbir çıktı dosyası oluşturulmaz ve derleme gerçekleşmez.  
   
- Bu derleyici seçeneği Visual Studio 'da kullanılamaz ve program aracılığıyla değiştirilemez.  
+ Bu derleyici seçeneği Visual Studio'da kullanılamaz ve programlı olarak değiştirilemez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

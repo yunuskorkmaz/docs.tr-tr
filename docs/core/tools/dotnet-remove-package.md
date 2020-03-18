@@ -1,23 +1,23 @@
 ---
-title: DotNet paket Kaldır komutu
-description: DotNet Remove Package komutu, bir projeye NuGet paket başvurusunu kaldırmak için kullanışlı bir seçenek sağlar.
+title: dotnet kaldırma paket komutu
+description: Dotnet kaldırma paketi komutu, NuGet paket başvurularını bir projeye kaldırmak için kullanışlı bir seçenek sağlar.
 ms.date: 02/14/2020
 ms.openlocfilehash: 8eaa311748c5627351ef149012dc4dddd2ab2793
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503638"
 ---
 # <a name="dotnet-remove-package"></a>dotnet remove package
 
-**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
+**Bu makale şu şekilde dir:** ✔️ .NET Core 2.x SDK ve sonraki sürümler
 
 ## <a name="name"></a>Adı
 
-`dotnet remove package`-paket başvurusunu bir proje dosyasından kaldırır.
+`dotnet remove package`- Paket başvurularını proje dosyasından kaldırır.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Özet
 
 ```dotnetcli
 dotnet remove [<PROJECT>] package <PACKAGE_NAME> [-h|--help]
@@ -25,13 +25,13 @@ dotnet remove [<PROJECT>] package <PACKAGE_NAME> [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet remove package` komutu bir projeden NuGet paket başvurusunu kaldırmak için kullanışlı bir seçenek sağlar.
+Komut, `dotnet remove package` bir Projeden NuGet paket başvurularını kaldırmak için kullanışlı bir seçenek sağlar.
 
 ## <a name="arguments"></a>Bağımsız Değişkenler
 
 `PROJECT`
 
-Proje dosyasını belirtir. Belirtilmemişse, komut geçerli dizinde bir arama yapar.
+Proje dosyasını belirtir. Belirtilmemişse, komut geçerli dizini arar.
 
 `PACKAGE_NAME`
 
@@ -45,7 +45,7 @@ Kaldırılacak paket başvurusu.
 
 ## <a name="examples"></a>Örnekler
 
-- `Newtonsoft.Json` NuGet paketini geçerli dizindeki bir projeden kaldır:
+- Geçerli `Newtonsoft.Json` dizindeki projeden NuGet paketini kaldırın:
 
   ```dotnetcli
   dotnet remove package Newtonsoft.Json

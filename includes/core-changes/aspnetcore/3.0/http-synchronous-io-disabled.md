@@ -1,35 +1,35 @@
 ---
 ms.openlocfilehash: 53d2c989120c92f4e2d18f50ce4b364bd4c9b604
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901939"
 ---
-### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP: tüm sunucularda zaman uyumlu GÇ devre dışı
+### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP: Senkron IO tüm sunucularda devre dışı
 
-ASP.NET Core 3,0 ' den başlayarak, zaman uyumlu sunucu işlemleri varsayılan olarak devre dışıdır.
+Core 3.0 ASP.NET ile başlayarak, senkron sunucu işlemleri varsayılan olarak devre dışı bırakılır.
 
-#### <a name="change-description"></a>Açıklamayı Değiştir
+#### <a name="change-description"></a>Açıklamayı değiştir
 
-`AllowSynchronousIO`, her bir sunucuda `HttpRequest.Body.Read`, `HttpResponse.Body.Write`ve `Stream.Flush`gibi zaman uyumlu GÇ API 'Lerini sağlayan veya devre dışı bırakan bir seçenektir. Bu API 'Ler, bir iş parçacığı kaynağı ve uygulama askıda kalıyor. ASP.NET Core 3,0 Preview 3 ' te başlayarak bu zaman uyumlu işlemler varsayılan olarak devre dışıdır.
+`AllowSynchronousIO`her sunucuda senkron IO API'lerini etkinleştiren veya devre `HttpRequest.Body.Read` `HttpResponse.Body.Write`dışı `Stream.Flush`eden bir seçenektir. Bu API'ler uzun iplik açlık kaynağı olmuştur ve uygulama asılı. Core 3.0 Preview 3'ASP.NET başlayarak, bu eşzamanlı işlemler varsayılan olarak devre dışı bırakılır.
 
 Etkilenen sunucular:
 
 - Kestrel
-- HttpSys
-- İşlem içi IIS
-- TestServer
+- Http://sys
+- IIS süreç içinde
+- TestSunucusu
 
-Şuna benzer hatalar beklenir:
+Benzer hatalar bekleyin:
 
 - `Synchronous operations are disallowed. Call ReadAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call WriteAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call FlushAsync or set AllowSynchronousIO to true instead.`
 
-Her sunucu, bu davranışı denetleyen bir `AllowSynchronousIO` seçeneğine sahiptir ve bunların tümü için varsayılan olarak `false`.
+Her sunucubu `AllowSynchronousIO` davranışı kontrol eden bir seçenek vardır ve `false`hepsi için varsayılan şimdi .
 
-Davranış, geçici bir risk azaltma olarak istek başına temelinde da geçersiz kılınabilir. Örneğin:
+Davranış, geçici bir azaltma olarak istek başına olarak geçersiz kılınabilir. Örnek:
 
 ```csharp
 var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();
@@ -39,23 +39,23 @@ if (syncIOFeature != null)
 }
 ```
 
-`Dispose`içinde zaman uyumlu bir API çağıran `TextWriter` veya başka bir akış ile ilgili sorun yaşıyorsanız, bunun yerine yeni `DisposeAsync` API 'sini çağırın.
+Senkron API'yi çağıran bir `TextWriter` veya başka bir `Dispose`akışla `DisposeAsync` ilgili sorun yaşıyorsanız, bunun yerine yeni API'yi arayın.
 
-Tartışma için bkz. [DotNet/aspnetcore # 7644](https://github.com/dotnet/aspnetcore/issues/7644).
+Tartışma için [dotnet/aspnetcore#7644'e](https://github.com/dotnet/aspnetcore/issues/7644)bakın.
 
-#### <a name="version-introduced"></a>Sunulan sürüm
+#### <a name="version-introduced"></a>Sürüm tanıtıldı
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-`HttpRequest.Body.Read`, `HttpResponse.Body.Write`ve `Stream.Flush` varsayılan olarak izin verilir.
+`HttpRequest.Body.Read`, `HttpResponse.Body.Write`ve `Stream.Flush` varsayılan olarak izin verildi.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Bu zaman uyumlu API 'Lere varsayılan olarak izin verilmez:
+Bu eşzamanlı API'ler varsayılan olarak izin verilmez:
 
-Şuna benzer hatalar beklenir:
+Benzer hatalar bekleyin:
 
 - `Synchronous operations are disallowed. Call ReadAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call WriteAsync or set AllowSynchronousIO to true instead.`
@@ -63,11 +63,11 @@ Bu zaman uyumlu API 'Lere varsayılan olarak izin verilmez:
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Bu zaman uyumlu API 'Ler, bir iş parçacığı kaynağı ve uygulama askıda kalıyor. ASP.NET Core 3,0 Preview 3 ' te başlayarak, zaman uyumlu işlemler varsayılan olarak devre dışıdır.
+Bu senkron API'ler uzun iplik açlık kaynağı olmuştur ve uygulama asılı. Core 3.0 Preview 3ASP.NETden başlayarak, eşzamanlı işlemler varsayılan olarak devre dışı bırakılır.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Yöntemlerin zaman uyumsuz sürümlerini kullanın. Davranış, geçici bir risk azaltma olarak istek başına temelinde da geçersiz kılınabilir.
+Yöntemlerin eşzamanlı sürümlerini kullanın. Davranış, geçici bir azaltma olarak istek başına olarak geçersiz kılınabilir.
 
 ```csharp
 var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();
@@ -79,7 +79,7 @@ if (syncIOFeature != null)
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Core
+ASP.NET Çekirdeği
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
