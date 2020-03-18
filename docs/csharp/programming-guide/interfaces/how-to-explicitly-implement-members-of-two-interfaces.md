@@ -1,35 +1,35 @@
 ---
-title: İki arabirimin üyelerini açıkça uygulama- C# Programlama Kılavuzu
+title: İki arabirimin üyeleri açıkça nasıl uygulanır - C# Programlama Kılavuzu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [C#], explicitly implementing interface members
 - interfaces [C#], explicitly implementing with inheritance
 ms.assetid: 8b402ddc-dff9-4869-89cb-d718c764e68e
 ms.openlocfilehash: c7adc08f62a7f8a14b8e10f8b5ecdd6e37db811d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75701244"
 ---
-# <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a><span data-ttu-id="f5e07-102">İki arabirimin üyelerini açıkça uygulama (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="f5e07-102">How to explicitly implement members of two interfaces (C# Programming Guide)</span></span>
-<span data-ttu-id="f5e07-103">Açık [arabirim](../../language-reference/keywords/interface.md) uygulaması Ayrıca, programcı 'nin aynı üye adlarına sahip iki arabirim uygulamasına ve her arabirime ayrı bir uygulama sağlamasına izin verir.</span><span class="sxs-lookup"><span data-stu-id="f5e07-103">Explicit [interface](../../language-reference/keywords/interface.md) implementation also allows the programmer to implement two interfaces that have the same member names and give each interface member a separate implementation.</span></span> <span data-ttu-id="f5e07-104">Bu örnek, hem ölçüm hem de Ingilizce birimlerindeki bir kutunun boyutlarını görüntüler.</span><span class="sxs-lookup"><span data-stu-id="f5e07-104">This example displays the dimensions of a box in both metric and English units.</span></span> <span data-ttu-id="f5e07-105">Box [sınıfı](../../language-reference/keywords/class.md) , farklı ölçü sistemlerini temsil eden iki arabirim olan IEnglishDimensions ve IMetricDimensions uygular.</span><span class="sxs-lookup"><span data-stu-id="f5e07-105">The Box [class](../../language-reference/keywords/class.md) implements two interfaces IEnglishDimensions and IMetricDimensions, which represent the different measurement systems.</span></span> <span data-ttu-id="f5e07-106">Her iki arabirimde de aynı üye adları, uzunluğu ve genişliği vardır.</span><span class="sxs-lookup"><span data-stu-id="f5e07-106">Both interfaces have identical member names, Length and Width.</span></span>  
+# <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a><span data-ttu-id="1068e-102">İki arabirimin üyeleri açıkça nasıl uygulanır (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="1068e-102">How to explicitly implement members of two interfaces (C# Programming Guide)</span></span>
+<span data-ttu-id="1068e-103">Açık [arabirim](../../language-reference/keywords/interface.md) uygulaması, programcının aynı üye adlara sahip iki arabirimi uygulamasına ve her arabirim üyesine ayrı bir uygulama sağlamasına da olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="1068e-103">Explicit [interface](../../language-reference/keywords/interface.md) implementation also allows the programmer to implement two interfaces that have the same member names and give each interface member a separate implementation.</span></span> <span data-ttu-id="1068e-104">Bu örnek, hem metrik hem de İngilizce birimlerde bir kutunun boyutlarını görüntüler.</span><span class="sxs-lookup"><span data-stu-id="1068e-104">This example displays the dimensions of a box in both metric and English units.</span></span> <span data-ttu-id="1068e-105">Kutu [sınıfı,](../../language-reference/keywords/class.md) farklı ölçüm sistemlerini temsil eden iki arabirim IEnglishDimensions ve IMetricDimensions uygular.</span><span class="sxs-lookup"><span data-stu-id="1068e-105">The Box [class](../../language-reference/keywords/class.md) implements two interfaces IEnglishDimensions and IMetricDimensions, which represent the different measurement systems.</span></span> <span data-ttu-id="1068e-106">Her iki arabirimde de aynı üye adları vardır, Uzunluk ve Genişlik.</span><span class="sxs-lookup"><span data-stu-id="1068e-106">Both interfaces have identical member names, Length and Width.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f5e07-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="f5e07-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="1068e-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="1068e-107">Example</span></span>  
  [!code-csharp[csProgGuideInheritance#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#9)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="f5e07-108">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="f5e07-108">Robust Programming</span></span>  
- <span data-ttu-id="f5e07-109">Varsayılan ölçümleri Ingilizce birimlerde yapmak istiyorsanız, yöntem uzunluğunu ve genişliğini normal şekilde uygulayın ve IMetricDimensions arabiriminden length ve Width yöntemlerini açık bir şekilde uygulayın:</span><span class="sxs-lookup"><span data-stu-id="f5e07-109">If you want to make the default measurements in English units, implement the methods Length and Width normally, and explicitly implement the Length and Width methods from the IMetricDimensions interface:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="1068e-108">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="1068e-108">Robust Programming</span></span>  
+ <span data-ttu-id="1068e-109">Varsayılan ölçümleri İngilizce birimlerde yapmak istiyorsanız, Uzunluk ve Genişlik yöntemlerini normal olarak uygulayın ve IMetricDimensions arabiriminden Uzunluk ve Genişlik yöntemlerini açıkça uygulayın:</span><span class="sxs-lookup"><span data-stu-id="1068e-109">If you want to make the default measurements in English units, implement the methods Length and Width normally, and explicitly implement the Length and Width methods from the IMetricDimensions interface:</span></span>  
   
  [!code-csharp[csProgGuideInheritance#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#10)]  
   
- <span data-ttu-id="f5e07-110">Bu durumda, sınıf örneğinden Ingilizce birimlere erişebilir ve arabirim örneğinden ölçüm birimlerine erişebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="f5e07-110">In this case, you can access the English units from the class instance and access the metric units from the interface instance:</span></span>  
+ <span data-ttu-id="1068e-110">Bu durumda, sınıf örneğinden İngilizce birimlere erişebilir ve arayüz örneğinden metrik birimlere erişebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="1068e-110">In this case, you can access the English units from the class instance and access the metric units from the interface instance:</span></span>  
   
  [!code-csharp[csProgGuideInheritance#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#11)]  
   
-## <a name="see-also"></a><span data-ttu-id="f5e07-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f5e07-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1068e-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1068e-111">See also</span></span>
 
-- [<span data-ttu-id="f5e07-112">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="f5e07-112">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="f5e07-113">Sınıflar ve Yapılar</span><span class="sxs-lookup"><span data-stu-id="f5e07-113">Classes and Structs</span></span>](../classes-and-structs/index.md)
-- [<span data-ttu-id="f5e07-114">Arabirimler</span><span class="sxs-lookup"><span data-stu-id="f5e07-114">Interfaces</span></span>](./index.md)
-- [<span data-ttu-id="f5e07-115">Arabirim üyelerini açıkça uygulama</span><span class="sxs-lookup"><span data-stu-id="f5e07-115">How to explicitly implement interface members</span></span>](./how-to-explicitly-implement-interface-members.md)
+- [<span data-ttu-id="1068e-112">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="1068e-112">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="1068e-113">Sınıflar ve Structs</span><span class="sxs-lookup"><span data-stu-id="1068e-113">Classes and Structs</span></span>](../classes-and-structs/index.md)
+- [<span data-ttu-id="1068e-114">Arabirimler</span><span class="sxs-lookup"><span data-stu-id="1068e-114">Interfaces</span></span>](./index.md)
+- [<span data-ttu-id="1068e-115">Arabirim üyelerini açıkça uygulama</span><span class="sxs-lookup"><span data-stu-id="1068e-115">How to explicitly implement interface members</span></span>](./how-to-explicitly-implement-interface-members.md)

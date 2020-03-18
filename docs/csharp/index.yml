@@ -1,45 +1,45 @@
 ### YamlMime:Landing
 title: C# belgeleri
-summary: .NET platformunda C# programlama dilini kullanarak herhangi bir uygulamayı yazmayı öğrenin.
+summary: .NET platformunda C# programlama dilini kullanarak herhangi bir uygulamayı nasıl yazarak yazabilirsiniz öğrenin.
 metadata:
-  title: C#docs-kullanmaya başlayın, Öğreticiler, başvuru.
-  description: Programlama C# hakkında bilgi edinin-başlangıç geliştiricileri, yeni C#, geliştiriciler ve deneyimli C# /.NET geliştiricileri
+  title: 'C # docs - başlamak, öğreticiler, referans.'
+  description: C# programlamayı öğrenin - başlangıç geliştiricileri, C#'a yeni geliştiriciler ve deneyimli C# / .NET geliştiricileri için
   ms.topic: landing-page
   ms.date: 11/19/2019
   ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
-  ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 12/25/2019
+  ms.lasthandoff: 03/15/2020
   ms.locfileid: "75339165"
 landingContent:
-- title: İçindeki programı öğreninC#
+- title: "C'de programlamayı öğrenin #"
   linkLists:
   - linkListType: get-started
     links:
-    - text: Çevrimiçi, etkileşimli Merhaba Dünya
+    - text: Çevrimiçi, interaktif Hello dünyası
       url: tutorials/intro-to-csharp/hello-world.yml
-    - text: İçindeki matematik ve sayılarC#
+    - text: "C'de matematik ve sayılar #"
       url: tutorials/intro-to-csharp/numbers-in-csharp.yml
-    - text: Giriş öğreticileri
+    - text: Tanıtım eğitimleri
       url: tutorials/intro-to-csharp/index.md
-    - text: Visual C# Studio ile uygulama oluşturma
+    - text: Visual Studio ile C# uygulamaları oluşturun
       url: https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-console
   - linkListType: video
     links:
-    - text: Nedir C#?
+    - text: C# nedir?
       url: https://channel9.msdn.com/Series/CSharp-101/What-is-C/player
-    - text: C#101 video serisi
+    - text: C# 101 video serisi
       url: https://aka.ms/dotnet3-csharp
   - linkListType: download
     links:
-    - text: .NET Core SDK indirin
+    - text: .NET Çekirdek SDK'yı indirin
       url: https://dotnet.microsoft.com/download
-- title: C#Temelleri
+- title: C# temelleri
   linkLists:
   - linkListType: overview
     links:
-    - text: Turuna katılınC#
+    - text: 'C turu #'
       url: tour-of-csharp/index.md
     - text: C# programı içinde
       url: programming-guide/inside-a-program/index.md
@@ -47,27 +47,27 @@ landingContent:
       url: programming-guide/main-and-command-args/index.md
   - linkListType: concept
     links:
-    - text: C# Ve .net tür sistemi
+    - text: C# ve .NET tip sistemi
       url: programming-guide/types/index.md
     - text: Dil ile Tümleşik Sorgu (LINQ)
       url: linq/index.md
-    - text: Async ve await
+    - text: async ve bekliyor
       url: programming-guide/concepts/async/index.md
   - linkListType: tutorial
     links:
-    - text: Nesne odaklı devralma
+    - text: Nesne yönelimli devralma
       url: tutorials/inheritance.md
-    - text: Verileri sorgulamak için LINQ kullanma
+    - text: Verileri sorgulamak için LINQ'yi kullanma
       url: tutorials/working-with-linq.md
-    - text: Dize ilişkilendirmeyi kullanarak metin biçimlendirme
+    - text: Dize enterpolasyonunu kullanarak metni biçimlendirme
       url: tutorials/string-interpolation.md
-    - text: Tüm öğreticilere göz atın
+    - text: Tüm eğitimlere göz atın
       url: tutorials/index.md
-- title: C# 8,0 sürümündeki yeni özellikler
+- title: C# 8.0'daki yeni özellikler
   linkLists:
   - linkListType: whats-new
     links:
-    - text: C# 8,0 sürümündeki yenilikler
+    - text: C# 8.0'daki yenilikler
       url: whats-new/csharp-8.md
   - linkListType: overview
     links:
@@ -77,27 +77,27 @@ landingContent:
       url: nullable-references.md
   - linkListType: concept
     links:
-    - text: Null değer alabilme için API 'Lere açıklama ekleme
+    - text: Nullability için API'ler açıklama
       url: nullable-attributes.md
   - linkListType: tutorial
     links:
-    - text: Zaman uyumsuz akışlar tüketme ve oluşturma
+    - text: Async akışlarını tüketin ve oluşturun
       url: tutorials/generate-consume-asynchronous-stream.md
-    - text: Null yapılabilir başvuru türleriyle geliştirme
+    - text: Nullable referans türleri ile geliştirme
       url: tutorials/nullable-reference-types.md
-    - text: Mevcut kodu Nullable başvuru türlerini kullanacak şekilde yükselt
+    - text: Nullable başvuru türlerini kullanmak için varolan kodu yükseltme
       url: tutorials/upgrade-to-nullable-references.md
-    - text: Daha açıklayıcı algoritmalar için model eşleştirmeyi kullanın
+    - text: Daha etkileyici algoritmalar için desen eşleştirmekullanma
       url: tutorials/pattern-matching.md
-    - text: Varsayılan arabirim üyeleriyle güvenli bir şekilde sürüm arabirimleri
+    - text: Varsayılan arabirim üyeleriile güvenli sürüm arabirimleri
       url: tutorials/default-interface-methods-versions.md
-    - text: Varsayılan arabirim üyeleri ile işlevsellikten karıştırma
+    - text: Varsayılan arabirim üyeleriyle işlevselliği karıştırın
       url: tutorials/mixins-with-default-interface-methods.md
-    - text: Aralıklar ve dizinler kullanarak alt kümeler ile çalışma
+    - text: Aralıkları ve endeksleri kullanarak alt kümelerle çalışma
       url: tutorials/ranges-indexes.md
   - linkListType: reference
     links:
-    - text: C# Derleyicideki son değişiklikler
+    - text: C# derleyicisindeki değişiklikleri kırma
       url: whats-new/breaking-changes.md
 - title: C# dili başvurusu
   linkLists:

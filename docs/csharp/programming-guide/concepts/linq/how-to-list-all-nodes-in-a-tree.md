@@ -1,28 +1,28 @@
 ---
-title: Bir ağaçtaki tüm düğümleri listeleme (C#)
+title: Ağaçtaki tüm düğümleri listeletme (C#)
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
 ms.openlocfilehash: e1b37c1d0801f2924e6811e630094524331a0d86
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345874"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-c"></a><span data-ttu-id="e7390-102">Bir ağaçtaki tüm düğümleri listeleme (C#)</span><span class="sxs-lookup"><span data-stu-id="e7390-102">How to list all nodes in a tree (C#)</span></span>
+# <a name="how-to-list-all-nodes-in-a-tree-c"></a><span data-ttu-id="a364f-102">Ağaçtaki tüm düğümleri listeletme (C#)</span><span class="sxs-lookup"><span data-stu-id="a364f-102">How to list all nodes in a tree (C#)</span></span>
 
-<span data-ttu-id="e7390-103">Bazen bir ağaçtaki tüm düğümleri listelemek yararlı olur.</span><span class="sxs-lookup"><span data-stu-id="e7390-103">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="e7390-104">Bu, bir yöntemin veya özelliğin ağacı nasıl etkilediğini tam olarak öğrenirken yararlı olabilir.</span><span class="sxs-lookup"><span data-stu-id="e7390-104">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="e7390-105">Bir metinsel form içindeki tüm düğümleri listelemek için bir yaklaşım, ağaçtaki herhangi bir düğümü tam olarak ve özellikle tanımlayan bir XPath ifadesi oluşturmaktır.</span><span class="sxs-lookup"><span data-stu-id="e7390-105">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>
+<span data-ttu-id="a364f-103">Bazen bir ağaçtaki tüm düğümleri listelemek yararlı olabilir.</span><span class="sxs-lookup"><span data-stu-id="a364f-103">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="a364f-104">Bu, bir yöntemin veya özelliğin ağacı tam olarak nasıl etkilediğini öğrenirken yararlı olabilir.</span><span class="sxs-lookup"><span data-stu-id="a364f-104">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="a364f-105">Tüm düğümleri metin biçiminde listelemek için bir yaklaşım, ağaçtaki herhangi bir düğümü tam olarak ve özellikle tanımlayan bir XPath ifadesi oluşturmaktır.</span><span class="sxs-lookup"><span data-stu-id="a364f-105">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>
 
-<span data-ttu-id="e7390-106">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]kullanarak XPath ifadeleri yürütmek özellikle yararlı değildir.</span><span class="sxs-lookup"><span data-stu-id="e7390-106">It is not particularly helpful to execute XPath expressions using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span> <span data-ttu-id="e7390-107">XPath ifadeleri [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgulardan poorer performansa sahiptir ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorguları çok daha güçlüdür.</span><span class="sxs-lookup"><span data-stu-id="e7390-107">XPath expressions have poorer performance than [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries, and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries are much more powerful.</span></span> <span data-ttu-id="e7390-108">Ancak, XML ağacındaki düğümleri belirlemenin bir yolu olarak, XPath iyi bir sonuç verir.</span><span class="sxs-lookup"><span data-stu-id="e7390-108">However, as a way to identify nodes in the XML tree, XPath works well.</span></span>
+<span data-ttu-id="a364f-106">XPath ifadelerini kullanarak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]yürütmek özellikle yararlı değildir.</span><span class="sxs-lookup"><span data-stu-id="a364f-106">It is not particularly helpful to execute XPath expressions using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span> <span data-ttu-id="a364f-107">XPath ifadeleri sorgulardan daha [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] düşük performansa sahiptir ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgular çok daha güçlüdür.</span><span class="sxs-lookup"><span data-stu-id="a364f-107">XPath expressions have poorer performance than [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries, and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries are much more powerful.</span></span> <span data-ttu-id="a364f-108">Ancak, XML ağacındaki düğümleri tanımlamanın bir yolu olarak XPath iyi çalışır.</span><span class="sxs-lookup"><span data-stu-id="a364f-108">However, as a way to identify nodes in the XML tree, XPath works well.</span></span>
 
-## <a name="example"></a><span data-ttu-id="e7390-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="e7390-109">Example</span></span>
- <span data-ttu-id="e7390-110">Bu örnek, XML ağacındaki herhangi bir düğüm için belirli bir XPath ifadesi oluşturan `GetXPath` adlı bir işlevi gösterir.</span><span class="sxs-lookup"><span data-stu-id="e7390-110">This example shows a function named `GetXPath` that generates a specific XPath expression for any node in the XML tree.</span></span> <span data-ttu-id="e7390-111">Düğümler bir ad alanında olduğunda bile uygun XPath ifadeleri oluşturur.</span><span class="sxs-lookup"><span data-stu-id="e7390-111">It generates appropriate XPath expressions even when nodes are in a namespace.</span></span> <span data-ttu-id="e7390-112">XPath ifadeleri, ad alanı önekleri kullanılarak oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="e7390-112">The XPath expressions are generated by using namespace prefixes.</span></span>
+## <a name="example"></a><span data-ttu-id="a364f-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="a364f-109">Example</span></span>
+ <span data-ttu-id="a364f-110">Bu örnek, XML ağacındaki herhangi bir düğüm için belirli bir XPath ifadesi oluşturan adlı `GetXPath` bir işlev gösterir.</span><span class="sxs-lookup"><span data-stu-id="a364f-110">This example shows a function named `GetXPath` that generates a specific XPath expression for any node in the XML tree.</span></span> <span data-ttu-id="a364f-111">Düğümler ad alanında olsa bile uygun XPath ifadeleri oluşturur.</span><span class="sxs-lookup"><span data-stu-id="a364f-111">It generates appropriate XPath expressions even when nodes are in a namespace.</span></span> <span data-ttu-id="a364f-112">XPath ifadeleri ad alanı önekleri kullanılarak oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="a364f-112">The XPath expressions are generated by using namespace prefixes.</span></span>
 
- <span data-ttu-id="e7390-113">Örnek daha sonra birkaç düğüm türüne örnek içeren küçük bir XML ağacı oluşturur.</span><span class="sxs-lookup"><span data-stu-id="e7390-113">The example then creates a small XML tree that contains an example of several types of nodes.</span></span> <span data-ttu-id="e7390-114">Daha sonra alt düğümler boyunca yinelenir ve her düğüm için XPath ifadesini yazdırır.</span><span class="sxs-lookup"><span data-stu-id="e7390-114">It then iterates through the descendant nodes and prints the XPath expression for each node.</span></span>
+ <span data-ttu-id="a364f-113">Örnek daha sonra, birkaç tür düğüm örneği içeren küçük bir XML ağacı oluşturur.</span><span class="sxs-lookup"><span data-stu-id="a364f-113">The example then creates a small XML tree that contains an example of several types of nodes.</span></span> <span data-ttu-id="a364f-114">Daha sonra soyundan gelen düğümler aracılığıyla yineler ve her düğüm için XPath ifadesini yazdırır.</span><span class="sxs-lookup"><span data-stu-id="a364f-114">It then iterates through the descendant nodes and prints the XPath expression for each node.</span></span>
 
- <span data-ttu-id="e7390-115">XML bildiriminin ağaçta bir düğüm olmadığına dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="e7390-115">You will notice that the XML declaration is not a node in the tree.</span></span>
+ <span data-ttu-id="a364f-115">XML bildiriminin ağaçta bir düğüm olmadığını fark edeceksiniz.</span><span class="sxs-lookup"><span data-stu-id="a364f-115">You will notice that the XML declaration is not a node in the tree.</span></span>
 
- <span data-ttu-id="e7390-116">Aşağıda, çeşitli düğüm türlerini içeren bir XML dosyası verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="e7390-116">The following is an XML file that contains several types of nodes:</span></span>
+ <span data-ttu-id="a364f-116">Aşağıda, çeşitli düğüm türleri içeren bir XML dosyası verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="a364f-116">The following is an XML file that contains several types of nodes:</span></span>
 
 ```xml
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
@@ -38,7 +38,7 @@ ms.locfileid: "75345874"
 </Root>
 ```
 
- <span data-ttu-id="e7390-117">Aşağıda, XPath ifadeleri olarak ifade edilen Yukarıdaki XML ağacındaki düğümlerin listesi verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="e7390-117">The following is the list of nodes in the above XML tree, expressed as XPath expressions:</span></span>
+ <span data-ttu-id="a364f-117">Yukarıdaki XML ağacında XPath ifadeleri olarak ifade edilen düğümlerin listesi aşağıda veda eder:</span><span class="sxs-lookup"><span data-stu-id="a364f-117">The following is the list of nodes in the above XML tree, expressed as XPath expressions:</span></span>
 
 ```text
 /processing-instruction()
@@ -316,7 +316,7 @@ class Program
 }
 ```
 
- <span data-ttu-id="e7390-118">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="e7390-118">This example produces the following output:</span></span>
+ <span data-ttu-id="a364f-118">Bu örnek, aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="a364f-118">This example produces the following output:</span></span>
 
 ```output
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>

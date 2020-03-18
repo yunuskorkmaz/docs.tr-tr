@@ -1,21 +1,21 @@
 ---
-title: Gruplandırma (C#) kullanarak hiyerarşi oluşturma
+title: Gruplandırmayı kullanarak hiyerarşi oluşturma (C#)
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
 ms.openlocfilehash: c5a96b02595446b2efa01868cc88377c3a5151c9
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141309"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-c"></a><span data-ttu-id="ef132-102">Gruplandırma (C#) kullanarak hiyerarşi oluşturma</span><span class="sxs-lookup"><span data-stu-id="ef132-102">How to create hierarchy using grouping (C#)</span></span>
-<span data-ttu-id="ef132-103">Bu örnek, verilerin nasıl gruplanıp gruplandırılmasının yanı sıra gruplandırma temelli XML oluşturmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="ef132-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
+# <a name="how-to-create-hierarchy-using-grouping-c"></a><span data-ttu-id="48fdd-102">Gruplandırmayı kullanarak hiyerarşi oluşturma (C#)</span><span class="sxs-lookup"><span data-stu-id="48fdd-102">How to create hierarchy using grouping (C#)</span></span>
+<span data-ttu-id="48fdd-103">Bu örnek, verilerin nasıl gruplatınıgösterilen ve gruplandırmaya dayalı Olarak XML'nin nasıl oluşturacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="48fdd-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ef132-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="ef132-104">Example</span></span>  
- <span data-ttu-id="ef132-105">Bu örnek öncelikle verileri bir kategoriye göre gruplandırır, ardından XML hiyerarşisinin gruplamayı yansıtan yeni bir XML dosyası oluşturur.</span><span class="sxs-lookup"><span data-stu-id="ef132-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
+## <a name="example"></a><span data-ttu-id="48fdd-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="48fdd-104">Example</span></span>  
+ <span data-ttu-id="48fdd-105">Bu örnek, önce verileri bir kategoriye göre gruplandırmak, sonra XML hiyerarşisinin gruplandırmayı yansıttığı yeni bir XML dosyası oluşturur.</span><span class="sxs-lookup"><span data-stu-id="48fdd-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
   
- <span data-ttu-id="ef132-106">Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: sayısal veri (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="ef132-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="48fdd-106">Bu örnekte aşağıdaki XML belgesi kullanılır: [Örnek XML Dosyası: Sayısal Veriler (LINQ-XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="48fdd-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  
@@ -35,7 +35,7 @@ var newData =
 Console.WriteLine(newData);  
 ```  
   
- <span data-ttu-id="ef132-107">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="ef132-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="48fdd-107">Bu örnek, aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="48fdd-107">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  

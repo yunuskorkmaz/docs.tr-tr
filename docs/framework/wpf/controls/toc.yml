@@ -179,7 +179,7 @@
             - name: Nasıl Yapılır Konuları
               href: listview-how-to-topics.md
               items:
-                - name: Üst Bilgiye Tıklandığında GridView Sütununu Sıralama
+                - name: Üstbilgi Tıklandığında GridView Sütununu Sıralama
                   href: how-to-sort-a-gridview-column-when-a-header-is-clicked.md
                 - name: ListView için Özel Görünüm Modu Oluşturma
                   href: how-to-create-a-custom-view-mode-for-a-listview.md
@@ -325,7 +325,7 @@
                   href: how-to-detect-when-text-in-a-textbox-has-changed.md
                 - name: Sekme Karakterlerini TextBox Denetimi İçinde Etkinleştirme
                   href: how-to-enable-tab-characters-in-a-textbox-control.md
-                - name: TextBox'tan Satır Koleksiyonu Alma
+                - name: TextBox'dan Satır Koleksiyonu Alma
                   href: how-to-get-a-collection-of-lines-from-a-textbox.md
                 - name: TextBox Denetimini Salt Okunur Yapma
                   href: how-to-make-a-textbox-control-read-only.md
@@ -341,7 +341,7 @@
                   href: how-to-enable-spell-checking-in-a-text-editing-control.md
                 - name: TextBox ile Özel Bağlam Menüsü Kullanma
                   href: how-to-use-a-custom-context-menu-with-a-textbox.md
-                - name: Açılır Menü ile Yazım Denetimi Kullanma
+                - name: Bağlam Menüsü ile Yazım Denetimi Kullanma
                   href: how-to-use-spell-checking-with-a-context-menu.md
                 - name: TextBox'a Filigran Ekleme
                   href: how-to-add-a-watermark-to-a-textbox.md
@@ -350,7 +350,7 @@
           items:
             - name: ToolBar Genel Bakışı
               href: toolbar-overview.md
-            - name: Araç Çubuğundaki Stil Denetimleri
+            - name: ToolBar Üzerindeki Stil Denetimleri
               href: how-to-style-controls-on-a-toolbar.md
         - name: ToolTip
           href: tooltip.md
@@ -378,7 +378,7 @@
                   href: how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md
                 - name: Belirlenemeyen Derinliğe Sahip Veriyi TreeView'a Bağlama
                   href: how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md
-                - name: TreeView'un Performansını Artırma
+                - name: TreeView'ın Performansını Artırma
                   href: how-to-improve-the-performance-of-a-treeview.md
                 - name: TreeView İçinde TreeViewItem Bulma
                   href: how-to-find-a-treeviewitem-in-a-treeview.md

@@ -1,21 +1,21 @@
 ---
-title: CSV dosyalarından XML oluşturma (C#)
+title: CSV dosyalarından XML nasıl üretilir (C#)
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
 ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635814"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="571c7-102">CSV dosyalarından XML oluşturma (C#)</span><span class="sxs-lookup"><span data-stu-id="571c7-102">How to generate XML from CSV files (C#)</span></span>
-<span data-ttu-id="571c7-103">Bu örnek, bir virgülle ayrılmış değer (CSV) dosyasından bir XML dosyası oluşturmak için dil ile tümleşik sorgu (LINQ) ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kullanmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="571c7-103">This example shows how to use Language-Integrated Query (LINQ) and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
+# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="41e30-102">CSV dosyalarından XML nasıl üretilir (C#)</span><span class="sxs-lookup"><span data-stu-id="41e30-102">How to generate XML from CSV files (C#)</span></span>
+<span data-ttu-id="41e30-103">Bu örnek, Dil-Tümleşik Sorgu 'nun [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] (LINQ) nasıl kullanılacağını ve virgülle ayrılmış bir değer (CSV) dosyasından bir XML dosyası oluşturmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="41e30-103">This example shows how to use Language-Integrated Query (LINQ) and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="571c7-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="571c7-104">Example</span></span>  
- <span data-ttu-id="571c7-105">Aşağıdaki kod, bir dize dizisi üzerinde bir LINQ sorgusu gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="571c7-105">The following code performs a LINQ query on an array of strings.</span></span>  
+## <a name="example"></a><span data-ttu-id="41e30-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="41e30-104">Example</span></span>  
+ <span data-ttu-id="41e30-105">Aşağıdaki kod dizeleri bir dizi bir LINQ sorgusu gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="41e30-105">The following code performs a LINQ query on an array of strings.</span></span>  
   
- <span data-ttu-id="571c7-106">Sorgu, her dizeyi bir alan dizisine bölmek için `let` yan tümcesini kullanır.</span><span class="sxs-lookup"><span data-stu-id="571c7-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
+ <span data-ttu-id="41e30-106">Sorgu, her `let` dizeyi bir dizi alana bölmek için yan tümceyi kullanır.</span><span class="sxs-lookup"><span data-stu-id="41e30-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
   
 ```csharp  
 // Create the text file.  
@@ -48,7 +48,7 @@ XElement cust = new XElement("Root",
 Console.WriteLine(cust);  
 ```  
   
- <span data-ttu-id="571c7-107">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="571c7-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="41e30-107">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="41e30-107">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  

@@ -2,17 +2,17 @@
 title: LINQ sorgularını normal ifadelerle birleştirme (C#)
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: 97551f7d9d8cf13f05449c2f825ed4d29eb3d86e
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 104e63adb9c07a75077b92654afd791b6c82d8de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141404"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169435"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a><span data-ttu-id="267f2-102">LINQ sorgularını normal ifadelerle birleştirme (C#)</span><span class="sxs-lookup"><span data-stu-id="267f2-102">How to combine LINQ queries with regular expressions (C#)</span></span>
-<span data-ttu-id="267f2-103">Bu örnek, metin dizelerinde daha karmaşık eşleştirme için bir normal ifade oluşturmak üzere <xref:System.Text.RegularExpressions.Regex> sınıfını nasıl kullanacağınızı gösterir.</span><span class="sxs-lookup"><span data-stu-id="267f2-103">This example shows how to use the <xref:System.Text.RegularExpressions.Regex> class to create a regular expression for more complex matching in text strings.</span></span> <span data-ttu-id="267f2-104">LINQ sorgusu, normal ifadeyle arama yapmak istediğiniz dosyaları tam olarak filtrelemenizi ve sonuçları şekillendirmenizi kolaylaştırır.</span><span class="sxs-lookup"><span data-stu-id="267f2-104">The LINQ query makes it easy to filter on exactly the files that you want to search with the regular expression, and to shape the results.</span></span>  
+# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a><span data-ttu-id="d23f5-102">LINQ sorgularını normal ifadelerle birleştirme (C#)</span><span class="sxs-lookup"><span data-stu-id="d23f5-102">How to combine LINQ queries with regular expressions (C#)</span></span>
+<span data-ttu-id="d23f5-103">Bu örnek, metin <xref:System.Text.RegularExpressions.Regex> dizelerinde daha karmaşık eşleştirme için normal bir ifade oluşturmak için sınıfın nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="d23f5-103">This example shows how to use the <xref:System.Text.RegularExpressions.Regex> class to create a regular expression for more complex matching in text strings.</span></span> <span data-ttu-id="d23f5-104">LINQ sorgusu, normal ifadeyle aramak istediğiniz dosyalara tam olarak filtre uygulamanızı ve sonuçları şekillendirmeyi kolaylaştırır.</span><span class="sxs-lookup"><span data-stu-id="d23f5-104">The LINQ query makes it easy to filter on exactly the files that you want to search with the regular expression, and to shape the results.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="267f2-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="267f2-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="d23f5-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="d23f5-105">Example</span></span>  
   
 ```csharp  
 class QueryWithRegEx  
@@ -36,7 +36,7 @@ class QueryWithRegEx
         // This query produces a list of files where a match  
         // was found, and a list of the matchedValues in that file.  
         // Note: Explicit typing of "Match" in select clause.  
-        // This is required because MatchCollection is not a   
+        // This is required because MatchCollection is not a
         // generic IEnumerable collection.  
         var queryMatchingFiles =  
             from file in fileList  
@@ -56,7 +56,7 @@ class QueryWithRegEx
   
         foreach (var v in queryMatchingFiles)  
         {  
-            // Trim the path a bit, then write   
+            // Trim the path a bit, then write
             // the file name in which a match was found.  
             string s = v.name.Substring(startFolder.Length - 1);  
             Console.WriteLine(s);  
@@ -73,7 +73,7 @@ class QueryWithRegEx
         Console.ReadKey();  
     }  
   
-    // This method assumes that the application has discovery   
+    // This method assumes that the application has discovery
     // permissions for all folders under the specified path.  
     static IEnumerable<System.IO.FileInfo> GetFiles(string path)  
     {  
@@ -93,12 +93,12 @@ class QueryWithRegEx
 }  
 ```  
   
- <span data-ttu-id="267f2-106">Ayrıca, bir `RegEx` arama tarafından döndürülen <xref:System.Text.RegularExpressions.MatchCollection> nesnesini sorgulayabileceğinizi unutmayın.</span><span class="sxs-lookup"><span data-stu-id="267f2-106">Note that you can also query the <xref:System.Text.RegularExpressions.MatchCollection> object that is returned by a `RegEx` search.</span></span> <span data-ttu-id="267f2-107">Bu örnekte, sonuçlarda yalnızca her bir eşleşmenin değeri üretilir.</span><span class="sxs-lookup"><span data-stu-id="267f2-107">In this example only the value of each match is produced in the results.</span></span> <span data-ttu-id="267f2-108">Ancak, bu koleksiyonda tüm filtreleme, sıralama ve gruplama türlerini gerçekleştirmek için LINQ kullanmak da mümkündür.</span><span class="sxs-lookup"><span data-stu-id="267f2-108">However, it is also possible to use LINQ to perform all kinds of filtering, sorting, and grouping on that collection.</span></span> <span data-ttu-id="267f2-109"><xref:System.Text.RegularExpressions.MatchCollection> genel olmayan bir <xref:System.Collections.IEnumerable> koleksiyonu olduğundan, sorgudaki aralık değişkeninin türünü açıkça belirtmelisiniz.</span><span class="sxs-lookup"><span data-stu-id="267f2-109">Because <xref:System.Text.RegularExpressions.MatchCollection> is a non-generic <xref:System.Collections.IEnumerable> collection, you have to explicitly state the type of the range variable in the query.</span></span>  
+ <span data-ttu-id="d23f5-106">Arama tarafından döndürülen <xref:System.Text.RegularExpressions.MatchCollection> nesneyi de sorgulayabildiğinizi unutmayın. `RegEx`</span><span class="sxs-lookup"><span data-stu-id="d23f5-106">Note that you can also query the <xref:System.Text.RegularExpressions.MatchCollection> object that is returned by a `RegEx` search.</span></span> <span data-ttu-id="d23f5-107">Bu örnekte sonuçlarda yalnızca her eşleşmenin değeri üretilir.</span><span class="sxs-lookup"><span data-stu-id="d23f5-107">In this example only the value of each match is produced in the results.</span></span> <span data-ttu-id="d23f5-108">Ancak, linq'i kullanarak bu koleksiyonda her türlü filtreleme, sıralama ve gruplandırma yı gerçekleştirmek de mümkündür.</span><span class="sxs-lookup"><span data-stu-id="d23f5-108">However, it is also possible to use LINQ to perform all kinds of filtering, sorting, and grouping on that collection.</span></span> <span data-ttu-id="d23f5-109">Genel <xref:System.Text.RegularExpressions.MatchCollection> <xref:System.Collections.IEnumerable> olmayan bir koleksiyon olduğundan, sorgudaki aralık değişkeninin türünü açıkça belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="d23f5-109">Because <xref:System.Text.RegularExpressions.MatchCollection> is a non-generic <xref:System.Collections.IEnumerable> collection, you have to explicitly state the type of the range variable in the query.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="267f2-110">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="267f2-110">Compiling the Code</span></span>  
- <span data-ttu-id="267f2-111">System. C# lınq ve System.IO ad alanları için `using` yönergeleriyle bir konsol uygulaması projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="267f2-111">Create a C# console application project with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="d23f5-110">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="d23f5-110">Compiling the Code</span></span>  
+ <span data-ttu-id="d23f5-111">System.Linq ve System.IO `using` ad alanları için yönergeleri içeren bir C# konsolu uygulama projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="d23f5-111">Create a C# console application project with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="267f2-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="267f2-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d23f5-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d23f5-112">See also</span></span>
 
-- [<span data-ttu-id="267f2-113">LINQ ve dizeler (C#)</span><span class="sxs-lookup"><span data-stu-id="267f2-113">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="267f2-114">LINQ ve dosya dizinleri (C#)</span><span class="sxs-lookup"><span data-stu-id="267f2-114">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="d23f5-113">LINQ ve Dizeleri (C#)</span><span class="sxs-lookup"><span data-stu-id="d23f5-113">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="d23f5-114">LINQ ve Dosya Dizinleri (C#)</span><span class="sxs-lookup"><span data-stu-id="d23f5-114">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)

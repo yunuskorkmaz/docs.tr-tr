@@ -4,7 +4,7 @@
   items:
     - name: Uygulama uyumluluğu
       items:
-        - name: Genel Bakış
+        - name: Genel bakış
           displayName: App compatibility
           href: application-compatibility.md
         - name: Çalışma zamanı değişiklikleri

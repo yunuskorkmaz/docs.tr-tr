@@ -57,7 +57,7 @@
           href: how-to-use-data-protection.md
         - name: 'Nasıl yapılır: Donanım Şifreleme Cihazlarına Erişim'
           href: how-to-access-hardware-encryption-devices.md
-        - name: 'İzlenecek yol: Şifreleme Uygulaması Oluşturma'
+        - name: 'İzlenecek Yol: Şifreleme Uygulaması Oluşturma'
           href: walkthrough-creating-a-cryptographic-application.md
     - name: Güvenli Kodlama Yönergeleri
       href: secure-coding-guidelines.md

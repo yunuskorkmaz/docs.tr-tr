@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: ML.NET belgeleri
-summary: Açık kaynak ML.NET kullanarak özel makine öğrenimi modelleri oluşturma ve bunları uygulamalarla tümleştirme hakkında bilgi edinin. Öğreticiler, kod örnekleri ve daha fazlası size nasıl yapılacağını göstermektedir.
+title: ML.NET Dokümantasyon
+summary: Özel makine öğrenme modelleri oluşturmak ve bunları uygulamalara entegre etmek için açık kaynak ML.NET nasıl kullanacağınızı öğrenin. Öğreticiler, kod örnekleri ve daha fazlası size nasıl yapılacağını gösterir.
 metadata:
-  title: ML.NET belgeleri-öğreticiler, API başvurusu
-  description: Açık kaynak ML.NET kullanarak özel makine öğrenimi modelleri oluşturma ve bunları uygulamalarla tümleştirme hakkında bilgi edinin. Öğreticiler, kod örnekleri ve daha fazlası size nasıl yapılacağını göstermektedir.
+  title: ML.NET Dokümantasyon - Öğreticiler, API Başvuru
+  description: Özel makine öğrenme modelleri oluşturmak ve bunları uygulamalara entegre etmek için açık kaynak ML.NET nasıl kullanacağınızı öğrenin. Öğreticiler, kod örnekleri ve daha fazlası size nasıl yapılacağını gösterir.
   ms.prod: dotnet-ml
   ms.topic: landing-page
   ms.collection: collection
@@ -11,13 +11,13 @@ metadata:
   ms.author: nakersha
   ms.date: 10/30/2019
   ms.openlocfilehash: 05d357af2088321524841bfc05f94f816f1bc306
-  ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/01/2019
+  ms.lasthandoff: 03/15/2020
   ms.locfileid: "73423935"
 landingContent:
-- title: ML.NET temelleri
+- title: ML.NET Temelleri
   linkLists:
   - linkListType: overview
     links:
@@ -25,47 +25,47 @@ landingContent:
       url: how-does-mldotnet-work.md
   - linkListType: video
     links:
-    - text: Machine Learning temelleri
+    - text: Makine öğrenimi temelleri
       url: https://channel9.msdn.com/Series/MLNET/MLNET-Machine-Learning-Introduction-1-of-8
   - linkListType: concept
     links:
-    - text: Machine Learning görevleri & algoritmaları
+    - text: Algoritmalar & makine öğrenimi görevleri
       url: resources/tasks.md
-    - text: Algoritma seçme
+    - text: Algoritma nasıl seçilir?
       url: how-to-choose-an-ml-net-algorithm.md
-- title: 10 dakika içinde kullanmaya başlayın
+- title: 10 dakikada kullanmaya başlayın
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Visual Studio 'da model oluşturucuyu ayarlama
+    - text: Visual Studio'da Model Oluşturucu'u ayarlama
       url: how-to-guides/install-model-builder.md
-    - text: ML.NET API 'SI ile çalışmaya başlama
+    - text: ML.NET API ile başlayın
       url: https://dotnet.microsoft.com/learn/ml-dotnet/get-started-tutorial/intro
-    - text: Mac OS, Windows veya Linux 'a CLı 'yı yükler
+    - text: CLI'yi Mac OS, Windows veya Linux'a yükleme
       url: how-to-guides/install-ml-net-cli.md
 - title: Öğreticiler
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Web sitesi açıklamasını çözümleme (model Oluşturucu)
+    - text: Analiz web sitesi yorum duygu (Model Builder)
       url: tutorials/sentiment-analysis-model-builder.md
-    - text: Fiyatları tahmin etme (model Oluşturucu)
+    - text: Fiyatları tahmin edin (Model Builder)
       url: tutorials/predict-prices-with-model-builder.md
-    - text: Sistem durumu ihlallerini kategorilere ayır (model Oluşturucu & SQL Server)
+    - text: Sistem durumu ihlallerini kategorilere ayırın (Model Oluşturucu & SQL Server)
       url: tutorials/health-violation-classification-model-builder.md
-    - text: Destek sorunlarını kategorilere ayırma (API)
+    - text: Destek sorunlarını kategorilere ayırın (API)
       url: tutorials/github-issue-classification.md
-    - text: Görüntü sınıflandırma API 'SI (API) ile görüntüleri sınıflandırma
+    - text: Görüntüleri Görüntü Sınıflandırma API (API) ile sınıflandırma
       url: tutorials/image-classification-api-transfer-learning.md
-    - text: Model oluşturma (API) kullanarak görüntüleri sınıflandırın
+    - text: Model kompozisyonu (API) kullanarak görüntüleri sınıflandırma
       url: tutorials/image-classification.md
-    - text: Resimlerdeki nesneleri algıla (API)
+    - text: Görüntülerdeki nesneleri algılama (API)
       url: tutorials/object-detection-onnx.md
-    - text: Ürün satışlarına ilişkin anormallikleri algılama (API)
+    - text: Ürün satışlarındaki anormallikleri tespit edin (API)
       url: tutorials/sales-anomaly-detection.md
-    - text: Bisiklet Kiralama talebini tahmin etme (API & SQL Server)
+    - text: Tahmin bisiklet kiralama talebi (API & SQL Server)
       url: tutorials/time-series-demand-forecasting.md
-    - text: Bir film öneren oluşturma (API)
+    - text: Film tavsiye leyicisi (API) oluşturma
       url: tutorials/movie-recommendation.md
 - title: Nasıl yapılır kılavuzları
   linkLists:
@@ -73,15 +73,15 @@ landingContent:
     links:
     - text: Çeşitli kaynaklardan veri yükleme
       url: how-to-guides/load-data-ml-net.md
-    - text: Model oluşturmaya yönelik verileri hazırlama
+    - text: Model oluşturmak için veri hazırlama
       url: how-to-guides/prepare-data-ml-net.md
-    - text: Bir modeli eğitme & değerlendirin
+    - text: Bir modeli değerlendirmek & eğitin
       url: how-to-guides/train-machine-learning-model-ml-net.md
-    - text: Eğitilen bir modelle tahminlere sahip olun
+    - text: Eğitimli bir modelle tahminlerde bulunun
       url: how-to-guides/machine-learning-model-predictions-ml-net.md
-    - text: Eğitilen bir model & kaydetme ve yükleme
+    - text: Eğitimli bir modeli yüklemek & kaydedin
       url: how-to-guides/save-load-machine-learning-models-ml-net.md
-    - text: Bir modeli yeniden eğitme
+    - text: Bir modeli yeniden eğitin
       url: how-to-guides/retrain-model-ml-net.md
 - title: Başvuru
   linkLists:

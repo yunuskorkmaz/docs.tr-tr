@@ -1,7 +1,7 @@
 - name: Dil ile Tümleşik Sorgu (LINQ)
   href: index.md
   items:
-    - name: LINQ'e Giriş
+    - name: LINQ'ye Giriş
       href: introduction-to-linq.md
     - name: LINQ Kullanmaya Başlama
       href: getting-started-with-linq.md

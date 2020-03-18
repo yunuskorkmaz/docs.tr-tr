@@ -1,37 +1,37 @@
 ---
-title: Windows Forms son değişiklikler
-description: .NET Core için Windows Forms 'deki son değişiklikleri listeler.
+title: Windows Formlar değişiklikleri kırma
+description: .NET Core için Windows Formlarında çığır açan değişiklikleri listeler.
 ms.date: 01/08/2020
 ms.openlocfilehash: 7fba78382d011bc9d489924fa185a44e598c5a76
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093025"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399100"
 ---
-# <a name="breaking-changes-in-windows-forms"></a><span data-ttu-id="cd0dc-103">Windows Forms 'deki değişiklikler kesiliyor</span><span class="sxs-lookup"><span data-stu-id="cd0dc-103">Breaking changes in Windows Forms</span></span>
+# <a name="breaking-changes-in-windows-forms"></a><span data-ttu-id="d6bf1-103">Windows Formlarında değişiklik kırma</span><span class="sxs-lookup"><span data-stu-id="d6bf1-103">Breaking changes in Windows Forms</span></span>
 
-<span data-ttu-id="cd0dc-104">Sürüm 3,0 ' de .NET Core 'a Windows Forms desteği eklenmiştir.</span><span class="sxs-lookup"><span data-stu-id="cd0dc-104">Windows Forms support was added to .NET Core in version 3.0.</span></span> <span data-ttu-id="cd0dc-105">Bu makalede, sunulan .NET Core sürümü tarafından Windows Forms yönelik son değişiklikler listelenir.</span><span class="sxs-lookup"><span data-stu-id="cd0dc-105">This article lists breaking changes for Windows Forms by the .NET Core version in which they were introduced.</span></span> <span data-ttu-id="cd0dc-106">Bir Windows Forms uygulamasını .NET Framework veya .NET Core 'un önceki bir sürümünden (3,0 veya üzeri) yükseltiyorsanız, bu makale sizin için geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="cd0dc-106">If you're upgrading a Windows Forms app from .NET Framework or from a previous version of .NET Core (3.0 or later), this article is applicable to you.</span></span>
+<span data-ttu-id="d6bf1-104">Windows Forms desteği 3.0 sürümünde .NET Core'a eklendi.</span><span class="sxs-lookup"><span data-stu-id="d6bf1-104">Windows Forms support was added to .NET Core in version 3.0.</span></span> <span data-ttu-id="d6bf1-105">Bu makalede, windows formları için son dakika değişiklikleri tanıtıldıkları .NET Core sürümüne göre listelenir.</span><span class="sxs-lookup"><span data-stu-id="d6bf1-105">This article lists breaking changes for Windows Forms by the .NET Core version in which they were introduced.</span></span> <span data-ttu-id="d6bf1-106">Bir Windows Forms uygulamasını .NET Framework'den veya .NET Core'un önceki sürümünden (3.0 veya sonraki) yükseltiyorsanız, bu makale sizin için geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="d6bf1-106">If you're upgrading a Windows Forms app from .NET Framework or from a previous version of .NET Core (3.0 or later), this article is applicable to you.</span></span>
 
-<span data-ttu-id="cd0dc-107">Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:</span><span class="sxs-lookup"><span data-stu-id="cd0dc-107">The following breaking changes are documented on this page:</span></span>
+<span data-ttu-id="d6bf1-107">Aşağıdaki kesme değişiklikleri bu sayfada belgelenmiştir:</span><span class="sxs-lookup"><span data-stu-id="d6bf1-107">The following breaking changes are documented on this page:</span></span>
 
-- [<span data-ttu-id="cd0dc-108">Kaldırılan denetimler</span><span class="sxs-lookup"><span data-stu-id="cd0dc-108">Removed controls</span></span>](#removed-controls)
-- [<span data-ttu-id="cd0dc-109">Araç ipucu gösterildiğinde CellFormatting olayı oluşturulmaz</span><span class="sxs-lookup"><span data-stu-id="cd0dc-109">CellFormatting event not raised if tooltip is shown</span></span>](#cellformatting-event-not-raised-if-tooltip-is-shown)
-- [<span data-ttu-id="cd0dc-110">Control. DefaultFont Segoe UI 9 nk olarak değiştirildi</span><span class="sxs-lookup"><span data-stu-id="cd0dc-110">Control.DefaultFont changed to Segoe UI 9 pt</span></span>](#default-control-font-changed-to-segoe-ui-9-pt)
-- [<span data-ttu-id="cd0dc-111">FolderBrowserDialog 'u modernleştirme</span><span class="sxs-lookup"><span data-stu-id="cd0dc-111">Modernization of the FolderBrowserDialog</span></span>](#modernization-of-the-folderbrowserdialog)
-- [<span data-ttu-id="cd0dc-112">SerializableAttribute bazı Windows Forms türlerinden kaldırıldı</span><span class="sxs-lookup"><span data-stu-id="cd0dc-112">SerializableAttribute removed from some Windows Forms types</span></span>](#serializableattribute-removed-from-some-windows-forms-types)
-- [<span data-ttu-id="cd0dc-113">AllowUpdateChildControlIndexForTabControls uyumluluk anahtarı desteklenmiyor</span><span class="sxs-lookup"><span data-stu-id="cd0dc-113">AllowUpdateChildControlIndexForTabControls compatibility switch not supported</span></span>](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
-- [<span data-ttu-id="cd0dc-114">DomainUpDown. UseLegacyScrolling uyumluluk anahtarı desteklenmiyor</span><span class="sxs-lookup"><span data-stu-id="cd0dc-114">DomainUpDown.UseLegacyScrolling compatibility switch not supported</span></span>](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
-- [<span data-ttu-id="cd0dc-115">DoNotLoadLatestRichEditControl uyumluluk anahtarı desteklenmiyor</span><span class="sxs-lookup"><span data-stu-id="cd0dc-115">DoNotLoadLatestRichEditControl compatibility switch not supported</span></span>](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
-- [<span data-ttu-id="cd0dc-116">Donotsupportselectallshortcutınmultilinetextbox uyumluluk anahtarı desteklenmiyor</span><span class="sxs-lookup"><span data-stu-id="cd0dc-116">DoNotSupportSelectAllShortcutInMultilineTextBox compatibility switch not supported</span></span>](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
-- [<span data-ttu-id="cd0dc-117">DontSupportReentrantFilterMessage uyumluluk anahtarı desteklenmiyor</span><span class="sxs-lookup"><span data-stu-id="cd0dc-117">DontSupportReentrantFilterMessage compatibility switch not supported</span></span>](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
-- [<span data-ttu-id="cd0dc-118">EnableVisualStyleValidation uyumluluk anahtarı desteklenmiyor</span><span class="sxs-lookup"><span data-stu-id="cd0dc-118">EnableVisualStyleValidation compatibility switch not supported</span></span>](#enablevisualstylevalidation-compatibility-switch-not-supported)
-- [<span data-ttu-id="cd0dc-119">UseLegacyContextMenuStripSourceControlValue uyumluluk anahtarı desteklenmiyor</span><span class="sxs-lookup"><span data-stu-id="cd0dc-119">UseLegacyContextMenuStripSourceControlValue compatibility switch not supported</span></span>](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
-- [<span data-ttu-id="cd0dc-120">UseLegacyImages uyumluluk anahtarı desteklenmiyor</span><span class="sxs-lookup"><span data-stu-id="cd0dc-120">UseLegacyImages compatibility switch not supported</span></span>](#uselegacyimages-compatibility-switch-not-supported)
-- [<span data-ttu-id="cd0dc-121">Erişilebilir nesne. Runtimeıdfirtıtem için erişim değişikliği</span><span class="sxs-lookup"><span data-stu-id="cd0dc-121">Change of access for AccessibleObject.RuntimeIDFirstItem</span></span>](#change-of-access-for-accessibleobjectruntimeidfirstitem)
-- [<span data-ttu-id="cd0dc-122">Yinelenen API 'Ler Windows Forms kaldırıldı</span><span class="sxs-lookup"><span data-stu-id="cd0dc-122">Duplicated APIs removed from Windows Forms</span></span>](#duplicated-apis-removed-from-windows-forms)
+- [<span data-ttu-id="d6bf1-108">Kaldırılan denetimler</span><span class="sxs-lookup"><span data-stu-id="d6bf1-108">Removed controls</span></span>](#removed-controls)
+- [<span data-ttu-id="d6bf1-109">Araç ipucu gösterilirse CellFormatting olayı yükseltilmez</span><span class="sxs-lookup"><span data-stu-id="d6bf1-109">CellFormatting event not raised if tooltip is shown</span></span>](#cellformatting-event-not-raised-if-tooltip-is-shown)
+- [<span data-ttu-id="d6bf1-110">Control.DefaultFont Segoe UI 9 pt olarak değiştirildi</span><span class="sxs-lookup"><span data-stu-id="d6bf1-110">Control.DefaultFont changed to Segoe UI 9 pt</span></span>](#default-control-font-changed-to-segoe-ui-9-pt)
+- [<span data-ttu-id="d6bf1-111">FolderBrowserDialog modernizasyonu</span><span class="sxs-lookup"><span data-stu-id="d6bf1-111">Modernization of the FolderBrowserDialog</span></span>](#modernization-of-the-folderbrowserdialog)
+- [<span data-ttu-id="d6bf1-112">SerializableAttribute bazı Windows Forms türlerinden kaldırıldı</span><span class="sxs-lookup"><span data-stu-id="d6bf1-112">SerializableAttribute removed from some Windows Forms types</span></span>](#serializableattribute-removed-from-some-windows-forms-types)
+- [<span data-ttu-id="d6bf1-113">AllowUpdateChildControlIndexForTabControls uyumluluk anahtarı desteklenmiyor</span><span class="sxs-lookup"><span data-stu-id="d6bf1-113">AllowUpdateChildControlIndexForTabControls compatibility switch not supported</span></span>](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
+- [<span data-ttu-id="d6bf1-114">DomainUpDown.UseLegacyScrolling uyumluluk anahtarı desteklenmiyor</span><span class="sxs-lookup"><span data-stu-id="d6bf1-114">DomainUpDown.UseLegacyScrolling compatibility switch not supported</span></span>](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
+- [<span data-ttu-id="d6bf1-115">DoNotLoadLatestRichEditControl uyumluluk anahtarı desteklenmiyor</span><span class="sxs-lookup"><span data-stu-id="d6bf1-115">DoNotLoadLatestRichEditControl compatibility switch not supported</span></span>](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
+- [<span data-ttu-id="d6bf1-116">DoNotSupportSelectAllShortcutInMultilineTextBox uyumluluk anahtarı desteklenmiyor</span><span class="sxs-lookup"><span data-stu-id="d6bf1-116">DoNotSupportSelectAllShortcutInMultilineTextBox compatibility switch not supported</span></span>](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
+- [<span data-ttu-id="d6bf1-117">DontSupportReentrantFilterMessage uyumluluk anahtarı desteklenmiyor</span><span class="sxs-lookup"><span data-stu-id="d6bf1-117">DontSupportReentrantFilterMessage compatibility switch not supported</span></span>](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
+- [<span data-ttu-id="d6bf1-118">EtkinleştirVisualStyleValidation uyumluluk anahtarı desteklenmiyor</span><span class="sxs-lookup"><span data-stu-id="d6bf1-118">EnableVisualStyleValidation compatibility switch not supported</span></span>](#enablevisualstylevalidation-compatibility-switch-not-supported)
+- [<span data-ttu-id="d6bf1-119">UseLegacyContextMenuStripSourceControlValue uyumluluk anahtarı desteklenmiyor</span><span class="sxs-lookup"><span data-stu-id="d6bf1-119">UseLegacyContextMenuStripSourceControlValue compatibility switch not supported</span></span>](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
+- [<span data-ttu-id="d6bf1-120">UseLegacyImages uyumluluk anahtarı desteklenmiyor</span><span class="sxs-lookup"><span data-stu-id="d6bf1-120">UseLegacyImages compatibility switch not supported</span></span>](#uselegacyimages-compatibility-switch-not-supported)
+- [<span data-ttu-id="d6bf1-121">ErişilebilirObject.RuntimeIDFirstItem için erişim değişikliği</span><span class="sxs-lookup"><span data-stu-id="d6bf1-121">Change of access for AccessibleObject.RuntimeIDFirstItem</span></span>](#change-of-access-for-accessibleobjectruntimeidfirstitem)
+- [<span data-ttu-id="d6bf1-122">Windows Formlarından Kaldırılan Yinelenen API'ler</span><span class="sxs-lookup"><span data-stu-id="d6bf1-122">Duplicated APIs removed from Windows Forms</span></span>](#duplicated-apis-removed-from-windows-forms)
 
-## <a name="net-core-31"></a><span data-ttu-id="cd0dc-123">.NET Core 3,1</span><span class="sxs-lookup"><span data-stu-id="cd0dc-123">.NET Core 3.1</span></span>
+## <a name="net-core-31"></a><span data-ttu-id="d6bf1-123">.NET Çekirdek 3.1</span><span class="sxs-lookup"><span data-stu-id="d6bf1-123">.NET Core 3.1</span></span>
 
 [!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/3.1/remove-controls-3.1.md)]
 
@@ -41,7 +41,7 @@ ms.locfileid: "77093025"
 
 ***
 
-## <a name="net-core-30"></a><span data-ttu-id="cd0dc-124">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="cd0dc-124">.NET Core 3.0</span></span>
+## <a name="net-core-30"></a><span data-ttu-id="d6bf1-124">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="d6bf1-124">.NET Core 3.0</span></span>
 
 [!INCLUDE[Control.DefaultFont changed to Segoe UI 9pt](~/includes/core-changes/windowsforms/3.0/control-defaultfont-changed.md)]
 
@@ -95,6 +95,6 @@ ms.locfileid: "77093025"
 
 ***
 
-## <a name="see-also"></a><span data-ttu-id="cd0dc-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cd0dc-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d6bf1-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d6bf1-125">See also</span></span>
 
-- [<span data-ttu-id="cd0dc-126">.NET Core 'a Windows Forms uygulaması bağlantı noktası</span><span class="sxs-lookup"><span data-stu-id="cd0dc-126">Port a Windows Forms app to .NET Core</span></span>](../porting/winforms.md)
+- [<span data-ttu-id="d6bf1-126">Windows Forms uygulamasını .NET Core'a taşıma</span><span class="sxs-lookup"><span data-stu-id="d6bf1-126">Port a Windows Forms app to .NET Core</span></span>](../porting/winforms.md)

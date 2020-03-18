@@ -1,19 +1,19 @@
 ---
-title: LINQ to XML (C#) kullanarak sözlüklerle çalışma
+title: LINQ to XML (C#) kullanarak sözlüklerle nasıl çalışIlir?
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
 ms.openlocfilehash: 1a98293f208e80e969362fca27014ecd2e5c4183
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347219"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a><span data-ttu-id="13046-102">LINQ to XML (C#) kullanarak sözlüklerle çalışma</span><span class="sxs-lookup"><span data-stu-id="13046-102">How to work with dictionaries using LINQ to XML (C#)</span></span>
-<span data-ttu-id="13046-103">Çok sayıda veri yapısını XML 'e ve XML 'e diğer veri yapılarına dönüştürmek genellikle yararlıdır.</span><span class="sxs-lookup"><span data-stu-id="13046-103">It is often convenient to convert varieties of data structures to XML, and XML back to other data structures.</span></span> <span data-ttu-id="13046-104">Bu konu, bir <xref:System.Collections.Generic.Dictionary%602> XML 'e ve geri dönüştürerek bu genel yaklaşımın belirli bir uygulamasını gösterir.</span><span class="sxs-lookup"><span data-stu-id="13046-104">This topic shows a specific implementation of this general approach by converting a <xref:System.Collections.Generic.Dictionary%602> to XML and back.</span></span>  
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a><span data-ttu-id="23c85-102">LINQ to XML (C#) kullanarak sözlüklerle nasıl çalışIlir?</span><span class="sxs-lookup"><span data-stu-id="23c85-102">How to work with dictionaries using LINQ to XML (C#)</span></span>
+<span data-ttu-id="23c85-103">Veri yapılarının çeşitlerini XML'e, XML'i ise diğer veri yapılarına dönüştürmek genellikle uygundur.</span><span class="sxs-lookup"><span data-stu-id="23c85-103">It is often convenient to convert varieties of data structures to XML, and XML back to other data structures.</span></span> <span data-ttu-id="23c85-104">Bu konu, bir <xref:System.Collections.Generic.Dictionary%602> XML ve geri dönüştürerek bu genel yaklaşımın belirli bir uygulama gösterir.</span><span class="sxs-lookup"><span data-stu-id="23c85-104">This topic shows a specific implementation of this general approach by converting a <xref:System.Collections.Generic.Dictionary%602> to XML and back.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="13046-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="13046-105">Example</span></span>  
- <span data-ttu-id="13046-106">Bu örnek, bir sorgu projelerinin yeni <xref:System.Xml.Linq.XElement> nesneleri ve elde edilen koleksiyonun, kök <xref:System.Xml.Linq.XElement> nesnesinin oluşturucusuna bir bağımsız değişken olarak geçirildiği işlevsel oluşturma formunu kullanır.</span><span class="sxs-lookup"><span data-stu-id="13046-106">This example uses a form of functional construction in which a query projects new <xref:System.Xml.Linq.XElement> objects, and the resulting collection is passed as an argument to the constructor of the Root <xref:System.Xml.Linq.XElement> object.</span></span>  
+## <a name="example"></a><span data-ttu-id="23c85-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="23c85-105">Example</span></span>  
+ <span data-ttu-id="23c85-106">Bu örnek, sorgunun yeni <xref:System.Xml.Linq.XElement> nesneleri oluşturduğu ve ortaya çıkan koleksiyonun Kök <xref:System.Xml.Linq.XElement> nesnenin oluşturucusu için bağımsız değişken olarak geçtiği işlevsel bir yapı biçimi kullanır.</span><span class="sxs-lookup"><span data-stu-id="23c85-106">This example uses a form of functional construction in which a query projects new <xref:System.Xml.Linq.XElement> objects, and the resulting collection is passed as an argument to the constructor of the Root <xref:System.Xml.Linq.XElement> object.</span></span>  
   
 ```csharp  
 Dictionary<string, string> dict = new Dictionary<string, string>();  
@@ -28,7 +28,7 @@ XElement root = new XElement("Root",
 Console.WriteLine(root);  
 ```  
   
- <span data-ttu-id="13046-107">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="13046-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="23c85-107">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="23c85-107">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -39,8 +39,8 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="13046-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="13046-108">Example</span></span>  
- <span data-ttu-id="13046-109">Aşağıdaki kod XML 'den bir sözlük oluşturur.</span><span class="sxs-lookup"><span data-stu-id="13046-109">The following code creates a dictionary from XML.</span></span>  
+## <a name="example"></a><span data-ttu-id="23c85-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="23c85-108">Example</span></span>  
+ <span data-ttu-id="23c85-109">Aşağıdaki kod XML bir sözlük oluşturur.</span><span class="sxs-lookup"><span data-stu-id="23c85-109">The following code creates a dictionary from XML.</span></span>  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -57,7 +57,7 @@ foreach (string str in dict.Keys)
     Console.WriteLine("{0}:{1}", str, dict[str]);  
 ```  
   
- <span data-ttu-id="13046-110">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="13046-110">This code produces the following output:</span></span>  
+ <span data-ttu-id="23c85-110">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="23c85-110">This code produces the following output:</span></span>  
   
 ```output  
 Child1:Value1  
