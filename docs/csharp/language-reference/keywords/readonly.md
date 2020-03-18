@@ -1,5 +1,5 @@
 ---
-title: ReadOnly anahtar sözcüğü C# -başvuru
+title: readonly anahtar kelime - C# Başvuru
 ms.date: 06/21/2018
 f1_keywords:
 - readonly_CSharpKeyword
@@ -7,54 +7,54 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: c3db8f7791e510768608e834339526fb82771979
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 165b6287e1610e013b289601e1535a08fdd3b5c9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451947"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399359"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# Başvurusu)
 
-`readonly` anahtar sözcüğü dört bağlamda kullanılabilecek bir değiştiricisidir:
+Anahtar `readonly` kelime, dört bağlamda kullanılabilen bir değiştiricidir:
 
-- [Alan bildiriminde](#readonly-field-example)`readonly`, alana atamanın yalnızca bildirimin bir parçası olarak veya aynı sınıftaki bir oluşturucuda kullanılabileceğini gösterir. Salt okunur bir alan, alan bildirimi ve Oluşturucu içinde birden çok kez atanabilir ve yeniden atanabilir. 
+- Alan [bildiriminde,](#readonly-field-example) `readonly` alana atamanın yalnızca bildirimin bir parçası olarak veya aynı sınıftaki bir oluşturucuda gerçekleşebileceğini belirtir. Yalnızca okunan bir alan, alan bildirimi ve oluşturucu içinde birden çok kez atanabilir ve yeniden atanabilir.
   
-  Oluşturucu çıktıktan sonra bir `readonly` alanı atanamaz. Bu kural, değer türleri ve başvuru türleri için farklı etkilere sahiptir:
+  Bir `readonly` alan, yapıcı çıktıktan sonra atanamaz. Bu kuralın değer türleri ve başvuru türleri için farklı etkileri vardır:
   
-  - Değer türleri doğrudan verilerini içerdiğinden, `readonly` değer türü olan bir alan sabittir. 
-  - Başvuru türleri, verilerine yönelik bir başvuru içerdiğinden, `readonly` başvuru türü olan bir alan her zaman aynı nesneye başvurmalıdır. Bu nesne sabit değildir. `readonly` değiştiricisi, alanın farklı bir başvuru türü örneğiyle değiştirilmesini önler. Ancak, değiştirici alanın örnek verilerinin salt okunurdur alanı aracılığıyla değiştirilmesini engellemez.
+  - Değer türleri doğrudan verilerini içerdiğinden, değer `readonly` türü olan bir alan değişmez.
+  - Başvuru türleri verilerine bir başvuru içerdiğinden, `readonly` başvuru türü olan bir alanın her zaman aynı nesneye başvurması gerekir. Bu nesne değişmez değil. Değiştirici, `readonly` alanın başvuru türünün farklı bir örneğiyle değiştirilmesini önler. Ancak, değiştirici, alanın örnek verilerinin salt okunur alanı boyunca değiştirilmesini engellemez.
 
   > [!WARNING]
-  > Değişebilir bir başvuru türü olan bir dışarıdan görünür salt okunurdur alanı içeren dışarıdan görünen bir tür, bir güvenlik açığı olabilir ve uyarı [CA2104](/visualstudio/code-quality/ca2104) : "salt okuma kesilebilir başvuru türleri bildiremiyor" olarak tetiklenebilir.
+  > Mutable başvuru türü olan harici olarak görünür salt okunur alan içeren harici olarak görünen bir tür bir güvenlik açığı olabilir ve [ca2104](/visualstudio/code-quality/ca2104) uyarısını tetikleyebilir: "Yalnızca mutable başvuru türlerini okumayı bildirin."
 
-- [`readonly struct` tanımında](#readonly-struct-example), `readonly` `struct` sabit olduğunu gösterir.
-- [`readonly` üye tanımında](#readonly-member-examples), `readonly` bir `struct` üyesinin yapının iç durumunu muiçermediğini belirtir.
-- `ref readonly` bir [yöntemde döndürülen](#ref-readonly-return-example)`readonly` değiştirici, yöntemin bir başvuru döndürdüğünü ve bu başvuruya yazma izni bulunmadığını gösterir.
+- Bir [ `readonly struct` tanımda,](#readonly-struct-example) `readonly` değişmez `struct` olduğunu gösterir.
+- [ `readonly` Üye](#readonly-member-examples)tanımında, `readonly` bir `struct` üyenin yapının iç durumunu mutasyona uğratmadığını belirtir.
+- Yöntem [ `ref readonly` dönüşünde,](#ref-readonly-return-example) `readonly` değiştirici yöntemin bir başvurudöndürür ve bu başvuru için yazı izin verilmez gösterir.
 
-`readonly struct` ve `ref readonly` bağlamları 7,2 ' C# ye eklenmiştir. 8,0 ' de C# `readonly` struct üyeleri eklendi
+Ve `readonly struct` `ref readonly` bağlamlar C# 7.2'ye eklendi. `readonly`yapı üyeleri C# 8.0'a eklendi
 
-## <a name="readonly-field-example"></a>ReadOnly alan örneği
+## <a name="readonly-field-example"></a>Readonly alan örneği
 
-Bu örnekte, `year` alan değeri, sınıf oluşturucusunda bir değer atanmış olsa da, `ChangeYear`yönteminde değiştirilemez:
+Bu örnekte, sınıf oluşturucuya bir değer atanmış `ChangeYear`olsa bile, yöntemde alanın `year` değeri değiştirilemez:
 
 [!code-csharp[Readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyField)]
 
-Bir `readonly` alanına yalnızca aşağıdaki bağlamlarda bir değer atayabilirsiniz:
+Bir `readonly` alana yalnızca aşağıdaki bağlamlarda bir değer atayabilirsiniz:
 
-- Bildirimde bir değişken başlatıldığında, örneğin:
+- Değişken bildirimde başharfe geçtiğinde, örneğin:
 
   ```csharp
   public readonly int y = 5;
   ```
 
-- Örnek alan bildirimini içeren sınıfın örnek oluşturucusunda.
-- Statik alan bildirimini içeren sınıfın statik oluşturucusunda.
+- Örnek alan bildirimini içeren sınıfın bir örnek oluşturucu.
+- Statik alan bildirimini içeren sınıfın statik oluşturucuda.
 
-Bu Oluşturucu bağlamları aynı zamanda bir `readonly` alanını [Out](out-parameter-modifier.md) veya [ref](ref.md) parametresi olarak geçirmek için geçerli olduğu tek bağlamlardır.
+Bu oluşturucu bağlamlar, bir `readonly` alanı dış [veya](out-parameter-modifier.md) [ref](ref.md) parametresi olarak geçirmenin geçerli olduğu tek bağlamdır.
 
 > [!NOTE]
-> `readonly` anahtar sözcüğü [const](const.md) anahtar sözcüğünden farklıdır. Bir `const` alanı yalnızca alanın bildiriminde başlatılabilir. `readonly` alan, alan bildiriminde ve herhangi bir oluşturucuda birden çok kez atanabilir. Bu nedenle, `readonly` alanlar kullanılan oluşturucuya bağlı olarak farklı değerlere sahip olabilir. Ayrıca, bir `const` alanı bir derleme zamanı sabiti olsa da, `readonly` alanı aşağıdaki örnekte olduğu gibi çalışma zamanı sabitleri için kullanılabilir:
+> Anahtar `readonly` kelime [const](const.md) anahtar kelime farklıdır. Bir `const` alan yalnızca alanın bildiriminde başlatılabilir. Alan `readonly` bildiriminde ve herhangi bir oluşturucuya birden çok kez atanabilir. Bu `readonly` nedenle, alanların kullanılan oluşturucuya bağlı olarak farklı değerlere sahip olabilir. Ayrıca, bir `const` alan derleme zamanı sabiti `readonly` olsa da, alan aşağıdaki örnekte olduğu gibi çalışma zamanı sabitleri için kullanılabilir:
 >
 > ```csharp
 > public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
@@ -62,23 +62,23 @@ Bu Oluşturucu bağlamları aynı zamanda bir `readonly` alanını [Out](out-par
 
 [!code-csharp[Initialize readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#InitReadonlyField)]
 
-Yukarıdaki örnekte, aşağıdaki örnekte olduğu gibi bir ifade kullanıyorsanız:
+Önceki örnekte, aşağıdaki örnek gibi bir deyim kullanırsanız:
 
 ```csharp
 p2.y = 66;        // Error
 ```
 
-Derleyici hata iletisini alırsınız:
+derleyici hata iletisini alırsınız:
 
-**Salt okunur bir alana atama yapılamaz (Oluşturucu veya değişken başlatıcı içinde olması dışında)**
+**Yalnızca okunan bir alan atanamıyor (bir oluşturucu veya değişken baş harfi hariç)**
 
-## <a name="readonly-struct-example"></a>ReadOnly struct örneği
+## <a name="readonly-struct-example"></a>Readonly struct örnek
 
-`struct` tanımında `readonly` değiştiricisi yapının **sabit**olduğunu bildirir. Aşağıdaki örnekte gösterildiği gibi `struct` her örnek alanı `readonly`işaretlenmelidir:
+Tanımdaki `readonly` `struct` değiştirici, yapının **değişmez**olduğunu bildirir. Aşağıdaki örnekte `struct` gösterildiği gibi, her örnek alanı işaretlenmelidir: `readonly`
 
 [!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyStruct)]
 
-Önceki örnek, depolama alanını bildirmek için [salt okunur otomatik özellikleri](../../properties.md#read-only) kullanır. Bu, derleyiciye bu özellikler için `readonly` yedekleme alanı oluşturmasını söyler. Ayrıca, `readonly` alanları doğrudan de bildirebilirsiniz:
+Önceki örnek, depolama alanını bildirmek için [salt okunur otomatik özelliklerini](../../properties.md#read-only) kullanır. Bu, derleyiciye bu `readonly` özellikler için destek alanları oluşturmasını bildirir. Alanları doğrudan `readonly` bildirebilirsiniz:
 
 ```csharp
 public readonly struct Point
@@ -92,20 +92,20 @@ public readonly struct Point
 }
 ```
 
-`readonly` işaretlenmemiş bir alan eklendiğinde `CS8340`derleyici hatası oluşturulur: "ReadOnly yapıların örnek alanları ReadOnly olmalıdır."
+İşaretlenmemiş `readonly` bir alan eklemek derleyici hatası `CS8340`oluşturur: "Yalnızca okunan yapıların örnek alanları yalnızca okunmalıdır."
 
-## <a name="readonly-member-examples"></a>ReadOnly üye örnekleri
+## <a name="readonly-member-examples"></a>Readonly üye örnekleri
 
-Diğer zamanlarda, mutasyonu destekleyen bir yapı oluşturabilirsiniz. Bu durumlarda, örnek üyelerinden birkaçı büyük olasılıkla yapının iç durumunu değiştirmez. Bu örnek üyelerini `readonly` değiştiricisiyle bildirebilirsiniz. Derleyici amacınızı zorluyor. Bu üye, durumu doğrudan değiştirir veya `readonly` değiştiricisi ile de bildirilmeyen bir üyeye eriştiğinde sonuç, derleme zamanı hatasıdır. `readonly` değiştiricisi `class` veya `interface` üye bildirimlerinde değil `struct` üyelerinde geçerlidir.
+Diğer zamanlarda, mutasyonu destekleyen bir yapı oluşturabilirsiniz. Bu gibi durumlarda, örnek üyelerden bazıları büyük olasılıkla yapının iç durumunu değiştirmez. Bu örnek üyeleri `readonly` değiştirici ile bildirebilirsiniz. Derleyici niyetinizi zorlar. Bu üye durumu doğrudan değiştirirse veya `readonly` değiştiriciile birlikte bildirilmemiş bir üyeye erişirse, sonuç derleme zamanı hatasıdır. Değiştirici üyeler `struct` için geçerlidir, `class` `interface` üye beyannamelerinde veya üye beyanlarında geçerli değildir. `readonly`
 
-Geçerli `struct` yöntemlerine `readonly` değiştiricisini uygulayarak iki avantaja sahip olursunuz. En önemlisi, derleyici amacınızı zorluyor. Durumu değiştiren kod `readonly` yönteminde geçerli değildir. Derleyici, performans iyileştirmelerini etkinleştirmek için `readonly` değiştiricisinden da kullanabilir. Büyük `struct` türleri `in` başvurusuyla geçirildiğinde, yapının durumu değiştirilemiyorsa derleyicinin bir savunma kopyası oluşturması gerekir. Yalnızca `readonly` üyelerine erişilirse, derleyici savunma kopyasını oluşturmayabilir.
+`readonly` Değiştiriciyi geçerli `struct` yöntemlere uygulayarak iki avantaj elde elabilirsiniz. En önemlisi, derleyici niyetinizi zorlar. Durumu değiştiren kod bir `readonly` yöntemde geçerli değildir. Derleyici, performans optimizasyonlarını `readonly` etkinleştirmek için değiştiriciden de yararlanabilir. Büyük `struct` türler başvuru `in` yla geçirildiğinde, yapının durumu değiştirilse derleyicinin bir savunma kopyası oluşturması gerekir. Yalnızca `readonly` üyelere erişilirse, derleyici savunma kopyasını oluşturamaz.
 
-`readonly` değiştiricisi, <xref:System.Object?displayProperty=nameWithType>tarafından belirtilen yöntemleri geçersiz kılan yöntemler de dahil olmak üzere `struct`çoğu üye üzerinde geçerlidir. Bazı kısıtlamalar vardır:
+`readonly` Değiştirici, 'de <xref:System.Object?displayProperty=nameWithType>bildirilen yöntemleri geçersiz kılma yöntemleri de dahil olmak üzere, bir `struct`üyenin çoğu üzerinde geçerlidir. Bazı kısıtlamalar vardır:
 
-- `readonly` statik yöntemler veya özellikler bildiremezsiniz.
-- `readonly` oluşturucuları bildiremezsiniz.
+- Statik yöntemleri veya `readonly` özellikleri bildiremezsiniz.
+- Yapıcıları beyan `readonly` edemezsin.
 
-`readonly` değiştiricisini bir özellik veya Dizin Oluşturucu bildirimine ekleyebilirsiniz:
+`readonly` Değiştiriciyi bir özellik veya dizinleyici bildirimine ekleyebilirsiniz:
 
 ```csharp
 readonly public int Counter
@@ -115,7 +115,7 @@ readonly public int Counter
 }
 ```
 
-`readonly` değiştiricisini bir özelliğin veya dizin oluşturucunun tek tek `get` veya `set` erişimcilerine de ekleyebilirsiniz:
+`readonly` Değiştiriciyi bir özellik veya `get` dizinleyicinin tek tek veya `set` erişimine de ekleyebilirsiniz:
 
 ```csharp
 public int Counter
@@ -126,40 +126,40 @@ public int Counter
 int _counter;
 ```
 
-`readonly` değiştiricisini hem özelliğe hem de aynı özelliğin erişimcilerine bir veya daha fazlasına ekleyemeyebilirsiniz. Aynı kısıtlama, Dizin oluşturucular için geçerlidir.
+`readonly` Değiştiriciyi hem bir özelliğe hem de aynı özelliğin erişimine bir veya daha fazla sınayabilirsiniz. Aynı kısıtlama dizinleyiciler için de geçerlidir.
 
-Derleyici, derleyicinin uyguladığı kodun durumu değiştirmediğinden otomatik uygulanan özelliklere `readonly` değiştiricisini örtülü olarak uygular. Aşağıdaki bildirimlerle eşdeğerdir:
+Derleyici, derleyicinin `readonly` uygulanan kodun durumu değiştirmediği otomatik olarak uygulanan özelliklere dolaylı olarak değiştirici uygular. Aşağıdaki beyanlara eşdeğerdir:
 
 ```csharp
 public readonly int Index { get; }
 // Or:
 public int Number { readonly get; }
 public string Message { readonly get; set; }
-``` 
+```
 
-`readonly` değiştiricisini bu konumlara ekleyebilirsiniz, ancak anlamlı bir etkiye sahip olmaz. `readonly` değiştiricisini otomatik uygulanan bir özellik ayarlayıcısına veya okuma/yazma otomatik uygulanan özelliğine ekleyemezsiniz.
+Bu konumlara `readonly` değiştirici ekleyebilirsiniz, ancak anlamlı bir etkisi olmayacaktır. `readonly` Değiştiriciyi otomatik olarak uygulanan bir özellik ayarlayıcısına veya otomatik olarak uygulanan bir özelliği okuma/yazma özelliğine ekleyebilirsiniz.
 
-## <a name="ref-readonly-return-example"></a>Ref ReadOnly dönüş örneği
+## <a name="ref-readonly-return-example"></a>Ref readonly dönüş örneği
 
-`ref return` `readonly` değiştiricisi döndürülen başvurunun değiştirilemeyeceğini gösterir. Aşağıdaki örnek, kaynağına bir başvuru döndürür. Çağıranların kaynağı değiştiremeyeceğini belirtmek için `readonly` değiştiricisini kullanır:
+A'daki `readonly` değiştirici, döndürülen başvurunun değiştirilemediğini `ref return` gösterir. Aşağıdaki örnek, kaynağına bir başvuru döndürür. Arayanların `readonly` kaynağı değiştiremediğini belirtmek için değiştirici kullanır:
 
 [!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
-Döndürülen türün bir `readonly struct`olması gerekmez. `ref` tarafından döndürülebilecek herhangi bir tür, `ref readonly`tarafından döndürülebilir.
+Döndürülen tür bir `readonly struct`. olması gerekmez Tarafından `ref` döndürülebilen herhangi bir tür `ref readonly`.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-Dil belirtimi tekliflerini de görebilirsiniz:
+Ayrıca dil belirtimi önerilerini de görebilirsiniz:
 
-- [ReadOnly ref ve ReadOnly yapısı](~/_csharplang/proposals/csharp-7.2/readonly-ref.md)
-- [ReadOnly struct üyeleri](~/_csharplang/proposals/csharp-8.0/readonly-instance-members.md)
+- [readonly ref ve readonly struct](~/_csharplang/proposals/csharp-7.2/readonly-ref.md)
+- [readonly struct üyeleri](~/_csharplang/proposals/csharp-8.0/readonly-instance-members.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../index.md)
+- [C# Referans](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Sözcükleri](index.md)
+- [C# Anahtar Kelimeler](index.md)
 - [Değiştiriciler](index.md)
 - [const](const.md)
 - [Alanlar](../../programming-guide/classes-and-structs/fields.md)

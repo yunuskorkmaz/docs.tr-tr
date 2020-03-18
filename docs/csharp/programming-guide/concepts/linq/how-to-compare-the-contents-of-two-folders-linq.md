@@ -1,27 +1,27 @@
 ---
-title: İki klasörün içeriğini karşılaştırma (LINQ) (C#)
+title: İki klasörün içeriği (LINQ) (C#) nasıl karşılaştırılır?
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: 9d46303068f2284415ea50c0514d76c5b2b55780
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 44dc97d6d48bed5e8b4d0376838e4dada2e8300c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346530"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169408"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>İki klasörün içeriğini karşılaştırma (LINQ) (C#)
-Bu örnekte iki dosya listesi karşılaştırmanın üç yolu gösterilmektedir:  
+# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>İki klasörün içeriği (LINQ) (C#) nasıl karşılaştırılır?
+Bu örnek, iki dosya girişini karşılaştırmanın üç yolunu gösterir:  
   
-- İki dosya listelerinin aynı olup olmadığını belirten bir Boolean değeri sorgulayarak.  
+- İki dosya listesinin aynı olup olmadığını belirten bir Boolean değeri için sorgu yaparak.  
   
-- Her iki klasördeki dosyaları almak için kesişimini sorgulayarak.  
+- Her iki klasörde bulunan dosyaları almak için kavşak için sorgulayarak.  
   
-- Bir klasörde olan ancak diğeri olmayan dosyaları almak için ayarlanan farkı sorgulayarak.  
+- Bir klasörde değil, diğer dosyaları almak için ayarlanan fark için sorgulayarak.  
   
     > [!NOTE]
-    > Burada gösterilen teknikler, herhangi bir türdeki nesne dizilerini karşılaştırmak için uyarlanmıştır.  
+    > Burada gösterilen teknikler, her türden nesne dizilerini karşılaştırmak için uyarlanabilir.  
   
- Burada gösterilen `FileComparer` sınıfı, standart sorgu Işleçleri ile birlikte özel bir karşılaştırıcı sınıfının nasıl kullanılacağını gösterir. Sınıfı, gerçek dünyada senaryolarda kullanılmak üzere tasarlanmamıştır. Her bir klasörün içeriğinin aynı olup olmadığını anlamak için her bir dosyanın bayt cinsinden adını ve uzunluğunu kullanır. Gerçek dünyada bir senaryoda, daha kapsamlı bir eşitlik denetimi gerçekleştirmek için bu karşılaştırıcıyı değiştirmelisiniz.  
+ Burada `FileComparer` gösterilen sınıf, Standart Sorgu Operatörleri ile birlikte özel bir karşılayıcı sınıfının nasıl kullanılacağını gösterir. Sınıf gerçek dünya senaryolarında kullanılmak üzere tasarlanmamıştır. Her klasörün içeriğinin aynı olup olmadığını belirlemek için her dosyanın ad ve uzunluğunu kullanır. Gerçek bir senaryoda, daha sıkı bir eşitlik denetimi gerçekleştirmek için bu karşılayıcıyı değiştirmeniz gerekir.  
   
 ## <a name="example"></a>Örnek  
   
@@ -34,7 +34,7 @@ namespace QueryCompareTwoDirs
         static void Main(string[] args)  
         {  
   
-            // Create two identical or different temporary folders   
+            // Create two identical or different temporary folders
             // on a local drive and change these file paths.  
             string pathA = @"C:\TestDir";  
             string pathB = @"C:\TestDir2";  
@@ -64,7 +64,7 @@ namespace QueryCompareTwoDirs
                 Console.WriteLine("The two folders are not the same");  
             }  
   
-            // Find the common files. It produces a sequence and doesn't   
+            // Find the common files. It produces a sequence and doesn't
             // execute until the foreach statement.  
             var queryCommonFiles = list1.Intersect(list2, myFileCompare);  
   
@@ -111,7 +111,7 @@ namespace QueryCompareTwoDirs
                     f1.Length == f2.Length);  
         }  
   
-        // Return a hash that reflects the comparison criteria. According to the   
+        // Return a hash that reflects the comparison criteria. According to the
         // rules for IEqualityComparer<T>, if Equals is true, then the hash codes must  
         // also be equal. Because equality as defined here is a simple value equality, not  
         // reference identity, it is possible that two or more objects will produce the same  
@@ -125,10 +125,10 @@ namespace QueryCompareTwoDirs
 }  
 ```  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
- System. C# lınq ve System.IO ad alanları için `using` yönergeler içeren bir konsol uygulaması projesi oluşturun.  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
+ System.Linq ve System.IO `using` ad alanları için yönergeleri içeren bir C# konsolu uygulama projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to Objects (C#)](./linq-to-objects.md)
-- [LINQ ve dosya dizinleri (C#)](./linq-and-file-directories.md)
+- [Nesnelere LINQ (C#)](./linq-to-objects.md)
+- [LINQ ve Dosya Dizinleri (C#)](./linq-and-file-directories.md)

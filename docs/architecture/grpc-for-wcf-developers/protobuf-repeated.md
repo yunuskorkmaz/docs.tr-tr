@@ -1,17 +1,17 @@
 ---
-title: Liste ve diziler için yinelenen alanlar-WCF geliştiricileri için gRPC
-description: Prototiparabelleği koleksiyonları ve .NET koleksiyonlarıyla ilişkilerini anlayın.
+title: Listeler ve diziler için tekrarlanan alanlar - WCF geliştiricileri için gRPC
+description: Protobuf'un koleksiyonları nasıl işleyeceğini ve .NET koleksiyonlarıyla nasıl ilişkili olduklarını anlayın.
 ms.date: 09/09/2019
-ms.openlocfilehash: 16f2b5a54b032f32c8fcb9d572d5284fe589cb01
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 63d99532d14deea7800673dd5a6350dd9362ad54
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542965"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79147977"
 ---
 # <a name="repeated-fields-for-lists-and-arrays"></a>Listeler ve diziler için yinelenen alanlar
 
-`repeated` önek anahtar sözcüğünü kullanarak protokol arabelleğinde (Protobuffer) listeler belirtirsiniz. Aşağıdaki örnek, bir listenin nasıl oluşturulacağını gösterir:
+Önke anahtar sözcüğü `repeated` kullanarak Protokol Arabelleği'nde (Protobuf) listeleri belirtirsiniz. Aşağıdaki örnekte, bir liste nasıl oluşturulacak gösterilmektedir:
 
 ```protobuf
 message Person {
@@ -20,10 +20,10 @@ message Person {
 }
 ```
 
-Oluşturulan kodda `repeated` alanları, yerleşik .NET koleksiyon türlerinden herhangi biri yerine `Google.Protobuf.Collections.RepeatedField<T>` genel tür tarafından temsil edilir. 
+Oluşturulan kodda, `repeated` alanlar yerleşik .NET koleksiyon türlerinden herhangi biri yerine `Google.Protobuf.Collections.RepeatedField<T>` genel türle temsil edilir.
 
-`RepeatedField<T>` türü, listeyi seri hale getirmek ve ikili tel formatında seri durumdan çıkarmak için gereken kodu içerir. <xref:System.Collections.Generic.IList%601> ve <xref:System.Collections.Generic.IEnumerable%601>gibi tüm standart .NET koleksiyonu arabirimlerini uygular. Bu nedenle, LINQ sorgularını kullanabilir veya bir diziye ya da listeye kolayca dönüştürebilirsiniz.
+Tür, `RepeatedField<T>` listeyi ikili tel biçimine seri hale getirmek ve deserialize etmek için gereken kodu içerir. Gibi tüm standart .NET toplama arabirimlerini <xref:System.Collections.Generic.IList%601> <xref:System.Collections.Generic.IEnumerable%601>uygular. Böylece LINQ sorgularını kullanabilir veya kolayca bir diziye veya listeye dönüştürebilirsiniz.
 
 >[!div class="step-by-step"]
 >[Önceki](protobuf-nested-types.md)
->[İleri](protobuf-reserved.md)
+>[Sonraki](protobuf-reserved.md)

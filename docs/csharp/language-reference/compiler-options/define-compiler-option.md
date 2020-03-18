@@ -1,5 +1,5 @@
 ---
-title: -define (C# derleyici seçenekleri)
+title: -define (C# Derleyici Seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /define
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: cb9de387b319ff4b81dcd1ccc37f04d8b6b3123a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4a3622b6acc8ebe9c590b01b67074ae59396fc34
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924794"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173750"
 ---
-# <a name="-define-c-compiler-options"></a>-define (C# derleyici seçenekleri)
-**-Define** seçeneği, programınızın `name` tüm kaynak kodu dosyalarında sembol olarak tanımlar.  
+# <a name="-define-c-compiler-options"></a>-define (C# Derleyici Seçenekleri)
+**-tanımla** seçeneği, `name` programınızı tüm kaynak kodu dosyalarında bir sembol olarak tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,35 +27,35 @@ ms.locfileid: "69924794"
 -define:name[;name2]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  `name`, `name2`  
  Tanımlamak istediğiniz bir veya daha fazla sembolün adı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- **-Define** seçeneği, derleme seçeneğinin projedeki tüm dosyalar için geçerli olması dışında, [#define](../preprocessor-directives/preprocessor-define.md) Önişlemci yönergesinin kullanılmasıyla aynı etkiye sahiptir. Kaynak dosyadaki bir [#undef](../preprocessor-directives/preprocessor-undef.md) yönergesi tanımı kaldırana kadar bir sembol kaynak dosyasında tanımlı kalır. -Define seçeneğini kullandığınızda, bir dosyadaki bir `#undef` yönergenin projedeki diğer kaynak kodu dosyaları üzerinde hiçbir etkisi olmaz.  
+ **-define** seçeneği, derleyici seçeneğinin projedeki tüm dosyalar için etkin olması dışında [#define](../preprocessor-directives/preprocessor-define.md) bir önişlemci yönergesi kullanmakla aynı etkiye sahiptir. Kaynak dosyadaki [#undef](../preprocessor-directives/preprocessor-undef.md) bir yönerge tanımı kaldırana kadar bir sembol kaynak dosyada tanımlanmaya devam eder. -define seçeneğini kullandığınızda, `#undef` bir dosyadaki bir yönergenin projedeki diğer kaynak kodu dosyaları üzerinde hiçbir etkisi yoktur.  
   
- Kaynak dosyaları koşullu olarak derlemek için bu seçenek tarafından oluşturulan sembolleri [#if](../preprocessor-directives/preprocessor-if.md), [#else](../preprocessor-directives/preprocessor-else.md), [#elif](../preprocessor-directives/preprocessor-elif.md)ve [#endif](../preprocessor-directives/preprocessor-endif.md) kullanabilirsiniz.  
+ Kaynak dosyalarını koşullu olarak derlemek için bu seçenek tarafından oluşturulan #if [,](../preprocessor-directives/preprocessor-if.md) [#else](../preprocessor-directives/preprocessor-else.md), [#elif](../preprocessor-directives/preprocessor-elif.md)ve [#endif](../preprocessor-directives/preprocessor-endif.md) sembolleri kullanabilirsiniz.  
   
- **-d** , **-define**öğesinin kısa biçimidir.  
+ **-d** **-define**kısa şeklidir.  
   
- Sembol adlarını ayırmak için noktalı virgül veya virgül kullanarak, **-define** ile birden çok sembol tanımlayabilirsiniz. Örneğin:  
+ Sembol adlarını ayırmak için bir yarı nokta nokta veya virgül kullanarak **-define** ile birden çok sembol tanımlayabilirsiniz. Örnek:  
   
 ```console  
 -define:DEBUG;TUESDAY  
 ```  
   
- Derleyici C# , kaynak kodunuzda kullanabileceğiniz hiçbir sembol veya makroyu tanımlar; Tüm sembol tanımlarının Kullanıcı tanımlı olması gerekir.  
+ C# derleyicisinin kendisi kaynak kodunuzda kullanabileceğiniz hiçbir sembol veya makro tanımlamaz; tüm sembol tanımları kullanıcı tanımlı olmalıdır.  
   
 > [!NOTE]
-> C# ,`#define` Bir simgeye, gibi dillerde bir değer verilmesini izin vermez C++. Örneğin, `#define` bir makro oluşturmak veya bir sabit tanımlamak için kullanılamaz. Bir sabit tanımlamanız gerekiyorsa, bir `enum` değişken kullanın. Bir C++ stil makrosu oluşturmak isterseniz, genel türler gibi alternatifleri göz önünde bulundurun. Makrolar önemli bir hataya açık olmadığından, kullanmalarına izin vermez C# , ancak daha güvenli alternatifler sağlar.  
+> C#, `#define` C++gibi dillerde olduğu gibi bir sembole değer verilmesine izin vermez. Örneğin, `#define` makro oluşturmak veya bir sabit tanımlamak için kullanılamaz. Bir sabit tanımlamanız gerekiyorsa, `enum` bir değişken kullanın. C++ tarzı bir makro oluşturmak istiyorsanız, genel olarak alternatifleri göz önünde bulundurun. Makrolar hataya açık olduğu için, C# kullanımlarına izin verir ancak daha güvenli alternatifler sunar.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1. Projenin **Özellikler** sayfasını açın.  
+1. Projenin **Özellikleri** sayfasını açın.  
   
-2. **Derleme** sekmesinde, **koşullu derleme sembolleri** kutusunda tanımlanacak simgeyi yazın. Örneğin, aşağıdaki kod örneğini kullanıyorsanız, metin kutusuna yazmanız `xx` yeterlidir.  
+2. **Yapı** sekmesinde, **Koşullu derleme sembolleri** kutusunda tanımlanacak simgeyi yazın. Örneğin, aşağıdaki kod örneğini kullanıyorsanız, metin `xx` kutusuna yazmanız gereken bir yazı nız vardır.  
   
- Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>.  
+ Bu derleyici seçeneğini programlı olarak nasıl ayarlayıştırılabildiğini öğrenmek için bkz. <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>  
   
 ## <a name="example"></a>Örnek  
   
@@ -65,11 +65,11 @@ ms.locfileid: "69924794"
 // or uncomment the next line  
 // #define xx  
 using System;  
-public class Test   
+public class Test
 {  
-    public static void Main()   
+    public static void Main()
     {  
-        #if (xx)   
+        #if (xx)
             Console.WriteLine("xx defined");  
         #else  
             Console.WriteLine("xx not defined");  

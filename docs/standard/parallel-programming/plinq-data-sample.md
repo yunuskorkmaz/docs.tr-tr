@@ -9,29 +9,29 @@ helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 ms.openlocfilehash: b13a2608df486f1de42514d4f8eaac49f04d345e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140015"
 ---
 # <a name="plinq-data-sample"></a>PLINQ Veri Örneği
-Bu örnek,. csv biçimindeki örnek verileri, bu dosyayı bellek içi müşteriler, ürünler, siparişler ve sipariş ayrıntılarına dönüştüren yöntemlerle birlikte içerir. PLıNQ ile daha fazla denemek için, belirli diğer konulardan kod örneklerini bu konudaki koda yapıştırabilir ve `Main` yönteminden çağırabilirsiniz. Bu verileri kendi PLıNQ sorgularınız ile de kullanabilirsiniz.  
+Bu örnek, .csv formatında örnek veriler ve müşteri, ürün, sipariş ve sipariş ayrıntılarının bellek içi koleksiyonlarına dönüştüren yöntemler içerir. PLINQ ile daha fazla deneme yapmak için, bu konudaki koda diğer bazı `Main` konulardan kod örneklerini yapıştırabilir ve yöntemden çağırabilirsiniz. Bu verileri kendi PLINQ sorgularınızla da kullanabilirsiniz.  
   
- Veriler, Northwind veritabanının bir alt kümesini temsil eder. 50 (50) müşteri kayıtları dahildir, ancak tüm alanları içermez. Siparişlerdeki satırların bir alt kümesi ve her müşteri için karşılık gelen Order_Detail verileri dahildir. Tüm ürünler dahil edilmiştir.  
+ Veriler Northwind veritabanının bir alt kümesini temsil eder. Elli (50) müşteri kaydı dahildir, ancak tüm alanlar dahil değildir. Siparişler'den gelen satırların bir alt kümesi ve her Müşteri için karşılık gelen Order_Detail verileri dahildir. Tüm Ürünler dahildir.  
   
 > [!NOTE]
-> Veri kümesi, PLıNQ 'in yalnızca temel `where` ve `select` yan tümceleri içeren sorgular için LINQ to Objects daha hızlı olduğunu göstermek için yeterince büyük değil. Bu gibi küçük veri kümeleri için hız artışı gözlemlemek için, veri kümesindeki her öğe üzerinde hesaplama maliyetli işlemler içeren sorguları kullanın.  
+> Veri kümesi, PLINQ'nin yalnızca temel `where` ve `select` yan tümceleri içeren sorgular için LINQ'dan Nesnelere linq'ten daha hızlı olduğunu gösterecek kadar büyük değildir. Bunun gibi küçük veri kümelerinin hız artışlarını gözlemlemek için, veri kümesindeki her öğede hesaplama açısından pahalı işlemler içeren sorgular kullanın.  
   
 ### <a name="to-set-up-this-sample"></a>Bu örneği ayarlamak için  
   
-1. Visual Basic veya görsel C# konsol uygulaması projesi oluşturun.  
+1. Visual Basic veya Visual C# konsol uygulama projesi oluşturun.  
   
-2. Bu adımları takip eden kodu kullanarak Module1. vb veya Program.cs içeriğini değiştirin.  
+2. Bu adımları izleyen kodu kullanarak Module1.vb veya Program.cs içeriğini değiştirin.  
   
-3. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın. **Metin dosyası** ' nı seçin ve ardından **Tamam**' a tıklayın. Bu konudaki verileri kopyalayın ve ardından yeni metin dosyasına yapıştırın. **Dosya** menüsünde, **Kaydet**' e tıklayın, dosyayı plinqdata. csv olarak adlandırın ve ardından kaynak kodu dosyalarınızı içeren klasöre kaydedin.  
+3. **Proje** menüsünde **Yeni Öğe Ekle'yi**tıklatın. **Metin Dosyası'nı** seçin ve ardından **Tamam'ı**tıklatın. Bu konuyla ilgili verileri kopyalayın ve yeni metin dosyasına yapıştırın. **Dosya** menüsünde **Kaydet,** Plinqdata.csv dosyasını adlandır'ı ve ardından kaynak kod dosyalarınızı içeren klasöre kaydedin'i tıklatın.  
   
-4. Projenin doğru bir şekilde oluşturulup çalıştığını doğrulamak için F5 tuşuna basın. Aşağıdaki çıkışın konsol penceresinde gösterilmesi gerekir.  
+4. Projenin doğru oluşturduğunu ve çalıştığını doğrulamak için F5 tuşuna basın. Aşağıdaki çıktı konsol penceresinde görüntülenmelidir.  
   
     ```console  
     Customer count: 50  
@@ -44,7 +44,7 @@ Bu örnek,. csv biçimindeki örnek verileri, bu dosyayı bellek içi müşteril
  [!code-csharp[PLINQ#50](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#50)]
  [!code-vb[PLINQ#50](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#50)]  
   
-## <a name="data"></a>Veri  
+## <a name="data"></a>Veriler  
   
 ```console  
 CUSTOMERS  

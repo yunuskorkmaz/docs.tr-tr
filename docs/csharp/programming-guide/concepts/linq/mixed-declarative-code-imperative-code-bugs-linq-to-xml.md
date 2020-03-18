@@ -1,38 +1,38 @@
 ---
-title: Karma bildirime dayalı kod-zorunlu kod hataları (LINQ to XML)C#()
+title: Karışık Bildirimkod-Zorunlu Kod Hataları (LINQ - XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-ms.openlocfilehash: 30760999a264c81e16104c0c9b112d442ce66121
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 76a9bb5abf6ce2700a2a0698ebc109f65e2b7eb1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591630"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168355"
 ---
-# <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Karma bildirime dayalı kod/zorunlu kod hataları (LINQ to XML)C#()
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]bir XML ağacını doğrudan değiştirmenize olanak sağlayan çeşitli yöntemler içerir. Öğe ekleyebilir, öğeleri silebilir, bir öğenin içeriğini değiştirebilir, öznitelik ekleyebilir ve benzerlerini yapabilirsiniz. Bu programlama arabirimi, [XML ağaçlarını (LINQ to XML)C#() değiştirme](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)konusunda açıklanmaktadır. Ve gibi eksenlerden <xref:System.Xml.Linq.XContainer.Elements%2A>birini yinelemenize sahipseniz ve eksen boyunca yineleme yaparken xml ağacını değiştiriyorsanız, bazı garip hatalara sahip olabilirsiniz.  
+# <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Karışık Bildirim kodu/Zorunlu Kod Hataları (LINQ - XML) (C#)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]doğrudan bir XML ağacını değiştirmenize olanak tanıyan çeşitli yöntemler içerir. Öğeler ekleyebilir, öğeleri silebilir, öğenin içeriğini değiştirebilir, öznitelikler ekleyebilirsiniz ve benzeri şeyler yapabilirsiniz. Bu programlama [arabirimi, XML Ağaçlarını Değiştirme (LINQ - XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)olarak tanımlanır. Eksenlerden <xref:System.Xml.Linq.XContainer.Elements%2A>birini yinelerseniz ve eksen boyunca yinelerken XML ağacını değiştiriyorsanız, bazı garip hatalarla başa çıkabilirsiniz.  
   
- Bu sorun bazen "Cadılar Bayramı sorunu" olarak bilinir.  
+ Bu sorun bazen "Cadılar Bayramı Sorunu" olarak bilinir.  
   
-## <a name="definition-of-the-problem"></a>Sorunun tanımı  
- Bir koleksiyon aracılığıyla yinelenen LINQ kullanarak bazı kodlar yazdığınızda, bildirime dayalı bir stilde kod yazıyor demektir. İstediğiniz *şeyi* açıklamak, bunun yerine *nasıl* yapılacağını öğrenmek için daha fazla oturum vardır. 1\) ilk öğeyi alan bir kod yazarsanız, 2) onu bir koşul için sınar, 3) onu değiştirir ve 4) listeye geri koyar, bu da zorunlu kod olacaktır. Bilgisayara ne yapılacağını istediğinizi söyleirsiniz.  
+## <a name="definition-of-the-problem"></a>Sorunun Tanımı  
+ LinQ kullanarak bir koleksiyon aracılığıyla yineleyen bazı kodlar yazdığınızda, kodbildirimel bir biçimde yazarsınız. Bu daha çok *ne* istediğinizi açıklamaya benzer, daha çok *nasıl* yapmak istediğinizi. Eğer kod yazarsanız 1) ilk öğealır, 2) bazı koşullar için test, 3) değiştirir ve 4) listeye geri koyar, o zaman bu zorunlu kod olacaktır. Bilgisayara yapılmasını istediğin şeyi *nasıl* yapacağını söylüyorsun.  
   
- Bu kod stillerinin aynı işlemde karıştırılması, sorunlara yol gösterir. Aşağıdakileri göz önünde bulundurun:  
+ Bu kod stillerini aynı işlemde karıştırmak sorunlara yol açar. Aşağıdaki topluluklara bir göz atın:  
   
- İçinde üç öğe (a, b ve c) içeren bağlı bir listeniz olduğunu varsayalım:  
+ Içinde üç öğe (a, b ve c) bulunan bağlantılı bir listenizle varsayalım:  
   
  `a -> b -> c`  
   
- Şimdi, bağlantılı liste içinde, üç yeni öğe (', b ' ve c ') ekleyerek geçiş yapmak istediğinizi varsayalım. Elde edilen bağlantılı listenin şuna benzer görünmesini istiyorsunuz:  
+ Şimdi, üç yeni öğe (a', b', ve c') ekleyerek bağlantılı listede taşımak istediğinizi varsayalım. Ortaya çıkan bağlantılı listenin şuna benzemesini istiyorsunuz:  
   
  `a -> a' -> b -> b' -> c -> c'`  
   
- Bu nedenle, liste boyunca yinelenen kod yazdığınızda ve her öğe için, hemen sonrasında yeni bir öğe ekler. Ne olacağı, kodunuzun `a` öğeyi ilk göreceği ve sonra ekleneceği `a'` şeydir. Şimdi, kodunuz listede `a'`bir sonraki düğüme geçmeyecektir. Bu, `a''`listeye yeni bir öğe ekler.  
+ Bu nedenle, liste boyunca yineleyen bir kod yazarsınız ve her öğe için hemen sonra yeni bir öğe eklersiniz. Ne olur, kodunuzu ilk `a` öğeyi görmek `a'` ve ondan sonra eklemek olmasıdır. Şimdi, kodunuz listedeki bir sonraki düğüme `a'`geçecek, şimdi! Bu mutlu listeye yeni bir öğe `a''`ekler.  
   
- Bunu gerçek dünyada nasıl çözirsiniz? Ayrıca, özgün bağlantılı listenin bir kopyasını oluşturabilir ve tamamen yeni bir liste oluşturabilirsiniz. Ya da yalnızca zorunlu kod yazıyorsanız, ilk öğeyi bulabilir, yeni öğeyi ekleyebilir ve ardından bağlantılı listede iki kez ilerledikten sonra yeni eklediğiniz öğeden ilerleyebilirsiniz.  
+ Bunu gerçek dünyada nasıl çözersin? Orijinal bağlantılı listenin bir kopyasını oluşturup tamamen yeni bir liste oluşturabilirsiniz. Veya tamamen zorunlu kod yazıyorsanız, ilk öğeyi bulabilir, yeni öğeyi ekleyebilir ve bağlı listede iki kez ilerleyerek eklediğiniz öğenin üzerinde ilerleyebilirsiniz.  
   
-## <a name="adding-while-iterating"></a>Yineleme sırasında ekleme  
- Örneğin, bir ağaçtaki her öğe için bir kod yazmak istediğinizi, yinelenen bir öğe oluşturmak istediğinizi varsayalım:  
+## <a name="adding-while-iterating"></a>Yinelerken Ekleme  
+ Örneğin, bir ağaçtaki her öğe için yinelenen bir öğe oluşturmak istediğiniz bazı kodlar yazmak istediğinizi varsayalım:  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -44,9 +44,9 @@ foreach (XElement e in root.Elements())
     root.Add(new XElement(e.Name, (string)e));  
 ```  
   
- Bu kod sonsuz bir döngüye girer. İfade, `doc` öğesine yeni öğeler `Elements()` ekleyerek eksen boyunca yinelenir. `foreach` Aynı zamanda, yeni eklenen öğeler aracılığıyla yineleme sona erer. Ayrıca, döngünün her tekrarında yeni nesneler ayırdığından, son olarak tüm kullanılabilir belleği tüketir.  
+ Bu kod sonsuz bir döngüye girer. İfade `foreach` `Elements()` eksen üzerinden yineler ve `doc` öğeye yeni öğeler ekler. Sadece ekleyen öğeler aracılığıyla da yineler. Ve döngünün her yinelemeile yeni nesneler ayırdığı için, sonunda kullanılabilir tüm belleği tüketir.  
   
- Aşağıdaki gibi <xref:System.Linq.Enumerable.ToList%2A> standart sorgu işlecini kullanarak koleksiyonu belleğe çekerek bu sorunu çözebilirsiniz:  
+ Aşağıdaki <xref:System.Linq.Enumerable.ToList%2A> gibi, standart sorgu işleci kullanarak koleksiyonu belleğe çekerek bu sorunu çözebilirsiniz:  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -59,7 +59,7 @@ foreach (XElement e in root.Elements().ToList())
 Console.WriteLine(root);  
 ```  
   
- Kod artık işe yarar. Elde edilen XML ağacı aşağıda verilmiştir:  
+ Şimdi kod çalışıyor. Ortaya çıkan XML ağacı aşağıdaki gibidir:  
   
 ```xml  
 <Root>  
@@ -73,7 +73,7 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="deleting-while-iterating"></a>Yineleme sırasında silme  
- Tüm düğümleri belirli bir düzeyde silmek isterseniz, aşağıdaki gibi bir kod yazmayı düşünebilirsiniz:  
+ Belirli bir düzeydeki tüm düğümleri silmek istiyorsanız, aşağıdaki gibi kod yazmak isteyebilirsiniz:  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -86,9 +86,9 @@ foreach (XElement e in root.Elements())
 Console.WriteLine(root);  
 ```  
   
- Ancak, bu, istediğiniz şeyi yapmaz. Bu durumda, ilk öğesini kaldırıldıktan sonra, bir, kök içinde yer alan XML ağacından kaldırılır ve yineleme yapan öğeler yöntemindeki kod bir sonraki öğeyi bulamaz.  
+ Ancak, bu ne istediğinizi yapmaz. Bu durumda, ilk öğeyi kaldırdıktan sonra, A, kökte bulunan XML ağacından kaldırılır ve yineleyen öğeler yöntemindeki kod sonraki öğeyi bulamaz.  
   
- Yukarıdaki kod aşağıdaki çıktıyı üretir:  
+ Önceki kod aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root>  
@@ -97,7 +97,7 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
- Bu çözüm, koleksiyonu aşağıda gösterildiği <xref:System.Linq.Enumerable.ToList%2A> gibi yeniden gerçekleştirmek için çağrmaktır:  
+ Çözüm yine aşağıdaki <xref:System.Linq.Enumerable.ToList%2A> gibi, koleksiyonu hayata getirmek için aramaktır:  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -128,10 +128,10 @@ root.RemoveAll();
 Console.WriteLine(root);  
 ```  
   
-## <a name="why-cant-linq-automatically-handle-this"></a>LINQ neden bunu otomatik olarak Işleyemiyor?  
- Tek bir yaklaşım, her şeyi yavaş değerlendirme yapmak yerine her zaman belleğe getirmek olacaktır. Ancak, performans ve bellek kullanımı bakımından çok pahalıdır. Aslında, LINQ ve (LINQ to XML) bu yaklaşıma ulaşacaksa, gerçek dünyada durumlarda başarısız olur.  
+## <a name="why-cant-linq-automatically-handle-this"></a>LINQ Neden Bunu Otomatik Olarak İşletemez?  
+ Bir yaklaşım her zaman yerine tembel değerlendirme yapıyor bellek her şeyi getirmek olacaktır. Ancak, performans ve bellek kullanımı açısından çok pahalı olacaktır. Aslında, LINQ ve (LINQ XML için) bu yaklaşımı almak olsaydı, gerçek dünya durumlarda başarısız olur.  
   
- Başka bir olası yaklaşım, bazı işlem söz dizimine LINQ 'a yerleştirilecek ve derleyicinin kodu analiz etmeyi denemesini ve belirli bir koleksiyonun gerçekleştirilip gerçekleştirilmeyeceğini belirleyebilmesini sağlar. Ancak, yan etkileri olan tüm kodları belirleme girişimi inanılmaz karmaşıktır. Aşağıdaki kodu göz önünde bulundurun:  
+ Başka bir olası yaklaşım LINQ içine işlem sözdizimi çeşit koymak ve derleyici kodu analiz etmek ve belirli bir koleksiyon gerçekleştirilmesi için gerekli olup olmadığını belirlemek için girişimi olacaktır. Ancak, yan etkileri olan tüm kodu belirlemeye çalışmak inanılmaz derecede karmaşıktır. Aşağıdaki kodu inceleyin:  
   
 ```csharp  
 var z =  
@@ -140,20 +140,20 @@ var z =
     select DoMyProjection(e);  
 ```  
   
- Bu tür analiz kodu, herhangi bir kodun yan etkilere sahip olup olmadığını anlamak için TestSomeCondition ve DoMyProjection yöntemlerini ve bu yöntemlerin çağırdığı tüm yöntemleri analiz etmeniz gerekir. Ancak, analiz kodu yalnızca yan etkileri olan herhangi bir koda bakamadı. Bu durumda yalnızca alt öğelerinde `root` yan etkileri olan kod için seçim yapması gerekir.  
+ Bu tür analiz kodu yöntemleri TestSomeCondition ve DoMyProjection ve bu yöntemler in called tüm yöntemleri, herhangi bir kod yan etkileri olup olmadığını belirlemek için analiz etmek gerekir. Ama analiz kodu sadece yan etkileri olan herhangi bir kod aramak olamazdı. Bu durumda alt öğeleri `root` üzerinde yan etkileri vardı sadece kod için seçmek gerekir.  
   
- LINQ to XML böyle bir analiz yapmayı denemez.  
+ LINQ xml için böyle bir analiz yapmaya çalışmaz.  
   
- Bu sorunlardan kaçınmak sizin için.  
+ Bu sorunlardan kaçınmak size kalmış.  
   
-## <a name="guidance"></a>Kılavuz  
- İlk olarak, bildirim temelli ve kesinlik temelli kodu karıştırmayın.  
+## <a name="guidance"></a>Rehber  
+ İlk olarak, bildirimsel ve zorunlu kodu karıştırmayın.  
   
- Koleksiyonlarınızın semantiğini ve xml ağacını değiştiren yöntemlerin semantiğini bildiğiniz halde, bu sorun kategorilerini engelleyen bazı zekice kodu yazarsanız, kodunuzun gelecekte diğer geliştiriciler tarafından tutulması gerekir , ve sorunlar üzerinde açık olmayabilir. Bildirime dayalı ve kesinlik temelli kodlama stillerini karıştırırsanız, kodunuz daha Brittle olacaktır.  
+ Koleksiyonlarınızın anlambilimini ve XML ağacını değiştiren yöntemlerin anlambilimini tam olarak biliyor olsanız bile, bu sorun kategorilerinden kaçınan bazı akıllı kodlar yazarsanız, kodunuzu gelecekte diğer geliştiriciler tarafından muhafaza edilmesi gerekir ve bu konularda o kadar açık olmayabilir. Bildirimsel ve zorunlu kodlama stillerini karıştırırsanız, kodunuz daha kırılgan olacaktır.  
   
- Bu sorunların kaçınılması için bir koleksiyonu üreten bir kod yazarsanız, bakım programcılarının sorunu anlayabilmesi için kodunuzda uygun olan açıklamalara göz önünde bulabilirsiniz.  
+ Bu sorunların önlenebilecek şekilde bir koleksiyonu somutlaştıran bir kod yazarsanız, bakım programcılarının sorunu anlaması için bunu kodunuzda uygun açıklamalarla not edin.  
   
- İkincisi, performans ve diğer hususlar izin veriyor ise yalnızca bildirim temelli kod kullanın. Mevcut XML ağacınızı değiştirmeyin. Yeni bir tane oluşturun.  
+ İkinci olarak, performans ve diğer hususlar izin verirse, yalnızca bildirim kodu kullanın. Varolan XML ağacınızı değiştirmeyin. Yeni bir tane oluşturun.  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -167,4 +167,3 @@ XElement newRoot = new XElement("Root",
 );  
 Console.WriteLine(newRoot);  
 ```  
- 

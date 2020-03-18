@@ -1,49 +1,49 @@
 ---
-title: Atama işleçleri- C# başvuru
+title: Atama işleçleri - C# başvurusu
 ms.date: 09/10/2019
 f1_keywords:
 - =_CSharpKeyword
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 790249c4cc85128f529bd88a4bf27d8b75121aaa
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 420b41f586a6980d40cf1171eef00dad37bf5abf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239541"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399254"
 ---
-# <a name="assignment-operators-c-reference"></a>Atama işleçleri (C# başvuru)
+# <a name="assignment-operators-c-reference"></a>Atama işleçleri (C# başvurusu)
 
-Atama işleci `=`, sağ işleneninin değerini bir değişkene, [özelliğe](../../programming-guide/classes-and-structs/properties.md)veya sol tarafından verilen bir [Dizin Oluşturucu](../../programming-guide/indexers/index.md) öğesine atar. Atama ifadesinin sonucu, sol işlenene atanan değerdir. Sağ işlenenin türü, sol işlenenin türüyle aynı veya örtülü olarak dönüştürülebilir olmalıdır.
+Atama işleci, `=` sağ el operand değerini bir değişkene, bir [özelliğe](../../programming-guide/classes-and-structs/properties.md)veya sol operand tarafından verilen bir [dizinleyici](../../programming-guide/indexers/index.md) öğeye atar. Atama ifadesinin sonucu, sol operanda atanan değerdir. Sağ operand türü sol operand türü ile aynı olmalıdır veya dolaylı olarak dönüştürülebilir.
 
-Atama işleci `=`, doğru ilişkilendirilebilir, diğer bir deyişle, formun bir ifadesidir
+Atama işleci `=` sağ-bağşdırıcı, yani formun bir ifadesi
 
 ```csharp
 a = b = c
 ```
 
-şöyle değerlendirilir
+olarak değerlendirilir
 
 ```csharp
 a = (b = c)
 ```
 
-Aşağıdaki örnek, bir yerel değişken, bir özellik ve bir Dizin Oluşturucu öğesi olan atama işlecinin kullanımını sol işlenen olarak gösterir:
+Aşağıdaki örnek, atama işlecinin yerel bir değişken, özellik ve dizinleyici öğesi ile sol operand olarak kullanımını gösterir:
 
-[!code-csharp-interactive[simple assignment](~/samples/snippets/csharp/language-reference/operators/AssignmentOperator.cs#Simple)]
+[!code-csharp-interactive[simple assignment](snippets/AssignmentOperator.cs#Simple)]
 
-## <a name="ref-assignment-operator"></a>ref atama işleci
+## <a name="ref-assignment-operator"></a>ref atama operatörü
 
-7,3 ' C# den başlayarak ref atama işlecini `= ref` bir [ref yerel](../keywords/ref.md#ref-locals) veya [ref ReadOnly yerel](../keywords/ref.md#ref-readonly-locals) değişkenini yeniden atamak için kullanabilirsiniz. Aşağıdaki örnek, ref atama işlecinin kullanımını gösterir:
+C# 7.3 ile başlayarak, ref `= ref` atama işlecini kullanarak bir [ref yerel](../keywords/ref.md#ref-locals) veya [ref salt yerel](../keywords/ref.md#ref-readonly-locals) değişkeni yeniden atayabilirsiniz. Aşağıdaki örnek, ref atama işlecinin kullanımını gösterir:
 
-[!code-csharp[ref assignment operator](~/samples/snippets/csharp/language-reference/operators/AssignmentOperator.cs#RefAssignment)]
+[!code-csharp[ref assignment operator](snippets/AssignmentOperator.cs#RefAssignment)]
 
-Ref atama operatörü durumunda, her iki işleneni de aynı türde olmalıdır.
+Ref atama işleci söz konusu olduğunda, her iki operands aynı tip olmalıdır.
 
 ## <a name="compound-assignment"></a>Bileşik atama
 
-Bir ikili işleç `op`için, formun bileşik atama ifadesi
+Bir ikili `op`işleç için, formun bileşik atama ifadesi
 
 ```csharp
 x op= y
@@ -55,28 +55,28 @@ eşdeğerdir
 x = x op y
 ```
 
-`x` hariç, yalnızca bir kez değerlendirilir.
+`x` bunun dışında sadece bir kez değerlendirilir.
 
-Bileşik atama [Aritmetik](arithmetic-operators.md#compound-assignment), [Boole mantıksal](boolean-logical-operators.md#compound-assignment)ve [bit düzeyinde mantıksal ve kaydırma](bitwise-and-shift-operators.md#compound-assignment) işleçleri tarafından desteklenir.
+Bileşik atama [aritmetik](arithmetic-operators.md#compound-assignment)tarafından desteklenir , [Boolean mantıksal](boolean-logical-operators.md#compound-assignment), ve [bitwise mantıksal ve kaydırma](bitwise-and-shift-operators.md#compound-assignment) işleçleri.
 
-## <a name="null-coalescing-assignment"></a>Null birleştirme ataması
+## <a name="null-coalescing-assignment"></a>Null-coalescing atama
 
-8,0 ' C# den başlayarak, sağ işleneninin değerini yalnızca sol taraftaki işlenenin `null`olarak değerlendirdiği durumlarda sol işlenenin değerini atamak için null birleşim atama işlecini `??=` kullanabilirsiniz. Daha fazla bilgi için?? [ve?? = operatörler](null-coalescing-operator.md) makalesi.
+C# 8.0 ile başlayarak, null-coalescing `??=` atama işleci nin sağ operand değerini sol operand'ına atamak için kullanabilirsiniz ve `null`ancak sol operand'ın değerlendirilmesi durumunda. Daha fazla bilgi için, bkz [?? = işleçler](null-coalescing-operator.md) makale.
 
-## <a name="operator-overloadability"></a>Operatör overloadability
+## <a name="operator-overloadability"></a>Operatör aşırı yüklenebilirlik
 
-Kullanıcı tanımlı bir tür atama işlecini [aşırı yükleyemez](operator-overloading.md) . Ancak, Kullanıcı tanımlı bir tür, başka bir türe örtük bir dönüştürme tanımlayabilir. Bu şekilde, Kullanıcı tanımlı bir türün değeri bir değişkene, özelliğe veya başka bir türün Dizin Oluşturucu öğesine atanabilir. Daha fazla bilgi için bkz. [Kullanıcı tanımlı dönüştürme işleçleri](user-defined-conversion-operators.md).
+Kullanıcı tanımlı bir tür atama işlecinin [aşırı yüklenemez.](operator-overloading.md) Ancak, kullanıcı tanımlı bir tür, başka bir türe örtülü dönüştürme tanımlayabilir. Bu şekilde, kullanıcı tanımlı bir türün değeri başka bir türdeki bir değişkene, bir özelliğe veya dizinleyici öğesine atanabilir. Daha fazla bilgi için [Bkz. Kullanıcı tanımlı dönüşüm operatörleri.](user-defined-conversion-operators.md)
 
-Kullanıcı tanımlı bir tür, bileşik atama işlecini açıkça aşırı yükleyemez. Ancak, Kullanıcı tanımlı bir tür bir ikili işleci `op`aşırı yükle, varsa `op=` işleci de dolaylı olarak aşırı yüklenmiştir.
+Kullanıcı tanımlı bir tür, bileşik atama işlecinin aşırı yüklenemeyeceğini açıkça ifade eder. Ancak, kullanıcı tanımlı bir tür bir `op`ikili `op=` işleci aşırı yüklerse , operatör, varsa, aynı zamanda örtülü olarak aşırı yüklenir.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [atama işleçleri](~/_csharplang/spec/expressions.md#assignment-operators) bölümüne bakın.
+Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Atama işleçleri](~/_csharplang/spec/expressions.md#assignment-operators) bölümüne bakın.
 
-Başvuru atama işleci `= ref`hakkında daha fazla bilgi için bkz. [özellik teklifi Not](~/_csharplang/proposals/csharp-7.3/ref-local-reassignment.md).
+Ref atama işleci `= ref`hakkında daha fazla bilgi [için, özellik teklif notuna](~/_csharplang/proposals/csharp-7.3/ref-local-reassignment.md)bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvurunun](../index.md)
+- [C# başvurusu](../index.md)
 - [C# işleçleri](index.md)
-- [ref anahtar sözcüğü](../keywords/ref.md)
+- [ref anahtar kelime](../keywords/ref.md)

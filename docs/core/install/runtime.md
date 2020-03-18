@@ -1,46 +1,46 @@
 ---
-title: Windows, Linux ve macOS-.NET Core 'a .NET Core çalışma zamanı 'nı yükler
-description: Windows, Linux ve macOS 'ta .NET Core 'u yüklemeyi öğrenin. .NET Core uygulamalarını çalıştırmak için gereken bağımlılıkları bulur.
+title: Windows, Linux ve macOS'a .NET Core çalışma süresini yükleme - .NET Core
+description: .NET Core'u Windows, Linux ve macOS'a nasıl yükleyin öğrenin. .NET Core uygulamalarını çalıştırmak için gereken bağımlılıkları keşfedin.
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: a41bbdf5419585f06773583dbe82ab0d84ebaa4c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: ca55b8fab4aa9ca9f7e308cce57181e2c7e89f4b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157642"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399016"
 ---
-# <a name="install-the-net-core-runtime"></a>.NET Core çalışma zamanını yükler
+# <a name="install-the-net-core-runtime"></a>.NET Çekirdek Çalışma Süresini Yükleyin
 
-Bu makalede, .NET Core çalışma zamanının nasıl indirileceği ve kurulacağı hakkında bilgi edineceksiniz. .NET Core çalışma zamanı .NET Core ile oluşturulan uygulamaları çalıştırmak için kullanılır.
+Bu makalede, .NET Core çalışma saatini nasıl indireceğinizi ve yükleyeceğinizi öğreneceksiniz. .NET Core çalışma süresi , .NET Core ile oluşturulan uygulamaları çalıştırmak için kullanılır.
 
 ::: zone pivot="os-windows"
 
-## <a name="install-with-an-installer"></a>Bir yükleyici ile yükleme
+## <a name="install-with-an-installer"></a>Yükleyiciyle yükleme
 
-Windows, .NET Core 3,1 çalışma zamanını yüklemek için kullanılabilecek tek başına yükleyicilere sahiptir:
+Windows'da .NET Core 3.1 çalışma süresini yüklemek için kullanılabilecek bağımsız yükleyiciler vardır:
 
-- [x64 (64-bit) CPU 'Lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- [x86 (32 bit) CPU 'Lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [x64 (64-bit) CPU'lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [x86 (32-bit) CPU'lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ::: zone-end
 
 ::: zone pivot="os-macos"
 
-## <a name="install-with-an-installer"></a>Bir yükleyici ile yükleme
+## <a name="install-with-an-installer"></a>Yükleyiciyle yükleme
 
-macOS, .NET Core 3,1 çalışma zamanını yüklemek için kullanılabilecek tek başına yükleyicilere sahiptir:
+macOS,.NET Core 3.1 çalışma süresini yüklemek için kullanılabilecek bağımsız yükleyicilere sahiptir:
 
-- [x64 (64-bit) CPU 'Lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [x64 (64-bit) CPU'lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-## <a name="download-and-manually-install"></a>İndirme ve el ile yükleme
+## <a name="download-and-manually-install"></a>İndirin ve el ile yükleyin
 
-.NET Core için macOS yükleyicilerine alternatif olarak, çalışma zamanını indirip el ile yükleyebilirsiniz.
+.NET Core için macOS yükleyicilere alternatif olarak çalışma süresini indirebilir ve el ile yükleyebilirsiniz.
 
-Çalışma zamanını yüklemek ve terminalde bulunan .NET Core CLI komutlarını etkinleştirmek için önce bir .NET Core ikili sürümü [indirin](#all-net-core-downloads) . Ardından, bir Terminal açın ve aşağıdaki komutları çalıştırın. Çalışma zamanının `~/Downloads/dotnet-runtime.pkg` dosyasına indirildiği varsayılır.
+Çalışma süresini yüklemek ve terminalde bulunan .NET Core CLI komutlarını etkinleştirmek için önce bir .NET Core ikili sürümü [indirin.](#all-net-core-downloads) Ardından, bir terminal açın ve aşağıdaki komutları çalıştırın. Çalışma zamanının `~/Downloads/dotnet-runtime.pkg` dosyaya indirilmiş olduğu varsayılır.
 
 ```bash
 mkdir -p $HOME/dotnet
@@ -53,15 +53,15 @@ export PATH=$PATH:$HOME/dotnet
 
 ::: zone pivot="os-linux"
 
-## <a name="install-with-a-package-manager"></a>Paket Yöneticisi ile yüklemesi
+## <a name="install-with-a-package-manager"></a>Paket yöneticisiyle yükleme
 
-.NET Core çalışma zamanını birçok ortak Linux Paket Yöneticisi ile yükleyebilirsiniz. Daha fazla bilgi için bkz. [Linux Paket Yöneticisi-.NET Core 'U yükler](linux-package-managers.md).
+.NET Core Runtime'ı birçok ortak Linux paket yöneticisiyle birlikte yükleyebilirsiniz. Daha fazla bilgi için [Linux Package Manager - Install .NET Core](linux-package-managers.md)'a bakın.
 
-Paketi bir paket yöneticisi ile yüklemek yalnızca x64 mimarisinde desteklenir. .NET Core çalışma zamanını ARM gibi farklı bir mimariye yüklüyorsanız, [indir ve el ile yükle](#download-and-manually-install) bölümündeki yönergeleri izleyin. Desteklenen mimariler hakkında daha fazla bilgi için bkz. [.NET Core Dependencies ve Requirements](dependencies.md).
+Bir paket yöneticisi ile yükleme yalnızca x64 mimarisinde desteklenir. .NET Core Runtime'ı ARM gibi farklı bir mimariyle yüklüyorsanız, İndir meyhanedeki yönergeleri izleyin [ve el ile yükleyin.](#download-and-manually-install) Hangi mimarilerin desteklendirilip desteklendirildigini daha fazla bilgi için [.NET Core bağımlılıkları ve gereksinimleri](dependencies.md)bölümüne bakın.
 
-## <a name="download-and-manually-install"></a>İndirme ve el ile yükleme
+## <a name="download-and-manually-install"></a>İndirin ve el ile yükleyin
 
-Çalışma zamanını ayıklamak ve .NET Core CLI komutlarının terminalde kullanılabilir hale getirmek için önce bir .NET Core ikili sürümü [indirin](#all-net-core-downloads) . Ardından, bir Terminal açın ve aşağıdaki komutları çalıştırın.
+Çalışma süresini ayıklamak ve .NET Core CLI komutlarını terminalde kullanılabilir hale getirmek için önce bir .NET Core ikili sürüm [indirin.](#all-net-core-downloads) Ardından, bir terminal açın ve aşağıdaki komutları çalıştırın.
 
 ```bash
 mkdir -p $HOME/dotnet && tar zxf aspnetcore-runtime-3.1.0-linux-x64.tar.gz -C $HOME/dotnet
@@ -70,51 +70,51 @@ export PATH=$PATH:$HOME/dotnet
 ```
 
 > [!TIP]
-> Yukarıdaki `export` komutları yalnızca .NET Core CLI komutlarını çalıştırıldığı terminal oturumu için kullanılabilir hale getirir.
+> Önceki `export` komutlar yalnızca çalıştırıldığı terminal oturumu için .NET Core CLI komutlarını kullanılabilir hale getirin.
 >
-> Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örnek:
+> Komutları kalıcı olarak eklemek için kabuk profilinizi edebilirsiniz. Linux için farklı kabukları bir dizi vardır ve her biri farklı bir profile sahiptir. Örnek:
 >
-> - **Bash kabuğu**: *~/. bash_profile*, *~/,bashrc*
-> - **Korn kabuğu**: *~/,KSHRC* veya *. Profile*
-> - **Z kabuğu**: *~/,zshrc* veya *. zprofile*
+> - **Bash Kabuk**: *~/.bash_profile*, *~/.bashrc*
+> - **Korn Kabuk**: *~/.kshrc* veya *.profile*
+> - **Z Kabuk**: *~/.zshrc* veya *.zprofile*
 >
-> Kabuğunuz için uygun kaynak dosyayı düzenleyin ve mevcut `PATH` ifadesinin sonuna `:$HOME/dotnet` ekleyin. `PATH` bir ifade dahil yoksa, `export PATH=$PATH:$HOME/dotnet`yeni bir satır ekleyin.
+> Kabuğunuz için uygun kaynak dosyayı `:$HOME/dotnet` edin ve `PATH` varolan ifadenin sonuna ekleyin. Hiçbir `PATH` deyim dahil değilse, `export PATH=$PATH:$HOME/dotnet`yeni bir satır ekleyin.
 >
-> Ayrıca, dosyanın sonuna `export DOTNET_ROOT=$HOME/dotnet` ekleyin.
+> Ayrıca, `export DOTNET_ROOT=$HOME/dotnet` dosyanın sonuna ekleyin.
 
-Bu yaklaşım ayrı konumlara farklı sürümler yüklemenize ve hangi uygulamayı kullanmak üzere açık bir şekilde tercih etmenize olanak tanır.
+Bu yaklaşım, farklı sürümleri ayrı konumlara yüklemenize ve hangi uygulamatarafından kullanılacağını açıkça seçmenize olanak tanır.
 
 ::: zone-end
 
 ::: zone pivot="os-windows"
 
-## <a name="install-with-powershell-automation"></a>PowerShell otomasyonu ile Install
+## <a name="install-with-powershell-automation"></a>PowerShell otomasyonu ile yükleme
 
-[DotNet yükleme betikleri](../tools/dotnet-install-script.md) , çalışma zamanının Otomasyon ve yönetici olmayan yüklemeleri için kullanılır. Betiği, [DotNet yükleme betiği başvuru sayfasından](../tools/dotnet-install-script.md)indirebilirsiniz.
+[Dotnet yükleme komut dosyaları,](../tools/dotnet-install-script.md) çalışma zamanının otomasyonu ve yönetici olmayan yüklemeleri için kullanılır. Komut dosyasını [dotnet yükleme komut dosyası başvuru sayfasından](../tools/dotnet-install-script.md)indirebilirsiniz.
 
-Komut dosyası, .NET Core 3,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. `Channel` anahtarını belirterek belirli bir yayını seçebilirsiniz. Çalışma zamanı yüklemek için `Runtime` anahtarını ekleyin. Aksi halde, komut dosyası [SDK 'yı](sdk.md)yüklüyor.
+Komut dosyası, .NET Core 3.1 olan en son [uzun vadeli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılandır. `Channel` Anahtarı belirterek belirli bir sürüm seçebilirsiniz. Çalışma `Runtime` süresini yüklemek için anahtarı ekleyin. Aksi takdirde, komut dosyası [SDK](sdk.md)yükler.
 
 ```powershell
 dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore
 ```
 
 > [!NOTE]
-> Yukarıdaki komut, ASP.NET Core çalışma zamanını maksimum uyumluluk için yüklerse. ASP.NET Core çalışma zamanı, standart .NET Core çalışma zamanını da içerir.
+> Yukarıdaki komut, maksimum uyumluluk için ASP.NET Core çalışma süresini yükler. core ASP.NET çalışma süresi standart .NET Core çalışma süresini de içerir.
 
-## <a name="download-and-manually-install"></a>İndirme ve el ile yükleme
+## <a name="download-and-manually-install"></a>İndirin ve el ile yükleyin
 
-Çalışma zamanını ayıklamak ve .NET Core CLI komutlarının terminalde kullanılabilir hale getirmek için önce bir .NET Core ikili sürümü [indirin](#all-net-core-downloads) . Ardından, yüklemek için bir dizin oluşturun, örneğin `%USERPROFILE%\dotnet`. Son olarak, indirilen ZIP dosyasını bu dizine ayıklayın.
+Çalışma süresini ayıklamak ve .NET Core CLI komutlarını terminalde kullanılabilir hale getirmek için önce bir .NET Core ikili sürüm [indirin.](#all-net-core-downloads) Ardından, yüklemek için bir dizin `%USERPROFILE%\dotnet`oluşturun, örneğin. Son olarak, indirilen zip dosyasını bu dizine ayıklayın.
 
-Varsayılan olarak, .NET Core CLI komutları ve uygulamalar .NET Core 'u bu şekilde kullanmaz. Açıkça kullanmayı tercih etmeniz gerekir. Bunu yapmak için, bir uygulamanın başlatıldığı ortam değişkenlerini değiştirin:
+Varsayılan olarak, .NET Core CLI komutları ve uygulamaları bu şekilde yüklenen .NET Core'u kullanmaz. Açıkça kullanmayı seçmelisiniz. Bunu yapmak için, bir uygulamanın başlatıldıği ortam değişkenlerini değiştirin:
 
 ```console
 set DOTNET_ROOT=%USERPROFILE%\dotnet
 set PATH=%USERPROFILE%\dotnet;%PATH%
 ```
 
-Bu yaklaşım, farklı konumlara birden çok sürüm yüklemenize olanak sağlar ve ardından uygulamayı o konuma işaret eden ortam değişkenleriyle çalıştırarak uygulamanın kullanması gereken yüklemeyi açıkça seçebilirsiniz.
+Bu yaklaşım, birden çok sürümü ayrı konumlara yüklemenize olanak tanır, ardından uygulamayı o konumu işaret eden ortam değişkenleri ile çalıştırarak uygulamanın hangi yükleme konumunu kullanması gerektiğini açıkça seçebilirsiniz.
 
-Bu ortam değişkenleri ayarlansa bile, .NET Core uygulamayı çalıştırmak için en iyi çerçeveyi seçerken varsayılan genel yüklemesi konumunu yine de dikkate alır. Varsayılan değer genellikle yükleyicilerin kullanacağı `C:\Program Files\dotnet`. Çalışma zamanına yalnızca bu ortam değişkenini de ayarlayarak özel bir yüklemede kullanmak üzere talimat verebilirsiniz:
+Bu ortam değişkenleri ayarlandığında bile,.NET Core, uygulamayı çalıştırmak için en iyi çerçeveyi seçerken varsayılan genel yükleme konumunu dikkate alır. Varsayılan genellikle `C:\Program Files\dotnet`, yükleyiciler kullanır. Çalışma zamanını yalnızca bu ortam değişkenini ayarlayarak özel yükleme konumunu kullanması için talimat verebilirsiniz:
 
 ```console
 set DOTNET_MULTILEVEL_LOOKUP=0
@@ -124,40 +124,38 @@ set DOTNET_MULTILEVEL_LOOKUP=0
 
 ::: zone pivot="os-linux,os-macos"
 
-## <a name="install-with-bash-automation"></a>Bash otomasyonu ile Install
+## <a name="install-with-bash-automation"></a>Bash otomasyonu ile yükleyin
 
-[DotNet yükleme betikleri](../tools/dotnet-install-script.md) , çalışma zamanının Otomasyon ve yönetici olmayan yüklemeleri için kullanılır. Betiği, [DotNet yükleme betiği başvuru sayfasından](../tools/dotnet-install-script.md)indirebilirsiniz.
+[Dotnet yükleme komut dosyaları,](../tools/dotnet-install-script.md) çalışma zamanının otomasyonu ve yönetici olmayan yüklemeleri için kullanılır. Komut dosyasını [dotnet yükleme komut dosyası başvuru sayfasından](../tools/dotnet-install-script.md)indirebilirsiniz.
 
-Komut dosyası, .NET Core 3,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. `current` anahtarını belirterek belirli bir yayını seçebilirsiniz. Çalışma zamanı yüklemek için `runtime` anahtarını ekleyin. Aksi halde, komut dosyası [SDK 'yı](sdk.md)yüklüyor.
+Komut dosyası, .NET Core 3.1 olan en son [uzun vadeli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılandır. `current` Anahtarı belirterek belirli bir sürüm seçebilirsiniz. Çalışma `runtime` süresini yüklemek için anahtarı ekleyin. Aksi takdirde, komut dosyası [SDK](sdk.md)yükler.
 
 ```bash
 ./dotnet-install.sh --channel 3.1 --runtime aspnetcore
 ```
 
 > [!NOTE]
-> Yukarıdaki komut, ASP.NET Core çalışma zamanını maksimum uyumluluk için yüklerse. ASP.NET Core çalışma zamanı, standart .NET Core çalışma zamanını da içerir.
+> Yukarıdaki komut, maksimum uyumluluk için ASP.NET Core çalışma süresini yükler. core ASP.NET çalışma süresi standart .NET Core çalışma süresini de içerir.
 
 ::: zone-end
 
-## <a name="all-net-core-downloads"></a>Tüm .NET Core İndirmeleri
+## <a name="all-net-core-downloads"></a>Tüm .NET Core indirmeleri
 
-.NET Core ' u aşağıdaki bağlantılardan biriyle doğrudan indirebilir ve yükleyebilirsiniz:
+.NET Core'u aşağıdaki bağlantılardan biriyle doğrudan indirip yükleyebilirsiniz:
 
-- [.NET Core 3,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- [.NET Core 3,0 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-- [.NET Core 2,2 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.2)
-- [.NET Core 2,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.1)
+- [.NET Core 3.1 indirme](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [.NET Core 2.1 indirme](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 
 ## <a name="docker"></a>Docker
 
-Kapsayıcılar, uygulamanızı ana bilgisayar sisteminin geri kalanından yalıtmak için basit bir yol sağlar. Aynı makinedeki kapsayıcılar yalnızca çekirdeği paylaşır ve uygulamanıza verilen kaynakları kullanır.
+Kapsayıcılar, uygulamanızı ana bilgisayar sisteminin geri kalanından yalıtmak için hafif bir yol sağlar. Aynı makinedeki kaplar sadece çekirdeği paylaşır ve uygulamanıza verilen kaynakları kullanır.
 
-.NET Core, Docker kapsayıcısında çalıştırılabilir. Resmi .NET Core Docker görüntüleri Microsoft Container Registry (MCR) ' de yayımlanır ve [Microsoft .NET Core Docker Hub deposunda](https://hub.docker.com/_/microsoft-dotnet-core/)bulunabilir. Her depo, .NET (SDK veya çalışma zamanı) ve kullanabileceğiniz farklı .NET birleşimlerinin görüntülerini içerir.
+.NET Core bir Docker konteynerinde çalıştırılabilir. Resmi .NET Core Docker görüntüleri Microsoft Konteyner Kayıt Defteri'nde (MCR) yayınlanır ve [Microsoft .NET Core Docker Hub deposunda](https://hub.docker.com/_/microsoft-dotnet-core/)keşfedilebilir. Her depo, kullanabilirsiniz .NET (SDK veya Runtime) ve işletim sistemi farklı kombinasyonları için görüntüler içerir.
 
-Microsoft, belirli senaryolar için uyarlanmış görüntüler sağlar. Örneğin, [ASP.NET Core deposu](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) üretimde ASP.NET Core uygulamaları çalıştırmak için oluşturulmuş görüntüler sağlar.
+Microsoft, belirli senaryolar için özel leştirilmiş görüntüler sağlar. Örneğin, [ASP.NET Core deposu,](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) üretimde Core uygulamaları ASP.NET çalıştırmak için oluşturulmuş görüntüler sağlar.
 
-Bir Docker kapsayıcısında .NET Core kullanma hakkında daha fazla bilgi için bkz. [.net ve Docker](../docker/introduction.md) ve [örneklere](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md)giriş.
+Docker konteynerinde .NET Core kullanma hakkında daha fazla bilgi için [.NET ve Docker ve Örneklere Giriş'e](../docker/introduction.md) bakın. [Samples](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [.NET Core 'un zaten yüklü olup olmadığını denetleme](how-to-detect-installed-versions.md).
+- [.NET Core'un zaten yüklü olup olmadığını nasıl kontrol edilir?](how-to-detect-installed-versions.md)

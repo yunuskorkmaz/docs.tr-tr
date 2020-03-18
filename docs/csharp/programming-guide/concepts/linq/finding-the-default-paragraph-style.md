@@ -1,25 +1,25 @@
 ---
-title: Varsayılan paragraf stilini bulma (C#)
+title: Varsayılan Paragraf Stilini Bulma (C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 45a3e293a88fc0d7fc6aa70d21d1d3a6a8bb9b13
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 8cc1f1b9df208b0b180e5fe4a50922b5ee46b480
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204109"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169538"
 ---
-# <a name="finding-the-default-paragraph-style-c"></a>Varsayılan paragraf stilini bulma (C#)
-WordprocessingML belgesi öğreticisindeki düzenleme bilgilerinde ilk görev, belgede varsayılan paragraf stilini bullevidir.  
+# <a name="finding-the-default-paragraph-style-c"></a>Varsayılan Paragraf Stilini Bulma (C#)
+WordprocessingML Belge öğreticisinde Bilgileri Manipüle Etme'deki ilk görev, belgedeki paragrafların varsayılan stilini bulmaktır.  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnek, bir Office Open XML WordprocessingML belgesi açar, paketin belge ve stil parçalarını bulur ve ardından varsayılan stil adını bulan bir sorgu yürütür. Office Open XML belge paketleri ve içerdikleri parçalar hakkında daha fazla bilgi için bkz. [Office Open XML WordprocessingML belgelerinin ayrıntıları (C#)](./wordprocessingml-document-with-styles.md).  
+ Aşağıdaki örnek, bir Office Open XML WordprocessingML belgesini açar, belgeve stil bölümlerini bulur ve sonra varsayılan stil adını bulan bir sorgu yürütür. Office Open XML belge paketleri ve bunların oluşan bölümleri hakkında bilgi [için](./wordprocessingml-document-with-styles.md)Bkz.  
   
- Sorgu, "paragraf" değeri `w:style` `w:type` ile adlandırılmış bir özniteliği olan adlı bir düğümü bulur ve ayrıca "1" değerine sahip adlı `w:default` bir özniteliğe sahiptir. Bu özniteliklere sahip yalnızca bir XML düğümü olacağı için, sorgu <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> işleci kullanarak bir koleksiyonu tek bir öğesine dönüştürür. Daha sonra, adlı `w:styleId`özniteliğin değerini alır.  
+ Sorgu, "paragraf" `w:style` değeriyle adında `w:type` bir özniteliği olan ve "1" değeriyle `w:default` de adlandırılan bir özniteliği olan bir düğüm bulur. Bu özniteliklere sahip yalnızca bir XML düğümü olacağından, sorgu bir koleksiyonu singletona dönüştürmek için <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> işleci kullanır. Daha sonra özniteliğin değerini adı `w:styleId`ile alır.  
   
- Bu örnek, WindowsBase derlemesinden sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> Ad alanındaki türleri kullanır.  
+ Bu örnek, WindowsBase derlemesi sınıflarını kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> Ad alanında türleri kullanır.  
   
 ### <a name="code"></a>Kod  
   
@@ -65,7 +65,7 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
 }  
   
 // The following query finds all the paragraphs that have the default style.  
-string defaultStyle =   
+string defaultStyle =
     (string)(  
         from style in styleDoc.Root.Elements(w + "style")  
         where (string)style.Attribute(w + "type") == "paragraph"&&  
@@ -76,14 +76,14 @@ string defaultStyle =
 Console.WriteLine("The default style is: {0}", defaultStyle);  
 ```  
   
-### <a name="comments"></a>Açıklamalar  
- Bu örnek aşağıdaki çıktıyı üretir:  
+### <a name="comments"></a>Yorumlar  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```output  
 The default style is: Normal  
 ```  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Sonraki örnekte, bir belgedeki ve stillerinin tüm paragraflarını bulan benzer bir sorgu oluşturacaksınız:  
+ Sonraki örnekte, belgedeki tüm paragrafları ve stillerini bulan benzer bir sorgu oluşturursunuz:  
   
-- [Paragrafları ve stillerini alma (C#)](./retrieving-the-paragraphs-and-their-styles.md)  
+- [Paragrafları ve Stillerinin Alınması (C#)](./retrieving-the-paragraphs-and-their-styles.md)  

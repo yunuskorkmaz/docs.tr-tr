@@ -1,27 +1,27 @@
 ---
-title: İlgili öğeleri bulma (XPath-LINQ to XML) (C#)
+title: İlgili öğeleri bulma (XPath-LINQ - XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: cdc281d0b08ee7b7f93ac28b14e82fa113a3379d
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f74c338019c0451ab5e3ac0d8da10392ae5601ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141025"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169239"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>İlgili öğeleri bulma (XPath-LINQ to XML) (C#)
-Bu konu başlığı altında, başka bir öğenin değeri tarafından başvurulan bir özniteliği seçme öğesinin nasıl alınacağı gösterilmektedir.  
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>İlgili öğeleri bulma (XPath-LINQ - XML) (C#)
+Bu konu, başka bir öğenin değeri tarafından başvurulan bir öznitelik üzerinde seçili bir öğenin nasıl alınabildiğini gösterir.  
   
  XPath ifadesi:  
   
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, 12. `Order` öğesini bulur ve ardından o sipariş için müşteriyi bulur.  
+ Bu örnek 12. `Order` öğeyi bulur ve ardından bu siparişin müşterisini bulur.  
   
- .NET 'teki bir listede dizin oluşturmanın ' sıfır ' tabanlı olduğunu unutmayın. XPath koşulunda bir düğümler koleksiyonuna dizin oluşturma işlemi ' One ' tabanlıdır. Bu örnek, bu farkı yansıtır.  
+ .NET'te bir listeye dizin oluşturmanın 'sıfır' tabanlı olduğunu unutmayın. XPath yüklemindeki düğümler koleksiyonuna dizin oluşturma 'bir' tabanlıdır. Bu örnek, bu farkı yansıtır.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Müşteriler ve Siparişler (LINQ-XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  
@@ -64,7 +64,7 @@ else
 Console.WriteLine(customer1);  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```output  
 Results are identical  
@@ -83,4 +83,3 @@ Results are identical
   </FullAddress>  
 </Customer>  
 ```  
- 

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - garbage collection [.NET Framework profiling]
 ms.assetid: fd0462f7-57ad-4858-bf62-958378873602
 ms.openlocfilehash: e4b8d7fc0882e16643a7b46aafe3e00c70ca67ca
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140289"
 ---
-# <a name="memory-management-and-garbage-collection-in-net"></a>.NET ' te bellek yönetimi ve çöp toplama
-Belgelerinin bu bölümü, .NET 'teki belleği yönetme hakkında bilgi sağlar.  
+# <a name="memory-management-and-garbage-collection-in-net"></a>Bellek Yönetimi ve Çöp Toplama .NET
+Belgelerin bu bölümü .NET'te bellek yönetimi hakkında bilgi sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Yönetilmeyen Kaynakları Temizleme](../../../docs/standard/garbage-collection/unmanaged.md)  
- Yönetilmeyen kaynakların nasıl doğru şekilde yönetileceğini ve temizleneceğini açıklar.  
+ Yönetilmeyen kaynakların düzgün bir şekilde nasıl yönetilenve temizlenecek yapılacağını açıklar...  
   
- [Atık Toplama](../../../docs/standard/garbage-collection/index.md)  
- .NET atık toplayıcısı hakkında bilgi sağlar.  
+ [Çöp Toplama](../../../docs/standard/garbage-collection/index.md)  
+ .NET çöp toplayıcısı hakkında bilgi sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Geliştirme Kılavuzu](../../../docs/framework/development-guide.md)

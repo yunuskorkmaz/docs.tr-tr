@@ -1,6 +1,6 @@
 ---
-title: Eşitlik işleçleri- C# başvuru
-description: Eşitlik karşılaştırma C# işleçleri ve C# tür eşitlik hakkında bilgi edinin.
+title: Eşitlik operatörleri - C# referansı
+description: C# eşitlik karşılaştırma işleçleri ve C# türü eşitliği hakkında bilgi edinin.
 ms.date: 06/26/2019
 author: pkulikov
 f1_keywords:
@@ -15,83 +15,83 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 099e535dc9dae1f7e93200509a02c8762ce43c27
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 079522b18afdf86a942d502672174516d45d37fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239346"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399569"
 ---
-# <a name="equality-operators-c-reference"></a>Eşitlik işleçleri (C# başvuru)
+# <a name="equality-operators-c-reference"></a>Eşitlik operatörleri (C# başvurusu)
 
-[`==` (eşitlik)](#equality-operator-) ve [`!=` (eşitsizlik)](#inequality-operator-) işleçleri işlenenlerinin eşit olup olmadığını denetler.
+[ `==` (Eşitlik)](#equality-operator-) ve [ `!=` (eşitsizlik)](#inequality-operator-) işleçleri, operandlarının eşit olup olmadığını kontrol eder.
 
-## <a name="equality-operator-"></a>Eşitlik işleci = =
+## <a name="equality-operator-"></a>Eşitlik işleci ==
 
-`==` eşitlik işleci, işlenenleri eşitse `true` döndürür `false` Aksi takdirde.
+Eşitlik `==` işleci, `true` operands eşitse, `false` aksi takdirde döner.
 
-### <a name="value-types-equality"></a>Değer türleri eşitlik
+### <a name="value-types-equality"></a>Değer türleri eşitliği
 
-[Yerleşik değer türlerinin](../builtin-types/value-types.md#built-in-value-types) işlenenleri, değerleri eşitse eşittir:
+[Yerleşik değer türlerinin](../builtin-types/value-types.md#built-in-value-types) operands değerleri eşit ise eşittir:
 
-[!code-csharp-interactive[value types equality](~/samples/snippets/csharp/language-reference/operators/EqualityOperators.cs#ValueTypesEquality)]
+[!code-csharp-interactive[value types equality](snippets/EqualityOperators.cs#ValueTypesEquality)]
 
 > [!NOTE]
-> `==`, [`<`, `>`, `<=`ve `>=`](comparison-operators.md) işleçleri için, işlenenlerin herhangi biri bir sayı değilse (<xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType>), işlemin sonucu `false`olur. Diğer bir deyişle, `NaN` değeri, `NaN`dahil herhangi bir `double` (veya `float`) değerinden daha fazla, daha küçüktür veya eşit değildir. Daha fazla bilgi ve örnek için bkz. <xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType> başvuru makalesi.
+> Için `==` [ `<`, `>`, `<=`, `>=` , ve](comparison-operators.md) operatörler, herhangi bir operands bir sayı değilse (veya<xref:System.Double.NaN?displayProperty=nameWithType> <xref:System.Single.NaN?displayProperty=nameWithType>), operasyon sonucudur `false`. `NaN` Bu, değerin ne daha büyük, ne daha az, ne de dahil olmak üzere başka `double` bir (veya) `float`değere eşit olduğu anlamına `NaN`gelir. Daha fazla bilgi ve <xref:System.Double.NaN?displayProperty=nameWithType> örnekler <xref:System.Single.NaN?displayProperty=nameWithType> için, başvuru makalesine bakın.
 
-Temeldeki integral türünün karşılık gelen değerleri eşitse aynı [sabit listesi](../builtin-types/enum.md) türünün iki işleneni eşittir.
+Altta yatan integral türünün karşılık gelen değerleri eşitse, aynı [enum](../builtin-types/enum.md) türünden iki operand eşittir.
 
-Kullanıcı tanımlı [Yapı](../builtin-types/struct.md) türleri, varsayılan olarak `==` işlecini desteklemez. `==` işlecini desteklemek için Kullanıcı tanımlı bir yapının onu [tekrar yüklemesi](operator-overloading.md) gerekir.
+Kullanıcı tanımlı [yapı](../builtin-types/struct.md) türleri varsayılan olarak `==` işleci desteklemez. İşleciyi `==` desteklemek için, kullanıcı tarafından tanımlanan bir yapının [aşırı yüklenmesi](operator-overloading.md) gerekir.
 
-7,3 ile C# başlayarak, `==` ve `!=` işleçleri C# [diziler](../../tuples.md)tarafından desteklenir. Daha fazla bilgi için [ C# demet türleri](../../tuples.md) makalesinin [eşitlik ve diziler](../../tuples.md#equality-and-tuples) bölümüne bakın.
+C# 7.3 ile `==` başlayarak, ve `!=` işleçler C# [tuples](../../tuples.md)tarafından desteklenir. Daha fazla bilgi için [C# tuple türleri](../../tuples.md) makalesinin [Eşitlik ve tuples](../../tuples.md#equality-and-tuples) bölümüne bakın.
 
-### <a name="reference-types-equality"></a>Başvuru türleri eşitliği
+### <a name="reference-types-equality"></a>Referans türleri eşitliği
 
-Varsayılan olarak, iki başvuru türü işlenen aynı nesneye başvurduklarında eşittir:
+Varsayılan olarak, aynı nesneye başvururlarsa, iki başvuru tipi operand eşittir:
 
-[!code-csharp[reference type equality](~/samples/snippets/csharp/language-reference/operators/EqualityOperators.cs#ReferenceTypesEquality)]
+[!code-csharp[reference type equality](snippets/EqualityOperators.cs#ReferenceTypesEquality)]
 
-Örnekte gösterildiği gibi, Kullanıcı tanımlı başvuru türleri varsayılan olarak `==` işlecini destekler. Ancak, bir başvuru türü `==` işlecini aşırı yükleyebilir. Bir başvuru türü `==` işlecini aşırı yükle, bu türden iki başvurunun aynı nesneye başvurmasını denetlemek için <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> yöntemini kullanın.
+Örnekte de görüldüğü gibi, kullanıcı `==` tanımlı başvuru türleri varsayılan olarak işleci destekler. Ancak, bir başvuru türü `==` işleci aşırı yükleyebilir. Bir başvuru türü `==` işleç aşırı <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> yüklerse, bu türiki başvurunun aynı nesneye başvurup başvurmadığını denetlemek için yöntemi kullanın.
 
-### <a name="string-equality"></a>Dize eşitlik
+### <a name="string-equality"></a>Dize eşitliği
 
-İki [dize](../builtin-types/reference-types.md#the-string-type) işleneni her ikisi de `null` veya her iki dize örneği de aynı uzunluktadır ve her bir karakter konumunda aynı karakterlere sahip olduğunda eşittir:
+İki [dize](../builtin-types/reference-types.md#the-string-type) operands her ikisi `null` de veya her iki dize örnekleri aynı uzunlukta ve her karakter konumunda aynı karakterlere sahip eşittir:
 
-[!code-csharp-interactive[string equality](~/samples/snippets/csharp/language-reference/operators/EqualityOperators.cs#StringEquality)]
+[!code-csharp-interactive[string equality](snippets/EqualityOperators.cs#StringEquality)]
 
-Bu, büyük/küçük harfe duyarlı bir sıra karşılaştırmasına sahiptir. Dize karşılaştırması hakkında daha fazla bilgi için bkz. [dizeleri C#karşılaştırma ](../../how-to/compare-strings.md).
+Bu büyük/küçük harf duyarlı bir ordinal karşılaştırma. Dize karşılaştırması hakkında daha fazla bilgi için [C# dizelerini nasıl karşılaştırın.](../../how-to/compare-strings.md)
 
-### <a name="delegate-equality"></a>Temsilci eşitlik
+### <a name="delegate-equality"></a>Temsilci eşitliği
 
-Aynı çalışma zamanı türünün iki [temsilci](../../programming-guide/delegates/index.md) işleneni, her ikisi de `null`, ya da çağrı listeleri aynı uzunluktadır ve her konumda eşit girdilere sahip olduğunda eşittir:
+Her [delegate](../../programming-guide/delegates/index.md) ikisi de aynı uzunlukta olduğunda `null` ve her pozisyonda eşit girişlere sahip olduklarında, aynı çalışma zamanı türünden iki temsilci operandeşittir:
 
-[!code-csharp-interactive[delegate equality](~/samples/snippets/csharp/language-reference/operators/EqualityOperators.cs#DelegateEquality)]
+[!code-csharp-interactive[delegate equality](snippets/EqualityOperators.cs#DelegateEquality)]
 
-Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md), [eşitlik işleçlerini devretmek](~/_csharplang/spec/expressions.md#delegate-equality-operators) bölümüne bakın.
+Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Temsilci eşitliği işleçleri](~/_csharplang/spec/expressions.md#delegate-equality-operators) bölümüne bakın.
 
-Anlamsal olarak özdeş [lambda ifadeleri](../../programming-guide/statements-expressions-operators/lambda-expressions.md) değerlendirmesinden üretilen temsilciler, aşağıdaki örnekte gösterildiği gibi eşit değildir:
+Aşağıdaki örnekte görüldüğü gibi, anlamsal olarak özdeş [lambda ifadelerinin](../../programming-guide/statements-expressions-operators/lambda-expressions.md) değerlendirilmesinden elde edilen temsilciler eşit değildir:
 
-[!code-csharp-interactive[from identical lambdas](~/samples/snippets/csharp/language-reference/operators/EqualityOperators.cs#IdenticalLambdas)]
+[!code-csharp-interactive[from identical lambdas](snippets/EqualityOperators.cs#IdenticalLambdas)]
 
-## <a name="inequality-operator-"></a>Eşitsizlik işleci! =
+## <a name="inequality-operator-"></a>Eşitsizlik operatörü !=
 
-Eşitsizlik işleci `!=`, işlenenleri eşit değilse `true` döndürür `false` Aksi takdirde. [Yerleşik türlerin](../builtin-types/built-in-types.md)işlenenleri için ifade `x != y`, ifade `!(x == y)`aynı sonucu üretir. Tür eşitliği hakkında daha fazla bilgi için [eşitlik işleci](#equality-operator-) bölümüne bakın.
+Eşitsizlik işleci, `!=` `true` operands eşit değilse, `false` aksi takdirde döner. [Yerleşik türlerin](../builtin-types/built-in-types.md)operands için, ifade `x != y` ifade `!(x == y)`olarak aynı sonucu üretir. Tür eşitliği hakkında daha fazla bilgi için [Eşitlik işleci](#equality-operator-) bölümüne bakın.
 
-Aşağıdaki örnek `!=` işlecinin kullanımını gösterir:
+Aşağıdaki örnek, işleç `!=` kullanımını gösterir:
 
-[!code-csharp-interactive[non-equality examples](~/samples/snippets/csharp/language-reference/operators/EqualityOperators.cs#NonEquality)]
+[!code-csharp-interactive[non-equality examples](snippets/EqualityOperators.cs#NonEquality)]
 
-## <a name="operator-overloadability"></a>Operatör overloadability
+## <a name="operator-overloadability"></a>Operatör aşırı yüklenebilirlik
 
-Kullanıcı tanımlı bir tür `==` ve `!=` işleçlerini [aşırı](operator-overloading.md) yükleyebilir. Bir tür iki işleçten birini aşırı yüklediğinden, başka bir tane de aşırı yüklemesi gerekir.
+Kullanıcı tanımlı bir tür `==` ve `!=` işleçler [aşırı yükleyebilir.](operator-overloading.md) Bir tür iki işleçten birini aşırı yüklenirse, başka bir işleçten de aşırı yüklenmesi gerekir.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [ilişkisel ve tür-test işleçleri](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) bölümüne bakın.
+Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [İlişkisel ve tür test işleçleri](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvurunun](../index.md)
+- [C# başvurusu](../index.md)
 - [C# işleçleri](index.md)
 - <xref:System.IEquatable%601?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>

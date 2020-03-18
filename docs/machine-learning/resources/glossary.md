@@ -1,176 +1,176 @@
 ---
 title: Makine öğrenimi sözlüğü
-description: ML.NET ' de özel modellerinizi oluştururken yararlı olan önemli makine öğrenimi terimlerinin bir sözlüğü.
+description: Özel modellerinizi ML.NET oluştururken yararlı olan önemli makine öğrenimi terimlerinin sözlüğü.
 ms.topic: reference
 ms.date: 07/31/2019
 ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739882"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398939"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Önemli terimlerin makine öğrenimi sözlüğü
 
-Aşağıdaki liste, ML.NET ' de özel modellerinizi oluştururken yararlı olan önemli makine öğrenimi koşullarının bir derlenmesi.
+Aşağıdaki liste, ML.NET özel modellerinizi oluştururken yararlı olan önemli makine öğrenimi terimlerinin bir derlemesidir.
 
-## <a name="accuracy"></a>Veritabanınızın
+## <a name="accuracy"></a>Doğru -luk
 
-[Sınıflandırmada](#classification)doğruluk, doğru sınıflandırılan öğelerin, test kümesindeki toplam öğe sayısına bölünmesiyle elde edilen sayıdır. 0 (en az doğru) ile 1 (en doğru) arasında değişir. Doğruluk, model performansının değerlendirme ölçümlerinden biridir. [Duyarlık](#precision), [geri çekme](#recall)ve [F puanı](#f-score)ile birlikte göz önünde bulundurun.
+[Sınıflandırmada](#classification)doğruluk, test kümesindeki toplam madde sayısına bölünen doğru sınıflanmış maddelerin sayısıdır. 0 (en az doğru) ile 1 (en doğru) arasında değişir. Doğruluk, model performansının değerlendirme ölçümlerinden biridir. [Hassas](#precision), [geri çağırma](#recall)ve [F-skoru](#f-score)ile birlikte düşünün.
 
-## <a name="area-under-the-curve-auc"></a>Eğri altındaki alan (AUC)
+## <a name="area-under-the-curve-auc"></a>Eğrinin altındaki alan (AUC)
 
-[İkili sınıflandırmada](#binary-classification), eğri altındaki alanın değeri olan bir değerlendirme ölçümü, doğru pozitif değer oranını (y ekseni üzerinde) yanlış pozitif sonuçlar oranına (x ekseninde) göre çizer. 0,5 (en kötü) ile 1 (en iyi) arasında aralıklar. Ayrıca, ROC eğrisi, yani alıcı işletim özelliği eğrisi altında alan olarak da bilinir. Daha fazla bilgi için, Vikipde yer alan [alıcı işletim özellikleri](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) makalesine bakın.
+[İkili sınıflandırmada,](#binary-classification)eğrinin altındaki alanın değeri olan bir değerlendirme ölçüsü, doğru pozitif oranını (y ekseninde) yanlış pozitif oranına (x ekseninde) göre çizer. 0,5 (en kötü) ile 1 (en iyi) arasında değişir. ROC eğrisinin altındaki alan olarak da bilinir, yani alıcı çalışma karakteristik eğrisi. Daha fazla bilgi [için,](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) Wikipedia'daki Alıcı işletim karakteristik makalesine bakın.
 
 ## <a name="binary-classification"></a>İkili sınıflandırma
 
-[Etiketin](#label) yalnızca iki sınıftan oluşan bir [Sınıflandırma](#classification) durumu. Daha fazla bilgi için [Machine Learning görevleri](tasks.md) konusunun [ikili sınıflandırma](tasks.md#binary-classification) bölümüne bakın.
+[Etiketin](#label) iki sınıftan yalnızca biri olduğu bir [sınıflandırma](#classification) örneği. Daha fazla bilgi için Makine [öğrenme görevleri](tasks.md) konusunun [İkili sınıflandırma](tasks.md#binary-classification) bölümüne bakın.
 
-## <a name="calibration"></a>Ayarları
+## <a name="calibration"></a>Kalibrasyon
 
-Ayar, bir ham puanı ikili ve çoklu sınıf sınıflandırması için bir sınıf üyeliğiyle eşleme işlemidir. Bazı ML.NET traıners `NonCalibrated` sonekine sahiptir. Bu algoritmalar, daha sonra bir sınıf olasılığa eşlenmesi gereken bir ham puan üretir.
+Kalibrasyon, ikili ve çok sınıflı sınıflandırma için ham bir puanı sınıf üyeliğine eşleme işlemidir. Bazı ML.NET eğitmenlerinin sonekleri `NonCalibrated` vardır. Bu algoritmalar, daha sonra bir sınıf olasılığı eşlenen gereken bir ham puan üretir.
 
 ## <a name="catalog"></a>Katalog
 
-ML.NET ' de, katalog, ortak bir amaca göre gruplanmış bir uzantı işlevleri koleksiyonudur.
+ML.NET olarak, katalog ortak bir amaca göre gruplanmış uzantı işlevleri koleksiyonudur.
 
-Örneğin, her makine öğrenimi görevi (ikili sınıflandırma, regresyon, derecelendirme vb.), kullanılabilir makine öğrenimi algoritmalarının (traers) bir kataloğuna sahiptir. İkili sınıflandırma esiners için Katalog: <xref:Microsoft.ML.BinaryClassificationCatalog.BinaryClassificationTrainers>.
+Örneğin, her makine öğrenme görevi (ikili sınıflandırma, regresyon, sıralama vb) kullanılabilir makine öğrenme algoritmaları (eğitmenler) bir katalog vardır. İkili sınıflandırma eğitmenleri için <xref:Microsoft.ML.BinaryClassificationCatalog.BinaryClassificationTrainers>katalog: .
 
 ## <a name="classification"></a>Sınıflandırma
 
-Veriler bir kategoriyi tahmin etmek için kullanıldığında, [denetimli makine öğrenimi](#supervised-machine-learning) görevi sınıflandırma olarak adlandırılır. [İkili sınıflandırma](#binary-classification) yalnızca iki kategoriyi tahmin etmek anlamına gelir (örneğin, bir resmi bir ' Cat ' veya ' köpek ' resmi olarak sınıflandırın). Çoklu [sınıf sınıflandırması](#multiclass-classification) , birden çok kategoriyi tahmin etmek anlamına gelir (örneğin, bir görüntüyü belirli bir köpeğin resmi olarak sınıflandırırken).
+Veriler bir kategoriyi tahmin etmek için kullanıldığında, [denetlenen makine öğrenimi](#supervised-machine-learning) görevi sınıflandırma olarak adlandırılır. [İkili sınıflandırma](#binary-classification) yalnızca iki kategoriyi tahmin etmek anlamına gelir (örneğin, bir resmi 'kedi' veya 'köpek' resmi olarak sınıflandırmak). [Çok sınıflı sınıflandırma,](#multiclass-classification) birden çok kategoriyi tahmin etmek anlamına gelir (örneğin, bir görüntüyü belirli bir köpek ırkının resmi olarak sınıflandırırken).
 
-## <a name="coefficient-of-determination"></a>Belirleme katsayısı
+## <a name="coefficient-of-determination"></a>Tespit katsayısı
 
-[Gerileme](#regression)' da, verilerin modele ne kadar iyi uyduğunu gösteren bir değerlendirme ölçümü. 0 ile 1 arasında aralıklar. 0 değeri, verilerin rastgele olması veya başka türlü modele sığamayacak olması anlamına gelir. 1 değeri, modelin verilerle tam olarak eşleştiği anlamına gelir. Bu, genellikle r<sup>2</sup>, r<sup>2</sup>veya r-kare olarak adlandırılır.
+[Regresyonda,](#regression)verilerin bir modele ne kadar iyi uyduğunu gösteren bir değerlendirme ölçüsü. 0 ile 1 arasında değişir. 0 değeri, verilerin rastgele olduğu veya modele başka bir şekilde sığamayacağı anlamına gelir. 1 değeri, modelin verilerle tam olarak eşleştiğini anlamına gelir. Bu genellikle r<sup>2</sup>, R<sup>2</sup>, veya r-kare olarak adlandırılır.
 
-## <a name="data"></a>Veri
+## <a name="data"></a>Veriler
 
-Veriler, tüm makine öğrenimi uygulamaları için tasarlanmıştır. ML.NET verilerinde <xref:Microsoft.ML.IDataView> nesneler tarafından temsil edilir. Veri görünümü nesneleri:
+Veriler herhangi bir makine öğrenimi uygulamasının merkezidir. ML.NET veriler nesneler tarafından <xref:Microsoft.ML.IDataView> temsil edilir. Veri görünümü nesneleri:
 
 - sütun ve satırlardan oluşur
-- geç değerlendirilir, bu, yalnızca bir işlem tarafından çağrı yapıldığında veri yükler
+- lazily değerlendirilir, yani sadece bir operasyon için çağırır veri yüklemek
 - her sütunun türünü, biçimini ve uzunluğunu tanımlayan bir şema içerir
 
-## <a name="estimator"></a>Tahmin Aracı
+## <a name="estimator"></a>Tahmincisi
 
-ML.NET içinde <xref:Microsoft.ML.IEstimator%601> arabirimini uygulayan bir sınıf.
+<xref:Microsoft.ML.IEstimator%601> Arabirimi uygulayan ML.NET bir sınıf.
 
-Bir tahmin aracı, dönüşümün bir belirtimidir (hem veri hazırlama dönüştürmesi hem de makine öğrenimi modeli eğitim dönüştürmesi). Estimators, bir dizi dönüşümde birlikte zincirlenebilir. Bir tahmin aracı veya tahmini işlem hattının parametreleri <xref:Microsoft.ML.IEstimator%601.Fit%2A> çağrıldığında öğrenilir. <xref:Microsoft.ML.IEstimator%601.Fit%2A> sonucu bir [transformatör](#transformer).
+Bir tahminci bir dönüşüm (hem veri hazırlama dönüşümü ve makine öğrenimi modeli eğitim dönüşümü) bir belirtimidir. Tahminciler bir dönüşüm ler zincirine zincirlenebilir. Bir tahmincinin veya tahmincilerin ardışık <xref:Microsoft.ML.IEstimator%601.Fit%2A> parametreleri çağrıldığında öğrenilir. Bunun sonucu <xref:Microsoft.ML.IEstimator%601.Fit%2A> bir [Transformatördür.](#transformer)
 
-## <a name="extension-method"></a>Genişletme yöntemi
+## <a name="extension-method"></a>Uzatma yöntemi
 
-Bir sınıfın parçası olan ancak sınıfının dışında tanımlanmış bir .NET yöntemi. Genişletme yönteminin ilk parametresi, Uzantı yönteminin ait olduğu sınıfa yönelik statik bir `this` başvurusudur.
+Sınıfın bir parçası olan ancak sınıfın dışında tanımlanan bir .NET yöntemi. Uzantı yönteminin ilk parametresi, uzantı yönteminin ait olduğu sınıfa statik `this` bir başvurudur.
 
-Genişletme yöntemleri, [Tahmini](#estimator)örnekleri oluşturmak için ml.NET içinde yaygın olarak kullanılır.
+Uzantı yöntemleri, [tahmincilerin](#estimator)örneklerini oluşturmak için ML.NET yaygın olarak kullanılır.
 
 ## <a name="feature"></a>Özellik
 
-Ölçülecek, genellikle sayısal (Double) bir değer olan ölçülebilir bir özellik. Birçok özelliğe **özellik vektörü** denir ve genellikle `double[]`olarak depolanır. Özellikler, ölçülen olgudur 'ın önemli özelliklerini tanımlar. Daha fazla bilgi için Vikipde bulunan [Özellikler](https://en.wikipedia.org/wiki/Feature_(machine_learning)) makalesine bakın.
+Ölçülen fenomenölçülebilir bir özelliği, genellikle bir sayısal (çift) değer. Birden çok özellik **Özellik vektörü** olarak adlandırılır `double[]`ve genellikle . Özellikler ölçülen fenomenin önemli özelliklerini tanımlar. Daha fazla bilgi için Vikipedi'deki [Özellik](https://en.wikipedia.org/wiki/Feature_(machine_learning)) makalesine bakın.
 
 ## <a name="feature-engineering"></a>Özellik mühendisliği
 
-Özellik Mühendisliği, kullanılabilir olgudur verilerinden, yani Özellik ayıklamadan Özellik vektörleri üreten [bir özellik kümesi tanımlamayı ve yazılım](#feature) geliştirmeyi içerir. Daha fazla bilgi için Vikipde bulunan [özellik Mühendisliği](https://en.wikipedia.org/wiki/Feature_engineering) makalesine bakın.
+Özellik mühendisliği, bir dizi [özelliği](#feature) tanımlamayı ve mevcut fenomen verilerinden, yani özellik çıkarmadan özellik vektörleri üreten yazılımlar geliştirmeyi içeren bir süreçtir. Daha fazla bilgi için Vikipedi'deki [Özellik mühendisliği](https://en.wikipedia.org/wiki/Feature_engineering) makalesine bakın.
 
 ## <a name="f-score"></a>F puanı
 
-[Sınıflandırmada](#classification) [duyarlık](#precision) ve [geri çekmeyi](#recall)dengeleyen bir değerlendirme ölçümü.
+[Sınıflandırmada,](#classification) [hassasiyeti](#precision) ve geri [çağırmayı](#recall)dengeleyen bir değerlendirme ölçüsü.
 
-## <a name="hyperparameter"></a>Hiper parametre
+## <a name="hyperparameter"></a>Hiperparametre
 
-Makine öğrenimi algoritmasının parametresi. Örnek olarak, karar verme ormanında veya bir gradyan algoritması algoritmasındaki adım boyutunda öğrenemeyen ağaç sayısını içerir. *Hyperparameters* 'ın değerleri, modeli eğitmek için ayarlanır ve tahmin işlevinin parametrelerini bulma işlemini (örneğin, bir karar ağacındaki karşılaştırma noktaları veya doğrusal regresyon modelindeki ağırlıklar) yönetmek için kullanılır. Daha fazla bilgi için Vikipde bulunan [Hyperparameter](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) makalesine bakın.
+Makine öğrenme algoritmasının parametresi. Örnekler, karar ormanında öğrenilmesi gereken ağaç sayısını veya degrade libir alçalma algoritmasındaki adım boyutunu içerir. *Hiperparametrelerin* değerleri modeli eğitmeden önce ayarlanır ve tahmin işlevinin parametrelerini bulma işlemini yönetir, örneğin, bir karar ağacındaki karşılaştırma noktaları veya doğrusal bir regresyon modelindeki ağırlıklar. Daha fazla bilgi için Vikipedi'deki [Hiperparametre](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) makalesine bakın.
 
 ## <a name="label"></a>Etiketle
 
-Machine Learning modeliyle tahmin edilecek öğe. Örneğin, kövil veya gelecekteki bir stok fiyatı.
+Makine öğrenme modeli ile tahmin edilecek eleman. Örneğin, köpek cins veya gelecekteki bir hisse senedi fiyatı.
 
-## <a name="log-loss"></a>Günlük kayıp
+## <a name="log-loss"></a>Günlük kaybı
 
-[Sınıflandırmada](#classification), sınıflandırıcının doğruluğunu nitelendirir bir değerlendirme ölçümü. Daha küçük günlük kaybı, sınıflandırıcının ne kadar doğru olduğunu.
+[Sınıflandırmada,](#classification)bir sınıflandırıcının doğruluğunu karakterize eden bir değerlendirme ölçüsü. Küçük günlük kaybı, daha doğru bir sınıflandırıcı olduğunu.
 
-## <a name="loss-function"></a>Kayıp işlevi
+## <a name="loss-function"></a>Kayıp fonksiyonu
 
-Bir kayıp işlevi, eğitim etiketi değerleri ile modelin yaptığı tahmin arasındaki farktır. Modelin parametreleri, kayıp işlevini en aza indirerek tahmin edilir.
+Kayıp işlevi, eğitim etiketi değerleri ile model tarafından yapılan tahmin arasındaki farktır. Modelin parametreleri kayıp işlevini en aza indirerek tahmin edilir.
 
-Farklı bir sorun, farklı kayıp işlevleriyle yapılandırılabilir.
+Farklı eğitmenler farklı kayıp fonksiyonları ile yapılandırılabilir.
 
 ## <a name="mean-absolute-error-mae"></a>Ortalama mutlak hata (MAE)
 
-[Gerileme](#regression)' da, model hatasının tahmin edilen [etiket](#label) değeri ile doğru etiket değeri arasındaki mesafe olduğu tüm model hatalarının ortalaması olan bir değerlendirme ölçümü.
+[Regresyonda,](#regression)model hatasının öngörülen etiket değeri ile doğru [etiket](#label) değeri arasındaki uzaklık olduğu tüm model hatalarının ortalaması olan bir değerlendirme ölçüsüdür.
 
 ## <a name="model"></a>Model
 
-Geleneksel olarak, tahmin işlevinin parametreleri. Örneğin, bir doğrusal regresyon modelindeki ağırlıklar veya bir karar ağacındaki bölünmüş noktaları. ML.NET ' de bir model, bir etki alanı nesnesinin (örneğin, görüntü veya metin) [etiketini](#label) tahmin etmek için gereken tüm bilgileri içerir. Bu, ML.NET modellerinin gerekli adımları ve tahmin işlevinin parametrelerini içermesi anlamına gelir.
+Geleneksel olarak, tahmin işlevi için parametreler. Örneğin, doğrusal bir regresyon modelindeki ağırlıklar veya karar ağacındaki bölünmüş noktalar. ML.NET, bir model etki alanı nesnesinin [etiketini](#label) (örneğin, resim veya metin) tahmin etmek için gereken tüm bilgileri içerir. Bu, ML.NET modellerinin gerekli olan featurization adımlarını ve tahmin işlevi için parametreleri içerdiği anlamına gelir.
 
-## <a name="multiclass-classification"></a>birden çok Lass sınıflandırması
+## <a name="multiclass-classification"></a>Çok sınıflı sınıflandırma
 
-[Etiketin](#label) üç veya daha fazla sınıftan birindeki bir [Sınıflandırma](#classification) durumu. Daha fazla bilgi için [Machine Learning görevleri](tasks.md) konusunun çoklu [sınıf sınıflandırması](tasks.md#multiclass-classification) bölümüne bakın.
+[Etiketin](#label) üç veya daha fazla sınıftan biri olduğu bir [sınıflandırma](#classification) örneği. Daha fazla bilgi için Makine öğrenme [görevleri](tasks.md) konusunun [Çok Sınıflı sınıflandırma](tasks.md#multiclass-classification) bölümüne bakın.
 
 ## <a name="n-gram"></a>N-gram
 
-Metin verileri için bir özellik ayıklama şeması: herhangi bir N kelime dizisi, bir [özellik](#feature) değerine dönüşür.
+Metin verileri için özellik ayıklama düzeni: Herhangi bir N sözcük dizisi [bir özellik](#feature) değerine dönüşür.
 
 ## <a name="normalization"></a>Normalleştirme
 
-Normalleştirme, kayan nokta verilerinin 0 ile 1 arasındaki değerlere ölçeklendirilmesi işlemidir. ML.NET ' de kullanılan eğitim algoritmalarının birçoğu, giriş özelliği verilerinin normalleştirilmesini gerektirir. ML.NET, [normalleştirmede](transforms.md#normalization-and-scaling) bir dizi dönüşüm sağlar
+Normalleştirme, kayan nokta verilerini 0 ile 1 arasındaki değerlere ölçekleme işlemidir. ML.NET kullanılan eğitim algoritmalarının çoğu, giriş özelliği verilerinin normalleştirilmesini gerektirir. ML.NET [normalleştirme için](transforms.md#normalization-and-scaling) bir dizi dönüşüm sağlar
 
-## <a name="numerical-feature-vector"></a>Sayısal Özellik vektörü
+## <a name="numerical-feature-vector"></a>Sayısal özellik vektörü
 
-Yalnızca sayısal değerler içeren bir [özellik](#feature) vektörü. Bu, `double[]`benzerdir.
+Yalnızca sayısal değerlerden oluşan bir [özellik](#feature) vektörü. Bu benzer `double[]`.
 
 ## <a name="pipeline"></a>İşlem hattı
 
-Bir modeli bir veri kümesine sığdırmak için gereken tüm işlemler. İşlem hattı, veri içeri aktarma, dönüştürme, korleştirme ve öğrenme adımlardan oluşur. Bir işlem hattı eğitilirken bir modeli açar.
+Bir modeli veri kümesine sığdırmak için gereken tüm işlemler. Bir ardışık veri alma, dönüştürme, featurization ve öğrenme adımlarından oluşur. Bir boru hattı eğitildikten sonra, bir modele dönüşür.
 
 ## <a name="precision"></a>Duyarlık
 
-[Sınıflandırmada](#classification), bir sınıf için duyarlık, sınıfa ait olarak tahmin edilen toplam öğe sayısına bölündüğü için, bu sınıfa ait olarak doğru tahmin edilen öğe sayısıdır.
+[Sınıflandırmada,](#classification)bir sınıfın kesinliği, sınıfa ait olduğu tahmin edilen toplam madde sayısına bölünerek o sınıfa ait olarak doğru olarak tahmin edilen öğe sayısıdır.
 
-## <a name="recall"></a>Geri çekme
+## <a name="recall"></a>Geri Çağırma
 
-[Sınıflandırmada](#classification), sınıf için geri çağırma, o sınıfa ait olan öğelerin, gerçekte sınıfa ait olan toplam öğe sayısına bölünmesiyle, doğru şekilde tahmin edilen öğe sayısıdır.
+[Sınıflandırmada,](#classification)bir sınıfın geri çağırması, sınıfa ait toplam madde sayısına bölünerek o sınıfa ait olarak doğru olarak tahmin edilen öğelerin sayısıdır.
 
-## <a name="regularization"></a>Düzenleme
+## <a name="regularization"></a>Düzenlileştirme
 
- Düzenleme penalizes çok karmaşık olması için doğrusal bir model. İki tür düzenleme vardır:
+ Düzenlileştirme, doğrusal bir modeli çok karmaşık olduğu için cezalandırır. İki tür düzenlileştirme vardır:
 
-- $L _1 $ düzenleme, önemli özellikler için sıfırlar. Bu düzenleme türünden sonra kaydedilen modelin boyutu daha küçük hale gelebilir.
-- $L _2 $ düzenleme, önemli özellikler için ağırlık aralığını en aza indirir. Bu, daha genel bir işlemdir ve aykırı değerleri daha az hassastır.
+- $L_1$ normalleştirme önemsiz özellikler için ağırlıkları sıfırlar. Kaydedilen modelin boyutu, bu tür bir düzenlilleştirmeden sonra küçülebilir.
+- $L_2$ düzenlileştirme önemsiz özellikler için ağırlık aralığını en aza indirir. Bu daha genel bir süreçtir ve aykırılara karşı daha az duyarlıdır.
 
 ## <a name="regression"></a>Regresyon
 
-Çıktının gerçek bir değer olduğu [denetimli bir makine öğrenimi](#supervised-machine-learning) görevi; Örneğin, Double. Örnek stok fiyatlarını tahmin eder. Daha fazla bilgi için [Machine Learning görevleri](tasks.md) konusunun [gerileme](tasks.md#regression) bölümüne bakın.
+Çıktının gerçek bir değer olduğu [denetlenen bir makine öğrenimi](#supervised-machine-learning) görevi, örneğin, iki katı. Buna örnek olarak hisse senedi fiyatlarını tahmin etmek verilebilir. Daha fazla bilgi için Makine öğrenme [görevleri](tasks.md) konusunun [Regresyon](tasks.md#regression) bölümüne bakın.
 
 ## <a name="relative-absolute-error"></a>Göreli mutlak hata
 
-[Gerileme](#regression)' da, tüm mutlak hataların toplamı, doğru [etiket](#label) değerleri ve tüm doğru etiket değerlerinin ortalaması arasındaki uzaklıklara bölünen bir değerlendirme ölçümünün toplamıdır.
+[Regresyonda,](#regression)doğru etiket değerleri ile tüm doğru [etiket](#label) değerlerinin ortalaması arasındaki mesafelerin toplamına bölünen tüm mutlak hataların toplamı olan bir değerlendirme ölçüsüdür.
 
-## <a name="relative-squared-error"></a>Göreli kare hatası
+## <a name="relative-squared-error"></a>Göreli kareli hata
 
-[Gerileme](#regression)' da, tüm kare dışı mutlak hataların toplamı, doğru [etiket](#label) değerleri ve tüm doğru etiket değerlerinin ortalaması arasındaki kare uzaklıkları toplamı olarak bölünür.
+[Regresyonda,](#regression)doğru etiket değerleri ile tüm doğru [etiket](#label) değerlerinin ortalaması arasındaki kareli mesafelerin toplamına bölünen tüm karemutlak hataların toplamı olan bir değerlendirme ölçüsüdür.
 
-## <a name="root-of-mean-squared-error-rmse"></a>Ortalama kareli hata (rmo) kökü
+## <a name="root-of-mean-squared-error-rmse"></a>Ortalama kare hatanın kökü (RMSE)
 
-[Gerileme](#regression)' da, hataların karelerinin ortalamasının kare kökü olan bir değerlendirme ölçümü.
+[Regresyon,](#regression)hataların kareleri ortalamasının kare kökü olan bir değerlendirme ölçüsüdür.
 
-## <a name="scoring"></a>Sonuç
+## <a name="scoring"></a>Puanlama
 
-Puanlama, eğitilen bir makine öğrenimi modeline yeni veri uygulama ve tahmin oluşturma işlemidir. Puanlama, ınıras olarak da bilinir. Modelin türüne bağlı olarak, puan ham bir değer, bir olasılık veya kategori olabilir.
+Puanlama, eğitimli bir makine öğrenme modeline yeni veriler uygulama ve öngörüler oluşturma işlemidir. Puanlama da inferencing olarak bilinir. Modeltürüne bağlı olarak, puan ham bir değer, bir olasılık veya bir kategori olabilir.
 
 ## <a name="supervised-machine-learning"></a>Denetimli makine öğrenimi
 
-İstenen modelin, henüz görünmeyen veriler için etiketi tahmin eden makine öğrenimi 'nin bir alt sınıfı. Örnek olarak sınıflandırma, gerileme ve yapılandırılmış tahmin sayılabilir. Daha fazla bilgi için Vikipedi 'teki [denetimli öğrenme](https://en.wikipedia.org/wiki/Supervised_learning) makalesine bakın.
+İstenilen bir modelin henüz görünmeyen veriler için etiketi öngördüğü bir alt makine öğrenimi sınıfı. Örnekler sınıflandırma, regresyon ve yapılandırılmış tahmin içerir. Daha fazla bilgi için Vikipedi'deki [Denetimli öğrenme](https://en.wikipedia.org/wiki/Supervised_learning) makalesine bakın.
 
 ## <a name="training"></a>Eğitim
 
-Verilen eğitim veri kümesi için bir [modeli](#model) tanımlama işlemi. Doğrusal bir model için bu, ağırlıkları bulma anlamına gelir. Ağaç için bölme noktalarını tanımlamayı içerir.
+Belirli bir eğitim veri kümesi için bir [model](#model) tanımlama işlemi. Doğrusal bir model için bu ağırlıkları bulmak anlamına gelir. Bir ağaç için, bölünmüş noktaları tanımlama içerir.
 
-## <a name="transformer"></a>Dönüştürücü
+## <a name="transformer"></a>Trafo
 
-<xref:Microsoft.ML.ITransformer> arabirimini uygulayan bir ML.NET sınıfı.
+<xref:Microsoft.ML.ITransformer> Arabirimi uygulayan ML.NET sınıfı.
 
-Bir transformatör bir <xref:Microsoft.ML.IDataView> diğerine dönüştürür. Bir transformatör, bir [tahmin aracı](#estimator)veya bir tahmin aracı işlem hattı eğitimi tarafından oluşturulur.
+Bir transformatör <xref:Microsoft.ML.IDataView> birini diğerine dönüştürür. Bir transformatör, bir [tahmincinin](#estimator)veya bir tahminci boru hattının eğitilmesiyle oluşturulur.
 
-## <a name="unsupervised-machine-learning"></a>Denetimli makine öğrenimi
+## <a name="unsupervised-machine-learning"></a>Denetimsiz makine öğrenimi
 
-İstenen modelin veride gizli (veya görünmeyen) yapısını bulduğu makine öğrenimi 'nin bir alt sınıfı. Kümeleme, konu modelleme ve boyutlılık azaltmaya örnek olarak verilebilir. Daha fazla bilgi için Vikipedi 'teki denetimsiz [öğrenme](https://en.wikipedia.org/wiki/Unsupervised_learning) makalesine bakın.
+İstenilen bir modelin verilerde gizli (veya gizli) yapıyı bulduğu makine öğrenimi alt sınıfı. Örnekler kümeleme, konu modelleme ve boyutlandırma içerir. Daha fazla bilgi için Vikipedi'deki [Denetimsiz öğrenme](https://en.wikipedia.org/wiki/Unsupervised_learning) makalesine bakın.
