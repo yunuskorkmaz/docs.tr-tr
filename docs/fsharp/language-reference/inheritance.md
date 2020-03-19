@@ -1,40 +1,40 @@
 ---
 title: Devralma
-description: "' İnherit ' anahtar F# sözcüğünü kullanarak devralma ilişkilerini belirtmeyi öğrenin."
+description: "'Devralma' anahtar sözcük anahtar sözcüklerini kullanarak F# kalıtım ilişkilerini nasıl belirteceklerini öğrenin."
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ab891a93528427a66e4eb8f7bfeccbf6e4d2c7e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627657"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400290"
 ---
 # <a name="inheritance"></a>Devralma
 
-Devralma, nesne odaklı programlamada "a-a" ilişkisini veya alt yazmayı modellemek için kullanılır.
+Kalıtım, nesne yönelimli programlamada "is-a" ilişkisini veya alt yazımayı modellemek için kullanılır.
 
-## <a name="specifying-inheritance-relationships"></a>Devralma Ilişkilerini belirtme
+## <a name="specifying-inheritance-relationships"></a>Kalıtım İlişkileri Belirtme
 
-Devralma ilişkilerini bir sınıf bildiriminde `inherit` anahtar sözcüğünü kullanarak belirtirsiniz. Temel sözdizimsel form aşağıdaki örnekte gösterilmiştir.
+Bir sınıf bildiriminde `inherit` anahtar kelimeyi kullanarak devralma ilişkilerini belirtirsiniz. Temel sözdizimsel form aşağıdaki örnekte gösterilmiştir.
 
 ```fsharp
 type MyDerived(...) =
     inherit MyBase(...)
 ```
 
-Bir sınıf en fazla bir doğrudan temel sınıfa sahip olabilir. `inherit` Anahtar sözcüğünü kullanarak bir temel sınıf belirtmezseniz, sınıf dolaylı olarak öğesinden `System.Object`devralır.
+Bir sınıfın en fazla bir doğrudan taban sınıfı olabilir. `inherit` Anahtar sözcüğü kullanarak bir taban sınıf belirtmezseniz, sınıf örtülü `System.Object`olarak .
 
-## <a name="inherited-members"></a>Devralınan Üyeler
+## <a name="inherited-members"></a>Devralınmış Üyeler
 
-Bir sınıf başka bir sınıftan devralırsa, temel sınıfın yöntemleri ve üyeleri türetilmiş sınıfın doğrudan üyeleri gibi türetilmiş sınıfın kullanıcıları tarafından kullanılabilir.
+Bir sınıf başka bir sınıftan devralıyorsa, taban sınıfın yöntemleri ve üyeleri türemiş sınıfın doğrudan üyeleriymiş gibi türemiş sınıfın kullanıcıları tarafından kullanılabilir.
 
-Tüm Let bağlamaları ve Oluşturucu parametreleri bir sınıfa özeldir ve bu nedenle türetilmiş sınıflardan erişilemez.
+Herhangi bir izin bağlamaları ve oluşturucu parametreleri bir sınıfa özeldir ve bu nedenle türemiş sınıflardan erişilemez.
 
-Anahtar sözcüğü `base` türetilmiş sınıflarda kullanılabilir ve temel sınıf örneğine başvurur. Kendi kendine tanımlayıcı gibi kullanılır.
+Anahtar kelime `base` türemiş sınıflarda kullanılabilir ve taban sınıf örneğine başvurur. Kendini tanımlayıcı gibi kullanılır.
 
-## <a name="virtual-methods-and-overrides"></a>Sanal yöntemler ve geçersiz kılmalar
+## <a name="virtual-methods-and-overrides"></a>Sanal Yöntemler ve Geçersiz Kılmalar
 
-Sanal Yöntemler (ve Özellikler), diğer .NET dilleri F# ile karşılaştırıldığında ' de biraz farklı şekilde çalışır. Yeni bir sanal üye bildirmek için `abstract` anahtar sözcüğünü kullanırsınız. Bu yöntem için varsayılan bir uygulama sağlayıp sağlamadığına bakılmaksızın bunu yapabilirsiniz. Bu nedenle, bir temel sınıftaki sanal bir yöntemin tüm tanımı bu modele uyar:
+Sanal yöntemler (ve özellikler) F#'da diğer .NET dillerine göre biraz farklı çalışır. Yeni bir sanal üye bildirmek `abstract` için anahtar kelimeyi kullanırsınız. Bu yöntem için varsayılan bir uygulama sağlayıp sağlamadığınıza bakılmaksızın bunu yaparsınız. Böylece bir taban sınıfta sanal yöntemin tam bir tanımı aşağıdaki şekilde dir:
 
 ```fsharp
 abstract member [method-name] : [type]
@@ -42,27 +42,27 @@ abstract member [method-name] : [type]
 default [self-identifier].[method-name] [argument-list] = [method-body]
 ```
 
-Türetilmiş bir sınıfta, bu sanal yöntemin bir geçersiz kılma bu düzene uyar:
+Ve türetilmiş bir sınıfta, bu sanal yöntemin geçersiz kılma bu desen izler:
 
 ```fsharp
 override [self-identifier].[method-name] [argument-list] = [method-body]
 ```
 
-Temel sınıfta varsayılan uygulamayı atlarsanız, temel sınıf bir soyut sınıf olur.
+Taban sınıfta varsayılan uygulamayı atlarsanız, taban sınıf soyut bir sınıf olur.
 
-Aşağıdaki kod örneği, bir temel sınıftaki yeni bir sanal yöntemin `function1` bildirimini ve türetilmiş bir sınıfta bunun nasıl geçersiz kılınacağını göstermektedir.
+Aşağıdaki kod örneği, taban sınıfta yeni `function1` bir sanal yöntemin bildirimini ve türetilmiş bir sınıfta nasıl geçersiz kılındığını göstermektedir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2601.fs)]
 
-## <a name="constructors-and-inheritance"></a>Oluşturucular ve devralma
+## <a name="constructors-and-inheritance"></a>Yapıcılar ve Kalıtım
 
-Temel sınıfa yönelik oluşturucunun türetilmiş sınıfta çağrılması gerekir. Temel sınıf oluşturucusunun bağımsız değişkenleri, `inherit` yan tümcesindeki bağımsız değişken listesinde görünür. Kullanılan değerlerin, türetilmiş sınıf oluşturucusuna sağlanan bağımsız değişkenlerden belirlenmesi gerekir.
+Taban sınıfın oluşturucusu türemiş sınıfta çağrılmalıdır. Taban sınıf oluşturucuiçin bağımsız değişkenler `inherit` yan tümcedeki bağımsız değişken listesinde görünür. Kullanılan değerler türemiş sınıf oluşturucuya sağlanan bağımsız değişkenlerden belirlenmelidir.
 
-Aşağıdaki kod, bir temel sınıf ve türetilmiş bir sınıf gösterir; burada türetilmiş sınıf, devralma yan tümcesinde temel sınıf oluşturucusunu çağırır:
+Aşağıdaki kod, türemiş sınıfın devralma yan tümcesinde taban sınıf oluşturucuyu çağırdığı bir taban sınıf ve türetilmiş sınıf gösterir:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2602.fs)]
 
-Birden çok Oluşturucu söz konusu olduğunda, aşağıdaki kod kullanılabilir. Türetilmiş sınıf oluşturucularının ilk satırı `inherit` yan tümcelerdir ve alanlar, `val` anahtar sözcüğüyle belirtilen açık alanlar olarak görünür. Daha fazla bilgi için bkz [. açık alanlar: `val` Anahtar sözcüğü](./members/explicit-fields-the-val-keyword.md).
+Birden çok oluşturucu söz konusu olduğunda, aşağıdaki kod kullanılabilir. Türemiş sınıf oluşturucularının ilk `inherit` satırı yan tümcedir ve alanlar `val` anahtar sözcükle birlikte bildirilen açık alanlar olarak görünür. Daha fazla bilgi için [bkz: Açık Alanlar: `val` Anahtar Kelime.](./members/explicit-fields-the-val-keyword.md)
 
 ```fsharp
 type BaseClass =
@@ -81,17 +81,17 @@ let obj1 = DerivedClass("A", "B")
 let obj2 = DerivedClass("A")
 ```
 
-## <a name="alternatives-to-inheritance"></a>Devralma alternatifleri
+## <a name="alternatives-to-inheritance"></a>Kalıtıma Alternatifler
 
-Bir tür için küçük bir değişikliğin gerekli olduğu durumlarda, devralma için alternatif olarak bir nesne ifadesi kullanmayı düşünün. Aşağıdaki örnek, yeni bir türetilmiş tür oluşturmaya alternatif olarak bir nesne ifadesinin kullanımını göstermektedir:
+Bir türün küçük bir değişiklik gerekli olduğu durumlarda, devralma alternatif olarak bir nesne ifadesi kullanmayı düşünün. Aşağıdaki örnekte, nesne ifadesinin yeni bir türetilmiş tür oluşturmaya alternatif olarak kullanılması gösteriş verilmiştir:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2603.fs)]
 
-Nesne ifadeleri hakkında daha fazla bilgi için bkz. [nesne ifadeleri](object-expressions.md).
+Nesne ifadeleri hakkında daha fazla bilgi için [bkz.](object-expressions.md)
 
-Nesne hiyerarşileri oluştururken, devralma yerine ayrılmış bir birleşim kullanmayı göz önünde bulundurun. Ayırt edici birleşimler ayrıca ortak bir genel türü paylaşan farklı nesnelerin değişen davranışlarını modelleyebilir. Tek bir ayırt edici birleşim genellikle birbirleriyle ilgili küçük farklılıklar olan bir dizi türetilmiş sınıfa gereksinimi ortadan kaldırabilir. Ayrılmış birleşimler hakkında daha fazla bilgi için bkz. [ayırt edici birleşimler](discriminated-unions.md).
+Nesne hiyerarşileri oluştururken, devralma yerine ayrımcı bir birliktelik kullanmayı düşünün. Ayrımcı birgörünüm, ortak bir genel türü paylaşan farklı nesnelerin çeşitli davranışlarını da modelleyebilir. Tek bir ayrımcı birliktelik genellikle birbirinin küçük varyasyonları olan türemiş sınıflar bir dizi ihtiyacını ortadan kaldırabilir. Ayrımcı sendikalar hakkında bilgi için [bkz.](discriminated-unions.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nesne İfadeleri](object-expressions.md)
-- [F# Dili Başvurusu](index.md)
+- [F# Dil Referansı](index.md)

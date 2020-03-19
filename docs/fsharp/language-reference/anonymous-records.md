@@ -1,21 +1,21 @@
 ---
 title: Anonim Kayıtlar
-description: Oluşturma ve veri işlemeye yardımcı olacak bir dil özelliği olan anonim kayıtları nasıl kullanacağınızı öğrenin.
+description: Verilerin manipülasyonuna yardımcı olan bir dil özelliği olan Anonim Kayıtlar'ı oluşturma ve kullanma hakkında bilgi edinin.
 ms.date: 06/12/2019
-ms.openlocfilehash: 061fd3279c84b9a3161c687d9392947ee7ce9c83
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ef3aa8fccdb6ff406542932816e4138040845a59
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453032"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187489"
 ---
 # <a name="anonymous-records"></a>Anonim Kayıtlar
 
-Anonim kayıtlar, kullanılmadan önce bildirilmesini gerektirmeyen adlandırılmış değerlerin basit toplamalarda bulunur. Bunları yapılar veya başvuru türleri olarak bildirebilirsiniz. Bunlar varsayılan olarak başvuru türlerdir.
+Anonim kayıtlar, kullanılmadan önce bildirilmesi gerekmeyen adlandırılmış değerlerin basit toplamıdır. Bunları yapı veya başvuru türü olarak bildirebilirsiniz. Varsayılan olarak başvuru türleridir.
 
 ## <a name="syntax"></a>Sözdizimi
 
-Aşağıdaki örneklerde anonim kayıt sözdizimi gösterilmektedir. `[item]` olarak sınırlandırılmış öğeler isteğe bağlıdır.
+Aşağıdaki örnekler, anonim kayıt sözdizimini gösterir. Öğeler isteğe `[item]` bağlı olarak sınırlıdır.
 
 ```fsharp
 // Construct an anonymous record
@@ -30,9 +30,9 @@ let function-name (arg-name: [struct] {| Label1: Type1; Label2: Type2; ...|}) ..
 
 ## <a name="basic-usage"></a>Temel kullanım
 
-Anonim kayıtlar, örnek oluşturmadan önce bildirilmesini F# gerektirmeyen kayıt türleri olarak en iyi şekilde düşünülebilir.
+Anonim kayıtlar, anlık olarak bildirilmesi gerekmeyen F# kayıt türleri olarak en iyi şekilde düşünülür.
 
-Örneğin, burada anonim bir kayıt üreten bir işlevle etkileşim kurabilirsiniz:
+Örneğin, burada anonim bir kayıt üreten bir işlevle nasıl etkileşimkurabilirsiniz:
 
 ```fsharp
 open System
@@ -50,7 +50,7 @@ printfn "Circle with radius: %f has diameter %f, area %f, and circumference %f"
     r stats.Diameter stats.Area stats.Circumference
 ```
 
-Aşağıdaki örnek, giriş olarak anonim bir kaydı alan `printCircleStats` bir işlevle önceki bir üzerinde genişletilir:
+Aşağıdaki örnek, giriş olarak anonim `printCircleStats` bir kayıt alan bir işlevle öncekinde genişler:
 
 ```fsharp
 open System
@@ -71,7 +71,7 @@ let stats = getCircleStats r
 printCircleStats r stats
 ```
 
-Giriş türü derlenemeyeceği için aynı "şekle" sahip olmayan herhangi bir anonim kayıt türüyle `printCircleStats` çağrısı başarısız olur:
+Giriş `printCircleStats` türüyle aynı "şekle" sahip olmayan herhangi bir anonim kayıt türüyle arama yapmak derlemek için başarısız olur:
 
 ```fsharp
 printCircleStats r {| Diameter = 2.0; Area = 4.0; MyCircumference = 12.566371 |}
@@ -79,9 +79,9 @@ printCircleStats r {| Diameter = 2.0; Area = 4.0; MyCircumference = 12.566371 |}
 // '["Area"; "Circumference"; "Diameter"]' and '["Area"; "Diameter"; "MyCircumference"]'
 ```
 
-## <a name="struct-anonymous-records"></a>Yapı anonim kayıtları
+## <a name="struct-anonymous-records"></a>Struct anonim kayıtları
 
-Anonim kayıtlar, isteğe bağlı `struct` anahtar sözcüğüyle yapı olarak da tanımlanabilir. Aşağıdaki örnek, bir struct anonim kaydı üreterek ve tüketerek bir öncekini genişlettiğini azaltır:
+Anonim kayıtlar, isteğe bağlı `struct` anahtar kelimeyle birlikte yapı olarak da tanımlanabilir. Aşağıdaki örnek, bir öncekini, bir yapı anonim kaydı üreterek ve tüketerek genişletir:
 
 ```fsharp
 open System
@@ -104,9 +104,9 @@ let stats = getCircleStats r
 printCircleStats r stats
 ```
 
-### <a name="structness-inference"></a>Struclük çıkarımı
+### <a name="structness-inference"></a>Structness çıkarım
 
-Yapı anonim kayıtları, çağrı sitesinde `struct` anahtar sözcüğünü belirtmeniz gerekmeyen "yapı zaman çıkarımı" için de izin verir. Bu örnekte, `printCircleStats`çağrılırken `struct` anahtar sözcüğünü devre dışı olursunuz:
+Struct anonim kayıtları da arama sitesinde `struct` anahtar kelime belirtmeniz gerekmez "structness çıkarım" için izin verir. Bu örnekte, anahtar `struct` kelimeyi ararken aşağıdakileri alasınız: `printCircleStats`
 
 ```fsharp
 
@@ -117,11 +117,11 @@ let printCircleStats r (stats: struct {| Area: float; Circumference: float; Diam
 printCircleStats r {| Area = 4.0; Circumference = 12.6; Diameter = 12.6 |}
 ```
 
-Ters desenler-giriş türü bir struct anonim kayıt olmadığında `struct` belirtmek için derleme başarısız olur.
+Ters desen - `struct` giriş türü bir yapı anonim kayıt ne zaman belirten - derlemek için başarısız olur.
 
-## <a name="embedding-anonymous-records-within-other-types"></a>Anonim kayıtları diğer türler içine ekleme
+## <a name="embedding-anonymous-records-within-other-types"></a>Anonim kayıtları diğer türlere gömme
 
-Durumları kayıtları olan [ayrılmış birleşimler](discriminated-unions.md) bildirmek yararlı olur. Ancak Kayıtlardaki veriler ayrılmış birleşimle aynı türde ise, tüm türleri birbirini dışlayan özyinelemeli olarak tanımlamanız gerekir. Anonim kayıtları kullanmak bu kısıtlamayı önler. Aşağıdaki örnek bir tür ve bir düzenin onunla eşleşen işlevdir:
+Davaları kayıt olan [ayrımcı sendikaları](discriminated-unions.md) beyan etmek yararlı olur. Ancak kayıtlardaki veriler, ayrımyapılan birlikle aynı türdeyse, tüm türleri karşılıklı özyinelemeolarak tanımlamanız gerekir. Anonim kayıtların kullanılması bu kısıtlamayı önler. Aşağıdaki ler, üzerinde eşleşen bir örnek türü ve işlevidir:
 
 ```fsharp
 type FullName = { FirstName: string; LastName: string }
@@ -139,16 +139,16 @@ let getFirstName e =
     | Executive ex -> ex.Name.FirstName
 ```
 
-## <a name="copy-and-update-expressions"></a>İfadeleri Kopyala ve Güncelleştir
+## <a name="copy-and-update-expressions"></a>İfadeleri kopyalama ve güncelleştirme
 
-Anonim kayıtlar [kopyalama ve güncelleştirme ifadeleri](copy-and-update-record-expressions.md)ile oluşturmayı destekler. Örneğin, var olan bir kaynağın verilerini kopyalayan bir anonim kaydın yeni bir örneğini nasıl oluşturabileceğiniz aşağıda açıklanmıştır:
+Anonim kayıtlar [kopyalama ve güncelleştirme ifadeleri](copy-and-update-record-expressions.md)ile yapıyı destekler. Örneğin, varolan bir kaydın verilerini kopyalayan anonim bir kaydın yeni bir örneğini şu şekilde oluşturabilirsiniz:
 
 ```fsharp
 let data = {| X = 1; Y = 2 |}
 let data' = {| data with Y = 3 |}
 ```
 
-Ancak, adlandırılmış kayıtlardan farklı olarak, anonim kayıtlar kopyalama ve güncelleştirme ifadelerine tamamen farklı formlar oluşturmanız için izin verir. Aşağıdaki örnek, önceki örnekteki aynı anonim kaydı alır ve yeni bir anonim kayda genişletir:
+Ancak, adlandırılmış kayıtların aksine, anonim kayıtlar kopyala ve güncelleştirme ifadeleri ile tamamen farklı formlar oluşturmanıza olanak sağlar. Aşağıdaki örnek, önceki örnekten aynı anonim kaydı alır ve yeni bir anonim kayda genişletir:
 
 ```fsharp
 let data = {| X = 1; Y = 2 |}
@@ -163,7 +163,7 @@ let data = { X = 1 }
 let data' = {| data with Y = 2 |} // Gives {| X=1; Y=2 |}
 ```
 
-Ayrıca, başvuruya ve yapı anonim kayıtlarına veri kopyalayabilirsiniz:
+Ayrıca, bilgileri referans avesi ve yapı anonim kayıtlarına kopyalayabilirsiniz:
 
 ```fsharp
 // Copy data from a reference record into a struct anonymous record
@@ -185,20 +185,20 @@ let data3 = struct {| data2 with Z = r2.X |}
 
 ## <a name="properties-of-anonymous-records"></a>Anonim kayıtların özellikleri
 
-Anonim kayıtlar, nasıl kullanılabilecekleri hakkında tam olarak anlamak için gereken birçok özelliğe sahiptir.
+Anonim kayıtlar, nasıl kullanılabileceğini tam olarak anlamak için gerekli olan bir dizi özelliktedir.
 
-### <a name="anonymous-records-are-nominal"></a>Anonim kayıtlar kabul edilir
+### <a name="anonymous-records-are-nominal"></a>Anonim kayıtlar nominal
 
-Anonim kayıtlar [nominal türlerdir](https://en.wikipedia.org/wiki/Nominal_type_system). Bunlar, önde gelen bildirim gerektirmeyen adlandırılmış [kayıt](records.md) türleri (de kabul edilir) olarak en iyi şekilde düşünüldüler.
+Anonim kayıtlar [nominal türleridir.](https://en.wikipedia.org/wiki/Nominal_type_system) Bunlar en iyi adlandırılmış [kayıt](records.md) türleri olarak düşünülür (aynı zamanda nominal olan) bir ön bildirim gerektirmeyen.
 
-İki anonim kayıt bildirimi ile aşağıdaki örneği göz önünde bulundurun:
+İki anonim kayıt bildirimiyle aşağıdaki örneği göz önünde bulundurun:
 
 ```fsharp
 let x = {| X = 1 |}
 let y = {| Y = 1 |}
 ```
 
-`x` ve `y` değerleri farklı türlere sahiptir ve birbiriyle uyumlu değildir. Bunlar equatable değildir ve karşılaştırılabilir değildir. Bunu göstermek için adlandırılmış bir kayıt eşdeğerini göz önünde bulundurun:
+`x` Ve `y` değerleri farklı türleri vardır ve birbirleriyle uyumlu değildir. Onlar ekvatora uygun değildir ve karşılaştırılabilir değildir. Bunu göstermek için, adlandırılmış bir kayıt eşdeğeri düşünün:
 
 ```fsharp
 type X = { X: int }
@@ -208,11 +208,11 @@ let x = { X = 1 }
 let y = { Y = 1 }
 ```
 
-Tür Denkliği veya karşılaştırmayla ilgili olarak adlandırılmış kayıt eşdeğerleri ile karşılaştırıldığında anonim kayıtlar hakkında doğal olarak farklı bir şey yoktur.
+Tür eşdeğerliği veya karşılaştırması ile ilgili olarak adlandırılmış kayıt eşdeğerleri ile karşılaştırıldığında anonim kayıtlar hakkında doğal olarak farklı bir şey yoktur.
 
 ### <a name="anonymous-records-use-structural-equality-and-comparison"></a>Anonim kayıtlar yapısal eşitlik ve karşılaştırma kullanır
 
-Kayıt türleri gibi anonim kayıtlar yapısal equatable ve karşılaştırılabilir. Bu yalnızca, tüm bileşen türleri eşitlik ve karşılaştırmayı destekliyorsa, örneğin, kayıt türleriyle geçerlidir. Eşitlik veya karşılaştırmayı desteklemek için, iki anonim kayıt aynı "şekle" sahip olmalıdır.
+Kayıt türleri gibi, anonim kayıtlar yapısal olarak eşit lenebilir ve karşılaştırılabilir. Bu, yalnızca tüm kurucu türleri kayıt türleri gibi eşitliği ve karşılaştırmayı destekliyorsa geçerlidir. Eşitliği veya karşılaştırmayı desteklemek için, iki anonim kaydın aynı "şekle" sahip olması gerekir.
 
 ```fsharp
 {| a = 1+1 |} = {| a = 2 |} // true
@@ -222,25 +222,25 @@ Kayıt türleri gibi anonim kayıtlar yapısal equatable ve karşılaştırılab
 {| a = 1 + 1 |} = {| a = 2;  b = 1|}
 ```
 
-### <a name="anonymous-records-are-serializable"></a>Anonim kayıtlar seri hale getirilebilir
+### <a name="anonymous-records-are-serializable"></a>Anonim kayıtlar serileştirilebilir
 
-Anonim kayıtları, adlandırılmış kayıtlarla yaptığınız gibi seri hale getirebilirsiniz. [Newtonsoft. JSON](https://www.nuget.org/packages/Newtonsoft.Json/)kullanarak bir örnek aşağıda verilmiştir:
+Anonim kayıtları, adlandırılmış kayıtlarla olabildiğince seri hale getirebilirsiniz. Burada [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)kullanarak bir örnektir:
 
 ```fsharp
 open Newtonsoft.Json
 
 let phillip' = {| name="Phillip"; age=28 |}
-let philStr = JsonConvert.SerializeObject(phillip') 
+let philStr = JsonConvert.SerializeObject(phillip')
 
 let phillip = JsonConvert.DeserializeObject<{|name: string; age: int|}>(philStr)
 printfn "Name: %s Age: %d" phillip.name phillip.age
 ```
 
-Anonim kayıtlar, serileştirilmiş/seri durumdan çıkarılan türler için bir etki alanı tanımlamaya gerek olmadan bir ağ üzerinden hafif veri göndermek için yararlıdır.
+Anonim kayıtlar, önceden serileştirilmiş/deserialized türleri niz için bir etki alanı tanımlamaya gerek kalmadan bir ağ üzerinden hafif veri göndermek için yararlıdır.
 
-### <a name="anonymous-records-interoperate-with-c-anonymous-types"></a>Anonim türlerle birlikte C# çalışan anonim kayıtlar
+### <a name="anonymous-records-interoperate-with-c-anonymous-types"></a>Anonim kayıtlar C# anonim türleri ile birlikte çalışır
 
-Anonim türlerin kullanılması gereken bir .NET API 'si kullanmak mümkündür. [ C# ](../../csharp/programming-guide/classes-and-structs/anonymous-types.md) C#anonim türler, anonim kayıtlar kullanılarak ile birlikte çalışır. Aşağıdaki örnek, anonim kayıtların adsız bir tür gerektiren bir [LINQ](../../csharp/programming-guide/concepts/linq/index.md) aşırı yüklemesini çağırmak için nasıl kullanılacağını gösterir:
+[C# anonim türlerinin](../../csharp/programming-guide/classes-and-structs/anonymous-types.md)kullanılmasını gerektiren bir .NET API kullanmak mümkündür. C# anonim türleri anonim kayıtları kullanarak birlikte çalışmak için önemsizdir. Aşağıdaki örnek, anonim bir tür gerektiren [bir LINQ](../../csharp/programming-guide/concepts/linq/index.md) aşırı yüklemesi çağırmak için anonim kayıtların nasıl kullanılacağını gösterir:
 
 ```fsharp
 open System.Linq
@@ -251,26 +251,26 @@ for ng in nameGrouping do
     printfn "%s has first letter %c" ng.Name ng.FirstLetter
 ```
 
-.NET genelinde bir anonim türde geçirme kullanılması gereken çok sayıda diğer API 'Ler vardır. Anonim kayıtlar, bu kişilerle çalışmaya yönelik aracımız.
+.NET'te kullanılan ve anonim bir türde geçmenin kullanılmasını gerektiren çok sayıda başka API vardır. Anonim kayıtlar onlarla çalışmak için aracınızdır.
 
 ## <a name="limitations"></a>Sınırlamalar
 
-Anonim kayıtlar, kullanımlarında bazı kısıtlamalar vardır. Bazıları tasarımına göre değişir, ancak başkaları değiştirebilecektir.
+Anonim kayıtların kullanımında bazı kısıtlamalar vardır. Bazıları tasarımlarının doğasında vardır, ancak diğerleri değişmeye elverişlidir.
 
-### <a name="limitations-with-pattern-matching"></a>Model eşleştirme sınırlamaları
+### <a name="limitations-with-pattern-matching"></a>Desen eşleştirmesi ile sınırlamalar
 
-Anonim kayıtlar, adlandırılmış kayıtlardan farklı olarak, model eşleştirmeyi desteklemez. Üç neden vardır:
+Adlandırılmış kayıtların aksine, adlandırılmış kayıtlar desen eşleştirmeyi desteklemez. Üç nedeni vardır:
 
-1. Adlandırılmış kayıt türlerinden farklı olarak, bir düzenin adsız kaydın her alanı için bir hesaba sahip olması gerekir. Bunun nedeni, anonim kayıtların yapısal alt yazmayı desteklememe yöntemidir. Bunlar, nominal türlerdir.
-2. (1) nedeniyle, her farklı düzen farklı bir anonim kayıt türünü aşacağından, desen eşleştirme ifadesinde ek desenler olamaz.
-3. (3) nedeniyle, herhangi bir anonim kayıt deseninin "nokta" gösterimi kullanmaktan daha ayrıntılı olması gerekir.
+1. Adlandırılmış kayıt türlerinin aksine, bir desen anonim bir kaydın her alanını hesaba katmak zorunda kalırdı. Bunun nedeni, anonim kayıtların yapısal alt yazımı desteklememesidir – bunlar nominal türlerdir.
+2. (1) nedeniyle, her farklı desen farklı bir anonim kayıt türü anlamına geleceğini gibi, bir desen eşleştirme ifadesinde ek desenler olması için hiçbir yeteneği yoktur.
+3. (3) nedeniyle, herhangi bir anonim kayıt deseni "nokta" gösterimi kullanımından daha ayrıntılı olacaktır.
 
-[Sınırlı bağlamlarda model eşleştirmeye izin veren](https://github.com/fsharp/fslang-suggestions/issues/713)açık bir dil önerisi vardır.
+[Sınırlı bağlamlarda desen eşleştirmesine izin](https://github.com/fsharp/fslang-suggestions/issues/713)vermek için açık dil önerisi vardır.
 
-### <a name="limitations-with-mutability"></a>Değiştirici ile sınırlamalar
+### <a name="limitations-with-mutability"></a>Susturulabilirlik ile sınırlamalar
 
-`mutable` verileri olan anonim bir kayıt tanımlamak Şu anda mümkün değildir. Değişebilir verilere izin veren [açık bir dil önerisi](https://github.com/fsharp/fslang-suggestions/issues/732) vardır.
+Şu anda verilerle `mutable` anonim bir kayıt tanımlamak mümkün değildir. Mutable verilere izin vermek için [açık dil önerisi](https://github.com/fsharp/fslang-suggestions/issues/732) vardır.
 
-### <a name="limitations-with-struct-anonymous-records"></a>Struct anonim kayıtlarıyla sınırlamalar
+### <a name="limitations-with-struct-anonymous-records"></a>Yapı anonim kayıtları ile sınırlamalar
 
-Yapı anonim kayıtlarını `IsByRefLike` veya `IsReadOnly`olarak bildirmek mümkün değildir. `IsByRefLike` ve anonim kayıtları `IsReadOnly` için [açık bir dil önerisi](https://github.com/fsharp/fslang-suggestions/issues/712) vardır.
+Struct anonim kayıtlarının "veya `IsByRefLike` `IsReadOnly`. " olarak bildirin mümkün değildir. Ve `IsByRefLike` `IsReadOnly` anonim kayıtlar için açık bir dil [önerisi](https://github.com/fsharp/fslang-suggestions/issues/712) vardır.

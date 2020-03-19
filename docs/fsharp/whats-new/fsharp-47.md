@@ -1,25 +1,25 @@
 ---
-title: F# 4,7 F# kılavuzundaki yenilikler
-description: 4,7 ' de F# bulunan yeni özelliklere genel bakış alın.
+title: F# 4.7 'deki yenilikler - F# Kılavuzu
+description: F# 4.7'de bulunan yeni özelliklere genel bir bakış alın.
 ms.date: 11/27/2019
-ms.openlocfilehash: 203b258466cb9f1f50215ecf8884e92e7e86416b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 7a6e744a398719bcb55d168dd700459e0b122dd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74644070"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185870"
 ---
-# <a name="whats-new-in-f-47"></a>F# 4,7 sürümündeki yenilikler
+# <a name="whats-new-in-f-47"></a>F# 4.7'deki yenilikler
 
-F#4,7, F# dile birden çok geliştirme ekler.
+F# 4.7, F# diline birden fazla iyileştirme ekler.
 
 ## <a name="get-started"></a>Kullanmaya başlayın
 
-F#4,7 tüm .NET Core dağıtımları ve Visual Studio Araçları 'nda kullanılabilir. Daha fazla bilgi edinmek için [ile F# çalışmaya](../get-started/index.md) başlayın.
+F# 4.7 tüm .NET Core dağıtımlarında ve Visual Studio araçlamalarında mevcuttur. Daha fazla bilgi edinmek için [F# ile başlayın.](../get-started/index.md)
 
 ## <a name="language-version"></a>Dil sürümü
 
-4,7 F# derleyicisi, etkin dil sürümünüzü proje dosyanızdaki bir özellik aracılığıyla ayarlamanıza olanak sağlar:
+F# 4.7 derleyicisi, etkili dil sürümünüzü proje dosyanızdaki bir özellik üzerinden ayarlama olanağını sunar:
 
 ```xml
 <PropertyGroup>
@@ -27,52 +27,52 @@ F#4,7 tüm .NET Core dağıtımları ve Visual Studio Araçları 'nda kullanıla
 </PropertyGroup>
 ```
 
-`4.6`, `4.7`, `latest`ve `preview`değerlerine ayarlayabilirsiniz. Varsayılan, `latest` değeridir.
+Değerleri `4.6`, , , `4.7` `latest`ve `preview`. Varsayılan değer: `latest`.
 
-`preview`olarak ayarlarsanız, derleyici, derleyicide uygulanan tüm F# Önizleme özelliklerini etkinleştireceğinize sahip olur.
+Eğer `preview`ayarlarsanız, derleyiciniz derleyicinizde uygulanan tüm F# önizleme özelliklerini etkinleştirir.
 
-## <a name="implicit-yields"></a>Örtük olarak verir
+## <a name="implicit-yields"></a>Örtük verimler
 
-Artık türün çıkarsanbileceği diziler, listeler, diziler veya hesaplama ifadelerinde `yield` anahtar sözcüğünü uygulamanız gerekmez. Aşağıdaki örnekte her iki ifade F# 4,7 ' den önceki her giriş için `yield` deyim gerektirir:
+Artık anahtar kelimeyi, `yield` türün çıkarılabildiği dizilerde, listelerde, dizilerde veya hesaplama ifadelerinde uygulamanız gerekmez. Aşağıdaki örnekte, her iki `yield` ifade f# 4.7 önce her giriş için deyimi gerekli:
 
 ```fsharp
 let s = seq { 1; 2; 3; 4; 5 }
 
 let daysOfWeek includeWeekend =
-    [ 
+    [
         "Monday"
         "Tuesday"
         "Wednesday"
         "Thursday"
         "Friday"
-        if includeWeekend then 
+        if includeWeekend then
             "Saturday"
             "Sunday"
-    ] 
+    ]
 ```
 
-Tek bir `yield` anahtar sözcüğünü tanıtdıysanız, diğer tüm öğeler için de `yield` uygulanmış olması gerekir.
+Tek `yield` bir anahtar kelime tanıtıyorsanız, `yield` diğer tüm öğede de uygulanmış olması gerekir.
 
-Örtük olarak, bir diziyi düzleştirmek gibi bir işlem yapmak için `yield!` kullanan bir ifadede kullanıldığında, örtülü olarak, etkin değildir. Bu durumlarda `yield` bugün kullanmaya devam etmeniz gerekir.
+Örtük verimler, bir diziyi düzleştirmek `yield!` gibi bir şey yapmak için de kullanan bir ifadede kullanıldığında etkinleştirilmez. Bu gibi durumlarda `yield` bugün kullanmaya devam etmelisiniz.
 
 ## <a name="wildcard-identifiers"></a>Joker karakter tanımlayıcıları
 
-Sınıfları F# içeren kodda, kendi kendine tanımlayıcının üye bildirimlerinde her zaman açık olması gerekir. Ancak, kendi kendine tanımlayıcının hiçbir zaman kullanılmayan durumlarda, genellikle bir ad daha az kendi kendine tanımlayıcı belirtmek için çift alt çizgi kullanma kuralına sahiptir. Artık tek bir alt çizgi kullanabilirsiniz:
+Sınıfları içeren F# kodunda, öz tanımlayıcının üye bildirimlerinde her zaman açık olması gerekir. Ancak kendini tanımlayıcının hiç kullanılmadığı durumlarda, isimsiz bir öz tanımlayıcıyı belirtmek için bir çift alt çizgi kullanmak geleneksel olarak bir gelenektir. Artık tek bir alt alt alt puan kullanabilirsiniz:
 
 ```fsharp
 type C() =
     member _.M() = ()
 ```
 
-Bu, `for` döngüleri için de geçerlidir:
+Bu döngüler `for` için de geçerlidir:
 
 ```fsharp
 for _ in 1..10 do printfn "Hello!"
 ```
 
-## <a name="indentation-relaxations"></a>Girintileme
+## <a name="indentation-relaxations"></a>Girintisi gevşemeleri
 
-F# 4,7 ' dan önce, birincil Oluşturucu ve statik üye bağımsız değişkenlerinin girintileme gereksinimleri çok fazla girintileme gerektirdi. Artık yalnızca tek bir girintileme kapsamı gerektirir:
+F# 4.7'den önce, birincil oluşturucu ve statik üye bağımsız değişkenler için girinti gereksinimleri aşırı girinti gerektiriyor. Artık yalnızca tek bir girintin kapsamı gerektirir:
 
 ```fsharp
 type OffsideCheck(a:int,

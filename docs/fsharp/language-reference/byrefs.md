@@ -1,20 +1,20 @@
 ---
 title: ByRef’ler
-description: İçindeki F#ByRef ve ByRef benzeri türler hakkında bilgi edinin ve bu, alt düzey programlama için kullanılır.
+description: Düşük seviyeli programlama için kullanılan F#'daki byref ve byref benzeri türleri hakkında bilgi edinin.
 ms.date: 11/04/2019
-ms.openlocfilehash: 2d98d325dc4ad26548fb2cc6aa5b872e152ee0a8
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 527f465ee87fe153a2deae1306b6730531dc4123
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092794"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187047"
 ---
 # <a name="byrefs"></a>ByRef’ler
 
-F#, alt düzey programlama alanında ele alan iki önemli özellik alanına sahiptir:
+F# düşük düzeyprogramlama alanında anlaşma iki ana özellik alanları vardır:
 
-* `byref`/`inref`yönetilen işaretçiler olan /`outref` türler. Çalışma zamanında geçersiz bir program derleyememesi için kullanım kısıtlamalarına sahiptir.
-* Benzer semantiğini ve `byref<'T>`aynı derleme zamanı kısıtlamalarını [içeren `byref`benzeri bir yapı](structures.md) . Bir örnek <xref:System.Span%601>.
+* `byref` / Yönetilen `inref` / işaretçiler olan `outref` türler. Çalışma zamanında geçersiz olan bir programı derleyemiyorsanız, kullanımla ilgili kısıtlamaları vardır.
+* Benzer `byref`semantik ve aynı derleme zamanı kısıtlamaları olan bir [yapıdır](structures.md) `byref<'T>`- struct gibi . Bir <xref:System.Span%601>örnek.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,19 +37,19 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-## <a name="byref-inref-and-outref"></a>ByRef, ınref ve outref
+## <a name="byref-inref-and-outref"></a>Byref, inref ve outref
 
-Üç `byref`biçimi vardır:
+Üç şekli `byref`vardır:
 
-* temel alınan değeri okumak için yönetilen bir işaretçi `inref<'T>`.
-* temel alınan değere yazmak için yönetilen bir işaretçi olan `outref<'T>`.
-* temel alınan değeri okumak ve yazmak için yönetilen bir işaretçi olan `byref<'T>`.
+* `inref<'T>`, temel değeri okumak için yönetilen bir işaretçi.
+* `outref<'T>`, temel değere yazmak için yönetilen bir işaretçi.
+* `byref<'T>`, temel değeri okumak ve yazmak için yönetilen bir işaretçi.
 
-Bir `inref<'T>` beklendiğinde `byref<'T>` geçirilebilir. Benzer şekilde, bir `outref<'T>` beklenildiği bir `byref<'T>` geçirilebilir.
+Bir `byref<'T>` beklenen yerde `inref<'T>` geçirilebilir. Benzer şekilde, `byref<'T>` bir beklenen `outref<'T>` yerde geçirilebilir.
 
-## <a name="using-byrefs"></a>ByRef 'ler kullanma
+## <a name="using-byrefs"></a>Byrefs kullanma
 
-`inref<'T>`kullanmak için, `&`bir işaretçi değeri almanız gerekir:
+Bir , `inref<'T>`bir işaretçi değeri almak `&`için gereken bir kullanmak için:
 
 ```fsharp
 open System
@@ -62,7 +62,7 @@ let usage =
     f &dt // Pass a pointer to 'dt'
 ```
 
-`outref<'T>` veya `byref<'T>`kullanarak işaretçiye yazmak için, `mutable`işaretçiyi aldığınız değeri de yapmalısınız.
+Bir `outref<'T>` veya `byref<'T>`kullanarak işaretçiye yazmak için `mutable`, ayrıca bir işaretçi kapmak değeri yapmak gerekir.
 
 ```fsharp
 open System
@@ -78,63 +78,63 @@ let mutable dt = DateTime.Now
 f &dt
 ```
 
-Yalnızca işaretçiyi okumak yerine yazıyorsanız, `byref<'T>`yerine `outref<'T>` kullanmayı göz önünde bulundurun.
+İşaretçiyi okumak yerine yalnızca yazıyorsanız, `outref<'T>` 'yi `byref<'T>`yerine kullanmayı düşünün.
 
-### <a name="inref-semantics"></a>Inref semantiği
+### <a name="inref-semantics"></a>İnref semantik
 
-Aşağıdaki kodu göz önünde bulundurun:
+Aşağıdaki kodu inceleyin:
 
 ```fsharp
 let f (x: inref<SomeStruct>) = x.SomeField
 ```
 
-Anlam, bu, aşağıdakiler anlamına gelir:
+Semantically, bu aşağıdaki anlamına gelir:
 
-* `x` işaretçisinin sahibi yalnızca değeri okumak için kullanabilir.
-* `SomeStruct` içinde iç içe `struct` alanlara alınan herhangi bir işaretçiye `inref<_>`türü verilir.
+* `x` İşaretçinin sahibi yalnızca değeri okumak için kullanabilir.
+* İç `struct` `SomeStruct` içe yuvalanmış alanlara edinilen `inref<_>`işaretçilere tür verilir.
 
-Aşağıdakiler de doğrudur:
+Aşağıdaki ler de doğrudur:
 
-* Diğer iş parçacıklarının veya diğer adların `x`için yazma erişimine sahip olmadığı kesin değildir.
-* `SomeStruct` `inref``x` sanallaştırılan bir sorun yoktur.
+* Diğer iş parçacıklarının veya diğer adların `x`yazma erişiminin olmadığı ima edilmez.
+* Bir `SomeStruct` `x` varlık nedeniyle değişmez bir ima `inref`yoktur.
 
-Ancak, sabit F# olan değer türleri için `this` işaretçisi bir `inref`olarak algılanır.
+Ancak, **değişmez** olan F# değer türleri `this` için işaretçi . `inref`
 
-Tüm bu kuralların birlikte bir `inref` işaretçisinin sahibi, işaret edilen belleğin hemen içeriğini değiştiremeyebilir.
+Tüm bu kurallar birlikte, bir `inref` işaretçinin sahibinin işaret edilen belleğin hemen içeriğini değiştiremeyeceği anlamına gelir.
 
-### <a name="outref-semantics"></a>Outref semantiği
+### <a name="outref-semantics"></a>Outref semantik
 
-`outref<'T>` amacı, işaretçinin yalnızca yazılması gerektiğini gösterir. Beklenmedik şekilde, `outref<'T>` ada rağmen temel alınan değerin okunmasına izin verir. Bu uyumluluk amaçlıdır. Anlamsal, `outref<'T>` `byref<'T>`farklı değildir.
+`outref<'T>` Amaç, işaretçinin yalnızca yazılması gerektiğini belirtmektir. Beklenmedik bir `outref<'T>` şekilde, adından da aynı sıcanda temel değeri okumaya izin verir. Bu uyumluluk amaçlıdır. Semantik olarak, `outref<'T>` farklı `byref<'T>`değil.
 
-### <a name="interop-with-c"></a>C\# ile birlikte çalışma
+### <a name="interop-with-c"></a>C ile Interop\#
 
-C#`ref` dönüşe ek olarak `in ref` ve `out ref` anahtar sözcüklerini destekler. Aşağıdaki tabloda, ne F# C# kadar yorumlama yapılacağı gösterilmektedir:
+C# ve `in ref` `out ref` anahtar kelimeleri destekler, döner ek `ref` olarak. Aşağıdaki tablo, F#'ın C#'ın ne yaksalar yayıştırdığını nasıl yorumladığını gösterir:
 
-|C#oluşturma|F#algılar|
+|C# yapı|F# çıkarımları|
 |------------|---------|
-|`ref` dönüş değeri|`outref<'T>`|
-|`ref readonly` dönüş değeri|`inref<'T>`|
-|`in ref` parametresi|`inref<'T>`|
-|`out ref` parametresi|`outref<'T>`|
+|`ref`iade değeri|`outref<'T>`|
+|`ref readonly`iade değeri|`inref<'T>`|
+|`in ref`Parametre|`inref<'T>`|
+|`out ref`Parametre|`outref<'T>`|
 
-Aşağıdaki tabloda neler F# olduğu gösterilmektedir:
+Aşağıdaki tablo, F#'nın ne yaksalar yayıştırolduğunu gösterir:
 
-|F#oluşturma|Yayınlanan Yapı|
+|F# yapısı|Yayılan yapı|
 |------------|-----------------|
-|`inref<'T>` bağımsız değişkeni|bağımsız değişkende `[In]` özniteliği|
-|`inref<'T>` dön|değer üzerinde `modreq` özniteliği|
-|Soyut yuva veya uygulamada `inref<'T>`|bağımsız değişkende veya dönüşte `modreq`|
-|`outref<'T>` bağımsız değişkeni|bağımsız değişkende `[Out]` özniteliği|
+|`inref<'T>` bağımsız değişkeni|`[In]`bağımsız değişkene öznitelik|
+|`inref<'T>`Dönüş|`modreq`değere öznitelik|
+|`inref<'T>`soyut yuva veya uygulamada|`modreq`bağımsız değişken veya dönüş|
+|`outref<'T>` bağımsız değişkeni|`[Out]`bağımsız değişkene öznitelik|
 
-### <a name="type-inference-and-overloading-rules"></a>Tür çıkarımı ve aşırı yükleme kuralları
+### <a name="type-inference-and-overloading-rules"></a>Tür çıkarım ve aşırı yükleme kuralları
 
-Aşağıdaki durumlarda F# derleyici tarafından bir `inref<'T>` türü algılanır:
+Bir `inref<'T>` tür aşağıdaki durumlarda F# derleyicisi tarafından çıkarılır:
 
-1. Bir `IsReadOnly` özniteliği olan bir .NET parametresi veya dönüş türü.
-2. `this` işaretçisi, değişebilir alanları olmayan bir struct türü üzerinde.
-3. Başka bir `inref<_>` işaretçisinden türetilen bir bellek konumunun adresi.
+1. `IsReadOnly` Bir .NET parametresi veya özniteliği olan iade türü.
+2. Mutable alanları olmayan bir yapı türündeki `this` işaretçi.
+3. Başka `inref<_>` bir işaretçiden türetilen bellek konumunun adresi.
 
-`inref` örtük bir adresi çekilirken, `inref<SomeType>`türünde bir bağımsız değişkenle birlikte `SomeType` türünde bağımsız değişkene sahip bir aşırı yükleme tercih edilir. Örneğin:
+Bir `inref` örtük adres alınırken, türü `SomeType` bağımsız değişkeni olan aşırı yük, türünden `inref<SomeType>`bir bağımsız değişkeniçeren aşırı yüke tercih edilir. Örnek:
 
 ```fsharp
 type C() =
@@ -148,11 +148,11 @@ let v =  C.M(res)
 let v2 =  C.M2(res, 4)
 ```
 
-Her iki durumda da, `inref<System.DateTime>`alan aşırı yüklemeler yerine `System.DateTime` alan aşırı yüklemeler çözümlenir.
+Her iki durumda da, `System.DateTime` aşırı yüklemeler alma `inref<System.DateTime>`yerine çözülür.
 
-## <a name="byref-like-structs"></a>ByRef benzeri yapılar
+## <a name="byref-like-structs"></a>Byref benzeri structs
 
-`byref`/`inref`/`outref` Trio 'ya ek olarak, `byref`benzer anlamlarına uygun olan kendi yapı birimlerinizi tanımlayabilirsiniz. Bu, <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> özniteliğiyle yapılır:
+`byref` / `inref` Üçlüye / ek olarak, semantik gibi lere uyabilen `byref`kendi yapılarınızı tanımlayabilirsiniz. `outref` Bu öznitelik <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> ile yapılır:
 
 ```fsharp
 open System
@@ -164,31 +164,31 @@ type S(count1: Span<int>, count2: Span<int>) =
     member x.Count2 = count2
 ```
 
-`IsByRefLike` `Struct`göstermez. Her ikisi de türünde bulunmalıdır.
+`IsByRefLike`anlamına `Struct`gelmez. Her ikisi de türünde mevcut olmalıdır.
 
-İçindeki F# "`byref`-LIKE" yapısı, yığın bağlantılı bir değer türüdür. Yönetilen yığında hiçbir şekilde ayrılmadı. `byref`benzeri bir yapı, yoğun ömür ve yakalama olmayan bir dizi güçlü denetim ile zorlandığından, yüksek performanslı programlama için yararlıdır. Kurallar şunlardır:
+F#'daki "-like"`byref`struct, yığına bağlı bir değer türüdür. Yönetilen yığına hiçbir zaman ayrılmaz. Bir `byref`-benzeri yapı, yaşam boyu ve yakalamama ile ilgili güçlü denetimler kümesiyle uygulandığından, yüksek performanslı programlama için yararlıdır. Kurallar şunlardır:
 
-* İşlev parametreleri, yöntem parametreleri, yerel değişkenler, yöntem geri dönüş olarak kullanılabilirler.
-* Bunlar statik veya bir sınıfın ya da normal yapının örnek üyeleri olamaz.
-* Bunlar herhangi bir kapanış yapısı (`async` Yöntemler veya lambda ifadeleri) tarafından yakalanamaz.
-* Genel parametre olarak kullanılamaz.
+* İşlev parametreleri, yöntem parametreleri, yerel değişkenler, yöntem döndürürler olarak kullanılabilirler.
+* Bunlar statik veya bir sınıfın veya normal yapının örnek üyeleri olamaz.
+* Herhangi bir kapatma yapısı (yöntemler`async` veya lambda ifadeleri) tarafından ele geçirilemezler.
+* Genel bir parametre olarak kullanılamazlar.
 
-Bu son nokta, işlem hattı F# stili programlama için önemlidir. `|>`, giriş türlerini parametreleştiren genel bir işlevdir. Bu kısıtlama, gelecekte `|>` için gevşek olabilir ve gövdesinde satır içi olmayan genel işlevlere hiçbir çağrı yapmaz.
+Bu son nokta, giriş türlerini parametreize `|>` eden genel bir işlev olduğu gibi F# ardışık ardışık programlama için çok önemlidir. Bu kısıtlama gelecekte `|>` için rahat olabilir, çünkü satır içi dir ve gövdesinde çizgisiz genel işlevlere herhangi bir çağrı yapmaz.
 
-Bu kurallar kullanımı kesin olarak kısıtlıyor olsa da, yüksek performanslı bilgi işlem taahhüdünü güvenli bir şekilde yerine getirmek için bu işlemleri yapılır.
+Bu kurallar kullanımı güçlü bir şekilde kısıtlasa da, bunu yüksek performanslı bilgi işlem sözünü güvenli bir şekilde yerine getirmek için yapar.
 
-## <a name="byref-returns"></a>ByRef dönüşler
+## <a name="byref-returns"></a>Byref döndürür
 
-ByRef, F# işlevlerden veya üyelerin üretilebilir ve tüketilebilmesi için kullanılır. `byref`döndüren bir yöntemi kullanırken, değer örtük olarak başvurulduğunu. Örneğin:
+Byref F# işlevlerinden döner veya üye üretilebilir ve tüketilebilir. `byref`-returning yöntemi tüketirken, değer örtülü olarak dereferenced. Örnek:
 
 ```fsharp
-let squareAndPrint (data : byref<int>) = 
+let squareAndPrint (data : byref<int>) =
     let squared = data*data    // data is implicitly dereferenced
     printfn "%d" squared
 ```
 
-ByRef değeri döndürmek için değeri içeren değişken geçerli kapsamdan daha uzun bir süre etkin olmalıdır.
-Ayrıca, ByRef döndürmek için `&value` (değeri geçerli kapsamdan daha uzun süre bulunan bir değişkendir) kullanın.
+Bir değer byref döndürmek için, değeri içeren değişkenin geçerli kapsamdan daha uzun yaşaması gerekir.
+Ayrıca, byref dönmek `&value` için, kullanın (değer geçerli kapsamdaha uzun yaşayan bir değişkendir).
 
 ```fsharp
 let mutable sum = 0
@@ -198,9 +198,9 @@ let safeSum (bytes: Span<byte>) =
     &sum  // sum lives longer than the scope of this function.
 ```
 
-Birden çok zincirleme çağrı yoluyla başvuru geçirme gibi örtük başvuru yapmaktan kaçınmak için `&x` (`x` değerdir) kullanın.
+Birden çok zincirleme arama yoluyla bir başvuru nun geçirilmesi `&x` gibi `x` örtük dereference'ı önlemek için kullanın (değer nerededir).
 
-Ayrıca, bir dönüş `byref`doğrudan atayabilirsiniz. Aşağıdaki (son derece kesinlik düzeyi) programı göz önünde bulundurun:
+Ayrıca doğrudan bir dönüş `byref`atayabilirsiniz. Aşağıdaki (son derece zorunlu) programı göz önünde bulundurun:
 
 ```fsharp
 type C() =
@@ -236,9 +236,9 @@ Original sequence: 1 3 7 15 31 63 127 255 511 1023
 New sequence:      1 3 7 30 31 63 127 255 511 1023
 ```
 
-## <a name="scoping-for-byrefs"></a>ByRef 'ler için kapsam
+## <a name="scoping-for-byrefs"></a>Byrefs için kapsam
 
-`let`ilişkili bir değerin başvurusu tanımlandığı kapsamı aşamaz. Örneğin, aşağıdakilere izin verilmez:
+Bağlı `let`bir değer, referansını tanımlandığı kapsamı aşamaz. Örneğin, aşağıdakiler izin verilmez:
 
 ```fsharp
 let test2 () =
@@ -252,4 +252,4 @@ let test () =
     ()
 ```
 
-Bu, iyileştirmelere göre derlemenize bağlı olarak farklı sonuçlar almanızı önler.
+Bu, optimizasyonlarla derlep girmediğinize bağlı olarak farklı sonuçlar elde etmenizi önler.
