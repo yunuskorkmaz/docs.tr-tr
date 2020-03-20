@@ -16,24 +16,24 @@ helpviewer_keywords:
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
 ms.openlocfilehash: ef2abc7574aea1b4f77ff93545ad84678c66ce48
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71046898"
 ---
-# <a name="using-secure-sockets-layer"></a><span data-ttu-id="8aaac-102">Güvenli Yuva Katmanı Kullanma</span><span class="sxs-lookup"><span data-stu-id="8aaac-102">Using Secure Sockets Layer</span></span>
-<span data-ttu-id="8aaac-103"><xref:System.Net> Sınıflar, birkaç ağ protokolünün bağlantısını şifrelemek için Güvenli Yuva Katmanı (SSL) kullanır.</span><span class="sxs-lookup"><span data-stu-id="8aaac-103">The <xref:System.Net> classes use the Secure Sockets Layer (SSL) to encrypt the connection for several network protocols.</span></span>  
+# <a name="using-secure-sockets-layer"></a><span data-ttu-id="83353-102">Güvenli Yuva Katmanı Kullanma</span><span class="sxs-lookup"><span data-stu-id="83353-102">Using Secure Sockets Layer</span></span>
+<span data-ttu-id="83353-103">Sınıflar, <xref:System.Net> çeşitli ağ protokolleri için bağlantıyı şifrelemek için Güvenli Soketkatmanını (SSL) kullanır.</span><span class="sxs-lookup"><span data-stu-id="83353-103">The <xref:System.Net> classes use the Secure Sockets Layer (SSL) to encrypt the connection for several network protocols.</span></span>  
   
- <span data-ttu-id="8aaac-104">Http bağlantılarında <xref:System.Net.WebRequest> , ve <xref:System.Net.WebResponse> sınıfları SSL 'yi destekleyen Web Konakları ile iletişim kurmak için SSL kullanır.</span><span class="sxs-lookup"><span data-stu-id="8aaac-104">For http connections, the <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse> classes use SSL to communicate with web hosts that support SSL.</span></span> <span data-ttu-id="8aaac-105">SSL kullanma kararı, verilen URI temel alınarak <xref:System.Net.WebRequest> sınıfı tarafından yapılır.</span><span class="sxs-lookup"><span data-stu-id="8aaac-105">The decision to use SSL is made by the <xref:System.Net.WebRequest> class, based on the URI it is given.</span></span> <span data-ttu-id="8aaac-106">URI "https:" ile başlıyorsa, SSL kullanılır; URI "http:" ile başlıyorsa, şifrelenmemiş bir bağlantı kullanılır.</span><span class="sxs-lookup"><span data-stu-id="8aaac-106">If the URI begins with "https:", SSL is used; if the URI begins with "http:", an unencrypted connection is used.</span></span>  
+ <span data-ttu-id="83353-104">Http bağlantıları için <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse> sınıflar, SSL'yi destekleyen web ana bilgisayarlarıyla iletişim kurmak için SSL'yi kullanır.</span><span class="sxs-lookup"><span data-stu-id="83353-104">For http connections, the <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse> classes use SSL to communicate with web hosts that support SSL.</span></span> <span data-ttu-id="83353-105">SSL'yi kullanma kararı, <xref:System.Net.WebRequest> verilen URI'ye göre sınıf tarafından verilir.</span><span class="sxs-lookup"><span data-stu-id="83353-105">The decision to use SSL is made by the <xref:System.Net.WebRequest> class, based on the URI it is given.</span></span> <span data-ttu-id="83353-106">URI "https:" ile başlarsa, SSL kullanılır; URI "http:" ile başlarsa, şifrelenmemiş bir bağlantı kullanılır.</span><span class="sxs-lookup"><span data-stu-id="83353-106">If the URI begins with "https:", SSL is used; if the URI begins with "http:", an unencrypted connection is used.</span></span>  
   
- <span data-ttu-id="8aaac-107">SSL 'yi Dosya Aktarım Protokolü (FTP) ile birlikte kullanmak için, <xref:System.Net.FtpWebRequest.EnableSsl> çağrılmadan <xref:System.Net.FtpWebRequest.GetResponse>önce özelliği true olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="8aaac-107">To use SSL with File Transfer Protocol (FTP), set the <xref:System.Net.FtpWebRequest.EnableSsl> property to true prior to calling <xref:System.Net.FtpWebRequest.GetResponse>.</span></span> <span data-ttu-id="8aaac-108">Benzer şekilde, Basit Posta Aktarım Protokolü (SMTP) ile SSL kullanmak için, e <xref:System.Net.Mail.SmtpClient.EnableSsl> -postayı göndermeden önce özelliğini doğru olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="8aaac-108">Similarly, to use SSL with Simple Mail Transport Protocol (SMTP), set the <xref:System.Net.Mail.SmtpClient.EnableSsl> property to true prior to sending the email.</span></span>  
+ <span data-ttu-id="83353-107">Dosya Aktarım Protokolü (FTP) ile SSL'yi kullanmak <xref:System.Net.FtpWebRequest.GetResponse>için, aramadan önce <xref:System.Net.FtpWebRequest.EnableSsl> özelliği doğru olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="83353-107">To use SSL with File Transfer Protocol (FTP), set the <xref:System.Net.FtpWebRequest.EnableSsl> property to true prior to calling <xref:System.Net.FtpWebRequest.GetResponse>.</span></span> <span data-ttu-id="83353-108">Benzer şekilde, Basit Posta Aktarım Protokolü (SMTP) <xref:System.Net.Mail.SmtpClient.EnableSsl> ile SSL kullanmak için, e-posta göndermeden önce gerçek özelliği ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="83353-108">Similarly, to use SSL with Simple Mail Transport Protocol (SMTP), set the <xref:System.Net.Mail.SmtpClient.EnableSsl> property to true prior to sending the email.</span></span>  
   
- <span data-ttu-id="8aaac-109"><xref:System.Net.Security.SslStream> Sınıfı, SSL için akış tabanlı bir soyutlama sağlar ve SSL anlaşmasını yapılandırmak için birçok yol sunar.</span><span class="sxs-lookup"><span data-stu-id="8aaac-109">The <xref:System.Net.Security.SslStream> class provides a stream-based abstraction for SSL, and offers many ways to configure the SSL handshake.</span></span>  
+ <span data-ttu-id="83353-109">Sınıf, <xref:System.Net.Security.SslStream> SSL için akış tabanlı bir soyutlama sağlar ve SSL el sıkışmasını yapılandırmanın birçok yolunu sunar.</span><span class="sxs-lookup"><span data-stu-id="83353-109">The <xref:System.Net.Security.SslStream> class provides a stream-based abstraction for SSL, and offers many ways to configure the SSL handshake.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8aaac-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="8aaac-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="83353-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="83353-110">Example</span></span>  
   
-### <a name="code"></a><span data-ttu-id="8aaac-111">Kod</span><span class="sxs-lookup"><span data-stu-id="8aaac-111">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="83353-111">Kod</span><span class="sxs-lookup"><span data-stu-id="83353-111">Code</span></span>  
   
 ```vb  
 Dim MyURI As String = "https://www.contoso.com/"  
@@ -57,13 +57,13 @@ request.Method = WebRequestMethods.Ftp.DeleteFile;
 FtpWebResponse response = (FtpWebResponse)request.GetResponse();  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="8aaac-112">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="8aaac-112">Compiling the Code</span></span>  
- <span data-ttu-id="8aaac-113">Bu örnek şunları gerektirir:</span><span class="sxs-lookup"><span data-stu-id="8aaac-113">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="83353-112">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="83353-112">Compiling the Code</span></span>  
+ <span data-ttu-id="83353-113">Bu örnek şunları gerektirir:</span><span class="sxs-lookup"><span data-stu-id="83353-113">This example requires:</span></span>  
   
-- <span data-ttu-id="8aaac-114">**System.net** ad alanına başvurular.</span><span class="sxs-lookup"><span data-stu-id="8aaac-114">References to the **System.Net** namespace.</span></span>  
+- <span data-ttu-id="83353-114">**System.Net** ad alanına başvurular.</span><span class="sxs-lookup"><span data-stu-id="83353-114">References to the **System.Net** namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8aaac-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8aaac-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="83353-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="83353-115">See also</span></span>
 
-- [<span data-ttu-id="8aaac-116">Ağ Programlama Güvenliği</span><span class="sxs-lookup"><span data-stu-id="8aaac-116">Security in Network Programming</span></span>](security-in-network-programming.md)
-- [<span data-ttu-id="8aaac-117">.NET Framework'te Ağ Programlaması</span><span class="sxs-lookup"><span data-stu-id="8aaac-117">Network Programming in the .NET Framework</span></span>](index.md)
-- [<span data-ttu-id="8aaac-118">Sertifika Seçimi ve Doğrulama</span><span class="sxs-lookup"><span data-stu-id="8aaac-118">Certificate Selection and Validation</span></span>](certificate-selection-and-validation.md)
+- [<span data-ttu-id="83353-116">Ağ Programlama Güvenliği</span><span class="sxs-lookup"><span data-stu-id="83353-116">Security in Network Programming</span></span>](security-in-network-programming.md)
+- [<span data-ttu-id="83353-117">.NET Framework'te Ağ Programlaması</span><span class="sxs-lookup"><span data-stu-id="83353-117">Network Programming in the .NET Framework</span></span>](index.md)
+- [<span data-ttu-id="83353-118">Sertifika Seçimi ve Doğrulama</span><span class="sxs-lookup"><span data-stu-id="83353-118">Certificate Selection and Validation</span></span>](certificate-selection-and-validation.md)

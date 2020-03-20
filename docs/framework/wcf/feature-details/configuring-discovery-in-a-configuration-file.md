@@ -2,18 +2,18 @@
 title: Yapılandırma Dosyasındaki Bir Keşfi Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-ms.openlocfilehash: 0ad44d0ad1f0d67d84cc42f6b9938d096c245417
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: b2e604f6168e4adff36bfb0c22861124743b358d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834756"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185324"
 ---
-# <a name="configuring-discovery-in-a-configuration-file"></a><span data-ttu-id="ee919-102">Yapılandırma Dosyasındaki Bir Keşfi Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="ee919-102">Configuring Discovery in a Configuration File</span></span>
-<span data-ttu-id="ee919-103">Bulma sırasında kullanılan dört ana yapılandırma ayarı grubu vardır.</span><span class="sxs-lookup"><span data-stu-id="ee919-103">There are four major groups of configuration settings used in discovery.</span></span> <span data-ttu-id="ee919-104">Bu konu, her birini kısaca betimleyen ve bunların nasıl yapılandırılacağını gösteren örnekler gösterecektir.</span><span class="sxs-lookup"><span data-stu-id="ee919-104">This topic will briefly describe each and show examples of how to configure them.</span></span> <span data-ttu-id="ee919-105">Her bölüm için, her alanla ilgili daha ayrıntılı bir belge bağlantısı olacaktır.</span><span class="sxs-lookup"><span data-stu-id="ee919-105">Following each section will be a link to more in-depth documentation about each area.</span></span>  
+# <a name="configuring-discovery-in-a-configuration-file"></a><span data-ttu-id="73816-102">Yapılandırma Dosyasındaki Bir Keşfi Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="73816-102">Configuring Discovery in a Configuration File</span></span>
+<span data-ttu-id="73816-103">Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır.</span><span class="sxs-lookup"><span data-stu-id="73816-103">There are four major groups of configuration settings used in discovery.</span></span> <span data-ttu-id="73816-104">Bu konu, her birini kısaca açıklar ve bunları nasıl yapılandıracağınıza ait örnekler gösterir.</span><span class="sxs-lookup"><span data-stu-id="73816-104">This topic will briefly describe each and show examples of how to configure them.</span></span> <span data-ttu-id="73816-105">Her bölümü takip her alan hakkında daha derinlemesine belgeler için bir bağlantı olacaktır.</span><span class="sxs-lookup"><span data-stu-id="73816-105">Following each section will be a link to more in-depth documentation about each area.</span></span>  
   
-## <a name="behavior-configuration"></a><span data-ttu-id="ee919-106">Davranış yapılandırması</span><span class="sxs-lookup"><span data-stu-id="ee919-106">Behavior Configuration</span></span>  
- <span data-ttu-id="ee919-107">Bulma hizmeti davranışlarını ve uç nokta davranışlarını kullanır.</span><span class="sxs-lookup"><span data-stu-id="ee919-107">Discovery uses service behaviors and endpoint behaviors.</span></span> <span data-ttu-id="ee919-108">@No__t-0 davranışı, bir hizmetin tüm uç noktaları için bulmayı sağlar ve duyuru uç noktalarını belirtmenize olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="ee919-108">The <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> behavior enables discovery for all of a service’s endpoints and allows you to specify announcement endpoints.</span></span>  <span data-ttu-id="ee919-109">Aşağıdaki örnek, <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> ' nın nasıl ekleneceğini ve bir duyuru uç noktasının nasıl yapılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="ee919-109">The following example shows how to add the <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> and specify an announcement endpoint.</span></span>  
+## <a name="behavior-configuration"></a><span data-ttu-id="73816-106">Davranış Yapılandırması</span><span class="sxs-lookup"><span data-stu-id="73816-106">Behavior Configuration</span></span>  
+ <span data-ttu-id="73816-107">Bulma, hizmet davranışları ve uç nokta davranışları kullanır.</span><span class="sxs-lookup"><span data-stu-id="73816-107">Discovery uses service behaviors and endpoint behaviors.</span></span> <span data-ttu-id="73816-108">Davranış, <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> bir hizmetin tüm uç noktalarının bulunmasını sağlar ve duyuru uç noktalarını belirtmenize olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="73816-108">The <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> behavior enables discovery for all of a service’s endpoints and allows you to specify announcement endpoints.</span></span>  <span data-ttu-id="73816-109">Aşağıdaki örnekte, bir <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> duyuru bitiş noktasının nasıl ekleyeceğinive belirtin.</span><span class="sxs-lookup"><span data-stu-id="73816-109">The following example shows how to add the <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> and specify an announcement endpoint.</span></span>  
   
 ```xml  
 <behaviors>  
@@ -28,7 +28,7 @@ ms.locfileid: "71834756"
       </serviceBehaviors>  
 ```  
   
- <span data-ttu-id="ee919-110">Davranışı belirttikten sonra, aşağıdaki örnekte gösterildiği gibi bir < `service` > öğesinden başvuru yapın.</span><span class="sxs-lookup"><span data-stu-id="ee919-110">Once you specify the behavior, reference it from a <`service`> element as shown in the following sample.</span></span>  
+ <span data-ttu-id="73816-110">Davranışı belirttikten sonra, aşağıdaki örnekte gösterildiği gibi <`service`> öğesinden başvurun.</span><span class="sxs-lookup"><span data-stu-id="73816-110">Once you specify the behavior, reference it from a <`service`> element as shown in the following sample.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -44,9 +44,9 @@ ms.locfileid: "71834756"
     </service>  
 ```  
   
- <span data-ttu-id="ee919-111">Bir hizmetin bulunabilir olması için, bir bulma uç noktası da eklemeniz gerekir, yukarıdaki örnek <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standart uç noktası ekler.</span><span class="sxs-lookup"><span data-stu-id="ee919-111">In order for a service to be discoverable, you must also add a discovery endpoint, the example above adds a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard endpoint.</span></span>  
+ <span data-ttu-id="73816-111">Bir hizmetin bulunabilmesi için, bir keşif bitiş noktası da eklemeniz <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> gerekir, yukarıdaki örnek standart bir bitiş noktası ekler.</span><span class="sxs-lookup"><span data-stu-id="73816-111">In order for a service to be discoverable, you must also add a discovery endpoint, the example above adds a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard endpoint.</span></span>  
   
- <span data-ttu-id="ee919-112">Duyuru uç noktaları eklediğinizde, aşağıdaki örnekte gösterildiği gibi < `services` > öğesine bir duyuru dinleyicisi hizmeti de eklemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="ee919-112">When you add announcement endpoints you must also add an announcement listener service to the <`services`> element as shown in the following example.</span></span>  
+ <span data-ttu-id="73816-112">Duyuru bitiş noktaları eklediğinizde, aşağıdaki örnekte gösterildiği gibi `services` <> öğesine bir duyuru dinleyici hizmeti de eklemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="73816-112">When you add announcement endpoints you must also add an announcement listener service to the <`services`> element as shown in the following example.</span></span>  
   
 ```xml  
 <services>  
@@ -64,7 +64,7 @@ ms.locfileid: "71834756"
    </service>  
 ```  
   
- <span data-ttu-id="ee919-113">@No__t-0 davranışı belirli bir uç noktanın bulunmasını etkinleştirmek veya devre dışı bırakmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="ee919-113">The <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior is used to enable or disable discovery of a specific endpoint.</span></span>  <span data-ttu-id="ee919-114">Aşağıdaki örnek, bir hizmeti bulma etkin ve diğeri de bulma devre dışı olan iki uygulama uç noktası ile yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="ee919-114">The following example configures a service with two application endpoints, one with discovery enabled and one with discovery disabled.</span></span> <span data-ttu-id="ee919-115">Her bitiş noktası için <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> davranışı eklenir.</span><span class="sxs-lookup"><span data-stu-id="ee919-115">For each endpoint an <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior is added.</span></span>  
+ <span data-ttu-id="73816-113">Davranış, <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> belirli bir bitiş noktasının keşfini etkinleştirmek veya devre dışı etmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="73816-113">The <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior is used to enable or disable discovery of a specific endpoint.</span></span>  <span data-ttu-id="73816-114">Aşağıdaki örnek, biri bulma etkinleştirilmiş, diğeri de bulma devre dışı bırakılmış iki uygulama uç noktası olan bir hizmeti yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="73816-114">The following example configures a service with two application endpoints, one with discovery enabled and one with discovery disabled.</span></span> <span data-ttu-id="73816-115">Her bitiş noktası <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> için bir davranış eklenir.</span><span class="sxs-lookup"><span data-stu-id="73816-115">For each endpoint an <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior is added.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -75,7 +75,7 @@ ms.locfileid: "71834756"
         <!-- Application Endpoints -->  
         <endpoint address="endpoint0"  
                  binding="basicHttpBinding"  
-                 contract="IHelloWorldService"   
+                 contract="IHelloWorldService"
                  behaviorConfiguration="ep0Behavior" />  
   
         <endpoint address="endpoint1"  
@@ -104,7 +104,7 @@ ms.locfileid: "71834756"
    </behaviors>  
 ```  
   
- <span data-ttu-id="ee919-116">@No__t-0 davranışı, hizmet tarafından döndürülen uç nokta meta verilerine özel meta veri eklemek için de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="ee919-116">The <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior can also be used to add custom metadata to the endpoint metadata returned by the service.</span></span> <span data-ttu-id="ee919-117">Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="ee919-117">The following example shows how to do this.</span></span>  
+ <span data-ttu-id="73816-116">Davranış, <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> hizmet tarafından döndürülen uç nokta meta verilerine özel meta veri eklemek için de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="73816-116">The <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior can also be used to add custom metadata to the endpoint metadata returned by the service.</span></span> <span data-ttu-id="73816-117">Aşağıdaki örnekte, bunun nasıl yapılacağını gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="73816-117">The following example shows how to do this.</span></span>  
   
 ```xml  
 <behavior name="ep4Behavior">  
@@ -120,7 +120,7 @@ ms.locfileid: "71834756"
 </behavior>  
 ```  
   
- <span data-ttu-id="ee919-118">@No__t-0 davranışı, istemcilerin Hizmetleri aramak için kullandığı kapsamları ve türleri eklemek için de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="ee919-118">The <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior can also be used to add scopes and types that clients use to search for services.</span></span> <span data-ttu-id="ee919-119">Aşağıdaki örnek, bir istemci tarafı yapılandırma dosyasında bunun nasıl yapılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="ee919-119">The following example shows how to do this in a client side configuration file.</span></span>  
+ <span data-ttu-id="73816-118">Bu <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> davranış, istemcilerin hizmetleri aramak için kullandığı kapsamları ve türleri eklemek için de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="73816-118">The <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior can also be used to add scopes and types that clients use to search for services.</span></span> <span data-ttu-id="73816-119">Aşağıdaki örnek, istemci tarafı yapılandırma dosyasında bunun nasıl yapılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="73816-119">The following example shows how to do this in a client side configuration file.</span></span>  
   
 ```xml  
 <behavior name="ep2Behavior">  
@@ -137,10 +137,10 @@ ms.locfileid: "71834756"
 </behavior>  
 ```  
   
- <span data-ttu-id="ee919-120">@No__t-0 ve <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> hakkında daha fazla bilgi için bkz. [WCF bulmaya genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span><span class="sxs-lookup"><span data-stu-id="ee919-120">For more information about <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> and <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> see [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span></span>  
+ <span data-ttu-id="73816-120">Hakkında <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> daha fazla <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> bilgi için ve [WCF Discovery Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)bakın.</span><span class="sxs-lookup"><span data-stu-id="73816-120">For more information about <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> and <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> see [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span></span>  
   
-## <a name="binding-element-configuration"></a><span data-ttu-id="ee919-121">Bağlama öğesi yapılandırması</span><span class="sxs-lookup"><span data-stu-id="ee919-121">Binding Element Configuration</span></span>  
- <span data-ttu-id="ee919-122">Bağlama öğesi yapılandırması, istemci tarafında en ilginç bir öğedir.</span><span class="sxs-lookup"><span data-stu-id="ee919-122">Binding element configuration is most interesting on the client side.</span></span> <span data-ttu-id="ee919-123">Bir WCF istemci uygulamasından hizmetleri bulmak için kullanılan bulma ölçütlerini belirtmek için yapılandırma kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ee919-123">You can use configuration to specify the find criteria used to discover services from a WCF client application.</span></span>  <span data-ttu-id="ee919-124">Aşağıdaki örnek <xref:System.ServiceModel.Discovery.DiscoveryClient> kanalına sahip özel bir bağlama oluşturur ve bir tür ve kapsam içeren bulma ölçütünü belirtir.</span><span class="sxs-lookup"><span data-stu-id="ee919-124">The following example creates a custom binding with the <xref:System.ServiceModel.Discovery.DiscoveryClient> channel and specifies find criteria that includes a type and scope.</span></span> <span data-ttu-id="ee919-125">Ayrıca, <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> ve <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> özellikleri için değerler belirtir.</span><span class="sxs-lookup"><span data-stu-id="ee919-125">In addition it specifies values for the <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> and <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> properties.</span></span>  
+## <a name="binding-element-configuration"></a><span data-ttu-id="73816-121">Bağlama Öğesi Yapılandırması</span><span class="sxs-lookup"><span data-stu-id="73816-121">Binding Element Configuration</span></span>  
+ <span data-ttu-id="73816-122">Bağlama öğesi yapılandırması istemci tarafında en ilginç.</span><span class="sxs-lookup"><span data-stu-id="73816-122">Binding element configuration is most interesting on the client side.</span></span> <span data-ttu-id="73816-123">Bir WCF istemci uygulamasından hizmetleri bulmak için kullanılan bulma ölçütlerini belirtmek için yapılandırmayı kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="73816-123">You can use configuration to specify the find criteria used to discover services from a WCF client application.</span></span>  <span data-ttu-id="73816-124">Aşağıdaki örnek, <xref:System.ServiceModel.Discovery.DiscoveryClient> kanalla özel bir bağlama oluşturur ve bir tür ve kapsam içeren bul ölçütlerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="73816-124">The following example creates a custom binding with the <xref:System.ServiceModel.Discovery.DiscoveryClient> channel and specifies find criteria that includes a type and scope.</span></span> <span data-ttu-id="73816-125">Buna ek olarak, özellikleri <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> ve <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> değerleri belirtir.</span><span class="sxs-lookup"><span data-stu-id="73816-125">In addition it specifies values for the <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> and <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> properties.</span></span>  
   
 ```xml  
 <bindings>  
@@ -158,7 +158,7 @@ ms.locfileid: "71834756"
               </types>  
               <scopes>  
                 <add scope="http://www.microsoft.com/building42/floor1"/>  
-              </scopes>              
+              </scopes>
             </findCriteria>  
           </discoveryClient>  
           <textMessageEncoding messageVersion="Soap11"/>  
@@ -166,7 +166,7 @@ ms.locfileid: "71834756"
         </binding>  
 ```  
   
- <span data-ttu-id="ee919-126">Bu özel bağlama yapılandırmasına bir istemci uç noktası tarafından başvurulmalıdır:</span><span class="sxs-lookup"><span data-stu-id="ee919-126">This custom binding configuration must be referenced by a client endpoint:</span></span>  
+ <span data-ttu-id="73816-126">Bu özel bağlama yapılandırması istemci bitiş noktası ile başvurulmalıdır:</span><span class="sxs-lookup"><span data-stu-id="73816-126">This custom binding configuration must be referenced by a client endpoint:</span></span>  
   
 ```xml  
 <client>  
@@ -177,15 +177,15 @@ ms.locfileid: "71834756"
     </client>  
 ```  
   
- <span data-ttu-id="ee919-127">Bulma ölçütü hakkında daha fazla bilgi için bkz. [bulma bulma ve FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).</span><span class="sxs-lookup"><span data-stu-id="ee919-127">For more information about find criteria see [Discovery Find and FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).</span></span> <span data-ttu-id="ee919-128">Bulma ve bağlama öğeleri hakkında daha fazla bilgi için bkz. [WCF bulgu genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)</span><span class="sxs-lookup"><span data-stu-id="ee919-128">For more information about discovery and binding elements see, [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)</span></span>  
+ <span data-ttu-id="73816-127">Bulma ölçütleri hakkında daha fazla bilgi için [Bkz. Bulma Ve Bulma Kriterleri.](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)</span><span class="sxs-lookup"><span data-stu-id="73816-127">For more information about find criteria see [Discovery Find and FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).</span></span> <span data-ttu-id="73816-128">Bulma ve bağlama öğeleri hakkında daha fazla bilgi için bkz: [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)</span><span class="sxs-lookup"><span data-stu-id="73816-128">For more information about discovery and binding elements see, [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)</span></span>  
   
-## <a name="standard-endpoint-configuration"></a><span data-ttu-id="ee919-129">Standart uç nokta yapılandırması</span><span class="sxs-lookup"><span data-stu-id="ee919-129">Standard Endpoint Configuration</span></span>  
- <span data-ttu-id="ee919-130">Standart uç noktalar bir veya daha fazla Özellik (adres, bağlama veya sözleşme) veya değiştirebir veya daha fazla özellik değeri için varsayılan değerlere sahip önceden tanımlanmış uç noktalardır.</span><span class="sxs-lookup"><span data-stu-id="ee919-130">Standard endpoints are predefined endpoints that have default values for one or more properties (address, binding, or contract) or one or more property values that cannot change.</span></span> <span data-ttu-id="ee919-131">.NET 4, 3 bulma ile ilgili standart uç noktaları ile birlikte gelir: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> ve <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span><span class="sxs-lookup"><span data-stu-id="ee919-131">.NET 4 ships with 3 discovery related standard endpoints: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>, and <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span></span>  <span data-ttu-id="ee919-132">@No__t-0, bir UDP çok noktaya yayın bağlaması üzerinde bulma işlemleri için önceden yapılandırılmış standart bir uç noktadır.</span><span class="sxs-lookup"><span data-stu-id="ee919-132">The <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> is a standard endpoint that is pre-configured for discovery operations over a UDP multicast binding.</span></span> <span data-ttu-id="ee919-133">@No__t-0, bir UDP bağlaması üzerinden duyuru iletileri gönderecek şekilde önceden yapılandırılmış standart bir uç noktadır.</span><span class="sxs-lookup"><span data-stu-id="ee919-133">The <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> is a standard endpoint that is pre-configured to send announcement messages over a UDP binding.</span></span> <span data-ttu-id="ee919-134">@No__t-0, çalışma zamanında dinamik olarak bulunan bir hizmetin uç nokta adresini bulmak için bulma kullanan standart bir uç noktadır.</span><span class="sxs-lookup"><span data-stu-id="ee919-134">The <xref:System.ServiceModel.Discovery.DynamicEndpoint> is a standard endpoint that uses discovery to find the endpoint address of a discovered service dynamically at runtime.</span></span>  <span data-ttu-id="ee919-135">Standart bağlamalar, eklenecek standart uç nokta türünü belirtilen tür özniteliğini içeren bir < `endpoint` > öğesiyle belirtilir.</span><span class="sxs-lookup"><span data-stu-id="ee919-135">Standard bindings are specified with an <`endpoint`> element that contains kind attribute that specified the type of standard endpoint to add.</span></span> <span data-ttu-id="ee919-136">Aşağıdaki örnek, <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ve <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> ' in nasıl ekleneceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="ee919-136">The following example shows how to add a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> and a <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.</span></span>  
+## <a name="standard-endpoint-configuration"></a><span data-ttu-id="73816-129">Standart Bitiş Noktası Yapılandırması</span><span class="sxs-lookup"><span data-stu-id="73816-129">Standard Endpoint Configuration</span></span>  
+ <span data-ttu-id="73816-130">Standart uç noktaları, bir veya daha fazla özellik (adres, bağlama veya sözleşme) veya değiştirilemeyen bir veya daha fazla özellik değerleri için varsayılan değerlere sahip önceden tanımlanmış uç noktalarıdır.</span><span class="sxs-lookup"><span data-stu-id="73816-130">Standard endpoints are predefined endpoints that have default values for one or more properties (address, binding, or contract) or one or more property values that cannot change.</span></span> <span data-ttu-id="73816-131">.NET 4 gemi ile 3 keşif <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>ilgili <xref:System.ServiceModel.Discovery.DynamicEndpoint>standart uç noktaları: , , ve .</span><span class="sxs-lookup"><span data-stu-id="73816-131">.NET 4 ships with 3 discovery related standard endpoints: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>, and <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span></span>  <span data-ttu-id="73816-132">UdP <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> çok noktaya yayın bağlama üzerinde bulma işlemleri için önceden yapılandırılan standart bir uç noktadır.</span><span class="sxs-lookup"><span data-stu-id="73816-132">The <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> is a standard endpoint that is pre-configured for discovery operations over a UDP multicast binding.</span></span> <span data-ttu-id="73816-133">UdP <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> bağlama üzerinden duyuru iletileri göndermek için önceden yapılandırılan standart bir bitiş noktasıdır.</span><span class="sxs-lookup"><span data-stu-id="73816-133">The <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> is a standard endpoint that is pre-configured to send announcement messages over a UDP binding.</span></span> <span data-ttu-id="73816-134">Keşfedilen <xref:System.ServiceModel.Discovery.DynamicEndpoint> bir hizmetin bitiş noktası adresini çalışma zamanında dinamik olarak bulmak için keşfedilmeyi kullanan standart bir uç noktadır.</span><span class="sxs-lookup"><span data-stu-id="73816-134">The <xref:System.ServiceModel.Discovery.DynamicEndpoint> is a standard endpoint that uses discovery to find the endpoint address of a discovered service dynamically at runtime.</span></span>  <span data-ttu-id="73816-135">Standart bağlamalar, eklenecek `endpoint` standart bitiş noktası türünü belirten tür özniteliği içeren <bir> öğesiyle belirtilir.</span><span class="sxs-lookup"><span data-stu-id="73816-135">Standard bindings are specified with an <`endpoint`> element that contains kind attribute that specified the type of standard endpoint to add.</span></span> <span data-ttu-id="73816-136">Aşağıdaki örnekte, a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ve <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>a' nın nasıl eklendirilir</span><span class="sxs-lookup"><span data-stu-id="73816-136">The following example shows how to add a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> and a <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.</span></span>  
   
 ```xml  
 <services>  
    <service name="HelloWorldService">  
-      <!-- ...  -->          
+      <!-- ...  -->
       <endpoint kind="udpDiscoveryEndpoint" />  
    </service>  
    <service name="AnnouncementListener">  
@@ -194,14 +194,14 @@ ms.locfileid: "71834756"
 </services>  
 ```  
   
- <span data-ttu-id="ee919-137">Standart uç noktalar < `standardEndpoints` > öğesinde yapılandırılır.</span><span class="sxs-lookup"><span data-stu-id="ee919-137">Standard endpoints are configured in a <`standardEndpoints`> element.</span></span> <span data-ttu-id="ee919-138">Aşağıdaki örnek, <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ve <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> ' in nasıl yapılandırılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="ee919-138">The following example shows how to configure the <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> and the <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.</span></span>  
+ <span data-ttu-id="73816-137">Standart uç noktalar <`standardEndpoints`> öğesi olarak yapılandırılır.</span><span class="sxs-lookup"><span data-stu-id="73816-137">Standard endpoints are configured in a <`standardEndpoints`> element.</span></span> <span data-ttu-id="73816-138">Aşağıdaki örnekte, <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> "ve <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.</span><span class="sxs-lookup"><span data-stu-id="73816-138">The following example shows how to configure the <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> and the <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.</span></span>  
   
 ```xml  
 <standardEndpoints>  
       <udpAnnouncementEndpoint>  
-        <standardEndpoint   
-            name="udpAnnouncementEndpointSettings"   
-            multicastAddress="soap.udp://239.255.255.250:3703"    
+        <standardEndpoint
+            name="udpAnnouncementEndpointSettings"
+            multicastAddress="soap.udp://239.255.255.250:3703"
             maxAnnouncementDelay="00:00:00.800">  
           <transportSettings  
             duplicateMessageHistoryLength="1028"  
@@ -226,12 +226,12 @@ ms.locfileid: "71834756"
       </udpDiscoveryEndpoint>  
 ```  
   
- <span data-ttu-id="ee919-139">Standart uç nokta yapılandırmasını ekledikten sonra, aşağıdaki örnekte gösterildiği gibi her bir uç nokta için < `endpoint` > öğesinde yapılandırmaya başvurun.</span><span class="sxs-lookup"><span data-stu-id="ee919-139">Once you’ve added the standard endpoint configuration, reference the configuration in the <`endpoint`> element for each endpoint as shown in the following sample.</span></span>  
+ <span data-ttu-id="73816-139">Standart bitiş noktası yapılandırmasını ekledikten sonra, aşağıdaki `endpoint` örnekte gösterildiği gibi, her bitiş noktası için <> öğesindeki yapılandırmaya başvurun.</span><span class="sxs-lookup"><span data-stu-id="73816-139">Once you’ve added the standard endpoint configuration, reference the configuration in the <`endpoint`> element for each endpoint as shown in the following sample.</span></span>  
   
 ```xml  
 <services>  
    <service name="HelloWorldService">  
-      <!-- ...  -->          
+      <!-- ...  -->
       <endpoint kind="udpDiscoveryEndpoint" endpointConfiguration="udpDiscoveryEndpointSettings"/>  
    </service>  
    <service name="AnnouncementListener">  
@@ -240,13 +240,13 @@ ms.locfileid: "71834756"
 </services>  
 ```  
   
- <span data-ttu-id="ee919-140">Bulma sırasında kullanılan diğer standart uç noktaların aksine, <xref:System.ServiceModel.Discovery.DynamicEndpoint> için bir bağlama ve sözleşme belirtirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ee919-140">Unlike the other standard endpoints used in discovery, you specify a binding and contract for <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span></span> <span data-ttu-id="ee919-141">Aşağıdaki örnek, <xref:System.ServiceModel.Discovery.DynamicEndpoint> ' ın nasıl ekleneceğini ve yapılandırılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="ee919-141">The following example shows how to add and configure a <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span></span>  
+ <span data-ttu-id="73816-140">Keşifte kullanılan diğer standart uç noktaların aksine, <xref:System.ServiceModel.Discovery.DynamicEndpoint>bir bağlama ve sözleşme belirtirsiniz.</span><span class="sxs-lookup"><span data-stu-id="73816-140">Unlike the other standard endpoints used in discovery, you specify a binding and contract for <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span></span> <span data-ttu-id="73816-141">Aşağıdaki örnekte, bir <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span><span class="sxs-lookup"><span data-stu-id="73816-141">The following example shows how to add and configure a <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span></span>  
   
 ```xml  
 <system.serviceModel>  
     <client>  
       <endpoint kind="dynamicEndpoint" binding="basicHttpBinding" contract="IHelloWorldService" endpointConfiguration="dynamicEndpointConfiguration" />  
-    </client>   
+    </client>
    <standardEndpoints>  
       <dynamicEndpoint>  
          <standardEndpoint name="dynamicEndpointConfiguration">  
@@ -259,7 +259,7 @@ ms.locfileid: "71834756"
                    <add scope="http://www.microsoft.com/building42/floor1"/>  
                  </scopes>  
                  <extensions>  
-                   <CustomMetadata>This is custom metadata.</CustomMetadata>          
+                   <CustomMetadata>This is custom metadata.</CustomMetadata>
                  </extensions>  
                </findCriteria>  
              </discoveryClientSettings>  
@@ -269,4 +269,4 @@ ms.locfileid: "71834756"
 </system.ServiceModel>  
 ```  
   
- <span data-ttu-id="ee919-142">Standart uç noktalar hakkında daha fazla bilgi için bkz. [standart uç noktalar](standard-endpoints.md).</span><span class="sxs-lookup"><span data-stu-id="ee919-142">For more information about standard endpoints see [Standard Endpoints](standard-endpoints.md).</span></span>
+ <span data-ttu-id="73816-142">Standart uç noktaları hakkında daha fazla bilgi için [Bkz. Standart Uç Noktaları.](standard-endpoints.md)</span><span class="sxs-lookup"><span data-stu-id="73816-142">For more information about standard endpoints see [Standard Endpoints](standard-endpoints.md).</span></span>
