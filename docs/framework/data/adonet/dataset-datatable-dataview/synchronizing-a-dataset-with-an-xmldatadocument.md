@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: 272b76c0448da9e069fba331c3ae99c1de02ed16
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2ee5b0937f24fac745f72cf6ef6e4bef9ec97ba8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784272"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150787"
 ---
-# <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a><span data-ttu-id="7f260-102">DataSet’i bir XmlDataDocument ile Eşitleme</span><span class="sxs-lookup"><span data-stu-id="7f260-102">Synchronizing a DataSet with an XmlDataDocument</span></span>
-<span data-ttu-id="7f260-103">Bu bölümde, bir satın alma siparişinin işlenmesinde bir adım gösterilir ve bir, <xref:System.Data.DataSet> <xref:System.Xml.XmlDataDocument>ile kesin olarak yazılmış bir şekilde eşitlenmiş.</span><span class="sxs-lookup"><span data-stu-id="7f260-103">This section demonstrates one step in the processing of a purchase order, using a strongly typed <xref:System.Data.DataSet> synchronized with an <xref:System.Xml.XmlDataDocument>.</span></span> <span data-ttu-id="7f260-104">Aşağıdaki örneklerde, yalnızca kaynak XML belgesinin yalnızca bir bölümüyle eşleşen küçültülmüş bir şemaya sahip bir **veri kümesi** oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="7f260-104">The examples that follow create a **DataSet** with a minimized schema that matches only a portion of the source XML document.</span></span> <span data-ttu-id="7f260-105">Örnekler, kaynak XML belgesinin aslına uygunluk düzeyini korumak için bir **XmlDataDocument** kullanır ve bu da **veri kümesinin** XML belgesinin bir alt kümesini açığa çıkarmak için kullanılmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="7f260-105">The examples use an **XmlDataDocument** to preserve the fidelity of the source XML document, enabling the **DataSet** to be used to expose a subset of the XML document.</span></span>  
+# <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a><span data-ttu-id="476db-102">DataSet’i bir XmlDataDocument ile Eşitleme</span><span class="sxs-lookup"><span data-stu-id="476db-102">Synchronizing a DataSet with an XmlDataDocument</span></span>
+<span data-ttu-id="476db-103">Bu bölümde, bir satınalma siparişi ile <xref:System.Data.DataSet> <xref:System.Xml.XmlDataDocument>senkronize güçlü bir şekilde yazılan bir sözcük kullanarak, bir satınalma siparişinin işlenmesinde bir adım gösterilmiş</span><span class="sxs-lookup"><span data-stu-id="476db-103">This section demonstrates one step in the processing of a purchase order, using a strongly typed <xref:System.Data.DataSet> synchronized with an <xref:System.Xml.XmlDataDocument>.</span></span> <span data-ttu-id="476db-104">İzleyen örnekler, kaynak XML belgesinin yalnızca bir bölümüyle eşleşen en aza indirgenen şema içeren bir **DataSet** oluşturur.</span><span class="sxs-lookup"><span data-stu-id="476db-104">The examples that follow create a **DataSet** with a minimized schema that matches only a portion of the source XML document.</span></span> <span data-ttu-id="476db-105">Örnekler, kaynak XML belgesinin doğrulamasını korumak için bir **XmlDataDocument** kullanarak **DataSet'in** XML belgesinin bir alt kümesini ortaya çıkarmak için kullanılmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="476db-105">The examples use an **XmlDataDocument** to preserve the fidelity of the source XML document, enabling the **DataSet** to be used to expose a subset of the XML document.</span></span>  
   
- <span data-ttu-id="7f260-106">Aşağıdaki XML belgesi, bir satın alma siparişiyle ilgili tüm bilgileri içerir: müşteri bilgileri, sipariş edilen öğeler, gönderim bilgileri vb.</span><span class="sxs-lookup"><span data-stu-id="7f260-106">The following XML document contains all the information pertaining to a purchase order: customer information, items ordered, shipping information, and so on.</span></span>  
+ <span data-ttu-id="476db-106">Aşağıdaki XML belgesi bir satın alma siparişi ile ilgili tüm bilgileri içerir: müşteri bilgileri, sipariş edilen maddeler, sevkiyat bilgileri, ve benzeri.</span><span class="sxs-lookup"><span data-stu-id="476db-106">The following XML document contains all the information pertaining to a purchase order: customer information, items ordered, shipping information, and so on.</span></span>  
   
 ```xml  
 <?xml version="1.0" standalone="yes"?>  
@@ -109,15 +109,15 @@ ms.locfileid: "70784272"
 </PurchaseOrder>  
 ```  
   
- <span data-ttu-id="7f260-107">Önceki XML belgesinde yer alan satın alma siparişi bilgilerini işlemenin bir adımı şirketin geçerli envanterinden doldurulacak şekilde yapılır.</span><span class="sxs-lookup"><span data-stu-id="7f260-107">One step in processing the purchase order information contained in the preceding XML document is for the order to be filled from the company's current inventory.</span></span> <span data-ttu-id="7f260-108">Siparişin şirket ambarından doldurulmasından sorumlu çalışan, satın alma siparişinin tüm içeriğini görmeniz gerekmez; yalnızca sipariş için ürün bilgilerini görmeleri gerekir.</span><span class="sxs-lookup"><span data-stu-id="7f260-108">The employee responsible for filling the order from the company's warehouse does not need to see the entire contents of the purchase order; they only need to see the product information for the order.</span></span> <span data-ttu-id="7f260-109">Yalnızca ürün bilgilerini XML belgesinden göstermek için, XML şeması tanım dili (XSD) şeması olarak yazılmış ve sıralanan ürünlerle ve miktarlarla eşleşen bir şemaya sahip kesin türü belirtilmiş bir **veri kümesi** oluşturun.</span><span class="sxs-lookup"><span data-stu-id="7f260-109">To expose only the product information from the XML document, create a strongly typed **DataSet** with a schema, written as XML Schema definition language (XSD) schema, that maps to the products and quantities ordered.</span></span> <span data-ttu-id="7f260-110">Türü kesin belirlenmiş **veri kümesi** nesneleri hakkında daha fazla bilgi için bkz. [Typed DataSet](typed-datasets.md).</span><span class="sxs-lookup"><span data-stu-id="7f260-110">For more information about strongly typed **DataSet** objects, see [Typed DataSets](typed-datasets.md).</span></span>  
+ <span data-ttu-id="476db-107">Önceki XML belgesinde yer alan satınalma siparişi bilgilerinin işlenmesinde bir adım, siparişin şirketin geçerli stoğundan doldurulmasıdır.</span><span class="sxs-lookup"><span data-stu-id="476db-107">One step in processing the purchase order information contained in the preceding XML document is for the order to be filled from the company's current inventory.</span></span> <span data-ttu-id="476db-108">Siparişi şirketin ambarından doldurmaktan sorumlu çalışanın satınalma siparişinin tüm içeriğini görmesi gerekmez; yalnızca sipariş için ürün bilgilerini görmeleri gerekir.</span><span class="sxs-lookup"><span data-stu-id="476db-108">The employee responsible for filling the order from the company's warehouse does not need to see the entire contents of the purchase order; they only need to see the product information for the order.</span></span> <span data-ttu-id="476db-109">Yalnızca XML belgesindeki ürün bilgilerini ortaya çıkarmak için, xml şema tanım dili (XSD) şeması olarak yazılmış, sipariş edilen ürünlere ve miktarlara eş lenen, güçlü bir şekilde yazılmış bir şemaya sahip bir **DataSet** oluşturun.</span><span class="sxs-lookup"><span data-stu-id="476db-109">To expose only the product information from the XML document, create a strongly typed **DataSet** with a schema, written as XML Schema definition language (XSD) schema, that maps to the products and quantities ordered.</span></span> <span data-ttu-id="476db-110">Güçlü bir şekilde yazılan **DataSet** nesneleri hakkında daha fazla bilgi [için, Typed DataSets'e](typed-datasets.md)bakın.</span><span class="sxs-lookup"><span data-stu-id="476db-110">For more information about strongly typed **DataSet** objects, see [Typed DataSets](typed-datasets.md).</span></span>  
   
- <span data-ttu-id="7f260-111">Aşağıdaki kod, bu örnek için türü kesin belirlenmiş **veri kümesinin** oluşturulduğu şemayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="7f260-111">The following code shows the schema from which the strongly typed **DataSet** is generated for this sample.</span></span>  
+ <span data-ttu-id="476db-111">Aşağıdaki kod, bu örnek için güçlü bir şekilde yazılan **DataSet'in** oluşturulduğu şemayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="476db-111">The following code shows the schema from which the strongly typed **DataSet** is generated for this sample.</span></span>  
   
 ```xml  
 <?xml version="1.0" standalone="yes"?>  
-<xs:schema id="OrderDetail" xmlns=""   
-                            xmlns:xs="http://www.w3.org/2001/XMLSchema"   
-                            xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"   
+<xs:schema id="OrderDetail" xmlns=""
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                            xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"
                             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
   <xs:element name="OrderDetail" msdata:IsDataSet="true">  
     <xs:complexType>  
@@ -157,11 +157,11 @@ ms.locfileid: "70784272"
 </xs:schema>  
 ```  
   
- <span data-ttu-id="7f260-112">Yalnızca özgün XML belgesinin **OrderDetails** ve **Products** öğelerinden alınan bilgilerin **veri kümesinin**şemasına dahil edildiğini fark edebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7f260-112">Notice that only information from the **OrderDetails** and **Products** elements of the original XML document are included in the schema for the **DataSet**.</span></span> <span data-ttu-id="7f260-113">**Veri kümesini** bir **XmlDataDocument** Ile eşitlemek, **VERI kümesinde** yer alan öğelerin XML belgesiyle kalıcı olmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="7f260-113">Synchronizing the **DataSet** with an **XmlDataDocument** ensures that the elements not included in the **DataSet** will persist with the XML document.</span></span>  
+ <span data-ttu-id="476db-112">Yalnızca orijinal XML belgesinin **OrderDetails** and **Products** öğelerindeki bilgilerin **DataSet**şemasına dahil edildiğine dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="476db-112">Notice that only information from the **OrderDetails** and **Products** elements of the original XML document are included in the schema for the **DataSet**.</span></span> <span data-ttu-id="476db-113">**DataSet'in** **Bir XmlDataDocument** ile senkronize edilmesi, **DataSet'e** dahil olmayan öğelerin XML belgesiyle devam edecektir.</span><span class="sxs-lookup"><span data-stu-id="476db-113">Synchronizing the **DataSet** with an **XmlDataDocument** ensures that the elements not included in the **DataSet** will persist with the XML document.</span></span>  
   
- <span data-ttu-id="7f260-114">XML şemasından ( **Northwind. FillOrder**'ın ad alanı ile) oluşturulan türü kesin belirlenmiş **veri kümesi** ile, özgün XML belgesinin bir bölümü, **veri kümesi** tarafından yüklenen **XmlDataDocument** ile eşitlenerek gösterilebilir kaynak XML belgesinden.</span><span class="sxs-lookup"><span data-stu-id="7f260-114">With the strongly typed **DataSet** generated from the XML Schema (with a namespace of **Northwind.FillOrder**), a portion of the original XML document can be exposed by synchronizing the **DataSet** with the **XmlDataDocument** loaded from the source XML document.</span></span> <span data-ttu-id="7f260-115">Şemadan oluşturulan veri **kümesinin** yapı içerdiğini, ancak hiçbir veri olmadığını unutmayın.</span><span class="sxs-lookup"><span data-stu-id="7f260-115">Notice that the **DataSet** generated from the schema contains structure but no data.</span></span> <span data-ttu-id="7f260-116">XML öğesini **XmlDataDocument**'e yüklediğinizde veriler doldurulur.</span><span class="sxs-lookup"><span data-stu-id="7f260-116">The data is filled in when you load the XML into the **XmlDataDocument**.</span></span> <span data-ttu-id="7f260-117">Zaten veri içeren bir veri **kümesiyle** eşitlenmiş bir **XmlDataDocument** yüklemeye çalışırsanız, bir özel durum oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="7f260-117">If you attempt to load an **XmlDataDocument** that has been synchronized with a **DataSet** that already contains data, an exception will be thrown.</span></span>  
+ <span data-ttu-id="476db-114">XML Schema'dan oluşturulan güçlü bir şekilde yazılan **DataSet** ile **(Northwind.FillOrder**ad alanı ile), orijinal XML belgesinin bir kısmı **DataSet'in** kaynak XML belgesinden yüklenen **XmlDataDocument** ile senkronize edilmesiyle ortaya çıkarılabilir.</span><span class="sxs-lookup"><span data-stu-id="476db-114">With the strongly typed **DataSet** generated from the XML Schema (with a namespace of **Northwind.FillOrder**), a portion of the original XML document can be exposed by synchronizing the **DataSet** with the **XmlDataDocument** loaded from the source XML document.</span></span> <span data-ttu-id="476db-115">Şema'dan oluşturulan **DataSet'in** yapı içerdiğine ancak veri içermediğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="476db-115">Notice that the **DataSet** generated from the schema contains structure but no data.</span></span> <span data-ttu-id="476db-116">XML'i **XmlDataDocument'a**yüklediğinizde veriler doldurulur.</span><span class="sxs-lookup"><span data-stu-id="476db-116">The data is filled in when you load the XML into the **XmlDataDocument**.</span></span> <span data-ttu-id="476db-117">Zaten veri içeren bir **DataSet** ile senkronize edilmiş bir **XmlDataDocument** yüklemeye çalışırsanız, bir özel durum atılır.</span><span class="sxs-lookup"><span data-stu-id="476db-117">If you attempt to load an **XmlDataDocument** that has been synchronized with a **DataSet** that already contains data, an exception will be thrown.</span></span>  
   
- <span data-ttu-id="7f260-118">**Veri kümesi** (ve **XmlDataDocument**) güncelleştirildikten sonra, **XmlDataDocument** daha sonra değiştirilmiş xml belgesini aşağıda gösterildiği gibi **veri kümesi** tarafından yok sayılmış öğelerle yazabilir.</span><span class="sxs-lookup"><span data-stu-id="7f260-118">After the **DataSet** (and the **XmlDataDocument**) has been updated, the **XmlDataDocument** can then write out the modified XML document with the elements ignored by the **DataSet** still intact, as shown below.</span></span> <span data-ttu-id="7f260-119">Satın alma siparişi senaryosunda, sipariş öğeleri doldurulduktan sonra değiştirilen XML belgesi, belki de şirketin sevkiyat departmanı için sipariş sürecinde bir sonraki adıma geçirilebilir.</span><span class="sxs-lookup"><span data-stu-id="7f260-119">In the purchase order scenario, after the order items have been filled, the modified XML document can then be passed on to the next step in the order process, perhaps to the company's shipping department.</span></span>  
+ <span data-ttu-id="476db-118">**DataSet** (ve **XmlDataDocument)** güncellendikten sonra, **XmlDataDocument** aşağıda gösterildiği gibi, **veri seti** tarafından göz ardı edilen öğelerhala bozulmamış olan değiştirilmiş XML belgesini yazabilir.</span><span class="sxs-lookup"><span data-stu-id="476db-118">After the **DataSet** (and the **XmlDataDocument**) has been updated, the **XmlDataDocument** can then write out the modified XML document with the elements ignored by the **DataSet** still intact, as shown below.</span></span> <span data-ttu-id="476db-119">Satınalma siparişi senaryosunda, sipariş maddeleri dolduruldıktan sonra, değiştirilen XML belgesi sipariş sürecindeki bir sonraki adıma, belki de şirketin sevkiyat departmanına aktarılabilir.</span><span class="sxs-lookup"><span data-stu-id="476db-119">In the purchase order scenario, after the order items have been filled, the modified XML document can then be passed on to the next step in the order process, perhaps to the company's shipping department.</span></span>  
   
 ```vb  
 Imports System  
@@ -174,7 +174,7 @@ Public class Sample
   
     Dim orderDS As OrderDetail = New OrderDetail  
   
-    Dim xmlDocument As XmlDataDocument = New XmlDataDocument(orderDS)   
+    Dim xmlDocument As XmlDataDocument = New XmlDataDocument(orderDS)
   
     xmlDocument.Load("Order.xml")  
   
@@ -208,9 +208,9 @@ public class Sample
 {  
   public static void Main()  
   {  
-    OrderDetail orderDS = new OrderDetail();   
+    OrderDetail orderDS = new OrderDetail();
   
-    XmlDataDocument xmlDocument = new XmlDataDocument(orderDS);   
+    XmlDataDocument xmlDocument = new XmlDataDocument(orderDS);
   
     xmlDocument.Load("Order.xml");  
   
@@ -231,7 +231,7 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7f260-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7f260-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="476db-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="476db-120">See also</span></span>
 
-- [<span data-ttu-id="7f260-121">DataSet ve XmlDataDocument Eşitlemesi</span><span class="sxs-lookup"><span data-stu-id="7f260-121">DataSet and XmlDataDocument Synchronization</span></span>](dataset-and-xmldatadocument-synchronization.md)
-- [<span data-ttu-id="7f260-122">ADO.NET’e Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7f260-122">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="476db-121">DataSet ve XmlDataDocument Eşitlemesi</span><span class="sxs-lookup"><span data-stu-id="476db-121">DataSet and XmlDataDocument Synchronization</span></span>](dataset-and-xmldatadocument-synchronization.md)
+- [<span data-ttu-id="476db-122">ADO.NET’e Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="476db-122">ADO.NET Overview</span></span>](../ado-net-overview.md)
