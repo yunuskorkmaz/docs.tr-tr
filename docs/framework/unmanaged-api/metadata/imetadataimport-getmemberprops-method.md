@@ -15,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-ms.openlocfilehash: bc5bbba2fa4a95955e52a2e083a2097178b5d96a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 72e14ea0414ebdeb8f54a4bdef8ce5208fc8ef72
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437511"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177224"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps Metodu
-Belirtilen meta veri belirtecinin başvurduğu <xref:System.Type> üyesinin adı, ikili imzası ve göreli sanal adresi de dahil olmak üzere, belirtilen üye tanımı için meta verilerde depolanan bilgileri alır. Bu basit bir yardımcı yöntemdir: *MB* bir MethodDef Ise **GetMethodProps** çağrılır; *MB* bir fieldDef Ise, **GetFieldProps** çağırılır. Ayrıntılar için diğer yöntemlere bakın. 
+Belirtilen meta veri belirteci tarafından başvurulan üyenin <xref:System.Type> adı, ikili imza ve göreli sanal adresi de dahil olmak üzere, belirli bir üye tanımı için meta verilerde depolanan bilgileri alır. Bu basit bir yardımcı yöntemdir: *mb* bir MethodDef ise, **getMethodProps** denir; *mb* bir FieldDef ise, o zaman **GetFieldProps** denir. Ayrıntılar için diğer yöntemlere bakın.
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetMemberProps (  
-   [in]  mdToken           mb,   
+   [in]  mdToken           mb,
    [out] mdTypeDef         *pClass,  
-   [out] LPWSTR            szMember,   
-   [in]  ULONG             cchMember,   
-   [out] ULONG             *pchMember,   
+   [out] LPWSTR            szMember,
+   [in]  ULONG             cchMember,
+   [out] ULONG             *pchMember,
    [out] DWORD             *pdwAttr,  
-   [out] PCCOR_SIGNATURE   *ppvSigBlob,   
-   [out] ULONG             *pcbSigBlob,   
-   [out] ULONG             *pulCodeRVA,   
-   [out] DWORD             *pdwImplFlags,   
-   [out] DWORD             *pdwCPlusTypeFlag,   
+   [out] PCCOR_SIGNATURE   *ppvSigBlob,
+   [out] ULONG             *pcbSigBlob,
+   [out] ULONG             *pulCodeRVA,
+   [out] DWORD             *pdwImplFlags,
+   [out] DWORD             *pdwCPlusTypeFlag,
    [out] UVCP_CONSTANT     *ppValue,  
    [out] ULONG             *pcchValue  
 );  
@@ -47,52 +47,52 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mb`  
- 'ndaki İlişkili meta verileri almak için üyeye başvuran belirteç.  
+ [içinde] İlişkili meta verileri almak için üyeye başvurur belirteç.  
   
  `pClass`  
- dışı Üyenin sınıfını temsil eden meta veri belirtecinin işaretçisi.  
+ [çıkış] Üyenin sınıfını temsil eden meta veri belirteci için bir işaretçi.  
   
  `szMember`  
- dışı Üyenin adı.  
+ [çıkış] Üyenin adı.  
   
  `cchMember`  
- 'ndaki `szMember` arabelleğinin geniş karakterdeki boyutu.  
+ [içinde] `szMember` Arabellek geniş karakterlerboyutu.  
   
  `pchMember`  
- dışı Döndürülen adın geniş karakterdeki boyutu.  
+ [çıkış] Döndürülen adın geniş karakterlerindeki boyutu.  
   
  `pdwAttr`  
- dışı Üyeye uygulanan bayrak değerleri.  
+ [çıkış] Üyeye uygulanan tüm bayrak değerleri.  
   
  `ppvSigBlob`  
- dışı Üyenin ikili meta veri imzasına yönelik bir işaretçi.  
+ [çıkış] Üyenin ikili meta veri imzasına işaretçi.  
   
  `pcbSigBlob`  
- dışı `ppvSigBlob`bayt cinsinden boyutu.  
+ [çıkış] `ppvSigBlob`Baytboyutu.  
   
  `pulCodeRVA`  
- dışı Üyenin göreli sanal adresine yönelik bir işaretçi.  
+ [çıkış] Üyenin göreli sanal adresine işaretçi.  
   
  `pdwImplFlags`  
- dışı Üyeyle ilişkili herhangi bir yöntem uygulama bayrağı.  
+ [çıkış] Üyeyle ilişkili herhangi bir yöntem uygulama bayrakları.  
   
  `pdwCPlusTypeFlag`  
- dışı Bir <xref:System.ValueType>işaretleyen bayrak. `ELEMENT_TYPE_*` değerlerinden biridir.
+ [çıkış] Bir bayrak. <xref:System.ValueType> Bu `ELEMENT_TYPE_*` değerlerden biridir.
   
  `ppValue`  
- dışı Bu üye tarafından döndürülen sabit dize değeri.  
+ [çıkış] Bu üye tarafından döndürülen sabit bir dize değeri.  
   
  `pcchValue`  
- dışı `ppValue`karakter cinsinden boyut veya `ppValue` bir dize yoksa sıfır.  
+ [çıkış] Bir dize tutmuyorsa `ppValue` `ppValue` , veya sıfır karakter boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 347d7e5c-c90f-45ad-bd1e-2c7912b0b19c
 topic_type:
 - apiref
-ms.openlocfilehash: 9d0f443b5b7d2d358534e888c3fc84ad3f554119
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e628cf5dab8006b0df0ab6c60dc995cd0c6bb29d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450049"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175453"
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>IMetaDataImport::EnumPermissionSets Yöntemi
-Belirtilen meta veri kapsamındaki nesneler için izinleri numaralandırır.  
+Belirli bir meta veri kapsamındaki nesnelerin izinlerini oyalar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumPermissionSets  
-   [in, out] HCORENUM      *phEnum,   
-   [in]      mdToken       tk,   
+   [in, out] HCORENUM      *phEnum,
+   [in]      mdToken       tk,
    [in]      DWORD         dwActions,  
    [out]     mdPermission  rPermission[],  
    [in]      ULONG         cMax,  
@@ -40,38 +40,38 @@ HRESULT EnumPermissionSets
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] Numaralandırıcı için bir işaretçi. Bu yöntemin ilk çağrısı için bu NULL olmalıdır.  
+ [içinde, dışarı] Sayıya işaretçisi. Bu yöntemin ilk araması için NULL olmalıdır.  
   
  `tk`  
- 'ndaki Aramanın kapsamını sınırlayan bir meta veri belirteci veya mümkün olan en geniş kapsamı aramak için NULL.  
+ [içinde] Aramanın kapsamını sınırlayan bir meta veri belirteci veya mümkün olan en geniş kapsamı aramak için NULL.  
   
  `dwActions`  
- 'ndaki Tüm eylemleri döndürmek için `rPermission`veya sıfıra dahil edilecek <xref:System.Security.Permissions.SecurityAction> değerlerini temsil eden bayraklar.  
+ [içinde] Tüm eylemleri <xref:System.Security.Permissions.SecurityAction> döndürmek için `rPermission`dahil olacak değerleri veya sıfırı temsil eden bayraklar.  
   
  `rPermission`  
- dışı Izin belirteçlerini depolamak için kullanılan dizi.  
+ [çıkış] İzin belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- 'ndaki `rPermission` dizisinin en büyük boyutu.  
+ [içinde] `rPermission` Dizinin en büyük boyutu.  
   
  `pcTokens`  
- dışı `rPermission`' de döndürülen Izin belirteçleri sayısı.  
+ [çıkış] Döndürülen İzin belirteçlerinin `rPermission`sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumPermissionSets` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda `pcTokens` sıfırdır.|  
+|`S_OK`|`EnumPermissionSets`başarıyla döndürülür.|  
+|`S_FALSE`|Sayısala rendelemek için hiçbir belirteçleri vardır. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

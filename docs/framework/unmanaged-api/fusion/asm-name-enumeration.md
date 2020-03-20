@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c8b65b19-d777-428f-bc0c-0d84c78a37bc
 topic_type:
 - apiref
-ms.openlocfilehash: 355f9da29a435a02d929cc01f28e95c4e04cdfcc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb77fe470829570d5abe291249eb7ef9023e6b14
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109150"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178306"
 ---
 # <a name="asm_name-enumeration"></a>ASM_NAME Numaralandırması
-Özellikleri alınacak veya [IAssemblyName](iassemblyname-interface.md) yöntemlerine göre ayarlanacak olan derlemenin sürümünü, derlemeyi, kültürünü, imzasını, vb. gösterir.  
+Özellikleri [IAssemblyName](iassemblyname-interface.md) yöntemleri yle alınıp ayarlanacak derlemenin sürümünü, inşasını, kültürünü, imzasını ve benzeri özelliklerini gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,7 +47,7 @@ typedef enum {
     ASM_NAME_NULL_PUBLIC_KEY,  
     ASM_NAME_NULL_PUBLIC_KEY_TOKEN,  
     ASM_NAME_CUSTOM,  
-    ASM_NAME_NULL_CUSTOM,   
+    ASM_NAME_NULL_CUSTOM,
     ASM_NAME_MVID,  
     ASM_NAME_FILE_MAJOR_VERSION,  
     ASM_NAME_FILE_MINOR_VERSION,  
@@ -63,13 +63,13 @@ typedef enum {
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion. h  
+ **Üstbilgi:** Fusion.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -5,50 +5,50 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: b6fa4207531e86cbde8657d0c47596f22c886f89
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5e37a04ff731a99664d636e0d4175f99214c2646
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791876"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174517"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server için Sağlayıcı İstatistikleri
-.NET Framework sürüm 2,0 ' den başlayarak, SQL Server için .NET Framework Veri Sağlayıcısı, çalışma zamanı istatistiklerini destekler. Geçerli bir Connection nesneniz oluşturulduktan <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> `True` sonra <xref:System.Data.SqlClient.SqlConnection> nesnesinin özelliğini ayarlayarak istatistikleri etkinleştirmeniz gerekir. İstatistikler etkinleştirildikten sonra, <xref:System.Collections.IDictionary> <xref:System.Data.SqlClient.SqlConnection> nesnenin <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> yöntemi aracılığıyla bir başvuru alarak bunları bir "anlık görüntü" olarak gözden geçirebilirsiniz. Liste/değer çifti sözlüğü girdileri kümesi olarak listeyi numaralandırın. Bu ad/değer çiftleri sırasız. İstediğiniz zaman, sayaçları sıfırlamak için <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> <xref:System.Data.SqlClient.SqlConnection> nesnesinin yöntemini çağırabilirsiniz. İstatistik toplama etkinleştirilmediyse, bir özel durum oluşturulmaz. Ayrıca <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> , ilki çağrılmadan <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> çağrılırsa, alınan değerler her girdinin başlangıç değerleridir. İstatistikleri etkinleştirir, uygulamanızı bir süre için çalıştırın ve sonra istatistikleri devre dışı bırakırsanız, alınan değerler istatistiklerin devre dışı bırakıldığı noktaya kadar toplanan değerleri yansıtır. Toplanan tüm istatistiksel değerler her bağlantı için yapılır.  
+.NET Framework sürüm 2.0 ile başlayarak, SQL Server için .NET Framework Data Provider çalışma zamanı istatistiklerini destekler. Oluşturulan geçerli bir bağlantı <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> nesnesi sonra <xref:System.Data.SqlClient.SqlConnection> nesnenin `True` özelliğini ayarlayarak istatistikleri etkinleştirmeniz gerekir. İstatistikler etkinleştirildikten sonra, <xref:System.Collections.IDictionary> <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> <xref:System.Data.SqlClient.SqlConnection> nesnenin yöntemi yle bir başvuru alarak bunları "zaman içinde anlık görüntü" olarak gözden geçirebilirsiniz. Listeyi ad/değer çifti sözlük girişleri kümesi olarak sıralarsınız. Bu ad/değer çiftleri sırasız. İstediğiniz zaman, sayaçları <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> sıfırlamak <xref:System.Data.SqlClient.SqlConnection> için nesnenin yöntemini arayabilirsiniz. İstatistik toplama etkinleştirilemediyse, bir özel durum oluşturulmadı. Ayrıca, önce <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> çağrılmadan <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> çağrılırsa, alınan değerler her giriş için başlangıç değerleridir. İstatistikleri etkinleştiriseniz, uygulamanızı bir süre çalıştırır ve istatistikleri devre dışı bıraktığınızda, alınan değerler toplanan değerleri istatistiklerin devre dışı bırakıldığı noktaya kadar yansıtır. Toplanan tüm istatistiksel değerler bağlantı başına ayrı ayrıdır.  
   
-## <a name="statistical-values-available"></a>İstatistiksel değerler kullanılabilir  
- Şu anda Microsoft SQL Server sağlayıcısından 18 farklı öğe mevcuttur. Kullanılabilir öğelerin sayısına tarafından <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>döndürülen <xref:System.Collections.IDictionary> arabirim başvurusunun **Count** özelliği aracılığıyla erişilebilir. Sağlayıcı istatistikleri için tüm sayaçlar, ortak dil çalışma zamanı <xref:System.Int64> türünü (**Long** in C# and Visual Basic) kullanır, bu da 64 bit geniştir. Int64 tarafından tanımlanan en büyük **Int64** veri türü değeri **. MaxValue** alanı ((2 ^ 63)-1)). Sayaçların değerleri bu en büyük değere ulaştığında, artık doğru olarak değerlendirilmemelidir. Bu, söz konusu int64 anlamına gelir **. MaxValue**-1 ((2 ^ 63)-2), herhangi bir istatistiğin en büyük geçerli değeri etkin değildir.  
+## <a name="statistical-values-available"></a>Mevcut İstatistiksel Değerler  
+ Şu anda Microsoft SQL Server sağlayıcısından 18 farklı öğe mevcuttur. Kullanılabilir öğelerin sayısı, '' tarafından <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>döndürülen <xref:System.Collections.IDictionary> arabirim referansının **Count** özelliği üzerinden erişilebilir. Sağlayıcı istatistikleri için tüm sayaçlar, 64 <xref:System.Int64> bit genişliğinde olan ortak dil çalışma zamanı türünü (C# ve Visual Basic'te**uzun)** kullanır. **int64** tarafından tanımlanan int64 veri türünün maksimum **değeri. MaxValue** alanı, ((2^63)-1)). Sayaçların değerleri bu maksimum değere ulaştığında, artık doğru olarak kabul edilmemelidir. Bu **int64 anlamına gelir. MaxValue**-1((2^63)-2) herhangi bir istatistik için etkili bir şekilde en büyük geçerli değerdir.  
   
 > [!NOTE]
-> Döndürülen istatistiklerin sayısı, isimleri ve sırası gelecekte değiştirebileceğinden, sağlayıcı istatistiklerini döndürmek için bir sözlük kullanılır. Uygulamalar, sözlükte bulunan belirli bir değere güvenmemelidir, ancak bunun yerine değerin aynı ve uygun olup olmadığını kontrol etmelidir.  
+> Döndürülen istatistiklerin sayısı, adları ve sırası gelecekte değişebileceğinden, sağlayıcı istatistiklerini döndürmek için sözlük kullanılır. Uygulamalar sözlükte bulunan belirli bir değere dayanmamalı, bunun yerine değerin var olup olmadığını ve buna göre dallanıp dallanmadığını kontrol etmelidir.  
   
- Aşağıdaki tabloda mevcut istatistiksel değerler açıklanmaktadır. Tek tek değerler için anahtar adlarının, Microsoft .NET çerçevesinin bölgesel sürümlerinde yerelleştirilmediğini unutmayın.  
+ Aşağıdaki tabloda mevcut istatistiksel değerler açıklanmaktadır. Tek tek değerlerin anahtar adlarının Microsoft .NET Framework'ün bölgesel sürümlerinde yerelleştirilmediğini unutmayın.  
   
-|Anahtar adı|Açıklama|  
+|Anahtar Adı|Açıklama|  
 |--------------|-----------------|  
-|`BuffersReceived`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra SQL Server sağlayıcı tarafından alınan tablo veri akışı (TDS) paketlerinin sayısını döndürür.|  
-|`BuffersSent`|İstatistikler etkinleştirildikten sonra sağlayıcı tarafından SQL Server gönderilen TDS paketlerinin sayısını döndürür. Büyük komutlar, birden çok arabellek gerektirebilir. Örneğin, sunucuya büyük bir komut gönderiliyorsa ve altı paket gerektiriyorsa, `ServerRoundtrips` bunlardan biri ile artırılır ve `BuffersSent` altı ile artırılır.|  
-|`BytesReceived`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirmişse, SQL Server sağlayıcı tarafından alınan TDS paketlerindeki veri bayt sayısını döndürür.|  
-|`BytesSent`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra TDS paketlerindeki SQL Server gönderilen verilerin bayt sayısını döndürür.|  
-|`ConnectionTime`|İstatistiklerin etkinleştirildikten sonra bağlantının açıldığı süre (milisaniye cinsinden) (bağlantı açılmadan önce istatistiklerin etkinleştirilmesi durumunda toplam bağlantı süresi).|  
-|`CursorOpens`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra bir imlecin bağlantı üzerinden kaç kez açık olduğunu döndürür.<br /><br /> SELECT deyimlerinin döndürdüğü salt okuma/iletme sonuçlarının işaretçiler kabul edilmediğini ve bu nedenle bu sayacı etkilemediğini unutmayın.|  
-|`ExecutionTime`|Sağlayıcıdan alınan yanıtların yanı sıra sağlayıcının kendisindeki kodu çalıştırırken harcanan süre dahil olmak üzere, sağlayıcının, istatistikleri etkinleştirildikten sonra işlem harcadığı süreyi (milisaniye cinsinden) döndürür.<br /><br /> Zamanlama kodu içeren sınıflar şunlardır:<br /><br /> SqlConnection<br /><br /> SqlCommand<br /><br /> Sýnýfý<br /><br /> SqlDataAdapter<br /><br /> SqlTransaction<br /><br /> SqlCommandBuilder<br /><br /> Performans açısından kritik üyeleri mümkün olduğunca küçük tutmak için aşağıdaki Üyeler zaman aşımına uğramaz:<br /><br /> Sýnýfý<br /><br /> This [] işleci (tüm aşırı yüklemeler)<br /><br /> GetBoolean<br /><br /> GetChar<br /><br /> GetDateTime<br /><br /> GetDecimal<br /><br /> GetDouble<br /><br /> GetFloat<br /><br /> GetGuid<br /><br /> Getınt16<br /><br /> GetInt32<br /><br /> GetInt64<br /><br /> GetName<br /><br /> GetOrdinal<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean<br /><br /> GetSqlByte<br /><br /> GetSqlDateTime<br /><br /> GetSqlDecimal<br /><br /> GetSqlDouble<br /><br /> GetSqlGuid<br /><br /> GetSqlInt16<br /><br /> GetSqlInt32<br /><br /> GetSqlInt64<br /><br /> GetSqlMoney<br /><br /> GetSqlSingle<br /><br /> GetSqlString<br /><br /> GetString<br /><br /> IsDBNull|  
-|`IduCount`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistiklere etkinleştikten sonra bağlantı aracılığıyla yürütülen INSERT, DELETE ve UPDATE deyimlerinin toplam sayısını döndürür.|  
-|`IduRows`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistiklere etkinleştikten sonra bağlantı aracılığıyla yürütülen INSERT, DELETE ve UPDATE deyimlerinin etkilediği toplam satır sayısını döndürür.|  
-|`NetworkServerTime`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistiklerin etkinleştirildiğinden, sağlayıcının sunucudan yanıt bekletmeyi beklediği toplam süreyi (milisaniye cinsinden) döndürür.|  
-|`PreparedExecs`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra bağlantı aracılığıyla yürütülen hazırlanan komutların sayısını döndürür.|  
-|`Prepares`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra bağlantı aracılığıyla hazırlanan deyimlerin sayısını döndürür.|  
-|`SelectCount`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra bağlantı aracılığıyla yürütülen SELECT deyimlerinin sayısını döndürür. Bu, imleçlerden satırları almak için Fetch deyimlerini içerir ve sonuna <xref:System.Data.SqlClient.SqlDataReader> ulaşıldığında SELECT deyimlerinin sayısı güncellenir.|  
-|`SelectRows`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra seçilen satır sayısını döndürür. Bu sayaç, SQL deyimleri tarafından oluşturulan ve aslında çağıran tarafından tüketilmemiş olanlar dahil tüm satırları yansıtır. Örneğin, tüm sonuç kümesini okumadan önce bir veri okuyucuyu kapatmak sayıyı etkilemez. Bu, GETIRME deyimleri aracılığıyla imleçler aracılığıyla alınan satırları içerir.|  
-|`ServerRoundtrips`|Bağlantının sunucuya gönderilme sayısını döndürür ve uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra bir yanıt gönderir.|  
-|`SumResultSets`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra kullanılan sonuç kümesi sayısını döndürür. Örneğin bu, istemciye döndürülen sonuç kümesini içerir. İmleçler için, her getirme veya engelleme getirme işlemi bağımsız bir sonuç kümesi olarak değerlendirilir.|  
-|`Transactions`|Uygulama sağlayıcıyı kullanmaya başladıktan sonra başlatılan kullanıcı işlemleri sayısını döndürür ve geri alma dahil istatistikleri etkinleştirdi. Bir bağlantı otomatik işleme ile çalışıyorsa her komut bir işlem olarak kabul edilir.<br /><br /> Bu sayaç, işlemin daha sonra yapılıp yapılmayacağını veya geri döndürülüp döndürülmediğine bakılmaksızın BEGIN TRAN ifadesinin yürütüldüğü anda işlem sayısını artırır.|  
-|`UnpreparedExecs`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra bağlantı aracılığıyla yürütülen hazırlanmamış deyimlerin sayısını döndürür.|  
+|`BuffersReceived`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra sağlayıcı tarafından SQL Server'dan alınan tabular veri akışı (TDS) paketlerinin sayısını verir.|  
+|`BuffersSent`|İstatistikler etkinleştirildikten sonra sağlayıcı tarafından SQL Server'a gönderilen TDS paketlerinin sayısını verir. Büyük komutlar birden çok arabellek gerektirebilir. Örneğin, sunucuya büyük bir komut gönderilirse ve altı `ServerRoundtrips` paket gerektiriyorsa, `BuffersSent` bir komut uğruyla artımlanır ve altı ile artımlanır.|  
+|`BytesReceived`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra sağlayıcı tarafından SQL Server'dan alınan TDS paketlerindeki bayt veri sayısını verir.|  
+|`BytesSent`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra TDS paketlerinde SQL Server'a gönderilen veri baytlarının sayısını verir.|  
+|`ConnectionTime`|İstatistikler etkinleştirildikten sonra bağlantının açıldığı süre (milisaniye cinsinden) (bağlantıyı açmadan önce istatistikler etkinleştirilmişse toplam bağlantı süresi).|  
+|`CursorOpens`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra imleç bağlantı üzerinden kaç kez açık olduğunu verir.<br /><br /> SELECT deyimleri tarafından döndürülen salt/forward sonuçlarının imleç olarak kabul edilmeyeceğini ve bu nedenle bu sayacı etkilemediğini unutmayın.|  
+|`ExecutionTime`|İstatistikler etkinleştirildikten sonra sağlayıcının işlemek için harcadığı kümülatif süreyi (milisaniye cinsinden) sunucudan gelen yanıtları beklerken harcanan süre ve sağlayıcının kendi içinde kodu yürütmek için harcanan süre de dahil olmak üzere döndürür.<br /><br /> Zamanlama kodu içeren sınıflar şunlardır:<br /><br /> Sqlconnection<br /><br /> Sqlcommand<br /><br /> Sqldatareader<br /><br /> Sqldataadapter<br /><br /> Sqltransaction<br /><br /> Sqlcommandbuilder<br /><br /> Performans açısından kritik üyeleri mümkün olduğunca küçük tutmak için aşağıdaki üyelere zaman landırılmaz:<br /><br /> Sqldatareader<br /><br /> bu[] işleci (tüm aşırı yüklemeler)<br /><br /> GetBoolean<br /><br /> Getchar<br /><br /> GetDateTime<br /><br /> GetOncimal<br /><br /> Getdouble<br /><br /> GetFloat<br /><br /> GetGuid<br /><br /> GetInt16<br /><br /> GetInt32<br /><br /> GetInt64<br /><br /> GetName<br /><br /> Getordinal<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean<br /><br /> SqlByte'ı Alın<br /><br /> GetSqlDateTime<br /><br /> GetSqlDecimal<br /><br /> GetSqlDouble<br /><br /> GetSqlGuid<br /><br /> SqlInt16'yı alın<br /><br /> SqlInt32'yi alın<br /><br /> SqlInt64'i alın<br /><br /> GetSqlMoney<br /><br /> GetSqlSingle<br /><br /> GetSqlString<br /><br /> GetString<br /><br /> ısdbnull|  
+|`IduCount`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra bağlantı üzerinden yürütülen INSERT, DELETE ve UPDATE deyimlerinin toplam sayısını verir.|  
+|`IduRows`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra bağlantı üzerinden yürütülen INSERT, DELETE ve UPDATE deyimlerinden etkilenen toplam satır sayısını verir.|  
+|`NetworkServerTime`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra sağlayıcının sunucudan gelen yanıtları beklemek için harcadığı kümülatif süreyi (milisaniye cinsinden) döndürür.|  
+|`PreparedExecs`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra bağlantı üzerinden yürütülen hazırlanan komutların sayısını döndürür.|  
+|`Prepares`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra bağlantı üzerinden hazırlanan deyim sayısını verir.|  
+|`SelectCount`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra bağlantı üzerinden yürütülen SELECT deyimlerinin sayısını verir. Bu imleçlerden satır almak için GETIR deyimleri içerir ve SELECT deyimleri için <xref:System.Data.SqlClient.SqlDataReader> sayı bir sonuna ulaşıldığında güncelleştirilir.|  
+|`SelectRows`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra seçilen satır sayısını döndürür. Bu sayaç, SQL deyimleri tarafından oluşturulan tüm satırları, hatta arayan tarafından gerçekten tüketilemeyen satırları yansıtır. Örneğin, tüm sonuç kümesini okumadan önce bir veri okuyucuyu kapatmak sayımı etkilemez. Bu, imleçlerden FETCH deyimleri aracılığıyla alınan satırları içerir.|  
+|`ServerRoundtrips`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra bağlantının komutları sunucuya kaç kez gönderdiğini ve yanıtını geri aldığı sayısını döndürür.|  
+|`SumResultSets`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra kullanılan sonuç kümelerinin sayısını verir. Örneğin, bu istemciye döndürülen herhangi bir sonuç kümesini içerir. İmleçler için, her getirme veya engelleme işlemi bağımsız bir sonuç kümesi olarak kabul edilir.|  
+|`Transactions`|Uygulama sağlayıcıyı kullanmaya başladıktan ve geri almalar da dahil olmak üzere istatistikleri etkinleştirdikten sonra başlatılan kullanıcı hareketleri sayısını döndürür. Otomatik commit ile çalışan bir bağlantı varsa, her komut bir işlem olarak kabul edilir.<br /><br /> Bu sayaç, işlemin kaydedilip işlenmediğine veya daha sonra geri alınıp alınmayacağına bakılmaksızın, BEGIN TRAN deyimi yürütülür yürütülür çalıştırılmaz hareket sayısını da yukarıya doğru şarampole bırakır.|  
+|`UnpreparedExecs`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra bağlantı üzerinden yürütülen hazırlıksız deyimlerin sayısını verir.|  
   
-### <a name="retrieving-a-value"></a>Değer alma  
- Aşağıdaki konsol uygulaması, bir bağlantı üzerinde istatistiklerin nasıl etkinleştirileceğini, dört ayrı istatistiksel değerin nasıl alınacağını ve bunları konsol penceresine nasıl yazılacağını gösterir.  
+### <a name="retrieving-a-value"></a>Bir Değer Alma  
+ Aşağıdaki konsol uygulaması, bir bağlantıdaki istatistikleri nasıl etkinleştireceklerini, dört ayrı istatistik değerini nasıl alsüreceğini ve bunları konsol penceresine nasıl yazarak yazacaklarını gösterir.  
   
 > [!NOTE]
-> Aşağıdaki örnek, SQL Server eklenen örnek **AdventureWorks** veritabanını kullanır. Örnek kodda sağlanan bağlantı dizesi, veritabanının yüklü olduğunu ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesini ortamınız için gereken şekilde değiştirin.  
+> Aşağıdaki örnek, SQL Server ile birlikte verilen örnek **AdventureWorks** veritabanını kullanır. Örnek kodda sağlanan bağlantı dizesi, veritabanının yüklenmiş ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesini ortamınız için gerektiği gibi değiştirin.  
   
 ```vb  
 Option Strict On  
@@ -65,7 +65,7 @@ Module Module1
   
     Using awConnection As New SqlConnection(connectionString)  
       ' StatisticsEnabled is False by default.  
-      ' It must be set to True to start the   
+      ' It must be set to True to start the
       ' statistic collection process.  
       awConnection.StatisticsEnabled = True  
   
@@ -136,16 +136,16 @@ namespace CS_Stats_Console_GetValue
     {  
       string connectionString = GetConnectionString();  
   
-      using (SqlConnection awConnection =   
+      using (SqlConnection awConnection =
         new SqlConnection(connectionString))  
       {  
         // StatisticsEnabled is False by default.  
-        // It must be set to True to start the   
+        // It must be set to True to start the
         // statistic collection process.  
         awConnection.StatisticsEnabled = true;  
   
         string productSQL = "SELECT * FROM Production.Product";  
-        SqlDataAdapter productAdapter =   
+        SqlDataAdapter productAdapter =
           new SqlDataAdapter(productSQL, awConnection);  
   
         DataSet awDataSet = new DataSet();  
@@ -193,18 +193,18 @@ namespace CS_Stats_Console_GetValue
     {  
       // To avoid storing the connection string in your code,  
       // you can retrieve it from a configuration file.  
-      return "Data Source=localhost;Integrated Security=SSPI;" +   
+      return "Data Source=localhost;Integrated Security=SSPI;" +
         "Initial Catalog=AdventureWorks";  
     }  
   }  
 }  
 ```  
   
-### <a name="retrieving-all-values"></a>Tüm değerler alınıyor  
- Aşağıdaki konsol uygulaması, bir bağlantı üzerinde istatistiklerin nasıl etkinleştirileceğini, Numaralandırıcının kullanıldığı tüm kullanılabilir istatistik değerlerini almayı ve bunları konsol penceresine yazmayı gösterir.  
+### <a name="retrieving-all-values"></a>Tüm Değerleri Alma  
+ Aşağıdaki konsol uygulaması, bir bağlantıdaki istatistikleri nasıl etkinleştireceklerini, kullanılabilir tüm istatistik değerlerini sayısallaştırıcıyı kullanarak nasıl alsüreceğini ve konsol penceresine nasıl yazarak yazacaklarını gösterir.  
   
 > [!NOTE]
-> Aşağıdaki örnek, SQL Server eklenen örnek **AdventureWorks** veritabanını kullanır. Örnek kodda sağlanan bağlantı dizesi, veritabanının yüklü olduğunu ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesini ortamınız için gereken şekilde değiştirin.  
+> Aşağıdaki örnek, SQL Server ile birlikte verilen örnek **AdventureWorks** veritabanını kullanır. Örnek kodda sağlanan bağlantı dizesi, veritabanının yüklenmiş ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesini ortamınız için gerektiği gibi değiştirin.  
   
 ```vb  
 Option Strict On  
@@ -220,7 +220,7 @@ Module Module1
   
     Using awConnection As New SqlConnection(connectionString)  
       ' StatisticsEnabled is False by default.  
-      ' It must be set to True to start the   
+      ' It must be set to True to start the
       ' statistic collection process.  
       awConnection.StatisticsEnabled = True  
   
@@ -284,11 +284,11 @@ namespace CS_Stats_Console_GetAll
     {  
       string connectionString = GetConnectionString();  
   
-      using (SqlConnection awConnection =   
+      using (SqlConnection awConnection =
         new SqlConnection(connectionString))  
       {  
         // StatisticsEnabled is False by default.  
-        // It must be set to True to start the   
+        // It must be set to True to start the
         // statistic collection process.  
         awConnection.StatisticsEnabled = true;  
   
@@ -331,7 +331,7 @@ namespace CS_Stats_Console_GetAll
     {  
       // To avoid storing the connection string in your code,  
       // you can retrieve it from a configuration file.  
-      return "Data Source=localhost;Integrated Security=SSPI;" +   
+      return "Data Source=localhost;Integrated Security=SSPI;" +
         "Initial Catalog=AdventureWorks";  
     }  
   }  

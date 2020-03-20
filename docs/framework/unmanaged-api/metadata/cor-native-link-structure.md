@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ef78d3c-1c69-4141-b687-dcb065b7a74d
 topic_type:
 - apiref
-ms.openlocfilehash: d03c22c455f0e44ce32d4593d9eee50ceef94a22
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 812b70a594b5aa933f52d36f32d96d712267ecf4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443952"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177955"
 ---
 # <a name="cor_native_link-structure"></a>COR_NATIVE_LINK Yapısı
 Yerel kodu bağlamak için kullanılan bilgileri içerir.  
@@ -27,7 +27,7 @@ Yerel kodu bağlamak için kullanılan bilgileri içerir.
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-typedef struct   
+typedef struct
 {  
     BYTE        m_linkType;  
     BYTE        m_flags;  
@@ -35,22 +35,22 @@ typedef struct
 } COR_NATIVE_LINK;  
 ```  
   
-## <a name="members"></a>Üyeleri  
+## <a name="members"></a>Üyeler  
   
-|Üyesi|Açıklama|  
+|Üye|Açıklama|  
 |------------|-----------------|  
-|`m_linkType`|Yerel koda bağlanacak tür. Bu değer, [Cornativelınktype](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) değerlerinden biridir.|  
-|`m_flags`|Yerel kod bağlanırken bağlayıcı tarafından kullanılan bayraklar. Bu değer, [Cornativelınkflags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) değerlerinden biridir.|  
-|`m_entryPoint`|Giriş noktasını temsil eden MemberRef meta veri belirteci. Biçim `lib:entrypoint`.|  
+|`m_linkType`|Yerel kodda bağlanacak tür. Bu değer [CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) değerlerinden biridir.|  
+|`m_flags`|Yerel kodu bağlarken bağlayıcı tarafından kullanılan bayraklar. Bu değer [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) değerlerinden biridir.|  
+|`m_entryPoint`|Giriş noktasını temsil eden MemberRef meta veri belirteci. Biçim şöyledir: `lib:entrypoint`.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

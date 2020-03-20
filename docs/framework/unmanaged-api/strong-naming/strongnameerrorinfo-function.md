@@ -18,35 +18,35 @@ helpviewer_keywords:
 ms.assetid: e91bf8c3-7c26-4732-938e-2e5b04abfc99
 topic_type:
 - apiref
-ms.openlocfilehash: dd83fc6a7f553b54cc2acd5e9a93d8d58747d75a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d5eedc34b75d3a0c02969c06454b0f7ec942ed17
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141709"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176948"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo İşlevi
-Tanımlayıcı ad işlevlerinden biri tarafından oluşturulan son hata kodunu alır.  
+Güçlü ad işlevlerinden biri tarafından yükseltilen son hata kodunu alır.  
   
- Bu işlev kullanım dışı bırakıldı.  
+ Bu işlev amortismana kaldırıldı.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT StrongNameErrorInfo ();   
+HRESULT StrongNameErrorInfo ();
 ```  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Tanımlayıcı ad işlevlerinden biri tarafından ayarlanan son COM hata kodu.  
+ Güçlü ad işlevlerinden biri tarafından ayarlanan son COM hata kodu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tanımlayıcı ad yöntemlerinin çoğu, başarılı tamamlama işleminin basit bir `true` veya `false` göstergesi döndürür. Güçlü ad işlevleri tarafından oluşturulan son hatayı belirten bir HRESULT almak için `StrongNameErrorInfo` işlevini kullanın.  
+ Güçlü ad yöntemlerinin çoğu `true` basit `false` veya başarılı bir tamamlama göstergesi döndürün. Güçlü `StrongNameErrorInfo` ad işlevleri tarafından oluşturulan son hatayı belirten bir HRESULT almak için işlevi kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** StrongName. h  
+ **Üstbilgi:** StrongName.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  

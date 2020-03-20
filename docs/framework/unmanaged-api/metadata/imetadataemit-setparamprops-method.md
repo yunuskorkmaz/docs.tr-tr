@@ -15,56 +15,56 @@ helpviewer_keywords:
 ms.assetid: a95a3908-9f87-4084-937e-8e01ef03ad63
 topic_type:
 - apiref
-ms.openlocfilehash: 813460aa027b259866b168d426fd28502b5c4465
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 13220dcfdd260688494d5aebc50f94abf8a82215
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432501"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177502"
 ---
 # <a name="imetadataemitsetparamprops-method"></a>IMetaDataEmit::SetParamProps Yöntemi
-Imetadatayayma için önceki bir çağrı tarafından tanımlanan bir yöntem parametresinin özelliklerini ayarlar veya değiştirir [::D efineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
+[IMetaDataEmit::DefineParam'a](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md)yapılan bir önceki çağrı yla tanımlanan yöntem parametresinin özelliklerini ayarlar veya değiştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT SetParamProps (   
-    [in]  mdParamDef  pd,   
-    [in]  LPCWSTR     szName,   
-    [in]  DWORD       dwParamFlags,   
-    [in]  DWORD       dwCPlusTypeFlag,   
-    [in]  void const  *pValue,   
-    [in]  ULONG       cchValue   
+HRESULT SetParamProps (
+    [in]  mdParamDef  pd,
+    [in]  LPCWSTR     szName,
+    [in]  DWORD       dwParamFlags,
+    [in]  DWORD       dwCPlusTypeFlag,
+    [in]  void const  *pValue,
+    [in]  ULONG       cchValue
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pd`  
- 'ndaki Hedef parametrenin belirteci.  
+ [içinde] Hedef parametrenin belirteci.  
   
  `szName`  
- 'ndaki Parametrenin Unicode olarak adı.  
+ [içinde] Unicode'daki parametrenin adı.  
   
  `dwParamFlags`  
- 'ndaki Parametresinin bayrakları.  
+ [içinde] Parametre nin bayrakları.  
   
  `dwCPlusTypeFlag`  
- 'ndaki Sabit değer için ELEMENT_TYPE_ *.  
+ [içinde] Sabit değer için ELEMENT_TYPE_*.  
   
  `pValue`  
- 'ndaki Parametrenin sabit değeri.  
+ [içinde] Parametrenin sabit değeri.  
   
  `cchValue`  
- 'ndaki `pValue`(Unicode) karakter boyutu.  
+ [içinde] (Unicode) karakterlerinin `pValue`boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
