@@ -1,5 +1,5 @@
 ---
-title: CheckedListBox denetimindeki Işaretli öğeleri belirleme
+title: CheckedListBox Denetiminde İşaretlenmiş Öğeleri Belirleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 5854f7e6be759daeb604458ea8554d3c98ed39c2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 5d93a63e9c1c6aae91ecfe83590c59450a565afe
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743244"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182197"
 ---
-# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a><span data-ttu-id="07060-102">Nasıl yapılır: Windows Forms CheckedListBox Denetimindeki İşaretli Öğeleri Belirleme</span><span class="sxs-lookup"><span data-stu-id="07060-102">How to: Determine Checked Items in the Windows Forms CheckedListBox Control</span></span>
-<span data-ttu-id="07060-103">Verileri bir Windows Forms <xref:System.Windows.Forms.CheckedListBox> denetiminde sunarken, <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> özelliğinde depolanan koleksiyonda yineleyebilirsiniz ya da hangi öğelerin denetleneceğini belirleyebilmek için <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> yöntemini kullanarak listede gezinebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="07060-103">When presenting data in a Windows Forms <xref:System.Windows.Forms.CheckedListBox> control, you can either iterate through the collection stored in the <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> property, or step through the list using the <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method to determine which items are checked.</span></span> <span data-ttu-id="07060-104"><xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> yöntemi, bağımsız değişkeni olarak bir öğe dizin numarası alır ve `true` veya `false`döndürür.</span><span class="sxs-lookup"><span data-stu-id="07060-104">The <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method takes an item index number as its argument and returns `true` or `false`.</span></span> <span data-ttu-id="07060-105">Beklediğiniz gibi, <xref:System.Windows.Forms.ListBox.SelectedItems%2A> ve <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> özellikleri hangi öğelerin denetleneceğini belirlemektir; hangi öğelerin vurgulandığı belirlenir.</span><span class="sxs-lookup"><span data-stu-id="07060-105">Contrary to what you might expect, the <xref:System.Windows.Forms.ListBox.SelectedItems%2A> and <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> properties do not determine which items are checked; they determine which items are highlighted.</span></span>  
+# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a><span data-ttu-id="c8abb-102">Nasıl yapılır: Windows Forms CheckedListBox Denetimindeki İşaretli Öğeleri Belirleme</span><span class="sxs-lookup"><span data-stu-id="c8abb-102">How to: Determine Checked Items in the Windows Forms CheckedListBox Control</span></span>
+<span data-ttu-id="c8abb-103">Windows Forms <xref:System.Windows.Forms.CheckedListBox> denetiminde veri sunarken, <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> özellikte depolanan koleksiyonda yineleyebilir veya hangi öğelerin <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> denetlenebileceğini belirlemek için yöntemi kullanarak listeyi karıştırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c8abb-103">When presenting data in a Windows Forms <xref:System.Windows.Forms.CheckedListBox> control, you can either iterate through the collection stored in the <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> property, or step through the list using the <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method to determine which items are checked.</span></span> <span data-ttu-id="c8abb-104">Yöntem <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> bağımsız değişkenolarak bir madde dizin numarası alır ve döndürür `true` veya `false`.</span><span class="sxs-lookup"><span data-stu-id="c8abb-104">The <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method takes an item index number as its argument and returns `true` or `false`.</span></span> <span data-ttu-id="c8abb-105">Tahmin edebileceğinizin aksine, <xref:System.Windows.Forms.ListBox.SelectedItems%2A> ve <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> özellikleri hangi öğelerin denetlenir belirlemez; hangi öğelerin vurgulanalı olduğunu belirlerler.</span><span class="sxs-lookup"><span data-stu-id="c8abb-105">Contrary to what you might expect, the <xref:System.Windows.Forms.ListBox.SelectedItems%2A> and <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> properties do not determine which items are checked; they determine which items are highlighted.</span></span>  
   
-### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a><span data-ttu-id="07060-106">CheckedListBox denetimindeki işaretli öğeleri belirleme</span><span class="sxs-lookup"><span data-stu-id="07060-106">To determine checked items in a CheckedListBox control</span></span>  
+### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a><span data-ttu-id="c8abb-106">CheckedListBox denetiminde denetlenen öğeleri belirlemek için</span><span class="sxs-lookup"><span data-stu-id="c8abb-106">To determine checked items in a CheckedListBox control</span></span>  
   
-1. <span data-ttu-id="07060-107">Koleksiyon sıfır tabanlı olduğundan, 0 ' dan başlayarak <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> koleksiyonunu yineleyin.</span><span class="sxs-lookup"><span data-stu-id="07060-107">Iterate through the <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> collection, starting at 0 since the collection is zero-based.</span></span> <span data-ttu-id="07060-108">Bu yöntemin, genel liste değil, denetlenen öğeler listesindeki öğe numarasını sunyacağını unutmayın.</span><span class="sxs-lookup"><span data-stu-id="07060-108">Note that this method will give you the item number in the list of checked items, not the overall list.</span></span> <span data-ttu-id="07060-109">Bu nedenle, listedeki ilk öğe denetlenmez ve ikinci öğe işaretliyse, aşağıdaki kod "Checked Item 1 = MyListItem2" gibi metni görüntüler.</span><span class="sxs-lookup"><span data-stu-id="07060-109">So if the first item in the list is not checked and the second item is checked, the code below will display text like "Checked Item 1 = MyListItem2".</span></span>  
+1. <span data-ttu-id="c8abb-107"><xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> Koleksiyon sıfır tabanlı olduğundan, 0'dan başlayarak koleksiyon da yineleyin.</span><span class="sxs-lookup"><span data-stu-id="c8abb-107">Iterate through the <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> collection, starting at 0 since the collection is zero-based.</span></span> <span data-ttu-id="c8abb-108">Bu yöntemin, genel listede değil, denetlenen öğeler listesindeki madde numarasını vereceğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="c8abb-108">Note that this method will give you the item number in the list of checked items, not the overall list.</span></span> <span data-ttu-id="c8abb-109">Bu nedenle, listedeki ilk öğe işaretlenmez ve ikinci öğe işaretlenirse, aşağıdaki kod "İşaretlenmiş Madde 1 = MyListItem2" gibi bir metin görüntüler.</span><span class="sxs-lookup"><span data-stu-id="c8abb-109">So if the first item in the list is not checked and the second item is checked, the code below will display text like "Checked Item 1 = MyListItem2".</span></span>  
   
     ```vb  
     ' Determine if there are any items checked.  
@@ -66,9 +66,9 @@ ms.locfileid: "76743244"
     }  
     ```  
   
-     - <span data-ttu-id="07060-110">veya -</span><span class="sxs-lookup"><span data-stu-id="07060-110">or -</span></span>  
+     - <span data-ttu-id="c8abb-110">veya -</span><span class="sxs-lookup"><span data-stu-id="c8abb-110">or -</span></span>  
   
-2. <span data-ttu-id="07060-111">Koleksiyon sıfır tabanlı olduğundan, 1 ' den başlayarak <xref:System.Windows.Forms.CheckedListBox.Items%2A> koleksiyonunda ilerleyin ve her öğe için <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> yöntemini çağırın.</span><span class="sxs-lookup"><span data-stu-id="07060-111">Step through the <xref:System.Windows.Forms.CheckedListBox.Items%2A> collection, starting at 0 since the collection is zero-based, and call the <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method for each item.</span></span> <span data-ttu-id="07060-112">Bu yöntemin genel listedeki öğe numarasını sunyacağını unutmayın. bu nedenle, listedeki ilk öğe denetlenmez ve ikinci öğe denetlendiğinde, "öğe 2 = MyListItem2" gibi bir şey görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="07060-112">Note that this method will give you the item number in the overall list, so if the first item in the list is not checked and the second item is checked, it will display something like "Item 2 = MyListItem2".</span></span>  
+2. <span data-ttu-id="c8abb-111"><xref:System.Windows.Forms.CheckedListBox.Items%2A> Koleksiyon sıfır tabanlı olduğundan 0'dan başlayarak koleksiyona adım <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> atın ve her öğe için yöntemi arayın.</span><span class="sxs-lookup"><span data-stu-id="c8abb-111">Step through the <xref:System.Windows.Forms.CheckedListBox.Items%2A> collection, starting at 0 since the collection is zero-based, and call the <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method for each item.</span></span> <span data-ttu-id="c8abb-112">Bu yöntemin size genel listedeki madde numarasını vereceğini, bu nedenle listedeki ilk öğe işaretlenmezse ve ikinci öğe işaretlenirse, "Item 2 = MyListItem2" gibi bir şey görüntülemeyeceğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="c8abb-112">Note that this method will give you the item number in the overall list, so if the first item in the list is not checked and the second item is checked, it will display something like "Item 2 = MyListItem2".</span></span>  
   
     ```vb  
     Dim i As Integer  
@@ -84,7 +84,7 @@ ms.locfileid: "76743244"
   
     ```csharp  
     int i;  
-    string s;   
+    string s;
     s = "Checked items:\n" ;  
     for (i = 0; i <= (checkedListBox1.Items.Count-1); i++)  
     {  
@@ -98,7 +98,7 @@ ms.locfileid: "76743244"
   
     ```cpp  
     int i;  
-    String ^ s;   
+    String ^ s;
     s = "Checked items:\n" ;  
     for (i = 0; i <= (checkedListBox1->Items->Count-1); i++)  
     {  
@@ -111,6 +111,6 @@ ms.locfileid: "76743244"
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="07060-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="07060-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8abb-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c8abb-113">See also</span></span>
 
-- [<span data-ttu-id="07060-114">Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri</span><span class="sxs-lookup"><span data-stu-id="07060-114">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
+- [<span data-ttu-id="c8abb-114">Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri</span><span class="sxs-lookup"><span data-stu-id="c8abb-114">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
