@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: FTP ile dizin içeriğini listeleme'
-description: Bu makalede, FTP sunucusunda dizin içeriğini listeleme bir örneği gösterilmektedir.
+title: 'Nasıl yapılı: FTP ile dizin içeriğini listele'
+description: Bu makalede, ftp sunucusunun dizin içeriğini nasıl listeleyiş gösterilmektedir.
 ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 130c64c9-7b7f-4672-9b3b-d946bd2616c5
 ms.openlocfilehash: 924e6731ce585f127af319fdbfbdc8c12e61c46d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "61642626"
 ---
-# <a name="how-to-list-directory-contents-with-ftp"></a>Nasıl yapılır: FTP ile dizin içeriğini listeleme
+# <a name="how-to-list-directory-contents-with-ftp"></a>Nasıl yapılı: FTP ile dizin içeriğini listele
 
-Bu örnek, bir FTP sunucusuna dizin içeriğini listeleme gösterir.
+Bu örnek, ftp sunucusunun dizin içeriğini nasıl listeleyiş gösteriş gösterir.
 
 ## <a name="example"></a>Örnek
 
@@ -81,7 +81,7 @@ Namespace Examples.System.Net
 End Namespace
 ```
 
-Belirli bir dizin listesi gerekiyorsa, yalnızca dizin, kullanmakta olduğunuz URI'nin sonuna Ekle <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> yöntemi:
+Belirli bir dizini listelamanız gerekiyorsa, yöntemde kullandığınız URI'nin sonuna dizini eklemeniz <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> gerekir:
 
 ```csharp
 FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://www.contoso.com/your_preferred_directory");

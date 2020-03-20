@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: WCF Web HTTP Programlama Modeli Kullanarak Rastgele Veriler Döndüren Bir Hizmet Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 41d9f0e53401bcd6b57b04a38e76af5ddb9fb4cc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c85ab6725876a2d523a18c817ce3fd89f0d2285a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976097"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184479"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Nasıl yapılır: WCF Web HTTP Programlama Modeli Kullanarak Rastgele Veriler Döndüren Bir Hizmet Oluşturma
-Bazen geliştiricilerin, bir hizmet işleminden verilerin nasıl döndürüldüğünden tam denetime sahip olmaları gerekir. Bu durum, bir hizmet işleminin WCF tarafından desteklenmeyen bir biçimde veri döndürmesi gereken durumdur. Bu konuda, bu tür bir hizmet oluşturmak için WCF WEB HTTP programlama modelinin kullanımı ele alınmaktadır. Bu hizmette bir akış döndüren bir işlem vardır.  
+Bazen geliştiriciler, verilerin bir hizmet işleminden nasıl döndürüldüğü konusunda tam denetime sahip olmalıdır. Bu durum, bir hizmet işleminin WCF tarafından desteklenmeyen bir biçimde veri döndürmesi gerektiği durumdur. Bu konu, böyle bir hizmet oluşturmak için WCF WEB HTTP Programlama Modeli kullanarak tartışır. Bu hizmet, bir akışı döndüren bir işlem vardır.  
   
 ### <a name="to-implement-the-service-contract"></a>Hizmet sözleşmesini uygulamak için  
   
-1. Hizmet sözleşmesini tanımlayın. Sözleşmeye `IImageServer` denir ve bir <xref:System.IO.Stream>döndüren `GetImage` adlı bir yöntemi vardır.  
+1. Hizmet sözleşmesini tanımlayın. Sözleşme denir `IImageServer` ve bir ' `GetImage` döndürür denilen bir <xref:System.IO.Stream>yöntem vardır.  
   
     ```csharp  
     [ServiceContract]  
@@ -25,9 +25,9 @@ Bazen geliştiricilerin, bir hizmet işleminden verilerin nasıl döndürüldü�
         }  
     ```  
   
-     Yöntem bir <xref:System.IO.Stream>döndürdüğünden, WCF işlemin hizmet işleminden döndürülen baytlar üzerinde tamamen denetim sahibi olduğunu ve döndürülen verilere biçimlendirme uygulamaz olduğunu varsayar.  
+     Yöntem bir <xref:System.IO.Stream>döndürdüğünden, WCF, işletmek, hizmet işletmesinden döndürülen baytlar üzerinde tam denetime sahip olduğunu ve iade edilen verilere biçimlendirme uygulamazığını varsayar.  
   
-2. Hizmet sözleşmesini uygulayın. Sözleşmede yalnızca bir işlem (`GetImage`) vardır. Bu yöntem bir bit eşlem üretir ve sonra. jpg biçiminde bir <xref:System.IO.MemoryStream> kaydeder. İşlem daha sonra bu akışı çağırana döndürür.  
+2. Hizmet sözleşmesini uygulayın. Sözleşmenin yalnızca bir`GetImage`işlemi vardır ( ). Bu yöntem bir bit eşlemi oluşturur <xref:System.IO.MemoryStream> ve sonra onu .jpg formatında bir biçime kaydeder. İşlem daha sonra bu akışı arayana döndürür.  
   
     ```csharp
     public class Service : IImageServer
@@ -51,9 +51,9 @@ Bazen geliştiricilerin, bir hizmet işleminden verilerin nasıl döndürüldü�
     }
     ```  
   
-     İkinci kodun son satırına dikkat edin: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+     Kodun ikinci ve son satırına dikkat edin:`WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
-     Bu, içerik türü üst bilgisini `"image/jpeg"`olarak ayarlar. Bu örnek, bir. jpg dosyasının nasıl döndürülmesini gösterir, ancak herhangi bir biçimde gerekli olan herhangi bir veri türünü döndürecek şekilde değiştirilebilir. İşlemin verileri alması veya oluşturması ve sonra bir akışa yazması gerekir.  
+     Bu, içerik türü üstbilgisini `"image/jpeg"`. Bu örnek bir .jpg dosyasının nasıl döndürüleceğini gösterse de, herhangi bir biçimde gerekli olan her türlü veriyi döndürmek için değiştirilebilir. İşlem, verileri almalı veya oluşturmalı ve sonra bir akışa yazmalıdır.  
   
 ### <a name="to-host-the-service"></a>Hizmeti barındırmak için  
   
@@ -64,35 +64,35 @@ Bazen geliştiricilerin, bir hizmet işleminden verilerin nasıl döndürüldü�
     {  
         static void Main(string[] args)  
         {  
-        }   
+        }
     }  
     ```  
   
-2. `Main` yöntemi içindeki hizmetin temel adresini tutacak bir değişken oluşturun.  
+2. `Main` Yöntem içinde hizmetin temel adresini tutmak için bir değişken oluşturun.  
   
     ```csharp
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3. Hizmet sınıfını ve temel adresi belirten hizmet için <xref:System.ServiceModel.ServiceHost> bir örnek oluşturun.  
+3. Hizmet <xref:System.ServiceModel.ServiceHost> sınıfını ve temel adresi belirten hizmet için bir örnek oluşturun.  
   
     ```csharp
     ServiceHost host = new ServiceHost(typeof(Service), new Uri(baseAddress));  
     ```  
   
-4. <xref:System.ServiceModel.WebHttpBinding> ve <xref:System.ServiceModel.Description.WebHttpBehavior>kullanarak bir uç nokta ekleyin.  
+4. ve kullanarak bir <xref:System.ServiceModel.WebHttpBinding> bitiş <xref:System.ServiceModel.Description.WebHttpBehavior>noktası ekleyin.  
   
     ```csharp  
     host.AddServiceEndpoint(typeof(IImageServer), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
-5. Hizmet konağını açın.  
+5. Servis ana bilgisayarını açın.  
   
     ```csharp  
     host.Open();  
     ```  
   
-6. Hizmeti sonlandırmak için kullanıcının ENTER tuşuna basmasına kadar bekleyin.  
+6. Kullanıcı hizmeti sonlandırmak için ENTER tuşuna basana kadar bekleyin.  
   
     ```csharp
     Console.WriteLine("Service is running");  
@@ -101,14 +101,14 @@ Bazen geliştiricilerin, bir hizmet işleminden verilerin nasıl döndürüldü�
     host.Close();  
     ```  
   
-### <a name="to-call-the-raw-service-using-internet-explorer"></a>Internet Explorer 'ı kullanarak ham hizmeti çağırmak için  
+### <a name="to-call-the-raw-service-using-internet-explorer"></a>Internet Explorer kullanarak ham hizmeti aramak için  
   
 1. Hizmeti çalıştırın, hizmetten aşağıdaki çıktıyı görmeniz gerekir. `Service is running Press ENTER to close the host`  
   
-2. Internet Explorer 'ı açın ve `http://localhost:8000/Service/GetImage?width=50&height=40` yazın ve ortadaki mavi çapraz çizgi ile sarı bir dikdörtgen görmeniz gerekir.  
+2. Internet Explorer'ı `http://localhost:8000/Service/GetImage?width=50&height=40` açın ve ortasın asıması mavi çapraz çizgili sarı bir dikdörtgen görmeniz gerekir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıda, bu konunun kodun tamambir listesi verilmiştir.  
+ Aşağıda, bu konu için kodun tam bir listesi vettir.  
   
 ```csharp  
 using System;  
@@ -173,7 +173,7 @@ namespace RawImageService
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
-- Örnek kod başvurusu System. ServiceModel. dll ve System. ServiceModel. Web. dll ' i derlerken.  
+- Örnek kod referans System.ServiceModel.dll ve System.ServiceModel.Web.dll derlenirken.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

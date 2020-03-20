@@ -1,17 +1,17 @@
 ---
 ms.openlocfilehash: 2f960942bda54505690cbac3151ef74ec0ab5ebb
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "68235611"
 ---
-### <a name="deadlock-may-result-when-using-reentrant-services"></a>Kilitlenme desteklemeyeceğini hizmetlerini kullanırken neden olabilir
+### <a name="deadlock-may-result-when-using-reentrant-services"></a>Reentrant hizmetlerini kullanırken kilitlenme oluşabilir
 
 |   |   |
 |---|---|
-|Ayrıntılar|Bir kilitlenme hizmeti örneklerini tek bir iş parçacığı aynı anda yürütme kısıtlayan bir desteklemeyeceğini hizmeti neden olabilir. Bu sorunla karşılaşırsanız eğilimlidir Hizmetleri aşağıdaki olacaktır <xref:System.ServiceModel.ServiceBehaviorAttribute> kodlarında:<pre><code class="lang-csharp">[ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant)]&#13;&#10;</code></pre>|
-|Öneri|Bu sorunu gidermek için aşağıdakileri yapabilirsiniz:<ul><li>Hizmetin eşzamanlılık modu ayarlamak <xref:System.ServiceModel.ConcurrencyMode.Single?displayProperty=nameWithType> veya &lt;System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType&gt;. Örneğin:</li></ul><pre><code class="lang-csharp">[ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Single)]&#13;&#10;</code></pre><ul><li>.NET Framework 4.6.2 en son güncelleştirmesi veya .NET Framework'ün daha sonraki bir sürüme yükseltin. Bu akışı devre dışı bırakır <xref:System.Threading.ExecutionContext> içinde <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType>. Bu davranışı yapılandırılabilir değildir; yapılandırma dosyanız aşağıdaki uygulama ayarı ekleme ile eşdeğerdir:</li></ul><pre><code class="lang-xml">&lt;appSettings&gt;&#13;&#10;&lt;add key=&quot;Switch.System.ServiceModel.DisableOperationContextAsyncFlow&quot; value=&quot;true&quot; /&gt;&#13;&#10;&lt;/appSettings&gt;&#13;&#10;</code></pre>Değerini <code>Switch.System.ServiceModel.DisableOperationContextAsyncFlow</code> hiçbir zaman ayarlanmalıdır <code>false</code> Rentrant Hizmetleri.|
+|Ayrıntılar|Kilitlenme, hizmetin örneklerini aynı anda bir yürütme iş parçacığıyla sınırlayan bir Reentrant hizmetiyle sonuçlanabilir. Bu sorunla karşılaşmaya yatkın hizmetlerin <xref:System.ServiceModel.ServiceBehaviorAttribute> kodlarında aşağıdakiler olacaktır:<pre><code class="lang-csharp">[ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant)]&#13;&#10;</code></pre>|
+|Öneri|Bu sorunu gidermek için aşağıdakileri yapabilirsiniz:<ul><li>Hizmetin eşzamanlılık modunu <xref:System.ServiceModel.ConcurrencyMode.Single?displayProperty=nameWithType> veya &lt;System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType&gt;'a ayarlayın. Örnek:</li></ul><pre><code class="lang-csharp">[ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Single)]&#13;&#10;</code></pre><ul><li>.NET Framework 4.6.2'ye en son güncelleştirmeyi yükleyin veya .NET Framework'ün sonraki bir sürümüne yükseltin. <xref:System.Threading.ExecutionContext> Bu, in <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType>akışını devre dışı kılabilir. Bu davranış yapılandırılabilir; yapılandırma dosyanıza aşağıdaki uygulama ayarını eklemeye eşdeğerdir:</li></ul><pre><code class="lang-xml">&lt;appSettings&gt;&#13;&#10;&lt;add key=&quot;Switch.System.ServiceModel.DisableOperationContextAsyncFlow&quot; value=&quot;true&quot; /&gt;&#13;&#10;&lt;/appSettings&gt;&#13;&#10;</code></pre>Değeri asla <code>Switch.System.ServiceModel.DisableOperationContextAsyncFlow</code> Rentrant hizmetleri <code>false</code> için ayarlanamamalıdır.|
 |Kapsam|İkincil|
 |Sürüm|4.6.2|
 |Tür|Yeniden Hedefleme|

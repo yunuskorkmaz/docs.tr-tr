@@ -1,19 +1,18 @@
 ---
-ms.openlocfilehash: d3c6818861f8b0261a9a71a4654029143d928d08
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: fbc39b6e1cc19f6c2846caaabb9a8a721494b4e6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67856988"
 ---
-### <a name="allow-unicode-in-uris-that-resemble-unc-shares"></a>Unicode UNC paylaşımlarını benzer bir URI'leri izin ver
+### <a name="allow-unicode-in-uris-that-resemble-unc-shares"></a>UNC hisselerine benzeyen URI'lerde Unicode'a izin ver
 
 |   |   |
 |---|---|
-|Ayrıntılar|İçinde <xref:System.Uri?displayProperty=fullName>, bir dosya oluşturmak URI içeren iki UNC paylaşım adını ve Unicode karakterler artık sonuçlanır geçersiz iç durum ile bir URI. Yalnızca aşağıdakilerin tümü doğru olduğunda davranışı değiştirir:<ul><li>URI şeması bulunuyor <code>file:</code> ve dört veya daha fazla eğik çizgiyle izlenir.</li><li>Ana bilgisayar adı, alt çizgi veya başka ayrılmamış bir simge ile başlar.</li><li>URI, Unicode karakterler içeriyor.</li></ul>|
-|Öneri|Tutarlı bir şekilde Unicode karakterler içeren URI'leri ile çalışan uygulamalar, kısıtlanmamışsa UNC paylaşımlarına başvuruları engellemek için bu davranışı kullanabilirdiniz. Bu uygulamaların kullanması gereken <xref:System.Uri.IsUnc> yerine.|
-|`Scope`|Kenar|
-|Version|4.7.2|
-|Type|Çalışma zamanı|
+|Ayrıntılar|Hem <xref:System.Uri?displayProperty=fullName>UNC hisse adı hem de Unicode karakterleri içeren bir dosya URI'nin oluşturulması artık geçersiz iç durumu olan bir URI ile sonuçlanmaz. Davranış yalnızca aşağıdakilerin tümü doğru olduğunda değişecektir:<ul><li>URI düzeni <code>file:</code> vardır ve dört veya daha fazla kesikler tarafından takip edilir.</li><li>Ana bilgisayar adı bir alt puan veya diğer rezerve edilmeyen bir sembolle başlar.</li><li>URI, Unicode karakterleri içerir.</li></ul>|
+|Öneri|Sürekli Unicode içeren URI'lerle çalışan uygulamalar, unc hisselerine yapılan atıflara izin vermemek için bu davranışı kullanmış olabilir. Bu uygulamaları yerine <xref:System.Uri.IsUnc> kullanmalısınız.|
+|Kapsam|Edge|
+|Sürüm|4.7.2|
+|Tür|Çalışma Zamanı|
 |Etkilenen API’ler|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
-

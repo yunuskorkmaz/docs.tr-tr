@@ -1,5 +1,5 @@
 ---
-title: Fırçalara genel bakış
+title: Fırçalar genel bakış
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,26 +7,26 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 18ca9b79a6ee801638a54fcb227c44e9aea21fd0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7a9474b392052900952f5b677ad94b16025de8dd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746214"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186571"
 ---
 # <a name="wpf-brushes-overview"></a>WPF Fırçalarına Genel Bakış
-Ekranınızda görülebilen her şey, bir fırça tarafından boyandığı için görülebilir. Örneğin, bir düğmenin arka planını, metin ön kümesini ve bir şeklin dolgusunu betimleyen bir fırça kullanılır. Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fırçalarla boyama kavramlarını tanıtır ve örnekler sağlar. Fırçalar, basit ve düz renklerle karmaşık desen ve resim kümelerine [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] nesneleri boyamanıza imkan tanır.  
+Ekranınızda görünen her şey bir fırçayla boyandığı için görünür. Örneğin, bir düğmenin arka planını, metnin ön planını ve şeklin dolgusu için bir fırça kullanılır. Bu konu fırçalarla [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] boyama kavramlarını tanıtır ve örnekler sunar. Fırçalar, nesneleri [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] basit, düz renklerden karmaşık desen ve görüntü kümelerine kadar her şeyle boyamanızı sağlar.  
   
-<a name="paintingwithbrush"></a>   
-## <a name="painting-with-a-brush"></a>Fırça ile boyama  
- Bir <xref:System.Windows.Media.Brush> ", çıktısını içeren bir alanı boyar. Farklı fırçalar farklı türlerde çıktıya sahiptir. Bazı fırçalar, bir alanı düz renk ile, diğerleri ise gradyan, kalıp, resim veya çizim ile boyar. Aşağıdaki çizimde, farklı <xref:System.Windows.Media.Brush> türlerinin her birinin örnekleri gösterilmektedir.  
+<a name="paintingwithbrush"></a>
+## <a name="painting-with-a-brush"></a>Fırçayla Boyama  
+ Bir <xref:System.Windows.Media.Brush> "boyalar" onun çıkışı ile bir alan. Farklı fırçaların farklı çıktı türleri vardır. Bazı fırçalar bir alanı düz renkle, diğerleri degrade, desen, görüntü veya çizimle boyar. Aşağıdaki resimde, her biri farklı <xref:System.Windows.Media.Brush> türdeki örnekler gösterilmektedir.  
   
  ![Fırça türleri](./media/graphicsmm-brushtypes.jpg "graphicsmm_brushtypes")  
 Fırça örnekleri  
   
- Çoğu görsel nesne nasıl boyanmış olduğunu belirtmenizi sağlar. Aşağıdaki tabloda, <xref:System.Windows.Media.Brush>kullanabileceğiniz bazı ortak nesneler ve özellikler listelenmiştir.  
+ Çoğu görsel nesne nasıl boyandıklarını belirtmenize olanak tanır. Aşağıdaki tabloda, bir <xref:System.Windows.Media.Brush>.  
   
-|örneği|Fırça özellikleri|  
+|Sınıf|Fırça özellikleri|  
 |-----------|----------------------|  
 |<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>, <xref:System.Windows.Controls.Border.Background%2A>|  
 |<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>|  
@@ -35,130 +35,130 @@ Fırça örnekleri
 |<xref:System.Windows.Shapes.Shape>|<xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>|  
 |<xref:System.Windows.Controls.TextBlock>|<xref:System.Windows.Controls.TextBlock.Background%2A>|  
   
- Aşağıdaki bölümler, farklı <xref:System.Windows.Media.Brush> türlerini ve her birine bir örnek sağlar.  
+ Aşağıdaki bölümlerde farklı <xref:System.Windows.Media.Brush> türleri açıklar ve her biri bir örnek sağlar.  
   
-<a name="paintwithsolidcolorbrush"></a>   
-## <a name="paint-with-a-solid-color"></a>Düz renk ile boyama  
- <xref:System.Windows.Media.SolidColorBrush>, bir alanı düz <xref:System.Windows.Media.Color>boyar. <xref:System.Windows.Media.SolidColorBrush><xref:System.Windows.Media.SolidColorBrush.Color%2A> belirtmek için kullanabileceğiniz çeşitli yollar vardır: Örneğin, Alfa, kırmızı, mavi ve yeşil kanallarını belirtebilir veya <xref:System.Windows.Media.Colors> sınıfı tarafından sunulan önceden tanımlanmış renkten birini kullanabilirsiniz.  
+<a name="paintwithsolidcolorbrush"></a>
+## <a name="paint-with-a-solid-color"></a>Katı Renkle Boya  
+ Bir <xref:System.Windows.Media.SolidColorBrush> katı <xref:System.Windows.Media.Color>ile bir alan boyar. Bir tanesini <xref:System.Windows.Media.SolidColorBrush.Color%2A> belirtmenin çeşitli yolları <xref:System.Windows.Media.SolidColorBrush>vardır: örneğin, alfa, kırmızı, mavi ve yeşil kanallarını belirtebilir veya <xref:System.Windows.Media.Colors> sınıf tarafından sağlanan önceden tanımlanmış renkten birini kullanabilirsiniz.  
   
- Aşağıdaki örnek, bir <xref:System.Windows.Shapes.Rectangle><xref:System.Windows.Shapes.Shape.Fill%2A> boyamak için bir <xref:System.Windows.Media.SolidColorBrush> kullanır. Aşağıdaki çizimde boyanmış dikdörtgen gösterilmektedir.  
+ Aşağıdaki örnekte <xref:System.Windows.Media.SolidColorBrush> bir <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Rectangle>. Aşağıdaki resimde boyalı dikdörtgen gösterilmektedir.  
   
  ![SolidColorBrush kullanılarak boyanmış bir dikdörtgen](./media/graphicsmm-brush-ovw-solidcolorbrush.png "graphicsmm_brush_ovw_solidcolorbrush")  
-SolidColorBrush kullanılarak boyanmış bir dikdörtgen  
+SolidColorBrush kullanılarak boyanmış bir Dikdörtgen  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmsolidcolorbrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmsolidcolorbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmsolidcolorbrushexampleinline)]  
   
- <xref:System.Windows.Media.SolidColorBrush> sınıfı hakkında daha fazla bilgi için bkz. [düz renklerle boyama ve degradelere genel bakış](painting-with-solid-colors-and-gradients-overview.md).  
+ Sınıf hakkında daha fazla bilgi için, [Düz Renkler ve Degradeler Genel Bakış ile Boyama](painting-with-solid-colors-and-gradients-overview.md)bölümüne bakın. <xref:System.Windows.Media.SolidColorBrush>  
   
-<a name="paintwithlineargradientbrush"></a>   
-## <a name="paint-with-a-linear-gradient"></a>Doğrusal gradyan ile boyama  
- <xref:System.Windows.Media.LinearGradientBrush>, doğrusal gradyan ile bir alanı boyar. Doğrusal bir gradyan, gradyan ekseninde iki veya daha fazla rengi bir çizgi genelinde karıştırır. Gradyandaki renkleri ve bunların konumlarını belirtmek için <xref:System.Windows.Media.GradientStop> nesneleri kullanırsınız.  
+<a name="paintwithlineargradientbrush"></a>
+## <a name="paint-with-a-linear-gradient"></a>Doğrusal Degradeli Boya  
+ Bir <xref:System.Windows.Media.LinearGradientBrush> doğrusal degrade ile bir alan boyar. Doğrusal degrade, iki veya daha fazla rengi bir çizgi, degrade ekseni boyunca karıştırır. Degradedeki renkleri ve konumlarını belirtmek için nesneleri kullanırsınız. <xref:System.Windows.Media.GradientStop>  
   
- Aşağıdaki örnek, bir <xref:System.Windows.Shapes.Rectangle><xref:System.Windows.Shapes.Shape.Fill%2A> boyamak için bir <xref:System.Windows.Media.LinearGradientBrush> kullanır. Aşağıdaki çizimde boyanmış dikdörtgen gösterilmektedir.  
+ Aşağıdaki örnekte <xref:System.Windows.Media.LinearGradientBrush> bir <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Rectangle>. Aşağıdaki resimde boyalı dikdörtgen gösterilmektedir.  
   
- ![Bir Doğrgradientbrush kullanılarak boyanmış bir dikdörtgen](./media/graphicsmm-brush-ovw-lineargradientbrush.jpg "graphicsmm_brush_ovw_lineargradientbrush")  
-Bir Doğrgradientbrush kullanılarak boyanmış bir dikdörtgen  
+ ![LinearGradientBrush kullanılarak boyanmış bir dikdörtgen](./media/graphicsmm-brush-ovw-lineargradientbrush.jpg "graphicsmm_brush_ovw_lineargradientbrush")  
+LinearGradientBrush kullanılarak boyanmış bir Dikdörtgen  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmlineargradientbrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmlineargradientbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmlineargradientbrushexampleinline)]  
   
- <xref:System.Windows.Media.LinearGradientBrush> sınıfı hakkında daha fazla bilgi için bkz. [düz renklerle boyama ve degradelere genel bakış](painting-with-solid-colors-and-gradients-overview.md).  
+ Sınıf hakkında daha fazla bilgi için, [Düz Renkler ve Degradeler Genel Bakış ile Boyama](painting-with-solid-colors-and-gradients-overview.md)bölümüne bakın. <xref:System.Windows.Media.LinearGradientBrush>  
   
-<a name="paintwithradialgradientbrush"></a>   
-## <a name="paint-with-a-radial-gradient"></a>Radyal gradyan ile boyama  
- Bir <xref:System.Windows.Media.RadialGradientBrush> radyal degradeyle bir alanı boyar. Radyal gradyan bir daire içinde iki veya daha fazla rengi karıştırır. <xref:System.Windows.Media.LinearGradientBrush> sınıfında olduğu gibi, Gradyandaki renkleri ve bunların konumlarını belirtmek için <xref:System.Windows.Media.GradientStop> nesneleri kullanırsınız.  
+<a name="paintwithradialgradientbrush"></a>
+## <a name="paint-with-a-radial-gradient"></a>Radyal Degrade ile Boya  
+ Bir <xref:System.Windows.Media.RadialGradientBrush> radyal degrade ile bir alan boyar. Radyal degrade, iki veya daha fazla rengi bir daire boyunca karıştırır. <xref:System.Windows.Media.LinearGradientBrush> Sınıfta olduğu gibi, <xref:System.Windows.Media.GradientStop> degradedeki renkleri ve konumlarını belirtmek için nesneleri kullanırsınız.  
   
- Aşağıdaki örnek, bir <xref:System.Windows.Shapes.Rectangle><xref:System.Windows.Shapes.Shape.Fill%2A> boyamak için bir <xref:System.Windows.Media.RadialGradientBrush> kullanır. Aşağıdaki çizimde boyanmış dikdörtgen gösterilmektedir.  
+ Aşağıdaki örnekte <xref:System.Windows.Media.RadialGradientBrush> bir <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Rectangle>. Aşağıdaki resimde boyalı dikdörtgen gösterilmektedir.  
   
- ![RadialGradientBrush kullanarak boyanmış bir dikdörtgen](./media/graphicsmm-brush-ovw-radialgradientbrush.jpg "graphicsmm_brush_ovw_radialgradientbrush")  
-RadialGradientBrush kullanarak boyanmış bir dikdörtgen  
+ ![RadialGradientBrush kullanılarak boyanmış bir dikdörtgen](./media/graphicsmm-brush-ovw-radialgradientbrush.jpg "graphicsmm_brush_ovw_radialgradientbrush")  
+RadialGradientBrush kullanılarak boyanmış bir Dikdörtgen  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmradialgradientbrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmradialgradientbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmradialgradientbrushexampleinline)]  
   
- <xref:System.Windows.Media.RadialGradientBrush> sınıfı hakkında daha fazla bilgi için bkz. [düz renklerle boyama ve degradelere genel bakış](painting-with-solid-colors-and-gradients-overview.md).  
+ Sınıf hakkında daha fazla bilgi için, [Düz Renkler ve Degradeler Genel Bakış ile Boyama](painting-with-solid-colors-and-gradients-overview.md)bölümüne bakın. <xref:System.Windows.Media.RadialGradientBrush>  
   
-<a name="paintwithimage"></a>   
-## <a name="paint-with-an-image"></a>Görüntüyle boyama  
- Bir <xref:System.Windows.Media.ImageBrush> <xref:System.Windows.Media.ImageSource>bir alanı boyar.  
+<a name="paintwithimage"></a>
+## <a name="paint-with-an-image"></a>Resimle Boyama  
+ Bir <xref:System.Windows.Media.ImageBrush> alan boyar <xref:System.Windows.Media.ImageSource>bir .  
   
- Aşağıdaki örnek, bir <xref:System.Windows.Shapes.Rectangle><xref:System.Windows.Shapes.Shape.Fill%2A> boyamak için bir <xref:System.Windows.Media.ImageBrush> kullanır. Aşağıdaki çizimde boyanmış dikdörtgen gösterilmektedir.  
+ Aşağıdaki örnekte <xref:System.Windows.Media.ImageBrush> bir <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Rectangle>. Aşağıdaki resimde boyalı dikdörtgen gösterilmektedir.  
   
- ![ImageBrush tarafından boyanan dikdörtgen](./media/graphicsmm-brush-ovw-imagebrush.jpg "graphicsmm_brush_ovw_imagebrush")  
-Görüntü kullanılarak boyanmış bir dikdörtgen  
+ ![ImageBrush ile boyanmış bir Dikdörtgen](./media/graphicsmm-brush-ovw-imagebrush.jpg "graphicsmm_brush_ovw_imagebrush")  
+Görüntü kullanılarak boyanmış bir Dikdörtgen  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmimagebrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmimagebrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmimagebrushexampleinline)]  
   
- <xref:System.Windows.Media.ImageBrush> sınıfı hakkında daha fazla bilgi için bkz. [görüntü, çizimler ve görsellerle boyama](painting-with-images-drawings-and-visuals.md).  
+ <xref:System.Windows.Media.ImageBrush> Sınıf hakkında daha fazla bilgi için [Resim, Çizim ve Görsellerle Boyama'ya](painting-with-images-drawings-and-visuals.md)bakın.  
   
-<a name="paintwithdrawing"></a>   
-## <a name="paint-with-a-drawing"></a>Çizim ile boyama  
- Bir <xref:System.Windows.Media.DrawingBrush> <xref:System.Windows.Media.Drawing>bir alanı boyar. Bir <xref:System.Windows.Media.Drawing> şekil, resim, metin ve medya içerebilir.  
+<a name="paintwithdrawing"></a>
+## <a name="paint-with-a-drawing"></a>Çizimle Boyama  
+ Bir <xref:System.Windows.Media.DrawingBrush> alan boyar <xref:System.Windows.Media.Drawing>bir . A <xref:System.Windows.Media.Drawing> şekiller, görüntüler, metin ve ortam içerebilir.  
   
- Aşağıdaki örnek, bir <xref:System.Windows.Shapes.Rectangle><xref:System.Windows.Shapes.Shape.Fill%2A> boyamak için bir <xref:System.Windows.Media.DrawingBrush> kullanır. Aşağıdaki çizimde boyanmış dikdörtgen gösterilmektedir.  
+ Aşağıdaki örnekte <xref:System.Windows.Media.DrawingBrush> bir <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Rectangle>. Aşağıdaki resimde boyalı dikdörtgen gösterilmektedir.  
   
  ![DrawingBrush kullanılarak boyanmış bir dikdörtgen](./media/graphicsmm-brush-ovw-drawingbrush.jpg "graphicsmm_brush_ovw_drawingbrush")  
-DrawingBrush kullanılarak boyanmış bir dikdörtgen  
+DrawingBrush kullanılarak boyanmış bir Dikdörtgen  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMDrawingBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmdrawingbrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMDrawingBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmdrawingbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMDrawingBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmdrawingbrushexampleinline)]  
   
- <xref:System.Windows.Media.DrawingBrush> sınıfı hakkında daha fazla bilgi için bkz. [görüntü, çizimler ve görsellerle boyama](painting-with-images-drawings-and-visuals.md).  
+ <xref:System.Windows.Media.DrawingBrush> Sınıf hakkında daha fazla bilgi için [Resim, Çizim ve Görsellerle Boyama'ya](painting-with-images-drawings-and-visuals.md)bakın.  
   
-<a name="paintwithvisual"></a>   
-## <a name="paint-with-a-visual"></a>Görselle boyama  
- <xref:System.Windows.Media.VisualBrush>, bir <xref:System.Windows.Media.Visual> nesnesi olan bir alanı boyar. Görsel nesne örnekleri <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Page>ve <xref:System.Windows.Controls.MediaElement>içerir. <xref:System.Windows.Media.VisualBrush> Ayrıca, uygulamanızın bir bölümünden başka bir alana içerik proje yapmanızı sağlar; Yansıma efektleri oluşturmak ve ekranın bölümlerini büyütme için çok kullanışlıdır.  
+<a name="paintwithvisual"></a>
+## <a name="paint-with-a-visual"></a>Görsel boya  
+ Bir <xref:System.Windows.Media.VisualBrush> <xref:System.Windows.Media.Visual> nesne ile bir alan boyar. Görsel nesnelere örnek <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Page>olarak <xref:System.Windows.Controls.MediaElement>, ve . A <xref:System.Windows.Media.VisualBrush> ayrıca, uygulamanızın bir bölümünden içeriği başka bir alana yansıtmanızı sağlar; yansıma efektleri oluşturmak ve ekranın büyüteç bölümlerini oluşturmak için çok yararlıdır.  
   
- Aşağıdaki örnek, bir <xref:System.Windows.Shapes.Rectangle><xref:System.Windows.Shapes.Shape.Fill%2A> boyamak için bir <xref:System.Windows.Media.VisualBrush> kullanır. Aşağıdaki çizimde boyanmış dikdörtgen gösterilmektedir.  
+ Aşağıdaki örnekte <xref:System.Windows.Media.VisualBrush> bir <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Rectangle>. Aşağıdaki resimde boyalı dikdörtgen gösterilmektedir.  
   
  ![VisualBrush kullanılarak boyanmış bir dikdörtgen](./media/graphicsmm-brush-ovw-visualbrush.jpg "graphicsmm_brush_ovw_visualbrush")  
-VisualBrush kullanılarak boyanmış bir dikdörtgen  
+VisualBrush kullanılarak boyanmış bir Dikdörtgen  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmvisualbrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmvisualbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmvisualbrushexampleinline)]  
   
- <xref:System.Windows.Media.VisualBrush> sınıfı hakkında daha fazla bilgi için bkz. [görüntü, çizimler ve görsellerle boyama](painting-with-images-drawings-and-visuals.md).  
+ <xref:System.Windows.Media.VisualBrush> Sınıf hakkında daha fazla bilgi için [Resim, Çizim ve Görsellerle Boyama'ya](painting-with-images-drawings-and-visuals.md)bakın.  
   
-<a name="paintwithpredefinedbrushesandsystemcolors"></a>   
-## <a name="paint-using-predefined-and-system-brushes"></a>Önceden tanımlanmış ve sistem fırçalarını kullanarak boyama  
- Windows Presentation Foundation (WPF), nesneleri boyamak için kullanabileceğiniz önceden tanımlanmış ve sistem fırçaları kümesi sağlar.  
+<a name="paintwithpredefinedbrushesandsystemcolors"></a>
+## <a name="paint-using-predefined-and-system-brushes"></a>Önceden Tanımlanmış ve Sistem Fırçaları Kullanarak Boya  
+ Kolaylık sağlamak için, Windows Presentation Foundation (WPF) nesneleri boyamak için kullanabileceğiniz önceden tanımlanmış ve sistem fırçaları kümesi sağlar.  
   
-- Kullanılabilir önceden tanımlanmış fırçalar listesi için <xref:System.Windows.Media.Brushes> sınıfına bakın. Önceden tanımlanmış bir fırçanın nasıl kullanılacağını gösteren bir örnek için bkz. [düz renk ile bir alanı boyama](how-to-paint-an-area-with-a-solid-color.md).  
+- Kullanılabilir önceden tanımlanmış fırçaların listesi için <xref:System.Windows.Media.Brushes> sınıfa bakın. Önceden tanımlanmış bir fırçanın nasıl kullanılacağını gösteren [bir](how-to-paint-an-area-with-a-solid-color.md)örnek için bkz.  
   
-- Kullanılabilir sistem fırçalarının bir listesi için <xref:System.Windows.SystemColors> sınıfına bakın. Bir örnek için bkz. [Sistem fırçası ile bir alanı boyama](how-to-paint-an-area-with-a-system-brush.md).  
+- Kullanılabilir sistem fırçalarının listesi için <xref:System.Windows.SystemColors> sınıfa bakın. Örneğin, [bkz.](how-to-paint-an-area-with-a-system-brush.md)  
   
-<a name="commonbrushfeatures"></a>   
-## <a name="common-brush-features"></a>Ortak fırça özellikleri  
- <xref:System.Windows.Media.Brush> nesneler, fırçayı saydam veya kısmen saydam hale getirmek için kullanılabilecek bir <xref:System.Windows.Media.Brush.Opacity%2A> özelliği sağlar. <xref:System.Windows.Media.Brush.Opacity%2A> 0 değeri, bir fırçayı tamamen saydam hale getirir, ancak 1 <xref:System.Windows.Media.Brush.Opacity%2A> değeri, fırçayı tamamen opak hale getirir. Aşağıdaki örnek, yüzde 25 oranında donuk bir <xref:System.Windows.Media.SolidColorBrush> yapmak için <xref:System.Windows.Media.Brush.Opacity%2A> özelliğini kullanır.  
+<a name="commonbrushfeatures"></a>
+## <a name="common-brush-features"></a>Ortak Fırça Özellikleri  
+ <xref:System.Windows.Media.Brush>nesneler, fırçayı saydam veya kısmen saydam yapmak için kullanılabilecek bir <xref:System.Windows.Media.Brush.Opacity%2A> özellik sağlar. 0 <xref:System.Windows.Media.Brush.Opacity%2A> değeri fırçayı tamamen saydam hale <xref:System.Windows.Media.Brush.Opacity%2A> getirirken, 1 değeri fırçayı tamamen opak yapar. Aşağıdaki örnekte, <xref:System.Windows.Media.Brush.Opacity%2A> yüzde <xref:System.Windows.Media.SolidColorBrush> 25 opak hale getirmek için özellik kullanır.  
   
  [!code-xaml[BrushOverviewExamples_snip#OpacityExample1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/OpacityExample.xaml#opacityexample1xaml)]  
   
  [!code-csharp[BrushOverviewExamples_snip#OpacityExample1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/OpacityExample.cs#opacityexample1csharp)]  
   
- Fırça kısmen saydam renkler içeriyorsa, rengin opaklık değeri, fırçanın opaklık değeri ile çarpma ile birleştirilir. Örneğin, bir fırçanın opaklık değeri 0,5 ise ve fırçaya ilişkin bir rengin opaklık değeri 0,5 ise, çıkış rengi bir opaklık değeri olan 0,25.  
+ Fırça kısmen saydam renkler içeriyorsa, rengin opaklık değeri fırçanın opaklık değeriyle çarpımı yla birleştirilir. Örneğin, bir fırçanın opaklık değeri 0,5 ve kullanılan bir rengin de opaklık değeri 0,5 ise, çıkış renginin opaklık değeri 0,25'dir.  
   
 > [!NOTE]
-> Bir fırçanın opaklık değerini değiştirmek, <xref:System.Windows.UIElement.Opacity%2A?displayProperty=nameWithType> özelliğini kullanarak tüm bir öğenin saydamlığını değiştirmek daha verimlidir.  
+> Bir fırçanın opaklık değerini değiştirmek, tüm öğenin opaklığını özelliğini <xref:System.Windows.UIElement.Opacity%2A?displayProperty=nameWithType> kullanmaktan daha etkilidir.  
   
- <xref:System.Windows.Media.Brush.Transform%2A> veya <xref:System.Windows.Media.Brush.RelativeTransform%2A> özelliklerini kullanarak bir fırçanın içeriğini döndürebilir, ölçeklendirebilir, eğebilir ve çevirebilirsiniz. Daha fazla bilgi için bkz. [fırça dönüşümüne genel bakış](brush-transformation-overview.md).  
+ Bir fırçanın içeriğini veya <xref:System.Windows.Media.Brush.Transform%2A> <xref:System.Windows.Media.Brush.RelativeTransform%2A> özelliklerini kullanarak döndürebilir, ölçeklendirebilir, eğriltebilir ve çevirebilirsiniz. Daha fazla bilgi için [Bkz. Fırça Dönüşümü Genel Bakış.](brush-transformation-overview.md)  
   
- <xref:System.Windows.Media.Animation.Animatable> nesneler olduklarından <xref:System.Windows.Media.Brush> nesneleri canlandırılabilirler. Daha fazla bilgi için bkz. [animasyon genel bakış](animation-overview.md).  
+ Nesneler oldukları <xref:System.Windows.Media.Animation.Animatable> ndan, <xref:System.Windows.Media.Brush> nesneler animasyonlu olabilir. Daha fazla bilgi için [Animasyona Genel Bakış'a](animation-overview.md)bakın.  
   
-<a name="freezable_features"></a>   
-### <a name="freezable-features"></a>Freezable özellikleri  
- <xref:System.Windows.Freezable> sınıfından devraldığı için <xref:System.Windows.Media.Brush> sınıfı birkaç özel özellik sağlar: <xref:System.Windows.Media.Brush> nesneler [kaynak](../../../desktop-wpf/fundamentals/xaml-resources-define.md)olarak veya birden çok nesne arasında paylaşılan ve klonlanmış olabilir. Ayrıca, <xref:System.Windows.Media.VisualBrush> hariç tüm <xref:System.Windows.Media.Brush> türleri, performansı artırmak ve iş parçacığı açısından güvenli hale getirilbilmek için salt okunurdur.  
+<a name="freezable_features"></a>
+### <a name="freezable-features"></a>Freezable Özellikler  
+ <xref:System.Windows.Freezable> Sınıftan devraldığı için, <xref:System.Windows.Media.Brush> sınıf çeşitli özel <xref:System.Windows.Media.Brush> özellikler sağlar: nesneler [kaynak](../../../desktop-wpf/fundamentals/xaml-resources-define.md)olarak bildirilebilir, birden çok nesne arasında paylaşılabilir ve klonlanabilir. Buna ek olarak, <xref:System.Windows.Media.VisualBrush> performansı artırmak ve iş parçacığı güvenli hale getirmek için salt okunur yapılabilir dışında tüm <xref:System.Windows.Media.Brush> türleri.  
   
- <xref:System.Windows.Freezable> nesneleri tarafından sunulan farklı özellikler hakkında daha fazla bilgi için bkz. [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md).  
+ Nesneler tarafından <xref:System.Windows.Freezable> sağlanan farklı özellikler hakkında daha fazla bilgi için [Freezable Objects Overview](../advanced/freezable-objects-overview.md)'a bakın.  
   
- <xref:System.Windows.Media.VisualBrush> nesnelerinin neden dondurulamadığı hakkında daha fazla bilgi için <xref:System.Windows.Media.VisualBrush> tür sayfasına bakın.  
+ Nesnelerin neden <xref:System.Windows.Media.VisualBrush> dondurulamayacağı hakkında daha fazla <xref:System.Windows.Media.VisualBrush> bilgi için tür sayfasına bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -167,8 +167,8 @@ VisualBrush kullanılarak boyanmış bir dikdörtgen
 - [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](painting-with-solid-colors-and-gradients-overview.md)
 - [Görüntüler, Çizimler ve Görsellerle Boyama](painting-with-images-drawings-and-visuals.md)
 - [Freezable Nesnelerine Genel Bakış](../advanced/freezable-objects-overview.md)
-- [Fırçalar örneği](https://go.microsoft.com/fwlink/?LinkID=159973)
-- [ImageBrush örneği](https://go.microsoft.com/fwlink/?LinkID=160005)
-- [VisualBrush örneği](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [Nasıl Yapılır Konuları](brushes-how-to-topics.md)
+- [Fırçalar Örnek](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Brushes)
+- [ImageBrush Örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ImageBrush)
+- [VisualBrush Örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/VisualBrush)
+- [Nasıl Dır Konular](brushes-how-to-topics.md)
 - [Diğer Performans Önerileri](../advanced/optimizing-performance-other-recommendations.md)

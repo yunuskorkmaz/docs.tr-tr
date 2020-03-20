@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: 9bf6972812bdf4a385b99fe34d2cd3cd8a91c8cf
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 0358450024607a985f38564ec9743ba964949e8f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67804556"
 ---
-### <a name="clickonce-supports-sha-256-on-40-targeted-apps"></a>ClickOnce uygulamaları 4.0 hedeflenen SHA-256'yı destekler
+### <a name="clickonce-supports-sha-256-on-40-targeted-apps"></a>ClickOnce, 4.0 hedefli uygulamalarda SHA-256'yı destekler
 
 |   |   |
 |---|---|
-|Ayrıntılar|Daha önce SHA-256 ile imzalanmış bir sertifika ile bir ClickOnce uygulamasını bile uygulamanın hedeflenen 4.0 bulunması, .NET Framework 4.5 veya üzeri olması gerekir. Şimdi, .NET Framework 4.0 hedefleyen ClickOnce uygulamaları üzerinde .NET Framework 4.0, SHA-256'yı açtıysanız bile çalıştırabilirsiniz.|
-|Öneri|Bu değişiklik bu bağımlılığı kaldırır ve .NET Framework 4 ve önceki sürümleri hedefleyen ClickOnce uygulamaları imzalamak için SHA-256'yı sertifikaları sağlar.|
+|Ayrıntılar|Önceden, SHA-256 ile imzalanmış bir sertifikaya sahip bir ClickOnce uygulaması, uygulama 4.0'ı hedeflese bile .NET Framework 4.5 veya daha sonra sının bulunmasını gerektirir. Şimdi, .NET Framework 4.0 hedefli ClickOnce uygulamaları SHA-256 ile imzalanmış olsa bile .NET Framework 4.0 üzerinde çalıştırılabilir.|
+|Öneri|Bu değişiklik bu bağımlılığı ortadan kaldırır ve SHA-256 sertifikalarının .NET Framework 4 ve önceki sürümleri hedefleyen ClickOnce uygulamalarını imzalamak için kullanılmasına olanak tanır.|
 |Kapsam|İkincil|
 |Sürüm|4.6|
 |Tür|Yeniden Hedefleme|
-

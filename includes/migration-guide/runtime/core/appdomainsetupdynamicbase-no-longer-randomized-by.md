@@ -1,19 +1,18 @@
 ---
-ms.openlocfilehash: ab7731d34aad5b6b6481f13ba11b778393e2cac2
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 3f553f95941eaf36cf335e9765a670a05bd157f4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858367"
 ---
-### <a name="appdomainsetupdynamicbase-is-no-longer-randomized-by-userandomizedstringhashalgorithm"></a>AppDomainSetup.DynamicBase UseRandomizedStringHashAlgorithm tarafından artık rastgeledir
+### <a name="appdomainsetupdynamicbase-is-no-longer-randomized-by-userandomizedstringhashalgorithm"></a>AppDomainSetup.DynamicBase artık UseRandomizedStringHashAlgorithm tarafından randomize edilir
 
 |   |   |
 |---|---|
-|Ayrıntılar|.NET Framework 4.6 değerini önce <xref:System.AppDomainSetup.DynamicBase> UseRandomizedStringHashAlgorithm uygulamanın yapılandırma dosyasında etkinleştirilirse işlemleri veya uygulama etki alanları arasında rastgele. .NET Framework 4.6, başlangıç <xref:System.AppDomainSetup.DynamicBase> çalıştıran bir uygulama farklı örnekleri arasında ve farklı uygulama etki alanları arasında tutarlı bir sonuç döndürür. Dinamik tabanları farklı uygulamalar için yine de değişir; Bu değişiklik, yalnızca aynı uygulamanın farklı örneklerini için rastgele adlandırma öğeyi kaldırır.|
-|Öneri|Unutmayın, etkinleştirme <code>UseRandomizedStringHashAlgorithm</code> açmayacaktır <xref:System.AppDomainSetup.DynamicBase> rastgele. Rastgele temel gerekirse, uygulamanızın kod yerine bu API aracılığıyla oluşturulması gerekir.|
-|`Scope`|Kenar|
-|Version|4.6|
-|Type|Çalışma zamanı|
+|Ayrıntılar|.NET Framework 4.6'dan önce, <xref:System.AppDomainSetup.DynamicBase> uygulamanın config dosyasında RandomizedStringHashAlgorithm etkinleştirilmişse, uygulama etki alanları arasında veya işlemler arasında randomize edilecektir. .NET Framework 4.6'dan <xref:System.AppDomainSetup.DynamicBase> başlayarak, çalışan bir uygulamanın farklı örnekleri ile farklı uygulama etki alanları arasında kararlı bir sonuç döndürecektir. Dinamik tabanlar farklı uygulamalar için farklılık gösterir; bu değişiklik yalnızca aynı uygulamanın farklı örnekleri için rasgele adlandırma öğesini kaldırır.|
+|Öneri|Etkinleştirme <code>UseRandomizedStringHashAlgorithm</code> randomize <xref:System.AppDomainSetup.DynamicBase> neden olmaz unutmayın. Rasgele bir taban gerekiyorsa, bu API yerine uygulamanızın kodunda üretilmelidir.|
+|Kapsam|Edge|
+|Sürüm|4.6|
+|Tür|Çalışma Zamanı|
 |Etkilenen API’ler|<ul><li><xref:System.AppDomainSetup.DynamicBase?displayProperty=nameWithType></li></ul>|
-

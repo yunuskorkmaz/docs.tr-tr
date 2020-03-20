@@ -7,57 +7,57 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: b3f2eabad3a6ef8e8fd5cc8f44f3132a3f5d8427
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c8c0c084ac3b1cf06fc5f2b3df85fa979744e17b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755236"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185413"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF'de Güvenlik için En İyi Uygulamalar
-Aşağıdaki bölümlerde Windows Communication Foundation (WCF) kullanan güvenli uygulamalar oluştururken dikkate alınması gereken en iyi yöntemler listelenmiştir. Güvenlik hakkında daha fazla bilgi için bkz: [güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), ve [meta veriler hakkında güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
+Aşağıdaki bölümlerde, Windows Communication Foundation (WCF) kullanılarak güvenli uygulamalar oluşturulurken göz önünde bulundurulması gereken en iyi uygulamalar listelenmiştir. Güvenlik hakkında daha fazla bilgi için bkz: [Güvenlik Hususları,](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) [Veriler için Güvenlik Hususları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)ve Meta [verilerle Güvenlik Hususları.](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
   
-## <a name="identify-services-performing-windows-authentication-with-spns"></a>SPN ile Windows kimlik doğrulaması gerçekleştirme Hizmetleri tanımlayın  
- Hizmetleri, kullanıcı asıl adlarından (UPN) veya hizmet asıl adı (SPN) ile tanımlanabilir. Ağ hizmeti gibi makine hesapları altında çalışan hizmetleri çalıştırdıkları makineye karşılık gelen bir SPN kimliği vardır. Kullanıcı hesapları altında çalışan hizmetleri sahip çalışan, kullanıcıya ancak karşılık gelen bir UPN varlığı `setspn` aracı, kullanıcı hesabı için bir SPN atamak için kullanılabilir. SPN tanımlanabilir ve bu SPN kullanılacak hizmetine istemcilerini yapılandırma belirli yaptığınız şekilde bir hizmet yapılandırma daha zor saldırıları. Bu kılavuz, Kerberos ya da SSPI anlaşması kullanılarak bağlamaları için geçerlidir.  İstemciler, burada SSPI NTLM'ye geri döner durumda SPN yine de belirtmeniz gerekir.  
+## <a name="identify-services-performing-windows-authentication-with-spns"></a>SPN'lerle Windows Kimlik Doğrulaması Gerçekleştiren Hizmetleri Belirleme  
+ Hizmetler, kullanıcı ana adı (UPNs) veya hizmet temel adları (SPNs) ile tanımlanabilir. Ağ hizmeti gibi makine hesapları altında çalışan hizmetlerin, çalıştırdıkları makineye karşılık gelen bir SPN kimliği vardır. Kullanıcı hesapları altında çalışan hizmetler, kullanıcı hesabına bir SPN `setspn` atamak için kullanılabilse de, çalıştıkları kullanıcıya karşılık gelen bir UPN kimliğine sahiptir. Bir hizmeti SPN üzerinden tanımlanabilecek şekilde yapılandırmak ve hizmete bağlanan istemcileri SPN'nin belirli saldırıları zorlaştırabileceği şekilde kullanmak üzere yapılandırmak. Bu kılavuz, Kerberos veya SSPI anlaşması kullanan bağlayıcılar için geçerlidir.  İstemciler, SSPI'nin NTLM'ye geri düştüğü durumlarda yine de bir SPN belirtmelidir.  
   
-## <a name="verify-service-identities-in-wsdl"></a>WSDL hizmet kimliklerini doğrulayın  
- WS-SecurityPolicy kendi kimlik bilgileri hakkındaki meta verileri yayımlamak hizmetler sağlar. Aracılığıyla alınırken `svcutil` veya diğer yöntemler gibi <xref:System.ServiceModel.Description.WsdlImporter>, bu kimlik bilgileri, WCF Hizmeti uç nokta adresleri kimlik özelliklerinin çevrilir. Bu hizmet kimlikleri etkili bir şekilde doğru ve geçerli olduğunu doğrulamaz istemcilerin hizmeti kimlik doğrulama atlama. Kötü amaçlı bir hizmet içinde WSDL talep kimliğini değiştirerek kimlik bilgisi iletme ve diğer "ortadaki adam" saldırılarına yürütmek için bu gibi istemcilerde yararlanabilir.  
+## <a name="verify-service-identities-in-wsdl"></a>WSDL'deki Hizmet Kimliklerini Doğrula  
+ WS-SecurityPolicy, hizmetlerin meta verilerde kendi kimlikleri hakkında bilgi yayımlamasına olanak tanır. Bu kimlik `svcutil` <xref:System.ServiceModel.Description.WsdlImporter>bilgileri, WCF hizmet bitiş noktası adreslerinin kimlik özelliklerine çevrildiğinde veya başka yöntemlerle alındığı zaman. Bu hizmet kimliklerinin doğru olduğunu ve geçerli olduğunu doğrulamayan istemciler hizmet kimlik doğrulamasını etkin bir şekilde atlar. Kötü amaçlı bir hizmet, WSDL'sinde iddia edilen kimliği değiştirerek kimlik bilgisi yönlendirme ve diğer "ortadaki adam" saldırılarını gerçekleştirmek için bu tür istemcilerden yararlanabilir.  
   
-## <a name="use-x509-certificates-instead-of-ntlm"></a>NTLM yerine sertifikaları kullan X509  
- WCF eşler arası kimlik doğrulaması için iki mekanizma sunar: X509 (eş kanalı tarafından kullanılır) sertifikaları ve burada SSPI anlaşması daha aşağı düşürmeden Kerberos'tan için NTLM Windows kimlik doğrulaması.  Sertifika tabanlı kimlik doğrulaması kullanarak anahtar boyutları 1024 bit veya daha pek çok nedenden dolayı NTLM için tercih edilen:  
+## <a name="use-x509-certificates-instead-of-ntlm"></a>NTLM Yerine X509 Sertifikaları Kullanın  
+ WCF, eşler arası kimlik doğrulaması için iki mekanizma sunar: X509 sertifikaları (eş ler tarafından kullanılır) ve Bir SSPI anlaşmasının Kerberos'tan NTLM'ye düşürüldüğü Windows kimlik doğrulaması.  1024 bit veya daha fazla anahtar boyutları kullanılarak sertifika tabanlı kimlik doğrulama sı çeşitli nedenlerle NTLM'ye tercih edilir:  
   
-- Kullanılabilirlik karşılıklı kimlik doğrulama  
+- karşılıklı kimlik doğrulamanın kullanılabilirliği,  
   
-- daha güçlü şifreleme algoritmalarının kullanımını ve  
+- daha güçlü şifreleme algoritmalarının kullanımı ve  
   
-- kullanma büyük zorluk X509 iletilen kimlik bilgileri.  
-   
-## <a name="always-revert-after-impersonation"></a>Kimliğe bürünme sonra her zaman geri dön  
- İstemcinin kimliğe bürünme sağlayan API'leri kullanırken, özgün kimliğine geri dönülemiyor emin olun. Örneğin kullanırken <xref:System.Security.Principal.WindowsIdentity> ve <xref:System.Security.Principal.WindowsImpersonationContext>, C# kullanın `using` deyimi veya Visual Basic`Using` deyimi, aşağıdaki kodda gösterildiği gibi. <xref:System.Security.Principal.WindowsImpersonationContext> Sınıfının Implements <xref:System.IDisposable> arabirimi ve bu nedenle ortak dil çalışma zamanı (CLR) otomatik olarak özgün kimliğine geri döner kodu ayrıldığında `using` blok.  
+- iletilen X509 kimlik bilgilerini kullanmanın daha büyük zorluğu.  
+
+## <a name="always-revert-after-impersonation"></a>Kimliğe Bürünmeden Sonra Her Zaman Geri Dön  
+ İstemci kimliğe bürünmesini sağlayan API'leri kullanırken, özgün kimliğe geri dönüldüğünden emin olun. Örneğin, aşağıdaki kodda <xref:System.Security.Principal.WindowsImpersonationContext>gösterildiği gibi `using` C# deyimini`Using` veya Visual Basic deyimini kullanırken <xref:System.Security.Principal.WindowsIdentity> kullanın. Sınıf <xref:System.Security.Principal.WindowsImpersonationContext> <xref:System.IDisposable> arabirimi uygular ve bu nedenle ortak dil çalışma süresi (CLR) kod `using` blokayrıldığında otomatik olarak özgün kimliğe geri döner.  
   
  [!code-csharp[c_SecurityBestPractices#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securitybestpractices/cs/source.cs#1)]
  [!code-vb[c_SecurityBestPractices#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securitybestpractices/vb/source.vb#1)]  
   
-## <a name="impersonate-only-as-needed"></a>Yalnızca gerektiğinde kimliğine bürün  
- Kullanarak <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> yöntemi <xref:System.Security.Principal.WindowsIdentity> sınıfı mümkündür çok denetlenen kapsamda kimliğe bürünme özelliğini kullanın. Bu kullanarak aksine, <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> özelliği <xref:System.ServiceModel.OperationBehaviorAttribute>, tüm işlemin kapsamı için kimliğe bürünme sağlar. Mümkün olduğunda, daha kesin kullanarak kimliğe bürünme kapsamını denetleme <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> yöntemi.  
+## <a name="impersonate-only-as-needed"></a>Yalnızca Gerektiği Gibi Kimliğin Kimliği  
+ <xref:System.Security.Principal.WindowsIdentity> Sınıfın yöntemini <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> kullanarak, çok kontrollü bir kapsamda kimliğe bürünme kullanmak mümkündür. Bu, tüm işlemin <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> kapsamı için kimliğe bürünme sağlayan , özelliğini kullanarak aksine. <xref:System.ServiceModel.OperationBehaviorAttribute> Mümkün olduğunda, daha kesin <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> yöntemi kullanarak kimliğe bürünme kapsamını denetler.  
   
-## <a name="obtain-metadata-from-trusted-sources"></a>Güvenilen kaynaklardan gelen meta verilerini alın  
- Meta verilerinizi kaynağına güveniyorsanız ve hiç meta verileriyle yapmadığından emin emin olun. HTTP protokolü kullanılarak alınan meta verileri açık metin olarak gönderilir ve bozuabilir. Hizmet kullanıyorsa <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> ve <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> özelliklerini, HTTPS protokolünü kullanarak verileri yüklemek için hizmet oluşturucusu tarafından sağlanan URL kullanın.  
+## <a name="obtain-metadata-from-trusted-sources"></a>Güvenilir Kaynaklardan Meta Veri Elde Etme  
+ Meta verilerinizin kaynağına güvendiğinizden ve kimsenin meta verileri kurcaladığından emin olun. HTTP protokolü kullanılarak alınan meta veriler açık metin olarak gönderilir ve kurcalanabilir. Hizmet özellikleri <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> ve <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> özelliklerini kullanıyorsa, https protokolünü kullanarak verileri indirmek için hizmet oluşturucutarafından sağlanan URL'yi kullanın.  
   
-## <a name="publish-metadata-using-security"></a>Güvenlik kullanarak meta verileri yayımlama  
- Bir hizmetin yayımlanan meta verilerle oynanmasını önlemek için meta veri değişimi uç noktası taşıma veya ileti düzeyi güvenlik ile güvenli hale getirin. Daha fazla bilgi için [meta veri uç noktalarını yayımlama](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) ve [nasıl yapılır: Kod kullanarak bir hizmet için meta verileri yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+## <a name="publish-metadata-using-security"></a>Güvenlik Kullanarak Meta Veri Yayımlama  
+ Bir hizmetin yayımlanmış meta verileriyle oynanmasını önlemek için, meta veri alışverişi bitiş noktasını aktarım veya ileti düzeyi güvenliğiyle güvence altına alametinin i Daha fazla bilgi için meta [veri uçnoktalarını yayımlama](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) ve nasıl yapılacağını şu bilgileriçin: [Kod Kullanan Bir Hizmet için Meta Verileri Yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)bölümüne bakın.  
   
-## <a name="ensure-use-of-local-issuer"></a>Yerel verici kullanımı emin olun  
- Belirli bir bağlama için bir veren adresi ve bağlama belirtilirse, yerel sertifika verenin bu bağlamayı kullanan uç noktaları için kullanılmaz. Her zaman yerel dağıtımcının kullanmayı düşündüğünüz istemciler, böyle bir bağlamanın kullanmayın veya veren adresin null olduğundan, bunlar bağlama değiştirme emin olun.  
+## <a name="ensure-use-of-local-issuer"></a>Yerel İhraççının Kullanımını Sağlama  
+ Belirli bir bağlama için bir veren adresi ve bağlama belirtilirse, yerel veren bu bağlamayı kullanan uç noktalar için kullanılmaz. Her zaman yerel vereni kullanmayı bekleyen istemciler, bu tür bir bağlayıcı kullanmadıklarından veya veren adresinin null olacak şekilde bağlamayı değiştirdiğinden emin olmalıdır.  
   
-## <a name="saml-token-size-quotas"></a>SAML belirteci boyutu kotaları  
- En büyük ileti boyutu kotası güvenlik onaylama işaretleme dili (SAML) belirteçleri, iletileri bir güvenlik belirteci hizmeti (STS) tarafından verilen veya istemciler bunları Hizmetleri kimlik doğrulaması bir parçası olarak olduğunda serileştirildiği zaman yeterince olmalıdır SAML belirtecindeki ve diğer ileti bölümlerini içerecek kadar büyük. Normal durumlarda, varsayılan ileti boyutu kotası yeterlidir. Ancak, talep yüzlerce içerdiğinden SAML belirteci büyük olduğu durumlarda, kotalar serileştirilmiş belirteci uyum sağlayacak şekilde artırılması gereken. Kotaları hakkında daha fazla bilgi için bkz: [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+## <a name="saml-token-size-quotas"></a>SAML Jeton Boyutu Kotaları  
+ Güvenlik İddiaları İşaretleme Dili (SAML) belirteçleri iletilerde seri hale geldiğinde, bir Güvenlik Belirteç Hizmeti (STS) tarafından verildiğinde veya istemciler bunları kimlik doğrulamanın bir parçası olarak hizmetlere sunduklarında, maksimum ileti boyutu kotası yeterli olmalıdır SAML belirteci ve diğer ileti parçaları karşılamak için büyük. Normal durumlarda, varsayılan ileti boyutu kotaları yeterlidir. Ancak, saml belirteci yüzlerce talep içerdiğinden büyük olduğu durumlarda, kotalar serileştirilmiş belirteci karşılamak için artırılmalıdır. Kotalar hakkında daha fazla bilgi için, [Veriler için Güvenlik Hususları'na](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)bakın.  
   
-## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>SecurityBindingElement.IncludeTimestamp özel bağlamalar True olarak ayarlayın  
- Özel bağlama oluşturduğunuzda ayarlamalısınız <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> için `true`. Aksi takdirde <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> ayarlanır `false`, ve bir asimetrik anahtar tabanlı belirteci x X509 gibi istemcinin kullandığı sertifika, ileti imzalanmamış.  
+## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>Özel Ciltlemelerde SecurityBindingElement.IncludeTimestamp'ı Doğru olarak ayarlayın  
+ Özel bir bağlama oluşturduğunuzda, <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> `true`'ye ayarlamanız gerekir. Aksi takdirde, <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> `false`'' olarak ayarlanmışsa ve istemci X509 sertifikası gibi asimetrik anahtar tabanlı bir belirteç kullanıyorsa, ileti imzalanmaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Güvenlik Hususları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Veriler için Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
 - [Meta Veriler Hakkında Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

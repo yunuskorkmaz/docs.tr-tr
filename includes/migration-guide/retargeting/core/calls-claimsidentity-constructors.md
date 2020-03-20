@@ -1,19 +1,18 @@
 ---
-ms.openlocfilehash: 7848b9a15c34e40c33495c31bd942e93c522cbdb
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 6dd7f2a2f6dec306940650beee58104b20788bdb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67859234"
 ---
-### <a name="calls-to-claimsidentity-constructors"></a>Claimsıdentity oluşturucular çağrıları
+### <a name="calls-to-claimsidentity-constructors"></a>İddialara ÇağrıLarKimlik yapıcıları
 
 |   |   |
 |---|---|
-|Ayrıntılar|.NET Framework 4.6.2 ile başlayarak, nasıl bir değişiklik olduğunda <xref:System.Security.Claims.ClaimsIdentity> oluşturucularla bir <xref:System.Security.Principal.IIdentity?displayProperty=name> parametre kümesi <xref:System.Security.Claims.ClaimsIdentity.Actor?displayProperty=name> özelliği. Varsa <xref:System.Security.Principal.IIdentity?displayProperty=name> bağımsız değişkeni bir <xref:System.Security.Claims.ClaimsIdentity> nesnesi ve <xref:System.Security.Claims.ClaimsIdentity.Actor?displayProperty=name> , söz konusu özellik <xref:System.Security.Claims.ClaimsIdentity> nesne değil <code>null</code>, <xref:System.Security.Claims.ClaimsIdentity.Actor?displayProperty=name> özelliği kullanılarak bağlı <xref:System.Security.Claims.ClaimsIdentity.Clone> yöntemi. Framework 4.6.1 ve önceki sürümlerinde, <xref:System.Security.Claims.ClaimsIdentity.Actor?displayProperty=name> var olan bir başvuru olarak ekli özellik. .NET Framework 4.6.2, ile başlayarak, bu değişiklik nedeniyle <xref:System.Security.Claims.ClaimsIdentity.Actor?displayProperty=name> yeni özellik <xref:System.Security.Claims.ClaimsIdentity> nesnesi eşit değil <xref:System.Security.Claims.ClaimsIdentity.Actor?displayProperty=name> oluşturucunun özelliği <xref:System.Security.Principal.IIdentity?displayProperty=name> bağımsız değişken. .NET Framework 4.6.1 ve önceki sürümlerinde eşittir.|
-|Öneri|Bu davranış, istenmeyen ise ayarlayarak önceki davranış geri yükleyebilirsiniz <code>Switch.System.Security.ClaimsIdentity.SetActorAsReferenceWhenCopyingClaimsIdentity</code> geçiş yapmak için uygulama yapılandırma dosyasında <code>true</code>. Bu, aşağıdaki eklemenizi gerektirir <code>&lt;runtime&gt;</code> bölümü web.config dosyanızın:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.ClaimsIdentity.SetActorAsReferenceWhenCopyingClaimsIdentity=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
-|`Scope`|Kenar|
-|Version|4.6.2|
-|Type|Yeniden Hedefleme|
+|Ayrıntılar|.NET Framework 4.6.2 ile başlayarak, parametreli <xref:System.Security.Claims.ClaimsIdentity> yapıcıların <xref:System.Security.Principal.IIdentity?displayProperty=name> <xref:System.Security.Claims.ClaimsIdentity.Actor?displayProperty=name> özelliği nasıl ayarlayıştAma şeklinde bir değişiklik vardır. <xref:System.Security.Principal.IIdentity?displayProperty=name> Bağımsız değişken bir <xref:System.Security.Claims.ClaimsIdentity> nesneise <xref:System.Security.Claims.ClaimsIdentity.Actor?displayProperty=name> ve bu <xref:System.Security.Claims.ClaimsIdentity> nesnenin <code>null</code>özelliği <xref:System.Security.Claims.ClaimsIdentity.Actor?displayProperty=name> değilse, özellik <xref:System.Security.Claims.ClaimsIdentity.Clone> yöntem kullanılarak eklenir. Çerçeve 4.6.1 ve önceki sürümlerde, <xref:System.Security.Claims.ClaimsIdentity.Actor?displayProperty=name> özellik varolan bir başvuru olarak eklenir. Bu değişiklik ten dolayı, .NET Framework 4.6.2 ile <xref:System.Security.Claims.ClaimsIdentity> başlayarak, yeni <xref:System.Security.Claims.ClaimsIdentity.Actor?displayProperty=name> nesnenin <xref:System.Security.Principal.IIdentity?displayProperty=name> <xref:System.Security.Claims.ClaimsIdentity.Actor?displayProperty=name> özelliği oluşturucubağımsız değişkeninin özelliğine eşit değildir. .NET Framework 4.6.1 ve önceki sürümlerinde eşittir.|
+|Öneri|Bu davranış istenmiyorsa, uygulama yapılandırma dosyanızdaki <code>Switch.System.Security.ClaimsIdentity.SetActorAsReferenceWhenCopyingClaimsIdentity</code> anahtarı <code>true</code>'ya ayarlayarak önceki davranışı geri yükleyebilirsiniz. Bu, web.config dosyanızın <code>&lt;runtime&gt;</code> bölümüne aşağıdakileri eklemenizi gerektirir:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.ClaimsIdentity.SetActorAsReferenceWhenCopyingClaimsIdentity=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
+|Kapsam|Edge|
+|Sürüm|4.6.2|
+|Tür|Yeniden Hedefleme|
 |Etkilenen API’ler|<ul><li><xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Security.Principal.IIdentity)?displayProperty=nameWithType></li><li><xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})?displayProperty=nameWithType></li><li><xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String,System.String,System.String)?displayProperty=nameWithType></li></ul>|
-

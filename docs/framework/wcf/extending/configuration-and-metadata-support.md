@@ -2,36 +2,36 @@
 title: Yapılandırma ve Meta Veri Desteği
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 3f6d506d719cbb1b2ecc8bae223dfe73e7e2d1a9
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 0ec8c3286037e7adbe6f5efb73e846a30b9d48d3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425141"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185661"
 ---
 # <a name="configuration-and-metadata-support"></a>Yapılandırma ve Meta Veri Desteği
-Bu konuda, bağlamalar ve bağlama öğeleri için yapılandırma ve meta veri desteğinin nasıl etkinleştirileceği açıklanır.  
+Bu konu, bağlamalar ve bağlama öğeleri için yapılandırma ve meta veri desteğinin nasıl etkinleştirilen açıklanır.  
   
-## <a name="overview-of-configuration-and-metadata"></a>Yapılandırma ve meta verilere genel bakış  
- Bu konuda, [Kanallar geliştirme](developing-channels.md) görev listesinde 1, 2 ve 4 ' te isteğe bağlı olan aşağıdaki görevler ele alınmaktadır.  
+## <a name="overview-of-configuration-and-metadata"></a>Yapılandırma ve Meta Verilere Genel Bakış  
+ Bu konu, [Gelişmekte Olan Kanallar](developing-channels.md) görev listesinde isteğe bağlı öğeler 1, 2 ve 4 olan aşağıdaki görevleri tartışır.  
   
-- Bağlama öğesi için yapılandırma dosyası desteği etkinleştiriliyor.  
+- Bağlama öğesi için yapılandırma dosyası desteğini etkinleştirme.  
   
 - Bağlama için yapılandırma dosyası desteğini etkinleştirme.  
   
-- Bağlama öğesi için WSDL ve ilke onayları dışarı aktarılıyor.  
+- Bağlayıcı bir öğe için WSDL ve ilke iddiaları dışa aktarma.  
   
-- Bağlama veya bağlama öğesini eklemek ve yapılandırmak için WSDL ve ilke onayları tanımlama.  
+- Bağlayıcı veya bağlayıcı öğenizi eklemek ve yapılandırmak için WSDL ve ilke iddialarını tanımlama.  
   
- Kullanıcı Tanımlı Bağlamalar ve bağlama öğeleri oluşturma hakkında daha fazla bilgi için, sırasıyla [Kullanıcı Tanımlı Bağlamalar Oluşturma](creating-user-defined-bindings.md) ve [bir BindingElement oluşturma](creating-a-bindingelement.md)hakkında bilgi için bkz.  
+ Kullanıcı tanımlı bağlamalar ve bağlama öğeleri oluşturma hakkında bilgi için sırasıyla [Kullanıcı Tanımlı Bağlamalar Oluşturma](creating-user-defined-bindings.md) ve [Bağlama Öğesi Oluşturma'ya](creating-a-bindingelement.md)bakın.  
   
-## <a name="adding-configuration-support"></a>Yapılandırma desteği ekleme  
- Bir kanal için yapılandırma dosyası desteğini etkinleştirmek üzere, bağlama öğeleri için yapılandırma desteğinin etkinleştirildiği <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType>, <xref:System.ServiceModel.Configuration.StandardBindingElement?displayProperty=nameWithType> ve <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602?displayProperty=nameWithType>bağlamaları için yapılandırma desteğini etkinleştiren iki yapılandırma bölümü uygulamanız gerekir.  
+## <a name="adding-configuration-support"></a>Yapılandırma Desteği Ekleme  
+ Bir kanal için yapılandırma dosyası desteğini etkinleştirmek için, <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType>bağlama öğeleri <xref:System.ServiceModel.Configuration.StandardBindingElement?displayProperty=nameWithType> <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602?displayProperty=nameWithType>için yapılandırma desteği sağlayan ve bağlayıcılar için yapılandırma desteğini etkinleştiren iki yapılandırma bölümü uygulamanız gerekir.  
   
- Bunu yapmanın daha kolay bir yolu, bağlamalarınız ve bağlama öğeleriniz için yapılandırma kodu oluşturmak üzere [ConfigurationCodeGenerator](../samples/configurationcodegenerator.md) örnek aracını kullanmaktır.  
+ Bunu yapmanın daha kolay bir yolu, bağlamalarınız ve bağlama öğeleriniz için yapılandırma kodu oluşturmak için [ConfigurationCodeGenerator](../samples/configurationcodegenerator.md) örnek aracını kullanmaktır.  
   
-### <a name="extending-bindingelementextensionelement"></a>BindingElementExtensionElement genişletme  
- Aşağıdaki örnek kod [aktarımdan alınmıştır: UDP](../samples/transport-udp.md) örneği. `UdpTransportElement`, yapılandırma sistemine `UdpTransportBindingElement` sunan bir <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Birkaç temel geçersiz kılmalarla, örnek yapılandırma bölümü adını, bağlama öğesinin türünü ve bağlama öğesinin nasıl oluşturulacağını tanımlar. Kullanıcılar daha sonra uzantı bölümünü bir yapılandırma dosyasına aşağıdaki şekilde kaydedebilir.  
+### <a name="extending-bindingelementextensionelement"></a>CiltlemeElementExtensionElement  
+ Aşağıdaki örnek kod [Transport: UDP](../samples/transport-udp.md) örneğinden alınmıştır. Yapılandırma `UdpTransportElement` sistemine <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> maruz `UdpTransportBindingElement` olan bir dir. Birkaç temel geçersiz kılmayla, örnek yapılandırma kesit adını, bağlama öğesinin türünü ve bağlama öğesinin nasıl oluşturulmasını tanımlar. Kullanıcılar daha sonra uzantı bölümünü bir yapılandırma dosyasına aşağıdaki gibi kaydedebilirler.  
   
 ```xml  
 <configuration>  
@@ -45,7 +45,7 @@ Bu konuda, bağlamalar ve bağlama öğeleri için yapılandırma ve meta veri d
 </configuration>  
 ```  
   
- Uzantıya, taşıma olarak UDP 'yi kullanmak için özel bağlamalardan başvurulabilir.  
+ Uzantı, udp'yi aktarım olarak kullanmak için özel bağlamalardan başvurulabilir.  
   
 ```xml  
 <configuration>  
@@ -61,10 +61,10 @@ Bu konuda, bağlamalar ve bağlama öğeleri için yapılandırma ve meta veri d
 </configuration>  
 ```  
   
-### <a name="adding-configuration-for-a-binding"></a>Bağlama için yapılandırma ekleme  
- `SampleProfileUdpBindingCollectionElement` bölüm, yapılandırma sistemine `SampleProfileUdpBinding` sunan bir <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>. Uygulamanın toplu işlemi, <xref:System.ServiceModel.Configuration.StandardBindingElement>türetilen `SampleProfileUdpBindingConfigurationElement`için temsilci olarak oluşturulur. `SampleProfileUdpBindingConfigurationElement`, `SampleProfileUdpBinding`özelliklere ve `ConfigurationElement` bağlamalarından eşlenecek işlevlere karşılık gelen özelliklere sahiptir. Son olarak, aşağıdaki örnek kodda gösterildiği gibi `OnApplyConfiguration` yöntemi `SampleProfileUdpBinding`geçersiz kılınır.  
+### <a name="adding-configuration-for-a-binding"></a>Bağlama için Yapılandırma Ekleme  
+ Bölüm, `SampleProfileUdpBindingCollectionElement` yapılandırma <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> sistemine `SampleProfileUdpBinding` maruz kalan bir bölümdür. Uygulamanın büyük bir kısmı `SampleProfileUdpBindingConfigurationElement`, ' den <xref:System.ServiceModel.Configuration.StandardBindingElement>türetilen . Üzerinde `SampleProfileUdpBindingConfigurationElement` özellikleri `SampleProfileUdpBinding`karşılık gelen özelliklere sahip ve `ConfigurationElement` bağlama eşlenecek işlevleri. Son olarak, `OnApplyConfiguration` `SampleProfileUdpBinding`yöntem, aşağıdaki örnek kodda gösterildiği gibi, geçersiz kılınmış.  
   
-```csharp 
+```csharp
 protected override void OnApplyConfiguration(string configurationName)  
 {  
             if (binding == null)  
@@ -86,7 +86,7 @@ protected override void OnApplyConfiguration(string configurationName)
 }  
 ```  
   
- Bu işleyiciyi yapılandırma sistemine kaydetmek için, ilgili yapılandırma dosyasına aşağıdaki bölümü ekleyin.  
+ Bu işleyiciyi yapılandırma sistemine kaydetmek için aşağıdaki bölümü ilgili yapılandırma dosyasına ekleyin.  
   
 ```xml  
 <configuration>  
@@ -100,16 +100,16 @@ protected override void OnApplyConfiguration(string configurationName)
 </configuration>  
 ```  
   
- Daha sonra [\<System. serviceModel >](../../configure-apps/file-schema/wcf/system-servicemodel.md) yapılandırma bölümünden başvurulabilirler.  
+ Daha sonra [ \<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) yapılandırma bölümünden başvurulabilir.  
   
 ```xml  
 <configuration>  
   <system.serviceModel>  
     <client>  
       <endpoint configurationName="calculator"  
-                address="soap.udp://localhost:8001/"   
+                address="soap.udp://localhost:8001/"
                 bindingConfiguration="CalculatorServer"  
-                binding="sampleProfileUdpBinding"   
+                binding="sampleProfileUdpBinding"
                 contract= "Microsoft.ServiceModel.Samples.ICalculatorContract">  
       </endpoint>  
     </client>  
@@ -117,14 +117,14 @@ protected override void OnApplyConfiguration(string configurationName)
 </configuration>  
 ```  
   
-## <a name="adding-metadata-support-for-a-binding-element"></a>Bağlama öğesi için meta veri desteği ekleme  
- Bir kanalı meta veri sistemiyle bütünleştirmek için, ilkenin hem içeri ve dışarı aktarılmasını desteklemesi gerekir. Bu, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) gibi araçların bağlama öğesinin istemcilerini oluşturmasını sağlar.  
+## <a name="adding-metadata-support-for-a-binding-element"></a>Bağlayıcı Öğe için Meta Veri Desteği Ekleme  
+ Bir kanalı meta veri sistemine entegre etmek için, hem ipolitikasının hem de dışa aktarmanın desteklenmesi gerekir. Bu, [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) gibi araçların bağlama öğesinin istemcilerini oluşturmasına olanak tanır.  
   
-### <a name="adding-wsdl-support"></a>WSDL desteği ekleme  
- Bir bağlamadaki aktarım bağlama öğesi, meta verilerde adres bilgilerinin dışarı ve içeri aktarılmasından sorumludur. SOAP bağlama kullanılırken, aktarım bağlama öğesi meta verilerde doğru bir taşıma URI 'sini de dışarı aktarmalıdır. Aşağıdaki örnek kod [aktarımdan alınmıştır: UDP](../samples/transport-udp.md) örneği.  
+### <a name="adding-wsdl-support"></a>WSDL Desteği Ekleme  
+ Bağlayıcıdaki aktarım bağlama öğesi, meta verilerdeki adresleme bilgilerinin dışa aktarılmasından ve aktarılmasından sorumludur. SOAP bağlama kullanırken, taşıma bağlama elemanı da meta verilerde doğru bir aktarım URI dışa aktarmalıdır. Aşağıdaki örnek kod [Transport: UDP](../samples/transport-udp.md) örneğinden alınmıştır.  
   
-#### <a name="wsdl-export"></a>WSDL dışarı aktarma  
- Adres bilgilerini dışarı aktarmak için `UdpTransportBindingElement` <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> arabirimini uygular. <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType> yöntemi, WSDL bağlantı noktasına doğru adres bilgilerini ekler.  
+#### <a name="wsdl-export"></a>WSDL İhracat  
+ Adres bilgilerini dışa `UdpTransportBindingElement` aktarmak için <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> arabirimi uygular. Yöntem, <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType> WSDL bağlantı noktasına doğru adresbilgilerini ekler.  
   
 ```csharp  
 if (context.WsdlPort != null)  
@@ -133,7 +133,7 @@ if (context.WsdlPort != null)
 }  
 ```  
   
- <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> yönteminin `UdpTransportBindingElement` uygulanması, uç nokta bir SOAP bağlama kullandığında bir aktarım URI 'sini de dışarı aktarır:  
+ Yöntemin `UdpTransportBindingElement` <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> uygulanması, bitiş noktası BIR SOAP bağlama kullandığında bir taşıma URI'si de dışa aktarmaktadır:  
   
 ```csharp  
 WsdlNS.SoapBinding soapBinding = GetSoapBinding(context, exporter);  
@@ -143,8 +143,8 @@ if (soapBinding != null)
 }  
 ```  
   
-#### <a name="wsdl-import"></a>WSDL Içeri aktarma  
- WSDL içeri aktarma sistemini adresleri içeri aktarmayı işleyecek şekilde genişletmek için, Svcutil. exe. config dosyasında gösterildiği gibi Svcutil. exe için yapılandırma dosyasına aşağıdaki yapılandırmayı ekleyin:  
+#### <a name="wsdl-import"></a>WSDL İthalat  
+ WSDL alma sistemini adresleri alma işlemlerini işlemek için genişletmek için, Svcutil.exe.config dosyasında gösterildiği gibi Svcutil.exe yapılandırma dosyasına aşağıdaki yapılandırmayı ekleyin:  
   
 ```xml  
 <configuration>  
@@ -160,13 +160,13 @@ if (soapBinding != null)
 </configuration>  
 ```  
   
- Svcutil. exe dosyasını çalıştırırken, Svcutil. exe ' nin WSDL içeri aktarma uzantılarını yüklemesi için iki seçenek vardır:  
+ Svcutil.exe çalıştırırken, WSDL alma uzantıları yüklemek için Svcutil.exe almak için iki seçenek vardır:  
   
-1. /SvcutilConfig:\<Dosya > kullanarak Svcutil. exe ' yi yapılandırma dosyasına yazın.  
+1. /SvcutilConfig kullanarak yapılandırma dosyasına Point Svcutil.exe:\<dosya>.  
   
-2. Svcutil. exe. config dosyasına, Svcutil. exe ile aynı dizinde yapılandırma bölümünü ekleyin.  
+2. Yapılandırma bölümünü Svcutil.exe ile aynı dizinde Svcutil.exe.config'e ekleyin.  
   
- `UdpBindingElementImporter` türü <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> arabirimini uygular. `ImportEndpoint` yöntemi, adresi WSDL bağlantı noktasından içeri aktarır:  
+ Tür `UdpBindingElementImporter` <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> arabirimi uygular. Yöntem `ImportEndpoint` wsdl bağlantı noktasından adresi içeri zabıta:  
   
 ```csharp  
 BindingElementCollection bindingElements = context.Endpoint.Binding.CreateBindingElements();  
@@ -177,13 +177,13 @@ if (transportBindingElement is UdpTransportBindingElement)
 }  
 ```  
   
-### <a name="adding-policy-support"></a>Ilke desteği ekleme  
- Özel bağlama öğesi, söz konusu bağlama öğesinin yeteneklerini ifade etmek için bir hizmet uç noktası için WSDL bağlamasındaki ilke onaylamalarını dışarı aktarabilir. Aşağıdaki örnek kod [aktarımdan alınmıştır: UDP](../samples/transport-udp.md) örneği.  
+### <a name="adding-policy-support"></a>İlke Desteği Ekleme  
+ Özel bağlama öğesi, bu bağlama öğesinin yeteneklerini ifade etmek için bir hizmet bitiş noktası için WSDL bağlayıcıilki iddialarını dışa aktarabilir. Aşağıdaki örnek kod [Transport: UDP](../samples/transport-udp.md) örneğinden alınmıştır.  
   
-#### <a name="policy-export"></a>İlke dışarı aktarma  
- `UdpTransportBindingElement` türü, ilke dışarı aktarma desteği eklemek için <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> uygular. Sonuç olarak, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType>, kendisini içeren herhangi bir bağlama için ilkenin oluşturulmasına `UdpTransportBindingElement` ekler.  
+#### <a name="policy-export"></a>İlke İhracatı  
+ Tür, `UdpTransportBindingElement` dışa aktarma ilkesi için destek eklemek için uygular. <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> Sonuç olarak, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> `UdpTransportBindingElement` bunu içeren herhangi bir bağlama için ilke oluşturma içerir.  
   
- <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType>, kanal çok noktaya yayın modundaysa UDP ve başka bir onaylama için onay ekleyin. Bunun nedeni, çok noktaya yayın modunun iletişim yığınının oluşturulmasını etkilemesi ve bu nedenle her iki taraf arasında koordine olması gerekir.  
+ Kanal <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType>çok noktaya yayın modundaysa, UDP için bir iddia ve başka bir iddia ekleyin. Bunun nedeni, çok noktaya yayın modunun iletişim yığınının nasıl oluşturulduğuna etki etmesi ve bu nedenle her iki taraf arasında koordine edilmesi dir.  
   
 ```csharp  
 ICollection<XmlElement> bindingAssertions = context.GetBindingAssertions();  
@@ -197,14 +197,14 @@ UdpPolicyStrings.Prefix, UdpPolicyStrings.MulticastAssertion,     UdpPolicyStrin
 }  
 ```  
   
- Özel aktarım bağlama öğeleri, adresleme 'yi işlemekten sorumlu olduğundan, `UdpTransportBindingElement` <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> uygulamasının, kullanılan WS-Addressing sürümünü göstermek için uygun WS-Addressing ilke onayları vermeyi de işlemesi gerekir.  
+ Özel aktarım bağlama öğeleri adresleme işlemekten sorumlu olduğundan, <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> ws-addressing sürümünü niçin kullanıldığını göstermek için uygun WS Adresleme ilkesi iddialarını dışa aktarma yı da ele almalıdır. `UdpTransportBindingElement`  
   
 ```csharp  
 AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressing);  
 ```  
   
-#### <a name="policy-import"></a>İlke Içeri aktarma  
- İlke içeri aktarma sistemini genişletmek için, Svcutil. exe. config dosyasında gösterildiği gibi Svcutil. exe için yapılandırma dosyasına aşağıdaki yapılandırmayı ekleyin:  
+#### <a name="policy-import"></a>İlke İthalatı  
+ İlke alma sistemini genişletmek için, Svcutil.exe.config dosyasında gösterildiği gibi Svcutil.exe için yapılandırma dosyasına aşağıdaki yapılandırmayı ekleyin:  
   
 ```xml  
 <configuration>  
@@ -220,16 +220,16 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 </configuration>  
 ```  
   
- Ardından, kayıtlı sınıfımızdan <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> uyguladık (`UdpBindingElementImporter`). <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType>, uygun ad alanındaki onaylamaları inceleyin ve nakliyenlerin oluşturulması ve çok noktaya yayın olup olmadığını kontrol etmek için bunları işleyin. Ayrıca, içeri aktarıcıların bağlama onayları listesinden işlediği onayları kaldırın. Yine, Svcutil. exe dosyasını çalıştırırken, tümleştirme için iki seçenek vardır:  
+ Sonra bizim <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> kayıtlı sınıftan`UdpBindingElementImporter`uygulamak ( ). In <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType>, uygun ad alanında iddiaları incelemek ve taşıma oluşturmak ve çok noktaya mı olup olmadığını kontrol etmek için olanları işlemek. Ayrıca, içe aktarıcının işlediği iddiaları bağlayıcı iddialar listesinden kaldırın. Yine, Svcutil.exe çalıştırırken, tümleştirme için iki seçenek vardır:  
   
-1. Svcutil. exe ' yi,/SvcutilConfig:\<Dosya > kullanarak yapılandırma dosyanıza yazın.  
+1. Svcutil.exe'yi /SvcutilConfig kullanarak yapılandırma\<dosyamıza yönlendirin: dosya>.  
   
-2. Svcutil. exe. config dosyasına, Svcutil. exe ile aynı dizinde yapılandırma bölümünü ekleyin.  
+2. Yapılandırma bölümünü Svcutil.exe ile aynı dizinde Svcutil.exe.config'e ekleyin.  
   
-### <a name="adding-a-custom-standard-binding-importer"></a>Özel standart bağlama Içeri aktarıcı ekleme  
- Svcutil. exe ve <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> türü, varsayılan olarak sistem tarafından belirtilen bağlamaları tanır ve içeri aktarır. Aksi takdirde, bağlama bir <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> örneği olarak içeri aktarılır. Svcutil. exe ' yi ve <xref:System.ServiceModel.Description.WsdlImporter> `UdpBindingElementImporter` `SampleProfileUdpBinding` içeri aktarmak için bir özel standart bağlama alma işlemi olarak da çalışır.  
+### <a name="adding-a-custom-standard-binding-importer"></a>Özel Standart Bağlama İthalatçısı Ekleme  
+ Svcutil.exe ve <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> türü, varsayılan olarak, tanımak ve sistem tarafından sağlanan bağlamaları alma. Aksi takdirde, bağlama bir <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> örnek olarak içe aktarılır. Svcutil.exe ve almak <xref:System.ServiceModel.Description.WsdlImporter> `SampleProfileUdpBinding` için `UdpBindingElementImporter` de özel bir standart bağlayıcı ithalatçı olarak hareket etmesini sağlamak için.  
   
- Özel standart bağlama İçeri Aktarıcı, belirli bir standart bağlama tarafından oluşturulup oluşturulmadığını görmek için meta verilerden içeri aktarılan <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> örneğini incelemek üzere <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> arabirimindeki `ImportEndpoint` yöntemini uygular.  
+ Özel bir standart bağlayıcı içe `ImportEndpoint` aktarıcı, meta <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> verilerden alınan örneği incelemek ve belirli bir standart bağlama tarafından oluşturulabilir mi diye görmek için <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> arabirimde yöntem uygular.  
   
 ```csharp  
 if (context.Endpoint.Binding is CustomBinding)  
@@ -249,4 +249,4 @@ if (context.Endpoint.Binding is CustomBinding)
 }  
 ```  
   
- Genellikle, özel bir standart bağlama alma programı uygulamak, yalnızca standart bağlama tarafından ayarlanmış olabilecek özelliklerin değiştiğini ve diğer tüm özelliklerin varsayılan olduğunu doğrulamak için içeri aktarılan bağlama öğelerinin özelliklerinin denetlenmesini içerir. Standart bağlama alma işlemi uygulamaya yönelik temel bir strateji, standart bağlamanın bir örneğini oluşturmaktır, bağlama öğelerinden özellikleri standart bağlamanın desteklediği standart bağlama örneğine yayar ve bağlamayı karşılaştırın İçeri aktarılan bağlama öğeleriyle standart bağlamalardan öğeler.
+ Genel olarak, özel bir standart bağlama içe aktarma işlemi, yalnızca standart bağlama tarafından ayarlanmış olabilecek özelliklerin değiştiğini ve diğer tüm özelliklerin varsayılanları olduğunu doğrulamak için içe aktarılan bağlama öğelerinin özelliklerini denetlemeyi içerir. Standart bağlayıcı lık uygulamak için temel bir strateji, standart bağlamanın bir örneğini oluşturmak, özellikleri bağlama öğelerinden standart bağlamanın desteklediği standart bağlama örneğine yaymak ve bağlamayı karşılaştırmaktır. alınan bağlama elemanları ile standart bağlama öğeleri.

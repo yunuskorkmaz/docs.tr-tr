@@ -1,18 +1,18 @@
 ---
 ms.openlocfilehash: 44cb833fc93caaa79000147421e1c013f755b9cb
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "68238020"
 ---
-### <a name="listboxitem-isselected-binding-issue-with-observablecollectionlttgtmove"></a>ObservableCollection ListBoxItem IsSelected bağlama sorun&lt;T&gt;. Taşıma
+### <a name="listboxitem-isselected-binding-issue-with-observablecollectionlttgtmove"></a>ListBoxItem ObservableCollection&lt;T&gt;ile bağlayıcılık sorunu seçili . Hareket
 
 |   |   |
 |---|---|
-|Ayrıntılar|Çağırma <xref:System.Collections.ObjectModel.ObservableCollection%601.Move(System.Int32,System.Int32)> veya <xref:System.Collections.ObjectModel.ObservableCollection%601.MoveItem(System.Int32,System.Int32)> bağlı bir koleksiyonda bir <xref:System.Windows.Controls.ListBox?displayProperty=name> seçilen öğeleri gelecekteki seçimi veya unselection, beklenmeyen davranışlara yol açabilir <xref:System.Windows.Controls.ListBox?displayProperty=name> öğeleri.|
-|Öneri|Çağırma <xref:System.Collections.ObjectModel.Collection%601.Remove(%600)?displayProperty=name> ve <xref:System.Collections.ObjectModel.Collection%601.Insert(System.Int32,%600)?displayProperty=name> yerine <xref:System.Collections.ObjectModel.ObservableCollection%601.Move(System.Int32,System.Int32)> bu sorunu geçici olarak çalışır. Alternatif olarak, bu sorun içinde .NET Framework 4.6 düzeltildi ve .NET Framework'ün bu sürümüne yükseltme tarafından desteklenebilir.|
+|Ayrıntılar|<xref:System.Collections.ObjectModel.ObservableCollection%601.Move(System.Int32,System.Int32)> Seçili <xref:System.Collections.ObjectModel.ObservableCollection%601.MoveItem(System.Int32,System.Int32)> öğelerle bir <xref:System.Windows.Controls.ListBox?displayProperty=name> koleksiyona bağlı arama veya bir koleksiyonda, <xref:System.Windows.Controls.ListBox?displayProperty=name> gelecekteki öğe seçimi veya unselection ile düzensiz davranışlara neden olabilir.|
+|Öneri|Arama <xref:System.Collections.ObjectModel.Collection%601.Remove(%600)?displayProperty=name> <xref:System.Collections.ObjectModel.Collection%601.Insert(System.Int32,%600)?displayProperty=name> ve <xref:System.Collections.ObjectModel.ObservableCollection%601.Move(System.Int32,System.Int32)> yerine bu sorunu çözmek olacaktır. Alternatif olarak, bu sorun .NET Framework 4.6'da giderilmiştir ve .NET Framework'ün bu sürümüne yükseltilerek giderilebilir.|
 |Kapsam|İkincil|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|Çalışma Zamanı|
 |Etkilenen API’ler|<ul><li><xref:System.Collections.ObjectModel.ObservableCollection%601.Move(System.Int32,System.Int32)?displayProperty=nameWithType></li><li><xref:System.Collections.ObjectModel.ObservableCollection%601.MoveItem(System.Int32,System.Int32)?displayProperty=nameWithType></li></ul>|

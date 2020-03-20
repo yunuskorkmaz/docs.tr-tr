@@ -5,46 +5,46 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 4b282062040ccfc18534ad88effc4c0f1972c5a6
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 3660877194931c2be5b9b1c9aa54e2595701697f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212060"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184651"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Sertifika İstemcisi ile İleti Güvenliği
-Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanmış bir Windows Communication Foundation (WCF) istemcisi ve hizmeti gösterilmektedir. İstemci ve hizmetin her ikisi de sertifikalarla doğrulanır. Daha fazla bilgi için bkz. [Dağıtılmış uygulama güvenliği](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).
+Aşağıdaki senaryo, ileti güvenliği modu kullanılarak güvenli bir Windows Communication Foundation (WCF) istemcisi ve hizmetini gösterir. Hem istemci hem de hizmet sertifikalarla doğrulanır. Daha fazla bilgi için Bkz. [Dağıtılmış Uygulama Güvenliği.](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
 
- ![Sertifikayı içeren bir istemciyi gösteren ekran görüntüsü.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
+ ![Sertifikası olan bir istemciyi gösteren ekran görüntüsü.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
- Örnek bir uygulama için bkz. [Ileti güvenliği sertifikası](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
+ Örnek bir uygulama için [İleti Güvenlik Sertifikası'na](../../../../docs/framework/wcf/samples/message-security-certificate.md)bakın.  
 
-|Özellikler|Açıklama|  
+|Özellik|Açıklama|  
 |--------------------|-----------------|  
-|Güvenlik modu|İleti|  
-|Birlikte Çalışabilirlik|Yalnızca WCF|  
-|Kimlik doğrulaması (sunucu)|Hizmet sertifikası kullanma|  
-|Kimlik doğrulaması (Istemci)|İstemci sertifikası kullanma|  
+|Güvenlik Modu|İleti|  
+|Birlikte çalışabilirlik|Yalnızca WCF|  
+|Kimlik Doğrulama (Sunucu)|Hizmet sertifikasını kullanma|  
+|Kimlik Doğrulama (İstemci)|İstemci sertifikasını kullanma|  
 |Bütünlük|Evet|  
 |Gizlilik|Evet|  
-|Aktarma|HTTP|  
+|Aktarım|HTTP|  
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Hizmet  
- Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma bağımsız olarak çalışmak içindir. Aşağıdakilerden birini yapın:  
   
 - Yapılandırma olmadan kodu kullanarak tek başına bir hizmet oluşturun.  
   
-- Sağlanan yapılandırmayı kullanarak bir hizmet oluşturun, ancak herhangi bir uç nokta tanımlamaz.  
+- Sağlanan yapılandırmayı kullanarak bir hizmet oluşturun, ancak herhangi bir uç nokta tanımlamayın.  
   
 ### <a name="code"></a>Kod  
- Aşağıdaki kod, güvenli bir bağlam oluşturmak için ileti güvenliği kullanan bir hizmet uç noktası oluşturmayı gösterir.  
+ Aşağıdaki kod, güvenli bir bağlam oluşturmak için ileti güvenliğini kullanan bir hizmet bitiş noktasının nasıl oluşturultuğu gösterilmektedir.  
   
  [!code-csharp[C_SecurityScenarios#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#10)]
  [!code-vb[C_SecurityScenarios#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#10)]  
   
 ### <a name="configuration"></a>Yapılandırma  
- Aşağıdaki yapılandırma kod yerine kullanılabilir.  
+ Kod yerine aşağıdaki yapılandırma kullanılabilir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -61,11 +61,11 @@ Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanm
       </serviceBehaviors>  
     </behaviors>  
     <services>  
-      <service behaviorConfiguration="ServiceCredentialsBehavior"   
+      <service behaviorConfiguration="ServiceCredentialsBehavior"
                name="ServiceModel.Calculator">  
-        <endpoint address="http://localhost/Calculator"   
+        <endpoint address="http://localhost/Calculator"
                   binding="wsHttpBinding"  
-                  bindingConfiguration="MessageAndCertificateClient"   
+                  bindingConfiguration="MessageAndCertificateClient"
                   name="SecuredByClientCertificate"  
                   contract="ServiceModel.ICalculator" />  
       </service>  
@@ -85,23 +85,23 @@ Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanm
 ```  
   
 ## <a name="client"></a>İstemci  
- Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma bağımsız olarak çalışmak içindir. Aşağıdakilerden birini yapın:  
   
-- Kodu kullanarak tek başına istemci oluşturun (ve istemci kodu).  
+- Kodu (ve istemci kodunu) kullanarak tek başına bir istemci oluşturun.  
   
-- Herhangi bir uç nokta adresi tanımlamayan bir istemci oluşturun. Bunun yerine, yapılandırma adını bağımsız değişken olarak alan istemci oluşturucusunu kullanın. Örneğin:  
+- Herhangi bir uç nokta adresi tanımlamayan bir istemci oluşturun. Bunun yerine, yapılandırma adını bağımsız değişken olarak alan istemci oluşturucuyu kullanın. Örnek:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Kod  
- Aşağıdaki kod istemcisini oluşturur. Bağlama ileti modu güvenliğine, istemci kimlik bilgisi türü ise `Certificate`olarak ayarlanmıştır.  
+ Aşağıdaki kod istemciyi oluşturur. Bağlama ileti modu güvenliği için ve istemci kimlik bilgisi türü `Certificate`olarak ayarlanır.  
   
  [!code-csharp[C_SecurityScenarios#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#17)]
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>Yapılandırma  
- Aşağıdaki yapılandırma, bir uç nokta davranışı kullanarak istemci sertifikasını belirtir. Sertifikalar hakkında daha fazla bilgi için bkz. [sertifikalarla çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Kod ayrıca, beklenen sunucu kimliğinin etki alanı adı sistemi (DNS) belirtmek için bir <`identity`> öğesi kullanır. Kimlik hakkında daha fazla bilgi için bkz. [hizmet kimliği ve kimlik doğrulaması](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Aşağıdaki yapılandırma, bir bitiş noktası davranışı kullanarak istemci sertifikasını belirtir. Sertifikalar hakkında daha fazla bilgi için [bkz.](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) Kod ayrıca, beklenen `identity` sunucu kimliğinin Etki Alanı Adı Sistemi(DNS) belirtmek için <bir> öğesi kullanır. Kimlik hakkında daha fazla bilgi için [Hizmet Kimliği ve Kimlik Doğrulama'ya](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)bakın.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -111,7 +111,7 @@ Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanm
       <endpointBehaviors>  
         <behavior name="endpointCredentialsBehavior">  
           <clientCredentials>  
-            <clientCertificate findValue="Cohowinery.com"   
+            <clientCertificate findValue="Cohowinery.com"
                storeLocation="LocalMachine"  
               x509FindType="FindBySubjectName" />  
           </clientCredentials>  
@@ -128,7 +128,7 @@ Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanm
       </wsHttpBinding>  
     </bindings>  
     <client>  
-      <endpoint address="http://machineName/Calculator"   
+      <endpoint address="http://machineName/Calculator"
                 behaviorConfiguration="endpointCredentialsBehavior"  
                 binding="wsHttpBinding"  
                 bindingConfiguration="WSHttpBinding_ICalculator"  
@@ -148,4 +148,4 @@ Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanm
 - [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Kimlik Doğrulama ile Hizmet Kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server App Fabric için Güvenlik Modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

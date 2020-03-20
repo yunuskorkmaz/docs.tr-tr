@@ -2,18 +2,18 @@
 title: Özel Filtreler
 ms.date: 03/30/2017
 ms.assetid: 97cf247d-be0a-4057-bba9-3be5c45029d5
-ms.openlocfilehash: ade387524c9ca6c8ef337ccf6a5b3453b7df976b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ae020173544372c3ce097c8ac57e53f3fde37514
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945374"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185204"
 ---
 # <a name="custom-filters"></a>Özel Filtreler
-Özel filtreler, sistem tarafından sağlanmış ileti filtreleri kullanılarak gerçekleştiresağlanmayan eşleşen mantığı tanımlamanızı sağlar. Örneğin, belirli bir ileti öğesini karma hale getirmek için bir özel filtre oluşturabilir ve sonra filtrenin true veya false olarak döndürülüp döndürülmeyeceğini tespit etmek için değeri incelemeniz gerekebilir.  
+Özel filtreler, sistem tarafından sağlanan ileti filtreleri kullanılarak gerçekleştirilemeyen eşleşen mantığı tanımlamanıza olanak sağlar. Örneğin, belirli bir ileti öğesini eleman olarak eleman olarak eleman olarak eleman olarak eleman olarak eleman olarak döndürecek ve filtrenin doğru mu yoksa yanlış mı döndüreceğini belirlemek için değeri inceleyen özel bir filtre oluşturabilirsiniz.  
   
 ## <a name="implementation"></a>Uygulama  
- Özel filtre <xref:System.ServiceModel.Dispatcher.MessageFilter> soyut temel sınıfın bir uygulamasıdır. Özel filtrenizi uygularken, Oluşturucu isteğe bağlı olarak tek bir dize parametresini kabul edebilir. Bu parametre, filtre uygulamak için filtrenin çalışma zamanında ihtiyacı olan herhangi bir değer veya yapılandırma sağlamak üzere MessageFilter oluşturucusuna geçirilen yapılandırma bilgilerini içerir. Örneğin, bu, filtrenin değerlendirilen ileti içinde aradığı bir değer sağlamak için kullanılabilir. Aşağıdaki örnek, bir dize parametresini kabul eden özel bir ileti filtresinin temel bir uygulamasını göstermektedir:  
+ Özel bir filtre soyut <xref:System.ServiceModel.Dispatcher.MessageFilter> taban sınıfının bir uygulamasıdır. Özel filtrenizi uygularken, oluşturucu isteğe bağlı olarak tek bir dize parametresini kabul edebilir. Bu parametre, filtrenin eşleşmeleri gerçekleştirmek için çalışma zamanında ihtiyaç duyduğu değerleri veya yapılandırmayı sağlamak için MessageFilter oluşturucusuna aktarılan yapılandırma bilgilerini içerir. Örneğin, bu, filtrenin değerlendirilmekte olan ileti içinde aradığı bir değeri sağlamak için kullanılabilir. Aşağıdaki örnek, dize parametresi kabul eden özel bir ileti filtresinin temel uygulamasını gösterir:  
   
 ```csharp  
 public class MyMessageFilter: MessageFilter  
@@ -39,32 +39,32 @@ public class MyMessageFilter: MessageFilter
 ```  
   
 > [!NOTE]
-> Gerçek bir uygulamada, eşleşme yöntemi (ler), bu ileti filtresinin **true** veya **false**döndürmesi gerekip gerekmediğini belirleyecek şekilde iletiyi inceleyecek mantığı içerir.  
+> Gerçek bir uygulamada, Eşleme yöntemi(ler) bu ileti filtresinin **doğru** mu yoksa **yanlış**mı döndüreceğini belirlemek için iletiyi inceleyecek mantık içerir.  
   
 ### <a name="performance"></a>Performans  
- Özel bir filtre uygularken, filtrenin bir ileti değerlendirmesini tamamlaması için gereken en uzun süreyi dikkate almanız önemlidir. Bir ileti bir eşleşme bulunamadığı için birden çok filtreye karşı değerlendirilebileceğinizden, tüm filtreler hesaplanmadan önce istemci isteğinin zaman aşımına memesini sağlamak önemlidir. Bu nedenle, özel bir filtrenin filtre ölçütleriyle eşleşip eşleşmediğini anlamak için yalnızca bir iletinin içeriğini veya özniteliklerini değerlendirmek için gereken kodu içermesi gerekir.  
+ Özel bir filtre uygularken, filtrenin iletinin değerlendirmesini tamamlaması için gereken maksimum süreyi göz önünde bulundurmak önemlidir. Bir ileti eşleşme bulunmadan önce birden çok filtreye karşı değerlendirilebileceğinden, tüm filtreler değerlendirilmeden önce istemci isteğinin zaman ödemediğinden emin olmak önemlidir. Bu nedenle, özel bir filtre, filtre ölçütlerine uygun olup olmadığını belirlemek için iletinin içeriğini veya özniteliklerini değerlendirmek için yalnızca gerekli kodu içermelidir.  
   
- Genel olarak, bir özel filtre uygularken aşağıdakilerden kaçınmanız gerekir:  
+ Genel olarak, özel bir filtre uygularken aşağıdakilerden kaçınmalısınız:  
   
-- Verileri diske veya bir veritabanına kaydetme gibi GÇ.  
+- IO, diske veya veritabanına veri kaydetme gibi.  
   
-- Belgedeki birden çok kayıt üzerinde döngü gibi gereksiz işleme.  
+- Bir belgedeki birden çok kaydın üzerinden döngü gibi gereksiz işleme.  
   
-- Paylaşılan kaynaklar üzerinde bir kilit elde etmek veya bir veritabanında arama gerçekleştirmek için gereken çağrılar gibi engelleyici işlemler.  
+- Paylaşılan kaynaklarda kilit alma veya veritabanına karşı arama lar gerçekleştirme gibi işlemleri engelleme.  
   
- Bir üretim ortamında özel bir filtre kullanmadan önce, filtrenin bir iletiyi değerlendirmek için aldığı ortalama süreyi öğrenmek için performans testlerini çalıştırmalısınız. Filtre tablosunda kullanılan diğer filtrelerin ortalama işlem süresi ile birleştirildiğinde, bu, istemci uygulaması tarafından belirtilmesi gereken en büyük zaman aşımı değerini doğru bir şekilde belirlemenizi sağlar.  
+ Üretim ortamında özel bir filtre kullanmadan önce, filtrenin bir iletiyi değerlendirmek için gereken ortalama süreyi belirlemek için performans testleri çalıştırmanız gerekir. Filtre tablosunda kullanılan diğer filtrelerin ortalama işlem süresiyle birleştirildiğinde, bu, istemci uygulaması tarafından belirtilmesi gereken maksimum zaman aşım değerini doğru bir şekilde belirlemenize olanak sağlar.  
   
 ## <a name="usage"></a>Kullanım  
- Özel filtrenizi yönlendirme hizmetiyle kullanabilmeniz için, "Custom" türünde yeni bir filtre girişi belirterek filtre tablosuna eklemeniz gerekir, ileti filtresinin tam tür adı ve derlemenizin adı.  Diğer MessageFilters gibi, özel filtreniz yapıcısına geçirilecek olan filterData dizesini de belirtebilirsiniz.  
+ Yönlendirme Hizmeti ile özel filtrenizi kullanmak için, "Özel" türünde yeni bir filtre girişi, ileti filtresinin tam nitelikli tür adı ve derlemenizin adını belirterek filtre tablosuna eklemeniz gerekir.  Diğer MessageFilters'larda olduğu gibi, özel filtrenizin oluşturucusuna aktaredilecek dize filtresiVerileri belirtebilirsiniz.  
   
- Aşağıdaki örneklerde, yönlendirme hizmeti ile özel bir filtrenin kullanılması gösterilmektedir:  
+ Aşağıdaki örnekler, Yönlendirme Hizmeti ile özel bir filtre kullanarak gösterilmektedir:  
   
 ```xml  
 <!--ROUTING SECTION -->  
 <routing>  
   <filters>  
-    <filter name="CustomFilter1" filterType="Custom"   
-            customType="CustomAssembly.MyMessageFilter,   
+    <filter name="CustomFilter1" filterType="Custom"
+            customType="CustomAssembly.MyMessageFilter,
             CustomAssembly" filterData="custom data" />  
   </filters>  
   <filterTables>  

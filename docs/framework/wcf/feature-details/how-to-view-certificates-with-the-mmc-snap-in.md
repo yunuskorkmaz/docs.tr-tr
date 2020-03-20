@@ -1,84 +1,84 @@
 ---
-title: 'Nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme'
+title: 'Nasıl yapilir: MMC snap-in ile sertifikaları görüntüleme'
 ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 69f79b64250ff46524e7b4720d13351774875a3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 35048c24e838c513909fae8bedcba287001f5cef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972737"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184779"
 ---
-# <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme
-Güvenli istemci veya hizmet oluştururken kullanabileceğiniz bir [sertifika](working-with-certificates.md) kimlik bilgisi olarak. Örneğin, ortak bir kimlik bilgisi türü ile oluşturduğunuz X.509 sertifikası olan <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> yöntemi. 
+# <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Nasıl yapilir: MMC snap-in ile sertifikaları görüntüleme
+Güvenli bir istemci veya hizmet oluşturduğunuzda, [sertifikayı](working-with-certificates.md) kimlik bilgisi olarak kullanabilirsiniz. Örneğin, yaygın bir kimlik bilgisi türü, <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> yöntemle oluşturduğunuz X.509 sertifikasıdır.
 
-Microsoft Yönetim Konsolu (MMC) ile Windows sistemlerinde inceleyebilirsiniz sertifika depolarını üç farklı türü vardır:
+Windows sistemlerinde Microsoft Yönetim Konsolu (MMC) ile incelediğiniz üç farklı sertifika deposu türü vardır:
 
-- Yerel bilgisayar: Yerel cihaz ve cihazdaki tüm kullanıcılar için küresel deposudur.
+- Yerel bilgisayar: Mağaza aygıtiçin yerel ve aygıttaki tüm kullanıcılar için geneldir.
 
-- Geçerli kullanıcı: Cihazdaki geçerli kullanıcı hesabı için yerel deposudur.
+- Geçerli kullanıcı: Mağaza, aygıttaki geçerli kullanıcı hesabına yereldir.
 
-- Hizmet hesabı: Belirli bir hizmete cihazdaki yerel deposudur.
+- Servis hesabı: Mağaza, aygıttaki belirli bir hizmetin yereldir.
 
-## <a name="view-certificates-in-the-mmc-snap-in"></a>MMC ek bileşeninde sertifikaları görüntüle 
+## <a name="view-certificates-in-the-mmc-snap-in"></a>MMC snap-in'deki sertifikaları görüntüleme
 
-Aşağıdaki yordam, uygun bir sertifika bulmak için yerel cihazınıza depoları incelemek nasıl göstermektedir: 
+Aşağıdaki yordam, uygun bir sertifika bulmak için yerel cihazınızdaki mağazaların nasıl incelenir olduğunu gösterir:
   
-1. Seçin **çalıştırma** gelen **Başlat** menüsünde ve enter *mmc*. 
+1. **Başlat** menüsünden **Çalıştır'ı** seçin ve ardından *mmc'yi*girin.
 
-    MMC açılır. 
+    MMC görünür.
   
-2. Gelen **dosya** menüsünde **Ekle/Kaldır ek bileşen içinde**. 
-    
-    **Ek bileşenler Ekle / Kaldır** penceresi görüntülenir.
-  
-3. Gelen **kullanılabilir ek bileşenler** listesinde **sertifikaları**, ardından **Ekle**.  
+2. **Dosya** menüsünden **Ekle/Kaldır'ı**seçin.
 
-    ![Sertifika ek bileşenini Ekle](./media/mmc-add-certificate-snap-in.png)
+    **Eklenti veya Kaldır Snap-ins** penceresi görüntülenir.
   
-4. İçinde **Sertifikalar ek bileşenini** penceresinde **bilgisayar hesabı**ve ardından **sonraki**. 
+3. Kullanılabilir **ekler** listesinden **Sertifikalar'ı**seçin ve ardından **Ekle'yi**seçin.  
+
+    ![Sertifika ekleme ekleme](./media/mmc-add-certificate-snap-in.png)
   
-    İsteğe bağlı olarak seçebileceğiniz **kullanıcı hesabım** geçerli kullanıcı için ya da **hizmet hesabı** belirli bir hizmet için. 
+4. **Sertifikalar'a giriş** penceresinde **Bilgisayar hesabı'nı**seçin ve sonra **İleri'yi**seçin.
+  
+    İsteğe bağlı olarak, belirli bir hizmet için geçerli kullanıcı veya **Hizmet hesabı** için kullanıcı **hesabımı** seçebilirsiniz.
 
     > [!NOTE]
-    > Bir yöneticinin Cihazınızda siz değilseniz, yalnızca kullanıcı hesabınız için sertifikaları yönetebilir.
+    > Aygıtınızın yöneticisi değilseniz, sertifikaları yalnızca kullanıcı hesabınız için yönetebilirsiniz.
   
-5. İçinde **Bilgisayar Seç** penceresinde bırakın **yerel bilgisayar** seçili ve ardından **son**.  
+5. Bilgisayarı **Seç** penceresinde, **Yerel bilgisayarı** seçili bırakın ve ardından **Bitir'i**seçin.  
   
-6. İçinde **Ekle veya Kaldır ek bileşenini** penceresinde **Tamam**.  
+6. Ekle **veya Kaldır** penceresinde **Tamam'ı**seçin.  
   
-    ![Sertifika ek bileşenini Ekle](./media/mmc-certificate-snap-in-selected.png)
+    ![Sertifika ekleme ekleme](./media/mmc-certificate-snap-in-selected.png)
 
-7. İsteğe bağlı: Gelen **dosya** menüsünde **Kaydet** veya **Kaydet** daha sonra kullanmak için MMC konsolu dosyasını kaydetmek için.  
+7. İsteğe bağlı: **Dosya** menüsünden, MMC konsol dosyasını daha sonra kullanmak üzere kaydetmek için **Kaydet** veya **Kaydet'i** seçin.  
 
-8. MMC ek bileşeninde, sertifikaları görüntülemek için seçin **konsol kökü** sol bölmede genişletin **sertifikalar (yerel bilgisayar)**.
+8. Sertifikalarınızı MMC snap-in'de görüntülemek için sol bölmede **Konsol Kökü'nü** seçin ve **ardından Sertifikaları (Yerel Bilgisayar)** genişletin.
 
-    Her sertifika türünün dizinlerinin listesi görüntülenir. Her sertifika dizinden görüntülemek, dışarı aktarma, alma ve sertifikalarını silin.
+    Her sertifika türü için dizin listesi görüntülenir. Her sertifika dizininden, sertifikalarını görüntüleyebilir, dışa aktarabilir, içe aktarabilir ve silebilirsiniz.
 
-## <a name="view-certificates-with-the-certificate-manager-tool"></a>Sertifika Yöneticisi Aracı ile sertifikaları görüntüleme
+## <a name="view-certificates-with-the-certificate-manager-tool"></a>Sertifika Yöneticisi aracıyla sertifikaları görüntüleme
 
-Da görüntüleyebilir, dışarı aktarma almak ve Sertifika Yöneticisi aracı kullanarak sertifikaları silin.
+Sertifika Yöneticisi aracını kullanarak sertifikaları görüntüleyebilir, dışa aktarabilir, içe aktarabilir ve silebilirsiniz.
 
-### <a name="to-view-certificates-for-the-local-device"></a>Yerel cihaz sertifikalarını görüntülemek için
+### <a name="to-view-certificates-for-the-local-device"></a>Yerel aygıtın sertifikalarını görüntülemek için
 
-1. Seçin **çalıştırma** gelen **Başlat** menüsünde ve enter *certlm.msc*. 
+1. **Başlat** menüsünden **Çalıştır'ı** seçin ve *ardından certlm.msc'yi*girin.
 
-    Sertifika Yöneticisi Aracı için yerel cihaz görünür. 
+    Yerel aygıt için Sertifika Yöneticisi aracı görüntülenir.
   
-2. Sertifikalarınızı, altında görüntülemek için **sertifikalar - yerel bilgisayar** sol bölmede, görüntülemek istediğiniz sertifika türü için dizine genişletin.
+2. Sertifikalarınızı görüntülemek için, sol bölmedeki **Sertifikalar - Yerel Bilgisayar** altında, görüntülemek istediğiniz sertifika türüiçin dizini genişletin.
 
 ### <a name="to-view-certificates-for-the-current-user"></a>Geçerli kullanıcının sertifikalarını görüntülemek için
 
-1. Seçin **çalıştırma** gelen **Başlat** menüsünde ve enter *certmgr.msc*. 
+1. **Başlat** menüsünden **Çalıştır'ı** seçin ve ardından *certmgr.msc'yi*girin.
 
-    Geçerli kullanıcı için Sertifika Yöneticisi Aracı görünür. 
+    Geçerli kullanıcı için Sertifika Yöneticisi aracı görüntülenir.
   
-2. Sertifikalarınızı, altında görüntülemek için **Sertifikalar - Geçerli kullanıcı** sol bölmede, görüntülemek istediğiniz sertifika türü için dizine genişletin.
+2. Sertifikalarınızı görüntülemek **için, Sertifikalar altında - Sol** bölmedeki Geçerli Kullanıcı, görüntülemek istediğiniz sertifika türüiçin dizini genişletin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Sertifikalarla çalışma](working-with-certificates.md)
-- [Nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](how-to-create-temporary-certificates-for-use-during-development.md)
-- [Nasıl yapılır: Bir sertifikanın parmak izini alma](how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Nasıl kullanılır: Geliştirme sırasında kullanılmak üzere geçici sertifikalar oluşturma](how-to-create-temporary-certificates-for-use-during-development.md)
+- [Nasıl yapılır: Sertifikanın parmak izini alma](how-to-retrieve-the-thumbprint-of-a-certificate.md)

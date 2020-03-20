@@ -1,19 +1,18 @@
 ---
-ms.openlocfilehash: e8fcd496b9c1921753ad0e1c2632f29bc5036956
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 1a1fc91ea2bb81e0f94b64323085ccf99072a1f5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802465"
 ---
-### <a name="datagridcellspanelbringindexintoview-throws-argumentoutofrangeexception"></a>ArgumentOutOfRangeException DataGridCellsPanel.BringIndexIntoView oluşturur
+### <a name="datagridcellspanelbringindexintoview-throws-argumentoutofrangeexception"></a>DataGridCellsPanel.BringIndexIntoView ArgumentOutOfRangeException atar
 
 |   |   |
 |---|---|
-|Ayrıntılar|<xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)> Sütun sanallaştırma etkinleştirilmiş ancak sütun genişliklerini henüz karar olduğunda zaman uyumsuz olarak çalışır.  Zaman uyumsuz iş gerçekleşmeden önce sütunları kaldırılırsa bir <xref:System.ArgumentOutOfRangeException?displayProperty=name> ortaya çıkabilir.|
-|Öneri|Aşağıdakilerden herhangi biri:<ol><li>.NET Framework 4.7 yükseltin.</li><li>En son hizmet düzeltme eki için .NET Framework 4.6.2 yükleyin.</li><li>Zaman uyumsuz yanıt kadar sütunları kaldırmayı önlemek <xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)> tamamlandı.</li></ol>|
-|Kapsam|Kenar|
+|Ayrıntılar|<xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)>sütun sanallaştırması etkinleştirildiğinde ancak sütun genişlikleri henüz belirlenmediğinde eş senkronize çalışacaktır.  Eşsenkronize çalışma gerçekleşmeden önce sütunlar <xref:System.ArgumentOutOfRangeException?displayProperty=name> kaldırılırsa, bir oluşabilir.|
+|Öneri|Aşağıdakilerden herhangi biri:<ol><li>.NET Framework 4.7'ye yükseltin.</li><li>.NET Framework 4.6.2 için en son servis yasını yükleyin.</li><li>Asynchronous yanıtı tamamlanana kadar <xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)> sütunları kaldırmaktan kaçının.</li></ol>|
+|Kapsam|Edge|
 |Sürüm|4.6.2|
-|Tür|Çalışma zamanı|
+|Tür|Çalışma Zamanı|
 |Etkilenen API’ler|<ul><li><xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object,System.Windows.Controls.DataGridColumn)?displayProperty=nameWithType></li></ul>|
-

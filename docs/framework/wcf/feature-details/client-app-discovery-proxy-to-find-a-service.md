@@ -2,32 +2,32 @@
 title: "Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma"
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 30db2bfc6191b1703f6d63ec2a925df42ecc93e4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33ee5d2c9206b16b1667abd5f6d6c811ff955969
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963868"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185379"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma
-Bu konu, bulma proxy 'nin nasıl uygulanacağını ele alan üçüncü üç konudan oluşur. Önceki konu başlığında, [nasıl yapılır: Bulma proxy 'sine](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)kaydolduktan sonra, bulma proxy 'sine sahip bir WCF hizmeti uyguladık. Bu konuda, WCF hizmetini bulmak için keşif proxy 'sini kullanan bir WCF istemcisi oluşturursunuz.  
+Bu konu, bir keşif proxy nasıl uygulanacağını tartışAn üç konunun üçüncüsüdür. Önceki konu, [Nasıl: Discovery Proxy ile kaydeder bir Keşfedilebilir Hizmet uygulayın](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), bulma proxy ile kendini kaydeden bir WCF hizmeti uyguladı. Bu konuda, WCF hizmetini bulmak için bulma proxy'sini kullanan bir WCF istemcisi oluşturursunuz.  
   
 ### <a name="implement-the-client"></a>İstemciyi uygulama  
   
-1. `DiscoveryProxyExample` Adlı`Client`çözüme yeni bir konsol uygulama projesi ekleyin.  
+1. `DiscoveryProxyExample` Çözüme yeni bir konsol uygulama `Client`projesi ekleyin.  
   
 2. Aşağıdaki derlemelere başvurular ekleyin:  
   
-    1. System. ServiceModel  
+    1. System.ServiceModel  
   
-    2. System. ServiceModel. Discovery  
+    2. System.ServiceModel.Discovery  
   
-3. Bu konunun en altında bulunan GeneratedClient.cs ' i projeye ekleyin.  
+3. Bu konunun alt kısmında bulunan GeneratedClient.cs projeye ekleyin.  
   
     > [!NOTE]
-    > Bu dosya genellikle Svcutil. exe gibi bir araç kullanılarak oluşturulur. Bu, görevi basitleştirmek için bu konuda verilmiştir.  
+    > Bu dosya genellikle Svcutil.exe gibi bir araç kullanılarak oluşturulur. Bu konu, görevi basitleştirmek için sağlanır.  
   
-4. Program.cs dosyasını açın ve aşağıdaki yöntemi ekleyin. Bu yöntem bir uç nokta adresi alır ve hizmet istemcisini (proxy) başlatmak için onu kullanır.  
+4. Program.cs dosyasını açın ve aşağıdaki yöntemi ekleyin. Bu yöntem bir bitiş noktası adresi alır ve hizmet istemcisi (proxy) başharflerini almak için kullanır.  
   
     ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -62,7 +62,7 @@ Bu konu, bulma proxy 'nin nasıl uygulanacağını ele alan üçüncü üç konu
     }  
     ```  
   
-5. `Main` Yöntemine aşağıdaki kodu ekleyin.  
+5. `Main` yöntemine aşağıdaki kodu ekleyin.  
   
     ```csharp  
     public static void Main()  
@@ -79,7 +79,7 @@ Bu konu, bulma proxy 'nin nasıl uygulanacağını ele alan üçüncü üç konu
 
         try  
         {  
-            // Search for services that implement ICalculatorService              
+            // Search for services that implement ICalculatorService
             FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
 
             Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
@@ -101,10 +101,10 @@ Bu konu, bulma proxy 'nin nasıl uygulanacağını ele alan üçüncü üç konu
     }  
     ```  
   
- İstemci uygulamasını uygulamayı tamamladınız. [Şu şekilde devam edin: Keşif proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)'sini test edin.  
+ İstemci uygulamasını uygulamayı tamamladınız. Nasıl devam [edin: Discovery Proxy test edin.](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)  
   
 ## <a name="example"></a>Örnek  
- Bu, bu konunun tam kod listesidir.  
+ Bu, bu konu için tam kod listesidir.  
   
 ```csharp  
 // GeneratedClient.cs  
@@ -226,7 +226,7 @@ namespace Microsoft.Samples.Discovery
   
             try  
             {  
-                // Find ICalculatorService endpoints              
+                // Find ICalculatorService endpoints
                 FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
   
                 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
@@ -283,6 +283,6 @@ namespace Microsoft.Samples.Discovery
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Bulmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Nasıl yapılır: Keşif proxy 'Si uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Nasıl yapılır: Bulma proxy 'Sine kaydolduktan sonra bulunabilir bir hizmet uygulama](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [WCF Keşif Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [Nasıl yapılır: Keşif Proxy'si Uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

@@ -2,28 +2,28 @@
 title: 'Nasıl yapılır: İstek-Yanıt Sözleşmesi Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: f5af7f3a0954e9becf1b9098f372878b537fec9c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 793f7214f8319e87c3e344990577841fc029bc55
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645817"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185024"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>Nasıl yapılır: İstek-Yanıt Sözleşmesi Oluşturma
-İstek-yanıt anlaşması yanıt döndüren bir yöntem belirtir. Yanıtı gönderilir ve bu sözleşmenin koşullarına isteğine bağıntılı. Bile yöntem hiç yanıt döndürür (`void` C# veya `Sub` Visual Basic'te), altyapıyı oluşturur ve çağırana bir boş ileti gönderir. Bir boş bir yanıt iletisini göndermeyi önlemek için tek yönlü anlaşma işlemi için kullanın.  
+İstek-yanıt sözleşmesi, yanıtı döndüren bir yöntem belirtir. Yanıt gönderilmelidir ve bu sözleşmenin şartları altında istekle ilişkilendirilmelidir. Yöntem yanıt vermese`void` bile (C#veya `Sub` Visual Basic'te), altyapı oluşturur ve arayana boş bir ileti gönderir. Boş bir yanıt iletisi gönderilmesini önlemek için işlem için tek yönlü bir sözleşme kullanın.  
   
-### <a name="to-create-a-request-reply-contract"></a>İstek-yanıt anlaşması oluşturma  
+### <a name="to-create-a-request-reply-contract"></a>İstek-yanıt sözleşmesi oluşturmak için  
   
-1. Bir arabirim, kendi seçtiğiniz programlama dilinde oluşturun.  
+1. Seçtiğiniz programlama dilinde bir arayüz oluşturun.  
   
-2. Uygulama <xref:System.ServiceModel.ServiceContractAttribute> özniteliği için arabirim.  
+2. <xref:System.ServiceModel.ServiceContractAttribute> Özniteliği arabirime uygulayın.  
   
-3. Uygulama <xref:System.ServiceModel.OperationContractAttribute> istemcileri çağırabilirsiniz her yönteme öznitelik.  
+3. İstemcilerin <xref:System.ServiceModel.OperationContractAttribute> çağırabileceği her yönteme öznitelik uygulayın.  
   
-4. İsteğe bağlı. Değerini <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliğini `true` bir boş bir yanıt iletisini göndermeyi önlemek için. Varsayılan olarak, tüm işlemler istek-yanıt sözleşmeleriyle gerçekleştirilir.  
+4. İsteğe bağlı. Boş bir yanıt <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> iletisi gönderilmesini önlemek için `true` özelliğin değerini ayarlayın. Varsayılan olarak, tüm işlemler istek yanıtlama sözleşmeleridir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek sağlayan bir hesap makinesi hizmet sözleşme tanımlayan `Add` ve `Subtract` yöntemleri. `Multiply` Yöntemi değil sözleşmesinin bir parçası olarak işaretlenmediğinden <xref:System.ServiceModel.OperationContractAttribute> sınıfı ve bu nedenle, istemciler için erişilebilir değil.  
+ Aşağıdaki örnek, sağlayan `Add` ve `Subtract` yöntemler sağlayan bir hesap makinesi hizmeti için bir sözleşme tanımlar. Yöntem, `Multiply` <xref:System.ServiceModel.OperationContractAttribute> sınıf tarafından işaretlenmediği ve bu nedenle istemciler tarafından erişilemediği için sözleşmenin bir parçası değildir.  
   
 ```csharp
 using System.ServiceModel;
@@ -35,20 +35,20 @@ public interface ICalculator
     // It would be equivalent to write explicitly:
     // [OperationContract(IsOneWay=false)]
     int Add(int a, int b);
-    
+
     [OperationContract]
     int Subtract(int a, int b);
-    
+
     int Multiply(int a, int b)
 }
 ```
   
-- İşlem sözleşmeleri belirtme hakkında daha fazla bilgi için bkz. <xref:System.ServiceModel.OperationContractAttribute> sınıfı ve <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliği.  
+- Çalışma sözleşmelerinin nasıl belirtilen hakkında <xref:System.ServiceModel.OperationContractAttribute> daha <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> fazla bilgi için sınıfa ve özelliğine bakın.  
   
-- Uygulama <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> öznitelikleri hizmet dağıtıldıktan sonra bu hizmet sözleşmesi tanımları otomatik olarak oluşturulmasını Web Hizmetleri Açıklama Dili (WSDL) belgesinde sağlar. Belge ekleyerek indirdiğiniz `?wsdl` HTTP temel adresi hizmeti. Örneğin, `http://microsoft/CalculatorService?wsdl`  
+- Hizmet <xref:System.ServiceModel.ServiceContractAttribute> <xref:System.ServiceModel.OperationContractAttribute> dağıtıldıktan sonra web hizmetleri açıklama dili (WSDL) belgesinde otomatik hizmet sözleşmesi tanımlarının uygulanmasına neden olur. Belge, hizmetin HTTP `?wsdl` temel adresine eklenerek indirilir. Örneğin, `http://microsoft/CalculatorService?wsdl`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.OperationContractAttribute>
 - [Hizmet Sözleşmeleri Tasarlama](../../../../docs/framework/wcf/designing-service-contracts.md)
-- [Nasıl yapılır: Çift yönlü sözleşme oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Nasıl yapılır: Çift Yönlü Sözleşme Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

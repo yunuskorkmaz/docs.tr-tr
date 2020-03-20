@@ -1,20 +1,20 @@
 ---
-title: 'Nasıl yapılır: WCF hizmetlerine tek yönlü ve istek-yanıt sözleşmeleriyle'
+title: 'Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle WCF Hizmetlerine Erişme'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 119a63978f6c45aa940ff999249c654c7cf96d91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 533b97892b15c9034679efba6e4da5e72b56099b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855120"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185151"
 ---
-# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Nasıl yapılır: WCF hizmetlerine tek yönlü ve istek-yanıt sözleşmeleriyle
-Aşağıdaki yordamlar, bir Windows Communication Foundation (WCF) hizmetine erişmek için tek yönlü sözleşme ve istek-yanıt sözleşmesi tanımlayan ve çift yönlü iletişim deseni kullanmaz nasıl açıklar.  
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle WCF Hizmetlerine Erişme
+Aşağıdaki yordamlar, tek yönlü bir sözleşme ve istek yanıtlama sözleşmesi tanımlayan ve çift yönlü iletişim deseni kullanmayan bir Windows Communication Foundation (WCF) hizmetine nasıl erişilir açıklanmıştır.  
   
-### <a name="to-define-the-service"></a>Hizmet tanımlama  
+### <a name="to-define-the-service"></a>Hizmeti tanımlamak için  
   
-1. Hizmet sözleşmesi bildirin. Tek yönlü olarak işlemleri olmalıdır `IsOneWay` kümesine `true` içinde <xref:System.ServiceModel.OperationContractAttribute>. Aşağıdaki kod bildirir `IOneWayCalculator` için tek yönlü işlem var sözleşme `Add`, `Subtract`, `Multiply`, ve `Divide`. Ayrıca adlı bir istek yanıt işlem tanımlar `SayHello`.  
+1. Hizmet sözleşmesini bildirin. Tek yönlü olması gereken `IsOneWay` `true` <xref:System.ServiceModel.OperationContractAttribute>işlemler, 'nin içinde ayarlanmış olmalıdır. `IOneWayCalculator` Aşağıdaki `Add`kod, , , , `Subtract` `Multiply`ve `Divide`. Ayrıca, '. adı verilen `SayHello`bir istek yanıt işlemi tanımlar.  
   
     ```csharp  
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -33,7 +33,7 @@ Aşağıdaki yordamlar, bir Windows Communication Foundation (WCF) hizmetine eri
     }  
     ```  
   
-2. Hizmet sözleşmesini uygulama. Aşağıdaki kod uygulayan `IOnewayCalculator` arabirimi.  
+2. Hizmet sözleşmesini uygulayın. Aşağıdaki kod `IOnewayCalculator` arabirimi uygular.  
   
     ```csharp  
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerCall)]  
@@ -71,7 +71,7 @@ Aşağıdaki yordamlar, bir Windows Communication Foundation (WCF) hizmetine eri
     }  
     ```  
   
-3. Hizmeti bir konsol uygulamasında barındırır. Aşağıdaki kod, hizmeti barındırmak nasıl gösterir.  
+3. Hizmeti bir konsol uygulamasında barındırın. Aşağıdaki kod, hizmetin nasıl barındırılabildiğini gösterir.  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -109,7 +109,7 @@ Aşağıdaki yordamlar, bir Windows Communication Foundation (WCF) hizmetine eri
   
 ### <a name="to-access-the-service"></a>Hizmete erişmek için  
   
-1. Çalıştırma [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) şu komut satırını kullanarak hizmeti istemci sınıf oluşturmak için meta veri değişimi uç nokta adresini kullanarak: `Svcutil http://localhost:8000/Service` [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aşağıdaki örnek kodda gösterildiği gibi arabirimler ve sınıflar, bir dizi oluşturur.  
+1. [ServiceModel Metadata Utility Tool 'u (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aşağıdaki komut satırını kullanarak hizmet için istemci sınıfını oluşturmak için meta veri değişimi bitiş noktası adresini kullanarak çalıştırın: `Svcutil http://localhost:8000/Service` [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aşağıdaki örnek kodda gösterildiği gibi bir dizi arabirim ve sınıf oluşturur.  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -147,22 +147,22 @@ Aşağıdaki yordamlar, bir Windows Communication Foundation (WCF) hizmetine eri
         {  
         }  
   
-        public OneWayCalculatorClient(string endpointConfigurationName) :   
+        public OneWayCalculatorClient(string endpointConfigurationName) :
                 base(endpointConfigurationName)  
         {  
         }  
   
-        public OneWayCalculatorClient(string endpointConfigurationName, string remoteAddress) :   
+        public OneWayCalculatorClient(string endpointConfigurationName, string remoteAddress) :
                 base(endpointConfigurationName, remoteAddress)  
         {  
         }  
   
-        public OneWayCalculatorClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :   
+        public OneWayCalculatorClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
                 base(endpointConfigurationName, remoteAddress)  
         {  
         }  
   
-        public OneWayCalculatorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :   
+        public OneWayCalculatorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
                 base(binding, remoteAddress)  
         {  
         }  
@@ -194,9 +194,9 @@ Aşağıdaki yordamlar, bir Windows Communication Foundation (WCF) hizmetine eri
     }  
     ```  
   
-     İçinde fark `IOneWayCalculator` tek yönlü hizmet işlemleri sahip arabirimi <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özniteliğini `true` ve istek-yanıt hizmeti işlemi varsayılan değere ayarlanmış özniteliğine sahip `false`. Ayrıca `OneWayCalculatorClient` sınıfı. Bu hizmeti çağırmak için kullanacağınız sınıftır.  
+     `IOneWayCalculator` Arabirimde tek yönlü hizmet işlemlerinin <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> öznitelik ayarladığını `true` ve istek yanıt hizmeti işleminin varsayılan değere ayarlanan özniteliği olduğunu `false`bildirir. Ayrıca sınıf `OneWayCalculatorClient` ala. Bu, hizmeti aramak için kullanacağınız sınıftır.  
   
-2. İstemci nesnesi oluşturun.  
+2. İstemci nesnesini oluşturun.  
   
     ```csharp  
     // Create a client  
@@ -205,7 +205,7 @@ Aşağıdaki yordamlar, bir Windows Communication Foundation (WCF) hizmetine eri
     OneWayCalculatorClient client = new OneWayCalculatorClient(binding, epAddress);  
     ```  
   
-3. Hizmet işlemleri çağırın.  
+3. Servis işlemlerini arayın.  
   
     ```csharp  
     // Call the Add service operation.  
@@ -239,7 +239,7 @@ Aşağıdaki yordamlar, bir Windows Communication Foundation (WCF) hizmetine eri
     Console.WriteLine("SayHello() returned: " + response);  
     ```  
   
-4. Bağlantıları kapatın ve kaynakları temizlemek için istemciyi kapatın.  
+4. Bağlantıları kapatmak ve kaynakları temizlemek için istemciyi kapatın.  
   
     ```csharp  
     //Closing the client gracefully closes the connection and cleans up resources  
@@ -247,7 +247,7 @@ Aşağıdaki yordamlar, bir Windows Communication Foundation (WCF) hizmetine eri
     ```  
   
 ## <a name="example"></a>Örnek  
- Bu konu başlığında kullanılan kod tam listesi verilmiştir.  
+ Aşağıda, bu konuda kullanılan kodun tam listesi vereme mi edilir.  
   
 ```csharp  
 // Service.cs  
@@ -258,7 +258,7 @@ using System.ServiceModel.Description;
   
 namespace Microsoft.ServiceModel.Samples  
 {  
-    // Define a service contract.   
+    // Define a service contract.
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
     public interface IOneWayCalculator  
     {  
@@ -341,7 +341,7 @@ namespace Microsoft.ServiceModel.Samples
             }  
         }  
     }  
-} 
+}
 ```
 
 ```csharp

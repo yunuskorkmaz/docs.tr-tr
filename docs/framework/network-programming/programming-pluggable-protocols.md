@@ -16,24 +16,24 @@ helpviewer_keywords:
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
 ms.openlocfilehash: 94dfedd317782b9e518df02c84d9af55b1ef2b69
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047394"
 ---
 # <a name="programming-pluggable-protocols"></a>Takılabilir Protokoller Programlama
-Soyut <xref:System.Net.WebRequest> ve<xref:System.Net.WebResponse> sınıflar takılabilir protokoller için temel sağlar. <xref:System.Net.WebRequest> Ve<xref:System.Net.WebResponse>' den protokolüne özgü sınıfları türeterek, bir uygulama bir Internet kaynağından veri talep edebilir ve kullanılan protokolü belirtmeden yanıtı okuyabilir.  
+Soyut <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse> sınıflar takılabilir protokoller için temel sağlar. Bir uygulama, protokole özgü <xref:System.Net.WebRequest> <xref:System.Net.WebResponse>sınıfları bir Internet kaynağından veri isteyebilir ve kullanılan protokolü belirtmeden yanıtı okuyabilir.  
   
- Protokolüne özgü <xref:System.Net.WebRequest>bir oluşturabilmeniz için önce Create yöntemini kaydetmeniz gerekir. Belirli bir Internet <xref:System.Net.WebRequest.RegisterPrefix%28System.String%2CSystem.Net.IWebRequestCreate%29> şemasına, bir düzene ve <xref:System.Net.WebRequest> sunucuya ya da bir düzen, sunucu ve yol için bir istek kümesini işlemek üzere bir alt öğesi kaydetmek için ' ın <xref:System.Net.WebRequest> statik metodunu kullanın.  
+ Protokole özgü <xref:System.Net.WebRequest>bir yöntem oluşturmadan önce, oluştur yöntemini kaydetmeniz gerekir. Belirli bir <xref:System.Net.WebRequest.RegisterPrefix%28System.String%2CSystem.Net.IWebRequestCreate%29> Internet <xref:System.Net.WebRequest> düzenine, bir düzene ve sunucuya veya bir şemaya, sunucuya ve yola bir dizi isteği işlemek için bir soyundan geleni <xref:System.Net.WebRequest> kaydetmek için statik yöntemi kullanın.  
   
- Çoğu durumda, <xref:System.Net.WebRequest> sınıfının yöntemlerini ve özelliklerini kullanarak veri gönderebileceksiniz ve alabilirsiniz. Ancak, protokole özgü özelliklere erişmeniz gerekiyorsa, a <xref:System.Net.WebRequest> 'yı belirli bir türetilmiş sınıf örneğine yazabilirsiniz.  
+ Çoğu <xref:System.Net.WebRequest> durumda, sınıfın yöntemlerini ve özelliklerini kullanarak veri gönderip alabilirsiniz. Ancak, protokole özgü özelliklere erişmeniz gerekiyorsa, <xref:System.Net.WebRequest> a'dan türemiş sınıf örneğine dakti-resmon yazabilirsiniz.  
   
- Takılabilir protokollerinden yararlanmak için, alt bilgileriniz <xref:System.Net.WebRequest> , protokole özgü özelliklerin ayarlanmasına gerek olmayan varsayılan bir istek-yanıt işlemi sağlamalıdır. Örneğin, <xref:System.Net.HttpWebRequest> http için <xref:System.Net.WebRequest> sınıfını uygulayan sınıfı, varsayılan olarak bir `GET` istek sağlar ve Web sunucusundan döndürülen akışı içeren bir <xref:System.Net.HttpWebResponse> döndürür.  
+ Takılabilir protokollerden yararlanmak için, <xref:System.Net.WebRequest> torunlarınızın protokole özgü özelliklerin ayarlanmasını gerektirmeyen varsayılan istek ve yanıt hareketi sağlaması gerekir. Örneğin, HTTP <xref:System.Net.HttpWebRequest> <xref:System.Net.WebRequest> için sınıfı uygulayan sınıf varsayılan olarak `GET` bir istek sağlar <xref:System.Net.HttpWebResponse> ve Web sunucusundan döndürülen akışı içeren bir istek verir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [WebRequest’ten Türetme](deriving-from-webrequest.md)
 - [WebResponse’tan Türetme](deriving-from-webresponse.md)
 - [.NET Framework'te Ağ Programlaması](index.md)
-- [Nasıl yapılır: Web Isteği protokolüne özgü özelliklere erişim için tür dönüştürme](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+- [Nasıl yapılır: WebRequest Türü Atayarak Protokole Özgü Özelliklere Erişim](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

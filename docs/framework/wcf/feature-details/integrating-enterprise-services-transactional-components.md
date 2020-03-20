@@ -2,27 +2,27 @@
 title: Kurumsal Hizmetler İşlemsel Bileşenlerini Tümleştirme
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 5914f76639adc3ff569a3bfb8d6eb1db14313e76
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 292573f911459d8a8419e09d81fd1e54dbc6c70b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211946"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184745"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Kurumsal Hizmetler İşlemsel Bileşenlerini Tümleştirme
 
-Windows Communication Foundation (WCF), Enterprise Services ile tümleştirme için otomatik bir mekanizma sağlar (bkz. [com+ uygulamalarıyla tümleştirme](integrating-with-com-plus-applications.md)). Ancak, kurumsal hizmetlerde barındırılan işlemsel bileşenleri dahili olarak kullanan hizmetler geliştirme esnekliği de isteyebilirsiniz. WCF Işlemler özelliği <xref:System.Transactions> altyapısında oluşturulduğundan, Enterprise Services 'ı WCF ile tümleştirme işlemi, [Kurumsal Hizmetler ve com+ işlemleri Ile birlikte çalışabilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))bölümünde açıklandığı gibi, <xref:System.Transactions> ve Enterprise hizmetleri arasında birlikte çalışabilirlik belirtmeyle aynıdır.  
+Windows Communication Foundation (WCF), Kurumsal Hizmetlerle tümleştirme için otomatik bir mekanizma sağlar (bkz. [COM+ Uygulamaları ile Tümleştirme).](integrating-with-com-plus-applications.md) Ancak, kurumsal hizmetler içinde barındırılan işlem bileşenlerini dahili olarak kullanan hizmetler geliştirme esnekliği isteyebilirsiniz. WCF İşlemleri özelliği <xref:System.Transactions> altyapı üzerine kurulduğundan, Kurumsal Hizmetler ile WCF'yi tümleştirme işlemi, Kurumsal <xref:System.Transactions> Hizmetler [ve COM+ İşlemleriyle Birlikte Çalışabilirlik'te](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))belirtildiği gibi, Kurumsal Hizmetler ve Kurumsal Hizmetler arasında birlikte çalışabilirlik belirtmek için de aynıdır.  
   
- Gelen akışlı işlem ve COM+ bağlam işlemi arasında istediğiniz birlikte çalışabilirlik düzeyini sağlamak için, hizmet uygulamasının bir <xref:System.Transactions.TransactionScope> örneği oluşturması ve <xref:System.Transactions.EnterpriseServicesInteropOption> numaralandırmasından uygun değeri kullanması gerekir.  
+ Gelen akışlı işlem ile COM+ bağlam hareketi arasında istenilen birlikte çalışabilirlik düzeyini sağlamak <xref:System.Transactions.TransactionScope> için, hizmet uygulamasının <xref:System.Transactions.EnterpriseServicesInteropOption> bir örnek oluşturması ve numaralandırmadan uygun değeri kullanması gerekir.  
   
-## <a name="integrating-enterprise-services-with-a-service-operation"></a>Kurumsal Hizmetleri bir hizmet Işlemi ile tümleştirme  
- Aşağıdaki kod, <xref:System.Transactions.EnterpriseServicesInteropOption.Full> seçeneğiyle bir <xref:System.Transactions.TransactionScope> oluşturan, Izin verilen işlem akışına sahip bir işlemi gösterir. Bu senaryoda aşağıdaki koşullar geçerlidir:  
+## <a name="integrating-enterprise-services-with-a-service-operation"></a>Kurumsal Hizmetleri Bir Hizmet İşlemiyle Bütünleştirme  
+ Aşağıdaki kod, İzin Verilen hareket <xref:System.Transactions.TransactionScope> akışıyla birlikte bir <xref:System.Transactions.EnterpriseServicesInteropOption.Full> işlem gösterir ve bu işlem seçeneğiyle birlikte bir işlem oluşturur. Bu senaryoda aşağıdaki koşullar geçerlidir:  
   
-- İstemci bir işlem akışa alıyorsa, Enterprise Services bileşenine yapılan çağrı dahil olmak üzere işlem bu işlemin kapsamı içinde yürütülür. <xref:System.Transactions.EnterpriseServicesInteropOption.Full> kullanmak, işlemin <xref:System.EnterpriseServices> bağlamla eşitlenmesini sağlar. Bu, <xref:System.Transactions> ve <xref:System.EnterpriseServices> ortam işleminin aynı olduğu anlamına gelir.  
+- İstemci bir hareket le hareket ederse, Kurumsal Hizmetler bileşenine yapılan çağrı da dahil olmak üzere işlem bu işlem kapsamında yürütülür. Kullanılması, <xref:System.Transactions.EnterpriseServicesInteropOption.Full> hareketin <xref:System.EnterpriseServices> bağlamla eşitlemesini sağlar, bu da ortam hareketinin <xref:System.Transactions> aynı <xref:System.EnterpriseServices> olduğu anlamına gelir.  
   
-- İstemci bir işlem akiçermiyorsa, <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> `true` ayarı, işlem için yeni bir işlem kapsamı oluşturur. Benzer şekilde, <xref:System.Transactions.EnterpriseServicesInteropOption.Full> kullanmak işlemin işleminin, <xref:System.EnterpriseServices> bileşenin bağlamı içinde kullanılan işlemle aynı olmasını sağlar.  
+- İstemci bir hareket akışı <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> yoksa, ayar işlem için yeni bir işlem kapsamı `true` oluşturur. Benzer şekilde, <xref:System.Transactions.EnterpriseServicesInteropOption.Full> kullanım, işlemin <xref:System.EnterpriseServices> bileşenin bağlamı içinde kullanılan hareketle aynı olmasını sağlar.  
   
- Aynı işlemin işleminin kapsamı içinde ek yöntem çağrıları da oluşur.  
+ Ek yöntem çağrıları da aynı işlemin işlem kapsamında oluşur.  
   
 ```csharp
 [ServiceContract()]  
@@ -46,11 +46,11 @@ public class CustomerService : ICustomerServiceContract
                      EnterpriseServicesInteropOption.Full))  
       {  
          // Create an Enterprise Services component  
-         // Call UpdateCustomer method on an Enterprise Services   
-         // component   
+         // Call UpdateCustomer method on an Enterprise Services
+         // component
   
-         // Call UpdateOtherCustomerData method on an Enterprise   
-         // Services component   
+         // Call UpdateOtherCustomerData method on an Enterprise
+         // Services component
          ts.Complete();  
       }  
   
@@ -60,10 +60,10 @@ public class CustomerService : ICustomerServiceContract
 }  
 ```  
   
- Bir işlemin geçerli işlemi ve işlemsel kurumsal hizmetler bileşenlerine çağrılar arasında eşitleme gerekmiyorsa, <xref:System.Transactions.TransactionScope> örneğini örneklemesinde <xref:System.Transactions.EnterpriseServicesInteropOption.None> seçeneğini kullanın.  
+ Bir işlemin geçerli hareketi ile işlemsel Kurumsal Hizmetler bileşenlerine yapılan aramalar arasında <xref:System.Transactions.EnterpriseServicesInteropOption.None> eşitleme gerekmiyorsa, <xref:System.Transactions.TransactionScope> örneği anında ayarlarken seçeneği kullanın.  
   
-## <a name="integrating-enterprise-services-with-a-client"></a>Kurumsal Hizmetleri bir Istemciyle tümleştirme  
- Aşağıdaki kod, <xref:System.Transactions.EnterpriseServicesInteropOption.Full> ayarıyla bir <xref:System.Transactions.TransactionScope> örneği kullanarak istemci kodunu gösterir. Bu senaryoda, işlem akışını destekleyen hizmet işlemlerine yapılan çağrılar, Enterprise Services bileşenlerine yapılan çağrılarla aynı işlemin kapsamı içinde oluşur.  
+## <a name="integrating-enterprise-services-with-a-client"></a>Kurumsal Hizmetleri Bir İstemci ile Tümleştirme  
+ Aşağıdaki kod, <xref:System.Transactions.TransactionScope> <xref:System.Transactions.EnterpriseServicesInteropOption.Full> ayarı olan bir örneği kullanarak istemci kodunu gösterir. Bu senaryoda, hareket akışını destekleyen hizmet işlemleriçağrıları, Kurumsal Hizmetler bileşenlerine yapılan çağrılarla aynı işlem kapsamında gerçekleşir.  
   
 ```csharp
 static void Main()  
@@ -81,13 +81,13 @@ static void Main()
   
         // Create an Enterprise Services component  
   
-        // Call UpdateCustomer method on an Enterprise Services   
-        // component   
+        // Call UpdateCustomer method on an Enterprise Services
+        // component
   
         ts.Complete();  
     }  
   
-    // Closing the client gracefully closes the connection and   
+    // Closing the client gracefully closes the connection and
     // cleans up resources  
     client.Close();  
 }  
@@ -95,5 +95,5 @@ static void Main()
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [COM+ Uygulamaları ile Tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [COM+ Uygulamaları ile tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
 - [COM Uygulamaları ile Tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

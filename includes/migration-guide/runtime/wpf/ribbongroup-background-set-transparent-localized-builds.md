@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: 9500907c6a1ba5b27008dcad4c9b47aef9092106
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 921baed7381fad363cc832c6b6af69068c2c8f43
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802551"
 ---
-### <a name="ribbongroup-background-is-set-to-transparent-in-localized-builds"></a>RibbonGroup arka plan yerelleştirilmiş derlemelerde saydam ayarlanır
+### <a name="ribbongroup-background-is-set-to-transparent-in-localized-builds"></a>RibbonGroup arka planı yerelleştirilmiş yapılarda saydam olarak ayarlanır
 
 |   |   |
 |---|---|
-|Ayrıntılar|<xref:System.Windows.Controls.Ribbon.RibbonGroup?displayProperty=name> arka plan yerelleştirilmiş derlemelerde her zaman düşük bir UI deneyim saydam fırçası ile boyanan. Bu .NET Framework 4.7 WPF düzeltme için yerelleştirilmiş kaynaklar güncelleştirerek düzeltilen <xref:System.Windows.Controls.Ribbon.RibbonGroup?displayProperty=name>, hangi sırayla sağlar doğru fırça seçilir.|
-|Öneri|.NET Framework 4.7 yükseltme|
-|Kapsam|Kenar|
+|Ayrıntılar|<xref:System.Windows.Controls.Ribbon.RibbonGroup?displayProperty=name>yerelleştirilmiş yapılarda arka plan her zaman Saydam fırçaile boyanmış ve bu da kötü kullanıcı arama-yüksek bilgi alanı deneyimine neden olmuştur. Bu, .NET Framework 4.7 WPF düzeltmesinde, yerelleştirilmiş <xref:System.Windows.Controls.Ribbon.RibbonGroup?displayProperty=name>kaynakları güncelleştirerek düzeltilir ve bu da doğru fırçanın seçilmesini sağlar.|
+|Öneri|.NET Framework 4.7'ye yükseltin|
+|Kapsam|Edge|
 |Sürüm|4.6.2|
-|Tür|Çalışma zamanı|
-
+|Tür|Çalışma Zamanı|

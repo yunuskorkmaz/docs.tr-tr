@@ -4,149 +4,149 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 3d94873931e3ee6df780df214f508258aa07a791
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 501a4221c99d405484a2fb908641d27d1f38f266
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735538"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187346"
 ---
 # <a name="typography-in-wpf"></a>WPF'de Tipografi
-Bu konu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]'in önemli tipografik özelliklerini tanıtır. Bu özellikler, metin işleme, OpenType tipografi desteği, gelişmiş uluslararası metin, gelişmiş yazı tipi desteği ve yeni metin uygulama programlama arabirimleri (API 'Ler) için geliştirilmiş kalite ve performans içerir.  
+Bu konu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]'nin ana tipografik özelliklerini tanır. Bu özellikler arasında metin oluşturmanın geliştirilmiş kalitesi ve performansı, OpenType tipografi desteği, geliştirilmiş uluslararası metin, geliştirilmiş yazı tipi desteği ve yeni metin uygulama programlama arabirimleri (API'ler) bulunmaktadır.  
   
-<a name="Improved_Quality_and_Performance_of_Text"></a>   
-## <a name="improved-quality-and-performance-of-text"></a>Metnin geliştirilmiş kalitesi ve performansı  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] metin, metnin açıklık ve okunabilirliğini artıran Microsoft ClearType kullanılarak işlenir. ClearType, dizüstü ekranları, Pocket PC ekranları ve düz panel izleyicileri gibi mevcut LCD 'lerde (sıvı kristal ekranlar) metinlerin okunabilirliğini artıran Microsoft tarafından geliştirilen bir yazılım teknolojisidir. ClearType, bir pikselin kesirli bölümünde karakterler hizalanarak metnin gerçek şeklinin daha büyük bir uygunluğa eşit bir şekilde görüntülenmesine olanak sağlayan alt piksel işleme kullanır. Ek çözüm, metin görüntüleme içindeki küçük ayrıntıların keskinliğini artırarak uzun süreleri okumayı çok daha kolay hale getirir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 'de ClearType 'ın diğer bir geliştirmesi, metin karakterlerine yönelik yüzeysel eğrilerin ve botları düzgüneden, y yönü düzgünleştirmedir. ClearType özellikleri hakkında daha fazla bilgi için bkz. [ClearType Genel Bakış](cleartype-overview.md).  
+<a name="Improved_Quality_and_Performance_of_Text"></a>
+## <a name="improved-quality-and-performance-of-text"></a>Metnin Kalitesini ve Performansını Artırdı  
+ Metin, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] metnin netliğini ve okunabilirliğini artıran Microsoft ClearType kullanılarak işlenir. ClearType, Microsoft tarafından geliştirilen ve dizüstü bilgisayar ekranları, Pocket PC ekranları ve düz panel monitörler gibi mevcut CD'lerde (Liquid Crystal Displays) metnin okunabilirliğini artıran bir yazılım teknolojisidir. ClearType, bir pikselin kesirli bir bölümünde karakterleri hizalayarak metnin gerçek şekline daha fazla doğrulukla görüntülenmesini sağlayan alt piksel oluşturma özelliğini kullanır. Ekstra çözünürlük, metin ekranındaki küçük ayrıntıların netliğini artırarak uzun süreler boyunca okunmasını çok daha kolay hale getirir. ClearType'ın bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diğer özelliği de metin karakterlerindeki sığ eğrilerin üstve altkısımlarını düzelten y yönü anti-takma addır. ClearType özellikleri hakkında daha fazla bilgi için [ClearType Genel Bakış'a](cleartype-overview.md)bakın.  
   
- ![ClearType y yönü düzgünleştirmesini içeren metin](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
-ClearType y yönünde düzgünleştirme içeren metin  
+ ![ClearType y yönü anti-takma ad içeren metin](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
+ClearType y yönü antialiasing ile metin  
   
- Tüm metin işleme işlem hattı, makinenizde gereken en düşük donanım düzeyini karşıladığından [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] donanım hızlandırılır. Donanım kullanılarak gerçekleştirilemediği işleme, yazılım işlemeye geri döner. Donanım hızlandırma, metin işleme işlem hattının tüm aşamalarını etkiler. tek glifleri depolamadan, glifleri karakter çalıştırmalarıyla birleştirme, etkileri uygulama, son görünen çıktıya ClearType karıştırma algoritmasını uygulama. Donanım hızlandırma hakkında daha fazla bilgi için bkz. [grafik Işleme katmanları](graphics-rendering-tiers.md).  
+ Makinenizin gereken minimum donanım düzeyini karşılaması [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] koşuluyla, tüm metin işleme ardışık alanı donanım hızlandırılabilir. Donanım kullanılarak gerçekleştirilemeyen işleme, yazılım işlemeye geri döner. Donanım hızlandırma, tek tek gliflerin depolanması, gliflerin gliflerin biraraya getirilmesi, efektlerin uygulanması ve ClearType karıştırma algoritmasının son görüntülenen çıktıya uygulanmasına kadar metin oluşturma ardışık hattının tüm aşamalarını etkiler. Donanım hızlandırma hakkında daha fazla bilgi için [Grafik Oluşturma Katmanları'na](graphics-rendering-tiers.md)bakın.  
   
- ![Metin işleme işlem hattının diyagramı](./media/typography-in-wpf/text-rendering-pipeline.png)  
+ ![Metin oluşturma ardışık lığı diyagramı](./media/typography-in-wpf/text-rendering-pipeline.png)  
   
- Buna ek olarak, karakter veya karakter olarak animasyonlu metin, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]tarafından etkinleştirilen grafik donanımı yeteneğinin tam olarak yararlanır. Bu, düz metin animasyonuna neden olur.  
+ Buna ek olarak, animasyonlu metin, karakter veya glyph tarafından etkin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]grafik donanım yeteneği tam olarak yararlanır. Bu, düzgün metin animasyonu yla sonuçlanır.  
   
-<a name="Rich_Typography"></a>   
-## <a name="rich-typography"></a>Zengin tipografi  
- OpenType yazı tipi biçimi, TrueType® yazı tipi biçiminin bir uzantısıdır. OpenType yazı tipi biçimi Microsoft ve Adobe tarafından ortaklaşa ortaklaşa geliştirilmiştir ve zengin bir gelişmiş tipografik özellikler sunar. <xref:System.Windows.Documents.Typography> nesnesi, OpenType yazı tiplerinin stil alternatifleri ve süslemeler gibi gelişmiş özelliklerinin çoğunu açığa çıkarır. Windows SDK, Pericles ve Pescadero fontları gibi zengin özelliklerle tasarlanan örnek bir OpenType yazı tipi kümesi sağlar. Daha fazla bilgi için bkz. [örnek OpenType yazı tipi paketi](sample-opentype-font-pack.md).  
+<a name="Rich_Typography"></a>
+## <a name="rich-typography"></a>Zengin Tipografi  
+ OpenType yazı tipi biçimi TrueType® font biçiminin bir uzantısıdır. OpenType yazı tipi biçimi Microsoft ve Adobe tarafından ortaklaşa geliştirilmiştir ve zengin bir gelişmiş tipografik özellik yelpazesine sahiptir. Nesne, <xref:System.Windows.Documents.Typography> stil alternatifleri ve swashes gibi OpenType yazı tiplerinin gelişmiş özelliklerinin çoğunu ortaya çıkarır. Windows SDK, Perikles ve Pescadero yazı tipleri gibi zengin özelliklere sahip bir dizi örnek OpenType yazı tipi sağlar. Daha fazla bilgi için [Örnek OpenType Yazı Tipi Paketi'ne](sample-opentype-font-pack.md)bakın.  
   
- Pericles OpenType yazı tipi, standart glif kümesine stil alternatifleri sağlayan ek glifler içerir. Aşağıdaki metin, biçimsel alternatif glifleri görüntüler.  
+ Pericles OpenType yazı tipi, standart glifler kümesine stil alternatifleri sağlayan ek glifler içerir. Aşağıdaki metin de stilistik alternatif glifleri görüntüler.  
   
- ![OpenType biçimsel alternatif glifleri kullanan metin](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "OpenType biçimsel alternatif glifleri kullanan metin")  
+ ![OpenType stilistik alternatif glifleri kullanarak metin](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "OpenType stilistik alternatif glifleri kullanarak metin")  
   
- Süslemeler, kaligrafi ile sık kullanılan süslemeler ile ilişkili olan dekoratif karakterlerdir. Aşağıdaki metin Pescadero yazı tipi için standart ve dalgalı glifleri görüntüler.  
+ Swashes genellikle kaligrafi ile ilişkili ayrıntılı süsleme kullanan dekoratif glifler vardır. Aşağıdaki metin Pescadero yazı tipi için standart ve swash glifleri görüntüler.  
   
- ![OpenType standart ve dalgalı glifleri kullanan metin](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "OpenType standart ve dalgalı glifleri kullanan metin")  
+ ![OpenType standardı ve swash glifleri kullanan metin](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "OpenType standardı ve swash glifleri kullanan metin")  
   
- OpenType özellikleri hakkında daha fazla bilgi için bkz. [OpenType yazı tipi özellikleri](opentype-font-features.md).  
+ OpenType özellikleri hakkında daha fazla bilgi için [OpenType Font Özellikleri'ne](opentype-font-features.md)bakın.  
   
-<a name="Enhanced_International_Text_Support"></a>   
-## <a name="enhanced-international-text-support"></a>Gelişmiş uluslararası metin desteği  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], aşağıdaki özellikleri sağlayarak gelişmiş uluslararası metin desteği sağlar:  
+<a name="Enhanced_International_Text_Support"></a>
+## <a name="enhanced-international-text-support"></a>Geliştirilmiş Uluslararası Metin Desteği  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]aşağıdaki özellikleri sağlayarak gelişmiş uluslararası metin desteği sağlar:  
   
-- Uyarlamalı ölçüm kullanarak tüm yazma sistemlerinde otomatik satır aralığı.  
+- Tüm yazma sistemlerinde, uyarlanabilir ölçüm kullanarak otomatik satır aralığı.  
   
-- Uluslararası metin için geniş destek. Daha fazla bilgi için bkz. [WPF Için Genelleştirme](globalization-for-wpf.md).  
+- Uluslararası metin için geniş destek. Daha fazla bilgi [için WPF için Küreselleşme'ye](globalization-for-wpf.md)bakın.  
   
-- Dil temelli satır sonu, heceleme ve gerekçe.  
+- Dil kılavuzlu satır kesme, heceleme ve yaslama.  
   
-<a name="Enhanced_Font_Support"></a>   
-## <a name="enhanced-font-support"></a>Gelişmiş yazı tipi desteği  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], aşağıdaki özellikleri sağlayarak gelişmiş yazı tipi desteği sağlar:  
+<a name="Enhanced_Font_Support"></a>
+## <a name="enhanced-font-support"></a>Geliştirilmiş Font Desteği  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]aşağıdaki özellikleri sağlayarak gelişmiş yazı tipi desteği sağlar:  
   
-- Tüm metinler için Unicode. Yazı tipi davranışı ve seçimi artık karakter kümesi veya kod sayfası gerektirmez.  
+- Tüm metinler için unicode. Yazı tipi davranışı ve seçimi artık charset veya codepage gerektirmez.  
   
-- Sistem yerel ayarı gibi genel ayarlardan bağımsız yazı tipi davranışı.  
+- Sistem yerel ayarları gibi genel ayarlardan bağımsız yazı tipi davranışı.  
   
-- <xref:System.Windows.Media.FontFamily>tanımlamak için <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>ve <xref:System.Windows.FontStyle> türlerini ayırın. Bu, bir yazı tipi ailesini tanımlamak için italik ve kalın olan Boole birleşimlerinin kullanıldığı Win32 programından daha fazla esneklik sağlar.  
+- Ayrı <xref:System.Windows.FontWeight> <xref:System.Windows.FontStretch>, <xref:System.Windows.FontStyle> ve bir <xref:System.Windows.Media.FontFamily>tanımlamak için türleri . Bu, boolean italik ve kalın birleşimlerinin bir yazı tipi ailesini tanımlamak için kullanıldığı Win32 programlamasına göre daha fazla esneklik sağlar.  
   
-- Yazma yönü (yatay veya dikey), yazı tipi adından bağımsız olarak işlenir.  
+- Yazı tipi adından bağımsız olarak işlenen yazı yönü (yatay karşı dikey) işlenir.  
   
-- Bileşik yazı tipi teknolojisini kullanarak taşınabilir XML dosyasına yazı tipi bağlama ve yazı tipi düşürme. Bileşik yazı tipleri, tam aralıklı çok dilli yazı tiplerinin oluşturulmasını sağlar. Bileşik yazı tipleri ayrıca eksik karakterlerin görüntülenmesini önleyen bir mekanizma sağlar. Daha fazla bilgi için <xref:System.Windows.Media.FontFamily> sınıfındaki açıklamalara bakın.  
+- Bileşik yazı tipi teknolojisini kullanarak taşınabilir bir XML dosyasında yazı tipi bağlama ve yazı tipi geri dönüş. Bileşik yazı tipleri, tam kapsamlı çok dilli yazı tiplerinin yapımına olanak sağlar. Bileşik yazı tipleri de eksik gliflerin görüntülenmesini önleyen bir mekanizma sağlar. Daha fazla bilgi için sınıftaki açıklamalara <xref:System.Windows.Media.FontFamily> bakın.  
   
-- Tek dildeki bir yazı tipi grubu kullanılarak bileşik yazı tiplerinden oluşturulan uluslararası yazı tipleri. Bu, birden çok dil için yazı tipi geliştirirken kaynak maliyetlerine kaydedilir.  
+- Tek dilli yazı tipleri grubu kullanarak bileşik yazı tiplerinden oluşturulmuş uluslararası yazı tipleri. Bu, birden çok dil için yazı tipleri geliştirirken kaynak maliyetlerinde tasarruf sağlar.  
   
-- Belge taşınabilirliği sağlayan bileşik yazı tipleri bir belgeye katıştırılır. Daha fazla bilgi için <xref:System.Windows.Media.FontFamily> sınıfındaki açıklamalara bakın.  
+- Belgeye katıştılmış bileşik yazı tipleri, belge taşınabilirliği sağlar. Daha fazla bilgi için sınıftaki açıklamalara <xref:System.Windows.Media.FontFamily> bakın.  
   
-<a name="New_Text_APIs"></a>   
-## <a name="new-text-application-programming-interfaces-apis"></a>Yeni metin uygulama programlama arabirimleri (API 'Ler)  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], geliştiricilerin uygulamalarına metin eklerken kullanacağı birkaç metin API 'si sağlar. Bu API 'Ler üç kategoride gruplandırılır:  
+<a name="New_Text_APIs"></a>
+## <a name="new-text-application-programming-interfaces-apis"></a>Yeni Metin Uygulama Programlama Arayüzleri (API'ler)  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]geliştiricilerin uygulamalarına metin dahil ederken kullanmaları için çeşitli metin API'leri sağlar. Bu API'ler üç kategoriye ayrılır:  
   
-- **Düzen ve Kullanıcı arabirimi**. Grafik Kullanıcı arabirimi (GUI) için ortak metin denetimleri.  
+- **Düzen ve kullanıcı arabirimi.** Grafik kullanıcı arabirimi (GUI) için ortak metin denetimleri.  
   
-- **Hafif metin çizme**. Doğrudan nesnelere metin çizmenizi sağlar.  
+- **Hafif metin çizimi.** Metni doğrudan nesnelere çizmenizi sağlar.  
   
-- **Gelişmiş metin biçimlendirme**. Özel bir metin altyapısı uygulamanıza olanak tanır.  
+- **Gelişmiş metin biçimlendirme.** Özel bir metin altyapısı uygulamanızı sağlar.  
   
-### <a name="layout-and-user-interface"></a>Düzen ve Kullanıcı arabirimi  
- En yüksek işlevsellik düzeyinde, metin API 'Leri, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock>ve <xref:System.Windows.Controls.TextBox>gibi ortak [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] denetimleri sağlar. Bu denetimler, bir uygulama içinde temel [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğeleri sağlar ve metin sunmak ve bunlarla etkileşim kurmak için kolay bir yol sunar. <xref:System.Windows.Controls.RichTextBox> ve <xref:System.Windows.Controls.PasswordBox> gibi denetimler daha gelişmiş veya özel metin işleme sağlar. <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection>ve <xref:System.Windows.Documents.TextPointer> gibi sınıflar yararlı metin işlemesini etkinleştirir. Bu [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] denetimleri, metni oluşturmak için kullanılan yazı tipini denetlemenizi sağlayan <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>ve <xref:System.Windows.Controls.Control.FontStyle%2A>gibi özellikler sağlar.  
+### <a name="layout-and-user-interface"></a>Düzen ve Kullanıcı Arabirimi  
+ En [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] üst düzeyde işlevsellik, metin API'leri <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock>, <xref:System.Windows.Controls.TextBox>ve . Bu denetimler [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bir uygulama içindeki temel öğeleri sağlar ve metin sunmak ve metinle etkileşimde bulunmanın kolay bir yolunu sunar. Daha gelişmiş <xref:System.Windows.Controls.RichTextBox> <xref:System.Windows.Controls.PasswordBox> veya özel metin işleme gibi denetimler ve etkinleştirme. Ve , <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection>gibi <xref:System.Windows.Documents.TextPointer> sınıflar ve yararlı metin işleme sağlar. Bu [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] denetimler, <xref:System.Windows.Controls.Control.FontFamily%2A>metni <xref:System.Windows.Controls.Control.FontSize%2A>işlemek <xref:System.Windows.Controls.Control.FontStyle%2A>için kullanılan yazı tipini denetlemenizi sağlayan , , ve , gibi özellikler sağlar.  
   
-#### <a name="using-bitmap-effects-transforms-and-text-effects"></a>Bit eşlem efektleri, dönüşümler ve metin efektlerini kullanma  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bit eşlem efektleri, dönüşümler ve metin etkileri gibi özellikleri kullanarak metnin görsel açıdan ilgi çekici kullanımlarını oluşturmanızı sağlar. Aşağıdaki örnek, metin için uygulanan tipik bir gölge etkisi türünü gösterir.  
+#### <a name="using-bitmap-effects-transforms-and-text-effects"></a>Bitmap Efektlerini, Dönüşümleri ve Metin Efektlerini Kullanma  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bitmap efektleri, dönüşümler ve metin efektleri gibi özellikleri kullanarak metnin görsel olarak ilginç kullanımlarını oluşturmanıza olanak tanır. Aşağıdaki örnek, metne uygulanan tipik bir açılır gölge efekti türünü gösterir.  
   
- ![Soflük &#61; 0,25 ile metin gölgesi](./media/typography-in-wpf/drop-shadow-text-effect.jpg) 
+ ![Yumuşaklıklı metin gölgesi 0,25 &#61;](./media/typography-in-wpf/drop-shadow-text-effect.jpg)
   
- Aşağıdaki örnekte, bir gölge efekti ve metne uygulanan gürültü gösterilmektedir.  
+ Aşağıdaki örnekte, metne uygulanan bir damla gölge efekti ve gürültü gösterilmektedir.  
   
- ![Gürültü içeren metin gölgesi](./media/typography-in-wpf/drop-shadow-noise-text.jpg) 
+ ![Gürültüiçeren metin gölgesi](./media/typography-in-wpf/drop-shadow-noise-text.jpg)
   
- Aşağıdaki örnek, metne uygulanan bir dış ışıma efektini gösterir.  
+ Aşağıdaki örnekte, metne uygulanan bir dış parlaklık efekti gösterilmektedir.  
   
  ![OuterGlowBitmapEffect kullanarak metin gölgesi](./media/typography-in-wpf/text-shadow-glow-effect.jpg)
   
- Aşağıdaki örnek, metne uygulanan bir bulanıklaştırma efektini gösterir.  
+ Aşağıdaki örnekte metne uygulanan bulanıklık efekti gösterilmektedir.  
   
- ![Bir BlurBitmapEffect kullanarak metin gölgesi](./media/typography-in-wpf/text-shadow-blur-effect.jpg)  
+ ![BlurBitmapEffect kullanarak metin gölgesi](./media/typography-in-wpf/text-shadow-blur-effect.jpg)  
 
- Aşağıdaki örnek, x ekseni ve y ekseni üzerinde %150 ile ölçeklenmiş üçüncü metin satırındaki 150 metnin ikinci satırını gösterir.  
+ Aşağıdaki örnek, x ekseni boyunca %150 ölçeklendirilen ikinci metin satırını ve y ekseni boyunca %150 ölçeklendirilen üçüncü metin satırını gösterir.  
   
- ![ScaleTransform kullanılarak Ölçeklendirilmiş metin](./media/typography-in-wpf/scaled-text-scaletransform.jpg) 
+ ![Bir ScaleTransform kullanılarak ölçeklendirilen metin](./media/typography-in-wpf/scaled-text-scaletransform.jpg)
   
- Aşağıdaki örnek, x ekseni üzerinde eğilmiş metni gösterir.  
+ Aşağıdaki örnek, x ekseni boyunca eğriltilen metni gösterir.  
   
- ![SkewTransform kullanarak eğilmiş metin](./media/typography-in-wpf/skewed-transformed-text.jpg)
+ ![SkewTransform kullanılarak eğriltilen metin](./media/typography-in-wpf/skewed-transformed-text.jpg)
   
- <xref:System.Windows.Media.TextEffect> nesnesi, metni bir metin dizesinde bir veya daha fazla karakter grubu olarak değerlendirme olanağı sağlayan bir yardımcı nesnedir. Aşağıdaki örnek, döndürülmekte olan ayrı bir karakteri gösterir. Her karakter, 1 saniyelik aralıklarla bağımsız olarak döndürülür.  
+ <xref:System.Windows.Media.TextEffect> Nesne, metin dizesinde bir veya daha fazla karakter grubu olarak metni ele alabildiğiniz yardımcı nesnedir. Aşağıdaki örnekte, döndürülen tek bir karakter gösterilmektedir. Her karakter 1 saniyelik aralıklarla bağımsız olarak döndürülür.  
   
- ![Metin döndürme metin efektinin ekran görüntüsü](./media/typography-in-wpf/rotating-text-effect.jpg) 
+ ![Metin efekti dönen metin ekran görüntüsü](./media/typography-in-wpf/rotating-text-effect.jpg)
   
-#### <a name="using-flow-documents"></a>Flow belgelerini kullanma  
- Ortak [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] denetimlerine ek olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Documents.FlowDocument> öğesi metin sunumu için bir düzen denetimi sunar. <xref:System.Windows.Controls.DocumentViewer> öğesiyle birlikte <xref:System.Windows.Documents.FlowDocument> öğesi, değişen düzen gereksinimlerine sahip büyük miktarda metin için bir denetim sağlar. Düzen denetimleri, <xref:System.Windows.Documents.Typography> nesnesi ve diğer [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] denetimlerinin yazı tipiyle ilişkili özellikleri aracılığıyla Gelişmiş tipografi erişimi sağlar.  
+#### <a name="using-flow-documents"></a>Akış Belgelerini Kullanma  
+ Ortak [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] denetimlere ek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olarak, metin sunumu için <xref:System.Windows.Documents.FlowDocument> bir düzen denetimi sunar- öğe. Öğe, <xref:System.Windows.Documents.FlowDocument> <xref:System.Windows.Controls.DocumentViewer> öğeyle birlikte, değişen düzen gereksinimlerine sahip büyük miktarda metin için bir denetim sağlar. Düzen <xref:System.Windows.Documents.Typography> denetimleri, nesne ve yazı tipi ile ilgili diğer [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] denetimlerin özellikleri aracılığıyla gelişmiş tipografiye erişim sağlar.  
   
- Aşağıdaki örnek, arama, gezinme, sayfalandırma ve içerik ölçekleme desteği sağlayan bir <xref:System.Windows.Controls.FlowDocumentReader>barındırılan metin içeriğini gösterir.  
+ Aşağıdaki örnek, arama, gezinme, pagination ve içerik ölçekleme desteği sağlayan bir <xref:System.Windows.Controls.FlowDocumentReader>, barındırılan metin içeriğini gösterir.  
   
  ![OpenType yazı tiplerini gösteren ekran görüntüsü.](./media/typography-in-wpf/typography-text-flowdocumentreader.png)
   
- Daha fazla bilgi için bkz. [WPF Içindeki belgeler](documents-in-wpf.md).  
+ Daha fazla bilgi için [WPF'deki Belgeler'e](documents-in-wpf.md)bakın.  
   
-### <a name="lightweight-text-drawing"></a>Hafif metin çizme  
- <xref:System.Windows.Media.DrawingContext> nesnesinin <xref:System.Windows.Media.DrawingContext.DrawText%2A> yöntemini kullanarak nesneleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] doğrudan metin çizebilirsiniz. Bu yöntemi kullanmak için bir <xref:System.Windows.Media.FormattedText> nesnesi oluşturursunuz. Bu nesne, metin içindeki her karakterin tek tek biçimlendirilebileceği çok satırlı metin çizmenizi sağlar. <xref:System.Windows.Media.FormattedText> nesnesinin işlevselliği, Windows API 'sindeki DrawText bayraklarının işlevlerinin çoğunu içerir. Ayrıca, <xref:System.Windows.Media.FormattedText> nesnesi, metin sınırlarını aştığında üç nokta da gösterildiği üç nokta desteği gibi işlevler içerir. Aşağıdaki örnek, ikinci ve üçüncü sözcüklere doğrusal bir gradyan dahil olmak üzere birkaç biçim uygulanmış olan metni gösterir.  
+### <a name="lightweight-text-drawing"></a>Hafif Metin Çizimi  
+ Nesnenin yöntemini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Media.DrawingContext.DrawText%2A> kullanarak doğrudan nesnelere metin çizebilirsiniz. <xref:System.Windows.Media.DrawingContext> Bu yöntemi kullanmak için <xref:System.Windows.Media.FormattedText> bir nesne oluşturursunuz. Bu nesne, metindeki her karakterin ayrı ayrı biçimlendirilebildiği çok satırlı metin çizmenize olanak tanır. <xref:System.Windows.Media.FormattedText> Nesnenin işlevselliği, Windows API'daki DrawText bayraklarının işlevselliğinin çoğunu içerir. Ayrıca, <xref:System.Windows.Media.FormattedText> nesne, metin sınırlarını aştığında bir elipsin görüntülendiği elips desteği gibi işlevler içerir. Aşağıdaki örnekte, ikinci ve üçüncü sözcüklerde doğrusal bir degrade de dahil olmak üzere çeşitli biçimler uygulanmış metin gösterilmektedir.  
   
- ![FormattedText nesnesi kullanılarak görünen metin](./media/typography-in-wpf/text-formatted-linear-gradient.jpg) 
+ ![BiçimlendirilmişMetin nesnesi kullanılarak görüntülenen metin](./media/typography-in-wpf/text-formatted-linear-gradient.jpg)
   
- Biçimlendirilen metni <xref:System.Windows.Media.Geometry> nesnelerine dönüştürebilirsiniz, böylece görsel açıdan ilgi çekici metin türlerini oluşturabilirsiniz. Örneğin, bir metin dizesinin ana hattını temel alan bir <xref:System.Windows.Media.Geometry> nesnesi oluşturabilirsiniz.  
+ Biçimlendirilmiş metni nesnelere <xref:System.Windows.Media.Geometry> dönüştürerek görsel olarak ilginç başka metin türleri oluşturabilirsiniz. Örneğin, bir metin <xref:System.Windows.Media.Geometry> dizesinin anahatlarını temel alan bir nesne oluşturabilirsiniz.  
   
- ![Doğrusal gradyan fırçası kullanan metin ana hattı](./media/typography-in-wpf/text-outline-linear-gradient.jpg)  
+ ![Doğrusal degrade fırçası kullanarak metin anahattı](./media/typography-in-wpf/text-outline-linear-gradient.jpg)  
   
- Aşağıdaki örneklerde, dönüştürülmüş metnin vuruş, dolgusu ve vurgulanmasını değiştirerek ilginç görsel etkiler oluşturmanın birkaç yolu gösterilmektedir.  
+ Aşağıdaki örnekler, dönüştürülen metnin konturunu, dolgusunu ve vurgusunu değiştirerek ilginç görsel efektler oluşturmanın çeşitli yollarını göstermektedir.  
   
- ![Fill ve Stroke için farklı renkler içeren metin](./media/typography-in-wpf/fill-stroke-text-effect.jpg)  
+ ![Dolgu ve kontur için farklı renklere sahip metin](./media/typography-in-wpf/fill-stroke-text-effect.jpg)  
   
- ![Görüntüye resim fırçası uygulanmış metin](./media/typography-in-wpf/image-brush-application.jpg)
+ ![Kontura uygulanan görüntü fırçası ile metin](./media/typography-in-wpf/image-brush-application.jpg)
   
- ![Kontura ve vurgulamaya uygulanan resim fırçasının bulunduğu metin](./media/typography-in-wpf/image-brush-text-application.jpg)
+ ![Kontur ve vurgulamaya uygulanan görüntü fırçası ile metin](./media/typography-in-wpf/image-brush-text-application.jpg)
   
- <xref:System.Windows.Media.FormattedText> nesnesi hakkında daha fazla bilgi için bkz. [biçimli metin çizme](drawing-formatted-text.md).  
+ <xref:System.Windows.Media.FormattedText> Nesne hakkında daha fazla bilgi için, Çizim [Biçimlendirilmiş Metin'e](drawing-formatted-text.md)bakın.  
   
 ### <a name="advanced-text-formatting"></a>Gelişmiş Metin Biçimlendirme  
- Metin API 'Lerinin en gelişmiş düzeyinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Media.TextFormatting.TextFormatter> nesnesini ve <xref:System.Windows.Media.TextFormatting> ad alanındaki diğer türleri kullanarak özel metin düzeni oluşturma olanağı sunar. <xref:System.Windows.Media.TextFormatting.TextFormatter> ve ilişkili sınıflar, kendi karakter formatları, paragraf stilleri, satır sonu kuralları ve uluslararası metin için diğer düzen özellikleri tanımlarını destekleyen özel metin düzeni uygulamanıza olanak tanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] metin düzeni desteğinin varsayılan uygulamasını geçersiz kılmak isteyebileceğiniz çok az durum vardır. Ancak, bir metin düzenlemesi denetimi veya uygulaması oluşturuyorsanız, varsayılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamasından farklı bir uygulamaya sahip olmanız gerekebilir.  
+ Metin API'lerinin en gelişmiş [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzeyinde, <xref:System.Windows.Media.TextFormatting.TextFormatter> <xref:System.Windows.Media.TextFormatting> ad alanındaki nesneyi ve diğer türleri kullanarak özel metin düzeni oluşturma olanağı sunar. <xref:System.Windows.Media.TextFormatting.TextFormatter> Ve ilişkili sınıflar, karakter biçimleri, paragraf stilleri, satır kesme kuralları ve uluslararası metin için diğer düzen özelliklerini kendi tanımınızı destekleyen özel metin düzeni uygulamanıza olanak sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Metin düzeni desteğinin varsayılan uygulamasını geçersiz kılmak istediğiniz çok az servis vardır. Ancak, metin düzenleme denetimi veya uygulaması oluşturuyorsanız, varsayılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamadan farklı bir uygulama isteyebilirsiniz.  
   
- Geleneksel bir metin API 'sinin aksine <xref:System.Windows.Media.TextFormatting.TextFormatter>, bir dizi geri arama yöntemi aracılığıyla metin düzeni istemcisiyle etkileşime girer. İstemcinin bu yöntemleri <xref:System.Windows.Media.TextFormatting.TextSource> sınıfının bir uygulamasında sağlamasını gerektirir. Aşağıdaki diyagramda, istemci uygulaması ve <xref:System.Windows.Media.TextFormatting.TextFormatter>arasındaki metin düzeni etkileşimi gösterilmektedir.  
+ Geleneksel metin API'sinin <xref:System.Windows.Media.TextFormatting.TextFormatter> aksine, bir dizi geri arama yöntemi yle metin düzeni istemcisi ile etkileşim kurar. Bu <xref:System.Windows.Media.TextFormatting.TextSource> sınıfın bir uygulamada bu yöntemleri sağlamak için istemci gerektirir. Aşağıdaki diyagram, istemci uygulaması ve <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
  ![Metin düzeni istemcisi ve TextFormatter diyagramı](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   
- Özel metin düzeni oluşturma hakkında daha fazla bilgi için bkz. [Gelişmiş metin biçimlendirme](advanced-text-formatting.md).  
+ Özel metin düzeni oluşturma hakkında daha fazla bilgi için [Gelişmiş Metin Biçimlendirme'ye](advanced-text-formatting.md)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

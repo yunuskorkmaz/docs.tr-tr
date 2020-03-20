@@ -2,22 +2,22 @@
 title: Tanılama için Windows Yönetim İzlemesini Kullanma
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 26758c8a4f537f9522d5ab650ae6b3cd8f044db2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 0c803e3988f7a63980d991190db87c263c992b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837447"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185683"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Tanılama için Windows Yönetim İzlemesini Kullanma
-Windows Communication Foundation (WCF) bir WCF Windows Yönetim Araçları (WMI) sağlayıcısı aracılığıyla çalışma zamanında bir hizmetin İnceleme verilerini gösterir.  
+Windows Communication Foundation (WCF), bir WCF Windows Management Instrumentation (WMI) sağlayıcısı aracılığıyla bir hizmetin denetim verilerini çalışma zamanında ortaya çıkarır.  
   
-## <a name="enabling-wmi"></a>WMI etkinleştiriliyor  
- WMI, Microsoft 'un web tabanlı kuruluş yönetimi (WBEM) standardı uygulamasıdır. WMI SDK hakkında daha fazla bilgi için bkz. [Windows Yönetim Araçları](/windows/desktop/WmiSdk/wmi-start-page). WBEM, uygulamaların yönetim araçları 'nı dış yönetim araçlarına nasıl sergilekullandığını gösteren bir sektör standardıdır.  
+## <a name="enabling-wmi"></a>WMI'yi etkinleştirme  
+ WMI, Microsoft'un Web Tabanlı Kurumsal Yönetim (WBEM) standardını uygulamasıdır. WMI SDK hakkında daha fazla bilgi için [Windows Management Instrumentation'a](/windows/desktop/WmiSdk/wmi-start-page)bakın. WBEM, uygulamaların yönetim araçlarını dış yönetim araçlarına nasıl maruz bıraktamaları için bir endüstri standardıdır.  
   
- WMI sağlayıcısı, çalışma zamanında WBEM ile uyumlu bir arabirim aracılığıyla izleme sunan bir bileşendir. Öznitelik/değer çiftlerine sahip bir WMI nesneleri kümesinden oluşur. Çiftler bir dizi basit türden olabilir. Yönetim Araçları, çalışma zamanında arabirim aracılığıyla hizmetlere bağlanabilir. WCF, adresler, bağlamalar, davranışlar ve dinleyicileri gibi hizmetlerin özniteliklerini gösterir.  
+ WMI sağlayıcısı, WBEM uyumlu bir arabirim aracılığıyla çalışma zamanında enstrümantasyonu ortaya çıkaran bir bileşendir. Öznitelik/değer çiftleri olan bir WMI nesne kümesinden oluşur. Çiftleri basit türleri bir dizi olabilir. Yönetim araçları, çalışma zamanında arabirim üzerinden hizmetlere bağlanabilir. WCF, adresler, bağlamalar, davranışlar ve dinleyiciler gibi hizmetlerin özniteliklerini ortaya çıkarır.  
   
- Yerleşik WMI sağlayıcısı, uygulamanın yapılandırma dosyasında etkinleştirilebilir. Bu, aşağıdaki örnek yapılandırmada gösterildiği gibi [\<System. serviceModel >](../../../configure-apps/file-schema/wcf/system-servicemodel.md) bölümünde [\<Tanılama >](../../../configure-apps/file-schema/wcf/diagnostics.md) `wmiProviderEnabled` özniteliği aracılığıyla yapılır.  
+ Yerleşik WMI sağlayıcısı uygulamanın yapılandırma dosyasında etkinleştirilebilir. Bu, aşağıdaki `wmiProviderEnabled` örnek yapılandırmada gösterildiği [ \<gibi, system.serviceModel>](../../../configure-apps/file-schema/wcf/system-servicemodel.md) bölümünde [ \<>tanılama](../../../configure-apps/file-schema/wcf/diagnostics.md) özniteliği ile yapılır.  
   
 ```xml  
 <system.serviceModel>  
@@ -27,55 +27,55 @@ Windows Communication Foundation (WCF) bir WCF Windows Yönetim Araçları (WMI)
 </system.serviceModel>  
 ```  
   
- Bu yapılandırma girişi bir WMI arabirimi sunar. Yönetim uygulamaları artık bu arabirimden bağlanabilir ve uygulamanın yönetim araçlarına erişebilir.  
+ Bu yapılandırma girişi bir WMI arabirimini ortaya çıkarır. Yönetim uygulamaları artık bu arayüz üzerinden bağlanabilir ve uygulamanın yönetim enstrümantasyonuna erişebilir.  
   
-## <a name="accessing-wmi-data"></a>WMI verilerine erişme  
- WMI verilerine birçok farklı yolla erişilebilir. Microsoft, betikler, Visual Basic uygulamalar, C++ uygulamalar ve .NET Framework Için WMI API 'leri sağlar. Daha fazla bilgi için bkz. [WMI kullanma](https://go.microsoft.com/fwlink/?LinkId=95183).  
+## <a name="accessing-wmi-data"></a>WMI Verilerine Erişim  
+ WMI verilerine birçok farklı şekilde erişilebilir. Microsoft komut dosyaları, Visual Basic uygulamaları, C++ uygulamaları ve .NET Framework için WMI API'leri sağlar. Daha fazla bilgi için [WMI kullanma'ya](/windows/win32/wmisdk/using-wmi)bakın.  
   
 > [!CAUTION]
-> WMI verilerine programlı olarak erişmek için .NET Framework sağlanan yöntemleri kullanırsanız, bu tür yöntemlerin bağlantı kurulurken özel durumlar oluşturduğunu bilmelisiniz. <xref:System.Management.ManagementObject> örneğinin oluşturulması sırasında bağlantı kurulmadı, ancak gerçek veri değişimini içeren ilk istek. Bu nedenle, olası özel durumları yakalamak için bir `try..catch` bloğu kullanmanız gerekir.  
+> .NET Framework sağlanan yöntemleri nizveolarak WMI verilerine erişmek için kullanıyorsanız, bağlantı kurulduğunda bu tür yöntemlerin özel durumlar oluşturabileceğini unutmayın. <xref:System.Management.ManagementObject> Bağlantı, örneğin yapımı sırasında değil, gerçek veri alışverişini içeren ilk istek üzerine kurulur. Bu nedenle, olası `try..catch` özel durumları yakalamak için bir blok kullanmanız gerekir.  
   
- İzleme ve mesaj günlüğü düzeyini ve WMI 'daki `System.ServiceModel` izleme kaynağı için ileti günlüğe kaydetme seçeneklerini değiştirebilirsiniz. Bu, bu Boole özelliklerini sunan [AppDomainInfo](appdomaininfo.md) örneğine erişerek yapılabilir: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, `LogMalformedMessages`ve `TraceLevel`. Bu nedenle, ileti günlüğe kaydetme için bir izleme dinleyicisi yapılandırırsanız, ancak bu seçenekleri yapılandırmada `false` ayarlarsanız, uygulama çalışırken `true` daha sonra değiştirebilirsiniz. Bu işlem, çalışma zamanında ileti günlüğe kaydetmeyi etkin bir şekilde etkinleştirir. Benzer şekilde, yapılandırma dosyanızda ileti günlüğünü etkinleştirirseniz, WMI kullanarak çalışma zamanında devre dışı bırakabilirsiniz.  
+ İzleme ve ileti günlüğe kaydetme düzeyini ve WMI'deki `System.ServiceModel` izleme kaynağı için ileti günlüğe kaydetme seçeneklerini değiştirebilirsiniz. Bu [AppDomainInfo](appdomaininfo.md) örneğine erişerek yapılabilir, hangi bu Boolean `LogMessagesAtServiceLevel` `LogMessagesAtTransportLevel`özellikleri `LogMalformedMessages`ortaya `TraceLevel`çıkarır: , , ve . Bu nedenle, ileti günlüğe kaydetme için bir izleme dinleyicisi yapılandırırsanız, ancak bu seçenekleri `false` yapılandırmada ayarlarsanız, bunları daha sonra uygulama çalışırken değiştirebilirsiniz. `true` Bu, çalışma zamanında ileti günlüğe kaydetmeyi etkin bir şekilde etkinleştirecektir. Benzer şekilde, yapılandırma dosyanızda ileti günlüğe kaydetmeyi etkinleştiriseniz, WMI kullanarak çalışma zamanında devre dışı kalabilirsiniz.  
   
- İleti günlüğe kaydetme için bir ileti günlüğe kaydetme `System.ServiceModel` veya izleme dinleyicilerinin yapılandırma dosyasında belirtilmediği durumlarda, değişiklikler WMI tarafından kabul edilse bile değişikliklerden hiçbiri geçerli değildir. İlgili dinleyicileri doğru şekilde ayarlama hakkında daha fazla bilgi için bkz. [Ileti günlüğe kaydetmeyi yapılandırma](../configuring-message-logging.md) ve [izlemeyi yapılandırma](../tracing/configuring-tracing.md). Yapılandırma tarafından belirtilen diğer tüm izleme kaynaklarının izleme düzeyi uygulama başlatıldığında etkilidir ve değiştirilemez.  
+ İleti günlüğe kaydetme için hiçbir ileti günlüğe kaydetme `System.ServiceModel` dinleyicisi yoksa veya yapılandırma dosyasında izleme için izleme dinleyicisi belirtilmemişse, değişiklikler WMI tarafından kabul edilse bile değişikliklerinizin hiçbirinin geçerli olmadığını unutmayın. İlgili dinleyicilerin düzgün bir şekilde ayarlanması hakkında daha fazla bilgi için Bkz. [İleti Günlüğe Kaydetme](../configuring-message-logging.md) ve [İzlemeyi Yapılandırma.](../tracing/configuring-tracing.md) Yapılandırma tarafından belirtilen diğer tüm izleme kaynaklarının izleme düzeyi, uygulama başladığında etkilidir ve değiştirilemez.  
   
- WCF, betik oluşturma için bir `GetOperationCounterInstanceName` yöntemi sunar. Bu yöntem, bir işlem adı ile sağlarsanız bir performans sayacı örnek adı döndürür. Ancak, girişinizi doğrulamaz. Bu nedenle, yanlış bir işlem adı sağlarsanız, yanlış bir sayaç adı döndürülür.  
+ WCF komut `GetOperationCounterInstanceName` dosyası için bir yöntem ortaya çıkarır. Bu yöntem, bir işlem adı ile sağlarsanız bir performans sayacı örnek adı döndürür. Ancak, giriş doğrulamıyor. Bu nedenle, yanlış bir işlem adı sağlarsanız, yanlış bir sayaç adı döndürülür.  
   
- `Service` örneğinin `OutgoingChannel` özelliği, başka bir hizmete bağlanmak için bir hizmet tarafından açılan kanalları saymaz (hedef hizmete yönelik WCF istemcisi, `Service` yönteminde oluşturulmadıysa).  
+ WCF istemcisi hedef hizmete `OutgoingChannel` `Service` metodun içinde oluşturulmazsa, örneğin özelliği başka bir hizmete bağlanmak için bir hizmet tarafından açılan kanalları saymaz. `Service`  
   
- **Dikkat** edin WMI yalnızca 3 ondalık noktaya kadar <xref:System.TimeSpan> bir değeri destekler. Örneğin, hizmetiniz özelliklerinden birini <xref:System.TimeSpan.MaxValue>olarak ayarladıysanız, WMI üzerinden görüntülendiğinde 3 ondalık noktadan sonra değeri kesilir.  
+ **Dikkat** WMI yalnızca <xref:System.TimeSpan> 3 ondalık noktaya kadar olan bir değeri destekler. Örneğin, hizmetiniz özelliklerinden birini <xref:System.TimeSpan.MaxValue>, WMI üzerinden görüntülendiğinde 3 ondalık noktadan sonra kesilir.  
   
 ## <a name="security"></a>Güvenlik  
- WCF WMI sağlayıcısı bir ortamdaki hizmetlerin bulunmasına izin verdiğinden, buna erişim vermek için çok dikkatli olmanız gerekir. Varsayılan yalnızca yönetici erişimini rahatladıysanız, ortamınızda hassas verilere daha az güvenilir taraflar erişebilmeye izin verebilirsiniz. Özellikle, uzak WMI erişimiyle ilgili izinleri gevbir şekilde bırakırsanız, taşması saldırıları meydana gelebilir. Bir işlem aşırı sayıda WMI isteği ile taştığında, performansı düşebilir.  
+ WCF WMI sağlayıcısı bir ortamda hizmetlerin bulunmasına izin verdiği için, bu hizmete erişim sağlamak için çok dikkatli olmalısınız. Yalnızca varsayılan yönetici erişimini rahatlatırsanız, daha az güvenilen tarafların ortamınızdaki hassas verilere erişmesine izin verebilirsiniz. Özellikle, uzaktan WMI erişimi izinleri gevşetin, sel saldırıları oluşabilir. Bir işlem aşırı WMI istekleri yle su basarsa, performansı düşürülebilir.  
   
- Ayrıca, MOF dosyası için erişim izinlerine güveniyorsanız, daha az güvenilir taraflar WMI davranışını değiştirebilir ve WMI şemasında yüklenen nesneleri değiştirebilir. Örneğin, kritik verilerin yöneticiden kaldırılması veya bir özel durum doldurulmayan veya neden olmayan alanlar dosyaya eklenebileceği için alanlar kaldırılabilir.  
+ Buna ek olarak, MOF dosyası için erişim izinlerini gevşetirseniz, daha az güvenilen taraflar WMI'nin davranışını değiştirebilir ve WMI şemasına yüklenen nesneleri değiştirebilir. Örneğin, kritik verilerin yöneticiden gizlenmesi veya dosyaya doldurmayan veya özel durumlara neden olmayan alanlar eklenecek şekilde alanlar kaldırılabilir.  
   
- Varsayılan olarak, WCF WMI sağlayıcısı yönetici için "yürütme yöntemi", "sağlayıcı yazma" ve "hesabı etkinleştir" iznini ve ASP.NET, yerel hizmet ve ağ hizmeti için "hesabı etkinleştir" iznini verir. Özellikle, Windows dışı Vista platformlarında, ASP.NET hesabının WMI ServiceModel ad alanına okuma erişimi vardır. Bu ayrıcalıkları belirli bir kullanıcı grubuna vermek istemiyorsanız, WMI sağlayıcısını devre dışı bırakmanız gerekir (varsayılan olarak devre dışıdır) ya da belirli kullanıcı grubu için erişimi devre dışı bırakmanız gerekir.  
+ Varsayılan olarak, WCF WMI sağlayıcısı yönetici için "yürütme yöntemi", "sağlayıcı yazma" ve "hesap etkinleştirme" izni ve ASP.NET, Yerel Hizmet ve Ağ Hizmeti için "hesap etkinleştirme" izni verir. Özellikle, Windows Vista olmayan platformlarda, ASP.NET hesabı WMI ServiceModel ad alanına erişimi okumuştur. Bu ayrıcalıkları belirli bir kullanıcı grubuna vermek istemiyorsanız, WMI sağlayıcısını devre dışı bırakmanız (varsayılan olarak devre dışı bırakılır) veya belirli kullanıcı grubu için erişimi devre dışı bırakmanız gerekir.  
   
- Ayrıca, WMI 'yi yapılandırma yoluyla etkinleştirmeye çalıştığınızda, yetersiz kullanıcı ayrıcalıkları nedeniyle WMI etkinleştirilmemiş olabilir. Ancak, bu hatayı kaydetmek için olay günlüğüne hiçbir olay yazılmaz.  
+ Ayrıca, yapılandırma yoluyla WMI'yi etkinleştirmeye çalıştığınızda, kullanıcı ayrıcalığı yetersiz olduğu için WMI etkinleştirilemeyebilir. Ancak, bu hatayı kaydetmek için olay günlüğüne hiçbir olay yazılmamıştır.  
   
  Kullanıcı ayrıcalık düzeylerini değiştirmek için aşağıdaki adımları kullanın.  
   
-1. Başlat ' a ve ardından Çalıştır ' a tıklayıp **compmgmt. msc**yazın.  
+1. Başlat'ı tıklatın ve sonra çalıştır Ve **compmgmt.msc**yazın.  
   
-2. **Özellikler**' i seçmek için **Hizmetler ve uygulama/WMI denetimleri** öğesine sağ tıklayın.  
+2. **Özellikleri**seçmek için **Hizmetler ve Uygulama/WMI Denetimleri'ni** sağ tıklatın.  
   
-3. **Güvenlik** sekmesini seçin ve **kök/ServiceModel** ad alanına gidin. **Güvenlik** düğmesine tıklayın.  
+3. **Güvenlik** Sekmesi'ni seçin ve **Root/ServiceModel** ad alanına gidin. **Güvenlik** düğmesini tıklatın.  
   
-4. Erişimi denetlemek istediğiniz belirli bir grup veya kullanıcıyı seçin ve izinleri yapılandırmak için **Izin ver** veya **Reddet** onay kutusunu kullanın.  
+4. Erişimi denetlemek istediğiniz belirli grubu veya kullanıcıyı seçin ve izinleri yapılandırmak için **İzin Ver** veya **Reddet** onay kutusunu kullanın.  
   
-## <a name="granting-wcf-wmi-registration-permissions-to-additional-users"></a>Ek kullanıcılara WCF WMI kayıt Izinleri verme  
- WCF, yönetim verilerini WMI 'ya gösterir. Bu işlemi, bazen "ayrılmış sağlayıcı" olarak adlandırılan işlem içi bir WMI sağlayıcısını barındırarak yapar. Yönetim verilerinin açığa çıkarılması için, bu sağlayıcıyı kaydeden hesabın uygun izinlere sahip olması gerekir. Windows 'da, yalnızca küçük bir ayrıcalıklı hesap kümesi varsayılan olarak ayrılmış sağlayıcıları kaydedebilir. Bu bir sorun olduğundan, kullanıcılar genellikle varsayılan kümesinde olmayan bir hesap altında çalışan bir WCF hizmetinden WMI verilerini açığa çıkarmak istiyor.  
+## <a name="granting-wcf-wmi-registration-permissions-to-additional-users"></a>Ek Kullanıcılara WCF WMI Kayıt İzni Verilmesi  
+ WCF, yönetim verilerini WMI'ye maruz bırakır. Bunu bazen "ayrılmış sağlayıcı" olarak adlandırılan bir süreç içinde WMI sağlayıcısı barındırarak yapar. Yönetim verilerinin açığa alınması için, bu sağlayıcıyı kaydeden hesabın uygun izinlere sahip olması gerekir. Windows'da, yalnızca küçük bir ayrıcalıklı hesap kümesi varsayılan olarak ayrılmış sağlayıcıları kaydedebilir. Kullanıcılar genellikle varsayılan kümede olmayan bir hesap altında çalışan bir WCF hizmetinden WMI verilerini ortaya çıkarmak istediğinizden, bu bir sorundur.  
   
- Bu erişimi sağlamak için, yöneticinin ek hesaba aşağıdaki sırayla aşağıdaki izinleri vermesi gerekir:  
+ Bu erişimi sağlamak için, yöneticinin aşağıdaki sırada ek hesaba aşağıdaki izinleri vermesi gerekir:  
   
-1. WCF WMI ad alanına erişme izni.  
+1. WCF WMI İsim Alanına erişim izni.  
   
-2. WCF ayrılmış WMI sağlayıcısını kaydetme izni.  
+2. WCF Decoupled WMI Sağlayıcısı'nı kaydetme izni.  
   
 #### <a name="to-grant-wmi-namespace-access-permission"></a>WMI ad alanı erişim izni vermek için  
   
-1. Aşağıdaki PowerShell betiğini çalıştırın.  
+1. Aşağıdaki PowerShell komut dosyasını çalıştırın.  
   
     ```powershell  
     write-host ""  
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF) bir WCF Windows Yönetim Araçları (WMI)
     write-host "Previous ACL: "$outsddl.SDDL  
   
     # Change the Access Control List (ACL) using SDDL  
-    $result = $security.PsBase.InvokeMethod("SetSD",$convertedPermissions)   
+    $result = $security.PsBase.InvokeMethod("SetSD",$convertedPermissions)
   
     # Get and output the current settings  
     $binarySD = @($null)  
@@ -110,19 +110,19 @@ Windows Communication Foundation (WCF) bir WCF Windows Yönetim Araçları (WMI)
     write-host ""  
     ```  
   
-     Bu PowerShell betiği, yerleşik kullanıcılar grubuna "root/ServiceModel" WMI ad alanına erişim izni vermek için güvenlik tanımlayıcısı tanım dili 'ni (SDDL) kullanır. Aşağıdaki ACL 'Leri belirtir:  
+     Bu PowerShell komut dosyası, Yerleşik Kullanıcılar grubuna "root/servicemodel" WMI ad alanına erişim sağlamak için Güvenlik Tanımlayıcı Tanım Dili (SDDL) kullanır. Aşağıdaki ALA'ları belirtir:  
   
-    - Yerleşik yönetici (BA)-zaten erişime sahipti.  
+    - Yerleşik yönetici (BA) - zaten erişimi vardı.  
   
-    - Ağ hizmeti (NS)-zaten erişime sahipti.  
+    - Ağ Hizmeti (NS) - Zaten erişimi vardı.  
   
-    - Yerel sistem (LS)-zaten erişime sahipti.  
+    - Yerel sistem (LS) - zaten erişimi vardı.  
   
-    - Yerleşik kullanıcılar-erişim verilecek grup.  
+    - Yerleşik Kullanıcılar - Erişim izni verecek grup.  
   
-#### <a name="to-grant-provider-registration-access"></a>Sağlayıcı kayıt erişimi sağlamak için  
+#### <a name="to-grant-provider-registration-access"></a>Sağlayıcı kaydı erişimi sağlamak için  
   
-1. Aşağıdaki PowerShell betiğini çalıştırın.  
+1. Aşağıdaki PowerShell komut dosyasını çalıştırın.  
   
     ```powershell  
     write-host ""  
@@ -140,36 +140,36 @@ Windows Communication Foundation (WCF) bir WCF Windows Yönetim Araçları (WMI)
     write-host ""  
     ```  
   
-### <a name="granting-access-to-arbitrary-users-or-groups"></a>Rastgele kullanıcılara veya gruplara erişim verme  
- Bu bölümdeki örnek, tüm yerel kullanıcılara WMI sağlayıcı kayıt ayrıcalıkları verir. İçinde yerleşik olmayan bir kullanıcıya veya gruba erişim vermek istiyorsanız, bu kullanıcı veya grubun güvenlik tanımlayıcısını (SID) edinmeniz gerekir. Rastgele bir kullanıcı için SID almanın basit bir yolu yoktur. Bir yöntem, istenen kullanıcı olarak oturum açıp aşağıdaki kabuk komutunu yayınvermektir.  
+### <a name="granting-access-to-arbitrary-users-or-groups"></a>Rasgele Kullanıcılara veya Gruplara Erişim Verme  
+ Bu bölümdeki örnek, wmi sağlayıcı kayıt ayrıcalıklarını tüm yerel kullanıcılara verir. Yerleşik olmayan bir kullanıcıya veya gruba erişim izni vermek istiyorsanız, o kullanıcının veya grubun Güvenlik Tanımlayıcısını (SID) edinmeniz gerekir. Rasgele bir kullanıcı için SID almak için basit bir yolu yoktur. Bir yöntem istenilen kullanıcı olarak oturum açmak ve sonra aşağıdaki kabuk komutunu vermektir.  
   
 ```console
 Whoami /user  
 ```  
   
- Bu, geçerli kullanıcının SID 'sini sağlar, ancak bu yöntem herhangi bir rastgele kullanıcının SID 'sini almak için kullanılamaz. SID 'yi almaya yönelik başka bir yöntem, [yönetim görevleri Için Windows 2000 Kaynak Seti araçlarından](https://go.microsoft.com/fwlink/?LinkId=178660) [GETSID. exe](https://go.microsoft.com/fwlink/?LinkId=186467) aracını kullanmaktır. Bu araç iki kullanıcının (yerel veya etki alanı) SID 'Lerini karşılaştırır ve yan etkisi olarak iki SID 'yi komut satırına yazdırır. Daha fazla bilgi için bkz. [tanınmış SID 'ler](https://go.microsoft.com/fwlink/?LinkId=186468).  
+ Bu, geçerli kullanıcının SID'sini sağlar, ancak bu yöntem herhangi bir rasgele kullanıcıüzerinde SID almak için kullanılamaz. SID almak için başka bir yöntem yönetim görevleri için Windows 2000 Kaynak Kiti Araçları [getsid.exe](/windows/win32/wmisdk/using-wmi) aracını kullanmaktır. Bu araç, iki kullanıcının (yerel veya etki alanı) SID'sini karşılaştırır ve yan etki olarak iki SID'yi komut satırına yazdırır. Daha fazla bilgi için, [Bilinen SIT'lere](https://support.microsoft.com/help/243330/well-known-security-identifiers-in-windows-operating-systems)bakın.  
   
-## <a name="accessing-remote-wmi-object-instances"></a>Uzak WMI nesne örneklerine erişme  
- Uzak bir makinedeki WCF WMI örneklerine erişmeniz gerekiyorsa, erişim için kullandığınız araçlarda paket gizliliğini etkinleştirmeniz gerekir. Aşağıdaki bölümde, bu, WMI CıM Studio, Windows Yönetim Araçları Sınayıcısı ve .NET SDK 2,0 ile nasıl elde edileceğini açıklamaktadır.  
+## <a name="accessing-remote-wmi-object-instances"></a>Uzak WMI Nesne Örneklerine Erişim  
+ Uzak bir makinede WCF WMI örneklerine erişmeniz gerekiyorsa, erişmek için kullandığınız araçlarda paket gizliliğini etkinleştirmeniz gerekir. Aşağıdaki bölümde WMI CIM Studio, Windows Management Instrumentation Tester ve .NET SDK 2.0'ı kullanarak bunların nasıl elde edilebildiğini açıklanmaktadır.  
   
-### <a name="wmi-cim-studio"></a>WMI CıM Studio  
- [WMI yönetim araçları](https://go.microsoft.com/fwlink/?LinkId=95185)'nı yüklediyseniz WMI örneklerine erışmek IÇIN WMI CIM Studio 'yu kullanabilirsiniz. Araçlar şu klasörlerdir  
+### <a name="wmi-cim-studio"></a>WMI CIM Stüdyo  
+ [WMI Yönetim Araçları](https://go.microsoft.com/fwlink/?LinkId=95185)yüklediyseniz, WMI örneklerine erişmek için WMI CIM Studio'yu kullanabilirsiniz. Araçlar aşağıdaki klasörde  
   
- **%windir%\Program Files\WMI araçları\\**  
+ **%windir%\Program Dosyaları\WMI Araçları\\**  
   
-1. **Ad alanına bağlan:** penceresinde, **Root\servicemodel** yazın ve Tamam ' a tıklayın **.**  
+1. Ad **alanına Bağlan:pencere,** **root\ServiceModel** yazın ve **Tamam'ı tıklatın.**  
   
-2. **WMI CIM Studio oturumu açma** penceresinde, **seçenekleri > >** düğmesine tıklayarak pencereyi genişletin. **Kimlik doğrulama düzeyi**için **paket gizliliği** ' ni seçin ve **Tamam**' ı tıklatın.  
+2. **WMI CIM Studio Giriş** penceresinde, pencereyi genişletmek için **Seçenekler >>** düğmesini tıklatın. Kimlik Doğrulama **düzeyi**için Paket **gizliliği'ni** seçin ve **Tamam'ı**tıklatın.  
   
-### <a name="windows-management-instrumentation-tester"></a>Windows Yönetim Araçları Sınayıcısı  
- Bu araç Windows tarafından yüklenir. Çalıştırmak için **Başlat/Çalıştır** iletişim kutusuna **cmd. exe** yazarak bir komut konsolu başlatın ve **Tamam**' a tıklayın. Ardından, komut penceresine **WBEMTest. exe** yazın. Windows Yönetim Araçları sınayıcı aracı başlatılır.  
+### <a name="windows-management-instrumentation-tester"></a>Windows Yönetimi Enstrümantasyon Test Cihazı  
+ Bu araç Windows tarafından yüklenir. Çalıştırmak için **Başlat/Çalıştır** iletişim kutusuna **cmd.exe** yazarak bir komut konsolu başlatın ve **Tamam'ı**tıklatın. Ardından, komut penceresinde **wbemtest.exe** yazın. Windows Yönetimi Instrumentation Tester aracı daha sonra başlatılır.  
   
-1. Pencerenin sağ üst köşesindeki **Bağlan** düğmesine tıklayın.  
+1. Pencerenin sağ üst köşesindeki **Bağlan** düğmesini tıklatın.  
   
-2. Yeni pencerede, **ad alanı** alanı için **Root\servicemodel** yazın ve **kimlik doğrulama düzeyi**için **paket gizliliği** ' ni seçin. **Bağlan**'a tıklayın.  
+2. Yeni pencerede, **Ad Alanı** alanı için **root\ServiceModel'i** girin ve **Kimlik Doğrulama düzeyi**için Paket **gizliliğini** seçin. **Bağlan**'a tıklayın.  
   
-### <a name="using-managed-code"></a>Yönetilen kodu kullanma  
- Ayrıca, <xref:System.Management> ad alanı tarafından sunulan sınıfları kullanarak uzak WMI örneklerine da erişebilirsiniz. Aşağıdaki kod örneği bunun nasıl yapılacağını göstermektedir.  
+### <a name="using-managed-code"></a>Yönetilen Kodu Kullanma  
+ Ayrıca, ad alanı tarafından sağlanan sınıfları kullanarak uzaktan <xref:System.Management> WMI örneklerine programlı olarak erişebilirsiniz. Aşağıdaki kod örneği bunun nasıl yapılacağını gösterir.  
   
 ```csharp
 String wcfNamespace = $@"\\{this.serviceMachineName}\Root\ServiceModel");

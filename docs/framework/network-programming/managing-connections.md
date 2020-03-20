@@ -18,27 +18,27 @@ helpviewer_keywords:
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
 ms.openlocfilehash: 11c17c6893800fce8bbff8f49b3a207c161bcdfa
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047642"
 ---
 # <a name="managing-connections"></a>Bağlantıları Yönetme
-Veri kaynaklarına bağlanmak için http kullanan uygulamalar, Internet bağlantılarını yönetmek ve en uygun <xref:System.Net.ServicePoint> ölçek <xref:System.Net.ServicePointManager> ve performansa ulaşmak için .NET Framework ve sınıflarını kullanabilir.  
+Veri kaynaklarına bağlanmak için HTTP'yi kullanan uygulamalar, <xref:System.Net.ServicePoint> Internet <xref:System.Net.ServicePointManager> bağlantılarını yönetmek ve optimum ölçek ve performans elde etmelerine yardımcı olmak için .NET Framework'ün ve sınıflarını kullanabilir.  
   
- **ServicePoint** sınıfı, uygulamanın Internet kaynaklarına erişim için bağlanabildiği bir uç noktaya sahip bir uygulama sağlar. Her bir **hizmet noktası** , performansı iyileştirmek için bağlantılar arasında iyileştirme bilgilerini paylaşarak bir Internet sunucusuyla bağlantıları iyileştirmeye yardımcı olan bilgileri içerir.  
+ **ServicePoint** sınıfı, uygulamanın Internet kaynaklarına erişebileceği bir bitiş noktası olan bir uygulama sağlar. Her **ServicePoint,** performansı artırmak için en iyi duruma getirme bilgilerini bağlantılar arasında paylaşarak bir Internet sunucusuyla bağlantıları optimize etmeye yardımcı olan bilgiler içerir.  
   
- Her bir **ServicePoint** bir Tekdüzen Kaynak tanımlayıcısı (URI) tarafından tanımlanır ve, URI 'nin şema tanımlayıcısına ve ana bilgisayar parçalara göre kategorize edilir. Örneğin, aynı **ServicePoint** örneği URI `http://www.contoso.com/index.htm` 'lere ve `http://www.contoso.com/news.htm?date=today` aynı düzen tanımlayıcısına (http) ve ana bilgisayar parçalara (`www.contoso.com`) sahip olduklarından istek sağlar. Uygulamanın zaten sunucuya `www.contoso.com`kalıcı bağlantısı varsa, her iki isteği de almak için bu bağlantıyı kullanır ve iki bağlantı oluşturma gereksinimini ortadan önler.  
+ Her **ServicePoint,** Tek düzen kaynak tanımlayıcısı (URI) tarafından tanımlanır ve URI'nin şema tanımlayıcısı ve ana bilgisayar parçalarına göre sınıflandırılır. Örneğin, aynı **ServicePoint** örneği, UrI'lere `http://www.contoso.com/index.htm` `http://www.contoso.com/news.htm?date=today` istekler sağlar ve aynı şema tanımlayıcısına (http)`www.contoso.com`ve ana bilgisayar parçalarına ( ) sahip olduklarından. Uygulama zaten sunucuya `www.contoso.com`kalıcı bir bağlantı varsa, iki bağlantı oluşturmak için gerek kaçınarak, her iki isteği almak için bu bağlantıyı kullanır.  
   
- **ServicePointManager** , **ServicePoint** örneklerinin oluşturulmasını ve yok edilmesini yöneten statik bir sınıftır. **ServicePointManager** , uygulama mevcut **ServicePoint** örnekleri koleksiyonunda olmayan bir Internet kaynağı istediğinde bir **ServicePoint** oluşturur. **ServicePoint** örnekleri, maksimum boşta kalma süresini aştığında veya var olan **ServicePoint** örneklerinin sayısı, uygulama Için en fazla **ServicePoint** örneği sayısını aşarsa yok edilir. **ServicePointManager**'daki <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> ve <xref:System.Net.ServicePointManager.MaxServicePoints%2A> özelliklerini ayarlayarak hem varsayılan en fazla boş süreyi hem de en fazla **ServicePoint** örneği sayısını denetleyebilirsiniz.  
+ **ServicePointManager,** **ServicePoint** örneklerinin oluşturulmasını ve yok edilmesini yöneten statik bir sınıftır. **ServicePointManager,** uygulama varolan **ServicePoint** örneklerinin koleksiyonunda olmayan bir Internet kaynağı istediğinde bir **ServicePoint** oluşturur. **ServicePoint** örnekleri, maksimum boşta kalma sürelerini aştıklarında veya varolan **ServicePoint** örneklerinin sayısı uygulama için en fazla **ServicePoint** örneği sayısını aştığında yok edilir. **ServicePointManager'daki**özellikleri <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> ve <xref:System.Net.ServicePointManager.MaxServicePoints%2A> özellikleri ayarlayarak hem varsayılan maksimum boşta kalma süresini hem de en fazla **ServicePoint** örneğini denetleyebilirsiniz.  
   
- İstemci ve sunucu arasındaki bağlantı sayısı, uygulama aktarım hızı üzerinde çarpıcı bir etkiye sahip olabilir. Varsayılan olarak, <xref:System.Net.HttpWebRequest> sınıfı kullanan bir uygulama, belirli bir sunucuya en fazla iki kalıcı bağlantı kullanır, ancak en fazla bağlantı sayısını uygulama başına temelinde ayarlayabilirsiniz.  
+ İstemci ve sunucu arasındaki bağlantı sayısı, uygulama verime üzerinde önemli bir etkiye sahip olabilir. Varsayılan olarak, <xref:System.Net.HttpWebRequest> sınıfı kullanan bir uygulama belirli bir sunucuya en fazla iki kalıcı bağlantı kullanır, ancak uygulama başına en fazla bağlantı sayısını ayarlayabilirsiniz.  
   
 > [!NOTE]
-> HTTP/1.1 belirtimi, bir uygulamadaki bağlantı sayısını sunucu başına iki bağlantı ile sınırlandırır.  
+> HTTP/1.1 belirtimi, bir uygulamadan bağlantı sayısını sunucu başına iki bağlantıyla sınırlar.  
   
- En iyi bağlantı sayısı, uygulamanın çalıştığı gerçek koşullara bağlıdır. Uygulamanın kullanabildiği bağlantı sayısını artırmak uygulama performansını etkilemeyebilir. Daha fazla bağlantının etkisini öğrenmek için, bağlantı sayısını değiştirerek performans testlerini çalıştırın. Aşağıdaki kod örneğinde gösterildiği gibi, uygulamanın başlatılmasında <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> **ServicePointManager** sınıfında statik özelliğini değiştirerek uygulamanın kullandığı bağlantı sayısını değiştirebilirsiniz.  
+ En uygun bağlantı sayısı, uygulamanın çalıştığı gerçek koşullara bağlıdır. Uygulamaiçin kullanılabilen bağlantı sayısını artırmak uygulama performansını etkilemeyebilir. Daha fazla bağlantının etkisini belirlemek için, bağlantı sayısını değiştirerek performans testleri çalıştırın. Aşağıdaki kod örneğinde gösterildiği gibi, uygulama başlatma <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> sırasında **ServicePointManager** sınıfındaki statik özelliği değiştirerek bir uygulamanın kullandığı bağlantı sayısını değiştirebilirsiniz.  
   
 ```csharp  
 // Set the maximum number of connections per server to 4.  
@@ -50,7 +50,7 @@ ServicePointManager.DefaultConnectionLimit = 4;
 ServicePointManager.DefaultConnectionLimit = 4  
 ```  
   
- **ServicePointManager. DefaultConnectionLimit** özelliğinin değiştirilmesi, daha önce başlatılmış olan **ServicePoint** örneklerini etkilemez. Aşağıdaki kod, sunucu `http://www.contoso.com` için var olan bir **hizmet noktasındaki** bağlantı sınırının ' de `newLimit`depolanan değere değiştirilmesini gösterir.  
+ **ServicePointManager.DefaultConnectionLimit** özelliğini değiştirmek, önceden başlatılan **ServicePoint** örneklerini etkilemez. Aşağıdaki kod, sunucunun `http://www.contoso.com` varolan bir `newLimit` **ServicePoint'teki** bağlantı sınırını depolanan değerle değiştirmeyi gösterir.  
   
 ```csharp  
 Uri uri = new Uri("http://www.contoso.com/");  

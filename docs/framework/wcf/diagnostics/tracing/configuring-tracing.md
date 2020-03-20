@@ -4,46 +4,46 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: bc23aff2f049f205d02e2fb1b5f8798c7f6a9931
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d8b216bf5497cf2a1faa2fa24ba1d8b3102f6f10
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044229"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185746"
 ---
 # <a name="configuring-tracing"></a>İzlemeyi Yapılandırma
-Bu konu, izlemeyi nasıl etkinleştirebileceğinizi, izleme kaynaklarını, izlemeleri yaymak ve izleme düzeylerini ayarlamayı, Etkinlik izlemeyi ve yaymayı, uçtan uca izleme bağıntısını destekleyecek şekilde ayarlamayı ve izleme dinleyicilerini izlemelere erişim için ayarlamayı açıklar.  
+Bu konu, izleme izlemeyi, izleme kaynaklarını izleme ve izleme düzeyleri ayarlamak için nasıl yapılandırabileceğinizi, etkinlik izlemeve yayılmayı uçlardan uca izleme bağındırMasını desteklemek için nasıl ayarlayabileceğinizi ve izleme dinleyicilerini izleme izine göre nasıl ayarlaabileceğinizi açıklar.  
   
- Üretim veya hata ayıklama ortamındaki izleme ayarları önerileri için [izleme ve Ileti günlüğe kaydetme Için önerilen ayarlar](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)bölümüne bakın.  
+ Üretim veya hata ayıklama ortamında ki ayarları izleme önerileri [için, İzleme ve İleti Günlüğe Kaydetme için Önerilen Ayarlar'a](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)bakın.  
   
 > [!IMPORTANT]
-> Windows 8 ' de uygulamanızın izleme günlükleri oluşturması için uygulamanızı yükseltilmiş (yönetici olarak çalıştır) çalıştırmalısınız.  
+> Windows 8'de, uygulamanızın izleme günlükleri oluşturabilmesi için uygulamanızı yükseltilmiş (Yönetici olarak çalıştır) çalıştırmanız gerekir.  
   
-## <a name="enabling-tracing"></a>Izlemeyi etkinleştirme  
- Windows Communication Foundation (WCF) Tanılama izleme için aşağıdaki verileri verir:  
+## <a name="enabling-tracing"></a>İzlemeyi Etkinleştirme  
+ Windows Communication Foundation (WCF), tanılama izleme için aşağıdaki verileri sağlar:  
   
-- İşlem çağrıları, kod özel durumları, uyarılar ve diğer önemli işleme olayları gibi uygulamaların tüm bileşenleri genelinde işlem kilometre taşları için izlemeler.  
+- İşlem çağrıları, kod özel durumları, uyarılar ve diğer önemli işleme olayları gibi uygulamaların tüm bileşenlerindeki işlem kilometre taşlarını izler.  
   
-- İzleme özelliğinin düzgün çalışmamasına zaman Windows hata olayları. [Olay günlüğüne](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)bakın.  
+- İzleme özelliği arızalandığında Windows hatası olayları. [Bkz. Olay Günlüğü.](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
   
- WCF izleme, üzerine <xref:System.Diagnostics>kurulmuştur. İzlemeyi kullanmak için yapılandırma dosyasında veya kodda izleme kaynakları tanımlamanız gerekir. WCF, her WCF derlemesi için bir izleme kaynağı tanımlar. `System.ServiceModel` İzleme kaynağı en genel WCF izleme kaynağıdır ve işlem kilometre taşlarını WCF iletişim yığınında, Kullanıcı kodunu girmeye/bırakarak taşıma/bırakma işleminden sonra kaydeder. İzleme `System.ServiceModel.MessageLogging` kaynağı, sistem üzerinden akan tüm iletileri kaydeder.  
+ WCF izleme üstüne inşa <xref:System.Diagnostics>edilmiştir. İzlemeyi kullanmak için, yapılandırma dosyasında veya koddaki izleme kaynaklarını tanımlamanız gerekir. WCF, her WCF derlemesi için bir izleme kaynağı tanımlar. `System.ServiceModel` İzleme kaynağı en genel WCF izleme kaynağıdır ve WCF iletişim yığınında taşımadan kullanıcı kodu girme/bırakma işlemine kadar işleme kilometre taşlarını kaydeder. İzleme `System.ServiceModel.MessageLogging` kaynağı, sistemde akan tüm iletileri kaydeder.  
   
- İzleme varsayılan olarak etkin değildir. İzlemeyi etkinleştirmek için, bir izleme dinleyicisi oluşturmanız ve yapılandırmada seçili izleme kaynağı için "off" dışında bir izleme düzeyi ayarlamanız gerekir. Aksi takdirde, WCF hiçbir izleme üretmez. Bir dinleyici belirtmezseniz, izleme otomatik olarak devre dışıdır. Bir dinleyici tanımlanmışsa, ancak düzey belirtilmemişse, varsayılan olarak düzey "off" olarak ayarlanır; bu da hiçbir izlemenin yayılmayacağı anlamına gelir.  
+ İzleme varsayılan olarak etkinleştirildi. İzlemeyi etkinleştirmek için, bir izleme dinleyicisi oluşturmanız ve yapılandırmada seçili izleme kaynağı için "Kapalı" dışında bir izleme düzeyi ayarlamanız gerekir; aksi takdirde, WCF herhangi bir iz oluşturmaz. Bir dinleyici belirtmezseniz, izleme otomatik olarak devre dışı bırakılır. Bir dinleyici tanımlanır, ancak düzey belirtilmemişse, düzey varsayılan olarak "Kapalı" olarak ayarlanır, bu da hiçbir izlemenin yayımlanmadığı anlamına gelir.  
   
- Özel işlem invokers gibi WCF genişletilebilirlik noktalarını kullanırsanız, kendi izlemelerinizi yaymalısınız. Bunun nedeni, bir genişletilebilirlik noktası uyguladığınızda WCF 'nin varsayılan yolda standart izlemeleri artık yaymayacağı bir yoldur. İzlemeleri yayarak el ile izleme desteği uygulamadıysanız, beklediğinizi izlemelerinizi göremeyebilirsiniz.  
+ Özel işlem çağrıçlayıcıları gibi WCF genişletilebilirlik noktaları kullanıyorsanız, kendi izlemelerinizi yaysanız gerekir. Bunun nedeni, bir genişletilebilirlik noktası uygularsanız, WCF'nin varsayılan yolda standart izlemeleri artık yakılamamasının dır. İzler yayarak manuel izleme desteği uygulamazsanız, beklediğiniz izleri göremeyebilirsiniz.  
   
- Uygulamanın yapılandırma dosyasını düzenleyerek izlemeyi yapılandırabilirsiniz: Web 'de barındırılan uygulamalar için Web. config veya şirket içinde barındırılan uygulamalar için AppName. exe. config. Aşağıda bu tür bir düzenleme örneği verilmiştir. Bu ayarlar hakkında daha fazla bilgi için, "Izlemeleri kullanmak için Izleme dinleyicileri yapılandırma" bölümüne bakın.  
+ Uygulamanın yapılandırma dosyasını düzenleyerek izlemeyi yapılandırabilirsiniz(Web tarafından barındırılan uygulamalar için Web.config veya kendi barındırılan uygulamalar için Appname.exe.config). Aşağıda bu tür bir edit e-posta verilmiştir. Bu ayarlar hakkında daha fazla bilgi için "İzleme Dinleyicilerini İzlemeyi İzlemek için Yapılandırma" bölümüne bakın.  
   
 ```xml  
 <configuration>  
    <system.diagnostics>  
       <sources>  
-            <source name="System.ServiceModel"   
+            <source name="System.ServiceModel"
                     switchValue="Information, ActivityTracing"  
                     propagateActivity="true">  
             <listeners>  
-               <add name="traceListener"   
-                   type="System.Diagnostics.XmlWriterTraceListener"   
+               <add name="traceListener"
+                   type="System.Diagnostics.XmlWriterTraceListener"
                    initializeData= "c:\log\Traces.svclog" />  
             </listeners>  
          </source>  
@@ -53,32 +53,32 @@ Bu konu, izlemeyi nasıl etkinleştirebileceğinizi, izleme kaynaklarını, izle
 ```  
   
 > [!NOTE]
-> Visual Studio 'da bir WCF hizmeti projesinin yapılandırma dosyasını düzenlemek için uygulamanın yapılandırma dosyasına (Web 'de barındırılan uygulamalar için Web. config veya **Çözüm Gezgini**içindeki şirket içinde barındırılan uygulama için AppName. exe. config ' e tıklayın. Ardından, **WCF yapılandırma bağlamını Düzenle** menü öğesini seçin. Bu, bir grafik kullanıcı arabirimi kullanarak WCF Hizmetleri için yapılandırma ayarlarını değiştirmenize olanak sağlayan [yapılandırma Düzenleyicisi aracını (SvcConfigEditor. exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)başlatır.  
+> Visual Studio'daki bir WCF hizmet projesinin yapılandırma dosyasını düzenlemek için, uygulamanın yapılandırma dosyasına (Web barındırılan uygulamalar için Web.config veya **Solution Explorer'da**kendi barındırılan uygulama için Appname.exe.config) sağ tıklayın. Ardından **WCF Yapılandırma** bağlamını edit menü öğesini seçin. Bu, grafik sel kullanıcı arabirimi kullanarak WCF hizmetleri için yapılandırma ayarlarını değiştirmenizi sağlayan [Configuration Editor Aracını (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)başlatır.  
   
-## <a name="configuring-trace-sources-to-emit-traces"></a>Izlemeleri yayma için Izleme kaynaklarını yapılandırma  
- WCF her derleme için bir izleme kaynağı tanımlar. Bir derlemede oluşturulan izlemelere bu kaynak için tanımlanan dinleyiciler tarafından erişilir. Aşağıdaki izleme kaynakları tanımlanmıştır:  
+## <a name="configuring-trace-sources-to-emit-traces"></a>İz Kaynaklarını İz Yayıştacak Şekilde Yapılandırma  
+ WCF her derleme için bir izleme kaynağı tanımlar. Bir derleme içinde oluşturulan izlemeler, o kaynak için tanımlanan dinleyiciler tarafından erişilir. Aşağıdaki izleme kaynakları tanımlanır:  
   
-- System. ServiceModel: Yapılandırma her değiştiğinde WCF işlemenin tüm aşamalarını günlüğe kaydeder, aktarım sırasında bir ileti işlenir, güvenlik işleme, Kullanıcı kodunda bir ileti gönderilir ve bu şekilde devam eder.  
+- System.ServiceModel: WCF işlemenin tüm aşamalarını kaydeder, yapılandırma okunduğunda, bir ileti taşımada, güvenlik işlemlerinde işlenir, kullanıcı kodunda bir ileti gönderilir, vesaire.  
   
-- System. ServiceModel. MessageLogging: Sistem üzerinden akan tüm iletileri günlüğe kaydeder.  
+- System.ServiceModel.MessageLogging: Sistem üzerinden akan tüm iletileri kaydeder.  
   
-- System. IdentityModel.  
+- System.IdentityModel.  
   
-- System. ServiceModel. Activation.  
+- System.ServiceModel.Activation.  
   
-- System. ıO. log: .NET Framework arabirimi için Ortak Günlük Dosya Sistemi (CLFS) günlüğe kaydediliyor.  
+- System.IO.Log: .NET Framework arabiriminin Ortak Günlük Dosya Sistemine (CLFS) giriş ibaresi.  
   
-- System. Runtime. Serialization: Nesneler okunmakta veya yazıldığında günlüğe kaydedilir.  
+- System.Runtime.Serialization: Nesneler okunduğunda veya yazıldığında günlükler.  
   
-- Rağmen.  
+- Cardspace.  
   
- Aşağıdaki yapılandırma örneğinde gösterildiği gibi, her bir izleme kaynağını aynı (paylaşılan) dinleyiciye kullanacak şekilde yapılandırabilirsiniz.  
+ Aşağıdaki yapılandırma örneğinde belirtildiği gibi, her izleme kaynağını aynı (paylaşılan) dinleyiciyi kullanacak şekilde yapılandırabilirsiniz.  
   
 ```xml  
 <configuration>  
     <system.diagnostics>  
         <sources>  
-            <source name="System.ServiceModel"   
+            <source name="System.ServiceModel"
                     switchValue="Information, ActivityTracing"  
                     propagateActivity="true">  
                 <listeners>  
@@ -116,7 +116,7 @@ Bu konu, izlemeyi nasıl etkinleştirebileceğinizi, izleme kaynaklarını, izle
 </configuration>  
 ```  
   
- Ayrıca, Kullanıcı kodu izlemelerini göstermek için aşağıdaki örnekte gösterildiği gibi Kullanıcı tanımlı izleme kaynakları ekleyebilirsiniz.  
+ Ayrıca, kullanıcı kodu izlemeleri yatmak için aşağıdaki örnekte gösterildiği gibi kullanıcı tanımlı izleme kaynakları ekleyebilirsiniz.  
   
 ```xml  
 <system.diagnostics>  
@@ -129,60 +129,60 @@ Bu konu, izlemeyi nasıl etkinleştirebileceğinizi, izleme kaynaklarını, izle
           </listeners>  
        </source>  
    </sources>  
-   <trace autoflush="true" />   
+   <trace autoflush="true" />
 </system.diagnostics>  
 ```  
   
- Kullanıcı tanımlı izleme kaynakları oluşturma hakkında daha fazla bilgi için bkz. [Izlemeyi genişletme](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
+ Kullanıcı tanımlı izleme kaynakları oluşturma hakkında daha fazla bilgi için [bkz.](../../../../../docs/framework/wcf/samples/extending-tracing.md)  
   
-## <a name="configuring-trace-listeners-to-consume-traces"></a>Izlemeleri kullanmak için Izleme dinleyicileri yapılandırma  
- Çalışma zamanında, WCF akışları verileri işleyen dinleyicilerine veri izler. WCF, için daha <xref:System.Diagnostics>önceden tanımlanmış birkaç dinleyici sağlar ve bu, çıktı için kullandıkları biçimde farklılık gösterir. Ayrıca, özel dinleyici türleri ekleyebilirsiniz.  
+## <a name="configuring-trace-listeners-to-consume-traces"></a>İzleme Dinleyicilerini İzlemeYi Tüketecek Şekilde Yapılandırma  
+ Çalışma zamanında WCF, verileri işleyen dinleyicilere izleme verileri aktarıyor. WCF, çıktı için <xref:System.Diagnostics>kullandıkları biçimde farklılık gösteren birkaç önceden tanımlanmış dinleyici sağlar. Özel dinleyici türleri de ekleyebilirsiniz.  
   
- Kullanmak istediğiniz izleme dinleyicisinin adını ve türünü belirtmek için'ikullanabilirsiniz.`add` Örnek yapılandırmanızda, dinleyiciyi `traceListener` adlandırdık ve kullanmak istediğimiz tür olarak standart .NET Framework Trace Listener (`System.Diagnostics.XmlWriterTraceListener`) ekledik. Her kaynak için herhangi bir sayıda izleme dinleyicisi ekleyebilirsiniz. İzleme dinleyicisi izlemeyi bir dosyaya yayıyorsa, yapılandırma dosyasında çıkış dosyasının konumunu ve adını belirtmeniz gerekir. Bu, bu dinleyicinin dosya `initializeData` adına ayarlanarak yapılır. Bir dosya adı belirtmezseniz, kullanılan dinleyici türü temel alınarak rastgele bir dosya adı oluşturulur. <xref:System.Diagnostics.XmlWriterTraceListener> Kullanılıyorsa, uzantısı olmayan bir dosya adı oluşturulur. Özel bir dinleyici uygularsanız, bu özniteliği bir dosya adı dışında başlatma verisi almak için de kullanabilirsiniz. Örneğin, bu öznitelik için bir veritabanı tanımlayıcısı belirtebilirsiniz.  
+ Kullanmak istediğiniz `add` izleme dinleyicisinin adını ve türünü belirtmek için kullanabilirsiniz. Örnek yapılandırmamızda Dinleyici'yi adlandırdık `traceListener` ve standart .NET Framework`System.Diagnostics.XmlWriterTraceListener`trace dinleyicisini ( ) kullanmak istediğimiz tür olarak ekledik. Her kaynak için istediğiniz sayıda izleme dinleyicisi ekleyebilirsiniz. İzleme dinleyicisi izlemeyi bir dosyaya yayırsa, çıktı dosyası konumunu ve adını yapılandırma dosyasında belirtmeniz gerekir. Bu, o `initializeData` dinleyici için dosyanın adına ayarlayarak yapılır. Bir dosya adı belirtmezseniz, kullanılan dinleyici türüne göre rasgele bir dosya adı oluşturulur. <xref:System.Diagnostics.XmlWriterTraceListener> Kullanılırsa, uzantısı olmayan bir dosya adı oluşturulur. Özel bir dinleyici uygularsanız, bu özniteliği dosya adı dışındaki başlatma verilerini almak için de kullanabilirsiniz. Örneğin, bu öznitelik için bir veritabanı tanımlayıcısı belirtebilirsiniz.  
   
- Örneğin, uzak bir veritabanına izleme izlemek için özel bir izleme dinleyicisi yapılandırabilirsiniz. Bir uygulama dağıtıcı olarak, uzak makinedeki izleme günlüklerinde doğru erişim denetimini zorunlu kılabilirsiniz.  
+ Örneğin, kablodaki izlemeleri uzak bir veritabanına gönderecek şekilde özel bir izleme dinleyicisi yapılandırabilirsiniz. Uygulama dağıtıcı olarak, uzak makinedeki izleme günlükleri üzerinde uygun erişim denetimini zorlamanız gerekir.  
   
- Ayrıca, bir izleme dinleyicisini programlı bir şekilde yapılandırabilirsiniz. Daha fazla bilgi için [nasıl yapılır: İzleme dinleyicileri](https://go.microsoft.com/fwlink/?LinkId=94648) oluşturma ve başlatma ve [özel bir TraceListener oluşturma](https://go.microsoft.com/fwlink/?LinkId=96239).  
+ Ayrıca, izleme dinleyicisini programlı olarak yapılandırabilirsiniz. Daha fazla bilgi için [bkz: İzleme Dinleyicileri Oluşturma ve Başlatma](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) ve [Özel İzleme Dinleyicisi Oluşturma.](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)  
   
 > [!CAUTION]
-> `System.Diagnostics.XmlWriterTraceListener` , İş parçacığı açısından güvenli olmadığından izleme kaynağı, izlemeleri çıktıları sırasında kaynakları özel olarak kilitleyebilir. Birçok iş parçacığı çıkışı, bu dinleyiciyi kullanmak üzere yapılandırılmış bir izleme kaynağına izlenirse, kaynak çakışması oluşabilir ve bu durum önemli bir performans sorununa neden olur. Bu sorunu çözmek için, iş parçacığı açısından güvenli olan özel bir dinleyici uygulamalısınız.  
+> `System.Diagnostics.XmlWriterTraceListener` İş parçacığı güvenli olmadığından, izleme kaynağı yalnızca izlemeleri çıkarırken kaynakları kilitleyebilir. Bu dinleyiciyi kullanmak üzere yapılandırılan bir izleme kaynağına çok sayıda iş parçacığı çıkışı izlendiğinde, kaynak çekişmesi oluşabilir ve bu da önemli bir performans sorununa neden olabilir. Bu sorunu gidermek için, iş parçacığı güvenli özel bir dinleyici uygulamanız gerekir.  
   
-## <a name="trace-level"></a>İzleme düzeyi  
- İzleme düzeyi izleme kaynağı `switchValue` ayarıyla denetlenir. Kullanılabilir izleme düzeyleri aşağıdaki tabloda açıklanmıştır.  
+## <a name="trace-level"></a>İzleme Düzeyi  
+ İzleme düzeyi, izleme kaynağının `switchValue` ayarı tarafından denetlenir. Kullanılabilir izleme düzeyleri aşağıdaki tabloda açıklanmıştır.  
   
-|İzleme düzeyi|Izlenen olayların doğası|Izlenen olayların içeriği|İzlenen Olaylar|Kullanıcı hedefi|  
+|İzleme Düzeyi|İzlenen Olayların Doğası|İzlenen Olayların İçeriği|İzlenen Etkinlikler|Kullanıcı Hedefi|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
-|Kapalı|Yok|Yok|Hiçbir izleme yayılmadı.|Yok|  
-|Kritik|"Negatif" olaylar: beklenmeyen bir işleme veya bir hata koşulunu belirten olaylar.||Aşağıdakiler dahil işlenmemiş özel durumlar günlüğe kaydedilir:<br /><br /> -OutOfMemoryException<br />-Threadadbortexception (CLR herhangi bir Threadavbortexceptionhandler çağırır)<br />-StackOverflowException (yakalanamaz)<br />-ConfigurationErrorsException<br />-Şehir özel durumu<br />-Uygulama başlatma hataları<br />-FailFast olayları<br />-Sistem askıda kalıyor<br />-Poison iletileri: uygulamanın başarısız olmasına neden olan ileti izlemeleri.|Yöneticiler<br /><br /> Uygulama geliştiricileri|  
-|Hata|"Negatif" olaylar: beklenmeyen bir işleme veya bir hata koşulunu belirten olaylar.|Beklenmeyen işlem gerçekleşti. Uygulama beklenen şekilde bir görev gerçekleştiremedi. Ancak uygulama hala çalışır durumda kalır.|Tüm özel durumlar günlüğe kaydedilir.|Yöneticiler<br /><br /> Uygulama geliştiricileri|  
-|Uyarı|"Negatif" olaylar: beklenmeyen bir işleme veya bir hata koşulunu belirten olaylar.|Olası bir sorun oluştu ya da olabilir, ancak uygulama hala doğru şekilde çalışır. Ancak, düzgün şekilde çalışmaya devam edemeyebilir.|-Uygulama, azaltma ayarlarının izin verenden daha fazla istek alıyor.<br />-Alma kuyruğu en yüksek yapılandırılmış kapasiteye yaklaştı.<br />-Zaman aşımı aşıldı.<br />-Kimlik bilgileri reddedilir.|Yöneticiler<br /><br /> Uygulama geliştiricileri|  
-|Bilgiler|"Olumlu" olaylar: başarılı kilometre taşlarını işaretleyen olaylar|Uygulamanın düzgün çalışıp çalışmadığını bağımsız olarak uygulama yürütmenin önemli ve başarılı kilometre taşları.|Genel olarak, sistem durumunu izleme ve tanılamaya yönelik olarak, performans veya profil oluşturma ölçme için yararlı iletiler oluşturulur. Kapasite planlama ve performans yönetimi için bu bilgileri kullanabilirsiniz:<br /><br /> -Kanallar oluşturulur.<br />-Uç nokta dinleyicileri oluşturulur.<br />-İleti taşımayı giriyor/bırakıyor.<br />-Güvenlik belirteci alındı.<br />-Yapılandırma ayarı okundu.|Yöneticiler<br /><br /> Uygulama geliştiricileri<br /><br /> Ürün geliştiricileri.|  
-|Ayrıntılı|"Olumlu" olaylar: başarılı kilometre taşlarını işaretleyen olaylar.|Hem Kullanıcı kodu hem de bakım için düşük düzey olaylar yayınlanır.|Genel olarak, hata ayıklama veya uygulama iyileştirmesi için bu düzeyi kullanabilirsiniz.<br /><br /> -Anlamış ileti üstbilgisi.|Yöneticiler<br /><br /> Uygulama geliştiricileri<br /><br /> Ürün geliştiricileri.|  
-|ActivityTracing||İşlem etkinlikleri ve bileşenleri arasındaki akış olayları.|Bu düzey, yöneticilerin ve geliştiricilerin aynı uygulama etki alanındaki uygulamaları ilişkilendirmelerine olanak tanır:<br /><br /> -Başlat/Durdur gibi etkinlik sınırları için izlemeler.<br />-Aktarımlar için izlemeler.|Tümü|  
-|Tümü||Uygulama düzgün çalışmayabilir. Tüm olaylar yayınlanır.|Önceki tüm olaylar.|Tümü|  
+|Kapalı|Yok|Yok|Hiçbir iz yayılmadım.|Yok|  
+|Kritik|"Negatif" olaylar: beklenmeyen bir işleme veya hata durumunu gösteren olaylar.||Aşağıdakiler de dahil olmak üzere işlenmemiş özel durumlar günlüğe kaydedilir:<br /><br /> - OutOfMemoryException<br />- ThreadAbortException (CLR herhangi bir ThreadAbortExceptionHandler çağırır)<br />- StackOverflowException (yakalanamaz)<br />- YapılandırmaHatalarıÖzel Durum<br />- SEHException<br />- Uygulama başlangıç hataları<br />- Failfast olaylar<br />- Sistem askıda<br />- Zehirli iletiler: uygulamanın başarısız lığa neden olan ileti izlemeleri.|Yöneticiler<br /><br /> Uygulama geliştiricileri|  
+|Hata|"Negatif" olaylar: beklenmeyen bir işleme veya hata durumunu gösteren olaylar.|Beklenmeyen işlem gerçekleşti. Uygulama beklendiği gibi bir görev gerçekleştirmek mümkün değildi. Ancak, uygulama hala çalışır durumda.|Tüm özel durumlar günlüğe kaydedilir.|Yöneticiler<br /><br /> Uygulama geliştiricileri|  
+|Uyarı|"Negatif" olaylar: beklenmeyen bir işleme veya hata durumunu gösteren olaylar.|Olası bir sorun oluştu veya oluşabilir, ancak uygulama hala düzgün çalışıyor. Ancak, düzgün çalışmaya devam etmeyebilir.|- Uygulama, azaltma ayarlarının izin verdiğinden daha fazla istek alıyor.<br />- Alıcı sıra, en yüksek yapılandırılmış kapasitesine yakındır.<br />- Zaman aşımı aşıldı.<br />- Kimlik bilgileri reddedilir.|Yöneticiler<br /><br /> Uygulama geliştiricileri|  
+|Bilgi|"Olumlu" olaylar: başarılı kilometre taşlarını işaretleyen olaylar|Uygulamanın düzgün çalışıp çalışmadığına bakılmaksızın, uygulama yürütmenin önemli ve başarılı kilometre taşları.|Genel olarak, sistem durumunu izlemek ve tanılama, performans veya profil oluşturma için yararlı iletiler oluşturulur. Bu bilgileri kapasite planlama ve performans yönetimi için kullanabilirsiniz:<br /><br /> - Kanallar oluşturulur.<br />- Endpoint dinleyiciler oluşturulur.<br />- İleti taşımaya girer/ayrılır.<br />- Güvenlik belirteci alınır.<br />- Yapılandırma ayarı okunur.|Yöneticiler<br /><br /> Uygulama geliştiricileri<br /><br /> Ürün geliştiricileri.|  
+|Ayrıntılı|"Olumlu" olaylar: başarılı kilometre taşlarını işaretleyen olaylar.|Hem kullanıcı kodu hem de servis için düşük düzeyli olaylar yayılır.|Genel olarak, hata ayıklama veya uygulama optimizasyonu için bu düzeyi kullanabilirsiniz.<br /><br /> - Anlaşılmış ileti üstbilgi.|Yöneticiler<br /><br /> Uygulama geliştiricileri<br /><br /> Ürün geliştiricileri.|  
+|Aktivite Yarışı||İşleme etkinlikleri ve bileşenler arasındaki akış olayları.|Bu düzey, yöneticilerin ve geliştiricilerin uygulamaları aynı uygulama etki alanında ilişkilendirmesine olanak tanır:<br /><br /> - Başlat/durdur gibi etkinlik sınırları için izler.<br />- Transferler için izler.|Tümü|  
+|Tümü||Uygulama düzgün çalışabilir. Tüm olaylar yayılır.|Önceki tüm olaylar.|Tümü|  
   
- Ayrıntılıdan kritik ' e kadar olan düzeyler birbirlerinin üzerine yığılır, diğer bir deyişle, her bir izleme düzeyi, kapalı düzeyi hariç tüm seviyeleri içerir. Örneğin, uyarı düzeyini dinleyen bir dinleyici, kritik, hata ve uyarı izlemelerini alır. Tüm düzey, ayrıntıdan kritik ve etkinlik izleme olaylarına kadar olan olayları içerir.  
+ Verbose'den Kritik'e kadar olan düzeyler üst üste yığılmış, yani her izleme düzeyi Kapalı seviye dışında üstündeki tüm düzeyleri içerir. Örneğin, Uyarı düzeyinde dinleyen bir dinleyici Kritik, Hata ve Uyarı izlemelerini alır. Tüm düzey, Verbose'dan Kritik ve Etkinlik izleme olaylarını içerir.  
   
 > [!CAUTION]
-> Bilgi, ayrıntılı ve ActivityTracing düzeyleri, makinedeki tüm kullanılabilir kaynakları kullandıysanız ileti aktarım hızını olumsuz yönde etkileyebilecek çok sayıda izleme oluşturur.  
+> Bilgi, Verbose ve ActivityTracing düzeyleri, makinedeki tüm kullanılabilir kaynakları kullandıysanız ileti çıktısını olumsuz etkileyebilecek çok sayıda izleme oluşturur.  
   
-## <a name="configuring-activity-tracing-and-propagation-for-correlation"></a>Bağıntı için etkinlik Izlemeyi ve yaymayı yapılandırma  
- Öznitelik için belirtilen değer, etkinlik sınırları ve uç noktalar içindeki aktarımlar için izlemeleri veren Etkinlik izlemeyi etkinleştirmek için kullanılır. `activityTracing` `switchValue`  
+## <a name="configuring-activity-tracing-and-propagation-for-correlation"></a>Korelasyon için Etkinlik İzleme ve YayılmaYı Yapılandırma  
+ Öznitelik `activityTracing` için `switchValue` belirtilen değer, etkinlik sınırları ve uç noktalar içinde aktarımlar için izleme ler yayan etkinlik izlemesini etkinleştirmek için kullanılır.  
   
 > [!NOTE]
-> WCF 'de belirli genişletilebilirlik özelliklerini kullandığınızda, <xref:System.NullReferenceException> etkinlik izlemenin ne zaman etkinleştirildiğini görebilirsiniz. Bu sorunu gidermek için, uygulamanızın yapılandırma dosyasını denetleyin ve izleme kaynağınıza ait `switchValue` özniteliğin olarak `activityTracing`ayarlı olmadığından emin olun.  
+> WCF'de belirli genişletilebilirlik özelliklerini kullandığınızda, <xref:System.NullReferenceException> etkinlik izleme etkinleştirildiğinde bir şey elde edebilirsiniz. Bu sorunu gidermek için, uygulamanızın yapılandırma dosyasını `switchValue` denetleyin ve izleme kaynağınızın `activityTracing`özniteliğinin ayarlanmadığından emin olun.  
   
- `propagateActivity` Özniteliği, etkinliğin ileti değişimine katılan diğer uç noktalara yayılıp yaymayacağını gösterir. Bu değeri olarak `true`ayarlarsanız, herhangi iki uç nokta tarafından oluşturulan izleme dosyalarını alabilir ve bir uç noktada bir izleme kümesinin başka bir uç noktasındaki izleme kümesine akışını gözlemleyebilirsiniz.  
+ Öznitelik, `propagateActivity` etkinliğin ileti alışverişine katılan diğer uç noktalara yayılıp yayılmaması gerektiğini gösterir. Bu değeri `true`, herhangi iki uç nokta tarafından oluşturulan izleme dosyalarını alabilir ve bir uç noktadaki izleme kümesinin başka bir uç noktadaki bir dizi iz kümesine nasıl aktığını gözlemleyebilirsiniz.  
   
- Etkinlik izleme ve yayma hakkında daha fazla bilgi için bkz. [yayma](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
+ Etkinlik izleme ve yayılma hakkında daha fazla bilgi için [bkz.](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)  
   
- Hem hem de `propagateActivity` BooleandeğerleriSystem.ServiceModelTraceSourceiçingeçerlidir.`ActivityTracing` `ActivityTracing` Değer aynı zamanda WCF veya Kullanıcı tanımlı olanlar dahil olmak üzere tüm izleme kaynakları için de geçerlidir.  
+ Hem `propagateActivity` `ActivityTracing` de Boolean değerleri System.ServiceModel TraceSource için geçerlidir. Bu `ActivityTracing` değer, WCF veya kullanıcı tanımlı olanlar da dahil olmak üzere herhangi bir izleme kaynağı için de geçerlidir.  
   
- `propagateActivity` Özniteliği Kullanıcı tanımlı izleme kaynakları ile kullanamazsınız. Kullanıcı kodu etkinlik kimliği yayılması için ServiceModel `ActivityTracing`' ı ayarladığınızdan, hala ServiceModel `propagateActivity` özniteliği olarak `true`ayarlanmış olduğundan emin olun.  
+ Özniteliği kullanıcı `propagateActivity` tanımlı izleme kaynaklarıyla kullanamazsınız. Kullanıcı kodu etkinliği kimliği yayılımı için ServiceModel'i ayarlamadığınızdan `propagateActivity` emin olun, `true`servicemodel `ActivityTracing`özniteliği hala .'a ayarlanmışken.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [Nasıl yapılır: Izleme dinleyicileri oluşturma ve başlatma](https://go.microsoft.com/fwlink/?LinkId=94648)
-- [Özel bir TraceListener oluşturma](https://go.microsoft.com/fwlink/?LinkId=96239)
+- [Nasıl yapılır: İzleme Dinleyicileri Oluşturma ve Başlatma](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)
+- [Özel TraceListener Oluşturma](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)

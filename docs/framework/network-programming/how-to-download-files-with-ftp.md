@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: FTP ile dosyaları indirme'
-description: Bu makalede, bir FTP sunucusundan bir dosyayı indirmek nasıl bir örneği gösterilmektedir.
+title: 'Nasıl yapılır: FTP ile dosya indirin'
+description: Bu makalede, ftp sunucusundan dosya nasıl indirilir bir örnek gösterilmektedir.
 ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 892548b8-954a-4f6a-9bca-2ae620c3700f
 ms.openlocfilehash: a0941d42de71029be9aab2fdbc69f8434fb73e2d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "65632982"
 ---
-# <a name="how-to-download-files-with-ftp"></a>Nasıl yapılır: FTP ile dosyaları indirme
+# <a name="how-to-download-files-with-ftp"></a>Nasıl yapılır: FTP ile dosya indirin
 
-Bu örnek, bir FTP sunucusundan dosya indirme işlemi gösterilmektedir.
+Bu örnek, ftp sunucusundan dosyanın nasıl indirilebildiğini gösterir.
 
 ## <a name="example"></a>Örnek
 

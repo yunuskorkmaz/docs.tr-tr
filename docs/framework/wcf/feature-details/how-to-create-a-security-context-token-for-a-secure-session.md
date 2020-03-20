@@ -5,73 +5,73 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-ms.openlocfilehash: 804161dfe4c2b5b397505f25231b3afccb5a6476
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 02e0403f9ae5bb437145fa3a015edc69b884c4d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141709"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185014"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Nasıl yapılır: Güvenli Bir Oturum için Güvenlik Bağlamı Belirteci Oluşturma
-Güvenli bir oturumda durum bilgisi olan güvenlik bağlamı belirteci (SCT) kullanarak, oturum hizmetin geri dönüştürülmemesini sağlayabilir. Örneğin, bir durum bilgisiz SCT güvenli bir oturumda kullanıldığında ve Internet Information Services (IIS) sıfırlandığında, hizmetle ilişkili oturum verileri kaybedilir. Bu oturum verileri bir SCT belirteç önbelleği içerir. Bu nedenle, bir istemci hizmeti durum bilgisiz SCT ' yi bir sonraki gönderişinde, SCT ile ilişkili anahtar alınamadığından bir hata döndürülür. Ancak, durum bilgisi olan bir SCT kullanılırsa, SCT ile ilişkili anahtar, SCT içinde yer alır. Anahtar SCT içinde bulunduğundan ve bu nedenle ileti içinde yer aldığı için güvenli oturum, geri dönüştürülecek hizmetten etkilenmez. Varsayılan olarak, Windows Communication Foundation (WCF) güvenli bir oturumda durum bilgisiz SCTs 'yi kullanır. Bu konuda güvenli bir oturumda durum bilgisi olan SCN 'leri kullanma hakkında ayrıntılı bilgi verilmektedir.  
+Güvenli bir oturumda durumsal bir güvenlik bağlamı belirteci (SCT) kullanarak, oturum geri dönüştürülen hizmete dayanabilir. Örneğin, güvenli bir oturumda durum bilgisi olmayan bir SCT kullanıldığında ve Internet Information Services (IIS) sıfırlandığında, hizmetle ilişkili oturum verileri kaybolur. Bu oturum verileri bir SCT belirteç önbelleği içerir. Bu nedenle, bir istemci hizmeti bir sonraki kez durumsuz bir SCT gönderdiğinde, SCT ile ilişkili anahtar alınamadığından bir hata döndürülür. Ancak, durum lu bir ÖST kullanılırsa, ÖSK ile ilişkili anahtar ÖSK içinde bulunur. Anahtar ÖST içinde ve böylece ileti içinde bulunduğundan, güvenli oturum geri dönüştürülen hizmetten etkilenmez. Varsayılan olarak, Windows Communication Foundation (WCF) güvenli bir oturumda devletsiz SCT'leri kullanır. Bu konu, güvenli bir oturumda durum lu SCT'lerin nasıl kullanılacağını ayrıntılarıyla anlatır.  
   
 > [!NOTE]
-> Durum bilgisi olan SCTs, <xref:System.ServiceModel.Channels.IDuplexChannel>türetilen bir sözleşmeyi içeren güvenli bir oturumda kullanılamaz.  
+> Stateful SCT'ler, <xref:System.ServiceModel.Channels.IDuplexChannel>'den türeyen bir sözleşme içeren güvenli bir oturumda kullanılamaz.  
   
 > [!NOTE]
-> Güvenli bir oturumda durum bilgisi olan SCN 'leri kullanan uygulamalar için, hizmetin iş parçacığı kimliği, ilişkili kullanıcı profiline sahip bir kullanıcı hesabı olmalıdır. Hizmet, `Local Service`gibi bir kullanıcı profiline sahip olmayan bir hesap altında çalıştırıldığında bir özel durum oluşabilir.  
+> Güvenli bir oturumda durum daki SCT'leri kullanan uygulamalar için, hizmetin iş parçacığı kimliği ilişkili bir kullanıcı profiline sahip bir kullanıcı hesabı olmalıdır. Hizmet, kullanıcı profili olmayan bir hesap altında `Local Service`çalıştırıldığında, örneğin , bir özel durum atılabilir.  
   
 > [!NOTE]
-> Windows XP 'de kimliğe bürünme özelliği gerekli olduğunda, durum bilgisi olmayan bir SCT olmadan güvenli bir oturum kullanın. Durum bilgisi olan SCN 'ler kimliğe bürünme ile kullanıldığında bir <xref:System.InvalidOperationException> oluşturulur. Daha fazla bilgi için bkz. [desteklenmeyen senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
+> Windows XP'de kimliğe bürünme gerektiğinde, devlete uygun bir SCT olmadan güvenli bir oturum kullanın. Stateful SCTs kimliğe bürünme <xref:System.InvalidOperationException> ile kullanıldığında, bir atılır. Daha fazla bilgi için [desteklenmeyen senaryolar'a](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)bakın.  
   
-### <a name="to-use-stateful-scts-in-a-secure-session"></a>Güvenli bir oturumda durum bilgisi olan SCN 'leri kullanmak için  
+### <a name="to-use-stateful-scts-in-a-secure-session"></a>Güvenli bir oturumda durum lu SCT'leri kullanmak için  
   
-- SOAP iletilerinin durum bilgisi olan bir SCT kullanan güvenli bir oturumla korunduğunu belirten özel bir bağlama oluşturun.  
+- SOAP iletilerinin özel bir ÖTV kullanan güvenli bir oturum tarafından korunduğunu belirten özel bir bağlama oluşturun.  
   
-    1. Hizmetin yapılandırma dosyasına bir [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) ekleyerek özel bir bağlama tanımlayın.  
+    1. Hizmetin yapılandırma dosyasına [ \<özel](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) bağlayıcı>ekleyerek özel bir bağlama tanımlayın.  
   
         ```xml  
         <customBinding>  
         ```  
   
-    2. [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)> alt öğe [\<bağlama](../../configure-apps/file-schema/wcf/bindings.md) ekleyin.  
+    2. Bağlayıcı [ \<>](../../configure-apps/file-schema/wcf/bindings.md) alt öğesi [özelBağlayıcı>. \< ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
   
-         `name` özniteliğini yapılandırma dosyası içindeki benzersiz bir ada ayarlayarak bir bağlama adı belirtin.  
+         Yapılandırma dosyasındaki `name` benzersiz bir ada özniteliği ayarlayarak bağlayıcı bir ad belirtin.  
   
         ```xml  
         <binding name="StatefulSCTSecureSession">  
         ```  
   
-    3. [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)bir [\<güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) alt öğesi ekleyerek bu hizmetten gelen ve giden iletiler için kimlik doğrulama modunu belirtin.  
+    3. ÖzelBağlayıcı>'ne bir [ \<güvenlik>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) alt öğesi ekleyerek bu hizmete ve bu hizmetten gönderilen iletilerin kimlik doğrulama modunu belirtin. [ \< ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
   
-         `authenticationMode` özniteliğini `SecureConversation`olarak ayarlayarak güvenli bir oturumun kullanıldığını belirtin. `requireSecurityContextCancellation` özniteliği `false`olarak ayarlanarak durum bilgisi olan SCN 'leri belirtin.  
+         Özniteliği ' ne `authenticationMode` `SecureConversation`ayarlayarak güvenli bir oturumun kullanıldığını belirtin Stateful SCT'lerin `requireSecurityContextCancellation` özniteliği ni atlayarak `false`kullanıldığını belirtin.  
   
         ```xml  
         <security authenticationMode="SecureConversation"  
                   requireSecurityContextCancellation="false">  
         ```  
   
-    4. [\<güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)bir [\<Securesestionbootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) alt öğesi ekleyerek, istemcinin nasıl doğrulandığını belirtin.  
+    4. Güvenli oturum güvenlik>güvenli bir [ \<ConversationBootstrap>](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) alt öğe ekleyerek kurulurken istemcinin nasıl doğrulanmış olduğunu belirtin. [ \< ](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)  
   
-         `authenticationMode` özniteliğini ayarlayarak istemcinin kimliğinin nasıl doğrulandığını belirtin.  
+         Öznitelik ayarlayarak istemcinin nasıl `authenticationMode` doğrulanmış olduğunu belirtin.  
   
         ```xml  
         <secureConversationBootstrap authenticationMode="UserNameForCertificate" />  
         ```  
   
-    5. [\<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)gibi bir kodlama öğesi ekleyerek ileti kodlamasını belirtin.  
+    5. [ \<TextMessageEncoding>](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)gibi bir kodlama öğesi ekleyerek ileti kodlamasını belirtin.  
   
         ```xml  
         <textMessageEncoding />  
         ```  
   
-    6. [\<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)gibi bir taşıma öğesi ekleyerek taşımayı belirtin.  
+    6. [ \<httpTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)gibi bir aktarım öğesi ekleyerek aktarım'ı belirtin.  
   
         ```xml  
         <httpTransport />  
         ```  
   
-     Aşağıdaki kod örneği, iletilerin, güvenli bir oturumda durum bilgisi olan SCN 'ler ile kullanabileceği özel bir bağlama belirtmek için yapılandırmayı kullanır.  
+     Aşağıdaki kod örneği, iletilerin güvenli bir oturumda durum daki SCT'lerle kullanabileceği özel bir bağlama belirtmek için yapılandırmayı kullanır.  
   
     ```xml  
     <customBinding>  
@@ -87,12 +87,12 @@ Güvenli bir oturumda durum bilgisi olan güvenlik bağlamı belirteci (SCT) kul
     ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, güvenli bir oturumu önyüklemek için <xref:System.ServiceModel.Configuration.AuthenticationMode.MutualCertificate> kimlik doğrulama modunu kullanan özel bir bağlama oluşturur.  
+ Aşağıdaki kod örneği, güvenli bir oturumu <xref:System.ServiceModel.Configuration.AuthenticationMode.MutualCertificate> önyükleme için kimlik doğrulama modunu kullanan özel bir bağlama oluşturur.  
   
  [!code-csharp[c_CreateStatefulSCT#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createstatefulsct/cs/secureservice.cs#2)]
  [!code-vb[c_CreateStatefulSCT#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createstatefulsct/vb/secureservice.vb#2)]  
   
- Windows kimlik doğrulaması durum bilgisi olan bir SCT ile birlikte kullanıldığında, WCF <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> özelliğini gerçek arayanın kimliğiyle doldurmaz, bunun yerine özelliği anonim olarak ayarlar. WCF güvenliği, gelen SCT 'nin her isteği için hizmet güvenlik bağlamının içeriğini yeniden oluşturması gerektiğinden, sunucu bellekteki güvenlik oturumunu izlemez. <xref:System.Security.Principal.WindowsIdentity> örneğinin SCT 'e serileştirilmek imkansız olduğundan, <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> özelliği anonim bir kimlik döndürür.  
+ Windows kimlik doğrulaması durum salkıcısı ile birlikte kullanıldığında, WCF özelliği gerçek arayanın <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> kimliğiyle doldurmaz, bunun yerine özelliği anonim olarak ayarlar. WCF security'nin gelen SCT'den gelen her istek için hizmet güvenliği bağlamının içeriğini yeniden oluşturması gerektiğinden, sunucu bellekteki güvenlik oturumunu izlemez. <xref:System.Security.Principal.WindowsIdentity> Örneği SCT'ye seri hale getirmek mümkün <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> olmadığından, özellik anonim bir kimlik döndürür.  
   
  Aşağıdaki yapılandırma bu davranışı sergiler.  
   
@@ -100,7 +100,7 @@ Güvenli bir oturumda durum bilgisi olan güvenlik bağlamı belirteci (SCT) kul
 <customBinding>  
   <binding name="Cancellation">  
        <textMessageEncoding />  
-        <security   
+        <security
             requireSecurityContextCancellation="false">  
               <secureConversationBootstrap />  
       </security>  
@@ -111,4 +111,4 @@ Güvenli bir oturumda durum bilgisi olan güvenlik bağlamı belirteci (SCT) kul
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

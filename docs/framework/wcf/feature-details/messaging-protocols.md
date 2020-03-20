@@ -2,136 +2,136 @@
 title: Mesajlaşma Protokolleri
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: 70972f6a211d60d9fd330277040428ef783e9668
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d35cd496db32e1a2886f7ca06e7a3d0964f9c9b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631532"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184589"
 ---
 # <a name="messaging-protocols"></a>Mesajlaşma Protokolleri
 
-Windows Communication Foundation (WCF) kanal yığın kodlama ve taşıma kanalları, kablo biçimini iç ileti gösterimine dönüştürmek ve belirli bir kullanarak göndermek için kullanır. HTTP Web Hizmetleri birlikte çalışabilirlik için kullanılan en yaygın taşıma olduğunda ve XML tabanlı SOAP 1.1 ve SOAP 1.2 ileti aktarım en iyi duruma getirme mekanizması (MTOM) Web Hizmetleri tarafından kullanılan en yaygın kodlamaları desteklenmektedir.
+Windows Communication Foundation (WCF) kanal yığını, dahili ileti gösterimini tel biçimine dönüştürmek ve belirli bir aktarım kullanarak göndermek için kodlama ve aktarım kanalları kullanır. Web hizmetleri birlikte çalışabilirlik için kullanılan en yaygın aktarım HTTP'dir ve Web hizmetleri tarafından kullanılan en yaygın kodlamalar XML tabanlı SOAP 1.1, SOAP 1.2 ve İleti İletim OptimizasyonU Mekanizması 'dır (MTOM).
 
-Bu konuda WCF tarafından kullanılan şu protokoller için uygulama ayrıntılarını kapsayan <xref:System.ServiceModel.Channels.HttpTransportBindingElement>.
+Bu konu, aşağıdaki protokoller için WCF <xref:System.ServiceModel.Channels.HttpTransportBindingElement>uygulama ayrıntılarını kapsamaktadır.
 
-Belirtimi/belgesi:
+Belirtim/belge:
 
 - [HTTP 1.1](https://www.ietf.org/rfc/rfc2616.txt)
-- [SOAP 1.1 HTTP bağlaması](https://www.w3.org/TR/2000/NOTE-SOAP-20000508), Bölüm 7
-- [SOAP 1.2 HTTP bağlaması](https://www.w3.org/TR/soap12-part2) Bölüm 7
+- [SOAP 1.1 HTTP Ciltleme](https://www.w3.org/TR/2000/NOTE-SOAP-20000508), Bölüm 7
+- [SOAP 1.2 HTTP Ciltleme](https://www.w3.org/TR/soap12-part2) Bölüm 7
 
-Şu protokoller için bu konuda WCF uygulama ayrıntılarını kapsayan <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> ve <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> uyguluyor.
+Bu konu, aşağıdaki protokoller için WCF uygulama ayrıntılarını kapsar <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> ve <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> kullanır.
 
-Belirtimi/belgesi:
+Şartname/Belge:
 
-- [XML](https://www.w3.org/TR/REC-xml)
-- [SOAP 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)
+- [Xml](https://www.w3.org/TR/REC-xml)
+- [SABUN 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)
 - [SOAP 1.2 Çekirdek](https://www.w3.org/TR/soap12-part1/)
-- [WS-Addressing 2004/08](https://www.w3.org/Submission/2004/SUBM-ws-addressing-20040810/)
-- [Adresleme 1.0 - çekirdek W3C Web Hizmetleri](https://www.w3.org/TR/2006/REC-ws-addr-core-20060509)
-- [Adresleme 1.0 - SOAP bağlama W3C Web Hizmetleri](https://www.w3.org/TR/2006/REC-ws-addr-soap-20060509)
-- [Adresleme 1.0 - WSDL bağlama W3C Web Hizmetleri](https://www.w3.org/TR/2006/CR-ws-addr-wsdl-20060529/)
-- [Adresleme 1.0 - meta verileri W3C Web Hizmetleri](https://www.w3.org/TR/ws-addr-metadata/)
-- [WSDL SOAP1.1 bağlama](https://www.w3.org/TR/wsdl/)
-- [WSDL SOAP1.2 bağlama](https://www.w3.org/Submission/wsdl11soap12/)
+- [WS-Adresleme 2004/08](https://www.w3.org/Submission/2004/SUBM-ws-addressing-20040810/)
+- [W3C Web Hizmetleri Adresleme 1.0 - Çekirdek](https://www.w3.org/TR/2006/REC-ws-addr-core-20060509)
+- [W3C Web Hizmetleri Adresleme 1.0 - SOAP Bağlama](https://www.w3.org/TR/2006/REC-ws-addr-soap-20060509)
+- [W3C Web Hizmetleri Adresleme 1.0 - WSDL Bağlama](https://www.w3.org/TR/2006/CR-ws-addr-wsdl-20060529/)
+- [W3C Web Hizmetleri Adresleme 1.0 - Metadata](https://www.w3.org/TR/ws-addr-metadata/)
+- [WSDL SOAP1.1 Ciltleme](https://www.w3.org/TR/wsdl/)
+- [WSDL SOAP1.2 Bağlama](https://www.w3.org/Submission/wsdl11soap12/)
 
-Şu protokoller için bu konuda WCF uygulama ayrıntılarını kapsayan <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> kullanır.
+Bu konu, <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> aşağıdaki protokoller için WCF uygulama ayrıntılarını kapsar.
 
-Belirtimi/belgesi:
+Belirtim/belge:
 
 - [XOP](https://www.w3.org/TR/xop10/)
-- [MTOM + SOAP 1.2 bağlama](https://www.w3.org/TR/soap12-mtom/)
-- [MTOM SOAP 1.1 bağlama](https://www.w3.org/Submission/soap11mtom10/)
-- [MTOM WS-Policy onaylama](https://www.w3.org/Submission/2006/SUBM-WS-MTOMPolicy-20061101/)
+- [MTOM + SABUN 1.2 Bağlama](https://www.w3.org/TR/soap12-mtom/)
+- [MTOM SABUN 1.1 Ciltleme](https://www.w3.org/Submission/soap11mtom10/)
+- [MTOM WS-Politika İddiası](https://www.w3.org/Submission/2006/SUBM-WS-MTOMPolicy-20061101/)
 
-Bu konu başlığı altında yaptığımız, aşağıdaki XML ad alanları ve ilişkili ön ekleri kullanılır:
+Bu konu boyunca aşağıdaki XML ad alanları ve ilişkili önekler kullanılır:
 
-| Ön eki | Namespace Tekdüzen Kaynak Tanımlayıcısı (URI) |
+| Ön ek | Namespace Uniform Resource Tanımlayıcı (URI) |
 |------------|---------------------------------------------------|
 | s11 | `http://schemas.xmlsoap.org/soap/envelope` |
 | s12 |`http://www.w3.org/2003/05/soap-envelope` |
-| wsa |`http://www.w3.org/2004/08/addressing` |
+| Wsa |`http://www.w3.org/2004/08/addressing` |
 | wsam |`http://www.w3.org/2007/05/addressing/metadata` |
 | wsap |`http://schemas.xmlsoap.org/ws/2004/09/policy/addressing` |
 | wsa10 |`http://www.w3.org/2005/08/addressing` |
 | wsaw10 |`http://www.w3.org/2006/05/addressing/wsdl` |
-| XOP |`http://www.w3.org/2004/08/xop/include` |
+| xop |`http://www.w3.org/2004/08/xop/include` |
 | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` |
-| dp |`http://schemas.microsoft.com/net/2006/06/duplex` |
+| Dp |`http://schemas.microsoft.com/net/2006/06/duplex` |
 
-## <a name="soap-11-and-soap-12"></a>SOAP 1.1 ve SOAP 1.2
+## <a name="soap-11-and-soap-12"></a>SABUN 1.1 ve SABUN 1.2
 
-### <a name="envelope-and-processing-model"></a>Zarf ve Model işleme
-WCF SOAP 1.1 Zarf işleme temel Profil 1.1 (BP11) ve temel Profil 1.0 (SSBP10) uygular. 1.2 Zarf SOAP12 bölüm 1 aşağıdaki işlem uygulanır SOAP.
+### <a name="envelope-and-processing-model"></a>Zarf ve İşleme Modeli
+WCF, Temel Profil 1.1 (BP11) ve Temel Profil 1.0 'dan (SSBP10) sonra SOAP 1.1 zarf işleme uygular. SOAP 1.2 Zarf işleme, SOAP12-Part1'den sonra uygulanır.
 
-Bu bölümde BP11 ve SOAP12 bölüm 1 ile ilgili WCF tarafından yapılan belirli uygulama seçimler açıklanmaktadır.
+Bu bölümde, WCF tarafından BP11 ve SOAP12-Part1 ile ilgili olarak alınan bazı uygulama seçenekleri açıklanmaktadır.
 
-#### <a name="mandatory-header-processing"></a>Zorunlu üstbilgiyi işleme
-WCF üst işleme işaretlenmiş için kuralları aşağıdaki `mustUnderstand` aşağıdaki farklılıklar nedeniyle SOAP 1.1 ve SOAP 1.2 özellikleri açıklanmaktadır.
+#### <a name="mandatory-header-processing"></a>Zorunlu Üstbilgi İşleme
+WCF, SOAP 1.1 `mustUnderstand` ve SOAP 1.2 belirtimlerinde açıklanan başlıkların işlenmesi için aşağıdaki varyasyonlarla birlikte kurallara uyar.
 
-WCF kanalı yığın girdiği bir ileti ile ilişkili bağlama öğeleri, örneğin yapılandırılmış tek tek kanalları, ileti metin kodlama, güvenlik, güvenilir Mesajlaşma ve işlemler tarafından işlenir. Her kanal, ilişkili ad alanından üstbilgileri tanır ve bunları anladım olarak işaretler. Bir ileti dağıtıcısı girdikten sonra işlem biçimlendirici ve karşılık gelen ileti/işlem anlaşması ve bunları anladım işaretleri tarafından beklenen üst bilgilerini okur. Dağıtıcı kalan üst bilgileri olmayan anladı ancak olarak işaretlenmiş olup olmadığını doğrular `mustUnderstand` ve bir özel durum oluşturur. İçeren iletileri `mustUnderstand` alıcı hedeflenen üstbilgileri alıcı uygulama kodu tarafından işlenmedi.
+WCF kanal yığınına giren bir ileti, Metin İleti Kodlaması, Güvenlik, Güvenilir İleti ve Hareketler gibi ilişkili bağlama öğeleri tarafından yapılandırılan tek tek kanallar tarafından işlenir. Her kanal ilişkili ad alanından üstbilgi tanır ve anlaşıldığı şekilde işaretler. İleti sevk irsaliyesi girdikten sonra, ilgili ileti/işlem sözleşmesitarafından beklenen üstleri okur ve anlaşıldı işaretler. Daha sonra, kalan üstbilginin anlaşılmadığını ancak özel `mustUnderstand` durum olarak işaretlenip işaretlenmediğini doğrular. Alıcıyı hedefleyen `mustUnderstand` üstbilgileri içeren iletiler alıcı uygulama kodu tarafından işlenmez.
 
-Gibi katmanlı işleme altyapısı katmanları ve SOAP düğümünün uygulama katmanları arasında ayrım sağlar:
+Bu tür katmanlı işleme altyapı katmanları ve SOAP düğümü uygulama katmanları arasında ayrım sağlar:
 
-- B1111: WCF altyapısı kanal yığını tarafından ileti işlendikten sonra ancak uygulama tarafından işlenmeden önce algılanan değil anlaşılan üst bilgileri
+- B1111: İleti WCF altyapı kanalı yığını tarafından işlendikten sonra ancak uygulama tarafından işlenmeden önce anlaşılamayan üstbilgi algılanır
 
-     `mustUnderstand` Üstbilgi değeri SOAP 1.1 ve SOAP 1.2 arasında farklılık gösterir. Temel Profil 1.1 gerektirir `mustUnderstand` değeri SOAP 1.1 iletileri için 0 veya 1 olmalıdır. SOAP 1.2 izin verir, 0, 1, `false`, ve `true` gibi değerler, ancak kurallı bir temsilini yayma önerir `xs:boolean` değerleri (`false`, `true`).
+     `mustUnderstand` Başlık değeri SOAP 1.1 ile SOAP 1.2 arasında farklılık gösterir. Temel Profil 1.1, `mustUnderstand` SOAP 1.1 iletileri için değerin 0 veya 1 olmasını gerektirir. SOAP 1.2, 0, `false`1 `true` ve değerler olarak izin verir, ancak değerlerin `xs:boolean` kanonik bir temsilini yayan önerir (`false`, `true`).
 
-- B1112: WCF yayan `mustUnderstand` SOAP zarfının değerleri 0 ile 1 hem SOAP 1.1 ve SOAP 1.2 sürümleri. WCF kabul ettiği tüm değerini alan `xs:boolean` için `mustUnderstand` üst bilgisi (0, 1, `false`, `true`)
+- B1112: WCF, `mustUnderstand` SOAP zarfının SOAP 1.1 ve SOAP 1.2 versiyonları için 0 ve 1 değerlerini yayır. `xs:boolean` WCF `mustUnderstand` üstbilgi için tüm değer alanını kabul eder `false`(0, 1, , `true`)
 
-#### <a name="soap-faults"></a>SOAP hataları
-WCF özel SOAP hatası uygulamalarının listesi verilmiştir.
+#### <a name="soap-faults"></a>SABUN Arızaları
+Aşağıda WCF'ye özgü SOAP hata uygulamalarının bir listesi verem.
 
-- B2121: WCF aşağıdaki SOAP 1.1 hata kodlarını döndürür: `s11:mustUnderstand`, `s11:Client`, ve `s11:Server`.
+- B2121: WCF aşağıdaki SOAP 1.1 `s11:mustUnderstand`Arıza `s11:Client`Kodları `s11:Server`döndürür: , , ve .
 
-- B2122: WCF aşağıdaki SOAP 1.2 hata kodlarını döndürür: `s12:MustUnderstand`, `s12:Sender`, ve `s12:Receiver`.
+- B2122: WCF aşağıdaki SOAP 1.2 `s12:MustUnderstand`Arıza `s12:Sender`Kodları `s12:Receiver`döndürür: , , ve .
 
-### <a name="http-binding"></a>HTTP bağlama
+### <a name="http-binding"></a>HTTP Ciltleme
 
-#### <a name="soap-11-http-binding"></a>SOAP 1.1 HTTP bağlama
-WCF ile aşağıdaki Açıklamalar bölümüne 3.4 temel Profil 1.1 belirtiminden SOAP1.1 HTTP bağlaması uygular:
+#### <a name="soap-11-http-binding"></a>SOAP 1.1 HTTP Ciltleme
+WCF aşağıdaki açıklamalar ile Temel Profil 1.1 belirtimi bölüm 3.4 aşağıdaki SOAP1.1 HTTP bağlama uygular:
 
-- B2211: WCF hizmeti, HTTP POST istekleri yeniden yönlendirme uygulamıyor.
+- B2211: WCF hizmeti HTTP POST isteklerinin yeniden yönlendirilmesi uygulamaz.
 
-- B2212: WCF istemcileri 3.4.8 uygun olarak HTTP tanımlama bilgileri destekler.
+- B2212: WCF müşterileri HTTP Çerezleri'ni 3.4.8 uyarınca destekler.
 
-#### <a name="soap-12-http-binding"></a>SOAP 1.2 HTTP bağlama
-WCF SOAP 1.2 HTTP bağlaması SOAP 1.2-Bölüm 2 (SOAP12Part2) belirtimiyle aşağıdaki açıklamalar bölümünde anlatıldığı gibi uygular.
+#### <a name="soap-12-http-binding"></a>SOAP 1.2 HTTP Ciltleme
+WCF aşağıdaki açıklamalar ile SOAP 1.2-part 2 (SOAP12Part2) belirtiminde açıklandığı gibi SOAP 1.2 HTTP bağlama uygular.
 
-SOAP 1.2 bir isteğe bağlı eylem parametresi için sunulan `application/soap+xml` medya türü. Bu parametre, WS-Addressing kullanılmadığında SOAP iletisinin gövdesini ayrıştırılması gerek kalmadan ileti gönderme en iyi duruma getirmek kullanışlıdır.
+SOAP `application/soap+xml` 1.2, ortam türü için isteğe bağlı bir eylem parametresi tanıttı. Bu parametre, WS-Adresleme kullanılmadığında SOAP iletisinin gövdesinin ayrıştırılmasına gerek kalmadan ileti gönderimi optimize etmek için yararlıdır.
 
-- R2221: `application/soap+xml` Eylem parametresi SOAP 1.2 istek üzerine varsa eşleşmelidir `soapAction` özniteliği `wsoap12:operation` içinde karşılık gelen WSDL bağlama öğesi.
+- R2221: `application/soap+xml` Bir SOAP 1.2 isteğinde mevcut olduğunda eylem `soapAction` parametresi, `wsoap12:operation` ilgili WSDL bağlama içindeki öğedeki öznitelikle eşleşmelidir.
 
-- R2222: `application/soap+xml` Eylem parametresi varsa bir SOAP 1.2 iletinin eşleşmelidir `wsa:Action` WS-Addressing 2004/08 veya WS-Addressing 1.0 ne zaman kullanılır.
+- R2222: `application/soap+xml` Bir SOAP 1.2 iletisi üzerinde mevcut `wsa:Action` olduğunda, ws-Adresleme 2004/08 veya WS-Adresleme 1.0 kullanıldığında eylem parametresi eşleşmelidir.
 
-WS-Addressing devre dışı ve gelen bir istek, bir eylem parametresinin içermiyor, ileti `Action` belirtilen olarak kabul edilmez.
+WS Adresi devre dışı bırakıldığında ve gelen istek bir eylem `Action` parametresi içermiyorsa, ileti belirtilmemiş olarak kabul edilir.
 
-## <a name="ws-addressing"></a>WS-Addressing
-WCF WS-Addressing 3 versiyonunu uygular:
+## <a name="ws-addressing"></a>WS-Adresleme
+WCF WS-Adresleme 3 sürümleri uygular:
 
-- WS-Addressing 2004/08
+- WS-Adresleme 2004/08
 
-- W3C Web Hizmetleri 1.0 çekirdek (çekirdek ADDR10) ve SOAP (ADDR10 SOAP) bağlama
+- W3C Web Hizmetleri Adresleme 1.0 Çekirdekli (ADDR10-CORE) ve SABUN Bağlama (ADDR10-SOAP)
 
-- WS-Addressing 1.0 - meta verileri
+- WS-Adresleme 1.0 - Meta veriler
 
-### <a name="endpoint-references"></a>Uç nokta başvuruları
-WCF uygulayan WS-Addressing tüm sürümlerinde uç nokta başvuruları uç noktaları tanımlamak için kullanılır.
+### <a name="endpoint-references"></a>Bitiş Noktası Referansları
+WCF'nin uyguladığı WS Adresi'nin tüm sürümleri uç noktaları açıklamak için uç nokta başvurularını kullanır.
 
-#### <a name="endpoint-references-and-ws-addressing-versions"></a>Uç nokta başvurular ve WS-Addressing sürümleri
-WCF altyapısı kurallarının WS-Addressing kullanın ve belirli bir sayı uygulayan `EndpointReference` öğesi ve `W3C.WsAddressing.EndpointReferenceType` sınıfı (örneğin, WS-ReliableMessaging, WS-SecureConversation ve WS-Trust). WCF WS-Addressing diğer altyapı protokollerle iki sürümünü destekler. WCF bitiş noktalarını, uç noktası başına bir sürümü, WS-Addressing destekler.
+#### <a name="endpoint-references-and-ws-addressing-versions"></a>Uç Nokta Referansları ve WS Adresleme Sürümleri
+WCF, WS-Addressing'i ve özellikle `EndpointReference` öğeve `W3C.WsAddressing.EndpointReferenceType` sınıfı (örneğin, WS-ReliableMessaging, WS-SecureConversation ve WS-Trust) kullanan bir dizi altyapı protokolünü uygular. WCF, WS-Addressing'in her iki sürümünün de diğer altyapı protokolleriyle kullanımını destekler. WCF uç noktaları, bitiş noktası başına WS adreslemenin bir sürümünü destekler.
 
-R3111, ad alanı için `EndpointReference` öğesi veya bir WCF uç noktasıyla alınıp verilen iletileri kullanılan türü-bu bitiş noktası tarafından uygulanan WS Addressing sürümü aynı olmalıdır.
+R3111 için, WCF `EndpointReference` bitiş noktasıyla değiştirilen iletilerde kullanılan öğe veya tür için ad alanı, bu bitiş noktası tarafından uygulanan WS-Adresleme sürümüyle eşleşmelidir.
 
-Örneğin, bir WCF uç noktası WS-ReliableMessaging uyguluyorsa `AcksTo` üst bilgisi içinde bir tür bir uç nokta tarafından döndürülen `CreateSequenceResponse` WS-Addressing sürümü kullanır, `EncodingBinding` öğesi için bu endpoint belirtir.
+Örneğin, bir WCF bitiş noktası WS-ReliableMessaging `AcksTo` uygularsa, üstbilgi içinde `CreateSequenceResponse` böyle bir bitiş noktası `EncodingBinding` tarafından döndürülen öğe, bu bitiş noktası için belirttiği WS Adresleme sürümünü kullanır.
 
-#### <a name="endpoint-references-and-metadata"></a>Uç nokta başvurular ve meta verileri
-Birçok senaryoda meta verileri veya belirli bir uç nokta için meta veri başvurusu iletişim kurmasını gerektirir.
+#### <a name="endpoint-references-and-metadata"></a>Uç Nokta Referansları ve Meta veriler
+Bir dizi senaryo, belirli bir bitiş noktası için meta verilerin iletişimini veya meta verilere başvuruyu gerektirir.
 
-B3121: WCF 6. Bölüm değere veya başvuruya göre meta veri uç noktası başvurular eklemek için WS-MetadataExchange (MEX) belirtiminde açıklanan mekanizmalarını kullanır.
+B3121: WCF, WS-MetadataExchange (MEX) belirtiminde Bölüm 6'da açıklanan mekanizmaları, değer veya referans olarak uç nokta referansları için meta verileri içerecek şekilde kullanır.
 
-Burada bir WCF Hizmeti belirteci veren tarafından verilen bir güvenlik onaylama işaretleme dili (SAML) belirteci kullanarak kimlik doğrulaması gerektirir bir senaryo düşünün `http://sts.fabrikam123.com`. WCF uç noktayı kullanarak bu kimlik doğrulama gereksinimini açıklar `sp:IssuedToken` onaylama işlemi bir iç içe `sp:Issuer` onaylama için belirteç verenin işaret eden. Erişen istemci uygulamalar `sp:Issuer` onaylama belirteci veren uç noktası ile iletişim kurma bilmeniz gerekir. İstemcinin meta veri belirteci veren hakkında bilmeniz gerekir. WCF MEX içinde tanımlanan uç nokta başvurusu meta verileri uzantıları kullanarak, belirteci veren meta verilerine bir başvuru sağlar.
+Bir WCF hizmetinin, belirteç veren kuruluş tarafından verilen Güvenlik İddiaları İşaretleyici Dili (SAML) belirteci kullanarak kimlik doğrulaması gerektirdiği bir senaryo `http://sts.fabrikam123.com`düşünün. WCF bitiş noktası belirteç veren `sp:IssuedToken` işaret eden `sp:Issuer` iç içe bir setir ile iddia kullanarak bu kimlik doğrulama gereksinimi açıklar. `sp:Issuer` Sermesi erişen istemci uygulamaları, belirteç veren bitiş noktasıyla nasıl iletişim kuracağını bermesi gerekir. İstemcinin belirteç veren hakkında meta verileri bilmesi gerekir. WCF, MEX'te tanımlanan uç nokta referans meta veri uzantılarını kullanarak belirteç veren meta verilerine bir başvuru sağlar.
 
 ```xml
 <sp:IssuedToken>
@@ -154,106 +154,106 @@ Burada bir WCF Hizmeti belirteci veren tarafından verilen bir güvenlik onaylam
 </sp:IssuedToken>
 ```
 
-### <a name="message-addressing-headers"></a>İleti Addressing üst bilgileri
+### <a name="message-addressing-headers"></a>İleti Adresleme Üstbilgileri
 
-#### <a name="message-headers"></a>İleti üstbilgileri
-WS-Addressing iki sürümü de WCF aşağıdaki ileti üstbilgilerini belirtimleri tarafından belirtilen şekilde kullanır `wsa:To`, `wsa:ReplyTo`, `wsa:Action`, `wsa:MessageID`, ve `wsa:RelatesTo`.
+#### <a name="message-headers"></a>İleti Üstbilgi
+WCF, her iki WS Adresleme sürümü için, `wsa:To`belirtimler , `wsa:ReplyTo` `wsa:Action`, `wsa:MessageID`, `wsa:RelatesTo`ve .
 
-B3211: Tüm sürümler, WS-Addressing WCF geliştirir. ancak kullanıma hazır, WS-Addressing ileti üstbilgileri üretmez `wsa:FaultTo` ve `wsa:From`.
+B3211: Tüm WS Adresleme sürümleri için, WCF onur, ancak kutunun dışında üretmek değil, `wsa:FaultTo` `wsa:From`WS-Adresleme ileti üstbilgileri ve .
 
-Bu ileti üstbilgileri ve WCF uygun şekilde işleyecek etkileşim kuran uygulamaları ile WCF uygulamaları ekleyebilirsiniz.
+WCF uygulamalarıyla etkileşimedebilen uygulamalar bu ileti üstbilgilerini ekleyebilir ve WCF bunları buna göre işleyebilir.
 
-#### <a name="reference-parameters-and-properties"></a>Başvuru parametreleri ve özellikleri
+#### <a name="reference-parameters-and-properties"></a>Referans Parametreleri ve Özellikleri
 
-WCF uç nokta başvuru parametreleri ve başvuru özellikleri ilgili özellikleri uygun şekilde işlenmesini uygular.
+WCF, uç nokta referans parametrelerinin ve referans özelliklerinin ilgili spesifikasyonlara uygun olarak işlenmesini uygular.
 
-B3221: WS-Addressing 2004/08 kullanmak için yapılandırıldığında, WCF bitiş noktalarını işlem başvurusu özellikleri ve başvuru parametreleri arasında ayrım yapmaz.
+B3221: WS-Addressing 2004/08'i kullanacak şekilde yapılandırıldığında, WCF uç noktaları başvuru özelliklerini işleme ve Referans Parametreleri arasında ayrım yapmaz.
 
-### <a name="message-exchange-patterns"></a>İleti Exchange desenleri
-Web hizmeti işlemi çağrısını ilgili iletiler dizisini olarak adlandırılır *ileti değişim deseni*. WCF destekleyen tek yönlü ve istek-yanıt çift yönlü ileti desenleri exchange. Bu bölümde kullanılan ileti değişim deseni bağlı olarak işlenen ileti üzerinde WS-Addressing gereksinimlerini açıklar.
+### <a name="message-exchange-patterns"></a>İleti Değişim Desenleri
+Web hizmeti işlemi çağırmasında yer alan iletilerin sırası *ileti alışverişi deseni*olarak adlandırılır. WCF tek yönlü, istek-yanıt ve çift yönlü ileti alışverişi modellerini destekler. Bu bölümde, kullanılan ileti alışverişi desenine bağlı olarak ileti işlemede WS-Adresleme gereksinimleri açıklamaktadır.
 
-Bu bölümde boyunca ilk iletiyi istek gönderir ve Yanıtlayıcı ilk iletiyi alır.
+Bu bölüm boyunca, istekte bulundurucu ilk iletiyi gönderir ve yanıtlayan ilk iletiyi alır.
 
-#### <a name="one-way-message"></a>Tek yönlü mesaj
-İletileri desteklemek üzere WCF uç noktasını yapılandırıldığında bir verilen `Action` tek yönlü bir yapıdadır WCF uç noktası aşağıdaki davranışları ve gereksinimleri aşağıda verilmiştir. Aksi belirtilmediği sürece, hem WS Addressing-WCF'de desteklenen sürümleri için davranışları ve kurallar geçerlidir:
+#### <a name="one-way-message"></a>Tek Yönlü İleti
+Bir WCF bitiş noktası, tek yönlü bir `Action` desen izlemek için verilen iletileri destekleyecek şekilde yapılandırıldığında, WCF bitiş noktası aşağıdaki davranışları ve gereksinimleri izler. Aksi belirtilmedikçe, WCF'de desteklenen WS-Addressing'in her iki sürümü için de davranışlar ve kurallar geçerlidir:
 
-- R3311: İstek sahibinin içermelidir `wsa:To`, `wsa:Action`ve uç nokta başvurusu tarafından belirtilen tüm başvuru parametreleri için üstbilgiler. WS-Addressing 2004/08 kullanılır ve [başvurusu Özellikleri] belirtilen uç nokta başvurusu tarafından ilgili üst bilgiler iletiye çok eklenmesi gerekir.
+- R3311: İstekli, `wsa:To`bitiş `wsa:Action`noktası referansı tarafından belirtilen tüm başvuru parametreleri için , ve üstbilgi içermelidir. WS Adresi 2004/08 kullanıldığında ve [başvuru özellikleri] bitiş noktası referansı yla belirtildiğinde, ilgili üstbilginin de iletiye eklenmesi gerekir.
 
-- B3312: İstek sahibinin içerebilir `MessageID`, `ReplyTo`, ve `FaultTo` üstbilgileri. Alıcı altyapı bunları yoksayar ve uygulamaya geçirilir.
+- B3312: İstekli , `MessageID` `ReplyTo`ve `FaultTo` üstbilgi içerebilir. Alıcı altyapısı bunları yok sayacak ve uygulamaya geçirilecek.
 
-- R3313: Yanıtlayıcı, HTTP kullanılır ve HTTP yanıt oluşturan üzerinde gönderilen ileti, boş bir gövdeye ve 202 HTTP durum kodu ile bir HTTP yanıtı göndermeniz gerekir.
+- R3313: HTTP kullanıldığında ve HTTP yanıt bacağına mesaj gönderilmediğinde, yanıtlayan boş bir gövde ve HTTP 202 durum kodu içeren bir HTTP yanıtı göndermelidir.
 
-     HTTP taşıma kullanımda ve bir ileti tek yönlü işlem anlaşması bildirir, HTTP yanıtı hala altyapı iletileri göndermek için kullanılabilir — örneğin, güvenilir ileti göndermek için bir `SequenceAcknowledgement` bir HTTP yanıt iletisi.
+     HTTP aktarım ı kullanımda olduğunda ve işlem sözleşmesi tek yönlü bir ileti beyan ettiğinde, HTTP yanıtı yine de altyapı `SequenceAcknowledgement` iletileri göndermek için kullanılabilir(örneğin, güvenilir ileti bir HTTP yanıtı na ileti gönderebilir).
 
-- B3314: WCF Yanıtlayıcı tek yönlü bir iletiye yanıt olarak bir hata iletisi göndermez.
+- B3314: WCF yanıtlayıcısı tek yönlü bir iletiye yanıt olarak hata iletisi göndermez.
 
 #### <a name="request-reply"></a>İstek-Yanıt
-Bir ileti ile WCF uç noktasını yapılandırıldığında bir verilen `Action` istek-yanıt desenler izleyen WCF uç nokta davranışları ve aşağıdaki gereksinimleri aşağıda verilmiştir. Aksi belirtilmediği sürece, hem WS Addressing-WCF'de desteklenen sürümleri için davranışları ve kurallar geçerlidir:
+Bir WCF bitiş noktası, istek yanıtı `Action` deseni izlemek için verilen bir ileti için yapılandırıldığında, WCF bitiş noktası aşağıdaki davranışları ve gereksinimleri izler. Aksi belirtilmedikçe, WCF'de desteklenen WS-Addressing'in her iki sürümü için de davranışlar ve kurallar geçerlidir:
 
-- R3321: İstek istek içermelidir `wsa:To`, `wsa:Action`, `wsa:MessageID`ve tüm başvuru parametreleri başvuru özellikler (veya her ikisi) uç noktası başvuru tarafından belirtilen için üstbilgiler.
+- R3321: İstekli, bitiş noktası `wsa:To` `wsa:Action`referansı tarafından belirtilen tüm başvuru parametreleri veya başvuru özellikleri (veya her ikisi) için istek, `wsa:MessageID`ve üstbilgi içermelidir.
 
-- R3322: WS-Addressing 2004/08 kullanıldığında `ReplyTo` ayrıca isteğinde bulunması gerekir.
+- R3322: WS-Adresleme 2004/08 kullanıldığında, `ReplyTo` isteğe de dahil edilmelidir.
 
-- R3323: WS-Addressing 1.0 kullanıldığında ve `ReplyTo` isteğindeki eşit [address] özelliği ile bir varsayılan uç nokta başvurusu yok `http://www.w3.org/2005/08/addressing/anonymous` kullanılır.
+- R3323: WS-Adresleme 1.0 kullanıldığında `ReplyTo` ve istekte bulunmadığında, [adres] özelliğine `http://www.w3.org/2005/08/addressing/anonymous` eşit olan varsayılan uç nokta başvurusu kullanılır.
 
-- R3324: İstek sahibinin içermelidir `wsa:To`, `wsa:Action`, ve `wsa:RelatesTo` tüm başvuru parametreleri başvuru özellikler (veya her ikisi) tarafından belirtilen üstbilgileri yanı sıra yanıt iletisinin üstbilgilerini `ReplyTo` istek uç nokta başvurusu.
+- R3324: İstekli, `wsa:To`yanıt `wsa:Action`iletisinde üstbilgi ve `wsa:RelatesTo` üstbilginin yanı sıra istekteki `ReplyTo` bitiş noktası referansı tarafından belirtilen tüm başvuru parametreleri veya başvuru özellikleri (veya her ikisi) için üstbilgi içermelidir.
 
-### <a name="web-services-addressing-faults"></a>Adres hatası Web Hizmetleri
-R3411: WCF WS-Addressing 2004/08 tarafından tanımlanan aşağıdaki hatalar üretir.
+### <a name="web-services-addressing-faults"></a>Hataları Gideren Web Hizmetleri
+R3411: WCF, WS-Addressing 2004/08 tarafından tanımlanan aşağıdaki hataları üretir.
 
-| Kod | Sebep |
+| Kod | Nedeni |
 |----------|-----------|
-| `wsa:DestinationUnreachable` | İle iletinin geldiği bir `ReplyTo` bu kanal için oluşturulan yanıt adresi farklıdır; için üst bilgisinde belirtilen adreste dinleme bitiş noktası yoktur. |
-| `wsa:ActionNotSupported` | Altyapı kanalları ya da uç noktasıyla ilişkili dağıtıcısı, belirtilen eylem algılamaz `Action` başlığı. |
+| `wsa:DestinationUnreachable` | İleti, bu `ReplyTo` kanal için kurulan yanıt adresinden farklı bir iletiyle geldi; To üstbilgisinde belirtilen adreste son nokta dinleme yoktur. |
+| `wsa:ActionNotSupported` | bitiş noktasıyla ilişkili altyapı kanalları veya sevk `Action` irsaliyesi üstbilgide belirtilen eylemi tanımaz. |
 
-R3412: WCF WS-Addressing 1.0 tarafından tanımlanan aşağıdaki hatalar üretir.
+R3412: WCF, WS-Adresleme 1.0 tarafından tanımlanan aşağıdaki hataları üretir.
 
-| Kod | Sebep |
+| Kod | Nedeni |
 |----------|-----------|
-| `wsa10:InvalidAddressingHeader` | Yinelenen `wsa:To`, `wsa:ReplyTo`, `wsa:From` veya `wsa:MessageID`. Yinelenen `wsa:RelatesTo` aynı `RelationshipType`. |
-| `wsa10:MessageAddressingHeaderRequired` | Gerekli Addressing üst bilgisi eksik. |
-| `wsa10:DestinationUnreachable` | İle iletinin geldiği bir `ReplyTo` , bu kanal için oluşturulan yanıt adresi farklıdır. Uç nokta için üst bilgisinde belirtilen adreste dinleme yoktur. |
-| `wsa10:ActionNotSupported` | Belirtilen eylem `Action` üstbilgi altyapı kanalları ya da uç noktasıyla ilişkili dağıtıcı tarafından tanınmıyor. |
-| `wsa10:EndpointUnavailable` | RM kanal uç nokta değil incelenmesi göre sırası işleme gösteren bu hata yeniden gönderir `CreateSequence` ileti adresleme üstbilgileri. |
+| `wsa10:InvalidAddressingHeader` | Yinelenen `wsa:To` `wsa:ReplyTo`, `wsa:From` `wsa:MessageID`veya . Aynı `wsa:RelatesTo` `RelationshipType`ile yinelenen . |
+| `wsa10:MessageAddressingHeaderRequired` | Gerekli Adresleme üstbilgisi eksik. |
+| `wsa10:DestinationUnreachable` | İleti, bu `ReplyTo` kanal için kurulan yanıt adresinden farklı bir iletiyle geldi. To başlığında belirtilen adreste bitiş noktası dinleme yoktur. |
+| `wsa10:ActionNotSupported` | `Action` Üstbilgide belirtilen bir eylem, bitiş noktasıyla ilişkili altyapı kanalları veya gönderen tarafından tanınmaz. |
+| `wsa10:EndpointUnavailable` | RM kanalı, bitiş noktasının `CreateSequence` iletinin adreslenen üstbilgileri incelenerek diziyi işlemeyeceğini belirten bu hatayı geri gönderir. |
 
-Yukarıdaki tablolarda kod eşlemeleri için `FaultCode` SOAP 1.1 içinde ve `SubCode` (gönderici ile kod =) SOAP 1.2 içinde.
+Önceki tablolardaki kod, `FaultCode` SOAP 1.1'e ve `SubCode` (Code=Sender ile) SOAP 1.2'ye eşler.
 
-### <a name="wsdl-11-binding-and-ws-policy-assertions"></a>WSDL 1.1 bağlama ve WS-Policy onaylar
+### <a name="wsdl-11-binding-and-ws-policy-assertions"></a>WSDL 1.1 Bağlayıcı ve WS-İlke İddiaları
 
-#### <a name="indicating-use-of-ws-addressing"></a>WS-Addressing kullanımını gösteren
-WCF ilke onaylamalarını belirli bir WS-Addressing sürümü için uç nokta destek belirtmek için kullanır.
+#### <a name="indicating-use-of-ws-addressing"></a>WS-Adresleme kullanımını gösteren
+WCF, belirli bir WS Adresleme sürümü için uç nokta desteğini belirtmek için ilke iddialarını kullanır.
 
-Aşağıdaki ilke onaylama, uç noktası İlkesi konu WS-PA ve WS-Addressing 2004/08 uç noktasından alınan iletileri kullanmalısınız gösterir.
+Aşağıdaki ilke iddiasında Endpoint İlkesi Konusu [WS-PA] vardır ve uç noktadan gönderilen ve alınan iletilerin WS-Addressing 2004/08'i kullanması gerektiğini gösterir.
 
 ```xml
 <wsap:UsingAddressing />
 ```
 
-Bu ilke onaylama WS-Addressing 2004/08 belirtimi artırmaktadır.
+Bu ilke iddiası WS-Adresleme 2004/08 belirtimini genişletiyor.
 
-Bu, gönderilen/alınan iletileri gösterir. aşağıdaki ilke onaylama, WS-Addressing 1.0 kullanmanız gerekir.
+Aşağıdaki ilke iddiası, gönderilen/alınan iletilerin WS Adresi 1.0'ı kullanması gerektiğini gösterir.
 
 ```xml
 <wsam:Addressing/>
 ```
 
-Aşağıdaki ilke onay uç noktası İlkesi konu WS-PA ve WS-Addressing 2004/08 uç noktasından alınan iletileri kullanması gerektiğini belirtir.
+Aşağıdaki ilke iddiasının bir Bitiş Noktası İlkesi Konusu [WS-PA] vardır ve son noktadan gönderilen ve alınan iletilerin WS Adresi 2004/08'i kullanması gerektiğini gösterir.
 
 ```xml
 <wsaw10:UsingAddressing />
 ```
 
-`wsaw10:UsingAddressing` Öğesi [WS-Addressing-WSDL'den] ödünç ve WS-Policy bağlamında bu belirtimini uyduğunuzu kullanılır, Bölüm 3.1.2.
+Öğe `wsaw10:UsingAddressing` [WS-Addressing-WSDL] ödünç ve bu belirtim, bölüm 3.1.2 uygun olarak WS-Politikası bağlamında kullanılır.
 
-Adresleme kullanımını WSDL 1.1, SOAP 1.1 ve SOAP 1.2 HTTP bağlamaları semantiği değiştirmez. Adresleme ve WSDL SOAP 1.x HTTP bağlaması kullanan bir uç noktasına gönderilen bir istek için yanıt bekleniyorsa, örneğin, yanıtı HTTP yanıt kullanarak gönderilmesi gerekir.
+Adresleme nin kullanımı WSDL 1.1, SOAP 1.1 ve SOAP 1.2 HTTP Ciltlemelerinin anlambilimini değiştirmez. Örneğin, Adresleme ve WSDL SOAP 1.x HTTP bağlama kullanan bir bitiş noktasına gönderilen bir isteğe yanıt bekleniyorsa, yanıt HTTP yanıtı kullanılarak gönderilmelidir.
 
-Http yanıtı gönderilen yanıtlar için WS-AM onaylama işlemi aşağıdaki gibidir:
+http yanıtı üzerinden gönderilen yanıtlar için WS-AM iddiası:
 
 ```xml
 <wsam:AnonymousResponses/>
 ```
 
-Tam İlkesi onayını şuna benzeyebilir:
+Tam ilke iddiası aşağıdaki gibi görünebilir:
 
 ```xml
 <wsam:Addressing>
@@ -263,17 +263,17 @@ Tam İlkesi onayını şuna benzeyebilir:
 </wsam:Addressing>
 ```
 
-Ancak, istekte bulunan taraf ile Yanıtlayıcı Yanıtlayıcı tarafından gönderilen Örneğin, istenmeyen tek yönlü iletileri arasında kurulan iki bağımsız listesiyse HTTP bağlantılarını kalmamasını fayda ileti exchange desenleri vardır.
+Ancak, istekte veren ve yanıtlayan arasında iki bağımsız converse HTTP bağlantısı nın kurulmasından yararlanan ileti alışverişi desenleri vardır, örneğin, yanıtlayan tarafından gönderilen istenmeyen tek yönlü iletiler.
 
-WCF tarafından bileşik çift yönlü kanalı burada bir kanalın giriş iletileri için kullanılır ve diğer çıkış iletileri için kullanılan iki temel taşıma kanalları oluşturabilir bir özellik sunar. HTTP taşıma söz konusu olduğunda bileşik çift yönlü iki ters HTTP bağlantılarını sağlar. İstek sahibinin Yanıtlayıcı için ileti göndermek için bir bağlantı kullanır ve Yanıtlayıcı diğer istemciye iletileri geri göndermek için kullanır.
+WCF, bir kanalın giriş iletileri için, diğerinin çıkış iletileri için kullanıldığı bir Bileşik Çift Yönlü kanal oluşturabileceği bir özellik sunar. HTTP Transport durumunda, Bileşik Çift yönlü iki converse HTTP bağlantısı sağlar. İstekçi, yanıtlayana ileti göndermek için bir bağlantı kullanır ve yanıtlayan diğerini iletileri istekte bulunduracak şekilde kullanır.
 
-Ayrı http istekleri üzerinden gönderilen yanıtlar için ws-am olaydır
+Ayrı http istekleri üzerinden gönderilen yanıtlar için ws-am iddiası
 
 ```xml
 <wsam:NonAnonymousResponses/>
 ```
 
-Tam İlkesi onayını şuna benzeyebilir:
+Tam ilke iddiası aşağıdaki gibi görünebilir:
 
 ```xml
 <wsam:Addressing>
@@ -283,59 +283,59 @@ Tam İlkesi onayını şuna benzeyebilir:
 </wsam:Addressing>
 ```
 
-Yanıtlayıcı ve Yanıtlayıcı istekte bulunan taraf için talep sahibinin akan iletileri için kullanılacak iki ayrı listesiyse HTTP bağlantısı uç noktası İlkesi konu WS-PA WSDL 1.1 SOAP 1.x HTTP bağlantıları kullanan Uç noktalara sahip aşağıdaki onay gerektirir, sırasıyla.
+WSDL 1.1 SOAP 1.x HTTP ciltlerini kullanan uç noktalarda Uç Nokta Politikası Konusu [WS-PA] bulunan aşağıdaki iddianın kullanımı, istektebulunandan yanıtlayana ve yanıtlayana akan iletiler için kullanılmak üzere iki ayrı converse HTTP bağlantısı gerektirir, Sıra -sıyla.
 
 ```xml
 <cdp:CompositeDuplex/>
 ```
 
-Önceki deyim aşağıdaki gereksinimlere müşteri adayları `wsa:ReplyTo` istek iletilerinin üstbilgisi:
+Önceki deyim, istek iletileri `wsa:ReplyTo` için üstbilgide aşağıdaki gereksinimlere yol açar:
 
-- R3514: Bir uç noktasına gönderilen iletileri olmalıdır isteği bir `ReplyTo` üstbilgiyle `[address]` özellik değerine eşit değil `http://www.w3.org/2005/08/addressing/anonymous` uç noktası ile bir ilke alternatif bir WSDL 1.1 SOAP 1.x HTTP bağlama kullanır ve varsa bir `wsap10:UsingAddressing` veya `wsap:UsingAddressing` onaylama ile birlikte `cdp:CompositeDuplex` bağlı.
+- R3514: Bitiş noktası WSDL 1.1 SOAP `[address]` 1.x `http://www.w3.org/2005/08/addressing/anonymous` HTTP bağlama kullanıyorsa ve `wsap10:UsingAddressing` `wsap:UsingAddressing` `cdp:CompositeDuplex` ekli bir veya bir leştirilmiş bir ilke alternatifi varsa, bitiş noktasına gönderilen istek iletilerinin özelliğine eşit olmayan bir `ReplyTo` üstbilgi olmalıdır.
 
-- R3515: Bir uç noktasına gönderilen iletileri olmalıdır isteği bir `ReplyTo` üstbilgiyle `[address]` özelliği eşit `http://www.w3.org/2005/08/addressing/anonymous`, veya bir `ReplyTo` tümü, uç nokta bir WSDL 1.1 SOAP 1.x HTTP bağlama kullanır ve bir ilke alternatif ilevarsaüstbilgisi`wsap10:UsingAddressing` onaylama ve Hayır `cdp:CompositeDuplex` bağlı onaylama.
+- R3515: `ReplyTo` Bitiş noktasına `[address]` gönderilen istek iletilerinin, bitiş noktası WSDL 1.1 SOAP 1.x HTTP bağlayıcısı kullanıyorsa ve `http://www.w3.org/2005/08/addressing/anonymous` `ReplyTo` `wsap10:UsingAddressing` iddia ve hiçbir `cdp:CompositeDuplex` iddiaekli bir ilke alternatifi varsa, özelliği ne eşit sayılsa da hiç üstbilgi içermemelidir.
 
-- R3516: Bir uç noktasına gönderilen iletileri olmalıdır isteği bir `ReplyTo` üstbilgiyle bir `[address]` özelliği eşit `http://www.w3.org/2005/08/addressing/anonymous` uç noktası ile bir ilke alternatif bir WSDL 1.1 SOAP 1.x HTTP bağlama kullanır ve varsa `wsap:UsingAddressing` onaylama ve Hayır `cdp:CompositeDuplex` ekli onaylar.
+- R3516: Bitiş noktası WSDL 1.1 SOAP `[address]` 1.x `http://www.w3.org/2005/08/addressing/anonymous` HTTP bağlama kullanıyorsa ve iddia içeren `wsap:UsingAddressing` ve hiçbir `cdp:CompositeDuplex` iddiaekli bir ilke alternatifi varsa, bitiş noktasına eşit bir özelliğe sahip bir `ReplyTo` üstbilgi olmalıdır.
 
-Bir öğe sunarak benzer protokolü bağlamaları tanımlamak WS-addressing WSDL belirtimi çalışır `<wsaw:Anonymous/>` değerlerle üzerinde gereksinimleri belirtmek için üç metin (gerekli, isteğe bağlı ve yasaklanmış) `wsa:ReplyTo` üst bilgisi (Bölüm 3.2). Ne yazık ki, bu tür bir öğe onaylama kullanarak alternatifleri kesişimi desteklemek için etki alanına özgü uzantıları gerektirdiğinden tür öğe tanımı özellikle, WS-Policy bağlamında onaylama kullanılabilir değil. Böyle bir öğe tanımı değerini de gösterir. `ReplyTo` HTTP aktarımı belirli kolaylaştırır Tel üzerinde uç nokta davranışı aksine başlığı.
+WS adresi WSDL belirtimi, `<wsaw:Anonymous/>` `wsa:ReplyTo` üstbilgideki gereksinimleri (bölüm 3.2) belirtmek için üç metin değeri (gerekli, isteğe bağlı ve yasak) olan bir öğe tanıtarak benzer iletişim kuralı bağlamalarını açıklamaya çalışır. Ne yazık ki, bu tür öğe tanımı, ws-policy bağlamında bir iddia olarak özellikle kullanılabilir değildir, çünkü bir iddia olarak böyle bir öğeyi kullanarak alternatiflerin kesişim desteklemek için etki alanına özgü uzantıları gerektirir. Bu tür öğe tanımı, `ReplyTo` telüzerindeki bitiş noktası davranışının aksine üstbilginin değerini de gösterir ve bu da onu HTTP aktarımına özgü kılar.
 
-#### <a name="action-definition"></a>Eylem tanımı
-WS-Addressing 2004/08 tanımlayan bir `wsa:Action` özniteliğini `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` öğeleri. WS-Addressing 1.0 WSDL bağlama (WS-ADDR10-WSDL) benzer bir öznitelik tanımlar `wsaw10:Action`.
+#### <a name="action-definition"></a>Eylem Tanımı
+WS-Adresleme 2004/08 `wsa:Action` `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` öğeleri için bir öznitelik tanımlar. WS Adresi 1.0 WSDL Bağlama (WS-ADDR10-WSDL) benzer bir `wsaw10:Action`öznitelik tanımlar.
 
-İkisi arasındaki tek fark, sırasıyla bölümü, WS-ADDR 3.3.2 ve WS-ADDR10-WSDL 4.4.4 bölümünde açıklanan varsayılan eylem deseni semantiği ' dir.
+İkisi arasındaki tek fark, WS-ADDR'ın 3.3.2 bölümünde ve sırasıyla WS-ADDR10-WSDL'nin 4.4.4 bölümünde açıklanan varsayılan Eylem deseni semantikleridir.
 
-Aynı paylaşan iki uç nokta uygun olan `portType` (veya WCF terminolojisinde sözleşme) ancak WS-Addressing'ın farklı sürümleri kullanılarak. Ancak bu eylem tarafından tanımlanan koşuluyla, `portType` ve uygulayan uç noktalar genelinde değiştirmemelisiniz `portType`, her iki varsayılan eylem desenleri desteklemesini mümkün olur.
+Ws-Addressing'in farklı sürümlerini kullanarak `portType` aynı (veya sözleşme, WCF terminolojisinde) aynı payı paylaşan iki uç noktaolması makul bir durumdur. Ancak, Eylem tarafından tanımlandığı `portType` ve uygulayan uç noktalar arasında `portType`değişmemesi gerektiği göz önüne alındığında, her iki varsayılan eylem desenlerini de desteklemek imkansız hale gelir.
 
-WCF bu controversy çözmek için tek bir sürümünü destekler `Action` özniteliği.
+Bu sorunu çözmek için WCF özniteliğin `Action` tek bir sürümünü destekler.
 
-B3521: WCF kullanan `wsaw10:Action` özniteliği `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` WS-ADDR10-belirlemek için WSDL içinde tanımlanan öğeleri `Action` bitiş noktası tarafından kullanılan WS-Addressing sürümü bakılmaksızın karşılık gelen iletiler için URI.
+B3521: WCF, `wsaw10:Action` bitiş `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` noktası tarafından kullanılan WS Adresleme sürümünden bağımsız olarak `Action` ilgili iletiler için URI'yi belirlemek için WS-ADDR10-WSDL'de tanımlanan öğeler üzerindeki özniteliği kullanır.
 
-#### <a name="use-endpoint-reference-inside-wsdl-port"></a>Kullanım uç nokta başvurusu iç WSDL bağlantı noktası
-WS ADDR10 WSDL bölümü 4.1 genişletir `wsdl:port` içerecek şekilde öğesi `<wsa10:EndpointReference…/>` WS-Addressing bağlamında uç noktayı tanımlamak için alt öğesi. WCF üzerinde WS-Addressing 2004/08, bu yardımcı genişletir izin vererek `<wsa:EndpointReference…/>` bir alt öğesi olarak görüntülenmesini `wsdl:port`.
+#### <a name="use-endpoint-reference-inside-wsdl-port"></a>WSDL Bağlantı Noktası İçinde Uç Nokta Referansı Kullanma
+WS-ADDR10-WSDL bölüm 4.1, `wsdl:port` bitiş noktasını `<wsa10:EndpointReference…/>` WS-Adresleme terimleriyle açıklamak için alt öğeyi içerecek şekilde öğeyi genişletir. WCF WS-Adresleme 2004/08 bu yardımcı programı `<wsa:EndpointReference…/>` genişletir, bir `wsdl:port`alt öğe olarak görünmesini sağlar.
 
-- R3531: İliştirilmiş ilke alternatif bir uç nokta varsa, bir `<wsaw10:UsingAddressing/>` İlkesi onayını, karşılık gelen `wsdl:port` öğesi bir alt öğe içerebilir `<wsa10:EndpointReference …/>`.
+- R3531: Bir uç nokta, bir ilke `<wsaw10:UsingAddressing/>` iddiası ile `wsdl:port` ekli bir ilke `<wsa10:EndpointReference …/>`alternatifi varsa, karşılık gelen öğe bir alt öğe içerebilir.
 
-- R3532: Varsa bir `wsdl:port` bir alt öğe içeriyor `<wsa10:EndpointReference …/>`, `wsa10:EndpointReference/wsa10:Address` alt öğe değeri değerini eşleşmelidir `@address` eşdüzeyin özniteliği `wsdl:port` / `wsdl:location` öğesi.
+- R3532: Bir `wsdl:port` alt öğe `<wsa10:EndpointReference …/>` `wsa10:EndpointReference/wsa10:Address` içeriyorsa, alt öğe değeri `@address` kardeş `wsdl:port` / `wsdl:location` öğenin özniteliğinin değeriyle eşleşmelidir.
 
-- R3533: İliştirilmiş ilke alternatif bir uç nokta varsa `<wsap:UsingAddressing/>` İlkesi onayını, karşılık gelen `wsdl:port` öğesi bir alt öğe içerebilir `<wsa:EndpointReference …/>`.
+- R3533: Bir uç nokta ilke iddiası `<wsap:UsingAddressing/>` ile ekli `wsdl:port` bir ilke alternatifi varsa, karşılık gelen öğe bir alt öğe `<wsa:EndpointReference …/>`içerebilir.
 
-- R3534: Varsa bir `wsdl:port` bir alt öğe içeriyor `<wsa:EndpointReference …/>`, `wsa:EndpointReference/wsa:Address` alt öğe değeri değerini eşleşmelidir `@address` eşdüzeyin özniteliği `wsdl:port` / `wsdl:location` öğesi.
+- R3534: Bir `wsdl:port` alt öğe `<wsa:EndpointReference …/>` `wsa:EndpointReference/wsa:Address` içeriyorsa, alt öğe değeri `@address` kardeş `wsdl:port` / `wsdl:location` öğenin özniteliğinin değeriyle eşleşmelidir.
 
-### <a name="composition-with-ws-security"></a>WS-güvenlik ile oluşturma
-WS-ADDR ve WS-ADDR10 göre güvenlik göz önünde bulundurarak bölümlerde, tüm adres ileti üstbilgileri ileti gövdesi ile birlikte birbirine bağlamak için oturum açmış olmanız önerilir.
+### <a name="composition-with-ws-security"></a>WS-Security ile kompozisyon
+WS-ADDR ve WS-ADDR10'daki güvenlik konuları bölümlerine göre, tüm adresleme ileti üstbilgileri, ileti gövdesi ile birlikte imzalanmalı ve bunları birbirine bağlar.
 
-WS-güvenlik ileti bütünlük koruması için kullanıldığında, WS-Addressing ileti üstbilgileri ve bunun yanı sıra üstbilgileri başvuru parametreleri veya özellikleri (veya her ikisi de) sonuçlandı ileti gövdesi ile birlikte oturum açmanız gerekir.
+İleti bütünlüğü koruması için WS-Security kullanıldığında, başvuru parametreleri veya özelliklerinden (veya her ikisinden) kaynaklanan WS Adresleme ileti üstbilgileri ve üstbilgileri iletişin gövdesi ile birlikte imzalanmalıdır.
 
 ### <a name="examples"></a>Örnekler
 
-#### <a name="one-way-message"></a>Tek yönlü mesaj
-Bu senaryoda, gönderenin alıcı için tek yönlü bir ileti gönderir. SOAP 1.2, HTTP 1.1 ve 1.0, W3C WS-Addressing kullanılır.
+#### <a name="one-way-message"></a>Tek Yönlü İleti
+Bu senaryoda, gönderen alıcıya tek yönlü bir ileti gönderir. SOAP 1.2, HTTP 1.1 ve W3C WS-Adresleme 1.0 kullanılır.
 
-İstek iletisi yapısı: İleti üstbilgilerini içeren `wsa10:To` ve `wsa10:Action` öğeleri. Belirli bir ileti gövdesini içeren `<app:Ping>` uygulama ad alanından öğesi.
+İstek İletisi Yapısı: İleti `wsa10:To` `wsa10:Action` üstbilgisi ve öğeleri içerir. İleti gövdesi, uygulama `<app:Ping>` ad alanından belirli bir öğe içerir.
 
-HTTP üst bilgileri: URI'de POST hedefte eşleşen `wsa10:To` öğesi.
+HTTP Başlıklar: POST'taki `wsa10:To` hedef, öğedeki URI ile eşleşir.
 
-Content-Type üstbilgisi değeri olan `application/soap+xml` SOAP 1.2 gerektirdiği. Parametreleri `charset` ve `action` dahil edilir. `action` Content-Type üstbilgisi parametresinin değerini eşleşen `wsa10:Action` ileti üst bilgisi.
+İçerik Türü üstbilgi, SOAP `application/soap+xml` 1.2'nin gerektirdiği değere sahiptir. Parametreler `charset` `action` ve dahildir. İçerik `action` Türü üstbilginin parametresi ileti üstbilgisinin değeriyle `wsa10:Action` eşleşir.
 
 ```
 POST http://fabrikam123.com/Service HTTP/1.1
@@ -351,7 +351,7 @@ Proxy-Connection: Keep-Alive
         http://fabrikam123.com/Service
     </wsa10:To>
     <wsa10:Action s12:mustUnderstand="1">
-        http://fabrikam123.com/Service/OneWay 
+        http://fabrikam123.com/Service/OneWay
     </wsa10:Action>
   </s12:Header>
   <s12:Body>
@@ -362,7 +362,7 @@ Proxy-Connection: Keep-Alive
 </s12:Envelope>
 ```
 
-Alıcı, bir boş bir HTTP yanıtı ve durum 202 ile yanıt verir. HTTP yanıt örneği:
+Alıcı boş bir HTTP yanıtı ve durum 202 ile yanıt verir. HTTP yanıtı bir örnek:
 
 ```
 HTTP/1.1 202 Accepted
@@ -375,210 +375,210 @@ Cache-Control: private
 Content-Length: 0
 ```
 
-## <a name="soap-message-transmission-optimization-mechanism"></a>SOAP ileti aktarım en iyi duruma getirme mekanizması
-Bu bölümde, HTTP SOAP MTOM için WCF uygulama ayrıntılarını açıklar. MTOM, SOAP ileti kodlama mekanizması geleneksel metin/XML kodlama veya WCF ikili kodlama aynı sınıfta teknolojisidir. MTOM aşağıdakileri içerir:
+## <a name="soap-message-transmission-optimization-mechanism"></a>SOAP İleti İleti optimizasyonu Mekanizması
+Bu bölümde HTTP SOAP MTOM için WCF uygulama ayrıntıları açıklanmaktadır. MTOM teknolojisi, geleneksel metin/XML kodlama veya WCF İkili kodlama ile aynı sınıfın SOAP ileti kodlama mekanizmasıdır. MTOM aşağıdakileri içerir:
 
-- Bir XML encoding ve paketleme mekanizması [XOP] tarafından açıklanan ikili ayrı bölümlere base64 ile kodlanmış ikili verileri içeren XML bilgi öğeleri iyileştirir.
+- Base64 kodlanmış ikili verileri içeren XML bilgi öğelerini ayrı ikili parçalarhalinde optimize eden [XOP] tarafından açıklanan bir XML kodlama ve paketleme mekanizması.
 
-- Bir MIME kapsülleme XOP paketinin XML bilgi kümesi ve her ikili XOP paketin parçası ayrı bir MIME bölümü serileştirir.
+- XML Bilgi Seti'ni ve XOP paketinin her ikili parçasını ayrı bir MIME parçasına serileştiren XOP paketinin MIME kapsüllemi.
 
-- SOAP için uygulanan bir MIME XOP kodlama 1.x Zarf.
+- SOAP 1.x Zarf'a uygulanan bir MIME XOP kodlaması.
 
-- HTTP aktarım bağlama.
+- Bir HTTP aktarım bağlama.
 
-MTOM olmayan HTTP taşımaları WCF ile kullanmak mümkündür. Ancak, bu konudaki şu HTTP üzerinde odaklanır.
+MTOM'u WCF ile HTTP dışı taşımalarla kullanmak mümkündür. Ancak, bu konuda biz HTTP üzerinde durulacak.
 
-MTOM biçim belirtimleri MTOM kendisi, XOP ve MIME kapsayan çok sayıda yararlanır. Bu belirtimi kümesi tanılanmasını biçimi ve işleme semantiğine gereksinimlerinin tamamı yeniden oluşturmak biraz zor yapar. Bu bölümde MTOM HTTP bağlaması biçimi ve işleme gereksinimlerini açıklar.
+MTOM biçimi, MTOM'un kendisini, XOP'u ve MIME'yi kapsayan geniş bir belirtim kümesinden yararlanır. Bu belirtim kümesinin modülerliği, biçim ve işleme semantikleri üzerinde tam gereksinimleri yeniden yapılandırmayı biraz zorlaştırır. Bu bölümde MTOM HTTP bağlama için biçim ve işleme gereksinimleri açıklanmaktadır.
 
-### <a name="mtom-message-encoding"></a>İleti MTOM kodlama
+### <a name="mtom-message-encoding"></a>MTOM İleti Kodlama
 
 #### <a name="generating-mtom-messages"></a>MTOM iletileri oluşturma
-[XOP] bölümü 3.1 bağlamalarında tanımlanmış bir XOP pakete base64 değerler içeren öğe bilgi öğelerle XML kodlama işlemi açıklanır.
+[XOP] bölüm 3.1 soyut tanımlanmış bir XOP paketine base64 değerleri içeren eleman bilgi öğeleri ile XML kodlama işlemini açıklar.
 
-Aşağıdaki adımlar dizisini özel MTOM kodlama işlemi açıklanmaktadır:
+Aşağıdaki adım sırası MTOM'a özgü kodlama işlemini açıklar:
 
-1. Kodlanmış SOAP Zarfı ile hiçbir öğe bilgi öğe içerdiğinden emin olun bir `[namespace name]` , `http://www.w3.org/2004/08/xop/include` ve `[local name]` , `Include`.
+1. Kodlanacak SOAP Zarfının `[namespace name]` a `http://www.w3.org/2004/08/xop/include` ve a `[local name]` ile hiçbir öğe bilgi `Include`öğesi içermediğinden emin olun.
 
 2. Boş bir MIME paketi oluşturun.
 
-3. Orijinal XML bilgi kümesi içinde en iyi duruma getirilmesi öğesi bilgi öğelerini tanımlayın. Öğeleri en iyi duruma getirilmesi karakter oluşturan `[children]` öğesi bilgilerini öğenin kurallı biçiminde olması gerekir `xs:base64Binary` (bkz XSD-2, 3.2.16 base64Binary) ve, satır içi, önceki herhangi bir boşluk karakteri içermemelidir veya boşluk olmayan içeriği takip.
+3. Orijinal XML Bilgi Seti içinde en iyi duruma getirilecek öğe bilgi öğelerini tanımlayın. Öğelerin optimize edilememesi için, öğe bilgi `[children]` öğesinin oluşturan karakterlerin kanonik biçiminde `xs:base64Binary` olması gerekir (bkz. XSD-2, 3.2.16 base64Binary) ve beyaz alan içeriğinden önce, satır da veya aşağıdaki herhangi bir beyaz boşluk karakteri içermemelidir.
 
-4. Özgün SOAP Zarfı kopyası olan bir XOP SOAP Zarfı oluşturun, ancak her öğe bilgileri çocuğunu önceki adımda tanımlanan öğe yerine bir `xop:Include` öğe bilgi öğe şu şekilde oluşturulur:
+4. Orijinal SOAP Zarfının bir kopyası olan, ancak önceki adımda tanımlanan her öğebilgi öğesinin çocuklarıyla `xop:Include` birlikte aşağıdaki gibi oluşturulmuş bir öğe bilgi öğesi ile değiştirilen bir XOP SOAP Zarfı oluşturun:
 
-    1. Değiştirilen karakter ikili verileri, base64 kodlu veriler olarak işleyerek dönüştürün.
+    1. Değiştirilen karakterleri temel 64 kodlanmış veri olarak işleyerek ikili veriye dönüştürün.
 
-    2. R3133 ve R3134 gereksinimlerini karşılayan benzersiz bir Content-ID üst bilgi değeri oluşturur.
+    2. Gereksinimleri Karşılayan benzersiz bir İçerik-Kimlik üstbilgi değeri Oluşturun R3133 ve R3134.
 
-    3. MIME içerik Transfer-Encoding üstbilgi ikili değer oluşturur.
+    3. Değer ikili ile Bir İçerik-Transfer-Kodlama MIME üstbilgi oluşturun.
 
-    4. Öğe bilgileri öğe iyileştirilen, ([üst] yeni eklenen `xop:Include` öğe bilgi öğe) sahip bir `xmime:contentType` öznitelik bilgisi öğesi, değeri ile bir MIME Content-Type üstbilgisini oluşturmak `xmime:contentType` özniteliği.
+    4. Öğe bilgi öğesi en iyi duruma getiriliyorsa (yeni `xop:Include` eklenen öğe bilgi `xmime:contentType` öğesinin [üst öğesi] bir öznitelik bilgi öğesi `xmime:contentType` varsa, öznitelik değeri ile bir İçerik Türü MIME üstbilgisi oluşturun.
 
-    5. Yeni bir ikili MIME bölümü, işlenen base64 4b Content-ID başlığından, üst bilgi içeriği Transfer-Encoding 4 c, adım 4 d oluşturursa Content-Type üst bilgisi olarak değiştirilen karakter gelen çözülmüş ikili verileri tarafından oluşturulmuş içerik ile oluşturur.
+    5. Base64 olarak işlenen değiştirilen karakterlerden deşifre edilen ikili verilerden oluşturulan içerikle oluşan yeni bir ikili MIME parçası oluşturun, 4b'den İçerik-Kimlik üstbilgisi, 4c'den İçerik-Aktarım-Kodlama üstbilgisi, adım 4d'de oluşturulursa İçerik Türü üstbilgisi.
 
-    6. Ekleme bir `href` özniteliğini `xop:Include` değeri CID öğeyle: Content-ID üst bilgi değeri adım 4b'de oluşturulan URI türetilir. Kapsayan Kaldır "\<" ve ">" karakterleri, URL-kalan dize ve ön ek Ekle kaçış `cid:`. Aşağıdaki en düşük karakter kümesi RFC1738 ve RFC2396 tarafından Atlanan gereklidir. Diğer karakterler Atlanan.
+    6. Değeri `href` cid ile `xop:Include` öğeye bir öznitelik ekleyin: uri Adım 4b oluşturulan İçerik-Kimlik üstbilgi değeri türetilmiştir. " " ve\<">" karakterleri kaldırın, kalan dizeyi URL'den `cid:`kaldırıp önek ekleyin. Aşağıdaki minimum karakter kümesinin RFC1738 ve RFC2396 tarafından kaçılması gerekir. Diğer karakterler kaçabilir.
 
         ```
         Hexadecimal 00-1F , 7F, 20, "<" | ">" | "#" | "%" | <">
         "{" | "}" | "|" | "\" | "^" | "[" | "]" | "`" | "~" | "^"
         ```
 
-5. Adım 4'teki XOP SOAP Zarfı ile bir kök MIME bölümü oluşturun.
+5. Adım 4 XOP SOAP Zarf ile bir kök MIME parçası oluşturun.
 
-6. HTTP Content-Type üst bilgisi dahil olmak üzere HTTP üst bilgilerini yazın.
+6. HTTP İçerik Türü üstbilgi de dahil olmak üzere HTTP üstbilgisini yazın.
 
-7. MIME paket yazın.
+7. MIME paketini yazın.
 
 #### <a name="processing-mtom-messages"></a>MTOM iletilerini işleme
-Bir MTOM işleme iletisi tam önceki açıklanan işlemi tersidir "oluşturma MTOM iletileri" bölümünde:
+Bir MTOM iletisinin işlenmesi, önceki "MTOM iletileri oluşturma" bölümünde açıklanan işlemin tam tersidir:
 
-1. MIME bölümü kök Content-Type olduğundan `application/xop+xml`.
+1. Kök MIME parçasının İçerik Türüne `application/xop+xml`sahip olduğundan emin olun.
 
-2. SOAP Zarfı MIME bölümü bir XML belgesi olarak paketin kök ayrıştırarak oluşturun. Karakter kodlamasını göre belirlenir `charset` Content-Type MIME bölümü kök parametresi.
+2. Paketin kök MIME kısmını XML belgesi olarak ayrıştarak bir SOAP Zarfı oluşturun. Karakter kodlaması, kök `charset` MIME bölümünün İçerik Türü parametresi ile belirlenir.
 
-3. Oluşturulan SOAP Zarfı içinde her öğe bilgi öğe için olan, kendi [alt] özelliğini tek üyesi olarak bir `xop:Include` öğe bilgi öğe:
+3. [Çocuk] özelliğinin tek üyesi olarak bir `xop:Include` öğe bilgi öğesi olan inşa SOAP Zarfı'ndaki her öğe bilgi öğesi için:
 
-    1. Kaldırma `cid:` önek ve tüm URI kaçış dizileri (RFC 2396) değerini unescape `@href` özniteliği `xop:Include` öğesi. Sonuç dizesinde alın "\<", ">".
+    1. Öğenin `cid:` özniteliğideğerindeki tüm URI kaçış dizilerini (RFC 2396) `@href` önekini kaldırın ve kaçışı kaldırın. `xop:Include` Sonuç dizesini "\<", ">" olarak ekle.
 
-    2. Adım 3a adımında türetilmiş dizesiyle eşleşen Content-ID üst bilgi değeri ile MIME bölümü bulun.
+    2. Adım 3a'da türetilen dizeyle eşleşen İçerik-Kimlik üstbilgi değeriyle MIME parçasını bulun.
 
-    3. Değiştirin `xop:Include` görünür öğe bilgi öğe `children` özellik kurallı base64 kodlama temsil eden karakter bilgi öğeleri ile her bir öğenin (bkz XSD-2, 3.2.16 base64Binary) varlık gövdesinin MIME bölümü Adım 3b içinde tanımlanan (etkili bir şekilde değiştirin `xop:Include` paket bölümünden reconstructed veri öğesi bilgi öğe).
+    3. Adım `xop:Include` 3b'de tanımlanan MIME parçasının varlık gövdesinin kanonik base64 kodlamasını (bkz. XSD-2, 3.2.16 base64Binary) temsil eden karakter bilgileri öğeleriyle her öğenin `children` özelliğinde görünen öğe bilgi öğesini değiştirin (öğe bilgi öğesini `xop:Include` paket parçasından yeniden yapılandırılan verilerle etkili bir şekilde değiştirin).
 
-#### <a name="http-content-type-header"></a>HTTP Content-Type üstbilgisi
-Aşağıdaki biçimi için WCF açıklamalar MTOM belirtimini içinde belirtilen gereksinimleri türetilen bir SOAP iletisinin 1.x MTOM kodlu HTTP Content-Type üstbilgisinin bir listesidir ve MTOM ve RFC 2387 türetilmiştir.
+#### <a name="http-content-type-header"></a>HTTP İçerik Türü Üstbilgi
+Aşağıda, MTOM belirtiminde belirtilen gereksinimlerden türetilen ve MTOM ve RFC 2387'den türetilen BIR SOAP 1.x MTOM kodlu iletinin HTTP İçerik Türü üstbilgisinin biçimine ait WCF açıklamalarının bir listesi vettir.
 
-- R4131: Bir HTTP Content-Type üstbilgisi değeri multipart/related (büyük-küçük harf duyarsız) ve parametreleri olmalıdır. Parametre adları büyük/küçük harfe duyarsızdır. Parametre sırası önemli değildir.
+- R4131: BIR HTTP İçerik Türü üstbilginin çok parçalı/ilişkili (büyük/küçük harf duyarsız) değeri ve parametreleri olmalıdır. Parametre adları büyük/küçük harf duyarsızdır. Parametre sırası önemli değildir.
 
-- Content-Type üstbilgisi MIME iletileri için tam Backus-Naur Form (BNF) bölümü 5.1, RFC 2045 listelenir.
+- MIME iletileri için İçerik Türü üstbilginin tam Backus-Naur Formu (BNF), RFC 2045, bölüm 5.1'de listelenmiştir.
 
-- R4132: Bir HTTP Content-Type üstbilgisi değeri ile bir tür parametresi olmalıdır `application/xop+xml` çift tırnak işareti içine alınmış.
+- R4132: HTTP İçerik Türü üstbilginin değeri `application/xop+xml` çift tırnak işaretleriyle kapatılan bir tür parametresi olmalıdır.
 
-Çift tırnak işareti kullanma gereksinimi RFC 2387 açık olsa da, tüm multipart/related medya tür parametreleri büyük olasılıkla gibi ayrılmış karakterler içeren metin uygulamasını gözlediğini "\@" veya "/" ve bu nedenle çift tırnak gerekir işaretler.
+RFC 2387'de çift tırnak işaretleri kullanma gereksinimi açık olmasa da, metinde tüm çok parçalı/ilişkili ortam türü\@parametrelerinin büyük olasılıkla " veya "/" gibi ayrılmış karakterler içerdiği ve bu nedenle çift tırnak işaretlerine ihtiyaç duyulduğu gözlemlenir.
 
-- R4133: Başlangıç parametresi SOAP içeren MIME bölümünün içerik kimliği-üstbilgisinin değeri ile bir HTTP Content-Type üst bilgisi olmalıdır 1.x Zarf çift tırnak işareti içine alınmış. Başlangıç parametresi atlanırsa, SOAP ilk MIME bölümü içermelidir 1.x Zarf.
+- R4133: BIR HTTP İçerik Türü üstbilgi, çift tırnak işaretleriyle kapatılan SOAP 1.x Zarfını içeren MIME bölümünün İçerik-KIMLIK üstbilgisinin değerini içeren bir başlangıç parametresi olmalıdır. Başlangıç parametresi atlanırsa, ilk MIME parçası SOAP 1.x Zarfı içermelidir.
 
-- R4134: Kodlanmış SOAP 1.1 MTOM iletisi için bir HTTP Content-Type üstbilgisi değeri çift tırnak işaretleri arasına metin/XML, başlangıç bilgileri parametresiyle içermelidir.
+- R4134: SOAP 1.1 MTOM kodlanmış ileti için http İçerik Türü üstbilgi, çift tırnak işaretleriyle kaplanmış metin/xml değerini içeren başlangıç bilgi parametresini içermelidir.
 
-- R4135: SOAP 1.2 MTOM olarak kodlanmış bir ileti için bir HTTP Content-Type üstbilgisi değeri başlangıç bilgileri parametresiyle içermelidir `application/soap+xml`çift tırnak işareti içine alınan.
+- R4135: SOAP 1.2 MTOM kodlu ileti için http İçerik Türü üstbilgi, çift tırnak işaretleriyle birlikte başlangıç bilgisi parametresini `application/soap+xml`içermelidir.
 
-- R4136: MTOM kodlanmış SOAP 1.x iletisi için HTTP Content-Type üst bilgisi bölümü 5.1.1, RFC 2046 BNF tanımlanmış MIME sınır eşleşen (çift tırnak işareti içine alınmış) değerine sahip sınır parametreye sahip olmalıdır
+- R4136: BIR SOAP 1.x MTOM kodlanmış ileti için HTTP İçerik Türü üstbilgi, RFC 2046'da tanımlanan MIME sınırı BNF ile eşleşen değere (çift tırnak işaretleriyle kapalı) sınır parametresi, bölüm 5.1.1 olmalıdır
 
     ```
-    boundary := 0*69<bchars> bcharsnospace 
-    bchars := bcharsnospace / " " 
-    bcharsnospace :=    DIGIT / ALPHA / "'" / "(" / ")" / "+" 
+    boundary := 0*69<bchars> bcharsnospace
+    bchars := bcharsnospace / " "
+    bcharsnospace :=    DIGIT / ALPHA / "'" / "(" / ")" / "+"
                         / "_" / "," / "-" / "." / "/" / ":" / "=" / "?"
     ```
 
      Örnekler:
 
-     DÜZELTİN
+     Doğru
 
     ```
     Content-Type: multipart/related; type="application/xop+xml";start=" <part0@tempuri.org>";boundary="uuid:0ca0e16e-feb1-426c-97d8-c4508ada5e82+id=1";start-info="text/xml"
     ```
 
-     DÜZELTİN
+     Doğru
 
     ```
     Content-Type: Multipart/Related; type="application/xop+xml";start-info="text/xml";boundary="uuid:0ca0e16e-feb1-426c-97d8-c4508ada5e82+id=1"
     ```
 
-     YANLIŞ
+     Yanlış
 
     ```
-    Content-Type: Multipart/Related; type=application/xop+xml;start=" <part0@tempuri.org>";start-info="text/xml";boundary="uuid:0ca0e16e-feb1-426c-97d8-c4508ada5e82+id=1" 
+    Content-Type: Multipart/Related; type=application/xop+xml;start=" <part0@tempuri.org>";start-info="text/xml";boundary="uuid:0ca0e16e-feb1-426c-97d8-c4508ada5e82+id=1"
     ```
 
-#### <a name="infoset-mime-part"></a>Bilgi kümesi MIME bölümü
-SOAP Zarfı XOP MIME paket kök bir parçası olarak saklanır ve genellikle çağrılır 1.x `infoset` bölümü.
+#### <a name="infoset-mime-part"></a>Infoset MIME Parçası
+SOAP 1.x Zarf XOP MIME paketinin bir kök parçası olarak kapsüllenir ve genellikle `infoset` parçası olarak adlandırılır.
 
-- R4141: SOAP Zarfı adlı XOP MIME paketi kök bir parçası olarak kapsüllenmelidir 1.x `infoset` bölümü ve gelen HTTP Content-Type başvurulan.
+- R4141: SOAP 1.x Zarf, XOP MIME paketinin bir `infoset` parçası olarak kapsüllenmelidir, adı verilen ve HTTP İçerik Türünden başvurulan.
 
-- R4142: SOAP `Infoset` bölümü şu MIME üst bilgilerini içermesi gerekir: `Content-ID`, `Content-Transfer-Encoding`, ve `Content-Type`.
+- R4142: SOAP `Infoset` parçası aşağıdaki MIME başlıklarını `Content-ID` `Content-Transfer-Encoding`içermelidir: , , ve `Content-Type`.
 
-Content-ID üst bilgisinin biçimi RFC 2045 tanımlanır
+İçerik-ID üstbilgisinin biçimi RFC 2045 tarafından
 
 ```
 "Content-ID" ":" msg-id
 ```
 
-Burada `msg-id` RFC 2822 (yani, RFC 822, RFC 2045 başvurulan yerini alır) olarak tanımlanır:
+RFC 2822'de tanımlandığı yer `msg-id` (RFC 822'nin yerini alan, RFC 2045'te başvurulan) şu şekildedir:
 
 ```
 msg-id    =       [CFWS] "<" id-left "@" id-right ">" [CFWS]
 ```
 
-ve etkili bir şekilde bir e-posta adresi içine alınmış "\<" ve ">". `[CFWS]` Önek ve sonek 2822 açıklamaları yürütmek için RFC eklendi ve birlikte çalışabilirlik korumak için kullanılmamalıdır.
+ve " "\<ve ">" içinde yer alan bir e-posta adresidir. Önek `[CFWS]` ve sonek, yorumları taşımak için RFC 2822'ye eklendi ve birlikte çalışabilirliği korumak için kullanılmamalıdır.
 
-R4143: Bilgi kümesi MIME bölümünün içerik kimliği-üstbilgisinin değerini izlemelidir `msg-id` ile RFC 2822 üretimden `[CFWS]` atlanmış önek ve sonek bölümleri.
+R4143: Infoset MIME parçasının İçerik-ID üstbilgisinin `msg-id` değeri, önek ve sonek `[CFWS]` parçaları atlanmış olan RFC 2822'den gelen üretimi takip etmelidir.
 
-MIME uygulamaları birkaç esnek içine alınmış değer gereksinimleri "\<" ve ">" e-posta adresi olabilir ve kullanılan `absoluteURI` içine "\<", ">" Ek e-posta adresi. Bu sürüm WCF MIME Content-ID üst bilgisi biçiminde değerleri kullanır:
+Bir dizi MIME uygulaması, " "\<ve ">" içindeki değerin e-posta `absoluteURI` adresi olması\<için gerekli gereksinimleri gidermiş ve e-posta adresine ek olarak " , ">" olarak kullanılır. WCF'nin bu sürümü, formun İçerik-ID MIME üstbilgisinin değerlerini kullanır:
 
 ```
-Content-ID: <http://tempuri.org/0> 
+Content-ID: <http://tempuri.org/0>
 ```
 
-R4144: MTOM işlemci kabul içerik kimliği-üstbilgi değerleri aşağıdaki rahat eşleşen `msg-id`.
+R4144: MTOM işlemciler aşağıdaki rahatlıkla `msg-id`eşleşen İçerik-KIMLIK üstbilgi değerlerini kabul etmelidir.
 
 ```
 msg-id-relaxed =     [CFWS] "<" (absoluteURI | mail-address) ">" [CFWS]
 mail-address   =     id-left "@" id-right
 ```
 
-MIME bölümünün içerik kodlama iletişim kurmak için içerik Transfer-Encoding üstbilgisi MIME (RFC 2045) sağlar. Content-Transfer-Encoding için tanımlanan varsayılan içerik Transfer-Encoding başlığı büyük birlikte çalışabilirlik için gerekli olan SOAP iletilerin çoğu için uygun değil, bu nedenle 7 bit:
+MIME (RFC 2045), MIME bölümünün içeriğinin kodlanması ile iletişim kurmak için İçerik Aktar-Kodlama üstbilgisini sağlar. İçerik-Aktarım-Kodlama için tanımlanan varsayılan değer, çoğu SOAP iletisi için uygun olmayan 7 bit'tir, bu nedenle daha fazla birlikte çalışabilirlik için İçerik Aktar-Kodlama üstbilgisi gereklidir:
 
-- R4145: SOAP bilgi bölümü içeriği Transfer-Encoding üst bilgisi içermelidir.
+- R4145: SOAP Bilgi Seti bölümü İçerik Aktar-Kodlama üstbilgisini içermelidir.
 
-- R4146: UTF-8 karakter kodlaması SOAP Zarfı varsa, içeriği Transfer-Encoding üstbilgisinin değerini 8 bit olmalıdır.
+- R4146: SOAP Envelope karakter kodlaması UTF-8 ise, İçerik Aktarımı-Kodlama üstbilgisinin değeri 8 bit olmalıdır.
 
-- R4147: UTF-16 karakter kodlamasını SOAP Zarfı varsa, içeriği Transfer-Encoding üstbilgisinin değerini ikili olması gerekir.
+- R4147: SOAP Envelope karakter kodlaması UTF-16 ise, İçerik Aktar-Kodlama üstbilgisinin değeri ikili olmalıdır.
 
-- [XOP göre] 5 bölümüne,
+- [XOP] bölüm 5'e göre,
 
-- R4148: Medya türü application/xop + xml Content-Type üstbilgisi SOAP1.1 bilgi bölümü içermelidir ve tür parametreleri = "text/xml" ve karakter kümesi
+- R4148: SOAP1.1 Bilgi seti parçası, ortam türü uygulaması/xop+xml ve parametreleri type="text/xml" ve charset ile İçerik Tipi başlık içermelidir
 
     ```
     Content-Type: application/xop+xml;
                   charset=utf-8;type="text/xml"
     ```
 
-- R4149: Content-Type üstbilgisi medya türü ile SOAP 1.2 bilgi bölümü içermelidir `application/xop+xml` ve tür parametreleri = "`application/soap+xml`" ve `charset`.
+- R4149: SOAP 1.2 Bilgi Seti parçası, ortam türü ve `application/xop+xml` parametreleri`application/soap+xml`type=" `charset`" ve .
 
     ```
     Content-Type: application/xop+xml;
                   charset=utf-8;type="application/soap+xml"
     ```
 
-     XOP açıklarken `charset` parametresi için `application/xop+xml` isteğe bağlı olacak şekilde BP 1.1 gereksinimini benzer birlikte çalışabilirliği için gerekli `charset` parametresi için `text/xml` medya türü.
+     XOP isteğe `charset` bağlı olması `application/xop+xml` için parametre tanımlar iken, `charset` `text/xml` medya türü için parametre bp 1.1 gereksinimi benzer birlikte çalışabilirlik için gereklidir.
 
-- R41410: `type` Ve `charset` parametreleri SOAP 1.x bilgi bölümü Content-Type üst bilgisi mevcut olmalıdır.
+- R41410: `type` `charset` SOAP 1.x Infoset bölümünün İçerik Tipi başlığında parametreler bulunmalıdır.
 
-#### <a name="wcf-endpoint-support-for-mtom"></a>MTOM WCF uç nokta desteği
-MTOM amacı, bir SOAP ileti base64 ile kodlanmış verileri En İyileştir şifrelemektir. Kısıtlamalar bir listesi verilmiştir:
+#### <a name="wcf-endpoint-support-for-mtom"></a>MTOM için WCF Uç Nokta Desteği
+MTOM'un amacı, base64 kodlanmış verileri optimize etmek için bir SOAP iletisi kodlamaktır. Aşağıdaki kısıtlamaların bir listesi:
 
-- R4151: Base64 ile kodlanmış verileri içeren herhangi bir öğe bilgi öğe iyileştirilmiş olması olabilir.
+- R4151: Base64 kodlanmış verileri içeren tüm öğe bilgileri öğesi en iyi duruma getirilebilir.
 
-- B4152: WCF base64 olarak kodlanmış veriler içeren ve uzunluğu 1024 bayt aşan öğesi bilgi öğelerini iyileştirir.
+- B4152: WCF, base64 kodlanmış veri içeren ve uzunluğu 1024 baytı aşan eleman bilgi öğelerini optimize eder.
 
-MTOM kullanacak şekilde yapılandırılmış bir WCF uç nokta her zaman MTOM kodlanmış iletileri gönderir. Hiçbir parçasının gerekli ölçütleri karşılayan bile ileti (bir MIME paketi olarak SOAP Zarfı içeren tek bir MIME bölümü ile seri hale getirilmiş) hala MTOM kodlanır.
+MTOM'u kullanmak üzere yapılandırılan bir WCF bitiş noktası her zaman MTOM kodlu iletiler gönderir. Hiçbir parça gerekli ölçütleri karşılamasa bile, ileti hala MTOM kodludur (SOAP zarfını içeren tek bir MIME parçası olan bir MIME paketi olarak seri hale getirilmiştir).
 
-### <a name="ws-policy-assertion-for-mtom"></a>MTOM için WS-Policy onaylama
-WCF MTOM kullanım bitiş noktası tarafından belirtmek için aşağıdaki İlkesi onayını kullanır:
+### <a name="ws-policy-assertion-for-mtom"></a>MTOM için WS-Politika İddiası
+WCF, MTOM kullanımını bitiş noktasına göre belirtmek için aşağıdaki ilke iddiasını kullanır:
 
 ```xml
 <wsoma:OptimizedMimeSerialization ... />
 ```
 
-- R4211: Önceki İlkesi onayını bir uç noktası İlkesi konu ve uç noktasından alınan ve gönderilen tüm iletilerin MTOM kullanarak iyileştirilmelidir belirtir.
+- R4211: Önceki ilke iddiasında Bir Uç Nokta İlkesi Konusu vardır ve bitiş noktasından gönderilen ve alınan tüm iletilerin MTOM kullanılarak optimize edilmesi gerektiğini belirtir.
 
-- B4212: MTOM iyileştirme'yi kullanmak üzere yapılandırıldığında, bir WCF uç nokta MTOM ilke onaylama karşılık gelen iliştirilmiş ilke ekler `wsdl:binding`.
+- B4212: MTOM optimizasyonu kullanmak üzere yapılandırıldığında, WCF bitiş noktası ilgili `wsdl:binding`ilkeekli bir MTOM İlkesi iddiası ekler.
 
-### <a name="composition-with-ws-security"></a>WS-güvenlik ile oluşturma
-MTOM olan benzer bir kodlama mekanizması `text/xml` ve WCF ikili XML. MTOM sunar doğal bileşim WS-güvenlik ve diğer WS-* protokoller: WS güvenliği kullanılarak güvenli bir ileti MTOM kullanılarak iyileştirilebilir.
+### <a name="composition-with-ws-security"></a>WS-Security ile kompozisyon
+MTOM ve WCF İkili XML benzer `text/xml` bir kodlama mekanizmasıdır. MTOM, WS-Security ve diğer WS-* protokolleri ile doğal kompozisyon sunar: WS-Security kullanılarak güvenli bir ileti MTOM kullanılarak optimize edilebilir.
 
 ### <a name="examples"></a>Örnekler
 
-#### <a name="wcf-soap-11-message-encoded-using-mtom"></a>WCF SOAP 1.1 ileti MTOM kullanılarak kodlanır
+#### <a name="wcf-soap-11-message-encoded-using-mtom"></a>WCF SOAP 1.1 Mesaj MTOM Kullanılarak Kodlanmış
 
 ```
 POST http://131.107.72.15/Mtom/svc/service.svc/Soap11MtomUTF8 HTTP/1.1
@@ -611,15 +611,15 @@ Content-Type: application/octet-stream
 --uuid:0ca0e16e-feb1-426c-97d8-c4508ada5e82+id=1
 ```
 
-#### <a name="wcf-secure-soap-12-message-encoded-using-mtom"></a>Güvenli WCF SOAP 1.2 MTOM kullanarak ileti kodlanmış.
-Bu örnekte, bir ileti MTOM ve WS-güvenlik kullanarak korumalı bir SOAP 1.2 kullanılarak kodlanır. Kodlama içeriğini için tanımlanan ikili parçaları `BinarySecurityToken`, `CipherValue` , `EncryptedData` karşılık gelen şifrelenmiş imzası ve şifrelenmiş gövdesi. Unutmayın `CipherValue` , `EncryptedKey` uzunluğunu daha az sonra 1024 bayt olduğundan iyileştirme için WCF tarafından tanımlanmadı.
+#### <a name="wcf-secure-soap-12-message-encoded-using-mtom"></a>WCF Secure SOAP 1.2 MTOM Kullanılarak Kodlanmış İleti
+Bu örnekte, WS-Security kullanılarak korunan MTOM ve SOAP 1.2 kullanılarak bir ileti kodlanır. Kodlama için tanımlanan ikili `BinarySecurityToken`parçalar, şifreli `CipherValue` imza `EncryptedData` ve şifreli gövdeye karşılık gelen , içeriğidir. `CipherValue` Uzunluğu 1024 bayt daha az olduğundan, WCF tarafından optimizasyon için `EncryptedKey` tanımlanmadığını unutmayın.
 
 ```
 POST http://131.107.72.15/Mtom/service.svc/Soap12MtomSecureSignEncrypt HTTP/1.1
 Content-Type: multipart/related; type="application/xop+xml";
               start="<http://tempuri.org/0>";
             boundary="uuid:0ca0e16e-feb1-426c-97d8-c4508ada5e82+id=3";
-              start-info="application/soap+xml"; 
+              start-info="application/soap+xml";
               action="http://xmlsoap.org/echoBinaryAsString"
 Host: 131.107.72.15
 Content-Length: 1941

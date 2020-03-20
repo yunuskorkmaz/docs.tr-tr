@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: c1a2d76b4e596acc395da6cefed008078e57a336
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 22f8e3bb1ba72379b3f5fc87a077e5fe57f89bf8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858600"
 ---
-### <a name="null-coalescer-values-are-not-visible-in-debugger-until-one-step-later"></a>Null coalescer değerleri daha sonra bir adım kadar hata ayıklayıcıda görünür değildir
+### <a name="null-coalescer-values-are-not-visible-in-debugger-until-one-step-later"></a>Null coalescer değerleri bir adım sonraya kadar hata ayıklama görünmez
 
 |   |   |
 |---|---|
-|Ayrıntılar|.NET Framework 4.5 hatada atama işlemi Framework'ün 64 bit sürümünde çalıştırıldığı sırada yürütüldükten hemen sonra hata ayıklayıcısı'nda görünür olmaması için null bir birleştirme işlemi ayarlanan değerleri neden olur.|
-|Öneri|Hata ayıklayıcı ek bir kerelik atlama doğru şekilde güncelleştirilmesi, yerel/alanın değeri neden olur. Ayrıca, .NET Framework 4. 6 ' Bu sorun düzeltilmiştir; Framework'ün bu sürüme yükseltme sorunu çözecektir.|
-|`Scope`|Kenar|
-|Version|4,5|
-|Type|Çalışma zamanı|
-
+|Ayrıntılar|.NET Framework 4.5'teki bir hata, null coalescing işlemi aracılığıyla ayarlanan değerlerin, Çerçeve'nin 64 bit sürümünde çalışırken atama işlemi yürütüldükten hemen sonra hata ayıklayıcıda görünmemelerine neden olur.|
+|Öneri|Hata ayıklamada bir kez daha zaman ayırMak, yerel/alanın değerinin doğru şekilde güncelleştirilmesine neden olur. Ayrıca, bu sorun .NET Framework 4.6'da giderilmiştir; Çerçeve'nin bu sürümüne yükseltme sorunu çözmek gerekir.|
+|Kapsam|Edge|
+|Sürüm|4,5|
+|Tür|Çalışma Zamanı|

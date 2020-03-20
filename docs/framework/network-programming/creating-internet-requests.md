@@ -11,23 +11,23 @@ helpviewer_keywords:
 - data requests, creating requests
 ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
 ms.openlocfilehash: 80e3a6bd199691df9391e88d5a64fab5df2a08a1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048614"
 ---
 # <a name="creating-internet-requests"></a>İnternet İstekleri Oluşturma
-Uygulamalar, <xref:System.Net.WebRequest> <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> yöntemi aracılığıyla örnek oluşturur. Bu, kendisine geçirilen URI şemasını temel alan **WebRequest** 'ten türetilmiş bir sınıf oluşturan statik bir yöntemdir.  
+Uygulamalar <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> yöntem <xref:System.Net.WebRequest> üzerinden örnekler oluşturur. Bu, **webisteğinden** türetilen bir sınıfı, ona geçirilen URI düzenini temel alan statik bir yöntemdir.  
   
-## <a name="web-file-and-ftp-requests"></a>Web, dosya ve FTP Istekleri  
- .NET Framework, http ve <xref:System.Net.HttpWebRequest> https isteklerini işlemek için **WebRequest**'ten türetilen sınıfı sağlar. Çoğu durumda, **WebRequest** sınıfı bir istek yapmak için ihtiyacınız olan tüm özellikleri sağlar; Ancak, gerekirse, isteğin HTTP 'e özgü özelliklerine erişmek için **Web isteği. Create** yöntemi tarafından oluşturulan **WebRequest** nesnelerini **HttpWebRequest** türüne çevirebilirsiniz. Benzer şekilde, **HttpWebResponse** nesnesi http ve https isteklerindeki yanıtları işler. **HttpWebResponse** nesnesinin http 'e özgü özelliklerine erişmek Için **WebResponse** nesnelerini **HttpWebResponse** türüne atamalısınız.  
+## <a name="web-file-and-ftp-requests"></a>Web, Dosya ve FTP İstekleri  
+ .NET Framework, <xref:System.Net.HttpWebRequest> HTTP ve HTTPS isteklerini işlemek için **WebRequest'ten**türetilen sınıfı sağlar. Çoğu durumda, **Webİstek** sınıfı istekte bulunmak için gereken tüm özellikleri sağlar; ancak, gerekirse, isteğin HTTP'ye özgü özelliklerine erişmek için **WebRequest.Create** yöntemi tarafından oluşturulan **WebRequest** nesnelerini **HttpWebRequest** türüne atabilirsiniz. Benzer şekilde, **HttpWebResponse** nesnesi HTTP ve HTTPS isteklerinden gelen yanıtları işler. **HttpWebResponse** nesnesinin HTTP'ye özgü özelliklerine erişmek için **WebResponse** nesnelerini **HttpWebResponse** türüne dökmeniz gerekir.  
   
- .NET Framework Ayrıca, "dosya <xref:System.Net.FileWebRequest> : <xref:System.Net.FileWebResponse> " kullanan kaynaklara yönelik istekleri işlemek için ve sınıflarını sağlar. URI şeması. Benzer şekilde, <xref:System.Net.FtpWebResponse>vesınıfları "FTP:" düzenini kullanan kaynaklar için istekleri işlemek üzere sağlanır. <xref:System.Net.FtpWebRequest> İsteğiniz bu düzenlerden herhangi birini kullanan bir kaynak için ise, isteğinizi yapmak için bir nesne elde etmek üzere **WebRequest. Create** yöntemini kullanabilirsiniz.  
+ .NET Framework ayrıca <xref:System.Net.FileWebRequest> "dosya:" URI düzenini kullanan kaynaklar için istekleri işlemek için <xref:System.Net.FileWebResponse> ve sınıfları sağlar. Aynı şekilde, <xref:System.Net.FtpWebRequest> <xref:System.Net.FtpWebResponse> ve sınıflar "ftp:" düzenini kullanan kaynaklar için istekleri işlemek için sağlanır. İsteğiniz bu düzenlerden herhangi birini kullanan bir kaynak içinse, isteğinizi yapmak için bir nesne elde etmek için **WebRequest.Create** yöntemini kullanabilirsiniz.  
   
- Diğer uygulama düzeyi protokolleri kullanan istekleri işlemek için **WebRequest** ve **WebResponse**'dan türetilmiş protokole özgü sınıfları uygulamanız gerekir. Daha fazla bilgi için bkz. [takılabilir protokolleri programlama](programming-pluggable-protocols.md).  
+ Diğer uygulama düzeyi protokollerini kullanan istekleri işlemek için **WebRequest** ve **WebResponse'dan**türetilen protokole özgü sınıfları uygulamanız gerekir. Daha fazla bilgi için, [Takılabilir Programlama Protokolleri'ne](programming-pluggable-protocols.md)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: WebRequest sınıfını kullanarak veri isteme](how-to-request-data-using-the-webrequest-class.md)
+- [Nasıl yapılır: WebRequest Sınıfını Kullanarak Veri İsteme](how-to-request-data-using-the-webrequest-class.md)
 - [Veri İsteme](requesting-data.md)

@@ -2,25 +2,25 @@
 title: WCF Web HTTP Hizmetleri için Önbelleğe Alma Desteği
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: b6247dd6c178b355fa4de271415b7cac12f6c629
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 63c83cc1af9a3ccfdbdd79f8d0480e6c29eaf2f3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116674"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185427"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF Web HTTP Hizmetleri için Önbelleğe Alma Desteği
 
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], WCF Web HTTP hizmetinizdeki ASP.NET içinde zaten bulunan bildirime dayalı önbelleğe alma mekanizmasını kullanmanıza olanak sağlar. Bu, WCF Web HTTP hizmet işlemlerinizin yanıtlarını önbelleğe almanıza olanak sağlar. Bir kullanıcı hizmetinize önbelleğe alma için yapılandırılmış bir HTTP Al gönderdiğinde, ASP.NET önbelleğe alınan yanıtı geri gönderir ve hizmet yöntemi çağrılmaz. Önbelleğin süresi dolarsa, bir Kullanıcı bir sonraki HTTP GET gönderdiğinde, hizmet yönteminiz çağrılır ve yanıt yeniden önbelleğe alınır. ASP.NET önbelleğe alma hakkında daha fazla bilgi için bkz. [ASP.net Caching Overview](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100)).  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]WCF Web HTTP hizmetlerinizde ASP.NET mevcut olan bildirimsel önbelleğe alma mekanizmasını kullanmanıza olanak tanır. Bu, WCF Web HTTP hizmet işlemlerinizden yanıtları önbelleğe alalet etmenizi sağlar. Bir kullanıcı önbelleğe almak üzere yapılandırılan bir HTTP GET hizmetinize gönderdiğinde, ASP.NET önbelleğe alınmış yanıtı geri gönderir ve hizmet yöntemi çağrılmaz. Önbelleğin süresi dolduğunda, bir sonraki kullanıcı BIR HTTP GET gönderdiğinde, hizmet yönteminiz çağrılır ve yanıt bir kez daha önbelleğe alır. ASP.NET önbelleğe alma hakkında daha fazla bilgi için, [ASP.NET Önbelleğe Alma Genel Bakış'a](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100))bakın.  
   
-## <a name="basic-web-http-service-caching"></a>Temel Web HTTP hizmeti önbelleğe alma  
+## <a name="basic-web-http-service-caching"></a>Temel Web HTTP Hizmet Önbelleğe Alma  
 
-  WEB HTTP hizmeti önbelleğe almayı etkinleştirmek için, <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> veya <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>hizmet ayarına uygulayarak, önce ASP.NET uyumluluğunu etkinleştirmeniz gerekir.  
+  WEB <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> HTTP hizmet önbelleğe almak için, <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> ASP.NET öncelikle hizmet ayarı veya <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
   
- .NET Framework 4, bir önbellek profili adı belirtmenize izin veren <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> adlı yeni bir öznitelik tanıtır. Bu öznitelik bir hizmet işlemine uygulanır. Aşağıdaki örnek, ASP.NET uyumluluğunu etkinleştirmek ve önbelleğe almak için `GetCustomer` işlemini yapılandıran bir hizmete <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> uygular. <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> özniteliği, kullanılacak önbellek ayarlarını içeren bir önbellek profili belirtir.  
+ .NET Framework 4, önbellek <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> profil adı belirtmenize olanak tanıyan yeni bir öznitelik sunar. Bu öznitelik bir hizmet işlemine uygulanır. Aşağıdaki örnek, ASP.NET <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> uyumluluğunu etkinleştirmek için bir hizmete uygulanır ve önbelleğe alma işlemini `GetCustomer` yapılandırır. Öznitelik, <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> kullanılacak önbellek ayarlarını içeren bir önbellek profili belirtir.  
   
 ```csharp
-[ServiceContract] 
+[ServiceContract]
 [AspNetCompatibilityRequirements(RequirementsMode=AspNetCompatibilityRequirementsMode.Allowed)]
 public class Service
 {
@@ -33,7 +33,7 @@ public class Service
 }
 ```  
   
-Ayrıca, aşağıdaki örnekte gösterildiği gibi Web. config dosyasında ASP.NET uyumluluk modunu da açın.  
+Ayrıca, aşağıdaki örnekte gösterildiği gibi Web.config dosyasındaki ASP.NET uyumluluk modunu da açın.  
   
 ```xml
 <system.serviceModel>
@@ -42,9 +42,9 @@ Ayrıca, aşağıdaki örnekte gösterildiği gibi Web. config dosyasında ASP.N
 ```
   
 > [!WARNING]
-> ASP.NET uyumluluk modu açık değilse ve <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> kullanılırsa bir özel durum oluşturulur.  
+> uyumluluk modu ASP.NET açık değilse ve <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> kullanılırsa bir özel durum atılır.  
   
- <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> tarafından belirtilen önbellek profili adı, Web. config yapılandırma dosyanıza eklenen bir önbellek profilini tanımlar. Önbellek profili, aşağıdaki yapılandırma örneğinde gösterildiği gibi bir <`outputCacheSetting`> öğesi ile tanımlanır.  
+ Web.config yapılandırma dosyanıza eklenen önbellek profilini <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> tanımlar tarafından belirtilen önbellek profili adı. Önbellek profili, aşağıdaki yapılandırma `outputCacheSetting` örneğinde gösterildiği gibi <bir> öğesiile tanımlanır.  
   
 ```xml
 <!-- ...  -->
@@ -60,11 +60,11 @@ Ayrıca, aşağıdaki örnekte gösterildiği gibi Web. config dosyasında ASP.N
 </system.web>  
 ```  
   
- Bu, ASP.NET uygulamaları için kullanılabilen yapılandırma öğesidir. ASP.NET önbellek profilleri hakkında daha fazla bilgi için bkz. <xref:System.Web.Configuration.OutputCacheProfile>. Web HTTP Hizmetleri için önbellek profilindeki en önemli öznitelikler şunlardır: `cacheDuration` ve `varyByParam`. Bu özniteliklerin her ikisi de gereklidir. `cacheDuration`, bir yanıtın saniye cinsinden önbelleğe alınması gereken süreyi belirler. `varyByParam`, yanıtları önbelleğe almak için kullanılan bir sorgu dizesi parametresi belirtmenize izin verir. Farklı sorgu dizesi parametre değerleriyle yapılan tüm istekler ayrı olarak önbelleğe alınır. Örneğin, `http://MyServer/MyHttpService/MyOperation?param=10`için bir başlangıç isteği yapıldıktan sonra, aynı URI ile yapılan sonraki tüm istekler önbelleğe alınan yanıtı (önbellek süresi geçmediğinde uzun) döndürülür. Benzer bir istek için aynı ancak parametre sorgu dizesi parametresi için farklı bir değere sahip yanıtlar ayrı olarak önbelleğe alınır. Bu ayrı önbelleğe alma davranışını istemiyorsanız, `varyByParam` "none" olarak ayarlayın.  
+ Bu, ASP.NET uygulamaları için kullanılabilen yapılandırma öğesidir. önbellek profilleri ASP.NET hakkında daha <xref:System.Web.Configuration.OutputCacheProfile>fazla bilgi için bkz. Web HTTP hizmetleri için önbellek profilindeki en `cacheDuration` önemli `varyByParam`öznitelikler şunlardır: ve. Bu özniteliklerin her ikisi de gereklidir. `cacheDuration`bir yanıtın saniyeler içinde önbelleğe alınması gereken süreyi ayarlar. `varyByParam`yanıtları önbelleğe almak için kullanılan bir sorgu dize parametresini belirtmenizi sağlar. Farklı sorgu dize parametre değerleri ile yapılan tüm istekler ayrı ayrı önbelleğe alınır. Örneğin, ilk istek yapıldıktan `http://MyServer/MyHttpService/MyOperation?param=10`sonra, aynı URI ile yapılan sonraki tüm istekler önbelleğe alınmış yanıtı döndürülür (önbellek süresi dolmadığı sürece). Parametre sorgusu dize parametresi parametresi için farklı bir değeri olan benzer bir isteğe yönelik yanıtlar ayrı olarak önbelleğe alınır. Bu ayrı önbelleğe alma davranışı `varyByParam` istemiyorsanız, "yok" olarak ayarlayın.  
   
-## <a name="sql-cache-dependency"></a>SQL önbellek bağımlılığı  
+## <a name="sql-cache-dependency"></a>SQL Önbellek Bağımlılığı  
 
-  Web HTTP hizmet yanıtları bir SQL önbellek bağımlılığı ile de önbelleğe alınabilir. WCF Web HTTP hizmetiniz bir SQL veritabanında depolanan verilere bağımlıysa, SQL veritabanı tablosundaki veriler değiştiğinde hizmetin yanıtını önbelleğe almak ve önbelleğe alınmış yanıtı geçersiz kılmak isteyebilirsiniz. Bu davranış, Web. config dosyası içinde tamamen yapılandırılır. İlk olarak, <`connectionStrings`> öğesinde bir bağlantı dizesi tanımlayın.  
+  Web HTTP hizmet yanıtları da bir SQL önbellek bağımlılığı ile önbelleğe alınabilir. WCF Web HTTP hizmetiniz bir SQL veritabanında depolanan verilere bağlıysa, hizmetin yanıtını önbelleğe almak ve SQL veritabanı tablosundaki veriler değiştiğinde önbelleğe alınan yanıtı geçersiz kılabilir. Bu davranış tamamen Web.config dosyası içinde yapılandırılır. İlk olarak, <`connectionStrings`> öğesinde bir bağlantı dizesi tanımlayın.  
   
 ```xml
 <connectionStrings>
@@ -74,7 +74,7 @@ Ayrıca, aşağıdaki örnekte gösterildiği gibi Web. config dosyasında ASP.N
 </connectionStrings>
 ```  
   
- Daha sonra, aşağıdaki yapılandırma örneğinde gösterildiği gibi <`system.web`> öğesi içindeki bir <`caching`> öğesinde SQL önbellek bağımlılığını etkinleştirmeniz gerekir.  
+ Daha sonra aşağıdaki config örneğinde `caching` gösterildiği gibi <`system.web`> öğesi içinde <bir> öğesi içinde SQL önbellek bağımlılığı etkinleştirmek gerekir.  
   
 ```xml  
 <system.web>
@@ -90,7 +90,7 @@ Ayrıca, aşağıdaki örnekte gösterildiği gibi Web. config dosyasında ASP.N
 </system.web>
 ```  
   
- Burada SQL önbellek bağımlılığı etkindir ve 1000 milisaniye bir yoklama süresi ayarlanır. Yoklama süresi her geçtiğinde, veritabanı tablosunu güncelleştirme için denetlenir. Değişiklikler algılanırsa, önbelleğin içerikleri kaldırılır ve hizmet işleminin bir sonraki çağrılışında yeni bir yanıt önbelleğe alınır. `sqlCacheDependency`> öğesi içinde, aşağıdaki örnekte gösterildiği gibi veritabanlarını ekleyin ve <`databases`> öğesi içindeki bağlantı dizelerine başvurun.  
+ Burada SQL önbellek bağımlılığı etkinleştirilir ve 1000 milisaniyelik bir yoklama süresi ayarlanır. Yoklama süresi her zaman veritabanı tablosu güncelleştirmeleri için denetlenir. Değişiklikler algılanırsa önbelleğin içeriği kaldırılır ve hizmet işlemi bir sonraki çağrıldığinde yeni bir yanıt önbelleğe alınır. <`sqlCacheDependency`> öğesi içinde veritabanları ekleyin ve aşağıdaki örnekte `databases` gösterildiği gibi <> öğesi içinde bağlantı dizeleri başvuru.  
   
 ```xml  
 <system.web>
@@ -106,7 +106,7 @@ Ayrıca, aşağıdaki örnekte gösterildiği gibi Web. config dosyasında ASP.N
 </system.web>  
 ```  
   
- Ardından, aşağıdaki örnekte gösterildiği gibi <`caching`> öğesi içindeki çıktı önbelleği ayarlarını yapılandırmanız gerekir.  
+ Daha sonra, aşağıdaki örnekte gösterildiği gibi `caching` <> öğesi içindeki çıktı önbelleği ayarlarını yapılandırmanız gerekir.  
   
 ```xml
 <system.web>
@@ -122,24 +122,24 @@ Ayrıca, aşağıdaki örnekte gösterildiği gibi Web. config dosyasında ASP.N
 </system.web>
 ```  
   
- Burada önbellek süresi 60 saniyeye ayarlanır, `varyByParam` None olarak ayarlanır ve `sqlDependency` noktalı virgülle ayrılmış veritabanı adı/tablo çiftleri listesini iki noktayla ayırarak ayarlar. `MyTable` veri değiştirildiğinde, hizmet işlemi için önbelleğe alınmış yanıt kaldırılır ve işlem çağrıldığında yeni bir yanıt oluşturulur (hizmet işlemini çağırarak), önbelleğe alınır ve istemciye döndürülür.  
+ Burada önbellek süresi 60 saniye `varyByParam` olarak ayarlanır, hiçbiri `sqlDependency` olarak ayarlanır ve iki nokta üst üste ayrılmış veritabanı adı/tablo çiftleri yarı sütunlu sınırlı bir listeye ayarlanır. İçteki `MyTable` veriler değiştirildiğinde, hizmet işlemi için önbelleğe alınan yanıt kaldırılır ve işlem çağrıldığında yeni bir yanıt oluşturulur (hizmet işlemi çağırılarak), önbelleğe alınır ve istemciye döndürülür.  
   
 > [!IMPORTANT]
-> ASP.NET 'in bir SQL veritabanına erişmesi için [ASP.NET SQL Server kayıt aracını](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229862(v=vs.90))kullanmanız gerekir. Ayrıca, uygun Kullanıcı hesabının veritabanına ve tabloya erişimine izin vermeniz gerekir. Daha fazla bilgi için bkz. [bir Web uygulamasından SQL Server erişme](https://docs.microsoft.com/previous-versions/aspnet/ht43wsex(v=vs.100)).  
+> Bir SQL veritabanına erişmek için ASP.NET [için ASP.NET SQL Server Registration Tool'u](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229862(v=vs.90))kullanmanız gerekir. Buna ek olarak, veritabanı na ve tabloya uygun kullanıcı hesabı erişimine izin vermelisiniz. Daha fazla bilgi için [bkz.](https://docs.microsoft.com/previous-versions/aspnet/ht43wsex(v=vs.100))  
   
-## <a name="conditional-http-get-based-caching"></a>Koşullu HTTP alma tabanlı önbelleğe alma  
+## <a name="conditional-http-get-based-caching"></a>Koşullu HTTP GET Tabanlı Önbelleğe Alma  
 
-  Web HTTP senaryolarında Koşullu HTTP GET, genellikle [http belirtiminde](https://www.w3.org/Protocols/rfc2616/rfc2616.html)açıklandığı gıbı akıllı http önbelleği uygulamak için kullanılır. Bunu yapmak için hizmet, HTTP yanıtında ETag üst bilgisinin değerini ayarlamış olmalıdır. Ayrıca, belirtilen ETag öğesinin geçerli ETag ile eşleşip eşleşmediğini görmek için HTTP isteğindeki If-None-Match üst bilgisini denetmelidir.  
+  Web HTTP senaryolarında koşullu bir HTTP GET genellikle [http belirtiminde](https://www.w3.org/Protocols/rfc2616/rfc2616.html)açıklandığı gibi akıllı HTTP önbelleğe uygulamak için hizmetler tarafından kullanılır. Bunu yapmak için, hizmetIN HTTP yanıtındaki ETag üstbilginin değerini ayarlaması gerekir. Ayrıca, ETag belirtilenlerden herhangi birinin geçerli ETag ile eşleşip eşleşmediğini görmek için HTTP isteğindeki If-None-Match üstbilgisini de denetlemelidir.  
   
- GET ve HEAD istekleri için <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> bir ETag değeri alır ve isteğin If-None-Match üst bilgisine karşı denetler. Üst bilgi varsa ve bir eşleşme varsa, HTTP durum kodu 304 (değiştirilmez) ile bir <xref:System.ServiceModel.Web.WebFaultException> oluşturulur ve eşleşen ETag ile yanıta bir ETag üst bilgisi eklenir.  
+ GET ve HEAD <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> istekleri için bir ETag değeri alır ve isteğin If-None-Match üstbilgisi ile karşılaştırın. Üstbilgi varsa ve bir eşleşme varsa, <xref:System.ServiceModel.Web.WebFaultException> bir HTTP durum kodu 304 (Değiştirilmemiş) ile bir atılır ve eşleşen ETag ile yanıta bir ETag üstbilgisi eklenir.  
   
- <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> yönteminin bir aşırı yüklemesi son değiştirilme tarihi alır ve isteğin If-Modified-Since üst bilgisine karşı denetler. Üst bilgi varsa ve kaynak değiştirilmediyse, HTTP durum kodu 304 (değiştirilmez) içeren bir <xref:System.ServiceModel.Web.WebFaultException> oluşturulur.  
+ Yöntemin <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> bir aşırı yüklemesi son değiştirilmiş bir tarih alır ve isteğin If-Modified-Since üstbilgisi ile karşılaştırın. Üstbilgi mevcutsa ve kaynak o zamandan beri <xref:System.ServiceModel.Web.WebFaultException> değiştirilmemişse, http durum kodu 304 (Değiştirilmemiş) ile bir a.ş. atılır.  
   
- PUT, POST ve DELETE istekleri için <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalUpdate%2A> bir kaynağın geçerli ETag değerini alır. Geçerli ETag değeri null ise, yöntemi If-None-Match üst bilgisinin "*" değeri olup olmadığını denetler.  Geçerli ETag değeri varsayılan bir değer değilse, yöntemi geçerli ETag değerini isteğin IF-Match üst bilgisine karşı denetler. Her iki durumda da, beklenen üst bilgi istekte yoksa ve değeri koşullu denetimi karşılamıyorsa ve yanıtın ETag üstbilgisini geçerli ETag değerine ayarlarsa, yöntemi HTTP durum kodu 412 (Önkoşul başarısız) ile bir <xref:System.ServiceModel.Web.WebFaultException> oluşturur.  
+ PUT, POST ve DELETE <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalUpdate%2A> istekleri için kaynağın geçerli ETag değerini alır. Geçerli ETag değeri null ise, yöntem If-None- Match üstbilgisinin "*" değerine sahip olduğunu denetler.  Geçerli ETag değeri varsayılan bir değer değilse, yöntem geçerli ETag değerini isteğin If- Match üstbilgisi ile karşıya denetler. Her iki durumda da, <xref:System.ServiceModel.Web.WebFaultException> beklenen üstbilgi istekte yoksa veya değeri koşullu denetimi karşılamazsa ve geçerli ETag değerine yanıtın ETag üstbilgisini ayarlarsa, yöntem bir HTTP durum kodu 412 (Ön Koşul Başarısız) ile a atar.  
   
- `CheckConditional` yöntemlerinin ve <xref:System.ServiceModel.Web.OutgoingWebResponseContext.SetETag%2A> yönteminin her ikisi de, yanıt üstbilgisinde ayarlanan ETag değerin HTTP belirtimine göre geçerli bir ETag olmasını sağlar. Bu, zaten mevcut değilse ve iç çift tırnak karakterlerini doğru bir şekilde kaçış durumunda ETag değerini çift tırnak içine çevreleyen bir kapsayıcı içerir. Zayıf ETag karşılaştırması desteklenmez.  
+ Hem `CheckConditional` yöntem hem <xref:System.ServiceModel.Web.OutgoingWebResponseContext.SetETag%2A> de yöntem, yanıt başlığında ayarlanan ETag değerinin HTTP belirtimine göre geçerli bir ETag olmasını sağlar. Bu, eTag değerini çift tırnak içinde çevrelemeyi içerir, eğer zaten mevcut değillerse ve herhangi bir dahili çift tırnak karakterlerinden düzgün bir şekilde kaçıyorlarsa. Zayıf ETag karşılaştırması desteklenmez.  
   
- Aşağıdaki örnek, bu yöntemlerin nasıl kullanılacağını göstermektedir.  
+ Aşağıdaki örnekte, bu yöntemlerin nasıl kullanılacağı gösterilmektedir.  
   
 ```csharp
 [WebGet(UriTemplate = "{id}"), Description("Returns the specified customer from customers collection. Returns NotFound if there is no such customer. Supports conditional GET.")]
@@ -158,7 +158,7 @@ public Customer GetCustomer(string id)
         // since when the client last retrieved it
         WebOperationContext.Current.IncomingRequest.CheckConditionalRetrieve((long)itemEtag);
         Customer result = this.customers[id] as Customer;
-        
+
         // set the customer etag before returning the result
         WebOperationContext.Current.OutgoingResponse.SetETag((long)itemEtag);
         return result;
@@ -166,5 +166,5 @@ public Customer GetCustomer(string id)
 }
 ```  
   
-## <a name="security-considerations"></a>Güvenlik Konuları  
- Yanıt önbellekten sunulduğunda yetkilendirme gerçekleştirilmediğinden, yetkilendirme gerektiren isteklerin yanıtları önbelleğe alınmamalıdır.  Bu tür yanıtların önbelleğe alınması, ciddi bir güvenlik güvenlik açığı ortaya çıkarabilir.  Genellikle, yetkilendirme gerektiren istekler kullanıcıya özgü veriler sağlar ve bu nedenle sunucu tarafında önbelleğe alma da yararlı değildir.  Bu gibi durumlarda, istemci tarafı önbelleğe alma veya yalnızca hiç önbelleğe alma işlemleri daha uygun olacaktır.
+## <a name="security-considerations"></a>Güvenlikle İlgili Dikkat Edilmesi Gerekenler  
+ Yetkilendirme önbellekten sunulduğunda yetkilendirme gerçekleştirilmediği için yetkilendirme gerektiren isteklerin yanıtlarının önbelleğe alınmaması gerekir.  Bu tür yanıtların önbelleğe alınmış bir şekilde önbelleğe alınmış bir güvenlik açığı na neden olur.  Genellikle, yetkilendirme gerektiren istekler kullanıcıya özgü veriler sağlar ve bu nedenle sunucu tarafı önbelleğe alma bile yararlı değildir.  Bu gibi durumlarda, istemci tarafı önbelleğe alma veya sadece hiç önbelleğe almamak daha uygun olacaktır.

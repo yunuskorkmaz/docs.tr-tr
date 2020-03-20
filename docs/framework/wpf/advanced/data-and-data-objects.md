@@ -9,89 +9,89 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-ms.openlocfilehash: 4b948a64a14df7ea79b54b810f734056d57ef406
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 532c254f997da183b073ddc9e00b4364ecfcd739
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964860"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186344"
 ---
 # <a name="data-and-data-objects"></a>Veri ve Veri Nesneleri
-Bir sürükle ve bırak işleminin parçası olarak aktarılan veriler bir veri nesnesi içinde depolanır.  Kavramsal olarak, bir veri nesnesi aşağıdaki çiftlerden bir veya daha fazlasını içerir:  
+Sürükle ve bırak işleminin bir parçası olarak aktarılan veriler bir veri nesnesinde depolanır.  Kavramsal olarak, bir veri nesnesi aşağıdaki çiftlerden bir veya daha fazla oluşur:  
   
 - Gerçek <xref:System.Object> verileri içeren bir.  
   
-- Karşılık gelen bir veri biçimi tanımlayıcısı.  
+- Karşılık gelen veri biçimi tanımlayıcısı.  
   
- Verilerin kendisi, temel <xref:System.Object>olarak gösterilebilen herhangi bir şeyi içerebilir.  Karşılık gelen veri biçimi bir dizedir veya <xref:System.Type> verilerin bulunduğu biçim hakkında bir ipucu sağlar.  Veri nesneleri birden çok veri/veri biçimi çifti barındırmayı destekler; Bu, tek bir veri nesnesinin birden çok biçimde veri sağlamasına olanak sağlar.  
+ Verilerin kendisi, temel <xref:System.Object>olarak temsil edilebilen her şeyden oluşabilir.  Karşılık gelen veri biçimi <xref:System.Type> bir dizedir veya verilerin hangi biçimde olduğu hakkında ipucu sağlar.  Veri nesneleri birden çok veri/veri biçimi çifti barındırma yı destekler; bu, tek bir veri nesnesi birden çok biçimde veri sağlamak için sağlar.  
   
-<a name="Data_and_Data_Objects"></a>   
-## <a name="data-objects"></a>Veri nesneleri  
- Tüm veri nesneleri, veri aktarımını <xref:System.Windows.IDataObject> etkinleştiren ve kolaylaştıran aşağıdaki standart yöntem kümesini sağlayan arabirimini uygulamalıdır.  
+<a name="Data_and_Data_Objects"></a>
+## <a name="data-objects"></a>Veri Nesneleri  
+ Tüm veri nesneleri, <xref:System.Windows.IDataObject> veri aktarımını sağlayan ve kolaylaştıran aşağıdaki standart yöntem kümesini sağlayan arabirimi uygulamalıdır.  
   
 |Yöntem|Özet|  
 |------------|-------------|  
-|<xref:System.Windows.IDataObject.GetData%2A>|Belirtilen veri biçimindeki bir veri nesnesini alır.|  
-|<xref:System.Windows.IDataObject.GetDataPresent%2A>|Verilerin ' de kullanılabilir olup olmadığını veya belirtilen biçime dönüştürülüp dönüştürülebileceğini kontrol eder.|  
-|<xref:System.Windows.IDataObject.GetFormats%2A>|Bu veri nesnesindeki verilerin depolandığı veya ' ye dönüştürülebileceği biçimlerin bir listesini döndürür.|  
+|<xref:System.Windows.IDataObject.GetData%2A>|Belirli bir veri biçiminde bir veri nesnesi alır.|  
+|<xref:System.Windows.IDataObject.GetDataPresent%2A>|Verilerin belirli bir biçimde kullanılabilir olup olmadığını veya dönüştürülebileceğini denetler.|  
+|<xref:System.Windows.IDataObject.GetFormats%2A>|Bu veri nesnesindeki verilerin depolandığı veya dönüştürülebileceği biçimlerin listesini verir.|  
 |<xref:System.Windows.IDataObject.SetData%2A>|Belirtilen verileri bu veri nesnesinde depolar.|  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.DataObject> sınıfında temel bir uygulamasını <xref:System.Windows.IDataObject> sağlar. Hisse senedi <xref:System.Windows.DataObject> sınıfı birçok yaygın veri aktarımı senaryosu için yeterlidir.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]sınıfta temel bir <xref:System.Windows.IDataObject> uygulama sağlar. <xref:System.Windows.DataObject> Stok <xref:System.Windows.DataObject> sınıfı birçok yaygın veri aktarım senaryosu için yeterlidir.  
   
- Bit eşlem, CSV, dosya, HTML, RTF, dize, metin ve ses gibi önceden tanımlanmış birkaç biçim vardır. İle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]sunulan önceden tanımlı veri biçimleri hakkında daha fazla bilgi için <xref:System.Windows.DataFormats> bkz. sınıf başvurusu konusu.  
+ Bitmap, CSV, dosya, HTML, RTF, string, metin ve ses gibi önceden tanımlanmış birkaç biçim vardır. Önceden tanımlanmış veri biçimleri hakkında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bilgi için <xref:System.Windows.DataFormats> sınıf başvuru konusuna bakın.  
   
- Veri nesneleri genellikle, verileri ayıklarken tek bir biçimde depolanan verileri farklı bir biçimde dönüştürmek için bir tesis içerir; Bu özellik otomatik dönüştürme olarak adlandırılır. Veri nesnesinde kullanılabilir olan veri biçimlerini sorgularken, otomatik dönüştürülebilir veri biçimleri <xref:System.Windows.DataObject.GetFormats%28System.Boolean%29> , veya <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> yöntemini çağırarak ve `autoConvert` parametresini olarak `false`belirterek yerel veri biçimlerinden filtrelenebilir.  Bir veri nesnesine <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%2CSystem.Boolean%29> yöntemiyle veri eklerken, `autoConvert` parametresi olarak `false`ayarlanarak verilerin otomatik dönüştürülmesine izin verilmez.  
+ Veri nesneleri genellikle, bir biçimde depolanan verileri, veri ayıklarken otomatik olarak farklı bir biçime dönüştürmek için bir tesis içerir; bu tesis otomatik dönüştürme olarak adlandırılır. Bir veri nesnesinde bulunan veri biçimleri için sorgu lanırken, otomatik dönüştürülebilir veri biçimleri, yerel <xref:System.Windows.DataObject.GetFormats%28System.Boolean%29> veri <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> biçimlerinden, `autoConvert` yöntemi veya `false`yöntemini arayarak ve parametreyi ' olarak belirterek filtrelenebilir.  <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%2CSystem.Boolean%29> Yöntemle bir veri nesnesine veri eklerken, parametreyi `autoConvert` `false`'ye ayarlayarak verilerin otomatik olarak dönüştürülmesi yasaklanabilir.  
   
-<a name="Working_with_Data_Objects"></a>   
-## <a name="working-with-data-objects"></a>Veri nesneleriyle çalışma  
- Bu bölümde, veri nesneleri oluşturmak ve bunlarla çalışmak için kullanılan yaygın teknikler açıklanmaktadır.  
+<a name="Working_with_Data_Objects"></a>
+## <a name="working-with-data-objects"></a>Veri Nesneleri ile Çalışma  
+ Bu bölümde, veri nesneleri oluşturmak ve bunlarla çalışmak için ortak teknikler açıklanmaktadır.  
   
-### <a name="creating-new-data-objects"></a>Yeni veri nesneleri oluşturma  
- Sınıfı <xref:System.Windows.DataObject> , tek bir veri/veri biçim çiftiyle yeni <xref:System.Windows.DataObject> bir örnek doldurmayı kolaylaştıran çok sayıda aşırı yüklü Oluşturucu sağlar.  
+### <a name="creating-new-data-objects"></a>Yeni Veri Nesneleri Oluşturma  
+ Sınıf, <xref:System.Windows.DataObject> yeni <xref:System.Windows.DataObject> bir örneğin tek bir veri/veri biçimi çiftiyle doldurulmasını kolaylaştıran birkaç aşırı yüklü oluşturucu sağlar.  
   
- Aşağıdaki örnek kod, yeni bir veri nesnesi oluşturur ve veri nesnesini bir dize ve belirtilen <xref:System.Windows.DataObject.%23ctor%2A>veri<xref:System.Windows.DataObject.%23ctor(System.String,System.Object)>biçimi ile başlatmak için aşırı yüklenmiş oluşturuculardan birini () kullanır.  Bu durumda, veri biçimi bir dize tarafından belirtilir; sınıfı <xref:System.Windows.DataFormats> , önceden tanımlanmış tür dizeleri kümesi sağlar. Depolanan verilerin otomatik dönüştürülmesine varsayılan olarak izin verilir.  
+ Aşağıdaki örnek kod yeni bir veri nesnesi oluşturur ve <xref:System.Windows.DataObject.%23ctor%2A>bir<xref:System.Windows.DataObject.%23ctor(System.String,System.Object)>dize ve belirli bir veri biçimi ile veri nesnesi başlatılması için aşırı yüklü yapıcılar () birini kullanır.  Bu durumda, veri biçimi bir dize tarafından belirtilir; <xref:System.Windows.DataFormats> sınıf önceden tanımlanmış tür dizeleri kümesi sağlar. Depolanan verilerin otomatik dönüştürmesi varsayılan olarak izin verilir.  
   
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_typestring)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_typestring)]  
   
- Veri nesnesi oluşturan koda daha fazla örnek için bkz. [veri nesnesi oluşturma](how-to-create-a-data-object.md).  
+ Veri nesnesi oluşturan kod daha fazla örnek [için](how-to-create-a-data-object.md)bkz.  
   
-### <a name="storing-data-in-multiple-formats"></a>Verileri birden çok biçimde depolama  
- Tek bir veri nesnesi, verileri birden çok biçimde depolayabiliyor.   Tek bir veri nesnesi içinde birden çok veri biçiminin stratejik kullanımı, büyük olasılıkla yalnızca tek bir veri biçimi temsil edilebileceğinden, veri nesnesini daha fazla sayıda bırakma hedefi ile tüketilebilir hale getirir.  Genellikle, bir sürükleme kaynağının olası bırakma hedeflerine göre tüketilebilir veri biçimleri hakkında belirsiz olması gerektiğini unutmayın.  
+### <a name="storing-data-in-multiple-formats"></a>Verileri Birden Çok Biçimde Depolama  
+ Tek bir veri nesnesi verileri birden çok biçimde depolanabilir.   Tek bir veri nesnesi içinde birden çok veri biçiminin stratejik kullanımı, yalnızca tek bir veri biçiminin temsil edilebileceğine göre veri nesnesini daha geniş bir bırakma hedefi tarafından tüketilebilir hale getirebilir.  Genel olarak, bir sürükleme kaynağının, olası bırakma hedefleri tarafından tüketilebilen veri biçimleri hakkında agnostik olması gerektiğini unutmayın.  
   
- Aşağıdaki örnek, birden çok biçimdeki veri nesnesine <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%29> veri eklemek için yönteminin nasıl kullanılacağını gösterir.  
+ Aşağıdaki örnekte, birden <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%29> çok biçimde bir veri nesnesine veri eklemek için yöntemin nasıl kullanılacağı gösterilmektedir.  
   
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_StoreMultipleFormats](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_storemultipleformats)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_StoreMultipleFormats](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_storemultipleformats)]  
   
-### <a name="querying-a-data-object-for-available-formats"></a>Kullanılabilir biçimler için bir veri nesnesi sorgulama  
- Tek bir veri nesnesi rastgele sayıda veri biçimi içerebildiğinden, veri nesneleri kullanılabilir veri biçimlerinin bir listesini almak için tesis içerir.  
+### <a name="querying-a-data-object-for-available-formats"></a>Kullanılabilir Biçimler için Veri Nesnesi Sorgulama  
+ Tek bir veri nesnesi rasgele sayıda veri biçimi içerebildiği için, veri nesneleri kullanılabilir veri biçimlerinin listesini almak için olanaklar içerir.  
   
- Aşağıdaki örnek kod, bir veri <xref:System.Windows.DataObject.GetFormats%2A> nesnesinde bulunan (hem yerel hem de otomatik dönüştürme ile) tüm veri biçimlerini belirten dizelerin dizisini almak için aşırı yüklemeyi kullanır.  
+ Aşağıdaki örnek kod, <xref:System.Windows.DataObject.GetFormats%2A> bir veri nesnesinde bulunan tüm veri biçimlerini gösteren bir dizi dize almak için aşırı yüklemeyi kullanır (hem yerel hem de otomatik dönüştürme).  
   
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getalldataformats)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getalldataformats)]  
   
- Kullanılabilir veri biçimleri için bir veri nesnesini sorgulayan koda daha fazla örnek için bkz. veri [nesnesindeki veri biçimlerini listeleme](how-to-list-the-data-formats-in-a-data-object.md).  Belirli bir veri biçiminin varlığı için bir veri nesnesi sorgulama örnekleri için, veri [nesnesinde veri biçiminin](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)olup olmadığını belirleme konusuna bakın.  
+ Kullanılabilir veri biçimleri için bir veri nesnesini sorgulayan daha fazla kod örneği için [bkz.](how-to-list-the-data-formats-in-a-data-object.md)  Belirli bir veri biçiminin varlığı için bir veri nesnesini sorgulama örnekleri [için](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)bkz.  
   
-### <a name="retrieving-data-from-a-data-object"></a>Veri nesnesinden veri alma  
- Bir veri nesnesinden belirli bir biçimdeki verilerin alınması yalnızca <xref:System.Windows.DataObject.GetData%2A> yöntemlerden birini çağırmayı ve istenen veri biçimini belirtmeyi içerir.  <xref:System.Windows.DataObject.GetDataPresent%2A> Yöntemlerden biri belirli bir veri biçiminin varlığını denetlemek için kullanılabilir.  <xref:System.Windows.DataObject.GetData%2A>içindeki <xref:System.Object>verileri döndürür. veri biçimine bağlı olarak, bu nesne türe özgü bir kapsayıcıya dönüşebilir.  
+### <a name="retrieving-data-from-a-data-object"></a>Veri Nesnesinden Veri Alma  
+ Belirli bir biçimde bir veri nesnesinden veri alma yalnızca <xref:System.Windows.DataObject.GetData%2A> yöntemlerden birini arama ve istenen veri biçimini belirtme içerir.  <xref:System.Windows.DataObject.GetDataPresent%2A> Yöntemlerden biri, belirli bir veri biçiminin varlığını denetlemek için kullanılabilir.  <xref:System.Windows.DataObject.GetData%2A>bir veri <xref:System.Object>döndürür; veri biçimine bağlı olarak, bu nesne türe özgü bir kapsayıcıya atılabilir.  
   
- Aşağıdaki örnek kod, belirtilen veri <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> biçiminin kullanılabilir olup olmadığını denetlemek için aşırı yüklemeyi kullanır (yerel veya otomatik dönüştürme ile). Belirtilen biçim kullanılabiliyorsa örnek, <xref:System.Windows.DataObject.GetData%28System.String%29> yöntemini kullanarak verileri alır.  
+ Aşağıdaki örnek kod, <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> belirli bir veri biçiminin kullanılabilir olup olmadığını (yerel veya otomatik dönüştürme) denetlemek için aşırı yüklemeyi kullanır. Belirtilen biçim varsa, örnek <xref:System.Windows.DataObject.GetData%28System.String%29> yöntemi kullanarak verileri alır.  
   
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetSpecificDataFormat](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getspecificdataformat)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetSpecificDataFormat](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getspecificdataformat)]  
   
- Veri nesnesinden veri alan kodun daha fazla örneği için bkz. [verileri belirli bir veri biçiminde alma](how-to-retrieve-data-in-a-particular-data-format.md).  
+ Veri nesnesinden veri alan daha fazla kod örneği [için](how-to-retrieve-data-in-a-particular-data-format.md)bkz.  
   
-### <a name="removing-data-from-a-data-object"></a>Veri nesnesinden verileri kaldırma  
- Veriler bir veri nesnesinden doğrudan kaldırılamaz.  Verileri bir veri nesnesinden etkin bir şekilde kaldırmak için şu adımları izleyin:  
+### <a name="removing-data-from-a-data-object"></a>Veri Nesnesinden Veri Kaldırma  
+ Veriler doğrudan bir veri nesnesinden kaldırılamaz.  Verileri bir veri nesnesinden etkili bir şekilde kaldırmak için aşağıdaki adımları izleyin:  
   
-1. Yalnızca, kalmasını istediğiniz verileri içerecek yeni bir veri nesnesi oluşturun.  
+1. Yalnızca saklamak istediğiniz verileri içeren yeni bir veri nesnesi oluşturun.  
   
-2. İstenen verileri eski veri nesnesinden yeni veri nesnesine "Kopyala".  Verileri kopyalamak için, ham verileri içeren bir <xref:System.Windows.DataObject.GetData%2A> <xref:System.Object> öğesini almak için yöntemlerinden birini kullanın ve <xref:System.Windows.DataObject.SetData%2A> ardından verileri yeni veri nesnesine eklemek için yöntemlerden birini kullanın.  
+2. Eski veri nesnesinden istenen verileri yeni veri nesnesine "kopyalayın".  Verileri kopyalamak için, ham <xref:System.Windows.DataObject.GetData%2A> verileri içeren <xref:System.Object> bir yöntemi almak için yöntemlerden <xref:System.Windows.DataObject.SetData%2A> birini kullanın ve ardından verileri yeni veri nesnesine eklemek için yöntemlerden birini kullanın.  
   
-3. Eski veri nesnesini yeni bir nesne ile değiştirin.  
+3. Eski veri nesnesini yenisiyle değiştirin.  
   
 > [!NOTE]
-> <xref:System.Windows.DataObject.SetData%2A> Yöntemler yalnızca bir veri nesnesine veri ekler; veri ve veri biçimi önceki bir çağrıyla tam olarak aynı olsa bile verilerin yerini mazlar. Aynı <xref:System.Windows.DataObject.SetData%2A> veri ve veri biçimi için iki kez çağrılması veri nesnesinde veri/veri biçiminin iki kez oluşmasına neden olur.
+> Yöntemler <xref:System.Windows.DataObject.SetData%2A> yalnızca bir veri nesnesine veri ekler; veri ve veri biçimi önceki aramayla tamamen aynı olsa bile, verileri değiştirmez. Aynı <xref:System.Windows.DataObject.SetData%2A> veri ve veri biçimi için iki kez çağrı, veri/veri biçiminin veri nesnesinde iki kez bulunmasına neden olur.

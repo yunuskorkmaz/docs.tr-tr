@@ -17,20 +17,20 @@ helpviewer_keywords:
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
 ms.openlocfilehash: d35278ab7feb42453b5a0adbc86c47b7ac3ff5ca
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047107"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
-Uygulamalar <xref:System.Net.Sockets.TcpClient>,, <xref:System.Net.Sockets.TcpListener>ve <xref:System.Net.Sockets.UdpClient> sınıflarıyla iletim Denetim Protokolü (TCP) ve Kullanıcı Datagram Protokolü (UDP) hizmetlerini kullanabilir. Bu protokol sınıfları <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> sınıfının üzerine kurulmuştur ve veri aktarma ayrıntılarının ayrıntılarını alır.  
+Uygulamalar, İletim Kontrol Protokolü (TCP) ve Kullanıcı Datagram Protokolü <xref:System.Net.Sockets.TcpClient> <xref:System.Net.Sockets.TcpListener>(UDP) hizmetlerini , ve <xref:System.Net.Sockets.UdpClient> sınıflarla kullanabilir. Bu protokol sınıfları <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> sınıfın en üstünde inşa edilir ve veri aktarım ayrıntılarıdikkat çekmek.  
   
- Protokol sınıfları, durum bilgilerini koruma veya protokole özgü yuvaları ayarlama ayrıntılarını bilme olmadan ağ hizmetlerine basit ve kolay erişim sağlamak için **yuva** sınıfının zaman uyumlu yöntemlerini kullanır. Zaman uyumsuz **yuva** yöntemlerini kullanmak için, <xref:System.Net.Sockets.NetworkStream> sınıfı tarafından sağlanan zaman uyumsuz yöntemleri kullanabilirsiniz. Protokol sınıfları tarafından gösterilmeyen **yuva** sınıfının özelliklerine erişmek için **yuva** sınıfını kullanmanız gerekir.  
+ Protokol sınıfları, durum bilgilerini koruma veya protokole özgü soketleri ayarlama ayrıntılarını bilme den ek yükü olmadan ağ hizmetlerine basit ve basit erişim sağlamak için **Soket** sınıfının eşzamanlı yöntemlerini kullanır. Eşzamanlı **Soket** yöntemlerini kullanmak <xref:System.Net.Sockets.NetworkStream> için, sınıf tarafından sağlanan eşzamanlı yöntemleri kullanabilirsiniz. Protokol sınıfları tarafından açığa çıkarılan **Soket** sınıfının özelliklerine erişmek için **Soket** sınıfını kullanmanız gerekir.  
   
- **TcpClient** ve **TcpListener** , **NetworkStream** sınıfını kullanarak ağı temsil eder. Ağ akışını döndürmek <xref:System.Net.Sockets.TcpClient.GetStream%2A> için yöntemini kullanın ve ardından <xref:System.Net.Sockets.NetworkStream.Read%2A> akışın ve <xref:System.Net.Sockets.NetworkStream.Write%2A> yöntemlerini çağırabilirsiniz. **NetworkStream** , temel alınan yuvaya ait protokol sınıflarının sahibi değil, bu nedenle bunu kapatmak yuvayı etkilemez.  
+ **TcpClient** ve **TcpListener,** **NetworkStream** sınıfını kullanarak ağı temsil ediyor. Ağ akışını <xref:System.Net.Sockets.TcpClient.GetStream%2A> döndürmek için yöntemi kullanırsınız ve ardından <xref:System.Net.Sockets.NetworkStream.Read%2A> akışı <xref:System.Net.Sockets.NetworkStream.Write%2A> ve yöntemleri çağırırsınız. **NetworkStream** protokol sınıfları'nın temel soketinin sahibi değildir, bu nedenle kapatmak soketi etkilemez.  
   
- **UdpClient** sınıfı, UDP veri birimini tutmak için bir bayt dizisi kullanır. Verileri ağa göndermek <xref:System.Net.Sockets.UdpClient.Send%2A> için yöntemini <xref:System.Net.Sockets.UdpClient.Receive%2A> ve gelen bir veri birimini alma yöntemini kullanırsınız.  
+ **UdpClient** sınıfı, UDP veri gramını tutmak için bir dizi bayt kullanır. Verileri ağa <xref:System.Net.Sockets.UdpClient.Send%2A> göndermek için <xref:System.Net.Sockets.UdpClient.Receive%2A> yöntemi ve gelen bir datagram almak için yöntemi kullanırsınız.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

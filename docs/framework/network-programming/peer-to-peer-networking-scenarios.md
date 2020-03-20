@@ -3,63 +3,63 @@ title: Eşler Arası Ağ Oluşturma Senaryoları
 ms.date: 03/30/2017
 ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
 ms.openlocfilehash: 9b5d4d35085585fe04f2f0c0a105e6dff4b1fcc0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "64623080"
 ---
 # <a name="peer-to-peer-networking-scenarios"></a>Eşler Arası Ağ Oluşturma Senaryoları
 
-Eşler arası ağ iletişimi etkinleştirir veya aşağıdaki senaryolarda geliştirir:
+Eşler arası ağ, aşağıdaki senaryoları sağlar veya geliştirir:
 
-## <a name="real-time-communications-rtc"></a>Gerçek zamanlı iletişimler (RTC)
+## <a name="real-time-communications-rtc"></a>Gerçek Zamanlı İletişim (RTC)
 
-- Sunucusuz anlık ileti
+- Sunucusuz Anlık Mesajlaşma
 
-  RTC bugün var. Bilgisayar kullanıcıları, sohbet ve ses veya video sohbet arkadaşlarına bugün sahip. Ancak, birçok mevcut programları ve bunların protokolleri çalışmaya sunucuları kullanır. Bir geçici kablosuz ağa katılan veya yalıtılmış bir ağın bir parçası olduğundan, bu RTC özellikleri kullanamaz. Eşler arası teknolojisi, bu ek ağ ortamlara RTC teknolojileri uzantısını tanır.
+  RTC bugün var. Bilgisayar kullanıcıları bugün akranlarıyla sohbet edebilir ve sesli veya görüntülü konuşmalar yapabilir. Ancak, varolan programların ve iletişim protokollerinin çoğu, sunucuların çalışmasına güvenir. Geçici bir kablosuz ağa katılıyorsanız veya yalıtılmış bir ağın parçasıysanız, bu RTC olanaklarını kullanamazsınız. Eşler arası teknoloji, RTC teknolojilerinin bu ek ağ ortamlarına genişletilmesine olanak tanır.
 
-- Gerçek zamanlı matchmaking ve oyun
+- Gerçek zamanlı çöpçatanlık ve oyun
 
-  RTC, gerçek zamanlı oyun benzer bugün var. Oyun topluluğuna Internet üzerinden değiştirebileceğiniz birçok Web tabanlı oyun siteleri vardır. Bunlar, benzer ilgi alanlarına sahip diğer oyuncular bulun ve oyun birlikte olanağı sunar. Oyun siteler yalnızca Internet'te mevcut ve doğru avid sağlamıştır sorunudur dünyanın en iyi oyuncular karşı yürütmek için isteyen oyuncu. Bu siteler, izlemek ve işlemde yardımcı olmak için istatistikler sağlar. Ancak, bu siteleri tatillerde bir geçici oyun arkadaşlarınız çeşitli ağ ortamları arasında ayarlamak izin vermez. Eşler arası ağ bu yeteneği sağlar.
+  RTC benzer, gerçek zamanlı oyun bugün var. Internet üzerinden oyun topluluğuna hitap eden birçok Web tabanlı oyun sitesi vardır. Onlar benzer ilgi alanlarına sahip diğer oyuncular bulmak ve birlikte bir oyun oynamak için yeteneği sunuyoruz. Sorun oyun siteleri sadece Internet üzerinde var ve dünyanın en iyi oyunculara karşı oynamak isteyen hevesli oyun yönelik olmasıdır. Bu siteler, süreçte yardımcı olmak için istatistikleri izler ve sağlar. Ancak, bu siteler bir oyuncu ağ ortamları çeşitli arkadaşlar arasında özel bir oyun kurmak için izin vermez. Eşler arası ağ bu özelliği sağlayabilir.
 
 ## <a name="collaboration"></a>İş Birliği
 
-- Hedef çözme proje çalışma alanları
+- Hedef çözme çalışma alanlarını projele
 
-  Paylaşılan çalışma uygulamaları için Geçici çalışma gruplarındaki oluşturmayı ve ardından paylaşılan çalışma alanı araçları ve bir sorunu çözmek grubu sağlayacak içerik ile doldurmak çalışma grubu sahipleri verin. Bu ileti panoları, üretkenlik araçları ve dosyaları içerebilir.
+  Paylaşılan çalışma alanı uygulamaları, geçici çalışma gruplarının oluşturulmasına ve ardından çalışma grubu sahiplerinin paylaşılan çalışma alanını grubun bir sorunu çözmesine olanak sağlayacak araçlar ve içerikle doldurmasına olanak sağlar. Bu, ileti panolarını, üretkenlik araçlarını ve dosyaları içerebilir.
 
-- Dosyaların başkalarıyla paylaşma
+- Dosyaları başkalarıyla paylaşma
 
-  Proje çalışma alanı paylaşımı alt dosyaları paylaşma olanağı kümesidir. Bu özellik şu anda geçerli Windows sürümü ile mevcut olsa da dosya içeriğini bir kolayca ve kolay bir şekilde kullanılabilmesi için eşler arası ağ üzerinden geliştirilebilir. Internet veya geçici bilgi işlem ortamlarının uçta içerik inanılmaz zengin kolay erişim sağlayan ağ bilgi işlem değeri artırır.
+  Proje çalışma alanı paylaşımının bir alt kümesi dosyaları paylaşma yeteneğidir. Bu yetenek bugün Windows'un geçerli sürümünde mevcut olsa da, dosya içeriğini kolay ve kolay bir şekilde kullanılabilir hale getirmek için eşler arası ağ aracılığıyla geliştirilebilir. Internet'in kenarında veya geçici bilgi işlem ortamlarında inanılmaz içerik zenginliğine kolay erişim sağlamak, ağ bilgi işleminin değerini artırır.
 
 - Deneyimleri paylaşma
 
-  Daha yaygın hale kablosuz bağlantıyla, eşler arası ağ bir eş grubu içinde çevrimiçi olması ve (örneğin, bir gün batımı, rock Konser veya tatil; gezi), deneyimlerini paylaşmak mümkün olmasını sağlayan bunlar gerçekleşirken.
+  Kablosuz bağlantının daha yaygın hale gelmesiyle, eşler arası ağ, bir grup eş halinde çevrimiçi olmanızı ve deneyimlerinizi (gün batımı, rock konseri veya tatil gezisi gibi) paylaşırken bunlar meydana gelirken size olanak tanır.
 
-## <a name="content-distribution"></a>İçerik dağıtımı
+## <a name="content-distribution"></a>İçerik Dağıtımı
 
-- Kısa mesaj
+- SMS mesajları
 
-  Eşler arası ağ dosyası ya da büyük bir kullanıcı grubuna iletileri biçiminde metin tabanlı bilgi dağıtımını için izin verebilirsiniz. Bir örnek, bir haber listesidir.
+  Eşler arası ağ oluşturma, metin tabanlı bilgilerin dosya veya ileti biçiminde büyük bir kullanıcı grubuna yayılmasına olanak tanır. Bir örnek bir haber listesidir.
 
 - Ses ve video
 
-  Eşler arası ağ kullanıcıları, büyük bir konser veya şirket toplantı gibi çok sayıda ses veya video bilgileri yayma için de izin verebilirsiniz. Bugün, içeriği dağıtmak için yüksek kapasiteli sunucuları toplamak ve yüzlerce veya binlerce kullanıcı yükünü dağıtmak için yapılandırmanız gerekir. Eşler arası ağ ile eş olması gerçekte içeriklerini merkezi sunuculardan elde edersiniz. Bu eşlerden bu bilgileri başkalarına gönderebilir ve benzeri birkaç daha fazla insana doldurmak. İçerik dağıtmanın yük eşlere bulutta dağıtılır. İçerik almak istediği bir eş en yakın dağıtılmasını eş bulun ve ancak bunları içeriğini Al.
+  Eşler arası ağ, ses veya video bilgilerinin büyük bir konser veya şirket toplantısı gibi büyük bir kullanıcı grubuna yayılmasına da izin verebilir. İçeriği bugün dağıtmak için, yükü yüzlerce veya binlerce kullanıcıya toplamak ve dağıtmak için yüksek kapasiteli sunucuları yapılandırmanız gerekir. Eşler arası ağ ile yalnızca bir avuç eş, içeriklerini merkezi sunuculardan alır. Bu akranlar bu bilgiyi başkalarına gönderen birkaç kişiye daha akıp gönderirler. İçeriği dağıtma yükü buluttaki eşlere dağıtılır. İçeriği almak isteyen bir eş, en yakın dağıtım yapan eşin bulacağı ve içeriği onlardan alacağı.
 
-- Ürün güncelleştirmeleri dağıtımı
+- Ürün güncelleştirmelerinin dağıtımı
 
-  Eşler arası ağ de (güvenlik güncelleştirmeleri ve hizmet paketleri) ürün güncelleştirmeleri gibi yazılım dağıtmak için etkili bir mekanizma sağlar. Bir yazılım dağıtım sunucuya bağlantısı olan bir eş ürün güncelleştirmesi alabilir ve kendi grubu diğer üyeleriyle yayar.
+  Eşler arası ağ, ürün güncelleştirmeleri (güvenlik güncelleştirmeleri ve hizmet paketleri) gibi yazılımları dağıtmak için etkili bir mekanizma da sağlayabilir. Yazılım dağıtım sunucusuyla bağlantısı olan bir eş, ürün güncelleştirmesini alabilir ve grubunun diğer üyelerine yayabilir.
 
-## <a name="distributed-processing"></a>Dağıtılan işleme
+## <a name="distributed-processing"></a>Dağıtılmış İşleme
 
-- Bölme ve bir görevin dağıtım
+- Bir görevin bölünmesi ve dağıtılması
 
-  Büyük bir bilgi işlem görevi bir eş işlem kaynakları için de uygun ayrı daha küçük bilgi işlem görevlerini ilk bölünebilir. Bir eş büyük bilgi işlem görevini ayırma yapabilirsiniz. Ardından, eşler arası ağ tek tek görevler için ayrı eş grubu içinde dağıtabilirsiniz. Her eş bilgi işlem görevi gerçekleştirir ve sonucu merkezi birikmesi noktasına geri rapor eder.
+  Büyük bir bilgi işlem görevi ilk olarak, bir eşin bilgi işlem kaynaklarına uygun olan ayrı küçük bilgi işlem görevlerine ayrılabilir. Bir eş, büyük bilgi işlem görevinin bölünmesini yapabilir. Daha sonra, eşler arası ağ, tek tek görevleri gruptaki ayrı eşlere dağıtabilir. Her eş, bilgisayar görevini gerçekleştirir ve sonucunu merkezi bir birikim noktasına geri bildirir.
 
-- Bilgisayar kaynakları toplama
+- Bilgisayar kaynaklarının toplanması
 
-  Eşler arası ağ için kullanmak için başka bir dağıtılan işleme boşta işlemci zamanlarda çalışan ve bir yönetim sunucusu tarafından denetlenen daha büyük bir bilgi işlem görevi parçası olan her eş programları çalıştırmak için yoludur. Birden çok bilgisayarın işlemci toplayarak eşler arası ağ eş bilgisayarlar büyük bilgi işlem görevleri için büyük bir paralel işlemci dönüştürebilirsiniz.
+  Dağıtılmış işleme için eşler arası ağ kullanımını kullanmanın başka bir yolu da, boşta işlemci süreleri boyunca çalışan ve merkezi bir sunucu tarafından koordine edilen daha büyük bir bilgi işlem görevinin parçası olan her eşteki programları çalıştırmaktır. Birden çok bilgisayarın işlemcilerini bir araya getirerek, eşler arası ağ, bir grup eş bilgisayarı büyük bilgi işlem görevleri için büyük bir paralel işlemciye dönüştürebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

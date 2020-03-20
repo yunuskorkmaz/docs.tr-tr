@@ -1,19 +1,18 @@
 ---
-ms.openlocfilehash: f221f923381d874e1d9e8b420811a770d86f7578
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: cbe1b32fa40e509f620845866c7a584e37f49a80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858479"
 ---
-### <a name="targetframeworkname-for-default-app-domain-no-longer-defaults-to-null-if-not-set"></a>Null değilse ayarlamak için varsayılan uygulama etki alanı için TargetFrameworkName artık varsayılan olarak
+### <a name="targetframeworkname-for-default-app-domain-no-longer-defaults-to-null-if-not-set"></a>Varsayılan uygulama etki alanı için TargetFrameworkName ayarlanmadığı takdirde artık null varsayılan
 
 |   |   |
 |---|---|
-|Ayrıntılar|<xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=name> Açıkça ayarlamadığınız sürece varsayılan uygulama etki alanında daha önce null idi. 4\.6 içinde başlayan <xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=name> özelliği varsayılan uygulama etki alanı için (varsa) TargetFrameworkAttribute türetilmiş bir varsayılan değer olacaktır. Varsayılan olmayan uygulama etki alanları devralmak devam edecek, <xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=name> (hangi 4.6 null varsayılan değil) varsayılan uygulama etki alanından, açıkça geçersiz kılınmadığı sürece.|
-|Öneri|Kodu bağımlı değil için güncelleştirilmesi gerektiğini <xref:System.AppDomainSetup.TargetFrameworkName> null varsayılan olarak ayarlanıyor. Gerekirse bu özellik null olarak değerlendirilecek devam, onu açıkça bu değere ayarlanabilir.|
-|`Scope`|Kenar|
-|Version|4.6|
-|Type|Çalışma zamanı|
+|Ayrıntılar|Açık <xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=name> olarak ayarlanan olmadıkça, varsayılan uygulama etki alanında daha önce null oldu. 4.6'dan başlayarak, varsayılan uygulama etki alanının <xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=name> özelliği TargetFrameworkAttribute'tan türetilen varsayılan bir değere sahip olacaktır (varsa). Varsayılan olmayan uygulama etki alanları, <xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=name> açıkça geçersiz kılınmadığı sürece varsayılan uygulama etki alanından (varsayılan olarak 4,6'da geçersiz kılınmayan) devralmaya devam eder.|
+|Öneri|Kod, <xref:System.AppDomainSetup.TargetFrameworkName> varsayılan olarak null'a bağlı olmayacak şekilde güncelleştirilmelidir. Bu özelliğin null olarak değerlendirmeye devam etmesi gerekiyorsa, açıkça bu değere ayarlanabilir.|
+|Kapsam|Edge|
+|Sürüm|4.6|
+|Tür|Çalışma Zamanı|
 |Etkilenen API’ler|<ul><li><xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=nameWithType></li></ul>|
-

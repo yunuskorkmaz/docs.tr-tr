@@ -3,35 +3,35 @@ title: Sürüm 3.5’teki Yuva Performansı Geliştirmeleri
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
 ms.openlocfilehash: 577c033fc5639f9d9f50e413fd2cb55a75d48f2c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047239"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Sürüm 3.5’teki Yuva Performansı Geliştirmeleri
-<xref:System.Net.Sockets.Socket?displayProperty=nameWithType> Sınıf, en yüksek performansa ulaşmak için zaman uyumsuz ağ g/ç kullanan uygulamalar tarafından kullanılmak üzere 3,5 sürümünde geliştirilmiştir. Özel yüksek performanslı yuva uygulamaları tarafından kullanılabilen alternatif bir zaman uyumsuz model sağlayan bir <xref:System.Net.Sockets.Socket> sınıf geliştirme kümesinin parçası olarak bir dizi yeni sınıf eklenmiştir. Bu geliştirmeler özellikle yüksek performans gerektiren ağ sunucusu uygulamaları için tasarlanmıştır. Bir uygulama geliştirilmiş zaman uyumsuz modelini özel olarak veya yalnızca uygulamalarının hedeflenen etkin alanlarında kullanabilir (örneğin, büyük miktarlarda veri alırken).  
+Sınıf, <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> en yüksek performansı elde etmek için eşzamanlı ağ G/Ç kullanan uygulamalar tarafından kullanılmak üzere Sürüm 3.5'te geliştirilmiştir. Özel leştirilmiş yüksek performanslı soket uygulamaları tarafından kullanılabilecek <xref:System.Net.Sockets.Socket> alternatif bir eşzamanlı desen sağlayan sınıfa bir dizi geliştirmenin parçası olarak bir dizi yeni sınıf eklendi. Bu geliştirmeler, yüksek performans gerektiren ağ sunucusu uygulamaları için özel olarak tasarlanmıştır. Bir uygulama yalnızca gelişmiş eşzamanlı deseni kullanabilir veya yalnızca uygulamanın hedeflenen sıcak alanlarında (örneğin, büyük miktarda veri alırken).  
   
-## <a name="class-enhancements"></a>Sınıf geliştirmeleri  
- Bu geliştirmelerin ana özelliği, yüksek hacimli zaman uyumsuz yuva g/ç sırasında nesnelerin yinelenen ayırma ve eşitlemesine yönelik engelleme. Şu anda zaman uyumsuz yuva g/ç için <xref:System.Net.Sockets.Socket> sınıf tarafından uygulanan başlangıç/bitiş tasarım deseninin her zaman uyumsuz yuva işlemi için bir <xref:System.IAsyncResult?displayProperty=nameWithType> nesne ayrılması gerekir.  
+## <a name="class-enhancements"></a>Sınıf Geliştirmeleri  
+ Bu geliştirmelerin temel özelliği, yüksek hacimli asynchronous soket G/Ç sırasında nesnelerin tekrarlanan ayırma ve eşitlemeden kaçınmasIdır. Şu anda <xref:System.Net.Sockets.Socket> sınıf tarafından asynchronous soket G/Ç için <xref:System.IAsyncResult?displayProperty=nameWithType> uygulanan Begin/End tasarım deseni, her bir eşzamanlı soket işlemi için bir nesne ayrılmasını gerektirir.  
   
- Yeni <xref:System.Net.Sockets.Socket> sınıf geliştirmelerinden zaman uyumsuz yuva işlemleri, uygulama tarafından ayrılan ve <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType> korunan yeniden kullanılabilir sınıf nesneleri tarafından açıklanmıştır. Yüksek performanslı soket uygulamaları, sürekli olması gereken örtüşen yuva işlemlerinin en iyi miktarını bilir. Uygulama, ihtiyacı olan <xref:System.Net.Sockets.SocketAsyncEventArgs> nesnelerin birçoğu tarafından oluşturulabilir. Örneğin, bir sunucu uygulamasının gelen istemci bağlantı hızlarını desteklemesi için her zaman bekleyen 15 soketli kabul etme işlemi olması gerekiyorsa, bu amaçla 15 yeniden kullanılabilir <xref:System.Net.Sockets.SocketAsyncEventArgs> nesne daha önceden ayrılabilir.  
+ Yeni <xref:System.Net.Sockets.Socket> sınıf geliştirmelerinde, eşzamanlı soket işlemleri, uygulama tarafından <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType> ayrılan ve sürdürülen yeniden kullanılabilir sınıf nesneleri tarafından tanımlanır. Yüksek performanslı soket uygulamaları, sürdürülmesi gereken çakışan soket işlemlerinin miktarını en iyi şekilde bilir. Uygulama, ihtiyaç duyduğu nesnelerin <xref:System.Net.Sockets.SocketAsyncEventArgs> çoğunu oluşturabilir. Örneğin, bir sunucu uygulamasının gelen istemci bağlantı oranlarını desteklemek için her zaman bekleyen işlemleri kabul etmek için <xref:System.Net.Sockets.SocketAsyncEventArgs> 15 sokete sahip olması gerekiyorsa, bu amaçla 15 yeniden kullanılabilir nesne ayırabilir.  
   
- Bu sınıfla zaman uyumsuz yuva işlemi gerçekleştirmeye yönelik model aşağıdaki adımlardan oluşur:  
+ Bu sınıfla bir eşzamanlı soket işlemi gerçekleştirmek için desen aşağıdaki adımlardan oluşur:  
   
-1. Yeni <xref:System.Net.Sockets.SocketAsyncEventArgs> bir bağlam nesnesi ayırın veya bir uygulama havuzundan ücretsiz olarak alın.  
+1. Yeni <xref:System.Net.Sockets.SocketAsyncEventArgs> bir bağlam nesnesi tahsis edin veya uygulama havuzundan ücretsiz bir nesne alın.  
   
-2. Bağlam nesnesindeki özellikleri gerçekleştirilecek işleme (örneğin, geri çağırma temsilcisi yöntemi ve veri arabelleği) ayarlayın.  
+2. Yapılmak üzere olan işlem için bağlam nesnesi üzerindeki özellikleri ayarlama (örneğin geri arama temsilcisi yöntemi ve veri arabelleği).  
   
-3. Zaman uyumsuz işlemi başlatmak için uygun yuva yöntemini (xxxAsync) çağırın.  
+3. Eşzamanlı işlemi başlatmak için uygun soket yöntemini (xxxAsync) çağırın.  
   
-4. Zaman uyumsuz yuva yöntemi (xxxAsync) geri çağırmada true döndürürse, tamamlanma durumu için bağlam özelliklerini sorgulayın.  
+4. Asynchronous soket yöntemi (xxxAsync) geri aramadoğru döndürür, tamamlama durumu için bağlam özelliklerini sorgun.  
   
-5. Zaman uyumsuz yuva yöntemi (xxxAsync) geri çağırmada yanlış döndürürse, işlem zaman uyumlu olarak tamamlanır. Bağlam özellikleri, işlem sonucu için sorgulanabilecek.  
+5. Asynchronous soket yöntemi (xxxAsync) geri aramada yanlış dönerse, işlem eşzamanlı olarak tamamlanır. İçerik özellikleri işlem sonucu için sorgulanabilir.  
   
-6. Bağlamı başka bir işlem için yeniden kullanın, havuza geri koyun veya atın.  
+6. Başka bir işlem için bağlamı yeniden kullanın, havuza geri koyun veya atın.  
   
- Yeni zaman uyumsuz yuva işlemi bağlam nesnesinin yaşam süresi, uygulama kodundaki ve zaman uyumsuz g/ç başvurularıyla belirlenir. Uygulamanın zaman uyumsuz yuva işlemi yöntemlerinden birine bir parametre olarak gönderildikten sonra zaman uyumsuz bir yuva işlemi bağlam nesnesine başvuruyu tutmasına gerek yoktur. Tamamlama geri araması dönene kadar başvurulan olarak kalır. Ancak, uygulamanın, daha sonra zaman uyumsuz yuva işlemi için yeniden kullanılabilmesi için bağlam nesnesine başvuruyu korumasını avantajlıdır.  
+ Yeni asynchronous soket çalışma bağlamı nesnesinin ömrü, uygulama kodundaki referanslar ve eşzamanlı G/Ç referansları ile belirlenir. Uygulamanın, asynchronous soket çalışma yöntemlerinden birine parametre olarak gönderildikten sonra bir asynchronous soket çalışma bağlamı nesnesine başvuruda bulunmaları gerekli değildir. Tamam geri arama dönene kadar başvurulan kalır. Ancak uygulamanın bağlam nesnesine başvuruyu tutması avantajlıdır, böylece gelecekteki bir eşzamanlı soket çalışması için yeniden kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

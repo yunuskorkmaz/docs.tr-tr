@@ -1,19 +1,18 @@
 ---
-ms.openlocfilehash: d48519443aeee05617538cf2cc12bea49ad3e16d
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 0dfc87201b9b31cd9d936f2c965c7d0ca0140cab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858473"
 ---
-### <a name="x509certificate2tostringboolean-does-not-throw-now-when-net-cannot-handle-the-certificate"></a>Artık .NET sertifika olduğunda işleyemiyor X509Certificate2.ToString(Boolean) oluşturmaz
+### <a name="x509certificate2tostringboolean-does-not-throw-now-when-net-cannot-handle-the-certificate"></a>X509Certificate2.ToString(Boolean) şimdi atmıyor .NET sertifikayı işleyemiyor
 
 |   |   |
 |---|---|
-|Ayrıntılar|.NET Framework 4.5.2 ve önceki sürümlerinde, bu yöntem, alanlarına <code>true</code> ayrıntılı parametresi için geçirilen ve yüklü olan ve .NET Framework tarafından desteklenen olmayan sertifikalar. Şimdi, yöntem başarılı ve sertifika erişilemez kısımlarını atlayarak geçerli bir dize döndürür.|
-|Öneri|Bağlı herhangi bir kod <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.ToString(System.Boolean)?displayProperty=nameWithType> döndürülen dizeyi bazı sertifika verilerini (örneğin, ortak anahtar, özel anahtarı ve Uzantılar) hariç tutabilir, API daha önce oluşturulan bazı durumlarda beklediğiniz şekilde güncelleştirilmesi.|
-|`Scope`|Kenar|
-|Version|4.6|
-|Type|Çalışma zamanı|
+|Ayrıntılar|.NET Framework 4.5.2 ve önceki sürümlerinde, <code>true</code> ayrıntılı parametre için geçirilen ve .NET Framework tarafından desteklenmeyen sertifikalar yüklüyse, bu yöntem atılır. Şimdi, yöntem başarılı olacak ve sertifikanın erişilemeyen bölümlerini atlayan geçerli bir dize döndürecek.|
+|Öneri|Bağlı olarak herhangi <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.ToString(System.Boolean)?displayProperty=nameWithType> bir kod, döndürülen dize, API'nin daha önce atmış olacağı bazı durumlarda bazı sertifika verilerini (ortak anahtar, özel anahtar ve uzantılar gibi) dışlayabilen bir şekilde güncelleştirilmelidir.|
+|Kapsam|Edge|
+|Sürüm|4.6|
+|Tür|Çalışma Zamanı|
 |Etkilenen API’ler|<ul><li><xref:System.Security.Cryptography.X509Certificates.X509Certificate2.ToString(System.Boolean)?displayProperty=nameWithType></li></ul>|
-

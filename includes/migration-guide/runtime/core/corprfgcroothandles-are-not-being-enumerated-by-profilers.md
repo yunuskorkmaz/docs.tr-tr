@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: 8dc98b2d9c2c0b5f145ebce48cf8f5e054975c6e
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 8433899058c6f569e380999800557dbe8ed0a169
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858573"
 ---
-### <a name="corprfgcroothandles-are-not-being-enumerated-by-profilers"></a>COR_PRF_GC_ROOT_HANDLEs profil oluşturucular tarafından numaralandırılan değil
+### <a name="cor_prf_gc_root_handles-are-not-being-enumerated-by-profilers"></a>COR_PRF_GC_ROOT_HANDLEs profilciler tarafından numaralandırılmıyor
 
 |   |   |
 |---|---|
-|Ayrıntılar|.NET Framework v4.5.1, profil oluşturma API içinde <code>RootReferences2()</code> yanlış hiçbir zaman döndüren <code>COR_PRF_GC_ROOT_HANDLE</code> (olarak döndürülen <code>COR_PRF_GC_ROOT_OTHER</code> bunun yerine). .NET Framework 4. 6 ' ' den itibaren bu sorun düzeltilmiştir.|
-|Öneri|Bu sorun, .NET Framework 4. 6 ' sabit ve .NET Framework'ün bu sürümüne yükseltme tarafından desteklenebilir.|
-|`Scope`|Küçük|
-|Version|4.5.1|
-|Type|Çalışma zamanı|
-
+|Ayrıntılar|.NET Framework v4.5.1'de profil oluşturma <code>RootReferences2()</code> API'si <code>COR_PRF_GC_ROOT_HANDLE</code> yanlış bir <code>COR_PRF_GC_ROOT_OTHER</code> şekilde asla döndürülmez (bunun yerine döndürülürler). Bu sorun .NET Framework 4.6'dan başlayarak giderilmiştir.|
+|Öneri|Bu sorun .NET Framework 4.6'da giderilmiştir ve .NET Framework'ün bu sürümüne yükseltilerek giderilebilir.|
+|Kapsam|İkincil|
+|Sürüm|4.5.1|
+|Tür|Çalışma Zamanı|

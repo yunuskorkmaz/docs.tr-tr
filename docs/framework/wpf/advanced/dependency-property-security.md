@@ -10,33 +10,33 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: d9dd9306980b80f7845c10e8c0ccb59f29821245
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f5640b348ccd68819052f58756489489371862d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940835"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186391"
 ---
 # <a name="dependency-property-security"></a>Bağımlılık Özelliği Güvenliği
-Bağımlılık özellikleri genellikle genel özellikler olarak düşünülmelidir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Özellik sisteminin doğası, bağımlılık özelliği değeri hakkında güvenlik garantisi yapma imkanını önler.  
+Bağımlılık özellikleri genellikle ortak özellikler olarak kabul edilmelidir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Özellik sisteminin doğası, bağımlılık özelliği değeri hakkında güvenlik garantileri yapma yeteneğini engeller.  
 
-<a name="AccessSecurity"></a>   
-## <a name="access-and-security-of-wrappers-and-dependency-properties"></a>Sarmalayıcılar ve bağımlılık özelliklerinin erişimi ve güvenliği  
- Genellikle bağımlılık özellikleri, özelliği bir örnekten almayı veya ayarlamayı kolaylaştıran "sarmalayıcı" ortak dil çalışma zamanı (CLR) özellikleriyle birlikte uygulanır. Ancak sarmalayıcılar, bağımlılık özellikleriyle etkileşim kurarken kullanılan temel <xref:System.Windows.DependencyObject.GetValue%2A> ve <xref:System.Windows.DependencyObject.SetValue%2A> statik çağrıları uygulayan oldukça kolay yöntemlerdir. Bunu başka bir şekilde düşünürken özellikler, özel bir alan yerine bir bağımlılık özelliği tarafından desteklenen ortak dil çalışma zamanı (CLR) özellikleri olarak gösterilir. Sarmalayıcılarla uygulanan güvenlik mekanizmaları, temel bağımlılık özelliğine özellik sistemi davranışını ve erişimini paralel değildir. Sarmalayıcı üzerine bir güvenlik talebi koymak yalnızca kolaylık yönteminin kullanımını engeller, ancak <xref:System.Windows.DependencyObject.GetValue%2A> veya <xref:System.Windows.DependencyObject.SetValue%2A>çağrılarını engellemez. Benzer şekilde, sarmalayıcıda korumalı veya özel erişim düzeyinin yerleştirilmesi, etkin bir güvenlik sağlamaz.  
+<a name="AccessSecurity"></a>
+## <a name="access-and-security-of-wrappers-and-dependency-properties"></a>Sarmalayıcılara ve Bağımlılık Özelliklerine Erişim ve Güvenlik  
+ Genellikle, bağımlılık özellikleri, özelliği bir örnekten almayı veya ayarlamayı basitleştiren "sarmalayıcı" ortak dil çalışma zamanı (CLR) özellikleriyle birlikte uygulanır. Ama sarmalayıcılar gerçekten bağımlılık özellikleri ile <xref:System.Windows.DependencyObject.GetValue%2A> <xref:System.Windows.DependencyObject.SetValue%2A> etkileşimde kullanılan temel ve statik çağrıları uygulamak sadece kolaylık yöntemleridir. Başka bir şekilde düşününce, özellikler, özel bir alan yerine bir bağımlılık özelliği tarafından desteklenen ortak dil çalışma zamanı (CLR) özellikleri olarak ortaya çıkar. Sarmalayıcılara uygulanan güvenlik mekanizmaları, özellik sistemi davranışı ve temel bağımlılık özelliğine erişime paralel değildir. Sarıcıya güvenlik talebi yerleştirmek yalnızca kolaylık yönteminin kullanımını engelleyecek, ancak <xref:System.Windows.DependencyObject.GetValue%2A> <xref:System.Windows.DependencyObject.SetValue%2A>.'a yapılan aramaları engellemeyececektir. Benzer şekilde, korumalı veya özel erişim düzeyinin sarmalayıcılara yerleştirilmesi de etkili bir güvenlik sağlamaz.  
   
- Kendi bağımlılık özelliklerinizi yazıyorsanız, çağıranların, bu özelliğin gerçek erişim düzeyiyle ilgili bir yanılma bilgisi alması için sarmalayıcıları ve <xref:System.Windows.DependencyProperty> tanımlayıcı alanını Genel Üyeler olarak bildirmeniz gerekir. bağımlılık özelliği olarak uygulandı).  
+ Kendi bağımlılık özelliklerinizi yazıyorsanız, arayanların söz özelliğinin <xref:System.Windows.DependencyProperty> gerçek erişim düzeyi hakkında yanıltıcı bilgi almaması için (deposunun bağımlılık özelliği olarak uygulanması nedeniyle) sarmalayıcıları ve tanımlayıcı alanını ortak üye olarak bildirmelisiniz.  
   
- Özel bir bağımlılık özelliği için, özelliği salt okunurdur ve bu özellik <xref:System.Windows.DependencyPropertyKey> için bir başvuru içermeyen herkes tarafından ayarlanmış bir özelliği engellemek için etkili bir yöntem sağlar. Daha fazla bilgi için bkz. [salt okuma bağımlılığı özellikleri](read-only-dependency-properties.md).  
+ Özel bağımlılık özelliği için, mülkünüzü salt okunur bağımlılık özelliği olarak kaydedebilirsiniz ve bu <xref:System.Windows.DependencyPropertyKey> özellik, bu özellik için başvuruda olmayan herkes tarafından ayarlanan bir özelliği önlemek için etkili bir yol sağlar. Daha fazla bilgi için [bkz.](read-only-dependency-properties.md)  
   
 > [!NOTE]
-> Bir <xref:System.Windows.DependencyProperty> tanımlayıcı alanın özel olarak bildirilmesi yasak değildir ve bir özel sınıfın hemen sunulma ad alanını azaltmaya yardımcı olmak için çalıp kullanılabilir, ancak bu tür bir özelliğin ortak dille aynı anlamda "özel" olarak değerlendirilmemesi gerekir çalışma zamanı (CLR) dil tanımları, sonraki bölümde açıklanan nedenlerle bu erişim düzeyini tanımlar.  
+> Tanımlayıcı alanını <xref:System.Windows.DependencyProperty> özel olarak bildirmek yasak değildir ve özel bir sınıfın hemen açıkta kalan ad alanını azaltmaya yardımcı olmak için düşünülebilir, ancak böyle bir özellik, ortak dil çalışma zamanı (CLR) dil tanımlarının bir sonraki bölümde açıklanan nedenlerle bu erişim düzeyini tanımladığı şekilde "özel" olarak kabul edilmemelidir.  
   
-<a name="PropertySystemExposure"></a>   
-## <a name="property-system-exposure-of-dependency-properties"></a>Bağımlılık özelliklerinin özellik sistemi pozlaması  
- Genellikle yararlı değildir ve ortak dışında bir <xref:System.Windows.DependencyProperty> erişim düzeyi bildirmek için potansiyel olarak yanıltıcı olur. Bu erişim düzeyi ayarı yalnızca birisinin bildirim sınıfından örneğe başvuru almasını engeller. Ancak, belirli bir özelliği bir sınıf örneği veya türetilmiş sınıf örneği üzerinde <xref:System.Windows.DependencyProperty> olduğu gibi tanımlayan bir yöntem olarak, özellik sisteminin birkaç yönü vardır ve bu tanımlayıcı yine de bir <xref:System.Windows.DependencyObject.SetValue%2A> çağrıda kullanılabilir özgün statik tanımlayıcı, ortak olarak bildirilirse. Ayrıca, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> sanal yöntemler değeri değiştiren mevcut herhangi bir bağımlılık özelliği hakkında bilgi alır. Ayrıca, <xref:System.Windows.DependencyObject.GetLocalValueEnumerator%2A> yöntemi yerel olarak ayarlanmış bir değere sahip örnekleri üzerinde herhangi bir özellik için tanımlayıcılar döndürür.  
+<a name="PropertySystemExposure"></a>
+## <a name="property-system-exposure-of-dependency-properties"></a>Bağımlılık Özelliklerinin Özellik Sistemi Pozlaması  
+ Genel olarak yararlı değildir ve genel erişim düzeyi dışında <xref:System.Windows.DependencyProperty> herhangi bir erişim düzeyi olarak beyan etmek potansiyel olarak yanıltıcıdır. Bu erişim düzeyi ayarı yalnızca bir kişinin bildirim sınıfından örneğin referansını alabilmesini engeller. Ancak özellik sisteminin belirli bir özelliği bir <xref:System.Windows.DependencyProperty> sınıf veya türetilmiş sınıf örneğinde var olduğu gibi tanımlama aracı olarak döndürecek çeşitli yönleri vardır ve <xref:System.Windows.DependencyObject.SetValue%2A> bu tanımlayıcı, özgün statik tanımlayıcı halka açık olmayan olarak beyan edilebilse bile bir çağrıda yine de kullanılabilir. Ayrıca, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> sanal yöntemler değeri değiştirilen varolan bağımlılık özelliğinin bilgilerini alır. Buna ek <xref:System.Windows.DependencyObject.GetLocalValueEnumerator%2A> olarak, yöntem yerel olarak ayarlanmış bir değere sahip örneklerdeki herhangi bir özellik için tanımlayıcılar döndürür.  
   
-### <a name="validation-and-security"></a>Doğrulama ve güvenlik  
- Bir özelliğin ayarlanmasının önleneceği bir istek hata üzerinde bir <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> istek uygulama ve doğrulama hatası bekleniyor, yeterli bir güvenlik mekanizması değildir. İle uygulama etki alanında bu çağıranlar <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> çalışıyorsa, ' ın aracılığıyla zorunlu kılınan küme değeri, kötü amaçlı arayanlar tarafından da gizlenebilir.  
+### <a name="validation-and-security"></a>Doğrulama ve Güvenlik  
+ Bir isteğin a'ya <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> uygulanması ve bir özelliğin ayarlanmasını engelleyen bir isteğ inemesi üzerine doğrulama hatası nın bekleyebilirsiniz yeterli bir güvenlik mekanizması değildir. Bu <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> arayanlar uygulama etki alanı içinde çalışıyorsa, kötü amaçlı arayanlar tarafından zorlanan ayar değeri geçersiz liği de bastırılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

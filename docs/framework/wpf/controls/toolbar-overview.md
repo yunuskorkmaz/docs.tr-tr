@@ -5,43 +5,43 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 460d4420d5faf849a8d05a94e0170aea384f69b4
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: b5498b8b88c7403ffe51256a57544261de3ace08
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452701"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186610"
 ---
 # <a name="toolbar-overview"></a>ToolBar Genel Bakışı
-<xref:System.Windows.Controls.ToolBar> denetimleri, genellikle işlevleriyle ilgili olan bir komut veya denetim grubu için kapsayıcılardır. <xref:System.Windows.Controls.ToolBar> genellikle komutları çağıran düğmeler içerir.  
+<xref:System.Windows.Controls.ToolBar>denetimler, işlevleriyle genellikle ilişkili olan bir grup komut veya denetim için kapsayıcılardır. Genellikle <xref:System.Windows.Controls.ToolBar> komutları çağıran düğmeler içerir.  
 
-<a name="ToolBarControl"></a>   
+<a name="ToolBarControl"></a>
 ## <a name="toolbar-control"></a>ToolBar Denetimi  
- <xref:System.Windows.Controls.ToolBar> denetim, adını, düğme veya diğer denetimlerin tek bir satır veya sütun halinde çubuk benzeri düzenlemelerinden alır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> denetimleri, doğal olarak uyumlu olmayan bir <xref:System.Windows.Controls.ToolBar> özel bir taşma alanına sığmayan öğeleri yerleştiren bir taşma mekanizması sağlar. Ayrıca, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> denetimleri genellikle ilgili <xref:System.Windows.Controls.ToolBarTray> denetimi ile birlikte kullanılır. Bu, özel düzen davranışı ve araç çubuklarının Kullanıcı tarafından başlatılan boyutlandırma ve düzenleme desteği sağlar.  
+ Denetim, <xref:System.Windows.Controls.ToolBar> adını düğmelerin veya diğer denetimlerin çubuk benzeri düzenlemesinden tek bir satıra veya sütuna alır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.ToolBar> denetimler, doğal olarak sığmayan maddeleri özel bir taşma alanına <xref:System.Windows.Controls.ToolBar> boyut kısıtlaması içine yerleştiren bir taşma mekanizması sağlar. Ayrıca, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> denetimler genellikle özel <xref:System.Windows.Controls.ToolBarTray> düzen davranışı yanı sıra kullanıcı tarafından başlatılan boyutlandırma ve araç çubukları düzenlenmesi için destek sağlayan ilgili denetim ile kullanılır.  
   
-<a name="Creating_ToolBars"></a>   
-## <a name="specifying-the-position-of-toolbars-in-a-toolbartray"></a>Araç çubuklarının konumunu bir Toolbartepsi içinde belirtme  
- <xref:System.Windows.Controls.ToolBarTray><xref:System.Windows.Controls.ToolBar> konumlandırmak için <xref:System.Windows.Controls.ToolBar.Band%2A> ve <xref:System.Windows.Controls.ToolBar.BandIndex%2A> özelliklerini kullanın. <xref:System.Windows.Controls.ToolBar.Band%2A>, <xref:System.Windows.Controls.ToolBar> üst <xref:System.Windows.Controls.ToolBarTray>içinde yerleştirildiği konumu gösterir. <xref:System.Windows.Controls.ToolBar.BandIndex%2A>, <xref:System.Windows.Controls.ToolBar> bandı içinde yerleştirildiği sırayı gösterir. Aşağıdaki örnek, <xref:System.Windows.Controls.ToolBar> denetimlerinin <xref:System.Windows.Controls.ToolBarTray>içine yerleştirilmesi için bu özelliğin nasıl kullanıldığını gösterir.  
+<a name="Creating_ToolBars"></a>
+## <a name="specifying-the-position-of-toolbars-in-a-toolbartray"></a>ToolBarTray'deki Araç Çubuklarının Konumunu Belirtme  
+ 'deki <xref:System.Windows.Controls.ToolBar.Band%2A> <xref:System.Windows.Controls.ToolBar.BandIndex%2A> konumu ve özelliklerini <xref:System.Windows.Controls.ToolBarTray> <xref:System.Windows.Controls.ToolBar> <xref:System.Windows.Controls.ToolBar.Band%2A>üst <xref:System.Windows.Controls.ToolBarTray>öğesinin içinde <xref:System.Windows.Controls.ToolBar> yer aldığı konumu gösterir. <xref:System.Windows.Controls.ToolBar.BandIndex%2A>bandının içinde <xref:System.Windows.Controls.ToolBar> yerleştirilme sırasını gösterir. Aşağıdaki örnek, denetimleri <xref:System.Windows.Controls.ToolBar> bir <xref:System.Windows.Controls.ToolBarTray>.  
   
  [!code-xaml[ToolBarExample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
   
-<a name="ToolBars_with_Overflow_Items"></a>   
-## <a name="toolbars-with-overflow-items"></a>Taşma öğeleri içeren araç çubukları  
- Genellikle <xref:System.Windows.Controls.ToolBar> denetimleri araç çubuğunun boyutuna sığmayacak kadar çok öğe içeriyor. Bu durumda <xref:System.Windows.Controls.ToolBar> bir taşma düğmesi görüntüler. Taşma öğelerini görmek için, Kullanıcı taşma düğmesine tıklamıştır ve öğeler <xref:System.Windows.Controls.ToolBar>altında bir açılır pencerede gösterilir. Aşağıdaki grafik, taşma öğeleriyle bir <xref:System.Windows.Controls.ToolBar> gösterir:  
+<a name="ToolBars_with_Overflow_Items"></a>
+## <a name="toolbars-with-overflow-items"></a>Taşma Öğeleri olan Araç Çubukları  
+ Denetimler genellikle <xref:System.Windows.Controls.ToolBar> araç çubuğunun boyutuna sığabilecekten daha fazla öğe içerir. Bu durumda, <xref:System.Windows.Controls.ToolBar> taşma düğmesi görüntülenir. Taşma öğelerini görmek için, kullanıcı taşma düğmesini tıklatıyor ve öğeler aşağıdaki <xref:System.Windows.Controls.ToolBar>açılır pencerede gösterilir. Aşağıdaki grafik, <xref:System.Windows.Controls.ToolBar> taşma öğeleri ile bir gösterir:  
   
- ![Taşma öğeleri içeren bir araç çubuğunu gösteren ekran görüntüsü.](./media/toolbar-overview/toolbar-overflow-items.png)  
+ ![Taşma öğeleri içeren bir araç çubuğu gösteren ekran görüntüsü.](./media/toolbar-overview/toolbar-overflow-items.png)  
   
- <xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType> ekli özelliği <xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType>, <xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>veya <xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType>olarak ayarlayarak, bir araç çubuğundaki öğenin taşma paneline ne zaman yerleştirileceğini belirtebilirsiniz. Aşağıdaki örnek, araç çubuğundaki son dört düğmenin her zaman taşma panelinde nerede olması gerektiğini belirtir.  
+ Araç çubuğundaki bir öğenin taşma paneline ne zaman <xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType> yerleştirildiğini, <xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType>ekli <xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>özelliği <xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType>, yani . Aşağıdaki örnekte, araç çubuğundaki son dört düğmenin her zaman taşma panelinde olması gerektiği belirtilmesinde belirtilir.  
   
  [!code-xaml[ToolBarExample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#3)]  
   
- <xref:System.Windows.Controls.ToolBar>, <xref:System.Windows.Controls.ControlTemplate>bir <xref:System.Windows.Controls.Primitives.ToolBarPanel> ve <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> kullanır.  <xref:System.Windows.Controls.Primitives.ToolBarPanel>, araç çubuğundaki öğelerin düzeninden sorumludur.  <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>, <xref:System.Windows.Controls.ToolBar>sığmayan öğelerin düzeninden sorumludur. Bir <xref:System.Windows.Controls.ToolBar>için <xref:System.Windows.Controls.ControlTemplate> bir örnek için bkz.  
+ Onun <xref:System.Windows.Controls.ToolBar> kullanır <xref:System.Windows.Controls.Primitives.ToolBarPanel> a <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> ve <xref:System.Windows.Controls.ControlTemplate>a .  Araç <xref:System.Windows.Controls.Primitives.ToolBarPanel> çubuğundaki öğelerin düzeninden sorumludur.  Bu <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> öğelerin düzeninden <xref:System.Windows.Controls.ToolBar>sorumludur. A için bir <xref:System.Windows.Controls.ControlTemplate> örnek <xref:System.Windows.Controls.ToolBar>için , bkz.  
   
- [Araç çubuğu stilleri ve şablonları](toolbar-styles-and-templates.md).  
+ [Araç Çubuğu Stilleri ve Şablonları](toolbar-styles-and-templates.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Controls.Primitives.ToolBarPanel>
 - <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>
 - [Araç Çubuğundaki Stil Denetimleri](how-to-style-controls-on-a-toolbar.md)
-- [WPF denetimleri Galeri örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
+- [WPF Denetimleri Galeri Örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)

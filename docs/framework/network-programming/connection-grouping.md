@@ -9,18 +9,18 @@ helpviewer_keywords:
 - connection pooling
 ms.assetid: 2ec502e8-4ba0-4c22-9410-f28eaf4eee63
 ms.openlocfilehash: 007366764a7b8e1208e22ef5895e6a9093b090e4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048639"
 ---
 # <a name="connection-grouping"></a>Bağlantı Gruplandırma
-Bağlantı gruplandırması, tek bir uygulama içindeki belirli istekleri tanımlı bir bağlantı havuzu ile ilişkilendirir. Bu, bir kullanıcı adına arka uç sunucusuna bağlanan ve Kerberos gibi temsilciyi destekleyen bir kimlik doğrulama protokolü (örneğin, kendi kimlik bilgilerini sağlayan bir orta katman uygulaması tarafından), Aşağıda örnek. Örneğin, bir kullanıcının, kendi bordro bilgilerini gösteren bir iç Web sitesini ziyaret ettiği bir kullanıcı olduğunu varsayalım. Joe kimlik doğrulamasından geçtikten sonra orta katmanlı uygulama sunucusu, ön uç sunucusuna bağlanmak için Joe kimlik bilgilerini kullanarak bordro bilgilerini alır. Daha sonra, Çiğdem siteyi ziyaret ettiğinde bordro bilgilerini ister. Orta katman uygulama Joe kimlik bilgilerini kullanarak zaten bir bağlantı yaptığından, arka uç sunucusu Joe 'nun bilgileriyle yanıt verir. Ancak, uygulama arka uç sunucusuna gönderilen her isteği Kullanıcı adından oluşturulmuş bir bağlantı grubuna atarsa, her kullanıcı ayrı bir bağlantı havuzuna aittir ve yanlışlıkla kimlik doğrulama bilgilerini başka bir kullanıcıyla paylaşamaz.  
+Bağlantı gruplandırma, belirli istekleri tek bir uygulama daki tanımlı bir bağlantı havuzuna ilişkilendirer. Bu, bir kullanıcı adına bir arka uç sunucusuna bağlanan ve Kerberos gibi delegasyonu destekleyen bir kimlik doğrulama protokolü kullanan bir orta katman uygulaması veya aşağıdaki örnek. Örneğin, bir kullanıcının, Joe'nun bordro bilgilerini görüntüleyen dahili bir Web sitesini ziyaret ettiğini varsayalım. Joe'nun kimliğini doğruladıktan sonra, orta katman uygulama sunucusu bordro bilgilerini almak için arka uç sunucusuna bağlanmak için Joe'nun kimlik bilgilerini kullanır. Sonra, Susan siteyi ziyaret eder ve bordro bilgilerini ister. Orta katman uygulaması Joe'nun kimlik bilgilerini kullanarak zaten bir bağlantı kurmuş olduğundan, arka uç sunucusu Joe'nun bilgileriyle yanıt verir. Ancak, uygulama arka uç sunucusuna gönderilen her isteği kullanıcı adından oluşan bir bağlantı grubuna atarsa, her kullanıcı ayrı bir bağlantı havuzuna ait olur ve yanlışlıkla kimlik doğrulama bilgilerini başka bir kullanıcıyla paylaşamaz.  
   
- Belirli bir bağlantı grubuna istek atamak için, isteği yapmadan <xref:System.Net.WebRequest.ConnectionGroupName%2A> <xref:System.Net.WebRequest> önce ' ın özelliğine bir ad atamanız gerekir.  
+ Belirli bir bağlantı grubuna istek atamak için, isteği <xref:System.Net.WebRequest.ConnectionGroupName%2A> yapmadan önce <xref:System.Net.WebRequest> mülkünüze bir ad atamanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bağlantıları Yönetme](managing-connections.md)
-- [Nasıl yapılır: Grup bağlantılarına Kullanıcı bilgilerini atama](how-to-assign-user-information-to-group-connections.md)
+- [Nasıl yapılır: Bağlantıları Gruplandırmak için Kullanıcı Bilgileri Atama](how-to-assign-user-information-to-group-connections.md)

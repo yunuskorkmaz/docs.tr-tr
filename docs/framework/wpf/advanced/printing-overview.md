@@ -15,124 +15,124 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: de9f4b5c0a817d010c7510395b4e5c09ed0a9865
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 902d51341850b5245b9fa6410b1954b2ab373bbc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794290"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187210"
 ---
 # <a name="printing-overview"></a>Yazdırmaya Genel Bakış
-Microsoft .NET Framework ile, Windows Presentation Foundation (WPF) kullanan uygulama geliştiricilerinin zengin yeni bir yazdırma ve yazdırma sistemi yönetim API 'Leri kümesi vardır. Windows Vista ile, bu yazdırma sistemi geliştirmelerinden bazıları, yönetilmeyen kod kullanan Windows Forms uygulamalar ve geliştiriciler oluşturan geliştiriciler tarafından da kullanılabilir. Bu yeni işlevselliğin çekirdeği, yeni XML Kağıt Belirtimi (XPS) dosya biçimi ve XPS yazdırma yoludur.  
+Microsoft .NET Framework ile Windows Presentation Foundation 'ı (WPF) kullanan uygulama geliştiricileri, zengin yeni bir yazdırma ve yazdırma sistemi yönetimi API'si kümesine sahiptir. Windows Vista ile bu yazdırma sistemi geliştirmelerinden bazıları, yönetilmeyen kodu kullanan Windows Forms uygulamaları ve geliştiricileri oluşturan geliştiriciler tarafından da kullanılabilir. Bu yeni işlevselliğin özünde yeni XML Kağıt Belirtimi (XPS) dosya biçimi ve XPS yazdırma yolu yer almaktadır.  
   
- Bu konuda aşağıdaki bölümleri içerir.  
+ Bu konuda aşağıdaki bölümler yer almaktadır.  
   
-<a name="introduction_to_XPS"></a>   
-## <a name="about-xps"></a>XPS hakkında  
- XPS elektronik belge biçimidir, bir biriktirme dosyası biçimi ve sayfa açıklaması dilidir. Bu, platformlar arası belgeler oluşturmak için XML, açık paketleme kuralları (OPC) ve diğer sektör standartlarını kullanan bir açık belge biçimidir. XPS dijital belge oluşturma, paylaşılan, yazdırılma, görüntülenen ve arşivlenen işlemleri basitleştirir. XPS hakkında daha fazla bilgi için bkz. [XPS belgeleri](/windows/desktop/printdocs/documents).  
+<a name="introduction_to_XPS"></a>
+## <a name="about-xps"></a>XPS Hakkında  
+ XPS elektronik belge biçimi, makara dosya biçimi ve sayfa açıklama dilidir. Platform ötesi belgeler oluşturmak için XML, Açık Ambalaj Sözleşmeleri (OPC) ve diğer endüstri standartlarını kullanan açık belge biçimidir. XPS, dijital belgelerin oluşturulma, paylaşılma, yazdırılma, görüntülenme ve arşivlenme işlemini kolaylaştırır. XPS hakkında daha fazla bilgi için [XPS Belgeleri'ne](/windows/desktop/printdocs/documents)bakın.  
   
- XPS tabanlı içeriği WPF kullanarak yazdırmanın birkaç tekniği, [programlı olarak XPS dosyaları yazdırma](how-to-programmatically-print-xps-files.md)bölümünde gösterilmiştir. Bu konuda yer alan içeriğin gözden geçirilmesi sırasında bu örneklere başvurmak yararlı olabilir. (Yönetilmeyen kod geliştiricileri [MXDC_ESCAPE işlevi](/windows/desktop/printdocs/mxdc-escape)için belgeler görmelidir. Windows Forms geliştiricilerin, tam XPS yazdırma yolunu desteklemeyen <xref:System.Drawing.Printing> ad alanında API kullanması gerekir, ancak karma GDI 'dan XPS 'ye yazdırma yolunu destekler. Aşağıdaki **yazdırma yolu mimarisini** inceleyin.)  
+ WPF kullanarak XPS tabanlı içerik yazdırmak için çeşitli teknikler [Programmatically Print XPS Dosyaları](how-to-programmatically-print-xps-files.md)gösterilmiştir. Bu konuyla ilgili içeriğin gözden geçirilmesi sırasında bu örneklere başvurmayı yararlı bulabilirsiniz. (Yönetilmeyen kod [geliştiricileri MXDC_ESCAPE işlevi](/windows/desktop/printdocs/mxdc-escape)için belgeleri görmelisiniz. Windows Forms <xref:System.Drawing.Printing> geliştiricileri, tam XPS yazdırma yolunu desteklemeyen, ancak karma GDI'den XPS yazdırma yolunu destekleyen ad alanında API'yi kullanmalıdır. Aşağıdaki **Yazdırma Yolu Mimarisi'ne** bakın.)  
   
-<a name="XPS_print_path_intro"></a>   
-## <a name="xps-print-path"></a>XPS yazdırma yolu  
- XML Kağıt Belirtimi (XPS) yazdırma yolu, yazdırmanın Windows uygulamalarında nasıl işlendiğini tekrar tanımlayan yeni bir Windows özelliğidir. XPS bir belge sunumu dilini (RTF gibi), bir yazdırma biriktiricisi biçimini (örneğin, WMF) ve bir sayfa açıklaması dilini (PCL veya PostScript gibi) değiştirebilir; Yeni yazdırma yolu, uygulama yayınından, yazdırma sürücüsü veya cihazındaki son işleme XPS biçimini korur.  
+<a name="XPS_print_path_intro"></a>
+## <a name="xps-print-path"></a>XPS Yazdırma Yolu  
+ XML Kağıt Belirtimi (XPS) yazdırma yolu, Yazdırmanın Windows uygulamalarında nasıl işleneceğini yeniden tanımlayan yeni bir Windows özelliğidir. XPS belge sunu dilini (RTF gibi), yazdırma biriktirme biçimi (WMF gibi) ve sayfa açıklama dilini (PCL veya Postscript gibi) değiştirebildiği için; yeni yazdırma yolu, xps biçimini uygulama yayınından yazdırma sürücüsüveya aygıtındaki son işleme kadar korur.  
   
- XPS yazdırma yolu, geliştiriciler için "gördükleriniz ne olur" (WYSıWYG) yazdırma, geliştirilmiş renk desteği ve önemli ölçüde iyileştirilmiş baskı performansı gibi geliştiriciler için çeşitli avantajlar sunan XPS yazıcı sürücüsü modeli (XPSDrv) üzerine kurulmuştur. (XPSDrv hakkında daha fazla bilgi için bkz. [Windows Sürücü Seti belgeleri](/windows-hardware/drivers/).)  
+ XPS yazdırma yolu, geliştiriciler için "ne elde ettiğinizi görürsünüz" (WYSIWYG) yazdırma, geliştirilmiş renk desteği ve önemli ölçüde geliştirilmiş yazdırma performansı gibi geliştiriciler için çeşitli avantajlar sağlayan XPS yazıcı sürücüsü modeli (XPSDrv) üzerine kurulmuştur. (XPSDrv hakkında daha fazla bilgi için [Windows Sürücü Kiti belgelerine](/windows-hardware/drivers/)bakın.)  
   
- XPS belgelerinin yazdırma biriktiricisinin işlemi, Windows 'un önceki sürümlerindeki ile aynıdır. Ancak, mevcut GDI yazdırma yolunun yanı sıra XPS yazdırma yolunu destekleyecek şekilde geliştirilmiştir. Yeni yazdırma yolu yerel olarak bir XPS biriktirme dosyası kullanır. Önceki Windows sürümleri için yazılan Kullanıcı modu yazıcı sürücüleri çalışmaya devam ederken, XPS yazdırma yolunu kullanabilmeniz için bir XPS yazıcı sürücüsü (XPSDrv) gereklidir.  
+ XPS belgeleri için baskı biriktirme işleminin çalışması temelde Windows'un önceki sürümlerindekiyle aynıdır. Ancak, xps yazdırma yolunu desteklemek için varolan GDI yazdırma yoluna ek olarak geliştirilmiştir. Yeni yazdırma yolu yerel olarak bir XPS biriktirme havuzu dosyasını tüketir. Windows'un önceki sürümleri için yazılan kullanıcı modu yazıcı sürücüleri çalışmaya devam ederken, XPS yazdırma yolunu kullanmak için bir XPSyazıcı sürücüsü (XPSDrv) gereklidir.  
   
- XPS yazdırma yolunun avantajları önemlidir ve şunları içerir:  
+ XPS yazdırma yolunun yararları önemlidir ve şunları içerir:  
   
-- WYSıWYG yazdırma desteği  
+- WYSIWYG baskı desteği  
   
-- Kanal başına 32 bit (bpc), CMYK, adlandırılmış renkler, n-mürekkepler ve saydamlık ve degradelerin yerel desteği dahil olmak üzere gelişmiş renk profillerinin yerel desteği.  
+- Kanal başına 32 bit (bpc), CMYK, adlandırılmış renkler, n-mürekkepler ve saydamlık ve degradelerin yerel desteğini içeren gelişmiş renk profillerinin yerel desteği.  
   
-- Hem .NET Framework hem de Win32 tabanlı uygulamalar için iyileştirilmiş yazdırma performansı.  
+- Hem .NET Framework hem de Win32 tabanlı uygulamalar için geliştirilmiş baskı performansı.  
   
-- Endüstri standardı XPS biçimi.  
+- Endüstri standardı XPS formatı.  
   
- Temel yazdırma senaryolarında, basit ve sezgisel bir API, Kullanıcı arabirimi, yapılandırma ve iş gönderimi için tek bir giriş noktasıyla birlikte kullanılabilir. Gelişmiş senaryolar için [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] özelleştirmeye (veya hiçbir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] hiç), zaman uyumlu veya zaman uyumsuz baskıya ve toplu yazdırma özelliklerine ek bir destek eklenir. Her iki seçenek de tam veya kısmi güven modunda yazdırma desteği sağlar.  
+ Temel yazdırma senaryoları için, kullanıcı arabirimi, yapılandırma ve iş gönderme için tek bir giriş noktasıyla basit ve sezgisel bir API kullanılabilir. Gelişmiş senaryolar için özelleştirme (veya [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] hiç yok), [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] senkron veya eşzamanlı yazdırma ve toplu yazdırma özellikleri için ek bir destek eklenir. Her iki seçenek de tam veya kısmi güven modunda yazdırma desteği sağlar.  
   
- XPS, genişletilebilirlik göz önünde bulundurularak tasarlandı. Genişletilebilirlik çerçevesini kullanarak, Özellikler ve yetenekler, XPS 'ye modüler bir şekilde eklenebilir. Genişletilebilirlik özellikleri şunlardır:  
+ XPS genişletilebilirlik göz önünde bulundurularak tasarlanmıştır. Genişletilebilirlik çerçevesi kullanılarak, özellikler ve yetenekler XPS'ye modüler bir şekilde eklenebilir. Genişletilebilirlik özellikleri şunlardır:  
   
-- Şemayı yazdır. Ortak şema düzenli olarak güncelleştirilir ve cihaz yeteneklerinin hızlı uzantısını sunar. (Bkz. **PrintTicket ve PrintCapabilities** .)  
+- Schema'yı yazdır. Genel şema düzenli olarak güncellenir ve cihaz yeteneklerinin hızla genişletilmesini sağlar. (Aşağıdaki **PrintTicket ve PrintCapabilities'e** bakın.)  
   
-- Genişletilebilir filtre işlem hattı. XPS yazıcı sürücüsü (XPSDrv) filtre işlem hattı, XPS belgelerinin hem doğrudan hem de ölçeklenebilir yazdırılmasını etkinleştirmek üzere tasarlanmıştır. Daha fazla bilgi için bkz. [XPSDrv yazıcı sürücüleri](/windows-hardware/drivers/print/xpsdrv-printer-drivers). 
+- Genişletilebilir Filtre Boru Hattı. XPS yazıcı sürücüsü (XPSDrv) filtre ardışık bölümü, XPS belgelerinin hem doğrudan hem de ölçeklenebilir şekilde yazdırılmasını sağlayacak şekilde tasarlanmıştır. Daha fazla bilgi için [XPSDrv Yazıcı Sürücüleri'ne](/windows-hardware/drivers/print/xpsdrv-printer-drivers)bakın.
   
-### <a name="print-path-architecture"></a>Yazdırma yolu mimarisi  
- Hem Win32 hem de .NET Framework uygulamaları XPS 'yi destekleirken, Win32 ve Windows Forms uygulamaları XPS yazıcı sürücüsü (XPSDrv) için XPS biçimli içerik oluşturmak üzere bir GDI 'dan XPS dönüştürmesi kullanır. Bu uygulamaların XPS yazdırma yolunu kullanması gerekmez ve gelişmiş meta dosyası (EMF) tabanlı yazdırma kullanmaya devam edebilir. Ancak, çoğu XPS özelliği ve geliştirmesi yalnızca XPS yazdırma yolunu hedefleyen uygulamalar tarafından kullanılabilir.  
+### <a name="print-path-architecture"></a>Yazdırma Yolu Mimarisi  
+ Hem Win32 hem de .NET Framework uygulamaları XPS'i desteklerken, Win32 ve Windows Forms uygulamaları XPS yazıcı sürücüsü (XPSDrv) için XPS biçimlendirilmiş içerik oluşturmak için XPS'e gdi ile dönüştürme kullanır. Bu uygulamaların XPS yazdırma yolunu kullanması gerekmez ve Gelişmiş Metafile (EMF) tabanlı yazdırmayı kullanmaya devam edebilir. Ancak, çoğu XPS özelliği ve geliştirmesi yalnızca XPS yazdırma yolunu hedefleyen uygulamalar tarafından kullanılabilir.  
   
- , Bir Win32 ve Windows Forms uygulamaları tarafından XPSDrv tabanlı yazıcıların kullanımını etkinleştirmek için, XPS yazıcı sürücüsü (XPSDrv) GDI 'dan XPS biçimine dönüştürmeyi destekler. XPSDrv modeli, Ayrıca, Win32 uygulamalarının XPS belgelerini yazdırabilmesi için, XPS için bir GDI biçimine dönüştürücü sağlar. WPF uygulamaları için, yazma işleminin hedef yazdırma sırasının bir XPSDrv sürücüsüne sahip olmadığı her seferinde XPS 'ye GDI biçimine dönüştürme işlemi, <xref:System.Windows.Xps.XpsDocumentWriter> sınıfının <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> ve <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> yöntemleri tarafından otomatik olarak gerçekleştirilir. (Windows Forms uygulamalar XPS belgelerini yazdıramaz.)  
+ XPSDrv tabanlı yazıcıların Win32 ve Windows Forms uygulamaları tarafından kullanılmasını sağlamak için XPS Yazıcı sürücüsü (XPSDrv) GDI'nin XPS biçimine dönüştürülmesini destekler. XPSDrv modeli, Win32 uygulamalarının XPS Belgeleri yazdırabilmesi için XPS'den GDI formatına dönüştürücü de sağlar. WPF uygulamaları için XPS'nin GDI biçimine dönüştürülmesi, <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> yazma işleminin hedef yazdırma sırası XPSDrv sürücüsü olmadığında <xref:System.Windows.Xps.XpsDocumentWriter> sınıfın yöntemleri ve yöntemleri yle otomatik olarak yapılır. (Windows Forms uygulamaları XPS Belgelerini yazdıramaz.)  
   
- Aşağıdaki çizimde, yazdırma alt sistemi gösterilmektedir ve Microsoft tarafından sunulan bölümleri ve yazılım ve donanım satıcıları tarafından tanımlanan bölümleri tanımlar:  
+ Aşağıdaki resimde yazdırma alt sistemi gösterilmektedir ve Microsoft tarafından sağlanan bölümleri ve yazılım ve donanım satıcıları tarafından tanımlanan bölümleri tanımlar:  
   
- ![Ekran görüntüsü XPS Yazdırma sistemini gösterir.](./media/printing-overview/xml-paper-specification-print-system.png)  
+ ![Ekran görüntüsü XPS yazdırma sistemini gösterir.](./media/printing-overview/xml-paper-specification-print-system.png)  
   
-### <a name="basic-xps-printing"></a>Temel XPS yazdırma  
- WPF hem temel hem de Gelişmiş API tanımlar. Kapsamlı yazdırma özelleştirmesi gerektirmeyen veya XPS özelliği 'nin tamamına erişebilen uygulamalar için, temel yazdırma desteği kullanılabilir. Temel yazdırma desteği, tanıdık bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]en düşük düzeyde yapılandırma ve özellik gerektiren bir yazdırma iletişim kutusu aracılığıyla sunulur. Bu basitleştirilmiş yazdırma modeli kullanılarak birçok XPS özelliği mevcuttur.  
+### <a name="basic-xps-printing"></a>Temel XPS Baskı  
+ WPF hem temel hem de gelişmiş API tanımlar. Kapsamlı yazdırma özelleştirmesi veya xps özellik kümesinin tamamına erişim gerektirmeyen uygulamalar için temel yazdırma desteği kullanılabilir. Temel yazdırma desteği, en az yapılandırma gerektiren ve tanıdık [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]bir şekilde sahip olan bir yazdırma iletişim denetimi aracılığıyla ortaya çıkarır. Bu basitleştirilmiş yazdırma modelini kullanarak birçok XPS özelliği mevcuttur.  
   
 #### <a name="printdialog"></a>PrintDialog  
- <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> denetimi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], yapılandırma ve XPS işi gönderimi için tek bir giriş noktası sağlar. Denetimin örneği oluşturma ve kullanma hakkında bilgi için bkz. [bir yazdırma Iletişim kutusu çağırma](how-to-invoke-a-print-dialog.md).  
+ Denetim, <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> yapılandırma ve XPS iş gönderimi için [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]tek bir giriş noktası sağlar. Denetimi anında nasıl kullanacağınız ve kullanılacağı hakkında bilgi için [bkz.](how-to-invoke-a-print-dialog.md)  
   
-### <a name="advanced-xps-printing"></a>Gelişmiş XPS yazdırma  
- XPS özelliklerinin tamamına erişmek için gelişmiş yazdırma API 'sinin kullanılması gerekir. Birkaç ilgili API aşağıda daha ayrıntılı olarak açıklanmıştır. XPS yazdırma yolu API 'Lerinin tüm listesi için, <xref:System.Windows.Xps> ve <xref:System.Printing> ad alanı başvurularına bakın.  
+### <a name="advanced-xps-printing"></a>Gelişmiş XPS Baskı  
+ XPS özelliklerinin tamamına erişmek için gelişmiş yazdırma API'sinin kullanılması gerekir. Birkaç ilgili API aşağıda daha ayrıntılı olarak açıklanmıştır. XPS yazdırma yolu API'lerinin tam <xref:System.Windows.Xps> listesi <xref:System.Printing> için, ad alanı başvurularına bakın.  
   
-#### <a name="printticket-and-printcapabilities"></a>PrintTicket ve PrintCapabilities  
- <xref:System.Printing.PrintTicket> ve <xref:System.Printing.PrintCapabilities> sınıfları, gelişmiş XPS özelliklerinin temelidir. Her iki tür nesne, harmanlama, iki taraflı yazdırma, Zımbalama vb. gibi yazdırma odaklı özelliklerin XML biçimli yapılarıdır. Bu yapılar, yazdırma şeması tarafından tanımlanır. <xref:System.Printing.PrintTicket> bir yazıcıya bir yazdırma işini nasıl işleyeceğini bildirir. <xref:System.Printing.PrintCapabilities> sınıfı bir yazıcının yeteneklerini tanımlar. Bir yazıcının yeteneklerini sorgulayarak, yazıcının desteklenen özelliklerinden tam olarak yararlanabilen bir <xref:System.Printing.PrintTicket> oluşturulabilir. Benzer şekilde, desteklenmeyen özelliklerden kaçınılabilir.  
+#### <a name="printticket-and-printcapabilities"></a>PrintTicket ve PrintYetenekleri  
+ Ve <xref:System.Printing.PrintTicket> <xref:System.Printing.PrintCapabilities> sınıflar gelişmiş XPS özelliklerinin temelidir. Her iki nesne türü de harmanlama, iki taraflı yazdırma, zımbalama gibi yazdırma yönelimli özelliklerin XML biçimlendirilmiş yapılarıdır. Bu yapılar baskı şeması ile tanımlanır. Bir <xref:System.Printing.PrintTicket> yazıcıya yazdırma işini nasıl işlenir talimat verir. Sınıf, <xref:System.Printing.PrintCapabilities> yazıcının özelliklerini tanımlar. Bir yazıcının özelliklerini sorgulayarak, <xref:System.Printing.PrintTicket> yazıcının desteklenen özelliklerinden tam olarak yararlanan bir yazıcı oluşturulabilir. Benzer şekilde, desteklenmeyen özellikler önlenebilir.  
   
- Aşağıdaki örnek, bir yazıcı <xref:System.Printing.PrintCapabilities> sorgulama ve kod kullanarak <xref:System.Printing.PrintTicket> oluşturma işlemlerinin nasıl yapılacağını gösterir.  
+ Aşağıdaki örnek, yazıcının <xref:System.Printing.PrintCapabilities> nasıl sorgulanır ve <xref:System.Printing.PrintTicket> bir kod oluşturmak için gösterir.  
   
  [!code-cpp[xpscreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
  [!code-csharp[xpscreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
  [!code-vb[xpscreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
   
-#### <a name="printserver-and-printqueue"></a>YazıcıSunucusu ve PrintQueue  
- <xref:System.Printing.PrintServer> sınıfı bir ağ yazdırma sunucusunu temsil eder ve <xref:System.Printing.PrintQueue> sınıfı, kendisiyle ilişkili bir yazıcıyı ve çıkış işi kuyruğunu temsil eder. Birlikte, bu API 'Ler bir sunucunun yazdırma işlerinin gelişmiş yönetimine izin verir. Bir <xref:System.Printing.PrintServer>veya türetilmiş sınıflarından biri, bir <xref:System.Printing.PrintQueue>yönetmek için kullanılır. <xref:System.Printing.PrintQueue.AddJob%2A> yöntemi, kuyruğa yeni bir yazdırma işi eklemek için kullanılır.  
+#### <a name="printserver-and-printqueue"></a>PrintServer ve PrintQueue  
+ Sınıf <xref:System.Printing.PrintServer> bir ağ yazdırma sunucusunu temsil eder ve <xref:System.Printing.PrintQueue> sınıf bir yazıcıyı ve onunla ilişkili çıktı iş sırasını temsil eder. Bu API'ler birlikte, bir sunucunun yazdırma işlerinin gelişmiş yönetimine olanak sağlar. A <xref:System.Printing.PrintServer>, ya da türetilmiş sınıflarından <xref:System.Printing.PrintQueue>biri, bir . Yöntem, <xref:System.Printing.PrintQueue.AddJob%2A> kuyruğa yeni bir yazdırma işi eklemek için kullanılır.  
   
- Aşağıdaki örnek, kod kullanarak bir <xref:System.Printing.LocalPrintServer> oluşturma ve varsayılan <xref:System.Printing.PrintQueue> erişme gösterilmiştir.  
+ Aşağıdaki örnek, kodu kullanarak <xref:System.Printing.LocalPrintServer> varsayılan bir <xref:System.Printing.PrintQueue> oluşturmak ve erişim nasıl göstermektedir.  
   
  [!code-csharp[xpsprint#PrintQueueSnip](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
  [!code-vb[xpsprint#PrintQueueSnip](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
   
 #### <a name="xpsdocumentwriter"></a>XpsDocumentWriter  
- <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> ve <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> yöntemlerine sahip bir <xref:System.Windows.Xps.XpsDocumentWriter>, XPS belgelerini bir <xref:System.Printing.PrintQueue>yazmak için kullanılır. Örneğin, <xref:System.Windows.Xps.XpsDocumentWriter.Write%28System.Windows.Documents.FixedPage%2CSystem.Printing.PrintTicket%29> yöntemi bir XPS belgesi çıkarmak ve zaman uyumlu <xref:System.Printing.PrintTicket> için kullanılır. <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%28System.Windows.Documents.FixedDocument%2CSystem.Printing.PrintTicket%29> yöntemi bir XPS belgesinin çıktısını almak için kullanılır ve zaman uyumsuz olarak <xref:System.Printing.PrintTicket>.  
+ Bir <xref:System.Windows.Xps.XpsDocumentWriter>, onun <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> birçok <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> ve yöntemleri ile, bir <xref:System.Printing.PrintQueue>XPS belgeleri yazmak için kullanılır. Örneğin, <xref:System.Windows.Xps.XpsDocumentWriter.Write%28System.Windows.Documents.FixedPage%2CSystem.Printing.PrintTicket%29> yöntem bir XPS belgesini ve <xref:System.Printing.PrintTicket> eşzamanlı olarak çıktıvermek için kullanılır. Yöntem, <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%28System.Windows.Documents.FixedDocument%2CSystem.Printing.PrintTicket%29> xps belgesini ve <xref:System.Printing.PrintTicket> eşzamanlı olarak çıktıvermek için kullanılır.  
   
- Aşağıdaki örnek, kod kullanarak bir <xref:System.Windows.Xps.XpsDocumentWriter> oluşturmayı gösterir.  
+ Aşağıdaki örnek, <xref:System.Windows.Xps.XpsDocumentWriter> bir kod kullanma nın nasıl oluşturulabildiğini gösterir.  
   
  [!code-csharp[XpsPrint#PrintQueueSnip](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
  [!code-vb[XpsPrint#PrintQueueSnip](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
   
- <xref:System.Printing.PrintQueue.AddJob%2A> yöntemleri, yazdırmanın yollarını da sağlar. Bkz. [Program aracılığıyla XPS dosyalarını yazdırma](how-to-programmatically-print-xps-files.md). daha fazla bilgi için.  
+ Yöntemler <xref:System.Printing.PrintQueue.AddJob%2A> yazdırmak için yollar da sağlar. XpS [Dosyalarını Programlı Olarak Yazdır'a](how-to-programmatically-print-xps-files.md)bakın. ayrıntılar için.  
   
-<a name="GDI_Print_Path_intro"></a>   
-## <a name="gdi-print-path"></a>GDI yazdırma yolu  
- WPF uygulamaları yerel olarak XPS yazdırma yolunu destekleirken, Win32 ve Windows Forms uygulamaları da bazı XPS özelliklerinden yararlanabilir. XPS yazıcı sürücüsü (XPSDrv), GDI tabanlı çıktıyı XPS biçimine dönüştürebilir. Gelişmiş senaryolar için, [MICROSOFT XPS Belge Dönüştürücüsü (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)kullanılarak içeriğin özel dönüştürmesi desteklenir. Benzer şekilde, WPF uygulamaları ayrıca <xref:System.Windows.Xps.XpsDocumentWriter> sınıfının <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> veya <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> yöntemlerinden birini çağırarak ve XpsDrv olmayan bir yazıcıyı hedef yazdırma kuyruğu olarak belirterek GDI yazdırma yoluna da yol açabilir.  
+<a name="GDI_Print_Path_intro"></a>
+## <a name="gdi-print-path"></a>GDI Yazdırma Yolu  
+ WPF uygulamaları xps yazdırma yolunu doğal olarak desteklerken, Win32 ve Windows Forms uygulamaları da bazı XPS özelliklerinden yararlanabilir. XPS yazıcı sürücüsü (XPSDrv), GDI tabanlı çıktıyı XPS biçimine dönüştürebilir. Gelişmiş senaryolar için, içeriğin özel dönüşümü [Microsoft XPS Belge Dönüştürücü (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)kullanılarak desteklenir. Benzer şekilde, WPF uygulamaları da <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> <xref:System.Windows.Xps.XpsDocumentWriter> sınıfın veya yöntemlerinden birini arayarak ve hedef yazdırma sırası olarak XpsDrv olmayan bir yazıcı atayarak GDI yazdırma yoluna çıktı olabilir.  
 
 XPS işlevselliği veya desteği gerektirmeyen uygulamalar için geçerli GDI yazdırma yolu değişmeden kalır.  
   
-- GDI yazdırma yolu ve çeşitli XPS dönüştürme seçenekleri hakkında ek başvuru malzemeleri için bkz. [MICROSOFT XPS Belge Dönüştürücüsü (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-) ve [XPSDrv yazıcı sürücüleri](/windows-hardware/drivers/print/xpsdrv-printer-drivers).  
+- GDI yazdırma yolundaki ek başvuru malzemesi ve çeşitli XPS dönüşüm seçenekleri için [Microsoft XPS Document Converter (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-) ve [XPSDrv Yazıcı Sürücüleri'ne](/windows-hardware/drivers/print/xpsdrv-printer-drivers)bakın.  
   
-<a name="XPS_Driver_Model_intro"></a>   
-## <a name="xpsdrv-driver-model"></a>XPSDrv sürücü modeli  
- XPS yazdırma yolu, XPS özellikli bir yazıcıya veya sürücüye yazdırırken yerel yazdırma kuyruğu biçimi olarak XPS kullanarak biriktirici verimliliğini geliştirir. Basitleştirilmiş biriktirme işlemi, belge belleğe alınmadan önce, EMF veri dosyası gibi bir ara biriktirme dosyası oluşturma gereksinimini ortadan kaldırır. Daha küçük biriktirme dosya boyutları ile XPS yazdırma yolu, ağ trafiğini azaltabilir ve yazdırma performansını iyileştirebilir.  
+<a name="XPS_Driver_Model_intro"></a>
+## <a name="xpsdrv-driver-model"></a>XPSDrv Sürücü Modeli  
+ XPS yazdırma yolu, XPS özellikli bir yazıcıya veya sürücüye yazdırılırken XPS'yi yerel yazdırma makara biçimi olarak kullanarak biriktirme verimliliğini artırır. Basitleştirilmiş biriktirme işlemi, belge biriktirmeden önce EMF veri dosyası gibi bir ara biriktirme dosyası oluşturma gereksinimini ortadan kaldırır. XPS yazdırma yolu, daha küçük makara dosya boyutları sayesinde ağ trafiğini azaltabilir ve yazdırma performansını artırabilir.  
   
- EMF, uygulama çıkışını, işleme hizmetleri için GDI 'ya bir dizi çağrı olarak temsil eden kapalı bir biçimdir. EMF 'den farklı olarak, XPS biriktirme biçimi, XPS tabanlı bir yazıcı sürücüsüne (XPSDrv) çıkış yaparken daha fazla yorum gerektirmeden gerçek belgeyi temsil eder. Sürücüler doğrudan biçimdeki veriler üzerinde çalışabilir. Bu özellik, EMF dosyalarını ve GDI tabanlı yazdırma sürücülerini kullanırken gereken veri ve renk alanı dönüştürmelerini ortadan kaldırır.  
+ EMF, hizmet vermek için GDI'ye yapılan bir dizi çağrı olarak uygulama çıktısını temsil eden kapalı bir biçimdir. EMF'nin aksine, XPS biriktirme biçimi, XPS tabanlı bir yazıcı sürücüsüne (XPSDrv) çıktı verildiğinde daha fazla yorum gerektirmeden gerçek belgeyi temsil eder. Sürücüler doğrudan formattaki veriler üzerinde çalışabilir. Bu özellik, EMF dosyalarını ve GDI tabanlı yazdırma sürücülerini kullandığınızda gereken veri ve renk alanı dönüşümlerini ortadan kaldırır.  
   
- , EMF eşdeğerlerine kıyasla bir XPS yazıcı sürücüsünü (XPSDrv) hedefleyen XPS belgelerini kullandığınızda biriktirme dosya boyutları genellikle azaltılır; Ancak, özel durumlar vardır:  
+ EMF eşdeğerleriyle karşılaştırıldığında bir XPS yazıcı sürücüsünü (XPSDrv) hedefleyen XPS Belgeleri kullandığınızda dosya boyutları genellikle azalır; ancak, istisnalar vardır:  
   
-- Çok karmaşık, çok katmanlı veya yeterince yazılamaz bir vektör grafiği aynı grafiğin bit eşlemli sürümünden daha büyük olabilir.  
+- Çok karmaşık, çok katmanlı veya verimsiz yazılmış bir vektör grafiği, aynı grafiğin eşeşlenmiş sürümünden daha büyük olabilir.  
   
-- Ekran görüntüleme amacıyla, XPS dosyaları cihaz yazı tiplerini ve bilgisayar tabanlı yazı tiplerini de katıştırır; GDI biriktirme dosyaları cihaz yazı tiplerini katıştırmaz. Ancak her iki tür yazı tipi de alt kümelenir (aşağıya bakın) ve yazıcı sürücüleri dosyayı yazıcıya iletmeden önce cihaz yazı tiplerini kaldırabilir.  
+- Ekran görüntüleme amacıyla XPS dosyaları aygıt yazı tiplerini ve bilgisayar tabanlı yazı tiplerini katıştırır; oysa GDI biriktirme dosyaları aygıt yazı tiplerini gömmez. Ancak her iki yazı tipi türü de subsetted (aşağıya bakın) ve yazıcı sürücüleri dosyayı yazıcıya iletmeden önce aygıt yazı tiplerini kaldırabilir.  
   
- Biriktirme boyutu azaltma çeşitli mekanizmalar aracılığıyla gerçekleştirilir:  
+ Makara boyutu azaltma çeşitli mekanizmalar aracılığıyla gerçekleştirilir:  
   
-- **Yazı tipi alt kümeleme**. Yalnızca gerçek belge içinde kullanılan karakterler XPS dosyasında depolanır.  
+- **Yazı tipi alt ayarı.** XpS dosyasında yalnızca gerçek belge içinde kullanılan karakterler depolanır.  
   
-- **Gelişmiş grafik desteği**. Saydamlık ve gradyan temel elemanlar için yerel destek, XPS belgesinde içeriğin Rasterleştirmeye karşı.  
+- **Gelişmiş Grafik Desteği**. Saydamlık ve degrade ilkel için yerel destek XPS Belgesi'nde içeriğin rasterization önler.  
   
-- **Ortak kaynakların tanımlanması**. Birden çok kez kullanılan kaynaklar (bir kurumsal logoyu temsil eden bir görüntü gibi), paylaşılan kaynaklar olarak değerlendirilir ve yalnızca bir kez yüklenir.  
+- **Ortak kaynakların tanımlanması.** Birden çok kez kullanılan kaynaklar (şirket logosunu temsil eden bir resim gibi) paylaşılan kaynak olarak kabul edilir ve yalnızca bir kez yüklenir.  
   
-- **ZIP sıkıştırması**. Tüm XPS belgeleri ZIP sıkıştırması kullanır.  
+- **ZIP sıkıştırma**. Tüm XPS belgeleri ZIP sıkıştırma kullanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -143,8 +143,8 @@ XPS işlevselliği veya desteği gerektirmeyen uygulamalar için geçerli GDI ya
 - <xref:System.Printing.PrintCapabilities>
 - <xref:System.Printing.PrintServer>
 - <xref:System.Printing.PrintQueue>
-- [Nasıl Yapılır Konuları](printing-how-to-topics.md)
+- [Nasıl Dır Konular](printing-how-to-topics.md)
 - [WPF'deki Belgeler](documents-in-wpf.md)
-- [XPS belgeleri](/windows/desktop/printdocs/documents)
+- [XPS Belgeleri](/windows/desktop/printdocs/documents)
 - [Belge Serileştirme ve Depolama](document-serialization-and-storage.md)
-- [Microsoft XPS Belge Dönüştürücüsü (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)
+- [Microsoft XPS Belge Dönüştürücü (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)

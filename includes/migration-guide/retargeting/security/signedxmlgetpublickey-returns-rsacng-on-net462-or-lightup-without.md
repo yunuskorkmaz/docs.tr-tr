@@ -1,19 +1,18 @@
 ---
-ms.openlocfilehash: 52693beada7b301e62414e38cef523226ee9c044
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: cdcf7f540a9ded4108121b2cd8e855687a0c7e27
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67859028"
 ---
-### <a name="signedxmlgetpublickey-returns-rsacng-on-net462-or-lightup-without-retargeting-change"></a>SignedXml.GetPublicKey RSACng net462 (veya yerelleştirilmesi) değişiklik yeniden hedefleme olmadan döndürür
+### <a name="signedxmlgetpublickey-returns-rsacng-on-net462-or-lightup-without-retargeting-change"></a>SignedXml.GetPublicKey, değişikliği yeniden hedeflemeden net462 (veya lightup) üzerinde RSACng döndürür
 
 |   |   |
 |---|---|
-|Ayrıntılar|Tarafından döndürülen nesne somut türü .NET Framework 4.6.2 sürümünden itibaren <xref:System.Security.Cryptography.Xml.SignedXml.GetPublicKey%2A?displayProperty=nameWithType> yöntemi bir Cng uygulamasına CryptoServiceProvider uygulamasından (quirk) değiştirildi. Uygulama kullanımından değiştiğinden budur <code>certificate.PublicKey.Key</code> iç kullanarak <code>certificate.GetAnyPublicKey</code> için iletir <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey%2A?displayProperty=nameWithType>.|
-|Öneri|.NET Framework 4.7.1 üzerinde çalışan uygulamalar ile başlayarak, varsayılan olarak .NET Framework 4.6.1 kullanılan CryptoServiceProvider uygulaması kullanabilirsiniz ve önceki sürümleri, aşağıdaki yapılandırma ekleyerek geçin [çalışma zamanı](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md), uygulama yapılandırma dosyası bölümünü:<pre><code class="lang-xml">&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.Cryptography.Xml.SignedXmlUseLegacyCertificatePrivateKey=true&quot; /&gt;&#13;&#10;</code></pre>|
-|`Scope`|Kenar|
-|Version|4.6.2|
-|Type|Yeniden Hedefleme|
+|Ayrıntılar|.NET Framework 4.6.2 ile başlayarak, <xref:System.Security.Cryptography.Xml.SignedXml.GetPublicKey%2A?displayProperty=nameWithType> yöntemle döndürülen nesnenin somut türü CryptoServiceProvider uygulamasından Cng uygulamasına (tuhaflık olmadan) değiştirildi. Bunun nedeni, uygulamanın <code>certificate.PublicKey.Key</code> iç tenene <code>certificate.GetAnyPublicKey</code> iletilmesine göre <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey%2A?displayProperty=nameWithType>değiştirilmesidir.|
+|Öneri|.NET Framework 4.7.1'de çalışan uygulamalardan başlayarak, .NET Framework 4.6.1 ve önceki sürümlerde varsayılan olarak kullanılan CryptoServiceProvider uygulamasını, uygulama config dosyanızın [çalışma zamanı](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) bölümüne aşağıdaki yapılandırma anahtarını ekleyerek kullanabilirsiniz:<pre><code class="lang-xml">&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.Cryptography.Xml.SignedXmlUseLegacyCertificatePrivateKey=true&quot; /&gt;&#13;&#10;</code></pre>|
+|Kapsam|Edge|
+|Sürüm|4.6.2|
+|Tür|Yeniden Hedefleme|
 |Etkilenen API’ler|<ul><li><xref:System.Security.Cryptography.Xml.SignedXml.CheckSignatureReturningKey(System.Security.Cryptography.AsymmetricAlgorithm@)?displayProperty=nameWithType></li></ul>|
-
