@@ -18,38 +18,38 @@ helpviewer_keywords:
 ms.assetid: eda21ecf-4734-4f92-aaba-9f34884385db
 topic_type:
 - apiref
-ms.openlocfilehash: 11821acbeeb04ae09464eb0e032b9bf387914168
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 50e3cc6e677de45be9256a2a818ebd6ed7d8b843
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73095059"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176922"
 ---
 # <a name="strongnamefreebuffer-function"></a>StrongNameFreeBuffer İşlevi
-[StrongNameGetPublicKey](strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](strongnametokenfrompublickey-function.md)veya [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md)gibi bir tanımlayıcı ad işlevine daha önceki bir çağrı ile ayrılmış belleği serbest bırakır.  
+[StrongNameGetPublicKey](strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](strongnametokenfrompublickey-function.md)veya [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md)gibi güçlü bir ad işlevine önceki bir çağrıyla ayrılan belleği serbest sağlar.  
   
- Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: StrongNameFreeBuffer](../hosting/iclrstrongname-strongnamefreebuffer-method.md) metodunu kullanın.  
+ Bu işlev amortismana kaldırıldı. Bunun yerine [ICLRStrongName::StrongNameFreeBuffer](../hosting/iclrstrongname-strongnamefreebuffer-method.md) yöntemini kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-VOID StrongNameFreeBuffer (   
+VOID StrongNameFreeBuffer (
    [in] BYTE   *pbMemory  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pbMemory`  
- 'ndaki Boşaltılacak belleğin bir işaretçisi.  
+ [içinde] Özgür bellek için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** StrongName. h  
+ **Üstbilgi:** StrongName.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

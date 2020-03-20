@@ -1,50 +1,50 @@
 ---
-title: 'ICorDebugVariableSymbol:: GetName metodu'
+title: ICorDebugVariableSymbol::GetName Yöntemi
 ms.date: 03/30/2017
 ms.assetid: c922b7d4-44e5-45e4-aef3-cc9c35a0be80
-ms.openlocfilehash: 172eea452442aa94ea010e2c434908ab8d040a93
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: abc0e368f259df1a3542b0fc8e7fbfd7e06cf6eb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790918"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178449"
 ---
-# <a name="icordebugvariablesymbolgetname-method"></a>ICorDebugVariableSymbol:: GetName metodu
+# <a name="icordebugvariablesymbolgetname-method"></a>ICorDebugVariableSymbol::GetName Yöntemi
 Bir değişkenin adını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetName(  
-   [in] ULONG32 cchName,   
-   [out] ULONG32 *pcchName,   
+   [in] ULONG32 cchName,
+   [out] ULONG32 *pcchName,
    [out, size_is(cchName), length_is(*pcchName)] WCHAR szName[]  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- 'ndaki `szName` arabelleğindeki karakterlerin sayısı.  
+ [içinde] `szName` Arabellekteki karakter sayısı.  
   
  `pcchName`  
- dışı Gerçekten `szName` arabelleğine yazılan karakter sayısına yönelik bir işaretçi.  
+ [çıkış] Arabelleğe yazılan karakter sayısına `szName` işaretçi.  
   
  `szName`  
- Değişken adını içeren bir karakter dizisine yönelik bir işaretçi.  
+ Değişken adını içeren bir karakter dizisiiçin işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
-> Bu yöntem yalnızca .NET Native kullanılabilir.  
+> Bu yöntem yalnızca .NET Native ile kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

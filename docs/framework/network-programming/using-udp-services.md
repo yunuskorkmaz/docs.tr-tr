@@ -17,29 +17,29 @@ helpviewer_keywords:
 - sending data, UDP
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
-ms.openlocfilehash: 397c51501ac333d6df699064b3fe82920bc38152
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 477095ada6e44f66cbc60cd80375da9a87f38e39
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788108"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180612"
 ---
 # <a name="using-udp-services"></a>UDP Hizmetleri Kullanma
-<xref:System.Net.Sockets.UdpClient> Sınıfı UDP kullanarak Ağ Hizmetleri ile iletişim kurar. Özellikleri ve yöntemleri <xref:System.Net.Sockets.UdpClient> oluşturma ayrıntıları soyut sınıf bir <xref:System.Net.Sockets.Socket> istemek ve UDP kullanarak verileri alma.
+Sınıf <xref:System.Net.Sockets.UdpClient> UDP kullanarak ağ hizmetleri ile iletişim kurar. <xref:System.Net.Sockets.UdpClient> Sınıfın özellikleri ve yöntemleri UDP kullanarak <xref:System.Net.Sockets.Socket> veri istemek ve almak için oluşturma ayrıntılarını özetler.
 
-Kullanıcı Veri Birimi Protokolü (UDP), uzak bir konağa verileri sunmak için bir en iyi hale getiren basit bir protokoldür. Ancak, bağlantısız bir protokol UDP protokolünü olduğundan, uzak uç noktaya gönderdi UDP veri birimi ulşamasını garanti değil ya da, bunlar gönderildiği sırada ulşamasını garanti. UDP kullanan uygulamalar, eksik, yinelenen ve sıra dışı veri birimi işlemek için hazırlanması gerekir.
+Kullanıcı Datagram Protokolü (UDP), uzak bir ana bilgisayara veri sağlamak için en iyi çabayı gösteren basit bir protokoldür. Ancak, UDP protokolü bağlantısız bir protokol olduğundan, uzak uç noktasına gönderilen UDP verigramlarının gelmesi garanti edilmez ve gönderildikleri sırayla ulaşmaları garanti edilmez. UDP kullanan uygulamalar eksik, yinelenen ve sıra dışı veri gramlarını işlemek için hazırlanmalıdır.
 
-Bir veri biriminde UDP kullanarak göndermek için barındırma hizmeti ve hizmetin iletişim kurmak için kullandığı UDP bağlantı noktası numarasını ağ cihaz ağ adresini bilmeniz gerekir. Ortak Hizmetleri için bağlantı noktası numaralarını Internet Atanmış Numaralar Yetkilisi (IANA) tanımlar (bkz [hizmet adını ve Aktarım Protokolü bağlantı noktası numarasını kayıt defteri](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)). IANA listede olmayan Hizmetleri bağlantı noktası numaraları için 1024 65,535 aralığında olabilir.
+UDP kullanarak bir veri gramı göndermek için, gereksinim duyduğunuz hizmeti barındıran ağ aygıtının ağ adresini ve hizmetin iletişim kurmak için kullandığı UDP bağlantı noktası numarasını bilmeniz gerekir. Internet Atanmış Sayılar Yetkilisi (Iana), ortak hizmetler için bağlantı noktası numaralarını tanımlar (bkz. [Hizmet Adı ve Taşıma Protokolü Bağlantı Noktası Numarası Kayıt Defteri).](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) Iana listesinde olmayan hizmetlerin bağlantı noktası numaraları 1.024 ile 65.535 arasında olabilir.
 
-Özel ağ adresleri, IP tabanlı ağlarda UDP yayın iletilerini desteklemek için kullanılır. Aşağıdaki tartışma örnek olarak Internet'te kullanılan IP sürüm 4 Adres ailesi kullanır.
+ÖZEL ağ adresleri, IP tabanlı ağlardaki UDP yayın iletilerini desteklemek için kullanılır. Aşağıdaki tartışma, Internet'te kullanılan IP sürüm 4 adresi ailesini örnek olarak kullanır.
 
-IP sürüm 4 adresleri 32 bit bir ağ adresi belirtmek için kullanın. Bir ağ maskesi 255.255.255.0 kullanarak sınıfı C adres için bu bit dört sekizlik tabanda ayrılır. Ondalık olarak belirtildiğinde, dört sekizlik tabanda 192.168.100.2 gibi tanıdık dört noktalı gösterimde oluşturur. İlk iki sekizlik tabanda (Bu örnekte 192.168) ağ sayısı form, üçüncü sekizli (100) alt ağı tanımlar ve son sekizli (2) konak tanımlayıcısıdır.
+IP sürüm 4 adresleri bir ağ adresi belirtmek için 32 bit kullanır. 255.255.255.0 netmask kullanarak C sınıfı adresler için bu bitler dört sekizliye ayrılır. Ondalık olarak ifade edildiğinde, dört sekizli 192.168.100.2 gibi tanıdık noktalı dörtlü gösterimi oluşturur. İlk iki sekizli (bu örnekte 192.168) ağ numarasını oluşturur, üçüncü sekizli (100) alt ağı tanımlar ve son sekizli (2) ana bilgisayar tanımlayıcısIdır.
 
-Bir veya 255.255.255.255, tüm bit'leri bir IP adresi ayarlama sınırlı yayın adresini oluşturur. Bu adrese bir UDP veri birimi gönderme yerel ağ kesimindeki tüm Konaklara iletiyi teslim eder. Yönlendiriciler hiçbir zaman bu adrese gönderilen iletileri iletmek için yalnızca ağ kesimindeki ana yayın iletisi alırsınız.
+Bir IP adresinin tüm bitlerini bir veya 255.255.255.255 olarak ayarlamak sınırlı yayın adresini oluşturur. Bu adrese bir UDP veri gramı göndermek, iletiyi yerel ağ segmentindeki herhangi bir ana bilgisayara gönderir. Yönlendiriciler bu adrese gönderilen iletileri hiçbir zaman iletmediğinden, yayın iletisini yalnızca ağ segmentindeki ana bilgisayarlar alır.
 
-Yayınları tüm bitlerinin ana tanımlayıcısının ayarlayarak bir ağ belirli kısımlarını yönlendirilebilir. Örneğin, bir yayın 192.168.1 ile başlangıç IP adresi ile tanımlanan ağdaki tüm konaklar göndermek üzere 192.168.1.255 aralığındaki adresi kullanın.
+Yayınlar, ana bilgisayar tanımlayıcısının tüm bitlerini ayarlayarak ağın belirli bölümlerine yönlendirilebilir. Örneğin, 192.168.1 ile başlayan IP adresleri tarafından tanımlanan ağdaki tüm ana bilgisayarlara yayın göndermek için 192.168.1.255 adresini kullanın.
 
-Aşağıdaki kod örneğinde bir <xref:System.Net.Sockets.UdpClient> UDP veri birimi 11.000 numaralı bağlantı noktasında dinleyecek şekilde. İstemci, bir ileti dizesi alır ve ileti konsola yazar.
+Aşağıdaki kod örneği, <xref:System.Net.Sockets.UdpClient> bağlantı noktası 11.000'deki UDP verigramlarını dinlemek için bir örnek kullanır. İstemci bir ileti dizesi alır ve iletiyi konsola yazar.
 
 ```vb
 Imports System.Net
@@ -48,7 +48,7 @@ Imports System.Text
 
 Public Class UDPListener
    Private Const listenPort As Integer = 11000
-   
+
    Private Shared Sub StartListener()
       Dim listener As New UdpClient(listenPort)
       Dim groupEP As New IPEndPoint(IPAddress.Any, listenPort)
@@ -65,7 +65,7 @@ Public Class UDPListener
          listener.Close()
       End Try
    End Sub 'StartListener
-   
+
    Public Shared Sub Main()
       StartListener()
    End Sub 'Main
@@ -81,19 +81,19 @@ using System.Text;
 public class UDPListener
 {
     private const int listenPort = 11000;
-    
+
     private static void StartListener()
     {
         UdpClient listener = new UdpClient(listenPort);
         IPEndPoint groupEP = new IPEndPoint(IPAddress.Any, listenPort);
-        
+
         try
         {
             while (true)
             {
                 Console.WriteLine("Waiting for broadcast");
                 byte[] bytes = listener.Receive(ref groupEP);
-                
+
                 Console.WriteLine($"Received broadcast from {groupEP} :");
                 Console.WriteLine($" {Encoding.ASCII.GetString(bytes, 0, bytes.Length)}");
             }
@@ -107,7 +107,7 @@ public class UDPListener
             listener.Close();
         }
     }
-    
+
     public static void Main()
     {
         StartListener();
@@ -115,7 +115,7 @@ public class UDPListener
 }
 ```
 
-Aşağıdaki kod örneğinde bir <xref:System.Net.Sockets.Socket> 11.000 numaralı bağlantı noktasını kullanan yayın adresine için 192.168.1.255 aralığındaki, UDP veri birimi göndermek için. İstemci, komut satırında belirtilen ileti dizesi gönderir.
+Aşağıdaki kod örneği, <xref:System.Net.Sockets.Socket> 11.000 no'lu bağlantı noktasını kullanarak UDP veri gramlarını yönlendirilmiş yayın adresi 192.168.1.255'e göndermek için kullanılır. İstemci komut satırında belirtilen ileti dizesini gönderir.
 
 ```vb
 Imports System.Net
@@ -145,14 +145,14 @@ class Program
     static void Main(string[] args)
     {
         Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-        
+
         IPAddress broadcast = IPAddress.Parse("192.168.1.255");
-        
+
         byte[] sendbuf = Encoding.ASCII.GetBytes(args[0]);
         IPEndPoint ep = new IPEndPoint(broadcast, 11000);
-        
+
         s.SendTo(sendbuf, ep);
-        
+
         Console.WriteLine("Message sent to the broadcast address");
     }
 }

@@ -15,67 +15,67 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-ms.openlocfilehash: 5c81bc82e19bce658336e4860a61f2721e17423d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2807458549db02598ba05f2aa80fa6ea6fbc5a13
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431695"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177700"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam Yöntemi
-Belirtilen belirteç tarafından başvurulan yöntem için belirtilen imzaya sahip bir parametre tanımı oluşturur ve bu parametre tanımı için bir belirteç alır.  
+Belirtilen belirteç tarafından başvurulan yöntem için belirtilen imzaile bir parametre tanımı oluşturur ve bu parametre tanımı için bir belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT DefineParam (  
-    [in]  mdMethodDef md,   
-    [in]  ULONG       ulParamSeq,   
-    [in]  LPCWSTR     szName,   
-    [in]  DWORD       dwParamFlags,   
-    [in]  DWORD       dwCPlusTypeFlag,   
+    [in]  mdMethodDef md,
+    [in]  ULONG       ulParamSeq,
+    [in]  LPCWSTR     szName,
+    [in]  DWORD       dwParamFlags,
+    [in]  DWORD       dwCPlusTypeFlag,
     [in]  void const  *pValue,  
-    [in]  ULONG       cchValue,   
-    [out] mdParamDef  *ppd   
+    [in]  ULONG       cchValue,
+    [out] mdParamDef  *ppd
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `md`  
- 'ndaki Parametresi tanımlanmakta olan metodun belirteci.  
+ [içinde] Parametresi tanımlanan yöntemin belirteci.  
   
  `ulParamSeq`  
- 'ndaki Parametre sıra numarası.  
+ [içinde] Parametre sıra numarası.  
   
  `szName`  
- 'ndaki Parametrenin Unicode olarak adı.  
+ [içinde] Unicode'daki parametrenin adı.  
   
  `dwParamFlags`  
- 'ndaki Parametre bayrakları. Bu, `CorParamAttr` değerlerinin bir bit dır.  
+ [içinde] Parametre için bayraklar. Bu `CorParamAttr` değerlerin bir bitmask olduğunu.  
   
  `dwCPlusTypeFlag`  
- [in] sabit değer için *\** `ELEMENT_TYPE_`.  
+ [içinde] `ELEMENT_TYPE_` sabit değer *\** için.  
   
  `pValue`  
- 'ndaki Parametrenin sabit değeri.  
+ [içinde] Parametrenin sabit değeri.  
   
  `cchValue`  
- 'ndaki `pValue`Unicode karakter cinsinden boyutu.  
+ [içinde] Unicode karakterlerinin boyutu. `pValue`  
   
  `ppd`  
- dışı `mdParamDef` belirteci atandı.  
+ [çıkış] Atanan `mdParamDef` belirteç.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ulParamSeq` dizi değerleri parametreler için 1 ile başlar. Dönüş değerinin sıra numarası 0 ' dır.  
+ Parametreler için `ulParamSeq` 1 ile başlarda sıra değerleri. İade değerinin sıra numarası 0'dır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

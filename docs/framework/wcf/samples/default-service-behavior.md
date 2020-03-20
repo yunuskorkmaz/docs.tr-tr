@@ -5,22 +5,22 @@ helpviewer_keywords:
 - service behaviors, defaults
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-ms.openlocfilehash: 7d2829e5c6d86d54f109fec6bf933049a093fd1c
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 798231cbfddf17dd63a61f3e2a07a6490289e56f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716561"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183758"
 ---
 # <a name="default-service-behavior"></a>Varsayılan Hizmet Davranışı
-Bu örnek, hizmet davranışı ayarlarının nasıl yapılandırılacağını gösterir. Örnek, `ICalculator` hizmet sözleşmesini uygulayan [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır. Bu örnek, <xref:System.ServiceModel.ServiceBehaviorAttribute> ve <xref:System.ServiceModel.OperationBehaviorAttribute> özniteliklerini kullanarak hizmet davranışlarını ve işlem davranışlarını açıkça tanımlar. Yapılandırma dosyalarındaki veya koddaki imperatively (Bu örnekte gösterildiği gibi) davranışları yapılandırabilirsiniz.  
+Bu örnek, hizmet davranış ayarlarının nasıl yapılandırılabildiğini gösterir. Örnek, hizmet sözleşmesini uygulayan [Başlarken'e](../../../../docs/framework/wcf/samples/getting-started-sample.md) `ICalculator` dayanır. Bu örnek, hizmet davranışlarını ve işleyiş <xref:System.ServiceModel.ServiceBehaviorAttribute> davranışlarını ve <xref:System.ServiceModel.OperationBehaviorAttribute> özniteliklerini kullanarak açıkça tanımlar. Yapılandırma dosyalarındaki veya zorunlu olarak koddaki (bu örnekte gösterildiği gibi) davranışları yapılandırabilirsiniz.  
   
- Bu örnekte, istemci bir konsol uygulaması (. exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
+ Bu örnekte, istemci bir konsol uygulamasıdır (.exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
   
 > [!NOTE]
-> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
+> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
   
- Service sınıfı, aşağıdaki kod örneğinde gösterildiği gibi <xref:System.ServiceModel.ServiceBehaviorAttribute> ve <xref:System.ServiceModel.OperationBehaviorAttribute> davranışları belirtir. Belirtilen tüm değerler varsayılan değerlerdir.  
+ Hizmet sınıfı, aşağıdaki kod örneğinde gösterildiği <xref:System.ServiceModel.ServiceBehaviorAttribute> gibi <xref:System.ServiceModel.OperationBehaviorAttribute> davranışları belirtir. Belirtilen tüm değerler varsayılandeğerlerdir.  
   
 ```csharp
 [ServiceBehavior(  
@@ -45,28 +45,28 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- Hizmet davranışları <xref:System.ServiceModel.ServiceBehaviorAttribute> özniteliğiyle belirtilir. Aşağıdaki tabloda bu davranışların bazıları açıklanmaktadır.  
+ Hizmet davranışları öznitelik <xref:System.ServiceModel.ServiceBehaviorAttribute> ile belirtilir. Aşağıdaki tabloda bu davranışların bazıları açıklanmaktadır.  
   
 |Hizmet davranışı|Açıklama|  
 |----------------------|-----------------|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.AutomaticSessionShutdown%2A>|İstemci isteğindeki bir oturumu otomatik olarak kapatır.|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.AutomaticSessionShutdown%2A>|Müşterinin isteği üzerine bir oturumu otomatik olarak kapatır.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>|Her hizmet örneği için eşzamanlılık modunu belirtir.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>|Örnek bağlam modunu belirtir.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.UseSynchronizationContext%2A>|Bir ayarlanmışsa, belirtilen eşitleme bağlamının kullanılıp kullanılmayacağını belirler. Windows Forms uygulamalarında bir `WindowsFormsSynchronizationContext` kullanıp kullanmayacağınızı denetlemek istediğinizde bunu kullanın.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A>|Genel işlenmemiş yürütme özel durumlarının bir `Fault<string>` dönüştürülüp dönüştürülmeyeceğini ve hata iletisi olarak gönderileceğini belirler.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>|İşlemler için yalıtım düzeyini belirtir.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.ValidateMustUnderstand%2A>|Beklenmeyen ileti üstbilgilerinin hata koşuluna neden olup olmadığını belirler.|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.UseSynchronizationContext%2A>|Sağlanan eşitleme bağlamını kullanıp kullanmayacağını, ayarlanmış olup olmadığını belirler. Windows Forms uygulamalarında bir uygulama `WindowsFormsSynchronizationContext` kullanıp kullanmayacağını denetlemek istediğinizde bunu kullanın.|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A>|Genel işlenmemiş yürütme özel durumlarının a'ya `Fault<string>` dönüştürülüp hata iletisi olarak gönderilip gönderilmeyeceğini belirler.|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>|Hareketler için yalıtım düzeyini belirtir.|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.ValidateMustUnderstand%2A>|Beklenmeyen ileti üstbilgilerinin hata durumuna neden olup olmadığını belirler.|  
   
- İşlem davranışları <xref:System.ServiceModel.OperationBehaviorAttribute> özniteliği kullanılarak belirtilir. Aşağıdaki tabloda bu davranışların bazıları açıklanmaktadır.  
+ İşlem davranışları öznitelik kullanılarak <xref:System.ServiceModel.OperationBehaviorAttribute> belirtilir. Aşağıdaki tabloda bu davranışların bazıları açıklanmaktadır.  
   
-|İşlem davranışı|Açıklama|  
+|Operasyon Davranışı|Açıklama|  
 |------------------------|-----------------|  
-|<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>|Hizmet işleminin tamamlanmasının geçerli işlemi yürütmeyeceğini belirler.|  
-|<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>|Hizmet işleminin istemci tarafından akışlı bir işlemde görüntülenip görüntülenmeyeceğini belirler.|  
-|<xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>|Hizmet işleminin arayanın kimliğini taklit etmediğini belirler.|  
-|<xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A>|Hizmet örneklerinin, hizmet işlemi çağrısının başlangıcında veya sonunda geri dönüştürülüp dönüştürülmeyeceğini belirler.|  
+|<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>|Hizmet işleminin tamamlanmasının geçerli hareketi gerçekleştirip işlemediğini belirler.|  
+|<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>|Hizmet işleminin istemci tarafından akan bir harekette kaydolup olmadığını belirler.|  
+|<xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>|Hizmet işleminin arayanın kimliğini taklit edip etmediğini belirler.|  
+|<xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A>|Hizmet örneklerinin hizmet işlem çağrısının başında mı yoksa sonunda mı geri dönüştürülür olduğunu belirler.|  
   
- Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. Çağrılar arasındaki gecikme, hizmet işlemlerinde yapılan `System.Threading.Thread.Sleep()` çağrılarının sonucudur. Davranış örneklerinin geri kalanı bu davranışları daha ayrıntılı bir şekilde açıklamaktadır. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. Aramalar arasındaki gecikme, hizmet işlemlerinde `System.Threading.Thread.Sleep()` yapılan aramaların sonucudur. Davranış örneklerinin geri kalanı bu davranışları daha ayrıntılı olarak açıklar. İstemciyi kapatmak için istemci penceresinde ENTER tuşuna basın.  
   
 ```console  
 Add(100,15.99) = 115.99  
@@ -77,19 +77,19 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
   
-1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
+1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
   
-2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak [için, Windows Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
   
-3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
+3. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
   
 > [!IMPORTANT]
-> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
->   
+> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
->   
+>
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Default`  

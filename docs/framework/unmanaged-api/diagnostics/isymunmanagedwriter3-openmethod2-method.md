@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 025e358c-448f-4423-a2f2-57acf437c8a5
 topic_type:
 - apiref
-ms.openlocfilehash: 3a628aec0823c5db07d31d33813a020606906163
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0c112819ef3bc4f9a7146ee80f55202ff89d689a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438127"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178323"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>ISymUnmanagedWriter3::OpenMethod2 Yöntemi
-Bir yöntemi açar ve görüntüde gerçek bölüm konumunu sağlar.  
+Bir yöntem açar ve görüntüde gerçek bölüm ofset sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT OpenMethod2(   
+HRESULT OpenMethod2(
     [in] mdMethodDef method,  
     [in] ULONG32 isect,  
     [in] ULONG32 offset);  
@@ -36,19 +36,19 @@ HRESULT OpenMethod2(
   
 ## <a name="parameters"></a>Parametreler  
  `method`  
- 'ndaki Açılacak yöntemin meta veri belirteci.  
+ [içinde] Açılacak yöntem için meta veri belirteci.  
   
  `isect`  
- 'ndaki Görüntüdeki bölüm boşluğu.  
+ [içinde] Görüntüdeki bölüm ofset.  
   
  `offset`  
- 'ndaki Görüntüdeki fark.  
+ [içinde] Görüntüdeki ofset.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ yöntem başarılı olursa S_OK; aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym. IDL, CorSym. h  
+ **Üstbilgi:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

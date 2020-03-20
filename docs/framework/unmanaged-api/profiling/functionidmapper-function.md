@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: b8205b60-1893-4303-8cff-7ac5a00892aa
 topic_type:
 - apiref
-ms.openlocfilehash: d5bf6626e2c6ba15fa9a5da08bcf2d9052866750
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 0cf2014d7007593c51868eff0b488fdab136e362
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866950"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175180"
 ---
 # <a name="functionidmapper-function"></a>FunctionIDMapper İşlevi
-Profil oluşturucuyu, bir işlevin verilen tanımlayıcısının, bu işlev için [FunctionEnter2](functionenter2-function.md), [FunctionLeave2](functionleave2-function.md)ve [FunctionTailcall2](functiontailcall2-function.md) geri ÇAĞıRMALAR içinde kullanılacak alternatif bir kimliğe yeniden eşlenilebileceği konusunda bilgilendirir. `FunctionIDMapper`, profil oluşturucunun bu işlev için geri çağırmaları almak isteyip istemediğini belirtmek için de olanak sağlar.  
+Profiloluşturucuya, bir işlevin verilen tanımlayıcısının [FunctionEnter2](functionenter2-function.md), [FunctionLeave2](functionleave2-function.md)ve [FunctionTailcall2](functiontailcall2-function.md) aramaları'nda kullanılmak üzere alternatif bir kimlikle yeniden eşlenebileceğini belirtir. `FunctionIDMapper`ayrıca profilleyicinin bu işlev için geri arama almak isteyip istemediğini belirtmesini sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 UINT_PTR __stdcall FunctionIDMapper (  
-    [in]  FunctionID  funcId,   
+    [in]  FunctionID  funcId,
     [out] BOOL       *pbHookFunction  
 );  
 ```  
@@ -37,32 +37,32 @@ UINT_PTR __stdcall FunctionIDMapper (
 
 - `funcId`
 
-  \[içinde] yeniden eşleştirilecek işlev tanımlayıcısı.
+  \[in] Yeniden alınacak işlev tanımlayıcısı.
 
 - `pbHookFunction`
 
-  \[out] profil oluşturucunun `FunctionEnter2`, `FunctionLeave2`ve `FunctionTailcall2` geri çağırmaları almak isterse `true` için ayarladığı değere yönelik bir işaretçi. Aksi takdirde, bu değeri `false`olarak ayarlar.
+  \[out] `true` Profiloluşturucunun , `FunctionEnter2`ve `FunctionLeave2` `FunctionTailcall2` geri arama almak istiyorsa ayarladığını bir değere işaretçi; aksi takdirde, bu `false`değeri .
 
 ## <a name="return-value"></a>Dönüş Değeri  
- Profiler, yürütme altyapısının alternatif işlev tanımlayıcısı olarak kullandığı bir değer döndürür. `pbHookFunction``false` döndürülmediği takdirde dönüş değeri null olamaz. Aksi takdirde, bir null dönüş değeri beklenmedik sonuçlar üretir, bu da işlemi çok büyük olasılıkla halele vermez.  
+ Profil oluşturucu, yürütme altyapısının alternatif işlev tanımlayıcısı olarak kullandığı bir değeri döndürür. İade değeri iade edilmedikçe `false` null `pbHookFunction`olamaz. Aksi takdirde, null bir iade değeri, büyük olasılıkla işlemi durdurmak da dahil olmak üzere öngörülemeyen sonuçlar üretecektir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `FunctionIDMapper` işlevi bir geri çağırmasıdır. Bir işlev KIMLIĞINI profil Oluşturucu için daha kullanışlı olan başka bir tanımlayıcıya yeniden eşlemek için profil oluşturucu tarafından uygulanır. `FunctionIDMapper`, verilen herhangi bir işlev için kullanılacak alternatif KIMLIĞI döndürür. Yürütme altyapısı daha sonra, bu alternatif KIMLIĞI, geleneksel işlev KIMLIĞINE ek olarak, `FunctionEnter2`, `FunctionLeave2`ve `FunctionTailcall2` kancalarını `clientData` parametresindeki Profiler 'a geri geçirerek, kancaın çağrıldığı işlevi belirlemek için profil oluşturucunun isteğine geçer.  
+ İşlev `FunctionIDMapper` bir geri aramadır. Bir işlev kimliğini profilci için daha kullanışlı olan başka bir tanımlayıcıya yeniden eşlemek için profiloluşturucu tarafından uygulanır. Herhangi `FunctionIDMapper` bir işlev için kullanılacak alternatif kimliği döndürür. Yürütme motoru daha sonra bu alternatif kimlik geçirerek profilci isteği onurlandırır, geleneksel işlev kimliğine `clientData` ek olarak, `FunctionEnter2` `FunctionLeave2`geri `FunctionTailcall2` parametre profilci için , ve kanca, kanca çağrıldığı işlevi tanımlamak için.  
   
- `FunctionIDMapper` işlevinin uygulamasını belirtmek için [ICorProfilerInfo:: SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md) yöntemini kullanabilirsiniz. `ICorProfilerInfo::SetFunctionIDMapper` yöntemini yalnızca bir kez çağırabilirsiniz ve [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) geri çağırmasında bunu yapmanızı öneririz.  
+ `FunctionIDMapper` İşlevin uygulanmasını belirtmek için [ICorProfilerInfo::SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md) yöntemini kullanabilirsiniz. Yöntemi yalnızca bir kez arayabilirsiniz ve [bunu ICorProfilerCallback::Initialize](icorprofilercallback-initialize-method.md) callback'de yapmanızı öneririz. `ICorProfilerInfo::SetFunctionIDMapper`  
   
- Varsayılan olarak, [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md)kullanarak COR_PRF_MONITOR_ENTERLEAVE bayrağını ayarlayan ve [ICorProfilerInfo:: Setenterleavefunctionkancaları](icorprofilerinfo-setenterleavefunctionhooks-method.md) veya [ICorProfilerInfo2:: SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)aracılığıyla kancaları ayarlayan bir profil oluşturucu, her işlev için `FunctionEnter2`, `FunctionLeave2`ve `FunctionTailcall2` geri çağırmaları almalıdır. Ancak, profil oluşturucular, `false`' e `pbHookFunction` ayarlayarak belirli işlevler için bu geri çağırmaları almayı seçerek `FunctionIDMapper` uygulayabilir.  
+ Varsayılan olarak, ICorProfilerInfo kullanarak COR_PRF_MONITOR_ENTERLEAVE bayrağı ayarlar bir profilci varsayılır::SetEventMask , ve [ICorProfilerInfo üzerinden kanca ayarlar::SetEnterLeaveFunctionHooks](icorprofilerinfo-setenterleavefunctionhooks-method.md) veya [ICorProfilerInfo2::SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md), `FunctionEnter2`almak gerekir `FunctionLeave2`, ve `FunctionTailcall2` her fonksiyon için geri arama. [ICorProfilerInfo::SetEventMask](icorprofilerinfo-seteventmask-method.md) Ancak, profilciler `FunctionIDMapper` seçici olarak ayarlayarak `pbHookFunction` belirli işlevler için bu `false`geri aramaları almaktan kaçınmak için uygulayabilir.  
   
- Profil oluşturucular, profili oluşturulmuş bir uygulamanın birden çok iş parçacığının aynı anda aynı yöntemi/işlevi aldığı durumlarda toleranslı olmalıdır. Bu gibi durumlarda, profil oluşturucu aynı `FunctionID`birden çok `FunctionIDMapper` geri çağırma alabilir. Profil Oluşturucu aynı `FunctionID`birden çok kez çağrıldığında, bu geri aramadan aynı değerleri döndürmelidir.  
+ Profilciler, profilli bir uygulamanın birden çok iş parçacığının aynı yöntem/işlevi aynı anda aradığı durumlara toleranslı olmalıdır. Bu gibi durumlarda, profil oluşturucu aynı `FunctionIDMapper` `FunctionID`için birden çok geri arama alabilir. Profil oluşturucu, aynı `FunctionID`ile birden çok kez çağrıldığında bu geri arama aynı değerleri döndürmek için emin olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf. IDL  
+ **Üstbilgi:** CorProf.idl  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

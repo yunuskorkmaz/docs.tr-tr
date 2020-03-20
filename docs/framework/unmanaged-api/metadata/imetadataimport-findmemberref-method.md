@@ -15,59 +15,59 @@ helpviewer_keywords:
 ms.assetid: 1ccda329-d752-4d89-abe8-511af3c3f4c9
 topic_type:
 - apiref
-ms.openlocfilehash: 59512cc1c1b280d7fe6deb2f9d721ad53547e356
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d8b8bfd0e70e75c702f32555c10f433a1ff4ae10
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437962"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175427"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef Yöntemi
-Belirtilen <xref:System.Type> içine alınmış ve belirtilen ad ve meta veri imzasına sahip olan üye başvurusunun MemberRef belirtecine yönelik bir işaretçi alır.  
+Belirtilen <xref:System.Type> ad ve meta veri imzasına sahip üye başvurusu için Üye Ref belirteci alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT FindMemberRef (  
    [in]  mdTypeRef          td,  
-   [in]  LPCWSTR            szName,   
-   [in]  PCCOR_SIGNATURE    pvSigBlob,   
-   [in]  ULONG              cbSigBlob,   
+   [in]  LPCWSTR            szName,
+   [in]  PCCOR_SIGNATURE    pvSigBlob,
+   [in]  ULONG              cbSigBlob,
    [out] mdMemberRef        *pmr  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- 'ndaki Arama için üye başvurusunu kapsayan sınıf veya arabirim için TypeRef belirteci. Bu değer `mdTokenNil`, arama genel bir değişken veya genel işlev başvurusu için yapılır.  
+ [içinde] Arama için üye başvuruyu içine alan sınıf veya arabirim için TypeRef belirteci. Bu değer `mdTokenNil`ise, arama genel değişken veya genel işlev başvurusu için yapılır.  
   
  `szName`  
- 'ndaki Arama yapılacak üye başvurusunun adı.  
+ [içinde] Aranacak üye nin adı.  
   
  `pvSigBlob`  
- 'ndaki Üye başvurusunun ikili meta veri imzasına yönelik bir işaretçi.  
+ [içinde] Üye başvurunun ikili meta veri imzasına işaretçi.  
   
  `cbSigBlob`  
- 'ndaki `pvSigBlob`bayt cinsinden boyutu.  
+ [içinde] `pvSigBlob`Baytboyutu.  
   
  `pmr`  
- dışı Eşleşen MemberRef belirtecine yönelik bir işaretçi.  
+ [çıkış] Eşleşen ÜyeRef belirteci için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Üyeyi kapsayan sınıfını veya arabirimini (`td`), adını (`szName`) ve isteğe bağlı olarak imzasını (`pvSigBlob`) kullanarak belirtirsiniz.  
+ Üyeyi çevreleyen sınıfını veya arayüzünü`td`( ),`szName`adını ( ),`pvSigBlob`ve isteğe bağlı olarak imzasını ( ) kullanarak belirtirsiniz.  
   
- İmzaların belirli bir kapsama bağlandığı için `FindMemberRef` geçirilen imza geçerli kapsamda oluşturulmuş olmalıdır. İmza, kapsayan sınıf veya değer türünü tanımlayan bir belirteç ekleyebilir. Belirteç, yerel TypeDef tablosunun bir dizinidir. Geçerli kapsamın bağlamı dışında bir çalışma zamanı imzası derlenemez ve bu imzayı `FindMemberRef`giriş olarak kullanabilirsiniz.  
+ İmzalar belirli `FindMemberRef` bir kapsama bağlı olduğundan, geçirilen imza geçerli kapsamda oluşturulmuş olmalıdır. İmza, çevreleyen sınıfı veya değer türünü tanımlayan bir belirteç katıştırabilir. Belirteç, yerel TypeDef tablosuna bir dizindir. Geçerli kapsam bağlamının dışında bir çalışma zamanı imzası oluşturamazsınız ve `FindMemberRef`bu imzayı 'ye giriş olarak kullanamazsınız.  
   
- `FindMemberRef` yalnızca sınıfta veya arabirimde doğrudan tanımlanmış üye başvurularını bulur; devralınan üye başvurularını bulmaz.  
+ `FindMemberRef`yalnızca doğrudan sınıf veya arabirimde tanımlanmış üye başvuruları bulur; devralınan üye referansları bulamaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

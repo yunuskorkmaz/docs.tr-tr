@@ -10,39 +10,39 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-ms.openlocfilehash: 791944bd9e8f5520a571e6fb415d69022aa0bead
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 672104db94826cfbe113a7ae0ea29546b0c3b9da
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991709"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181996"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Bir Windows Formundaki Denetimler için Erişilebilirlik Bilgileri Sağlama
-Erişilebilirlik yardımları, Engelli kişilerin bilgisayarları daha verimli bir şekilde kullanmasına yardımcı olan özel programlar ve cihazlardır. Bu örneklerde, fare veya klavyeyi kullanmak yerine, kısayol tuşları sağlayan kişiler için görme ve ses girişi yardımcı programları için ekran okuyucular bulunur. Bu erişilebilirlik yardımları, Windows Forms denetimleri tarafından sunulan erişilebilirlik özellikleriyle etkileşime geçebilir. Bu özellikler şunlardır:  
+Erişilebilirlik yardımcıları, engelli kişilerin bilgisayarları daha etkili kullanmasına yardımcı olan özel programlar ve aygıtlardır. Örnekler arasında, fare veya klavye kullanmak yerine sözlü komutlar sağlayan kişiler için kör olan kişiler için ekran okuyucular ve ses girişi yardımcı programları yer alır. Bu erişilebilirlik yardımcıları, Windows Forms denetimleri tarafından açığa çıkarılan erişilebilirlik özellikleriyle etkileşime girerek etkileşime girebilirsiniz. Bu özellikler şunlardır:  
   
-- **AccessibilityObject**  
+- **Accessibilityobject**  
   
-- **Erişilebilir Defaultactiondescription**  
+- **ErişilebilirDefaultActionDescription**  
   
-- **Erişilebilir açıklama**  
+- **Accessibledescription**  
   
-- **Erişilebilir ad**  
+- **Accessiblename**  
   
-- **Erişilebilir OLE**  
+- **Accessiblerole**  
   
-## <a name="accessibilityobject-property"></a>AccessibilityObject özelliği  
- Bu salt okunurdur özelliği bir <xref:System.Windows.Forms.AccessibleObject> örnek içerir. **Erişilebilir nesne** , denetimin açıklaması, <xref:Accessibility.IAccessible> ekran konumu, gezinme becerileri ve değer hakkında bilgi sağlayan arabirimini uygular. Tasarımcı, bu değeri denetim forma eklendiğinde ayarlar.  
+## <a name="accessibilityobject-property"></a>ErişilebilirlikNesne Özelliği  
+ Salt okunur özelliği bir <xref:System.Windows.Forms.AccessibleObject> örnek içerir. **Erişilebilir Nesne,** denetimin <xref:Accessibility.IAccessible> açıklaması, ekran konumu, gezinme yetenekleri ve değeri hakkında bilgi sağlayan arabirimi uygular. Denetim forma eklendiğinde tasarımcı bu değeri ayarlar.  
   
-## <a name="accessibledefaultactiondescription-property"></a>Erişilebilir Defaultactiondescription özelliği  
- Bu dize, denetimin eylemini açıklar. Özellikler penceresi görünmez ve yalnızca kodda ayarlanabilir. Aşağıdaki örnek, bir düğme denetimi için bu özelliği ayarlar:  
+## <a name="accessibledefaultactiondescription-property"></a>ErişilebilirDefaultActionDescription Özelliği  
+ Bu dize, denetimin eylemini açıklar. Özellikler penceresinde görünmez ve yalnızca kod olarak ayarlanabilir. Aşağıdaki örnek, bir düğme denetimi için bu özelliği ayarlar:  
   
 ```vb  
 Button1.AccessibleDefaultActionDescription = _  
    "Closes the application."  
-``` 
+```
 
 ```csharp  
-Button1.AccessibleDefaultActionDescription =   
+Button1.AccessibleDefaultActionDescription =
    "Closes the application.";  
 ```
 
@@ -51,8 +51,8 @@ button1->AccessibleDefaultActionDescription =
    "Closes the application.";  
 ```  
   
-## <a name="accessibledescription-property"></a>Erişilebilir Açıklama özelliği  
- Bu dize, denetimi açıklar. Özellikler penceresi veya kodda aşağıdaki gibi ayarlanabilir.  
+## <a name="accessibledescription-property"></a>Erişilebilir Açıklama Özelliği  
+ Bu dize denetimi açıklar. Özellikler penceresinde veya kod olarak aşağıdaki gibi ayarlanabilir:  
   
 ```vb  
 Button1.AccessibleDescription = "A button with text 'Exit'."  
@@ -66,8 +66,8 @@ Button1.AccessibleDescription = "A button with text 'Exit'";
 button1->AccessibleDescription = "A button with text 'Exit'";  
 ```  
   
-## <a name="accessiblename-property"></a>Erişilebilirblename özelliği  
- Bu, erişilebilirlik yardımlarına bildirilen bir denetimin adıdır. Özellikler penceresi veya kodda aşağıdaki gibi ayarlanabilir.  
+## <a name="accessiblename-property"></a>ErişilebilirAd Özelliği  
+ Bu, erişilebilirlik yardımcılarına bildirilen bir denetimin adıdır. Özellikler penceresinde veya kod olarak aşağıdaki gibi ayarlanabilir:  
   
 ```vb  
 Button1.AccessibleName = "Order"  
@@ -81,10 +81,10 @@ Button1.AccessibleName = "Order";
 button1->AccessibleName = "Order";  
 ```  
   
-## <a name="accessiblerole-property"></a>Erişilebilir OLE özelliği  
- Bir <xref:System.Windows.Forms.AccessibleRole> sabit listesi içeren bu özellik, denetimin kullanıcı arabirimi rolünü açıklar. Yeni bir denetimin değeri olarak `Default`ayarlanır. Bu, varsayılan olarak bir **düğme** denetiminin **düğme**işlevi gördüğü anlamına gelir. Bir denetimin başka bir rolü varsa, bu özelliği sıfırlamak isteyebilirsiniz. Örneğin, bir **PictureBox** denetimini **grafik**olarak kullanıyor olabilirsiniz ve erişilebilirlik yardımlarının rolü **PictureBox**olarak değil bir **grafik**olarak rapor etmek isteyebilirsiniz. Bu özelliği, geliştirmiş olduğunuz özel denetimler için de belirtmek isteyebilirsiniz. Bu özellik Özellikler penceresi veya kodda aşağıdaki gibi ayarlanabilir:  
+## <a name="accessiblerole-property"></a>ErişilebilirRol Özelliği  
+ Numaralandırma <xref:System.Windows.Forms.AccessibleRole> içeren bu özellik, denetimin kullanıcı arabirimi rolünü açıklar. Yeni bir denetim değeri `Default`' ne göre ayarlanır. Bu, varsayılan olarak, bir **Düğme** denetiminin **Düğme**gibi hareket ettiği anlamına gelir. Denetimin başka bir rolü varsa bu özelliği sıfırlamak isteyebilirsiniz. Örneğin, **Bir Grafik**olarak **PictureBox** denetimi kullanıyor olabilirsiniz ve erişilebilirlik yardımcılarını, **Rolü PictureBox**olarak değil, **Grafik**olarak bildirmek için isteyebilirsiniz. Ayrıca, geliştirdiğiniz özel denetimler için bu özelliği belirtmek isteyebilirsiniz. Bu özellik Özellikler penceresinde veya kod olarak aşağıdaki gibi ayarlanabilir:  
   
-```vb 
+```vb
 PictureBox1.AccessibleRole = AccessibleRole.Chart  
 ```
 

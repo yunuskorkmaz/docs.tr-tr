@@ -15,66 +15,66 @@ helpviewer_keywords:
 ms.assetid: 7c9e9120-3104-42f0-86ce-19a025f20dcc
 topic_type:
 - apiref
-ms.openlocfilehash: ed193aab8beb0de1321aa1d52ec9f963b08b316c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7410f91a853f3a677a105dc2e12a86d723c9fad6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441668"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177313"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName Yöntemi
-Belirtilen ada sahip belirtilen türdeki üyeleri temsil eden MemberDef belirteçlerini numaralandırır.  
+Belirtilen türdeki üyeleri temsil eden ÜyeDef belirteçlerini belirtilen adla oyalar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumMembersWithName (  
-   [in, out] HCORENUM    *phEnum,   
-   [in]      mdTypeDef   cl,   
-   [in]      LPCWSTR     szName,   
-   [out]     mdToken     rMembers[],   
-   [in]      ULONG       cMax,   
+   [in, out] HCORENUM    *phEnum,
+   [in]      mdTypeDef   cl,
+   [in]      LPCWSTR     szName,
+   [out]     mdToken     rMembers[],
+   [in]      ULONG       cMax,
    [out]     ULONG       *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] Numaralandırıcı için bir işaretçi.  
+ [içinde, dışarı] Sayıya işaretçisi.  
   
  `cl`  
- 'ndaki Numaralandırılacak üyeleri olan türü temsil eden bir TypeDef belirteci.  
+ [içinde] Üyelerini sayısala dizecek türü temsil eden bir TypeDef belirteci.  
   
  `szName`  
- 'ndaki Numaralandırıcı kapsamını sınırlayan üye adı.  
+ [içinde] Üyenin kapsamını sınırlayan üye adı.  
   
  `rMembers`  
- dışı MemberDef belirteçlerini depolamak için kullanılan dizi.  
+ [çıkış] ÜyeDef belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- 'ndaki `rMembers` dizisinin en büyük boyutu.  
+ [içinde] `rMembers` Dizinin en büyük boyutu.  
   
  `pcTokens`  
- dışı `rMembers`' de döndürülen MemberDef belirteçlerinin gerçek sayısı.  
+ [çıkış] ÜyeDef belirteçlerinin gerçek sayısı `rMembers`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, alanları ve yöntemleri numaralandırır, ancak özellikleri veya olayları numaralandırır. [IMetaDataImport:: EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md)'tan farklı olarak `EnumMembersWithName`, belirtilen ada sahip olmayan tüm alan ve üye belirteçlerini atar.  
+ Bu yöntem alanları ve yöntemleri, ancak özellikleri veya olayları sayısallar. [IMetaDataImport aksine::EnumMembers,](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md) `EnumMembersWithName` belirtilen adı olmayan tüm alan ve üye belirteçleri atar.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak MemberDef belirteçleri yok. Bu durumda `pcTokens` sıfırdır.|  
+|`S_OK`|`EnumTypeDefs`başarıyla döndürülür.|  
+|`S_FALSE`|Sayısala kaydolacak ÜyeDef belirteçleri yoktur. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -10,15 +10,15 @@ api_type:
 ms.assetid: 31833a2d-a0d6-48a1-b05f-995ca307a08f
 topic_type:
 - apiref
-ms.openlocfilehash: f037a28f0417f5607cd5b5637da4ca62e34e0edb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f1d4a1e08a63665a532c7aa3572f1e3f9c106ba6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132259"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179237"
 ---
 # <a name="cordebugcodeinvokepurpose-enumeration"></a>CorDebugCodeInvokePurpose Numaralandırması
-Bir içe aktarılmış işlevin neden yönetilen kodu çağırıyor olduğunu açıklar.  
+Dışa aktarılan bir işlevin yönetilen kodu neden aradığını açıklar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,7 +26,7 @@ Bir içe aktarılmış işlevin neden yönetilen kodu çağırıyor olduğunu a�
 typedef enum CorDebugCodeInvokePurpose  
 {  
     CODE_INVOKE_PURPOSE_NONE,  
-    CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION,    
+    CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION,
     CODE_INVOKE_PURPOSE_CLASS_INIT,  
     CODE_INVOKE_PURPOSE_INTERFACE_DISPATCH,  
 } CorDebugCodeInvokePurpose;  
@@ -36,27 +36,27 @@ typedef enum CorDebugCodeInvokePurpose
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`CODE_INVOKE_PURPOSE_NONE`|Hiçbiri veya bilinmiyor.|  
-|`CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION`|Yönetilen kod, ters p-Invoke gibi herhangi bir yönetilen giriş noktasını çalıştırır. Daha ayrıntılı bir amaç çalışma zamanı tarafından bilinmiyor.|  
-|`CODE_INVOKE_PURPOSE_CLASS_INIT`|Yönetilen kod statik bir Oluşturucu çalıştıracak.|  
-|`CODE_INVOKE_PURPOSE_INTERFACE_DISPATCH`|Yönetilen kod, çağrılan bazı arabirim yöntemleri için uygulamayı çalıştırır.|  
+|`CODE_INVOKE_PURPOSE_NONE`|Hiç ya da bilinmeyen.|  
+|`CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION`|Yönetilen kod, ters p-çağırma gibi yönetilen herhangi bir giriş noktasını çalıştıracaktır. Daha ayrıntılı bir amaç çalışma süresine göre bilinmemektedir.|  
+|`CODE_INVOKE_PURPOSE_CLASS_INIT`|Yönetilen kod statik bir oluşturucu çalıştıracak.|  
+|`CODE_INVOKE_PURPOSE_INTERFACE_DISPATCH`|Yönetilen kod, çağrılan bazı arabirim yöntemi için uygulamayı çalıştıracaktır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu numaralandırma, yönetilen kod üzerinden atlama hakkında bilgi sağlamak için [ICorDebugProcess6:: GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) yöntemi tarafından kullanılır.  
+ Bu numaralandırma, yönetilen kodüzerinden adım atma hakkında bilgi sağlamak için [ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) yöntemi tarafından kullanılır.  
   
 > [!NOTE]
-> Bu numaralandırma yalnızca .NET Native hata ayıklama senaryolarında kullanılmak üzere tasarlanmıştır.  
+> Bu numaralandırma yalnızca .NET Yerel hata ayıklama senaryolarında kullanılmak üzere tasarlanmıştır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Numaralandırmaları](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Hata ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

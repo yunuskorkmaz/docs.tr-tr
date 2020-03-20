@@ -14,69 +14,69 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-ms.openlocfilehash: 68332aee895f012bcf6ab6a72936c8dddc7f28a0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a300c2679ef11a84edb2ab89c8dea96e445c9ee3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122044"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177976"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx İşlevi
-Belirtilen kültür için bir HRESULT değerini uygun bir hata iletisine çevirir.  
+HRESULT değerini belirtilen kültür için uygun bir hata iletisine çevirir.  
   
- Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
+ Bu işlev .NET Framework 4'te amortismana hazırlanmıştır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT LoadStringRCEx (  
-    [in]  LCID    lcid,   
-    [in]  UINT    iResouceID,   
-    [out] LPWSTR  szBuffer,   
-    [in]  int     iMax,   
-    [in]  int     bQuiet,   
+    [in]  LCID    lcid,
+    [in]  UINT    iResouceID,
+    [out] LPWSTR  szBuffer,
+    [in]  int     iMax,
+    [in]  int     bQuiet,
     [out] int    *pcwchUsed  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `lcid`  
- 'ndaki Bir kültür tanımlayıcısı. `lcid` için-1 ' i varsayılan kültürü kullanacak şekilde geçirin.  
+ [içinde] Bir kültür tanımlayıcısı. Varsayılan kültürü `lcid` kullanmak için -1'i geç.  
   
  `iResourceID`  
- 'ndaki HRESULT.  
+ [içinde] Bir HRESULT.  
   
  `szBuffer`  
- dışı Başarılı bir şekilde tamamlandıktan sonra hata iletisini içeren bir arabellek.  
+ [çıkış] Başarılı bir şekilde tamamlandıktan sonra hata iletisi içeren bir arabellek.  
   
  `iMax`  
- 'ndaki Hata iletisi arabelleğinin boyutu.  
+ [içinde] Hata iletisi arabelleği boyutu.  
   
  `bQuiet`  
- 'ndaki LIP.  
+ [içinde] Göz ardı.  
   
  `pcwchUsed`  
- dışı Hata iletisinin uzunluğuna yönelik bir işaretçi.  
+ [çıkış] Hata iletisinin uzunluğuna işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem, aşağıdaki değerlere ek olarak, WinError. h içinde tanımlanan standart COM hata kodlarını döndürür.  
+ Bu yöntem, aşağıdaki değerlere ek olarak WinError.h'de tanımlandığı şekilde standart COM hata kodlarını döndürür.  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_INVALIDARG|`szBuffer` null veya `iMax` sıfır (0).|  
+|E_ınvalıdarg|`szBuffer`null veya `iMax` sıfır (0) ise.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntem başarıyla tamamlanmazsa, `szBuffer` boş bir dize içerir.  
+ Yöntem başarıyla tamamlanmamışsa, `szBuffer` boş bir dize içerir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE. h  
+ **Üstbilgi:** MSCorEE.h  
   
- **Kitaplık:** MSCorEE. dll  
+ **Kütüphane:** Mscoree.dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

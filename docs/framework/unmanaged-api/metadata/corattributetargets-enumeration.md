@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: 5f83cb96e39b257a1d35786130cd5ed31d071de7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 51741aa3a6d965c1e9743081628d8ad62e8fb04e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443876"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176207"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets Numaralandırması
 Bir öznitelik uygulamak için geçerli olduğu uygulama öğelerini belirtir.  
@@ -44,53 +44,53 @@ typedef enum CorAttributeTargets
     catDelegate            = 0x1000,  
     catGenericParameter    = 0x4000,  
   
-    catAll                 =   
-        catAssembly | catModule | catClass | catStruct |   
-        catEnum | catConstructor | catMethod | catProperty |   
-        catField | catEvent | catInterface | catParameter |   
+    catAll                 =
+        catAssembly | catModule | catClass | catStruct |
+        catEnum | catConstructor | catMethod | catProperty |
+        catField | catEvent | catInterface | catParameter |
         catDelegate | catGenericParameter,  
   
-    catClassMembers        =   
-        catClass | catStruct | catEnum | catConstructor |   
-        catMethod | catProperty | catField | catEvent |   
+    catClassMembers        =
+        catClass | catStruct | catEnum | catConstructor |
+        catMethod | catProperty | catField | catEvent |
         catDelegate | catInterface  
   
 } CorAttributeTargets;  
 ```  
   
-## <a name="members"></a>Üyeleri  
+## <a name="members"></a>Üyeler  
   
-|Üyesi|Açıklama|  
+|Üye|Açıklama|  
 |------------|-----------------|  
-|`catAssembly`|Öznitelik, bir derlemeye uygulanabilir.|  
-|`catModule`|Öznitelik, taşınabilir bir çalıştırılabilir (. dll veya. exe) modülüne uygulanabilir.|  
-|`catClass`|Öznitelik, bir sınıfa uygulanabilir.|  
-|`catStruct`|Öznitelik bir yapıya uygulanabilir; diğer bir deyişle, bir değer türüdür.|  
-|`catEnum`|Öznitelik, bir numaralandırmaya uygulanabilir.|  
-|`catConstructor`|Öznitelik, bir oluşturucuya uygulanabilir.|  
-|`catMethod`|Öznitelik, bir yönteme uygulanabilir.|  
-|`catProperty`|Öznitelik, bir özelliğe uygulanabilir.|  
-|`catField`|Öznitelik, bir alana uygulanabilir.|  
-|`catEvent`|Öznitelik, bir olaya uygulanabilir.|  
-|`catInterface`|Öznitelik, bir arabirime uygulanabilir.|  
-|`catParameter`|Öznitelik, bir parametreye uygulanabilir.|  
-|`catDelegate`|Öznitelik, bir temsilciye uygulanabilir.|  
-|`catGenericParameter`|Öznitelik, genel parametreye uygulanabilir.|  
-|`catAll`|Özniteliği herhangi bir uygulama öğesine uygulanabilir.|  
-|`catClassMembers`|Öznitelik, bir sınıfın üyesine uygulanabilir.|  
+|`catAssembly`|Öznitelik bir derlemeye uygulanabilir.|  
+|`catModule`|Öznitelik taşınabilir çalıştırılabilir (.dll veya .exe) modülüne uygulanabilir.|  
+|`catClass`|Öznitelik bir sınıfa uygulanabilir.|  
+|`catStruct`|Öznitelik bir yapıya uygulanabilir; diğer bir değer türü.|  
+|`catEnum`|Öznitelik bir numaralandırma uygulanabilir.|  
+|`catConstructor`|Öznitelik bir oluşturucuya uygulanabilir.|  
+|`catMethod`|Öznitelik bir yönteme uygulanabilir.|  
+|`catProperty`|Öznitelik bir özelliğe uygulanabilir.|  
+|`catField`|Öznitelik bir alana uygulanabilir.|  
+|`catEvent`|Öznitelik bir olaya uygulanabilir.|  
+|`catInterface`|Öznitelik bir arabirime uygulanabilir.|  
+|`catParameter`|Öznitelik bir parametreye uygulanabilir.|  
+|`catDelegate`|Öznitelik bir temsilciye uygulanabilir.|  
+|`catGenericParameter`|Öznitelik genel bir parametreye uygulanabilir.|  
+|`catAll`|Öznitelik herhangi bir uygulama öğesine uygulanabilir.|  
+|`catClassMembers`|Öznitelik bir sınıfın bir üyesine uygulanabilir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CorAttributeTargets` numaralandırma değerleri, tercih edilen birleşimi almak için bit düzeyinde veya işlemle birleştirilebilir.  
+ Numaralandırma `CorAttributeTargets` değerleri, tercih edilen kombinasyonu elde etmek için biraz akıllıca veya operasyonla birleştirilebilir.  
   
- `CorAttributeTargets` yönetilen <xref:System.AttributeTargets?displayProperty=nameWithType> numaralandırmasını paraleller.  
+ Yönetilen `CorAttributeTargets` numaralandırmaparalel. <xref:System.AttributeTargets?displayProperty=nameWithType>  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr. h  
+ **Üstbilgi:** CorHdr.h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

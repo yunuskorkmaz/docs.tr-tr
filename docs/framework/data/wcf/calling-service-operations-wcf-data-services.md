@@ -1,112 +1,112 @@
 ---
-title: Hizmet Işlemlerini çağırma (WCF Veri Hizmetleri)
+title: Arama Hizmeti İşlemleri (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: f838cbd0a1884d9fca1f12398b996cde93af453a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 41aac38cec97ae1afdd3c3c051d04ff242e7729d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937560"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174361"
 ---
-# <a name="calling-service-operations-wcf-data-services"></a>Hizmet Işlemlerini çağırma (WCF Veri Hizmetleri)
-Açık Veri Protokolü (OData), bir veri hizmeti için hizmet işlemlerini tanımlar. WCF Veri Hizmetleri, bu işlemleri veri hizmetindeki yöntemler olarak tanımlamanızı sağlar. Diğer veri hizmeti kaynakları gibi bu hizmet işlemleri de URI 'Ler kullanılarak karşılanır. Bir hizmet işlemi varlık türleri, tek varlık türü örnekleri ve tamsayı ve dize gibi basit türler için Koleksiyonlar döndürebilir. Ayrıca, bir hizmet işlemi `null` (`Nothing` Visual Basic) döndürebilir. WCF Veri Hizmetleri istemci kitaplığı, HTTP GET isteklerini destekleyen hizmet işlemlerine erişmek için kullanılabilir. Bu tür hizmet işlemleri, <xref:System.ServiceModel.Web.WebGetAttribute> uygulanmış yöntemler olarak tanımlanır. Daha fazla bilgi için bkz. [hizmet işlemleri](service-operations-wcf-data-services.md).  
+# <a name="calling-service-operations-wcf-data-services"></a>Arama Hizmeti İşlemleri (WCF Veri Hizmetleri)
+Açık Veri Protokolü (OData), bir veri hizmetiiçin hizmet işlemlerini tanımlar. WCF Veri Hizmetleri, bu tür işlemleri veri hizmetindeki yöntemler gibi tanımlamanıza olanak tanır. Diğer veri hizmeti kaynakları gibi, bu hizmet işlemleri de URI kullanılarak ele alınır. Bir hizmet işlemi varlık türleri, tek varlık türü örnekleri ve tamsayı ve dize gibi ilkel türlerin koleksiyonlarını döndürebilir. Bir hizmet işlemi `null` de`Nothing` (Visual Basic'te) geri dönebilir. WCF Veri Hizmetleri istemci kitaplığı, HTTP GET isteklerini destekleyen hizmet işlemlerine erişmek için kullanılabilir. Bu tür hizmet işlemleri <xref:System.ServiceModel.Web.WebGetAttribute> uygulanan yöntemler olarak tanımlanır. Daha fazla bilgi için [Hizmet İşlemleri'ne](service-operations-wcf-data-services.md)bakın.  
   
- Hizmet işlemleri, OData 'i uygulayan bir veri hizmeti tarafından döndürülen meta verilerde gösterilir. Meta verilerde, hizmet işlemleri `FunctionImport` öğesi olarak temsil edilir. Türü kesin belirlenmiş <xref:System.Data.Services.Client.DataServiceContext>oluştururken, Hizmet Başvurusu Ekle ve DataSvcUtil. exe araçları bu öğeyi yoksayar. Bu nedenle, bir hizmet işlemini doğrudan çağırmak için kullanılabilen bağlamda bir yöntem bulamacaksınız. Ancak, bu iki şekilde hizmet işlemlerini çağırmak için WCF Veri Hizmetleri istemcisini kullanmaya devam edebilirsiniz:  
+ Hizmet işlemleri, OData'yı uygulayan bir veri hizmeti tarafından döndürülen meta verilerde ortaya çıkarır. Meta verilerde, hizmet işlemleri öğeler `FunctionImport` olarak temsil edilir. Güçlü bir şekilde yazılan <xref:System.Data.Services.Client.DataServiceContext>, Hizmet Başvurusu Ekle ve DataSvcUtil.exe araçlarını oluştururken bu öğeyi yoksun. Bu nedenle, bağlam üzerinde bir hizmet işlemini doğrudan çağırmak için kullanılabilecek bir yöntem bulamazsınız. Ancak, hizmet işlemlerini şu iki şekilde aramak için WCF Veri Hizmetleri istemcisini kullanmaya devam edebilirsiniz:  
   
-- <xref:System.Data.Services.Client.DataServiceContext><xref:System.Data.Services.Client.DataServiceContext.Execute%2A> yöntemini çağırarak, hizmet işleminin URI 'sini, tüm parametrelerle birlikte sağlayarak. Bu yöntem, tüm hizmet Al işlemlerini çağırmak için kullanılır.  
+- Herhangi bir <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> parametre <xref:System.Data.Services.Client.DataServiceContext>ile birlikte, hizmet işleminin URI temini üzerinde yöntem arayarak. Bu yöntem, herhangi bir GET servis işlemini çağırmak için kullanılır.  
   
-- <xref:System.Data.Services.Client.DataServiceContext> <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> yöntemi kullanarak bir <xref:System.Data.Services.Client.DataServiceQuery%601> nesnesi oluşturun. <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A>çağrılırken, hizmet işleminin adı `entitySetName` parametresine sağlanır. Bu yöntem, <xref:System.Data.Services.Client.DataServiceQuery%601.Execute%2A> yöntemi çağrıldığında veya oluşturulduğunda hizmet işlemini çağıran bir <xref:System.Data.Services.Client.DataServiceQuery%601> nesnesi döndürür. Bu yöntem, bir koleksiyon döndüren GET hizmeti işlemlerini çağırmak için kullanılır. Tek bir parametre <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> yöntemi kullanılarak sağlanabilir. Bu yöntem tarafından döndürülen <xref:System.Data.Services.Client.DataServiceQuery%601> nesnesi, herhangi bir sorgu nesnesi gibi daha fazla bulunabilir. Daha fazla bilgi için bkz. [veri hizmetini sorgulama](querying-the-data-service-wcf-data-services.md).  
+- Bir <xref:System.Data.Services.Client.DataServiceQuery%601> nesne <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> oluşturmak <xref:System.Data.Services.Client.DataServiceContext> için yöntemi kullanarak. Arama <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A>yaparken, hizmet işleminin adı `entitySetName` parametreye verilir. Bu yöntem, <xref:System.Data.Services.Client.DataServiceQuery%601> numaralandırıldığında veya <xref:System.Data.Services.Client.DataServiceQuery%601.Execute%2A> yöntem çağrıldığında hizmet işlemini çağıran bir nesneyi döndürür. Bu yöntem, bir koleksiyon döndüren GET hizmet işlemlerini çağırmak için kullanılır. Yöntem kullanılarak <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> tek bir parametre sağlanabilir. Bu <xref:System.Data.Services.Client.DataServiceQuery%601> yöntemle döndürülen nesne, herhangi bir sorgu nesnesi gibi daha da oluşturulabilir. Daha fazla bilgi için [Bkz. Veri Hizmetini Sorgulama.](querying-the-data-service-wcf-data-services.md)  
   
-## <a name="considerations-for-calling-service-operations"></a>Hizmet Işlemlerini çağırma konuları  
- Aşağıdaki noktalar, hizmet işlemlerini çağırmak için WCF Veri Hizmetleri istemcisi kullanılırken geçerlidir.  
+## <a name="considerations-for-calling-service-operations"></a>Arama Hizmeti İşlemlerinde Dikkat Edilecek Hususlar  
+ Hizmet işlemlerini aramak için WCF Veri Hizmetleri istemcisini kullanırken aşağıdaki hususlar geçerlidir.  
   
-- Veri hizmetine zaman uyumsuz olarak erişirken, <xref:System.Data.Services.Client.DataServiceContext> üzerinde <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> yöntemleri veya <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A>/<xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> yöntemleri /<xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A>eş zamanlı zaman uyumsuz kullanmanız gerekir.  
+- Veri hizmetine eşit olarak erişirken, eşdeğer eşzamanlı <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> yöntemleri <xref:System.Data.Services.Client.DataServiceContext> veya <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 'deki <xref:System.Data.Services.Client.DataServiceQuery%601>yöntemleri kullanmanız gerekir.  
   
-- WCF Veri Hizmetleri istemci kitaplığı, temel türlerin bir koleksiyonunu döndüren bir hizmet işleminden sonuçları yürütülemiyor.  
+- WCF Veri Hizmetleri istemci kitaplığı, ilkel türler koleksiyonunu döndüren bir hizmet işleminin sonuçlarını somutlaştıramaz.  
   
-- WCF Veri Hizmetleri istemci kitaplığı, hizmet gönderme işlemlerinin çağrılmasını desteklemez. Bir HTTP POST tarafından çağrılan hizmet işlemleri `Method="POST"` parametresiyle <xref:System.ServiceModel.Web.WebInvokeAttribute> kullanılarak tanımlanır. Bir HTTP POST isteği kullanarak bir hizmet işlemini çağırmak için, bunun yerine bir <xref:System.Net.HttpWebRequest>kullanmanız gerekir.  
+- WCF Veri Hizmetleri istemci kitaplığı POST servis işlemlerini aramayı desteklemez. HTTP POST tarafından çağrılan servis işlemleri <xref:System.ServiceModel.Web.WebInvokeAttribute> `Method="POST"` parametre ile kullanılarak tanımlanır. Bir HTTP POST isteği kullanarak bir hizmet işlemini <xref:System.Net.HttpWebRequest>çağırmak için, bunun yerine bir .  
   
-- Tek bir sonuç döndüren veya birden fazla giriş parametresi gerektiren bir GET hizmeti işlemini çağırmak için <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> kullanamazsınız. Bunun yerine <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> yöntemini çağırmanız gerekir.  
+- Varlık veya <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> ilkel türde tek bir sonucu döndüren veya birden fazla giriş parametresi gerektiren get hizmet işlemini çağırmak için kullanamazsınız. Bunun yerine <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> yöntemi aramalısınız.  
   
-- Araçlar tarafından oluşturulan, bir hizmet işlemini çağırmak için <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> veya <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> yöntemini kullanan kesin olarak belirlenmiş <xref:System.Data.Services.Client.DataServiceContext> kısmi sınıfında bir genişletme yöntemi oluşturmayı düşünün. Bu, hizmet işlemlerini doğrudan bağlamdan çağırmanızı sağlar. Daha fazla bilgi için bkz. Blog Post [hizmeti işlemleri ve WCF veri Hizmetleri istemcisi](https://docs.microsoft.com/archive/blogs/astoriateam/service-operations-and-the-wcf-data-services-client).  
+- Bir hizmet işlemini çağırmak için ya <xref:System.Data.Services.Client.DataServiceContext> <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> da <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> yöntemi kullanan araçlar tarafından oluşturulan güçlü bir şekilde yazılan kısmi sınıfta bir uzantı yöntemi oluşturmayı düşünün. Bu, hizmet işlemlerini doğrudan bağlamdan aramanızı sağlar. Daha fazla bilgi için blog gönderisi [Hizmet İşlemleri ve WCF Veri Hizmetleri İstemci'si'ne](https://docs.microsoft.com/archive/blogs/astoriateam/service-operations-and-the-wcf-data-services-client)bakın.  
   
-- Bir hizmet işlemini çağırmak için <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> kullandığınızda, istemci kitaplığı, ampersan (&) ve dizelerde tek tırnak işareti gibi ayrılmış karakterlerin yüzde kodlaması gerçekleştirerek <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> sağlanan karakterleri otomatik olarak çıkar. Ancak, bir hizmet işlemini çağırmak için *Execute* yöntemlerinden birini çağırdığınızda, Kullanıcı tarafından sağlanan herhangi bir dize değerinin bu kaçışı gerçekleştirmeyi unutmamanız gerekir. URI 'Lerinde tek tırnak işareti, tek tırnak çifti olarak atlardır.  
+- Bir hizmet <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> işlemini çağırmak için kullandığınızda, istemci kitaplığı, ampersand (&) gibi ayrılmış karakterlerin yüzde kodlamasını <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> gerçekleştirerek ve dizelerdeki tek tırnak tan kaçarak otomatik olarak verilen karakterlerden kaçar. Ancak, bir hizmet işlemini çağırmak için *Yürüt metotlardan* birini çağırdığınızda, kullanıcı tarafından sağlanan dize değerlerinin bu kaçışını gerçekleştirmeyi unutmamanız gerekir. URI'lerde tek tırnak işaretleri tek tırnak çifti olarak kaçtır.  
   
-## <a name="examples-of-calling-service-operations"></a>Hizmet Işlemlerini çağırma örnekleri  
- Bu bölüm, WCF Veri Hizmetleri istemci kitaplığını kullanarak hizmet işlemlerini çağırma hakkında aşağıdaki örnekleri içerir:  
+## <a name="examples-of-calling-service-operations"></a>Arama Hizmeti İşlemleri Örnekleri  
+ Bu bölümde, WCF Veri Hizmetleri istemci kitaplığını kullanarak hizmet işlemlerinin nasıl çağrılması ile ilgili aşağıdaki örnekler yer almaktadır:  
   
-- [Bir varlık koleksiyonu döndürmek için Execute&lt;T&gt; çağrılıyor](calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
+- [Varlıklar&lt;Koleksiyonunu&gt; Döndürmek Için Execute T'yi Arama](calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
   
-- [Bir varlık koleksiyonu döndürmek için CreateQuery&lt;T&gt; kullanma](calling-service-operations-wcf-data-services.md#CreateQueryIQueryable)  
+- [Varlıklar Koleksiyonunu&lt;&gt; Döndürmek için CreateQuery T'yi kullanma](calling-service-operations-wcf-data-services.md#CreateQueryIQueryable)  
   
-- [Tek bir varlık döndürmek için Execute&lt;T&gt; çağrılıyor](calling-service-operations-wcf-data-services.md#ExecuteSingleEntity)  
+- [Tek&lt;Bir&gt; Varlığı Döndürmek Için Yürütme T'yi Arama](calling-service-operations-wcf-data-services.md#ExecuteSingleEntity)  
   
-- [Temel değerlerin bir koleksiyonunu döndürmek için Execute&lt;T&gt; çağrılıyor](calling-service-operations-wcf-data-services.md#ExecutePrimitiveCollection)  
+- [İlkel&lt;&gt; Değerler Koleksiyonunu Döndürmek Için Execute T'yi Çağırma](calling-service-operations-wcf-data-services.md#ExecutePrimitiveCollection)  
   
-- [Tek bir temel değer döndürmek için Execute&lt;T&gt; çağrılıyor](calling-service-operations-wcf-data-services.md#ExecutePrimitiveValue)  
+- [Tek&lt;Bir&gt; İlkel Değeri Döndürmek Için Yürütme T'yi Arama](calling-service-operations-wcf-data-services.md#ExecutePrimitiveValue)  
   
-- [Veri döndüren bir hizmet Işlemi çağırma](calling-service-operations-wcf-data-services.md#ExecuteVoid)  
+- [Veri İade Sayılmama Hizmeti İşlemini Çağırma](calling-service-operations-wcf-data-services.md#ExecuteVoid)  
   
-- [Hizmet Işlemi zaman uyumsuz olarak çağrılıyor](calling-service-operations-wcf-data-services.md#ExecuteAsync)  
+- [Bir Hizmet İşlemini Eşzamanlı Olarak Çağırma](calling-service-operations-wcf-data-services.md#ExecuteAsync)  
   
-<a name="ExecuteIQueryable"></a>   
-### <a name="calling-executet-to-return-a-collection-of-entities"></a>Bir varlık koleksiyonu döndürmek için Execute\<T > çağrılıyor  
- Aşağıdaki örnek, bir `city` dize parametresi alan ve bir <xref:System.Linq.IQueryable%601>döndüren GetOrdersByCity adlı bir hizmet işlemini çağırır:  
+<a name="ExecuteIQueryable"></a>
+### <a name="calling-executet-to-return-a-collection-of-entities"></a>Varlıkların\<Bir Koleksiyon İade si için Execute T> Arama  
+ Aşağıdaki örnek, getOrdersByCity adlı bir hizmet işlemini `city` çağırır ve <xref:System.Linq.IQueryable%601>bir dize parametresi alır ve bir:  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationIQueryable](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationiqueryable)]
  [!code-vb[Astoria Northwind Client#CallServiceOperationIQueryable](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#callserviceoperationiqueryable)]  
   
- Bu örnekte, hizmet işlemi ilgili `Order_Detail` nesneleri olan `Order` nesnelerinin bir koleksiyonunu döndürür.  
+ Bu örnekte, hizmet işlemi ilgili `Order` `Order_Detail` nesnelerle nesnelerin bir koleksiyon döndürür.  
   
-<a name="CreateQueryIQueryable"></a>   
-### <a name="using-createqueryt-to-return-a-collection-of-entities"></a>Bir varlık koleksiyonu döndürmek için CreateQuery\<T > kullanma  
- Aşağıdaki örnek, aynı GetOrdersByCity hizmeti işlemini çağırmak için kullanılan bir <xref:System.Data.Services.Client.DataServiceQuery%601> döndürmek için <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> kullanır:  
+<a name="CreateQueryIQueryable"></a>
+### <a name="using-createqueryt-to-return-a-collection-of-entities"></a>Varlıkların Bir\<Koleksiyon Döndürme> CreateQuery T kullanma  
+ Aşağıdaki örnek, <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> aynı GetOrdersByCity hizmet işlemini çağırmak için kullanılan bir iade <xref:System.Data.Services.Client.DataServiceQuery%601> yi kullanır:  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationCreateQuery](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationcreatequery)]
  [!code-vb[Astoria Northwind Client#CallServiceOperationCreateQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#callserviceoperationcreatequery)]  
   
- Bu örnekte <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> yöntemi, sorguya parametreyi eklemek için kullanılır ve <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> yöntemi, sonuçlarda ilgili Order_Details nesneleri dahil etmek için kullanılır.  
+ Bu örnekte, <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> yöntem sorguya parametre eklemek için kullanılır <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> ve yöntem sonuçlara ilgili Order_Details nesneleri eklemek için kullanılır.  
   
-<a name="ExecuteSingleEntity"></a>   
-### <a name="calling-executet-to-return-a-single-entity"></a>Tek bir varlık döndürmek için Execute\<T > çağrılıyor  
- Aşağıdaki örnek, yalnızca tek bir sipariş varlığı döndüren GetNewestOrder adlı bir hizmet işlemini çağırır:  
+<a name="ExecuteSingleEntity"></a>
+### <a name="calling-executet-to-return-a-single-entity"></a>Tek\<Bir Varlığı Döndürmek için Execute T>'ı arama  
+ Aşağıdaki örnek, yalnızca tek bir Sipariş varlığını döndüren GetNewestOrder adlı bir hizmet işlemini çağırır:  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationSingleEntity](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationsingleentity)]
  [!code-vb[Astoria Northwind Client#CallServiceOperationSingleEntity](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#callserviceoperationsingleentity)]  
   
- Bu örnekte, yürütme sırasında yalnızca tek bir sipariş varlığı istemek için <xref:System.Linq.Enumerable.FirstOrDefault%2A> yöntemi kullanılır.  
+ Bu örnekte, <xref:System.Linq.Enumerable.FirstOrDefault%2A> yöntem yürütme yalnızca tek bir Sipariş varlık istemek için kullanılır.  
   
-<a name="ExecutePrimitiveCollection"></a>   
-### <a name="calling-executet-to-return-a-collection-of-primitive-values"></a>Temel değerlerin bir koleksiyonunu döndürmek için Execute\<T > çağrılıyor  
- Aşağıdaki örnek, bir dize değerleri koleksiyonu döndüren bir hizmet işlemini çağırır:  
+<a name="ExecutePrimitiveCollection"></a>
+### <a name="calling-executet-to-return-a-collection-of-primitive-values"></a>İlkel\<Değerler Koleksiyonunu Döndürmek için Execute T>'ı arama  
+ Aşağıdaki örnek, dize değerleri koleksiyonunu döndüren bir hizmet işlemi çağırır:  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationEnumString](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationenumstring)]  
   
-<a name="ExecutePrimitiveValue"></a>   
-### <a name="calling-executet-to-return-a-single-primitive-value"></a>Tek bir temel değer döndürmek için Execute\<T > çağrılıyor  
- Aşağıdaki örnek, tek bir dize değeri döndüren bir hizmet işlemini çağırır:  
+<a name="ExecutePrimitiveValue"></a>
+### <a name="calling-executet-to-return-a-single-primitive-value"></a>Tek\<Bir İlkel Değeri Döndürmek için Execute T>'ı arama  
+ Aşağıdaki örnek, tek bir dize değeri döndüren bir hizmet işlemi çağırır:  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationSingleInt](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationsingleint)]
  [!code-vb[Astoria Northwind Client#CallServiceOperationSingleInt](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#callserviceoperationsingleint)]  
   
- Bu örnekte, <xref:System.Linq.Enumerable.FirstOrDefault%2A> yöntemi yürütme sırasında yalnızca tek bir tamsayı değeri istemek için kullanılır.  
+ Yine bu örnekte, <xref:System.Linq.Enumerable.FirstOrDefault%2A> yöntem yürütme yalnızca tek bir tamsayı değeri istemek için kullanılır.  
   
-<a name="ExecuteVoid"></a>   
-### <a name="calling-a-service-operation-that-returns-no-data"></a>Veri döndüren bir hizmet Işlemi çağırma  
- Aşağıdaki örnek, veri döndüren bir hizmet işlemini çağırır:  
+<a name="ExecuteVoid"></a>
+### <a name="calling-a-service-operation-that-returns-no-data"></a>Veri İade Sayılmama Hizmeti İşlemini Çağırma  
+ Aşağıdaki örnek, veri döndüren bir hizmet işlemi çağırır:  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationVoid](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationvoid)]
  [!code-vb[Astoria Northwind Client#CallServiceOperationVoid](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#callserviceoperationvoid)]  
   
- Veriler döndürülmediği için yürütmenin değeri atanmadı. İsteğin başarılı olduğu tek gösterge <xref:System.Data.Services.Client.DataServiceQueryException> oluşturulmaz.  
+ Veri döndürülmediği için yürütmenin değeri atanmıyor. İsteğin başarılı olduğunun tek göstergesi hayır'ın <xref:System.Data.Services.Client.DataServiceQueryException> yükseltilmesidir.  
   
-<a name="ExecuteAsync"></a>   
-### <a name="calling-a-service-operation-asynchronously"></a>Hizmet Işlemi zaman uyumsuz olarak çağrılıyor  
- Aşağıdaki örnek, <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> ve <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A>çağırarak bir hizmet işlemini zaman uyumsuz olarak çağırır:  
+<a name="ExecuteAsync"></a>
+### <a name="calling-a-service-operation-asynchronously"></a>Bir Hizmet İşlemini Eşzamanlı Olarak Çağırma  
+ Aşağıdaki örnek, bir servis işlemini eş <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A>senkronize olarak arayarak çağırır ve:  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationasync)]
  [!code-vb[Astoria Northwind Client#CallServiceOperationAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#callserviceoperationasync)]  
@@ -114,9 +114,9 @@ Açık Veri Protokolü (OData), bir veri hizmeti için hizmet işlemlerini tanı
  [!code-csharp[Astoria Northwind Client#OnAsyncExecutionComplete](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#onasyncexecutioncomplete)]
  [!code-vb[Astoria Northwind Client#OnAsyncExecutionComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#onasyncexecutioncomplete)]  
   
- Hiçbir veri döndürülmediği için, yürütme tarafından döndürülen değer atanmadı. İsteğin başarılı olduğu tek gösterge <xref:System.Data.Services.Client.DataServiceQueryException> oluşturulmaz.  
+ Veri döndürülmedığından, yürütme tarafından döndürülen değer atanmıyor. İsteğin başarılı olduğunun tek göstergesi hayır'ın <xref:System.Data.Services.Client.DataServiceQueryException> yükseltilmesidir.  
   
- Aşağıdaki örnek, <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A>kullanarak aynı hizmet işlemini zaman uyumsuz olarak çağırır:  
+ Aşağıdaki örnek, aynı hizmet işlemini aşağıdakileri <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A>kullanarak eşit olarak çağırır:  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationQueryAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationqueryasync)]
  [!code-vb[Astoria Northwind Client#CallServiceOperationQueryAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#callserviceoperationqueryasync)]  

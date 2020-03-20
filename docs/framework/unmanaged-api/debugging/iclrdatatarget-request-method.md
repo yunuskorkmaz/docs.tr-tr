@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4723bd1c-eddb-4ed2-897a-010024a47e01
 topic_type:
 - apiref
-ms.openlocfilehash: 0a7e764d89dd42bcaf81da5cf6a16991b6b8a16e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 336ba38bc80fcb2649a12c78691e52c5e4d70bfe
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793699"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179107"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request Yöntemi
-Uygulama tarafından tanımlanan bir işlem istemek için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağırılır.  
+Uygulama tarafından tanımlandığı gibi bir işlem istemek için ortak dil çalışma zamanı (CLR) veri erişim hizmetleri tarafından çağrılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,43 +31,43 @@ Uygulama tarafından tanımlanan bir işlem istemek için ortak dil çalışma z
 HRESULT Request (  
     [in] ULONG32            reqCode,  
     [in] ULONG32            inBufferSize,  
-    [in, size_is(inBufferSize)]   
+    [in, size_is(inBufferSize)]
         BYTE                *inBuffer,  
     [in] ULONG32            outBufferSize,  
-    [out, size_is(outBufferSize)]   
+    [out, size_is(outBufferSize)]
         BYTE                *outBuffer  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `reqCode`  
- 'ndaki Kullanıcı tanımlı.  
+ [içinde] Kullanıcı tanımlı.  
   
  `inBufferSize`  
- 'ndaki Gelen istek için kullanılan giriş arabelleğinin boyutu.  
+ [içinde] Gelen istek için kullanılan giriş arabelleği boyutu.  
   
  `inBuffer`  
- 'ndaki İsteği içeren bir arabellek.  
+ [içinde] İsteği içeren bir arabellek.  
   
  `outBufferSize`  
- 'ndaki Yanıt için kullanılan çıkış arabelleğinin boyutu.  
+ [içinde] Yanıt için kullanılan çıktı arabelleği boyutu.  
   
  `outBuffer`  
- dışı Yanıtı içeren bir arabellek.  
+ [çıkış] Yanıtı içeren bir Arabellek.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Request` yöntemi, belirtilmeyen özel işlemlerin eklenmesini kolaylaştırır. Diğer bir deyişle, bu yöntem, arabirim tanımının düzeltilmesi gerekmeden genişletilebilirlik sağlar.  
+ Yöntem, `Request` belirtilmeyen özel işlemlerin eklenmesini kolaylaştırır. Diğer bir zamanda, bu yöntem arabirim tanımının gözden geçirilmesini gerektirmeden genişletilebilirlik sağlar.  
   
- Bu yöntem, hata ayıklama uygulamasının yazarı tarafından uygulanır.  
+ Bu yöntem hata ayıklama uygulamasının yazarı tarafından uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** ClrData. IDL, ClrData. h  
+ **Üstbilgi:** ClrData.idl, ClrData.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

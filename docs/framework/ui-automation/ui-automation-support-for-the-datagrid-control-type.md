@@ -6,100 +6,100 @@ helpviewer_keywords:
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-ms.openlocfilehash: 1e127b4a2fdb51a151344f81e1451ecee6ca3a5a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 69532c9836876c25e9f31395213b1a89e0307dcd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789536"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179796"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>DataGrid Denetim Türü için UI Otomasyon Desteği
 > [!NOTE]
-> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu dokümantasyon, ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıfları kullanmak <xref:System.Windows.Automation> isteyen .NET Framework geliştiricileri için tasarlanmıştır. Hakkında en son [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bilgi için [Bkz. Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
   
- Bu konuda, DataGrid denetim türü için [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] desteği hakkında bilgi verilmektedir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], denetim türü, bir denetimin `ControlType` özelliğini kullanmak için karşılaması gereken koşullar kümesidir. Koşullar, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısına yönelik özel yönergeler, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellik değerleri ve Denetim desenleri içerir.  
+ Bu konu, [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] DataGrid denetim türü için destek hakkında bilgi sağlar. Denetim [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]türü, `ControlType` özelliği kullanmak için denetimin karşılaması gereken koşullar kümesidir. Koşullar, ağaç yapısı, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellik değerleri ve denetim desenleri için özel yönergeler içerir.  
   
- DataGrid denetim türü, bir kullanıcının sütunlarda temsil edilen meta verileri içeren öğelerle kolayca çalışmasına olanak sağlar. Veri kılavuzu denetimlerinde bu öğeler hakkındaki öğe ve bilgi sütunlarının satırları vardır. Microsoft Vista Explorer 'daki liste görünümü denetimi, DataGrid denetim türünü destekleyen bir örnektir.  
+ DataGrid denetim türü, kullanıcının sütunlarda temsil edilen meta verileri içeren öğelerle kolayca çalışmasını sağlar. Veri ızgarası denetimlerinde bu öğelerle ilgili öğeler ve bilgi sütunları satırları vardır. Microsoft Vista Explorer'daki Liste Görünümü denetimi, DataGrid denetim türünü destekleyen bir örnektir.  
   
- Aşağıdaki bölümler, DataGrid denetim türü için gerekli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısını, özellikleri, denetim desenlerini ve olayları tanımlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gereksinimleri, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 veya Windows Forms bakılmaksızın tüm veri kılavuzu denetimleri için geçerlidir.  
+ Aşağıdaki bölümlerde DataGrid denetim türü için gerekli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısı, özellikleri, denetim desenleri ve olayları tanımlanır. Gereksinimler, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Win32 veya [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Windows Forms olsun, tüm veri ızgara denetimleri için geçerlidir.  
   
-## <a name="required-ui-automation-tree-structure"></a>Gerekli UI Otomasyonu ağaç yapısı  
- Aşağıdaki tabloda, veri kılavuzu denetimleriyle ilgili [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının denetim görünümü ve içerik görünümü gösterilmektedir ve her görünümde nelerin yer aldığı açıklanmaktadır. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı hakkında daha fazla bilgi için bkz. [UI Otomasyon ağacına genel bakış](ui-automation-tree-overview.md).  
+## <a name="required-ui-automation-tree-structure"></a>Gerekli UI Otomasyon Ağaç Yapısı  
+ Aşağıdaki tablo, veri ızgara denetimleri ile [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ilgili denetim görünümü ve ağacın içerik görünümünü görüntüler ve her görünümde nelerin bulunabileceğini açıklar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ağaç hakkında daha fazla bilgi için [UI Automation Tree Genel Bakış'a](ui-automation-tree-overview.md)bakın.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç denetimi görünümü|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı-Içerik görünümü|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Ağaç - Kontrol Görünümü|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Ağaç - İçerik Görünümü|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|DataGrid<br /><br /> <ul><li>Üst bilgi (0, 1 veya 2)<br /><br /> <ul><li>HeaderItem (sütun veya satır sayısı)</li></ul></li><li>DataItem (0 veya daha fazla; hiyerarşide yapılandırılabilir)</li></ul>|DataGrid<br /><br /> -DataItem (0 veya daha fazla; hiyerarşide yapılandırılabilir)|  
+|DataGrid<br /><br /> <ul><li>Üstbilgi (0, 1 veya 2)<br /><br /> <ul><li>Üstbilgi Öğesi (sütun veya satır sayısı)</li></ul></li><li>DataItem (0 veya daha fazla; hiyerarşi içinde yapılandırılabilir)</li></ul>|DataGrid<br /><br /> - DataItem (0 veya daha fazla; hiyerarşi içinde yapılandırılabilir)|  
   
-<a name="Required_UI_Automation_Properties"></a>   
+<a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>Gerekli UI Otomasyon Özellikleri  
- Aşağıdaki tabloda, değeri veya tanımı özellikle veri kılavuzu denetimleriyle ilgili olan özellikler listelenmiştir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri hakkında daha fazla bilgi için bkz. [istemciler Için UI Otomasyon özellikleri](ui-automation-properties-for-clients.md).  
+ Aşağıdaki tablo, değeri veya tanımı özellikle veri ızgara denetimleri ile ilgili özellikleri listeler. Özellikler hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] daha fazla bilgi [için, Müşteriler için Kullanıcı Arabirimi Otomasyon Özellikleri'ne](ui-automation-properties-for-clients.md)bakın.  
   
 |Özellik|Değer|Notlar|  
 |--------------|-----------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Notlara bakın.|Bu özelliğin değerinin bir uygulamadaki tüm denetimlerde benzersiz olması gerekir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Notlara bakın.|Bu özelliğin değeri, bir uygulamadaki tüm denetimler arasında benzersiz olmalıdır.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Notlara bakın.|Tüm denetimi içeren en dıştaki dikdörtgen.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Notlara bakın.|Sınırlayıcı bir dikdörtgen varsa desteklenir. Sınırlayıcı dikdörtgenin içindeki her nokta tıklatılabilir ise ve özelleştirilmiş isabet testi gerçekleştirirseniz ve ardından tıklatılabilir bir nokta sağlayabilirsiniz.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|DataGrid|Bu değer tüm UI çerçeveleri için aynıdır.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Doğru|Bu özelliğin değeri her zaman doğru olmalıdır. Bu, veri kılavuzu denetiminin her zaman [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının içerik görünümünde olması gerektiği anlamına gelir.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Doğru|Bu özelliğin değeri her zaman doğru olmalıdır. Bu, veri kılavuzu denetiminin her zaman [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının denetim görünümünde olması gerektiği anlamına gelir.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Notlara bakın.|Denetim, klavye odağı alamıyorsa, bu özelliği desteklemesi gerekir.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Notlara bakın.|Statik bir metin etiketi varsa, bu özellik bu denetimin bir başvurusunu kullanıma sunmalıdır.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"veri kılavuzu"|DataGrid denetim türüne karşılık gelen yerelleştirilmiş dize.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Notlara bakın.|Veri kılavuzu denetimi genellikle statik metin etiketinden `Name` özelliğinin değerini alır. Bir statik metin etiketi yoksa, uygulama geliştiricisi `Name` özelliği için bir değer atamalıdır. `Name` özelliğinin değeri hiçbir koşulda düzenleme denetiminin metin içeriği olmamalıdır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Notlara bakın.|Sınırlayıcı bir dikdörtgen varsa desteklenir. Sınırlayıcı dikdörtgen içindeki her nokta tıklatılabilir değilse ve özel isabet testi gerçekleştirin, sonra geçersiz kılınve tıklanabilir bir nokta sağlayın.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|DataGrid|Bu değer tüm Ara bilgi arabirimi çerçeveleri için aynıdır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Bu özelliğin değeri her zaman Doğru olmalıdır. Bu, veri ızgaradenetiminin her zaman [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacın içerik görünümünde olması gerektiği anlamına gelir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Bu özelliğin değeri her zaman Doğru olmalıdır. Bu, veri ızgaradenetiminin her zaman [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacın denetim görünümünde olması gerektiği anlamına gelir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Notlara bakın.|Denetim klavye odağı alabiliyorsa, bu özelliği desteklemesi gerekir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Notlara bakın.|Statik bir metin etiketi varsa, bu özellik bu denetime bir başvuru göstermelidir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"veri ızgarası"|DataGrid denetim türüne karşılık gelen yerelleştirilmiş dize.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Notlara bakın.|Veri ızgarası denetimi genellikle statik `Name` bir metin etiketinden özelliğinin değerini alır. Statik metin etiketi yoksa, uygulama geliştiricisinin özellik için bir `Name` değer ataması gerekir. `Name` Özelliğin değeri hiçbir zaman edit denetiminin metin içeriği olmamalıdır.|  
   
-## <a name="required-ui-automation-control-patterns"></a>Gerekli UI Otomasyonu Denetim desenleri  
- Aşağıdaki tabloda tüm veri kılavuzu denetimleri tarafından desteklenmesi gereken denetim desenleri listelenmektedir. Denetim desenleri hakkında daha fazla bilgi için bkz. [UI Otomasyonu Denetim desenlerine genel bakış](ui-automation-control-patterns-overview.md).  
+## <a name="required-ui-automation-control-patterns"></a>Gerekli UI Otomasyon Kontrol Desenleri  
+ Aşağıdaki tablo, tüm veri ızgara denetimleri tarafından desteklenmesi gereken denetim desenleri listeler. Denetim desenleri hakkında daha fazla bilgi için [UI Otomasyon Denetim Modellerine Genel Bakış'a](ui-automation-control-patterns-overview.md)bakın.  
   
-|Denetim deseninin|Destek|Notlar|  
+|Kontrol Deseni|Destek|Notlar|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|Evet|Veri kılavuzu denetimi her zaman kılavuz denetim modelini destekler çünkü bu öğe bir kılavuzda yer alan meta veriler içerir.|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider>|Şekline|Veri kılavuzunu kaydırma özelliği içeriğe ve kaydırma çubuklarının mevcut olup olmamasına bağlıdır.|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Şekline|Veri kılavuzunu seçme özelliği içeriğe bağlıdır.|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|Evet|Veri kılavuzu denetimi her zaman alt ağacı içinde bir üst bilgiye sahiptir, böylece tablo Denetim deseninin desteklenmesi gerekir.|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|Evet|Veri ızgarası denetimi nin kendisi her zaman Izgara denetim deseni destekler, çünkü bir ızgarada ortaya konan meta verileri içeren öğeler.|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider>|-sına bağ -lıdır|Veri ızgarasını kaydırma yeteneği içeriğe ve kaydırma çubuklarının bulunup bulunmadığına bağlıdır.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|-sına bağ -lıdır|Veri ızgarasını seçebilme özelliği içeriğe bağlıdır.|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|Evet|Veri ızgarası denetiminin her zaman alt ağacıiçinde bir üstbilgi vardır, bu nedenle Tablo denetim deseni desteklenmelidir.|  
   
- Veri kılavuzu kapsayıcıları içindeki veri öğeleri en az bir destekdir:  
+ Veri ızgara kapsayıcıları içindeki veri öğeleri en azından destekleyecektir:  
   
-- Seçim öğesi denetim deseninin (veri kılavuzu seçilebilir ise)  
+- Seçim Öğesi denetim deseni (veri ızgarası seçilebilirse)  
   
-- Kaydırma öğesi denetim deseninin (veri kılavuzu kaydırılabilir ise)  
+- Öğe denetim deseni kaydırma (veri ızgarası kaydırılabilirse)  
   
-- Grid öğesi denetim deseninin  
+- Izgara Öğesi kontrol deseni  
   
 - Tablo Öğesi denetim deseni  
   
-<a name="Required_UI_Automation_Events"></a>   
-## <a name="required-ui-automation-events"></a>Gerekli UI Otomasyon olayları  
- Aşağıdaki tabloda tüm veri kılavuzu denetimleri tarafından desteklenmesi gereken [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olayları listelenmektedir. Olaylar hakkında daha fazla bilgi için bkz. [UI Otomasyonu olaylarına genel bakış](ui-automation-events-overview.md).  
+<a name="Required_UI_Automation_Events"></a>
+## <a name="required-ui-automation-events"></a>Gerekli UI Otomasyon Etkinlikleri  
+ Aşağıdaki tablo, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tüm veri ızgara denetimleri tarafından desteklenmesi gereken olayları listeler. Etkinlikler hakkında daha fazla bilgi için [UI Otomasyon Etkinliklerine Genel Bakış'a](ui-automation-events-overview.md)bakın.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olayı|Destek|Notlar|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Olay|Destek|Notlar|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Gerekli|Yok.|  
-|özellik değişti olayı <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>.|Gerekli|Yok.|  
-|özellik değişti olayı <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>.|Gerekli|Yok.|  
-|özellik değişti olayı <xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>.|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|Şekline|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Gerekli|Yok.|  
-|özellik değişti olayı <xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty>.|Şekline|Yok.|  
-|özellik değişti olayı <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>.|Şekline|Denetim, kaydırma modelini destekliyorsa, bu olayı desteklemesi gerekir.|  
-|özellik değişti olayı <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty>.|Şekline|Denetim, kaydırma modelini destekliyorsa, bu olayı desteklemesi gerekir.|  
-|özellik değişti olayı <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty>.|Şekline|Denetim, kaydırma modelini destekliyorsa, bu olayı desteklemesi gerekir.|  
-|özellik değişti olayı <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty>.|Şekline|Denetim, kaydırma modelini destekliyorsa, bu olayı desteklemesi gerekir.|  
-|özellik değişti olayı <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty>.|Şekline|Denetim, kaydırma modelini destekliyorsa, bu olayı desteklemesi gerekir.|  
-|özellik değişti olayı <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty>.|Şekline|Denetim, kaydırma modelini destekliyorsa, bu olayı desteklemesi gerekir.|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Gerekli|Yok.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Gerekli|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>özellik değiştirilen olay.|Gerekli|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>özellik değiştirilen olay.|Gerekli|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>özellik değiştirilen olay.|Gerekli|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|-sına bağ -lıdır|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Gerekli|None|  
+|<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty>özellik değiştirilen olay.|-sına bağ -lıdır|None|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>özellik değiştirilen olay.|-sına bağ -lıdır|Denetim Kaydırma deseni destekliyorsa, bu olayı desteklemesi gerekir.|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty>özellik değiştirilen olay.|-sına bağ -lıdır|Denetim Kaydırma deseni destekliyorsa, bu olayı desteklemesi gerekir.|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty>özellik değiştirilen olay.|-sına bağ -lıdır|Denetim Kaydırma deseni destekliyorsa, bu olayı desteklemesi gerekir.|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty>özellik değiştirilen olay.|-sına bağ -lıdır|Denetim Kaydırma deseni destekliyorsa, bu olayı desteklemesi gerekir.|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty>özellik değiştirilen olay.|-sına bağ -lıdır|Denetim Kaydırma deseni destekliyorsa, bu olayı desteklemesi gerekir.|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty>özellik değiştirilen olay.|-sına bağ -lıdır|Denetim Kaydırma deseni destekliyorsa, bu olayı desteklemesi gerekir.|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Gerekli|None|  
   
-## <a name="date-grid-control-type-example"></a>Tarih kılavuz denetim türü örneği  
- Aşağıdaki görüntüde DataGrid denetim türünü uygulayan bir liste görünümü denetimi gösterilmektedir.  
+## <a name="date-grid-control-type-example"></a>Tarih Grid Kontrol Türü Örneği  
+ Aşağıdaki resimde, DataGrid denetim türünü uygulayan bir Liste Görünümü denetimi gösterin.  
   
- ![İki veri öğesi içeren liste görünümü denetiminin grafiği](./media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
+ ![İki veri öğesiyle Liste Görünümü denetiminin grafiği](./media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
   
- Liste görünümü denetimiyle ilgili olan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının denetim görünümü ve içerik görünümü aşağıda görüntülenmektedir. Her Otomasyon öğesi için Denetim desenleri parantez içinde gösterilir.  
+ Liste Görünümü denetimiyle ilgili [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacın denetim görünümü ve içerik görünümü aşağıda gösterilmiştir. Her otomasyon öğesi için kontrol desenleri parantez içinde gösterilir.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç denetimi görünümü|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı-Içerik görünümü|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Ağaç - Kontrol Görünümü|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Ağaç - İçerik Görünümü|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|<ul><li>DataGrid (tablo, kılavuz, seçim)</li><li>Üstbilgi<br /><br /> <ul><li>HeaderItem "Name" (Invoke)</li><li>HeaderItem "değiştirilme tarihi" (Invoke)</li><li>HeaderItem "size" (Invoke)</li></ul></li><li>"Contoso" grubu (TableItem, GridItem, SelectionItem, Table *, Grid\*)<br /><br /> <ul><li>DataItem "accounts. doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li><li>DataItem "accounts. doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid (tablo, kılavuz, seçim)</li><li>"Contoso" grubu (TableItem, GridItem, SelectionItem, Table *, Grid\*)<br /><br /> <ul><li>DataItem "accounts. doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li><li>DataItem "accounts. doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li></ul></li></ul>|  
+|<ul><li>DataGrid (Tablo, Kılavuz, Seçim)</li><li>Üst bilgi<br /><br /> <ul><li>HeaderItem "Ad" (Çağırma)</li><li>Üstbilgi Öğe "Değiştirilen Tarih" (Çağrıl)</li><li>HeaderItem "Boyut" (Çağırma)</li></ul></li><li>Grup "Contoso" (TableItem, GridItem, SelectionItem,\*Tablo*, Izgara)<br /><br /> <ul><li>DataItem "Alacak Hesapları.doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li><li>DataItem "Accounts Payable.doc" (SelectionItem,\*Invoke,\*TableItem , GridItem )</li></ul></li></ul>|<ul><li>DataGrid (Tablo, Kılavuz, Seçim)</li><li>Grup "Contoso" (TableItem, GridItem, SelectionItem,\*Tablo*, Izgara)<br /><br /> <ul><li>DataItem "Alacak Hesapları.doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li><li>DataItem "Accounts Payable.doc" (SelectionItem,\*Invoke,\*TableItem , GridItem )</li></ul></li></ul>|  
   
- Önceki örnekte \* birden çok denetim düzeyi içeren bir DataGrid gösterilmektedir. Grup ("contoso") denetimi iki DataItem denetimi içerir ("accounts. doc" ve "accounts borçları. doc"). DataGrid/GridItem çifti, bir çiftin farklı bir düzeyde bağımsızdır. Bir grup altındaki DataItem denetimleri, basit veri öğeleri yerine seçilebilir nesneler olarak daha net bir şekilde sunulmasını sağlayan bir ListItem denetim türü olarak da gösterilebilir. Bu örnek, gruplandırılmış veri öğelerinin alt öğelerini içermez.  
+ \*Önceki örnek, birden çok denetim düzeyi içeren bir DataGrid gösterir. Grup ("Contoso") denetimi iki DataItem denetimi ("Alacak Hesapları.doc" ve "Ödenecek Hesaplar.doc") içerir. DataGrid/GridItem çifti başka bir düzeydeki bir çiftden bağımsızdır. Grup altındaki DataItem denetimleri, basit veri öğeleri olarak değil, seçilebilir nesneler olarak daha açık bir şekilde sunulmasını sağlayan bir ListItem denetim türü olarak da ortaya çıkabilir. Bu örnek, gruplanmış veri öğelerinin alt öğelerini içermez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -12,50 +12,50 @@ api_type:
 ms.assetid: 6f60aae6-70ec-4c4c-963a-138df98c4668
 topic_type:
 - apiref
-ms.openlocfilehash: afeec3df03fc2b122ca8deb8123b79314b5e3837
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 341a86f4c1c8367f979e193a6284bf89f1b03ca0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76782428"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178799"
 ---
 # <a name="icordebugilframe4enumeratelocalvariablesex-method"></a>ICorDebugILFrame4::EnumerateLocalVariablesEx Yöntemi
 [.NET Framework 4.5.2 ve sonraki sürümlerde desteklenir]  
   
- Çerçevede yerel değişken için bir Numaralandırıcı alır ve isteğe bağlı olarak profil oluşturucu yeniden JIT araçlarına eklenen değişkenleri içerir.  
+ Çerçevedeki yerel değişken için bir sayıyalı madde alır ve isteğe bağlı olarak profil oluşturucu ReJIT enstrümantasyonuna eklenen değişkenleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp
 HRESULT EnumerateLocalVariablesEx(  
-   [in] ILCodeKind flags,   
+   [in] ILCodeKind flags,
    [out] ICorDebugValueEnum **ppValueEnum  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `flags`  
- 'ndaki Profil Oluşturucu yeniden JIT araçlarına eklenen değişkenlerin çerçeveye dahil edilip edilmeyeceğini belirten bir [ılcodekind](ilcodekind-enumeration.md) numaralandırma üyesi.  
+ [içinde] Profiloluşturr ReJIT enstrümantasyonuna eklenen değişkenlerin çerçeveye dahil edilip edilmeyeceğini belirten bir [ILCodeKind](ilcodekind-enumeration.md) numaralandırma üyesi.  
   
  `ppValueEnum`  
- dışı Bu çerçevedeki yerel değişkenlerin numaralandırıcısının bulunduğu bir "ICorDebugValueEnum" nesnesinin adresine yönelik bir işaretçi.  
+ [çıkış] Bu çerçevedeki yerel değişkenlerin sayıcısı olan "ICorDebugValueEnum" nesnesinin adresine işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, isteğe bağlı olarak profil oluşturucu yeniden JIT araçları 'nda eklenen değişkenlere erişmesi dışında, [EnumerateLocalVariables](icordebugilframe-enumeratelocalvariables-method.md) yöntemine benzerdir. `flags` `ILCODE_ORIGINAL_IL` ayarlanması [ICorDebugILFrame:: EnumerateLocalVariables](icordebugilframe-enumeratelocalvariables-method.md)çağrısı ile eşdeğerdir. `flags` `ILCODE_REJIT_IL` olarak ayarlamak, hata ayıklayıcının profil oluşturucu ReJIT araçları 'nda eklenen yerel değişkenlere erişmesini sağlar. Ara dil (IL) görünmüyorsa, numaralandırma boştur ve Yöntem `S_OK`döndürür.  
+ Bu yöntem, profiler ReJIT enstrümantasyonuna eklenen değişkenlere isteğe bağlı olarak erişilmesi dışında, [EnumerateLocalVariables](icordebugilframe-enumeratelocalvariables-method.md) yöntemine benzer. Ayar `flags` `ILCODE_ORIGINAL_IL` [iCorDebugILFrame::EnumerateLocalVariables arama eşdeğerdir.](icordebugilframe-enumeratelocalvariables-method.md) `flags` Hata `ILCODE_REJIT_IL` ayıklayıcının profil oluşturucu ReJIT enstrümantasyonuna eklenen yerel değişkenlere erişmesine olanak sağlayacak ayar. Ara dil (IL) enstrümantasyon aletli değilse, numaralandırma boştur ve yöntem döndürür. `S_OK`  
   
- Numaralandırıcı etkin olmayabilir, bu, çalışan yöntemdeki tüm yerel değişkenleri içermeyebilir.  
+ Enumerator, bazıları etkin olmayabilir, çünkü çalışan yöntemde tüm yerel değişkenleri içermeyebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ICorDebugILFrame4 Arabirimi](icordebugilframe4-interface.md)
 - [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
-- [ReJIT: nasıl yapılır Kılavuzu](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: Nasıl Yapilir Kılavuzu](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

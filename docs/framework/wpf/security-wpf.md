@@ -13,153 +13,153 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: a49634fd955b0dc1f4cac5c785d49c24d16bbc60
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: e0a56dcbf8d151fcb0d4f6271ecba15c0ff955a4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868050"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174621"
 ---
 # <a name="security-wpf"></a>Güvenlik (WPF)
-<a name="introduction"></a>Windows Presentation Foundation (WPF) tek başına ve tarayıcıda barındırılan uygulamalar geliştirirken güvenlik modelini göz önünde bulundurmanız gerekir. WPF tek başına uygulamaları, Windows Installer (. msi), XCopy veya ClickOnce kullanılarak dağıtılıp dağıtılmayacağı Kısıtlanmamış izinlerle (CAS**FullTrust** izin kümesi) yürütülür. ClickOnce ile kısmi güven dağıtma, tek başına WPF uygulamaları desteklenmez. Ancak, bir tam güven ana bilgisayar uygulaması, .NET Framework eklenti modelini kullanarak kısmi güven <xref:System.AppDomain> oluşturabilir. Daha fazla bilgi için bkz. [WPF Eklentilerine Genel Bakış](./app-development/wpf-add-ins-overview.md).  
+<a name="introduction"></a>Windows Presentation Foundation (WPF) bağımsız ve tarayıcı tarafından barındırılan uygulamaları geliştirirken, güvenlik modelini göz önünde bulundurmanız gerekir. WPF bağımsız uygulamaları, Windows Installer (.msi), XCopy veya ClickOnce kullanılarak dağıtılıp dağıtılmayacağı sınırsız izinlerle (CAS**FullTrust** izin kümesi) yürütülür. ClickOnce ile kısmi güven, bağımsız WPF uygulamaları nın dağıtılması desteklenmez. Ancak, tam güven ana bilgisayar uygulaması .NET Framework Add-in modelini kullanarak kısmi güven <xref:System.AppDomain> oluşturabilir. Daha fazla bilgi için [WPF Eklentilerine Genel Bakış'a](./app-development/wpf-add-ins-overview.md)bakın.  
   
- WPF tarayıcı tarafından barındırılan uygulamalar Windows Internet Explorer veya Firefox tarafından barındırılır ve daha fazla bilgi Için XAML tarayıcı uygulamaları (XBAP) veya gevşek [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] belgeleri olabilir. bkz. [WPF XAML tarayıcı uygulamalarına genel bakış](./app-development/wpf-xaml-browser-applications-overview.md).  
+ WPF tarayıcı tarafından barındırılan uygulamalar Windows Internet Explorer veya Firefox tarafından barındırılan ve xaml tarayıcı uygulamaları (XBAPs) veya gevşek [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] belgeler daha fazla bilgi için, [WPF XAML Tarayıcı Uygulamaları Genel Bakış](./app-development/wpf-xaml-browser-applications-overview.md)bakın olabilir.  
   
- WPF tarayıcıda barındırılan uygulamalar, varsayılan olarak varsayılan CA**Internet** bölgesi izin kümesiyle sınırlanan kısmi güven güvenlik alanı içinde yürütülür. Bu, WPF tarayıcı tarafından barındırılan uygulamaları istemci bilgisayardan, normal web uygulamalarının yalıtılması için bekleeceğiniz şekilde yalıtılmıştır. Bir XBAP, dağıtım URL 'sinin güvenlik bölgesine ve istemcinin güvenlik yapılandırmasına bağlı olarak, ayrıcalıkları tam güvenle yükseltebilir. Daha fazla bilgi için bkz. [WPF Kısmi güven güvenliği](wpf-partial-trust-security.md).  
+ WPF tarayıcı tarafından barındırılan uygulamalar, varsayılan OLARAK CAS**Internet** bölgesi izin kümesiyle sınırlı olan kısmi güven güvenliği sandbox içinde yürütülür. Bu, WPF tarayıcı tarafından barındırılan uygulamaları, tipik Web uygulamalarının yalıtılmış olmasını beklediğiniz şekilde istemci bilgisayardan etkin bir şekilde yalıtır. Bir XBAP, dağıtım URL'sinin güvenlik bölgesine ve istemcinin güvenlik yapılandırmasına bağlı olarak ayrıcalıkları Full Trust'a yükseltebilir. Daha fazla bilgi için [WPF Kısmi Güven Güvenliği'ne](wpf-partial-trust-security.md)bakın.  
   
- Bu konuda Windows Presentation Foundation (WPF) tek başına ve tarayıcıda barındırılan uygulamalar için güvenlik modeli ele alınmaktadır.  
+ Bu konu, Windows Presentation Foundation (WPF) bağımsız ve tarayıcı tarafından barındırılan uygulamalar için güvenlik modelini tartışır.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
-- [Güvenli gezinti](#SafeTopLevelNavigation)  
+- [Güvenli Navigasyon](#SafeTopLevelNavigation)  
   
-- [Web 'e göz atma yazılım güvenlik ayarları](#InternetExplorerSecuritySettings)  
+- [Web Tarama Yazılımı Güvenlik Ayarları](#InternetExplorerSecuritySettings)  
   
-- [WebBrowser denetimi ve özellik denetimleri](#webbrowser_control_and_feature_controls)  
+- [WebBrowser Kontrol ve Özellik Denetimleri](#webbrowser_control_and_feature_controls)  
   
-- [Kısmen güvenilen Istemci uygulamaları için APTCA derlemelerini devre dışı bırakma](#APTCA)  
+- [Kısmen Güvenilen İstemci Uygulamaları için APTCA Montajlarının Devre Dışı Bırakılması](#APTCA)  
   
-- [Gevşek XAML dosyaları için korumalı alan davranışı](#LooseContentSandboxing)  
+- [Gevşek XAML Dosyaları için Sandbox Davranışı](#LooseContentSandboxing)  
   
-- [Güvenliği geliştiren WPF uygulamaları geliştirmeye yönelik kaynaklar](#BestPractices)  
+- [Güvenliği Teşvik Eden WPF Uygulamaları Geliştirme Kaynakları](#BestPractices)  
   
-<a name="SafeTopLevelNavigation"></a>   
-## <a name="safe-navigation"></a>Güvenli gezinti  
- XBAP 'ler için WPF iki tür gezinti ayırır: uygulama ve tarayıcı.  
+<a name="SafeTopLevelNavigation"></a>
+## <a name="safe-navigation"></a>Güvenli Navigasyon  
+ XBAP'lar için WPF iki tür gezinmeyi ayırt eder: uygulama ve tarayıcı.  
   
- *Uygulama gezintisi* , bir tarayıcı tarafından barındırılan bir uygulama içindeki içerik öğeleri arasında gezinmektedir. *Tarayıcı gezintisi* , tarayıcının içerik ve konum URL 'sini değiştiren gezinidir. Uygulama Gezintisi (genellikle XAML) ve tarayıcı Gezintisi (genellikle HTML) arasındaki ilişki aşağıdaki çizimde gösterilmiştir:
+ *Uygulama* gezintisi, bir tarayıcı tarafından barındırılan bir uygulamadaki içerik öğeleri arasında gezinmedir. *Tarayıcı* gezintisi, bir tarayıcının içeriğini ve konum URL'sini değiştiren gezintidir. Uygulama gezintisi (genellikle XAML) ve tarayıcı gezintisi (genellikle HTML) arasındaki ilişki aşağıdaki resimde gösterilmiştir:
   
  ![Uygulama gezintisi ve tarayıcı gezintisi arasındaki ilişki.](./media/security-wpf/application-browser-navigation-relationship.png)  
   
- Bir XBAP 'nin gidilecek güvenli olarak kabul edilen içerik türü öncelikle uygulama gezintisi veya tarayıcı gezinmesinin kullanılıp kullanılmadığını belirler.  
+ Bir XBAP'ın gezinmesi için güvenli kabul edilen içerik türü, öncelikle uygulama gezintisinin veya tarayıcı gezintisinin kullanılıp kullanılmadığına göre belirlenir.  
   
-<a name="Application_Navigation_Security"></a>   
-### <a name="application-navigation-security"></a>Uygulama gezintisi güvenliği  
- Dört tür içeriği destekleyen bir paket URI 'SI ile tanımlanamıyorsa uygulama gezintisi güvenli olarak değerlendirilir:  
+<a name="Application_Navigation_Security"></a>
+### <a name="application-navigation-security"></a>Uygulama Navigasyon Güvenliği  
+ Uygulama gezintisi, dört tür içeriği destekleyen bir paket URI ile tanımlanabiliyorsa güvenli kabul edilir:  
   
-|İçerik Türü|Açıklama|URI örneği|  
+|İçerik Türü|Açıklama|URI Örneği|  
 |------------------|-----------------|-----------------|  
-|Kaynak|**Kaynak**yapı türüne sahip bir projeye eklenen dosyalar.|`pack://application:,,,/MyResourceFile.xaml`|  
-|İçerik|**İçerik**yapı türü olan bir projeye eklenen dosyalar.|`pack://application:,,,/MyContentFile.xaml`|  
-|Kaynak site|Derleme türü **none**olan bir projeye eklenen dosyalar.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|Uygulama kodu|Derlenmiş bir arka plan kodu olan XAML Kaynakları.<br /><br /> veya<br /><br /> Yapı türü **sayfa**olan bir projeye eklenen XAML dosyaları.|`pack://application:,,,/MyResourceFile` `.xaml`|  
+|Kaynak|Yapı Türü **Kaynak**olan bir projeye eklenen dosyalar.|`pack://application:,,,/MyResourceFile.xaml`|  
+|İçerik|Yapı Türü **İçerik**olan bir projeye eklenen dosyalar.|`pack://application:,,,/MyContentFile.xaml`|  
+|Menşe sitesi|Yapı türü **Yok**olan bir projeye eklenen dosyalar.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
+|Uygulama kodu|Derlenmiş bir kod arkası olan XAML kaynakları.<br /><br /> -veya-<br /><br /> **Bir projeye sayfa**yapı türüne sahip xaml dosyaları eklendi.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
-> Uygulama verileri dosyaları ve paket URI 'Leri hakkında daha fazla bilgi için bkz. [WPF uygulama kaynağı, içerik ve veri dosyaları](./app-development/wpf-application-resource-content-and-data-files.md).  
+> Uygulama veri dosyaları ve paket URL'leri hakkında daha fazla bilgi için [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları'na](./app-development/wpf-application-resource-content-and-data-files.md)bakın.  
   
- Bu içerik türlerinin dosyalarına Kullanıcı veya program aracılığıyla gidilenebilir:  
+ Bu içerik türlerinin dosyaları kullanıcı tarafından veya programlı olarak gezinilebilir:  
   
-- **Kullanıcı gezintisi**. Kullanıcı bir <xref:System.Windows.Documents.Hyperlink> öğesine tıklayarak gezinir.  
+- **Kullanıcı Navigasyon**. Kullanıcı bir <xref:System.Windows.Documents.Hyperlink> öğeyi tıklatarak gezinir.  
   
-- **Programlı gezinti**. Uygulama, Kullanıcı eklemeden (örneğin, <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType> özelliğini ayarlayarak) gezinir.  
+- **Programlı Navigasyon**. Uygulama, <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType> örneğin, özelliği ayarlayarak, kullanıcıdahil olmadan gezinir.  
   
-<a name="Browser_Navigation_Security"></a>   
-### <a name="browser-navigation-security"></a>Tarayıcı gezintisi güvenliği  
- Tarayıcı gezintisi, yalnızca aşağıdaki koşullarda güvenli olarak kabul edilir:  
+<a name="Browser_Navigation_Security"></a>
+### <a name="browser-navigation-security"></a>Tarayıcı Navigasyon Güvenliği  
+ Tarayıcı gezintisi yalnızca aşağıdaki koşullar altında güvenli olarak kabul edilir:  
   
-- **Kullanıcı gezintisi**. Kullanıcı, iç içe geçmiş bir <xref:System.Windows.Controls.Frame>değil, ana <xref:System.Windows.Navigation.NavigationWindow>içindeki bir <xref:System.Windows.Documents.Hyperlink> öğesine tıklayarak gezinir.  
+- **Kullanıcı Navigasyon**. Kullanıcı, iç içe değil, ana <xref:System.Windows.Documents.Hyperlink> <xref:System.Windows.Navigation.NavigationWindow>içinde bulunan bir öğeyi <xref:System.Windows.Controls.Frame>tıklatarak gezinir.  
   
-- **Bölge**. Gezinmekte olan içerik Internet veya yerel intranette bulunuyor.  
+- **Bölge**. Gezinilen içerik Internet'te veya yerel intranette bulunur.  
   
-- **Protokol**. Kullanılan protokol **http**, **https**, **File**ya da **mailto**'dir.  
+- **Protokol.** Kullanılan protokol ya **http**, **https**, **dosya**, ya da **mailto**.  
   
- Bir XBAP, içeriğe bu koşullara uygun olmayan bir şekilde gitmeyi denerse bir <xref:System.Security.SecurityException> oluşturulur.  
+ Bir XBAP içeriğe bu koşullara uymayan bir şekilde gezinmeye <xref:System.Security.SecurityException> çalışırsa, bir atLanır.  
   
-<a name="InternetExplorerSecuritySettings"></a>   
-## <a name="web-browsing-software-security-settings"></a>Web 'e göz atma yazılım güvenlik ayarları  
- Bilgisayarınızdaki güvenlik ayarları Web 'e göz atma yazılımının verildiği erişimi tespit edilir. Web 'e göz atma yazılımı, Internet Explorer ve PresentationHost. exe dahil olmak üzere [Winınet](/windows/win32/wininet/portal) veya [Urlmon](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767916(v=vs.85)) API 'leri kullanan herhangi bir uygulama veya bileşeni içerir.  
+<a name="InternetExplorerSecuritySettings"></a>
+## <a name="web-browsing-software-security-settings"></a>Web Tarama Yazılımı Güvenlik Ayarları  
+ Bilgisayarınızdaki güvenlik ayarları, herhangi bir Web tarama yazılımının erişilen erişimi belirler. Web tarama yazılımı, Internet Explorer ve PresentationHost.exe dahil olmak üzere [WinINet](/windows/win32/wininet/portal) veya [UrlMon](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767916(v=vs.85)) API'lerini kullanan herhangi bir uygulama veya bileşen içerir.  
   
- Internet Explorer, aşağıdakiler de dahil olmak üzere Internet Explorer tarafından veya Internet Explorer 'dan yürütülmesine izin verilen işlevselliği yapılandırabileceğiniz bir mekanizma sağlar:  
+ Internet Explorer, aşağıdakiler de dahil olmak üzere Internet Explorer tarafından veya Internet Explorer tarafından yürütülmesine izin verilen işlevselliği yapılandırabileceğiniz bir mekanizma sağlar:  
   
-- .NET Framework bağımlı bileşenler  
+- .NET Çerçeveye dayalı bileşenler  
   
-- ActiveX denetimleri ve eklentileri  
+- ActiveX kontrolleri ve eklentileri  
   
 - İndirmeler  
   
-- Komut Dosyaları  
+- Betik Oluşturma  
   
-- Kullanıcı Kimlik Doğrulaması.  
+- Kullanıcı Kimlik Doğrulaması  
   
- Bu şekilde güvenli hale getirilmiş işlevsellik koleksiyonu, **Internet**, **Intranet**, **Güvenilen siteler**ve **Yasak siteler** bölgeleri için her bölgeye göre yapılandırılır. Aşağıdaki adımlarda güvenlik ayarlarınızın nasıl yapılandırılacağı açıklanır:  
+ Bu şekilde güvence altına alınabilen işlevsellik **koleksiyonu, Internet,** **Intranet,** **Trusted Sites**ve **Restricted Sites** bölgeleri için bölge bazında yapılandırılır. Aşağıdaki adımlar, güvenlik ayarlarınızı nasıl yapılandırıştırılayarılanızı açıklar:  
   
-1. **Denetim Masası**'nı açın.  
+1. Açık **Kontrol Paneli**.  
   
-2. **Ağ ve internet** ' e ve ardından **İnternet seçenekleri**' ne tıklayın.  
+2. **Ağ ve Internet'i tıklatın** ve ardından Internet **Seçenekleri'ni**tıklatın.  
   
      Internet Seçenekleri iletişim kutusu görüntülenir.  
   
 3. **Güvenlik** sekmesinde, güvenlik ayarlarını yapılandırmak için bölgeyi seçin.  
   
-4. **Özel düzey** düğmesine tıklayın.  
+4. Özel **Düzey** düğmesini tıklatın.  
   
-     **Güvenlik ayarları** iletişim kutusu görünür ve seçili bölgenin güvenlik ayarlarını yapılandırabilirsiniz.  
+     **Güvenlik Ayarları** iletişim kutusu görüntülenir ve seçili bölgenin güvenlik ayarlarını yapılandırabilirsiniz.  
   
-     ![Güvenlik ayarları iletişim kutusunu gösteren ekran görüntüsü.](./media/security-wpf/windows-presentation-foundation-security-settings.png)  
+     ![Güvenlik Ayarları iletişim kutusunu gösteren ekran görüntüsü.](./media/security-wpf/windows-presentation-foundation-security-settings.png)  
   
 > [!NOTE]
-> Internet Explorer 'ın Internet Seçenekleri iletişim kutusuna da ulaşabilirsiniz. **Araçlar** ' a ve ardından **Internet seçenekleri**' ne tıklayın.  
+> Internet Explorer'dan Internet Seçenekleri iletişim kutusuna da ulaşabilirsiniz. **Araçlar'ı** tıklatın ve ardından **Internet Seçenekleri'ni**tıklatın.  
   
- Windows Internet Explorer 7 ' den itibaren, özellikle .NET Framework için aşağıdaki güvenlik ayarları dahil edilmiştir:  
+ Windows Internet Explorer 7 ile başlayarak, özellikle .NET Framework için aşağıdaki güvenlik ayarları dahildir:  
   
-- **Gevşek XAML**. Internet Explorer 'ın dosyalara [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] erişip erişemeyeceğini denetler. (Etkinleştir, devre dışı bırak ve sor seçenekleri).  
+- **Gevşek XAML**. Internet Explorer'ın dosyalara [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] gidip gidemeyeceğini ve dosyaları serbest bırakabileceğini denetler. (Etkinleştir, Devre Dışı Ve İstem seçeneklerini).  
   
-- **XAML tarayıcı uygulamaları**. Internet Explorer 'ın XBAP 'ye gidip erişip çalıştıramayacağını denetler. (Etkinleştir, devre dışı bırak ve sor seçenekleri).  
+- **XAML tarayıcı uygulamaları**. Internet Explorer'ın XBAP'lara gidip gidemeyeceğini ve çalıştırıp çalıştıramayacağını denetler. (Etkinleştir, Devre Dışı Ve İstem seçeneklerini).  
   
- Varsayılan olarak, bu ayarların hepsi **Internet**, **Yerel intranet**ve **Güvenilen siteler** bölgeleri için etkindir ve **Yasak siteler** bölgesi için devre dışıdır.  
+ Varsayılan olarak, bu ayarların tümü **Internet,** **Yerel intranet**ve **Güvenilen siteler** bölgeleri için etkinleştirilir ve **Kısıtlı siteler** bölgesi için devre dışı bırakılır.  
   
-<a name="Security_Settings_for_IE6_and_Below"></a>   
-### <a name="security-related-wpf-registry-settings"></a>Güvenlikle ilgili WPF kayıt defteri ayarları  
- Internet seçenekleri aracılığıyla kullanılabilen güvenlik ayarlarına ek olarak, bir dizi güvenliğe duyarlı WPF özelliğini seçmeli olarak engellemek için aşağıdaki kayıt defteri değerleri mevcuttur. Değerler aşağıdaki anahtar altında tanımlanmıştır:  
+<a name="Security_Settings_for_IE6_and_Below"></a>
+### <a name="security-related-wpf-registry-settings"></a>Güvenlikle ilgili WPF Kayıt Defteri Ayarları  
+ Internet Seçenekleri aracılığıyla kullanılabilen güvenlik ayarlarına ek olarak, güvenliğe duyarlı wpf özelliklerinin bir dizisini seçerek engellemek için aşağıdaki kayıt defteri değerleri kullanılabilir. Değerler aşağıdaki anahtar altında tanımlanır:  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\Windows Presentation Foundation\Features`  
   
- Aşağıdaki tabloda, ayarlankullanılabilecek değerler listelenmektedir.  
+ Aşağıdaki tabloda ayarlanabilecek değerler listelenecek.  
   
-|Değer adı|Değer türü|Değer verisi|  
+|Değer Adı|Değer Türü|Değer Verileri|  
 |----------------|----------------|----------------|  
-|Xbapallow|REG_DWORD|1-izin verme; izin verilecek 0.|  
-|Gevsexamlallow|REG_DWORD|1-izin verme; izin verilecek 0.|  
-|Webbrowserallow|REG_DWORD|1-izin verme; izin verilecek 0.|  
-|Mediaaudioallow|REG_DWORD|1-izin verme; izin verilecek 0.|  
-|Mediaımageallow|REG_DWORD|1-izin verme; izin verilecek 0.|  
-|Mediavideoallow|REG_DWORD|1-izin verme; izin verilecek 0.|  
-|ScriptInteropDisallow|REG_DWORD|1-izin verme; izin verilecek 0.|  
+|XBAPDisallow|REG_DWORD|1 izin vermemek için; 0 izin vermek.|  
+|LooseXamlDisallow|REG_DWORD|1 izin vermemek için; 0 izin vermek.|  
+|WebBrowserDisallow|REG_DWORD|1 izin vermemek için; 0 izin vermek.|  
+|MediaAudioDisallow|REG_DWORD|1 izin vermemek için; 0 izin vermek.|  
+|MediaImageDisallow|REG_DWORD|1 izin vermemek için; 0 izin vermek.|  
+|MediaVideoDisallow|REG_DWORD|1 izin vermemek için; 0 izin vermek.|  
+|ScriptInteropDisallow|REG_DWORD|1 izin vermemek için; 0 izin vermek.|  
   
-<a name="webbrowser_control_and_feature_controls"></a>   
-## <a name="webbrowser-control-and-feature-controls"></a>WebBrowser denetimi ve özellik denetimleri  
- WPF <xref:System.Windows.Controls.WebBrowser> denetimi Web içeriğini barındırmak için kullanılabilir. WPF <xref:System.Windows.Controls.WebBrowser> denetimi temel alınan WebBrowser ActiveX denetimini sarmalanmış. WPF, güvenilmeyen Web içeriğini barındırmak için WPF <xref:System.Windows.Controls.WebBrowser> denetimini kullandığınızda uygulamanızın güvenliğini sağlamaya yönelik bazı destek sağlar. Ancak bazı güvenlik özelliklerinin, <xref:System.Windows.Controls.WebBrowser> denetimi kullanılarak doğrudan uygulamalar tarafından uygulanması gerekir. WebBrowser ActiveX denetimi hakkında daha fazla bilgi için bkz. [WebBrowser denetimi genel bakış ve öğreticiler](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752041(v=vs.85)).  
+<a name="webbrowser_control_and_feature_controls"></a>
+## <a name="webbrowser-control-and-feature-controls"></a>WebBrowser Kontrol ve Özellik Denetimleri  
+ WPF <xref:System.Windows.Controls.WebBrowser> denetimi Web içeriğini barındırmak için kullanılabilir. WPF <xref:System.Windows.Controls.WebBrowser> denetimi, temel WebBrowser ActiveX denetimini sarar. WPF, wpf <xref:System.Windows.Controls.WebBrowser> denetimini güvenilmeyen Web içeriğini barındırmak için kullandığınızda uygulamanızı güvence altına almak için bazı destek sağlar. Ancak, bazı güvenlik özellikleri <xref:System.Windows.Controls.WebBrowser> denetimi kullanarak uygulamalar tarafından doğrudan uygulanmalıdır. WebBrowser ActiveX denetimi hakkında daha fazla bilgi için [WebBrowser Denetimigenel Bakışları ve Eğitimleri'ne](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752041(v=vs.85))bakın.  
   
 > [!NOTE]
-> Bu bölüm, HTML içeriğine gitmek için <xref:System.Windows.Controls.WebBrowser> kullandığından <xref:System.Windows.Controls.Frame> denetimi için de geçerlidir.  
+> Bu bölüm, HTML <xref:System.Windows.Controls.Frame> içeriğine gitmek <xref:System.Windows.Controls.WebBrowser> için kullandığından denetim için de geçerlidir.  
   
- WPF <xref:System.Windows.Controls.WebBrowser> denetimi güvenilmeyen Web içeriğini barındırmak için kullanılıyorsa, uygulamanız büyük olasılıkla kötü amaçlı HTML betik kodundan uygulama kodunuzun korunmasını sağlamak için kısmi güven <xref:System.AppDomain> kullanmalıdır. Bu özellikle, uygulamanız <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> yöntemi ve <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> özelliğini kullanarak barındırılan betikle etkileşim kurılıyorsa geçerlidir. Daha fazla bilgi için bkz. [WPF Eklentilerine Genel Bakış](./app-development/wpf-add-ins-overview.md).  
+ WPF <xref:System.Windows.Controls.WebBrowser> denetimi güvenilmeyen Web içeriğini barındırmak için kullanılıyorsa, uygulamanızın uygulama kodunuzu kötü amaçlı HTML komut dosyası kodundan izole etmeye yardımcı olmak için kısmi bir güven <xref:System.AppDomain> kullanması gerekir. Bu, özellikle uygulamanız metodunu <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> ve <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> özelliği ni kullanarak barındırılan komut dosyasıyla etkileşim halindeyse geçerlidir. Daha fazla bilgi için [WPF Eklentilerine Genel Bakış'a](./app-development/wpf-add-ins-overview.md)bakın.  
   
- Uygulamanız WPF <xref:System.Windows.Controls.WebBrowser> denetimini kullanıyorsa, güvenliği artırmanın ve saldırıları hafifletmek için başka bir yöntem, Internet Explorer Özellik denetimlerini etkinleştirmektir. Özellik denetimleri, Internet Explorer 'ın, yöneticilerin ve geliştiricilerin Internet Explorer 'ın ve WPF <xref:System.Windows.Controls.WebBrowser> denetiminin sarmaladığı WebBrowser ActiveX denetimini barındıran uygulamaların özelliklerini yapılandırmalarına olanak tanıyan eklemelerdir. Özellik denetimleri [CoInternetSetFeatureEnabled](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537168(v=vs.85)) işlevi kullanılarak veya kayıt defterindeki değerler değiştirilerek yapılandırılabilir. Özellik denetimleri hakkında daha fazla bilgi için bkz. [özellik denetimlerine giriş](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537184(v=vs.85)) ve [Internet Özellik denetimleri](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/general-info/ee330720(v=vs.85)).  
+ Uygulamanız WPF <xref:System.Windows.Controls.WebBrowser> denetimini kullanıyorsa, güvenliği artırmanın ve saldırıları azaltmanın başka bir yolu Internet Explorer özellik denetimlerini etkinleştirmektir. Özellik denetimleri, yöneticilerin ve geliştiricilerin Internet Explorer özelliklerini yapılandırmasına ve WPF <xref:System.Windows.Controls.WebBrowser> denetiminin kaydırdığı WebBrowser ActiveX denetimini barındıran uygulamaların özelliklerini yapılandırmasına olanak tanıyan Internet Explorer'a eklemelerdir. Özellik denetimleri [CoInternetSetFeatureEnabled](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537168(v=vs.85)) işlevi kullanılarak veya kayıt defterindeki değerleri değiştirerek yapılandırılabilir. [Özellik](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537184(v=vs.85)) denetimleri hakkında daha fazla bilgi için [bkz.](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/general-info/ee330720(v=vs.85))  
   
- WPF <xref:System.Windows.Controls.WebBrowser> denetimini kullanan tek başına bir WPF uygulaması geliştiriyorsanız, WPF, uygulamanız için aşağıdaki özellik denetimlerini otomatik olarak etkinleştirilir.  
+ WPF <xref:System.Windows.Controls.WebBrowser> denetimini kullanan bağımsız bir WPF uygulaması geliştiriyorsanız, WPF uygulamanız için aşağıdaki özellik denetimlerini otomatik olarak etkinleştirir.  
   
-|Özellik denetimi|  
+|Özellik Kontrolü|  
 |---------------------|  
 |FEATURE_MIME_HANDLING|  
 |FEATURE_MIME_SNIFFING|  
@@ -179,16 +179,16 @@ ms.locfileid: "76868050"
 |FEATURE_DISABLE_LEGACY_COMPRESSION|  
 |FEATURE_SSLUX|  
   
- Bu özellik denetimleri koşullu olarak etkinleştirildiğinden, tam güven uygulaması onlar tarafından zayıflatılabilir. Bu durumda, belirli bir uygulama ve barındırdığı içerik için bir güvenlik riski yoksa, ilgili özellik denetimi devre dışı bırakılabilir.  
+ Bu özellik denetimleri koşulsuz olarak etkinleştirildiğinden, tam güven uygulaması onlar tarafından bozulabilir. Bu durumda, belirli bir uygulama ve barındıran içerik için güvenlik riski yoksa, ilgili özellik denetimi devre dışı bırakılır.  
   
- Özellik denetimleri, WebBrowser ActiveX nesnesini örnekleyerek işlem tarafından uygulanır. Bu nedenle, güvenilmeyen içeriğe gidebileceğiniz tek başına bir uygulama oluşturuyorsanız, ek özellik denetimlerini etkinleştirmeyi ciddi bir şekilde dikkate almanız gerekir.  
+ Özellik denetimleri, WebBrowser ActiveX nesnesini anında sağlayan işlem tarafından uygulanır. Bu nedenle, güvenilmeyen içeriğe gidebilecek tek başına bir uygulama oluşturuyorsanız, ek özellik denetimlerini etkinleştirmeyi ciddi şekilde düşünmelisiniz.  
   
 > [!NOTE]
-> Bu öneri, MSHTML ve SHDOCVW ana bilgisayar güvenliği için genel önerilere dayanır. Daha fazla bilgi için bkz. [MSHTML ana bilgisayar GÜVENLIK SSS: II 'Nin bölüm](https://msrc-blog.microsoft.com/2009/04/02/the-mshtml-host-security-faq-part-i-of-ii/) ve [MSHTML ana bilgisayar GÜVENLIK SSS: II 'nin Bölüm II](https://msrc-blog.microsoft.com/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii/).  
+> Bu öneri, MSHTML ve SHDOCVW ana bilgisayar güvenliği için genel önerilere dayanmaktadır. Daha fazla bilgi için, [Bkz. MSHTML Ana Bilgisayar Güvenlik SSS: Bölüm I I](https://msrc-blog.microsoft.com/2009/04/02/the-mshtml-host-security-faq-part-i-of-ii/) ve [MSHTML Ana Bilgisayar Güvenlik SSS: Bölüm II II](https://msrc-blog.microsoft.com/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii/).  
   
- Yürütülebilir dosya için, kayıt defteri değerini 1 olarak ayarlayarak aşağıdaki özellik denetimlerini etkinleştirmeyi düşünün.  
+ Çalıştırılabilir liğiniz için, kayıt defteri değerini 1 olarak ayarlayarak aşağıdaki özellik denetimlerini etkinleştirmeyi düşünün.  
   
-|Özellik denetimi|  
+|Özellik Kontrolü|  
 |---------------------|  
 |FEATURE_ACTIVEX_REPURPOSEDETECTION|  
 |FEATURE_BLOCK_LMZ_IMG|  
@@ -201,73 +201,73 @@ ms.locfileid: "76868050"
 |FEATURE_FORCE_ADDR_AND_STATUS|  
 |FEATURE_RESTRICTED_ZONE_WHEN_FILE_NOT_FOUND|  
   
- Yürütülebilir dosya için, kayıt defteri değerini 0 olarak ayarlayarak aşağıdaki Özellik denetimini devre dışı bırakmayı göz önünde bulundurun.  
+ Çalıştırılabilir liğiniz için, kayıt defteri değerini 0 olarak ayarlayarak aşağıdaki özellik denetimini devre dışı bırakmayı düşünün.  
   
-|Özellik denetimi|  
+|Özellik Kontrolü|  
 |---------------------|  
 |FEATURE_ENABLE_SCRIPT_PASTE_URLACTION_IF_PROMPT|  
   
- Windows Internet Explorer 'da WPF <xref:System.Windows.Controls.WebBrowser> denetimi içeren bir kısmi güven XAML tarayıcı uygulaması (XBAP) çalıştırırsanız, WPF, Internet Explorer işleminin adres alanındaki WebBrowser ActiveX denetimini barındırır. WebBrowser ActiveX denetimi Internet Explorer işleminde barındırıldığından, Internet Explorer 'ın tüm özellik denetimleri de WebBrowser ActiveX denetimi için etkinleştirilmiştir.  
+ Windows Internet Explorer'da WPF <xref:System.Windows.Controls.WebBrowser> denetimi içeren kısmi güven xaml tarayıcı uygulaması (XBAP) çalıştırırsanız, WPF Internet Explorer işleminin adres alanında WebBrowser ActiveX denetimini barındırır. WebBrowser ActiveX denetimi Internet Explorer işleminde barındırılan olduğundan, Internet Explorer için tüm özellik denetimleri de WebBrowser ActiveX denetimi için etkinleştirilir.  
   
- Internet Explorer 'da çalışan XBAP 'ler, normal tek başına uygulamalara kıyasla ek bir güvenlik düzeyi de alır. Bu ek güvenlik, Internet Explorer ve dolayısıyla WebBrowser ActiveX denetimi Windows Vista ve Windows 7 ' de varsayılan olarak korumalı modda çalışır. Korumalı mod hakkında daha fazla bilgi için bkz. [korumalı modda anlama ve Internet Explorer 'Da çalışma](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/).  
+ Internet Explorer'da çalışan XBAP'lar, normal bağımsız uygulamalara kıyasla ek bir güvenlik düzeyi de elde eder. Bu ek güvenlik, Internet Explorer'ın ve dolayısıyla WebBrowser ActiveX denetiminin Windows Vista ve Windows 7'de varsayılan olarak korumalı modda çalıştırıştırı. Korumalı mod hakkında daha fazla bilgi için [bkz.](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/)  
   
 > [!NOTE]
-> Firefox 'ta WPF <xref:System.Windows.Controls.WebBrowser> denetimi içeren bir XBAP çalıştırmayı denerseniz, Internet bölgesinde bir <xref:System.Security.SecurityException> oluşturulur. Bunun nedeni WPF Güvenlik ilkesidir.  
+> Firefox'ta WPF <xref:System.Windows.Controls.WebBrowser> denetimi içeren bir XBAP çalıştırmayı denerseniz, <xref:System.Security.SecurityException> Internet bölgesinde yken bir a atılır. Bunun nedeni WPF güvenlik ilkesidir.  
   
-<a name="APTCA"></a>   
-## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a>Kısmen güvenilen Istemci uygulamaları için APTCA derlemelerini devre dışı bırakma  
- Yönetilen derlemeler genel derleme önbelleği 'ne (GAC) yüklendiğinde, kullanıcının bunları yüklemek için açık izin sağlaması gerektiğinden, bunlar tamamen güvenilir hale gelir. Tam güvenilir oldukları için, yalnızca tam olarak güvenilen yönetilen istemci uygulamaları kullanabilir. Kısmen güvenilir uygulamaların bunları kullanmasına izin vermek için, <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) ile işaretlenmeleri gerekir. Yalnızca kısmi güvende yürütme için güvenli olarak test edilmiş derlemeler Bu öznitelikle işaretlenmelidir.  
+<a name="APTCA"></a>
+## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a>Kısmen Güvenilen İstemci Uygulamaları için APTCA Montajlarının Devre Dışı Bırakılması  
+ Yönetilen derlemeler genel derleme önbelleğine (GAC) yüklendiğinde, kullanıcının bunları yüklemek için açık izin vermesi gerektiğinden tam olarak güvenilir. Bunlar tam olarak güvenilen olduğundan, yalnızca tam olarak güvenilen yönetilen istemci uygulamaları bunları kullanabilir. Kısmen güvenilen uygulamaların bunları kullanmasına izin vermek için, bu uygulamaların <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) ile işaretlenmiş olması gerekir. Yalnızca kısmi güven içinde yürütülmesi için güvenli olması için sınanmış derlemeler bu öznitelik ile işaretlenmiş olmalıdır.  
   
- Ancak, bir APTCA derlemesinin GAC 'ye yüklendikten sonra bir güvenlik kusuru göstermesi mümkündür. Bir güvenlik kusurunu bulduktan sonra, derleme yayımcıları mevcut kurulumlarda sorunu gidermek ve sorun keşfedildiğinde oluşabilecek yüklemelere karşı korumak için bir güvenlik güncelleştirmesi oluşturabilir. Güncelleştirme için bir seçenek derlemeyi kaldırmakla birlikte, derlemeyi kullanan diğer tam güvenilir istemci uygulamaları da kesintiye uğramayabilir.  
+ Ancak, bir APTCA derlemesi GAC'ye yüklendikten sonra bir güvenlik kusuru sergilemesi mümkündür. Bir güvenlik kusuru keşfedildikten sonra, derleme yayımcılar varolan yüklemeler üzerindeki sorunu gidermek ve sorun keşfedildikten sonra oluşabilecek yüklemelere karşı korumak için bir güvenlik güncelleştirmesi üretebilir. Güncelleştirme için bir seçenek, derlemeyi kullanan diğer tam güvenilen istemci uygulamalarını bozabilir, ancak derlemeyi kaldırmaktır.  
   
- WPF, APTCA derlemesini kaldırmadan kısmen güvenilen XBAP 'ler için bir APTCA derlemesinin devre dışı bırakılabileceği bir mekanizma sağlar.  
+ WPF, APTCA derlemesini kaldırmadan kısmen güvenilen XBA'lar için bir APTCA derlemesinin devre dışı açılabilir bir mekanizma sağlar.  
   
- Bir APTCA derlemesini devre dışı bırakmak için özel bir kayıt defteri anahtarı oluşturmanız gerekir:  
+ Bir APTCA derlemesini devre dışı kılabilirse, özel bir kayıt defteri anahtarı oluşturmanız gerekir:  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\policy\APTCA\<AssemblyFullName>, FileVersion=<AssemblyFileVersion>`  
   
- Aşağıda bir örnek gösterilmektedir:  
+ Aşağıdaki bir örnek gösterilmektedir:  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\policy\APTCA\aptcagac, Version=1.0.0.0, Culture=neutral, PublicKeyToken=215e3ac809a0fea7, FileVersion=1.0.0.0`  
   
- Bu anahtar, APTCA derlemesi için bir giriş oluşturur. Ayrıca, bu anahtarda derlemeyi sağlayan veya devre dışı bırakan bir değer oluşturmanız gerekir. Aşağıda değerin ayrıntıları verilmiştir:  
+ Bu anahtar, APTCA derlemesi için bir giriş belirler. Ayrıca, bu anahtarda derlemeyi etkinleştiren veya devre dışı düşüren bir değer oluşturmanız gerekir. Değerin ayrıntıları şunlardır:  
   
-- Değer adı: **APTCA_FLAG**.  
+- Değer Adı: **APTCA_FLAG**.  
   
-- Değer türü: **REG_DWORD**.  
+- Değer Türü: **REG_DWORD**.  
   
-- Değer verisi: devre dışı bırakmak için **1** ; etkinleştirmek için **0** .  
+- Değer Verileri: **1** devre dışı kalmak için; **0** etkinleştirmek için.  
   
- Kısmen güvenilen istemci uygulamaları için bir derlemenin devre dışı bırakılması gerekiyorsa, kayıt defteri anahtarını ve değerini oluşturan bir güncelleştirme yazabilirsiniz.  
+ Kısmen güvenilen istemci uygulamaları için bir derlemenin devre dışı edilmesi gerekiyorsa, kayıt defteri anahtarını ve değerini oluşturan bir güncelleştirme yazabilirsiniz.  
   
 > [!NOTE]
-> Temel .NET Framework derlemeleri, yönetilen uygulamaların çalışması için gerekli olduklarından, bu şekilde devre dışı bırakılarak etkilenmez. APTCA derlemelerini devre dışı bırakma desteği öncelikle üçüncü taraf uygulamalara yöneliktir.  
+> Çekirdek .NET Framework derlemeleri, yönetilen uygulamaların çalışması için gerekli olduğundan, bu şekilde devre dışı bırakılmaz. APTCA derlemelerinin devre dışı bırakılması için destek öncelikle üçüncü taraf uygulamaları hedeflenir.  
   
-<a name="LooseContentSandboxing"></a>   
-## <a name="sandbox-behavior-for-loose-xaml-files"></a>Gevşek XAML dosyaları için korumalı alan davranışı  
- Gevşek [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] dosyalar, herhangi bir kod, olay işleyicisine veya uygulamaya özgü derlemeye bağlı olmayan yalnızca biçimlendirme XAML dosyalarıdır. Gevşek [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] dosyalarına doğrudan tarayıcıdan gezindiği zaman, varsayılan Internet bölgesi izin kümesine göre bir güvenlik korumalı alana yüklenir.  
+<a name="LooseContentSandboxing"></a>
+## <a name="sandbox-behavior-for-loose-xaml-files"></a>Gevşek XAML Dosyaları için Sandbox Davranışı  
+ Gevşek [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] dosyalar, herhangi bir kod arkası, olay işleyicisi veya uygulamaya özgü derlemeye bağlı olmayan yalnızca biçimlendirmeye dayalı XAML dosyalarıdır. Gevşek [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] dosyalar doğrudan tarayıcıdan yönlendirildiğinde, varsayılan Internet bölgesi izin kümesine göre bir güvenlik sandbox'ına yüklenirler.  
   
- Ancak, gevşek [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] dosyaları tek başına bir uygulamadaki <xref:System.Windows.Navigation.NavigationWindow> veya <xref:System.Windows.Controls.Frame> gezindiği durumlarda güvenlik davranışı farklıdır.  
+ Ancak, gevşek [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] dosyalar a <xref:System.Windows.Navigation.NavigationWindow> veya <xref:System.Windows.Controls.Frame> bağımsız bir uygulamada gezinildiğinde güvenlik davranışı farklıdır.  
   
- Her iki durumda da gezinmiş olan gevşek [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] dosyası, ana bilgisayar uygulamasının izinlerini devralır. Ancak, özellikle de güvenilir olmayan veya bilinmeyen bir varlık tarafından gevşek bir [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] dosyası üretildiyse, bu davranış bir güvenlik perspektifinden istenmeyen bir durum olabilir. Bu içerik türü *dış içerik*olarak bilinir ve <xref:System.Windows.Controls.Frame> ve <xref:System.Windows.Navigation.NavigationWindow> her ikisi de, ' a gidildiğinde yalıtmak üzere yapılandırılabilir. Yalıtım, <xref:System.Windows.Controls.Frame> ve <xref:System.Windows.Navigation.NavigationWindow>için aşağıdaki örneklerde gösterildiği gibi **SandboxExternalContent** özelliği true olarak ayarlanarak elde edilir:  
+ Her iki durumda [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] da, ana bilgisayar uygulamasının izinlerini devralmak üzere gezinilen gevşek dosya. Ancak, bu davranış, özellikle gevşek [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] bir dosya güvenilmeyen veya bilinmeyen bir varlık tarafından üretilmişse, güvenlik açısından istenmeyen olabilir. Bu tür içerik *dış içerik*olarak <xref:System.Windows.Controls.Frame> bilinir <xref:System.Windows.Navigation.NavigationWindow> ve her ikisi de ve gezinildiğinde onu yalıtmak için yapılandırılabilir. İzolasyon, Aşağıdaki örneklerde gösterildiği **gibi, SandboxExternalContent** özelliğini doğru olarak ayarlayarak elde <xref:System.Windows.Controls.Frame> edilir: <xref:System.Windows.Navigation.NavigationWindow>  
   
  [!code-xaml[SecurityOverviewSnippets#FrameMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
   
  [!code-xaml[SecurityOverviewSnippets#NavigationWindowMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window1.xaml#navigationwindowmarkup)]  
   
- Bu ayarla, dış içerik, uygulamayı barındıran işlemden ayrı bir işleme yüklenir. Bu işlem, varsayılan Internet bölgesi izin kümesiyle kısıtlıdır ve bu, barındırma uygulamasından ve istemci bilgisayardan etkin bir şekilde yalımalıdır.  
+ Bu ayar ile, dış içerik uygulamayı barındıran işlemden ayrı bir işleme yüklenir. Bu işlem, barındırma uygulamasından ve istemci bilgisayardan etkin bir şekilde yalıtarak varsayılan Internet bölgesi izin kümesiyle sınırlıdır.  
   
 > [!NOTE]
-> Tek başına bir uygulamadaki bir <xref:System.Windows.Navigation.NavigationWindow> veya <xref:System.Windows.Controls.Frame> [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] dosyalara yönelik gezinti, Microsoft Vista ve Windows 7 ' de, içerik doğrudan Windows Vista ve Windows 7 ' deki Internet Explorer 'da yüklenirken güvenlik düzeyi biraz daha küçüktür. Bunun nedeni, bir Web tarayıcısı kullanan tek başına bir WPF uygulamasının Internet Explorer 'ın ek korumalı mod güvenliği özelliği sağlamasıdır.  
+> <xref:System.Windows.Navigation.NavigationWindow> Bir <xref:System.Windows.Controls.Frame> veya bağımsız [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] bir uygulamadan gevşek dosyalara gezinme PresentationHost işlemini içeren WPF tarayıcı barındırma altyapısına dayalı olarak uygulansa da, güvenlik düzeyi içeriğin Doğrudan Windows Vista ve Windows 7'deki Internet Explorer'a yüklendiğinden biraz daha azdır (hala PresentationHost aracılığıyla olacaktır). Bunun nedeni, Web tarayıcısı kullanan bağımsız bir WPF uygulamasının Internet Explorer'ın ek Korumalı Modu güvenlik özelliğini sağlamamasıdır.  
   
-<a name="BestPractices"></a>   
-## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>Güvenliği geliştiren WPF uygulamaları geliştirmeye yönelik kaynaklar  
- Aşağıda, güvenliği geliştiren WPF uygulamaları geliştirmeye yardımcı olacak bazı ek kaynaklar verilmiştir:  
+<a name="BestPractices"></a>
+## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>Güvenliği Teşvik Eden WPF Uygulamaları Geliştirme Kaynakları  
+ Güvenliği teşvik eden WPF uygulamaları geliştirmeye yardımcı olacak bazı ek kaynaklar şunlardır:  
   
 |Alan|Kaynak|  
 |----------|--------------|  
-|Yönetilen kod|[Uygulamalar için modeller ve uygulamalar güvenlik kılavuzu](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))|  
-|CAS|[Kod erişim güvenliği](../misc/code-access-security.md)|  
+|Yönetilen kod|[Uygulamalar için Örüntü ler ve Uygulamalar Güvenlik Rehberi](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))|  
+|CAS|[Kod Erişimi Güvenliği](../misc/code-access-security.md)|  
 |ClickOnce|[ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |WPF|[WPF Kısmi Güven Güvenliği](wpf-partial-trust-security.md)|  
   
@@ -276,7 +276,7 @@ ms.locfileid: "76868050"
 - [WPF Kısmi Güven Güvenliği](wpf-partial-trust-security.md)
 - [WPF Güvenlik Stratejisi - Platform Güvenliği](wpf-security-strategy-platform-security.md)
 - [WPF Güvenlik Stratejisi - Güvenlik Mühendisliği](wpf-security-strategy-security-engineering.md)
-- [Uygulamalar için modeller ve uygulamalar güvenlik kılavuzu](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))
-- [Kod erişim güvenliği](../misc/code-access-security.md)
+- [Uygulamalar için Örüntü ler ve Uygulamalar Güvenlik Rehberi](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))
+- [Kod Erişimi Güvenliği](../misc/code-access-security.md)
 - [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)
 - [XAML'ye Genel Bakış (WPF)](../../desktop-wpf/fundamentals/xaml.md)

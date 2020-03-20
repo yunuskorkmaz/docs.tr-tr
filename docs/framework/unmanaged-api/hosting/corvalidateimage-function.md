@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-ms.openlocfilehash: 42da5bb761ba8ce388bd41d46e8fdc4561ad0290
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3a6da0e845fa50d090cdf0808b211a5806c40961
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136877"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178210"
 ---
 # <a name="_corvalidateimage-function"></a>_CorValidateImage İşlevi
-Yönetilen modül görüntülerini doğrular ve yüklendikten sonra işletim sistemi yükleyicisini bilgilendirir.  
+Yönetilen modül görüntülerini doğrular ve yüklendikten sonra işletim sistemi yükleyicisini onaylar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-STDAPI _CorValidateImage (   
+STDAPI _CorValidateImage (
    [in] PVOID* ImageBase,  
    [in] LPCWSTR FileName  
 );  
@@ -35,50 +35,50 @@ STDAPI _CorValidateImage (
   
 ## <a name="parameters"></a>Parametreler  
  `ImageBase`  
- 'ndaki Yönetilen kod olarak doğrulanacak görüntünün başlangıç konumuna yönelik bir işaretçi. Görüntü zaten belleğe yüklenmiş olmalıdır.  
+ [içinde] Yönetilen kod olarak doğrulamak için görüntünün başlangıç konumuna bir işaretçi. Görüntü zaten belleğe yüklenmiş olmalıdır.  
   
  `FileName`  
- 'ndaki Görüntünün dosya adı.  
+ [içinde] Resmin dosya adı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu işlev, `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`ve `E_FAIL`gibi standart değerleri, ayrıca aşağıdaki değerleri döndürür.  
+ Bu işlev standart `E_INVALIDARG`değerleri `E_OUTOFMEMORY` `E_UNEXPECTED`, `E_FAIL`, , ve , yanı sıra aşağıdaki değerleri döndürür.  
   
-|Dönüş değeri|Açıklama|  
+|Döndürülen değer|Açıklama|  
 |------------------|-----------------|  
-|`STATUS_INVALID_IMAGE_FORMAT`|Görüntü geçersiz. Bu değer HRESULT 0xC000007BL.|  
-|`STATUS_SUCCESS`|Görüntü geçerli. Bu değer HRESULT 0x00000000L ' i içerir.|  
+|`STATUS_INVALID_IMAGE_FORMAT`|Görüntü geçersiz. Bu değer HRESULT 0xC000007BL vardır.|  
+|`STATUS_SUCCESS`|Görüntü geçerli. Bu değer HRESULT 0x00000000L vardır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Windows XP ve sonraki sürümlerinde, işletim sistemi yükleyicisi ortak nesne dosyası biçimi (COFF) üstbilgisindeki COM tanımlayıcı dizin bitini inceleyerek yönetilen modülleri denetler. Set bit, yönetilen bir modülü gösterir. Yükleyici yönetilen bir modül algılarsa, MsCorEE. dll dosyasını yükler ve `_CorValidateImage`çağırır ve aşağıdaki eylemleri gerçekleştirir:  
+ Windows XP ve sonraki sürümlerde, işletim sistemi yükleyiciortak nesne dosya biçimi (COFF) üstbilgisinde COM Tanımlayıcı Dizin bitini inceleyerek yönetilen modülleri denetler. Bir ayar biti yönetilen bir modülü gösterir. Yükleyici yönetilen bir modülü algılarsa, MsCorEE.dll `_CorValidateImage`yükler ve aşağıdaki eylemleri gerçekleştiren çağrıları yapar:  
   
-- Görüntünün geçerli bir yönetilen modül olduğunu onaylar.  
+- Görüntünün geçerli bir yönetilen modül olduğunu doğrular.  
   
-- Görüntüdeki giriş noktasını, ortak dil çalışma zamanında (CLR) bir giriş noktasına değiştirir.  
+- Görüntüdeki giriş noktasını ortak dil çalışma zamanındaki (CLR) bir giriş noktasına değiştirir.  
   
-- Windows 'un 64 bitlik sürümleri için, bellekte bulunan görüntüyü PE32 ' dan PE32 + biçimine dönüştürerek değiştirir.  
+- Windows'un 64 bit sürümleri için, BELLEKteki görüntüyü PE32'den PE32+ biçimine dönüştürerek değiştirir.  
   
-- Yönetilen modül görüntüleri yüklendiğinde yükleyice döndürür.  
+- Yönetilen modül görüntüleri yüklendiğinde yükleyiciye geri döner.  
   
- Yürütülebilir görüntüler için, işletim sistemi yükleyicisi, yürütülebilir dosyada belirtilen giriş noktası ne olursa olsun, [_Corexemain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) işlevini çağırır. DLL derleme görüntüleri için yükleyici [_Cordllmain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) işlevini çağırır.  
+ Çalıştırılabilir görüntüler için, işletim sistemi yükleyicisi, yürütülebilir de belirtilen giriş noktası ne olursa olsun, [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) işlevini çağırır. DLL montaj görüntüleri için yükleyici [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) işlevini çağırır.  
   
- `_CorExeMain` veya `_CorDllMain` aşağıdaki eylemleri gerçekleştirir:  
+ `_CorExeMain`veya `_CorDllMain` aşağıdaki eylemleri gerçekleştirir:  
   
-- CLR 'yi başlatır.  
+- CLR'yi başharfe iter.  
   
-- Yönetilen giriş noktasını derlemenin CLR üst bilgisinden konumlandırır.  
+- Derlemenin CLR üstbilgisinden yönetilen giriş noktasını bulur.  
   
-- Yürütmeye başlar.  
+- İdam başlar.  
   
- Yükleyici, yönetilen modül görüntüleri kaldırıldığında [_Corımagebellekten kaldırma](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) işlevini çağırır. Ancak, bu işlev herhangi bir eylem gerçekleştirmez; yalnızca döndürür.  
+ Yönetilen modül görüntüleri boşaltıldığında yükleyici [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) işlevini çağırır. Ancak, bu işlev herhangi bir eylem gerçekleştirmez; sadece geri döner.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

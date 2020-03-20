@@ -3,21 +3,21 @@ title: <tracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: fd9b50ed-98a1-4518-836d-e4e02c670822
-ms.openlocfilehash: 28d73bb74c4a49052589040adc26194b1300668c
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 968cfa8e5402458afd6f13545ed999a472adf2e0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397599"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151916"
 ---
-# <a name="tracking"></a>\<İzleme >
-Bir iş akışı hizmeti için izleme ayarlarını tanımlamaya yönelik bir yapılandırma bölümünü temsil eder.  
+# <a name="tracking"></a>\<izleme>
+İş akışı hizmeti için izleme ayarlarını tanımlamak için bir yapılandırma bölümünü temsil eder.  
   
- İş akışı izleme ve yapılandırması hakkında daha fazla bilgi için bkz. iş akışı [izleme ve izleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) ve [izleme yapılandırma](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
+ İş akışı izleme ve yapılandırmasında daha fazla bilgi için [Configuring Tracking for a Workflow](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md) [bkz.](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<sistemin. ServiceModel >** ](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<İzleme >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<Sistem. ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<izleme>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,14 +26,14 @@ Bir iş akışı hizmeti için izleme ayarlarını tanımlamaya yönelik bir yap
   <tracking>
     <profiles>
       <participants>
-        <add name="String" 
-             profileName="String" 
+        <add name="String"
+             profileName="String"
              type="String" />
       </participants>
       <trackingProfile name="String">
         <workflow activityDefinitionId="String">
           <activityScheduledQueries>
-            <activityScheduledQuery activityName="String" 
+            <activityScheduledQuery activityName="String"
                                     childActivityName="String"/>
           </activityScheduledQueries>
           <activityStateQueries>
@@ -52,15 +52,15 @@ Bir iş akışı hizmeti için izleme ayarlarını tanımlamaya yönelik bir yap
             <bookmarkResumptionQuery name="String" />
           </bookmarkResumptionQueries>
           <cancelRequestQueries>
-            <cancelRequestQuery activityName="String" 
+            <cancelRequestQuery activityName="String"
                                 childActivityName="String"/>
           </cancelRequestQueries>
           <customTrackingQueries>
-            <customTrackingQuery activityName="String" 
+            <customTrackingQuery activityName="String"
                                  name="String"/>
           </customTrackingQueries>
           <faultPropagationQueries>
-            <faultPropagationQuery activityName="String" 
+            <faultPropagationQuery activityName="String"
                                    faultHandlerActivityName="String" />
           </faultPropagationQueries>
           <workflowInstanceQueries>
@@ -87,8 +87,8 @@ Bir iş akışı hizmeti için izleme ayarlarını tanımlamaya yönelik bir yap
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Katılımcılar >](participants.md)|Kayıtları izlemeye abone olan katılımcıları tanımlayan bir yapılandırma öğeleri koleksiyonu. İzleme katılımcıları, izleme kayıtlarından yükü işlemeye yönelik mantığı içerir (örneğin, bir dosyaya yazmayı seçebilirler).|  
-|[\<trackingProfile >](trackingprofile.md)|Bir iş akışı örneğinden yayılan izleme kayıtlarını filtrelemek için bir izleme profili.|  
+|[\<katılımcılar>](participants.md)|İzleme kayıtlarına abone olan katılımcıları tanımlayan yapılandırma öğeleri koleksiyonu. İzleme katılımcıları, izleme kayıtlarından yükü işlemek için gereken mantığı içerir (örneğin, bir dosyaya yazmayı seçebilirler).|  
+|[\<izlemeProfil>](trackingprofile.md)|İş akışı örneğinden yayılan izleme kayıtlarını filtrelemek için izleme profili.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -97,7 +97,7 @@ Bir iş akışı hizmeti için izleme ayarlarını tanımlamaya yönelik bir yap
 |Sistem.ServiceModel|Tüm iş akışı yapılandırma öğelerinin kök öğe.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İzleme, bir iş akışının yürütülmesini incelemenize olanak sağlar. İş akışı izleme altyapısı, yürütme sırasında önemli olayları yansıtan kayıtları göstermek için bir iş akışı araçları sağlar. Örneğin, bir iş akışı örneği başlatıldığında ya da tamamlandığında izleme kayıtları yayınlanmaktadır. İzleme, iş akışı değişkenleriyle ilişkili iş ile ilgili verileri de ayıklayabilir. Örneğin, iş akışı bir sipariş işleme sistemini temsil ediyorsa, sipariş kimliği izleme kaydıyla birlikte ayıklanabilir. Genel olarak, WF izlemeyi etkinleştirmek, bir iş akışı yürütmesi üzerinde tanılamayı veya iş analizlerini kolaylaştırır.  
+ İzleme, iş akışının yürütülmesini inceleme olanağı sağlar. İş akışı izleme altyapısı, yürütme sırasında ki önemli olayları yansıtan kayıtları yayacak bir iş akışı sağlar. Örneğin, bir iş akışı örneği başlatıldığında veya izleme kayıtlarını tamamladığında yayımlanır. İzleme, iş akışı değişkenleriyle ilişkili iş ile ilgili verileri de ayıklayabilir. Örneğin, iş akışı bir sipariş işleme sistemini temsil ediyorsa, sipariş kimliği izleme kaydıyla birlikte ayıklanabilir. Genel olarak, WF izlemeyi etkinleştirmek, iş akışı yürütmesi üzerinden tanılamayı veya iş analitiğini kolaylaştırır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,44 +2,44 @@
 title: Windows Presentation Foundation İstemcisinde Veri Bağlama
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: 44a208cf081ef00396dfc874349dff57363c0df3
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 7bc389056872841905336dcf658a07223906bf82
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715393"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183815"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Windows Presentation Foundation İstemcisinde Veri Bağlama
-Bu örnek, bir Windows Presentation Foundation (WPF) istemcisinde veri bağlamanın kullanımını gösterir. Örnek, istemciye dönmek için bir albüm dizisini rastgele üreten bir Windows Communication Foundation (WCF) hizmetini kullanır. Her albümün bir adı, fiyatı ve albüm izlemelerinin bir listesi vardır. Albüm izlemelerinin adı ve süresi vardır. Hizmet tarafından döndürülen bilgiler, Windows Presentation Foundation (WPF) istemcisi tarafından verilen kullanıcı arabirimine (UI) otomatik olarak bağlanır.  
+Bu örnek, bir Windows Sunu Temeli (WPF) istemcisinde veri bağlama kullanımını göstermektedir. Örnek, istemciye dönmek için rasgele bir dizi albüm oluşturan bir Windows Communication Foundation (WCF) hizmetini kullanır. Her albümün bir adı, bir fiyatı ve albüm parçalarının bir listesi vardır. Albüm parçalarının bir adı ve süresi var. Hizmet tarafından döndürülen bilgiler, Windows Sunu Temeli (WPF) istemcisi tarafından sağlanan kullanıcı arabirimine (UI) otomatik olarak bağlanır.  
   
 > [!NOTE]
-> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
+> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
   
- Veri bağlama bir veri kaynağının bir kullanıcı arabirimine otomatik olarak bağlanmasını sağlar. Bu, programlama modelini basitleştiğinden, her UI öğesini bir veri nesnesinden veya bir dizi veri nesnesinden verilerle programlı bir şekilde güncelleştirmenizi gerektirmez. Bir nesneyi tek bir UI öğesine veya bir diziye, `ListBox`gibi birden çok girişi alan bir denetime bağlayabilirsiniz. Aşağıdaki kod, bir kullanıcı arabirimi öğesinin `DataContext` nasıl veri bağlanacağını gösterir.  
+ Veri bağlama, bir veri kaynağının otomatik olarak kullanıcı arasına bağlanmasını sağlar. Bu, her kullanıcı arabirimi öğesini bir veri nesnesinden veya bir veri nesnesi dizisinden gelen verilerle programlı bir şekilde güncelleştirmenizi gerektirmediği için programlama modelini basitleştirir. Bir nesneyi tek bir UI öğesine veya diziye `ListBox`bağlayabilirsiniz. Aşağıdaki kod, verileri bir Web-Posta öğesine nasıl bağlanınca `DataContext` gösterir.  
   
 ```csharp  
 // Event handler executed when call is complete  
 void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs e)  
 {  
     // This is on the UI thread, myPanel can be accessed directly  
-    myPanel.DataContext = e.Result;   
+    myPanel.DataContext = e.Result;
 }  
 ```  
   
- Önceki örnekte, `myPanel` adlı `grid` düzen öğesi için `DataContext` `GetAlbumList` metodu tarafından döndürülen verilere ayarlanır. `DataContext`, öğelerin bağlama için kullanılan veri kaynağı ve yol gibi bağlamanın diğer özellikleri hakkında üst öğelerinden bilgi devralmasını sağlar. Sunucudaki verilerin her güncelleştirildiği her seferinde kod satırının yürütülmesi gerekir. Örneğin, pencere başlatıldığında ve yeni bir albüm eklendiğinde yürütülür.  
+ `DataContext` Önceki örnekte, `grid` adlı `myPanel` düzen öğesi `GetAlbumList` yöntem tarafından döndürülen verilere ayarlanır. Öğelerin `DataContext` bağlama için kullanılan veri kaynağı hakkında üst öğelerinden bilgileri ve yol gibi bağlamanın diğer özelliklerini devralmasına olanak tanır. Kod satırı, sunucudaki veriler her güncelleştirilince yürütülmelidir. Örneğin, pencere başharfe geçtiğinde ve yeni bir albüm eklendiğinde yürütülür.  
   
- Aşağıdaki örnek XAML kodunda, `ListBox` `ItemsSource="{Binding }"`belirtir.  
+ Aşağıdaki örnekxAML kodunda, `ListBox` `ItemsSource="{Binding }"`belirtir.  
   
 ```xml  
-<ListBox   
+<ListBox
           ItemTemplate="{StaticResource AlbumStyle}"  
-          ItemsSource="{Binding }"   
+          ItemsSource="{Binding }"
           IsSynchronizedWithCurrentItem="true" />  
 ```  
   
- Bu, üst düzey UI öğesine bağlanan verilerin de bu denetime (yani Albümler dizisi) bağlandığını belirtir. Ayrıca, `ItemTemplate="{StaticResource AlbumStyle}"` `ListBox`her öğe için kullanılacak veri şablonunu belirtir. Verilerin nasıl biçimlendirilmesi gerektiğini belirtmek için veri şablonları da tanımlayabilirsiniz. Bu veri şablonları, uygulamadaki diğer kullanıcı arabirimi öğeleri için yeniden kullanılabilir. avantajı, veri şablonunun tek bir yerde tanımlanması ve saklanması olabilir.  
+ Bu, üst düzey Web Bilgisi öğesine bağlı verilerin de bu denetime (diğer bir şekilde Albümler dizisine) bağlı olduğunu belirtir. Buna ek `ItemTemplate="{StaticResource AlbumStyle}"` olarak, her öğe için kullanılacak veri `ListBox`şablonu belirtir. Verilerin nasıl biçimlendirilmesi gerektiğini belirtmek için veri şablonları da tanımlayabilirsiniz. Bu veri şablonları uygulamadaki diğer Kullanıcı Arabirimi öğeleri için yeniden kullanılabilir, avantajı veri şablonu tanımlanır ve tek bir yerde korunur.  
   
- `AlbumStyle` veri şablonu iki `TextBlock`yan yana bir kılavuz yerleştirir. Bir tane, albümün adını ve albümdeki diğer parça sayısını belirtir.  
+ Veri `AlbumStyle` şablonu yan yana iki `TextBlock`s ile bir ızgara ortaya koyar. Biri Albümün adını, diğeri ise albümdeki Parça sayısını belirtir.  
   
 ```xaml  
 <DataTemplate x:Key="AlbumStyle">  
@@ -54,30 +54,30 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
 </DataTemplate>  
 ```  
   
- Aşağıdaki XAML kodu ikinci bir `ListBox`oluşturur.  
+ Aşağıdaki XAML kodu ikinci `ListBox`bir oluşturur.  
   
 ```xaml  
-<ListBox Grid.Row="2"   
-            Grid.ColumnSpan="2"   
+<ListBox Grid.Row="2"
+            Grid.ColumnSpan="2"
             ItemTemplate="{StaticResource TrackStyle}"  
             ItemsSource="{Binding Path=Tracks}" />  
 ```  
   
- Kod `ItemsSource`için bir yol belirtir. Bu, bu denetime bağlanan verilerin en üst düzey veriler olmadığını, `Tracks`adlı en üst düzey verilerin bir özelliğini olduğunu gösterir. Bu özellik, albümün içindeki izlemelerin dizisini temsil eder. Ayrıca, `TrackStyle` adlı farklı bir `DataTemplate` belirtilir. `TrackStyle` şablonun düzeni `AlbumStyle` şablonuyla benzerdir, ancak `TextBlock`s farklı özelliklere bağlanır. Bunun nedeni, iki şablonun farklı veri nesneleriyle kullanıllarıdır.  
+ Kod için bir yol `ItemsSource`belirtir. Bu, bu denetime bağlı verilerin üst düzey veriler değil, adı geçen `Tracks`üst düzey verilerin bir özelliği olduğunu gösterir. Bu özellik, albüm içinde bulunan parça dizisini temsil eder. Buna ek olarak, farklı `DataTemplate` bir adlandırılmış `TrackStyle` belirtilir. `TrackStyle` Şablonun düzeni `AlbumStyle` şablonunkine benzer, ancak `TextBlock`s farklı özelliklere bağlıdır. Bunun nedeni, iki şablonun farklı veri nesneleri ile kullanılmasıdır.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
   
-1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
+1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
   
-2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak [için, Windows Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
   
-3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
+3. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
   
 > [!IMPORTANT]
-> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
->   
+> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
->   
+>
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  

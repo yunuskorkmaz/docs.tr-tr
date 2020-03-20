@@ -6,75 +6,75 @@ helpviewer_keywords:
 - control types, Menu Bar
 - Menu Bar control type
 ms.assetid: c1202b21-c1f0-4560-853c-7b99bd73ad97
-ms.openlocfilehash: a6727b298c6289297fe049ffa4e64623bc9b711a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c50c5abb450ae44fcc08507354ea73f3a780afdf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778452"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179644"
 ---
 # <a name="ui-automation-support-for-the-menubar-control-type"></a>MenuBar Denetim Türü için UI Otomasyon Desteği
 > [!NOTE]
-> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu dokümantasyon, ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıfları kullanmak <xref:System.Windows.Automation> isteyen .NET Framework geliştiricileri için tasarlanmıştır. Hakkında en son [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bilgi için [Bkz. Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
   
- Bu konu, <xref:System.Windows.Automation.ControlType.MenuBar> denetim türü için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] desteği hakkında bilgi sağlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], denetim türü, bir denetimin <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> özelliğini kullanmak için karşılaması gereken koşullar kümesidir. Koşullar, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısına yönelik özel yönergeler, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellik değerleri ve Denetim desenleri içerir.  
+ Bu <xref:System.Windows.Automation.ControlType.MenuBar> konu, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] denetim türü için destek hakkında bilgi sağlar. Denetim [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]türü, <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> özelliği kullanmak için denetimin karşılaması gereken koşullar kümesidir. Koşullar, ağaç yapısı, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellik değerleri ve denetim desenleri için özel yönergeler içerir.  
   
- Menü çubuğu denetimleri, menü çubuğu denetim türünü uygulayan denetimlerin bir örneğidir. Menü çubukları, kullanıcıların bir uygulamada içerilen komutları ve seçenekleri etkinleştirmesi için bir yol sağlar.  
+ Menü çubuğu denetimleri, MenuBar denetim türünü uygulayan denetimlerin bir örneğidir. Menü çubukları, kullanıcıların bir uygulamada bulunan komutları ve seçenekleri etkinleştirmeleri için bir araç sağlar.  
   
- Aşağıdaki bölümler, menü çubuğu denetim türü için gerekli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısını, özellikleri, denetim desenlerini ve olayları tanımlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gereksinimleri, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 veya Windows Forms bakılmaksızın tüm liste denetimlerine uygulanır.  
+ Aşağıdaki bölümlerde MenuBar denetim türü için gerekli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısı, özellikleri, denetim desenleri ve olayları tanımlanır. Gereksinimler, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Win32 veya [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Windows Forms olsun, tüm liste denetimleri için geçerlidir.  
   
-<a name="Required_UI_Automation_Tree_Structure"></a>   
-## <a name="required-ui-automation-tree-structure"></a>Gerekli UI Otomasyonu ağaç yapısı  
- Aşağıdaki tabloda, denetim görünümü ve menü çubuğu denetimleriyle ilgili [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının içerik görünümü gösterilmektedir ve her görünümde nelerin yer aldığı açıklanmaktadır. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı hakkında daha fazla bilgi için bkz. [UI Otomasyon ağacına genel bakış](ui-automation-tree-overview.md).  
+<a name="Required_UI_Automation_Tree_Structure"></a>
+## <a name="required-ui-automation-tree-structure"></a>Gerekli UI Otomasyon Ağaç Yapısı  
+ Aşağıdaki tablo, menü çubuğu denetimleri ile [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ilgili denetim görünümünü ve ağacın içerik görünümünü görüntüler ve her görünümde nelerin bulunabileceğini açıklar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ağaç hakkında daha fazla bilgi için [UI Automation Tree Genel Bakış'a](ui-automation-tree-overview.md)bakın.  
   
-|Denetim görünümü|İçerik görünümü|  
+|Kontrol Görünümü|İçerik Görünümü|  
 |------------------|------------------|  
-|Menü<br /><br /> -MenuItem (1 veya daha fazla)<br />-Diğer denetimler (0 veya çok)|Menü<br /><br /> -MenuItem (1 veya daha fazla)<br />-Diğer denetimler (0 veya çok)|  
+|Menubar<br /><br /> - MenuItem (1 veya daha fazla)<br />- Diğer kontroller (0 veya çok)|Menubar<br /><br /> - MenuItem (1 veya daha fazla)<br />- Diğer kontroller (0 veya çok)|  
   
- Menü çubuğu denetimleri, yapısı içinde denetimleri ve Birleşik giriş kutularını düzenleme gibi diğer denetimleri içerebilir. Bu ek denetimler, denetim ve içerik görünümlerinde yukarıda listelenen "diğer denetimlere" karşılık gelir.  
+ Menü çubuğu denetimleri, yapısı içinde denetimleri ve açılan kutular gibi diğer denetimleri içerebilir. Bu ek denetimler, denetim ve içerik görünümlerinde yukarıda listelenen "diğer denetimlere" karşılık gelir.  
   
-<a name="Required_UI_Automation_Properties"></a>   
+<a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>Gerekli UI Otomasyon Özellikleri  
- Aşağıdaki tabloda, değeri veya tanımı özellikle menü çubuğu denetimleriyle ilgili olan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri listelenmektedir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri hakkında daha fazla bilgi için bkz. [istemciler Için UI Otomasyon özellikleri](ui-automation-properties-for-clients.md).  
+ Aşağıdaki tabloda, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] değeri veya tanımı özellikle menü çubuğu denetimleri ile ilgili özellikleri listelenir. Özellikler hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] daha fazla bilgi [için, Müşteriler için Kullanıcı Arabirimi Otomasyon Özellikleri'ne](ui-automation-properties-for-clients.md)bakın.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliği|Değer|Notlar|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Özellik|Değer|Notlar|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Notlara bakın.|Bu özelliğin açığa çıkarılan değeri, içinde yer alan tüm denetimleri içermelidir.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Notlara bakın.|Bir uygulamada birden fazla menü çubuğu yoksa, menü çubuğu denetimine bir ad gerekmez. Bir uygulamada birden fazla menü çubuğu varsa, bu özellik, "biçimlendirme" veya "anahat oluşturma" gibi ayrım adlarını açığa çıkarmak için kullanılmalıdır.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|Menü çubuğu denetimlerinin hiç bir etiketi yoktur.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Menü|Bu değer tüm UI çerçeveleri için aynıdır.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"menü çubuğu"|Menü çubuğu denetim türüne karşılık gelen yerelleştirilmiş dize.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Doğru|Menü çubuğu denetimi her zaman [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının içerik görünümüne dahil edilmiştir.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Doğru|Menü çubuğu denetimi her zaman [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının denetim görünümüne dahil edilir.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Notlara bakın.|Bu özelliğin değeri, denetimin ekranda görüntülenebilir olup olmamasına bağlıdır.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|Şekline|Bu özellik menü çubuğu denetiminin yatay mı yoksa dikey mi olduğunu gösterir.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Doğru|Menü çubuğu denetimleri, içerdikleri denetimler klavye odağı alabildiğinden klavye odaklanıyor.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|Notlara bakın.|Bir menü çubuğu denetimi için yardım metninin gerekli olduğu senaryo yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>|`Null`|Menü çubuklarında hiç kısayol tuşu yoktur.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AccessKeyProperty>|ALTERNATIF|ALT tuşuna basmak her zaman uygulamanın içindeki menü çubuğuna odaklanmalıdır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Notlara bakın.|Bu özellik tarafından maruz kalan değer, içerdiği tüm denetimleri içermelidir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Notlara bakın.|Bir uygulamada birden fazla menü çubuğu yoksa menü çubuğu denetiminin bir ad gerektirmemesi gerekir. Bir uygulamada birden fazla menü çubuğu varsa, bu özellik "Biçimlendirme" veya "Anahat Oluşturma" gibi ayırt edici adları ortaya çıkarmak için kullanılmalıdır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|Menü çubuğu denetimleri hiçbir zaman bir etikete sahip olmaz.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Menubar|Bu değer tüm Ara bilgi arabirimi çerçeveleri için aynıdır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"menü çubuğu"|MenuBar denetim türüne karşılık gelen yerelleştirilmiş dize.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Menü çubuğu denetimi her zaman [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacın içerik görünümüne dahildir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Menü çubuğu denetimi her zaman [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacın denetim görünümüne dahildir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Notlara bakın.|Bu özelliğin değeri, denetimin ekranda görüntülenip görüntülenmediğine bağlıdır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|-sına bağ -lıdır|Bu özellik, menü çubuğu denetiminin yatay veya dikey olup olmadığını ortaya çıkarır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|True|Menü çubuğu denetimleri klavye ye odaklanabiliyor, çünkü içerdikleri denetimler klavye odağı alabilir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|Notlara bakın.|Menü çubuğu denetimi için Yardım metni nin gerekli olduğu senaryolar yoktur.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>|`Null`|Menü çubuklarında hiçbir zaman hızlandırıcı tuşları yoktur.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AccessKeyProperty>|"ALT"|ALT tuşuna basıldığında her zaman uygulama içindeki menü çubuğuna odak getirmelidir.|  
   
-<a name="Required_UI_Automation_Control_Patterns"></a>   
-## <a name="required-ui-automation-control-patterns"></a>Gerekli UI Otomasyonu Denetim desenleri  
- Aşağıdaki tabloda, menü çubuğu denetimleri tarafından desteklenmesi gereken [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Denetim desenleri listelenmektedir. Denetim desenleri hakkında daha fazla bilgi için bkz. [UI Otomasyonu Denetim desenlerine genel bakış](ui-automation-control-patterns-overview.md).  
+<a name="Required_UI_Automation_Control_Patterns"></a>
+## <a name="required-ui-automation-control-patterns"></a>Gerekli UI Otomasyon Kontrol Desenleri  
+ Aşağıdaki tabloda [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] menü çubuğu denetimleri tarafından desteklenmesi gereken denetim desenleri listelenir. Denetim desenleri hakkında daha fazla bilgi için [UI Otomasyon Kontrol Modellerine Genel Bakış'a](ui-automation-control-patterns-overview.md)bakın.  
   
-|Denetim deseninin|Destek|Notlar|  
+|Kontrol Deseni|Destek|Notlar|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Şekline|Denetim genişletilebilir veya daraltılabilse <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>uygulayın.|  
-|<xref:System.Windows.Automation.Provider.IDockProvider>|Şekline|Denetim, ekranın farklı bölümlerine sabitlenebilir <xref:System.Windows.Automation.Provider.IDockProvider>uygulayın.|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider>|Şekline|Denetim yeniden boyutlandırılabileceği, döndürülerek veya taşınmışsa <xref:System.Windows.Automation.Provider.ITransformProvider>uygulaması gerekir.|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|-sına bağ -lıdır|Denetim genişletilebilir veya daraltılabilirse, uygulayın. <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|  
+|<xref:System.Windows.Automation.Provider.IDockProvider>|-sına bağ -lıdır|Denetim ekranın farklı bölümlerine sabitlenebilirse, <xref:System.Windows.Automation.Provider.IDockProvider>uygulayın.|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider>|-sına bağ -lıdır|Denetim yeniden boyutlandırılabilir, döndürülebilir veya <xref:System.Windows.Automation.Provider.ITransformProvider>taşınabiliyorsa.|  
   
-<a name="Required_UI_Automation_Events"></a>   
-## <a name="required-ui-automation-events"></a>Gerekli UI Otomasyon olayları  
- Aşağıdaki tabloda, tüm menü çubuğu denetimleri tarafından desteklenmesi gereken [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olayları listelenmektedir. Olaylar hakkında daha fazla bilgi için bkz. [UI Otomasyonu olaylarına genel bakış](ui-automation-events-overview.md).  
+<a name="Required_UI_Automation_Events"></a>
+## <a name="required-ui-automation-events"></a>Gerekli UI Otomasyon Etkinlikleri  
+ Aşağıdaki tabloda, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tüm menü çubuğu denetimleri tarafından desteklenmesi gereken olaylar listelenmektedir. Etkinlikler hakkında daha fazla bilgi için [UI Otomasyon Etkinliklerine Genel Bakış'a](ui-automation-events-overview.md)bakın.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olayı|Destek/değer|Notlar|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Olay|Destek / Değer|Notlar|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
-|özellik değişti olayı <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>.|Gerekli|Yok.|  
-|özellik değişti olayı <xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>.|Gerekli|Yok.|  
-|özellik değişti olayı <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>.|Gerekli|Yok.|  
-|özellik değişti olayı <xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty>.|Şekline|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Gerekli|Yok.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>özellik değiştirilen olay.|Gerekli|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>özellik değiştirilen olay.|Gerekli|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>özellik değiştirilen olay.|Gerekli|None|  
+|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty>özellik değiştirilen olay.|-sına bağ -lıdır|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Gerekli|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Gerekli|None|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

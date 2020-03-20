@@ -15,66 +15,66 @@ helpviewer_keywords:
 ms.assetid: 42145e8d-000f-4d0b-ae43-c08201190fa2
 topic_type:
 - apiref
-ms.openlocfilehash: b240be3e5b0127de42cea43dd8e89a2cc656b28e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bb8b531a884c9d3c2f33aa4aec5c4dbeaafe2b66
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449515"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177348"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>IMetaDataImport::EnumFieldsWithName Yöntemi
-Belirtilen ada sahip belirtilen türdeki FieldDef belirteçlerini numaralandırır.  
+Belirtilen türdeki FieldDef belirteçlerini belirtilen adla oyuvarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumFieldsWithName (  
-   [in, out] HCORENUM    *phEnum,   
-   [in]  mdTypeDef       cl,   
-   [in]  LPCWSTR         szName,   
-   [out] mdFieldDef      rFields[],   
-   [in]  ULONG           cMax,   
-   [out] ULONG           *pcTokens   
+   [in, out] HCORENUM    *phEnum,
+   [in]  mdTypeDef       cl,
+   [in]  LPCWSTR         szName,
+   [out] mdFieldDef      rFields[],
+   [in]  ULONG           cMax,
+   [out] ULONG           *pcTokens
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] Numaralandırıcı için bir işaretçi.  
+ [içinde, dışarı] Sayıya işaretçisi.  
   
  `cl`  
- 'ndaki Alanları Numaralandırılacak olan türün belirteci.  
+ [içinde] Alanları numaralandırılacak türden belirteç.  
   
  `szName`  
- 'ndaki Sabit listesinin kapsamını sınırlayan alan adı.  
+ [içinde] Numaralandırmanın kapsamını sınırlayan alan adı.  
   
  `rFields`  
- dışı FieldDef belirteçlerini depolamak için kullanılan dizi.  
+ [çıkış] Dizi FieldDef belirteçleri depolamak için kullanılır.  
   
  `cMax`  
- 'ndaki `rFields` dizisinin en büyük boyutu.  
+ [içinde] `rFields` Dizinin en büyük boyutu.  
   
  `pcTokens`  
- dışı `rFields`içinde döndürülen FieldDef belirteçlerinin gerçek sayısı.  
+ [çıkış] FieldDef belirteçlerinin gerçek sayısı `rFields`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- [IMetaDataImport:: EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md)'ten farklı olarak `EnumFieldsWithName`, belirtilen ada sahip olmayan tüm alan belirteçlerini atar.  
+ [IMetaDataImport::EnumFields'ın](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md)aksine, `EnumFieldsWithName` belirtilen ada sahip olmayan tüm alan belirteçlerini atar.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFieldsWithName` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak alan yok. Bu durumda `pcTokens` sıfırdır.|  
+|`S_OK`|`EnumFieldsWithName`başarıyla döndürülür.|  
+|`S_FALSE`|Sayısalolarak sayısala erdirecek alan yok. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -6,73 +6,73 @@ helpviewer_keywords:
 - control types, Table
 - UI Automation, Table control type
 ms.assetid: 9050dde5-6469-4c83-abb7-f861c24ff985
-ms.openlocfilehash: c66e5dd9b49f28d60fdec3563464bcb3a2fa8271
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 8a6d78ce159727ddeff72ec5729c1cc645648b61
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793993"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179527"
 ---
 # <a name="ui-automation-support-for-the-table-control-type"></a>Tablo Denetim Türü İçin UI Otomasyon Desteği
 > [!NOTE]
-> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu dokümantasyon, ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıfları kullanmak <xref:System.Windows.Automation> isteyen .NET Framework geliştiricileri için tasarlanmıştır. Hakkında en son [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bilgi için [Bkz. Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
   
- Bu konuda tablo Denetim türü için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] desteği hakkında bilgi verilmektedir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], denetim türü, bir denetimin <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> özelliğini kullanmak için karşılaması gereken koşullar kümesidir. Koşullar, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısına yönelik özel yönergeler, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellik değerleri ve Denetim desenleri içerir.  
+ Bu konu, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Tablo denetim türü için destek hakkında bilgi sağlar. Denetim [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]türü, <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> özelliği kullanmak için denetimin karşılaması gereken koşullar kümesidir. Koşullar, ağaç yapısı, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellik değerleri ve denetim desenleri için özel yönergeler içerir.  
   
- Tablo denetimleri, metin satırları ve sütunları ve isteğe bağlı olarak satır üst bilgileri ve sütun üst bilgileri içerir.  
+ Tablo denetimleri satır lar ve metin sütunları ve isteğe bağlı olarak, satır üstbilgileri ve sütun üstbilgileri içerir.  
   
- Aşağıdaki bölümler tablo Denetim türü için gerekli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısını, özellikleri, denetim desenlerini ve olayları tanımlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gereksinimler, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 veya Windows Forms gibi tüm tablo denetimleri için geçerlidir.  
+ Aşağıdaki bölümlerde Tablo [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] denetim türü için gerekli ağaç yapısı, özellikleri, denetim desenleri ve olayları tanımlanır. Gereksinimler, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Win32 veya [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Windows Forms olsun, tüm tablo denetimleri için geçerlidir.  
   
-<a name="Required_UI_Automation_Tree_Structure"></a>   
-## <a name="required-ui-automation-tree-structure"></a>Gerekli UI Otomasyonu ağaç yapısı  
- Aşağıdaki tabloda, tablo denetimleriyle ilgili [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının denetim görünümü ve içerik görünümü gösterilmektedir ve her görünümde nelerin yer aldığı açıklanmaktadır. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı hakkında daha fazla bilgi için bkz. [UI Otomasyon ağacına genel bakış](ui-automation-tree-overview.md).  
+<a name="Required_UI_Automation_Tree_Structure"></a>
+## <a name="required-ui-automation-tree-structure"></a>Gerekli UI Otomasyon Ağaç Yapısı  
+ Aşağıdaki tablo, tablo denetimleri ile ilgili [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] denetim görünümünü ve ağacın içerik görünümünü görüntüler ve her görünümde nelerin bulunabileceğini açıklar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ağaç hakkında daha fazla bilgi için [UI Automation Tree Genel Bakış'a](ui-automation-tree-overview.md)bakın.  
   
-|Denetim görünümü|İçerik görünümü|  
+|Kontrol Görünümü|İçerik Görünümü|  
 |------------------|------------------|  
-|Tablo<br /><br /> -Üst bilgi (0 veya 1)<br />-Metin (0 veya 1)<br />-Çeşitli denetimler (0 veya daha fazla)|Tablo<br /><br /> -Metin (0 veya daha fazla)<br />-Çeşitli denetimler (0 veya daha fazla)|  
+|Tablo<br /><br /> - Üstbilgi (0 veya 1)<br />- Metin (0 veya 1)<br />- Çeşitli kontroller (0 veya daha fazla)|Tablo<br /><br /> - Metin (0 veya daha fazla)<br />- Çeşitli kontroller (0 veya daha fazla)|  
   
- Bir tablo denetiminde satır veya sütun başlıkları varsa, UI Otomasyon ağacının denetim görünümünde gösterilmeleri gerekir. Tablemodel kullanılarak erişilebildiğinden Içerik görünümü bu bilgileri açığa çıkarmak zorunda değildir.  
+ Tablo denetiminde satır veya sütun üstbilgisi varsa, bunların UI Otomasyonu ağacının Denetim Görünümü'nde açıkta kalması gerekir. İçerik Görünümü'ne bu bilgileri ifşa etmesi gerekmez, çünkü Tablo Deseni kullanılarak erişilebilir.  
   
-<a name="Required_UI_Automation_Properties"></a>   
+<a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>Gerekli UI Otomasyon Özellikleri  
- Aşağıdaki tabloda, değeri veya tanımı özellikle tablo denetimleriyle ilgili olan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri listelenmektedir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri hakkında daha fazla bilgi için bkz. [istemciler Için UI Otomasyon özellikleri](ui-automation-properties-for-clients.md).  
+ Aşağıdaki tablo, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] değeri veya tanımı özellikle Tablo denetimleri ile ilgili özellikleri listeler. Özellikler hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] daha fazla bilgi [için, Istemciler için Kullanıcı Arabirimi Otomasyon Özellikleri'ne](ui-automation-properties-for-clients.md)bakın.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliği|Değer|Notlar|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Özellik|Değer|Notlar|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Notlara bakın.|Bu özelliğin değerinin bir uygulamadaki tüm denetimlerde benzersiz olması gerekir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Notlara bakın.|Bu özelliğin değeri, bir uygulamadaki tüm denetimler arasında benzersiz olmalıdır.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Notlara bakın.|Tüm denetimi içeren en dıştaki dikdörtgen.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Notlara bakın.|Sınırlayıcı bir dikdörtgen varsa desteklenir. Sınırlayıcı dikdörtgenin içindeki her nokta tıklatılabilir ise ve özelleştirilmiş isabet testi gerçekleştirirseniz ve ardından tıklatılabilir bir nokta sağlayabilirsiniz.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Notlara bakın.|Denetim, klavye odağı alamıyorsa, bu özelliği desteklemesi gerekir.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Notlara bakın.|Tablo denetimi genellikle adını statik bir metin etiketinden alır. Statik metin etiketi yoksa, tablonun amacını açıklamak için her zaman kullanılabilir olması gereken bir ad özelliği atamanız gerekir.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Notlara bakın.|Statik bir metin etiketi varsa, bu özellik denetimin Automation öğesine bir başvuru göstermelidir.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Tablo|Bu değer tüm UI çerçeveleri için aynıdır.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|tablosundan|Tablo denetim türüne karşılık gelen yerelleştirilmiş dize.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|Notlara bakın.|Tablonun amacı hakkında daha fazla ayrıntı, NameProperty öğesine erişerek yeterince açıklanmadığı durumlarda bu özellik aracılığıyla gösterilmelidir.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Doğru|Tablo denetimi her zaman içerik olmalıdır.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Doğru|Tablo denetimi her zaman bir denetim olmalıdır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Notlara bakın.|Sınırlayıcı bir dikdörtgen varsa desteklenir. Sınırlayıcı dikdörtgen içindeki her nokta tıklatılabilir değilse ve özel isabet testi gerçekleştirin, sonra geçersiz kılınve tıklanabilir bir nokta sağlayın.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Notlara bakın.|Denetim klavye odağı alabiliyorsa, bu özelliği desteklemesi gerekir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Notlara bakın.|Tablo denetimi genellikle adını statik bir metin etiketinden alır. Statik metin etiketi yoksa, tablonun amacını açıklamak için her zaman kullanılabilir olması gereken bir Ad özelliği atamanız gerekir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Notlara bakın.|Statik bir metin etiketi varsa, bu özellik denetimin otomasyon öğesine bir başvuru göstermelidir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Tablo|Bu değer tüm Ara bilgi arabirimi çerçeveleri için aynıdır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"masa"|Tablo denetim türüne karşılık gelen yerelleştirilmiş dize.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|Notlara bakın.|NameProperty'e erişilerek yeterince açıklanmazsa, tablonun amacı hakkında daha fazla ayrıntı bu özellik aracılığıyla açıklanmalıdır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Tablo denetimi her zaman içerik olmalıdır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Tablo denetimi her zaman bir kontrol olmalıdır.|  
   
-<a name="Required_UI_Automation_Control_Patterns"></a>   
-## <a name="required-ui-automation-control-patterns"></a>Gerekli UI Otomasyonu Denetim desenleri  
- Aşağıdaki tabloda tablo denetimleri tarafından desteklenmesi gereken [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Denetim desenleri listelenmektedir. Denetim desenleri hakkında daha fazla bilgi için bkz. [UI Otomasyonu Denetim desenlerine genel bakış](ui-automation-control-patterns-overview.md).  
+<a name="Required_UI_Automation_Control_Patterns"></a>
+## <a name="required-ui-automation-control-patterns"></a>Gerekli UI Otomasyon Kontrol Desenleri  
+ Aşağıdaki tablo, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Tablo denetimleri tarafından desteklenmesi gereken denetim desenlerini listeler. Denetim desenleri hakkında daha fazla bilgi için [UI Otomasyon Kontrol Modellerine Genel Bakış'a](ui-automation-control-patterns-overview.md)bakın.  
   
-|Denetim deseninin|Destek|Notlar|  
+|Kontrol Deseni|Destek|Notlar|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|Evet|Tablo denetimi her zaman bu denetim modelini destekler çünkü içerdiği öğelerin bir kılavuzda sunulan verileri vardır.|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Evet (alt nesnelerle gereklidir)|Bir tablonun iç nesneleri hem GridItem hem de TableItem denetim düzenlerini desteklemelidir. Tablo başka bir tablonun parçası değilse tablonun kendisi GridItem veya TableItem denetim düzenlerini desteklemezler.|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|Evet|Tablo denetimi her zaman içerikle ilişkili üst bilgilerin yer aldığı özelliğe sahiptir.|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Evet (alt nesnelerle gereklidir)|Bir tablonun iç nesneleri hem GridItem hem de TableItem denetim düzenlerini desteklemelidir. Tablo başka bir tablonun parçası değilse tablonun kendisi GridItem veya TableItem denetim düzenlerini desteklemezler.|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|Evet|İçerdiği öğelerızgarada sunulan verilere sahip olduğundan, tablo denetimi her zaman bu denetim deseni destekler.|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Evet (alt nesnelerle birlikte gereklidir)|Tablonun iç nesneleri hem GridItem hem de TableItem denetim modellerini desteklemelidir. Tablo başka bir tablonun parçası olmadığı sürece tablonun griditem veya TableItem denetim desenleri desteklemez.|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|Evet|Tablo denetimi her zaman içerikle ilişkili üstbilgi sahibi olma yeteneğine sahiptir.|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Evet (alt nesnelerle birlikte gereklidir)|Tablonun iç nesneleri hem GridItem hem de TableItem denetim modellerini desteklemelidir. Tablo başka bir tablonun parçası olmadığı sürece tablonun griditem veya TableItem denetim desenleri desteklemez.|  
   
-<a name="Required_UI_Automation_Events"></a>   
-## <a name="required-ui-automation-events"></a>Gerekli UI Otomasyon olayları  
- Aşağıdaki tabloda tüm tablo denetimleri tarafından desteklenmesi gereken [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olayları listelenmektedir. Olaylar hakkında daha fazla bilgi için bkz. [UI Otomasyonu olaylarına genel bakış](ui-automation-events-overview.md).  
+<a name="Required_UI_Automation_Events"></a>
+## <a name="required-ui-automation-events"></a>Gerekli UI Otomasyon Etkinlikleri  
+ Aşağıdaki tablo, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tüm tablo denetimleri tarafından desteklenmesi gereken olayları listeler. Etkinlikler hakkında daha fazla bilgi için [UI Otomasyon Etkinliklerine Genel Bakış'a](ui-automation-events-overview.md)bakın.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olayı|Destek|Notlar|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Olay|Destek|Notlar|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|özellik değişti olayı <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>.|Gerekli|Yok.|  
-|özellik değişti olayı <xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>.|Gerekli|Yok.|  
-|özellik değişti olayı <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>.|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Gerekli|Yok.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>özellik değiştirilen olay.|Gerekli|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>özellik değiştirilen olay.|Gerekli|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>özellik değiştirilen olay.|Gerekli|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Gerekli|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Gerekli|None|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

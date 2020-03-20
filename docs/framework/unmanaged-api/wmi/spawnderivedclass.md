@@ -1,6 +1,6 @@
 ---
-title: SpawnDerivedClass işlevi (yönetilmeyen API Başvurusu)
-description: SpawnDerivedClass işlevi, bir nesneden türetilen yeni bir nesne oluşturur.
+title: SpawnDerivedClass işlevi (Yönetilmeyen API Başvurusu)
+description: SpawnDerivedClass işlevi bir nesneden türeyen yeni bir nesne oluşturur.
 ms.date: 11/06/2017
 api_name:
 - SpawnDerivedClass
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SpawnDerivedClass function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: f72e6b1c356077a94b141e40d6efe485e77e7a9e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e9784f8a024c788823dc702794b2b86eea1827bb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120187"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174855"
 ---
-# <a name="spawnderivedclass-function"></a>SpawnDerivedClass işlevi
-Belirtilen nesneden yeni türetilmiş sınıf nesnesi oluşturur.    
+# <a name="spawnderivedclass-function"></a>SpawnDerivedClass fonksiyonu
+Belirtilen bir nesneden yeni türetilmiş bir sınıf nesnesi oluşturur.
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -30,54 +30,54 @@ Belirtilen nesneden yeni türetilmiş sınıf nesnesi oluşturur.
   
 ```cpp  
 HRESULT SpawnDerivedClass (
-   [in] int                  vFunc, 
-   [in] IWbemClassObject*    ptr, 
+   [in] int                  vFunc,
+   [in] IWbemClassObject*    ptr,
    [in] LONG                 lFlags,
-   [out] IWbemClassObject**  ppNewClass); 
+   [out] IWbemClassObject**  ppNewClass);
 ```  
 
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-'ndaki Bu parametre kullanılmıyor.
+[içinde] Bu parametre kullanılmaz.
 
 `ptr`  
-'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
+[içinde] [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine işaretçi.
 
 `lFlags`  
-'ndaki Ayrılamadı. Bu parametre 0 olmalıdır.
+[içinde] Saklı -dır. Bu parametre 0 olmalıdır.
 
 `ppNewClass`  
-dışı Yeni sınıf tanımı nesnesine yönelik işaretçiyi alır. Bir hata oluşursa, yeni bir nesne döndürülmez ve `ppNewClass` değiştirilmemiş olarak bırakılır. Değeri `null`olamaz.
+[çıkış] Yeni sınıf tanımı nesnesinin işaretçisini alır. Bir hata oluşursa, yeni bir nesne `ppNewClass` döndürülür ve değiştirilmemiş bırakılır. Değeri. `null`
 
-## <a name="return-value"></a>Dönüş değeri
+## <a name="return-value"></a>Döndürülen değer
 
-Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
+Bu işlev tarafından döndürülen aşağıdaki değerler *WbemCli.h* üstbilgi dosyasında tanımlanır veya bunları kodunuzdaki sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
-| `WBEM_E_INVALID_OPERATION` | 0x80041016 | Örnekten bir sınıfı oluşturmak gibi geçersiz bir işlem istendi. |
-| `WBEM_E_INCOMPLETE_CLASS` | Kaynak sınıf tamamen tanımlanmamış veya Windows yönetimine kaydolmadı, bu nedenle yeni bir türetilmiş sınıfa izin verilmez. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi gerçekleştirmek için yeterli bellek yok. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` `null`. |
+| `WBEM_E_FAILED` | 0x80041001 | Genel bir başarısızlık oldu. |
+| `WBEM_E_INVALID_OPERATION` | 0x80041016 | Bir örnekten bir sınıf yumurtlama gibi geçersiz bir işlem istendi. |
+| `WBEM_E_INCOMPLETE_CLASS` | Kaynak sınıf windows yönetimi ile tam olarak tanımlanmadı veya kaydedilmedi, bu nedenle yeni bir türetilmiş sınıfa izin verilmez. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak için yeterli bellek yok. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass``null`. |
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev, [IWbemClassObject:: SpawnDerivedClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) yöntemine bir çağrı kaydırır.
+Bu [işlev, IWbemClassObject::SpawnDerivedClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) yöntemine bir çağrı yıkLar.
 
-`ptr`, üretilen nesnenin üst sınıfı haline gelen bir sınıf tanımı olmalıdır. Döndürülen nesne geçerli nesnenin bir alt sınıfı olur.
+`ptr`oluşturulan nesnenin ana sınıfı haline gelen bir sınıf tanımı olmalıdır. Döndürülen nesne, geçerli nesnenin bir alt sınıfı olur.
 
-`ppNewClass` ' de döndürülen yeni nesne otomatik olarak geçerli nesnenin bir alt sınıfı olur. Bu davranışın üzerine yazılamıyor. Alt sınıfların (türetilmiş sınıflar) oluşturulabilmesi için başka bir yöntem yoktur.
+Otomatik `ppNewClass` olarak döndürülen yeni nesne, geçerli nesnenin bir alt sınıfı olur. Bu davranış geçersiz kılınamaz. Alt sınıfların (türetilmiş sınıflar) oluşturulabileceği başka bir yöntem yoktur.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** WMINet_Utils. IDL  
+ **Üstbilgi:** WMINet_Utils.idl  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)

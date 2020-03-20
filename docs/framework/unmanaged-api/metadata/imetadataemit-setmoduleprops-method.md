@@ -15,36 +15,36 @@ helpviewer_keywords:
 ms.assetid: b74d7629-5f46-458f-8d67-2456a1e7030c
 topic_type:
 - apiref
-ms.openlocfilehash: 2d3c820975488fa722e7af6070611ba7e9686ce8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 69c3ee366dbb8505e0df744037c480da996bb836
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445450"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175622"
 ---
 # <a name="imetadataemitsetmoduleprops-method"></a>IMetaDataEmit::SetModuleProps Yöntemi
-Imetadatayayma için önceki bir çağrı tarafından tanımlanan bir modüle yapılan başvuruları güncelleştirir [::D efineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).  
+[Başvuruları IMetaDataEmit::DefineModuleRef'e](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md)önceden yapılan bir çağrıyla tanımlanan bir modüle güncelleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT SetModuleProps (   
+HRESULT SetModuleProps (
     [in]  LPCWSTR     szName  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `szName`  
- 'ndaki Unicode 'daki modül adı. Bu, yalnızca dosya adıdır ve tam yol adı değildir.  
+ [içinde] Unicode'daki modül adı. Bu yalnızca dosya adıdır ve tam yol adı değildir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

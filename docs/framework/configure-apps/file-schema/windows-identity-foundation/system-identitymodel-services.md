@@ -3,18 +3,18 @@ title: <system.identityModel.services>
 ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
-ms.openlocfilehash: e9488c0681e1a5f0fe94112a36b65ec73bf9fd09
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 57757aaec39bc5c552e7ba12c9779cb3a92a9025
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251803"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152510"
 ---
-# <a name="systemidentitymodelservices"></a>\<System. IdentityModel. Services >
-WS-Federation protokolünü kullanarak kimlik doğrulaması için yapılandırma bölümü.  
+# <a name="systemidentitymodelservices"></a>\<system.identityModel.services>
+WS-Federation protokolünü kullanarak kimlik doğrulama için yapılandırma bölümü.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<System. IdentityModel. Services >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.identityModel.services>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,27 +29,27 @@ WS-Federation protokolünü kullanarak kimlik doğrulaması için yapılandırma
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
- Yok.  
+ None  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<federationConfiguration >](federationconfiguration.md)|<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (Wsfab) <xref:System.IdentityModel.Services.SessionAuthenticationModule> ve (Sam) http modüllerini yapılandıran ayarları içerir.|  
+|[\<federasyonKonfigürasyon>](federationconfiguration.md)|<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) ve <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) HTTP modüllerini yapılandıran ayarları içerir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
- Yok.  
+ None  
   
 ## <a name="remarks"></a>Açıklamalar  
- Sam ve `<system.identityModel.services>` wsfae ayarlarını sağlamak için uygulamanızın yapılandırma dosyasına bir bölüm ekleyin.  
+ SAM `<system.identityModel.services>` ve WSFAM ayarlarını sağlamak için uygulamanızın yapılandırma dosyasına bir bölüm ekleyin.  
   
 > [!IMPORTANT]
-> Kodunuzda talep tabanlı <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> erişim denetimi <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> sağlamak için veya sınıfını kullanırken, yetkilendirme kararları almak için kullanılan talep Yetkilendirme Yöneticisi (<xref:System.Security.Claims.ClaimsAuthorizationManager>) ve ilkesi bir `<identityConfiguration>` Bu bölümdeki bir `<federationConfiguration>` öğeden örtük veya açık olarak başvurulan öğe. Daha fazla bilgi için [ \<FederationConfiguration >](federationconfiguration.md) **öğesinin altındaki açıklamalara** bakın.  
+> Kodunuzda <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> talep <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> tabanlı erişim denetimi sağlamak için sınıfı veya sınıfı<xref:System.Security.Claims.ClaimsAuthorizationManager>kullanırken, talep yetkilendirme yöneticisi ( ) ve `<identityConfiguration>` yetkilendirme kararları vermek için kullanılan ilke, bu bölümdeki bir `<federationConfiguration>` öğeden örtülü veya açıkça başvurulan bir öğe aracılığıyla yapılandırılır. Daha fazla bilgi için [ \<federasyonYapılandırma>](federationconfiguration.md) öğesi altındaki **Açıklamalar'a** bakın.  
   
- `<system.identityModel.services>` Bölümü sınıfı<xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> tarafından temsil edilir. Bölümünde yapılandırılan alt `<federationConfiguration>` öğelerin koleksiyonu <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection> sınıfı tarafından temsil edilir.  
+ Bölüm `<system.identityModel.services>` <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> sınıf tarafından temsil edilir. Bölümde yapılandırılan `<federationConfiguration>` alt öğelerin toplanması <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection> sınıf tarafından temsil edilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki XML, bir yapılandırma dosyasına bir `<system.identityModel.services>` bölümün nasıl ekleneceğini gösterir. Öncelikle `<system.identityModel.services>` bölüm`<system.identityModel>` ve bölümler için bölüm bildirimleri eklemeniz gerekir. (Bir `<system.identityModel.services>` bölümü eklediğinizde, gerekirse çalışma zamanı tarafından varsayılan `<identityConfiguration>` bir bölümün oluşturulabilmelidir emin `<system.identityModel>` olmak için bölüm için bir bildirim de eklemeniz gerekir.) Bölüm bildirimleri eklendikten sonra, `<system.identityModel.services>` öğesinin altında federal kimlik doğrulama ayarlarını yapılandırabilirsiniz.  
+ Aşağıdaki XML, yapılandırma dosyasına `<system.identityModel.services>` nasıl bir bölüm ekleyeceğinigösterir. Öncelikle `<system.identityModel.services>` hem bölüm hem de bölümler için `<system.identityModel>` bölüm bildirimleri eklemeniz gerekir. (Bir `<system.identityModel.services>` bölüm eklediğinizde, gerekirse çalışma süresine `<system.identityModel>` kadar varsayılan `<identityConfiguration>` bir bölümün oluşturulabilmesini sağlamak için bölüm için bir bildirim de eklemelisiniz.) Bölüm bildirimleri eklendikten sonra, öğenin `<system.identityModel.services>` altında federal kimlik doğrulama ayarlarını yapılandırabilirsiniz.  
   
 ```xml  
 <configuration>  
@@ -62,12 +62,12 @@ WS-Federation protokolünü kullanarak kimlik doğrulaması için yapılandırma
   
   <system.identityModel.services>  
     <federationConfiguration>  
-      <wsFederation passiveRedirectEnabled="true"   
-        issuer="http://localhost:15839/wsFederationSTS/Issue"   
-        realm="http://localhost:50969/" reply="http://localhost:50969/"   
-        requireHttps="false"   
-        signOutReply="http://localhost:50969/SignedOutPage.html"   
-        signOutQueryString="Param1=value2&Param2=value2"   
+      <wsFederation passiveRedirectEnabled="true"
+        issuer="http://localhost:15839/wsFederationSTS/Issue"
+        realm="http://localhost:50969/" reply="http://localhost:50969/"
+        requireHttps="false"
+        signOutReply="http://localhost:50969/SignedOutPage.html"
+        signOutQueryString="Param1=value2&Param2=value2"
         persistentCookiesOnPassiveRedirects="true" />  
       <cookieHandler requireSsl="false" />  
     </federationConfiguration>  

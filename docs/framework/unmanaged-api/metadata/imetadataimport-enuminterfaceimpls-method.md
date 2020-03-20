@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-ms.openlocfilehash: ef7057ad19fd34750bd15d358e9c1ebb1289cd44
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b535fdd5027a26cc4dd0eafec9883f0186773dd1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338059"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175505"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls Yöntemi
-Belirtilen `TypeDef`tarafından uygulanan tüm arabirimleri numaralandırır. 
+Belirtilen `TypeDef`tarafından uygulanan tüm arabirimleri oyalar.
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumInterfaceImpls (  
-   [in, out]  HCORENUM       *phEnum,   
+   [in, out]  HCORENUM       *phEnum,
    [in]   mdTypeDef          td,  
-   [out]  mdInterfaceImpl    rImpls[],   
+   [out]  mdInterfaceImpl    rImpls[],
    [in]   ULONG              cMax,  
    [out]  ULONG*             pcImpls  
 );  
@@ -39,39 +39,39 @@ HRESULT EnumInterfaceImpls (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] Numaralandırıcı için bir işaretçi.  
+ [içinde, dışarı] Sayıya işaretçisi.  
   
  `td`  
- 'ndaki MethodDef belirteçleri arabirim uygulamalarını temsil eden TypeDef 'in belirteci NUMARALANDIRILAMAZ.  
+ [içinde] Arabirim uygulamalarını temsil eden MethodDef belirteçleri numaralandırılacak Olan TypeDef belirteci.  
   
  `rImpls`  
- dışı MethodDef belirteçlerini depolamak için kullanılan dizi.  
+ [çıkış] MethodDef belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- 'ndaki `rImpls` dizisinin uzunluk üst sınırı.  
+ [içinde] `rImpls` Dizinin maksimum uzunluğu.  
   
  `pcImpls`  
- dışı `rImpls`' de döndürülen gerçek belirteç sayısı.  
+ [çıkış] Döndürülen belirteçlerin gerçek `rImpls`sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak bir MethodDef belirteci yok. Bu durumda `pcImpls` sıfır olarak ayarlanır.|  
+|`S_OK`|`EnumInterfaceImpls`başarıyla döndürülür.|  
+|`S_FALSE`|Sayısala çıkarmak için MethodDef belirteçleri yoktur. Bu durumda, `pcImpls` sıfıra ayarlanır.|  
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sabit listesi, belirtilen `TypeDef`tarafından uygulanan her arabirim için `mdInterfaceImpl` belirteçlerinin bir koleksiyonunu döndürür. Arabirim belirteçleri, arabirimlerin belirtildiği sırada döndürülür (`DefineTypeDef` veya `SetTypeDefProps`aracılığıyla). Döndürülen `mdInterfaceImpl` belirteçlerinin özellikleri [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md)kullanılarak sorgulanabilir.
+Numaralandırma, belirtilen ler tarafından `mdInterfaceImpl` uygulanan her arabirim için bir `TypeDef`belirteç ler koleksiyonunu döndürür. Arabirim belirteçleri, arabirimlerin belirtildiği sırayla `DefineTypeDef` `SetTypeDefProps`döndürülür (üzerinden veya). Döndürülen `mdInterfaceImpl` belirteçlerin özellikleri [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md)kullanılarak sorgulanabilir.
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

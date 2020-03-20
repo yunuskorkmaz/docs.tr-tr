@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 38e72a06-dbed-473b-a59b-7e0b3ea4f2af
 topic_type:
 - apiref
-ms.openlocfilehash: aec3c5f140df7eab10ea2bfa33634a4d853adcb0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0073a532f680d8764ec9e76ea22326a630457043
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134297"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176441"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable Numaralandırması
-Bilgisayardaki boş fiziksel bellek miktarını belirten değerleri içerir. Bu değerler, Windows API 'sindeki `CreateMemoryResourceNotification` işlevinden döndürülen yüksek ve düşük bellek olaylarına mantıksal olarak eşlenir.  
+Bilgisayardaki boş fiziksel bellek miktarını gösteren değerler içerir. Bu değerler, Windows API'daki `CreateMemoryResourceNotification` işlevden döndürülen yüksek ve düşük bellek olaylarının mantıksal olarak eşlenir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -30,7 +30,7 @@ Bilgisayardaki boş fiziksel bellek miktarını belirten değerleri içerir. Bu 
 typedef enum {  
     eMemoryAvailableLow     = 1,  
     eMemoryAvailableNeutral = 2,  
-    eMemoryAvailableHigh    = 3   
+    eMemoryAvailableHigh    = 3
 } EMemoryAvailable;  
 ```  
   
@@ -38,21 +38,21 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`eMemoryAvailableHigh`|Yeterince fiziksel bellek mevcuttur.|  
+|`eMemoryAvailableHigh`|Çok sayıda fiziksel bellek mevcuttur.|  
 |`eMemoryAvailableLow`|Çok az fiziksel bellek mevcuttur.|  
-|`eMemoryAvailableNeutral`|Kullanılabilir fiziksel bellek nötr.|  
+|`eMemoryAvailableNeutral`|Kullanılabilir fiziksel bellek nötrdür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu değer, [ICLRMemoryNotificationCallback:: OnMemoryNotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) yöntemine yapılan bir çağrı kullanılarak ana bilgisayar tarafından ortak dil çalışma zamanına (CLR) geçirilir.  
+ Bu değer, [iCLRMemoryNotificationCallback::OnMemoryNotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) yöntemine bir çağrı kullanılarak ana bilgisayar tarafından ortak dil çalışma süresine (CLR) aktarılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE. h  
+ **Üstbilgi:** MSCorEE.h  
   
- **Kitaplık:** MSCorEE. dll  
+ **Kütüphane:** Mscoree.dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

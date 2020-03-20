@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1e744b8-a6fb-4d9c-a971-8babc875d8f0
 topic_type:
 - apiref
-ms.openlocfilehash: f10c55abcc044b5bbdbb940001a25f530a4688e4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 489fa217744e41ccb5d27d088790131c15e1ee52
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431226"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177392"
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError Yöntemi
 Meta veri birleştirme sırasında oluşan hataların bildirimini sağlar.  
@@ -29,26 +29,26 @@ Meta veri birleştirme sırasında oluşan hataların bildirimini sağlar.
   
 ```cpp  
 HRESULT OnError (  
-    [in] HRESULT   hrError,   
+    [in] HRESULT   hrError,
     [in] mdToken   token  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `hrError`  
- 'ndaki Çağırma yöntemine döndürülen HRESULT hata değeri.  
+ [içinde] HRESULT hata değeri arama yöntemine döndürülür.  
   
  `token`  
- 'ndaki Hata oluştuğunda birleştirilmekte olan kod nesnesinin meta veri belirteci.  
+ [içinde] Hata oluştuğunda birleştirilen kod nesnesinin meta veri belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

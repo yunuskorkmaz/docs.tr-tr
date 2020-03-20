@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: f2833594-d90b-4a71-9a53-34b12470c64a
 topic_type:
 - apiref
-ms.openlocfilehash: c736eccfd5d05ec9b65e6ed26187e7c7b4387c5d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 94261b7796166cf482a7de990551890e4722dd3b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431735"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177732"
 ---
 # <a name="imetadataemitdefinemoduleref-method"></a>IMetaDataEmit::DefineModuleRef Yöntemi
-Belirtilen ada sahip bir modül için meta veri imzası oluşturur.  
+Belirtilen ada sahip bir modül için meta veri imzasını oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT DefineModuleRef (     
-    [in]  LPCWSTR           szName,   
-    [out] mdModuleRef       *pmur   
+HRESULT DefineModuleRef (
+    [in]  LPCWSTR           szName,
+    [out] mdModuleRef       *pmur
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `szName`  
- 'ndaki Diğer meta veri dosyasının adı, genellikle DLL. Bu yalnızca dosya adıdır. Tam yol adı kullanmayın.  
+ [içinde] Diğer meta veri dosyasının adı, genellikle bir DLL. Bu yalnızca dosya adıdır. Tam yol adı kullanmayın.  
   
  `pmur`  
- dışı Atanan `mdModuleRef` belirteci.  
+ [çıkış] Atanan `mdModuleRef` belirteç.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

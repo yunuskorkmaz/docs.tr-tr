@@ -2,32 +2,32 @@
 title: WCF Keşif Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: 46092c3bce87d426f4d465367e99a9ebb6dc37fa
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 449d54e0dd1948885a7298fb4da46067de3eb9d9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737482"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184208"
 ---
 # <a name="wcf-discovery-overview"></a>WCF Keşif Genel Bakış
-Bulma API 'Leri, WS-Discovery protokolünü kullanarak dinamik yayımlama ve Web Hizmetleri bulma için Birleşik bir programlama modeli sağlar. Bu API 'Ler, hizmetlerin kendilerini ve istemcileri yayımlanmış Hizmetleri bulmak için yayımlamasına olanak sağlar. Bir hizmet bulunabilir hale getirildikten sonra hizmet, duyuru iletileri gönderebilir ve bulma isteklerini dinleyebilir ve bunlara yanıt verebilir. Keşfedilebilir hizmetler, bir ağ üzerinden bir ağı duyurmak üzere bir ağ ve Bye iletileri üzerinde gelişmelerini duyurmak için Merhaba iletiler gönderebilir. İstemciler, bir hizmeti bulmak için ağ üzerinde hizmet sözleşmesi türü, anahtar sözcükler ve kapsam gibi belirli ölçütlere sahip bir `Probe` isteği gönderir. Hizmetler `Probe` isteği alır ve ölçütlere göre eşleşip eşleşmediğine göre belirlenir. Bir hizmet eşleşiyorsa, hizmetle iletişim kurmak için gereken bilgilerle istemciye bir `ProbeMatch` iletisi göndererek yanıt verir. İstemciler ayrıca, kendi uç nokta adreslerini değiştirmiş olabilecek Hizmetleri bulmasına izin veren `Resolve` istekleri de gönderebilir. Eşleşen hizmetler, istemciye geri `ResolveMatch` bir ileti göndererek `Resolve` isteklerine yanıt verir.  
+Discovery API'leri, WS-Discovery protokolünü kullanarak Web hizmetlerinin dinamik olarak yayımlanması ve keşfi için birleşik bir programlama modeli sağlar. Bu API'ler, hizmetlerin kendilerini ve istemcilerini yayımlayabilmeleri için yayımlanmış hizmetleri bulmalarına olanak sağlar. Bir hizmet keşfedilebilir hale getirildikten sonra, hizmet duyuru iletileri göndermenin yanı sıra keşif isteklerini dinleyebilir ve yanıtverebilir. Keşfedilebilir hizmetler, bir ağa gelişlerini duyurmak için Merhaba mesajları gönderebilir ve bir ağdan ayrıldıklarını duyurmak için Bye mesajları gönderebilir. Bir hizmeti bulmak için `Probe` istemciler, ağdaki hizmet sözleşmesi türü, anahtar kelimeler ve kapsam gibi belirli ölçütleri içeren bir istek gönderir. Hizmetler `Probe` isteği alır ve ölçütlerine uyup uymadığını belirler. Bir hizmet eşleşirse, hizmetle iletişim kurmak için gerekli bilgileri istemciye geri göndererek `ProbeMatch` yanıt verir. İstemciler, `Resolve` bitiş noktası adreslerini değiştirmiş olabilecek hizmetleri bulmalarına izin veren istekler de gönderebilir. Eşleşen hizmetler `Resolve` istemciye bir `ResolveMatch` ileti göndererek istekleri yanıtlar.  
   
-## <a name="ad-hoc-and-managed-modes"></a>Geçici ve yönetilen modlar  
- Keşif API 'SI iki farklı modu destekler: yönetilen ve geçici. Yönetilen modda, kullanılabilir hizmetler hakkında bilgi tutan bulma proxy 'si adlı merkezi bir sunucu vardır. Keşif proxy 'si, hizmetler hakkında çeşitli yollarla doldurulmuş olabilir. Örneğin, hizmetler bulma proxy 'sine başlama sırasında duyuru iletileri gönderebilir veya proxy, hangi hizmetlerin kullanılabilir olduğunu belirlemek için bir veritabanından veya bir yapılandırma dosyasından verileri okuyabilir. Bulma proxy 'sinin nasıl doldurulduğu, geliştiriciye tamamen tamamen yapılır. İstemciler, kullanılabilir hizmetler hakkında bilgi almak için bulma proxy 'sini kullanır. İstemci bir hizmeti aradığında, bulma proxy 'sine `Probe` bir ileti gönderir ve proxy, istemci tarafından aranan hizmetlerden herhangi birinin aradığı hizmetle eşleşip eşleşmediğini belirler. Eşleşmeler varsa, bulma proxy 'si istemciye geri `ProbeMatch` bir yanıt gönderir. İstemci daha sonra doğrudan proxy 'den döndürülen hizmet bilgilerini kullanarak hizmetle iletişim kurabilirler. Yönetilen modun arkasındaki anahtar ilkesi, bulma isteklerinin tek bir yetkiliye, bulma proxy 'sine yönelik bir tek noktaya gönderildiği bir şekilde gönderilir. .NET Framework kendi ara sunucusunu oluşturmanıza izin veren anahtar bileşenleri içerir. İstemciler ve hizmetler Proxy 'yi birden çok yöntemle bulabilir:  
+## <a name="ad-hoc-and-managed-modes"></a>Ad-Hoc ve Yönetilen Modlar  
+ Discovery API iki farklı modu destekler: Yönetilen ve Ad-Hoc. Yönetilen modda, kullanılabilir hizmetler hakkında bilgi tutan bir bulma proxy'si adı verilen merkezi bir sunucu vardır. Keşif proxy çeşitli şekillerde hizmetler hakkında bilgi ile doldurulabilir. Örneğin, hizmetler bulma proxy'sine başlatma sırasında duyuru iletileri gönderebilir veya proxy hangi hizmetlerin kullanılabilir olduğunu belirlemek için bir veritabanından veya yapılandırma dosyasından verileri okuyabilir. Keşif proxy'sinin nasıl doldurulur tamamen geliştiriciye bağlıdır. İstemciler kullanılabilir hizmetler hakkında bilgi almak için bulma proxy'sini kullanır. İstemci bir hizmeti aradığında, `Probe` bulma proxy'sine bir ileti gönderir ve proxy, bildiği hizmetlerden herhangi birinin istemcinin aradığı hizmetle eşleşip eşleşmediğini belirler. Eşleşmeler varsa, keşif proxy'si istemciye bir `ProbeMatch` yanıt gönderir. İstemci daha sonra proxy'den döndürülen hizmet bilgilerini kullanarak doğrudan hizmetle iletişim kurabilir. Yönetilen moduarkasındaki temel ilke, keşif isteklerinin tek bir yetkiliye, keşif proxy'sine tek tek bir şekilde gönderilmesidir. .NET Framework, kendi proxy'nizi oluşturmanıza olanak tanıyan önemli bileşenler içerir. İstemciler ve hizmetler proxy'yi birden çok yöntemle bulabilir:  
   
-- Proxy, geçici iletilere yanıt verebilir.  
+- Proxy geçici iletilere yanıt verebilir.  
   
-- Proxy, başlangıç sırasında bir duyuru iletisi gönderebilir.  
+- Proxy başlatma sırasında bir duyuru iletisi gönderebilir.  
   
-- İstemciler ve hizmetler, iyi bilinen belirli bir uç noktayı aramak için yazılabilir.  
+- İstemciler ve hizmetler belirli bir iyi bilinen bitiş noktası aramak için yazılabilir.  
   
- Geçici modda, merkezi sunucu yoktur. Hizmet duyuruları ve istemci istekleri gibi tüm bulma iletileri çok noktaya yayın biçiminde gönderilir. Varsayılan olarak .NET Framework, UDP protokolü üzerinden geçici bulma desteği içerir. Örneğin, bir hizmet başlangıç sırasında bir Hello duyurusu gönderecek şekilde yapılandırıldıysa, UDP protokolünü kullanarak iyi bilinen bir çok noktaya yayın adresi üzerinden gönderilir. İstemcilerin bu duyuruları etkin bir şekilde dinlemek ve uygun şekilde işlemesi gerekir. İstemci bir hizmet için `Probe` bir ileti gönderdiğinde çok noktaya yayın protokolü kullanılarak ağ üzerinden gönderilir. İsteği alan her hizmet, `Probe` iletisindeki ölçütlerle eşleşip eşleşmediğini ve hizmetin `Probe` iletisinde belirtilen ölçütlerle eşleşiyorsa `ProbeMatch` bir iletiyle doğrudan istemciye yanıt verdiğini belirler.  
+ Ad-Hoc modunda merkezi sunucu yoktur. Hizmet duyuruları ve istemci istekleri gibi tüm keşif iletileri çok noktaya yayın la gönderilir. Varsayılan olarak .NET Framework UDP protokolü üzerinden Ad-Hoc bulma desteği içerir. Örneğin, bir hizmet başlangıç'ta Merhaba duyurusu gönderecek şekilde yapılandırılırsa, bunu UDP protokolünü kullanarak tanınmış, çok noktaya yayın adresi üzerinden gönderir. Müşteriler aktif olarak bu duyurular için dinlemek ve buna göre bunları işlemek zorunda. İstemci bir `Probe` hizmet için ileti gönderdiğinde, çok noktaya yayın protokolü kullanılarak ağ üzerinden gönderilir. İsteğe sahip her hizmet, `Probe` iletideki ölçütlerle eşleşip eşleşmediğini belirler `ProbeMatch` ve hizmet `Probe` iletide belirtilen ölçütlerle eşleşirse doğrudan istemciye bir iletiyle yanıt verir.  
   
-## <a name="benefits-of-using-wcf-discovery"></a>WCF bulmayı kullanmanın avantajları  
- WCF bulma işlemi WS-Discovery protokolü kullanılarak uygulandığından, WS-Discovery ' i uygulayan diğer istemcilerle, hizmetlerle ve proxy 'lerde birlikte çalışabilir. WCF bulma, mevcut WCF API 'Leri üzerine kurulmuştur. Bu, mevcut hizmet ve istemcilerinize bulma işlevselliği eklemenizi kolaylaştırır. Hizmet bulunabilirliği, uygulama yapılandırma ayarları aracılığıyla kolayca eklenebilir. Ayrıca, WCF bulma Ayrıca, Eş ağ, adlandırma kaplaması ve HTTP gibi diğer aktarımlara yönelik bulma protokolünü de destekler. WCF bulma, bir bulma proxy 'sinin kullanıldığı yönetilen işlem modu için destek sağlar. Bu, iletiler tüm ağa çok noktaya yayın iletileri göndermek yerine doğrudan bulma proxy 'sine gönderildiğinde ağ trafiğini azaltabilir. WCF bulma ayrıca Web hizmetleriyle çalışırken daha fazla esneklik sağlar. Örneğin, istemciyi veya hizmeti yeniden yapılandırmak zorunda kalmadan bir hizmetin adresini değiştirebilirsiniz. Bir istemcinin hizmete erişmesi gerektiğinde, `Find` bir istek aracılığıyla `Probe` bir ileti verebilir ve hizmetin geçerli adresiyle yanıt vermesini bekleyebilir. WCF bulma, bir istemcinin sözleşme türleri, bağlama öğeleri, ad alanı, kapsam ve anahtar sözcükler ya da sürüm numaraları gibi farklı ölçütlere göre bir hizmet aramasını sağlar. WCF bulma çalışma zamanı ve tasarım zamanı bulmayı mümkün bir şekilde sunar. Uygulamanıza bulma eklemek, hata toleransı ve otomatik yapılandırma gibi diğer senaryolara olanak tanımak için kullanılabilir.  
+## <a name="benefits-of-using-wcf-discovery"></a>WCF Discovery Kullanmanın Faydaları  
+ WCF Discovery, WS-Discovery protokolü kullanılarak uygulandığından, WS-Discovery'yi uygulayan diğer istemciler, hizmetler ve diğer kişilerle birlikte çalışabilir. WCF Discovery, varolan hizmetlerinize ve müşterilerinize Discovery işlevselliği eklemeyi kolaylaştıran mevcut WCF API'leri üzerine kuruludur. Hizmet bulunabilirliği uygulama yapılandırma ayarları aracılığıyla kolayca eklenebilir. Buna ek olarak, WCF Discovery ayrıca eş ağı, adlandırma bindirme ve HTTP gibi diğer aktarımlar üzerinde bulma protokolü nün kullanılmasını da destekler. WCF Discovery, bir keşif proxy'sinin kullanıldığı Yönetilen bir işlem modu için destek sağlar. İletiler tüm ağa çok noktaya yayın göndermek yerine doğrudan bulma proxy'sine gönderildiğinde bu ağ trafiğini azaltabilir. WCF Discovery, Web hizmetleriyle çalışırken daha fazla esneklik sağlar. Örneğin, istemciyi veya hizmeti yeniden yapılandırmak zorunda kalmadan bir hizmetin adresini değiştirebilirsiniz. İstemci hizmete erişmesi gerektiğinde, `Probe` bir `Find` istek aracılığıyla bir ileti verebilir ve hizmetin geçerli adresiyle yanıt vermesine bekleyebilir. WCF Discovery, istemcinin sözleşme türleri, bağlama öğeleri, ad alanı, kapsam ve anahtar kelimeler veya sürüm numaraları gibi farklı ölçütlere dayalı bir hizmeti aramasına olanak tanır. WCF Discovery çalışma zamanı ve tasarım zamanı bulma sağlar. Uygulamanıza keşif ekleme, hata toleransı ve otomatik yapılandırma gibi diğer senaryoları etkinleştirmek için kullanılabilir.  
   
-## <a name="service-publication"></a>Hizmet yayını  
- Bir hizmeti bulunabilir hale getirmek için, hizmet ana bilgisayarına bir <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> eklenmelidir ve bulma iletilerinin nerede dinleneceğini belirtmek için bir bulma uç noktası eklenmelidir. Aşağıdaki kod örneği, kendi kendine barındırılan bir hizmetin bulunabilir hale getirmek için nasıl değiştirileceğini gösterir.  
+## <a name="service-publication"></a>Hizmet Yayını  
+ Bir hizmeti bulunabilir kılmak <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> için hizmet ana bilgisayara bir ekleme ve keşif iletilerinin nerede dinleneceğini belirtmek için bir keşif bitiş noktası nın eklenmesi gerekir. Aşağıdaki kod örneği, kendi kendine barındırılan bir hizmetin keşfedilebilir hale getirmek için nasıl değiştirilebileceği gösterilmektedir.  
   
 ```csharp  
 Uri baseAddress = new Uri($"http://{System.Net.Dns.GetHostName()}:8000/discovery/scenarios/calculatorservice/{Guid.NewGuid().ToString()}/");
@@ -55,10 +55,10 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 }
 ```  
   
- Hizmetin keşfedilmesini sağlamak için bir hizmet açıklamasına bir <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> örneği eklenmelidir. Hizmeti bulma isteklerinin nerede dinleneceğini bildirmek için hizmet ana bilgisayarına bir <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> örneği eklenmelidir. Bu örnekte, hizmetin UDP çok noktaya yayın aktarımı üzerinden bulma isteklerini dinlemesi gerektiğini belirtmek için bir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> (<xref:System.ServiceModel.Discovery.DiscoveryEndpoint>türetilen) eklenir. <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, tüm iletiler çok noktaya yayın düzeyinde gönderildiğinden geçici bulma için kullanılır.  
+ Hizmetin <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> bulunabilmesi için bir hizmet açıklamasına bir örnek eklenmelidir. Hizmete keşif isteklerini nerede dinleyeceğini söylemek için servis ana bilgisayara bir <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> örnek eklenmelidir. Bu örnekte, <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> hizmetin UDP çok noktaya yayın aktarımı üzerinden keşif isteklerini dinlemesi gerektiğini belirtmek için bir (türetilmiş) <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>eklenir. Tüm <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> iletiler çok noktaya yayın bir şekilde gönderildiğinden, Ad-Hoc keşfi için kullanılır.  
   
 ## <a name="announcement"></a>Duyuru  
- Varsayılan olarak, hizmet yayını duyuru iletileri göndermez. Hizmetin duyuru iletileri gönderecek şekilde yapılandırılması gerekir. Bu, hizmeti bulma iletilerini dinlemeden ayrı olarak duyurabileceğinden, hizmet yazarları için ek esneklik sağlar. Hizmet duyurusu Ayrıca, Hizmetleri bulma proxy 'si veya diğer hizmet kayıt defterlerine kaydetme mekanizması olarak da kullanılabilir. Aşağıdaki kod, bir hizmetin UDP bağlama üzerinden duyuru iletileri göndermek için nasıl yapılandırılacağını gösterir.  
+ Varsayılan olarak, hizmet yayını duyuru iletileri göndermez. Hizmet, duyuru iletileri gönderecek şekilde yapılandırılmalıdır. Bu, hizmeti keşif iletilerini dinlemekten ayrı olarak duyurabildiklerinden, hizmet yazarları için ek esneklik sağlar. Hizmet duyurusu, bir keşif proxy'si veya diğer hizmet kayıtlarıyla hizmetleri kaydetmek için bir mekanizma olarak da kullanılabilir. Aşağıdaki kod, bir UDP bağlama üzerinden duyuru iletileri göndermek için bir hizmetin nasıl yapılandırılabildiğini gösterir.  
   
 ```csharp  
 Uri baseAddress = new Uri($"http://{System.Net.Dns.GetHostName()}:8000/discovery/scenarios/calculatorservice/{Guid.NewGuid().ToString()}/");
@@ -91,8 +91,8 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 }
 ```  
   
-## <a name="service-discovery"></a>Hizmet bulma  
- İstemci uygulaması, hizmetleri bulmak için <xref:System.ServiceModel.Discovery.DiscoveryClient> sınıfını kullanabilir. Geliştirici, `Probe` veya `Resolve` iletilerinin nereye gönderileceğini belirten bir bulma uç noktasında geçen <xref:System.ServiceModel.Discovery.DiscoveryClient> sınıfının bir örneğini oluşturur. İstemci daha sonra arama ölçütlerini belirten <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> bir <xref:System.ServiceModel.Discovery.FindCriteria> örneği içinde çağırır. Eşleşen hizmetler bulunursa, <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> bir <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>koleksiyonu döndürür. Aşağıdaki kod, `Find` yönteminin nasıl çağrılacağını ve sonra keşfedilen bir hizmete nasıl bağlanacağını gösterir.  
+## <a name="service-discovery"></a>Hizmet Bulma  
+ İstemci uygulaması <xref:System.ServiceModel.Discovery.DiscoveryClient> hizmetleri bulmak için sınıfı kullanabilir. Geliştirici, nerede gönderileceği <xref:System.ServiceModel.Discovery.DiscoveryClient> `Probe` veya `Resolve` ileti gönderileceği belirtilen bir keşif bitiş noktasında geçen sınıfın bir örneğini oluşturur. İstemci <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> daha sonra bir <xref:System.ServiceModel.Discovery.FindCriteria> örnek içinde arama ölçütlerini belirten çağırır. Eşleşen hizmetler bulunursa, <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> bir <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>koleksiyon döndürür. Aşağıdaki kod, yöntemin `Find` nasıl çağrılmasını ve sonra keşfedilen bir hizmete nasıl bağlanılmayı gösterir.  
   
 ```csharp  
 class Client
@@ -101,7 +101,7 @@ class Client
   
     static void Main()
     {  
-        if (FindService()) 
+        if (FindService())
         {
             InvokeService();
         }
@@ -111,10 +111,10 @@ class Client
     static bool FindService()  
     {  
         Console.WriteLine("\nFinding Calculator Service ..");  
-        DiscoveryClient discoveryClient =   
+        DiscoveryClient discoveryClient =
             new DiscoveryClient(new UdpDiscoveryEndpoint());  
   
-        Collection<EndpointDiscoveryMetadata> calculatorServices =   
+        Collection<EndpointDiscoveryMetadata> calculatorServices =
             (Collection<EndpointDiscoveryMetadata>)discoveryClient.Find(new FindCriteria(typeof(ICalculator))).Endpoints;  
   
         discoveryClient.Close();  
@@ -143,19 +143,19 @@ class Client
 }  
 ```  
   
-## <a name="discovery-and-message-level-security"></a>Bulma ve Ileti düzeyi güvenliği  
- İleti düzeyinde güvenlik kullanırken, istemci bulma uç noktasındaki hizmet bulma uç noktasında bir <xref:System.ServiceModel.EndpointIdentity> ve eşleşen bir <xref:System.ServiceModel.EndpointIdentity> belirtmeniz gerekir. İleti düzeyi güvenliği hakkında daha fazla bilgi için bkz. [Ileti güvenliği](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+## <a name="discovery-and-message-level-security"></a>Bulma ve İleti Düzeyi Güvenliği  
+ İleti düzeyi güvenliğini kullanırken, hizmet <xref:System.ServiceModel.EndpointIdentity> bulma bitiş noktası ve <xref:System.ServiceModel.EndpointIdentity> istemci bulma bitiş noktası üzerinde bir eşleme belirtmek gerekir. İleti düzeyi güvenliği hakkında daha fazla bilgi için [İleti Güvenliği'ne](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)bakın.  
   
-## <a name="discovery-and-web-hosted-services"></a>Bulma ve Web 'de barındırılan hizmetler  
- WCF hizmetlerinin keşfedilmesini sağlamak için bunların çalışıyor olması gerekir. IIS 'de barındırılan WCF Hizmetleri, IIS/hizmet için bir ileti alana bağlanana kadar çalıştırılmadığından, varsayılan olarak keşfedilemez.  Web 'de barındırılan Hizmetleri bulunabilir hale getirmek için iki seçenek vardır:  
+## <a name="discovery-and-web-hosted-services"></a>Bulma ve Web Barındırılan Hizmetler  
+ WCF hizmetlerinin bulunabilmesi için çalışıyor olmaları gerekir. IIS veya WAS altında barındırılan WCF hizmetleri, IIS/WAS hizmete bağlı bir ileti alana kadar çalışmaz, bu nedenle varsayılan olarak bulunamazlar.  Web Tarafından Barındırılan hizmetleri keşfedilebilir hale getirmek için iki seçenek vardır:  
   
-1. Windows Server AppFabric otomatik başlatma özelliğini kullanın  
+1. Windows Server AppFabric Otomatik Başlatma özelliğini kullanma  
   
-2. Hizmet adına iletişim kurmak için bir bulma proxy 'si kullanın  
+2. Hizmet adına iletişim kurmak için bir keşif proxy'si kullanma  
   
- Windows Server AppFabric, herhangi bir ileti alınmadan önce bir hizmetin başlatılmasını sağlayacak bir otomatik başlatma özelliğine sahiptir. Bu otomatik başlatma kümesiyle, bir IIS/WAS barındırılan hizmeti bulunabilir olacak şekilde yapılandırılabilir. Otomatik başlatma özelliği hakkında daha fazla bilgi için bkz. [Windows Server AppFabric otomatik başlatma özelliği](https://docs.microsoft.com/previous-versions/appfabric/ee677260(v=azure.10)). Otomatik başlatma özelliğini açma ile birlikte, hizmeti bulma için yapılandırmanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: program aracılığıyla BIR WCF hizmetine bulunabilirliği ekleme ve Istemci](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[yapılandırma dosyasında bulmayı yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
+ Windows Server AppFabric, herhangi bir ileti almadan önce bir hizmetin başlatılmasını sağlayacak bir Otomatik Başlatma özelliğine sahiptir. Bu Otomatik Başlatma kümesi yle, IIS/WAS barındırılan bir hizmet bulunabilir şekilde yapılandırılabilir. Otomatik Başlat özelliği hakkında daha fazla bilgi için [bkz.](https://docs.microsoft.com/previous-versions/appfabric/ee677260(v=azure.10)) Otomatik Başlat özelliğini açmanın yanı sıra, hizmeti keşif için yapılandırmanız gerekir. Daha fazla bilgi için [bkz: Nasıl Yapılacağını: Bir WCF Hizmetine Keşfedilebilirlik Ve](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)Yapılandırma Dosyasında İstemci[Yapılandırma Bulma'](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md)yı Programlı bir şekilde ekleyin.  
   
- Bulma proxy 'si, hizmet çalışmadığı zaman WCF hizmeti adına iletişim kurmak için kullanılabilir. Proxy, araştırmayı dinleyebilir veya iletileri çözümleyebilir ve istemciye yanıt verebilir. İstemci daha sonra iletileri doğrudan hizmete gönderebilir. İstemci hizmete bir ileti gönderdiğinde, iletiye yanıt vermek için örneği oluşturulur. Bulma proxy 'si uygulama hakkında daha fazla bilgi için bkz. [bulma proxy 'Si uygulama](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
+ Bir keşif proxy'si, hizmet çalışmadığında WCF hizmeti adına iletişim kurmak için kullanılabilir. Proxy sonda için dinleyebilir veya iletileri çözebilir ve istemciye yanıt verebilir. İstemci daha sonra doğrudan hizmete ileti gönderebilir. İstemci hizmete bir ileti gönderdiğinde, iletiye yanıt vermek için anında yanıtlanır. Bir bulma proxy uygulama hakkında daha fazla bilgi için [bkz.](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)  
   
 > [!NOTE]
-> WCF bulmanın düzgün çalışması için tüm NIC 'ler (ağ arabirim denetleyicisi) yalnızca 1 IP adresine sahip olmalıdır.
+> WCF Discovery'nin düzgün çalışması için tüm NIC'lerin (Ağ Arabirimi Denetleyicisi) yalnızca 1 IP adresi olmalıdır.

@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 5b21b2bdf3447e3a61c8fff0a311b4144ecaecb2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0cefca33bde94855a2bb20a6404dfd4e75a954c2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791927"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174530"
 ---
 # <a name="polling-in-console-applications"></a>Konsol Uygulamalarında Yoklama
-ADO.NET ' deki zaman uyumsuz işlemler, başka bir iş parçacığında diğer görevleri gerçekleştirirken bir iş parçacığında zaman alan veritabanı işlemlerini başlatabilmeniz için izin verir. Bununla birlikte, Çoğu senaryoda uygulamanızın veritabanı işlemi tamamlanana kadar devam etmesi gereken bir noktaya sahip olursunuz. Bu gibi durumlarda, işlemin tamamlanıp tamamlanmadığını anlamak için zaman uyumsuz işlemi yoklamak yararlıdır.  
+ADO.NET'deki eşzamanlı işlemler, başka bir iş parçacığı üzerinde diğer görevleri gerçekleştirirken bir iş parçacığı üzerinde zaman alan veritabanı işlemleri başlatmanızı sağlar. Ancak çoğu senaryoda, veritabanı işlemi tamamlanana kadar uygulamanızın devam etmemesi gereken bir noktaya ulaşırsınız. Bu gibi durumlarda, işlemin tamamlanıp tamamlanmadığını belirlemek için eşzamanlı işlemi yoklamak yararlıdır.  
   
- İşlemin tamamlanıp tamamlanmadığını öğrenmek <xref:System.IAsyncResult.IsCompleted%2A> için özelliğini kullanabilirsiniz.  
+ İşlemin <xref:System.IAsyncResult.IsCompleted%2A> tamamlanıp tamamlanmadığını öğrenmek için özelliği kullanabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki konsol uygulaması, **AdventureWorks** örnek veritabanı içindeki verileri güncelleştirir ve işi zaman uyumsuz olarak çalışır. Uzun süre çalışan bir işleme öykünmek için, bu örnek komut metnine bir WAITFOR bildirisi ekler. Normalde, komutlarınızın daha yavaş çalışmasını yapmayı deneirsiniz, ancak bu durumda bunun yapılması zaman uyumsuz davranışı göstermeye daha kolay hale gelir.  
+ Aşağıdaki konsol **uygulaması, AdventureWorks** örnek veritabanındaki verileri güncelleyerek çalışmalarını eşit bir şekilde tamamlar. Uzun süren bir işlemi taklit etmek için, bu örnek komut metnine bir WAITFOR deyimi ekler. Normalde, komutlarınızı daha yavaş çalıştırmaya çalışmazsınız, ancak bu durumda bunu yapmak eşzamanlı davranışı göstermeyi kolaylaştırır.  
   
 ```vb  
 Imports System  
@@ -27,7 +27,7 @@ Imports System.Data.SqlClient
 Module Module1  
   
     Sub Main()  
-        ' The WAITFOR statement simply adds enough time to prove the   
+        ' The WAITFOR statement simply adds enough time to prove the
         ' asynchronous nature of the command.  
         Dim commandText As String = _  
          "UPDATE Production.Product " & _  
@@ -47,10 +47,10 @@ Module Module1
     Private Sub RunCommandAsynchronously( _  
      ByVal commandText As String, ByVal connectionString As String)  
   
-        ' Given command text and connection string, asynchronously   
-        ' execute the specified command against the connection. For   
-        ' this example, the code displays an indicator as it's working,   
-        ' verifying the asynchronous behavior.   
+        ' Given command text and connection string, asynchronously
+        ' execute the specified command against the connection. For
+        ' this example, the code displays an indicator as it's working,
+        ' verifying the asynchronous behavior.
         Using connection As New SqlConnection(connectionString)  
             Try  
                 Dim count As Integer = 0  
@@ -61,7 +61,7 @@ Module Module1
                 While Not result.IsCompleted  
                     Console.WriteLine("Waiting ({0})", count)  
                     ' Wait for 1/10 second, so the counter  
-                    ' doesn't consume all available resources   
+                    ' doesn't consume all available resources
                     ' on the main thread.  
                     Threading.Thread.Sleep(100)  
                     count += 1  
@@ -83,17 +83,17 @@ Module Module1
     End Sub  
   
     Private Function GetConnectionString() As String  
-        ' To avoid storing the connection string in your code,              
-        ' you can retrieve it from a configuration file.   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
   
-        ' If you have not included "Asynchronous Processing=true"   
+        ' If you have not included "Asynchronous Processing=true"
         ' in the connection string, the command will not be able  
         ' to execute asynchronously.  
         Return "Data Source=(local);Integrated Security=SSPI;" & _  
           "Initial Catalog=AdventureWorks; " & _  
           "Asynchronous Processing=true"  
     End Function  
-End Module   
+End Module
 ```  
   
 ```csharp  
@@ -106,7 +106,7 @@ class Class1
     [STAThread]  
     static void Main()  
     {  
-        // The WAITFOR statement simply adds enough time to   
+        // The WAITFOR statement simply adds enough time to
         // prove the asynchronous nature of the command.  
   
         string commandText =  
@@ -129,27 +129,27 @@ class Class1
       string commandText, string connectionString)  
     {  
         // Given command text and connection string, asynchronously  
-        // execute the specified command against the connection.   
-        // For this example, the code displays an indicator as it's   
-        // working, verifying the asynchronous behavior.   
+        // execute the specified command against the connection.
+        // For this example, the code displays an indicator as it's
+        // working, verifying the asynchronous behavior.
         using (SqlConnection connection =  
           new SqlConnection(connectionString))  
         {  
             try  
             {  
                 int count = 0;  
-                SqlCommand command =   
+                SqlCommand command =
                     new SqlCommand(commandText, connection);  
                 connection.Open();  
   
-                IAsyncResult result =   
+                IAsyncResult result =
                     command.BeginExecuteNonQuery();  
                 while (!result.IsCompleted)  
                 {  
                     Console.WriteLine(  
                                     "Waiting ({0})", count++);  
                     // Wait for 1/10 second, so the counter  
-                    // doesn't consume all available   
+                    // doesn't consume all available
                     // resources on the main thread.  
                     System.Threading.Thread.Sleep(100);  
                 }  
@@ -159,7 +159,7 @@ class Class1
             }  
             catch (SqlException ex)  
             {  
-                Console.WriteLine("Error ({0}): {1}",   
+                Console.WriteLine("Error ({0}): {1}",
                     ex.Number, ex.Message);  
             }  
             catch (InvalidOperationException ex)  
@@ -177,14 +177,14 @@ class Class1
   
     private static string GetConnectionString()  
     {  
-        // To avoid storing the connection string in your code,              
-        // you can retrieve it from a configuration file.   
+        // To avoid storing the connection string in your code,
+        // you can retrieve it from a configuration file.
   
         // If you have not included "Asynchronous Processing=true"  
         // in the connection string, the command will not be able  
         // to execute asynchronously.  
         return "Data Source=(local);Integrated Security=SSPI;" +  
-        "Initial Catalog=AdventureWorks; " +   
+        "Initial Catalog=AdventureWorks; " +
         "Asynchronous Processing=true";  
     }  
 }  
@@ -192,5 +192,5 @@ class Class1
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Zaman Uyumsuz İşlemler](asynchronous-operations.md)
+- [Asynchronous İşlemleri](asynchronous-operations.md)
 - [ADO.NET’e Genel Bakış](../ado-net-overview.md)

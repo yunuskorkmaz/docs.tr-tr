@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: 5904a5b61c0cc472c40eb2b4967815d5e6add195
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: da54a835fd32efe4f53a80701465d2d7d8adba7e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714666"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183471"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
-Bu örnekte, aynı makinede çapraz işlem iletişimi sağlayan `netNamedPipeBinding` bağlama gösterilmektedir. Adlandırılmış kanallar makineler arasında çalışmaz. Bu [örnek, başlangıç Hesaplayıcı](../../../../docs/framework/wcf/samples/getting-started-sample.md) hizmetini temel alır.  
+Bu örnek, `netNamedPipeBinding` aynı makinede çapraz proses iletişimi sağlayan bağlamayı gösterir. Adlandırılmış borular makineler arasında çalışmaz. Bu örnek, [Başlangıç](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesap makinesi hizmetine dayanmaktadır.  
   
- Bu örnekte, hizmet kendiliğinden barındırılır. Hem istemci hem de hizmet konsol uygulamalardır.  
+ Bu örnekte, hizmet kendi kendine barındırılan. Hem istemci hem de hizmet konsol uygulamalarıdır.  
   
 > [!NOTE]
-> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
+> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
   
- Bağlama, istemci ve hizmet için yapılandırma dosyalarında belirtilir. Bağlama türü, aşağıdaki örnek yapılandırmada gösterildiği gibi, [\<uç noktası >](../../configure-apps/file-schema/wcf/endpoint-element.md) `binding` özniteliğinde veya [> client \<öğesinin\<uç nokta >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) ' nde belirtilir:  
+ Bağlama istemci ve hizmet için yapılandırma dosyalarında belirtilir. Bağlama türü, aşağıdaki `binding` örnek yapılandırmada gösterildiği gibi, [ \<istemci \<>öğesinin](../../configure-apps/file-schema/wcf/endpoint-of-client.md) [ \<bitiş noktası>](../../configure-apps/file-schema/wcf/endpoint-element.md) veya bitiş noktası> özniteliği içinde belirtilir:  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
@@ -27,16 +27,16 @@ Bu örnekte, aynı makinede çapraz işlem iletişimi sağlayan `netNamedPipeBin
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Önceki örnek, `netNamedPipeBinding` bağlamayı varsayılan ayarlarla kullanmak için bir uç noktanın nasıl yapılandırılacağını gösterir. `netNamedPipeBinding` bağlamasını yapılandırmak ve ayarlarını değiştirmek istiyorsanız, bir bağlama yapılandırması tanımlamanız gerekir. Uç noktanın bağlama yapılandırmasına bir `bindingConfiguration` özniteliğiyle ad ile başvurması gerekir.  
+ Önceki örnekte, varsayılan ayarlarla bağlamayı `netNamedPipeBinding` kullanmak için bir bitiş noktasının nasıl yapılandırılabildiğini gösterir. Bağlamayı `netNamedPipeBinding` yapılandırmak ve bazı ayarlarını değiştirmek istiyorsanız, bağlayıcı bir yapılandırma tanımlamanız gerekir. Bitiş noktası, öznitelik ile `bindingConfiguration` ada göre bağlama yapılandırmabaşvurugerekir.  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
           binding="netNamedPipeBinding"  
-          bindingConfiguration="Binding1"   
+          bindingConfiguration="Binding1"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Bu örnekte, bağlama yapılandırması `Binding1` olarak adlandırılır ve aşağıdaki tanıma sahiptir:  
+ Bu örnekte, bağlama yapılandırması adlandırılır `Binding1` ve aşağıdaki tanımı vardır:  
   
 ```xml  
 <bindings>  
@@ -45,18 +45,18 @@ Bu örnekte, aynı makinede çapraz işlem iletişimi sağlayan `netNamedPipeBin
         Each property is configured with the default value.  
      -->  
   <netNamedPipeBinding>  
-    <binding name="Binding1"   
+    <binding name="Binding1"
              closeTimeout="00:01:00"  
-             openTimeout="00:01:00"   
-             receiveTimeout="00:10:00"   
+             openTimeout="00:01:00"
+             receiveTimeout="00:10:00"
              sendTimeout="00:01:00"  
-             transactionFlow="false"   
-             transferMode="Buffered"   
+             transactionFlow="false"
+             transferMode="Buffered"
              transactionProtocol="OleTransactions"  
-             hostNameComparisonMode="StrongWildcard"   
+             hostNameComparisonMode="StrongWildcard"
              maxBufferPoolSize="524288"  
-             maxBufferSize="65536"   
-             maxConnections="10"   
+             maxBufferSize="65536"
+             maxConnections="10"
              maxReceivedMessageSize="65536">  
       <security mode="Transport">  
         <transport protectionLevel="EncryptAndSign" />  
@@ -66,7 +66,7 @@ Bu örnekte, aynı makinede çapraz işlem iletişimi sağlayan `netNamedPipeBin
 </bindings>  
 ```  
   
- Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemciyi kapatmak için istemci penceresinde ENTER tuşuna basın.  
   
 ```console  
 Add(100,15.99) = 115.99  
@@ -77,19 +77,19 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
   
-1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
+1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
   
-2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak [için, Windows Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
   
-3. Örneği tek bir makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
+3. Örneği tek bir makine yapılandırmasında çalıştırmak [için, Windows Communication Foundation Samples'i çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
   
 > [!IMPORTANT]
-> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
->   
+> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
->   
+>
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\NamedPipe`  

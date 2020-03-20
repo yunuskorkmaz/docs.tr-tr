@@ -2,18 +2,18 @@
 title: System.Web.Routing Tümleştirmesi
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: fdc355d4560294a16f3e9c488fdaf142d2982c0d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a80b5c3b336b4fd18b347a25ceaf509baf6461b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745332"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184390"
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing Tümleştirmesi
-Internet Information Service (IIS) içinde bir Windows Communication Foundation (WCF) hizmeti barındırırken, sanal dizinde bir. svc dosyası yerleştirebilirsiniz. Bu. svc dosyası, kullanılacak hizmet ana bilgisayar fabrikasını ve hizmeti uygulayan sınıfını belirtir. Hizmete istek yaparken, URI 'de. svc dosyasını belirtirsiniz, örneğin: `http://contoso.com/EmployeeServce.svc`. REST Hizmetleri yazan programcılar için, bu tür bir URI en uygun değildir. REST Hizmetleri için URI 'Ler belirli bir kaynağı belirtir ve normalde hiçbir uzantıya sahip değildir. <xref:System.Web.Routing> tümleştirme özelliği, uzantısı olmayan URI 'lere yanıt veren bir WCF REST hizmetini barındırmanıza olanak tanır. Yönlendirme hakkında daha fazla bilgi için bkz. [ASP.net Routing](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100)).  
+Internet Information Service 'te (IIS) bir Windows Communication Foundation (WCF) hizmeti barındırırken sanal dizine bir .svc dosyası yersiniz. Bu .svc dosyası, hizmeti uygulayan sınıfın yanı sıra kullanılacak servis ana bilgisayar fabrikasını da belirtir. Hizmete istekte bulunduktan sonra URI'deki .svc dosyasını belirtin, örneğin: `http://contoso.com/EmployeeServce.svc`. REST hizmetleri yazan programcılar için, bu tür URI en uygun değildir. REST hizmetleri için URI'ler belirli bir kaynak belirtir ve normalde herhangi bir uzantısı yoktur. Tümleştirme özelliği, <xref:System.Web.Routing> uri'lere uzantısı zolmadan yanıt veren bir WCF REST hizmeti barındırmanızı sağlar. Yönlendirme hakkında daha fazla bilgi için ASP.NET [Yönlendirme'ye](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))bakın.  
   
-## <a name="using-systemwebrouting-integration"></a>System. Web. Routing tümleştirmesini kullanma  
- <xref:System.Web.Routing> tümleştirme özelliğini kullanmak için, bir veya daha fazla yol oluşturmak ve bunları bir Global. asax dosyasındaki <xref:System.Web.Routing.RouteTable> eklemek için <xref:System.ServiceModel.Activation.ServiceRoute> sınıfını kullanın. Bu rotalar hizmetin yanıt verdiği göreli URI 'Leri belirtir. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir.  
+## <a name="using-systemwebrouting-integration"></a>System.Web.Routing Entegrasyonunu Kullanma  
+ Tümleştirme <xref:System.Web.Routing> özelliğini kullanmak için <xref:System.ServiceModel.Activation.ServiceRoute> sınıfı bir veya daha fazla yol <xref:System.Web.Routing.RouteTable> oluşturmak ve bunları global.asax dosyasına eklemek için kullanırsınız. Bu rotalar, hizmetin yanıt verdiği göreli ÜR'leri belirtir. Aşağıdaki örnekte, bunun nasıl yapılacağını gösterilmektedir.  
   
 ```aspx-csharp  
 <%@ Application Language="C#" %>  
@@ -29,14 +29,14 @@ Internet Information Service (IIS) içinde bir Windows Communication Foundation 
   
     private void RegisterRoutes(RouteCollection routes)  
     {  
-        routes.Add(new ServiceRoute("Customers", new WebServiceHostFactory(), typeof(Service)));   
+        routes.Add(new ServiceRoute("Customers", new WebServiceHostFactory(), typeof(Service)));
    }  
 </script>  
 ```  
   
- Bu, tüm istekleri müşteriler ile `Service` hizmetine başlayan göreli bir URI ile yönlendirir.  
+ Bu, müşterilerle başlayan göreceli bir URI `Service` ile tüm istekleri hizmete yönlendirir.  
   
- Web. config dosyanızda `System.Web.Routing.UrlRoutingModule` modülünü eklemeli, `runAllManagedModulesForAllRequests` özniteliğini `true`olarak ayarlamanız ve `UrlRoutingHandler` işleyicisini aşağıdaki örnekte gösterildiği gibi `<system.webServer>` öğesine eklemeniz gerekir.  
+ `System.Web.Routing.UrlRoutingModule` Web.config dosyanızda modülü eklemeniz, özniteliği `runAllManagedModulesForAllRequests` `true`ayarlamanız ve `UrlRoutingHandler` işleyiciyi `<system.webServer>` aşağıdaki örnekte gösterildiği gibi öğeye eklemeniz gerekir.  
   
 ```xml  
 <system.webServer>  
@@ -49,7 +49,7 @@ Internet Information Service (IIS) içinde bir Windows Communication Foundation 
     </system.webServer>  
 ```  
   
- Bu, yönlendirme için gerekli bir modülü ve işleyiciyi yükler. Daha fazla bilgi için bkz. [yönlendirme](../../../../docs/framework/wcf/feature-details/routing.md). Ayrıca, aşağıdaki örnekte gösterildiği gibi, `aspNetCompatibilityEnabled` özniteliğini `<serviceHostingEnvironment>` öğesinde `true` olarak ayarlamanız gerekir.  
+ Bu, yönlendirme için gerekli bir modül ve işleyici yükler. Daha fazla bilgi için [Yönlendirme'ye](../../../../docs/framework/wcf/feature-details/routing.md)bakın. Ayrıca, aşağıdaki `aspNetCompatibilityEnabled` `true` örnekte gösterildiği `<serviceHostingEnvironment>` gibi öğedeki özniteliği de ayarlamanız gerekir.  
   
 ```xml  
 <system.serviceModel>  
@@ -58,9 +58,9 @@ Internet Information Service (IIS) içinde bir Windows Communication Foundation 
     </system.serviceModel>  
 ```  
   
- Hizmeti uygulayan sınıfın aşağıdaki örnekte gösterildiği gibi ASP.NET uyumluluk gereksinimlerini etkinleştirmesi gerekir.  
+ Hizmeti uygulayan sınıf, aşağıdaki örnekte gösterildiği gibi ASP.NET uyumluluk gereksinimlerini etkinleştirmelidir.  
   
-```csharp 
+```csharp
 [ServiceContract]  
 [AspNetCompatibilityRequirements(RequirementsMode=AspNetCompatibilityRequirementsMode.Allowed)]  
     public class Service  
@@ -72,4 +72,4 @@ Internet Information Service (IIS) içinde bir Windows Communication Foundation 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [ASP.NET yönlendirme](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))
+- [ASP.NET Yönlendirme](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))

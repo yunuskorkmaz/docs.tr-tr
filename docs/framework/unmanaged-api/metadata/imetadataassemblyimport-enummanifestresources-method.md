@@ -15,55 +15,55 @@ helpviewer_keywords:
 ms.assetid: 9543b111-5705-40c9-935c-a3ffc7a581aa
 topic_type:
 - apiref
-ms.openlocfilehash: 2748460826deb422a3851713db11343209fe449a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 22141cf46a965c0624c076bd1d86d2624e5a09f3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449557"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176025"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources Yöntemi
-Geçerli derleme bildiriminde başvurulan kaynaklar için bir Numaralandırıcı işaretçisi alır.  
+Geçerli derleme bildiriminde başvurulan kaynaklar için bir işaretçi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumManifestResources (  
-    [in, out] HCORENUM         *phEnum,   
-    [out] mdManifestResource   rManifestResources[],   
-    [in]  ULONG                cMax,   
+    [in, out] HCORENUM         *phEnum,
+    [out] mdManifestResource   rManifestResources[],
+    [in]  ULONG                cMax,
     [out] ULONG                *pcTokens  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] Numaralandırıcı için bir işaretçi. `EnumManifestResources` yöntemi ilk kez çağrıldığında bu null bir değer olmalıdır.  
+ [içinde, dışarı] Sayıya işaretçisi. `EnumManifestResources` Yöntem ilk kez çağrıldığında bu null bir değer olmalıdır.  
   
  `rManifestResources`  
- dışı `mdManifestResource` meta veri belirteçlerini depolamak için kullanılan dizi.  
+ [çıkış] `mdManifestResource` Meta veri belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- 'ndaki `rManifestResources`yerleştirilebilecek en fazla `mdManifestResource` belirteci sayısı.  
+ [içinde] Yerleştirilebilen `mdManifestResource` en fazla belirteç `rManifestResources`sayısı.  
   
  `pcTokens`  
- dışı Gerçekte `rManifestResources`yer `mdManifestResource` belirteçlerin sayısı.  
+ [çıkış] Yerleştirilen belirteçlerin `mdManifestResource` `rManifestResources`sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumManifestResources` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda `pcTokens` sıfır olarak ayarlanır.|  
+|`S_OK`|`EnumManifestResources`başarıyla döndürülür.|  
+|`S_FALSE`|Sayısala rendelemek için hiçbir belirteçleri vardır. Bu durumda, `pcTokens` sıfıra ayarlanır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

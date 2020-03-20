@@ -3,22 +3,22 @@ title: <x509SecurityTokenHandlerRequirement>
 ms.date: 03/30/2017
 ms.assetid: aca22c2c-5ae7-42af-9bbd-15c2524692ce
 author: BrucePerlerMS
-ms.openlocfilehash: 76eeea635fd65486a1c16bea15a49018876dae99
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 30ce69a35cfdd34e0dfea5c682347eb9187e04ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251689"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152456"
 ---
-# <a name="x509securitytokenhandlerrequirement"></a>\<x509SecurityTokenHandlerRequirement >
+# <a name="x509securitytokenhandlerrequirement"></a>\<x509SecurityTokenHandlerRequirement>
 <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> Sınıf veya türetilmiş sınıflar için isteğe bağlı yapılandırma sağlar.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. IdentityModel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<IdentityConfiguration >** ](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> Ekle**](add.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<x509SecurityTokenHandlerRequirement >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<güvenlikTokenHandlers>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>ekleyin**](add.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<x509SecurityTokenHandlerRequirement>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,28 +47,28 @@ ms.locfileid: "70251689"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|certificateValidationMode|X <xref:System.ServiceModel.Security.X509CertificateValidationMode> . 509.440 sertifikası için kullanılacak doğrulama modunu belirten bir değer. Varsayılan değer "PeerOrChainTrust" dır.|  
-|mapToWindows|Belirteç işleyicisinin, gelen UPN talebini kullanarak doğrulama belirtecini bir Windows hesabına eşlemenizi isteyip istemediğinizi belirtir. Varsayılan değer "false" dır.|  
-|Revocationmodu|X <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> . 509.440 sertifikası için kullanılacak iptal modunu belirten bir değer. Varsayılan değer "çevrimiçi" dır.|  
-|trustedStoreLocation|X <xref:System.Security.Cryptography.X509Certificates.StoreLocation> . 509.440 sertifika deposunu belirten bir değer. Varsayılan değer "LocalMachine" dır.|  
-|certificateValidator|Öğesinden <xref:System.IdentityModel.Selectors.X509CertificateValidator>türetilen özel bir tür. `certificateValidationMode` Öznitelik "Custom" ise, bu türün bir örneği veren sertifika doğrulaması için kullanılır.|  
+|sertifikaDoğrulamaModu|X.509 sertifikası için kullanılacak doğrulama modunu belirten bir <xref:System.ServiceModel.Security.X509CertificateValidationMode> değer. Varsayılan değer "PeerOrChainTrust"tır.|  
+|haritaToWindows|Belirteç işleyicisinin gelen UPN talebini kullanarak doğrulama belirteciyle bir Windows hesabıyla eşlemesi gerekip gerekmediğini belirtir. Varsayılan "false" olur.|  
+|iptalModu|X.509 sertifikası için kullanılacak iptal modunu belirten bir <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> değer. Varsayılan değer "Çevrimiçi"dir.|  
+|güvenilirStoreLocation|X.509 sertifika deposunu belirten bir <xref:System.Security.Cryptography.X509Certificates.StoreLocation> değer. Varsayılan değer "LocalMachine"dir.|  
+|sertifikaValidator|'den <xref:System.IdentityModel.Selectors.X509CertificateValidator>türeyen özel bir tür. `certificateValidationMode` Öznitelik "Özel" ise, bu tür bir örneği veren sertifika doğrulama için kullanılır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ None  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<> Ekle](add.md)|Belirtilen güvenlik belirteci işleyicisini belirteç işleyici koleksiyonuna ekler.|  
+|[\<>ekleyin](add.md)|Belirteç işleyicisi koleksiyonuna belirtilen güvenlik belirteci işleyicisi ekler.|  
   
 ## <a name="example"></a>Örnek  
   
 ```xml  
 <add type="System.IdentityModel.Tokens.X509SecurityTokenHandler, System.IdentityModel">  
-    <x509SecurityTokenHandlerRequirement mapToWindows="true"   
-                                         certificateValidationMode="PeerOrChainTrust"   
-                                         revocationMode="Online"   
+    <x509SecurityTokenHandlerRequirement mapToWindows="true"
+                                         certificateValidationMode="PeerOrChainTrust"
+                                         revocationMode="Online"
                                          trustedStoreLocation="LocalMachine" />  
 </add>  
 ```

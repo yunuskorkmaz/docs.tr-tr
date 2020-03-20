@@ -31,60 +31,60 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: 7084c4579dd5fca0075c7516754195f7cea9e27c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f5be5d8e14d7aa2d98009fc10c9cce314e745ed1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458044"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180865"
 ---
 # <a name="handling-errors"></a>Hataları İşleme
 
-<xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse> sınıfları sistem özel durumlarını (<xref:System.ArgumentException>gibi) ve Web 'e özgü özel durumları (<xref:System.Net.WebRequest.GetResponse%2A> yöntemi tarafından oluşturulan <xref:System.Net.WebException>) oluşturur.  
+Ve <xref:System.Net.WebRequest> <xref:System.Net.WebResponse> sınıflar hem sistem özel durumlarını (örneğin) <xref:System.ArgumentException>hem de <xref:System.Net.WebException> Web'e <xref:System.Net.WebRequest.GetResponse%2A> özgü özel özel durumları (yöntem tarafından atılan) atar.  
   
-Her **WebException** , <xref:System.Net.WebExceptionStatus> numaralandırmasından bir değer içeren bir <xref:System.Net.WebException.Status%2A> özelliği içerir. **Durum** özelliğini inceleyerek oluşan hatayı belirleyebilir ve hatayı çözümlemek için doğru adımları uygulayabilirsiniz.  
+Her **WebException** <xref:System.Net.WebException.Status%2A> numaralandırma bir <xref:System.Net.WebExceptionStatus> değer içeren bir özellik içerir. Oluşan hatayı belirlemek için **Durum** özelliğini inceleyebilir ve hatayı gidermek için uygun adımları atabilirsiniz.  
   
-Aşağıdaki tabloda **durum** özelliği için olası değerler açıklanmaktadır.  
+Aşağıdaki **tabloda Durum** özelliği için olası değerler açıklanmaktadır.  
   
 |Durum|Açıklama|  
 |------------|-----------------|  
-|ConnectFailure|Uzak hizmete Aktarım düzeyinde iletişim kurulamadı.|  
-|ConnectionClosed|Bağlantı zamanından önce kapatıldı.|  
-|KeepAliveFailure|Sunucu, etkin tut üst bilgi kümesiyle yapılan bir bağlantıyı kapattı.|  
-|NameResolutionFailure|Ad hizmeti, ana bilgisayar adını çözümleyemedi.|  
-|ProtocolError|Sunucudan alınan yanıt tamamlanmıştır, ancak protokol düzeyinde bir hata belirtti.|  
-|ReceiveFailure|Uzak sunucudan bir bütün yanıt alınmadı.|  
-|Requestiptal edildi|İstek iptal edildi.|  
-|SecureChannelFailure|Güvenli kanal bağlantısında bir hata oluştu.|  
-|SendFailure|Uzak sunucuya komple bir istek gönderilemedi.|  
-|Serverprotocolihlaline|Sunucu yanıtı geçerli bir HTTP yanıtı değildi.|  
-|Başarılı|Hatayla karşılaşılmadı.|  
-|aş|İstek için zaman aşımı kümesi içinde yanıt alınmadı.|  
-|TrustFailure hatası|Sunucu sertifikası doğrulanamadı.|  
-|Messagelengthlimitexceıbaşında|İstek gönderilirken veya sunucudan yanıt alındığında belirtilen sınırı aşan bir ileti alındı.|  
-|Bekleniyor|İç zaman uyumsuz istek bekleniyor.|  
-|PipelineFailure|Bu değer .NET Framework altyapısını destekler ve doğrudan kodunuzda kullanılmaya yönelik değildir.|  
-|ProxyNameResolutionFailure|Ad çözümleyici Hizmeti, proxy ana bilgisayar adını çözümleyemedi.|  
+|ConnectFailure|Uzak hizmet, aktarım düzeyinde bağlantı kuramadı.|  
+|Bağlantı Kapalı|Bağlantı zamanından önce kapatıldı.|  
+|KeepAliveFailure|Sunucu, Canlı Kal üstbilgi kümesiyle yapılan bir bağlantıyı kapattı.|  
+|Ad Çözümleme Hatası|Ad hizmeti ana bilgisayar adını çözümlemedi.|  
+|ProtokolHatası|Sunucudan alınan yanıt tamamlandı, ancak protokol düzeyinde bir hata belirtildi.|  
+|Alma Hatası|Uzak sunucudan tam bir yanıt alınmadı.|  
+|İstekİptal edildi|İstek iptal edildi.|  
+|Güvenli Kanal Hatası|Güvenli bir kanal bağlantısında bir hata oluştu.|  
+|SendFailure|Uzak sunucuya tam bir istek gönderilemedi.|  
+|ServerProtocolViolation|Sunucu yanıtı geçerli bir HTTP yanıtı değildi.|  
+|Başarılı|Hiçbir hata yla karşılaşılmamada.|  
+|Zaman aşımı|İstek için zaman belirleme kümesi içinde yanıt alınmadı.|  
+|Güven Hatası|Sunucu sertifikası doğrulanamadı.|  
+|MesajUzunluğuLimitAşıldı|İstek gönderirken veya sunucudan yanıt alırken belirtilen sınırı aşan bir ileti alındı.|  
+|Beklemede|Dahili bir eşzamanlı istek beklemede.|  
+|Boru Hattı Arıza|Bu değer .NET Framework altyapısını destekler ve doğrudan kodunuzda kullanılmak üzere tasarlanmamıştır.|  
+|ProxyNameResolutionFailure|Ad çözümleyici hizmeti proxy ana bilgisayar adını çözemedi.|  
 |UnknownError|Bilinmeyen türde bir özel durum oluştu.|  
   
-**Status** özelliği **WebExceptionStatus. ProtocolError**olduğunda, sunucudan gelen yanıtı içeren bir **WebResponse** kullanılabilir. Protokol hatasının gerçek kaynağını öğrenmek için bu yanıtı inceleyebilirsiniz.  
+**Durum** özelliği **WebExceptionStatus.ProtocolError**olduğunda, sunucudan yanıt içeren bir **WebResponse** kullanılabilir. Bu yanıtı, protokol hatasının gerçek kaynağını belirlemek için inceleyebilirsiniz.  
   
-Aşağıdaki örnek, bir **WebException**nasıl yakalandığı gösterilmektedir.  
+Aşağıdaki örnek, bir **WebException'ı**nasıl yakalayacaklarını gösterir.  
   
 ```csharp  
-try   
+try
 {  
     // Create a request instance.  
-    WebRequest myRequest =   
+    WebRequest myRequest =
     WebRequest.Create("http://www.contoso.com");  
     // Get the response.  
     WebResponse myResponse = myRequest.GetResponse();  
-    //Get a readable stream from the server.   
+    //Get a readable stream from the server.
     Stream sr = myResponse.GetResponseStream();  
   
     //Read from the stream and write any data to the console.  
     bytesread = sr.Read( myBuffer, 0, length);  
-    while( bytesread > 0 )   
+    while( bytesread > 0 )
     {  
         for (int i=0; i<bytesread; i++) {  
             Console.Write( "{0}", myBuffer[i]);  
@@ -95,7 +95,7 @@ try
     sr.Close();  
     myResponse.Close();  
 }  
-catch (WebException webExcp)   
+catch (WebException webExcp)
 {  
     // If you reach this point, an exception has been caught.  
     Console.WriteLine("A WebException has been caught.");  
@@ -103,8 +103,8 @@ catch (WebException webExcp)
     Console.WriteLine(webExcp.ToString());  
     // Get the WebException status code.  
     WebExceptionStatus status =  webExcp.Status;  
-    // If status is WebExceptionStatus.ProtocolError,   
-    //   there has been a protocol error and a WebResponse   
+    // If status is WebExceptionStatus.ProtocolError,
+    //   there has been a protocol error and a WebResponse
     //   should exist. Display the protocol error.  
     if (status == WebExceptionStatus.ProtocolError) {  
         Console.Write("The server returned protocol error ");  
@@ -114,7 +114,7 @@ catch (WebException webExcp)
            + httpResponse.StatusCode);  
     }  
 }  
-catch (Exception e)   
+catch (Exception e)
 {  
     // Code to catch other exceptions goes here.  
 }  
@@ -126,10 +126,10 @@ Try
     Dim myRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ' Get the response.  
     Dim myResponse As WebResponse = myRequest.GetResponse()  
-    'Get a readable stream from the server.   
+    'Get a readable stream from the server.
     Dim sr As Stream = myResponse.GetResponseStream()  
   
-    Dim i As Integer      
+    Dim i As Integer
     'Read from the stream and write any data to the console.  
     bytesread = sr.Read(myBuffer, 0, length)  
     While bytesread > 0  
@@ -148,8 +148,8 @@ Catch webExcp As WebException
     Console.WriteLine(webExcp.ToString())  
     ' Get the WebException status code.  
     Dim status As WebExceptionStatus = webExcp.Status  
-    ' If status is WebExceptionStatus.ProtocolError,   
-    '   there has been a protocol error and a WebResponse   
+    ' If status is WebExceptionStatus.ProtocolError,
+    '   there has been a protocol error and a WebResponse
     '   should exist. Display the protocol error.  
     If status = WebExceptionStatus.ProtocolError Then  
         Console.Write("The server returned protocol error ")  
@@ -164,11 +164,11 @@ Catch e As Exception
 End Try  
 ```  
   
-<xref:System.Net.Sockets.Socket> sınıfını kullanan uygulamalar, Windows yuvasında hata oluştuğunda <xref:System.Net.Sockets.SocketException> oluşturur. <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>ve <xref:System.Net.Sockets.UdpClient> sınıfları **yuva** sınıfının üzerine kurulmuştur ve **SocketExceptions** de oluşturur.  
+Windows yuvasında <xref:System.Net.Sockets.Socket> hatalar <xref:System.Net.Sockets.SocketException> oluştuğunda sınıf atışını kullanan uygulamalar. , <xref:System.Net.Sockets.TcpClient> <xref:System.Net.Sockets.TcpListener>ve <xref:System.Net.Sockets.UdpClient> sınıflar **Soket** sınıfının üstüne inşa edilir ve **SocketExceptions** atmak da.  
   
-Bir **SocketException** oluşturulduğunda, **socketexception** sınıfı <xref:System.Net.Sockets.SocketException.ErrorCode%2A> özelliğini gerçekleşen son işletim sistemi yuva hatası olarak ayarlar. Yuva hata kodları hakkında daha fazla bilgi için MSDN 'de Winsock 2,0 API hata kodu belgelerine bakın.  
+**SocketException** atıldığında, **SocketException** sınıfı <xref:System.Net.Sockets.SocketException.ErrorCode%2A> özelliği oluşan son işletim sistemi soketi hatasına ayarlar. Soket hata kodları hakkında daha fazla bilgi için MSDN'deki Winsock 2.0 API hata kodu belgelerine bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET 'te özel durumları işleme ve atma](../../standard/exceptions/index.md)
+- [.NET'te özel durumları işleme ve atma](../../standard/exceptions/index.md)
 - [Veri İsteme](requesting-data.md)

@@ -2,23 +2,23 @@
 title: Parametreler (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8d618edd-0988-4ff2-8263-ce59448af7a5
-ms.openlocfilehash: 8fbca4f10a7c2c3dbaffff978a536b87d31a8df4
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: e1bb633f7f7c7908a5f424991f20a5cd89aee5aa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319426"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150020"
 ---
 # <a name="parameters-entity-sql"></a>Parametreler (Entity SQL)
-Parametreler, genellikle bir ana bilgisayar dili tarafından kullanılan bağlama API 'SI aracılığıyla [!INCLUDE[esql](../../../../../../includes/esql-md.md)] dışında tanımlanan değişkenlerdir. Her parametrenin bir adı ve türü vardır. Parametre adları, (@) simgesi olan sorgu ifadelerinde ön ek olarak tanımlanır. Bu, bunları, sorgu adlarından veya sorguda tanımlanan diğer adlarla ayırt ediyor.  
+Parametreler, genellikle ana bilgisayar [!INCLUDE[esql](../../../../../../includes/esql-md.md)]dili tarafından kullanılan bağlayıcı bir API aracılığıyla, dışarıdan tanımlanan değişkenlerdir. Her parametrenin bir adı ve türü vardır. Parametre adları, sorgu ifadelerinde önek olarak at (@) simgesi olan tanımlanır. Bu, bunları sorguda tanımlanan özelliklerin veya diğer adların adlarından ayrıştırıyor.  
   
- Konak dili bağlama API 'SI bağlama parametreleri için API 'Ler sağlar.  
+ Ana bilgisayar dili bağlama API'si, bağlama parametreleri için API sağlar.  
   
 ## <a name="example"></a>Örnek  
   
 ```sql  
-SELECT c   
-      FROM LOB.Customers AS c   
+SELECT c
+      FROM LOB.Customers AS c
       WHERE c.Name = @name  
 ```  
   

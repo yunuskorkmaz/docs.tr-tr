@@ -8,25 +8,25 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: e3c48aec830cdc3ccceb8683f93e3a99ee6364e2
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 863726a6264f01de9f00296b4a64b9fd1bb96765
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506189"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182044"
 ---
 # <a name="overriding-the-onpaint-method"></a>OnPaint Yöntemini Geçersiz Kılma
-.NET Framework içinde tanımlanmış herhangi bir olayı geçersiz kılmak için temel adımlar aynıdır ve aşağıda özetlenmiştir.  
+.NET Framework'de tanımlanan herhangi bir olayı geçersiz kılmak için temel adımlar aynıdır ve aşağıdaki listede özetlenmiştir.  
   
 #### <a name="to-override-an-inherited-event"></a>Devralınan bir olayı geçersiz kılmak için  
   
-1. Geçersiz kılma korumalı `On` *EventName* yöntemi.  
+1. Korumalı `On` *EventName* yöntemini geçersiz kılın.  
   
-2. Çağrı `On` *EventName* yöntemi geçersiz kılınan taban sınıfından `On` *EventName* yöntemi, temsilcileri kayıtlı için olay alırsınız.  
+2. Kayıtlı temsilcilerin olayı alması için taban sınıfın `On` *EventName* yöntemini geçersiz kılın *EventName* yönteminden arayın. `On`  
   
- <xref:System.Windows.Forms.Control.Paint> Olay her Windows Forms denetimi geçersiz kılmanız gerekir çünkü burada ayrıntılı olarak ele <xref:System.Windows.Forms.Control.Paint> devraldığı olay <xref:System.Windows.Forms.Control>. Temel <xref:System.Windows.Forms.Control> sınıfı türetilmiş bir denetimi nasıl çizilmesi gerektiğinde bilmeyen ve bir boyama mantığında sağlamaz <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi. <xref:System.Windows.Forms.Control.OnPaint%2A> Yöntemi <xref:System.Windows.Forms.Control> yalnızca gönderir <xref:System.Windows.Forms.Control.Paint> kayıtlı olay alıcıları için olay.  
+ Her <xref:System.Windows.Forms.Control.Paint> Windows Forms denetimi devraldığı <xref:System.Windows.Forms.Control.Paint> olayı geçersiz kılmak zorundadır, çünkü olay <xref:System.Windows.Forms.Control>burada ayrıntılı olarak tartışılır. Taban <xref:System.Windows.Forms.Control> sınıf, türemiş denetimin nasıl çizilmesi gerektiğini bilmez ve <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemde herhangi bir boyama mantığı sağlamaz. <xref:System.Windows.Forms.Control> Yöntem, <xref:System.Windows.Forms.Control.OnPaint%2A> <xref:System.Windows.Forms.Control.Paint> olayı kayıtlı olay alıcılarına gönderir.  
   
- Örnekte aracılığıyla yaradıysa [nasıl yapılır: Basit bir Windows Forms denetimi geliştirme](how-to-develop-a-simple-windows-forms-control.md), geçersiz kılma örneği gördünüz <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi. Aşağıdaki kod parçası bu örnekten alınır.  
+ Örnek üzerinde [çalıştıysanız Nasıl Yapılır: Basit Bir Windows Formlar Denetimi](how-to-develop-a-simple-windows-forms-control.md)Geliştirin, <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemin geçersiz kılınması için bir örnek gördünüz. Aşağıdaki kod parçası bu örnekten alınır.  
   
 ```vb  
 Public Class FirstControl  
@@ -41,7 +41,7 @@ Public Class FirstControl
       ' Call methods of the System.Drawing.Graphics object.  
       e.Graphics.DrawString(Text, Font, New SolidBrush(ForeColor), RectangleF.op_Implicit(ClientRectangle))  
    End Sub  
-End Class   
+End Class
 ```  
   
 ```csharp  
@@ -52,11 +52,11 @@ public class FirstControl : Control {
       base.OnPaint(e);  
       // Call methods of the System.Drawing.Graphics object.  
       e.Graphics.DrawString(Text, Font, new SolidBrush(ForeColor), ClientRectangle);  
-   }   
-}   
+   }
+}
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs> Sınıfı içeren verileri <xref:System.Windows.Forms.Control.Paint> olay. Aşağıdaki kodda gösterildiği gibi iki özelliğe sahiptir.  
+ Sınıf <xref:System.Windows.Forms.PaintEventArgs> <xref:System.Windows.Forms.Control.Paint> olay için veri içerir. Aşağıdaki kodda gösterildiği gibi iki özelliği vardır.  
   
 ```vb  
 Public Class PaintEventArgs  
@@ -68,7 +68,7 @@ Public Class PaintEventArgs
   
    Public ReadOnly Property Graphics() As System.Drawing.Graphics  
       ...  
-   End Property   
+   End Property
    ...  
 End Class  
 ```  
@@ -82,9 +82,9 @@ public class PaintEventArgs : EventArgs {
 }  
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> boyanacak, dikdörtgen ve <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> özelliği başvurduğu bir <xref:System.Drawing.Graphics> nesne. Sınıflarda <xref:System.Drawing?displayProperty=nameWithType> ad alanı yönetilen GDI +'da, yeni bir Windows grafik kitaplığı işlevlerini erişimi sağlayan sınıflar. <xref:System.Drawing.Graphics> Nesne noktaları, dizeler, çizgiler, yaylar, üç nokta ve birçok diğer şekiller çizmek için yöntemleri vardır.  
+ <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>boyanacak dikdörtgendir ve <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> özellik bir <xref:System.Drawing.Graphics> nesneye başvurur. <xref:System.Drawing?displayProperty=nameWithType> Ad alanındaki sınıflar, yeni Windows grafik kitaplığı olan GDI+'nın işlevselliğine erişim sağlayan yönetilen sınıflardır. Nesnenin <xref:System.Drawing.Graphics> noktaları, dizeleri, çizgileri, yayları, elipsleri ve diğer birçok şekli çizme yöntemleri vardır.  
   
- Bir denetim çağırır, <xref:System.Windows.Forms.Control.OnPaint%2A> görsel görünümünü değiştirmek gerektiğinde yöntemi. Bu yöntem sırayla başlatır <xref:System.Windows.Forms.Control.Paint> olay.  
+ Denetim, görsel <xref:System.Windows.Forms.Control.OnPaint%2A> ekranını değiştirmesi gerektiğinde yöntemini çağırır. Bu yöntem sırayla <xref:System.Windows.Forms.Control.Paint> olayı yükseltir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

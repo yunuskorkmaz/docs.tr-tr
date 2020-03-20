@@ -15,44 +15,44 @@ helpviewer_keywords:
 ms.assetid: 90eab7b3-1fae-4af4-8bce-f7bc0e188a99
 topic_type:
 - apiref
-ms.openlocfilehash: 9da4e34fa948db2fc73cbde813bac9b3430605ca
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ef573eb9a572c27e685289b2740a55e898be2093
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436255"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177627"
 ---
 # <a name="imetadataconvertergettypelibfrommetadata-method"></a>IMetaDataConverter::GetTypeLibFromMetaData Yöntemi
-Belirtilen kitaplık ve modül adlarına sahip tür kitaplığını temsil eden bir `ITypeLib` örneğine yönelik bir işaretçi alır.  
+Belirtilen kitaplık `ITypeLib` ve modül adlarına sahip tür kitaplığını temsil eden bir örneğin işaretçisini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetTypeLibFromMetaData (  
-    [in]  BSTR     strModule,   
-    [in]  BSTR     strTlbName,   
+    [in]  BSTR     strModule,
+    [in]  BSTR     strTlbName,
     [out] ITypeLib **ppITL  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `strModule`  
- 'ndaki Tür kitaplığının modülünün adı.  
+ [içinde] Tür kitaplığı modülünün adı.  
   
  `strTlbName`  
- 'ndaki Tür kitaplığının adı.  
+ [içinde] Tür kitaplığın adı.  
   
  `ppITL`  
- dışı Tür kitaplığını temsil eden `ITypeLib` örneğinin adresini alan bir konum işaretçisi.  
+ [çıkış] Tür kitaplığını temsil eden `ITypeLib` örneğin adresini alan bir konuma işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

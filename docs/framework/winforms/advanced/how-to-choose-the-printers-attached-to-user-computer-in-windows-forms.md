@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir kullanıcının bilgisayarına bağlı yazıcıları seçme'
+title: 'Nasıl YapIlir: Kullanıcının Bilgisayarına Bağlı Yazıcıları Seçin'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: 7fc2427468540ac0a1480f6140cbb34c3a0f1ab3
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 2afbccd02ef42a78d5eac1a01841516fca27c92e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746503"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182606"
 ---
 # <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta Bir Kullanıcının Bilgisayarına Bağlanan Yazıcıları Seçme
-Genellikle, kullanıcılar, yazdırma için varsayılan yazıcıdan farklı bir yazıcı seçmek ister. Kullanıcıların, <xref:System.Windows.Forms.PrintDialog> bileşenini kullanarak şu anda yüklü olanlardan bir yazıcı seçmesini sağlayabilirsiniz. <xref:System.Windows.Forms.PrintDialog> bileşeni aracılığıyla <xref:System.Windows.Forms.PrintDialog> bileşenin <xref:System.Windows.Forms.DialogResult> yakalanır ve yazıcıyı seçmek için kullanılır.  
+Genellikle, kullanıcılar yazdırılacak varsayılan yazıcı dışında bir yazıcı seçmek ister. Kullanıcıların bileşeni kullanarak şu anda yüklü olanlar arasından <xref:System.Windows.Forms.PrintDialog> bir yazıcı seçmelerini sağlayabilirsiniz. <xref:System.Windows.Forms.PrintDialog> Bileşen aracılığıyla, <xref:System.Windows.Forms.DialogResult> <xref:System.Windows.Forms.PrintDialog> bileşenin yakalanan ve yazıcı seçmek için kullanılır.  
   
- Aşağıdaki yordamda, varsayılan yazıcıda yazdırılmak üzere bir metin dosyası seçilidir. <xref:System.Windows.Forms.PrintDialog> sınıfı daha sonra oluşturulur.  
+ Aşağıdaki yordamda, varsayılan yazıcıya yazdırılmak üzere bir metin dosyası seçilir. Sınıf <xref:System.Windows.Forms.PrintDialog> daha sonra anında.  
   
-### <a name="to-choose-a-printer-and-then-print-a-file"></a>Bir yazıcı seçmek ve sonra bir dosyayı yazdırmak için  
+### <a name="to-choose-a-printer-and-then-print-a-file"></a>Yazıcı seçmek ve ardından dosya yazdırmak için  
   
-1. <xref:System.Windows.Forms.PrintDialog> bileşeni kullanılarak kullanılacak yazıcıyı seçin.  
+1. Bileşeni kullanarak kullanılacak yazıcıyı <xref:System.Windows.Forms.PrintDialog> seçin.  
   
-     Aşağıdaki kod örneğinde, işlenen iki olay vardır. İlk olarak, bir <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olayında <xref:System.Windows.Forms.PrintDialog> sınıfı örneklenmiştir ve Kullanıcı tarafından seçilen yazıcı <xref:System.Windows.Forms.DialogResult> özelliğinde yakalanır.  
+     Aşağıdaki kod örneğinde, ele alınmakta olan iki olay vardır. İlk olarak, <xref:System.Windows.Forms.Button> bir denetim <xref:System.Windows.Forms.Control.Click> olayı, <xref:System.Windows.Forms.PrintDialog> sınıf anında ve kullanıcı tarafından seçilen yazıcı <xref:System.Windows.Forms.DialogResult> özelliği yakalanır.  
   
-     İkinci olayda, <xref:System.Drawing.Printing.PrintDocument> bileşenin <xref:System.Drawing.Printing.PrintDocument.PrintPage> olayı, belirtilen yazıcıda bir örnek belge yazdırılır.  
+     İkinci olayda, <xref:System.Drawing.Printing.PrintDocument.PrintPage> <xref:System.Drawing.Printing.PrintDocument> bileşenin durumunda, bir örnek belge belirtilen yazıcıya yazdırılır.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -37,12 +37,12 @@ Genellikle, kullanıcılar, yazdırma için varsayılan yazıcıdan farklı bir 
   
        If (result = DialogResult.OK) Then  
          PrintDocument1.Print()  
-       End If   
+       End If
   
     End Sub  
   
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
-       e.Graphics.FillRectangle(Brushes.Red, New Rectangle(500, 500, 500, 500))          
+       e.Graphics.FillRectangle(Brushes.Red, New Rectangle(500, 500, 500, 500))
     End Sub  
     ```  
   
@@ -58,10 +58,10 @@ Genellikle, kullanıcılar, yazdırma için varsayılan yazıcıdan farklı bir 
        }  
     }  
   
-    private void printDocument1_PrintPage(object sender,   
+    private void printDocument1_PrintPage(object sender,
     System.Drawing.Printing.PrintPageEventArgs e)  
     {  
-       e.Graphics.FillRectangle(Brushes.Red,   
+       e.Graphics.FillRectangle(Brushes.Red,
          new Rectangle(500, 500, 500, 500));  
     }  
     ```  
@@ -73,7 +73,7 @@ Genellikle, kullanıcılar, yazdırma için varsayılan yazıcıdan farklı bir 
        {  
           PrintDialog ^ printDialog1 = gcnew PrintDialog();  
           printDialog1->Document = printDocument1;  
-          System::Windows::Forms::DialogResult result =   
+          System::Windows::Forms::DialogResult result =
              printDialog1->ShowDialog();  
           if (result == DialogResult::OK)  
           {  
@@ -89,7 +89,7 @@ Genellikle, kullanıcılar, yazdırma için varsayılan yazıcıdan farklı bir 
        }  
     ```  
   
-     (Görsel C# ve görsel C++) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.  
+     (Görsel C# ve Görsel C++) Olay işleyicisini kaydetmek için aşağıdaki kodu formun oluşturucusuna yerleştirin.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d82d633e-cce6-427c-8b02-8227e34e12ba
 topic_type:
 - apiref
-ms.openlocfilehash: d5323538447e083a0c727e43261dd68337182b9b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d8df78e3d5cebe5378dfba11dc0ea93cc8e346eb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141082"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178096"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy Yöntemi
 Belirtilen derleme için bağlama ilkesini değiştirir ve ilkenin yeni bir sürümünü oluşturur.  
@@ -29,62 +29,62 @@ Belirtilen derleme için bağlama ilkesini değiştirir ve ilkenin yeni bir sür
   
 ```cpp  
 HRESULT  ModifyApplicationPolicy (  
-    [in] LPCWSTR     pwzSourceAssemblyIdentity,   
+    [in] LPCWSTR     pwzSourceAssemblyIdentity,
     [in] LPCWSTR     pwzTargetAssemblyIdentity,  
     [in] BYTE       *pbApplicationPolicy,  
     [in] DWORD       cbAppPolicySize,  
     [in] DWORD       dwPolicyModifyFlags,  
-    [out, size_is(*pcbNewAppPolicySize)] BYTE *pbNewApplicationPolicy,   
+    [out, size_is(*pcbNewAppPolicySize)] BYTE *pbNewApplicationPolicy,
     [in, out] DWORD *pcbNewAppPolicySize  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pwzSourceAssemblyIdentity`  
- 'ndaki Değiştirilecek derlemenin kimliği.  
+ [içinde] Değiştirilen derlemenin kimliği.  
   
  `pwzTargetAssemblyIdentity`  
- 'ndaki Değiştirilen derlemenin yeni kimliği.  
+ [içinde] Değiştirilen derlemenin yeni kimliği.  
   
  `pbApplicationPolicy`  
- 'ndaki Değiştirilecek derleme için bağlama ilkesi verilerini içeren bir arabelleğin işaretçisi.  
+ [içinde] Derlemenin değiştirilen bağlama ilkesi verilerini içeren arabelleğe işaretçi.  
   
  `cbAppPolicySize`  
- 'ndaki Değiştirilmekte olan bağlama ilkesinin boyutu.  
+ [içinde] Değiştirilecek bağlama ilkesinin boyutu.  
   
  `dwPolicyModifyFlags`  
- 'ndaki Yeniden yönlendirme denetimini gösteren [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) DEĞERLERININ mantıksal veya birleşimi.  
+ [içinde] [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) değerlerinin mantıksal veya birleşimi, yeniden yönlendirme denetimini gösterir.  
   
  `pbNewApplicationPolicy`  
- dışı Yeni bağlama ilkesi verilerini içeren bir arabelleğin işaretçisi.  
+ [çıkış] Yeni bağlama ilkesi verilerini içeren bir arabellek için bir işaretçi.  
   
  `pcbNewAppPolicySize`  
- [in, out] Yeni bağlama ilkesi arabelleğinin boyutuna yönelik bir işaretçi.  
+ [içinde, dışarı] Yeni bağlama ilkesi arabelleği boyutuna bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|İlke başarıyla değiştirildi.|  
-|E_INVALIDARG|`pwzSourceAssemblyIdentity` veya `pwzTargetAssemblyIdentity` null bir başvuruya sahip.|  
-|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` çok küçük.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
-|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|E_ınvalıdarg|`pwzSourceAssemblyIdentity`ya `pwzTargetAssemblyIdentity` da null bir referans oldu.|  
+|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy`çok küçük.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma süresi (CLR) bir işleme yüklenmedi veya CLR yönetilen kodu çalıştıramadığı veya aramayı başarıyla işleyemediği bir durumdadır.|  
+|HOST_E_TIMEOUT|Arama zaman doldu.|  
+|HOST_E_NOT_OWNER|Arayan kilidin sahibi değildir.|  
 |HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
-|E_FAıL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_faıl|Bilinmeyen bir felaket hatası meydana geldi. Bir yöntem E_FAIL döndükten sonra, CLR artık işlem içinde kullanılabilir. Barındırma yöntemleri sonraki aramalar HOST_E_CLRNOTAVAILABLE döndürün.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ModifyApplicationPolicy` yöntemi iki kez çağrılabilir. İlk çağrı `pbNewApplicationPolicy` parametresi için null değer sağlamalıdır. Bu çağrı, `pcbNewAppPolicySize`için gereken değerle birlikte döndürülür. İkinci çağrı `pcbNewAppPolicySize`için bu değeri sağlamalı ve `pbNewApplicationPolicy`için bu boyuttaki bir arabelleğe işaret etmelidir.  
+ Yöntem `ModifyApplicationPolicy` iki kez çağrılabilir. İlk çağrı `pbNewApplicationPolicy` parametre için null bir değer sağlamalıdır. Bu çağrı için `pcbNewAppPolicySize`gerekli değer ile dönecektir. İkinci çağrı için `pcbNewAppPolicySize`bu değeri sağlamalı ve bu boyuttabir `pbNewApplicationPolicy`arabelleğe işaret etmelidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE. h  
+ **Üstbilgi:** MSCorEE.h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MSCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

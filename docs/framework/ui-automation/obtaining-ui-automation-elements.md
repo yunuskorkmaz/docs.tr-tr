@@ -5,99 +5,99 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 0ae4694e2efb6f6c51b279adf2851baf38785c8b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: eab4e59ee219808a4c0ae9ca5331a14928b66b5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446891"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179992"
 ---
 # <a name="obtaining-ui-automation-elements"></a>UI Otomasyon Öğelerini Alma
 > [!NOTE]
-> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu dokümantasyon, ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıfları kullanmak <xref:System.Windows.Automation> isteyen .NET Framework geliştiricileri için tasarlanmıştır. Hakkında en son [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bilgi için [Bkz. Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
   
- Bu konu, [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] öğeleri için <xref:System.Windows.Automation.AutomationElement> nesneleri almanın çeşitli yollarını açıklamaktadır.  
-  
-> [!CAUTION]
-> İstemci uygulamanız kendi Kullanıcı arabirimindeki öğeleri bulmaya çalışıyorsa, tüm [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çağrılarını ayrı bir iş parçacığında yapmanız gerekir. Daha fazla bilgi için bkz. [UI Otomasyonu Iş parçacığı sorunları](ui-automation-threading-issues.md).  
-  
-<a name="The_Root_Element"></a>   
-## <a name="root-element"></a>Kök öğe  
- <xref:System.Windows.Automation.AutomationElement> nesneleri için tüm aramalar bir başlangıç yerinde olmalıdır. Bu, Masaüstü, uygulama penceresi veya denetim dahil olmak üzere herhangi bir öğe olabilir.  
-  
- Tüm öğelerin alt öğesi olduğu, statik <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> özelliğinden alınan Masaüstü için kök öğe.  
+ Bu konu, öğeler için <xref:System.Windows.Automation.AutomationElement> [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] nesneleri elde etmenin çeşitli yollarını açıklar.  
   
 > [!CAUTION]
-> Genel olarak, <xref:System.Windows.Automation.AutomationElement.RootElement%2A>yalnızca doğrudan alt öğelerini almaya çalışırsınız. Alt öğeler için arama yüzlerce veya hatta binlerce öğe aracılığıyla yineleyebilir ve muhtemelen yığın taşmasına neden olabilir. Daha düşük bir düzeyde belirli bir öğe edinmeye çalışıyorsanız, aramanızı uygulama penceresinden veya bir kapsayıcıdan daha düşük bir düzeyde başlatmanız gerekir.  
+> İstemci uygulamanız kendi kullanıcı arabiriminde öğeleri bulmaya [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çalışırsa, tüm aramaları ayrı bir iş parçacığı üzerinde yapmalısınız. Daha fazla bilgi için [UI Automation Threading Issues'a](ui-automation-threading-issues.md)bakın.  
   
-<a name="Using_Conditions"></a>   
+<a name="The_Root_Element"></a>
+## <a name="root-element"></a>Kök Öğesi  
+ <xref:System.Windows.Automation.AutomationElement> Nesnelerin tüm aramalarının bir başlangıç noktası olmalıdır. Bu, masaüstü, uygulama penceresi veya denetim de dahil olmak üzere herhangi bir öğe olabilir.  
+  
+ Tüm öğelerin alnındığı masaüstünün kök öğesi statik <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> özellikten elde edilir.  
+  
+> [!CAUTION]
+> Genel olarak, sadece doğrudan çocuk elde <xref:System.Windows.Automation.AutomationElement.RootElement%2A>etmek için çalışmalısınız . Soyundan gelenler için yapılan bir arama, yüzlerce hatta binlerce öğeyi yineleyebilir ve bu da büyük olasılıkla bir yığın taşmasına neden olabilir. Belirli bir öğeyi daha düşük bir düzeyde elde etmeye çalışıyorsanız, aramanızı uygulama penceresinden veya daha düşük bir düzeydeki bir kapsayıcıdan başlamalısınız.  
+  
+<a name="Using_Conditions"></a>
 ## <a name="conditions"></a>Koşullar  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] öğelerini almak için kullanabileceğiniz çoğu teknik için, almak istediğiniz öğeleri tanımlayan bir ölçüt kümesi olan bir <xref:System.Windows.Automation.Condition>belirtmeniz gerekir.  
+ Öğeleri almak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] için kullanabileceğiniz çoğu teknik için, almak istediğiniz öğeleri tanımlayan bir ölçüt kümesi olan bir <xref:System.Windows.Automation.Condition>, bir belirtmeniz gerekir.  
   
- En basit koşul <xref:System.Windows.Automation.Condition.TrueCondition>, arama kapsamındaki tüm öğelerin döndürülüp döndürülmeyeceğini belirten önceden tanımlanmış bir nesnedir. <xref:System.Windows.Automation.Condition.FalseCondition>, tüm öğelerin bulunmasını önleyecağından, <xref:System.Windows.Automation.Condition.TrueCondition>dönüştürmesi daha az yararlıdır.  
+ En basit koşul, arama kapsamı içindeki tüm öğelerin döndürüleceğini belirten önceden tanımlanmış bir nesnedir. <xref:System.Windows.Automation.Condition.TrueCondition> <xref:System.Windows.Automation.Condition.FalseCondition>, <xref:System.Windows.Automation.Condition.TrueCondition>tersi, daha az yararlıdır, herhangi bir öğe nin bulunmasını önleyeceği için.  
   
- Önceden tanımlanmış üç koşul, tek başına veya diğer koşullarla birlikte kullanılabilir: <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>ve <xref:System.Windows.Automation.Automation.RawViewCondition>. <xref:System.Windows.Automation.Automation.RawViewCondition>, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> veya <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> özelliklerine göre filtrelemediğinden, kendisi tarafından kullanılan <xref:System.Windows.Automation.Condition.TrueCondition>eşdeğerdir.  
+ Diğer üç önceden tanımlanmış koşullar tek başına veya <xref:System.Windows.Automation.Automation.ContentViewCondition>diğer <xref:System.Windows.Automation.Automation.ControlViewCondition>koşullarla birlikte kullanılabilir: , , ve <xref:System.Windows.Automation.Automation.RawViewCondition>. <xref:System.Windows.Automation.Automation.RawViewCondition>, kendi başına kullanılan, <xref:System.Windows.Automation.Condition.TrueCondition>kendi <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> veya <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> özellikleri tarafından öğeleri filtre değil, çünkü eşdeğerdir.  
   
- Diğer koşullar, her biri bir özellik değeri belirten bir veya daha fazla <xref:System.Windows.Automation.PropertyCondition> nesnesinden oluşturulmuştur. Örneğin, bir <xref:System.Windows.Automation.PropertyCondition> öğenin etkinleştirildiğini veya belirli bir denetim modelini desteklediğini belirtebilir.  
+ Diğer koşullar, her biri <xref:System.Windows.Automation.PropertyCondition> bir özellik değeri belirten bir veya daha fazla nesneden oluşturulur. Örneğin, bir <xref:System.Windows.Automation.PropertyCondition> öğenin etkin olduğunu veya belirli bir denetim deseni desteklediğini belirtebilir.  
   
- Koşullar, <xref:System.Windows.Automation.AndCondition>, <xref:System.Windows.Automation.OrCondition>ve <xref:System.Windows.Automation.NotCondition>türlerin nesneleri oluşturarak Boolean Logic kullanılarak birleştirilebilir.  
+ Koşullar boolean mantığı kullanılarak, türleri <xref:System.Windows.Automation.AndCondition> <xref:System.Windows.Automation.OrCondition>, ve <xref:System.Windows.Automation.NotCondition>.  
   
-<a name="Search_Scope"></a>   
-## <a name="search-scope"></a>Arama kapsamı  
- <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> veya <xref:System.Windows.Automation.AutomationElement.FindAll%2A> kullanılarak gerçekleştirilen aramaların bir kapsamı ve bir başlangıç yerinde olması gerekir.  
+<a name="Search_Scope"></a>
+## <a name="search-scope"></a>Arama Kapsamı  
+ Kullanılarak <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> yapılan aramalarda <xref:System.Windows.Automation.AutomationElement.FindAll%2A> bir kapsam ve başlangıç yeri olması gerekir.  
   
- Kapsam, Aranmak üzere başlangıç yeri etrafında yer alan alanı tanımlar. Bu, öğenin kendisini, onun eşdüzey öğelerini, üst öğelerini, alt öğelerini ve alt öğelerini içerebilir.  
+ Kapsam, aranacak başlangıç noktasının etrafındaki alanı tanımlar. Bu öğenin kendisi, kardeşleri, ebeveyni, ataları, yakın çocukları ve soyundan içerebilir.  
   
- Bir aramanın kapsamı, <xref:System.Windows.Automation.TreeScope> numaralandırmasından bir bit düzeyinde Değerler birleşimi tarafından tanımlanır.  
+ Aramanın kapsamı, numaralandırmadaki <xref:System.Windows.Automation.TreeScope> değerlerin bitwise birleşimi ile tanımlanır.  
   
-<a name="Finding_a_Known_Element"></a>   
-## <a name="finding-a-known-element"></a>Bilinen bir öğeyi bulma  
- <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A>veya başka bir özellik ya da özelliklerin birleşimiyle tanımlanan bilinen bir öğeyi bulmak için <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> yönteminin kullanılması en kolay yoldur. Aranan öğe bir uygulama penceresuysa, aramanın başlangıç noktası <xref:System.Windows.Automation.AutomationElement.RootElement%2A>olabilir.  
+<a name="Finding_a_Known_Element"></a>
+## <a name="finding-a-known-element"></a>Bilinen Öğeyi Bulma  
+ Bilinen bir öğeyi bulmak <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>için, onun tarafından tanımlanan , <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A>veya başka bir özellik <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> veya özellikleri kombinasyonu, bu yöntemi kullanmak en kolay. Aranan öğe bir uygulama penceresi ise, aramanın başlangıç noktası <xref:System.Windows.Automation.AutomationElement.RootElement%2A>.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] öğeleri bulmanın bu yolu, otomatikleştirilmiş test senaryolarında en yararlı seçenektir.  
+ Öğeleri bulma [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bu şekilde en otomatik sınama senaryolarında yararlıdır.  
   
-<a name="Finding_Elements_in_a_Subtree"></a>   
-## <a name="finding-elements-in-a-subtree"></a>Alt ağaçtaki öğeleri bulma  
- Bilinen bir öğeyle ilgili belirli ölçütlere uyan tüm öğeleri bulmak için <xref:System.Windows.Automation.AutomationElement.FindAll%2A>kullanabilirsiniz. Örneğin, liste öğelerini veya menü öğelerini bir listeden veya menüden almak ya da bir iletişim kutusundaki tüm denetimleri tanımlamak için bu yöntemi kullanabilirsiniz.  
+<a name="Finding_Elements_in_a_Subtree"></a>
+## <a name="finding-elements-in-a-subtree"></a>Alt Ağaçta Öğeleri Bulma  
+ Bilinen bir öğeyle ilişkili belirli ölçütleri karşılayan tüm <xref:System.Windows.Automation.AutomationElement.FindAll%2A>öğeleri bulmak için kullanabilirsiniz. Örneğin, liste öğelerini veya menü öğelerini bir listeden veya menüden almak veya iletişim kutusundaki tüm denetimleri tanımlamak için bu yöntemi kullanabilirsiniz.  
   
-<a name="Walking_a_Subtree"></a>   
-## <a name="walking-a-subtree"></a>Alt ağaç yürüme  
- İstemcinizin ile birlikte kullanılabilecek uygulamalar hakkında daha önce bilginiz yoksa, <xref:System.Windows.Automation.TreeWalker> sınıfını kullanarak ilgilendiğiniz tüm öğelerin bir alt ağacını oluşturabilirsiniz. Uygulamanız bunu bir odak değişikliği olayına yanıt olarak gerektirebilir; Yani, bir uygulama veya denetim giriş odağını aldığında, UI Otomasyonu istemcisi alt öğeleri ve belki de odaklanmış öğenin tüm alt öğelerini inceler.  
+<a name="Walking_a_Subtree"></a>
+## <a name="walking-a-subtree"></a>Bir Subtree Yürüyüş  
+ İstemcinizin birlikte kullanılabileceği uygulamalar hakkında önceden bilginiz yoksa, <xref:System.Windows.Automation.TreeWalker> sınıfı kullanarak tüm ilgi çekici öğelerin bir alt ağacını oluşturabilirsiniz. Uygulamanız bunu odak değiştirilen bir olaya yanıt olarak yapabilir; diğer bir deyişle, bir uygulama veya denetim girdi odağı aldığında, Kullanıcı Aracı Otomasyon istemcisi çocukları ve belki de tüm odaklanmış öğenin torunlarını inceler.  
   
- <xref:System.Windows.Automation.TreeWalker> kullanılabilecek başka bir yol da bir öğenin üst öğelerinden birini tanımlamaktır. Örneğin, ağacı izleyerek bir denetimin üst penceresini belirleyebilirsiniz.  
+ <xref:System.Windows.Automation.TreeWalker> Kullanılabilen başka bir yol da bir öğenin atalarını tanımlamaktır. Örneğin, ağaca doğru yürüyerek denetimin üst penceresini tanımlayabilirsiniz.  
   
- <xref:System.Windows.Automation.TreeWalker>, sınıfın bir nesnesini oluşturarak (bir <xref:System.Windows.Automation.Condition>geçirerek ilgilendiğiniz öğeleri tanımlayarak) veya <xref:System.Windows.Automation.TreeWalker>alanları olarak tanımlanan aşağıdaki önceden tanımlanmış nesnelerden birini kullanarak kullanabilirsiniz.  
+ Sınıfın bir <xref:System.Windows.Automation.TreeWalker> nesnesini oluşturarak (bir <xref:System.Windows.Automation.Condition>tane geçerek ilgi öğelerini tanımlayarak) veya <xref:System.Windows.Automation.TreeWalker>'nin alanları olarak tanımlanan aşağıdaki önceden tanımlanmış nesnelerden birini kullanarak) kullanabilirsiniz.  
   
 |||  
 |-|-|  
-|<xref:System.Windows.Automation.TreeWalker.ContentViewWalker>|Yalnızca <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> özelliği `true`olan öğeleri bulur.|  
-|<xref:System.Windows.Automation.TreeWalker.ControlViewWalker>|Yalnızca <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> özelliği `true`olan öğeleri bulur.|  
+|<xref:System.Windows.Automation.TreeWalker.ContentViewWalker>|Yalnızca özelliği <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> olan `true`öğeleri bulur.|  
+|<xref:System.Windows.Automation.TreeWalker.ControlViewWalker>|Yalnızca özelliği <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> olan `true`öğeleri bulur.|  
 |<xref:System.Windows.Automation.TreeWalker.RawViewWalker>|Tüm öğeleri bulur.|  
   
- Bir <xref:System.Windows.Automation.TreeWalker>elde ettikten sonra, kullanımı basittir. Alt ağacın öğeleri arasında gezinmek için `Get` yöntemlerini çağırmanız yeterlidir.  
+ Bir elde ettikten <xref:System.Windows.Automation.TreeWalker>sonra , bunu kullanarak basittir. Alt ağacın `Get` öğeleri arasında gezinmek için yöntemleri aramanız yeterlidir.  
   
- <xref:System.Windows.Automation.TreeWalker.Normalize%2A> yöntemi, alt ağaçtaki bir öğeye, görünümün parçası olmayan başka bir öğeden gitmek için kullanılabilir. Örneğin, <xref:System.Windows.Automation.TreeWalker.ContentViewWalker>kullanarak bir alt ağacın görünümünü oluşturduğunuzu varsayalım. Uygulamanız daha sonra bir kaydırma çubuğunun giriş odağını aldığını belirten bir bildirim alır. Bir kaydırma çubuğu bir içerik öğesi olmadığından, alt ağacının görünümünde mevcut değildir. Ancak, kaydırma <xref:System.Windows.Automation.TreeWalker.Normalize%2A> çubuğunu temsil eden <xref:System.Windows.Automation.AutomationElement> geçirebilir ve içerik görünümündeki en yakın üst öğeye sahip olabilirsiniz.  
+ Yöntem, <xref:System.Windows.Automation.TreeWalker.Normalize%2A> görünümün bir parçası olmayan başka bir öğeden alt ağaçtaki bir öğeye gezinmek için kullanılabilir. Örneğin, bir alt ağacın görünümünü kullanarak <xref:System.Windows.Automation.TreeWalker.ContentViewWalker>oluşturduğunuzu varsayalım. Uygulamanız daha sonra bir kaydırma çubuğunun giriş odağı aldığına dair bildirim alır. Kaydırma çubuğu bir içerik öğesi olmadığından, alt ağacı görünümünüzde bulunmaz. Ancak, <xref:System.Windows.Automation.AutomationElement> kaydırma çubuğunu temsil edeni <xref:System.Windows.Automation.TreeWalker.Normalize%2A> geçirebilir ve içerik görünümünde bulunan en yakın atayı alabilirsiniz.  
   
-<a name="Other_Ways_to_Retrieve_an_Element"></a>   
-## <a name="other-ways-to-retrieve-an-element"></a>Bir öğeyi almanın diğer yolları  
- Aramalara ve gezinmeye ek olarak, aşağıdaki yollarla bir <xref:System.Windows.Automation.AutomationElement> alabilirsiniz.  
+<a name="Other_Ways_to_Retrieve_an_Element"></a>
+## <a name="other-ways-to-retrieve-an-element"></a>Öğe Almanın Diğer Yolları  
+ Aramalar avesi ve gezinmeye <xref:System.Windows.Automation.AutomationElement> ek olarak, aşağıdaki yollarla bir alabilirsiniz.  
   
-### <a name="from-an-event"></a>Bir olaydan  
- Uygulamanız bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olayı aldığında, olay işleyicinizde geçirilen kaynak nesne bir <xref:System.Windows.Automation.AutomationElement>. Örneğin, odak değiştirilen olaylara abone olduysa, <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> geçirilen kaynak odağı alan öğedir.  
+### <a name="from-an-event"></a>Bir Etkinlikten  
+ Uygulamanız bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olay aldığında, olay işleyicinize geçen <xref:System.Windows.Automation.AutomationElement>kaynak nesne bir . Örneğin, odak değiştirilen olaylara abone olduysanız, size <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> geçen kaynak odağı alan öğedir.  
   
- Daha fazla bilgi için bkz. [UI Otomasyon olaylarına abone olma](subscribe-to-ui-automation-events.md).  
+ Daha fazla bilgi için [bkz.](subscribe-to-ui-automation-events.md)  
   
-### <a name="from-a-point"></a>Bir noktadan  
- Ekran koordinatlarına sahipseniz (örneğin, bir imleç konumu), statik <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> metodunu kullanarak bir <xref:System.Windows.Automation.AutomationElement> alabilirsiniz.  
+### <a name="from-a-point"></a>Bir Noktadan  
+ Ekran koordinatlarınız (örneğin, imleç konumu) varsa, statik <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> yöntemi kullanarak bir tane alabilirsiniz.  
   
-### <a name="from-a-window-handle"></a>Pencere tanıtıcısından  
- HWND 'den bir <xref:System.Windows.Automation.AutomationElement> almak için statik <xref:System.Windows.Automation.AutomationElement.FromHandle%2A> yöntemini kullanın.  
+### <a name="from-a-window-handle"></a>Pencere Tutamacından  
+ BIR HWND'den bir alma <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.AutomationElement.FromHandle%2A> yöntemini kullanın.  
   
-### <a name="from-the-focused-control"></a>Odaklanmış denetimden  
- Statik <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> özelliğinden odaklanmış denetimi temsil eden bir <xref:System.Windows.Automation.AutomationElement> alabilirsiniz.  
+### <a name="from-the-focused-control"></a>Odaklanmış Kontrol'den  
+ Statik <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> özellikten <xref:System.Windows.Automation.AutomationElement> odaklanmış denetimi temsil eden bir şey alabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özellik Koşulunu Temel Alan UI Otomasyonu Öğesi Bulma](find-a-ui-automation-element-based-on-a-property-condition.md)
-- [TreeWalker ile UI Otomasyonu Öğeleri Arasında Gezinme](navigate-among-ui-automation-elements-with-treewalker.md)
+- [Özellik Koşulunu Temel Alan UI Otomasyon Öğesi Bulma](find-a-ui-automation-element-based-on-a-property-condition.md)
+- [TreeWalker ile UI Otomasyon Öğeleri Arasında Gezinme](navigate-among-ui-automation-elements-with-treewalker.md)
 - [UI Otomasyon Ağacına Genel Bakış](ui-automation-tree-overview.md)

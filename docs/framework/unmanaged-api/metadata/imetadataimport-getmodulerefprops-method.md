@@ -15,48 +15,48 @@ helpviewer_keywords:
 ms.assetid: b558e766-4c11-4628-ae47-b4e0a1800168
 topic_type:
 - apiref
-ms.openlocfilehash: dce9b9c20cbc73c6a70a34afa6c348c23164ed9e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f46033b9e643ef6b4a0063c4995b8c024b8c1f7e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437323"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175362"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>IMetaDataImport::GetModuleRefProps Yöntemi
-Belirtilen meta veri belirtecinin başvurduğu modülün adını alır.  
+Belirtilen meta veri belirteci tarafından başvurulan modülün adını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetModuleRefProps (  
    [in]  mdModuleRef         mur,  
-   [out] LPWSTR              szName,   
-   [in]  ULONG               cchName,   
-   [out] ULONG               *pchName   
+   [out] LPWSTR              szName,
+   [in]  ULONG               cchName,
+   [out] ULONG               *pchName
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `mur`  
- 'ndaki Meta veri bilgilerini almak için modüle başvuruda bulunan ModuleRef meta veri belirteci.  
+ [içinde] Modüliçin meta veri bilgisi almak için modüle başvuran ModuleRef meta veri belirteci.  
   
  `szName`  
- dışı Modül adını tutan bir arabellek.  
+ [çıkış] Modül adını tutmak için bir arabellek.  
   
  `cchName`  
- 'ndaki Geniş karakterdeki `szName` istenen boyutu.  
+ [içinde] Geniş karakterlerde `szName` istenen boyutu.  
   
  `pchName`  
- dışı Geniş karakterdeki `szName` döndürülen boyutu.  
+ [çıkış] Geniş karakterlerde `szName` döndürülen boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

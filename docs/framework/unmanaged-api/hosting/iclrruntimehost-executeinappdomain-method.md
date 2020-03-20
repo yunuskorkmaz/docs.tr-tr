@@ -15,58 +15,58 @@ helpviewer_keywords:
 ms.assetid: e2b0e2db-3fae-4b56-844e-d30a125a660c
 topic_type:
 - apiref
-ms.openlocfilehash: c847f177f48d72f28192d1efabe93c65a7b3f4b8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c012e4e2b5e41737f7bbe6a0fb887693b0ba22c8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120499"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176428"
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a>ICLRRuntimeHost::ExecuteInAppDomain Yöntemi
-Belirtilen yönetilen kodun çalıştırılacağı <xref:System.AppDomain> belirtir.  
+Belirtilen yönetilen <xref:System.AppDomain> kodun yürütülmek için hangi sini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT ExecuteInAppDomain(  
-    [in] DWORD AppDomainId,   
-    [in] FExecuteInDomainCallback pCallback,   
+    [in] DWORD AppDomainId,
+    [in] FExecuteInDomainCallback pCallback,
     [in] void* cookie  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `AppDomainId`  
- 'ndaki Belirtilen metodun çalıştırılacağı <xref:System.AppDomain> sayısal KIMLIĞI.  
+ [içinde] Belirtilen yöntemin <xref:System.AppDomain> yürütülmesi için sayısal kimlik.  
   
  `pCallback`  
- 'ndaki Belirtilen <xref:System.AppDomain>yürütmek için işleve yönelik bir işaretçi.  
+ [içinde] Belirtilen <xref:System.AppDomain>içinde yürütmek için işlev için bir işaretçi .  
   
  `cookie`  
- 'ndaki Donuk, çağırana ayrılan belleğe yönelik bir işaretçi. Bu parametre, ortak dil çalışma zamanı (CLR) tarafından etki alanı geri çağırması ile geçirilir. Çalışma zamanı tarafından yönetilen yığın belleği değildir; Bu belleğin ayırma ve yaşam süresi çağıran tarafından denetlenir.  
+ [içinde] Opak arayan ayrılmış bellek için bir işaretçi. Bu parametre ortak dil çalışma süresi (CLR) tarafından etki alanı geri arama geçirilir. Çalışma zamanı yönetilen yığın belleği değildir; bu belleğin hem tahsisi hem de kullanım ömrü arayan tarafından denetlenir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`ExecuteInAppDomain` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
-|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|S_OK|`ExecuteInAppDomain`başarıyla döndürülür.|  
+|HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmedi veya CLR yönetilen kodu çalıştıramadığı veya aramayı başarıyla işleyemediği bir durumdadır.|  
+|HOST_E_TIMEOUT|Arama zaman doldu.|  
+|HOST_E_NOT_OWNER|Arayan kilidin sahibi değildir.|  
 |HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
-|E_FAıL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürürse, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_faıl|Bilinmeyen bir felaket hatası meydana geldi. Bir yöntem E_FAIL döndürürse, CLR artık işlem içinde kullanılabilir. Barındırma yöntemleri sonraki aramalar HOST_E_CLRNOTAVAILABLE döndürün.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ExecuteInAppDomain`, konağın belirtilen yönetilen yöntemin üzerinde yürütülmesi gereken yönetilen <xref:System.AppDomain> denetimi üzerinde çalışmasına izin verir. [GetCurrentAppDomainId metodunu](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md)çağırarak, <xref:System.AppDomain.Id%2A> özelliğinin değerine karşılık gelen bir uygulama etki alanı tanımlayıcısının değerini alabilirsiniz.  
+ `ExecuteInAppDomain`ev sahibinin, belirtilen yönetilen <xref:System.AppDomain> yöntemin hangi şekilde yönetildiği üzerinde yürütülmesi gerektiğini denetlemesini sağlar. <xref:System.AppDomain.Id%2A> [GetCurrentAppDomainId Yöntemi'ni](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md)arayarak, bir uygulama etki alanının özelliğinin değerine karşılık gelen tanımlayıcısının değerini alabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE. h  
+ **Üstbilgi:** MSCorEE.h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MSCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

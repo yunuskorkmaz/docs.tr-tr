@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: e9e85729b10d1c992a22f6c0bea65dfd1e21e7e4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 10a8d243b3f053879f183864e955d9260c07865b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742558"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183606"
 ---
 # <a name="impersonating-the-client"></a>İstemci Kimliğine Bürünme
-Kimliğe bürünme örneği, hizmetin çağıran adına sistem kaynaklarına erişebilmesi için çağıran uygulamanın nasıl taklit edilebilir olduğunu gösterir.  
+Kimliğe Bürünme örneği, hizmetin arayan adına sistem kaynaklarına erişebilmeleri için servisteki arayan uygulamasının nasıl taklit edilebildiğini gösterir.  
   
- Bu örnek, [self-Host](../../../../docs/framework/wcf/samples/self-host.md) örneğine dayalıdır. Hizmet ve istemci yapılandırma dosyaları, [self-Host](../../../../docs/framework/wcf/samples/self-host.md) örneğindeki ile aynıdır.  
+ Bu örnek [Self-Host](../../../../docs/framework/wcf/samples/self-host.md) örneğine dayanmaktadır. Hizmet ve istemci yapılandırma dosyaları [Self-Host](../../../../docs/framework/wcf/samples/self-host.md) örneği ile aynıdır.  
   
 > [!NOTE]
-> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
+> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
   
- Hizmet kodu, hizmet üzerindeki `Add` yöntemi, aşağıdaki örnek kodda gösterildiği gibi <xref:System.ServiceModel.OperationBehaviorAttribute> kullanarak çağıranı kimliğine bürünür gibi değiştirilmiştir.  
+ Hizmet kodu, hizmetteki `Add` yöntemin aşağıdaki örnek kodda gösterildiği <xref:System.ServiceModel.OperationBehaviorAttribute> gibi kullanarak arayanın kimliğine büründiyi olacak şekilde değiştirildi.  
   
 ```csharp
 [OperationBehavior(Impersonation = ImpersonationOption.Required)]  
@@ -35,16 +35,16 @@ public double Add(double n1, double n2)
 }  
 ```  
   
- Sonuç olarak, yürütülen iş parçacığının güvenlik bağlamı, `Add` yöntemine girmeden önce çağıranın kimliğine bürünmek ve yöntemden çıkmadan geri döndürülmek üzere çağrılır.  
+ Sonuç olarak, yürütme iş parçacığının güvenlik bağlamı `Add` yönteme girmeden önce arayanın kimliğine göre değiştirilir ve yöntemden çıkarken döndürüldü.  
   
- Aşağıdaki örnek kodda gösterilen `DisplayIdentityInformation` yöntemi, arayanın kimliğini görüntüleyen bir yardımcı programdır.  
+ Aşağıdaki `DisplayIdentityInformation` örnek kodda gösterilen yöntem, arayanın kimliğini görüntüleyen bir yardımcı program işlevidir.  
   
 ```csharp
 static void DisplayIdentityInformation()  
 {  
     Console.WriteLine("\t\tThread Identity            :{0}",  
          WindowsIdentity.GetCurrent().Name);  
-    Console.WriteLine("\t\tThread Identity level  :{0}",   
+    Console.WriteLine("\t\tThread Identity level  :{0}",
          WindowsIdentity.GetCurrent().ImpersonationLevel);  
     Console.WriteLine("\t\thToken                     :{0}",  
          WindowsIdentity.GetCurrent().Token.ToString());  
@@ -52,7 +52,7 @@ static void DisplayIdentityInformation()
 }  
 ```  
   
- Hizmetindeki `Subtract` yöntemi, aşağıdaki örnek kodda gösterildiği gibi, çağrıyı yapanın zorunlu çağrıları kullanarak taklit eder.  
+ Hizmetteki yöntem, `Subtract` aşağıdaki örnek kodda gösterildiği gibi zorunlu çağrıları kullanarak arayanın kimliğine bürünmüş olur.  
   
 ```csharp
 public double Subtract(double n1, double n2)  
@@ -69,8 +69,8 @@ public double Subtract(double n1, double n2)
         // Impersonate.  
         using (ServiceSecurityContext.Current.WindowsIdentity.Impersonate())  
         {  
-            // Make a system call in the caller's context and ACLs   
-            // on the system resource are enforced in the caller's context.   
+            // Make a system call in the caller's context and ACLs
+            // on the system resource are enforced in the caller's context.
             Console.WriteLine("Impersonating the caller imperatively");  
             DisplayIdentityInformation();  
         }  
@@ -86,11 +86,11 @@ public double Subtract(double n1, double n2)
 }  
 ```  
   
- Bu durumda çağıranın tüm çağrı için kimliğe bürünmediğini ancak yalnızca çağrının bir bölümü için kimliğe bürünülmüş olduğunu unutmayın. Genel olarak, en küçük kapsam için kimliğe bürünme işleminin tamamı için kimliğe bürünme tercih edilir.  
+ Bu durumda, arayanın tüm arama için taklit olmadığını, yalnızca aramanın bir bölümü için taklit edildiğini unutmayın. Genel olarak, en küçük kapsam için taklit tüm işlem için taklit etmek tercih edilir.  
   
- Diğer yöntemler çağıranın kimliğine bürünemez.  
+ Diğer yöntemler arayanın kimliğine bürünmez.  
   
- İstemci kodu, kimliğe bürünme düzeyini <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>olarak ayarlanacak şekilde değiştirilmiştir. İstemci, <xref:System.Security.Principal.TokenImpersonationLevel> numaralandırması kullanarak hizmet tarafından kullanılacak kimliğe bürünme düzeyini belirtir. Sabit listesi şu değerleri destekler: <xref:System.Security.Principal.TokenImpersonationLevel.None>, <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>, <xref:System.Security.Principal.TokenImpersonationLevel.Identification>, <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> ve <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. Windows ACL 'Leri kullanılarak korunan yerel makinedeki bir sistem kaynağına erişirken erişim denetimi gerçekleştirmek için, aşağıdaki örnek kodda gösterildiği gibi kimliğe bürünme düzeyi <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>olarak ayarlanmalıdır.  
+ İstemci kodu, kimliğe bürünme <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>düzeyini ' olarak ayarlamak üzere değiştirildi İstemci, numaralandırmayı kullanarak <xref:System.Security.Principal.TokenImpersonationLevel> hizmet tarafından kullanılacak kimliğe bürünme düzeyini belirtir. Numaralandırma <xref:System.Security.Principal.TokenImpersonationLevel.None>aşağıdaki değerleri destekler: , <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous> <xref:System.Security.Principal.TokenImpersonationLevel.Identification>, <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>ve . Windows ALA'ları kullanılarak korunan yerel makinedeki bir sistem kaynağına erişirken bir erişim denetimi <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>gerçekleştirmek için, kimliğe bürünme düzeyi aşağıdaki örnek kodda gösterildiği gibi ayarlanmalıdır.  
   
 ```csharp
 // Create a client with given client endpoint configuration  
@@ -99,28 +99,28 @@ CalculatorClient client = new CalculatorClient();
 client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationLevel.Impersonation;  
 ```  
   
- Örneği çalıştırdığınızda, işlem istekleri ve yanıtları hem hizmet hem de istemci konsol penceresinde görüntülenir. Hizmeti ve istemciyi kapatmak için her bir konsol penceresinde ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları hem hizmet hem de istemci konsol pencerelerinde görüntülenir. Hizmeti ve istemciyi kapatmak için her konsol penceresinde ENTER tuşuna basın.  
   
 > [!NOTE]
-> Hizmet bir yönetici hesabı altında çalışmalıdır veya altında çalıştığı hesaba HTTP katmanıyla `http://localhost:8000/ServiceModelSamples` URI 'sini kaydetmek için haklar verilmelidir. Bu tür haklar, [Httpcfg. exe aracı](/windows/win32/http/httpcfg-exe)kullanılarak bir [ad alanı ayırması](/windows/win32/http/namespace-reservations-registrations-and-routing) ayarlanarak verilebilir.  
+> Hizmet, idari bir hesap altında çalışmalı veya çalıştığı hesabın `http://localhost:8000/ServiceModelSamples` URI'yi HTTP katmanına kaydetme hakkı verilmelidir. Bu tür [haklar, Httpcfg.exe aracını](/windows/win32/http/httpcfg-exe)kullanarak bir [Namespace Rezervasyonu](/windows/win32/http/namespace-reservations-registrations-and-routing) ayarlayarak verilebilir.  
   
 > [!NOTE]
-> Windows Server 2003 çalıştıran bilgisayarlarda, kimliğe bürünme yalnızca Host. exe uygulamasının kimliğe bürünme ayrıcalığına sahip olması durumunda desteklenir. (Varsayılan olarak, yalnızca Yöneticiler bu izne sahiptir.) Bu ayrıcalığı hizmetin çalıştığı bir hesaba eklemek için, **Yönetimsel Araçlar**' a gidin, **yerel güvenlik ilkesi**' ni açın, **Yerel Ilkeler**' i açın, **Kullanıcı hakları ataması**' nı seçin ve **kimlik doğrulamasından sonra istemcinin özelliklerini al** ' ı seçin ve **Özellikler** ' i çift tıklatarak bir kullanıcı veya grup ekleyin.  
+> Windows Server 2003 çalıştıran bilgisayarlarda, kimliğe bürünme yalnızca Host.exe uygulaması Kimliğe Bürünme ayrıcalığına sahipse desteklenir. (Varsayılan olarak, yalnızca yöneticiler bu izne sahiptir.) Bu ayrıcalığı bir hesaba eklemek için hizmet, Yönetim Araçları'na gidin, Yerel Güvenlik **İlkesi'ni**açın, **Yerel** **İlkeler'i**açın, **Kullanıcı Hakları Ataması'nı**tıklatın ve Kimlik **Doğrulama'dan sonra İstemcili'yi taklit** etmeyi seçin ve kullanıcı veya grup eklemek için **Özellikleri** çift tıklatın.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
   
-1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
+1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
   
-2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak [için, Windows Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
   
-3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
+3. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
   
-4. Hizmetin çağıran tarafından taklit olduğunu göstermek için, istemciyi hizmetin altında çalıştığı farklı bir hesap altında çalıştırın. Bunu yapmak için, komut isteminde şunu yazın:  
+4. Hizmetin arayanın kimliğine büründiyi göstermek için istemciyi, hizmetin altında çalıştırdığı hesaptan farklı bir hesap altında çalıştırın. Bunu yapmak için, komut istemi, yazın:  
   
     ```console  
     runas /user:<machine-name>\<user-name> client.exe  
     ```  
   
-     Daha sonra parola girmeniz istenir. Daha önce belirttiğiniz hesabın parolasını girin.  
+     Daha sonra bir parola istenir. Daha önce belirttiğiniz hesabın parolasını girin.  
   
-5. İstemcisini çalıştırdığınızda, kimliği farklı kimlik bilgileriyle çalıştırmadan önce ve sonra kimliği aklınızda edin.  
+5. İstemciyi çalıştırdığınızda, farklı kimlik bilgileriyle çalıştırmadan önce ve sonra kimliği not edin.  

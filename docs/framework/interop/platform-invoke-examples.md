@@ -13,21 +13,21 @@ helpviewer_keywords:
 - interoperation with unmanaged code, platform invoke
 - DLL functions
 ms.assetid: 15926806-f0b7-487e-93a6-4e9367ec689f
-ms.openlocfilehash: da157a40819ada3914cf1791c8ca3f7b30e8c837
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 358d1ce662d56b8c31124f4b3264ec25a0f94586
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124754"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181327"
 ---
 # <a name="platform-invoke-examples"></a>Platform Çağırma Örnekleri
-Aşağıdaki örnekler, bir bağımsız değişken olarak basit bir dize geçirerek User32. dll ' de **MessageBox** işlevinin nasıl tanımlanacağını ve çağrılacağını gösterir. Örneklerde, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> alanı **Auto** olarak ayarlanır ve hedef platformun karakter genişliğini ve dize sıralamasını belirlemesine izin verir.  
+Aşağıdaki örnekler, User32.dll'de **MessageBox** işlevinin nasıl tanımlanacağını ve çağıracağını ve basit bir dizeyi bağımsız değişken olarak nasıl geçeceğini göstermektedir. Örneklerde, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> alan, hedef platformun karakter genişliğini ve dize mareşalliğini belirlemesini sağlamak için **Otomatik** olarak ayarlanır.  
   
- [!code-cpp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cpp/Example.cpp#1)] 
- [!code-csharp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cs/Example1.cs#1)] 
+ [!code-cpp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cpp/Example.cpp#1)]
+ [!code-csharp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cs/Example1.cs#1)]
  [!code-vb[Conceptual.Interop.PInvoke#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.Interop.PInvoke/vb/Example1.vb#1)]  
   
- Ek örnekler için bkz. [Platform çağırma Ile verileri sıralama](marshaling-data-with-platform-invoke.md).  
+ Ek örnekler için [bkz.](marshaling-data-with-platform-invoke.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

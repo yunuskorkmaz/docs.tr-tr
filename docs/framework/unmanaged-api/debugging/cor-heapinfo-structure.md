@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: bfb2cd39-3e0b-4d51-ba0c-f009755c1456
 topic_type:
 - apiref
-ms.openlocfilehash: b6fd3682290c9752125aed7b9663c6704ade25de
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 37659262695b63a6dd6390c62c4bb7e04fdadca4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132328"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179303"
 ---
 # <a name="cor_heapinfo-structure"></a>COR_HEAPINFO Yapısı
-Çöp toplama yığını hakkında, numaralandırılabilir olup olmadığı dahil genel bilgiler sağlar.  
+Çöp toplama yığını hakkında, sayısala uygun olup olmadığı da dahil olmak üzere genel bilgiler sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 typedef struct _COR_HEAPINFO {  
-    BOOL areGCStructuresValid;   
-    DWORD pointerSize;   
+    BOOL areGCStructuresValid;
+    DWORD pointerSize;
     DWORD numHeaps;  
-    BOOL concurrent;   
-    CorDebugGCType gcType;   
+    BOOL concurrent;
+    CorDebugGCType gcType;
 } COR_HEAPINFO;  
 ```  
   
@@ -40,27 +40,27 @@ typedef struct _COR_HEAPINFO {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`areGCStructuresValid`|çöp toplama yapıları geçerliyse ve yığın numaralandırılabilir ise `true`; Aksi takdirde, `false`.|  
-|`pointerSize`|Hedef mimarideki işaretçilerin bayt cinsinden boyutu.|  
-|`numHeaps`|İşlemdeki mantıksal çöp toplama yığınlarını sayısı.|  
-|`concurrent`|eş zamanlı (arka plan) çöp toplama etkinse `TRUE`; Aksi takdirde, `FALSE`.|  
-|`gcType`|Çöp toplayıcısının bir iş istasyonunda veya sunucuda çalışıp çalışmadığını belirten, [Cordebugggctype](cordebuggctype-enumeration.md) numaralandırmasının bir üyesi.|  
+|`areGCStructuresValid`|`true`çöp toplama yapıları geçerliyse ve yığın numaralandırılabilirse; aksi `false`takdirde, .|  
+|`pointerSize`|Hedef mimarideki işaretçilerin baytboyutu.|  
+|`numHeaps`|İşlemdeki mantıksal çöp toplama yığınlarının sayısı.|  
+|`concurrent`|`TRUE`eşzamanlı (arka plan) çöp toplama etkinse; aksi `FALSE`takdirde, .|  
+|`gcType`|Çöp toplayıcısının bir iş istasyonunda mı yoksa sunucuda mı çalıştığını gösteren [CorDebugGCType](cordebuggctype-enumeration.md) numaralandırmasının bir üyesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `COR_HEAPINFO` yapısının bir örneği, [ICorDebugProcess5:: GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) yöntemi çağırarak döndürülür.  
+ Yapının `COR_HEAPINFO` bir örneği [ICorDebugProcess5::GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) yöntemini arayarak döndürülür.  
   
- Çöp toplama yığınında nesneleri numaralandırmadan önce, yığının sıralanabilir bir durumda olduğundan emin olmak için `areGCStructuresValid` alanı her zaman denetlemeniz gerekir. Daha fazla bilgi için bkz. [ICorDebugProcess5:: GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) yöntemi.  
+ Nesneleri çöp toplama yığınına kaydettirmeden önce, yığının `areGCStructuresValid` sayısal durumuna geldiğinden emin olmak için her zaman alanı denetlemeniz gerekir. Daha fazla bilgi için [ICorDebugProcess5::GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) yöntemine bakın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama Yapıları](debugging-structures.md)
-- [Hata Ayıklama](index.md)
+- [Hata ayıklama](index.md)

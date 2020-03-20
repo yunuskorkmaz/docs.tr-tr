@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: b46a04d67f59c5031b5bd195cef4cc2275e1e5e0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c24bdce64eb7e208bf3830940d7beab1ebf92e78
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793804"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179196"
 ---
 # <a name="dacpmoduledata-structure"></a>DacpModuleData Yapısı
 
@@ -34,7 +34,7 @@ Modülün çalışma zamanı bilgileri için bir aktarım arabelleği tanımlar.
 struct DacpModuleData
 {
     CLRDATA_ADDRESS Address;
-    CLRDATA_ADDRESS File; 
+    CLRDATA_ADDRESS File;
     CLRDATA_ADDRESS  ilBase;
     char payLoad[132];
 };
@@ -45,21 +45,21 @@ struct DacpModuleData
 | Üye    | Açıklama                                                             |
 | --------- | ----------------------------------------------------------------------- |
 | `Address` | Modül nesnesinin adresi.                                           |
-| `File`    | Taşınabilir çalıştırılabilir (PE) dosyasına yönelik bir işaretçi.                       |
-| `ilBase`  | Yüklenen görüntünün tabanının adresi.                                 |
-| `payLoad` | Çalışma zamanı tarafından kullanılan ek modül bilgileri için yük arabelleği. |
+| `File`    | Taşınabilir yürütülebilir (PE) dosyasına işaretçi.                       |
+| `ilBase`  | Yüklenen görüntütabanının adresi.                                 |
+| `payLoad` | Çalışma zamanı tarafından kullanılan ek modül bilgileri için bir yük arabelleği. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı çalışma zamanının içinde bulunur ve herhangi bir üst bilgi veya kitaplık dosyası aracılığıyla gösterilmez. Kullanmak için, yapıyı yukarıda belirtilen şekilde tanımlayın.
+Bu yapı çalışma zamanı içinde yaşar ve üstbilgi veya kitaplık dosyaları aracılığıyla açıklanmaz. Kullanmak için, yapıyı yukarıda belirtildiği gibi tanımlayın.
 
 ## <a name="requirements"></a>Gereksinimler
-**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** Seçim  
-**Kitaplık:** Seçim  
-**.NET Framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Üstbilgi:** Hiçbiri  
+**Kütüphane:** Hiçbiri  
+**.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama](index.md)
+- [Hata ayıklama](index.md)
 - [Hata Ayıklama Yapıları](debugging-structures.md)

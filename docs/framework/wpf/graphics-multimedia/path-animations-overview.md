@@ -8,48 +8,48 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
-ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07628d26c8222c7c01f58826a36a15e13dc31ff4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008221"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181875"
 ---
 # <a name="path-animations-overview"></a>Yol Animasyonlarına Genel Bakış
-<a name="introduction"></a> Bu konu, çıkış değerleri oluşturmak için bir geometrik yol kullanmanıza olanak sağlayan yol animasyonları tanıtır. Yol animasyonları, taşıma ve karmaşık yollar üzerindeki nesneler döndürmek için kullanışlıdır.  
+<a name="introduction"></a>Bu konu, çıktı değerleri oluşturmak için geometrik bir yol kullanmanızı sağlayan yol animasyonlarını tanıtır. Yol animasyonları, nesneleri karmaşık yollar boyunca taşımak ve döndürmek için yararlıdır.  
   
-<a name="prerequisites"></a>   
+<a name="prerequisites"></a>
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konuda anlamak için aşina olmalısınız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyonları özellikleri. Animasyon özelliklerine bir giriş için bkz [animasyona genel bakış](animation-overview.md).  
+ Bu konuyu anlamak için animasyon [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliklerine aşina olmalısınız. Animasyon özelliklerine giriş için [Animasyona Genel Bakış'a](animation-overview.md)bakın.  
   
- Kullandığınız bir <xref:System.Windows.Media.PathGeometry> bir yol animasyonu tanımlamak için nesne da aşina olmalısınız <xref:System.Windows.Media.PathGeometry> ve farklı türde <xref:System.Windows.Media.PathSegment> nesneleri. Daha fazla bilgi için [geometrisi](geometry-overview.md).  
+ Bir yol <xref:System.Windows.Media.PathGeometry> animasyonu tanımlamak için bir nesne kullandığınızdan, aynı zamanda aşina <xref:System.Windows.Media.PathGeometry> ve <xref:System.Windows.Media.PathSegment> nesnelerin farklı türleri olmalıdır. Daha fazla bilgi için [Geometriye Genel Bakış'a](geometry-overview.md)bakın.  
   
-<a name="what_is_a_path_animation"></a>   
-## <a name="what-is-a-path-animation"></a>Yol animasyonu nedir?  
- Yol animasyonu türüdür <xref:System.Windows.Media.Animation.AnimationTimeline> kullanan bir <xref:System.Windows.Media.PathGeometry> giriş olarak. Bir kaynak için ayar yerine veya özelliğe göre (From/To/By yaptığınız gibi animasyon) veya (anahtar-çerçeve animasyon için kullandığınız gibi) anahtar çerçeveler kullanarak, geometrik yol tanımlayın ve ayarlamak için kullanın `PathGeometry` yolu animasyonun özellik. Yol Animasyon ilerledikçe yolundan x, y ve açı bilgilerini okur ve çıktısını oluşturmak için bu bilgileri kullanır.  
+<a name="what_is_a_path_animation"></a>
+## <a name="what-is-a-path-animation"></a>Yol Animasyonu Nedir?  
+ Yol animasyonu, a <xref:System.Windows.Media.Animation.AnimationTimeline> <xref:System.Windows.Media.PathGeometry> girişi olarak kullanan bir türdür. Kimden, To veya By özelliği (Kimden/To/By animasyonu için yaptığınız gibi) ayarlamak veya anahtar kareleri kullanmak (anahtar kare animasyonu için `PathGeometry` kullandığınız gibi) yerine, geometrik bir yol tanımlar ve yol animasyonunun özelliğini ayarlamak için kullanırsınız. Yol animasyonu ilerledikçe, yoldaki x, y ve açı bilgilerini okur ve çıktısını oluşturmak için bu bilgileri kullanır.  
   
- Yol animasyonları çok karmaşık bir yolda bir nesne animasyon için kullanışlıdır. Bir nesnenin yol kullanmaktır taşımak için tek yönlü bir <xref:System.Windows.Media.MatrixTransform> ve <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> karmaşık bir yolda bir nesneyi dönüştürmek için. Aşağıdaki örnek bu tekniği kullanarak gösterir <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> animasyon uygulamak için nesne <xref:System.Windows.Media.MatrixTransform.Matrix%2A> özelliği bir <xref:System.Windows.Media.MatrixTransform>. <xref:System.Windows.Media.MatrixTransform> Düğmeye uygulanır ve eğik bir yolu boyunca taşımak neden olur. Çünkü <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> özelliği `true`, dikdörtgen yol tanjantını döndürür.  
+ Yol animasyonları karmaşık bir yol boyunca bir nesneyi animasyon için çok yararlıdır. Bir nesneyi bir yol boyunca hareket <xref:System.Windows.Media.MatrixTransform> ettirmenin <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> bir yolu, bir nesneyi karmaşık bir yol boyunca dönüştürmek için a ve a kullanmaktır. Aşağıdaki örnekte, bir <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> <xref:System.Windows.Media.MatrixTransform.Matrix%2A> <xref:System.Windows.Media.MatrixTransform>. özelliğianimasyon nesnesini kullanarak bu tekniği gösterir. Bir <xref:System.Windows.Media.MatrixTransform> düğmeye uygulanır ve eğri bir yol boyunca hareket etmesini neden olur. <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> Özellik ayarlandığı için, `true`dikdörtgen yolun teğet boyunca döner.  
   
  [!code-xaml[PathAnimationGallery_snippet#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/matrixanimationusingpathdoesrotatewithtangentexample.xaml#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
   
  [!code-csharp[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/CSharp/MatrixAnimationUsingPathDoesRotateWithTangentExample.cs#matrixanimationusingpathdoesrotatewithtangentwholepage)]
  [!code-vb[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/VisualBasic/MatrixAnimationUsingPathDoesRotateWithTangentExample.vb#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
   
- Kullanılan yolu sözdizimi hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] örnekte bkz [yol işaretleme söz dizimi](path-markup-syntax.md) genel bakış. Tam bir örnek için bkz. [yol animasyonu örneği](https://go.microsoft.com/fwlink/?LinkID=160028).  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Örnekte kullanılan yol sözdizimi hakkında daha fazla bilgi için [Yol İşaretleyici sözdizimine](path-markup-syntax.md) genel bakış bakın. Tam örnek için [Yol Animasyon Örneği'ne](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/PathAnimations)bakın.  
   
- Kullanarak bir özellik için bir yol animasyon uygulayabilirsiniz bir <xref:System.Windows.Media.Animation.Storyboard> içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve kod kullanarak veya <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> kodda yöntemi. Yol animasyon oluşturmak için de kullanabilirsiniz bir <xref:System.Windows.Media.Animation.AnimationClock> ve bir veya daha fazla özellikler için geçerlidir. Animasyonlara uygulama için farklı yöntemler hakkında daha fazla bilgi için bkz. [özellik Animasyon Tekniklerine Genel Bakış](property-animation-techniques-overview.md).  
+ Bir in <xref:System.Windows.Media.Animation.Storyboard> [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve kodu kullanarak veya koddaki <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> yöntemi kullanarak bir özellik için bir yol animasyonu uygulayabilirsiniz. Bir yol animasyonu oluşturmak <xref:System.Windows.Media.Animation.AnimationClock> ve bir veya daha fazla özele uygulamak için de kullanabilirsiniz. Animasyonları uygulamak için farklı yöntemler hakkında daha fazla bilgi için, [Emlak Animasyon Teknikleri Genel Bakış'a](property-animation-techniques-overview.md)bakın.  
   
-<a name="animation_types"></a>   
-## <a name="path-animation-types"></a>Yol animasyon türü  
- Özellik değerlerini animasyonlar oluşturması nedeniyle farklı özellik türleri için farklı animasyon türü vardır. Alan özelliği oynatmak bir <xref:System.Double> (gibi <xref:System.Windows.Media.TranslateTransform.X%2A> özelliği bir <xref:System.Windows.Media.TranslateTransform>), üreten bir animasyon kullandığınız <xref:System.Double> değerleri. Alan özelliği oynatmak bir <xref:System.Windows.Point>, üreten bir animasyon kullandığınız <xref:System.Windows.Point> değerleri ve benzeri.  
+<a name="animation_types"></a>
+## <a name="path-animation-types"></a>Yol Animasyon Türleri  
+ Animasyonlar özellik değerleri oluşturduğundan, farklı özellik türleri için farklı animasyon türleri vardır. Bir <xref:System.Double> özelliği <xref:System.Windows.Media.TranslateTransform.X%2A> (örneğin, bir <xref:System.Windows.Media.TranslateTransform>özelliği) alan bir özelliği canlandırmak için, <xref:System.Double> değerler üreten bir animasyon kullanırsınız. Bir özelliği canlandırmak için , <xref:System.Windows.Point>değerler üreten <xref:System.Windows.Point> bir animasyon kullanırsınız ve böyle devam edin.  
   
- Yol animasyon sınıfları ait <xref:System.Windows.Media.Animation> ad alanı ve şu adlandırma kuralını kullanır:  
+ Yol animasyon sınıfları <xref:System.Windows.Media.Animation> ad alanına aittir ve aşağıdaki adlandırma kuralını kullanır:  
   
- *\<türü >* `AnimationUsingPath`  
+ * \<Tip>*`AnimationUsingPath`  
   
- Burada  *\<türü >* sınıfı canlandırır değer türüdür.  
+ * \<Tür>* sınıf animasyonları değer türüdür.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aşağıdaki yol animasyon sınıfları sağlar.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]aşağıdaki yol animasyon sınıfları sağlar.  
   
 |Özellik türü|Karşılık gelen yol animasyon sınıfı|Örnek|  
 |-------------------|----------------------------------------|-------------|  
@@ -57,42 +57,42 @@ ms.locfileid: "62008221"
 |<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (Matris Animasyonu)](how-to-animate-an-object-along-a-path-matrix-animation.md)|  
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (İşaret Etme Animasyonu)](how-to-animate-an-object-along-a-path-point-animation.md)|  
   
- A <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> oluşturur <xref:System.Windows.Media.Matrix> değerlerini kendi <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.PathGeometry%2A>. İle kullanıldığında bir <xref:System.Windows.Media.MatrixTransform>, <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> bir nesnenin yol taşıyabilirsiniz. Ayarlarsanız <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> özelliği <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> için `true`, ayrıca yolun nesne döndürür.  
+ A, <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> <xref:System.Windows.Media.Matrix> kendi <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.PathGeometry%2A>değerlerinden değerler üretir. Bir <xref:System.Windows.Media.MatrixTransform>, a <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> ile kullanıldığında bir nesneyi bir yol boyunca hareket ettirebilir. Özelliğini <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> `true`ayarlarsanız, nesneyi yolun eğrileri boyunca döndürür.  
   
- A <xref:System.Windows.Media.Animation.PointAnimationUsingPath> oluşturur <xref:System.Windows.Point> gelen x ve y-koordinatlarını değerleri kendi <xref:System.Windows.Media.Animation.PointAnimationUsingPath.PathGeometry%2A>. Kullanarak bir <xref:System.Windows.Media.Animation.PointAnimationUsingPath> alan özelliği oynatmak <xref:System.Windows.Point> değerleri, bir nesnenin yol taşıyabilirsiniz. A <xref:System.Windows.Media.Animation.PointAnimationUsingPath> nesne döndüremez.  
+ A, <xref:System.Windows.Media.Animation.PointAnimationUsingPath> <xref:System.Windows.Point> x- <xref:System.Windows.Media.Animation.PointAnimationUsingPath.PathGeometry%2A>ve y-koordinatlarından değerler üretir. Değerleri alan <xref:System.Windows.Media.Animation.PointAnimationUsingPath> <xref:System.Windows.Point> bir özelliği canlandırmak için a kullanarak, bir nesneyi bir yol boyunca taşıyabilirsiniz. A <xref:System.Windows.Media.Animation.PointAnimationUsingPath> nesneleri döndüremez.  
   
- A <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> oluşturur <xref:System.Double> değerlerini kendi <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath.PathGeometry%2A>. Ayarlayarak <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath.Source%2A> belirtebileceğiniz özelliği olup olmadığını <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> çıktı olarak x koordinatını, y koordinatını ya da yolun açısını kullanır. Kullanabileceğiniz bir <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> nesneyi döndürme veya x veya y ekseni taşımak için.  
+ A, <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> <xref:System.Double> kendi <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath.PathGeometry%2A>değerlerinden değerler üretir. <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath.Source%2A> Özelliği ayarlayarak, x-koordinatını, y-koordinatını veya çıkış olarak yolun açısını <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> kullanıp kullanmadığını belirtebilirsiniz. A'yı <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> bir nesneyi döndürmek veya x ekseni veya y ekseni boyunca taşımak için kullanabilirsiniz.  
   
-<a name="pathanimationinput"></a>   
-## <a name="path-animation-input"></a>Yol animasyonu giriş  
- Her yol animasyon sınıfı sağlar bir <xref:System.Windows.Media.PathGeometry> özelliği, giriş belirtmek için. Yol animasyonu kullanan <xref:System.Windows.Media.PathGeometry> çıkış değerleri oluşturmak için. <xref:System.Windows.Media.PathGeometry> Sınıfı yay, eğriler ve satırlardan oluşan birden çok karmaşık şekiller açıklamanıza olanak sağlar.  
+<a name="pathanimationinput"></a>
+## <a name="path-animation-input"></a>Yol Animasyon Girişi  
+ Her yol animasyon <xref:System.Windows.Media.PathGeometry> sınıfı, girişini belirtmek için bir özellik sağlar. Yol animasyonu, <xref:System.Windows.Media.PathGeometry> çıktı değerlerini oluşturmak için kullanır. Sınıf, <xref:System.Windows.Media.PathGeometry> yaylar, eğriler ve çizgilerden oluşan birden çok karmaşık figürü açıklamanızı sağlar.  
   
- Temelini bir <xref:System.Windows.Media.PathGeometry> koleksiyonudur <xref:System.Windows.Media.PathFigure> nesneleri; bu nesnelerin her şekil merkezinde açıkladığı için bu şekilde adlandırılmış <xref:System.Windows.Media.PathGeometry>. Her <xref:System.Windows.Media.PathFigure> bir veya daha fazla oluşur <xref:System.Windows.Media.PathSegment> nesneleri, her biri bir parçası şekilde açıklar.  
+ Bir <xref:System.Windows.Media.PathGeometry> <xref:System.Windows.Media.PathFigure> nesnelerin kalbinde bir nesne koleksiyonudur; bu nesneler, her şekil 'de <xref:System.Windows.Media.PathGeometry>ayrı bir şekil açıkladığı için bu nesnelere bu şekilde adlandırılır. Her <xref:System.Windows.Media.PathFigure> biri, her <xref:System.Windows.Media.PathSegment> biri figürün bir kesimini açıklayan bir veya daha fazla nesneden oluşur.  
   
- Parçaların birçok türü vardır.  
+ Birçok segment türü vardır.  
   
-|Segment türü|Açıklama|  
+|Segment Türü|Açıklama|  
 |------------------|-----------------|  
-|<xref:System.Windows.Media.ArcSegment>|Elips yay iki nokta arasındaki oluşturur.|  
-|<xref:System.Windows.Media.BezierSegment>|Üçüncü dereceden Bezier eğrisi iki nokta arasındaki oluşturur.|  
-|<xref:System.Windows.Media.LineSegment>|İki nokta arasındaki bir satır oluşturur.|  
-|<xref:System.Windows.Media.PolyBezierSegment>|Üçüncü derece Bezier eğrileri bir dizi oluşturur.|  
-|<xref:System.Windows.Media.PolyLineSegment>|Satırları bir dizi oluşturur.|  
-|<xref:System.Windows.Media.PolyQuadraticBezierSegment>|İkinci derece Bezier eğrileri bir dizi oluşturur.|  
-|<xref:System.Windows.Media.QuadraticBezierSegment>|İkinci dereceden Bezier eğrisi oluşturur.|  
+|<xref:System.Windows.Media.ArcSegment>|İki nokta arasında eliptik bir yay oluşturur.|  
+|<xref:System.Windows.Media.BezierSegment>|İki nokta arasında kübik Bezier eğrisi oluşturur.|  
+|<xref:System.Windows.Media.LineSegment>|İki nokta arasında bir çizgi oluşturur.|  
+|<xref:System.Windows.Media.PolyBezierSegment>|Bir dizi kübik Bezier eğrisi oluşturur.|  
+|<xref:System.Windows.Media.PolyLineSegment>|Bir dizi satır oluşturur.|  
+|<xref:System.Windows.Media.PolyQuadraticBezierSegment>|Bir dizi kuadratik Bezier eğrisi oluşturur.|  
+|<xref:System.Windows.Media.QuadraticBezierSegment>|Bir kuadratik Bezier eğrisi oluşturur.|  
   
- Segmentte bir <xref:System.Windows.Media.PathFigure> segmentin son noktası sonraki kesimin başlangıç noktası olarak kullanan tek bir geometrik şekil birleştirilir. <xref:System.Windows.Media.PathFigure.StartPoint%2A> Özelliği bir <xref:System.Windows.Media.PathFigure> içinden ilk segment çizilmez noktasını belirtir. Önceki kesime bitiş noktasında izleyen her bir kesim başlatır. Örneğin, bir dikey çizgi `10,50` için `10,150` ayarlayarak tanımlanabilir <xref:System.Windows.Media.PathFigure.StartPoint%2A> özelliğini `10,50` ve oluşturma bir <xref:System.Windows.Media.LineSegment> ile bir <xref:System.Windows.Media.LineSegment.Point%2A> özelliğini `10,150`.  
+ A'daki <xref:System.Windows.Media.PathFigure> segmentler, bir sonraki parçanın başlangıç noktası olarak bir kesimin bitiş noktasını kullanan tek bir geometrik şekle ayrılır. Bir <xref:System.Windows.Media.PathFigure.StartPoint%2A> <xref:System.Windows.Media.PathFigure> özelliği, ilk kesimin çizildiği noktayı belirtir. Sonraki her segment önceki bölümün bitiş noktasında başlar. Örneğin, dikey bir `10,50` çizgi `10,150` özelliği <xref:System.Windows.Media.PathFigure.StartPoint%2A> ayarlayarak `10,50` ve <xref:System.Windows.Media.LineSegment> bir <xref:System.Windows.Media.LineSegment.Point%2A> özellik ayarı ile `10,150`bir tanımlanabilir.  
   
- Hakkında daha fazla bilgi için <xref:System.Windows.Media.PathGeometry> nesneleri bkz [geometrisi](geometry-overview.md).  
+ Nesneler hakkında <xref:System.Windows.Media.PathGeometry> daha fazla bilgi için [Geometriye Genel Bakış'a](geometry-overview.md)bakın.  
   
- İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], ayarlamak için özel bir kısaltılmış sözdizimi kullanabilirsiniz <xref:System.Windows.Media.PathGeometry.Figures%2A> özelliği bir <xref:System.Windows.Media.PathGeometry>. Daha fazla bilgi için [yol işaretleme söz dizimi](path-markup-syntax.md) genel bakış.  
+ 'de, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.Media.PathGeometry.Figures%2A> bir <xref:System.Windows.Media.PathGeometry>. Daha fazla bilgi için [bkz.](path-markup-syntax.md)  
   
- Kullanılan yolu sözdizimi hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] örnekte bkz [yol işaretleme söz dizimi](path-markup-syntax.md) genel bakış.  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Örnekte kullanılan yol sözdizimi hakkında daha fazla bilgi için [Yol İşaretleyici sözdizimine](path-markup-syntax.md) genel bakış bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yol animasyonu örneği](https://go.microsoft.com/fwlink/?LinkID=160028)
-- [Yol İşaretleme Söz Dizimi](path-markup-syntax.md)
+- [Yol Animasyon Örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/PathAnimations)
+- [Yol Biçimlendirme Sözdizimi](path-markup-syntax.md)
 - [Yol Animasyonu ile İlgili Nasıl Yapılır Konuları](path-animation-how-to-topics.md)
 - [Animasyona Genel bakış](animation-overview.md)
 - [Özellik Animasyon Tekniklerine Genel Bakış](property-animation-techniques-overview.md)

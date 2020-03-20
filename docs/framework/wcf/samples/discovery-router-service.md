@@ -2,39 +2,39 @@
 title: Keşif Yönlendirme Hizmeti
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: 09309b23d2a3cc672811c2f617e6fb81a2b4e021
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 149dd69cdd1972465f4b7cb48ab657492d3f21d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712282"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183722"
 ---
 # <a name="discovery-router-service"></a>Keşif Yönlendirme Hizmeti
-Bu örnek, bulma iletilerinin başka bir uç noktaya nasıl iletileceğini gösterir.  
+Bu örnek, keşif iletilerinin başka bir uç noktaya nasıl iletilenin nasıl gösterildiğini gösterir.  
   
-## <a name="demonstrates"></a>Gösterir  
- Bulma yönlendirmesi  
+## <a name="demonstrates"></a>Gösteriler  
+ Keşif Yönlendirme  
   
 ## <a name="discussion"></a>Tartışma  
- Bulma yönlendirmesi, bir istemcinin proxy kullanarak hizmet arayan ve proxy 'nin böyle bir hizmetin farkında olduğu, ancak başka bir proxy 'nin bildiği bir senaryoda yararlıdır. Bu proxy, bulma paketini bu istemciden ikinci proxy 'ye iletebilir. İkinci proxy hizmeti arayabilir ve özgün istemciye yanıtları döndürebilir.  
+ Bulma yönlendirme, istemcinin proxy kullanarak bir hizmet aradığı ve proxy'nin böyle bir hizmetten habersiz olduğu, ancak başka bir proxy bildiği bir senaryoda yararlıdır. Bu proxy, bulma paketini bu istemciden ikinci proxy'ye iletebilir. İkinci proxy hizmeti arar ve yanıtları özgün istemciye döndürebilir.  
   
- Bu örnekte, bir istemci bulma yönlendirme bileşenine bir ileti gönderir. Bu ileti, bulma yönlendiricisinde belirli bir uç noktaya gönderilir. Yönlendirici daha sonra iletiyi bir UDP çok noktaya yayın uç noktasına iletir. Araştırma iletisi çok noktaya yayın uç noktasına gider ve bir UDP çok noktaya yayın adresini dinleyen bir hizmet, bu bulma yönlendiricisine yanıt verir. Bulma yönlendiricisi yanıtları toplar ve istemciye geri gönderir.  
+ Bu örnekte, istemci bir bulma yönlendirme bileşenine bir ileti gönderir. Bu ileti, bulma yönlendiricisindeki belirli bir bitiş noktasına gönderilir. Yönlendirici daha sonra iletiyi UDP çok noktaya yayın ucuna ileter. Sonda iletisi çok noktaya yayın ucuna gider ve UDP çok noktaya yayın adresini dinleyen bir hizmet bu keşif yönlendiricisine yanıt verir. Bulma yönlendiricisi yanıtları toplar ve istemciye geri gönderir.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
   
-1. Örneği oluşturun.  
+1. Örneği derleyin.  
   
-2. DiscoveryRouter yürütülebilir dosyasını çalıştırın.  
+2. DiscoveryRouter çalıştırılabilir çalıştırın.  
   
-3. Hizmet yürütülebilir dosyasını yapı dizininden çalıştırın.  
+3. Yapı dizininden çalıştırılabilen hizmeti çalıştırın.  
   
-4. İstemci yürütülebilir dosyasını çalıştırın. İstemcinin hizmeti konumlandırır olduğunu unutmayın.  
+4. İstemciyi çalıştırılabilir çalıştırın. İstemcinin hizmeti bulup bulmadığını unutmayın.  
   
 > [!IMPORTANT]
-> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
->   
+> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
->   
+>
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryRouter`

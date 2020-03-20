@@ -2,40 +2,40 @@
 title: Pick Etkinliği
 ms.date: 03/30/2017
 ms.assetid: b3e49b7f-0285-4720-8c09-11ae18f0d53e
-ms.openlocfilehash: 51caf020042212b570ae915ead00a4225df2c588
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 672de5fd3df5e8dde6c54118503bf2a11353b116
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283176"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182901"
 ---
 # <a name="pick-activity"></a>Pick Etkinliği
-<xref:System.Activities.Statements.Pick> etkinliği, karşılık gelen işleyicileri izleyen bir olay tetikleyicisi kümesinin modelleme işlemini basitleştirir.  <xref:System.Activities.Statements.Pick> etkinliği, her <xref:System.Activities.Statements.PickBranch> <xref:System.Activities.Statements.PickBranch.Trigger%2A> etkinliği ve <xref:System.Activities.Statements.PickBranch.Action%2A> etkinliği arasında bir eşleştirme olduğu <xref:System.Activities.Statements.PickBranch> etkinliklerin bir koleksiyonunu içerir.  Yürütme sırasında, tüm dallar için Tetikleyiciler paralel olarak yürütülür.  Bir tetikleyici tamamlandığında, ilgili eylem yürütülür ve diğer tüm tetikleyiciler iptal edilir.  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]<xref:System.Activities.Statements.Pick> etkinliğinin davranışı .NET Framework 3,5 <xref:System.Workflow.Activities.ListenActivity> etkinliğine benzerdir.  
+Etkinlik, <xref:System.Activities.Statements.Pick> ilgili işleyicileri tarafından izlenen olay tetikleyicileri kümesinin modelliğini kolaylaştırır.  Bir <xref:System.Activities.Statements.Pick> etkinlik, her <xref:System.Activities.Statements.PickBranch> <xref:System.Activities.Statements.PickBranch> bir <xref:System.Activities.Statements.PickBranch.Trigger%2A> etkinlik ve bir <xref:System.Activities.Statements.PickBranch.Action%2A> etkinlik arasında bir eşleştirme olduğu bir etkinlik koleksiyonu içerir.  Yürütme sırasında, tüm dalların tetikleyicileri paralel olarak yürütülür.  Bir tetikleyici tamamlandığında, karşılık gelen eylemi yürütülür ve diğer tüm tetikleyiciler iptal edilir.  Etkinliğin davranışı [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] .NET Framework 3.5 <xref:System.Workflow.Activities.ListenActivity> etkinliğine benzer. <xref:System.Activities.Statements.Pick>  
   
- [Çekme etkinliği](./samples/using-the-pick-activity.md) SDK 'sını kullanan aşağıdaki ekran görüntüsünde, iki dala sahip bir çekme etkinliği gösterilmektedir.  Bir dalın, komut satırından girişi okuyan özel bir etkinlik olan **Read Input**adlı bir tetikleyicisi vardır. İkinci dalın <xref:System.Activities.Statements.Delay> etkinlik tetikleyicisi vardır. **Girişi oku** etkinliği <xref:System.Activities.Statements.Delay> etkinlik bitmeden önce verileri alırsa, <xref:System.Activities.Statements.Delay> gecikme iptal edilir ve konsola bir selamlama yazılır.  Aksi takdirde, **okundu girişi** etkinliği ayrılan sürede veri almazsa, iptal edilir ve konsola bir zaman aşımı iletisi yazılır.  Bu, herhangi bir eyleme zaman aşımı eklemek için kullanılan yaygın bir modeldir.  
+ [Seçme Etkinliği](./samples/using-the-pick-activity.md) SDK örneğinden aşağıdaki ekran görüntüsü, iki dallı bir Çekme etkinliği gösterir.  Bir dalda **Okuma girişi**adlı bir tetikleyici vardır, komut satırından girişi okuyan özel bir etkinlik. İkinci dalda <xref:System.Activities.Statements.Delay> bir etkinlik tetikleyicisi vardır. Okundu **girişi** etkinliği etkinlik bitmeden <xref:System.Activities.Statements.Delay> önce <xref:System.Activities.Statements.Delay> veri alırsa, Gecikme iptal edilir ve konsola bir karşılama yazılır.  Aksi takdirde, **Read girişi** etkinliği ayrılan süre içinde veri almazsa, iptal edilir ve konsola bir zaman ekme iletisi yazılır.  Bu, herhangi bir eyleme zaman aşındırmak için kullanılan yaygın bir desendir.  
   
  ![Pick Etkinliği](./media/pick-activity/pick-activity-two-branches.jpg)  
   
-## <a name="best-practices"></a>Önerilen uygulamalar  
- Seçme kullanılırken, yürüten dal, tetikleyicisi önce tamamlanan daldır.  Kavramsal olarak, tüm tetikleyiciler paralel olarak yürütülür ve bir tetikleyici, başka bir tetikleyicinin tamamlanmasına kadar iptal edilmeden önce mantığının çoğunluğunu yürütülemeyebilir.  Bu göz önünde bulundurularak, çekme etkinliğini kullanırken izlenecek genel bir kılavuz, tetikleyiciyi tek bir olayı temsil edecek şekilde değerlendirmek ve buna mümkün olduğunca az mantık koymak için kullanılır.  İdeal olarak, tetikleyici yalnızca bir olay almak için yeterli mantık içermelidir ve bu olayın tüm işlemleri dalın eylemine gitmelidir.  Bu yöntem, tetikleyicilerin yürütülmesi arasındaki çakışma miktarını en aza indirir.  Örneğin, her tetikleyicinin bir <xref:System.ServiceModel.Activities.Receive> etkinlik ve ardından ek mantık içerdiği iki tetikleyiciyle <xref:System.Activities.Statements.Pick> düşünün.  Ek mantık boş bir nokta tanımışsa, her iki <xref:System.ServiceModel.Activities.Receive> etkinliğin de başarıyla tamamması olasılığı vardır.  Bir tetikleyici tamamen tamamlanır, diğeri kısmen tamamlanır.  Bazı senaryolarda bir ileti kabul edilir ve sonra işlenmesi kısmen tamamlankabul edilemez.  Bu nedenle, <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply>gibi WF yerleşik mesajlaşma etkinliklerini kullanırken <xref:System.ServiceModel.Activities.Receive> yaygın olarak tetikleyicide kullanılırken, <xref:System.ServiceModel.Activities.SendReply> ve diğer mantığın mümkün olan her durumda yerine konacak olması gerekir.  
+## <a name="best-practices"></a>En iyi uygulamalar  
+ Çekme'yi kullanırken, çalıştıran dal, tetikleyicisi ilk tamamlanan daldır.  Kavramsal olarak, tüm tetikleyiciler paralel olarak yürütülür ve bir tetikleyici, başka bir tetikleyicinin tamamlanmasıyla iptal edilmeden önce mantığının büyük bir kısmını yürütülmüş olabilir.  Bunu göz önünde bulundurarak, Çekme etkinliğini kullanırken izninizlen genel bir kılavuz, tetikleyiciyi tek bir olayı temsil ediyor gibi ele almak ve mümkün olduğunca az mantık koymaktır.  İdeal olarak, tetikleyici bir olay almak için yeterli mantık içermelidir ve bu olayın tüm işleme dalı eyleme gitmeli.  Bu yöntem, tetikleyicilerin yürütülmesi arasındaki çakışma miktarını en aza indirir.  Örneğin, her <xref:System.Activities.Statements.Pick> tetikleyiciek mantık ardından bir <xref:System.ServiceModel.Activities.Receive> etkinlik içeren iki tetikleyici ile a düşünün.  Ek mantık boşta bir nokta tanıtırsa, <xref:System.ServiceModel.Activities.Receive> her iki faaliyetin de başarıyla tamamlanması olasılığı vardır.  Bir tetikleyici tamamen tamamlanacak, diğeri ise kısmen tamamlanacak.  Bazı senaryolarda, bir iletiyi kabul etmek ve sonra kısmen işlemeyi tamamlamak kabul edilemez.  Bu nedenle, WF dahili mesajlaşma etkinlikleri <xref:System.ServiceModel.Activities.Receive> <xref:System.ServiceModel.Activities.SendReply>kullanırken <xref:System.ServiceModel.Activities.Receive> ve , genellikle tetikleyici <xref:System.ServiceModel.Activities.SendReply> kullanılır ken, ve diğer mantık mümkün olduğunca eylem koymak gerekir.  
   
-## <a name="using-the-pick-activity-in-the-designer"></a>Tasarımcıda çekme etkinliğini kullanma  
- Tasarımcıda seçimi kullanmak için araç kutusunda **seçme** ve **PickBranch dalını** bulun.  **Seçimi** tuval üzerine sürükleyip bırakın.  Varsayılan olarak, tasarımcıda yeni bir **çekme** etkinliği iki dal içerecektir.  Ek dallar eklemek için **PickBranch** etkinliğini sürükleyin ve var olan dalların yanına bırakın. Etkinlikler, **çekme** etkinliğine herhangi bir **PickBranch**'In Action alanı **veya** **eylem** alanı üzerinde bırakılabilir.  
+## <a name="using-the-pick-activity-in-the-designer"></a>Tasarımcıda Çekme etkinliğini kullanma  
+ Tasarımcıda Seç'i kullanmak için araç kutusunda **Pick** ve **PickBranch'ı** bulun.  **Sürükle** ve tuval üzerine Pick bırakın.  Varsayılan olarak, tasarımcıda yeni bir **Çekme** Etkinliği iki dal içerir.  Ek dallar eklemek için **PickBranch** etkinliğini sürükleyin ve varolan dalların yanına bırakın. Etkinlikler, **Tetikleyici** alanına veya herhangi bir **PickBranch'ın** **Eylem** alanına **Çekme** Etkinliği'ne bırakılabilir.  
   
-## <a name="using-the-pick-activity-in-code"></a>Koddaki çekme etkinliğini kullanma  
- <xref:System.Activities.Statements.Pick> etkinliği, <xref:System.Activities.Statements.Pick.Branches%2A> koleksiyonu <xref:System.Activities.Statements.PickBranch> etkinlikleriyle doldurularak kullanılır. <xref:System.Activities.Statements.PickBranch> etkinliklerinin her biri <xref:System.Activities.Activity>türünde bir <xref:System.Activities.Statements.PickBranch.Trigger%2A> özelliğine sahiptir. Belirtilen etkinlik yürütmeyi tamamladığında <xref:System.Activities.Statements.PickBranch.Action%2A> yürütülür.  
+## <a name="using-the-pick-activity-in-code"></a>Kodda Çekme Etkinliği'ni kullanma  
+ Etkinlik, <xref:System.Activities.Statements.Pick> <xref:System.Activities.Statements.Pick.Branches%2A> koleksiyonunu etkinliklerle <xref:System.Activities.Statements.PickBranch> doldurarak kullanılır. Etkinliklerin <xref:System.Activities.Statements.PickBranch> her <xref:System.Activities.Statements.PickBranch.Trigger%2A> biri bir <xref:System.Activities.Activity>tür özelliğine sahiptir. Belirtilen etkinlik yürütmeyi tamamladığında, yürütülür. <xref:System.Activities.Statements.PickBranch.Action%2A>  
   
- Aşağıdaki kod örneğinde, konsolundan bir satırı okuyan bir etkinlik için zaman aşımı uygulamak üzere <xref:System.Activities.Statements.Pick> etkinliğinin nasıl kullanılacağı gösterilmektedir.  
+ Aşağıdaki kod örneği, konsoldan <xref:System.Activities.Statements.Pick> bir satır okuyan bir etkinlik için zaman arasını uygulamak için bir etkinliğin nasıl kullanılacağını gösterir.  
   
 ```csharp  
 Sequence body = new Sequence()  
 {  
     Variables = { name },  
-    Activities =   
+    Activities =
    {  
        new System.Activities.Statements.Pick  
         {  
-           Branches =   
+           Branches =
            {  
                new PickBranch  
                {  
@@ -44,10 +44,10 @@ Sequence body = new Sequence()
                       Result = name,  
                       BookmarkName = "name"  
                    },  
-                   Action = new WriteLine   
-                   {   
-                       Text = ExpressionServices.Convert<string>(ctx => "Hello " +   
-                           name.Get(ctx))   
+                   Action = new WriteLine
+                   {
+                       Text = ExpressionServices.Convert<string>(ctx => "Hello " +
+                           name.Get(ctx))
                    }  
                },  
                new PickBranch  

@@ -1,5 +1,5 @@
 ---
-title: Güvenlik stratejisi ve Mühendisliği
+title: Güvenlik stratejisi ve mühendisliği
 ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WPF], testing techniques
@@ -10,89 +10,89 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 57ee0c8242c0bca1b2c76e7751ed25f6a889c264
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 970627c5de4964ebd5331c488152022fda55bd74
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741843"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174569"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF Güvenlik Stratejisi - Güvenlik Mühendisliği
-Güvenilir bilgi Işlem, güvenli kod üretimi sağlamaya yönelik bir Microsoft girişimidir. Güvenilir bilgi Işlem girişiminin önemli bir öğesi Microsoft Security Development Lifecycle (SDL). SDL, güvenli kod teslimini kolaylaştırmak için standart MÜHENDİSLİK süreçleriyle birlikte kullanılan bir mühendislik uygulamasıdır. SDL, en iyi yöntemleri formalization, measurability ve ek yapıyla birleştiren on aşamadan oluşur; örneğin:  
+Güvenilir Bilgi İşlem, güvenli kod üretimini sağlamak için bir Microsoft girişimidir. Güvenilir Bilgi İşlem girişiminin önemli bir unsuru Microsoft Güvenlik Geliştirme Yaşam Döngüsü 'dür (SDL). SDL, güvenli kodun teslimini kolaylaştırmak için standart mühendislik süreçleri ile birlikte kullanılan bir mühendislik uygulamasıdır. SDL, en iyi uygulamaları formalizasyon, ölçülebilirlik ve ek yapı yla birleştiren on aşamadan oluşur:  
   
-- Güvenlik tasarımı Analizi  
+- Güvenlik tasarım analizi  
   
-- Araç tabanlı kalite denetimleri  
+- Takım tabanlı kalite kontrolleri  
   
 - Sızma testi  
   
 - Son güvenlik incelemesi  
   
-- Yayın sonrası ürün güvenlik yönetimi  
+- Yayın sonrası ürün güvenliği yönetimi  
   
-## <a name="wpf-specifics"></a>WPF özellikleri  
- [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] mühendislik ekibinin her ikisi de, aşağıdaki anahtar yönlerini içeren, SDL 'yi uygular ve genişletir:  
+## <a name="wpf-specifics"></a>WPF Özellikleri  
+ Mühendislik [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] ekibi, aşağıdaki temel yönleri içeren SDL'yi hem uygular hem de genişletir:  
   
- [Tehdit modelleme](#threat_modeling)  
+ [Tehdit Modelleme](#threat_modeling)  
   
- [Güvenlik analizi ve Düzen araçları](#tools)  
+ [Güvenlik Analizi ve Düzenleme Araçları](#tools)  
   
- [Test teknikleri](#techniques)  
+ [Test Teknikleri](#techniques)  
   
- [Kritik kod yönetimi](#critical_code)  
+ [Kritik Kod Yönetimi](#critical_code)  
   
-<a name="threat_modeling"></a>   
-### <a name="threat-modeling"></a>Tehdit modelleme  
- Tehdit modellemesi, SDL 'nin temel bir bileşenidir ve olası güvenlik açıklarını tespit etmek üzere bir sistemin profilini almak için kullanılır. Güvenlik açıkları tanımlandıktan sonra, tehdit modelleme uygun azaltmaları da sağlar.  
+<a name="threat_modeling"></a>
+### <a name="threat-modeling"></a>Tehdit Modelleme  
+ Tehdit modelleme SDL'nin temel bileşenidir ve olası güvenlik açıklarını belirlemek için bir sistemin profilini çıkarmak için kullanılır. Güvenlik açıkları tanımlandıktan sonra, tehdit modellemesi de uygun azaltıcı etkenlerin yerinde olmasını sağlar.  
   
- Tehdit modellemesi, yüksek düzeyde bir market mağaza kullanarak bir örnek olarak aşağıdaki temel adımları içerir:  
+ Yüksek düzeyde, tehdit modelleme örnek olarak bir bakkal kullanarak aşağıdaki önemli adımları içerir:  
   
-1. **Varlıkları tanımlama**. Market mağazalarının varlıkları çalışanlar, güvenli, nakit kayıtları ve envanter içerebilir.  
+1. **Varlıkların Tanımlanması**. Bir marketin varlıkları arasında çalışanlar, kasa, yazar kasalar ve envanter bulunabilir.  
   
-2. **Giriş noktaları numaralandırılıyor**. Market 'in giriş noktaları, ön ve arka kapılar, pencereler, yükleme rampası ve AIR koşullandırma birimlerini içerebilir.  
+2. **Giriş Noktalarını Puanlama**. Bir marketin giriş noktaları ön ve arka kapılar, pencereler, yükleme rıhtımı ve klima ünitelerini içerebilir.  
   
-3. **Giriş noktalarını kullanarak varlıklara karşı saldırıları araştırma**. Olası bir saldırı, bir *Market giriş noktası* aracılığıyla Market 'in *güvenli* varlığını hedefleyebilir; Havalandırma birimi, güvenli bir şekilde ve mağaza 'dan çekilme izni vermek için unvidalı olabilir.  
+3. **Giriş Noktalarını Kullanarak Varlıklara Yönelik Saldırıları Araştırma**. Olası bir saldırı *klima* giriş noktasından bir marketin *güvenli* varlığını hedef alabilir; klima ünitesi, kasanın içinden ve mağazadan çekilmesine izin verecek şekilde sökülebilir.  
   
- Tehdit modelleme [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] tamamında uygulanır ve şunları içerir:  
+ Tehdit modelleme boyunca [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] uygulanır ve aşağıdakileri içerir:  
   
-- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] ayrıştırıcısı dosyaları okur, metni ilgili nesne modeli sınıflarıyla eşleştirir ve gerçek kodu oluşturur.  
+- Araleyicinin [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] dosyaları nasıl okuduğu, metni karşılık gelen nesne modeli sınıflarına nasıl eşler ve gerçek kodu nasıl oluşturur.  
   
-- Pencere tanıtıcısının (hWnd) nasıl oluşturulduğu, ileti gönderdiği ve bir pencerenin içeriğini işlemek için kullanılan.  
+- Nasıl bir pencere tutamacı (hWnd) oluşturulur, iletigönderir ve bir pencerenin içeriğini işlemek için kullanılır.  
   
-- Veri bağlama, kaynakları nasıl edinir ve sistemle etkileşime girer.  
+- Veri bağlamanın kaynakları nasıl elde eder ve sistemle etkileşime girilir.  
   
- Bu tehdit modelleri, geliştirme sürecinde güvenlik tasarımı gereksinimlerini ve tehdit azaltmalarını belirlemek için önemlidir.  
+ Bu tehdit modelleri, geliştirme sürecinde güvenlik tasarım gereksinimlerini ve tehdit azaltımlarını belirlemek için önemlidir.  
   
-<a name="tools"></a>   
-### <a name="source-analysis-and-editing-tools"></a>Kaynak çözümleme ve Düzen araçları  
- [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] ekibi, SDL 'nin el ile güvenlik kodu İnceleme öğelerine ek olarak, güvenlik açıklarını azaltmak için kaynak analizine ve ilişkili düzenlemelere yönelik birkaç araç kullanır. Çok çeşitli kaynak araçları kullanılır ve şunları içerir:  
+<a name="tools"></a>
+### <a name="source-analysis-and-editing-tools"></a>Kaynak Analizi ve Düzenleme Araçları  
+ [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] SDL'nin el ile güvenlik kodu gözden geçirme öğelerine ek olarak, takım güvenlik açıklarını azaltmak için kaynak çözümlemesi ve ilişkili ayarlamalar için çeşitli araçlar kullanır. Çok çeşitli kaynak araçları kullanılır ve aşağıdakileri içerir:  
   
-- **FxCop**: Yönetilen koddaki, devralma kurallarından, yönetilmeyen kod ile güvenli bir şekilde birlikte çalışma ile kod erişimi güvenlik kullanımı arasındaki yaygın güvenlik sorunlarını bulur. Bkz. [FxCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
+- **FXCop**: Devralma kurallarından kod erişim güvenliği kullanımına ve yönetilmeyen kodla güvenli bir şekilde nasıl birlikte çalışılabilene kadar yönetilen kodda sık karşılaşılan güvenlik sorunlarını bulur. Bkz. [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
   
-- **Önek/PREfast**: arabellek aşımları, biçim dizesi sorunları ve hata denetimi gibi yönetilmeyen koddaki güvenlik açıklarını ve genel güvenlik sorunlarını bulur.  
+- **Önek/Prefast**: Arabellek taşmaları, biçim dize sorunları ve hata denetimi gibi yönetilmeyen kodlarda güvenlik açıklarını ve yaygın güvenlik sorunlarını bulur.  
   
-- **Yasaklanmış API 'ler**: `strcpy`gibi güvenlik sorunlarına neden olmak üzere iyi bilinen işlevlerin yanlışlıkla kullanımını belirlemek için kaynak kodu arar. Tanımlandıktan sonra, bu işlevler daha güvenli olan alternatifler ile değiştirilmiştir.  
+- **Yasaklı API'ler**: Güvenlik sorunlarına neden olduğu bilinen işlevlerin yanlışlıkla kullanımını belirlemek `strcpy`için kaynak kodu arar. Tanımlandıktan sonra, bu işlevler daha güvenli alternatiflerle değiştirilir.  
   
-<a name="techniques"></a>   
-### <a name="testing-techniques"></a>Test teknikleri  
- [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] aşağıdakileri içeren çeşitli güvenlik testi tekniklerini kullanır:  
+<a name="techniques"></a>
+### <a name="testing-techniques"></a>Test Teknikleri  
+ [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]çeşitli güvenlik sınama teknikleri kullanır:  
   
-- **Beyaz kutu testi**: test ediciler kaynak kodunu görüntüler ve ardından Exploit testlerini oluşturur.
+- **Whitebox Testi**: Test edenler kaynak kodunu görüntüleyin ve ardından yararlanma testleri oluşturur.
   
-- **Kara kutu testi**: test edenler, API ve özellikleri inceleyerek güvenlik açıklarını bulmaya çalışır ve ardından ürüne saldırmayı dener.  
+- **Blackbox Testing**: Test edenler API ve özellikleri inceleyerek güvenlik açıklarını bulmaya ve ürüne saldırmaya çalışırlar.  
   
-- **Diğer ürünlerden güvenlik sorunlarını gerileme**: ilgili ürünlerden ilgili olan güvenlik sorunları test edilir. Örneğin, Internet Explorer için yaklaşık 60 güvenlik sorunlarının uygun çeşitleri tanımlanmıştır ve bunların uygulanabilirlikleri [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]edilmeye çalışıldı.  
+- **Diğer Ürünlerden Güvenlik Sorunlarının Gerilemesi**: İlgili ürünlerin güvenlik sorunları nın test edildiği durumlarda. Örneğin, Internet Explorer için yaklaşık altmış güvenlik sorunlarının uygun türevleri tanımlanmış ve [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]uygulanabilirliği için denenmiş.  
   
-- **Dosya belirsizlik aracılığıyla araçlara dayalı sızma testi**: dosya bulanık hale getirme, çeşitli girişler aracılığıyla bir dosya okuyucusunun giriş aralığından yararlanılır. Bu tekniğin kullanıldığı [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] bir örnek, görüntü kod çözme kodunda hata olup olmadığını denetmektir.  
+- **Dosya Fuzzing ile Araçlar Tabanlı Penetrasyon Testi**: Dosya bulanıklığı, dosya okuyucunun giriş aralığının çeşitli girişler yoluyla kullanılmasıdır. Bu tekniğin [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] kullanıldığı durumlardan biri, görüntü çözme kodundaki hata olup olmadığını denetlemektir.  
   
-<a name="critical_code"></a>   
-### <a name="critical-code-management"></a>Kritik kod yönetimi  
- XAML tarayıcı uygulamaları (XBAP 'ler) için [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], ayrıcalıkları ( [WPF Güvenlik Stratejisi-Platform güvenliği](wpf-security-strategy-platform-security.md)' nde **güvenlik açısından kritik metodolojisi** ) işaretleme ve izleme için .NET Framework desteğini kullanarak bir güvenlik korumalı alanı oluşturur. Güvenlik açısından kritik kodda yüksek güvenlik kalitesi gereksinimleri verilince, bu kod, ek bir kaynak yönetimi denetimi ve güvenlik denetimi düzeyi alır. [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] için yaklaşık %5 ila %10, özel bir gözden geçirme ekibi tarafından gözden geçirilen güvenlik açısından kritik koddan oluşur. Kaynak kodu ve iade işlemi, güvenlik açısından kritik kodu izleyerek ve her kritik varlıkla (kritik kod içeren bir yöntem) oturum kapatma durumuna eşlenerek yönetilir. Kaydolma durumu, bir veya daha fazla gözden geçiren adını içerir. Her günlük [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] derlemesi, onaysız değişiklikleri denetlemek için önceki Derlemeleriyle ilgili kritik kodu karşılaştırır. Bir mühendis İnceleme ekibinden onay olmadan kritik kodu değiştirirse, bu, hemen belirtilir ve düzeltilir. Bu işlem, [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] Sandbox kodu üzerinde özellikle yüksek düzeyde bir yönetim düzeyi uygulama ve bakımını yapmanızı mümkün.  
+<a name="critical_code"></a>
+### <a name="critical-code-management"></a>Kritik Kod Yönetimi  
+ XAML tarayıcı uygulamaları (XBAP'ler) için, [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] ayrıcalıkları yükselten güvenlik açısından kritik kodu işaretlemek ve izlemek için .NET Framework desteğini kullanarak bir güvenlik alanı oluşturur (Bkz. [WPF Güvenlik Stratejisinde](wpf-security-strategy-platform-security.md)Güvenlik Açısından Kritik **Metodoloji** - Platform Güvenliği). Güvenlik kritik kodundaki yüksek güvenlik kalitesi gereksinimleri göz önüne alındığında, bu kod ek bir kaynak yönetimi denetimi ve güvenlik denetimi düzeyi alır. Yaklaşık %5 ila [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] %10'u, özel bir inceleme ekibi tarafından gözden geçirilen güvenlik açısından kritik koddan oluşur. Kaynak kodu ve iade işlemi, güvenlik kritik kodunu izleyerek ve her kritik varlığın (örneğin kritik kod içeren bir yöntem) işaretleme durumuna eşleyerek yönetilir. İmza durumu, bir veya daha fazla gözden geçirenin adlarını içerir. Her günlük [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] yapı, onaylanmamış değişiklikleri denetlemek için kritik kodu önceki yapılardakiyle karşılaştırır. Bir mühendis inceleme ekibinin onayı olmadan kritik kodu değiştirirse, hemen tanımlanır ve düzeltilir. Bu işlem, özellikle yüksek düzeyde sandbox kodu [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] üzerinde inceleme yapılmasını ve bakımını sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Güvenlik](security-wpf.md)
 - [WPF Kısmi Güven Güvenliği](wpf-partial-trust-security.md)
 - [WPF Güvenlik Stratejisi - Platform Güvenliği](wpf-security-strategy-platform-security.md)
-- [Güvenilir bilgi Işlem](https://www.microsoft.com/mscorp/twc/default.mspx)
-- [.NET 'te güvenlik](../../standard/security/index.md)
+- [Güvenilir Bilgi İşlem](https://www.microsoft.com/mscorp/twc/default.mspx)
+- [.NET içinde güvenlik](../../standard/security/index.md)

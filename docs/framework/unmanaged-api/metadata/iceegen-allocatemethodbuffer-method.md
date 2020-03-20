@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 845ab77e-9639-47f5-99fb-f3b619e3e779
 topic_type:
 - apiref
-ms.openlocfilehash: 34636f1ca8e42c452aa41f6145d439a26f01b0a7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 38b9ea2ffab439f55f0a6d34d7f42c7669629168
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436397"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177917"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>ICeeGen::AllocateMethodBuffer Yöntemi
-Bir yöntem için belirtilen boyutun bir arabelleğini oluşturur ve yöntemin göreli sanal adresini alır.  
+Bir yöntem için belirtilen boyutta bir arabellek oluşturur ve yöntemin göreli sanal adresini alır.  
   
- Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
+ Bu yöntem eskidir ve kullanılmamalıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT AllocateMethodBuffer (   
-    [in]  ULONG    cchBuffer,   
+HRESULT AllocateMethodBuffer (
+    [in]  ULONG    cchBuffer,
     [out] UCHAR    **lpBuffer,  
     [out] ULONG    *RVA  
 );  
@@ -39,22 +39,22 @@ HRESULT AllocateMethodBuffer (
   
 ## <a name="parameters"></a>Parametreler  
  `cchBuffer`  
- 'ndaki Oluşturulacak arabelleğin uzunluğu.  
+ [içinde] Oluşturulacak arabellek uzunluğu.  
   
  `lpBuffer`  
- dışı Döndürülen arabellek.  
+ [çıkış] Döndürülen arabellek.  
   
  `RVA`  
- dışı Metodun göreli sanal adresi.  
+ [çıkış] Yöntemin göreli sanal adresi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

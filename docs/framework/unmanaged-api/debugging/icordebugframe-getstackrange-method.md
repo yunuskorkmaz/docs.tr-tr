@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fab037cb-fda6-40fb-9367-921e435dd5a0
 topic_type:
 - apiref
-ms.openlocfilehash: 828e4dc67cb93d0a35879e94b54c9fac6e5bda16
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a35ce025360e0ec8b7085d68e54548026b7c7fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124080"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178906"
 ---
 # <a name="icordebugframegetstackrange-method"></a>ICorDebugFrame::GetStackRange Yöntemi
 Bu yığın çerçevesinin mutlak adres aralığını alır.  
@@ -29,26 +29,26 @@ Bu yığın çerçevesinin mutlak adres aralığını alır.
   
 ```cpp  
 HRESULT GetStackRange (  
-    [out] CORDB_ADDRESS      *pStart,   
+    [out] CORDB_ADDRESS      *pStart,
     [out] CORDB_ADDRESS      *pEnd  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pStart`  
- dışı Bu `ICorDebugFrame` nesnesi tarafından temsil edilen yığın çerçevesinin başlangıç adresini belirten `CORDB_ADDRESS` işaretçisi.  
+ [çıkış] Bu `ICorDebugFrame` nesne `CORDB_ADDRESS` tarafından temsil edilen yığın çerçevesinin başlangıç adresini belirten bir işaretçi.  
   
  `pEnd`  
- dışı Bu `ICorDebugFrame` nesnesi tarafından temsil edilen yığın çerçevesinin bitiş adresini belirten `CORDB_ADDRESS` işaretçisi.  
+ [çıkış] Bu `ICorDebugFrame` nesne `CORDB_ADDRESS` tarafından temsil edilen yığın çerçevesinin bitiş adresini belirten bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yığının adres aralığı, birden çok hata ayıklama altyapılarından toplanan araya eklemeli yığın izlemeleri piecing için faydalıdır. Sayısal Aralık, yığın çerçevesinin içeriğiyle ilgili bilgi sağlamaz. Yalnızca yığın çerçeve konumlarının karşılaştırılmasının anlamı vardır.  
+ Yığının adres aralığı, birden çok hata ayıklama motorundan toplanan ara sıra yığın izlerini birleştirmek için yararlıdır. Sayısal aralık, yığın çerçevesinin içeriği hakkında bilgi sağlamaz. Yalnızca yığın çerçeve konumlarının karşılaştırılması için anlamlıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -6,47 +6,47 @@ helpviewer_keywords:
 - control patterns, Toggle
 - UI Automation, Toggle control pattern
 ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
-ms.openlocfilehash: c25f2d3b73e90adb3299ff8c4ff7c8a77fc5fc5e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5f64842d31d46af3d648b9b570d1cfb210e2910a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447066"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180058"
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a>UI Otomasyonu Değiştirme Denetim Düzenini Uygulama
 > [!NOTE]
-> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu dokümantasyon, ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıfları kullanmak <xref:System.Windows.Automation> isteyen .NET Framework geliştiricileri için tasarlanmıştır. Hakkında en son [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bilgi için [Bkz. Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
   
- Bu konu, Yöntemler ve özellikler hakkında bilgiler de dahil olmak üzere <xref:System.Windows.Automation.Provider.IToggleProvider>uygulamak için kılavuz ve kuralları tanıtır. Ek başvuruların bağlantıları konunun sonunda listelenmiştir.  
+ Bu <xref:System.Windows.Automation.Provider.IToggleProvider>konu, yöntemler ve özellikler hakkında bilgi de dahil olmak üzere, uygulama yönergeleri ve kuralları tanıtır. Ek başvurulara bağlantılar konunun sonunda listelenir.  
   
- <xref:System.Windows.Automation.TogglePattern> denetim stili, bir durum kümesinde geçiş yapan ve bir kez ayarlandıktan sonra bir durumu korumak için kullanılan denetimleri desteklemek için kullanılır. Bu denetim modelini uygulayan denetimlerin örnekleri için bkz. [UI Otomasyonu istemcileri Için denetim model eşlemesi](control-pattern-mapping-for-ui-automation-clients.md).  
+ Denetim <xref:System.Windows.Automation.TogglePattern> deseni, bir dizi durum arasında geçiş yapabilecek ve bir kez ayarlanan durumu koruyabilen denetimleri desteklemek için kullanılır. Bu denetim deseni uygulayan denetim örnekleri için, [UI Otomasyon Istemcileri için Denetim Deseni Eşleciliği'ne](control-pattern-mapping-for-ui-automation-clients.md)bakın.  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Uygulama kılavuzları ve kuralları  
- Iki durumlu denetim modelini uygularken aşağıdaki kılavuz ve kurallara göz önünde  
+<a name="Implementation_Guidelines_and_Conventions"></a>
+## <a name="implementation-guidelines-and-conventions"></a>Uygulama Yönergeleri ve Sözleşmeleri  
+ Geçiş denetimi deseni uygularken aşağıdaki yönergeleri ve kuralları not edin:  
   
-- Düğme, araç çubuğu düğmeleri ve köprüler gibi etkinleştirildiğinde durumu korumayan denetimler, bunun yerine <xref:System.Windows.Automation.Provider.IInvokeProvider> gerçekleştirmelidir.  
+- Düğmeler, araç çubuğu düğmeleri ve köprüler gibi etkinleştirildiğinde durum tutmayan <xref:System.Windows.Automation.Provider.IInvokeProvider> denetimler bunun yerine uygulanmalıdır.  
   
-- Bir denetim, <xref:System.Windows.Automation.ToggleState> şu sırada bir şekilde çalışmalıdır: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> ve destekleniyorsa, <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
+- Bir <xref:System.Windows.Automation.ToggleState> denetim, aşağıdaki sırayla üzerinden <xref:System.Windows.Automation.ToggleState.On> <xref:System.Windows.Automation.ToggleState.Off> döngü gerekir: , <xref:System.Windows.Automation.ToggleState.Indeterminate>ve, eğer desteklenirse, .  
   
-- <xref:System.Windows.Automation.TogglePattern>, Üçlü durum onay kutusunun doğrudan ayarını çevreleyen sorunlar nedeniyle uygun <xref:System.Windows.Automation.ToggleState> sırası boyunca geçiş yapılmadan bir SetState (newState) yöntemi sağlamıyor.  
+- <xref:System.Windows.Automation.TogglePattern>uygun <xref:System.Windows.Automation.ToggleState> sırası ile bisiklet olmadan üç devletli CheckBox doğrudan ayarı çevreleyen sorunlar nedeniyle bir SetState (newState) yöntemi sağlamaz.  
   
-- RadioButton denetimi geçerli durumları arasında geçiş yapamayacağı için <xref:System.Windows.Automation.Provider.IToggleProvider>uygulamaz.  
+- RadioButton denetimi, geçerli <xref:System.Windows.Automation.Provider.IToggleProvider>durumları arasında bisiklete binme yeteneğine sahip olmadığı için uygulamaz.  
   
-<a name="Required_Members_for_IToggleProvider"></a>   
-## <a name="required-members-for-itoggleprovider"></a>IToggleProvider için gerekli Üyeler  
- <xref:System.Windows.Automation.Provider.IToggleProvider>uygulamak için aşağıdaki özellikler ve Yöntemler gereklidir.  
+<a name="Required_Members_for_IToggleProvider"></a>
+## <a name="required-members-for-itoggleprovider"></a>IToggleProvider için Gerekli Üyeler  
+ Uygulamak için aşağıdaki özellikler ve <xref:System.Windows.Automation.Provider.IToggleProvider>yöntemler gereklidir.  
   
-|Gerekli üye|Üye türü|Notlar|  
+|Gerekli üye|Üye tipi|Notlar|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|Yöntem|Yok.|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|Yöntem|None|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|Özellik|None|  
   
- Bu denetim deseninin ilişkili olayları yok.  
+ Bu denetim deseni ilişkili olaylar vardır.  
   
-<a name="Exceptions"></a>   
-## <a name="exceptions"></a>Özel Durumlar  
- Bu denetim deseninin ilişkili özel durumları yok.  
+<a name="Exceptions"></a>
+## <a name="exceptions"></a>Özel durumlar  
+ Bu denetim deseni ilişkili özel durumlar vardır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

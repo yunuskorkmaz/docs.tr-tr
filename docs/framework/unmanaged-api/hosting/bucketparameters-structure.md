@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 9432487e-f276-45d6-9a13-9a68024dbd46
 topic_type:
 - apiref
-ms.openlocfilehash: 80623bdec939b0ae5fc13008c1c4001c613ac435
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4d9de489bdeb0ab506f56ff08f4afb4cf6d0ab4f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73195952"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178281"
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters Yapısı
-Bir olayın tür adını ve olayla ilişkili geçerli özel durumun parametrelerini depolar.  
+Bir olayın türü ve olayla ilişkili geçerli özel durum parametrelerini depolar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 typedef struct _BucketParameters {  
-    BOOL  fInited;                    
-    WCHAR pszEventTypeName[255];      
-    WCHAR pszParams[10][255];         
+    BOOL  fInited;
+    WCHAR pszEventTypeName[255];
+    WCHAR pszParams[10][255];
 } BucketParameters;  
 ```  
   
@@ -38,16 +38,16 @@ typedef struct _BucketParameters {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`fInited`|`true`, bu yapının geri kalanı geçerliyse; Aksi takdirde, `false`.|  
+|`fInited`|`true`, Bu yapının geri kalanı geçerliise; aksi `false`takdirde, .|  
 |`pszEventTypeName`|Olay türünün adı.|  
-|`pszParams`|Her biri olayla ilişkili geçerli özel durum için bir parametre belirten dizeler dizisi.|  
+|`pszParams`|Her biri olayla ilişkili geçerli özel durum için bir parametre belirten bir dizi dize.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE. IDL  
+ **Üstbilgi:** MSCorEE.idl  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

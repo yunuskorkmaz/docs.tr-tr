@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 4f86ff37-2dab-4e64-819a-76b3bfe828ff
 topic_type:
 - apiref
-ms.openlocfilehash: 718e41e16c07265d8a36b8f6124d99cd3490f7be
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0b613ebacdff82a29fdbc3f4caa0f2b8bb5d3f6a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436620"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176168"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType Numaralandırması
-Yerel kodda bağlantılı türü gösteren değerler sağlar.  
+Yerel koda bağlı türü gösteren değerler sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-typedef enum   
+typedef enum
 {  
     nltNone       = 1,  
     nltAnsi       = 2,  
@@ -42,22 +42,22 @@ typedef enum
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`nltNone`|Anahtar sözcüklerin hiçbirinin belirtilmediğini belirtir.|  
-|`nltAnsi`|Bir ANSI anahtar sözcüğünün belirtildiğini belirtir.|  
-|`nltUnicode`|Unicode anahtar sözcüğünün belirtildiğini belirtir|  
-|`nltAuto`|Bir auto anahtar sözcüğünün belirtildiğini gösterir.|  
-|`nltOle`|OLE anahtar sözcüğünün belirtildiğini belirtir.|  
+|`nltNone`|Anahtar kelimelerden hiçbirinin belirtilmemiş olduğunu gösterir.|  
+|`nltAnsi`|ANSI anahtar kelimesinin belirtildiğini gösterir.|  
+|`nltUnicode`|Unicode anahtar kelimesinin belirtildiğini gösterir|  
+|`nltAuto`|Otomatik anahtar kelimenin belirtildiğini gösterir.|  
+|`nltOle`|OLE anahtar kelimesinin belirtildiğini gösterir.|  
 |`nltMaxValue`|Kullanılmadı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

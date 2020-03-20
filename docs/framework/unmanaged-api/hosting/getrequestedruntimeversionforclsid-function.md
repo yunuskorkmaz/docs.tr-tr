@@ -14,66 +14,66 @@ helpviewer_keywords:
 ms.assetid: 5bb12f9a-0612-434b-b4ed-2db636a20bec
 topic_type:
 - apiref
-ms.openlocfilehash: ce0c6307defd93dcf63ac4e9051fc798041475f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6132e94544b30486b70ecfec49c1ddd5e3c0f50b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127050"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178111"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID İşlevi
 Belirtilen `CLSID`sınıf için uygun ortak dil çalışma zamanı (CLR) sürüm bilgilerini alır.  
   
- Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
+ Bu işlev .NET Framework 4'te amortismana hazırlanmıştır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetRequestedRuntimeVersionForCLSID (  
-    [in]  REFCLSID   rclsid,   
-    [out]  LPWSTR     pVersion,   
-    [in]  DWORD      cchBuffer,   
-    [out] DWORD*     dwLength,   
+    [in]  REFCLSID   rclsid,
+    [out]  LPWSTR     pVersion,
+    [in]  DWORD      cchBuffer,
+    [out] DWORD*     dwLength,
     [in]  CLSID_RESOLUTION_FLAGS dwResolutionFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `rclsid`  
- 'ndaki  Bileşenin `CLSID`.  
+ [içinde]  Bileşenin. `CLSID`  
   
  `pVersion`  
- dışı  Başarılı bir şekilde tamamlandıktan sonra sürüm numarası dizesini içeren bir arabellek.  
+ [çıkış]  Başarılı bir şekilde tamamlandıktan sonra sürüm numarası dizesini içeren bir arabellek.  
   
  `cchBuffer`  
- 'ndaki  `pVersion` arabelleğinin geniş karakterdeki boyutu.  
+ [içinde]  Geniş karakterlerdeki arabelleğin `pVersion` boyutu.  
   
  `dwLength`  
- dışı Döndürülen arabelleğin bayt cinsinden uzunluğu.  
+ [çıkış] Döndürülen arabelleğe baytlar halindeki uzunluğu.  
   
  `dwResolutionFlags`  
- 'ndaki  CLSID_RESOLUTION_FLAGS değerlerinden biri. Aşağıdaki değerler desteklenir:  
+ [içinde]  CLSID_RESOLUTION_FLAGS değerlerinden biri. Aşağıdaki değerler desteklenir:  
   
-- CLSID_RESOLUTION_DEFAULT: (0x0) varsayılan birlikte çalışma davranışının kullanılması gerektiğini belirtir.  
+- CLSID_RESOLUTION_DEFAULT: (0x0) Varsayılan interop davranışının kullanılması gerektiğini belirtir.  
   
-- CLSID_RESOLUTION_REGISTERED: (0x1) kayıt defterinin aranması gerektiğini ve dolgu ilkesinin uygulanacağını belirtir.  
+- CLSID_RESOLUTION_REGISTERED: (0x1) Kayıt defterinin aranması ve şim ilkesinin uygulanması gerektiğini belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|İşlev başarıyla döndürüldü.|  
-|E_INVALIDARG|Parametrelerden birinde geçersiz bir tür veya biçim vardır.|  
-|ERROR_INSUFFICIENT_BUFFER|`pVersion` arabelleği tüm sürüm dizesini tutabilecek kadar büyük değil.|  
-|REGDB_E_CLASSNOTREG|Belirtilen `CLSID`kayıtlı bir sınıf yok.|  
-|E_POINTER|`dwLength` null veya `cchBuffer` sürüm dizesini tutacak kadar büyük, ancak `pVersion` null.|  
+|S_OK|İşlev başarıyla döndü.|  
+|E_ınvalıdarg|Parametrelerden birinin geçersiz türü veya biçimi vardır.|  
+|ERROR_INSUFFICIENT_BUFFER|Arabellek `pVersion` tüm sürüm dizesini tutacak kadar büyük değil.|  
+|REGDB_E_CLASSNOTREG|Belirtilen `CLSID`sınıfa kayıtlı bir sınıf yok.|  
+|E_POINTER|`dwLength`null veya `cchBuffer` sürüm dizesini tutmak için `pVersion` yeterince büyük, ancak null.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE. h  
+ **Üstbilgi:** MSCorEE.h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

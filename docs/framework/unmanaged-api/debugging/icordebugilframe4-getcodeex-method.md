@@ -12,48 +12,48 @@ api_type:
 ms.assetid: aeda0e42-29ee-4ca8-9f21-ac4641677a62
 topic_type:
 - apiref
-ms.openlocfilehash: e77344a99189ec8e234129262d45698c794dc249
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ef2e4bc0caddd6b13c8dbe8edb59e0673519421b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788509"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178790"
 ---
 # <a name="icordebugilframe4getcodeex-method"></a>ICorDebugILFrame4::GetCodeEx Yöntemi
 [.NET Framework 4.5.2 ve sonraki sürümlerde desteklenir]  
   
- Bu yığın çerçevesinin yürütüldüğü koda yönelik bir işaretçi alır.  
+ Bu yığın çerçevesinin yürütüldettiği koda bir işaretçi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp
 HRESULT GetCodeEx(  
-   [in] ILCodeKind flags,   
+   [in] ILCodeKind flags,
    [out] ICorDebugCode **ppCode  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `flags`  
- 'ndaki Profiler 'ın ReJIT isteği tarafından tanımlanan ara dilin (IL) çerçeveye dahil edilip edilmeyeceğini belirten bir [ılcodekind](ilcodekind-enumeration.md) numaralandırma üyesi.  
+ [içinde] Profilcinin ReJIT isteği tarafından tanımlanan ara dilin (IL) çerçeveye dahil edilip edilmeyeceğini belirten bir [ILCodeKind](ilcodekind-enumeration.md) numaralandırma üyesi.  
   
  `ppCode`  
- dışı Bu yığın çerçevesinin yürütüldüğü kodu temsil eden bir "ICorDebugCode" nesnesinin adresine yönelik bir işaretçi.  
+ [çıkış] Bu yığın çerçevesinin yürütüldettiği kodu temsil eden bir "ICorDebugCode" nesnesinin adresine işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem [ICorDebugFrame:: GetCode](icordebugframe-getcode-method.md) yöntemine benzer, isteğe bağlı olarak Profiler 'ın ReJIT isteği tarafından tanımlanan koda erişir. Bu yöntemin `flags` bir `ILCODE_ORIGINAL_IL` ile çağrılması [GetCode](icordebugframe-getcode-method.md)çağırma ile eşdeğerdir; Yöntem belgelenmiş ise, onun Il 'ye erişilemeyecektir. `ILCODE_REJIT_IL`, hata ayıklayıcının profil oluşturucunun ReJIT isteği tarafından tanımlanan Il 'ye erişmesine izin verir. Il görünmüyorsa, `ppCode` **null**olur ve Yöntem `S_OK`döndürür.  
+ Bu yöntem, profilcinin ReJIT isteği tarafından tanımlanan koda isteğe bağlı olarak erişmesi dışında [ICorDebugFrame::GetCode](icordebugframe-getcode-method.md) yöntemine benzer. Bu yöntemi `flags` bir değerle çağırmak [GetCode'u](icordebugframe-getcode-method.md)aramaya `ILCODE_ORIGINAL_IL` eşdeğerdir; yöntem işletilmişse, IL'sine erişilemez. `ILCODE_REJIT_IL`hata ayıklayıcının profilcinin ReJIT isteği tarafından tanımlanan IL'ye erişmesine izin verir. IL enstrümante değilse, `ppCode` **null**ise , ve `S_OK`yöntem döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ICorDebugILFrame4 Arabirimi](icordebugilframe4-interface.md)
 - [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
-- [ReJIT: nasıl yapılır Kılavuzu](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: Nasıl Yapilir Kılavuzu](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

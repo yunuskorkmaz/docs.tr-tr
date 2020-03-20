@@ -15,65 +15,65 @@ helpviewer_keywords:
 ms.assetid: 1c8d9959-95b5-4131-be4a-556d97774014
 topic_type:
 - apiref
-ms.openlocfilehash: f9d6c4f01b01944c885190f90e2195c3a308490a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 645b64c8b536029663c350bdcde9a716a715aab3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141212"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178089"
 ---
 # <a name="iclrgcmanagersetgcstartuplimits-method"></a>ICLRGCManager::SetGCStartupLimits Yöntemi
-Çöp toplama kesiminin boyutunu ve çöp toplama sisteminin oluşturma 0 ' nın en büyük boyutunu ayarlar.  
+Çöp toplama kesiminin boyutunu ve çöp toplama sisteminin oluşturma 0'ının maksimum boyutunu ayarlar.  
   
 > [!IMPORTANT]
-> 4,5 .NET Framework başlayarak, [ICLRGCManager2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) yöntemini kullanarak segment boyutunu ve en fazla nesil 0 boyutunu `DWORD` daha büyük değerlere ayarlayabilirsiniz.  
+> .NET Framework 4.5 ile başlayarak, segment boyutunu ve maksimum nesil `DWORD` 0 boyutunu [ICLRGCManager2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) yöntemini kullanarak daha büyük değerlere ayarlayabilirsiniz.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetGCStartupLimits (  
-    [in] DWORD SegmentSize,   
+    [in] DWORD SegmentSize,
     [in] DWORD MaxGen0Size  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `SegmentSize`  
- 'ndaki Bir çöp toplama kesiminin belirtilen boyutu.  
+ [içinde] Çöp toplama kesiminin belirtilen boyutu.  
   
- En küçük kesim boyutu 4 MB 'tır. Segmentler, 1 MB veya daha büyük artışlarla artırılabilir.  
+ Minimum segment boyutu 4 MB'dır. Segmentler 1 MB veya daha büyük artışlarla artırılabilir.  
   
  `MaxGen0Size`  
- 'ndaki Oluşturma 0 için belirtilen en büyük boyut.  
+ [içinde] Nesil 0 için belirtilen maksimum boyut.  
   
- Minimum nesil 0 boyutu 64 KB 'tır.  
+ Minimum nesil 0 boyutu 64 KB'dir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`SetGCStartupLimits` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
-|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|S_OK|`SetGCStartupLimits`başarıyla döndürülür.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma süresi (CLR) bir işleme yüklenmedi veya CLR yönetilen kodu çalıştıramadığı veya aramayı başarıyla işleyemediği bir durumdadır.|  
+|HOST_E_TIMEOUT|Arama zaman doldu.|  
+|HOST_E_NOT_OWNER|Arayan kilidin sahibi değildir.|  
 |HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
-|E_FAıL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_faıl|Bilinmeyen bir felaket hatası meydana geldi. Bir yöntem E_FAIL döndükten sonra, CLR artık işlem içinde kullanılabilir. Barındırma yöntemleri sonraki aramalar HOST_E_CLRNOTAVAILABLE döndürün.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `SetGCStartupLimits` kümelerinin değerleri yalnızca bir kez belirtilebilir. `SetGCStartupLimits` yapılan çağrılar daha sonra yok sayılır.  
+ Kümeler `SetGCStartupLimits` değerleri yalnızca bir kez belirtilebilir. Daha sonra `SetGCStartupLimits` yapılan aramalar yoksayılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE. h  
+ **Üstbilgi:** MSCorEE.h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MSCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Otomatik Bellek Yönetimi](../../../standard/automatic-memory-management.md)
-- [Atık Toplama](../../../standard/garbage-collection/index.md)
+- [Çöp Toplama](../../../standard/garbage-collection/index.md)
 - [ICLRControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [ICLRGCManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)

@@ -15,51 +15,51 @@ helpviewer_keywords:
 ms.assetid: afdb5ac9-5bf5-4b91-b7cb-f81db23d7da3
 topic_type:
 - apiref
-ms.openlocfilehash: add89fe81fccbd5e6f5ad5d27f0ab3ace489963e
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 5346792cb2a1309268cb4ba48625aa559777fbaf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868531"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177000"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>ICorProfilerInfo3::GetFunctionTailcall3Info Yöntemi
-[FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) işlevi tarafından Profiler 'a bildirilen işlevin yığın çerçevesini sağlar. Bu yöntem yalnızca `FunctionTailcall3WithInfo` geri çağırma sırasında çağrılabilir.  
+[FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) işlevi tarafından profilciye bildirilen işlevin yığın çerçevesini sağlar. Bu yöntem yalnızca `FunctionTailcall3WithInfo` geri arama sırasında çağrılabilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT GetFunctionTailcall3Info(   
-            [in]  FunctionID functionId,   
+HRESULT GetFunctionTailcall3Info(
+            [in]  FunctionID functionId,
             [in]  COR_PRF_ELT_INFO eltInfo,  
             [out] COR_PRF_FRAME_INFO *pFrameInfo);  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `functionId`  
- 'ndaki Döndürülen işlevin `FunctionID`.  
+ [içinde] Geri `FunctionID` dönen işlevin.  
   
  `eltInfo`  
- 'ndaki Belirli bir yığın çerçevesi hakkındaki bilgileri temsil eden donuk bir tanıtıcı. Profil Oluşturucu, `FunctionTailcall3WithInfo` işlevi tarafından Profiler 'a verilen aynı `eltInfo` sağlamalıdır.  
+ [içinde] Belirli bir yığın çerçevesi hakkındaki bilgileri temsil eden opak bir tutamaç. Profil oluşturucu, `eltInfo` `FunctionTailcall3WithInfo` işlev tarafından profilciye verilenin aynısını sağlamalıdır.  
   
  `pFrameInfo`  
- dışı Belirli bir yığın çerçevesiyle ilgili genel türler bilgilerini temsil eden donuk bir tanıtıcı. Bu tanıtıcı yalnızca profil oluşturucunun `GetFunctionTailcall3Info` metodunu çağırdığı `FunctionTailcall3WithInfo` geri çağırma sırasında geçerlidir.  
+ [çıkış] Belirli bir yığın çerçevesi hakkında genel bilgileri temsil eden opak bir tanıtıcı. Bu tanıtıcı yalnızca `FunctionTailcall3WithInfo` profilleyicinin `GetFunctionTailcall3Info` yöntemi çağırdığı geri arama sırasında geçerlidir.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf. IDL, CorProf. h  
+ **Üstbilgi:** CorProf.idl, CorProf.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Functionenter3withınfo](functionenter3withinfo-function.md)
-- [Functionleave3withınfo](functionleave3withinfo-function.md)
-- [Functiontailcall3withınfo](functiontailcall3withinfo-function.md)
-- [ICorProfilerInfo3 Yöntemi](icorprofilerinfo3-interface.md)
+- [FonksiyonEnter3WithInfo](functionenter3withinfo-function.md)
+- [FonksiyonLeave3WithInfo](functionleave3withinfo-function.md)
+- [FonksiyonTailcall3WithInfo](functiontailcall3withinfo-function.md)
+- [ICorProfilerInfo3 Arabirimi](icorprofilerinfo3-interface.md)
 - [Profil Oluşturma Arabirimleri](profiling-interfaces.md)
-- [Profil Oluşturma](index.md)
+- [Profil oluşturma](index.md)

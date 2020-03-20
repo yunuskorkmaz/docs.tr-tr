@@ -10,24 +10,24 @@ api_type:
 ms.assetid: e795e6a2-1008-4a81-af88-d777888e942e
 topic_type:
 - apiref
-ms.openlocfilehash: cc839e9b2a28dc428ae7cc87c9d080c4b7612a9d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 54332f5b3383f1c1513242a79cbd81eb8aa5c4f2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73098877"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179257"
 ---
 # <a name="cordebugcodeinvokekind-enumeration"></a>CorDebugCodeInvokeKind Numaralandırması
-Bir içe aktarılmış işlevin yönetilen kodu nasıl çağırılacağını açıklar.  
+Dışa aktarılan bir işlevin yönetilen kodu nasıl çağırdığını açıklar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 typedef enum CorDebugCodeInvokeKind  
 {  
-    CODE_INVOKE_KIND_NONE,       
-    CODE_INVOKE_KIND_RETURN,     
-    CODE_INVOKE_KIND_TAILCALL,   
+    CODE_INVOKE_KIND_NONE,
+    CODE_INVOKE_KIND_RETURN,
+    CODE_INVOKE_KIND_TAILCALL,
 } CorDebugCodeInvokeKind;  
 ```  
   
@@ -35,26 +35,26 @@ typedef enum CorDebugCodeInvokeKind
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`CODE_INVOKE_KIND_NONE`|Bu yöntem tarafından herhangi bir yönetilen kod çağrılırsa, daha sonra açık olaylar veya kesme noktaları tarafından bulunması gerekecektir.<br /><br /> --veya--<br /><br /> Üzerinde durmanın kolay bir yolu olmadığından, bu yöntemin çağırdığı bazı yönetilen koddan bazılarını kaçırabilir.<br /><br /> --veya--<br /><br /> Yöntemi hiçbir şekilde yönetilen kodu çağırmayabilir.|  
-|`CODE_INVOKE_KIND_RETURN`|Bu yöntem, bir dönüş yönergesi aracılığıyla yönetilen kodu çağırır. Adımlama, sonraki yönetilen koda ulaşmalıdır.|  
-|`CODE_INVOKE_KIND_TAILCALL`|Bu yöntem, bir tail çağrısı aracılığıyla yönetilen kodu çağırır. Tüm çağrı yönergelerinin tek adımlamayı ve adımlamayı yönetilen koda ulaşmalıdır.|  
+|`CODE_INVOKE_KIND_NONE`|Bu yöntem tarafından herhangi bir yönetilen kod çağrılırsa, daha sonra açık olaylar veya kesme noktaları tarafından bulunması gerekir.<br /><br /> --veya--<br /><br /> Bu yöntemin aradığı yönetilen kodun bazılarını kaçırabiliriz, çünkü bunu durdurmanın kolay bir yolu yoktur.<br /><br /> --veya--<br /><br /> Yöntem yönetilen kodu hiçbir zaman çağıramayabilir.|  
+|`CODE_INVOKE_KIND_RETURN`|Bu yöntem, bir iade yönergesi aracılığıyla yönetilen kodu çağırır. Dışarı çıkmak bir sonraki yönetilen koda ulaşmalıdır.|  
+|`CODE_INVOKE_KIND_TAILCALL`|Bu yöntem, bir kuyruk çağrısı ile yönetilen kodu çağırır. Tek adımve herhangi bir çağrı yönergeleri üzerinden adım yönetilen kod almalısınız.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu numaralandırma, yönetilen kod üzerinden atlama hakkında bilgi sağlamak için [ICorDebugProcess6:: GetExportStepInfo](icordebugprocess6-getexportstepinfo-method.md) yöntemi tarafından kullanılır.  
+ Bu numaralandırma, yönetilen kodüzerinden adım atma hakkında bilgi sağlamak için [ICorDebugProcess6::GetExportStepInfo](icordebugprocess6-getexportstepinfo-method.md) yöntemi tarafından kullanılır.  
   
 > [!NOTE]
-> Bu numaralandırma yalnızca .NET Native hata ayıklama senaryolarında kullanılmak üzere tasarlanmıştır.  
+> Bu numaralandırma yalnızca .NET Yerel hata ayıklama senaryolarında kullanılmak üzere tasarlanmıştır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)
-- [Hata Ayıklama](index.md)
+- [Hata Ayıklama Numaralandırmaları](debugging-enumerations.md)
+- [Hata ayıklama](index.md)

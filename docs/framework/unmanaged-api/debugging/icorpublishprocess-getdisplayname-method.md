@@ -15,45 +15,45 @@ helpviewer_keywords:
 ms.assetid: 7c0af9e9-a73f-41aa-a685-b21c439e059d
 topic_type:
 - apiref
-ms.openlocfilehash: 7f2e644340a2ec7fe807830422b927ce811ddcf9
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 77e801b048709949c384f642fc0d0ecb5d7eb512
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790570"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178383"
 ---
 # <a name="icorpublishprocessgetdisplayname-method"></a>ICorPublishProcess::GetDisplayName Metodu
-Bu [ICorPublishProcess](icorpublishprocess-interface.md)tarafından başvurulan işlem için yürütülebilir dosyanın tam yolunu alır.  
+Bu [ICorPublishProcess](icorpublishprocess-interface.md)tarafından başvurulan işlem için yürütülebilir tam yolu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetDisplayName (  
-    [in]  ULONG32                    cchName,   
+    [in]  ULONG32                    cchName,
     [out] ULONG32                    *pcchName,  
-    [out, size_is(cchName), length_is(*pcchName)]   
+    [out, size_is(cchName), length_is(*pcchName)]
         WCHAR                        *szName  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- 'ndaki `szName` dizisinin boyutu.  
+ [içinde] `szName` Dizinin boyutu.  
   
  `pcchName`  
- dışı `szName` dizisinde döndürülen geniş karakter sayısı.  
+ [çıkış] `szName` Dizide döndürülen geniş karakter sayısı.  
   
  `szName`  
- dışı Yürütülebilir dosyanın tam yolu da dahil olmak üzere, adı depolayan bir dizi. Ad null ile sonlandırılmış.  
+ [çıkış] Yürütülebilir in tam yolu da dahil olmak üzere adı depolamak için bir dizi. Ad geçersiz sayılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorPub. IDL, CorPub. h  
+ **Üstbilgi:** CorPub.idl, CorPub.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

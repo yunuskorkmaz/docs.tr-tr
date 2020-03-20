@@ -15,43 +15,43 @@ helpviewer_keywords:
 ms.assetid: c8111502-5a20-447f-9dc2-76e8acd7ed5a
 topic_type:
 - apiref
-ms.openlocfilehash: 540ca78c5548d4fbdd3338671ea02314736f15cd
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4b48132ee60bcaebb218d8f583de6558372f5055
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792357"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178604"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject Metodu
-Bir nesne adresini bir "ICorDebugObjectValue" nesnesine dönüştürür.  
+Nesne adresini "ICorDebugObjectValue" nesnesine dönüştürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetObject(  
-    [in] CORDB_ADDRESS addr,   
+    [in] CORDB_ADDRESS addr,
     [out] ICorDebugObjectValue **ppObject  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `addr`  
- 'ndaki Nesne adresi.  
+ [içinde] Nesne adresi.  
   
  `ppObject`  
- dışı "ICorDebugObjectValue" nesnesinin adresine yönelik bir işaretçi.  
+ [çıkış] "ICorDebugObjectValue" nesnesinin adresine işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `addr` geçerli bir yönetilen nesneyi işaret etmez, `GetObject` yöntemi `E_FAIL`döndürür.  
+ Geçerli `addr` yönetilen nesneyi işaret `GetObject` etmiyorsa, `E_FAIL`yöntem döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

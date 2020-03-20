@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 8f35414d-f40b-4b99-8768-9adb675c622a
 topic_type:
 - apiref
-ms.openlocfilehash: 8360a74e9e18e5b68ecc9edd7be2e3a711cb61c9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e02d7dd4b287d027b633ae9bf2e98e036062bdd0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437772"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175414"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>IMetaDataImport::GetClassLayout Metodu
-Belirtilen TypeDef belirtecinin başvurduğu sınıfa ait düzen bilgisini alır.  
+Belirtilen TypeDef belirteci tarafından başvurulan sınıfın düzen bilgilerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT GetClassLayout  (   
-   [in]  mdTypeDef          td,   
+HRESULT GetClassLayout  (
+   [in]  mdTypeDef          td,
    [out] DWORD              *pdwPackSize,  
    [out] COR_FIELD_OFFSET   rFieldOffset[],  
    [in]  ULONG              cMax,  
@@ -40,31 +40,31 @@ HRESULT GetClassLayout  (
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- 'ndaki Döndürülecek düzen ile sınıfın TypeDef belirteci.  
+ [içinde] Döndürülecek düzene sahip sınıfın TypeDef belirteci.  
   
  `pdwPackSize`  
- dışı Sınıfın paket boyutunu temsil eden 1, 2, 4, 8 veya 16 değerlerinden biri.  
+ [çıkış] Sınıfın paket boyutunu temsil eden 1, 2, 4, 8 veya 16 değerlerinden biri.  
   
  `rFieldOffset`  
- dışı [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) değerleri dizisi.  
+ [çıkış] [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) değerleri dizisi.  
   
  `cMax`  
- 'ndaki `rFieldOffset` dizisinin en büyük boyutu.  
+ [içinde] `rFieldOffset` Dizinin en büyük boyutu.  
   
  `pcFieldOffset`  
- dışı `rFieldOffset`döndürülen öğe sayısı.  
+ [çıkış] Döndürülen öğe `rFieldOffset`sayısı.  
   
  `pulClassSize`  
- dışı `td`tarafından temsil edilen sınıfın bayt cinsinden boyutu.  
+ [çıkış] Sınıfın baytboyutu tarafından `td`temsil edilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

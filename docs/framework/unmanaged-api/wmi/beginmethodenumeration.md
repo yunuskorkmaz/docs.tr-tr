@@ -1,6 +1,6 @@
 ---
-title: BeginMethodEnumeration işlevi (yönetilmeyen API Başvurusu)
-description: BeginMethodEnumeration işlevi, nesne yöntemlerinin bir listesini başlatır
+title: BeginMethodEnumeration fonksiyonu (Yönetilmeyen API Başvurusu)
+description: BeginMethodEnumeration işlevi nesnenin yöntemlerinin numaralandırma başlar
 ms.date: 11/06/2017
 api_name:
 - BeginMethodEnumeration
@@ -14,66 +14,66 @@ helpviewer_keywords:
 - BeginMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: be1e86e0b760ab403cf42ac19da03f84769a85cf
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.openlocfilehash: 876f5810fffab7fa98cd4d46715e13569ab95f6c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884429"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175050"
 ---
 # <a name="beginmethodenumeration-function"></a>BeginMethodEnumeration işlevi
-Nesne için kullanılabilen yöntemlerin bir listesini başlatır.  
+Nesne için kullanılabilir yöntemlerin numaralandırmasını başlatın.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
+
 ## <a name="syntax"></a>Sözdizimi  
   
-```cpp 
+```cpp
 HRESULT BeginMethodEnumeration (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
    [in] LONG              lEnumFlags
-); 
+);
 ```  
 
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-'ndaki Bu parametre kullanılmıyor.
+[içinde] Bu parametre kullanılmaz.
 
 `ptr`  
-'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
+[içinde] [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine işaretçi.
 
 `lEnumFlags`  
-'ndaki Tüm yöntemler için sıfır (0) veya numaralandırmanın kapsamını belirten bir bayrak. Aşağıdaki bayraklar, *Wbemcli. h* üstbilgi dosyasında tanımlanmıştır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
+[içinde] Tüm yöntemler için Sıfır (0) veya numaralandırmanın kapsamını belirten bir bayrak. Aşağıdaki bayraklar *WbemCli.h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Sabit listesini sınıfta tanımlanan yöntemlerle sınırlayın. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Sabit listesini temel sınıflardan devralınan özelliklerle sınırlayın. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Numaralandırmayı sınıfın kendisinde tanımlanan yöntemlerle sınırlandırın. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Numaralandırmayı temel sınıflardan devralınan özelliklerle sınırlandırın. |
 
-## <a name="return-value"></a>Dönüş değeri
+## <a name="return-value"></a>Döndürülen değer
 
-Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
+Bu işlev tarafından döndürülen aşağıdaki değerler *WbemCli.h* üstbilgi dosyasında tanımlanır veya bunları kodunuzdaki sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` sıfır değil ve belirtilen bayraklardan biri değil. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags`sıfır değildir ve belirtilen bayraklardan biri değildir. |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev, [IWbemClassObject:: BeginMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration) yöntemine bir çağrı kaydırır.
+Bu [işlev, IWbemClassObject::BeginMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration) yöntemine bir çağrı yıkıyor.
 
-Bu yöntem çağrısı yalnızca geçerli nesne bir sınıf tanımı ise desteklenir. Yöntem işleme, örnekleri işaret eden [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) işaretçilerinden kullanılamıyor. Yöntemlerin numaralandırıldıkları sıranın belirli bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)örneği için sabit olması garanti edilir.
+Bu yöntem çağrısı yalnızca geçerli nesne bir sınıf tanımı ise desteklenir. Yöntem işleme örnekleri işaret [iWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) işaretçileri kullanılamaz. Yöntemleri numaralandırılan sıra, [IWbemClassObject'in](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)belirli bir örneği için değişmez olması garanti edilir.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** WMINet_Utils. IDL  
+ **Üstbilgi:** WMINet_Utils.idl  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)

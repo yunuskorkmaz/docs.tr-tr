@@ -2,52 +2,52 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: 0d77af319e18868ce7d600269cd9afaa0c4ce2c6
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c23bd3eddd49972b7083347fed88d4e70707ae58
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928639"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183806"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
-, `CustomChannelsTester` Özel kanal uygulamalarınızı önceden tanımlanmış bir hizmet sözleşmeleri kümesine karşı test etmek için kullanabileceğiniz bir araçtır. Hizmet sözleşmeleri kümesini seçebilir ve bir XML dosyası kullanarak araca geçirebilirsiniz. Araç daha sonra ileti değişimi sırasında özel kanal uygulamalarınızı uygulayan hizmeti ve istemciyi oluşturur.  
+Özel `CustomChannelsTester` kanal uygulamalarınızı önceden tanımlanmış hizmet sözleşmeleri kümesine karşı sınamak için kullanabileceğiniz bir araçtır. Hizmet sözleşmeleri kümesini seçebilir ve bir XML dosyasını kullanarak araca aktarabilirsiniz. Araç daha sonra ileti alışverişi sırasında özel kanal uygulamaları egzersizhizmeti ve istemci oluşturur.  
   
 ### <a name="to-build-the-tool"></a>Aracı oluşturmak için  
   
-1. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümündeki yönergeleri izleyin.  
+1. Çözümü oluşturmak için, Windows [Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
   
-2. Çözümün oluşturulması üç dosya üretir: CustomChannelsTester. exe, TestSpec. xml ve SampleRun. cmd. SampleRun. cmd dosyası, bu aracın [taşımayı test etmek için nasıl kullanılacağını gösteren örnek bir komut satırına sahiptir: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örneği.  
+2. Çözümü oluşturmak üç dosya oluşturur: CustomChannelsTester.exe, TestSpec.xml ve SampleRun.cmd. SampleRun.cmd [dosyasında, Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örneğini test etmek için bu aracın nasıl kullanılacağını gösteren bir örnek komut satırı vardır.  
   
 ### <a name="to-run-the-tool"></a>Aracı çalıştırmak için  
   
-- Komut isteminde aşağıdaki komutu yazın:  
+- Komut istemi'nde aşağıdaki komutu yazın:  
   
     ```console  
     CustomChannelsTester.exe /binding:YourCustomBindngName /dll:TheAssemblyWhereThisTypeisDefined /testspec:XmlFileNameWhichContainsTestOptions  
     ```  
   
-     `/binding` Seçeneğinin kullanılması gerekir.  
+     Seçeneğin `/binding` kullanılması gereklidir.  
   
-     `/dll`"Binding", Windows Communication Foundation (WCF) tarafından belirtilen sistem tarafından sağlanmış bir bağlama değilse gereklidir.  
+     `/dll`Windows Communication Foundation (WCF) tarafından sağlanan sistem tarafından sağlanan bir bağlama değilse gereklidir.  
   
-     `/testspec`isteğe bağlıdır.  
+     `/testspec` isteğe bağlıdır.  
   
-     Bu, test belirtimlerine ve bağlamaya göre sunucu ve istemci oluşturur.  
+     Bu, test belirtimlerine ve bağlamaya dayalı olarak sunucu ve istemciler oluşturur.  
   
-     İstemcisini ve sunucuyu yürütür ve sonuçları döndürür.  
+     İstemciyi ve sunucuyu yürütür ve sonuçları döndürür.  
   
-     Aşağıda, test belirtimleri (TestSpec. xml) açıklaması için örnek XML verilmiştir:  
+     Test özelliklerinin (testspec.xml) açıklaması için örnek XML aşağıdavetvelmiyeaşağıdakileri belirteçtir:  
   
     ```xml  
-    <TestSpec xmlns="http://WCF/TestSpec" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"   
+    <TestSpec xmlns="http://WCF/TestSpec" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >  
     <ServiceContract>  
     <!-- Test a contract which has oneway / twoway operations. If you set ExpandAll = true, both types of contracts are tested -->    <IsOneWay ExpandAll="true">true</IsOneWay>  
     <!-- Test a contract with Asynchronous / Synchronous Operations-->  
-        <IsAsync>false</IsAsync>   
-    <!-- Test a sessionful / sessionless contract-->      
+        <IsAsync>false</IsAsync>
+    <!-- Test a sessionful / sessionless contract-->
         <IsSession ExpandAll="true">true</IsSession>  
-    <!-- If the Service Contract includes a CallBack Contract-->      
+    <!-- If the Service Contract includes a CallBack Contract-->
         <IsCallBack ExpandAll="true">true</IsCallBack>  
     </ServiceContract>  
     <TestDetails>  
@@ -56,7 +56,7 @@ ms.locfileid: "70928639"
     <!-- Port Number - Optional-->  
         <Port>8000</Port>  
     <!--URI for the callBack address for the client. The client will receive the messages from the server on this address in case of a CallBack Contract-->  
-        <ClientCallBackAddress/>      
+        <ClientCallBackAddress/>
     <!-- Duration (in sec) after the server has started, it times out - optional(default = 300sec) -->  
         <ServerTimeout>300</ServerTimeout>  
     <!-- Duration (in sec) before the Client initializes -optional(default = 60sec) -->  

@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: c42baa79-f469-4330-95a2-baf7f021c2fc
 topic_type:
 - apiref
-ms.openlocfilehash: 57054bdb7e3b991bc81985c02ec72a4110f31d60
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e5cbd8c5b1bb048088fe137b1359d0bb9e29af20
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436440"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176129"
 ---
 # <a name="couninitiee-enumeration"></a>COUNINITIEE Numaralandırması
-Ortak dil çalışma zamanı başlatılırken [Counınitialeee](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) tarafından kullanılan sabitleri belirtir.  
+Ortak dil çalışma süresini başlatmada [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) tarafından kullanılan sabitleri belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 typedef enum tagCOUNINITEE  
 {  
-    COUNINITEE_DEFAULT  = 0x0,   
+    COUNINITEE_DEFAULT  = 0x0,
     COUNINITEE_DLL      = 0x1  
 } COUNINITIEE;  
 ```  
@@ -38,18 +38,18 @@ typedef enum tagCOUNINITEE
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`COUNINITEE_DEFAULT`|Varsayılan başlatma modunu gösterir.|  
-|`COUNINITEE_DLL`|Bir derlemeyi kaldırmak için başlatma modunu gösterir.|  
+|`COUNINITEE_DEFAULT`|Varsayılan önbaşlatma modunu gösterir.|  
+|`COUNINITEE_DLL`|Bir derlemeyi boşaltmak için başlatma modunu gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

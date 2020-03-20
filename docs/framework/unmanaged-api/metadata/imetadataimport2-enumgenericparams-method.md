@@ -15,59 +15,59 @@ helpviewer_keywords:
 ms.assetid: b50488a5-3cf0-483c-82dc-2892a3ec61ac
 topic_type:
 - apiref
-ms.openlocfilehash: d0377ade5265bba9b313d6ed2e91c446497fac6e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 55709e79cd8bdb36fe1e32ee8a699fccb1b1bbc8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428311"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175310"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams Yöntemi
-Belirtilen TypeDef veya MethodDef belirteciyle ilişkili bir genel parametre belirteçleri dizisi için bir Numaralandırıcı alır.  
+Belirtilen TypeDef veya MethodDef belirteciyle ilişkili genel parametre belirteçleri dizisi için bir sayısallaştırıcı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp
 HRESULT EnumGenericParams (  
-   [in, out] HCORENUM     *phEnum,   
+   [in, out] HCORENUM     *phEnum,
    [in]  mdToken          tk,  
-   [out] mdGenericParam   rGenericParams[],   
-   [in]  ULONG            cMax,   
+   [out] mdGenericParam   rGenericParams[],
+   [in]  ULONG            cMax,
    [out] ULONG            *pcGenericParams  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] Numaralandırıcı için bir işaretçi.  
+ [içinde, dışarı] Sayıya işaretçisi.  
   
  `tk`  
- 'ndaki Genel parametreleri numaralandırılmış olan TypeDef veya MethodDef belirteci.  
+ [içinde] Genel parametreleri numaralandırılacak Olan TypeDef veya MethodDef belirteci.  
   
  `rGenericParams`  
- dışı Numaralandırılacak genel parametrelerin dizisi.  
+ [çıkış] Sayısala' da genel parametreler dizisi.  
   
  `cMax`  
- 'ndaki `rGenericParams`yerleştirmek için istenen en fazla belirteç sayısı.  
+ [içinde] Yerleştirilecek istenen maksimum belirteç `rGenericParams`sayısı.  
   
  `pcGenericParams`  
- dışı `rGenericParams`yerleştirilmiş belirteç sayısı döndürüldü.  
+ [çıkış] Yerleştirilen belirteçlerin döndürülen `rGenericParams`sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams` başarıyla döndürüldü.|  
-|`S_FALSE`|`phEnum` üye öğesi yok. Bu durumda, `pcGenericParams` 0 (sıfır) olarak ayarlanır.|  
+|`S_OK`|`EnumGenericParams`başarıyla döndürülür.|  
+|`S_FALSE`|`phEnum`üye öğesi yoktur. Bu durumda, `pcGenericParams` 0 (sıfır) olarak ayarlanır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: d6a5fa8b-09c6-47a5-b60e-6cf2e355df30
 topic_type:
 - apiref
-ms.openlocfilehash: 2b228337a55d50b94da966b45877e2000b3c03e4
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 988843559e55cc4cacd2a40bb3e6ac51721e99b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866334"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175167"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>ICorProfilerCallback::FunctionUnloadStarted Yöntemi
-Profil oluşturucuyu, çalışma zamanının bir işlevi kaldırmak için başlatıldığını bildirir.  
+Profil oluşturucuya çalışma zamanının bir işlevi boşaltmaya başladığını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT FunctionUnloadStarted(  
-    [in] FunctionID functionId);   
+    [in] FunctionID functionId);
 ```  
   
 ## <a name="parameters"></a>Parametreler
 
 - `functionId`
 
-  \[içinde] bellekten kaldırılmakta olan işlevin KIMLIĞI.
+  \[in] Boşaltılan işlevin kimliği.
 
 ## <a name="remarks"></a>Açıklamalar  
- `functionId` parametresinin değeri, bu yöntem çağırana geri döndüğünde artık geçerli değildir.  
+ Bu yöntem `functionId` arayana döndükten sonra parametrenin değeri artık geçerli değildir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf. IDL, CorProf. h  
+ **Üstbilgi:** CorProf.idl, CorProf.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: 4d69fb6d-ee35-4318-8224-5eea2bd16818
 topic_type:
 - apiref
-ms.openlocfilehash: 0a1d244a4bf077970d2031c3c3b2bc56a0dd3d79
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fe0b4b7fef0d05c4acc06dad5bc8a4eaf0722c9c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426814"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175583"
 ---
 # <a name="imetadataemitsetrva-method"></a>IMetaDataEmit::SetRVA Yöntemi
-Belirtilen metodun göreli sanal adresini ayarlar.  
+Belirtilen yöntemin göreli sanal adresini ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetRVA (  
-    [in]  mdMethodDef  md,   
-    [in]  ULONG        ulRVA   
+    [in]  mdMethodDef  md,
+    [in]  ULONG        ulRVA
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `md`  
- 'ndaki Hedef Yöntem veya yöntem uygulamasına yönelik belirteç.  
+ [içinde] Hedef yöntem veya yöntem uygulaması için belirteç.  
   
  `ulRVA`  
- 'ndaki Kod veya veri alanının adresi.  
+ [içinde] Kodun veya veri alanının adresi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

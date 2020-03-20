@@ -6,57 +6,57 @@ helpviewer_keywords:
 - control patterns, Table
 - TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
-ms.openlocfilehash: 8e929f181255f6738261533fa3261187ebe3c6ff
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0b3d000112060550734890ad3c4063a26c320b04
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447097"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180111"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>UI Otomasyonu Tablo Denetim Düzenini Uygulama
 > [!NOTE]
-> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu dokümantasyon, ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıfları kullanmak <xref:System.Windows.Automation> isteyen .NET Framework geliştiricileri için tasarlanmıştır. Hakkında en son [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bilgi için [Bkz. Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
   
- Bu konuda özellikler, Yöntemler ve olaylar hakkında bilgiler de dahil olmak üzere <xref:System.Windows.Automation.Provider.ITableProvider>uygulamak için yönergeler ve kurallar tanıtılmaktadır. Ek başvuruların bağlantıları genel bakış sonunda listelenir.  
+ Bu konu, özellikler, yöntemler ve <xref:System.Windows.Automation.Provider.ITableProvider>olaylar hakkında bilgiler de dahil olmak üzere uygulama yönergeleri ve kuralları sunar. Ek başvurulara bağlantılar genel bakışın sonunda listelenir.  
   
- <xref:System.Windows.Automation.TablePattern> denetim deseninin bir alt öğe koleksiyonu için kapsayıcılar olarak davranan denetimleri desteklemek için kullanılır. Bu öğenin alt öğeleri <xref:System.Windows.Automation.Provider.ITableItemProvider> uygulamalıdır ve satır ve sütun tarafından çapraz bir şekilde iki boyutlu bir mantıksal koordinat sisteminde düzenlenmelidir. Bu denetim deseninin <xref:System.Windows.Automation.Provider.IGridProvider>benzer şekilde, <xref:System.Windows.Automation.Provider.ITableProvider> uygulayan herhangi bir denetimin her alt öğe için bir sütun ve/veya satır üst bilgisi ilişkisi olması gerekir. Bu denetim modelini uygulayan denetimlerin örnekleri için bkz. [UI Otomasyonu istemcileri Için denetim model eşlemesi](control-pattern-mapping-for-ui-automation-clients.md).  
+ Denetim <xref:System.Windows.Automation.TablePattern> deseni, alt öğelerin toplanması için kapsayıcı görevi yapan denetimleri desteklemek için kullanılır. Bu öğenin alt <xref:System.Windows.Automation.Provider.ITableItemProvider> uygulamak ve satır ve sütun tarafından geçilebilir iki boyutlu bir mantıksal koordinat sistemi içinde organize edilmelidir. Bu denetim <xref:System.Windows.Automation.Provider.IGridProvider>deseni, herhangi bir denetim uygulamasının <xref:System.Windows.Automation.Provider.ITableProvider> her alt öğe için bir sütun ve/veya satır üstbilgi ilişkisini de ortaya koyması gerektiği ayrımıyla benzerdir. Bu denetim deseni uygulayan denetim örnekleri için, [UI Otomasyon Istemcileri için Denetim Deseni Eşleciliği'ne](control-pattern-mapping-for-ui-automation-clients.md)bakın.  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Uygulama kılavuzları ve kuralları  
- Tablo denetim modelini uygularken aşağıdaki kılavuz ve kurallara göz önünde yer verilmiştir:  
+<a name="Implementation_Guidelines_and_Conventions"></a>
+## <a name="implementation-guidelines-and-conventions"></a>Uygulama Yönergeleri ve Sözleşmeleri  
+ Tablo denetim deseni uygulanırken aşağıdaki yönergeleri ve kuralları not edin:  
   
-- Tek tek hücrelerin içeriğine erişim iki boyutlu bir mantıksal koordinat sistemi veya <xref:System.Windows.Automation.Provider.IGridProvider>için gereken eşzamanlı uygulama tarafından sağlanmış dizi.  
+- Tek tek hücrelerin içeriğine erişim, gerekli eşzamanlı uygulama tarafından sağlanan iki boyutlu bir <xref:System.Windows.Automation.Provider.IGridProvider>mantıksal koordinat sistemi veya dizi üzerinden dir.  
   
-- Bir sütun veya satır üst bilgisi, tablo nesnesi içinde veya tablo nesnesiyle ilişkili ayrı bir üst bilgi nesnesi olabilir.  
+- Sütun veya satır üstbilgi bir tablo nesnesi içinde bulunabilir veya bir tablo nesnesi ile ilişkili ayrı bir üstbilgi nesnesi olabilir.  
   
-- Sütun ve satır başlıkları hem birincil üstbilgiyi hem de tüm destekleyici üst bilgileri içerebilir.  
+- Sütun ve satır üstbilgi, hem birincil üstbilgi hem de destekleyici üstbilgi içerebilir.  
   
 > [!NOTE]
-> Bu kavram, bir kullanıcının "Ilk ad" sütunu tanımladığı bir Microsoft Excel elektronik tablosunda görünür hale gelir. Bu sütunda artık iki üst bilgi vardır: Kullanıcı tarafından tanımlanan "Ilk ad" üstbilgisi ve uygulama tarafından atanan sütun için alfasayısal atama.  
+> Bu kavram, bir kullanıcının "Ad" sütunu tanımladığı Microsoft Excel elektronik tablosunda belirgin hale gelir. Bu sütunda artık iki üstbilgi vardır: kullanıcı tarafından tanımlanan "Ad" başlığı ve uygulama tarafından atanan bu sütuniçin alfasayısal atama.  
   
-- İlgili kılavuz işlevselliği için [UI Otomasyonu kılavuz denetim modelini uygulama](implementing-the-ui-automation-grid-control-pattern.md) bölümüne bakın.  
+- İlgili ızgara işlevselliği için [UI Automation Grid Control Modelini uygulama](implementing-the-ui-automation-grid-control-pattern.md) hakkındabkz.  
   
  ![Karmaşık üstbilgi öğeleri içeren tablo.](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
-Karmaşık sütun başlıkları içeren bir tablo örneği  
+Karmaşık Sütun Üstbilgili Tablo Örneği  
   
- ![Belirsiz Roworcolumnana özelliği olan tablo.](./media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
-Belirsiz Roworcolumnana özelliği olan bir tablo örneği  
+ ![Belirsiz RowOrColumnMajor özelliğine sahip tablo.](./media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
+Belirsiz Satır Veya SütunAna Özelliği Olan Tablo Örneği  
   
-<a name="Required_Members_for_ITableProvider"></a>   
-## <a name="required-members-for-itableprovider"></a>ITableProvider için gerekli Üyeler  
- ITableProvider arabirimi için aşağıdaki özellikler ve Yöntemler gereklidir.  
+<a name="Required_Members_for_ITableProvider"></a>
+## <a name="required-members-for-itableprovider"></a>ITableProvider için Gerekli Üyeler  
+ ITableProvider arabirimi için aşağıdaki özellikler ve yöntemler gereklidir.  
   
-|Gerekli Üyeler|Üye türü|Notlar|  
+|Gerekli üyeler|Üye tipi|Notlar|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|Özellik|Yok.|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|Yöntem|Yok.|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Yöntem|Yok.|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|Özellik|None|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|Yöntem|None|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Yöntem|None|  
   
- Bu denetim deseninin ilişkili olayları yok.  
+ Bu denetim deseni ilişkili olaylar vardır.  
   
-<a name="Exceptions"></a>   
-## <a name="exceptions"></a>Özel Durumlar  
- Bu denetim deseninin ilişkili özel durumları yok.  
+<a name="Exceptions"></a>
+## <a name="exceptions"></a>Özel durumlar  
+ Bu denetim deseni ilişkili özel durumlar vardır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

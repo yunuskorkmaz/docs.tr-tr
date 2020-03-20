@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-ms.openlocfilehash: 1aa59ee559abff8006f0ac63a812e4315aa48154
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e2fa5d5a998f51e0e90cfde22b40ec12f278307b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790304"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178358"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType Sabit Listesi
 Bir değişkenin yerel konum türünü gösterir.  
@@ -29,8 +29,8 @@ Bir değişkenin yerel konum türünü gösterir.
 ```cpp  
 typedef enum VariableLocationType  
 {  
-    VLT_REGISTER,               
-    VLT_REGISTER_RELATIVE,      
+    VLT_REGISTER,
+    VLT_REGISTER_RELATIVE,
     VLT_INVALID  
 } VariableLocationType;  
 ```  
@@ -39,22 +39,22 @@ typedef enum VariableLocationType
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`VLT_REGISTER`|Değişken bir yazmaç içinde.|  
-|`VLT_REGISTER_RELATIVE`|Değişken, YAZMAÇ göreli bir bellek konumudur.|  
-|`VLT_INVALID`|Değişken, YAZMAÇ veya yazmaç göreli bellek konumunda depolanmaz.|  
+|`VLT_REGISTER`|Değişken bir kayıtta.|  
+|`VLT_REGISTER_RELATIVE`|Değişken, kayıt bağıyla göreli bellek konumundadır.|  
+|`VLT_INVALID`|Değişken bir kayıt ta veya bir kayıt göreli bellek konumunda depolanmaz.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `VariableLocationType` numaralandırmanın bir üyesi [ıcordebugvariablehome:: GetLocationType](icordebugvariablehome-getlocationtype-method.md) yöntemi tarafından döndürülür.  
+ Numaralandırmanın `VariableLocationType` bir üyesi [ICorDebugVariableHome::GetLocationType](icordebugvariablehome-getlocationtype-method.md) yöntemi ile döndürülür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)
+- [Hata Ayıklama Numaralandırmaları](debugging-enumerations.md)

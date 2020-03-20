@@ -1,5 +1,5 @@
 ---
-title: GetNames işlevi (yönetilmeyen API Başvurusu)
+title: GetNames işlevi (Yönetilmeyen API Başvurusu)
 description: GetNames işlevi bir nesnenin özelliklerinin adlarını alır.
 ms.date: 11/06/2017
 api_name:
@@ -14,100 +14,99 @@ helpviewer_keywords:
 - GetNames function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 5b03ed6a68fbe288e93dedb4f425f1511563dfeb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 449f0ce9c291d4bbcad4947214e56ff46f55beed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73102519"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174959"
 ---
 # <a name="getnames-function"></a>GetNames işlevi
-Bir nesnenin özelliklerinin bir alt kümesini ya da tümünü alır. 
+Bir alt kümeyi veya nesnenin özelliklerinin tüm adlarını alır.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
+
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetNames (
-   [in] int                 vFunc, 
-   [in] IWbemClassObject*   ptr, 
+   [in] int                 vFunc,
+   [in] IWbemClassObject*   ptr,
    [in] LPCWSTR             wszQualifierName,
    [in] LONG                lFlags,
    [in] VARIANT*            pQualifierValue,
    [out] SAFEARRAY (BSTR)** pstrNames
-); 
+);
 ```  
 
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-'ndaki Bu parametre kullanılmıyor.
+[içinde] Bu parametre kullanılmaz.
 
 `ptr`  
-'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
+[içinde] [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine işaretçi.
 
 `wszQualifierName`  
-'ndaki Bir filtrenin parçası olarak çalışan bir niteleyici adı belirten geçerli bir `LPCWSTR` işaretçisi. Daha fazla bilgi için, [açıklamalar](#remarks) bölümüne bakın. Bu parametre `null`olabilir. 
+[içinde] Bir filtrenin `LPCWSTR` parçası olarak çalışan bir niteleyici adı belirten bir geçerli için işaretçi. Daha fazla bilgi için [Açıklamalar](#remarks) bölümüne bakın. Bu parametre `null`olabilir .
 
 `lFlags`  
-'ndaki Bit alanlarının birleşimi. Daha fazla bilgi için, [açıklamalar](#remarks) bölümüne bakın.
+[içinde] Bit alanlarının birleşimi. Daha fazla bilgi için [Açıklamalar](#remarks) bölümüne bakın.
 
-`pQualifierValue`   
-'ndaki Filtre değerine başlatılan geçerli `VARIANT` yapısına yönelik bir işaretçi. Bu parametre `null`olabilir. 
+`pQualifierValue`[içinde] Filtre değerine `VARIANT` başlattı geçerli bir yapıiçin işaretçi. Bu parametre `null`olabilir .
 
 `pstrNames`  
-dışı Özellik adlarını içeren `SAFEARRAY` yapısı. Girişte, bu parametrenin `null`için her zaman bir işaretçi olması gerekir. Daha fazla bilgi için [açıklamalar](#remarks) bölümüne bakın. 
+[çıkış] Özellik `SAFEARRAY` adları içeren bir yapı. Girişte, bu parametre her zaman `null`bir işaretçi olmalıdır. Daha fazla bilgi için [Açıklamalar](#remarks) bölümüne bakın.
 
-## <a name="return-value"></a>Dönüş değeri
+## <a name="return-value"></a>Döndürülen değer
 
-Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
+Bu işlev tarafından döndürülen aşağıdaki değerler *WbemCli.h* üstbilgi dosyasında tanımlanır veya bunları kodunuzdaki sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir veya daha fazla parametre geçerli değil veya bayrakların ve parametrelerin yanlış birleşimi belirtildi. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi gerçekleştirmek için yeterli bellek yok. |
+|`WBEM_E_FAILED` | 0x80041001 | Genel bir başarısızlık oldu. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir veya daha fazla parametre geçerli değildir veya bayraklar ve parametrelerin yanlış bir birleşimi belirtilmiş. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak için yeterli bellek yok. |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev, [IWbemClassObject:: GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getnames) yöntemine bir çağrı kaydırır.
+Bu [işlev, IWbemClassObject::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getnames) yöntemine bir çağrı yıkıyor.
 
-Döndürülen adlı ad, bayrakların ve parametrelerin birleşimiyle denetlenir. Örneğin, işlev tüm özelliklerin adlarını veya yalnızca anahtar özelliklerinin adlarını döndürebilir.  Birincil filtre `lFlags` parametresinde belirtilir ve diğer parametreler buna bağlı olarak değişir.
+Döndürülen ad, bayraklar ve parametrelerin birleşimi tarafından denetlenir. Örneğin, işlev tüm özelliklerin adlarını veya yalnızca anahtar özelliklerinin adlarını döndürebilir.  Birincil filtre `lFlags` parametrede belirtilir ve diğer parametreler buna bağlı olarak değişir.
 
-`lFlags` bayrak değerleri bit alanlardır
+Bayrak değerleri `lFlags` bit alanlarıdır
 
-`lEnumFlags` bağımsız değişkeni olarak geçirilebilecek bayraklar, *Wbemcli. h* üstbilgi dosyasında tanımlanan bit alanlardır veya kodunuzda sabitler olarak tanımlayabilirsiniz.  Her bir grup için herhangi bir bayrak ile bir bayrak birleştirebilirsiniz. Ancak, aynı gruptaki Bayraklar birbirini dışlıyor. 
+`lEnumFlags` Bağımsız değişken olarak geçirilebilen *bayraklar, WbemCli.h* üstbilgi dosyasında tanımlanan bit alanlarıdır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz.  Her gruptan bir bayrağı başka bir gruptan herhangi bir bayrakla birleştirebilirsiniz. Ancak, aynı grubun bayrakları birbirini dışlar.
 
 | Grup 1 bayrakları |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_FLAG_ALWAYS` | 0 | Tüm özellik adlarını döndürür. `strQualifierName` ve `pQualifierVal` kullanılmıyor. |
-| `WBEM_FLAG_ONLY_IF_TRUE` | 1\. | Yalnızca `strQualifierName` parametresi tarafından belirtilen adın niteleyicisi olan özellikleri döndürür. Bu bayrak kullanılırsa, `strQualifierName`belirtmeniz gerekir. |
-|`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Yalnızca `strQualifierName` parametresi tarafından belirtilen adın niteleyicisi olmayan özellikleri döndürür. Bu bayrak kullanılırsa, `strQualifierName`belirtmeniz gerekir. |
-|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Yalnızca `wszQualifierName` parametresi tarafından belirtilen ad niteleyicisi olan ve ayrıca `pQualifierVal` yapısıyla belirtilen değere sahip olan özellikleri döndürür. Bu bayrak kullanılırsa, hem `wszQualifierName` hem de `pQualifierValue`belirtmeniz gerekir. |
+| `WBEM_FLAG_ALWAYS` | 0 | Tüm özellik adlarını döndürün. `strQualifierName`ve `pQualifierVal` kullanılmaz. |
+| `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Yalnızca parametre tarafından belirtilen adı niteleyen `strQualifierName` özellikleri döndürün. Bu bayrak kullanılırsa, `strQualifierName`belirtmelisiniz. |
+|`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Yalnızca parametre tarafından belirtilen adınitelemeye sahip `strQualifierName` olmayan özellikleri döndürün. Bu bayrak kullanılırsa, `strQualifierName`belirtmelisiniz. |
+|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Yalnızca `wszQualifierName` parametre tarafından belirtilen adı niteleyen ve yapı tarafından belirtilen değere sahip `pQualifierVal` özellikleri döndürün. Bu bayrak kullanılırsa, hem `wszQualifierName` a `pQualifierValue`hem de bir . belirtmeniz gerekir |
 
 | Grup 2 bayrakları |Değer  |Açıklama  |
 |---------|---------|---------|
-|`WBEM_FLAG_KEYS_ONLY` | 4, | Yalnızca anahtarları tanımlayan özelliklerin adlarını döndürür. |
-|`WBEM_FLAG_REFS_ONLY` | 0x8 | Yalnızca nesne başvuruları olan özellik adlarını döndürür. |
+|`WBEM_FLAG_KEYS_ONLY` | 0x4 | Yalnızca anahtarları tanımlayan özelliklerin adlarını döndürün. |
+|`WBEM_FLAG_REFS_ONLY` | 0x8 | Yalnızca nesne başvuruları olan özellik adlarını döndürün. |
 
 | Grup 3 bayrakları |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Yalnızca en türetilmiş sınıfa ait olan özellik adlarını döndürür. Üst sınıflardan özellikleri dışlayın. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Yalnızca üst sınıflara ait olan özellik adlarını döndürür. |
-|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Yalnızca sistem özelliklerinin adlarını döndürür. |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Yalnızca sistem dışı özelliklerin adlarını döndürür. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Yalnızca en çok türetilmiş sınıfa ait özellik adlarını döndürün. Özellikleri üst sınıflardan hariç tinler. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Yalnızca üst sınıflara ait özellik adlarını döndürün. |
+|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Yalnızca sistem özelliklerinin adlarını döndürün. |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Yalnızca sistem dışı özelliklerin adlarını döndürün. |
 
-İşlev `WBEM_S_NO_ERROR`döndürürse her zaman yeni bir `SAFEARRAY` ayırır ve `pstrNames` her zaman işaret etmek üzere ayarlanır. Belirtilen filtrelerle eşleşen hiçbir özellik yoksa döndürülen dizide 0 öğesi olabilir. İşlev `WBM_S_NO_ERROR`dışında bir değer döndürürse, yeni bir `SAFEARRAY` yapısı döndürülmez.
- 
+İşlev her zaman `SAFEARRAY` yeni `WBEM_S_NO_ERROR` `pstrNames` bir döner ve her zaman onu işaret etmek için ayarlanır ayırır. Döndürülen dizi, belirtilen filtrelerle hiçbir özellik eşleşmezse 0 elemana sahip olabilir. İşlev, yeni bir `WBM_S_NO_ERROR` `SAFEARRAY` yapının döndürülmesi dışında bir değer döndürür.
+
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** WMINet_Utils. IDL  
+ **Üstbilgi:** WMINet_Utils.idl  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)

@@ -15,44 +15,44 @@ helpviewer_keywords:
 ms.assetid: b5785468-fcd7-4cc3-8a5d-8796337b53fc
 topic_type:
 - apiref
-ms.openlocfilehash: 69e3ecfc82985d52bd5b14e9faf2566e395b622b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aacf9de36dc39b63ed36b672e31f40704413d608
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124650"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176337"
 ---
 # <a name="iclrtaskrudeabort-method"></a>ICLRTask::RudeAbort Yöntemi
-Ortak dil çalışma zamanı 'nın (CLR) geçerli [ICLRTask arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) örneği tarafından temsil edilen görevi hemen ve koşulsuz olarak iptal etmek için yönlendirir.  
+Geçerli [ICLRTask Interface](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) örneği tarafından temsil edilen görevi derhal ve koşulsuz olarak iptal etmesi için ortak dil çalışma süresine (CLR) talimat verir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT RudeAbort ();   
+HRESULT RudeAbort ();
 ```  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`RudeAbort` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
-|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|S_OK|`RudeAbort`başarıyla döndürülür.|  
+|HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmedi veya CLR yönetilen kodu çalıştıramadığı veya aramayı başarıyla işleyemediği bir durumdadır.|  
+|HOST_E_TIMEOUT|Arama zaman doldu.|  
+|HOST_E_NOT_OWNER|Arayan kilidin sahibi değildir.|  
 |HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
-|E_FAıL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_faıl|Bilinmeyen bir felaket hatası meydana geldi. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılabilir. Barındırma yöntemleri sonraki aramalar HOST_E_CLRNOTAVAILABLE döndürün.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir konak bir görevi hemen durdurmak için `RudeAbort` çağırır. Sonlandırıcılar ve özel durum işleme yordamlarının yürütülmesi garanti edilmez.  
+ Bir ev `RudeAbort` sahibi, bir görevi hemen iptal etmek için çağrıda bulunur. Sonlandırıcılar ve özel durum işleme rutinlerinin yürütülmesi garanti edilmez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE. h  
+ **Üstbilgi:** MSCorEE.h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MSCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,54 +15,54 @@ helpviewer_keywords:
 ms.assetid: c30a4ce3-2d3e-411a-98df-e62ac4a5dd50
 topic_type:
 - apiref
-ms.openlocfilehash: 3dfdd473b01bfe83def52f957c52e0f4d11375ad
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 23a6931b31ea2d7e4e8d1cb3dc8adf3a51216315
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434388"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175752"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName Yöntemi
-Geçerli kapsamın dışında belirtilen kapsamda tanımlı bir tür için meta veri belirteci alır.  
+Geçerli kapsam dışında, belirtilen kapsamda tanımlanan bir tür için bir meta veri belirteci alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT DefineTypeRefByName (   
-    [in]  mdToken     tkResolutionScope,   
-    [in]  LPCWSTR     szName,   
-    [out] mdTypeRef   *ptr   
+HRESULT DefineTypeRefByName (
+    [in]  mdToken     tkResolutionScope,
+    [in]  LPCWSTR     szName,
+    [out] mdTypeRef   *ptr
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `tkResolutionScope`  
- 'ndaki Çözümleme kapsamını belirten belirteç. Aşağıdaki belirteç türleri geçerlidir:  
+ [içinde] Çözüm kapsamını belirten belirteç. Aşağıdaki belirteç türleri geçerlidir:  
   
-- `mdModuleRef`, çağıran tarafından tanımlanan derlemede tanımlanırsa.  
+- `mdModuleRef`, tür, arayanın tanımlandığı aynı derlemede tanımlanırsa.  
   
-- `mdAssemblyRef`, tür arayanın tanımlandığı bir derlemede tanımlıysa.  
+- `mdAssemblyRef`, tür, arayanın tanımlandığı derleme den başka bir derlemede tanımlanmışsa.  
   
-- tür iç içe bir tür ise `mdTypeRef`.  
+- `mdTypeRef`, tür iç içe bir tür ise.  
   
-- `mdModule`, çağıran tarafından tanımlanan modül içinde tanımlanmışsa.  
+- `mdModule`, tür, arayanın tanımlandığı aynı modülde tanımlanmışsa.  
   
-- Tür genel olarak tanımlanmışsa null.  
+- Null, tür genel olarak tanımlanırsa.  
   
  `szName`  
- 'ndaki Unicode 'daki hedef türünün adı.  
+ [içinde] Unicode'da hedef türün adı.  
   
  `ptr`  
- dışı Türe atanan `mdTypeRef` belirtecine yönelik bir işaretçi.  
+ [çıkış] Türe `mdTypeRef` atanan belirteç için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

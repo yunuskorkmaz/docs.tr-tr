@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-ms.openlocfilehash: 854d3ad28cc00c03e903b9e1d2ce3863e3ceef17
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cc8aac32149fed952737d928e16a8f6efc448c79
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436100"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177129"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo Yöntemi
-Belirtilen tabloda belirtilen sütunla ilgili verileri alır.  
+Belirtilen tabloda belirtilen sütun hakkında veri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT GetColumnInfo (   
+HRESULT GetColumnInfo (
     [in]  ULONG        ixTbl,  
     [in]  ULONG        ixCol,  
     [out] ULONG        *poCol,  
@@ -42,57 +42,57 @@ HRESULT GetColumnInfo (
 =======
 
  `ixTbl`  
- 'ndaki İstenen tablonun dizini.  
+ [içinde] İstenilen tablonun dizini.  
   
  `ixCol`  
- 'ndaki İstenen sütunun dizini.  
+ [içinde] İstenilen sütunun dizini.  
   
  `poCol`  
- dışı Satırdaki sütunun uzaklığa yönelik bir işaretçi.  
+ [çıkış] Satırdaki sütunun mahsup için bir işaretçi.  
   
  `pcbCol`  
- dışı Sütunun bayt cinsinden boyutu için bir işaretçi.  
+ [çıkış] Sütunun boyutuna, baytlarda bir işaretçi.  
   
  `pType`  
- dışı Sütundaki değerlerin türüne yönelik bir işaretçi.  
+ [çıkış] Sütundaki değerlerin türüne işaretçi.  
   
  `ppName`  
- dışı Sütun adı işaretçisinin işaretçisi.  
- 
+ [çıkış] Sütun adına işaretçi için bir işaretçi.  
+
 ## <a name="remarks"></a>Açıklamalar
 
-Döndürülen sütun türü bir değer aralığı içinde yer alıyorsa:
+Döndürülen sütun türü bir değer aralığına girer:
 
-| pType                    | Açıklama   | Yardımcı işlevi                   |
+| pTipi                    | Açıklama   | Yardımcı işlevi                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0.. 63)   | Rid           | **Isrbıtype türü**<br>**IsRidOrToken** |
-| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | Kodlanmış belirteç | **IsCodedTokenType** <br>**IsRidOrToken** |
-| `iSHORT` (96)            | Int16         | **IsFixedType**                   |
-| `iUSHORT` (97)           | UInt16        | **IsFixedType**                   |
-| `iLONG` (98)             | Int32         | **IsFixedType**                   |
-| `iULONG` (99)            | UInt32        | **IsFixedType**                   |
-| `iBYTE` (100)            | Bayt          | **IsFixedType**                   |
-| `iSTRING` (101)          | Dize        | **IsHeapType**                    |
-| `iGUID` (102)            | Guid          | **IsHeapType**                    |
-| `iBLOB` (103)            | Blob          | **IsHeapType**                    |
+| `0`..`iRidMax`<br>(0..63)   | Kurtulmak           | **IsRidType**<br>**IsRidOrToken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | Kodlanmış belirteç | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `iSHORT`(96)            | Int16         | **IsFixedType**                   |
+| `iUSHORT`(97)           | UInt16        | **IsFixedType**                   |
+| `iLONG`(98)             | Int32         | **IsFixedType**                   |
+| `iULONG`(99)            | UInt32        | **IsFixedType**                   |
+| `iBYTE`(100)            | Bayt          | **IsFixedType**                   |
+| `iSTRING`(101)          | Dize        | **IsHeapType**                    |
+| `iGUID`(102)            | Guid          | **IsHeapType**                    |
+| `iBLOB`(103)            | Blob          | **IsHeapType**                    |
 
-*Yığında* depolanan değerler (yani, `IsHeapType == true`) kullanılarak okunabilir:
+*Yığında* depolanan değerler (diğer bir `IsHeapType == true`deyişle), aşağıdakiler kullanılarak okunabilir:
 
-- `iSTRING`: **IMetaDataTables. GetString**
-- `iGUID`: **IMetaDataTables. GetGUID**
-- `iBLOB`: **IMetaDataTables. GetBlob**
+- `iSTRING`: **IMetadataTables.GetString**
+- `iGUID`: **IMetadataTables.GetGUID**
+- `iBLOB`: **IMetadataTables.GetBlob**
 
 > [!IMPORTANT]
-> Yukarıdaki tabloda tanımlanan sabitleri kullanmak için *Cor. h* üstbilgi dosyası tarafından sunulan yönerge `#define _DEFINE_META_DATA_META_CONSTANTS` ekleyin.
+> Yukarıdaki tabloda tanımlanan sabitleri kullanmak için `#define _DEFINE_META_DATA_META_CONSTANTS` *cor.h* üstbilgi dosyası tarafından sağlanan yönergeyi ekleyin.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

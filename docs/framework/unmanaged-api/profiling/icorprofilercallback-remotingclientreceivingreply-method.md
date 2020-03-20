@@ -15,47 +15,47 @@ helpviewer_keywords:
 ms.assetid: 15cfc300-8231-4ecb-9a04-19851c3eb484
 topic_type:
 - apiref
-ms.openlocfilehash: 62973a36e899b1a8c618888e5245bfc00d8ad777
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f7a943627e2087e6b8c78ced9fc32824843d44fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866078"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175141"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply Yöntemi
-Profil oluşturucuya, uzaktan iletişim çağrısının sunucu tarafı bölümünün tamamlandığını ve istemcinin artık yanıtı aldığını ve yanıt işlemesini bildirir.  
+Profiloluşturucuya, remoting çağrısının sunucu tarafındaki bölümünün tamamlandığını ve istemcinin şimdi yanıtı aldığını ve işlemek üzere olduğunu belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT RemotingClientReceivingReply(  
     [in] GUID *pCookie,  
-    [in] BOOL fIsAsync);   
+    [in] BOOL fIsAsync);
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pCookie`  
- 'ndaki Şu koşullarda [ICorProfilerCallback:: RemotingServerSendingReply](icorprofilercallback-remotingserversendingreply-method.md) içinde belirtilen değere karşılık gelen bir değer:  
+ [içinde] Bu koşullar altında ICorProfilerCallback sağlanan değer ile karşılık gelecek bir [değer::RemotingServerSendingReply:](icorprofilercallback-remotingserversendingreply-method.md)  
   
-- Uzaktan iletişim GUID tanımlama bilgileri etkin.  
+- GUID tanımlama bilgilerini remoting etkindir.  
   
-- Kanal, iletiyi iletmede başarılı olur.  
+- Kanal iletiyi iletmede başarılı dır.  
   
-- GUID tanımlama bilgileri, sunucu tarafı işleminde etkindir.  
+- GUID tanımlama bilgileri sunucu tarafında etkindir.  
   
- Bu, uzaktan iletişim çağrılarının kolayca eşleştirilmesini sağlar.  
+ Bu, remoting çağrılarının kolay eşleşmesini sağlar.  
   
  `fIsAsync`  
- 'ndaki Çağrı zaman uyumsuz ise `true` bir değer; Aksi takdirde, `false`.  
+ [içinde] Arama nın `true` eşzamanlı olması durumunda ki değer; aksi `false`takdirde, .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf. IDL, CorProf. h  
+ **Üstbilgi:** CorProf.idl, CorProf.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

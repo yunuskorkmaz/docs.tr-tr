@@ -12,52 +12,52 @@ api_type:
 ms.assetid: 0c8676f8-ca0d-4998-b64d-fefac7e38912
 topic_type:
 - apiref
-ms.openlocfilehash: 017c14e9170087f3c3c9de64f50d165fc91aa297
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ee263e8c49cd6da7278bd2299557336629720d2f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76782412"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178772"
 ---
 # <a name="icordebugilframe4getlocalvariableex-method"></a>ICorDebugILFrame4::GetLocalVariableEx Yöntemi
 [.NET Framework 4.5.2 ve sonraki sürümlerde desteklenir]  
   
- Bu ara dil (IL) yığın çerçevesinde belirtilen yerel değişkenin değerini alır ve isteğe bağlı olarak profil oluşturucu yeniden JIT araçlarına eklenen bir değişkene erişir.  
+ Bu ara dil (IL) yığın çerçevesinde belirtilen yerel değişkenin değerini alır ve isteğe bağlı olarak profiloluşturucu ReJIT enstrümantasyonuna eklenen bir değişkene erişir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp
 HRESULT GetLocalVariableEx(  
-   [in] ILCodeKind flags,   
-   [in] DWORD dwIndex,   
+   [in] ILCodeKind flags,
+   [in] DWORD dwIndex,
    [out] ICorDebugValue **ppValue  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `flags`  
- 'ndaki Profil Oluşturucu ReJIT araçlarına eklenen bir değişkenin çerçeveye dahil edilip edilmeyeceğini belirten bir [ılcodekind](ilcodekind-enumeration.md) numaralandırma üyesi.  
+ [içinde] Profiloluşturr ReJIT enstrümantasyonuna eklenen bir değişkenin çerçeveye dahil edilip edilmeyeceğini belirten bir [ILCodeKind](ilcodekind-enumeration.md) numaralandırma üyesi.  
   
  `dwIndex`  
- 'ndaki Il yığın çerçevesindeki yerel değişkenin dizini.  
+ [içinde] IL yığın çerçevesinde yerel değişkenin dizin.  
   
  `ppValue`  
- dışı Alınan değeri temsil eden bir "ICorDebugValue" nesnesinin adresine yönelik bir işaretçi.  
+ [çıkış] Alınan değeri temsil eden bir "ICorDebugValue" nesnesinin adresine işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, isteğe bağlı olarak profil oluşturucu yeniden JIT araçları 'nda eklenen bir değişkene eriştiği için [GetLocalVariable](icordebugilframe-getlocalvariable-method.md) yöntemine benzerdir. Bu yöntemin `flags` bir `ILCODE_ORIGINAL_IL` çağrısı [GetLocalVariable](icordebugilframe-getlocalvariable-method.md)çağrısı ile eşdeğerdir; Yöntem ek yerel değişkenlerle birlikte işaretlenmiş ise, bu değişkenlere erişilemez. `ILCODE_REJIT_IL`, hata ayıklayıcının profil oluşturucu ReJIT araçları 'nda eklenen yerel değişkenlere erişmesine izin verir. Il görünmüyorsa, yöntem `E_INVALIDARG`döndürür.  
+ Bu yöntem, profiler ReJIT enstrümantasyonuna eklenen bir değişkene isteğe bağlı olarak erişilmesi dışında [GetLocalVariable](icordebugilframe-getlocalvariable-method.md) yöntemine benzer. Bu yöntemi `flags` bir değerle çağırmak [GetLocalVariable'i](icordebugilframe-getlocalvariable-method.md)aramaya `ILCODE_ORIGINAL_IL` eşdeğerdir; yöntem ek yerel değişkenlerle çalgılanmışsa, bu değişkenlere erişilemez. `ILCODE_REJIT_IL`hata ayıklayıcının profil oluşturucu ReJIT enstrümantasyonuna eklenen yerel değişkenlere erişmesine izin verir. IL aracılı değilse, yöntem döndürür. `E_INVALIDARG`  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ICorDebugILFrame4 Arabirimi](icordebugilframe4-interface.md)
 - [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
-- [ReJIT: nasıl yapılır Kılavuzu](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: Nasıl Yapilir Kılavuzu](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

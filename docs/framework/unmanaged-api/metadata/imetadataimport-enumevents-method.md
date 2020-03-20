@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: e1efedcb-3dd7-42ae-a399-21c24728aec5
 topic_type:
 - apiref
-ms.openlocfilehash: 4faf8646b81f92ddf65eff15fdc610d275b37864
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bd50d63b1f7080f510c29f90979b7b36242af1c0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440013"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177367"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents Yöntemi
-Belirtilen TypeDef belirtecinin olay tanımı belirteçlerini numaralandırır.  
+Belirtilen TypeDef belirteci için olay tanımı belirteçlerini oyalar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT EnumEvents (   
-   [in, out] HCORENUM    *phEnum,   
-   [in]      mdTypeDef   td,   
-   [out]     mdEvent     rEvents[],   
+HRESULT EnumEvents (
+   [in, out] HCORENUM    *phEnum,
+   [in]      mdTypeDef   td,
+   [out]     mdEvent     rEvents[],
    [in]      ULONG       cMax,  
    [out]    ULONG        *pcEvents  
 );  
@@ -39,35 +39,35 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] Numaralandırıcı için bir işaretçi.  
+ [içinde, dışarı] Sayıya işaretçisi.  
   
  `td`  
- 'ndaki Olay tanımları Numaralandırılacak olan TypeDef belirteci.  
+ [içinde] Olay tanımları numaralandırılacak Olan TypeDef belirteci.  
   
  `rEvents`  
- dışı Döndürülen olayların dizisi.  
+ [çıkış] Döndürülen olaylar dizisi.  
   
  `cMax`  
- 'ndaki `rEvents` dizisinin en büyük boyutu.  
+ [içinde] `rEvents` Dizinin en büyük boyutu.  
   
  `pcEvents`  
- dışı `rEvents`döndürülen gerçek olay sayısı.  
+ [çıkış] Döndürülen olayların gerçek `rEvents`sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak olay yok. Bu durumda `pcEvents` sıfırdır.|  
+|`S_OK`|`EnumEvents`başarıyla döndürülür.|  
+|`S_FALSE`|Sayısalolarak kaydolacak bir olay yok. Bu durumda, `pcEvents` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

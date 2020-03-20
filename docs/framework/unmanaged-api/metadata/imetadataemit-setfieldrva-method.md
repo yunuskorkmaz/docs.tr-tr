@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: 6dc37f9d-87ee-4cb3-9216-ced600184ce8
 topic_type:
 - apiref
-ms.openlocfilehash: 501199bedec3b7a65d95c80cdef178831a65fd01
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7648a1b3d219ee5d2b1ddc6b26f7b65c9ac85105
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428411"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175648"
 ---
 # <a name="imetadataemitsetfieldrva-method"></a>IMetaDataEmit::SetFieldRVA Yöntemi
-Belirtilen belirtecin başvurduğu alanın göreli sanal adresi için genel bir değişken değeri ayarlar.  
+Belirtilen belirteç tarafından başvurulan alanın göreli sanal adresi için genel bir değişken değeri ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT SetFieldRVA (   
-    [in]  mdFieldDef  fd,   
-    [in]  ULONG       ulRVA   
+HRESULT SetFieldRVA (
+    [in]  mdFieldDef  fd,
+    [in]  ULONG       ulRVA
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `fd`  
- 'ndaki Hedef alan için belirteç.  
+ [içinde] Hedef alanın belirteci.  
   
  `ulRVA`  
- 'ndaki Bir kodun veya veri alanının adresi.  
+ [içinde] Bir kodun veya veri alanının adresi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

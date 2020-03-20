@@ -15,63 +15,63 @@ helpviewer_keywords:
 ms.assetid: 37fd27af-8062-4904-ace4-51bb78ec600a
 topic_type:
 - apiref
-ms.openlocfilehash: 5b4b0682b2bddff96cb3d720900ed3aa39f06f9d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6825a5198976cc7ab2c04ebd6e782418dcf4a8f7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431844"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177688"
 ---
 # <a name="imetadataemitdefineimporttype-method"></a>IMetaDataEmit::DefineImportType Yöntemi
-Geçerli kapsamın dışında tanımlanan belirtilen türe bir başvuru oluşturur ve bu başvuru için bir belirteç tanımlar.  
+Geçerli kapsam dışında tanımlanan belirtilen türe bir başvuru oluşturur ve bu başvuru için bir belirteç tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT DefineImportType (   
-    [in]  IMetaDataAssemblyImport  *pAssemImport,   
-    [in]  const void               *pbHashValue,   
-    [in]  ULONG                    cbHashValue,    
-    [in]  IMetaDataImport          *pImport,   
-    [in]  mdTypeDef                tdImport,   
-    [in]  IMetaDataAssemblyEmit    *pAssemEmit,   
+HRESULT DefineImportType (
+    [in]  IMetaDataAssemblyImport  *pAssemImport,
+    [in]  const void               *pbHashValue,
+    [in]  ULONG                    cbHashValue,
+    [in]  IMetaDataImport          *pImport,
+    [in]  mdTypeDef                tdImport,
+    [in]  IMetaDataAssemblyEmit    *pAssemEmit,
     [out] mdTypeRef                *ptr  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pAssemImport`  
- 'ndaki Hedef türün içeri aktarıldığı derlemeyi temsil eden bir [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) arabirimi.  
+ [içinde] Hedef türün içe aktarıldığı derlemeyi temsil eden bir [IMetaDataAssemblyAlma](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) arabirimi.  
   
  `pbHashValue`  
- 'ndaki `pAssemImport`tarafından belirtilen derlemenin karmasını içeren bir dizi.  
+ [içinde] Tarafından belirtilen derleme için karma içeren `pAssemImport`bir dizi.  
   
  `cbHashValue`  
- 'ndaki `pbHashValue` dizisindeki bayt sayısı.  
+ [içinde] Dizideki `pbHashValue` bayt sayısı.  
   
  `pImport`  
- 'ndaki Hedef türün içeri aktarıldığı meta veri kapsamını temsil eden bir [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) arabirimi.  
+ [içinde] Hedef türün içe aktarıldığı meta veri kapsamını temsil eden bir [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) arabirimi.  
   
  `tdImport`  
- 'ndaki Hedef türünü belirten `mdTypeDef` belirteci.  
+ [içinde] `mdTypeDef` Hedef türünü belirten bir belirteç.  
   
  `pAssemEmit`  
- 'ndaki Hedef türün içeri aktarıldığı derlemeyi temsil eden bir [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) arabirimi.  
+ [içinde] Hedef türün içe aktarıldığı derlemeyi temsil eden bir [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) arabirimi.  
   
  `ptr`  
- dışı Tür başvurusu için geçerli kapsamda tanımlanan `mdTypeRef` belirteci.  
+ [çıkış] Tür `mdTypeRef` başvurusu için geçerli kapsamda tanımlanan belirteç.  
   
 ## <a name="remarks"></a>Açıklamalar  
- [Imetadatayayma::D Efineımportmember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) metodunu çağırmadan önce, üyenin üst sınıfı veya üst arabirimi için geçerli kapsamda bir tür başvurusu oluşturmak için `DefineImportType` yöntemini kullanabilirsiniz.  
+ [IMetaDataEmit::DefineImportMember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) yöntemini aramadan önce, `DefineImportType` geçerli kapsamda, üyenin üst sınıfı veya üst arabirimi için bir tür başvurusu oluşturmak için yöntemi kullanabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

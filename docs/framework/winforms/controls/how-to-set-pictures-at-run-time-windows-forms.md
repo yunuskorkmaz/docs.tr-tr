@@ -13,25 +13,25 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: bd0509c05fd9c1cfc0c631fcd613c64d20296f6b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: cd599ac7e07b5210f8bcff1ffbc76b3d9ee563d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746740"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182113"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Nasıl yapılır: Çalışma Zamanında Resimleri Ayarlama (Windows Forms)
-Bir Windows Forms <xref:System.Windows.Forms.PictureBox> denetimi tarafından görünen görüntüyü programlı bir şekilde ayarlayabilirsiniz.  
+Windows Forms <xref:System.Windows.Forms.PictureBox> denetimi tarafından görüntülenen görüntüyü programlı olarak ayarlayabilirsiniz.  
   
-### <a name="to-set-a-picture-programmatically"></a>Bir resmi programlı bir şekilde ayarlamak için  
+### <a name="to-set-a-picture-programmatically"></a>Resmi programlı olarak ayarlamak için  
   
-- <xref:System.Drawing.Image> sınıfının <xref:System.Drawing.Image.FromFile%2A> yöntemini kullanarak <xref:System.Windows.Forms.PictureBox.Image%2A> özelliğini ayarlayın.  
+- Sınıfın <xref:System.Windows.Forms.PictureBox.Image%2A> yöntemini <xref:System.Drawing.Image.FromFile%2A> kullanarak özelliği ayarlayın. <xref:System.Drawing.Image>  
   
-     Aşağıdaki örnekte, görüntü konumu için ayarlanan yol Belgelerim klasörüdür. Bu, Windows işletim sistemini çalıştıran bilgisayarların çoğunun bu dizini içerdiğini varsaydığı için yapılır. Bu Ayrıca, en az sistem erişim düzeylerine sahip kullanıcıların uygulamayı güvenle çalıştırmasına olanak tanır. Aşağıdaki örnekte, <xref:System.Windows.Forms.PictureBox> denetimi zaten eklenmiş bir form varsayılır.  
+     Aşağıdaki örnekte, görüntünün konumu için ayarlanan yol Belgelerim klasörüdür. Windows işletim sistemini çalıştıran bilgisayarların çoğunun bu dizini içereceğini varsayabileceğinizden, bu işlem yapılır. Bu aynı zamanda en az sistem erişim düzeylerine sahip kullanıcıların uygulamayı güvenli bir şekilde çalıştırmasına olanak tanır. Aşağıdaki <xref:System.Windows.Forms.PictureBox> örnekte, denetimzaten eklenmiştir.  
   
     ```vb  
     Private Sub LoadNewPict()  
-       ' You should replace the bold image   
+       ' You should replace the bold image
        ' in the sample below with an icon of your own choosing.  
        PictureBox1.Image = Image.FromFile _  
        (System.Environment.GetFolderPath _  
@@ -42,7 +42,7 @@ Bir Windows Forms <xref:System.Windows.Forms.PictureBox> denetimi tarafından g�
   
     ```csharp  
     private void LoadNewPict(){  
-       // You should replace the bold image   
+       // You should replace the bold image
        // in the sample below with an icon of your own choosing.  
        // Note the escape character used (@) when specifying the path.  
        pictureBox1.Image = Image.FromFile  
@@ -56,7 +56,7 @@ Bir Windows Forms <xref:System.Windows.Forms.PictureBox> denetimi tarafından g�
     private:  
        void LoadNewPict()  
        {  
-          // You should replace the bold image   
+          // You should replace the bold image
           // in the sample below with an icon of your own choosing.  
           pictureBox1->Image = Image::FromFile(String::Concat(  
              System::Environment::GetFolderPath(  
@@ -65,9 +65,9 @@ Bir Windows Forms <xref:System.Windows.Forms.PictureBox> denetimi tarafından g�
        }  
     ```  
   
-### <a name="to-clear-a-graphic"></a>Grafiği temizlemek için  
+### <a name="to-clear-a-graphic"></a>Bir grafiği temizlemek için  
   
-- İlk olarak, görüntü tarafından kullanılan belleği serbest bırakın ve grafiği temizleyin. Bellek yönetimi bir sorun haline gelirse çöp toplama belleği daha sonra boşaltacaktır.  
+- Önce görüntü tarafından kullanılan belleği bırakın ve ardından grafiği temizleyin. Bellek yönetimi bir sorun haline gelirse çöp toplama daha sonra bellek kadar serbest olacaktır.  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  
@@ -77,7 +77,7 @@ Bir Windows Forms <xref:System.Windows.Forms.PictureBox> denetimi tarafından g�
     ```  
   
     ```csharp  
-    if (pictureBox1.Image != null)   
+    if (pictureBox1.Image != null)
     {  
        pictureBox1.Image.Dispose();  
        pictureBox1.Image = null;  
@@ -93,9 +93,9 @@ Bir Windows Forms <xref:System.Windows.Forms.PictureBox> denetimi tarafından g�
     ```  
   
     > [!NOTE]
-    > <xref:System.Drawing.Image.Dispose%2A> yöntemini bu şekilde nasıl kullanmanız gerektiği hakkında daha fazla bilgi için bkz. [yönetilmeyen kaynakları temizleme](../../../standard/garbage-collection/unmanaged.md).  
+    > <xref:System.Drawing.Image.Dispose%2A> Yöntemi neden bu şekilde kullanmanız gerektiği hakkında daha fazla bilgi için, [Yönetilmeyen Kaynakları Temizleme'ye](../../../standard/garbage-collection/unmanaged.md)bakın.  
   
-     Bu kod, tasarım zamanında denetime bir grafik yüklense bile görüntüyü temizler.  
+     Bu kod, bir grafik tasarım zamanında denetime yüklense bile görüntüyü temizler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

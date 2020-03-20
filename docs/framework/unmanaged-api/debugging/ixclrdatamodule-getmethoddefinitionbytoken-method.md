@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataModule::GetMethodDefinitionByToken yöntemi
+title: IXCLRDataModule::GetMethodDefinitionByToken Yöntemi
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::GetMethodDefinitionByToken Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2c0cf56f108396226b7c7399f6da75e5f47d36f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 294c5340caf2217f9337d654a11a63a43d46febd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744676"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176675"
 ---
-# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>IXCLRDataModule::GetMethodDefinitionByToken yöntemi
+# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>IXCLRDataModule::GetMethodDefinitionByToken Yöntemi
 
-Belirli bir metaveri belirteci için karşılık gelen yöntem tanımını alır.
+Belirli bir meta veri belirtecikarşılık gelen yöntem tanımıalır.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,23 +40,23 @@ HRESULT GetMethodDefinitionByToken(
 ## <a name="parameters"></a>Parametreler
 
 `token`\
-[in] Token metody
+[içinde] Yöntem belirteci.
 
 `methodDefinition`\
-[out] Yöntem tanımı.
+[çıkış] Yöntem tanımı.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sağlanan yöntem parçasıdır `IXCLRDataModule` arabirim ve 25 sanal yöntem tablosunu yuvasına karşılık gelir.
+Sağlanan yöntem `IXCLRDataModule` arabirimin bir parçasıdır ve sanal yöntem tablosunun 25 yuvasına karşılık gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** Yok.  
-**Kitaplığı:** Yok.  
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
- 
+**Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Üstbilgi:** Hiçbiri  
+**Kütüphane:** Hiçbiri  
+**.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama](index.md)
-- [IXCLRDataModule arabirimi](ixclrdatamodule-interface.md)
+- [Hata ayıklama](index.md)
+- [IXCLRDataModule Arabirimi](ixclrdatamodule-interface.md)

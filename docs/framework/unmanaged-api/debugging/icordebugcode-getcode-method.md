@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-ms.openlocfilehash: 14a72e4622aac09840e43f8bcdcf8a8c8d6e6892
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: fde76c3b34fcc9f2321f3426d2801b310f681067
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777913"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178992"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode Metodu
-Ayrıştırılmış derleme için biçimlendirilen, belirtilen işlevin tüm kodunu alır. Bu yöntem 2,0 .NET Framework sürümünde kullanımdan kaldırılmıştır. Bunun yerine [ICorDebugCode2:: Getcodeöbekleri](icordebugcode2-getcodechunks-method.md) kullanın.  
+Belirtilen işlevin tüm kodunu alır, sökme için biçimlendirilir. Bu yöntem .NET Framework sürüm 2.0'da amortismana hazırlanmıştır. Bunun yerine [ICorDebugCode2::GetCodeChunks](icordebugcode2-getcodechunks-method.md) kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetCode (  
-    [in] ULONG32     startOffset,   
+    [in] ULONG32     startOffset,
     [in] ULONG32     endOffset,  
     [in] ULONG32     cBufferAlloc,  
     [out, size_is(cBufferAlloc),  
@@ -40,31 +40,31 @@ HRESULT GetCode (
   
 ## <a name="parameters"></a>Parametreler  
  `startOffset`  
- 'ndaki İşlevin başlangıcının boşluğu.  
+ [içinde] Fonksiyonun başlangıcının mahsup.  
   
  `endOffset`  
- 'ndaki İşlevin sonundaki fark.  
+ [içinde] Fonksiyonun sonu mahsup.  
   
  `cBufferAlloc`  
- 'ndaki Kodun döndürüleceği `buffer` dizisinin boyutu.  
+ [içinde] Kodun `buffer` döndürüleceği dizinin boyutu.  
   
  `buffer`  
- dışı Kodun döndürüleceği dizi.  
+ [çıkış] Kodun döndürüleceği dizi.  
   
  `pcBufferSize`  
- dışı Döndürülen bayt sayısı.  
+ [çıkış] Döndürülen bayt sayısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlevin kodu birden çok Öbekle ayrılmışsa, bu değerler artan yerel uzaklığa göre birleştirilir. Yönerge sınırları denetlenmez.  
+ İşlevin kodu birden çok parçaya bölündüyse, yerel ofset'i artırmak amacıyla kısıtlanırlar. Talimat sınırları denetlenmez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** 1,1, 1,0  
+ **.NET Çerçeve Sürümleri:** 1.1, 1.0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

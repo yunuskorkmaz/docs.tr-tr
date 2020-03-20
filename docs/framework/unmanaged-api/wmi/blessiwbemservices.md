@@ -1,6 +1,6 @@
 ---
-title: Blessıwbemservices işlevi (yönetilmeyen API Başvurusu)
-description: Blessıwbemservices işlevi, Kullanıcı kimlik bilgilerinin bir IWbemServices sınıfına erişime izin verip vermediğini belirtir.
+title: BlessIWbemServices fonksiyonu (Yönetilmeyen API Başvurusu)
+description: BlessIWbemServices işlevi, kullanıcı kimlik bilgilerinin bir IWbemServices sınıfına erişime izin verip vermediğini gösterir.
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServices
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - BlessIWbemServices function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 946d29892052ea69c2a8a3bf11e7be7a1b2d7068
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4b15af840cc00b3ec261604db4f3625c6b975d3e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138776"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176870"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices işlevi
-Kullanıcı kimlik bilgilerinin belirtilen [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) sınıfına erişime izin verip vermediğini belirtir.   
+Kullanıcı kimlik bilgilerinin belirtilen [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) sınıfına erişime izin verip vermediğini gösterir.
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -31,10 +31,10 @@ Kullanıcı kimlik bilgilerinin belirtilen [IWbemServices](/windows/desktop/api/
 ```cpp
 HRESULT BlessIWbemServices (
    [in] IWbemServices* pIWbemServices,
-   [in] BSTR strUser, 
-   [in] BSTR strPassword, 
-   [in] BSTR strAuthority, 
-   [in] DWORD impLevel, 
+   [in] BSTR strUser,
+   [in] BSTR strPassword,
+   [in] BSTR strAuthority,
+   [in] DWORD impLevel,
    [in] DWORD authnLevel
 );
 ```  
@@ -42,43 +42,43 @@ HRESULT BlessIWbemServices (
 ## <a name="parameters"></a>Parametreler
 
 `pIWbemServices`\
-'ndaki İzinleri gerekli olan [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) nesnesine yönelik bir işaretçi.
+[içinde] İzinlerin gerekli olduğu [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) nesnesine bir işaretçi.
 
 `strUser`\
-'ndaki Kullanıcı adı.
+[içinde] Kullanıcı adı.
 
 `strPassword`\
-'ndaki `strUser`ilişkili parola.
+[içinde] `strUser`' ile ilişkili parola
 
 `strAuthority`\
-'ndaki Kullanıcının etki alanı adı. Daha fazla bilgi için bkz. [Connectserverwmi](connectserverwmi.md) işlevi.
+[içinde] Kullanıcının etki alanı adı. Daha fazla bilgi için [ConnectServerWmi](connectserverwmi.md) işlevine bakın.
 
 `impLevel`\
-'ndaki Kimliğe bürünme düzeyi.
+[içinde] Kimliğe bürünme düzeyi.
 
 `authnLevel`\
-'ndaki Yetkilendirme düzeyi.
+[içinde] Yetkilendirme düzeyi.
 
-## <a name="return-value"></a>Dönüş değeri
+## <a name="return-value"></a>Döndürülen değer
 
-Bu işlev tarafından döndürülen aşağıdaki değerler *Winerror. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
+Bu işlev tarafından döndürülen aşağıdaki değerler *WinError.h* üstbilgi dosyasında tanımlanır veya bunları kodunuzdaki sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `E_INVALIDARG` | 0x80070057 | Bir veya daha fazla bağımsız değişken geçersiz. |
-| `E_POINTER` | 0x80004003 | `pIWbemServices` `null`. | 
+| `E_INVALIDARG` | 0x80070057 | Bir veya daha fazla bağımsız değişken geçersizdir. |
+| `E_POINTER` | 0x80004003 | `pIWbemServices``null`. |
 | `E_FAIL` | 0x80000008 | Belirtilmeyen bir hata oluştu. |
-| `E_OUTOFMEMORY` | 0x80000002 | İşlemi gerçekleştirmek için yeterli bellek yok. | 
-| `S_OK` | 0 | İşlev çağrısı başarılı oldu. | 
+| `E_OUTOFMEMORY` | 0x80000002 | İşlemi gerçekleştirmek için yetersiz bellek kullanılabilir. |
+| `S_OK` | 0 | İşlev çağrısı başarılı oldu. |
 
 ## <a name="requirements"></a>Gereksinimler  
 
- **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** WMINet_Utils. IDL  
+ **Üstbilgi:** WMINet_Utils.idl  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)

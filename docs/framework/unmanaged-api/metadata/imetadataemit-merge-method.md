@@ -15,47 +15,47 @@ helpviewer_keywords:
 ms.assetid: 7596220c-f699-4b6c-8ae7-c83220610650
 topic_type:
 - apiref
-ms.openlocfilehash: 06894f238f9fda3111d5484bb1b2add183a5abb2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 759358822ed865c89f6f55084d1e7f6143506e93
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448060"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175713"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge Yöntemi
-Belirtilen içeri aktarılan kapsamı birleştirilecek kapsamlar listesine ekler.  
+Belirtilen alınan kapsamı birleştirilecek kapsamlar listesine ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT Merge (   
-    [in]  IMetaDataImport  *pImport,   
-    [in]  IMapToken        *pHostMapToken,   
-    [in]  IUnknown         *pHandler   
+HRESULT Merge (
+    [in]  IMetaDataImport  *pImport,
+    [in]  IMapToken        *pHostMapToken,
+    [in]  IUnknown         *pHandler
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pImport`  
- 'ndaki Birleştirilecek kapsamı tanımlayan bir [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) nesnesine yönelik işaretçi.  
+ [içinde] Birleştirilecek dışa aktarılan kapsamı tanımlayan bir [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) nesnesinin işaretçisi.  
   
  `pIMap`  
- 'ndaki Belirteç yeniden eşlemesini belirten bir [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) nesnesine yönelik işaretçi.  
+ [içinde] Belirteç yeniden eşlemi belirten bir [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) nesnesine işaretçi.  
   
  `pHandler`  
- 'ndaki Hataları belirten [IUnknown](/cpp/atl/iunknown) nesnesine yönelik bir işaretçi.  
+ [içinde] Hataları belirten [bir IUnknown](/cpp/atl/iunknown) nesnesine işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Meta verilerin birleştiğini tek bir kapsamda tetiklemek için [ımetadatayayma:: MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) ' i çağırın.  
+ Çağrı [IMetaDataEmit::MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) tek bir kapsamda meta verilerin birleşmesi tetiklemek için.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

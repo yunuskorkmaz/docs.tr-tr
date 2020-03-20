@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: ecd786e8-f9a4-4190-a6ef-af18e8c6d654
 topic_type:
 - apiref
-ms.openlocfilehash: b5da781f148c23efcc909ad65e198e4f3c6fe5b5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7e8376f3a029b0e3ec51a1e7587dd14b3e7530ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447877"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177420"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>IMetaDataEmit2::SaveDeltaToStream Yöntemi
-Değişiklikleri geçerli Düzenle ve devam et oturumundan belirtilen akışa kaydeder.  
+Değişiklikleri geçerli düzenle ve devam oturumundan belirtilen akışa kaydeder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SaveDeltaToStream (  
-    [in] IStream     *pIStream,   
+    [in] IStream     *pIStream,
     [in] DWORD       dwSaveFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pIStream`  
- 'ndaki Değişikliklerin kaydedileceği yazılabilir akışa yönelik bir arabirim işaretçisi.  
+ [içinde] Değişiklikleri kaydetmek için yazılabilir akış için bir arabirim işaretçisi.  
   
  `dwSaveFlags`  
- 'ndaki Ayrılamadı. Bu değer sıfır olmalıdır.  
+ [içinde] Saklı -dır. Bu değer sıfır olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -12,31 +12,31 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: 8ab1fa8fc163ed50e51801769d40e61483e8ed5b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1bb6de58010e70a4edafacafe3dc00b511fc63de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912638"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182332"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control"></a>Nasıl yapılır: Bir ToolBar Denetimine Düğme Ekleme
 > [!NOTE]
-> Denetim yerini alır ve <xref:System.Windows.Forms.ToolBar> <xref:System.Windows.Forms.ToolBar> denetime işlevsellik ekler; ancak, isterseniz denetim hem geri uyumluluk hem de gelecekteki kullanım için korunur. <xref:System.Windows.Forms.ToolStrip>  
+> Denetim, <xref:System.Windows.Forms.ToolStrip> denetimin <xref:System.Windows.Forms.ToolBar> yerini alır ve işlevsellik ekler; ancak, <xref:System.Windows.Forms.ToolBar> isterseniz, denetim hem geriye dönük uyumluluk hem de gelecekteki kullanım için korunur.  
   
- <xref:System.Windows.Forms.ToolBar> Denetimin integral bir bölümü, ona eklediğiniz düğmelerdir. Bunlar menü komutlarına kolay erişim sağlamak için kullanılabilir veya alternatif olarak, menü yapısında kullanılamayan kullanıcılarınıza komutları göstermek için uygulamanızın kullanıcı arabiriminin başka bir alanına yerleştirilebilecek.  
+ Denetimin <xref:System.Windows.Forms.ToolBar> ayrılmaz bir parçası, ona eklediğiniz düğmelerdir. Bunlar menü komutlarına kolay erişim sağlamak için kullanılabilir veya alternatif olarak, menü yapısında bulunmayan komutları kullanıcılarınıza sunmak için uygulamanızın kullanıcı arabiriminin başka bir alanına yerleştirilebilir.  
   
- Aşağıdaki örneklerde, bir denetimin bir <xref:System.Windows.Forms.ToolBar> Windows formuna (`Form1`) eklendiğini varsaymaktadır.  
+ Aşağıdaki örnekler, bir <xref:System.Windows.Forms.ToolBar> Windows Formu'na bir`Form1`denetim eklendiğini varsayar ( ).  
   
-### <a name="to-add-buttons-programmatically"></a>Program aracılığıyla düğme eklemek için  
+### <a name="to-add-buttons-programmatically"></a>Düğmeleri programlı olarak eklemek için  
   
-1. Bir yordamda, bunları <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> koleksiyona ekleyerek araç çubuğu düğmeleri oluşturun.  
+1. Bir yordamda, <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> koleksiyona ekleyerek araç çubuğu düğmeleri oluşturun.  
   
-2. Düğme dizinini <xref:System.Windows.Forms.ToolBar.Buttons%2A> özelliği aracılığıyla geçirerek tek bir düğme için özellik ayarlarını belirtin.  
+2. Düğmenin dizinini özellik üzerinden geçirerek tek bir <xref:System.Windows.Forms.ToolBar.Buttons%2A> düğmenin özellik ayarlarını belirtin.  
   
-     Aşağıdaki örnekte, bir <xref:System.Windows.Forms.ToolBar> denetimin zaten eklendiği bir form varsayılır.  
+     Aşağıdaki <xref:System.Windows.Forms.ToolBar> örnekte, denetimzaten eklenmiştir.  
   
     > [!NOTE]
-    > <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Koleksiyon sıfır tabanlı bir koleksiyondur, bu nedenle kod buna uygun şekilde devam etmelidir.  
+    > Koleksiyon <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> sıfır tabanlı bir koleksiyondur, bu nedenle kod buna göre hareket etmelidir.  
   
     ```vb  
     Public Sub CreateToolBarButtons()  
@@ -90,7 +90,7 @@ ms.locfileid: "69912638"
        toolBar1.Buttons[2].PartialPush = true;  
   
        // Instantiate a ContextMenu component and menu items.  
-       // Set the DropDownButton's DropDownMenu property to   
+       // Set the DropDownButton's DropDownMenu property to
        // the context menu.  
        ContextMenu cm = new ContextMenu();  
        MenuItem miOne = new MenuItem("One");  
@@ -129,7 +129,7 @@ ms.locfileid: "69912638"
           toolBar1->Buttons[2]->PartialPush = true;  
   
           // Instantiate a ContextMenu component and menu items.  
-          // Set the DropDownButton's DropDownMenu property to   
+          // Set the DropDownButton's DropDownMenu property to
           // the context menu.  
           System::Windows::Forms::ContextMenu^ cm = gcnew System::Windows::Forms::ContextMenu;  
           MenuItem^ miOne = gcnew MenuItem( "One" );  
@@ -151,7 +151,7 @@ ms.locfileid: "69912638"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Nasıl yapılır: Bir araç çubuğu düğmesi için simge tanımlama](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Nasıl yapılır: Araç çubuğu düğmeleri için tetikleyici menü olayları](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Nasıl yapılır: ToolBar Düğmesi için Simge Tanımlama](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Nasıl yapılır: Araç Çubuğu Düğmeleri için Menü Olaylarını Tetikleme](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar Denetimine Genel Bakış](toolbar-control-overview-windows-forms.md)
 - [ToolBar Denetimi](toolbar-control-windows-forms.md)

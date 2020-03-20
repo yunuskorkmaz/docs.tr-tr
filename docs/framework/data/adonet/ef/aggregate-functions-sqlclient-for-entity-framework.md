@@ -1,86 +1,86 @@
 ---
-title: Toplama Işlevleri (Entity Framework için SqlClient)
+title: Toplam Fonksiyonlar (Entity Framework için SqlClient)
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
-ms.openlocfilehash: 3dbd4c0a24a5fc41153ea16747325e824669b0e5
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 1fad25f2229b4fa810cf82a96dcb8c50a9de3070
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700053"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150655"
 ---
-# <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Toplama Işlevleri (Entity Framework için SqlClient)
-SQL Server (SqlClient) için .NET Framework Veri Sağlayıcısı toplama işlevleri sağlar. Toplama işlevleri, bir giriş değerleri kümesi üzerinde hesaplamalar gerçekleştirir ve bir değer döndürür. Bu işlevler, SqlClient kullandığınızda kullanılabilir olan SqlServer ad alanıdır. Bir sağlayıcının ad alanı özelliği Entity Framework, bu sağlayıcı tarafından türler ve işlevler gibi belirli yapılar için kullanılan öneki bulmasını sağlar.  
+# <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Toplam Fonksiyonlar (Entity Framework için SqlClient)
+SQL Server için .NET Framework Data Provider (SqlClient) toplu işlevler sağlar. Toplam işlevler, giriş değerleri kümesi üzerinde hesaplamalar yapar ve bir değer döndürür. Bu işlevler, SqlClient'ı kullandığınızda kullanılabilen SqlServer ad alanındadır. Sağlayıcının ad alanı özelliği, Varlık Çerçevesi'nin bu sağlayıcı tarafından türler ve işlevler gibi belirli yapılar için hangi önek kullanıldığını keşfetmesine olanak tanır.  
   
- Aşağıdaki, SqlClient toplama işlevleridir.  
+ Aşağıdaki sqlclient toplu işlevleri vardır.  
 
-## <a name="avgexpression"></a>Ort (ifade)
+## <a name="avgexpression"></a>AVG(ifade)
 
-Bir koleksiyondaki değerlerin ortalamasını döndürür. Null değerler yok sayılır.
+Koleksiyondaki değerlerin ortalamasını verir. Null değerleri yoksayılır.
 
 **Bağımsız Değişkenler**
 
-`Int32`, `Int64`, `Double`ve `Decimal`.
+Bir `Int32` `Int64`, `Double`, `Decimal`ve .
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-`expression` öğesinin türü.
+Türü `expression`.
 
 **Örnek**
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_avg)]
 
-## <a name="checksum_aggcollection"></a>CHECKSUM_AGG (koleksiyon)
- 
- Bir koleksiyondaki değerlerin sağlama toplamını döndürür. Null değerler yok sayılır.
- 
- **Bağımsız Değişkenler**
- 
- Bir koleksiyon (`Int32`).
- 
- **Dönüş değeri**
- 
- Bir `Int32`.
- 
- **Örnek**
- 
-[!code-sql[DP EntityServices Concepts#SQLSERVER_CHECKSUM](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_checksum)]
-   
-## <a name="countexpression"></a>COUNT (ifade)
+## <a name="checksum_aggcollection"></a>CHECKSUM_AGG(toplama)
 
-Bir koleksiyondaki öğelerin sayısını `Int32`olarak döndürür.
+ Koleksiyondaki değerlerin denetimini verir. Null değerleri yoksayılır.
+
+ **Bağımsız Değişkenler**
+
+ Bir Koleksiyon(`Int32`).
+
+ **Dönüş Değeri**
+
+ Bir `Int32`.
+
+ **Örnek**
+
+[!code-sql[DP EntityServices Concepts#SQLSERVER_CHECKSUM](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_checksum)]
+
+## <a name="countexpression"></a>COUNT(ifade)
+
+Koleksiyondaki öğe sayısını ' `Int32`olarak verir.
 
 **Bağımsız Değişkenler**
 
-Bir koleksiyon\<T >, burada T aşağıdaki türlerden biridir:
+T'nin aşağıdaki türlerden biri olduğu Bir Koleksiyon\<T>:
 
 |   |   |   |   |
 |---|---|---|---|
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
-|`Time`|`String`|`Binary`|`Guid` (SQL Server 2000 ' de döndürülmez)|
+|`Time`|`String`|`Binary`|`Guid`(SQL Server 2000'de döndürülmez)|
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
 Bir `Int32`.
 
 **Örnek**
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)]
- 
-## <a name="count_bigexpression"></a>COUNT_BIG (ifade)
- 
-Bir koleksiyondaki öğelerin sayısını `bigint`olarak döndürür.
- 
+
+## <a name="count_bigexpression"></a>COUNT_BIG(ifade)
+
+Koleksiyondaki madde sayısını ' `bigint`olarak verir.
+
  **Bağımsız Değişkenler**
- 
- Bir koleksiyon (T), burada T aşağıdaki türlerden biridir:
- 
+
+ T'nin aşağıdaki türlerden biri olduğu Koleksiyon(T)
+
  |   |   |   |   |
 |---|---|---|---|
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
-|`Time`|`String`|`Binary`|`Guid` (SQL Server 2000 ' de döndürülmez)|
+|`Time`|`String`|`Binary`|`Guid`(SQL Server 2000'de döndürülmez)|
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
 Bir `Int64`.
 
@@ -88,130 +88,130 @@ Bir `Int64`.
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNTBIG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_countbig)]
 
-## <a name="maxexpression"></a>MAX (ifade)
+## <a name="maxexpression"></a>MAX(ifade)
 
-Koleksiyonun en büyük değerini döndürür.
+Koleksiyonun en büyük değerini verir.
 
 **Bağımsız Değişkenler**
 
-Bir koleksiyon (T), burada T aşağıdaki türlerden biridir: 
+T'nin aşağıdaki türlerden biri olduğu Koleksiyon(T)
 
 |   |   |   |   |
 |---|---|---|---|
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
 |`Time`|`String`|`Binary`||
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-`expression` öğesinin türü.
+Türü `expression`.
 
 **Örnek**
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_MAX](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_max)]
 
-## <a name="minexpression"></a>MIN (ifade)
+## <a name="minexpression"></a>MIN(ifade)
 
-Bir koleksiyondaki en küçük değeri döndürür.
+Koleksiyondaki minimum değeri verir.
 
 **Bağımsız Değişkenler**
 
-Bir koleksiyon (T), burada T aşağıdaki türlerden biridir: 
+T'nin aşağıdaki türlerden biri olduğu Koleksiyon(T)
 
 |   |   |   |   |
 |---|---|---|---|
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
 |`Time`|`String`|`Binary`||
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-`expression` öğesinin türü.
+Türü `expression`.
 
 **Örnek**
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_MIN](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_min)]
 
-## <a name="stdevexpression"></a>STDEV (ifade)
+## <a name="stdevexpression"></a>STDSAPMA(ifade)
 
-Belirtilen ifadedeki tüm değerlerin istatistiksel standart sapmasını döndürür.
+Belirtilen ifadedeki tüm değerlerin istatistiksel standart sapını verir.
 
 **Bağımsız Değişkenler**
 
-Bir koleksiyon (`Double`).
+Bir Koleksiyon(`Double`).
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-A `Double`.
+Bir `Double`.
 
 **Örnek**
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_STDEV](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdev)]
 
-## <a name="stdevpexpression"></a>STDSAPMAS (ifade)
+## <a name="stdevpexpression"></a>STDSAPMAS(ifade)
 
-Belirtilen ifadedeki tüm değerler için popülasyonun istatistiksel standart sapmasını döndürür.
+Belirtilen ifadedeki tüm değerler için popülasyon için istatistiksel standart sapması verir.
 
 **Bağımsız Değişkenler**
 
-Bir koleksiyon (`Double`).
+Bir Koleksiyon(`Double`).
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-A `Double`.
+Bir `Double`.
 
 **Örnek**
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_STDEVP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdevp)]
 
-## <a name="sumexpression"></a>SUM (ifade)
+## <a name="sumexpression"></a>SUM(ifade)
 
-Koleksiyondaki tüm değerlerin toplamını döndürür.
+Koleksiyondaki tüm değerlerin toplamını verir.
 
 **Bağımsız Değişkenler**
 
-T 'nin şu türlerden biri olduğu bir koleksiyon (T): `Int32`, `Int64`, `Double``Decimal`.
+T'nin aşağıdaki türlerden biri olduğu Bir `Int32` `Int64`Koleksiyon(T) : , , `Double`, `Decimal`.
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-`expression` öğesinin türü.
+Türü `expression`.
 
 **Örnek**
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_SUM](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_sum)]
 
-## <a name="varexpression"></a>VAR (ifade)
+## <a name="varexpression"></a>VAR(ifade)
 
-Belirtilen ifadedeki tüm değerlerin istatistiksel varyansını döndürür.
+Belirtilen ifadedeki tüm değerlerin istatistiksel değişkenini verir.
 
 **Bağımsız Değişkenler**
 
-Bir koleksiyon (`Double`).
+Bir Koleksiyon(`Double`).
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-A `Double`.
+Bir `Double`.
 
 **Örnek**
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_VAR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_var)]
 
-## <a name="varpexpression"></a>VARP (ifade)
+## <a name="varpexpression"></a>VARP(ifade)
 
-Belirtilen ifadedeki tüm değerler için popülasyon için istatistiksel varyansı döndürür.
+Belirtilen ifadedeki tüm değerler için popülasyon için istatistiksel varyansı verir.
 
 **Bağımsız Değişkenler**
 
-Bir koleksiyon (`Double`).
+Bir Koleksiyon(`Double`).
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-A `Double`.
+Bir `Double`.
 
 **Örnek**
 
-[!code-sql[DP EntityServices Concepts#SQLSERVER_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_varp)] 
+[!code-sql[DP EntityServices Concepts#SQLSERVER_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_varp)]
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Toplama Işlevleri (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)
+- [Toplam Fonksiyonlar (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)
 - [Entity SQL Dili](./language-reference/entity-sql-language.md)
 - [Toplu Kurallı İşlevler](./language-reference/aggregate-canonical-functions.md)

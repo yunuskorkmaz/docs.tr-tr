@@ -15,52 +15,52 @@ helpviewer_keywords:
 ms.assetid: 21b5bcb8-ea75-4962-8acc-ad17584061e5
 topic_type:
 - apiref
-ms.openlocfilehash: 696389b51328e167212fb2292a873c34b9263811
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e371330336002c673f2c54d882e70dbed41b743c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431826"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175843"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>IMetaDataEmit::DefineMemberRef Yöntemi
-Geçerli kapsam dışındaki bir modülün üyesine yönelik bir başvuru tanımlar ve bu başvuru tanımına bir belirteç alır.  
+Geçerli kapsam dışında bir modülün üyesine başvuru tanımlar ve bu başvuru tanımına bir belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT DefineMemberRef (   
-    [in]  mdToken           tkImport,   
-    [in]  LPCWSTR           szName,   
-    [in]  PCCOR_SIGNATURE   pvSigBlob,   
-    [in]  ULONG             cbSigBlob,   
-    [out] mdMemberRef       *pmr   
+HRESULT DefineMemberRef (
+    [in]  mdToken           tkImport,
+    [in]  LPCWSTR           szName,
+    [in]  PCCOR_SIGNATURE   pvSigBlob,
+    [in]  ULONG             cbSigBlob,
+    [out] mdMemberRef       *pmr
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `tkImport`  
- 'ndaki Üye genel değilse hedef üyenin sınıfı veya arabirimi için belirteç; üye geneldir ise, bu dosya için `mdModuleRef` belirteç.  
+ [içinde] Üye genel değilse, hedef üyenin sınıfı veya arabirimi için belirteç; üye genel ise, `mdModuleRef` diğer dosyaiçin belirteç.  
   
  `szName`  
- 'ndaki Hedef üyenin adı.  
+ [içinde] Hedef üyenin adı.  
   
  `pvSigBlob`  
- 'ndaki Hedef üyenin imzası.  
+ [içinde] Hedef üyenin imzası.  
   
  `cbSigBlob`  
- 'ndaki `pvSigBlob`bayt sayısı.  
+ [içinde] Bayt `pvSigBlob`sayısı.  
   
  `pmr`  
- dışı `mdMemberRef` belirteci atandı.  
+ [çıkış] Atanan `mdMemberRef` belirteç.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

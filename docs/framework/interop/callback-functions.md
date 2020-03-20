@@ -5,25 +5,25 @@ helpviewer_keywords:
 - callback function
 - platform invoke, calling unmanaged functions
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
-ms.openlocfilehash: 0fbf6df93e3ef9ee6380ed35f98018d157599e2a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8b8bb4dff4f73247282060c0b4fd778ae0169b1f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123740"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181512"
 ---
 # <a name="callback-functions"></a>Geri Çağırma İşlevleri
-Bir geri çağırma işlevi, yönetilmeyen bir DLL işlevinin bir görevi tamammesine yardımcı olan bir yönetilen uygulama içindeki koddur. Bir geri çağırma işlevine yapılan çağrılar, yönetilen bir uygulamadan, bir DLL işlevi aracılığıyla ve yönetilen uygulamaya geri dönerek dolaylı olarak geçer. Platform çağırma ile çağrılan birçok DLL işlevinden bazıları, yönetilen kodda düzgün şekilde çalışması için bir geri çağırma işlevi gerektirir.  
+Geri arama işlevi, yönetilmeyen bir DLL işlevinin görevi tamamlamasına yardımcı olan yönetilen bir uygulama içindeki koddur. Geri arama işlevine yapılan çağrılar, yönetilen bir uygulamadan, Bir DLL işlevi aracılığıyla ve yönetilen uygulamaya dolaylı olarak geçer. Platform çağrıcağı ile çağrılan birçok DLL işlevinden bazıları, düzgün çalışması için yönetilen kodda bir geri arama işlevi gerektirir.  
   
- Yönetilen koddan çoğu DLL işlevini çağırmak için, işlevin yönetilen bir tanımını oluşturun ve ardından bunu çağırın. İşlem basittir.  
+ Yönetilen koddan çoğu DLL işlevini çağırmak için, işlevin yönetilen bir tanımını oluşturun ve sonra onu çağırırsınız. İşlem basittir.  
   
- Bir geri çağırma işlevi gerektiren DLL işlevinin kullanılması bazı ek adımlara sahiptir. Önce, işlevin belgelerine bakarak işlevin geri çağırma gerektirip gerektirmediğini belirlemelisiniz. Ardından, yönetilen uygulamanızda geri çağırma işlevini oluşturmanız gerekir. Son olarak, DLL işlevini çağırır ve geri çağırma işlevine bir işaretçiyi bir bağımsız değişken olarak geçirerek. 
- 
- Aşağıdaki çizim, geri çağırma işlevini ve uygulama adımlarını özetler:  
+ Geri arama işlevi gerektiren bir DLL işlevinin kullanılmasının bazı ek adımları vardır. İlk olarak, işlev için belgelere bakarak işlevin bir geri arama gerektirip gerektirmediğini belirlemeniz gerekir. Ardından, yönetilen uygulamanızda geri arama işlevini oluşturmanız gerekir. Son olarak, dll işlevini çağırın, bir işaretçiyi bağımsız değişken olarak geri arama işlevine geçersiniz.
+
+ Aşağıdaki resimde geri arama işlevi ve uygulama adımları özetlenebilir:  
   
- ![Platform çağırma geri çağırma işlemini gösteren diyagram.](./media/callback-functions/platform-invoke-callback-process.gif)  
+ ![Platformu gösteren diyagram geri arama işlemini çağırır.](./media/callback-functions/platform-invoke-callback-process.gif)  
   
- Geri çağırma işlevleri, bir görevin tekrar tekrar gerçekleştirildiği durumlarda kullanım için idealdir. Diğer bir yaygın kullanım, Windows API 'sindeki **Enumfontaileleri**, **EnumPrinters**ve **EnumWindows** gibi numaralandırma işlevleridir. **EnumWindows** işlevi, her pencerede bir görevi gerçekleştirmek için geri çağırma işlevini çağırarak bilgisayarınızdaki mevcut tüm pencereleri sıralar. Yönergeler ve bir örnek için bkz. [nasıl yapılır: geri çağırma Işlevlerini uygulama](how-to-implement-callback-functions.md).  
+ Geri arama işlevleri, görevin tekrar tekrar gerçekleştirildiği durumlarda kullanım için idealdir. Başka bir yaygın kullanım numaralandırma fonksiyonları ile, **EnumFontFamilies**gibi , **EnumPrinters** **,** windows API. **EnumWindows** işlevi bilgisayarınızdaki varolan tüm pencerelerden birime direnerek, her pencerede bir görevi gerçekleştirmek için geri arama işlevini çağırır. Yönergeler ve bir örnek için [bkz.](how-to-implement-callback-functions.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

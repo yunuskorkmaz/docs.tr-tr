@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: 554284e7-3f6c-4d40-8da5-1c9317fbd484
 topic_type:
 - apiref
-ms.openlocfilehash: d9430c5a1f37a0507b383ea5437f7d7fed706c43
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64e697323377d664b7b1e36bbf5931a44465cc51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123857"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178951"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>ICorDebugChain::GetStackRange Metodu
-Bu zincir için yığın segmentinin adres aralığını alır.  
+Bu zincirin yığın kesiminin adres aralığını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetStackRange (  
-    [out] CORDB_ADDRESS      *pStart,   
+    [out] CORDB_ADDRESS      *pStart,
     [out] CORDB_ADDRESS      *pEnd  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pStart`  
- dışı Yığın segmentinin başlangıç adresi olan `CORDB_ADDRESS` değere yönelik bir işaretçi.  
+ [çıkış] Yığın kesiminin `CORDB_ADDRESS` başlangıç adresi olan bir değeriçin işaretçi.  
   
  `pEnd`  
- dışı Yığın segmentinin bitiş adresi olan `CORDB_ADDRESS` değere yönelik bir işaretçi.  
+ [çıkış] Yığın kesiminin `CORDB_ADDRESS` bitiş adresi olan bir değerin işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Sayısal Aralık yalnızca yığın çerçeve konumlarının karşılaştırılmasının anlamı vardır. Aslında yığında depolandıkları hakkında varsayımlar yapamazsınız.  
+ Sayısal aralık yalnızca yığın çerçeve konumlarının karşılaştırılması için anlamlıdır. Yığında gerçekte nelerin depolanmış olduğu hakkında herhangi bir varsayımda bulunamazsınız.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

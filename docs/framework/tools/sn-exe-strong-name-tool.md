@@ -10,25 +10,25 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: 90cad6529b3ac2a8afedaca0c43d5c7561dcf9e6
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: b5eee15a08dcae42263e06939c197ec0848816a0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138970"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180311"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Tanımlayıcı Ad Aracı)
-Tanımlayıcı ad Aracı (sn. exe), derlemelerin [güçlü adlarla](../../standard/assembly/strong-named.md)imzalanmanıza yardımcı olur. Sn.exe; temel yönetim, imza oluşturma ve imza doğrulaması için seçenekler sağlar.  
+Güçlü Ad aracı (Sn.exe) güçlü [adlara](../../standard/assembly/strong-named.md)sahip derlemeleri imzalamaya yardımcı olur. Sn.exe; temel yönetim, imza oluşturma ve imza doğrulaması için seçenekler sağlar.  
   
 > [!WARNING]
-> Güvenlik için tanımlayıcı adlara güvenmeyin. Yalnızca benzersiz bir kimlik sağlarlar.
+> Güvenlik için güçlü isimlere güvenmeyin. Yalnızca benzersiz bir kimlik sağlarlar.
 
- Tanımlayıcı adlandırma ve tanımlayıcı adlı derlemeler hakkında daha fazla bilgi için bkz. Strong [-adlandırılmış derlemeler](../../standard/assembly/strong-named.md) ve [nasıl yapılır: bir derlemeyi güçlü bir adla imzalama](../../standard/assembly/sign-strong-name.md).  
+ Güçlü adlandırma ve güçlü adlandırılmış derlemeler hakkında daha fazla bilgi için Bkz. [Güçlü Adlandırılmış Derlemeler](../../standard/assembly/strong-named.md) ve [Nasıl Adlandırılır: Güçlü Bir İsimli Bir Meclis'i İmzalayın.](../../standard/assembly/sign-strong-name.md)  
   
- Tanımlayıcı Ad aracı Visual Studio ile birlikte otomatik olarak yüklenir. Aracı başlatmak için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).  
+ Tanımlayıcı Ad aracı Visual Studio ile birlikte otomatik olarak yüklenir. To start the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7). Daha fazla bilgi için [Komut İstemleri'ne](developer-command-prompt-for-vs.md)bakın.  
 
 > [!NOTE]
-> 64 bit bilgisayarlarda, Visual Studio x64 Win64 komut Istemi kullanarak Visual Studio için Geliştirici Komut İstemi ve 64 bit sürümü kullanarak sn. exe ' nin 32 bit sürümünü çalıştırın. 
+> 64 bit bilgisayarlarda Visual Studio için Geliştirici Komut Komut Ustem komutunu ve Visual Studio x64 Win64 Komut Istemi'ni kullanarak 64 bit sürümünü kullanarak Sn.exe'nin 32 bit sürümünü çalıştırın.
   
  Komut satırına şunu yazın:  
   
@@ -42,35 +42,35 @@ sn [-quiet][option [parameter(s)]]
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|`-a identityKeyPairFile signaturePublicKeyFile`|Kimlik anahtarını bir dosyadan imza anahtarına geçirmek için <xref:System.Reflection.AssemblySignatureKeyAttribute> verileri oluşturur.|  
-|`-ac identityPublicKeyFile identityKeyPairContainer signaturePublicKeyFile`|Kimlik anahtarını bir anahtar kapsayıcısından imza anahtarına geçirmek için <xref:System.Reflection.AssemblySignatureKeyAttribute> verileri oluşturur.|  
+|`-a identityKeyPairFile signaturePublicKeyFile`|Kimlik <xref:System.Reflection.AssemblySignatureKeyAttribute> anahtarını bir dosyadan imza anahtarına geçirmek için veri üretir.|  
+|`-ac identityPublicKeyFile identityKeyPairContainer signaturePublicKeyFile`|Kimlik <xref:System.Reflection.AssemblySignatureKeyAttribute> anahtarını anahtar kapsayıcısından imza anahtarına geçirmek için veri üretir.|  
 |`-c [csp]`|Tanımlayıcı ad imzası için kullanılacak varsayılan şifreleme hizmeti sağlayıcısı (CSP) ayarlar. Bu ayar tüm bilgisayara uygulanır. Bir CSP adı belirtmezseniz, Sn.exe geçerli ayarı temizler.|  
 |`-d container`|Belirtilen anahtar kapsayıcısını tanımlayıcı ad CSP'sinden siler.|  
 |`-D assembly1 assembly2`|İki derlemenin yalnızca imza farkı olduğunu doğrular. Bu çoğunlukla, bir derleme farklı bir anahtar çifti ile yeniden imzalandıktan sonra denetim olarak kullanılır.|  
-|`-e assembly outfile`|*Derlemeden* ortak anahtarı ayıklar ve çıkışdosyası içinde depolar *.*|  
+|`-e assembly outfile`|Ortak anahtarı *montajdan* ayıklar ve *dış dosyada saklar.*|  
 |`-h`|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
-|`-i infile container`|Belirtilen anahtar kapsayıcısındaki *INFILE* 'dan anahtar çiftini yükleme. Anahtar kapsayıcısı, tanımlayıcı ad CSP'sinde bulunur.|  
-|`-k [keysize] outfile`|Belirtilen boyutun yeni bir <xref:System.Security.Cryptography.RSACryptoServiceProvider> anahtarını oluşturur ve belirtilen dosyaya yazar.  Hem ortak hem de özel anahtar dosyaya yazılır.<br /><br /> Bir anahtar boyutu belirtmezseniz, makinenizde Microsoft gelişmiş şifreleme sağlayıcısı yüklü ise varsayılan olarak 1,024-bit bir anahtar oluşturulur, yüklü değilse 512-bit anahtar oluşturulur.<br /><br /> Microsoft Gelişmiş şifreleme sağlayıcısı yüklüyse, *KeySize* parametresi, 384 bitten 16.384 bite kadar, 8 bitten oluşan anahtar uzunluklarını destekler.  Makinenizde Microsoft temel şifreleme sağlayıcısı yüklüyse, 8 bitlik artışlarla 384 bit'ten 512 bit'e kadar olan anahtar uzunluklarını destekler.|  
-|`-m [y|n]`|Anahtar kapsayıcılarının bilgisayara özgü mi yoksa kullanıcıya özgü mü olduğunu belirtir. *Y*belirtirseniz, anahtar kapsayıcıları bilgisayara özgüdür. *N*belirtirseniz, anahtar kapsayıcıları kullanıcıya özeldir.<br /><br /> y ne n öğelerinden hiçbirini belirtmezseniz, bu seçenek geçerli ayarı görüntüler.|  
-|`-o infile [outfile]`|*Indosyadan* ortak anahtarı ayıklar ve bir. csv dosyasında depolar. Ortak anahtarın her baytı virgülle ayrılır. Bu biçim, kaynak kodunda başlatılmış diziler olarak anahtarlara ilişkin sabit kodlama başvuruları için yararlıdır. Bir *çıkışdosyası*belirtmezseniz, bu seçenek çıktıyı panoya yerleştirir. **Note:**  Bu seçenek, girişin yalnızca bir ortak anahtar olduğunu doğrulamaz. `infile` özel anahtara sahip bir anahtar çifti içeriyorsa, özel anahtar de ayıklanır.|  
-|`-p infile outfile [hashalg]`|Ortak anahtarı *InFile* içindeki anahtar çiftinden ayıklar ve isteğe bağlı olarak *HashAlg*tarafından belirtilen RSA algoritmasını kullanarak bu dosyayı *çıkışdosyası*içinde depolar. Bu ortak anahtar, derleme [Bağlayıcısı (al. exe)](al-exe-assembly-linker.md)için **/delaysign +** ve **/keyfile** seçeneklerini kullanarak bir derlemeyi gecikmeli imzalamak için kullanılabilir. Derleme gecikmeli imzalanmış olduğunda, yalnızca ortak anahtar derleme zamanında ayarlanır ve özel anahtarı bulunduğunda, daha sonra eklenecek bir imza için dosyada alan ayrılır.|  
-|`-pc container outfile [hashalg]`|*Kapsayıcıda* anahtar çiftinden ortak anahtarı ayıklar ve *çıkışdosyası*içinde depolar. *HashAlg* seçeneğini KULLANıRSANıZ, RSA algoritması ortak anahtarı ayıklamak için kullanılır.|  
-|`-Pb [y|n]`|Tanımlayıcı ad atlama ilkesinin uygulatılıp uygulatılmayacağı belirtir. *Y*belirtirseniz, tam güvenle derlemeler için tanımlayıcı adlar, tam güven <xref:System.AppDomain>yüklendiğinde doğrulanmaz. *N*belirtirseniz, tanımlayıcı adlar doğruluk için onaylanır, ancak belirli bir tanımlayıcı ad için desteklenmez. <xref:System.Security.Permissions.StrongNameIdentityPermission> tam güvenle derlemeler üzerinde hiçbir etkisi yoktur. Bir tanımlayıcı ad eşleştirmesi için kendi denetiminizi gerçekleştirmeniz gerekir.<br /><br /> Ne `y` ne de `n` belirtilmemişse, bu seçenek geçerli ayarı görüntüler. Varsayılan, `y` değeridir. **Note:**  64 bit bilgisayarlarda, bu parametreyi hem 32 bit hem de sn. exe ' nin 64 bit örneklerinde ayarlamanız gerekir.|  
+|`-i infile container`|Belirtilen anahtar kapsayıcısında *infile* gelen anahtar çifti yükler. Anahtar kapsayıcısı, tanımlayıcı ad CSP'sinde bulunur.|  
+|`-k [keysize] outfile`|Belirtilen boyutta <xref:System.Security.Cryptography.RSACryptoServiceProvider> yeni bir anahtar oluşturur ve belirtilen dosyaya yazar.  Hem ortak hem de özel anahtar dosyaya yazılır.<br /><br /> Bir anahtar boyutu belirtmezseniz, makinenizde Microsoft gelişmiş şifreleme sağlayıcısı yüklü ise varsayılan olarak 1,024-bit bir anahtar oluşturulur, yüklü değilse 512-bit anahtar oluşturulur.<br /><br /> *Anahtar boyutu* parametresi, Microsoft gelişmiş şifreleme sağlayıcısı yüklüyse, 384 bitten 16.384 bit'e kadar olan anahtar uzunluklarını 8 bitlik artışlarla destekler.  Makinenizde Microsoft temel şifreleme sağlayıcısı yüklüyse, 8 bitlik artışlarla 384 bit'ten 512 bit'e kadar olan anahtar uzunluklarını destekler.|  
+|`-m [y|n]`|Anahtar kapsayıcılarının bilgisayara özgü mi yoksa kullanıcıya özgü mü olduğunu belirtir. *Y*, anahtar kapsayıcıları bilgisayara özgü olarak belirtirseniz. *n,* anahtar kapsayıcıları kullanıcıya özgü olarak belirtirseniz.<br /><br /> y ne n öğelerinden hiçbirini belirtmezseniz, bu seçenek geçerli ayarı görüntüler.|  
+|`-o infile [outfile]`|Ortak anahtarı *dosyadan* ayıklar ve .csv dosyasında saklar. Ortak anahtarın her baytı virgülle ayrılır. Bu biçim, kaynak kodunda başlatılmış diziler olarak anahtarlara ilişkin sabit kodlama başvuruları için yararlıdır. Bir *dış dosya*belirtmezseniz, bu seçenek çıktıyı Pano'ya yerleştirir. **Not:**  Bu seçenek, girişin yalnızca ortak bir anahtar olduğunu doğrulamaz. Özel `infile` anahtara sahip bir anahtar çifti içeriyorsa, özel anahtar da ayıklanır.|  
+|`-p infile outfile [hashalg]`|Ortak anahtarı *dosyadaki* anahtar çiftinden ayıklar ve *hashalg*tarafından belirtilen RSA algoritmasını isteğe bağlı olarak kullanarak *dış dosyada*saklar. Bu ortak anahtar, [Derleme Bağlayıcısı'nın (Al.exe)](al-exe-assembly-linker.md) **/delaysign+** ve **/keyfile** seçeneklerini kullanarak bir derlemeyi geciktirmek için kullanılabilir. Derleme gecikmeli imzalanmış olduğunda, yalnızca ortak anahtar derleme zamanında ayarlanır ve özel anahtarı bulunduğunda, daha sonra eklenecek bir imza için dosyada alan ayrılır.|  
+|`-pc container outfile [hashalg]`|Ortak anahtarı *kapsayıcıdaki* anahtar çiftinden ayıklar ve *dış dosyada*saklar. *Hashalg* seçeneğini kullanırsanız, ortak anahtarı ayıklamak için RSA algoritması kullanılır.|  
+|`-Pb [y|n]`|Tanımlayıcı ad atlama ilkesinin uygulatılıp uygulatılmayacağı belirtir. *Y*belirtirseniz, tam güven derlemeleri için güçlü adlar tam güvene <xref:System.AppDomain>yüklendiğinde doğrulanmaz. *N*belirtirseniz, güçlü adlar doğruluk için doğrulanır, ancak belirli bir güçlü ad için doğrulanmaz. Tam <xref:System.Security.Permissions.StrongNameIdentityPermission> güven meclisleri üzerinde hiçbir etkisi yoktur. Bir tanımlayıcı ad eşleştirmesi için kendi denetiminizi gerçekleştirmeniz gerekir.<br /><br /> Ne `y` de `n` belirtilmişse, bu seçenek geçerli ayarı görüntüler. Varsayılan değer: `y`. **Not:**  64 bit bilgisayarlarda, bu parametreyi hem 32 bit hem de Sn.exe'nin 64 bit örneklerinde ayarlamanız gerekir.|  
 |`-q[uiet]`|Sessiz mod kullanılacağını belirtir; başarı iletilerinin görüntülenmesini engeller.|  
-|`-R[a] assembly infile`|Önceden imzalanmış veya gecikmeli imzalanmış bir derlemeyi *InFile*içindeki anahtar çifti ile yeniden imzalar.<br /><br /> **-Ra** kullanılıyorsa, karmalar derlemedeki tüm dosyalar için yeniden hesaplanır.|  
-|`-Rc[a] assembly container`|Önceden imzalanmış veya gecikmeli imzalanmış bir derlemeyi *kapsayıcıda*anahtar çifti ile yeniden imzalar.<br /><br /> **-RCA** kullanılıyorsa, karmalar derlemedeki tüm dosyalar için yeniden hesaplanır.|  
+|`-R[a] assembly infile`|Daha önce imzalanmış veya gecikmeyle imzalanmış bir derlemeyi *dosyadaki*anahtar çiftiyle yeniden imzalar.<br /><br /> **-Ra** kullanılırsa, derlemedeki tüm dosyalar için hashes yeniden hesaplanır.|  
+|`-Rc[a] assembly container`|Daha önce imzalanmış veya gecikme imzalı bir derlemeyi *konteynerdeki*anahtar çiftiyle yeniden imzalar.<br /><br /> **-Rca** kullanılırsa, derlemedeki tüm dosyalar için hashes yeniden hesaplanır.|  
 |`-Rh assembly`|Derlemedeki tüm dosyaların karma değerlerini yeniden hesaplar.|  
-|`-t[p] infile`|*InFile*içinde depolanan ortak anahtar belirtecini görüntüler. *InFile* içeriğinin, daha önce **-p**kullanan bir anahtar çifti dosyasından oluşturulmuş bir ortak anahtar olması gerekir.  Belirteci doğrudan bir anahtar çifti dosyasından ayıklamak için **-t [p]** seçeneğini kullanmayın.<br /><br /> Sn.exe, ortak anahtardan bir karma işlevini kullanarak belirteci hesaplar. Alandan kazanmak için, ortak dil çalışma zamanı, tanımlayıcı bir ada sahip derlemeye bağımlılık kaydederken ortak anahtar belirteçlerini başka bir derlemenin başvurusunun parçası olarak bildirimde depolar. **-TP** seçeneği, belirtece ek olarak ortak anahtarı görüntüler. <xref:System.Reflection.AssemblySignatureKeyAttribute> özniteliği derlemeye uygulanmışsa, belirteç kimlik anahtarına, karma algoritmanın adına ve kimlik anahtarına göre gösterilir.<br /><br /> Bu seçeneğin derleme imzasını doğrulamadığını ve güven kararları vermek için kullanılmaması gerektiğini unutmayın.  Bu seçenek yalnızca ham ortak anahtar belirteci verilerini görüntüler.|  
-|`-T[p] assembly`|Derleme için ortak anahtar belirtecini görüntüler *.* *Derleme* , derleme bildirimi içeren bir dosyanın adı olmalıdır.<br /><br /> Sn.exe, ortak anahtardan bir karma işlevini kullanarak belirteci hesaplar. Alandan kazanmak için, çalışma zamanı, tanımlayıcı bir ada sahip derlemeye bağımlılık kaydederken ortak anahtar belirteçlerini başka bir derlemenin başvurusunun parçası olarak bildirimde depolar. **-TP** seçeneği, belirtece ek olarak ortak anahtarı görüntüler. <xref:System.Reflection.AssemblySignatureKeyAttribute> özniteliği derlemeye uygulanmışsa, belirteç kimlik anahtarına, karma algoritmanın adına ve kimlik anahtarına göre gösterilir.<br /><br /> Bu seçeneğin derleme imzasını doğrulamadığını ve güven kararları vermek için kullanılmaması gerektiğini unutmayın.  Bu seçenek yalnızca ham ortak anahtar belirteci verilerini görüntüler.|  
-|`-TS assembly infile`|İmzalı veya kısmen imzalı *derlemeyi* *InFile*içindeki anahtar çiftiyle test edin.|  
-|`-TSc assembly container`|Test-imzalanmış veya kısmen imzalı *derlemeyi* anahtar kapsayıcısı *kapsayıcısında*anahtar çiftiyle imzalar.| 
-|`-v assembly`|*Derlemede tanımlayıcı adı doğrular; burada* *derleme* , derleme bildirimi içeren bir dosyanın adıdır.|  
-|`-vf assembly`|Derlemede tanımlayıcı adı doğrular *.* \- **V** seçeneğinin aksine- **VF** , **-VR** seçeneği kullanılarak devre dışı bırakılmış olsa bile doğrulamayı zorlar.|  
-|`-Vk regfile.reg assembly [userlist] [infile]`|Doğrulamayı atlama için belirtilen derlemeyi kaydetmek üzere kullanabileceğiniz bir kayıt girdileri (.reg) dosyası oluşturur. **-VR** seçeneğine uygulanan derleme adlandırmayla ilgili kurallar, **– VK** için de geçerlidir. *UserList* ve *InFile* seçenekleri hakkında daha fazla bilgi için **– VR** seçeneğine bakın.|  
+|`-t[p] infile`|*Dosyada*depolanan ortak anahtarın belirteci görüntülenir. *Dosya* içeriği daha önce bir anahtar çifti dosyasından **-p**kullanarak oluşturulan ortak bir anahtar olmalıdır.  Belirteci doğrudan anahtar çifti dosyasından ayıklamak için **-t[p]** seçeneğini kullanmayın.<br /><br /> Sn.exe, ortak anahtardan bir karma işlevini kullanarak belirteci hesaplar. Alandan kazanmak için, ortak dil çalışma zamanı, tanımlayıcı bir ada sahip derlemeye bağımlılık kaydederken ortak anahtar belirteçlerini başka bir derlemenin başvurusunun parçası olarak bildirimde depolar. **-tp** seçeneği belirteci ek olarak ortak anahtarı görüntüler. <xref:System.Reflection.AssemblySignatureKeyAttribute> Öznitelik derlemeye uygulandıysa, belirteç kimlik anahtarı içindir ve karma algoritmanın adı ve kimlik anahtarı görüntülenir.<br /><br /> Bu seçeneğin derleme imzasını doğrulamadığını ve güven kararları vermek için kullanılmaması gerektiğini unutmayın.  Bu seçenek yalnızca ham ortak anahtar belirteci verilerini görüntüler.|  
+|`-T[p] assembly`|Derleme için ortak anahtar belirteci *görüntüler.* *Derleme,* derleme bildirimi içeren bir dosyanın adı olmalıdır.<br /><br /> Sn.exe, ortak anahtardan bir karma işlevini kullanarak belirteci hesaplar. Alandan kazanmak için, çalışma zamanı, tanımlayıcı bir ada sahip derlemeye bağımlılık kaydederken ortak anahtar belirteçlerini başka bir derlemenin başvurusunun parçası olarak bildirimde depolar. **-Tp** seçeneği belirteci ek olarak ortak anahtarı görüntüler. <xref:System.Reflection.AssemblySignatureKeyAttribute> Öznitelik derlemeye uygulandıysa, belirteç kimlik anahtarı içindir ve karma algoritmanın adı ve kimlik anahtarı görüntülenir.<br /><br /> Bu seçeneğin derleme imzasını doğrulamadığını ve güven kararları vermek için kullanılmaması gerektiğini unutmayın.  Bu seçenek yalnızca ham ortak anahtar belirteci verilerini görüntüler.|  
+|`-TS assembly infile`|Dosyadaki anahtar çifti ile imzalı veya kısmen imzalanmış *derlemeyi* test *eder.*|  
+|`-TSc assembly container`|Anahtar *kapsayıcı*kapsayıcısında anahtar çifti ile imzalı veya kısmen imzalanmış *montaj* test imzalar.|
+|`-v assembly`|*Derleme, derleme* bildirimi içeren bir dosyanın adı olduğu *derlemedeki*güçlü adı doğrular.|  
+|`-vf assembly`|*Derlemedeki* güçlü adı doğrular. **-v** seçeneğinin **aksine-vf-** **Vr** seçeneği kullanılarak devre dışı bırakılmış olsa bile doğrulamayı zorlar.|  
+|`-Vk regfile.reg assembly [userlist] [infile]`|Doğrulamayı atlama için belirtilen derlemeyi kaydetmek üzere kullanabileceğiniz bir kayıt girdileri (.reg) dosyası oluşturur. **-Vr** seçeneği için geçerli olan montaj adlandırma kuralları **-Vk** için de geçerlidir. *Kullanıcı listesi* ve *dosya seçenekleri* hakkında bilgi için **–Vr** seçeneğine bakın.|  
 |`-Vl`|Bu bilgisayardaki tanımlayıcı ad doğrulamasının geçerli ayarlarını listeler.|  
-|`-Vr  assembly [userlist] [infile]`|Doğrulama atlama için *bütünleştirilmiş kodu* kaydeder. İsteğe bağlı olarak, doğrulama atlamanın geçerli olacağı kullanıcı adlarının virgülle ayrılmış listesini belirtebilirsiniz. *InFile*belirtirseniz, doğrulama etkin kalır ancak doğrulama işlemlerinde *InFile* içindeki ortak anahtar kullanılır. *Derleme* *\*,* belirtilen tanımlayıcı ada sahip tüm derlemeleri kaydetmek için tanımlayıcı biçimde belirtebilirsiniz. *StrongName*için, ortak anahtarın simgeleştirilmiş biçimini temsil eden onaltılık basamakların dizesini belirtin. Ortak anahtar belirtecini görüntülemek için **-t** ve **-t** seçeneklerine bakın. **Dikkat:**  Bu seçeneği yalnızca geliştirme sırasında kullanın. Doğrulama atlama listesine bir derleme eklemek güvenlik açığı oluşturur. Kötü amaçlı bir derleme, kimliğini gizlemek için doğrulama atlama listesine eklenmiş derlemenin tam olarak belirtilmiş derleme adını (derleme adı, sürüm, kültür ve ortak anahtar belirteci) kullanabilir. Bu, kötü amaçlı derlemenin de doğrulamayı atlamasına izin verir.|  
+|`-Vr  assembly [userlist] [infile]`|Doğrulama atlama için *montaj* kaydeder. İsteğe bağlı olarak, doğrulama atlamanın geçerli olacağı kullanıcı adlarının virgülle ayrılmış listesini belirtebilirsiniz. *Dosya yı*belirtirseniz, doğrulama etkin kalır, ancak *infiledeki* ortak anahtar doğrulama işlemlerinde kullanılır. Belirtilen güçlü ada sahip tüm derlemeleri kaydetmek için * \*, güçlü ad* şeklinde *montaj* belirtebilirsiniz. *Strongname*için, ortak anahtarın belirteç biçimini temsil eden hexadecimal basamaklar dizesini belirtin. Ortak anahtar belirteci görüntülemek için **-t** ve **-T** seçeneklerine bakın. **Dikkat:**  Bu seçeneği yalnızca geliştirme sırasında kullanın. Doğrulama atlama listesine bir derleme eklemek güvenlik açığı oluşturur. Kötü amaçlı bir derleme, kimliğini gizlemek için doğrulama atlama listesine eklenmiş derlemenin tam olarak belirtilmiş derleme adını (derleme adı, sürüm, kültür ve ortak anahtar belirteci) kullanabilir. Bu, kötü amaçlı derlemenin de doğrulamayı atlamasına izin verir.|  
 |||  
-|`-Vu  assembly`|Doğrulama atlama için *bütünleştirilmiş kodun* kaydını siler. **-VR** ' ye uygulanan derleme adlandırması için aynı kurallar **-vu & lt**için geçerlidir.|  
+|`-Vu  assembly`|Doğrulama atlama için *derlemeyi* unregisters. **-Vr** için geçerli olan montaj adlandırma için aynı kurallar **-Vu**için geçerlidir.|  
 |`-Vx`|Doğrulama atlama girişlerinin tümünü kaldırır.|  
 |`-?`|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
@@ -78,45 +78,45 @@ sn [-quiet][option [parameter(s)]]
 > Tüm Sn.exe seçenekler büyük/küçük harfe duyarlıdır ve araç tarafından tanınması için tam olarak gösterildiği gibi yazılmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- **-R** ve **– RC** seçenekleri, gecikmeli imzalanmış Derlemelerle yararlı olur. Bu senaryoda, derleme zamanında yalnızca ortak anahtar ayarlanmıştır, imzalama ise daha sonra, özel anahtar tanındığında yapılır.  
+ **-R** ve **-Rc** seçenekleri, gecikme imzalı derlemeler için yararlıdır. Bu senaryoda, derleme zamanında yalnızca ortak anahtar ayarlanmıştır, imzalama ise daha sonra, özel anahtar tanındığında yapılır.  
   
 > [!NOTE]
-> Kayıt defteri gibi korumalı kaynaklara yazan parametreler (örneğin, –**VR)** IÇIN, sn. exe ' yi yönetici olarak çalıştırın.  
+> Kayıt defteri gibi korumalı kaynaklara yazan parametreler (örneğin, –**Vr)** için SN.exe'yi yönetici olarak çalıştırın.  
   
-Tanımlayıcı ad Aracı, ortak/özel anahtar çiftlerinin `AT_SIGNATURE` algoritma tanımlayıcısı ile oluşturulduğunu varsayar. `AT_KEYEXCHANGE` algoritmasıyla oluşturulan ortak/özel anahtar çiftleri bir hata oluşturur. 
+Güçlü Ad aracı, `AT_SIGNATURE` ortak/özel anahtar çiftleri algoritma tanımlayıcısı ile oluşturulur varsayar. `AT_KEYEXCHANGE` Algoritma yla oluşturulan ortak/özel anahtar çiftleri bir hata oluşturur.
 
 ## <a name="examples"></a>Örnekler  
- Aşağıdaki komut yeni, rastgele bir anahtar çifti oluşturur ve `keyPair.snk`içinde depolar.  
+ Aşağıdaki komut yeni, rasgele bir anahtar çifti `keyPair.snk`oluşturur ve onu .  
   
 ```console  
 sn -k keyPair.snk  
 ```  
   
- Aşağıdaki komut, anahtarı tanımlayıcı ad CSP 'de kapsayıcı `MyContainer` `keyPair.snk` içinde depolar.  
+ Aşağıdaki komut, anahtarı `keyPair.snk` güçlü ad `MyContainer` CSP'de kapsayıcıda saklar.  
   
 ```console  
 sn -i keyPair.snk MyContainer  
 ```  
   
- Aşağıdaki komut `keyPair.snk` ' den ortak anahtarı ayıklar ve `publicKey.snk`depolar.  
+ Aşağıdaki komut ortak anahtarı ayıklar `keyPair.snk` ve `publicKey.snk`'de saklar.  
   
 ```console  
 sn -p keyPair.snk publicKey.snk  
 ```  
   
- Aşağıdaki komut, `publicKey.snk`bulunan ortak anahtar için ortak anahtarı ve belirteci görüntüler.  
+ Aşağıdaki komut, ortak anahtarı ve 'de bulunan ortak `publicKey.snk`anahtarın belirteci'ni görüntüler.  
   
 ```console  
 sn -tp publicKey.snk  
 ```  
   
- Aşağıdaki komut `MyAsm.dll`derlemeyi doğrular.  
+ Aşağıdaki komut derlemeyi `MyAsm.dll`doğrular.  
   
 ```console  
 sn -v MyAsm.dll  
 ```  
   
- Aşağıdaki komut, `MyContainer` Varsayılan CSP 'den siler.  
+ Aşağıdaki komut varsayılan `MyContainer` CSP'den silinir.  
   
 ```console  
 sn -d MyContainer  
@@ -126,5 +126,5 @@ sn -d MyContainer
 
 - [Araçlar](index.md)
 - [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](al-exe-assembly-linker.md)
-- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../standard/assembly/strong-named.md)
+- [Tanımlayıcı Adlı Derlemeler](../../standard/assembly/strong-named.md)
 - [Komut İstemleri](developer-command-prompt-for-vs.md)

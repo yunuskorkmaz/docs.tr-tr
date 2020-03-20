@@ -15,56 +15,56 @@ helpviewer_keywords:
 ms.assetid: 1e994de6-4628-459c-b967-b34be1e9fe4f
 topic_type:
 - apiref
-ms.openlocfilehash: 5d985e22ba77053127610445374b8c13ca6b97f1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3b8fd9876563bace52a6088747d1ca4ed26ea872
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431709"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175817"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType Yöntemi
-Bir tür tanımının meta veri imzasını oluşturur, bu tür için bir `mdTypeDef` belirteci döndürür ve tanımlanan türün, `tdEncloser` parametresi tarafından başvurulan türün bir üyesi olduğunu belirtir.  
+Bir tür tanımının meta veri imzasını `mdTypeDef` oluşturur, bu tür için bir belirteç döndürür ve tanımlanan `tdEncloser` türün parametre tarafından başvurulan türe üye olduğunu belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT DefineNestedType (   
+HRESULT DefineNestedType (
     [in]  LPCWSTR     szTypeDef,  
-    [in]  DWORD       dwTypeDefFlags,   
-    [in]  mdToken     tkExtends,   
-    [in]  mdToken     rtkImplements[],   
-    [in]  mdTypeDef   tdEncloser,   
+    [in]  DWORD       dwTypeDefFlags,
+    [in]  mdToken     tkExtends,
+    [in]  mdToken     rtkImplements[],
+    [in]  mdTypeDef   tdEncloser,
     [out] mdTypeDef   *ptd  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `szTypeDef`  
- 'ndaki Unicode 'daki türün adı.  
+ [içinde] Unicode'daki türün adı.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` öznitelikleri. Bu, `CorTypeAttr` değerlerinin bir bit dır.  
+ [içinde] `TypeDef` öznitelikleri. Bu `CorTypeAttr` değerlerin bir bitmask olduğunu.  
   
  `tkExtends`  
- 'ndaki Taban sınıfının belirteci. Bu bir `mdTypeDef` ya da `mdTypeRef` belirteci.  
+ [içinde] Taban sınıfın belirteci. Bu ya `mdTypeDef` bir `mdTypeRef` ya da bir belirteç.  
   
  `rtkImplements`[]  
- 'ndaki Bu sınıfın veya arabirimin uyguladığı arabirimleri belirten bir belirteç dizisi.  
+ [içinde] Bu sınıfın veya arabirimin uyguladığı arabirimleri belirten belirteçler dizisi.  
   
  `tdEncloser`  
- 'ndaki Kapsayan türün belirteci. Dizinin son öğesi `mdTokenNil`olmalıdır.  
+ [içinde] Çevreleyen türün belirteci. Dizinin son öğesi `mdTokenNil`.  
   
  `ptd`  
- dışı `mdTypeDef` belirteci atandı.  
+ [çıkış] Atanan `mdTypeDef` belirteç.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

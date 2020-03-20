@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
-ms.openlocfilehash: 5202e4c26220bc9ea08d6d941ee5a7821cbbdefd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e965702943149d3ed34be39bb2923ad52dcf90ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122232"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181652"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework'te Yan Yana Yürütme
 
@@ -23,27 +23,27 @@ Aynı bilgisayar üzerinde çalışma zamanının farklı iki versiyonunu kullan
   
 Aşağıdaki örnek çeşitli uygulamaların aynı bilgisayarda bir bileşenin iki farklı sürümünü kullandığını göstermektedir. Uygulama A ve B bileşenin 1.0 sürümünü kullanırken Uygulama C aynı bileşenin 2.0 sürümünü kullanır.  
   
-![Bileşenin yan yana yürütmesini gösteren diyagram.](./media/side-by-side-execution/side-by-side-component-execution.gif)  
+![Bir bileşenin yan yana yürütülmesini gösteren diyagram.](./media/side-by-side-execution/side-by-side-component-execution.gif)  
   
 Yan yana yürütme size bir bileşenin sürümüne bağlı olan uygulama ve uygulamanın kullandığı çalışma zamanı üzerinde daha fazla denetim, kontrol sağlar.  
   
 ## <a name="benefits-of-side-by-side-execution"></a>Yan Yana Yürütmenin Yararları  
- 
+
 Windows XP ve .NET Framework' den önce uygulamalar aynı kodun uyumsuz sürümleri arasında kararsız kaldığı için DLL çakışması oluşurdu. DLL içinde yer alan tür bilgileri yalnızca bir dosya adına bağlıydı. Bir uygulamanın bir DLL içinde yer alan tür bilgileriyle uygulamanın oluşturuldu türlerin aynı olduğunu bilmesinin imkanı yoktu. Sonuç olarak, bir bileşenin yeni bir sürümü eski bir sürümü üzerine yazılabilir ve uygulamaları durdurabilir.  
   
 Yan yana yürütme ve .NET Framework DLL çakışmalarını gidermek için aşağıdaki özellikleri sağlar:  
   
 - Tanımlayıcı adlandırılmış derlemeler.  
   
-     Yan yana yürütme bir derlemenin belirli bir sürümüne tür bilgisi bağlamak için tanımlayıcı adlandırılmış derlemeler kullanır. Bu bir uygulama ya da bileşenin bir derlemenin geçersiz bir sürümüne bağlanmasını önler. Tanımlayıcı adlandırılmış derlemeler ayrıca bir bilgisayar üzerinde var olan bir dosyanın çeşitli sürümlerine ve uygulamalar tarafından kullanılmasına izin verir. Daha fazla bilgi için bkz. [Strong-adlandırılmış derlemeler](../../standard/assembly/strong-named.md).  
+     Yan yana yürütme bir derlemenin belirli bir sürümüne tür bilgisi bağlamak için tanımlayıcı adlandırılmış derlemeler kullanır. Bu bir uygulama ya da bileşenin bir derlemenin geçersiz bir sürümüne bağlanmasını önler. Tanımlayıcı adlandırılmış derlemeler ayrıca bir bilgisayar üzerinde var olan bir dosyanın çeşitli sürümlerine ve uygulamalar tarafından kullanılmasına izin verir. Daha fazla bilgi için Bkz. [Güçlü Adlandırılmış Derlemeler.](../../standard/assembly/strong-named.md)  
   
 - Sürüm uyumlu kod depolama.  
   
-     .NET Framework genel derleme önbelleğinde sürüm ile uyumlu kod depolamayı sağlar. Genel birleştirme önbelleği .NET Framework yüklü olan tüm bilgisayarlar üzerinde sunulan mevcut bilgisayar düzeyindeki kod önbelleğidir. Sürüm bazlı derlemeleri, kültür ve yayımcı bilgilerini depolar ve bileşenlerin ve uygulamaların birden çok sürümünü destekler. Daha fazla bilgi için bkz. [genel derleme önbelleği](../app-domains/gac.md).  
+     .NET Framework genel derleme önbelleğinde sürüm ile uyumlu kod depolamayı sağlar. Genel birleştirme önbelleği .NET Framework yüklü olan tüm bilgisayarlar üzerinde sunulan mevcut bilgisayar düzeyindeki kod önbelleğidir. Sürüm bazlı derlemeleri, kültür ve yayımcı bilgilerini depolar ve bileşenlerin ve uygulamaların birden çok sürümünü destekler. Daha fazla bilgi için [Genel Montaj Önbelleği'ne](../app-domains/gac.md)bakın.  
   
 - Yalıtım.  
   
-     .NET Framework kullanarak yalıtım modunda çalışan uygulamalar ve bileşenler oluşturabilirsiniz. Yalıtım, yan yana yürütmenin temel bir bileşenidir. Bir bileşenin ya da uygulamanın kullandığınız çeşitli sürümleri arasında güvenli olan kaynak paylaşmayı ve kaynaklarla uyumlu olmayı sağlar. Yalıtım ayrıca sürüme özgü bir şekilde dosya depolamayı da içerir. Yalıtım hakkında daha fazla bilgi için bkz. [yan yana yürütme Için bileşen oluşturmaya yönelik kılavuzlar](guidelines-for-creating-components-for-side-by-side-execution.md).  
+     .NET Framework kullanarak yalıtım modunda çalışan uygulamalar ve bileşenler oluşturabilirsiniz. Yalıtım, yan yana yürütmenin temel bir bileşenidir. Bir bileşenin ya da uygulamanın kullandığınız çeşitli sürümleri arasında güvenli olan kaynak paylaşmayı ve kaynaklarla uyumlu olmayı sağlar. Yalıtım ayrıca sürüme özgü bir şekilde dosya depolamayı da içerir. Yalıtım hakkında daha fazla bilgi için, [Yan yana Yürütme için Bileşenler Oluşturma Yönergeleri'ne](guidelines-for-creating-components-for-side-by-side-execution.md)bakın.  
   
 ## <a name="version-compatibility"></a>Sürüm Uyumluluğu  
 
@@ -53,79 +53,79 @@ Yan yana yürütme ve .NET Framework DLL çakışmalarını gidermek için aşa�
   
 ## <a name="locating-runtime-version-information"></a>Çalışma Zamanı Sürüm Bilgilerini Bulma  
 
-Bir uygulama veya bileşenin hangi çalışma zamanı sürümü ile derlendiğine ve uygulamanın çalışması için gereken çalışma zamanının hangi sürümlerinin, iki konumda depolanabileceği bilgiler. Bir uygulama veya bileşen derlendiğinde, derleme için kullanılan çalışma zamanı sürümü ile ilgili bilgiler yönetilen yürütülebilir dosyada depolanır. Uygulamanın veya bileşenin gerektirdiği çalışma zamanı sürümleri hakkında bilgi, uygulama yapılandırma dosyasında depolanır.  
+Bir uygulamanın veya bileşenin hangi çalışma zamanı sürümüyle derlendiği ve uygulamanın çalıştırılması gereken çalışma zamanı sürümlerinin iki konumda depolandığı bilgiler. Bir uygulama veya bileşen derlendiğinde, derlemek için kullanılan çalışma zamanı sürümündeki bilgiler yönetilen yürütülebilir de depolanır. Uygulamanın veya bileşenin gerektirdiği çalışma zamanı sürümlerindeki bilgiler uygulama yapılandırma dosyasında depolanır.  
   
-### <a name="runtime-version-information-in-the-managed-executable"></a>Yönetilen Çalıştırılabilirteki çalışma zamanı sürüm bilgileri  
+### <a name="runtime-version-information-in-the-managed-executable"></a>Yönetilen Yürütülebilir'deki Çalışma Zamanı Sürüm Bilgileri  
 
-Her bir yönetilen uygulamanın ve bileşeninin taşınabilir yürütülebilir (PE) dosya üstbilgisi, birlikte oluşturulduğu çalışma zamanı sürümü hakkında bilgi içerir. Ortak dil çalışma zamanı, uygulamanın çalışması gereken en olası çalışma zamanı sürümünü öğrenmek için bu bilgileri kullanır.  
+Yönetilen her uygulamanın ve bileşenin taşınabilir yürütülebilir (PE) dosya üstbilgisi, birlikte üretildiği çalışma zamanı sürümü hakkında bilgi içerir. Ortak dil çalışma süresi, uygulamanın çalışması gereken çalışma zamanının en olası sürümünü belirlemek için bu bilgileri kullanır.  
   
-### <a name="runtime-version-information-in-the-application-configuration-file"></a>Uygulama yapılandırma dosyasındaki çalışma zamanı sürüm bilgileri  
+### <a name="runtime-version-information-in-the-application-configuration-file"></a>Uygulama Yapılandırma Dosyasındaki Çalışma Zamanı Sürüm Bilgileri  
 
-PE dosya üstbilgisindeki bilgilere ek olarak, bir uygulama çalışma zamanı sürüm bilgilerini sağlayan bir uygulama yapılandırma dosyası ile dağıtılabilir. Uygulama yapılandırma dosyası, uygulama geliştiricisi tarafından oluşturulan ve bir uygulamayla birlikte gelen XML tabanlı bir dosyadır. [\<startup > bölümünün](../configure-apps/file-schema/startup/startup-element.md) [\<requiredRuntime > öğesi](../configure-apps/file-schema/startup/requiredruntime-element.md) bu dosyada mevcutsa, çalışma zamanının hangi sürümlerinin ve uygulamanın hangi sürümlerinin desteklediğini belirtir. Uygulamanın çalışma zamanının farklı sürümleriyle uyumluluğunu test etmek için bu dosyayı test içinde de kullanabilirsiniz.  
+PE dosya üstbilgideki bilgilere ek olarak, bir uygulama çalışma zamanı sürüm bilgilerini sağlayan bir uygulama yapılandırma dosyasıyla dağıtılabilir. Uygulama yapılandırma dosyası, uygulama geliştiricisi tarafından oluşturulan ve bir uygulama ile birlikte gönderen XML tabanlı bir dosyadır. Başlangıç [ \<](../configure-apps/file-schema/startup/requiredruntime-element.md) [ \<> bölümünün](../configure-apps/file-schema/startup/startup-element.md)gerekli Runtime> Öğesi , bu dosyada varsa, çalışma zamanının hangi sürümlerini ve uygulamanın hangi bileşeni ni desteklediğini belirtir. Bu dosyayı, bir uygulamanın çalışma zamanının farklı sürümleriyle uyumluluğunu test etmek için de kullanabilirsiniz.  
   
-COM ve COM+ uygulamaları dahil olmak üzere yönetilmeyen kod, çalışma zamanının yönetilen kodla etkileşim kurmak için kullandığı uygulama yapılandırma dosyalarına sahip olabilir. Uygulama yapılandırma dosyası, COM aracılığıyla etkinleştirebileceğiniz tüm yönetilen kodları etkiler. Dosya, derleme yeniden yönlendirmelerinin yanı sıra desteklediği çalışma zamanı sürümlerini belirtebilir. Varsayılan olarak, yönetilen koda çağıran COM birlikte çalışma uygulamaları, bilgisayarda yüklü olan çalışma zamanının en son sürümünü kullanır.  
+COM ve COM+ uygulamaları da dahil olmak üzere yönetilmeyen kod, çalışma zamanının yönetilen kodla etkileşim kurmak için kullandığı uygulama yapılandırma dosyalarına sahip olabilir. Uygulama yapılandırma dosyası, COM aracılığıyla etkinleştirdiğiniz yönetilen kodları etkiler. Dosya, hangi çalışma zamanı sürümlerini desteklediğini ve derlemenin yeniden yönlendirebileceğini belirtebilir. Varsayılan olarak, yönetilen koda çağrıda bulunan COM interop uygulamaları, bilgisayarda yüklü olan çalışma zamanının en son sürümünü kullanır.  
   
- Uygulama yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [uygulamaları yapılandırma](../configure-apps/index.md).  
+ Uygulama yapılandırma dosyaları hakkında daha fazla bilgi için Uygulamaları [Yapılandırma'ya](../configure-apps/index.md)bakın.  
   
 ## <a name="determining-which-version-of-the-runtime-to-load"></a>Çalışma Zamanının Hangi Sürümünün Yükleneceğini Belirleme  
 
-Ortak dil çalışma zamanı, bir uygulama için hangi çalışma zamanının hangi sürümünün yükleneceğini belirlemede aşağıdaki bilgileri kullanır:  
+Ortak dil çalışma süresi, bir uygulama için yüklenmesi gereken çalışma zamanının hangi sürümünü belirlemek için aşağıdaki bilgileri kullanır:  
   
 - Kullanılabilir çalışma zamanı sürümleri.  
   
-- Uygulamanın desteklediği çalışma zamanı sürümleri.  
+- Bir uygulamanın desteklediği çalışma zamanı sürümleri.  
   
-### <a name="supported-runtime-versions"></a>Desteklenen çalışma zamanı sürümleri  
+### <a name="supported-runtime-versions"></a>Desteklenen Runtime Sürümleri  
 
-Çalışma zamanı, uygulama yapılandırma dosyasını ve taşınabilir yürütülebilir (PE) dosya üstbilgisini kullanarak bir uygulamanın hangi çalışma zamanı sürümünü desteklediğini belirleyebilir. Uygulama yapılandırma dosyası yoksa, çalışma zamanı, uygulamanın PE dosya üstbilgisinde belirtilen çalışma zamanı sürümünü yükler, bu sürüm kullanılabilir.  
+Çalışma zamanı, uygulamanın hangi sürümünü desteklediğini belirlemek için uygulama yapılandırma dosyasını ve taşınabilir yürütülebilir (PE) dosya üstbilgisini kullanır. Uygulama yapılandırma dosyası yoksa, çalışma zamanı, uygulamanın PE dosya üstbilgisinde belirtilen çalışma zamanı sürümünü yükler, bu sürüm varsa.  
   
-Bir uygulama yapılandırma dosyası varsa, çalışma zamanı, aşağıdaki işlemin sonuçlarına göre yüklenecek uygun çalışma zamanı sürümünü belirler:  
+Bir uygulama yapılandırma dosyası varsa, çalışma zamanı aşağıdaki işlemin sonuçlarına göre yüklenmeye uygun çalışma zamanı sürümünü belirler:  
   
-1. Çalışma zamanı, uygulama yapılandırma dosyasında [\<supportedRuntime > öğesi](../configure-apps/file-schema/startup/supportedruntime-element.md) öğesini inceler. **\<supportedruntime >** öğesinde belirtilen bir veya daha fazla desteklenen çalışma zamanı sürümü varsa, çalışma zamanı Ilk **\<supportedRuntime >** öğesi tarafından belirtilen çalışma zamanı sürümünü yükler. Bu sürüm kullanılamıyorsa, çalışma zamanı bir sonraki **\<supportedruntime >** öğesini inceler ve belirtilen çalışma zamanı sürümünü yüklemeye çalışır. Bu çalışma zamanı sürümü kullanılamıyorsa, sonraki **\<supportedRuntime >** öğeleri incelenir. Desteklenen çalışma zamanı sürümlerinin hiçbiri kullanılabilir değilse, çalışma zamanı bir çalışma zamanı sürümü yükleyemez ve kullanıcıya bir ileti görüntüler (bkz. Adım 3).  
+1. Çalışma zamanı, uygulama yapılandırma dosyasındaki [ \<desteklenen Runtime> Öğesi](../configure-apps/file-schema/startup/supportedruntime-element.md) öğesini inceler. Desteklenen Runtime>öğesinde belirtilen desteklenen çalışma zamanı sürümlerinden biri veya birkaçı varsa, çalışma zamanı ilk ** \<desteklenen Runtime>** öğesi tarafından belirtilen çalışma zamanı sürümünü yükler. ** \<** Bu sürüm kullanılamıyorsa, çalışma zamanı sonraki ** \<desteklenen Runtime>** öğesini inceler ve belirtilen çalışma zamanı sürümünü yüklemeye çalışır. Bu çalışma zamanı sürümü kullanılamıyorsa, sonraki ** \<desteklenen Runtime>** öğeleri incelenir. Desteklenen çalışma zamanı sürümlerinin hiçbiri yoksa, çalışma zamanı sürümü yüklenmez ve kullanıcıya bir ileti görüntüler (bkz. adım 3).  
   
-2. Çalışma zamanı, uygulamanın yürütülebilir dosyasının PE dosya üstbilgisini okur. PE dosya üst bilgisi tarafından belirtilen çalışma zamanı sürümü kullanılabiliyorsa, çalışma zamanı bu sürümü yükler. Belirtilen çalışma zamanı sürümü kullanılamıyorsa, çalışma zamanı Microsoft tarafından, PE üstbilgisindeki çalışma zamanı sürümüyle uyumlu olacak şekilde belirlenen bir çalışma zamanı sürümü arar. Bu sürüm bulunamazsa, işlem adım 3 ' e devam eder.  
+2. Çalışma süresi, uygulamanın yürütülebilir dosyasının PE dosya üstbilgisini okur. PE dosya üstbilgisi tarafından belirtilen çalışma zamanı sürümü kullanılabilirse, çalışma zamanı bu sürümü yükler. Belirtilen çalışma zamanı sürümü kullanılamıyorsa, çalışma zamanı sürümü Microsoft tarafından PE üstbilgideki çalışma zamanı sürümüyle uyumlu olarak belirlenen çalışma zamanı sürümünü arar. Bu sürüm bulunamazsa, işlem 3 adıma devam eder.  
   
-3. Çalışma zamanı, uygulama tarafından desteklenen çalışma zamanı sürümünün kullanılamadığını belirten bir ileti görüntüler. Çalışma zamanı yüklenmedi.  
+3. Çalışma zamanı, uygulama tarafından desteklenen çalışma zamanı sürümünün kullanılamadığını belirten bir ileti görüntüler. Çalışma süresi yüklenmedi.  
   
     > [!NOTE]
-    > Bu iletinin görüntülenmesini, HKLM\Software\Microsoft\\kayıt defteri anahtarı altındaki NoGuiFromShim değerini kullanarak gizleyebilirsiniz. NETFramework veya COMPLUS_NoGuiFromShim ortam değişkenini kullanma. Örneğin, katılımsız yüklemeler veya Windows Hizmetleri gibi genellikle kullanıcıyla etkileşimde bulunmayan uygulamalar için iletiyi gizleyebilirsiniz. Bu ileti görüntülendiğinde, çalışma zamanı olay günlüğüne bir ileti yazar.  Bir bilgisayardaki tüm uygulamalarda bu iletiyi bastırmak için NoGuiFromShim kayıt defteri değerini 1 olarak ayarlayın. Alternatif olarak, belirli bir kullanıcı bağlamında çalışan uygulamaların iletisini bastırmak için COMPLUS_NoGuiFromShim ortam değişkenini 1 olarak ayarlayın.  
+    > Bu iletinin görüntülenmesini, kayıt defteri anahtarı hkLM\Software\Microsoft\\altında NoGuiFromShim değerini kullanarak bastırabilirsiniz. NETFramework veya çevre değişkeni COMPLUS_NoGuiFromShim kullanarak. Örneğin, genellikle kullanıcıyla etkileşimde olmayan,sahipsiz yüklemeler veya Windows hizmetleri gibi uygulamalar için iletiyi bastırabilirsiniz. Bu ileti ekranı bastırıldığında, çalışma zamanı olay günlüğüne bir ileti yazar.  Bilgisayardaki tüm uygulamalar için bu iletiyi bastırmak için kayıt defteri değerini NoGuiFromShim olarak 1 olarak ayarlayın. Alternatif olarak, belirli bir kullanıcı bağlamında çalışan uygulamalar için iletibastırmak için COMPLUS_NoGuiFromShim ortamı değişkenini 1 olarak ayarlayın.  
   
 > [!NOTE]
-> Bir çalışma zamanı sürümü yüklendikten sonra, derleme bağlama yeniden yönlendirmeleri, tek bir .NET Framework derlemesinin farklı bir sürümünün yükleneceğini belirtebilir. Bu bağlama yeniden yönlendirmeleri yalnızca yeniden yönlendirilen belirli bir derlemeyi etkiler.  
+> Çalışma zamanı sürümü yüklendikten sonra, derleme bağlama yönlendirmeleri, tek bir .NET Framework derlemesinin farklı bir sürümünün yüklendiğini belirtebilir. Bu bağlama yönlendirmeleri yalnızca yönlendirilen belirli derlemeyi etkiler.  
   
 ## <a name="partially-qualified-assembly-names-and-side-by-side-execution"></a>Kısmen Nitelenmiş Derleme Adları ve Yan Yana Yürütme  
 
-Yan yana sorunların olası bir kaynağı olduklarından, kısmen nitelenmiş derleme başvuruları yalnızca bir uygulama dizini içindeki derlemelere bağlamak için kullanılabilir. Kodunuzda kısmen nitelikli derleme başvurularından kaçının.  
+Yan yana sorunların potansiyel bir kaynağı olduğundan, kısmen nitelikli derleme başvuruları yalnızca bir uygulama dizini içindeki derlemelere bağlamak için kullanılabilir. Kodunuzda kısmen nitelikli montaj başvurularından kaçının.  
   
-Kodda kısmen nitelikli derleme başvurularını azaltmak için bir uygulama yapılandırma dosyasında [\<qualifyAssembly >](../configure-apps/file-schema/runtime/qualifyassembly-element.md) öğesini kullanarak kodda oluşan kısmen nitelikli derleme başvurularını tam olarak niteleyebilirsiniz. Yalnızca kısmi başvuruda ayarlanmamış alanları belirtmek için **\<qualifyAssembly >** öğesini kullanın. **FullName** özniteliğinde listelenen derleme kimliği, derleme adını, ortak anahtarı, kültürü ve sürümü tam olarak nitelemek için gereken tüm bilgileri içermelidir.  
+Koddaki kısmen nitelikli derleme başvurularını azaltmak için, kodda oluşan kısmen nitelikli derleme başvurularını tam olarak hak kazanmak için bir uygulama yapılandırma dosyasındaki [ \<uygun Assembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md) öğesini kullanabilirsiniz. Yalnızca kısmi başvuruda ayarlanamayan alanları belirtmek için qualifyAssembly>öğesini kullanın. ** \<** **fullName** özniteliğinde listelenen derleme kimliği, derleme adını, genel anahtarı, kültürü ve sürümü tam olarak nitelemek için gereken tüm bilgileri içermelidir.  
   
- Aşağıdaki örnek, `myAssembly`adlı bir derlemeyi tam olarak nitelendirmek için uygulama yapılandırma dosya girişini gösterir.  
+ Aşağıdaki örnekte, '. adı verilen `myAssembly`bir derlemeyi tam olarak nitelemek için uygulama yapılandırma dosya girişi gösterilmektedir.  
   
 ```xml  
-<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">   
-<qualifyAssembly partialName="myAssembly"   
+<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+<qualifyAssembly partialName="myAssembly"
 fullName="myAssembly,  
-      version=1.0.0.0,   
-publicKeyToken=...,   
-      culture=neutral"/>   
-</assemblyBinding>   
+      version=1.0.0.0,
+publicKeyToken=...,
+      culture=neutral"/>
+</assemblyBinding>
 ```  
   
- Bir derleme yükleme bildiriminde `myAssembly`her başvurduğunda, bu yapılandırma dosyası ayarları çalışma zamanının kısmen nitelenmiş `myAssembly` başvurusunu tam nitelikli bir başvuruya otomatik olarak çevirmesine neden olur. Örneğin, Assembly. Load ("myAssembly") derleme. Load ("myAssembly, Version = 1.0.0.0, publicKeyToken =..., Culture = neutral") olur.  
+ Bir derleme yük deyimi `myAssembly`başvurulsa, bu yapılandırma dosyası ayarları çalışma `myAssembly` zamanının kısmen nitelikli başvuruyu tam nitelikli bir başvuruya otomatik olarak çevirmesine neden olur. Örneğin, Assembly.Load("myAssembly") Assembly.Load("myAssembly, version=1.0.0.0, publicKeyToken=..., culture=neutral") olur.  
   
 > [!NOTE]
-> Genel derleme önbelleğinden kısmen Başvurulmuş derlemelerin yüklenmesini engelleyen ortak dil çalışma zamanı kısıtlamasını atlamak için **LoadWithPartialName** yöntemini kullanabilirsiniz. Bu yöntem, yan yana yürütmede sorunlara kolayca yol açabileceği için yalnızca uzaktan iletişim senaryolarında kullanılmalıdır.  
+> Kısmen başvurulan derlemelerin genel derleme önbelleğinden yüklenmesini yasaklayan ortak dil çalışma zamanı kısıtlamasını atlamak için **LoadWithPartialName** yöntemini kullanabilirsiniz. Bu yöntem, yan yana yürütmede kolayca sorunlara neden olabileceğiiçin yalnızca senaryoları remoting'de kullanılmalıdır.  
   
 ## <a name="related-topics"></a>İlgili Konular  
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
 |[Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Bir uygulamanın bir derlemenin belirli bir sürümüne nasıl bağlanacağını açıklar.|  
-|[Bütünleştirilmiş Kod Bağlama Yönlendirmesini Yapılandırma](configuring-assembly-binding-redirection.md)|Derleme bağlama başvurularının nasıl belirli bir sürümdeki .NET Framework derlemelerine yeniden yönlendirildiğini açıklar.|  
-|[İşlem İçi Yan Yana Yürütme](in-process-side-by-side-execution.md)|Tek bir işlemde CLR'nin birden çok sürümünü çalıştırılacak işlem içi yan yana çalışma zamanlı ana makine etkinleştirmenin nasıl kullanabileceğini açıklanır.|  
+|[Derleme Bağlama Yönlendirmesini Yapılandırma](configuring-assembly-binding-redirection.md)|Derleme bağlama başvurularının nasıl belirli bir sürümdeki .NET Framework derlemelerine yeniden yönlendirildiğini açıklar.|  
+|[Devam Eden Yan Yana Yürütme](in-process-side-by-side-execution.md)|Tek bir işlemde CLR'nin birden çok sürümünü çalıştırılacak işlem içi yan yana çalışma zamanlı ana makine etkinleştirmenin nasıl kullanabileceğini açıklanır.|  
 |[.NET’te bütünleştirilmiş kodlar](../../standard/assembly/index.md)|Derlemeler üzerine kavramsal bir genel bakış sağlar.|  
 |[Uygulama Etki Alanları](../app-domains/application-domains.md)|Uygulama etki alanları üzerine kavramsal bir genel bakış sağlar.|  
   
 ## <a name="reference"></a>Başvuru  
 
-[\<supportedRuntime > öğesi](../configure-apps/file-schema/startup/supportedruntime-element.md)
+[\<desteklenenRuntime> Öğesi](../configure-apps/file-schema/startup/supportedruntime-element.md)

@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
-ms.openlocfilehash: 6efc89e5c22f53d9b2c48e535c783d488df16462
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d89d19a7a3edb57dcd6c0e37e6688701da8b3713
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130334"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180592"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>Nasıl yapılır: Nesnelerin Yavaş Başlatılmasını Gerçekleştirme
-<xref:System.Lazy%601?displayProperty=nameWithType> sınıfı, nesnelerin yavaş başlatılmasını ve örneklenmesini gerçekleştirme işini basitleştirir. Nesneleri yavaş bir şekilde başlatarak, hiçbir zaman gerekli olmadıklarında bunları her türlü oluşturmak zorunda kalmaktan kaçınabilirsiniz veya ilk erişilene kadar başlatma işleminin ertelenebilmesini sağlayabilirsiniz. Daha fazla bilgi için bkz. [yavaş başlatma](lazy-initialization.md).  
+Sınıf, <xref:System.Lazy%601?displayProperty=nameWithType> nesnelerin tembel başlatılması nı ve anlık olarak gerçekleştirme işini basitleştirir. Nesneleri tembel bir şekilde başharfe alarak, hiç ihtiyaç duyulmamışsa bunları oluşturmak zorunda kalmaktan kaçınabilir veya ilk erişilene kadar başlatmalarını erteleyebilirsiniz. Daha fazla bilgi [için, Lazy Initialization](lazy-initialization.md)bakın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, <xref:System.Lazy%601>bir değerin nasıl başlatılacağını gösterir. `someCondition` değişkenini true veya false olarak ayarlayan başka bir koda bağlı olarak, yavaş değişkenin gerekli olabileceğini varsayalım.  
+ Aşağıdaki örnekte, <xref:System.Lazy%601>bir değerin nasıl başlağlaştırılanın. `someCondition` Değişkeni doğru veya yanlış olarak ayarlayan başka bir koda bağlı olarak, tembel değişkenin gerekli olmayabileceğini varsayalım.  
   
 ```vb  
 Dim someCondition As Boolean = False  
@@ -48,7 +48,7 @@ End Sub
 ```  
   
 ```csharp  
-  static bool someCondition = false;    
+  static bool someCondition = false;
   //Initializing a value with a big computation, computed in parallel  
   Lazy<int> _data = new Lazy<int>(delegate  
   {  
@@ -69,7 +69,7 @@ End Sub
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, yalnızca geçerli iş parçacığındaki geçerli nesne örneği için görünür olan bir türü başlatmak üzere <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> sınıfının nasıl kullanılacağını gösterir.  
+ Aşağıdaki örnek, yalnızca geçerli <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> iş parçacığındaki geçerli nesne örneğinde görünen bir türü başlatmayı yapmak için sınıfın nasıl kullanılacağını gösterir.  
   
  [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
  [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
@@ -77,4 +77,4 @@ End Sub
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
-- [Geç Başlatma](lazy-initialization.md)
+- [Yavaş Başlatma](lazy-initialization.md)

@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-ms.openlocfilehash: a43c1883038e41cac1b58c78bc26f20d436ebbd1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 61b5678a546bdbadbcc6d8ee86447cb17ce72b99
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440245"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175531"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes Yöntemi
-Belirtilen tür veya üyeyle ilişkili özel öznitelik tanımı belirteçlerini numaralandırır.  
+Belirtilen tür veya üyeile ilişkili özel öznitelik tanım belirteçleri güncelleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT EnumCustomAttributes (   
+HRESULT EnumCustomAttributes (
    [in, out] HCORENUM      *phEnum,  
-   [in]  mdToken            tk,   
-   [in]  mdToken            tkType,   
-   [out] mdCustomAttribute  rCustomAttributes[],   
+   [in]  mdToken            tk,
+   [in]  mdToken            tkType,
+   [out] mdCustomAttribute  rCustomAttributes[],
    [in]  ULONG              cMax,  
    [out, optional] ULONG   *pcCustomAttributes  
 );  
@@ -40,38 +40,38 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] Döndürülen Numaralandırıcı için bir işaretçi.  
+ [içinde, dışarı] Döndürülen sayıya işaretçi.  
   
  `tk`  
- 'ndaki Numaralandırma kapsamı için bir belirteç veya tüm özel öznitelikler için sıfır.  
+ [içinde] Numaralandırma kapsamı için bir belirteç veya tüm özel öznitelikler için sıfır.  
   
  `tkType`  
- 'ndaki Numaralandırılacak özniteliklerin türü oluşturucusuna yönelik belirteç veya tüm türler için `null`.  
+ [içinde] Numaralandırılacak özniteliklerin türünün veya tüm türlerin oluşturucusu `null` için bir belirteç.  
   
  `rCustomAttributes`  
- dışı Özel öznitelik belirteçlerinin dizisi.  
+ [çıkış] Özel öznitelik belirteçleri dizisi.  
   
  `cMax`  
- 'ndaki `rCustomAttributes` dizisinin en büyük boyutu.  
+ [içinde] `rCustomAttributes` Dizinin en büyük boyutu.  
   
  `pcCustomAttributes`  
- [Out, isteğe bağlı] `rCustomAttributes`' de döndürülen belirteç değerlerinin gerçek sayısı.  
+ [çıkış, isteğe bağlı] Döndürülen belirteç değerlerinin `rCustomAttributes`gerçek sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak özel öznitelik yok. Bu durumda `pcCustomAttributes` sıfırdır.|  
+|`S_OK`|`EnumCustomAttributes`başarıyla döndürülür.|  
+|`S_FALSE`|Sayısala' da özel öznitelikler yoktur. Bu durumda, `pcCustomAttributes` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

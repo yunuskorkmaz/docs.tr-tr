@@ -15,63 +15,63 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-ms.openlocfilehash: 193e8788d5a1b28f43f2fb0d4d935a18542dd923
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e766cec8fd84713e12c43cd1095650ed5b757bcb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427496"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175479"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls Yöntemi
-Belirtilen türdeki yöntemleri temsil eden MethodBody ve MethodDeclaration belirteçlerini numaralandırır.  
+Belirtilen tipteki yöntemleri temsil eden MethodBody ve MethodDeclaration belirteçlerini okurum.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumMethodImpls (  
-   [in, out] HCORENUM    *phEnum,   
-   [in]      mdTypeDef   td,   
-   [out]     mdToken     rMethodBody[],   
-   [out]     mdToken     rMethodDecl[],   
-   [in]      ULONG       cMax,   
+   [in, out] HCORENUM    *phEnum,
+   [in]      mdTypeDef   td,
+   [out]     mdToken     rMethodBody[],
+   [out]     mdToken     rMethodDecl[],
+   [in]      ULONG       cMax,
    [in]      ULONG       *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] Numaralandırıcı için bir işaretçi. Bu yöntemin ilk çağrısı için bu NULL olmalıdır.  
+ [içinde, dışarı] Sayıya işaretçisi. Bu yöntemin ilk araması için NULL olmalıdır.  
   
  `td`  
- 'ndaki Yöntem uygulamaları Numaralandırılacak tür için bir TypeDef belirteci.  
+ [içinde] Yöntem uygulamaları numaralandırmak için türü için bir TypeDef belirteci.  
   
  `rMethodBody`  
- dışı MethodBody belirteçlerini depolayacak dizi.  
+ [çıkış] MethodBody belirteçlerini depolamak için dizi.  
   
  `rMethodDecl`  
- dışı MethodDeclaration belirteçlerini depolayacak dizi.  
+ [çıkış] MethodDeclaration belirteçlerini depolayabilmek için dizi.  
   
  `cMax`  
- 'ndaki `rMethodBody` ve `rMethodDecl` dizilerinin en büyük boyutu.  
+ [içinde] Ve `rMethodBody` `rMethodDecl` dizilerin maksimum boyutu.  
   
  `pcTokens`  
- 'ndaki `rMethodBody` ve `rMethodDecl`döndürülen gerçek Yöntem sayısı.  
+ [içinde] Döndürülen yöntemlerin gerçek `rMethodBody` `rMethodDecl`sayısı ve .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak hiçbir yöntem belirteci yok. Bu durumda `pcTokens` sıfırdır.|  
+|`S_OK`|`EnumMethodImpls`başarıyla döndürülür.|  
+|`S_FALSE`|Sayısala maksat için herhangi bir yöntem belirteçleri vardır. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

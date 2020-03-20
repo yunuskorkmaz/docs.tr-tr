@@ -3,22 +3,22 @@ title: <serviceTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
 author: BrucePerlerMS
-ms.openlocfilehash: 30a53c11b551623311f7ca3f957143fc702568a1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0983380e553acfe246d6b987784d818b8ae85b17
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251843"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152586"
 ---
-# <a name="servicetokenresolver"></a>\<serviceTokenResolver >
-Belirteç işleyici koleksiyonundaki işleyiciler tarafından kullanılan hizmet belirteci çözümleyicisini kaydeder. Hizmet belirteci çözümleyici, gelen belirteçlerde ve iletilerde şifreleme belirtecini çözümlemek için kullanılır.  
+# <a name="servicetokenresolver"></a>\<serviceTokenResolver>
+Belirteç işleyicisi koleksiyonunda işleyiciler tarafından kullanılan hizmet belirteci çözümleyicisini kaydeder. Hizmet belirteci çözümleyicisi, gelen belirteçler ve iletiler üzerindeki şifreleme belirteci çözümlemek için kullanılır.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. IdentityModel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<IdentityConfiguration >** ](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlerConfiguration >** ](securitytokenhandlerconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<serviceTokenResolver >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<güvenlikTokenHandlers>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<güvenlikTokenHandlerConfiguration>**](securitytokenhandlerconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceTokenResolver>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,28 +42,27 @@ Belirteç işleyici koleksiyonundaki işleyiciler tarafından kullanılan hizmet
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|türü|Hizmet belirteci Çözümleyicisinin türünü belirtir. Ya tür ya da <xref:System.IdentityModel.Selectors.SecurityTokenResolver> sınıftan türeyen bir tür. <xref:System.IdentityModel.Selectors.SecurityTokenResolver> `type` Özniteliği belirtme hakkında daha fazla bilgi için bkz. [özel tür başvuruları]. Gerekli.|  
+|type|Hizmet belirteci çözümleyicisinin türünü belirtir. <xref:System.IdentityModel.Selectors.SecurityTokenResolver> Sınıftan <xref:System.IdentityModel.Selectors.SecurityTokenResolver> tür veya tür. Öznitelik nasıl belirtilir `type` hakkında daha fazla bilgi için bkz: [Özel Tür Başvuruları]. Gereklidir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ None  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md)|Bir güvenlik belirteci işleyicileri koleksiyonu için yapılandırma sağlar.|  
+|[\<güvenlikTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Güvenlik belirteç işleyicileri koleksiyonu için yapılandırma sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hizmet belirteci çözümleyici, gelen belirteçlerde ve iletilerde şifreleme belirtecini çözümlemek için kullanılabilir. Gelen belirteçlerin şifresini çözmek için kullanılması gereken anahtarı almak için kullanılır. `type` Özniteliğini belirtmeniz gerekir. Belirtilen tür ya da <xref:System.IdentityModel.Selectors.SecurityTokenResolver> <xref:System.IdentityModel.Selectors.SecurityTokenResolver> sınıfından türetilen özel bir tür olabilir.  
+ Hizmet belirteci çözümleyicisi, gelen belirteçler ve iletiler üzerindeki şifreleme belirteci çözümlemek için kullanılabilir. Gelen belirteçlerin şifresini çözmek için kullanılması gereken anahtarı almak için kullanılır. Özniteliği belirtmeniz `type` gerekir. Belirtilen tür, <xref:System.IdentityModel.Selectors.SecurityTokenResolver> <xref:System.IdentityModel.Selectors.SecurityTokenResolver> sınıftan türeyen özel bir tür olabilir.  
   
- Bazı belirteç işleyicileri, yapılandırmada hizmet belirteci çözümleyici ayarlarını belirtmenize olanak tanır. Bağımsız belirteç işleyicilerindeki ayarlar, güvenlik belirteci işleyici koleksiyonunda belirtilen ayarları geçersiz kılar.  
+ Bazı belirteç işleyicileri yapılandırmada hizmet belirteç çözümleyicisi ayarlarını belirtmenize olanak tanır. Tek tek belirteç işleyicileri ayarları, güvenlik belirteci işleyicisi koleksiyonunda belirtilenleri geçersiz kılar.  
   
 > [!NOTE]
-> Öğesini IdentityConfiguration > öğesinin bir alt öğesi [olarak belirtmek kullanım dışı bırakılmıştır, ancak yine de geriye dönük uyumluluk için desteklenir. \<](identityconfiguration.md) `<serviceTokenResolver>` Öğesindeki ayarlar, `<identityConfiguration>` öğesinde olanları geçersiz kılar. `<securityTokenHandlerConfiguration>`  
+> Kimlik Yapılandırma `<serviceTokenResolver>` [ \<>](identityconfiguration.md) öğesinin alt öğesi olarak öğebelirtilmesi küçümsenmiştir, ancak yine de geriye dönük uyumluluk için desteklenir. Öğedeki `<securityTokenHandlerConfiguration>` `<identityConfiguration>` ayarlar, öğedekiayarları geçersiz kılar.  
   
 ## <a name="example"></a>Örnek  
   
 ```xml  
 <serviceTokenResolver type="MyNamespace.CustomTokenResolver, MyAssembly" />  
 ```
- 

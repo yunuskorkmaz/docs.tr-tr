@@ -2,23 +2,23 @@
 title: <msmqTransportSecurity>
 ms.date: 03/30/2017
 ms.assetid: 092e911b-ab1b-4069-a26e-6134c3299e06
-ms.openlocfilehash: dc7371d694925d3ac5aa49d7d1269df323358f90
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 5899c609b3cf52c4a275ba6fb10c5826fcf37f1e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397808"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153015"
 ---
-# <a name="msmqtransportsecurity"></a>\<msmqTransportSecurity >
-Özel bağlama için MSMQ taşıma güvenlik ayarlarını belirtir.  
+# <a name="msmqtransportsecurity"></a>\<msmqTransportSecurity>
+Özel bir bağlama için MSMQ taşıma güvenlik ayarlarını belirtir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlama >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<MsmqIntegration >** ](msmqintegration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<msmqTransportSecurity >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<bağlayıcı>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<msmqEntegrasyon>**](msmqintegration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<msmqTransportSecurity>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,10 +37,10 @@ ms.locfileid: "70397808"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`msmqAuthenticationMode`|İletinin MSMQ taşıması tarafından nasıl doğrulanabilmesi gerektiğini belirtir. Bu olarak `None`ayarlanırsa, `msmqProtectionLevel` özniteliğinin değeri de olarak `None`ayarlanmalıdır.<br /><br /> Geçerli değerler şunlardır:<br /><br /> Seçim Kimlik doğrulaması yok.<br />Pencerelerin Kimlik doğrulama mekanizması, iletiyle ilişkili SID için X. 509.440 sertifikasını almak üzere Active Directory kullanır. Bu daha sonra kullanıcının sıraya yazma izni olduğundan emin olmak için kuyruğun ACL 'sini denetlemek üzere kullanılır.<br />Sertifika Kanal, sertifika deposundan sertifikayı alır.<br /><br /> Varsayılan değer Windows ' dır. Bu öznitelik türü <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
-|`msmqEncryptionAlgorithm`|Message Queue yöneticileri arasında ileti aktarılırken ileti şifreleme için kullanılacak algoritmayı belirtir. Geçerli değerler şunlardır:<br /><br /> - RC4Stream<br />-AES<br /><br /> Varsayılan değer RC4Stream ' dir. Bu öznitelik türü <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
-|`msmqProtectionLevel`|İletinin MSMQ taşıma düzeyinde nasıl güvenlik altına alınacağını belirtir. Şifreleme, her iki ileti bütünlüğünü ve Red olmamasını sağlarken, şifreleme ileti bütünlüğünü sağlar; diğer bir deyişle, ileti gerçekten gönderenden geliyor ve gönderen kim olduğunu söylüyor. Geçerli değerler şunlardır:<br /><br /> Seçim Koruma yok.<br />İmzalayabilirsiniz İletiler imzalanır.<br />EncryptAndSign özelliğini İletiler şifrelenir ve imzalanır.<br /><br /> Varsayılan değer, Işaret ' dır. Bu öznitelik türü <xref:System.Net.Security.ProtectionLevel>.|  
-|`msmqSecureHashAlgorithm`|İmzaların bir parçası olarak Özet hesaplanırken kullanılacak algoritmayı belirtir. Geçerli değerler şunlardır:<br /><br /> -MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> Varsayılan değer SHA1 ' dır. Bu öznitelik türü <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.<br>MD5 ve SHA1 ile ilgili çarpışma sorunları nedeniyle, Microsoft SHA256 veya daha iyi bir performans öneriyor.|  
+|`msmqAuthenticationMode`|İletinin MSMQ aktarım tarafından nasıl doğrulanmış olması gerektiğini belirtir. Bu `None`ayarlanırsa, `msmqProtectionLevel` öznitelik değeri de `None`ayarlanmalıdır.<br /><br /> Geçerli değerler şunlardır:<br /><br /> - Yok: Kimlik doğrulaması yok.<br />- Windows: Kimlik doğrulama mekanizması, iletiyle ilişkili SID için X.509 sertifikasını almak için Etkin Dizin kullanır. Bu daha sonra, kullanıcının kuyruğa yazma izni olduğundan emin olmak için kuyruğun ACL'sini denetlemek için kullanılır.<br />- Sertifika: Kanal sertifika deposundan sertifika alır.<br /><br /> Varsayılan değer Windows'dur. Bu öznitelik türündedir. <xref:System.ServiceModel.MsmqAuthenticationMode>|  
+|`msmqEncryptionAlgorithm`|İleti sıra yöneticileri arasında ileti aktarırken ileti şifrelemesi için kullanılacak algoritmayı belirtir. Geçerli değerler şunlardır:<br /><br /> - RC4Stream<br />- AES<br /><br /> Varsayılan değer RC4Stream'dir. Bu öznitelik türündedir. <xref:System.ServiceModel.MsmqEncryptionAlgorithm>|  
+|`msmqProtectionLevel`|İletinin MSMQ aktarım düzeyinde nasıl güvenli olduğunu belirtir. Şifreleme ileti bütünlüğünü sağlarken, EncryptAndSign hem ileti bütünlüğünü hem de reddetmeyi sağlar; yani, mesaj gerçekten gönderenden gelir ve gönderen dedikleri kişidir. Geçerli değerler şunlardır:<br /><br /> - Yok: Koruma yok.<br />- İşaret: Mesajlar imzalanır.<br />- EncryptAndSign: İletiler şifrelenir ve imzalanır.<br /><br /> Varsayılan değer İşarettir. Bu öznitelik türündedir. <xref:System.Net.Security.ProtectionLevel>|  
+|`msmqSecureHashAlgorithm`|İmzaların bir parçası olarak özetin hesaplanmasında kullanılacak algoritmayı belirtir. Geçerli değerler şunlardır:<br /><br /> - MD5<br />- SHA1<br />- SHA256<br />- SHA512<br /><br /> Varsayılan değer SHA1'dir. Bu öznitelik türündedir. <xref:System.ServiceModel.MsmqSecureHashAlgorithm><br>MD5 ve SHA1 ile çarpışma sorunları nedeniyle, Microsoft SHA256 veya daha iyi önerir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -49,11 +49,11 @@ ms.locfileid: "70397808"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<MsmqIntegration >](msmqintegration.md)|Message Queuing (MSMQ) gönderici veya alıcısıyla etkileşim için gereken ayarları belirtir.|  
-|[\<msmqTransport >](msmqtransport.md)|Yerel MSMQ protokolünü kullanan bir Windows Communication Foundation (WCF) hizmeti için sıraya alma iletişim özelliklerini belirtir.|  
+|[\<msmqEntegrasyon>](msmqintegration.md)|İleti Sıralaması (MSMQ) gönderen veya alıcısı ile etkileşim için gereken ayarları belirtir.|  
+|[\<msmqUlaşım>](msmqtransport.md)|Yerel MSMQ protokolünü kullanan bir Windows Communication Foundation (WCF) hizmetiiçin sıraya giren iletişim özelliklerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Taşıma güvenliği hakkında daha fazla bilgi için bkz. [Transport Security](../../../wcf/feature-details/transport-security.md).  
+ Aktarım güvenliği hakkında daha fazla bilgi için [Transport Security'ye](../../../wcf/feature-details/transport-security.md)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -66,5 +66,5 @@ ms.locfileid: "70397808"
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Bağlamaları Genişletme](../../../wcf/extending/extending-bindings.md)
 - [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding >](custombinding.md)
+- [\<customBinding>](custombinding.md)
 - [Aktarım Güvenliği](../../../wcf/feature-details/transport-security.md)

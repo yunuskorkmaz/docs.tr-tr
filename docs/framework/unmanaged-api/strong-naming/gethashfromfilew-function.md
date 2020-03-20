@@ -14,57 +14,57 @@ helpviewer_keywords:
 ms.assetid: 97c2d7a6-5376-45a1-ba65-146a249147cc
 topic_type:
 - apiref
-ms.openlocfilehash: db6f39119d143d27c0d3a80a9c65565d4dfd0d39
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9db583c7064cb910b29e84437f31143dac0d3ec9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140681"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175089"
 ---
 # <a name="gethashfromfilew-function"></a>GetHashFromFileW İşlevi
-Unicode dizesi tarafından belirtilen dosyanın içeriği üzerinde bir karma oluşturur.  
+Unicode dizesi tarafından belirtilen dosyanın içeriği üzerinde karma oluşturur.  
   
- Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: GetHashFromFileW](../hosting/iclrstrongname-gethashfromfilew-method.md) yöntemini kullanın.  
+ Bu işlev amortismana kaldırıldı. Bunun yerine [ICLRStrongName::GetHashFromFileW](../hosting/iclrstrongname-gethashfromfilew-method.md) yöntemini kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT GetHashFromFileW (   
+HRESULT GetHashFromFileW (
     [in]  LPCWSTR   wszFilePath,  
     [in, out] unsigned int   *piHashAlg,  
     [out] BYTE      *pbHash,  
     [in]  DWORD     cchHash,  
     [out] DWORD     *pchHash  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `wszFilePath`  
- 'ndaki Karma olacak dosyanın Unicode adı.  
+ [içinde] Karma dosyanın Unicode adı.  
   
  `piHashAlg`  
- [in, out] Karma oluşturulurken kullanılacak algoritma. Geçerli algoritmalar Win32 CryptoAPI tarafından tanımlı olanlardır. `piHashAlg` 0 olarak ayarlanırsa, varsayılan algoritma CALG_SHA-1 kullanılır.  
+ [içinde, dışarı] Karma oluştururken kullanılacak algoritma. Geçerli algoritmalar Win32 CryptoAPI tarafından tanımlanan algoritmalardır. 0 `piHashAlg` olarak ayarlanırsa, varsayılan algoritma CALG_SHA-1 kullanılır.  
   
  `pbHash`  
- dışı Oluşturulan karmayı içeren bir bayt dizisi.  
+ [çıkış] Oluşturulan karma içeren bir bayt dizisi.  
   
  `cchHash`  
- 'ndaki `pbHash`tarafından işaret edilen arabelleğin en büyük boyutu.  
+ [içinde] Tarafından işaret edilen arabelleğe `pbHash`işaret edilen maksimum boyutu.  
   
  `pchHash`  
- dışı `pbHash`bayt cinsinden boyutu.  
+ [çıkış] Boyutu, bayt, ve. `pbHash`  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu işlev, [GetHashFromFile](gethashfromfile-function.md)ile aynıdır, ancak dosya adı belirtimi ANSI yerine Unicode olur.  
+ Bu işlev [GetHashFromFile](gethashfromfile-function.md)ile aynıdır , ancak dosya adı belirtimi ANSI yerine Unicode'dur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** StrongName. h  
+ **Üstbilgi:** StrongName.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

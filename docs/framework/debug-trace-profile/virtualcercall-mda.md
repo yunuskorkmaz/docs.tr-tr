@@ -9,27 +9,27 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
-ms.openlocfilehash: 49ba4e7ca0b8ed2e433053130bc9ca2742c72ec9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: a2112baed863b1035cbee4e956c1b6e271ff6e3c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217188"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181718"
 ---
 # <a name="virtualcercall-mda"></a>virtualCERCall MDA
-`virtualCERCall` yönetilen hata ayıklama Yardımcısı (MDA), kısıtlı yürütme bölgesi (CER) çağrı grafı içindeki bir çağrı sitesinin sanal bir hedefe, yani son olmayan bir sanal yönteme veya bir arabirim kullanarak bir çağrıya işaret ettiği bir uyarı olarak etkinleştirilir. Ortak dil çalışma zamanı (CLR), bu çağrıların yalnızca ara dil ve meta veri analizinden hedef yöntemini tahmin edemez. Sonuç olarak, CER grafiğinin bir parçası olarak çağrı ağacı hazırlanamaz ve bu alt ağaçta iş parçacığı iptal etme işlemini otomatik olarak engellenemez. Bu MDA, çağrı hedefini hesaplamak için gereken ek bilgiler çalışma zamanında bilindiğinde, bir CER 'nin <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> yöntemine açık çağrılar kullanılarak genişletilmesi gerekebileceği durumları uyarır.  
+Yönetilen `virtualCERCall` hata ayıklama yardımcısı (MDA), kısıtlı bir yürütme bölgesi (CER) çağrı grafiği içindeki bir çağrı sitesinin sanal bir hedefe, yani son sanal olmayan bir yönteme veya arabirim kullanan bir çağrıya sanal çağrı anlamına geldiğini belirten bir uyarı olarak etkinleştirilir. Ortak dil çalışma süresi (CLR), bu çağrıların hedef yöntemini yalnızca ara dilden ve meta veri çözümlemesi ile tahmin edemez. Sonuç olarak, çağrı ağacı CER grafiğinin bir parçası olarak hazırlanamaz ve bu alt ağaçtaki iş parçacığı iptalleri otomatik olarak engellenemez. Bu MDA, arama hedefini hesaplamak için gereken ek bilgiler <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> çalışma zamanında bilindiğinde yönteme açık çağrılar kullanılarak CER'in genişletilmesi gerekebileceği durumlar konusunda uyarır.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Bir iş parçacığı iptal edildiğinde veya bir uygulama etki alanı kaldırıldığında çalıştırmayan CERs.  
+ İş parçacığı iptal edildiğinde veya uygulama etki alanı kaldırılınca çalışmayan CER'ler.  
   
 ## <a name="cause"></a>Nedeni  
- Bir CER, otomatik olarak hazırlanamadığından sanal bir yönteme yönelik bir çağrı içerir.  
+ CER, otomatik olarak hazırlanamayan sanal bir yönteme çağrı içerir.  
   
 ## <a name="resolution"></a>Çözüm  
- Sanal yöntem için <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> çağırın.  
+ Sanal <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> yöntem için arayın.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
- Bu MDA, CLR üzerinde hiçbir etkisi yoktur.  
+## <a name="effect-on-the-runtime"></a>Çalışma Süresi üzerindeki etkisi  
+ Bu MDA'nın CLR üzerinde hiçbir etkisi yoktur.  
   
 ## <a name="output"></a>Çıktı  
   
@@ -87,7 +87,7 @@ void MethodWithCer(MyClass object)
         // Start of the CER.  
   
         // Cannot tell at analysis time whether object is a MyClass  
-        // or a MyDerivedClass, so we do not know which version of   
+        // or a MyDerivedClass, so we do not know which version of
         // VirtualMethod we are going to call.  
         object.VirtualMethod();  
     }  
@@ -98,4 +98,4 @@ void MethodWithCer(MyClass object)
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../interop/interop-marshaling.md)
+- [Birlikte Çalışma Hazırlama](../interop/interop-marshaling.md)

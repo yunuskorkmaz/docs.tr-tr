@@ -5,56 +5,56 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: 7cc8ff5391fca7c3315dda433785a182f476bca7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 76c2a6cb0661a0e39fc3a0dd599fcbb3c046f382
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783883"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149618"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>CommandBuilders ile Komut Oluşturma
-Özelliği, kullanıcıdan metin komutu alan bir sorgu aracı aracılığıyla olduğu gibi çalışma zamanında dinamik olarak belirtildiğinde, uygun `InsertCommand`, `UpdateCommand`veya `DeleteCommand` tasarım zamanını belirtmeyebilirsiniz. `SelectCommand` Tek bir <xref:System.Data.DataTable> veritabanı tablosundan haritalarınız veya oluşturulursa,,, ve `UpdateCommand` <xref:System.Data.Common.DbDataAdapter>' ı otomatik olarak oluşturmak `DeleteCommand` `InsertCommand`için <xref:System.Data.Common.DbCommandBuilder> nesnesinden faydalanabilir.  
+`SelectCommand` Özellik, kullanıcıdan metin komutu alan bir sorgu aracı gibi çalışma zamanında dinamik olarak belirtildiğinde, uygun `InsertCommand`, `UpdateCommand`veya `DeleteCommand` tasarım zamanında belirtemeyebilirsiniz. Tek <xref:System.Data.DataTable> bir veritabanı tablosuna yaptığınız haritalar veya haritalarınız tek <xref:System.Data.Common.DbCommandBuilder> bir veritabanı tablosundan oluşturulacaksa, `DeleteCommand`nesnenin `InsertCommand`,, ve `UpdateCommand` <xref:System.Data.Common.DbDataAdapter>.  
   
- En düşük gereksinim olarak, otomatik komut oluşturma `SelectCommand` özelliğinin çalışması için özelliği ayarlamanız gerekir. `SelectCommand` Özelliği tarafından alınan tablo şeması, otomatik olarak oluşturulan INSERT, Update ve DELETE deyimlerinin söz dizimini belirler.  
+ Minimum gereksinim olarak, otomatik `SelectCommand` komut oluşturmanın çalışması için özelliği ayarlamanız gerekir. `SelectCommand` Özellik tarafından alınan tablo şeması, otomatik olarak oluşturulan INSERT, UPDATE ve DELETE ifadelerinin sözdizimini belirler.  
   
- INSERT, Update ve `SelectCommand` DELETE SQL komutlarını oluşturmak için gereken meta verileri döndürmek üzere öğesini yürütmelidir.<xref:System.Data.Common.DbCommandBuilder> Sonuç olarak, veri kaynağına fazladan bir seyahat gerekir ve bu da performansı azaltabilir. En iyi performansı elde etmek için, komutlarınızı kullanmak <xref:System.Data.Common.DbCommandBuilder>yerine açıkça belirtin.  
+ INSERT, `SelectCommand` UPDATE ve DELETE SQL komutlarını oluşturmak için gerekli meta verileri döndürmek için yürütmeniz <xref:System.Data.Common.DbCommandBuilder> gerekir. Sonuç olarak, veri kaynağına ekstra bir yolculuk gereklidir ve bu da performansı engelleyebilir. En iyi performansı elde etmek için komutlarınızı <xref:System.Data.Common.DbCommandBuilder>kullanarak değil, açıkça belirtin.  
   
- `SelectCommand` Ayrıca en az bir birincil anahtar veya benzersiz sütun döndürmelidir. Hiçbiri yoksa, bir `InvalidOperation` özel durum oluşturulur ve komutlar oluşturulmaz.  
+ Ayrıca `SelectCommand` en az bir birincil anahtar veya benzersiz sütun döndürmesi gerekir. Hiçbiri yoksa, bir `InvalidOperation` özel durum oluşturulur ve komutlar oluşturulmaz.  
   
- İle `DataAdapter` `InsertCommand` ilişkilendirildiğinde,`UpdateCommand`,,, ve özelliklerini,`DataAdapter` null başvurularsa <xref:System.Data.Common.DbCommandBuilder> otomatik `DeleteCommand` olarak oluşturur. Bir `Command` özellik için zaten varsa, var olan `Command` kullanılır.  
+ Bir `DataAdapter`ile ilişkili <xref:System.Data.Common.DbCommandBuilder> olduğunda , otomatik `InsertCommand` `UpdateCommand`olarak `DeleteCommand` oluşturur , `DataAdapter` , ve özellikleri eğer null referanslar vardır. Bir `Command` özellik için zaten varsa, `Command` varolan kullanılır.  
   
- İki veya daha fazla tabloyu birlikte birleştirerek oluşturulan veritabanı görünümleri tek bir veritabanı tablosu olarak kabul edilmez. Bu örnekte, <xref:System.Data.Common.DbCommandBuilder> komutları otomatik olarak oluşturmak için kullanamazsınız; komutlarınızı açık bir şekilde belirtmeniz gerekir. Güncelleştirmeleri `DataSet` veri kaynağına geri çözümlemeye yönelik komutları açıkça ayarlama hakkında daha fazla bilgi için, bkz. [veri kaynaklarını DataAdapter ile güncelleştirme](updating-data-sources-with-dataadapters.md).  
+ İki veya daha fazla tabloyu bir araya getirerek oluşturulan veritabanı görünümleri tek bir veritabanı tablosu olarak kabul edilmez. Bu durumda otomatik olarak <xref:System.Data.Common.DbCommandBuilder> komutoluşturmak için kullanamazsınız; komutlarınızı açıkça belirtmeniz gerekir. Veri kaynağına `DataSet` geri güncellemeleri çözmek için açıkça ayarlama komutları hakkında bilgi için, [DataAdapters ile Veri Kaynaklarını Güncelleştirme'ye](updating-data-sources-with-dataadapters.md)bakın.  
   
- Çıkış parametrelerini, öğesinin `DataSet`güncelleştirilmiş satırına geri eşlemek isteyebilirsiniz. Bir ortak görev, otomatik olarak oluşturulan bir kimlik alanının veya veri kaynağından zaman damgasının değerini alıyor. , <xref:System.Data.Common.DbCommandBuilder> Çıkış parametrelerini varsayılan olarak güncelleştirilmiş bir satırdaki sütunlara eşlemecektir. Bu örnekte, komutunuz açıkça belirtmeniz gerekir. Otomatik olarak oluşturulan bir kimlik alanını, ekli bir satırın sütununa geri eşleme örneği için bkz. [kimlik veya OtomatikSayı değerlerini alma](retrieving-identity-or-autonumber-values.md).  
+ Çıktı parametrelerini güncelleştirilmiş bir `DataSet`satıra geri eşlemek isteyebilirsiniz. Ortak bir görev, otomatik olarak oluşturulan kimlik alanının veya zaman damgasının değerini veri kaynağından almaktır. Çıkış <xref:System.Data.Common.DbCommandBuilder> parametrelerini varsayılan olarak güncelleştirilmiş bir satırdaki sütunlarla eşlemez. Bu durumda komutunuzu açıkça belirtmeniz gerekir. Otomatik olarak oluşturulan kimlik alanını eklenen bir satırsütununa eşleme örneği [için](retrieving-identity-or-autonumber-values.md)bkz.  
   
-## <a name="rules-for-automatically-generated-commands"></a>Otomatik olarak oluşturulan komutlar için kurallar  
- Aşağıdaki tabloda otomatik olarak oluşturulan komutların nasıl oluşturulduğu kurallar gösterilmektedir.  
+## <a name="rules-for-automatically-generated-commands"></a>Otomatik Oluşturulan Komutlar için Kurallar  
+ Aşağıdaki tablo, otomatik olarak oluşturulan komutların nasıl oluşturulduğuna yönelik kuralları gösterir.  
   
 |Komut|Kural|  
 |-------------|----------|  
-|`InsertCommand`|Tablodaki tüm satırlar için veri kaynağına bir <xref:System.Data.DataRow.RowState%2A> <xref:System.Data.DataRowState.Added>satır ekler. Güncelleştirilebilir olan tüm sütunlar için değerler ekler (Ancak kimlikler, ifadeler veya zaman damgaları gibi sütunlar).|  
-|`UpdateCommand`|`RowState` Tablodaki<xref:System.Data.DataRowState.Modified>tüm satırlar için veri kaynağındaki satırları güncelleştirir. Kimlikler veya ifadeler gibi, güncelleştirilemez olan sütunlar hariç tüm sütunların değerlerini güncelleştirir. Veri kaynağındaki sütun değerlerinin satırın birincil anahtar sütun değerleriyle eşleştiği ve veri kaynağındaki kalan sütunların satırın orijinal değerleriyle eşleştiği tüm satırları güncelleştirir. Daha fazla bilgi için, bu konunun devamındaki "Güncelleştirmeler ve silmeler için Iyimser eşzamanlılık modeli" başlığına bakın.|  
-|`DeleteCommand`|' A `RowState` <xref:System.Data.DataRowState.Deleted>sahip tablodaki tüm satırlar için veri kaynağındaki satırları siler. Sütun değerlerinin satırın birincil anahtar sütun değerleriyle eşleştiği ve veri kaynağındaki kalan sütunların satırın orijinal değerleriyle eşleştiği tüm satırları siler. Daha fazla bilgi için, bu konunun devamındaki "Güncelleştirmeler ve silmeler için Iyimser eşzamanlılık modeli" başlığına bakın.|  
+|`InsertCommand`|Tablodaki tüm satırlar için veri kaynağına bir <xref:System.Data.DataRow.RowState%2A> satır <xref:System.Data.DataRowState.Added>ekler. Güncelleştirilebilir (ancak kimlikler, ifadeler veya zaman damgaları gibi sütunlar değil) tüm sütunlar için değerler ekler.|  
+|`UpdateCommand`|Tablodaki `RowState` tüm satırların veri kaynağındaki satırları <xref:System.Data.DataRowState.Modified>güncelleştirir. Kimlikler veya ifadeler gibi güncelleştirilemeyecek sütunlar dışında tüm sütunların değerlerini güncelleştirir. Veri kaynağındaki sütun değerlerinin satırın birincil anahtar sütun değerleriyle eşleştiği ve veri kaynağındaki kalan sütunların satırın özgün değerleriyle eşleştiği tüm satırları güncelleştirir. Daha fazla bilgi için, daha sonra bu konuda "Güncelleştirmeler ve Silmeler için İyimser Eşzamanlılık Modeli"ne bakın.|  
+|`DeleteCommand`|Tablodaki `RowState` tüm satırların veri kaynağındaki satırları <xref:System.Data.DataRowState.Deleted>siler. Sütun değerlerinin satırın birincil temel sütun değerleriyle eşleştiği ve veri kaynağındaki kalan sütunların satırın özgün değerleriyle eşleştiği tüm satırları siler. Daha fazla bilgi için, daha sonra bu konuda "Güncelleştirmeler ve Silmeler için İyimser Eşzamanlılık Modeli"ne bakın.|  
   
-## <a name="optimistic-concurrency-model-for-updates-and-deletes"></a>Güncelleştirmeler ve silmeler için iyimser eşzamanlılık modeli  
- UPDATE ve DELETE deyimlerine yönelik komutları otomatik olarak oluşturma mantığı, *iyimser eşzamanlılık*tabanlıdır; Yani, kayıtlar düzenlenmek üzere kilitlenmez ve herhangi bir zamanda diğer Kullanıcı veya süreçler tarafından değiştirilebilir. Bir kayıt, SELECT ifadesinden döndürülmeden sonra değiştirilmiş olabileceğinden, UPDATE veya DELETE deyimi verildikten sonra, otomatik olarak oluşturulan UPDATE veya DELETE deyimi bir WHERE yan tümcesi içerir, bu da bir satırın yalnızca tüm özgün değerleri içerir ve veri kaynağından silinmez. Bu, yeni verilerin üzerine yazılmasını önlemek için yapılır. Otomatik olarak oluşturulan bir güncelleştirme silinmiş olan veya içinde <xref:System.Data.DataSet>bulunan özgün değerleri içermeyen bir satırı güncelleştirmeyi denediğinde, komut herhangi bir kaydı etkilemez ve bir <xref:System.Data.DBConcurrencyException> oluşturulur.  
+## <a name="optimistic-concurrency-model-for-updates-and-deletes"></a>Güncellemeler ve Silmeler için İyimser Eşzamanlılık Modeli  
+ UPDATE ve DELETE ifadeleri için otomatik olarak komut oluşturma mantığı *iyimser eşzamanlılık*dayanmaktadır -diğer bir deyişle, kayıtlar düzenleme için kilitli değildir ve herhangi bir zamanda diğer kullanıcılar veya işlemler tarafından değiştirilebilir. Bir kayıt SELECT deyiminden döndürüldükten sonra değiştirilebileceğinden, ancak UPDATE veya DELETE deyimi verilmeden önce, otomatik olarak oluşturulan UPDATE veya DELETE deyimi, bir satırın yalnızca bu ifadede güncelleştirildiğini belirten bir WHERE yan tümcesi içerir. tüm özgün değerleri içerir ve veri kaynağından silinmemiştir. Bu, yeni verilerin üzerine yazılmasından kaçınmak için yapılır. Otomatik olarak oluşturulan güncelleştirme, silinmiş veya özgün değerleri içermeyen bir satırı güncelleştirmeye <xref:System.Data.DataSet>çalıştığında, komut herhangi bir kaydı <xref:System.Data.DBConcurrencyException> etkilemez ve bir atılmıştır.  
   
- Güncelleştirme veya silme işleminin özgün değerlerden bağımsız olarak tamamlanmasını istiyorsanız, otomatik komut oluşturmaya dayanmayan `UpdateCommand` `DataAdapter` ve için öğesini açıkça ayarlamanız gerekir.  
+ ÖZGÜN DEĞERLERDEN bağımsız olarak UPDATE veya DELETE'in tamamlanmasını istiyorsanız, otomatik komut oluşturma için açıkça ayarlamanız `UpdateCommand` `DataAdapter` ve otomatik komut oluşturmanıza güvenmemeniz gerekir.  
   
-## <a name="limitations-of-automatic-command-generation-logic"></a>Otomatik komut oluşturma mantığının sınırlamaları  
- Otomatik komut oluşturma için aşağıdaki sınırlamalar geçerlidir.  
+## <a name="limitations-of-automatic-command-generation-logic"></a>Otomatik Komut Oluşturma Mantığının Sınırlamaları  
+ Aşağıdaki sınırlamalar otomatik komut oluşturma için geçerlidir.  
   
-### <a name="unrelated-tables-only"></a>Yalnızca ilişkisiz tablolar  
- Otomatik komut oluşturma mantığı, veri kaynağındaki diğer tablolarla hiçbir ilişki hesaba katmadan tek başına tablolar için INSERT, UPDATE veya DELETE deyimlerini oluşturur. Sonuç olarak, veritabanındaki bir yabancı anahtar kısıtlamasına katılan bir sütun `Update` için değişiklik göndermek üzere çağrılırken bir hatayla karşılaşabilirsiniz. Bu özel durumdan kaçınmak için, yabancı anahtar kısıtlamasında <xref:System.Data.Common.DbCommandBuilder> yer alan sütunları güncelleştirmek için kullanmayın; bunun yerine, işlemi gerçekleştirmek için kullanılan deyimleri açıkça belirtin.  
+### <a name="unrelated-tables-only"></a>Yalnızca İlişkisiz Tablolar  
+ Otomatik komut oluşturma mantığı, veri kaynağındaki diğer tablolarla herhangi bir ilişkiyi hesaba katmadan tek başına tablolar için INSERT, UPDATE veya DELETE deyimleri oluşturur. Sonuç olarak, veritabanında yabancı anahtar `Update` kısıtlamasına katılan bir sütun için değişiklik göndermeye çağırdığınızda bir hatayla karşılaşabilirsiniz. Bu özel durum önlemek <xref:System.Data.Common.DbCommandBuilder> için, yabancı anahtar kısıtlaması ile ilgili sütunları güncelleştirmek için kullanmayın; bunun yerine, işlemi gerçekleştirmek için kullanılan ifadeleri açıkça belirtin.  
   
-### <a name="table-and-column-names"></a>Tablo ve sütun adları  
- Sütun adları veya tablo adlarında boşluk, nokta, tırnak işaretleri gibi özel karakterler veya köşeli ayraç ile sınırlandırılmış olsa bile, alfasayısal olmayan karakterler içeriyorsa otomatik komut oluşturma mantığı başarısız olabilir. Sağlayıcıya bağlı olarak, QuotePrefix ve QuoteSuffix parametrelerinin ayarlanması nesil mantığın boşluk işlemesini sağlayabilir, ancak özel karakterler içeremez. *Catalog. Schema. Table* biçimindeki tam nitelikli tablo adları desteklenir.  
+### <a name="table-and-column-names"></a>Tablo ve Sütun Adları  
+ Sütun adları veya tablo adları, köşeli ayraçlarla sınırlandırılsa bile boşluklar, dönemler, tırnak işaretleri veya diğer alfanümerik olmayan karakterler gibi özel karakterler içeriyorsa otomatik komut oluşturma mantığı başarısız olabilir. Sağlayıcıya bağlı olarak, QuotePrefix ve QuoteSuffix parametrelerinin ayarlanması, oluşturma mantığının boşlukları işlemesine izin verebilir, ancak özel karakterlerden kaçamaz. *Catalog.schema.table* şeklinde tam nitelikli tablo adları desteklenir.  
   
-## <a name="using-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>CommandBuilder kullanarak bir SQL Ifadesini otomatik olarak oluşturma  
- Otomatik `DataAdapter`olarak bir için SQL deyimleri oluşturmak üzere, öğesinin `DataAdapter` `SelectCommand` `DataAdapter`özelliğini ayarlayın, sonra bir `CommandBuilder` `CommandBuilder` nesnesi oluşturun ve için otomatik olarak kullanılacak bir bağımsız değişken olarak belirtin. SQL deyimlerini oluştur.  
+## <a name="using-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>Otomatik olarak BIR SQL Bildirimi Oluşturmak için CommandBuilder kullanma  
+ Otomatik `DataAdapter`olarak bir için SQL deyimleri `SelectCommand` oluşturmak `DataAdapter`için , `CommandBuilder` önce , sonra bir `DataAdapter` nesne oluşturmak `CommandBuilder` ve bir bağımsız değişken olarak hangi otomatik olarak SQL deyimleri oluşturacak belirtin.  
   
 ```vb  
-' Assumes that connection is a valid SqlConnection object   
+' Assumes that connection is a valid SqlConnection object
 ' inside of a Using block.  
 Dim adapter As SqlDataAdapter = New SqlDataAdapter( _  
   "SELECT * FROM dbo.Customers", connection)  
@@ -73,14 +73,14 @@ builder.QuotePrefix = "[";
 builder.QuoteSuffix = "]";  
 ```  
   
-## <a name="modifying-the-selectcommand"></a>SelectCommand 'i değiştirme  
- INSERT, Update veya `CommandText` DELETE komutları `SelectCommand` otomatik olarak oluşturulduktan sonra ' ın öğesini değiştirirseniz, bir özel durum ortaya çıkabilir. Değiştirilen `SelectCommand.CommandText` , INSERT, Update veya delete komutları otomatik olarak oluşturulduğunda `SelectCommand.CommandText` kullanılan ile tutarsız şema bilgileri içeriyorsa `DataAdapter.Update` , yönteme gelecekteki çağrılar Artık tarafından `SelectCommand`başvurulan geçerli tabloda yok ve bir özel durum oluşturulacak.  
+## <a name="modifying-the-selectcommand"></a>SelectKomutunu Değiştirme  
+ INSERT, `CommandText` UPDATE `SelectCommand` veya DELETE komutlarının otomatik olarak oluşturulduktan sonra sını değiştirirseniz, bir özel durum oluşabilir. Değiştirilen, `SelectCommand.CommandText` ekleme, güncelleştirme veya silme komutları `SelectCommand.CommandText` otomatik olarak oluşturulduğunda kullanılanla tutarsız şema bilgileri içeriyorsa, `DataAdapter.Update` yönteme gelecek çağrılar, başvurulan `SelectCommand`geçerli tabloda artık bulunmayan sütunlara erişmeye çalışabilir ve bir özel durum atılır.  
   
- ' In `CommandBuilder` `RefreshSchema`metodunuçağırarak komutları otomatik olarak oluşturmak için tarafından kullanılan şema bilgilerini yenileyebilirsiniz. `CommandBuilder`  
+ Otomatik olarak komutoluşturmak `CommandBuilder` için kullanılan şema bilgilerini `RefreshSchema` `CommandBuilder`yenileyebilirsiniz.  
   
- Hangi komutun otomatik olarak oluşturulduğunu `GetInsertCommand`biliyorsanız, `CommandBuilder` nesnesinin, `GetUpdateCommand`, ve `GetDeleteCommand` yöntemlerini kullanarak otomatik olarak oluşturulan komutlara bir başvuru elde edebilir ve `CommandText`ilişkili komutun özelliği.  
+ Hangi komutun otomatik olarak oluşturulduğunu bilmek istiyorsanız, `GetInsertCommand` `GetUpdateCommand` `GetDeleteCommand` `CommandBuilder` nesnenin yöntemlerini ve ilişkili komutun özelliğini `CommandText` denetleyerek otomatik olarak oluşturulan komutlara bir başvuru alabilirsiniz.  
   
- Aşağıdaki kod örneği, otomatik olarak oluşturulan Update komutuna konsola yazar.  
+ Aşağıdaki kod örneği konsola otomatik olarak oluşturulan güncelleştirme komutunu yazar.  
   
 ```vb
 Console.WriteLine(builder.GetUpdateCommand().CommandText)  
@@ -90,7 +90,7 @@ Console.WriteLine(builder.GetUpdateCommand().CommandText)
 Console.WriteLine(builder.GetUpdateCommand().CommandText);
 ```
   
- Aşağıdaki örnek, `custDS` veri kümesindeki `Customers` tabloyu yeniden oluşturur. Bu yeni sütun bilgileriyle otomatik olarak oluşturulan komutları yenilemek için **RefreshSchema** yöntemi çağırılır.  
+ Aşağıdaki örnek, veri `Customers` kümesindeki `custDS` tabloyu yeniden oluşturur. Bu yeni sütun bilgileriyle otomatik olarak oluşturulan komutları yenilemek için **Schema'yı Yenileme** yöntemi çağrılır.  
   
 ```vb  
 ' Assumes an open SqlConnection and SqlDataAdapter inside of a Using block.  
@@ -104,7 +104,7 @@ adapter.Fill(custDS, "Customers")
   
 ```csharp  
 // Assumes an open SqlConnection and SqlDataAdapter inside of a using block.  
-adapter.SelectCommand.CommandText =   
+adapter.SelectCommand.CommandText =
   "SELECT CustomerID, ContactName FROM dbo.Customers";  
 builder.RefreshSchema();  
   

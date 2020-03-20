@@ -15,44 +15,44 @@ helpviewer_keywords:
 ms.assetid: d9e0f3b6-e106-4820-bada-5bfba34ce360
 topic_type:
 - apiref
-ms.openlocfilehash: da9a13a3dea34f6681f47e95c5b352a710d7458b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fb673666543bea3df44005ee3b20d311524f51d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431206"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175921"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory Metodu
-Geçerli ortak dil çalışma zamanını (CLR) tutan dizini alır. Bu yöntem yalnızca işlem dışı hata ayıklayıcıları tarafından kullanılmak üzere desteklenir. Başka bir bileşenden çağrılırsa E_NOTIMPL döndürür.  
+Geçerli ortak dil çalışma saatini (CLR) tutan dizini alır. Bu yöntem yalnızca işlem dışı hata ayıklayıcılar tarafından kullanılmak üzere desteklenir. Başka bir bileşenden çağrılırsa, E_NOTIMPL döndürecek.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetCORSystemDirectory (  
-    [out] LPWSTR      szBuffer,   
-    [in]  DWORD       cchBuffer,   
+    [out] LPWSTR      szBuffer,
+    [in]  DWORD       cchBuffer,
     [out] DWORD*      pchBuffer  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `szBuffer`  
- dışı Dizin adını almak için arabellek.  
+ [çıkış] Dizin adını almak için arabellek.  
   
  `cchBuffer`  
- 'ndaki `szBuffer`bayt cinsinden boyutu.  
+ [içinde] Boyutu, bayt, ve. `szBuffer`  
   
  `pchBuffer`  
- dışı `szBuffer`' de gerçekten döndürülen bayt sayısı.  
+ [çıkış] Bayt sayısı aslında `szBuffer`döndü.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

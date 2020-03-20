@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35991289-f389-495d-8caa-a6384fb1d557
 topic_type:
 - apiref
-ms.openlocfilehash: b9cad4c9647983e5b39f9b7a5d03736f2848e1c9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f876187624d066b9e672fbf44a984d6d02a54c43
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432689"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175882"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>IMetaDataEmit::ApplyEditAndContinue Yöntemi
 Geçerli derleme kapsamını belirtilen meta verilerde yapılan değişikliklerle güncelleştirir.  
@@ -28,25 +28,25 @@ Geçerli derleme kapsamını belirtilen meta verilerde yapılan değişikliklerl
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT ApplyEditAndContinue (   
+HRESULT ApplyEditAndContinue (
     [in]  IUnknown    *pImport  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pImport`  
- Taşınabilir çalıştırılabilir (PE) dosyasındaki Delta meta verilerini temsil eden bir [IUnknown](/cpp/atl/iunknown) nesnesine\] işaretçisinde \[.
+ \[işaretçide\] taşınabilir yürütülebilir (PE) dosyasından delta meta verilerini temsil eden bir [IUnknown](/cpp/atl/iunknown) nesnesine.
   
  Delta meta verileri, modülün gerçek meta verilerinin kopyasında yapılan değişiklikleri içeren meta veri bloğudur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

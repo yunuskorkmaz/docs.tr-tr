@@ -1,6 +1,6 @@
 ---
-title: GetErrorInfo işlevi (yönetilmeyen API Başvurusu)
-description: GetErrorInfo işlevi, önceki işlev çağrısından hata bilgilerini alır.
+title: GetErrorInfo işlevi (Yönetilmeyen API Başvurusu)
+description: GetErrorInfo işlevi önceki işlev çağrısından hata bilgilerini alır.
 ms.date: 11/06/2017
 api_name:
 - GetErrorInfo
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - GetErrorInfo function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 062dc62dfe53af3bf5158cb1add0897eccc1df60
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 802ee66a5be213ac7a599b193ec6de589773ea17
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73102609"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176818"
 ---
-# <a name="geterrorinfo-function"></a>GetErrorInfo işlevi
+# <a name="geterrorinfo-function"></a>GetErrorInfo fonksiyonu
 Önceki işlev çağrısından hata bilgilerini alır.  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -29,24 +29,24 @@ ms.locfileid: "73102609"
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-IErrorInfo* GetErrorInfo(); 
+IErrorInfo* GetErrorInfo();
 ```  
 
-## <a name="return-value"></a>Dönüş değeri
+## <a name="return-value"></a>Döndürülen değer
 
-İşlev çağrısı başarılı olursa bir [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) nesnesi işaretçisi veya başarısız olursa `null`.
+İşlev çağrısı başarılı olursa veya `null` başarısız olursa [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) nesnesine işaretçi.
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev, [ICommandText Threadingınfo:: GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) yöntemine bir çağrı kaydırır.
+Bu [işlev, IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) yöntemine bir çağrı yıkıyor.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** WMINet_Utils. def  
+ **Üstbilgi:** WMINet_Utils.def  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)

@@ -2,31 +2,31 @@
 title: WCF Web HTTP biçimlendirme
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 884193dc26794be5e8a3c95e05be2ca43a90f6e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6c9728fe40e26977366b73337e72b1514a12a19
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643466"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184190"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP biçimlendirme
-WCF Web HTTP programlama modeli yanıtına döndürmek bir hizmet işlemi için en iyi biçimi dinamik olarak belirlemenize olanak tanır. Uygun bir biçim belirlemek için iki yöntem desteklenir: otomatik ve açık.  
+WCF Web HTTP programlama modeli, yanıtını geri döndürmek için bir hizmet işlemi için en iyi biçimi dinamik olarak belirlemenize olanak tanır. Uygun biçimi belirlemek için iki yöntem desteklenir: otomatik ve açık.  
   
 ## <a name="automatic-formatting"></a>Otomatik biçimlendirme  
- Etkin olduğunda, otomatik biçimlendirme yanıtta döndürülecek en iyi biçimde seçer. Aşağıdaki sırayla denetleyerek, en iyi biçimi belirler:  
+ Etkinleştirildiğinde, otomatik biçimlendirme yanıtı döndürecek en iyi biçimi seçer. Sırayla aşağıdakileri işaretleyerek en iyi biçimi belirler:  
   
-1. Medya türleri istek iletisinin Accept üst bilgisi.  
+1. İstek iletisinin Kabul üstbilgisinde ortam türleri.  
   
-2. İstek iletisi content-type.  
+2. İstek iletisinin içerik türü.  
   
-3. Varsayılan biçimi ayarlama işlemi.  
+3. İşlemdeki varsayılan biçim ayarı.  
   
-4. İçinde WebHttpBehavior ayarı varsayılan biçimi.  
+4. Web'de varsayılan biçim ayarıHttpBehavior.  
   
- İsteğine bir Accept üst bilgisi içeriyorsa, Windows Communication Foundation (WCF) altyapısı onu destekleyen bir türü arar. Varsa `Accept` medya türlerinden öncelikleri üstbilgisini belirtir, bunların tümü kabul edilir. Hiçbir uygun biçimde bulunursa `Accept` üst bilgi, istek iletisinin içerik türü kullanılır. Uygun içerik türü belirtilirse, ayarlama işlemi için varsayılan biçimi kullanılır. Varsayılan biçimi ile ayarlanır `ResponseFormat` parametresinin <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute> öznitelikleri. Hiçbir varsayılan biçimi işlemi, değerini belirttiyseniz, <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> özelliği kullanılır. Otomatik biçimlendirme dayanır <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> özelliği. Bu özelliği ayarlandığında `true`, WCF altyapısı kullanılacak en iyi biçimi belirler. Otomatik Biçim Seçimi varsayılan olarak devre dışıdır için geriye dönük uyumluluk. Otomatik Biçim Seçimi program aracılığıyla veya yapılandırma yoluyla etkinleştirilebilir. Aşağıdaki örnek kodda Otomatik Biçim Seçimi etkinleştirme gösterir.  
+ İstek iletisi bir Üstbilgi içeriyorsa, Windows Communication Foundation (WCF) altyapısı desteklediği bir türü arar. `Accept` Üstbilgi, ortam türleri için öncelikleri belirtirse, bunlar onurlanır. `Accept` Üstbilgide uygun biçim bulunmazsa, istek iletisinin içerik türü kullanılır. Uygun içerik türü belirtilmemişse, işlem için varsayılan biçim ayarı kullanılır. Varsayılan biçim `ResponseFormat` <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute> özniteliklerin parametresi ile ayarlanır. İşlemde varsayılan biçim belirtilmemişse, özelliğin <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> değeri kullanılır. Otomatik biçimlendirme <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> özelliğine dayanır. Bu özellik `true`ayarlandığında, WCF altyapısı kullanılacak en iyi biçimi belirler. Otomatik biçim seçimi geriye dönük uyumluluk için varsayılan olarak devre dışı bırakılır. Otomatik biçim seçimi programlı olarak veya yapılandırma yoluyla etkinleştirilebilir. Aşağıdaki örnekte, kodda otomatik biçim seçiminin nasıl etkinleştirilen gösterilmektedir.  
   
 ```csharp
-// This code assumes the service name is MyService and the service contract is IMyContract     
+// This code assumes the service name is MyService and the service contract is IMyContract
 Uri baseAddress = new Uri("http://localhost:8000");  
   
 WebServiceHost host = new WebServiceHost(typeof(MyService), baseAddress)  
@@ -47,7 +47,7 @@ try
       sep.Behaviors.Add(webBehavior);  
    }  
          // Open host to start listening for messages  
-   host.Open();        
+   host.Open();
   
   // ...  
 }  
@@ -57,7 +57,7 @@ try
   }  
 ```  
   
- Otomatik biçimlendirme yapılandırma aracılığıyla etkinleştirilebilir. Ayarlayabileceğiniz <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> özelliği doğrudan üzerinde <xref:System.ServiceModel.Description.WebHttpBehavior> veya bu adı kullanıyor <xref:System.ServiceModel.Description.WebHttpEndpoint>. Aşağıdaki örnek otomatik biçim seçimi üzerinde nasıl etkinleştirileceğini gösterir <xref:System.ServiceModel.Description.WebHttpBehavior>.  
+ Otomatik biçimlendirme yapılandırma yoluyla da etkinleştirilebilir. <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> Özelliği doğrudan üzerinde <xref:System.ServiceModel.Description.WebHttpBehavior> ayarlayabilirsiniz veya <xref:System.ServiceModel.Description.WebHttpEndpoint>. Aşağıdaki örnekte, <xref:System.ServiceModel.Description.WebHttpBehavior>''de otomatik biçim seçiminin nasıl etkinleştirilen  
   
 ```xml  
 <system.serviceModel>  
@@ -77,7 +77,7 @@ try
 </system.serviceModel>  
 ```  
   
- Aşağıdaki örnek, Otomatik Biçim Seçimi kullanarak etkinleştirmek gösterilmektedir <xref:System.ServiceModel.Description.WebHttpEndpoint>.  
+ Aşağıdaki örnekte, otomatik biçim seçiminin nasıl etkinleştirilen bir şekilde gösterilmektedir. <xref:System.ServiceModel.Description.WebHttpEndpoint>  
   
 ```xml  
 <system.serviceModel>  
@@ -90,10 +90,10 @@ try
   </system.serviceModel>  
 ```  
   
-## <a name="explicit-formatting"></a>Explicit biçimlendirme  
- Adından da anlaşılacağı gibi açık biçimlendirmede Geliştirici işlem kodu içinde kullanmak için en iyi biçimi belirler. En iyi biçimi XML veya JSON ise Geliştirici ayarlar <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> ya da <xref:System.ServiceModel.Web.WebMessageFormat.Xml> veya <xref:System.ServiceModel.Web.WebMessageFormat.Json>. Varsa <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> özelliği açıkça ayarlanmamışsa, ardından işlem varsayılan biçimi kullanılır.  
+## <a name="explicit-formatting"></a>Açık biçimlendirme  
+ Adından da anlaşılacağı gibi, açık biçimlendirme geliştirici işlem kodu içinde kullanılacak en iyi biçimi belirler. En iyi biçim XML veya JSON <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> ise <xref:System.ServiceModel.Web.WebMessageFormat.Xml> <xref:System.ServiceModel.Web.WebMessageFormat.Json>geliştirici ya da ayarlar. <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> Özellik açıkça ayarlanmazsa, işlemin varsayılan biçimi kullanılır.  
   
- Aşağıdaki örnek, biçim sorgu dizesi parametresi için kullanılacak biçimi denetler. Belirtilen değilse, işlemin ayarlar kullanılarak Biçimlendirilecek <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>.  
+ Aşağıdaki örnekte, kullanılacak bir biçim için biçim sorgusu dize parametresini denetler. Belirtilmişse, 'yi kullanarak <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>işlemin biçimini ayarlar.  
   
 ```csharp
 public class Service : IService  
@@ -123,7 +123,7 @@ public class Service : IService
     }  
 ```  
   
- XML veya JSON dışında biçimleri için destek gerekiyorsa, dönüş türüne sahip olmasını işleminizi tanımlama <xref:System.ServiceModel.Channels.Message>. İşlem kod içinde kullanmak ve oluşturmak için uygun biçimde belirlemek bir <xref:System.ServiceModel.Channels.Message> aşağıdaki yöntemlerden birini kullanarak nesne:  
+ XML veya JSON dışındaki biçimleri desteklemeniz gerekiyorsa, işleminizi bir geri <xref:System.ServiceModel.Channels.Message>dönüş türüne sahip olmak için tanımlayın. İşlem kodu içinde, kullanılacak uygun biçimi belirleyin <xref:System.ServiceModel.Channels.Message> ve ardından aşağıdaki yöntemlerden birini kullanarak bir nesne oluşturun:  
   
 - `WebOperationContext.CreateAtom10Response`  
   
@@ -135,7 +135,7 @@ public class Service : IService
   
 - `WebOperationContext.CreateXmlResponse`  
   
- Bu yöntemlerin her biri, içerik alır ve bir ileti ile uygun biçimde oluşturur. `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` Yöntemi tercih azalan dosyasındaki istemci tarafından tercih edilen biçimler listesini almak için kullanılabilir. Aşağıdaki örnek nasıl kullanılacağını gösterir `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` biçimini kullanın ve ardından kullanan belirlemek için uygun bir yanıt iletisi oluşturmak için yanıt yöntemi oluşturun.  
+ Bu yöntemlerin her biri içerik alır ve uygun biçimde bir ileti oluşturur. Yöntem, `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` tercihi azaltmak amacıyla istemci tarafından tercih edilen biçimlerin listesini almak için kullanılabilir. Aşağıdaki örnek, kullanılacak `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` biçimi belirlemek için nasıl kullanılacağını gösterir ve yanıt iletisi oluşturmak için uygun yanıt oluşturma yöntemini kullanır.  
   
 ```csharp
 public class Service : IService  

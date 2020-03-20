@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 7305258570ad853afa88a231592fd4b6cd2dd74e
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 49d2988cbad33497f2214098bcde68f7d5434b5e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965873"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180019"
 ---
 # <a name="microsoft-ui-automation"></a>Microsoft UI Otomasyonu
 
 > [!NOTE]
-> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen UI Otomasyon sınıflarını kullanmak isteyen .NET geliştiricileri için tasarlanmıştır. UI Otomasyonu hakkında en son bilgiler için bkz. [Windows AUTOMATION API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).
+> Bu dokümantasyon, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen Kullanıcı Arabirimi Otomasyon sınıflarını kullanmak isteyen .NET geliştiricileri için tasarlanmıştır. Kullanıcı Arabirimi Otomasyonu hakkında en son bilgiler için [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32)'a bakın.
 
- Microsoft UI Otomasyonu, Microsoft Windows için bir erişilebilirlik çerçevesidir. Kullanıcı arabirimi (UI) hakkındaki bilgilere programlı erişim sağlayarak yardımcı teknoloji ürünlerinin ve otomatikleştirilmiş test çerçevelerinin ihtiyaçlarını ele alınmaktadır. Ayrıca, UI Otomasyonu, denetim ve uygulama geliştiricilerinin ürünlerini erişilebilir hale getirmenizi sağlar.
+ Microsoft UI Automation, Microsoft Windows için erişilebilirlik çerçevesidir. Kullanıcı arabirimi (UI) hakkındaki bilgilere programlı erişim sağlayarak yardımcı teknoloji ürünlerinin ve otomatik test çerçevelerinin gereksinimlerini giderer. Buna ek olarak, UI Automation kontrol ve uygulama geliştiricilerin ürünlerini erişilebilir hale getirmelerini sağlar.
 
- Bu belgede, yönetilen kod için UI Otomasyonu API 'SI açıklanmaktadır. ' De C++UI Otomasyonu programlama hakkında bilgi için bkz. [Win32 uygulamaları için UI Otomasyonu](/windows/desktop/winauto/windows-automation-api-portal).
+ Bu belge, yönetilen kod için UI Automation API açıklar. C++'da UI Automation programlama hakkında bilgi için [Win32 Uygulamaları için Kullanıcı Arabirimi](/windows/desktop/winauto/windows-automation-api-portal)Otomasyonu'na bakın.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
 - [En İyi Erişilebilirlik Uygulamaları](accessibility-best-practices.md)
-- [UI Otomasyonu Temelleri](ui-automation-fundamentals.md)
-- [Yönetilen Kod İçin UI Otomasyonu Sağlayıcıları](ui-automation-providers-for-managed-code.md)
-- [Yönetilen Kod İçin UI Otomasyonu İstemcileri](ui-automation-clients-for-managed-code.md)
-- [UI Otomasyonu Denetim Desenleri](ui-automation-control-patterns.md)
-- [UI Otomasyonu Metin Deseni](ui-automation-text-pattern.md)
-- [UI Otomasyonu Denetim Türleri](ui-automation-control-types.md)
+- [UI Otomasyon Temelleri](ui-automation-fundamentals.md)
+- [Yönetilen Kod İçin UI Otomasyon Sağlayıcılar](ui-automation-providers-for-managed-code.md)
+- [Yönetilen Kod İçin UI Otomasyon İstemcileri](ui-automation-clients-for-managed-code.md)
+- [UI Otomasyon Denetim Düzenleri](ui-automation-control-patterns.md)
+- [UI Otomasyon Metin Düzeni](ui-automation-text-pattern.md)
+- [UI Otomasyon Denetim Türleri](ui-automation-control-types.md)
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-- [Erişilebilirlik örnekleri](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 
+- [Erişilebilirlik Örnekleri](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility)

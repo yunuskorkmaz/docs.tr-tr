@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: e0290a49-3818-4a43-ad46-3014faa34f97
 topic_type:
 - apiref
-ms.openlocfilehash: 23f6186b2561cbcd52db767616d986084f33860b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7db27670b72a5018a03d4614b69486f67bcef155
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435934"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175687"
 ---
 # <a name="imetadataemitsavetostream-method"></a>IMetaDataEmit::SaveToStream Yöntemi
-Geçerli kapsamdaki tüm meta verileri belirtilen `IStream`kaydeder.  
+Geçerli kapsamdaki tüm meta verileri belirtilene `IStream`kaydeder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT SaveToStream (   
+HRESULT SaveToStream (
     [in]  IStream     *pIStream,  
     [in]  DWORD       dwSaveFlags  
 );  
@@ -36,19 +36,19 @@ HRESULT SaveToStream (
   
 ## <a name="parameters"></a>Parametreler  
  `pIStream`  
- 'ndaki Kaydedilecek yazılabilir akış.  
+ [içinde] Kaydedilen yazılabilir akış.  
   
  `dwSaveFlags`  
- 'ndaki Ayrılamadı. Sıfır olmalıdır.  
+ [içinde] Saklı -dır. Sıfır olmalı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

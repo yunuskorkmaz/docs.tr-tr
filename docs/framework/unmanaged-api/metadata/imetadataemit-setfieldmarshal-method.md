@@ -15,44 +15,44 @@ helpviewer_keywords:
 ms.assetid: be232314-7f69-4855-bfab-63361bd22307
 topic_type:
 - apiref
-ms.openlocfilehash: cdbcdb9359d295ad9bed2050ed36499feba74d9e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1037cd4210605192870d43d88979b89af6536380
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442277"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175661"
 ---
 # <a name="imetadataemitsetfieldmarshal-method"></a>IMetaDataEmit::SetFieldMarshal Yöntemi
-Belirtilen belirteç tarafından başvurulan alan, yöntem döndürme veya yöntem parametresi için PInvoke sıralama bilgilerini ayarlar.  
+Belirtilen belirteç tarafından başvurulan alan, yöntem iadesi veya yöntem parametresi için PInvoke mareşal bilgilerini ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetFieldMarshal (  
-    [in]  mdToken          tk,   
-    [in]  PCCOR_SIGNATURE  pvNativeType,   
-    [in]  ULONG            cbNativeType   
+    [in]  mdToken          tk,
+    [in]  PCCOR_SIGNATURE  pvNativeType,
+    [in]  ULONG            cbNativeType
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `tk`  
- 'ndaki Hedef veri öğesi için belirteç. Bu bir `mdFieldDef` ya da `mdParamDef` belirteci.  
+ [içinde] Hedef veri öğesinin belirteci. Bu ya `mdFieldDef` bir `mdParamDef` ya da bir belirteç.  
   
  `pvNativeType`  
- 'ndaki Yönetilmeyen tür için imza.  
+ [içinde] Yönetilmeyen tür için imza.  
   
  `cbNativeType`  
- 'ndaki `pvNativeType`bayt sayısı.  
+ [içinde] Bayt `pvNativeType`sayısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

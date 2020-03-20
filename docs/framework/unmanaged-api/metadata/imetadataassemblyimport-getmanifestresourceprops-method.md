@@ -15,60 +15,60 @@ helpviewer_keywords:
 ms.assetid: 00be4789-ac63-4397-b2ec-1629a5c5a585
 topic_type:
 - apiref
-ms.openlocfilehash: c1792ed0f15f8cfb62567593c9694453650f0bb9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d87d0d46ede65cf44c84edba92fe246174088a4e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436322"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177656"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps Yöntemi
-Belirtilen meta veri imzasıyla bildirim kaynağının özellik kümesini alır.  
+Belirtilen meta veri imzasıyla bildirim kaynağının özellikleri kümesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetManifestResourceProps (  
-    [in]  mdManifestResource   mdmr,   
-    [out] LPWSTR               szName,   
-    [in]  ULONG                cchName,   
-    [out] ULONG                *pchName,   
-    [out] mdToken              *ptkImplementation,   
-    [out] DWORD                *pdwOffset,   
+    [in]  mdManifestResource   mdmr,
+    [out] LPWSTR               szName,
+    [in]  ULONG                cchName,
+    [out] ULONG                *pchName,
+    [out] mdToken              *ptkImplementation,
+    [out] DWORD                *pdwOffset,
     [out] DWORD                *pdwResourceFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `mdmr`  
- 'ndaki Özelliklerinin alınacağı kaynağı temsil eden `mdManifestResource` belirteç.  
+ [içinde] Özellikleri `mdManifestResource` almak için kaynağı temsil eden bir belirteç.  
   
  `szName`  
- dışı Kaynağın adı.  
+ [çıkış] Kaynağın adı.  
   
  `cchName`  
- 'ndaki `szName`geniş karakter cinsinden boyutu.  
+ [içinde] Boyutu, geniş chars, `szName`ve .  
   
  `pchName`  
- dışı `szName`' de döndürülen geniş karakter sayısının bir işaretçisi.  
+ [çıkış] Geniş karakter sayısına işaretçi aslında `szName`döndürülür.  
   
  `ptkImplementation`  
- dışı Kaynağı içeren, sırasıyla dosyayı veya derlemeyi temsil eden bir `mdFile` belirtecinin veya `mdAssemblyRef` belirtecinin işaretçisi.  
+ [çıkış] Kaynağı içeren `mdFile` dosya yı `mdAssemblyRef` veya derlemeyi temsil eden bir belirteç veya belirteç için işaretçi.  
   
  `pdwOffset`  
- dışı Dosyanın içindeki kaynağın başlangıcına olan sapmayı belirten bir değer işaretçisi.  
+ [çıkış] Dosya içindeki kaynağın başına mahsup belirten bir değer için işaretçi.  
   
  `pdwResourceFlags`  
- dışı Bir kaynağa uygulanan meta verileri tanımlayan bayrakların işaretçisi. Flags değeri bir veya daha fazla [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) değeri birleşimidir.  
+ [çıkış] Kaynağa uygulanan meta verileri açıklayan bayraklar için bir işaretçi. Bayrak değeri, bir veya daha fazla [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) değerinin bir leşimidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

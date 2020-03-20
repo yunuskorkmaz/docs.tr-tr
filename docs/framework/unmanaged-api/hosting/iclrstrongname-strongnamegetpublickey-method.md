@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: a31dcaa9-a404-4c1d-8cc7-081827c52935
 topic_type:
 - apiref
-ms.openlocfilehash: fd7f95ea01de397509c2a7b5fc08c0ac401a8da9
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: cb96c7e17627205db0573e56fc8c2a29e7717434
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899602"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181931"
 ---
 # <a name="iclrstrongnamestrongnamegetpublickey-method"></a>ICLRStrongName::StrongNameGetPublicKey Yöntemi
-Ortak/özel anahtar çiftinden ortak anahtarı alır. Anahtar çifti, bir şifreleme hizmeti sağlayıcısı (CSP) içinde anahtar kapsayıcı adı olarak veya ham bir bayt koleksiyonu olarak sağlanabilir.  
+Ortak anahtarı genel/özel anahtar çiftinden alır. Anahtar çifti, bir şifreleme hizmet sağlayıcısı (CSP) içinde önemli bir kapsayıcı adı olarak veya ham bir bayt koleksiyonu olarak sağlanabilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT StrongNameGetPublicKey (   
+HRESULT StrongNameGetPublicKey (
     [in]  LPCWSTR   szKeyContainer,  
     [in]  BYTE      *pbKeyBlob,  
     [in]  ULONG     cbKeyBlob,  
@@ -39,38 +39,38 @@ HRESULT StrongNameGetPublicKey (
   
 ## <a name="parameters"></a>Parametreler  
  `szKeyContainer`  
- 'ndaki Ortak/özel anahtar çiftini içeren anahtar kapsayıcısının adı. `pbKeyBlob` null ise, `szKeyContainer` CSP içinde geçerli bir kapsayıcı belirtmesi gerekir. Bu durumda, [ICLRStrongName:: StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md) yöntemi kapsayıcıda depolanan anahtar çiftinden ortak anahtarı ayıklar.  
+ [içinde] Ortak/özel anahtar çiftini içeren anahtar kapsayıcısının adı. Null `pbKeyBlob` ise, `szKeyContainer` CSP içinde geçerli bir kapsayıcı belirtmelidir. Bu durumda, [ICLRStrongName::StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md) yöntemi, kapsayıcıda depolanan anahtar çiftinden ortak anahtarı ayıklar.  
   
- `pbKeyBlob` null değilse, anahtar çiftinin anahtar ikili büyük nesne (BLOB) içinde yer aldığı varsayılır.  
+ Null `pbKeyBlob` değilse, anahtar çiftinin anahtar ikili büyük nesnesinde (BLOB) bulunduğu varsayılır.  
   
- Anahtarlar 1024-bit Rivest-Shamir-Adtaman (RSA) imzalama anahtarları olmalıdır. Şu anda başka türde anahtarlar desteklenmiyor.  
+ Anahtarlar 1024 bit Rivest-Shamir-Adleman (RSA) imzalama anahtarları olmalıdır. Şu anda başka anahtar türü desteklenmez.  
   
  `pbKeyBlob`  
- 'ndaki Ortak/özel anahtar çifti işaretçisi. Bu çift, Win32 `CryptExportKey` işlevi tarafından oluşturulan biçimdedir. `pbKeyBlob` null ise, `szKeyContainer` tarafından belirtilen anahtar kapsayıcısının anahtar çiftini içermesi varsayılır.  
+ [içinde] Ortak/özel anahtar çiftine işaretçi. Bu çift Win32 `CryptExportKey` işlevi tarafından oluşturulan biçimdedir. Null `pbKeyBlob` ise, tarafından `szKeyContainer` belirtilen anahtar kapsayıcı anahtar çiftini içerdiği varsayılır.  
   
  `cbKeyBlob`  
- 'ndaki `pbKeyBlob`bayt cinsinden boyutu.  
+ [içinde] Boyutu, bayt, ve. `pbKeyBlob`  
   
  `ppbPublicKeyBlob`  
- dışı Döndürülen ortak anahtar blobu. `ppbPublicKeyBlob` parametresi ortak dil çalışma zamanı tarafından ayrılır ve çağırana döndürülür. Çağıranın, [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) metodunu kullanarak belleği boşaltmalıdır.  
+ [çıkış] Döndürülen ortak anahtar BLOB. `ppbPublicKeyBlob` Parametre ortak dil çalışma zamanı tarafından ayrılır ve arayana döndürülür. Arayan ICLRStrongName kullanarak bellek serbest [gerekir::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) yöntemi.  
   
  `pcbPublicKeyBlob`  
- dışı Döndürülen ortak anahtar BLOBUNUN boyutu.  
+ [çıkış] Döndürülen ortak anahtar BLOB boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](/windows/win32/seccrypto/common-hresult-values) ).  
+ `S_OK`yöntem başarıyla tamamlanırsa; aksi takdirde, başarısızlığı gösteren bir HRESULT değeri (liste için [Ortak HRESULT Değerleri'ne](/windows/win32/seccrypto/common-hresult-values) bakın).  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ortak anahtar, [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) yapısında bulunur.  
+ Ortak anahtar [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) yapısında yer almaktadır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MetaHost. h  
+ **Üstbilgi:** MetaHost.h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MSCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

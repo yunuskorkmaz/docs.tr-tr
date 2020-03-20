@@ -15,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 5eaf3b4a-92b7-4d5b-97e0-1e83721e0052
 topic_type:
 - apiref
-ms.openlocfilehash: 18fe0c834506d0ac4cd15fd7af4c4f15904b0f81
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 306c1748b4997309ee15fb7751bc818b0287aaf0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437578"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177265"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps Yöntemi
-Bildirim türü, temsilciler için ekleme ve kaldırma yöntemleri ve tüm bayraklar ve diğer ilişkili veriler de dahil olmak üzere, belirtilen olay belirteci tarafından temsil edilen olay için meta veri bilgilerini alır.  
+Bildirim türü, temsilciler için ekleme ve kaldırma yöntemleri ve herhangi bir bayrak ve diğer ilişkili veriler de dahil olmak üzere, belirtilen olay belirteci tarafından temsil edilen olay için meta veri bilgileri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetEventProps (  
    [in]  mdEvent       ev,  
-   [out] mdTypeDef     *pClass,   
-   [out] LPCWSTR       szEvent,   
-   [in]  ULONG         cchEvent,   
-   [out] ULONG         *pchEvent,   
+   [out] mdTypeDef     *pClass,
+   [out] LPCWSTR       szEvent,
+   [in]  ULONG         cchEvent,
+   [out] ULONG         *pchEvent,
    [out] DWORD         *pdwEventFlags,  
    [out] mdToken       *ptkEventType,  
-   [out] mdMethodDef   *pmdAddOn,   
-   [out] mdMethodDef   *pmdRemoveOn,   
-   [out] mdMethodDef   *pmdFire,   
-   [out] mdMethodDef   rmdOtherMethod[],   
+   [out] mdMethodDef   *pmdAddOn,
+   [out] mdMethodDef   *pmdRemoveOn,
+   [out] mdMethodDef   *pmdFire,
+   [out] mdMethodDef   rmdOtherMethod[],
    [in]  ULONG         cMax,  
    [out] ULONG         *pcOtherMethod  
 );  
@@ -47,49 +47,49 @@ HRESULT GetEventProps (
   
 ## <a name="parameters"></a>Parametreler  
  `ev`  
- 'ndaki Meta verilerinin alınacağı olayı temsil eden olay meta veri belirteci.  
+ [içinde] Meta veri almak için olayı temsil eden olay meta veri belirteci.  
   
  `pClass`  
- dışı Olayı bildiren sınıfı temsil eden TypeDef belirtecinin işaretçisi.  
+ [çıkış] Olayı bildiren sınıfı temsil eden TypeDef belirteci için bir işaretçi.  
   
  `szEvent`  
- dışı `ev`başvurduğu olayın adı.  
+ [çıkış] Başvuran olayın `ev`adı.  
   
  `pchEvent`  
- 'ndaki `szEvent`geniş karakterdeki istenen uzunluk.  
+ [içinde] Geniş karakterlerde istenen `szEvent`uzunluk.  
   
  `pdwEventFlags`  
- dışı `szEvent`geniş karakterde döndürülen uzunluk.  
+ [çıkış] Geniş karakterlerde döndürülen `szEvent`uzunluk.  
   
  `ptkEventType`  
- dışı Olayın <xref:System.Delegate> türünü temsil eden TypeRef veya TypeDef meta veri belirtecinin işaretçisi.  
+ [çıkış] Olayın <xref:System.Delegate> türünü temsil eden bir TypeRef veya TypeDef meta veri belirteci için bir işaretçi.  
   
  `pmdAddOn`  
- dışı Olaya yönelik işleyiciler ekleyen yöntemi temsil eden meta veri belirteci işaretçisi.  
+ [çıkış] Olay için işleyicileri ekleyen yöntemi temsil eden meta veri belirteci için bir işaretçi.  
   
  `pmdRemoveOn`  
- dışı Olay için işleyicileri kaldıran yöntemi temsil eden meta veri belirteci işaretçisi.  
+ [çıkış] Olay için işleyicileri kaldıran yöntemi temsil eden meta veri belirteci için bir işaretçi.  
   
  `pmdFire`  
- dışı Olayı başlatan yöntemi temsil eden meta veri belirtecinin işaretçisi.  
+ [çıkış] Olayı yükselten yöntemi temsil eden meta veri belirteci için bir işaretçi.  
   
  `rmdOtherMethod`  
- dışı Olayla ilişkili diğer yöntemlere belirteç işaretçileri dizisi.  
+ [çıkış] Olayla ilişkili diğer yöntemlere işaretçi dizisi.  
   
  `cMax`  
- 'ndaki `rmdOtherMethod` dizisinin en büyük boyutu.  
+ [içinde] `rmdOtherMethod` Dizinin en büyük boyutu.  
   
  `pcOtherMethod`  
- dışı `rmdOtherMethod`döndürülen belirteçlerin sayısı.  
+ [çıkış] Döndürülen belirteçlerin `rmdOtherMethod`sayısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

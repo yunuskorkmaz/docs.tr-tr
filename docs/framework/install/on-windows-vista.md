@@ -1,37 +1,37 @@
 ---
-title: Windows Vista 'da .NET Framework yüklemesi
-description: .NET Framework Windows Vista 'da yüklemeyi öğrenin.
+title: Windows Vista'da .NET Framework'u yükleme
+description: .NET Framework'u Windows Vista'ya nasıl yükleyin.
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
-ms.openlocfilehash: 02f57aee139621ba277731f9b76c3c48fc6abc57
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 9b8470f4cdfcc6ec85fb6677f5518203c0de5de1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965886"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181538"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Windows Vista ve Windows Server 2008’de .NET Framework Yükleme
 
-.NET Framework Windows üzerinde birçok uygulama çalıştırmak için gereklidir. Yüklemek için aşağıdaki yönergeleri kullanabilirsiniz. Bir uygulamayı çalıştırmayı ve makinenizde aşağıdaki iletişim kutusunu görmenizi tamamladıktan sonra bu sayfada ulaşmış olabilirsiniz.
+.NET Framework Windows'da birçok uygulama çalıştırmak için gereklidir. Yüklemek için aşağıdaki yönergeleri kullanabilirsiniz. Bir uygulamayı çalıştırmaya çalıştıktan ve makinenizde aşağıdaki iletişim kutusunu gördükten sonra bu sayfaya gelmiş olabilirsiniz.
 
 ![Bu uygulama başlatılamadı](./media/this-application-could-not-be-started.png)
 
-Bu yönergeler, ihtiyacınız olan .NET Framework sürümlerini yüklemenize yardımcı olur. [.NET Framework 4,8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) en son sürümdür. Windows Vista ve Windows Server 2008 ' de desteklenmez. [Windows 10 mayıs 2019 güncelleştirmesine](https://support.microsoft.com/help/4028685/windows-10-get-the-update)dahildir.
+Bu yönergeler , .NET Framework sürümlerini yüklemenize yardımcı olur. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) en son sürümüdür. Windows Vista ve Windows Server 2008'de desteklenmez. [Windows 10 Mayıs 2019 Güncellemesi](https://support.microsoft.com/help/4028685/windows-10-get-the-update)ile birlikte verilir.
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 
-[.NET Framework 4,6](https://dotnet.microsoft.com/download/dotnet-framework/net46) , Windows Vista ve windows Server 2008 ' deki en son desteklenen .NET Framework sürümdür.
+[.NET Framework 4.6,](https://dotnet.microsoft.com/download/dotnet-framework/net46) Windows Vista ve Windows Server 2008'de en son desteklenen .NET Framework sürümüdür.
 
-[.NET Framework 4,6](https://dotnet.microsoft.com/download/dotnet-framework/net46&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) ile 4,6 .NET Framework 4,0 için oluşturulmuş uygulamaları destekler.
+[.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46) ,.NET Framework 4.0 ile 4.6 için oluşturulmuş uygulamaları destekler.
 
-## <a name="net-framework-35"></a>.NET Framework 3.5
+## <a name="net-framework-35"></a>.NET Framework 3.5
 
-Windows Vista 'da [3,5 .NET Framework](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) yükleyebilirsiniz.
+[.NET Framework 3.5'i](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) Windows Vista'ya yükleyebilirsiniz.
 
-.NET Framework 3,5 ile 3,5 .NET Framework 1,0 için oluşturulmuş uygulamaları destekler.
+.NET Framework 3.5,.NET Framework 1.0 ile 3.5 arasında oluşturulmuş uygulamaları destekler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework indirin](https://dotnet.microsoft.com/download)
+- [.NET Framework'ü indirin](https://dotnet.microsoft.com/download)
 - [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](troubleshoot-blocked-installations-and-uninstallations.md)
-- [Geliştiriciler için .NET Framework yüklemesi](guide-for-developers.md)
+- [Geliştiriciler için .NET Framework'u yükleyin](guide-for-developers.md)

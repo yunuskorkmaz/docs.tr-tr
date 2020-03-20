@@ -5,24 +5,24 @@ helpviewer_keywords:
 - gcAllowVeryLargeObjects element
 - <gcAllowVeryLargeObjects> element
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
-ms.openlocfilehash: b6230833808ec45d702502e36f929db4e03173e1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8b2f39a0867228474afdee788474fda11f14ca82
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116799"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154133"
 ---
-# <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects > öğesi
+# <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects> Öğesi
 64-bit platformlarda toplam boyutu 2 gigabayttan (GB) büyük olan dizileri etkinleştirir.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<gcAllowVeryLargeObjects >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<çalışma zamanı>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<gcAllowVeryLargeObjects>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<gcAllowVeryLargeObjects    
+<gcAllowVeryLargeObjects
    enabled="true|false" />  
 ```  
   
@@ -77,7 +77,7 @@ ms.locfileid: "73116799"
   
 ## <a name="supported-in"></a>Destekleyen:
 
-.NET Framework 4,5 ve sonraki sürümler
+.NET Framework 4.5 ve sonraki sürümler
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

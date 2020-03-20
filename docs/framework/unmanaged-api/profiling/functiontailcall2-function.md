@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: 2d99c6d8bd2af02456c6a90143b524c337483868
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 60276327617ae24e9bdcebf958613c21d3808429
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866901"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175193"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 İşlevi
-Şu anda yürütülmekte olan işlevin başka bir işleve bir tail çağrısı gerçekleştirmek üzere olduğunu ve yığın çerçevesi hakkında bilgi sağladığını bildiren Profiler öğesine bildirir.  
+Profiloluşturucuya, şu anda yürütülen işlevin başka bir işleve kuyruk çağrısı yapmak üzere olduğunu ve yığın çerçevesi hakkında bilgi verdiğini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp
 void __stdcall FunctionTailcall2 (  
-    [in] FunctionID         funcId,   
-    [in] UINT_PTR           clientData,   
+    [in] FunctionID         funcId,
+    [in] UINT_PTR           clientData,
     [in] COR_PRF_FRAME_INFO func  
 );  
 ```  
@@ -38,43 +38,43 @@ void __stdcall FunctionTailcall2 (
 
 - `funcId`
 
-  \[in] Şu anda yürütülmekte olan işlevin tanıtıcısı, kuyruk çağrısını yapmak için kullanılır.
+  \[in] Kuyruk araması yapmak üzere olan şu anda çalıştırılabilen işlevin tanımlayıcısı.
 
 - `clientData`
 
-  \[içinde] ' de, bir kuyruk çağrısını yapmak üzere olan şu anda yürütülmekte olan işlevin [FunctionIDMapper](functionidmapper-function.md)aracılığıyla belirtilen profil oluşturucunun yeniden eşlenen işlev tanımlayıcısı.
+  \[in] Profiloluşturucudaha önce [FunctionIDMapper](functionidmapper-function.md)üzerinden belirtilen remapped fonksiyon tanımlayıcısı , bir kuyruk aramayapmak üzere olan şu anda çalıştırılan işlev.
   
 - `func`
 
-  \[içinde, yığın çerçevesi hakkındaki bilgileri gösteren bir `COR_PRF_FRAME_INFO` değeri.
+  \[in] `COR_PRF_FRAME_INFO` Yığın çerçevesi hakkındaki bilgilere işaret eden bir değer.
 
-  Profil Oluşturucu bunu [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) yönteminde yürütme motoruna geri geçirilebilecek donuk bir tanıtıcı olarak kabul etmelidir.
+  Profil oluşturucu [bunu, ICorProfilerInfo2::GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) yöntemindeki yürütme motoruna geri geçirilebilen opak bir kulp olarak ele almalıdır.
 
 ## <a name="remarks"></a>Açıklamalar  
- Tail çağrısının hedef işlevi geçerli yığın çerçevesini kullanır ve doğrudan kuyruk çağrısını yapan işlevin çağıranına döndürülür. Bu, bir kuyruk çağrısının hedefi olan bir işlev için [FunctionLeave2](functionleave2-function.md) geri çağrısının yayımlanmayacağı anlamına gelir.  
+ Kuyruk çağrısının hedef işlevi geçerli yığın çerçevesini kullanır ve doğrudan kuyruk aramasını yapan işlevin arayana döner. Bu, bir kuyruk çağrısının hedefi olan bir işlev için [FunctionLeave2](functionleave2-function.md) geri aramasının verilmeyeceğini anlamına gelir.  
   
- `func` parametresinin değeri, `FunctionTailcall2` işlevi döndürüldüğünden geçerli değildir çünkü değer değişebilir veya yok edilir.  
+ `func` Değer değişebileceği veya yok `FunctionTailcall2` olabileceğinden, parametrenin değeri işlev döndükten sonra geçerli değildir.  
   
- `FunctionTailcall2` işlevi bir geri çağırmasıdır; Uygulamanızı uygulamanız gerekir. Uygulamanın `__declspec`(`naked`) depolama sınıfı özniteliğini kullanması gerekir.  
+ İşlev `FunctionTailcall2` bir geri aramadır; bunu uygulamanız gerekir. Uygulama `__declspec`, (`naked`) depolama sınıfı özniteliği kullanmalıdır.  
   
- Yürütme altyapısı, bu işlevi çağırmadan önce hiçbir kaydı kaydetmez.  
+ Yürütme motoru, bu işlevi aramadan önce herhangi bir kayıt kaydetmez.  
   
-- Girişte, kayan nokta birimi (FPU) dahil olmak üzere, kullandığınız tüm Yazmaçları kaydetmelisiniz.  
+- Girişte, kayan nokta birimindekiler (FPU) dahil olmak üzere kullandığınız tüm kayıtları kaydetmeniz gerekir.  
   
-- Çıkışta, çağıran tarafından gönderilen tüm parametreleri kaldırarak yığını geri yüklemeniz gerekir.  
+- Çıkışta, arayan tarafından itilen tüm parametreleri patlatarak yığını geri yüklemeniz gerekir.  
   
- `FunctionTailcall2` uygulanması çöp toplamayı ertelendirilemediğinden engellenmemelidir. Yığın atık toplama kolay bir durumda olmadığından uygulama çöp toplamayı denememelidir. Çöp toplama denendiğinde, çalışma zamanı `FunctionTailcall2` dönüşene kadar engeller.  
+ Çöp toplamayı `FunctionTailcall2` geciktireceği için uygulanması engellememelidir. Yığın çöp toplama dostu bir durumda olmayabilir, çünkü uygulama bir çöp toplama girişimi olmamalıdır. Bir çöp toplama denenir, çalışma süresi `FunctionTailcall2` döndürülene kadar engellenir.  
   
- Ayrıca, `FunctionTailcall2` işlevi yönetilen koda çağrı içermemelidir veya herhangi bir şekilde yönetilen bellek ayırmaya neden olur.  
+ Ayrıca, `FunctionTailcall2` işlev yönetilen koda çağrı yapmamalı veya herhangi bir şekilde yönetilen bir bellek ayırmasına neden olmamalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf. IDL  
+ **Üstbilgi:** CorProf.idl  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

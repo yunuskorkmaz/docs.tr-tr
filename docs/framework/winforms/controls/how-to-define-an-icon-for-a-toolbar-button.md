@@ -13,30 +13,30 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: 2b85f734a5f8b31531cfe48f87681d98304db09b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84c67c7d2584390ba3e48cb83820c65c6bb45d1f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929637"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182203"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Nasıl yapılır: ToolBar Düğmesi için Simge Tanımlama
 > [!NOTE]
-> Denetim yerini alır ve <xref:System.Windows.Forms.ToolBar> <xref:System.Windows.Forms.ToolBar> denetime işlevsellik ekler; ancak, isterseniz denetim hem geri uyumluluk hem de gelecekteki kullanım için korunur. <xref:System.Windows.Forms.ToolStrip>  
+> Denetim, <xref:System.Windows.Forms.ToolStrip> denetimin <xref:System.Windows.Forms.ToolBar> yerini alır ve işlevsellik ekler; ancak, <xref:System.Windows.Forms.ToolBar> isterseniz, denetim hem geriye dönük uyumluluk hem de gelecekteki kullanım için korunur.  
   
- <xref:System.Windows.Forms.ToolBar>düğmeler, kullanıcılar tarafından kolay bir şekilde tanımlanması için simgeleri içinde görüntüleyebilir. Bu, [ImageList bileşen](imagelist-component-windows-forms.md) bileşenine görüntü eklenerek ve ardından <xref:System.Windows.Forms.ImageList> bileşeni <xref:System.Windows.Forms.ToolBar> denetimiyle ilişkilendirerek elde edilir.  
+ <xref:System.Windows.Forms.ToolBar>düğmeler, kullanıcılar tarafından kolay tanımlama için içlerindeki simgeleri görüntüleyebilir. Bu, [ImageList Bileşeni](imagelist-component-windows-forms.md) bileşenine görüntü ekleyerek ve bileşenle <xref:System.Windows.Forms.ImageList> <xref:System.Windows.Forms.ToolBar> denetimle ilişkilendirilerek elde edilir.  
   
-### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>Bir araç çubuğu düğmesine programlı bir simge ayarlamak için  
+### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>Araç çubuğu düğmesi için simgeyi programlı olarak ayarlamak için  
   
-1. Bir yordamda, bir <xref:System.Windows.Forms.ImageList> bileşeni <xref:System.Windows.Forms.ToolBar> ve denetimi örneğini oluşturun.  
+1. Bir yordamda, bir <xref:System.Windows.Forms.ImageList> bileşeni ve <xref:System.Windows.Forms.ToolBar> denetimi anında yerleştirin.  
   
-2. Aynı yordamda <xref:System.Windows.Forms.ImageList> bileşene bir görüntü atayın.  
+2. Aynı yordamda, <xref:System.Windows.Forms.ImageList> bileşene bir görüntü atayın.  
   
-3. Aynı yordamda denetimi <xref:System.Windows.Forms.ImageList> <xref:System.Windows.Forms.ToolBar> denetime atayın ve tek araç çubuğu düğmelerinin <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> özelliğini atayın.  
+3. Aynı yordamda, <xref:System.Windows.Forms.ImageList> denetimi denetime <xref:System.Windows.Forms.ToolBar> atayın ve <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> tek tek araç çubuğu düğmelerinin özelliğini atayın.  
   
-     Aşağıdaki kod örneğinde, görüntü konumu için ayarlanan yol Belgelerim klasörüdür. Bu, Windows işletim sistemini çalıştıran bilgisayarların çoğunun bu dizini içerdiğini varsaydığı için yapılır. Bu Ayrıca, en az sistem erişim düzeylerine sahip kullanıcıların uygulamayı güvenle çalıştırmasına olanak tanır. Aşağıdaki örnekte, bir <xref:System.Windows.Forms.PictureBox> denetimin zaten eklendiği bir form varsayılır.  
+     Aşağıdaki kod örneğinde, görüntünün konumu için ayarlanan yol **Belgelerim** klasörüdür. Windows işletim sistemini çalıştıran bilgisayarların çoğunun bu dizini içereceğini varsayabileceğinizden, bu işlem yapılır. Bu aynı zamanda en az sistem erişim düzeylerine sahip kullanıcıların uygulamayı güvenli bir şekilde çalıştırmasına olanak tanır. Aşağıdaki <xref:System.Windows.Forms.PictureBox> örnekte, denetimzaten eklenmiştir.  
   
-     Yukarıdaki adımları izleyerek aşağıda gösterilene benzer bir kod yazmış olmanız gerekir.  
+     Yukarıdaki adımları izleyerek, aşağıda görüntülenen benzer kod yazmış olmalıdır.  
   
     ```vb  
     Public Sub InitializeMyToolBar()  
@@ -46,7 +46,7 @@ ms.locfileid: "69929637"
     ' Assign an image to the ImageList component.  
     ' You should replace the bold image  
     ' in the sample below with an icon of your own choosing.  
-       Dim myImage As System.Drawing.Image = _   
+       Dim myImage As System.Drawing.Image = _
           Image.FromFile Image.FromFile _  
           (System.Environment.GetFolderPath _  
           (System.Environment.SpecialFolder.Personal) _  
@@ -67,10 +67,10 @@ ms.locfileid: "69929637"
     public void InitializeMyToolBar()  
     {  
        // Instantiate an ImageList component and a ToolBar control.  
-       ToolBar toolBar1 = new  ToolBar();   
+       ToolBar toolBar1 = new  ToolBar();
        ImageList imageList1 = new ImageList();  
        // Assign an image to the ImageList component.  
-       // You should replace the bold image   
+       // You should replace the bold image
        // in the sample below with an icon of your own choosing.  
        // Note the escape character used (@) when specifying the path.  
        Image myImage = Image.FromFile  
@@ -94,10 +94,10 @@ ms.locfileid: "69929637"
        void InitializeMyToolBar()  
        {  
           // Instantiate an ImageList component and a ToolBar control.  
-          ToolBar ^ toolBar1 = gcnew  ToolBar();   
+          ToolBar ^ toolBar1 = gcnew  ToolBar();
           ImageList ^ imageList1 = gcnew ImageList();  
           // Assign an image to the ImageList component.  
-          // You should replace the bold image   
+          // You should replace the bold image
           // in the sample below with an icon of your own choosing.  
           Image ^ myImage = Image::FromFile(String::Concat  
              (System::Environment::GetFolderPath  
@@ -118,6 +118,6 @@ ms.locfileid: "69929637"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Nasıl yapılır: Araç çubuğu düğmeleri için tetikleyici menü olayları](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Nasıl yapılır: Araç Çubuğu Düğmeleri için Menü Olaylarını Tetikleme](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar Denetimi](toolbar-control-windows-forms.md)
 - [ImageList Bileşeni](imagelist-component-windows-forms.md)

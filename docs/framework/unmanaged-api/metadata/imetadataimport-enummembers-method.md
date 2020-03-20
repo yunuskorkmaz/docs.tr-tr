@@ -15,64 +15,64 @@ helpviewer_keywords:
 ms.assetid: 3fb8e178-342b-4c89-9bcf-f7f834e6cb77
 topic_type:
 - apiref
-ms.openlocfilehash: acb772a64c8f13405f2836bb5f4f308986dce414
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 20c7a90f27defa18a5ef311d1f3a549b81fc5c40
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447660"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175492"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers Yöntemi
-Belirtilen türdeki üyeleri temsil eden MemberDef belirteçlerini numaralandırır.  
+Belirtilen tipteki üyeleri temsil eden ÜyeDef belirteçlerini oyalar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT EnumMembers (   
-   [in, out]  HCORENUM    *phEnum,   
-   [in]  mdTypeDef   cl,   
-   [out] mdToken     rMembers[],   
-   [in]  ULONG       cMax,   
+HRESULT EnumMembers (
+   [in, out]  HCORENUM    *phEnum,
+   [in]  mdTypeDef   cl,
+   [out] mdToken     rMembers[],
+   [in]  ULONG       cMax,
    [out] ULONG       *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] Numaralandırıcı için bir işaretçi.  
+ [içinde, dışarı] Sayıya işaretçisi.  
   
  `cl`  
- 'ndaki Üyeleri numaralandırılmış olan türü temsil eden bir TypeDef belirteci.  
+ [içinde] Üyeleri numaralandırılacak türü temsil eden bir TypeDef belirteci.  
   
  `rMembers`  
- dışı MemberDef belirteçlerini tutmak için kullanılan dizi.  
+ [çıkış] ÜyeDef belirteçlerini tutmak için kullanılan dizi.  
   
  `cMax`  
- 'ndaki `rMembers` dizisinin en büyük boyutu.  
+ [içinde] `rMembers` Dizinin en büyük boyutu.  
   
  `pcTokens`  
- dışı `rMembers`' de döndürülen MemberDef belirteçlerinin gerçek sayısı.  
+ [çıkış] ÜyeDef belirteçlerinin gerçek sayısı `rMembers`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak MemberDef belirteçleri yok. Bu durumda `pcTokens` sıfırdır.|  
+|`S_OK`|`EnumMembers`başarıyla döndürülür.|  
+|`S_FALSE`|Sayısala kaydolacak ÜyeDef belirteçleri yoktur. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir sınıf için üye koleksiyonları numaralandırılırken `EnumMembers`, doğrudan sınıfında tanımlanmış üyeleri (alanlar ve Yöntemler, ancak Özellikler veya olaylar **değil** ) döndürür. Sınıf, devralınan Üyeler için bir uygulama sağladığından bile, sınıfın devraldığı herhangi bir üye döndürmez. Devralınan üyeleri listelemek için çağıran, devralma zincirini açıkça yürümelidir. Devralma zincirinin kurallarının, özgün meta verileri oluşturan dile veya derleyiciye göre değişebileceğini unutmayın.
- 
- Özellikler ve olaylar `EnumMembers`tarafından numaralandırılmıyor. Bunları listelemek için, [EnumProperties](imetadataimport-enumproperties-method.md) veya [trmevents](imetadataimport-enumevents-method.md)kullanın.
+ Bir sınıf için üye koleksiyonlarını toplarken, `EnumMembers` yalnızca üyeler (alanlar ve yöntemler, ancak özellikler veya olaylar) doğrudan sınıf üzerinde tanımlanan döndürür. **not** Sınıf, devralınan üyeler için bir uygulama sağlasa bile, sınıfın devraldığı hiçbir üyeyi döndürmez. Devralınan üyeleri doğrulamak için, arayan açıkça devralma zincirinde yürümelidir. Devralma zincirinin kurallarının, özgün meta verileri yayan dile veya derleyiciye bağlı olarak değişebileceğini unutmayın.
+
+ Özellikler ve olaylar `EnumMembers`tarafından numaralandırılmez. Bunları sayısallandırmak için [EnumProperties](imetadataimport-enumproperties-method.md) veya [EnumEvents'i](imetadataimport-enumevents-method.md)kullanın.
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

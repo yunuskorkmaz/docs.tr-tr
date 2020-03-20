@@ -15,60 +15,60 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-ms.openlocfilehash: 1d6d66ea62cbf679f722f830b3638455001aedd6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a61254ba751e47b0089a3f7528aca337a32e2db3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437495"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175375"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps Yöntemi
-Belirtilen belirteç tarafından başvurulan üyeyle ilişkili meta verileri alır.  
+Belirtilen belirteç tarafından başvurulan üye ile ilişkili meta verileri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetMemberRefProps (  
-   [in]  mdMemberRef       mr,   
-   [out] mdToken           *ptk,   
-   [out] LPWSTR            szMember,   
-   [in]  ULONG             cchMember,   
-   [out] ULONG             *pchMember,   
-   [out] PCCOR_SIGNATURE   *ppvSigBlob,   
-   [out] ULONG             *pbSig   
+   [in]  mdMemberRef       mr,
+   [out] mdToken           *ptk,
+   [out] LPWSTR            szMember,
+   [in]  ULONG             cchMember,
+   [out] ULONG             *pchMember,
+   [out] PCCOR_SIGNATURE   *ppvSigBlob,
+   [out] ULONG             *pbSig
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `mr`  
- 'ndaki İçin ilişkili meta verileri döndürecek MemberRef belirteci.  
+ [içinde] ÜyeRef belirteç için ilişkili meta verileri döndürmek için.  
   
  `ptk`  
- dışı Üyeyi bildiren sınıfı temsil eden bir TypeDef veya TypeRef, ya da üyeyi bildiren modül sınıfını temsil eden bir ModuleRef belirteci ya da üyeyi temsil eden bir MethodDef.  
+ [çıkış] Üyeyi bildiren sınıfı temsil eden bir TypeDef veya TypeRef veya TypeSpec belirteci veya üyeyi bildiren modül sınıfını temsil eden bir ModuleRef belirteci veya üyeyi temsil eden bir MethodDef belirteç.  
   
  `szMember`  
- dışı Üyenin adı için bir dize arabelleği.  
+ [çıkış] Üyenin adı için bir dize arabelleği.  
   
  `cchMember`  
- 'ndaki `szMember`geniş karakterdeki istenen boyut.  
+ [içinde] Geniş karakterlerde istenen `szMember`boyut.  
   
  `pchMember`  
- dışı `szMember`geniş karakterdeki döndürülen boyut.  
+ [çıkış] Döndürülen boyut geniş karakterler `szMember`.  
   
  `ppvSibBlob`  
- dışı Üyenin ikili meta veri imzasına yönelik bir işaretçi.  
+ [çıkış] Üye için ikili meta veri imzasına işaretçi.  
   
  `pbSig`  
- dışı `ppvSigBlob`bayt cinsinden boyutu.  
+ [çıkış] `ppvSigBlob`Baytboyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

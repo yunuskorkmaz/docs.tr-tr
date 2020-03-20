@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-ms.openlocfilehash: 0b7ca6f9878ed2fa2d90ea93e5101f0a66ec2d5e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cabd6a47e5d6fc2a4cea87b16d349d9c778b3507
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440211"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176064"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile Yöntemi
-Bu derleme tarafından başvurulan derleme için meta verileri içeren bir `File` meta veri yapısı oluşturur ve ilişkili meta veri belirtecini döndürür.  
+Bu derleme `File` tarafından başvurulan derleme için meta veri içeren bir meta veri yapısı oluşturur ve ilişkili meta veri belirteci döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT DefineFile (  
-    [in]  LPCWSTR        szName,   
-    [in]  const void     *pbHashValue,   
+    [in]  LPCWSTR        szName,
+    [in]  const void     *pbHashValue,
     [in]  ULONG          cbHashValue,  
     [in]  DWORD          dwFileFlags,  
     [out] mdFile         *pmdf  
@@ -39,31 +39,31 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>Parametreler  
  `szName`  
- 'ndaki Tüketilecek dosyanın adı.  
+ [içinde] Tüketilecek dosyanın adı.  
   
  `pbHashValue`  
- 'ndaki Derlemeyle ilişkili karma verileri işaretçisi.  
+ [içinde] Derleme ile ilişkili karma verilere işaretçi.  
   
  `cbHashValue`  
- 'ndaki `pbHashValue`bayt cinsinden boyutu.  
+ [içinde] `pbHashValue`Baytboyutu.  
   
  `dwFileFlags`  
- 'ndaki Özellik ayarlarını belirten `FileFlags` değerlerinin bit düzeyinde birleşimi.  
+ [içinde] Özellik ayarlarını `FileFlags` belirten değerlerin bitwise birleşimi.  
   
  `pmdf`  
- dışı Döndürülen `File` belirtecine yönelik bir işaretçi.  
+ [çıkış] Döndürülen `File` belirteç için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu derlemenin oluşturulduğu zaman, meta verileri içeren dosya hariç olmak üzere, bu derlemenin parçası olan her bir dosya için bir `File` meta veri yapısının tanımlanması gerekir.  
+ Meta `File` verileri içeren dosya hariç olmak üzere, bu derlemenin yapıldığı sırada bu derlemenin parçası olan her dosya için bir meta veri yapısı tanımlanmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

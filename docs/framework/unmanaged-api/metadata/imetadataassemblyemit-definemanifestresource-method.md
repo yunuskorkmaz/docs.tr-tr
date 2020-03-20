@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 27f6d295-0fe9-4cda-b77e-6e7d5c53df09
 topic_type:
 - apiref
-ms.openlocfilehash: 83170815f4aa65988bb6a6394bd466a0ba376ebf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5aa5d78faa8ca9261594e2a649b11088e1d78ee7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432056"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177866"
 ---
 # <a name="imetadataassemblyemitdefinemanifestresource-method"></a>IMetaDataAssemblyEmit::DefineManifestResource Yöntemi
-Belirtilen bildirim kaynağı için meta verileri içeren bir `ManifestResource` yapısı oluşturur ve ilişkili meta veri belirtecini döndürür.  
+Belirtilen bildirim `ManifestResource` kaynağı için meta veri içeren bir yapı oluşturur ve ilişkili meta veri belirteci döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT DefineManifestResource (  
-    [in] LPCWSTR                szName,   
-    [in] mdToken                tkImplementation,   
-    [in] DWORD                  dwOffset,   
+    [in] LPCWSTR                szName,
+    [in] mdToken                tkImplementation,
+    [in] DWORD                  dwOffset,
     [in] DWORD                  dwResourceFlags,  
     [out] mdManifestResource    *pmdmr  
 );  
@@ -39,31 +39,31 @@ HRESULT DefineManifestResource (
   
 ## <a name="parameters"></a>Parametreler  
  `szName`  
- 'ndaki Kaynağın adı.  
+ [içinde] Kaynağın adı.  
   
  `tkImplementation`  
- 'ndaki Kaynak sağlayıcısına eşlenen `mdtFile` veya `mdtAssemblyRef` türünde bir meta veri belirteci. NULL değer, meta verilerin katıştırıldığı dosyanın kaynak sağlayıcısı olduğunu gösterir.  
+ [içinde] Bir meta veri türü `mdtFile` `mdtAssemblyRef` belirteci veya kaynak sağlayıcısı yla eşler. NULL değeri, meta verilerin katıştırıldığı dosyanın kaynak sağlayıcısı olduğunu gösterir.  
   
  `dwOffset`  
- 'ndaki Dosyanın içindeki kaynağın başlangıcına olan Aralık. Tek başına dosyalardaki kaynaklar için bu her zaman sıfır olur. Kaynak bir PE (taşınabilir yürütülebilir) dosyasına katıştırılmışsa, bu, Cor. h üstbilgi dosyasında belirtilen konumda başlayan kaynak BLOBUN bir denklüdür.  
+ [içinde] Dosya içindeki kaynağın başına mahsup. Bağımsız dosyalardaki kaynaklar için bu her zaman sıfır olacaktır. Kaynak bir PE (taşınabilir çalıştırılabilir) dosyaya katıştırılmışsa, bu, cor.h üstbilgi dosyasında belirtilen konumda başlayan kaynak BLOB'nin bir mahsup noktasıdır.  
   
  `dwResourceFlags`  
- 'ndaki Kaynak tanımı için özellik ayarlarını belirten bayrak değerlerinin bit düzeyinde birleşimi.  
+ [içinde] Kaynak tanımı için özellik ayarlarını belirten bayrak değerlerinin bityişli bir leşimi.  
   
  `pmdmr`  
- dışı Döndürülen meta veri belirtecine yönelik bir işaretçi.  
+ [çıkış] Döndürülen meta veri belirteci için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir `ManifestResource` meta veri yapısının her bir derleme dosyasında uygulanan her kaynak için tanımlanması gerekir.  
+ Derlemenin her dosyasında uygulanan her kaynak için bir `ManifestResource` meta veri yapısı tanımlanmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,30 +2,30 @@
 title: Özel İfade Düzenleyicisi Kullanma
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 9e179914a56874ddc9f3f170d35ae04c97dd859e
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: a1cd92766c8897868920c1465ddb3eeabae1aa97
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988787"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182709"
 ---
 # <a name="using-a-custom-expression-editor"></a>Özel İfade Düzenleyicisi Kullanma
-Bir özel ifade Düzenleyicisi, daha zengin veya daha basit bir ifade düzenleme deneyimi sağlamak için uygulanabilir. Özel ifade Düzenleyicisi kullanmak isteyebileceğiniz birkaç senaryo vardır:  
+Daha zengin veya daha basit bir ifade düzenleme deneyimi sağlamak için özel bir ifade düzenleyicisi uygulanabilir. Özel bir ifade düzenleyicisi kullanmak isteyebileceğin birkaç senaryo vardır:  
   
-- Bir yeniden barındırılan iş akışı tasarımcısında IntelliSense ve diğer zengin düzen özelliklerine yönelik destek sağlamak için. Bu işlev, varsayılan Visual Studio ifade Düzenleyicisi yeniden barındırılan uygulamalarda kullanılamadığından sağlanmalıdır.  
+- Yeniden barındırılan iş akışı tasarımcısında IntelliSense ve diğer zengin düzenleme özellikleri için destek sağlamak. Varsayılan Visual Studio ifade düzenleyicisi yeniden barındırılan uygulamalarda kullanılamadığından, bu işlevsellik sağlanmalıdır.  
   
-- İş analistlerine yönelik ifade düzenlemesi deneyimini basitleştirmek için, örneğin, Visual Basic öğrenmek veya Visual Basic ifadelerle uğraşmak için gereklidir.  
+- İş analisti kullanıcılar için ifade düzenleme deneyimini basitleştirmek için, örneğin Visual Basic'i öğrenmeleri veya Visual Basic ifadeleriyle ilgilenmeleri gerekmesin.  
   
- Özel ifade Düzenleyicisi uygulamak için üç temel adım gereklidir:  
+ Özel bir ifade düzenleyicisi uygulamak için üç temel adım gereklidir:  
   
-1. <xref:System.Activities.Presentation.View.IExpressionEditorService> arabirimini gerçekleştirin. Bu arabirim, ifade düzenleyicilerinin oluşturulmasını ve yok edilmesini yönetir.  
+1. <xref:System.Activities.Presentation.View.IExpressionEditorService> arabirimini gerçekleştirin. Bu arabirim, ifade editörlerinin oluşturulmasını ve yok edilmesini yönetir.  
   
-2. <xref:System.Activities.Presentation.View.IExpressionEditorInstance> arabirimini gerçekleştirin. Bu arabirim, ifade düzenlemesi Kullanıcı arabirimi için Kullanıcı arabirimini uygular.  
+2. <xref:System.Activities.Presentation.View.IExpressionEditorInstance> arabirimini gerçekleştirin. Bu arabirim, ifade düzenleme UI için UI uygular.  
   
-3. <xref:System.Activities.Presentation.View.IExpressionEditorService> ' İ yeniden barındırılan iş akışı uygulamanızda yayımlayın.  
+3. Yeniden <xref:System.Activities.Presentation.View.IExpressionEditorService> barındırılan iş akışı uygulamanızda yayımlayın.  
   
-## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>Bir sınıf kitaplığında özel Ifade Düzenleyicisi uygulama  
- Bir myexpressioneditorservice kitaplık projesinde, `MyEditorService` <xref:System.Activities.Presentation.View.IExpressionEditorService> arabirimi uygulayan bir (kavram kanıtı kanıtlama) sınıfı için kod örneği aşağıda verilmiştir.  
+## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>Sınıf Kitaplığında Özel İfade Düzenleyicisi Uygulama  
+ Burada `MyEditorService` <xref:System.Activities.Presentation.View.IExpressionEditorService> arabirimi uygulayan bir (kavram kanıtı) sınıfı için kod örneği MyExpressionEditorService kitaplık projesinde yer almaktadır.  
   
 ```csharp  
 using System;  
@@ -71,7 +71,7 @@ namespace MyExpressionEditorService
 }  
 ```  
   
- Bir myexpressioneditorservice kitaplık `MyExpressionEditorInstance` projesinde <xref:System.Activities.Presentation.View.IExpressionEditorInstance> arabirimi uygulayan bir sınıf için kod aşağıda verilmiştir.  
+ Burada MyExpressionEditorService `MyExpressionEditorInstance` kitaplık projesinde <xref:System.Activities.Presentation.View.IExpressionEditorInstance> arabirimi uygulayan bir sınıfın kodu verilmiştir.  
   
 ```csharp  
 using System;  
@@ -221,8 +221,8 @@ namespace MyExpressionEditorService
 }  
 ```  
   
-### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a>WPF projesinde özel Ifade Düzenleyicisi yayımlama  
- Tasarımcı 'nın WPF uygulamasında nasıl yeniden barındırılacağını ve `MyEditorService` hizmetin nasıl oluşturulacağını ve yayınlanalınacağını gösteren kod aşağıda verilmiştir. Bu kodu kullanmadan önce, avalon2 uygulamasını içeren projeden MyExpressionEditorService kitaplık projesine bir başvuru ekleyin.  
+### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a>WPF Projesinde Özel İfade Düzenleyicisi Yayınlama  
+ Burada, tasarımcının WPF uygulamasında nasıl yeniden barındırılabildiğini ve `MyEditorService` hizmetin nasıl oluşturulup yayımlandırılabildiğini gösteren kod ve kod ve readesi aşağıda verebilmektedir. Bu kodu kullanmadan önce, avalon2 uygulamasını içeren projeden MyExpressionEditorService kitaplık projesine bir başvuru ekleyin.  
   
 ```csharp  
 using System.Windows;  
@@ -263,7 +263,7 @@ namespace WpfApplication1
   
             Grid.SetColumn(designer.View, 0);  
   
-            // Create ExpressionEditorService   
+            // Create ExpressionEditorService
             this.expressionEditorService = new MyEditorService();  
   
             // Publish the instance of MyEditorService.  
@@ -276,7 +276,7 @@ namespace WpfApplication1
 ```  
   
 ### <a name="notes"></a>Notlar  
- Özel bir etkinlik tasarımcısında bir **ExpressionTextBox** denetimi kullanıyorsanız, bu <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> <xref:System.Activities.Presentation.View.IExpressionEditorService> arabirimin ve <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> yöntemlerini kullanarak ifade düzenleyicilerinin oluşturulması ve yok olması gerekmez. <xref:System.Activities.Presentation.View.ExpressionTextBox> Sınıfı bunu sizin için yönetir.  
+ Özel bir etkinlik tasarımcısında **ExpressionTextBox** denetimi kullanıyorsanız, <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> <xref:System.Activities.Presentation.View.IExpressionEditorService> arabirimin yöntemlerini kullanarak ifade düzenleyicileri oluşturmak ve yok etmek gerekmez. Sınıf <xref:System.Activities.Presentation.View.ExpressionTextBox> bunu senin için yönetiyor.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

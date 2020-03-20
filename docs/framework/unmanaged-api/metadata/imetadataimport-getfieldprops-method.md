@@ -15,29 +15,29 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-ms.openlocfilehash: 462512fd2c2b33905b45bb67599b23b301fc71f7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8c3f98a124dbbcae3b0500932a2357ed1757951f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438000"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177242"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps Metodu
-Belirtilen FieldDef belirtecinin başvurduğu alanla ilişkili meta verileri alır.  
+Belirtilen FieldDef belirteci tarafından başvurulan alanla ilişkili meta verileri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetFieldProps (  
-   [in]  mdFieldDef        mb,   
+   [in]  mdFieldDef        mb,
    [out] mdTypeDef         *pClass,  
    [out] LPWSTR            szField,  
-   [in]  ULONG             cchField,   
+   [in]  ULONG             cchField,
    [out] ULONG             *pchField,  
    [out] DWORD             *pdwAttr,  
-   [in]  PCCOR_SIGNATURE   *ppvSigBlob,   
-   [out] ULONG             *pcbSigBlob,   
-   [out] DWORD             *pdwCPlusTypeFlag,   
+   [in]  PCCOR_SIGNATURE   *ppvSigBlob,
+   [out] ULONG             *pcbSigBlob,
+   [out] DWORD             *pdwCPlusTypeFlag,
    [out] UVCP_CONSTANT     *ppValue,  
    [out] ULONG             *pcchValue  
 );  
@@ -45,46 +45,46 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mb`  
- 'ndaki İlişkili meta verileri almak için alanı temsil eden bir FieldDef belirteci.  
+ [içinde] İlişkili meta verileri almak için alanı temsil eden bir FieldDef belirteci.  
   
  `pClass`  
- dışı Bir TypeDef belirtecinin, alanın ait olduğu sınıfın türünü temsil eden bir işaretçisi.  
+ [çıkış] Alanın ait olduğu sınıfın türünü temsil eden bir TypeDef belirteci.  
   
  `szField`  
- dışı Alanın adı.  
+ [çıkış] Alanın adı.  
   
  `cchField`  
- 'ndaki *SzField*arabelleğinin geniş karakterdeki boyutu.  
+ [içinde] *szField*için arabellek geniş karakterler boyutu.  
   
  `pchField`  
- dışı Döndürülen arabelleğin gerçek boyutu.  
+ [çıkış] Döndürülen arabelleğe gerçek boyutu.  
   
  `pdwAttr`  
- dışı Alanın meta verileriyle ilişkili bayraklar.  
+ [çıkış] Alanın meta verileriyle ilişkili bayraklar.  
   
  `ppvSigBlob`  
- 'ndaki Alanı açıklayan ikili meta veri değerine yönelik bir işaretçi.  
+ [içinde] Alanı açıklayan ikili meta veri değeri için bir işaretçi.  
   
  `pcbSigBlob`  
- dışı `ppvSigBlob`bayt cinsinden boyutu.  
+ [çıkış] `ppvSigBlob`Baytboyutu.  
   
  `pdwCPlusTypeFlag`  
- dışı Alanın değer türünü belirten bayrak.  
+ [çıkış] Alanın değer türünü belirten bir bayrak.  
   
  `ppValue`  
- dışı Alan için sabit bir değer.  
+ [çıkış] Alan için sabit bir değer.  
   
  `pcchValue`  
- dışı `ppValue`karakter cinsinden boyut veya hiçbir dize yoksa sıfır.  
+ [çıkış] Karakterdeki boyut `ppValue`, veya dize yoksa sıfır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,45 +15,45 @@ helpviewer_keywords:
 ms.assetid: 7b72fa11-3866-402b-bdea-2b966b77cfe0
 topic_type:
 - apiref
-ms.openlocfilehash: f0c390509a698fdc4682ba81182d4b407d8718c9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ae9097725aecd21e910e49a78d81951df39e9b2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448259"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177773"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>IMetaDataAssemblyImport::FindManifestResourceByName Yöntemi
-Belirtilen ada sahip bildirim kaynağına yönelik bir işaretçi alır.  
+Belirtilen ada sahip bildirim kaynağına işaretçi sayar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp
 HRESULT FindManifestResourceByName (  
-    [in]  LPCWSTR                szName,   
+    [in]  LPCWSTR                szName,
     [out] mdManifestResource     *ptkManifestResource  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `szName`  
- 'ndaki Kaynağın adı.  
+ [içinde] Kaynağın adı.  
   
  `ptkManifestResource`  
- dışı Her biri bir bildirim kaynağını temsil eden `mdManifestResource` meta veri belirteçlerini depolamak için kullanılan dizi.  
+ [çıkış] Her biri bir `mdManifestResource` bildirim kaynağını temsil eden meta veri belirteçlerini depolamak için kullanılan dizi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `FindManifestResourceByName` yöntemi, başvuruları çözümlemek için ortak dil çalışma zamanı tarafından çalıştırılan standart kuralları kullanır.  
+ Yöntem, `FindManifestResourceByName` başvuruları çözmek için ortak dil çalışma zamanı tarafından kullanılan standart kuralları kullanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Çalışma Zamanının Derlemelerin Konumunu Bulması](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

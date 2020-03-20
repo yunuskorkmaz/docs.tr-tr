@@ -1,6 +1,6 @@
 ---
-title: NextMethod işlevi (yönetilmeyen API Başvurusu)
-description: NextMethod işlevi bir Numaralandırmadaki sonraki yöntemi alır.
+title: NextMethod işlevi (Yönetilmeyen API Başvurusu)
+description: NextMethod işlevi bir sonraki yöntemi numaralandırmada alır.
 ms.date: 11/06/2017
 api_name:
 - NextMethod
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - NextMethod function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 1c20fe5b4a081bd41f51365a36ab5f8f8cfb71ed
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 36acd6135110a8865bd8efdda628c352c01b4f26
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127368"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174933"
 ---
-# <a name="nextmethod-function"></a>NextMethod işlevi
-Bir sonraki yöntemi [Beginmethodenumeration](beginmethodenumeration.md)çağrısıyla başlayan bir Numaralandırmadaki alır.  
+# <a name="nextmethod-function"></a>NextMethod fonksiyonu
+[BeginMethodEnumeration](beginmethodenumeration.md)için bir çağrı ile başlayan bir numaralandırma sonraki yöntemi alır.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -30,62 +30,62 @@ Bir sonraki yöntemi [Beginmethodenumeration](beginmethodenumeration.md)çağrı
   
 ```cpp  
 HRESULT NextMethod (
-   [in] int                 vFunc, 
-   [in] IWbemClassObject*   ptr, 
+   [in] int                 vFunc,
+   [in] IWbemClassObject*   ptr,
    [in] LONG                lFlags,
    [out] BSTR*              pName,
    [out] IWbemClassObject** ppInSignature,
-   [out] IWbemClassObject** ppOutSignature   
-); 
+   [out] IWbemClassObject** ppOutSignature
+);
 ```  
 
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-'ndaki Bu parametre kullanılmıyor.
+[içinde] Bu parametre kullanılmaz.
 
 `ptr`  
-'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
+[içinde] [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine işaretçi.
 
 `lFlags`  
-'ndaki Ayrılamadı. Bu parametre 0 olmalıdır.
+[içinde] Saklı -dır. Bu parametre 0 olmalıdır.
 
 `pName`  
-dışı Çağrıdan önce `null` işaret eden bir işaretçi. İşlev döndüğünde, yöntem adını içeren yeni bir `BSTR` adresi. 
+[çıkış] Aramadan önce `null` işaret eden bir işaretçi. İşlev döndüğünde, yöntem adını `BSTR` içeren yeni bir adres.
 
 `ppSignatureIn`  
-dışı Yöntemi için `in` parametrelerini içeren bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) öğesine işaretçi alan bir işaretçi. 
+[çıkış] Yöntem için parametreleri `in` içeren bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) için bir işaretçi alan bir işaretçi.
 
 `ppSignatureOut`  
-dışı Yöntemi için `out` parametrelerini içeren bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) öğesine işaretçi alan bir işaretçi. 
+[çıkış] Yöntem için parametreleri `out` içeren bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) için bir işaretçi alan bir işaretçi.
 
-## <a name="return-value"></a>Dönüş değeri
+## <a name="return-value"></a>Döndürülen değer
 
-Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
+Bu işlev tarafından döndürülen aşağıdaki değerler *WbemCli.h* üstbilgi dosyasında tanımlanır veya bunları kodunuzdaki sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_E_UNEXPECTED` | 0x8004101D | [`BeginEnumeration`](beginenumeration.md) işlevine hiçbir çağrı yoktu. |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | Fonksiyon arayın. [`BeginEnumeration`](beginenumeration.md) |
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
-| `WBEM_S_NO_MORE_DATA` | 0x40005 | Numaralandırmada daha fazla özellik yok. |
+| `WBEM_S_NO_MORE_DATA` | 0x40005 | Numaralandırmada başka özellik yok. |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev, [IWbemClassObject:: NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) yöntemine bir çağrı kaydırır.
+Bu [işlev, IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) yöntemine bir çağrı yıkıyor.
 
-Çağıran, [Beginmethodenumeration](beginmethodenumeration.md) işlevini çağırarak numaralandırma dizisini başlatır ve ardından işlev `WBEM_S_NO_MORE_DATA`döndürünceye kadar [NextMethod] işlevini çağırır. İsteğe bağlı olarak, çağıran, [Endmethodenumeration](endmethodenumeration.md)' ı çağırarak sırayı sonlandırır. Çağıran, her zaman [Endmethodenumeration](endmethodenumeration.md) ' ı çağırarak numaralandırmayı erken sonlandıramayabilir.
+Arayan numaralandırma sırasını [BeginMethodEnumeration](beginmethodenumeration.md) işlevini çağırarak başlatır ve işlev dönene `WBEM_S_NO_MORE_DATA`kadar [NextMethod] işlevini çağırır. İsteğe bağlı olarak, arayan [EndMethodEnumeration](endmethodenumeration.md)çağırarak sırayı bitirir. Arayan, [endmethodenumeration'ı](endmethodenumeration.md) herhangi bir zamanda arayarak numaralandırmayı erken sonlandırabilir.
 
 ## <a name="example"></a>Örnek
 
-Bir C++ örnek için, bkz. [IWbemClassObject:: NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) yöntemi.
+C++ örneği için [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) yöntemine bakın.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** WMINet_Utils. IDL  
+ **Üstbilgi:** WMINet_Utils.idl  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)

@@ -15,59 +15,59 @@ helpviewer_keywords:
 ms.assetid: a3007f5e-d75d-4b37-842b-704e9edced5e
 topic_type:
 - apiref
-ms.openlocfilehash: 9837e4e3428a0293c8e689b3f3e081aa07f055b2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dded37fdef02963f60883b289462aa6a96693b3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192077"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176311"
 ---
 # <a name="ihostmallocalloc-method"></a>IHostMAlloc::Alloc Yöntemi
-Konağın yığından belirtilen bellek miktarını ayırmasını ister.  
+Ana bilgisayar, yığından belirtilen bellek miktarını ayırmasını ister.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT Alloc (  
-    [in] SIZE_T  cbSize,   
-    [in] EMemoryCriticalLevel dwCriticalLevel,   
+    [in] SIZE_T  cbSize,
+    [in] EMemoryCriticalLevel dwCriticalLevel,
     [out] void** ppMem  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `cbSize`  
- 'ndaki Geçerli bellek ayırma isteğinin bayt cinsinden boyutu.  
+ [içinde] Geçerli bellek ayırma isteğinin baytboyutu.  
   
  `dwCriticalLevel`  
- 'ndaki Bir ayırma hatasının etkisini belirten [Ememorycriticalhandle düzey](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) değerlerinden biri.  
+ [içinde] Bir ayırma hatasının etkisini gösteren [EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) değerlerinden biri.  
   
  `ppMem`  
- dışı Ayrılan belleğe yönelik bir işaretçi veya istek tamamlanmayabilir null.  
+ [çıkış] Ayrılan belleğe işaretçi veya istek tamamlanamadıysa null.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`Alloc` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
-|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|S_OK|`Alloc`başarıyla döndürülür.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma süresi (CLR) bir işleme yüklenmedi veya CLR yönetilen kodu çalıştıramadığı veya aramayı başarıyla işleyemediği bir durumdadır.|  
+|HOST_E_TIMEOUT|Arama zaman doldu.|  
+|HOST_E_NOT_OWNER|Arayan kilidin sahibi değildir.|  
 |HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
-|E_FAıL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
-|E_OUTOFMEMORY|Ayırma isteğini tamamlamaya yetecek miktarda bellek yoktu.|  
+|E_faıl|Bilinmeyen bir felaket hatası meydana geldi. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılabilir. Barındırma yöntemleri sonraki aramalar HOST_E_CLRNOTAVAILABLE döndürün.|  
+|E_outofmemory|Ayırma isteğini tamamlamak için yeterli bellek yoktu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- CLR, [IHostMemoryManager:: Createmayırma](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) yöntemini çağırarak bir `IHostMalloc` örneğine yönelik bir arabirim işaretçisi alır.  
+ CLR IHostMemoryManager arayarak bir örnek için bir `IHostMalloc` arayüz işaretçisi [alır::CreateMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE. h  
+ **Üstbilgi:** MSCorEE.h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MSCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

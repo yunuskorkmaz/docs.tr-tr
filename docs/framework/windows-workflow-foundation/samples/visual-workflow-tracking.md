@@ -2,40 +2,40 @@
 title: Görsel İş Akışı İzleme
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-ms.openlocfilehash: 05f8fcf4c765998fc4e101d9dbef026d85b8b2fb
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 22c91a12bba148e1fa823bb2bf9b3eaf16704c46
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715516"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182756"
 ---
 # <a name="visual-workflow-tracking"></a>Görsel İş Akışı İzleme
-Bu örnek, [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]aracılığıyla kullanılabilen hata ayıklama işlevini kullanarak bir görsel iş akışı izleme uygulamasının nasıl yazılacağını gösterir.
+Bu örnek, [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]hata ayıklama işlevini kullanarak görsel bir iş akışı izleme uygulamasının nasıl yazılabildiğini gösterir.
 
 ## <a name="sample-details"></a>Örnek Ayrıntılar
- Uygulama, bir basit akış çizelgesi iş akışı yürütür (Workflow. xaml içinde tanımlanır) ve şu anda yürütülmekte olan iş akışını göstermek için iş akışı tasarımcısını yeniden barındırır. İş akışı yürütüldüğü sırada yürütülmekte olan etkinlik sarı bir ana hat ve hata ayıklama okuna sahip olarak gösterilir. Ayrıca, iş akışı tarafından oluşturulan izleme kayıtları da uygulama penceresinde görüntülenir. İş akışı izleme hakkında daha fazla bilgi için bkz. [Iş akışı izleme ve izleme](../workflow-tracking-and-tracing.md). İş akışı tasarımcısını yeniden barındırma hakkında daha fazla bilgi için bkz. [iş akışı Tasarımcısı yeniden barındırma](../rehosting-the-workflow-designer.md).
+ Uygulama basit bir akış şeması iş akışı yürütür (Workflow.xaml'de tanımlanan) ve şu anda çalıştırılan iş akışını görüntülemek için iş akışı tasarımcısını yeniden barındırır. İş akışı yürütüldükçe, şu anda yürütülen etkinlik sarı bir anahat ve hata ayıklama okuyla gösterilir. Ayrıca, iş akışı tarafından oluşturulan izleme kayıtları da uygulama penceresinde görüntülenir. İş akışı izleme hakkında daha fazla bilgi için [bkz.](../workflow-tracking-and-tracing.md) İş akışı tasarımcısını yeniden barındırma hakkında daha fazla bilgi [için](../rehosting-the-workflow-designer.md)bkz.
 
- İş akışı simülatörü iki sözlük tutarak çalışır. Biri, şu anda yürütülmekte olan etkinlik nesnesi ve etkinliğin örneklendiği XAML satır numarası arasında bir eşleme içerir. Diğeri etkinlik örnek KIMLIĞI ve etkinlik nesnesi arasında bir eşleme içerir. İzleme kayıtları, özel bir izleme profili kullanılarak yayınlandığından, uygulama şu anda yürütülmekte olan etkinliğin örnek KIMLIĞINI belirler ve onu oluşturan XAML dosyasına geri eşler. Daha sonra yeniden barındırılan iş akışı Tasarımcısı, tasarımcı yüzeyinde etkinliği vurgulaması ve iş akışı hata ayıklayıcıyla aynı yöntemi kullanmaktır, özellikle etkinliğin etrafında sarı bir kenarlık çizerek ve bu yöntemin sol tarafında bir sarı ok görüntülüyor. Layana.
+ İş akışı simülatörü iki sözlük tutarak çalışır. Bunlardan biri, şu anda çalıştırılan etkinlik nesnesi ile etkinliğin anlık olarak bulunduğu XAML satır numarası arasında bir eşleme içerir. Diğer etkinlik örnek kimliği ve etkinlik nesnesi arasında bir eşleme içerir. İzleme kayıtları özel bir izleme profili kullanılarak yayımlandığında, uygulama şu anda çalıştırılan etkinliğin örnek kimliğini belirler ve anında alan XAML dosyasıyla yeniden eşlenir. Yeniden barındırılan iş akışı tasarımcısı, tasarımcı yüzeyindeki etkinliği vurgulamak ve iş akışı hata ayıklayıcıyla aynı yöntemi kullanması, özellikle etkinliğin etrafında sarı bir kenarlık çizmesi ve sol tarafı boyunca sarı bir ok göstermesi talimatı nı Tasarımcısı.
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 
-1. Visual Studio 2010 ' deki örnek dizinden Workflowsimülatör. sln dosyasını açın.
+1. Visual Studio 2010'daki örnek dizinden WorkflowSimulator.sln dosyasını açın.
 
-2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
+2. Çözümü derlemek için CTRL+SHIFT+B'ye basın.
 
-3. Örneği çalıştırmak için CTRL + F5 tuşlarına basın. Bu, Iş akışı. xaml dosyasını yeniden barındırılan bir iş akışı Tasarımcısı penceresinde görüntüler.
+3. Örneği çalıştırmak için CTRL + F5 tuşuna basın. Bu, yeniden barındırılan iş akışı tasarımcısı penceresinde Workflow.xaml dosyasını görüntüler.
 
-4. **Dosya** menüsüne tıklayın ve **iş akışını Çalıştır...** seçeneğini belirleyin.
+4. **Dosya** menüsüne tıklayın ve **İş Akışını Çalıştır'ı seçin... seçeneğini belirleyin.**
 
-5. Şu anda yürütülmekte olan etkinliğin daha önce açıklandığı gibi vurgulandığını ve izleme kayıtlarının uygulama penceresinin sağ tarafında görüntülendiğini unutmayın.
+5. Şu anda yürütülen etkinliğin daha önce açıklandığı gibi vurgulandığına ve izleme kayıtlarının uygulama penceresinin sağ tarafında görüntülendiğine dikkat edin.
 
-6. İş akışı tamamlandığında, hangi etkinliğin karşılık geldiğini denetlemek için izleme kayıtlarının herhangi birine tıklayabilirsiniz.
+6. İş akışı tamamlandığında, hangi faaliyete karşılık geldiğini denetlemek için izleme kayıtlarından herhangi birini tıklatabilirsiniz.
 
 > [!IMPORTANT]
-> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
->   
+> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
->   
+>
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\VisualWorkflowTracking`

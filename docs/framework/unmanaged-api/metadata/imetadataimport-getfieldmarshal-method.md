@@ -15,44 +15,44 @@ helpviewer_keywords:
 ms.assetid: 4e2d88c6-8a3a-4fbe-900b-b4f4c06bf6bf
 topic_type:
 - apiref
-ms.openlocfilehash: 1a4f7703536bcfdae75b0bcffae8dca0734e9e0f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 91a19e5e15dddd446208dfa3b2c32826282067eb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437571"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175401"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>IMetaDataImport::GetFieldMarshal Yöntemi
-Belirtilen alan meta veri belirteciyle temsil edilen alanın yerel, yönetilmeyen türüne yönelik bir işaretçi alır.  
+Belirtilen alan meta veri belirteci tarafından temsil edilen alanın yerel, yönetilmeyen türüne bir işaretçi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetFieldMarshal (  
-   [in]  mdToken             tk,   
+   [in]  mdToken             tk,
    [out] PCCOR_SIGNATURE     *ppvNativeType,  
-   [out] ULONG               *pcbNativeType   
+   [out] ULONG               *pcbNativeType
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `tk`  
- 'ndaki İçin birlikte çalışma sıralama bilgilerini almak için alanı temsil eden meta veri belirteci.  
+ [içinde] Interop mareşal bilgi almak için alanı temsil eden meta veri belirteci.  
   
  `ppvNativeType`  
- dışı Alanın yerel türünün meta veri imzasına yönelik bir işaretçi.  
+ [çıkış] Alanın yerel türünün meta veri imzasına işaretçi.  
   
  `pcbNativeType`  
- dışı `ppvNativeType`bayt cinsinden boyutu.  
+ [çıkış] `ppvNativeType`Baytboyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

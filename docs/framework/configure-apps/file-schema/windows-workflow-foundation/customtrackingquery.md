@@ -3,25 +3,25 @@ title: <customTrackingQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4e108e89-1132-46b7-868a-c7f5c69dc89f
-ms.openlocfilehash: 695fccf88ac0d8a672e710ccc632ea58dd2fc693
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: a02d71811709b2c285ab7081b89ee3082ec5b43d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398776"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152215"
 ---
-# <a name="customtrackingquery"></a>\<customTrackingQuery >
-Kod etkinliklerinizde tanımladığınız olayları izlemek için kullanılan bir sorgu koleksiyonunu temsil eder. Sorgu, izleme katılımcısı için özel izleme kayıtlarına abone olmak için gereklidir.  
+# <a name="customtrackingquery"></a>\<customTrackingQuery>
+Kod etkinliklerinizde tanımladığınız olayları izlemek için kullanılan sorgu koleksiyonunu temsil eder. Sorgu, bir izleme katılımcısının özel izleme kayıtlarına abone olması için gereklidir.  
   
- Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md)  
+ Profil sorgularını izleme hakkında daha fazla bilgi için [bkz.](../../../windows-workflow-foundation/tracking-profiles.md)  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<sistemin. ServiceModel >** ](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<İzleme >** ](tracking.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<trackingProfile >** ](trackingprofile.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<iş akışı >** ](workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customTrackingQueries >** ](customtrackingqueries.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<customTrackingQuery >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<Sistem. ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<izleme>**](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<izlemeProfil>**](trackingprofile.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<iş akışı>**](workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customTrackingQueries>**](customtrackingqueries.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<customTrackingQuery>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -30,7 +30,7 @@ Kod etkinliklerinizde tanımladığınız olayları izlemek için kullanılan bi
   <trackingProfile name="Name">
     <workflow>
       <customTrackingQueries>
-        <customTrackingQuery activityName="String" 
+        <customTrackingQuery activityName="String"
                              name="String" />
       </customTrackingQueries>
     </workflow>
@@ -45,8 +45,8 @@ Kod etkinliklerinizde tanımladığınız olayları izlemek için kullanılan bi
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|activityName|İzleme kaydını oluşturan etkinliğin adını belirten bir dize.|  
-|name|Yayılan özel izleme kaydının adını belirten bir dize.|  
+|activityName|İzleme kaydını oluşturan etkinliğin adını belirten dize.|  
+|ad|Yayılan özel izleme kaydının adını belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -55,7 +55,7 @@ Kod etkinliklerinizde tanımladığınız olayları izlemek için kullanılan bi
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<customTrackingQuery >](customtrackingquery.md)|Kod etkinliklerinizde tanımladığınız olayları izlemek için kullanılan bir sorgu.|  
+|[\<customTrackingQuery>](customtrackingquery.md)|Kod etkinliklerinizde tanımladığınız olayları izlemek için kullanılan bir sorgu.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

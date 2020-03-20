@@ -15,64 +15,64 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-ms.openlocfilehash: 0fdec87324d6efa0f911e37573093c19b93c0349
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dc6375f3e2cff1a744a8ff2e6a6adab27bbf8af3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440541"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177471"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps Yöntemi
-[DefineProperty metoduna](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)önceki bir çağrı tarafından tanımlanan bir özellik için meta verilerde depolanan özellikleri ayarlar.  
+[DefineProperty Yöntemi'ne](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)önceki bir çağrıyla tanımlanan bir özellik için meta verilerde depolanan özellikleri ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT SetPropertyProps (   
-    [in]  mdProperty      pr,   
-    [in]  DWORD           dwPropFlags,   
-    [in]  DWORD           dwCPlusTypeFlag,   
-    [in]  void const      *pValue,   
-    [in]  ULONG           cchValue,   
-    [in]  mdMethodDef     mdSetter,   
-    [in]  mdMethodDef     mdGetter,   
-    [in]  mdMethodDef     rmdOtherMethods[]   
+HRESULT SetPropertyProps (
+    [in]  mdProperty      pr,
+    [in]  DWORD           dwPropFlags,
+    [in]  DWORD           dwCPlusTypeFlag,
+    [in]  void const      *pValue,
+    [in]  ULONG           cchValue,
+    [in]  mdMethodDef     mdSetter,
+    [in]  mdMethodDef     mdGetter,
+    [in]  mdMethodDef     rmdOtherMethods[]
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pr`  
- 'ndaki Değiştirilecek özelliğin belirteci  
+ [içinde] Özelliğin değiştirilecek belirteci  
   
  `dwPropFlags`  
- 'ndaki Özellik bayrakları.  
+ [içinde] Özellik bayrakları.  
   
  `dwCPlusTypeFlag`  
- 'ndaki Özelliğin varsayılan değerinin türü.  
+ [içinde] Özelliğin varsayılan değerinin türü.  
   
  `pValue`  
- 'ndaki Özelliğin varsayılan değeri.  
+ [içinde] Özellik için varsayılan değer.  
   
  `cchValue`  
- 'ndaki `pValue`içindeki (Unicode) karakterlerin sayısı.  
+ [içinde] (Unicode) karakter `pValue`sayısı.  
   
  `mdSetter`  
- 'ndaki Özellik değerini ayarlayan yöntem.  
+ [içinde] Özellik değerini ayarlayan yöntem.  
   
  `mdGetter`  
- 'ndaki Özellik değerini alan yöntem.  
+ [içinde] Özellik değerini alan yöntem.  
   
  `rmdOtherMethods[]`  
- 'ndaki Özelliği ile ilişkili diğer yöntemlerin dizisi. Bu diziyi `mdTokenNil` bir belirteçle sonlandırın.  
+ [içinde] Özellik ile ilişkili diğer yöntemler dizisi. Bu diziyi `mdTokenNil` bir belirteçle sonlandırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

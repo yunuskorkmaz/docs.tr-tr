@@ -9,26 +9,26 @@ helpviewer_keywords:
 - container tags, <bindingRedirect> element
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-ms.openlocfilehash: 7d51ef5c4107fc6a40a472a660f53bb0ded59683
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: d96585b397f75dcb9fac7e7fce93799cc95e7c6c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252779"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154302"
 ---
-# <a name="bindingredirect-element"></a>\<bindingRedirect > öğesi
+# <a name="bindingredirect-element"></a>\<bağlayıcıRedirect> Elemanı
 Bir derleme sürümünü diğerine yeniden yönlendirir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<çalışma zamanı >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bindingRedirect >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<çalışma zamanı>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<montajBağlama>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<bağımlıAssembly>**](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<bağlayıcıRedirect>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-   <bindingRedirect    
+   <bindingRedirect
 oldVersion="existing assembly version"  
 newVersion="new assembly version"/>  
 ```  
@@ -40,14 +40,14 @@ newVersion="new assembly version"/>
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`oldVersion`|Gerekli öznitelik.<br /><br /> Başlangıçta istenen derleme sürümünü belirtir. Bütünleştirilmiş kod sürümü numarası, *birincil. ikincil. derleme. düzeltme*. Bu sürüm numarasının her bir parçası için geçerli değerler 0 ile 65535 arasındadır.<br /><br /> Ayrıca, aşağıdaki biçimde bir sürüm aralığı da belirtebilirsiniz:<br /><br /> *n. n. n. n-n. n. n. n*|  
-|`newVersion`|Gerekli öznitelik.<br /><br /> Özgün olarak istenen sürüm yerine kullanılacak derlemenin sürümünü belirtir: *n. n. n. n*<br /><br /> Bu değer, sürümünden önceki bir sürümü `oldVersion`belirtebilir.|  
+|`oldVersion`|Gerekli öznitelik.<br /><br /> Başlangıçta istenen derleme sürümünü belirtir. Bir derleme sürüm numarasının biçimi *major.minor.build.revision*' dir. Bu sürüm numarasının her bir parçası için geçerli değerler 0 ile 65535 arasındadır.<br /><br /> Ayrıca, aşağıdaki biçimde bir sürüm aralığı da belirtebilirsiniz:<br /><br /> *n.n.n.n - n.n.n.n*|  
+|`newVersion`|Gerekli öznitelik.<br /><br /> Biçimde başlangıçta istenen sürüm yerine kullanılacak derleme sürümünü belirtir: *n.n.n.n*<br /><br /> Bu değer, 'den `oldVersion`önceki bir sürümü belirtebilirsiniz.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|Yok.||  
+|None||  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -59,11 +59,11 @@ newVersion="new assembly version"/>
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kesin adlandırılmış bir derlemeye ilişkin olarak bir .NET Framework uygulaması oluşturduğunuzda, yeni bir sürüm kullanılabilir olsa bile, uygulama varsayılan olarak çalışma zamanında derlemenin o sürümünü kullanır. Bununla birlikte, uygulamayı derlemenin daha yeni bir sürümüne ilişkin olarak çalışacak şekilde yapılandırabilirsiniz. Çalışma zamanının hangi derleme sürümünün kullanılacağını belirleme hakkında daha fazla bilgi için, bkz. [çalışma zamanı derlemeleri nasıl konumlandırır](../../../deployment/how-the-runtime-locates-assemblies.md).  
+ Kesin adlandırılmış bir derlemeye ilişkin olarak bir .NET Framework uygulaması oluşturduğunuzda, yeni bir sürüm kullanılabilir olsa bile, uygulama varsayılan olarak çalışma zamanında derlemenin o sürümünü kullanır. Bununla birlikte, uygulamayı derlemenin daha yeni bir sürümüne ilişkin olarak çalışacak şekilde yapılandırabilirsiniz. Çalışma zamanının hangi derleme sürümünü niçin kullanacağını belirlemek için bu dosyaları nasıl kullandığına ilişkin ayrıntılar [için, Çalışma Zamanı Derlemeleri Nasıl Bulur'a](../../../deployment/how-the-runtime-locates-assemblies.md)bakın.  
   
- `bindingRedirect` Bir`dependentAssembly` öğeye birden fazla öğe ekleyerek birden çok derleme sürümünü yeniden yönlendirebilirsiniz. Ayrıca, derlemenin daha yeni bir sürümünden daha eski bir sürümüne yeniden yönlendirme de yapabilirsiniz.  
+ Bir `bindingRedirect` `dependentAssembly` öğeye birden çok öğe ekleyerek birden fazla derleme sürümünü yeniden yönlendirebilirsiniz. Ayrıca, derlemenin daha yeni bir sürümünden daha eski bir sürümüne yeniden yönlendirme de yapabilirsiniz.  
   
- Bir uygulama yapılandırma dosyasında açık derleme bağlama yeniden yönlendirmesi için bir güvenlik izni gerekir. Bu, .NET Framework derlemelerinin ve üçüncü tarafların derlemelerinin yeniden yönlendirilmesi için geçerlidir. ' De <xref:System.Security.Permissions.SecurityPermissionFlag> bayrak ayarlanarak izin verilir. <xref:System.Security.Permissions.SecurityPermission> Daha fazla bilgi için bkz. [derleme bağlama yeniden yönlendirme güvenlik izni](../../assembly-binding-redirection-security-permission.md).  
+ Bir uygulama yapılandırma dosyasında açık derleme bağlama yeniden yönlendirmesi için bir güvenlik izni gerekir. Bu, .NET Framework derlemelerinin ve üçüncü tarafların derlemelerinin yeniden yönlendirilmesi için geçerlidir. İzin, <xref:System.Security.Permissions.SecurityPermissionFlag> bayrağın üzerinde ayarlanmasıyla <xref:System.Security.Permissions.SecurityPermission>verilir. Daha fazla bilgi için, [Derleme Bağlama Yeniden Yönlendirme Güvenlik İzni'ne](../../assembly-binding-redirection-security-permission.md)bakın.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir derleme sürümünün diğerine nasıl yeniden yönlendirileceği gösterilmiştir.  

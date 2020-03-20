@@ -15,67 +15,67 @@ helpviewer_keywords:
 ms.assetid: 0bfbc527-bea2-43ce-b041-69186f4440dd
 topic_type:
 - apiref
-ms.openlocfilehash: a2a752f23ed64795f9208b9101c21bc585d5f431
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 20ad5485b8603cc7de1c27c00d53c8939871d525
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136809"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178031"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>IHostMAlloc::DebugAlloc Yöntemi
-Konağın yığından belirtilen miktarda bellek ayırmasını ve ayrıca belleğin nerede ayrıldığını izlemelerini ister.  
+Ana bilgisayar, yığından belirtilen bellek miktarını ayırmasını ve ayrıca belleğin nereye tahsis edildiğini izlemesini ister.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT DebugAlloc (  
-    [in]  SIZE_T  cbSize,   
-    [in]  EMemoryCriticalLevel dwCriticalLevel,   
-    [in]  char*   pszFileName,   
-    [in]  int     iLineNo,   
+    [in]  SIZE_T  cbSize,
+    [in]  EMemoryCriticalLevel dwCriticalLevel,
+    [in]  char*   pszFileName,
+    [in]  int     iLineNo,
     [out] void**  ppMem  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `cbSize`  
- 'ndaki Geçerli bellek ayırma isteğinin bayt cinsinden boyutu.  
+ [içinde] Geçerli bellek ayırma isteğinin baytboyutu.  
   
  `dwCriticalLevel`  
- 'ndaki Bir ayırma hatasının etkisini belirten [Ememorycriticalhandle düzey](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) değerlerinden biri.  
+ [içinde] Bir ayırma hatasının etkisini gösteren [EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) değerlerinden biri.  
   
  `pszFileName`  
- 'ndaki Hata ayıklanan yürütülebilir dosyanın kod dosyası.  
+ [içinde] Yürütülebilir kod dosyası debugged ediliyor.  
   
  `iLineNo`  
- 'ndaki Ayırmasının istendiği `pszFileName` satır numarası.  
+ [içinde] Ayırmanın istendiği `pszFileName` satır numarası.  
   
  `ppMem`  
- dışı Ayrılan belleğe yönelik bir işaretçi veya istek tamamlanmayabilir null.  
+ [çıkış] Ayrılan belleğe işaretçi veya istek tamamlanamadıysa null.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`DebugAlloc` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
-|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|S_OK|`DebugAlloc`başarıyla döndürülür.|  
+|HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmedi veya CLR yönetilen kodu çalıştıramadığı veya aramayı başarıyla işleyemediği bir durumdadır.|  
+|HOST_E_TIMEOUT|Arama zaman doldu.|  
+|HOST_E_NOT_OWNER|Arayan kilidin sahibi değildir.|  
 |HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
-|E_FAıL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
-|E_OUTOFMEMORY|Ayırma isteğini tamamlamaya yetecek miktarda bellek yoktu.|  
+|E_faıl|Bilinmeyen bir felaket hatası meydana geldi. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılabilir. Barındırma yöntemleri sonraki aramalar HOST_E_CLRNOTAVAILABLE döndürün.|  
+|E_outofmemory|Ayırma isteğini tamamlamak için yeterli bellek yoktu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- CLR [IHostMemoryManager:: Createmayırma](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) yöntemini çağırarak bir [IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) örneğine bir arabirim işaretçisi alır. `DebugAlloc`, çalışma zamanının hata ayıklama sırasında kullanılmak üzere kod dosyası bilgilerini almasına izin verir.  
+ CLR IHostMemoryManager arayarak bir [IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) örnek için bir arayüz işaretçisi [alır::CreateMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) yöntemi. `DebugAlloc`hata ayıklama sırasında kullanılmak üzere kod dosyası bilgilerini almak için çalışma süresi sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE. h  
+ **Üstbilgi:** MSCorEE.h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MSCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

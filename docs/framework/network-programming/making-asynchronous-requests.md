@@ -11,39 +11,39 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: 3668975c31e9086ee15250dae939b75587f5c0c6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a49233596bafebd4f07372e59f29ea77afb21458
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047654"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180728"
 ---
 # <a name="making-asynchronous-requests"></a>Zaman Uyumsuz İstekler Yapma
-<xref:System.Net> Sınıflar, Internet kaynaklarına zaman uyumsuz erişim için .NET Framework standart zaman uyumsuz programlama modelini kullanır. Sınıfının ve <xref:System.Net.WebRequest.EndGetResponse%2A> yöntemleri bir Internet kaynağı için zaman uyumsuz istekleri başlatır ve tamamlar. <xref:System.Net.WebRequest.BeginGetResponse%2A> <xref:System.Net.WebRequest>  
+Sınıflar, <xref:System.Net> Internet kaynaklarına eşzamanlı erişim için .NET Framework'ün standart eşzamanlı programlama modelini kullanır. <xref:System.Net.WebRequest> Sınıfın <xref:System.Net.WebRequest.BeginGetResponse%2A> <xref:System.Net.WebRequest.EndGetResponse%2A> yöntemleri, Internet kaynağı için eşzamanlı istekleri başlatın ve tamamlar.  
   
 > [!NOTE]
-> Zaman uyumsuz geri çağırma yöntemlerinde zaman uyumlu çağrıların kullanılması ciddi performans cezalarına neden olabilir. **WebRequest** ile yapılan Internet istekleri ve alt öğeleri <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> , <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> yöntemi tarafından döndürülen akışı okumak için kullanılmalıdır.  
+> Eşzamanlı geri arama yöntemleriyle eşzamanlı aramaların kullanılması ciddi performans cezalarına neden olabilir. **WebRequest** ve torunları ile yapılan Internet <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> istekleri, yöntemtarafından döndürülen akışı okumak için kullanmalıdır.  
   
- Aşağıdaki örnek kod, **WebRequest** sınıfıyla zaman uyumsuz çağrıların nasıl kullanılacağını göstermektedir. Örnek, komut satırından URI alan bir konsol programıdır, kaynağı URI üzerinde ister ve sonra verileri Internet 'ten alındığından konsola yazdırır.  
+ Aşağıdaki örnek kod, **WebRequest** sınıfıyla eşzamanlı aramaların nasıl kullanılacağını gösterir. Örnek, komut satırından URI alan, URI'deki kaynağı isteyen ve internetten alınan verileri konsola yazdıran bir konsol programıdır.  
   
- Program kendi kullanımı için iki sınıf tanımlar, zaman uyumsuz çağrılarda verileri geçen **RequestState** sınıfı ve zaman uyumsuz Istekleri bir Internet kaynağına uygulayan **ClientGetAsync** sınıfı.  
+ Program, kendi kullanımı için iki sınıf tanımlar: asynchronous aramalar arasında veri geçen **RequestState** sınıfı ve internet kaynağına asynchronous isteği uygulayan **ClientGetAsync** sınıfı.  
   
- **RequestState** sınıfı, isteği sunan zaman uyumsuz yöntemlere yapılan çağrılar genelinde isteğin durumunu korur. Bu, kaynağa yönelik geçerli <xref:System.IO.Stream> isteği ve yanıt olarak alınan akışı içeren **Web isteği** ve örnekleri, Internet kaynağından alınan verileri içeren bir arabellek ve şunları içeren bir <xref:System.Text.StringBuilder> arabellek içerir Tüm yanıt. <xref:System.AsyncCallback> Yöntem **WebRequest. BeginGetResponse**ile kaydettirilirse, bir **RequestState** *durum* parametresi olarak geçirilir.  
+ **RequestState** sınıfı, isteğe hizmet veren eşzamanlı yöntemlere yapılan aramalar arasında isteğin durumunu korur. **WebRequest** ve <xref:System.IO.Stream> yanıt olarak alınan kaynağa ve akışa gelen geçerli isteği içeren örnekler, Internet kaynağından alınan verileri <xref:System.Text.StringBuilder> içeren bir arabellek ve tam yanıtı içeren bir arabellek içerir. Yöntem **WebRequest.BeginGetResponse'a** <xref:System.AsyncCallback> kaydedildiğinde, **RequestState** *durum* parametresi olarak geçirilir.  
   
- **ClientGetAsync** sınıfı bir Internet kaynağına zaman uyumsuz bir istek uygular ve sonuçta elde edilen yanıtı konsola yazar. Aşağıdaki listede açıklanan yöntemleri ve özellikleri içerir.  
+ **ClientGetAsync** sınıfı bir Internet kaynağına bir eşzamanlı istek uygular ve konsola gelen yanıtı yazar. Aşağıdaki listede açıklanan yöntemleri ve özellikleri içerir.  
   
-- Özelliği, isteğin tamamlanmasına işaret eden <xref:System.Threading.ManualResetEvent> sınıfının bir örneğini içerir. `allDone`  
+- Özellik, `allDone` isteğin tamamlanmasını <xref:System.Threading.ManualResetEvent> işaret eden sınıfın bir örneğini içerir.  
   
-- `Main()` Yöntemi komut satırını okur ve belirtilen Internet kaynağı için isteği başlatır. **WebRequest** `wreq` ve **RequestState** `rs`' i oluşturur, isteği işlemeye başlamak için **BeginGetResponse** çağırır ve sonra `allDone.WaitOne()`uygulamanın çıkış geri çağırma tamamlanmıştır. Yanıt Internet `Main()` kaynağından okunduktan sonra konsola yazar ve uygulama sonlanır.  
+- Yöntem `Main()` komut satırını okur ve belirtilen Internet kaynağı için isteği başlatır. **WebRequest** `wreq` ve **RequestState'i** `rs`oluşturur, **BeginGetResponse'u** isteği işlemeye başlamak `allDone.WaitOne()`için çağırır ve geri arama tamamlanana kadar uygulamanın çıkmaması için yöntemi çağırır. Yanıt Internet kaynağından okunduktan `Main()` sonra konsola yazar ve uygulama sona erer.  
   
-- `showusage()` Yöntemi konsola bir örnek komut satırı yazar. Komut satırında hiçbir URI `Main()` sağlanmamışsa çağrılır.  
+- Yöntem `showusage()` konsola bir örnek komut satırı yazar. Komut satırında `Main()` URI sağlanamadığında çağrılır.  
   
-- `RespCallBack()` Yöntemi, Internet isteği için zaman uyumsuz geri çağırma yöntemi uygular. Internet kaynağından gelen yanıtı içeren **WebResponse** örneğini oluşturur, yanıt akışını alır ve akıştan zaman uyumsuz olarak veri okumaya başlar.  
+- Yöntem, `RespCallBack()` Internet isteği için eşzamanlı geri arama yöntemini uygular. Internet kaynağından gelen yanıtı içeren **WebResponse** örneğini oluşturur, yanıt akışını alır ve ardından akıştaki verileri eşit bir şekilde okumaya başlar.  
   
-- `ReadCallBack()` Yöntemi, yanıt akışını okumak için zaman uyumsuz geri çağırma yöntemini uygular. Internet kaynağından alınan verileri **RequestState** örneğinin **ResponseData** özelliğine aktarır, daha sonra daha fazla veri döndürülünceye kadar yanıt akışının başka bir zaman uyumsuz okumasını başlatır. Tüm veriler okunduktan sonra, `ReadCallBack()` yanıt akışını kapatır ve yanıtın tamamının **ResponseData**içinde mevcut olduğunu göstermek için `allDone.Set()` yöntemini çağırır.  
+- Yöntem, `ReadCallBack()` yanıt akışını okumak için eşzamanlı geri arama yöntemini uygular. Internet kaynağından alınan verileri **RequestState** örneğinin **Yanıt Verisi** özelliğine aktarır ve daha fazla veri döndürülene kadar yanıt akışının başka bir eşzamanlı okumasını başlatır. Tüm veriler okunduktan sonra `ReadCallBack()` yanıt akışını kapatır ve `allDone.Set()` yanıtın tamamının **Yanıt Verileri'nde**mevcut olduğunu belirtmek için yöntemi çağırır.  
   
     > [!NOTE]
-    > Tüm ağ akışlarının kapalı olması önemlidir. Her bir istek ve yanıt akışını kapatmdıysanız, uygulamanız sunucuya bağlantılar dışında çalışır ve ek istekleri işleyemez.  
+    > Tüm ağ akışlarının kapalı olması çok önemlidir. Her istek ve yanıt akışını kapatmazsanız, uygulamanızın sunucuya bağlantıları biter ve ek istekleri işleyemez.  
   
 ```csharp  
 using System;  
@@ -69,18 +69,18 @@ public class RequestState
       RequestData = new StringBuilder(String.Empty);  
       Request = null;  
       ResponseStream = null;  
-   }       
+   }
 }  
   
 // ClientGetAsync issues the async request.  
-class ClientGetAsync   
+class ClientGetAsync
 {  
    public static ManualResetEvent allDone = new ManualResetEvent(false);  
    const int BUFFER_SIZE = 1024;  
   
-   public static void Main(string[] args)   
+   public static void Main(string[] args)
    {  
-      if (args.Length < 1)   
+      if (args.Length < 1)
       {  
          showusage();  
          return;  
@@ -102,7 +102,7 @@ class ClientGetAsync
       IAsyncResult r = (IAsyncResult) wreq.BeginGetResponse(  
          new AsyncCallback(RespCallback), rs);  
   
-      // Wait until the ManualResetEvent is set so that the application   
+      // Wait until the ManualResetEvent is set so that the application
       // does not exit until after the callback is called.  
       allDone.WaitOne();  
   
@@ -127,18 +127,18 @@ class ClientGetAsync
   
       // Call EndGetResponse, which produces the WebResponse object  
       //  that came from the request issued above.  
-      WebResponse resp = req.EndGetResponse(ar);           
+      WebResponse resp = req.EndGetResponse(ar);
   
       //  Start reading data from the response stream.  
       Stream ResponseStream = resp.GetResponseStream();  
   
-      // Store the response stream in RequestState to read   
+      // Store the response stream in RequestState to read
       // the stream asynchronously.  
       rs.ResponseStream = ResponseStream;  
   
       //  Pass rs.BufferRead to BeginRead. Read data into rs.BufferRead  
-      IAsyncResult iarRead = ResponseStream.BeginRead(rs.BufferRead, 0,   
-         BUFFER_SIZE, new AsyncCallback(ReadCallBack), rs);   
+      IAsyncResult iarRead = ResponseStream.BeginRead(rs.BufferRead, 0,
+         BUFFER_SIZE, new AsyncCallback(ReadCallBack), rs);
    }  
   
    private static void ReadCallBack(IAsyncResult asyncResult)  
@@ -146,10 +146,10 @@ class ClientGetAsync
       // Get the RequestState object from AsyncResult.  
       RequestState rs = (RequestState)asyncResult.AsyncState;  
   
-      // Retrieve the ResponseStream that was set in RespCallback.   
+      // Retrieve the ResponseStream that was set in RespCallback.
       Stream responseStream = rs.ResponseStream;  
   
-      // Read rs.BufferRead to verify that it contains data.   
+      // Read rs.BufferRead to verify that it contains data.
       int read = responseStream.EndRead( asyncResult );  
       if (read > 0)  
       {  
@@ -158,7 +158,7 @@ class ClientGetAsync
   
          // Convert byte stream to Char array and then to String.  
          // len contains the number of characters converted to Unicode.  
-      int len =   
+      int len =
          rs.StreamDecode.GetChars(rs.BufferRead, 0, read, charBuffer, 0);  
   
          String str = new String(charBuffer, 0, len);  
@@ -166,12 +166,12 @@ class ClientGetAsync
          // Append the recently read data to the RequestData stringbuilder  
          // object contained in RequestState.  
          rs.RequestData.Append(  
-            Encoding.ASCII.GetString(rs.BufferRead, 0, read));           
+            Encoding.ASCII.GetString(rs.BufferRead, 0, read));
   
-         // Continue reading data until   
+         // Continue reading data until
          // responseStream.EndRead returns –1.  
-         IAsyncResult ar = responseStream.BeginRead(   
-            rs.BufferRead, 0, BUFFER_SIZE,   
+         IAsyncResult ar = responseStream.BeginRead(
+            rs.BufferRead, 0, BUFFER_SIZE,
             new AsyncCallback(ReadCallBack), rs);  
       }  
       else  
@@ -179,16 +179,16 @@ class ClientGetAsync
          if(rs.RequestData.Length>0)  
          {  
             //  Display data to the console.  
-            string strContent;                    
+            string strContent;
             strContent = rs.RequestData.ToString();  
          }  
          // Close down the response stream.  
-         responseStream.Close();           
+         responseStream.Close();
          // Set the ManualResetEvent so the main thread can exit.  
-         allDone.Set();                             
+         allDone.Set();
       }  
       return;  
-   }      
+   }
 }  
 ```  
   
@@ -302,9 +302,9 @@ Class ClientGetAsync
          ' len contains the number of characters converted to Unicode.  
          Dim len As Integer = _  
            rs.StreamDecode.GetChars(rs.BufferRead, 0, read, charBuffer, 0)  
-         Dim str As String = new String(charBuffer, 0, len)      
+         Dim str As String = new String(charBuffer, 0, len)
   
-         ' Append the recently read data to the RequestData stringbuilder   
+         ' Append the recently read data to the RequestData stringbuilder
          ' object contained in RequestState.  
          rs.RequestData.Append( _  
             Encoding.ASCII.GetString(rs.BufferRead, 0, read))  

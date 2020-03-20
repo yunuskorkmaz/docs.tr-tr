@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-ms.openlocfilehash: beb697d80417b937876a0887e4376341185a47d9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dae4a36537eeac58ffb17ebc1b78d935ec807cd8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447217"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175986"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps Metodu
 Belirtilen meta veri imzasıyla dosyanın özelliklerini alır.  
@@ -29,46 +29,46 @@ Belirtilen meta veri imzasıyla dosyanın özelliklerini alır.
   
 ```cpp  
 HRESULT GetFileProps (  
-    [in]  mdFile      mdf,   
-    [out] LPWSTR      szName,   
-    [in]  ULONG       cchName,   
-    [out] ULONG       *pchName,   
-    [out] const void  **ppbHashValue,   
-    [out] ULONG       *pcbHashValue,   
+    [in]  mdFile      mdf,
+    [out] LPWSTR      szName,
+    [in]  ULONG       cchName,
+    [out] ULONG       *pchName,
+    [out] const void  **ppbHashValue,
+    [out] ULONG       *pcbHashValue,
     [out] DWORD       *pdwFileFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `mdf`  
- 'ndaki Özelliklerinin alınacağı dosyayı temsil eden `mdFile` meta veri belirteci.  
+ [içinde] Özellikleri `mdFile` almak için dosyayı temsil eden meta veri belirteci.  
   
  `szName`  
- dışı Dosyanın basit adı.  
+ [çıkış] Dosyanın basit adı.  
   
  `cchName`  
- 'ndaki `szName`geniş karakter cinsinden boyutu.  
+ [içinde] Boyutu, geniş chars, `szName`ve .  
   
  `pchName`  
- dışı `szName`' de döndürülen geniş karakter sayısı.  
+ [çıkış] Geniş karakter sayısı aslında döndü `szName`.  
   
  `ppbHashValue`  
- dışı Karma değere yönelik bir işaretçi. Bu, dosyanın SHA-1 algoritmasını kullanan karmadır.  
+ [çıkış] Karma değeri için bir işaretçi. Bu, SHA-1 algoritmasını kullanarak dosyanın karma.  
   
  `pcbHashValue`  
- dışı Döndürülen karma değerindeki geniş karakter sayısı.  
+ [çıkış] Döndürülen karma değerdeki geniş karakter sayısı.  
   
  `pdwFileFlags`  
- dışı Bir dosyaya uygulanan meta verileri tanımlayan bayrakların işaretçisi. Flags değeri bir veya daha fazla [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) değerinin birleşimidir.  
+ [çıkış] Bir dosyaya uygulanan meta verileri açıklayan bayraklar için bir işaretçi. Bayrak değeri, bir veya daha fazla [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) değerinin bir leşimidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

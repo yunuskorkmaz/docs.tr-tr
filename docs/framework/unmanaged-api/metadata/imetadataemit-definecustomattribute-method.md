@@ -15,52 +15,52 @@ helpviewer_keywords:
 ms.assetid: 7dd14854-b756-4401-b167-88ca576dc8f0
 topic_type:
 - apiref
-ms.openlocfilehash: e6a732b98ae02ba2b273b45921b7de61ab4fd29f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9c4ed282e259aa46fc0cb0175214dc51d3d5fbee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432645"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175895"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>IMetaDataEmit::DefineCustomAttribute Yöntemi
-Belirtilen nesneye iliştirililmesi için belirtilen meta veri imzasına sahip özel bir öznitelik için bir tanım oluşturur ve bu özel öznitelik tanımına bir belirteç alır.  
+Belirtilen meta veri imzasıyla özel bir öznitelik için, belirtilen nesneye eklenecek bir tanım oluşturur ve bu özel öznitelik tanımına bir belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT DefineCustomAttribute (   
-    [in]  mdToken     tkObj,   
-    [in]  mdToken     tkType,   
-    [in]  void const  *pCustomAttribute,   
-    [in]  ULONG       cbCustomAttribute,   
-    [out] mdCustomAttribute *pcv   
+HRESULT DefineCustomAttribute (
+    [in]  mdToken     tkObj,
+    [in]  mdToken     tkType,
+    [in]  void const  *pCustomAttribute,
+    [in]  ULONG       cbCustomAttribute,
+    [out] mdCustomAttribute *pcv
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `tkObj`  
- 'ndaki Sahip öğesi için belirteç.  
+ [içinde] Sahibi öğesinin belirteci.  
   
  `tkType`  
- 'ndaki Özel özniteliği tanımlayan belirteç.  
+ [içinde] Özel özniteliği tanımlayan belirteç.  
   
  `pCustomAttribute`  
- 'ndaki Özel özniteliğe yönelik bir işaretçi.  
+ [içinde] Özel öznitelik için bir işaretçi.  
   
  `cbCustomAttribute`  
- 'ndaki `pCustomAttribute`bayt sayısı.  
+ [içinde] Bayt `pCustomAttribute`sayısı.  
   
  `pcv`  
- dışı `mdCustomAttribute` belirteci atandı.  
+ [çıkış] Atanan `mdCustomAttribute` belirteç.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

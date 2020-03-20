@@ -15,36 +15,36 @@ helpviewer_keywords:
 ms.assetid: a4926d0a-261b-46b1-9994-82633661a64b
 topic_type:
 - apiref
-ms.openlocfilehash: e8c145632911817e8e19d587bb8afead0a6c33af
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3b8aed6522b1c7eb2d8916f71d8a66b367623765
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434340"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177605"
 ---
 # <a name="imetadataemitdeletetoken-method"></a>IMetaDataEmit::DeleteToken Yöntemi
-Belirtilen belirteci geçerli meta veri kapsamından siler.  
+Belirtilen belirteç leri geçerli meta veri kapsamından siler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT DeleteToken (   
-    [in]  mdToken     tkObj   
+HRESULT DeleteToken (
+    [in]  mdToken     tkObj
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `tkObj`  
- 'ndaki Silinecek belirteç.  
+ [içinde] Silinecek belirteç.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

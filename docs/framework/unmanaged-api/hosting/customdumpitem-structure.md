@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: fd9085ff-7beb-4c38-97f0-037cd8ba4f65
 topic_type:
 - apiref
-ms.openlocfilehash: ae64edd8a3a628100d4c51d0b78be1bc8d49fc17
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 154beef9398029f31dcb4d081019b9f292238af4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138280"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176480"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem Yapısı
-Hata raporlamada özel bir döküme eklenecek bir öğe tanımlar.  
+Hata bildiriminde özel bir döküme eklenecek bir öğeyi açıklar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 struct {  
-    ECustomDumpItemKind itemKind;   
+    ECustomDumpItemKind itemKind;
     union {  
         UINT_PTR pReserved;  
     }  
@@ -39,20 +39,20 @@ struct {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`itemKind`|Eklenecek öğe türünü gösteren bir [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) değeri.|  
-|`pReserved`|Şu anda kullanılmıyor. Birleşime eklenen öğelerin işaretçi boyutundan büyük olmaması gerekir. Bir `struct` gerekiyorsa, bunu ayrı olarak ayırmanız ve üzerine işaret etmeniz gerekir.|  
+|`itemKind`|Eklenecek öğe türünü gösteren [bir ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) değeri.|  
+|`pReserved`|Şu anda kullanılmaz. Birliğe eklenen öğeler işaretçi boyutundan büyük olmamalıdır. A `struct` gerekiyorsa, ayrı ayrı ayırmanız ve işaret etmeniz gerekir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [ICLRErrorReportingManager:: BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) , `CustomDumpItem`türünde bir parametre alır.  
+ [ICLRErrorReportingManager::BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) türünden `CustomDumpItem`bir parametre alır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE. IDL  
+ **Üstbilgi:** MSCorEE.idl  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MSCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

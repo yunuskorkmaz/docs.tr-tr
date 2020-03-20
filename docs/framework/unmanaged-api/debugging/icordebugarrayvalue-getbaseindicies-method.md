@@ -15,38 +15,38 @@ helpviewer_keywords:
 ms.assetid: 868b339b-acdb-4fe0-91c7-b85f4fba99eb
 topic_type:
 - apiref
-ms.openlocfilehash: e103401b85626e53db53e1894c22b161774e5163
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7c6d1905cdbd12b960014e687034ea9d163b68d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088682"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179033"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>ICorDebugArrayValue::GetBaseIndicies Metodu
-Dizideki her boyutun temel dizinini alır.  
+Dizideki her boyutun temel dizisini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetBaseIndicies (  
     [in] ULONG32          cdim,  
-    [out, size_is(cdim), length_is(cdim)]   
+    [out, size_is(cdim), length_is(cdim)]
         ULONG32           indicies[]  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `cdim`  
- 'ndaki Bu `ICorDebugArrayValue` nesnesinin boyut sayısı. Boyutu, `ICorDebugArrayValue` nesnesinin boyut sayısına eşit olduğundan, bu değer ayrıca `indicies` dizisinin boyutudur.  
+ [içinde] Bu `ICorDebugArrayValue` nesnenin boyutlarının sayısı. Boyutu `indicies` `ICorDebugArrayValue` nesnenin boyut sayısına eşit olduğundan, bu değer de dizinin boyutudur.  
   
  `indicies`  
- dışı Bu `ICorDebugArrayValue` nesnesinin bir boyutunun temel dizini (yani, başlangıç dizini) olan tamsayılar dizisi.  
+ [çıkış] Her biri bu `ICorDebugArrayValue` nesnenin bir boyutunun temel dizini (yani başlangıç dizini) olan bir tamsayı dizisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

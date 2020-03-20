@@ -15,75 +15,75 @@ helpviewer_keywords:
 ms.assetid: 5c6b7fb4-cbca-4479-b650-ab9a99732ea0
 topic_type:
 - apiref
-ms.openlocfilehash: 4149db74adfa26df221eed5c590766a023bb105e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9aef471c1155070af0e9bcca14975a65bc5dc763
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448231"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175973"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps Yöntemi
-Belirtilen meta veri imzasıyla derleme başvurusunun özellik kümesini alır.  
+Belirtilen meta veri imzasıyla derleme başvurusu için özellik kümesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetAssemblyRefProps (  
-    [in]  mdAssemblyRef        mdar,   
-    [out] const void          **ppbPublicKeyOrToken,   
-    [out] ULONG                *pcbPublicKeyOrToken,   
-    [out] LPWSTR               szName,   
-    [in]  ULONG                cchName,   
-    [out] ULONG                *pchName,   
-    [out] ASSEMBLYMETADATA     *pMetaData,   
-    [out] const void           **ppbHashValue,   
-    [out] ULONG                *pcbHashValue,   
+    [in]  mdAssemblyRef        mdar,
+    [out] const void          **ppbPublicKeyOrToken,
+    [out] ULONG                *pcbPublicKeyOrToken,
+    [out] LPWSTR               szName,
+    [in]  ULONG                cchName,
+    [out] ULONG                *pchName,
+    [out] ASSEMBLYMETADATA     *pMetaData,
+    [out] const void           **ppbHashValue,
+    [out] ULONG                *pcbHashValue,
     [out] DWORD                *pdwAssemblyRefFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `mdar`  
- 'ndaki Özelliklerinin alınacağı derleme başvurusunu temsil eden `mdAssemblyRef` meta veri belirteci.  
+ [içinde] Özellikleri `mdAssemblyRef` almak için derleme başvurutemsil meta veri belirteci.  
   
  `ppbPublicKeyOrToken`  
- dışı Ortak anahtara veya meta veri belirtecine yönelik bir işaretçi.  
+ [çıkış] Ortak anahtarveya meta veri belirteci için bir işaretçi.  
   
  `pcbPublicKeyOrToken`  
- dışı Döndürülen ortak anahtar veya belirteçteki bayt sayısı.  
+ [çıkış] Döndürülen ortak anahtar veya belirteçteki bayt sayısı.  
   
  `szName`  
- dışı Derlemenin basit adı.  
+ [çıkış] Derlemenin basit adı.  
   
  `cchName`  
- 'ndaki `szName`geniş karakter cinsinden boyutu.  
+ [içinde] Boyutu, geniş chars, `szName`ve .  
   
  `pchName`  
- dışı `szName`' de döndürülen geniş karakter sayısının bir işaretçisi.  
+ [çıkış] Geniş karakter sayısına işaretçi aslında `szName`döndürülür.  
   
  `pMetaData`  
- dışı Derleme meta verilerini içeren bir ASSEMBLYMETADATA yapısına yönelik işaretçi.  
+ [çıkış] Derleme meta verilerini içeren bir ASSEMBLYMETADATA yapısına işaretçi.  
   
  `ppbHashValue`  
- dışı Karma değere yönelik bir işaretçi. Bu, [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) numaralandırması Için arfFullOriginator bayrağı ayarlanmadığı takdirde, başvurulan derlemenin `PublicKey` özelliğinin SHA-1 algoritmasını kullanan karmadır.  
+ [çıkış] Karma değeri için bir işaretçi. Bu, Sha-1 algoritmasını kullanarak, `PublicKey` [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) numaralandırmasının arfFullOriginator bayrağı ayarlanmadığı sürece, başvurulan derleme özelliğinin karmadır.  
   
  `pcbHashValue`  
- dışı Döndürülen karma değerindeki geniş karakter sayısı.  
+ [çıkış] Döndürülen karma değerdeki geniş karakter sayısı.  
   
  `pdwAssemblyRefFlags`  
- dışı Bir derlemeye uygulanan meta verileri tanımlayan bayrakların işaretçisi. Flags değeri bir veya daha fazla [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) değeri birleşimidir.  
+ [çıkış] Bir derlemeye uygulanan meta verileri açıklayan bayraklar için bir işaretçi. Bayrak değeri, bir veya daha fazla [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) değerinin bir leşimidir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem başarılı olursa S_OK döndürür; Aksi takdirde, Winerror. h üstbilgi dosyasında tanımlanan hata kodlarından birini döndürür.  
+ Bu yöntem başarılı olursa S_OK döndürür; aksi takdirde, Winerror.h üstbilgi dosyasında tanımlanan hata kodlarından birini döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

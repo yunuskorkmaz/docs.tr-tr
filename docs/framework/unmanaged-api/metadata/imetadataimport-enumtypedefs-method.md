@@ -15,58 +15,58 @@ helpviewer_keywords:
 ms.assetid: 4e508711-da92-4381-aaf8-6803075cdaa2
 topic_type:
 - apiref
-ms.openlocfilehash: 3854cb4aa3d229c87466c0a35a72447ceb235624
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2d6e86a7f5a93b900e79907f8ee0762869d7f737
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450000"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177291"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>IMetaDataImport::EnumTypeDefs Yöntemi
-Geçerli kapsam içindeki tüm türleri temsil eden TypeDef belirteçlerini numaralandırır.  
+Geçerli kapsamdaki tüm türleri temsil eden TypeDef belirteçlerini güncelleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumTypeDefs (  
-   [out] HCORENUM   *phEnum,   
+   [out] HCORENUM   *phEnum,
    [in]  mdTypeDef  rTypeDefs[],  
-   [in]  ULONG      cMax,   
+   [in]  ULONG      cMax,
    [out] ULONG      *pcTypeDefs  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- dışı Yeni Numaralandırıcı için bir işaretçi. Bu yöntemin ilk çağrısı için bu NULL olmalıdır.  
+ [çıkış] Yeni sayıya işaretçisi. Bu yöntemin ilk araması için NULL olmalıdır.  
   
  `rTypeDefs`  
- 'ndaki TypeDef belirteçlerini depolamak için kullanılan dizi.  
+ [içinde] TypeDef belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- 'ndaki `rTypeDefs` dizisinin en büyük boyutu.  
+ [içinde] `rTypeDefs` Dizinin en büyük boyutu.  
   
  `pcTypeDefs`  
- dışı `rTypeDefs`' de döndürülen TypeDef belirteçleri sayısı.  
+ [çıkış] TypeDef belirteçlerinin sayısı `rTypeDefs`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda `pcTypeDefs` sıfırdır.|  
+|`S_OK`|`EnumTypeDefs`başarıyla döndürülür.|  
+|`S_FALSE`|Sayısala rendelemek için hiçbir belirteçleri vardır. Bu durumda, `pcTypeDefs` sıfırdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- TypeDef belirteci, bir sınıf veya arabirim gibi bir türü ve bir genişletilebilirlik mekanizması aracılığıyla eklenen herhangi bir türü temsil eder.  
+ TypeDef belirteci, bir sınıf veya arabirim gibi bir türü ve genişletilebilirlik mekanizması yla eklenen herhangi bir türü temsil eder.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

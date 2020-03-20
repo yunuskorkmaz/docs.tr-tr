@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 895c35cf-b95d-4e3b-93b5-cfc1cf9044fc
 topic_type:
 - apiref
-ms.openlocfilehash: 055499230f500cb7249746e1acbf46b4548d25bc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 216a1f7bd2ff5a596fa7abf7874b5e603d5a9f7b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426804"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175245"
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString Metodu
 Geçerli başvuru kapsamındaki tablo sütunundan belirtilen dizindeki dizeyi alır.  
@@ -28,7 +28,7 @@ Geçerli başvuru kapsamındaki tablo sütunundan belirtilen dizindeki dizeyi al
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT GetString (   
+HRESULT GetString (
     [in]  ULONG       ixString,  
     [out] const char  **ppString  
 );  
@@ -36,19 +36,19 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>Parametreler  
  `ixString`  
- 'ndaki Sonraki değeri aramaya başlamak için kullanılacak dizin.  
+ [içinde] Bir sonraki değeri aramaya başlamak için hangi dizin.  
   
  `ppString`  
- dışı Döndürülen dize değerine yönelik işaretçiye yönelik bir işaretçi.  
+ [çıkış] Döndürülen dize değeri için bir işaretçi için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

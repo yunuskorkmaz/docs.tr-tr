@@ -7,45 +7,45 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
-ms.openlocfilehash: b4b78d377cf3ff2b43f7776567583c71c479054c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1e82a499b77cc6d1d49eaf13e243201bbdc4c5fe
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123950"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181440"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>Nasıl yapılır: Tür Kitaplıklarına Başvurular Ekleme
-Visual Studio, bir tür kitaplığına bir başvuru eklediğinizde meta verileri içeren bir birlikte çalışma derlemesi oluşturur. Birincil birlikte çalışma derlemesi varsa, Visual Studio yeni bir birlikte çalışma derlemesi oluşturmadan önce mevcut derlemeyi kullanır.  
+Visual Studio, tür kitaplığına bir başvuru eklediğinizde meta verileri içeren bir interop derlemesi oluşturur. Birincil interop derlemesi varsa, Visual Studio yeni bir interop derlemesi oluşturmadan önce varolan derlemeyi kullanır.  
   
-### <a name="to-add-a-reference-to-a-type-library-in-visual-studio"></a>Visual Studio 'da bir tür kitaplığına başvuru eklemek için  
+### <a name="to-add-a-reference-to-a-type-library-in-visual-studio"></a>Visual Studio'daki tür kitaplığına başvuru eklemek için  
   
-1. Bir Windows Kurulumu. exe dosyası yüklemeyi sizin için gerçekleştirmediği müddetçe COM DLL veya EXE dosyasını bilgisayarınıza yükleyebilirsiniz.  
+1. Bir Windows Setup.exe dosyası yüklemeyi sizin için gerçekleştirmedikçe, COM DLL veya EXE dosyasını bilgisayarınıza yükleyin.  
   
-2. **Proje**, **Başvuru Ekle**' yi seçin.  
+2. **Proje**seçin , **Referans Ekle**.  
   
-3. Başvuru Yöneticisi 'nde **com**' u seçin.  
+3. Başvuru Yöneticisi'nde **COM'u**seçin.  
   
-4. Listeden tür kitaplığını seçin veya. tlb dosyasına gözatamazsınız.  
+4. Listeden tür kitaplığını seçin veya .tlb dosyasına göz atın.  
   
-5. **Tamam ' ı**seçin.  
+5. **Tamam'ı**seçin.  
   
-6. Çözüm Gezgini ' de, yeni eklediğiniz başvurunun kısayol menüsünü açın ve ardından **Özellikler**' i seçin.  
+6. Çözüm Gezgini'nde, az önce eklediğiniz başvuru için kısayol menüsünü açın ve ardından **Özellikler'i**seçin.  
   
-7. **Özellikler** penceresinde, **birlikte çalışma türlerini katıştır** özelliğinin **true**olarak ayarlandığından emin olun. Bu, Visual Studio 'Nun çalıştırılabilirlerinizdeki COM türlerine ait tür bilgilerini katıştırmasına ve birincil birlikte çalışma derlemelerini uygulamanızla birlikte dağıtma gereksinimini ortadan kaldırmaya neden olur.  
+7. **Özellikler** penceresinde, **Embed Interop Türleri** özelliğinin **True**olarak ayarlandıkından emin olun. Bu, Visual Studio'nun çalıştırılabilir lerinize COM türleri için tür bilgilerini gömmesine neden olarak uygulamanızla birincil interop derlemeleri dağıtma gereksinimini ortadan kaldırır.  
   
 > [!NOTE]
-> Menü ve iletişim kutusu seçenekleri, kullanmakta olduğunuz Visual Studio sürümüne bağlı olarak farklılık gösterebilir.  
+> Menü ve iletişim kutusu seçenekleri, kullandığınız Visual Studio sürümüne bağlı olarak değişebilir.  
   
-### <a name="to-add-a-reference-to-a-type-library-for-command-line-compilation"></a>Komut satırı derlemesi için bir tür kitaplığına başvuru eklemek için  
+### <a name="to-add-a-reference-to-a-type-library-for-command-line-compilation"></a>Komut satırı derlemesi için tür kitaplığına başvuru eklemek için  
   
-1. [Nasıl yapılır: tür kitaplıklarından birlikte çalışma derlemeleri oluşturma](how-to-generate-interop-assemblies-from-type-libraries.md)bölümünde açıklandığı gibi bir birlikte çalışma derlemesi oluşturun.  
+1. Nasıl açıklandığı gibi bir interop derlemesi [oluşturun: Tür Kitaplıklarından Interop Derlemeleri Oluşturun.](how-to-generate-interop-assemblies-from-type-libraries.md)  
   
-2. Çalıştırılabilirlerinizde COM türlerine ilişkin tür bilgilerini eklemek için, birlikte çalışma derlemesi adı ile [-Link (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/link-compiler-option.md) veya [-Link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) derleyici seçeneğini kullanın.  
+2. Yürütülebilirlerinize COM türleri için tür bilgilerini gömmek için interop montaj adı ile [-link (C# Derleyici Seçenekleri)](../../csharp/language-reference/compiler-options/link-compiler-option.md) veya [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) derleyicisi seçeneğini kullanın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](importing-a-type-library-as-an-assembly.md)
+- [Tür Kitaplığını Derleme Olarak İçeri Aktarma](importing-a-type-library-as-an-assembly.md)
 - [COM Bileşenlerini .NET Framework'te Gösterme](exposing-com-components.md)
-- [İzlenecek yol: Visual Studio’da Yönetilen Bütünleştirilmiş Kodlardan Türleri Katıştırma](../../standard/assembly/embed-types-visual-studio.md) 
-- [-Link (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [İzlenecek yol: Visual Studio’da Yönetilen Bütünleştirilmiş Kodlardan Türleri Katıştırma](../../standard/assembly/embed-types-visual-studio.md)
+- [-link (C# Derleyici Seçenekleri)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
 - [-bağlantı (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

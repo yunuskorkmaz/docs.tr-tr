@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
-ms.openlocfilehash: c4efe358147c10ac31d42b83f6f4a65c274fe8dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 09ae830bbef078b94bd28e654d93c10cde6108fd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624566"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180794"
 ---
 # <a name="how-to-ping-a-host"></a>Nasıl yapılır: Konağa Ping Yapma
-Bu örnek, uzak konağa ping yapma işlemi gösterilmektedir.  
+Bu örnek, uzak bir ana bilgisayarping nasıl gösterir.  
   
 ## <a name="example"></a>Örnek  
   
@@ -77,8 +77,8 @@ namespace Examples.System.Net.NetworkInformation.PingTest
             {  
                 Console.WriteLine ("Ping canceled.");  
   
-                // Let the main thread resume.   
-                // UserToken is the AutoResetEvent object that the main thread   
+                // Let the main thread resume.
+                // UserToken is the AutoResetEvent object that the main thread
                 // is waiting for.  
                 ((AutoResetEvent)e.UserState).Set ();  
             }  
@@ -89,7 +89,7 @@ namespace Examples.System.Net.NetworkInformation.PingTest
                 Console.WriteLine ("Ping failed:");  
                 Console.WriteLine (e.Error.ToString ());  
   
-                // Let the main thread resume.   
+                // Let the main thread resume.
                 ((AutoResetEvent)e.UserState).Set();  
             }  
   
@@ -121,6 +121,6 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
-- Başvurular **System.Net** ad alanı.
+- **System.Net** ad alanına başvurular.

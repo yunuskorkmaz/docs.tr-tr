@@ -15,59 +15,59 @@ helpviewer_keywords:
 ms.assetid: 1d23247e-c58c-45db-afd8-83aa89cde18e
 topic_type:
 - apiref
-ms.openlocfilehash: 2d32dc8ae59fc1a4a189d849437cc95ea3b94a4d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: be2845d1d660d86447cfbb6f2845a8e68b727e66
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449544"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175518"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields Yöntemi
-Belirtilen TypeDef belirtecinin başvurduğu tür için FieldDef belirteçlerini numaralandırır.  
+Belirtilen TypeDef belirteci tarafından başvurulan tür için FieldDef belirteçleri sayısalleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT EnumFields (   
-   [in, out] HCORENUM    *phEnum,   
-   [in]      mdTypeDef   cl,   
-   [out]     mdFieldDef  rFields[],   
-   [in]      ULONG       cMax,   
+HRESULT EnumFields (
+   [in, out] HCORENUM    *phEnum,
+   [in]      mdTypeDef   cl,
+   [out]     mdFieldDef  rFields[],
+   [in]      ULONG       cMax,
    [out]     ULONG       *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] Numaralandırıcı için bir işaretçi.  
+ [içinde, dışarı] Sayıya işaretçisi.  
   
  `cl`  
- 'ndaki Alanları Numaralandırılacak olan sınıfın TypeDef belirteci.  
+ [içinde] Alanları numaralandırılacak sınıfın TypeDef belirteci.  
   
  `rFields`  
- dışı FieldDef belirteçlerinin listesi.  
+ [çıkış] FieldDef belirteçleri listesi.  
   
  `cMax`  
- 'ndaki `rFields` dizisinin en büyük boyutu.  
+ [içinde] `rFields` Dizinin en büyük boyutu.  
   
  `pcTokens`  
- dışı `rFields`içinde döndürülen FieldDef belirteçlerinin gerçek sayısı.  
+ [çıkış] FieldDef belirteçlerinin gerçek sayısı `rFields`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak alan yok. Bu durumda `pcTokens` sıfırdır.|  
+|`S_OK`|`EnumFields`başarıyla döndürülür.|  
+|`S_FALSE`|Sayısalolarak sayısala erdirecek alan yok. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

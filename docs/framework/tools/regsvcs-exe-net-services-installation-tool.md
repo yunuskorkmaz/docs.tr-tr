@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type libraries
 - registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
-ms.openlocfilehash: 1af93ae89d027bccdd52b9cd9c49f8e620303677
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aecd2f6894558b45898c7f22dd333617d9e2e327
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104936"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180355"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET Hizmetleri Yükleme Aracı)
 .NET Hizmetleri Yükleme aracı aşağıdaki eylemleri gerçekleştirir:  
@@ -25,7 +25,7 @@ ms.locfileid: "73104936"
   
 - Sınıfınıza program aracılığıyla eklediğiniz hizmetleri yapılandırır.  
   
- Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).  
+ To run the tool, use the Developer Command Prompt for Visual Studio (or the Visual Studio Command Prompt in Windows 7). Daha fazla bilgi için [Komut İstemleri'ne](developer-command-prompt-for-vs.md)bakın.  
   
  Komut satırına şunu yazın:  
   
@@ -34,51 +34,51 @@ ms.locfileid: "73104936"
 ```console  
       regsvcs [/c | /fc | /u] [/tlb:typeLibraryFile] [/extlb]  
 [/reconfig] [/componly] [/appname:applicationName]  
-[/nologo] [/quiet]assemblyFile.dll   
+[/nologo] [/quiet]assemblyFile.dll
 ```  
   
 ## <a name="parameters"></a>Parametreler  
   
 |Bağımsız Değişken|Açıklama|  
 |--------------|-----------------|  
-|*assemblyFile. dll*|Kaynak derleme dosyası. Derlemenin tanımlayıcı ad ile imzalanması gerekir. Daha fazla bilgi için bkz. [bir derlemeyi güçlü bir adla imzalama](../../standard/assembly/sign-strong-name.md).|  
+|*assemblyFile.dll*|Kaynak derleme dosyası. Derlemenin tanımlayıcı ad ile imzalanması gerekir. Daha fazla bilgi için [bkz.](../../standard/assembly/sign-strong-name.md)|  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/Appdir:** *yol*|Uygulamanın kök dizinini belirtir.|  
-|**/appname:** *ApplicationName*|Bulunacak veya oluşturulacak COM+ uygulamasının adını belirtir.|  
+|**/appdir:** *yol*|Uygulamanın kök dizinini belirtir.|  
+|**/appname:** *applicationName*|Bulunacak veya oluşturulacak COM+ uygulamasının adını belirtir.|  
 |**/c**|Hedef uygulamayı oluşturur.|  
 |**/componly**|Yalnızca bileşenleri yapılandırır; yöntemleri ve arabirimleri yoksayar.|  
 |**/exapp**|Varolan bir uygulamayı beklemek üzere aracı belirtir.|  
 |**/extlb**|Varolan bir tür kitaplığını kullanır.|  
-|**/FC**|Hedef uygulamayı bulur veya oluşturur.|  
-|**/Help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
+|**/fc**|Hedef uygulamayı bulur veya oluşturur.|  
+|**/yardım**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/noreconfig**|Varolan bir hedef uygulamayı yeniden yapılandırmaz.|  
 |**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
-|**/parName:** *ad*|Bulunacak veya oluşturulacak COM+ uygulamasının adını veya kimliğini belirtir.|  
+|**/parname:** *isim*|Bulunacak veya oluşturulacak COM+ uygulamasının adını veya kimliğini belirtir.|  
 |**/reconfig**|Varolan bir hedef uygulamayı yeniden yapılandırır. Bu varsayılandır.|  
-|**/tlb:** *TypeLibraryFile*|Yüklenecek tür kitaplığı dosyasını belirtir.|  
-|**p**|Hedef uygulamayı kaldırır.|  
-|**/quiet**|Sessiz modu belirtir; logo ve başarı iletisi görüntüsünü bastırır.|  
+|**/tlb:** *typelibraryfile*|Yüklenecek tür kitaplığı dosyasını belirtir.|  
+|**/u**|Hedef uygulamayı kaldırır.|  
+|**/sessiz**|Sessiz modu belirtir; logo ve başarı iletisi görüntüsünü bastırır.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- RegSvcs. exe, *assemblyFile. dll*tarafından belirtilen bir kaynak derleme dosyası gerektirir. Bu derlemenin tanımlayıcı ad ile imzalanması gerekir. Tanımlayıcı ad imzalama hakkında daha fazla bilgi için bkz. [bir derlemeyi tanımlayıcı bir adla imzalama](../../standard/assembly/sign-strong-name.md). Hedef uygulamanın ve tür kitaplığı dosyasının adları isteğe bağlıdır. *ApplicationName* bağımsız değişkeni kaynak derleme dosyasından oluşturulabilir ve henüz yoksa RegSvcs. exe tarafından oluşturulacaktır. *TypeLibraryFile* bağımsız değişkeni bir tür kitaplığı adı belirtebilir. Bir tür kitaplığı adı belirtmezseniz, Regsvcs.exe derleme adını varsayılan olarak kullanır.  
+ Regsvcs.exe *assemblyFile.dll*tarafından belirtilen bir kaynak derleme dosyası gerektirir. Bu derlemenin tanımlayıcı ad ile imzalanması gerekir. Güçlü ad imzalama hakkında daha fazla bilgi için [bkz.](../../standard/assembly/sign-strong-name.md) Hedef uygulamanın ve tür kitaplığı dosyasının adları isteğe bağlıdır. *ApplicationName* bağımsız değişkeni kaynak derleme dosyasından oluşturulabilir ve zaten yoksa Regsvcs.exe tarafından oluşturulur. *Typelibraryfile* bağımsız değişkeni bir tür kitaplığı adı belirtebilir. Bir tür kitaplığı adı belirtmezseniz, Regsvcs.exe derleme adını varsayılan olarak kullanır.  
   
- RegSvcs. exe bir bileşenin yöntemlerini kaydettiğinde, bu yöntemler için [talepler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9kc0c6st(v=vs.100)) ve [bağlantı taleplerine](../misc/link-demands.md) tabidir. Araç tam olarak güvenilen bir ortamda yürütüldüğünden, izin taleplerinin çoğu başarılı olur. Ancak, RegSvcs. exe, <xref:System.Security.Permissions.StrongNameIdentityPermission> veya <xref:System.Security.Permissions.PublisherIdentityPermission>için talep veya bağlantı talebi tarafından korunan yöntemlerle bileşenleri kaydedemez.  
+ Regsvcs.exe bir bileşenin yöntemlerini kaydettiğinde, bu yöntemlerle ilgili [taleplere](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9kc0c6st(v=vs.100)) ve [bağlantı taleplerine](../misc/link-demands.md) tabidir. Araç tam olarak güvenilen bir ortamda yürütüldüğünden, izin taleplerinin çoğu başarılı olur. Ancak, Regsvcs.exe bileşenleri bir talep veya bağlantı talebi <xref:System.Security.Permissions.StrongNameIdentityPermission> tarafından <xref:System.Security.Permissions.PublisherIdentityPermission>korunan yöntemlerle kaydedemez.  
   
  Regsvcs.exe'yi kullanmak için yerel bilgisayarda yönetici ayrıcalıklarına sahip olmanız gerekir.  
   
  Bu eylemlerden herhangi birini gerçekleştirirken Regsvcs.exe başarısız olursa, ilgili hata iletilerini görüntüler.  
   
 ## <a name="examples"></a>Örnekler  
- Aşağıdaki komut, `myTest.dll` bulunan tüm ortak sınıfları `myTargetApp` (var olan bir COM+ uygulaması) öğesine ekler ve `myTest.tlb` tür kitaplığı oluşturur.  
+ Aşağıdaki komut, içerdiği `myTest.dll` tüm ortak `myTargetApp` sınıfları (varolan bir `myTest.tlb` COM+ uygulamasına) ekler ve tür kitaplığını üretir.  
   
 ```console  
 regsvcs /appname:myTargetApp myTest.dll  
 ```  
   
- Aşağıdaki komut, `myTest.dll` bulunan tüm ortak sınıfları `myTargetApp` (var olan bir COM+ uygulaması) öğesine ekler ve `newTest.tlb` tür kitaplığı oluşturur.  
+ Aşağıdaki komut, içerdiği `myTest.dll` tüm ortak `myTargetApp` sınıfları (varolan bir `newTest.tlb` COM+ uygulamasına) ekler ve tür kitaplığını üretir.  
   
 ```console  
 regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll  

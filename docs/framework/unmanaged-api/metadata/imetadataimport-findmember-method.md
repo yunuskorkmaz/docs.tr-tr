@@ -15,62 +15,62 @@ helpviewer_keywords:
 ms.assetid: ad32fb84-c2b6-41cd-888d-787ff3a90449
 topic_type:
 - apiref
-ms.openlocfilehash: 7a46fa5319a1badc0cf28dcdbf535a6ed017c9c9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dab155b82d87609b3d3f390133e6490502a43518
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437920"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177276"
 ---
 # <a name="imetadataimportfindmember-method"></a>IMetaDataImport::FindMember Yöntemi
-Belirtilen <xref:System.Type> alınmış ve belirtilen ad ve meta veri imzasına sahip olan alan veya yöntem için MemberDef belirtecine yönelik bir işaretçi alır.  
+Belirtilen <xref:System.Type> ad ve meta veri imzasına sahip alan veya yöntem için ÜyeDef belirteci için bir işaretçi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT FindMember (  
    [in]  mdTypeDef         td,  
-   [in]  LPCWSTR           szName,   
-   [in]  PCCOR_SIGNATURE   pvSigBlob,   
-   [in]  ULONG             cbSigBlob,   
+   [in]  LPCWSTR           szName,
+   [in]  PCCOR_SIGNATURE   pvSigBlob,
+   [in]  ULONG             cbSigBlob,
    [out] mdToken           *pmb  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- 'ndaki Aranacak üyeyi kapsayan sınıf veya arabirim için TypeDef belirteci. Bu değer `mdTokenNil`ise, arama genel değişken veya genel işlev için yapılır.  
+ [içinde] Üyenin aranması gereken sınıf veya arabirim için TypeDef belirteci. Bu değer `mdTokenNil`ise, arama genel değişken veya genel işlev için yapılır.  
   
  `szName`  
- 'ndaki Aranacak üyenin adı.  
+ [içinde] Aranacak üyenin adı.  
   
  `pvSigBlob`  
- 'ndaki Üyenin ikili meta veri imzasına yönelik bir işaretçi.  
+ [içinde] Üyenin ikili meta veri imzasına işaretçi.  
   
  `cbSigBlob`  
- 'ndaki `pvSigBlob`bayt cinsinden boyutu.  
+ [içinde] `pvSigBlob`Baytboyutu.  
   
  `pmb`  
- dışı Eşleşen MemberDef belirtecine yönelik bir işaretçi.  
+ [çıkış] Eşleşen ÜyeDef belirteci için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Üyeyi kapsayan sınıfını veya arabirimini (`td`), adını (`szName`) ve isteğe bağlı olarak imzasını (`pvSigBlob`) kullanarak belirtirsiniz. Bir sınıfta veya arabirimde aynı ada sahip birden çok üye olabilir. Bu durumda, benzersiz eşleşmeyi bulmak için üyenin imzasını geçirin.  
+ Üyeyi çevreleyen sınıfını veya arayüzünü`td`( ),`szName`adını ( ),`pvSigBlob`ve isteğe bağlı olarak imzasını ( ) kullanarak belirtirsiniz. Bir sınıfta veya arabirimde aynı ada sahip birden çok üye olabilir. Bu durumda, benzersiz eşleşmeyi bulmak için üyenin imzasını geçirin.  
   
- İmzaların belirli bir kapsama bağlandığı için `FindMember` geçirilen imza geçerli kapsamda oluşturulmuş olmalıdır. İmza, kapsayan sınıf veya değer türünü tanımlayan bir belirteç ekleyebilir. Belirteç, yerel TypeDef tablosunun bir dizinidir. Geçerli kapsamın bağlamı dışında bir çalışma zamanı imzası derlenemez ve bu imzayı `FindMember`giriş olarak kullanabilirsiniz.  
+ İmzalar belirli `FindMember` bir kapsama bağlı olduğundan, geçirilen imza geçerli kapsamda oluşturulmuş olmalıdır. İmza, çevreleyen sınıfı veya değer türünü tanımlayan bir belirteç katıştırabilir. Belirteç, yerel TypeDef tablosuna bir dizindir. Geçerli kapsam bağlamının dışında bir çalışma zamanı imzası oluşturamazsınız ve bu imzayı `FindMember`giriş olarak kullanamazsınız.  
   
- `FindMember` yalnızca doğrudan sınıfta veya arabirimde tanımlanmış olan üyeleri bulur; devralınan üyeleri bulamaz.  
+ `FindMember`yalnızca doğrudan sınıf veya arabirimde tanımlanmış üyeleri bulur; devralınan üyeleri bulamaz.  
   
 > [!NOTE]
-> `FindMember` bir yardımcı yöntemidir. [IMetaDataImport:: FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); öğesini çağırır Bu çağrı bir eşleşme bulamazsa, `FindMember` sonra [IMetaDataImport:: FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md)' ı çağırır.  
+> `FindMember`yardımcı bir yöntemdir. Bu [iMetaDataImport çağırır::FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); bu arama eşleşme bulamazsa, `FindMember` o zaman [iMetaDataImport çağırır::FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

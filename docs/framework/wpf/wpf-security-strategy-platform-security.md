@@ -17,178 +17,178 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 4fa01922c5c3097adb124d67272b9f449b70ada3
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 258fcd7c51ea59de03fe60a4eeb9a82dd1c7efca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76979878"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174608"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF Güvenlik Stratejisi - Platform Güvenliği
-Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetleri sağladığından, işletim sistemini, CLR 'yi ve Internet Explorer 'ı içeren temel platformun güvenlik özelliklerinden de yararlanır. Bu katmanlar WPF 'e, aşağıdaki şekilde gösterildiği gibi, tek bir hata noktası oluşmasını önlemeye yönelik güçlü, derinlemesine bir güvenlik modeli sağlamak üzere birleştirilir:  
+Windows Sunu Temeli (WPF) çeşitli güvenlik hizmetleri sağlarken, işletim sistemi, CLR ve Internet Explorer'ı içeren temel platformun güvenlik özelliklerinden de yararlanır. Bu katmanlar, WPF'ye aşağıdaki şekilde gösterildiği gibi, tek bir hata noktasından kaçınmaya çalışan güçlü, derinlemesine bir güvenlik modeli sağlamak için biraraya gelir:  
   
  ![WPF güvenlik modelini gösteren diyagram.](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
- Bu konunun geri kalanında, özellikle WPF ile ilgili bu katmanların her birinde bulunan özellikler ele alınmaktadır.  
+ Bu konunun geri kalanı, özellikle WPF ile ilgili bu katmanların her birinde özellikleri tartışır.  
 
-## <a name="operating-system-security"></a>İşletim sistemi güvenliği  
-Windows çekirdeği, WPF ile oluşturulmuş olanlar da dahil olmak üzere tüm Windows uygulamaları için güvenlik temelini oluşturan çeşitli güvenlik özellikleri sağlar. Bu konu, WPF için önemli olan bu güvenlik özelliklerinin kapsamını ele almaktadır ve WPF 'in bunlarla nasıl tümleştirilebildiğinden daha ayrıntılı savunma sağlar.  
+## <a name="operating-system-security"></a>İşletim Sistemi Güvenliği  
+Windows'un çekirdeği, WPF ile oluşturulmuş olanlar da dahil olmak üzere tüm Windows uygulamaları için güvenlik temelini oluşturan çeşitli güvenlik özellikleri sağlar. Bu konu, WPF için önemli olan bu güvenlik özelliklerinin genişliğini ve WPF'nin derinlemesine daha fazla savunma sağlamak için onlarla nasıl entegre olduğunu tartışır.  
   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
- Windows XP SP2 'nin Genel İnceleme ve güçlendirmeye ek olarak, bu konuda tartışacak üç temel özellik vardır:  
+ Windows'un genel bir incelemesi ve güçlendirilmesine ek olarak, Windows XP SP2'nin bu konuda tartışacağız üç temel özelliği vardır:  
   
 - /GS derlemesi  
   
 - Microsoft Windows Update.  
   
-#### <a name="gs-compilation"></a>/GS derlemesi  
- Windows XP SP2, arabellek taşmalarını azaltmaya yardımcı olmak için CLR gibi tüm WPF bağımlılıkları dahil olmak üzere birçok çekirdek sistem kitaplığını yeniden derleyerek koruma sağlar. Bu, C/C++ komut satırı derleyicisi ile/GS parametresi kullanılarak elde edilir. Arabellek taşmalarının açıkça kaçınılması gerekse de,/GS derlemesi, bu, yanlışlıkla veya kötü amaçlı olarak oluşturulan olası güvenlik açıklarına karşı derinlemesine savunma sağlayan bir örnek sağlar.  
+#### <a name="gs-compilation"></a>/GS Derleme  
+ Windows XP SP2, arabellek taşmaları azaltmaya yardımcı olmak için CLR gibi Tüm WPF bağımlılıkları da dahil olmak üzere birçok temel sistem kitaplıklarını yeniden derleyerek koruma sağlar. Bu, C/C++ komut satırı derleyicisi ile /GS parametresi kullanılarak elde edilir. Arabellek taşmaları açıkça kaçınılmalıdır rağmen, / GS derleme yanlışlıkla veya kötü niyetli onlar tarafından oluşturulan olası güvenlik açıklarına karşı derinlemesine bir savunma örneği sağlar.  
   
- Geçmişte, arabellek aşımları birçok yüksek etki güvenliği güvenlik açığından oluşur. Bir saldırgan, bir arabelleğin sınırlarını aşan kötü amaçlı kod eklenmesine izin veren bir kod güvenlik açığından yararlanıyorsa bir arabellek taşması oluşur. Bu daha sonra, saldırganın kodunun yürütülmesine neden olmak için bir işlevin dönüş adresinin üzerine yazarak kodun yürütüldüğü işlemi bir saldırganın almasına izin verir. Sonuç, ele geçirilen işlemle aynı ayrıcalıklarla rastgele kod yürüten kötü amaçlı koddur.  
+ Tarihsel olarak, arabellek taşmaları birçok yüksek etkili güvenlik açıkları neden olmuştur. Arabellek taşma, bir saldırgan arabellek sınırlarını geçmiş yazıyor kötü amaçlı kod enjeksiyonu sağlayan bir kod güvenlik açığı yararlanmak oluşur. Bu, saldırganın bir işlevin iade adresini üzerine yazarak kodun yürütüldettiği işlemi ele geçirerek saldırganın kodunun yürütülmesine neden olmasını sağlar. Sonuç, kaçırılan işlemle aynı ayrıcalıklara sahip rasgele kod yürüten kötü amaçlı koddur.  
   
- Yüksek düzeyde,-GS derleyici bayrağı, yerel dize arabelleklerine sahip bir işlevin dönüş adresini korumak için özel bir güvenlik tanımlama bilgisinin ekleme tarafından bazı olası arabellek taşmalarına karşı koruma sağlar. Bir işlev döndüğünde, güvenlik tanımlama bilgisi önceki değeriyle karşılaştırılır. Değer değiştirildiyse, bir arabellek taşması oluşmuş olabilir ve işlem bir hata durumuyla durdurulur. İşlem durdurulduğunda kötü amaçlı olabilecek kodun yürütülmesi önlenir. Daha fazla ayrıntı için bkz. [-GS (arabellek güvenlik denetimi)](/cpp/build/reference/gs-buffer-security-check) .  
+ Yüksek düzeyde, -GS derleyici bayrağı, yerel dize arabelleklerine sahip bir işlevin dönüş adresini korumak için özel bir güvenlik çerezi enjekte ederek bazı olası arabellek taşmaları karşı korur. Bir işlev döndükten sonra, güvenlik çerezi önceki değeriyle karşılaştırılır. Değer değiştiyse, arabellek taşma oluştu ve işlem bir hata koşuluyla durdurulur. İşlemin durdurulması, kötü amaçlı olabilecek kodun yürütülmesini engeller. Daha fazla bilgi için [bkz: -GS (Arabellek Güvenlik Kontrolü).](/cpp/build/reference/gs-buffer-security-check)  
   
- WPF, WPF uygulamalarına henüz başka bir savunma katmanı eklemek için/GS bayrağıyla derlenir.  
+ WPF, WPF uygulamalarına başka bir savunma katmanı eklemek için /GS bayrağı yla derlenmiştir.  
   
 ### <a name="windows-vista"></a>Windows Vista  
-Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı erişimi", kod bütünlüğü denetimleri ve ayrıcalık yalıtımı gibi işletim sisteminin ek güvenlik geliştirmelerinden faydalanır.  
+Windows Vista'daki WPF kullanıcıları, işletim sisteminin "En Az Ayrıcalıklı Kullanıcı Erişimi", kod bütünlüğü denetimleri ve ayrıcalık yalıtımı gibi ek güvenlik geliştirmelerinden yararlanır.  
   
-#### <a name="user-account-control-uac"></a>Kullanıcı hesabı denetimi (UAC)  
- Günümüzde, çoğu uygulama için yükleme veya yürütme ya da her ikisi için gerekli olduğundan, Windows kullanıcıları yönetici ayrıcalıklarıyla çalışmaya eğilimlidir. Varsayılan uygulama ayarlarını kayıt defterine yazamayacak bir örnektir.  
+#### <a name="user-account-control-uac"></a>Kullanıcı Hesabı Denetimi (UAC)  
+ Günümüzde, birçok uygulama yükleme veya yürütme veya her ikisi için bunları gerektirdiğinden, Windows kullanıcıları yönetici ayrıcalıklarıyla çalışma eğilimindedir. Kayıt Defteri'ne varsayılan uygulama ayarlarını yazabilmek bir örnektir.  
   
- Yönetici ayrıcalıklarıyla çalıştırmak, uygulamaların yönetici ayrıcalıkları verilen işlemlerden yürütülmesi anlamına gelir. Bunun güvenlik etkisi, yönetici ayrıcalıklarıyla çalışan bir işlemi ele alan herhangi bir kötü amaçlı kodun, kritik sistem kaynaklarına erişim de dahil olmak üzere otomatik olarak bu ayrıcalıkları devralmasını sağlar.  
+ Yönetici ayrıcalıklarıyla çalışan, uygulamaların yönetici ayrıcalıkları verilen işlemlerden yürütülmesi anlamına gelir. Bunun güvenlik etkisi, yönetici ayrıcalıklarıyla çalışan bir işlemi ele kaçıran herhangi bir kötü amaçlı kodun, kritik sistem kaynaklarına erişim de dahil olmak üzere bu ayrıcalıkları otomatik olarak devralmasıdır.  
   
- Bu güvenlik tehditlerine karşı korumanın bir yolu, uygulamaları gereken en az sayıda ayrıcalığa sahip olacak şekilde kullanmaktır. Bu, en az ayrıcalık ilkesi olarak bilinir ve Windows işletim sisteminin temel bir özelliğidir. Bu özellik, Kullanıcı hesabı denetimi (UAC) olarak adlandırılır ve Windows UAC tarafından iki önemli şekilde kullanılır:  
+ Bu güvenlik tehdidine karşı korumanın bir yolu, gerekli olan en az ayrıcalıkla uygulamaları çalıştırmaktır. Bu, en az ayrıcalık ilkesi olarak bilinir ve Windows işletim sisteminin temel bir özelliğidir. Bu özellik Kullanıcı Hesabı Denetimi (UAC) olarak adlandırılır ve Windows UAC tarafından iki anahtar şekilde kullanılır:  
   
-- Kullanıcı yönetici olsa bile, çoğu uygulamayı UAC ayrıcalıklarıyla çalıştırmak için; yalnızca yönetici ayrıcalıklarına ihtiyacı olan uygulamalar, yönetici ayrıcalıklarıyla çalışır. Yönetim ayrıcalıklarıyla çalıştırmak için uygulamaların uygulama bildiriminde açıkça veya güvenlik ilkesinde bir giriş olarak işaretlenmesi gerekir.  
+- Kullanıcı yönetici olsa bile, varsayılan olarak UAC ayrıcalıklarına sahip çoğu uygulamayı çalıştırmak için; yalnızca yönetici ayrıcalıkları gerektiren uygulamalar yönetici ayrıcalıklarıyla birlikte çalışır. İdari ayrıcalıklarla çalışmak için, uygulamaların uygulama bildiriminde veya güvenlik ilkesine giriş olarak açıkça işaretlemesi gerekir.  
   
-- Sanallaştırma gibi uyumluluk çözümleri sağlamak için. Örneğin, birçok uygulama C:\Program Files gibi kısıtlı konumlara yazmaya çalışır. UAC altında yürütülen uygulamalar için, yazma için yönetici ayrıcalıkları gerektirmeyen Kullanıcı başına alternatif bir konum vardır. UAC altında çalışan uygulamalar için, UAC 'ler C:\Program Files 'ı sanallaştırır. bu sayede, kendisine yazdıkları uygulamalar aslında alternatif, Kullanıcı başına konuma yazıyor. Bu tür bir uyumluluk çalışması, işletim sisteminin daha önce UAC 'de çalışmayan birçok uygulamayı çalıştırmasına olanak sağlar.  
+- Sanallaştırma gibi uyumluluk çözümleri sunmak. Örneğin, birçok uygulama C:\Program Dosyaları gibi kısıtlı konumlara yazmaya çalışır. UAC altında çalıştırılabilen uygulamalar için, kullanıcı başına yönetici ayrıcalıkları gerektirmeyen bir alternatif konum vardır. UAC altında çalışan uygulamalar için, UAC C:\Program Dosyalarını sanallaştırır, böylece ona yazdıklarını düşünen uygulamalar aslında alternatif kullanıcı başına konuma yazıyorlar. Bu tür uyumluluk çalışmaları, işletim sisteminin daha önce UAC'de çalıştırılamamış birçok uygulamayı çalıştırmasını sağlar.  
   
-#### <a name="code-integrity-checks"></a>Kod bütünlüğü denetimleri  
- Windows Vista, kötü amaçlı kodun sistem dosyalarına veya yükleme/çalışma zamanında çekirdeğe eklenmesini önlemeye yardımcı olmak için daha derin kod bütünlüğü denetimleri içerir. Bu, sistem dosya korumasının ötesine geçer.  
-   
-### <a name="limited-rights-process-for-browser-hosted-applications"></a>Tarayıcıda barındırılan uygulamalar için sınırlı haklar süreci  
- Tarayıcıda barındırılan WPF uygulamaları, Internet bölgesi korumalı alanı içinde yürütülür. Microsoft Internet Explorer ile WPF tümleştirmesi, bu korumayı ek destek ile genişletir.  
+#### <a name="code-integrity-checks"></a>Kod Bütünlüğü Denetimleri  
+ Windows Vista, kötü amaçlı kodun sistem dosyalarına veya yük/çalışma zamanında çekirdek içine enjekte edilebünden korunmaya yardımcı olmak için daha derin kod bütünlüğü denetimleri içerir. Bu sistem dosya koruması ötesine geçer.  
+
+### <a name="limited-rights-process-for-browser-hosted-applications"></a>Tarayıcı Barındırılan Uygulamalar için Sınırlı Haklar Süreci  
+ Tarayıcı tarafından barındırılan WPF uygulamaları Internet bölgesi sandbox içinde yürütülür. Microsoft Internet Explorer ile WPF tümleştirmesi bu korumayı ek destekle genişletir.  
   
- XAML tarayıcı uygulamaları (XBAP 'ler) Internet bölgesi izin kümesi tarafından genellikle korumalı olduğundan, bu ayrıcalıkların kaldırılması bir uyumluluk perspektifinden XAML tarayıcı uygulamalarına (XBAP) zarar vermez. Bunun yerine, ek bir derinlemesine savunma katmanı oluşturulur; korumalı bir uygulama diğer katmanlardan yararlanabilebiliyor ve süreci hijak, işlem hala yalnızca sınırlı ayrıcalıklara sahip olur.  
+ XAML tarayıcı uygulamaları (XBAP'ler) genellikle Internet bölgesi izin kümesi tarafından sandboxed olduğundan, bu ayrıcalıkların kaldırılması XAML tarayıcı uygulamalarına (XBAP' ler) uyumluluk açısından zarar vermez. Bunun yerine, ek bir savunma-in-derinlemesine katman oluşturulur; Kumlanmış bir uygulama diğer katmanları sömürebilir ve işlemi ele geçirebiliyorsa, işlem yine de yalnızca sınırlı ayrıcalıklara sahip olur.  
   
- Bkz. [en az ayrıcalıklı kullanıcı hesabı kullanma](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29).  
+ Bkz. [En Az Ayrıcalıklı Kullanıcı Hesabı Kullanma](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29).  
   
-## <a name="common-language-runtime-security"></a>Ortak dil çalışma zamanı güvenliği  
- Ortak dil çalışma zamanı (CLR), doğrulama ve doğrulama, kod erişim güvenliği (CAS) ve güvenlik açısından kritik metodolojisini içeren bir dizi anahtar güvenlik avantajı sunar.  
-    
-### <a name="validation-and-verification"></a>Doğrulama ve doğrulama  
- Bütünleştirilmiş kod yalıtımı ve bütünlüğü sağlamak için, CLR doğrulama işlemini kullanır. CLR doğrulaması, derlemenin dışına işaret eden adresler için taşınabilir yürütülebilir (PE) dosya biçimi doğrulayarak derlemelerin yalıtılmasını sağlar. CLR doğrulaması ayrıca bir derleme içine katıştırılmış meta verilerin bütünlüğünü doğrular.  
+## <a name="common-language-runtime-security"></a>Ortak Dil Çalışma Süresi Güvenliği  
+ Ortak dil çalışma süresi (CLR), doğrulama ve doğrulama, Kod Erişim Güvenliği (CAS) ve Güvenlik Açısından Kritik Metodoloji gibi bir dizi önemli güvenlik avantajı sunar.  
+
+### <a name="validation-and-verification"></a>Doğrulama ve Doğrulama  
+ Derleme yalıtımı ve bütünlüğü sağlamak için CLR bir doğrulama işlemi kullanır. CLR doğrulama, derlemenin dışındaki adresler için Taşınabilir Çalıştırılabilir (PE) dosya biçimini doğrulayarak derlemelerin yalıtılmış olmasını sağlar. CLR doğrulaması, derlemenin içine katıştırılmış meta verilerin bütünlüğünü de doğrular.  
   
- Tür güvenliğini sağlamak için, yaygın güvenlik sorunlarını önlemeye yardımcı olun (örneğin, arabellek taşmaları) ve alt süreç yalıtımı aracılığıyla korumalı alana alma etkinleştirin, CLR güvenliği doğrulama kavramını kullanır.  
+ Tür güvenliğini sağlamak, sık karşılaşılan güvenlik sorunlarını önlemeye yardımcı olmak (örn. arabellek taşmaları) ve alt proses yalıtımı yoluyla kum kutulamasını etkinleştirmek için CLR security doğrulama kavramını kullanır.  
   
- Yönetilen uygulamalar Microsoft ara dil (MSIL) ile derlenir. Yönetilen bir uygulamadaki Yöntemler yürütüldüğünde, MSIL, tam zamanında (JıT) derleme aracılığıyla yerel koda derlenir. JıT derlemesi, kodun olmamasını sağlayan birçok güvenlik ve sağlamlık kuralı uygulayan bir doğrulama işlemi içerir:  
+ Yönetilen uygulamalar Microsoft Ara Dili (MSIL) olarak derlenir. Yönetilen bir uygulamadaki yöntemler yürütüldüğünde, MSIL'i Just-In-Time (JIT) derlemesi aracılığıyla yerel kod olarak derlenir. JIT derlemesi, kodun aşağıdakileri yapmamasını sağlayan birçok güvenlik ve sağlamlık kuralını uygulayan bir doğrulama işlemi içerir:  
   
-- Tür sözleşmelerini ihlal etme  
+- Tür sözleşmelerini ihlal  
   
-- Arabellek taşmalarını tanıtma  
+- Arabellek taşmaları tanıtın  
   
-- Bellek erişimi.  
+- Belleğe çılgınca erişin.  
   
- Güvenilen kod kabul edilmediği takdirde, doğrulama kurallarına uymayan yönetilen kodun yürütülmesine izin verilmez.  
+ Denetim kurallarına uymayan yönetilen kodun, güvenilir kod olarak kabul edilmedikçe yürütülmesine izin verilmez.  
   
- Doğrulanabilir kod avantajı, WPF 'nin .NET Framework üzerinde derlemelerin neden olduğunu önemli bir nedendir. Doğrulanabilir kodun kullanıldığı ölçüde, olası güvenlik açıklarını kötüye bir şekilde düşürme olasılığı büyük ölçüde azalır.  
+ Doğrulanabilir kodun avantajı, WPF'nin .NET Framework üzerinde oluşturmasının önemli bir nedenidir. Doğrulanabilir kod kullanıldığı ölçüde, olası güvenlik açıklarından yararlanma olasılığı büyük ölçüde azaltılır.  
   
 ### <a name="code-access-security"></a>Kod Erişimi Güvenliği  
- Bir istemci makinesi, yönetilen bir uygulamanın, dosya sistemi, kayıt defteri, yazdırma hizmetleri, Kullanıcı arabirimi, yansıma ve ortam değişkenleri dahil olmak üzere erişebileceği çok çeşitli kaynaklar sunar. Yönetilen bir uygulama, bir istemci makinedeki herhangi bir kaynağa erişebilmeye başlamadan önce, .NET Framework iznine sahip olmalıdır. CA 'larda izin, <xref:System.Security.CodeAccessPermission>bir alt sınıfıdır; CAS, yönetilen uygulamaların erişebileceği her kaynak için bir alt sınıf uygular.  
+ İstemci makinesi, dosya sistemi, Kayıt Defteri, yazdırma hizmetleri, kullanıcı arabirimi, yansıma ve ortam değişkenleri de dahil olmak üzere yönetilen bir uygulamanın erişebileceği çok çeşitli kaynakları ortaya çıkarır. Yönetilen bir uygulamaistemci makinesindeki kaynaklardan herhangi biri sine erişebilmek için bunu yapmak için .NET Framework iznine sahip olması gerekir. CAS'ta bir izin bir <xref:System.Security.CodeAccessPermission>alt sınıftır; CAS, yönetilen uygulamaların erişebileceği her kaynak için bir alt sınıf uygular.  
   
- Yönetilen bir uygulamanın,, yürütülmeye başladığı zaman CA 'LAR tarafından verilen izinler kümesi, izin kümesi olarak bilinir ve uygulama tarafından sağlanan kanıt tarafından belirlenir. WPF uygulamaları için, belirtilen kanıt, uygulamaların başlatıldığı konum veya bölgedir. CAS aşağıdaki bölgeleri tanımlar:  
+ Yönetilen bir uygulamanın yürütmeye başladığında CAS tarafından verildiği izinler kümesi, izin kümesi olarak bilinir ve uygulama tarafından sağlanan kanıtlarla belirlenir. WPF uygulamaları için sağlanan kanıt, uygulamaların başlatıldığı konum veya bölgedir. CAS aşağıdaki bölgeleri tanımlar:  
   
-- **Bilgisayarım**. İstemci makineden başlatılan uygulamalar (tamamen güvenilir).  
+- **Benim Bilgisayar**. İstemci makinesinden başlatılan uygulamalar (Tam Güvenilir).  
   
-- **Yerel Intranet**. İntranetten başlatılan uygulamalar. (Biraz güvenilir).  
+- **Yerel Intranet**. Uygulamalar intranetten başlatılır. (Biraz Güvenilir).  
   
-- **Internet**. Internet 'ten başlatılan uygulamalar. (En az güvenilir).  
+- **İnternet**. Uygulamalar Internet'ten başlatıldı. (En Az Güvenilir).  
   
-- **Güvenilen siteler**. Bir kullanıcı tarafından güvenilen olarak tanımlanan uygulamalar. (En az güvenilir).  
+- **Güvenilir Siteler**. Kullanıcı tarafından güvenilir olarak tanımlanan uygulamalar. (En Az Güvenilir).  
   
-- **Güvenilmeyen siteler**. Bir kullanıcı tarafından güvenilmeyen olarak tanımlanan uygulamalar. (Güvenilmeyen).  
+- **Güvenilmeyen Siteler**. Kullanıcı tarafından güvenilmeyen olarak tanımlanan uygulamalar. (Güvenilmez).  
   
- Bu bölgelerin her biri için CA 'LAR, her biriyle ilişkili güven düzeyiyle eşleşen izinleri içeren önceden tanımlanmış bir izin kümesi sağlar. Bu güncelleştirmeler şunlardır:  
+ Bu bölgelerin her biri için CAS, her biriyle ilişkili güven düzeyiyle eşleşen izinleri içeren önceden tanımlanmış bir izin kümesi sağlar. Bunlar:  
   
-- **FullTrust**. **Bilgisayarım** bölgesinden başlatılan uygulamalar için. Olası tüm izinler verilir.  
+- **FullTrust**. **Bilgisayarım** bölgesinden başlatılan uygulamalar için. Tüm olası izinler verilir.  
   
-- **LocalIntranet**. **Yerel Intranet** bölgesinden başlatılan uygulamalar için. Yalıtılmış depolama, sınırsız Kullanıcı Arabirimi erişimi, kısıtlanmamış dosya iletişimleri, sınırlı yansıma, ortam değişkenlerine sınırlı erişim dahil olmak üzere bir istemci makinenin kaynaklarına orta erişim sağlamak için izin alt kümesi verilir. Kayıt defteri gibi kritik kaynakların izinleri sağlanmaz.  
+- **LocalIntranet**. **Yerel Intranet** bölgesinden başlatılan uygulamalar için. İzole depolama, sınırsız Kullanıcı Bira erişimi, sınırsız dosya iletişim bilgileri, sınırlı yansıma, ortam değişkenlerine sınırlı erişim gibi istemci makinesinin kaynaklarına orta düzeyde erişim sağlamak için izinlerin bir alt kümesi verilir. Kayıt Defteri gibi kritik kaynaklar için izinler sağlanmaz.  
   
-- **Internet**. **Internet** veya **Güvenilen siteler** bölgesinden başlatılan uygulamalar için. Yalıtılmış depolama, yalnızca dosya açma ve sınırlı kullanıcı arabirimi dahil olmak üzere bir istemci makinenin kaynaklarına sınırlı erişim sağlamak için bir izin alt kümesi verilmiştir. Temelde, bu izin kümesi, uygulamaları istemci makineden ayırır.  
+- **İnternet**. **Internet** veya **Trusted Sites** bölgesinden başlatılan uygulamalar için. İzlenme, yalnızca dosya açık ve sınırlı kullanıcı arama bilgileri de dahil olmak üzere istemci makinenin kaynaklarına sınırlı erişim sağlamak için izinlerin bir alt kümesi verilir. Esasen, bu izin kümesi uygulamaları istemci makineden yalıtır.  
   
- **Güvenilmeyen siteler** bölgesinde olduğu şekilde tanımlanan uygulamalara, CA 'lar tarafından hiçbir izin verilmez. Sonuç olarak, önceden tanımlanmış bir izin kümesi onlar için mevcut değildir.  
+ **Güvenilmeyen Siteler** bölgesinden olduğu belirlenen başvurulara CAS tarafından hiçbir izin verilmez. Sonuç olarak, onlar için önceden tanımlanmış bir izin kümesi yok.  
   
- Aşağıdaki şekilde bölgeler, izin kümeleri, izinler ve kaynaklar arasındaki ilişki gösterilmektedir:  
+ Aşağıdaki şekilde bölgeler, izin kümeleri, izinler ve kaynaklar arasındaki ilişki gösteriş verecektir:  
   
  ![CAS izin kümelerini gösteren diyagram.](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
- Internet bölgesi güvenlik sanal alanının kısıtlamaları, bir XBAP 'nin WPF dahil bir sistem kitaplığından içeri aktardığı herhangi bir koda eşit olarak uygulanır. Bu, kodun her bitini, hatta WPF 'in kilitli olmasını sağlar. Ne yazık ki, yürütebilmek için, bir XBAP 'nin Internet bölgesi güvenlik korumalı alanı tarafından etkinleştirilenden daha fazla izin gerektiren işlevselliği yürütmesi gerekir.  
+ Internet bölgesi güvenlik alanı kısıtlamaları, XBAP'ın WPF de dahil olmak üzere bir sistem kitaplığından aldığı tüm kodlar için eşit olarak uygulanır. Bu, kodun her bitinin WPF tarafından bile kilitaltında olmasını sağlar. Ne yazık ki, yürütebilmek için, bir XBAP'Nin Internet bölgesi güvenlik alanı tarafından etkinleştirilenlerden daha fazla izin gerektiren işlevleri yürütmesi gerekir.  
   
- Aşağıdaki sayfayı içeren bir XBAP uygulaması düşünün:  
-  
- [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
- [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
-  
- Bu XBAP 'yi yürütmek için, temel alınan WPF kodu, çağıran XBAP tarafından kullanılabilir olandan daha fazla işlevsellik yürütmelidir, örneğin:  
-  
-- İşleme için pencere tutamacı (HWND) oluşturma  
-  
-- İletileri dağıtma  
-  
-- Tahoma yazı tipi yükleniyor  
-  
- Bir güvenlik noktasından, korumalı uygulamadan bu işlemlerden herhangi birine doğrudan erişim verilmesi çok zararlı olabilir.  
-  
- Neyse ki, bu işlemlerin korumalı bir uygulama adına yükseltilmiş ayrıcalıklarla yürütülmesine izin vererek WPF bu duruma göre yapılır. Tüm WPF işlemleri, XBAP 'nin uygulama etki alanının sınırlı Internet bölgesi güvenlik izinlerine karşı denetlenirken, WPF (diğer sistem kitaplıklarında olduğu gibi) tüm olası izinleri içeren bir izin kümesi verilir.
-  
- Bunun yapılması, bu ayrıcalıkların konak uygulama etki alanının Internet bölgesi izin kümesi tarafından yönetilmesini engellerken, WPF 'nin yükseltilmiş ayrıcalıklar almasını gerektirir.  
-  
- WPF bunu bir iznin **onaylama** yöntemini kullanarak yapar. Aşağıdaki kod bunun nasıl gerçekleştiğini gösterir.  
+ Aşağıdaki sayfayı içeren bir XBAP uygulamasını düşünün:  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- Bu **onay, WPF** 'ın, XBAP 'nin Internet bölgesi izinleriyle kısıtlanması için gereken sınırsız izinleri önler.  
+ Bu XBAP'ı yürütmek için, temel WPF kodu, aşağıdakiler de dahil olmak üzere, aşağıdakiler de dahil olmak üzere, xbap çağıran için kullanılabilir olandan daha fazla işlevsellik yürütmelidir:  
   
- WPF, bir platform **perspektifinden doğru onay** kullanmaktan sorumludur; Hatalı bir **onaylama** kullanımı, kötü amaçlı kodun ayrıcalıkların yükseltilmesini sağlayabilir. Sonuç olarak, **yalnızca gerektiğinde onay çağrısı yapmak** ve korumalı alan kısıtlamalarının bozulmadan kalmasını sağlamak önemlidir. Örneğin, korumalı kodun rastgele dosyaları açmasına izin verilmez, ancak yazı tiplerini kullanmasına izin verilir. WPF **, korumalı**uygulamaların onay çağırarak yazı tipi işlevselliğini kullanmasına ve bu yazı tiplerini korumalı uygulama adına içerdiği bilinen dosyaları okumasına olanak sağlar.  
+- Oluşturma için bir pencere tutamacı (HWND) oluşturma  
   
-### <a name="clickonce-deployment"></a>ClickOnce dağıtımı  
- ClickOnce, .NET Framework ile birlikte sunulan kapsamlı bir dağıtım teknolojisidir ve Visual Studio ile tümleştirilir (ayrıntılı bilgi için bkz. [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment) ). Tek başına WPF uygulamaları ClickOnce kullanılarak dağıtılabilir, ancak tarayıcıda barındırılan uygulamalar ClickOnce ile dağıtılmalıdır.  
+- İletileri gönderme  
   
- ClickOnce kullanılarak dağıtılan uygulamalara, kod erişim güvenliği (CAS) üzerinden ek bir güvenlik katmanı verilir; Temelde, ClickOnce tarafından dağıtılan uygulamalar gereksinim duydukları izinleri ister. Yalnızca uygulamanın dağıtıldığı bölge için izin kümesini aşmazsa, bu izinlere izin verilir. İzin kümesini, başlatma bölgesinin izin kümesi tarafından sağlananlardan daha az olsalar bile yalnızca gerekli olanlarla azaltarak, uygulamanın erişimi olan kaynak sayısı en az bir değer olacak şekilde azaltılır. Sonuç olarak, uygulama ele geçirilmiş ise, istemci makinesine zarar verme olasılığı azalır.  
+- Tahoma yazı tipini yükleme  
   
-### <a name="security-critical-methodology"></a>Güvenlik açısından kritik metodolojisi  
- XBAP uygulamaları için Internet bölgesi korumalı alanını etkinleştirmek üzere izinleri kullanan WPF kodu, en yüksek düzeyde güvenlik denetimi ve denetimi için tutulmalıdır. Bu gereksinimi kolaylaştırmak için .NET Framework, ayrıcalıkları destekleyen kodu yönetmek için yeni destek sağlar. CLR, ayrıcalıkları yükseltir ve <xref:System.Security.SecurityCriticalAttribute>ile işaretleyecek kodu tanımlamanızı sağlar. <xref:System.Security.SecurityCriticalAttribute> ile işaretlenmemiş herhangi bir kod bu metodolojide *saydam* hale gelir. Buna karşılık, <xref:System.Security.SecurityCriticalAttribute> işaretli olmayan yönetilen kodun ayrıcalık yükseltme işlemi engellenir.  
+ Güvenlik açısından bakıldığında, bu işlemlerden herhangi biri için kum havuzu uygulamasından doğrudan erişime izin vermek felaket olur.  
   
- Güvenlik açısından kritik metodolojisi, güvenlik *açısından kritik çekirdekler*için AYRıCALıKLARı destekleyen WPF kodu kuruluşunun, kalanı saydam olacak şekilde çalışmasına olanak tanır. Güvenlik açısından kritik kodu yalıtmak, WPF Mühendisliği ekibinin yukarıdaki güvenlik açısından kritik çekirdekte ve standart güvenlik uygulamalarının ötesinde ek bir güvenlik çözümlemesi ve kaynak denetimi odağa (bkz. [WPF güvenlik stratejisi-güvenlik mühendisliği](wpf-security-strategy-security-engineering.md)).  
+ Neyse ki, WPF bu işlemleri kumhavuzu uygulaması adına yüksek ayrıcalıklarla yürütülmesine izin vererek bu duruma hitap eder. Tüm WPF işlemleri XBAP uygulama etki alanının sınırlı Internet bölgesi güvenlik izinleri karşı kontrol edilirken, WPF (diğer sistem kitaplıklarında olduğu gibi) tüm olası izinleri içeren bir izin kümesi verilir.
   
- .NET Framework, geliştiricilerin <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) ile işaretlenmiş ve kullanıcının genel derleme önbelleği 'ne (GAC) dağıtılan yönetilen derlemeler yazmasına izin vererek, güvenilen kodun XBAP Internet bölgesi sanal alanını genişlemesine izin verdiğini unutmayın. Derlemeyi APTCA ile işaretlemek, Internet 'ten gelen kötü amaçlı kod dahil olmak üzere herhangi bir kodun bu derlemeyi çağırmasını olanaklı olduğundan, yüksek oranda duyarlı bir güvenlik işlemidir. Bu işlem sırasında çok dikkatli ve en iyi uygulamalar kullanılmalıdır ve kullanıcıların yüklenebilmesi için bu yazılıma güvenmeyi seçmesi gerekir.  
+ Bu, WPF'nin yüksek ayrıcalıklar almasını ve bu ayrıcalıkların ana bilgisayar uygulama etki alanının Internet bölgesi izin kümesi tarafından yönetilmesini engellemesini gerektirir.  
   
-## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer güvenliği  
- Güvenlik sorunlarını azalttıktan ve güvenlik yapılandırmasını basitleştirerek, Microsoft Internet Explorer 6 (SP2), XAML tarayıcı uygulamaları (XBAP) kullanıcılarına yönelik güvenlik geliştirmelerinden oluşan çeşitli özellikler içerir. Bu özelliklerin bu özellikleri, kullanıcıların gözatma deneyimi üzerinde daha fazla denetime izin vermeyi dener.  
+ WPF bunu, bir izin **alma** yöntemini kullanarak yapar. Aşağıdaki kod bunun nasıl olduğunu gösterir.  
   
- IE6 SP2 'den önce, kullanıcılar aşağıdakilerden birine tabi olabilir:  
+ [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
+ [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
-- Rastgele açılan pencereler.  
+ **Assert,** WPF tarafından gerekli olan sınırsız izinlerin XBAP'ın Internet bölgesi izinleri tarafından kısıtlanmasını engeller.  
   
-- Kafa karıştırıcı betiği yeniden yönlendirme.  
+ Platform açısından Bakıldığında, WPF **Assert'ı** doğru kullanmaktan sorumludur; **Assert'in** yanlış kullanımı, kötü amaçlı kodun ayrıcalıkları yükseltmesine olanak sağlayabilir. Sonuç olarak, yalnızca gerektiğinde **Assert'ı** aramak ve kum havuzu kısıtlamalarının bozulmadan kalmasını sağlamak önemlidir. Örneğin, sandboxed kodu rasgele dosyaları açmak için izin verilmez, ancak yazı tipleri kullanmak için izin verilir. WPF, kumlanmış uygulamaların **Assert'ı**arayarak yazı tipi işlevselliğini kullanmasını ve WPF'nin bu yazı tiplerini kumlanmış uygulama adına içerdiği bilinen dosyaları okumasını sağlar.  
   
-- Bazı web sitelerinde çok sayıda güvenlik iletişim kutusu.  
+### <a name="clickonce-deployment"></a>ClickOnce Dağıtım  
+ ClickOnce, .NET Framework ile birlikte verilen ve Visual Studio ile entegre olan kapsamlı bir dağıtım teknolojisidir (ayrıntılı bilgi için [ClickOnce güvenlik ve dağıtıma](/visualstudio/deployment/clickonce-security-and-deployment) bakın). Bağımsız WPF uygulamaları ClickOnce kullanılarak dağıtılabilirken, tarayıcı tarafından barındırılan uygulamaların ClickOnce ile dağıtılması gerekir.  
   
- Bazı durumlarda, güvenilir olmayan Web siteleri, Kullanıcı tarafından iptal edilmiş olsa bile yükleme [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] veya bir Microsoft ActiveX yükleme iletişim kutusunu sürekli olarak görüntüleyerek kullanıcıları aldatmaya çalışır. Bu teknikleri kullanarak, casus yazılım uygulamalarının yüklenmesiyle sonuçlanan kötü kararlar almaya çok sayıda kullanıcı daha karmaşık bir şekilde ele alınmış olabilir.  
+ ClickOnce kullanılarak dağıtılan uygulamalara Code Access Security (CAS) üzerinden ek bir güvenlik katmanı verilir; esasen, ClickOnce dağıtılan uygulamalar gereksinim duydukları izinleri isteyin. Yalnızca uygulamanın dağıtıldığı bölge için izin kümesini aşmadıkları takdirde bu izinler verilir. İzin kümesini yalnızca gerekli olanlara indirgeyerek, başlatma bölgesinin izin kümesi tarafından sağlananlardan daha az olsalar bile, uygulamanın erişediği kaynak sayısı en aza indirgenir. Sonuç olarak, uygulama kaçırılırsa, istemci makineye zarar verme potansiyeli azalır.  
   
- IE6 SP2, bu tür sorunları hafifletmek için Kullanıcı başlatma kavramını kapsayan çeşitli özellikler içerir. IE6 SP2, bir Kullanıcı *başlatma*olarak bilinen bir eylemden önce bir bağlantı veya sayfa öğesine tıkladığını algılar ve bir sayfada betik tarafından bunun yerine benzer bir eylem olduğu gibi davranır. Örnek olarak, ıE6 SP2 bir kullanıcının açılır pencere oluşturmadan önce bir düğmeye tıkladığını algılayan bir **açılır pencere engelleyicisi** içerir. Bu, ıE6 SP2'NIN çoğu zararsız açılır pencerelere izin vermesini sağlar, ancak kullanıcıların veya istediği açılan pencereleri önler. Engellenen açılır pencereler, kullanıcının engellemeyi el ile geçersiz kılmasını ve açılır pencereyi görüntülemesini sağlayan yeni **bilgi çubuğu**altında yakalanmalıdır.  
+### <a name="security-critical-methodology"></a>Güvenlik Açısından Kritik Metodoloji  
+ XBAP uygulamaları için Internet bölgesi kum havuzunu etkinleştirmek için izinleri kullanan WPF kodu, mümkün olan en yüksek düzeyde güvenlik denetimi ve denetimine sahip olmalıdır. Bu gereksinimi kolaylaştırmak için ,NET Framework ayrıcalığı artıran kodu yönetmek için yeni destek sağlar. Özellikle, CLR ayrıcalık yükseltir kodu tanımlamak ve onu işaretlemek <xref:System.Security.SecurityCriticalAttribute>sağlar ; işaretlenmemiş <xref:System.Security.SecurityCriticalAttribute> herhangi bir kod bu metodoloji kullanılarak *saydam* hale gelir. Tersine, işaretlenmemiş <xref:System.Security.SecurityCriticalAttribute> yönetilen kodun ayrıcalığı yükseltmesi engellenir.  
   
- Aynı Kullanıcı başlatma mantığı Ayrıca **açmak**/güvenlik istemlerini **Kaydet** ' e de uygulanır. Daha önce yüklenmiş bir denetimden bir yükseltmeyi temsil etmediği takdirde, ActiveX yükleme iletişim kutuları her zaman bilgi çubuğu altına kaydedilir. Bu ölçümler kullanıcılara daha güvenli, daha denetimli bir kullanıcı deneyimi sağlamak için birleşerek, istenmeyen veya kötü amaçlı yazılım yüklemeleri için bunları tacler eden sitelere karşı koruma sağlar.  
+ Güvenlik Açısından Kritik Metodoloji, gizliliği güvenlik açısından kritik çekirdek haline yükselten WPF *kodunun*düzenlenmesine izin verir ve geri kalanı saydamdır. Güvenlik açısından kritik kodun yalıtılmasını, WPF mühendislik ekibinin standart güvenlik uygulamalarının üstündeve ötesinde ki güvenlik açısından kritik çekirdek üzerinde ek bir güvenlik analizi ve kaynak denetimine odaklanmasını sağlar [(bkz.](wpf-security-strategy-security-engineering.md)  
   
- Bu özellikler ayrıca, ıE6 SP2 kullanan müşterileri, WPF uygulamalarını indirip yüklemelerine izin veren Web sitelerine gözatmaya karşı korur. Bunun nedeni, ıE6 SP2'NIN, WPF dahil olmak üzere hangi teknolojinin kullanıldığı bağımsız olarak kötü amaçlı veya en yüksek uygulamalar yükleyebilme olasılığını azaltan daha iyi bir kullanıcı deneyimi sunmasıdır. WPF, uygulamalarını Internet üzerinden indirmeyi kolaylaştırmak için ClickOnce kullanarak bu korumaların sonuna ekler. XAML tarayıcı uygulamaları (XBAP) bir Internet bölgesi güvenlik korumalı alanı içinde yürütülmesinden, sorunsuz bir şekilde başlatılabilir. Öte yandan, tek başına WPF uygulamaları yürütmek için tam güven gerektirir. Bu uygulamalar için, ClickOnce, uygulamanın ek güvenlik gereksinimlerinin kullanımını bildirmek üzere başlatma işlemi sırasında bir güvenlik iletişim kutusu görüntüler. Ancak, bu kullanıcı tarafından başlatılmış olması gerekir ve Kullanıcı tarafından başlatılan mantığa göre yönetilir ve iptal edilebilir.  
+ .NET Framework'ün, geliştiricilerin (APTCA) ile <xref:System.Security.AllowPartiallyTrustedCallersAttribute> işaretlenmiş ve kullanıcının Genel Derleme Önbelleğine (GAC) dağıtılan yönetilen derlemeler yazmasına izin vererek, güvenilir kodun XBAP Internet bölgesi kum havuzunu genişletmesine izin verdiğini unutmayın. Bir derlemeyi APTCA ile işaretleme, herhangi bir kodun Internet'ten gelen kötü amaçlı kod da dahil olmak üzere bu derlemeyi çağırmasına izin verdiği için son derece hassas bir güvenlik işlemidir. Bunu yaparken çok dikkatli ve en iyi uygulamalar kullanılmalıdır ve kullanıcıların bu yazılımın yüklenmesi için bu yazılıma güvenmeyi seçmeleri gerekir.  
   
- Internet Explorer 7, güvenlik çabalarının bir parçası olarak ıE6 SP2'NIN güvenlik yeteneklerini içerir ve genişletir.  
+## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer Güvenliği  
+ Microsoft Internet Explorer 6 (SP2), güvenlik sorunlarını azaltmanın ve güvenlik yapılandırmalarını basitleştirmenin ötesinde, XAML tarayıcı uygulamaları (XBAPs) kullanıcılarıiçin güvenliği artıran güvenlik geliştirmeleri içeren çeşitli özellikler içerir. Bu özelliklerin itme kullanıcıların tarama deneyimi üzerinde daha fazla kontrol sağlamak için çalışır.  
+  
+ IE6 SP2'den önce, kullanıcılar aşağıdakilerden herhangi biri olabilir:  
+  
+- Rastgele açılır pencereler.  
+  
+- Kafa karıştırıcı komut dosyası yeniden yönlendirmesi.  
+  
+- Bazı Web sitelerinde çok sayıda güvenlik iletişim ilerler.  
+  
+ Bazı durumlarda, güvenilmez Web siteleri, kullanıcı yüklemeyi iptal etmiş [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] olsa bile, yüklemeyi taklit ederek veya microsoft ActiveX yükleme iletişim kutusunu tekrar tekrar göstererek kullanıcıları kandırmaya çalışır. Bu teknikleri kullanarak, kullanıcıların önemli bir kısmı casus yazılım uygulamalarının kurulumu ile sonuçlanan kötü kararlar almak için kandırılmış olabilir.  
+  
+ IE6 SP2, kullanıcı başlatma kavramı etrafında dönen bu tür sorunları azaltmak için çeşitli özellikler içerir. IE6 SP2, kullanıcı *başlatma*olarak bilinen bir eylemden önce bir bağlantıyı veya sayfa öğesini tıklattığında algılar ve benzer bir eylemin bir sayfadaki komut dosyası tarafından tetiklendiğinden farklı davranır. Örnek olarak, IE6 SP2, bir kullanıcının sayfaaçılır pencere oluşturmadan önce bir düğmeyi tıklattığında algıladığını algılayan bir **Açılır Pencere Engelleyici** içerir. Bu, IE6 SP2'nin en zararsız açılır pencerelere izin verirken, kullanıcıların ne istediği ne de istediği açılır pencereleri önlemesini sağlar. Engellenen açılır pencereler, kullanıcının bloğu el ile geçersiz kılmasına ve açılır pencereyi görüntülemesine olanak tanıyan yeni **Bilgi Çubuğu'nun**altında sıkışıp kalır.  
+  
+ Aynı kullanıcı başlatma mantığı,/**Kaydet** **Open**güvenlik istemlerine de uygulanır. ActiveX yükleme iletişim kutuları, önceden yüklenmiş bir denetimden bir yükseltmeyi temsil etmediği sürece her zaman Bilgi Çubuğu'nun altında sıkışıp kalır. Bu önlemler, kullanıcılara istenmeyen veya kötü amaçlı yazılım yüklemeleri için onları rahatsız eden sitelere karşı korundukları için daha güvenli ve daha kontrollü bir kullanıcı deneyimi sağlamak için biraraya gelir.  
+  
+ Bu özellikler, WPF uygulamalarını indirmelerine ve yüklemelerine izin veren web sitelerine göz atmak için IE6 SP2 kullanan müşterileri de korur. Bunun nedeni, IE6 SP2'nin wpf dahil olmak üzere, hangi teknolojinin kullanıldığına bakılmaksızın kullanıcıların kötü amaçlı veya dolambaçlı uygulamalar yükleme şansını azaltan daha iyi bir kullanıcı deneyimi sunmasıdır. WPF, internet üzerinden uygulamalarının karşıdan yüklenmesini kolaylaştırmak için ClickOnce'yi kullanarak bu korumaları ekler. XAML tarayıcı uygulamaları (XBAP'ler) Internet bölgesi güvenlik alanı içinde yürütüldünden, sorunsuz bir şekilde başlatılabilir. Diğer taraftan, bağımsız WPF uygulamaları yürütmek için tam güven gerektirir. Bu uygulamalar için ClickOnce, başlatma işlemi sırasında uygulamanın ek güvenlik gereksinimlerinin kullanımını bildirmek için bir güvenlik iletişim kutusu görüntüler. Ancak, bu kullanıcı tarafından başlatılmalıdır, ayrıca kullanıcı başlatılan mantığı tarafından yönetilir ve iptal edilebilir.  
+  
+ Internet Explorer 7, iE6 SP2'nin güvenlik yeteneklerini sürekli güvenlik taahhüdünün bir parçası olarak birleştirir ve genişletir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod erişim güvenliği](../misc/code-access-security.md)
-- [Security](security-wpf.md)
+- [Kod Erişimi Güvenliği](../misc/code-access-security.md)
+- [Güvenlik](security-wpf.md)
 - [WPF Kısmi Güven Güvenliği](wpf-partial-trust-security.md)
 - [WPF Güvenlik Stratejisi - Güvenlik Mühendisliği](wpf-security-strategy-security-engineering.md)

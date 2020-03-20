@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: 0a7a2475891488d1fdd60f0db4a483c144a73f0d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 563be8494cb84dc74b45985d3ba74e4b6a07eb8a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947840"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182490"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>Nasıl yapılır: Etkin MDI Alt Öğesine Veri Gönderme
-Genellikle, [birden çok belgeli arabirim (MDI) uygulamaları](multiple-document-interface-mdi-applications.md)bağlamında, Kullanıcı panodan VERILERI bir MDI uygulamasına yapıştırılırken olduğu gibi, etkin alt pencereye veri göndermeniz gerekir.  
+Genellikle, [Çoklu Belge Arabirimi (MDI) Uygulamaları](multiple-document-interface-mdi-applications.md)bağlamında, kullanıcı panodaki verileri Bir MDI uygulamasına yapıştırdığında olduğu gibi, etkin alt pencereye veri göndermeniz gerekir.  
   
 > [!NOTE]
-> Hangi alt pencerenin odağa sahip olduğunu doğrulama ve içeriğini panoya gönderme hakkında daha fazla bilgi için bkz. [ETKIN MDI alt öğesini belirleme](how-to-determine-the-active-mdi-child.md).  
+> Hangi alt pencerenin odak noktası olduğunu doğrulamak ve içeriğini Panoya gönderme hakkında bilgi [için](how-to-determine-the-active-mdi-child.md)bkz.  
   
-### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Panodaki etkin MDI alt penceresine veri göndermek için  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Panodan etkin MDI alt penceresine veri göndermek için  
   
-1. Bir yöntem içinde Panodaki metni etkin alt formun etkin denetimine kopyalayın.  
+1. Bir yöntem içinde, Pano'daki metni etkin alt formun etkin denetimine kopyalayın.  
   
     > [!NOTE]
-    > Bu örnek, bir`Form1` <xref:System.Windows.Forms.RichTextBox> denetim içeren bir veya daha fazla MDI alt penceresi olan bir MDI parent formu () olduğunu varsayar. Daha fazla bilgi için bkz. [MDI parent Forms oluşturma](how-to-create-mdi-parent-forms.md).  
+    > Bu örnek, denetim içeren bir veya`Form1`daha fazla MDI alt penceresi <xref:System.Windows.Forms.RichTextBox> olan bir MDI üst formu () olduğunu varsayar. Daha fazla bilgi için Bkz. [MDI Üst Formları Oluşturma.](how-to-create-mdi-parent-forms.md)  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -45,7 +45,7 @@ Genellikle, [birden çok belgeli arabirim (MDI) uygulamaları](multiple-document
              If (Not theBox Is Nothing) Then  
                 ' Create a new instance of the DataObject interface.  
                 Dim data As IDataObject = Clipboard.GetDataObject()  
-                ' If the data is text, then set the text of the   
+                ' If the data is text, then set the text of the
                 ' RichTextBox to the text in the clipboard.  
                 If (data.GetDataPresent(DataFormats.Text)) Then  
                    theBox.SelectedText = data.GetData(DataFormats.Text).ToString()  
@@ -68,22 +68,22 @@ Genellikle, [birden çok belgeli arabirim (MDI) uygulamaları](multiple-document
        // in this example should be a RichTextBox.  
        if (activeChild != null)  
        {  
-          try   
+          try
           {  
              RichTextBox theBox = (RichTextBox)activeChild.ActiveControl;  
              if (theBox != null)  
              {  
                 // Create a new instance of the DataObject interface.  
                 IDataObject data = Clipboard.GetDataObject();  
-                // If the data is text, then set the text of the   
+                // If the data is text, then set the text of the
                 // RichTextBox to the text in the clipboard.  
                 if (data.GetDataPresent(DataFormats.Text))  
                 {  
-                   theBox.SelectedText = data.GetData(DataFormats.Text).ToString();                 
+                   theBox.SelectedText = data.GetData(DataFormats.Text).ToString();
                 }  
              }  
           }  
-          catch   
+          catch
           {  
              MessageBox.Show("You need to select a RichTextBox.");  
           }  
@@ -93,8 +93,8 @@ Genellikle, [birden çok belgeli arabirim (MDI) uygulamaları](multiple-document
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çok Belgeli Arabirim (MDI) Uygulamaları](multiple-document-interface-mdi-applications.md)
-- [Nasıl yapılır: MDI üst formları oluşturma](how-to-create-mdi-parent-forms.md)
-- [Nasıl yapılır: MDI alt formları oluşturma](how-to-create-mdi-child-forms.md)
-- [Nasıl yapılır: Etkin MDI alt öğesini belirleme](how-to-determine-the-active-mdi-child.md)
-- [Nasıl yapılır: MDI alt formlarını düzenleme](how-to-arrange-mdi-child-forms.md)
+- [Çoklu Belge Arabirimi (MDI) Uygulamaları](multiple-document-interface-mdi-applications.md)
+- [Nasıl yapılır: MDI Üst Formları Oluşturma](how-to-create-mdi-parent-forms.md)
+- [Nasıl yapılır: MDI Alt Formları Oluşturma](how-to-create-mdi-child-forms.md)
+- [Nasıl yapılır: Etkin MDI Alt Öğesini Belirleme](how-to-determine-the-active-mdi-child.md)
+- [Nasıl yapılır: MDI Alt Formlarını Düzenleme](how-to-arrange-mdi-child-forms.md)

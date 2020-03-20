@@ -1,6 +1,6 @@
 ---
-title: Inhersfrom işlevi (yönetilmeyen API Başvurusu)
-description: Inhersfrom işlevi bir sınıfın veya örneğin belirli bir üst sınıftan türeip türetilmediğini belirler.
+title: DevralmalarFrom işlevi (Yönetilmeyen API Başvurusu)
+description: InheritsFrom işlevi, bir sınıfın veya örneğin belirli bir üst sınıftan türediğini belirler.
 ms.date: 11/06/2017
 api_name:
 - InheritsFrom
@@ -14,60 +14,60 @@ helpviewer_keywords:
 - InheritsFrom function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 6bda63377251e3a208dfb1620896535ccdf8ccd8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c735c01c45beda8a1ba988a5c580e6b04ae46312
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127426"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174946"
 ---
-# <a name="inheritsfrom-function"></a>Inhersfrom işlevi
-Geçerli sınıfın veya örneğin belirtilen bir üst sınıftan türeip türetilmediğini belirler.
+# <a name="inheritsfrom-function"></a>DevralmalarFrom işlevi
+Geçerli sınıfın veya örneğin belirli bir üst sınıftan türetilip türedip türetilemeyeceğini belirler.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
+
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp
 HRESULT InheritsFrom (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
-   [in] LPCWSTR           wszAncestor 
-); 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
+   [in] LPCWSTR           wszAncestor
+);
 ```  
 
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-'ndaki Bu parametre kullanılmıyor.
+[içinde] Bu parametre kullanılmaz.
 
 `ptr`  
-'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
+[içinde] [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine işaretçi.
 
 `wszAncestor`  
-'ndaki Sınıfın adı. `wszAncestor` geçerli bir `LPCWSTR`işaret etmelidir.
+[içinde] Sınıfın adı. `wszAncestor`geçerli `LPCWSTR`bir işaret etmelidir.
 
-## <a name="return-value"></a>Dönüş değeri
+## <a name="return-value"></a>Döndürülen değer
 
-Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
+Bu işlev tarafından döndürülen aşağıdaki değerler *WbemCli.h* üstbilgi dosyasında tanımlanır veya bunları kodunuzdaki sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `WBEM_S_NO_ERROR` | 0 | Geçerli nesne `wszAncestor`devralır.  |
-| `WBEM_S_FALSE` | 1\. | Geçerli nesne `wszAncestor`öğesinden almıyor. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` `null`. |
+| `WBEM_S_FALSE` | 1 | Geçerli nesne ' den `wszAncestor`devralmaz. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor``null`. |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev, [IWbemClassObject:: ınhersfrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) yöntemine bir çağrı kaydırır.
+Bu [işlev, IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) yöntemine bir çağrı yıkıyor.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** WMINet_Utils. IDL  
+ **Üstbilgi:** WMINet_Utils.idl  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)

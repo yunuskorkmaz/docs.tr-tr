@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8d4ff73e-739b-40f6-9349-359fbc99c2f9
 topic_type:
 - apiref
-ms.openlocfilehash: 12c00ed009e0e57436a71aed256b07a58ba68a32
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2ab0c38645a8e5fbd9e71b3c1787e88bfe2c0604
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138344"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176532"
 ---
 # <a name="cor_gc_stats-structure"></a>COR_GC_STATS Yapısı
 Ortak dil çalışma zamanının (CLR) çöp toplama mekanizması hakkında istatistikler sağlar.  
@@ -28,10 +28,10 @@ Ortak dil çalışma zamanının (CLR) çöp toplama mekanizması hakkında ista
   
 ```cpp  
 typedef struct _COR_GC_STATS {  
-    ULONG   Flags;   
+    ULONG   Flags;
     SIZE_T  ExplicitGCCount;  
     SIZE_T  GenCollectionsTaken[3];  
-    SIZE_T  CommittedKBytes;   
+    SIZE_T  CommittedKBytes;
     SIZE_T  ReservedKBytes;  
     SIZE_T  Gen0HeapSizeKBytes;  
     SIZE_T  Gen1HeapSizeKBytes;  
@@ -46,28 +46,28 @@ typedef struct _COR_GC_STATS {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`Flags`|Hangi alan değerlerinin hesaplanacağını ve döndürüleceğini belirtir.|  
-|`ExplicitGCCount`|Dış istek tarafından zorlanan çöp koleksiyonlarının sayısını belirtir.|  
-|`GenCollectionsTaken`|Her nesil için gerçekleştirilen çöp koleksiyonlarının sayısını belirtir.|  
-|`CommittedKBytes`|Tüm yığınlara kaydedilen kilobayt toplam sayısı.|  
-|`ReservedKBytes`|Tüm yığınlara ayrılan toplam kilobayt sayısı.|  
-|`Gen0HeapSizeKBytes`|Kuşak sıfır yığınının kilobayt cinsinden boyutu.|  
-|`Gen1HeapSizeKBytes`|Kuşak-tek yığının kilobayt cinsinden boyutu.|  
-|`Gen2HeapSizeKBytes`|Oluşturma-iki yığının kilobayt cinsinden boyutu.|  
-|`LargeObjectHeapSizeKBytes`|Büyük nesne yığınının kilobayt cinsinden boyutu.|  
-|`KBytesPromotedFromGen0`|Sıfırdan yükseltilen nesnelerin kilobayt cinsinden boyutu. kuşak.|  
-|`KBytesPromotedFromGen1`|Tek nesil bir oluşturma işleminden yükseltilen nesnelerin kilobayt cinsinden boyutu.|  
+|`Flags`|Hangi alan değerlerinin hesaplanıp döndürülmesi gerektiğini gösterir.|  
+|`ExplicitGCCount`|Dış istek tarafından zorlanan çöp toplama sayısını gösterir.|  
+|`GenCollectionsTaken`|Her nesil için gerçekleştirilen çöp toplama sayısını gösterir.|  
+|`CommittedKBytes`|Tüm yığınlarda işlenen toplam kilobayt sayısı.|  
+|`ReservedKBytes`|Tüm yığınlarda ayrılmış toplam kilobayt sayısı.|  
+|`Gen0HeapSizeKBytes`|Kilobaytlıklarda, sıfır kuşağının büyüklüğü.|  
+|`Gen1HeapSizeKBytes`|Kilobaytlıklarda, nesil-bir yığının büyüklüğü.|  
+|`Gen2HeapSizeKBytes`|Kilobaytlıkboyutu, nesil-iki yığın.|  
+|`LargeObjectHeapSizeKBytes`|Büyük nesne yığınının büyüklüğü, kilobaytlar halinde.|  
+|`KBytesPromotedFromGen0`|Kilobaytlarda, sıfır kuşağından nesil bire yükseltilen nesnelerin boyutu.|  
+|`KBytesPromotedFromGen1`|Kilobaytlarda, birinci nesilden ikinci nesile terfi eden nesnelerin boyutu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [ICLRGCManager:: GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) yöntemi, hangi istatistiklerin ayarlanacağını belirlemek için `COR_GC_STATS` yapısının `Flags` alanının bir veya daha fazla [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) numaralandırması değerine ayarlanmasını gerektirir.  
+ [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) yöntemi, `Flags` hangi istatistiklerin ayarlaneceğini belirtmek için `COR_GC_STATS` yapıalanının [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) numaralandırmanın bir veya daha fazla değerine ayarlanmasını gerektirir.  
   
- Aşağıdaki tabloda, bu yapı tarafından sunulan istatistikler iki [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) sabit listesi değeri, `COR_GC_COUNTS` ve `COR_GC_MEMORYUSAGE`eşlenir.  
+ Aşağıdaki tablo, bu yapı tarafından sağlanan istatistikleri iki [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) numaralandırma değeri `COR_GC_COUNTS` ile eşler ve. `COR_GC_MEMORYUSAGE`  
   
-|COR_GC_COUNTS tarafından belirtilen|COR_GC_MEMORYUSAGE tarafından belirtilen|  
+|COR_GC_COUNTS tarafından belirtilir|COR_GC_MEMORYUSAGE tarafından belirtilir|  
 |----------------------------------|---------------------------------------|  
 |`ExplicitGCCount`<br /><br /> `GenCollectionsTaken`|`CommittedKBytes`<br /><br /> `ReservedKBytes`<br /><br /> `Gen0HeapSizeKBytes`<br /><br /> `Gen1HeapSizeKBytes`<br /><br /> `Gen2HeapSizeKBytes`<br /><br /> `LargeObjectHeapSizeKBytes`<br /><br /> `KBytesPromotedFromGen0`<br /><br /> `KBytesPromotedFromGen1`|  
   
- Kullanım örneği aşağıdaki gibidir:  
+ Kullanıma bir örnek aşağıdaki gibidir:  
   
 ```cpp  
 COR_GC_STATS GCStats;  
@@ -76,16 +76,16 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** GCHost. IDL  
+ **Üstbilgi:** GCHost.idl  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MSCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Barındırma Yapıları](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
 - [Otomatik Bellek Yönetimi](../../../standard/automatic-memory-management.md)
-- [Atık Toplama](../../../standard/garbage-collection/index.md)
+- [Çöp Toplama](../../../standard/garbage-collection/index.md)

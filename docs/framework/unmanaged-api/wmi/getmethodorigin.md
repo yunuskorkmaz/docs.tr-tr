@@ -1,6 +1,6 @@
 ---
-title: GetMethodOrigin işlevi (yönetilmeyen API Başvurusu)
-description: GetMethodOrigin işlevi, bir yöntemin bildirildiği sınıfı belirler.
+title: GetMethodOrigin işlevi (Yönetilmeyen API Başvurusu)
+description: GetMethodOrigin işlevi, yöntemin bildirildiği sınıfı belirler.
 ms.date: 11/06/2017
 api_name:
 - GetMethodOrigin
@@ -14,68 +14,68 @@ helpviewer_keywords:
 - GetMethodOrigin function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 1f669d5721a7bd9434f0ce4b1e2290c0633e1b46
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5b4609b6649be875aea7dfcf52ba36b1e98ab7bc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73102537"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176805"
 ---
 # <a name="getmethodorigin-function"></a>GetMethodOrigin işlevi
-Bir yöntemin bildirildiği sınıfı belirler.
+Yöntemin bildirildiği sınıfı belirler.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
+
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetMethodOrigin (
-   [in] int                 vFunc, 
-   [in] IWbemClassObject*   ptr, 
+   [in] int                 vFunc,
+   [in] IWbemClassObject*   ptr,
    [in] LPCWSTR             wszMethodName,
    [out] BSTR*              pstrClassName
-); 
+);
 ```  
 
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-'ndaki Bu parametre kullanılmıyor.
+[içinde] Bu parametre kullanılmaz.
 
 `ptr`  
-'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
+[içinde] [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine işaretçi.
 
 `wszMethodName`  
-'ndaki Sahip sınıfı istenen nesne için yöntemin adı. 
+[içinde] Sahibi sınıfı istenen nesne için yöntemin adı.
 
 `pstrClassName`  
-dışı Yöntemine sahip olan sınıfın adını alır.
+[çıkış] Yöntemin sahibi sınıfın adını alır.
 
-## <a name="return-value"></a>Dönüş değeri
+## <a name="return-value"></a>Döndürülen değer
 
-Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
+Bu işlev tarafından döndürülen aşağıdaki değerler *WbemCli.h* üstbilgi dosyasında tanımlanır veya bunları kodunuzdaki sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Belirtilen yöntem bulunamadı. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir veya daha fazla parametre geçerli değil. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir veya daha fazla parametre geçerli değildir. |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev, [IWbemClassObject:: GetMethodOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) yöntemine bir çağrı kaydırır.
+Bu [işlev, IWbemClassObject::GetMethodOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) yöntemine bir çağrı yıkıyor.
 
-Bir sınıf bir veya daha fazla taban sınıftan Yöntemler devraldığı için, geliştiriciler genellikle belirli bir yöntemin tanımlandığı sınıfı belirleyebilmek ister.
+Bir sınıf yöntemleri bir veya daha fazla temel sınıftan devralabileceğinden, geliştiriciler genellikle belirli bir yöntemin tanımlandığı sınıfı belirlemek ister.
 
-Bu bir `out` parametresi olduğundan, işlev çağrılmadan önce `pstrClassName` parametresi geçerli bir `BSTR` işaret etmelidir; işlev döndüğünde bu işaretçi serbest bırakılmaz.
+Bu `pstrClassName` bir parametre olduğundan, `BSTR` işlev çağrılmadan önce `out` parametre geçerliyi işaret etmemelidir; bu işaretçi işlev döndükten sonra ayrılmaz.
 
 ## <a name="requirements"></a>Gereksinimler  
-**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+**Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** WMINet_Utils. IDL  
+ **Üstbilgi:** WMINet_Utils.idl  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)

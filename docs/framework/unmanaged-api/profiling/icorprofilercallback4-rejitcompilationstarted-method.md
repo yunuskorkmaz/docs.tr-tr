@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 512fdd00-262a-4456-a075-365ef4133c4d
 topic_type:
 - apiref
-ms.openlocfilehash: 81d11c87c9bc970dd5b5c9010023610cea7c0e72
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: be257930ca0fad658afa75d6efa4573d4f888a2b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865200"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177090"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>ICorProfilerCallback4::ReJITCompilationStarted Yöntemi
-Profil oluşturucuyu, Just-In-Time (JıT) derleyicisinin bir işlevi yeniden derlemek için başlatıldığını bildirir.  
+Profil oluşturucuya, tam zamanında (JIT) derleyicinin bir işlevi yeniden derlemeye başladığını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT ReJITCompilationStarted(   
+HRESULT ReJITCompilationStarted(
     [in] FunctionID functionId,  
     [in] ReJITID    rejitId,  
     [in] BOOL       fIsSafeToBlock);  
@@ -36,27 +36,27 @@ HRESULT ReJITCompilationStarted(
   
 ## <a name="parameters"></a>Parametreler  
  `functionId`  
- 'ndaki JıT derleyicisinin yeniden derlenmeye başladığı işlevin KIMLIĞI.  
+ [içinde] JIT derleyicisinin yeniden derlemeye başladığı işlevin kimliği.  
   
  `rejitId`  
- 'ndaki İşlevin yeni sürümünün yeniden derlenmesi KIMLIĞI.  
+ [içinde] İşlevin yeni sürümünün derleme kimliği.  
   
  `fIsSafeToBlock`  
- [in] engellemenin, çalışma zamanının çağıran iş parçacığının bu geri aramadan dönmesini beklemesini sağlamak için `true`; engellemenin çalışma zamanının işlemini etkilemeyeceğini belirten `false`. `true` değeri çalışma zamanına zarar vermez, ancak profil oluşturma sonuçlarını etkileyebilir.  
+ [içinde] `true` engellemenin çalışma zamanının arama iş parçacığının bu geri aramadan dönmesini beklemesine neden olabileceğini belirtmek için; `false` engellemenin çalışma zamanının çalışmasını etkilemeyeceğini belirtmek için. Bir değer `true` çalışma süresine zarar vermez, ancak profil oluşturma sonuçlarını etkileyebilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çalışma zamanının sınıf oluşturucularını işleme biçimi nedeniyle, her bir işlev için birden fazla `ReJITCompilationStarted` ve [ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md) Yöntem çağrısı almak mümkündür. Örneğin, çalışma zamanı A metodunu yeniden dermaya başlar, ancak B sınıfı için sınıf oluşturucusunun çalıştırılması gerekir. Bu nedenle, çalışma zamanı oluşturucuyu B sınıfı için yeniden derler ve çalıştırır. Oluşturucu çalışırken, a yöntemine bir çağrı yapar, bu da Yöntem A 'nın yeniden derlenmesine neden olur. Bu senaryoda, A yönteminin ilk yeniden derlenmesi durdurulur. Ancak, her iki yöntemi de derleme yeniden derleme olayları ile bildirilir.  
+ Çalışma zamanı sınıf oluşturucuları `ReJITCompilationStarted` işleme yolu nedeniyle birden fazla çift ve [ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md) yöntemi her işlev için çağrı almak mümkündür. Örneğin, çalışma zamanı Yöntem A'yı yeniden derlemeye başlar, ancak B sınıfının sınıf oluşturucusu çalıştırılması gerekir. Bu nedenle, çalışma zamanı B sınıfı için oluşturucuyu yeniden derler ve çalıştırır. Oluşturucu çalışırken, A yönteminin yeniden derlenmesine neden olan A yöntemini arar. Bu senaryoda, A yönteminin ilk derlemesi durdurulur. Ancak, her iki yöntem A yeniden derlemek için JIT yeniden derleme olayları ile bildirilir.  
   
- Profil oluşturucular, iki iş parçacığının aynı anda geri çağırma yapmakta olduğu durumlarda JıT yeniden derleme geri çağırmaları dizisini desteklemelidir. Örneğin, bir çağrı `ReJITCompilationStarted`iş parçacığı Bununla birlikte, bir çağrı iş parçacığına [yeniden JITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md), Iş parçacığı B, Iş parçacığı A için `ReJITCompilationStarted` geri ÇAĞRıSıNDAN Işlev kimliğiyle [ICorProfilerCallback:: ExceptionSearchFunctionEnter](icorprofilercallback-exceptionsearchfunctionenter-method.md) yöntemini çağırır. Bir [ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md) çağrısı henüz profil oluşturucu tarafından alınmadığından, işlev kimliğinin henüz geçerli olmaması gerekebilir. Ancak, bu durumda, işlev KIMLIĞI geçerli olur.  
+ Profilciler, iki iş parçacığının aynı anda geri arama yaptığı durumlarda JIT yeniden derleme geri aramalarının sırasını desteklemelidir. Örneğin, iş parçacığı `ReJITCompilationStarted`A çağırır; ancak, iş parçacığı Önce Bir aramaları [ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md), iş parçacığı B aramaları [ICorProfilerCallback çağırır::ExceptionSearchSearchFunctionEnter](icorprofilercallback-exceptionsearchfunctionenter-method.md) iş parçacığı a için `ReJITCompilationStarted` geri arama işlev kimliği ile. [ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md) için bir çağrı henüz profiloluşturucu tarafından alınmamıştı, çünkü işlev kimliği henüz geçerli olmamalıdır görünebilir. Ancak, bu durumda, işlev kimliği geçerlidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf. IDL, CorProf. h  
+ **Üstbilgi:** CorProf.idl, CorProf.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

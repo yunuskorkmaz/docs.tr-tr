@@ -5,104 +5,104 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 5c0c92f40ae60785f780cb573bb7faa77a31f273
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 186ed77594aadab9e3f49ef30e559e159aee1b60
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741784"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180283"
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI Otomasyonda Önbelleğe Alma
 > [!NOTE]
-> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu dokümantasyon, ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıfları kullanmak <xref:System.Windows.Automation> isteyen .NET Framework geliştiricileri için tasarlanmıştır. Hakkında en son [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bilgi için [Bkz. Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
   
- Bu konu, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliklerinin ve denetim desenlerinin önbelleğe alınmasını tanıtır.  
+ Bu konu özellikleri ve [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] denetim desenleri önbelleğe getirin.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], önbelleğe alma işlemi verileri önceden getirme anlamına gelir. Verilere daha sonra çapraz işlem sonrası iletişim olmadan erişilebilir. Önbelleğe alma, genellikle özellikleri ve denetim düzenlerini toplu olarak almak için UI Otomasyonu istemci uygulamaları tarafından kullanılır. Daha sonra bilgiler, gerektiğinde önbellekten alınır. Uygulama, genellikle [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] değiştiği bir şeyi belirten olaylara yanıt olarak önbelleği düzenli olarak güncelleştirir.  
+ In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], önbelleğe alma veri ön alma anlamına gelir. Verilere daha sonra daha fazla çapraz işlem iletişimi olmadan erişilebilir. Önbelleğe alma genellikle Kullanıcı Birleşik UI Automation istemci sürücü uygulamaları tarafından özellikleri ve denetim desenleri toplu olarak almak için kullanılır. Bilgiler daha sonra gerektiğinde önbellekten alınır. Uygulama, genellikle önbelleği, genellikle bir şeyin [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] değiştiğini gösteren olaylara yanıt olarak düzenli olarak güncelleştirir.  
   
- Önbelleğe almanın avantajları, Windows Presentation Foundation (WPF) denetimleri ve sunucu tarafı UI Otomasyon sağlayıcılarının bulunduğu özel denetimlerle görülür. Win32 denetimleri için varsayılan sağlayıcılar gibi istemci tarafı sağlayıcılarına erişirken daha az avantaj vardır.  
+ Önbelleğe almanın yararları en çok Windows Presentation Foundation (WPF) denetimleri ve sunucu tarafındaki Kullanıcı Arabirimi Otomasyon sağlayıcılarına sahip özel denetimlerde fark edilir. Win32 denetimleri için varsayılan sağlayıcılar gibi istemci tarafındaki sağlayıcılara erişirken daha az avantaj elde edilir.  
   
- Önbelleğe alma, uygulama bir <xref:System.Windows.Automation.CacheRequest> etkinleşdiğinde ve sonra bir <xref:System.Windows.Automation.AutomationElement>döndüren herhangi bir yöntemi veya özelliği kullandığında oluşur; Örneğin, <xref:System.Windows.Automation.AutomationElement.FindFirst%2A><xref:System.Windows.Automation.AutomationElement.FindAll%2A>. <xref:System.Windows.Automation.TreeWalker> sınıfının yöntemleri bir istisnadır; önbelleğe alma işlemi, yalnızca bir parametre olarak bir <xref:System.Windows.Automation.CacheRequest> belirtilirse yapılır (örneğin, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>.  
+ Önbelleğe alma, uygulama a'yı <xref:System.Windows.Automation.CacheRequest> etkinleştirdiğinde ve sonra <xref:System.Windows.Automation.AutomationElement>bir yöntem veya özellik kullandığında oluşur; örneğin, <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>. <xref:System.Windows.Automation.AutomationElement.FindAll%2A> <xref:System.Windows.Automation.TreeWalker> Sınıfın yöntemleri bir istisnadır; önbelleğe alma yalnızca <xref:System.Windows.Automation.CacheRequest> a parametresi olarak belirtilirse (örneğin, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>.  
   
- Önbelleğe alma işlemi, bir <xref:System.Windows.Automation.CacheRequest> etkinken bir olaya abone olduğunuzda da oluşur. Olay işleyicinizde bir olayın kaynağı olarak geçirilen <xref:System.Windows.Automation.AutomationElement>, özgün <xref:System.Windows.Automation.CacheRequest>tarafından belirtilen önbelleğe alınmış özellikleri ve desenleri içerir. Olaya abone olduktan sonra <xref:System.Windows.Automation.CacheRequest> yapılan tüm değişiklikler etkisizdir.  
+ Önbelleğe alma, bir <xref:System.Windows.Automation.CacheRequest> olaya abone olduğunuzda da oluşur. Bir <xref:System.Windows.Automation.AutomationElement> olayın kaynağı olarak olay işleyicinize geçirilen önbelleğe alınmış özellikleri ve <xref:System.Windows.Automation.CacheRequest>desenleri özgün tarafından belirtilen içerir. Etkinliğe abone <xref:System.Windows.Automation.CacheRequest> olduktan sonra yapılan değişikliklerin hiçbir etkisi yoktur.  
   
- Öğenin [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri ve Denetim desenleri önbelleğe alınabilir.  
+ Bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] öğenin özellikleri ve denetim desenleri önbelleğe alınabilir.  
   
-<a name="Options_for_Caching"></a>   
-## <a name="options-for-caching"></a>Önbelleğe alma seçenekleri  
- <xref:System.Windows.Automation.CacheRequest>, önbelleğe alma için aşağıdaki seçenekleri belirtir.  
+<a name="Options_for_Caching"></a>
+## <a name="options-for-caching"></a>Önbelleğe Alma Seçenekleri  
+ Önbelleğe <xref:System.Windows.Automation.CacheRequest> alma için aşağıdaki seçenekleri belirtir.  
   
-<a name="Properties_to_Cache"></a>   
-### <a name="properties-to-cache"></a>Önbelleğe eklenecek özellikler  
- İsteği etkinleştirmeden önce her bir özellik için <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationProperty%29> çağırarak önbelleğe almak için özellikleri belirtebilirsiniz.  
+<a name="Properties_to_Cache"></a>
+### <a name="properties-to-cache"></a>Önbellek özellikleri  
+ İsteği etkinleştirmeden önce <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationProperty%29> her özellik için çağrıda bulunarak önbelleğe özellikleri belirtebilirsiniz.  
   
-<a name="Control_Patterns_to_Cache"></a>   
-### <a name="control-patterns-to-cache"></a>Önbelleğe almak için Denetim desenleri  
- İsteği etkinleştirmeden önce her bir desen için <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationPattern%29> çağırarak, önbelleğe almak için Denetim desenleri belirtebilirsiniz. Bir model önbelleğe alındığında, özellikleri otomatik olarak önbelleğe alınmaz; <xref:System.Windows.Automation.CacheRequest.Add%2A?displayProperty=nameWithType>kullanarak, önbelleğe alınmasını istediğiniz özellikleri belirtmeniz gerekir.  
+<a name="Control_Patterns_to_Cache"></a>
+### <a name="control-patterns-to-cache"></a>Önbelleğe Denetim Desenleri  
+ İsteği etkinleştirmeden önce her <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationPattern%29> desen için çağrıda bulunarak önbelleğe almak için denetim desenleri belirtebilirsiniz. Bir desen önbelleğe alındığunda, özellikleri otomatik olarak önbelleğe alınmaz; kullanarak <xref:System.Windows.Automation.CacheRequest.Add%2A?displayProperty=nameWithType>önbelleğe alınmasını istediğiniz özellikleri belirtmeniz gerekir.  
   
-<a name="Scope_of_the_Caching"></a>   
-### <a name="scope-and-filtering-of-caching"></a>Önbelleğe almayı kapsam ve filtreleme  
- İsteği etkinleştirmeden önce <xref:System.Windows.Automation.CacheRequest.TreeScope%2A?displayProperty=nameWithType> özelliğini ayarlayarak, özelliklerini ve desenlerini önbelleğe almak istediğiniz öğeleri belirtebilirsiniz. Kapsam, istek etkinken alınan öğelere görelidir. Örneğin, yalnızca <xref:System.Windows.Automation.TreeScope.Children>ayarlarsanız ve sonra bir <xref:System.Windows.Automation.AutomationElement>alırsanız, bu öğenin alt öğelerinin özellikleri ve desenleri önbelleğe alınır, ancak öğenin kendisidir. Alınan öğenin kendisi için önbelleğe alma işleminin yapıldığından emin olmak için, <xref:System.Windows.Automation.TreeScope.Element> <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> özelliğine dahil etmeniz gerekir. Kapsamı <xref:System.Windows.Automation.TreeScope.Parent> veya <xref:System.Windows.Automation.TreeScope.Ancestors>olarak ayarlamak mümkün değildir. Ancak, bir alt öğe önbelleğe alındığında bir üst öğe önbelleğe alınabilir; bkz. bu konuda önbelleğe alınmış alt öğeleri ve üst öğeleri alma.  
+<a name="Scope_of_the_Caching"></a>
+### <a name="scope-and-filtering-of-caching"></a>Önbelleğe Alma kapsamı ve Filtreleme  
+ İsteği etkinleştirmeden önce <xref:System.Windows.Automation.CacheRequest.TreeScope%2A?displayProperty=nameWithType> özelliği ayarlayarak önbelleğe almak istediğiniz öğeleri ve desenleri belirtebilirsiniz. Kapsam, istek etkinken alınan öğelerle görecelidir. Örneğin, yalnızca <xref:System.Windows.Automation.TreeScope.Children>, ve sonra bir <xref:System.Windows.Automation.AutomationElement>, bu öğenin çocukların özellikleri ve desenleri alırsanız önbelleğe alınır, ancak öğenin kendisi değil. Önbelleğe alma özelliğinin kendisi için yapıldığından emin <xref:System.Windows.Automation.TreeScope.Element> olmak <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> için, özelliğe eklemeniz gerekir. Kapsamı ayarlamak mümkün değildir <xref:System.Windows.Automation.TreeScope.Parent> veya <xref:System.Windows.Automation.TreeScope.Ancestors>. Ancak, bir alt öğe önbelleğe alındığında bir üst öğe önbelleğe alınabilir; bkz. Önbelleğe Alınmış Çocuk ve Ebeveynleri bu konuda alma.  
   
- Önbelleğe almanın kapsamı <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A?displayProperty=nameWithType> özelliğinden da etkilenir. Varsayılan olarak, önbelleğe alma yalnızca [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının denetim görünümünde görünen öğeler için gerçekleştirilir. Ancak, bu özelliği, tüm öğelere önbelleğe alma uygulamak veya yalnızca içerik görünümünde görünen öğelere dönüştürmek için değiştirebilirsiniz.  
+ Önbelleğe alma nın boyutu <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A?displayProperty=nameWithType> da özellikten etkilenir. Varsayılan olarak, önbelleğe alma yalnızca [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacın denetim görünümünde görünen öğeler için gerçekleştirilir. Ancak, önbelleğe alma özelliğini tüm öğelere veya yalnızca içerik görünümünde görünen öğelere uygulamak için değiştirebilirsiniz.  
   
-<a name="Strength_of_the_Element_References"></a>   
-### <a name="strength-of-the-element-references"></a>Öğe başvurularının gücü  
- Bir <xref:System.Windows.Automation.AutomationElement>aldığınızda, varsayılan olarak, önbelleğe alınmamış olanlar dahil olmak üzere, bu öğenin tüm özelliklerine ve desenlerine erişebilirsiniz. Ancak, daha fazla verimlilik için, öğe başvurusunun, <xref:System.Windows.Automation.CacheRequest> <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> özelliğini <xref:System.Windows.Automation.AutomationElementMode.None>olarak ayarlayarak, yalnızca önbelleğe alınmış verilere başvurduğunu belirtebilirsiniz. Bu durumda, önbelleğe alınmamış özelliklere ve alınan öğelerin desenlerine erişiminiz yok. Bu, <xref:System.Windows.Automation.AutomationElement> veya herhangi bir denetim deseninin <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> veya `Current` özelliği aracılığıyla herhangi bir özelliğe erişemeyeceğiniz anlamına gelir; ya da <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> ya da <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>kullanarak bir model elde edebilirsiniz. Önbelleğe alınmış desenler ' de, <xref:System.Windows.Automation.SelectionPattern.SelectionPatternInformation.GetSelection%2A?displayProperty=nameWithType>gibi dizi özelliklerini alan yöntemler çağırabilirsiniz, ancak <xref:System.Windows.Automation.InvokePattern.Invoke%2A?displayProperty=nameWithType>gibi denetim üzerinde herhangi bir eylem gerçekleştirmez.  
+<a name="Strength_of_the_Element_References"></a>
+### <a name="strength-of-the-element-references"></a>Element Referanslarının Gücü  
+ Bir <xref:System.Windows.Automation.AutomationElement>, varsayılan olarak aldığınızda, önbelleğe alınmamış olanlar da dahil olmak üzere, bu öğenin tüm özelliklerine ve desenlerine erişebilirsiniz. Ancak, daha fazla verimlilik için öğeye yapılan başvurunun yalnızca önbelleğe <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> alınmış verileri <xref:System.Windows.Automation.CacheRequest> <xref:System.Windows.Automation.AutomationElementMode.None>ifade ettiğini belirtebilirsiniz. Bu durumda, önbelleğe alınmayan özelliklere ve alınan öğelerin desenlerine erişiminiz yoktur. Bu, herhangi bir özelliğe <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> veya `Current` herhangi <xref:System.Windows.Automation.AutomationElement> bir denetim deseninin özelliğine erişemeyeceğiniz anlamına gelir; ne de kullanarak <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> bir desen <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>alabilirsiniz ya da . Önbelleğe alınan desenlerde, dizi özelliklerini alan, <xref:System.Windows.Automation.SelectionPattern.SelectionPatternInformation.GetSelection%2A?displayProperty=nameWithType>ancak denetimde <xref:System.Windows.Automation.InvokePattern.Invoke%2A?displayProperty=nameWithType>eylem gerçekleştiren yöntemleri çağıramazsınız.  
   
- Nesnelere tam başvurular gerektirebilecek bir uygulama örneği, bir penceredeki öğelerin <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> ve <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> özelliklerini önceden ve <xref:System.Windows.Automation.AutomationElement> nesneleri için gerekli olmayan bir ekran okuyucudur.  
+ Nesnelere tam başvuru gerekmeyen bir uygulama örneği, bir penceredeki <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> öğelerin <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> ve özelliklerinin önceden alınıp, nesnelerin kendilerine ihtiyaç duymayacağı <xref:System.Windows.Automation.AutomationElement> bir ekran okuyucudur.  
   
-<a name="Activating_the_CacheRequest"></a>   
-## <a name="activating-the-cacherequest"></a>CacheRequest etkinleştiriliyor  
- Önbelleğe alma yalnızca, geçerli iş parçacığı için bir <xref:System.Windows.Automation.CacheRequest> etkinken <xref:System.Windows.Automation.AutomationElement> nesneleri alındığında gerçekleştirilir. <xref:System.Windows.Automation.CacheRequest>etkinleştirmenin iki yolu vardır.  
+<a name="Activating_the_CacheRequest"></a>
+## <a name="activating-the-cacherequest"></a>Önbellek İsteğini Etkinleştirme  
+ Önbelleğe alma <xref:System.Windows.Automation.AutomationElement> işlemi yalnızca geçerli iş <xref:System.Windows.Automation.CacheRequest> parçacığı için etkin iken nesneler alınırken gerçekleştirilir. Bir <xref:System.Windows.Automation.CacheRequest>' yi etkinleştirmenin iki yolu vardır.  
   
- Her zamanki yol <xref:System.Windows.Automation.CacheRequest.Activate%2A>çağırmanız olur. Bu yöntem <xref:System.IDisposable>uygulayan bir nesne döndürür. <xref:System.IDisposable> nesnesi mevcut olduğu sürece istek etkin kalır. Nesnenin ömrünü denetlemek için en kolay yol, çağrıyı bir `using` (C#) veya `Using` (Visual Basic) bloğunun içine kullanmaktır. Bu, bir özel durum oluşsa bile, isteğin yığından ortaya çıkarılmasını sağlar.  
+ Her zamanki gibi <xref:System.Windows.Automation.CacheRequest.Activate%2A>aramaktır. Bu yöntem, uygulayan bir <xref:System.IDisposable>nesne döndürür. <xref:System.IDisposable> Nesne var olduğu sürece istek etkin kalır. Nesnenin kullanım ömrünü denetlemenin en kolay yolu, aramayı `using` (C#) `Using` veya (Visual Basic) bloğuna içine almaktır. Bu, bir özel durum yükseltilse bile isteğin yığından atılmasını sağlar.  
   
- Önbellek isteklerini iç içe aktarmak istediğinizde yararlı olan başka bir yol da <xref:System.Windows.Automation.CacheRequest.Push%2A>çağırıladır. Bu, isteği bir yığına koyar ve etkinleştirir. <xref:System.Windows.Automation.CacheRequest.Pop%2A>tarafından yığından kaldırılana kadar istek etkin kalır. Yığın üzerine başka bir istek itilmesi durumunda istek geçici olarak devre dışı olur; yalnızca Yığındaki en üstteki istek etkindir.  
+ Önbellek isteklerini yuvalamak istediğinizde yararlı olan başka <xref:System.Windows.Automation.CacheRequest.Push%2A>bir yol da. Bu, isteği bir yığına koyar ve etkinleştirir. İstek, yığından kaldırılına kadar etkin <xref:System.Windows.Automation.CacheRequest.Pop%2A>kalır. Başka bir istek yığına itilirse istek geçici olarak etkin değil olur; yığındaki yalnızca üst istek etkindir.  
   
-<a name="Retrieving_Cached_Properties"></a>   
-## <a name="retrieving-cached-properties"></a>Önbelleğe alınmış Özellikler alınıyor  
+<a name="Retrieving_Cached_Properties"></a>
+## <a name="retrieving-cached-properties"></a>Önbelleğe Alınmış Özellikleri Alma  
  Aşağıdaki yöntemler ve özellikler aracılığıyla bir öğenin önbelleğe alınmış özelliklerini alabilirsiniz.  
   
 - <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
 - <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
   
- İstenen özellik önbellekte değilse bir özel durum oluşur.  
+ İstenen özellik önbellekte değilse bir özel durum yükseltilir.  
   
- <xref:System.Windows.Automation.AutomationElement.Current%2A>gibi <xref:System.Windows.Automation.AutomationElement.Cached%2A>, tek tek özellikleri bir yapının üyesi olarak kullanıma sunar. Ancak, bu yapıyı almanız gerekmez; tek tek özelliklere doğrudan erişebilirsiniz. Örneğin, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> özelliği, `element` bir <xref:System.Windows.Automation.AutomationElement>olduğu `element.Cached.Name`elde edilebilir.  
+ <xref:System.Windows.Automation.AutomationElement.Cached%2A>, <xref:System.Windows.Automation.AutomationElement.Current%2A>gibi, bir yapının üyeleri olarak tek tek özellikleri ortaya çıkarır. Ancak, bu yapıyı almanız gerekmez; tek tek özelliklere doğrudan erişebilirsiniz. Örneğin, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> özellik elde edilebilir `element.Cached.Name`, `element` nerede <xref:System.Windows.Automation.AutomationElement>bir .  
   
-<a name="Retrieving_Cached_Control_Patterns"></a>   
-## <a name="retrieving-cached-control-patterns"></a>Önbelleğe alınmış denetim desenlerini alma  
- Bir öğenin önbelleğe alınmış denetim desenlerini aşağıdaki yöntemlerle alabilirsiniz.  
+<a name="Retrieving_Cached_Control_Patterns"></a>
+## <a name="retrieving-cached-control-patterns"></a>Önbelleğe Alınmış Kontrol Desenlerini Alma  
+ Aşağıdaki yöntemlerle bir öğenin önbelleğe alınmış denetim desenleri alabilirsiniz.  
   
 - <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
   
 - <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
   
- Desenler önbellekte değilse, <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> bir özel durum harekete geçirir ve <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> `false`döndürür.  
+ Desen önbellekte değilse, <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> bir özel durum <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> yükseltir `false`ve döndürür.  
   
- Bir denetim deseninin önbelleğe alınmış özelliklerini, model nesnesinin `Cached` özelliğini kullanarak elde edebilirsiniz. Ayrıca, `Current` özelliği aracılığıyla geçerli değerleri alabilirsiniz, ancak yalnızca <xref:System.Windows.Automation.AutomationElement> alındığında <xref:System.Windows.Automation.AutomationElementMode.None> belirtilmemişse. (<xref:System.Windows.Automation.AutomationElementMode.Full> varsayılan değerdir ve bu, geçerli değerlere erişime izin verir.)  
+ Desen nesnesinin `Cached` özelliğini kullanarak bir denetim deseninin önbelleğe alınmış özelliklerini alabilirsiniz. Ayrıca, yalnızca ne zaman `Current` <xref:System.Windows.Automation.AutomationElementMode.None> <xref:System.Windows.Automation.AutomationElement> alındığı belirtilmemişse, özellik üzerinden geçerli değerleri de alabilirsiniz. (<xref:System.Windows.Automation.AutomationElementMode.Full> varsayılan değerdir ve bu geçerli değerlere erişime izin verir.)  
   
-<a name="Retrieving_Cached_Children_and_Parents"></a>   
-## <a name="retrieving-cached-children-and-parents"></a>Önbelleğe alınmış alt öğeler ve ebeveynler alınıyor  
- Bir <xref:System.Windows.Automation.AutomationElement> alıp, bu öğenin alt öğeleri için isteğin <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> özelliği aracılığıyla önbelleğe alma isteği aldığınızda, daha sonra, aldığınız öğenin <xref:System.Windows.Automation.AutomationElement.CachedChildren%2A> özelliğinden alt öğeleri almak mümkündür.  
+<a name="Retrieving_Cached_Children_and_Parents"></a>
+## <a name="retrieving-cached-children-and-parents"></a>Önbelleğe Alınmış Çocuk ve Ebeveynlerin Alınması  
+ İsteğin <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> özelliği aracılığıyla bu öğenin alt öğeleri için bir önbelleğe alma ve istekte bulunduğunuzda, daha sonra alt öğeleri aldığınız öğenin <xref:System.Windows.Automation.AutomationElement.CachedChildren%2A> özelliğinden almak mümkündür.  
   
- <xref:System.Windows.Automation.TreeScope.Element>, önbellek isteğinin kapsamına dahil edilmişse, isteğin kök öğesi bundan sonra alt öğelerin herhangi birinin <xref:System.Windows.Automation.AutomationElement.CachedParent%2A> özelliğinden kullanılabilir.  
+ Önbellek isteği kapsamına dahil edildiyse, <xref:System.Windows.Automation.TreeScope.Element> isteğin kök öğesi daha sonra <xref:System.Windows.Automation.AutomationElement.CachedParent%2A> alt öğelerden herhangi birinin özelliğinden kullanılabilir.  
   
 > [!NOTE]
-> İsteğin kök öğesinin üst öğelerini veya üst öğelerini önbelleğe alamaz.  
+> İstek kök öğesinin ebeveynleri veya atalarını önbelleğe alamazsınız.  
   
-<a name="Updating_the_Cache"></a>   
-## <a name="updating-the-cache"></a>Önbellek güncelleştiriliyor  
- Önbellek yalnızca [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]hiçbir değişiklik olmadığı sürece geçerlidir. Uygulamanız, genellikle olaylara yanıt olarak önbelleğin güncelleştirilmesinden sorumludur.  
+<a name="Updating_the_Cache"></a>
+## <a name="updating-the-cache"></a>Önbelleği Güncelleştirme  
+ Önbellek yalnızca hiçbir şey değişmediği sürece [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]geçerlidir. Uygulamanız genellikle olaylara yanıt olarak önbelleği güncelleştirmekten sorumludur.  
   
- Bir <xref:System.Windows.Automation.CacheRequest> etkinken bir olaya abone olduğunuzda, olay işleyicisi temsilciniz her çağrıldığında etkinliğin kaynağı olarak güncelleştirilmiş bir önbellek ile <xref:System.Windows.Automation.AutomationElement> elde edersiniz. Ayrıca, <xref:System.Windows.Automation.AutomationElement.GetUpdatedCache%2A>çağırarak bir öğe için önbelleğe alınmış bilgileri güncelleştirebilirsiniz. Daha önce önbelleğe alınmış tüm bilgileri güncelleştirmek için özgün <xref:System.Windows.Automation.CacheRequest> geçirebilirsiniz.  
+ Etkin <xref:System.Windows.Automation.CacheRequest> ken bir olaya abone olursanız, <xref:System.Windows.Automation.AutomationElement> olay işleyicitemsilciniz çağrıldığında olayın kaynağı olarak güncelleştirilmiş bir önbellek elde elabilirsiniz. Önbelleğe alınan bilgileri de arayarak <xref:System.Windows.Automation.AutomationElement.GetUpdatedCache%2A>bir öğenin önbelleğe alınmış bilgilerini güncelleştirebilirsiniz. Daha önce önbelleğe alınmış tüm bilgileri güncelleştirmek için orijinalini <xref:System.Windows.Automation.CacheRequest> geçirebilirsiniz.  
   
- Önbelleğin güncelleştirilmesi, varolan <xref:System.Windows.Automation.AutomationElement> başvurularının özelliklerini değiştirmez.  
+ Önbelleğe göre güncelleştirilme, varolan <xref:System.Windows.Automation.AutomationElement> başvuruların özelliklerini değiştirmez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İstemciler İçin UI Otomasyonu Olayları](ui-automation-events-for-clients.md)
 - [UI Otomasyonunda Önbelleğe Almayı Kullanma](use-caching-in-ui-automation.md)
-- [FetchTimer örneği](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))
+- [FetchTimer Örnek](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))
