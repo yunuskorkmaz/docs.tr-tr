@@ -1,18 +1,18 @@
 ---
 ms.openlocfilehash: fc315faef750d93d914104dd568078aa3fc430d4
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "72887850"
 ---
-### <a name="rsacngverifyhash-now-returns-false-for-any-verification-failure"></a>RSACng. VerifyHash şimdi herhangi bir doğrulama hatası için yanlış değer döndürüyor
+### <a name="rsacngverifyhash-now-returns-false-for-any-verification-failure"></a>RSACng.VerifyHash şimdi herhangi bir doğrulama hatası için False döndürür
 
 |   |   |
 |---|---|
-|Ayrıntılar|.NET Framework 4.6.2 başlayarak, bu yöntem imza hatalı biçimlendirildiyse **false** değerini döndürür. Artık herhangi bir doğrulama hatası için yanlış döndürür. .NET Framework 4,6 ve 4.6.1 içinde, imza kötü biçimlenir ise Yöntem bir <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> oluşturur.|
-|Öneri|Yürütmesi <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> işlemeye bağlı olan tüm kodlar, doğrulama başarısız olursa ve Yöntem **false**döndürürse yürütülür.|
+|Ayrıntılar|.NET Framework 4.6.2 ile başlayarak, imzanın kendisi kötü biçimlendirilmişse bu yöntem **False** döndürür. Şimdi herhangi bir doğrulama hatası için yanlış döndürür. .NET Framework 4.6 ve 4.6.1'de, <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> imzanın kendisi kötü biçimlendirilmişse yöntem bir yöntem atar.|
+|Öneri|Yürütme işleme bağlıdır herhangi bir <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> kod doğrulama başarısız olursa ve yöntem **False**döndürür yerine yürütme gerekir .|
 |Kapsam|İkincil|
-|Version|4.6.2|
-|Tür|Çalışma zamanı|
+|Sürüm|4.6.2|
+|Tür|Çalışma Zamanı|
 |Etkilenen API’ler|<ul><li><xref:System.Security.Cryptography.RSACng.VerifyHash(System.Byte[],System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)?displayProperty=nameWithType></li></ul>|

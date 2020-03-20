@@ -11,39 +11,39 @@ ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d0025ba136698c0a74a73e64a83fa4f526e44843
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: b0e0053816efde349c7e4d13d03bef5f8801c667
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736488"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78849386"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Nasıl yapılır: Mevcut Windows Formları Denetimlerinden Devralma
 
-Varolan bir denetimin işlevselliğini genişletmek istiyorsanız, devralma yoluyla var olan bir denetimden türetilmiş bir denetim oluşturabilirsiniz. Var olan bir denetimden devralınırken, bu denetimin tüm işlevselliğini ve görsel özelliklerini devralırsınız. Örneğin, <xref:System.Windows.Forms.Button>devralınan bir denetim oluşturuyorsanız, yeni denetiminiz standart bir <xref:System.Windows.Forms.Button> denetimi gibi görünür ve aynı şekilde davranır. Daha sonra özel yöntemlerin ve özelliklerin uygulanmasıyla yeni denetiminizin işlevselliğini genişletebilir veya değiştirebilirsiniz. Bazı denetimlerde, <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemini geçersiz kılarak devralınmış denetiminizin görsel görünümünü de değiştirebilirsiniz.
+Varolan bir denetimin işlevselliğini genişletmek istiyorsanız, devralma yoluyla varolan denetimden türetilen bir denetim oluşturabilirsiniz. Varolan bir denetimden devralırken, bu denetimin tüm işlevselliğini ve görsel özelliklerini devralırsınız. Örneğin, devralınan bir denetim <xref:System.Windows.Forms.Button>oluşturuyorsanız, yeni denetiminiz tam olarak standart <xref:System.Windows.Forms.Button> bir denetim gibi görünür ve hareket eder. Daha sonra özel yöntemler ve özellikler uygulanması yoluyla yeni denetimişlevselliğini genişletmek veya değiştirmek olabilir. Bazı denetimlerde, <xref:System.Windows.Forms.Control.OnPaint%2A> metodunu geçersiz kılarak devralınan denetiminizin görsel görünümünü de değiştirebilirsiniz.
 
 ## <a name="to-create-an-inherited-control"></a>Devralınan bir denetim oluşturmak için
 
-1. Visual Studio 'da yeni bir **Windows Forms uygulama** projesi oluşturun.
+1. Visual Studio'da yeni bir **Windows Forms Application** projesi oluşturun.
 
-1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
+1. **Proje** menüsünden **Yeni Öğe Ekle'yi**seçin.
 
     **Yeni Öğe Ekle** iletişim kutusu görünür.
 
-1. **Yeni öğe Ekle** Iletişim kutusunda **özel denetim ' e**çift tıklayın.
+1. Yeni **Öğe Ekle** iletişim kutusunda, **Özel Denetim'i**çift tıklatın.
 
     Projenize yeni bir özel denetim eklenir.
 
-1. Şunu kullanıyorsanız:
+1. Kullanıyorsanız:
 
-    - Visual Basic, **Çözüm Gezgini**üst kısmında **tüm dosyaları göster**' e tıklayın. CustomControl1. vb öğesini genişletin ve ardından kod düzenleyicisinde CustomControl1. Designer. vb dosyasını açın.
-    - C#, kod düzenleyicisinde CustomControl1.cs öğesini açın.
+    - Visual Basic, Çözüm **Gezgini'nin**en üstünde, **Tüm Dosyaları Göster'i**tıklatın. CustomControl1.vb'i genişletin ve ardından Code Editor'da CustomControl1.Designer.vb'yi açın.
+    - C#, Kod Düzenleyicisi'nde CustomControl1.cs açın.
 
-1. <xref:System.Windows.Forms.Control>devralan sınıf bildirimini bulun.
+1. 'den <xref:System.Windows.Forms.Control>devralınan sınıf bildirimini bulun
 
-1. Taban sınıfını, devralması istediğiniz denetim olarak değiştirin.
+1. Taban sınıfı devralmak istediğiniz denetimle değiştirin.
 
-     Örneğin, <xref:System.Windows.Forms.Button>devralma yapmak istiyorsanız, sınıf bildirimini aşağıdaki şekilde değiştirin:
+     Örneğin, devralmak <xref:System.Windows.Forms.Button>istiyorsanız, sınıf bildirimini aşağıdakiyle değiştirin:
 
     ```vb
     Partial Class CustomControl1
@@ -54,14 +54,14 @@ Varolan bir denetimin işlevselliğini genişletmek istiyorsanız, devralma yolu
     public partial class CustomControl1 : System.Windows.Forms.Button
     ```
 
-1. Visual Basic kullanıyorsanız, CustomControl1. Designer. vb dosyasını kaydedin ve kapatın. Kod Düzenleyicisi 'nde CustomControl1. vb dosyasını açın.
+1. Visual Basic kullanıyorsanız, CustomControl1.Designer.vb kaydedin ve kapatın. Code Editor'da CustomControl1.vb'i açın.
 
-1. Denetiminizin dahil olacağı özel yöntemleri veya özellikleri uygulayın.
+1. Denetiminizin dahil edeceği özel yöntemler veya özellikler uygulayın.
 
-1. Denetiminizin grafik görünümünü değiştirmek istiyorsanız <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemini geçersiz kılın.
+1. Denetiminizin grafik görünümünü değiştirmek istiyorsanız, <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi geçersiz kılın.
 
     > [!NOTE]
-    > <xref:System.Windows.Forms.Control.OnPaint%2A> geçersiz kılmak tüm denetimlerin görünümünü değiştirmenize izin vermez. Tüm boyalarını Windows tarafından gerçekleştirilen (örneğin, <xref:System.Windows.Forms.TextBox>) denetimler hiçbir şekilde <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemini çağırmaz ve bu nedenle özel kodu hiçbir şekilde kullanmaz. <xref:System.Windows.Forms.Control.OnPaint%2A> yönteminin kullanılabilir olup olmadığını görmek için değiştirmek istediğiniz belirli denetim için yardım belgelerine başvurun. Tüm Windows form denetimlerinin listesi için bkz. [Windows Forms Için kullanılacak denetimler](controls-to-use-on-windows-forms.md). Bir denetimin üye yöntemi olarak listelenen <xref:System.Windows.Forms.Control.OnPaint%2A> yoksa, bu yöntemi geçersiz kılarak görünümünü değiştiremezsiniz. Özel boyama hakkında daha fazla bilgi için bkz. [özel denetim boyama ve işleme](custom-control-painting-and-rendering.md).
+    > Geçersiz <xref:System.Windows.Forms.Control.OnPaint%2A> kılma, tüm denetimlerin görünümünü değiştirmenize izin vermez. Tüm resimlerini Windows tarafından yapılan bu denetimler <xref:System.Windows.Forms.TextBox>(örneğin,) asla kendi yöntemlerini <xref:System.Windows.Forms.Control.OnPaint%2A> aramaz ve bu nedenle özel kodu asla kullanmaz. <xref:System.Windows.Forms.Control.OnPaint%2A> Yöntemin kullanılabilir olup olmadığını görmek için değiştirmek istediğiniz özel denetim için Yardım belgelerine bakın. Tüm Windows Form Denetimlerinin listesi için [Windows Formlarında Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)bölümüne bakın. Denetim üye yöntemi <xref:System.Windows.Forms.Control.OnPaint%2A> olarak listelenmemişse, bu yöntemi geçersiz kılarak görünümünü değiştiremezsiniz. Özel boyama hakkında daha fazla bilgi için [Bkz. Özel Denetim Boyama ve Oluşturma.](custom-control-painting-and-rendering.md)
 
     ```vb
     Protected Overrides Sub OnPaint(ByVal e As _
@@ -83,7 +83,7 @@ Varolan bir denetimin işlevselliğini genişletmek istiyorsanız, devralma yolu
     }
     ```
 
-1. Denetiminizi kaydedin ve test edin.
+1. Kaydedin ve kontrol test edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -91,5 +91,5 @@ Varolan bir denetimin işlevselliğini genişletmek istiyorsanız, devralma yolu
 - [Nasıl yapılır: Denetim Sınıfından Devralma](how-to-inherit-from-the-control-class.md)
 - [Nasıl yapılır: UserControl Sınıfından Devralma](how-to-inherit-from-the-usercontrol-class.md)
 - [Nasıl yapılır: Windows Forms için Denetimler Yazma](how-to-author-controls-for-windows-forms.md)
-- [Visual Basic devralınan olay Işleyicileriyle ilgili sorunları giderme](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [İzlenecek yol: Windows Forms denetiminden devralma](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Visual Basic'de Devralınmış Olay İşleyicileri İle İlgili Sorun Giderme](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Walkthrough: Windows Forms Denetiminden Devralma](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

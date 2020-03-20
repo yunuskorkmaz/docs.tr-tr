@@ -9,16 +9,16 @@ helpviewer_keywords:
 - certificates, Software Publisher's Certificate
 ms.assetid: be434d7d-9c0d-46e7-8392-58a9b542d11d
 ms.openlocfilehash: 809b7d0383f172a5fbcb2ac4ac3ffb96ff0b8e20
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73129880"
 ---
 # <a name="cert2spcexe-software-publisher-certificate-test-tool"></a>Cert2spc.exe (Yazılım Yayımcısı Sertifika Test Aracı)
-Yazılım Yayımcı Sertifikası Test aracı, bir veya daha fazla X.509 sertifikasından bir Yazılım Yayımcısı Sertifikası (SPC) oluşturur. Cert2spc.exe, yalnızca test amaçlıdır. VeriSign ya da Thawte gibi bir Sertifika Yetkilisi'nden geçerli bir SPC edinebilirsiniz. X. 509.952 sertifikaları oluşturma hakkında daha fazla bilgi için bkz. [MakeCert. exe (sertifika oluşturma aracı)](/windows/desktop/SecCrypto/makecert).  
+Yazılım Yayımcı Sertifikası Test aracı, bir veya daha fazla X.509 sertifikasından bir Yazılım Yayımcısı Sertifikası (SPC) oluşturur. Cert2spc.exe, yalnızca test amaçlıdır. VeriSign ya da Thawte gibi bir Sertifika Yetkilisi'nden geçerli bir SPC edinebilirsiniz. X.509 sertifikaları oluşturma hakkında daha fazla bilgi için [Makecert.exe (Sertifika Oluşturma Aracı)](/windows/desktop/SecCrypto/makecert)bakın.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).  
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. To run the tool, use the Developer Command Prompt for Visual Studio (or the Visual Studio Command Prompt in Windows 7). Daha fazla bilgi için [Komut İstemleri'ne](developer-command-prompt-for-vs.md)bakın.  
   
  Komut satırına şunu yazın:  
   
@@ -41,13 +41,13 @@ cert2spc cert1.cer | crl1.crl [... certN.cer | crlN.crl] outputSPCfile.spc
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="examples"></a>Örnekler  
- Aşağıdaki komut `myCertificate.cer` bir SPC oluşturur ve `mySPCFile.spc`içine koyar.  
+ Aşağıdaki komut bir `myCertificate.cer` SPC oluşturur ve `mySPCFile.spc`.'ye yerleştirir.  
   
 ```console
 cert2spc myCertificate.cer mySPCFile.spc  
 ```  
   
- Aşağıdaki komut `oneCertificate.cer` ve `twoCertificate.cer`bir SPC oluşturur ve `mySPCFile.spc`koyar.  
+ Aşağıdaki komut bir SPC `oneCertificate.cer` oluşturur `twoCertificate.cer`ve , `mySPCFile.spc`ve yerleştirir.  
   
 ```console
 cert2spc oneCertificate.cer twoCertificate.cer mySPCFile.spc  
@@ -56,5 +56,5 @@ cert2spc oneCertificate.cer twoCertificate.cer mySPCFile.spc
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Araçlar](index.md)
-- [MakeCert. exe (sertifika oluşturma aracı)](/windows/desktop/SecCrypto/makecert)
+- [Makecert.exe (Sertifika Oluşturma Aracı)](/windows/desktop/SecCrypto/makecert)
 - [Komut İstemleri](developer-command-prompt-for-vs.md)

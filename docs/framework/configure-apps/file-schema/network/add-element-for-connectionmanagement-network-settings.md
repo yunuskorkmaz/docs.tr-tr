@@ -10,27 +10,27 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 19ebbfba477eeba253a7af0742953cc6a4d45a0e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 093b68d31e03094bedefa96a2f2d53eb3d84edf0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088526"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155017"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>connectionManagement için > öğesi eklemek \<(ağ ayarları)
-Bağlantı yönetimi listesine bir IP adresi veya DNS adı ekler.  
+# <a name="add-element-for-connectionmanagement-network-settings"></a>\<bağlantı Yönetimi için> Öğesi ekle (Ağ Ayarları)
+Bağlantı yönetim listesine bir IP adresi veya DNS adı ekler.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<add >**
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bağlantıYönetim>**](connectionmanagement-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>ekleyin**
 
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<add   
-  address="address expression"   
-  maxconnection="integer"   
+<add
+  address="address expression"
+  maxconnection="integer"
 />  
 ```  
   
@@ -41,8 +41,8 @@ Bağlantı yönetimi listesine bir IP adresi veya DNS adı ekler.
   
 |**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|`address`|IP adresini veya DNS adını tanımlayan bir dize.|  
-|`maxconnection`|Bir sunucuyla izin verilen en fazla bağlantı sayısı. Sağlanmazsa, varsayılan değer 2 ' dir.|  
+|`address`|IP adresini veya DNS adını açıklayan dize.|  
+|`maxconnection`|Sunucuya izin verilen maksimum bağlantı sayısı. Sağlanmazsa, varsayılan değer 2'dir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -51,18 +51,18 @@ Bağlantı yönetimi listesine bir IP adresi veya DNS adı ekler.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[connectionManagement](connectionmanagement-element-network-settings.md)|Bir ağ konağına en fazla bağlantı sayısını belirtir.|  
+|[bağlantıYönetim](connectionmanagement-element-network-settings.md)|Bir ağ ana bilgisayarına en fazla bağlantı sayısını belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `address` özniteliğin değeri, tüm bağlantıları göstermek için bir yıldız işareti ya da `<schema>://<idn_hostname>[:<port>]`bir form dizesi olmalıdır.  
+ Özniteliğin `address` değeri, tüm bağlantıları belirtmek için bir yıldız işareti veya formun `<schema>://<idn_hostname>[:<port>]`bir dizesi olmalıdır.  
   
- Herhangi bir HTTP API 'sine geçirilen URI Unicode içeriyorsa, ad, bir punıcode dizesi (geçerli ıDN yapılandırmasına bağımlı davranış) döndürebilen <xref:System.Uri.DnsSafeHost%2A> kullanılarak dahili olarak dönüştürülür.  
+ URI herhangi bir HTTP API'sine geçtiyse Unicode içeriyorsa, ad bir punicode dizesi (geçerli IDN yapılandırmasına bağlı davranış) döndürebilecek <xref:System.Uri.DnsSafeHost%2A> şekilde dahili olarak dönüştürülür.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+ Bu öğe uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir uygulamayı sunucu `www.contoso.com` dört bağlantı ve diğer tüm sunuculara iki bağlantı kullanacak şekilde yapılandırır.  
+ Aşağıdaki örnek, bir uygulamayı sunucuya `www.contoso.com` dört, diğer tüm sunuculara iki bağlantı kullanacak şekilde yapılandırır.  
   
 ```xml  
 <configuration>  

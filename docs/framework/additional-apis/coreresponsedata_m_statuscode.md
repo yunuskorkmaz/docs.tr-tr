@@ -1,5 +1,5 @@
 ---
-title: CoreResponseData. m_StatusCode alanı
+title: CoreResponseData.m_StatusCode Alanı
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 8abe619a57cc61fc3502807f60deccbbd578f382
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: dfed9a748e959f0f751408566c7cbb4d2fa13e3c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740997"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156079"
 ---
-# <a name="coreresponsedatam_statuscode-field"></a>CoreResponseData. d\_StatusCode alanı
+# <a name="coreresponsedatam_statuscode-field"></a>CoreResponseData.m\_StatusCode Alanı
 
-`CoreResponseData.m_StatusCode`, yanıtın durumunu içeren bir <xref:System.Net.HttpStatusCode>.
+`CoreResponseData.m_StatusCode`yanıtın <xref:System.Net.HttpStatusCode> durumunu içeren bir durumdur.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -28,14 +28,14 @@ public HttpStatusCode m_StatusCode
 ```
 
 > [!WARNING]
-> Bu API 'nin doğrudan kodunuzda kullanılması amaçlıyordu. Bunun yerine, ağ kodunu bağlamak için bir <xref:System.Diagnostics.DiagnosticSource> kullanmanız gerekir. Bkz. [Diagnosticsource Kullanıcı Kılavuzu](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
-> 
-> Microsoft, bu sınıfın herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
+> Bu API doğrudan kodunuzda kullanılmak üzere değildir. Bunun yerine, bir <xref:System.Diagnostics.DiagnosticSource> bağlantı ağ kodu kullanmalısınız. [Bkz. DiagnosticSource Kullanıcı Kılavuzu.](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)
+>
+> Microsoft, hiçbir koşulda bir üretim uygulamasında bu sınıfın kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Ad alanı:** <xref:System.Net>
+**Ad alanı:**<xref:System.Net>
 
-**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
+**Montaj:** Sistem (System.dll'de)
 
-**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2.0'dan beri mevcuttur.

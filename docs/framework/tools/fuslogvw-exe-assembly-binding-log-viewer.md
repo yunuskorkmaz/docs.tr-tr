@@ -10,20 +10,20 @@ helpviewer_keywords:
 - Assembly Binding Log Viewer
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 ms.openlocfilehash: 2f0018dca6e5add2c5bc531103a4078307a8c8c6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73129843"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Derleme Bağlaması Günlük Görüntüleyici)
 
-Derleme Bağlama Kayıt Günlüğü Görüntüleyici derleme bağlamalar için ayrıntıları görüntüler. Bu bilgiler .NET Framework'ün çalışma zamanında niye bir derlemeyi bulamadığını tanılamanıza yardımcı olur. Bu hatalar genellikle derlemenin yanlış yere yayınlanması sonucudur, geçerli olmayan yerel bir resim veya kültürlerin uyuşmayan bir sürüm numarası. Ortak dil çalışma zamanının bir derlemeyi bulma hatası genellikle uygulamanızda <xref:System.TypeLoadException> olarak gösterilir.
+Derleme Bağlama Kayıt Günlüğü Görüntüleyici derleme bağlamalar için ayrıntıları görüntüler. Bu bilgiler .NET Framework'ün çalışma zamanında niye bir derlemeyi bulamadığını tanılamanıza yardımcı olur. Bu hatalar genellikle derlemenin yanlış yere yayınlanması sonucudur, geçerli olmayan yerel bir resim veya kültürlerin uyuşmayan bir sürüm numarası. Ortak dil çalışma zamanının bir derlemeyi bulamaması genellikle <xref:System.TypeLoadException> uygulamanızda bir derleme olarak gösterilmektedir.
 
 > [!IMPORTANT]
 > fuslogvw.exe'yi yönetici ayrıcalıklarıyla çalıştırmalısınız.
 
-Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, yönetici kimlik bilgileriyle Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
+Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. To run the tool, use the Developer Command Prompt for Visual Studio (or the Visual Studio Command Prompt in Windows 7) with administrator credentials. Daha fazla bilgi için [Komut İstemleri'ne](developer-command-prompt-for-vs.md)bakın.
 
 Komut satırına şunu yazın:
 
@@ -35,18 +35,18 @@ Görüntüleyici başarısız bağlanan her derleme için bir girdi gösterir. H
 
 ### <a name="to-change-the-log-location-view"></a>Günlük konum görünümünü değiştirmek için
 
-1. Tüm uygulama türleri için bağlama başarısızlıklarını görüntülemek için **varsayılan** seçenek düğmesini seçin. Varsayılan olarak, wininet önbelleğinde disk üzerinde her kullanıcı dizini içinde günlük kayıtları depolanır.
+1. Tüm uygulama türleri için bağlama hatalarını görüntülemek için **Varsayılan** seçeneği düğmesini seçin. Varsayılan olarak, wininet önbelleğinde disk üzerinde her kullanıcı dizini içinde günlük kayıtları depolanır.
 
-2. Belirttiğiniz özel bir dizinde bağlama başarısızlıklarını görüntülemek için **özel** seçenek düğmesini seçin. **Günlük ayarları** iletişim kutusundaki özel günlük konumunu geçerli bir dizin adına ayarlayarak, çalışma zamanının günlükleri depolamasını istediğiniz özel konumu belirtmeniz gerekir. Dizin temiz olmalıdır ve sadece çalışma zamanının oluşturduğu dosyaları içermelidir. Eğer günlüğe kaydedilecek hata üreten bir çalıştırılabilir dosya içeriyorsa, başarısızlık günlüğe kaydedilmeyecek çünkü araç çalıştırılabilir olanla aynı isimde bir dizin yaratmaya çalışacaktır. Buna ek olarak, bir yürütülebilir çalıştırma denemesi bu günlük konumunda başarısız olur.
+2. Bağlama hatalarını belirttiğiniz özel bir dizinde görüntülemek için **Özel** seçeneği düğmesini seçin. **Günlük Ayarları** iletişim kutusundaki özel günlük konumunu geçerli bir dizin adı ile ayarlayarak, çalışma zamanının günlükleri depolamasını istediğiniz özel konumu belirtmeniz gerekir. Dizin temiz olmalıdır ve sadece çalışma zamanının oluşturduğu dosyaları içermelidir. Eğer günlüğe kaydedilecek hata üreten bir çalıştırılabilir dosya içeriyorsa, başarısızlık günlüğe kaydedilmeyecek çünkü araç çalıştırılabilir olanla aynı isimde bir dizin yaratmaya çalışacaktır. Buna ek olarak, bir yürütülebilir çalıştırma denemesi bu günlük konumunda başarısız olur.
 
     > [!NOTE]
-    > Varsayılan bağlama konumu özel bağlama konumuna tercih edilir. Çalışma zamanı, varsayılan bağlama konumunu Wininet önbelleğinde depolar ve bu nedenle otomatik olarak temizler. Özel bir bağlama konumu belirtirseniz, onu temizlemek sizin sorumluluğunuzdadır.
+    > Varsayılan bağlama konumu özel bağlama konumuna tercih edilir. Çalışma zamanı varsayılan bağlama konumunu wininet önbelleğinde depolar ve bu nedenle otomatik olarak temizler. Özel bir bağlama konumu belirtirseniz, bu konumu temizlemekten siz sorumlusunuz.
 
 ### <a name="to-view-details-about-a-specific-failure"></a>Belirli bir kültür hakkında detayları görüntülemek için
 
 1. Görüntüleyiciden istenen uygulamanın girişini seçin.
 
-2. **Günlüğü görüntüle** düğmesine tıklayın. Alternatif olarak, seçili girdiye çift tıklayabilirsiniz.
+2. **Günlük'u Görüntüle** düğmesini tıklatın. Alternatif olarak, seçili girdiye çift tıklayabilirsiniz.
 
     Araç seçili bağlama başarısızlığı hakkında aşağıdaki ayrıntıları görüntüler:
 
@@ -58,7 +58,7 @@ Görüntüleyici başarısız bağlanan her derleme için bir girdi gösterir. H
 
     - Herhangi bir uygulama, Yayıncı veya Yönetici sürüm ilkeleri açıklamaya uygulanır.
 
-    - Derlemenin [genel derleme önbelleğinde](../app-domains/gac.md)bulunup bulunamamayacağı.
+    - Derlemenin genel derleme [önbelleğinde](../app-domains/gac.md)bulunup bulunmadığı.
 
     - Tüm algılama URL'lerinin listesi.
 
@@ -100,31 +100,31 @@ LOG: All probing URLs attempted and failed.
 
 1. Görüntüleyicide bir girdi seçin.
 
-2. **Girişi Sil** düğmesine tıklayın.
+2. Girişi **Sil** düğmesini tıklatın.
 
 ### <a name="to-delete-all-entries-from-the-log"></a>Günlükten bütün girdileri silmek için
 
-- **Tümünü Sil** düğmesine tıklayın.
+- **Tümünü Sil** düğmesini tıklatın.
 
 ### <a name="to-refresh-the-user-interface"></a>Kullanıcı arabirimini yenilemek için
 
-- **Yenile** düğmesine tıklayın. Görüntüleyici çalışırken yeni günlük girdilerini otomatik olarak algılamaz. Bunları göstermek için **Yenile** düğmesini kullanmanız gerekir.
+- **Yenile** düğmesini tıklatın. Görüntüleyici çalışırken yeni günlük girdilerini otomatik olarak algılamaz. Bunları görüntülemek için **Yenile** düğmesini kullanmanız gerekir.
 
 ### <a name="to-change-the-log-settings"></a>Günlük ayarlarını değiştirmek için
 
-- **Ayarlar** düğmesine tıklayarak **günlük ayarları** iletişim kutusunu açın.
+- **Günlük Ayarları** iletişim kutusunu açmak için **Ayarlar** düğmesini tıklatın.
 
 ### <a name="to-view-the-about-dialog"></a>Hakkında iletişim kutusunu görüntülemek için
 
-- **Hakkında** düğmesine tıklayın.
+- **Hakkında** düğmesini tıklatın.
 
 ## <a name="binding-logs-for-native-images"></a>Özgün Görüntüler için Bağlama Günlükleri
 
-Varsayılan olarak, Fuslogvw.exe normal derleme bağlama isteklerini günlüğe kaydeder. Alternatif olarak, [Ngen. exe (yerel görüntü Oluşturucu)](ngen-exe-native-image-generator.md)kullanılarak oluşturulan yerel görüntüler için derleme bağlamalarını günlüğe kaydedebilirsiniz.
+Varsayılan olarak, Fuslogvw.exe normal derleme bağlama isteklerini günlüğe kaydeder. Alternatif olarak, [Ngen.exe (Yerel Görüntü Oluşturucusu)](ngen-exe-native-image-generator.md)kullanılarak oluşturulan yerel görüntüler için montaj bağlarını günlüğe kaydedebilirsiniz.
 
 #### <a name="to-log-assembly-binds-for-native-images"></a>Özgün görüntüler için derleme bağlamalarını günlüğe kaydetmek için
 
-- **Günlük kategorileri** grubunda, **Yerel görüntüler** seçenek düğmesini seçin.
+- Günlük **Kategorileri** grubunda, **Yerel Görseller** seçeneği düğmesini seçin.
 
 Aşağıdaki günlük kaydı uygulama için özgün görüntü oluştuğunda varolmayan bir bağımlılıktan kaynaklı bir başarısızlığı gösterir. Eğer çalışma zamanındaki bağımlılık Ngen.exe çalışırken oluşan bağımlılıktan farklıysa, yerel bir görüntü bağlamaya izin vermez.
 
@@ -182,49 +182,49 @@ Discarding native image.
 
 ## <a name="the-log-settings-dialog"></a>Günlük Ayarları İletişim Kutusu
 
-Aşağıdaki işlemleri gerçekleştirmek için **günlük ayarları** iletişim kutusunu kullanabilirsiniz.
+Aşağıdaki eylemleri gerçekleştirmek için **Günlük Ayarları** iletişim kutusunu kullanabilirsiniz.
 
 #### <a name="to-disable-logging"></a>Günlüğe kaydetmeyi devre dışı bırakmak için
 
-- **Devre dışı tut** seçenek düğmesini seçin.  Bu seçeneğin varsayılan olarak seçili geldiğini unutmayın.
+- **Engellenen** seçeneğini kaydedin.  Bu seçeneğin varsayılan olarak seçili geldiğini unutmayın.
 
 #### <a name="to-log-assembly-binds-in-exceptions"></a>İstisnalar içinde derleme bağlamalarını günlüğe kaydetmek için
 
-- **Özel durum metni** seç seçenek düğmesini seçin. İstisna metninin içinde yalnızca füzyon günlük kaydı bilgileri kaydedilir. Tüm bilgileri görmek için diğer seçeneklerden birini kullanın.
+- Özel **durum metin** seçeneğinde Oturum Aç düğmesini seçin. İstisna metninin içinde yalnızca füzyon günlük kaydı bilgileri kaydedilir. Tüm bilgileri görmek için diğer seçeneklerden birini kullanın.
 
   Etki alanı nötr olarak yüklenen derlemelerle ilgili önemli bir not bırakın.
 
 #### <a name="to-log-assembly-bind-failures"></a>Derleme bağlama başarısızlıklarını günlüğe kaydetmek için
 
-- **Disk bağlama başarısızlıklarını diske yaz** seçenek düğmesini seçin.
+- Disk seçeneği **düğmesine günlük bağlama hatalarını** seçin.
 
   Etki alanı nötr olarak yüklenen derlemelerle ilgili önemli bir not bırakın.
 
 #### <a name="to-log-all-assembly-binds"></a>Tüm derleme bağlamalarını günlüğe kaydetmek için
 
-- **Tümünü diske bağlar** seçenek düğmesini seçin.
+- Disk seçeneği **düğmesine tüm bağlanan tüm bağlarını** kaydedin.
 
   Etki alanı nötr olarak yüklenen derlemelerle ilgili önemli bir not bırakın.
 
 > [!IMPORTANT]
-> Bir derleme etki alanı nötr olarak yüklendiğinde, örneğin <xref:System.AppDomainSetup.LoaderOptimization%2A> özelliğini <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> veya <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>olarak ayarlayarak, günlüğe kaydetme işleminin etkinleştirilmesi bazı durumlarda belleği sızıyor. Etki alanı nötr modu bir uygulama etki alanına yüklendiğinde ve uygulama etki alanı boşaltıldığında eğer günlük kaydı girişi yapılmışsa bu olur. Günlük girdisi işlem bitene kadar serbest bırakılmayabilir. Bazı hata ayıklayıcılar otomatik olarak günlüğe kaydetmeyi etkinleştirebilir.
+> Bir derleme etki alanı nötr olarak yüklendiğinde, <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> örneğin <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType> <xref:System.AppDomainSetup.LoaderOptimization%2A> özelliği ayarlayarak veya , günlüğe kaydetmeyi açmak bazı durumlarda bellek sızdırabilir. Etki alanı nötr modu bir uygulama etki alanına yüklendiğinde ve uygulama etki alanı boşaltıldığında eğer günlük kaydı girişi yapılmışsa bu olur. Günlük girdisi işlem bitene kadar serbest bırakılmayabilir. Bazı hata ayıklayıcılar otomatik olarak günlüğe kaydetmeyi etkinleştirebilir.
 
 #### <a name="to-enable-a-custom-log-path"></a>Özel bir günlük kaydı yolunu etkinleştirmek için
 
-1. **Özel günlük yolunu etkinleştir** seçenek düğmesini seçin.
+1. Özel **günlük yolunu etkinleştir** düğmesini seçin.
 
-2. Yolu **özel günlük yolu** metin kutusuna girin.
+2. Yolu **Özel günlük yolu** metin kutusuna girin.
 
 > [!NOTE]
-> [Derleme bağlama günlük Görüntüleyicisi (Fuslogvw. exe)](fuslogvw-exe-assembly-binding-log-viewer.md) , bağlama günlüğünü depolamak Için Internet Explorer (IE) önbelleğini kullanır. IE önbelleğinde zaman zaman bozulma nedeniyle, [derleme bağlama günlüğü Görüntüleyicisi (Fuslogvw. exe)](fuslogvw-exe-assembly-binding-log-viewer.md) bazen görüntüleme penceresinde yeni bağlama günlüklerini göstermeyi durdurabilir. Bu bozulmanın sonucu olarak, .NET bağlama altyapısı (füzyon) bağlama günlüğüne yazamaz veya okuyamaz. (Özel bir günlük yolu kullanırsanız bu sorunla karşılaşılmaz.)  Bozulmayı onarmak ve Fusion 'un bağlama günlüklerini yeniden göstermesini sağlamak için IE Internet Seçenekleri iletişim kutusunun içinden geçici internet dosyalarını silerek IE önbelleğini temizleyin.
+> [Derleme Bağlama Günlük Görüntüleyicisi (Fuslogvw.exe),](fuslogvw-exe-assembly-binding-log-viewer.md) bağlama günlüğünü depolamak için Internet Explorer (IE) önbelleğini kullanır. IE önbelleğindeki zaman zaman bozulma nedeniyle, [Derleme Bağlama Günlük Görüntüleyicisi (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) bazen görüntüleme penceresinde yeni bağlama günlükleri göstermeyi durdurabilir. Bu bozulmanın sonucu olarak, .NET bağlama altyapısı (füzyon) bağlama günlüğüne yazamaz veya okuyamaz. (Özel bir günlük yolu kullanıyorsanız bu sorunla karşılaşılmez.)  Bozulmayı düzeltmek ve kaynaşın bağlama günlüklerini yeniden göstermesine izin vermek için, geçici internet dosyalarını IE Internet Seçenekleri iletişim kutusundan silerek IE önbelleğini temizleyin.
 >
-> Yönetilmeyen uygulamanız `IHostAssemblyManager` ve `IHostAssemblyStore` arabirimlerini uygulayarak ortak dil çalışma zamanını barındırıyorsa, günlük girdileri Wininet önbelleğinde depolanamaz.  Bu arabirimleri uygulayan özel barındırmalar için günlük girdilerini görüntülemek için, alternatif bir günlük yolu belirtmelisiniz.
+> Yönetilmeyen uygulamanız `IHostAssemblyManager` ve `IHostAssemblyStore` arabirimleri uygulayarak ortak dil çalışma süresini barındırıyorsa, günlük girişleri wininet önbelleğinde depolanamaz.  Bu arabirimleri uygulayan özel barındırmalar için günlük girdilerini görüntülemek için, alternatif bir günlük yolu belirtmelisiniz.
 
 #### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a>Windows uygulama kapsayıcısı içinde çalışan uygulamalar için günlük kaydediciyi etkinleştirmek için
 
 1. Önceki prosedürde açıklandığı gibi özel bir günlük yolunu etkinleştirin. Varsayılan olarak, Windows uygulama kapsayıcı içinde çalışan uygulamaların hard disk erişimi sınırlıdır. Uygulama kapsayıcı içerisindeki bütün uygulamalar için belirlediğiniz dizinin okuma/yazma erişim hakkı vardır.
 
-2. **Derinlikli günlüğü etkinleştir** onay kutusunu seçin.
+2. Sürükleyici **günlük onay** kutusunu Etkinleştir'i seçin.
 
     > [!NOTE]
     > Bu kutu yalnızca Windows 8 veya sonrasında etkindir.
@@ -234,5 +234,5 @@ Aşağıdaki işlemleri gerçekleştirmek için **günlük ayarları** iletişim
 - <xref:System.TypeLoadException>
 - [Araçlar](index.md)
 - [Genel Derleme Önbelleği](../app-domains/gac.md)
-- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../deployment/how-the-runtime-locates-assemblies.md)
+- [Çalışma Zamanının Derlemelerin Konumunu Bulması](../deployment/how-the-runtime-locates-assemblies.md)
 - [Komut İstemleri](developer-command-prompt-for-vs.md)

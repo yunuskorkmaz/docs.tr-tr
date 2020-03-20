@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: e613f0c52c77efebf250f5935d5cbfc29bc09a6b
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 6fafb689af5d50b31b19f5d1fe7090a6c256ca45
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802521"
 ---
-### <a name="wpf-printing-stack-update"></a>WPF yazdırma yığını güncelleştirmesi
+### <a name="wpf-printing-stack-update"></a>WPF Yazdırma Yığını Güncellemesi
 
 |   |   |
 |---|---|
-|Ayrıntılar|WPF'nin yazdırma API'lerini kullanarak <xref:System.Printing.PrintQueue?displayProperty=name> penceresinin Yazdır belge paket API artık kullanım dışı XPS yazdırma API yerine artık çağırın. Bakım kolaylığı düşünülerek ile değişiklik yapılmıştır; kullanıcıların ne geliştiricilerin herhangi bir değişiklik davranış veya API kullanımı görmeniz gerekir. Yeni yazdırma yığın içinde Windows 10 Creators Update çalıştıran, varsayılan olarak etkindir. Eski yazdırma yığın hala eski Windows sürümlerinde yalnızca önceki gibi çalışmaya devam eder.|
-|Öneri|Eski yığın içinde Windows 10 Creators Update kullanmak için ayarlanmış <code>UseXpsOMPrinting</code> REG_DWORD değeri <code>HKEY_CURRENT_USER\Software\Microsoft\.NETFramework\Windows Presentation Foundation\Printing</code> kayıt defteri anahtarına <code>1</code>.|
-|Kapsam|Kenar|
+|Ayrıntılar|WPF'nin Yazdırma API'leri <xref:System.Printing.PrintQueue?displayProperty=name> artık window'un Yazdırma Belge Paketi API'sini artık amortismana hazır olan XPS Print API lehine arayın. Değişiklik, hizmet edilebilirlik göz önünde bulundurularak yapıldı; ne kullanıcılar ne de geliştiriciler davranış veya API kullanımında herhangi bir değişiklik görmemelidir. Windows 10 Creators Update'te çalışırken yeni yazdırma yığını varsayılan olarak etkinleştirilir. Eski yazdırma yığını, eski Windows sürümlerinde olduğu gibi çalışmaya devam edecektir.|
+|Öneri|Windows 10 Creators Update'teki eski yığını <code>UseXpsOMPrinting</code> kullanmak <code>HKEY_CURRENT_USER\Software\Microsoft\.NETFramework\Windows Presentation Foundation\Printing</code> için, kayıt <code>1</code>defteri anahtarının REG_DWORD değerini .|
+|Kapsam|Edge|
 |Sürüm|4.7|
-|Tür|Çalışma zamanı|
-
+|Tür|Çalışma Zamanı|

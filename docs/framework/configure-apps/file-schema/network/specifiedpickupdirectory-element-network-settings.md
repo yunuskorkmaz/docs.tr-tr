@@ -8,27 +8,27 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: 1acc724bb14c3610f14d06452c30b3d5dac42e13
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 4b0cbaf9a7bfe2a9b1610811f4201253d219a6b2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089071"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154614"
 ---
-# <a name="specifiedpickupdirectory-element-network-settings"></a>\<Belirtilmedipickupdirectory > öğesi (ağ ayarları)
-, Bir Basit Posta Aktarım Protokolü (SMTP) sunucusu için yerel dizini yapılandırır.  
+# <a name="specifiedpickupdirectory-element-network-settings"></a>\<belirtilenPickupDirectory> Elemanı (Ağ Ayarları)
+Basit Posta Aktarım Protokolü (SMTP) sunucusunun yerel dizinini yapılandırır.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**mailSettings >** ](mailsettings-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<smtp >** ](smtp-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Belirtilmedipickupdirectory >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<mailAyarlar>**](mailsettings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<smtp>**](smtp-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<belirtilenPickupDirectory>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
 <specifiedPickupDirectory  
-  pickupDirectoryLocation="directory"   
+  pickupDirectoryLocation="directory"
 />  
 ```  
   
@@ -39,7 +39,7 @@ ms.locfileid: "74089071"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|Uygulamaların SMTP sunucusu tarafından daha sonra işlenmek üzere e-posta kaydetmesinin bulunduğu dizin.|  
+|`pickupDirectoryLocation`|Uygulamaların e-postaları SMTP sunucusu tarafından daha sonra işlenmesi için kaydettiği dizin.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -48,13 +48,13 @@ ms.locfileid: "74089071"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<SMTP > öğesi (ağ ayarları)](smtp-element-network-settings.md)|Basit Posta Aktarım Protokolü (SMTP) posta gönderme seçeneklerini yapılandırır.|  
+|[\<smtp> Elemanı (Ağ Ayarları)](smtp-element-network-settings.md)|Basit Posta Aktarım Protokolü (SMTP) posta gönderme seçeneklerini yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `specifiedPickupDirectory` özniteliği, uygulamaların posta iletilerini SMTP sunucusu tarafından işlenecek şekilde kaydetmediği dizini ayarlar.  
+ Öznitelik, `specifiedPickupDirectory` uygulamaların SMTP sunucusu tarafından işlenecek posta iletilerini kaydettiği dizini ayarlar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte posta toplama dizini olarak c:\maildrop belirtilir.  
+ Aşağıdaki örnek, c:\maildrop'u posta alma dizinini belirtir.  
   
 ```xml  
 <configuration>  

@@ -8,24 +8,24 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: bacaaf92464a355804a9ea8307f6e6f1caac1f05
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: b502cc4a0958f074018d4b0ce6b3fb118b811c2f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087607"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154978"
 ---
-# <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules > öğesi (ağ ayarları)
-Ağ isteklerinin kimliğini doğrulamak için kullanılan modülleri belirtir.  
+# <a name="authenticationmodules-element-network-settings"></a>\<kimlik doğrulamaModülleri> Elemanı (Ağ Ayarları)
+Ağ isteklerini doğrulamak için kullanılan modülleri belirtir.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<authenticationModules >**
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<kimlik doğrulamaModülleri>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<authenticationModules>   
+<authenticationModules>
 </authenticationModules>  
 ```  
   
@@ -39,24 +39,24 @@ Ağ isteklerinin kimliğini doğrulamak için kullanılan modülleri belirtir.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[add](add-element-for-authenticationmodules-network-settings.md)|Uygulamaya bir kimlik doğrulama modülü ekler.|  
-|[lediğiniz](clear-element-for-authenticationmodules-network-settings.md)|Tüm kimlik doğrulama modüllerini uygulamadan temizler.|  
-|[remove](remove-element-for-authenticationmodules-network-settings.md)|Bir kimlik doğrulama modülünü uygulamadan kaldırır.|  
+|[Ekle](add-element-for-authenticationmodules-network-settings.md)|Uygulamaya bir kimlik doğrulama modülü ekler.|  
+|[Temizleyin](clear-element-for-authenticationmodules-network-settings.md)|Tüm kimlik doğrulama modüllerini uygulamadan temizler.|  
+|[Kaldırmak](remove-element-for-authenticationmodules-network-settings.md)|Uygulamadan bir kimlik doğrulama modüllerini kaldırır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[system.net](system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.|  
+|[system.net](system-net-element-network-settings.md)|.NET Framework'ün ağa nasıl bağladığını belirten ayarlar içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `authenticationModule` öğesi, bir sunucusuyla kimlik doğrulama işlemini gerçekleştiren kimlik doğrulama modüllerini belirtir. Bir kimlik doğrulama modülünün <xref:System.Net.IAuthenticationModule> arabirimini uygulaması gerekir.  
+ Öğe, `authenticationModule` kimlik doğrulama işlemini bir sunucuyla yürüten kimlik doğrulama modüllerini belirtir. Kimlik doğrulama modülü <xref:System.Net.IAuthenticationModule> arabirimi uygulamalıdır.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+ Bu öğe uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir kimlik doğrulama modülünü mümkün bir şekilde sunar. Version ve PublicKeyToken değerlerini belirtilen modülle ilgili doğru değerlerle değiştirmelisiniz.  
+ Aşağıdaki örnek, bir kimlik doğrulama modülü sağlar. Sürüm ve PublicKeyToken değerlerini belirtilen modül için doğru değerlerle değiştirmelisiniz.  
   
 ```xml  
 <configuration>  

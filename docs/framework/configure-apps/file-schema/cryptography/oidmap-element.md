@@ -8,25 +8,25 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: 5f055d6e665f68586191ab760fb5658eeb5c2cb2
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: a28eaf68fe1e6ab3f26592eee5ae2d0f2e7a3256
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087989"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155173"
 ---
-# <a name="oidmap-element"></a>\<Oıdmap > öğesi
-Sınıflara ASN. 1 nesne tanımlayıcısı (OID) eşlemelerini içerir.  
+# <a name="oidmap-element"></a>\<oidMap> Elemanı
+Sınıflara ASN.1 nesne tanımlayıcısı (OID) eşlemeleri içerir.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Cryptographyısettings >** ](cryptographysettings-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Oıdmap >**
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<şifrelemeAyarlar>**](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<oidMap>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<oidMap>   
+<oidMap>
 </oidMap>  
 ```  
   
@@ -40,18 +40,18 @@ Sınıflara ASN. 1 nesne tanımlayıcısı (OID) eşlemelerini içerir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Oıdentry >](oidentry-element.md)|Bir ASN. 1 OID 'yi kolay bir ada eşler.|  
+|[\<oidEntry>](oidentry-element.md)|Bir ASN.1 OID'yi dost bir isme eşler.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`cryptographySettings`|Şifreleme ayarlarını içerir.|  
-|`mscorlib`|`cryptographySettings` öğesini içerir.|  
+|`cryptographySettings`|Şifreleme ayarları içerir.|  
+|`mscorlib`|Öğeyi `cryptographySettings` içerir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, RIPEMD-160 karma algoritması için bir OID 'nin bu karma algoritmanın bir uygulamasına eşlemesini içeren **\<Oıdmap >** öğesinin nasıl kullanılacağını gösterir.  
+ Aşağıdaki örnek, ** \<OIDMap>** elemanının RIPEMD-160 karma algoritması için bir OID eşlemesini içeren bu karma algoritmanın uygulanmasına nasıl kullanılacağını gösterir.  
   
 ```xml  
 <configuration>  

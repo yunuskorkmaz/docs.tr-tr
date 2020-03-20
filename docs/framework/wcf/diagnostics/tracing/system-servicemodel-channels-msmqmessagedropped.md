@@ -2,26 +2,26 @@
 title: System.ServiceModel.Channels.MsmqMessageDropped
 ms.date: 03/30/2017
 ms.assetid: 8b6e644d-fa68-4be7-abe9-3659671a37c1
-ms.openlocfilehash: 3fa5ec62c5e8ac83f3f81fb406499b7e596b3dac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e80fecf508158dcb53f08b75c8f9486c13e403a4
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969513"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78674794"
 ---
 # <a name="systemservicemodelchannelsmsmqmessagedropped"></a>System.ServiceModel.Channels.MsmqMessageDropped
-İletinin MSMQ bırakıldı.  
+MSMQ iletiyi bıraktı.  
   
 ## <a name="description"></a>Açıklama  
- İzleme, bir MSMQ iletisinin bırakıldı gösterir. Windows Communication Foundation (WCF) (NetMsmqBinding veya MsmqIntegrationBinding ile kullanılır) bunları işleyemiyor olduğunda MSMQ iletileri bırakılabilir. Bu türden iletilere zehirli ileti olarak adlandırılır.  
+ İzleme, bir MSMQ iletisinin bırakıldığını gösterir. MsMQ iletileri, Windows Communication Foundation (WCF) (NetMsmqBinding veya MsmqIntegrationBinding ile birlikte kullanılır) bunları işleyemediğinde bırakılabilir. Bu tür iletilere zehirli iletiler denir.  
   
- Zehirli ileti ne zaman bırakılan `ReceiveErrorHandling` özelliği NetMsmqBinding veya MsmqIntegrationBinding `Drop`. Bırakılan ileti kuyruktan kaldırılır ve artık kurtarılabilir.  
+ NetMsmqBinding veya `ReceiveErrorHandling` MsmqIntegrationBinding üzerindeki özellik ayarlandığında bir zehir `Drop`iletisi bırakılır. Bırakılan ileti kuyruktan kaldırılır ve artık kurtarılamaz.  
   
- Bkz: [Poison ileti işleme](https://go.microsoft.com/fwlink/?LinkID=99546) iletileri zehirli duruma ne zaman ve uygun şekilde işlemek için hizmetinizi yapılandırmak nasıl daha fazla ayrıntı için.  
+ İletilerin ne zaman zehirhaline geldiği ve hizmetinizi uygun şekilde işlemek üzere nasıl yapılandırılacağı hakkında daha fazla bilgi için [Poison-Message Handling](../../feature-details/poison-message-handling.md)'e bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [Poison ileti işleme](https://go.microsoft.com/fwlink/?LinkID=99546)
+- [Zehir-Mesaj Taşıma](../../feature-details/poison-message-handling.md)

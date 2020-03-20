@@ -12,87 +12,87 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: 76ff60cfe26f9105d4504164802987115fc2a7e2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e125c9a57090049f4319da96c7004f06606d0147
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455465"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141568"
 ---
 # <a name="attached-events-overview"></a>Ekli Olaylara Genel Bakış
 
-Extensible Application Markup Language (XAML), bir dil bileşeni ve *ekli olay*olarak adlandırılan olay türünü tanımlar. Ekli bir olay kavramı, olayı gerçekten tanımlayan veya devralan bir öğe yerine, belirli bir olaya yönelik bir işleyiciyi rastgele bir öğeye eklemenizi sağlar. Bu durumda, nesne potansiyel olarak ne tür bir şekilde tetiklemez ve hedef işleme örneği, olayı tanımlar veya başka bir şekilde "sahip değildir".  
+Genişletilebilir Uygulama Biçimlendirme Dili (XAML), bir dil bileşeni ve *ekli olay*olarak adlandırılan olay türünü tanımlar. Ekli bir olay kavramı, olayı gerçekten tanımlayan veya devralan bir öğeyerine rasgele bir öğeye belirli bir olay için işleyici eklemenize olanak tanır. Bu durumda, ne nesneyi potansiyel olarak olay yükselterek ne de hedef işleme örneği tanımlar veya başka bir olay "sahibi".  
 
-<a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Prerequisites  
- Bu konuda, [yönlendirilmiş olaylara genel bakış](routed-events-overview.md) ve [xaml 'ye Genel Bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md)okumanız varsayılmaktadır.  
+<a name="prerequisites"></a>
+## <a name="prerequisites"></a>Önkoşullar  
+ Bu [konu, Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md) ve [XAML Genel Bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md)okuduğunuz varsayar.  
   
-<a name="Syntax"></a>   
-## <a name="attached-event-syntax"></a>Ekli olay sözdizimi  
- Ekli olaylarda, ekli olay kullanımını desteklemek için, yedekleme kodu tarafından kullanılması gereken bir XAML sözdizimi ve bir kodlama düzeni vardır.  
+<a name="Syntax"></a>
+## <a name="attached-event-syntax"></a>Ekli Olay Sözdizimi  
+ Ekli olaylar, ekli olay kullanımını desteklemek için bir XAML sözdizimi ve destek kodu tarafından kullanılması gereken bir kodlama deseni vardır.  
   
- XAML sözdiziminde, ekli olay yalnızca kendi olay adı tarafından değil, sahip türü ve bir noktayla (.) ayrılmış olan olay adı ile belirtilir. Olay adı, sahip olduğu türün adıyla nitelenbildiğinden, ekli olay sözdizimi, hiçbir ekli olayın, örneklenebilir herhangi bir öğeye eklenmesini sağlar.  
+ XAML sözdiziminde, eklenen olay sadece olay adı ile değil, sahip olduğu tür artı olay adı ile bir nokta (.) ile ayrılmış olarak belirtilir. Olay adı kendi türüadı ile nitelikli olduğundan, ekli olay sözdizimi herhangi bir ekli olay anlık olabilir herhangi bir öğeye eklenmesine izin verir.  
   
- Örneğin, özel `NeedsCleaning` ekli bir olay için bir işleyici eklemek için XAML sözdizimi aşağıda verilmiştir:  
+ Örneğin, özel `NeedsCleaning` bir bağlı olay için işleyici eklemek için XAML sözdizimi aşağıdaverilmiştir:  
   
  [!code-xaml[WPFAquariumSln#AE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
   
- `aqua:` ön ekine göz önüne alın. Bu durumda, ekli olay özel eşlenmiş bir xmlns 'den gelen özel bir olay olduğundan, ön ek gereklidir.  
+ Önek `aqua:` dikkat edin; ekteki olay özel eşlenmiş xmlns gelen özel bir olay olduğundan önek bu durumda gereklidir.  
   
-<a name="WPFImplements"></a>   
-## <a name="how-wpf-implements-attached-events"></a>WPF ekli olayları nasıl uygular
+<a name="WPFImplements"></a>
+## <a name="how-wpf-implements-attached-events"></a>WPF Ekli Olayları Nasıl Uygular?
 
-WPF 'de, ekli olaylar bir <xref:System.Windows.RoutedEvent> alanı tarafından desteklenir ve oluşturulduktan sonra ağaç üzerinden yönlendirilir. Genellikle, ekli olayın kaynağı (olayı oluşturan nesnesi) bir sistem veya hizmet kaynağıdır ve olayı oluşturan kodu çalıştıran nesne bu nedenle öğe ağacının doğrudan bir parçası değildir.  
+WPF'de, ekli olaylar bir <xref:System.Windows.RoutedEvent> alan tarafından desteklenen ve yükseltildikten sonra ağaç üzerinden yönlendirilir. Genellikle, ekli olayın kaynağı (olayı yükselten nesne) bir sistem veya hizmet kaynağıdır ve olayı yükselten kodu çalıştıran nesne bu nedenle öğe ağacının doğrudan bir parçası değildir.  
   
-<a name="Scenarios"></a>   
-## <a name="scenarios-for-attached-events"></a>Ekli olaylara yönelik senaryolar  
- WPF 'de, ekli olaylar, statik <xref:System.Windows.Input.Mouse> sınıfı veya <xref:System.Windows.Controls.Validation> sınıfı tarafından etkinleştirilen olaylar gibi hizmet düzeyi soyutlama olan belirli özellik alanlarında mevcuttur. Ya da hizmetini kullanan sınıflar, ekli olay söz diziminde olayını kullanabilir ya da ekli olayı sınıfın hizmetin yeteneklerini nasıl tümleştirdiğini gösteren yönlendirilmiş bir olay olarak yüzey seçebilirler.  
+<a name="Scenarios"></a>
+## <a name="scenarios-for-attached-events"></a>Ekli Olaylar için Senaryolar  
+ WPF'de, statik <xref:System.Windows.Input.Mouse> sınıfın veya <xref:System.Windows.Controls.Validation> sınıfın etkinleştirdiği olaylar gibi hizmet düzeyi soyutlamanın olduğu belirli özellik alanlarında ekli olaylar bulunur. Hizmetle etkileşimde bulunan veya hizmeti kullanan sınıflar, olayı ekteki olay sözdiziminde kullanabilir veya sınıfın hizmetin yeteneklerini nasıl tümleştirdiğinin bir parçası olan yönlendirilmiş bir olay olarak ekli olayı yüzeyden ayırmayı seçebilir.  
   
- WPF bir dizi ekli olayı tanımlasa da, ekli olayı doğrudan kullanacağınız veya işleyebileceğiniz senaryolar çok sınırlı olur. Genellikle, ekli olay bir mimari amaca hizmet eder, ancak daha sonra eklenmemiş (CLR olayı "sarmalayıcı") yönlendirilmiş bir olayla iletilir.  
+ WPF bir dizi bağlı olayı tanımlasa da, bağlı olayı doğrudan kullanacağınız veya işleyeceğiniz senaryolar çok sınırlıdır. Genellikle, ekli olay mimari bir amaca hizmet eder, ancak daha sonra bağlı olmayan (CLR olay "sarıcı" ile desteklenen) yönlendirilmiş olay iletilir.  
   
- Örneğin, temel alınan ekli olay <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType>, XAML veya koddaki ekli olay söz dizimi ile ilgilenmektense, söz konusu <xref:System.Windows.UIElement> <xref:System.Windows.UIElement.MouseDown> kullanılarak, belirli bir <xref:System.Windows.UIElement> üzerinde daha kolay işlenebilir. Eklenen olay, giriş cihazlarının gelecekteki genişlemesine izin verdiğinden, mimaride bir amaca hizmet eder. Kuramsal cihazın, fare girişinin benzetimini yapmak için yalnızca <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType> oluşturması ve <xref:System.Windows.Input.Mouse> türetmesinin gerekli olmaması gerekir. Ancak, bu senaryo olayların kod işlemesini içerir ve ekli etkinliğin XAML işleme Bu senaryoyla ilgili değildir.  
+ Örneğin, xaml veya <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType> kod ya ekli olay <xref:System.Windows.UIElement> sözdizimi ile ilgili yerine bu <xref:System.Windows.UIElement.MouseDown> <xref:System.Windows.UIElement> kullanarak herhangi bir temel ekli olay daha kolay işlenebilir. Bağlı olay, giriş aygıtlarının gelecekteki genişlemesine izin verdiği için mimaride bir amaca hizmet eder. Varsayımsal aygıtın yalnızca fare girişini simüle etmek için yükseltmesi <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType> gerekir <xref:System.Windows.Input.Mouse> ve bunu yapmak için türetin gerekmez. Ancak, bu senaryo olayların kod işleme içerir ve ekli olayın XAML işleme bu senaryo ile ilgili değildir.  
   
-<a name="Handling"></a>   
-## <a name="handling-an-attached-event-in-wpf"></a>WPF 'de ekli olay işleme  
- Ekli olayı işleme işlemi ve yazacağınız işleyici kodu, bir yönlendirilmiş olayla aynı şekilde temelde aynıdır.  
+<a name="Handling"></a>
+## <a name="handling-an-attached-event-in-wpf"></a>WPF'de Ekli Bir Olayı İşleme  
+ Ekli bir olayı işleme işlemi ve yazacağınız işleyici kodu, temelde yönlendirilmiş bir olay için aynıdır.  
   
- Genel olarak, WPF ekli olayı WPF yönlendirilmiş olayından çok farklı değildir. Farklar olayın kaynağını belirleme ve bir sınıf tarafından bir üye olarak nasıl açığa çıkarılacağıdır (Ayrıca XAML işleyicisi söz dizimini da etkiler).  
+ Genel olarak, WPF ekli bir olay, WPF yönlendirilmiş bir olaydan çok farklı değildir. Farklar, olayın nasıl kaynağı olduğu ve bir sınıf tarafından üye olarak nasıl ortaya çıkarılan (xaml işleyicisi sözdizimini de etkilediği) dir.  
   
- Ancak, daha önce belirtildiği gibi, mevcut WPF ekli olayları özellikle WPF 'de işlemeye yöneliktir. Daha sık, olayın amacı, bir örneği birleştirme sırasında bir üst öğeye raporlamak için bir Oluşturucu bir öğe sağlamaktır, bu durumda olay genellikle kodda tetiklenir ve ayrıca ilgili üst sınıfta sınıf işlemeye dayanır. Örneğin, bir <xref:System.Windows.Controls.Primitives.Selector> içindeki öğelerin ekli <xref:System.Windows.Controls.Primitives.Selector.Selected> olayını oluşturması beklenir. Bu, daha sonra <xref:System.Windows.Controls.Primitives.Selector> sınıfı tarafından işlenen ve daha sonra büyük olasılıkla <xref:System.Windows.Controls.Primitives.Selector> sınıfı tarafından farklı bir yönlendirilmiş <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>olaya dönüştürüldü. Yönlendirilmiş olaylar ve sınıf işlemesi hakkında daha fazla bilgi için bkz. [yönlendirilmiş olayları işlenmiş olarak işaretleme ve sınıf işleme](marking-routed-events-as-handled-and-class-handling.md).  
+ Ancak, daha önce belirtildiği gibi, mevcut WPF ekli olaylar özellikle WPF işlemek için tasarlanmamıştır. Daha sık, olayın amacı, bileşik bir öğenin bir durumu birleştirmedeki bir üst öğeye bildirmesini sağlamaktır, bu durumda olay genellikle kodolarak yükseltilir ve aynı zamanda ilgili üst sınıftasınıf işlemeye dayanır. <xref:System.Windows.Controls.Primitives.Selector> Örneğin, a içindeki öğelerin, <xref:System.Windows.Controls.Primitives.Selector.Selected> <xref:System.Windows.Controls.Primitives.Selector> sınıf tarafından işlenen ve daha sonra sınıf tarafından <xref:System.Windows.Controls.Primitives.Selector> potansiyel olarak farklı bir yönlendirilmiş olaya <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>dönüştürülen ekli olayı yükseltmesi beklenir. Yönlendirilen olaylar ve sınıf işleme hakkında daha fazla bilgi için, [Yönlendirilen Olayları İşlenirken İşaretleme ve Sınıf İşleme'ye](marking-routed-events-as-handled-and-class-handling.md)bakın.  
   
-<a name="Custom"></a>   
-## <a name="defining-your-own-attached-events-as-routed-events"></a>Kendi ekli olaylarınızı yönlendirilmiş olaylar olarak tanımlama  
- Ortak WPF temel sınıflarından türetmeniz durumunda, sınıfınıza belirli model yöntemlerini ekleyerek ve temel sınıflarda zaten mevcut olan yardımcı program yöntemlerini kullanarak kendi ekli olaylarınızı uygulayabilirsiniz.  
+<a name="Custom"></a>
+## <a name="defining-your-own-attached-events-as-routed-events"></a>Kendi Ekli Etkinliklerinizi Yönlendirilmiş Olaylar Olarak Tanımlama  
+ Ortak WPF taban sınıflarından türeyen iseniz, sınıfınızda belirli desen yöntemlerini ekleyerek ve temel sınıflarda zaten mevcut olan yardımcı program yöntemlerini kullanarak kendi ekli etkinliklerinizi uygulayabilirsiniz.  
   
- Bu model aşağıdaki gibidir:  
+ Desen aşağıdaki gibidir:  
   
-- Bir yöntem, iki parametreli bir __*EventName*işleyicisi ekler__ . İlk parametre olay işleyicisinin eklendiği örneğidir. İkinci parametre, eklenecek olay işleyicisidir. Yöntem, dönüş değeri olmadan `public` ve `static`olmalıdır.  
+- İki parametre ile __*EventName*Işleyicisi ekle__ yöntemi. İlk parametre, olay işleyicisinin eklendiği örnektir. İkinci parametre, eklenecek olay işleyicisidir. Yöntem olmalı `public` ve `static`, hiçbir iade değeri ile.  
   
-- Bir yöntem __,*EventName*Işleyicisini__ iki parametreyle kaldırır. İlk parametre olay işleyicisinin kaldırıldığı örneğidir. İkinci parametre, kaldırılacak olay işleyicisidir. Yöntem, dönüş değeri olmadan `public` ve `static`olmalıdır.  
+- İki parametreile __*EventName*Işleyicisi kaldır'__ yöntemi. İlk parametre, olay işleyicisinin kaldırıldığı örnektir. İkinci parametre kaldırılacak olay işleyicisidir. Yöntem olmalı `public` ve `static`, hiçbir iade değeri ile.  
   
- __*EventName*işleyicisi ekleme__ erişimcisi yöntemi, ekli olay işleyicisi ÖZNITELIKLERI bir öğede bildirildiğinde xaml işlemesini kolaylaştırır. __*EventName*Handler__ ve __Remove*EventName*Handler__ yöntemleri, ekli olay için olay işleyicisi deposuna kod erişimini de etkinleştirir.  
+ __*EventName*İşleyicisi Ekle__ erişimyöntemi, bir öğe üzerinde eklenen olay işleyicisi öznitelikleri bildirildiğinde XAML işlemini kolaylaştırır. __*EventName*İşleyicisi Ekle__ ve __Olay Adı*İşleyicisini*Kaldır__ yöntemleri de ekli olay için olay işleyicisi deposuna kod erişimi sağlar.  
   
- Bu genel düzen bir çerçevede pratik uygulama için yeterince kesin değildir, çünkü herhangi bir XAML okuyucu uygulamasının destekleyici dilde ve mimaride temel olayları tanımlamak için farklı şemaları olabilir. Bu, WPF 'nin ekli olayları yönlendirilmiş olaylar olarak uyguladığı nedenlerinden biridir; bir olay (<xref:System.Windows.RoutedEvent>) için kullanılacak tanımlayıcı, WPF olay sistemi tarafından zaten tanımlanmış. Ayrıca, bir olayı yönlendirme, ekli bir olayın XAML dil düzeyi kavramında doğal bir uygulama uzantısıdır.  
+ Herhangi bir XAML okuyucu uygulaması destekleyici dil ve mimaride temel olayları tanımlamak için farklı şemaları olabilir, çünkü bu genel desen henüz bir çerçevede pratik uygulama için yeterince hassas değildir. Bu, WPF'nin yönlendirilen olaylar olarak ekli olayları uygulama nedenlerinden biridir; bir olay için kullanılacak tanımlayıcı (<xref:System.Windows.RoutedEvent>) zaten WPF olay sistemi tarafından tanımlanır. Ayrıca, bir olayı yönlendirme, ekli bir olayın XAML dil düzeyi kavramıüzerinde doğal bir uygulama uzantısıdır.  
   
- WPF ekli olayı için __*EventName*işleyici ekleme__ , bağımsız değişken olarak yönlendirilmiş olay ve işleyiciyle <xref:System.Windows.UIElement.AddHandler%2A> çağırmaktan oluşur.  
+ WPF ekli bir olay için <xref:System.Windows.UIElement.AddHandler%2A> __*EventName*İşleyicisi__ ekle uygulaması, yönlendirilen olayı ve işleyiciyi bağımsız değişken olarak çağırmaktan oluşur.  
   
- Bu uygulama stratejisi ve yönlendirilmiş olay sistemi genel olarak, yalnızca bu sınıfların <xref:System.Windows.UIElement.AddHandler%2A> uygulamalarına sahip olduğu için, ekli olayları <xref:System.Windows.UIElement> türetilmiş sınıflara veya <xref:System.Windows.ContentElement> türetilmiş sınıflara göre işlemeyi kısıtlar.  
+ Bu uygulama stratejisi ve genel olarak yönlendirilmiş olay sistemi, <xref:System.Windows.UIElement> yalnızca <xref:System.Windows.ContentElement> bu sınıfların uygulamaları olduğundan, <xref:System.Windows.UIElement.AddHandler%2A> ekli olayların işlenmesini türemiş sınıflarla veya türetilmiş sınıflarla kısıtlar.  
   
- Örneğin, aşağıdaki kod, ekli olayı yönlendirilmiş olay olarak bildirmek için WPF Ekli olay stratejisi kullanarak, `NeedsCleaning` ekli olayını sahip sınıfında `Aquarium`tanımlar.  
+ Örneğin, aşağıdaki kod, bağlı `NeedsCleaning` olayı yönlendirilmiş bir `Aquarium`olay olarak bildirme ye ait WPF ekli olay stratejisini kullanarak, sahip sınıfındaki ekteki olayı tanımlar.  
   
  [!code-csharp[WPFAquariumSln#AECode](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
  [!code-vb[WPFAquariumSln#AECode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
   
- <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>ekli olay tanımlayıcı alanını oluşturmak için kullanılan yöntemin gerçekten, ekli olmayan bir yönlendirilmiş olayı kaydetmek için kullanılan yöntem olduğunu unutmayın. Ekli olaylar ve yönlendirilmiş olaylar, merkezi bir dahili depoya kaydedilir. Bu olay depolama uygulama, [yönlendirilmiş olaylara genel bakış](routed-events-overview.md)bölümünde ele alınan "arabirim olarak olaylar" kavramsal değerlendirmesi sunar.  
+ Ekli olay tanımlayıcı alanını oluşturmak için kullanılan yöntemin aslında <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>bağlı olmayan bir yönlendirilmiş olayı kaydetmek için kullanılan yöntemle aynı olduğunu unutmayın. Ekli olaylar ve yönlendirilmiş olayların tümü merkezi bir dahili mağazaya kaydedilir. Bu olay deposu [uygulaması, Yönlendirilmiş Olaylara Genel Bakış'ta](routed-events-overview.md)tartışılan "arabirim olarak olaylar" kavramsal dikkate alınmasını sağlar.  
   
-<a name="Raising"></a>   
-## <a name="raising-a-wpf-attached-event"></a>WPF ekli olayını yükseltme  
- Genellikle, kodunuzda mevcut WPF tanımlı ekli olayları uygulamanız gerekmez. Bu olaylar genel "hizmet" kavramsal modelini izler ve <xref:System.Windows.Input.InputManager> gibi hizmet sınıfları olayları oluşturmaktan sorumludur.  
+<a name="Raising"></a>
+## <a name="raising-a-wpf-attached-event"></a>WPF Ekli Etkinlik Yükseltme  
+ Genellikle kodunuzdan wpf tanımlı bağlı olayları yükseltmeniz gerekmez. Bu olaylar genel "hizmet" kavramsal modelini <xref:System.Windows.Input.InputManager> izler ve bu tür hizmet sınıfları olayların yükseltilmesinden sorumludur.  
   
- Ancak, <xref:System.Windows.RoutedEvent>ekli olayları temel alan WPF modeline dayalı özel bir ekli olay tanımlıyorsanız, herhangi bir <xref:System.Windows.UIElement> veya <xref:System.Windows.ContentElement>eklenen bir olayı açmak için <xref:System.Windows.UIElement.RaiseEvent%2A> kullanabilirsiniz. Yönlendirilmiş bir olayı (ekli veya değil) yükseltmek için, öğe ağacında olay kaynağı olarak belirli bir öğeyi bildirmeniz gerekir; Bu kaynak <xref:System.Windows.UIElement.RaiseEvent%2A> arayan olarak bildirilir. Ağaçta kaynak olarak hangi öğenin bildirileceğini belirleme hizmetinizin sorumluluğu  
+ Ancak, bağlı olayları temel alan WPF modeline dayalı özel bir bağlı <xref:System.Windows.RoutedEvent>olay tanımlıyorsanız, <xref:System.Windows.UIElement.RaiseEvent%2A> ekli bir olayı <xref:System.Windows.UIElement> herhangi <xref:System.Windows.ContentElement>birinden veya. Yönlendirilen bir olayı yükseltmek (ekli veya bağlı değil) öğe ağacında belirli bir öğeyi olay kaynağı olarak bildirmenizi gerektirir; bu kaynak <xref:System.Windows.UIElement.RaiseEvent%2A> arayan olarak bildirilir. Ağaçtaki kaynağın hangi öğe olarak raporlandığı belirlendir, hizmetinsorumluluğundadır  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
+- [Gönderilmiş Olaylara Genel Bakış](routed-events-overview.md)
 - [Ayrıntılı XAML Sözdizimi](xaml-syntax-in-detail.md)
 - [WPF için XAML ve Özel Sınıflar](xaml-and-custom-classes-for-wpf.md)

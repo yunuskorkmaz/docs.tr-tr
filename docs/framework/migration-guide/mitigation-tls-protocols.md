@@ -6,39 +6,39 @@ dev_langs:
 - vb
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
 ms.openlocfilehash: 45225d73ac60564d3e22c73270faab6b4e04d697
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457829"
 ---
 # <a name="mitigation-tls-protocols"></a>Azaltma: TLS Protokolleri
-.NET Framework 4,6 ' den başlayarak, <xref:System.Net.ServicePointManager?displayProperty=nameWithType> ve <xref:System.Net.Security.SslStream?displayProperty=nameWithType> sınıflarının şu üç protokolden birini kullanmasına izin verilir: TLS 1.0, TLS 1.1 veya TLS 1,2. SSL 3.0 protokol ve RC4 şifresi desteklenmez.  
+.NET Framework 4.6 ile <xref:System.Net.ServicePointManager?displayProperty=nameWithType> başlayarak, <xref:System.Net.Security.SslStream?displayProperty=nameWithType> ve sınıfları aşağıdaki üç protokolden birini kullanabilir: Tls1.0, Tls1.1 veya TLs 1.2. SSL3.0 protokolü ve RC4 şifresi desteklenmez.  
   
 ## <a name="impact"></a>Etki  
- Bu değişiklik şunları etkiler:  
+ Bu değişiklik etkiler:  
   
-- SSL kullanan herhangi bir uygulama, şu türlerden birini kullanarak bir HTTPS sunucusu ya da bir yuva sunucusu ile konuşmak için: <xref:System.Net.Http.HttpClient>, <xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.Mail.SmtpClient>ve <xref:System.Net.Security.SslStream>.  
+- Aşağıdaki türlerden herhangi birini kullanarak bir HTTPS sunucusu veya soket sunucusuyla <xref:System.Net.Http.HttpClient> <xref:System.Net.HttpWebRequest>konuşmak <xref:System.Net.FtpWebRequest> <xref:System.Net.Mail.SmtpClient>için <xref:System.Net.Security.SslStream>SSL kullanan herhangi bir uygulama: , , , ve .  
   
-- TLS 1.0, TLS 1.1 veya TLS 1,2 desteği için yükseltilemeyen herhangi bir sunucu tarafı uygulama.  
+- Tls1.0, Tls1.1 veya Tls 1.2...'i destekleyecek şekilde yükseltilemeyen sunucu tarafındaki herhangi bir uygulama.  
   
-## <a name="mitigation"></a>Azaltma  
- Önerilen risk azaltma, sunucu tarafı uygulamayı TLS 1.0, TLS 1.1 veya TLS 1,2 sürümüne yükseltmekle birlikte önerilir. Bu uygun değilse veya istemci uygulamaları bozulur, <xref:System.AppContext> sınıfı iki şekilde bu özelliği devre dışı bırakmak için kullanılabilir:  
+## <a name="mitigation"></a>Risk azaltma  
+ Önerilen azaltma, kesme tarafındaki uygulamayı Tls1.0, Tls1.1 veya Tls 1.2'ye yükseltmektir. Bu mümkün değilse veya istemci uygulamaları bozulursa, <xref:System.AppContext> sınıf bu özelliğin dışında iki şekilde devre dışı bırakmak için kullanılabilir:  
   
 - Programlı olarak, aşağıdaki gibi bir kod parçacığı kullanarak:  
   
      [!code-csharp[AppCompat.SSLProtocols#1](../../../samples/snippets/csharp/VS_Snippets_CLR/appcompat.sslprotocols/cs/program.cs#1)]
      [!code-vb[AppCompat.SSLProtocols#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/appcompat.sslprotocols/vb/module1.vb#1)]  
   
-     <xref:System.Net.ServicePointManager> nesnesi yalnızca bir kez başlatıldığından, bu uyumluluk ayarlarının tanımlanması uygulamanın ilk tarafından yapılması gerekir.  
+     <xref:System.Net.ServicePointManager> Nesne yalnızca bir kez başharfe bulaştığından, bu uyumluluk ayarlarını tanımlamak uygulamanın ilk yaptığı şey olmalıdır.  
   
-- Aşağıdaki satırı App. config dosyanızın [\<runtime >](../configure-apps/file-schema/runtime/runtime-element.md) bölümüne ekleyerek:  
+- App.config dosyanızın [ \<çalışma süresi>](../configure-apps/file-schema/runtime/runtime-element.md) bölümüne aşağıdaki satırı ekleyerek:  
   
     ```xml  
     <AppContextSwitchOverrides value="Switch.System.Net.DontEnableSchUseStrongCrypto=true"/>  
     ```  
   
- Ancak, uygulamayı daha az güvenli hale yaptığından varsayılan davranışın yerine geçen önerilmez.  
+ Ancak, uygulamayı daha az güvenli hale getirir, çünkü varsayılan davranış devre dışı bırakma önerilmez unutmayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

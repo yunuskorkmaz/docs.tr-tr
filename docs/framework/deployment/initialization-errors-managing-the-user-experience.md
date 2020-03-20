@@ -7,21 +7,21 @@ helpviewer_keywords:
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 ms.openlocfilehash: 73a0ffd4a39b144a61bf559ac424414728fb9a3f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716449"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework başlatma hataları: Kullanıcı deneyimini yönetme
 
-Ortak dil çalışma zamanı (CLR) etkinleştirme sistemi, yönetilen uygulama kodunu çalıştırmak için kullanılacak CLR sürümünü belirler. Bazı durumlarda, etkinleştirme sistemi, yüklemek için CLR 'nin bir sürümünü bulamamayabilir. Bu durum genellikle bir uygulama, belirli bir bilgisayarda geçersiz veya yüklü olmayan bir CLR sürümü gerektirdiğinde oluşur. İstenen sürüm bulunmazsa, CLR etkinleştirme sistemi çağrılan işlevden veya arabirimden bir HRESULT hata kodu döndürür ve uygulamayı çalıştıran kullanıcıya bir hata iletisi görüntüleyebilir. Bu makale, HRESULT kodlarının bir listesini sağlar ve hata iletisinin görüntülenmesini nasıl engelleyebileceğinizi açıklar.
+Ortak dil çalışma süresi (CLR) etkinleştirme sistemi, yönetilen uygulama kodunu çalıştırmak için kullanılacak CLR sürümünü belirler. Bazı durumlarda, etkinleştirme sistemi clr yüklemek için bir sürümünü bulmak mümkün olmayabilir. Bu durum genellikle bir uygulama geçersiz veya belirli bir bilgisayarda yüklü olmayan bir CLR sürümü gerektiriyorsa oluşur. İstenen sürüm bulunamazsa, CLR etkinleştirme sistemi çağrılan işlev veya arabirimden bir HRESULT hata kodu döndürür ve uygulamayı çalıştıran kullanıcıya bir hata iletisi görüntüleyebilir. Bu makalede, HRESULT kodlarının bir listesi sağlar ve hata iletisinin görüntülenmesini nasıl önleyeceğiniz açıklanmaktadır.
 
-Clr, CLR etkinleştirme [sorunlarını ayıklama](how-to-debug-clr-activation-issues.md)bölümünde açıklandığı gıbı, CLR etkinleştirme sorunlarını ayıklamanıza yardımcı olmak için günlük altyapısı sağlar. Bu altyapı, tamamen farklı olan [bütünleştirilmiş kod bağlama günlükleriyle](../tools/fuslogvw-exe-assembly-binding-log-viewer.md)karıştırılmamalıdır.
+CLR, CLR etkinleştirme sorunlarını nasıl karşılandığı gibi hata ayıklamanıza yardımcı olacak günlük altyapısı [sağlar: Hata Ayıklama CLR Etkinleştirme Sorunları.](how-to-debug-clr-activation-issues.md) Bu altyapı tamamen farklı [derleme bağlama günlükleri](../tools/fuslogvw-exe-assembly-binding-log-viewer.md)ile karıştırılmamalıdır.
 
-## <a name="clr-activation-hresult-codes"></a>CLR etkinleştirme HRESULT kodları
+## <a name="clr-activation-hresult-codes"></a>CLR aktivasyon HRESULT kodları
 
-CLR etkinleştirme API 'Leri bir etkinleştirme işleminin sonucunu bir konağa bildirmek için HRESULT kodlarını döndürür. CLR Konakları ek işlemlere geçmeden önce bu dönüş değerlerine her zaman başvurmalıdır.
+CLR etkinleştirme API'leri, etkinleştirme işleminin sonucunu bir ana bilgisayara bildirmek için HRESULT kodlarını döndürer. CLR ana bilgisayarları, ek işlemlere devam etmeden önce her zaman bu iade değerlerine başvurmalıdır.
 
 - CLR_E_SHIM_RUNTIMELOAD
 
@@ -35,63 +35,63 @@ CLR etkinleştirme API 'Leri bir etkinleştirme işleminin sonucunu bir konağa 
 
 - CLR_E_SHIM_SHUTDOWNINPROGRESS
 
-## <a name="ui-for-initialization-errors"></a>Başlatma hataları için Kullanıcı arabirimi
+## <a name="ui-for-initialization-errors"></a>Başlatma hataları için UI
 
-CLR etkinleştirme sistemi bir uygulama için gerekli olan çalışma zamanının doğru sürümünü yükleyemiyorsa, kullanıcıların, uygulamayı çalıştırmak için düzgün şekilde yapılandırılmadığını bilgilendirmek üzere kullanıcılara bir hata iletisi görüntüler ve durumu çözmek için fırsat. Aşağıdaki hata iletisi genellikle bu durumda sunulur. Kullanıcı, uygulamanın doğru .NET Framework sürümünü indirebilecekleri bir Microsoft Web sitesine gitmek için **Evet** ' i seçebilirler.
+CLR etkinleştirme sistemi bir uygulama tarafından gerekli olan çalışma zamanının doğru sürümünü yükleyemiyorsa, kullanıcılara bilgisayarlarının uygulamayı çalıştırmak için düzgün bir şekilde yapılandırılmadığını bildiren bir hata iletisi görüntüler ve durumu düzeltmek için fırsat. Aşağıdaki hata iletisi genellikle bu durumda sunulur. Kullanıcı, uygulama için doğru .NET Framework sürümünü indirebilecekleri bir Microsoft web sitesine gitmek için **Evet'i** seçebilir.
 
-![.NET Framework başlatma hatası iletişim kutusu](./media/initialization-errors-managing-the-user-experience/initialization-error-dialog.png "Başlatma hataları için tipik hata iletisi")
+![.NET Framework Initialization Error iletişim kutusu](./media/initialization-errors-managing-the-user-experience/initialization-error-dialog.png "Başlatma hataları için tipik hata iletisi")
 
-## <a name="resolving-the-initialization-error"></a>Başlatma hatası çözümleniyor
+## <a name="resolving-the-initialization-error"></a>Başlatma hatasını çözme
 
-Geliştirici olarak, .NET Framework başlatma hatası iletisini denetlemek için kullanabileceğiniz çeşitli seçenekleriniz vardır. Örneğin, sonraki bölümde açıklandığı gibi, iletinin görüntülenmesini engellemek için bir API bayrağı kullanabilirsiniz. Ancak, uygulamanızın istenen çalışma zamanını yüklemesini önleyen sorunu çözmeniz hala gerekir. Aksi takdirde, uygulamanız hiç çalışmayabilir veya bazı işlevler kullanılamayabilir.
+Geliştirici olarak,.NET Framework başlatma hata iletisini denetlemek için çeşitli seçenekleriniz vardır. Örneğin, bir sonraki bölümde açıklandığı gibi iletinin görüntülenmesini önlemek için bir API bayrağı kullanabilirsiniz. Ancak, uygulamanızın istenen çalışma süresini yüklemesini engelleyen sorunu yine de çözmeniz gerekir. Aksi takdirde, uygulamanız hiç çalışmayabilir veya bazı işlevler kullanılamayabilir.
 
-Temeldeki sorunları çözümlemek ve en iyi kullanıcı deneyimini (daha az hata iletisi) sağlamak için şunları öneririz:
+Altta yatan sorunları gidermek ve en iyi kullanıcı deneyimini (daha az hata iletisi) sağlamak için aşağıdakileri öneririz:
 
-- .NET Framework 3,5 (ve önceki sürümler) uygulamaları için: uygulamanızı .NET Framework 4 veya sonraki sürümlerini destekleyecek şekilde yapılandırın (bkz. [yönergeler](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)).
+- .NET Framework 3.5 (ve önceki) uygulamalar için: .NET Framework 4 veya sonraki sürümlerini destekleyecek şekilde uygulamanızı yapılandırın [(yönergelere](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)bakın).
 
-- .NET Framework 4 uygulamaları için: uygulama kurulumlarınızın bir parçası olarak .NET Framework 4 yeniden dağıtılabilir paketini yükleme. Bkz. [geliştiriciler Için dağıtım kılavuzu](deployment-guide-for-developers.md).
+- .NET Framework 4 uygulamaları için: .NET Framework 4 yeniden dağıtılabilir paketini uygulama kurulumuzun bir parçası olarak yükleyin. [Geliştiriciler için Dağıtım Kılavuzu'na](deployment-guide-for-developers.md)bakın.
 
 ## <a name="controlling-the-error-message"></a>Hata iletisini denetleme
 
-İstenen bir .NET Framework sürümünün bulunamadığını bildirmek için bir hata iletisi görüntüleme, kullanıcılar için faydalı bir hizmet veya küçük bir açıklama olarak görüntülenebilir. Her iki durumda da, bu kullanıcı arabirimini, bayrakları etkinleştirme API 'Lerine geçirerek kontrol edebilirsiniz.
+İstenen .NET Framework sürümünün bulunamadığını bildirmek için bir hata iletisi görüntülenmek, kullanıcılar için yararlı bir hizmet veya küçük bir sıkıntı olarak görülebilir. Her iki durumda da, etkinleştirme API'lerine bayraklar geçirerek bu UI'yi denetleyebilirsiniz.
 
-[ICLRMetaHostPolicy:: GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) yöntemi girdi olarak bir [METAHOST_POLICY_FLAGS](../unmanaged-api/hosting/metahost-policy-flags-enumeration.md) numaralandırma üyesini kabul eder. CLR 'nin istenen sürümü bulunamazsa bir hata mesajı istemek için METAHOST_POLICY_SHOW_ERROR_DIALOG bayrağını ekleyebilirsiniz. Varsayılan olarak, hata iletisi görüntülenmez. ( [ICLRMetaHost:: GetRuntime](../unmanaged-api/hosting/iclrmetahost-getruntime-method.md) yöntemi bu bayrağı kabul etmez ve hata iletisini göstermek için başka bir yol sağlamaz.)
+[ICLRMetaHostPolicy::GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) yöntemi giriş olarak [METAHOST_POLICY_FLAGS](../unmanaged-api/hosting/metahost-policy-flags-enumeration.md) numaralandırma üyesi kabul eder. CLR'nin istenen sürümü bulunamazsa hata iletisi istemek için METAHOST_POLICY_SHOW_ERROR_DIALOG bayrağı ekleyebilirsiniz. Varsayılan olarak, hata iletisi görüntülenmez. [(ICLRMetaHost::GetRuntime](../unmanaged-api/hosting/iclrmetahost-getruntime-method.md) yöntemi bu bayrağı kabul etmez ve hata iletisini görüntülemek için başka bir yol sağlamaz.)
 
-Windows, işlem içinde çalışan kodun sonucu olarak hata iletilerinin gösterilip gösterilmeyeceğini bildirmek için kullanabileceğiniz bir [SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode) işlevi sağlar. Hata iletisinin görüntülenmesini engellemek için SEM_FAILCRITICALERRORS bayrağını belirtebilirsiniz.
+Windows, işlemiçinde çalışan kod sonucunda hata iletilerinin gösterilmesini isteyip istemediğinizi bildirmek için kullanabileceğiniz bir [SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode) işlevi sağlar. Hata iletisinin görüntülenmesini önlemek için SEM_FAILCRITICALERRORS bayrağını belirtebilirsiniz.
 
-Ancak bazı senaryolarda, bir uygulama işlemi tarafından ayarlanan SEM_FAILCRITICALERRORS ayarının geçersiz kılınması önemlidir. Örneğin, CLR 'yi barındıran ve SEM_FAILCRITICALERRORS ayarlandığı bir işlemde barındırılan yerel bir COM bileşeniniz varsa, bu belirli uygulama sürecinde hata iletilerinin görüntülenmesine bağlı olarak bayrağını geçersiz kılmak isteyebilirsiniz. Bu durumda, SEM_FAILCRITICALERRORS geçersiz kılmak için aşağıdaki bayraklardan birini kullanabilirsiniz:
+Ancak, bazı senaryolarda, bir uygulama işlemi tarafından ayarlanan SEM_FAILCRITICALERRORS ayarını geçersiz kılmak önemlidir. Örneğin, CLR'yi barındıran ve SEM_FAILCRITICALERRORS ayarlandığı bir işlemde barındırılan yerel bir COM bileşeniniz varsa, belirli bir uygulama sürecinde hata iletileri görüntülemenin etkisine bağlı olarak bayrağı geçersiz kılmak isteyebilirsiniz. Bu durumda, SEM_FAILCRITICALERRORS geçersiz kılmak için aşağıdaki bayraklardan birini kullanabilirsiniz:
 
-- [ICLRMetaHostPolicy:: GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) yöntemiyle METAHOST_POLICY_IGNORE_ERROR_MODE kullanın.
+- [ICLRMetaHostPolicy::GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) yöntemi ile METAHOST_POLICY_IGNORE_ERROR_MODE kullanın.
 
-- [GetRequestedRuntimeInfo](../unmanaged-api/hosting/getrequestedruntimeinfo-function.md) işleviyle birlikte RUNTIME_INFO_IGNORE_ERROR_MODE kullanın.
+- [GetRequestedRuntimeInfo](../unmanaged-api/hosting/getrequestedruntimeinfo-function.md) işlevi ile RUNTIME_INFO_IGNORE_ERROR_MODE kullanın.
 
-## <a name="ui-policy-for-clr-provided-hosts"></a>CLR tarafından sağlanmış konaklar için Kullanıcı Arabirimi ilkesi
+## <a name="ui-policy-for-clr-provided-hosts"></a>CLR tarafından sağlanan ana bilgisayarlar için Ara bilgi ilkesi
 
-CLR çeşitli senaryolar için bir dizi ana bilgisayar içerir ve bu konaklar, çalışma zamanının gerekli sürümünü yüklerken sorunlarla karşılaştığında bir hata mesajı görüntüler. Aşağıdaki tabloda, ana bilgisayarların listesi ve bunların hata ileti ilkeleri verilmiştir.
+CLR çeşitli senaryolar için ana bilgisayar ları içerir ve bu ana bilgisayarların tümü, çalışma zamanının gerekli sürümünü yüklerken sorunlarla karşılaştıklarında bir hata iletisi görüntüler. Aşağıdaki tablo, ana bilgisayarların ve hata iletisi ilkelerinin bir listesini sağlar.
 
-|CLR Konağı|Açıklama|Hata iletisi ilkesi|Hata iletisi devre dışı bırakılabilir mi?|
+|CLR ana bilgisayar|Açıklama|Hata iletisi ilkesi|Hata iletisi devre dışı alınabilir mi?|
 |--------------|-----------------|--------------------------|------------------------------------|
-|Yönetilen EXE ana bilgisayarı|Yönetilen EXEs 'leri başlatır.|Eksik bir .NET Framework sürümü durumunda gösterilir|Hayır|
-|Yönetilen COM ana bilgisayarı|Yönetilen COM bileşenlerini bir işleme yükler.|Eksik bir .NET Framework sürümü durumunda gösterilir|Evet, SEM_FAILCRITICALERRORS bayrağını ayarlayarak|
-|ClickOnce ana bilgisayarı|ClickOnce uygulamalarını başlatır.|Eksik bir .NET Framework sürümünde gösterilmiştir .NET Framework 4,5 ile başlar|Hayır|
-|XBAP Konağı|WPF XBAP uygulamalarını başlatır.|Eksik bir .NET Framework sürümünde gösterilmiştir .NET Framework 4,5 ile başlar|Hayır|
+|Yönetilen EXE ana bilgisayar|Yönetilen EXE'leri başlatır.|Eksik bir .NET Framework sürümü nde gösterilir|Hayır|
+|Yönetilen COM ana bilgisayar|Yönetilen COM bileşenlerini bir işleme yükler.|Eksik bir .NET Framework sürümü nde gösterilir|Evet, SEM_FAILCRITICALERRORS bayrağı nı ayarlayarak|
+|ClickOnce ana bilgisayar|ClickOnce uygulamalarını başlatın.|.NET Framework 4.5 ile başlayan bir .NET Framework sürümü eksik durumunda gösterilir|Hayır|
+|XBAP ana bilgisayar|WPF XBAP uygulamalarını başlatın.|.NET Framework 4.5 ile başlayan bir .NET Framework sürümü eksik durumunda gösterilir|Hayır|
 
-## <a name="windows-8-behavior-and-ui"></a>Windows 8 davranışı ve Kullanıcı arabirimi
+## <a name="windows-8-behavior-and-ui"></a>Windows 8 davranışı ve UI
 
-CLR etkinleştirme sistemi, Windows 8 ' de aynı davranışı ve Kullanıcı arabirimini, Windows işletim sisteminin diğer sürümlerinde olduğu gibi, CLR 2,0 yükleme sorunlarıyla karşılaştığında de sağlar. Windows 8, CLR 4,5 kullanan .NET Framework 4,5 ' i içerir. Ancak, Windows 8, tüm CLR 2,0 kullanan 2,0, 3,0 veya 3,5 .NET Framework içermez. Sonuç olarak, CLR 2,0 ' ye bağımlı uygulamalar varsayılan olarak Windows 8 üzerinde çalışmaz. Bunun yerine, kullanıcıların 3,5 .NET Framework yüklemesine olanak tanımak için aşağıdaki iletişim kutusunu görüntüler. Kullanıcılar ayrıca Denetim Masası 'nda .NET Framework 3,5 ' i etkinleştirebilir. Her iki seçenek de, [Windows 10, Windows 8.1 ve Windows 8 ' de .NET Framework 3,5 ' i yüklein](../install/dotnet-35-windows-10.md)makalesinde açıklanmaktadır.
+CLR etkinleştirme sistemi, CLR 2.0 yükleme sorunlarıyla karşılaşmadığı sürece, Windows 8'de windows işletim sisteminin diğer sürümlerinde olduğu gibi aynı davranışı ve kullanıcı kullanıcı yanını sağlar. Windows 8, CLR 4.5 kullanan .NET Framework 4.5'i içerir. Ancak, Windows 8,clr 2.0 kullanan .NET Framework 2.0, 3.0 veya 3.5'i içermez. Sonuç olarak, CLR 2.0'a bağlı uygulamalar varsayılan olarak Windows 8'de çalışmaz. Bunun yerine, kullanıcıların .NET Framework 3.5'i yüklemesini sağlamak için aşağıdaki iletişim kutusunu görüntülerler. Kullanıcılar denetim panelinde .NET Framework 3.5'i de etkinleştirebilir. Her iki seçenek de makalede [Windows 10, Windows 8.1 ve Windows 8'de .NET Framework 3.5'i yükleyin.](../install/dotnet-35-windows-10.md)
 
-![Windows 8 ' de 3,5 yüklemesi için iletişim kutusu](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "İsteğe bağlı .NET Framework 3,5 yükleme istemi")
+![Windows 8'de 3,5 yükleme için iletişim kutusu](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "Talep üzerine .NET Framework 3.5'i yüklemek için istek")
 
 > [!NOTE]
-> .NET Framework 4,5, kullanıcının bilgisayarındaki .NET Framework 4 ' ün (CLR 4) yerini almıştır. Bu nedenle, Windows 8 ' de bu iletişim kutusunu görüntülemeden .NET Framework 4 uygulama sorunsuz bir şekilde çalışır.
+> .NET Framework 4.5, kullanıcının bilgisayarındaki .NET Framework 4'ün (CLR 4) yerini alır. Bu nedenle, .NET Framework 4 uygulamaları, bu iletişim kutusunu görüntülemeden Windows 8'de sorunsuz bir şekilde çalışır.
 
-.NET Framework 3,5 yüklendiğinde, kullanıcılar Windows 8 bilgisayarlarında 2,0, 3,0 veya 3,5 .NET Framework bağlı olan uygulamaları çalıştırabilir. Ayrıca, bu uygulamaların yalnızca .NET Framework 1,0 veya 1,1 üzerinde çalışmak üzere açıkça yapılandırılmaları kaydıyla, .NET Framework 1,0 ve 1,1 uygulamalarını da çalıştırabilirler. Bkz. [.NET Framework 1,1 ' den geçiş](../migration-guide/migrating-from-the-net-framework-1-1.md).
+.NET Framework 3.5 yüklendiğinde, kullanıcılar Windows 8 bilgisayarlarında .NET Framework 2.0, 3.0 veya 3.5'e bağlı uygulamaları çalıştırabilir. Bu uygulamalar açıkça yalnızca .NET Framework 1.0 veya 1.1 üzerinde çalışacak şekilde yapılandırılmamış olması koşuluyla ,NET Framework 1.0 ve 1.1 uygulamalarını da çalıştırabilirler. Bkz. [.NET Framework 1.1'den Geçiş](../migration-guide/migrating-from-the-net-framework-1-1.md).
 
-.NET Framework 4,5 ' den başlayarak, CLR etkinleştirme günlüğü, başlatma hatası iletisinin ne zaman ve neden görüntüleneceğini kaydeden günlük girdilerini içerecek şekilde geliştirilmiştir. Daha fazla bilgi için bkz. [nasıl yapılır: CLR etkinleştirme sorunlarını ayıklama](how-to-debug-clr-activation-issues.md).
+.NET Framework 4.5 ile başlayarak, CLR etkinleştirme günlüğe kaydetme nin ne zaman ve neden başlatıldığını kaydeden günlük girişlerini içerecek şekilde geliştirilmiştir. Daha fazla bilgi için [bkz: Hata Ayıklama CLR Etkinleştirme Sorunları.](how-to-debug-clr-activation-issues.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Geliştiriciler için Dağıtım Kılavuzu](deployment-guide-for-developers.md)
-- [Nasıl yapılır: .NET Framework 4 veya sonraki sürümleri desteklemek için uygulama yapılandırma](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Nasıl yapilir: Bir uygulamayı .NET Framework 4 veya sonraki sürümlerini destekleyecek şekilde yapılandırın](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 - [Nasıl Yapılır: CLR Etkinleştirme Sorunlarında Hata Ayıklama](how-to-debug-clr-activation-issues.md)
 - [Windows 10, Windows 8.1 ve Windows 8’de .NET Framework 3.5 Yükleme](../install/dotnet-35-windows-10.md)

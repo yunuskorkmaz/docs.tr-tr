@@ -1,5 +1,5 @@
 ---
-title: ListView denetimindeki öğeleri gruplandırma
+title: ListView Denetiminde Öğeleri Grupla
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,42 +12,42 @@ helpviewer_keywords:
 - groups
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 610416a1-8da4-436c-af19-5f19e654769b
-ms.openlocfilehash: 45846751780f433c29b186fe8b9a908f5d295ab3
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a1754d10de2bbb5895ae861cd17f4af1f18810e2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736633"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141997"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>Nasıl yapılır Windows Forms ListView Denetimindeki Öğeleri Gruplama
-<xref:System.Windows.Forms.ListView> denetiminin gruplandırma özelliği ile, gruplar içindeki ilgili öğe kümelerini görüntüleyebilirsiniz. Bu gruplar, grup başlıklarını içeren yatay grup üst bilgilerine göre ekranda ayrılır. Öğeleri alfabetik olarak, tarihe göre veya diğer mantıksal gruplandırmalara göre gruplandırarak büyük listeleri daha kolay gezinmek için <xref:System.Windows.Forms.ListView> gruplarını kullanabilirsiniz. Aşağıdaki görüntüde bazı gruplanmış öğeler gösteriliyor.  
+<xref:System.Windows.Forms.ListView> Denetimin gruplandırma özelliğiyle, ilgili öğe kümelerini gruplar halinde görüntüleyebilirsiniz. Bu gruplar, grup başlıklarını içeren yatay grup başlıkları yla ekranda ayrılır. Büyük listelerde gezinmeyi, öğeleri alfabetik olarak, tarihe göre veya başka bir mantıksal gruplandırmaya göre gruplandırmayı kolaylaştırmak için grupları kullanabilirsiniz. <xref:System.Windows.Forms.ListView> Aşağıdaki resimde bazı gruplanmış öğeler gösterilmektedir.  
   
- ![Tek ve hatta ListView gruplarının ekran görüntüsü.](./media/how-to-group-items-in-a-windows-forms-listview-control-using-the-designer/odd-even-list-view-groups.gif)  
-   
- Gruplamayı etkinleştirmek için önce tasarımcıda veya program aracılığıyla bir veya daha fazla grup oluşturmanız gerekir. Bir grup tanımlandıktan sonra gruplara <xref:System.Windows.Forms.ListView> öğeleri atayabilirsiniz. Ayrıca, öğeleri programlama yoluyla bir gruptan diğerine taşıyabilirsiniz.  
+ ![Tek ve çift ListView gruplarının ekran görüntüsü.](./media/how-to-group-items-in-a-windows-forms-listview-control-using-the-designer/odd-even-list-view-groups.gif)  
+
+ Gruplandırmayı etkinleştirmek için önce tasarımcıda veya programlı olarak bir veya daha fazla grup oluşturmanız gerekir. Bir grup tanımlandıktan sonra, gruplara öğe atayabilirsiniz. <xref:System.Windows.Forms.ListView> Öğeleri bir gruptan diğerine programlı olarak da taşıyabilirsiniz.  
   
 ### <a name="to-add-groups"></a>Grup eklemek için  
   
-1. <xref:System.Windows.Forms.ListView.Groups%2A> koleksiyonunun <xref:System.Windows.Forms.ListViewGroupCollection.Add%2A> yöntemini kullanın.  
+1. Toplama <xref:System.Windows.Forms.ListViewGroupCollection.Add%2A> yöntemini <xref:System.Windows.Forms.ListView.Groups%2A> kullanın.  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#21)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#21)]  
   
 ### <a name="to-remove-groups"></a>Grupları kaldırmak için  
   
-1. <xref:System.Windows.Forms.ListView.Groups%2A> koleksiyonunun <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> veya <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> yöntemini kullanın.  
+1. Koleksiyonun <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> yöntemini <xref:System.Windows.Forms.ListView.Groups%2A> veya yöntemini kullanın.  
   
-     <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> yöntemi tek bir grubu kaldırır; <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> yöntemi, tüm grupları listeden kaldırır.  
+     Yöntem <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> tek bir grubu kaldırır; <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> yöntem tüm grupları listeden kaldırır.  
   
     > [!NOTE]
-    > Bir grubun kaldırılması bu gruptaki öğeleri kaldırmaz.  
+    > Bir grubu kaldırmak, bu gruptaki öğeleri kaldırmaz.  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#22)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#22)]  
   
-### <a name="to-assign-items-to-groups-or-move-items-between-groups"></a>Gruplara öğe atamak veya öğeleri gruplar arasında taşımak için  
+### <a name="to-assign-items-to-groups-or-move-items-between-groups"></a>Maddeleri gruplara atamak veya maddeleri gruplar arasında taşımak için  
   
-1. Ayrı öğelerin <xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType> özelliğini ayarlayın.  
+1. Tek <xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType> tek öğelerin özelliğini ayarlayın.  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#23)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#23)]  

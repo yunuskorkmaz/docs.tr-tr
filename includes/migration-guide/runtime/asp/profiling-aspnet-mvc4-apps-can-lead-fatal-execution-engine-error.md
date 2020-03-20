@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: 107b34c7bd26e1396e8a6638d6929c15de92b8e4
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 439a4976482639cd2e4e17315ec1a53ca54aa477
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67803267"
 ---
-### <a name="profiling-aspnet-mvc4-apps-can-lead-to-fatal-execution-engine-error"></a>ASP.Net MVC4 uygulamaları profil oluşturma için önemli yürütme altyapısı hata neden olabilir
+### <a name="profiling-aspnet-mvc4-apps-can-lead-to-fatal-execution-engine-error"></a>MVC4 uygulamaları ASP.Net profil oluşturma Ölümcül Yürütme Motoru Hatasına yol açabilir
 
 |   |   |
 |---|---|
-|Ayrıntılar|NGEN/profile bütünleştirilmiş kodları kullanarak profil oluşturucular başlangıçta 'Önemli yürütme altyapısı bir özel durum' ile profili oluşturulmuş ASP.NET MVC4 uygulamalarının çökebilir|
-|Öneri|.NET Framework 4.5.2 Bu sorun düzeltilmiştir. Alternatif olarak, profil oluşturucu bu sorunu belirterek önlemek <code>COR_PRF_DISABLE_ALL_NGEN_IMAGES</code> kendi olay maske.|
-|Kapsam|Kenar|
+|Ayrıntılar|NGEN /Profil montajları kullanan profilciler, başlangıç ASP.NET MVC4 uygulamalarında profillenmiş olarak 'Fatal Execution Engine Exception' ile çökebilir|
+|Öneri|Bu sorun .NET Framework 4.5.2'de giderilmiştir. Alternatif olarak, profil oluşturucu olay maskesini belirterek <code>COR_PRF_DISABLE_ALL_NGEN_IMAGES</code> bu sorunu önleyebilir.|
+|Kapsam|Edge|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
-
+|Tür|Çalışma Zamanı|

@@ -1,5 +1,5 @@
 ---
-title: ServicePointManager. s_ServicePointTable alanı
+title: ServicePointManager.s_ServicePointTable Alanı
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 24459679-291c-401a-9def-e42b29466fcf
-ms.openlocfilehash: 272a0c113fd70d804c763ba0e7e6e9a4a4ee04ce
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 6a56ecd6fc85005f5987c3c2ad0d1680ca63c398
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214916"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155825"
 ---
-# <a name="servicepointmanagers_servicepointtable-field"></a>ServicePointManager. s\_ServicePointTable alanı
+# <a name="servicepointmanagers_servicepointtable-field"></a>ServicePointManager.s\_ServicePointTable Alanı
 
-`ServicePointManager.s_ServicePointTable`, <xref:System.AppDomain>içindeki etkin HTTP bağlantılarının (<xref:System.Net.ServicePoint>s) listesini içeren bir <xref:System.Collections.Hashtable>.
+`ServicePointManager.s_ServicePointTable`etkin <xref:System.Collections.Hashtable> HTTP bağlantılarının (lar)<xref:System.Net.ServicePoint>listesini içeren bir <xref:System.AppDomain>bağlantıdır.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -28,14 +28,14 @@ private static Hashtable s_ServicePointTable
 ```
 
 > [!WARNING]
-> `ServicePointManager.s_ServicePointTable` alanı özeldir ve doğrudan kodunuzda kullanılmamalıdır.
-> 
-> Microsoft, herhangi bir koşulda bu alanın bir üretim uygulamasında kullanımını desteklemez.
+> Alan `ServicePointManager.s_ServicePointTable` özeldir ve doğrudan kodunuzda kullanılmamalıdır.
+>
+> Microsoft, hiçbir koşulda bir üretim uygulamasında bu alanın kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Ad alanı:** <xref:System.Net>
+**Ad alanı:**<xref:System.Net>
 
-**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
+**Montaj:** Sistem (System.dll'de)
 
-**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2.0'dan beri mevcuttur.

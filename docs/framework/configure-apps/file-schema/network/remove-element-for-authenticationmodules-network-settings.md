@@ -10,26 +10,26 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: 2113b2b81ae347b398b0f25028dc6c361aec8447
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: d171fea193bbae068e69b8976abb8e56a5623f02
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089173"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154783"
 ---
-# <a name="remove-element-for-authenticationmodules-network-settings"></a>authenticationModules için > öğesini \<Kaldır (ağ ayarları)
-Bir kimlik doğrulama modülünü uygulamadan kaldırır.  
+# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<kimlik doğrulama modülleri için> Öğesi kaldırma (Ağ Ayarları)
+Uygulamadan bir kimlik doğrulama modüllerini kaldırır.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**kaldır >**
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<kimlik doğrulamaModülleri>**](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>kaldırmak**
 
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<remove   
-   type="authentication module name"   
+<remove
+   type="authentication module name"
 />  
 ```  
   
@@ -40,7 +40,7 @@ Bir kimlik doğrulama modülünü uygulamadan kaldırır.
   
 |**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|**türüyle**|Kaldırılacak kimlik doğrulama modülünün adı.|  
+|**Türü**|Kaldırılacak kimlik doğrulama modülünün adı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -49,18 +49,18 @@ Bir kimlik doğrulama modülünü uygulamadan kaldırır.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[authenticationModules](authenticationmodules-element-network-settings.md)|Ağ isteklerinin kimliğini doğrulamak için kullanılan modülleri belirtir.|  
+|[kimlik doğrulamaModülleri](authenticationmodules-element-network-settings.md)|Ağ isteklerini doğrulamak için kullanılan modülleri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `remove` öğesi, daha önce yapılandırma dosyasında veya yapılandırma hiyerarşisinde daha yüksek bir düzeyde tanımlanmış olan kimlik doğrulama modüllerini kaldırır.  
+ Öğe, `remove` yapılandırma dosyasında veya yapılandırma hiyerarşisinde daha yüksek bir düzeyde daha önce tanımlanan kimlik doğrulama modüllerini kaldırır.  
   
- `type` özniteliğin değeri geçerli bir sınıf adı olmalıdır.  
+ Öznitelik için `type` değer geçerli bir sınıf adı olmalıdır.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+ Bu öğe uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir kimlik doğrulama modülünü kaldırır.  
+ Aşağıdaki örnek, kimlik doğrulama modüllerini kaldırır.  
   
 ```xml  
 <configuration>  

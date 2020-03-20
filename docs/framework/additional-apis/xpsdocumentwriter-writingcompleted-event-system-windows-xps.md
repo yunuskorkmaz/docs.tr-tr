@@ -1,5 +1,5 @@
 ---
-title: XpsDocumentWriter. _WritingCompleted olayı (System. Windows. XPS)
+title: XpsDocumentWriter._WritingCompleted Olay (System.Windows.Xps)
 ms.date: 10/17/2017
 api_location:
 - system.printing.dll
@@ -11,16 +11,16 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 902e491ce4c4a37f83d68888fc4b5d6a7665ffb6
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 0c233965638217ad5b25b9792fe07fb4d73dbe18
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524899"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155628"
 ---
-# <a name="xpsdocumentwriter_writingcompleted-event"></a>XpsDocumentWriter. \_WritingCompleted olayı
+# <a name="xpsdocumentwriter_writingcompleted-event"></a>Xpsdocumentwriter. \_YazılarTamamlanan Etkinlik
 
-Bir yazma işlemi tamamlandığında gerçekleşir. 
+Bir yazma işlemi bittiğinde oluşur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,8 +30,8 @@ internal event WritingCompletedEventHandler _WritingCompleted
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Ad alanı:** <xref:System.Windows.Xps>
+**Ad alanı:**<xref:System.Windows.Xps>
 
-**Bütünleştirilmiş kod:** System. Printing (System. Printing. dll içinde)
+**Montaj:** System.Printing (system.printing.dll içinde)
 
-**.NET Framework sürümleri:** 3,0 sürümünden itibaren kullanılabilir
+**.NET Framework sürümleri:** 3.0'dan beri mevcut

@@ -10,26 +10,26 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: ca3a78a491c61b6e23dab0f96eebceb3157706ae
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: afa1aef8ea71f43a136987ec5b6e1925c6d9fb40
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089144"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154731"
 ---
-# <a name="remove-element-for-webrequestmodules-network-settings"></a>webRequestModules için > öğesini \<Kaldır (ağ ayarları)
-Uygulamadan özel bir Web istek modülünü kaldırır.  
+# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<webRequestModules (Ağ Ayarları) için> Öğeyi kaldırın
+Özel bir Web isteği modüllerini uygulamadan kaldırır.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webRequestModules**](webrequestmodules-element-network-settings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**kaldır >**
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<webRequestModules>**](webrequestmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>kaldırmak**
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<remove   
-  prefix="URI prefix"   
+<remove
+  prefix="URI prefix"
 />  
 ```  
   
@@ -40,7 +40,7 @@ Uygulamadan özel bir Web istek modülünü kaldırır.
   
 |**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|`prefix`|Bu Web isteği modülü tarafından işlenen istekler için URI ön eki.|  
+|`prefix`|Bu Web istek modülü tarafından işlenen istekler için URI öneki.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -49,19 +49,19 @@ Uygulamadan özel bir Web istek modülünü kaldırır.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[webRequestModules](webrequestmodules-element-network-settings.md)|Ağ konaklarından bilgi istemek için kullanılacak modülleri belirtir.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|Ağ ana bilgisayarlarından bilgi istemek için kullanılacak modülleri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `remove` öğesi, belirtilen URI ön eki için kayıtlı Web isteği modülünü kaldırır.  
+ Öğe, `remove` belirtilen URI öneki için kayıtlı Web isteği modüllerini kaldırır.  
   
- `prefix` özniteliğin değeri, geçerli bir URI 'nin baştaki karakterleri olmalıdır--örneğin, "`http`" veya "`http://www.contoso.com`".  
+ Öznitelik değeri `prefix` geçerli bir URI'nin önde gelen karakterleri olmalıdır`http`- örneğin,`http://www.contoso.com`" ", veya " ".  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+ Bu öğe uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
 
-Aşağıdaki örnek, HTTP için mevcut Web isteği modülünü kaldırır ve ardından `www.contoso.com`HTTP istekleri için yeni bir özel Web isteği modülü kaydeder.
+Aşağıdaki örnek, HTTP için varolan Web istek modüllerini kaldırır ve ardından HTTP `www.contoso.com`istekleri için yeni bir özel Web isteği modüllerini kaydeder.
   
 ```xml  
 <configuration>  

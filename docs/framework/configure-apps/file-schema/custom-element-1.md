@@ -6,19 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-ms.openlocfilehash: 1d0431085a04d3fb817dfe0883779acc4d693084
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 04360a796b18cf1e414f1f84bff247a1e9d8ef9c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214779"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155160"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler için özel öğe
 
-Bir \<bölümü > öğesi tarafından tanımlanan ve <xref:System.Configuration.SingleTagSectionHandler> sınıfını kullanan özel bir yapılandırma bölümünde ayarları tanımlar.
+Bir bölüm> öğesi tarafından tanımlanan ve \< <xref:System.Configuration.SingleTagSectionHandler> sınıfı kullanan özel bir yapılandırma bölümündeki ayarları tanımlar.
 
-[ **\<yapılandırma >** ](configuration-element.md)   
-&nbsp;&nbsp; *\<sectionName >*
+yapılandırma &nbsp; &nbsp;>[** \<**](configuration-element.md) * \<bölümName>*
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,41 +27,41 @@ Bir \<bölümü > öğesi tarafından tanımlanan ve <xref:System.Configuration.
 
 ## <a name="attributes"></a>Öznitelikler
 
-Öznitelikler ve öznitelik değerleri Kullanıcı tanımlı ' dır.
+Öznitelikler ve öznitelik değerleri kullanıcı tanımlanır.
 
 ## <a name="parent-element"></a>Üst öğe
 
 |     | Açıklama |
 | --- | ----------- |
-| [ **\<Yapılandırma >** ](configuration-element.md) | Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe. |
+| [**\<yapılandırma>**](configuration-element.md) | Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-Hiçbiri
+None
 
 ## <a name="remarks"></a>Açıklamalar
 
-**\<sectionName >** öğesi, [ **\<configSections >** ](configsections-element-for-configuration.md) öğesinde bir [ **\<bölümü >** ](section-element.md) etiketi tarafından tanımlanan özel bir öğedir. Yapılandırma sistemi, <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>çağırdığınızda bir <xref:System.Collections.IDictionary> nesnesi döndürür.
+sectionName>[** \<öğesi, configSections>**](configsections-element-for-configuration.md) öğesindeki bir [** \<bölüm>**](section-element.md) etiketiyle tanımlanan özel bir öğedir. ** \<** Yapılandırma sistemi, <xref:System.Collections.IDictionary> <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, <xref:System.Configuration.SingleTagSectionHandler> sınıfı tarafından okunan ayarları içeren **\<sampleSection >** adlı özel bir öğe bildirir:
+Aşağıdaki örnek, <xref:System.Configuration.SingleTagSectionHandler> sınıf tarafından okunan ayarları içeren ** \<örnekBölüm>** adlı özel bir öğe bildirir:
 
 ```xml
 <configuration>
   <configSections>
-    <section name="sampleSection" 
+    <section name="sampleSection"
              type="System.Configuration.SingleTagSectionHandler" />
   </configSections>
-  <sampleSection setting1="Value1" 
-                 setting2="value two" 
+  <sampleSection setting1="Value1"
+                 setting2="value two"
                  setting3="third value" />
 </configuration>
 ```
 
 ## <a name="configuration-file"></a>Yapılandırma dosyası
 
-Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine. config*) ve uygulama dizini düzeyinde olmayan *Web. config* dosyalarında kullanılabilir.
+Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında *(Machine.config)* ve uygulama dizini düzeyinde olmayan *Web.config* dosyalarında kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

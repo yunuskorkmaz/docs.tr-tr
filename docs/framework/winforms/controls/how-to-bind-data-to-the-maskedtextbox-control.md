@@ -10,29 +10,29 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: f10a19433c70eb0a1dacf99925f70d6796727da9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0cbb239e24b254c37c453486590185e934adf482
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612415"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142179"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Nasıl yapılır: MaskedTextBox Denetimine Veri Bağlama
-Verilere bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> için başka bir Windows Forms denetimi gibi denetim. Bununla birlikte, verilerinizi veritabanında biçimi tanımınızı maskesi beklenen biçimde eşleşmiyorsa, verileri yeniden biçimlendirmek gerekir. Aşağıdaki yordam kullanılarak bunun nasıl yapılacağını göstermektedir <xref:System.Windows.Forms.Binding.Format> ve <xref:System.Windows.Forms.Binding.Parse> olayları <xref:System.Windows.Forms.Binding> ayrı bir telefon numarası görüntülemek ve tek düzenlenebilir bir alanı telefon uzantısı veritabanı alanları için sınıf.  
+Verileri, diğer Windows <xref:System.Windows.Forms.MaskedTextBox> Forms denetimine bağlayabileceğiniz gibi bir denetime bağlayabilirsiniz. Ancak, veritabanındaki verilerinizin biçimi maske tanımınızın beklediği biçimle eşleşmiyorsa, verileri yeniden biçimlendirmeniz gerekir. Aşağıdaki yordam, ayrı telefon numarası <xref:System.Windows.Forms.Binding.Format> ve <xref:System.Windows.Forms.Binding.Parse> telefon <xref:System.Windows.Forms.Binding> uzantısı veritabanı alanlarını tek bir editable alan olarak görüntülemek için sınıfın olayları ve olayları kullanarak bunu nasıl yapacağını gösterir.  
   
- Aşağıdaki yordam, yüklü Northwind örnek veritabanı ile SQL Server veritabanına sahip olmasını gerektirir.  
+ Aşağıdaki yordam, Northwind örnek veritabanı yüklü bir SQL Server veritabanına erişmenizi gerektirir.  
   
-### <a name="to-bind-data-to-a-maskedtextbox-control"></a>MaskedTextBox denetimine veri bağlama için  
+### <a name="to-bind-data-to-a-maskedtextbox-control"></a>Verileri MaskeliTextBox denetimine bağlamak için  
   
 1. Yeni bir Windows Forms projesi oluşturun.  
   
-2. İki <xref:System.Windows.Forms.TextBox> denetimleri formunuza; bunları `FirstName` ve `LastName`.  
+2. İki <xref:System.Windows.Forms.TextBox> denetimi formunuza sürükleyin; onları `FirstName` isim `LastName`ve .  
   
-3. Sürükleme bir <xref:System.Windows.Forms.MaskedTextBox> Formunuza denetim; adlandırın `PhoneMask`.  
+3. Bir <xref:System.Windows.Forms.MaskedTextBox> denetimi formunuza sürükleyin; adını. `PhoneMask`  
   
-4. Ayarlama <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> özelliği `PhoneMask` için `(000) 000-0000 x9999`.  
+4. 'nin <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> `PhoneMask` özelliğini `(000) 000-0000 x9999`.  
   
-5. Aşağıdaki ad alanı için formu alır ekleyin.  
+5. Forma aşağıdaki ad alanı içeriaklarını ekleyin.  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -42,7 +42,7 @@ Verilere bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> için 
     Imports System.Data.SqlClient  
     ```  
   
-6. Formun sağ tıklatın ve seçin **kodu görüntüle**. Bu kod, form Sınıfınız içinde herhangi bir yere yerleştirin.  
+6. Forma sağ tıklayın ve **Kodu Görüntüle'yi**seçin. Bu kodu form sınıfınızın herhangi bir yerine yerleştirin.  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -72,8 +72,8 @@ Verilere bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> için 
         dataConnect.Fill(employeesTable, "Employees");  
   
         // Now bind MaskedTextBox to appropriate field. Note that we must create the Binding objects  
-        // before adding them to the control - otherwise, we won't get a Format event on the   
-        // initial load.   
+        // before adding them to the control - otherwise, we won't get a Format event on the
+        // initial load.
         try  
         {  
             currentBinding = new Binding("Text", employeesTable, "Employees.FirstName");  
@@ -120,7 +120,7 @@ Verilere bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> için 
         DataConnect.Fill(EmployeesTable, "Employees")  
   
         ' Now bind MaskedTextBox to appropriate field. Note that we must create the Binding objects  
-        ' before adding them to the control - otherwise, we won't get a Format event on the   
+        ' before adding them to the control - otherwise, we won't get a Format event on the
         ' initial load.  
         Try  
             CurrentBinding = New Binding("Text", EmployeesTable, "Employees.FirstName")  
@@ -136,7 +136,7 @@ Verilere bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> için 
     End Sub  
     ```  
   
-7. Olay işleyicileri ekleme <xref:System.Windows.Forms.Binding.Format> ve <xref:System.Windows.Forms.Binding.Parse> birleştirin ve ayırmak için olayları `PhoneNumber` ve `Extension` ilişkili alanları <xref:System.Data.DataSet>.  
+7. <xref:System.Windows.Forms.Binding.Format> Ve <xref:System.Windows.Forms.Binding.Parse> `Extension` alanları birleştirmek ve bağlı <xref:System.Data.DataSet>olandan ayırmak `PhoneNumber` için olay işleyicileri ve olaylar ekleyin.  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -144,10 +144,10 @@ Verilere bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> için 
         String ext;  
   
         DataRowView currentRow = (DataRowView)BindingContext[employeesTable, "Employees"].Current;  
-        if (currentRow["Extension"] == null)   
+        if (currentRow["Extension"] == null)
         {  
             ext = "";  
-        } else   
+        } else
         {  
             ext = currentRow["Extension"].ToString();  
         }  
@@ -163,7 +163,7 @@ Verilere bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> için 
         String ext = phoneNumberAndExt.Substring(extIndex).Trim();  
         String phoneNumber = phoneNumberAndExt.Substring(0, extIndex).Trim();  
   
-        //Get the current binding object, and set the new extension manually.   
+        //Get the current binding object, and set the new extension manually.
         DataRowView currentRow = (DataRowView)BindingContext[employeesTable, "Employees"].Current;  
         // Remove the "x" from the extension.  
         currentRow["Extension"] = ext.Substring(1);  
@@ -194,7 +194,7 @@ Verilere bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> için 
         Dim Ext As String = PhoneNumberAndExt.Substring(ExtIndex).Trim()  
         Dim PhoneNumber As String = PhoneNumberAndExt.Substring(0, ExtIndex).Trim()  
   
-        ' Get the current binding object, and set the new extension manually.   
+        ' Get the current binding object, and set the new extension manually.
         Dim CurrentRow As DataRowView = CType(Me.BindingContext(EmployeesTable, "Employees").Current, DataRowView)  
         ' Remove the "x" from the extension.  
         CurrentRow("Extension") = CObj(Ext.Substring(1))  
@@ -204,7 +204,7 @@ Verilere bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> için 
     End Sub  
     ```  
   
-8. İki ekleme <xref:System.Windows.Forms.Button> formu için denetimler. Bunları `previousButton` ve `nextButton`. Her düğme eklemek için çift bir <xref:System.Windows.Forms.Control.Click> olay işleyicisi ve aşağıdaki kod örneğinde gösterildiği gibi olay işleyicilerini doldurun.  
+8. Forma <xref:System.Windows.Forms.Button> iki denetim ekleyin. Onları `previousButton` adlandır `nextButton`ve. <xref:System.Windows.Forms.Control.Click> Olay işleyicisi eklemek için her düğmeyi çift tıklatın ve aşağıdaki kod örneğinde gösterildiği gibi olay işleyicilerini doldurun.  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  
@@ -228,10 +228,10 @@ Verilere bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> için 
     End Sub  
     ```  
   
-9. Örneği çalıştırın. Verileri düzenleme ve kullanma **önceki** ve **sonraki** için verilerin düzgün şekilde kalıcı olduğunu görmek için düğmeler <xref:System.Data.DataSet>.  
+9. Örnek uygulamayı çalıştırın. Verileri edin ve Önceki **ve** **Sonraki** düğmelerini kullanarak verilerin ''de düzgün <xref:System.Data.DataSet>bir şekilde kalıcı olduğunu' görmek için  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, önceki yordamı tamamladıktan bu sonuçları listesi tam kodudur.  
+ Aşağıdaki kod örneği, önceki yordamı tamamlamanın sonucu olan tam kod listesidir.  
   
  [!code-cpp[MaskedTextBoxData#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MaskedTextBoxData/cpp/form1.cpp#1)]
  [!code-csharp[MaskedTextBoxData#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MaskedTextBoxData/CS/form1.cs#1)]
@@ -239,16 +239,16 @@ Verilere bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> için 
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
-- Bir görsel oluşturun C# veya Visual Basic projesi.  
+- Visual C# veya Visual Basic projesi oluşturun.  
   
-- Ekleme <xref:System.Windows.Forms.TextBox> ve <xref:System.Windows.Forms.MaskedTextBox> önceki yordamda açıklandığı gibi formuna denetler.  
+- Önceki <xref:System.Windows.Forms.TextBox> yordamda açıklandığı gibi, forma ve <xref:System.Windows.Forms.MaskedTextBox> denetimleri ekleyin.  
   
 - Projenin varsayılan formu için kaynak kod dosyasını açın.  
   
-- Bu dosya kaynak kodunda önceki "Kod" bölümünde listelenen kod ile değiştirin.  
+- Bu dosyadaki kaynak kodu önceki "Kod" bölümünde listelenen kodla değiştirin.  
   
-- Uygulamayı derleyin.  
+- Uygulamayı derle.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: MaskedTextBox denetimiyle çalışma](walkthrough-working-with-the-maskedtextbox-control.md)
+- [İzlenecek Yol: MaskedTextBox Denetimiyle Çalışma](walkthrough-working-with-the-maskedtextbox-control.md)

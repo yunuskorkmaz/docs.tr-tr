@@ -10,26 +10,26 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: 9c011cf1216b98fa20e330e185e4cf2c331b31d4
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 4181a045079bdb455a63ebda722dd6b0daf33c4d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087947"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155121"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>authenticationModules için > öğesi eklemek \<(ağ ayarları)
+# <a name="add-element-for-authenticationmodules-network-settings"></a>\<kimlik doğrulama modülleri için> Öğesi ekleModüller (Ağ Ayarları)
 Uygulamaya bir kimlik doğrulama modülü ekler.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<add >**
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<kimlik doğrulamaModülleri>**](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>ekleyin**
 
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
 <add
-  type="type_fullname, assembly_fullname"   
+  type="type_fullname, assembly_fullname"
 />  
 ```  
   
@@ -40,7 +40,7 @@ Uygulamaya bir kimlik doğrulama modülü ekler.
   
 |**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|`type`|Tam nitelikli tür adı (<xref:System.Type.FullName%2A> özelliği ile gösterilir) ve derleme adı (<xref:System.Reflection.Assembly.FullName%2A> özelliği tarafından belirtilir), virgülle ayrılır.|  
+|`type`|Tam nitelikli tür adı <xref:System.Type.FullName%2A> (özellik tarafından gösterilir) ve montaj <xref:System.Reflection.Assembly.FullName%2A> adı (özellik tarafından gösterilir), bir virgül ile ayrılmıştır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -49,18 +49,18 @@ Uygulamaya bir kimlik doğrulama modülü ekler.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[authenticationModules](authenticationmodules-element-network-settings.md)|Ağ isteklerinin kimliğini doğrulamak için kullanılan modülleri belirtir.|  
+|[kimlik doğrulamaModülleri](authenticationmodules-element-network-settings.md)|Ağ isteklerini doğrulamak için kullanılan modülleri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `add` öğesi, kayıtlı kimlik doğrulama modülleri listesinin sonuna bir kimlik doğrulama modülü ekler. Kimlik doğrulama modülleri, listeye eklendikleri sırada çağırılır.  
+ Öğe, `add` kayıtlı kimlik doğrulama modülleri listesinin sonuna bir kimlik doğrulama modülü ekler. Kimlik doğrulama modülleri, listeye eklendikleri sırada çağrılır.  
   
- `type` özniteliğin değeri, virgülle ayrılmış olarak geçerli bir tür adı ve karşılık gelen derleme adı olmalıdır.  
+ Öznitelik için `type` değer geçerli bir tür adı ve ilgili derleme adı, bir virgül ile ayrılmış olmalıdır.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+ Bu öğe uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte varsayılan kimlik doğrulama modülleri etkinleştirilir. Version ve PublicKeyToken değerlerini belirtilen modülle ilgili doğru değerlerle değiştirmelisiniz.  
+ Aşağıdaki örnekte varsayılan kimlik doğrulama modülleri etkinleştirin. Sürüm ve PublicKeyToken değerlerini belirtilen modül için doğru değerlerle değiştirmelisiniz.  
   
 ```xml  
 <configuration>  

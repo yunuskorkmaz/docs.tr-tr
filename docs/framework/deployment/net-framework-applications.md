@@ -6,21 +6,21 @@ helpviewer_keywords:
 - .NET Framework, deploying apps
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
 ms.openlocfilehash: c025643b6dd103e35231df5c983a06c899af02b1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716435"
 ---
 # <a name="deploying-net-framework-applications"></a>.NET Framework Uygulamalarını Dağıtma
-.NET Framework belgelerinin bu bölümü, derlemeleri yükleme, derleme başvurularını çözme ve uygulamanızın performansını artırma yönergeleri dahil .NET Framework uygulamaları dağıtmaya yönelik temel bilgileri sağlar Yerel görüntü oluşturma aracılığıyla.  
+.NET Framework dokümantasyonunun bu bölümü, derlemelerin yüklenmesi, montaj başvurularının çözülmesi ve uygulamanızın performansının iyileştirilmesi için yönergeler de dahil olmak üzere .NET Framework uygulamalarının dağıtılması için gerekli bilgileri sağlar yerli görüntü oluşturma yoluyla.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](how-the-runtime-locates-assemblies.md)  
- Ortak dil çalışma zamanının uygulamanızı oluşturan derlemeleri nasıl bulup bağladığını açıklar.  
+ [Çalışma Zamanının Derlemelerin Konumunu Bulması](how-the-runtime-locates-assemblies.md)  
+ Ortak dil çalışma zamanının uygulamayı oluşturan derlemeleri nasıl bulup bağlandığını açıklar.  
   
- [Bütünleştirilmiş Kod Yükleme için En İyi Yöntemler](best-practices-for-assembly-loading.md)  
- <xref:System.InvalidCastException>, <xref:System.MissingMethodException>ve diğer hatalara yol açabilecek kimlik tür sorunlarından kaçınmanın yollarını açıklar.  
+ [Derleme Yükleme için En İyi Yöntemler](best-practices-for-assembly-loading.md)  
+ Tür kimliği, "ve <xref:System.InvalidCastException> <xref:System.MissingMethodException>diğer hatalara" yol açabilecek sorunlardan kaçınmanın yollarını tartışır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

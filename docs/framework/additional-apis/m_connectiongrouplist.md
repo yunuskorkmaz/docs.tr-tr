@@ -1,5 +1,5 @@
 ---
-title: ServicePoint. m_ConnectionGroupList alanı
+title: ServicePoint.m_ConnectionGroupList Alanı
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
-ms.openlocfilehash: f2759f82f335415edf7bab33edbd446eec6ffbb5
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2b1b46085ed035b67fd01447727b406fe3895980
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215512"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155901"
 ---
-# <a name="servicepointm_connectiongrouplist-field"></a>ServicePoint. d\_ConnectionGroupList alanı
+# <a name="servicepointm_connectiongrouplist-field"></a>ServicePoint.m\_ConnectionGroupList Alanı
 
-`ServicePoint.m_ConnectionGroupList`, her biri <xref:System.Net.ServicePoint>URI 'sine yönelik bir bağlantı tutan bağlantı gruplarının bir <xref:System.Collections.Hashtable>.
+`ServicePoint.m_ConnectionGroupList`her <xref:System.Collections.Hashtable> biri <xref:System.Net.ServicePoint>URI için bir bağlantı tutan bir bağlantı grubudur.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -28,14 +28,14 @@ private Hashtable m_ConnectionGroupList
 ```
 
 > [!WARNING]
-> `ServicePoint.m_ConnectionGroupList` alanı özeldir ve doğrudan kodunuzda kullanılmamalıdır.
-> 
-> Microsoft, herhangi bir koşulda bu alanın bir üretim uygulamasında kullanımını desteklemez.
+> Alan `ServicePoint.m_ConnectionGroupList` özeldir ve doğrudan kodunuzda kullanılmamalıdır.
+>
+> Microsoft, hiçbir koşulda bir üretim uygulamasında bu alanın kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Ad alanı:** <xref:System.Net>
+**Ad alanı:**<xref:System.Net>
 
-**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
+**Montaj:** Sistem (System.dll'de)
 
-**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2.0'dan beri mevcuttur.

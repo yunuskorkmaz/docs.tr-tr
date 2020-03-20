@@ -3,10 +3,10 @@ title: 'Azaltma: Uygulama Etki Alanlarında Nesneleri Seri Durumdan Çıkarma'
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 ms.openlocfilehash: e2d90a77cab699646bd31eaa162d1bd1744fd51b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457932"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Azaltma: Uygulama Etki Alanlarında Nesneleri Seri Durumdan Çıkarma
@@ -35,7 +35,7 @@ Bazı durumlarda, bir uygulama farklı uygulama temeli kullanan iki veya daha fa
   
 6. Mantıksal çağrı bağlamındaki türler varsayılan uygulama etki alanında çözümlenemediği için, bir özel durum oluşturulur.  
   
-## <a name="mitigation"></a>Azaltma  
+## <a name="mitigation"></a>Risk azaltma  
  Bu sorunun geçici çözümü için, aşağıdakini yapın  
   
 1. Özel durumun oluşturulduğu çağrı yığınındaki `get_Evidence` çağrısını bulun. Özel durum, <xref:System.IO.FileNotFoundException> ve <xref:System.Runtime.Serialization.SerializationException> dahil birçok özel durumun ait olduğu büyük bir alt kümedeki özel durumlardan herhangi biri olabilir.  

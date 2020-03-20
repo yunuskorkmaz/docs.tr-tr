@@ -8,57 +8,57 @@ helpviewer_keywords:
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 ms.openlocfilehash: f7dd78b889129998dee31a22f5dd23325613b8ea
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73092020"
 ---
 # <a name="unmanaged-api-reference"></a>Yönetilmeyen API Başvurusu
-Bu bölüm, çalışma zamanı Konakları, derleyiciler, kod çözücüler, gizleme, hata ayıklayıcılar ve profil oluşturucular gibi yönetilen kodla ilgili uygulamalar tarafından kullanılabilecek yönetilmeyen API 'Ler hakkında bilgiler içerir.  
+Bu bölümde, runtime ana bilgisayarları, derleyiciler, sökücüler, obfuscators, hata ayıklayıcılar ve profilciler gibi yönetilen kodla ilgili uygulamalar tarafından kullanılabilecek yönetilmeyen API'ler hakkında bilgiler bulunur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Ortak Veri Türleri](common-data-types-unmanaged-api-reference.md)  
- Özellikle yönetilmeyen profil oluşturma ve hata ayıklama API 'Lerinde kullanılan ortak veri türlerini listeler.  
+ Özellikle yönetilmeyen profil oluşturma ve hata ayıklama API'lerinde olmak üzere kullanılan yaygın veri türlerini listeler.  
   
- [ALINK](./alink/index.md)  
- .NET Framework derlemeleri ve ilişkisiz modülleri oluşturmayı destekleyen ALink API 'sini açıklar.  
+ [Alink](./alink/index.md)  
+ .NET Framework derlemeleri ve bağlantısız modüllerin oluşturulmasını destekleyen ALink API'sini açıklar.  
   
  [Authenticode](./authenticode/index.md)  
- Authenticode XrML lisans oluşturma ve doğrulama modülünü destekler.  
+ Authenticode XrML lisans oluşturma ve doğrulama modüllerini destekler.  
   
  [Sabitler](constants-unmanaged-api-reference.md)  
- Corsyd. IDL içinde tanımlanan sabitleri açıklar.  
+ CorSym.idl'de tanımlanan sabitleri açıklar.  
   
- [Özel arabirim öznitelikleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))  
+ [Özel Arayüz Öznitelikleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))  
  Bileşen nesne modeli (COM) özel arabirim özniteliklerini açıklar.  
   
- [Hata Ayıklama](./debugging/index.md)  
- Bir hata ayıklayıcının ortak dil çalışma zamanı (CLR) ortamında çalışan kodun hatalarını ayıklamasını sağlayan hata ayıklama API 'sini açıklar.  
+ [Hata ayıklama](./debugging/index.md)  
+ Hata ayıklayıcının ortak dil çalışma zamanı (CLR) ortamında çalışan hata ayıklayıcı kodunu ayıklamasını sağlayan hata ayıklama API'sini açıklar.  
   
  [Tanılama Simge Deposu](./diagnostics/index.md)  
- Bir derleyicinin hata ayıklayıcı tarafından kullanılmak üzere sembol bilgisi oluşturmasını sağlayan tanılama sembol deposu API 'sini açıklar.  
+ Bir derleyicinin hata ayıklayıcı tarafından kullanılmak üzere sembol bilgileri oluşturmasını sağlayan tanılama sembolü deposu API'yi açıklar.  
   
  [Fusion](./fusion/index.md)  
- Uygulama için bu kaynakların doğru sürümlerini bulmak üzere bir çalışma zamanı konağının bir uygulama kaynaklarının özelliklerine erişmesini sağlayan Fusion API 'sini açıklar.  
+ Uygulama için bu kaynakların doğru sürümlerini bulmak için bir çalışma zamanı ana bilgisayar bir uygulamakaynaklarının özelliklerine erişmek için izin füzyon API açıklar.  
   
  [Barındırma](./hosting/index.md)  
- Yönetilmeyen ana bilgisayarların CLR 'yi uygulamalarıyla tümleştirmesini sağlayan barındırma API 'sini açıklar.  
+ Yönetilmeyen ana bilgisayarların CLR'yi uygulamalarına entegre etmesini sağlayan barındırma API'sini açıklar.  
   
- [Meta Veriler](./metadata/index.md)  
- Bir derleyicinin, CLR tarafından yüklenen türler olmadan bir bileşenin meta verilerini oluşturmasına veya erişmesine olanak tanıyan meta veri API 'sini açıklar.  
+ [Meta veriler](./metadata/index.md)  
+ Derleyici gibi bir istemcinin CLR tarafından yüklenen türler olmadan bir bileşenin meta verilerini oluşturmasına veya bunlara erişmesini sağlayan meta veri API'sını açıklar.  
   
- [Profil Oluşturma](./profiling/index.md)  
- Profil oluşturucunun bir programın CLR tarafından yürütülmesini izlemesini sağlayan profil oluşturma API 'sini açıklar.  
+ [Profil oluşturma](./profiling/index.md)  
+ Profil oluşturma API'sini açıklar ve bir profil oluşturucunun bir programın CLR tarafından yürütülmesini izlemesine olanak tanır.  
   
- [Kesin Adlandırma](./strong-naming/index.md)  
- Bir istemcinin derlemeler için tanımlayıcı ad imzalamayı yönetmesine olanak tanıyan güçlü adlandırma API 'sini açıklar.  
+ [Güçlü Adlandırma](./strong-naming/index.md)  
+ İstemci derlemeler için güçlü ad imzalama yönetmek sağlayan güçlü adlandırma API açıklar.  
 
  [WMI ve Performans Sayaçları](wmi/index.md)  
- Windows Yönetim Araçları (WMI) kitaplıklarına çağrıları kaymakta olan API 'Leri açıklar.
+ Windows Yönetim Araçları (WMI) kitaplıklarına çağrıları kaydıran API'leri açıklar.
   
  [Tlbexp Yardımcı İşlevleri](./tlbexp/index.md)  
- Tür kitaplığı verme programı (Tlbexp. exe) tarafından derlemeden tür kitaplığı dönüştürme işlemi sırasında kullanılan iki yardımcı işlevi ve arabirimi açıklar.  
+ Montaj-to-type-kitaplık dönüştürme işlemi sırasında Tip Kitaplığı İhracatçısı (Tlbexp.exe) tarafından kullanılan iki yardımcı işlevi ve arabirimi açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Geliştirme Kılavuzu](../../../docs/framework/development-guide.md)  
