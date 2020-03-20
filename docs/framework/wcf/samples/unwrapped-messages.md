@@ -2,18 +2,18 @@
 title: Açılmamış İletiler
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
-ms.openlocfilehash: 4d6525393bb65dd6361b8d195f3a71991102daa1
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 81592910d8530cea2df5ec1fd8a8b1145350ef78
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716729"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143739"
 ---
-# <a name="unwrapped-messages"></a><span data-ttu-id="095d0-102">Açılmamış İletiler</span><span class="sxs-lookup"><span data-stu-id="095d0-102">Unwrapped Messages</span></span>
-<span data-ttu-id="095d0-103">Bu örnek sarmalanmamış iletileri gösterir.</span><span class="sxs-lookup"><span data-stu-id="095d0-103">This sample demonstrates unwrapped messages.</span></span> <span data-ttu-id="095d0-104">Varsayılan olarak, ileti gövdesi bir hizmet işlemine ait parametrelerin sarmalanması için biçimlendirilir.</span><span class="sxs-lookup"><span data-stu-id="095d0-104">By default, the message body is formatted such that the parameters to a service operation are wrapped.</span></span> <span data-ttu-id="095d0-105">Aşağıdaki örnek, Sarmalanan modda `ICalculator` hizmetine bir `Add` isteği iletisi gösterir.</span><span class="sxs-lookup"><span data-stu-id="095d0-105">The following sample shows an `Add` request message to the `ICalculator` service in wrapped mode.</span></span>  
+# <a name="unwrapped-messages"></a><span data-ttu-id="39cfb-102">Açılmamış İletiler</span><span class="sxs-lookup"><span data-stu-id="39cfb-102">Unwrapped Messages</span></span>
+<span data-ttu-id="39cfb-103">Bu örnek, paketlenmemiş iletileri gösterir.</span><span class="sxs-lookup"><span data-stu-id="39cfb-103">This sample demonstrates unwrapped messages.</span></span> <span data-ttu-id="39cfb-104">Varsayılan olarak, ileti gövdesi, bir hizmet işleminin parametreleri sarılmış olacak şekilde biçimlendirilir.</span><span class="sxs-lookup"><span data-stu-id="39cfb-104">By default, the message body is formatted such that the parameters to a service operation are wrapped.</span></span> <span data-ttu-id="39cfb-105">Aşağıdaki örnek, `Add` paketleden `ICalculator` modunda hizmete bir istek iletisi gösterir.</span><span class="sxs-lookup"><span data-stu-id="39cfb-105">The following sample shows an `Add` request message to the `ICalculator` service in wrapped mode.</span></span>  
   
 ```xml  
-<s:Envelope   
+<s:Envelope
     xmlns:s="http://www.w3.org/2003/05/soap-envelope"  
     xmlns:a="http://schemas.xmlsoap.org/ws/2005/08/addressing">  
     <s:Header>  
@@ -28,11 +28,11 @@ ms.locfileid: "74716729"
 </s:Envelope>  
 ```  
   
- <span data-ttu-id="095d0-106">İleti gövdesindeki `<Add>` öğesi `n1` ve `n2` parametrelerini sarmalar.</span><span class="sxs-lookup"><span data-stu-id="095d0-106">The `<Add>` element in the message body wraps the `n1` and `n2` parameters.</span></span> <span data-ttu-id="095d0-107">Buna karşılık aşağıdaki örnek, sarmalanmamış moddaki denk iletiyi gösterir.</span><span class="sxs-lookup"><span data-stu-id="095d0-107">In contrast, the following sample shows the equivalent message in the unwrapped mode.</span></span>  
+ <span data-ttu-id="39cfb-106">İleti `<Add>` gövdesindeki öğe, `n1` parametreleri `n2` ve</span><span class="sxs-lookup"><span data-stu-id="39cfb-106">The `<Add>` element in the message body wraps the `n1` and `n2` parameters.</span></span> <span data-ttu-id="39cfb-107">Buna karşılık, aşağıdaki örnek, paketlenmemiş modda eşdeğer iletiyi gösterir.</span><span class="sxs-lookup"><span data-stu-id="39cfb-107">In contrast, the following sample shows the equivalent message in the unwrapped mode.</span></span>  
   
 ```xml  
-<s:Envelope   
-    xmlns:s="http://www.w3.org/2003/05/soap-envelope"   
+<s:Envelope
+    xmlns:s="http://www.w3.org/2003/05/soap-envelope"
     xmlns:a="http://schemas.xmlsoap.org/ws/2005/08/addressing">  
     <s:Header>  
         ….  
@@ -45,12 +45,12 @@ ms.locfileid: "74716729"
 </MessageLogTraceRecord>  
 ```  
   
- <span data-ttu-id="095d0-108">Sarmalanmamış ileti, içerilen bir öğedeki `n1` ve `n2` parametrelerini sarmalamaz, bunlar soap body öğesinin doğrudan alt öğesidir.</span><span class="sxs-lookup"><span data-stu-id="095d0-108">The unwrapped message does not wrap the `n1` and `n2` parameters in a containing element, they are direct children of the soap body element.</span></span>  
+ <span data-ttu-id="39cfb-108">Unwrapped mesaj `n1` içeren bir `n2` öğe ve parametreleri sarmak değil, onlar sabun vücut elemanının doğrudan çocuklarıdır.</span><span class="sxs-lookup"><span data-stu-id="39cfb-108">The unwrapped message does not wrap the `n1` and `n2` parameters in a containing element, they are direct children of the soap body element.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="095d0-109">Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.</span><span class="sxs-lookup"><span data-stu-id="095d0-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+> <span data-ttu-id="39cfb-109">Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.</span><span class="sxs-lookup"><span data-stu-id="39cfb-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="095d0-110">Bu örnekte, hizmet işlemi parametre türüne <xref:System.ServiceModel.MessageContractAttribute> uygulanarak sarmalanmamış bir ileti oluşturulur ve aşağıdaki örnek kodda gösterildiği şekilde değer türü döndürülür.</span><span class="sxs-lookup"><span data-stu-id="095d0-110">In this sample, an unwrapped message is created by applying the <xref:System.ServiceModel.MessageContractAttribute> to the service operation parameter type and return value type as shown in the following sample code.</span></span>  
+ <span data-ttu-id="39cfb-110">Bu örnekte, aşağıdaki örnek kodda gösterildiği <xref:System.ServiceModel.MessageContractAttribute> gibi hizmet işlem parametresi türüne ve iade değeri türüne uygulanarak paketlenmemiş bir ileti oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="39cfb-110">In this sample, an unwrapped message is created by applying the <xref:System.ServiceModel.MessageContractAttribute> to the service operation parameter type and return value type as shown in the following sample code.</span></span>  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -89,25 +89,25 @@ public class ResponseMessage
 }  
 ```  
   
- <span data-ttu-id="095d0-111">Gönderilen ve alınan iletileri görmenizi sağlamak için bu örnek izleme kullanır.</span><span class="sxs-lookup"><span data-stu-id="095d0-111">To allow you to see the messages being sent and received, this sample uses tracing.</span></span> <span data-ttu-id="095d0-112">Ayrıca, <xref:System.ServiceModel.WSHttpBinding>, günlüğe kaydettiği ileti sayısını azaltmak için güvenlik olmadan yapılandırılmıştır.</span><span class="sxs-lookup"><span data-stu-id="095d0-112">In addition, the <xref:System.ServiceModel.WSHttpBinding> has been configured without security, to reduce the number of messages it logs.</span></span>  
+ <span data-ttu-id="39cfb-111">Gönderilen ve alınan iletileri görmenizi sağlamak için bu örnek izleme kullanır.</span><span class="sxs-lookup"><span data-stu-id="39cfb-111">To allow you to see the messages being sent and received, this sample uses tracing.</span></span> <span data-ttu-id="39cfb-112">Buna ek <xref:System.ServiceModel.WSHttpBinding> olarak, günlükleri ileti sayısını azaltmak için, güvenlik olmadan yapılandırıldı.</span><span class="sxs-lookup"><span data-stu-id="39cfb-112">In addition, the <xref:System.ServiceModel.WSHttpBinding> has been configured without security, to reduce the number of messages it logs.</span></span>  
   
- <span data-ttu-id="095d0-113">Elde edilen izleme günlüğü (c:\logs\Message.log), [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)kullanılarak görüntülenebilir.</span><span class="sxs-lookup"><span data-stu-id="095d0-113">The resulting trace log (c:\logs\Message.log) can be viewed by using the [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).</span></span> <span data-ttu-id="095d0-114">İleti içeriğini görüntülemek için, hizmet Izleme Görüntüleyicisi aracının sol ve sağ bölmelerinde **iletiler** ' i seçin.</span><span class="sxs-lookup"><span data-stu-id="095d0-114">To view message contents, select **Messages** in both the left and the right panes of the Service Trace Viewer tool.</span></span> <span data-ttu-id="095d0-115">Bu örnekteki izleme günlükleri C:\LOGS klasöründe oluşturulacak şekilde yapılandırılmıştır.</span><span class="sxs-lookup"><span data-stu-id="095d0-115">Trace logs in this sample are configured to be generated into the C:\LOGS folder.</span></span> <span data-ttu-id="095d0-116">Örneği çalıştırmadan önce bu klasörü oluşturun ve bu dizin için Kullanıcı ağ hizmetine yazma izinleri verin.</span><span class="sxs-lookup"><span data-stu-id="095d0-116">Create this folder before running the sample and give the user Network Service write permissions for this directory.</span></span>  
+ <span data-ttu-id="39cfb-113">Elde edilen izleme günlüğü (c:\logs\Message.log) [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)kullanılarak görüntülenebilir.</span><span class="sxs-lookup"><span data-stu-id="39cfb-113">The resulting trace log (c:\logs\Message.log) can be viewed by using the [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).</span></span> <span data-ttu-id="39cfb-114">İleti içeriğini görüntülemek için, Hizmet İzleme Görüntüleyici aracının hem sol hem de sağ bölmelerinde **İletileri** seçin.</span><span class="sxs-lookup"><span data-stu-id="39cfb-114">To view message contents, select **Messages** in both the left and the right panes of the Service Trace Viewer tool.</span></span> <span data-ttu-id="39cfb-115">Bu örnekteki izleme günlükleri C:\LOGS klasöründe oluşturulacak şekilde yapılandırılır.</span><span class="sxs-lookup"><span data-stu-id="39cfb-115">Trace logs in this sample are configured to be generated into the C:\LOGS folder.</span></span> <span data-ttu-id="39cfb-116">Örneği çalıştırmadan önce bu klasörü oluşturun ve kullanıcıYa Bu dizini yazma izinleri verin.</span><span class="sxs-lookup"><span data-stu-id="39cfb-116">Create this folder before running the sample and give the user Network Service write permissions for this directory.</span></span>  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="095d0-117">Örneği ayarlamak, derlemek ve çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="095d0-117">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="39cfb-117">Örneği ayarlamak, oluşturmak ve çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="39cfb-117">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="095d0-118">[Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.</span><span class="sxs-lookup"><span data-stu-id="095d0-118">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1. <span data-ttu-id="39cfb-118">Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.</span><span class="sxs-lookup"><span data-stu-id="39cfb-118">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2. <span data-ttu-id="095d0-119">İletileri günlüğe kaydetmek için bir C:\LOGS dizini oluşturun.</span><span class="sxs-lookup"><span data-stu-id="095d0-119">Create a C:\LOGS directory for logging messages.</span></span> <span data-ttu-id="095d0-120">Bu dizin için Kullanıcı ağ hizmetine yazma izinleri verin.</span><span class="sxs-lookup"><span data-stu-id="095d0-120">Give the user Network Service write permissions for this directory.</span></span>  
+2. <span data-ttu-id="39cfb-119">İletileri günlüğe kaydetmek için C:\LOGS dizini oluşturun.</span><span class="sxs-lookup"><span data-stu-id="39cfb-119">Create a C:\LOGS directory for logging messages.</span></span> <span data-ttu-id="39cfb-120">Kullanıcı Ağ Hizmeti'ne bu dizini yazma izinleri verin.</span><span class="sxs-lookup"><span data-stu-id="39cfb-120">Give the user Network Service write permissions for this directory.</span></span>  
   
-3. <span data-ttu-id="095d0-121">Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="095d0-121">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+3. <span data-ttu-id="39cfb-121">Çözümün C# veya Visual Basic .NET sürümünü oluşturmak [için, Windows Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="39cfb-121">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4. <span data-ttu-id="095d0-122">Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="095d0-122">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+4. <span data-ttu-id="39cfb-122">Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="39cfb-122">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="095d0-123">Örnekler makinenizde zaten yüklü olabilir.</span><span class="sxs-lookup"><span data-stu-id="095d0-123">The samples may already be installed on your machine.</span></span> <span data-ttu-id="095d0-124">Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.</span><span class="sxs-lookup"><span data-stu-id="095d0-124">Check for the following (default) directory before continuing.</span></span>  
->   
+> <span data-ttu-id="39cfb-123">Numuneler makinenize zaten yüklenmiş olabilir.</span><span class="sxs-lookup"><span data-stu-id="39cfb-123">The samples may already be installed on your machine.</span></span> <span data-ttu-id="39cfb-124">Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.</span><span class="sxs-lookup"><span data-stu-id="39cfb-124">Check for the following (default) directory before continuing.</span></span>  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> <span data-ttu-id="095d0-125">Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin.</span><span class="sxs-lookup"><span data-stu-id="095d0-125">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="095d0-126">Bu örnek, aşağıdaki dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="095d0-126">This sample is located in the following directory.</span></span>  
->   
+>
+> <span data-ttu-id="39cfb-125">Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin.</span><span class="sxs-lookup"><span data-stu-id="39cfb-125">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="39cfb-126">Bu örnek aşağıdaki dizinde yer almaktadır.</span><span class="sxs-lookup"><span data-stu-id="39cfb-126">This sample is located in the following directory.</span></span>  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Unwrapped`  
