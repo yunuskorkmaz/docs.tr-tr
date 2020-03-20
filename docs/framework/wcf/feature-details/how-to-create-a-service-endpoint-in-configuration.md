@@ -2,18 +2,18 @@
 title: 'Nasıl yapılır: Yapılandırma İçinde Hizmet Uç Noktası Oluşturma'
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: 63a40576b805952197cec5af2f89a5dc4b5d3545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9687d9537d6f166a02b79261743050168f677261
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787653"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185007"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>Nasıl yapılır: Yapılandırma İçinde Hizmet Uç Noktası Oluşturma
-Uç noktaları, istemcilerin bir Windows Communication Foundation (WCF) hizmeti sunan işlevine erişim sağlar. Göreli ve mutlak uç nokta adresleri bir birleşimini kullanarak bir hizmet için bir veya daha fazla uç nokta tanımlayabilirsiniz veya herhangi bir hizmet uç noktaları tanımlamazsanız, çalışma zamanı bazı varsayılan olarak, sağlar. Bu konuda, göreli ve mutlak adreslerini içeren bir yapılandırma dosyası kullanarak uç noktalarını eklemek gösterilmektedir.  
+Uç noktalar, istemcilere Windows Communication Foundation (WCF) hizmetinin sunduğu işlevsellik lere erişim sağlar. Bir hizmet için bir veya daha fazla uç nokta, göreli ve mutlak uç nokta adreslerinin bir birleşimini kullanarak veya herhangi bir hizmet bitiş noktası tanımlamazsanız, çalışma süresi varsayılan olarak sizin için bazı sağlar. Bu konu, hem göreceli hem de mutlak adresleri içeren bir yapılandırma dosyasını kullanarak uç noktaların nasıl ekleyeceğini gösterir.  
   
 ## <a name="example"></a>Örnek  
- Temel adres ve beş uç noktaları aşağıdaki hizmet yapılandırmasını belirtir.  
+ Aşağıdaki hizmet yapılandırması bir temel adres ve beş uç nokta belirtir.  
   
 ```xml  
 <configuration>  
@@ -70,10 +70,10 @@ Uç noktaları, istemcilerin bir Windows Communication Foundation (WCF) hizmeti 
 ```  
   
 ## <a name="example"></a>Örnek  
- Taban adresi kullanarak belirtilen `add` öğede hizmet/konak/baseAddresses aşağıdaki örnekte gösterildiği gibi.  
+ Temel adres, aşağıdaki `add` örnekte gösterildiği gibi hizmet/ana bilgisayar/baseAddresss altında öğe kullanılarak belirtilir.  
   
 ```xml  
-<service   
+<service
     name="Microsoft.ServiceModel.Samples.CalculatorService">  
   <host>  
     <baseAddresses>  
@@ -83,16 +83,16 @@ Uç noktaları, istemcilerin bir Windows Communication Foundation (WCF) hizmeti 
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte gösterilen ilk uç nokta tanımı taban adresini ve hizmetin göreli adresini Tekdüzen Kaynak Tanımlayıcısı (URI) oluşturma kuralları aşağıdaki uç nokta adresi olduğu anlamına gelir göreli bir adresi belirtir. Hizmetin göreli adresini boştur (""), uç nokta adresini temel adresi ile aynıdır. Gerçek bir uç nokta adresi `http://localhost:8000/servicemodelsamples/service`.  
+ Aşağıdaki örnekte gösterilen ilk uç nokta tanımı göreceli bir adres belirtir, bu da bitiş noktası adresinin temel adres ve Tekdüzen Kaynak Tanımlayıcı (URI) kompozisyonunun kurallarını izleyen göreli adresin birleşimi olduğu anlamına gelir. Göreli adres boş (""), bu nedenle bitiş noktası adresi temel adresle aynıdır. Gerçek bitiş noktası `http://localhost:8000/servicemodelsamples/service`adresi .  
   
 ```xml  
-<endpoint address=""   
+<endpoint address=""
     binding="wsHttpBinding"  
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
 ## <a name="example"></a>Örnek  
- İkinci uç nokta tanımı, ayrıca aşağıdaki örnek yapılandırmada gösterildiği gibi bir göreli adresini belirtir. Hizmetin göreli adresini "test" öğesine taban adresi olarak eklenir. Gerçek bir uç nokta adresi `http://localhost:8000/servicemodelsamples/service/test`.  
+ İkinci uç nokta tanımı, aşağıdaki örnek yapılandırmada gösterildiği gibi göreli bir adres de belirtir. Göreli adres, "test", temel adrese eklenir. Gerçek bitiş noktası `http://localhost:8000/servicemodelsamples/service/test`adresi .  
   
 ```xml  
 <endpoint address="/test"  
@@ -101,7 +101,7 @@ Uç noktaları, istemcilerin bir Windows Communication Foundation (WCF) hizmeti 
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek yapılandırmada gösterildiği gibi üçüncü bir uç nokta tanımı mutlak bir adres belirtir. Temel adres, adres, hiçbir rol oynar. Gerçek bir uç nokta adresi `http://localhost:8001/hello/servicemodelsamples`.  
+ Üçüncü uç nokta tanımı, aşağıdaki örnek yapılandırmada gösterildiği gibi mutlak bir adres belirtir. Temel adres adreste hiçbir rol oynamaz. Gerçek bitiş noktası `http://localhost:8001/hello/servicemodelsamples`adresi .  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  
@@ -110,7 +110,7 @@ Uç noktaları, istemcilerin bir Windows Communication Foundation (WCF) hizmeti 
 ```  
   
 ## <a name="example"></a>Örnek  
- Mutlak bir adres ve farklı bir aktarım dördüncü uç nokta adresini belirtir; TCP. Temel adres, adres, hiçbir rol oynar. Gerçek bir uç nokta adresi olduğunu NET.TCP://localhost: 9000/servicemodelsamples/hizmet.  
+ Dördüncü uç nokta adresi mutlak bir adres ve farklı bir aktarım belirtir—TCP. Temel adres adreste hiçbir rol oynamaz. Gerçek bitiş noktası adresi net.tcp://localhost:9000/servicemodelsamples/service olduğunu.  
   
 ```xml  
 <endpoint address="net.tcp://localhost:9000/servicemodelsamples/service"  
@@ -119,7 +119,7 @@ Uç noktaları, istemcilerin bir Windows Communication Foundation (WCF) hizmeti 
 ```  
   
 ## <a name="example"></a>Örnek  
- Çalışma zamanı tarafından sağlanan varsayılan uç noktalarını kullanacak şekilde herhangi bir hizmet uç noktaları kod veya yapılandırma dosyasını belirtmeyin. Bir hizmeti açtığınızda bu örnekte, çalışma zamanı varsayılan uç noktaları oluşturur. Varsayılan uç noktaları, bağlamalar ve davranışları hakkında daha fazla bilgi için bkz. [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Çalışma zamanı tarafından sağlanan varsayılan uç noktaları kullanmak için, kod veya yapılandırma dosyasında herhangi bir hizmet uç noktası belirtmeyin. Bu örnekte, hizmet açıldığında çalışma süresi varsayılan uç noktaları oluşturur. Varsayılan uç noktalar, bağlamalar ve davranışlar hakkında daha fazla bilgi için wcf hizmetleri için [Basitleştirilmiş Yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md) ve [Basitleştirilmiş Yapılandırma'ya](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)bakın.  
   
 ```xml  
 <configuration>  

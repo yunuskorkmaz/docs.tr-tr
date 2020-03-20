@@ -2,34 +2,34 @@
 title: 'Nasıl yapılır: İstemcide İletileri Denetleme veya Değiştirme'
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 14c24c16a36be600881de402de50086dd18b30b4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: db1a99d2ed1f765e39815e6b6c70d6ada1db1d15
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796977"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185534"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Nasıl yapılır: İstemcide İletileri Denetleme veya Değiştirme
-Bir WCF istemcisi genelinde gelen veya giden iletileri, bir <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> oluşturup istemci çalışma zamanına ekleyerek inceleyebilir veya değiştirebilirsiniz. Daha fazla bilgi için bkz. [Istemcileri genişletme](extending-clients.md). Hizmetin eşdeğer özelliği <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Tüm kod örneği için bkz. [Ileti Inspectors](../samples/message-inspectors.md) örneği.  
+Bir WCF istemcisi üzerinden gelen veya giden iletileri bir <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> uygulama ve istemci çalışma süresine ekleyerek inceleyebilir veya değiştirebilirsiniz. Daha fazla bilgi için [bkz.](extending-clients.md) Hizmetteki eşdeğer özellik <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Tam bir kod örneği için [İleti Müfettişleri](../samples/message-inspectors.md) örneğine bakın.  
   
 ### <a name="to-inspect-or-modify-messages"></a>İletileri incelemek veya değiştirmek için  
   
 1. <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> arabirimini gerçekleştirin.  
   
-2. İstemci ileti denetçisini <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> eklemek istediğiniz kapsama göre veyauygulayın.<xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>uç nokta düzeyindeki davranışı değiştirmenize izin verir. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>Sözleşme düzeyindeki davranışı değiştirmenize izin verir.  
+2. İstemci ileti denetçisini eklemek istediğiniz kapsama bağlı olarak bir <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> bağlı olarak uygulayın. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>bitiş noktası düzeyinde davranışı değiştirmenizi sağlar. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>sözleşme düzeyinde davranış değiştirmenize olanak sağlar.  
   
-3. <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> Veya metodunuçağırmadan<xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType>önce davranışını ekleyin. <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> Ayrıntılar için bkz. [çalışma zamanını davranışlar Ile yapılandırma ve genişletme](configuring-and-extending-the-runtime-with-behaviors.md).  
+3. 'yi veya <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> yöntemi çağırmadan önce davranışı <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>ekleyin. Ayrıntılar için, [Çalışma Zamanını Davranışlarla Yapılandırma ve Genişletme'ye](configuring-and-extending-the-runtime-with-behaviors.md)bakın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örnekleri sırasıyla gösterilmektedir:  
+ Aşağıdaki kod örnekleri sırayla gösterir:  
   
-- Bir istemci denetçisi uygulamasıdır.  
+- Bir istemci denetçi uygulaması.  
   
-- Inspector ekleyen bir uç nokta davranışı.  
+- Denetçiyi ekleyen bir bitiş noktası davranışı.  
   
-- Bir <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>yapılandırma dosyasına davranışı eklemenize olanak tanıyan bir türetilmiş sınıf.  
+- A <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>- yapılandırma dosyasında davranış eklemek için izin veren türemiş sınıf.  
   
-- İstemci ileti denetçisini istemci çalışma zamanına ekleyen uç nokta davranışını ekleyen bir yapılandırma dosyası.  
+- İstemci ileti denetçisini istemci çalışma süresine ekleyen uç nokta davranışını ekleyen yapılandırma dosyası.  
   
 ```csharp  
 // Client message inspector  
@@ -38,13 +38,13 @@ public class SimpleMessageInspector : IClientMessageInspector
     public void AfterReceiveReply(ref System.ServiceModel.Channels.Message reply, object correlationState)  
     {  
         // Implement this method to inspect/modify messages after a message  
-        // is received but prior to passing it back to the client   
+        // is received but prior to passing it back to the client
         Console.WriteLine("AfterReceiveReply called");  
     }  
   
     public object BeforeSendRequest(ref System.ServiceModel.Channels.Message request, IClientChannel channel)  
     {  
-        // Implement this method to inspect/modify messages before they   
+        // Implement this method to inspect/modify messages before they
         // are sent to the service  
         Console.WriteLine("BeforeSendRequest called");  
         return null;  
@@ -79,7 +79,7 @@ public class SimpleEndpointBehavior : IEndpointBehavior
 ```  
   
 ```csharp  
-// Configuration element   
+// Configuration element
 public class SimpleBehaviorExtensionElement : BehaviorExtensionElement  
 {  
     public override Type BehaviorType  
@@ -101,7 +101,7 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
 <configuration>  
     <system.serviceModel>  
         <client>  
-            <endpoint address="http://localhost:8080/SimpleService/"   
+            <endpoint address="http://localhost:8080/SimpleService/"
                       binding="wsHttpBinding"
                       behaviorConfiguration="clientInspectorsAdded"
                       contract="ServiceReference1.IService1"  

@@ -1,5 +1,5 @@
 ---
-title: LinkLabel denetiminin görünümünü değiştirme
+title: LinkLabel Denetimigörünümünü Değiştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-ms.openlocfilehash: 0b38722fb1647ea215c3bb8978dd3f54b300a0e0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: df66991289373a05fc7c27b7768a96643e3bbae0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746624"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142136"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Nasıl yapılır: Windows Forms LinkLabel Denetiminin Görünüşünü Değiştirme
-<xref:System.Windows.Forms.LinkLabel> denetimi tarafından görüntülenecek metni çeşitli amaçlarla değiştirebilirsiniz. Örneğin, metnin metin ile belirli bir renkte görünmesini sağlayarak metne tıklanabileceği kullanıcıya göstermek yaygın bir uygulamadır. Kullanıcı metne tıkladıktan sonra, renk farklı bir renge dönüşür. Bu davranışı denetlemek için, beş farklı özellik belirleyebilirsiniz: <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>ve <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> özellikleri.  
+<xref:System.Windows.Forms.LinkLabel> Denetim tarafından görüntülenen metni çeşitli amaçlara uyacak şekilde değiştirebilirsiniz. Örneğin, metnin altı çizili belirli bir renkte görünmesi için metin ayarlayarak metnin tıklanabileceğini kullanıcıya belirtmek yaygın bir uygulamadır. Kullanıcı metni tıklattıktan sonra renk farklı bir renge dönüşür. Bu davranışı denetlemek için beş farklı özellik <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>ayarlayabilirsiniz: , , <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, ve <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> özellikleri.  
   
-### <a name="to-change-the-appearance-of-a-linklabel-control"></a>Bir LinkLabel denetiminin görünüşünü değiştirmek için  
+### <a name="to-change-the-appearance-of-a-linklabel-control"></a>Bir LinkLabel denetiminin görünümünü değiştirmek için  
   
-1. <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> ve <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> özelliklerini istediğiniz renklere ayarlayın.  
+1. <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> Ve <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> özellikleri istediğiniz renklere ayarlayın.  
   
      Bu, **Özellikler** penceresinde programlı olarak veya tasarım zamanında yapılabilir.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "76746624"
     linkLabel1->VisitedLinkColor = Color::Purple;  
     ```  
   
-2. <xref:System.Windows.Forms.LinkLabel.Text%2A> özelliğini uygun bir başlık olarak ayarlayın.  
+2. <xref:System.Windows.Forms.LinkLabel.Text%2A> Özelliği uygun bir alt yazı yla ayarlayın.  
   
      Bu, **Özellikler** penceresinde programlı olarak veya tasarım zamanında yapılabilir.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "76746624"
     linkLabel1->Text = "Click here to see more.";  
     ```  
   
-3. Başlığın hangi kısmının bağlantı olarak belirtileyeceğini öğrenmek için <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> özelliğini ayarlayın.  
+3. Alt <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> yazının hangi bölümünün bağlantı olarak gösterileceğini belirlemek için özelliği ayarlayın.  
   
-     <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> değeri iki sayı içeren bir <xref:System.Windows.Forms.LinkArea> ile temsil edilir, başlangıç karakteri konumu ve karakter sayısı. Bu, **Özellikler** penceresinde programlı olarak veya tasarım zamanında yapılabilir.  
+     Değer, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> iki sayı, <xref:System.Windows.Forms.LinkArea> başlangıç karakter konumu ve karakter sayısı içeren bir ile gösterilir. Bu, **Özellikler** penceresinde programlı olarak veya tasarım zamanında yapılabilir.  
   
     ```vb  
     LinkLabel1.LinkArea = new LinkArea(6,4)  
@@ -81,13 +81,13 @@ ms.locfileid: "76746624"
     linkLabel1->LinkArea = LinkArea(6,4);  
     ```  
   
-4. <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> özelliğini <xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>, <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>veya <xref:System.Windows.Forms.LinkBehavior.NeverUnderline>olarak ayarlayın.  
+4. <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> Özelliği <xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>, <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>veya <xref:System.Windows.Forms.LinkBehavior.NeverUnderline>.  
   
-     <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>olarak ayarlanırsa, başlığın <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> tarafından belirlenen bölümü yalnızca işaretçi üzerine getirildiğinde altı çizili olur.  
+     <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>Ayarlanırsa, alt yazının belirlediği <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> bölüm yalnızca işaretçi üzerinde yse altı çizilir.  
   
-5. <xref:System.Windows.Forms.LinkLabel.LinkClicked> olay işleyicisinde, <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> özelliğini `true`olarak ayarlayın.  
+5. Olay <xref:System.Windows.Forms.LinkLabel.LinkClicked> işleyicisi, <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> özelliği `true`' ye ayarla.  
   
-     Bir bağlantı ziyaret edildiğinde, genellikle renge göre görünümünü bir şekilde değiştirmek yaygın bir uygulamadır. Metin, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> özelliği tarafından belirtilen renge değişecektir.  
+     Bir bağlantı ziyaret edildiğinde, görünümünü genellikle renk olarak bir şekilde değiştirmek yaygın bir uygulamadır. <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Metin, özellik tarafından belirtilen renge değişecektir.  
   
     ```vb  
     Protected Sub LinkLabel1_LinkClicked (ByVal sender As Object, _  
@@ -102,7 +102,7 @@ ms.locfileid: "76746624"
     ```csharp  
     protected void LinkLabel1_LinkClicked(object sender, System.EventArgs e)  
     {  
-       // Change the color of the link text by setting LinkVisited   
+       // Change the color of the link text by setting LinkVisited
        // to True.  
        linkLabel1.LinkVisited = true;  
        // Then do whatever other action is appropriate  
@@ -114,7 +114,7 @@ ms.locfileid: "76746624"
        System::Void linkLabel1_LinkClicked(System::Object ^  sender,  
           System::Windows::Forms::LinkLabelLinkClickedEventArgs ^  e)  
        {  
-          // Change the color of the link text by setting LinkVisited   
+          // Change the color of the link text by setting LinkVisited
           // to True.  
           linkLabel1->LinkVisited = true;  
           // Then do whatever other action is appropriate  

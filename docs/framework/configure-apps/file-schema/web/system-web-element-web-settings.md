@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: 5c5c857d4494b6d78b819e56bae4213abc5e2035
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: b37b05bdf90630251cbfcf86751243a3a8b77663
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699098"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152847"
 ---
-# <a name="systemweb-element-web-settings"></a>System. Web > öğesi \<(Web ayarları)
-ASP.NET barındırma katmanının işlem genelinde davranışı nasıl yönettiği hakkında bilgi içerir.  
+# <a name="systemweb-element-web-settings"></a>\<system.web> Element (Web Ayarları)
+ASP.NET barındırma katmanının işlem genelindeki davranışı nasıl yönettiği hakkında bilgi içerir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp;&nbsp; **\<System. web >**  
+[**\<yapılandırma>**](../configuration-element.md)  
+&nbsp;&nbsp;**\<system.web>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,42 +40,42 @@ Yok.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<applicationPool >](applicationpool-element-web-settings.md)|ASPNET. config dosyasındaki IIS uygulama havuzlarının yapılandırma ayarlarını belirtir.|  
+|[\<uygulamaHavuz>](applicationpool-element-web-settings.md)|Aspnet.config dosyasında IIS uygulama havuzları için yapılandırma ayarlarını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Yapılandırma >](../configuration-element.md)|Ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan her yapılandırma dosyasında kök öğesini belirtir.|  
+|[\<yapılandırma>](../configuration-element.md)|Ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan her yapılandırma dosyasındaki kök öğeyi belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
 
-`system.web` öğesi ve onun alt `applicationPool` öğesi .NET Framework 3,5 SP1 itibariyle .NET Framework eklenmiştir. IIS 7,0 veya sonraki sürümlerini tümleşik modda çalıştırdığınızda, bu öğe birleşimi ASP.NET 'in iş parçacıklarını nasıl yönettiğini ve ASP.NET 'in bir IIS uygulama havuzunda barındırıldığında istekleri nasıl sıraya yazacağını yapılandırmanıza olanak tanır. IIS 7,0 veya sonraki sürümlerini klasik veya ISAPI modunda çalıştırırsanız, bu ayarlar yok sayılır.  
+.NET `system.web` Framework `applicationPool` 3.5 SP1 itibariyle eleman ve alt öğesi .NET Çerçevesi'ne eklendi. Tümleşik modda IIS 7.0 veya daha sonraki sürümleri çalıştırdığınızda, bu öğe birleşimi iş parçacıklarını nasıl ASP.NET ve ASP.NET bir IIS uygulama havuzunda barındırıldığında istekleri nasıl sıraya oluşturduğunu yapılandırmanıza olanak tanır. Klasik veya ISAPI modunda IIS 7.0 veya daha sonraki sürümleri çalıştırırsanız, bu ayarlar yoksayılır.  
   
 ## <a name="example"></a>Örnek  
 
-Aşağıdaki örnek, ASP.NET bir IIS uygulama havuzunda barındırıldığında Aspnet. config dosyasında ASP.NET işlem genelindeki davranışın nasıl yapılandırılacağını gösterir. Örnekte IIS 'nin tümleşik modda çalıştığı ve uygulamanın .NET Framework 3,5 SP1 veya sonraki bir sürümü kullanıldığı varsayılır. Bu davranış, .NET Framework .NET Framework 3,5 SP1 'den önceki sürümlerinde oluşmaz. Örnekteki değerler varsayılan değerlerdir.  
+Aşağıdaki örnek, ASP.NET bir IIS uygulama havuzunda barındırıldığında aspnet.config dosyasındaki işlem genelindeASP.NET davranışın nasıl yapılandırılabildiğini gösterir. Örnek, IIS'nin Tümleşik modda çalıştığını ve uygulamanın .NET Framework 3.5 SP1 veya daha sonraki bir sürümü kullandığını varsayar. Bu davranış.NET Framework 3.5 SP1'den önceki .NET Framework sürümlerinde oluşmaz. Örnekteki değerler varsayılan değerlerdir.  
   
 ```xml  
 <configuration>  
   <system.web>  
-    <applicationPool   
-        maxConcurrentRequestsPerCPU="5000"   
-        maxConcurrentThreadsPerCPU="0"   
+    <applicationPool
+        maxConcurrentRequestsPerCPU="5000"
+        maxConcurrentThreadsPerCPU="0"
         requestQueueLimit="5000" />  
   </system.web>  
 </configuration>  
 ```  
   
-## <a name="element-information"></a>Öğe Bilgileri  
+## <a name="element-information"></a>Öğe Bilgisi  
   
 |||  
 |-|-|  
-|Ad alanı||  
-|Şema adı||  
-|Doğrulama dosyası||  
-|Boş olabilir||  
+|Ad Alanı||  
+|Şema Adı||  
+|Doğrulama Dosyası||  
+|Boş Olabilir||  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<applicationPool > öğesi (Web ayarları)](applicationpool-element-web-settings.md)
+- [\<applicationPool> Elemanı (Web Ayarları)](applicationpool-element-web-settings.md)

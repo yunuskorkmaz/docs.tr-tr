@@ -12,62 +12,62 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: ead1d114f773cba88e8b3e20f395019fbde3ee15
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 49fb0109e1d7db065f7e241955f30cb038699020
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458584"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187461"
 ---
 # <a name="transforms-overview"></a>Dönüşümlere Genel Bakış
-Bu konuda, <xref:System.Windows.FrameworkElement> nesneleri döndürmek, ölçeklendirmek, taşımak (çevirmek) ve eğmek için 2-b <xref:System.Windows.Media.Transform> sınıflarının nasıl kullanılacağı açıklanmaktadır.  
+Bu konu, <xref:System.Windows.Media.Transform> <xref:System.Windows.FrameworkElement> nesneleri döndürmek, ölçeklendirmek, taşımak (çevirmek) ve eğriltmek için 2-B sınıflarının nasıl kullanılacağını açıklar.  
 
-<a name="whatIsATransformSection"></a>   
-## <a name="what-is-a-transform"></a>Dönüşüm nedir?  
- Bir <xref:System.Windows.Media.Transform>, bir koordinat alanından başka bir koordinat alanına nasıl eşleme veya dönüştürme yapılacağını tanımlar. Bu eşleme, üç satırlık <xref:System.Double> değerleri içeren üç satır koleksiyonu olan bir dönüştürme <xref:System.Windows.Media.Matrix>açıklanmaktadır.  
+<a name="whatIsATransformSection"></a>
+## <a name="what-is-a-transform"></a>Dönüşüm Nedir?  
+ A, <xref:System.Windows.Media.Transform> bir koordinat alanından başka bir koordinat alanına noktaların nasıl eşlenebildiğini veya dönüştürüldüğünü tanımlar. Bu <xref:System.Windows.Media.Matrix>eşleme, üç değer sütununa <xref:System.Double> sahip üç satırdan oluşan bir dönüşüm le açıklanır.  
   
 > [!NOTE]
-> Windows Presentation Foundation (WPF) satır birincil matrislerini kullanır. Vektörler, sütun vektörleri değil, satır vektörleri olarak ifade edilir.  
+> Windows Sunu Temeli (WPF) satır-büyük matriskullanır. Vektörler sütun vektörleri olarak değil, satır vektörleri olarak ifade edilir.  
   
- Aşağıdaki tablo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] matrisin yapısını gösterir.  
+ Aşağıdaki tabloda bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] matrisin yapısı gösterilmektedir.  
   
-### <a name="a-2-d-transformation-matrix"></a>2-b dönüşüm matrisi  
+### <a name="a-2-d-transformation-matrix"></a>2-B dönüştürme matrisi  
   
 ||||  
 |-|-|-|  
-|<xref:System.Windows.Media.Matrix.M11%2A><br /><br /> Varsayılan: 1,0|<xref:System.Windows.Media.Matrix.M12%2A><br /><br /> Varsayılan: 0,0|0,0|  
-|<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> Varsayılan: 0,0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> Varsayılan: 1,0|0,0|  
-|<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> Varsayılan: 0,0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> Varsayılan: 0,0|1.0|  
+|<xref:System.Windows.Media.Matrix.M11%2A><br /><br /> Varsayılan: 1.0|<xref:System.Windows.Media.Matrix.M12%2A><br /><br /> Varsayılan: 0.0|0,0|  
+|<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> Varsayılan: 0.0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> Varsayılan: 1.0|0,0|  
+|<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> Varsayılan: 0.0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> Varsayılan: 0.0|1.0|  
   
- Matris değerlerini değiştirerek bir nesne döndürebilir, ölçeklendirebilir, eğriltebilir ve taşıyabilirsiniz (çevirebilir). Örneğin, üçüncü satırın ilk sütunundaki değeri (<xref:System.Windows.Media.Matrix.OffsetX%2A> değeri) 100 olarak değiştirirseniz, x ekseninde bir nesne 100 birimleri taşımak için kullanabilirsiniz. İkinci satırın ikinci sütunundaki değeri 3 olarak değiştirirseniz, nesneyi geçerli yüksekliğinin üç katına uzatmak için kullanabilirsiniz. Her iki değeri de değiştirirseniz, nesne 100 birimini x ekseni üzerinde taşır ve yüksekliğini 3 faktörüyle uzatın. Windows Presentation Foundation (WPF) yalnızca Afine dönüştürmeleri desteklediğinden, sağ sütundaki değerler her zaman 0, 0, 1 ' dir.  
+ Matris değerlerini değiştirerek, bir nesneyi döndürebilir, ölçekleyebilir, çarpıtabilir ve taşıyabilir (çevirebilirsiniz). Örneğin, üçüncü satırın ilk sütunundaki değeri <xref:System.Windows.Media.Matrix.OffsetX%2A> (değer) 100 olarak değiştirirseniz, bir nesneyi x ekseni boyunca 100 birim taşımak için kullanabilirsiniz. İkinci satırın ikinci sütunundaki değeri 3 olarak değiştirirseniz, nesneyi geçerli yüksekliğinin üç katına çıkarmak için kullanabilirsiniz. Her iki değeri de değiştirirseniz, nesneyi x ekseni boyunca 100 birim hareket ettirir ve yüksekliğini 3 kat daha fazla uzatırsınız. Windows Sunu Temeli (WPF) yalnızca affine dönüşümlerini desteklediğinden, sağ sütundaki değerler her zaman 0, 0, 1'dir.  
   
- Windows Presentation Foundation (WPF), matris değerlerini doğrudan yönetmenize olanak tanısa da, temel matris yapısının nasıl yapılandırıldığını bilmeden bir nesneyi dönüştürmenizi sağlayan birkaç <xref:System.Windows.Media.Transform> sınıfı da sağlar. Örneğin <xref:System.Windows.Media.ScaleTransform> sınıfı, bir dönüştürme matrisini işlemek yerine <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> ve <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> özelliklerini ayarlayarak bir nesneyi ölçeklendirmenize olanak sağlar. Benzer şekilde, <xref:System.Windows.Media.RotateTransform> sınıfı, bir nesneyi yalnızca <xref:System.Windows.Media.RotateTransform.Angle%2A> özelliğini ayarlayarak döndürmenize olanak sağlar.  
+ Windows Sunu Temeli (WPF) matris değerlerini doğrudan işlemenizi sağlasa da, temel matris yapısının nasıl yapılandırıldığı bilmeden nesneyi dönüştürmenizi sağlayan birkaç <xref:System.Windows.Media.Transform> sınıf da sağlar. Örneğin, <xref:System.Windows.Media.ScaleTransform> sınıf, dönüştürme matrisini işlemek yerine <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> bir nesneyi ve özelliklerini ayarlayarak ölçeklendirmenizi sağlar. Aynı şekilde, <xref:System.Windows.Media.RotateTransform> sınıf yalnızca özelliğini <xref:System.Windows.Media.RotateTransform.Angle%2A> ayarlayarak bir nesneyi döndürmenizi sağlar.  
   
-<a name="transformClassesSection"></a>   
+<a name="transformClassesSection"></a>
 ## <a name="transform-classes"></a>Sınıfları Dönüştür  
- Windows Presentation Foundation (WPF), yaygın dönüştürme işlemleri için aşağıdaki 2-b <xref:System.Windows.Media.Transform> sınıfları sağlar:  
+ Windows Sunu Temeli (WPF), ortak <xref:System.Windows.Media.Transform> dönüşüm işlemleri için aşağıdaki 2-B sınıfları sağlar:  
   
-|örneği|Açıklama|Örnek|Göstermektedir|  
+|Sınıf|Açıklama|Örnek|Illüstrasyon|  
 |-----------|-----------------|-------------|------------------|  
-|<xref:System.Windows.Media.RotateTransform>|Belirtilen <xref:System.Windows.Media.RotateTransform.Angle%2A>bir öğeyi döndürür.|[Nesne Döndürme](how-to-rotate-an-object.md)|![Çizimi döndür](./media/graphicsmm-thumbnails-rotate.png "graphicsmm_thumbnails_rotate")|  
-|<xref:System.Windows.Media.ScaleTransform>|Bir öğeyi belirtilen <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> ölçeklendirir ve miktarları <xref:System.Windows.Media.ScaleTransform.ScaleY%2A>.|[Öğe Ölçeklendirme](how-to-scale-an-element.md)|![Ölçek çizimi](./media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")|  
-|<xref:System.Windows.Media.SkewTransform>|Bir öğeyi belirtilen <xref:System.Windows.Media.SkewTransform.AngleX%2A> ve <xref:System.Windows.Media.SkewTransform.AngleY%2A> tutarlarla eğriltir.|[Bir Öğeyi Eğme](how-to-skew-an-element.md)|![Çizimi eğ](./media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")|  
-|<xref:System.Windows.Media.TranslateTransform>|Bir öğeyi belirtilen <xref:System.Windows.Media.TranslateTransform.X%2A> ve <xref:System.Windows.Media.TranslateTransform.Y%2A> tutarlarla taşıyarak (çevirir).|[Bir Öğeyi Çevirme](how-to-translate-an-element.md)|![Çizimi çevir](./media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")|  
+|<xref:System.Windows.Media.RotateTransform>|Bir öğeyi belirtilene <xref:System.Windows.Media.RotateTransform.Angle%2A>göre döndürür.|[Nesne Döndürme](how-to-rotate-an-object.md)|![Çizimi döndürme](./media/graphicsmm-thumbnails-rotate.png "graphicsmm_thumbnails_rotate")|  
+|<xref:System.Windows.Media.ScaleTransform>|Bir öğeyi belirtilen <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> ve <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> miktarlara göre ölçeklendirin.|[Öğe Ölçeklendirme](how-to-scale-an-element.md)|![Ölçek illüstrasyon](./media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")|  
+|<xref:System.Windows.Media.SkewTransform>|Bir öğeyi belirtilen <xref:System.Windows.Media.SkewTransform.AngleX%2A> ve <xref:System.Windows.Media.SkewTransform.AngleY%2A> tutarlara göre eğriltiyor.|[Bir Öğeyi Eğme](how-to-skew-an-element.md)|![Çarpık illüstrasyon](./media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")|  
+|<xref:System.Windows.Media.TranslateTransform>|Bir öğeyi belirtilen <xref:System.Windows.Media.TranslateTransform.X%2A> ve <xref:System.Windows.Media.TranslateTransform.Y%2A> miktarlara göre taşır (çevirir).|[Bir Öğeyi Çevirme](how-to-translate-an-element.md)|![İllüstrasyonu çevir](./media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")|  
   
- Daha karmaşık dönüştürmeler oluşturmak için Windows Presentation Foundation (WPF) aşağıdaki iki sınıfı sağlar:  
+ Daha karmaşık dönüşümler oluşturmak için, Windows Sunu Temeli (WPF) aşağıdaki iki sınıfı sağlar:  
   
-|örneği|Açıklama|Örnek|  
+|Sınıf|Açıklama|Örnek|  
 |-----------|-----------------|-------------|  
-|<xref:System.Windows.Media.TransformGroup>|Birden çok <xref:System.Windows.Media.TransformGroup> nesnesini, dönüşüm özelliklerine uygulayabileceğiniz tek bir <xref:System.Windows.Media.Transform> gruplandırır.|[Nesneye Birden Çok Dönüşüm Uygulama](how-to-apply-multiple-transforms-to-an-object.md)|  
-|<xref:System.Windows.Media.MatrixTransform>|Diğer <xref:System.Windows.Media.Transform> sınıfları tarafından sağlanmayan özel dönüşümler oluşturur. Bir <xref:System.Windows.Media.MatrixTransform>kullandığınızda bir matrisi doğrudan işleyebilirsiniz.|[Özel Dönüşümler Oluşturmak için MatrixTransform Kullanma](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
+|<xref:System.Windows.Media.TransformGroup>|Birden <xref:System.Windows.Media.TransformGroup> çok nesneyi, <xref:System.Windows.Media.Transform> daha sonra özellikleri dönüştürmek için uygulayabileceğiniz tek bir nesne olarak grupla.|[Nesneye Birden Çok Dönüşüm Uygulama](how-to-apply-multiple-transforms-to-an-object.md)|  
+|<xref:System.Windows.Media.MatrixTransform>|Diğer <xref:System.Windows.Media.Transform> sınıflar tarafından sağverilmeyecek özel dönüşümler oluşturur. Bir <xref:System.Windows.Media.MatrixTransform>matrisi doğrudan manipüle emdiğinizde.|[Özel Dönüşümler Oluşturmak için MatrixTransform Kullanma](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
- Windows Presentation Foundation (WPF) Ayrıca 3-b dönüşümler de sağlar. Daha fazla bilgi için <xref:System.Windows.Media.Media3D.Transform3D> sınıfına bakın.  
+ Windows Sunu Temeli (WPF) da 3-B dönüşümleri sağlar. Daha fazla bilgi <xref:System.Windows.Media.Media3D.Transform3D> için sınıfa bakın.  
   
-<a name="transformationproperties"></a>   
-## <a name="common-transformation-properties"></a>Ortak dönüştürme özellikleri  
- Bir nesneyi dönüştürmenin bir yolu, uygun <xref:System.Windows.Media.Transform> türünü bildirmek ve nesnenin dönüştürme özelliğine uygulamaktır. Farklı nesne türleri farklı tür dönüştürme özelliklerine sahiptir. Aşağıdaki tabloda, yaygın olarak kullanılan birkaç Windows Presentation Foundation (WPF) türü ve bunların dönüştürme özellikleri listelenmektedir.  
+<a name="transformationproperties"></a>
+## <a name="common-transformation-properties"></a>Ortak Dönüşüm Özellikleri  
+ Bir nesneyi dönüştürmenin bir yolu, uygun <xref:System.Windows.Media.Transform> türü bildirmek ve nesnenin dönüştürme özelliğine uygulamaktır. Farklı türde nesnelerin farklı türde dönüşüm özellikleri vardır. Aşağıdaki tabloda, sık kullanılan birkaç Windows Presentation Foundation (WPF) türü ve bunların dönüştürme özellikleri listelenmiştir.  
   
-|Tür|Dönüştürme özellikleri|  
+|Tür|Dönüşüm özellikleri|  
 |----------|-------------------------------|  
 |<xref:System.Windows.Media.Brush>|<xref:System.Windows.Media.Brush.Transform%2A>, <xref:System.Windows.Media.Brush.RelativeTransform%2A>|  
 |<xref:System.Windows.Media.ContainerVisual>|<xref:System.Windows.Media.ContainerVisual.Transform%2A>|  
@@ -77,80 +77,80 @@ Bu konuda, <xref:System.Windows.FrameworkElement> nesneleri döndürmek, ölçek
 |<xref:System.Windows.Media.TextEffect>|<xref:System.Windows.Media.TextEffect.Transform%2A>|  
 |<xref:System.Windows.UIElement>|<xref:System.Windows.UIElement.RenderTransform%2A>|  
   
-<a name="transformcenter"></a>   
-## <a name="transformations-and-coordinate-systems"></a>Dönüşümler ve koordinat sistemleri  
- Bir nesneyi dönüştürdüğünüzde, nesneyi dönüştürmeyin, nesnenin bulunduğu koordinat alanını dönüştürüdürler. Varsayılan olarak, bir dönüşüm hedef nesnenin koordinat sisteminin kaynağına ortalanır: (0, 0). Tek özel durum <xref:System.Windows.Media.TranslateTransform>; bir <xref:System.Windows.Media.TranslateTransform>, ortalandığı yere bakılmaksızın çeviri efekti aynı olduğundan ayarlanacak bir merkez özelliklerine sahip değildir.  
+<a name="transformcenter"></a>
+## <a name="transformations-and-coordinate-systems"></a>Dönüşümler ve Koordinat Sistemleri  
+ Bir nesneyi dönüştürdüğünüzde, sadece nesneyi değil, o nesnenin var olduğu koordinat alanını da dönüştürürsunuz. Varsayılan olarak, bir dönüştürme hedef nesnenin koordinat sisteminin kaynağında ortalanır: (0,0). Tek istisna; <xref:System.Windows.Media.TranslateTransform> a'nın <xref:System.Windows.Media.TranslateTransform> ayarladığı merkezi özellikleri yoktur, çünkü çeviri efekti ortalandığı yere bakılmaksızın aynıdır.  
   
- Aşağıdaki örnek, bir <xref:System.Windows.Shapes.Rectangle> öğesini, bir <xref:System.Windows.FrameworkElement>türünü varsayılan merkezi yaklaşık 45 derece (0, 0) olarak döndürmek için bir <xref:System.Windows.Media.RotateTransform> kullanır. Aşağıdaki çizimde, döndürmenin etkisi gösterilmektedir.  
+ Aşağıdaki örnek, <xref:System.Windows.Media.RotateTransform> varsayılan merkezi <xref:System.Windows.Shapes.Rectangle> (0, 0) hakkında 45 derece ile bir <xref:System.Windows.FrameworkElement>tür, bir öğeyi döndürmek için a kullanır. Aşağıdaki resimde döndürmenin etkisi gösterilmektedir.  
   
- ![0, 0 yaklaşık &#40;45 derece döndürülmüş bir FrameworkElement&#41;](./media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm_FE_rotated_about_upperleft_corner")  
-Nokta ile 45 derece döndürülmüş bir dikdörtgen öğesi (0, 0)  
+ ![Bir FrameworkElement yaklaşık 0,0 &#40;&#41;45 derece döndü](./media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm_FE_rotated_about_upperleft_corner")  
+Bir Dikdörtgen eleman noktası (0,0) hakkında 45 derece döndürülür  
   
  [!code-xaml[Transforms_snip#TransformsFERotatedAboutTopLeft](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedabouttopleft)]  
   
- Varsayılan olarak öğe, sol üst köşesine (0, 0) döner. <xref:System.Windows.Media.RotateTransform>, <xref:System.Windows.Media.ScaleTransform>ve <xref:System.Windows.Media.SkewTransform> sınıfları, dönüşümün uygulandığı noktayı belirtmenizi sağlayan CenterX ve CenterY özellikleri sağlar.  
+ Varsayılan olarak, öğe sol üst köşesinde döner, (0, 0). , <xref:System.Windows.Media.RotateTransform> <xref:System.Windows.Media.ScaleTransform>ve <xref:System.Windows.Media.SkewTransform> sınıflar, dönüşümün uygulandığı noktayı belirtmenizi sağlayan CenterX ve CenterY özelliklerini sağlar.  
   
- Sonraki örnek ayrıca, bir <xref:System.Windows.Shapes.Rectangle> öğesini 45 derece döndürmek için bir <xref:System.Windows.Media.RotateTransform> kullanır; Ancak, bu kez <xref:System.Windows.Media.RotateTransform.CenterX%2A> ve <xref:System.Windows.Media.RotateTransform.CenterY%2A> özellikleri, <xref:System.Windows.Media.RotateTransform> Merkezi (25, 25) olacak şekilde ayarlanır. Aşağıdaki çizimde, döndürmenin etkisi gösterilmektedir.  
+ Bir sonraki örnek <xref:System.Windows.Media.RotateTransform> de 45 <xref:System.Windows.Shapes.Rectangle> derece ile bir öğedöndürmek için a kullanır; ancak, bu <xref:System.Windows.Media.RotateTransform.CenterX%2A> kez <xref:System.Windows.Media.RotateTransform.CenterY%2A> ve özellikleri (25, 25) bir merkezi <xref:System.Windows.Media.RotateTransform> olacak şekilde ayarlanır. Aşağıdaki resimde döndürmenin etkisi gösterilmektedir.  
   
- ![45 derece döndürülmüş bir geometri &#40;25, 25&#41;](./media/graphicsmm-fe-rotated-about-center.png "graphicsmm_FE_rotated_about_center")  
-Nokta ile 45 derece döndürülmüş bir dikdörtgen öğesi (25, 25)  
+ ![A Geometri yaklaşık 25, 25 &#40;45 derece döndü&#41;](./media/graphicsmm-fe-rotated-about-center.png "graphicsmm_FE_rotated_about_center")  
+Bir Dikdörtgen eleman noktası (25, 25) hakkında 45 derece döndürülür  
   
  [!code-xaml[Transforms_snip#TransformsFERotatedAboutCenter](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedaboutcenter)]  
   
-<a name="layoutTransformsAndRenderTransformsSection"></a>   
-## <a name="transforming-a-frameworkelement"></a>FrameworkElement dönüştürme  
- Dönüşümleri bir <xref:System.Windows.FrameworkElement>uygulamak için bir <xref:System.Windows.Media.Transform> oluşturun ve bunu <xref:System.Windows.FrameworkElement> sınıfının sağladığı iki özelliklerden birine uygulayın:  
+<a name="layoutTransformsAndRenderTransformsSection"></a>
+## <a name="transforming-a-frameworkelement"></a>Bir FrameworkElement dönüştürme  
+ Dönüşümleri bir <xref:System.Windows.FrameworkElement>, oluşturmak <xref:System.Windows.Media.Transform> ve <xref:System.Windows.FrameworkElement> sınıfın sağladığı iki özellikten birine uygulamak için:  
   
-- <xref:System.Windows.FrameworkElement.LayoutTransform%2A>: düzen geçirmeden önce uygulanan bir dönüşüm. Dönüşüm uygulandıktan sonra, Düzen sistemi öğenin dönüştürülmüş boyutunu ve konumunu işler.  
+- <xref:System.Windows.FrameworkElement.LayoutTransform%2A>– Düzen geçmeden önce uygulanan bir dönüştürme. Dönüştürme uygulandıktan sonra, düzen sistemi öğenin dönüştürülmüş boyutunu ve konumunu işler.  
   
-- <xref:System.Windows.UIElement.RenderTransform%2A>: öğenin görünümünü değiştiren ancak düzen geçişi tamamlandıktan sonra uygulanan bir dönüşüm. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> özelliği yerine <xref:System.Windows.UIElement.RenderTransform%2A> özelliğini kullanarak performans avantajları elde edebilirsiniz.  
+- <xref:System.Windows.UIElement.RenderTransform%2A>– Öğenin görünümünü değiştiren ancak düzen geçişi tamamlandıktan sonra uygulanan dönüştürme. <xref:System.Windows.UIElement.RenderTransform%2A> Özellik yerine özelliği kullanarak, performans avantajları elde edebilirsiniz. <xref:System.Windows.FrameworkElement.LayoutTransform%2A>  
   
- Hangi özelliği kullanmalıyım? Sağladığı performans avantajları nedeniyle, özellikle animasyonlu <xref:System.Windows.Media.Transform> nesneleri kullandığınızda, mümkün olan her durumda <xref:System.Windows.UIElement.RenderTransform%2A> özelliğini kullanın. Ölçeklendirirken, döndürürken veya eğme sırasında <xref:System.Windows.FrameworkElement.LayoutTransform%2A> özelliğini kullanın ve öğenin dönüştürülmüş boyutuna ayarlanacak öğenin üst öğesine ihtiyacınız vardır. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> özelliği ile kullanıldıkları zaman, <xref:System.Windows.Media.TranslateTransform> nesnelerin öğeler üzerinde hiçbir etkisi olmadığını unutmayın. Bunun nedeni, düzen sisteminin işlemin bir parçası olarak, çevrilmiş öğeyi özgün konumuna döndürmesinin bir parçasıdır.  
+ Hangi özelliği kullanmalısınız? Sağladığı performans avantajları nedeniyle, özellikle <xref:System.Windows.UIElement.RenderTransform%2A> animasyonlu <xref:System.Windows.Media.Transform> nesneler kullandığınızda özelliği mümkün olduğunca kullanın. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> Ölçekleme, döndürme veya eğrilme özelliğini kullanın ve öğenin dönüştürülmüş boyutuna ayarlamak için öğenin üst gerekir. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> Özellik ile birlikte kullanıldıklarında, <xref:System.Windows.Media.TranslateTransform> nesnelerin öğeler üzerinde hiçbir etkisi olmadığını unutmayın. Bunun nedeni, düzen sisteminin çevrilen öğeyi işlemenin bir parçası olarak özgün konumuna döndürmesidir.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]düzen hakkında daha fazla bilgi için bkz. [düzene](../advanced/layout.md) genel bakış.  
+ Düzen [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]hakkında ek bilgi için Bkz. [Düzen](../advanced/layout.md) genel bakışı.  
   
-<a name="exampleRotateAnElement45degSection"></a>   
-## <a name="example-rotate-a-frameworkelement-45-degrees"></a>Örnek: FrameworkElement 45 derece döndürün  
- Aşağıdaki örnek, bir düğmeyi saat yönünde 45 derece döndürmek için bir <xref:System.Windows.Media.RotateTransform> kullanır. Düğme, iki farklı düğme içeren <xref:System.Windows.Controls.StackPanel> bulunur.  
+<a name="exampleRotateAnElement45degSection"></a>
+## <a name="example-rotate-a-frameworkelement-45-degrees"></a>Örnek: FrameworkElement 45 Derece döndürme  
+ Aşağıdaki örnek, <xref:System.Windows.Media.RotateTransform> bir düğmeyi saat yönünde 45 derece döndürmek için a kullanır. Düğme, diğer iki <xref:System.Windows.Controls.StackPanel> düğmesi olan bir düğmede bulunur.  
   
- Varsayılan olarak, <xref:System.Windows.Media.RotateTransform> (0, 0) noktası hakkında bir değer döndürür. Örnek bir orta değer belirtmediğinden düğme, sol üst köşesi olan nokta (0, 0) ile ilgili olarak döner. <xref:System.Windows.Media.RotateTransform>, <xref:System.Windows.UIElement.RenderTransform%2A> özelliğine uygulanır. Aşağıdaki çizim, dönüşümün sonucunu gösterir.  
+ Varsayılan olarak, <xref:System.Windows.Media.RotateTransform> bir nokta (0, 0) etrafında döner. Örnek bir merkez değeri belirtmediği için, düğme sol üst köşesi olan nokta (0, 0) etrafında döner. Özellik <xref:System.Windows.Media.RotateTransform> uygulanır. <xref:System.Windows.UIElement.RenderTransform%2A> Aşağıdaki resimde dönüşümün sonucu gösterilmektedir.  
   
- ![RenderTransform kullanılarak dönüştürülen bir düğme](./media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
-Sol üst köşeden saat yönünde döndürme 45 derece  
+ ![RenderTransform kullanılarak dönüştürülmüş bir düğme](./media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
+Sol üst köşeden saat yönünde 45 derece dönüş  
   
  [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
   
- Sonraki örnek ayrıca bir <xref:System.Windows.Media.RotateTransform> bir Button 45 derece saat yönünde döndürmek için bir kullanır, ancak aynı zamanda düğmenin <xref:System.Windows.UIElement.RenderTransformOrigin%2A> (0,5, 0,5) olarak ayarlanır. <xref:System.Windows.UIElement.RenderTransformOrigin%2A> özelliğinin değeri düğme boyutuna göredir. Sonuç olarak, döndürme sol üst köşesinden değil, düğmenin merkezine uygulanır. Aşağıdaki çizim, dönüşümün sonucunu gösterir.  
+ Sonraki örnek de <xref:System.Windows.Media.RotateTransform> bir düğmeyi saat yönünde 45 derece döndürmek için <xref:System.Windows.UIElement.RenderTransformOrigin%2A> a kullanır, ancak düğmenin (0,5, 0,5) olarak da ayarlanır. Özelliğin <xref:System.Windows.UIElement.RenderTransformOrigin%2A> değeri düğmenin boyutuna göredir. Sonuç olarak, döndürme sol üst köşesi yerine düğmenin ortasına uygulanır. Aşağıdaki resimde dönüşümün sonucu gösterilmektedir.  
   
- ![Bir düğme merkeziyle ilgili olarak dönüştürüldü](./media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
-Orta etrafında saat yönünde döndürme 45 derece  
+ ![Merkezi hakkında dönüştürülmüş bir düğme](./media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
+Saat yönünde dönüş merkez etrafında 45 derece  
   
  [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
   
- Aşağıdaki örnek, düğmeyi döndürmek için <xref:System.Windows.UIElement.RenderTransform%2A> özelliği yerine <xref:System.Windows.FrameworkElement.LayoutTransform%2A> özelliğini kullanır.  Bu, dönüşümün düzen sistemi tarafından tam Geçişi tetikleyen düğmenin yerleşimini etkilemesine neden olur. Sonuç olarak, bu düğme döndürülür ve boyutu değiştiğinden yeniden konumlandırılır. Aşağıdaki çizim, dönüşümün sonucunu gösterir.  
+ Aşağıdaki örnek, <xref:System.Windows.FrameworkElement.LayoutTransform%2A> düğmeyi <xref:System.Windows.UIElement.RenderTransform%2A> döndürmek için özellik yerine özelliği kullanır.  Bu, dönüşümün düğmenin düzenini etkilemesine neden olur ve bu da düzen sistemi tarafından tam geçişi tetikler. Sonuç olarak, boyutu değiştiğinden düğme döndürülür ve yeniden konumlandırılır. Aşağıdaki resimde dönüşümün sonucu gösterilmektedir.  
   
- ![LayoutTransform kullanılarak dönüştürülen düğme](./media/graphicsmm-layouttransform.png "graphicsmm_LayoutTransform")  
-Düğmeyi döndürmek için kullanılan LayoutTransform  
+ ![LayoutTransform kullanılarak dönüştürülmüş bir düğme](./media/graphicsmm-layouttransform.png "graphicsmm_LayoutTransform")  
+Button'u döndürmek için kullanılan DüzenTransform  
   
  [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample3](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample3)]  
   
-<a name="animate_transforms"></a>   
-## <a name="animating-transformations"></a>Dönüşümleri Hareketlendirme  
- <xref:System.Windows.Media.Animation.Animatable> sınıfından devraldığı için <xref:System.Windows.Media.Transform> sınıfları canlandırılabilirler. Bir <xref:System.Windows.Media.Transform>hareketlendirmek için, hareketlendirmek istediğiniz özelliğe uyumlu bir tür animasyonu uygulayın.  
+<a name="animate_transforms"></a>
+## <a name="animating-transformations"></a>Dönüşümleri Animating  
+ <xref:System.Windows.Media.Animation.Animatable> Sınıftan miras aldıkları <xref:System.Windows.Media.Transform> için, sınıflar canlandırılabilir. Animasyon <xref:System.Windows.Media.Transform>a, animasyon istediğiniz özelliği uyumlu bir tür animasyon uygulayın.  
   
- Aşağıdaki örnek, bir <xref:System.Windows.Media.Animation.Storyboard> <xref:System.Windows.Media.Animation.DoubleAnimation> ve tıklandığı zaman yerinde bir <xref:System.Windows.Media.RotateTransform> <xref:System.Windows.Controls.Button> bir döndürme kullanır.  
+ Aşağıdaki örnek, <xref:System.Windows.Media.Animation.Storyboard> tıklatıldığında <xref:System.Windows.Media.Animation.DoubleAnimation> yerinde <xref:System.Windows.Media.RotateTransform> bir <xref:System.Windows.Controls.Button> spin yapmak için a ve a ile kullanır.  
   
  [!code-xaml[Transforms_snip#GraphicsMMAnimatedRotateButtonExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonAnimatedRotateTransformExample.xaml#graphicsmmanimatedrotatebuttonexamplewholepage)]  
   
- Tam örnek için bkz. [2-b dönüşümler örneği](https://go.microsoft.com/fwlink/?LinkID=158252). Animasyonlar hakkında daha fazla bilgi için bkz. [animasyona genel bakış](animation-overview.md).  
+ Numunenin tamamı için [2-B Dönüşüm Örneği'ne](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)bakın. Animasyonlar hakkında daha fazla bilgi için [Animasyona Genel Bakış'a](animation-overview.md)bakın.  
   
-<a name="freezable_features"></a>   
-## <a name="freezable-features"></a>Freezable özellikleri  
- <xref:System.Windows.Freezable> sınıfından devraldığı için, <xref:System.Windows.Media.Transform> sınıfı birkaç özel özellik sağlar: <xref:System.Windows.Media.Transform> nesneler [kaynak](../../../desktop-wpf/fundamentals/xaml-resources-define.md)olarak, birden fazla nesne arasında paylaşılan, performansı geliştirmek için salt okunabilir hale getirilir, klonlanmış ve iş parçacığı güvenli hale getirilir. <xref:System.Windows.Freezable> nesneleri tarafından sunulan farklı özellikler hakkında daha fazla bilgi için, [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md)bölümüne bakın.  
+<a name="freezable_features"></a>
+## <a name="freezable-features"></a>Freezable Özellikler  
+ Sınıftan <xref:System.Windows.Media.Transform> devraldığı için, sınıf çeşitli özel <xref:System.Windows.Media.Transform> özellikler sağlar: nesneler kaynak olarak bildirilebilir, birden çok nesne arasında paylaşılabilir, performansı artırmak için salt okunur hale getirilebilir, klonlanabilir ve iş parçacığı güvenli hale getirilebilir. [resources](../../../desktop-wpf/fundamentals/xaml-resources-define.md) <xref:System.Windows.Freezable> Nesneler tarafından <xref:System.Windows.Freezable> sağlanan farklı özellikler hakkında daha fazla bilgi için [Freezable Objects Overview](../advanced/freezable-objects-overview.md)'a bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
-- [Nasıl Yapılır Konuları](transformations-how-to-topics.md)
-- [2-b dönüşümler örneği](https://go.microsoft.com/fwlink/?LinkID=158252)
+- [Nasıl Dır Konular](transformations-how-to-topics.md)
+- [2-B Dönüşüm Örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)

@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 2ad6b16370f600299439d2e810dfefa1b5fa3c06
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: c25477c2c99be66b34b07e1f7e50115bfa8d14e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087537"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154939"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a>BypassList için \<Clear > öğesi (ağ ayarları)
-Proxy atlama listesini temizler.  
+# <a name="clear-element-for-bypasslist-network-settings"></a>\<bypasslist (Ağ Ayarları) için açık> Öğesi
+Proxy bypass listesini temizler.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BypassList >** ](bypasslist-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<bypasslist>**](bypasslist-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<açık>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,16 +45,16 @@ Proxy atlama listesini temizler.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[BypassList](bypasslist-element-network-settings.md)|Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.|  
+|[Bypasslist](bypasslist-element-network-settings.md)|Proxy kullanmayan adresleri açıklayan bir dizi düzenli ifade sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `clear` öğesi atlama listesinden tüm girdileri temizler.  
+ Öğe, `clear` tüm girişleri baypas listesinden temizler.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+ Bu öğe uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek atlama listesini temizler ve atlama listesine iki adres ekler. İlki, contoso.com etki alanındaki tüm sunucular için proxy 'yi atlar; İkincisi, IP adresi 192,168 ile başlayan tüm sunucular için proxy 'yi atlar.  
+ Aşağıdaki örnek, baypas listesini temizler ve sonra bypass listesine iki adres ekler. İlki, contoso.com etki alanında bulunan tüm sunucular için proxy'yi atlar; ikincisi, IP adresi 192.168 ile başlayan tüm sunucular için proxy'yi atlar.  
   
 ```xml  
 <configuration>  
@@ -67,7 +67,7 @@ Proxy atlama listesini temizler.
       </bypasslist>  
     </defaultProxy>  
   </system.net>  
-</configuration>   
+</configuration>
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.

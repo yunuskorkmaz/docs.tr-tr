@@ -1,23 +1,23 @@
 ---
-title: <behavior><serviceBehaviors> iş akışının
+title: <behavior>iş <serviceBehaviors> akışının
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a4b718a-1b40-4957-935a-f6122819ab3c
-ms.openlocfilehash: 65bde45ffdd4af166d5b44308162c23257659802
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 071cff8e9f6ec3fa0546a07d19160869d8b43f60
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398885"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152326"
 ---
-# <a name="behavior-of-servicebehaviors-of-workflow"></a>\<iş akışının \<ServiceBehavior > davranış >
-**Behavior** öğesi, bir hizmetin davranışına yönelik ayarların bir koleksiyonunu içerir. Her davranışın **adına**göre dizini oluşturulur. Hizmetler, [ \<uç nokta >](../wcf/endpoint-element.md) öğesinin **behaviorConfiguration** özniteliğini kullanarak bu ad aracılığıyla her davranışa bağlanabilir. Bu ayarları yeniden tanımlama olmadan davranışı yapılandırmaların paylaşmak uç noktaları sağlar.  
+# <a name="behavior-of-servicebehaviors-of-workflow"></a>\<hizmet davranış \<>İş akışı> Davranışlar
+**Davranış** öğesi, bir hizmetin davranışı için ayarlar bir koleksiyon içerir. Her davranış **kendi adıyla**dizine dizinlenir. Hizmetler, [ \<bitiş noktası>](../wcf/endpoint-element.md) öğesinin **davranışYapılandırma** özniteliğini kullanarak her davranışa bu ad üzerinden bağlanabilir. Bu ayarları yeniden tanımlama olmadan davranışı yapılandırmaların paylaşmak uç noktaları sağlar.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<sistemin. ServiceModel >** ](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<davranışlar >** ](behaviors-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Servicedavranışlar >** ](servicebehaviors-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<davranış >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<Sistem. ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<davranışlar>**](behaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<davranış>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,20 +29,20 @@ ms.locfileid: "70398885"
         <bufferReceive maxPendingMessagesPerChannel="Integer" />
         <etwTracking profileName="String" />
         <sendMessageChannelCache allowUnsafeCaching="Boolean">
-          <channelSettings idleTimeout="TimeSpan" 
-                           leaseTimeout="TimeSpan" 
+          <channelSettings idleTimeout="TimeSpan"
+                           leaseTimeout="TimeSpan"
                            maxItemsInCache="Integer" />
-          <factorySettings idleTimeout="TimeSpan" 
-                           leaseTimeout="TimeSpan" 
+          <factorySettings idleTimeout="TimeSpan"
+                           leaseTimeout="TimeSpan"
                            maxItemsInCache="Integer" />
         </sendMessageChannelCache>
-        <sqlWorkflowInstanceStore connectionStringName="String" 
-                                  hostLockRenewalPeriod="TimeSpan" 
-                                  instanceCompletionAction="DeleteNothing/DeleteAll" 
-                                  instanceEncodingAction="None/GZip" 
-                                  instanceLockedExceptionAction="NoRetry/BasicRetry/AggressiveRetry" 
+        <sqlWorkflowInstanceStore connectionStringName="String"
+                                  hostLockRenewalPeriod="TimeSpan"
+                                  instanceCompletionAction="DeleteNothing/DeleteAll"
+                                  instanceEncodingAction="None/GZip"
+                                  instanceLockedExceptionAction="NoRetry/BasicRetry/AggressiveRetry"
                                   runnableInstancesDetectionPeriod="TimeSpan" />
-        <workflowIdle timeToPersist="TimeSpan" 
+        <workflowIdle timeToPersist="TimeSpan"
                       timeToUnload="TimeSpan" />
         <workflowUnhandledException action="Abandon/AbandonAndSuspend/Cancel/Terminate" />
       </behavior>
@@ -58,22 +58,22 @@ ms.locfileid: "70398885"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|name|Davranışın yapılandırma adını içeren benzersiz bir dize. Bu değer, öğe için kimlik dizesi olarak davrandığından, benzersiz olması gereken kullanıcı tanımlı bir dizedir.|  
+|ad|Davranışın yapılandırma adını içeren benzersiz bir dize. Bu değer, öğenin tanımlama dizesi olarak hareket ettiği için benzersiz olması gereken kullanıcı tanımlı bir dizedir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bufferReceive >](bufferreceive.md)|Bir hizmet davranışını etkinleştirir hizmeti kullanmak için arabelleğe alınan sırası iletileri işlemek bir iş akışı hizmeti sağlayan işleme alırsınız.|  
-|[\<Yönlendirme >](../wcf/routing-of-servicebehavior.md)|Bir hizmetin, kullanarak <xref:System.Activities.Tracking.EtwTrackingParticipant>etw izlemeyi kullanmasına izin veren bir hizmet davranışı.|  
-|[\<sendMessageChannelCache >](sendmessagechannelcache.md)|Önbellek paylaşım düzeylerinin özelleştirilmesine, kanal fabrikası önbelleğinin ayarlarına ve ileti gönderme etkinlikleri kullanarak hizmet uç noktalarına ileti gönderen iş akışları için kanal önbelleğinin ayarlarına olanak tanıyan bir hizmet davranışı.|  
-|[\<SqlWorkflowInstanceStore >](sqlworkflowinstancestore.md)|İş akışı hizmeti örnekleri için SQL Server 2005 veya SQL Server <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 2008 veritabanına yönelik kalıcı durum bilgilerini destekleyen özelliği yapılandırmanıza olanak tanıyan bir hizmet davranışı.|  
-|[\<workflowIdle >](workflowidle.md)|Boştaki iş akışı örneklerinin ne zaman kaldırılabileceğini ve kalıcı olduğunu denetleyen bir hizmet davranışı.|  
-|[\<workflowInstanceManagement >](workflowinstancemanagement.md)|Kalıcılık, işlenmemiş özel durum davranışı ve boşta davranış dahil, iş akışı örneklerinin nasıl çalıştırılacağını denetleyen ayarları belirtmenize olanak tanıyan bir hizmet davranışı.|  
-|[\<workflowUnhandledException >](workflowunhandledexception.md)|Bir iş akışı hizmeti içinde işlenmeyen bir özel durum oluştuğunda yapılacak eylem belirtmenize olanak tanıyan bir hizmet davranışı.|  
+|[\<bufferReceive>](bufferreceive.md)|Bir hizmet davranışını etkinleştirir hizmeti kullanmak için arabelleğe alınan sırası iletileri işlemek bir iş akışı hizmeti sağlayan işleme alırsınız.|  
+|[\<yönlendirme>](../wcf/routing-of-servicebehavior.md)|Bir hizmetin ETW izlemesini kullanmasına izin <xref:System.Activities.Tracking.EtwTrackingParticipant>veren bir hizmet davranışı.|  
+|[\<sendMessageChannelCache>](sendmessagechannelcache.md)|İleti gönder etkinliklerini kullanarak hizmet uç noktalarına ileti gönderen iş akışları için önbellek paylaşım düzeylerinin, kanal fabrika önbelleğinin ayarlarını ve kanal önbelleğinin ayarlarını özelleştirmeyi sağlayan bir hizmet davranışı.|  
+|[\<sqlWorkflowInstanceStore>](sqlworkflowinstancestore.md)|İş akışı hizmeti örnekleri için <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> kalıcı durum bilgilerini bir SQL Server 2005 veya SQL Server 2008 veritabanında destekleyen özelliği yapılandırmanızı sağlayan bir hizmet davranışı.|  
+|[\<iş akışıBoş>](workflowidle.md)|Boşta kalan iş akışı örnekleri boşaldığında ve kalıcı olduğunda denetleyen bir hizmet davranışı.|  
+|[\<iş akışıInstanceManagement>](workflowinstancemanagement.md)|Kalıcılık, işlenmemiş Özel Durum davranışı ve boşta kalan davranışlar dahil olmak üzere iş akışı örneklerinin nasıl çalıştırılacağını denetleyen ayarları belirtmenizi sağlayan bir hizmet davranışı.|  
+|[\<iş akışıUnhandledException>](workflowunhandledexception.md)|Bir iş akışı hizmeti içinde işlenmeyen bir özel durum oluştuğunda yapılacak eylem belirtmenize olanak tanıyan bir hizmet davranışı.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Servicedavranışlar >](servicebehaviors-of-workflow.md)|Hizmet davranışı öğelerinin koleksiyonu.|
+|[\<serviceBehaviors>](servicebehaviors-of-workflow.md)|Hizmet davranışı öğelerinin koleksiyonu.|

@@ -9,25 +9,25 @@ helpviewer_keywords:
 - dependentAssembly element
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-ms.openlocfilehash: 33309ed89b4d31580da5de3aeb38e9e1fd8ae4d0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2de8c752867d00708173d11d1851f415a2e8518d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73117592"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154211"
 ---
-# <a name="dependentassembly-element"></a>\<dependentAssembly > öğesi
-Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Her derleme için bir `dependentAssembly` öğesi kullanın.  
+# <a name="dependentassembly-element"></a>\<bağımlıMontaj> Öğesi
+Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Her `dependentAssembly` montaj için bir öğe kullanın.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dependentAssembly >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<çalışma zamanı>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<montajBağlama>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<bağımlıAssembly>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<dependentAssembly>   
+<dependentAssembly>
 </dependentAssembly>  
 ```  
   
@@ -41,10 +41,10 @@ Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Her derleme i�
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|`assemblyIdentity`|Derlemeyle ilgili tanımlama bilgilerini içerir. Bu öğe her bir `dependentAssembly` öğesine eklenmelidir.|  
-|`codeBase`|Çalışma zamanının, bilgisayarda yüklü değilse paylaşılan bir derlemeyi bulabilecekleri yeri belirtir.|  
+|`assemblyIdentity`|Derleme hakkında tanımlayıcı bilgileri içerir. Bu öğe her `dependentAssembly` öğeye dahil edilmelidir.|  
+|`codeBase`|Bilgisayarda yüklü değilse, çalışma zamanının paylaşılan bir derlemeyi nerede bulabileceğini belirtir.|  
 |`bindingRedirect`|Bir derleme sürümünü diğerine yeniden yönlendirir.|  
-|`publisherPolicy`|Çalışma zamanının bu derleme için yayımcı ilkesi uygulanıp uygulanmadığını belirtir.|  
+|`publisherPolicy`|Çalışma zamanının bu derleme için yayımcı ilkesini kullanıp uygulamayacağını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -55,7 +55,7 @@ Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Her derleme i�
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, iki derleme için derleme bilgilerinin nasıl kapsüllagösterdiğini gösterir.  
+ Aşağıdaki örnek, iki derleme için derleme bilgilerinin nasıl kapsüllenebildiğini gösterir.  
   
 ```xml  
 <configuration>  

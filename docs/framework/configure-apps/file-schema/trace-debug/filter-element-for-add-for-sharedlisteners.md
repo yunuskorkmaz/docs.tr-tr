@@ -1,5 +1,5 @@
 ---
-title: <sharedListeners> için <add> <filter> öğesi
+title: <filter><add> Için element<sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,26 +10,26 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: e04ecd773bd6aa7791858711edbd72128dc391ea
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 6fb52cdfa5792ab6059b60d8dbb91c107cd666ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088877"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153459"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a>\<sharedListeners için \<ekleme > için Filtre > öğesi \<
-`sharedListeners` koleksiyonundaki bir dinleyiciye bir filtre ekler.  
+# <a name="filter-element-for-add-for-sharedlisteners"></a>\<paylaşılan Dinleyiciler \<için \<> eklemek için> Öğesi'ni filtreleme>
+`sharedListeners` Koleksiyondaki bir dinleyiciye filtre ekler.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-[**System. diagnostics\<** ](system-diagnostics-element.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**sharedListeners**](sharedlisteners-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add >** ](add-element-for-sharedlisteners.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<filtresi >**
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<paylaşılanDinleyiciler>**](sharedlisteners-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>ekleyin**](add-element-for-sharedlisteners.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<filtre>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<filter type="System.Diagnostics.EventTypeFilter"   
+<filter type="System.Diagnostics.EventTypeFilter"
   initializeData="Warning" />  
 ```  
   
@@ -40,8 +40,8 @@ ms.locfileid: "74088877"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**türüyle**|Gerekli öznitelik.<br /><br /> Filtrenin türünü belirtir. Türün tam adını (<xref:System.Type.FullName%2A?displayProperty=nameWithType> özelliğinin biçiminde) kullanabilir veya derleme bilgileri de dahil olmak üzere tam nitelikli tür adını (<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> özelliğinin biçiminde) kullanabilirsiniz. Tam nitelikli tür adı oluşturma hakkında bilgi için, bkz. [tam nitelikli tür adları belirtme](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|**initializeData**|İsteğe bağlı öznitelik.<br /><br /> Belirtilen sınıf için oluşturucuya geçirilen dize.|  
+|**Türü**|Gerekli öznitelik.<br /><br /> Filtrenin türünü belirtir. Yalnızca türün tam adını <xref:System.Type.FullName%2A?displayProperty=nameWithType> (özelliğin biçiminde) veya derleme bilgilerini de içeren tam nitelikli tür adını <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> (özelliğin biçiminde) kullanabilirsiniz. Tam nitelikli tür adı oluşturma hakkında bilgi için [bkz.](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)|  
+|**initializeData**|İsteğe bağlı öznitelik.<br /><br /> Dize, belirtilen sınıfın oluşturucuya geçti.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -51,17 +51,17 @@ ms.locfileid: "74088877"
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
-|`sharedListeners`|Herhangi bir kaynak veya izleme öğesinin başvurmasına yönelik bir dinleyici koleksiyonu.|  
-|`add`|**SharedListeners** koleksiyonuna bir dinleyici ekler.|  
+|`system.diagnostics`|İletileri toplayan, depolayan ve yönlendiren izleme dinleyicilerini ve izleme anahtarının ayarlandığı düzeyi belirtir.|  
+|`sharedListeners`|Herhangi bir kaynak veya izleme öğesinin başvuruda bulunabileceği dinleyici koleksiyonu.|  
+|`add`|**Paylaşılan Dinleyici** koleksiyonuna bir dinleyici ekler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir dinleyici `<sharedListeners>` öğesinin bir `<add>` öğesinde tanımlanmışsa, bu dinleyicinin filtresi, `<add>` öğesinin bir alt öğesi olan bir `<filter>` öğesinde tanımlanmalıdır.  
+ Bir `<add>` dinleyici `<sharedListeners>` öğenin bir öğesi nde tanımlanırsa, bu dinleyici için `<filter>` filtre `<add>` öğenin bir alt öğesi olan bir öğe tanımlanmalıdır.  
   
- Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe makine yapılandırma dosyasında (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, `sharedListeners` koleksiyonundaki izleme dinleyicisi `console` bir filtre eklemek için `<filter>` öğesinin nasıl kullanılacağını gösterir.  
+ Aşağıdaki örnek, `<filter>` `console` koleksiyondaki izleme dinleyicisine bir filtre eklemek için `sharedListeners` öğenin nasıl kullanılacağını gösterir.  
   
 ```xml  
 <configuration>  
@@ -75,9 +75,9 @@ ms.locfileid: "74088877"
       </source>  
     </sources>  
     <sharedListeners>  
-      <add name="console"   
+      <add name="console"
         type="System.Diagnostics.ConsoleTraceListener" >  
-        <filter type="System.Diagnostics.EventTypeFilter"   
+        <filter type="System.Diagnostics.EventTypeFilter"
           initializeData="Error" />  
       </add>  
     </sharedListeners>  

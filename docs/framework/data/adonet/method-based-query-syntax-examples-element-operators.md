@@ -1,50 +1,50 @@
 ---
-title: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Öğe Işleçleri (LINQ to DataSet)'
+title: 'Yöntem Tabanlı Sorgu Sözdizimi Örnekleri: Eleman Operatörleri (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: eedf2fbd-f407-4f62-bb1a-c00eb001b1dd
-ms.openlocfilehash: 7ef2e2328ed69edea8cbb29942fe665a905e6a03
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e43208d6ae524a1370b936d42508e9c7a7d196e5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794907"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149513"
 ---
-# <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Öğe Işleçleri (LINQ to DataSet)
-Bu konudaki örneklerde, sorgu ifadesi söz dizimini kullanarak bir <xref:System.Linq.Enumerable.First%2A> <xref:System.Data.DataSet> öğesinden <xref:System.Linq.Enumerable.ElementAt%2A> öğeleri almak <xref:System.Data.DataRow> için ve yöntemlerinin nasıl kullanılacağı gösterilmektedir.  
+# <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>Yöntem Tabanlı Sorgu Sözdizimi Örnekleri: Eleman Operatörleri (LINQ to DataSet)
+Bu konudaki örnekler, sorgu <xref:System.Linq.Enumerable.First%2A> ifadesi <xref:System.Linq.Enumerable.ElementAt%2A> sözdizimini <xref:System.Data.DataRow> <xref:System.Data.DataSet> kullanarak öğeleri almak için nasıl kullanılacağını ve yöntemleri gösterilmektedir.  
   
- Bu örneklerde kullanılan [](loading-data-into-a-dataset.md) yöntemiverileribirverikümesineyüklerken`FillDataSet` belirtilmiştir.  
+ Bu `FillDataSet` örneklerde kullanılan yöntem, [Veri Kümesine Veri Yükleme'de](loading-data-into-a-dataset.md)belirtilir.  
   
- Bu konudaki örneklerde, AdventureWorks örnek veritabanındaki Ilgili kişi, adres, ürün, SalesOrderHeader ve SalesOrderDetail tabloları kullanılmaktadır.  
+ Bu konudaki örnekler AdventureWorks örnek veritabanındaki İletişim, Adres, Ürün, SalesOrderHeader ve SalesOrderDetail tablolarını kullanır.  
   
- Bu konudaki örnekler aşağıdaki `using` / `Imports` deyimleri kullanır:  
+ Bu konudaki örneklerde `using` / `Imports` aşağıdaki ifadeler kullanılır:  
   
-[!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]   
-[!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]     
+[!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
+[!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]
 
- Daha fazla bilgi için [nasıl yapılır: Visual Studio](how-to-create-a-linq-to-dataset-project-in-vs.md)'Da bir LINQ to DataSet projesi oluşturun.  
+ Daha fazla bilgi için [bkz: Visual Studio'da DataSet Project'e LINQ oluşturun.](how-to-create-a-linq-to-dataset-project-in-vs.md)  
   
-## <a name="elementat"></a>ElementAt  
-  
-### <a name="example"></a>Örnek  
- Bu örnek, <xref:System.Linq.Enumerable.ElementAt%2A> = = "M4B 1V7" `PostalCode` WHERE beşinci adresini almak için yöntemini kullanır.  
-  
-[!code-csharp[DP LINQ to DataSet Examples#ElementAt](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#elementat)]   
-[!code-vb[DP LINQ to DataSet Examples#ElementAt](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#elementat)]     
-  
-## <a name="first"></a>Adı  
+## <a name="elementat"></a>Elementat  
   
 ### <a name="example"></a>Örnek  
- Bu örnek, ilk <xref:System.Linq.Enumerable.First%2A> adı ' Brooke ' olan ilk kişiyi döndürmek için yöntemini kullanır.  
+ Bu örnekte <xref:System.Linq.Enumerable.ElementAt%2A> beşinci adresi almak `PostalCode` için yöntem kullanır == "M4B 1V7".  
   
-[!code-csharp[DP LINQ to DataSet Examples#FirstSimple](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#firstsimple)]   
-[!code-vb[DP LINQ to DataSet Examples#FirstSimple](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#firstsimple)] 
+[!code-csharp[DP LINQ to DataSet Examples#ElementAt](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#elementat)]
+[!code-vb[DP LINQ to DataSet Examples#ElementAt](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#elementat)]
+  
+## <a name="first"></a>İlk  
+  
+### <a name="example"></a>Örnek  
+ Bu örnek, <xref:System.Linq.Enumerable.First%2A> ilk adı 'Brooke' olan ilk ilgili kişi dönmek için yöntemi kullanır.  
+  
+[!code-csharp[DP LINQ to DataSet Examples#FirstSimple](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#firstsimple)]
+[!code-vb[DP LINQ to DataSet Examples#FirstSimple](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#firstsimple)]
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DataSet’e Veri Yükleme](loading-data-into-a-dataset.md)
 - [LINQ to DataSet Örnekleri](linq-to-dataset-examples.md)
-- [Standart sorgu Işleçlerine genelC#bakış ()](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Standart sorgu Işleçlerine genel bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Standart Sorgu Operatörlerine Genel Bakış (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Standart Sorgu Operatörlerine Genel Bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

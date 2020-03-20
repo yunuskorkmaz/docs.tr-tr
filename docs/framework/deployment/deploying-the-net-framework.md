@@ -6,33 +6,33 @@ helpviewer_keywords:
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 ms.openlocfilehash: cc4f9c38138a37b6068d33ffa4229a955db08c07
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716540"
 ---
 # <a name="deploying-the-net-framework"></a>.NET Framework'ü dağıtma
-.NET Framework belgelerinin bu bölümü, .NET Framework uygulamalarına ve .NET Framework dağıtmak isteyen yöneticilere bir ağ üzerinden yüklemek isteyen geliştiriciler için bilgi sağlamaktadır. Ayrıca, dağıtım ile ilişkili etkinleştirme ve yeniden başlatma sorunlarını ve .NET Framework yüklemenizin ilerlemesini nasıl izleyeceğinizi açıklar.  
+.NET Framework dokümantasyonunun bu bölümü, .NET Framework'ü uygulamalarıyla birlikte yüklemek isteyen geliştiriciler ve .NET Framework'ü ağ üzerinden dağıtmak isteyen yöneticiler için bilgi sağlar. Ayrıca, dağıtımla ilişkili etkinleştirme ve yeniden başlatma sorunlarını ve .NET Framework yüklemenizin ilerlemesini nasıl izleyeceğinizi de tartışır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Geliştiriciler için Dağıtım Kılavuzu](deployment-guide-for-developers.md)  
- Geliştiricilerin kullanıcıların bilgisayarlarına uygulamalarına .NET Framework nasıl yükleyebileceğini açıklar.  
+ Geliştiricilerin .NET Framework'u uygulamalarıyla birlikte kullanıcılarının bilgisayarlarına nasıl yükleyebileceğini açıklar.  
   
  [Yöneticiler için Dağıtım Kılavuzu](guide-for-administrators.md)  
- Bir sistem yöneticisinin, Microsoft uç nokta Configuration Manager kullanarak bir ağ üzerinde .NET Framework ve sistem bağımlılıklarını nasıl dağıtabilebileceğini açıklar.  
+ Bir sistem yöneticisinin Microsoft Endpoint Configuration Manager'ı kullanarak .NET Framework'ünü ve sistem bağımlılıklarını ağ da nasıl dağıtabileceğini açıklar.  
   
  [.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma](reducing-system-restarts.md)  
- Mümkün olan her durumda yeniden başlatma Işlemini önleyen ve .NET Framework yükleyen uygulamaların nasıl yararlanacağı açıklanmaktadır.  
+ Mümkün olduğunda yeniden başlatmayı önleyen yeniden başlatma yöneticisini açıklar ve .NET Framework'ü yükleyen uygulamaların bundan nasıl yararlanabileceğini açıklar.  
   
  [Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma](how-to-get-progress-from-the-dotnet-installer.md)  
- Kurulum ilerleme durumunun kendi görünümünü gösterirken .NET Framework kurulum işleminin sessizce nasıl başlatılmasını ve izleneceğini açıklar.  
+ Kurulum ilerlemesini kendi görünümünüz gösterirken .NET Framework kurulum işlemini sessizce nasıl başlatıp izleyeceğinizi açıklar.  
   
  [.NET Framework Başlatma Hataları: Kullanıcı Deneyimini Yönetme](initialization-errors-managing-the-user-experience.md)  
- .NET Framework bir uygulama, kullanıcının bilgisayarında geçersiz veya yüklü olmayan bir CLR sürümü gerektirdiğinde, bu hataların nasıl çözümleneceği ve kullanıcıya görüntülenen hata iletisinin nasıl denetleneceği hakkında ne olacağını açıklar.  
+ Bir .NET Framework uygulaması geçersiz veya kullanıcının bilgisayarında yüklü olmayan bir CLR sürümü gerektirdiğinde ne olacağını, bu hataların nasıl çözüleceğini ve kullanıcıya görüntülenen hata iletisinin nasıl denetleneceğini açıklar.  
   
  [Nasıl Yapılır: CLR Etkinleştirme Sorunlarında Hata Ayıklama](how-to-debug-clr-activation-issues.md)  
- Uygulamanızı CLR 'nin doğru sürümüyle çalıştırmak için karşılaşabileceğiniz sorunları çözümlemek üzere CLR etkinleştirme günlüklerini nasıl görüntüleyip ayıklayabileceğinizi açıklar.  
+ Uygulamanızın CLR'nin doğru sürümüyle çalışmasını sağlamak için karşılaşabileceğiniz sorunları gidermek için CLR etkinleştirme günlüğünü nasıl görüntüleyip hata ayıklaabileceğinizi açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

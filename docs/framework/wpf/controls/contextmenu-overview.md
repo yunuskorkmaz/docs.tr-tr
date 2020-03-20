@@ -8,45 +8,45 @@ helpviewer_keywords:
 - controls [WPF], ContextMenu
 - ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
-ms.openlocfilehash: b973d47711632f4c0fe56f042545598272c79d2d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 4d2d8db0f614b5240705146dbe91432b96b46dd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124370"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185912"
 ---
 # <a name="contextmenu-overview"></a>ContextMenu Genel Bakışı
-<xref:System.Windows.Controls.ContextMenu> sınıfı, içeriğe özgü bir <xref:System.Windows.Controls.Menu>kullanarak işlevselliği kullanıma sunan öğeyi temsil eder. Genellikle, bir Kullanıcı fare düğmesine sağ tıklayarak [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] <xref:System.Windows.Controls.ContextMenu> kullanıma sunar. Bu konu, <xref:System.Windows.Controls.ContextMenu> öğesini tanıtır ve [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve kodda nasıl kullanılacağına ilişkin örnekler sağlar.  
+Sınıf, <xref:System.Windows.Controls.ContextMenu> içeriğe özgü <xref:System.Windows.Controls.Menu>bir öğe kullanarak işlevselliği ortaya çıkaran öğeyi temsil eder. Genellikle, bir kullanıcı fare <xref:System.Windows.Controls.ContextMenu> düğmesini [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] sağ tıklayarak içinde ortaya çıkarır. Bu konu öğeyi <xref:System.Windows.Controls.ContextMenu> tanır ve nasıl kullanılacağı [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve kod örnekler sağlar.  
 
-<a name="contextmenu_control"></a>   
-## <a name="contextmenu-control"></a>ContextMenu denetimi  
- <xref:System.Windows.Controls.ContextMenu> belirli bir denetime iliştirilir. <xref:System.Windows.Controls.ContextMenu> öğesi, kullanıcılara belirli bir denetimle ilişkili komutları veya seçenekleri belirten bir öğe listesi (örneğin, bir <xref:System.Windows.Controls.Button>) sunmanızı sağlar. Kullanıcılar, menünün görünmesini sağlamak için denetime sağ tıklayın. Genellikle, bir <xref:System.Windows.Controls.MenuItem> tıklamak bir alt menü açar veya bir uygulamanın bir komutu gerçekleştirmesini sağlar.  
+<a name="contextmenu_control"></a>
+## <a name="contextmenu-control"></a>ContextMenu Denetimi  
+ A <xref:System.Windows.Controls.ContextMenu> belirli bir denetime eklenir. Öğe, <xref:System.Windows.Controls.ContextMenu> kullanıcılara belirli bir denetimle ilişkili komutları veya seçenekleri belirten öğelerin bir listesini <xref:System.Windows.Controls.Button>sunmanızı sağlar, örneğin, bir . Kullanıcılar, menüyü görüntülemek için denetimi sağ tıklatın. Genellikle, bir <xref:System.Windows.Controls.MenuItem> alt menüyü tıklatmak bir alt menüyü açar veya bir uygulamanın bir komut u gerçekleştirmesine neden olur.  
   
-<a name="creating_contextmenus"></a>   
-## <a name="creating-contextmenus"></a>ContextMenus oluşturma  
- Aşağıdaki örneklerde, alt menülerde <xref:System.Windows.Controls.ContextMenu> oluşturma gösterilmektedir. <xref:System.Windows.Controls.ContextMenu> denetimleri düğme denetimlerine iliştirilir.  
+<a name="creating_contextmenus"></a>
+## <a name="creating-contextmenus"></a>ContextMenüoluşturma  
+ Aşağıdaki örnekler, alt <xref:System.Windows.Controls.ContextMenu> menülerle nasıl oluşturulacak larını gösterir. Denetimler <xref:System.Windows.Controls.ContextMenu> düğme denetimlerine eklenir.  
   
  [!code-xaml[ContextMenu#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#1)]  
   
  [!code-csharp[ContextMenu#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml.cs#2)]
  [!code-vb[ContextMenu#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContextMenu/VisualBasic/Pane1.xaml.vb#2)]  
   
-<a name="applying_styles_to_contextmenu"></a>   
-## <a name="applying-styles-to-a-contextmenu"></a>ContextMenu 'ye stil uygulama  
- Bir denetim <xref:System.Windows.Style>kullanarak, bir <xref:System.Windows.Controls.ContextMenu> görünümünü ve davranışını özel bir denetim yazmadan önemli ölçüde değiştirebilirsiniz. Görsel özellikleri ayarlamaya ek olarak, bir denetimin bölümlerine da stil uygulayabilirsiniz. Örneğin, özellikleri kullanarak denetimin bölümlerinin davranışını değiştirebilir veya bir <xref:System.Windows.Controls.ContextMenu>için parçalar ekleyebilir veya yerleşimini değiştirebilirsiniz. Aşağıdaki örneklerde <xref:System.Windows.Controls.ContextMenu> denetimlerine stil eklemenin birkaç yolu gösterilmektedir.  
+<a name="applying_styles_to_contextmenu"></a>
+## <a name="applying-styles-to-a-contextmenu"></a>Bağlam Menüsüne Stilleri Uygulama  
+ Bir denetim <xref:System.Windows.Style>kullanarak, özel bir denetim yazmadan <xref:System.Windows.Controls.ContextMenu> bir görünümünü ve davranışını önemli ölçüde değiştirebilirsiniz. Görsel özellikler ayarlamaya ek olarak, stilleri denetimin bölümlerine de uygulayabilirsiniz. Örneğin, özellikleri kullanarak denetim bölümlerinin davranışını değiştirebilir veya bir <xref:System.Windows.Controls.ContextMenu>. Aşağıdaki örnekler, denetimlere stil <xref:System.Windows.Controls.ContextMenu> eklemenin çeşitli yollarını gösterir.  
   
- İlk örnek, `SimpleSysResources`adlı bir stil tanımlar, bu, stilinize geçerli sistem ayarlarının nasıl kullanılacağını gösterir. Örnek, <xref:System.Windows.SystemColors.MenuHighlightBrushKey%2A> <xref:System.Windows.Controls.Control.Background%2A> rengi olarak atar ve <xref:System.Windows.Controls.ContextMenu><xref:System.Windows.Controls.Control.Foreground%2A> rengi olarak <xref:System.Windows.SystemColors.MenuTextBrushKey%2A>.  
+ İlk örnek, stilinizde `SimpleSysResources`geçerli sistem ayarlarının nasıl kullanılacağını gösteren , adlı bir stil tanımlar. Örnek, <xref:System.Windows.SystemColors.MenuHighlightBrushKey%2A> <xref:System.Windows.Controls.Control.Background%2A> renk ve <xref:System.Windows.SystemColors.MenuTextBrushKey%2A> <xref:System.Windows.Controls.Control.Foreground%2A> renk olarak <xref:System.Windows.Controls.ContextMenu>atar.  
   
 ```xaml  
 <Style x:Key="SimpleSysResources" TargetType="{x:Type MenuItem}">  
-  <Setter Property = "Background" Value=   
+  <Setter Property = "Background" Value=
     "{DynamicResource {x:Static SystemColors.MenuHighlightBrushKey}}"/>  
-  <Setter Property = "Foreground" Value=   
+  <Setter Property = "Foreground" Value=
     "{DynamicResource {x:Static SystemColors.MenuTextBrushKey}}"/>  
 </Style>  
 ```  
   
- Aşağıdaki örnek, <xref:System.Windows.Controls.ContextMenu>oluşturulan olaylara yanıt olarak bir <xref:System.Windows.Controls.Menu> görünümünü değiştirmek için <xref:System.Windows.Trigger> öğesini kullanır. Kullanıcı fareyi menünün üzerine taşıdıkça <xref:System.Windows.Controls.ContextMenu> öğelerinin görünümü değişir.  
+ Aşağıdaki örnekte, <xref:System.Windows.Trigger> <xref:System.Windows.Controls.ContextMenu>'de yükseltilen <xref:System.Windows.Controls.Menu> olaylara yanıt olarak bir görünümü değiştirmek için öğe yi kullanır. Bir kullanıcı fareyi menünün üzerinde hareket <xref:System.Windows.Controls.ContextMenu> ettirdiğinde, öğelerin görünümü değişir.  
   
 ```xaml  
 <Style x:Key="Triggers" TargetType="{x:Type MenuItem}">  
@@ -68,4 +68,4 @@ ms.locfileid: "77124370"
 - <xref:System.Windows.Controls.MenuItem>
 - [ContextMenu](contextmenu.md)
 - [ContextMenu Stilleri ve Şablonları](contextmenu-styles-and-templates.md)
-- [WPF denetimleri Galeri örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
+- [WPF Denetimleri Galeri Örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)

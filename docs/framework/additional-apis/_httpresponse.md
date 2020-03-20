@@ -1,5 +1,5 @@
 ---
-title: HttpWebRequest. _HttpResponse alanı
+title: HttpWebRequest._HttpResponse Alanı
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
-ms.openlocfilehash: 236298921ecd286ddba4e74dbce1b63e96055412
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 0c5bfc56299aa06dd59c2598588044e81a69933a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215106"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156252"
 ---
-# <a name="httpwebrequest_httpresponse-field"></a>HttpWebRequest.\_HttpResponse alanı
+# <a name="httpwebrequest_httpresponse-field"></a>httpwebrequest. \_httpResponse Alanı
 
-`HttpWebRequest._HttpResponse`, HTTP isteğinin http yanıtı ayrıntılarını içeren bir <xref:System.Net.HttpWebResponse>. HTTP yanıtı alınana kadar `null` olabilir.
+`HttpWebRequest._HttpResponse`bir <xref:System.Net.HttpWebResponse> HTTP isteğinden alınan bir HTTP yanıt ayrıntılarıdır. Bir HTTP `null` yanıtı alınana kadar olabilir.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -28,14 +28,14 @@ internal HttpWebResponse _HttpResponse
 ```
 
 > [!WARNING]
-> `HttpWebRequest._HttpResponse` alanı dahili ve doğrudan kodunuzda kullanılmak üzere tasarlanmamıştır.
-> 
-> Microsoft, herhangi bir koşulda bu alanın bir üretim uygulamasında kullanımını desteklemez.
+> Alan `HttpWebRequest._HttpResponse` dahilidir ve doğrudan kodunuzda kullanılmak üzere değildir.
+>
+> Microsoft, hiçbir koşulda bir üretim uygulamasında bu alanın kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Ad alanı:** <xref:System.Net>
+**Ad alanı:**<xref:System.Net>
 
-**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
+**Montaj:** Sistem (System.dll'de)
 
-**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2.0'dan beri mevcuttur.

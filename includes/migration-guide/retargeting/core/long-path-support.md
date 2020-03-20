@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: f672645fb98f511f7e1326c9c584b287a0fae7dc
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 506218195417548880a9d8d10508a570a7769682
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67859317"
 ---
 ### <a name="long-path-support"></a>Uzun yol desteği
 
 |   |   |
 |---|---|
-|Ayrıntılar|Uygulamalarla hedefleyen .NET Framework 4.6.2, uzun yollar (en fazla 32 K karakterler) desteklenir ve 260 karakter başlangıç (veya <code>MAX_PATH</code>) yol uzunluğu sınırlama kaldırıldı. .NET Framework 4.6.2 hedeflemek için yeniden derlenen uygulamalar için daha önce oluşturdu yolları kod bir <xref:System.IO.PathTooLongException?displayProperty=name> yol aştığından 260 karakterden artık throw bir <xref:System.IO.PathTooLongException?displayProperty=name> yalnızca aşağıdaki koşullar altında:<ul><li>Yol uzunluğunun büyüktür <xref:System.Int16.MaxValue> (32.767) karakter.</li><li>İşletim sistemi döndürür <code>COR_E_PATHTOOLONG</code> ya da eşdeğerine.</li></ul>.NET Framework 4.6.1 ve önceki sürümleri hedefleyen uygulamalar için çalışma zamanı otomatik olarak oluşturur bir <xref:System.IO.PathTooLongException?displayProperty=name> her bir yol 260 karakteri aşıyor.|
-|Öneri|.NET Framework 4.6.2'yi hedefleyen uygulamalar için aşağıdaki ekleyerek arzu değil, uzun yol destek kapsamı dışında seçebilirsiniz <code>&lt;runtime&gt;</code> bölümünü, <code>app.config</code> dosyası:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.BlockLongPaths=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>Hedefleyen uygulamalar için .NET Framework'ün önceki sürümlerinde, ancak .NET Framework 4.6.2 çalıştırmak veya daha sonra uzun yol desteği için aşağıdaki ekleyerek kabul <code>&lt;runtime&gt;</code> bölümünü, <code>app.config</code> dosyası:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.BlockLongPaths=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|`Scope`|Küçük|
-|Version|4.6.2|
-|Type|Yeniden Hedefleme|
-
+|Ayrıntılar|.NET Framework 4.6.2'yi hedefleyen uygulamalardan başlayarak, uzun yollar (32K karaktere kadar) desteklenir <code>MAX_PATH</code>ve yol uzunluklarındaki 260 karakterlik (veya) sınırlaması kaldırılmıştır. .NET Framework 4.6.2'yi hedeflemek için yeniden derlenen uygulamalar için, daha önce <xref:System.IO.PathTooLongException?displayProperty=name> 260 karakteri aşan <xref:System.IO.PathTooLongException?displayProperty=name> bir yol attığı kod yolları artık yalnızca aşağıdaki koşullar altında bir yol açacaktır:<ul><li>Yolun uzunluğu (32.767) karakterden <xref:System.Int16.MaxValue> daha büyüktür.</li><li>İşletim sistemi <code>COR_E_PATHTOOLONG</code> veya eşdeğeri döndürür.</li></ul>.NET Framework 4.6.1 ve önceki sürümleri hedefleyen uygulamalar için çalışma <xref:System.IO.PathTooLongException?displayProperty=name> süresi, bir yol 260 karakteri aştığında otomatik olarak atar.|
+|Öneri|.NET Framework 4.6.2'yi hedefleyen uygulamalar için, dosyanızın <code>&lt;runtime&gt;</code> <code>app.config</code> bölümüne aşağıdakileri ekleyerek uzun yol desteğini devre dışı kullanabilirsiniz:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.BlockLongPaths=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>.NET Framework'ün önceki sürümlerini hedefleyen ancak .NET Framework 4.6.2 veya sonraki sürümlerde çalışan uygulamalar için, <code>&lt;runtime&gt;</code> dosyanızın <code>app.config</code> bölümüne aşağıdakileri ekleyerek uzun yol desteğini tercih edebilirsiniz:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.BlockLongPaths=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
+|Kapsam|İkincil|
+|Sürüm|4.6.2|
+|Tür|Yeniden Hedefleme|

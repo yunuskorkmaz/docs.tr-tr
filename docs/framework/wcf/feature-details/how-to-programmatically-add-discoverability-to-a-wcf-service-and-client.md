@@ -1,30 +1,30 @@
 ---
-title: 'Nasıl yapılır: bir WCF hizmeti ve Istemcisine program aracılığıyla bulunabilirliği ekleme'
+title: 'Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: a139eb4a15486be329bc6853ee6b3a3be06b0619
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: dd96bc168413eef99260a5251e74971aa1309ff4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291565"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184880"
 ---
-# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Nasıl yapılır: bir WCF hizmeti ve Istemcisine program aracılığıyla bulunabilirliği ekleme
-Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale getirme açıklanmaktadır. Bu, [kendi kendine konak](https://go.microsoft.com/fwlink/?LinkId=145523) örneğine dayalıdır.  
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme
+Bu konu, bir Windows Communication Foundation (WCF) hizmetinin nasıl keşfedilebilir hale getirilebildiğini açıklar. [Self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) örneğine dayanır.  
   
-### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Mevcut Self-Host hizmet örneğini bulma için yapılandırmak için  
+### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Discovery için varolan Self-Host hizmet örneğini yapılandırmak için  
   
-1. Visual Studio 2012 ' de Self-Host çözümünü açın. Örnek, TechnologySamples\Basic\Service\Hosting\SelfHost dizininde bulunur.  
+1. Visual Studio 2012'de Self-Host çözümlerini açın. Örnek TechnologySamples\Basic\Service\Hosting\SelfHost dizininde yer alır.  
   
-2. Hizmet projesine `System.ServiceModel.Discovery.dll` ' a bir başvuru ekleyin. "Sistem" iletisini bildiren bir hata iletisi görebilirsiniz. ServiceModel. Discovery. dll veya bağımlılıklarından biri, .NET Framework projede belirtiden daha yeni bir sürümünü gerektiriyor... " Bu iletiyi görürseniz, Çözüm Gezgini projeye sağ tıklayın ve **Özellikler**' i seçin. **Proje özellikleri** penceresinde, **hedef Framework 'ün** [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] olduğundan emin olun.  
+2. Hizmet projesine `System.ServiceModel.Discovery.dll` bir başvuru ekleyin. "Sistem" yazan bir hata iletisi görebilirsiniz. ServiceModel.Discovery.dll veya bağımlılıklarından biri ,.NET Framework'ün projede belirtilenden daha sonraki bir sürümünü gerektirir..." Bu iletiyi görürseniz, Çözüm Gezgini'ndeki projeyi sağ tıklatın ve **Özellikler'i**seçin. Project **Properties** penceresinde, **Hedef Çerçeve'nin** [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
-3. Service.cs dosyasını açın ve aşağıdaki `using` ifadesini ekleyin.  
+3. Service.cs dosyasını açın ve `using` aşağıdaki ifadeyi ekleyin.  
   
     ```csharp  
     using System.ServiceModel.Discovery;  
     ```  
   
-4. @No__t-0 yönteminde, `using` ifadesinin içinde hizmet ana bilgisayarına bir <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> örneği ekleyin.  
+4. `Main()` Yöntemde, deyimin `using` içinde, <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> hizmet ana bilgisayara bir örnek ekleyin.  
   
     ```csharp  
     public static void Main()  
@@ -33,16 +33,16 @@ Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale get
         using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService)))  
         {  
             // Add a ServiceDiscoveryBehavior  
-            serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());                  
+            serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());
   
             // ...  
         }  
     }  
     ```  
   
-     @No__t-0, uygulandığı hizmetin bulunabilir olduğunu belirtir.  
+     Uygulandığı <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> hizmetin keşfedilebilir olduğunu belirtir.  
   
-5. @No__t-1 ' i ekleyen koddan hemen sonra hizmet ana bilgisayarına <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ekleyin.  
+5. 'yi <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ekleyen koddan hemen sonra <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>hizmet ana bilgisayara a ekleyin  
   
     ```csharp  
     // Add ServiceDiscoveryBehavior  
@@ -52,17 +52,17 @@ Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale get
     serviceHost.AddServiceEndpoint(new UdpDiscoveryEndpoint());  
     ```  
   
-     Bu kod, bulma iletilerinin standart UDP bulma uç noktasına gönderilmesi gerektiğini belirtir.  
+     Bu kod, bulma iletilerinin standart UDP bulma bitiş noktasına gönderilmesi gerektiğini belirtir.  
   
-### <a name="to-create-a-client-application-that-uses-discovery-to-call-the-service"></a>Hizmeti çağırmak için bulma kullanan bir istemci uygulaması oluşturmak için  
+### <a name="to-create-a-client-application-that-uses-discovery-to-call-the-service"></a>Hizmeti aramak için bulma kullanan bir istemci uygulaması oluşturmak için  
   
-1. @No__t-0 adlı çözüme yeni bir konsol uygulaması ekleyin.  
+1. Çözüme yeni bir konsol `DiscoveryClientApp`uygulaması ekleyin.  
   
-2. @No__t-0 ve `System.ServiceModel.Discovery.dll` öğesine bir başvuru ekleyin  
+2. Bir referans `System.ServiceModel.dll` ekleyin ve`System.ServiceModel.Discovery.dll`  
   
-3. GeneratedClient.cs ve App. config dosyalarını var olan istemci projesinden yeni DiscoveryClientApp projesine kopyalayın. Bunu yapmak için **Çözüm Gezgini**dosyalara sağ tıklayın, **Kopyala**' yı seçin ve ardından **DiscoveryClientApp** projesini seçin, sağ tıklayıp **Yapıştır**' ı seçin.  
+3. Mevcut istemci projesinden GeneratedClient.cs ve App.config dosyalarını yeni DiscoveryClientApp projesine kopyalayın. Bunu yapmak **için, Çözüm Gezgini'ndeki**dosyalara sağ tıklayın , **Kopyala'yı**seçin ve ardından **DiscoveryClientApp** projesini seçin, sağ tıklayın ve **Yapıştır'ı**seçin.  
   
-4. Program.cs 'i açın.  
+4. Açık Program.cs.  
   
 5. Aşağıdaki `using` deyimlerini ekleyin.  
   
@@ -72,7 +72,7 @@ Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale get
     using Microsoft.ServiceModel.Samples;  
     ```  
   
-6. @No__t-1 sınıfına `FindCalculatorServiceAddress()` adlı bir statik yöntem ekleyin.  
+6. `Program` Sınıfa çağrılan `FindCalculatorServiceAddress()` statik bir yöntem ekleyin.  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -80,9 +80,9 @@ Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale get
     }  
     ```  
   
-     Bu yöntem `CalculatorService` hizmetini aramak için bulma kullanır.  
+     Bu yöntem, hizmeti aramak `CalculatorService` için bulma kullanır.  
   
-7. @No__t-0 yönteminde, oluşturucuya bir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> geçirerek yeni bir <xref:System.ServiceModel.Discovery.DiscoveryClient> örneği oluşturun.  
+7. Yöntemin `FindCalculatorServiceAddress` içinde, a'dan oluşturucuya geçerek yeni <xref:System.ServiceModel.Discovery.DiscoveryClient> bir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> örnek oluşturun.  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -92,16 +92,16 @@ Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale get
     }  
     ```  
   
-     Bu, WCF 'ye <xref:System.ServiceModel.Discovery.DiscoveryClient> sınıfının bulma iletilerini göndermek ve almak için standart UDP bulma uç noktasını kullanması gerektiğini belirtir.  
+     Bu, WCF'ye <xref:System.ServiceModel.Discovery.DiscoveryClient> sınıfın bulma iletileri göndermek ve almak için standart UDP bulma bitiş noktasını kullanması gerektiğini söyler.  
   
-8. Sonraki satırda <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> yöntemini çağırın ve aramak istediğiniz hizmet sözleşmesini içeren bir <xref:System.ServiceModel.Discovery.FindCriteria> örneği belirtin. Bu durumda `ICalculator` belirtin.  
+8. Sonraki satırda, <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> yöntemi arayın ve <xref:System.ServiceModel.Discovery.FindCriteria> aramak istediğiniz hizmet sözleşmesini içeren bir örnek belirtin. Bu durumda, `ICalculator`belirtin.  
   
     ```csharp  
-    // Find ICalculatorService endpoints              
+    // Find ICalculatorService endpoints
     FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculator)));  
     ```  
   
-9. @No__t-0 ' a çağrıdan sonra, en az bir eşleşen hizmet olup olmadığını denetleyin ve ilk eşleşen hizmetin <xref:System.ServiceModel.EndpointAddress> ' i döndürün. Aksi takdirde `null` döndürün.  
+9. Aramadan <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>sonra, en az bir eşleşen hizmet olup olmadığını <xref:System.ServiceModel.EndpointAddress> kontrol edin ve ilk eşleşen hizmetin döndürülmesini. Aksi `null`takdirde geri dönün.  
   
     ```csharp  
     if (findResponse.Endpoints.Count > 0)  
@@ -114,7 +114,7 @@ Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale get
     }  
     ```  
   
-10. @No__t-1 sınıfına `InvokeCalculatorService` adlı bir statik yöntem ekleyin.  
+10. Sınıfa statik bir yöntem ekleyin. `InvokeCalculatorService` `Program`  
   
     ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -122,23 +122,23 @@ Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale get
     }  
     ```  
   
-     Bu yöntem, hesaplayıcı hizmetini çağırmak için `FindCalculatorServiceAddress` ' dan döndürülen uç nokta adresini kullanır.  
+     Bu yöntem, hesap makinesi `FindCalculatorServiceAddress` hizmetini aramak için döndürülen uç nokta adresini kullanır.  
   
-11. @No__t-0 yönteminin içinde, `CalculatorServiceClient` sınıfının bir örneğini oluşturun. Bu sınıf, [self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) örneği tarafından tanımlanır. Svcutil. exe kullanılarak oluşturulmuştur.  
+11. Yöntemin `InvokeCalculatorService` içinde, sınıfın bir `CalculatorServiceClient` örneğini oluşturun. Bu sınıf [Self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) örneği tarafından tanımlanır. Svcutil.exe kullanılarak oluşturuldu.  
   
     ```csharp  
     // Create a client  
     CalculatorClient client = new CalculatorClient();  
     ```  
   
-12. Sonraki satırda, istemcinin uç nokta adresini `FindCalculatorServiceAddress()` ' dan döndürülen uç nokta adresi olarak ayarlayın.  
+12. Sonraki satırda, istemcinin bitiş noktası adresini 'den `FindCalculatorServiceAddress()`döndürülen bitiş noktası adresine ayarlayın.  
   
     ```csharp  
     // Connect to the discovered service endpoint  
     client.Endpoint.Address = endpointAddress;  
     ```  
   
-13. Önceki adıma ait koddan hemen sonra, hesaplayıcı hizmeti tarafından kullanıma sunulan yöntemleri çağırın.  
+13. Önceki adımın kodundan hemen sonra, hesap makinesi hizmetitarafından ortaya çıkarılan yöntemleri arayın.  
   
     ```csharp  
     Console.WriteLine("Invoking CalculatorService at {0}", endpointAddress);  
@@ -167,7 +167,7 @@ Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale get
     client.Close();  
     ```  
   
-14. @No__t-2 ' i çağırmak için `Program` sınıfındaki `Main()` yöntemine kod ekleyin.  
+14. Çağrı yapmak `Main()` için sınıfta yönteme kod `FindCalculatorServiceAddress` `Program`  
   
     ```csharp  
     public static void Main()  
@@ -176,7 +176,7 @@ Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale get
     }  
     ```  
   
-15. Sonraki satırda, `InvokeCalculatorService()` ' ı çağırın ve `FindCalculatorServiceAddress()` ' den döndürülen uç nokta adresini geçirin.  
+15. Bir sonraki satırda, `InvokeCalculatorService()` 'den `FindCalculatorServiceAddress()`döndürülen bitiş noktası adresini arayın ve geçin.  
   
     ```csharp  
     if (endpointAddress != null)  
@@ -190,11 +190,11 @@ Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale get
   
 ### <a name="to-test-the-application"></a>Uygulamayı test etmek için  
   
-1. Yükseltilmiş bir komut istemi açın ve Service. exe ' yi çalıştırın.  
+1. Yükseltilmiş bir komut istemi açın ve Service.exe çalıştırın.  
   
-2. Bir komut istemi açın ve DiscoveryClientApp. exe ' yi çalıştırın.  
+2. Bir komut istemi açın ve DiscoveryClientapp.exe çalıştırın.  
   
-3. Service. exe ' den alınan çıktı aşağıdaki çıktı gibi görünmelidir.  
+3. service.exe çıktısı aşağıdaki çıktı gibi görünmelidir.  
   
     ```output  
     Received Add(100,15.99)  
@@ -207,7 +207,7 @@ Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale get
     Return: 6.25390869293308  
     ```  
   
-4. Discoveryclientapp. exe ' den alınan çıktı aşağıdaki çıktı gibi görünmelidir.  
+4. Discoveryclientapp.exe'den gelen çıktı aşağıdaki çıktı gibi görünmelidir.  
   
     ```output  
     Invoking CalculatorService at http://localhost:8000/ServiceModelSamples/service  
@@ -220,7 +220,7 @@ Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale get
     ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnek için kodun bir listesi aşağıda verilmiştir. Bu kod, [kendi kendine konak](https://go.microsoft.com/fwlink/?LinkId=145523) örneğine bağlı olduğundan, yalnızca değiştirilen dosyalar listelenir. Self-Host örneği hakkında daha fazla bilgi için bkz. [Kurulum yönergeleri](https://go.microsoft.com/fwlink/?LinkId=145522).  
+ Aşağıda, bu örnek için kodun bir listesi vetir. Bu kod [Self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) örneğini temel aldığı için, yalnızca değiştirilen dosyalar listelenir. Self-Host örneği hakkında daha fazla bilgi için [Kurulum Talimatları'na](https://go.microsoft.com/fwlink/?LinkId=145522)bakın.  
   
 ```csharp  
 // Service.cs  
@@ -277,7 +277,7 @@ namespace DiscoveryClientApp
             // Create DiscoveryClient  
             DiscoveryClient discoveryClient = new DiscoveryClient(new UdpDiscoveryEndpoint());  
   
-            // Find ICalculatorService endpoints              
+            // Find ICalculatorService endpoints
             FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculator)));  
   
             if (findResponse.Endpoints.Count > 0)  
@@ -342,5 +342,5 @@ namespace DiscoveryClientApp
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF bulmaya genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [WCF bulma nesne modeli](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+- [WCF Keşif Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [WCF Keşif Nesnesi Modeli](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

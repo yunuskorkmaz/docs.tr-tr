@@ -6,199 +6,199 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: a592cbb49c1b9ec8f36b90f2ec1097f6c84efbe9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 44a5d1cb70d294d720290a4754bb5f5cb47f79a4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281818"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400024"
 ---
-# <a name="performance-counters-in-the-net-framework"></a>.NET Framework performans sayaçları
+# <a name="performance-counters-in-the-net-framework"></a>.NET Çerçevesindeki performans sayaçları
 
-Bu konu, [Windows Performans İzleyicisi](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)'nde bulabileceğiniz performans sayaçlarının bir listesini sağlar.  
+Bu [konu, Windows Performans İzleyicisi'nde](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)bulabileceğiniz performans sayaçlarının bir listesini sağlar.  
 
 ## <a name="exception-performance-counters"></a>Özel durum performans sayaçları  
- Performans konsolu .NET CLR özel durumları kategorisi, bir uygulama tarafından oluşturulan özel durumlar hakkında bilgi sağlayan sayaçlar içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
+ Performans konsolu .NET CLR Özel Durumlar kategorisi, bir uygulama tarafından atılan özel durumlar hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
 |Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
-|**Atılan Exceps sayısı**|Uygulama başladıktan sonra oluşturulan toplam özel durum sayısını görüntüler. Bu hem .NET özel durumlarını hem de .NET özel durumlarına dönüştürülmüş yönetilmeyen özel durumları içerir. Örneğin, yönetilmeyen koddan döndürülen bir HRESULT, Yönetilen koddaki özel duruma dönüştürülür.<br /><br /> Bu sayaç hem işlenmiş hem de işlenmemiş özel durumları içerir. Yeniden oluşturulan özel durumlar tekrar sayılır.|  
-|**Oluşturulan Exceps sayısı/sn**|Saniye başına oluşturulan özel durumların sayısını görüntüler. Bu hem .NET özel durumlarını hem de .NET özel durumlarına dönüştürülmüş yönetilmeyen özel durumları içerir. Örneğin, yönetilmeyen koddan döndürülen bir HRESULT, Yönetilen koddaki özel duruma dönüştürülür.<br /><br /> Bu sayaç hem işlenmiş hem de işlenmemiş özel durumları içerir. Bu, zaman içinde bir ortalama değildir; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir. Bu sayaç, büyük bir (> 100s) özel durum sayısı oluşturulursa olası performans sorunlarının göstergesidir.|  
-|**Filtre sayısı/sn**|Saniye başına yürütülen .NET özel durum filtrelerinin sayısını görüntüler. Özel durum filtresi, bir özel durumun işlenmiş olup olmamasından bağımsız olarak değerlendirilir.<br /><br /> Bu sayaç, zaman içinde bir ortalama değil; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
-|**Finallys sayısı/sn**|Saniye başına yürütülen son blok sayısını görüntüler. Try bloğunun çıkış şeklinden bağımsız olarak bir finally bloğunun yürütülmesi garanti edilir.  Yalnızca bir özel durum için yürütülen finally blokları sayılır; normal kod yollarındaki son bloklar Bu sayaç tarafından sayılmaz.<br /><br /> Bu sayaç, zaman içinde bir ortalama değil; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
-|**Catch derinliğine/sn 'ye throw**|Özel durumu, saniye başına işlenen çerçeveye özel durum veren kareden geçen yığın çerçevelerinin sayısını görüntüler. Bir özel durum işleyicisi girildiğinde bu sayaç sıfıra sıfırlanır, bu yüzden iç içe geçmiş özel durumlar işleyicinin işleyici yığın derinliğini gösterir.<br /><br /> Bu sayaç, zaman içinde bir ortalama değil; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
-     
-## <a name="interop-performance-counters"></a>Birlikte çalışabilirlik performans sayaçları  
- Performans konsolu .NET CLR birlikte çalışma kategorisi, bir uygulamanın COM bileşenleri, COM+ Hizmetleri ve dış tür kitaplıklarıyla etkileşimi hakkında bilgi sağlayan sayaçlar içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
+|**# Exceps Atılmış**|Uygulama başladığından beri atılan toplam özel durum sayısını görüntüler. Buna hem .NET özel durumları hem de .NET özel durumlara dönüştürülen yönetilmeyen özel durumları içerir. Örneğin, yönetilmeyen koddan döndürülen bir HRESULT, yönetilen kodda özel bir özel durum olarak dönüştürülür.<br /><br /> Bu sayaç hem işlenmiş hem de işlenmemiş özel durumları içerir. Yeniden atılan özel durumlar yeniden sayılır.|  
+|**# Exceps Atılmış / Sn**|Saniyede atılan özel durum sayısını görüntüler. Buna hem .NET özel durumları hem de .NET özel durumlara dönüştürülen yönetilmeyen özel durumları içerir. Örneğin, yönetilmeyen koddan döndürülen bir HRESULT, yönetilen kodda özel bir özel durum olarak dönüştürülür.<br /><br /> Bu sayaç hem işlenmiş hem de işlenmemiş özel durumları içerir. Bu zaman içinde bir ortalama değildir; örnek aralığının süresine bölünen son iki örnekte gözlenen değerler arasındaki farkı görüntüler. Bu sayaç, büyük (>100'lü >) sayıda özel durum atılırsa olası performans sorunlarının bir göstergesidir.|  
+|**# filtreler / Sec**|Saniyede çalıştırılan .NET özel durum filtrelerinin sayısını görüntüler. Özel durum filtresi, özel durum işlenip işlenmediğine bakılmaksızın değerlendirir.<br /><br /> Bu sayaç zaman içinde bir ortalama değildir; örnek aralığının süresine bölünen son iki örnekte gözlenen değerler arasındaki farkı görüntüler.|  
+|**# / Sn**|Saniyede çalıştırılan son blokların sayısını görüntüler. Try bloğunun nasıl çıktığına bakılmaksızın son bloğun yürütülmesi garanti edilir.  Yalnızca bir özel durum için çalıştırılan son bloklar sayılır; son olarak normal kod yollarında bloklar bu sayaç tarafından sayılmaz.<br /><br /> Bu sayaç zaman içinde bir ortalama değildir; örnek aralığının süresine bölünen son iki örnekte gözlenen değerler arasındaki farkı görüntüler.|  
+|**Catch Depth / Sec atmak**|Özel durumu atan çerçeveden, saniyede özel durumu işleyen çerçeveye geçen yığın çerçevelerinin sayısını görüntüler. Bir özel durum işleyicisi girildiğinde bu sayaç sıfırlanır, bu nedenle iç içe geçen özel durumlar işleyiciden işleyici yığını derinliğini gösterir.<br /><br /> Bu sayaç zaman içinde bir ortalama değildir; örnek aralığının süresine bölünen son iki örnekte gözlenen değerler arasındaki farkı görüntüler.|  
+
+## <a name="interop-performance-counters"></a>Interop performans sayaçları  
+ Performans konsolu .NET CLR Interop kategorisi, bir uygulamanın COM bileşenleri, COM+ hizmetleri ve dış tür kitaplıklarıyla etkileşimi hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
 |Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
-|**CCWs sayısı**|Geçerli COM çağrılabilir sarmalayıcılarının (CCWs) sayısını görüntüler. Bir CCW, yönetilmeyen bir COM istemcisinden başvurulmakta olan yönetilen bir nesne için bir ara sunucu. Bu sayaç, yönetilmeyen COM kodu tarafından başvurulan yönetilen nesne sayısını gösterir.|  
-|**sıralama sayısı**|Bağımsız değişkenlerin ve dönüş değerlerinin yönetilen ve yönetilmeyen koddan kaç kez sıralandığına ve uygulamanın başlamasından bu yana tam tersi gösterir. Saplamalar satır içine alınır ise bu sayaç arttırılır. (Saplamalar, bağımsız değişkenleri ve dönüş değerlerini sıralama sorumludur). Hazırlama ek yükü küçükse, saplamalar genellikle satır içine alınır.|  
-|**Saplamalar sayısı**|Ortak dil çalışma zamanı tarafından oluşturulan geçerli saplamalar sayısını görüntüler. Saplamalar, bağımsız değişkenleri sıralama ve yönetilen değerden yönetilmeyen koda döndürme ve bir COM birlikte çalışma çağrısı sırasında veya platform çağırma çağrısı sırasında sorumludur.|  
-|**TLB dışarı aktarma sayısı/sn**|Gelecekte kullanılmak üzere ayrılmış.|  
-|**TLB içeri aktarma sayısı/sn**|Gelecekte kullanılmak üzere ayrılmış.|  
-    
+|**# CCWs ve**|Geçerli COM çağrılabilir sarmalayıcı (CCW) sayısını görüntüler. CCW, yönetilmeyen bir COM istemcisinden başvurulan yönetilen bir nesnenin proxy'sidir. Bu sayaç, yönetilmeyen COM kodu tarafından başvurulan yönetilen nesnelerin sayısını gösterir.|  
+|**# mareşallik**|Uygulama başladığından beri yönetilen koddan yönetilmeyen koda kadar toplam kaç kez bağımsız değişken ve döndürme değeri olduğunu görüntüler. Saplamalar çizgiliise bu sayaç artımlı değildir. (Saplamalar bağımsız değişkenleri ve döndürme değerlerini mareşallemeden sorumludur). Pareşal yükü küçükse, saplamalar genellikle sıralanır.|  
+|**# Saplamalar**|Ortak dil çalışma zamanı tarafından oluşturulan geçerli saplama sayısını görüntüler. Saplamalar, yönetilen koddan yönetilmeyen koda bağımsız değişkenleri ve döndürme değerlerini mareşallemekten sorumludur ve bunun tersi, com interop çağrısı veya platform çağrı çağrısı sırasında.|  
+|**# TLB ihracat / sn**|Daha sonraki kullanımlar için ayrılmıştır.|  
+|**# TLB ithalat / sn**|Daha sonraki kullanımlar için ayrılmıştır.|  
+
 ## <a name="jit-performance-counters"></a>JIT performans sayaçları  
- Performans konsolu .NET CLR JıT kategorisi, JıT derlenmiş kod hakkında bilgi sağlayan sayaçlar içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
+ Performans konsolu .NET CLR JIT kategorisi, JIT tarafından derlenen kod hakkında bilgi sağlayan sayaçlar içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
 |Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
-|**anında derlenen IL bayt sayısı**|Uygulamanın başlatılmasından bu yana tam zamanında (JıT) derleyici tarafından derlenen Microsoft ara dili (MSIL) baytlarının toplam sayısını görüntüler. Bu sayaç, **derlenen toplam IL bayt sayacı sayısına** eşittir.|  
-|**anında derlenen Yöntem sayısı**|Uygulamanın başlatılmasından bu yana JıT ile derlenen yöntemlerin toplam sayısını görüntüler. Bu sayaç önceden JıT ile derlenen yöntemler içermez.|  
-|**JIT 'de% Time**|Son JıT derleme aşamasından bu yana JıT derlemesinde harcanan geçen sürenin yüzdesini görüntüler. Bu sayaç her JıT derleme aşamasının sonunda güncelleştirilir. Bir yöntem ve bağımlılıkları derlendiğinde bir JıT derleme aşaması oluşur.|  
-|**Anında derlenen IL bayt/sn**|Saniye başına JıT olarak derlenen MSIL bayt sayısını görüntüler. Bu sayaç, zaman içinde bir ortalama değil; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
-|**Standart JIT sorunları**|Uygulama başladıktan sonra JıT derleyicisinin derleyemeyeceği en yüksek Yöntem sayısını görüntüler. Bu hata, MSIL doğrulanamazsa veya JıT derleyicisinde bir iç hata varsa meydana gelebilir.|  
-|**Anında derlenen toplam IL bayt sayısı**|Uygulamanın başlatılmasından bu yana JıT ile derlenen toplam MSIL bayt sayısını görüntüler. Bu sayaç, derlenen **IL bayt** sayısı ile eşdeğerdir.|  
-     
-## <a name="loading-performance-counters"></a>Performans sayaçları yükleniyor  
+|**# IL Bayt jitted ve**|Uygulama başladığından beri tam zamanında (JIT) derleyicisi tarafından derlenen toplam Microsoft ara dili (MSIL) bayt sayısını görüntüler. Bu **sayaç, IL BaytJitted sayacının Toplam #una** eşdeğerdir.|  
+|**# Yöntemleri JITted**|Uygulama başladığından beri JIT tarafından derlenen toplam yöntem sayısını görüntüler. Bu sayaç, JIT öncesi derlenmiş yöntemleri içermez.|  
+|**Jit'te % Zaman**|Son JIT derleme aşamasından bu yana JIT derlemesinde harcanan geçen süre yüzdesini görüntüler. Bu sayaç her JIT derleme aşamasının sonunda güncelleştirilir. Bir yöntem ve bağımlılıkları derlendiğinde JIT derleme aşaması oluşur.|  
+|**IL Bayt Jitted / sn**|Saniyede JIT tarafından derlenen MSIL baytlarının sayısını görüntüler. Bu sayaç zaman içinde bir ortalama değildir; örnek aralığının süresine bölünen son iki örnekte gözlenen değerler arasındaki farkı görüntüler.|  
+|**Standart Jit Hataları**|JIT derleyicisinin uygulama başladığından beri derlemediği en yüksek yöntem sayısını görüntüler. MSIL doğrulanamıyorsa veya JIT derleyicisinde bir iç hata varsa bu hata oluşabilir.|  
+|**Toplam # IL Bayt Jitted**|Uygulama başladığından beri derlenen toplam MSIL baytJIT'i görüntüler. Bu sayaç IL **Bayt Jitted sayacının #** eşdeğerdir.|  
+
+## <a name="loading-performance-counters"></a>Yükleme performans sayaçları  
  Performans konsolu .NET CLR Yükleme kategorisi, yüklenen derlemeler, sınıflar ve uygulama etki alanları hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
 |Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
-|**Yükleme zamanı yüzdesi**|Gelecekte kullanılmak üzere ayrılmış.|  
-|**Derleme arama uzunluğu**|Gelecekte kullanılmak üzere ayrılmış.|  
-|**Yükleyici yığınındaki baytlar**|Tüm uygulama etki alanları genelinde sınıf yükleyicisi tarafından kaydedilen belleğin bayt cinsinden geçerli boyutunu görüntüler. Kaydedilmiş bellek, disk disk belleği dosyasında ayrılan fiziksel alandır.|  
-|**Geçerli AppDomain 'ler**|Bu uygulamada yüklenen uygulama etki alanlarının geçerli sayısını görüntüler.|  
-|**Geçerli derlemeler**|O anda çalışan uygulamadaki tüm uygulama etki alanları genelinde yüklenen derlemelerin geçerli sayısını görüntüler. Derleme birden çok uygulama etki alanında etki alanı nötr olarak yüklenirse, bu sayaç yalnızca bir kez artırılır.|  
-|**Geçerli sınıflar yüklendi**|Tüm derlemelerde yüklenen sınıfların geçerli sayısını görüntüler.|  
-|**AppDomain oranı**|Saniye başına yüklenen uygulama etki alanı sayısını görüntüler. Bu sayaç, zaman içinde bir ortalama değil; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
-|**Bellekten kaldırılan AppDomain oranı**|Saniye başına bellekten kaldırılan uygulama etki alanı sayısını görüntüler. Bu sayaç, zaman içinde bir ortalama değil; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
-|**Derleme oranı**|Tüm uygulama etki alanlarında saniye başına yüklenen derlemelerin sayısını görüntüler. Derleme birden çok uygulama etki alanında etki alanı nötr olarak yüklenirse, bu sayaç yalnızca bir kez artırılır.<br /><br /> Bu sayaç, zaman içinde bir ortalama değil; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
-|**Yüklenen sınıfların oranı**|Tüm derlemelerdeki saniye başına yüklenen sınıfların sayısını görüntüler. Bu sayaç, zaman içinde bir ortalama değil; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
-|**Yükleme hatalarının oranı**|Saniye başına yüklenmeyen sınıfların sayısını görüntüler. Bu sayaç, zaman içinde bir ortalama değil; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.<br /><br /> Yetersiz güvenlik veya geçersiz biçim gibi birçok nedenden dolayı yükleme başarısız olabilir. Ayrıntılar için bkz. profil oluşturma Hizmetleri Yardımı.|  
-|**Toplam yükleme başarısızlığı sayısı**|Uygulamanın başlatılmasından bu yana yükleme başarısız olan sınıfların en yüksek sayısını görüntüler.<br /><br /> Yetersiz güvenlik veya geçersiz biçim gibi birçok nedenden dolayı yükleme başarısız olabilir. Ayrıntılar için bkz. profil oluşturma Hizmetleri Yardımı.|  
-|**Toplam AppDomain**|Uygulamanın başlatılmasından bu yana yüklenen uygulama etki alanlarının en yüksek sayısını görüntüler.|  
-|**Bellekten kaldırılan toplam AppDomain**|Uygulama başladıktan sonra bellekten kaldırılan uygulama etki alanlarının toplam sayısını görüntüler. Bir uygulama etki alanı yüklenip birden çok kez kaldırıldığında, bu sayaç uygulama etki alanının her kaldırıldığında artar.|  
-|**Toplam derleme sayısı**|Uygulama başladıktan sonra yüklenen derlemelerin toplam sayısını görüntüler. Derleme birden çok uygulama etki alanında etki alanı nötr olarak yüklenirse, bu sayaç yalnızca bir kez artırılır.|  
-|**Toplam yüklenen sınıf**|Uygulamanın başlatılmasından bu yana tüm derlemelerde yüklenen sınıfların birikmiş sayısını görüntüler.|  
-   
+|**% Zaman Yükleme**|Daha sonraki kullanımlar için ayrılmıştır.|  
+|**Montaj Arama Uzunluğu**|Daha sonraki kullanımlar için ayrılmıştır.|  
+|**Yükleyici Yığınında Baytlar**|Sınıf yükleyicisi tarafından tüm uygulama etki alanlarında işlenen belleğin geçerli boyutunu baytolarak görüntüler. Taahhüt edilen bellek, disk sayfalama dosyasında ayrılmış fiziksel alandır.|  
+|**Geçerli etki alanları**|Bu uygulamada yüklenen geçerli uygulama etki alanı sayısını görüntüler.|  
+|**Geçerli Meclisler**|Geçerli olan uygulamadaki tüm uygulama etki alanlarında yüklenen geçerli derleme sayısını görüntüler. Derleme birden çok uygulama etki alanından etki alanı nötr olarak yüklenirse, bu sayaç yalnızca bir kez artımlanır.|  
+|**Yüklenen Geçerli Sınıflar**|Tüm derlemelerde yüklenen sınıfların geçerli sayısını görüntüler.|  
+|**Etki alanlarının oranı**|Saniyede yüklenen uygulama etki alanı sayısını görüntüler. Bu sayaç zaman içinde bir ortalama değildir; örnek aralığının süresine bölünen son iki örnekte gözlenen değerler arasındaki farkı görüntüler.|  
+|**Çıkarılan etki alanlarının oranı**|Saniyede boşaltılan uygulama etki alanı sayısını görüntüler. Bu sayaç zaman içinde bir ortalama değildir; örnek aralığının süresine bölünen son iki örnekte gözlenen değerler arasındaki farkı görüntüler.|  
+|**Meclisoranı**|Tüm uygulama etki alanlarında saniyede yüklenen derleme sayısını görüntüler. Derleme birden çok uygulama etki alanından etki alanı nötr olarak yüklenirse, bu sayaç yalnızca bir kez artımlanır.<br /><br /> Bu sayaç zaman içinde bir ortalama değildir; örnek aralığının süresine bölünen son iki örnekte gözlenen değerler arasındaki farkı görüntüler.|  
+|**Yüklenen Sınıfların Oranı**|Tüm derlemelerde saniyede yüklenen sınıf sayısını görüntüler. Bu sayaç zaman içinde bir ortalama değildir; örnek aralığının süresine bölünen son iki örnekte gözlenen değerler arasındaki farkı görüntüler.|  
+|**Yük Arızaoranı**|Saniyede yüklenemeyen sınıf ların sayısını görüntüler. Bu sayaç zaman içinde bir ortalama değildir; örnek aralığının süresine bölünen son iki örnekte gözlenen değerler arasındaki farkı görüntüler.<br /><br /> Yük hataları, yetersiz güvenlik veya geçersiz biçim gibi birçok nedenden dolayı oluşabilir. Ayrıntılar için profil oluşturma hizmetleri Yardım'a bakın.|  
+|**Yük Hatalarıtoplamı #**|Uygulama başladığından beri yüklenemeyen en yüksek sınıf sayısını görüntüler.<br /><br /> Yük hataları, yetersiz güvenlik veya geçersiz biçim gibi birçok nedenden dolayı oluşabilir. Ayrıntılar için profil oluşturma hizmetleri Yardım'a bakın.|  
+|**Toplam Appdomains**|Uygulama başladığından beri yüklenen en yüksek uygulama etki alanı sayısını görüntüler.|  
+|**Toplam etki alanları boşaltıldı**|Uygulama başladığından beri boşaltılan toplam uygulama etki alanı sayısını görüntüler. Bir uygulama etki alanı birden çok kez yüklenir ve boşaltılırsa, bu sayaç her uygulama etki alanı boşaltıldığında artış lar.|  
+|**Toplam Meclisler**|Uygulama başladığından beri yüklenen toplam derleme sayısını görüntüler. Derleme birden çok uygulama etki alanından etki alanı nötr olarak yüklenirse, bu sayaç yalnızca bir kez artımlanır.|  
+|**Yüklenen Toplam Sınıf Sayısı**|Uygulama başladığından beri tüm derlemelerde yüklenen sınıfların kümülatif sayısını görüntüler.|  
+
 ## <a name="lock-and-thread-performance-counters"></a>Kilit ve iş parçacığı performans sayaçları  
  Performans konsolu .NET CLR LocksAndThreads kategorisi, bir uygulamanın kullandığı yönetilen kilitler ve iş parçacıkları hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
 |Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
-|**geçerli mantıksal Iş parçacığı sayısı**|Uygulamadaki geçerli yönetilen iş parçacığı nesnelerinin sayısını görüntüler. Bu sayaç hem çalışan hem de durdurulan iş parçacıklarının sayısını tutar. Bu sayaç, zaman içinde bir ortalama değil; yalnızca son gözlemlenen değeri görüntüler.|  
-|**geçerli fiziksel Iş parçacığı sayısı**|Yönetilen iş parçacığı nesneleri için temel alınan iş parçacıkları olarak görev yapacak ortak dil çalışma zamanına ait ve oluşturulan yerel işletim sistemi iş parçacıklarının sayısını görüntüler. Bu sayacın değeri, iç işlemlerinde çalışma zamanı tarafından kullanılan iş parçacıklarını içermez; Bu, işletim sistemi işlemindeki iş parçacıklarının bir alt kümesidir.|  
-|**geçerli tanınan iş parçacıklarının sayısı**|Çalışma zamanı tarafından şu anda tanınan iş parçacığı sayısını görüntüler. Bu iş parçacıkları karşılık gelen bir yönetilen iş parçacığı nesnesiyle ilişkilendirilir. Çalışma zamanı bu iş parçacıklarını oluşturmaz, ancak çalışma zamanı içinde en az bir kez çalıştırılırlar.<br /><br /> Yalnızca benzersiz iş parçacıkları izlenir; çalışma zamanını yeniden girerek veya iş parçacığının çıktıktan sonra yeniden oluşturulmuş iş parçacığı KIMLIĞINE sahip iş parçacıkları iki kez sayılmaz.|  
-|**Toplam tanınan Iş parçacığı sayısı**|Uygulama başlatıldığından bu yana çalışma zamanı tarafından tanınan toplam iş parçacığı sayısını görüntüler. Bu iş parçacıkları karşılık gelen bir yönetilen iş parçacığı nesnesiyle ilişkilendirilir. Çalışma zamanı bu iş parçacıklarını oluşturmaz, ancak çalışma zamanı içinde en az bir kez çalıştırılırlar.<br /><br /> Yalnızca benzersiz iş parçacıkları izlenir; çalışma zamanını yeniden girerek veya iş parçacığının çıktıktan sonra yeniden oluşturulmuş iş parçacığı KIMLIĞINE sahip iş parçacıkları iki kez sayılmaz.|  
-|**Çekişme oranı/sn**|Çalışma zamanındaki iş parçacıklarının yönetilen kilidi alma girişimi hızını görüntüler.|  
-|**Geçerli kuyruk uzunluğu**|Uygulamada yönetilen bir kilidi almak için bekleyen iş parçacıklarının toplam sayısını görüntüler. Bu sayaç, zaman içinde bir ortalama değil; son gözlenen değeri görüntüler.|  
-|**Sıra uzunluğu/sn**|Uygulamada bir kilit elde etmek için bekleyen, saniye başına iş parçacığı sayısını görüntüler. Bu sayaç, zaman içinde bir ortalama değil; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
-|**En yüksek kuyruk uzunluğu**|Uygulamanın başlatılmasından bu yana yönetilen bir kilit almayı bekleyen iş parçacıklarının toplam sayısını görüntüler.|  
-|**tanınan iş parçacığı oranı/sn**|Bir saniyede çalışma zamanı tarafından tanınan iş parçacığı sayısını görüntüler. Bu iş parçacıkları karşılık gelen bir yönetilen iş parçacığı nesnesiyle ilişkilendirilir. Çalışma zamanı bu iş parçacıklarını oluşturmaz, ancak çalışma zamanı içinde en az bir kez çalıştırılırlar.<br /><br /> Yalnızca benzersiz iş parçacıkları izlenir; çalışma zamanını yeniden girerek veya iş parçacığının çıktıktan sonra yeniden oluşturulmuş iş parçacığı KIMLIĞINE sahip iş parçacıkları iki kez sayılmaz.<br /><br /> Bu sayaç, zaman içinde bir ortalama değil; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
-|**Toplam çekişmeler sayısı**|Çalışma zamanındaki iş parçacıklarının yönetilen kilit alma girişimi başarısız olan toplam sayısını görüntüler.|  
-    
+|**# geçerli mantıksal Konuları**|Uygulamadaki geçerli yönetilen iş parçacığı nesnelerinin sayısını görüntüler. Bu sayaç, hem çalışan hem de durdurulan iş parçacığı sayısını korur. Bu sayaç zaman içinde bir ortalama değildir; yalnızca son gözlenen değeri gösterir.|  
+|**# geçerli fiziksel Konuları**|Yönetilen iş parçacığı nesneleri için altta yatan iş parçacıkları olarak hareket etmek için ortak dil çalışma zamanı tarafından oluşturulan ve sahip olunan yerel işletim sistemi iş parçacığı sayısını görüntüler. Bu sayacın değeri, çalışma zamanı tarafından kullanılan iş parçacıklarını iç işlemlerinde içermez; işletme sistemi işlemindeki iş parçacıklarının bir alt kümesidir.|  
+|**# geçerli tanınan iş parçacıkları**|Şu anda çalışma zamanı tarafından tanınan iş parçacığı sayısını görüntüler. Bu iş parçacıkları karşılık gelen yönetilen iş parçacığı nesnesi ile ilişkilidir. Çalışma zamanı bu iş parçacıklarını oluşturmaz, ancak çalışma süresi içinde en az bir kez çalıştırılabın.<br /><br /> Yalnızca benzersiz iş parçacıkları izlenir; çalışma süresini yeniden giren veya iş parçacığı çıktılarından sonra yeniden oluşturulan aynı iş parçacığı kimliğine sahip iş parçacıkları iki kez sayılmaz.|  
+|**# toplam tanınan Konuları**|Uygulamanın başlamasından bu yana çalışma süresi tarafından tanınan toplam iş parçacığı sayısını görüntüler. Bu iş parçacıkları karşılık gelen yönetilen iş parçacığı nesnesi ile ilişkilidir. Çalışma zamanı bu iş parçacıklarını oluşturmaz, ancak çalışma süresi içinde en az bir kez çalıştırılabın.<br /><br /> Yalnızca benzersiz iş parçacıkları izlenir; çalışma süresini yeniden giren veya iş parçacığı çıktılarından sonra yeniden oluşturulan aynı iş parçacığı kimliğine sahip iş parçacıkları iki kez sayılmaz.|  
+|**Çekişme Oranı / Sn**|Yönetilen bir kilidi başarısız bir şekilde elde etmek için çalışma zamanındaki iş parçacıklarının çalışma hızını görüntüler.|  
+|**Geçerli Sıra Uzunluğu**|Uygulamada yönetilen bir kilit elde etmek için bekleyen toplam iş parçacığı sayısını görüntüler. Bu sayaç zaman içinde bir ortalama değildir; son gözlenen değeri gösterir.|  
+|**Sıra Uzunluğu / sn**|Uygulamada kilit elde etmek için bekleyen saniyede iş parçacığı sayısını görüntüler. Bu sayaç zaman içinde bir ortalama değildir; örnek aralığının süresine bölünen son iki örnekte gözlenen değerler arasındaki farkı görüntüler.|  
+|**Sıra Uzunluğu Tepe Noktası**|Uygulama başladığından beri yönetilen bir kilit elde etmek için bekleyen toplam iş parçacığı sayısını görüntüler.|  
+|**tanınan iş parçacığı / sn oranı**|Çalışma zamanı tarafından tanınan saniyede iş parçacığı sayısını görüntüler. Bu iş parçacıkları karşılık gelen yönetilen iş parçacığı nesnesi ile ilişkilidir. Çalışma zamanı bu iş parçacıklarını oluşturmaz, ancak çalışma süresi içinde en az bir kez çalıştırılabın.<br /><br /> Yalnızca benzersiz iş parçacıkları izlenir; çalışma süresini yeniden giren veya iş parçacığı çıktılarından sonra yeniden oluşturulan aynı iş parçacığı kimliğine sahip iş parçacıkları iki kez sayılmaz.<br /><br /> Bu sayaç zaman içinde bir ortalama değildir; örnek aralığının süresine bölünen son iki örnekte gözlenen değerler arasındaki farkı görüntüler.|  
+|**Çekişmelerin Toplam #**|Çalışma zamanında iş parçacıklarının yönetilen bir kilidi başarısız bir şekilde elde etmeye çalıştığı toplam sayısını görüntüler.|  
+
 ## <a name="memory-performance-counters"></a>Bellek performans sayaçları  
- Performans konsolu .NET CLR bellek kategorisi, çöp toplayıcısı hakkında bilgi sağlayan sayaçlar içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
+ Performans konsolu .NET CLR Bellek kategorisi, çöp toplayıcısı hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
 |Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
-|**Tüm yığınlardaki bayt sayısı**|**Gen 1 yığın boyutu**, **Gen 2 yığın boyutu**ve **büyük nesne yığın boyutu** sayaçlarının toplamını görüntüler. Bu sayaç, çöp toplama yığınlarında bayt cinsinden ayrılan geçerli belleği gösterir.|  
-|**# GC tutamaçları**|Kullanımdaki çöp toplama tanıtıcılarının geçerli sayısını görüntüler. Çöp toplama tutamaçları, ortak dil çalışma zamanı ve yönetilen ortam dışındaki kaynaklara yönelik tanıtıcılardır.|  
-|**# Gen 0 toplamaları**|Oluşturma 0 nesnelerinin (yani, kardeşinizin, en son ayrılan nesnelerin), uygulamanın başlatılmasından bu yana atık olarak toplanarak sayısını görüntüler.<br /><br /> Nesil 0, kuşak 0 ' daki kullanılabilir bellek, bir ayırma isteğini karşılamak için yeterli olmadığında oluşur. Bu sayaç, 1. nesil atık toplamanın sonunda artırılır. Daha yüksek kuşak çöp koleksiyonları, tüm düşük nesil koleksiyonları içerir. Bu sayaç, daha yüksek bir oluşturma (1 veya 2. nesil) çöp toplama gerçekleştiğinde açıkça artırılır.<br /><br /> Bu sayaç, son gözlemlenen değeri görüntüler. **_Global\_** sayaç değeri doğru değil ve göz ardı edilmelidir.|  
-|**# Gen 1 toplamaları**|Uygulamanın başlatılmasından bu yana 1. nesil nesnelerin atık olarak toplandığı kaç kez toplandığını gösterir.<br /><br /> Sayaç, 1. nesil atık toplamanın sonunda artırılır. Daha yüksek kuşak çöp koleksiyonları, tüm düşük nesil koleksiyonları içerir. Bu sayaç, daha yüksek bir oluşturma (2. nesil) atık toplama gerçekleştiğinde açıkça artırılır.<br /><br /> Bu sayaç, son gözlemlenen değeri görüntüler. **_Global\_** sayaç değeri doğru değil ve göz ardı edilmelidir.|  
-|**Gen 2 toplamaları sayısı**|Uygulamanın başlatılmasından bu yana 2. nesil nesnelerinin çöp toplama sayısını görüntüler. Sayaç, 2. nesil atık toplamanın (tam çöp toplama da denir) sonunda artırılır.<br /><br /> Bu sayaç, son gözlemlenen değeri görüntüler. **_Global\_** sayaç değeri doğru değil ve göz ardı edilmelidir.|  
-|**Igelemiş GC**|<xref:System.GC.Collect%2A?displayProperty=nameWithType>yönelik açık bir çağrı nedeniyle çöp toplamanın en yüksek sayısını görüntüler. Atık toplayıcısının koleksiyonların sıklığını ayarlamaya olanak sağlamak iyi bir uygulamadır.|  
-|**Sabitlenmiş nesne sayısı**|Son çöp toplama işleminde karşılaşılan sabitlenmiş nesne sayısını görüntüler. Sabitlenmiş nesne, çöp toplayıcısının bellekte taşıyamayacağını belirten bir nesnedir. Bu sayaç, Sabitlenmiş nesneleri yalnızca atık toplanan yığınlardaki izler. Örneğin, nesil 0 çöp toplama, sabitlenmiş nesnelerin yalnızca nesil 0 yığınında numaralandırılmasına neden olur.|  
-|**Kullanımdaki havuz bloklarının sayısı**|Kullanımdaki eşitleme bloklarının geçerli sayısını görüntüler. Eşitleme blokları, eşitleme bilgilerini depolamak için ayrılan nesne başına veri yapılarıdır. Bunlar yönetilen nesnelere zayıf başvuruları tutar ve çöp toplayıcı tarafından taranmalıdır. Eşitleme blokları, eşitleme bilgilerini depolamak için sınırlı değildir; Ayrıca, COM birlikte çalışma meta verilerini de saklayabilir. Bu sayaç, eşitleme temel temellerinin yoğun kullanımıyla ilgili performans sorunlarını gösterir.|  
-|**Toplam kaydedilmiş bayt sayısı**|Çöp toplayıcı tarafından şu anda işlenen sanal bellek miktarını bayt cinsinden görüntüler. Kaydedilmiş bellek, disk disk belleği dosyasında ayrılan alanın fiziksel belleğidir.|  
-|**Toplam ayrılan bayt sayısı**|Çöp toplayıcı tarafından şu anda ayrılmış olan sanal bellek miktarını bayt cinsinden görüntüler. Ayrılan bellek, disk veya ana bellek sayfası kullanılmadığınızda uygulama için ayrılan sanal bellek alanıdır.|  
-|**GC 'de% Time**|Son çöp toplama döngüsünden bu yana bir çöp toplama işlemi için harcanan geçen sürenin yüzdesini görüntüler. Bu sayaç genellikle çöp toplayıcı tarafından uygulama adına bellek toplamak ve sıkıştırmak için yapılan işi gösterir. Bu sayaç yalnızca her çöp toplamanın sonunda güncelleştirilir. Bu sayaç bir ortalama değil; değeri, son gözlemlenen değeri yansıtır.|  
-|**Ayrılan bayt/saniye**|Çöp toplama yığınında ayrılan saniye başına bayt sayısını görüntüler. Bu sayaç her bir ayırmada değil her çöp toplamanın sonunda güncelleştirilir. Bu sayaç, zaman içinde bir ortalama değil; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
-|**Kalan VNET 'leri sonlandırma**|Toplanmayı beklediği için bir koleksiyonun üzerinde kalan atık toplanmış nesne sayısını görüntüler. Bu nesneler diğer nesnelere başvurular içeriyorsa, bu nesneler de devam etmez ancak bu sayaç tarafından sayılmaz. **Yükseltilen sonlandırma süresi-Gen 0 sayacından alınan bellek** , sonlandırma nedeniyle kalan tüm belleği temsil eder.<br /><br /> Bu sayaç toplu değildir; her çöp toplamanın sonunda yalnızca söz konusu koleksiyon sırasında kalan sanal nesnelerin sayısıyla güncelleştirilir. Bu sayaç, sonlandırma nedeniyle uygulamanın tabi olabileceği ek yükü gösterir.|  
-|**Gen 0 yığın boyutu**|Oluşturma 0 ' da ayrılabilecek maksimum bayt sayısını görüntüler; 0 kuşağında ayrılan geçerli bayt sayısını göstermez.<br /><br /> Kuşak 0 çöp toplama, son koleksiyonda bu yana olan ayırmalar bu boyutu aşarsa oluşur. Nesil 0 boyutu çöp toplayıcı tarafından ayarlanır ve uygulamanın yürütülmesi sırasında değişebilir. Nesil 0 koleksiyonunun sonunda nesil 0 yığını boyutu 0 bayttır. Bu sayaç, bir sonraki nesil 0 çöp toplamayı çağıran ayırmaların bayt cinsinden boyutunu görüntüler.<br /><br /> Bu sayaç her ayırmada değil çöp toplamanın sonunda güncelleştirilir.|  
-|**G 0 yükseltilen bayt/sn**|Nesil 0 ' dan 1 ' e yükseltilen saniye başına bayt sayısını görüntüler. Bellek, atık toplama işlemi yaparken yükseltilir. Bu sayaç, saniye başına oluşturulan görece uzun süreli nesnelerin göstergesidir.<br /><br /> Bu sayaç, son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
-|**Gen 1 yığın boyutu**|1\. nesil geçerli bayt sayısını görüntüler; Bu sayaç, 1. nesil en büyük boyutunu görüntülemez. Nesneler bu Neste doğrudan ayrılmamış; Bunlar, önceki nesil 0 çöp toplamalarından yükseltilir. Bu sayaç her ayırmada değil çöp toplamanın sonunda güncelleştirilir.|  
-|**G 1 yükseltilen bayt/sn**|1\. nesil 2 ' ye kadar yükseltilen saniye başına bayt sayısını görüntüler. Yalnızca Sonlandırılmayı beklediği için yükseltilen nesneler bu sayaca dahil edilmez.<br /><br /> Bellek, atık toplama işlemi yaparken yükseltilir. 2\. nesil, en eski nesil olduğundan hiçbir şey yükseltilmez. Bu sayaç, saniye başına oluşturulan çok uzun süreli nesnelerin göstergesidir.<br /><br /> Bu sayaç, son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
-|**Gen 2 yığın boyutu**|2\. nesil geçerli bayt sayısını görüntüler. Nesneler bu Neste doğrudan ayrılmamış; önceki nesil 1 atık koleksiyonlar sırasında 1. kuşak 'den yükseltilir. Bu sayaç her ayırmada değil çöp toplamanın sonunda güncelleştirilir.|  
-|**Büyük nesne yığın boyutu**|Büyük nesne yığınının geçerli boyutunu bayt cinsinden görüntüler. Yaklaşık 85.000 bayttan büyük nesneler çöp toplayıcı tarafından büyük nesneler olarak değerlendirilir ve özel bir yığında doğrudan ayrılır. Nesiller aracılığıyla yükseltilmez. Bu sayaç her ayırmada değil çöp toplamanın sonunda güncelleştirilir.|  
-|**İşlem KIMLIĞI**|İzlenmekte olan CLR işlem örneğinin işlem KIMLIĞINI görüntüler.|  
-|**Yükseltilen sonlandırma-bellek, Gen 0 ' dan**|1\. nesil 0 ' dan 1 ' e yükseltilen bellek baytlarını yalnızca Sonlandırılmayı beklediği için görüntüler. Bu sayaç toplu değildir; Son atık toplamanın sonunda gözlemlenen değeri görüntüler.|  
-|**Gen 0 ' dan yükseltilen bellek**|Atık toplamayı sürdüren ve 1. nesil 0 ' dan 1 ' e yükseltilen bellek baytlarını görüntüler. Yalnızca Sonlandırılmayı beklediği için yükseltilen nesneler bu sayaca dahil edilmez. Bu sayaç toplu değildir; Son atık toplamanın sonunda gözlemlenen değeri görüntüler.|  
-|**Gen 1 ' den yükseltilen bellek**|Çöp toplama işlemini sürdüren ve 1. nesil 2 ' den 2 ' ye yükseltilen bellek baytlarını görüntüler. Yalnızca Sonlandırılmayı beklediği için yükseltilen nesneler bu sayaca dahil edilmez. Bu sayaç toplu değildir; Son atık toplamanın sonunda gözlemlenen değeri görüntüler. Bu sayaç, son çöp toplama işlemi yalnızca 0. kuşak bir koleksiyon ise 0 ' a sıfırlanır.|  
-     
+|**# Tüm Yığınlar içinde Bayt**|**Gen 1 Yığın Boyutu,** Gen **2 Yığın Boyutu**ve Büyük Nesne Yığın **Boyutu** sayaçlarının toplamını görüntüler. Bu sayaç, çöp toplama yığınlarıüzerinde baytayrılan geçerli belleği gösterir.|  
+|**# GC Kolları**|Kullanılan çöp toplama tanıtıcılarının geçerli sayısını görüntüler. Çöp toplama tanıtıcıları, ortak dil çalışma süresi ve yönetilen ortam dışında kaynaklara işlenir.|  
+|**# Gen 0 Koleksiyonları**|Uygulama başladığından beri nesil 0 nesnelerinin (yani en genç, en son ayrılan nesnelerin) kaç kez toplandığını görüntüler.<br /><br /> Nesil 0 çöp toplama, nesil 0'daki kullanılabilir bellek ayırma isteğini karşılamak için yeterli olmadığında oluşur. Bu sayaç bir nesil 0 çöp toplama sonunda artımlı. Yüksek nesil çöp koleksiyonları tüm alt nesil koleksiyonları içerir. Bu sayaç, daha yüksek nesil (nesil 1 veya 2) çöp toplama gerçekleştiğinde açıkça artımlanır.<br /><br /> Bu sayaç, gözlenen son değeri görüntüler. sayaç değeri **_Global\_ ** doğru değildir ve göz ardı edilmelidir.|  
+|**# Gen 1 Koleksiyonları**|Uygulama başladığından beri nesil 1 nesnelerin in kaç kez toplandığını görüntüler.<br /><br /> Sayaç, nesil 1 çöp toplama sonunda artıya lanır. Yüksek nesil çöp koleksiyonları tüm alt nesil koleksiyonları içerir. Bu sayaç, daha yüksek nesil (nesil 2) çöp toplama gerçekleştiğinde açıkça artımlanır.<br /><br /> Bu sayaç, gözlenen son değeri görüntüler. sayaç değeri **_Global\_ ** doğru değildir ve göz ardı edilmelidir.|  
+|**# Gen 2 Koleksiyonları**|Uygulama başladığından beri nesil 2 nesnelerin kaç kez toplandığını görüntüler. Sayaç, nesil 2 çöp toplama (tam çöp toplama olarak da adlandırılır) sonunda artımlı.<br /><br /> Bu sayaç, gözlenen son değeri görüntüler. sayaç değeri **_Global\_ ** doğru değildir ve göz ardı edilmelidir.|  
+|**# Indüklenen GC**|Açık bir çağrı nedeniyle çöp toplamanın en yüksek <xref:System.GC.Collect%2A?displayProperty=nameWithType>kaç kez gerçekleştirildiği görüntülenir. Çöp toplayıcısının koleksiyonlarının sıklığını ayarlamasına izin vermek iyi bir uygulamadır.|  
+|**# Sabitlenmiş Nesneler**|Son çöp koleksiyonunda karşılaşılan sabitlenmiş nesne sayısını görüntüler. Sabitlenmiş nesne, çöp toplayıcısının bellekte taşıyamadığı bir nesnedir. Bu sayaç, sabitlenmiş nesneleri yalnızca toplanan çöp yığınlarında izler. Örneğin, bir nesil 0 çöp toplama yalnızca nesil 0 yığın sabitlenmiş nesnelerin numaralandırma neden olur.|  
+|**# kullanılan Lavabo Blokları**|Geçerli eşzamanlılık bloklarının geçerli sayısını görüntüler. Eşitleme blokları, eşitleme bilgilerini depolamak için ayrılan nesne başına veri yapılarıdır. Yönetilen nesnelere zayıf başvurular tutarlar ve çöp toplayıcı sı tarafından taranmalıdır. Eşitleme blokları eşitleme bilgilerini depolamakla sınırlı değildir; ayrıca COM interop meta verilerini de saklayabilirler. Bu sayaç, eşitleme ilkellerinin yoğun kullanımıyla ilgili performans sorunlarını gösterir.|  
+|**# Toplam taahhüt Bayt**|Çöp toplayıcıtarafından şu anda işlenen sanal bellek miktarını baytlar halinde görüntüler. Taahhüt edilen bellek, disk sayfalama dosyasında boşluk rezerve edilen fiziksel bellektir.|  
+|**# Toplam ayrılmış Bayt**|Şu anda çöp toplayıcı tarafından ayrılmış olan sanal bellek miktarını baytlar halinde görüntüler. Ayrılmış bellek, disk veya ana bellek sayfaları kullanılmadığında uygulama için ayrılmış sanal bellek alanıdır.|  
+|**GC'de % Süre**|Son çöp toplama döngüsünden bu yana çöp toplama gerçekleştirme için harcanan geçen süre yüzdesini görüntüler. Bu sayaç genellikle çöp toplayıcı tarafından yapılan işi gösterir ve uygulama adına bellek sıkıştırmak için. Bu sayaç yalnızca her çöp toplama nın sonunda güncelleştirilir. Bu sayaç bir ortalama değildir; değeri son gözlenen değeri yansıtır.|  
+|**Ayrılan Bayt/saniye**|Çöp toplama yığınına ayrılan saniyede bayt sayısını görüntüler. Bu sayaç, her ayırmada değil, her çöp toplamanın sonunda güncelleştirilir. Bu sayaç zaman içinde bir ortalama değildir; örnek aralığının süresine bölünen son iki örnekte gözlenen değerler arasındaki farkı görüntüler.|  
+|**Sonlandırma Kurtulanlar**|Sonuçlanmasını bekledikleri için koleksiyondan kurtulan çöple toplanan nesnelerin sayısını görüntüler. Bu nesneler diğer nesnelere başvuru tutuyorsa, bu nesneler de hayatta kalır, ancak bu sayaç tarafından sayılmaz. **Gen 0 sayacından Tanıtılan Sonlandırma-Bellek,** sonlandırma nedeniyle hayatta kalan tüm belleği temsil eder.<br /><br /> Bu sayaç kümülatif değildir; sadece o toplama sırasında kurtulanların sayısı ile her çöp toplama sonunda güncellenir. Bu sayaç, uygulamanın sonlandırma nedeniyle maruz kılabileceği ek yükü gösterir.|  
+|**Gen 0 yığın boyutu**|Nesil 0'da ayrılabilen maksimum baytları görüntüler; nesil 0'da ayrılan geçerli bayt sayısını göstermez.<br /><br /> Son koleksiyondan sonraki ayırmalar bu boyutu aştığında bir nesil 0 çöp toplama oluşur. Nesil 0 boyutu çöp toplayıcı tarafından ayarlanır ve uygulamanın yürütülmesi sırasında değişebilir. Bir nesil 0 koleksiyonunun sonunda nesil 0 yığınının boyutu 0 bayttır. Bu sayaç, yeni nesil 0 çöp toplama çağıran ayırmaların boyutunu, baytlar olarak görüntüler.<br /><br /> Bu sayaç, her ayırmada değil, çöp toplamanın sonunda güncelleştirilir.|  
+|**Gen 0 Terfi Bayt/Sn**|Nesil 0'dan nesil 1'e yükseltilen saniyede baytları görüntüler. Bellek, çöp toplamadan kurtulduğunda tanıtılır. Bu sayaç, saniyede oluşturulan nispeten uzun ömürlü nesnelerin bir göstergesidir.<br /><br /> Bu sayaç, son iki örnekte gözlenen değerler arasındaki farkı, örnek aralığının süresine bölünür.|  
+|**Gen 1 yığın boyutu**|Nesil 1'deki geçerli bayt sayısını görüntüler; bu sayaç nesil 1 maksimum boyutu görüntülemez. Nesneler bu nesilde doğrudan tahsis edilmez; onlar önceki nesil 0 çöp toplama teşvik edilmektedir. Bu sayaç, her ayırmada değil, çöp toplamanın sonunda güncelleştirilir.|  
+|**Gen 1 Terfi Bayt/Sn**|Nesil 1'den nesil 2'ye yükseltilen saniyede baytları görüntüler. Yalnızca sonuçlandırılmasını bekledikleri için tanıtılan nesneler bu sayaça dahil edilmez.<br /><br /> Bellek, çöp toplamadan kurtulduğunda tanıtılır. En eski nesil olduğu için hiçbir şey nesil 2'den terfi ettirilir. Bu sayaç, saniyede oluşturulan çok uzun ömürlü nesnelerin bir göstergesidir.<br /><br /> Bu sayaç, son iki örnekte gözlenen değerler arasındaki farkı, örnek aralığının süresine bölünür.|  
+|**Gen 2 yığın boyutu**|Nesil 2'deki geçerli bayt sayısını görüntüler. Nesneler bu nesilde doğrudan tahsis edilmez; onlar nesil 1 önceki nesil 1 çöp koleksiyonları sırasında terfi ettirilir. Bu sayaç, her ayırmada değil, çöp toplamanın sonunda güncelleştirilir.|  
+|**Büyük Nesne Yığını boyutu**|Büyük nesne yığınının geçerli boyutunu baytlar halinde görüntüler. Yaklaşık 85.000 bayttan büyük nesneler çöp toplayıcı tarafından büyük nesneler olarak kabul edilir ve doğrudan özel bir yığın ayrılır. Nesiller boyunca terfi etmiyorlar. Bu sayaç, her ayırmada değil, çöp toplamanın sonunda güncelleştirilir.|  
+|**İşlem Kimliği**|İzlenen CLR işlem örneğinin işlem kimliğini görüntüler.|  
+|**Gen 0'dan Terfi Finalleştirme-Bellek**|Yalnızca sonolarak tamamlanmayı bekledikleri için nesil 0'dan nesil 1'e yükseltilen bellek baytlarını görüntüler. Bu sayaç kümülatif değildir; son çöp toplama nın sonunda gözlenen değeri görüntüler.|  
+|**Gen 0'dan Tanıtılan Bellek**|Çöp toplamadan kurtulan ve nesil 0'dan nesil 1'e yükseltilen bellek baytlarını görüntüler. Yalnızca sonuçlandırılmasını bekledikleri için tanıtılan nesneler bu sayaça dahil edilmez. Bu sayaç kümülatif değildir; son çöp toplama nın sonunda gözlenen değeri görüntüler.|  
+|**Gen 1'den Tanıtılan Bellek**|Çöp toplamadan kurtulan ve nesil 1'den nesil 2'ye yükseltilen bellek baytlarını görüntüler. Yalnızca sonuçlandırılmasını bekledikleri için tanıtılan nesneler bu sayaça dahil edilmez. Bu sayaç kümülatif değildir; son çöp toplama nın sonunda gözlenen değeri görüntüler. Son çöp toplama yalnızca nesil 0 koleksiyonu ysa, bu sayaç 0'a sıfırlanır.|  
+
 ## <a name="networking-performance-counters"></a>Ağ performans sayaçları  
 
-Performans konsolu .NET CLR ağ kategorisi, bir uygulamanın ağ üzerinden gönderdiği ve aldığı veriler hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
+Performans konsolu .NET CLR Ağ kategorisi, bir uygulamanın ağ üzerinden gönderdiği ve aldığı veriler hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
 |Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
-|**Alınan bayt**|İşlem başlatıldığından bu yana <xref:System.AppDomain> içindeki tüm <xref:System.Net.Sockets.Socket> nesneleri tarafından alınan toplam bayt sayısı. Bu sayı, TCP/IP tarafından tanımlanmayan verileri ve protokol bilgilerini içerir.|  
-|**Gönderilen bayt**|İşlem başlatıldığından bu yana <xref:System.AppDomain> içindeki tüm <xref:System.Net.Sockets.Socket> nesneleri tarafından gönderilen toplam bayt sayısı. Bu sayı, TCP/IP tarafından tanımlanmayan verileri ve protokol bilgilerini içerir.|  
-|**Kurulan bağlantılar**|İşlem başladıktan sonra, <xref:System.AppDomain> içinde hiç bağlı olan akış yuvaları için <xref:System.Net.Sockets.Socket> nesnelerinin birikimli toplam sayısı.|  
-|**Alınan veri birimleri**|İşlem başlatıldığından bu yana <xref:System.AppDomain> içindeki tüm <xref:System.Net.Sockets.Socket> nesneleri tarafından alınan toplam veri birimi paketlerinin birikimli sayısı.|  
-|**Gönderilen veri birimleri**|İşlem başlatıldığından bu yana <xref:System.AppDomain> içindeki tüm <xref:System.Net.Sockets.Socket> nesneleri tarafından gönderilen toplam veri birimi paketi sayısı.|  
-|**HttpWebRequest ortalama ömrü**|İşlem başlatıldığından bu yana <xref:System.AppDomain> içindeki son aralıkta sona eren <xref:System.Net.HttpWebRequest> tüm nesneler için tamamlanması gereken ortalama süre.|  
-|**HttpWebRequest Ortalama sıra süresi**|İşlem başlatıldığından bu yana <xref:System.AppDomain> içindeki son aralıkta sırayı bıraktığınız tüm <xref:System.Net.HttpWebRequest> nesneleri için Ortalama süre (sıra).|  
-|**Oluşturulan Httpwebistek/sn**|<xref:System.AppDomain>içinde saniyede oluşturulan <xref:System.Net.HttpWebRequest> nesne sayısı.|  
-|**Sıraya alınan Httpwebistek/sn**|<xref:System.AppDomain>içindeki sıraya göre sıraya eklenen <xref:System.Net.HttpWebRequest> nesne sayısı.|  
-|**Durdurulan Httpwebistek/sn**|Uygulamanın <xref:System.AppDomain>içinde saniye başına <xref:System.Net.HttpWebRequest.Abort%2A> yöntemi olarak çağırdığı <xref:System.Net.HttpWebRequest> nesne sayısı.|  
-|**Başarısız Httpwebisteği/sn**|Sunucu <xref:System.AppDomain>içinde saniyede başarısız durum kodu alan <xref:System.Net.HttpWebRequest> nesne sayısı.|  
+|**Alınan Baytlar**|İşlemin başlamasından <xref:System.Net.Sockets.Socket> <xref:System.AppDomain> bu yana içindeki tüm nesneler tarafından alınan toplam bayt sayısı. Bu sayı, tcp/IP tarafından tanımlanmayan verileri ve protokol bilgilerini içerir.|  
+|**Gönderilen Baytlar**|İşlemin başlamasından <xref:System.Net.Sockets.Socket> <xref:System.AppDomain> bu yana içindeki tüm nesneler tarafından gönderilen baytların kümülatif sayısı. Bu sayı, tcp/IP tarafından tanımlanmayan verileri ve protokol bilgilerini içerir.|  
+|**Kurulan Bağlantılar**|İşlemin başlamasından <xref:System.Net.Sockets.Socket> <xref:System.AppDomain> bu yana bağlı olan akış yuvaları için toplam nesne sayısı.|  
+|**Alınan Datagramlar**|İşlemin başlamasından <xref:System.Net.Sockets.Socket> <xref:System.AppDomain> bu yana içindeki tüm nesneler tarafından alınan toplam verigramı paketi sayısı.|  
+|**Gönderilen Datagramlar**|İşlemin başlamasından <xref:System.Net.Sockets.Socket> <xref:System.AppDomain> bu yana içindeki tüm nesneler tarafından gönderilen toplam veri gram ı paketi sayısı.|  
+|**httpwebRequest Ortalama Ömür Boyu**|İşlemin başlamasından <xref:System.Net.HttpWebRequest> <xref:System.AppDomain> bu yana son aralıkta sona eren tüm nesneler için ortalama tamamlanma süresi.|  
+|**httpwebRequest Ortalama Sıra Süresi**|İşlemin başlamasından <xref:System.Net.HttpWebRequest> <xref:System.AppDomain> bu yana son aralıkta sırayı bırakan tüm nesneler için ortalama sıralı süre.|  
+|**HttpWebRequests Oluşturuldu/sn**|Içinde saniyede <xref:System.Net.HttpWebRequest> oluşturulan nesnelerin <xref:System.AppDomain>sayısı.|  
+|**HttpWebRequests Sıraya/sn**|'deki <xref:System.Net.HttpWebRequest> kuyruğa eklenen nesne <xref:System.AppDomain>sayısı.|  
+|**HttpWebRequests İptal /sn**|Uygulamanın <xref:System.Net.HttpWebRequest> içinde saniye başına <xref:System.Net.HttpWebRequest.Abort%2A> yöntem olarak adlandırılan <xref:System.AppDomain>nesnelerin sayısı.|  
+|**HttpWebRequests Başarısız / sn**|Sunucudan <xref:System.Net.HttpWebRequest> saniye başına başarısız bir durum kodu alan nesnelerin <xref:System.AppDomain>sayısı .|  
   
- Desteklenen birkaç ağ performans sayacı sınıfı vardır:  
+ Desteklenen ağ performans sayaçları çeşitli sınıflar vardır:  
   
-- Bazı olayların kaç kez oluştuğunu ölçen olay sayaçları.  
+- Bazı olayın oluşma sayısını ölçen olay sayaçları.  
   
 - Gönderilen veya alınan veri miktarını ölçen veri sayaçları.  
   
-- Farklı işlemlerin ne kadar sürdüğünü ölçen Duration sayaçları. Süreler, farklı durumlardan çıktıktan sonra her Aralık (genellikle saniye cinsinden) nesneler üzerinde ölçülür.  
+- Farklı işlemlerin ne kadar sürdüğünü ölçen süre sayaçları. Saatler, farklı durumlardan çıktıktan sonra her aralıkta (genellikle saniye cinsinden) nesneler üzerinde ölçülür.  
   
-- Aralık başına belirli bir geçiş yapan nesne sayısını ölçen Aralık başına sayaçlar (normalde saniyede).  
+- Aralık başına belirli bir geçiş yapan nesnelerin sayısını ölçen Aralık Başına sayaçlar (normalde saniye başına).  
   
-Olaylar için ağ performans sayaçları şunları içerir:  
+Etkinlikler için ağ performans sayaçları şunlardır:  
   
-- **Kurulan bağlantılar**  
+- **Kurulan Bağlantılar**  
   
-- **Alınan veri birimleri**  
+- **Alınan Datagramlar**  
   
-- **Gönderilen veri birimleri**  
+- **Gönderilen Datagramlar**  
   
- Bu performans sayaçları, işlem başladıktan sonra sayımlar sağlar. Oluşturulan <xref:System.Net.Sockets.Socket> bağlantı sayısı, oluşturulan bir akış yuvası bağlantısı için bir uygulama tarafından açık <xref:System.Net.Sockets.Socket> Yöntem çağrıları ve diğer sınıfların (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.WebClient>ve <xref:System.Net.Sockets.TcpClient>) (örneğin, <xref:System.Net.Sockets.Socket> sınıfına) yapılan iç çağrılardır.  
+ Bu performans sayaçları, işlem başladığından beri sayımlar sağlar. Kurulan <xref:System.Net.Sockets.Socket> bağlantı sayısı, bir <xref:System.Net.Sockets.Socket> uygulama tarafından kurulan akış soketi bağlantısının yanı sıra diğer sınıflar tarafından<xref:System.Net.HttpWebRequest> <xref:System.Net.FtpWebRequest>sınıfa <xref:System.Net.WebClient> <xref:System.Net.Sockets.TcpClient> <xref:System.Net.Sockets.Socket> (, , ve örneğin) yapılan dahili çağrıları içeren açık yöntem çağrılarını içerir  
   
- **Alınan veri birimleri** ve **gönderilen veri birimleri** için sayımlar, bir uygulamanın açık <xref:System.Net.Sockets.Socket> yöntemi çağrıları kullanılarak gönderilen veya alınan veri birimi paketleri içerir (örneğin,<xref:System.Net.Sockets.UdpClient><xref:System.Net.Sockets.Socket>). sınıfı. **Alınan** veri birimleri ve **gönderilen** veri birimleri, bir veri birimi için Ortalama bir boyut varsayarak, veri birimleri kullanılarak gönderilen veya alınan bayt sayısı çok kaba bir ölçü sağlamak için de kullanılabilir.  
+ **Alınan Datagramlar** ve **Gönderilen Datagramlar** için sayımlar, <xref:System.Net.Sockets.Socket> bir uygulama tarafından açık yöntem çağrıları kullanılarak<xref:System.Net.Sockets.UdpClient>gönderilen veya alınan <xref:System.Net.Sockets.Socket>verigram ı paketlerinin yanı sıra diğer sınıflar tarafından yapılan dahili aramaları da (örneğin) . Sınıfı. **Datagramalınan** ve **Gönderilen Datagramsayısı,** bir datagram için ortalama bir boyut üstlenerek verigramı kullanılarak kaç bayt gönderildiğinin veya alındığının çok kaba bir ölçüsünü sağlamak için de kullanılabilir.  
   
- Veriler için ağ performans sayaçları şunları içerir:  
+ Veriler için ağ performans sayaçları şunlardır:  
   
-- **Alınan bayt**  
+- **Alınan Baytlar**  
   
-- **Gönderilen bayt**  
+- **Gönderilen Baytlar**  
   
- Yukarıdaki sayaçlar, işlem başladıktan sonra gelen bayt sayısını sağlar.  
+ Yukarıdaki sayaçlar, işlem başladığından beri bayt sayısını sağlar.  
   
- <xref:System.Net.HttpWebRequest> nesnelerinin tüm yaşam döngüsü veya yalnızca bir parçası aracılığıyla geçmesi için ne kadar sürdüğünü ölçen iki Duration sayacı vardır:  
+ <xref:System.Net.HttpWebRequest> Nesnelerin tüm yaşam döngülerinden ya da sadece bir kısmından geçmelerinin ne kadar sürdüğünü ölçen iki süre sayacı vardır:  
   
-- **HttpWebRequest ortalama ömrü**  
+- **httpwebRequest Ortalama Ömür Boyu**  
   
-- **HttpWebRequest Ortalama sıra süresi**  
+- **httpwebRequest Ortalama Sıra Süresi**  
   
- **HttpWebRequest ortalama ömür süresi** sayacı için, en <xref:System.Net.HttpWebRequest> nesnelerinin yaşam süresi her zaman, yanıt akışının uygulama tarafından kapatılmadığı zamana kadar her zaman nesnenin oluşturulduğu zaman ile başlar. Yaygın olarak görülen iki durum vardır:  
+ **HttpWebRequest Ortalama Yaşam Süresi** sayacı <xref:System.Net.HttpWebRequest> için, çoğu nesnenin ömrü her zaman yanıt akışı uygulama tarafından kapatılanakadar nesnenin oluşturulduğu süreyle başlar. İki nadir durum vardır:  
   
-- Uygulama <xref:System.Net.HttpWebRequest.GetResponse%2A> veya <xref:System.Net.HttpWebRequest.BeginGetResponse%2A> yöntemlerini hiçbir şekilde çağırmadıysa <xref:System.Net.HttpWebRequest> nesnesinin kullanım ömrü yoksayılır.  
+- Uygulama hiçbir zaman <xref:System.Net.HttpWebRequest.GetResponse%2A> veya <xref:System.Net.HttpWebRequest.BeginGetResponse%2A> yöntemleri aramaz, <xref:System.Net.HttpWebRequest> nesnenin ömrü yoksayılır.  
   
-- <xref:System.Net.HttpWebRequest> nesnesi <xref:System.Net.HttpWebRequest.GetResponse%2A> veya <xref:System.Net.HttpWebRequest.EndGetResponse%2A> yöntemlerini çağırırken bir <xref:System.Net.WebException> oluşturursa, özel durum oluştuğunda yaşam süresi sona erer. Teknik olarak, temel alınan yanıt akışı o noktada da kapatılır (kullanıcıya döndürülen yanıt akışı gerçekten yanıt akışının bir kopyasını içeren bir bellek akışıdır).  
+- <xref:System.Net.HttpWebRequest> Nesne çağıran <xref:System.Net.HttpWebRequest.GetResponse%2A> veya <xref:System.Net.HttpWebRequest.EndGetResponse%2A> <xref:System.Net.WebException> yöntemleri a atarsa, özel durum atıldığında kullanım ömrü sona erer. Teknik olarak, bu noktada temel yanıt akışı da kapatılır (kullanıcıya döndürülen yanıt akışı gerçekten yanıt akışının bir kopyasını içeren bir bellek akışıdır).  
   
- Aralık başına belirli <xref:System.Net.HttpWebRequest> nesne sorunlarını izleyen dört sayaç vardır. Bu performans sayaçları, uygulama geliştiricilerinin, yöneticilerin ve destek personelinin <xref:System.Net.HttpWebRequest> nesnelerinin ne yaptığını daha iyi anlamasına yardımcı olabilir. Sayaçlar şunları içerir:  
+ Belirli <xref:System.Net.HttpWebRequest> nesne sorunlarını aralık başına izleyen dört sayaç vardır. Bu performans sayaçları, uygulama geliştiricilerinin, yöneticilerin ve <xref:System.Net.HttpWebRequest> destek personelinin nesnelerin ne yaptığını daha iyi anlamalarına yardımcı olabilir. Sayaçlar şunlardır:  
   
-- **Oluşturulan Httpwebistek/sn**  
+- **HttpWebRequests Oluşturuldu/sn**  
   
-- **Sıraya alınan Httpwebistek/sn**  
+- **HttpWebRequests Sıraya/sn**  
   
-- **Durdurulan Httpwebistek/sn**  
+- **HttpWebRequests İptal /sn**  
   
-- **Başarısız Httpwebisteği/sn**  
+- **HttpWebRequests Başarısız / sn**  
   
- **Yürütülen HttpWebRequests/sn** sayacı için <xref:System.Net.HttpWebRequest.Abort%2A> iç çağrıları da sayılır. Bu iç çağrılar genellikle uygulamanın ölçmek isteyebileceğiniz zaman aşımları nedeniyle oluşur.  
+ **HttpWebRequests İptal/sn** sayacı için, <xref:System.Net.HttpWebRequest.Abort%2A> dahili aramalar da sayılır. Bu dahili çağrılar genellikle bir uygulamanın ölçmek isteyebileceği zaman eklerinden kaynaklanır.  
   
- **Başarısız olan HttpWebRequests/sn** sayacı, sunucudan başarısız bir durum kodu içeren <xref:System.Net.HttpWebRequest> nesne sayısını (saniye başına) içerir. Yani, isteğin sonundaki HTTP sunucusundan alınan durum kodu 200 ile 299 arasında değildir. İşlenen ve yeni bir istek ile sonuçlanan durum kodları (örneğin, 401 Yetkisiz durum kodlarının çoğu) başarısız olur veya yeniden deneme sonucuna göre başarısız olmaz. Uygulama yeniden denemeye göre bir hata görebiliyorsa, bu sayaç artırılır.  
+ **HttpWebRequests Failed/sec** sayacı, <xref:System.Net.HttpWebRequest> sunucudan saniyede başarısız bir durum kodu alan nesne sayısını içerir. Bu, isteğin sonunda Http sunucusundan alınan durum kodunun 200 ile 299 arasında aralıkta olmadığı anlamına gelir. İşlenen ve yeni bir istekle sonuçlanan durum kodları (örneğin, 401 Yetkisiz durum kodlarının çoğu) yeniden denemenin sonucuna bağlı olarak başarısız olur veya başarısız olmaz. Uygulama yeniden denemedayalı bir hata görürseniz, bu sayaç artımlı.  
   
- <xref:System.Diagnostics> ad alanındaki <xref:System.Diagnostics.PerformanceCounter> ve ilgili sınıflar kullanılarak ağ performans sayaçlarına erişilebilir ve yönetilebilir. Ağ performans sayaçları, Windows performans Izleyicisi konsolu ile de görüntülenebilir.  
+ Ağ performans sayaçlarına <xref:System.Diagnostics.PerformanceCounter> <xref:System.Diagnostics> ad alanındaki ilgili sınıflar kullanılarak erişilebilir ve yönetilebilir. Ağ performans sayaçları, Windows Performance Monitor konsolu ile de görüntülenebilir.  
   
- Ağ performans sayaçlarının kullanılacak yapılandırma dosyasında etkinleştirilmesi gerekir. Tüm ağ performans sayaçları, yapılandırma dosyasında tek bir ayarla etkin veya devre dışı bırakıldı. Bireysel ağ performans sayaçları etkinleştirilemez veya devre dışı bırakılamaz. Daha fazla bilgi için bkz. [\<performanceCounter > öğesi (ağ ayarları)](../configure-apps/file-schema/network/performancecounter-element-network-settings.md).  
+ Ağ performans sayaçlarının kullanılacak yapılandırma dosyasında etkinleştirilmesi gerekir. Yapılandırma dosyasında tek bir ayar la tüm ağ performans sayaçları etkin veya devre dışı bırakılır. Tek tek ağ performans sayaçları etkinleştirilemez veya devre dışı tutulamaz. Daha fazla bilgi için [ \<performanceCounter> Öğesi (Ağ Ayarları)](../configure-apps/file-schema/network/performancecounter-element-network-settings.md)bakın.  
   
- Ağ sayaçları etkinse bu, hem AppDomain başına hem de küresel performans sayaçlarını oluşturur ve güncelleştirir. Devre dışı bırakılırsa, uygulama herhangi bir ağ performans sayacı verisi sağlamacaktır.  
+ Ağ sayaçları etkinse, bu hem AppDomain başına hem de genel performans sayaçları oluşturur ve güncellenir. Devre dışı bırakılırsa, uygulama herhangi bir ağ performans sayacı verisağlamaz.  
   
- Performans sayaçları kategoriler halinde gruplandırılır. Bir uygulama aşağıdaki örnek kodla tüm kategorileri listeleyebilir:  
+ Performans sayaçları Kategoriler olarak gruplandırılır. Bir uygulama aşağıdaki örnek kodu ile tüm kategorileri listeleyebilir:  
   
 ```csharp
 PerformanceCounterCategory[] Array = PerformanceCounterCategory.GetCategories();  
@@ -208,24 +208,24 @@ for (int i = 0; i < Array.Length; i++)
 }  
 ```  
   
- Ağ performans sayaçları iki kategoride listelenmiştir:  
+ Ağ performans sayaçları iki kategoride listelenir:  
   
-- ".NET CLR Networking"-.NET Framework sürüm 2 ' de tanıtılan ve .NET Framework sürüm 2 ve sonrasında desteklenen özgün performans sayaçları.  
+- ".NET CLR Networking" - .NET Framework Version 2'de tanıtılan ve .NET Framework Version 2 ve sonraki sürümlerde desteklenen orijinal performans sayaçları.  
   
-- ".NET CLR Networking 4.0.0.0"-yukarıdaki yuva sayaçlarının yanı sıra .NET Framework sürüm 4 ve üzeri sürümlerde desteklenen yeni performans sayaçları. Bu yeni sayaçlar <xref:System.Net.HttpWebRequest> nesneler hakkında performans bilgileri sağlar.  
+- ".NET CLR Networking 4.0.0.0" - Yukarıdaki soket sayaçlarının tümü artı .NET Framework Version 4 ve sonraki sürümlerde desteklenen yeni performans sayaçları. Bu yeni sayaçlar nesneler <xref:System.Net.HttpWebRequest> üzerinde performans bilgileri sağlar.  
   
- Bir uygulamadaki performans sayaçlarına erişme ve bunları yönetme hakkında daha fazla bilgi için bkz. [performans sayaçları](performance-counters.md).  
-    
+ Bir uygulamadaki performans sayaçlarına erişim ve yönetme hakkında daha fazla bilgi için [Performans Sayaçları'na](performance-counters.md)bakın.  
+
 ## <a name="security-performance-counters"></a>Güvenlik performans sayaçları  
- Performans konsolu .NET CLR güvenlik kategorisi, ortak dil çalışma zamanının bir uygulama için gerçekleştirdiği güvenlik denetimleri hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
+ Performans konsolu .NET CLR Güvenlik kategorisi, ortak dil çalışma zamanının bir uygulama için gerçekleştirdiği güvenlik denetimleri hakkında bilgi sağlayan sayaçlar içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
 |Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
-|**Bağlantı zamanı denetimleri sayısı**|Uygulama başladıktan sonra bağlantı zamanı kod erişimi güvenlik denetimlerinin toplam sayısını görüntüler. Bağlama zamanı kod erişimi güvenlik denetimleri, bir arayan belirli bir zamanda (JıT) derleme zamanında belirli bir izin talep ettiğinde gerçekleştirilir. Bir bağlantı zamanı denetimi, çağıran başına bir kez gerçekleştirilir. Bu sayı ciddi performans sorunlarının göstergesi değildir; yalnızca güvenlik sistemi etkinliğinin bir göstergesi vardır.|  
-|**RT denetimlerinde% Time**|Son örnekten bu yana çalışma zamanı kodu erişim güvenlik denetimlerini gerçekleştirirken harcanan geçen sürenin yüzdesini görüntüler. Bu sayaç, .NET Framework bir güvenlik denetiminin sonunda güncelleştirilir. Ortalama değer değildir; Bu, son gözlemlenen değeri temsil eder.|  
-|**% Saat SIG kimlik doğrulaması**|Gelecekte kullanılmak üzere ayrılmış.|  
-|**Yığın Ilerleme derinliği**|Son çalışma zamanı kod erişimi güvenlik denetimi sırasında yığının derinliğini görüntüler. Çalışma zamanı kod erişimi güvenlik denetimleri, yığın yürüyerek gerçekleştirilir. Bu sayaç bir ortalama değil; yalnızca son gözlemlenen değeri görüntüler.|  
-|**Toplam çalışma zamanı denetimleri**|Uygulama başladıktan sonra gerçekleştirilen çalışma zamanı kodu erişimi güvenlik denetimlerinin toplam sayısını görüntüler. Çalışma zamanı kod erişimi güvenlik denetimleri, bir arayan belirli bir izin talep ettiğinde gerçekleştirilir. Çalışma zamanı denetimi, çağıran tarafından her çağrıda yapılır ve çağıranın geçerli iş parçacığı yığınını inceler. **Yığın Ilerleme derinliği** sayacı ile kullanıldığında, bu sayaç güvenlik denetimleri için gerçekleşen performans cezası olduğunu gösterir.|  
+|**# Bağlantı Zaman Kontrolleri**|Uygulama başladığından beri toplam bağlantı zamanı kodu erişim güvenlik denetimleri sayısını görüntüler. Bağlantı zamanı kodu erişim güvenlik denetimleri, arayan tam zamanında belirli bir izin istediğinde (JIT) derleme zamanı. Arayan başına bir kez bağlantı zamanı denetimi gerçekleştirilir. Bu sayım ciddi performans sorunlarının göstergesi değildir; yalnızca güvenlik sistemi etkinliğinin göstergesidir.|  
+|**RT kontrollerinde % Süre**|Son örnekten bu yana runtime kodu erişim güvenlik denetimleri gerçekleştirmek için harcanan geçen süre yüzdesini görüntüler. Bu sayaç ,NET Framework güvenlik denetiminin sonunda güncelleştirilir. Bu bir ortalama değildir; son gözlenen değeri temsil eder.|  
+|**% Zaman Sig Kimlik Doğrulama**|Daha sonraki kullanımlar için ayrılmıştır.|  
+|**Yığın Yürüyüş Derinliği**|Son çalışma zamanı kodu erişim güvenlik denetimi sırasında yığının derinliğini görüntüler. Runtime kodu erişim güvenlik denetimleri yığını yürüyerek gerçekleştirilir. Bu sayaç bir ortalama değildir; yalnızca son gözlenen değeri gösterir.|  
+|**Toplam Çalışma Süresi Denetimleri**|Uygulama başladığından beri gerçekleştirilen toplam çalışma zamanı kodu erişim güvenlik denetimleri sayısını görüntüler. Bir arayan belirli bir izin istediğinde runtime kodu erişim güvenlik denetimleri gerçekleştirilir. Çalışma zamanı denetimi, arayan tarafından her aramada yapılır ve arayanın geçerli iş parçacığı yığınını inceler. Stack Walk **Depth** sayacıile kullanıldığında, bu sayaç güvenlik denetimleri için oluşan performans cezasını gösterir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

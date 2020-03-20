@@ -8,23 +8,23 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: 4e2159cda5f35b5795804dede09ec17d07d71b23
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d1d805f7154c18dba2dcd4eb7228cc200d8da811
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699739"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155187"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a>Şifreleme ayarları için mscorlib > öğesi \<
-[\<Cryptographyısettings > öğesini](cryptographysettings-element.md)içerir.  
+# <a name="mscorlib-element-for-cryptography-settings"></a>\<şifreleme ayarları için mscorlib> Elemanı
+Şifreleme [ \<Ayarlar> öğesini](cryptographysettings-element.md)içerir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp;&nbsp; **\<mscorlib >**  
+[**\<yapılandırma>**](../configuration-element.md)  
+&nbsp;&nbsp;**\<mscorlib>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-      <mscorlib>   
+      <mscorlib>
 </mscorlib>  
 ```  
   
@@ -38,7 +38,7 @@ ms.locfileid: "71699739"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|`cryptographySettings`|Şifreleme ayarlarını içerir.|  
+|`cryptographySettings`|Şifreleme ayarları içerir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -47,7 +47,7 @@ ms.locfileid: "71699739"
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir şifreleme sınıfına başvurmak ve çalışma zamanını yapılandırmak için **\<mscorlib >** öğesinin nasıl kullanılacağını gösterir. Daha sonra "RSA" dizesini <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemine geçirebilir ve bir `MyCryptoRSAClass` nesnesi döndürmek için <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodunu kullanabilirsiniz.  
+ Aşağıdaki örnek, bir şifreleme sınıfına başvurmak ve çalışma süresini yapılandırmak için ** \<mscorlib>** öğesini nasıl kullanacağımı gösterir. Daha sonra "RSA" dizesini <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yönteme <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> geçirebilir ve `MyCryptoRSAClass` bir nesneyi döndürmek için yöntemi kullanabilirsiniz.  
   
 ```xml  
 <configuration>  

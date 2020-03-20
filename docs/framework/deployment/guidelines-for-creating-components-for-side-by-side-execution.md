@@ -6,59 +6,59 @@ helpviewer_keywords:
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 ms.openlocfilehash: 42d0e2d85517d4a8fb443db9b63e6b893267caca
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121582"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Yan Yana Yürütme için Bileşen Oluşturma Yönergeleri
-Yan yana yürütme için tasarlanan yönetilen uygulamaları veya bileşenleri oluşturmak için aşağıdaki genel yönergeleri izleyin:  
+Yan yana yürütme için tasarlanmış yönetilen uygulamalar veya bileşenler oluşturmak için aşağıdaki genel yönergeleri izleyin:  
   
-- Tür kimliğini bir dosyanın belirli bir sürümüne bağlayın.  
+- Türü kimliği bir dosyanın belirli bir sürümüne bağla.  
   
-     Ortak dil çalışma zamanı, tanımlayıcı adlı derlemeler kullanarak tür kimliğini belirli bir dosya sürümüne bağlar. Yan yana yürütmeye yönelik bir uygulama veya bileşen oluşturmak için, tüm derlemelere tanımlayıcı bir ad vermeniz gerekir. Bu kesin tür kimliği oluşturur ve herhangi bir tür çözümlemenin doğru dosyaya yönlendirilmesini sağlar. Tanımlayıcı adlı bir derleme, çalışma zamanının bir bağlama isteğini yerine getiren doğru dosyayı bulmak için kullandığı sürüm, kültür ve Yayımcı bilgilerini içerir.  
+     Ortak dil çalışma süresi, güçlü adlandırılmış derlemeler kullanarak kimlik türünü belirli bir dosya sürümüne bağlar. Yan yana yürütme için bir uygulama veya bileşen oluşturmak için, tüm derlemelere güçlü bir ad vermeniz gerekir. Bu, kesin tür kimliği oluşturur ve herhangi bir tür çözünürlüğünün doğru dosyaya yönlendirilmesini sağlar. Güçlü adlandırılmış derleme, bağlama isteğini yerine getirmek için doğru dosyayı bulmak için çalışma zamanının kullandığı sürüm, kültür ve yayımcı bilgilerini içerir.  
   
-- Sürüm duyarlı depolama kullanın.  
+- Sürüm farkında depolama alanını kullanın.  
   
-     Çalışma zamanı, sürüm algılayan depolama sağlamak için genel derleme önbelleğini kullanır. Genel bütünleştirilmiş kod önbelleği, .NET Framework kullanan her bilgisayarda yüklü sürümü algılayan bir dizin yapısıdır. Bu derlemenin yeni bir sürümü yüklendiğinde, genel derleme önbelleğinde yüklü olan derlemelerin üzerine yazılmaz.  
+     Çalışma süresi, sürüm eğitim alanını sağlamak için genel montaj önbelleğini kullanır. Genel derleme önbelleği, .NET Framework kullanan her bilgisayara yüklenen sürüm farkında bir dizin yapısıdır. Bu derlemenin yeni bir sürümü yüklendiğinde, genel derleme önbelleğine yüklenen derlemeler üzerine yazılmaz.  
   
-- Yalıtılmış olarak çalışan bir uygulama veya bileşen oluşturun.  
+- Yalıtımlı çalışan bir uygulama veya bileşen oluşturun.  
   
-     Yalıtım aşamasında çalışan bir uygulama veya bileşen, uygulamanın veya bileşenin iki örneği aynı anda çalıştığında çakışmaları önlemek için kaynakları yönetmelidir. Uygulama veya bileşen ayrıca sürüme özgü bir dosya yapısı kullanmalıdır.  
+     Yalıtımlı çalışan bir uygulama veya bileşen, uygulamanın veya bileşenin iki örneği aynı anda çalıştığında çakışmaları önlemek için kaynakları yönetmelidir. Uygulama veya bileşen de bir sürüm özel dosya yapısı kullanmanız gerekir.  
   
-## <a name="application-and-component-isolation"></a>Uygulama ve bileşen yalıtımı  
- Yan yana yürütme için bir uygulamanın veya bileşenin başarıyla tasarlanmasına yönelik bir anahtar, yalıtımdır. Uygulamanın veya bileşenin tüm kaynakları, özellikle de dosya g/ç 'yi yalıtılmış bir şekilde yönetmesi gerekir. Uygulamanızın veya bileşenin yalıtımta çalıştığından emin olmak için bu yönergeleri izleyin:  
+## <a name="application-and-component-isolation"></a>Uygulama ve Bileşen İzolasyon  
+ Yan yana yürütme için bir uygulamayı veya bileşeni başarıyla tasarlamanın bir anahtarı yalıtımdır. Uygulama veya bileşen, özellikle dosya G/Ç olmak üzere tüm kaynakları yalıtılmış bir şekilde yönetmelidir. Uygulamanızın veya bileşeninizin izole çalıştığından emin olmak için aşağıdaki yönergeleri izleyin:  
   
-- Kayıt defterine sürüme özgü bir şekilde yazın. Değerleri, sürümü gösteren yığınlar veya anahtarlar halinde depolayın ve bir bileşenin sürümleri arasında bilgi veya durum paylaşmayın. Bu, aynı anda çalışan iki uygulamanın veya bileşenin, bilgilerin üzerine yazılmasına engel olur.  
+- Kayıt defterine sürüme özgü bir şekilde yazın. Değerleri sürümü gösteren kovanlarda veya anahtarlarda depolayın ve bilgileri paylaşmayın veya bileşenin sürümleri arasında durum belirtin. Bu, iki uygulamanın veya bileşenin aynı anda çalışmasını önler.  
   
-- Bir yarış durumu gerçekleşmemesi için adlandırılmış çekirdek nesneleri sürümüne özel yapın. Örneğin, bir yarış durumu aynı uygulamanın iki sürümünden iki semafor aynı olduğunda meydana gelir.  
+- Bir yarış koşulu oluşmaması için adlandırılmış çekirdek nesneleri sürümüne özgü olun. Örneğin, aynı uygulamanın iki sürümünden iki semafor birbiri üzerine beklemede bir yarış koşulu oluşur.  
   
-- Dosya ve dizin adlarını sürümü algılayan hale getirin. Bu, dosya yapılarının sürüm bilgilerine dayanması gerektiği anlamına gelir.  
+- Dosya ve dizin adlarını sürüm farkında hale getirin. Bu, dosya yapılarının sürüm bilgilerine dayanması gerektiği anlamına gelir.  
   
-- Kullanıcı hesaplarını ve grupları sürüme özgü bir şekilde oluşturun. Bir uygulama tarafından oluşturulan kullanıcı hesapları ve gruplar, sürümle tanımlanmalıdır. Kullanıcı hesaplarını ve grupları bir uygulamanın sürümleri arasında paylaşmayın.  
+- Kullanıcı hesaplarını ve grupları sürüme özgü bir şekilde oluşturun. Bir uygulama tarafından oluşturulan kullanıcı hesapları ve grupları sürümle tanımlanmalıdır. Kullanıcı hesaplarını ve gruplarını bir uygulamanın sürümleri arasında paylaşmayın.  
   
-## <a name="installing-and-uninstalling-versions"></a>Sürümleri yükleme ve kaldırma  
- Yan yana yürütme için bir uygulama tasarlarken, sürümleri yükleme ve kaldırma ile ilgili aşağıdaki yönergeleri izleyin:  
+## <a name="installing-and-uninstalling-versions"></a>Sürümleri Yükleme ve Kaldırma  
+ Yan yana yürütme için bir uygulama tasarlarken, sürümleri yükleme ve kaldırma yla ilgili aşağıdaki yönergeleri izleyin:  
   
-- .NET Framework farklı bir sürümünde çalışan diğer uygulamalar tarafından gerekebilecek bilgileri kayıt defterinden silmeyin.  
+- .NET Framework'ün farklı bir sürümü altında çalışan diğer uygulamaların ihtiyaç duyulabileceği bilgileri kayıt defterinden silmeyin.  
   
-- Kayıt defterindeki, .NET Framework farklı bir sürümünde çalışan diğer uygulamalar tarafından gerekebilecek bilgileri değiştirme.  
+- .NET Framework'ün farklı bir sürümü altında çalışan diğer uygulamaların ihtiyaç duyulabileceği bilgileri kayıt defterinde değiştirmeyin.  
   
-- .NET Framework farklı bir sürümünde çalışan diğer uygulamalar tarafından gerekebilecek COM bileşenlerinin kaydını kaldırmayın.  
+- .NET Framework'ün farklı bir sürümü altında çalışan diğer uygulamaların ihtiyaç duyulabileceği COM bileşenlerinin kaydını silmeyin.  
   
-- Zaten kayıtlı olan bir COM sunucusu için **ınprocserver32** veya diğer kayıt defteri girdilerini değiştirmeyin.  
+- **InprocServer32** veya daha önce kaydedilmiş bir COM sunucusu için diğer kayıt defteri girişlerini değiştirmeyin.  
   
-- .NET Framework farklı bir sürümünde çalışan diğer uygulamalar tarafından gerekebilecek Kullanıcı hesaplarını veya grupları silmeyin.  
+- .NET Framework'ün farklı bir sürümü altında çalışan diğer uygulamaların ihtiyaç duyulabileceği kullanıcı hesaplarını veya gruplarını silmeyin.  
   
-- Sürüm bilgisi olmayan bir yol içeren kayıt defterine hiçbir şey eklemeyin.  
+- Kayıt defterine, kullanılmayan bir yol içeren hiçbir şey eklemeyin.  
   
-## <a name="file-version-number-and-assembly-version-number"></a>Dosya sürüm numarası ve derleme sürüm numarası  
- Dosya sürümü, çalışma zamanı tarafından kullanılmayan bir Win32 sürümü kaynağıdır. Genel olarak, dosya sürümünü yerinde güncelleştirme için de güncelleştirebilirsiniz. İki özdeş dosya farklı dosya sürümü bilgilerine sahip olabilir ve iki farklı dosya aynı dosya sürümü bilgisine sahip olabilir.  
+## <a name="file-version-number-and-assembly-version-number"></a>Dosya Sürüm Numarası ve Montaj Sürüm Numarası  
+ Dosya sürümü, çalışma zamanı tarafından kullanılmayan bir Win32 sürüm kaynağıdır. Genel olarak, yerinde bir güncelleştirme için bile dosya sürümünü güncellersiniz. İki özdeş dosya farklı dosya sürümü bilgilerine sahip olabilir ve iki farklı dosya aynı dosya sürümü bilgilerine sahip olabilir.  
   
- Derleme sürümü derleme bağlaması için çalışma zamanı tarafından kullanılır. Farklı sürüm numaralarına sahip iki özdeş derleme çalışma zamanı tarafından iki farklı derleme olarak değerlendirilir.  
+ Derleme sürümü, derleme bağlama için çalışma zamanı tarafından kullanılır. Farklı sürüm numaralarına sahip iki özdeş derleme, çalışma süresine göre iki farklı derleme olarak kabul edilir.  
   
- [Genel derleme önbelleği aracı (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md) yalnızca dosya sürüm numarası yeniyse bir derlemeyi değiştirmenize izin verir. Derleme sürüm numarası daha büyük değilse, yükleyici genellikle derleme üzerine yüklemez.  
+ [Genel Derleme Önbellek aracı (Gacutil.exe),](../tools/gacutil-exe-gac-tool.md) yalnızca dosya sürüm numarası daha yeni olduğunda bir derlemeyi değiştirmenize olanak tanır. Montajcı genellikle montaj sürüm numarası daha büyük olmadığı sürece bir derleme üzerine yüklemez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

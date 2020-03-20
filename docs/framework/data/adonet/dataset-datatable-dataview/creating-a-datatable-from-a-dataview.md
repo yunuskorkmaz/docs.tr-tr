@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: 6e066bcbe02fa9cf498e11af431b9f6dcd4432ab
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e5135aca49a63aafa3330832c54f2d28d31d60d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785520"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151357"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>DataView’dan DataTable Oluşturma
-Veri kaynağından veri aldıktan ve verilerle doldurduktan sonra, döndürülen verileri yeniden almadan sıralamak <xref:System.Data.DataTable> , filtrelemek veya başka bir şekilde sınırlamak isteyebilirsiniz. <xref:System.Data.DataView> Sınıfı bunu mümkün hale getirir. Ayrıca, <xref:System.Data.DataTable> <xref:System.Data.DataTable>öğesinden yeni bir oluşturmanız gerekiyorsa, tüm satır ve sütunları ya da verilerin bir alt <xref:System.Data.DataView.ToTable%2A> kümesini yeni bir olarak kopyalamak için yöntemini kullanabilirsiniz. <xref:System.Data.DataView> <xref:System.Data.DataView.ToTable%2A> Yöntemi için aşırı yükleme sağlar:  
+Bir veri kaynağından veri aldıktan ve verileri <xref:System.Data.DataTable> doldurduktan sonra, döndürülen verileri yeniden almadan sıralamak, filtrelemek veya başka bir şekilde sınırlamak isteyebilirsiniz. Sınıf <xref:System.Data.DataView> bunu mümkün kılıyor. Buna <xref:System.Data.DataTable> ek olarak, yeni bir oluşturmanız <xref:System.Data.DataView>gerekiyorsa, <xref:System.Data.DataView.ToTable%2A> tüm satırları ve sütunları kopyalamak için yöntemi kullanabilirsiniz, <xref:System.Data.DataTable>ya da yeni bir veri alt kümesi . Yöntem, <xref:System.Data.DataView.ToTable%2A> aşağıdakilere aşırı yükleme sağlar:  
   
-- İçindeki sütunların <xref:System.Data.DataTable> bir alt kümesi olan sütunları içeren bir sütun oluşturun. <xref:System.Data.DataView>  
+- <xref:System.Data.DataTable> 'deki sütunların bir alt kümesi olan içeren sütunlar <xref:System.Data.DataView>oluşturun.  
   
-- Transact- <xref:System.Data.DataTable> SQL içindeki DISTINCT anahtar sözcüğüne, ancak <xref:System.Data.DataView>öğesinden farklı satırlar içeren bir oluşturun.  
+- Transact-SQL'deki DISTINCT anahtar <xref:System.Data.DataView>kelimesine benzer şekilde yalnızca farklı satırlar içeren bir <xref:System.Data.DataTable> satır oluşturun.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki konsol uygulaması örneği, **AdventureWorks** örnek <xref:System.Data.DataTable> veritabanındaki **Person. Contact** tablosundan veri içeren bir oluşturur. Daha sonra örnek, bir sıralanmış ve öğesine göre <xref:System.Data.DataView> filtrelenmiş <xref:System.Data.DataTable>olarak oluşturulur. <xref:System.Data.DataTable> <xref:System.Data.DataTable> <xref:System.Data.DataView> Ve içeriğini görüntülendikten sonra örnek, yöntemi<xref:System.Data.DataView.ToTable%2A> çağırarak, yalnızca kullanılabilir sütunların yalnızca bir alt kümesini seçerek öğesinden yeni bir oluşturur. <xref:System.Data.DataView> Son olarak, örnek yeni <xref:System.Data.DataTable>içeriğini görüntüler.  
+ Aşağıdaki konsol uygulaması <xref:System.Data.DataTable> **örneği, AdventureWorks** örnek veritabanındaki **Kişi.İlgili kişi** tablosundan veri içeren bir örnek oluşturur. Ardından, örnek, <xref:System.Data.DataView> <xref:System.Data.DataTable>. <xref:System.Data.DataTable> Ve içeriğini görüntüledikten sonra <xref:System.Data.DataView>, örnek kullanılabilir <xref:System.Data.DataTable> sütunların <xref:System.Data.DataView> yalnızca <xref:System.Data.DataView.ToTable%2A> bir alt kümesi seçerek, yöntemi çağırarak yeni bir oluşturur. Son olarak, örnek yeni <xref:System.Data.DataTable>içeriğini görüntüler.  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -114,7 +114,7 @@ private static void DemonstrateDataView()
 // connectionString is assumed to be a valid connection string.  
 SqlDataAdapter adapter = new SqlDataAdapter(  
     "SELECT FirstName, LastName, EmailAddress " +  
-    "FROM Person.Contact WHERE FirstName LIKE 'Mich%'",   
+    "FROM Person.Contact WHERE FirstName LIKE 'Mich%'",
        GetConnectionString());  
 DataTable table = new DataTable();  
   

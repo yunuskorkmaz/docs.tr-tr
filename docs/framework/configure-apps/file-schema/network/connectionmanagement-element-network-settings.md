@@ -8,24 +8,24 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: b769dd8d3ed0c617d0d8f908e7ef516615da09a7
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 9f1e382bbbaad2cb95e2c33bbbdfb4c505378c9e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088454"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154900"
 ---
-# <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement > öğesi (ağ ayarları)
-Bir ağ konağına en fazla bağlantı sayısını belirtir.  
+# <a name="connectionmanagement-element-network-settings"></a>\<bağlantıYönetim> Öğesi (Ağ Ayarları)
+Bir ağ ana bilgisayarına en fazla bağlantı sayısını belirtir.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<connectionManagement >**
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<bağlantıYönetim>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<connectionManagement>   
+<connectionManagement>
 </connectionManagement>  
 ```  
   
@@ -39,24 +39,24 @@ Bir ağ konağına en fazla bağlantı sayısını belirtir.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[add](add-element-for-connectionmanagement-network-settings.md)|Bağlantı yönetimi listesine bir IP adresi veya DNS adı ekler.|  
-|[lediğiniz](clear-element-for-connectionmanagement-network-settings.md)|Bağlantı yönetimi listesini temizler.|  
-|[remove](remove-element-for-connectionmanagement-network-settings.md)|Bağlantı yönetimi listesinden bir IP adresini veya DNS adını kaldırır.|  
+|[Ekle](add-element-for-connectionmanagement-network-settings.md)|Bağlantı yönetim listesine bir IP adresi veya DNS adı ekler.|  
+|[Temizleyin](clear-element-for-connectionmanagement-network-settings.md)|Bağlantı yönetimi listesini temizler.|  
+|[Kaldırmak](remove-element-for-connectionmanagement-network-settings.md)|Bağlantı yönetim listesinden bir IP adresi veya DNS adını kaldırır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[system.net](system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.|  
+|[system.net](system-net-element-network-settings.md)|.NET Framework'ün ağa nasıl bağladığını belirten ayarlar içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `connectionManagement` öğesi, bir sunucu veya sunucu grubu için en fazla bağlantı sayısını tanımlar.  
+ Öğe, `connectionManagement` bir sunucuya veya sunucu grubuna en fazla bağlantı sayısını tanımlar.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+ Bu öğe uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir uygulamayı sunucu `www.contoso.com` dört bağlantı ve diğer tüm sunuculara iki bağlantı kullanacak şekilde yapılandırır.  
+ Aşağıdaki örnek, bir uygulamayı sunucuya `www.contoso.com` dört, diğer tüm sunuculara iki bağlantı kullanacak şekilde yapılandırır.  
   
 ```xml  
 <configuration>  

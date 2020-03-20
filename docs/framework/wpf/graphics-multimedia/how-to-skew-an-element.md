@@ -6,45 +6,45 @@ helpviewer_keywords:
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: cf770a284238826852e788e27f3b3f329ed0269f
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 370ac28b07427345b52822133b5414b45d4462eb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664078"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187658"
 ---
 # <a name="how-to-skew-an-element"></a>Nasıl yapılır: Bir Öğeyi Eğme
-Bu örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Media.SkewTransform> bir öğeyi eğme için. Olarak da bilinen bir yamultma olan bir eğme koordinat bir Tekdüzen olmayan şekilde uzatır bir dönüşümdür. Tipik bir kullanımı, bir <xref:System.Windows.Media.SkewTransform> 2B nesneler, 3B derinliği benzetimi için olduğu.  
+Bu örnek, bir <xref:System.Windows.Media.SkewTransform> öğeyi eğriltmek için a'nın nasıl kullanılacağını gösterir. Bir eğrilik, aynı zamanda bir yama olarak bilinen, olmayan bir üniforma şekilde koordinat alanı uzanan bir dönüşümdür. A'nın <xref:System.Windows.Media.SkewTransform> tipik kullanımlarından biri, 2-B nesnelerde 3-B derinliğinin simüle edilmesidir.  
   
- Kullanım <xref:System.Windows.Media.SkewTransform.CenterX%2A> ve <xref:System.Windows.Media.SkewTransform.CenterY%2A> merkezi belirtmek için özellikleri noktasını <xref:System.Windows.Media.SkewTransform>.  
+ 'nin <xref:System.Windows.Media.SkewTransform.CenterX%2A> <xref:System.Windows.Media.SkewTransform.CenterY%2A> merkez noktasını belirtmek için ve özelliklerini kullanın. <xref:System.Windows.Media.SkewTransform>  
   
- Kullanım <xref:System.Windows.Media.SkewTransform.AngleX%2A> ve <xref:System.Windows.Media.SkewTransform.AngleY%2A> eğme açısı x ve y ekseni belirtin ve bu eksen boyunca geçerli koordinat sistemini eğriltmek için özellikleri.  
+ X <xref:System.Windows.Media.SkewTransform.AngleX%2A> ekseni ve <xref:System.Windows.Media.SkewTransform.AngleY%2A> y ekseninin çarpık açısını belirtmek ve bu eksenler boyunca geçerli koordinat sistemini eğriltmek için ve özellikleri kullanın.  
   
- Bir eğme dönüştürmesi etkisini tahmin etmek için göz önünde bulundurun <xref:System.Windows.Media.SkewTransform.AngleX%2A> özgün koordinat sistemi x ekseni değerlerini eğriltir. Bu nedenle, bir <xref:System.Windows.Media.SkewTransform.AngleX%2A> 30 y kaynağı üzerinden 30 derece çevirir ve değerleri x-30 derece kaynağından eğriltir. Benzer şekilde, bir <xref:System.Windows.Media.SkewTransform.AngleY%2A> şeklin y değerlerinin kaynaktan 30 derece 30 Eğer. Bu (taşıma) çevirme aynı etkiyi olmadığını unutmayın x veya y - 30 derece koordinat sistemi.  
+ Çarpık dönüşümün etkisini tahmin etmek için, <xref:System.Windows.Media.SkewTransform.AngleX%2A> x ekseni değerlerini özgün koordinat sistemine göre çarpıtmayı düşünün. Bu nedenle, <xref:System.Windows.Media.SkewTransform.AngleX%2A> 30'lu bir için y ekseni menşei boyunca 30 derece döner ve x-'deki değerleri bu kaynaktan 30 derece eğritir. Aynı şekilde, <xref:System.Windows.Media.SkewTransform.AngleY%2A> 30'dan biri şeklin y değerlerini kökenden 30 derece eğriltiyor. Bunun koordinat sistemini x veya y-'de 30 derece çevirmek (taşımak) ile aynı etkiyi yaratmadığını unutmayın.  
   
- Aşağıdaki örnekte yatay eğme açısını 45 derecenin için geçerli bir <xref:System.Windows.Shapes.Rectangle> bir merkez noktadan (0,0).  
+ Aşağıdaki örnek, (0,0) bir merkez noktasından <xref:System.Windows.Shapes.Rectangle> a 45 derecelik yatay bir eğrilik uygular.  
   
 ## <a name="example"></a>Örnek  
  [!code-xaml[transformsSample#41](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#41)]  
   
- Aşağıdaki örnekte yatay eğme açısını 45 derecenin için geçerli bir <xref:System.Windows.Shapes.Rectangle> bir merkez noktadan (25,25).  
+ Aşağıdaki örnek, (25,25) bir merkez <xref:System.Windows.Shapes.Rectangle> noktasından a için 45 derecelik yatay bir eğrilik uygular.  
   
  [!code-xaml[transformsSample#42](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#42)]  
   
- Aşağıdaki örnekte dikey eğme açısını 45 derecenin için geçerli bir <xref:System.Windows.Shapes.Rectangle> bir merkez noktadan (25,25).  
+ Aşağıdaki örnek, (25,25) bir merkez <xref:System.Windows.Shapes.Rectangle> noktasından a için 45 derecelik dikey bir eğrilik uygular.  
   
  [!code-xaml[transformsSample#43](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#43)]  
   
- Aşağıdaki çizimde, bu örnekte kullanılan farklı farklarından gösterir.  
+ Aşağıdaki resimde, bu örnekte kullanılan farklı eğrilikler gösterilmektedir.  
   
- ![SkewTransform örneği](./media/img-wcpsdk-graphicsmm-skewtransformexample.gif "img_wcpsdk_graphicsmm_skewtransformexample")  
-Gösterilen üç SkewTransform örneği  
+ ![SkewTransform örnekleri](./media/img-wcpsdk-graphicsmm-skewtransformexample.gif "img_wcpsdk_graphicsmm_skewtransformexample")  
+Üç SkewTransform örnekleri resimli  
   
- Tam bir örnek için bkz. [2B dönüşüm örnek](https://go.microsoft.com/fwlink/?LinkID=158252).  
+ Numunenin tamamı için [2-B Dönüşüm Örneği'ne](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.SkewTransform>
 - [Dönüşümlere Genel Bakış](transforms-overview.md)
-- [Nasıl Yapılır Konuları](transformations-how-to-topics.md)
+- [Nasıl Dır Konular](transformations-how-to-topics.md)

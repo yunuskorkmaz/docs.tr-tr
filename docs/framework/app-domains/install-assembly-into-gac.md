@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir derlemeyi genel derleme önbelleğine yüklemek'
+title: 'Nasıl yapilir: Derlemeyi genel derleme önbelleğine yükleme'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -9,56 +9,56 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-ms.openlocfilehash: e670f5dba47393b7df047fb4e6f7d92df8cb187c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64878a795a7c5b790c8991064e32b82505685c0c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119804"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155569"
 ---
-# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Nasıl yapılır: bir derlemeyi genel derleme önbelleğine yüklemek
+# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Nasıl yapilir: Derlemeyi genel derleme önbelleğine yükleme
 
-Genel bütünleştirilmiş kod önbelleği (GAC), birkaç uygulamanın paylaştığı derlemeleri depolar. Aşağıdaki bileşenlerden biriyle bir derlemeyi [genel bütünleştirilmiş kod önbelleğine](gac.md) yükler: 
+Genel derleme önbelleği (GAC), çeşitli uygulamaların paylaştığı derlemeleri depolar. Aşağıdaki bileşenlerden biriyle bir derlemeyi [genel montaj önbelleğine](gac.md) yükleyin:
 
 - [Windows Installer](#windows-installer)
-- [Genel derleme önbelleği aracı](#global-assembly-cache-tool)
+- [Genel Montaj Önbellek aracı](#global-assembly-cache-tool)
 
 > [!IMPORTANT]
-> Genel bütünleştirilmiş kod önbelleğine yalnızca tanımlayıcı adlı derlemeler yükleyebilirsiniz. Tanımlayıcı adlı bütünleştirilmiş kod oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: derlemeyi güçlü bir adla imzalama](../../standard/assembly/sign-strong-name.md).
+> Genel derleme önbelleğine yalnızca güçlü adlandırılmış derlemeler yükleyebilirsiniz. Güçlü adlandırılmış bir derlemenin nasıl oluşturulabildiğini öğrenmek için [bkz.](../../standard/assembly/sign-strong-name.md)
 
 ## <a name="windows-installer"></a>Windows Installer
 
-Windows yükleme altyapısı [Windows Installer](/windows/desktop/Msi/installation-of-assemblies-to-the-global-assembly-cache), genel derleme önbelleğine derlemeler eklemenin önerilen yoludur. Windows Installer, genel derleme önbelleğindeki derlemelerin ve diğer avantajlardan başvuru saymasını sağlar. Windows Installer için bir yükleyici paketi oluşturmak için, [Visual Studio 2017 Için Wix araç takımı uzantısını](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension)kullanın.
+[Windows Installer](/windows/desktop/Msi/installation-of-assemblies-to-the-global-assembly-cache), Windows yükleme motoru, genel derleme önbelleğine derlemeler eklemek için önerilen yoldur. Windows Installer, genel derleme önbelleğindeki derlemelerin başvuru sayımını ve diğer avantajları sağlar. Windows Installer için yükleyici paketi oluşturmak [için Visual Studio 2017 için WiX araç seti uzantısını](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension)kullanın.
 
-## <a name="global-assembly-cache-tool"></a>Genel Derleme Önbelleği aracı
+## <a name="global-assembly-cache-tool"></a>Genel Montaj Önbellek aracı
 
-Genel bütünleştirilmiş kod önbelleğine derleme eklemek ve genel derleme önbelleğinin içeriğini görüntülemek için [.NET genel derleme önbelleği yardımcı programını (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md) kullanabilirsiniz.
+[.NET Global Assembly Cache yardımcı programını (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) genel derleme önbelleğine derlemeler eklemek ve genel derleme önbelleğinin içeriğini görüntülemek için kullanabilirsiniz.
 
    > [!NOTE]
-   > *Gacutil. exe* yalnızca geliştirme amaçlıdır. Bu uygulamayı, genel derleme önbelleğine üretim derlemeleri yüklemek için kullanmayın.
+   > *Gacutil.exe* sadece geliştirme amaçlıdır. Üretim derlemelerini genel derleme önbelleğine yüklemek için kullanmayın.
 
-GAC 'de bir derlemeyi yüklemek için *Gacutil. exe* ' yi kullanma söz dizimi aşağıdaki gibidir:
+GAC bir derleme yüklemek için *gacutil.exe* kullanmak için sözdizimi aşağıdaki gibidir:
 
 ```cmd
 gacutil -i <assembly name>
 ```
 
-Bu komutta *\<derleme adı >* , genel derleme önbelleğine yüklenecek derlemenin adıdır.
+Bu komutta, * \<derleme adı>,* genel derleme önbelleğine yüklenmesi gereken derlemenin adıdır.
 
-*Gacutil. exe* dosyası sistem yolunuzda DEĞILSE, [VS *\<sürüm >* için geliştirici komut istemi](../tools/developer-command-prompt-for-vs.md)' ni kullanın.
+*gacutil.exe* sistem yolunuzda değilse, [VS * \<sürümü>* için Geliştirici komut istemini ](../tools/developer-command-prompt-for-vs.md)kullanın.
 
-Aşağıdaki örnek, *Hello. dll* dosya adına sahip bir derlemeyi genel bütünleştirilmiş kod önbelleğine yükler.
+Aşağıdaki örnek, genel derleme önbelleğine dosya adı *hello.dll* içeren bir derleme yükler.
 
 ```cmd
 gacutil -i hello.dll
 ```
 
 > [!NOTE]
-> .NET Framework önceki sürümlerinde, *Shfusion. dll* Windows kabuğu uzantısı, derlemeleri dosya Gezgini 'ne sürükleyerek yüklemenizi sağlar. .NET Framework 4 ' ten başlayarak *Shfusion. dll* artık kullanılmıyor.
+> .NET Framework'ün önceki sürümlerinde, *Shfusion.dll* Windows kabuk uzantısı derlemeleri Dosya Gezgini'ne sürükleyerek yüklemenize olanak sağlar. .NET Framework 4 ile başlayarak, *Shfusion.dll* eskidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derlemeler ve genel derleme önbelleği ile çalışma](working-with-assemblies-and-the-gac.md)
-- [Nasıl yapılır: genel bütünleştirilmiş kod önbelleğinden bir derlemeyi kaldırma](how-to-remove-an-assembly-from-the-gac.md)
-- [Gacutil. exe (genel derleme önbelleği aracı)](../tools/gacutil-exe-gac-tool.md)
-- [Nasıl yapılır: bir derlemeyi güçlü bir adla Imzalama](../../standard/assembly/sign-strong-name.md)
+- [Derlemeler ve genel montaj önbelleği yle çalışma](working-with-assemblies-and-the-gac.md)
+- [Nasıl yapilir: Derlemeyi genel montaj önbelleğinden kaldırma](how-to-remove-an-assembly-from-the-gac.md)
+- [Gacutil.exe (Küresel Montaj Önbellek aracı)](../tools/gacutil-exe-gac-tool.md)
+- [Nasıl yapilir: Güçlü bir ada sahip bir derlemeyi imzalama](../../standard/assembly/sign-strong-name.md)

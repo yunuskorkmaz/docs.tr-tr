@@ -10,27 +10,27 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: 76dad0c0b75d20627e9f57fd1bb467bf17c9294c
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: f4edce948033478aab59a2aff61abadc55a327ce
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088508"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155030"
 ---
-# <a name="add-element-for-webrequestmodules-network-settings"></a>webRequestModules için > öğesi ekleme \<(ağ ayarları)
+# <a name="add-element-for-webrequestmodules-network-settings"></a>\<webRequestModules (Ağ Ayarları) için> Öğesi ekle
 Uygulamaya özel bir Web isteği modülü ekler.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webRequestModules**](webrequestmodules-element-network-settings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<add >**
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<webRequestModules>**](webrequestmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>ekleyin**
 
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<add   
-  prefix="URI prefix"   
-  type="type_fullname, assembly_fullname"   
+<add
+  prefix="URI prefix"
+  type="type_fullname, assembly_fullname"
 />  
 ```  
   
@@ -41,8 +41,8 @@ Uygulamaya özel bir Web isteği modülü ekler.
   
 |**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|`prefix`|Bu Web isteği modülü tarafından işlenen istekler için URI ön eki.|  
-|`type`|Bu Web istek modülünü uygulayan, tam nitelikli tür adı (<xref:System.Type.FullName%2A> özelliği tarafından belirtilir) ve derleme adı (<xref:System.Reflection.Assembly.FullName%2A> özelliği tarafından belirtilir).|  
+|`prefix`|Bu Web istek modülü tarafından işlenen istekler için URI öneki.|  
+|`type`|Tam nitelikli tür adı <xref:System.Type.FullName%2A> (özellik tarafından gösterilir) ve montaj <xref:System.Reflection.Assembly.FullName%2A> adı (özellik tarafından gösterilir), virgülle ayrılmış, bu Web istek modüllerini uygular.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -51,22 +51,22 @@ Uygulamaya özel bir Web isteği modülü ekler.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[webRequestModules](webrequestmodules-element-network-settings.md)|Ağ konaklarından bilgi istemek için kullanılacak modülleri belirtir.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|Ağ ana bilgisayarlarından bilgi istemek için kullanılacak modülleri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `prefix` özniteliği belirtilen Web isteği modülünü kullanan URI önekini tanımlar. Web isteği modülleri, genellikle HTTP veya FTP gibi belirli bir protokolü işlemek için kaydedilir, ancak bir sunucudaki belirli bir sunucuya veya yola yönelik bir isteği işlemek için kayıt yapılabilir.  
+ Öznitelik, `prefix` belirtilen Web isteği modüllerini kullanan URI önekini tanımlar. Web istek modülleri genellikle HTTP veya FTP gibi belirli bir protokolü işlemek için kaydedilir, ancak bir isteği bir sunucuda belirli bir sunucuya veya yola işlemek için kaydedilebilir.  
   
- Web isteği modülü, <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> yöntemine bir URI eşleştirme öneki geçirildiğinde oluşturulur.  
+ Uri eşleştirme öneki <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> yönteme geçirildiğinde Web isteği modülü oluşturulur.  
   
- `prefix` özniteliğin değeri geçerli bir URI 'nin baştaki karakterleri olmalıdır. Örneğin, `http` veya `http://www.contoso.com`.
+ Öznitelik değeri `prefix` geçerli bir URI'nin önde gelen karakterleri olmalıdır. Örneğin `http` veya `http://www.contoso.com` olabilir.
   
- `type` özniteliğin değeri, virgülle ayrılmış olarak geçerli bir tür adı ve karşılık gelen derleme adı olmalıdır.
+ Öznitelik için `type` değer geçerli bir tür adı ve ilgili derleme adı, bir virgül ile ayrılmış olmalıdır.
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+ Bu öğe uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, HTTP için özel bir Web isteği modülü kaydeder. Version ve PublicKeyToken değerlerini belirtilen modülle ilgili doğru değerlerle değiştirmelisiniz.  
+ Aşağıdaki örnekte HTTP için özel bir Web isteği modülü kaydedilir. Sürüm ve PublicKeyToken değerlerini belirtilen modül için doğru değerlerle değiştirmelisiniz.  
   
 ```xml  
 <configuration>  

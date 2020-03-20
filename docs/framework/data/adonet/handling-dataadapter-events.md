@@ -5,41 +5,41 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: 8438a7b54ca19625687ab96386384cf62ae62d11
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d01198d158c4e1c64f12e8a0756c3d4e599fce74
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783805"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149550"
 ---
 # <a name="handling-dataadapter-events"></a>DataAdapter Olaylarını İşleme
-ADO.net <xref:System.Data.Common.DataAdapter> , veri kaynağındaki verilerde yapılan değişikliklere yanıt vermek için kullanabileceğiniz üç olay sunar. Aşağıdaki tabloda `DataAdapter` olaylar gösterilmektedir.  
+ADO.NET, <xref:System.Data.Common.DataAdapter> veri kaynağındaki verilerde yapılan değişikliklere yanıt vermek için kullanabileceğiniz üç olayı ortaya çıkarır. Aşağıdaki tabloolayları `DataAdapter` gösterir.  
   
 |Olay|Açıklama|  
 |-----------|-----------------|  
-|`RowUpdating`|Bir satırdaki güncelleştirme, ekleme veya silme işlemi ( `Update` metotlardan birine yapılan bir çağrı ile) başlamak üzere.|  
-|`RowUpdated`|Bir satırdaki güncelleştirme, ekleme veya silme işlemi ( `Update` metotlardan birine yapılan bir çağrı ile) tamamlanmıştır.|  
-|`FillError`|`Fill` İşlem sırasında bir hata oluştu.|  
+|`RowUpdating`|Bir satırda `Update` (yöntemlerden birine yapılan bir çağrıyla) bir UPDATE, INSERT veya DELETE işlemi başlamak üzeredir.|  
+|`RowUpdated`|Bir satırdaki `Update` (yöntemlerden birine yapılan bir çağrıyla) BIR UPDATE, INSERT veya DELETE işlemi tamamlandı.|  
+|`FillError`|Bir işlem sırasında bir `Fill` hata oluştu.|  
   
-## <a name="rowupdating-and-rowupdated"></a>RowUpdating ve RowUpdated  
- `RowUpdating`, <xref:System.Data.DataSet> öğesinden bir satırdaki herhangi bir güncelleştirme veri kaynağında işlenmeden önce tetiklenir. `RowUpdated`, `DataSet` öğesinden bir satırdaki herhangi bir güncelleştirme veri kaynağında işlendikten sonra oluşturulur. Sonuç olarak, güncelleştirme davranışını yapmadan önce `RowUpdating` değiştirmek için, bir güncelleştirme gerçekleştiğinde, güncelleştirilmiş bir satıra yönelik bir başvuruyu sürdürmek için, geçerli güncelleştirmeyi iptal etmek ve daha sonra işlenecek bir toplu işlem için zamanlamak üzere, bir güncelleştirme gerçekleştiğinde ek işleme sağlamak için kullanabilirsiniz vb. `RowUpdated`, güncelleştirme sırasında oluşan hatalara ve özel durumlara yanıt vermek için yararlıdır. Öğesine `DataSet`hata bilgilerini ve yeniden deneme mantığını ve benzerlerini de ekleyebilirsiniz.  
+## <a name="rowupdating-and-rowupdated"></a>Satır Güncelleme ve Satır Güncelleme  
+ `RowUpdating`veri kaynağında işlenen bir satıra <xref:System.Data.DataSet> herhangi bir güncelleştirme önce yükseltilir. `RowUpdated`veri kaynağında işlenen bir satıra `DataSet` herhangi bir güncelleştirme sonra yükseltilir. Sonuç olarak, güncelleştirme `RowUpdating` davranışını gerçekleşmeden önce değiştirmek, güncelleştirme ne zaman gerçekleşeceğini ek işleme sağlamak, güncelleştirilmiş bir satıra başvuruyu tutmak, geçerli güncelleştirmeyi iptal etmek ve daha sonra işlenecek bir toplu iş işlemi için zamanlamak için kullanabilirsiniz. `RowUpdated`güncelleştirme sırasında oluşan hataları ve özel durumları yanıtlamak için yararlıdır. Hata bilgilerini `DataSet`, yeniden deneme mantığına ve benzeri bilgilere ekleyebilirsiniz.  
   
- <xref:System.Data.Common.RowUpdatingEventArgs> `Command` `Row` Ve olaylarına geçirilen`RowUpdating`bağımsızdeğişkenler şunlardır :`Command` güncelleştirmeyi gerçekleştirmek için kullanılan nesneye başvuran bir özellik; a <xref:System.Data.Common.RowUpdatedEventArgs> `RowUpdated` Güncelleştirilmiş `DataRow` bilgileri içeren nesneye başvuran özellik; ne tür bir güncelleştirme `StatementType` gerçekleştirilmekte `TableMapping`olan bir özellik; varsa,, varsa, ve `Status` işlemi.  
+ Ve <xref:System.Data.Common.RowUpdatingEventArgs> <xref:System.Data.Common.RowUpdatedEventArgs> bağımsız değişkenlere `RowUpdating` `RowUpdated` geçirilen ve olaylar `Command` şunlardır: `Command` güncelleştirmeyi gerçekleştirmek için kullanılan nesneye başvuran bir özellik; güncelleştirilmiş bilgileri `DataRow` içeren nesneye başvuran bir `Row` özellik; ne `StatementType` tür bir güncelleştirme nin gerçekleştirildiği ne tür bir özellik; `TableMapping`, varsa; `Status` ve operasyonun.  
   
- `Status` Özelliği, işlem sırasında bir hata oluşup olmadığını ve isterseniz geçerli ve sonuç satırlarıyla eylemleri denetlemek için kullanabilirsiniz. Olay gerçekleştiğinde, `Status` özelliği ya `ErrorsOccurred`da `Continue` değerine eşittir. Aşağıdaki tabloda, güncelleştirme sırasında sonraki işlemleri denetlemek için `Status` özelliği ayarlayabileceğiniz değerler gösterilmektedir.  
+ `Status` İşlem sırasında bir hata oluşup oluşmadiğini belirlemek ve istenirse, eylemleri geçerli ve ortaya çıkan satırlara karşı denetlemek için özelliği kullanabilirsiniz. Olay oluştuğunda, `Status` özellik eşittir ya `Continue` `ErrorsOccurred`da . Aşağıdaki tablo, güncelleştirme sırasında sonraki eylemleri `Status` denetlemek için özelliği ayarlayabileceğiniz değerleri gösterir.  
   
 |Durum|Açıklama|  
 |------------|-----------------|  
 |`Continue`|Güncelleştirme işlemine devam edin.|  
-|`ErrorsOccurred`|Güncelleştirme işlemini iptal edin ve bir özel durum oluşturun.|  
+|`ErrorsOccurred`|Güncelleştirme işlemini iptal edin ve bir özel durum atın.|  
 |`SkipCurrentRow`|Geçerli satırı yoksayın ve güncelleştirme işlemine devam edin.|  
-|`SkipAllRemainingRows`|Güncelleştirme işlemini iptal edin, ancak özel durum oluşturmaz.|  
+|`SkipAllRemainingRows`|Güncelleştirme işlemini iptal edin, ancak bir özel durum atmayın.|  
   
- `Status` Özelliği olarak`ErrorsOccurred` ayarlamak bir özel durumun oluşturulmasına neden olur. `Errors` Özelliği istenen özel duruma ayarlayarak hangi özel durumun oluşturulmuş olduğunu denetleyebilirsiniz. İçin `Status` diğer değerlerden birini kullanmak, bir özel durumun oluşturulmasını engeller.  
+ `Status` Özelliği, `ErrorsOccurred` özel bir özel durum atacak şekilde ayarlamak. `Errors` Özelliği istenilen özel durum için ayarlayarak hangi özel durum atılacağını denetleyebilirsiniz. Diğer değerlerden birini `Status` kullanmak, bir özel durum atılmasını önler.  
   
- Ayrıca, `ContinueUpdateOnError` güncelleştirilmiş satırlar için hataları işlemek üzere özelliğini de kullanabilirsiniz. İse `DataAdapter.ContinueUpdateOnError` `RowError` , bir satırdaki bir güncelleştirme bir özel durumla sonuçlanmışsa, özel durumun metni belirli bir satırın bilgilerine konur ve işleme özel durum oluşturmadan devam eder. `true` Bu, bir hata ile karşılaşıldığında hatalara yanıt vermenize `Update` olanak sağlayan `RowUpdated` olaya karşılık olarak hatalara yanıt vermenize olanak sağlar.  
+ Güncelleştirilmiş satırlar `ContinueUpdateOnError` için hataları işlemek için özelliği de kullanabilirsiniz. Eğer `DataAdapter.ContinueUpdateOnError` `true`ise, bir satıra güncelleştirme bir özel durum atılması ile sonuçlanırsa, özel durum metni belirli satırın `RowError` bilgilerine yerleştirilir ve işleme özel durum atmadan devam edilir. Bu, hatayla karşılaşıldığında `Update` hatalara yanıt vermenizi `RowUpdated` sağlayan olayın aksine, tamamlandığında hatalara yanıt vermenizi sağlar.  
   
- Aşağıdaki kod örneği, olay işleyicilerinin nasıl ekleneceğini ve kaldırılacağını gösterir. Olay `RowUpdating` işleyicisi, bir zaman damgasıyla silinen tüm kayıtların günlüğünü yazar. `RowError`  =  `ContinueUpdateOnError`Olay işleyicisi `true`, içindekisatırınözelliğinehatabilgileriniekler,özeldurumubastırırveişlemedevameder(davranışınıyansıtma).`DataSet` `RowUpdated`  
+ Aşağıdaki kod örneği, olay işleyicilerinin hem ekleyeceğini hem de kaldırılmasını gösterir. Olay `RowUpdating` işleyicisi, silinen tüm kayıtların bir günlüğünü bir zaman damgası ile yazar. `RowUpdated` Olay işleyicisi satırın `RowError` özelliğine hata `DataSet`bilgileri ekler, özel durumu bastırır ve işleme `ContinueUpdateOnError`  =  `true`devam eder (davranışı yansıtma).  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -107,7 +107,7 @@ protected static void OnRowUpdating(
   {  
     System.IO.TextWriter tw = System.IO.File.AppendText("Deletes.log");  
     tw.WriteLine(  
-      "{0}: Customer {1} Deleted.", DateTime.Now,   
+      "{0}: Customer {1} Deleted.", DateTime.Now,
        args.Row["CustomerID", DataRowVersion.Original]);  
     tw.Close();  
   }  
@@ -124,21 +124,21 @@ protected static void OnRowUpdated(
 }  
 ```  
   
-## <a name="fillerror"></a>FillError  
- İşlemsırasında`Fill` bir `FillError` hata oluştuğunda olayı yayınlar.`DataAdapter` Bu tür bir hata genellikle, eklenmekte olan satırdaki veriler bir duyarlık kaybı olmadan bir .NET Framework türüne dönüştürülemiyorsa oluşur.  
+## <a name="fillerror"></a>Fillerror  
+ Bir `DataAdapter` `Fill` işlem `FillError` sırasında bir hata oluştuğunda sorunları. Bu tür hatalar genellikle, eklenen satırdaki verilerin bazı kesinlik kaybı olmadan bir .NET Framework türüne dönüştürülemediğinde oluşur.  
   
- `Fill` İşlem sırasında bir hata oluşursa, geçerli satır `DataTable`öğesine eklenmez. Olay, hatayı çözmenize ve satırı eklemenize, ya da dışlanan satırı yoksaymanızı ve `Fill` işleme devam etmenizi sağlar. `FillError`  
+ Bir işlem sırasında bir `Fill` hata oluşursa, geçerli `DataTable`satır . Olay, `FillError` hatayı çözmenizi ve satırı eklemenizi veya dışlanan satırı yok `Fill` saymanızı ve işlemi devam etmenizi sağlar.  
   
- Olaya`FillError` geçilen, `FillErrorEventArgs` hatalara yanıt vermenize ve bunları çözmenize olanak sağlayan çeşitli özellikler içerebilir. Aşağıdaki tabloda `FillErrorEventArgs` nesnesinin özellikleri gösterilmektedir.  
+ `FillError` Olaya geçirilen, `FillErrorEventArgs` yanıt vermenizi ve hataları çözmenizi sağlayan birkaç özellik içerebilir. Aşağıdaki tablo nesnenin `FillErrorEventArgs` özelliklerini gösterir.  
   
 |Özellik|Açıklama|  
 |--------------|-----------------|  
-|`Errors`|`Exception` Bu oluştu.|  
-|`DataTable`|Hata oluştuğunda Doldurulmakta olan nesne.`DataTable`|  
-|`Values`|Hata oluştuğunda eklenmekte olan satırın değerlerini içeren bir nesne dizisi. `Values` Dizinin sıralı başvuruları, eklenmekte olan satır sütunlarının sıralı başvurularına karşılık gelir. Örneğin, `Values[0]` satırın ilk sütunu olarak eklenmekte olan değerdir.|  
-|`Continue`|Bir özel durum oluşturulup oluşturulmayacağını seçmenize olanak sağlar. Özelliği olarak `false` ayarlamak geçerli`Fill` işlemi durdurur ve bir özel durum oluşturulur. `Continue` Hataya rağmen `true` `Continue` işleme`Fill` devam etmek için ayarlama.|  
+|`Errors`|Olan `Exception` bu.|  
+|`DataTable`|Hata `DataTable` oluştuğunda doldurulan nesne.|  
+|`Values`|Hata oluştuğunda eklenen satırın değerlerini içeren bir nesne dizisi. `Values` Dizinin ordinal referansları, eklenen satır sütunlarının ordinal başvurularına karşılık gelir. Örneğin, `Values[0]` satırın ilk sütunu olarak eklenen değerdir.|  
+|`Continue`|Bir özel durum atıp atmayacağını seçmenizi sağlar. `Continue` Özelliğin geçerli `false` `Fill` işlemi durduracak şekilde ayarlanması ve bir özel durum atılır. Ayarı, `Continue` `Fill` hataya `true` rağmen işlemi devam ettir.|  
   
- Aşağıdaki kod örneği, `FillError` `DataAdapter`olayı için bir olay işleyicisi ekler. `FillError` Olay kodunda örnek, özel duruma yanıt verme fırsatı sağlayarak duyarlık kaybı için olası olup olmadığını belirler.  
+ Aşağıdaki kod örneği olay için `FillError` bir olay `DataAdapter`işleyicisi ekler . `FillError` Olay kodunda, örnek, özel durum yanıtlama olanağı sağlayarak hassas kayıp potansiyeli olup olmadığını belirler.  
   
 ```vb  
 AddHandler adapter.FillError, New FillErrorEventHandler( _  
@@ -178,7 +178,7 @@ protected static void FillError(object sender, FillErrorEventArgs args)
     DataRow myRow = args.DataTable.Rows.Add(new object[]  
        {args.Values[0], args.Values[1], DBNull.Value});  
     //Set the RowError containing the value for the third column.  
-    myRow.RowError =   
+    myRow.RowError =
        "OverflowException Encountered. Value from data source: " +  
        args.Values[2];  
     args.Continue = true;  

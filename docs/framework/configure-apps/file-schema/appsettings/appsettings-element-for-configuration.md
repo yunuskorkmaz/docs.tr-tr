@@ -1,5 +1,5 @@
 ---
-title: <appSettings> için <configuration> öğesi
+title: <configuration> için <appSettings> öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings
@@ -7,19 +7,18 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-ms.openlocfilehash: e1f285aae10a89fa49846534d5b47e15920294ea
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ea341d562f4b163a3a1771da0f20903b7d64bcdf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452285"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155537"
 ---
-# <a name="appsettings-element-for-configuration"></a>\<yapılandırması için \<appSettings > öğesi >
+# <a name="appsettings-element-for-configuration"></a>\<yapılandırma> için \<> öğesi
 
-Özel uygulama ayarlarını içerir. Bu, .NET Framework tarafından sunulan önceden tanımlanmış bir yapılandırma bölümüdür.
+Özel uygulama ayarları içerir. Bu, .NET Framework tarafından sağlanan önceden tanımlanmış bir yapılandırma bölümüdür.
 
-[ **\<yapılandırma >** ](../configuration-element.md)   
-&nbsp;&nbsp; **\<appSettings >**
+yapılandırma &nbsp; &nbsp;>[** \<**](../configuration-element.md) ** \<appAyarlar>**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,33 +32,33 @@ ms.locfileid: "77452285"
 
 |           | Açıklama |
 | --------- | ----------- |
-| **dosyasýný**  | İsteğe bağlı öznitelik.<br><br>Özel uygulama yapılandırma ayarlarını içeren bir dış dosyanın göreli yolunu belirtir. Belirtilen dosya **\<> eklemek**, **> kaldırmak\<** ve\<**Temizle >** öğelerini ve bu öğelerle aynı anahtar/değer çifti biçimini kullanır.<br><br>Belirtilen yol, ana yapılandırma dosyasına göredir. Windows Forms bir uygulama için, bu, uygulama yapılandırma dosyasının konumunu değil, ikili klasördür (örneğin, */bin/Debug*). Web Forms uygulamalar için yol, *Web. config* dosyasının bulunduğu uygulama köküne göredir.<br><br>Belirtilen dosya bulunamazsa çalışma zamanı özniteliği yoksayar. |
+| **Dosya**  | İsteğe bağlı öznitelik.<br><br>Özel uygulama yapılandırma ayarları içeren harici bir dosyaya göreli bir yol belirtir. Belirtilen dosya, ** \<>ekleme, ** ** \<>kaldırma **ve ** \<>öğelerini temizleme** de belirtilen ayarların aynı türünü içerir ve bu öğelerle aynı anahtar/değer çifti biçimini kullanır.<br><br>Belirtilen yol ana yapılandırma dosyasına göredir. Windows Forms uygulaması için bu ikili klasördür *(//bin/hata ayıklama*gibi), uygulama yapılandırma dosyasının konumu değildir. Web Formları uygulamaları için yol, *web.config* dosyasının bulunduğu uygulama köküne göredir.<br><br>Belirtilen dosya bulunamazsa çalışma süresi özniteliği yok sayar. |
 
 ## <a name="parent-element"></a>Üst öğe
 
 |     | Açıklama |
 | --- | ----------- |
-| [ **\<yapılandırma >** Dosyalarında](../configuration-element.md) | Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe. |
+| [** \<yapılandırma>** Öğe](../configuration-element.md) | Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
 |     | Açıklama |
 | --- | ----------- |
-| [ **\<> Ekle**](add-element-for-appsettings.md) | Özel bir uygulama ayarı ekler. |
-| [ **\<Temizle >** ](clear-element-for-appsettings.md) | Önceden tanımlanmış tüm uygulama ayarlarını temizler. |
-| [ **\<> Kaldır**](remove-element-for-appsettings.md) | Önceden tanımlanmış bir uygulama ayarını kaldırır. |
+| [**\<>ekleyin**](add-element-for-appsettings.md) | Özel bir uygulama ayarı ekler. |
+| [**\<açık>**](clear-element-for-appsettings.md) | Daha önce tanımlanmış tüm uygulama ayarlarını temizler. |
+| [**\<>kaldırmak**](remove-element-for-appsettings.md) | Daha önce tanımlanmış bir uygulama ayarını kaldırır. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-**\<AppSettings >** öğesi veritabanı bağlantı dizeleri, dosya yolları, XML Web hizmeti URL'leri veya diğer özel yapılandırma bilgileri için gibi özel bir uygulama yapılandırma bilgilerini depolayan bir uygulama. **\<appSettings >** öğesinde belirtilen anahtar/değer çiftlerine <xref:System.Configuration.ConfigurationSettings> sınıfı kullanılarak kodla erişilir.
+AppSettings>öğesi veritabanı bağlantı dizeleri, dosya yolları, XML Web hizmeti URL'leri veya bir uygulama için diğer özel yapılandırma bilgileri gibi özel uygulama yapılandırma bilgilerini depolar. ** \<** ** \<Uygulama Ayarları>** öğesinde belirtilen anahtar/değer çiftleri <xref:System.Configuration.ConfigurationSettings> sınıf kullanılarak kod olarak erişilir.
 
-*Web. config* ve uygulama yapılandırma dosyalarının **\<appSettings >** öğesinde **Dosya** özniteliğini kullanabilirsiniz. Bu öznitelik, ek ayarlar sağlayan veya **\<appSettings >** öğesinde belirtilen ayarları geçersiz kılan bir yapılandırma dosyasını belirtir. **Dosya** özniteliği, bir Kullanıcı bir uygulama yapılandırma dosyasında belirtilen proje ayarlarını geçersiz kılmak istediğinde olduğu gibi, kaynak denetimi takım geliştirme senaryolarında kullanılabilir.
+*Web.config* ve uygulama yapılandırma dosyalarının ** \<appSettings>** öğesinde **dosya** özniteliğini kullanabilirsiniz. Bu öznitelik, ek ayarlar sağlayan veya ** \<uygulama Ayarları>** öğesinde belirtilen ayarları geçersiz kılan bir yapılandırma dosyası belirtir. **Dosya** özniteliği, kullanıcının bir uygulama yapılandırma dosyasında belirtilen proje ayarlarını geçersiz kılmak istemesi gibi kaynak denetimi ekibi geliştirme senaryolarında kullanılabilir.
 
-**Dosya** özniteliği tarafından belirtilen yapılandırma dosyaları, **\<yapılandırma >** yerine **\<appSettings >** kök düğümüne sahip olmalıdır.
+**Dosya** özniteliği tarafından belirtilen yapılandırma dosyaları, ** \<yapılandırma>** yerine ** \<>appSettings** kök düğümüne sahip olmalıdır.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir özel uygulama ayarı tanımlayan bir dış uygulama ayarları dosyasını (*Custom. config*) gösterir:
+Aşağıdaki örnek, özel bir uygulama ayarı tanımlayan harici bir uygulama ayarları dosyasını *(custom.config)* gösterir:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -68,7 +67,7 @@ Aşağıdaki örnek, bir özel uygulama ayarı tanımlayan bir dış uygulama ay
 </appSettings>
 ```
 
-Aşağıdaki örnek, dış ayarlar dosyasında ayarı tüketen ve kendi uygulama ayarını ayarlayan bir uygulama yapılandırma dosyasını gösterir:
+Aşağıdaki örnek, dış ayarlar dosyasındaki ayarı tüketen ve kendi uygulama ayarını ayarlayan bir uygulama yapılandırma dosyasını gösterir:
 
 ```xml
 <configuration>
@@ -80,7 +79,7 @@ Aşağıdaki örnek, dış ayarlar dosyasında ayarı tüketen ve kendi uygulama
 
 ## <a name="configuration-file"></a>Yapılandırma dosyası
 
-Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine. config*) ve uygulama dizini düzeyinde olmayan *Web. config* dosyalarında kullanılabilir.
+Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında *(Machine.config)* ve uygulama dizini düzeyinde olmayan *Web.config* dosyalarında kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,18 +2,18 @@
 title: 'Taşıma: UDP üzerinden Özel İşlemler Örneği'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: 00e6d593e185cd09ea66e88f38cf1d8e71785704
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: ba9fb91623606d3aaba5ba56784b20bb92d343a7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960414"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143804"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Taşıma: UDP üzerinden Özel İşlemler Örneği
-Bu örnek, Windows Communication Foundation (WCF)[taşıma genişletilebilirliğine](../../../../docs/framework/wcf/samples/transport-extensibility.md) [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örneğini temel alır. Özel işlem akışını desteklemek için UDP aktarım örneğini genişletir ve <xref:System.ServiceModel.Channels.TransactionMessageProperty> özelliğinin kullanımını gösterir.  
+Bu örnek, Windows Communication Foundation (WCF)[Transport Extensibility'deki](../../../../docs/framework/wcf/samples/transport-extensibility.md) [UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örneğine dayanmaktadır. Özel işlem akışını desteklemek için UDP Transport örneğini genişletir <xref:System.ServiceModel.Channels.TransactionMessageProperty> ve özelliğin kullanımını gösterir.  
   
-## <a name="code-changes-in-the-udp-transport-sample"></a>UDP aktarım örneğindeki kod değişiklikleri  
- İşlem akışını göstermek için örnek, `ICalculatorContract` için hizmet sözleşmesini `CalculatorService.Add()`için bir işlem kapsamı gerektirecek şekilde değiştirir. Örnek ayrıca, `Add` işleminin sözleşmesine ek bir `System.Guid` parametresi ekler. Bu parametre, istemci işleminin tanımlayıcısını hizmete geçirmek için kullanılır.  
+## <a name="code-changes-in-the-udp-transport-sample"></a>UDP Taşıma Numunesindeki Kod Değişiklikleri  
+ Hareket akışını göstermek için, `ICalculatorContract` `CalculatorService.Add()`örnek için bir işlem kapsamı gerektirecek şekilde hizmet sözleşmesini değiştirir. Örnek ayrıca `System.Guid` `Add` işlemin sözleşmesine fazladan bir parametre ekler. Bu parametre, istemci hareketinin tanımlayıcısını hizmete geçirmek için kullanılır.  
   
 ```csharp  
 class CalculatorService : IDatagramContract, ICalculatorContract  
@@ -30,7 +30,7 @@ class CalculatorService : IDatagramContract, ICalculatorContract
      Console.WriteLine("The client transaction has NOT flowed to the service");  
     }  
   
-    Console.WriteLine("   adding {0} + {1}", x, y);              
+    Console.WriteLine("   adding {0} + {1}", x, y);
     return (x + y);  
     }  
   
@@ -38,7 +38,7 @@ class CalculatorService : IDatagramContract, ICalculatorContract
 }  
 ```  
   
- [Taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örneği, iletileri bir istemci ve hizmet arasında GEÇIRMEK için UDP paketlerini kullanır. [Taşıma: özel aktarım örneği](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) , iletileri aktarmak için aynı mekanizmayı kullanır, ancak bir işlem akışlı olduğunda, kodlanmış ILETIYLE birlikte UDP paketine eklenir.  
+ [Aktarım: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örneği, istemci ve hizmet arasında ileti leri iletmek için UDP paketlerini kullanır. [Aktarım: Özel Aktarım Örneği](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) iletileri taşımak için aynı mekanizmayı kullanır, ancak bir hareket aktığında, kodlanmış iletiyle birlikte UDP paketine eklenir.  
   
 ```csharp  
 byte[] txmsgBuffer = TransactionMessageBuffer.WriteTransactionMessageBuffer(txPropToken, messageBuffer);  
@@ -46,13 +46,13 @@ byte[] txmsgBuffer = TransactionMessageBuffer.WriteTransactionMessageBuffer(txPr
 int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
- `TransactionMessageBuffer.WriteTransactionMessageBuffer`, ileti varlığıyla geçerli işlemin yayma belirtecini birleştirmek ve bir arabelleğe yerleştirmek için yeni işlevsellik içeren bir yardımcı yöntemdir.  
+ `TransactionMessageBuffer.WriteTransactionMessageBuffer`ileti varlığı ile geçerli hareket için yayılma belirteci birleştirmek ve bir arabellek içine yerleştirmek için yeni işlevsellik içeren bir yardımcı yöntemdir.  
   
- Özel işlem akışı taşıması için, istemci uygulamasının işlem akışı gerektirdiğini ve bu bilgileri WCF 'ye hangi hizmet işlemlerini iletmesini bilmelidir. Ayrıca, Kullanıcı işleminin Aktarım katmanına iletilmesi için bir mekanizma olmalıdır. Bu örnek, bu bilgileri almak için "WCF ileti denetçiler" kullanır. Burada uygulanan istemci ileti denetçisi, `TransactionFlowInspector`olarak adlandırılan aşağıdaki görevleri gerçekleştirir:  
+ Özel işlem akışı aktarımı için istemci uygulamasının hangi hizmet işlemlerinin hareket akışı gerektirdiğini bilmesi ve bu bilgileri WCF'ye aktarması gerekir. Kullanıcı işlemini aktarım katmanına iletmek için bir mekanizma da olmalıdır. Bu örnek, bu bilgileri elde etmek için "WCF ileti denetçileri" kullanır. Burada uygulanan istemci ileti sile `TransactionFlowInspector`denetçisi, adı verilen, aşağıdaki görevleri gerçekleştirir:  
   
-- Belirli bir ileti eylemi için bir işlemin akışını mı yoksa (Bu `IsTxFlowRequiredForThisOperation()`gerçekleşir) belirler.  
+- Belirli bir ileti eylemi için bir işlemin aktaması gerekip gerekmediğini belirler (bu `IsTxFlowRequiredForThisOperation()`gerçekleşir).  
   
-- `TransactionFlowProperty`kullanarak geçerli ortam hareketini iletiye ekler (Bu işlem, `BeforeSendRequest()`için yapılır).  
+- Bir işlemin akması gerekiyorsa (bu `TransactionFlowProperty`işlem `BeforeSendRequest()`yapılır) kullanarak iletiye geçerli ortam işlemini bağlar.  
   
 ```csharp  
 public class TransactionFlowInspector : IClientMessageInspector  
@@ -64,7 +64,7 @@ public class TransactionFlowInspector : IClientMessageInspector
    public object BeforeSendRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel)  
    {  
        // obtain the tx propagation token  
-       byte[] propToken = null;             
+       byte[] propToken = null;
        if (Transaction.Current != null && IsTxFlowRequiredForThisOperation(request.Headers.Action))  
        {  
            try  
@@ -80,7 +80,7 @@ public class TransactionFlowInspector : IClientMessageInspector
       // set the propToken on the message in a TransactionFlowProperty  
        TransactionFlowProperty.Set(propToken, request);  
   
-       return null;              
+       return null;
     }  
   }  
   
@@ -92,7 +92,7 @@ public class TransactionFlowInspector : IClientMessageInspector
 }  
 ```  
   
- `TransactionFlowInspector` kendisine özel bir davranış kullanılarak çerçeveye geçirilir: `TransactionFlowBehavior`.  
+ Kendisi `TransactionFlowInspector` özel bir davranış kullanılarak çerçeveye `TransactionFlowBehavior`geçirilir: .  
   
 ```csharp  
 public class TransactionFlowBehavior : IEndpointBehavior  
@@ -117,11 +117,11 @@ public class TransactionFlowBehavior : IEndpointBehavior
 }  
 ```  
   
- Önceki mekanizmaya sahip olan Kullanıcı kodu, hizmet işlemini çağırmadan önce bir `TransactionScope` oluşturur. İleti denetçisi, hizmet işlemine taşınmasının gerekli olması durumunda işlemin aktarıma geçirilmesini sağlar.  
+ Önceki mekanizma yerinde olduğu için, kullanıcı kodu `TransactionScope` hizmet işlemini aramadan önce bir kod oluşturur. İleti denetçisi, hizmet işlemine akması gerektiğinde işlemin taşımaya geçirilmesini sağlar.  
   
 ```csharp  
 CalculatorContractClient calculatorClient = new CalculatorContractClient("SampleProfileUdpBinding_ICalculatorContract");  
-calculatorClient.Endpoint.Behaviors.Add(new TransactionFlowBehavior());               
+calculatorClient.Endpoint.Behaviors.Add(new TransactionFlowBehavior());
   
 try  
 {  
@@ -133,7 +133,7 @@ try
         [...]  
         Console.WriteLine(calculatorClient.Add(i, i * 2));  
          }  
-      }               
+      }
        calculatorClient.Close();  
 }  
 catch (TimeoutException)  
@@ -151,7 +151,7 @@ catch (Exception)
 }  
 ```  
   
- İstemciden bir UDP paketi aldıktan sonra, hizmet iletiyi ayıklayarak iletiyi ve muhtemelen bir işlemi geri alır.  
+ İstemciden bir UDP paketi aldıktan sonra, hizmet iletiyi ve büyük olasılıkla bir hareketi ayıklamak için paketi deserialize eder.  
   
 ```csharp  
 count = listenSocket.EndReceiveFrom(result, ref dummy);  
@@ -159,9 +159,9 @@ count = listenSocket.EndReceiveFrom(result, ref dummy);
 // read the transaction and message                       TransactionMessageBuffer.ReadTransactionMessageBuffer(buffer, count, out transaction, out msg);  
 ```  
   
- `TransactionMessageBuffer.ReadTransactionMessageBuffer()`, `TransactionMessageBuffer.WriteTransactionMessageBuffer()`tarafından gerçekleştirilen serileştirme sürecini ters yükleyen yardımcı yöntemdir.  
+ `TransactionMessageBuffer.ReadTransactionMessageBuffer()``TransactionMessageBuffer.WriteTransactionMessageBuffer()`tarafından gerçekleştirilen serileştirme işlemini tersine çeviren yardımcı yöntemdir.  
   
- Bir işlem içinde akıtıdıysa, `TransactionMessageProperty`iletiye eklenir.  
+ Bir hareket aktıysa, `TransactionMessageProperty`'deki iletiye eklenir.  
   
 ```csharp  
 message = MessageEncoderFactory.Encoder.ReadMessage(msg, bufferManager);  
@@ -172,13 +172,13 @@ if (transaction != null)
 }  
 ```  
   
- Bu, Dispatcher 'ın işlemi dağıtım zamanında almasını sağlar ve ileti tarafından belirtilen hizmet işlemini çağırırken onu kullanır.  
+ Bu, sevk irsaliyesi'nin hareketi sevkiyat zamanında almasını ve ileti tarafından adreslenen servis işlemini ararken kullanmasını sağlar.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
   
-1. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümündeki yönergeleri izleyin.  
+1. Çözümü oluşturmak için, Windows [Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
   
-2. Geçerli örnek, [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örneğine benzer şekilde çalıştırılmalıdır. Çalıştırmak için, hizmeti UdpTestService. exe ile başlatın. Windows Vista çalıştırıyorsanız, hizmeti yükseltilmiş ayrıcalıklarla başlatmanız gerekir. Bunu yapmak için dosya Gezgini 'nde UdpTestService. exe ' ye sağ tıklayın ve **yönetici olarak çalıştır**' a tıklayın.  
+2. Geçerli [örnek, Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örneğine benzer şekilde çalıştırılmalıdır. Çalıştırmak için, UdpTestService.exe ile hizmet başlatın. Windows Vista'yı çalıştırıyorsanız, hizmeti yüksek ayrıcalıklarla başlatmanız gerekir. Bunu yapmak için, Dosya Gezgini'nde UdpTestService.exe'ye sağ tıklayın ve **yönetici olarak çalıştır'ı**tıklatın.  
   
 3. Bu, aşağıdaki çıktıyı üretir.  
   
@@ -188,9 +188,9 @@ if (transaction != null)
     Press <ENTER> to terminate the service and start service from config...  
     ```  
   
-4. Şu anda, istemcisini UdpTestClient. exe ' yi çalıştırarak başlatabilirsiniz. İstemci tarafından üretilen çıkış aşağıdaki gibidir.  
+4. Şu anda, UdpTestClient.exe çalıştırarak istemci başlatabilirsiniz. İstemci tarafından üretilen çıktı aşağıdaki gibidir.  
   
-    ```console 
+    ```console
     0  
     3  
     6  
@@ -201,7 +201,7 @@ if (transaction != null)
   
 5. Hizmet çıktısı aşağıdaki gibidir.  
   
-    ```console 
+    ```console
     Hello, world!  
     Hello, world!  
     Hello, world!  
@@ -219,9 +219,9 @@ if (transaction != null)
        adding 4 + 8  
     ```  
   
-6. Hizmet uygulaması, `CalculatorService.Add()` işleminin `clientTransactionId` parametresinde, hizmet işleminin tanımlayıcısına kadar, istemci tarafından gönderilen işlem tanımlayıcısıyla eşleşiyorsa `The client transaction has flowed to the service` iletiyi görüntüler. Bir eşleşme yalnızca istemci işlemi hizmete akan ise elde edilir.  
+6. Hizmet uygulaması, `The client transaction has flowed to the service` `clientTransactionId` `CalculatorService.Add()` istemci tarafından gönderilen hareket tanımlayıcısını, işlemin parametresinde, hizmet hareketinin tanımlayıcısına eşleştirebiliyorsa iletiyi görüntüler. Eşleşme, yalnızca istemci hareketi hizmete akmışsa elde edilir.  
   
-7. İstemci uygulamasını yapılandırma kullanılarak yayınlanan uç noktalara karşı çalıştırmak için, hizmet uygulaması penceresinde ENTER tuşuna basın ve ardından test istemcisini yeniden çalıştırın. Hizmette aşağıdaki çıktıyı görmeniz gerekir.  
+7. İstemci uygulamasını yapılandırma kullanılarak yayınlanan uç noktalara göre çalıştırmak için hizmet uygulama penceresinde ENTER tuşuna basın ve test istemcisini yeniden çalıştırın. Hizmette aşağıdaki çıktıyı görmeniz gerekir.  
   
     ```console  
     Testing Udp From Config.  
@@ -229,19 +229,19 @@ if (transaction != null)
     Press <ENTER> to terminate the service and exit...  
     ```  
   
-8. İstemcisini hizmete karşı çalıştırmak daha önce olduğu gibi benzer bir çıktı üretir.  
+8. İstemciyi hizmete karşı çalıştırmak artık eskisi gibi benzer çıktı lar üretir.  
   
-9. Svcutil. exe kullanarak istemci kodunu ve yapılandırmayı yeniden oluşturmak için, hizmet uygulamasını başlatın ve örnek kök dizininden aşağıdaki Svcutil. exe komutunu çalıştırın.  
+9. Svcutil.exe kullanarak istemci kodunu ve yapılandırmasını yeniden oluşturmak için servis uygulamasını başlatın ve ardından aşağıdaki Svcutil.exe komutunu örneğin kök dizininden çalıştırın.  
   
     ```console  
     svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
     ```  
   
-10. Svcutil. exe ' nin `sampleProfileUdpBinding`için bağlama uzantısı yapılandırması üretmediğini unutmayın; el ile eklemeniz gerekir.  
+10. Svcutil.exe için bağlayıcı uzantısı yapılandırma oluşturmaz `sampleProfileUdpBinding`unutmayın; el ile eklemeniz gerekir.  
   
     ```xml  
     <configuration>  
-        <system.serviceModel>      
+        <system.serviceModel>
             …  
             <extensions>  
                 <!-- This was added manually because svcutil.exe does not add this extension to the file -->  
@@ -254,12 +254,12 @@ if (transaction != null)
     ```  
   
 > [!IMPORTANT]
-> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
->   
+> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
->   
+>
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
