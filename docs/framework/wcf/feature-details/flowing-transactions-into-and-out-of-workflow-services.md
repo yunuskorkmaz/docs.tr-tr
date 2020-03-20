@@ -2,40 +2,40 @@
 title: İş Akışı Hizmetlerine İşlemlerin Giriş ve Çıkış Akışını Gerçekleştirme
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: ea14bc651258684fd31940aa6b88f9731348dcd1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: fe03047dd931d25ec94bbc5e00c479d1b42397bc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978277"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185273"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>İş Akışı Hizmetlerine İşlemlerin Giriş ve Çıkış Akışını Gerçekleştirme
-İş akışı hizmetleri ve istemcileri işlemlere katılabilir.  Bir hizmet işleminin bir ortam işleminin parçası haline gelmesi için, bir <xref:System.ServiceModel.Activities.TransactedReceiveScope> etkinliğine <xref:System.ServiceModel.Activities.Receive> etkinlik koyun. <xref:System.ServiceModel.Activities.Send> veya <xref:System.ServiceModel.Activities.TransactedReceiveScope> içindeki bir <xref:System.ServiceModel.Activities.SendReply> etkinliği tarafından yapılan çağrılar, çevresel işlem içinde de yapılır. Bir iş akışı istemci uygulaması, <xref:System.Activities.Statements.TransactionScope> etkinliğini kullanarak ve ortam işlemini kullanarak hizmet işlemlerini çağıran bir ortam işlemi oluşturabilir. Bu konu, işlemlere katılan bir iş akışı hizmeti ve iş akışı istemcisi oluşturma konusunda size yol gösterir.  
+İş akışı hizmetleri ve istemciler hareketlere katılabilir.  Bir hizmet işleminin ortam hareketinin bir parçası <xref:System.ServiceModel.Activities.Receive> olması için <xref:System.ServiceModel.Activities.TransactedReceiveScope> bir etkinliği bir etkinlik içine yerleştirin. Bir <xref:System.ServiceModel.Activities.Send> veya bir <xref:System.ServiceModel.Activities.SendReply> etkinlik içinde <xref:System.ServiceModel.Activities.TransactedReceiveScope> yapılan tüm aramalar da ortam hareketi içinde yapılacaktır. İş akışı istemcisi uygulaması, ortam işlemini <xref:System.Activities.Statements.TransactionScope> kullanarak etkinlik ve çağrı hizmeti işlemlerini kullanarak bir ortam hareketi oluşturabilir. Bu konu, hareketlere katılan bir iş akışı hizmeti ve iş akışı istemcisi oluşturmakonusunda size yol gösterir.  
   
 > [!WARNING]
-> Bir iş akışı hizmeti örneği bir işlem içinde yüklenirse ve iş akışı bir <xref:System.Activities.Statements.Persist> etkinlik içeriyorsa, iş akışı örneği işlem zaman aşımına uğrayana kadar engeller.  
+> Bir iş akışı hizmeti örneği bir hareket içinde yüklenirse ve iş akışı bir <xref:System.Activities.Statements.Persist> etkinlik içeriyorsa, iş akışı örneği işlem süreleri bitene kadar engellenir.  
   
 > [!IMPORTANT]
-> <xref:System.ServiceModel.Activities.TransactedReceiveScope> kullandığınızda, tüm alma işlemlerini iş akışına <xref:System.ServiceModel.Activities.TransactedReceiveScope> etkinlikler dahilinde yerleştirmeniz önerilir.  
+> Ne zaman bir <xref:System.ServiceModel.Activities.TransactedReceiveScope> kullandığınızda, tüm Alır'yı iş <xref:System.ServiceModel.Activities.TransactedReceiveScope> akışına etkinlikler içinde yerleştirmeniz önerilir.  
   
 > [!IMPORTANT]
-> <xref:System.ServiceModel.Activities.TransactedReceiveScope> kullanılırken ve iletileri yanlış sırada geldiğinde, ilk sipariş dışı ileti teslim edilmeye çalışılırken iş akışı iptal edilir. İş akışınızın iş akışı kimliği her zaman tutarlı bir durdurma noktasında olduğundan emin olmanız gerekir. Bu, iş akışını önceki bir Kalıcılık noktasından yeniden başlatmanıza olanak tanır.  
+> Kullanma <xref:System.ServiceModel.Activities.TransactedReceiveScope> ve iletiler yanlış sırada geldiğinde, ilk sipariş dışı iletisini teslim etmeye çalışırken iş akışı iptal edilecektir. İş akışı boşta kaldığında iş akışınızın her zaman tutarlı bir durdurma noktasında olduğundan emin olmalısınız. Bu, iş akışı iptal edilmesi halinde önceki bir kalıcılık noktasından iş akışını yeniden başlatmanızı sağlar.  
   
 ### <a name="create-a-shared-library"></a>Paylaşılan kitaplık oluşturma  
   
-1. Yeni boş bir Visual Studio çözümü oluşturun.  
+1. Yeni bir boş Visual Studio Çözümü oluşturun.  
   
-2. `Common`adlı yeni bir sınıf kitaplığı projesi ekleyin. Aşağıdaki derlemelere başvurular ekleyin:  
+2. 'li yeni bir `Common`sınıf kitaplığı projesi ekleyin. Aşağıdaki derlemelere başvurular ekleyin:  
   
-    - System. Activities. dll  
+    - Sistem.Etkinlikler.dll  
   
     - System.ServiceModel.dll  
   
-    - System. ServiceModel. Activities. dll  
+    - Sistem.ServiceModel.Activities.dll  
   
     - System.Transactions.dll  
   
-3. `Common` projesine `PrintTransactionInfo` adlı yeni bir sınıf ekleyin. Bu sınıf <xref:System.Activities.NativeActivity> türetilir ve <xref:System.Activities.NativeActivity.Execute%2A> yöntemini aşırı yükler.  
+3. `Common` Projeye çağrılan `PrintTransactionInfo` yeni bir sınıf ekleyin. Bu sınıf yöntemden <xref:System.Activities.NativeActivity> türetilir ve aşırı yüklenir. <xref:System.Activities.NativeActivity.Execute%2A>  
   
     ```csharp
     using System;  
@@ -72,154 +72,154 @@ ms.locfileid: "73978277"
     }  
     ```  
   
-     Bu, ortam işlem hakkındaki bilgileri görüntüleyen ve bu konuda kullanılan hizmet ve istemci iş akışlarında kullanılan yerel bir etkinliktir. Bu etkinliği **araç kutusunun** **ortak** bölümünde kullanılabilir hale getirmek için çözümü oluşturun.  
+     Bu, ortam hareketi yle ilgili bilgileri görüntüleyen ve bu konuda kullanılan hem hizmet hem de istemci iş akışlarında kullanılan yerel bir etkinliktir. Bu etkinliği **Araç Kutusu'nun** **Ortak** bölümünde kullanılabilir hale getirmek için çözüm oluşturun.  
   
-### <a name="implement-the-workflow-service"></a>İş akışı hizmetini uygulama  
+### <a name="implement-the-workflow-service"></a>İş akışı hizmetini uygulayın  
   
-1. `Common` projesine `WorkflowService` adlı yeni bir WCF Iş akışı hizmeti ekleyin. Bunu yapmak için `Common` projesine tıklayın, **Ekle**, **Yeni öğe...** öğesini seçin, **yüklü şablonlar** altında **Iş akışı** ' nı seçin ve **WCF iş akışı hizmeti**' ni seçin.  
+1. `Common` Projeye çağrılan `WorkflowService` yeni bir WCF İş Akışı Hizmeti ekleyin. Bunu yapmak için `Common` projeyi sağ tıklatın, **Ekle**, **Yeni Öğe ...**, Yüklü **Şablonlar** altında **İş Akışını** seçin ve **WCF İş Akışı Hizmeti'ni**seçin.  
   
-     ![Iş akışı hizmeti ekleme](./media/flowing-transactions-into-and-out-of-workflow-services/add-workflow-service.jpg)  
+     ![İş Akışı Hizmeti Ekleme](./media/flowing-transactions-into-and-out-of-workflow-services/add-workflow-service.jpg)  
   
-2. Varsayılan `ReceiveRequest` ve `SendResponse` etkinliklerini silin.  
+2. Varsayılan `ReceiveRequest` ve `SendResponse` etkinlikleri silin.  
   
-3. <xref:System.Activities.Statements.WriteLine> etkinliğini sürükleyip `Sequential Service` etkinliğine bırakın. Aşağıdaki örnekte gösterildiği gibi, Text özelliğini `"Workflow Service starting ..."` olarak ayarlayın.  
+3. Bir <xref:System.Activities.Statements.WriteLine> etkinliği sürükleyin `Sequential Service` ve aktiviteye bırakın. Metin özelliğini `"Workflow Service starting ..."` aşağıdaki örnekte gösterildiği gibi ayarlayın.  
   
-     ! [Sıralı hizmet etkinliğine bir WriteLine etkinliği ekleme (./Media/flowing-Transactions-into-and-out-of-Workflow-Services/Add-WriteLine-Sequential-Service.jpg)  
+     ! [Sıralı Hizmet etkinliğine WriteLine etkinliği ekleme(./ortam/akan-hareketler-iş akışı-hizmetler/add-writeline-sequential-service.jpg)  
   
-4. <xref:System.Activities.Statements.WriteLine> etkinliğinden sonra bir <xref:System.ServiceModel.Activities.TransactedReceiveScope> sürükleyip bırakın. <xref:System.ServiceModel.Activities.TransactedReceiveScope> etkinliği **araç kutusunun** **mesajlaşma** bölümünde bulunabilir. <xref:System.ServiceModel.Activities.TransactedReceiveScope> etkinliği iki bölümden oluşan **istek** ve **gövdeden**oluşur. **İstek** bölümü <xref:System.ServiceModel.Activities.Receive> etkinliğini içerir. **Gövde** bölümü bir ileti alındıktan sonra bir işlem içinde yürütülecek etkinlikleri içerir.  
+4. Etkinlikten <xref:System.Activities.Statements.WriteLine> sonra <xref:System.ServiceModel.Activities.TransactedReceiveScope> bir sürükle ve bırak. <xref:System.ServiceModel.Activities.TransactedReceiveScope> Etkinlik, **Araç Kutusu'nun** **Mesajlaşma** bölümünde bulunabilir. Etkinlik, **İstek** ve Gövde olmak için iki bölümden oluşmaktadır. **Body** <xref:System.ServiceModel.Activities.TransactedReceiveScope> **İstek** bölümü <xref:System.ServiceModel.Activities.Receive> etkinliği içerir. **Gövde** bölümü, ileti alındıktan sonra bir hareket içinde yürütülecek etkinlikleri içerir.  
   
      ![TransactedReceiveScope etkinliği ekleme](./media/flowing-transactions-into-and-out-of-workflow-services/transactedreceivescope-activity.jpg)  
   
-5. <xref:System.ServiceModel.Activities.TransactedReceiveScope> etkinliğini seçin ve **değişkenler** düğmesine tıklayın. Aşağıdaki değişkenleri ekleyin.  
+5. <xref:System.ServiceModel.Activities.TransactedReceiveScope> Etkinliği seçin ve **Değişkenler** düğmesini tıklatın. Aşağıdaki değişkenleri ekleyin.  
   
-     ![TransactedReceiveScope 'a değişken ekleme](./media/flowing-transactions-into-and-out-of-workflow-services/add-transactedreceivescope-variables.jpg)  
+     ![TransactedReceiveScope'a değişken ekleme](./media/flowing-transactions-into-and-out-of-workflow-services/add-transactedreceivescope-variables.jpg)  
   
     > [!NOTE]
-    > Varsayılan olarak bulunan veri değişkenini silebilirsiniz. Ayrıca var olan tanıtıcı değişkenini de kullanabilirsiniz.  
+    > Varsayılan olarak var olan veri değişkenini silebilirsiniz. Varolan tutamaç değişkenini de kullanabilirsiniz.  
   
-6. <xref:System.ServiceModel.Activities.Receive> etkinliğini <xref:System.ServiceModel.Activities.TransactedReceiveScope> etkinliğinin **istek** bölümünde sürükleyin ve bırakın. Aşağıdaki özellikleri ayarlayın:  
+6. Etkinliğin İstek <xref:System.ServiceModel.Activities.Receive> bölümündeki bir etkinliği sürükleyin ve bırakın. **Request** <xref:System.ServiceModel.Activities.TransactedReceiveScope> Aşağıdaki özellikleri ayarlayın:  
   
     |Özellik|Değer|  
     |--------------|-----------|  
     |CanCreateInstance|True (onay kutusunu işaretleyin)|  
-    |OperationName|StartSample|  
-    |ServiceContractName|Itransactionsample|  
+    |ThrottledRequests|BaşlangıçÖrneği|  
+    |Hizmet Sözleşme Adı|ITransactionSample|  
   
-     İş akışı şöyle görünmelidir:  
+     İş akışı aşağıdaki gibi görünmelidir:  
   
      ![Alma etkinliği ekleme](./media/flowing-transactions-into-and-out-of-workflow-services/add-receive-activity.jpg)  
   
-7. <xref:System.ServiceModel.Activities.Receive> etkinliğinde **tanımla...** bağlantısına tıklayın ve aşağıdaki ayarları yapın:  
+7. <xref:System.ServiceModel.Activities.Receive> Etkinlikte **Tanımla...** bağlantısını tıklatın ve aşağıdaki ayarları yapın:  
   
-     ![Alma etkinliği için ileti ayarlarını ayarlama](./media/flowing-transactions-into-and-out-of-workflow-services/receive-message-settings.jpg)  
+     ![Al etkinliği için ileti ayarlarını ayarlama](./media/flowing-transactions-into-and-out-of-workflow-services/receive-message-settings.jpg)  
   
-8. <xref:System.Activities.Statements.Sequence> etkinliğini sürükleyip <xref:System.ServiceModel.Activities.TransactedReceiveScope>gövde bölümüne bırakın. <xref:System.Activities.Statements.Sequence> etkinliği içinde iki <xref:System.Activities.Statements.WriteLine> etkinliği sürükleyip bırakın ve aşağıdaki tabloda gösterildiği gibi <xref:System.Activities.Statements.WriteLine.Text%2A> özelliklerini ayarlayın.  
+8. Sürükleyin ve <xref:System.Activities.Statements.Sequence> Vücut bölümüne bir <xref:System.ServiceModel.Activities.TransactedReceiveScope>etkinlik bırakın. <xref:System.Activities.Statements.Sequence> Etkinlik içinde sürükleyin <xref:System.Activities.Statements.WriteLine> ve iki <xref:System.Activities.Statements.WriteLine.Text%2A> etkinlik bırakın ve aşağıdaki tabloda gösterildiği gibi özellikleri ayarlayın.  
   
     |Etkinlik|Değer|  
     |--------------|-----------|  
-    |1\. WriteLine|"Hizmet: alma tamamlandı"|  
-    |2\. WriteLine|"Hizmet: alındı =" + requestMessage|  
+    |1. WriteLine|"Hizmet: Tamamlanmış Alma"|  
+    |2. WriteLine|"Hizmet: Alınan = " + requestMessage|  
   
-     İş akışı artık şöyle görünmelidir:  
+     İş akışı şimdi şu şekilde görünmelidir:  
   
-     ![WriteLine etkinlikleri eklendikten sonra sıra](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-writelines.jpg)  
+     ![WriteLine etkinliklerini ekledikten sonra sıra](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-writelines.jpg)  
   
-9. `PrintTransactionInfo` etkinliğini <xref:System.ServiceModel.Activities.TransactedReceiveScope> etkinliğinde **gövdesinde** ikinci <xref:System.Activities.Statements.WriteLine> etkinlikten sonra sürükleyip bırakın.  
+9. **Aktivitedeki** <xref:System.ServiceModel.Activities.TransactedReceiveScope> Ikinci `PrintTransactionInfo` <xref:System.Activities.Statements.WriteLine> etkinlikten sonra etkinliği sürükleyin ve bırakın.  
   
-     ![PrintTransactionInfo eklendikten sonra sıra](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-printtransactioninfo.jpg )  
+     ![PrintTransactionInfo ekledikten sonra sıra](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-printtransactioninfo.jpg )  
   
-10. `PrintTransactionInfo` etkinliğinden sonra bir <xref:System.Activities.Statements.Assign> etkinliğini sürükleyip bırakın ve aşağıdaki tabloya göre özelliklerini ayarlayın.  
+10. Etkinlikten `PrintTransactionInfo` sonra <xref:System.Activities.Statements.Assign> bir etkinliği sürükleyin ve bırakın ve özelliklerini aşağıdaki tabloya göre ayarlayın.  
   
     |Özellik|Değer|  
     |--------------|-----------|  
-    |Bitiş|replyMessage|  
-    |Değer|"Hizmet: Yanıt gönderiliyor."|  
+    |Alıcı|replyMessage|  
+    |Değer|"Hizmet: Yanıt gönderme."|  
   
-11. <xref:System.Activities.Statements.Assign> etkinliğinden sonra bir <xref:System.Activities.Statements.WriteLine> etkinliğini sürükleyip bırakın ve <xref:System.Activities.Statements.WriteLine.Text%2A> özelliğini "Service: BEGIN Reply" olarak ayarlayın.  
+11. Etkinlikten <xref:System.Activities.Statements.WriteLine> <xref:System.Activities.Statements.Assign> sonra bir etkinliği sürükleyin <xref:System.Activities.Statements.WriteLine.Text%2A> ve bırakın ve özelliğini "Hizmet: Yanıtla başlat" olarak ayarlayın.  
   
-     İş akışı artık şöyle görünmelidir:  
+     İş akışı şimdi şu şekilde görünmelidir:  
   
-     ![Assign ve WriteLine eklendikten sonra](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-sbr-writeline.jpg)  
+     ![Atama ve WriteLine ekledikten sonra](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-sbr-writeline.jpg)  
   
-12. <xref:System.ServiceModel.Activities.Receive> etkinliğine sağ tıklayıp **SendReply oluştur** ' u seçin ve son <xref:System.Activities.Statements.WriteLine> etkinliğinden sonra yapıştırın. `SendReplyToReceive` etkinliğinde **tanımla...** bağlantısına tıklayın ve aşağıdaki ayarları yapın.  
+12. Etkinliği sağ tıklatın ve **SendReply oluştur'u** seçin <xref:System.Activities.Statements.WriteLine> ve son etkinlikten sonra yapıştırın. <xref:System.ServiceModel.Activities.Receive> `SendReplyToReceive` Etkinlikte **Tanımla...** bağlantısını tıklatın ve aşağıdaki ayarları yapın.  
   
-     ![Yanıt iletisi ayarları](./media/flowing-transactions-into-and-out-of-workflow-services/reply-message-settings.jpg)  
+     ![İleti ayarlarını yanıtla](./media/flowing-transactions-into-and-out-of-workflow-services/reply-message-settings.jpg)  
   
-13. `SendReplyToReceive` etkinliğinden sonra bir <xref:System.Activities.Statements.WriteLine> etkinliğini sürükleyip bırakın ve <xref:System.Activities.Statements.WriteLine.Text%2A> özelliğini "Service: Reply gönderildi" olarak ayarlayın.  
+13. Etkinlikten <xref:System.Activities.Statements.WriteLine> `SendReplyToReceive` sonra bir etkinliği sürükleyin ve <xref:System.Activities.Statements.WriteLine.Text%2A> bırakın ve özelliğini "Hizmet: Gönderilen Yanıt" olarak ayarlayın.  
   
-14. İş akışının alt kısmındaki bir <xref:System.Activities.Statements.WriteLine> etkinliğini sürükleyip bırakın ve <xref:System.Activities.Statements.WriteLine.Text%2A> özelliğini "Service: Workflow bitiyor, çıkmak için ENTER tuşuna basın" olarak ayarlayın.  
+14. Bir <xref:System.Activities.Statements.WriteLine> etkinliği iş akışının en altında sürükleyin <xref:System.Activities.Statements.WriteLine.Text%2A> ve bırakın ve özelliğini "Hizmet: İş akışı sona erer, çıkmak için ENTER tuşuna basın." olarak ayarlayın.  
   
-     Tamamlanmış hizmet iş akışı şöyle görünmelidir:  
+     Tamamlanan hizmet iş akışı aşağıdaki gibi görünmelidir:  
   
-     ![Hizmet Iş akışını doldurun](./media/flowing-transactions-into-and-out-of-workflow-services/service-complete-workflow.jpg)  
+     ![Komple Servis İş Akışı](./media/flowing-transactions-into-and-out-of-workflow-services/service-complete-workflow.jpg)  
   
 ### <a name="implement-the-workflow-client"></a>İş akışı istemcisini uygulama  
   
-1. `Common` projesine `WorkflowClient` adlı yeni bir WCF Iş akışı uygulaması ekleyin. Bunu yapmak için `Common` projesine tıklayın, **Ekle**, **Yeni öğe...** öğesini seçin, **yüklü şablonlar** altında **iş akışı** ' nı seçin ve **etkinlik**' ı seçin.  
+1. `Common` Projeye çağrılan `WorkflowClient` yeni bir WCF İş Akışı uygulaması ekleyin. Bunu yapmak için `Common` projeyi sağ tıklatın, **Ekle**, **Yeni Öğe ... ,** Yüklü **Şablonlar** altında **İş Akışı'nı** seçin ve **Etkinlik'i**seçin.  
   
      ![Etkinlik projesi ekleme](./media/flowing-transactions-into-and-out-of-workflow-services/add-activity-project.jpg)  
   
-2. <xref:System.Activities.Statements.Sequence> etkinliğini tasarım yüzeyine sürükleyip bırakın.  
+2. Bir <xref:System.Activities.Statements.Sequence> etkinliği tasarım yüzeyine sürükleyin ve bırakın.  
   
-3. <xref:System.Activities.Statements.Sequence> etkinliği içinde <xref:System.Activities.Statements.WriteLine> etkinliğini sürükleyip bırakın ve <xref:System.Activities.Statements.WriteLine.Text%2A> özelliğini `"Client: Workflow starting"`olarak ayarlayın. İş akışı artık şöyle görünmelidir:  
+3. Etkinlik içinde sürükleyin <xref:System.Activities.Statements.WriteLine> ve bir <xref:System.Activities.Statements.WriteLine.Text%2A> etkinliği bırakın ve özelliğini `"Client: Workflow starting"` <xref:System.Activities.Statements.Sequence> İş akışı şimdi şu şekilde görünmelidir:  
   
      ![WriteLine etkinliği ekleme](./media/flowing-transactions-into-and-out-of-workflow-services/add-writeline-activity.jpg)  
   
-4. <xref:System.Activities.Statements.TransactionScope> etkinliğini <xref:System.Activities.Statements.WriteLine> etkinliğinden sonra sürükleyip bırakın.  <xref:System.Activities.Statements.TransactionScope> etkinliğini seçin, değişkenler düğmesine tıklayın ve aşağıdaki değişkenleri ekleyin.  
+4. Etkinlikten <xref:System.Activities.Statements.WriteLine> sonra <xref:System.Activities.Statements.TransactionScope> bir etkinliği sürükleyin ve bırakın.  <xref:System.Activities.Statements.TransactionScope> Etkinliği seçin, Değişkenler düğmesini tıklatın ve aşağıdaki değişkenleri ekleyin.  
   
-     ![TransactionScope 'a değişken ekleme](./media/flowing-transactions-into-and-out-of-workflow-services/transactionscope-variables.jpg)  
+     ![TransactionScope'a değişken ekleme](./media/flowing-transactions-into-and-out-of-workflow-services/transactionscope-variables.jpg)  
   
-5. <xref:System.Activities.Statements.Sequence> etkinliğini sürükleyip <xref:System.Activities.Statements.TransactionScope> etkinliğinin gövdesine bırakın.  
+5. Bir <xref:System.Activities.Statements.Sequence> etkinliği sürükleyin ve aktivitenin <xref:System.Activities.Statements.TransactionScope> gövdesine bırakın.  
   
-6. <xref:System.Activities.Statements.Sequence> içinde `PrintTransactionInfo` etkinliğini sürükleyip bırakma  
+6. Bir `PrintTransactionInfo` etkinliği sürükleyin ve bırakın<xref:System.Activities.Statements.Sequence>  
   
-7. <xref:System.Activities.Statements.WriteLine> etkinliğini `PrintTransactionInfo` etkinliğinden sonra sürükleyip bırakın ve <xref:System.Activities.Statements.WriteLine.Text%2A> özelliğini "Client: Send başlatılıyor" olarak ayarlayın. İş akışı artık şöyle görünmelidir:  
+7. Etkinlikten <xref:System.Activities.Statements.WriteLine> `PrintTransactionInfo` sonra bir etkinliği sürükleyin <xref:System.Activities.Statements.WriteLine.Text%2A> ve bırakın ve özelliğini "İstemci: Başlangıç Gönder" olarak ayarlayın. İş akışı şimdi şu şekilde görünmelidir:  
   
-     ![Istemci ekleniyor: gönderme etkinlikleri başlatılıyor](./media/flowing-transactions-into-and-out-of-workflow-services/client-add-cbs-writeline.jpg)  
+     ![İstemci Ekleme: Gönderme etkinliklerini başlangıç](./media/flowing-transactions-into-and-out-of-workflow-services/client-add-cbs-writeline.jpg)  
   
-8. <xref:System.ServiceModel.Activities.Send> etkinliğini <xref:System.Activities.Statements.Assign> etkinliğinden sonra sürükleyip bırakın ve aşağıdaki özellikleri ayarlayın:  
+8. Etkinlikten <xref:System.Activities.Statements.Assign> sonra <xref:System.ServiceModel.Activities.Send> bir etkinliği sürükleyin ve bırakın ve aşağıdaki özellikleri ayarlayın:  
   
     |Özellik|Değer|  
     |--------------|-----------|  
-    |EndpointConfigurationName|workflowServiceEndpoint|  
-    |OperationName|StartSample|  
-    |ServiceContractName|Itransactionsample|  
+    |Endpointconfigurationname|iş akışıServiceEndpoint|  
+    |ThrottledRequests|BaşlangıçÖrneği|  
+    |Hizmet Sözleşme Adı|ITransactionSample|  
   
-     İş akışı artık şöyle görünmelidir:  
+     İş akışı şimdi şu şekilde görünmelidir:  
   
-     ![Gönderme etkinliği özelliklerini ayarlama](./media/flowing-transactions-into-and-out-of-workflow-services/client-send-activity-settings.jpg)  
+     ![Gönder etkinlik özelliklerini ayarlama](./media/flowing-transactions-into-and-out-of-workflow-services/client-send-activity-settings.jpg)  
   
-9. **Tanımla...** bağlantısına tıklayın ve aşağıdaki ayarları yapın:  
+9. **Tanımla...** bağlantısını tıklayın ve aşağıdaki ayarları yapın:  
   
-     ![Etkinlik iletisi ayarlarını gönder](./media/flowing-transactions-into-and-out-of-workflow-services/send-message-settings.jpg)  
+     ![Etkinlik iletisi ayarları gönderme](./media/flowing-transactions-into-and-out-of-workflow-services/send-message-settings.jpg)  
   
-10. <xref:System.ServiceModel.Activities.Send> etkinliğine sağ tıklayın ve **ReceiveReply oluştur**' u seçin. <xref:System.ServiceModel.Activities.ReceiveReply> etkinlik <xref:System.ServiceModel.Activities.Send> etkinliğinden sonra otomatik olarak yerleştirilecek.  
+10. <xref:System.ServiceModel.Activities.Send> Etkinliği sağ tıklatın ve **YanıtLa oluştur'u**seçin. Etkinlik, <xref:System.ServiceModel.Activities.ReceiveReply> etkinlikten <xref:System.ServiceModel.Activities.Send> sonra otomatik olarak yerleştirilir.  
   
-11. Tanımla... öğesine tıklayın ReceiveReplyForSend etkinliğinin bağlantısını yapın ve aşağıdaki ayarları yapın:  
+11. Tanımla'yı tıklatın... ReceiveReplyForSend etkinliğinde bağlantı kurun ve aşağıdaki ayarları yapın:  
   
      ![ReceiveForSend ileti ayarlarını ayarlama](./media/flowing-transactions-into-and-out-of-workflow-services/client-reply-message-settings.jpg)  
   
-12. <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.ReceiveReply> etkinlikleri arasında <xref:System.Activities.Statements.WriteLine> etkinliğini sürükleyip bırakın ve <xref:System.Activities.Statements.WriteLine.Text%2A> özelliğini "Client: Send tamamlanmıştır" olarak ayarlayın.  
+12. <xref:System.Activities.Statements.WriteLine> Bir etkinliği sürükleyin <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.ReceiveReply> bırakın ve <xref:System.Activities.Statements.WriteLine.Text%2A> özelliğini "İstemci: Eksiksiz Gönder" olarak ayarlayın.  
   
-13. <xref:System.ServiceModel.Activities.ReceiveReply> etkinliğinden sonra bir <xref:System.Activities.Statements.WriteLine> etkinliğini sürükleyip bırakın ve <xref:System.Activities.Statements.WriteLine.Text%2A> özelliğini "Istemci tarafı: Yanıtla alındı =" + replyMessage olarak ayarlayın  
+13. Etkinlikten <xref:System.Activities.Statements.WriteLine> <xref:System.ServiceModel.Activities.ReceiveReply> sonra bir etkinliği sürükleyin <xref:System.Activities.Statements.WriteLine.Text%2A> ve bırakın ve özelliğini "İstemci tarafına: Alınan yanıt = " + yanıtİletim  
   
-14. `PrintTransactionInfo` etkinliğini <xref:System.Activities.Statements.WriteLine> etkinliğinden sonra sürükleyip bırakın.  
+14. Etkinlikten <xref:System.Activities.Statements.WriteLine> sonra `PrintTransactionInfo` bir etkinliği sürükleyin ve bırakın.  
   
-15. <xref:System.Activities.Statements.WriteLine> etkinliğini iş akışının sonuna sürükleyip bırakın ve <xref:System.Activities.Statements.WriteLine.Text%2A> özelliğini "Istemci iş akışı bitişi" olarak ayarlayın. Tamamlanan istemci iş akışı aşağıdaki diyagram gibi görünmelidir.  
+15. Bir <xref:System.Activities.Statements.WriteLine> etkinliği iş akışının sonunda sürükleyin ve <xref:System.Activities.Statements.WriteLine.Text%2A> bırakın ve özelliğini "İstemci iş akışı sona erer" olarak ayarlayın. Tamamlanan istemci iş akışı aşağıdaki diyagram gibi görünmelidir.  
   
      ![Tamamlanan istemci iş akışı](./media/flowing-transactions-into-and-out-of-workflow-services/client-complete-workflow.jpg)  
   
-16. Çözümü oluşturun.  
+16. Çözümü derleyin.  
   
-### <a name="create-the-service-application"></a>Hizmet uygulaması oluşturma  
+### <a name="create-the-service-application"></a>Hizmet uygulamasını oluşturma  
   
-1. Çözüme `Service` adlı yeni bir konsol uygulaması projesi ekleyin. Aşağıdaki derlemelere başvurular ekleyin:  
+1. Çözüme yeni `Service` bir Konsol Uygulaması projesi ekleyin. Aşağıdaki derlemelere başvurular ekleyin:  
   
-    1. System. Activities. dll  
+    1. Sistem.Etkinlikler.dll  
   
     2. System.ServiceModel.dll  
   
-    3. System. ServiceModel. Activities. dll  
+    3. Sistem.ServiceModel.Activities.dll  
   
 2. Oluşturulan Program.cs dosyasını ve aşağıdaki kodu açın:  
   
@@ -228,7 +228,7 @@ ms.locfileid: "73978277"
           {  
               Console.WriteLine("Building the server.");  
               using (WorkflowServiceHost host = new WorkflowServiceHost(new DeclarativeServiceWorkflow(), new Uri("net.tcp://localhost:8000/TransactedReceiveService/Declarative")))  
-              {                
+              {
                   //Start the server  
                   host.Open();  
                   Console.WriteLine("Service started.");  
@@ -237,11 +237,11 @@ ms.locfileid: "73978277"
                   Console.ReadLine();  
                   //Shutdown  
                   host.Close();  
-              };         
+              };
           }  
     ```  
   
-3. Projeye aşağıdaki App. config dosyasını ekleyin.  
+3. Projeye aşağıdaki app.config dosyasını ekleyin.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -257,11 +257,11 @@ ms.locfileid: "73978277"
     </configuration>  
     ```  
   
-### <a name="create-the-client-application"></a>İstemci uygulaması oluşturma  
+### <a name="create-the-client-application"></a>İstemci uygulamasını oluşturma  
   
-1. Çözüme `Client` adlı yeni bir konsol uygulaması projesi ekleyin. System. Activities. dll dosyasına bir başvuru ekleyin.  
+1. Çözüme yeni `Client` bir Konsol Uygulaması projesi ekleyin. System.Activities.dll adresine bir başvuru ekleyin.  
   
-2. Program.cs dosyasını açın ve aşağıdaki kodu ekleyin.  
+2. program.cs dosyasını açın ve aşağıdaki kodu ekleyin.  
   
     ```csharp
     class Program  
@@ -281,7 +281,7 @@ ms.locfileid: "73978277"
             Console.WriteLine("Press ENTER once service is started.");  
             Console.ReadLine();  
   
-            //Start the client              
+            //Start the client
             Console.WriteLine("Starting the client.");  
             client.Run();  
             syncEvent.WaitOne();  

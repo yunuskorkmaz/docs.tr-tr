@@ -2,85 +2,85 @@
 title: Arka Plan Bilgileri
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: d7d00a0c64c6b25219403e8fd15eae85c09eafa0
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 3aa0cd4eaae38121cbb8c04c1c917f51dfbb0de1
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937544"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78848333"
 ---
 # <a name="background-information"></a>Arka Plan Bilgileri
-Bu bölümdeki konular, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]kullanımı hakkındaki temel bilgileri aşmaya yönelik kavramlar ve yordamlar ile ilgilidir.  
+Bu bölümdeki konular, kullanma [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]yla ilgili temel kavramların ötesine geçen kavramlar ve yordamlarla ilgilidir.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kod ve uygulamanın ek örneklerini bulmak için aşağıdaki adımları izleyin:  
+ Kod ve uygulamaların ek [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] örneklerini bulmak için aşağıdaki adımları izleyin:  
   
-- Belirli sorunlar için Microsoft Docs arayın.  
+- Belirli sorunlar için Microsoft Dokümanları'nda arama yapın.  
   
-- Uzmanlarla ilgili daha karmaşık konuları tartışabilirsiniz [LINQ forumuna](https://go.microsoft.com/fwlink/?LinkId=76488)katılın.  
+- Daha karmaşık konuları uzmanlarla ayrıntılı olarak tartışabileceğiniz [LINQ Forumu'na](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)katılın.  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] teknolojinin ayrıntılarını Visual Basic ve C# kod örnekleriyle tamamlamaya yönelik teknik incelemeyi inceleyin. Daha fazla bilgi için bkz. [LINQ to SQL: .NET dil Ile tümleşik sorgulama verileri](https://go.microsoft.com/fwlink/?LinkId=93205).  
+- Visual Basic ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] C# kod örnekleriyle birlikte teknolojiyi ayrıntılarıyla gösteren teknik incelemeyi inceleştirin. Daha fazla bilgi için [LINQ to SQL: .NET Language-Integrated Query for Relational Data adresine](https://docs.microsoft.com/previous-versions/dotnet/articles/bb425822(v=msdn.10))bakın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [ADO.NET ve LINQ to SQL](ado-net-and-linq-to-sql.md)  
- ADO.NET ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ilişkisini açıklar.  
+ ADO.NET ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [LINQ to SQL Kaynak Kodunu Analiz Etme](analyzing-linq-to-sql-source-code.md)  
- Northwind örnek veritabanından kaynak kodu oluşturarak ve görüntüleyerek [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eşlemenin nasıl analiz edileceğini açıklar.  
+ Northwind örnek [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veritabanından kaynak kodu üreterek ve görüntüleyerek eşlemenin nasıl analiz edilebildiğini açıklar.  
   
  [Insert, Update ve Delete İşlemlerini Özelleştirme](customizing-insert-update-and-delete-operations.md)  
- Doğrulama kodu ve diğer özelleştirmelerin nasıl ekleneceğini açıklar.  
+ Doğrulama kodu ve diğer özelleştirmelerin nasıl ekleyeceğini açıklar.  
   
  [Veri Bağlama](data-binding.md)  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], veri bağlamayı desteklemek için <xref:System.ComponentModel.IListSource> nasıl kullandığını açıklar.  
+ Veri [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bağlamayı desteklemek için nasıl kullanır <xref:System.ComponentModel.IListSource> açıklar.  
   
  [Devralma Desteği](inheritance-support.md)  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modelinde devralma rolünü ve sorgularınızdaki ilgili işleçlerin nasıl kullanılacağını açıklar.  
+ Nesne modelinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] devralmanın rolünü ve sorgularınızda ilgili işleçlerin nasıl kullanılacağını açıklar.  
   
  [Yerel Yöntem Çağrıları](local-method-calls.md)  
- Yerel Yöntem çağrıları için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] desteğini açıklar.  
+ Yerel [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yöntem çağrıları için desteği açıklar.  
   
  [LINQ to SQL ile N Katmanı ve Uzak Uygulamalar](n-tier-and-remote-applications-with-linq-to-sql.md)  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]kullanan çok katmanlı uygulamalar için ayrıntılı bilgiler sağlar.  
+ Kullanan [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]çok katmanlı uygulamalar için ayrıntılı bilgi sağlar.  
   
  [Nesne Kimliği](object-identity.md)  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modelinde nesne kimliğini açıklar ve bu özelliğin bir veritabanındaki nesne kimliğinden farklı olduğunu açıklar.  
+ Nesne modelinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne kimliğini açıklar ve bu özelliğin veritabanındaki nesne kimliğinden nasıl farklı olduğunu açıklar.  
   
  [LINQ to SQL Nesne Modeli](the-linq-to-sql-object-model.md)  
- Nesne modelini ve ilişkisel veri modeliyle ilişkilerini açıklar.  
+ Nesne modelini ve ilişkisel veri modeliyle ilişkisini açıklar.  
   
  [Nesne Durumları ve Değişiklik İzleme](object-states-and-change-tracking.md)  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] değişiklikleri nasıl izlediğini hakkında ayrıntılı bilgi sağlar.  
+ Parçaların nasıl [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] değiştiği hakkında ayrıntılı bilgi sağlar.  
   
  [İyimser Eşzamanlılık: Genel Bakış](optimistic-concurrency-overview.md)  
- İyimser eşzamanlılığı açıklar ve koşulları tanımlar.  
+ İyimser eşzamanlılığı tanımlar ve terimleri tanımlar.  
   
  [Sorgu Kavramları](query-concepts.md)  
- LINQ 'teki sorgulardan farklı [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorguların yönlerini açıklar.  
+ LINQ'daki [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorgulardan farklı olan sorguların yönlerini açıklar.  
   
  [Kimlik Önbelleğinden Nesne Alma](retrieving-objects-from-the-identity-cache.md)  
  Kimlik önbelleğinden nesneleri alan sorgu türlerini açıklar.  
   
  [LINQ to SQL’de Güvenlik](security-in-linq-to-sql.md)  
- Veritabanı bağlantılarında güvenliğe yönelik doğru yaklaşımı açıklar.  
+ Veritabanı bağlantılarında güvenliğe doğru yaklaşımı açıklar.  
   
- [Serileştirme](serialization.md)  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamalarda serileştirme işlemini açıklar.  
+ [Seri -leştirme](serialization.md)  
+ Uygulamalarda [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] serileştirme işlemini açıklar.  
   
  [Saklı Yordamlar](stored-procedures.md)  
- Tasarım zamanında saklı yordamların nasıl eşleneceğini ve uygulamanızdan nasıl çağrılacağını açıklar.  
+ Depolanan yordamları tasarım zamanında nasıl eşlenizi gösterin ve bunları uygulamanızdan nasıl çağırılanın açıklar.  
   
  [İşlem Desteği](transaction-support.md)  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] desteklediği üç işlem modelini özetler.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Destekleyen üç işlem modelini özetler.  
   
  [SQL-CLR Tür Uyumsuzlukları](sql-clr-type-mismatches.md)  
- Farklı tür sistemlerini mingile ilgili güçlükleri açıklar.  
+ Farklı tip sistemlerini karıştırmanın zorluklarını açıklar.  
   
  [SQL-CLR Özel Tür Eşlemeleri](sql-clr-custom-type-mappings.md)  
- Tür eşlemelerini özelleştirme hakkında rehberlik sağlar.  
+ Tür eşlemelerini özelleştirme konusunda kılavuz sağlar.  
   
- [Kullanıcı Tanımlı İşlevler](user-defined-functions.md)  
- Tasarım zamanında Kullanıcı tanımlı işlevlerin nasıl eşleneceğini ve uygulamanızdan nasıl çağrılacağını açıklar.  
+ [Kullanıcı Tanımlı Fonksiyonlar](user-defined-functions.md)  
+ Tasarım zamanında kullanıcı tarafından tanımlanan işlevlerin nasıl eşlenebildiğini ve bunları uygulamanızdan nasıl çağırılanın açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Programlama Kılavuzu](programming-guide.md)  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]çeşitli yönlerini açıklayan bölümlerin bağlantılarını içerir.
+ Çeşitli yönlerini açıklayan bölümlere bağlantılar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]içerir.

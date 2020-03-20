@@ -5,115 +5,115 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 6143cf835cc44a6c6cc50372b2ac1a4d24d65311
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: bedd99fcf9b4ca1d10b4c24d7cff9de320e6fd12
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740389"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186169"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType Kayıt Defteri Ayarları
 Bu konu, WPF uygulamaları tarafından kullanılan Microsoft ClearType kayıt defteri ayarlarına genel bir bakış sağlar.  
 
-<a name="overview"></a>   
-## <a name="technology-overview"></a>Teknolojiye genel bakış  
- bir görüntüleme cihazına metin işleyen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar, Gelişmiş okuma deneyimi sağlamak için ClearType özelliklerini kullanır. ClearType, dizüstü ekranları, Pocket PC ekranları ve düz panel izleyicileri gibi mevcut LCD 'lerde (sıvı kristal ekranlar) metinlerin okunabilirliğini artıran Microsoft tarafından geliştirilen bir yazılım teknolojisidir. ClearType, bir LCD ekranın her pikseline tek dikey renk Stripe öğelerine erişerek işe yarar. ClearType hakkında daha fazla bilgi için bkz. [ClearType Genel Bakış](cleartype-overview.md).  
+<a name="overview"></a>
+## <a name="technology-overview"></a>Teknolojiye Genel Bakış  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]metin görüntüleme aygıtına metin işleyen uygulamalar, gelişmiş bir okuma deneyimi sağlamak için ClearType özelliklerini kullanır. ClearType, Microsoft tarafından geliştirilen ve dizüstü bilgisayar ekranları, Pocket PC ekranları ve düz panel monitörler gibi mevcut CD'lerde (Liquid Crystal Displays) metnin okunabilirliğini artıran bir yazılım teknolojisidir. ClearType, LCD ekranın her pikselinde tek tek dikey renkli şerit öğelerine erişerek çalışır. ClearType hakkında daha fazla bilgi için [ClearType Genel Bakış'a](cleartype-overview.md)bakın.  
   
- ClearType ile işlenen metin, çeşitli görüntü cihazlarında görüntülendiklerinde önemli ölçüde farklı görünebilir. Örneğin, küçük sayıda izleyici renk Stripe öğelerini, daha sık görülen kırmızı, yeşil, mavi (RGB) sıra yerine mavi, yeşil, kırmızı düzende uygular.  
+ ClearType ile işlenen metin, çeşitli görüntüleme aygıtlarında görüntülendiğinde önemli ölçüde farklı görünebilir. Örneğin, az sayıda monitör, daha yaygın kırmızı, yeşil, mavi (RGB) sırasına göre renk çizgi öğelerini mavi, yeşil, kırmızı sırada uygular.  
   
- ClearType ile işlenen metin, farklı renk duyarlılığı düzeylerine sahip kişiler tarafından görüntülendiklerinde önemli ölçüde farklı şekilde de görüntülenebilir. Bazı bireyler renk açısından hafif farklılıkları diğerlerinden daha iyi algılayabilirler.  
+ ClearType ile işlenen metin, farklı renk duyarlılığı düzeylerine sahip kişiler tarafından görüntülendiğinde de önemli ölçüde farklı görünebilir. Bazı bireyler diğerlerinden daha iyi renk hafif farklılıklar algılayabilir.  
   
- Bu durumların her birinde, her biri için en iyi okuma deneyimini sağlamak üzere ClearType özelliklerinin değiştirilmesi gerekir.  
+ Bu durumların her birinde, ClearType özelliklerinin her birey için en iyi okuma deneyimini sağlamak için değiştirilmesi gerekir.  
   
-<a name="registry_settings"></a>   
+<a name="registry_settings"></a>
 ## <a name="registry-settings"></a>Kayıt Defteri Ayarları  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ClearType özelliklerini denetlemek için dört kayıt defteri ayarı belirtir:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType özelliklerini denetlemek için dört kayıt defteri ayarı belirtir:  
   
 |Ayar|Açıklama|  
 |-------------|-----------------|  
 |ClearType düzeyi|ClearType renk netliği düzeyini açıklar.|  
-|Gama düzeyi|Bir görüntü cihazının piksel rengi bileşeninin düzeyini açıklar.|  
-|Piksel yapısı|Bir görüntü cihazının piksel düzenlemesini açıklar.|  
-|Metin karşıtlığı düzeyi|Görünen metnin kontrast düzeyini açıklar.|  
+|Gama seviyesi|Bir görüntü aygıtının piksel renk bileşeninin düzeyini açıklar.|  
+|Piksel yapısı|Bir görüntü aygıtı için piksellerin düzenlenmesini açıklar.|  
+|Metin kontrast düzeyi|Görüntülenen metnin kontrast düzeyini açıklar.|  
   
- Bu ayarlara, tanımlanan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType kayıt defteri ayarlarına nasıl başvurulacağını bilen bir dış yapılandırma yardımcı programı tarafından erişilebilir. Bu ayarlar, Windows kayıt defteri Düzenleyicisi kullanılarak değerlere doğrudan erişerek da oluşturulabilir veya değiştirilebilir.  
+ Bu ayarlara, tanımlanan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ClearType kayıt defteri ayarlarına nasıl başvuruleceğini bilen harici bir yapılandırma yardımcı programı tarafından erişilebilir. Bu ayarlar, windows kayıt defteri düzenleyicisini kullanarak değerlere doğrudan erişerek de oluşturulabilir veya değiştirilebilir.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType kayıt defteri ayarları ayarlanmamışsa (varsayılan durumdur), [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama, yazı tipi yumuşatma ayarları için Windows sistem parametreleri bilgilerini sorgular.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ClearType kayıt defteri ayarları ayarlanmazsa (varsayılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] durum buysa), uygulama yazı tipi düzgünleme ayarları için Windows sistem parametreleri bilgilerini sorgular.  
   
 > [!NOTE]
-> Görüntüleme cihaz adlarını numaralandırma hakkında bilgi için bkz. `SystemParametersInfo`Win32 işlevi.  
+> Görüntü aygıtı adlarını listeleyen hakkında bilgi `SystemParametersInfo`için Win32 işlevine bakın.  
   
-<a name="ClearType_level"></a>   
-## <a name="cleartype-level"></a>ClearType düzeyi  
- ClearType düzeyi, bir bireyin için renk duyarlılığı ve permütasyon temelinde metin işlemesini ayarlamanıza olanak sağlar. Bazı bireyler için, en yüksek düzeyde ClearType kullanan metnin işlenmesi en iyi okuma deneyimini oluşturmaz.  
+<a name="ClearType_level"></a>
+## <a name="cleartype-level"></a>ClearType Düzeyi  
+ ClearType düzeyi, bir bireyin renk hassasiyetine ve algısına göre metnin işlenmesini ayarlamanızı sağlar. Bazı kişiler için, ClearType'ı en üst düzeyde kullanan metnin işlenmesi en iyi okuma deneyimini oluşturmaz.  
   
- ClearType düzeyi, 0 ile 100 arasında değişen bir tamsayı değeridir. Varsayılan düzey 100 ' dir. Bu, ClearType 'ın, görüntüleme cihazının renk şeridi öğelerinin en yüksek yeteneğini kullanması anlamına gelir. Ancak, bir ClearType düzeyi 0, metni gri ölçekli olarak işler. ClearType düzeyini 0 ile 100 arasında bir yere ayarlayarak, bir kişinin renk duyarlılığı için uygun bir ara düzeyi oluşturabilirsiniz.  
+ ClearType düzeyi 0 ile 100 arasında değişen bir bir gerçek değeridir. Varsayılan düzey 100'dür, bu da ClearType'ın görüntü aygıtının renk şerit öğelerinin maksimum kapasitesini kullandığı anlamına gelir. Ancak, 0'lık ClearType düzeyi metni gri ölçek olarak işler. ClearType düzeyini 0 ile 100 arasında bir yere ayarlayarak, bireyin renk hassasiyetine uygun bir ara düzey oluşturabilirsiniz.  
   
-### <a name="registry-setting"></a>Kayıt defteri ayarı  
- ClearType düzeyi için kayıt defteri ayarı konumu, belirli bir görüntü aygıtı adına karşılık gelen bireysel bir Kullanıcı ayarıdır:  
+### <a name="registry-setting"></a>Kayıt Defteri Ayarı  
+ ClearType düzeyi için kayıt defteri ayarı konumu, belirli bir görüntü aygıtı adına karşılık gelen tek bir kullanıcı ayarıdır:  
   
  `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- Bir kullanıcının her ekran cihaz adı için bir `ClearTypeLevel` DWORD değeri tanımlanmıştır. Aşağıdaki ekran görüntüsünde, ClearType düzeyi için kayıt defteri Düzenleyicisi ayarı gösterilmektedir.  
+ Bir kullanıcıiçin her görüntü aygıtı `ClearTypeLevel` adı için bir DWORD değeri tanımlanır. Aşağıdaki ekran görüntüsü, ClearType düzeyi için Kayıt Defteri Düzenleyicisi ayarını gösterir.  
   
- ![Kayıt defteri düzenleyicisinde ClearType ayarları.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
+ ![Kayıt Defteri Düzenleyicisi'ndeki ClearType ayarları.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar, ClearType ile ve olmayan iki moddan birinde metin işler. Metin ClearType olmadan işlendiğinde gri ölçekli işleme olarak adlandırılır.  
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]uygulamalar, ClearType'lı ve ClearType'sız iki moddan birinde metin işler. Metin ClearType olmadan işlendiğinde, gri ölçek işleme olarak adlandırılır.  
   
-<a name="gamma_level"></a>   
-## <a name="gamma-level"></a>Gama düzeyi  
- Gama düzeyi piksel değeri ve ışıklılık arasındaki doğrusal olmayan ilişkiyi ifade eder. Gama düzeyi ayarı, görüntüleme cihazının fiziksel özelliklerine karşılık gelmelidir; Aksi takdirde, işlenen çıktıda deformasyonlar olabilir. Örneğin, metin çok geniş veya çok dar görünebilir veya karakterlerin dikey metinlerin kenarları üzerinde renkli fringes görünebilir.  
+<a name="gamma_level"></a>
+## <a name="gamma-level"></a>Gama Seviyesi  
+ Gama düzeyi, piksel değeri ile parlaklık arasındaki doğrusal olmayan ilişkiyi ifade eder. Gama seviyesi ayarı, görüntü aygıtının fiziksel özelliklerine karşılık gelir; aksi takdirde, işlenmiş çıktıda bozulmalar oluşabilir. Örneğin, metin çok geniş veya çok dar görünebilir veya gliflerin dikey saplarının kenarlarında renk saçaklar görünebilir.  
   
- Gama düzeyi 1000 ile 2200 arasında değişen bir tamsayı değeridir. Varsayılan düzey 1900 ' dir.  
+ Gama seviyesi 1000 ile 2200 arasında değişen bir bir gerçek değeridir. Varsayılan düzey 1900'dür.  
   
-### <a name="registry-setting"></a>Kayıt defteri ayarı  
- Gama düzeyi için kayıt defteri ayarı konumu, belirli bir görüntü aygıtı adına karşılık gelen bir yerel makine ayarıdır:  
+### <a name="registry-setting"></a>Kayıt Defteri Ayarı  
+ Gama düzeyi için kayıt defteri ayarı konumu, belirli bir görüntü aygıtı adına karşılık gelen yerel bir makine ayarıdır:  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- Bir kullanıcının her ekran cihaz adı için bir `GammaLevel` DWORD değeri tanımlanmıştır. Aşağıdaki ekran görüntüsünde, gama düzeyi için kayıt defteri Düzenleyicisi ayarı gösterilmektedir.  
+ Bir kullanıcıiçin her görüntü aygıtı `GammaLevel` adı için bir DWORD değeri tanımlanır. Aşağıdaki ekran görüntüsü, gama düzeyi için Kayıt Defteri Düzenleyicisi ayarını gösterir.  
   
- ![Kayıt defteri düzenleyicisinde ClearType gama düzeyi ayarları](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
+ ![Kayıt Defteri Düzenleyicisi'nde ClearType gama düzeyi ayarları](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
-<a name="pixel_structure"></a>   
-## <a name="pixel-structure"></a>Piksel yapısı  
- Piksel yapısı, bir görüntü cihazını oluşturan piksellerin türünü tanımlar. Piksel yapısı, üç türden biri olarak tanımlanır:  
+<a name="pixel_structure"></a>
+## <a name="pixel-structure"></a>Piksel Yapısı  
+ Piksel yapısı, bir görüntü aygıtı oluşturan piksel türünü açıklar. Piksel yapısı üç türden biri olarak tanımlanır:  
   
 |Tür|Değer|Açıklama|  
 |----------|-----------|-----------------|  
-|Düz|0|Görüntü cihazının piksel yapısı yok. Bu, her renk için açık kaynakların piksel alanına eşit olarak yayıldığı anlamına gelir; buna gri ölçekli işleme denir. Bu, standart görüntü cihazının nasıl çalıştığı. ClearType, işlenen metne hiçbir şekilde uygulanmaz.|  
-|RGB|1\.|Görüntü cihazının şu sırada üç şeritden oluşan pikselleri vardır: kırmızı, yeşil ve mavi. ClearType, işlenen metne uygulanır.|  
-|BGR|2|Görüntü cihazında şu sırada üç şeritden oluşan pikseller vardır: mavi, yeşil ve kırmızı. ClearType, işlenen metne uygulanır. Sıranın RGB türünden nasıl tersine çevrildiğine dikkat edin.|  
+|Düz|0|Görüntü aygıtının piksel yapısı yoktur. Bu, her renk için ışık kaynaklarının piksel alanına eşit olarak yayıldığı anlamına gelir — buna gri ölçek işleme denir. Standart bir görüntüleme aygıtı bu şekilde çalışır. ClearType işlenen metne hiçbir zaman uygulanmaz.|  
+|RGB|1|Ekran aygıtı, aşağıdaki sırayla üç şeritten oluşan piksellere sahiptir: kırmızı, yeşil ve mavi. ClearType işlenen metne uygulanır.|  
+|Bgr|2|Ekran aygıtı, aşağıdaki sırada üç şeritten oluşan piksellere sahiptir: mavi, yeşil ve kırmızı. ClearType işlenen metne uygulanır. Siparişin RGB türünden nasıl ters çevrilebildiğini fark edin.|  
   
- Piksel yapısı, 0 ile 2 arasında değişen bir tamsayı değerine karşılık gelir. Varsayılan düzey, düz bir piksel yapısını temsil eden 0 ' dır.  
+ Piksel yapısı 0 ile 2 arasında değişen bir tamsayı değerine karşılık gelir. Varsayılan düzey, düz piksel yapısını temsil eden 0'dır.  
   
 > [!NOTE]
-> Görüntüleme cihaz adlarını numaralandırma hakkında bilgi için bkz. `EnumDisplayDevices`Win32 işlevi.  
+> Görüntü aygıtı adlarını listeleyen hakkında bilgi `EnumDisplayDevices`için Win32 işlevine bakın.  
   
-### <a name="registry-setting"></a>Kayıt defteri ayarı  
- Piksel yapısına yönelik kayıt defteri ayarı konumu, belirli bir görüntü aygıtı adına karşılık gelen bir yerel makine ayarıdır:  
+### <a name="registry-setting"></a>Kayıt Defteri Ayarı  
+ Piksel yapısıiçin kayıt defteri ayarı konumu, belirli bir görüntü aygıtı adına karşılık gelen yerel bir makine ayarıdır:  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- Bir kullanıcının her ekran cihaz adı için bir `PixelStructure` DWORD değeri tanımlanmıştır. Aşağıdaki ekran görüntüsünde, piksel yapısına yönelik kayıt defteri Düzenleyicisi ayarı gösterilmektedir.  
+ Bir kullanıcıiçin her görüntü aygıtı `PixelStructure` adı için bir DWORD değeri tanımlanır. Aşağıdaki ekran görüntüsü, piksel yapısı için Kayıt Defteri Düzenleyicisi ayarını gösterir.  
   
- ![Kayıt defteri düzenleyicisinde ClearType gama düzeyi ayarları](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
+ ![Kayıt Defteri Düzenleyicisi'nde ClearType gama düzeyi ayarları](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
-<a name="text_contrast_level"></a>   
-## <a name="text-contrast-level"></a>Metin karşıtlığı düzeyi  
- Metin karşıtlığı düzeyi, karakterlerin alt genişlerine göre metin işlemesini ayarlamanıza olanak sağlar. Metin karşıtlığı düzeyi, 0 ile 6 arasında değişen bir tamsayı değeridir — tamsayı değeri, daha geniş. Varsayılan düzey 1 ' dir.  
+<a name="text_contrast_level"></a>
+## <a name="text-contrast-level"></a>Metin Kontrast Düzeyi  
+ Metin kontrast düzeyi, gliflerin gövde genişliklerine göre metnin işlenmesini ayarlamanızı sağlar. Metin kontrast düzeyi 0 ile 6 arasında değişen bir tamsayı değeridir— tamsayı değeri ne kadar büyükse, kök o kadar geniştir. Varsayılan düzey 1'dir.  
   
-### <a name="registry-setting"></a>Kayıt defteri ayarı  
- Metin karşıtlığı düzeyi için kayıt defteri ayarı konumu, belirli bir görüntü aygıtı adına karşılık gelen bireysel bir Kullanıcı ayarıdır:  
+### <a name="registry-setting"></a>Kayıt Defteri Ayarı  
+ Metin kontrast düzeyi için kayıt defteri ayarı konumu, belirli bir görüntü aygıtı adına karşılık gelen tek bir kullanıcı ayarıdır:  
   
  `HKEY_CURRENT_USER\Software\Microsoft\Avalon.Graphics\<displayName>`  
   
- Bir kullanıcının her ekran cihaz adı için bir `TextContrastLevel` DWORD değeri tanımlanmıştır. Aşağıdaki ekran görüntüsünde, metin karşıtlığı düzeyi için kayıt defteri Düzenleyicisi ayarı gösterilmektedir.  
+ Bir kullanıcıiçin her görüntü aygıtı `TextContrastLevel` adı için bir DWORD değeri tanımlanır. Aşağıdaki ekran görüntüsü, metin kontrast düzeyi için Kayıt Defteri Düzenleyicisi ayarını gösterir.  
   
- ![Kayıt defteri düzenleyicisinde ClearType ayarları.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
+ ![Kayıt Defteri Düzenleyicisi'ndeki ClearType ayarları.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ClearType Genel Bakışı](cleartype-overview.md)
-- [ClearType düzgünleştirme](/windows/desktop/gdi/cleartype-antialiasing)
+- [ClearType Antialiasing](/windows/desktop/gdi/cleartype-antialiasing)

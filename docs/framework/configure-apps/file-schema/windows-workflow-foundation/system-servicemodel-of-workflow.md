@@ -1,20 +1,20 @@
 ---
-title: < System. serviceModel > iş akışı
+title: <system.serviceModel> iş akışı
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 757a7a132a6e765e257097d251a110297c6a40bf
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 9aa2bf0fdfd6fe4528a3fda4d05b3ba8f23637d3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398608"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151955"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<iş akışının System. serviceModel >
+# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel iş akışı>
 Bu yapılandırma bölümü tüm iş akışı yapılandırma öğeleri içerir.  
 
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<sistemin. ServiceModel >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<Sistem. ServiceModel>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -25,12 +25,12 @@ Bu yapılandırma bölümü tüm iş akışı yapılandırma öğeleri içerir.
     <behavior name="String">  
       <bufferReceive maxPendingMessagesPerChannel="Integer" />  
       <etwTracking profileName="String" />  
-     <sendMessageChannelCache allowUnsafeCaching="Boolean" >          
+     <sendMessageChannelCache allowUnsafeCaching="Boolean" >
         <channelSettings idleTimeout="TimeSpan" leaseTimeout="TimeSpan" maxItemsInCache="Integer" />  
         <factorySettings idleTimeout="TimeSpan" leaseTimeout="TimeSpan" maxItemsInCache="Integer" />  
      </sendMessageChannelCache>  
-      <sqlWorkflowInstanceStore   
-          connectionStringName="String"   
+      <sqlWorkflowInstanceStore
+          connectionStringName="String"
           hostLockRenewalPeriod="TimeSpan"  
           instanceCompletionAction="DeleteNothing/DeleteAll"  
           instanceEncodingAction="None/GZip"  
@@ -42,12 +42,12 @@ Bu yapılandırma bölümü tüm iş akışı yapılandırma öğeleri içerir.
     </behavior>  
     </serviceBehaviors>  
   </behaviors>  
-  <tracking>    
-     <participants>   
-      <add name="String"   
+  <tracking>
+     <participants>
+      <add name="String"
            profileName="String"  
-           type="String" />   
-     </participants>   
+           type="String" />
+     </participants>
     <trackingProfile name="String">  
       <workflow activityDefinitionId="String">  
           <activityScheduledQueries>  
@@ -88,7 +88,7 @@ Bu yapılandırma bölümü tüm iş akışı yapılandırma öğeleri içerir.
           </workflowInstanceQuery>  
         </workflowInstanceQueries>  
       </workflow>  
-    </trackingProfile>          
+    </trackingProfile>
    </profiles>  
   </tracking>  
 </system.ServiceModel>  
@@ -98,17 +98,17 @@ Bu yapılandırma bölümü tüm iş akışı yapılandırma öğeleri içerir.
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
- Yok.  
+ None  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<davranışlar >](behaviors-of-workflow.md)|Bu bölüm **Servicedavranışlar** koleksiyonunu tanımlar.  Koleksiyondaki her öğe hizmetler tarafından kullanılan davranışı öğeleri tanımlar. Her davranış öğesi, benzersiz **ad** özniteliği tarafından tanımlanır.|  
-|[\<İzleme >](tracking.md)|Bir iş akışı hizmeti için izleme ayarlarını tanımlamaya yönelik bir yapılandırma bölümünü temsil eder.<br /><br /> İş akışı izleme ve yapılandırması hakkında daha fazla bilgi için bkz. iş akışı [izleme ve izleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) ve [izleme yapılandırma](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
+|[\<davranışlar>](behaviors-of-workflow.md)|Bu bölümde **serviceBehaviors** koleksiyonu tanımlanır.  Koleksiyondaki her öğe hizmetler tarafından kullanılan davranışı öğeleri tanımlar. Her davranış öğesi benzersiz **ad** özniteliği ile tanımlanır.|  
+|[\<izleme>](tracking.md)|İş akışı hizmeti için izleme ayarlarını tanımlamak için bir yapılandırma bölümünü temsil eder.<br /><br /> İş akışı izleme ve yapılandırmasında daha fazla bilgi için [Configuring Tracking for a Workflow](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md) [bkz.](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Yapılandırma >](../configuration-element.md)|Bir .NET yapılandırma dosyasındaki tüm yapılandırma öğeleri için kök öğesi.|
+|[\<yapılandırma>](../configuration-element.md)|Bir .NET yapılandırma dosyasındaki tüm yapılandırma öğeleri için kök öğesi.|

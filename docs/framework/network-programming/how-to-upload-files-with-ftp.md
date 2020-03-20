@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: FTP ile dosyaları karşıya yükleme'
-description: Bu makalede, bir FTP sunucusuna bir dosya karşıya yükleme örneği gösterilmektedir.
+title: 'Nasıl yapılır: FTP ile dosya yükleme'
+description: Bu makalede, ftp sunucusuna dosya yükleme nin bir örneği gösterilmektedir.
 ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: e40f17c5-dd12-4c62-9dbf-00ab491382dc
 ms.openlocfilehash: 670bbc65078e6530cffbcfa7d324c36238014ffb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "65632816"
 ---
-# <a name="how-to-upload-files-with-ftp"></a>Nasıl yapılır: FTP ile dosyaları karşıya yükleme
+# <a name="how-to-upload-files-with-ftp"></a>Nasıl yapılır: FTP ile dosya yükleme
 
-Bu örnek, bir FTP sunucusuna bir dosya karşıya yükleme işlemini gösterir.
+Bu örnek, bir FTP sunucusuna dosyanın nasıl yüklendiğini gösterir.
 
 ## <a name="example"></a>Örnek
 

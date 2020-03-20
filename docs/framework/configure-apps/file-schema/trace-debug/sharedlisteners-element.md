@@ -11,24 +11,24 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: b419ecf451b79808e545525c7b8761175f390200
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 69f15cc9583b397017ac30a0c567914495867c18
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699297"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153327"
 ---
-# <a name="sharedlisteners-element"></a>\<sharedListeners > öğesi
-Herhangi bir kaynak veya izleme öğesinin başvurmasına yönelik dinleyicileri içerir.  Bu dinleyiciler, varsayılan olarak herhangi bir izleme almaz ve çalışma zamanında bu dinleyicileri almak mümkün değildir. Paylaşılan dinleyiciler ada göre kaynaklara veya izlemelere eklenebilir olarak tanımlanan dinleyiciler.  
+# <a name="sharedlisteners-element"></a>\<sharedListeners> Element
+Herhangi bir kaynak veya izleme öğesinin başvuruedebileceği dinleyicileri içerir.  Bu dinleyiciler varsayılan olarak herhangi bir iz almazlar ve bu dinleyicileri çalışma zamanında almak mümkün değildir. Paylaşılan dinleyici olarak tanımlanan dinleyiciler kaynaklara veya izadile eklenebilir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-[ **System. diagnostics\<** &nbsp;&nbsp;>](system-diagnostics-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<sharedListeners >**  
+[**\<yapılandırma>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<paylaşılanDinleyiciler>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<sharedListeners>   
+<sharedListeners>
   <add>...</add>  
 </sharedListeners>  
 ```  
@@ -43,7 +43,7 @@ Herhangi bir kaynak veya izleme öğesinin başvurmasına yönelik dinleyicileri
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<> Ekle](add-element-for-listeners-for-trace.md)|`sharedListeners` koleksiyonuna bir dinleyici ekler.|  
+|[\<>ekleyin](add-element-for-listeners-for-trace.md)|`sharedListeners` Koleksiyona bir dinleyici ekler.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -53,12 +53,12 @@ Herhangi bir kaynak veya izleme öğesinin başvurmasına yönelik dinleyicileri
 |`system.diagnostics`|ASP.NET yapılandırma bölümünün kök öğesini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Paylaşılan dinleyiciler koleksiyonuna dinleyici eklemek, etkin bir dinleyici yapmaz. Yine de bu izleme öğesi için `Listeners` koleksiyonuna ekleyerek bir izleme kaynağına veya bir izlemeye eklenmeli. .NET Framework dinleyici sınıfları <xref:System.Diagnostics.TraceListener> sınıfından türetilir.  
+ Paylaşılan dinleyici koleksiyonuna dinleyici eklemek onu etkin bir dinleyici yapmaz. Yine de bir izleme kaynağına veya bir izleme `Listeners` için bu izleme öğesi için koleksiyona ekleyerek eklenmelidir. .NET Framework'deki dinleyici sınıfları sınıftan <xref:System.Diagnostics.TraceListener> türetilmiştir.  
   
- Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe makine yapılandırma dosyasında (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, <xref:System.Diagnostics.TraceSource> ve <xref:System.Diagnostics.Trace> sınıflarının her ikisi için de `Listeners` koleksiyonuna dinleyici `console` eklemek için `<sharedListeners>` öğesinin nasıl kullanılacağını gösterir. Konsol izleme dinleyicisi, <xref:System.Diagnostics.TraceSource> ya da <xref:System.Diagnostics.Trace>çağrıları aracılığıyla izleme bilgilerini konsola yazar.  
+ Aşağıdaki örnek, dinleyiciyi `<sharedListeners>` `Listeners` hem sınıflar hem `console` de <xref:System.Diagnostics.Trace> sınıflar için <xref:System.Diagnostics.TraceSource> koleksiyona eklemek için öğenin nasıl kullanılacağını gösterir. Konsol izleme dinleyicisi ya da <xref:System.Diagnostics.TraceSource> <xref:System.Diagnostics.Trace>aramalar yoluyla konsola izleme bilgileri yazar.  
   
 ```xml  
 <configuration>  
@@ -92,4 +92,4 @@ Herhangi bir kaynak veya izleme öğesinin başvurmasına yönelik dinleyicileri
 
 - <xref:System.Diagnostics.TraceListener>
 - [İzleme ve Hata Ayıklama Ayarları Şeması](index.md)
-- [İzleme Dinleyicileri](../../../debug-trace-profile/trace-listeners.md)
+- [İz Dinleyicileri](../../../debug-trace-profile/trace-listeners.md)

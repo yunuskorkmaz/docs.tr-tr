@@ -2,23 +2,23 @@
 title: Kesin Kod Temelli Doğrulama
 ms.date: 03/30/2017
 ms.assetid: ae12537c-455e-42b1-82f4-cea4c46c023e
-ms.openlocfilehash: 333e1e200825dd1fc8ed750abbecbb309da66663
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3b07d0ab06b3753286c929b90e713a6941684ad
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009779"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143102"
 ---
 # <a name="imperative-code-based-validation"></a>Kesin Kod Temelli Doğrulama
 
-Kesin kod temelli doğrulama doğrulama kendisi hakkında sağlamaya bir etkinlik için basit bir yol sağlar ve türetilen etkinlikler için kullanılabilir <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, ve <xref:System.Activities.NativeActivity>. Herhangi bir doğrulama hataları veya uyarıları belirleyen bir doğrulama kodu etkinliğe eklenir.  
+Zorunlu kod tabanlı doğrulama, bir etkinliğin kendisi hakkında doğrulama sağlaması için basit bir yol <xref:System.Activities.CodeActivity>sağlar <xref:System.Activities.AsyncCodeActivity>ve <xref:System.Activities.NativeActivity>, ve . Etkinlikte herhangi bir doğrulama hatası veya uyarıyı belirleyen doğrulama kodu eklenir.  
   
-## <a name="using-code-based-validation"></a>Kod temelli doğrulama kullanma
+## <a name="using-code-based-validation"></a>Kod Tabanlı Doğrulamayı Kullanma
 
-Öğesinden türetilen etkinlikleri tarafından desteklenen kod temelli doğrulama <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, ve <xref:System.Activities.NativeActivity>. Doğrulama kodu yerleştirilebileceğini <xref:System.Activities.CodeActivity.CacheMetadata%2A> geçersiz kıl ve doğrulama hataları veya uyarılar, meta veri bağımsız değişkeni eklenebilir. Aşağıdaki örnekte, `Cost` büyüktür `Price`, meta veriler için bir doğrulama hatası eklenir.  
+Kod tabanlı <xref:System.Activities.CodeActivity>doğrulama, , ve <xref:System.Activities.AsyncCodeActivity>. <xref:System.Activities.NativeActivity> Geçersiz kılmaya <xref:System.Activities.CodeActivity.CacheMetadata%2A> doğrulama kodu yerleştirilebilir ve doğrulama hataları veya uyarıları meta veri bağımsız değişkenine eklenebilir. Aşağıdaki örnekte, `Cost` meta verilere `Price`bir doğrulama hatası eklenir.  
   
 > [!NOTE]
-> Unutmayın `Cost` ve `Price` etkinlik bağımsız değişkenleri değildir, ancak tasarım zamanında ayarlanır özelliklerdir. Diğer bir deyişle neden değerleri olarak doğrulanabilmesi <xref:System.Activities.CodeActivity.CacheMetadata%2A> geçersiz kılar. Veri çalışma zamanına kadar akışı değil, ancak etkinlik bağımsız değişkenleri doğrulanmış bunlar kullanarak bağlı olmadığından emin olmak için tasarım zamanında bir bağımsız değişken akan veri değeri doğrulanamıyor `RequiredArgument` özniteliği ve grupları aşırı yükleme. Bu kod örneği görür `RequiredArgument` özniteliğini `Description` bağımsız değişken, bağlı değil sonra bir doğrulama hatası oluşturulur. Gerekli bağımsız değişken içinde ele alınmıştır [gerekli bağımsız değişkenler ve aşırı grupları](required-arguments-and-overload-groups.md).  
+> Bu `Cost` ve `Price` etkinlik için bağımsız değişkenler değildir, ancak tasarım zamanında ayarlanmış özellikleri olduğunu unutmayın. Bu nedenle, değerleri geçersiz kılmada <xref:System.Activities.CodeActivity.CacheMetadata%2A> doğrulanabilir. Bir bağımsız değişken den akan verilerin değeri, veriler çalışma süresine kadar akmaz, ancak öznitelik ve aşırı yük grupları kullanılarak `RequiredArgument` bağlı olduğundan emin olmak için etkinlik bağımsız değişkenleri doğrulanabilir, çünkü tasarım zamanında doğrulanamaz. Bu örnek kod `RequiredArgument` `Description` bağımsız değişken için özniteliği görür ve bağlı değilse bir doğrulama hatası oluşturulur. Gerekli bağımsız değişkenler Gerekli Bağımsız Değişkenler ve Aşırı Yük Grupları'nda ele [alınmıştır.](required-arguments-and-overload-groups.md)  
   
 ```csharp  
 public sealed class CreateProduct : CodeActivity  
@@ -26,7 +26,7 @@ public sealed class CreateProduct : CodeActivity
     public double Price { get; set; }  
     public double Cost { get; set; }  
   
-    // [RequiredArgument] attribute will generate a validation error   
+    // [RequiredArgument] attribute will generate a validation error
     // if the Description argument is not set.  
     [RequiredArgument]  
     public InArgument<string> Description { get; set; }  
@@ -49,10 +49,10 @@ public sealed class CreateProduct : CodeActivity
 }  
 ```  
   
- Varsayılan olarak, meta veriler için bir doğrulama hatası eklenir, <xref:System.Activities.CodeActivityMetadata.AddValidationError%2A> çağrılır. Doğrulama uyarısı eklemek için <xref:System.Activities.CodeActivityMetadata.AddValidationError%2A> alan aşırı yüklemesini bir <xref:System.Activities.Validation.ValidationError>, belirleyen <xref:System.Activities.Validation.ValidationError> ayarlayarak bir uyarı temsil <xref:System.Activities.Validation.ValidationError.IsWarning%2A> özelliği.  
+ Varsayılan olarak, çağrıldığında <xref:System.Activities.CodeActivityMetadata.AddValidationError%2A> meta verilere bir doğrulama hatası eklenir. Doğrulama uyarısı eklemek için, <xref:System.Activities.CodeActivityMetadata.AddValidationError%2A> bir <xref:System.Activities.Validation.ValidationError>, alan aşırı yükü <xref:System.Activities.Validation.ValidationError> kullanın ve <xref:System.Activities.Validation.ValidationError.IsWarning%2A> özelliği ayarlayarak bir uyarı temsil ettiğini belirtin.  
   
- Bir iş akışı iş akışı Tasarımcısı'nda değiştirilir ve herhangi bir doğrulama hataları veya uyarıları iş akışı Tasarımcısı'nda görüntülenen doğrulama gerçekleşir. Doğrulama iş akışı çağrıldığında ve herhangi bir doğrulama hatası meydana gelirse, çalışma zamanında da oluşur bir <xref:System.Activities.InvalidWorkflowException> varsayılan Doğrulama mantığı tarafından oluşturulur. Doğrulama uyarıları veya hataları erişmek ve doğrulamayı çağırma hakkında daha fazla bilgi için bkz. [etkinlik doğrulamayı çağırma](invoking-activity-validation.md).  
+ Doğrulama, iş akışı tasarımcısında bir iş akışı değiştirildiğinde ve iş akışı tasarımcısında doğrulama hataları veya uyarıları görüntülendiğinde oluşur. Doğrulama, bir iş akışı çağrıldığı ve herhangi bir doğrulama hatası oluştuğunda, <xref:System.Activities.InvalidWorkflowException> varsayılan doğrulama mantığı tarafından atılan çalışma zamanında da oluşur. Doğrulama çağırmak ve doğrulama uyarılarına veya hatalarına erişim hakkında daha fazla bilgi için [bkz.](invoking-activity-validation.md)  
   
- Şuradan oluşturulduğu özel durumları <xref:System.Activities.CodeActivity.CacheMetadata%2A> doğrulama hataları değerlendirilir. Bu özel durumlar çağrısından kaçış <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> ve çağıran tarafından ele alınması gerekir.  
+ Atılan <xref:System.Activities.CodeActivity.CacheMetadata%2A> tüm özel durumlar doğrulama hatası olarak kabul edilmez. Bu özel durumlar aramadan <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> kaçar ve arayan tarafından ele alınmalıdır.  
   
- Kod temelli doğrulama kodu içeren etkinlik doğrulamak için yararlıdır, ancak diğer etkinliklere görünürlük iş akışı içinde yok. Bildirim temelli kısıtlamalar doğrulama etkinlik diğer etkinlikler iş akışı ile arasındaki ilişkileri validate olanağı sağlar ve ele alınmıştır [bildirim temelli kısıtlamalar](declarative-constraints.md) konu.
+ Kod tabanlı doğrulama, kodu içeren etkinliği doğrulamak için yararlıdır, ancak iş akışındaki diğer etkinliklere görünürlüğü yoktur. Bildirimsel kısıtlamalar doğrulaması, bir etkinlik le iş akışındaki diğer etkinlikler arasındaki ilişkileri doğrulama olanağı sağlar ve [Bildirimsel Kısıtlamalar](declarative-constraints.md) konusunda ele alınmıştır.

@@ -16,46 +16,46 @@ helpviewer_keywords:
 - typography [WPF], text decorations
 - baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
-ms.openlocfilehash: d586eef8d1308070da38a0a54c63c3ba64d30c8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf3b3c3bcb75153a0be4f7ced03b38134b79a930
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776642"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185931"
 ---
 # <a name="how-to-create-a-text-decoration"></a>Nasıl yapılır: Metin Süslemesi Oluşturma
-A <xref:System.Windows.TextDecoration> metni ekleyebileceğiniz görsel bir süsleme nesnedir. Metin süslemeleri dört tür vardır: alt çizgi, temel, üstü çizili ve üst çizgi. Aşağıdaki örnek, metin düzenlemelerinin metin göreli konumlarını gösterir.  
+<xref:System.Windows.TextDecoration> Nesne, metne ekleyebileceğiniz görsel bir süslemedir. Dört tür metin süslemesi vardır: altı çizili, temel, vurucu ve üst çizgi. Aşağıdaki örnek, metin süslemelerinin metne göre konumlarını gösterir.  
   
- ![Metin düzenleme türleri diyagramı](./media/how-to-create-a-text-decoration/text-decoration-types.gif)  
+ ![Metin süsleme türleri diyagramı](./media/how-to-create-a-text-decoration/text-decoration-types.gif)  
   
- Metin süslemesi metin eklemek için oluşturun bir <xref:System.Windows.TextDecoration> nesne ve özelliklerini değiştirin. Kullanım <xref:System.Windows.TextDecoration.Location%2A> metin düzenleme, alt çizgi gibi görüneceği yeri belirtmek için özellik. Kullanım <xref:System.Windows.TextDecoration.Pen%2A> tek renk dolgu veya gradyan rengi gibi metin düzenleme görünümünü belirtmek için özellik. İçin bir değer belirtmezseniz <xref:System.Windows.TextDecoration.Pen%2A> özelliğini aynı metin rengini varsayılır. Tanımladığınız sonra bir <xref:System.Windows.TextDecoration> nesne, ekleyin <xref:System.Windows.TextDecorations> istenen metin nesnesi koleksiyonu.  
+ Metne metin süslemesi eklemek <xref:System.Windows.TextDecoration> için bir nesne oluşturun ve özelliklerini değiştirin. Metin <xref:System.Windows.TextDecoration.Location%2A> süslemesinin altı çizili gibi nerede göründüğünü belirtmek için özelliği kullanın. Metin <xref:System.Windows.TextDecoration.Pen%2A> süslemesinin görünümünü belirtmek için katı dolgu veya degrade renk gibi özelliği kullanın. <xref:System.Windows.TextDecoration.Pen%2A> Özellik için bir değer belirtmezseniz, süslemeler varsayılan olarak metinle aynı renge ayrılır. Bir <xref:System.Windows.TextDecoration> nesneyi tanımladıktan sonra, <xref:System.Windows.TextDecorations> nesneyi istenen metin nesnesinin koleksiyonuna ekleyin.  
   
- Aşağıdaki örnek, doğrusal gradyan fırçası ve bir kesikli kalem ile biçimlendirilmiş metin süslemesi gösterir.  
+ Aşağıdaki örnek, doğrusal degrade fırçası ve kesikli kalemle stile sahip bir metin süslemesini gösterir.  
   
- ![Doğrusal gradyan altı çizili metin düzenleme](./media/how-to-create-a-text-decoration/text-decoration-gradient.png)  
+ ![Doğrusal degrade altı çizili metin süslemesi](./media/how-to-create-a-text-decoration/text-decoration-gradient.png)  
   
- <xref:System.Windows.Documents.Hyperlink> Köprüler akış içeriği barındırmanıza olanak tanır bir satır içi düzeydeki akış içerik öğesi nesnedir. Varsayılan olarak, <xref:System.Windows.Documents.Hyperlink> kullanan bir <xref:System.Windows.TextDecoration> altı çizili görüntülenecek nesne. <xref:System.Windows.TextDecoration> nesneleri oluşturmak için yoğun performans olabilir, özellikle Çoğu varsa <xref:System.Windows.Documents.Hyperlink> nesneleri. Kapsamlı kullanımını yaparsanız <xref:System.Windows.Documents.Hyperlink> öğeleri altçizgi gibi yalnızca bir olay tetiklendiğinde gösteren düşünmek isteyebilirsiniz <xref:System.Windows.ContentElement.MouseEnter> olay.  
+ Nesne, <xref:System.Windows.Documents.Hyperlink> akış içeriği içinde köprüler barındırmanızı sağlayan bir satır içi düzey akış içeriği öğesidir. Varsayılan olarak, <xref:System.Windows.Documents.Hyperlink> <xref:System.Windows.TextDecoration> bir alt çizgi yi görüntülemek için bir nesne kullanır. <xref:System.Windows.TextDecoration>nesneler, özellikle çok sayıda <xref:System.Windows.Documents.Hyperlink> nesne varsa, anlık olarak performans yoğun olabilir. <xref:System.Windows.Documents.Hyperlink> Öğeleri kapsamlı bir şekilde kullanırsanız, yalnızca olay gibi bir olayı tetiklerken <xref:System.Windows.ContentElement.MouseEnter> altı çiziyi göstermeyi düşünebilirsiniz.  
   
- Aşağıdaki örnekte, "My MSN" bağlantısını için altı çizili dinamik — zaman görünür <xref:System.Windows.ContentElement.MouseEnter> olay tetiklenir.  
+ Aşağıdaki örnekte, "MSN' mevzum" bağlantısının alt çizgi <xref:System.Windows.ContentElement.MouseEnter> altı dinamiktir ve yalnızca olay tetiklendiğinde görünür.  
   
- ![Köprüler TextDecorations görüntüleme](./media/how-to-create-a-text-decoration/text-decorations-hyperlinks.png)  
-   
- Daha fazla bilgi için [belirtin olmadığını köprünün altı çizilir](how-to-specify-whether-a-hyperlink-is-underlined.md).  
+ ![TextDecorations görüntüleyen köprüler](./media/how-to-create-a-text-decoration/text-decorations-hyperlinks.png)  
+
+ Daha fazla bilgi için [bkz.](how-to-specify-whether-a-hyperlink-is-underlined.md)  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde altı çizili metin düzenleme varsayılan yazı tipi değeri kullanır.  
+ Aşağıdaki kod örneğinde, altı çizili metin süslemesi varsayılan yazı tipi değerini kullanır.  
   
  [!code-csharp[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets1)]
  [!code-vb[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets1)]
  [!code-xaml[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets1)]  
   
- Aşağıdaki kod örneğinde tek renk Fırçası kalem için altı çizili metin düzenleme oluşturulur.  
+ Aşağıdaki kod örneğinde, kalem için düz renkli bir fırça ile altı çizili metin süslemesi oluşturulur.  
   
  [!code-csharp[TextDecorationSnippets#TextDecorationSnippets2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets2)]
  [!code-vb[TextDecorationSnippets#TextDecorationSnippets2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets2)]
  [!code-xaml[TextDecorationSnippets#TextDecorationSnippets2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets2)]  
   
- Aşağıdaki kod örneğinde altı çizili metin düzenleme doğrusal gradyan fırçası kesik kalem için oluşturulur.  
+ Aşağıdaki kod örneğinde, kesikli kalem için doğrusal degrade fırçası ile altı çizili metin süslemesi oluşturulur.  
   
  [!code-csharp[TextDecorationSnippets#TextDecorationSnippets3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets3)]
  [!code-vb[TextDecorationSnippets#TextDecorationSnippets3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets3)]

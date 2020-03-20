@@ -6,83 +6,83 @@ helpviewer_keywords:
 - Spinner control type
 - control types, Spinner
 ms.assetid: 3a29d185-65d8-42e3-bcc3-7f43e96f40c5
-ms.openlocfilehash: 189773525a448befe670e2a62a1ee4134ff71b0f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d3cf972afdaaffaf1c0943c9cc11348bee23345d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785960"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179578"
 ---
 # <a name="ui-automation-support-for-the-spinner-control-type"></a>Değer Değiştirici Denetim Türü İçin UI Otomasyon Desteği
 > [!NOTE]
-> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu dokümantasyon, ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıfları kullanmak <xref:System.Windows.Automation> isteyen .NET Framework geliştiricileri için tasarlanmıştır. Hakkında en son [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bilgi için [Bkz. Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
   
- Bu konu, değer değiştirici denetim türü için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] desteği hakkında bilgi sağlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], denetim türü, bir denetimin <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> özelliğini kullanmak için karşılaması gereken koşullar kümesidir. Koşullar, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısına yönelik özel yönergeler, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellik değerleri ve Denetim desenleri içerir.  
+ Bu konu Spinner [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] denetim türü için destek hakkında bilgi sağlar. Denetim [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]türü, <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> özelliği kullanmak için denetimin karşılaması gereken koşullar kümesidir. Koşullar, ağaç yapısı, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellik değerleri ve denetim desenleri için özel yönergeler içerir.  
   
- Değer değiştirici denetimleri, öğelerin etki alanından veya bir dizi sayıdan seçim yapmak için kullanılır.  
+ Spinner denetimleri, öğelerin etki alanından veya çeşitli sayılardan seçim yapmak için kullanılır.  
   
- Aşağıdaki bölümler, değer değiştirici denetim türü için gerekli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısını, özellikleri, denetim desenlerini ve olayları tanımlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gereksinimleri, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 veya Windows Forms bakılmaksızın tüm değer değiştirici denetimlerine uygulanır.  
+ Aşağıdaki bölümlerde Spinner [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] denetim türü için gerekli ağaç yapısı, özellikleri, denetim desenleri ve olayları tanımlanır. Gereksinimler, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Win32 veya [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Windows Forms olsun, tüm spinner denetimleri için geçerlidir.  
   
-<a name="Required_UI_Automation_Tree_Structure"></a>   
-## <a name="required-ui-automation-tree-structure"></a>Gerekli UI Otomasyonu ağaç yapısı  
- Aşağıdaki tabloda, Aralık değerini, değer ve seçim denetimi düzenlerini desteklediklerinde ve her görünümde nelerin yer abileceklerini açıklayan, değer değiştirici denetimlerine ait [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının denetim görünümü ve içerik görünümü gösterilmektedir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı hakkında daha fazla bilgi için bkz. [UI Otomasyon ağacına genel bakış](ui-automation-tree-overview.md).  
+<a name="Required_UI_Automation_Tree_Structure"></a>
+## <a name="required-ui-automation-tree-structure"></a>Gerekli UI Otomasyon Ağaç Yapısı  
+ Aşağıdaki tablo, Aralık Değeri, Değer ve [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Seçim denetim modellerini desteklediklerinde spinner denetimleri ile ilgili ağacın denetim görünümünü ve içerik görünümünü görüntüler ve her görünümde nelerin bulunabileceğini açıklar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ağaç hakkında daha fazla bilgi için [UI Automation Tree Genel Bakış'a](ui-automation-tree-overview.md)bakın.  
   
- **Aralık değeri veya değer denetim stili**  
+ **Aralık Değeri veya Değer kontrol deseni**  
   
-|Denetim görünümü|İçerik görünümü|  
+|Kontrol Görünümü|İçerik Görünümü|  
 |------------------|------------------|  
-|Değer Değiştirici<br /><br /> -Düzenle (0 veya 1)<br />-Düğme (2)|Değer Değiştirici|  
+|Değer Değiştirici<br /><br /> - Edit (0 veya 1)<br />- Düğme (2)|Değer Değiştirici|  
   
- **Seçim denetimi KALIBI**  
+ **Seçim kontrol deseni**  
   
-|Denetim görünümü|İçerik görünümü|  
+|Kontrol Görünümü|İçerik Görünümü|  
 |------------------|------------------|  
-|Değer Değiştirici<br /><br /> -Düzenle (0 veya 1)<br />-Düğme (2)<br />-Liste öğesi (0 veya daha fazla)|Değer Değiştirici<br /><br /> -ListItem (0 veya daha fazla)|  
+|Değer Değiştirici<br /><br /> - Edit (0 veya 1)<br />- Düğme (2)<br />- Liste Öğesi (0 veya daha fazla)|Değer Değiştirici<br /><br /> - ListItem (0 veya daha fazla)|  
   
- Denetim görünümü alt ağacındaki iki düğmenin otomatik test araçlarıyla ayırt edilebilir olmasını sağlamak için `SmallIncrement` veya `SmallDecrement` `AutomationId` uygun şekilde atayın. Bazı uygulamalarda, ilişkili düzenleme denetimi değer değiştirici denetiminin bir eşi olabilir.  
+ Denetim görünümü alt ağacındaki iki düğmenin otomatik test araçlarıyla ayırt edilebilmesini `SmallDecrement` `AutomationId` sağlamak için, uygun `SmallIncrement` veya uygun şekilde atayın. Bazı uygulamalar için, ilişkili Edit denetimi Spinner denetiminin bir eş olabilir.  
   
-<a name="Required_UI_Automation_Properties"></a>   
+<a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>Gerekli UI Otomasyon Özellikleri  
- Aşağıdaki tabloda, değeri veya tanımı özellikle değer değiştirici denetimleriyle ilgili olan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri listelenmektedir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri hakkında daha fazla bilgi için bkz. [istemciler Için UI Otomasyon özellikleri](ui-automation-properties-for-clients.md).  
+ Aşağıdaki tabloda, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] değeri veya tanımı özellikle spinner denetimleri ile ilgili özellikleri listelenir. Özellikler hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] daha fazla bilgi [için, Müşteriler için Kullanıcı Arabirimi Otomasyon Özellikleri'ne](ui-automation-properties-for-clients.md)bakın.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliği|Değer|Notlar|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Özellik|Değer|Notlar|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Notlara bakın.|Bu özelliğin değerinin bir uygulamadaki tüm denetimlerde benzersiz olması gerekir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Notlara bakın.|Bu özelliğin değeri, bir uygulamadaki tüm denetimler arasında benzersiz olmalıdır.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Notlara bakın.|Tüm denetimi içeren en dıştaki dikdörtgen.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Notlara bakın.|Değer değiştirici denetiminin tıklatılabilir noktası odağı denetimin düzenleme bölümüne verir.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Notlara bakın.|Denetim, klavye odağı alamıyorsa, bu özelliği desteklemesi gerekir.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Notlara bakın.|Değer değiştirici denetimi genellikle adını statik metin etiketinden alır.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Notlara bakın.|Değer değiştirici denetimlerinin statik metin etiketi vardır.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Değer Değiştirici|Bu değer tüm UI çerçeveleri için aynıdır.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|dönüş|Değer değiştirici denetim türüne karşılık gelen yerelleştirilmiş dize.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Doğru|Değer değiştirici denetimi her zaman içerik olmalıdır.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Doğru|Değer değiştirici denetimi her zaman bir denetim olmalıdır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Notlara bakın.|Döndürücü denetimin tıklanabilir noktası, denetimin edit kısmına odaklanma sağlar.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Notlara bakın.|Denetim klavye odağı alabiliyorsa, bu özelliği desteklemesi gerekir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Notlara bakın.|Spinner denetimi genellikle adını statik bir metin etiketinden alır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Notlara bakın.|Spinner denetimleri statik bir metin etiketine sahiptir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Değer Değiştirici|Bu değer tüm Ara bilgi arabirimi çerçeveleri için aynıdır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"spinner"|Spinner denetim türüne karşılık gelen yerelleştirilmiş dize.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Spinner kontrolü her zaman içerik olmalıdır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Spinner kontrolü her zaman bir kontrol olmalıdır.|  
   
-<a name="Required_UI_Automation_Control_Patterns_and_Properties"></a>   
-## <a name="required-ui-automation-control-patterns-and-properties"></a>Gerekli UI Otomasyonu Denetim desenleri ve özellikleri  
- Aşağıdaki tabloda, değer değiştirici denetimleri tarafından desteklenmesi gereken [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Denetim desenleri listelenmektedir. Denetim desenleri hakkında daha fazla bilgi için bkz. [UI Otomasyonu Denetim desenlerine genel bakış](ui-automation-control-patterns-overview.md).  
+<a name="Required_UI_Automation_Control_Patterns_and_Properties"></a>
+## <a name="required-ui-automation-control-patterns-and-properties"></a>Gerekli UI Otomasyon Kontrol Desenleri ve Özellikleri  
+ Aşağıdaki tabloda [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] spinner denetimleri tarafından desteklenmesi gereken denetim desenleri listelenir. Denetim desenleri hakkında daha fazla bilgi için [UI Otomasyon Denetim Modellerine Genel Bakış'a](ui-automation-control-patterns-overview.md)bakın.  
   
-|Denetim deseninin/deseninin özelliği|Destek/değer|Notlar|  
+|Kontrol Deseni/Desen Özelliği|Destek / Değer|Notlar|  
 |---------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Şekline|Seçilecek öğe listesi olan değer değiştirici denetimleri bu kalıbı desteklemelidir.|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|False|Değer değiştirici denetimleri her zaman tek seçim kapsayıcılarıdır.|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Şekline|Değer değiştirici denetimleri, bir sayısal aralığı yayan bu kalıbı destekleyebilir.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|Şekline|Değer değiştirici bir seçenek veya sayı kümesini kapsayan değiştirici denetimleri bu kalıbı destekleyebilir.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|-sına bağ -lıdır|Seçilecek öğelerin listesi olan spinner denetimleri bu deseni desteklemelidir.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|False|Spinner kontrolleri her zaman tek seçim kapsayıcılarıdır.|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|-sına bağ -lıdır|Sayısal bir aralığı kaplayan spinner denetimleri bu deseni destekleyebilir.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|-sına bağ -lıdır|Ayrı bir seçenek kümesini veya sayıkümesini kapsayan spinner denetimleri bu deseni destekleyebilir.|  
   
-<a name="Required_UI_Automation_Events"></a>   
-## <a name="required-ui-automation-events"></a>Gerekli UI Otomasyon olayları  
- Aşağıdaki tabloda, tüm değer değiştirici denetimleri tarafından desteklenmesi gereken [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olayları listelenmektedir. Olaylar hakkında daha fazla bilgi için bkz. [UI Otomasyonu olaylarına genel bakış](ui-automation-events-overview.md).  
+<a name="Required_UI_Automation_Events"></a>
+## <a name="required-ui-automation-events"></a>Gerekli UI Otomasyon Etkinlikleri  
+ Aşağıdaki tabloda [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tüm spinner denetimleri tarafından desteklenmesi gereken olaylar listelenir. Etkinlikler hakkında daha fazla bilgi için [UI Otomasyon Etkinliklerine Genel Bakış'a](ui-automation-events-overview.md)bakın.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olayı|Destek|Notlar|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Olay|Destek|Notlar|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Şekline|Yok.|  
-|özellik değişti olayı <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>.|Gerekli|Yok.|  
-|özellik değişti olayı <xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>.|Gerekli|Yok.|  
-|özellik değişti olayı <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>.|Gerekli|Yok.|  
-|özellik değişti olayı <xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty>.|Şekline|Yok.|  
-|özellik değişti olayı <xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty>.|Şekline|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Gerekli|Yok.|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|-sına bağ -lıdır|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>özellik değiştirilen olay.|Gerekli|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>özellik değiştirilen olay.|Gerekli|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>özellik değiştirilen olay.|Gerekli|None|  
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty>özellik değiştirilen olay.|-sına bağ -lıdır|None|  
+|<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty>özellik değiştirilen olay.|-sına bağ -lıdır|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Gerekli|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Gerekli|None|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

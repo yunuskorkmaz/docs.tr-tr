@@ -2,21 +2,21 @@
 title: İç İçe Yerleştirme İçermeyen Öğeler Arasındaki İlişkileri Belirtme
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: 3aa9976ccde426eeda1d869164409c5235a629fe
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: bee427c6cdf76792773ea827c8772b276ff29c31
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040046"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150824"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>İç İçe Yerleştirme İçermeyen Öğeler Arasındaki İlişkileri Belirtme
-Öğeler iç içe olmadığında dolaylı ilişkiler oluşturulmaz. Ancak, **msdata: Relationship** ek açıklaması kullanılarak iç içe olmayan öğeler arasındaki ilişkileri açıkça belirtebilirsiniz.  
+Öğeler iç içe geçmediğinde, örtük ilişki oluşturulmaz. Ancak, **msdata:İlişki** ek açıklamasını kullanarak iç içe geçmemiş öğeler arasındaki ilişkileri açıkça belirtebilirsiniz.  
   
- Aşağıdaki örnek, iç içe olmayan **Order** ve **OrderDetail** öğeleri arasında **msdata: ılışkı** ek açıklaması belirtilen bir XML şemasını gösterir. **Msdata: ilişki** ek açıklaması, **şema** öğesinin alt öğesi olarak belirtilir.  
+ Aşağıdaki örnekte, **msdata:İlişki** ek açıklamanın İç içe geçmemiş **Sipariş** ve **OrderDetail** öğeleri arasında belirtildiği bir XML Şeması gösterilmektedir. **msdata:İlişki** ek gösterimi **Şema** öğesinin alt öğesi olarak belirtilir.  
   
 ```xml  
-<xs:schema id="MyDataSet" xmlns=""   
-             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+<xs:schema id="MyDataSet" xmlns=""
+             xmlns:xs="http://www.w3.org/2001/XMLSchema"
              xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
  <xs:element name="MyDataSet" msdata:IsDataSet="true">  
   <xs:complexType>  
@@ -44,23 +44,23 @@ ms.locfileid: "73040046"
    <xs:annotation>  
      <xs:appinfo>  
        <msdata:Relationship name="OrdOrderDetailRelation"  
-                            msdata:parent="Order"   
-                            msdata:child="OrderDetail"   
-                            msdata:parentkey="OrderNumber"   
+                            msdata:parent="Order"
+                            msdata:child="OrderDetail"
+                            msdata:parentkey="OrderNumber"
                             msdata:childkey="OrderNo"/>  
      </xs:appinfo>  
   </xs:annotation>  
 </xs:schema>  
 ```  
   
- XML şeması tanım dili (XSD) şema eşleme işlemi, **Order** ve **OrderDetail** tabloları ve aşağıda gösterildiği gibi bu iki tablo arasında belirtilen bir ilişki içeren bir <xref:System.Data.DataSet> oluşturur.  
+ XML Şema tanım dili (XSD) şema eşleme <xref:System.Data.DataSet> işlemi, Aşağıda gösterildiği **gibi, Sipariş** ve **OrderDetail** tabloları ve bu iki tablo arasında belirtilen bir ilişki oluşturur.  
   
 ```text  
 RelationName: OrdOrderDetailRelation  
 ParentTable: Order  
-ParentColumns: OrderNumber   
+ParentColumns: OrderNumber
 ChildTable: OrderDetail  
-ChildColumns: OrderNo   
+ChildColumns: OrderNo
 Nested: False  
 ```  
   

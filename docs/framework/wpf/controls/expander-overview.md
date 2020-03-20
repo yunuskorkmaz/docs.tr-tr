@@ -8,58 +8,58 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: ddf6ee550e0eb6af5af44d032e85ecd5b735b951
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 892d972a5704d50e91d04e05d6fdea7180a3155d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054932"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187118"
 ---
 # <a name="expander-overview"></a>Genişleticiye Genel Bakış
-Bir <xref:System.Windows.Controls.Expander> denetim bir pencere benzer ve üst bilgi içeren genişletilebilir bir alanda içerik sağlamak için bir yol sağlar.  
+Denetim, <xref:System.Windows.Controls.Expander> pencereye benzeyen ve üstbilgi içeren genişletilebilir bir alanda içerik sağlamanın bir yolunu sağlar.  
 
-<a name="CreatinganExpanderinXAML"></a>   
-## <a name="creating-a-simple-expander"></a>Basit bir Genişletici Oluşturma  
- Aşağıdaki örnek, basit bir oluşturma işlemi gösterilmektedir <xref:System.Windows.Controls.Expander> denetimi. Bu örnekte bir <xref:System.Windows.Controls.Expander> önceki çizim gibi görünüyor.  
+<a name="CreatinganExpanderinXAML"></a>
+## <a name="creating-a-simple-expander"></a>Basit Genişletici Oluşturma  
+ Aşağıdaki örnek, basit <xref:System.Windows.Controls.Expander> bir denetimin nasıl oluşturulabildiğini gösterir. Bu örnek, <xref:System.Windows.Controls.Expander> önceki çizime benzeyen bir örnek oluşturur.  
   
  [!code-xaml[ExpanderExample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
   
- <xref:System.Windows.Controls.ContentControl.Content%2A> Ve <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> , bir <xref:System.Windows.Controls.Expander> karmaşık içerik gibi de içerebilen <xref:System.Windows.Controls.RadioButton> ve <xref:System.Windows.Controls.Image> nesneleri.  
+ Bir <xref:System.Windows.Controls.ContentControl.Content%2A> <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> ve bir de karmaşık içerik <xref:System.Windows.Controls.RadioButton> içerebilir, gibi ve <xref:System.Windows.Controls.Image> nesneler.  
   
-<a name="SettingtheDirectionoftheExpandingWindow"></a>   
-## <a name="setting-the-direction-of-the-expanding-content-area"></a>Genişleyen bir içerik alanı yönü ayarlama  
- Pencerenin içerik alanı ayarlayabileceğiniz bir <xref:System.Windows.Controls.Expander> dört yönergeleri birini genişletmek için denetim (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, veya <xref:System.Windows.Controls.ExpandDirection.Right>) kullanarak <xref:System.Windows.Controls.ExpandDirection> özelliği. Ne zaman içerik alanı daraltıldığında, yalnızca <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> ve iki durumlu düğmesi görünür. A <xref:System.Windows.Controls.Button> tek yönlü bir ok görüntüler denetimi, içerik alanını genişletmek veya daraltmak için iki durumlu düğme olarak kullanılır. Genişletildiğinde, <xref:System.Windows.Controls.Expander> penceresi gibi bir alanda içeriğini görüntülemek çalışır.  
+<a name="SettingtheDirectionoftheExpandingWindow"></a>
+## <a name="setting-the-direction-of-the-expanding-content-area"></a>Genişleyen İçerik Alanının Yönünü Ayarlama  
+ Bir <xref:System.Windows.Controls.Expander> denetimin içerik alanını özelliği kullanarak<xref:System.Windows.Controls.ExpandDirection.Down> <xref:System.Windows.Controls.ExpandDirection.Up> <xref:System.Windows.Controls.ExpandDirection.Left> <xref:System.Windows.Controls.ExpandDirection.Right> <xref:System.Windows.Controls.ExpandDirection> dört yönden birinde (, , , veya ) genişletecek şekilde ayarlayabilirsiniz. İçerik alanı daraltıldığında, yalnızca <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> geçiş düğmesi görüntülenir. İçerik <xref:System.Windows.Controls.Button> alanını genişletmek veya daraltmak için geçiş düğmesi olarak yön oku görüntüleyen bir denetim kullanılır. Genişletildiğinde, <xref:System.Windows.Controls.Expander> tüm içeriğini pencere benzeri bir alanda görüntülemeye çalışır.  
   
-<a name="SettingSizeDimensionsonanExpanderinaPanel"></a>   
-## <a name="controlling-the-size-of-an-expander-in-a-panel"></a>Bir Panel içinde bir genişletici boyutunu denetleme  
- Varsa bir <xref:System.Windows.Controls.Expander> denetimidir devralan bir düzen denetimi içinde <xref:System.Windows.Controls.Panel>, gibi <xref:System.Windows.Controls.StackPanel>, belirtmeyin bir <xref:System.Windows.FrameworkElement.Height%2A> üzerinde <xref:System.Windows.Controls.Expander> olduğunda <xref:System.Windows.Controls.Expander.ExpandDirection%2A> özelliği <xref:System.Windows.Controls.ExpandDirection.Down> veya <xref:System.Windows.Controls.ExpandDirection.Up>. Benzer şekilde, belirtmeyin bir <xref:System.Windows.FrameworkElement.Width%2A> üzerinde <xref:System.Windows.Controls.Expander> olduğunda <xref:System.Windows.Controls.Expander.ExpandDirection%2A> özelliği <xref:System.Windows.Controls.ExpandDirection.Left> veya <xref:System.Windows.Controls.ExpandDirection.Right>.  
+<a name="SettingSizeDimensionsonanExpanderinaPanel"></a>
+## <a name="controlling-the-size-of-an-expander-in-a-panel"></a>Panelde Genişleticinin Boyutunu Denetleme  
+ Denetim, <xref:System.Windows.Controls.Expander> devralan bir düzen denetiminin <xref:System.Windows.Controls.Panel>içindeyse, <xref:System.Windows.Controls.StackPanel>örneğin, <xref:System.Windows.FrameworkElement.Height%2A> <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.Expander.ExpandDirection%2A> özelliğin ayarlandığında <xref:System.Windows.Controls.ExpandDirection.Down> veya <xref:System.Windows.Controls.ExpandDirection.Up>. Benzer şekilde, <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.Expander.ExpandDirection%2A> özelliğin ayarlandığında <xref:System.Windows.Controls.ExpandDirection.Left> veya <xref:System.Windows.Controls.ExpandDirection.Right>.  
   
- Şirket boyutu boyut ayarlarsanız bir <xref:System.Windows.Controls.Expander> genişletilmiş içeriği görüntülendiğini yönü denetiminde <xref:System.Windows.Controls.Expander> içerik tarafından kullanılan ve bir kenarlık görüntüler alanı denetimi gerçekleştirir. İçerik daraltıldığında bile kenarlık gösterilmektedir. Genişletilmiş içerik alanı boyutunu ayarlamak için boyut özellikleri içeriğine ayarlayın <xref:System.Windows.Controls.Expander>, veya üzerinde kaydırma yeteneği, isterseniz <xref:System.Windows.Controls.ScrollViewer> , içeriği alır.  
+ Genişletilmiş içeriğin görüntülendiği <xref:System.Windows.Controls.Expander> yönde bir denetimüzerinde boyut boyutu ayarladığınızda, içerik tarafından kullanılan alanın denetimini <xref:System.Windows.Controls.Expander> alır ve çevresinde bir kenarlık görüntüler. Kenarlık, içerik daraltıldığında bile gösterir. Genişletilmiş içerik alanının boyutunu ayarlamak için, içeriğin <xref:System.Windows.Controls.Expander>içeriğine boyut boyutları ayarlayın veya içeriği <xref:System.Windows.Controls.ScrollViewer> içine alan içerikte kaydırma özelliği istiyorsanız.  
   
- Olduğunda bir <xref:System.Windows.Controls.Expander> denetimidir içindeki son öğeden bir <xref:System.Windows.Controls.DockPanel>, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] otomatik olarak ayarlar <xref:System.Windows.Controls.Expander> kalan alanı eşit boyutları <xref:System.Windows.Controls.DockPanel>. Bu varsayılan davranışı önleyecek şekilde ayarlanmış <xref:System.Windows.Controls.DockPanel.LastChildFill%2A> özelliği <xref:System.Windows.Controls.DockPanel> nesnesini `false`, veya emin olun <xref:System.Windows.Controls.Expander> içindeki son öğeden değil bir <xref:System.Windows.Controls.DockPanel>.  
+ <xref:System.Windows.Controls.Expander> Bir denetim, <xref:System.Windows.Controls.DockPanel>bir 'deki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] son öğe <xref:System.Windows.Controls.Expander> olduğunda, boyutları otomatik olarak <xref:System.Windows.Controls.DockPanel>kalan alana eşit olarak ayarlar. Bu varsayılan davranışı önlemek <xref:System.Windows.Controls.DockPanel.LastChildFill%2A> için, <xref:System.Windows.Controls.DockPanel> `false`nesne üzerindeki özelliği ayarla <xref:System.Windows.Controls.Expander> , ya da <xref:System.Windows.Controls.DockPanel>bir ' deki son öğe olmadığından emin olun  
   
-<a name="CreatingScrollableContent"></a>   
-## <a name="creating-scrollable-content"></a>Kaydırılabilir içeriği oluşturma  
- İçerik için içerik alanı boyutu çok büyük ise, içeriği kaydırılabilir bir <xref:System.Windows.Controls.Expander> içinde bir <xref:System.Windows.Controls.ScrollViewer> kaydırılabilir içerik sağlamak için. <xref:System.Windows.Controls.Expander> Denetimi otomatik olarak kaydırma özelliği sağlamaz. Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.Expander> içeren denetimi bir <xref:System.Windows.Controls.ScrollViewer> denetimi.  
+<a name="CreatingScrollableContent"></a>
+## <a name="creating-scrollable-content"></a>Kaydırılabilir İçerik Oluşturma  
+ İçerik içerik alanının boyutu için çok büyükse, kaydırılabilir <xref:System.Windows.Controls.Expander> içerik <xref:System.Windows.Controls.ScrollViewer> sağlamak için içeriği bir olarak satamam. Denetim <xref:System.Windows.Controls.Expander> otomatik olarak kaydırma özelliği sağlamaz. Aşağıdaki resimde denetim <xref:System.Windows.Controls.Expander> içeren bir <xref:System.Windows.Controls.ScrollViewer> denetim gösterilmektedir.  
   
- **ScrollViewer içinde Genişleticisi**  
+ **ScrollViewer'da Genişletici**  
   
- ![Kaydırma çubuğu ile bir genişletici gösteren ekran görüntüsü.](./media/expander-overview/expander-scrollbar-control.jpg)  
+ ![ScrollBar ile bir genişletici gösteren ekran görüntüsü.](./media/expander-overview/expander-scrollbar-control.jpg)  
   
- Yerleştirdiğinizde bir <xref:System.Windows.Controls.Expander> denetimine bir <xref:System.Windows.Controls.ScrollViewer>ayarlayın <xref:System.Windows.Controls.ScrollViewer> boyut hangi yönde karşılık gelen özellik <xref:System.Windows.Controls.Expander> içeriği açılır boyutuna <xref:System.Windows.Controls.Expander> içerik alanı. Örneğin ayarlarsanız, <xref:System.Windows.Controls.Expander.ExpandDirection%2A> özelliği <xref:System.Windows.Controls.Expander> için <xref:System.Windows.Controls.ExpandDirection.Down> (içerik alanı açılır) ayarlama <xref:System.Windows.FrameworkElement.Height%2A> özelliği <xref:System.Windows.Controls.ScrollViewer> içerik alanı gerekli yüksekliğe denetimi. Yükseklik boyutu içeriğin kendisi, bunun yerine ayarlarsanız <xref:System.Windows.Controls.ScrollViewer> Bu ayar tanımıyor ve bu nedenle, kaydırılabilir içeriği sağlamaz.  
+ Bir <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.ScrollViewer>denetime , <xref:System.Windows.Controls.ScrollViewer> <xref:System.Windows.Controls.Expander> içeriğin <xref:System.Windows.Controls.Expander> içerik alanının boyutuna açıldığı yöne karşılık gelen boyut özelliğini ayarlayın. Örneğin, <xref:System.Windows.Controls.Expander.ExpandDirection%2A> özelliği <xref:System.Windows.Controls.Expander> (içerik <xref:System.Windows.Controls.ExpandDirection.Down> alanı açılır) üzerine ayarlarsanız, <xref:System.Windows.FrameworkElement.Height%2A> <xref:System.Windows.Controls.ScrollViewer> denetimdeki özelliği içerik alanı için gerekli yüksekliğe ayarlayın. Bunun yerine içeriğin kendisi üzerinde yükseklik <xref:System.Windows.Controls.ScrollViewer> boyutunu ayarlarsanız, bu ayarı tanımıyor ve bu nedenle, kaydırılabilir içerik sağlamaz.  
   
- Aşağıdaki örnek nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Controls.Expander> karmaşık içerik olan ve içeren denetimini bir <xref:System.Windows.Controls.ScrollViewer> denetimi. Bu örnekte bir <xref:System.Windows.Controls.Expander> bu bölümün başında çizim gibi olmasıdır.  
+ Aşağıdaki örnek, karmaşık içeriğe sahip ve denetim içeren <xref:System.Windows.Controls.ScrollViewer> bir <xref:System.Windows.Controls.Expander> denetimin nasıl oluşturulabildiğini gösterir. Bu örnek, <xref:System.Windows.Controls.Expander> bu bölümün başındaki çizime benzer bir örnek oluşturur.  
   
  [!code-csharp[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
  [!code-vb[ExpanderRichContent#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
  [!code-xaml[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
   
-<a name="UsingtheAlignmentProperties"></a>   
-## <a name="using-the-alignment-properties"></a>Hizalama özelliklerini kullanma  
- İçerik ayarlayarak hizalayabilirsiniz <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> ve <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> özellikleri <xref:System.Windows.Controls.Expander> denetimi. Bu özellikleri ayarlama, üst bilgi ve genişletilmiş içeriği hizalaması geçerlidir.  
+<a name="UsingtheAlignmentProperties"></a>
+## <a name="using-the-alignment-properties"></a>Hizalama Özelliklerini Kullanma  
+ Denetimi ve <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> özelliklerini ayarlayarak içeriği hizalayabilirsiniz. <xref:System.Windows.Controls.Expander> Bu özellikleri ayarladığınızda, hizalama üstbilgi ve genişletilmiş içeriğe de uygulanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [Nasıl Yapılır Konuları](expander-how-to-topics.md)
+- [Nasıl Dır Konular](expander-how-to-topics.md)

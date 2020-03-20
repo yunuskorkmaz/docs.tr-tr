@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 8f8cf715269fd0ed67e2265eee4139a509f70cd1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d420ac8fcb98ddec195093be8ae25be37443da4e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977132"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184972"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma
-WCF Hizmetleri ve istemcileri, WebSockets üzerinden iletişim kurmak için <xref:System.ServiceModel.NetHttpBinding> bağlamayı kullanabilir.  WebSockets, <xref:System.ServiceModel.NetHttpBinding> hizmet sözleşmesinin bir geri çağırma anlaşması tanımladığını belirlediğinde kullanılacaktır. Bu konuda, WebSockets üzerinden iletişim kurmak için <xref:System.ServiceModel.NetHttpBinding> kullanan bir WCF hizmeti ve istemcisinin nasıl uygulanacağı açıklanmaktadır.  
+WCF hizmetleri ve istemcileri WebSockets üzerinden iletişim kurmak için <xref:System.ServiceModel.NetHttpBinding> bağlama kullanabilirsiniz.  WebSockets hizmet sözleşmesi <xref:System.ServiceModel.NetHttpBinding> bir geri arama sözleşmesi tanımlar belirler zaman kullanılır. Bu konu, WebSockets üzerinden iletişim kurmak <xref:System.ServiceModel.NetHttpBinding> için kullanan bir WCF hizmeti nin ve istemcinin nasıl uygulanacağını açıklar.  
   
-### <a name="define-the-service"></a>Hizmeti tanımlama  
+### <a name="define-the-service"></a>Hizmeti Tanımla  
   
-1. Bir geri çağırma sözleşmesi tanımlama  
+1. Geri arama sözleşmesi tanımlama  
   
     ```csharp  
     [ServiceContract]  
@@ -25,9 +25,9 @@ WCF Hizmetleri ve istemcileri, WebSockets üzerinden iletişim kurmak için <xre
         }  
     ```  
   
-     Bu sözleşme, hizmetin istemciye geri ileti göndermesini sağlamak için istemci uygulaması tarafından uygulanır.  
+     Bu sözleşme, hizmetin istemciye ileti göndermesine izin vermek için istemci uygulaması tarafından uygulanacaktır.  
   
-2. Hizmet sözleşmesini tanımlayın ve geri çağırma anlaşması olarak `IStockQuoteCallback` arabirimini belirtin.  
+2. Hizmet sözleşmesini tanımlayın `IStockQuoteCallback` ve arabirimi geri arama sözleşmesi olarak belirtin.  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -59,17 +59,17 @@ WCF Hizmetleri ve istemcileri, WebSockets üzerinden iletişim kurmak için <xre
     }  
     ```  
   
-     Hizmet işlemi `StartSendingQuotes` zaman uyumsuz bir çağrı olarak uygulanır. `OperationContext` kullanarak geri çağırma kanalını aldık ve kanal açıksa geri çağırma kanalında zaman uyumsuz bir çağrı yaptık.  
+     Hizmet işlemi `StartSendingQuotes` eşzamanlı çağrı olarak uygulanır. Geri arama kanalını `OperationContext` kullanarak geri alma kanalını alıyoruz ve kanal açıksa, geri arama kanalında bir async araması yapıyoruz.  
   
 4. Hizmeti yapılandırma  
   
     ```xml  
     <configuration>  
         <appSettings>  
-          <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />        
+          <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />
         </appSettings>  
         <system.web>  
-          <compilation debug="true" targetFramework="4.5" />        
+          <compilation debug="true" targetFramework="4.5" />
         </system.web>  
         <system.serviceModel>  
             <protocolMapping>  
@@ -90,11 +90,11 @@ WCF Hizmetleri ve istemcileri, WebSockets üzerinden iletişim kurmak için <xre
     </configuration>  
     ```  
   
-     Hizmetin yapılandırma dosyası WCF 'nin varsayılan uç noktalarını kullanır. `<protocolMapping>` bölümü, oluşturulan varsayılan uç noktalar için `NetHttpBinding` kullanılması gerektiğini belirtmek için kullanılır.  
+     Hizmetin yapılandırma dosyası WCF'nin varsayılan uç noktalarına dayanır. Bölüm, `<protocolMapping>` oluşturulan varsayılan uç `NetHttpBinding` noktalar için kullanılması gerektiğini belirtmek için kullanılır.  
   
-### <a name="define-the-client"></a>Istemciyi tanımlama  
+### <a name="define-the-client"></a>İstemciyi Tanımla  
   
-1. Geri çağırma sözleşmesini uygulayın.  
+1. Geri arama sözleşmesini uygulayın.  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  
@@ -106,7 +106,7 @@ WCF Hizmetleri ve istemcileri, WebSockets üzerinden iletişim kurmak için <xre
             }  
     ```  
   
-     Geri arama sözleşmesi işlemi, zaman uyumsuz bir yöntem olarak uygulanır.  
+     Geri arama sözleşmesi işlemi eşzamanlı bir yöntem olarak uygulanır.  
   
     1. İstemci kodunu uygulayın.  
   
@@ -117,7 +117,7 @@ WCF Hizmetleri ve istemcileri, WebSockets üzerinden iletişim kurmak için <xre
             {  
                 var context = new InstanceContext(new CallbackHandler());  
                 var client = new StockQuoteServiceReference.StockQuoteServiceClient(context);  
-                client.StartSendingQuotes();              
+                client.StartSendingQuotes();
                 Console.ReadLine();  
             }  
   
@@ -131,14 +131,14 @@ WCF Hizmetleri ve istemcileri, WebSockets üzerinden iletişim kurmak için <xre
         }  
         ```  
   
-         CallbackHandler, açıklık açısından tekrarlanıyor. İstemci uygulaması yeni bir InstanceContext oluşturur ve geri çağırma arabiriminin uygulamasını belirtir. Ardından, yeni oluşturulan InstanceContext öğesine bir başvuru gönderen proxy sınıfının bir örneğini oluşturur. İstemci hizmeti çağırdığında hizmet, belirtilen geri çağırma sözleşmesini kullanarak istemciyi çağırır.  
+         CallbackHandler burada netlik için tekrarlanır. İstemci uygulaması yeni bir Örnek Bağlam oluşturur ve geri arama arabiriminin uygulanmasını belirtir. Daha sonra, yeni oluşturulan InstanceContext'a başvuru gönderen proxy sınıfının bir örneğini oluşturur. İstemci hizmeti aradığında, hizmet belirtilen geri arama sözleşmesini kullanarak istemciyi arar.  
   
     2. İstemciyi yapılandırma  
   
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  
         <configuration>  
-            <startup>   
+            <startup>
                 <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />  
             </startup>  
             <system.serviceModel>  
@@ -158,10 +158,10 @@ WCF Hizmetleri ve istemcileri, WebSockets üzerinden iletişim kurmak için <xre
         </configuration>  
         ```  
   
-         İstemci yapılandırmasında yapmanız gereken özel bir şey yoktur, `NetHttpBinding`kullanarak istemci tarafı uç noktasını belirtmeniz yeterlidir.  
+         İstemci yapılandırmasında yapmanız gereken özel bir şey yoktur, sadece `NetHttpBinding`istemci yan uç noktasını kullanarak belirtin.  
   
 ## <a name="example"></a>Örnek  
- Bu konuda kullanılan kodun tamamı aşağıda verilmiştir.  
+ Bu konuda kullanılan kodun tamamı aşağıda veda edilebedilir.  
   
 ```csharp  
 // IStockQuoteService.cs  
@@ -233,10 +233,10 @@ namespace Server
   
 <configuration>  
     <appSettings>  
-      <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />        
+      <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />
     </appSettings>  
     <system.web>  
-      <compilation debug="true" targetFramework="4.5" />        
+      <compilation debug="true" targetFramework="4.5" />
     </system.web>  
     <system.serviceModel>  
         <protocolMapping>  
@@ -279,7 +279,7 @@ namespace Client
         {  
             var context = new InstanceContext(new CallbackHandler());  
             var client = new StockQuoteServiceReference.StockQuoteServiceClient(context);  
-            client.StartSendingQuotes();              
+            client.StartSendingQuotes();
             Console.ReadLine();  
         }  
   
@@ -298,7 +298,7 @@ namespace Client
 <!--App.config -->  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
-    <startup>   
+    <startup>
         <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />  
     </startup>  
     <system.serviceModel>  

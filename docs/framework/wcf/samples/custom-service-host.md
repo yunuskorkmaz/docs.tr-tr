@@ -2,37 +2,37 @@
 title: Özel Hizmet Ana Bilgisayarı
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: 271233015739024428a7a29815f66278c9d7aa04
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2aed557d1d045c08aed206660aa7b4b75ffe0e2f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789935"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145078"
 ---
 # <a name="custom-service-host"></a>Özel Hizmet Ana Bilgisayarı
-Bu örnek, bir hizmetin çalışma zamanı davranışını değiştirmek için <xref:System.ServiceModel.ServiceHost> sınıfının özel bir türevi nasıl kullanacağınızı gösterir. Bu yaklaşım, çok sayıda hizmeti yaygın bir şekilde yapılandırmaya yönelik yeniden kullanılabilir bir alternatif sağlar. Örnek ayrıca, Internet Information Services (IIS) veya Windows Işlem etkinleştirme hizmeti (WAS) barındırma ortamında özel bir ServiceHost kullanmak için <xref:System.ServiceModel.Activation.ServiceHostFactory> sınıfını nasıl kullanacağınızı gösterir.  
+Bu örnek, bir hizmetin <xref:System.ServiceModel.ServiceHost> çalışma zamanı davranışını değiştirmek için sınıfın özel bir türevinin nasıl kullanılacağını gösterir. Bu yaklaşım, çok sayıda hizmeti ortak bir şekilde yapılandırmak için yeniden kullanılabilir bir alternatif sağlar. Örnek ayrıca, Internet Information <xref:System.ServiceModel.Activation.ServiceHostFactory> Services (IIS) veya Windows Process Activation Service (WAS) barındırma ortamında özel bir ServiceHost kullanmak için sınıfınasıl kullanılacağını da gösterir.  
   
 > [!IMPORTANT]
-> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
->   
+> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
->   
+>
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Hosting\CustomServiceHost`  
   
 ## <a name="about-the-scenario"></a>Senaryo hakkında
- Potansiyel olarak duyarlı hizmet meta verilerinin istenmeden açıklanmasını engellemek için Windows Communication Foundation (WCF) Hizmetleri için varsayılan yapılandırma, meta veri yayımlamayı devre dışı bırakır. Bu davranış, varsayılan olarak güvenlidir, ancak hizmetin meta veri yayımlama davranışı yapılandırmada açıkça etkinleştirilmediği sürece hizmeti çağırmak için gereken istemci kodunu oluşturmak için bir meta veri alma aracı (Svcutil. exe gibi) kullanamazsınız.  
+ Potansiyel olarak hassas hizmet meta verilerinin kasıtsız olarak açıklanmasını önlemek için, Windows Communication Foundation (WCF) hizmetleri için varsayılan yapılandırma meta veri yayımlamayı devre dışı kılabilir. Bu davranış varsayılan olarak güvenlidir, ancak hizmetin meta veri yayımlama davranışı yapılandırmada açıkça etkinleştirilmediği sürece hizmeti çağırmak için gereken istemci kodunu oluşturmak için bir meta veri alma aracını (Svcutil.exe gibi) kullanamayacağınız anlamına da gelir.  
   
- Çok sayıda hizmet için meta veri yayımlamanın etkinleştirilmesi, her bir hizmete aynı yapılandırma öğelerinin eklenmesini ve temelde aynı olan büyük miktarda yapılandırma bilgisine neden olur. Her hizmeti ayrı ayrı yapılandırmaya alternatif olarak, meta veri yayımlamanın bir kez kullanılmasına izin veren zorunlu kodu yazmak ve daha sonra bu kodu birkaç farklı hizmette yeniden kullanmak mümkündür. Bu, <xref:System.ServiceModel.ServiceHost> türetilen yeni bir sınıf oluşturularak ve `ApplyConfiguration`() yöntemini imperatively () metodunu geçersiz kıldığından meta veri yayımlama davranışını ekler.  
+ Çok sayıda hizmet için meta veri yayımlamayı etkinleştirmek, her bir hizmete aynı yapılandırma öğelerinin eklenmesini içerir ve bu da büyük miktarda yapılandırma bilgisinin temelde aynı olmasını sağlar. Her hizmeti ayrı ayrı yapılandırmaya alternatif olarak, meta veri yayımlamayı bir kez etkinleştiren zorunlu kodu yazmak ve ardından bu kodu birkaç farklı hizmet arasında yeniden kullanmak mümkündür. Bu, meta veri yayımlama davranışını zorunlu <xref:System.ServiceModel.ServiceHost> olarak eklemek `ApplyConfiguration`için () yönteminden türeten ve geçersiz kılan yeni bir sınıf oluşturarak gerçekleştirilir.  
   
 > [!IMPORTANT]
-> Bu örnek, netlik açısından güvenli olmayan bir meta veri yayımlama uç noktasının nasıl oluşturulacağını göstermektedir. Bu uç noktalar, anonim olarak kimliği doğrulanmamış tüketiciler tarafından kullanılabilir ve bir hizmetin meta verilerinin genel olarak kapatılarak emin olmak için bu uç noktaların dağıtılmasından önce gerçekleştirilmelidir.  
+> Bu örnek, açıklık için güvenli olmayan bir meta veri yayımlama bitiş noktasının nasıl oluşturulabildiğini gösterir. Bu tür uç noktalar anonim kimliği doğrulanmamış tüketiciler için kullanılabilir ve bir hizmetin meta verilerinin herkese açık olarak ifşa edilmesinin uygun olduğundan emin olmak için bu uç noktaları dağıtmadan önce dikkatli olunmalıdır.  
   
 ## <a name="implementing-a-custom-servicehost"></a>Özel bir ServiceHost uygulama
- <xref:System.ServiceModel.ServiceHost> sınıfı, bir hizmetin çalışma zamanı davranışını değiştirmek için devralanların geçersiz kılabilmesini sağlayan çeşitli yararlı sanal yöntemler sunar. Örneğin, `ApplyConfiguration`() yöntemi yapılandırma deposundan hizmet yapılandırma bilgilerini okur ve konağın <xref:System.ServiceModel.Description.ServiceDescription> uygun şekilde değiştirir. Varsayılan uygulama, uygulamanın yapılandırma dosyasından yapılandırmayı okur. Özel uygulamalar, zorunlu kodu kullanarak <xref:System.ServiceModel.Description.ServiceDescription> daha fazla değiştirmek için `ApplyConfiguration`() geçersiz kılabilir ve hatta varsayılan yapılandırma deposunu tamamen değiştirebilir. Örneğin, bir hizmetin uç nokta yapılandırmasını uygulamanın yapılandırma dosyası yerine bir veritabanından okumak için.  
+ Sınıf, <xref:System.ServiceModel.ServiceHost> devralanların bir hizmetin çalışma zamanı davranışını değiştirmek için geçersiz kabilecekleri birkaç yararlı sanal yöntem ortaya çıkarır. Örneğin, `ApplyConfiguration`() yöntemi yapılandırma deposundan hizmet yapılandırma bilgilerini okur ve <xref:System.ServiceModel.Description.ServiceDescription> ana bilgisayardakininkini buna göre değiştirir. Varsayılan uygulama, uygulamanın yapılandırma dosyasından yapılandırmayı okur. Özel uygulamalar () `ApplyConfiguration` <xref:System.ServiceModel.Description.ServiceDescription> kullanarak zorunlu kodu daha fazla değiştirmek ve hatta varsayılan yapılandırma deposutamamen değiştirmek için geçersiz kılınabilir. Örneğin, bir hizmetin bitiş noktası yapılandırmasını uygulamanın yapılandırma dosyası yerine bir veritabanından okumak için.  
   
- Bu örnekte, bu davranış hizmetin yapılandırma dosyasına açıkça eklenmese bile, ServiceMetadataBehavior öğesini ekleyen özel bir ServiceHost (meta veri yayımlamayı sağlayan) oluşturmak istiyoruz. Bunu gerçekleştirmek için, <xref:System.ServiceModel.ServiceHost> devralan yeni bir sınıf oluşturacağız ve `ApplyConfiguration`() geçersiz kıldık.  
+ Bu örnekte, bu davranış hizmetin yapılandırma dosyasına açıkça eklenmese bile ServiceMetadataBehavior (meta veri yayımlamayı sağlayan) ekleyen özel bir ServiceHost oluşturmak istiyoruz. Bunu başarmak için, devralan <xref:System.ServiceModel.ServiceHost> ve geçersiz kılan `ApplyConfiguration`yeni bir sınıf oluştururuz ().  
   
 ```csharp
 class SelfDescribingServiceHost : ServiceHost  
@@ -40,9 +40,9 @@ class SelfDescribingServiceHost : ServiceHost
     public SelfDescribingServiceHost(Type serviceType, params Uri[] baseAddresses)  
         : base(serviceType, baseAddresses) { }  
   
-    //Overriding ApplyConfiguration() allows us to   
+    //Overriding ApplyConfiguration() allows us to
     //alter the ServiceDescription prior to opening  
-    //the service host.   
+    //the service host.
     protected override void ApplyConfiguration()  
     {  
         //First, we call base.ApplyConfiguration()  
@@ -50,14 +50,14 @@ class SelfDescribingServiceHost : ServiceHost
         //the service we're hosting. After this call,  
         //this.Description describes the service  
         //as it was configured.  
-        base.ApplyConfiguration();       
+        base.ApplyConfiguration();
   
         //(rest of implementation elided for clarity)  
     }  
 }  
 ```  
   
- Uygulamanın yapılandırma dosyasında sağlanmış olan herhangi bir yapılandırmayı yoksaymak istemediğimiz için, `ApplyConfiguration`() geçersiz kıldığımız ilk şey temel uygulamayı çağırır. Bu yöntem tamamlandıktan sonra, aşağıdaki zorunlu kodu kullanarak <xref:System.ServiceModel.Description.ServiceMetadataBehavior> açıklamaya imperatively ekleyebiliriz.  
+ Uygulamanın yapılandırma dosyasında sağlanan herhangi bir yapılandırmayı göz ardı etmek istemediğimizden, `ApplyConfiguration`() geçersiz kılmamızın ilk işi temel uygulamayı çağırmaktır. Bu yöntem tamamlandıktan sonra, zorunlu <xref:System.ServiceModel.Description.ServiceMetadataBehavior> olarak aşağıdaki zorunlu kodu kullanarak açıklamaya ekleyebiliriz.  
   
 ```csharp
 ServiceMetadataBehavior mexBehavior = this.Description.Behaviors.Find<ServiceMetadataBehavior>();  
@@ -68,13 +68,13 @@ if (mexBehavior == null)
 }  
 else  
 {  
-    //Metadata behavior has already been configured,   
+    //Metadata behavior has already been configured,
     //so we do not have any work to do.  
     return;  
 }  
 ```  
   
- `ApplyConfiguration`() geçersiz kılmanın yapması gereken son şey, varsayılan meta veri uç noktasını eklemektir. Kurala göre, hizmet ana bilgisayarının BaseAddresses koleksiyonundaki her bir URI için bir meta veri uç noktası oluşturulur.  
+ () geçersiz `ApplyConfiguration`kılmanın yapması gereken son şey varsayılan meta veri bitiş noktasını eklemektir. Kuralına göre, hizmet ana bilgisayarının BaseAddresses koleksiyonundaki her URI için bir meta veri bitiş noktası oluşturulur.  
   
 ```csharp
 //Add a metadata endpoint at each base address  
@@ -110,40 +110,40 @@ foreach (Uri baseAddress in this.BaseAddresses)
 }  
 ```  
   
-## <a name="using-a-custom-servicehost-in-self-host"></a>Self ana bilgisayarda özel bir ServiceHost kullanma  
- Özel ServiceHost uygulamamızı tamamladığımıza göre, bu hizmeti, `SelfDescribingServiceHost`bir örneğinin içinde barındırarak herhangi bir hizmete meta veri yayımlama davranışı eklemek için kullanabiliriz. Aşağıdaki kod, kendi kendine ana bilgisayar senaryosunda nasıl kullanılacağını gösterir.  
+## <a name="using-a-custom-servicehost-in-self-host"></a>Self-host özel bir ServiceHost kullanma  
+ Şimdi bizim özel ServiceHost uygulamasını tamamladık, bizim `SelfDescribingServiceHost`bir örnek içinde bu hizmeti barındırarak herhangi bir hizmet meta veri yayımlama davranışı eklemek için kullanabilirsiniz. Aşağıdaki kod, kendi kendine barındırma senaryosunda nasıl kullanılacağını gösterir.  
   
 ```csharp
-SelfDescribingServiceHost host =   
+SelfDescribingServiceHost host =
          new SelfDescribingServiceHost( typeof( Calculator ) );  
 host.Open();  
 ```  
   
- Özel ana bilgisayar, hizmeti barındırmak için varsayılan <xref:System.ServiceModel.ServiceHost> sınıfını kullandığımız gibi uygulamanın yapılandırma dosyasından hizmetin uç nokta yapılandırmasını yine de okur. Ancak, özel ana bilgisayar içinde meta veri yayımlamayı etkinleştirmeye yönelik mantığı eklediğimiz için, artık yapılandırmada meta veri yayımlama davranışını açıkça etkinleştirmeleri gerekir. Bu yaklaşım, birkaç hizmet içeren bir uygulama oluştururken ve aynı yapılandırma öğelerini ve üzerine yazmadan her birinde meta veri yayımlamayı etkinleştirmek istediğinizde ayrı bir avantaja sahiptir.  
+ Özel ana bilgisayarımız, hizmetin barındırmak için varsayılan <xref:System.ServiceModel.ServiceHost> sınıfını kullanmışız gibi, yine de uygulamanın yapılandırma dosyasından hizmetin bitiş noktası yapılandırmasını okur. Ancak, meta veri yayımlamayı özel ana bilgisayarımız içinde etkinleştirme mantığını eklediğimiz için, artık yapılandırmada meta veri yayımlama davranışını açıkça etkinleştirmemiz gerekir. Bu yaklaşım, birden çok hizmet içeren bir uygulama oluşturuyorsanız ve her biri üzerinde aynı yapılandırma öğelerini tekrar tekrar yazmadan meta veri yayımlamayı etkinleştirmek istediğinizde belirgin bir avantaja sahiptir.  
   
-## <a name="using-a-custom-servicehost-in-iis-or-was"></a>IIS 'de veya WAS 'de özel bir ServiceHost kullanma  
- Hizmet ana bilgisayarı örneğini oluşturup açmaktan sorumlu olan uygulama kodunuz olduğundan, Self-Host senaryolarında özel bir hizmet ana bilgisayarı kullanılması basittir. Ancak, IIS veya barındırma ortamında, WCF altyapısı gelen iletilere yanıt olarak hizmetinizin ana bilgisayarını dinamik olarak örnekleyebilir. Özel hizmet ana bilgisayarları da bu barındırma ortamında kullanılabilir, ancak bir ServiceHostFactory biçiminde bazı ek kodlar gerektirir. Aşağıdaki kod, özel `SelfDescribingServiceHost`örneklerini döndüren <xref:System.ServiceModel.Activation.ServiceHostFactory> bir türevi gösterir.  
+## <a name="using-a-custom-servicehost-in-iis-or-was"></a>IIS veya WAS'da özel bir ServiceHost kullanma  
+ Hizmet ana bilgisayar örneğini oluşturmak ve açmaktan sonuçta sorumlu olan uygulama kodunuz olduğundan, kendi kendine barındırış senaryolarında özel bir hizmet ana bilgisayarı kullanmak kolaydır. Ancak IIS veya WAS barındırma ortamında, WCF altyapısı gelen iletilere yanıt olarak hizmetinizin ana bilgisayarını dinamik olarak anında bir şekilde anında hale getirmektedir. Özel hizmet ana bilgisayarları da bu barındırma ortamında kullanılabilir, ancak serviceHostFactory şeklinde bazı ek kod gerektirir. Aşağıdaki kod, özel <xref:System.ServiceModel.Activation.ServiceHostFactory> `SelfDescribingServiceHost`örnekleri döndüren bir türevi gösterir.  
   
 ```csharp
 public class SelfDescribingServiceHostFactory : ServiceHostFactory  
 {  
-    protected override ServiceHost CreateServiceHost(Type serviceType,   
+    protected override ServiceHost CreateServiceHost(Type serviceType,
      Uri[] baseAddresses)  
     {  
         //All the custom factory does is return a new instance  
         //of our custom host class. The bulk of the custom logic should  
-        //live in the custom host (as opposed to the factory)   
+        //live in the custom host (as opposed to the factory)
         //for maximum  
         //reuse value outside of the IIS/WAS hosting environment.  
-        return new SelfDescribingServiceHost(serviceType,     
+        return new SelfDescribingServiceHost(serviceType,
                                              baseAddresses);  
     }  
 }  
 ```  
   
- Gördüğünüz gibi, özel bir ServiceHostFactory uygulamak çok basittir. Tüm özel mantık, ServiceHost uygulamasının içinde bulunur; Factory, türetilmiş sınıfın bir örneğini döndürür.  
+ Gördüğünüz gibi, özel bir ServiceHostFactory uygulanması çok basittir. Tüm özel mantık ServiceHost uygulamasının içinde bulunur; fabrika türetilmiş sınıfın bir örneğini döndürür.  
   
- Hizmet uygulamasıyla özel bir fabrika kullanmak için hizmetin. svc dosyasına bazı ek meta veriler eklememiz gerekir.  
+ Hizmet uygulaması olan özel bir fabrikayı kullanmak için, hizmetin .svc dosyasına bazı ek meta veriler eklememiz gerekir.  
   
 ```xml
 <%@ServiceHost Service="Microsoft.ServiceModel.Samples.CalculatorService"
@@ -151,28 +151,28 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
                language=c# Debug="true" %>
 ```
   
- Burada `@ServiceHost` yönergesine ek bir `Factory` özniteliği ekledik ve özel fabrikamızın CLR türü adını özniteliğin değeri olarak geçirdik. IIS veya bu hizmet için bir ileti aldığında, WCF barındırma altyapısı ilk olarak bir ServiceHostFactory örneği oluşturur ve ardından `ServiceHostFactory.CreateServiceHost()`çağırarak hizmet ana bilgisayarının örneğini oluşturur.  
+ Burada `@ServiceHost` yönergeye `Factory` ek bir öznitelik ekledik ve özel fabrikamızın CLR türü adını özniteliğin değeri olarak geçtik. IIS veya WAS bu hizmet için bir ileti aldığında, WCF barındırma altyapısı önce ServiceHostFactory'nin bir örneğini `ServiceHostFactory.CreateServiceHost()`oluşturur ve ardından servis ev sahibini arayarak anında  
   
-## <a name="running-the-sample"></a>Örnek çalıştırma  
- Bu örnek, tam işlevli bir istemci ve hizmet uygulamasını sağlasa da, örnek noktası, bir hizmetin çalışma zamanı davranışının özel bir ana bilgisayar aracılığıyla nasıl değiştirileceğini gösterir. aşağıdaki adımları uygulayın:  
+## <a name="running-the-sample"></a>Örneği çalıştırma  
+ Bu örnek tam işlevli bir istemci ve hizmet uygulaması sağlasa da, örneklemin amacı, bir hizmetin çalışma zamanı davranışını özel bir ana bilgisayar aracılığı ile nasıl değiştirilemeyeceğini göstermektir., aşağıdaki adımları yapın:  
   
-### <a name="observe-the-effect-of-the-custom-host"></a>Özel ana bilgisayarın etkisini gözlemleyin
+### <a name="observe-the-effect-of-the-custom-host"></a>Özel ana bilgisayar etkisini gözlemleyin
   
-1. Hizmetin Web. config dosyasını açın ve hizmet için açık bir yapılandırma olmadığını gözlemleyin.  
+1. Hizmetin Web.config dosyasını açın ve hizmet için meta verileri açıkça etkinleştiren bir yapılandırma olmadığını gözlemleyin.  
   
-2. Hizmetin. svc dosyasını açın ve @ServiceHost yönergesinin, özel bir ServiceHostFactory adını belirten bir Factory özniteliği içerdiğini gözlemleyin.  
+2. Hizmetin .svc dosyasını açın ve @ServiceHost yönergesinin özel bir ServiceHostFactory'nin adını belirten bir Fabrika özniteliği içerdiğini gözlemleyin.  
   
-### <a name="set-up-build-and-run-the-sample"></a>Örneği kurma, oluşturma ve çalıştırma
+### <a name="set-up-build-and-run-the-sample"></a>Örneği ayarlama, oluşturma ve çalıştırma
   
-1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
+1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.
 
-2. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)bölümündeki yönergeleri izleyin.
+2. Çözümü oluşturmak için, Windows [Communication Foundation Samples'i oluştururken](building-the-samples.md)yönergeleri izleyin.
 
-3. Çözüm derlendikten sonra, ServiceModelSamples uygulamasını IIS 7,0 ' de ayarlamak için Setup. bat dosyasını çalıştırın. ServiceModelSamples dizini artık bir IIS 7,0 uygulaması olarak görünmelidir.
+3. Çözüm yapıldıktan sonra, IIS 7.0'da ServiceModelSamples Uygulamasını ayarlamak için Setup.bat'ı çalıştırın. ServiceModelSamples dizini artık bir IIS 7.0 Uygulaması olarak görünmelidir.
 
-4. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.
+4. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](running-the-samples.md)yönergeleri izleyin.
 
-5. IIS 7,0 uygulamasını kaldırmak için *Cleanup. bat*dosyasını çalıştırın.
+5. IIS 7.0 uygulamasını kaldırmak için *Cleanup.bat'ı*çalıştırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

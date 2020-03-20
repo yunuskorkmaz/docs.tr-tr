@@ -9,40 +9,40 @@ helpviewer_keywords:
 - brushes [WPF], Transform property
 - rotating contents of brushes [WPF]
 ms.assetid: ebada2f9-f01f-4863-9ea2-c2e4e51610f1
-ms.openlocfilehash: a83f3b1c046e94faa8816e8c310f438b4711048a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4484e2fc1ae3e969b02b1d8f3ae4ab2a035558e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769386"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187331"
 ---
 # <a name="how-to-transform-a-brush"></a>Nasıl yapılır: Fırça Dönüşümü
-Bu örnek nasıl dönüştürüleceğini gösterir <xref:System.Windows.Media.Brush> iki dönüştürme özelliklerini kullanarak nesneleri: <xref:System.Windows.Media.Brush.RelativeTransform%2A> ve <xref:System.Windows.Media.Brush.Transform%2A>.  
+Bu örnek, iki <xref:System.Windows.Media.Brush> dönüştürme özelliklerini kullanarak nesnelerin <xref:System.Windows.Media.Brush.RelativeTransform%2A> nasıl <xref:System.Windows.Media.Brush.Transform%2A>dönüştürüleceklerini gösterir: ve.  
   
- Aşağıdaki örneklerde bir <xref:System.Windows.Media.RotateTransform> içeriğini döndürmek için bir <xref:System.Windows.Media.ImageBrush> 45 derece.  
+ Aşağıdaki örneklerde <xref:System.Windows.Media.RotateTransform> a, bir <xref:System.Windows.Media.ImageBrush> derecenin içeriğini 45 derece döndürmek için kullanılır.  
   
- Aşağıdaki çizimde gösterildiği <xref:System.Windows.Media.ImageBrush> olmadan bir <xref:System.Windows.Media.RotateTransform>, ile <xref:System.Windows.Media.RotateTransform> uygulanan <xref:System.Windows.Media.Brush.RelativeTransform%2A> özelliği ile <xref:System.Windows.Media.RotateTransform> uygulanan <xref:System.Windows.Media.Brush.Transform%2A> özelliği.  
+ Aşağıdaki resimde, <xref:System.Windows.Media.ImageBrush> <xref:System.Windows.Media.Brush.RelativeTransform%2A> özelliğe <xref:System.Windows.Media.RotateTransform> <xref:System.Windows.Media.RotateTransform> uygulanan bir , olmayan ve <xref:System.Windows.Media.RotateTransform> <xref:System.Windows.Media.Brush.Transform%2A> özelliğe uygulanan ile gösterilmektedir.  
   
- ![Fırça RelativeTransform ve dönüşüm ayarları](./media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk_graphicsmm_transformandrelativetransform")  
+ ![Fırça RelativeTransform ve Transform ayarları](./media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk_graphicsmm_transformandrelativetransform")  
   
 ## <a name="example"></a>Örnek  
- İlk örnek geçerli bir <xref:System.Windows.Media.RotateTransform> için <xref:System.Windows.Media.Brush.RelativeTransform%2A> özelliği bir <xref:System.Windows.Media.ImageBrush>. <xref:System.Windows.Media.RotateTransform.CenterX%2A> Ve <xref:System.Windows.Media.RotateTransform.CenterY%2A> özelliklerini bir <xref:System.Windows.Media.RotateTransform> her ikisi de ayarlanmış bu içeriğin orta noktasının göreli koordinatı 0,5 nesne. Sonuç olarak, <xref:System.Windows.Media.ImageBrush> içeriği ortasından döndürür.  
+ İlk örnek bir <xref:System.Windows.Media.RotateTransform> <xref:System.Windows.Media.Brush.RelativeTransform%2A> . <xref:System.Windows.Media.ImageBrush> Bir <xref:System.Windows.Media.RotateTransform.CenterX%2A> <xref:System.Windows.Media.RotateTransform.CenterY%2A> <xref:System.Windows.Media.RotateTransform> nesnenin ve özelliklerinin her ikisi de 0,5 olarak ayarlanır, bu da bu içeriğin merkez noktasının göreli koordinatıdır. Sonuç olarak, <xref:System.Windows.Media.ImageBrush> içerik merkezi etrafında döner.  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushrelativetransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushrelativetransformexample)]
  [!code-xaml[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushrelativetransformexample)]  
   
- İkinci örnek de geçerlidir bir <xref:System.Windows.Media.RotateTransform> için bir <xref:System.Windows.Media.ImageBrush>; ancak bu örnekte <xref:System.Windows.Media.Brush.Transform%2A> özelliği yerine <xref:System.Windows.Media.Brush.RelativeTransform%2A> özelliği.  
+ İkinci örnek de bir; <xref:System.Windows.Media.RotateTransform> <xref:System.Windows.Media.ImageBrush> ancak, bu örnek <xref:System.Windows.Media.Brush.Transform%2A> <xref:System.Windows.Media.Brush.RelativeTransform%2A> özelliği yerine özelliği kullanır.  
   
- Örnek merkezi fırçayı döndürmek için ayarlar <xref:System.Windows.Media.RotateTransform.CenterX%2A> ve <xref:System.Windows.Media.RotateTransform.CenterY%2A> özelliklerini <xref:System.Windows.Media.RotateTransform> mutlak koordinatlara nesne. Fırça 175 90 piksel bir dikdörtgen boyar, merkez noktasını dikdörtgenin olduğundan (87.5, 45).  
+ Fırçayı merkezi yle döndürmek için, örnek <xref:System.Windows.Media.RotateTransform.CenterX%2A> <xref:System.Windows.Media.RotateTransform.CenterY%2A> nesnenin <xref:System.Windows.Media.RotateTransform> özelliklerini ve özelliklerini mutlak koordinatlara ayarlar. Fırça 175'e 90 piksellik bir dikdörtgen boyadığından, dikdörtgenin orta noktası (87,5, 45).  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushTransformExample](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushtransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushTransformExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushtransformexample)]
  [!code-xaml[BrushesIntroduction_snip#ImageBrushTransformExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushtransformexample)]  
   
- Nasıl bir açıklaması için <xref:System.Windows.Media.Brush.RelativeTransform%2A> ve <xref:System.Windows.Media.Brush.Transform%2A> özellikleri çalışma, bkz [fırça dönüşümüne genel bakış](brush-transformation-overview.md).  
+ Özelliklerin ve <xref:System.Windows.Media.Brush.RelativeTransform%2A> <xref:System.Windows.Media.Brush.Transform%2A> özelliklerinin nasıl çalıştığına yönelik bir açıklama için [Fırça Dönüşümüne Genel Bakış'a](brush-transformation-overview.md)bakın.  
   
- Tam bir örnek için bkz. [Fırçalar örnek](https://go.microsoft.com/fwlink/?LinkID=159973). Fırçalar hakkında daha fazla bilgi için bkz. [düz renkler ve gradyanlar genel bakış boyama](painting-with-solid-colors-and-gradients-overview.md).  
+ Tam örnek için [Fırçalar Örneği'ne](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Brushes)bakın. Fırçalar hakkında daha fazla bilgi için, [Düz Renkler ve Degradeler Genel Bakış ile Boyama](painting-with-solid-colors-and-gradients-overview.md)bölümüne bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

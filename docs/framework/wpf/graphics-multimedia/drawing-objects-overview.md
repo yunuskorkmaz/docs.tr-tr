@@ -9,225 +9,225 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: d4527c331308ff6cd517705212e09428216d2378
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7a5d00eb2fb7c66e5e42d40893806e13717e1d2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459734"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186535"
 ---
 # <a name="drawing-objects-overview"></a>Çizim Nesnelerine Genel Bakış
-Bu konu <xref:System.Windows.Media.Drawing> nesneleri tanıtır ve bunları etkin şekilde şekiller, bit eşlemler, metin ve medya çizmek için nasıl kullanacağınızı açıklar. Küçük resim oluştururken <xref:System.Windows.Media.Drawing> nesneleri kullanın, bir <xref:System.Windows.Media.DrawingBrush>boyayın veya <xref:System.Windows.Media.Visual> nesneleri kullanın.  
+Bu konu <xref:System.Windows.Media.Drawing> nesneleri tanılar ve verimli şekiller, bit eşlemler, metin ve medya çizmek için bunları nasıl kullanılacağını açıklar. Küçük <xref:System.Windows.Media.Drawing> resim oluştururken, nesneleri <xref:System.Windows.Media.DrawingBrush>boyarken veya <xref:System.Windows.Media.Visual> nesneleri kullanırken nesneleri kullanın.  
 
-<a name="whatisadrawingsection"></a>   
-## <a name="what-is-a-drawing-object"></a>Çizim nesnesi nedir?  
- Bir <xref:System.Windows.Media.Drawing> nesnesi, şekil, bit eşlem, video veya metin satırı gibi görünür içerikleri açıklar. Farklı türdeki çizimler farklı içerik türlerini anlatmaktadır. Aşağıda, çizim nesnelerinin farklı türlerinin bir listesi verilmiştir.  
+<a name="whatisadrawingsection"></a>
+## <a name="what-is-a-drawing-object"></a>Çizim Nesnesi Nedir?  
+ Nesne, <xref:System.Windows.Media.Drawing> şekil, biteş, video veya metin satırı gibi görünür içeriği açıklar. Farklı çizim türleri farklı içerik türlerini açıklar. Aşağıda, farklı çizim nesnetürlerinin listesi verilmiştir.  
   
-- <xref:System.Windows.Media.GeometryDrawing>: bir şekil çizer.  
+- <xref:System.Windows.Media.GeometryDrawing>– Bir şekil çizer.  
   
-- <xref:System.Windows.Media.ImageDrawing>: bir resim çizer.  
+- <xref:System.Windows.Media.ImageDrawing>– Bir görüntü çizer.  
   
-- <xref:System.Windows.Media.GlyphRunDrawing>: metin çizer.  
+- <xref:System.Windows.Media.GlyphRunDrawing>– Metin çizer.  
   
-- <xref:System.Windows.Media.VideoDrawing> – bir ses veya video dosyası çalar.  
+- <xref:System.Windows.Media.VideoDrawing>– Ses veya video dosyası çalar.  
   
-- <xref:System.Windows.Media.DrawingGroup>: diğer çizimleri çizer. Diğer çizimleri tek bileşik çizimde birleştirmek için bir çizim grubu kullanın.  
+- <xref:System.Windows.Media.DrawingGroup>– Diğer çizimleri çizer. Diğer çizimleri tek bir bileşik çizimde birleştirmek için bir çizim grubu kullanın.  
   
- <xref:System.Windows.Media.Drawing> nesneler çok yönlüdür; <xref:System.Windows.Media.Drawing> nesnesini kullanmanın birçok yolu vardır.  
+ <xref:System.Windows.Media.Drawing>nesneler çok yönlüdür; bir <xref:System.Windows.Media.Drawing> nesneyi kullanmanın birçok yolu vardır.  
   
-- Bir <xref:System.Windows.Media.DrawingImage> ve <xref:System.Windows.Controls.Image> denetimi kullanarak bir görüntü olarak görüntüleyebilirsiniz.  
+- A <xref:System.Windows.Media.DrawingImage> ve bir <xref:System.Windows.Controls.Image> denetim kullanarak görüntü olarak görüntüleyebilirsiniz.  
   
-- Bir <xref:System.Windows.Controls.Page><xref:System.Windows.Controls.Page.Background%2A> gibi bir nesneyi boyamak için bir <xref:System.Windows.Media.DrawingBrush> kullanabilirsiniz.  
+- Bir nesneyi boyamak için a <xref:System.Windows.Media.DrawingBrush> ile <xref:System.Windows.Controls.Page.Background%2A> kullanabilirsiniz, örneğin bir <xref:System.Windows.Controls.Page>.  
   
-- <xref:System.Windows.Media.DrawingVisual>görünümünü anlatmak için kullanabilirsiniz.  
+- Bir <xref:System.Windows.Media.DrawingVisual>.  
   
-- <xref:System.Windows.Media.Visual>içeriğini numaralandırmak için kullanabilirsiniz.  
+- Bir <xref:System.Windows.Media.Visual>.  
   
- WPF, şekiller, bit eşlemler, metin ve medya çizme yeteneğine sahip olan diğer nesne türlerini sağlar. Örneğin, şekiller çizmek için <xref:System.Windows.Shapes.Shape> nesneleri de kullanabilirsiniz ve <xref:System.Windows.Controls.MediaElement> denetimi uygulamanıza video eklemek için başka bir yol sağlar. Bu nedenle <xref:System.Windows.Media.Drawing> nesneleri ne zaman kullanmalısınız? Performans avantajları elde etmek veya <xref:System.Windows.Freezable> özelliklere ihtiyaç duyduğunuzda, çerçeve düzeyindeki özellikleri feda edebilirsiniz. <xref:System.Windows.Media.Drawing> nesneler [Düzen](../advanced/layout.md), giriş ve odak için destek olmadığından, bunları arka planların, küçük resimlerin ve <xref:System.Windows.Media.Visual> nesnelerle alt düzey çizim için açıklamak için ideal hale getirir.  
+ WPF, şekil, bit eşlem, metin ve ortam çizim yeteneğine sahip diğer nesne türleri sağlar. Örneğin, şekilleri çizmek <xref:System.Windows.Shapes.Shape> için nesneleri de kullanabilirsiniz <xref:System.Windows.Controls.MediaElement> ve denetim uygulamanıza video eklemek için başka bir yol sağlar. Peki nesneleri ne <xref:System.Windows.Media.Drawing> zaman kullanmalısınız? Performans avantajları ndan yararlanmak için çerçeve düzeyindeki <xref:System.Windows.Freezable> özelliklerden ne zaman yararlanabilirsiniz veya özelliklere ihtiyacınız olduğunda. Nesneler [Düzen,](../advanced/layout.md)giriş ve odak için destek olmadığından, arka planlar, küçük resim ve nesnelerle <xref:System.Windows.Media.Visual> düşük düzeyli çizim için onları ideal hale getiren performans avantajları sağlar. <xref:System.Windows.Media.Drawing>  
   
- Bir tür <xref:System.Windows.Freezable> nesne olduklarından, <xref:System.Windows.Media.Drawing> nesneleri aşağıdakiler dahil olmak üzere birkaç özel özellik elde ederler: [kaynak](../../../desktop-wpf/fundamentals/xaml-resources-define.md)olarak, birden fazla nesne arasında paylaşılan, performansı artırmak için salt okunabilir hale getirilir, klonlanmış ve yapılabilir iş parçacığı güvenli. <xref:System.Windows.Freezable> nesneleri tarafından sunulan farklı özellikler hakkında daha fazla bilgi için, [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md)bölümüne bakın.  
+ Bir tür <xref:System.Windows.Freezable> nesnesi <xref:System.Windows.Media.Drawing> olduklarından, nesneler aşağıdakileri içeren birkaç özel özellik kazanırlar: birden çok nesne arasında paylaşılan, performansı artırmak için salt okunur hale getirilmiş, klonlanmış ve iş parçacığı güvenli hale getirilmiş [kaynaklar](../../../desktop-wpf/fundamentals/xaml-resources-define.md)olarak bildirilebilirler. Nesneler tarafından <xref:System.Windows.Freezable> sağlanan farklı özellikler hakkında daha fazla bilgi için [Freezable Objects Overview](../advanced/freezable-objects-overview.md)'a bakın.  
   
-<a name="drawinggeometriessection"></a>   
-## <a name="draw-a-shape"></a>Şekil çiz  
- Bir şekil çizmek için <xref:System.Windows.Media.GeometryDrawing>kullanırsınız. Geometri çiziminin <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> özelliği, çizilecek şekli açıklar, <xref:System.Windows.Media.GeometryDrawing.Brush%2A> özelliği şeklin iç kısmının nasıl boyanması gerektiğini ve <xref:System.Windows.Media.GeometryDrawing.Pen%2A> özelliği, anahattının nasıl çizildiğini açıklar.  
+<a name="drawinggeometriessection"></a>
+## <a name="draw-a-shape"></a>Şekil Çiz  
+ Bir şekil çizmek için, <xref:System.Windows.Media.GeometryDrawing>bir . Bir geometri çiziminin <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> özelliği çizilecek <xref:System.Windows.Media.GeometryDrawing.Brush%2A> şekli, özelliği şeklin iç tasarımının nasıl <xref:System.Windows.Media.GeometryDrawing.Pen%2A> boyanması gerektiğini ve özelliğinin anahattının nasıl çizilmesi gerektiğini açıklar.  
   
- Aşağıdaki örnek bir şekil çizmek için <xref:System.Windows.Media.GeometryDrawing> kullanır. Şekil bir <xref:System.Windows.Media.GeometryGroup> ve iki <xref:System.Windows.Media.EllipseGeometry> nesnesi tarafından tanımlanır. Şeklin iç kısmı bir <xref:System.Windows.Media.LinearGradientBrush> ile boyanmıştır ve ana hattı <xref:System.Windows.Media.Brushes.Black%2A> <xref:System.Windows.Media.Pen>ile çizilir.  
+ Aşağıdaki örnekte <xref:System.Windows.Media.GeometryDrawing> bir şekil çizmek için a kullanır. Şekil bir <xref:System.Windows.Media.GeometryGroup> ve iki <xref:System.Windows.Media.EllipseGeometry> nesne tarafından açıklanır. Şeklin iç bir <xref:System.Windows.Media.LinearGradientBrush> ile boyanmış ve anahat ile <xref:System.Windows.Media.Brushes.Black%2A> <xref:System.Windows.Media.Pen>çizilir .  
   
- Bu örnek, aşağıdaki <xref:System.Windows.Media.GeometryDrawing>oluşturur.  
+ Bu örnek aşağıdakileri <xref:System.Windows.Media.GeometryDrawing>oluşturur.  
   
- ![İki elips için GeometryDrawing](./media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")  
-GeometryDrawing  
+ ![İki elipsin Geometri Çizimi](./media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")  
+Bir Geometri Çizimi  
   
  [!code-csharp[DrawingMiscSnippets_snip#GeometryDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/GeometryDrawingExample.cs#geometrydrawingexampleinline)]
  [!code-xaml[DrawingMiscSnippets_snip#GeometryDrawingExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/GeometryDrawingExample.xaml#geometrydrawingexampleinline)]  
   
- Tüm örnek için bkz. [GeometryDrawing oluşturma](how-to-create-a-geometrydrawing.md).  
+ Tam örnek için [bkz.](how-to-create-a-geometrydrawing.md)  
   
- <xref:System.Windows.Media.PathGeometry> gibi diğer <xref:System.Windows.Media.Geometry> sınıflar, eğriler ve yaylar oluşturarak daha karmaşık şekiller oluşturmanızı sağlar. <xref:System.Windows.Media.Geometry> nesneler hakkında daha fazla bilgi için bkz. [geometriye genel bakış](geometry-overview.md).  
+ Eğriler ve <xref:System.Windows.Media.PathGeometry> yaylar oluşturarak daha karmaşık şekiller oluşturmanızı sağlamak gibi diğer <xref:System.Windows.Media.Geometry> sınıflar. Nesneler hakkında <xref:System.Windows.Media.Geometry> daha fazla bilgi için [Geometriye Genel Bakış'a](geometry-overview.md)bakın.  
   
- <xref:System.Windows.Media.Drawing> nesneleri kullanmayan şekiller çizmenin diğer yolları hakkında daha fazla bilgi için bkz. [WPF 'de şekillere ve temel çizime genel bakış](shapes-and-basic-drawing-in-wpf-overview.md).  
+ Nesneleri kullanmayan <xref:System.Windows.Media.Drawing> şekiller çizmenin diğer yolları hakkında daha fazla bilgi için [WPF Genel Bakışı'nda Şekiller ve Temel Çizim'e](shapes-and-basic-drawing-in-wpf-overview.md)bakın.  
   
-<a name="drawingimagessection"></a>   
-## <a name="draw-an-image"></a>Görüntü çizme  
- Bir görüntü çizmek için <xref:System.Windows.Media.ImageDrawing>kullanırsınız. <xref:System.Windows.Media.ImageDrawing> nesnenin <xref:System.Windows.Media.ImageDrawing.ImageSource%2A> özelliği, çizilecek görüntüyü açıklar ve <xref:System.Windows.Media.ImageDrawing.Rect%2A> özelliği görüntünün çizildiği bölgeyi tanımlar.  
+<a name="drawingimagessection"></a>
+## <a name="draw-an-image"></a>Resim Çiz  
+ Bir resim çizmek için, <xref:System.Windows.Media.ImageDrawing>bir . Bir <xref:System.Windows.Media.ImageDrawing> nesnenin <xref:System.Windows.Media.ImageDrawing.ImageSource%2A> özelliği çizilecek görüntüyü açıklar <xref:System.Windows.Media.ImageDrawing.Rect%2A> ve özelliği görüntünün çizildiği bölgeyi tanımlar.  
   
- Aşağıdaki örnek, (75, 75) konumunda bulunan bir dikdörtgene bir resim çizer ve 100 piksel 100 piksel. Aşağıdaki çizimde, örnek tarafından oluşturulan <xref:System.Windows.Media.ImageDrawing> gösterilmektedir. <xref:System.Windows.Media.ImageDrawing>sınırlarını göstermek için gri bir kenarlık eklenmiştir.  
+ Aşağıdaki örnek, görüntüyü 100'e 100 piksel olan (75,75) bir dikdörtgenin içine çeker. Aşağıdaki resimde örnek <xref:System.Windows.Media.ImageDrawing> tarafından oluşturulan gösterir. Gri kenarlık, <xref:System.Windows.Media.ImageDrawing>'nin sınırlarını göstermek için eklendi.  
   
- ![75, 75 ve üzerinde &#40;çizilmiş bir 100 x 100 ImageDrawing&#41;](./media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")  
-100 ile 100 ImageDrawing  
+ ![100'e 100 Görüntü Çizilen 75,75 &#40;&#41;](./media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")  
+A 100 by 100 ImageDrawing  
   
  [!code-csharp[DrawingMiscSnippets_snip#ImageDrawing100by100Inline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/ImageDrawingExample.cs#imagedrawing100by100inline)]
  [!code-xaml[DrawingMiscSnippets_snip#ImageDrawing100by100Inline](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/ImageDrawingExample.xaml#imagedrawing100by100inline)]  
   
- Görüntüler hakkında daha fazla bilgi için bkz. [görüntülemeye genel bakış](imaging-overview.md).  
+ Görüntüler hakkında daha fazla bilgi için [Görüntülemeye Genel Bakış'a](imaging-overview.md)bakın.  
   
-<a name="playmedia"></a>   
-## <a name="play-media-code-only"></a>Medyayı oynat (yalnızca kod)  
-  
-> [!NOTE]
-> [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]<xref:System.Windows.Media.VideoDrawing> bildirebilseniz de, yalnızca kodu kullanarak medyayı yükleyebilir ve oynatabilirsiniz. Videoyu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]oynatmak için, bunun yerine bir <xref:System.Windows.Controls.MediaElement> kullanın.  
-  
- Ses veya video dosyası oynatmak için bir <xref:System.Windows.Media.VideoDrawing> ve <xref:System.Windows.Media.MediaPlayer>kullanırsınız. Medyayı yüklemek ve oynatmak için kullanabileceğiniz iki yol vardır. Birincisi bir <xref:System.Windows.Media.MediaPlayer> ve <xref:System.Windows.Media.VideoDrawing> kendileri ve ikinci yöntem, <xref:System.Windows.Media.MediaPlayer> ve <xref:System.Windows.Media.VideoDrawing>birlikte kullanmak üzere kendi <xref:System.Windows.Media.MediaTimeline> oluşturmaktır.  
+<a name="playmedia"></a>
+## <a name="play-media-code-only"></a>Medya Oynatma (Yalnızca Kod)  
   
 > [!NOTE]
-> Medyayı uygulamanızla dağıtırken, bir görüntü gibi bir proje kaynağı olarak bir medya dosyası kullanamazsınız. Proje dosyanızda, bunun yerine medya türünü `Content` olarak ayarlamanız ve `CopyToOutputDirectory` ' i `PreserveNewest` ' ye `Always` ' e ayarlamanız gerekir.  
+> Bir <xref:System.Windows.Media.VideoDrawing> in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]bildirebilirsiniz rağmen, yalnızca yükleyebilirsiniz ve kod kullanarak medya oynatabilirsiniz. Video oynatmak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]için <xref:System.Windows.Controls.MediaElement> bunun yerine bir video kullanın.  
   
- Medyayı kendi <xref:System.Windows.Media.MediaTimeline>oluşturmadan yürütmek için aşağıdaki adımları gerçekleştirirsiniz.  
+ Bir ses veya video dosyasını <xref:System.Windows.Media.VideoDrawing> oynatmak <xref:System.Windows.Media.MediaPlayer>için, bir ve bir . Medyayı yüklemenin ve oynatmanın iki yolu vardır. İlk <xref:System.Windows.Media.MediaPlayer> bir ve kendileri <xref:System.Windows.Media.VideoDrawing> tarafından kullanmak, ve ikinci yolu <xref:System.Windows.Media.MediaTimeline> <xref:System.Windows.Media.MediaPlayer> ile kullanmak için <xref:System.Windows.Media.VideoDrawing>kendi oluşturmaktır ve .  
   
-1. <xref:System.Windows.Media.MediaPlayer> nesnesi oluşturun.  
+> [!NOTE]
+> Uygulamanızla ortam dağıtırken, bir ortam dosyalarını bir görüntü gibi proje kaynağı olarak kullanamazsınız. Proje dosyanızda, bunun yerine ortam türünü `Content` ayarlamanız `PreserveNewest` `Always`ve ayarlamalısınız. `CopyToOutputDirectory`  
+  
+ Kendi <xref:System.Windows.Media.MediaTimeline>oluşturmadan medya oynatmak için, aşağıdaki adımları gerçekleştirin.  
+  
+1. Bir <xref:System.Windows.Media.MediaPlayer> nesne oluşturun.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline1)]  
   
-2. Medya dosyasını yüklemek için <xref:System.Windows.Media.MediaPlayer.Open%2A> yöntemini kullanın.  
+2. Ortam <xref:System.Windows.Media.MediaPlayer.Open%2A> dosyasını yüklemek için yöntemi kullanın.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline2)]  
   
-3. <xref:System.Windows.Media.VideoDrawing>oluşturun.  
+3. Bir <xref:System.Windows.Media.VideoDrawing>.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline3)]  
   
-4. <xref:System.Windows.Media.VideoDrawing><xref:System.Windows.Media.VideoDrawing.Rect%2A> özelliğini ayarlayarak medyayı çizmek için boyut ve konum belirtin.  
+4. Özelliğini <xref:System.Windows.Media.VideoDrawing.Rect%2A> ayarlayarak ortamı çizmek için boyutu ve <xref:System.Windows.Media.VideoDrawing>konumu belirtin.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline4](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline4)]  
   
-5. <xref:System.Windows.Media.VideoDrawing> <xref:System.Windows.Media.VideoDrawing.Player%2A> özelliğini oluşturduğunuz <xref:System.Windows.Media.MediaPlayer> ayarlayın.  
+5. <xref:System.Windows.Media.MediaPlayer> Oluşturduğunuz <xref:System.Windows.Media.VideoDrawing.Player%2A> <xref:System.Windows.Media.VideoDrawing> özelliği ayarlayın.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline5](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline5)]  
   
-6. Medyayı yürütmeye başlamak için <xref:System.Windows.Media.MediaPlayer> <xref:System.Windows.Media.MediaPlayer.Play%2A> yöntemini kullanın.  
+6. Ortamı <xref:System.Windows.Media.MediaPlayer.Play%2A> <xref:System.Windows.Media.MediaPlayer> oynatmaya başlamak için yöntemini kullanın.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline6](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline6)]  
   
- Aşağıdaki örnek, bir video dosyasını bir kez oynatmak için bir <xref:System.Windows.Media.VideoDrawing> ve <xref:System.Windows.Media.MediaPlayer> kullanır.  
+ Aşağıdaki örnekte <xref:System.Windows.Media.VideoDrawing> bir <xref:System.Windows.Media.MediaPlayer> video dosyasını bir kez oynatmak için a ve a kullanır.  
   
  [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline)]  
   
- Medya üzerinde ek zamanlama denetimi kazanmak için, <xref:System.Windows.Media.MediaPlayer> ve <xref:System.Windows.Media.VideoDrawing> nesneleriyle bir <xref:System.Windows.Media.MediaTimeline> kullanın. <xref:System.Windows.Media.MediaTimeline>, videonun yinelenmesi gerekip gerekmediğini belirtmenizi sağlar. Bir <xref:System.Windows.Media.VideoDrawing><xref:System.Windows.Media.MediaTimeline> kullanmak için aşağıdaki adımları gerçekleştirirsiniz:  
+ Ortam üzerinde ek zamanlama denetimi elde <xref:System.Windows.Media.MediaTimeline> etmek <xref:System.Windows.Media.MediaPlayer> <xref:System.Windows.Media.VideoDrawing> için, bir ve nesnelerle birlikte kullanın. Videonun <xref:System.Windows.Media.MediaTimeline> tekrarlanıp yinelenmeyeceğini belirtmenizi sağlar. A <xref:System.Windows.Media.VideoDrawing>ile <xref:System.Windows.Media.MediaTimeline> birlikte kullanmak için aşağıdaki adımları gerçekleştirirsiniz:  
   
-1. <xref:System.Windows.Media.MediaTimeline> bildirin ve zamanlama davranışlarını ayarlayın.  
+1. Bildirin <xref:System.Windows.Media.MediaTimeline> ve zamanlama davranışlarını ayarlayın.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline1)]  
   
-2. <xref:System.Windows.Media.MediaTimeline><xref:System.Windows.Media.MediaClock> oluşturun.  
+2. Bir'den <xref:System.Windows.Media.MediaClock> <xref:System.Windows.Media.MediaTimeline>bir oluştur.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline2)]  
   
-3. <xref:System.Windows.Media.MediaPlayer> oluşturun ve <xref:System.Windows.Media.MediaPlayer.Clock%2A> özelliğini ayarlamak için <xref:System.Windows.Media.MediaClock> kullanın.  
+3. A <xref:System.Windows.Media.MediaPlayer> oluşturun ve <xref:System.Windows.Media.MediaClock> özelliğini <xref:System.Windows.Media.MediaPlayer.Clock%2A> ayarlamak için kullanın.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline3)]  
   
-4. <xref:System.Windows.Media.VideoDrawing> oluşturun ve <xref:System.Windows.Media.MediaPlayer> <xref:System.Windows.Media.VideoDrawing><xref:System.Windows.Media.VideoDrawing.Player%2A> özelliğine atayın.  
+4. Bir <xref:System.Windows.Media.VideoDrawing> oluşturun ve <xref:System.Windows.Media.MediaPlayer> özelliğine <xref:System.Windows.Media.VideoDrawing.Player%2A> <xref:System.Windows.Media.VideoDrawing>atamak.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline4](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline4)]  
   
- Aşağıdaki örnek, bir videoyu sürekli olarak oynatmak için bir <xref:System.Windows.Media.MediaPlayer> ve bir <xref:System.Windows.Media.VideoDrawing> <xref:System.Windows.Media.MediaTimeline> kullanır.  
+ Aşağıdaki örnekte, <xref:System.Windows.Media.MediaTimeline> bir <xref:System.Windows.Media.MediaPlayer> videoyu <xref:System.Windows.Media.VideoDrawing> tekrar tekrar oynatmak için a ve a ile birlikte kullanır.  
   
  [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline)]  
   
- <xref:System.Windows.Media.MediaTimeline>kullandığınızda, <xref:System.Windows.Media.MediaPlayer>etkileşimli yöntemleri yerine medya kayıttan yürütmeyi denetlemek için <xref:System.Windows.Media.MediaClock> <xref:System.Windows.Media.Animation.Clock.Controller%2A> özelliğinden döndürülen etkileşimli <xref:System.Windows.Media.Animation.ClockController> kullanacağınızı unutmayın.  
+ Bir <xref:System.Windows.Media.MediaTimeline>, 'ı kullandığınızda, etkileşimli yöntemler <xref:System.Windows.Media.Animation.Clock.Controller%2A> yerine <xref:System.Windows.Media.MediaClock> medya oynatmayı denetlemek için gelen <xref:System.Windows.Media.MediaPlayer>etkileşimli <xref:System.Windows.Media.Animation.ClockController> döndürülen leri kullandığınızı unutmayın.  
   
-<a name="drawtext"></a>   
-## <a name="draw-text"></a>Metin çiz  
- Metin çizmek için bir <xref:System.Windows.Media.GlyphRunDrawing> ve <xref:System.Windows.Media.GlyphRun>kullanırsınız. Aşağıdaki örnek, "Merhaba Dünya" metnini çizmek için bir <xref:System.Windows.Media.GlyphRunDrawing> kullanır.  
+<a name="drawtext"></a>
+## <a name="draw-text"></a>Metin Çiz  
+ Metin çizmek için, <xref:System.Windows.Media.GlyphRunDrawing> bir <xref:System.Windows.Media.GlyphRun>ve bir . Aşağıdaki örnekte <xref:System.Windows.Media.GlyphRunDrawing> "Hello World" metnini çizmek için a kullanır.  
   
  [!code-csharp[DrawingMiscSnippets_snip#GlyphRunDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/GlyphRunDrawingExample.cs#glyphrundrawingexampleinline)]
  [!code-xaml[DrawingMiscSnippets_snip#GlyphRunDrawingExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/GlyphRunExample.xaml#glyphrundrawingexampleinline)]  
   
- <xref:System.Windows.Media.GlyphRun>, sabit biçimli belge sunumu ve yazdırma senaryolarında kullanılması amaçlanan alt düzey bir nesnedir. Ekrana metin çizmenin daha basit bir yolu <xref:System.Windows.Controls.Label> veya <xref:System.Windows.Controls.TextBlock>kullanmaktır. <xref:System.Windows.Media.GlyphRun>hakkında daha fazla bilgi için bkz. [GlyphRun nesne ve Glifler öğesine giriş](../advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md) genel bakış.  
+ A, <xref:System.Windows.Media.GlyphRun> sabit biçimli belge sunusu ve yazdırma senaryolarıyla kullanılmak üzere tasarlanmış düşük düzeyli bir nesnedir. Ekrana metin çizmenin daha basit bir <xref:System.Windows.Controls.Label> yolu <xref:System.Windows.Controls.TextBlock>bir veya bir . Hakkında <xref:System.Windows.Media.GlyphRun>daha fazla bilgi için [GlyphRun Nesnesine Giriş ve Glyphs Elementi](../advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md) genel bakışına bakın.  
   
-<a name="compositedrawingssection"></a>   
-## <a name="composite-drawings"></a>Bileşik çizimler  
- <xref:System.Windows.Media.DrawingGroup> birden çok çizimi tek bir bileşik çizimde birleştirmenizi sağlar. Bir <xref:System.Windows.Media.DrawingGroup>kullanarak şekilleri, resimleri ve metni tek bir <xref:System.Windows.Media.Drawing> nesnesi içinde birleştirebilirsiniz.  
+<a name="compositedrawingssection"></a>
+## <a name="composite-drawings"></a>Kompozit Çizimler  
+ A, <xref:System.Windows.Media.DrawingGroup> birden çok çizimi tek bir bileşik çizimde birleştirmenizi sağlar. Bir <xref:System.Windows.Media.DrawingGroup>, kullanarak şekilleri, görüntüleri ve metni tek <xref:System.Windows.Media.Drawing> bir nesnede birleştirebilirsiniz.  
   
- Aşağıdaki örnek, iki <xref:System.Windows.Media.GeometryDrawing> nesnesini ve bir <xref:System.Windows.Media.ImageDrawing> nesnesini birleştirmek için bir <xref:System.Windows.Media.DrawingGroup> kullanır. Bu örnek aşağıdaki çıktıyı üretir.  
+ Aşağıdaki örnekte, <xref:System.Windows.Media.DrawingGroup> iki <xref:System.Windows.Media.GeometryDrawing> nesne ve <xref:System.Windows.Media.ImageDrawing> bir nesneyi birleştirmek için a kullanır. Bu örnek, aşağıdaki çıktıyı üretir.  
   
- ![Birden çok çizimle bir DrawingGroup](./media/graphicsmm-simple.jpg "graphicsmm_simple")  
-Bileşik çizim  
+ ![Birden fazla çizimi olan bir DrawingGroup](./media/graphicsmm-simple.jpg "graphicsmm_simple")  
+Kompozit çizim  
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupExample.cs#graphicsmmsimpledrawinggroupexample)]
  [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupExample.xaml#graphicsmmsimpledrawinggroupexample)]  
   
- <xref:System.Windows.Media.DrawingGroup> Ayrıca, içeriğe opaklık maskeleri, dönüşümler, bit eşlem efektleri ve diğer işlemler uygulamanıza olanak sağlar. <xref:System.Windows.Media.DrawingGroup> işlemler şu sırada uygulanır: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>ve <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
+ A <xref:System.Windows.Media.DrawingGroup> ayrıca, opaklık maskeleri, dönüşümler, bitmap efektleri ve diğer işlemleri içeriğine uygulamanızı sağlar. <xref:System.Windows.Media.DrawingGroup>işlemler <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>aşağıdaki sırayla uygulanır: <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A> <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.Transform%2A>, ve sonra .  
   
- Aşağıdaki çizimde <xref:System.Windows.Media.DrawingGroup> işlemlerinin uygulanma sırası gösterilmektedir.  
+ Aşağıdaki <xref:System.Windows.Media.DrawingGroup> resimde, işlemlerin uygulandığı sıra gösterilmektedir.  
   
  ![DrawingGroup işlem sırası](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
 DrawingGroup işlemleri sırası  
   
- Aşağıdaki tabloda <xref:System.Windows.Media.DrawingGroup> nesnesinin içeriğini yönetmek için kullanabileceğiniz özellikler açıklanmaktadır.  
+ Aşağıdaki tabloda, bir <xref:System.Windows.Media.DrawingGroup> nesnenin içeriğini işlemek için kullanabileceğiniz özellikler açıklanmaktadır.  
   
-|Özellik|Açıklama|Göstermektedir|  
+|Özellik|Açıklama|Illüstrasyon|  
 |--------------|-----------------|------------------|  
-|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|<xref:System.Windows.Media.DrawingGroup> içeriğinin seçili bölümlerinin saydamlığını değiştirir. Bir örnek için bkz. [nasıl yapılır: çizimin saydamlığını denetleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms748242(v=vs.90)).|![Opaklık maskesi olan bir DrawingGroup](./media/graphicsmm-opmask.png "graphicsmm_opmask")|  
-|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|<xref:System.Windows.Media.DrawingGroup> içeriğinin saydamlığını tek tek değiştirir. <xref:System.Windows.Media.Drawing> saydam veya kısmen saydam hale getirmek için bu özelliği kullanın. Bir örnek için bkz. [nasıl yapılır: bir çizime opaklık maskesi uygulama](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms753195(v=vs.90)).|![Farklı opaklık ayarlarına sahip DrawingGroups](./media/graphicsmm-opacity.png "graphicsmm_opacity")|  
-|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|<xref:System.Windows.Media.DrawingGroup> içeriğine <xref:System.Windows.Media.Effects.BitmapEffect> uygular. Bir örnek için bkz. [nasıl yapılır: bir çizime BitmapEffect uygulama](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752341(v=vs.90)).|![BlurBitmapEffect ile DrawingGroup](./media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
-|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|<xref:System.Windows.Media.DrawingGroup> içeriğini <xref:System.Windows.Media.Geometry>kullanarak betimleyen bir bölgeye kırpar. Bir örnek için bkz. [nasıl yapılır: çizimi kırpma](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743068(v=vs.90)) .|![Tanımlı bir klip bölgesi olan DrawingGroup](./media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")|  
-|<xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>|Cihaz bağımsız piksellerini belirtilen yönergeleriyle cihaz pikselleriyle yaslar. Bu özellik, ayrıntılı grafiklerin düşük DPı ekranlarda keskin şekilde işlemesini sağlamak için yararlıdır. Bir örnek için bkz. [çizime bir kılavuz çizgisi kümesi uygulama](how-to-apply-a-guidelineset-to-a-drawing.md).|![Kılavuz çizgisi kümesi olmayan bir DrawingGroup](./media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")|  
-|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|<xref:System.Windows.Media.DrawingGroup> içeriğini dönüştürür. Bir örnek için bkz. [nasıl yapılır: çizime dönüşüm uygulama](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms742304(v=vs.90)).|![Döndürülmüş bir DrawingGroup](./media/graphicsmm-rotate.png "graphicsmm_rotate")|  
+|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|İçeriğin seçili bölümlerinin <xref:System.Windows.Media.DrawingGroup> donukluğunu değiştirir. Örneğin, [bkz.](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms748242(v=vs.90))|![Opaklık maskesi olan drawinggroup](./media/graphicsmm-opmask.png "graphicsmm_opmask")|  
+|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|Düzgün içeriğini donukluk <xref:System.Windows.Media.DrawingGroup> değiştirir. <xref:System.Windows.Media.Drawing> Saydam veya kısmen saydam yapmak için bu özelliği kullanın. Örneğin, [bkz.](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms753195(v=vs.90))|![Farklı opaklık ayarlarına sahip Çizim Grupları](./media/graphicsmm-opacity.png "graphicsmm_opacity")|  
+|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|İçeriği için geçerlidir. <xref:System.Windows.Media.Effects.BitmapEffect> <xref:System.Windows.Media.DrawingGroup> Örneğin, [bkz.](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752341(v=vs.90))|![BlurBitmapEffect ile DrawingGroup](./media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
+|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|<xref:System.Windows.Media.DrawingGroup> İçeriği bir <xref:System.Windows.Media.Geometry>' kullanarak tanımladığınız bir bölgeye klipsler. Örneğin, [bkz.](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743068(v=vs.90))|![Tanımlı bir klip bölgesine sahip Çizim Grubu](./media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")|  
+|<xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>|Aygıtbağımsız piksellerini belirtilen yönergeler boyunca aygıt piksellerine yakalar. Bu özellik, ince ayrıntılı grafiklerin düşük DPI ekranlarda keskin bir şekilde işlenmesini sağlamak için yararlıdır. Örneğin, [bkz.](how-to-apply-a-guidelineset-to-a-drawing.md)|![Kılavuz Seti olan ve olmayan bir Çizim Grubu](./media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")|  
+|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|<xref:System.Windows.Media.DrawingGroup> İçeriği dönüştürür. Örneğin, [bkz.](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms742304(v=vs.90))|![Döndürülmüş Çizim Grubu](./media/graphicsmm-rotate.png "graphicsmm_rotate")|  
   
-<a name="usingimagedrawing"></a>   
-## <a name="display-a-drawing-as-an-image"></a>Çizimi resim olarak görüntüleme  
- Bir <xref:System.Windows.Controls.Image> denetimiyle <xref:System.Windows.Media.Drawing> göstermek için, <xref:System.Windows.Controls.Image> denetiminin <xref:System.Windows.Controls.Image.Source%2A> olarak bir <xref:System.Windows.Media.DrawingImage> kullanın ve <xref:System.Windows.Media.DrawingImage> nesnesinin <xref:System.Windows.Media.DrawingImage.Drawing%2A?displayProperty=nameWithType> özelliğini, göstermek istediğiniz çizime ayarlayın.  
+<a name="usingimagedrawing"></a>
+## <a name="display-a-drawing-as-an-image"></a>Çizimi Görüntü Olarak Görüntüleme  
+ Bir <xref:System.Windows.Media.Drawing> <xref:System.Windows.Controls.Image> denetimle bir ekran <xref:System.Windows.Media.DrawingImage> için, <xref:System.Windows.Controls.Image> a <xref:System.Windows.Controls.Image.Source%2A> denetimininki olarak kullanın ve nesnenin <xref:System.Windows.Media.DrawingImage> <xref:System.Windows.Media.DrawingImage.Drawing%2A?displayProperty=nameWithType> özelliğini görüntülemek istediğiniz çizime ayarlayın.  
   
- Aşağıdaki örnek, bir <xref:System.Windows.Media.GeometryDrawing>göstermek için bir <xref:System.Windows.Media.DrawingImage> ve <xref:System.Windows.Controls.Image> denetimini kullanır. Bu örnek aşağıdaki çıktıyı üretir.  
+ Aşağıdaki örnekte <xref:System.Windows.Media.DrawingImage> bir <xref:System.Windows.Controls.Image> ve bir <xref:System.Windows.Media.GeometryDrawing>denetim görüntülemek için bir denetim kullanır. Bu örnek, aşağıdaki çıktıyı üretir.  
   
- ![İki elips için GeometryDrawing](./media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")  
-Bir DrawingImage desteklenir  
+ ![İki elipsin Geometri Çizimi](./media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")  
+Bir Çizim Görüntüsü  
   
  [!code-csharp[DrawingMiscSnippets_snip#DrawingImageExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingImageExample.cs#drawingimageexamplewholepage)]
  [!code-xaml[DrawingMiscSnippets_snip#DrawingImageExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingImageExample.xaml#drawingimageexamplewholepage)]  
   
-<a name="renderingwithdrawingbrushsection"></a>   
-## <a name="paint-an-object-with-a-drawing"></a>Çizim ile nesne boyama  
- <xref:System.Windows.Media.DrawingBrush> çizim nesnesi olan bir alanı boyayan bir fırça türüdür. Çizim ile herhangi bir grafik nesnesini boyamak için kullanabilirsiniz. Bir <xref:System.Windows.Media.DrawingBrush> <xref:System.Windows.Media.Drawing> özelliği <xref:System.Windows.Media.DrawingBrush.Drawing%2A>açıklar. Bir <xref:System.Windows.Media.Drawing> <xref:System.Windows.Media.DrawingBrush>işlemek için fırçanın <xref:System.Windows.Media.Drawing> özelliğini kullanarak fırçaya ekleyin ve bir denetim veya panel gibi bir grafik nesnesini boyamak için fırçayı kullanın.  
+<a name="renderingwithdrawingbrushsection"></a>
+## <a name="paint-an-object-with-a-drawing"></a>Çizimle Nesneyi Boyama  
+ A, <xref:System.Windows.Media.DrawingBrush> bir alanı çizim nesnesiyle boyayen bir fırça türüdür. Bir çizim ile hemen hemen herhangi bir grafik nesne boyamak için kullanabilirsiniz. Bir <xref:System.Windows.Media.Drawing> <xref:System.Windows.Media.DrawingBrush> özelliği açıklar <xref:System.Windows.Media.DrawingBrush.Drawing%2A>onun . Bir <xref:System.Windows.Media.Drawing> <xref:System.Windows.Media.DrawingBrush>ile işlemek için, fırçanın <xref:System.Windows.Media.Drawing> özelliğini kullanarak fırçaya ekleyin ve fırçayı denetim veya panel gibi bir grafik nesnesini boyamak için kullanın.  
   
- Aşağıdaki örneklerde, bir <xref:System.Windows.Shapes.Rectangle> <xref:System.Windows.Media.GeometryDrawing>oluşturulan bir desenli <xref:System.Windows.Shapes.Shape.Fill%2A> boyamak için bir <xref:System.Windows.Media.DrawingBrush> kullanılmaktadır. Bu örnek aşağıdaki çıktıyı üretir.  
+ Aşağıdaki örnekler de <xref:System.Windows.Media.DrawingBrush> bir <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Rectangle> <xref:System.Windows.Media.GeometryDrawing>.'den oluşturulan bir desenle a'yı boyamak için kullanır. Bu örnek, aşağıdaki çıktıyı üretir.  
   
- ![Döşeli bir DrawingBrush](./media/graphicsmm-drawingbrush-geometrydrawing.png "graphicsmm_drawingbrush_geometrydrawing")  
-DrawingBrush ile kullanılan GeometryDrawing  
+ ![Karo Çizim Fırçası](./media/graphicsmm-drawingbrush-geometrydrawing.png "graphicsmm_drawingbrush_geometrydrawing")  
+DrawingBrush ile kullanılan Bir GeometriÇizimi  
   
  [!code-csharp[DrawingMiscSnippets_snip#DrawingBrushExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingBrushExample.cs#drawingbrushexamplewholepage)]
  [!code-xaml[DrawingMiscSnippets_snip#DrawingBrushExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingBrushExample.xaml#drawingbrushexamplewholepage)]  
   
- <xref:System.Windows.Media.DrawingBrush> sınıfı, içeriğini uzatma ve döşeme için çeşitli seçenekler sağlar. <xref:System.Windows.Media.DrawingBrush>hakkında daha fazla bilgi için bkz. [görüntü, çizim ve görsellere](painting-with-images-drawings-and-visuals.md) genel bakış.  
+ Sınıf, <xref:System.Windows.Media.DrawingBrush> içeriğini germe ve döşeme için çeşitli seçenekler sunar. Hakkında <xref:System.Windows.Media.DrawingBrush>daha fazla bilgi için [Resimler, Çizimler ve Görsellerle Resim'e](painting-with-images-drawings-and-visuals.md) genel bakış bakın.  
   
-<a name="renderingwithvisualsection"></a>   
-## <a name="render-a-drawing-with-a-visual"></a>Görsel ile çizim işleme  
- <xref:System.Windows.Media.DrawingVisual>, bir çizimi işlemek için tasarlanan bir görsel nesne türüdür. Doğrudan görsel katmanda çalışmak, yüksek düzeyde özelleştirilmiş bir grafik ortamı oluşturmak isteyen geliştiriciler için bir seçenektir ve bu genel bakışta açıklanmamaktadır. Daha fazla bilgi için bkz. [DrawingVisual Objects 'ı kullanma](using-drawingvisual-objects.md) genel bakış.  
+<a name="renderingwithvisualsection"></a>
+## <a name="render-a-drawing-with-a-visual"></a>Görsel Çizim Oluşturma  
+ A, <xref:System.Windows.Media.DrawingVisual> çizimi işlemek için tasarlanmış görsel nesne türüdür. Doğrudan görsel katmanda çalışmak, son derece özelleştirilmiş bir grafik ortamı oluşturmak isteyen geliştiriciler için bir seçenektir ve bu genel bakışta açıklanmaz. Daha fazla bilgi için [Bkz. ÇizimGörsel Nesneleri Kullanma](using-drawingvisual-objects.md) genel bakışı.  
   
-<a name="drawingcontextobjects"></a>   
-## <a name="drawingcontext-objects"></a>DrawingContext nesneleri  
- <xref:System.Windows.Media.DrawingContext> sınıfı, bir <xref:System.Windows.Media.Visual> veya <xref:System.Windows.Media.Drawing> görsel içerikle doldurmanıza olanak sağlar. Birçok alt düzey grafik nesnesi, grafik içeriğini çok verimli bir şekilde açıkladığı için bir <xref:System.Windows.Media.DrawingContext> kullanır.  
+<a name="drawingcontextobjects"></a>
+## <a name="drawingcontext-objects"></a>ÇizimBağlam Nesneleri  
+ Sınıf, <xref:System.Windows.Media.DrawingContext> görsel içerikli bir <xref:System.Windows.Media.Visual> veya <xref:System.Windows.Media.Drawing> bir doldurmanızı sağlar. Grafik içeriği çok verimli bir <xref:System.Windows.Media.DrawingContext> şekilde açıkladığı için bu tür alt düzey grafik nesnelerinin çoğu a kullanır.  
   
- <xref:System.Windows.Media.DrawingContext> çizim yöntemleri <xref:System.Drawing.Graphics?displayProperty=nameWithType> türünün Çizim yöntemlerine benzer görünse de, aslında çok farklıdır. <xref:System.Windows.Media.DrawingContext>, bir tutulan mod grafik sistemiyle birlikte kullanılır, ancak <xref:System.Drawing.Graphics?displayProperty=nameWithType> türü bir anlık mod grafik sistemiyle kullanılır. <xref:System.Windows.Media.DrawingContext> nesnenin çizim komutlarını kullandığınızda, aslında bir dizi işleme yönergesi depoluyorsanız (tam depolama mekanizması, daha sonra grafik sistemi tarafından kullanılacak olan <xref:System.Windows.Media.DrawingContext>nesne türüne bağlıdır). ekranı gerçek zamanlı olarak çizmeyin. Windows Presentation Foundation (WPF) grafik sisteminin nasıl çalıştığı hakkında daha fazla bilgi için [WPF Grafik Işlemeye genel bakış ' a](wpf-graphics-rendering-overview.md)bakın.  
+ Çizim <xref:System.Windows.Media.DrawingContext> yöntemleri <xref:System.Drawing.Graphics?displayProperty=nameWithType> türünün çizim yöntemlerine benzer görünse de, aslında çok farklıdırlar. <xref:System.Windows.Media.DrawingContext><xref:System.Drawing.Graphics?displayProperty=nameWithType> türün hemen mod grafik sistemi ile kullanılırken, korunmuş mod grafik sistemi ile kullanılır. Bir <xref:System.Windows.Media.DrawingContext> nesnenin çizim komutlarını kullandığınızda, aslında bir dizi işleme yönergelerini depoluyorsunuz (tam depolama mekanizması daha <xref:System.Windows.Media.DrawingContext>sonra grafik sistemi tarafından kullanılacak nesnenin türüne bağlı olsa da; gerçek zamanlı olarak ekrana çizim değildir. Windows Presentation Foundation (WPF) grafik sisteminin nasıl çalıştığı hakkında daha fazla bilgi için [WPF Grafik Oluşturma Genel Bakışı'na](wpf-graphics-rendering-overview.md)bakın.  
   
- Hiçbir <xref:System.Windows.Media.DrawingContext>doğrudan bir örnekleyemezsiniz; Ancak, <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType> ve <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>gibi belirli yöntemlerden bir çizim bağlamı elde edebilirsiniz.  
+ Hiçbir zaman doğrudan bir <xref:System.Windows.Media.DrawingContext>ani lik atamayın; ancak, belirli yöntemlerden bir çizim bağlamı <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType> edinebilirsiniz, gibi ve. <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>  
   
-<a name="enumeratevisualcontents"></a>   
-## <a name="enumerate-the-contents-of-a-visual"></a>Görselin Içeriğini listeleme  
- <xref:System.Windows.Media.Drawing> nesneler, diğer kullanımlarına ek olarak, bir <xref:System.Windows.Media.Visual>içeriğini numaralandırmak için de bir nesne modeli sağlar.  
+<a name="enumeratevisualcontents"></a>
+## <a name="enumerate-the-contents-of-a-visual"></a>Görsel bir içeriğin sayısal  
+ Diğer kullanımlarına ek <xref:System.Windows.Media.Drawing> olarak, nesneler bir <xref:System.Windows.Media.Visual>nesnenin içeriğini sıralamak için bir nesne modeli de sağlar.  
   
- Aşağıdaki örnek, bir <xref:System.Windows.Media.Visual> <xref:System.Windows.Media.DrawingGroup> değerini almak ve numaralandırmak için <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> yöntemini kullanır.  
+ Aşağıdaki örnek, <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> a <xref:System.Windows.Media.DrawingGroup> <xref:System.Windows.Media.Visual> değerini almak ve sayısallamak için yöntemi kullanır.  
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
@@ -238,7 +238,7 @@ DrawingBrush ile kullanılan GeometryDrawing
 - [2B Grafikleri ve Görüntüleme](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Görüntüler, Çizimler ve Görsellerle Boyama](painting-with-images-drawings-and-visuals.md)
 - [Geometriye Genel Bakış](geometry-overview.md)
-- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](shapes-and-basic-drawing-in-wpf-overview.md)
+- [WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler](shapes-and-basic-drawing-in-wpf-overview.md)
 - [WPF Grafik İşlemeye Genel Bakış](wpf-graphics-rendering-overview.md)
 - [Freezable Nesnelerine Genel Bakış](../advanced/freezable-objects-overview.md)
-- [Nasıl Yapılır Konuları](drawings-how-to-topics.md)
+- [Nasıl Dır Konular](drawings-how-to-topics.md)

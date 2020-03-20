@@ -5,42 +5,42 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 985951180a5c8ee09460b7fe4bf3213b986c3bb6
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: b68787980a8b64d9ee90ed8d834fab2c5c69006b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980073"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149342"
 ---
-# <a name="performance-counters-in-adonet"></a>ADO.NET 'de performans sayaçları
-ADO.NET 2,0, hem <xref:System.Data.SqlClient> hem de <xref:System.Data.OracleClient>için destek içeren performans sayaçları için genişletilmiş destek getirmiştir. Önceki ADO.NET sürümlerinde bulunan <xref:System.Data.SqlClient> performans sayaçları kullanımdan kaldırılmıştır ve bu konuda açıklanan yeni performans sayaçlarıyla değiştirilmiştir. Uygulamanızın durumunu ve kullandığı bağlantı kaynaklarını izlemek için ADO.NET performans sayaçlarını kullanabilirsiniz. Performans sayaçları, Windows performans Izleyicisi kullanılarak izlenebilir veya <xref:System.Diagnostics> ad alanındaki <xref:System.Diagnostics.PerformanceCounter> sınıfı kullanılarak programlı bir şekilde erişilebilir.  
+# <a name="performance-counters-in-adonet"></a>ADO.NET'da Performans Sayaçları
+ADO.NET 2.0 hem de <xref:System.Data.SqlClient> <xref:System.Data.OracleClient>destek içeren performans sayaçları için genişletilmiş destek tanıttı. ADO.NET <xref:System.Data.SqlClient> önceki sürümlerinde bulunan performans sayaçları küçümsüldü ve bu konuda tartışılan yeni performans sayaçları ile değiştirildi. Uygulamanızın durumunu ve kullandığı bağlantı kaynaklarını izlemek için ADO.NET performans sayaçlarını kullanabilirsiniz. Performans sayaçları Windows Performance Monitor kullanılarak izlenebilir veya <xref:System.Diagnostics.PerformanceCounter> <xref:System.Diagnostics> ad alanındaki sınıf kullanılarak programlı olarak erişilebilir.  
   
-## <a name="available-performance-counters"></a>Kullanılabilir performans sayaçları  
- Şu anda <xref:System.Data.SqlClient> ve <xref:System.Data.OracleClient> için aşağıdaki tabloda açıklandığı gibi 14 farklı performans sayacı mevcuttur. Bireysel sayaçların adlarının Microsoft .NET çerçevesinin bölgesel sürümlerinde yerelleştirilmemiş olduğunu unutmayın.  
+## <a name="available-performance-counters"></a>Mevcut Performans Sayaçları  
+ Şu anda 14 farklı performans <xref:System.Data.SqlClient> <xref:System.Data.OracleClient> sayacı için kullanılabilir ve aşağıdaki tabloda açıklandığı gibi vardır. Tek tek sayaçların adlarının Microsoft .NET Framework'ün bölgesel sürümlerinde yerelleştirilmediğini unutmayın.  
   
 |Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
-|`HardConnectsPerSecond`|Bir veritabanı sunucusuna yapılan saniye başına bağlantı sayısı.|  
-|`HardDisconnectsPerSecond`|Bir veritabanı sunucusuna yapılan saniye başına bağlantı kesilen bağlantı sayısı.|  
-|`NumberOfActiveConnectionPoolGroups`|Etkin olan benzersiz bağlantı havuzu grupları sayısı. Bu sayaç, AppDomain 'de bulunan benzersiz bağlantı dizeleri sayısına göre denetlenir.|  
-|`NumberOfActiveConnectionPools`|Bağlantı havuzlarının toplam sayısı.|  
-|`NumberOfActiveConnections`|Şu anda kullanımda olan etkin bağlantı sayısı. **Note:**  Bu performans sayacı varsayılan olarak etkinleştirilmemiştir. Bu performans sayacını etkinleştirmek için bkz. [Varsayılan olarak devre dışı sayaçları etkinleştirme](#ActivatingOffByDefault).|  
-|`NumberOfFreeConnections`|Bağlantı havuzlarında kullanılabilecek bağlantı sayısı. **Note:**  Bu performans sayacı varsayılan olarak etkinleştirilmemiştir. Bu performans sayacını etkinleştirmek için bkz. [Varsayılan olarak devre dışı sayaçları etkinleştirme](#ActivatingOffByDefault).|  
-|`NumberOfInactiveConnectionPoolGroups`|Ayıklama için işaretlenen benzersiz bağlantı havuzu grupları sayısı. Bu sayaç, AppDomain 'de bulunan benzersiz bağlantı dizeleri sayısına göre denetlenir.|  
-|`NumberOfInactiveConnectionPools`|En son etkinliği olmayan ve aktiften çıkarılmayı bekleyen etkin olmayan bağlantı havuzu sayısı.|  
-|`NumberOfNonPooledConnections`|Havuza alınmamış etkin bağlantı sayısı.|  
-|`NumberOfPooledConnections`|Bağlantı havuzu altyapısı tarafından yönetilmekte olan etkin bağlantı sayısı.|  
-|`NumberOfReclaimedConnections`|`Close` veya `Dispose` uygulama tarafından çağrılmayan çöp toplama aracılığıyla geri kazanılan bağlantı sayısı. Bağlantı kesilmesi performansını açıkça kapatma veya atma.|  
+|`HardConnectsPerSecond`|Bir veritabanı sunucusuna yapılan saniyede bağlantı sayısı.|  
+|`HardDisconnectsPerSecond`|Bir veritabanı sunucusuna yapılan saniyede bağlantı kesme sayısı.|  
+|`NumberOfActiveConnectionPoolGroups`|Etkin olan benzersiz bağlantı havuzu gruplarının sayısı. Bu sayaç, AppDomain'de bulunan benzersiz bağlantı dizelerinin sayısı tarafından denetlenir.|  
+|`NumberOfActiveConnectionPools`|Toplam bağlantı havuzu sayısı.|  
+|`NumberOfActiveConnections`|Şu anda kullanılmakta olan etkin bağlantı sayısı. **Not:**  Bu performans sayacı varsayılan olarak etkinleştirilir. Bu performans sayacını etkinleştirmek için, [Varsayılan Olmayan Sayaçları Etkinleştirme'ye](#ActivatingOffByDefault)bakın.|  
+|`NumberOfFreeConnections`|Bağlantı havuzlarında kullanılabilecek bağlantı sayısı. **Not:**  Bu performans sayacı varsayılan olarak etkinleştirilir. Bu performans sayacını etkinleştirmek için, [Varsayılan Olmayan Sayaçları Etkinleştirme'ye](#ActivatingOffByDefault)bakın.|  
+|`NumberOfInactiveConnectionPoolGroups`|Budama için işaretlenmiş benzersiz bağlantı havuzu gruplarının sayısı. Bu sayaç, AppDomain'de bulunan benzersiz bağlantı dizelerinin sayısı tarafından denetlenir.|  
+|`NumberOfInactiveConnectionPools`|Son herhangi bir etkinlik olmayan ve imha edilmeyi bekleyen etkin olmayan bağlantı havuzlarının sayısı.|  
+|`NumberOfNonPooledConnections`|Havuza alınmayan etkin bağlantı sayısı.|  
+|`NumberOfPooledConnections`|Bağlantı havuzu altyapısı tarafından yönetilen etkin bağlantı sayısı.|  
+|`NumberOfReclaimedConnections`|Uygulama tarafından çağrılmayan `Close` veya `Dispose` çağrılmayan çöp toplama yoluyla geri alınan bağlantı sayısı. Bağlantıları açıkça kapatmamak veya atmamaperformansa zarar verir.|  
 |`NumberOfStasisConnections`|Şu anda bir eylemin tamamlanmasını bekleyen ve bu nedenle uygulamanız tarafından kullanılamayan bağlantı sayısı.|  
-|`SoftConnectsPerSecond`|Bağlantı havuzundan çekilen etkin bağlantı sayısı. **Note:**  Bu performans sayacı varsayılan olarak etkinleştirilmemiştir. Bu performans sayacını etkinleştirmek için bkz. [Varsayılan olarak devre dışı sayaçları etkinleştirme](#ActivatingOffByDefault).|  
-|`SoftDisconnectsPerSecond`|Bağlantı havuzuna döndürülen etkin bağlantı sayısı. **Note:**  Bu performans sayacı varsayılan olarak etkinleştirilmemiştir. Bu performans sayacını etkinleştirmek için bkz. [Varsayılan olarak devre dışı sayaçları etkinleştirme](#ActivatingOffByDefault).|  
+|`SoftConnectsPerSecond`|Bağlantı havuzundan çekilen etkin bağlantı sayısı. **Not:**  Bu performans sayacı varsayılan olarak etkinleştirilir. Bu performans sayacını etkinleştirmek için, [Varsayılan Olmayan Sayaçları Etkinleştirme'ye](#ActivatingOffByDefault)bakın.|  
+|`SoftDisconnectsPerSecond`|Bağlantı havuzuna döndürülen etkin bağlantı sayısı. **Not:**  Bu performans sayacı varsayılan olarak etkinleştirilir. Bu performans sayacını etkinleştirmek için, [Varsayılan Olmayan Sayaçları Etkinleştirme'ye](#ActivatingOffByDefault)bakın.|  
   
-### <a name="connection-pool-groups-and-connection-pools"></a>Bağlantı havuzu grupları ve bağlantı havuzları  
- Windows kimlik doğrulaması (tümleşik güvenlik) kullanırken hem `NumberOfActiveConnectionPoolGroups` hem de `NumberOfActiveConnectionPools` performans sayaçlarını izlemeniz gerekir. Bunun nedeni, bağlantı havuzu gruplarının benzersiz bağlantı dizeleriyle eşlenme nedenidir. Tümleşik güvenlik kullanıldığında, bağlantı havuzları bağlantı dizelerine eşlenir ve ayrıca ayrı Windows kimlikleri için ayrı havuzlar oluşturur. Örneğin, Fred ve Julie, her ikisi de aynı AppDomain içinde `"Data Source=MySqlServer;Integrated Security=true"`, bağlantı dizesi için bir bağlantı havuzu grubu oluşturulur ve biri Fred ve Julie için olmak üzere iki ek havuz oluşturulur. John ve Martha aynı SQL Server oturum açma `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`sahip bir bağlantı dizesi kullanıyorsa, **Lowprıkullanıcı** kimliği için yalnızca tek bir havuz oluşturulur.  
+### <a name="connection-pool-groups-and-connection-pools"></a>Bağlantı Havuzu Grupları ve Bağlantı Havuzları  
+ Windows Kimlik Doğrulama (tümleşik güvenlik) `NumberOfActiveConnectionPoolGroups` kullanırken, hem performans sayaçlarını hem `NumberOfActiveConnectionPools` de performans sayaçlarını izlemeniz gerekir. Bunun nedeni, bağlantı havuzu gruplarının benzersiz bağlantı dizeleri ile eşleşiş olmasıdır. Tümleşik güvenlik kullanıldığında, bağlantı havuzları bağlantı dizeleri eşlenir ve ayrıca tek tek Windows kimlikleri için ayrı havuzlar oluşturur. Örneğin, Her biri aynı AppDomain içinde olan Fred ve `"Data Source=MySqlServer;Integrated Security=true"`Julie her ikisi de bağlantı dizesini kullanırsa, bağlantı dizesi için bir bağlantı havuzu grubu oluşturulur ve biri Fred ve diğeri Julie için olmak üzere iki ek havuz oluşturulur. John ve Martha aynı SQL Server giriş ile `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`bir bağlantı dizesi kullanırsanız, o zaman sadece tek bir havuz **lowPrivUser** kimliği için oluşturulur.  
   
-<a name="ActivatingOffByDefault"></a>   
-### <a name="activating-off-by-default-counters"></a>Varsayılan olarak devre dışı sayaçları etkinleştirme  
- `NumberOfFreeConnections`, `NumberOfActiveConnections`, `SoftDisconnectsPerSecond`ve `SoftConnectsPerSecond` performans sayaçları varsayılan olarak kapalıdır. Aşağıdaki bilgileri etkinleştirmek için uygulamanın yapılandırma dosyasına ekleyin:  
+<a name="ActivatingOffByDefault"></a>
+### <a name="activating-off-by-default-counters"></a>Varsayılan Olmayan Sayaçları Etkinleştirme  
+ Performans sayaçları `NumberOfFreeConnections` `NumberOfActiveConnections`, `SoftDisconnectsPerSecond`, `SoftConnectsPerSecond` , ve varsayılan olarak kapalıdır. Bunları etkinleştirmek için uygulamanın yapılandırma dosyasına aşağıdaki bilgileri ekleyin:  
   
 ```xml  
 <system.diagnostics>  
@@ -51,11 +51,11 @@ ADO.NET 2,0, hem <xref:System.Data.SqlClient> hem de <xref:System.Data.OracleCli
 </system.diagnostics>  
 ```  
   
-## <a name="retrieving-performance-counter-values"></a>Performans sayacı değerlerini alma  
- Aşağıdaki konsol uygulaması, uygulamanızda performans sayacı değerlerinin nasıl alınacağını gösterir. Tüm ADO.NET performans sayaçlarıyla ilgili bilgilerin döndürülmesi için bağlantıların açık ve etkin olması gerekir.  
+## <a name="retrieving-performance-counter-values"></a>Performans Sayacı Değerlerini Alma  
+ Aşağıdaki konsol uygulaması, uygulamanızda performans sayacı değerlerinin nasıl alındığını gösterir. Tüm ADO.NET performans sayaçları için bilgilerin döndürülmesi için bağlantıların açık ve etkin olması gerekir.  
   
 > [!NOTE]
-> Bu örnek, SQL Server eklenen örnek **AdventureWorks** veritabanını kullanır. Örnek kodda sağlanan bağlantı dizeleri, veritabanının bir örnek adı SqlExpress olan yerel bilgisayarda yüklü ve kullanılabilir olduğunu ve bağlantı dizelerinde sağlananlarla eşleşen SQL Server oturum açma işlemleri oluşturduğunuzu varsayar. Sunucunuz yalnızca Windows kimlik doğrulamasına izin veren varsayılan güvenlik ayarları kullanılarak yapılandırılmışsa SQL Server oturum açma işlemlerini etkinleştirmeniz gerekebilir. Bağlantı dizelerini ortamınıza uyacak şekilde değiştirin.  
+> Bu örnek, SQL Server ile birlikte verilen örnek **AdventureWorks** veritabanını kullanır. Örnek kodda sağlanan bağlantı dizeleri veritabanının yüklü olduğunu ve sqlexpress örneği adı ile yerel bilgisayarda kullanılabildiğini ve bağlantı dizelerinde sağlananlarla eşleşen SQL Server girişleri oluşturduğunuzu varsayar. Sunucunuz yalnızca Windows Kimlik Doğrulamasına izin veren varsayılan güvenlik ayarları kullanılarak yapılandırılırsa, SQL Server oturumlarını etkinleştirmeniz gerekebilir. Bağlantı dizelerini ortamınıza uyacak şekilde gerektiği gibi değiştirin.  
   
 ### <a name="example"></a>Örnek  
   
@@ -74,7 +74,7 @@ Class Program
   
     Public Shared Sub Main()  
         Dim prog As Program = New Program  
-        ' Open a connection and create the performance counters.   
+        ' Open a connection and create the performance counters.
         prog.connection.ConnectionString = _  
            GetIntegratedSecurityConnectionString()  
         prog.SetUpPerformanceCounters()  
@@ -171,17 +171,17 @@ Class Program
     Private Declare Function GetCurrentProcessId Lib "kernel32.dll" () As Integer  
   
     Private Function GetInstanceName() As String  
-        'This works for Winforms apps.   
+        'This works for Winforms apps.
         Dim instanceName As String = _  
            System.Reflection.Assembly.GetEntryAssembly.GetName.Name  
   
-        ' Must replace special characters like (, ), #, /, \\   
+        ' Must replace special characters like (, ), #, /, \\
         Dim instanceName2 As String = _  
            AppDomain.CurrentDomain.FriendlyName.ToString.Replace("(", "[") _  
            .Replace(")", "]").Replace("#", "_").Replace("/", "_").Replace("\\", "_")  
   
-        'For ASP.NET applications your instanceName will be your CurrentDomain's   
-        'FriendlyName. Replace the line above that sets the instanceName with this:   
+        'For ASP.NET applications your instanceName will be your CurrentDomain's
+        'FriendlyName. Replace the line above that sets the instanceName with this:
         'instanceName = AppDomain.CurrentDomain.FriendlyName.ToString.Replace("(", "[") _  
         '    .Replace(")", "]").Replace("#", "_").Replace("/", "_").Replace("\\", "_")  
   
@@ -201,22 +201,22 @@ Class Program
     End Sub  
   
     Private Shared Function GetIntegratedSecurityConnectionString() As String  
-        ' To avoid storing the connection string in your code,   
-        ' you can retrieve it from a configuration file.   
-        Return ("Data Source=.\SqlExpress;Integrated Security=True;" &   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
+        Return ("Data Source=.\SqlExpress;Integrated Security=True;" &
           "Initial Catalog=AdventureWorks")  
     End Function  
   
     Private Shared Function GetSqlConnectionString() As String  
-        ' To avoid storing the connection string in your code,   
-        ' you can retrieve it from a configuration file.   
-        Return ("Data Source=.\SqlExpress;User Id=LowPriv;Password=Data!05;" &   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
+        Return ("Data Source=.\SqlExpress;User Id=LowPriv;Password=Data!05;" &
           "Initial Catalog=AdventureWorks")  
     End Function  
   
     Private Shared Function GetSqlConnectionStringDifferent() As String  
-        ' To avoid storing the connection string in your code,   
-        ' you can retrieve it from a configuration file.   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
         Return ("Initial Catalog=AdventureWorks;Data Source=.\SqlExpress;" & _  
           "User Id=LowPriv;Password=Data!05;")  
     End Function  
@@ -347,7 +347,7 @@ class Program
             AppDomain.CurrentDomain.FriendlyName.ToString().Replace('(', '[')  
             .Replace(')', ']').Replace('#', '_').Replace('/', '_').Replace('\\', '_');  
   
-        // For ASP.NET applications your instanceName will be your CurrentDomain's   
+        // For ASP.NET applications your instanceName will be your CurrentDomain's
         // FriendlyName. Replace the line above that sets the instanceName with this:  
         // instanceName = AppDomain.CurrentDomain.FriendlyName.ToString().Replace('(','[')  
         // .Replace(')',']').Replace('#','_').Replace('/','_').Replace('\\','_');  
@@ -398,7 +398,7 @@ class Program
 
 - [Veri Kaynağına Bağlanma](connecting-to-a-data-source.md)
 - [OLE DB, ODBC ve Oracle Bağlantı Havuzu](ole-db-odbc-and-oracle-connection-pooling.md)
-- [ASP.NET için performans sayaçları](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
+- [ASP.NET için Performans Sayaçları](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
 - [Çalışma Zamanı Profili Oluşturma](../../debug-trace-profile/runtime-profiling.md)
-- [Performans eşiklerini Izlemeye giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
+- [Performans Eşiklerinin İzlenmesine Giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
 - [ADO.NET’e Genel Bakış](ado-net-overview.md)

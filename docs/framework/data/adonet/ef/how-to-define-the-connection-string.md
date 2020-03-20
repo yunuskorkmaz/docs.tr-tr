@@ -1,28 +1,28 @@
 ---
-title: 'Nasıl yapılır: bağlantı dizesini tanımlama'
+title: 'Nasıl yapılır: Bağlantı Dizesi Tanımlama'
 ms.date: 03/30/2017
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
-ms.openlocfilehash: 9ce0b427cac17fc338877c5f85d3648d15d5ee14
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e5b675a50f883825cce97275048447b79b64cc97
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833946"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150577"
 ---
-# <a name="how-to-define-the-connection-string"></a>Nasıl yapılır: bağlantı dizesini tanımlama
+# <a name="how-to-define-the-connection-string"></a>Nasıl yapılır: Bağlantı Dizesi Tanımlama
 
-Bu konu başlığı altında, kavramsal bir modele bağlanırken kullanılan bağlantı dizesinin nasıl tanımlanacağı gösterilmektedir. Bu konu, [AdventureWorks Sales](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb387147(v=vs.100)) kavramsal modeline dayalıdır. AdventureWorks Sales modeli, Entity Framework belgelerindeki görevle ilgili konular boyunca kullanılır. Bu konu, Entity Framework yapılandırdığınız ve AdventureWorks Sales modelini tanımladığınız varsayılmaktadır. Daha fazla bilgi için bkz. [nasıl yapılır: model ve eşleme dosyalarını el Ile tanımlama](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100)). Bu konudaki yordamlar, [nasıl yapılır: el ile Entity Framework projesi yapılandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))bölümüne de eklenmiştir.
+Bu konu, kavramsal bir modele bağlanırken kullanılan bağlantı dizesinin nasıl tanımlandığını gösterir. Bu konu [AdventureWorks Satış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb387147(v=vs.100)) kavramsal modeline dayanmaktadır. AdventureWorks Satış Modeli, Entity Framework belgelerinde görevle ilgili konular boyunca kullanılır. Bu konu, Varlık Çerçevesi'ni zaten yapılandırdığınızı ve AdventureWorks Satış Modelini tanımladığınızı varsayar. Daha fazla bilgi için [bkz: Modeli el ile tanımla ve Dosyaları Eşleme.](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100)) Bu konudaki yordamlar, Nasıl [Yapılır: Varlık Çerçeve Projesi'ni el ile yapılandırın.](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
 
 > [!NOTE]
-> Visual Studio projesinde Varlık Veri Modeli Sihirbazı 'nı kullanırsanız, otomatik olarak bir. edmx dosyası oluşturur ve projeyi Entity Framework kullanacak şekilde yapılandırır. Daha fazla bilgi için bkz. [nasıl yapılır: varlık veri modeli Sihirbazı 'Nı kullanma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).
+> Visual Studio projesinde Varlık Veri Modeli Sihirbazı'nı kullanırsanız, otomatik olarak bir .edmx dosyası oluşturur ve projeyi Varlık Çerçevesi'ni kullanacak şekilde yapılandırır. Daha fazla bilgi için [bkz: Varlık Veri Modeli Sihirbazı'nı kullanın.](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))
 
-## <a name="to-define-the-entity-framework-connection-string"></a>Entity Framework bağlantı dizesini tanımlamak için
+## <a name="to-define-the-entity-framework-connection-string"></a>Varlık Çerçevesi bağlantı dizesini tanımlamak için
 
-- Projenin uygulama yapılandırma dosyasını (App. config) açın ve aşağıdaki bağlantı dizesini ekleyin:
+- Projenin uygulama yapılandırma dosyasını (app.config) açın ve aşağıdaki bağlantı dizesini ekleyin:
 
 ```xml
 <connectionStrings>
-    <add name="AdventureWorksEntities" 
+    <add name="AdventureWorksEntities"
          connectionString="metadata=.\AdventureWorks.csdl|.\AdventureWorks.ssdl|.\AdventureWorks.msl;
          provider=System.Data.SqlClient;provider connection string='Data Source=localhost;
          Initial Catalog=AdventureWorks;Integrated Security=True;Connection Timeout=60;
@@ -30,10 +30,10 @@ Bu konu başlığı altında, kavramsal bir modele bağlanırken kullanılan ba�
 </connectionStrings>
 ```
 
-Projenizde bir uygulama yapılandırma dosyası yoksa, **Proje** menüsünde **Yeni öğe Ekle** ' yi seçerek, **genel** kategorisini seçerek, **uygulama yapılandırma dosyası**' nı seçip ardından **Ekleyin**.
+Projenizde bir uygulama yapılandırma dosyası yoksa, **Proje** menüsünden **Yeni Öğe Ekle'yi** seçerek, **Genel** kategoriyi seçerek, Uygulama **Yapılandırma Dosyası'nı**seçerek ve sonra **Ekle'yi**tıklatarak bir tane ekleyebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hızlı Başlangıç](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))
-- [Nasıl yapılır: yeni bir. edmx dosyası oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))
-- [ADO.NET Varlık Veri Modeli araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [Quickstart](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))
+- [Nasıl Yapılsın: Yeni .edmx Dosyası Oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))
+- [ADO.NET Varlık Veri Modeli Araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

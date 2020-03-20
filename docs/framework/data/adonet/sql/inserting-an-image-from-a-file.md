@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: d47f5b7eaf6b5f6a3174982e6b4cf43859c031a5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 94ec554ca2dc5ed4eb6792b9b42ae6f1b856f51e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794145"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148614"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Dosyadan Görüntü Ekleme
-Veri kaynağınızdaki alanın türüne bağlı olarak, bir veritabanına ikili veya karakter verisi olarak bir ikili büyük nesne (BLOB) yazabilirsiniz. BLOB, genellikle belge ve resim içeren `text`, `ntext`, ve `image` veri türlerine başvuran genel bir terimdir.  
+Veri kaynağınızdaki alanın türüne bağlı olarak, ikili büyük bir nesneyi (BLOB) veritabanına ikili veya karakter verileri olarak yazabilirsiniz. BLOB, genellikle belge ve `text` `ntext` `image` resim içeren , ve veri türlerini ifade eden genel bir terimdir.  
   
- Veritabanınıza bir BLOB değeri yazmak için, uygun INSERT veya UPDATE ifadesini verin ve BLOB değerini bir giriş parametresi olarak geçirin (bkz. [parametreleri ve parametre veri türlerini yapılandırma](../configuring-parameters-and-parameter-data-types.md)). Blobu bir SQL Server `text` alanı gibi metin olarak depolanıyorsa, blobu dize parametresi olarak geçirebilirsiniz. BLOB, bir SQL Server `image` alanı gibi ikili biçimde depolanıyorsa, türü `byte` bir diziyi ikili parametre olarak geçirebilirsiniz.  
+ Veritabanınıza BLOB değeri yazmak için, uygun INSERT veya UPDATE deyimini verin ve BLOB değerini giriş parametresi olarak geçirin [(bkz.](../configuring-parameters-and-parameter-data-types.md) BLOB'unuzun SQL Server `text` alanı gibi metin olarak depolanırsa, BLOB'yi dize parametresi olarak geçirebilirsiniz. BLOB, SQL Server `image` alanı gibi ikili biçimde depolanırsa, ikili parametre `byte` olarak bir dizi tür geçirebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, çalışan bilgilerini Northwind veritabanındaki Çalışanlar tablosuna ekler. Çalışan fotoğrafı bir dosyadan okunmalıdır ve tablodaki fotoğraf alanına eklenir. Bu bir görüntü alanıdır.  
+ Aşağıdaki kod örneği, Northwind veritabanındaki Çalışanlar tablosuna çalışan bilgilerini ekler. Çalışanın fotoğrafı bir dosyadan okunur ve resim alanı olan tablodaki Fotoğraf alanına eklenir.  
   
 ```vb  
 Public Shared Sub AddEmployee( _  
@@ -39,7 +39,7 @@ Public Shared Sub AddEmployee( _
     "INSERT INTO Employees (LastName, FirstName, Title, " & _  
     "HireDate, ReportsTo, Photo) " & _  
     "Values(@LastName, @FirstName, @Title, " & _  
-    "@HireDate, @ReportsTo, @Photo)", connection)   
+    "@HireDate, @ReportsTo, @Photo)", connection)
   
   command.Parameters.Add("@LastName",  _  
     SqlDbType.NVarChar, 20).Value = lastName  
@@ -77,12 +77,12 @@ End Function
   
 ```csharp  
 public static void AddEmployee(  
-  string lastName,   
-  string firstName,   
-  string title,   
-  DateTime hireDate,   
-  int reportsTo,   
-  string photoFilePath,   
+  string lastName,
+  string firstName,
+  string title,
+  DateTime hireDate,
+  int reportsTo,
+  string photoFilePath,
   string connectionString)  
 {  
   byte[] photo = GetPhoto(photoFilePath);  
@@ -94,17 +94,17 @@ public static void AddEmployee(
     "INSERT INTO Employees (LastName, FirstName, " +  
     "Title, HireDate, ReportsTo, Photo) " +  
     "Values(@LastName, @FirstName, @Title, " +  
-    "@HireDate, @ReportsTo, @Photo)", connection);   
+    "@HireDate, @ReportsTo, @Photo)", connection);
   
-  command.Parameters.Add("@LastName",    
+  command.Parameters.Add("@LastName",
      SqlDbType.NVarChar, 20).Value = lastName;  
-  command.Parameters.Add("@FirstName",   
+  command.Parameters.Add("@FirstName",
       SqlDbType.NVarChar, 10).Value = firstName;  
-  command.Parameters.Add("@Title",       
+  command.Parameters.Add("@Title",
       SqlDbType.NVarChar, 30).Value = title;  
-  command.Parameters.Add("@HireDate",   
+  command.Parameters.Add("@HireDate",
        SqlDbType.DateTime).Value = hireDate;  
-  command.Parameters.Add("@ReportsTo",   
+  command.Parameters.Add("@ReportsTo",
       SqlDbType.Int).Value = reportsTo;  
   
   command.Parameters.Add("@Photo",  

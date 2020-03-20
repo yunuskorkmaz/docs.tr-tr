@@ -5,77 +5,77 @@ helpviewer_keywords:
 - ETW, CLR providers
 - CLR ETW providers
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
-ms.openlocfilehash: dbdd4ad862ae300c330dc56a82fcd65b866855b6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 33ef7491c2bffeda4ef737ed8f826cdfbfbb119d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716176"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400080"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW Sağlayıcılar
-Ortak dil çalışma zamanı (CLR) iki sağlayıcıya sahiptir: çalışma zamanı sağlayıcısı ve runaşağı sağlayıcısı.  
+Ortak dil çalışma süresi (CLR) iki sağlayıcıdan sahiptir: çalışma zamanı sağlayıcısı ve genel kaçıp sağlayıcı.  
   
- Çalışma zamanı sağlayıcısı, hangi anahtar sözcüklere (olay kategorileri) etkin olarak olaylar oluşturur. Örneğin, `LoaderKeyword` anahtar sözcüğünü etkinleştirerek yükleyici olaylarını toplayabilirsiniz.  
+ Çalışma zamanı sağlayıcısı, hangi anahtar kelimelerin (etkinlik kategorileri) etkin olduğuna bağlı olarak olayları yükseltir. Örneğin, `LoaderKeyword` anahtar kelimeyi etkinleştirerek yükleyici olaylarını toplayabilirsiniz.  
   
- Windows için olay Izleme (ETW) olayları, daha sonra gerektiğinde virgülle ayrılmış değer (. csv) dosyalarında işlenmek üzere bir. etl uzantısı olan bir dosyada günlüğe kaydedilir. . Etl dosyasını. csv dosyasına dönüştürme hakkında daha fazla bilgi için bkz. [.NET Framework günlüğünü denetleme](controlling-logging.md).  
+ Windows (ETW) olayları için Olay İzleme, daha sonra virgülle ayrılmış değer (.csv) dosyalarında gerektiğinde sonradan işlenebilecek .etl uzantısı olan bir dosyaya kaydedilir. .etl dosyasının .csv dosyasına nasıl dönüştürüldüğü hakkında bilgi için [bkz.](controlling-logging.md)  
   
-## <a name="the-runtime-provider"></a>Çalışma zamanı sağlayıcısı  
- Çalışma zamanı sağlayıcısı, ana CLR ETW sağlayıcısıdır.  
+## <a name="the-runtime-provider"></a>Çalışma Zamanı Sağlayıcısı  
+ Çalışma zamanı sağlayıcısı ana CLR ETW sağlayıcısıdır.  
   
- CLR çalışma zamanı sağlayıcısı GUID 'SI e13c0d23-CCBC-4e12-931B-d9cc2eee27e4.  
+ CLR çalışma zamanı sağlayıcısı GUID e13c0d23-ccbc-4e12-931b-d9cc2eee27e4 olduğunu.  
   
- CLR ETW olaylarını yaygın olarak kullanılabilen araçları kullanarak günlüğe kaydetme ve görüntüleme örnekleri için bkz. [.NET Framework günlüğünü denetleme](controlling-logging.md).  
+ Yaygın olarak kullanılan araçları kullanarak CLR ETW olaylarını nasıl günlüğe kaydedip görüntüleyebilirsiniz, [bkz.](controlling-logging.md)  
   
- `LoaderKeyword`gibi anahtar sözcüklerin kullanılmasına ek olarak, çok sık ortaya çıkarılan olayları günlüğe kaydetmek için anahtar kelimeleri etkinleştirmeniz gerekebilir. `StartEnumerationKeyword` ve `EndEnumerationKeyword` anahtar sözcükleri bu olayları etkinleştirir ve [CLR ETW anahtar sözcükleri ve düzeylerinde](clr-etw-keywords-and-levels.md)özetlenmektedir.  
+ Gibi anahtar kelimeler kullanmanın yanı `LoaderKeyword`sıra, çok sık gündeme getirilebilir olayları günlüğe kaydetme için anahtar kelimeleri etkinleştirmek zorunda kalabilir. Ve `EndEnumerationKeyword` anahtar kelimeler bu olayları etkinleştirmek ve [CLR ETW Anahtar Kelimeler ve Düzeyleri](clr-etw-keywords-and-levels.md)özetlenir. `StartEnumerationKeyword`  
   
-## <a name="the-rundown-provider"></a>Özet sağlayıcı  
- Özet sağlayıcının belirli özel amaçlı kullanımlar için açık olması gerekir. Ancak, çoğu kullanıcı için çalışma zamanı sağlayıcısı yeterli olacaktır.  
+## <a name="the-rundown-provider"></a>Rundown Sağlayıcı  
+ Bazı özel amaçlı kullanımlar için rundown sağlayıcısının açık olması gerekir. Ancak, kullanıcıların çoğunluğu için, çalışma zamanı sağlayıcısı yeterli olmalıdır.  
   
- CLR özeti sağlayıcısı GUID 'SI A669021C-C450-4609-A035-5AF59AF4DF18.  
+ CLR tükenme sağlayıcısı GUID A669021C-C450-4609-A035-5AF59AF4DF18 olduğunu.  
   
- Normalde, bir işlem başlatılmadan önce ETW günlüğü etkinleştirilir ve işlem çıktıktan sonra günlüğe kaydetme kapalıdır. Ancak, işlem yürütülürken ETW günlüğü açıksa, işlem hakkında ek bilgiler gereklidir. Örneğin, sembol çözümlemesi için, günlük kaydı açılmadan önce zaten yüklenmiş olan yöntemler için yöntem olaylarını günlüğe yazmanız gerekir.  
+ Normalde, bir işlem başlatılmadan önce ETW günlüğü etkinleştirilir ve işlem çıktıktan sonra günlüğe kaydetme kapatılır. Ancak, işlem yürütülerken ETW günlüğe kaydetme açıksa, işlem hakkında ek bilgiler gerekir. Örneğin, sembol çözünürlüğü için günlüğe kaydetmeden önce zaten yüklenen yöntemler için yöntem olaylarını günlüğe kaydetmeniz gerekir.  
   
- `DCStart` ve `DCEnd` olayları, veri toplama başlatıldığında ve durdurulduğunda işlemin durumunu yakalar. (Durum, zaten tam zamanında (JıT) derlenmiş Yöntemler ve yüklenmiş derlemeler dahil olmak üzere yüksek düzeyde bilgi anlamına gelir.) Bu iki olay, işlemde zaten ne olduğunu hakkında bilgi sağlayabilir; Örneğin, JıT olarak derlenen Yöntemler ve bu şekilde devam eder.  
+ Ve `DCStart` `DCEnd` olaylar, veri toplama başlatıldığında ve durdurulduğunda işlemin durumunu yakalar. (Devlet zaten sadece-in-time (JIT) derlenmiş ve yüklenen derlemeler yöntemleri de dahil olmak üzere, yüksek düzeyde bilgi anlamına gelir.) Bu iki olay, süreç içinde zaten neler olduğu hakkında bilgi sağlayabilir; örneğin, hangi yöntemler JIT-derlenmiş ve benzeri.  
   
- Yalnızca adlarına `DC`, `DCStart`, `DCEnd`veya `DCInit` sahip olan olaylar, Özet sağlayıcının altında oluşturulur. Ayrıca, bu olaylar yalnızca Özet sağlayıcının altında oluşturulur.  
+ Yalnızca `DC`, , `DCStart` `DCEnd`, `DCInit` veya adlarındaki olaylar, rundown sağlayıcısı altında yükseltilir. Ayrıca, bu olaylar yalnızca rundown sağlayıcısı altında yükseltilir.  
   
- Olay anahtar sözcük filtrelerine ek olarak, runaşağı sağlayıcı, hedeflenen filtreleme sağlamak için `StartRundownKeyword` ve `EndRundownKeyword` anahtar sözcüklerini de destekler.  
+ Olay anahtar kelime filtreleri ek olarak, rundown `StartRundownKeyword` sağlayıcısı `EndRundownKeyword` da hedefli filtreleme sağlamak için ve anahtar kelimeler destekler.  
   
 ### <a name="start-rundown"></a>Özeti Başlat  
- Bir başlangıç Özeti, runaşağı sağlayıcısı altında günlüğe kaydetme işlemi `StartRundownKeyword` anahtar sözcüğüyle etkinleştirildiğinde tetiklenir. Bu, `DCStart` olayının oluşturulmasına neden olur ve sistemin durumunu yakalar. Numaralandırma başlamadan önce `DCStartInit` olayı tetiklenir. Numaralandırmanın sonunda, veri toplamanın normal şekilde sonlandırıldığı denetleyiciye bildirmek için `DCStartComplete` olayı tetiklenir.  
+ `StartRundownKeyword` Başlangıç özeti, anahtar kelimeyle birlikte, tükenme sağlayıcısının altında günlüğe kaydedildiğinde tetiklenir. Bu, `DCStart` olayın yükseltilmesine neden olur ve sistemin durumunu yakalar. Numaralandırma başlamadan `DCStartInit` önce, olay yükseltilir. Numaralandırma sonunda, `DCStartComplete` olay, veri toplamanın normal olarak sonlandırıldığını denetleyiciye bildirmek için yükseltilir.  
   
-### <a name="end-rundown"></a>Özeti Sonlandır  
- Özet sağlayıcının altında günlüğe kaydetme işlemi `EndRundownKeyword` anahtar sözcüğüyle etkinleştirildiği zaman bir kapanış Özeti tetiklenir. Özeti Sonlandır, yürütülmeye devam eden bir işlemde profil oluşturmayı durduruyor. `DCEnd` olaylar, profil oluşturma durdurulduğunda sistemin durumunu yakalar.  
+### <a name="end-rundown"></a>Özeti Sona Erdirme  
+ `EndRundownKeyword` Özet sağlayıcının altında günlüğe kaydetme anahtar kelimeyle etkinleştirildiğinde bir son özeti tetiklenir. Son özet, yürütmeye devam eden bir işlemde profil oluşturmayı durdurur. Profil `DCEnd` oluşturma durdurulduğunda olaylar sistemin durumunu yakalar.  
   
- Numaralandırma başlamadan önce `DCEndInit` olayı tetiklenir. Sabit listesinin sonunda, tüketiciye veri toplamanın normal şekilde sonlandırıldığını bildirmek için `DCEndComplete` olayı tetiklenir. Başlangıç özeti ve bitiş Özeti öncelikle yönetilen sembol çözümlemesi için kullanılır. Özeti Başlat, profil oluşturma oturumu başlatılmadan önce zaten JıT olarak derlenen yöntemler için adres aralığı bilgisi sağlayabilir. Özet sonu, profil oluşturma işlemi kapalı olduğunda JıT derlenen tüm yöntemler için adres aralığı bilgisi sağlayabilir.  
+ Numaralandırma başlamadan `DCEndInit` önce, olay yükseltilir. Numaralandırma sonunda, `DCEndComplete` olay veri toplama normal sona erdirilmiş olduğunu tüketicibildirmek için yükseltilir. Başlangıç özeti ve bitiş özeti öncelikle yönetilen sembol çözümü için kullanılır. Başlangıç özeti, profil oluşturma oturumu başlamadan önce zaten JIT tarafından derlenmiş olan yöntemler için adres aralığı bilgileri sağlayabilir. Son özet, profil oluşturma kapatılmak üzereyken JIT tarafından derlenen tüm yöntemler için adres aralığı bilgileri sağlayabilir.  
   
- Bir profil oluşturma oturumu durdurulduğunda, Özeti Sonlandır işlemi otomatik olarak gerçekleşmez. Bunun yerine, yönetilen sembol çözünürlüğünü gerçekleştirmeye yönelik bir aracın, profil oluşturma durdurulmadan hemen önce `EndRundownKeyword` anahtar sözcüğü etkin bir CLR özet sağlayıcısı oturumunu açıkça çağırması gerekir.  
+ Profil oluşturma oturumu durdurulduğunda son özet otomatik olarak gerçekleşmez. Bunun yerine, yönetilen sembol çözümlemesi gerçekleştirmek isteyen bir araç, profil oluşturma `EndRundownKeyword` durdurulmadan hemen önce, anahtar kelime etkin leştirilmiş bir CLR özeti sağlayıcısı oturumunu açıkça çağırmak zorundadır.  
   
- Başlangıç Özeti veya bitiş Özeti, yönetilen sembol çözümlemesi için yöntem adres aralığı bilgilerini sağlayabilse de, `StartRundownKeyword` anahtar sözcüğü yerine (`DCStart` olayları sağlayan) `EndRundownKeyword` anahtar sözcüğünü (`DCEnd` olayları sağlar) kullanmanızı öneririz. `StartRundownKeyword` kullanmak, profil oluşturma oturumu sırasında, profili oluşturulmuş senaryoyu rahatsız eden bir şekilde oluşmasına neden olur.  
+ Başlangıç özeti veya son özet yönetilen sembol çözümü için yöntem adresi aralığı bilgileri `EndRundownKeyword` sağlasa da, `DCEnd` `StartRundownKeyword` anahtar kelime (olayları sağlayan) yerine anahtar sözcüğü (olayları sağlayan) kullanmanızı öneririz (olayları sağlayan). `DCStart` Profil `StartRundownKeyword` oluşturma oturumu sırasında özetin gerçekleşmesine neden olan bu durum profil senaryosunu bozabilir.  
   
-## <a name="etw-data-collection-using-runtime-and-rundown-providers"></a>Çalışma zamanı ve Özet sağlayıcıları kullanılarak ETW veri toplama  
- Aşağıdaki örnek, CLR özet sağlayıcısının, işlemlerin profil oluşturulmuş pencerenin içinde mi yoksa dışında mı başlayıp bitmediğine bakılmaksızın, en az etkiyle yönetilen işlemlerin sembol çözümüne izin veren bir şekilde nasıl kullanılacağını göstermektedir.  
+## <a name="etw-data-collection-using-runtime-and-rundown-providers"></a>Runtime ve Rundown Sağlayıcıları Kullanarak ETW Veri Toplama  
+ Aşağıdaki örnek, proseslerin profilli pencerenin içinde veya dışında başlayıp bitmesine bakılmaksızın, yönetilen işlemlerin en az etkiyle çözüme kavuşturulmasını sağlayacak şekilde CLR özet sağlayıcısının nasıl kullanılacağını gösterir.  
   
-1. CLR Runtime sağlayıcısını kullanarak ETW günlüğünü açın:  
+1. CLR çalışma zamanı sağlayıcısını kullanarak ETW günlüğe kaydetmeyi açın:  
   
     ```console
-    xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
+    xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl
     ```  
   
-     Günlük, clr1. etl dosyasına kaydedilir.  
+     Günlük clr1.etl dosyasına kaydedilir.  
   
-2. İşlem yürütülmeye devam ederken profil oluşturmayı durdurmak için, `DCEnd` olaylarını yakalamak için runaşağı sağlayıcısını başlatın:  
+2. İşlem yürütmeye devam ederken profil oluşturmayı durdurmak için, `DCEnd` olayları yakalamak için özeti sağlayıcıyı başlatın:  
   
     ```console
-    xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
+    xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl
     ```  
   
-     Bu, `DCEnd` olaylarının toplanmasını bir runaşağı oturumu başlatmak için sağlar. Tüm olayların toplanması için 30 ila 60 saniye beklemeniz gerekebilir. Günlük, clr1. ET2 dosyasına kaydedilir.  
+     Bu, `DCEnd` olayların bir özeti oturumu başlatmak için bir koleksiyon sağlar. Tüm etkinliklerin toplanması için 30 ila 60 saniye beklemeniz gerekebilir. Günlük clr1.et2 dosyasına kaydedilir.  
   
-3. Tüm ETW profil oluşturmayı kapat:  
+3. Tüm ETW profil oluşturmayı kapatın:  
   
     ```console
-    xperf -stop clrRundown   
+    xperf -stop clrRundown
     xperf -stop clr  
     ```  
   
@@ -85,10 +85,10 @@ Ortak dil çalışma zamanı (CLR) iki sağlayıcıya sahiptir: çalışma zaman
     xperf -merge clr1.etl clr2.etl merged.etl  
     ```  
   
-     Birleştirilmiş. etl dosyası çalışma zamanı ve özet sağlayıcı oturumlarından olayları içerecektir.  
+     Birleştirilmiş.etl dosyası, çalışma saatindeki olayları ve özeti sağlayıcı oturumlarını içerir.  
   
- Bir araç, bir Kullanıcı profil oluşturmayı istemesi durumunda profil oluşturmayı hemen kapatmak yerine 2 ve 3. adımları (bir Özet oturumu başlatıp profil oluşturmayı sonlandırıp) yürütebilir. Bir araç, 4. adımı da yürütebilir.  
+ Bir araç, kullanıcı profil oluşturmanın durdurulmasını istediğinde profil oluşturmayı hemen kapatmak yerine 2 ve 3 adımlarını (bir başlangıç oturumu başlatıp profil oluşturmayı sonlandırma) yürütebilir. Bir araç da adım 4 çalıştırabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ortak Dil Çalışma Zamanı Modülünde ETW Olayları](etw-events-in-the-common-language-runtime.md)
+- [Ortak Dil Çalışma Zamanında ETW Olayları](etw-events-in-the-common-language-runtime.md)

@@ -15,48 +15,48 @@ helpviewer_keywords:
 ms.assetid: 9855f0e4-12c0-4d3d-ab5d-d6bc52d25eae
 topic_type:
 - apiref
-ms.openlocfilehash: a020a0343eecceb4a85ebbddffe323c7f7bdca3d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5faf1a6ae89045b2ef17fab789ee6e5bf23eecf2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437116"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175349"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>IMetaDataImport::GetPermissionSetProps Yöntemi
-Belirtilen Izin belirteciyle temsil edilen <xref:System.Security.PermissionSet?displayProperty=nameWithType> ilişkili meta verileri alır.  
+Belirtilen İzin belirteci <xref:System.Security.PermissionSet?displayProperty=nameWithType> tarafından temsil edilenile ilişkili meta verileri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetPermissionSetProps (  
    [in]  mdPermission      pm,  
-   [out] DWORD             *pdwAction,   
-   [out] void const        **ppvPermission,   
+   [out] DWORD             *pdwAction,
+   [out] void const        **ppvPermission,
    [out] ULONG             *pcbPermission  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pm`  
- 'ndaki Meta veri özelliklerini almak için ayarlanan izni temsil eden Izin meta veri belirteci.  
+ [içinde] Meta veri özelliklerini almak için izin kümesini temsil eden İzin meta veri belirteci.  
   
  `pdwAction`  
- dışı İzin kümesine yönelik bir işaretçi.  
+ [çıkış] İzin kümesiiçin bir işaretçi.  
   
  `ppvPermission`  
- dışı İzin kümesinin ikili meta veri imzasına yönelik bir işaretçi.  
+ [çıkış] İzin kümesinin ikili meta veri imzasına işaretçi.  
   
  `pcbPermission`  
- dışı `ppvPermission`bayt cinsinden boyutu.  
+ [çıkış] `ppvPermission`Baytboyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

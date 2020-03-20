@@ -2,30 +2,30 @@
 title: Federasyon Örneği
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: c143ad9315df94a2d836a2c2c742ffa9a7728511
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 9ec462f88c0e3a039b7f288554be3e28f13ece08
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837889"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144675"
 ---
 # <a name="federation-sample"></a>Federasyon Örneği
-Bu örnekte, Federasyon güvenliği gösterilmektedir.  
+Bu örnek federe güvenliği gösteriyor.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntılar  
- Windows Communication Foundation (WCF) `wsFederationHttpBinding`aracılığıyla Federal Güvenlik mimarilerini dağıtmaya yönelik destek sağlar. `wsFederationHttpBinding`, istek/yanıt iletişimi için temel alınan aktarım mekanizması olarak HTTP kullanımını ve kodlama için Tel biçimi olarak metin/XML kullanımını içeren güvenli, güvenilir ve birlikte çalışabilen bir bağlama sağlar. WCF 'de Federasyon hakkında daha fazla bilgi için bkz. [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Windows Communication Foundation (WCF), federe güvenlik mimarilerinin dağıtılamı için destek `wsFederationHttpBinding`sağlar. İstek/yanıt iletişimi `wsFederationHttpBinding` için temel aktarım mekanizması olarak HTTP'nin kullanımını ve kodlama için tel biçimi olarak Metin/XML'i içeren güvenli, güvenilir ve birlikte çalışabilir bir bağlama sağlar. WCF'deki Federasyon hakkında daha fazla bilgi için [Federasyon'a](../../../../docs/framework/wcf/feature-details/federation.md)bakın.  
   
  Senaryo 4 parçadan oluşur:  
   
-- Kitaplığı hizmeti  
+- BookStore hizmeti  
   
-- Kitaplığı STS  
+- Kitapçı STS  
   
 - HomeRealm STS  
   
-- Kitaplığı Istemcisi  
+- Kitabevi İstemcisi  
   
- Kitaplığı hizmeti, `BrowseBooks` ve `BuyBook`iki işlemi destekler. `BrowseBooks` işleme anonim erişimine izin verir, ancak `BuyBooks` işlemine erişmek için kimliği doğrulanmış erişim gerektirir. Kimlik doğrulaması, kitaplığı STS tarafından verilen belirtecin biçimini alır. Kitaplığı hizmeti için yapılandırma dosyası, istemcileri `wsFederationHttpBinding`kullanarak kitaplara yönlendirir.  
+ BookStore hizmeti iki işlemi `BrowseBooks` `BuyBook`destekler ve . `BrowseBooks` Bu işlem için anonim erişim sağlar, ancak `BuyBooks` operasyona erişmek için kimlik doğrulaması erişim gerektirir. Kimlik doğrulaması BookStore STS tarafından verilen bir belirteç biçimindedir. BookStore Hizmeti için yapılandırma dosyası, istemcileri BookStore `wsFederationHttpBinding`STS'ye işaret eder.  
   
 ```xml  
 <wsFederationHttpBinding>  
@@ -45,7 +45,7 @@ Bu örnekte, Federasyon güvenliği gösterilmektedir.
 </wsFederationHttpBinding>  
 ```  
   
- Bu durumda, daha sonra, istemcilerin HomeRealm STS tarafından verilen bir belirteç kullanarak kimlik doğrulaması yapması gerekir. Yine, kitaplığı STS için yapılandırma dosyası, istemcileri `wsFederationHttpBinding`kullanarak HomeRealm STS 'ye yönlendirir.  
+ BookStore STS daha sonra istemcilerin HomeRealm STS tarafından verilen bir belirteç kullanarak kimlik doğrulamasını gerektirir. Yine, BookStore STS için yapılandırma dosyası kullanarak HomeRealm STS istemcileri `wsFederationHttpBinding`puan.  
   
 ```xml  
 <wsFederationHttpBinding>  
@@ -65,54 +65,54 @@ Bu örnekte, Federasyon güvenliği gösterilmektedir.
 </wsFederationHttpBinding>  
 ```  
   
- `BuyBook` işlemine erişirken olayların sırası aşağıdaki gibidir:  
+ `BuyBook` İşleme erişirken olayların sırası aşağıdaki gibidir:  
   
-1. İstemci, Windows kimlik bilgilerini kullanarak HomeRealm STS 'nin kimliğini doğrular.  
+1. İstemci, Windows kimlik bilgilerini kullanarak HomeRealm STS'ye kimlik doğrulaması yaptı.  
   
-2. HomeRealm STS, kitaplığı STS ' de kimlik doğrulaması için kullanılabilecek bir belirteç yayınlar.  
+2. HomeRealm STS, BookStore STS'ye kimlik doğrulamak için kullanılabilecek bir belirteç yayınlar.  
   
-3. İstemci, HomeRealm STS tarafından verilen belirteci kullanarak kitaplığı STS 'de kimlik doğrulaması yapar.  
+3. İstemci, HomeRealm STS tarafından verilen belirteci kullanarak BookStore STS'ye doğrulanır.  
   
-4. Kitaplığı STS, kitaplığı hizmetinde kimlik doğrulaması yapmak için kullanılabilecek bir belirteç verir.  
+4. BookStore STS, BookStore Hizmeti'nin kimliğini doğrulamak için kullanılabilecek bir belirteç verir.  
   
-5. İstemci, kitaplığı STS tarafından verilen belirteci kullanarak Kitaplığı hizmeti için kimlik doğrulaması yapar.  
+5. İstemci, BookStore STS tarafından verilen belirteci kullanarak BookStore hizmetine kimlik doğrular.  
   
-6. İstemci `BuyBook` işlemine erişir.  
+6. İstemci işlem `BuyBook` erişimi.  
   
- Bu örneği ayarlama ve çalıştırma hakkında aşağıdaki yönergelere bakın.  
+ Bu örneğin nasıl ayarlanıp çalıştırılabildiğini ilgili aşağıdaki yönergeleri izleyin.  
   
 > [!NOTE]
-> Bu örneği çalıştırmak için **Wwwroot** dizinine yazma izinleriniz olmalıdır.  
+> Bu örneği çalıştırmak için **wwwroot** dizinine yazma izinlerine sahip olmalısınız.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
   
-1. SDK komut penceresini açın. Örnek yolda Setup. bat dosyasını çalıştırın. Bu, örnek için gereken sanal dizinleri oluşturur ve uygun izinlere sahip gerekli sertifikaları kurar.  
-  
-    > [!NOTE]
-    > Setup. bat toplu iş dosyası bir Windows SDK komut Isteminden çalıştırılmak üzere tasarlanmıştır. MSSDK ortam değişkeninin, SDK 'nın yüklü olduğu dizine işaret olmasını gerektirir. Bu ortam değişkeni bir Windows SDK komut Istemi içinde otomatik olarak ayarlanır. Windows Vista 'da, kurulum IIS Yönetici betikleri kullandığından, IIS 6,0 yönetim uyumluluğuna emin olmanız gerekir. Windows Vista 'da kurulum betiğini çalıştırmak için yönetici ayrıcalıkları gerekir.  
-  
-2. Visual Studio 'da FederationSample. sln ' yi açın ve **derleme** menüsünden **çözüm oluştur** ' u seçin. Bu, ortak proje dosyalarını, kitaplığı hizmeti, kitaplığı STS, HomeRealm STS 'yi oluşturur ve bunları IIS 'de dağıtır. Bu Ayrıca, kitaplığı istemci uygulamasını oluşturur ve Boosample\bookstoreclient\bin\debug klasörüne yürütülebilir BookStoreClient. exe ' yi koyar.  
-  
-3. BookStoreClient. exe ' ye çift tıklayın. BookStoreClient penceresi görüntülenir.  
-  
-4. Kitaplarda bulunan kitaplara **gözatıp**' ye tıklayarak kitapçığa gidebilirsiniz.  
-  
-5. Belirli bir kitabı satın almak için listeden kitabı seçin ve **kitabı satın al**' a tıklayın. Uygulama başlatılır ve Barındırmerealm güvenlik belirteci hizmeti ile Windows kimlik doğrulamasını kullanarak kimlik doğrular.  
-  
-     Örnek, kullanıcıların $15 veya daha az bir kitap satın almasını sağlamak üzere yapılandırılmıştır. $15 'den daha fazla maliyet satın alma girişimi, istemcinin kitap mağazası hizmetinden bir erişim reddedildi iletisi almasıyla sonuçlanır.  
+1. SDK komut penceresini açın. Örnek yolda Kurulum.bat'ı çalıştırın. Bu, örnek için gereken sanal dizinleri oluşturur ve gerekli sertifikaları uygun izinlerle yükler.  
   
     > [!NOTE]
-    > Örnek, bir satın alma işleminden sonra kullanıcının kredi limitini güncelleştirmez. Kullanıcıların (Sabit) kredi limiti içindeki kitapları tekrar tekrar satın alabilirsiniz.  
+    > Setup.bat toplu dosyası, Windows SDK Komut İstemi'nden çalıştırılmak üzere tasarlanmıştır. MSSDK ortamı değişkeninin SDK'nın yüklendiği dizine işaret etmesini gerektirir. Bu ortam değişkeni otomatik olarak bir Windows SDK Komut İstemi içinde ayarlanır. Windows Vista'da, kurulum IIS yönetici komut dosyalarını kullandığından IIS 6.0 Yönetim Uyumluluğunun yüklü olduğundan emin olmalısınız. Windows Vista'da kurulum komut dosyasının çalıştırılması için yönetici ayrıcalıkları gerekiyor.  
+  
+2. Visual Studio'da FederationSample.sln'yi açın ve **Yapı** menüsünden **Çözüm Oluştur'u** seçin. Bu ortak proje dosyaları, Kitabevi hizmeti, Kitabevi STS, HomeRealm STS oluşturur ve IIS bunları dağıtır. Bu da Kitabevi istemci uygulaması oluşturur ve yürütülebilir BookStoreClient.exe'yi FederationSample\BookStoreClient\bin\Debug klasörüne yerleştirir.  
+  
+3. BookStoreClient.exe'yi çift tıklatın. BookStoreClient penceresi görüntülenir.  
+  
+4. **Kitaplara Gözat'ı**tıklayarak kitapçıda bulunan kitaplara göz atabilirsiniz.  
+  
+5. Belirli bir kitabı satın almak için, listedeki kitabı seçin ve **Kitap Satın Al'ı**tıklatın. Uygulama başlatılır ve HomeRealm Güvenlik Belirteç Hizmeti ile Windows kimlik doğrulaması kullanarak kimlik doğrulaması.  
+  
+     Örnek, kullanıcıların 15 ABD doları veya daha az maliyetli kitap satın almasına olanak sağlayacak şekilde yapılandırılmıştır. 15 TL'den fazla maliyetli kitap satın almaya çalışmak, istemcinin Book Store Hizmeti'nden Erişim Reddedilen bir ileti almasına neden olabilir.  
+  
+    > [!NOTE]
+    > Örnek, bir satın alma işleminden sonra kullanıcının kredi limitini güncelleştirmez. Kullanıcının (sabit) kredi limiti dahilinde sürekli olarak kitap satın alabilirsiniz.  
   
 #### <a name="to-clean-up"></a>Temizlemek için  
   
-1. Cleanup. bat dosyasını çalıştırın. Bu, ayarlama sırasında oluşturulan sanal dizinleri siler ve kurulum sırasında yüklenen sertifikaları da kaldırır.  
+1. Cleanup'ı çalıştır.yarasa. Bu, kurulum sırasında oluşturulan sanal dizinleri siler ve kurulum sırasında yüklenen sertifikaları da kaldırır.  
   
 > [!IMPORTANT]
-> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
->   
+> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
->   
+>
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  

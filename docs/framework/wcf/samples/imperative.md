@@ -2,21 +2,21 @@
 title: Kesin
 ms.date: 03/30/2017
 ms.assetid: 4f7ce807-c0e4-407a-92a6-22abafb40b51
-ms.openlocfilehash: 897b4a37c25ff8f7cf5739cc9fca8cb3f3e9a4d6
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2484b6a6a8e5a62676eb9e9830a91f91ac923eff
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715824"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144688"
 ---
 # <a name="imperative"></a>Kesin
 
-Bu örnek, yapılandırmada `wsHttpBinding` bağlamayı tanımlamak yerine kod kullanarak bir hizmet için <xref:System.ServiceModel.WSHttpBinding> tanımlamayı gösterir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](getting-started-sample.md) Başlarken hizmetini temel alır.
+Bu örnek, yapılandırmada <xref:System.ServiceModel.WSHttpBinding> `wsHttpBinding` bağlamayı tanımlamak yerine kod kullanan bir hizmet için bir hizmetin nasıl tanımlandığını gösterir. Bu örnek, bir hesap makinesi hizmeti uygulayan [Başlarken'e](getting-started-sample.md) dayanır.
 
 > [!NOTE]
-> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
+> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.
 
-Aşağıdaki kod, bir bağlama imperatively kodda nasıl tanımlanacağını göstermektedir.
+Aşağıdaki kod, zorunlu olarak kodda bir bağlamanın nasıl tanımlanabildiğini gösterir.
 
 ```csharp
 public static void Main()
@@ -35,7 +35,7 @@ public static void Main()
     // Create a ServiceHost for the CalculatorService type and provide the base address.
     using(ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))
     {
-        serviceHost.AddServiceEndpoint(typeof(ICalculator), 
+        serviceHost.AddServiceEndpoint(typeof(ICalculator),
                                        binding, baseAddress);
         // Open the ServiceHostBase to create listeners and start listening for messages.
         serviceHost.Open();
@@ -67,7 +67,7 @@ ChannelFactory<ICalculator> channelFactory = new ChannelFactory<ICalculator>(bin
 ICalculator channel = channelFactory.CreateChannel();
 ```
 
- Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemciyi kapatmak için istemci penceresinde ENTER tuşuna basın.
 
 ```console
 Add(100,15.99) = 115.99
@@ -78,19 +78,19 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.
 ```
 
-## <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için
+## <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için
 
-1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
+1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinden emin olun.
 
-2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak [için, Windows Communication Foundation Samples'i oluştururken](building-the-samples.md)yönergeleri izleyin.
 
-3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.
+3. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](running-the-samples.md)yönergeleri izleyin.
 
 > [!IMPORTANT]
-> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
+> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Imperative`

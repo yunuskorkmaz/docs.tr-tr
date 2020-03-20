@@ -5,24 +5,24 @@ helpviewer_keywords:
 - forcePerformanceCounterUniqueSharedMemoryReads element
 - <forcePerformanceCounterUniqueSharedMemoryReads> element
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
-ms.openlocfilehash: efa6dce1035f7d2cf63b74c6a03d911b5dede722
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 742b444c445ba67d6977b622e615a6a8f591826e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116947"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154146"
 ---
-# <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads > öğesi
-PerfCounter. dll ' nin, performans sayacı verilerinin kategoriye özgü paylaşılan bellekten veya genel bellekten yüklenip yüklenmeyeceğini belirleme .NET Framework sürüm 1,1 uygulamasında CategoryOptions kayıt defteri ayarını kullanıp kullanmadığını belirtir.  
+# <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads> Öğesi
+PerfCounter.dll'nin kategoriye özgü paylaşılan bellekten veya genel bellekten performans sayacı verilerini yükleyip yüklemeyeceğini belirlemek için bir .NET Framework sürüm 1.1 uygulamasında CategoryOptions kayıt defteri ayarını kullanıp kullanmayacağını belirtir.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<forcePerformanceCounterUniqueSharedMemoryReads >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<çalışma zamanı>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<forcePerformanceCounterUniqueSharedMemoryReads>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<forcePerformanceCounterUniqueSharedMemoryReads   
+<forcePerformanceCounterUniqueSharedMemoryReads
 enabled="true|false"/>  
 ```  
   
@@ -33,14 +33,14 @@ enabled="true|false"/>
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`enabled`|Gerekli öznitelik.<br /><br /> PerfCounter. dll ' nin, performans sayacı verilerinin kategoriye özgü paylaşılan bellekten mi yoksa genel bellekten mi yükleneceğini öğrenmek için CategoryOptions kayıt defteri ayarını kullanıp kullanmadığını belirtir.|  
+|`enabled`|Gerekli öznitelik.<br /><br /> PerfCounter.dll'nin kategoriye özgü paylaşılan bellekten veya genel bellekten performans sayacı verilerini yükleyip yüklemeyeceğini belirlemek için CategoryOptions kayıt defteri ayarını kullanıp kullanmadığını gösterir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`false`|PerfCounter. dll, CategoryOptions kayıt defteri ayarını kullanmaz. bu varsayılan ayardır.|  
-|`true`|PerfCounter. dll, CategoryOptions kayıt defteri ayarını kullanır.|  
+|`false`|PerfCounter.dll CategoryOptions kayıt defteri ayarı bu varsayılan kullanmaz.|  
+|`true`|PerfCounter.dll CategoryOptions kayıt defteri ayarını kullanır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -53,21 +53,21 @@ enabled="true|false"/>
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework 4 ' ün öncesindeki .NET Framework sürümlerinde, yüklenmiş olan PerfCounter. dll sürümü, işleme yüklenmiş çalışma zamanına karşılık gelen sürümüdür. Bir bilgisayarda .NET Framework sürüm 1,1 ve .NET Framework 2,0 yüklüyse, bir .NET Framework 1,1 uygulaması PerfCounter. dll ' nin .NET Framework 1,1 sürümünü yükler. .NET Framework 4 ' te başlayarak, PerfCounter. dll ' nin en yeni yüklü sürümü yüklenir. Bu, .NET Framework 1,1 uygulaması, bilgisayarda .NET Framework 4 yüklüyse PerfCounter. dll ' nin .NET Framework 4 sürümünü yükleyecek anlamına gelir.  
+ .NET Framework 4'ten önceki .NET Framework sürümlerinde, yüklenilen PerfCounter.dll sürümü, işlemde yüklenen çalışma süresine karşılık gelir. Bir bilgisayarda hem .NET Framework sürüm 1.1 hem de .NET Framework 2.0 yüklü olsaydı, bir .NET Framework 1.1 uygulaması PerfCounter.dll'nin .NET Framework 1.1 sürümünü yükler. .NET Framework 4'ten başlayarak, PerfCounter.dll'nin en yeni yüklü sürümü yüklenir. Bu, bilgisayara .NET Framework 4 yüklenirse ,NET Framework 1.1 uygulamasının PerfCounter.dll'nin .NET Framework 4 sürümünü yükleyeceği anlamına gelir.  
   
- .NET Framework 4 ' ten başlayarak, performans sayaçlarını tükettiği için PerfCounter. dll, her bir sağlayıcının kategorilere özgü paylaşılan bellekten veya genel paylaşılan bellekten okunup okunmayacağını belirlemede bu kayıt defteri girişini denetler. .NET Framework 1,1 PerfCounter. dll, kategoriye özgü paylaşılan belleğin farkında olmadığından, bu kayıt defteri girdisini okuyamıyor; her zaman genel paylaşılan bellekten okur.  
+ Performans sayaçlarını tüketirken .NET Framework 4'ten başlayarak PerfCounter.dll, kategoriye özgü paylaşılan bellekten mi yoksa genel paylaşılan bellekten mi okunması gerektiğini belirlemek için her sağlayıcı için CategoryOptions kayıt defteri girişini denetler. .NET Framework 1.1 PerfCounter.dll, kategoriye özgü paylaşılan belleğin farkında olmadığından, kayıt defteri girişini okumaz; her zaman genel paylaşılan bellekten okur.  
   
- Geriye dönük uyumluluk için .NET Framework 4 PerfCounter. dll, bir .NET Framework 1,1 uygulamasında çalışırken CategoryOptions kayıt defteri girişini denetlemez. Yalnızca .NET Framework 1,1 PerfCounter. dll gibi genel paylaşılan belleği kullanır. Ancak, `<forcePerformanceCounterUniqueSharedMemoryReads>` öğesini etkinleştirerek kayıt defteri ayarını denetlemek için .NET Framework 4 PerfCounter. dll ' ye bakabilirsiniz.  
+ Geriye dönük uyumluluk için .NET Framework 4 PerfCounter.dll, .NET Framework 1.1 uygulamasında çalışırken CategoryOptions kayıt defteri girişini denetlemez. Sadece .NET Framework 1.1 PerfCounter.dll gibi, küresel paylaşılan bellek kullanır. Ancak, .NET Framework 4 PerfCounter.dll öğesini etkinleştirerek kayıt defteri `<forcePerformanceCounterUniqueSharedMemoryReads>` ayarını denetlemesi için talimat verebilirsiniz.  
   
 > [!NOTE]
-> `<forcePerformanceCounterUniqueSharedMemoryReads>` öğesinin etkinleştirilmesi, kategoriye özgü paylaşılan belleğin kullanılacağını garanti etmez. `true` etkinleştirildi ayarı yalnızca PerfCounter. dll ' nin CategoryOptions kayıt defteri ayarına başvurmasına neden olur. CategoryOptions için varsayılan ayar, kategoriye özgü paylaşılan bellek kullanmaktır; Ancak, genel paylaşılan belleğin kullanılması gerektiğini belirtmek için CategoryOptions ' ı değiştirebilirsiniz.  
+> Öğeyi `<forcePerformanceCounterUniqueSharedMemoryReads>` etkinleştirmek, kategoriye özgü paylaşılan belleğin kullanılacağını garanti etmez. Yalnızca PerfCounter.dll'nin CategoryOptions kayıt defteri ayarına başvurmasına neden olacak şekilde etkinleştirildi. `true` CategoryOptions için varsayılan ayar kategoriye özgü paylaşılan bellek kullanmaktır; ancak, genel paylaşılan belleğin kullanılması gerektiğini belirtmek için CategoryOptions'ı değiştirebilirsiniz.  
   
- CategoryOptions ayarını içeren kayıt defteri anahtarı HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\< categoryName\>\Performanceşeklindedir. Varsayılan olarak, CategoryOptions 3 olarak ayarlanır, bu da PerfCounter. dll ' ye kategoriye özgü paylaşılan bellek kullanmasını söyler. CategoryOptions 0 olarak ayarlandıysa, PerfCounter. dll genel paylaşılan belleği kullanır. Örnek verileri yalnızca oluşturulan örneğin adı, yeniden kullanılan örnekle aynıysa yeniden kullanılır. Tüm sürümler kategoriye yazabilecektir. Kategorili olarak 1 olarak ayarlanırsa, genel paylaşılan bellek kullanılır, ancak kategori adı, yeniden kullanılan kategoriyle aynı uzunluktadır sonra örnek verileri yeniden kullanılabilir.  
+ CategoryOptions ayarını içeren kayıt defteri anahtarı\\ HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\><categoryName \Performance'tır. Varsayılan olarak, CategoryOptions 3 olarak ayarlanır ve bu da PerfCounter.dll'ye kategoriye özgü paylaşılan belleği kullanmasını bildirir. CategoryOptions 0 olarak ayarlanmışsa, PerfCounter.dll genel paylaşılan bellek kullanır. Örnek veriler, yalnızca oluşturulan örneğin adı yeniden kullanılan örnekle aynıysa yeniden kullanılır. Tüm sürümler kategoriye yazabilecektir. CategoryOptions 1 olarak ayarlanmışsa, genel paylaşılan bellek kullanılır, ancak kategori adı yeniden kullanılan kategoriyle aynı uzunluktaysa örnek verileri yeniden kullanılabilir.  
   
- 0 ve 1 ayarları, bellek sızıntılarına ve performans sayacı belleğinin doldurulmasına yol açabilir.  
+ 0 ve 1 ayarları bellek sızıntılarına ve performans sayacı belleği doldurmasına neden olabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, kategoriye özgü paylaşılan bellek kullanıp kullanmayacağını belirlemek için PerfCounter. dll ' nin CategoryOptions kayıt defteri girişine başvurması gerektiğini gösterir.  
+ Aşağıdaki örnekte, PerfCounter.dll'nin kategoriye özgü paylaşılan bellek kullanıp kullanmaması gerektiğini belirlemek için CategoryOptions kayıt defteri girişine başvurması gerektiğinin nasıl belirtilen bir şekilde belirtilen.  
   
 ```xml  
 <configuration>  

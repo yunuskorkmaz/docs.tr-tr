@@ -1,34 +1,34 @@
 ---
-title: Tek tablo sorguları (LINQ to DataSet)
+title: Tek Tablolu Sorgular (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 1f4462f617eb81d30f893b52bdc674e1eee8961c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 7bb8d8e19ac9cf36eabc061ceba9c649b8a4cc00
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634774"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148978"
 ---
-# <a name="single-table-queries-linq-to-dataset"></a>Tek tablo sorguları (LINQ to DataSet)
-Dil ile tümleşik sorgu (LINQ) sorguları <xref:System.Collections.Generic.IEnumerable%601> arabirimini veya <xref:System.Linq.IQueryable%601> arabirimini uygulayan veri kaynakları üzerinde çalışır. <xref:System.Data.DataTable> sınıfı her iki arabirimi de uygulamıyor, bu nedenle <xref:System.Data.DataTable> bir LINQ sorgusunun `From` yan tümcesinde kaynak olarak kullanmak istiyorsanız <xref:System.Data.DataTableExtensions.AsEnumerable%2A> yöntemini çağırmanız gerekir.  
+# <a name="single-table-queries-linq-to-dataset"></a>Tek Tablolu Sorgular (LINQ to DataSet)
+Dil-Tümleşik Sorgu (LINQ) <xref:System.Collections.Generic.IEnumerable%601> sorguları, arabirimi <xref:System.Linq.IQueryable%601> veya arabirimi uygulayan veri kaynakları üzerinde çalışır. Sınıf <xref:System.Data.DataTable> her iki arabirimi de uygulamaz, bu nedenle bir <xref:System.Data.DataTable> LINQ sorgusunun `From` yan tümcesinde kaynak olarak kullanmak istiyorsanız <xref:System.Data.DataTableExtensions.AsEnumerable%2A> yöntemi aramanız gerekir.  
   
- Aşağıdaki örnek, SalesOrderHeader tablosundan gelen tüm çevrimiçi siparişleri alır ve sipariş KIMLIĞINI, sipariş tarihini ve sipariş numarasını konsola verir.  
+ Aşağıdaki örnek, SalesOrderHeader tablosundan tüm çevrimiçi siparişleri alır ve sipariş kimliğini, sipariş tarihini ve sipariş numarasını konsola verir.  
   
  [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
- [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
+ [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)]
   
- Yerel değişken sorgusu, standart sorgu işleçlerinden bir veya daha fazla sorgu işleci uygulayarak bir veya daha fazla bilgi kaynağında çalışan bir sorgu ifadesiyle başlatılır ve bu durumda, <xref:System.Data.DataSet> sınıfına özgü işleçler LINQ to DataSet. Önceki örnekteki sorgu ifadesi standart sorgu işleçlerinin ikisini kullanır: `Where` ve `Select`.  
+ Yerel değişken sorgusu, standart sorgu işleçlerinden veya LINQ'dan DataSet'e bir veya daha fazla sorgu işleci uygulayarak bir veya daha fazla <xref:System.Data.DataSet> bilgi kaynağında çalışan bir sorgu ifadesiyle başolarak başolarak başolarak başolarak adlanır. Önceki örnekteki sorgu ifadesi, standart sorgu işleçlerinden ikisini kullanır: `Where` ve `Select`.  
   
- `Where` yan tümcesi, bir koşula göre diziyi filtreleyerek, bu durumda `OnlineOrderFlag` `true`olarak ayarlanmıştır. `Select` işleci, işlecine geçirilen bağımsız değişkenleri yakalayan bir sıralanabilir nesne ayırır ve döndürür. Yukarıdaki örnekte, anonim bir tür üç özellik ile oluşturulur: `SalesOrderID`, `OrderDate`ve `SalesOrderNumber`. Bu üç özellik değerleri, `SalesOrderHeader` tablosundan `SalesOrderID`, `OrderDate`ve `SalesOrderNumber` sütunlarının değerlerine ayarlanır.  
+ Yan `Where` tümce, sırayı bir koşula göre `OnlineOrderFlag` filtreler, `true`bu durumda dizi . İşleç, `Select` işleç geçirilen bağımsız değişkenleri yakalayan bir sayısal nesne ayırır ve döndürür. Bu yukarıdaki örnekte, anonim bir tür `SalesOrderID`üç `OrderDate`özellikleri `SalesOrderNumber`ile oluşturulur: , ve . Bu üç özelliğin `SalesOrderID`değerleri , , `OrderDate`ve `SalesOrderNumber` `SalesOrderHeader` sütunlar tablodaki değerleri ayarlanır.  
   
- `foreach` döngüsü daha sonra `Select` tarafından döndürülen sıralanabilir nesneyi numaralandırır ve sorgu sonuçlarını verir. Sorgu, <xref:System.Collections.Generic.IEnumerable%601>uygulayan <xref:System.Linq.Enumerable> bir tür olduğundan, sorgu değişkeni `foreach` döngüsü kullanılarak yinelenene kadar sorgu değerlendirmesi ertelenir. Ertelenmiş sorgu değerlendirmesi, sorguların birden çok kez değerlendirilebilecek, her seferinde farklı sonuçlar veren değerler olarak tutulmasını sağlar.  
+ Döngü `foreach` daha sonra döndürülen `Select` sayısal nesneyi kaydeder ve sorgu sonuçlarını verir. Sorgu uygulayan <xref:System.Linq.Enumerable> bir tür <xref:System.Collections.Generic.IEnumerable%601>olduğundan, sorgu değişkeni `foreach` döngü kullanılarak üzerinde yinelenene kadar sorgunun değerlendirilmesi ertelenir. Ertelenmiş sorgu değerlendirmesi, sorguların her seferinde farklı sonuçlar elde ederek birden çok kez değerlendirilebilecek değerler olarak tutulmasını sağlar.  
   
- <xref:System.Data.DataRowExtensions.Field%2A> yöntemi bir <xref:System.Data.DataRow> sütun değerlerine erişim sağlar ve <xref:System.Data.DataRowExtensions.SetField%2A> (önceki örnekte gösterilmez) <xref:System.Data.DataRow>sütun değerlerini ayarlar. <xref:System.Data.DataRowExtensions.Field%2A> yöntemi ve <xref:System.Data.DataRowExtensions.SetField%2A> yöntemi null yapılabilir türleri işler, bu nedenle null değerleri açıkça denetlemeniz gerekmez. Her iki yöntem de genel yöntemlerdir, bu da dönüş türünü dönüştürmek zorunda değilsiniz anlamına gelir. Önceden var olan sütun erişimcisini <xref:System.Data.DataRow> (örneğin, `o["OrderDate"]`) kullanabilirsiniz, ancak bunu yapmak için return nesnesini uygun türe atamalısınız.  Sütun null yapılabilir ise, <xref:System.Data.DataRow.IsNull%2A> yöntemini kullanarak değerin null olup olmadığını denetlemeniz gerekir. Daha fazla bilgi için bkz. [Genel alan ve SetField yöntemleri](generic-field-and-setfield-methods-linq-to-dataset.md).  
+ Yöntem <xref:System.Data.DataRowExtensions.Field%2A> a sütun değerlerine erişim <xref:System.Data.DataRow> sağlar <xref:System.Data.DataRowExtensions.SetField%2A> ve (önceki örnekte gösterilmez) <xref:System.Data.DataRow>bir . sütun değerlerini ayarlar . Hem <xref:System.Data.DataRowExtensions.Field%2A> yöntem <xref:System.Data.DataRowExtensions.SetField%2A> hem de yöntem nullable türleri işler, bu nedenle açıkça null değerleri denetlemek zorunda değildir. Her iki yöntem de genel yöntemlerdir, bu da dönüş türünü atmanız gerekolmadığı anlamına gelir. Önceden varolan sütun aksesuarını <xref:System.Data.DataRow> (örneğin, ) `o["OrderDate"]`kullanabilirsiniz, ancak bunu yapmak için iade nesnesini uygun türe dökmeniz gerekir.  Sütun nullable ise <xref:System.Data.DataRow.IsNull%2A> yöntemi kullanarak değeri null olup olmadığını kontrol etmek zorunda. Daha fazla bilgi için [Genel Alan ve SetField Yöntemleri'ne](generic-field-and-setfield-methods-linq-to-dataset.md)bakın.  
   
- <xref:System.Data.DataRowExtensions.Field%2A> yönteminin ve <xref:System.Data.DataRowExtensions.SetField%2A> yönteminin genel parametresinde belirtilen veri türünün, temel alınan değerin türüyle eşleşmesi gerektiğini veya bir <xref:System.InvalidCastException> `T`. Belirtilen sütun adı ayrıca <xref:System.Data.DataSet> bir sütunun adıyla eşleşmelidir veya bir <xref:System.ArgumentException> atılır. Her iki durumda da, sorgu yürütüldüğünde çalışma zamanı veri numaralandırmasında özel durum oluşturulur.  
+ Yöntem <xref:System.Data.DataRowExtensions.SetField%2A> ve yöntemin genel parametresinde <xref:System.InvalidCastException> `T` belirtilen veri türünün, temel değerin türüyle eşleşmesi veya atılacağına dikkat edin. <xref:System.Data.DataRowExtensions.Field%2A> Belirtilen sütun adı da bir sütunun <xref:System.Data.DataSet> <xref:System.ArgumentException> adı veya bir atAtılacak eşleşmesi gerekir. Her iki durumda da, sorgu yürütüldüğünde özel durum çalışma zamanı veri numaralandırmasında atılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

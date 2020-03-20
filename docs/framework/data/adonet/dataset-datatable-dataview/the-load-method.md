@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-ms.openlocfilehash: da0695aff9447355b1fc44a033c1b4a1cc224435
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f1c819333225c22efb85946001a1fc8340d57989
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785875"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150733"
 ---
 # <a name="the-load-method"></a>Load Yöntemi
-Bir veri kaynağından satırları <xref:System.Data.DataTable.Load%2A> içeren bir <xref:System.Data.DataTable> ile yüklemek için yöntemini kullanabilirsiniz. Bu, en basit biçimiyle bir **DataReader**olan tek bir parametreyi kabul eden aşırı yüklenmiş bir yöntemdir. Bu formda, yalnızca **DataTable** 'ı satırları ile yükler. İsteğe bağlı olarak, verilerin **DataTable**'a nasıl eklendiğini denetlemek için **LoadOption** parametresini belirtebilirsiniz.  
+Bir veri <xref:System.Data.DataTable.Load%2A> kaynağından satırlarla a <xref:System.Data.DataTable> yüklemek için yöntemi kullanabilirsiniz. Bu, en basit haliyle, tek bir parametre, bir **DataReader**kabul eden aşırı yüklü bir yöntemdir. Bu formda, **yalnızca Satırlarla DataTable** yükler. İsteğe bağlı olarak, **Verilerin DataTable'a**nasıl eklenmesini denetlemek için **LoadOption** parametresini belirtebilirsiniz.  
   
- **LoadOption** parametresi, veri kaynağından gelen verilerin tabloda zaten bulunan verilerle nasıl birleştirileceğini açıkladığı için **DataTable** 'ın zaten veri satırları içerdiği durumlarda faydalıdır. Örneğin, **PreserveCurrentValues** (varsayılan), bir satırın **DataTable**'a **eklenen** olarak işaretlendiği, **özgün** değerin veya her sütunun veri kaynağından eşleşen satırın içeriğine ayarlandığı durumlarda belirtir. **Geçerli** değer, satır eklendiğinde atanan değerleri korur ve satırın **RowState** değeri **değiştirildi**olarak ayarlanır.  
+ **LoadOption** parametresi, veri kaynağından gelen verilerin tablodaki verilerle nasıl birleştirileceğini açıkladığı **için, DataTable'ın** zaten veri satırları içerdiği durumlarda özellikle yararlıdır. Örneğin, **Koruma Geçerli Değerleri** (varsayılan) bir satır **ın DataTable'a** **Eklendi** olarak işaretlendiği durumlarda, **Özgün** değerin veya her sütunun veri kaynağından eşleşen satırın içeriğine ayarlandığı belirtilir. **Geçerli** değer satır eklendiğinde atanan değerleri koruyacak ve satırın **Satır Durumu** **Değiştirildi**olarak ayarlanır.  
   
- Aşağıdaki tabloda, <xref:System.Data.LoadOption> numaralandırma değerlerinin kısa bir açıklaması verilmiştir.  
+ Aşağıdaki tablo, numaralandırma değerlerinin <xref:System.Data.LoadOption> kısa bir açıklamasını verir.  
   
 |LoadOption değeri|Açıklama|  
 |----------------------|-----------------|  
-|**OverwriteRow**|Gelen satırlarda zaten **DataTable**içinde olan bir satırla aynı **PrimaryKey** değeri varsa, her sütunun **özgün** ve **geçerli** değerleri gelen satırdaki değerlerle yerine, **RowState** özelliği ise olarak ayarlanır. **Değiştirilmez**.<br /><br /> **DataTable** 'da zaten mevcut olmayan veri kaynağındaki satırlar, bir **RowState** değeri **değiştirilmeden**eklenir.<br /><br /> Bu seçenek, veri kaynağının içeriğiyle eşleşecek şekilde **DataTable** 'ın içeriğini yeniler.|  
-|**PreserveCurrentValues (varsayılan)**|Gelen satırlarda zaten **DataTable**içinde olan bir satır Ile aynı **PrimaryKey** değeri varsa, **özgün** değer gelen satırın içeriğine ayarlanır ve **geçerli** değer değiştirilmez.<br /><br /> **RowState** **eklendiğinde** veya **değiştirilirse**, **değiştirildi**olarak ayarlanır.<br /><br /> **RowState** **silinmişse** **silinen kalır.**<br /><br /> Veri kaynağından **DataTable** 'da zaten mevcut olmayan satırlar eklenir ve **RowState** , **Unchanged**olarak ayarlanır.|  
-|**UpdateCurrentValues**|Gelen satırlar zaten **DataTable**içinde olan satır Ile aynı **PrimaryKey** değerine sahip Ise, **geçerli** değer **özgün** değere kopyalanır ve **geçerli** değer, gelen satırın içeriğine ayarlanır.<br /><br /> **DataTable** Içindeki **RowState** **eklendiyse**, **RowState** **eklenmiş**olarak kalır. **Değiştirilmiş** veya **Silinmiş**olarak Işaretlenen satırlarda, **RowState** **değiştirilir**.<br /><br /> Veri kaynağından **DataTable** 'da zaten mevcut olmayan satırlar eklenir ve **RowState** , **eklendi**olarak ayarlanır.|  
+|**OverwriteRow**|Gelen satırlar **DataTable'da**zaten bir satırla aynı **Birincil Anahtar** değerine sahipse, her sütunun **Özgün** ve **Geçerli** değerleri gelen satırdaki değerlerle değiştirilir ve **RowState** özelliği **Değişmeden**olarak ayarlanır.<br /><br /> **Veri Tablosu'nda** zaten bulunmayan veri kaynağından satırlar, **Değişmemiş** **bir Satır Durumu** değeriyle eklenir.<br /><br /> Bu seçenek, veri kaynağının içeriğiyle eşleşebilecek şekilde **DataTable'ın** içeriğini yeniler.|  
+|**Geçerli Değerleri Koruma (varsayılan)**|Gelen satırlar **DataTable'da**zaten bulunan bir satırla aynı **Birincil Anahtar** değerine sahipse, **Özgün** değer gelen satırın içeriğine ayarlanır ve **Geçerli** değer değiştirilmez.<br /><br /> **RowState** **Eklendi** veya **Değiştirilirse,** **Değiştirilecek**şekilde ayarlanır.<br /><br /> **RowState** **Silindiyse,** **Silinmiş**olarak kalır.<br /><br /> **Veri Kaynağı'nda** zaten bulunmayan veri kaynağından satırlar eklenir ve **RowState** **Değişmeden**olarak ayarlanır.|  
+|**Güncel Geçerli Değerler**|Gelen satırlar **DataTable'daki**satırla aynı **Birincil Anahtar** değerine sahipse, **Geçerli** değer **Özgün** değere kopyalanır ve **Geçerli** değer gelen satırın içeriğine ayarlanır.<br /><br /> **DataTable'daki** **RowState** **eklendiyse,** **RowState** **eklendi**kalır. **Değiştirilen** veya **Silinen**olarak işaretlenmiş satırlar için **RowState** **değiştirilir.**<br /><br /> **Veri Kaynağı'nda** zaten bulunmayan veri kaynağından satırlar eklenir ve **RowState** **Eklendi**olarak ayarlanır.|  
   
- Aşağıdaki örnek, **Northwind** veritabanındaki çalışanların Doğum günlerini listesini göstermek için **Load** yöntemini kullanır.  
+ Aşağıdaki örnek, **Northwind** veritabanındaki çalışanların doğum günlerinin listesini görüntülemek için **Yükle** yöntemini kullanır.  
   
 ```vb  
 Private Sub LoadBirthdays(ByVal connectionString As String)  
@@ -35,7 +35,7 @@ Private Sub LoadBirthdays(ByVal connectionString As String)
       " FROM dbo.Employees " & _  
       "ORDER BY BirthDate, LastName, FirstName"  
   
-    ' Open and fill a DataSet.   
+    ' Open and fill a DataSet.
     Dim adapter As SqlDataAdapter = New SqlDataAdapter( _  
         queryString, connectionString)  
     Dim employees As New DataSet  

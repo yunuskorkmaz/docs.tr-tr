@@ -12,33 +12,33 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-ms.openlocfilehash: dfdbf67d35cbb13e80d0c5184f165b0cc660e2ef
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 44104bec478f1fbb10acc0e591af43ea95fecdc5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76731627"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141334"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler
-Bu konu, <xref:System.Windows.Shapes.Shape> nesneleriyle nasıl çizileceğini gösteren bir genel bakış sunar. <xref:System.Windows.Shapes.Shape>, ekrana şekil çizmenizi sağlayan bir <xref:System.Windows.UIElement> türüdür. UI öğeleri olduklarından <xref:System.Windows.Shapes.Shape> nesneleri <xref:System.Windows.Controls.Panel> öğeleri ve çoğu denetim içinde kullanılabilir.  
+Bu konu, nesnelerle <xref:System.Windows.Shapes.Shape> nasıl çizilir eylene genel bir bakış sağlar. A, <xref:System.Windows.Shapes.Shape> ekrana <xref:System.Windows.UIElement> şekil çizmenizi sağlayan bir türdür. Bunlar UI öğeleri <xref:System.Windows.Shapes.Shape> olduğundan, nesneler öğelerin ve çoğu denetimin içinde <xref:System.Windows.Controls.Panel> kullanılabilir.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], grafik ve işleme hizmetlerine birkaç farklı erişim katmanı sunar. Üst katmanda <xref:System.Windows.Shapes.Shape> nesnelerinin kullanımı kolaydır ve [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] olay sistemine düzen ve katılım gibi birçok yararlı özellik sağlar.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]grafik ve render hizmetlerine çeşitli katmanlar sunar. Üst katmanda, <xref:System.Windows.Shapes.Shape> nesnelerin kullanımı kolaydır ve düzen ve [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] etkinlik sistemine katılım gibi birçok yararlı özellik sağlar.  
 
-<a name="shapes"></a>   
-## <a name="shape-objects"></a>Şekil nesneleri  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], kullanıma yönelik birkaç <xref:System.Windows.Shapes.Shape> nesne sağlar.  Tüm şekil nesneleri <xref:System.Windows.Shapes.Shape> sınıfından devralınır. Kullanılabilir şekil nesneleri <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>ve <xref:System.Windows.Shapes.Rectangle>içerir. <xref:System.Windows.Shapes.Shape> nesneler aşağıdaki ortak özellikleri paylaşır.  
+<a name="shapes"></a>
+## <a name="shape-objects"></a>Nesneleri Şekillendir  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]kullanıma hazır <xref:System.Windows.Shapes.Shape> nesneler sağlar.  Tüm şekil nesneleri <xref:System.Windows.Shapes.Shape> sınıftan devralır. Kullanılabilir şekil nesneleri <xref:System.Windows.Shapes.Ellipse> <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path> <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, <xref:System.Windows.Shapes.Rectangle>, , ve . <xref:System.Windows.Shapes.Shape>nesneler aşağıdaki ortak özellikleri paylaşır.  
   
-- <xref:System.Windows.Shapes.Shape.Stroke%2A>: Şeklin anahattının nasıl boyanacağını açıklar.  
+- <xref:System.Windows.Shapes.Shape.Stroke%2A>: Şeklin anahattının nasıl boyandığını açıklar.  
   
 - <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: Şeklin anahattının kalınlığını açıklar.  
   
-- <xref:System.Windows.Shapes.Shape.Fill%2A>: şeklin iç kısmının nasıl boyanacağını açıklar.  
+- <xref:System.Windows.Shapes.Shape.Fill%2A>: Şeklin iç kısmı nasıl boyanır.  
   
-- Cihazdan bağımsız piksellerde ölçülen koordinatları ve köşeleri belirtmek için veri özellikleri.  
+- Aygıtlardan bağımsız piksellerde ölçülen koordinatları ve verticleri belirtmek için veri özellikleri.  
   
- <xref:System.Windows.UIElement>türettikleri için, şekil nesneleri panellerin ve çoğu denetimin içinde kullanılabilir. <xref:System.Windows.Controls.Canvas> panel, alt nesnelerinin mutlak konumunu desteklediğinden karmaşık çizimler oluşturmak için özellikle iyi bir seçimdir.  
+ Çünkü onlar türetilmiştir <xref:System.Windows.UIElement>, şekil nesneleri paneller ve en denetimleri içinde kullanılabilir. Panel, <xref:System.Windows.Controls.Canvas> alt nesnelerinin mutlak konumlandırılmasını desteklediği için karmaşık çizimler oluşturmak için özellikle iyi bir seçimdir.  
   
- <xref:System.Windows.Shapes.Line> sınıfı iki noktaya çizgi çizmenizi sağlar. Aşağıdaki örnek, çizgi koordinatları ve vuruş özelliklerini belirtmek için çeşitli yollar gösterir.  
+ Sınıf, <xref:System.Windows.Shapes.Line> iki nokta arasında bir çizgi çizmenizi sağlar. Aşağıdaki örnek, satır koordinatlarını ve kontur özelliklerini belirtmenin çeşitli yollarını gösterir.  
   
  [!code-xaml[drawingwithshapeelements#LineExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
   
@@ -46,68 +46,68 @@ Bu konu, <xref:System.Windows.Shapes.Shape> nesneleriyle nasıl çizileceğini g
  [!code-csharp[shapesprocedural#ShapesProceduralLine](~/samples/snippets/csharp/VS_Snippets_Wpf/ShapesProcedural/Csharp/ShapesProcedural.cs#shapesproceduralline)]
  [!code-vb[shapesprocedural#ShapesProceduralLine](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ShapesProcedural/VisualBasic/ShapesProceduralVB.vb#shapesproceduralline)]  
   
- Aşağıdaki görüntüde işlenen <xref:System.Windows.Shapes.Line>gösterilmektedir.  
+ Aşağıdaki resimde işlenen <xref:System.Windows.Shapes.Line>gösterir.  
   
  ![Çizgi çizimi](./media/shape-ovw-line2.gif "shape_ovw_line2")  
   
- <xref:System.Windows.Shapes.Line> sınıfı bir <xref:System.Windows.Shapes.Shape.Fill%2A> özelliği sağlamasına karşın, bir <xref:System.Windows.Shapes.Line> alanı olmadığından, bu ayarın hiçbir etkisi olmaz.  
+ <xref:System.Windows.Shapes.Line> Sınıf bir <xref:System.Windows.Shapes.Shape.Fill%2A> özellik sağlasa da, bir <xref:System.Windows.Shapes.Line> alan olmadığından bunun bir etkisi yoktur.  
   
- Diğer bir yaygın şekil <xref:System.Windows.Shapes.Ellipse>.  Şeklin <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerini tanımlayarak <xref:System.Windows.Shapes.Ellipse> oluşturun. Bir daire çizmek için <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> değerleri eşit olan bir <xref:System.Windows.Shapes.Ellipse> belirtin.  
+ Başka bir ortak <xref:System.Windows.Shapes.Ellipse>şeklidir .  Şeklin <xref:System.Windows.Shapes.Ellipse> <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özellikleri tanımlayarak bir oluşturun. Bir daire çizmek için, <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.Height%2A> kimin <xref:System.Windows.Shapes.Ellipse> ve değerlerin eşit olduğunu belirtin.  
   
  [!code-xaml[ShapeOverviews#ShapesOVW1](~/samples/snippets/csharp/VS_Snippets_Wpf/ShapeOverviews/CS/Window1.xaml#shapesovw1)]  
   
  [!code-csharp[brushesmiscsnippets_procedural_snip#SetBackgroundColorOfShapeCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesMiscSnippets_procedural_snip/CSharp/SetBackgroundColorOfShapeExample.cs#setbackgroundcolorofshapecodeexamplewholepage)]
  [!code-vb[brushesmiscsnippets_procedural_snip#SetBackgroundColorOfShapeCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesMiscSnippets_procedural_snip/visualbasic/setbackgroundcolorofshapeexample.vb#setbackgroundcolorofshapecodeexamplewholepage)]  
   
- Aşağıdaki görüntüde bir işlenen <xref:System.Windows.Shapes.Ellipse>örneği gösterilmektedir.  
+ Aşağıdaki resimde işlenmiş bir örnek <xref:System.Windows.Shapes.Ellipse>gösterilmektedir.  
   
- ![Elips çizimi](./media/shape-ovw-ellipse2.png "shape_ovw_ellipse2")  
+ ![Elips illüstrasyon](./media/shape-ovw-ellipse2.png "shape_ovw_ellipse2")  
   
-<a name="paths"></a>   
-## <a name="using-paths-and-geometries"></a>Yolları ve geometrileri kullanma  
- <xref:System.Windows.Shapes.Path> sınıfı eğrileri ve karmaşık şekilleri çizmenizi sağlar. Bu eğriler ve şekiller <xref:System.Windows.Media.Geometry> nesneleri kullanılarak açıklanmıştır. Bir <xref:System.Windows.Shapes.Path>kullanmak için, bir <xref:System.Windows.Media.Geometry> oluşturup <xref:System.Windows.Shapes.Path> nesnenin <xref:System.Windows.Shapes.Path.Data%2A> özelliğini ayarlamak için bunu kullanırsınız.  
+<a name="paths"></a>
+## <a name="using-paths-and-geometries"></a>Yolları ve Geometrileri Kullanma  
+ Sınıf, <xref:System.Windows.Shapes.Path> eğriler ve karmaşık şekiller çizmenizi sağlar. Bu eğriler ve şekiller nesneler kullanılarak <xref:System.Windows.Media.Geometry> tanımlanır. Bir , <xref:System.Windows.Shapes.Path>bir kullanmak <xref:System.Windows.Media.Geometry> için bir oluşturmak <xref:System.Windows.Shapes.Path> ve <xref:System.Windows.Shapes.Path.Data%2A> nesnenin özelliğini ayarlamak için kullanabilirsiniz.  
   
- Aralarından seçim yapabileceğiniz çeşitli <xref:System.Windows.Media.Geometry> nesneleri vardır. <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.RectangleGeometry>ve <xref:System.Windows.Media.EllipseGeometry> sınıfları görece basit şekilleri anlatmaktadır. Daha karmaşık şekiller oluşturmak veya Eğriler oluşturmak için <xref:System.Windows.Media.PathGeometry>kullanın.  
+ Aralarından <xref:System.Windows.Media.Geometry> seçim yapabileceğiniz çeşitli nesneler vardır. , <xref:System.Windows.Media.LineGeometry> <xref:System.Windows.Media.RectangleGeometry>ve <xref:System.Windows.Media.EllipseGeometry> sınıflar nispeten basit şekilleri açıklar. Daha karmaşık şekiller oluşturmak veya eğriler oluşturmak için bir <xref:System.Windows.Media.PathGeometry>.  
   
-<a name="pathgeometry"></a>   
-### <a name="pathgeometry-and-pathsegments"></a>PathGeometry ve PathSegments  
- <xref:System.Windows.Media.PathGeometry> nesneler bir veya daha fazla <xref:System.Windows.Media.PathFigure> nesnesinden oluşur; Her <xref:System.Windows.Media.PathFigure> farklı bir "şekil" veya şekli temsil eder. Her <xref:System.Windows.Media.PathFigure>, her biri şekil veya şeklin bağlı bir bölümünü temsil eden bir veya daha fazla <xref:System.Windows.Media.PathSegment> nesnesinden oluşur. Segment türleri şunları içerir: <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.BezierSegment>ve <xref:System.Windows.Media.ArcSegment>.  
+<a name="pathgeometry"></a>
+### <a name="pathgeometry-and-pathsegments"></a>PathGeometri ve PathSegments  
+ <xref:System.Windows.Media.PathGeometry>nesneler bir veya daha fazla <xref:System.Windows.Media.PathFigure> nesneden oluşur; her <xref:System.Windows.Media.PathFigure> biri farklı bir "şekil" veya şekli temsil eder. Her <xref:System.Windows.Media.PathFigure> biri, her biri <xref:System.Windows.Media.PathSegment> şekil veya şeklin bağlı bir bölümünü temsil eden bir veya daha fazla nesneden oluşur. Segment türleri <xref:System.Windows.Media.LineSegment>şunlardır: <xref:System.Windows.Media.BezierSegment>, <xref:System.Windows.Media.ArcSegment>, ve .  
   
- Aşağıdaki örnekte, bir <xref:System.Windows.Shapes.Path> ikinci dereceden Bezier eğrisini çizmek için kullanılır.  
+ Aşağıdaki örnekte, <xref:System.Windows.Shapes.Path> bir kuadratik Bezier eğrisi çizmek için kullanılır.  
   
  [!code-xaml[geometrysample#34](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#34)]  
   
- Aşağıdaki görüntüde işlenmiş şekil gösterilmektedir.  
+ Aşağıdaki resim, işlenen şekli gösterir.  
   
  ![Yol çizimi](./media/shape-ovw-path2.gif "shape_ovw_path2")  
   
- <xref:System.Windows.Media.PathGeometry> ve diğer <xref:System.Windows.Media.Geometry> sınıfları hakkında daha fazla bilgi için bkz. [geometriye genel bakış](geometry-overview.md).  
+ Ve diğer <xref:System.Windows.Media.Geometry> <xref:System.Windows.Media.PathGeometry> sınıflar hakkında daha fazla bilgi için [Geometriye Genel Bakış'a](geometry-overview.md)bakın.  
   
-<a name="pathdatastring"></a>   
-### <a name="xaml-abbreviated-syntax"></a>XAML kısaltılmış sözdizimi  
- [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], bir <xref:System.Windows.Shapes.Path>anlatmak için özel kısaltılmış bir sözdizimi de kullanabilirsiniz. Aşağıdaki örnekte, karmaşık bir şekil çizmek için kısaltılmış sözdizimi kullanılır.  
+<a name="pathdatastring"></a>
+### <a name="xaml-abbreviated-syntax"></a>XAML Kısaltılmış Sözdizimi  
+ 'de, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]bir <xref:System.Windows.Shapes.Path>. Aşağıdaki örnekte, karmaşık bir şekil çizmek için kısaltılmış sözdizimi kullanılır.  
   
 ```xaml  
-      <Path Stroke="DarkGoldenRod" StrokeThickness="3"   
+      <Path Stroke="DarkGoldenRod" StrokeThickness="3"
 Data="M 100,200 C 100,25 400,350 400,175 H 280" />  
 ```  
   
- Aşağıdaki görüntüde işlenen bir <xref:System.Windows.Shapes.Path>gösterilmektedir.  
+ Aşağıdaki resimde işlenmiş bir <xref:System.Windows.Shapes.Path>görüntü gösterilmektedir.  
   
  ![Yol çizimi](./media/shape-ovw-path.PNG "shape_ovw_path")  
   
- <xref:System.Windows.Shapes.Path.Data%2A> öznitelik dizesi, <xref:System.Windows.Controls.Canvas>koordinat sistemindeki yol için bir başlangıç noktası kuran, M tarafından belirtilen "MoveTo" komutuyla başlar. <xref:System.Windows.Shapes.Path> veri parametreleri büyük/küçük harfe duyarlıdır. Büyük harf, yeni geçerli nokta için mutlak bir konum gösterir. Küçük harf m, göreli koordinatları gösterir. İlk kesim, (100.200) ve bitiş saati (400.175) ile başlayan üçüncü dereceden Bezier eğrisdir ve iki denetim noktası (100, 25) ve (400.350) kullanılarak çizilir. Bu segment <xref:System.Windows.Shapes.Path.Data%2A> öznitelik dizesinde C komutu tarafından belirtilir. Yine, büyük harf C mutlak bir yolu belirtir; küçük harfli c, göreli bir yol gösterir.  
+ Öznitelik <xref:System.Windows.Shapes.Path.Data%2A> dizesi, M ile gösterilen ve koordinat sistemindeki <xref:System.Windows.Controls.Canvas>yol için bir başlangıç noktası oluşturan "moveto" komutuyla başlar. <xref:System.Windows.Shapes.Path>veri parametreleri büyük/küçük harf duyarlıdır. Büyük M, yeni geçerli nokta için mutlak bir konum gösterir. Küçük bir m göreli koordinatları gösterir. İlk segment ,(100.200) başlayıp (400.175) ile biten ve iki kontrol noktası (100,25) ve (400.350) kullanılarak çizilen kübik Bezier eğrisidir. Bu kesim öznitelik dizesinde <xref:System.Windows.Shapes.Path.Data%2A> C komutu ile gösterilir. Yine, büyük C mutlak bir yol gösterir; küçük c göreli bir yolu gösterir.  
   
- İkinci kesim, önceki alt yolun uç noktasından (400.175) yeni bir uç noktaya (280.175) çizilmiş bir çizgi belirten mutlak yatay "lineto" komutu H ile başlar. Yatay bir "lineto" komutu olduğundan, belirtilen değer bir *x*koordinatı.  
+ İkinci bölüm, önceki alt adadan (400.175) yeni bir bitiş noktasına (280.175) çekilen bir çizgi belirten mutlak yatay "lineto" komutuyla başlar. Yatay bir "lineto" komutu olduğundan, belirtilen değer *x*-koordinattır.  
   
- Tüm yol sözdizimi için bkz. <xref:System.Windows.Shapes.Path.Data%2A> başvurusu ve [PathGeometry kullanarak şekil oluşturma](how-to-create-a-shape-by-using-a-pathgeometry.md).  
+ Tam yol sözdizimi için <xref:System.Windows.Shapes.Path.Data%2A> başvuruyu görün ve [Yol Geometrisi kullanarak şekil oluşturun.](how-to-create-a-shape-by-using-a-pathgeometry.md)  
   
-<a name="fillpaint"></a>   
-## <a name="painting-shapes"></a>Şekilleri boyama  
- <xref:System.Windows.Media.Brush> nesneler, bir şeklin <xref:System.Windows.Shapes.Shape.Stroke%2A> ve <xref:System.Windows.Shapes.Shape.Fill%2A>boyamak için kullanılır. Aşağıdaki örnekte, <xref:System.Windows.Shapes.Ellipse> vuruş ve dolgusu belirtilmiştir. Fırça özelliklerinin geçerli girişinin bir anahtar sözcük veya onaltılık renk değeri olabileceğini unutmayın. Kullanılabilir renk anahtar sözcükleri hakkında daha fazla bilgi için, <xref:System.Windows.Media> ad alanındaki <xref:System.Windows.Media.Colors> sınıfının özelliklerine bakın.  
+<a name="fillpaint"></a>
+## <a name="painting-shapes"></a>Şekilleri Boyama  
+ <xref:System.Windows.Media.Brush>nesneler bir şeklin <xref:System.Windows.Shapes.Shape.Stroke%2A> ve <xref:System.Windows.Shapes.Shape.Fill%2A>. Aşağıdaki örnekte, kontur ve <xref:System.Windows.Shapes.Ellipse> dolgu belirtilir. Fırça özellikleri için geçerli girişin bir anahtar kelime veya hexadecimal renk değeri olabileceğini unutmayın. Kullanılabilir renk anahtar kelimeleri hakkında daha <xref:System.Windows.Media.Colors> fazla bilgi <xref:System.Windows.Media> için ad alanındaki sınıfın özelliklerine bakın.  
   
 ```xaml
-<Canvas Background="LightGray">   
+<Canvas Background="LightGray">
    <Ellipse  
       Canvas.Top="50"  
       Canvas.Left="50"  
@@ -119,11 +119,11 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
 </Canvas>  
 ```  
   
- Aşağıdaki görüntüde işlenen <xref:System.Windows.Shapes.Ellipse>gösterilmektedir.  
+ Aşağıdaki resimde işlenen <xref:System.Windows.Shapes.Ellipse>gösterir.  
   
  ![Elips](./media/shape-ovw-ellipsefill.PNG "shape_ovw_ellipsefill")  
   
- Alternatif olarak, şekli düz bir renkle boyamak için açıkça bir <xref:System.Windows.Media.SolidColorBrush> nesnesi oluşturmak üzere özellik öğesi sözdizimini kullanabilirsiniz.  
+ Alternatif olarak, şekli düz bir renkle boyamak için açıkça bir <xref:System.Windows.Media.SolidColorBrush> nesne oluşturmak için özellik öğesi sözdizimini kullanabilirsiniz.  
   
 ```xaml
 <!-- This polygon shape uses pre-defined color values for its Stroke and  
@@ -134,7 +134,7 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
 <Polygon  
     Points="300,200 400,125 400,275 300,200"  
-    Stroke="Purple"   
+    Stroke="Purple"
     StrokeThickness="2">  
     <Polygon.Fill>  
        <SolidColorBrush Color="Blue" Opacity="0.4"/>  
@@ -142,29 +142,29 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
 </Polygon>  
 ```  
   
- Aşağıdaki çizimde, işlenmiş şekil gösterilmektedir.  
+ Aşağıdaki resimde işlenen şekli gösterilmektedir.  
   
- ![SolidColorBrush çizimi](./media/shape-ovw-solidcolorbrush.PNG "shape_ovw_solidcolorbrush")  
+ ![SolidColorBrush illüstrasyon](./media/shape-ovw-solidcolorbrush.PNG "shape_ovw_solidcolorbrush")  
   
- Ayrıca, bir şeklin konturunu veya degradelerini, resimleri, desenleri ve daha fazlasını boyayabilir. Daha fazla bilgi için bkz. [düz renklerle boyama ve degradelere genel bakış](painting-with-solid-colors-and-gradients-overview.md).  
+ Ayrıca bir şeklin konturunu boyayabilir veya degradeler, resimler, desenler ve daha fazlası ile doldurabilirsiniz. Daha fazla bilgi [için, Düz Renkler ve Degradeler Genel Bakış ile Resim](painting-with-solid-colors-and-gradients-overview.md)bakın.  
   
-<a name="stretchableshapessection"></a>   
-## <a name="stretchable-shapes"></a>Uzatılabilir şekiller  
- <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>ve <xref:System.Windows.Shapes.Rectangle> sınıflarının hepsi bir <xref:System.Windows.Shapes.Shape.Stretch%2A> özelliğine sahiptir. Bu özellik, bir <xref:System.Windows.Shapes.Shape> nesnesinin içeriğinin (çizilecek şekil) <xref:System.Windows.Shapes.Shape> nesnenin düzen alanını doldurmak için nasıl uzatılacağını belirler. <xref:System.Windows.Shapes.Shape> nesnenin düzen alanı, <xref:System.Windows.Shapes.Shape> bir <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> ayarı ya da <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> ve <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> ayarları nedeniyle, Düzen sistemi tarafından ayrılan alan miktarıdır. Windows Presentation Foundation düzen hakkında daha fazla bilgi için bkz. [düzene](../advanced/layout.md) genel bakış.  
+<a name="stretchableshapessection"></a>
+## <a name="stretchable-shapes"></a>Gerilebilir Şekiller  
+ , <xref:System.Windows.Shapes.Line> <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon> <xref:System.Windows.Shapes.Polyline>, <xref:System.Windows.Shapes.Rectangle> ve sınıflar <xref:System.Windows.Shapes.Shape.Stretch%2A> tüm bir özelliği vardır. Bu özellik, nesnenin düzen alanını doldurmak için nesnenin <xref:System.Windows.Shapes.Shape> içeriğinin <xref:System.Windows.Shapes.Shape> (çizilecek şeklin) nasıl genişletildiğini belirler. Bir <xref:System.Windows.Shapes.Shape> nesnenin düzen alanı, açık <xref:System.Windows.Shapes.Shape> <xref:System.Windows.FrameworkElement.Width%2A> ve ayar veya onun <xref:System.Windows.FrameworkElement.Height%2A> <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> ve <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> ayarları nedeniyle, düzen sistemi tarafından ayrılan alan miktarıdır. Windows Sunu Temeli'ndeki düzen [Layout](../advanced/layout.md) hakkında daha fazla bilgi için Düzen'e genel bakış'a bakın.  
   
- Esnetme özelliği aşağıdaki değerlerden birini alır:  
+ Stretch özelliği aşağıdaki değerlerden birini alır:  
   
-- <xref:System.Windows.Media.Stretch.None>: <xref:System.Windows.Shapes.Shape> nesnenin içerikleri genişletilmedi.  
+- <xref:System.Windows.Media.Stretch.None>: <xref:System.Windows.Shapes.Shape> Nesnenin içeriği uzatılmış değildir.  
   
-- <xref:System.Windows.Media.Stretch.Fill>: <xref:System.Windows.Shapes.Shape> nesnenin içerikleri, düzen alanını doldurmak için uzatılır.  En boy oranı korunmaz.  
+- <xref:System.Windows.Media.Stretch.Fill>: <xref:System.Windows.Shapes.Shape> Nesnenin içeriği, düzen alanını doldurmak için uzatılır.  En boy oranı korunmaz.  
   
-- <xref:System.Windows.Media.Stretch.Uniform>: <xref:System.Windows.Shapes.Shape> nesnenin içerikleri, özgün en boy oranını korurken düzen alanını doldurmak için mümkün olduğunca uzatılır.  
+- <xref:System.Windows.Media.Stretch.Uniform>: <xref:System.Windows.Shapes.Shape> Nesnenin içeriği, orijinal en boy oranını korurken yerleşim alanını doldurmak için mümkün olduğunca uzatılır.  
   
-- <xref:System.Windows.Media.Stretch.UniformToFill>: <xref:System.Windows.Shapes.Shape> nesnenin içeriği, özgün en boy oranını korurken düzen alanını tamamen doldurmak için uzatılır.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: <xref:System.Windows.Shapes.Shape> Nesnenin içeriği, orijinal en boy oranını korurken düzen alanını tamamen doldurmak için uzatılır.  
   
- <xref:System.Windows.Shapes.Shape> nesnenin içerikleri uzatıldığında, <xref:System.Windows.Shapes.Shape> nesnesinin anahattının uzatma sonrasında boyanmış olduğunu unutmayın.  
+ Bir <xref:System.Windows.Shapes.Shape> nesnenin içeriği gerildiğinde, nesnenin <xref:System.Windows.Shapes.Shape> anahattının germeden sonra boyandığını unutmayın.  
   
- Aşağıdaki örnekte, (0, 0) ile (0, 1) arasında (1, 1) çok küçük bir üçgen çizmek için bir <xref:System.Windows.Shapes.Polygon> kullanılır. <xref:System.Windows.Shapes.Polygon> nesnenin <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> 100 olarak ayarlanır ve Esnetme özelliği Fill olarak ayarlanır. Sonuç olarak, <xref:System.Windows.Shapes.Polygon> nesnenin içerikleri (üçgeni) daha büyük alanı dolduracak şekilde uzatılır.  
+ Aşağıdaki örnekte, <xref:System.Windows.Shapes.Polygon> a çok küçük bir üçgen çizmek için kullanılır (0,0) için (0,1) için (1,1). Nesnenin <xref:System.Windows.Shapes.Polygon> ve <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.Height%2A> 100 olarak ayarlanır ve streç özelliği Doldurmak için ayarlanır. Sonuç olarak, <xref:System.Windows.Shapes.Polygon> nesnenin içeriği (üçgen) büyük alanı doldurmak için gerilir.  
   
 ```xaml
 <Polygon  
@@ -193,25 +193,25 @@ myPolygon.Stroke = Brushes.Black;
 myPolygon.StrokeThickness = 2;  
 ```
 
-<a name="transforms"></a>   
-## <a name="transforming-shapes"></a>Şekilleri dönüştürme  
- <xref:System.Windows.Media.Transform> sınıfı, şekilleri iki boyutlu bir düzlemde dönüştürmek için yollar sağlar.  Farklı dönüştürme türleri arasında döndürme (<xref:System.Windows.Media.RotateTransform>), ölçek (<xref:System.Windows.Media.ScaleTransform>), eğriltme (<xref:System.Windows.Media.SkewTransform>) ve çeviri (<xref:System.Windows.Media.TranslateTransform>) bulunur.  
+<a name="transforms"></a>
+## <a name="transforming-shapes"></a>Şekilleri Dönüştürme  
+ Sınıf, <xref:System.Windows.Media.Transform> şekilleri iki boyutlu bir düzlemde dönüştürmek için araçlar sağlar.  Farklı dönüşüm türleri döndürme<xref:System.Windows.Media.RotateTransform>( ),<xref:System.Windows.Media.ScaleTransform>ölçek (<xref:System.Windows.Media.SkewTransform>), eğriltme ( ), ve çeviri ( ) içerir.<xref:System.Windows.Media.TranslateTransform>  
   
- Bir şekle uygulanacak ortak bir dönüşüm bir dönüşdir.  Bir şekli döndürmek için bir <xref:System.Windows.Media.RotateTransform> oluşturun ve <xref:System.Windows.Media.RotateTransform.Angle%2A>belirtin. 45 <xref:System.Windows.Media.RotateTransform.Angle%2A>, öğe 45 derece saat yönünde döner; 90 açısı öğe 90 derece saat yönünde döner; vb. Öğenin döndürüldüğü noktayı denetlemek istiyorsanız <xref:System.Windows.Media.RotateTransform.CenterX%2A> ve <xref:System.Windows.Media.RotateTransform.CenterY%2A> özelliklerini ayarlayın. Bu özellik değerleri, dönüştürülmekte olan öğenin koordinat alanında ifade edilir. <xref:System.Windows.Media.RotateTransform.CenterX%2A> ve <xref:System.Windows.Media.RotateTransform.CenterY%2A> varsayılan değerleri sıfır olmalıdır. Son olarak, <xref:System.Windows.Media.RotateTransform> öğesine uygulayın. Dönüşümün düzeni etkilemesini istemiyorsanız şeklin <xref:System.Windows.UIElement.RenderTransform%2A> özelliğini ayarlayın.  
+ Bir şekle uygulanacak yaygın bir dönüşüm bir dönüşdür.  Bir şekli döndürmek için, <xref:System.Windows.Media.RotateTransform> bir <xref:System.Windows.Media.RotateTransform.Angle%2A>oluşturmak ve onun . 45'lik bir <xref:System.Windows.Media.RotateTransform.Angle%2A> elementi saat yönünde 45 derece döndürür; 90'lık bir açı eleman 90 derece saat yönünde döner; ve saire. Öğenin <xref:System.Windows.Media.RotateTransform.CenterX%2A> <xref:System.Windows.Media.RotateTransform.CenterY%2A> döndürüldettiği noktayı denetlemek istiyorsanız, özellikleri ve özelliklerini ayarlayın. Bu özellik değerleri dönüştürülen öğenin koordinat alanında ifade edilir. <xref:System.Windows.Media.RotateTransform.CenterX%2A>ve <xref:System.Windows.Media.RotateTransform.CenterY%2A> varsayılan değerleri sıfırdır. Son olarak, <xref:System.Windows.Media.RotateTransform> öğeyi uygulayın. Dönüşümün düzeni etkilemesini istemiyorsanız, şeklin <xref:System.Windows.UIElement.RenderTransform%2A> özelliğini ayarlayın.  
   
- Aşağıdaki örnekte, şeklin sol üst köşesinden (0, 0) bir şekil 45 derece döndürmek için bir <xref:System.Windows.Media.RotateTransform> kullanılır.  
+ Aşağıdaki örnekte, <xref:System.Windows.Media.RotateTransform> bir şekli şekli sol üst köşe (0,0) hakkında 45 derece döndürmek için kullanılır.  
   
  [!code-xaml[transformssample#14](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/RotateTransformExample.xaml#14)]  
   
- Sonraki örnekte, başka bir şekil 45 derece döndürülür, ancak bu zaman nokta (25, 50) ile döndürülür.  
+ Sonraki örnekte, başka bir şekil 45 derece döndürülür, ancak bu sefer nokta (25,50) etrafında döndürülür.  
   
  [!code-xaml[transformssample#15](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/RotateTransformExample.xaml#15)]  
   
- Aşağıdaki çizimde, iki dönüştürme uygulamanın sonuçları gösterilmektedir.  
+ Aşağıdaki resimde iki dönüşümü uygulamanın sonuçları gösterilmektedir.  
   
- ![farklı orta noktaları olan 45 derece döndürme](./media/wcpsdk-graphicsmm-rotatetransform45degrees.gif "wcpsdk_graphicsmm_rotatetransform45degrees")  
+ ![Farklı merkez noktaları ile 45 derece rotasyonlar](./media/wcpsdk-graphicsmm-rotatetransform45degrees.gif "wcpsdk_graphicsmm_rotatetransform45degrees")  
   
- Önceki örneklerde, her şekil nesnesine tek bir dönüşüm uygulandı. Bir şekle (veya başka bir kullanıcı arabirimi öğesine) birden çok dönüşüm uygulamak için <xref:System.Windows.Media.TransformGroup>kullanın.  
+ Önceki örneklerde, her şekil nesnesine tek bir dönüştürme uygulanmıştır. Bir şekle (veya başka bir UI öğesine) <xref:System.Windows.Media.TransformGroup>birden çok dönüştürme uygulamak için bir .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

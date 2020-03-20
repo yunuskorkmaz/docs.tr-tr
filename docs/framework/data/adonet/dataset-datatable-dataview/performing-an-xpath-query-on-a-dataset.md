@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 6082a171d24c55ea52c153bbd920bb7486be78a7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5e9a00ab78a57c3c1686d7c87ed8b45d9b2649af
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784367"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150837"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>DataSet Üzerinde XPath Sorgusu Gerçekleştirme
-Eşitlenmiş <xref:System.Data.DataSet> ve <xref:System.Xml.XmlDataDocument> arasındaki ilişki, **XmlDataDocument** 'e erişen XML Path Language (XPath) sorgusu gibi XML hizmetlerinden yararlanabilirsiniz ve belirli işlevselliği daha kolay bir şekilde gerçekleştirebilir doğrudan **veri kümesine** erişme. Örneğin, bir **veri kümesindeki**diğer tablolarla ilişkilerde gezinmek için bir <xref:System.Data.DataTable> ' ın SELECT metodunu kullanmak yerine, bir veri **kümesiyle**eşitlenen bir **XmlDataDocument** üzerinde bir XPath sorgusu gerçekleştirebilirsiniz. bir <xref:System.Xml.XmlNodeList>biçimindeki XML öğelerinin listesi. **XmlNodeList**içindeki düğümler <xref:System.Xml.XmlElement> , düğüm olarak atama, daha sonra, eşitlenen <xref:System.Data.DataRow> **tablodaki satırlara eşleşen başvuruları döndürmek için XmlDataDocument 'in GetRowFromElement yöntemine geçirilebilir Veri kümesi**.  
+Senkronize <xref:System.Data.DataSet> edilmiş <xref:System.Xml.XmlDataDocument> ve XML Yol Dili (XPath) sorgusu **gibi, XmlDataDocument'a** erişen ve belirli işlevleri doğrudan **DataSet'e** erişmekten daha rahat gerçekleştirebilen XML hizmetlerinden yararlanmanızı sağlar. Örneğin, **Bir DataSet'teki**diğer <xref:System.Data.DataTable> tablolarla ilişkileri yönlendirmek için bir ilişkinin **Seç** yöntemini kullanmak yerine, Bir ' şeklinde XML öğelerinin listesini almak **için, DataSet** <xref:System.Xml.XmlNodeList>ile senkronize edilmiş bir **XmlDataDocument'da** XPath sorgusu gerçekleştirebilirsiniz. **XmlNodeList**düğümleri <xref:System.Xml.XmlElement> , düğümolarak döküm, daha sonra **XmlDataDocument** **GetRowFromElement** yöntemine geçirilebilir , <xref:System.Data.DataRow> senkronize **DataSet**tablonun satırlarına eşleşen başvurular dönmek için .  
   
- Örneğin, aşağıdaki kod örneği bir "ılchild" XPath sorgusu gerçekleştirir. **Veri kümesi** üç tabloyla doldurulmuştur: **Müşteriler**, **siparişler**ve **OrderDetails**. Örnekte, ilk olarak **müşteriler** ve **siparişler** tabloları arasında ve **siparişler** ve **OrderDetails** tabloları arasında bir üst-alt ilişkisi oluşturulur. Daha sonra bir XPath sorgusu, bir alt öğe **OrderDetails** düğümünün 43 değeriyle bir **ProductID** düğümü olduğu **müşteriler** düğümlerinin bir **XmlNodeList** 'i döndürmek için gerçekleştirilir. Temelde, örnek 43 **ProductID** 'sini içeren ürünü hangi müşterilerin sipariş etti belirleyen XPath sorgusunu kullanmaktır.  
+ Örneğin, aşağıdaki kod örneği bir "torun" XPath sorgusu gerçekleştirir. **DataSet** üç tabloyla doldurulur: **Müşteriler,** **Siparişler**ve **Sipariş Ayrıntıları.** Örnekte, önce **Müşteriler** ve **Siparişler** tabloları arasında ve **Siparişler** ve Sipariş **Ayrıntıları** tabloları arasında bir üst-alt ilişkisi oluşturulur. XPath sorgusu daha sonra, torun **Sipariş Ayrıntıları** düğümünde 43 değeriolan bir **ProductID** düğümüolan Bir **XmlNodeList** **of Customers** düğümlerini döndürmek için gerçekleştirilir. Özünde, örnek, **43'ün ProductID'sine** sahip ürünü hangi müşterilerin sipariş ettiğini belirlemek için XPath sorgusunu kullanır.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -43,7 +43,7 @@ dataSet.Relations.Add("OrderDetail", _
   dataSet.Tables("Orders").Columns("OrderID"), _  
 dataSet.Tables("OrderDetails").Columns("OrderID"), false).Nested = true  
   
-Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)   
+Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)
   
 Dim nodeList As XmlNodeList = xmlDoc.DocumentElement.SelectNodes( _  
   "descendant::Customers[*/OrderDetails/ProductID=43]")  
@@ -84,10 +84,10 @@ dataSet.Relations.Add("CustOrders",
   
 dataSet.Relations.Add("OrderDetail",  
   dataSet.Tables["Orders"].Columns["OrderID"],  
-  dataSet.Tables["OrderDetails"].Columns["OrderID"],   
+  dataSet.Tables["OrderDetails"].Columns["OrderID"],
   false).Nested = true;  
   
-XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);   
+XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);
   
 XmlNodeList nodeList = xmlDoc.DocumentElement.SelectNodes(  
   "descendant::Customers[*/OrderDetails/ProductID=43]");  

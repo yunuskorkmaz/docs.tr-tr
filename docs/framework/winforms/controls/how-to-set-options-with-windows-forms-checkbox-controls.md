@@ -12,21 +12,21 @@ helpviewer_keywords:
 - check boxes [Windows Forms], using to set options
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-ms.openlocfilehash: 84198eab42aa02b1bb37fa16a3c4247a37f58a10
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 00b467836d8e60aeee51a010a6384abf7dd73c56
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746771"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141854"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Nasıl yapılır: Windows Forms CheckBox Denetimleriyle Seçenekleri Ayarlama
-Bir Windows Forms <xref:System.Windows.Forms.CheckBox> denetimi, kullanıcılara doğru/yanlış veya Evet/Hayır seçenekleri sağlamak için kullanılır. Seçildiğinde Denetim onay işareti görüntülenir.  
+Windows Forms <xref:System.Windows.Forms.CheckBox> denetimi, kullanıcılara True/False veya Yes/No seçeneklerini vermek için kullanılır. Denetim seçildiğinde bir onay işareti görüntüler.  
   
-### <a name="to-set-options-with-checkbox-controls"></a>Seçenekleri CheckBox denetimleriyle ayarlamak için  
+### <a name="to-set-options-with-checkbox-controls"></a>Onay Kutusu denetimleriyle seçenekleri ayarlamak için  
   
-1. <xref:System.Windows.Forms.CheckBox.Checked%2A> özelliğinin değerini inceleyerek durumunu belirleyin ve bu değeri bir seçenek ayarlamak için kullanın.  
+1. Durumunu belirlemek için <xref:System.Windows.Forms.CheckBox.Checked%2A> özelliğin değerini inceleyin ve bir seçenek ayarlamak için bu değeri kullanın.  
   
-     Aşağıdaki kod örneğinde, <xref:System.Windows.Forms.CheckBox> denetimin <xref:System.Windows.Forms.CheckBox.CheckedChanged> olayı harekete geçirilir, onay kutusu işaretliyse formun <xref:System.Windows.Forms.Control.AllowDrop%2A> özelliği `false` olarak ayarlanır. Bu, kullanıcı etkileşimini kısıtlamak istediğiniz durumlar için yararlıdır.  
+     Aşağıdaki kod örneğinde, <xref:System.Windows.Forms.CheckBox> denetimin <xref:System.Windows.Forms.CheckBox.CheckedChanged> olayı yükseltildiğinde, onay <xref:System.Windows.Forms.Control.AllowDrop%2A> kutusu `false` işaretlenirse formun özelliği ayarlanır. Bu, kullanıcı etkileşimini kısıtlamak istediğiniz durumlar için yararlıdır.  
   
     ```vb  
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, _  
@@ -43,7 +43,7 @@ Bir Windows Forms <xref:System.Windows.Forms.CheckBox> denetimi, kullanıcılara
     private void checkBox1_CheckedChanged(object sender, System.EventArgs e)  
     {  
        // Determine the CheckState of the check box.  
-       if (checkBox1.CheckState == CheckState.Checked)   
+       if (checkBox1.CheckState == CheckState.Checked)
        {  
           // If checked, do not allow items to be dragged onto the form.  
           this.AllowDrop = false;  
@@ -57,7 +57,7 @@ Bir Windows Forms <xref:System.Windows.Forms.CheckBox> denetimi, kullanıcılara
           System::EventArgs ^ e)  
        {  
           // Determine the CheckState of the check box.  
-          if (checkBox1->CheckState == CheckState::Checked)   
+          if (checkBox1->CheckState == CheckState::Checked)
           {  
              // If checked, do not allow items to be dragged onto the form.  
              this->AllowDrop = false;  

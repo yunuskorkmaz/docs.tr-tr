@@ -8,26 +8,26 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: b390caf644b86de0001387b2c3f41503fd34759a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 825e5a90ebb0d9df3b894ce7bd353e917b676939
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593202"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142400"
 ---
 # <a name="how-to-shear-colors"></a>Nasıl yapılır: Renkleri Bükme
-Yamultma artırır veya bir renk bileşeni için başka bir renk bileşeni orantılı bir miktar azaltır. Örneğin, kırmızı bileşeni mavi bileşeni değeriyle yarısı burada artırılır dönüştürmeyi göz önünde bulundurun. Bu tür bir dönüştürme altında (0.2, 0,5, 1) rengi (0,7, 0,5, 1) olacak. Yeni kırmızı 0.2 bileşendir + (1/2)(1) 0,7 =.  
+Yamultma, bir renk bileşenini başka bir renk bileşeniyle orantılı bir miktar artırır veya azaltır. Örneğin, kırmızı bileşenin mavi bileşenin yarısı kadar artırıldığı dönüşümü göz önünde bulundurun. Böyle bir dönüşüm altında renk (0.2, 0.5, 1) (0.7, 0.5, 1) olur. Yeni kırmızı bileşen 0,2 + (1/2)(1) = 0,7'dir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek oluşturan bir <xref:System.Drawing.Image> ColorBars4.bmp dosyasından nesnesi. Ardından kod, resimdeki her piksele önceki paragrafta açıklanan kesme dönüşümü uygular.  
+ Aşağıdaki örnek, ColorBars4.bmp dosyasından bir <xref:System.Drawing.Image> nesne oluşturuyor. Ardından kod, önceki paragrafta açıklanan kesme dönüşümünü görüntüdeki her piksele uygular.  
   
- Aşağıdaki resimde, sağ tarafta sol taraftaki özgün görüntü ve yamultulmuş görüntü gösterilmektedir: 
+ Aşağıdaki resimde soldaki orijinal görüntü ve sağdaki yıkıntılmış görüntü gösterilmektedir:
   
- ![İki kare renkli şeritler-özgün görüntü ve yamultulmuş görüntüyü gösteren yan ile.](./media/how-to-shear-colors/original-image-sheared-image.png)  
+ ![Orijinal görüntüyü ve yıyıkgörüntüyü gösteren renkli çizgili iki kare yan yana.](./media/how-to-shear-colors/original-image-sheared-image.png)  
   
- Aşağıdaki tabloda önceki ve sonraki kesme dönüşümü dört Çubuklar için rengi vektörleri listeler.  
+ Aşağıdaki tabloda, kesme dönüşümünden önce ve sonra dört çubuk için renk vektörleri listelenir.  
   
-|Özgün|Yamulttuysanız|  
+|Özgün|Sheared|  
 |--------------|-------------|  
 |(0, 0, 1, 1)|(0.5, 0, 1, 1)|  
 |(0.5, 1, 0.5, 1)|(0.75, 1, 0.5, 1)|  
@@ -38,7 +38,7 @@ Yamultma artırır veya bir renk bileşeni için başka bir renk bileşeni orant
  [!code-vb[System.Drawing.Misc3#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Değiştirin `ColorBars.bmp` bir görüntü adı ve yolu sisteminize göre geçerli.  
+ Önceki örnek, Windows Formları ile kullanılmak üzere <xref:System.Windows.Forms.PaintEventArgs> `e`tasarlanmıştır ve <xref:System.Windows.Forms.Control.Paint> olay işleyicisinin bir parametresi olan , gerektirir. Sisteminizde geçerli bir görüntü adı ve yol ile değiştirin. `ColorBars.bmp`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

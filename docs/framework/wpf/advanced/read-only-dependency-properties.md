@@ -5,41 +5,41 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: a849b835bab832a4ddb8d594d1788ab062f4284e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8adc90182f0f42f52e6ace4e13c68acb3539516b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459011"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187174"
 ---
 # <a name="read-only-dependency-properties"></a>Salt Okunur Bağımlılık Özellikleri
-Bu konu, mevcut salt okuma bağımlılığı özellikleri ve özel salt okunurdur bir bağımlılık özelliği oluşturmaya yönelik senaryolar ve teknikler dahil salt okuma bağımlılığı özelliklerini açıklar.  
+Bu konu, varolan salt okunur bağımlılık özellikleri ve özel salt okunur bağımlılık özelliği oluşturmak için senaryolar ve teknikler de dahil olmak üzere salt okunur bağımlılık özelliklerini açıklar.  
 
-<a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Prerequisites  
- Bu konu, bağımlılık özelliği uygulama ve meta verilerin özel bir bağımlılık özelliğine uygulanma şeklini anladığınızı varsayar. Bağlam için bkz. [Özel bağımlılık özellikleri](custom-dependency-properties.md) ve [bağımlılık özelliği meta verileri](dependency-property-metadata.md) .  
+<a name="prerequisites"></a>
+## <a name="prerequisites"></a>Önkoşullar  
+ Bu konu, bağımlılık özelliğini uygulamanın temel senaryolarını ve meta verilerin özel bağımlılık özelliğine nasıl uygulandığını anladığınızı varsayar. Bağlam için [Özel Bağımlılık Özellikleri](custom-dependency-properties.md) ve Bağımlılık Özelliği Meta [verilerine](dependency-property-metadata.md) bakın.  
   
-<a name="existing"></a>   
-## <a name="existing-read-only-dependency-properties"></a>Mevcut salt okunurdur bağımlılık özellikleri  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] çerçevesinde tanımlanan bağımlılık özelliklerinden bazıları salt okunurdur. Salt okunurdur bir bağımlılık özelliği belirtmenin tipik nedeni, bunların durum belirleme için kullanılması gereken özellikler olduğundan, bu durumun çok sayıda faktörden etkilenmesinden, ancak özelliğin bu duruma Kullanıcı arabirimi tasarım perspektifi. Örneğin, <xref:System.Windows.UIElement.IsMouseOver%2A> özellik, fare girişinden belirlendiği gibi oldukça yalnızca ortaya çıkmış durumda olur. Bu değeri, doğru fare girişinin bir atlama yöntemiyle programlı bir şekilde ayarlama girişimleri tahmin edilemez ve tutarsızlığa neden olabilir.  
+<a name="existing"></a>
+## <a name="existing-read-only-dependency-properties"></a>Varolan Salt Okunur Bağımlılık Özellikleri  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Çerçevede tanımlanan bağımlılık özelliklerinden bazıları salt okunur. Salt okunur bağımlılık özelliğini belirtmenin tipik nedeni, bunların durum belirleme için kullanılması gereken özellikler olması, ancak bu durum çok sayıda etkenin etkisi altında olması, ancak özelliği yalnızca bu duruma ayarlamanın kullanıcı arabirimi tasarım perspektifi. Örneğin, özellik <xref:System.Windows.UIElement.IsMouseOver%2A> gerçekten sadece fare girişi belirlenen durumu yüzey. Gerçek fare girişini atlatarak bu değeri programlı olarak ayarlamaya yönelik herhangi bir girişim öngörülemez olur ve tutarsızlığa neden olur.  
   
- Özelliği ayarlanamaz olan sanallaştırmadan, salt okuma bağımlılığı özellikleri, bağımlılık özelliklerinin normalde çözüm sunduğu birçok senaryoya uygun değildir (yani, veri bağlama, doğrudan bir değere, doğrulamaya, animasyona, devralmaya göre Stillenebilir). Ayarlanamaz olsa da, salt okuma bağımlılığı özellikleri hala Özellik sisteminde bağımlılık özellikleri tarafından desteklenen ek özelliklerin bazılarına sahiptir. En önemli geri kalan özellik, salt okunurdur ve bir stilde özellik tetikleyicisi olarak kullanılmaya devam edilebilir. Normal bir ortak dil çalışma zamanı (CLR) özelliği ile Tetikleyicileri etkinleştiremezsiniz; bağımlılık özelliği olması gerekir. En çok bahsedilen <xref:System.Windows.UIElement.IsMouseOver%2A> özelliği, bir denetimin stil tanımlamak için oldukça yararlı olabilecek bir senaryoya yönelik kusursuz bir örnektir. Bu, arka plan, ön plan veya denetim içindeki bileşik öğelerin benzer özellikleri gibi bazı görünür Özellikler Kullanıcı denetiminizin bazı tanımlı bölgelerine bir fare yerleştirdiği zaman değiştirin. Salt okunurdur bir bağımlılık özelliğindeki değişiklikler özellik sisteminin devralınan geçersiz kılma işlemlerine göre algılanır ve bildirilebilir ve bu özellik, özellik tetikleyici işlevselliğini dahili olarak destekler.  
+ Ayarlanamayan olması nedeniyle, yalnızca okuma bağımlılık özellikleri, bağımlılık özelliklerinin normalde bir çözüm sunduğu senaryoların çoğu için uygun değildir (yani: veri bağlama, doğrudan bir değere, doğrulamaya, animasyona, kalıtıma doğrulanabilir). Ayarlanamayan rağmen, salt okunur bağımlılık özellikleri, özellik sistemindeki bağımlılık özellikleri tarafından desteklenen bazı ek özelliklere sahiptir. Kalan en önemli özellik, salt okunur bağımlılık özelliğinin yine de bir stilde özellik tetikleyicisi olarak kullanılabilmedir. Normal ortak bir dil çalışma zamanı (CLR) özelliği olan tetikleyicileri etkinleştiremezsiniz; bir bağımlılık özelliği olması gerekir. Yukarıda belirtilen <xref:System.Windows.UIElement.IsMouseOver%2A> özellik, kullanıcı denetiminizin belirli bir bölgesinin üzerine fare yerleştirdiğinde, arka plan, ön plan veya denetim içindeki bileşik öğelerin benzer özellikleri gibi bazı görünür özelliklerin değişeceği bir denetim stilitanımlamanın oldukça yararlı olabileceği bir senaryonun mükemmel bir örneğidir. Salt okunur bağımlılık özelliğindeki değişiklikler de özellik sisteminin doğasında var olan geçersiz igeçersiz lik işlemleri tarafından algılanabilir ve raporlanabilir ve bu durum aslında özellik tetikleyici işlevselliğini dahili olarak destekler.  
   
-<a name="new"></a>   
-## <a name="creating-custom-read-only-dependency-properties"></a>Özel salt okuma bağımlılığı özellikleri oluşturma  
- Yalnızca okuma bağımlılığı özelliklerinin çoğu tipik bağımlılık özelliği senaryosunda çalışmadığına ilişkin yukarıdaki bölümü okuduğunuzdan emin olun. Ancak uygun bir senaryonuz varsa, kendi salt okunurdur.  
+<a name="new"></a>
+## <a name="creating-custom-read-only-dependency-properties"></a>Özel Okuma-Salt Bağımlılık Özellikleri Oluşturma  
+ Salt okunur bağımlılık özelliklerinin neden birçok tipik bağımlılık özelliği senaryosunda çalışmayamaz ile ilgili yukarıdaki bölümü okuduğunuzdan emin olun. Ancak uygun bir senaryonuz varsa, kendi salt okunur bağımlılık özelliğinizi oluşturmak isteyebilirsiniz.  
   
- Salt okunurdur bir bağımlılık özelliği oluşturma işleminin büyük bölümü, [Özel bağımlılık özelliklerinde](custom-dependency-properties.md) açıklananla aynıdır ve [bir bağımlılık özelliği konuları uygular](how-to-implement-a-dependency-property.md) . Üç önemli fark vardır:  
+ Salt okunur bağımlılık özelliği oluşturma işleminin çoğu, [Özel Bağımlılık Özellikleri](custom-dependency-properties.md) ve Bağımlılık [Özelliği](how-to-implement-a-dependency-property.md) konuları nın uygulanmasında açıklandığı gibi aynıdır. Üç önemli fark vardır:  
   
-- Özelliği kaydederken, özellik kaydı için normal <xref:System.Windows.DependencyProperty.Register%2A> yöntemi yerine <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> yöntemini çağırın.  
+- Mülkünüzü kaydederken, özellik <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> kaydı için <xref:System.Windows.DependencyProperty.Register%2A> normal yöntem yerine yöntemi arayın.  
   
-- CLR "sarmalayıcı" özelliğini uygularken, sarmalayıcının bir küme uygulamasına sahip olmadığından emin olun. böylece, seçtiğiniz ortak sarmalayıcı için salt okuma durumunda bir tutarsızlık olmaz.  
+- CLR "sarmalayıcı" özelliğini uygularken, sarmalayıcının da belirli bir uygulaması olmadığından emin olun, böylece açığa çıkardığınız genel sarıcı için salt okunur durumda tutarsızlık yoktur.  
   
-- Salt okuma kaydı tarafından döndürülen nesne <xref:System.Windows.DependencyProperty>yerine <xref:System.Windows.DependencyPropertyKey>. Bu alanı yine de üye olarak depolamanız gerekir, ancak genellikle türün genel bir üyesini yapmamalıdır.  
+- Salt okunur kaydıyla döndürülen <xref:System.Windows.DependencyPropertyKey> nesne <xref:System.Windows.DependencyProperty>yerine. Yine de bu alanı üye olarak saklamanız gerekir, ancak genellikle bu alanı bu tür bir genel üye yapmazsınız.  
   
- Yalnızca okuma bağımlılığı özelliğini yedeklediğiniz özel alan veya değer, karar vereceğiniz mantığı kullanarak tamamen yazılabilir olabilir. Ancak, özelliği başlangıçta veya çalışma zamanı mantığının bir parçası olarak ayarlamanın en kolay yolu, özellik sistemini atlamaktansa ve özel destek alanını doğrudan ayarlayarak özellik sisteminin API 'Lerini kullanmaktır. Özellikle, <xref:System.Windows.DependencyPropertyKey>türünde bir parametre kabul eden <xref:System.Windows.DependencyObject.SetValue%2A> imzası vardır. Uygulama mantığınızın içindeki bu değeri programlı bir şekilde nasıl ayarlayabileceğiniz, bağımlılık özelliğini ilk kez kaydettiğinizde oluşturulan <xref:System.Windows.DependencyPropertyKey> erişimi nasıl ayarlamak istediğinizi etkiler. Bu mantığı tüm sınıf içinde işleyebilir, bunu özel hale getirebilirsiniz veya derlemenin diğer bölümlerinden ayarlanmak istiyorsanız içsel olarak ayarlayabilirsiniz. Bir yaklaşım, saklı Özellik değerinin değiştirilmesi gerektiğini bir sınıf örneğine bildiren ilgili bir olayın sınıf olay işleyicisi içinde <xref:System.Windows.DependencyObject.SetValue%2A> çağırmasıdır. Başka bir yaklaşım de, kayıt sırasında bu özelliklerin meta verilerinin bir parçası olarak eşleştirilmiş <xref:System.Windows.PropertyChangedCallback> ve <xref:System.Windows.CoerceValueCallback> geri çağırmaları kullanarak bağımlılık özelliklerini birbirine bağlamaktır.  
+ Salt okunur bağımlılık özelliğinizi destekleyen özel alan veya değer ne olursa olsun, karar verirseniz verin mantığınızı kullanarak elbette tamamen yazılabilir olabilir. Ancak, özelliği başlangıçta veya çalışma zamanı mantığının bir parçası olarak ayarlamanın en kolay yolu, özellik sistemini atlatmak ve özel destek alanını doğrudan ayarlamak yerine özellik sisteminin API'lerini kullanmaktır. Özellikle, türü <xref:System.Windows.DependencyObject.SetValue%2A> <xref:System.Windows.DependencyPropertyKey>bir parametre kabul eden bir imza vardır. Bu değeri uygulama mantığınızda programlı olarak nasıl ve nerede ayarladığınız, <xref:System.Windows.DependencyPropertyKey> bağımlılık özelliğini ilk kaydettirdiğinizde oluşturulan aerişe erişimi nasıl ayarlamak isteyebileceğinizi etkileyecektir. Bu mantığı sınıf içinde işlerseniz, özel hale getirebilirsiniz veya derlemenin diğer bölümlerinden ayarlanmasını isterseniz, bunu dahili olarak ayarlayabilirsiniz. Bir yaklaşım, <xref:System.Windows.DependencyObject.SetValue%2A> bir sınıf örneğini depolanan özellik değerinin değiştirilmesi gerektiğini bildiren ilgili bir olayın sınıf olay işleyicisini aramaktır. Başka bir yaklaşım, kayıt sırasında bu <xref:System.Windows.PropertyChangedCallback> özelliklerin meta verilerinin bir parçası olarak eşleştirilmiş ve <xref:System.Windows.CoerceValueCallback> geri aramaları kullanarak bağımlılık özelliklerini birbirine bağlamaktır.  
   
- <xref:System.Windows.DependencyPropertyKey> özel olduğundan ve kodunuzun dışında özellik sistemi tarafından yayılmadığından, salt okunurdur, salt okunurdur bir Read-Write bağımlılık özelliğinden daha iyi ayar güvenliği vardır. Okuma-yazma bağımlılığı özelliği için, tanımlayıcı alan açık veya örtük olarak genel olur ve bu nedenle Özellik yaygın olarak ayarlanabilir. Daha fazla bilgi için bkz. [bağımlılık özelliği güvenliği](dependency-property-security.md).  
+ Özel <xref:System.Windows.DependencyPropertyKey> olduğundan ve özellik sistemi tarafından kodunuzu dışında yayılmadığından, salt okunur bağımlılık özelliği, okuma yazma bağımlılık özelliğinden daha iyi ayar güvenliğine sahiptir. Okuma yazma bağımlılık özelliği için, tanımlama alanı açık veya örtülü olarak herkese açıktır ve böylece özellik yaygın olarak ayarlanabilir. Daha fazla ayrıntı için Bkz. [Bağımlılık Özelliği Güvenliği.](dependency-property-security.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

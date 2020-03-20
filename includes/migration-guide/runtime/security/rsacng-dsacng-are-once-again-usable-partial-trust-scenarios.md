@@ -1,19 +1,18 @@
 ---
-ms.openlocfilehash: 242a9952cb47d170aceffa1aa392071eb40cc6ab
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 8b41e3234c00059ecb5088bbf2597611d7f139b8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67857200"
 ---
-### <a name="rsacng-and-dsacng-are-once-again-usable-in-partial-trust-scenarios"></a>RSACng ve DSACng kısmi güven senaryolarında yine kullanılabilir.
+### <a name="rsacng-and-dsacng-are-once-again-usable-in-partial-trust-scenarios"></a>RSACng ve DSACng kısmi güven senaryolarında bir kez daha kullanılabilir
 
 |   |   |
 |---|---|
-|Ayrıntılar|CngLightup (birden çok üst düzey şifreleme içinde kullanılan API'leri gibi <xref:System.Security.Cryptography.Xml.EncryptedXml?displayProperty=nameWithType>) ve <xref:System.Security.Cryptography.RSACng?displayProperty=nameWithType> bazı durumlarda, tam güven kullanır. P/Invoke'lar sunduğundan olmadan bunlar <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode?displayProperty=nameWithType> izinleri ve kod yollarını burada <xref:System.Security.Cryptography.CngKey?displayProperty=nameWithType> için izni taleplerine sahiptir <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode?displayProperty=nameWithType>. .NET Framework 4.6.2 ile başlayarak, CngLightup geçmek için kullanılan <xref:System.Security.Cryptography.RSACng?displayProperty=nameWithType> mümkün olan her yerde. Sonuç olarak, kısmi güven uygulamaları, başarılı bir şekilde kullanılan <xref:System.Security.Cryptography.Xml.EncryptedXml?displayProperty=nameWithType> başarısız ve throw başladığı <xref:System.Security.SecurityException> özel durumlar. Bu değişiklik, böylece tüm işlevleri CngLightup kullanarak gerekli izinlere sahip gerekli onaylar ekler.|
-|Öneri|.NET Framework 4.6.2 bu değişikliğe, kısmi güven uygulamaları olumsuz etkilediği, .NET Framework 4.7.1 yükseltin.|
-|`Scope`|Kenar|
-|Version|4.6.2|
-|Type|Çalışma zamanı|
+|Ayrıntılar|CngLightup (birkaç üst düzey kripto apis <xref:System.Security.Cryptography.Xml.EncryptedXml?displayProperty=nameWithType>kullanılır, <xref:System.Security.Cryptography.RSACng?displayProperty=nameWithType> gibi) ve bazı durumlarda tam güven güveniyor. Bunlar arasında <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode?displayProperty=nameWithType> izin vermeden P/Invokes ve izin <xref:System.Security.Cryptography.CngKey?displayProperty=nameWithType> taleplerinin <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode?displayProperty=nameWithType>bulunduğu kod yolları yer alıyor. .NET Framework 4.6.2 ile başlayarak, CngLightup <xref:System.Security.Cryptography.RSACng?displayProperty=nameWithType> mümkün olan her yere geçmek için kullanıldı. Sonuç olarak, başarıyla kullanılan <xref:System.Security.Cryptography.Xml.EncryptedXml?displayProperty=nameWithType> kısmi güven uygulamaları <xref:System.Security.SecurityException> başarısız olmaya ve özel durumlar atmaya başladı. Bu değişiklik, CngLightup kullanan tüm işlevlerin gerekli izinlere sahip olması için gerekli ileri leri ekler.|
+|Öneri|.NET Framework 4.6.2'deki bu değişiklik kısmi güven uygulamalarınızı olumsuz etkilediyse,.NET Framework 4.7.1'e yükseltin.|
+|Kapsam|Edge|
+|Sürüm|4.6.2|
+|Tür|Çalışma Zamanı|
 |Etkilenen API’ler|<ul><li><xref:System.Security.Cryptography.DSACng.%23ctor(System.Security.Cryptography.CngKey)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.DSACng.Key?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.DSACng.LegalKeySizes?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.DSACng.CreateSignature(System.Byte[])?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.DSACng.VerifySignature(System.Byte[],System.Byte[])?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.RSACng.%23ctor(System.Security.Cryptography.CngKey)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.RSACng.Key?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.RSACng.Decrypt(System.Byte[],System.Security.Cryptography.RSAEncryptionPadding)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.RSACng.SignHash(System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)?displayProperty=nameWithType></li></ul>|
-

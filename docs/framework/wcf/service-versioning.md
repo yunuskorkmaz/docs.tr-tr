@@ -2,135 +2,135 @@
 title: Hizmet Sürümü Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 3f9fd87eacf67a1b23568dcf87df086e935879ba
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ea5e80e33d1b29e01e6d1867c50bb3bb973b01c3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423680"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183115"
 ---
 # <a name="service-versioning"></a>Hizmet Sürümü Oluşturma
-İlk dağıtımdan sonra ve yaşam süreleri (ve sergiledikleri uç noktalar) sırasında, iş ihtiyaçlarını değiştirme, bilgi teknolojisi gereksinimleri gibi çeşitli nedenlerle değişiklik yapılması veya diğer sorunları ele almanız gerekebilir çıkışları. Her değişiklik, hizmetin yeni bir sürümünü kullanıma sunar. Bu konu, Windows Communication Foundation (WCF) sürümünde sürüm oluşturmayı nasıl düşüntireceğinizi açıklamaktadır.  
+İlk dağıtımdan sonra ve kullanım ömürleri boyunca birkaç kez hizmet (ve maruz kaldıkları uç noktalar) iş gereksinimlerinin değiştirilmesi, bilgi teknolojisi gereksinimleri veya diğer Sorun. Her değişiklik, hizmetin yeni bir sürümünü sunar. Bu konu, Windows Communication Foundation 'da (WCF) sürüm konusunu nasıl değerlendireceklerini açıklar.  
   
-## <a name="four-categories-of-service-changes"></a>Dört hizmet kategorisi değişikliği  
- Gerekebilecek hizmetlerde yapılan değişiklikler dört kategoride sınıflandırılabilir:  
+## <a name="four-categories-of-service-changes"></a>Hizmet Değişikliklerinin Dört Kategorisi  
+ Gerekli olabilecek hizmetlerdeki değişiklikler dört kategoriye ayırılabilir:  
   
-- Sözleşme değişiklikleri: Örneğin, bir işlem eklenebilir veya bir iletideki veri öğesi eklenebilir veya değiştirilebilir.  
+- Sözleşme değişiklikleri: Örneğin, bir işlem eklenebilir veya iletideki bir veri öğesi eklenebilir veya değiştirilebilir.  
   
-- Adres değişiklikleri: Örneğin, bir hizmet, uç noktaların yeni adreslere sahip olduğu farklı bir konuma geçer.  
+- Adres değişiklikleri: Örneğin, bir hizmet uç noktaların yeni adresleri olduğu farklı bir konuma taşınır.  
   
-- Bağlantı değişiklikleri: Örneğin, bir güvenlik mekanizması değişir veya ayarları değişir.  
+- Bağlama değişiklikleri: Örneğin, bir güvenlik mekanizması değişir veya ayarları değişir.  
   
-- Uygulama değişiklikleri: Örneğin, bir iç Yöntem uygulamasında değişiklik yapıldığında.  
+- Uygulama değişiklikleri: Örneğin, bir iç yöntem uygulaması değiştiğinde.  
   
- Bu değişikliklerden bazıları "kırın" olarak, diğerleri ise "bölünemez" olarak adlandırılır. Önceki sürümde başarıyla işlenen tüm iletiler yeni sürümde başarıyla işlenirse bir değişiklik *bölünemez* . Bu ölçütü karşılamayan herhangi bir değişiklik, bir *son* değişiklik olur.  
+ Bu değişikliklerden bazıları "kırılmaz" olarak adlandırılır ve diğerleri "kırılmaz" olarak adlandırılır. Önceki sürümde başarıyla işlenmiş olan tüm iletiler yeni sürümde başarıyla işlenirse, değişiklik *kırılmaz.* Bu kriteri karşılamayan herhangi bir değişiklik *bir kırılma* değişikliktir.  
   
-## <a name="service-orientation-and-versioning"></a>Hizmet yönü ve sürüm oluşturma  
- Hizmet yönünün her biri, hizmetlerin ve istemcilerin otonom (veya bağımsız) olduğu bir hizmettir. Diğer şeyler arasında bu, Service Developers 'ın tüm hizmet istemcileri hakkında kontrol ettikleri veya bunlara yönelik olduğunu varsaymayacağı anlamına gelir. Bu, bir hizmet sürümleri değiştirdiğinde tüm istemcilerin yeniden oluşturulması ve yeniden dağıtılması seçeneklerini ortadan kaldırır. Bu konu, hizmetin bu temel 'e ait olduğunu varsayar ve bu nedenle, istemcilerinden bağımsız olarak değiştirilmesi veya "sürümlenmiş" olması gerekir.  
+## <a name="service-orientation-and-versioning"></a>Hizmet Yönlendirme ve Sürüm  
+ Hizmet yönlendirme ilkelerinden biri, hizmetlerin ve istemcilerin özerk (veya bağımsız) olmasıdır. Diğer şeylerin yanı sıra, bu, hizmet geliştiricilerin tüm hizmet istemcilerini denetlediklerini ve hatta bildiklerini varsayamadıkları anlamına gelir. Bu, bir hizmet sürümleri değiştirdiğinde tüm istemcileri yeniden oluşturma ve yeniden dağıtma seçeneğini ortadan kaldırır. Bu konu, hizmetin bu ilkeye uygun olduğunu varsayar ve bu nedenle istemcilerinden bağımsız olarak değiştirilmesi veya "sürülmesi" gerekir.  
   
- Önemli bir değişikliğin beklenmiyorsa ve kaçınılmaz durumda, bir uygulama bu temel 'i yok saymayı seçebilir ve istemcilerin yeniden oluşturulmasını ve hizmetin yeni bir sürümü ile yeniden dağıtılmasını gerektirebilir.  
+ Bir kesme değişikliğinin beklenmeyen ve önlenemediği durumlarda, bir uygulama bu ilkeyi yoksaymayı seçebilir ve istemcilerin hizmetin yeni bir sürümüyle yeniden oluşturulmasını ve yeniden dağıtılmasını gerektirebilir.  
   
-## <a name="contract-versioning"></a>Sözleşme sürümü oluşturma  
- İstemci tarafından kullanılan sözleşmelerin, hizmet tarafından kullanılan sözleşmeyle aynı olması gerekmez; yalnızca uyumlu olmaları gerekir.  
+## <a name="contract-versioning"></a>Sözleşme Sürümü  
+ Müşteri tarafından kullanılan sözleşmelerin hizmet tarafından kullanılan sözleşmeyle aynı olması gerekmez; sadece uyumlu olması gerekir.  
   
- Hizmet sözleşmeleri için uyumluluk, hizmet tarafından kullanıma sunulan yeni işlemler eklenebilir, ancak mevcut işlemler kaldırılabilir veya anlamsal olarak değiştirilemez.  
+ Hizmet sözleşmeleri için uyumluluk, hizmetin maruz kaçtığı yeni işlemlerin eklenebileceği, ancak varolan işlemlerin anlamsal olarak kaldırılamadığı veya değiştirilemeyeceği anlamına gelir.  
   
- Veri sözleşmeleri için uyumluluk, yeni şema türü tanımlarının eklenebileceği, ancak var olan şema türü tanımlarının de kırılmaya karşı değiştirimeyeceği anlamına gelir. Son değişiklikler veri üyelerini kaldırmayı veya incompatibly veri türünü değiştirmeyi içerebilir. Bu özellik, hizmetin istemcileri bozmadan sözleşmelerinin sürümünü değiştirme konusunda bazı Enlem sağlar. Sonraki iki bölüm, WCF verileri ve hizmet sözleşmeleri üzerinde yapılabilecek bölünemez ve son değişiklikleri açıklamaktadır.  
+ Veri sözleşmeleri için uyumluluk, yeni şema türü tanımlarının eklenebileceği, ancak varolan şema türü tanımlarının kırılma yollarında değiştirilemeyeceği anlamına gelir. Son dakika değişiklikleri, veri üyelerinin kaldırılmasını veya veri türünü uyumlu bir şekilde değiştirmeyi içerebilir. Bu özellik, hizmetin sözleşmelerinin sürümünü istemcileri bozmadan değiştirmede bazı enlemler sağlar. Sonraki iki bölüm, WCF verileri ve hizmet sözleşmelerinde yapılabilecek sonsyama ve bozma değişikliklerini açıklayırır.  
   
 ## <a name="data-contract-versioning"></a>Veri Sözleşmesi Sürümü Oluşturma  
- Bu bölüm <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.DataContractAttribute> sınıfları kullanılırken veri sürümü oluşturma ile ilgilidir.  
+ Bu bölümde, <xref:System.Runtime.Serialization.DataContractSerializer> sınıfları ve <xref:System.Runtime.Serialization.DataContractAttribute> bunları kullanırken veri sürümle ilgilidir.  
   
-### <a name="strict-versioning"></a>Katı sürüm oluşturma  
- Birçok senaryoda, sürümleri değiştirirken bir sorun olduğunda, hizmet geliştiricisi istemciler üzerinde denetime sahip değildir ve bu nedenle ileti XML veya şemadaki değişikliklere nasıl tepki verdikleri hakkında varsayımlar yapamaz. Bu durumlarda, yeni iletilerin iki nedenden dolayı eski şemaya göre doğrulanabileceğini garanti etmeniz gerekir:  
+### <a name="strict-versioning"></a>Sıkı Sürümleme  
+ Sürümleri değiştirme sorun olduğunda birçok senaryoda, hizmet geliştiricisi istemciler üzerinde denetimi yoktur ve bu nedenle ileti XML veya şema değişikliklere nasıl tepki vereceğini hakkında varsayımlar yapamaz. Bu gibi durumlarda, yeni iletilerin eski şema aleyhine iki nedenden dolayı doğrulaşacağını garanti emelisiniz:  
   
-- Eski istemciler şemanın değişmeyecek varsayımıyla geliştirilmiştir. Şimdiye kadar tasarlandıkları iletileri işleyemeyebilir.  
+- Eski istemciler şema değişmez varsayımı ile geliştirilmiştir. Hiçbir zaman tasarlanamadıkları iletileri işlemeyi başaramayabilirler.  
   
-- Eski istemciler, iletileri işlemeye çalışmadan önce eski şemaya göre gerçek şema doğrulaması gerçekleştirebilir.  
+- Eski istemciler, iletileri işlemeye çalışmadan önce eski şemaya karşı gerçek şema doğrulaması gerçekleştirebilir.  
   
- Bu senaryolarda önerilen yaklaşım, var olan veri sözleşmelerini sabit olarak değerlendirmek ve benzersiz XML nitelikli adlarıyla yenilerini oluşturmak için kullanılır. Hizmet geliştiricisi daha sonra mevcut bir hizmet sözleşmesine yeni yöntemler ekler ya da yeni veri sözleşmesini kullanan yöntemlerle yeni bir hizmet sözleşmesi oluşturur.  
+ Bu tür senaryolarda önerilen yaklaşım, varolan veri sözleşmelerini değişmez olarak ele almak ve benzersiz XML nitelikli adlara sahip yeni lerini oluşturmaktır. Hizmet geliştiricisi daha sonra varolan bir hizmet sözleşmesine yeni yöntemler ekler veya yeni veri sözleşmesini kullanan yöntemlerle yeni bir hizmet sözleşmesi oluşturur.  
   
- Genellikle bir hizmet geliştiricisinin, veri sözleşmesinin tüm sürümlerinde çalışması gereken bir iş mantığı yazması ve veri sözleşmesinin her sürümü için sürüme özgü iş kodu olması gerekir. Bu konunun sonundaki ek, arabirimlerin bu gereksinimi karşılamak için nasıl kullanılabileceğini açıklar.  
+ Genellikle bir hizmet geliştiricisi veri sözleşmesi artı veri sözleşmesinin her sürümü için sürüm özel iş kodu tüm sürümleri içinde çalışması gereken bazı iş mantığı yazmak gerekir durumda olacaktır. Bu konunun sonundaki ekte, arabirimlerin bu ihtiyacı karşılamak için nasıl kullanılabileceğini açıklar.  
   
-### <a name="lax-versioning"></a>LAX sürümü oluşturma  
- Diğer birçok senaryoda, hizmet geliştiricisi, veri sözleşmesine yeni ve isteğe bağlı bir üyenin eklenmesinin mevcut istemcileri bozmayacak şekilde varsayımını yapabilir. Bu, hizmet geliştiricisi 'nin mevcut istemcilerin şema doğrulaması yapıp gerçekleştirmediğini ve bilinmeyen veri üyelerini yoksaymalarını araştırmasını gerektirir. Bu senaryolarda, yeni üyeleri bölünemez bir şekilde eklemek için veri sözleşmesi özelliklerinden faydalanmak mümkündür. Hizmet geliştiricisi, sürüm için veri sözleşmesi özelliklerinin hizmetin ilk sürümü için zaten kullanılmış olması durumunda bu varsayımını güvenle yapabilir.  
+### <a name="lax-versioning"></a>Lax Versiyon  
+ Diğer birçok senaryoda, hizmet geliştiricisi veri sözleşmesine yeni, isteğe bağlı bir üye eklemenin varolan istemcileri bozamayacağı varsayımında bulunabilir. Bu, servis geliştiricisinin varolan istemcilerin şema doğrulaması yapıp yapmamayı ve bilinmeyen veri üyelerini yoksaydığını araştırmasını gerektirir. Bu senaryolarda, yeni üyeler eklemek için veri sözleşmesi özelliklerinden kesintisiz bir şekilde yararlanmak mümkündür. Sürüm için veri sözleşmesi özellikleri hizmetin ilk sürümü için zaten kullanılmışsa, hizmet geliştiricisi bu varsayımı güvenle yapabilir.  
   
- WCF, ASP.NET Web Hizmetleri ve diğer birçok Web hizmeti yığını *LAX sürüm oluşturmayı*destekler: Yani, alınan verilerdeki yeni bilinmeyen veri üyeleri için özel durumlar oluşturmaz.  
+ WCF, ASP.NET Web Hizmetleri ve diğer birçok Web hizmeti yığınları *gevşek sürümü*destekler: yani, alınan verilerde yeni bilinmeyen veri üyeleri için özel durumlar atmayın.  
   
- Yeni bir üyenin eklenmesi, var olan istemcileri bozmayacak şekilde çok daha kolay bir şekilde inanacaktır. Tüm istemcilerin LAX sürümü oluşturma işlemi yaptığından emin değilseniz, katı sürüm oluşturma yönergelerini kullanmak ve veri sözleşmelerini sabit olarak değerlendirmek için öneri önerilir.  
+ Yanlışlıkla yeni bir üye eklemenin varolan istemcileri kırmayacağına inanmak kolaydır. Tüm istemcilerin gevşek sürümle başa çıkabileceğinden emin değilseniz, öneri katı sürüm yönergelerini kullanmak ve veri sözleşmelerini değişmez olarak ele almaktır.  
   
- Veri sözleşmelerinin hem LAX hem de katı sürümü oluşturma hakkında ayrıntılı yönergeler için bkz. [En Iyi uygulamalar: veri sözleşmesi sürümü oluşturma](best-practices-data-contract-versioning.md).  
+ Veri sözleşmelerinin hem gevşek hem de katı sürümü için ayrıntılı yönergeler için En [İyi Uygulamalar: Veri Sözleşmesi Sürümü](best-practices-data-contract-versioning.md)bölümüne bakın.  
   
-### <a name="distinguishing-between-data-contract-and-net-types"></a>Veri sözleşmesi ve .NET türleri arasında ayrım  
- Bir .NET sınıfı veya yapısı, sınıfa <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği uygulanarak veri sözleşmesi olarak yansıtılyabilirler. .NET türü ve veri sözleşmesi projeksiyonları iki ayrı önemlidir. Aynı veri anlaşması projeksiyonu ile birden çok .NET türü olması mümkündür. Bu ayrım özellikle, tasarlanan veri sözleşmesini koruyarak .NET türünü değiştirmenize olanak tanıyan yararlı olur ve böylece sözcüğün katı anlamda bile mevcut istemcilerle uyumluluğu sürdürmenize yardımcı olur. .NET türü ve veri sözleşmesi arasında bu ayrımı sürdürmek için her zaman yapmanız gereken iki şey vardır:  
+### <a name="distinguishing-between-data-contract-and-net-types"></a>Veri Sözleşmesi ile .NET Türleri Arasında Ayrım  
+ Bir .NET sınıfı veya yapısı, sınıfa öznitelik <xref:System.Runtime.Serialization.DataContractAttribute> uygulanarak veri sözleşmesi olarak yansıtılabilir. .NET türü ve veri sözleşmesi projeksiyonları iki farklı konudur. Aynı veri sözleşmesi projeksiyonuna sahip birden çok .NET türü olması mümkündür. Bu ayrım, özellikle öngörülen veri sözleşmesini korurken .NET türünü değiştirmenize ve böylece sözcüğün katı anlamıyla bile varolan istemcilerle uyumluluğu korumanıza olanak sağlar. .NET türü ve veri sözleşmesi arasındaki bu ayrımı korumak için her zaman yapmanız gereken iki şey vardır:  
   
-- Bir <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> ve <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>belirtin. .NET türünün adının ve ad alanının sözleşmede gösterilmesini engellemek için, her zaman veri sözleşmeniz adını ve ad alanını belirtmeniz gerekir. Bu şekilde, daha sonra .NET ad alanı veya tür adı değiştirmeye karar verirseniz, veri sözleşmeniz aynı kalır.  
+- Bir <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> ve <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>. belirtin .NET türün adının ve ad alanının sözleşmede açıkolmasını önlemek için her zaman veri sözleşmenizin adını ve ad alanını belirtmeniz gerekir. Bu şekilde, .NET ad alanını veya türü adını daha sonra değiştirmeye karar verirseniz, veri sözleşmeniz aynı kalır.  
   
-- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>belirtin. .NET üye adınızın sözleşmede gösterilmesini engellemek için, her zaman veri üyelerinizin adını belirtmeniz gerekir. Bu şekilde, üyenin .NET adını daha sonra değiştirmeye karar verirseniz, veri sözleşmeniz aynı kalır.  
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> belirtin. .NET üye adınızın sözleşmede açıkolmasını önlemek için her zaman veri üyelerinizin adını belirtmeniz gerekir. Bu şekilde, üyenin .NET adını daha sonra değiştirmeye karar verirseniz, veri sözleşmeniz aynı kalır.  
   
-### <a name="changing-or-removing-members"></a>Üyeleri değiştirme veya kaldırma  
- Bir üyenin adını veya veri türünü değiştirmek ya da veri üyelerini kaldırmak, LAX sürümliğine izin verilse bile Son değişiklik olur. Bu gerekliyse, yeni bir veri sözleşmesi oluşturun.  
+### <a name="changing-or-removing-members"></a>Üyelerin Değiştirilmesi veya Kaldırılması  
+ Bir üyenin adını veya veri türünü değiştirmek veya veri üyelerini kaldırmak, gevşek sürüm alınmasına izin verilse bile bir kesme değişikliğidir. Bu gerekliyse, yeni bir veri sözleşmesi oluşturun.  
   
- Hizmet uyumluluğu yüksek öneme sahip ise, kodunuzda kullanılmayan veri üyelerini yoksaymayı ve bunları yerinde bırakmayı düşünebilirsiniz. Bir veri üyesini birden çok üyeye bölebiliyorsanız, alt düzey istemciler (en son sürüme yükseltilmeyen istemciler) için gerekli bölme ve yeniden toplamayı gerçekleştirebilecek bir özellik olarak var olan üyeyi yerinde bırakmayı düşünebilirsiniz.  
+ Hizmet uyumluluğu çok önemliyse, kodunuzda kullanılmayan veri üyelerini yoksaymayı ve yerinde bırakmayı düşünebilirsiniz. Bir veri üyesini birden çok üyeye bölüyorsanız, varolan üyeyi alt düzey istemciler (en son sürüme yükseltilmeyen istemciler) için gerekli bölme ve yeniden toplamayı gerçekleştirebilecek bir özellik olarak yerinde bırakmayı düşünebilirsiniz.  
   
- Benzer şekilde, veri sözleşmesinin adı veya ad alanındaki değişiklikler de büyük değişikliklerdir.  
+ Benzer şekilde, veri sözleşmesinin adı veya ad alanında yapılan değişiklikler de değişiklikleri bozuyor.  
   
-### <a name="round-trips-of-unknown-data"></a>Bilinmeyen verilerin gidiş dönüşleri  
- Bazı senaryolarda, yeni bir sürüme eklenen üyelerden gelen bilinmeyen veriler "gidiş dönüş" için bir gereksinim vardır. Örneğin, "versionNew" hizmeti, yeni eklenen bazı üyelere "versionOld" istemcisine veri gönderir. İstemci, iletiyi işlerken yeni eklenen üyeleri yoksayar, ancak yeni eklenen üyeler de dahil olmak üzere aynı verileri versionNew hizmetine geri gönderir. Bunun için tipik senaryo, verilerin hizmetten alındığı, değiştirildiği ve döndürüldüğü veri güncelleştirmeleridir.  
+### <a name="round-trips-of-unknown-data"></a>Bilinmeyen Verilerin Gidiş-Dönüşleri  
+ Bazı senaryolarda, yeni bir sürümde eklenen üyelerden gelen bilinmeyen verileri "gidiş-dönüş" olarak yapmanız gerekir. Örneğin, bir "sürümNew" hizmeti, yeni eklenen bazı üyelerle birlikte verileri "sürümOld" istemcisine gönderir. İstemci iletiyi işlerken yeni eklenen üyeleri yoksa, ancak yeni eklenen üyeler de dahil olmak üzere aynı verileri sürümYeni hizmete geri gönderir. Bunun için tipik senaryo, verilerin hizmetten alındığı, değiştirildiği ve döndürüldüğü veri güncelleştirmeleridir.  
   
- Belirli bir tür için gidiş-dönüşü etkinleştirmek üzere, türün <xref:System.Runtime.Serialization.IExtensibleDataObject> arabirimini uygulaması gerekir. Arabirim bir özellik içerir, <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> <xref:System.Runtime.Serialization.ExtensionDataObject> türünü döndürür. Özelliği, geçerli sürüme bilinmeyen veri sözleşmesinin gelecekteki sürümlerindeki verileri depolamak için kullanılır. Bu veriler istemci için opaktır, ancak örnek serileştirildiğinde <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> özelliğinin içeriği, veri sözleşmesinin üyelerinin verileri ile yazılır.  
+ Belirli bir tür için yuvarlama özelliğini etkinleştirmek <xref:System.Runtime.Serialization.IExtensibleDataObject> için, tür arabirimi uygulamalıdır. Arabirim, <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> türü döndüren <xref:System.Runtime.Serialization.ExtensionDataObject> bir özellik içerir. Özellik, geçerli sürüm tarafından bilinmeyen veri sözleşmesinin gelecekteki sürümlerinden gelen verileri depolamak için kullanılır. Bu veriler istemciye opaktır, ancak örnek seri hale geldiğinde, <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> özelliğin içeriği diğer veri sözleşmesi üyelerinin verileriyle birlikte yazılır.  
   
- Tüm türlerinizin, yeni ve bilinmeyen gelecekteki üyelere uyum sağlaması için bu arabirimi uygulaması önerilir.  
+ Tüm türlerinizin, gelecekteki yeni ve bilinmeyen üyeleri barındırmak için bu arabirimi uygulaması önerilir.  
   
-### <a name="data-contract-libraries"></a>Veri sözleşmesi kitaplıkları  
- Bir sözleşmenin merkezi bir depoya yayımlandığı veri sözleşmeleri kitaplıkları olabilir ve hizmet ve tür uygulayıcıları, bu depodan veri sözleşmeleri uygular ve kullanıma sunar. Bu durumda, depoya bir veri sözleşmesi yayımladığınızda, kendisini uygulayan türler oluşturan herhangi bir denetiminiz yoktur. Bu nedenle, sözleşmeyi yayımlandıktan sonra değiştiremezsiniz ve etkili bir şekilde sabit hale gelir.  
+### <a name="data-contract-libraries"></a>Veri Sözleşmesi Kitaplıkları  
+ Bir sözleşmenin merkezi bir depoda yayımlandığı veri sözleşmeleri kitaplıkları olabilir ve hizmet ve tür uygulayıcıları söz konusu depodaki veri sözleşmelerini uygular ve ortaya çıkarır. Bu durumda, depoya bir veri sözleşmesi yayımladığınızda, bunu uygulayan türleri kimin oluşturduğu üzerinde hiçbir denetiminiz yoktur. Bu nedenle, yayımlandıktan sonra sözleşmeyi değiştiremezsiniz ve bu da sözleşmeyi etkin bir şekilde değişmez hale getirir.  
   
-### <a name="when-using-the-xmlserializer"></a>XmlSerializer kullanılırken  
- <xref:System.Xml.Serialization.XmlSerializer> sınıfı kullanılırken aynı sürüm oluşturma ilkeleri uygulanır. Katı sürüm oluşturma gerektiğinde, veri sözleşmelerini sabit olarak değerlendirin ve yeni sürümler için benzersiz ve nitelikli adlarla yeni veri sözleşmeleri oluşturun. LAX sürümü oluşturma 'nın kullanılabilir olduğundan emin olduğunuzda, yeni sürümlere yeni seri hale getirilebilir Üyeler ekleyebilirsiniz, ancak var olan üyeleri değiştirmez veya kaldıramazsınız.  
-  
-> [!NOTE]
-> <xref:System.Xml.Serialization.XmlSerializer>, bilinmeyen verilerin gidiş dönüşü desteklemek için <xref:System.Xml.Serialization.XmlAnyElementAttribute> ve <xref:System.Xml.Serialization.XmlAnyAttributeAttribute> özniteliklerini kullanır.  
-  
-## <a name="message-contract-versioning"></a>İleti sözleşmesi sürümü oluşturma  
- İleti sözleşmesi sürümü oluşturma yönergeleri, veri sözleşmelerinin sürümü oluşturma konusunda çok benzer. Katı sürüm oluşturma gerekliyse, ileti gövdesini değiştirmemelisiniz, bunun yerine benzersiz bir nitelenmiş ada sahip yeni bir ileti sözleşmesi oluşturmalısınız. LAX sürümü oluşturmayı biliyorsanız, yeni ileti gövdesi parçalarını ekleyebilir, ancak varolanları değiştirmez veya kaldırabilirsiniz. Bu kılavuz, hem çıplak hem de Sarmalanan ileti sözleşmeleri için geçerlidir.  
-  
- Katı sürüm oluşturma kullanımda olsa bile ileti üstbilgileri her zaman eklenebilir. MustUnderstand bayrağı sürümü oluşturmayı etkileyebilir. Genel olarak, WCF 'deki üst bilgiler için sürüm oluşturma modeli SOAP belirtiminde açıklanacaktır.  
-  
-## <a name="service-contract-versioning"></a>Hizmet sözleşmesi sürümü oluşturma  
- Veri sözleşmesi sürümü oluşturma ile benzer şekilde, hizmet sözleşmesi sürümü oluşturma işlemi ekleme, değiştirme ve kaldırma işlemlerini de kapsar.  
-  
-### <a name="specifying-name-namespace-and-action"></a>Ad, ad alanı ve eylem belirtme  
- Varsayılan olarak, bir hizmet sözleşmesinin adı arabirimin adıdır. Varsayılan ad alanı "http://tempuri.org" ve her bir işlemin eylemi "http://tempuri.org/contractname/methodname". Hizmet sözleşmesi için bir ad ve ad alanı ve "http://tempuri.org" kullanmaktan kaçınmak ve arabirim ve yöntem adlarının hizmetin sözleşmesinde gösterilmesini önlemek için her işlem için bir eylem belirlemeniz önerilir.  
-  
-### <a name="adding-parameters-and-operations"></a>Parametreleri ve Işlemleri ekleme  
- Hizmet tarafından sunulan hizmet işlemlerinin eklenmesi, var olan istemcilerin bu yeni işlemler konusunda endişe duymadığı için bölünemez bir değişiklik.  
+### <a name="when-using-the-xmlserializer"></a>XmlSerializer kullanırken  
+ <xref:System.Xml.Serialization.XmlSerializer> Sınıfı kullanırken aynı sürüm ilkeleri geçerlidir. Sıkı sürüm gerektiğinde, veri sözleşmelerini değişmez olarak ele verin ve yeni sürümler için benzersiz, nitelikli adlarla yeni veri sözleşmeleri oluşturun. Gevşek sürüm kullanılabilir emin olduğunuzda, yeni sürümler yeni serializable üyeleri ekleyebilirsiniz, ancak değiştirmek veya varolan üyeleri kaldırmak değil.  
   
 > [!NOTE]
-> Bir çift yönlü geri çağırma sözleşmesine işlemler eklemek, önemli bir değişiklik olur.  
+> Bilinmeyen <xref:System.Xml.Serialization.XmlSerializer> verilerin <xref:System.Xml.Serialization.XmlAnyElementAttribute> <xref:System.Xml.Serialization.XmlAnyAttributeAttribute> yuvarlak tripping desteklemek için ve öznitelikleri kullanır.  
   
-### <a name="changing-operation-parameter-or-return-types"></a>Işlem parametresini veya dönüş türlerini değiştirme  
- Yeni tür, eski tür tarafından uygulanan aynı veri sözleşmesini uygularsa, parametre veya dönüş türlerinin genel olarak değiştirilmesi genellikle bir son değişiklik olur. Böyle bir değişiklik yapmak için, hizmet sözleşmesine yeni bir işlem ekleyin veya yeni bir hizmet sözleşmesi tanımlayın.  
+## <a name="message-contract-versioning"></a>İleti Sözleşmesi Sürümü  
+ İleti sözleşmesi sürümü için yönergeler veri sözleşmelerini sürümleme çok benzer. Sıkı sürüm gerekiyorsa, ileti gövdenizi değiştirmemeli, bunun yerine benzersiz bir nitelikli ada sahip yeni bir ileti sözleşmesi oluşturmanız gerekir. Gevşek sürüm kullanabilirsiniz biliyorsanız, yeni ileti gövde parçaları ekleyebilirsiniz, ancak değiştirmek veya varolan olanları kaldırmak değil. Bu kılavuz, hem çıplak hem de sarılmış ileti sözleşmeleri için geçerlidir.  
   
-### <a name="removing-operations"></a>Işlemleri kaldırma  
- İşlemleri kaldırma işlemi de son değişiklik olur. Böyle bir değişiklik yapmak için yeni bir hizmet sözleşmesi tanımlayın ve yeni bir uç noktada kullanıma sunun.  
+ Sıkı sürüm kullanımda olsa bile ileti üstileri her zaman eklenebilir. MustUnderstand bayrağı sürümü etkileyebilir. Genel olarak, WCF başlıkları için sürüm modeli SOAP belirtiminde açıklandığı gibi.  
   
-### <a name="fault-contracts"></a>Hata sözleşmeleri  
- <xref:System.ServiceModel.FaultContractAttribute> özniteliği, bir hizmet sözleşmesi geliştiricisinin, sözleşmenin işlemlerinden döndürülebilecek hatalar hakkında bilgi belirtmesini sağlar.  
+## <a name="service-contract-versioning"></a>Hizmet Sözleşmesi Sürümü  
+ Veri sözleşmesi sürümüne benzer şekilde, hizmet sözleşmesi sürümü de ekleme, değiştirme ve işlemleri kaldırmayı içerir.  
   
- Bir hizmetin sözleşmesinde açıklanan hataların listesi ayrıntılı olarak değerlendirilmez. Herhangi bir zamanda, bir işlem sözleşmede açıklanmayan hatalar döndürebilir. Bu nedenle, sözleşmede açıklanan hata kümesini değiştirmenin bölünmesi düşünülmez. Örneğin, <xref:System.ServiceModel.FaultContractAttribute> kullanarak sözleşmeye yeni bir hata ekleme veya mevcut bir hatayı sözleşmeden kaldırma.  
+### <a name="specifying-name-namespace-and-action"></a>Ad, Ad Alanı ve Eylem Belirtme  
+ Varsayılan olarak, bir hizmet sözleşmesinin adı arabirimin adıdır. Varsayılan ad alanıhttp://tempuri.org" "dır ve her işleminhttp://tempuri.org/contractname/methodnameeylemi " "dir. Hizmet sözleşmesi için açıkça bir ad ve ad alanı ve " "http://tempuri.orgkullanmaktan kaçınmak ve arabirim ve yöntem adlarının hizmet sözleşmesinde açığa çıkarını önlemek için her işlem için bir eylem belirtmeniz önerilir.  
   
-### <a name="service-contract-libraries"></a>Hizmet sözleşmesi kitaplıkları  
- Kuruluşların, bir sözleşmenin merkezi bir depoya yayımlandığı ve hizmet uygulayıcıları bu depodan sözleşme uygulayan sözleşmeler kitaplıkları olabilir. Bu durumda, depoya bir hizmet sözleşmesi yayımladığınızda, kendisini uygulayan hizmetler oluşturan herhangi bir denetiminiz yoktur. Bu nedenle, hizmet sözleşmesini yayımlandıktan sonra değiştirilemez, böylece etkili bir şekilde işleme alabilirsiniz. WCF, mevcut sözleşmeleri genişleten yeni bir sözleşme oluşturmak için kullanılabilecek sözleşme devralmayı destekler. Bu özelliği kullanmak için eski hizmet sözleşmesi arabiriminden devralan yeni bir hizmet sözleşmesi arabirimi tanımlayın ve ardından yeni arabirime Yöntemler ekleyin. Daha sonra, yeni sözleşmeyi uygulamak için eski sözleşmeyi uygulayan hizmeti değiştirirsiniz ve "versionOld" uç nokta tanımını yeni sözleşmeyi kullanacak şekilde değiştirebilirsiniz. "VersionOld" istemcileri için uç nokta, "versionOld" sözleşmesini açığa çıkarmasına devam edecektir; "versionNew" istemcileri için uç nokta "versionNew" sözleşmesini kullanıma sunacaktır.  
+### <a name="adding-parameters-and-operations"></a>Parametreler ve İşlemler Ekleme  
+ Hizmet tarafından açıkta olan hizmet işlemleri ekleme, varolan istemcilerin bu yeni işlemlerle ilgilenmesi gerekmedığından, sonuçsuz bir değişikliktir.  
   
-## <a name="address-and-binding-versioning"></a>Adres ve bağlama sürümü oluşturma  
- İstemcilerin yeni uç nokta adresini veya bağlamayı dinamik olarak bulamadığı durumlar, uç nokta adresi ve bağlamadaki değişiklikler ortadan kaldırılır. Bu özelliği uygulamaya yönelik bir mekanizma, bir evrensel keşif açıklaması ve Tümleştirme (UDDI) kayıt defteri ve istemcinin bir uç noktayla iletişim kurmayı denediği ve hata durumunda iyi bilinen bir UDDI 'yı sorgulayan bir UDDI çağırma modelini kullanmaktır geçerli uç nokta meta verileri için kayıt defteri. İstemci daha sonra uç noktayla iletişim kurmak için bu meta verilerden adresi ve bağlamayı kullanır. Bu iletişim başarılı olursa istemci, daha sonra kullanmak üzere adresi ve bağlama bilgilerini önbelleğe alır.  
+> [!NOTE]
+> Çift yönlü geri arama sözleşmesine işlem eklemek bir son işlemdir.  
   
-## <a name="routing-service-and-versioning"></a>Yönlendirme hizmeti ve sürümü oluşturma  
- Bir hizmette yapılan değişiklikler önemli değişiklikler olduğunda ve hizmetin iki veya daha fazla farklı sürümünü aynı anda çalıştıran bir hizmete sahip olmanız gerekiyorsa, iletileri uygun hizmet örneğine yönlendirmek için WCF yönlendirme hizmetini kullanabilirsiniz. WCF yönlendirme hizmeti, içerik tabanlı yönlendirme kullanır, diğer bir deyişle, iletinin nereye yönlendirileceğini anlamak için ileti içindeki bilgileri kullanır. WCF yönlendirme hizmeti hakkında daha fazla bilgi için bkz. [yönlendirme hizmeti](./feature-details/routing-service.md). Hizmet sürümü oluşturma için WCF yönlendirme hizmetini nasıl kullanacağınızı gösteren bir örnek için bkz. [nasıl yapılır: hizmet sürümü oluşturma](./feature-details/how-to-service-versioning.md).  
+### <a name="changing-operation-parameter-or-return-types"></a>İşlem Parametresi veya İade Türlerini Değiştirme  
+ Parametre veya iade türlerini değiştirmek, yeni tür eski tür tarafından uygulanan aynı veri sözleşmesini uygulamadığı sürece genellikle bir kesme değişikliğidir. Böyle bir değişiklik yapmak için hizmet sözleşmesine yeni bir işlem ekleyin veya yeni bir hizmet sözleşmesi tanımlayın.  
   
-## <a name="appendix"></a>Yer  
- Katı sürüm oluşturma gerektiğinde genel veri anlaşması sürüm oluşturma kılavuzu, veri sözleşmelerini sabit olarak değerlendirmek ve değişiklikler gerektiğinde yenilerini oluşturmak için kullanılır. Her yeni veri sözleşmesi için yeni bir sınıf oluşturulması gerekir. bu nedenle, eski veri sözleşmesi sınıfına göre yazılmış olan kodu almak zorunda kalmamak ve yeni veri sözleşmesi sınıfına yeniden yazmak için bir mekanizma gereklidir.  
+### <a name="removing-operations"></a>İşlemleri Kaldırma  
+ İşlemleri kaldırma da bir kırılma değişikliğidir. Böyle bir değişiklik yapmak için yeni bir hizmet sözleşmesi tanımlayın ve yeni bir bitiş noktasında ortaya çıkarın.  
   
- Bu tür bir mekanizma, her bir veri sözleşmesinin üyelerini tanımlamak ve arabirimleri uygulayan veri sözleşmesi sınıfları yerine iç uygulama kodu yazmak için arabirimler kullanmaktır. Bir hizmetin 1. sürümü için aşağıdaki kod `IPurchaseOrderV1` arabirimini ve `PurchaseOrderV1` ' i gösterir:  
+### <a name="fault-contracts"></a>Arıza Sözleşmeleri  
+ Öznitelik, <xref:System.ServiceModel.FaultContractAttribute> bir hizmet sözleşmesi geliştiricisinin sözleşmenin işlemlerinden döndürülebilen hatalar hakkında bilgi belirtmesini sağlar.  
+  
+ Bir hizmetin sözleşmesinde açıklanan hataların listesi ayrıntılı olarak kabul edilmez. Herhangi bir zamanda, bir işlem sözleşmesinde açıklanmayan hataları döndürebilir. Bu nedenle sözleşmede açıklanan hata kümesinin değiştirilmesi kırılma olarak kabul edilmez. Örneğin, varolan bir hatayı kullanarak <xref:System.ServiceModel.FaultContractAttribute> veya sözleşmeden kaldırarak sözleşmeye yeni bir hata eklemek.  
+  
+### <a name="service-contract-libraries"></a>Hizmet Sözleşmesi Kütüphaneleri  
+ Kuruluşların, merkezi bir depoya sözleşme yayınlandığı ve hizmet uygulayıcılarının söz konusu depodan sözleşmeleri uyguladığı sözleşme kitaplıkları olabilir. Bu durumda, depoya bir hizmet sözleşmesi yayımladığınızda, bunu uygulayan hizmetleri kimin oluşturduğu üzerinde hiçbir denetiminiz yoktur. Bu nedenle, hizmet sözleşmesini yayımlandıktan sonra değiştiremezsiniz ve bu da hizmet sözleşmesini etkin bir şekilde değişmez hale getirir. WCF, varolan sözleşmeleri uzatan yeni bir sözleşme oluşturmak için kullanılabilecek sözleşme mirasını destekler. Bu özelliği kullanmak için, eski hizmet sözleşmesi arabiriminden devralınan yeni bir hizmet sözleşmesi arabirimi tanımlayın ve ardından yeni arabirime yöntemler ekleyin. Daha sonra, yeni sözleşmeyi uygulamak için eski sözleşmeyi uygulayan hizmeti değiştirir ve yeni sözleşmeyi kullanmak için "sürümOld" bitiş noktası tanımını değiştirirsiniz. "VersionOld" istemcileri için, bitiş noktası "versionOld" sözleşmesini açığa çıkarmak olarak görünmeye devam edecektir; "versionNew" istemcileri için, bitiş noktası "sürümNew" sözleşmesini ortaya çıkarmak için görünür.  
+  
+## <a name="address-and-binding-versioning"></a>Adres ve Ciltleme Sürümleme  
+ Uç nokta adresi ve bağlama değişiklikleri, istemciler yeni uç nokta adresini dinamik olarak keşfedebilme veya bağlama yeteneğine sahip olmadığı sürece değişiklikleri bozuyor. Bu özelliği uygulamak için bir mekanizma evrensel bulma açıklama ve tümleştirme (UDDI) kayıt defteri ve UDDI Çağırma Deseni kullanarak bir istemci nin bir bitiş noktası ile iletişim kurmaya çalışır ve başarısızlık üzerine, iyi bilinen bir UDDI sorgular geçerli uç nokta meta verilerinin kayıt defteri. İstemci daha sonra bitiş noktası ile iletişim kurmak için bu meta verilerden adresi ve bağlama kullanır. Bu iletişim başarılı olursa, istemci adresi ve bağlayıcı bilgileri ileride kullanmak üzere önbelleğe alınr.  
+  
+## <a name="routing-service-and-versioning"></a>Yönlendirme Hizmeti ve Sürüm  
+ Bir hizmette yapılan değişiklikler değişiklikleri kırıyorsa ve aynı anda çalışan bir hizmetin iki veya daha fazla farklı sürümüne sahip olmanız gerekiyorsa, iletileri uygun hizmet örneğine yönlendirmek için WCF Yönlendirme Hizmeti'ni kullanabilirsiniz. WCF Yönlendirme Hizmeti içerik tabanlı yönlendirme kullanır, başka bir deyişle, iletiyi nereye yönlendireceklerini belirlemek için ileti içindeki bilgileri kullanır. WCF Yönlendirme Hizmeti hakkında daha fazla bilgi için [Yönlendirme Hizmeti'ne](./feature-details/routing-service.md)bakın. Hizmet sürümü için WCF Yönlendirme Hizmeti'nin nasıl kullanılacağına bir örnek için [bkz.](./feature-details/how-to-service-versioning.md)  
+  
+## <a name="appendix"></a>Ek  
+ Sıkı sürüm gerektiğinde genel veri sözleşmesi sürüm kılavuzu, veri sözleşmelerini değişmez olarak ele almak ve değişiklikler gerektiğinde yenilerini oluşturmaktır. Her yeni veri sözleşmesi için yeni bir sınıf oluşturulması gerekir, bu nedenle eski veri sözleşmesi sınıfı açısından yazılmış varolan kodu almak ve yeni veri sözleşmesi sınıfı açısından yeniden yazmak zorunda kalmaktan kaçınmak için bir mekanizma gereklidir.  
+  
+ Bu mekanizmalardan biri, arabirimleri uygulayan veri sözleşmesi sınıfları yerine arabirimler açısından her veri sözleşmesinin üyelerini tanımlamak ve iç uygulama kodu yazmak için arabirimleri kullanmaktır. Bir hizmetin sürüm 1 için `IPurchaseOrderV1` aşağıdaki kodu `PurchaseOrderV1`bir arabirim ve bir gösterir:  
   
 ```csharp  
 public interface IPurchaseOrderV1  
@@ -151,7 +151,7 @@ public class PurchaseOrderV1 : IPurchaseOrderV1
 }  
 ```  
   
- Hizmet sözleşmesinin işlemleri `PurchaseOrderV1` ' da yazıldığında, gerçek iş mantığı `IPurchaseOrderV1` ' de olabilir. Ardından, sürüm 2 ' de, aşağıdaki kodda gösterildiği gibi yeni bir `IPurchaseOrderV2` arabirimi ve yeni bir `PurchaseOrderV2` sınıfı vardır:  
+ Hizmet sözleşmesinin işlemleri açısından `PurchaseOrderV1`yazılırken, asıl iş mantığı açısından `IPurchaseOrderV1`olacaktır. Daha sonra, sürüm 2'de, `IPurchaseOrderV2` aşağıdaki kodda gösterildiği gibi yeni bir arabirim ve yeni `PurchaseOrderV2` bir sınıf olacaktır:  
   
 ```csharp
 public interface IPurchaseOrderV2  
@@ -159,7 +159,7 @@ public interface IPurchaseOrderV2
     DateTime OrderDate { get; set; }  
 }
 
-[DataContract(   
+[DataContract(
 Name = "PurchaseOrder",  
 Namespace = "http://examples.microsoft.com/WCF/2006/02/PurchaseOrder")]  
 public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2  
@@ -173,7 +173,7 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
 }  
 ```  
   
- Hizmet sözleşmesi, `PurchaseOrderV2` ' da yazılı yeni işlemleri içerecek şekilde güncelleştirilecektir. `IPurchaseOrderV1` olarak yazılan mevcut iş mantığı `PurchaseOrderV2` ve `OrderDate` özelliğin `IPurchaseOrderV2`açısından yazılması gereken yeni iş mantığı için çalışmaya devam edecektir.  
+ Hizmet sözleşmesi, `PurchaseOrderV2`'' açısından yazılmış yeni işlemleri içerecek şekilde güncellenecektir. Mevcut iş mantığı açısından `IPurchaseOrderV1` yazılan lar `PurchaseOrderV2` için çalışmaya devam edecek `OrderDate` ve yeni iş `IPurchaseOrderV2`mantığı na ihtiyaç duyduğu özellik açısından yazılacak.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -187,5 +187,5 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
 - <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Veri Anlaşması Eşitliği](./feature-details/data-contract-equivalence.md)
+- [Veri Sözleşmesi Eşitliği](./feature-details/data-contract-equivalence.md)
 - [Sürüm Toleranslı Seri Hale Getirme Geri Çağrıları](./feature-details/version-tolerant-serialization-callbacks.md)

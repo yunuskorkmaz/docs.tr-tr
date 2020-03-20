@@ -9,24 +9,24 @@ helpviewer_keywords:
 - switches element
 - trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
-ms.openlocfilehash: 4aeb3cb0cd75f0fb27e3b359b86da61a77b491c7
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 15cc9680d7a20341eb5d1d1df302c1e034e70e02
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088799"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153236"
 ---
-# <a name="switches-element"></a>\<anahtarlar > öğesi
-İzleme anahtarlarını ve izleme anahtarlarının ayarlandığı düzeyi içerir.  
+# <a name="switches-element"></a>\<anahtarları> Eleman
+İzleme anahtarları ve izleme anahtarlarının ayarlandığı düzeyi içerir.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-[**System. diagnostics\<** ](system-diagnostics-element.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<anahtarlar >**
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<anahtarları>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-      <switches>   
+      <switches>
 </switches>  
 ```  
   
@@ -40,20 +40,20 @@ ms.locfileid: "74088799"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<> Ekle](add-element-for-switches.md)|Bir izleme anahtarının ayarlandığı düzeyi belirtir.|  
+|[\<>ekleyin](add-element-for-switches.md)|İzleme anahtarının ayarlandığı düzeyi belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`System.diagnostics`|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
+|`System.diagnostics`|İletileri toplayan, depolayan ve yönlendiren izleme dinleyicilerini ve izleme anahtarının ayarlandığı düzeyi belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir izleme anahtarı düzeyini bir yapılandırma dosyasına yerleştirerek değiştirebilirsiniz. Anahtar bir <xref:System.Diagnostics.BooleanSwitch>, açıp kapatabilirsiniz. Anahtar bir <xref:System.Diagnostics.TraceSwitch>ise, uygulamanın çıkışları için izleme veya hata ayıklama iletilerinin türlerini belirtmek üzere buna farklı düzeyler atayabilirsiniz.  
+ Bir yapılandırma dosyasına koyarak izleme anahtarıdüzeyini değiştirebilirsiniz. Anahtar bir <xref:System.Diagnostics.BooleanSwitch>ise, açıp kapatabilirsiniz. Anahtar bir <xref:System.Diagnostics.TraceSwitch>ise, uygulama çıktılarının izleme veya hata ayıklama iletilerinin türlerini belirtmek için bu düzeylere farklı düzeyler atayabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, `General` izleme anahtarını <xref:System.Diagnostics.TraceLevel> düzeyine ayarlamak ve `Data` Boole izleme anahtarını etkinleştirmek için **\<anahtar >** öğesinin nasıl kullanılacağını gösterir.  
+ Aşağıdaki örnekte, izleme anahtarını `General` <xref:System.Diagnostics.TraceLevel> düzeye ayarlamak ve Boolean izleme `Data` anahtarını ** \<** etkinleştirmek için anahtar>öğesinin nasıl kullanılacağı gösterilmektedir.  
   
 ```xml  
 <configuration>  

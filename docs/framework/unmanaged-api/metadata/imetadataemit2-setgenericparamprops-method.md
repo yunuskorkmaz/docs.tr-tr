@@ -15,52 +15,52 @@ helpviewer_keywords:
 ms.assetid: cd93a48d-1fed-4706-bec6-a05dc3b64fbd
 topic_type:
 - apiref
-ms.openlocfilehash: 7a93bbe0d7a9d9e6ff7505bbc215efa79176ad1f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fd7f149e806727d849cdceb3ffbc5dc7392fcf1d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440441"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177407"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>IMetaDataEmit2::SetGenericParamProps Yöntemi
-Belirtilen belirteç tarafından başvurulan genel parametre tanımının özellik değerlerini ayarlar.  
+Belirtilen belirteç tarafından başvurulan genel parametre tanımı için özellik değerlerini ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetGenericParamProps (  
-    [in] mdGenericParam   gp,   
-    [in] DWORD            dwParamFlags,   
-    [in] LPCWSTR          szName,   
-    [in] DWORD            reserved,   
+    [in] mdGenericParam   gp,
+    [in] DWORD            dwParamFlags,
+    [in] LPCWSTR          szName,
+    [in] DWORD            reserved,
     [in] mdToken          rtkConstraints[]  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `gp`  
- 'ndaki Değerleri ayarlanacak genel parametre tanımının belirteci.  
+ [içinde] Değerleri ayarlamak için genel parametre tanımı için belirteç.  
   
  `dwParamFlags`  
- 'ndaki Genel parametrenin türünü açıklayan [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) numaralandırması değeri.  
+ [içinde] Genel parametrenin türünü açıklayan [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) numaralandırmadeğeri.  
   
  `szName`  
- 'ndaki Seçim. Değerlerinin ayarlanacağı parametrenin adı.  
+ [içinde] Isteğe bağlı. Değerleri ayarlamak için parametrenin adı.  
   
  `reserved`  
- 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır.  
+ [içinde] Gelecekteki genişletilebilirlik için ayrılmıştır.  
   
  `rtkConstraints`  
- 'ndaki Seçim. Tür kısıtlamaları sıfır ile sonlandırılmış dizi. Dizi üyeleri bir `mdTypeDef`, `mdTypeRef`veya `mdTypeSpec` meta veri belirteci olmalıdır.  
+ [içinde] Isteğe bağlı. Sıfır sonlandırılmış tür kısıtlamaları dizisi. Dizi üyeleri bir `mdTypeDef` `mdTypeRef`, `mdTypeSpec` veya meta veri belirteci olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

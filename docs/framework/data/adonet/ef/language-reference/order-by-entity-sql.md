@@ -1,57 +1,57 @@
 ---
-title: SıRALAMA ölçütü (Entity SQL)
+title: SİPARİş TARAFINDAN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: 2010ef9d6fe37e65824cac877074453db1b789db
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 1233971b172079aa48227d0ec520068afbdf0952
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319440"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150075"
 ---
-# <a name="order-by-entity-sql"></a>SıRALAMA ölçütü (Entity SQL)
-Bir SELECT ifadesinde döndürülen nesnelerde kullanılan sıralama düzenini belirtir.  
+# <a name="order-by-entity-sql"></a>SİPARİş TARAFINDAN (Entity SQL)
+SELECT deyiminde döndürülen nesnelerde kullanılan sıralama sırasını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```sql  
-[ ORDER BY   
+[ ORDER BY
    {  
       order_by_expression [SKIP n] [LIMIT n]  
       [ COLLATE collation_name ]  
       [ ASC | DESC ]  
    }  
-   [ ,…n ]   
+   [ ,…n ]
 ]  
 ```  
   
 ## <a name="arguments"></a>Bağımsız Değişkenler  
  `order_by_expression`  
- Üzerinde sıralanacak bir özellik belirten geçerli bir sorgu ifadesi. Birden çok sıralama ifadesi belirlenebilir. ORDER BY yan tümcesindeki sıralama ifadelerinin sırası, sıralanmış sonuç kümesinin organizasyonunu tanımlar.  
+ Sıralamak için bir özellik belirten geçerli bir sorgu ifadesi. Birden çok sıralama ifadeleri belirtilebilir. ORDER BY yan tümcesindeki tür ifadelerinin sırası, sıralanmış sonuç kümesinin organizasyonunu tanımlar.  
   
- HARMANLAMA {collation_name}  
- ORDER BY işleminin, `collation_name`belirtilen harmanlamaya göre gerçekleştirilmesi gerektiğini belirtir. HARMANLAMA yalnızca dize ifadeleri için geçerlidir.  
+ HARM {collation_name}  
+ Order BY işleminin belirtilen harmanlama göre yapılması gerektiğini `collation_name`belirtir. COLLATE yalnızca dize ifadeleri için geçerlidir.  
   
  ASC  
- Belirtilen özelliğindeki değerlerin, en düşük değerden en yüksek değere göre artan sırada sıralanması gerektiğini belirtir. Bu varsayılandır.  
+ Belirtilen özellikteki değerlerin artan sırada, en düşük değerden en yüksek değere sıralanması gerektiğini belirtir. Bu varsayılandır.  
   
- KÜMESINDE  
- Belirtilen özelliğindeki değerlerin, en yüksek değerden en düşük değere göre azalan sırada sıralanması gerektiğini belirtir.  
+ DESC  
+ Belirtilen özellikteki değerlerin azalan sırada, en yüksek değerden en düşük değere sıralanması gerektiğini belirtir.  
   
- SıNıR `n`  
- Yalnızca ilk `n` öğe seçilecek.  
+ Sınırı`n`  
+ Yalnızca ilk `n` öğeler seçilir.  
   
- `n` atla  
- İlk `n` öğelerini atlar.  
+ Atlamak`n`  
+ İlk `n` öğeleri atlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- ORDER BY yan tümcesi, SELECT yan tümcesinin sonucuna mantıksal olarak uygulanır. ORDER BY yan tümcesi, seçim listesindeki öğelere diğer adlarını kullanarak başvurabilir. ORDER BY yan tümcesi, şu anda kapsamda olan diğer değişkenlere de başvurabilir. Ancak, SELECT yan tümcesi ayrı bir değiştiriciyle belirtilmişse, ORDER BY yan tümcesi yalnızca SELECT yan tümcesindeki diğer adlara başvurabilir.  
+ ORDER BY yan tümcesi, SELECT yan tümcesinin sonucuna mantıksal olarak uygulanır. ORDER BY yan tümcesi, diğer adlarını kullanarak seçili listedeki öğelere başvuru yapabilir. ORDER BY yan tümcesi, şu anda kapsam içinde olan diğer değişkenlere de başvuruyapabilir. Ancak, SELECT yan tümcesi DISTINCT değiştirici ile belirtilmişse, ORDER BY yan tümcesi yalnızca SELECT yan tümcesi diğer adlarını kullanabilir.  
   
  `SELECT c AS c1 FROM cs AS c ORDER BY c1.e1, c.e2`  
   
- ORDER BY yan tümcesindeki her bir ifade, sıralı eşitsizlik (küçüktür veya büyüktür, vb.) için karşılaştırılabileceğiniz bazı tür olarak değerlendirilmelidir. Bu türler genellikle sayılar, dizeler ve tarihler gibi skaler temel öğelerdir. Karşılaştırılabilir türlerin RowTypes da sıralı karşılaştırılabilir.  
+ ORDER BY yan tümcesindeki her ifade, sipariş edilen eşitsizlik için karşılaştırılabilen bazı türe (daha az veya daha büyük vb.) değerlendirilmelidir. Bu türler genellikle sayılar, dizeleri ve tarihler gibi skaler ilkel vardır. Karşılaştırılabilir türlerin RowTypes da karşılaştırılabilir sipariş vardır.  
   
- Kodunuz, üst düzey projeksiyon için dışında, sıralı bir küme üzerinde yinelenir, çıkışın sırasının korunması garanti edilmez.  
+ Kodunuz, üst düzey bir projeksiyon dışında sıralı bir küme üzerinde yinelenirse, çıktının siparişinin korunduğu garanti edilmez.  
 
 Aşağıdaki örnekte, siparişin korunması garanti edilir:
 
@@ -61,7 +61,7 @@ SELECT C1.FirstName, C1.LastName
         ORDER BY C1.LastName  
 ```  
 
-Aşağıdaki sorguda, iç içe geçmiş sorgunun sıralaması yok sayılır:  
+Aşağıdaki sorguda, iç içe olan sorgunun sırası yoksayılır:  
 
 ```sql  
 SELECT C2.FirstName, C2.LastName  
@@ -70,7 +70,7 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
- Sıralı bir UNıON, UNıON ALL, EXCEPT veya ıNTERSECT işlemine sahip olmak için aşağıdaki kalıbı kullanın:  
+ Sipariş edilmiş bir BİrLİk, UNION ALL, EXCEPT veya INTERSECT işlemine sahip olmak için aşağıdaki deseni kullanın:  
   
 ```sql  
 SELECT ...  
@@ -78,18 +78,18 @@ FROM ( UNION/EXCEPT/INTERSECT operation )
 ORDER BY ...  
 ```  
   
-## <a name="restricted-keywords"></a>Kısıtlanmış anahtar sözcükler  
- Aşağıdaki anahtar sözcükler, bir `ORDER BY` yan tümcesinde kullanıldığında tırnak işaretleri içine alınmalıdır:  
+## <a name="restricted-keywords"></a>Kısıtlı anahtar kelimeler  
+ Aşağıdaki anahtar kelimeler, bir `ORDER BY` yan tümcede kullanıldığında tırnak işaretlerine eklenmelidir:  
   
-- ÜSTÜNÜ  
+- Çapraz  
   
-- TÜMÜNÜ  
+- Tam  
   
 - KEY  
   
-- TARAFTA  
+- LEFT  
   
-- SIPARIŞI  
+- Sipariş  
   
 - Dış  
   
@@ -97,12 +97,12 @@ ORDER BY ...
   
 - ROW  
   
-- DEERI  
+- DEĞER  
   
-## <a name="ordering-nested-queries"></a>Iç Içe sorguları sıralama  
- Entity Framework, iç içe geçmiş bir ifade sorgunun herhangi bir yerine yerleştirilebilir; iç içe geçmiş bir sorgunun sırası korunmaz.  
+## <a name="ordering-nested-queries"></a>İç Içe Sorguları Sıralama  
+ Varlık Çerçevesi'nde, iç içe bir ifade sorguda herhangi bir yere yerleştirilebilir; iç içe geçme sırası korunmaz.  
 
-Aşağıdaki sorgu sonuçları en son ada göre sıraya alacak:  
+Aşağıdaki sorgu sonuçları soyadına göre sıralar:  
 
 ```sql  
 SELECT C1.FirstName, C1.LastName  
@@ -110,7 +110,7 @@ SELECT C1.FirstName, C1.LastName
         ORDER BY C1.LastName  
 ```  
 
-Aşağıdaki sorguda, iç içe geçmiş sorgunun sıralaması yok sayılır:  
+Aşağıdaki sorguda, iç içe olan sorgunun sırası yoksayılır:  
 
 ```sql  
 SELECT C2.FirstName, C2.LastName  
@@ -120,11 +120,11 @@ SELECT C2.FirstName, C2.LastName
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgusu, SELECT ifadesinde döndürülen nesneler üzerinde kullanılan sıralama düzenini belirtmek için ORDER BY işlecini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
+ Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu, SELECT deyiminde döndürülen nesnelerde kullanılan sıralama sırasını belirtmek için ORDER BY işlecikullanır. Sorgu AdventureWorks Satış Modeli dayanmaktadır. Bu sorguyı derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. [Nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../how-to-execute-a-query-that-returns-structuraltype-results.md)bölümündeki yordamı izleyin.  
+1. [YapısalTürü Sonuçları Döndüren Bir Sorguyu Yürütme: Nasıl Yapılır'daki](../how-to-execute-a-query-that-returns-structuraltype-results.md)yordamı izleyin.  
   
-2. Aşağıdaki sorguyu `ExecuteStructuralTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
+2. Aşağıdaki sorguyu bağımsız değişken `ExecuteStructuralTypeQuery` olarak yönteme geçirin:  
   
  [!code-sql[DP EntityServices Concepts#ORDERBY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#orderby)]  
   
@@ -132,6 +132,6 @@ SELECT C2.FirstName, C2.LastName
 
 - [Sorgu İfadeleri](query-expressions-entity-sql.md)
 - [Entity SQL Başvurusu](entity-sql-reference.md)
-- [SKIP](skip-entity-sql.md)
-- [LIMIT](limit-entity-sql.md)
-- [TOP](top-entity-sql.md)
+- [Atlamak](skip-entity-sql.md)
+- [Sınırı](limit-entity-sql.md)
+- [Sayfanın Üstü](top-entity-sql.md)

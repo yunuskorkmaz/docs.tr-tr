@@ -15,51 +15,51 @@ helpviewer_keywords:
 ms.assetid: 3dcd16a7-dafc-4ca8-b5cd-20ffb37db91d
 topic_type:
 - apiref
-ms.openlocfilehash: 63fb505a92683fda21b6e71a6ca891ca35afba1d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bdafacfe52d678aacfcd44de1e924bcb88547424
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136407"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178199"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory İşlevi
-İşleme yüklenen ortak dil çalışma zamanının (CLR) yükleme dizinini döndürür. Yükleme dizini tam olarak nitelenir, örneğin "c:\Windows\Microsoft.NET\Framework\v1.0.3705".  
+İşleme yüklenen ortak dil çalışma zamanının (CLR) yükleme dizini verir. Yükleme dizini, örneğin "c:\windows\microsoft.net\framework\v1.0.3705" gibi tam niteliklidir.  
   
- Bu işlev kullanım dışıdır. .NET Framework 4 ' te belirtilen [ICLRRuntimeInfo:: GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) yöntemi ile değiştirilmiştir.  
+ Bu işlev amortismana hazır. Bu [ICLRRuntimeInfo tarafından yerini::GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) yöntemi .NET Framework 4 sağlanan.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT GetCORSystemDirectory (   
-    [out] LPWSTR  pbuffer,     
-    [in]  DWORD   cchBuffer,   
+HRESULT GetCORSystemDirectory (
+    [out] LPWSTR  pbuffer,
+    [in]  DWORD   cchBuffer,
     [out] DWORD*  dwlength  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pbuffer`  
- dışı Çalışma zamanının, işleme yüklenmiş çalışma zamanı için yükleme dizininin tam adını içeren bir dize döndürdüğü bir arabellek. Çalışma zamanı işleme henüz yüklenmemişse, işlev, bilgisayarda yüklü olan çalışma zamanının en son sürümü için uygun dizin bilgilerini döndürür.  
+ [çıkış] Çalışma zamanının, işleme yüklenen çalışma zamanı için yükleme dizininin tam nitelikli adını içeren bir dize döndürdİğİ bir arabellek. Çalışma süresi henüz işleme yüklenmediyse, işlev bilgisayarda yüklenen çalışma zamanının en son sürümü için uygun dizin bilgilerini döndürür.  
   
  `cchBuffer`  
- 'ndaki `pbuffer`bayt cinsinden boyutu.  
+ [içinde] Boyutu, bayt, ve. `pbuffer`  
   
  `dwLength`  
- dışı `pbuffer`döndürülen karakterlerin sayısı.  
+ [çıkış] Döndürülen karakter `pbuffer`sayısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!CAUTION]
-> Bu işlevi CLR sürüm 4 ' ü çalıştıran işlemlerde kullanmayın. Bilgisayarda CLR 'nin önceki bir sürümü yüklüyse, bu işlev söz konusu sürümün yükleme dizinini döndürür.  
+> CLR'nin sürüm 4'ü çalıştıran işlemlerde bu işlevi kullanmayın. CLR'nin önceki bir sürümü bilgisayara yüklenmişse, bu işlev bu sürümün yükleme dizinini döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE. h  
+ **Üstbilgi:** MSCorEE.h  
   
- **Kitaplık:** MSCorEE. dll  
+ **Kütüphane:** Mscoree.dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

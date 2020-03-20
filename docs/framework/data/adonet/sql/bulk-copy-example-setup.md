@@ -2,30 +2,30 @@
 title: Toplu Kopyalama Örnek Kurulumu
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: 28fa5cde1dcbaf9f38450116a56fc11d904edc1c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 80350d112da03c00e422432ce271ca5ea3ac58ab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040261"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148848"
 ---
 # <a name="bulk-copy-example-setup"></a>Toplu Kopyalama Örnek Kurulumu
-<xref:System.Data.SqlClient.SqlBulkCopy> sınıfı yalnızca SQL Server tablolarına veri yazmak için kullanılabilir. Bu konuda gösterilen kod örnekleri, **AdventureWorks**SQL Server örnek veritabanını kullanır. Mevcut tabloların değiştirilmesini önlemek için, önce oluşturmanız gereken tablolara veri yazar.  
+Sınıf <xref:System.Data.SqlClient.SqlBulkCopy> yalnızca SQL Server tablolarına veri yazmak için kullanılabilir. Bu konuda gösterilen kod örnekleri SQL Server örnek veritabanı, **AdventureWorks**kullanın. Varolan tablolar kod örnekleri değiştirmemek için önce oluşturmanız gereken tablolara veri yazın.  
   
- **BulkCopyDemoMatchingColumns** ve **Bulkcopydemofarklıentcolumns** tabloları, hem **AdventureWorks** **Production. Products** tablosuna dayalıdır. Bu tabloları kullanan kod örneklerinde, veriler **üretim. Products** tablosundan bu örnek tablolardan birine eklenir. Örnek, kaynak verilerden hedef tabloya sütunların nasıl eşlendiğini gösteren **Bulkcopydemofarklıya sütunları** tablosu kullanılır; Diğer çoğu örnek için **BulkCopyDemoMatchingColumns** kullanılır.  
+ **BulkCopyDemoMatchingColumns** ve **BulkCopyDemoDifferentColumns** tablolar **adventureworks** **Production.Products** tablosuna dayanmaktadır. Bu tabloları kullanan kod örneklerinde, **Production.Products** tablosundan bu örnek tablolardan birine veriler eklenir. **BulkCopyDemoDifferentColumns** tablosu, örnekte kaynak verilerden hedef tabloya sütunların nasıl eşlenecek gösterildiğinde kullanılır; **BulkCopyDemoMatchingColumns** diğer örneklerin çoğu için kullanılır.  
   
- Kod örneklerinin birkaçı, birden çok tabloya yazmak için bir <xref:System.Data.SqlClient.SqlBulkCopy> sınıfını nasıl kullanacağınızı gösterir. Bu örnekler için, **BulkCopyDemoOrderHeader** ve **BulkCopyDemoOrderDetail** tabloları hedef tabloları olarak kullanılır. Bu tablolar, **AdventureWorks**içindeki **Sales. SalesOrderHeader** ve **Sales. SalesOrderDetail** tablolarını temel alır.  
+ Kod örneklerinden birkaçı, birden <xref:System.Data.SqlClient.SqlBulkCopy> çok tabloya yazmak için bir sınıfın nasıl kullanılacağını gösterir. Bu örnekler için, **BulkCopyDemoOrderHeader** ve **BulkCopyDemoOrderDetail** tabloları hedef tabloları olarak kullanılır. Bu tablolar **AdventureWorks** **Sales.SalesOrderHeader** ve **Sales.SalesOrderDetail** tabloları dayanmaktadır.  
   
 > [!NOTE]
-> **SqlBulkCopy** kod örnekleri yalnızca **SqlBulkCopy** kullanma sözdizimini göstermek için verilmiştir. Kaynak ve hedef tablolar aynı SQL Server örneğinde yer alıyorsa, verileri kopyalamak için Transact-SQL `INSERT … SELECT` deyimlerinin kullanılması daha kolay ve hızlıdır.  
+> **SqlBulkCopy** kod örnekleri yalnızca **SqlBulkCopy** kullanmak için sözdizimini göstermek için sağlanır. Kaynak ve hedef tablolar aynı SQL Server örneğinde bulunuyorsa, verileri kopyalamak için `INSERT … SELECT` Transact-SQL deyimi kullanmak daha kolay ve daha hızlıdır.  
   
-## <a name="table-setup"></a>Tablo kurulumu  
- Kod örneklerinin düzgün çalışması için gereken tabloları oluşturmak için aşağıdaki Transact-SQL deyimlerini bir SQL Server veritabanında çalıştırmanız gerekir.  
+## <a name="table-setup"></a>Tablo Kurulumu  
+ Kod örneklerinin düzgün çalışması için gerekli tabloları oluşturmak için, aşağıdaki İşlem-SQL deyimlerini bir SQL Server veritabanında çalıştırmanız gerekir.  
   
 ```sql
 USE AdventureWorks  
   
-IF EXISTS (SELECT * FROM dbo.sysobjects   
+IF EXISTS (SELECT * FROM dbo.sysobjects
  WHERE id = object_id(N'[dbo].[BulkCopyDemoMatchingColumns]')  
  AND OBJECTPROPERTY(id, N'IsUserTable') = 1)  
     DROP TABLE [dbo].[BulkCopyDemoMatchingColumns]  
@@ -38,7 +38,7 @@ CREATE TABLE [dbo].[BulkCopyDemoMatchingColumns]([ProductID] [int] IDENTITY(1,1)
     [ProductID] ASC  
 ) ON [PRIMARY]) ON [PRIMARY]  
   
-IF EXISTS (SELECT * FROM dbo.sysobjects   
+IF EXISTS (SELECT * FROM dbo.sysobjects
  WHERE id = object_id(N'[dbo].[BulkCopyDemoDifferentColumns]')  
  AND OBJECTPROPERTY(id, N'IsUserTable') = 1)  
     DROP TABLE [dbo].[BulkCopyDemoDifferentColumns]  
@@ -51,7 +51,7 @@ CREATE TABLE [dbo].[BulkCopyDemoDifferentColumns]([ProdID] [int] IDENTITY(1,1) N
     [ProdID] ASC  
 ) ON [PRIMARY]) ON [PRIMARY]  
   
-IF EXISTS (SELECT * FROM dbo.sysobjects   
+IF EXISTS (SELECT * FROM dbo.sysobjects
  WHERE id = object_id(N'[dbo].[BulkCopyDemoOrderHeader]')  
  AND OBJECTPROPERTY(id, N'IsUserTable') = 1)  
     DROP TABLE [dbo].[BulkCopyDemoOrderHeader]  
@@ -64,7 +64,7 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderHeader]([SalesOrderID] [int] IDENTITY(1,1) 
     [SalesOrderID] ASC  
 ) ON [PRIMARY]) ON [PRIMARY]  
   
-IF EXISTS (SELECT * FROM dbo.sysobjects   
+IF EXISTS (SELECT * FROM dbo.sysobjects
  WHERE id = object_id(N'[dbo].[BulkCopyDemoOrderDetail]')  
  AND OBJECTPROPERTY(id, N'IsUserTable') = 1)  
     DROP TABLE [dbo].[BulkCopyDemoOrderDetail]  

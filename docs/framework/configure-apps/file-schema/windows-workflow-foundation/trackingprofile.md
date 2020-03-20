@@ -3,22 +3,22 @@ title: <trackingProfile>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 154830ff-ddd3-4397-a3b5-5b334907777f
-ms.openlocfilehash: 3120d6f5d1bb5a5cf452567e96766231534f3f41
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 8985da7e1223ac117cf1b68227140634f9c85d3a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398589"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151895"
 ---
-# <a name="trackingprofile"></a>\<trackingProfile>
-Bir izleme katılımcısı içindeki iş akışı izleme kayıtlarına abonelik oluşturmak için bir yapılandırma bölümünü temsil eder. Bir izleme profili, bir iş akışı örneğinin durumu çalışma zamanında değiştiğinde yayınlanan iş akışı olaylarına abone olmak için izleme katılımcısına izin veren izleme sorguları içerir. İzleme profili bölümü içinde tanımlanan sorgular, aboneliğin döndürdüğü olay türlerini tanımlar.  
+# <a name="trackingprofile"></a>\<izlemeProfil>
+İzleme katılımcısında iş akışı izleme kayıtlarına abonelik oluşturmak için bir yapılandırma bölümünü temsil eder. İzleme profili, bir izleme katılımcısının çalışma zamanında iş akışı örneği durumu değiştiğinde yayılan iş akışı olaylarına abone olmasını sağlayan izleme sorguları içerir. İzleme profili bölümünde tanımlanan sorgular, abonelik tarafından döndürülen olay türlerini tanımlar.  
   
- İş akışı izleme ve yapılandırma hakkında daha fazla bilgi için bkz. [Iş akışı izleme ve izleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) ve [izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md).  
+ İş akışı izleme ve yapılandırmasında daha fazla bilgi için [İş Akışı İzleme ve İzleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) ve İzleme [Profilleri'ne](../../../windows-workflow-foundation/tracking-profiles.md)bakın.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<sistemin. ServiceModel >** ](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<İzleme >** ](tracking.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<trackingProfile >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<Sistem. ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<izleme>**](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<izlemeProfil>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,14 +27,14 @@ Bir izleme katılımcısı içindeki iş akışı izleme kayıtlarına abonelik 
   <tracking>
     <profiles>
       <participants>
-        <add name="String" 
-             profileName="String" 
+        <add name="String"
+             profileName="String"
              type="String" />
       </participants>
       <trackingProfile name="String">
         <workflow activityDefinitionId="String">
           <activityScheduledQueries>
-            <activityScheduledQuery activityName="String" 
+            <activityScheduledQuery activityName="String"
                                     childActivityName="String"/>
           </activityScheduledQueries>
           <activityStateQueries>
@@ -53,15 +53,15 @@ Bir izleme katılımcısı içindeki iş akışı izleme kayıtlarına abonelik 
             <bookmarkResumptionQuery name="String" />
           </bookmarkResumptionQueries>
           <cancelRequestQueries>
-            <cancelRequestQuery activityName="String" 
+            <cancelRequestQuery activityName="String"
                                 childActivityName="String"/>
           </cancelRequestQueries>
           <customTrackingQueries>
-            <customTrackingQuery activityName="String" 
+            <customTrackingQuery activityName="String"
                                  name="String"/>
           </customTrackingQueries>
           <faultPropagationQueries>
-            <faultPropagationQuery activityName="String" 
+            <faultPropagationQuery activityName="String"
                                    faultHandlerActivityName="String" />
           </faultPropagationQueries>
           <workflowInstanceQueries>
@@ -85,30 +85,30 @@ Bir izleme katılımcısı içindeki iş akışı izleme kayıtlarına abonelik 
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|name|İzleme profilinin adını belirten bir dize.|  
+|ad|İzleme profilinin adını belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Katılımcılar >](participants.md)|Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir yapılandırma öğesi <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId%2A?displayProperty=nameWithType> özelliği.|  
+|[\<katılımcılar>](participants.md)|Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir yapılandırma öğesi <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId%2A?displayProperty=nameWithType> özelliği.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<İzleme >](tracking.md)|Bir iş akışı hizmeti için izleme ayarlarını tanımlamaya yönelik bir yapılandırma bölümünü temsil eder.|  
+|[\<izleme>](tracking.md)|İş akışı hizmeti için izleme ayarlarını tanımlamak için bir yapılandırma bölümünü temsil eder.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İzleme profilleri, bir iş akışı örneğinin durumu çalışma zamanında değiştiğinde yayınlanan iş akışı olaylarına abone olmak için izleme katılımcısına izin veren izleme sorguları içerir. Çok kaba bir profili yazabilirsiniz izleme gereksinimlerinize bağlı olarak, bir iş akışı üzerinde üst düzey durum değişikliklerini küçük bir kümesi için abone olur. Buna karşılık, daha sonra ayrıntılı bir yürütme akışını yeniden oluşturmak için yeterince zengin olan çok özel bir profil oluşturabilirsiniz.  
+ İzleme profilleri, bir izleme katılımcısının çalışma zamanında iş akışı örneği durumu değiştiğinde yayılan iş akışı olaylarına abone olmasını sağlayan izleme sorguları içerir. Çok kaba bir profili yazabilirsiniz izleme gereksinimlerinize bağlı olarak, bir iş akışı üzerinde üst düzey durum değişikliklerini küçük bir kümesi için abone olur. Tersine, ortaya çıkan olaylar daha sonra ayrıntılı bir yürütme akışını yeniden oluşturmak için yeterince zengin olan çok özel bir profil oluşturabilirsiniz.  
   
- İzleme profilleri, belirli izleme kayıtları için iş akışı çalışma zamanını sorgulamanızı sağlayan kayıtları izlemek için bildirim temelli abonelikler olarak yapılandırılır. Farklı <xref:System.Activities.Tracking.TrackingRecord> nesne sınıflarına abone olmanıza imkan tanıyan bir dizi sorgu türü vardır. Sorguların tüm listesi için bkz [ \<. katılımcılar >](participants.md) ve [izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md)..  
+ İzleme profilleri, belirli izleme kayıtları için iş akışı çalışma zamanını sorgulamanıza olanak tanıyan kayıtları izlemek için bildirimsel abonelikler olarak yapılandırılır. Farklı <xref:System.Activities.Tracking.TrackingRecord> nesne sınıflarına abone olsanız neden olan bir avuç sorgu türü vardır. Sorguların tam listesi için [ \<katılımcılar>](participants.md) ve [İzleme Profilleri'ne](../../../windows-workflow-foundation/tracking-profiles.md)bakın.  
   
- Aşağıdaki örnek, bir yapılandırma dosyasında izleme katılımcısının `Started` ve `Completed` iş akışı olaylarına abone olmasına izin veren bir izleme profilini gösterir.  
+ Aşağıdaki örnek, bir yapılandırma dosyasındaki bir izleme katılımcısının iş `Started` `Completed` akışı olaylarına abone olmasını sağlayan bir izleme profilini gösterir.  
   
 ```xml  
 <system.serviceModel>  
-  <tracking>    
+  <tracking>
     <trackingProfile name="Sample Tracking Profile">  
       <workflow activityDefinitionId="*">  
          <workflowInstanceQueries>  
@@ -120,7 +120,7 @@ Bir izleme katılımcısı içindeki iş akışı izleme kayıtlarına abonelik 
           </workflowInstanceQuery>  
         </workflowInstanceQueries>  
       </workflow>  
-    </trackingProfile>          
+    </trackingProfile>
    </profiles>  
   </tracking>  
 </system.serviceModel>  

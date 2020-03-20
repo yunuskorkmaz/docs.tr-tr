@@ -5,24 +5,24 @@ helpviewer_keywords:
 - RelativeBindForResources element
 - <relativeBindForResources> element
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
-ms.openlocfilehash: 6a418fc546313b74bb965a0b223eca9c2e5acc08
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd49d424019a4e8422fee0ae16217d49cfc456b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115796"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153912"
 ---
-# <a name="relativebindforresources-element"></a>\<Relativeforresources > öğesi
-Uydu derlemeleri için araştırmayı iyileştirir.  
+# <a name="relativebindforresources-element"></a>\<relativeBindForResources> Öğesi
+Sondayı uydu montajları için optimize eder.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<relativeBindForResources >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<çalışma zamanı>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<relativeBindForResources>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml
-<relativeBindForResources    
+<relativeBindForResources
    enabled="true|false" />  
 ```  
   
@@ -33,14 +33,14 @@ Uydu derlemeleri için araştırmayı iyileştirir.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`enabled`|Gerekli öznitelik.<br /><br /> Ortak dil çalışma zamanının uydu derlemeleri için araştırmayı iyileştirip iyileştirmediğini belirtir.|  
+|`enabled`|Gerekli öznitelik.<br /><br /> Ortak dil çalışma süresinin uydu derlemeleri için sondayı optimize edip etmediğini belirtir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`false`|Çalışma zamanı, uydu derlemeleri için araştırmayı iyileştirmez. Varsayılan değer budur.|  
-|`true`|Çalışma zamanı, uydu derlemeleri için araştırmayı iyileştirir.|  
+|`false`|Çalışma süresi, sondayı uydu derlemeleri için optimize etmez. Varsayılan değer budur.|  
+|`true`|Çalışma süresi uydu meclisleri için sonda optimize eder.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -53,21 +53,21 @@ Uydu derlemeleri için araştırmayı iyileştirir.
 |`runtime`|Çalışma zamanı başlatma seçenekleri hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Genel olarak, kaynakları [paketleme ve dağıtma](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md) konusunda belgelendiği gibi, kaynakların araştırmalarını Kaynak Yöneticisi. Yani, bir kaynağın belirli bir yerelleştirilmiş sürümü için Kaynak Yöneticisi yokladığınızda, genel derleme önbelleğine bakabilir, uygulamanın kod tabanında kültüre özgü bir klasöre bakabilir, uydu Derlemeleriyle ilgili sorgu Windows Installer ve <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olayı. `<relativeBindForResources>` öğesi, uydu derlemeleri için Kaynak Yöneticisi araştırma şeklini iyileştirir. Aşağıdaki koşullarda kaynakları yokladığınızda performansı iyileştirebilir:  
+ Genel olarak, Kaynak Yöneticisi, [Kaynakları Paketleme ve Dağıtma](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md) konusunda belgelenen kaynaklar için sondalar. Bu, Kaynak Yöneticisi bir kaynağın belirli bir yerelleştirilmiş sürümünü incelediğinde, genel derleme önbelleğine bakabileceği, uygulamanın kod tabanında kültüre özgü bir klasöre <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> bakabileceği, uydu derlemeleri için Windows Yükleyici'yi sorgulayabileceği ve olayı yükseltebileceği anlamına gelir. Öğe, `<relativeBindForResources>` Kaynak Yöneticisi'nin uydu derlemeleri için araştırma şeklini optimize eder. Aşağıdaki koşullar altında kaynaklar için sondalama performansı artırabilir:  
   
-- Uydu derlemesi, kod derlemesiyle aynı konumda dağıtıldığında. Diğer bir deyişle, kod derlemesi genel derleme önbelleğinde yüklüyse, uydu derlemelerinin de de yüklü olması gerekir. Kod derlemesi uygulamanın kod tabanında yüklüyse, uydu derlemelerinin de kod tabanında kültüre özgü bir klasöre yüklenmesi gerekir.  
+- Uydu derlemesi kod derlemesi ile aynı konumda dağıtıldığında. Başka bir deyişle, kod derlemesi genel montaj önbelleğine yüklenmişse, uydu derlemeleri de burada yüklenmiş olmalıdır. Kod derlemesi uygulamanın kod tabanına yüklenmişse, uydu derlemelerinin kod tabanında kültüre özgü bir klasöre de yüklenmesi gerekir.  
   
-- Windows Installer kullanılmazsa veya yalnızca, uydu derlemelerinin isteğe bağlı yüklemesi için nadiren kullanılırsa.  
+- Windows Installer kullanılmadığında veya uydu derlemelerinin isteğe bağlı olarak yüklenmesi için nadiren kullanıldığında.  
   
-- Uygulama kodu <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olayını işlemez.  
+- Uygulama kodu olayı işlemiyorsa. <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>  
   
- `<relativeBindForResources>` öğesinin `enabled` özniteliğini `true` olarak ayarlamak, aşağıdaki gibi uydu derlemeleri için Kaynak Yöneticisi araştırmasını iyileştirir:  
+ Kaynak Yöneticisi'nin `<relativeBindForResources>` uydu `true` derlemeleri için sondasını en iyi duruma getirmek için öğenin özniteliğini aşağıdaki gibi ayarlar: `enabled`  
   
-- Uydu derlemesini yoklamanız için üst kod derlemesinin konumunu kullanır.  
+- Uydu derlemesini araştırmak için ana kod derlemesinin konumunu kullanır.  
   
-- Uydu derlemeleri için Windows Installer sorgulamaz.  
+- Uydu derlemeleri için Windows Installer sorgusu yapmaz.  
   
-- <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olayını yükseltmez.  
+- <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Olayı yükseltmez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

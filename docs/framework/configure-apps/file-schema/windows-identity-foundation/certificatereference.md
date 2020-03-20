@@ -3,21 +3,21 @@ title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: 782ca3344774b8412a18e3cf13bff5f969751ea3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 47d432a84d070476ddffd9b98a4ba46d8163bdc3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252151"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152820"
 ---
-# <a name="certificatereference"></a>\<certificateReference >
-Bir sertifika deposundaki bir X. 509.440 sertifikasını bulmak ve doğrulamak için kullanılan ayarları belirtir.  
+# <a name="certificatereference"></a>\<sertifikaReferans>
+Bir sertifika deposunda X.509 sertifikasını bulmak ve doğrulamak için kullanılan ayarları belirtir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. IdentityModel. Services >** ](system-identitymodel-services.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<federationConfiguration >** ](federationconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCertificate >** ](servicecertificate.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<certificateReference >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel.services>**](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<federasyonKonfigürasyon>**](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceSertifika>**](servicecertificate.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<sertifikaReferans>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -25,7 +25,7 @@ Bir sertifika deposundaki bir X. 509.440 sertifikasını bulmak ve doğrulamak i
 <system.identityModel.services>  
   <federationConfiguration>  
     <serviceCertificate>  
-      <certificateReference   
+      <certificateReference
         storeName="AddressBook||AuthRoot||CertificateAuthority||Disallowed||My||Root||TrustedPeople||TrustedPublisher"  
         storeLocation="CurrentUser||LocalMachine"  
         x509FindType="FindByThumbprint||FindBySubjectName||FindBySubjectDistinguishedName||FindByIssuerName||FindByIssuerDistinguishedName||FindBySerialNumber||FindByTimeValid||FindByTimeNotYetValid||FindByTimeExpired||FindByTemplateName||FindByApplicationPolicy||FindByCertificatePolicy||FindByExtension||FindByKeyUsage||FindBySubjectKeyIdentifier"  
@@ -44,20 +44,20 @@ Bir sertifika deposundaki bir X. 509.440 sertifikasını bulmak ve doğrulamak i
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|storeName|X. 509.440 sertifika deposunun adı. Varsayılan değer "My" dır. İsteğe bağlı.|  
-|storeLocation|X <xref:System.Security.Cryptography.X509Certificates.StoreLocation> . 509.440 sertifika deposunun konumunu belirten bir değer. Varsayılan değer "LocalMachine" dır. İsteğe bağlı.|  
-|x509FindType|Yürütülecek <xref:System.Security.Cryptography.X509Certificates.X509FindType> arama türünü belirten bir değer. Varsayılan değer "FindBySubjectDistinguishedName" dır. İsteğe bağlı.|  
-|findValue|X. 509.440 sertifika deposunda Aranacak değer. İsteğe bağlı.|  
-|Ischaindahil|Doğrulamanın sertifika zinciri kullanılarak gerçekleştirilip gerçekleştirilmeyeceğini belirtir. Varsayılan değer "true" 'dur; doğrulama, sertifika zinciri kullanılarak gerçekleştirilir. İsteğe bağlı.|  
+|Storename|X.509 sertifika deposunun adı. Varsayılan değer "Benim"dir. İsteğe bağlı.|  
+|Storelocation|X.509 sertifika deposunun konumunu belirten bir <xref:System.Security.Cryptography.X509Certificates.StoreLocation> değer. Varsayılan değer "LocalMachine"dir. İsteğe bağlı.|  
+|X509findtype|Yürütülecek arama türünü belirten bir <xref:System.Security.Cryptography.X509Certificates.X509FindType> değer. Varsayılan "FindBySubjectDistinguishedName"dir. İsteğe bağlı.|  
+|findValue|X.509 sertifika deposunda aranacak değer. İsteğe bağlı.|  
+|isChainIncluded|Sertifika zinciri kullanılarak doğrulamanın yapılıp yapılmaması gerektiğini belirtir. Varsayılan "true"; doğrulama sertifika zinciri kullanılarak gerçekleştirilir. İsteğe bağlı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ None  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](servicecertificate.md)|Belirteçleri şifrelemek ve şifrelerini çözmek için kullanılan sertifikayı yapılandırır.|  
+|[\<serviceSertifika>](servicecertificate.md)|Belirteçleri şifrelemek ve şifresini çözmek için kullanılan sertifikayı yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğesi `<certificateReference>` , bir sertifika deposundaki bir X. 509.440 sertifikasını bulmak ve doğrulamak için kullanılan ayarları belirler. `<serviceCertificate>` Öğesinin alt öğesi olarak belirtildiğinde, belirteçleri şifrelemek ve şifrelerini çözmek için kullanılan X. 509.440 sertifikasının konumunu ve doğrulama ayarlarını belirtir. `<certificateReference>` Öğesi sınıfı<xref:System.ServiceModel.Configuration.CertificateReferenceElement> tarafından temsil edilir.
+ Öğe, `<certificateReference>` bir sertifika deposunda X.509 sertifikasını bulmak ve doğrulamak için kullanılan ayarları belirtir. `<serviceCertificate>` Öğenin alt öğesi olarak belirtildiğinde, belirteçleri şifrelemek ve şifresini çözmek için kullanılan X.509 sertifikasının konum ve doğrulama ayarlarını belirtir. Öğe `<certificateReference>` <xref:System.ServiceModel.Configuration.CertificateReferenceElement> sınıf tarafından temsil edilir.

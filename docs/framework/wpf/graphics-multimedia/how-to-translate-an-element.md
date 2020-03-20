@@ -4,26 +4,26 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], translations
 ms.assetid: 461c8273-15df-42f6-8672-89ba22887cc0
-ms.openlocfilehash: 9c1b873a89820e85efb99789f483c4832fb23cf7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba6bda09a4ee189cdd1a32eed8f65b32d1a9abe4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051448"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187314"
 ---
 # <a name="how-to-translate-an-element"></a>Nasıl yapılır: Bir Öğeyi Çevirme
-Bu örnek nasıl çevrileceği (taşıma) kullanarak bir öğe gösterir bir <xref:System.Windows.Media.TranslateTransform>.  
+Bu örnek, bir öğeyi kullanarak nasıl <xref:System.Windows.Media.TranslateTransform>çevrilecek (taşınır) gösterir.  
   
- <xref:System.Windows.Media.TranslateTransform> Sınıfı, konumlandırmayı mutlak desteklemeyen bir panel içinde öğeleri taşımak için özellikle kullanışlıdır. Örneğin, uygulama tarafından bir <xref:System.Windows.Media.TranslateTransform> için <xref:System.Windows.UIElement.RenderTransform%2A> özellik öğesinin içindeki bir öğeye taşıyabilirsiniz bir <xref:System.Windows.Controls.StackPanel> veya <xref:System.Windows.Controls.DockPanel>.  
+ Sınıf, <xref:System.Windows.Media.TranslateTransform> özellikle mutlak konumlandırmayı desteklemeyen panellerin içindeki öğeleri taşımak için kullanışlıdır. Örneğin, bir öğenin <xref:System.Windows.Media.TranslateTransform> <xref:System.Windows.UIElement.RenderTransform%2A> özelliğine a uygulayarak, bir <xref:System.Windows.Controls.StackPanel> öğeyi <xref:System.Windows.Controls.DockPanel>veya .  
   
- Kullanım <xref:System.Windows.Media.TranslateTransform.X%2A> özelliği <xref:System.Windows.Media.TranslateTransform> miktarını piksel cinsinden öğe x ekseni boyunca taşımak için belirtmek için. Kullanım <xref:System.Windows.Media.TranslateTransform.Y%2A> özelliği miktarını piksel cinsinden öğe ve y ekseni boyunca taşımak için belirtin. Son olarak, uygulama <xref:System.Windows.Media.TranslateTransform> için <xref:System.Windows.UIElement.RenderTransform%2A> öğesinin özelliği.  
+ Öğeyi <xref:System.Windows.Media.TranslateTransform.X%2A> x <xref:System.Windows.Media.TranslateTransform> ekseni boyunca taşımak için pikselolarak miktarı belirtmek için öğenin özelliğini kullanın. Öğeyi <xref:System.Windows.Media.TranslateTransform.Y%2A> y ekseni boyunca taşımak için piksellerde miktarı belirtmek için özelliği kullanın. Son olarak, <xref:System.Windows.Media.TranslateTransform> öğenin <xref:System.Windows.UIElement.RenderTransform%2A> özelliğine uygulayın.  
   
- Aşağıdaki örnekte bir <xref:System.Windows.Media.TranslateTransform> öğesi 50 piksel doğru ve 50 piksel olarak aşağı taşımak için.  
+ Aşağıdaki örnekte, <xref:System.Windows.Media.TranslateTransform> bir öğeyi 50 piksel sağa ve 50 piksel aşağıya taşımak için a kullanır.  
   
 ## <a name="example"></a>Örnek  
  [!code-xaml[transformsSample#53](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
   
- Tam bir örnek için bkz. [2B dönüşüm örnek](https://go.microsoft.com/fwlink/?LinkID=158252).  
+ Numunenin tamamı için [2-B Dönüşüm Örneği'ne](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

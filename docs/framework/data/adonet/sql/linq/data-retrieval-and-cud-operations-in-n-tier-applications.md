@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: 706dbda98d0e1674b76ebc6a25c7a34746720ea2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5ab829993b8f8faa6dcb91d3f23e8442b8aa95bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70247360"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148419"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>N Katmanı Uygulamalarında Veri Alma ve CUD İşlemleri (LINQ to SQL)
-Müşteriler veya siparişler gibi varlık nesnelerini bir ağ üzerinden bir istemciye serileştirçalıştığınızda, bu varlıklar veri bağlamlarından ayrılır. Veri bağlamı artık yaptıkları değişiklikleri veya ilişkilerini diğer nesnelerle izlemediğinden. Bu, istemcilerin yalnızca verileri okuduğu sürece bir sorun değildir. Ayrıca, istemcilerin bir veritabanına yeni satırlar eklemesini sağlamak oldukça kolaydır. Bununla birlikte, uygulamanız, istemcilerin verileri güncelleştirebilmesini veya silmesine gerek duymalıdır, çağrı <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>yapmadan önce varlıkları yeni bir veri bağlamına iliştirmelidir. Buna ek olarak, özgün değerlerle iyimser eşzamanlılık denetimi kullanıyorsanız, veritabanını hem özgün varlık hem de varlığı değiştirilmiş olarak sağlamak için bir yol gerekir. Yöntemler `Attach` , daha sonra varlıkları kullanımdan kaldırıldıktan sonra yeni bir veri bağlamına yerleştirmeye olanak tanımak için verilmiştir.  
+Müşteri veya Siparişler gibi varlık nesnelerini bir ağ üzerinden istemciye serihale ettiğinizde, bu varlıklar veri bağlamından ayrılır. Veri bağlamı artık değişikliklerini veya diğer nesnelerle ilişkilendirmelerini izletmez. İstemciler yalnızca verileri okuduğu sürece bu bir sorun değildir. İstemcilerin veritabanına yeni satırlar eklemesini sağlamak da nispeten basittir. Ancak, uygulamanız istemcilerin verileri güncelleştirebilmelerini veya silebilmelerini gerektiriyorsa, aramadan <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>önce varlıkları yeni bir veri bağlamına iliştirmeniz gerekir. Buna ek olarak, özgün değerlerle iyimser bir eşzamanlılık denetimi kullanıyorsanız, veritabanını hem özgün varlığı hem de varlığı değiştirilmiş olarak sağlamanın bir yolunu da emegerekir. Yöntemler, `Attach` varlıkları ayrıldıktan sonra yeni bir veri bağlamına koymanızı sağlamak için sağlanır.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Varlıkların yerine ara sunucu nesnelerini serileştirseniz bile, verileri veritabanına göndermek için veri erişim katmanında (dal) bir varlık oluşturmanız ve bunu yeni <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>bir ile bağlamanız gerekir.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Varlıkların yerine proxy nesnelerini seri hale getirmeniz olsa bile, verileri veritabanına göndermek için veri erişim katmanında <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>(DAL) bir varlık oluşturmanız ve yeni bir ,'ye eklemeniz gerekir.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]varlıkların serileştirilme şekli hakkında tamamen farklıdır. Windows Communication Foundation (WCF) kullanılarak seri hale getirilebilir sınıflar oluşturmak için nesne ilişkisel Tasarımcısı ve SQLMetal araçlarının nasıl kullanılacağı hakkında daha fazla bilgi için bkz [. nasıl yapılır: Varlıkları seri hale](how-to-make-entities-serializable.md)getirilebilir yapın.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]varlıkların nasıl seri hale getirilen hakkında tamamen kayıtsız. Windows Communication Foundation (WCF) kullanarak serileştirilebilir sınıflar oluşturmak için Object İlişkisel Tasarımcı ve SQLMetal araçlarının nasıl kullanılacağı hakkında daha fazla bilgi için [bkz.](how-to-make-entities-serializable.md)  
   
 > [!NOTE]
-> Yalnızca yeni veya `Attach` Serisi kaldırılan varlıklarda Yöntemleri çağırın. Bir varlığın özgün veri bağlamından ayrılması için tek yol, onun serileştirilmesi içindir. Ayrılmamış bir varlığı yeni bir veri bağlamına iliştirmeye çalışırsanız ve bu varlığın önceki veri bağlamından [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ertelenmiş yükleyiciler varsa, bir özel durum oluşturulur. İki farklı veri bağlamlarından ertelenmiş yükleyicileriyle bir varlık, bu varlıkta ekleme, güncelleştirme ve silme işlemlerini gerçekleştirdiğinizde istenmeyen sonuçlara neden olabilir. Ertelenmiş yükleyiciler hakkında daha fazla bilgi için bkz. [ertelenmiş ve hemen yükleme](deferred-versus-immediate-loading.md).  
+> Yalnızca yeni `Attach` veya deserialized varlıklar üzerindeki yöntemleri arayın. Bir varlığın özgün veri bağlamından ayrılmasının tek yolu seri hale getirilmesidir. Yeni bir veri bağlamına ayrılmamış bir varlık eklemeye çalışırsanız ve bu varlık hala [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] önceki veri bağlamından ertelenmiş yükleyicileri varsa, bir özel durum atacaktır. İki farklı veri bağlamından ertelenmiş yükleyicilere sahip bir varlık, bu varlıktaki ekleme, güncelleştirme ve silme işlemlerini gerçekleştirdiğiniz zaman istenmeyen sonuçlara neden olabilir. Ertelenmiş yükleyiciler hakkında daha fazla bilgi için [Ertelenmiş ve Hemen Yükleme](deferred-versus-immediate-loading.md)bölümüne bakın.  
   
-## <a name="retrieving-data"></a>Veri alma  
+## <a name="retrieving-data"></a>Veri Alma  
   
-### <a name="client-method-call"></a>İstemci yöntemi çağrısı  
- Aşağıdaki örneklerde, bir Windows Forms istemcisinden DAL için örnek yöntem çağrısı gösterilmektedir. Bu örnekte, DAL bir Windows hizmet kitaplığı olarak uygulanır:  
+### <a name="client-method-call"></a>İstemci Yöntemi Çağrısı  
+ Aşağıdaki örnekler, bir Windows Forms istemcisinden DAL'ye örnek bir yöntem çağrısı gösterir. Bu örnekte, DAL Bir Windows Hizmet Kitaplığı olarak uygulanır:  
   
 ```vb  
 Private Function GetProdsByCat_Click(ByVal sender As Object, ByVal e _  
@@ -59,15 +59,15 @@ End Function
 private void GetProdsByCat_Click(object sender, EventArgs e)  
 {  
     // Create the WCF client proxy.  
-    NorthwindServiceReference.Service1Client proxy =   
+    NorthwindServiceReference.Service1Client proxy =
     new NorthwindClient.NorthwindServiceReference.Service1Client();  
   
     // Call the method on the service.  
-    NorthwindServiceReference.Product[] products =   
+    NorthwindServiceReference.Product[] products =
     proxy.GetProductsByCategory(1);  
   
-    // If the database uses original values for concurrency checks,   
-    // the client needs to store them and pass them back to the   
+    // If the database uses original values for concurrency checks,
+    // the client needs to store them and pass them back to the
     // middle tier along with the new values when updating data.  
     foreach (var v in products)  
     {  
@@ -82,12 +82,12 @@ private void GetProdsByCat_Click(object sender, EventArgs e)
     }  
 ```  
   
-### <a name="middle-tier-implementation"></a>Orta katman uygulama  
- Aşağıdaki örnek, Orta katmanda arabirim yönteminin bir uygulamasını gösterir. Aşağıda, aklınızda iki ana işaret verilmiştir:  
+### <a name="middle-tier-implementation"></a>Orta Katman Uygulaması  
+ Aşağıdaki örnekte, arabirim yönteminin orta katmanda bir uygulaması gösterilmektedir. Dikkat edilmesi gereken iki ana nokta şunlardır:  
   
-- , <xref:System.Data.Linq.DataContext> Yöntem kapsamında bildirilmiştir.  
+- Yöntem <xref:System.Data.Linq.DataContext> kapsamında bildirilir.  
   
-- Yöntemi, gerçek sonuçların <xref:System.Collections.IEnumerable> bir koleksiyonunu döndürür. Seri hale getirici, sonuçları istemci/sunum katmanına geri göndermek için sorguyu yürütür. Sorgu sonuçlarına yerel olarak Orta katmanda erişmek için, sorgu değişkenine veya `ToList` `ToArray` öğesini çağırarak yürütmeye zorlayabilirsiniz. Daha sonra, bu listeyi veya diziyi bir `IEnumerable`olarak döndürebilirsiniz.  
+- Yöntem, gerçek <xref:System.Collections.IEnumerable> sonuçların bir koleksiyonunu döndürür. Serileştirici, sonuçları istemci/sunu katmanına geri göndermek için sorguyu yürütecektir. Sorgu sonuçlarına orta katmandaki yerel olarak erişmek için, `ToList` `ToArray` sorgu değişkenini arayarak veya sorgu değişkenini kullanarak yürütmeyi zorlayabilirsiniz. Daha sonra bu listeyi veya `IEnumerable`diziyi bir .  
   
 ```vb  
 Public Function GetProductsByCategory(ByVal categoryID As Integer) _  
@@ -107,7 +107,7 @@ End Function
 ```csharp  
 public IEnumerable<Product> GetProductsByCategory(int categoryID)  
 {  
-    NorthwindClasses1DataContext db =   
+    NorthwindClasses1DataContext db =
     new NorthwindClasses1DataContext(connectionString);  
   
     IEnumerable<Product> productQuery =  
@@ -115,19 +115,19 @@ public IEnumerable<Product> GetProductsByCategory(int categoryID)
     where prod.CategoryID == categoryID  
     select prod;  
   
-    return productQuery.AsEnumerable();   
+    return productQuery.AsEnumerable();
 }  
 ```  
   
- Veri bağlamının bir örneği bir "iş birimi" süresine sahip olmalıdır. Gevşek olarak bağlanmış bir ortamda, bir iş birimi genellikle küçük, tek bir çağrı `SubmitChanges`dahil olmak üzere tek bir iyimser işlem olur. Bu nedenle, veri bağlamı oluşturulup Yöntem kapsamında atılmış olur. Çalışma birimi iş kuralları mantığına çağrılar içeriyorsa, genellikle `DataContext` örneği bu bütün işlem için tutmak isteyeceksiniz. Her durumda, `DataContext` örneklerin rastgele işlem sırasında uzun süreler boyunca etkin tutulması amaçlanmamıştır.  
+ Bir veri bağlamı örneğinin bir "çalışma birimi" ömrü olmalıdır. Gevşek bir leştiği ortamda, bir iş birimi genellikle küçük, belki de tek bir çağrı `SubmitChanges`da dahil olmak üzere iyimser bir işlem. Bu nedenle, veri bağlamı oluşturulur ve yöntem kapsamında atılır. Çalışma birimi iş kuralları mantığına çağrılar içeriyorsa, genellikle `DataContext` bu tüm işlem için örnek tutmak isteyeceksiniz. Her durumda, `DataContext` örneklerin rasgele sayıda hareket arasında uzun süre canlı tutulması amaçlanmamıştır.  
   
- Bu yöntem, ürün nesnelerini döndürür ancak her ürünle ilişkili Order_Detail nesnelerinin koleksiyonunu değil. Bu varsayılan davranışı değiştirmek için nesnesinikullanın.<xref:System.Data.Linq.DataLoadOptions> Daha fazla bilgi için [nasıl yapılır: Ilgili verilerin ne kadar alındığını](how-to-control-how-much-related-data-is-retrieved.md)denetleyin.  
+ Bu yöntem, Ürün nesnelerini döndürecek, ancak her Ürünle ilişkili Order_Detail nesnelerin inkisini döndürmez. Bu <xref:System.Data.Linq.DataLoadOptions> varsayılan davranışı değiştirmek için nesneyi kullanın. Daha fazla bilgi için bkz: İlgili Verilerin Ne Kadar ını [Denetle.](how-to-control-how-much-related-data-is-retrieved.md)  
   
 ## <a name="inserting-data"></a>Veri ekleme  
- Yeni bir nesne eklemek için sunum katmanı yalnızca orta katman arabirimindeki ilgili yöntemi çağırır ve yeni nesnede eklenecek şekilde geçer. Bazı durumlarda, istemcinin yalnızca bazı değerleri geçmesi ve ortadaki katmanın tam nesneyi oluşturmasına daha etkili olabilir.  
+ Yeni bir nesne eklemek için sunu katmanı yalnızca orta katman arabiriminde ilgili yöntemi çağırır ve eklemek için yeni nesnegeçer. Bazı durumlarda, istemcinin yalnızca bazı değerleri geçirmesi ve orta katmanın tam nesneyi oluşturmasını sağlamak daha verimli olabilir.  
   
-### <a name="middle-tier-implementation"></a>Orta katman uygulama  
- Orta katmanda yeni <xref:System.Data.Linq.DataContext> bir oluşturulur, <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> nesne <xref:System.Data.Linq.DataContext.SubmitChanges%2A> yöntemi kullanılarak <xref:System.Data.Linq.DataContext> öğesine iliştirilir ve çağrıldığında nesne eklenir. Özel durumlar, geri çağrılar ve hata koşulları diğer Web hizmeti senaryolarında olduğu gibi işlenebilirler.  
+### <a name="middle-tier-implementation"></a>Orta Katman Uygulaması  
+ Orta katmanda, yeni <xref:System.Data.Linq.DataContext> bir oluşturulur, nesne <xref:System.Data.Linq.DataContext> <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> yöntem kullanılarak eklenir ve çağrıldığında <xref:System.Data.Linq.DataContext.SubmitChanges%2A> nesne eklenir. Özel durumlar, geri aramalar ve hata koşulları, diğer Web hizmeti senaryolarında olduğu gibi işlenebilir.  
   
 ```vb  
 ' No call to Attach is necessary for inserts.  
@@ -154,12 +154,12 @@ End Sub
     }  
 ```  
   
-## <a name="deleting-data"></a>Verileri silme  
- Veritabanından varolan bir nesneyi silmek için sunum katmanı, ortadaki katman arabirimindeki ilgili yöntemi çağırır ve Silinecek nesnenin orijinal değerlerini içeren kopyasına geçirilir.  
+## <a name="deleting-data"></a>Veri silme  
+ Varolan bir nesneyi veritabanından silmek için, sunu katmanı orta katman arabirimindeki ilgili yöntemi çağırır ve silinecek nesnenin özgün değerlerini içeren kopyasına geçer.  
   
- Silme işlemleri iyimser eşzamanlılık denetimleri içerir ve Silinecek nesnenin önce yeni veri bağlamına bağlanması gerekir. Bu örnekte, `Boolean` parametresi, nesnesinin zaman damgası ( `false` rowversion) olmadığını belirtmek için olarak ayarlanır. Veritabanı tablonuz her kayıt için zaman damgaları üretilemez, eşzamanlılık denetimleri özellikle istemci için çok daha basittir. Yalnızca orijinal veya değiştirilmiş nesneyi geçirin ve `Boolean` parametresini olarak `true`ayarlayın. Herhangi bir durumda, Orta katmanda genellikle yakalamak <xref:System.Data.Linq.ChangeConflictException>gerekir. İyimser eşzamanlılık çakışmalarını işleme hakkında daha fazla bilgi için bkz [. iyimser eşzamanlılık: Genel](optimistic-concurrency-overview.md)bakış.  
+ Silme işlemleri iyimser eşzamanlılık denetimleri içerir ve silinecek nesnenin önce yeni veri bağlamına eklenmesi gerekir. Bu örnekte, `Boolean` parametre nesnenin bir zaman damgası (RowVersion) olmadığını belirtmek için `false` ayarlanır. Veritabanı tablonuz her kayıt için zaman damgaları oluşturuyorsa, eşzamanlılık denetimleri özellikle istemci için çok daha basittir. Orijinal veya değiştirilmiş nesneyi geçirin `Boolean` ve parametreyi 'ye `true`ayarlayın Her durumda, orta katmanda genellikle yakalamak için <xref:System.Data.Linq.ChangeConflictException>gereklidir. İyimser eşzamanlılık çakışmaları hakkında daha fazla bilgi için [Bkz. İyimser Eşzamanlılık: Genel Bakış.](optimistic-concurrency-overview.md)  
   
- İlişkili tablolarda yabancı anahtar kısıtlamalarına sahip varlıkları silerken, önce <xref:System.Data.Linq.EntitySet%601> koleksiyonlarındaki tüm nesneleri silmeniz gerekir.  
+ İlişkili tablolarda yabancı anahtar kısıtlamaları olan varlıkları silerken, önce <xref:System.Data.Linq.EntitySet%601> koleksiyonlarındaki tüm nesneleri silmeniz gerekir.  
   
 ```vb  
 ' Attach is necessary for deletes.  
@@ -207,22 +207,22 @@ public void DeleteOrder(Order order)
 }  
 ```  
   
-## <a name="updating-data"></a>Verileri güncelleştirme  
+## <a name="updating-data"></a>Verileri Güncelleme  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]iyimser eşzamanlılık içeren bu senaryolarda güncelleştirmeleri destekler:  
   
-- Zaman damgaları veya RowVersion numaralarına göre iyimser eşzamanlılık.  
+- Zaman damgaları veya RowVersion numaralarına dayalı iyimser eşzamanlılık.  
   
-- Varlık özelliklerinin bir alt kümesinin orijinal değerlerini temel alan iyimser eşzamanlılık.  
+- Varlık özellikleri alt kümesinin özgün değerlerine dayalı iyimser eşzamanlılık.  
   
-- Tüm özgün ve değiştirilmiş varlıklar temelinde iyimser eşzamanlılık.  
+- Orijinal ve değiştirilmiş varlıkların tamamına dayalı iyimser eşzamanlılık.  
   
- Ayrıca, bir varlıkta bir varlık üzerinde güncelleştirmeler veya silmeler, örneğin bir müşteri ve ilişkili sıralama nesnelerinin bir koleksiyonu gibi işlemleri de yapabilirsiniz. İstemcide bir varlık nesneleri ve onların alt (`EntitySet`) koleksiyonları grafiğinde değişiklikler yaptığınızda ve iyimser eşzamanlılık denetimleri orijinal değerler gerektirdiğinde, istemci her varlık için bu özgün değerleri sağlamalıdır ve <xref:System.Data.Linq.EntitySet%601> nesne. İstemcilerinin tek bir yöntem çağrısında ilgili bir dizi ilgili güncelleştirme, silme ve ekleme yapmasını etkinleştirmek istiyorsanız, istemciye her varlıkta ne tür bir işlemin gerçekleştirileceğini belirten bir yol sağlamanız gerekir. Daha sonra, kullanmadan önce her varlık <xref:System.Data.Linq.ITable.Attach%2A> için uygun yöntemi ve sonra <xref:System.Data.Linq.ITable.InsertOnSubmit%2A>, <xref:System.Data.Linq.ITable.DeleteAllOnSubmit%2A>veya <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> (Eklenenler <xref:System.Data.Linq.DataContext.SubmitChanges%2A>olmadan `Attach`) yöntemini çağırmanız gerekir. Güncelleştirmeleri denemeden önce özgün değerleri elde etmenin bir yolu olarak veritabanından veri alma.  
+ Müşteri ve ilişkili Sipariş nesnelerinin bir koleksiyonu gibi, bir varlık üzerindeki güncelleştirmeleri veya silmeleri ilişkileriyle birlikte de gerçekleştirebilirsiniz. Varlık nesneleri ve alt ( )`EntitySet`koleksiyonlarının grafiğinde istemci üzerinde değişiklikler yaptığınızda ve iyimser eşzamanlılık denetimleri özgün değerler gerektiriyorsa, istemci her varlık ve <xref:System.Data.Linq.EntitySet%601> nesne için bu özgün değerleri sağlamalıdır. İstemcilerin tek bir yöntem çağrısında ilgili güncelleştirmeler, silmeler ve eklemeler kümesi yapmasını sağlamak istiyorsanız, istemciye her varlıkta ne tür bir işlem gerçekleştireceklerini belirtmek için bir yol sağlamanız gerekir. Orta katmanda, daha sonra, <xref:System.Data.Linq.ITable.Attach%2A> aramadan <xref:System.Data.Linq.ITable.InsertOnSubmit%2A>önce <xref:System.Data.Linq.ITable.DeleteAllOnSubmit%2A>her <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> varlık `Attach`için uygun yöntemi aramanız ve <xref:System.Data.Linq.DataContext.SubmitChanges%2A>ardından , veya (eklemeler için olmadan) aramanız gerekir. Güncelleştirmeleri denemeden önce özgün değerleri elde etmek için veritabanından veri almayın.  
   
- İyimser eşzamanlılık hakkında daha fazla bilgi için bkz [. iyimser eşzamanlılık: Genel](optimistic-concurrency-overview.md)bakış. İyimser eşzamanlılık değişikliği çakışmalarını çözme hakkında ayrıntılı bilgi için bkz [. nasıl yapılır: Değişiklik çakışmalarını](how-to-manage-change-conflicts.md)yönetin.  
+ İyimser eşzamanlılık hakkında daha fazla bilgi için, [Bkz. İyimser Eşzamanlılık: Genel Bakış.](optimistic-concurrency-overview.md) İyimser eşzamanlılık değişikliği çakışmalarını çözme hakkında ayrıntılı bilgi için [bkz.](how-to-manage-change-conflicts.md)  
   
- Aşağıdaki örneklerde her senaryo gösterilmektedir:  
+ Aşağıdaki örnekler her senaryoyu gösterir:  
   
-### <a name="optimistic-concurrency-with-timestamps"></a>Zaman damgalarına sahip iyimser eşzamanlılık  
+### <a name="optimistic-concurrency-with-timestamps"></a>Zaman damgaları ile iyimser eşzamanlılık  
   
 ```vb  
 ' Assume that "customer" has been sent by client.  
@@ -263,8 +263,8 @@ catch(ChangeConflictException e)
 }  
 ```  
   
-### <a name="with-subset-of-original-values"></a>Özgün değerlerin alt kümesiyle  
- Bu yaklaşımda istemci, tüm serileştirilmiş nesneyi, değiştirilecek değerlerle birlikte döndürür.  
+### <a name="with-subset-of-original-values"></a>Orijinal Değerlerin Alt Kümesi ile  
+ Bu yaklaşımda, istemci değiştirilecek değerlerle birlikte serileştirilmiş nesnenin tamamını döndürür.  
   
 ```vb  
 Public Sub UpdateProductInventory(ByVal p As Product, ByVal _  
@@ -324,7 +324,7 @@ public void UpdateProductInventory(Product p, short? unitsInStock, short? unitsO
 }  
 ```  
   
-### <a name="with-complete-entities"></a>Tüm varlıklarla  
+### <a name="with-complete-entities"></a>Komple Varlıklarla  
   
 ```vb  
 Public Sub UpdateProductInfo(ByVal newProd As Product, ByVal _  
@@ -369,42 +369,42 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
             // is appropriate for your application.  
             // For more information, see the MSDN article  
             // How to: Manage Change Conflicts (LINQ to SQL)/  
-        }   
+        }
     }  
 }  
 ```  
   
- Bir koleksiyonu güncelleştirmek için <xref:System.Data.Linq.ITable.AttachAll%2A> `Attach`yerine çağırın.  
+ Koleksiyonu güncelleştirmek için, `Attach`"' yerine çağırın. <xref:System.Data.Linq.ITable.AttachAll%2A>  
   
-### <a name="expected-entity-members"></a>Beklenen varlık üyeleri  
- Daha önce belirtildiği gibi, `Attach` yöntemleri çağırmadan önce yalnızca belirli varlık nesnesi üyelerinin ayarlanması gerekir. Ayarlanması gereken varlık üyelerinin aşağıdaki kriterleri yerine getirilmesi gerekir:  
+### <a name="expected-entity-members"></a>Beklenen Varlık Üyeleri  
+ Daha önce belirtildiği gibi, `Attach` yöntemleri çağırmadan önce yalnızca belirli varlık nesnesinin üyelerinin ayarlatılması gerekir. Ayarlanılması gereken varlık üyeleri aşağıdaki ölçütleri karşılamalıdır:  
   
 - Varlığın kimliğinin bir parçası olun.  
   
 - Değiştirilmesi bekleniyor.  
   
-- Bir zaman damgası olun veya <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> özniteliği bir `Never`öğe olarak ayarlanır.  
+- Bir zaman damgası <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> olun veya özniteliği `Never`yanında bir şey ayarlanmış olması.  
   
- Bir tablo, iyimser eşzamanlılık denetimi için zaman damgası veya sürüm numarası kullanıyorsa, bu üyeleri çağırmadan <xref:System.Data.Linq.ITable.Attach%2A>önce ayarlamanız gerekir. Bu sütun özniteliğinde özelliği true olarak ayarlandığında, <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> bir üye iyimser eşzamanlılık denetimi için ayrılmıştır. İstenen tüm güncelleştirmeler yalnızca sürüm numarası veya zaman damgası değerleri veritabanında aynı ise gönderilir.  
+ Bir tablo iyimser bir eşzamanlılık denetimi için bir zaman damgası veya sürüm <xref:System.Data.Linq.ITable.Attach%2A>numarası kullanıyorsa, bu üyeleri aramadan önce ayarlamanız gerekir. Bir üye, <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> özellik bu Sütun özniteliği üzerinde doğru ayarlandığında iyimser eşzamanlılık denetimi için adamıştır. İstenen güncelleştirmeler yalnızca sürüm numarası veya zaman damgası değerleri veritabanında aynıysa gönderilir.  
   
- Üye, olarak <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> `Never`ayarlı olmadığı sürece iyimser eşzamanlılık denetiminde de kullanılır. Varsayılan değer, başka `Always` bir değer belirtilmemişse olur.  
+ Bir üye, iyimser eşzamanlılık denetiminde de <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> `Never`kullanılır. Varsayılan değer, `Always` başka bir değer belirtilmemişse değerdir.  
   
- Bu gerekli üyelerin herhangi biri eksikse, ("satır bulunamadı <xref:System.Data.Linq.ChangeConflictException> veya değiştirildi" <xref:System.Data.Linq.DataContext.SubmitChanges%2A> ) sırasında bir oluşturulur.  
+ Bu gerekli üyelerden herhangi biri <xref:System.Data.Linq.ChangeConflictException> eksikse, bir satır ("Satır bulunamadı veya değiştirilmez") sırasında <xref:System.Data.Linq.DataContext.SubmitChanges%2A> atılır.  
   
 ### <a name="state"></a>Durum  
- Bir varlık nesnesi <xref:System.Data.Linq.DataContext> örneğe eklendikten sonra, nesne `PossiblyModified` durumunda olduğu kabul edilir. Eklenmiş bir nesneyi kabul `Modified`etmeye zorlamak için üç yol vardır.  
+ Bir varlık nesnesi <xref:System.Data.Linq.DataContext> örneğe iliştirildikten sonra, nesne `PossiblyModified` durumda olarak kabul edilir. Ekli bir nesneyi dikkate `Modified`almaya zorlamanın üç yolu vardır.  
   
-1. Bunu değiştirilmemiş olarak ekleyin ve ardından alanları doğrudan değiştirin.  
+1. Değiştirilmemiş olarak takın ve sonra alanları doğrudan değiştirin.  
   
-2. Geçerli ve orijinal nesne örneklerini alan aşırıyüklemeyeekleyin.<xref:System.Data.Linq.Table%601.Attach%2A> Bu değişiklik izleyicisini eski ve yeni değerlerle sağlar, böylece hangi alanların değiştirildiğini otomatik olarak bilir.  
+2. Geçerli ve <xref:System.Data.Linq.Table%601.Attach%2A> özgün nesne örneklerini alan aşırı yükletin. Bu, hangi alanların değiştiğini otomatik olarak bilecek şekilde değişim izleyicisini eski ve yeni değerlerle birlikte sağlar.  
   
-3. İkinci bir Boole parametresi alan aşırıyüklemeyeekleyin(trueolarakayarlanır).<xref:System.Data.Linq.Table%601.Attach%2A> Bu, değişiklik izleyicide herhangi bir özgün değer sağlamak zorunda kalmadan değiştirilen nesneyi kabul edecek şekilde söyleyecektir. Bu yaklaşımda, nesnenin bir sürüm/zaman damgası alanı olması gerekir.  
+3. İkinci bir <xref:System.Data.Linq.Table%601.Attach%2A> Boolean parametresi (doğru ayarlanmış) alır aşırı yük ile takın. Bu, değişiklik izleyicisine, özgün değerler sağlamak zorunda kalmadan nesneyi değiştirildiğini düşünmesini söyler. Bu yaklaşımda, nesnenin bir sürüm/zaman damgası alanı olmalıdır.  
   
- Daha fazla bilgi için bkz. [nesne durumları ve değişiklik izleme](object-states-and-change-tracking.md).  
+ Daha fazla bilgi için [bkz.](object-states-and-change-tracking.md)  
   
- Bir varlık nesnesi, iliştirilmekte olan nesneyle aynı kimliğe sahip kimlik önbelleğinde zaten gerçekleşirse, bir <xref:System.Data.Linq.DuplicateKeyException> oluşturulur.  
+ Kimlik Önbelleğinde zaten eklenen nesneyle aynı kimliğe sahip bir varlık <xref:System.Data.Linq.DuplicateKeyException> nesnesi oluşursa, bir atılmıştır.  
   
- Bir `IEnumerable` nesne kümesiyle birlikte eklediğinizde <xref:System.Data.Linq.DuplicateKeyException> , zaten varolan bir anahtar olduğunda oluşturulur. Kalan nesneler ekli değil.  
+ Bir `IEnumerable` nesne kümesiyle iliştirdiğinizde, zaten varolan bir anahtar bulunduğunda a <xref:System.Data.Linq.DuplicateKeyException> atılır. Kalan nesneler eklenmez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

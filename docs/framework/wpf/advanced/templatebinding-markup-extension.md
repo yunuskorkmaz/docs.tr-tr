@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 6d89978b907c8f124b5162c97de5edc034cf1e95
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 8cebbf717f66b072bc84b2068193ff2fe76ea87b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976667"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187288"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding Biçimlendirme Uzantısı
 Denetim şablonunda bir özelliğin değerini, şablonlu denetim üzerinde açıkça gösterilen başka bir özelliğin değerine bağlar.  
@@ -34,31 +34,31 @@ Denetim şablonunda bir özelliğin değerini, şablonlu denetim üzerinde açı
   
 |||  
 |-|-|  
-|`propertyName`|ayarlayıcı sözdiziminde ayarlanan özelliğin <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>.|  
-|`sourceProperty`|Şablonlu tür üzerinde bulunan ve <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>tarafından belirtilen başka bir bağımlılık özelliği.<br /><br /> veya<br /><br /> Şablonu oluşturulan hedef türünden farklı bir tür tarafından tanımlanan "aşağı noktalanmış" özellik adı. Bu aslında bir <xref:System.Windows.PropertyPath>. Bkz. [PROPERTYPATH XAML sözdizimi](propertypath-xaml-syntax.md).|  
+|`propertyName`|<xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>ayarlayıcı sözdiziminde ayarlanan özelliğin.|  
+|`sourceProperty`|Şablonlanan türde bulunan başka bir bağımlılık özelliği, <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>onun .<br /><br /> - veya -<br /><br /> Şablonu oluşturulan hedef türünden farklı bir tür tarafından tanımlanan "aşağı noktalanmış" özellik adı. Bu aslında <xref:System.Windows.PropertyPath>bir. Bkz. [PropertyPath XAML Sözdizimi.](propertypath-xaml-syntax.md)|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `TemplateBinding`, `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`ile oluşturulmuş bir `Binding` benzer şablon senaryoları için en iyileştirilmiş bir [bağlama](binding-markup-extension.md) biçimidir. Bir `TemplateBinding` her zaman tek yönlü bir bağlamadır ve özellikler varsayılan olarak iki yönlü bağlamaya dahil olur. İlgili iki özellik de bağımlılık özellikleri olmalıdır. Şablonlu bir üst öğeye iki yönlü bağlama ulaşmak için `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`yerine aşağıdaki bağlama ifadesini kullanın. 
+ A, `TemplateBinding` şablon senaryoları [için](binding-markup-extension.md) bağlayıcılık için en iyi `Binding` duruma `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`getirilmiş bir biçimidir, bu da bir 'ile oluşturulmuşbir . A, `TemplateBinding` özellikler varsayılan olarak iki yönlü bağlamayı gerektirse bile, her zaman tek yönlü bir bağlamadır. İlgili iki özellik de bağımlılık özellikleri olmalıdır. Şablonlu bir üst öğeye iki yönlü bağlama elde etmek `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`için aşağıdaki bağlayıcı ifadeyi kullanın.
   
- [RelativeSource](relativesource-markupextension.md) , bir şablon içinde göreli Özellik bağlamayı gerçekleştirmek için bazen `TemplateBinding` veya yerine ile birlikte kullanılan başka bir işaretleme uzantısıdır.  
+ [RelativeSource](relativesource-markupextension.md) bazen bir şablon içinde göreceli özellik bağlama `TemplateBinding` gerçekleştirmek için birlikte veya yerine kullanılan başka bir biçimlendirme uzantısıdır.  
   
- Bir kavram olarak denetim şablonlarının açıklaması burada ele alınmıyor; daha fazla bilgi için bkz. [denetim stilleri ve şablonları](../controls/control-styles-and-templates.md).  
+ Denetim şablonlarını bir kavram olarak tanımlamak burada ele alınmaz; daha fazla bilgi için denetim [stilleri ve Şablonlar'a](../controls/control-styles-and-templates.md)bakın.  
   
- Öznitelik sözdizimi, bu işaretleme uzantısı ile kullanılan en yaygın sözdizimidir. `TemplateBinding` tanımlayıcı dizeden sonra belirtilen dize belirteci, temel <xref:System.Windows.TemplateBindingExtension> uzantı sınıfının <xref:System.Windows.TemplateBindingExtension.Property%2A> değeri olarak atanır.  
+ Öznitelik sözdizimi, bu işaretleme uzantısı ile kullanılan en yaygın sözdizimidir. Tanımlayıcı dizesonra sağlanan `TemplateBinding` dize belirteci alttaki <xref:System.Windows.TemplateBindingExtension.Property%2A> <xref:System.Windows.TemplateBindingExtension> uzantı sınıfının değeri olarak atanır.  
   
- Nesne öğesi sözdizimi mümkündür, ancak gerçekçi uygulamaya sahip olmadığından gösterilmez. `TemplateBinding`, değerlendirilmiş ifadeler kullanılarak ayarlayıcıdaki değerleri ve `TemplateBinding` için nesne öğesi söz dizimini `<Setter.Property>` Özellik öğesi söz dizimini kullanarak doldurmanız için kullanılır.  
+ Nesne öğesi sözdizimi mümkündür, ancak gerçekçi uygulamaya sahip olmadığından gösterilmez. `TemplateBinding`ayarlayıcılar içindeki değerleri doldurmak için, değerlendirilen ifadeleri kullanarak ve `TemplateBinding` özellik `<Setter.Property>` öğesi sözdizimini doldurmak için nesne öğesi sözdizimini kullanmak gereksiz yere ayrıntılıdır.  
   
- `TemplateBinding`, özellik = değer çifti olarak <xref:System.Windows.TemplateBindingExtension.Property%2A> özelliğini belirten ayrıntılı bir öznitelik kullanımında de kullanılabilir:  
+ `TemplateBinding`<xref:System.Windows.TemplateBindingExtension.Property%2A> özelliği özellik=değer çifti olarak belirten ayrıntılı bir öznitelik kullanımında da kullanılabilir:  
   
 ```xml  
 <object property="{TemplateBinding Property=sourceProperty}" .../>  
 ```  
   
- Ayrıntılı kullanım, genellikle birden fazla ayarlanabilir özelliğe sahip uzantılar için veya bazı özellikler isteğe bağlıysa yararlıdır. `TemplateBinding`, gereken tek bir ayarlanabilir özelliğe sahip olduğundan, bu ayrıntılı kullanım tipik değildir.  
+ Ayrıntılı kullanım, genellikle birden fazla ayarlanabilir özelliğe sahip uzantılar için veya bazı özellikler isteğe bağlıysa yararlıdır. Yalnızca `TemplateBinding` bir ayarlanabilen özelliği olduğundan, bu ayrıntılı kullanım tipik değildir.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML işlemci uygulamasında, bu biçimlendirme uzantısının işlenmesi <xref:System.Windows.TemplateBindingExtension> sınıfı tarafından tanımlanır.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML işlemci uygulamasında, bu biçimlendirme uzantısı için işleme <xref:System.Windows.TemplateBindingExtension> sınıf tarafından tanımlanır.  
   
- `TemplateBinding`, biçimlendirme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. XAML 'deki tüm biçimlendirme uzantıları, `{` ve `}` karakterlerini öznitelik sözdiziminde kullanır. Bu, XAML işlemcisinin bir biçimlendirme uzantısının özniteliği işlemesi gerektiğini tanıdığı bir kuraldır. Daha fazla bilgi için bkz. [Biçimlendirme uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md).  
+ `TemplateBinding`biçimlendirme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. XAML'deki tüm biçimlendirme `{` uzantıları, bir XAML işlemcinin bir biçimlendirme uzantısıözözelliği ni işlemesi gerektiğini kabul ettiği kural olan öznitelik sözdiziminde karakterleri ve `}` karakterleri kullanır. Daha fazla bilgi için [bkz: Biçimlendirme Uzantıları ve WPF XAML.](markup-extensions-and-wpf-xaml.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

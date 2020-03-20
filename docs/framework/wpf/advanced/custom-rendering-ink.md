@@ -9,87 +9,87 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: 9a62a16f4fa16cfe40bbf830de2255bea25f8d3f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3cf0d98c40e71a380b218c76d6e52d00cdd05342
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611982"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186360"
 ---
 # <a name="custom-rendering-ink"></a>Özel İşleme Mürekkebi
-<xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Bir fırça özelliği, boyutunu, rengini ve şekil gibi bir vuruş görünümünü belirtmenize olanak sağlar ancak ne ötesinde görünümünü özelleştirmek istediğiniz zamanlar olabilir <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> izin verin. Mürekkep tarafından işlenirken bir püskürtme kabı, Petrol boyama ve birçok başka etkileri görünüşünü özelleştirme isteyebilirsiniz. Windows Presentation Foundation (WPF), özel işleme mürekkebi özel bir uygulama tarafından sağlayan <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> ve <xref:System.Windows.Ink.Stroke> nesne.  
+Konturözelliği, <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> bir konturun boyutunu, rengini ve şekli gibi bir konturgörünümünü belirtmenize olanak tanır, ancak görünümü <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> izin verenin ötesinde özelleştirmek istediğiniz zamanlar olabilir. Bir hava fırçası, yağlı boya ve diğer birçok efekt görünümünü görüntüleyerek mürekkep görünümünü özelleştirmek isteyebilirsiniz. Windows Sunu Temeli (WPF), özel <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> ve <xref:System.Windows.Ink.Stroke> nesne uygulayarak mürekçeoluşturmanızı sağlar.  
   
  Bu konu aşağıdaki alt bölümleri içerir:  
   
 - [Mimari](#Architecture)  
   
-- [Dinamik bir işleyici uygulama](#ImplementingADynamicRenderer)  
+- [Dinamik İşleme İşleme](#ImplementingADynamicRenderer)  
   
-- [Özel vuruşları uygulama](#ImplementingCustomStrokes)  
+- [Özel Konturların Uygulanması](#ImplementingCustomStrokes)  
   
-- [Özel bir InkCanvas Uygulama](#ImplementingACustomInkCanvas)  
+- [Özel Mürekkep Tuvali Uygulama](#ImplementingACustomInkCanvas)  
   
 - [Sonuç](#Conclusion)  
   
-<a name="Architecture"></a>   
+<a name="Architecture"></a>
 ## <a name="architecture"></a>Mimari  
- Mürekkep işleme, iki kez gerçekleşir; bir kullanıcı mürekkep yüzeyine ve vuruş sonra yeniden yazdığında mürekkep özellikli yüzeyine eklenir. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Kullanıcı tablet kalemi çizim tablasının üzerinde hareket ettiğinde mürekkebi işler ve <xref:System.Windows.Ink.Stroke> öğe eklendikten sonra kendisini işler.  
+ Mürekkep işleme iki kez oluşur; bir kullanıcı mürekkep yüzeyine mürekkep yazdığında ve konturdan sonra mürekkep etkin yüzeye tekrar eklenir. Kullanıcı <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> tablet kalemini sayısallaştırıcıya taşırken mürekkebin işlenir ve bir öğeye eklendikten sonra kendisini <xref:System.Windows.Ink.Stroke> işler.  
   
- Mürekkep dinamik olarak işlenirken uygulamak için üç sınıfı vardır.  
+ Mürekİğİ dinamik olarak oluştururken uygulanacak üç sınıf vardır.  
   
-1. **DynamicRenderer**: Türetilen bir sınıf uygulamak <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Bu sınıf özelleştirilmiş, <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> çizildiğinde vuruş işleyen. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Mürekkep surface bile uygulama kullanıcı arabirimi (UI) iş parçacığı engellendiğinde mürekkep toplama görünmesi için ayrı bir iş parçacığı üzerinde işleme yok. İş parçacığı modeli hakkında daha fazla bilgi için bkz: [mürekkep iş parçacığı modeli](the-ink-threading-model.md). Bir vuruş dinamik olarak işleme özelleştirmek için geçersiz kılma <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> yöntemi.  
+1. **DynamicRenderer**: 'den <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>türeyen bir sınıf uygulayın. Bu sınıf, çekildiği gibi kontur işleyen özel <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> bir sınıftır. Ayrı <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> bir iş parçacığı üzerinde render yapar, böylece mürekkep yüzeyi uygulama kullanıcı arabirimi (UI) iş parçacığı engellendiğinde bile mürekkep toplamak için görünür. İş parçacığı modeli hakkında daha fazla bilgi için [Mürekkep İş parçacığı modeline](the-ink-threading-model.md)bakın. Kontur oluşturmayı dinamik olarak özelleştirmek <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> için yöntemi geçersiz kılın.  
   
-2. **Fırça darbesi**: Türetilen bir sınıf uygulamak <xref:System.Windows.Ink.Stroke>. Bu sınıfın statik işlemesinden sorumludur <xref:System.Windows.Input.StylusPoint> içine dönüştürüldükten sonra verileri bir <xref:System.Windows.Ink.Stroke> nesne. Geçersiz kılma <xref:System.Windows.Ink.Stroke.DrawCore%2A> yöntemi statik vuruş işlemesinin emin olmak için dinamik işleme ile tutarlıdır.  
+2. **Kontur**: <xref:System.Windows.Ink.Stroke>Türetilen bir sınıf uygulayın. Bu sınıf, <xref:System.Windows.Input.StylusPoint> bir <xref:System.Windows.Ink.Stroke> nesneye dönüştürüldükten sonra verilerin statik olarak işlenmesinden sorumludur. Konturun <xref:System.Windows.Ink.Stroke.DrawCore%2A> statik işlemesinin dinamik görüntülemeyle tutarlı olduğundan emin olmak için yöntemi geçersiz kılın.  
   
-3. **InkCanvas:** Türetilen bir sınıf uygulamak <xref:System.Windows.Controls.InkCanvas>. Özelleştirilmiş atama <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> için <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> özelliği. Geçersiz kılma <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> yöntemi ve özel bir vuruş ekleme <xref:System.Windows.Controls.InkCanvas.Strokes%2A> özelliği. Bu, mürekkep görünümünü tutarlı olmasını sağlar.  
+3. **Mürekkep Tuval:** 'den türeyen bir <xref:System.Windows.Controls.InkCanvas>sınıf uygulayın. Özelleştirilmiş <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> özelliği atayın. <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> Yöntemi geçersiz kılın ve <xref:System.Windows.Controls.InkCanvas.Strokes%2A> özel bir kontur ekleyin. Bu, mürekçegörünümünün tutarlı olmasını sağlar.  
   
-<a name="ImplementingADynamicRenderer"></a>   
-## <a name="implementing-a-dynamic-renderer"></a>Dinamik bir işleyici uygulama  
- Rağmen <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> sınıftır, standart bir parçası [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]özelleştirilmiş işlemeyi daha fazlasını gerçekleştirmek için türetilen özelleştirilmiş bir dinamik Oluşturucu oluşturmalısınız <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> ve geçersiz kılma <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> yöntemi.  
+<a name="ImplementingADynamicRenderer"></a>
+## <a name="implementing-a-dynamic-renderer"></a>Dinamik İşleme İşleme  
+ <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Sınıf [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]standart bir parçası olmasına rağmen , daha özel işleme gerçekleştirmek için, bu türlerden türetilmiş <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> ve <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> yöntemi geçersiz kılan özelleştirilmiş bir dinamik render oluşturmak gerekir.  
   
- Aşağıdaki örnek, özelleştirilmiş gösterir <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> , doğrusal gradyan fırça efekti ile mürekkep çizer.  
+ Aşağıdaki örnek, doğrusal <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> degrade fırça efektiyle mürekçe çeken özelleştirilmiş bir örnek gösterir.  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
 [!code-csharp[AdvancedInkTopicsSamples#1](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#1)]
 [!code-vb[AdvancedInkTopicsSamples#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#1)]  
   
-<a name="ImplementingCustomStrokes"></a>   
-## <a name="implementing-custom-strokes"></a>Özel vuruşları uygulama  
- Türetilen bir sınıf uygulamak <xref:System.Windows.Ink.Stroke>. Bu sınıf işlenmesinden sorumludur <xref:System.Windows.Input.StylusPoint> içine dönüştürüldükten sonra verileri bir <xref:System.Windows.Ink.Stroke> nesne. Geçersiz kılma <xref:System.Windows.Ink.Stroke.DrawCore%2A> gerçek çizim yapmak için sınıf.  
+<a name="ImplementingCustomStrokes"></a>
+## <a name="implementing-custom-strokes"></a>Özel Konturların Uygulanması  
+ 'den türeyen bir <xref:System.Windows.Ink.Stroke>sınıf uygulayın. Bu sınıf, bir <xref:System.Windows.Input.StylusPoint> <xref:System.Windows.Ink.Stroke> nesneye dönüştürüldükten sonra verileri işlemekten sorumludur. Gerçek çizimi <xref:System.Windows.Ink.Stroke.DrawCore%2A> yapmak için sınıfı geçersiz kılın.  
   
- Stroke sınıfınız de özel veri kullanarak depolayabilirsiniz <xref:System.Windows.Ink.Stroke.AddPropertyData%2A> yöntemi. Bu veriler kalıcı olduğunda vuruş verilerle depolanır.  
+ Kontur sınıfınız da <xref:System.Windows.Ink.Stroke.AddPropertyData%2A> yöntemi kullanarak özel verileri depolayabilir. Bu veriler, kalıcı olduğunda kontur verileriyle birlikte depolanır.  
   
- <xref:System.Windows.Ink.Stroke> Sınıfı, isabet sınaması da gerçekleştirebilirsiniz. Ayrıca kendi isabet algoritması geçersiz kılarak sınama uygulayabilirsiniz <xref:System.Windows.Ink.Stroke.HitTest%2A> geçerli sınıfında yöntemi.  
+ Sınıf <xref:System.Windows.Ink.Stroke> isabet testi de gerçekleştirebilir. Ayrıca, geçerli sınıftayöntemi <xref:System.Windows.Ink.Stroke.HitTest%2A> geçersiz kılarak kendi isabet testi algoritmanızı da uygulayabilirsiniz.  
   
- Aşağıdaki C# kod, özel bir gösterir <xref:System.Windows.Ink.Stroke> işleyen sınıfı <xref:System.Windows.Input.StylusPoint> 3B vuruş olarak veri.  
+ Aşağıdaki C# kodu, <xref:System.Windows.Ink.Stroke> <xref:System.Windows.Input.StylusPoint> verileri 3-B kontur olarak işleyen özel bir sınıf gösterir.  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
 [!code-csharp[AdvancedInkTopicsSamples#2](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#2)]
 [!code-vb[AdvancedInkTopicsSamples#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#2)]  
   
-<a name="ImplementingACustomInkCanvas"></a>   
-## <a name="implementing-a-custom-inkcanvas"></a>Özel bir InkCanvas Uygulama  
- Özelleştirilmiş kullanmak için en kolay yolu <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> ve vuruşu türetildiği bir sınıf uygulamak için <xref:System.Windows.Controls.InkCanvas> ve bu sınıflar kullanır. <xref:System.Windows.Controls.InkCanvas> Sahip bir <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> kullanıcının bunu yeniden çizilirken vuruş nasıl oluşturulacağını belirten özelliği.  
+<a name="ImplementingACustomInkCanvas"></a>
+## <a name="implementing-a-custom-inkcanvas"></a>Özel Mürekkep Tuvali Uygulama  
+ Özelleştirilmiş <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> ve konturunuzu kullanmanın en kolay yolu, bu <xref:System.Windows.Controls.InkCanvas> sınıflardan türetilen ve kullanan bir sınıf uygulamaktır. Kullanıcı <xref:System.Windows.Controls.InkCanvas> çizim <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> yaparken konturun nasıl işlenirse nasıl işlenir belirten bir özelliği vardır.  
   
- Üzerinde strokes özel işleme bir <xref:System.Windows.Controls.InkCanvas> aşağıdakileri yapın:  
+ Özel işleme konturlarını <xref:System.Windows.Controls.InkCanvas> yapmak için aşağıdakileri yapın:  
   
-- Türetilen bir sınıf oluşturmanız <xref:System.Windows.Controls.InkCanvas>.  
+- <xref:System.Windows.Controls.InkCanvas>'den türeyen bir sınıf oluşturun.  
   
-- Özelleştirilmiş atama <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> için <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType> özelliği.  
+- Özelleştirilmiş <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> özelliğinizi <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType> atayın.  
   
-- Geçersiz kılma <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> yöntemi. Bu yöntemde InkCanvas'a eklenen özgün vuruş kaldırın. Özel bir vuruş'ı oluşturun, ekleyin <xref:System.Windows.Controls.InkCanvas.Strokes%2A> özelliği ve yeni bir temel sınıfı çağırın <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> kontur içeren.  
+- <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> Yöntemi geçersiz kılın. Bu yöntemde, InkCanvas'a eklenen orijinal kontur kaldırın. Ardından özel bir kontur oluşturun, özel kontur <xref:System.Windows.Controls.InkCanvas.Strokes%2A> ekleyin ve <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> taban sınıfı özel kontur içeren yeni bir çağrı yla arayın.  
   
- Aşağıdaki C# kod, özel bir gösterir <xref:System.Windows.Controls.InkCanvas> özelleştirilmiş kullanan sınıf <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> ve özel vuruşları toplar.  
+ Aşağıdaki C# kodu, özelleştirilmiş <xref:System.Windows.Controls.InkCanvas> <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> bir sınıf kullanan ve özel konturlar toplayan özel bir sınıfı gösterir.  
   
  [!code-csharp[AdvancedInkTopicsSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#9)]  
   
- Bir <xref:System.Windows.Controls.InkCanvas> birden fazla aboneliğiniz <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Birden çok ekleyebilirsiniz <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> nesneleri için <xref:System.Windows.Controls.InkCanvas> ekleyerek <xref:System.Windows.UIElement.StylusPlugIns%2A> özelliği.  
+ Bir <xref:System.Windows.Controls.InkCanvas> birden <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>fazla olabilir. Özelliğe ekleyerek <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> birden çok <xref:System.Windows.Controls.InkCanvas> nesne ekleyebilirsiniz. <xref:System.Windows.UIElement.StylusPlugIns%2A>  
   
-<a name="Conclusion"></a>   
+<a name="Conclusion"></a>
 ## <a name="conclusion"></a>Sonuç  
- Kendi türetilerek mürekkep görünümünü özelleştirebilirsiniz <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>, ve <xref:System.Windows.Controls.InkCanvas> sınıfları. Birlikte, bu sınıflar stroke'un Görünümü Kullanıcı vuruşu çizer ve toplandıktan sonra tutarlı olduğundan emin olun.  
+ Kendi <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>ve <xref:System.Windows.Controls.InkCanvas> sınıflar türeterek mürekkep görünümünü özelleştirebilirsiniz. Bu sınıflar birlikte, kullanıcı kontur çizdiğinde ve toplandıktan sonra kontur görünümünün tutarlı olmasını sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

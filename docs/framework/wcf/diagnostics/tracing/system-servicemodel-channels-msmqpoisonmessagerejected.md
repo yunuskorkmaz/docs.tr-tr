@@ -2,25 +2,26 @@
 title: System.ServiceModel.Channels.MsmqPoisonMessageRejected
 ms.date: 03/30/2017
 ms.assetid: 0e64b9bd-1f12-43df-a189-d7be3c2bace1
-ms.openlocfilehash: 562399c1d45dc73c7c88bd165e9f95ee1bcfa19d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b0e6e3ebcf5d414e9dbbcecd09ba2e8bb3ddd3a
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997522"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78674810"
 ---
 # <a name="systemservicemodelchannelsmsmqpoisonmessagerejected"></a>System.ServiceModel.Channels.MsmqPoisonMessageRejected
 Zehirli ileti reddedildi.  
   
 ## <a name="description"></a>Açıklama  
- İzleme, zehirli ileti karşılaştı ve daha sonra reddedildiği olduğunu gösterir. Böyle durumlarda `ReceiveErrorHandling` özelliği NetMsmqBinding veya MsmqIntegrationBinding `Reject`. Reddedilen ileti geri gönderen için teslim [eski ileti sırası](https://go.microsoft.com/fwlink/?LinkId=99544).  
+
+ İz, zehirli bir iletiyle karşılaşıldığını ve daha sonra reddedildiğini gösterir. Bu, NetMsmqBinding veya MsmqIntegrationBinding'deki `ReceiveErrorHandling` özellik . `Reject` Reddedilen ileti gönderenin [Ölü Harf Kuyruğuna](../../feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)geri teslim edilir.  
   
- Bkz: [Poison ileti işleme](https://go.microsoft.com/fwlink/?LinkId=99546) iletileri zehirli duruma ne zaman ve uygun şekilde işlemek için hizmetinizi yapılandırmak nasıl daha fazla ayrıntı için. Bkz: [MQMarkMessageRejected](https://go.microsoft.com/fwlink/?LinkId=99548) MSMQ reddedilen ileti ne anlama hakkında daha fazla bilgi.  
+ İletilerin ne zaman zehirhaline geldiği ve hizmetinizi uygun şekilde işlemek üzere nasıl yapılandırılacağı hakkında daha fazla bilgi için [Poison-Message Handling](../../feature-details/poison-message-handling.md)'e bakın. Reddedilen iletinin MSMQ'da ne anlama geldiğini hakkında daha fazla bilgi [için](https://docs.microsoft.com/previous-versions/windows/desktop/msmq/ms707071(v%3dvs.85))bkz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [Poison ileti işleme](https://go.microsoft.com/fwlink/?LinkId=99546)
-- [MQMarkMessageRejected](https://go.microsoft.com/fwlink/?LinkId=99548)
+- [Zehir-Mesaj Taşıma](../../feature-details/poison-message-handling.md)
+- [MQMarkMessageReddedildi](https://docs.microsoft.com/previous-versions/windows/desktop/msmq/ms707071(v%3dvs.85))

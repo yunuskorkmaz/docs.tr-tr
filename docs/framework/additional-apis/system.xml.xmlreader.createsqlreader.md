@@ -1,5 +1,5 @@
 ---
-title: XmlReader. CreateSqlReader yöntemi (System. xml)
+title: XmlReader.CreateSqlReader Yöntemi (System.Xml)
 ms.date: 10/17/2019
 topic_type:
 - apiref
@@ -9,19 +9,19 @@ api_location:
 - system.xml.dll
 api_type:
 - Assembly
-ms.openlocfilehash: c65ef7c073175488c11c5e912a44d46fd4319209
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 7bd2ef5158516acede47f73f9937d06159bc16c9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215457"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155745"
 ---
 # <a name="xmlreadercreatesqlreader-method"></a>XmlReader.CreateSqlReader Metodu
 
-Belirtilen akışı, ayarları ve ayrıştırma için bağlam bilgilerini kullanarak yeni bir <xref:System.Xml.XmlReader> örneği oluşturur.
+Ayrıştırma <xref:System.Xml.XmlReader> için belirtilen akış, ayarlar ve bağlam bilgilerini kullanarak yeni bir örnek oluşturur.
 
 ```csharp
-internal static XmlReader CreateSqlReader(Stream input, 
+internal static XmlReader CreateSqlReader(Stream input,
   XmlReaderSettings settings, XmlParserContext inputContext)
 ```
 
@@ -31,10 +31,10 @@ internal static XmlReader CreateSqlReader(Stream input,
   XML verilerini içeren akış.
 
 - `settings` <xref:System.Xml.XmlReaderSettings>  
-  Yeni <xref:System.Xml.XmlReader> örneğinin ayarları. Bu değer `null`olabilir.
+  Yeni <xref:System.Xml.XmlReader> örneğin ayarları. Bu değer `null`.
 
 - `inputContext` <xref:System.Xml.XmlParserContext>  
-  XML parçasını ayrıştırmak için gereken bağlam bilgileri. Bu değer `null`olabilir.
+  XML parçasını ayrışdırmak için gereken bağlam bilgileri. Bu değer `null`.
 
 ## <a name="returns"></a>Döndürür
 
@@ -44,14 +44,14 @@ Akıştaki XML verilerini okumak için kullanılan bir nesne.
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> `XmlReader.CreateSqlReader` yöntemi dahili ve doğrudan kodunuzda kullanılmamalıdır.
+> Yöntem `XmlReader.CreateSqlReader` dahilidir ve doğrudan kodunuzda kullanılmak üzere değildir.
 >
-> Microsoft, bu yöntemin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
+> Microsoft, bu yöntemin hiçbir koşulda bir üretim uygulamasında kullanılmasını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Ad alanı:** <xref:System.Xml>
+**Ad alanı:**<xref:System.Xml>
 
-**Bütünleştirilmiş kod:** System. xml. dll
+**Montaj:** System.xml.dll
 
-**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2.0'dan beri mevcuttur.

@@ -5,26 +5,26 @@ helpviewer_keywords:
 - FillBehavior property for inactive timelines [WPF]
 - Timelines [WPF], FillBehavior property
 ms.assetid: db805f59-d513-4dac-af15-47005dae3199
-ms.openlocfilehash: 9f03c5b8d4585c32e0a9f119649dd15a23523033
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f54f2c1bb49bb7a0301f112a109194ab1a8658e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973673"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141179"
 ---
 # <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>Nasıl yapılır: Etkin Döneminin Sonuna Gelen Zaman Çizelgesi için FillBehavior Belirtme
-Bu örnek nasıl belirtileceğini gösterir <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> için etkin olmayan <xref:System.Windows.Media.Animation.Timeline> animasyonlu bir özelliği.  
+Bu örnek, animasyonlu <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> bir özelliğin etkin olmayan <xref:System.Windows.Media.Animation.Timeline> için nasıl belirtilir gösterir.  
   
 ## <a name="example"></a>Örnek  
- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Özelliği bir <xref:System.Windows.Media.Animation.Timeline> yok edilirken animasyonlu bir özelliğin değerini ne olacağını belirler, diğer bir deyişle, ne zaman animasyonlu <xref:System.Windows.Media.Animation.Timeline> üst etkin değil <xref:System.Windows.Media.Animation.Timeline> içinde etkin veya dönem. Örneğin, bir animasyonlu özelliği sonuna kalır yoksa animasyon sona erer veya mevcut sonra değer animasyon başlamadan önceki değerine geri dönmek?  
+ Animasyonlu <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> <xref:System.Windows.Media.Animation.Timeline> olmadığında, yani etkin olmadığında ancak üst <xref:System.Windows.Media.Animation.Timeline> <xref:System.Windows.Media.Animation.Timeline> öğesi etkin veya bekleme süresinin içinde yken animasyonlu bir özelliğin değerine ne olacağını belirler. Örneğin, animasyon özelliği animasyon sona erdikten sonra bitiş değerinde mi kalır yoksa animasyon başlamadan önceki değerine geri mi döner?  
   
- Aşağıdaki örnekte bir <xref:System.Windows.Media.Animation.DoubleAnimation> animasyon uygulamak için <xref:System.Windows.FrameworkElement.Width%2A> iki dikdörtgenlerin. Her dikdörtgenin farklı bir kullanan <xref:System.Windows.Media.Animation.Timeline> nesne.  
+ Aşağıdaki örnekte, <xref:System.Windows.Media.Animation.DoubleAnimation> iki dikdörtgenin <xref:System.Windows.FrameworkElement.Width%2A> animasyonu için a kullanır. Her dikdörtgen farklı <xref:System.Windows.Media.Animation.Timeline> bir nesne kullanır.  
   
- Bir <xref:System.Windows.Media.Animation.Timeline> sahip bir <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> ayarlanmış <xref:System.Windows.Media.Animation.FillBehavior.Stop>, geri kendi hareketli olmayan için dikdörtgenin genişliğini neden değeri <xref:System.Windows.Media.Animation.Timeline> sona erer. Diğer <xref:System.Windows.Media.Animation.Timeline> sahip bir <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> , <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, genişliğin sonuna kalmasına neden değeri <xref:System.Windows.Media.Animation.Timeline> sona erer.  
+ Bir <xref:System.Windows.Media.Animation.Timeline> ayarlı bir <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> <xref:System.Windows.Media.Animation.FillBehavior.Stop>var , dikdörtgenin genişliği <xref:System.Windows.Media.Animation.Timeline> sona erdiğinde animasyonsuz değerine geri dönmek için neden olur. Diğer <xref:System.Windows.Media.Animation.Timeline> bir <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>var , hangi genişlik <xref:System.Windows.Media.Animation.Timeline> sona erdiğinde son değeri kalmasına neden olur.  
   
  [!code-xaml[timingbehaviors_snip#FillBehaviorWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/FillBehaviorExample.xaml#fillbehaviorwholepage)]  
   
- Tam bir örnek için bkz. [animasyon örnek Galerisi](https://go.microsoft.com/fwlink/?LinkID=159969).  
+ Tam örnek için [Animasyon Örnek Galerisi'ne](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationExamples)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -35,4 +35,4 @@ Bu örnek nasıl belirtileceğini gösterir <xref:System.Windows.Media.Animation
 - <xref:System.Windows.Media.Animation.FillBehavior.Stop>
 - <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>
 - [Animasyona Genel bakış](animation-overview.md)
-- [Animasyon ve zamanlama ile ilgili nasıl yapılır konuları](animation-and-timing-how-to-topics.md)
+- [Animasyon ve Zamanlama ile İlgili Nasıl Yapılır Konuları](animation-and-timing-how-to-topics.md)

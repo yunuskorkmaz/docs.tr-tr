@@ -1,5 +1,5 @@
 ---
-title: ConnectionGroup. m_ConnectionList alanı
+title: ConnectionGroup.m_ConnectionList Alanı
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
-ms.openlocfilehash: d53eeb54d212adb011dae138e103ea5b30f7fb99
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 8eb6f215c36e214f7095eeba90bf0aed66dfcea0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215537"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155856"
 ---
-# <a name="connectiongroupm_connectionlist-field"></a>ConnectionGroup. d\_ConnectionList alanı
+# <a name="connectiongroupm_connectionlist-field"></a>ConnectionGroup.m\_ConnectionList Alanı
 
-`ConnectionGroup.m_ConnectionList`, aynı URI 'ye hizmet veren ve süre sonu ve kimlik doğrulama gibi bazı özellikler için aynı değerleri paylaşan bağlantı nesnelerinin bir <xref:System.Collections.ArrayList>.
+`ConnectionGroup.m_ConnectionList`<xref:System.Collections.ArrayList> aynı URI'ye hizmet eden ve son kullanma ve kimlik doğrulama gibi diğer bazı özellikler için aynı değerleri paylaşan bağlantı nesnelerinden biridir.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -28,14 +28,14 @@ private ArrayList m_ConnectionList
 ```
 
 > [!WARNING]
-> `ConnectionGroup.m_ConnectionList` alanı özeldir ve doğrudan kodunuzda kullanılmamalıdır.
-> 
-> Microsoft, herhangi bir koşulda bu alanın bir üretim uygulamasında kullanımını desteklemez.
+> Alan `ConnectionGroup.m_ConnectionList` özeldir ve doğrudan kodunuzda kullanılmamalıdır.
+>
+> Microsoft, hiçbir koşulda bir üretim uygulamasında bu alanın kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Ad alanı:** <xref:System.Net>
+**Ad alanı:**<xref:System.Net>
 
-**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
+**Montaj:** Sistem (System.dll'de)
 
-**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2.0'dan beri mevcuttur.

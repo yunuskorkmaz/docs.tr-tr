@@ -12,23 +12,23 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: ba2afb52939a6274978ce725dac19b5622419b99
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6ff20c443519446d3804b325924cb3c5cbedea97
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735667"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141932"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Nasıl yapılır: Windows Forms CheckBox Tıklamalarına Yanıt Verme
-Kullanıcı Windows Forms <xref:System.Windows.Forms.CheckBox> denetimine tıkladığında <xref:System.Windows.Forms.Control.Click> olay oluşur. Onay kutusunun durumuna bağlı olarak, uygulamanızı bazı eylemler gerçekleştirecek şekilde programlayabilirsiniz.  
+Bir kullanıcı Windows Forms <xref:System.Windows.Forms.CheckBox> denetimini <xref:System.Windows.Forms.Control.Click> tıklattığında, olay oluşur. Başvurunuzu, onay kutusunun durumuna bağlı olarak bazı eylemler gerçekleştirecek şekilde programlayabilirsiniz.  
   
-### <a name="to-respond-to-checkbox-clicks"></a>Onay kutusu tıklamalarına yanıt vermek için  
+### <a name="to-respond-to-checkbox-clicks"></a>CheckBox tıklamalarına yanıt vermek için  
   
-1. <xref:System.Windows.Forms.Control.Click> olay işleyicisinde, denetimin durumunu öğrenmek için <xref:System.Windows.Forms.CheckBox.Checked%2A> özelliğini kullanın ve gerekli tüm eylemleri gerçekleştirin.  
+1. Olay <xref:System.Windows.Forms.Control.Click> işleyicisi, <xref:System.Windows.Forms.CheckBox.Checked%2A> denetimdurumunu belirlemek için özelliği kullanın ve gerekli eylemi gerçekleştirin.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
-       ' The CheckBox control's Text property is changed each time the   
+       ' The CheckBox control's Text property is changed each time the
        ' control is clicked, indicating a checked or unchecked state.  
        If CheckBox1.Checked = True Then  
           CheckBox1.Text = "Checked"  
@@ -41,7 +41,7 @@ Kullanıcı Windows Forms <xref:System.Windows.Forms.CheckBox> denetimine tıkla
     ```csharp  
     private void checkBox1_Click(object sender, System.EventArgs e)  
     {  
-       // The CheckBox control's Text property is changed each time the   
+       // The CheckBox control's Text property is changed each time the
        // control is clicked, indicating a checked or unchecked state.  
        if (checkBox1.Checked)  
        {  
@@ -71,16 +71,16 @@ Kullanıcı Windows Forms <xref:System.Windows.Forms.CheckBox> denetimine tıkla
     ```  
   
     > [!NOTE]
-    > Kullanıcı <xref:System.Windows.Forms.CheckBox> denetimine çift tıkladenerse, her tıklama ayrı olarak işlenir; diğer bir deyişle, <xref:System.Windows.Forms.CheckBox> denetimi çift tıklama olayını desteklemez.  
+    > Kullanıcı <xref:System.Windows.Forms.CheckBox> denetimi çift tıklatmaya çalışırsa, her tıklama ayrı ayrı işlenir; diğer bir <xref:System.Windows.Forms.CheckBox> diğer olarak, denetim çift tıklatma olayını desteklemez.  
   
     > [!NOTE]
-    > <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> özelliği `true` (varsayılan), tıklandığında <xref:System.Windows.Forms.CheckBox> otomatik olarak seçilir veya temizlenir. Aksi takdirde, <xref:System.Windows.Forms.Control.Click> olayı gerçekleştiğinde <xref:System.Windows.Forms.CheckBox.Checked%2A> özelliğini el ile ayarlamanız gerekir.  
+    > <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> Özellik (varsayılan) olduğunda, `true` <xref:System.Windows.Forms.CheckBox> tıklatıldığında otomatik olarak seçilir veya temizlenir. Aksi takdirde, <xref:System.Windows.Forms.CheckBox.Checked%2A> <xref:System.Windows.Forms.Control.Click> olay gerçekleştiğinde özelliği el ile ayarlamanız gerekir.  
   
-     <xref:System.Windows.Forms.CheckBox> denetimini Ayrıca bir eylem kursu tespit etmek için de kullanabilirsiniz.  
+     Denetimi <xref:System.Windows.Forms.CheckBox> bir eylem rotasını belirlemek için de kullanabilirsiniz.  
   
-### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>Bir onay kutusu tıklandığında bir eylem kursu belirleme  
+### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>Onay kutusu tıklatıldığında eylem rotasını belirlemek için  
   
-1. Bir eylem kursu belirleme <xref:System.Windows.Forms.CheckBox.CheckState%2A> özelliğinin değerini sorgulamak için Case ifadesini kullanın. <xref:System.Windows.Forms.CheckBox.ThreeState%2A> özelliği `true`olarak ayarlandığında, <xref:System.Windows.Forms.CheckBox.CheckState%2A> özelliği denetlenen kutuyu temsil eden üç olası değeri, işaretlenmekte olan kutuyu veya seçeneğin kullanılamaz olduğunu göstermek için kutunun soluk bir görünümle birlikte görüntüleneceği üçüncü bir belirsiz durumu döndürebilir.  
+1. Bir eylem kursunu belirlemek için <xref:System.Windows.Forms.CheckBox.CheckState%2A> özelliğin değerini sorgulamak için bir servis talebi deyimi kullanın. <xref:System.Windows.Forms.CheckBox.ThreeState%2A> Özellik `true`ayarlandığında, <xref:System.Windows.Forms.CheckBox.CheckState%2A> özellik işaretlenen kutuyu temsil eden üç olası değer, işaretlenmemiş kutuyu veya seçeneğin kullanılmayabileceğini belirtmek için kutunun soluk bir görünümle görüntülendiği üçüncü bir belirsiz durumu döndürebilir.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -91,7 +91,7 @@ Kullanıcı Windows Forms <xref:System.Windows.Forms.CheckBox> denetimine tıkla
              ' Code for unchecked state.  
           Case CheckState.Indeterminate  
              ' Code for indeterminate state.  
-       End Select   
+       End Select
     End Sub  
     ```  
   
@@ -133,7 +133,7 @@ Kullanıcı Windows Forms <xref:System.Windows.Forms.CheckBox> denetimine tıkla
     ```  
   
     > [!NOTE]
-    > <xref:System.Windows.Forms.CheckBox.ThreeState%2A> özelliği `true`olarak ayarlandığında <xref:System.Windows.Forms.CheckBox.Checked%2A> özelliği hem <xref:System.Windows.Forms.CheckState.Checked> hem de <xref:System.Windows.Forms.CheckState.Indeterminate>için `true` döndürür.  
+    > <xref:System.Windows.Forms.CheckBox.ThreeState%2A> `true`Özellik ayarlandığında, <xref:System.Windows.Forms.CheckBox.Checked%2A> özellik hem `true` de <xref:System.Windows.Forms.CheckState.Checked> . <xref:System.Windows.Forms.CheckState.Indeterminate>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

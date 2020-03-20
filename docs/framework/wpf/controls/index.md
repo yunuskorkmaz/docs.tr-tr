@@ -7,95 +7,95 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: 42596c8adf1b8b27f250fa7a3cf6cc173a63e2eb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2ec8c0a99f4e2431aed0d8c24168b7329de669f8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459453"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187529"
 ---
 # <a name="controls"></a>Denetimler
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], neredeyse her Windows uygulamasında kullanılan <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu>ve <xref:System.Windows.Controls.ListBox>gibi birçok ortak kullanıcı arabirimi bileşeni ile birlikte gelir. Tarihsel olarak, bu nesneler denetimler olarak adlandırılmıştır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK, bir uygulamadaki görünür bir nesneyi temsil eden herhangi bir sınıfı gevşekme etmek için "Control" terimini kullanmaya devam ederken, bir sınıfın görünür bir varlığına sahip olmak için <xref:System.Windows.Controls.Control> sınıfından devralması gerekmediğini unutmayın. <xref:System.Windows.Controls.Control> sınıfından kalıtımla alan sınıflar, bir denetimin tüketicisinin yeni bir alt sınıf oluşturmaya gerek kalmadan denetimin görünümünü bir şekilde değiştirmesine izin veren bir <xref:System.Windows.Controls.ControlTemplate>içerir.  Bu konuda, denetimlerin (hem <xref:System.Windows.Controls.Control> sınıfından, hem de olmayanlar) [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]yaygın olarak kullanıldığı denetimlerin (her ikisi de) açıklanmaktadır.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]gibi hemen hemen her Windows uygulamasında kullanılan ortak Kullanıcı Arabirimi <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Label>bileşenlerinin çoğuile gemiler, , <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.Menu>, , ve <xref:System.Windows.Controls.ListBox>. Tarihsel olarak, bu nesnelere denetimler olarak adlandırılır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK, bir uygulamada görünür bir nesneyi temsil eden herhangi bir sınıfı gevşek bir şekilde ifade etmek için "denetim" terimini <xref:System.Windows.Controls.Control> kullanmaya devam ederken, bir sınıfın görünür bir varlığa sahip olması için sınıftan devralmasına gerek olmadığını belirtmek önemlidir. <xref:System.Windows.Controls.Control> Sınıftan devralan sınıflar, <xref:System.Windows.Controls.ControlTemplate>bir denetimin tüketicisinin yeni bir alt sınıf oluşturmak zorunda kalmadan denetimin görünümünü kökten değiştirmesine olanak tanıyan bir sınıf içerir.  Bu konu, denetimlerin <xref:System.Windows.Controls.Control> (hem sınıftan devralanlar hem de devralınmayanlar) [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]'da nasıl kullanıldığını) açıklar.  
 
-<a name="creating_an_instance_of_a_control"></a>   
-## <a name="creating-an-instance-of-a-control"></a>Bir denetimin örneğini oluşturma  
- [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] veya kodu kullanarak uygulamaya bir denetim ekleyebilirsiniz.  Aşağıdaki örnek, kullanıcıdan ilk ve son adlarını soran basit bir uygulamanın nasıl oluşturulacağını gösterir.  Bu örnek altı denetim oluşturur: iki etiket, iki metin kutusu ve iki düğme, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Tüm denetimler benzer şekilde oluşturulabilir.  
+<a name="creating_an_instance_of_a_control"></a>
+## <a name="creating-an-instance-of-a-control"></a>Denetim Örneği Oluşturma  
+ Bir uygulama için bir denetim [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ya da kod kullanarak ekleyebilirsiniz.  Aşağıdaki örnek, kullanıcıdan ad ve soyadlarını soran basit bir uygulamanın nasıl oluşturulacağını gösterir.  Bu örnekte altı denetim oluşturulur: iki etiket, iki metin [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]kutusu ve iki düğme. Tüm denetimler benzer şekilde oluşturulabilir.  
   
  [!code-xaml[ControlsOverview#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#1)]  
   
- Aşağıdaki örnek, kodda aynı uygulamayı oluşturur. Kısaltma için, <xref:System.Windows.Controls.Grid>`grid1`oluşturma, örnekten dışlandı. `grid1`, önceki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] örneğinde gösterildiği gibi aynı sütun ve satır tanımlarına sahiptir.  
+ Aşağıdaki örnekkod aynı uygulamayı oluşturur. Kısaltma için, <xref:System.Windows.Controls.Grid>, , `grid1`oluşturulması , örnek dışında tutulmuştür. `grid1`önceki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] örnekte gösterildiği gibi aynı sütun ve satır tanımları vardır.  
   
  [!code-csharp[ControlsOverview#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#2)]
  [!code-vb[ControlsOverview#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#2)]  
   
-<a name="changing_the_appearance_of_a_control"></a>   
-## <a name="changing-the-appearance-of-a-control"></a>Bir denetimin görünümünü değiştirme  
- Bir denetimin görünümünü uygulamanızın görünümüne uyacak şekilde değiştirmek yaygındır. Bir denetimin görünüşünü, gerçekleştirmek istediğiniz seçeneğe bağlı olarak aşağıdakilerden birini yaparak değiştirebilirsiniz:  
+<a name="changing_the_appearance_of_a_control"></a>
+## <a name="changing-the-appearance-of-a-control"></a>Denetimin Görünümünü Değiştirme  
+ Uygulamanızın görünümüne ve hissine uyacak şekilde bir denetimin görünümünü değiştirmek yaygındır. Gerçekleştirmek istediğiniz şeye bağlı olarak aşağıdakilerden birini yaparak denetimin görünümünü değiştirebilirsiniz:  
   
-- Denetimin bir özelliğinin değerini değiştirin.  
+- Denetimin özelliğinin değerini değiştirin.  
   
-- Denetim için bir <xref:System.Windows.Style> oluşturun.  
+- Denetim <xref:System.Windows.Style> için bir oluştur.  
   
-- Denetim için yeni bir <xref:System.Windows.Controls.ControlTemplate> oluşturun.  
+- Denetim için <xref:System.Windows.Controls.ControlTemplate> yeni bir oluştur.  
   
-### <a name="changing-a-controls-property-value"></a>Denetimin özellik değerini değiştirme  
- Birçok denetimin, bir <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Control.Background%2A> gibi, denetimin görünümünü değiştirmenize olanak tanıyan özellikler vardır. Değer özelliklerini hem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] hem de kodda ayarlayabilirsiniz. Aşağıdaki örnek, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]bir <xref:System.Windows.Controls.Button> üzerinde <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>ve <xref:System.Windows.Controls.Control.FontWeight%2A> özelliklerini ayarlar.  
+### <a name="changing-a-controls-property-value"></a>Denetimin Özellik Değerini Değiştirme  
+ Birçok denetim, denetimin nasıl göründüğünü değiştirmenize olanak tanıyan <xref:System.Windows.Controls.Control.Background%2A> özelliklere <xref:System.Windows.Controls.Button>sahiptir ( Hem de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] koddaki değer özelliklerini ayarlayabilirsiniz. Aşağıdaki örnekte <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>ve <xref:System.Windows.Controls.Control.FontWeight%2A> özellikleri <xref:System.Windows.Controls.Button> bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]in'de ayarlar.  
   
  [!code-xaml[ControlsOverview#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#3)]  
   
- Aşağıdaki örnek, kodda aynı özellikleri ayarlar.  
+ Aşağıdaki örnekkodaynı özellikleri ayarlar.  
   
  [!code-csharp[ControlsOverview#4](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#4)]
  [!code-vb[ControlsOverview#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#4)]  
   
-### <a name="creating-a-style-for-a-control"></a>Denetim için stil oluşturma  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bir <xref:System.Windows.Style>oluşturarak uygulamadaki her bir örnekteki özellikleri ayarlamak yerine, denetimlerin toptan görünümünü belirtme olanağı sağlar. Aşağıdaki örnek, uygulamadaki her bir <xref:System.Windows.Controls.Button> uygulanan bir <xref:System.Windows.Style> oluşturur. <xref:System.Windows.Style> tanımları, genellikle <xref:System.Windows.FrameworkElement><xref:System.Windows.FrameworkElement.Resources%2A> özelliği gibi bir <xref:System.Windows.ResourceDictionary>[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tanımlanmıştır.  
+### <a name="creating-a-style-for-a-control"></a>Denetim için Stil Oluşturma  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bir <xref:System.Windows.Style>. oluşturarak, uygulamadaki her örnekte özellikleri ayarlamak yerine denetimlerin görünümünü toptan belirtme olanağı sağlar. Aşağıdaki örnek, uygulamadaki her <xref:System.Windows.Style> <xref:System.Windows.Controls.Button> birine uygulanan bir örnek oluşturur. <xref:System.Windows.Style>[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tanımlar genellikle <xref:System.Windows.ResourceDictionary>bir , örneğin <xref:System.Windows.FrameworkElement.Resources%2A> bir tanımlanır . <xref:System.Windows.FrameworkElement>  
   
  [!code-xaml[ControlsOverview#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   
- Ayrıca, stile bir anahtar atayarak ve bu anahtarı denetiminizin `Style` özelliğinde belirterek belirli bir türün yalnızca belirli denetimlerine bir stil uygulayabilirsiniz.  Stiller hakkında daha fazla bilgi için bkz. [Stil oluşturma ve şablon](styling-and-templating.md)oluşturma.  
+ Ayrıca, stiliçin bir anahtar atayarak ve denetiminizin `Style` özelliğinde bu anahtarı belirterek yalnızca belirli bir türün belirli denetimlerine stil uygulayabilirsiniz.  Stiller hakkında daha fazla bilgi için [Stil ve Templating'e](styling-and-templating.md)bakın.  
   
-### <a name="creating-a-controltemplate"></a>ControlTemplate oluşturarak  
- <xref:System.Windows.Style>, tek seferde birden çok denetim üzerinde özellikler ayarlamanıza olanak tanır, ancak bazen bir <xref:System.Windows.Style>oluşturarak yapabileceklerinizin ötesinde bir <xref:System.Windows.Controls.Control> görünümünü özelleştirmek isteyebilirsiniz. <xref:System.Windows.Controls.Control> sınıfından kalıtımla alan sınıfların bir <xref:System.Windows.Controls.Control>yapısını ve görünümünü tanımlayan bir <xref:System.Windows.Controls.ControlTemplate>vardır. Bir <xref:System.Windows.Controls.Control> <xref:System.Windows.Controls.Control.Template%2A> özelliği geneldir, bu sayede varsayılandan farklı bir <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.Control> sağlayabilirsiniz. Bir <xref:System.Windows.Controls.Control>görünümünü özelleştirmek için bir denetimden devralma yerine, genellikle bir <xref:System.Windows.Controls.Control> için yeni bir <xref:System.Windows.Controls.ControlTemplate> belirtebilirsiniz.  
+### <a name="creating-a-controltemplate"></a>Denetim Şablonu Oluşturma  
+ A, <xref:System.Windows.Style> aynı anda birden çok denetimde özellikleri ayarlamanızı sağlar, ancak <xref:System.Windows.Controls.Control> bazen bir <xref:System.Windows.Style>. Sınıftan <xref:System.Windows.Controls.Control> devralan sınıfların <xref:System.Windows.Controls.ControlTemplate>yapısı ve görünümünü tanımlayan bir <xref:System.Windows.Controls.Control>, . A'nın <xref:System.Windows.Controls.Control.Template%2A> <xref:System.Windows.Controls.Control> özelliği herkese açıktır, bu <xref:System.Windows.Controls.Control> <xref:System.Windows.Controls.ControlTemplate> nedenle bir a'yı varsayılanından farklı bir özellik verebilirsiniz. Genellikle bir denetim <xref:System.Windows.Controls.ControlTemplate> görünümünü <xref:System.Windows.Controls.Control> özelleştirmek için bir denetim devralma yerine yeni <xref:System.Windows.Controls.Control>belirtebilirsiniz .  
   
- <xref:System.Windows.Controls.Button>en yaygın denetimi göz önünde bulundurun.  Bir <xref:System.Windows.Controls.Button> birincil davranışı, bir uygulamanın kullanıcı tıkladığı zaman bir eylem yapması olanaklı hale gelir.  Varsayılan olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> yükseltilmiş dikdörtgen olarak görünür.  Bir uygulama geliştirirken, düğmenin tıklama olayını işleyerek bir <xref:System.Windows.Controls.Button>davranışından faydalanmak isteyebilirsiniz, ancak düğmenin özelliklerini değiştirerek düğmenin görünümünü yapabileceklerinizi aşabilirsiniz. bu işlemi yapabilirsiniz.  Bu durumda, yeni bir <xref:System.Windows.Controls.ControlTemplate>oluşturabilirsiniz.  
+ Çok yaygın kontrolü <xref:System.Windows.Controls.Button>göz önünde bulundurun.  A'nın birincil <xref:System.Windows.Controls.Button> davranışı, kullanıcı tıklattığında bir uygulamanın bazı eylemlerde durmasını sağlamaktır.  Varsayılan olarak, <xref:System.Windows.Controls.Button> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in yükseltilmiş bir dikdörtgen olarak görünür.  Bir uygulama geliştirirken, düğmenin tıklama olayını ele <xref:System.Windows.Controls.Button>alarak bir uygulamanın davranışından yararlanmak isteyebilirsiniz, ancak düğmenin özelliklerini değiştirerek düğmenin görünümünü değiştirebilirsiniz.  Bu durumda, yeni <xref:System.Windows.Controls.ControlTemplate>bir .  
   
- Aşağıdaki örnek bir <xref:System.Windows.Controls.Button>için <xref:System.Windows.Controls.ControlTemplate> oluşturur.  <xref:System.Windows.Controls.ControlTemplate>, yuvarlatılmış köşeler ve gradyan arka planına sahip bir <xref:System.Windows.Controls.Button> oluşturur.  <xref:System.Windows.Controls.ControlTemplate>, <xref:System.Windows.Controls.Border.Background%2A> iki <xref:System.Windows.Media.GradientStop> nesnesine sahip <xref:System.Windows.Media.LinearGradientBrush> olan bir <xref:System.Windows.Controls.Border> içerir.  İlk <xref:System.Windows.Media.GradientStop>, <xref:System.Windows.Media.GradientStop> <xref:System.Windows.Media.GradientStop.Color%2A> özelliğini düğmenin arka planının rengine bağlamak için veri bağlamayı kullanır.  <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Control.Background%2A> özelliğini ayarladığınızda, bu değerin rengi ilk <xref:System.Windows.Media.GradientStop>olarak kullanılacaktır. Veri bağlama hakkında daha fazla bilgi için bkz. [veri bağlamaya genel bakış](../../../desktop-wpf/data/data-binding-overview.md). Örnek ayrıca <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> `true`olduğunda <xref:System.Windows.Controls.Button> görünümünü değiştiren bir <xref:System.Windows.Trigger> oluşturur.  
+ Aşağıdaki örnek için <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.Button>bir .  Yuvarlak <xref:System.Windows.Controls.ControlTemplate> köşeleri <xref:System.Windows.Controls.Button> ve degrade arka plan ile oluşturur.  İki <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.Border> <xref:System.Windows.Media.GradientStop> nesneile <xref:System.Windows.Controls.Border.Background%2A> a <xref:System.Windows.Media.LinearGradientBrush> olan içerir.  İlk <xref:System.Windows.Media.GradientStop> olarak, düğmenin <xref:System.Windows.Media.GradientStop.Color%2A> arka planının <xref:System.Windows.Media.GradientStop> rengine özelliğini bağlamak için veri bağlama kullanır.  <xref:System.Windows.Controls.Control.Background%2A> Özelliğini <xref:System.Windows.Controls.Button>ayarladığınızda, bu değerin rengi ilk <xref:System.Windows.Media.GradientStop>olarak kullanılacaktır. Veri bağlama hakkında daha fazla bilgi için [bkz.](../../../desktop-wpf/data/data-binding-overview.md) <xref:System.Windows.Trigger> Örnek, <xref:System.Windows.Controls.Button> ne zaman <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> görünümünü değiştiren bir de `true`oluşturur.  
   
  [!code-xaml[ControlsOverview#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#6)]  
 [!code-xaml[ControlsOverview#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#7)]  
   
 > [!NOTE]
-> Örneğin düzgün çalışması için <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Control.Background%2A> özelliği bir <xref:System.Windows.Media.SolidColorBrush> olarak ayarlanmalıdır.  
+> Düzgün <xref:System.Windows.Controls.Control.Background%2A> çalışması <xref:System.Windows.Controls.Button> için örneğin özelliği <xref:System.Windows.Media.SolidColorBrush> a olarak ayarlanmalıdır.  
   
-<a name="subscribing_to_events"></a>   
-## <a name="subscribing-to-events"></a>Olaylara abone olma  
- Bir denetimin olayına [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] veya kodu kullanarak abone olabilirsiniz, ancak kodda yalnızca bir olayı işleyebilirsiniz.  Aşağıdaki örnekte, bir <xref:System.Windows.Controls.Button>`Click` olayına nasıl abone olunacağı gösterilmektedir.  
+<a name="subscribing_to_events"></a>
+## <a name="subscribing-to-events"></a>Etkinliklere Abone Olma  
+ Bir denetimin olayına ya da [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kodu kullanarak abone olabilirsiniz, ancak bir olayı yalnızca kod olarak işleyebilirsiniz.  Aşağıdaki örnekte, `Click` bir <xref:System.Windows.Controls.Button>.  
   
  [!code-xaml[ControlsOverview#10](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#10)]  
   
  [!code-csharp[ControlsOverview#8](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#8)]
  [!code-vb[ControlsOverview#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#8)]  
   
- Aşağıdaki örnek, bir <xref:System.Windows.Controls.Button>`Click` olayını işler.  
+ Aşağıdaki örnekte bir `Click` <xref:System.Windows.Controls.Button>. olayını işler  
   
  [!code-csharp[ControlsOverview#9](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#9)]
  [!code-vb[ControlsOverview#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#9)]  
   
-<a name="rich_content_in_controls"></a>   
-## <a name="rich-content-in-controls"></a>Denetimlerde zengin Içerik  
- <xref:System.Windows.Controls.Control> sınıfından kalıtımla alan çoğu sınıfın, zengin içerik içerme kapasitesi vardır. Örneğin, bir <xref:System.Windows.Controls.Label> dize, <xref:System.Windows.Controls.Image>veya <xref:System.Windows.Controls.Panel>gibi herhangi bir nesne içerebilir.  Aşağıdaki sınıflar zengin içerik desteği sağlar ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]içindeki denetimlerin çoğu için temel sınıf olarak davranır.  
+<a name="rich_content_in_controls"></a>
+## <a name="rich-content-in-controls"></a>Denetimlerde Zengin İçerik  
+ <xref:System.Windows.Controls.Control> Sınıftan devralan çoğu sınıf zengin içerik içerme kapasitesine sahiptir. Örneğin, bir <xref:System.Windows.Controls.Label> dize, bir <xref:System.Windows.Controls.Image>, veya bir . <xref:System.Windows.Controls.Panel>gibi herhangi bir nesne içerebilir.  Aşağıdaki sınıflar zengin içerik için destek sağlar ve 'deki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]denetimlerin çoğu için temel sınıflar olarak hareket eder.  
   
-- <xref:System.Windows.Controls.ContentControl>--bu sınıftan kalıtımla alan sınıfların bazı örnekleri <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>ve <xref:System.Windows.Controls.ToolTip>.  
+- <xref:System.Windows.Controls.ContentControl>-- Bu sınıftan devralan bazı <xref:System.Windows.Controls.Label> <xref:System.Windows.Controls.Button>sınıflara <xref:System.Windows.Controls.ToolTip>örnekler , , ve .  
   
-- <xref:System.Windows.Controls.ItemsControl>--bu sınıftan kalıtımla alan sınıfların bazı örnekleri <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>ve <xref:System.Windows.Controls.Primitives.StatusBar>.  
+- <xref:System.Windows.Controls.ItemsControl>-- Bu sınıftan devralan bazı <xref:System.Windows.Controls.ListBox> <xref:System.Windows.Controls.Menu>sınıflara <xref:System.Windows.Controls.Primitives.StatusBar>örnekler , , ve .  
   
-- <xref:System.Windows.Controls.HeaderedContentControl>--bu sınıftan kalıtımla alan sınıfların bazı örnekleri <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.GroupBox>ve <xref:System.Windows.Controls.Expander>.  
+- <xref:System.Windows.Controls.HeaderedContentControl>-- Bu sınıftan devralan bazı <xref:System.Windows.Controls.TabItem> <xref:System.Windows.Controls.GroupBox>sınıflara <xref:System.Windows.Controls.Expander>örnekler , , ve .  
   
-- <xref:System.Windows.Controls.HeaderedItemsControl>--bu sınıftan kalıtımla alan sınıfların bazı örnekleri <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>ve <xref:System.Windows.Controls.ToolBar>.  
+- <xref:System.Windows.Controls.HeaderedItemsControl>--Bu sınıftan devralan bazı <xref:System.Windows.Controls.MenuItem>sınıflara örnekler , , <xref:System.Windows.Controls.TreeViewItem>ve <xref:System.Windows.Controls.ToolBar>.  
 
- Bu temel sınıflar hakkında daha fazla bilgi için bkz. [WPF Içerik modeli](wpf-content-model.md).  
+ Bu temel sınıflar hakkında daha fazla bilgi için [WPF İçerik Modeli'ne](wpf-content-model.md)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -103,8 +103,8 @@ ms.locfileid: "73459453"
 - [Kategoriye Göre Denetimler](controls-by-category.md)
 - [Denetim Kitaplığı](control-library.md)
 - [Veri Şablonu Oluşturmaya Genel Bakış](../data/data-templating-overview.md)
-- [Veri Bağlamaya Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md)
-- [Girdi](../advanced/input-wpf.md)
+- [Veri Bağlama Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md)
+- [Giriş](../advanced/input-wpf.md)
 - [Komutu Etkinleştirme](../advanced/how-to-enable-a-command.md)
 - [İzlenecek yollar: Özel Animasyonlu Düğme Oluşturma](walkthroughs-create-a-custom-animated-button.md)
 - [Denetim Özelleştirme](control-customization.md)

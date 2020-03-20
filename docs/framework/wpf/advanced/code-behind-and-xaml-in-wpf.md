@@ -1,62 +1,62 @@
 ---
-title: Arka plan kodu ve XAML
+title: Kod Arkası ve XAML
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 212a37fb7fbcb7e66a669d96671333be793956df
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 32283d5b81bf92999a97711ded13a8b533ae3028
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738096"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145351"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Arka Plan Kod ve WPF İçindeki XAML
-<a name="introduction"></a>Arka plan kodu, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bir sayfa biçimlendirme derlendiğinde, biçimlendirme tanımlı nesnelerle birleştirilen kodu tanımlayan bir terimdir. Bu konuda [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]kod için alternatif bir satır içi kod mekanizması ve arka plan kodu gereksinimleri açıklanmaktadır.  
+<a name="introduction"></a>Kod arkası, bir sayfa biçimlendirme derlendiğinde biçimlendirme tanımlı nesnelerle birleşen kodu tanımlamak için kullanılan bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] terimdir. Bu konu, kod arkası gereksinimlerinin yanı sıra kod için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]alternatif bir satır içi kod mekanizmasını da açıklar.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
 - [Önkoşullar](#Prerequisites)  
   
-- [Arka plan kodu ve XAML dili](#codebehind_and_the_xaml_language)  
+- [Kod Arkası ve XAML Dili](#codebehind_and_the_xaml_language)  
   
-- [WPF 'deki arka plan kod, olay Işleyicisi ve kısmi sınıf gereksinimleri](#Code_behind__Event_Handler__and_Partial_Class)  
+- [WPF'de Kod Arkası, Olay İşleyicisi ve Kısmi Sınıf Gereksinimleri](#Code_behind__Event_Handler__and_Partial_Class)  
   
-- [x:Code](#x_Code)  
+- [x:Kod](#x_Code)  
   
-- [Satır içi kod sınırlamaları](#Inline_Code_Limitations)  
+- [Satır Satır Dalasınırlamaları](#Inline_Code_Limitations)  
   
-<a name="Prerequisites"></a>   
-## <a name="prerequisites"></a>Prerequisites  
- Bu konu, [xaml 'ye Genel Bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md) okuduğunuzu ve clr ve nesne odaklı programlama hakkında temel bilgiye sahip olduğunuzu varsayar.  
+<a name="Prerequisites"></a>
+## <a name="prerequisites"></a>Önkoşullar  
+ Bu konu, [XAML Genel Bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md) okudum ve CLR ve nesne yönelimli programlama bazı temel bilgilere sahip varsayar.  
   
-<a name="codebehind_and_the_xaml_language"></a>   
-## <a name="code-behind-and-the-xaml-language"></a>Arka plan kodu ve XAML dili  
- XAML dili, biçimlendirme dosyası tarafındaki kod dosyalarını biçimlendirme dosyalarıyla ilişkilendirmeyi olanaklı kılan dil düzeyi özellikleri içerir. Özellikle XAML dili, [X:Class yönergesi](../../../desktop-wpf/xaml-services/xclass-directive.md), [x:alt sınıf yönergesi](../../../desktop-wpf/xaml-services/xsubclass-directive.md)ve [x:ClassModifier yönergesini](../../../desktop-wpf/xaml-services/xclassmodifier-directive.md)dil özelliklerini tanımlar. Kodun nasıl üretileceği, biçimlendirme ve kodun nasıl tümleştirileceği, XAML dilinin neyi belirttiği bir parçası değildir. Kodun nasıl tümleştirileceğini, uygulama ve programlama modellerinde XAML 'yi kullanmayı ve bunun gerektirdiği derleme eylemlerini veya diğer desteği öğrenmek için WPF gibi çerçevelere ayrıldınız.  
+<a name="codebehind_and_the_xaml_language"></a>
+## <a name="code-behind-and-the-xaml-language"></a>Kod Arkası ve XAML Dili  
+ XAML dili, kod dosyalarını biçimlendirme dosyası tarafından işaretleme dosyalarıyla ilişkilendirmemi mümkün hale getiren dil düzeyinde özellikler içerir. Özellikle, XAML dili dil özelliklerini tanımlar [x:Sınıf Yönergesi](../../../desktop-wpf/xaml-services/xclass-directive.md), [x:Alt Sınıf Yönergesi](../../../desktop-wpf/xaml-services/xsubclass-directive.md), ve [x:ClassModifier Yönergesi](../../../desktop-wpf/xaml-services/xclassmodifier-directive.md). Kodun tam olarak nasıl üretilmesi gerektiği ve biçimlendirme ve kodun nasıl tümleştirilecek olması XAML dilinin belirttiği bir parçası değildir. Kodun nasıl tümleştirilen, uygulama ve programlama modellerinde XAML'nin nasıl kullanılacağını ve tüm bunların gerektirdiği yapı eylemleri veya diğer desteği belirlemek WPF gibi çerçevelere bırakılır.  
   
-<a name="Code_behind__Event_Handler__and_Partial_Class"></a>   
-## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a>WPF 'deki arka plan kod, olay Işleyicisi ve kısmi sınıf gereksinimleri  
+<a name="Code_behind__Event_Handler__and_Partial_Class"></a>
+## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a>WPF'de Kod Arkası, Olay İşleyicisi ve Kısmi Sınıf Gereksinimleri  
   
-- Kısmi sınıf kök öğeyi yedekleyen türden türetilmelidir.  
+- Kısmi sınıf, kök öğesini destekleyen türden türemelidir.  
   
-- Biçimlendirme derlemesi oluşturma eylemlerinin varsayılan davranışı altında, türetme kodunu arka plan kod tarafında kısmi sınıf tanımında boş bırakabilirsiniz. Derlenmiş sonuç, belirtilmese de, sayfa kökünün yedekleme türünü kısmi sınıfın temeli olacak şekilde varsayar. Ancak, bu davranışa bağlı olarak en iyi yöntem değildir.  
+- Biçimlendirme derleme yapı eylemlerinin varsayılan davranışı altında, türetmeyi kod arkası tarafındaki kısmi sınıf tanımında boş bırakabileceğinizi unutmayın. Derlenen sonuç, belirtilmese bile sayfa kökünü destekleyen türü kısmi sınıfın temeli olarak kabul eder. Ancak, bu davranışa güvenmek en iyi yöntem değildir.  
   
-- Arka planda yazdığınız olay işleyicileri örnek yöntemler olmalıdır ve statik yöntemler olamaz. Bu yöntemler, `x:Class`tarafından tanımlanan CLR ad alanı içindeki kısmi sınıf tarafından tanımlanmalıdır. Bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcinin, farklı bir sınıf kapsamındaki olay kablolaması için bir olay işleyicisini araması gerektiğini bildirmek üzere bir olay işleyicisinin adını niteleyemezsiniz.  
+- Kod arkasında yazdığınız olay işleyicileri örnek yöntemleri olmalıdır ve statik yöntemler olamaz. Bu yöntemler, CLR ad alanı içinde kısmi sınıf `x:Class`tarafından tanımlanmalıdır. Olay işleyicisinin adını, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemciye farklı bir sınıf kapsamı içinde olay kablolama için olay işleyicisi aramasını öğretmek için nitelendiremezsiniz.  
   
-- İşleyici, yedekleme türü sistemindeki ilgili olay için temsilciyle eşleşmelidir.  
+- İşleyici, destek türü sisteminde uygun olay için temsilciyle eşleşmelidir.  
   
-- Özel olarak Microsoft Visual Basic dili için, işleyicileri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]özniteliklerle eklemek yerine, işleyicileri işleyici bildiriminde örnek ve olaylarla ilişkilendirmek için dile özgü `Handles` anahtar sözcüğünü kullanabilirsiniz. Ancak, `Handles` anahtar sözcüğü belirli yönlendirilmiş olay senaryoları veya ekli olaylar gibi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olay sisteminin tüm özelliklerini desteklemediğinden, bu teknik bazı sınırlamalara sahiptir. Ayrıntılar için bkz. [Visual Basic ve WPF olay işleme](visual-basic-and-wpf-event-handling.md).  
+- Özellikle Microsoft Visual Basic dili için, işleyicileri işleyicileri 'deki özniteliklere `Handles` [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]eklemek yerine, işleyicileri örneklerle ve olaylarla ilişkilendirmek için dile özgü anahtar sözcüğü kullanabilirsiniz. Ancak, `Handles` anahtar kelime belirli yönlendirilmiş olay senaryoları veya ekli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olaylar gibi olay sisteminin tüm belirli özelliklerini destekleyemediğinden, bu tekniğin bazı sınırlamaları vardır. Ayrıntılar için [Visual Basic ve WPF Olay Yönetimi'ne](visual-basic-and-wpf-event-handling.md)bakın.  
   
-<a name="x_Code"></a>   
-## <a name="xcode"></a>x:Code  
- [X:Code](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md) , [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]tanımlı bir Directive öğesidir. `x:Code` Directive öğesi, satır içi programlama kodu içerebilir. Satır içi tanımlı kod, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aynı sayfada etkileşim kurabilir. Aşağıdaki örnek, satır içi C# kodu gösterir. Kodun `x:Code` öğesinin içinde olduğuna ve kodun, bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcisinin ([!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] şemayı veya [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] şemasının yorumlanması) XML olarak, tam olarak XML olarak yorumlanmaya devam edebilmesi için, XML içeriğini kaçış`]]>` `<CDATA[`... ile çevrelendiğine dikkat edin.  
+<a name="x_Code"></a>
+## <a name="xcode"></a>x:Kod  
+ [x:Kod,](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md) [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Bir `x:Code` yönerge öğesi satır içinde programlama kodu içerebilir. Satır içinde tanımlanan kod, aynı [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfada bulunanla etkileşimkurabilir. Aşağıdaki örnek, sıralı C# kodunu göstermektedir. Kodun öğenin `x:Code` içinde olduğuna ve kodun `<CDATA[`... `]]>` xml için içeriğini kaçmak için, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] böylece bir işlemci [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (şema [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] veya şema yorumlama) kelimenin tam anlamıyla XML olarak içeriğini yorumlamak için çalışacağız.  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   
-<a name="Inline_Code_Limitations"></a>   
-## <a name="inline-code-limitations"></a>Satır içi kod sınırlamaları  
- Satır içi kod kullanımının önlenmemesini veya sınırlandırmasını düşünmelisiniz. Mimari ve kodlama FI açısından, biçimlendirme ve arka plan arasındaki ayrımı korumak, tasarımcı ve geliştirici rollerinin çok daha belirgin kalmasını önler. Daha teknik bir düzeyde, her zaman [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] oluşturulan kısmi sınıfa yazmakta olduğunuzdan ve yalnızca varsayılan XML ad alanı eşlemelerini kullanabilmesi nedeniyle, satır içi kod için yazdığınız kod yazmak için çok fazla olabilir. `using` deyimleri ekleyemediği için, yaptığınız birçok API çağrısının çoğunu tam olarak nitelemeniz gerekir. Varsayılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eşlemeleri, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] derlemelerinde bulunan tüm CLR ad alanlarını içermez; diğer CLR ad alanlarında bulunan türlere ve üyelere yönelik çağrıları tamamen nitelemeniz gerekir. Ayrıca, satır içi koddaki kısmi sınıfın ötesinde herhangi bir şey tanımlayamazsınız ve başvurmakta olduğunuz tüm Kullanıcı kodu varlıklarının, oluşturulan kısmi sınıf içinde bir üye veya değişken olarak mevcut olması gerekir. Makrolar veya genel değişkenlere veya derleme değişkenlerine karşı `#ifdef` gibi diğer dile özgü programlama özellikleri de kullanılamaz. Daha fazla bilgi için bkz. [X:Code IÇSEL xaml türü](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md).  
+<a name="Inline_Code_Limitations"></a>
+## <a name="inline-code-limitations"></a>Satır Satır Dalasınırlamaları  
+ Satır kodu kullanmaktan kaçınmayı veya sınırlamayı düşünmelisiniz. Mimarlık ve kodlama felsefesi açısından, biçimlendirme ve kod arkası arasındaki ayrımı sürdürmek tasarımcı ve geliştirici rollerini çok daha farklı tutar. Daha teknik bir düzeyde, satır altı kod için yazdığınız kod yazmak zor olabilir, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] çünkü her zaman oluşturulan kısmi sınıfa yazıyorsunuz ve yalnızca varsayılan XML ad alanı eşlemelerini kullanabilirsiniz. İfade ekleyemediğiniz `using` için, yaptığınız API çağrılarının çoğunu tam olarak nitelemelisiniz. Varsayılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eşlemeler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] derlemelerde bulunan tüm CLR ad alanlarını içermez; diğer CLR ad alanlarında bulunan türlere ve üyelere yapılan aramaları tam olarak nitelemek zorunda kalmaktadır. Satır içi kodda kısmi sınıfın ötesinde hiçbir şey tanımlayamazsınız ve başlatınıza başlatınız olan tüm kullanıcı kodu varlıkları, oluşturulan kısmi sınıf içinde bir üye veya değişken olarak var olmalıdır. Makrolar veya genel değişkenler veya `#ifdef` yapı değişkenleri gibi diğer dile özgü programlama özellikleri de kullanılamaz. Daha fazla bilgi için [bkz: x:Code Intrinsic XAML Türü.](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: Connection. m_WriteList alanı
+title: Bağlantı.m_WriteList Alanı
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 235503c1-1d01-4f59-895f-ae2cf15b3345
-ms.openlocfilehash: 22f939d13cceac4d1c0b39e9e8fe20cdc0ab9387
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 6c60831ddf23ce8ac9afcf244383d24732c3ef8b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214909"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155843"
 ---
-# <a name="connectionm_writelist-field"></a>Connection. d\_WriteList alanı
+# <a name="connectionm_writelist-field"></a>Connection.m\_YazmaListesi Alanı
 
-`Connection.m_WriteList`, HTTP üzerinden gönderilmek üzere sıralanan <xref:System.Net.HttpWebRequest> nesnelerinin bir <xref:System.Collections.ArrayList>.
+`Connection.m_WriteList`http <xref:System.Collections.ArrayList> üzerinden <xref:System.Net.HttpWebRequest> gönderilmek üzere sıraya dizilmiş nesnelerin biridir.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -28,14 +28,14 @@ private ArrayList m_WriteList
 ```
 
 > [!WARNING]
-> `Connection.m_WriteList` alanı özeldir ve doğrudan kodunuzda kullanılmamalıdır.
-> 
-> Microsoft, herhangi bir koşulda bu alanın bir üretim uygulamasında kullanımını desteklemez.
+> Alan `Connection.m_WriteList` özeldir ve doğrudan kodunuzda kullanılmamalıdır.
+>
+> Microsoft, hiçbir koşulda bir üretim uygulamasında bu alanın kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Ad alanı:** <xref:System.Net>
+**Ad alanı:**<xref:System.Net>
 
-**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
+**Montaj:** Sistem (System.dll'de)
 
-**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2.0'dan beri mevcuttur.

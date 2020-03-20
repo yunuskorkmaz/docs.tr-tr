@@ -1,5 +1,5 @@
 ---
-title: <remove> için <configSections> öğesi
+title: <configSections> için <remove> öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/remove
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-ms.openlocfilehash: 99d67bd621390789993caa4862e5ce379135eb92
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 6991e3f73ac180fc690ec48e1a0d15f40c915733
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215385"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154536"
 ---
-# <a name="remove-element-for-configsections"></a>\<configSections için > öğesini \<kaldırın >
+# <a name="remove-element-for-configsections"></a>\<configSections \<> için> öğeyi kaldırmak
 
 Önceden tanımlanmış bir bölümü veya bölüm grubunu kaldırır.
 
-[ **\<yapılandırma >** ](configuration-element.md)\
-&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<kaldır >**
+[**\<yapılandırma>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<configBölüm>**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<>kaldırmak**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,27 +32,27 @@ ms.locfileid: "77215385"
 
 |           | Açıklama |
 | --------- | ----------- |
-| **ada**  | Gerekli öznitelik.<br><br>Kaldırılacak bölüm veya bölüm grubunun adını belirtir. |
+| **Adı**  | Gerekli öznitelik.<br><br>Kaldırılacak bölüm veya bölüm grubunun adını belirtir. |
 
 ## <a name="parent-element"></a>Üst öğe
 
 |     | Açıklama |
 | --- | ----------- |
-| [ **\<configSections >** Dosyalarında](configsections-element-for-configuration.md) | Yapılandırma bölümü ve ad alanı bildirimleri içerir. |
+| [** \<configSections>** Öğe](configsections-element-for-configuration.md) | Yapılandırma bölümü ve ad alanı bildirimleri içerir. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-Hiçbiri
+None
 
 ## <a name="remarks"></a>Açıklamalar
 
-Uygulamanızın yapılandırma dosyası hiyerarşisinde daha yüksek bir düzeyde tanımlanmış bölümleri ve bölüm gruplarını kaldırmak için **\<remove >** öğesini kullanabilirsiniz.
+Yapılandırma dosyası ** \<** hiyerarşisinde daha yüksek bir düzeyde tanımlanan bölümleri ve bölüm gruplarını uygulamanızdan kaldırmak için kaldır>öğesini kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, daha önce makine yapılandırma dosyasında tanımlanan bir bölümü kaldırmak üzere bir uygulama yapılandırma dosyasında **\<remove >** öğesinin nasıl kullanılacağını gösterir.
+Aşağıdaki örnek, makine yapılandırma dosyasında daha önce tanımlanmış bir bölümü kaldırmak için uygulama yapılandırma dosyasındaki ** \<kaldırma>** öğesini nasıl kullanacağımı gösterir.
 
-Aşağıdaki makine yapılandırma dosyası kodu, **\<samplesection >** bölümünü bildirir:
+Aşağıdaki makine yapılandırma dosya kodu bölüm ** \<örnekBölüm>** bildirir:
 
 ```xml
 <!-- Machine.config file -->
@@ -61,13 +61,13 @@ Aşağıdaki makine yapılandırma dosyası kodu, **\<samplesection >** bölüm�
     <section name="sampleSection"
              type="System.Configuration.SingleTagSectionHandler" />
   </configSections>
-  <sampleSection setting1="Value1" 
-                 setting2="value two" 
+  <sampleSection setting1="Value1"
+                 setting2="value two"
                  setting3="third value" />
 </configuration>
 ```
 
-Aşağıdaki uygulama yapılandırma dosyası kodu **\<samplesection >** bölümünü kaldırır. Kaldırma işleminden sonra uygulama, **>\<sampleSection**içindeki ayarları alamaz.
+Aşağıdaki uygulama yapılandırma dosya kodu ** \<örnekBölüm>** bölümünü kaldırır. Kaldırıldıktan sonra, uygulama ** \<örnekBölüm>'ndaki **ayarları alamıyor.
 
 ```xml
 <!-- Application configuration file -->
@@ -80,7 +80,7 @@ Aşağıdaki uygulama yapılandırma dosyası kodu **\<samplesection >** bölüm
 
 ## <a name="configuration-file"></a>Yapılandırma dosyası
 
-Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine. config*) ve uygulama dizini düzeyinde olmayan *Web. config* dosyalarında kullanılabilir.
+Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında *(Machine.config)* ve uygulama dizini düzeyinde olmayan *Web.config* dosyalarında kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

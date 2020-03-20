@@ -8,24 +8,24 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: e119d9ce1f8bb6f07f8050612550db459a2f065c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 7f2805283f89e6165d336b3e593d34054e02115d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697471"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154549"
 ---
-# <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules > öğesi (ağ ayarları)
-Ağ konaklarından bilgi istemek için kullanılacak modülleri belirtir.  
+# <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules> Elemanı (Ağ Ayarları)
+Ağ ana bilgisayarlarından bilgi istemek için kullanılacak modülleri belirtir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-[ **System. net >\<** &nbsp;&nbsp;](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;\<webRequestModules >  
+[**\<yapılandırma>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;\<webRequestModules>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<webRequestModules>   
+<webRequestModules>
 </webRequestModules>  
 ```  
   
@@ -39,26 +39,26 @@ Ağ konaklarından bilgi istemek için kullanılacak modülleri belirtir.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[add](add-element-for-webrequestmodules-network-settings.md)|Uygulamaya özel bir Web isteği modülü ekler.|  
-|[lediğiniz](clear-element-for-webrequestmodules-network-settings.md)|Tüm kayıtlı Web isteği modüllerini uygulamadan kaldırır.|  
-|[remove](remove-element-for-webrequestmodules-network-settings.md)|Uygulamadan özel bir Web istek modülünü kaldırır.|  
+|[Ekle](add-element-for-webrequestmodules-network-settings.md)|Uygulamaya özel bir Web isteği modülü ekler.|  
+|[Temizleyin](clear-element-for-webrequestmodules-network-settings.md)|Tüm kayıtlı Web istek modüllerini uygulamadan kaldırır.|  
+|[Kaldırmak](remove-element-for-webrequestmodules-network-settings.md)|Özel bir Web isteği modüllerini uygulamadan kaldırır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[system.net](system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.|  
+|[system.net](system-net-element-network-settings.md)|.NET Framework'ün ağa nasıl bağladığını belirten ayarlar içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `webRequestModules` öğesi, ağ konaklarına bilgi isteklerini işlemek için <xref:System.Net.WebRequest> sınıfının alt öğelerini kaydeder. Web isteği modülleri <xref:System.Net.IWebRequestCreate> arabirimini gerçekleştirmelidir.  
+ Öğe, `webRequestModules` ağ ana bilgisayarlarına bilgi isteklerini <xref:System.Net.WebRequest> işlemek için sınıfın torunlarını kaydeder. Web istek modülleri <xref:System.Net.IWebRequestCreate> arabirimi uygulamalıdır.  
   
- .NET Framework, `http://`, `https://`ve `file://`ile başlayan URI 'Ler için Web isteği modülleri içerir. Varsayılan modülleri yalnızca yapılandırma dosyasına özel bir modül kaydederek geçersiz kılabilirsiniz.  
+ .NET Framework, URI'ler için `http://`,, `https://`ve `file://`. Varsayılan modülleri yalnızca yapılandırma dosyasına özel bir modül kaydederek geçersiz kılabilirsiniz.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+ Bu öğe uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek varsayılan HTTP modülünü kaydeder. Version ve PublicKeyToken değerlerini belirtilen modülle ilgili doğru değerlerle değiştirmelisiniz.  
+ Aşağıdaki örnekte varsayılan HTTP modülü kaydedilir. Sürüm ve PublicKeyToken değerlerini belirtilen modül için doğru değerlerle değiştirmelisiniz.  
   
 ```xml  
 <configuration>  

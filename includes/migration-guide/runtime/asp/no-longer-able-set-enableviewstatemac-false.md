@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: 78f4d533f1efdc8d43a9ab96508b84a77e3260bc
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: dbe96abebdc61fae469f7727673e6fcb93cbc739
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67803159"
 ---
-### <a name="no-longer-able-to-set-enableviewstatemac-to-false"></a>Artık şunları EnableViewStateMac false olarak ayarlayın.
+### <a name="no-longer-able-to-set-enableviewstatemac-to-false"></a>EnableViewStateMac'i artık false olarak ayarlayama
 
 |   |   |
 |---|---|
-|Ayrıntılar|ASP.NET belirlemek geliştiriciler artık sağlayan <code>&lt;pages enableViewStateMac=&quot;false&quot;/&gt;</code> veya <code>&lt;@Page EnableViewStateMac=&quot;false&quot; %&gt;</code>. Görünüm durumu ileti kimlik doğrulama kodu (MAC), artık katıştırılmış görünüm durumuna sahip tüm istekler için zorlanır. Yalnızca açıkça EnableViewStateMac özellik kümesine uygulamaların <code>false</code> etkilenir.|
-|Öneri|EnableViewStateMac varsayıldı, doğru olmasını ve ortaya çıkan MAC hataları çözümlenemedi. (açıklandığı şekilde [bu kılavuz](https://support.microsoft.com/kb/2915218), MAC hataları neden olan özelliklerini bağlı olarak birden çok çözümler içerir).|
+|Ayrıntılar|ASP.NET artık geliştiricilerin <code>&lt;pages enableViewStateMac=&quot;false&quot;/&gt;</code> belirtmesine veya <code>&lt;@Page EnableViewStateMac=&quot;false&quot; %&gt;</code>. Görünüm durumu iletikimlik doğrulama kodu (MAC) şimdi katıştırılmış görünüm durumu olan tüm istekler için zorlanır. Yalnızca EnableViewStateMac özelliğini <code>false</code> açıkça ayarlayan uygulamalar etkilenir.|
+|Öneri|EnableViewStateMac'in doğru olduğu varsayılmalıdır ve ortaya çıkan MAC hataları çözülmelidir [(bu kılavuzda](https://support.microsoft.com/kb/2915218)açıklandığı gibi, MAC hatalarına neyin neden olduğuna bağlı olarak birden çok çözünürlük içerir).|
 |Kapsam|Ana|
 |Sürüm|4.5.2|
-|Tür|Çalışma zamanı|
-
+|Tür|Çalışma Zamanı|

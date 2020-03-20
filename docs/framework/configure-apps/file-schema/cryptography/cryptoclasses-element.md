@@ -8,26 +8,26 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-ms.openlocfilehash: 6601417f0b80f623b7698c4b072c35eca44343b7
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: c93fadf51297d59ab499e25de283700364903049
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732882"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155252"
 ---
-# <a name="cryptoclasses-element"></a>\<cryptoClasses > öğesi
-[\<nameEntry >](nameentry-element.md) öğesinde kolay bir ada eşleme olan şifreleme sınıflarının bir listesini içerir.  
+# <a name="cryptoclasses-element"></a>\<cryptoClasses> Öğesi
+[ \<NameEntry>](nameentry-element.md) öğesinde dost bir ada eşleme olan şifreleme sınıflarının listesini içerir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Cryptographyısettings >** ](cryptographysettings-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**cryptoClasses >**  
+[**\<yapılandırma>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<şifrelemeAyarlar>**](cryptographysettings-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptoNameMapping>**](cryptonamemapping-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<cryptoClasses>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<cryptoClasses>   
+<cryptoClasses>
 </cryptoClasses>  
 ```  
   
@@ -41,19 +41,19 @@ ms.locfileid: "76732882"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<cryptoClass >](cryptoclass-element.md)|**\<nameEntry >** öğesinde kolay bir ad ile eşleşen bir şifreleme sınıfı içerir.|  
+|[\<cryptoClass>](cryptoclass-element.md)|** \<Entry>** öğesinde dost bir ada eşleme olan bir şifreleme sınıfı içerir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`cryptographySettings`|Şifreleme ayarlarını içerir.|  
-|`cryptoNameMapping`|Kolay adlarla sınıfların eşlemelerini içerir.|  
-|`mscorlib`|`cryptographySettings` öğesini içerir.|  
+|`cryptographySettings`|Şifreleme ayarları içerir.|  
+|`cryptoNameMapping`|Sınıfların dost adlara eşlemelerini içerir.|  
+|`mscorlib`|Öğeyi `cryptographySettings` içerir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir şifreleme sınıfına başvurmak ve çalışma zamanını yapılandırmak için **\<cryptoClass >** öğesinin nasıl kullanılacağını gösterir. Daha sonra "RSA" dizesini <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemine geçirebilir ve bir `MyCryptoRSAClass` nesnesi döndürmek için <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodunu kullanabilirsiniz.  
+ Aşağıdaki örnek, ** \<şifreleme** sınıfına başvurmak ve çalışma süresini yapılandırmak için cryptoClass>öğesini nasıl kullandığını gösterir. Daha sonra "RSA" dizesini <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yönteme <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> geçirebilir ve `MyCryptoRSAClass` bir nesneyi döndürmek için yöntemi kullanabilirsiniz.  
   
 ```xml  
 <configuration>  
@@ -82,5 +82,5 @@ ms.locfileid: "76732882"
 - [Yapılandırma Dosyası Şeması](../index.md)
 - [Şifreleme Ayarları Şeması](index.md)
 - [Şifreleme Hizmetleri](../../../../standard/security/cryptographic-services.md)
-- [System. Security. Cryptography. CryptoConfig. CreateFromName](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
+- [System.Security.Cryptography.CryptoConfig.CreateFromName](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
 - [Şifreleme Sınıflarını Yapılandırma](../../configure-cryptography-classes.md)

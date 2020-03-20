@@ -3,34 +3,34 @@ title: <activityScheduledQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a8bcd6d4-b389-4daf-86bf-1ade85fec114
-ms.openlocfilehash: aa6ee435c66303b5089b459ecc4ed3023297636d
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 09cbc43ae4db82dc80e6985131f8d6cc0c24b2ac
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398965"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152417"
 ---
-# <a name="activityscheduledquery"></a>\<activityScheduledQuery >
-Bir üst etkinliğin yürütülmesi için zamanlanmış bir etkinliği izlemek için kullanılan bir sorgu koleksiyonunu temsil eder. Sorgu, etkinlik zamanlanan kayıtlarına abone olmak için izleme katılımcısı için gereklidir.  
+# <a name="activityscheduledquery"></a>\<etkinlikScheduledQuery>
+Bir üst etkinlik tarafından yürütülmesi için zamanlanmış bir etkinliği izlemek için kullanılan sorgukoleksiyonunu temsil eder. Sorgu, bir izleme katılımcısının etkinlik zamanlanan kayıtlara abone olması için gereklidir.  
   
- Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md)  
+ Profil sorgularını izleme hakkında daha fazla bilgi için [bkz.](../../../windows-workflow-foundation/tracking-profiles.md)  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<sistemin. ServiceModel >** ](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<İzleme >** ](tracking.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<trackingProfile >** ](trackingprofile.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<iş akışı >** ](workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<activityScheduledQueries >** ](activityscheduledqueries.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<activityScheduledQuery >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<Sistem. ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<izleme>**](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<izlemeProfil>**](trackingprofile.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<iş akışı>**](workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<etkinlikPlanlanmışSorgular>**](activityscheduledqueries.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<etkinlikScheduledQuery>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```xml 
+```xml
 <tracking>
   <trackingProfile name="Name">
     <workflow>
       <activityScheduledQueries>
-        <activityScheduledQuery activityName="String" 
+        <activityScheduledQuery activityName="String"
                                 childActivityName="String"/>
       </activityScheduledQueries>
     </workflow>
@@ -45,8 +45,8 @@ Bir üst etkinliğin yürütülmesi için zamanlanmış bir etkinliği izlemek i
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|activityName|İptali isteyen etkinliğin adını belirten bir dize.|  
-|childActivityName|İptalin istendiği alt etkinliğin adını belirten bir dize.|  
+|activityName|İptal isteyen etkinliğin adını belirten bir dize.|  
+|childActivityName|İptal inistendiği alt etkinliğin in adını belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -55,7 +55,7 @@ Bir üst etkinliğin yürütülmesi için zamanlanmış bir etkinliği izlemek i
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<activityScheduledQuery >](activityscheduledquery.md)|Bir üst etkinliğin yürütülmesi için zamanlanmış bir etkinliği izlemek için kullanılan sorgu.|  
+|[\<etkinlikScheduledQuery>](activityscheduledquery.md)|Bir üst etkinlik tarafından yürütülmesi için zamanlanan bir etkinliği izlemek için kullanılan bir sorgu.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

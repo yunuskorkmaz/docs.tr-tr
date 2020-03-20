@@ -2,39 +2,39 @@
 title: Üyelik ve Rol Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 7fba608d6d0ed3b7caab62ff16926d7b03516ed1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 117be783c2d4a72ff9d1c4509566274b1043a43d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424662"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144467"
 ---
 # <a name="membership-and-role-provider"></a>Üyelik ve Rol Sağlayıcısı
-Üyelik ve rol sağlayıcısı örneği, bir hizmetin, istemcilerin kimliğini doğrulamak ve yetkilendirmek için ASP.NET üyeliğini ve rol sağlayıcılarını nasıl kullanabileceğinizi gösterir.  
+Üyelik ve Rol Sağlayıcı örneği, bir hizmetin ASP.NET üyeliği ve rol sağlayıcıları istemcileri doğrulamak ve yetkilendirmek için nasıl kullanabileceğini gösterir.  
   
- Bu örnekte, istemci bir konsol uygulaması (. exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
+ Bu örnekte, istemci bir konsol uygulamasıdır (.exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
   
 > [!NOTE]
-> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
+> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
   
- Örnek şunu gösterir:  
+ Örnek, aşağıdakileri gösterir:  
   
-- İstemci Kullanıcı adı-parola birleşimini kullanarak kimlik doğrulaması yapabilir.  
+- İstemci, kullanıcı adı-parola birleşimini kullanarak kimlik doğrulaması yapabilir.  
   
-- Sunucu, ASP.NET üyelik sağlayıcısına karşı istemci kimlik bilgilerini doğrulayabilir.  
+- Sunucu, istemci kimlik bilgilerini ASP.NET üyelik sağlayıcısına karşı doğrulayabilir.  
   
-- Sunucunun sunucu X. 509.440 sertifikası kullanılarak kimlik doğrulaması yapılabilir.  
+- Sunucunun X.509 sertifikası kullanılarak sunucunun kimliği doğrulanabilir.  
   
-- Sunucu, ASP.NET rol sağlayıcısını kullanarak kimliği doğrulanmış istemciyi bir rolle eşleyebilir.  
+- Sunucu, ASP.NET rol sağlayıcısını kullanarak kimlik doğrulaması yapılan istemciyi bir role eşleyebilir.  
   
-- Sunucu, hizmet tarafından sunulan belirli yöntemlere erişimi denetlemek için `PrincipalPermissionAttribute` kullanabilir.  
+- Sunucu, hizmet `PrincipalPermissionAttribute` tarafından açığa çıkarılan belirli yöntemlere erişimi denetlemek için kullanabilir.  
   
- Üyelik ve rol sağlayıcıları, SQL Server tarafından desteklenen bir depoyu kullanacak şekilde yapılandırılır. Hizmet yapılandırma dosyasında bir bağlantı dizesi ve çeşitli seçenekler belirtilmiştir. Rol sağlayıcısına `SqlRoleProvider`adı verildiğinde üyelik sağlayıcısına `SqlMembershipProvider` adı verilir.  
+ Üyelik ve rol sağlayıcıları, SQL Server tarafından desteklenen bir depoyu kullanacak şekilde yapılandırılır. Hizmet yapılandırma dosyasında bir bağlantı dizesi ve çeşitli seçenekler belirtilir. Rol sağlayıcısına ad `SqlMembershipProvider` `SqlRoleProvider`verilirken, üyelik sağlayıcısına ad verilir.  
   
 ```xml  
 <!-- Set the connection string for SQL Server -->  
 <connectionStrings>  
-  <add name="SqlConn"   
+  <add name="SqlConn"
        connectionString="Data Source=localhost;Integrated Security=SSPI;Initial Catalog=aspnetdb;" />  
 </connectionStrings>  
   
@@ -43,9 +43,9 @@ ms.locfileid: "73424662"
   <membership defaultProvider="SqlMembershipProvider" userIsOnlineTimeWindow="15">  
     <providers>  
       <clear />  
-      <add   
-        name="SqlMembershipProvider"   
-        type="System.Web.Security.SqlMembershipProvider"   
+      <add
+        name="SqlMembershipProvider"
+        type="System.Web.Security.SqlMembershipProvider"
         connectionStringName="SqlConn"  
         applicationName="MembershipAndRoleProviderSample"  
         enablePasswordRetrieval="false"  
@@ -57,19 +57,19 @@ ms.locfileid: "73424662"
   </membership>  
   
   <!-- Configure the Sql Role Provider -->  
-  <roleManager enabled ="true"   
+  <roleManager enabled ="true"
                defaultProvider ="SqlRoleProvider" >  
     <providers>  
-      <add name ="SqlRoleProvider"   
-           type="System.Web.Security.SqlRoleProvider"   
-           connectionStringName="SqlConn"   
+      <add name ="SqlRoleProvider"
+           type="System.Web.Security.SqlRoleProvider"
+           connectionStringName="SqlConn"
            applicationName="MembershipAndRoleProviderSample"/>  
     </providers>  
   </roleManager>  
 </system.web>  
 ```  
   
- Hizmet, Web. config yapılandırma dosyası kullanılarak tanımlanan hizmetle iletişim kurmak için tek bir uç nokta sunar. Uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Bağlama, varsayılan olarak Windows kimlik doğrulamasını kullanan standart bir `wsHttpBinding`yapılandırılır. Bu örnek, Kullanıcı adı kimlik doğrulamasını kullanmak için standart `wsHttpBinding` ayarlar. Davranış, sunucu sertifikasının hizmet kimlik doğrulaması için kullanılacağını belirtir. Sunucu sertifikası, [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) yapılandırma öğesinde `findValue` özniteliği olarak `SubjectName` için aynı değeri içermelidir. Ayrıca davranış, Kullanıcı adı-parola çiftlerinin kimlik doğrulamasının ASP.NET üyelik sağlayıcısı tarafından gerçekleştirildiğini belirtir ve rol eşleme, iki sağlayıcı için tanımlanan adları belirterek ASP.NET rol sağlayıcısı tarafından gerçekleştirilir.  
+ Hizmet, Web.config yapılandırma dosyasını kullanarak tanımlanan hizmetle iletişim kurmak için tek bir bitiş noktasını ortaya çıkarır. Bitiş noktası bir adres, bir bağlama ve sözleşmeden oluşur. Bağlama, Windows kimlik doğrulaması kullanmaya varsayılan bir standartla `wsHttpBinding`yapılandırılır. Bu örnek, `wsHttpBinding` kullanıcı adı kimlik doğrulaması kullanmak için standart ayarlar. Davranış, sunucu sertifikasının hizmet kimlik doğrulaması için kullanılacağını belirtir. Sunucu sertifikası, [ \<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) `SubjectName` yapılandırma `findValue` öğesindeki öznitelikle aynı değeri içermelidir. Buna ek olarak, kullanıcı adı-parola çiftleri kimlik doğrulamasının ASP.NET üyelik sağlayıcısı tarafından gerçekleştirildiğini ve rol eşlemenin ASP.NET rol sağlayıcısı tarafından iki sağlayıcı için tanımlanan adlar belirtilerek gerçekleştirildiğini belirtir.  
   
 ```xml  
 <system.serviceModel>  
@@ -97,11 +97,11 @@ ms.locfileid: "73424662"
                               roleProviderName ="SqlRoleProvider" />  
         <serviceCredentials>  
           <!-- Configure user name authentication to use the Membership Provider -->  
-          <userNameAuthentication userNamePasswordValidationMode ="MembershipProvider"   
+          <userNameAuthentication userNamePasswordValidationMode ="MembershipProvider"
                                   membershipProviderName ="SqlMembershipProvider"/>  
           <!-- Configure the service certificate -->  
-          <serviceCertificate storeLocation ="LocalMachine"   
-                              storeName ="My"   
+          <serviceCertificate storeLocation ="LocalMachine"
+                              storeName ="My"
                               x509FindType ="FindBySubjectName"  
                               findValue ="localhost" />  
         </serviceCredentials>  
@@ -114,71 +114,71 @@ ms.locfileid: "73424662"
 </system.serviceModel>  
 ```  
   
- Örneği çalıştırdığınızda, istemci üç farklı kullanıcı hesabı altında çeşitli hizmet işlemlerini çağırır: Gamze, Bob ve Charlie. İşlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. "Gamze" kullanıcısı olarak yapılan tüm dört çağrı başarılı olmalıdır. "Bob" kullanıcısının, bölme yöntemini çağırmaya çalışırken bir erişim reddedildi hatası alması gerekir. "Charlie" kullanıcısının, çarpma yöntemini çağırmaya çalışırken bir erişim reddedildi hatası alması gerekir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, istemci üç farklı kullanıcı hesabı altında çeşitli hizmet işlemlerini çağırır: Alice, Bob ve Charlie. İşlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. Kullanıcı "Alice" olarak yapılan dört aramanın tümü başarılı olmalıdır. Kullanıcı "Bob" B) yöntemini aramaya çalışırken erişim reddedilen bir hata almalıdır. Kullanıcı "Charlie" Çarpma yöntemini aramaya çalışırken erişim reddedilen bir hata almalıdır. İstemciyi kapatmak için istemci penceresinde ENTER tuşuna basın.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
   
-1. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
+1. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak [için Windows Communication Foundation Örneklerini Çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
   
-2. [ASP.NET uygulama Hizmetleri veritabanını](https://go.microsoft.com/fwlink/?LinkId=94997)yapılandırdığınızdan emin olun.  
-  
-    > [!NOTE]
-    > SQL Server Express Edition çalıştırıyorsanız, sunucu adınız .\SQLEXPRESS. olur. Bu sunucu, ASP.NET Uygulama Hizmetleri veritabanı ve Web. config bağlantı dizesinde yapılandırılırken kullanılmalıdır.  
+2. [ASP.NET Uygulama Hizmetleri Veritabanını](https://go.microsoft.com/fwlink/?LinkId=94997)yapılandırdığınızdan emin olun.  
   
     > [!NOTE]
-    > ASP.NET çalışan işlem hesabının, bu adımda oluşturulan veritabanında izinleri olmalıdır. Bunu yapmak için sqlcmd yardımcı programını veya SQL Server Management Studio kullanın.  
+    > SQL Server Express Edition çalıştırıyorsanız, sunucu adınız .\SQLEXPRESS'tir. Bu sunucu, ASP.NET Uygulama Hizmetleri Veritabanı'nı ve Web.config bağlantı dizesini yapılandırırken kullanılmalıdır.  
   
-3. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için aşağıdaki yönergeleri kullanın.  
+    > [!NOTE]
+    > ASP.NET işlemesi hesabının bu adımda oluşturulan veritabanında izinleri olmalıdır. Bunu yapmak için sqlcmd yardımcı programını veya SQL Server Management Studio'yu kullanın.  
+  
+3. Örneği tek veya bilgisayar lar arası yapılandırmada çalıştırmak için aşağıdaki yönergeleri kullanın.  
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için  
   
-1. Yolun, MakeCert. exe ' nin bulunduğu klasörü içerdiğinden emin olun.  
+1. Yolun Makecert.exe'nin bulunduğu klasörü içerdiğinden emin olun.  
   
-2. Visual Studio 'nun yönetici ayrıcalıklarıyla çalışması için Geliştirici Komut İstemi örnek yükleme klasöründen Setup. bat dosyasını çalıştırın. Bu, örneği çalıştırmak için gereken hizmet sertifikalarını kurar.  
+2. Setup.bat'ı visual studio için Geliştirici Komut Komut Ustem'de yönetici ayrıcalıklarıyla çalıştırın örnek yükleme klasöründen çalıştırın. Bu, örneği çalıştırmak için gereken hizmet sertifikalarını yükler.  
   
-3. \Client\bin. adresinden Client. exe ' yi Başlat İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
+3. Client.exe'yi \client\bin'den başlatın. İstemci etkinliği istemci konsoluygulamasında görüntülenir.  
   
-4. İstemci ve hizmet iletişim kuramadıysanız, bkz. [WCF örnekleri Için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. İstemci ve hizmet iletişim kuramazsa, [WCF Örnekleri için Sorun Giderme İpuçları'na](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))bakın.  
   
-### <a name="to-run-the-sample-across-computers"></a>Örneği bilgisayarlar arasında çalıştırmak için  
+### <a name="to-run-the-sample-across-computers"></a>Örneği bilgisayarlarda çalıştırmak için  
   
-1. Hizmet bilgisayarında bir dizin oluşturun. Internet Information Services (IIS) yönetim aracını kullanarak bu dizin için servicemodelsamples adlı bir sanal uygulama oluşturun.  
+1. Hizmet bilgisayarında bir dizin oluşturun. Internet Information Services (IIS) yönetim aracını kullanarak bu dizin için servicemodelsamples adlı sanal bir uygulama oluşturun.  
   
-2. Hizmet programı dosyalarını \inetpub\wwwroot\servicemodelsamples adresinden hizmet bilgisayarındaki sanal dizine kopyalayın. Dosyaları \bin alt dizininde kopyalamadiğinizden emin olun. Ayrıca Setup. bat, GetComputerName. vbs ve Cleanup. bat dosyalarını da hizmet bilgisayarına kopyalayın.  
+2. Hizmet programı dosyalarını \inetpub\wwwroot\servicemodelsamples'ten hizmet bilgisayarındaki sanal dizine kopyalayın. \bin alt dizinindeki dosyaları kopyaladığınızdan emin olun. Ayrıca Setup.bat, GetComputerName.vbs ve Cleanup.bat dosyalarını servis bilgisayarına kopyalayın.  
   
-3. İstemci bilgisayarda istemci ikilileri için bir dizin oluşturun.  
+3. İstemci ikilileri için istemci bilgisayarında bir dizin oluşturun.  
   
-4. İstemci programı dosyalarını istemci bilgisayardaki istemci dizinine kopyalayın. Ayrıca Setup. bat, Cleanup. bat ve ImportServiceCert. bat dosyalarını istemciye kopyalayın.  
+4. İstemci programı dosyalarını istemci bilgisayarındaki istemci dizinine kopyalayın. Ayrıca Setup.bat, Cleanup.bat ve ImportServiceCert.bat dosyalarını istemciye kopyalayın.  
   
-5. Sunucusunda, yönetim ayrıcalıklarına sahip bir Visual Studio Geliştirici Komut İstemi açın ve `setup.bat service`çalıştırın. `setup.bat` `service` bağımsız değişkeniyle çalıştırmak, bilgisayarın tam etki alanı adına sahip bir hizmet sertifikası oluşturur ve hizmet sertifikasını Service. cer adlı bir dosyaya aktarır.  
+5. Sunucuda, yönetim ayrıcalıkları olan Visual Studio için geliştirici `setup.bat service`komut istemini açın ve çalıştırın. Bağımsız değişkenle birlikte çalışmak, `setup.bat` bilgisayarın tam nitelikli etki alanı adı içeren bir hizmet sertifikası oluşturur ve hizmet sertifikasını Service.cer adlı bir dosyaya aktarın. `service`  
   
-6. Web. config dosyasını, yeni sertifika adını ( [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), bilgisayarın tam etki alanı adıyla aynı olacak şekilde (`findValue` özniteliğinde) yansıtacak şekilde düzenleyin.  
+6. Web.config'i bilgisayarın tam nitelikli alan `findValue` adı ile aynı olan yeni sertifika adını [ \<(serviceCertificate>'daki ](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)öznitelikte) yansıtacak şekilde edin.  
   
-7. Service. cer dosyasını hizmet dizininden istemci bilgisayarındaki istemci dizinine kopyalayın.  
+7. Service.cer dosyasını servis dizininden istemci bilgisayarındaki istemci dizinine kopyalayın.  
   
-8. İstemci bilgisayardaki Client. exe. config dosyasında, uç noktanın adres değerini hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin.  
+8. İstemci bilgisayarındaki Client.exe.config dosyasında, hizmetinyeni adresiyle eşleşecek şekilde bitiş noktasının adres değerini değiştirin.  
   
-9. İstemcisinde, yönetim ayrıcalıklarına sahip bir Visual Studio Geliştirici Komut İstemi açın ve ImportServiceCert. bat dosyasını çalıştırın. Bu, hizmet sertifikasını Service. cer dosyasından CurrentUser-Trustedkişiler deposuna aktarır.  
+9. İstemcide, yönetim ayrıcalıklarına sahip Visual Studio için bir Geliştirici Komut Komut Ustem'i açın ve ImportServiceCert.bat çalıştırın. Bu, hizmet sertifikasını Service.cer dosyasından CurrentUser - Trusted People deposuna aktarabilir.  
   
-10. İstemci bilgisayarda, bir komut isteminden Client. exe ' yi başlatın. İstemci ve hizmet iletişim kuramadıysanız, bkz. [WCF örnekleri Için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+10. İstemci bilgisayarında, istemci.exe'yi komut isteminden başlatın. İstemci ve hizmet iletişim kuramazsa, [WCF Örnekleri için Sorun Giderme İpuçları'na](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))bakın.  
   
 ### <a name="to-clean-up-after-the-sample"></a>Örnekten sonra temizlemek için  
   
-- Örneği çalıştırmayı bitirdikten sonra Samples klasöründe Cleanup. bat dosyasını çalıştırın.  
+- Örneği çalıştırmayı bitirdikten sonra örnekler klasöründe Cleanup.bat çalıştırın.  
   
 > [!NOTE]
-> Bu betik, bilgisayarlar arasında bu örneği çalıştırırken bir istemcideki hizmet sertifikalarını kaldırmaz. Bilgisayarlar arasında sertifika kullanan Windows Communication Foundation (WCF) örneklerini çalıştırırsanız, CurrentUser-Trustedkişiler deposuna yüklenmiş olan hizmet sertifikalarını temizlediğinizden emin olun. Bunu yapmak için şu komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+> Bu komut dosyası, bu örneği bilgisayarlar da çalıştırırken istemcideki hizmet sertifikalarını kaldırmaz. Bilgisayarlar arasında sertifika kullanan Windows Communication Foundation (WCF) örneklerini çalıştırdıysanız, CurrentUser - Trusted People mağazasında yüklenen hizmet sertifikalarını temizlediğinizden emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
-## <a name="the-setup-batch-file"></a>Kurulum toplu Iş dosyası  
- Bu örneğe eklenen Setup. bat toplu iş dosyası, sunucu sertifika tabanlı güvenlik gerektiren şirket içinde barındırılan bir uygulamayı çalıştırmak için sunucuyu ilgili sertifikalarla yapılandırmanıza olanak tanır. Bu toplu iş dosyasının bilgisayarlarda çalışmak veya barındırılmayan bir durumda çalışması için değiştirilmesi gerekir.  
+## <a name="the-setup-batch-file"></a>Kurulum Toplu Dosyası  
+ Bu örnekte yer alan Setup.bat toplu dosyası, sunucu sertifikası tabanlı güvenlik gerektiren kendi kendine barındırılan bir uygulamayı çalıştırmak için sunucuyu ilgili sertifikalarla yapılandırmanıza olanak tanır. Bu toplu iş dosyası, bilgisayarlar arasında çalışmak veya barındırılmayan bir durumda çalışmak için değiştirilmelidir.  
   
- Aşağıdakiler, uygun yapılandırmada çalışacak şekilde değiştirilebilecek şekilde, toplu iş dosyalarının farklı bölümlerine kısa bir genel bakış sağlar.  
+ Aşağıda, uygun yapılandırmada çalışacak şekilde değiştirilebilmeleri için toplu iş dosyalarının farklı bölümlerine kısa bir genel bakış sağlanacaktır.  
   
-- Sunucu sertifikası oluşturuluyor.  
+- Sunucu sertifikası oluşturma.  
   
-     Setup. bat toplu iş dosyasından aşağıdaki satırlar kullanılacak sunucu sertifikasını oluşturur. % SERVER_NAME% değişkeni sunucu adını belirtiyor. Kendi sunucu adınızı belirtmek için bu değişkeni değiştirin. Bu toplu iş dosyası varsayılan olarak localhost 'tur.  
+     Setup.bat toplu dosyasından aşağıdaki satırlar kullanılacak sunucu sertifikasını oluşturur. %SERVER_NAME değişkeni sunucu adını belirtir. Kendi sunucu adınızı belirtmek için bu değişkeni değiştirin. Bu toplu iş dosyası varsayılan olarak localhost'a aktarır.  
   
-     Sertifika, LocalMachine depolama konumu altında (kişisel) deposunda depolanır.  
+     Sertifika, LocalMachine mağazasının altında Benim (Kişisel) mağazamda depolanır.  
   
     ```console
     echo ************  
@@ -190,9 +190,9 @@ ms.locfileid: "73424662"
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
-- Sunucu sertifikasını istemcinin güvenilen sertifika deposuna yükleme.  
+- Sunucu sertifikasını istemcinin güvenilir sertifika deposuna yükleme.  
   
-     Setup. bat toplu iş dosyası 'ndaki aşağıdaki satırlar, sunucu sertifikasını istemci güvenilir kişiler deposuna kopyalar. Bu adım, MakeCert. exe tarafından oluşturulan sertifikaların istemci sistemi tarafından örtük olarak güvenilir olmadığından gereklidir. İstemci tarafından güvenilen kök sertifikada kök sertifikaya sahip bir sertifikanız zaten varsa (örneğin, Microsoft tarafından verilen bir sertifika), istemci sertifikası deposunu sunucu sertifikasıyla doldurmanın bu adımı gerektirmez.  
+     Setup.bat toplu iş dosyasındaki aşağıdaki satırlar, sunucu sertifikasını istemcigüvenilir kişiler deposuna kopyalar. Makecert.exe tarafından oluşturulan sertifikalar istemci sistemi tarafından dolaylı olarak güvenilen olmadığından bu adım gereklidir. İstemci tarafından güvenilen kök sertifikasına dayanan bir sertifikanız varsa (örneğin, Microsoft tarafından verilmiş bir sertifika- istemci sertifika deposunu sunucu sertifikasıyla doldurma adımı gerekli değildir.  
   
     ```bat  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  

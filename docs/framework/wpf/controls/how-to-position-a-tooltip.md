@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Araç İpucu Konumlandırma'
+title: 'Nasıl yapılır: ToolTip Konumlandırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-ms.openlocfilehash: 811818fe6e7c0d8ce9e2aa058b42bf592ada4b92
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f52703e4fe127daa40f220280f084b2026580cc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770935"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186947"
 ---
-# <a name="how-to-position-a-tooltip"></a>Nasıl yapılır: Araç İpucu Konumlandırma
-Bu örnek, ekranda bir araç ipucunun konumunu belirtmek gösterilmektedir.  
+# <a name="how-to-position-a-tooltip"></a>Nasıl yapılır: ToolTip Konumlandırma
+Bu örnek, bir araç ucunun ekranda konumunu nasıl belirtini gösteriş yaptığıdır.  
   
 ## <a name="example"></a>Örnek  
- Her ikisinde de tanımlanan beş özellikler kümesini kullanarak bir araç ipucu konumlandırabilirsiniz <xref:System.Windows.Controls.ToolTip> ve <xref:System.Windows.Controls.ToolTipService> sınıfları. Aşağıdaki tabloda, bu iki özellik kümeleri beş gösterir ve sınıf göre kendi başvuru belgelerine bağlantılar sağlar.  
+ Hem sınıflarda hem de <xref:System.Windows.Controls.ToolTip> <xref:System.Windows.Controls.ToolTipService> sınıflarda tanımlanan beş özellikkümesini kullanarak bir araç ucunu konumlandırabilirsiniz. Aşağıdaki tablo, beş özellikten oluşan bu iki kümeyi gösterir ve sınıfa göre başvuru belgelerine bağlantılar sağlar.  
   
-### <a name="corresponding-tooltip-properties-according-to-class"></a>Karşılık gelen araç ipucu özelliklere göre sınıfı  
+### <a name="corresponding-tooltip-properties-according-to-class"></a>Sınıfa göre karşılık gelen araç ucu özellikleri  
   
-|<xref:System.Windows.Controls.ToolTip?displayProperty=nameWithType> Sınıf özellikleri|<xref:System.Windows.Controls.ToolTipService?displayProperty=nameWithType> Sınıf özellikleri|  
+|<xref:System.Windows.Controls.ToolTip?displayProperty=nameWithType>sınıf özellikleri|<xref:System.Windows.Controls.ToolTipService?displayProperty=nameWithType>sınıf özellikleri|  
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.ToolTip.Placement%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.ToolTipService.Placement%2A?displayProperty=nameWithType>|  
 |<xref:System.Windows.Controls.ToolTip.PlacementTarget%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.ToolTipService.PlacementTarget%2A?displayProperty=nameWithType>|  
@@ -31,30 +31,30 @@ Bu örnek, ekranda bir araç ipucunun konumunu belirtmek gösterilmektedir.
 |<xref:System.Windows.Controls.ToolTip.HorizontalOffset%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.ToolTipService.HorizontalOffset%2A?displayProperty=nameWithType>|  
 |<xref:System.Windows.Controls.ToolTip.VerticalOffset%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.ToolTipService.VerticalOffset%2A?displayProperty=nameWithType>|  
   
- Kullanarak bir araç ipucu içeriğini tanımlarsanız, bir <xref:System.Windows.Controls.ToolTip> nesnesi ya da sınıf özelliklerini kullanabilirsiniz; ancak <xref:System.Windows.Controls.ToolTipService> özellikleri daha önceliklidir. Kullanım <xref:System.Windows.Controls.ToolTipService> olarak tanımlanmamış araç ipuçları için özellikleri <xref:System.Windows.Controls.ToolTip> nesneleri.  
+ Bir araç ucunun içeriğini bir <xref:System.Windows.Controls.ToolTip> nesne kullanarak tanımlarsanız, her iki sınıfın özelliklerini kullanabilirsiniz; ancak, <xref:System.Windows.Controls.ToolTipService> özellikleri önceliklidir. Nesne <xref:System.Windows.Controls.ToolTipService> olarak <xref:System.Windows.Controls.ToolTip> tanımlanmayan araç ipuçları için özellikleri kullanın.  
   
- Aşağıdaki çizimler, bu özellikleri kullanarak tooltip konumlandırma gösterilmektedir. Ancak, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] örnekler, bu örnekler tarafından tanımlanan özelliklerin nasıl ayarlanacağını <xref:System.Windows.Controls.ToolTip> sınıfı, karşılık gelen özelliklere <xref:System.Windows.Controls.ToolTipService> sınıfı aynı düzen kurallarını izleyin. Yerleştirme özelliği için olası değerler hakkında daha fazla bilgi için bkz: [açılan pencere yerleştirme davranışı](popup-placement-behavior.md).  
- 
- Aşağıdaki görüntüde, yerleştirme özelliğini kullanarak araç ipucu yerleşimi gösterilmektedir:  
-  
- ![Araç İpucu yerleştirme yerleştirme özelliğini kullanarak gösteren diyagram.](./media/how-to-position-a-tooltip/tooltip-placement-property.png)
- 
- Aşağıdaki görüntüde yerleştirme ve PlacementRectangle özelliklerinin kullanarak araç ipucu yerleşimi gösterilmektedir:   
+ Aşağıdaki çizimler, bu özellikleri kullanarak bir araç ucunun nasıl konumlandırılabildiğini gösterir. Bu çizimlerdeki [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] örnekler <xref:System.Windows.Controls.ToolTip> sınıf tarafından tanımlanan özelliklerin nasıl ayarlanış yapılacağını gösterse <xref:System.Windows.Controls.ToolTipService> de, sınıfın karşılık gelen özellikleri aynı düzen kurallarını izler. Yerleşim özelliği için olası değerler hakkında daha fazla bilgi için [Popup Yerleştirme Davranışı'na](popup-placement-behavior.md)bakın.  
 
- ![Araç İpucu yerleştirme PlacementRectangle özelliğini kullanarak gösteren diyagram.](./media/how-to-position-a-tooltip/tooltip-placement-rectangle-property.png)  
- 
- Aşağıdaki görüntüde, yerleştirme ve PlacementRectangle uzaklığı özelliklerini kullanarak araç ipucu yerleşimi gösterilmektedir:   
+ Aşağıdaki resimde, Yerleştirme özelliğikullanılarak araç ipucu yerleşimi gösterilmektedir:  
   
- ![Araç İpucu yerleştirme uzaklığı özelliğini kullanarak gösteren diyagram.](./media/how-to-position-a-tooltip/tooltip-placement-offset-property.png)
+ ![Yerleştirme özelliğini kullanarak Araç İpucu yerleşimini gösteren diyagram.](./media/how-to-position-a-tooltip/tooltip-placement-property.png)
 
- Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Windows.Controls.ToolTip> içeriğe sahip olan bir araç ipucunun konumunu belirtmek için özellikleri bir <xref:System.Windows.Controls.ToolTip> nesne.  
+ Aşağıdaki resimde, Yerleştirme ve YerleştirmeDikdörtgen özelliklerini kullanarak araç ipucu yerleşimi gösterilmektedir:
+
+ ![PlacementRectangle özelliğini kullanarak Araç İpucu yerleşimini gösteren diyagram.](./media/how-to-position-a-tooltip/tooltip-placement-rectangle-property.png)  
+
+ Aşağıdaki resimde, Yerleştirme, YerleştirmeRectangle ve Ofset özelliklerini kullanarak araç ipucu yerleşimi gösterilmektedir:
+  
+ ![Ofset özelliğini kullanarak Araç İpucu yerleşimini gösteren diyagram.](./media/how-to-position-a-tooltip/tooltip-placement-offset-property.png)
+
+ Aşağıdaki örnekte, içeriği <xref:System.Windows.Controls.ToolTip> <xref:System.Windows.Controls.ToolTip> nesne olan bir araç ucunun konumunu belirtmek için özelliklerin nasıl kullanılacağı gösterilmektedir.  
   
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
   
  [!code-csharp[ToolTipService#ToolTipCode](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#tooltipcode)]
  [!code-vb[ToolTipService#ToolTipCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#tooltipcode)]  
   
- Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Windows.Controls.ToolTipService> içeriğe sahip olmayan bir araç ipucunun konumunu belirtmek için özellikleri bir <xref:System.Windows.Controls.ToolTip> nesne.  
+ Aşağıdaki örnekte, içeriği <xref:System.Windows.Controls.ToolTipService> <xref:System.Windows.Controls.ToolTip> nesne olmayan bir araç ucunun konumunu belirtmek için özelliklerin nasıl kullanılacağı gösterilmektedir.  
   
  [!code-xaml[ToolTipService#NoToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
   
@@ -65,5 +65,5 @@ Bu örnek, ekranda bir araç ipucunun konumunu belirtmek gösterilmektedir.
 
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [Nasıl Yapılır Konuları](tooltip-how-to-topics.md)
-- [Araç İpucuna Genel Bakış](tooltip-overview.md)
+- [Nasıl Dır Konular](tooltip-how-to-topics.md)
+- [ToolTip Genel Bakışı](tooltip-overview.md)

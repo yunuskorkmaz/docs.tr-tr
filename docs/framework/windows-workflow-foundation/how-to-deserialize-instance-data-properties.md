@@ -2,15 +2,15 @@
 title: 'Nasıl yapılır: Örnek Veri Özelliklerini Seri Durumdan Çıkarma'
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-ms.openlocfilehash: e037d5f8d0b221aa0eb8fdc6eceabf6efb2dc387
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8142671fc1bc154337019e025d8443f0570106b3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989631"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143089"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>Nasıl yapılır: Örnek Veri Özelliklerini Seri Durumdan Çıkarma
-Bir kullanıcı veya iş akışı yöneticisinin kalıcı bir iş akışı örneğinin durumunu el ile incelemesi isteyebileceğiniz durumlar olabilir. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>Örnekler tablosunda aşağıdaki dört sütunu kullanıma sunan bir görünüm sağlar:  
+Bir kullanıcı veya iş akışı yöneticisinin, kalıcı bir iş akışı örneğinin durumunu el ile denetlemek isteyebileceği durumlar olabilir. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>Örnekler tablosunda aşağıdaki dört sütunu ortaya çıkaran bir görünüm sağlar:  
   
 - ReadWritePrimitiveDataProperties  
   
@@ -20,13 +20,13 @@ Bir kullanıcı veya iş akışı yöneticisinin kalıcı bir iş akışı örne
   
 - WriteOnlyComplexDataProperties  
   
- İlkel veri özellikleri, .NET Framework türleri "ortak" (örneğin, Int32 ve dize) olarak kabul edilen özelliklere başvurur, ancak karmaşık veri özellikleri diğer tüm türlere başvurur. Temel türlerin tam numaralandırması, bu kod örneğinde daha sonra bulunur.  
+ İlkel veri özellikleri, .NET Framework türleri "ortak" olarak kabul edilen özelliklere (örneğin, Int32 ve String) atıfta bulunurken, karmaşık veri özellikleri diğer tüm türlere başvurur. İlkel türlerin tam bir numaralandırma daha sonra bu kod örneğinde bulunur.  
   
- Okuma/yazma özellikleri, bir örnek yüklendiğinde Iş akışı çalışma zamanına geri döndürülen özelliklere başvurur. WriteOnly özellikleri veritabanına yazılır ve sonra hiçbir şekilde yeniden okunamaz.  
+ Okuma/yazma özellikleri, bir örnek yüklendiğinde İş Akışı Çalışma Zamanı'na geri döndürülen özelliklere başvurur. WriteOnly özellikleri veritabanına yazılır ve bir daha asla okunmaz.  
   
- Bu örnek, bir kullanıcının temel veri özelliklerinin serisini kaldırma olanağı sağlayan kodu sağlar. Readwriteprimitivedataproperties veya WriteOnlyPrimitiveDataProperties sütunundan okunan bir bayt dizisi verildiğinde, bu kod ikili büyük nesne (blob) <xref:System.Collections.Generic.Dictionary%602> ' ı her anahtar değerinin bulunduğu XName, Object > türüne \<dönüştürür. Çift, bir özellik adını ve buna karşılık gelen değeri temsil eder.  
+ Bu örnek, kullanıcının ilkel veri özelliklerini deserialize sağlayan kod sağlar. ReadWritePrimitiveDataProperties veya WriteOnlyPrimitiveDataProperties sütunundan okunan bir bayt dizisi göz önüne alındığında, bu <xref:System.Collections.Generic.Dictionary%602> kod \<ikili büyük nesneyi (BLOB) her anahtar değer çiftinin bir özellik adını ve karşılık gelen değerini temsil ettiği bir tür XName, nesne> dönüştürür.  
   
- Bu örnek, şu anda desteklenen bir işlem olmadığından, karmaşık veri özelliklerinin serisini kaldırma işlemini göstermez.  
+ Bu örnek, şu anda desteklenen bir işlem olmadığından karmaşık veri özelliklerini nasıl deserialize göstermeyeceğini gösterir.  
   
 ```csharp  
 using System;  
@@ -104,7 +104,7 @@ namespace PropertyReader
                     // if the instance state is compressed using GZip algorithm  
                     if (isCompressed)  
                     {  
-                        // decompress the data using the GZip   
+                        // decompress the data using the GZip
                         using (GZipStream stream = new GZipStream(memoryStream, CompressionMode.Decompress))  
                         {  
                             // create an XmlReader object and pass it on to the helper method ReadPrimitiveDataProperties  
@@ -117,7 +117,7 @@ namespace PropertyReader
                     }  
                     else  
                     {  
-                        // if the instance data is not compressed   
+                        // if the instance data is not compressed
                         // create an XmlReader object and pass it on to the helper method ReadPrimitiveDataProperties  
                         using (XmlReader reader = XmlDictionaryReader.CreateBinaryReader(memoryStream, XmlDictionaryReaderQuotas.Max))  
                         {  

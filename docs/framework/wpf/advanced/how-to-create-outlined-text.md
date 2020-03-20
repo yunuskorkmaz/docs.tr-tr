@@ -11,48 +11,48 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: 237bdc097cd2a3fbfff6dd79bce401c2d091e211
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0ce46b9895589fd4635b567136204368a6431ad
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776768"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186867"
 ---
 # <a name="how-to-create-outlined-text"></a>Nasıl yapılır: Anahatları Belirlenmiş Metin Oluşturma
-Çoğu durumda, metin dizelerini için eklediğiniz zaman, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama, kullanmakta olduğunuz farklı karakter veya karakterler koleksiyonu açısından metin. Örneğin, doğrusal gradyan fırçası oluşturmak ve uygulamak <xref:System.Windows.Controls.Control.Foreground%2A> özelliği bir <xref:System.Windows.Controls.TextBox> nesne. Görüntüleme veya düzenleme metin kutusu, doğrusal gradyan fırçası geçerli bir metin dizesindeki bir karakter kümesini otomatik olarak uygulanır.  
+Çoğu durumda, uygulamanızdaki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] metin dizelerine süsleme eklerken, metni ayrı karakterler veya glifler koleksiyonu açısından kullanırsınız. Örneğin, doğrusal bir degrade fırça sıcabilir <xref:System.Windows.Controls.Control.Foreground%2A> ve <xref:System.Windows.Controls.TextBox> bunu bir nesnenin özelliğine uygulayabilirsiniz. Metin kutusunu görüntülediğinizde veya yaptığınızda, doğrusal degrade fırçası metin dizesindeki geçerli karakter kümesine otomatik olarak uygulanır.  
   
- ![Doğrusal gradyan fırçası ile bir metin](./media/how-to-create-outlined-text/text-linear-gradient.jpg)    
+ ![Doğrusal degrade fırçasıyla görüntülenen metin](./media/how-to-create-outlined-text/text-linear-gradient.jpg)
   
- Ancak, aynı zamanda metne dönüştürebilirsiniz <xref:System.Windows.Media.Geometry> diğer türde bir görsel olarak zengin metin oluşturmanızı sağlayan nesneler. Örneğin, aşağıdakileri oluşturabilirsiniz bir <xref:System.Windows.Media.Geometry> nesne tabanlı bir metin dizesinin çerçevesinde.  
+ Ancak, görsel açıdan zengin <xref:System.Windows.Media.Geometry> başka metin türleri oluşturmanıza olanak tanıyan metni nesnelere dönüştürebilirsiniz. Örneğin, bir metin <xref:System.Windows.Media.Geometry> dizesinin anahatlarını temel alan bir nesne oluşturabilirsiniz.  
   
- ![Metin anahat doğrusal gradyan fırçası kullanma](./media/how-to-create-outlined-text/text-outline-linear-gradient.jpg)  
+ ![Doğrusal degrade fırçası kullanarak metin anahattı](./media/how-to-create-outlined-text/text-outline-linear-gradient.jpg)  
   
- Ne zaman metin dönüştürülür bir <xref:System.Windows.Media.Geometry> nesnesi, artık bir derlemesidir karakter — metin dizesindeki karakterlerin değiştiremezsiniz. Ancak, çizme ve İşaretleme dolgu özelliklerini değiştirerek Dönüştürülen metin görünümünü etkileyebilir. Fırça darbesi Dönüştürülen metin anahattına gösterir. Dolgu Dönüştürülen metin özetini içindeki alan ifade eder.  
+ Metin bir <xref:System.Windows.Media.Geometry> nesneye dönüştürüldüğünde, artık bir karakter topluluğu değildir—metin dizesindeki karakterleri değiştiremezsiniz. Ancak, kontur ve dolgu özelliklerini değiştirerek dönüştürülen metnin görünümünü etkileyebilirsiniz. Kontur, dönüştürülen metnin anahatlarını ifade eder; dolgu, dönüştürülen metnin anahat içindeki alanı ifade eder.  
   
- Aşağıdaki örnekler, görsel efektler vuruş ve dönüştürülen metin dolgu değiştirerek oluşturmanın birkaç yolu gösterilmektedir.  
+ Aşağıdaki örnekler, dönüştürülen metnin konturunu ve dolgusunu değiştirerek görsel efekt oluşturmanın çeşitli yollarını göstermektedir.  
   
- ![Farklı renklerde doldurup için metin](./media/how-to-create-outlined-text/fill-stroke-text-effect.jpg)  
+ ![Dolgu ve kontur için farklı renklere sahip metin](./media/how-to-create-outlined-text/fill-stroke-text-effect.jpg)  
   
- ![Resim fırçası uygulandığı metin](./media/how-to-create-outlined-text/image-brush-application.jpg)
+ ![Kontura uygulanan görüntü fırçası ile metin](./media/how-to-create-outlined-text/image-brush-application.jpg)
   
- Sınırlayıcı kutusunun dikdörtgen veya vurgulama, dönüştürülen metin değiştirmek mümkündür. Aşağıdaki örnek, dönüştürülen metin vurgulama ve vuruş değiştirerek görsel efektler oluşturmanın bir yolu gösterir.  
+ Dönüştürülen metnin sınırlayıcı kutusu dikdörtgenini veya vurgusunu değiştirmek de mümkündür. Aşağıdaki örnek, dönüştürülen metnin konturunu ve vurgusunu değiştirerek görsel efekt oluşturmanın bir yolunu göstermektedir.  
   
- ![Resim fırçası vuruş yapmak ve vurgulamak için uygulanan metin](./media/how-to-create-outlined-text/image-brush-text-application.jpg)
+ ![Kontur ve vurgulamaya uygulanan görüntü fırçası ile metin](./media/how-to-create-outlined-text/image-brush-text-application.jpg)
 
 ## <a name="example"></a>Örnek  
- Metin dönüştürmenin anahtarı bir <xref:System.Windows.Media.Geometry> kullanılacak nesnedir <xref:System.Windows.Media.FormattedText> nesne. Bu nesne oluşturulduktan sonra kullanabileceğiniz <xref:System.Windows.Media.FormattedText.BuildGeometry%2A> ve <xref:System.Windows.Media.FormattedText.BuildHighlightGeometry%2A> metne dönüştürme yöntemleri <xref:System.Windows.Media.Geometry> nesneleri. İlk yöntem, geometri biçimlendirilmiş metin döndürür; İkinci yöntem, biçimlendirilmiş metnin geometrisini sınırlayıcı kutusunun döndürür. Aşağıdaki kod örneğinde nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Media.FormattedText> nesne ve biçimlendirilmiş metnin ve sınırlayıcı kutusunun geometriler alınacak.  
+ Metni bir <xref:System.Windows.Media.Geometry> nesneye dönüştürmenin anahtarı nesneyi <xref:System.Windows.Media.FormattedText> kullanmaktır. Bu nesneyi oluşturduktan sonra, <xref:System.Windows.Media.FormattedText.BuildGeometry%2A> metni <xref:System.Windows.Media.FormattedText.BuildHighlightGeometry%2A> nesnelere dönüştürmek <xref:System.Windows.Media.Geometry> için bu ve yöntemleri kullanabilirsiniz. İlk yöntem biçimlendirilmiş metnin geometrisini döndürür; ikinci yöntem biçimlendirilmiş metnin sınırlayıcı kutusunun geometrisini döndürür. Aşağıdaki kod örneği, bir <xref:System.Windows.Media.FormattedText> nesnenin nasıl oluşturulup biçimlendirilmiş metnin ve sınırlayıcı kutusunun geometrilerini nasıl alınca gösterilmektedir.  
   
  [!code-csharp[OutlineTextControlViewer#CreateText](~/samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#createtext)]
  [!code-vb[OutlineTextControlViewer#CreateText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#createtext)]  
   
- Alınan görüntülemek için <xref:System.Windows.Media.Geometry> nesnelerini erişmek için gereksinim duyduğunuz <xref:System.Windows.Media.DrawingContext> Dönüştürülen metin görüntüleme nesnesi. Bu kod örnekleri, bu kullanıcı tanımlı işlemeyi destekleyen bir sınıftan türetilmiş bir özel denetim nesnesi oluşturarak yapılır.  
+ Alınan <xref:System.Windows.Media.Geometry> nesneleri görüntülemek için dönüştürülen metni görüntüleyen <xref:System.Windows.Media.DrawingContext> nesnenin erişimine erişmeniz gerekir. Bu kod örneklerinde, bu, kullanıcı tanımlı işleme destekleyen bir sınıftan türetilen bir özel denetim nesnesi oluşturarak yapılır.  
   
- Görüntülenecek <xref:System.Windows.Media.Geometry> özel denetimindeki nesnelere sağlamak için bir geçersiz kılma <xref:System.Windows.UIElement.OnRender%2A> yöntemi. Geçersiz kılınan yönteminizi kullanması gereken <xref:System.Windows.Media.DrawingContext.DrawGeometry%2A> çizmek için yöntemi <xref:System.Windows.Media.Geometry> nesneleri.  
+ Nesneleri <xref:System.Windows.Media.Geometry> özel denetimde görüntülemek için <xref:System.Windows.UIElement.OnRender%2A> yöntem için bir geçersiz kılma sağlayın. Geçersiz kılınan yöntem, <xref:System.Windows.Media.DrawingContext.DrawGeometry%2A> <xref:System.Windows.Media.Geometry> nesneleri çizmek için yöntemi kullanmalıdır.  
   
  [!code-csharp[OutlineTextControlViewer#OnRender](~/samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#onrender)]
  [!code-vb[OutlineTextControlViewer#OnRender](~/samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#onrender)]  
   
-  Örnek özel kullanıcı denetimi nesnesinin kaynağını görmek [için OutlineTextControl.cs C# ](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) ve [Visual Basic için OutlineTextControl.vb](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb). 
+  Örnek özel kullanıcı denetim nesnesinin kaynağı için, Visual Basic [için C#](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) için OutlineTextControl.cs ve [OutlineTextControl.vb bölümüne](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb)bakın.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

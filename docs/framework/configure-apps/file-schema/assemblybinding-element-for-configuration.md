@@ -7,19 +7,18 @@ helpviewer_keywords:
 - assemblyBinding Element
 - <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
-ms.openlocfilehash: e0b83c4b3573ab6819654e72cac1bf3e4a0ba637
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 21cf5e749b0dae310c3326f8abf82c6678fc97e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921270"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155485"
 ---
-# <a name="assemblybinding-element-for-configuration"></a>\<Yapılandırma > için \<assemblyBinding > öğesi
+# <a name="assemblybinding-element-for-configuration"></a>\<derlemeYapılandırma> \<için> öğesi bağlama
 
 Yapılandırma düzeyinde derleme bağlama ilkesini belirtir.
 
-[ **\<Yapılandırma >** ](configuration-element.md)   
-&nbsp;&nbsp; **\<assemblyBinding >**
+yapılandırma &nbsp; &nbsp;>[** \<**](configuration-element.md) ** \<montajBağlayıcı>**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,30 +32,30 @@ Yapılandırma düzeyinde derleme bağlama ilkesini belirtir.
 
 |           | Açıklama |
 | --------- | ----------- |
-| **özniteliði** | Gerekli öznitelik.<br><br>Derleme bağlaması için gereken XML ad alanını belirtir. Değer olarak "urn: schemas-microsoft-com: asm. v1" dizesini kullanın. |
+| **Xmlns** | Gerekli öznitelik.<br><br>Derleme bağlama için gereken XML ad alanını belirtir. Değer olarak "urn:schemas-microsoft-com:asm.v1" dizesini kullanın. |
 
 ## <a name="parent-element"></a>Üst öğe
 
 |     | Açıklama |
 | --- | ----------- |
-| [ **\<Yapılandırma >** ](configuration-element.md) | Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe. |
+| [**\<yapılandırma>**](configuration-element.md) | Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe. |
 
 ## <a name="child-element"></a>Alt öğe
 
 |     | Açıklama |
 | --- | ----------- |
-| [ **\<linkedConfiguration>** ](linkedconfiguration-element.md) | Dahil edilecek bir yapılandırma dosyasını belirtir. |
+| [**\<linkedConfiguration>**](linkedconfiguration-element.md) | İçerecek bir yapılandırma dosyası belirtir. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-[ **\<LinkedConfiguration>** ](linkedconfiguration-element.md) öğesi yapılandırma dosyalarında derlemeyi dahil etmek için uygulama yapılandırma dosyaları vererek bileşen derlemelerini yönetimini basitleştirir iyi bilinen konumları, çoğaltma derleme yapılandırma ayarları yerine.
+LinkedConfiguration>öğesi, uygulama yapılandırma dosyalarının derleme yapılandırma ayarlarını çoğaltmak yerine iyi bilinen konumlarda derleme yapılandırma dosyalarını içermesi için izin vererek bileşen derlemelerinin yönetimini kolaylaştırır. [** \<**](linkedconfiguration-element.md)
 
 > [!NOTE]
-> **\<LinkedConfiguration>** öğesi Windows yan yana bildirimleri olan uygulamalar için desteklenmez.
+> ** \<Bağlantılı Yapılandırma>** öğesi, Windows yan yana bildirimleri olan uygulamalar için desteklenmez.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, yerel sabit diske bir yapılandırma dosyasının nasıl ekleneceğini göstermektedir:
+Aşağıdaki örnek, yerel sabit diske yapılandırma dosyasının nasıl eklenmeygerektiğini gösterir:
 
 ```xml
 <configuration>

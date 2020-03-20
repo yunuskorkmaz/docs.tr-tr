@@ -8,24 +8,24 @@ helpviewer_keywords:
 - <legacyImpersonationPolicy> element
 - legacyImpersonationPolicy element
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
-ms.openlocfilehash: 18a027bc09f2400a10a06efdc4c5355686bcb56d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e43ead278ecd4049014f4000a2f056b2190f7e5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116534"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154110"
 ---
-# <a name="legacyimpersonationpolicy-element"></a>\<Legacyımpersonationpolicy > öğesi
-Geçerli iş parçacığında yürütme bağlamı için akış ayarlarından bağımsız olarak, Windows kimliğinin zaman uyumsuz noktalarda akış yapmaz.  
+# <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy> Öğesi
+Geçerli iş parçacığı üzerindeki yürütme bağlamının akış ayarlarına bakılmaksızın, Windows kimliğinin eşzamanlı noktalar arasında akmadığını belirtir.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Legacyımpersonationpolicy >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<çalışma zamanı>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<legacyImpersonationPolicy>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<legacyImpersonationPolicy    
+<legacyImpersonationPolicy
    enabled="true|false"/>  
 ```  
   
@@ -36,14 +36,14 @@ Geçerli iş parçacığında yürütme bağlamı için akış ayarlarından ba�
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`enabled`|Gerekli öznitelik.<br /><br /> <xref:System.Security.Principal.WindowsIdentity>, geçerli iş parçacığındaki <xref:System.Threading.ExecutionContext> Flow ayarlarından bağımsız olarak, zaman uyumsuz noktalarda akış yapmaz.|  
+|`enabled`|Gerekli öznitelik.<br /><br /> Geçerli iş parçacığındaki <xref:System.Security.Principal.WindowsIdentity> <xref:System.Threading.ExecutionContext> akış ayarlarından bağımsız olarak, asenkron noktalar arasında akmadığını belirtir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`false`|<xref:System.Security.Principal.WindowsIdentity>, geçerli iş parçacığının <xref:System.Threading.ExecutionContext> akış ayarlarına bağlı olarak zaman uyumsuz noktalara akar. Bu varsayılandır.|  
-|`true`|<xref:System.Security.Principal.WindowsIdentity>, geçerli iş parçacığındaki <xref:System.Threading.ExecutionContext> Flow ayarlarından bağımsız olarak, zaman uyumsuz noktalarda akış yapmaz.|  
+|`false`|<xref:System.Security.Principal.WindowsIdentity>geçerli iş parçacığının akış ayarlarına <xref:System.Threading.ExecutionContext> bağlı olarak asynchronous noktaları boyunca akar. Bu varsayılandır.|  
+|`true`|<xref:System.Security.Principal.WindowsIdentity>geçerli iş parçacığındaki <xref:System.Threading.ExecutionContext> akış ayarlarına bakılmaksızın, eşzamanlı noktalar arasında akmaz.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -56,31 +56,31 @@ Geçerli iş parçacığında yürütme bağlamı için akış ayarlarından ba�
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework sürüm 1,0 ve 1,1 ' de, <xref:System.Security.Principal.WindowsIdentity> Kullanıcı tanımlı zaman uyumsuz noktalarda akış yapmaz. .NET Framework sürüm 2,0 ' den başlayarak, şu anda yürütülmekte olan iş parçacığı hakkında bilgi içeren bir <xref:System.Threading.ExecutionContext> nesnesi vardır ve bir uygulama etki alanı içindeki zaman uyumsuz noktalara akar. <xref:System.Security.Principal.WindowsIdentity> bu yürütme bağlamına dahil edilmiştir ve bu nedenle zaman uyumsuz noktalara akar, yani bir kimliğe bürünme bağlamı varsa, bu da akacaktır.  
+ .NET Framework sürümleri 1.0 ve 1.1'de kullanıcı <xref:System.Security.Principal.WindowsIdentity> tanımlı eşsenkronize noktalar arasında akmaz. .NET Framework sürüm 2.0 ile başlayarak, şu anda çalıştırılabilen iş parçacığı hakkında bilgi içeren bir <xref:System.Threading.ExecutionContext> nesne vardır ve bir uygulama etki alanı içinde eşzamanlı noktalar arasında akar. Bu <xref:System.Security.Principal.WindowsIdentity> yürütme bağlamında dahil edilir ve bu nedenle de asynchronous noktaları arasında akar, yani bir kimliğe bürünme bağlamı varsa, o da akacak.  
   
- .NET Framework 2,0 ' den başlayarak, <xref:System.Security.Principal.WindowsIdentity> zaman uyumsuz noktalarda akış yapmaz belirtmek için `<legacyImpersonationPolicy>` öğesini kullanabilirsiniz.  
+ .NET Framework 2.0 ile başlayarak, `<legacyImpersonationPolicy>` eşzamanlı noktalar <xref:System.Security.Principal.WindowsIdentity> arasında akmayan belirtme öğesini kullanabilirsiniz.  
   
 > [!NOTE]
-> Ortak dil çalışma zamanı (CLR), yönetilen kod kullanılarak gerçekleştirilen kimliğe bürünme işlemlerinden, yönetilmeyen koda platform çağırma veya doğrudan Win32 işlevlerine yapılan çağrılar aracılığıyla yapılan kimliğe bürünme işlemlerinden haberdar olur. `alwaysFlowImpersonationPolicy` öğesi true (`<alwaysFlowImpersonationPolicy enabled="true"/>`) olarak ayarlanmadığı takdirde, yalnızca yönetilen <xref:System.Security.Principal.WindowsIdentity> nesneleri zaman uyumsuz noktalara akabilir. `alwaysFlowImpersonationPolicy` öğesinin true olarak ayarlanması, kimliğe bürünme işlemi ne olursa olsun, Windows kimliğinin her zaman zaman uyumsuz noktalarda akacağını belirtir. Zaman uyumsuz noktalarda yönetilmeyen kimliğe bürünme ile akan hakkında daha fazla bilgi için, bkz. [\<alwaysflowımpersonationpolicy > öğesi](alwaysflowimpersonationpolicy-element.md).  
+> Ortak dil çalışma süresi (CLR), yönetilen koda platform çağırma veya Win32 işlevlerine doğrudan çağrılar yoluyla gerçekleştirilen işlevler gibi yönetilen kod dışında gerçekleştirilen kimliğe bürünme işlemleri değil, yalnızca yönetilen kod kullanılarak gerçekleştirilen kimliğe bürünme işlemlerinin farkındadır. Yalnızca <xref:System.Security.Principal.WindowsIdentity> yönetilen nesneler, öğe doğru olarak ayarlanmadıkça, eşzamanlı noktalar`<alwaysFlowImpersonationPolicy enabled="true"/>`arasında akabilir ( ). `alwaysFlowImpersonationPolicy` Öğeyi `alwaysFlowImpersonationPolicy` doğru olarak ayarlamak, kimliğe bürünme nasıl gerçekleştirildiğini niçin olursa olsun, Windows kimliğinin her zaman eşzamanlı noktalar arasında aktığını belirtir. Eşzamanlı noktalar arasında yönetilmeyen kimliğe bürünme hakkında daha fazla bilgi [ \<için, her zamanFlowImpersonationPolicy> Öğesi'ne](alwaysflowimpersonationpolicy-element.md)bakın.  
   
- Bu varsayılan davranışı iki farklı şekilde değiştirebilirsiniz:  
+ Bu varsayılan davranışı iki şekilde değiştirebilirsiniz:  
   
-1. Yönetilen kodda iş parçacığı başına temelinde.  
+1. İş parçacığı başına olarak yönetilen kodda.  
   
-     <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType> veya <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> yöntemini kullanarak <xref:System.Threading.ExecutionContext> ve <xref:System.Security.SecurityContext> ayarlarını değiştirerek akışı her iş parçacığı temelinde gizleyebilirsiniz.  
+     İş parçacığı başına <xref:System.Threading.ExecutionContext> <xref:System.Security.SecurityContext> <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>akışı, (veya <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType> <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> yöntemi) kullanarak ve ayarları değiştirerek bastırabilirsiniz.  
   
-2. Ortak dil çalışma zamanını (CLR) yüklemek için yönetilmeyen barındırma arabirimine yapılan çağrıda.  
+2. Ortak dil çalışma süresini (CLR) yüklemek için yönetilmeyen barındırma arabirimine yapılan çağrıda.  
   
-     CLR yüklemek için yönetilmeyen bir barındırma arabirimi (basit bir yönetilen yürütülebilir dosya yerine) kullanılırsa, [CorBindToRuntimeEx işlevi](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md) işlevine yapılan çağrıda özel bir bayrak belirtebilirsiniz. Tüm işlemin uyumluluk modunu etkinleştirmek için [CorBindToRuntimeEx işlevi](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md) için `flags` parametresini STARTUP_LEGACY_IMPERSONATION olarak ayarlayın.  
+     CLR'yi yüklemek için yönetilmeyen bir barındırma arabirimi (basit yönetilen çalıştırılabilir lik yerine) kullanılırsa, [CorBindToRuntimeEx Fonksiyonu](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md) işlevine yapılan çağrıda özel bir bayrak belirtebilirsiniz. Tüm işlemin uyumluluk modunu etkinleştirmek için `flags` [CorBindToRuntimeEx Fonksiyonu](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md) nun parametresini STARTUP_LEGACY_IMPERSONATION ayarlayın.  
   
- Daha fazla bilgi için bkz. [\<alwaysflowımpersonationpolicy > öğesi](alwaysflowimpersonationpolicy-element.md).  
+ Daha fazla bilgi için [ \<alwaysFlowImpersonationPolicy> Öğesi'ne](alwaysflowimpersonationpolicy-element.md)bakın.  
   
 ## <a name="configuration-file"></a>Yapılandırma Dosyası  
- .NET Framework bir uygulamada, bu öğe yalnızca uygulama yapılandırma dosyasında kullanılabilir.  
+ Bir .NET Framework uygulamasında, bu öğe yalnızca uygulama yapılandırma dosyasında kullanılabilir.  
   
- Bir ASP.NET uygulaması için, kimliğe bürünme akışı \<Windows klasörü > \Microsoft.NET\Framework\vx.x.xxxx dizininde bulunan Aspnet. config dosyasında yapılandırılabilir.  
+ Bir ASP.NET uygulama için, kimliğe bürünme akışı \<Windows Klasörü>\Microsoft.NET\Framework\vx.x.xxxx dizininde bulunan aspnet.config dosyasında yapılandırılabilir.  
   
- ASP.NET tarafından varsayılan olarak, aşağıdaki yapılandırma ayarlarını kullanarak ASPNET. config dosyasındaki kimliğe bürünme akışını devre dışı bırakır:  
+ ASP.NET varsayılan olarak aşağıdaki yapılandırma ayarlarını kullanarak aspnet.config dosyasındaki kimliğe bürünme akışını devre dışı bırakabilirsiniz:  
   
 ``` xml
 <configuration>  
@@ -91,7 +91,7 @@ Geçerli iş parçacığında yürütme bağlamı için akış ayarlarından ba�
 </configuration>  
 ```  
   
- ASP.NET ' de, bunun yerine kimliğe bürünme akışına izin vermek istiyorsanız, aşağıdaki yapılandırma ayarlarını açıkça kullanmanız gerekir:  
+ ASP.NET, bunun yerine kimliğe bürünme akışına izin vermek istiyorsanız, aşağıdaki yapılandırma ayarlarını açıkça kullanmanız gerekir:  
   
 ```xml  
 <configuration>  
@@ -103,7 +103,7 @@ Geçerli iş parçacığında yürütme bağlamı için akış ayarlarından ba�
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, zaman uyumsuz noktalarda Windows kimliğini Flow olmayan eski davranışın nasıl ekleneceğini gösterir.  
+ Aşağıdaki örnek, Windows kimliğini niçin asynchronous noktaları arasında akmayacak eski davranışın nasıl belirtilen olduğunu gösterir.  
   
 ```xml  
 <configuration>  
@@ -117,4 +117,4 @@ Geçerli iş parçacığında yürütme bağlamı için akış ayarlarından ba�
 
 - [Çalışma Zamanı Ayarları Şeması](index.md)
 - [Yapılandırma Dosyası Şeması](../index.md)
-- [\<alwaysFlowImpersonationPolicy > öğesi](alwaysflowimpersonationpolicy-element.md)
+- [\<alwaysFlowImpersonationPolicy> Öğesi](alwaysflowimpersonationpolicy-element.md)

@@ -1,25 +1,25 @@
 ---
-title: Yer işaretleri-WF
+title: Yer Imleri - WF
 ms.date: 03/30/2017
 ms.assetid: 9b51a346-09ae-455c-a70a-e2264ddeb9e2
-ms.openlocfilehash: a15a28cc39a4227765c238a6f2b86c72197f1a39
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: c5bd8130ee623599e80014777baf92986c3b6969
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868923"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183017"
 ---
 # <a name="bookmarks"></a>Yer İşaretleri
-Yer işaretleri, bir etkinliğin bir iş akışı iş parçacığına sahip olmadan giriş için büyük bir süre beklemesini sağlayan mekanizmadır. Bir etkinlik, Stimulus için beklediğini işaret eder, bir yer işareti oluşturabilir. Bu, şu anda yürütülmekte olan Yöntem (tarafından oluşturulan <xref:System.Activities.Bookmark>) tarafından döndürülen çalışma zamanına etkinlik yürütmenin tamamlanma kabul edilmesi gerektiğini gösterir.  
+Yer imleri, bir etkinliğin iş akışı iş parçacığına tutunmadan girişi pasif olarak beklemesini sağlayan mekanizmadır. Bir etkinlik uyarıcı beklediğini niçin işaret verdiğinde, bir yer imi oluşturabilir. Bu, çalışma süresine, şu anda yürütülen yöntem (oluşturdu) <xref:System.Activities.Bookmark>döndürülmüş olsa bile etkinliğin yürütülmesinin tamamlanmış olarak kabul edilmemesi gerektiğini gösterir.  
   
-## <a name="bookmark-basics"></a>Yer işareti temelleri  
- Bir <xref:System.Activities.Bookmark> iş akışı örneği içinde yürütmenin sürdürülebilecek (ve hangi girişin teslim edileceği) bir noktayı temsil eder. Genellikle, bir <xref:System.Activities.Bookmark> ad ve dış (konak veya uzantı) kodu, yer işaretinin ilgili verilerle sürdürülmesinden sorumludur. Bir <xref:System.Activities.Bookmark> devam edildiğinde, iş akışı çalışma zamanı, oluşturma <xref:System.Activities.BookmarkCallback> sırasında ilişkili <xref:System.Activities.Bookmark> temsilciyi zamanlar.  
+## <a name="bookmark-basics"></a>Yer Imi Temelleri  
+ A, <xref:System.Activities.Bookmark> iş akışı örneği içinde yürütmenin sürdürülebileceği (ve girişin teslim edilebildiği) bir noktayı temsil eder. Genellikle, a <xref:System.Activities.Bookmark> bir ad verilir ve dış (ana bilgisayar veya uzantı) kodu ilgili verilerle yer imini devam ından sorumludur. A <xref:System.Activities.Bookmark> başlatıldığında, iş akışı çalışma zamanı, <xref:System.Activities.BookmarkCallback> oluşturuldurduğu <xref:System.Activities.Bookmark> anda onunla ilişkili olan temsilciyi zamanlar.  
   
-## <a name="bookmark-options"></a>Yer işareti seçenekleri  
- Sınıf, oluşturulmakta <xref:System.Activities.Bookmark> olan türünü belirtir. <xref:System.Activities.BookmarkOptions> Birbirini dışlayan olası olmayan değerler, <xref:System.Activities.BookmarkOptions.None> <xref:System.Activities.BookmarkOptions.MultipleResume>ve <xref:System.Activities.BookmarkOptions.NonBlocking>' dir. Tam <xref:System.Activities.BookmarkOptions.None>olarak bir <xref:System.Activities.Bookmark> kez sürdürülmeleri beklenen, oluşturma işlemi varsayılan olan ' ı kullanın. Birden <xref:System.Activities.BookmarkOptions.MultipleResume> çok kez devam <xref:System.Activities.Bookmark> ettirilebilecek bir oluşturma sırasında kullanın. Hiçbir <xref:System.Activities.BookmarkOptions.NonBlocking> zaman sürdürülmeyebilir <xref:System.Activities.Bookmark> bir oluşturma sırasında kullanın. Varsayılan değer <xref:System.Activities.BookmarkOptions>kullanılarak oluşturulan yer işaretlerinin aksine <xref:System.Activities.BookmarkOptions.NonBlocking> , yer işaretleri bir etkinliğin tamamlanmasını engellemez.  
+## <a name="bookmark-options"></a>Yer Imi Seçenekleri  
+ Sınıf <xref:System.Activities.BookmarkOptions> oluşturulan türü <xref:System.Activities.Bookmark> belirtir. Olası olmayan birbirini dışlamayan <xref:System.Activities.BookmarkOptions.None>değerler <xref:System.Activities.BookmarkOptions.MultipleResume>, <xref:System.Activities.BookmarkOptions.NonBlocking>ve . Tam <xref:System.Activities.BookmarkOptions.None>olarak bir kez <xref:System.Activities.Bookmark> devam etmesi beklenen bir oluşturma yaparken varsayılan kullanın. Birden <xref:System.Activities.BookmarkOptions.MultipleResume> çok <xref:System.Activities.Bookmark> kez yeniden başlatılabilen bir oluşturma yaparken kullanın. Hiçbir <xref:System.Activities.BookmarkOptions.NonBlocking> zaman <xref:System.Activities.Bookmark> başlatılmayan bir şey oluştururken kullanın. Varsayılan <xref:System.Activities.BookmarkOptions>kullanılarak oluşturulan yer <xref:System.Activities.BookmarkOptions.NonBlocking> imlerinden farklı olarak, yer imleri bir etkinliğin tamamlanmasını engellemez.  
   
-## <a name="bookmark-resumption"></a>Yer işareti sürdürme  
- Yer işaretleri, <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> aşırı yüklerden birini kullanan bir iş akışı dışındaki kodla devam edebilir. Bu örnekte, bir `ReadLine` etkinlik oluşturulur. Yürütüldüğünde `ReadLine` , etkinlik bir <xref:System.Activities.Bookmark>oluşturur, bir geri çağırma kaydeder <xref:System.Activities.Bookmark> ve devam etmek için bekler. Devam `ReadLine` edildiğinde etkinlik <xref:System.Activities.Bookmark> ,<xref:System.Activities.Activity%601.Result%2A> ile geçilen verileri bağımsız değişkenine atar.  
+## <a name="bookmark-resumption"></a>Yer Ii Devamı  
+ Yer <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> imleri, aşırı yüklerden birini kullanarak iş akışı dışında kodla yeniden başlatılabilir. Bu örnekte, `ReadLine` bir etkinlik oluşturulur. Yürütüldüğünde, `ReadLine` etkinlik bir <xref:System.Activities.Bookmark>, geri arama kaydeder ve sonra <xref:System.Activities.Bookmark> devam etmesini bekler. Devam ettiğinde, `ReadLine` etkinlik <xref:System.Activities.Bookmark> <xref:System.Activities.Activity%601.Result%2A> bağımsız değişkeniyle geçirilen verileri atar.  
   
 ```csharp  
 public sealed class ReadLine : NativeActivity<string>  
@@ -30,12 +30,12 @@ public sealed class ReadLine : NativeActivity<string>
     protected override void Execute(NativeActivityContext context)  
     {  
         // Create a Bookmark and wait for it to be resumed.  
-        context.CreateBookmark(BookmarkName.Get(context),   
+        context.CreateBookmark(BookmarkName.Get(context),
             new BookmarkCallback(OnResumeBookmark));  
     }  
   
-    // NativeActivity derived activities that do asynchronous operations by calling   
-    // one of the CreateBookmark overloads defined on System.Activities.NativeActivityContext   
+    // NativeActivity derived activities that do asynchronous operations by calling
+    // one of the CreateBookmark overloads defined on System.Activities.NativeActivityContext
     // must override the CanInduceIdle property and return true.  
     protected override bool CanInduceIdle  
     {  
@@ -51,7 +51,7 @@ public sealed class ReadLine : NativeActivity<string>
 }  
 ```  
   
- Bu örnekte, `ReadLine` etkinliğin Kullanıcı adını toplayıp konsol penceresinde görüntülemesi için etkinliğini kullanan bir iş akışı oluşturulur. Ana bilgisayar uygulaması, <xref:System.Activities.Bookmark>giriş toplama işini gerçekleştirir ve devam ederek iş akışına geçirir.  
+ Bu örnekte, kullanıcının `ReadLine` adını toplamak ve konsol penceresine görüntülemek için etkinliği kullanan bir iş akışı oluşturulur. Ana bilgisayar uygulaması, girdiyi toplama fiili işini gerçekleştirir ve <xref:System.Activities.Bookmark>devam ederek iş akışına aktarın.  
   
 ```csharp  
 Variable<string> name = new Variable<string>  
@@ -111,7 +111,7 @@ wfApp.ResumeBookmark("UserName", Console.ReadLine());
 syncEvent.WaitOne();  
 ```  
   
- Etkinlik yürütüldüğünde, adlandırılmış bir <xref:System.Activities.Bookmark> adı `UserName` oluşturur ve sonra yer işaretinin sürdürülmesini bekler. `ReadLine` Konak, istenen verileri toplar ve ardından devam ettirir <xref:System.Activities.Bookmark>. İş akışı devam eder, adı görüntüler ve sonra tamamlar. Yer işaretinin sürdürülmeye devam ettiğine ilişkin hiçbir eşitleme kodu gerekmediğini unutmayın. Yalnızca iş akışı boşta kaldığında devam <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> edebilirveişakışıboştadeğilseişakışıboştaolanakadarbloklarıçağırır.<xref:System.Activities.Bookmark>  
+ `ReadLine` Etkinlik yürütüldüğünde, bir <xref:System.Activities.Bookmark> ad `UserName` ve ardından yer işaretinin devam etmesini bekler. Ana bilgisayar istenen verileri toplar ve <xref:System.Activities.Bookmark>sonra . İş akışı devam eder, adı görüntüler ve tamamlar. Yer imi devam ı ile ilgili olarak eşitleme kodu gerekmemektedir. A <xref:System.Activities.Bookmark> yalnızca iş akışı boştayken ve iş akışı boşta değilse, iş <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> akışı boşalana kadar çağrıyı engeller.  
   
-## <a name="bookmark-resumption-result"></a>Yer işareti sürdürme sonucu  
- <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A>Bookmark sürdürme <xref:System.Activities.BookmarkResumptionResult> isteğinin sonuçlarını göstermek için bir sabit listesi değeri döndürür. Olası dönüş değerleri, <xref:System.Activities.BookmarkResumptionResult.Success> <xref:System.Activities.BookmarkResumptionResult.NotReady>ve <xref:System.Activities.BookmarkResumptionResult.NotFound>' dir. Konaklar ve uzantılar, devam etmek için bu değeri kullanabilir.
+## <a name="bookmark-resumption-result"></a>Yer Ii Devamı Sonucu  
+ <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A>yer <xref:System.Activities.BookmarkResumptionResult> imi yeniden başlama isteğinin sonuçlarını belirtmek için numaralandırma değerini döndürür. Olası iade değerleri <xref:System.Activities.BookmarkResumptionResult.Success> <xref:System.Activities.BookmarkResumptionResult.NotReady>, <xref:System.Activities.BookmarkResumptionResult.NotFound>ve . Ana bilgisayarlar ve uzantılar, nasıl devam edileceğine karar vermek için bu değeri kullanabilir.

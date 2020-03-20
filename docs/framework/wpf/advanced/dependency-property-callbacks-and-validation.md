@@ -11,72 +11,72 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: 7f00961ba100700c68936cc33facfdc758c77d3f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c5f7439753037aeb5c2ff558da63e063ad65a5e1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940818"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186433"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Bağımlılık Özelliği Geri Aramaları ve Doğrulama
-Bu konuda, doğrulama belirleme, özelliğin etkin değeri değiştirildiğinde çağrılan geri çağrılar ve geçersiz kılma gibi özelliklerle ilgili özellikler için alternatif özel uygulamalar kullanılarak bağımlılık özelliklerinin nasıl oluşturulacağı açıklanmaktadır. Bunun dışında, değer belirleme üzerindeki etkiler. Bu konuda Ayrıca, bu teknikleri kullanarak varsayılan özellik sistem davranışlarındaki genişlemenin uygun olduğu senaryolar ele alınmaktadır.  
+Bu konu, doğrulama belirleme, özelliğin etkili değeri değiştirildiğinde çağrılan geri aramalar ve geçersiz kılma gibi özellik ile ilgili özellikler için alternatif özel uygulamalar kullanarak bağımlılık özelliklerinin nasıl oluşturulacak olduğunu açıklar değer belirleme üzerinde olası dış etkiler. Bu konu, bu teknikleri kullanarak varsayılan özellik sistemi davranışlarını genişletmenin uygun olduğu senaryoları da tartışır.  
 
-<a name="prerequisites"></a>   
+<a name="prerequisites"></a>
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konu, bağımlılık özelliği uygulama ve meta verilerin özel bir bağımlılık özelliğine uygulanma şeklini anladığınızı varsayar. Bağlam için bkz. [Özel bağımlılık özellikleri](custom-dependency-properties.md) ve [bağımlılık özelliği meta verileri](dependency-property-metadata.md) .  
+ Bu konu, bağımlılık özelliğini uygulamanın temel senaryolarını ve meta verilerin özel bağımlılık özelliğine nasıl uygulandığını anladığınızı varsayar. Bağlam için [Özel Bağımlılık Özellikleri](custom-dependency-properties.md) ve Bağımlılık Özelliği Meta [verilerine](dependency-property-metadata.md) bakın.  
   
-<a name="Validation_Callbacks"></a>   
-## <a name="validation-callbacks"></a>Doğrulama geri çağırmaları  
- Doğrulama geri çağırmaları, ilk kez kaydettiğinizde bir bağımlılık özelliğine atanabilir. Doğrulama geri çağırması, özellik meta verilerinin bir parçası değildir; Bu, <xref:System.Windows.DependencyProperty.Register%2A> yönteminin doğrudan bir girişi olur. Bu nedenle, bir bağımlılık özelliği için bir doğrulama geri çağırması oluşturulduktan sonra, yeni bir uygulama tarafından geçersiz kılınamaz.  
+<a name="Validation_Callbacks"></a>
+## <a name="validation-callbacks"></a>Doğrulama Geri Aramaları  
+ Doğrulama geri aramaları, ilk kaydettiğinizde bir bağımlılık özelliğine atanabilir. Doğrulama geri arama özelliği meta verilerinin bir parçası değildir; yöntemin <xref:System.Windows.DependencyProperty.Register%2A> doğrudan bir girişidir. Bu nedenle, bir bağımlılık özelliği için bir doğrulama geri arama oluşturulduktan sonra, yeni bir uygulama tarafından geçersiz kılınamaz.  
   
  [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
  [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
- Geri çağrılar bir nesne değeri sağlandıklarından uygulanır. Bunlar, `true` belirtilen değer özelliği için geçerliyse döndürülür; Aksi takdirde, döndürülür. `false` Özelliğin özellik sistemiyle kaydedilen tür için doğru türde olduğu varsayılır, bu nedenle geri çağırmalar içindeki tür denetimi normalde yapılmaz. Geri çağrılar, çeşitli farklı işlemlerde özellik sistemi tarafından kullanılır. Bu, varsayılan değer tarafından başlangıç türü başlatmayı, çağırarak <xref:System.Windows.DependencyObject.SetValue%2A>programlı değişikliği veya belirtilen yeni varsayılan değerle meta verileri geçersiz kılmaya çalışır. Doğrulama geri çağırması bu işlemlerden herhangi biri tarafından çağrılırsa ve döndürürse `false`, bir özel durum oluşturulur. Uygulama yazarları bu özel durumları işleyecek şekilde hazırlanmalıdır. Doğrulama geri çağırmaların ortak kullanımı, numaralandırma değerlerini doğrulayarak veya özellik sıfır veya daha büyük olması gereken ölçümleri ayarladığında, tamsayıların değerlerini kısıtlayan veya Double değerleri kısıtlayan.  
+ Geri aramalar, nesne değeri sağlayacak şekilde uygulanır. Sağlanan `true` değer özellik için geçerliyse geri dönerler; aksi takdirde, `false`geri dönerler. Özelliğin, özellik sistemine kayıtlı türe göre doğru türde olduğu varsayılır, bu nedenle geri aramalar içindeki tür kontrol normalde yapılmaz. Geri aramalar özellik sistemi tarafından çeşitli işlemlerde kullanılır. Bu, varsayılan değere göre ilk tür başlatmayı, <xref:System.Windows.DependencyObject.SetValue%2A>çağırarak programlı değişikliği veya sağlanan yeni varsayılan değerle meta verileri geçersiz kılmayı denemeyi içerir. Doğrulama geri arama bu işlemlerden herhangi biri tarafından `false`çağrılır ve döndürür, sonra bir özel durum yükseltilir. Uygulama yazarları bu özel durumları işlemek için hazır olmalıdır. Doğrulama geri aramalarının yaygın kullanımı, numaralandırma değerlerini doğrulamak veya özellik sıfır veya daha büyük olması gereken ölçümler ilerlerken tamsayılar veya iki katına çıkarma değerlerini doğrulamaktır.  
   
- Doğrulama geri çağırmaları özellikle, örnek Doğrulayıcıları değil sınıf Doğrulayıcıları olmak üzere tasarlanmıştır. Geri aramanın parametreleri, doğrulanacak özelliklerin ayarlandığı belirli <xref:System.Windows.DependencyObject> bir iletişim kurmaz. Bu nedenle, doğrulama geri çağırmaları bir özellik değerini etkileyebilecek olası "bağımlılıkları" zorlama için yararlı değildir, burada bir özelliğin örneğe özgü değeri diğer özelliklerin örneğe özgü değerleri gibi faktörlere bağlı olarak veya çalışma zamanı durumu.  
+ Doğrulama geri aramaları özellikle örnek doğrulayıcılar değil, sınıf doğrulayıcıları olarak tasarlanmıştır. Geri arama parametreleri, doğrulanması <xref:System.Windows.DependencyObject> gereken özelliklerin ayarlandığı belirli bir iletişim kurmaz. Bu nedenle doğrulama geri aramaları, bir özelliğin örneğine özgü değerinin diğer özelliklerin örneğine özgü değerleri gibi etkenlere bağlı olduğu veya özellik değerini etkileyebilecek olası "bağımlılıkları" uygulamak için yararlı değildir veya çalışma zamanı durumu.  
   
- Aşağıda, çok basit bir doğrulama geri çağırma senaryosuna yönelik örnek kod verilmiştir: <xref:System.Double> ilkel olarak yazılan bir özelliğin veya <xref:System.Double.NegativeInfinity>olmadığı <xref:System.Double.PositiveInfinity> doğrulanıyor.  
+ Aşağıda çok basit bir doğrulama geri arama senaryosu için örnek kod: <xref:System.Double> ilkel olarak yazılan <xref:System.Double.PositiveInfinity> bir <xref:System.Double.NegativeInfinity>özelliğin olmadığını doğrulama veya .  
   
  [!code-csharp[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
  [!code-vb[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
   
-<a name="Coerce_Value_Callbacks_and_Property_Changed_Events"></a>   
-## <a name="coerce-value-callbacks-and-property-changed-events"></a>Coerce değeri geri çağırmaları ve özellik değişti olayları  
- Zorunlu değer geri çağırmaları, bağımlılık özelliğinin <xref:System.Windows.DependencyObject> değeri değiştiğinde özellik sistemi tarafından çağrılan <xref:System.Windows.PropertyChangedCallback> uygulamalar gibi, özellikler için belirli örneği geçirir. Bu iki geri çağırmaları birlikte kullanarak, bir özellikte yapılan değişikliklerin başka bir özelliğin zorla veya yeniden değerlemeyi zorlamasının zorlanacağı öğelerde bir dizi özellik oluşturabilirsiniz.  
+<a name="Coerce_Value_Callbacks_and_Property_Changed_Events"></a>
+## <a name="coerce-value-callbacks-and-property-changed-events"></a>Zorlama Değeri Geri Aramaları ve Özellik Değiştirilen Olaylar  
+ Zorlama değeri geri aramaları, bir <xref:System.Windows.DependencyObject> bağımlılık özelliğinin değeri <xref:System.Windows.PropertyChangedCallback> değiştiğinde özellik sistemi tarafından çağrılan uygulamalar gibi, özellikler için belirli bir örneği geçer. Bu iki geri aramayı birlikte kullanarak, bir özellikteki değişikliklerin başka bir özelliği zorlamaya veya yeniden değerlendirmeye zorladığı öğeler üzerinde bir dizi özellik oluşturabilirsiniz.  
   
- Bağımlılık özelliklerinin bir bağlantı kullanımı için tipik bir senaryo, en düşük ve en yüksek değer ve gerçek ya da geçerli değer için üçüncü bir özellik olan öğenin her birini bir özellik taşıdığı bir kullanıcı arabirimi temelli özelliğine sahip olduğunuz durumlar olur. Burada, en büyük değer, geçerli değerin yeni en yüksek değeri aşması için ayarlandıysa, geçerli değeri yeni en büyük değerinden büyük olmayacak şekilde ve en düşük ile geçerli olan benzer bir ilişkiyi zorlamak isteyeceksiniz.  
+ Bağımlılık özelliklerinin bağlantısını kullanmak için tipik bir senaryo, öğenin her biri minimum ve maksimum değer için bir özellik ve gerçek veya geçerli değer için üçüncü bir özellik tuttuğu bir kullanıcı arabirimi odaklı özelliğiniz olmasıdır. Burada, en büyük değer yeni en büyük değeri aşacak şekilde ayarlanmışsa, geçerli değeri yeni maksimumdan büyük olmayacak şekilde ve en az geçerli ile benzer bir ilişki için zorlarsınız.  
   
- Aşağıda, bu ilişkiyi gösteren üç bağımlılık özelliklerinden yalnızca biri için çok kısa bir örnek kod verilmiştir. Örnek, bir en düşük `CurrentReading` /en yüksek/geçerli ilişkili * okuma özellikleri kümesinin özelliğinin nasıl kaydedildiğini gösterir. Önceki bölümde gösterildiği gibi doğrulamayı kullanır.  
+ Aşağıda, bu ilişkiyi gösteren üç bağımlılık özelliğinden sadece biri için çok kısa bir örnek kod verilmiştir. Örnek, Bir `CurrentReading` Min/Max/Current ilgili *Okuma özellikleri kümesinin özelliğinin nasıl kaydolduğunu gösterir. Önceki bölümde gösterildiği gibi doğrulama kullanır.  
   
  [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
  [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
- Geçerli için geri çağırma özelliği, değişikliği diğer bağımlı özelliklerle iletmek için kullanılır ve bu diğer özellikler için kaydedilen zorunlu değer geri çağırmaları açıkça çağrılır:  
+ Geçerli için değiştirilen özellik geri çağırma, bu diğer özellikler için kayıtlı olan zorlama değeri geri aramaları açıkça çağırarak, değişikliği diğer bağımlı özelliklere iletmek için kullanılır:  
   
  [!code-csharp[DPCallbackOverride#OnPCCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
  [!code-vb[DPCallbackOverride#OnPCCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
   
- Zorunlu değer geri çağırması, geçerli özelliğin potansiyel olarak bağlı olduğu özelliklerin değerlerini denetler ve gerekirse geçerli değeri zorlar:  
+ Zorlama değeri geri arama, geçerli özelliğin bağımlı olduğu özelliklerin değerlerini denetler ve gerekirse geçerli değeri zorlamaz:  
   
  [!code-csharp[DPCallbackOverride#CoerceCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
  [!code-vb[DPCallbackOverride#CoerceCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
   
 > [!NOTE]
-> Özelliklerin varsayılan değerleri zorlanmaz. Varsayılan değere eşit bir özellik değeri, bir özellik değeri hala başlangıçtaki varsayılan değeri varsa veya ile <xref:System.Windows.DependencyObject.ClearValue%2A>diğer değerleri temizleyerek meydana gelebilir.  
+> Özelliklerin varsayılan değerleri zorla rıdda değildir. Bir özellik değerinin hala ilk varsayılan değeri varsa veya diğer değerleri <xref:System.Windows.DependencyObject.ClearValue%2A>' ile temizleyerek varsayılan değere eşit bir özellik değeri oluşabilir.  
   
- Coerce değeri ve özellik değiştirme geri çağırmaları özellik meta verilerinin bir parçasıdır. Bu nedenle, belirli bir bağımlılık özelliği için geri çağırmaları, bu özelliğe ait meta verileri geçersiz kılarak, bağımlılık özelliğine sahip olan türden türettiğiniz bir tür üzerinde var olduğu gibi değiştirebilirsiniz.  
+ Zorlama değeri ve özellik değiştirilen geri aramalar özellik meta verilerinin bir parçasıdır. Bu nedenle, belirli bir bağımlılık özelliği için geri aramaları, türünüzdeki bu özelliğin meta verilerini geçersiz kılarak, bağımlılık özelliğinin sahibi olan türden türediğiniz bir türde var olduğu için değiştirebilirsiniz.  
   
-<a name="Advanced"></a>   
-## <a name="advanced-coercion-and-callback-scenarios"></a>Gelişmiş zorlama ve geri arama senaryoları  
+<a name="Advanced"></a>
+## <a name="advanced-coercion-and-callback-scenarios"></a>Gelişmiş Zorlama ve Geri Arama Senaryoları  
   
-### <a name="constraints-and-desired-values"></a>Kısıtlamalar ve Istenen değerler  
- <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> Geri çağrılar, bildirdiğiniz mantığa uygun olarak bir değeri zorlamak için özellik sistemi tarafından kullanılır, ancak yerel olarak ayarlanmış özelliğin bir zorunlu değeri, dahili olarak "istenen değeri" devam edecektir. Kısıtlamalar, uygulama ömrü boyunca dinamik olarak değiştirilebilen diğer özellik değerlerini temel alıyorsa, zorlama kısıtlamaları da dinamik olarak değiştirilir ve kısıtlanmış Özellik değeri, istenen değere yakın şekilde almak için değerini değiştirebilir yeni kısıtlamalar verilme olasılığı vardır. Tüm kısıtlamalar yükseltilmemiş ise değer istenen değer olacaktır. Döngüsel bir şekilde birbirlerine bağımlı birden fazla özellik varsa, oldukça karmaşık bazı bağımlılık senaryolarına neden olabilirsiniz. Örneğin, Min/Max/Current senaryosunda, en az ve en fazla kullanıcı ayarlanabilir olmasını seçebilirsiniz. Bu durumda, en yüksek değeri en düşük olan ve tam tersi olarak değiştirmeniz gerekebilir. Ancak, bu zorlama etkin ise ve en fazla minimum değere zorsa, her ikisine de bağlı olduğundan ve değeri sıfır olan değerler arasındaki aralığa sınırlı olduğundan, geçerli olmayan bir durumda kalır. Daha sonra, en yüksek veya en düşük değeri ayarlanıyorsa, geçerli geçerli değeri hala depolandığından ve kısıtlamalar gevşmiş olduğu için istenen değere ulaşmaya çalıştığından, şu değerlerden birini "takip et" olarak görünür.  
+### <a name="constraints-and-desired-values"></a>Kısıtlamalar ve İstenilen Değerler  
+ <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> Geri aramalar, beyan ettiğiniz mantığa uygun olarak bir değeri zorlamak için özellik sistemi tarafından kullanılır, ancak yerel olarak ayarlanmış bir özelliğin zorla değerdeğeri yine de dahili olarak "istenen değeri" korur. Kısıtlamalar, uygulama ömrü boyunca dinamik olarak değişebilen diğer özellik değerlerine dayanıyorsa, zorlama kısıtlamaları da dinamik olarak değiştirilir ve kısıtlı özellik, istenilen değere yaklaşmak için değerini değiştirebilir. yeni kısıtlamalar göz önüne alındığında mümkündür. Tüm kısıtlamalar kaldırılırsa, değer istenilen değer haline gelir. Dairesel bir şekilde birbirine bağımlı olan birden çok özelliğiniz varsa, oldukça karmaşık bağımlılık senaryoları tanıyabilirsiniz. Örneğin, Min/Max/Current senaryosunda, Minimum ve Maksimum kullanıcı ayarlanabilir olmasını seçebilirsiniz. Bu öyleyse, Maksimum'un her zaman Minimum'dan büyük olduğunu ve bunun tersi olduğunu zorlamanız gerekebilir. Ancak bu zorlama etkinse ve Maksimum Minimum'a zorlanırsa, Akımı her ikisine de bağımlı olduğu ve sıfır olan değerler arasındaki aralıkla sınırlandırıldığı için, kararsız bir durumda bırakır. Daha sonra, Maksimum veya Minimum ayarlanırsa, Geçerli'nin istenen değeri hala depolandığı ve kısıtlamalar gevşetildikçe istenen değere ulaşmaya çalıştığı için, Geçerli değerlerden birini "takip" eder gibi görünür.  
   
- Karmaşık bağımlılıklarda Teknik olarak yanlış bir şey yoktur, ancak çok sayıda yeniden deneme gerektiren ve kullanıcı ARABIRIMI doğrudan etkiliyorsa kullanıcıları kafa karıştırıcı olabilecek hafif bir performans olabilir. Özellik değişikliği ve coerce değeri geri çağırmaları konusunda dikkatli olun ve denenmekte olan zorlamasının mümkün olduğunca kesin olarak değerlendirileceğini ve "aşırı kısıtlama" gerçekleştirmeyeceğini unutmayın.  
+ Karmaşık bağımlılıklarla teknik olarak yanlış bir şey yoktur, ancak çok sayıda yeniden değerlendirme gerektiriyorsa hafif bir performans zararı olabilir ve kullanıcı kullanıcı larını doğrudan etkiliyorsa da kafa karıştırıcı olabilirler. Değiştirilen özellik ve zorlama değeri geri aramaları ile dikkatli olun ve denenen zorlamanın mümkün olduğunca açık bir şekilde ele alınabilmesini ve "aşırı kısıtlama" sağlamadığından emin olun.  
   
-### <a name="using-coercevalue-to-cancel-value-changes"></a>Değer değişikliklerini Iptal etmek için CoerceValue kullanma  
- Özellik sistemi, değeri <xref:System.Windows.CoerceValueCallback> <xref:System.Windows.DependencyProperty.UnsetValue> özel bir durum olarak döndüren her türlü ele alınacaktır. Bu özel durum, <xref:System.Windows.CoerceValueCallback> Çağrılmakta olan özellik değişikliğinin özellik sistemi tarafından reddedilmesi ve özellik sisteminin bunun yerine özelliğin sahip olduğu önceki değeri rapor etmesi gerektiği anlamına gelir. Bu mekanizma, zaman uyumsuz olarak başlatılan bir özellikte yapılan değişikliklerin geçerli nesne durumu için hala geçerli olduğunu denetlemek ve değilse değişiklikleri bastırmak için yararlı olabilir. Başka bir olası senaryo, hangi özellik değeri belirleme bileşeninin raporlanan değerden sorumlu olduğuna bağlı olarak bir değeri seçmeli olarak gizlenebilir. Bunu yapmak için, geri çağırma ve özellik <xref:System.Windows.DependencyProperty> tanımlayıcısı ' nı <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>giriş olarak kullanabilir ve sonra öğesini işleyebilirsiniz <xref:System.Windows.ValueSource>.  
+### <a name="using-coercevalue-to-cancel-value-changes"></a>Değer Değişikliklerini İptal Etmek Için Zorlama Değerini Kullanma  
+ Özellik sistemi, değeri <xref:System.Windows.CoerceValueCallback> <xref:System.Windows.DependencyProperty.UnsetValue> özel bir durum olarak döndüren leri ele alacaktır. Bu özel durum, <xref:System.Windows.CoerceValueCallback> çağrılması ile sonuçlanan özellik değişikliğinin özellik sistemi tarafından reddedilmesi ve özellik sisteminin bunun yerine mülkün sahip olduğu önceki değeri bildirmesi gerektiği anlamına gelir. Bu mekanizma, eş zamanlı olarak başlatılan bir özellik değişikliklerinin geçerli nesne durumu için hala geçerli olup olmadığını denetlemek ve değilse değişiklikleri bastırmak için yararlı olabilir. Başka bir olası senaryo, bildirilen değerden hangi özellik değeri belirleme bileşeninin sorumlu olduğuna bağlı olarak bir değeri seçerek bastırabilmektir. Bunu yapmak için, geri <xref:System.Windows.DependencyProperty> arama ve özellik tanımlayıcısı için giriş olarak geçirilen <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>kullanabilirsiniz , <xref:System.Windows.ValueSource>ve sonra .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

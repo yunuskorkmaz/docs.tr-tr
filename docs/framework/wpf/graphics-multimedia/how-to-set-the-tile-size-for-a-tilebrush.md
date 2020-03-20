@@ -5,40 +5,40 @@ helpviewer_keywords:
 - TileBrush [WPF], size of tile properties
 - Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-ms.openlocfilehash: 80b5dfc668464df829db593668bea8a9a4ec09e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af7bab59a292549b29dad9b6a7417f22b1b84e48
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61804214"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186829"
 ---
 # <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Nasıl yapılır: TileBrush için Döşeme Boyutunu Ayarlama
 
-Bu örnek için döşeme boyutunu ayarlama işlemi gösterilmektedir bir <xref:System.Windows.Media.TileBrush>. Varsayılan olarak, bir <xref:System.Windows.Media.TileBrush> tamamen boyama yaptığınız alanı dolduran kutucuk üretir. Ayarlayarak bu davranışı geçersiz kılabilirsiniz <xref:System.Windows.Media.TileBrush.Viewport%2A> ve <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> özellikleri.
+Bu örnek, bir <xref:System.Windows.Media.TileBrush>. Varsayılan olarak, <xref:System.Windows.Media.TileBrush> bir resim yaptığınız alanı tamamen dolduran tek bir döşeme üretir. Bu davranışı <xref:System.Windows.Media.TileBrush.Viewport%2A> ve <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> özellikleri ayarlayarak geçersiz kılabilirsiniz.
 
-<xref:System.Windows.Media.TileBrush.Viewport%2A> Özelliği için döşeme boyutunu belirten bir <xref:System.Windows.Media.TileBrush>. Varsayılan olarak, değerini <xref:System.Windows.Media.TileBrush.Viewport%2A> boyanan alanın boyutuna göre bir özelliktir. Yapmak <xref:System.Windows.Media.TileBrush.Viewport%2A> özelliğini belirtin, mutlak bir döşeme boyutunu ayarlama <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> özelliğini <xref:System.Windows.Media.BrushMappingMode.Absolute>.
+Özellik, <xref:System.Windows.Media.TileBrush.Viewport%2A> bir <xref:System.Windows.Media.TileBrush>. Varsayılan olarak, özelliğin <xref:System.Windows.Media.TileBrush.Viewport%2A> değeri boyanmakta olan alanın boyutuna göredir. <xref:System.Windows.Media.TileBrush.Viewport%2A> Özelliğin mutlak bir döşeme boyutu belirtinsin, <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> özelliği ' ne <xref:System.Windows.Media.BrushMappingMode.Absolute>göre ayarlayın.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte bir <xref:System.Windows.Media.ImageBrush>, bir tür <xref:System.Windows.Media.TileBrush>kutucuklar içeren bir dikdörtgen boyamak için. Örnek her kutucuk yüzde 50 ' (dikdörtgen) çıktı alanının yüzde 50 ayarlar. Sonuç olarak, dikdörtgeni görüntünün dört projeksiyonlar ile boyanır.
+Aşağıdaki örnek, <xref:System.Windows.Media.ImageBrush>bir dikdörtgeni <xref:System.Windows.Media.TileBrush>karolarla boyamak için bir tür , bir tür kullanır. Örnek, her döşemeyi çıkış alanının (dikdörtgenin) yüzde 50'si oranında yüzde 50 olarak ayarlar. Sonuç olarak, dikdörtgen görüntünün dört projeksiyonları ile boyanır.
 
-Örneğin oluşturduğu çıktı aşağıda gösterilmiştir:
+Aşağıdaki resimde, örneğin ürettiği çıktı gösterilmektedir:
 
-![Resim fırçası ile döşeme gösteren dört cherries bir dikdörtgen.](./media/how-to-set-the-tile-size-for-a-tilebrush/rectangle-tile-image-brush.png)
+![Bir görüntü fırçası ile fayans gösteren dört kiraz ile bir dikdörtgen.](./media/how-to-set-the-tile-size-for-a-tilebrush/rectangle-tile-image-brush.png)
 
 [!code-csharp[UsingImageBrush_snip#RelativeTileSizeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#relativetilesizeexample)]
 
-Sonraki örnek, oluşturur bir <xref:System.Windows.Media.ImageBrush>, ayarlar, <xref:System.Windows.Media.TileBrush.Viewport%2A> için `0,0,25,25` ve kendi <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> için <xref:System.Windows.Media.BrushMappingMode.Absolute>ve başka bir dikdörtgen boyamak için kullanır. Sonuç olarak, fırça 25 piksel genişliği ve yüksekliği 25 piksel kutucukları üretir.
+Sonraki örnek, bir <xref:System.Windows.Media.ImageBrush>oluşturur <xref:System.Windows.Media.TileBrush.Viewport%2A> , `0,0,25,25` onun <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> <xref:System.Windows.Media.BrushMappingMode.Absolute>ve onun ayarlar , ve başka bir dikdörtgen boyamak için kullanır. Sonuç olarak, fırça 25 piksel genişliğinde ve 25 piksel yüksekliğe sahip karolar üretir.
 
-Örneğin oluşturduğu çıktı aşağıda gösterilmiştir:
+Aşağıdaki resimde, örneğin ürettiği çıktı gösterilmektedir:
 
-![Kırk sekiz cherries döşenmiş TileBrush ile görünüm penceresini gösteren bir dikdörtgen.](./media/how-to-set-the-tile-size-for-a-tilebrush/25-x-25-viewport-tilebrush.png)
+![Kırk sekiz kiraz ile bir dikdörtgen bir Viewport ile bir kiremitli TileFırça gösteren.](./media/how-to-set-the-tile-size-for-a-tilebrush/25-x-25-viewport-tilebrush.png)
 
 [!code-csharp[UsingImageBrush_snip#AbsoluteTileSizeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#absolutetilesizeexample)]
 
-Önceki örneklerde, daha büyük bir örnek bir parçasıdır. Tam bir örnek için bkz. [ImageBrush örnek](https://go.microsoft.com/fwlink/?LinkID=160005).
+Önceki örnekler daha büyük bir örneğin parçasıdır. Tam örnek için [ImageBrush Örneği'ne](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ImageBrush)bakın.
 
-Bu örnek kullansa <xref:System.Windows.Media.ImageBrush> sınıfı <xref:System.Windows.Media.TileBrush.Viewport%2A> ve <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> özellikleri aynı şekilde davranır diğeri için <xref:System.Windows.Media.TileBrush> nesnelerini, diğer bir deyişle, için <xref:System.Windows.Media.DrawingBrush> ve <xref:System.Windows.Media.VisualBrush>. Hakkında daha fazla bilgi için <xref:System.Windows.Media.ImageBrush> ve diğer <xref:System.Windows.Media.TileBrush> nesneleri bkz [görüntüler, çizimler ve görsellerle boyama](painting-with-images-drawings-and-visuals.md).
+Bu örnek sınıfı <xref:System.Windows.Media.ImageBrush> kullansa da, <xref:System.Windows.Media.TileBrush.Viewport%2A> diğer <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> <xref:System.Windows.Media.TileBrush> nesneler için özellikler aynı şekilde <xref:System.Windows.Media.DrawingBrush> <xref:System.Windows.Media.VisualBrush>çalışır, yani, için ve . Ve diğer <xref:System.Windows.Media.TileBrush> <xref:System.Windows.Media.ImageBrush> nesneler hakkında daha fazla bilgi için [Resim, Çizim ve Görsellerle Boyama](painting-with-images-drawings-and-visuals.md)konusuna bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

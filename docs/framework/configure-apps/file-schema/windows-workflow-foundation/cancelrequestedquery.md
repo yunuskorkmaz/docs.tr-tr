@@ -3,25 +3,25 @@ title: <cancelRequestedQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8da9b1c4-338a-4f23-9830-6d257772d340
-ms.openlocfilehash: 5de459717fdc0dbf946f12dceda18dce79ca4b06
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 3e6840ce647625c36356cccd4651f17de32777e2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398811"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152293"
 ---
-# <a name="cancelrequestedquery"></a>\<cancelRequestedQuery >
-Üst etkinlik tarafından bir alt etkinliği iptal etmek için istekleri izlemek üzere kullanılan bir sorgu temsil eder. Sorgu, istek kaydı nesnelerine abone olmak için bir izleme katılımcısı için gereklidir.  
+# <a name="cancelrequestedquery"></a>\<cancelRequestedQuery>
+Üst etkinlik tarafından bir alt etkinliği iptal etmek için istekleri ni izlemek için kullanılan bir sorguyu temsil eder. Sorgu, bir izleme katılımcısının istek kayıt nesnelerini iptal etmek için abone olması için gereklidir.  
   
- Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md).  
+ Profil sorgularını izleme hakkında daha fazla bilgi için [bkz.](../../../windows-workflow-foundation/tracking-profiles.md)  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<sistemin. ServiceModel >** ](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<İzleme >** ](tracking.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<trackingProfile >** ](trackingprofile.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<iş akışı >** ](workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cancelRequestedQueries >** ](cancelrequestedqueries.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<cancelRequestedQuery >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<Sistem. ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<izleme>**](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<izlemeProfil>**](trackingprofile.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<iş akışı>**](workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<cancelRequestedQueries>**](cancelrequestedqueries.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<cancelRequestedQuery>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -30,7 +30,7 @@ ms.locfileid: "70398811"
   <trackingProfile name="Name">
     <workflow>
       <cancelRequestQueries>
-        <cancelRequestQuery activityName="String" 
+        <cancelRequestQuery activityName="String"
                             childActivityName="String"/>
       </cancelRequestQueries>
     </workflow>
@@ -45,8 +45,8 @@ ms.locfileid: "70398811"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|activityName|İptali isteyen etkinliğin adını belirten bir dize.|  
-|childActivityName|İptalin istendiği alt etkinliğin adını belirten bir dize.|  
+|activityName|İptal isteyen etkinliğin adını belirten bir dize.|  
+|childActivityName|İptal inistendiği alt etkinliğin in adını belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -55,7 +55,7 @@ ms.locfileid: "70398811"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<faultPropagationQuery >](faultpropagationquery.md)|Üst etkinlik tarafından bir alt etkinliği iptal etmek için istekleri izlemek üzere kullanılan yapılandırma öğelerinin listesini temsil eder. Sorgu, istek kaydı nesnelerine abone olmak için bir izleme katılımcısı için gereklidir.|  
+|[\<hataPropagationQuery>](faultpropagationquery.md)|Alt etkinliği üst etkinlik tarafından iptal etmek için istekleri ni izlemek için kullanılan yapılandırma öğeleri listesini temsil eder. Sorgu, bir izleme katılımcısının istek kayıt nesnelerini iptal etmek için abone olması için gereklidir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: 2a001ac8b3d4b8cd9618b3ced7bdf578ebae2e22
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 02d7f94259cc56513be404c5539ca7015d5f3533
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786601"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151539"
 ---
 # <a name="adding-data-to-a-datatable"></a>DataTable’a Veri Ekleme
-' I oluşturup <xref:System.Data.DataTable> , sütunları ve kısıtlamalarını kullanarak yapısını tanımladıktan sonra, tabloya yeni veri satırları ekleyebilirsiniz. Yeni bir satır eklemek için yeni bir değişkeni tür <xref:System.Data.DataRow>olarak bildirin. <xref:System.Data.DataTable.NewRow%2A> Yöntemini çağırdığınızda yeni bir **DataRow** nesnesi döndürülür. **DataTable** daha sonra, <xref:System.Data.DataColumnCollection>tarafından tanımlandığı gibi, tablosunun yapısına bağlı olarak **DataRow** nesnesini oluşturur.  
+Sütunlar ve <xref:System.Data.DataTable> kısıtlamalar kullanarak bir yapı oluşturduktan ve yapısını tanımladıktan sonra, tabloya yeni veri satırları ekleyebilirsiniz. Yeni bir satır eklemek için, yeni <xref:System.Data.DataRow>bir değişkeni tür olarak bildirin. Yöntemi aradığınızda yeni bir **DataRow** nesnesi <xref:System.Data.DataTable.NewRow%2A> döndürülür. **DataTable** daha sonra tablonun yapısına göre **Veri Satırı** nesnesi <xref:System.Data.DataColumnCollection>oluşturur, tarafından tanımlanan .  
   
- Aşağıdaki örnek, **NewRow** yöntemini çağırarak yeni bir satır oluşturmayı gösterir.  
+ Aşağıdaki örnek, **NewRow** yöntemini arayarak yeni bir satırOluşturmanın nasıl olduğunu gösterir.  
   
 ```vb  
 Dim workRow As DataRow = workTable.NewRow()  
@@ -25,7 +25,7 @@ Dim workRow As DataRow = workTable.NewRow()
 DataRow workRow = workTable.NewRow();  
 ```  
   
- Daha sonra, aşağıdaki örnekte gösterildiği gibi, yeni eklenen satırı bir dizin veya sütun adı kullanarak düzenleyebilirsiniz.  
+ Ardından, aşağıdaki örnekte gösterildiği gibi, bir dizin veya sütun adını kullanarak yeni eklenen satırı işleyebilirsiniz.  
   
 ```vb  
 workRow("CustLName") = "Smith"  
@@ -37,7 +37,7 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- Veriler yeni satıra eklendikten sonra, aşağıdaki kodda gösterildiği <xref:System.Data.DataRowCollection>gibi **ekleme** yöntemi satırı öğesine eklemek için kullanılır.  
+ Veriler yeni satıra eklendikten sonra, **satırı** aşağıdaki kodda gösterilen <xref:System.Data.DataRowCollection>sıraya eklemek için Ekle yöntemi kullanılır.  
   
 ```vb  
 workTable.Rows.Add(workRow)  
@@ -47,7 +47,7 @@ workTable.Rows.Add(workRow)
 workTable.Rows.Add(workRow);  
 ```  
   
- Ayrıca <xref:System.Object>, aşağıdaki örnekte gösterildiği gibi, bir değerler dizisine geçirerek yeni bir satır eklemek için **Add** yöntemini çağırabilirsiniz.  
+ Aşağıdaki örnekte **Add** gösterildiği gibi, <xref:System.Object>bir dizi değer geçirerek yeni bir satır eklemek için Ekle yöntemini de arayabilirsiniz.  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
@@ -57,9 +57,9 @@ workTable.Rows.Add(new Object() {1, "Smith"})
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- **Add** yöntemine **nesne**olarak yazılan bir değer dizisinin geçirilmesi, tablonun içinde yeni bir satır oluşturur ve sütun değerlerini nesne dizisindeki değerler olarak ayarlar. Dizideki değerlerin, tabloda göründükleri sıraya göre sütunları sırayla eşleştirdiğini unutmayın.  
+ **Nesne**olarak yazılan bir dizi değerin **Ekle** yöntemine geçirilmesi, tablonun içinde yeni bir satır oluşturur ve sütun değerlerini nesne dizisindeki değerlere ayarlar. Dizideki değerlerin, tabloda göründükleri sıraya göre sütunlar ile sırayla eşleştiğini unutmayın.  
   
- Aşağıdaki örnek, yeni oluşturulan **müşteriler** tablosuna 10 satır ekler.  
+ Aşağıdaki örnek, yeni oluşturulan **Müşteriler** tablosuna 10 satır ekler.  
   
 ```vb  
 Dim workRow As DataRow  
@@ -76,7 +76,7 @@ Next
 ```csharp  
 DataRow workRow;  
   
-for (int i = 0; i <= 9; i++)   
+for (int i = 0; i <= 9; i++)
 {  
   workRow = workTable.NewRow();  
   workRow[0] = i;  

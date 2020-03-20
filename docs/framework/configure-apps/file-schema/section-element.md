@@ -8,32 +8,32 @@ helpviewer_keywords:
 - section Element
 - <section> Element
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
-ms.openlocfilehash: 8785523d664294e3ca3792fb0f84d739d1f1a376
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 88f74c02ef627e9136e4437ffa150c36445266a3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215725"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153742"
 ---
-# <a name="section-element"></a>\<Bölüm > öğesi
+# <a name="section-element"></a>\<bölüm> öğesi
 
-Bir yapılandırma bölümü bildirimi içerir.
+Yapılandırma bölümü bildirimi içerir.
 
-[ **\<yapılandırma >** ](configuration-element.md)\
-&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<bölüm >**
+[**\<yapılandırma>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<configBölüm>**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<bölüm>**
 
-[ **\<yapılandırma >** ](configuration-element.md)\
-&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bölümü >**
+[**\<yapılandırma>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<configBölüm>**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bölümGrup>**](sectiongroup-element-for-configsections.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<bölüm>**
 
 ## <a name="syntax"></a>Sözdizimi
 
 ```xml
 <section name="section name"
          type="configuration section handler class, assembly"
-         allowDefinition="Everywhere|MachineOnly|MachineToApplication" 
+         allowDefinition="Everywhere|MachineOnly|MachineToApplication"
          allowLocation="true|false" />
 ```
 
@@ -41,58 +41,58 @@ Bir yapılandırma bölümü bildirimi içerir.
 
 |           | Açıklama |
 | --------- | ----------- |
-| **ada**  | Yapılandırma bölümünün adını belirtir. |
-| **type**  | Yapılandırma dosyasından bölümü okuyan yapılandırma bölümü işleyici sınıfının adını belirtir. Tür değeri "tam nitelikli-bölüm-işleyici-sınıf-adı, basit-derleme-adı" sözdizimine sahiptir. Basit derleme adı, *. dll* dosya uzantısı olmayan kök dosya adıdır. |
+| **Adı**  | Yapılandırma bölümünün adını belirtir. |
+| **Türü**  | Yapılandırma dosyasından bölümü okuyan yapılandırma bölümü işleyicisınıfının adını belirtir. Tür değeri sözdizimi vardır "tam nitelikli-bölüm işleyicisi-sınıf adı, basit-derleme-adı". Basit derleme adı *.dll* dosya uzantısı olmayan kök dosya adıdır. |
 
 ## <a name="optional-attributes"></a>İsteğe bağlı öznitelikler
 
-Aşağıdaki öznitelikler yalnızca ASP.NET uygulamaları için geçerlidir. Yapılandırma sistemi, diğer uygulama türleri için bu öznitelikleri yoksayar.
+Aşağıdaki öznitelikler yalnızca ASP.NET uygulamalar için geçerlidir. Yapılandırma sistemi, diğer uygulama türleri için bu öznitelikleri yoksayar.
 
 |                     | Açıklama |
 | ------------------- | ----------- |
-| **allowDefinition** | Bölümün hangi yapılandırma dosyasına kullanılabileceğini belirtir. Aşağıdaki değerlerden birini kullanın:<br><br>**Yer**<br>Bölümün herhangi bir yapılandırma dosyasında kullanılmasına izin verir. Bu varsayılandır.<br>**MachineOnly**<br>Bölümün yalnızca makine yapılandırma dosyasında (*Machine. config*) kullanılmasına izin verir.<br>**MachineToApplication**<br>Bölümün makine yapılandırma dosyasında veya uygulama yapılandırma dosyasında kullanılmasına izin verir. |
-| **allowLocation**   | Bölümün **\<location >** öğesi içinde kullanılıp kullanılamayacağını belirler. Aşağıdaki değerlerden birini kullanın:<br><br>**true**<br>Bölümün **\<location >** öğesi içinde kullanılmasına izin verir. Bu varsayılandır.<br>**false**<br>Bölümün **\<location >** öğesi içinde kullanılmasına izin vermez. |
+| **Allowdefinition** | Bölümün hangi yapılandırma dosyasında kullanılabileceğini belirtir. Aşağıdaki değerlerden birini kullanın:<br><br>**Heryer -de**<br>Bölümün herhangi bir yapılandırma dosyasında kullanılmasını sağlar. Bu varsayılandır.<br>**MakineSadece**<br>Bölümün yalnızca makine yapılandırma dosyasında *(Machine.config)* kullanılmasını sağlar.<br>**MachinetoApplication**<br>Bölümün makine yapılandırma dosyasında veya uygulama yapılandırma dosyasında kullanılmasını sağlar. |
+| **Allowlocation**   | Bölümün ** \<konum>** öğesi içinde kullanılıp kullanılamayacağı belirlenir. Aşağıdaki değerlerden birini kullanın:<br><br>**true**<br>Bölümün ** \<konum>** öğesi içinde kullanılmasını sağlar. Bu varsayılandır.<br>**yanlış**<br>Bölümün ** \<konum>** öğesi içinde kullanılmasına izin vermez. |
 
 ## <a name="parent-elements"></a>Üst öğeler
 
 |     | Açıklama |
 | --- | ----------- |
-| [ **\<configSections >** Dosyalarında](configsections-element-for-configuration.md) | Yapılandırma bölümü ve ad alanı bildirimleri içerir. |
-| [ **\<sectionGroup >** Dosyalarında](sectiongroup-element-for-configsections.md) | Yapılandırma bölümleri için bir ad alanı tanımlar. |
+| [** \<configSections>** Öğe](configsections-element-for-configuration.md) | Yapılandırma bölümü ve ad alanı bildirimleri içerir. |
+| [** \<bölümGrup>** Öğe](sectiongroup-element-for-configsections.md) | Yapılandırma bölümleri için bir ad alanı tanımlar. |
 
 > [!NOTE]
-> **\<bölüm >** öğesi, **\<configSections >** veya **\<sectionGroup >** alt öğesidir, ancak her ikisine birden değil.
+> ** \<Bir bölüm>** öğesi ** \<configSections>** veya ** \<sectionGroup>** bir alt öğesidir, ancak her ikisi de değil.
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-Hiçbiri
+None
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bir yapılandırma bölümünün bildirilmesi, temel olarak yapılandırma dosyası için yeni bir öğe tanımlar. Yeni öğe, bir yapılandırma bölümü işleyicisinin (yani, <xref:System.Configuration.IConfigurationSectionHandler> arabirimini uygulayan bir sınıf) okuduğu ayarları içerir. Tanımladığınız bir bölümün öznitelikleri ve alt öğeleri, ayarlarınızı okumak için kullandığınız bölüm işleyicisine bağlıdır.
+Yapılandırma bölümü bildirmek, yapılandırma dosyası için temelde yeni bir öğe tanımlar. Yeni öğe, yapılandırma bölümü işleyicisinin (diğer bir şekilde <xref:System.Configuration.IConfigurationSectionHandler> arabirimi uygulayan bir sınıfın) okuduğu ayarları içerir. Tanımladığınız bir bölümün öznitelikleri ve alt öğeleri, ayarlarınızı okumak için kullandığınız bölüm işleyicisine bağlıdır.
 
-*Machine. config* dosyasında bir yapılandırma bölümü işleyicisi bildirmek, **allowDefinition** özniteliği aksini belirtmedikçe, bu bilgisayardaki herhangi bir uygulama yapılandırma dosyasında yapılandırma bölümünü kullanmanıza olanak sağlar.
+*Machine.config* dosyasında bir yapılandırma bölümü işleyicisi bildirmek, **allowDefinition** özniteliği aksini belirtmediği sürece, o bilgisayardaki herhangi bir uygulama yapılandırma dosyasında yapılandırma bölümünü kullanmanıza olanak tanır.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir yapılandırma bölümünün nasıl tanımlanacağını ve bu bölüm için ayarların nasıl tanımlanacağını göstermektedir:
+Aşağıdaki örnekte, yapılandırma bölümünün nasıl tanımlanılıgı ve bu bölümün ayarlarını nasıl tanımlanabilirsiniz:
 
 ```xml
 <configuration>
   <configSections>
     <section name="sampleSection"
-             type="System.Configuration.SingleTagSectionHandler" 
+             type="System.Configuration.SingleTagSectionHandler"
              allowLocation="false" />
   </configSections>
-  <sampleSection setting1="Value1" 
-                 setting2="value two" 
+  <sampleSection setting1="Value1"
+                 setting2="value two"
                  setting3="third value" />
 </configuration>
 ```
 
 ## <a name="configuration-file"></a>Yapılandırma dosyası
 
-Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine. config*) ve uygulama dizini düzeyinde olmayan *Web. config* dosyalarında kullanılabilir.
+Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında *(Machine.config)* ve uygulama dizini düzeyinde olmayan *Web.config* dosyalarında kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

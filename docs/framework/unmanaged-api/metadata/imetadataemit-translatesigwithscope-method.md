@@ -15,76 +15,76 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-ms.openlocfilehash: cea84f47a5289df4bc9c50381e18d7077b3b8dad
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2662af41fbd2cdc3ce8a6df1e036dfc5b22ff6a3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440485"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175557"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope Yöntemi
-Bir derlemeyi geçerli kapsama aktarır ve birleştirilmiş kapsam için yeni bir meta veri imzası alır.  
+Geçerli kapsama bir derleme alır ve birleştirilmiş kapsam için yeni bir meta veri imzası alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT TranslateSigWithScope (   
-    [in]  IMetaDataAssemblyImport   *pAssemImport,   
-    [in]  const void                *pbHashValue,   
-    [in]  ULONG                     cbHashValue,   
-    [in]  IMetaDataImport           *import,   
-    [in]  PCCOR_SIGNATURE           pbSigBlob,   
+HRESULT TranslateSigWithScope (
+    [in]  IMetaDataAssemblyImport   *pAssemImport,
+    [in]  const void                *pbHashValue,
+    [in]  ULONG                     cbHashValue,
+    [in]  IMetaDataImport           *import,
+    [in]  PCCOR_SIGNATURE           pbSigBlob,
     [in]  ULONG                     cbSigBlob,  
-    [in]  IMetaDataAssemblyEmit     *pAssemEmit,   
-    [in]  IMetaDataEmit             *emit,   
-    [out] PCOR_SIGNATURE            pvTranslatedSig,   
-    [in]  ULONG                     cbTranslatedSigMax,   
-    [out] ULONG                     *pcbTranslatedSig   
+    [in]  IMetaDataAssemblyEmit     *pAssemEmit,
+    [in]  IMetaDataEmit             *emit,
+    [out] PCOR_SIGNATURE            pvTranslatedSig,
+    [in]  ULONG                     cbTranslatedSigMax,
+    [out] ULONG                     *pcbTranslatedSig
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pAssemImport`  
- 'ndaki İçeri aktarma derlemesi için arabirim (imzanın tanımlandığı yer).  
+ [içinde] Alma derlemesi için arabirim (imzanın tanımlandığı yer).  
   
  `pbHashValue`  
- 'ndaki Derlemenin karma blobu.  
+ [içinde] Montaj için karma blob.  
   
  `cbHashValue`  
- 'ndaki `pbHashValue`bayt sayısı.  
+ [içinde] Bayt `pbHashValue`sayısı.  
   
  `import`  
- 'ndaki İçeri aktarma meta veri kapsamı için arabirim.  
+ [içinde] Alma meta veri kapsamı için arabirim.  
   
  `pbSigBlob`  
- 'ndaki İçeri aktarılacak imza.  
+ [içinde] Alınacak imza.  
   
  `cbSigBlob`  
- 'ndaki `pbSigBlob`bayt cinsinden boyutu.  
+ [içinde] Boyutu, bayt, ve. `pbSigBlob`  
   
  `pAssemEmit`  
- 'ndaki Dışarı aktarma derlemesi için arabirim.  
+ [içinde] Dışa aktarma derlemesi için arayüz.  
   
  `emit`  
- 'ndaki Dışarı aktarma meta verileri kapsamı için arabirim.  
+ [içinde] Dışa aktarma meta veri kapsamı için arabirim.  
   
  `pvTranslatedSig`  
- dışı Çevrilen imza blobunu tutan arabellek.  
+ [çıkış] Çevrilen imza blob tutmak için arabellek.  
   
  `cbTranslatedSigMax`  
- 'ndaki `pvTranslatedSig`kapasitesi (bayt cinsinden).  
+ [içinde] Kapasite, bayt, içinde. `pvTranslatedSig`  
   
  `pcbTranslatedSig`  
- dışı Çevrilen İmzadaki gerçek bayt sayısı.  
+ [çıkış] Çevrilen imzadaki gerçek bayt sayısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

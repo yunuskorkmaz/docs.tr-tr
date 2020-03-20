@@ -1,6 +1,6 @@
 ---
-title: Clone işlevi (yönetilmeyen API Başvurusu)
-description: Clone işlevi, geçerli birinin tamamen kopyası olan yeni bir nesne döndürür.
+title: Klon işlevi (Yönetilmeyen API Başvurusu)
+description: Klon işlevi, geçerli olanın tam bir klonu olan yeni bir nesneyi döndürür.
 ms.date: 11/06/2017
 api_name:
 - Clone
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Clone function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: c8e7781a3efe7679ef2e05747862911db88bcc5f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cb4951a1f289417482bfa1287028cc66349a5938
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141620"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176857"
 ---
 # <a name="clone-function"></a>Clone işlevi
-Geçerli nesnenin tamamen kopyası olan yeni bir nesne döndürür.   
+Geçerli nesnenin tam bir klonu olan yeni bir nesne döndürür.
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -30,47 +30,47 @@ Geçerli nesnenin tamamen kopyası olan yeni bir nesne döndürür.
   
 ```cpp  
 HRESULT Clone (
-   [in] int                  vFunc, 
-   [in] IWbemClassObject*    ptr, 
+   [in] int                  vFunc,
+   [in] IWbemClassObject*    ptr,
    [out] IWbemClassObject**  ppCopy
-); 
+);
 ```  
 
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-'ndaki Bu parametre kullanılmıyor.
+[içinde] Bu parametre kullanılmaz.
 
 `ptr`  
-'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
+[içinde] [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine işaretçi.
 
 `ppCopy`  
-dışı `ptr`tamamen bir tane olan yeni bir nesne. Bu bağımsız değişken geçerli nesnenin kopyasını alırsa `null` olamaz.
+[çıkış] Tam bir yalnız olan yeni `ptr`bir nesne . Geçerli nesnenin `null` kopyasını alıyorsa, bu bağımsız değişken olamaz.
 
-## <a name="return-value"></a>Dönüş değeri
+## <a name="return-value"></a>Döndürülen değer
 
-Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
+Bu işlev tarafından döndürülen aşağıdaki değerler *WbemCli.h* üstbilgi dosyasında tanımlanır veya bunları kodunuzdaki sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` bir parametre olarak belirtildi ve bu kullanımda yasal değil. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nesneyi kopyalamak için yeterli kullanılabilir bellek yok. |
+| `WBEM_E_FAILED` | 0x80041001 | Genel bir başarısızlık oldu. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null`bir parametre olarak belirtilmiştir ve bu kullanımda yasal değildir. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nesneyi klonlamak için yeterli bellek yok. |
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev, [IWbemClassObject:: Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) yöntemine bir çağrı kaydırır.
+Bu [işlev, IWbemClassObject::Klon](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) yöntemine bir çağrı yıkıyor.
 
-Kopyalanmış nesne, başvuru sayısı 1 olan bir COM nesnesidir.
+Klonlanan nesne, başvuru sayısı 1 olan bir COM nesnesidir.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** WMINet_Utils. IDL  
+ **Üstbilgi:** WMINet_Utils.idl  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)

@@ -1,25 +1,25 @@
 ---
-title: System.Uri ad 2.0 sürümündeki değişiklikler
+title: Sürüm 2.0'da System.Uri ad alanında yapılan değişiklikler
 ms.date: 03/30/2017
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 ms.openlocfilehash: 987010b8367069e8089df3f809d23f258bb68f2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "61642769"
 ---
-# <a name="changes-to-the-systemuri-namespace-in-version-20"></a>System.Uri ad 2.0 sürümündeki değişiklikler
+# <a name="changes-to-the-systemuri-namespace-in-version-20"></a>Sürüm 2.0'da System.Uri ad alanında yapılan değişiklikler
 
-Birkaç değişiklik yapılmıştır <xref:System.Uri?displayProperty=nameWithType> sınıfı. Bu değişiklikler yanlış davranışa sabit, artırılmış kullanılabilirlik ve Gelişmiş Güvenlik.
+<xref:System.Uri?displayProperty=nameWithType> Sınıfta çeşitli değişiklikler yapıldı. Bu değişiklikler yanlış davranışı, gelişmiş kullanılabilirliği ve gelişmiş güvenliği düzelttirdi.
 
-## <a name="obsolete-and-deprecated-members"></a>Artık kullanılmıyor ve kullanım dışı bırakılan üyeleri
+## <a name="obsolete-and-deprecated-members"></a>Eski ve yıkıntılı Üyeler
 
- Oluşturucular:
+ Kurucular:
 
-- Sahip tüm oluşturucular bir `dontEscape` parametresi.
+- `dontEscape` Parametresi olan tüm yapıcılar.
 
- Yöntemleri:
+ Yöntemler:
 
 - <xref:System.Uri.CheckSecurity%2A>
 
@@ -39,37 +39,37 @@ Birkaç değişiklik yapılmıştır <xref:System.Uri?displayProperty=nameWithTy
 
 ## <a name="changes"></a>Değişiklikler
 
-- (Dosya, ftp ve diğerleri), sorgu parçası olmayan bilinen URI düzenleri için '?' karakteri, her zaman Atlanan ve başlangıcı olarak kabul edilmez bir <xref:System.Uri.Query%2A> bölümü.
+- Sorgu bölümü (dosya, ftp ve diğerleri) olmadığı bilinen URI düzenleri için '?' karakteri her zaman kaçar <xref:System.Uri.Query%2A> ve bir bölümün başlangıcı olarak kabul edilmez.
 
-- Örtük dosya URI'ler için (form `c:\directory\file@name.txt`), parça karakter ('#') tam unescaping istenen sürece her zaman kaçırılmışsa veya <xref:System.Uri.LocalPath%2A> olduğu `true`.
+- Örtük dosya URI'leri `c:\directory\file@name.txt`(formdan), parça karakteri ('#') her zaman tam <xref:System.Uri.LocalPath%2A> `true`unescaping istenmedikçe veya .
 
-- UNC ana bilgisayar adı desteği kaldırıldı; Uluslararası ana bilgisayar adları temsil eden IDN belirtimi benimsenen.
+- UNC hostname desteği kaldırıldı; uluslararası ana bilgisayar adlarını temsil eden IDN belirtimi kabul edilmiştir.
 
-- <xref:System.Uri.LocalPath%2A> her zaman tamamen atlanmayan bir dize döndürür.
+- <xref:System.Uri.LocalPath%2A>her zaman tamamen kaçılmamış bir dize döndürür.
 
-- <xref:System.Uri.ToString%2A> bir kaçış '%', unescape değil '?', veya '#' karakteri.
+- <xref:System.Uri.ToString%2A>kaçan bir '%', '?'veya '#' karakterinden kaçmaz.
 
-- <xref:System.Uri.Equals%2A> artık <xref:System.Uri.Query%2A> yapılan eşitlik kontrolüne bölümünde.
+- <xref:System.Uri.Equals%2A>şimdi eşitlik <xref:System.Uri.Query%2A> denetimindeki bölümü içerir.
 
-- İşleçleri "=="ve"! =" geçersiz kılınacak ve bağlantılı <xref:System.Uri.Equals%2A> yöntemi.
+- "==" ve "!=" işleçleri geçersiz <xref:System.Uri.Equals%2A> kılınmış ve yönteme bağlanır.
 
-- <xref:System.Uri.IsLoopback%2A> Şimdi, tutarlı sonuçlar üretir.
+- <xref:System.Uri.IsLoopback%2A>şimdi tutarlı sonuçlar üretir.
 
-- URI "`file:///path`" artık veri dönüştürülür `file://path`.
+- URI "`file:///path`" artık `file://path`.
 
-- "#", artık bir konak adı Sonlandırıcı kabul edilir. Diğer bir deyişle, `http://contoso.com#fragment` artık dönüştürülür `http://contoso.com/#fragment`.
+- "#" artık bir ana bilgisayar adı sonlandırıcısı olarak kabul edilmektedir. Yani, `http://contoso.com#fragment` şimdi dönüştürülür `http://contoso.com/#fragment`.
 
-- Taban URI ile bir parça birleştirilirken bir hata düzeltildi.
+- Bir temel URI'yi bir parçayla birleştirirken bir hata düzeltildi.
 
-- Bir hatada <xref:System.Uri.HostNameType%2A> sabittir.
+- Bir hata <xref:System.Uri.HostNameType%2A> giderilmiştir.
 
-- NNTP ayrıştırılırken bir hata düzeltildi.
+- NNTP ayrıştırma bir hata giderilmiştir.
 
-- Bir URI biçiminde HTTP:contoso.com artık bir ayrıştırma özel durumu oluşturur.
+- Formun bir URI HTTP:contoso.com şimdi bir ayrıştırma özel atar.
 
-- Framework doğru bir Uri kullanıcı bilgileri işler.
+- Framework, bir URI'deki userinfo'yu doğru şekilde işler.
 
-- Bozuk URI yukarıda kök dosya sistemine çapraz olamaz, URI yolu sıkıştırma sabittir.
+- URI yol sıkıştırma, bozuk bir URI'nin dosya sisteminde kökün üzerinde geçememesi için sabitlenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

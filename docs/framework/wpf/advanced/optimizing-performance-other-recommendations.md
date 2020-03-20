@@ -11,66 +11,66 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: b6d99d90a3da232e1873ebe8433e01ceb2977de6
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 727331adb41251460209f157d1804ff455bcf473
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636438"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186296"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Performansı İyileştirme: Diğer Öneriler
-<a name="introduction"></a>Bu konu, [WPF uygulama performansını En Iyi duruma getirme](optimizing-wpf-application-performance.md) bölümünde yer almayan konular kapsamında ele alınanlara ek olarak performans önerileri sağlar.  
+<a name="introduction"></a>Bu konu, [WPF Uygulama Performansını Optimize Etme](optimizing-wpf-application-performance.md) bölümündeki konuların kapsadığı konulara ek olarak performans önerileri sağlar.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
-- [Fırçalar üzerinde opaklık ve öğeler üzerinde opaklık](#Opacity)  
+- [Fırçalarda Elementlerde Opaklık](#Opacity)  
   
-- [Nesneye gezinti](#Navigation_Objects)  
+- [Nesneye Gezinme](#Navigation_Objects)  
   
-- [Büyük 3B yüzeyler üzerinde isabet testi](#Hit_Testing)  
+- [Büyük 3B Yüzeylerde Hit Testi](#Hit_Testing)  
   
-- [Kompozisyontiontarget. Rendering olayı](#CompositionTarget_Rendering_Event)  
+- [CompositionTarget.RenderOlay](#CompositionTarget_Rendering_Event)  
   
-- [ScrollBarVisibility = Auto kullanmaktan kaçının](#Avoid_Using_ScrollBarVisibility)  
+- [ScrollBarVisibility=Auto kullanmaktan kaçının](#Avoid_Using_ScrollBarVisibility)  
   
-- [Başlangıç saatini azaltmak için yazı tipi önbellek hizmetini yapılandırın](#FontCache)  
+- [Başlangıç Süresini Azaltmak için Font Önbelleği Hizmetini Yapılandırın](#FontCache)  
   
-<a name="Opacity"></a>   
-## <a name="opacity-on-brushes-versus-opacity-on-elements"></a>Fırçalar üzerinde opaklık ve öğeler üzerinde opaklık  
- Bir öğenin <xref:System.Windows.Shapes.Shape.Fill%2A> veya <xref:System.Windows.Shapes.Shape.Stroke%2A> ayarlamak için bir <xref:System.Windows.Media.Brush> kullandığınızda, öğenin <xref:System.Windows.UIElement.Opacity%2A> özelliğini ayarlamak yerine <xref:System.Windows.Media.Brush.Opacity%2A?displayProperty=nameWithType> değeri ayarlamak daha iyidir. Bir öğenin <xref:System.Windows.UIElement.Opacity%2A> özelliğini değiştirmek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geçici bir yüzey oluşturulmasına neden olabilir.  
+<a name="Opacity"></a>
+## <a name="opacity-on-brushes-versus-opacity-on-elements"></a>Fırçalarda Elementlerde Opaklık  
+ Bir öğeyi <xref:System.Windows.Media.Brush> <xref:System.Windows.Shapes.Shape.Fill%2A> ayarlamak <xref:System.Windows.Shapes.Shape.Stroke%2A> için a kullandığınızda, öğenin <xref:System.Windows.Media.Brush.Opacity%2A?displayProperty=nameWithType> <xref:System.Windows.UIElement.Opacity%2A> özelliğini ayarlamak yerine değeri ayarlamak daha iyidir. Bir öğenin özelliğini <xref:System.Windows.UIElement.Opacity%2A> değiştirmek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geçici bir yüzey oluşturmaya neden olabilir.  
   
-<a name="Navigation_Objects"></a>   
-## <a name="navigation-to-object"></a>Nesneye gezinti  
- <xref:System.Windows.Navigation.NavigationWindow> nesnesi <xref:System.Windows.Window> türetilir ve öncelikle <xref:System.Windows.Navigation.NavigationService> ve günlüğü toplayarak içerik gezintisi desteğiyle genişletir. Bir Tekdüzen Kaynak tanımlayıcısı (URI) veya bir nesnesi belirterek <xref:System.Windows.Navigation.NavigationWindow> istemci alanını güncelleştirebilirsiniz. Aşağıdaki örnek her iki yöntemi göstermektedir:  
+<a name="Navigation_Objects"></a>
+## <a name="navigation-to-object"></a>Nesneye Gezinme  
+ Nesne, <xref:System.Windows.Navigation.NavigationWindow> öncelikle toplama <xref:System.Windows.Window> <xref:System.Windows.Navigation.NavigationService> ve günlük tarafından içerik gezintisi desteğinden türetilmiştir ve genişletir. Tek düzen kaynak tanımlayıcısı (URI) veya bir nesne <xref:System.Windows.Navigation.NavigationWindow> belirterek istemci alanını güncelleştirebilirsiniz. Aşağıdaki örnek her iki yöntemi de gösterir:  
   
  [!code-csharp[Performance#PerformanceSnippet14](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
  [!code-vb[Performance#PerformanceSnippet14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
   
- Her bir <xref:System.Windows.Navigation.NavigationWindow> nesnesinin, bu pencerede kullanıcının gezinti geçmişini kaydeden bir günlüğü vardır. Günlüğün amaçlarından biri, kullanıcıların kendi adımlarını yeniden izlemesine izin vermelidir.  
+ Her <xref:System.Windows.Navigation.NavigationWindow> nesnenin, kullanıcının gezinti geçmişini bu pencerede kaydeden bir günlüğü vardır. Günlüğün amaçlarından biri, kullanıcıların adımlarını yeniden izlemelerine izin vermektir.  
   
- Tekdüzen Kaynak tanımlayıcısı (URI) kullanarak gittiğinizde, günlük yalnızca Tekdüzen Kaynak tanımlayıcısı (URI) başvurusunu depolar. Bu, sayfayı her ziyaret ettiğiniz zaman dinamik olarak yeniden oluşturulduğu ve sayfanın karmaşıklığına bağlı olarak zaman alıcı olabilen bir anlamına gelir. Bu durumda, günlük depolama maliyeti düşüktür, ancak sayfanın edilmeyen süresi yüksek olabilir.  
+ Tek düzen kaynak tanımlayıcısı (URI) kullanarak gezinirken, günlük yalnızca tek düzen kaynak tanımlayıcısı (URI) başvurularını depolar. Bu, sayfayı her yeniden ziyaret edilince, sayfanın karmaşıklığına bağlı olarak zaman alıcı olabilecek dinamik olarak yeniden oluşturuldurabileceği anlamına gelir. Bu durumda, günlük depolama maliyeti düşüktür, ancak sayfayı yeniden oluşturma süresi potansiyel olarak yüksektir.  
   
- Bir nesne kullanarak gittiğinizde, günlük nesnenin tüm görsel ağacını depolar. Bu, sayfayı her ziyaret ettiğiniz zaman yeniden yapılandırılması gerekmeden hemen işlediğini anlamına gelir. Bu durumda, günlük depolama maliyeti yüksektir, ancak sayfanın edilmeyen süresi düşüktür.  
+ Bir nesneyi kullanarak gezindiğinizde, günlük nesnenin tüm görsel ağacını depolar. Bu, sayfayı her yeniden ziyaret edilince, sayfanın yeniden oluşturulmak zorunda kalmadan hemen işlendiği anlamına gelir. Bu durumda, günlük depolama maliyeti yüksektir, ancak sayfayı yeniden oluşturma zamanı düşüktür.  
   
- <xref:System.Windows.Navigation.NavigationWindow> nesnesini kullandığınızda, günlüğe kaydetme desteğinin uygulamanızın performansını nasıl etkilediğini göz önünde bulundurmanız gerekir. Daha fazla bilgi için bkz. [gezintiye genel bakış](../app-development/navigation-overview.md).  
+ Nesneyi <xref:System.Windows.Navigation.NavigationWindow> kullandığınızda, günlük desteğinin uygulamanızın performansını nasıl etkilediğini aklınızda bulundurmanız gerekir. Daha fazla bilgi için [Gezintiye Genel Bakış'a](../app-development/navigation-overview.md)bakın.  
   
-<a name="Hit_Testing"></a>   
-## <a name="hit-testing-on-large-3d-surfaces"></a>Büyük 3B yüzeyler üzerinde isabet testi  
- Büyük 3B yüzeyler üzerinde isabet testi, CPU tüketimi açısından çok performanslı, yoğun bir işlemdir. Bu, 3B Yüzey animasyon eklendiğinde özellikle doğrudur. Bu yüzeyler üzerinde isabet testi gerektirmiyorsa, isabet sınamasını devre dışı bırakın. <xref:System.Windows.UIElement> türetilen nesneler <xref:System.Windows.UIElement.IsHitTestVisible%2A> özelliğini `false`ayarlayarak isabet sınamasını devre dışı bırakabilir.  
+<a name="Hit_Testing"></a>
+## <a name="hit-testing-on-large-3d-surfaces"></a>Büyük 3B Yüzeylerde Hit Testi  
+ Büyük 3B yüzeylerde isabet testi CPU tüketimi açısından çok performans yoğun bir işlemdir. Bu, özellikle 3B yüzey imiyating olduğunda doğrudur. Bu yüzeylerde isabet testi gerektirmezseniz, isabet testini devre dışı k. Türetilen nesneler <xref:System.Windows.UIElement> <xref:System.Windows.UIElement.IsHitTestVisible%2A> özelliği `false`' ne ayarlayarak hit testi devre dışı atabilir.  
   
-<a name="CompositionTarget_Rendering_Event"></a>   
-## <a name="compositiontargetrendering-event"></a>Kompozisyontiontarget. Rendering olayı  
- <xref:System.Windows.Media.CompositionTarget.Rendering?displayProperty=nameWithType> olay, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sürekli olarak animasyon almasına neden olur. Bu olayı kullanırsanız, her fırsat üzerinde ayırın.  
+<a name="CompositionTarget_Rendering_Event"></a>
+## <a name="compositiontargetrendering-event"></a>CompositionTarget.RenderOlay  
+ Olay <xref:System.Windows.Media.CompositionTarget.Rendering?displayProperty=nameWithType> sürekli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon neden olur. Bu olayı kullanırsanız, her fırsatta ayırın.  
   
-<a name="Avoid_Using_ScrollBarVisibility"></a>   
-## <a name="avoid-using-scrollbarvisibilityauto"></a>ScrollBarVisibility = Auto kullanmaktan kaçının  
- Mümkün olduğunda, `HorizontalScrollBarVisibility` ve `VerticalScrollBarVisibility` özellikleri için <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> değerini kullanmaktan kaçının. Bu özellikler <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.ScrollViewer>ve <xref:System.Windows.Controls.TextBox> nesneleri için ve <xref:System.Windows.Controls.ListBox> nesnesi için iliştirilmiş bir özellik olarak tanımlanmıştır. Bunun yerine, <xref:System.Windows.Controls.ScrollBarVisibility> <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>, <xref:System.Windows.Controls.ScrollBarVisibility.Hidden>veya <xref:System.Windows.Controls.ScrollBarVisibility.Visible>olarak ayarlayın.  
+<a name="Avoid_Using_ScrollBarVisibility"></a>
+## <a name="avoid-using-scrollbarvisibilityauto"></a>ScrollBarVisibility=Auto kullanmaktan kaçının  
+ Mümkün olduğunda, değeri <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> `HorizontalScrollBarVisibility` ve `VerticalScrollBarVisibility` özellikleri için kullanmaktan kaçının. Bu özellikler, <xref:System.Windows.Controls.RichTextBox> <xref:System.Windows.Controls.ListBox> nesne <xref:System.Windows.Controls.ScrollViewer>için <xref:System.Windows.Controls.TextBox> ve nesne için ekli bir özellik olarak tanımlanır. Bunun yerine, <xref:System.Windows.Controls.ScrollBarVisibility.Disabled> <xref:System.Windows.Controls.ScrollBarVisibility.Hidden>ayarlayın <xref:System.Windows.Controls.ScrollBarVisibility> <xref:System.Windows.Controls.ScrollBarVisibility.Visible>, , veya .  
   
- <xref:System.Windows.Controls.ScrollBarVisibility.Auto> değeri, boşluk sınırlı olduğunda ve kaydırma çubuklarının yalnızca gerektiğinde görüntülenmesi gerektiği durumlar için tasarlanmıştır. Örneğin, yüzlerce satırlık metin içeren bir <xref:System.Windows.Controls.TextBox> aksine bu <xref:System.Windows.Controls.ScrollBarVisibility> değerini 30 öğe <xref:System.Windows.Controls.ListBox> ile kullanmak yararlı olabilir.  
+ Değer, alanın sınırlı olduğu ve kaydırma çubuklarının <xref:System.Windows.Controls.ScrollBarVisibility.Auto> yalnızca gerektiğinde görüntülenmesi gereken durumlar için tasarlanmıştır. Örneğin, bu <xref:System.Windows.Controls.ScrollBarVisibility> değeri <xref:System.Windows.Controls.ListBox> yüzlerce metin satırıyla karşı sırayla 30 <xref:System.Windows.Controls.TextBox> öğeden oluşan bir değerle kullanmak yararlı olabilir.  
   
-<a name="FontCache"></a>   
-## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>Başlangıç saatini azaltmak için yazı tipi önbellek hizmetini yapılandırın  
- WPF yazı tipi önbellek hizmeti, WPF uygulamaları arasında yazı tipi verilerini paylaşır. Hizmet zaten çalışmıyorsa, çalıştırdığınız ilk WPF uygulaması bu hizmeti başlatır. Windows Vista kullanıyorsanız, WPF uygulamalarının ilk başlangıç zamanını azaltmak için "Windows Presentation Foundation (WPF) yazı tipi önbelleği 3.0.0.0" hizmetini "El Ile" (varsayılan) "otomatik (Gecikmeli başlatma)" olarak ayarlayabilirsiniz.  
+<a name="FontCache"></a>
+## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>Başlangıç Süresini Azaltmak için Font Önbelleği Hizmetini Yapılandırın  
+ WPF Font Önbelleği hizmeti, yazı tipi verilerini WPF uygulamaları arasında paylaşır. Çalıştırdığınız ilk WPF uygulaması, hizmet zaten çalışmıyorsa bu hizmeti başlatır. Windows Vista kullanıyorsanız, WPF uygulamalarının başlangıç süresini azaltmak için "Windows Presentation Foundation (WPF) Font Önbelleği 3.0.0.0" hizmetini "El Ile" (varsayılan) ile "Otomatik (Gecikmeli Başlat)" olarak ayarlayabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

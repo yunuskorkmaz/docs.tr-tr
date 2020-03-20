@@ -9,117 +9,117 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: 7af110b9b00b080bf40bc9ee4b85aa293940bbc3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b85a607d2e44d6253359a81118f90e6ee05d2d3f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794258"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187321"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Karma Uygulama Sorunlarını Giderme
-<a name="introduction"></a>Bu konuda, hem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hem de Windows Forms teknolojilerini kullanan karma uygulamalar yazarken oluşabilecek bazı yaygın sorunlar listelenmektedir.  
+<a name="introduction"></a>Bu konu, hem de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows Forms teknolojilerini kullanan karma uygulamaları yazarken oluşabilecek bazı sık karşılaşılan sorunları listeler.  
 
-<a name="overlapping_controls"></a>   
-## <a name="overlapping-controls"></a>Çakışan denetimler  
- Denetimler, bekledikleri gibi çakışmayabilir. Windows Forms her denetim için ayrı bir HWND kullanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sayfadaki tüm içerikler için bir HWND kullanır. Bu uygulama farkı, beklenmeyen çakışan davranışlara neden olur.  
+<a name="overlapping_controls"></a>
+## <a name="overlapping-controls"></a>Çakışan Denetimler  
+ Denetimler beklediğiniz gibi çakışmayabilir. Windows Forms, her denetim için ayrı bir HWND kullanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bir sayfadaki tüm içerik ler için bir HWND kullanır. Bu uygulama farkı beklenmeyen çakışan davranışlara neden olur.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] barındırılan Windows Forms denetimi her zaman [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğinin üstünde görünür.  
+ Barındırılan bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows Forms denetimi her [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zaman içeriğin üstünde görünür.  
   
- <xref:System.Windows.Forms.Integration.ElementHost> denetiminde barındırılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerikler <xref:System.Windows.Forms.Integration.ElementHost> denetimin z düzeninde görüntülenir. <xref:System.Windows.Forms.Integration.ElementHost> denetimlerinin örtüşmesi mümkündür, ancak barındırılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği birleştirmez veya etkileşime almaz.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]denetimde <xref:System.Windows.Forms.Integration.ElementHost> barındırılan <xref:System.Windows.Forms.Integration.ElementHost> içerik, denetimin z-sırasında görünür. Denetimleri çakıştmak <xref:System.Windows.Forms.Integration.ElementHost> mümkündür, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ancak barındırılan içerik birleşmiyor veya etkileşimde yok.  
   
-<a name="child_property"></a>   
-## <a name="child-property"></a>Alt özellik  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost> ve <xref:System.Windows.Forms.Integration.ElementHost> sınıfları yalnızca tek bir alt denetim veya öğe barındırabilir. Birden fazla denetimi veya öğeyi barındırmak için alt içerik olarak bir kapsayıcı kullanmanız gerekir. Örneğin, bir <xref:System.Windows.Forms.Panel?displayProperty=nameWithType> denetimine Windows Forms düğme ve onay kutusu denetimleri ekleyebilir ve sonra paneli bir <xref:System.Windows.Forms.Integration.WindowsFormsHost> denetiminin <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> özelliğine atayabilirsiniz. Ancak, düğme ve onay kutusu denetimlerini aynı <xref:System.Windows.Forms.Integration.WindowsFormsHost> denetimine ayrı olarak ekleyemezsiniz.  
+<a name="child_property"></a>
+## <a name="child-property"></a>Çocuk Mülkiyeti  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> Ve <xref:System.Windows.Forms.Integration.ElementHost> sınıflar yalnızca tek bir alt denetim veya öğe barındırabilir. Birden fazla denetim veya öğe barındırmak için, alt içerik olarak bir kapsayıcı kullanmanız gerekir. Örneğin, windows forms düğmesi ve onay kutusu <xref:System.Windows.Forms.Panel?displayProperty=nameWithType> denetimlerini bir denetime ekleyebilir <xref:System.Windows.Forms.Integration.WindowsFormsHost> ve <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> ardından paneli denetimin özelliğine atayabilirsiniz. Ancak, düğme ve onay kutusu denetimlerini aynı <xref:System.Windows.Forms.Integration.WindowsFormsHost> denetime ayrı ayrı ekleyemezsiniz.  
   
-<a name="scaling"></a>   
+<a name="scaling"></a>
 ## <a name="scaling"></a>Ölçeklendirme  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve Windows Forms farklı ölçekleme modellerine sahiptir. Bazı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ölçeklendirme dönüştürmeleri Windows Forms denetimlerine göre anlamlıdır, ancak diğerleri değildir. Örneğin, bir Windows Forms denetimini 0 olarak ölçeklendirmeye çalışır, ancak aynı denetimi sıfır olmayan bir değere ölçeklendirmeye çalışırsanız, denetimin boyutu 0 kalır. Daha fazla bilgi için bkz. [WindowsFormsHost öğesi Için düzen konuları](layout-considerations-for-the-windowsformshost-element.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ve Windows Formlar farklı ölçekleme modelleri vardır. Bazı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ölçekleme dönüşümleri Windows Forms denetimleri için anlamlıdır, ancak diğerleri anlamlı değildir. Örneğin, Windows Forms denetimini 0'a ölçeklendirme çalışması, ancak aynı denetimi sıfır olmayan bir değere geri ölçeklendirmeye çalışırsanız, denetimin boyutu 0 kalır. Daha fazla bilgi [için WindowsFormsHost Öğesi için Düzen Hususları'na](layout-considerations-for-the-windowsformshost-element.md)bakın.  
   
-<a name="adapter"></a>   
+<a name="adapter"></a>
 ## <a name="adapter"></a>Bağdaştırıcı  
- Gizli bir kapsayıcı içerdiğinden <xref:System.Windows.Forms.Integration.WindowsFormsHost> ve <xref:System.Windows.Forms.Integration.ElementHost> sınıfları çalışırken karışıklığa neden olabilir. <xref:System.Windows.Forms.Integration.WindowsFormsHost> ve <xref:System.Windows.Forms.Integration.ElementHost> sınıflarının her ikisi de, içerik barındırmak için kullandıkları *Bağdaştırıcı*olarak adlandırılan gizli bir kapsayıcıya sahiptir. <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi için, bağdaştırıcı <xref:System.Windows.Forms.ContainerControl?displayProperty=nameWithType> sınıfından türetilir. <xref:System.Windows.Forms.Integration.ElementHost> denetimi için, bağdaştırıcı <xref:System.Windows.Controls.DockPanel> öğesinden türetilir. Diğer birlikte çalışabilirlik konularında bağdaştırıcıya yönelik başvuruları gördüğünüzde, bu kapsayıcı ele alınmıştır.  
+ Gizli bir kapsayıcı içerdikleri için, <xref:System.Windows.Forms.Integration.WindowsFormsHost> sınıfları ve <xref:System.Windows.Forms.Integration.ElementHost> çalışma yaparken karışıklık olabilir. Hem <xref:System.Windows.Forms.Integration.WindowsFormsHost> sınıflarda, <xref:System.Windows.Forms.Integration.ElementHost> içeriği barındırmak için kullandıkları *bağdaştırıcı*adı verilen gizli bir kapsayıcı vardır. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Öğe için bağdaştırıcı <xref:System.Windows.Forms.ContainerControl?displayProperty=nameWithType> sınıftan türetilmiştir. Denetim <xref:System.Windows.Forms.Integration.ElementHost> için bağdaştırıcı <xref:System.Windows.Controls.DockPanel> öğeden türetilmiştir. Diğer işlem leşme konularında bağdaştırıcıya yapılan başvuruları gördüğünüzde, bu kapsayıcı tartışılmaktadır.  
   
-<a name="nesting"></a>   
-## <a name="nesting"></a>İç içe geçirme  
- Bir <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesinin <xref:System.Windows.Forms.Integration.ElementHost> denetimi içinde iç içe geçirilmesi desteklenmez. <xref:System.Windows.Forms.Integration.WindowsFormsHost> bir öğe içinde <xref:System.Windows.Forms.Integration.ElementHost> denetiminin iç içe geçirilmesi de desteklenmez.  
+<a name="nesting"></a>
+## <a name="nesting"></a>Iç içe  
+ Bir <xref:System.Windows.Forms.Integration.WindowsFormsHost> <xref:System.Windows.Forms.Integration.ElementHost> öğenin denetimin içine yerleştirme desteklenmez. Bir <xref:System.Windows.Forms.Integration.ElementHost> <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğenin içinde bir denetim iç içe de desteklenmez.  
   
-<a name="focus"></a>   
-## <a name="focus"></a>Çı  
- Odak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve Windows Forms farklı çalışır ve bu da odak sorunlarının karma bir uygulamada gerçekleşebileceği anlamına gelir. Örneğin, bir <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesinin içine odaklandıysanız ve sayfayı en aza indirip geri yükledikten veya kalıcı iletişim kutusunu gösterdiğinizde, <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesinin içine odak kaybolabilir. <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi hala odağa sahiptir ancak içindeki denetim bu olmayabilir.  
+<a name="focus"></a>
+## <a name="focus"></a>Odak  
+ Odak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] farklı çalışır ve Windows Formlar, bu da odak sorunları karma bir uygulamada oluşabilir anlamına gelir. Örneğin, bir <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğenin içinde odağınız varsa ve sayfayı en aza indirip geri yüklediyseniz veya bir modal iletişim kutusu gösteriyorsanız, öğenin <xref:System.Windows.Forms.Integration.WindowsFormsHost> içindeki odak kaybolabilir. Öğe <xref:System.Windows.Forms.Integration.WindowsFormsHost> hala odak vardır, ancak içindeki denetim olmayabilir.  
   
- Veri doğrulama de odaklanarak etkilenir. Doğrulama bir <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesinde çalışır, ancak <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğenin dışına veya iki farklı <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi arasında sekme olarak çalışmaz.  
+ Veri doğrulama da odak etkilenir. Doğrulama bir <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğede çalışır, ancak <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğenin dışına sekme olarak veya <xref:System.Windows.Forms.Integration.WindowsFormsHost> iki farklı öğe arasında çalışmaz.  
   
-<a name="property_mapping"></a>   
-## <a name="property-mapping"></a>Özellik Eşleme  
- Bazı özellik eşlemeleri, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve Windows Forms teknolojileri arasında benzer uygulamaları köprülemek için kapsamlı bir yorum gerektirir. Özellik eşlemeleri, kodunuzun yazı tiplerinde, renklerde ve diğer özelliklerde yapılan değişikliklere tepki vermesini sağlar. Genel olarak özellik eşlemeleri, *özellik*değişmiş olayları ya da*özellik*değişmiş çağrıları dinleyerek ve alt denetimde veya bağdaştırıcısında uygun özellikleri ayarlayarak çalışır. Daha fazla bilgi için bkz. [Windows Forms ve WPF özellik eşleme](windows-forms-and-wpf-property-mapping.md).  
+<a name="property_mapping"></a>
+## <a name="property-mapping"></a>Özellik Eşlemesi  
+ Bazı özellik eşlemeleri, windows formları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] teknolojileri arasındaki farklı uygulamaları köprülemek için kapsamlı yorum gerektirir. Özellik eşlemeleri, kodunuzun yazı tiplerinde, renklerdeki ve diğer özelliklerdeki değişikliklere tepki göstermesini sağlar. Genel olarak, özellik eşlemeleri *Özellik*Değiştirilen olayları dinleyerek veya*Özellik*Değiştirildi çağrıları üzerinde dinleyerek ve çocuk denetimi veya bağdaştırıcısı üzerinde uygun özellikleri ayarlayarak çalışır. Daha fazla bilgi için [Windows Formları ve WPF Özellik Eşleme'ye](windows-forms-and-wpf-property-mapping.md)bakın.  
   
-<a name="layoutrelated_properties_on_hosted_content"></a>   
-## <a name="layout-related-properties-on-hosted-content"></a>Barındırılan Içerikte düzenle ilgili özellikler  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A?displayProperty=nameWithType> veya <xref:System.Windows.Forms.Integration.ElementHost.Child%2A?displayProperty=nameWithType> özelliği atandığında, barındırılan içerikteki bazı düzenle ilgili özellikler otomatik olarak ayarlanır. Bu içerik özelliklerini değiştirmek beklenmeyen düzen davranışlarına neden olabilir.  
+<a name="layoutrelated_properties_on_hosted_content"></a>
+## <a name="layout-related-properties-on-hosted-content"></a>Barındırılan İçerikte Düzenle İlgili Özellikler  
+ Özellik <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A?displayProperty=nameWithType> <xref:System.Windows.Forms.Integration.ElementHost.Child%2A?displayProperty=nameWithType> atandığında, barındırılan içerikteki düzenle ilgili birkaç özellik otomatik olarak ayarlanır. Bu içerik özelliklerini değiştirmek beklenmeyen düzen davranışlarına neden olabilir.  
   
- Barındırılan içeriğiniz <xref:System.Windows.Forms.Integration.WindowsFormsHost> ve üst <xref:System.Windows.Forms.Integration.ElementHost> dolduracak şekilde yerleştirildi. Bu Fill davranışını etkinleştirmek için, alt özelliği ayarladığınızda birçok özellik ayarlanır. Aşağıdaki tabloda, hangi içerik özelliklerinin <xref:System.Windows.Forms.Integration.ElementHost> ve <xref:System.Windows.Forms.Integration.WindowsFormsHost> sınıfları tarafından ayarlandığı listelenmektedir.  
+ Barındırılan içeriğiniz, üst <xref:System.Windows.Forms.Integration.WindowsFormsHost> <xref:System.Windows.Forms.Integration.ElementHost> öğeyi ve ebeveyni doldurmak için sabitlenir. Bu dolgu davranışını etkinleştirmek için, alt özelliği ayarladığınızda birkaç özellik ayarlanır. Aşağıdaki tabloda içerik özelliklerinin <xref:System.Windows.Forms.Integration.ElementHost> sınıflar <xref:System.Windows.Forms.Integration.WindowsFormsHost> ve sınıflar tarafından ayarlandığı listelenir.  
   
-|Ana bilgisayar sınıfı|İçerik özellikleri|  
+|Host Sınıf|İçerik Özellikleri|  
 |----------------|------------------------|  
 |<xref:System.Windows.Forms.Integration.ElementHost>|<xref:System.Windows.FrameworkElement.Height%2A><br /><br /> <xref:System.Windows.FrameworkElement.Width%2A><br /><br /> <xref:System.Windows.FrameworkElement.Margin%2A><br /><br /> <xref:System.Windows.FrameworkElement.VerticalAlignment%2A><br /><br /> <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>|  
 |<xref:System.Windows.Forms.Integration.WindowsFormsHost>|<xref:System.Windows.Forms.Control.Margin%2A><br /><br /> <xref:System.Windows.Forms.Control.Dock%2A><br /><br /> <xref:System.Windows.Forms.Control.AutoSize%2A><br /><br /> <xref:System.Windows.Forms.Control.Location%2A><br /><br /> <xref:System.Windows.Forms.Control.MaximumSize%2A>|  
   
- Bu özellikleri doğrudan barındırılan içerikte ayarlamayın. Daha fazla bilgi için bkz. [WindowsFormsHost öğesi Için düzen konuları](layout-considerations-for-the-windowsformshost-element.md).  
+ Bu özellikleri doğrudan barındırılan içeriğe ayarlamayın. Daha fazla bilgi [için WindowsFormsHost Öğesi için Düzen Hususları'na](layout-considerations-for-the-windowsformshost-element.md)bakın.  
   
-<a name="navigation_applications"></a>   
-## <a name="navigation-applications"></a>Gezinti uygulamaları  
- Gezinti uygulamaları Kullanıcı durumunu koruyamayabilir. <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi, bir gezinti uygulamasında kullanıldığında denetimlerini yeniden oluşturur. Kullanıcı <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesini barındıran sayfadan uzaklaştığında alt denetimleri yeniden oluşturmak oluşur ve sonra buna geri döner. Kullanıcı tarafından yazılan içerikler kaybedilir.  
+<a name="navigation_applications"></a>
+## <a name="navigation-applications"></a>Navigasyon Uygulamaları  
+ Gezinme uygulamaları kullanıcı durumunu koruyamaz. Öğe, <xref:System.Windows.Forms.Integration.WindowsFormsHost> bir gezinti uygulamasında kullanıldığında denetimlerini yeniden oluşturur. Alt denetimleri yeniden oluşturma, kullanıcı <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğeyi barındıran sayfadan uzağa gittiğinde ve sonra bu öğeye geri döndüğünde oluşur. Kullanıcı tarafından yazılan tüm içerik kaybolur.  
   
-<a name="message_loop_interoperation"></a>   
-## <a name="message-loop-interoperation"></a>İleti döngüsü birlikte çalışma  
- Windows Forms ileti döngülerinde çalışırken, iletiler beklendiği gibi işlenmeyebilir. <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> yöntemi <xref:System.Windows.Forms.Integration.WindowsFormsHost> Oluşturucusu tarafından çağrılır. Bu yöntem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ileti döngüsüne bir ileti filtresi ekler. Bu filtre, bir <xref:System.Windows.Forms.Control?displayProperty=nameWithType> iletinin hedefi ise ve iletiyi çevirdiğinde/dağıtırsa <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> yöntemini çağırır.  
+<a name="message_loop_interoperation"></a>
+## <a name="message-loop-interoperation"></a>İleti Döngüsü İnİşleyişi  
+ Windows Forms ileti döngüleri ile çalışırken, iletiler beklendiği gibi işlenmeyebilir. Yöntem <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> <xref:System.Windows.Forms.Integration.WindowsFormsHost> yapıcı tarafından çağrılır. Bu yöntem ileti döngüsüne [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir ileti filtresi ekler. Bu filtre, <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> iletinin <xref:System.Windows.Forms.Control?displayProperty=nameWithType> hedefi a ise yöntemi çağırır ve iletiyi çevirir/gönderir.  
   
- <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>ile Windows Forms ileti döngüsünde bir <xref:System.Windows.Window> gösterdiğinizde, <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> yöntemini çağırmadığınız takdirde hiçbir şey belirtemezsiniz. <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> yöntemi bir <xref:System.Windows.Window> alır ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mesajı döngüsüne anahtarla ilgili iletileri reroutes <xref:System.Windows.Forms.IMessageFilter?displayProperty=nameWithType>ekler. Daha fazla bilgi için bkz. [Windows Forms ve WPF birlikte çalışabilirlik giriş mimarisi](windows-forms-and-wpf-interoperability-input-architecture.md).  
+ Windows Forms <xref:System.Windows.Window> ileti döngüsünde bir <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>ileti döngüsü gösterirseniz, <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> yöntemi aramadığınız sürece hiçbir şey yazamazsınız. Yöntem <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> a <xref:System.Windows.Window> alır ve <xref:System.Windows.Forms.IMessageFilter?displayProperty=nameWithType>anahtarla ilgili iletileri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ileti döngüsüne yeniden yönlendirir bir , ekler. Daha fazla bilgi için [Windows Formları ve WPF Birlikte Çalışabilirlik Giriş Mimarisi'ne](windows-forms-and-wpf-interoperability-input-architecture.md)bakın.  
   
-<a name="opacity_and_layering"></a>   
-## <a name="opacity-and-layering"></a>Opaklık ve katmanlama  
- <xref:System.Windows.Interop.HwndHost> sınıfı katmanlanın desteklemez. Bu, <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesindeki <xref:System.Windows.UIElement.Opacity%2A> özelliğinin ayarının hiçbir etkisi olmadığı ve <xref:System.Windows.Window.AllowsTransparency%2A> `true`olarak ayarlanmış diğer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pencereleri ile hiçbir karıştırma gerçekleşmeyeceği anlamına gelir.  
+<a name="opacity_and_layering"></a>
+## <a name="opacity-and-layering"></a>Opaklık ve Katmanlama  
+ Sınıf <xref:System.Windows.Interop.HwndHost> katmanlamayı desteklemez. Bu, öğe <xref:System.Windows.UIElement.Opacity%2A> üzerindeki özelliği <xref:System.Windows.Forms.Integration.WindowsFormsHost> ayarlamanın hiçbir etkisi olmadığı ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window.AllowsTransparency%2A> `true`'de ayarlanan diğer pencerelerle karıştırma olmayacağı anlamına gelir.  
   
-<a name="dispose"></a>   
-## <a name="dispose"></a>'U  
- Sınıfların elden atılırken kaynakları sızmasını sağlayabilirsiniz. Karma uygulamalarınızda <xref:System.Windows.Forms.Integration.WindowsFormsHost> ve <xref:System.Windows.Forms.Integration.ElementHost> sınıflarının atıldığından emin olun ya da kaynakları sızdırabilirsiniz. Kalıcı olmayan <xref:System.Windows.Forms.Form> üst öğesi kapandığında Windows Forms <xref:System.Windows.Forms.Integration.ElementHost> denetimleri ortadan kaldırıyor. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], uygulamanız kapandığında <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğeleri ortadan kaldırır. Bir <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesini bir Windows Forms ileti döngüsünde <xref:System.Windows.Window> göstermek mümkündür. Bu durumda, kodunuz uygulamanızın kapanmakta olduğu bildirimini alamayabilir.  
+<a name="dispose"></a>
+## <a name="dispose"></a>Dispose  
+ Sınıfları düzgün bir şekilde atmamakaynakları sızdırabilir. Karma uygulamalarınızda, <xref:System.Windows.Forms.Integration.WindowsFormsHost> <xref:System.Windows.Forms.Integration.ElementHost> sınıfların elden çıkarıladığından veya kaynak sızdırdığından emin olun. Windows Forms, <xref:System.Windows.Forms.Integration.ElementHost> modal <xref:System.Windows.Forms.Form> olmayan üst öğesi kapandığında denetimleri ortadan kalar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]uygulamanız <xref:System.Windows.Forms.Integration.WindowsFormsHost> kapandığında öğeleri ortadan katabilir. Windows Forms ileti <xref:System.Windows.Forms.Integration.WindowsFormsHost> döngüsündeki <xref:System.Windows.Window> bir öğeyi göstermek mümkündür. Bu durumda, kodunuz uygulamanızın kapatılıyor bildirimi almayabilir.  
   
-<a name="enabling_visual_styles"></a>   
-## <a name="enabling-visual-styles"></a>Görsel stilleri etkinleştirme  
- Windows Forms denetimindeki Microsoft Windows XP görsel stilleri etkinleştirilmemiş olabilir. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi Windows Forms bir uygulama için şablonunda çağırılır. Bu yöntem varsayılan olarak çağrılmasa da, bir proje oluşturmak için Visual Studio kullanıyorsanız, Comctl32. dll 6,0 sürümü varsa, denetimler için Microsoft Windows XP görsel stilleri alırsınız. İş parçacığında tanıtıcıların oluşturulabilmesi için <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> yöntemini çağırmanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: karma uygulamada görsel stilleri etkinleştirme](how-to-enable-visual-styles-in-a-hybrid-application.md).  
+<a name="enabling_visual_styles"></a>
+## <a name="enabling-visual-styles"></a>Görsel Stilleri Etkinleştirme  
+ Windows Forms denetimindeki Microsoft Windows XP görsel stilleri etkinleştirilemeyebilir. Yöntem, <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Windows Forms uygulaması için şablonda çağrılır. Bu yöntem varsayılan olarak çağrılmasa da, bir proje oluşturmak için Visual Studio'yu kullanıyorsanız, Comctl32.dll sürümü 6.0 varsa denetimler için Microsoft Windows XP görsel stilleri alırsınız. İş parçacığı <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> üzerinde tutamaçları oluşturulmadan önce yöntemi aramanız gerekir. Daha fazla bilgi için [bkz: Karma Uygulamada Görsel Stilleri Etkinleştir.](how-to-enable-visual-styles-in-a-hybrid-application.md)  
   
-<a name="licensed_controls"></a>   
-## <a name="licensed-controls"></a>Lisanslı denetimler  
- Lisans bilgilerini kullanıcıya bir ileti kutusunda görüntüleyen lisanslı Windows Forms denetimleri, karma uygulama için beklenmeyen davranışlara neden olabilir. Bazı lisanslı denetimler, oluşturma tanıtıcısının yanıt olarak bir iletişim kutusu gösterir. Örneğin, lisanslı bir denetim kullanıcıya bir lisansın gerekli olduğunu veya kullanıcının bu denetimin üç deneme sürümünü kullandığını bildirebilir.  
+<a name="licensed_controls"></a>
+## <a name="licensed-controls"></a>Lisanslı Kontroller  
+ Lisanslı Windows Forms, kullanıcıya ileti kutusunda lisans bilgilerini görüntüleyen denetimleri karma bir uygulama için beklenmeyen davranışlara neden olabilir. Bazı lisanslı denetimler, oluşturma yı işlemek için yanıt olarak bir iletişim kutusu gösterir. Örneğin, lisanslı denetim kullanıcıya bir lisansın gerekli olduğunu veya kullanıcının denetimin kalan üç deneme sürümü ne olduğunu bildirebilir.  
   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi <xref:System.Windows.Interop.HwndHost> sınıfından türetilir ve alt denetimin tanıtıcısı <xref:System.Windows.Forms.Integration.WindowsFormsHost.BuildWindowCore%2A> yöntemi içinde oluşturulur. <xref:System.Windows.Interop.HwndHost> sınıfı iletilerin <xref:System.Windows.Forms.Integration.WindowsFormsHost.BuildWindowCore%2A> yönteminde işlenmesine izin vermez, ancak bir iletişim kutusunun görüntülenmesi iletilerin gönderilmesine neden olur. Bu lisans senaryosunu etkinleştirmek için, <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesinin alt öğesi olarak atamadan önce denetimdeki <xref:System.Windows.Forms.Control.CreateControl%2A?displayProperty=nameWithType> yöntemini çağırın.  
+ Öğe <xref:System.Windows.Forms.Integration.WindowsFormsHost> <xref:System.Windows.Interop.HwndHost> sınıftan türetilir ve alt denetimin tutamacı <xref:System.Windows.Forms.Integration.WindowsFormsHost.BuildWindowCore%2A> yöntemin içinde oluşturulur. Sınıf <xref:System.Windows.Interop.HwndHost> iletilerin <xref:System.Windows.Forms.Integration.WindowsFormsHost.BuildWindowCore%2A> yöntemde işlenmesine izin vermez, ancak iletişim kutusu nun görüntülenmesi iletilerin gönderilmesine neden olur. Bu lisans senaryosunu etkinleştirmek <xref:System.Windows.Forms.Control.CreateControl%2A?displayProperty=nameWithType> için, <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğenin alt öğesi olarak atamadan önce denetim yöntemini arayın.  
   
-<a name="wpf_designer"></a>   
+<a name="wpf_designer"></a>
 ## <a name="wpf-designer"></a>WPF Tasarımcısı  
- Visual Studio için WPF Tasarımcısı 'nı kullanarak WPF içeriğinizi tasarlayabilirsiniz. Aşağıdaki bölümlerde, WPF Tasarımcısı ile karma uygulamalar yazarken oluşabilecek bazı yaygın sorunlar listelenmektedir.  
+ WPF içeriğinizi Visual Studio için WPF Designer'ı kullanarak tasarlayabilirsiniz. Aşağıdaki bölümlerde WPF Tasarımcısı ile karma uygulamalar yazarken oluşabilecek bazı sık karşılaşılan sorunlar listelenerilmiştir.  
   
-### <a name="backcolortransparent-is-ignored-at-design-time"></a>BackColorTransparent, tasarım zamanında yoksayılıyor  
- <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> özelliği tasarım zamanında beklendiği gibi çalışmayabilir.  
+### <a name="backcolortransparent-is-ignored-at-design-time"></a>BackColorTransparent tasarım zamanda göz ardı edilir  
+ Özellik <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> tasarım zamanında beklendiği gibi çalışmayabilir.  
   
- WPF denetimi görünür bir üst öğede değilse, WPF çalışma zamanı <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> değerini yoksayar. <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> yok sayılabilir olmasının nedeni, <xref:System.Windows.Forms.Integration.ElementHost> nesnenin ayrı bir <xref:System.AppDomain>oluşturulması olabilir. Ancak, uygulamayı çalıştırdığınızda <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> beklendiği gibi çalışır.  
+ WPF denetimi görünür bir üst öğede değilse, WPF <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> çalışma zamanı değeri yoksa. Göz ardı <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> edilebilir nedeni <xref:System.Windows.Forms.Integration.ElementHost> nesne ayrı <xref:System.AppDomain>bir . Ancak, uygulamayı çalıştırdığınızda, <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> beklendiği gibi çalışır.  
   
-### <a name="design-time-error-list-appears-when-the-obj-folder-is-deleted"></a>Tasarım Zamanı Hata Listesi obj klasörü silindiğinde görüntülenir  
- Obj klasörü silinirse, Tasarım Zamanı Hata Listesi görüntülenir.  
+### <a name="design-time-error-list-appears-when-the-obj-folder-is-deleted"></a>Obj klasörü silindiğinde tasarım zamanı Hata Listesi görüntülenir  
+ OBJ klasörü silinirse, Tasarım zamanı Hata Listesi görüntülenir.  
   
- <xref:System.Windows.Forms.Integration.ElementHost>kullanarak tasarladığınızda Windows Form Tasarımcısı, projenin obj klasöründeki hata ayıklama veya yayınlama klasöründe oluşturulan dosyaları kullanır. Bu dosyaları silerseniz tasarım zamanı Hata Listesi görüntülenir. Bu sorunu gidermek için projenizi yeniden derleyin. Daha fazla bilgi için bkz. [Windows Form Tasarımcısı tasarım zamanı hataları](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md).  
+ Windows Forms <xref:System.Windows.Forms.Integration.ElementHost>Designer kullanarak tasarım yaparken, Projenizin obj klasöründe Hata Ayıklama veya Sürüm klasöründe oluşturulan dosyaları kullanır. Bu dosyaları silerseniz, Tasarım zamanı Hata Listesi görüntülenir. Bu sorunu gidermek için projenizi yeniden oluşturun. Daha fazla bilgi için [Windows Forms Designer'daki Tasarım-Zaman Hataları bölümüne](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)bakın.  
   
-<a name="elementhost_and_ime"></a>   
+<a name="elementhost_and_ime"></a>
 ## <a name="elementhost-and-ime"></a>ElementHost ve IME  
- Şu anda <xref:System.Windows.Forms.Integration.ElementHost> barındırılan WPF denetimleri <xref:System.Windows.Forms.Control.ImeMode%2A> özelliğini desteklemiyor. <xref:System.Windows.Forms.Control.ImeMode%2A> yapılan değişiklikler barındırılan denetimler tarafından yok sayılacak.  
+ <xref:System.Windows.Forms.Integration.ElementHost> WPF denetimleri şu anda <xref:System.Windows.Forms.Control.ImeMode%2A> özelliği desteklemiyor. <xref:System.Windows.Forms.Control.ImeMode%2A> Değişiklikler barındırılan denetimler tarafından yoksayılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [WPF Tasarımcısında birlikte çalışabilirlik](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
+- [WPF Tasarımcısı'nda birlikte çalışabilirlik](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
 - [Windows Forms ve WPF Birlikte Çalışabilirlik Giriş Mimarisi](windows-forms-and-wpf-interoperability-input-architecture.md)
 - [Nasıl yapılır: Karma Uygulamada Görsel Stilleri Etkinleştirme](how-to-enable-visual-styles-in-a-hybrid-application.md)
 - [WindowsFormsHost Öğesi için Düzen Konusunda Dikkat Edilmesi Gereken Noktalar](layout-considerations-for-the-windowsformshost-element.md)
 - [Windows Forms ve WPF Özelliğini Eşleme](windows-forms-and-wpf-property-mapping.md)
-- [Windows Forms Tasarımcısında Tasarım Zamanı Hataları](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
+- [Windows Formları Tasarımcısında Tasarım Zamanı Hataları](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
 - [Geçiş ve Birlikte Çalışabilirlik](migration-and-interoperability.md)

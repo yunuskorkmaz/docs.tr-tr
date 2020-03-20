@@ -5,71 +5,71 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: bd1a52f1ce0f656af79928a20e3badc73661e89a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1d1eaa1ebf41ef86478dda795b3b199239cd37b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635299"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184940"
 ---
 # <a name="how-to-enable-streaming"></a>Nasıl yapılır: Akışı Etkinleştirme
-Windows Communication Foundation (WCF) iletilerini arabelleğe alınan ya da akış aktarımları kullanarak gönderebilirsiniz. Bir alıcı okumadan önce varsayılan arabelleğe alınan aktarım modunda bir ileti tamamen teslim edilmelidir. Aktarım modunu akışında alıcı tamamen teslim edilmeden önce iletiyi işlemeye başlayabilirsiniz. Akış modunda iletilen bilgiler uzun ve seri olarak işlenebilecek yararlı olur. Akış modunda de, ileti tamamen arabelleğe çok büyük olduğunda yararlıdır.  
+Windows Communication Foundation (WCF), arabelleğe alınan veya akışlı aktarımları kullanarak ileti gönderebilir. Varsayılan arabelleğe alınan aktarım modunda, bir iletinin bir alıcının okuyabilmesi için tamamen teslim edilmesi gerekir. Akış aktarım modunda, alıcı iletiyi tamamen teslim edilmeden önce işlemeye başlayabilir. Akış modu, geçirilen bilgiler uzun olduğunda ve seri olarak işlenebilirse yararlıdır. Akış modu, ileti tamamen arabelleğe alınamayacak kadar büyükolduğunda da kullanışlıdır.  
   
- Akışını etkinleştirmek için tanımladığınız `OperationContract` uygun şekilde ve akış taşıma düzeyinde etkinleştirin.  
+ Akışı etkinleştirmek için, uygun şekilde tanımlayın `OperationContract` ve aktarım düzeyinde akışı etkinleştirin.  
   
-### <a name="to-stream-data"></a>Akış verileri  
+### <a name="to-stream-data"></a>Veri akışı için  
   
-1. Veri akışı `OperationContract` için hizmeti iki gereksinimleri karşılaması gerekir:  
+1. Veri akışı için, hizmet `OperationContract` için iki gereksinimi karşılamalıdır:  
   
-    1. Akışla verileri tutan parametresi, yöntemin tek parametre olmalıdır. Örneğin, giriş iletisine akışla birine ise, işlemi tam olarak bir girdi parametreniz olmalıdır. Benzer şekilde, çıktı iletisi akışını ise işlemi tam olarak bir çıkış parametresi ya da dönüş değeri olması gerekir.  
+    1. Akışlanacak verileri tutan parametre yöntemdeki tek parametre olmalıdır. Örneğin, giriş iletisi akış için bir işlem varsa, işlem tam olarak bir giriş parametresi olmalıdır. Benzer şekilde, çıktı iletisi akış olacaksa, işlemin tam olarak bir çıkış parametresi veya bir iade değeri olmalıdır.  
   
-    2. En az bir parametre ve dönüş değeri türlerini olmalıdır ya da <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, veya <xref:System.Xml.Serialization.IXmlSerializable>.  
+    2. Parametre ve iade değeri türlerinden en az <xref:System.IO.Stream>biri <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.Serialization.IXmlSerializable>, veya .  
   
-     Akış veri sözleşme örneği verilmiştir.  
+     Aşağıda, akışlı veriler için bir sözleşme örneği verilmiştir.  
   
      [!code-csharp[c_HowTo_EnableStreaming#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#1)]
      [!code-vb[c_HowTo_EnableStreaming#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#1)]  
   
-     `GetStream` İşlemi arabelleğe alınan bazı girdi verisi olarak aldığı bir `string`, arabelleğe alınıp ve döndürür bir `Stream`, hangi akış. Buna karşılık `UploadStream` alır bir `Stream` (akış) ve döndüren bir `bool` (arabelleğe). `EchoStream` alan ve döndüren `Stream` işlem girişi örneğidir ve çıkış iletileri hem de akış. Son olarak, `GetReversedStream` giriş alan ve döndüren bir `Stream` (akış).  
+     İşlem, `GetStream` arabelleğe alınan bazı arabelleğe alınan giriş verilerini `string`, `Stream`arabelleğe alınan bir , olarak alır ve akışlı bir , döndürür. Tersine `UploadStream` bir `Stream` (akış) alır ve `bool` bir (arabelleğe alındı) döndürür. `EchoStream`alır ve `Stream` döndürür ve giriş ve çıktı iletileri hem akış lı bir işlem örneğidir. Son `GetReversedStream` olarak, hiçbir giriş `Stream` alır ve bir (akış) döndürür.  
   
-2. Akış bağlamadaki etkinleştirilmesi gerekir. Ayarladığınız bir `TransferMode` özelliği şu değerlerden birini alabilir:  
+2. Bağlamada akış etkinleştirilmelidir. Aşağıdaki değerlerden birini alabilecek bir `TransferMode` özellik ayarlarsınız:  
   
     1. `Buffered`,  
   
-    2. `Streamed`, her iki yönde de akış iletişimi sağlar.  
+    2. `Streamed`, her iki yönde de iletişim akışı sağlar.  
   
-    3. `StreamedRequest`, yalnızca istek akışı etkinleştirir.  
+    3. `StreamedRequest`, yalnızca isteği akışı sağlar.  
   
-    4. `StreamedResponse`, yalnızca yanıt akışı etkinleştirir.  
+    4. `StreamedResponse`, yalnızca yanıtAkışını sağlar.  
   
-     `BasicHttpBinding` Sunan `TransferMode` aynı bağlama özelliğinin `NetTcpBinding` ve `NetNamedPipeBinding`. `TransferMode` Özelliği ayrıca aktarım bağlama öğede ayarlama ve kullanılan özel bir bağlama.  
+     Bağlama `BasicHttpBinding` özelliğini `TransferMode` ortaya çıkarır, yaptığı `NetTcpBinding` `NetNamedPipeBinding`gibi ve . Özellik, `TransferMode` aktarım bağlama öğesi üzerinde de ayarlanabilir ve özel bir bağlama da kullanılabilir.  
   
-     Aşağıdaki örnekler nasıl belirleyeceğinizi `TransferMode` kod ve yapılandırma dosyasını değiştirerek. Her ikisi de ayarlanmış örnekleri `maxReceivedMessageSize` yerleştirir iletileri izin verilen en büyük boyutu için üst sınır 64 MB özelliğini alır. Varsayılan `maxReceivedMessageSize` genellikle akış senaryoları için düşükse, 64 KB ' tır. Bu kota ayarı iletileri almak için uygulamanızı bekliyor en büyük boyutuna bağlı olarak uygun şekilde ayarlayın. Ayrıca `maxBufferSize` arabelleğe alınır ve uygun şekilde ayarlanmış maksimum boyutu denetler.  
+     Aşağıdaki örnekler, koda `TransferMode` göre ve yapılandırma dosyasını değiştirerek nasıl ayarlanır gösterin. Örneklerin her ikisi `maxReceivedMessageSize` de özelliği 64 MB olarak ayarlar ve bu da alınan iletilerin izin verilen maksimum boyutuna bir kapak yerleştirir. Varsayılan `maxReceivedMessageSize` 64 KB, genellikle çok düşük akış senaryoları için. Bu kota ayarını, uygulamanızın almayı beklediği maksimum ileti boyutuna bağlı olarak uygun şekilde ayarlayın. Arabelleğe `maxBufferSize` alınan maksimum boyutu denetler ve uygun şekilde ayarlayın.  
   
-    1. Ayar örneği aşağıdaki yapılandırma parçacığından gösterir `TransferMode` üzerinde akış özelliği `basicHttpBinding` ve özel bir HTTP bağlaması.  
+    1. Örnekten aşağıdaki yapılandırma parçacığı, `TransferMode` özelliği akışa `basicHttpBinding` ve özel bir HTTP bağlamaya ayarlayışgösterir.  
   
-         [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]   
+         [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]
   
-    2. Aşağıdaki kod parçacığı ayarını gösterir `TransferMode` üzerinde akış özelliği `basicHttpBinding` ve özel bir HTTP bağlaması.  
+    2. Aşağıdaki kod snippet `TransferMode` `basicHttpBinding` ve özel bir HTTP bağlama üzerinde akış özelliği ayarı gösterir.  
   
          [!code-csharp[c_HowTo_EnableStreaming_code#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming_code/cs/c_howto_enablestreaming_code.cs#2)]
          [!code-vb[c_HowTo_EnableStreaming_code#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming_code/vb/c_howto_enablestreaming_code.vb#2)]  
   
-    3. Aşağıdaki kod parçacığı ayarını gösterir `TransferMode` özel TCP bağlamada akış özelliği.  
+    3. Aşağıdaki kod snippet özel `TransferMode` bir TCP bağlama üzerinde akış özelliği ayarı gösterir.  
   
          [!code-csharp[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming_code/cs/c_howto_enablestreaming_code.cs#3)]
          [!code-vb[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming_code/vb/c_howto_enablestreaming_code.vb#3)]  
   
-3. İşlemleri `GetStream`, `UploadStream`, ve `EchoStream` tüm baş doğrudan bir dosyadan veri gönderen veya alınan verileri bir dosyaya kaydetme. Aşağıdaki kod içindir `GetStream`.  
+3. İşlemler `GetStream` `UploadStream`ve `EchoStream` tüm işlemler, doğrudan bir dosyadan veri gönderme veya alınan verileri doğrudan bir dosyaya kaydetme ile ilgilenir. Aşağıdaki kod `GetStream`.  
   
      [!code-csharp[c_HowTo_EnableStreaming#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#4)]
      [!code-vb[c_HowTo_EnableStreaming#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#4)]  
   
-### <a name="writing-a-custom-stream"></a>Özel bir akış yazma  
+### <a name="writing-a-custom-stream"></a>Özel akış yazma  
   
-1. Bunu gönderildiği sırada bir veri akışı, her bir öbeği özel işleme yapmak veya alınan özel akış sınıfından türetilen <xref:System.IO.Stream>. Özel bir akışa ilişkin bir örnek olarak, aşağıdaki kodu içeren bir `GetReversedStream` yöntemi ve bir `ReverseStream` sınıfı-.  
+1. Bir veri akışının gönderildiği veya alındığı her yığın da özel işleme yapmak için, 'den <xref:System.IO.Stream>özel bir akış sınıfı türetmek. Özel bir akış örneği olarak, aşağıdaki `GetReversedStream` kod bir `ReverseStream` yöntem ve bir sınıf içerir.  
   
-     `GetReversedStream` oluşturur ve yeni bir örneğini döndürür `ReverseStream`. Sistem okur gibi gerçek işleme olur `ReverseStream` nesne. `ReverseStream.Read` Yöntemi bayt öbeğini temel alınan dosyadan okur, bunları tersine çevirir ve sonra ters bayt sayısını döndürür. Bu yöntem, tüm dosya içeriğini ters değil; bir kerede bir bayt bir öbek tersine çevirir. Bu örnek, içeriği olarak akış işlemede nasıl gerçekleştirebileceğiniz gösterir akıştan yazılamaz veya okunamaz için okuyun.  
+     `GetReversedStream`yeni bir örnek oluşturur `ReverseStream`ve döndürür. Gerçek işleme, sistem `ReverseStream` nesneden okurken gerçekleşir. Yöntem, `ReverseStream.Read` alttaki dosyadan bayt bir yığın okur, bunları tersine çevirir ve ters bayt döndürür. Bu yöntem, dosya içeriğinin tamamını tersine çevirmez; bir seferde bir bayt parçasını tersine çevirir. Bu örnek, içerik akışa okunurken veya akıştan yazılırken akış işlemeyi nasıl gerçekleştirebileceğinizi gösterir.  
   
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
