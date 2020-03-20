@@ -12,21 +12,21 @@ helpviewer_keywords:
 - check boxes [Windows Forms], using to set options
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-ms.openlocfilehash: 84198eab42aa02b1bb37fa16a3c4247a37f58a10
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 00b467836d8e60aeee51a010a6384abf7dd73c56
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746771"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141854"
 ---
-# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a><span data-ttu-id="4501c-102">Nasıl yapılır: Windows Forms CheckBox Denetimleriyle Seçenekleri Ayarlama</span><span class="sxs-lookup"><span data-stu-id="4501c-102">How to: Set Options with Windows Forms CheckBox Controls</span></span>
-<span data-ttu-id="4501c-103">Bir Windows Forms <xref:System.Windows.Forms.CheckBox> denetimi, kullanıcılara doğru/yanlış veya Evet/Hayır seçenekleri sağlamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="4501c-103">A Windows Forms <xref:System.Windows.Forms.CheckBox> control is used to give users True/False or Yes/No options.</span></span> <span data-ttu-id="4501c-104">Seçildiğinde Denetim onay işareti görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="4501c-104">The control displays a check mark when it is selected.</span></span>  
+# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a><span data-ttu-id="5aed0-102">Nasıl yapılır: Windows Forms CheckBox Denetimleriyle Seçenekleri Ayarlama</span><span class="sxs-lookup"><span data-stu-id="5aed0-102">How to: Set Options with Windows Forms CheckBox Controls</span></span>
+<span data-ttu-id="5aed0-103">Windows Forms <xref:System.Windows.Forms.CheckBox> denetimi, kullanıcılara True/False veya Yes/No seçeneklerini vermek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="5aed0-103">A Windows Forms <xref:System.Windows.Forms.CheckBox> control is used to give users True/False or Yes/No options.</span></span> <span data-ttu-id="5aed0-104">Denetim seçildiğinde bir onay işareti görüntüler.</span><span class="sxs-lookup"><span data-stu-id="5aed0-104">The control displays a check mark when it is selected.</span></span>  
   
-### <a name="to-set-options-with-checkbox-controls"></a><span data-ttu-id="4501c-105">Seçenekleri CheckBox denetimleriyle ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="4501c-105">To set options with CheckBox controls</span></span>  
+### <a name="to-set-options-with-checkbox-controls"></a><span data-ttu-id="5aed0-105">Onay Kutusu denetimleriyle seçenekleri ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="5aed0-105">To set options with CheckBox controls</span></span>  
   
-1. <span data-ttu-id="4501c-106"><xref:System.Windows.Forms.CheckBox.Checked%2A> özelliğinin değerini inceleyerek durumunu belirleyin ve bu değeri bir seçenek ayarlamak için kullanın.</span><span class="sxs-lookup"><span data-stu-id="4501c-106">Examine the value of the <xref:System.Windows.Forms.CheckBox.Checked%2A> property to determine its state, and use that value to set an option.</span></span>  
+1. <span data-ttu-id="5aed0-106">Durumunu belirlemek için <xref:System.Windows.Forms.CheckBox.Checked%2A> özelliğin değerini inceleyin ve bir seçenek ayarlamak için bu değeri kullanın.</span><span class="sxs-lookup"><span data-stu-id="5aed0-106">Examine the value of the <xref:System.Windows.Forms.CheckBox.Checked%2A> property to determine its state, and use that value to set an option.</span></span>  
   
-     <span data-ttu-id="4501c-107">Aşağıdaki kod örneğinde, <xref:System.Windows.Forms.CheckBox> denetimin <xref:System.Windows.Forms.CheckBox.CheckedChanged> olayı harekete geçirilir, onay kutusu işaretliyse formun <xref:System.Windows.Forms.Control.AllowDrop%2A> özelliği `false` olarak ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="4501c-107">In the code sample below, when the <xref:System.Windows.Forms.CheckBox> control's <xref:System.Windows.Forms.CheckBox.CheckedChanged> event is raised, the form's <xref:System.Windows.Forms.Control.AllowDrop%2A> property is set to `false` if the check box is checked.</span></span> <span data-ttu-id="4501c-108">Bu, kullanıcı etkileşimini kısıtlamak istediğiniz durumlar için yararlıdır.</span><span class="sxs-lookup"><span data-stu-id="4501c-108">This is useful for situations where you want to restrict user interaction.</span></span>  
+     <span data-ttu-id="5aed0-107">Aşağıdaki kod örneğinde, <xref:System.Windows.Forms.CheckBox> denetimin <xref:System.Windows.Forms.CheckBox.CheckedChanged> olayı yükseltildiğinde, onay <xref:System.Windows.Forms.Control.AllowDrop%2A> kutusu `false` işaretlenirse formun özelliği ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="5aed0-107">In the code sample below, when the <xref:System.Windows.Forms.CheckBox> control's <xref:System.Windows.Forms.CheckBox.CheckedChanged> event is raised, the form's <xref:System.Windows.Forms.Control.AllowDrop%2A> property is set to `false` if the check box is checked.</span></span> <span data-ttu-id="5aed0-108">Bu, kullanıcı etkileşimini kısıtlamak istediğiniz durumlar için yararlıdır.</span><span class="sxs-lookup"><span data-stu-id="5aed0-108">This is useful for situations where you want to restrict user interaction.</span></span>  
   
     ```vb  
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, _  
@@ -43,7 +43,7 @@ ms.locfileid: "76746771"
     private void checkBox1_CheckedChanged(object sender, System.EventArgs e)  
     {  
        // Determine the CheckState of the check box.  
-       if (checkBox1.CheckState == CheckState.Checked)   
+       if (checkBox1.CheckState == CheckState.Checked)
        {  
           // If checked, do not allow items to be dragged onto the form.  
           this.AllowDrop = false;  
@@ -57,7 +57,7 @@ ms.locfileid: "76746771"
           System::EventArgs ^ e)  
        {  
           // Determine the CheckState of the check box.  
-          if (checkBox1->CheckState == CheckState::Checked)   
+          if (checkBox1->CheckState == CheckState::Checked)
           {  
              // If checked, do not allow items to be dragged onto the form.  
              this->AllowDrop = false;  
@@ -65,9 +65,9 @@ ms.locfileid: "76746771"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="4501c-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4501c-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5aed0-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5aed0-109">See also</span></span>
 
 - <xref:System.Windows.Forms.CheckBox>
-- [<span data-ttu-id="4501c-110">CheckBox Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="4501c-110">CheckBox Control Overview</span></span>](checkbox-control-overview-windows-forms.md)
-- [<span data-ttu-id="4501c-111">Nasıl yapılır: Windows Forms CheckBox Tıklamalarına Yanıt Verme</span><span class="sxs-lookup"><span data-stu-id="4501c-111">How to: Respond to Windows Forms CheckBox Clicks</span></span>](how-to-respond-to-windows-forms-checkbox-clicks.md)
-- [<span data-ttu-id="4501c-112">CheckBox Denetimi</span><span class="sxs-lookup"><span data-stu-id="4501c-112">CheckBox Control</span></span>](checkbox-control-windows-forms.md)
+- [<span data-ttu-id="5aed0-110">CheckBox Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="5aed0-110">CheckBox Control Overview</span></span>](checkbox-control-overview-windows-forms.md)
+- [<span data-ttu-id="5aed0-111">Nasıl yapılır: Windows Forms CheckBox Tıklamalarına Yanıt Verme</span><span class="sxs-lookup"><span data-stu-id="5aed0-111">How to: Respond to Windows Forms CheckBox Clicks</span></span>](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [<span data-ttu-id="5aed0-112">CheckBox Denetimi</span><span class="sxs-lookup"><span data-stu-id="5aed0-112">CheckBox Control</span></span>](checkbox-control-windows-forms.md)

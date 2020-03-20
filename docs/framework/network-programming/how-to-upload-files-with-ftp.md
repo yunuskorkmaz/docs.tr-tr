@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: FTP ile dosyaları karşıya yükleme'
-description: Bu makalede, bir FTP sunucusuna bir dosya karşıya yükleme örneği gösterilmektedir.
+title: 'Nasıl yapılır: FTP ile dosya yükleme'
+description: Bu makalede, ftp sunucusuna dosya yükleme nin bir örneği gösterilmektedir.
 ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: e40f17c5-dd12-4c62-9dbf-00ab491382dc
 ms.openlocfilehash: 670bbc65078e6530cffbcfa7d324c36238014ffb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "65632816"
 ---
-# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="72388-103">Nasıl yapılır: FTP ile dosyaları karşıya yükleme</span><span class="sxs-lookup"><span data-stu-id="72388-103">How to: Upload files with FTP</span></span>
+# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="c6619-103">Nasıl yapılır: FTP ile dosya yükleme</span><span class="sxs-lookup"><span data-stu-id="c6619-103">How to: Upload files with FTP</span></span>
 
-<span data-ttu-id="72388-104">Bu örnek, bir FTP sunucusuna bir dosya karşıya yükleme işlemini gösterir.</span><span class="sxs-lookup"><span data-stu-id="72388-104">This sample shows how to upload a file to an FTP server.</span></span>
+<span data-ttu-id="c6619-104">Bu örnek, bir FTP sunucusuna dosyanın nasıl yüklendiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="c6619-104">This sample shows how to upload a file to an FTP server.</span></span>
 
-## <a name="example"></a><span data-ttu-id="72388-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="72388-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c6619-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="c6619-105">Example</span></span>
 
 ```csharp
 using System;

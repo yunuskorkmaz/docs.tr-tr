@@ -12,22 +12,22 @@ helpviewer_keywords:
 - ToolStripComboBox class [Windows Forms], examples
 - ToolStrip control [Windows Forms], AutoComplete
 ms.assetid: fd66d085-1af1-45d4-930a-cde944da2e16
-ms.openlocfilehash: db411023ad624e4c3d60b09bdbd588c85f8e22d1
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 18b17aaea9d2354c03bb43f3fdd8d3779697cf58
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745510"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142024"
 ---
-# <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a><span data-ttu-id="ae1d1-102">Nasıl yapılır: Windows Forms'ta ToolStrip Denetimlerinde AutoComplete Seçeneğini Etkinleştirme</span><span class="sxs-lookup"><span data-stu-id="ae1d1-102">How to: Enable AutoComplete in ToolStrip Controls in Windows Forms</span></span>
-<span data-ttu-id="ae1d1-103">Aşağıdaki yordam, son ziyaret edilen web siteleri gibi öğelerin bir listesini göstermek üzere bırakılmış bir <xref:System.Windows.Forms.ToolStripComboBox> <xref:System.Windows.Forms.ToolStripLabel> birleştirir.</span><span class="sxs-lookup"><span data-stu-id="ae1d1-103">The following procedure combines a <xref:System.Windows.Forms.ToolStripLabel> with a <xref:System.Windows.Forms.ToolStripComboBox> that can be dropped down to show a list of items, such as recently visited Web sites.</span></span> <span data-ttu-id="ae1d1-104">Kullanıcı listedeki öğelerden birinin ilk karakteriyle eşleşen bir karakter yazdığında, öğe hemen görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="ae1d1-104">If the user types a character that matches the first character of one of the items in the list, the item is immediately displayed.</span></span>  
+# <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a><span data-ttu-id="46f17-102">Nasıl yapılır: Windows Forms'ta ToolStrip Denetimlerinde AutoComplete Seçeneğini Etkinleştirme</span><span class="sxs-lookup"><span data-stu-id="46f17-102">How to: Enable AutoComplete in ToolStrip Controls in Windows Forms</span></span>
+<span data-ttu-id="46f17-103">Aşağıdaki yordam, yakın <xref:System.Windows.Forms.ToolStripLabel> zamanda <xref:System.Windows.Forms.ToolStripComboBox> ziyaret edilen Web siteleri gibi öğelerin listesini göstermek için bırakılabilen bir ile birleştirir.</span><span class="sxs-lookup"><span data-stu-id="46f17-103">The following procedure combines a <xref:System.Windows.Forms.ToolStripLabel> with a <xref:System.Windows.Forms.ToolStripComboBox> that can be dropped down to show a list of items, such as recently visited Web sites.</span></span> <span data-ttu-id="46f17-104">Kullanıcı, listedeki öğelerden birinin ilk karakteriyle eşleşen bir karakter sınıfa çıkarsa, öğe hemen görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="46f17-104">If the user types a character that matches the first character of one of the items in the list, the item is immediately displayed.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="ae1d1-105">Otomatik tamamlama, `ToolStrip` denetimleriyle birlikte çalışarak <xref:System.Windows.Forms.ComboBox> ve <xref:System.Windows.Forms.TextBox>gibi geleneksel denetimlerle çalıştığı şekilde çalışacaktır.</span><span class="sxs-lookup"><span data-stu-id="ae1d1-105">Automatic completion works with `ToolStrip` controls in the same way that it works with traditional controls such as <xref:System.Windows.Forms.ComboBox> and <xref:System.Windows.Forms.TextBox>.</span></span>  
+> <span data-ttu-id="46f17-105">Otomatik tamamlama `ToolStrip` gibi geleneksel kontroller <xref:System.Windows.Forms.ComboBox> ile çalıştığı gibi aynı <xref:System.Windows.Forms.TextBox>şekilde kontrolleri ile çalışır.</span><span class="sxs-lookup"><span data-stu-id="46f17-105">Automatic completion works with `ToolStrip` controls in the same way that it works with traditional controls such as <xref:System.Windows.Forms.ComboBox> and <xref:System.Windows.Forms.TextBox>.</span></span>  
   
-### <a name="to-enable-autocomplete-in-a-toolstrip-control"></a><span data-ttu-id="ae1d1-106">ToolStrip denetiminde otomatik tamamlamayı etkinleştirmek için</span><span class="sxs-lookup"><span data-stu-id="ae1d1-106">To enable AutoComplete in a ToolStrip control</span></span>  
+### <a name="to-enable-autocomplete-in-a-toolstrip-control"></a><span data-ttu-id="46f17-106">ToolStrip denetiminde Otomatik Tamamlama'yı etkinleştirmek için</span><span class="sxs-lookup"><span data-stu-id="46f17-106">To enable AutoComplete in a ToolStrip control</span></span>  
   
-1. <span data-ttu-id="ae1d1-107"><xref:System.Windows.Forms.ToolStrip> bir denetim oluşturun ve buna öğe ekleyin.</span><span class="sxs-lookup"><span data-stu-id="ae1d1-107">Create a <xref:System.Windows.Forms.ToolStrip> control and add items to it.</span></span>  
+1. <span data-ttu-id="46f17-107">Bir <xref:System.Windows.Forms.ToolStrip> denetim oluşturun ve buna öğeler ekleyin.</span><span class="sxs-lookup"><span data-stu-id="46f17-107">Create a <xref:System.Windows.Forms.ToolStrip> control and add items to it.</span></span>  
   
     ```vb  
     ToolStrip1 = New System.Windows.Forms.ToolStrip  
@@ -37,11 +37,11 @@ ms.locfileid: "76745510"
   
     ```csharp  
     toolStrip1 = new System.Windows.Forms.ToolStrip();  
-    toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[]   
+    toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[]
         {toolStripLabel1, toolStripComboBox1});  
     ```  
   
-2. <span data-ttu-id="ae1d1-108">Listenin, form boyutundan bağımsız olarak her zaman kullanılabilir olması için etiketin ve Birleşik giriş kutusunun <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> özelliğini <xref:System.Windows.Forms.ToolStripItemOverflow.Never> olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="ae1d1-108">Set the <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> property of the label and the combo box to <xref:System.Windows.Forms.ToolStripItemOverflow.Never> so that the list is always available regardless of the form's size.</span></span>  
+2. <span data-ttu-id="46f17-108">Etiketin <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> ve açılan kutunun <xref:System.Windows.Forms.ToolStripItemOverflow.Never> özelliğini, formun boyutundan bağımsız olarak listenin her zaman kullanılabilir olması için ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="46f17-108">Set the <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> property of the label and the combo box to <xref:System.Windows.Forms.ToolStripItemOverflow.Never> so that the list is always available regardless of the form's size.</span></span>  
   
     ```vb  
     ToolStripLabel1.Overflow = _  
@@ -56,7 +56,7 @@ ms.locfileid: "76745510"
     toolStripComboBox1.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never  
     ```  
   
-3. <span data-ttu-id="ae1d1-109"><xref:System.Windows.Forms.ToolStripComboBox> denetiminin Items koleksiyonuna sözcükler ekleyin.</span><span class="sxs-lookup"><span data-stu-id="ae1d1-109">Add words to the Items collection of the <xref:System.Windows.Forms.ToolStripComboBox> control.</span></span>  
+3. <span data-ttu-id="46f17-109">Denetimin Öğeler koleksiyonuna <xref:System.Windows.Forms.ToolStripComboBox> sözcükler ekleyin.</span><span class="sxs-lookup"><span data-stu-id="46f17-109">Add words to the Items collection of the <xref:System.Windows.Forms.ToolStripComboBox> control.</span></span>  
   
     ```vb  
     ToolStripComboBox1.Items.AddRange(New Object() {"First Item", _  
@@ -67,7 +67,7 @@ ms.locfileid: "76745510"
     toolStripComboBox1.Items.AddRange(new object[] {"First item", "Second item", "Third item"});  
     ```  
   
-4. <span data-ttu-id="ae1d1-110">Birleşik giriş kutusunun <xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A> özelliğini <xref:System.Windows.Forms.AutoCompleteMode.Append>olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="ae1d1-110">Set the <xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A> property of the combo box to <xref:System.Windows.Forms.AutoCompleteMode.Append>.</span></span>  
+4. <span data-ttu-id="46f17-110">Açılan <xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A> kutunun özelliğini <xref:System.Windows.Forms.AutoCompleteMode.Append>.</span><span class="sxs-lookup"><span data-stu-id="46f17-110">Set the <xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A> property of the combo box to <xref:System.Windows.Forms.AutoCompleteMode.Append>.</span></span>  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteMode = _  
@@ -78,7 +78,7 @@ ms.locfileid: "76745510"
     toolStripComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;  
     ```  
   
-5. <span data-ttu-id="ae1d1-111">Birleşik giriş kutusunun <xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A> özelliğini <xref:System.Windows.Forms.AutoCompleteSource.ListItems>olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="ae1d1-111">Set the <xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A> property of the combo box to <xref:System.Windows.Forms.AutoCompleteSource.ListItems>.</span></span>  
+5. <span data-ttu-id="46f17-111">Açılan <xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A> kutunun özelliğini <xref:System.Windows.Forms.AutoCompleteSource.ListItems>.</span><span class="sxs-lookup"><span data-stu-id="46f17-111">Set the <xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A> property of the combo box to <xref:System.Windows.Forms.AutoCompleteSource.ListItems>.</span></span>  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteSource = _  
@@ -89,13 +89,13 @@ ms.locfileid: "76745510"
     toolStripComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="ae1d1-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ae1d1-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="46f17-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="46f17-112">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripLabel>
 - <xref:System.Windows.Forms.ToolStripComboBox>
 - <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteMode%2A>
 - <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteSource%2A>
-- [<span data-ttu-id="ae1d1-113">ToolStrip Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="ae1d1-113">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
-- [<span data-ttu-id="ae1d1-114">ToolStrip Denetim, Mimarisi</span><span class="sxs-lookup"><span data-stu-id="ae1d1-114">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
-- [<span data-ttu-id="ae1d1-115">ToolStrip Teknoloji Özeti</span><span class="sxs-lookup"><span data-stu-id="ae1d1-115">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)
+- [<span data-ttu-id="46f17-113">ToolStrip Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="46f17-113">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="46f17-114">ToolStrip Denetim, Mimarisi</span><span class="sxs-lookup"><span data-stu-id="46f17-114">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
+- [<span data-ttu-id="46f17-115">ToolStrip Teknoloiji Özeti</span><span class="sxs-lookup"><span data-stu-id="46f17-115">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)

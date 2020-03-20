@@ -1,5 +1,5 @@
 ---
-title: Bağlantı sınıfı (System.Net)
+title: Bağlantı Sınıfı (System.Net)
 ms.date: 05/01/2017
 ms.technology: dotnet-networking
 topic_type:
@@ -11,32 +11,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-ms.openlocfilehash: e9e0f4eed5eb4a7efd27177ab65551afa87fb7f6
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: dc0a594f7ae2bb9fc1883ec7ef672805bbc08778
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215086"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156187"
 ---
-# <a name="connection-class"></a><span data-ttu-id="c4e56-102">Connection Sınıfı</span><span class="sxs-lookup"><span data-stu-id="c4e56-102">Connection Class</span></span>
+# <a name="connection-class"></a><span data-ttu-id="10cbf-102">Connection Sınıfı</span><span class="sxs-lookup"><span data-stu-id="10cbf-102">Connection Class</span></span>
 
-<span data-ttu-id="c4e56-103">`Connection` sınıfı sunucu yanıtlarını, kuyruk isteklerini ve işlem hattı isteklerini ayrıştırır.</span><span class="sxs-lookup"><span data-stu-id="c4e56-103">The `Connection` class parses server responses, queue requests, and pipeline requests.</span></span>
+<span data-ttu-id="10cbf-103">Sınıf `Connection` sunucu yanıtlarını, sıra isteklerini ve ardışık hat isteklerini ayrışdırır.</span><span class="sxs-lookup"><span data-stu-id="10cbf-103">The `Connection` class parses server responses, queue requests, and pipeline requests.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="c4e56-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c4e56-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="10cbf-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="10cbf-104">Syntax</span></span>
   
 ```csharp  
 internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> <span data-ttu-id="c4e56-105">`Connection` sınıfı dahili ve doğrudan kodunuzda kullanılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="c4e56-105">The `Connection` class is internal and is not meant to be used directly in your code.</span></span>
-> 
-> <span data-ttu-id="c4e56-106">Microsoft, bu sınıfın herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.</span><span class="sxs-lookup"><span data-stu-id="c4e56-106">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
+> <span data-ttu-id="10cbf-105">Sınıf `Connection` dahilidir ve doğrudan kodunuzda kullanılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="10cbf-105">The `Connection` class is internal and is not meant to be used directly in your code.</span></span>
+>
+> <span data-ttu-id="10cbf-106">Microsoft, hiçbir koşulda bir üretim uygulamasında bu sınıfın kullanımını desteklemez.</span><span class="sxs-lookup"><span data-stu-id="10cbf-106">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="c4e56-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c4e56-107">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="10cbf-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="10cbf-107">Requirements</span></span>
 
-<span data-ttu-id="c4e56-108">**Ad alanı:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="c4e56-108">**Namespace:** <xref:System.Net></span></span>
+<span data-ttu-id="10cbf-108">**Ad alanı:**<xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="10cbf-108">**Namespace:** <xref:System.Net></span></span>
 
-<span data-ttu-id="c4e56-109">**Bütünleştirilmiş kod:** Sistem (System. dll içinde)</span><span class="sxs-lookup"><span data-stu-id="c4e56-109">**Assembly:** System (in System.dll)</span></span>
+<span data-ttu-id="10cbf-109">**Montaj:** Sistem (System.dll'de)</span><span class="sxs-lookup"><span data-stu-id="10cbf-109">**Assembly:** System (in System.dll)</span></span>
 
-<span data-ttu-id="c4e56-110">**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="c4e56-110">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="10cbf-110">**.NET Framework sürümleri:** 2.0'dan beri mevcuttur.</span><span class="sxs-lookup"><span data-stu-id="10cbf-110">**.NET Framework versions:** Available since 2.0.</span></span>
