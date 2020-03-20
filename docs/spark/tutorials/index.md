@@ -1,23 +1,23 @@
 ---
-title: Apache Spark öğreticileri için .NET
-description: Apache Spark .NET uygulamalarınıza nasıl tümleştirileceğini öğrenmek için Apache Spark öğreticileri için .NET 'i araştırın.
+title: .NET Apache Spark öğreticiler için
+description: Apache Spark'ı .NET uygulamalarınıza nasıl entegre edeceğinizi öğrenmek için .NET öğreticilerini keşfedin.
 ms.date: 05/17/2019
 ms.openlocfilehash: fde70dfbe5d8c09c4af63ecae5608ff0f3bb2b9b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "72583494"
 ---
-# <a name="net-for-apache-spark-tutorials"></a><span data-ttu-id="66023-103">Apache Spark öğreticileri için .NET</span><span class="sxs-lookup"><span data-stu-id="66023-103">.NET for Apache Spark tutorials</span></span>
+# <a name="net-for-apache-spark-tutorials"></a><span data-ttu-id="bf06a-103">.NET Apache Spark öğreticiler için</span><span class="sxs-lookup"><span data-stu-id="bf06a-103">.NET for Apache Spark tutorials</span></span>
 
-<span data-ttu-id="66023-104">Aşağıdaki öğreticiler, Apache Spark ile özel büyük veri çözümleri oluşturmak ve bunları .NET uygulamalarınızla bütünleştirmek için [Apache Spark .net](../index.yml) kullanmayı anlamanıza olanak tanır:</span><span class="sxs-lookup"><span data-stu-id="66023-104">The following tutorials enable you to understand how to use [.NET for Apache Spark](../index.yml) to build custom big data solutions with Apache Spark and integrate them into your .NET applications:</span></span>
+<span data-ttu-id="bf06a-104">Aşağıdaki öğreticiler, Apache Spark ile özel büyük veri çözümleri oluşturmak ve onları .NET uygulamalarınıza entegre etmek [için .NET for Apache Spark'ın](../index.yml) nasıl kullanılacağını anlamanızı sağlar:</span><span class="sxs-lookup"><span data-stu-id="bf06a-104">The following tutorials enable you to understand how to use [.NET for Apache Spark](../index.yml) to build custom big data solutions with Apache Spark and integrate them into your .NET applications:</span></span>
 
-* <span data-ttu-id="66023-105">[Kullanmaya başlayın](get-started.md): Apache Spark uygulama için basit bir .net oluşturmayı ve çalıştırmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="66023-105">[Get started](get-started.md): demonstrates build and run a simple .NET for Apache Spark application.</span></span>
-* <span data-ttu-id="66023-106">[Azure HDInsight 'a bir .net Apache Spark uygulaması dağıtma](hdinsight-deployment.md): .net için Apache Spark uygulamanızın Azure HDInsight 'a nasıl dağıtılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="66023-106">[Deploy a .NET for Apache Spark application to Azure HDInsight](hdinsight-deployment.md): demonstrates how to deploy your .NET for Apache Spark application to Azure HDInsight.</span></span>
-* <span data-ttu-id="66023-107">[Amazon emr Spark için bir .net Apache Spark uygulaması dağıtma](amazon-emr-spark-deployment.md): .net Apache Spark uygulamanızın Amazon emr Spark 'a nasıl dağıtılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="66023-107">[Deploy a .NET for Apache Spark application to Amazon EMR Spark](amazon-emr-spark-deployment.md): demonstrates how to deploy your .NET for Apache Spark application to Amazon EMR Spark.</span></span>
-* <span data-ttu-id="66023-108">[Databricks 'e Apache Spark için .NET uygulaması dağıtma](databricks-deployment.md): .net Apache Spark uygulamanızı Databricks 'e dağıtmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="66023-108">[Deploy a .NET for Apache Spark application to Databricks](databricks-deployment.md): demonstrates how to deploy your .NET for Apache Spark application to Databricks.</span></span>
+* <span data-ttu-id="bf06a-105">[Başlayın:](get-started.md)Apache Spark uygulaması için basit bir .NET oluşturma ve çalıştırmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="bf06a-105">[Get started](get-started.md): demonstrates build and run a simple .NET for Apache Spark application.</span></span>
+* <span data-ttu-id="bf06a-106">[Apache Spark uygulaması için Bir .NET uygulamasını Azure HDInsight'a dağıtın](hdinsight-deployment.md): Apache Spark uygulamanızı Azure HDInsight'a nasıl dağıtacağınız gösterilir.</span><span class="sxs-lookup"><span data-stu-id="bf06a-106">[Deploy a .NET for Apache Spark application to Azure HDInsight](hdinsight-deployment.md): demonstrates how to deploy your .NET for Apache Spark application to Azure HDInsight.</span></span>
+* <span data-ttu-id="bf06a-107">[Amazon EMR Spark'a Apache Spark uygulaması için bir .NET dağıtın : Apache](amazon-emr-spark-deployment.md)Spark uygulaması için .NET uygulamanızı Amazon EMR Spark'a nasıl dağıtacağınızı gösterir.</span><span class="sxs-lookup"><span data-stu-id="bf06a-107">[Deploy a .NET for Apache Spark application to Amazon EMR Spark](amazon-emr-spark-deployment.md): demonstrates how to deploy your .NET for Apache Spark application to Amazon EMR Spark.</span></span>
+* <span data-ttu-id="bf06a-108">[Apache Spark uygulaması için Bir .NET uygulamasını Databricks'e dağıtın](databricks-deployment.md): .NET'inizin Apache Spark uygulaması için Nasıl Databricks'e dağıtılabildiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="bf06a-108">[Deploy a .NET for Apache Spark application to Databricks](databricks-deployment.md): demonstrates how to deploy your .NET for Apache Spark application to Databricks.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="66023-109">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="66023-109">Next Steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="bf06a-109">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="bf06a-109">Next Steps</span></span>
 
-<span data-ttu-id="66023-110">Apache Spark için .NET kullanan daha fazla örnek için [GitHub 'daki Apache Spark örnekleri için .net](https://github.com/dotnet/spark#samples)' i inceleyin.</span><span class="sxs-lookup"><span data-stu-id="66023-110">For more examples that use .NET for Apache Spark, check out the [.NET for Apache Spark samples on GitHub](https://github.com/dotnet/spark#samples).</span></span>
+<span data-ttu-id="bf06a-110">Apache Spark için .NET kullanan diğer örnekler için [GitHub'daki Apache Spark örnekleri için .NET'e](https://github.com/dotnet/spark#samples)göz atın.</span><span class="sxs-lookup"><span data-stu-id="bf06a-110">For more examples that use .NET for Apache Spark, check out the [.NET for Apache Spark samples on GitHub](https://github.com/dotnet/spark#samples).</span></span>
