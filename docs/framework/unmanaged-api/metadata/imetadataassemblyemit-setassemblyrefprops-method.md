@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70a32bf3-9051-4f96-ae87-11356d06a073
 topic_type:
 - apiref
-ms.openlocfilehash: 5434aa2d12bd9a29a8c2fc784421442469ceb1ce
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6ad6bbb8a4c69f575bbeba3a297c46e049a97325
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440552"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176051"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps Yöntemi
 Belirtilen `AssemblyRef` meta veri yapısını değiştirir.  
@@ -32,8 +32,8 @@ HRESULT SetAssemblyRefProps (
     [in] mdAssemblyRef              ar,  
     [in] const void                 *pbPublicKeyOrToken,  
     [in] ULONG                      cbPublicKeyOrToken,  
-    [in] LPCWSTR                    szName,   
-    [in] const ASSEMBLYMETADATA     *pMetaData,   
+    [in] LPCWSTR                    szName,
+    [in] const ASSEMBLYMETADATA     *pMetaData,
     [in] const void                 *pbHashValue,  
     [in] ULONG                      cbHashValue,  
     [in] DWORD                      dwAssemblyRefFlags  
@@ -42,40 +42,40 @@ HRESULT SetAssemblyRefProps (
   
 ## <a name="parameters"></a>Parametreler  
  `ar`  
- 'ndaki Değiştirilecek `AssemblyRef` meta veri yapısını belirten meta veri belirteci.  
+ [içinde] Değiştirilecek `AssemblyRef` meta veri yapısını belirten meta veri belirteci.  
   
  `pbPublicKeyOrToken`  
- 'ndaki Başvurulan derlemenin yayımcısının ortak anahtarı.  
+ [içinde] Başvurulan derlemenin yayımcısının ortak anahtarı.  
   
  `cbPublicKeyOrToken`  
- 'ndaki `pbPublicKeyOrToken`bayt cinsinden boyutu.  
+ [içinde] `pbPublicKeyOrToken`Baytboyutu.  
   
  `szName`  
- 'ndaki Derlemenin insanların okunabilir metin adı.  
+ [içinde] Derlemenin insan tarafından okunabilen metin adı.  
   
  `pMetaData`  
- 'ndaki Derleme için sürüm, platform ve yerel ayar bilgilerini içeren bir ASSEMBLYMETADATA örneğine yönelik bir işaretçi.  
+ [içinde] Derlemenin sürümünü, platformlarını ve yerel bilgilerini içeren bir ASSEMBLYMETADATA örneğine işaretçi.  
   
  `pbHashValue`  
- 'ndaki Derlemeyle ilişkili karma verileri işaretçisi.  
+ [içinde] Derleme ile ilişkili karma verilere işaretçi.  
   
  `cbHashValue`  
- 'ndaki `pbHashValue`bayt cinsinden boyutu.  
+ [içinde] `pbHashValue`Baytboyutu.  
   
  `dwAssemblyRefFlags`  
- 'ndaki Başvurulan derlemenin özniteliklerini belirten, [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) değerlerinin bit düzeyinde birleşimi.  
+ [içinde] Başvurulan derlemenin özniteliklerini belirten [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) değerlerinin bityişli bir birleşimi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `AssemblyRef` meta veri yapısı oluşturmak için [IMetaDataAssemblyEmit::D efineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) metodunu kullanın.  
+ Meta `AssemblyRef` veri yapısı oluşturmak için [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) yöntemini kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -7,40 +7,40 @@ dev_langs:
 helpviewer_keywords:
 - platform invoke, calling unmanaged functions
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
-ms.openlocfilehash: 8fde48f0697d986c5fc7f6d7059b6b45a6af1488
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11e329fa8f0c059b6c2f1c8ccb1d6bd0d0f0030a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124973"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181332"
 ---
 # <a name="passing-structures"></a>Yapıları Geçirme
-Birçok yönetilmeyen işlev, işlevine parametre olarak, yapıların üyelerini (Visual Basic içinde Kullanıcı tanımlı türler) veya yönetilen kodda tanımlanan sınıfların üyelerini geçirmenize bekler. Platform Invoke kullanılarak yönetilmeyen koda yapıları veya sınıfları geçirirken, özgün düzeni ve hizalamayı korumak için ek bilgiler sağlamalısınız. Bu konuda, biçimli türleri tanımlamak için kullandığınız <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliği tanıtılmaktadır. Yönetilen yapılar ve sınıflar için, **LayoutKind** numaralandırması tarafından sağlanan birkaç öngörülebilir düzen davranışı arasından seçim yapabilirsiniz.  
+Birçok yönetilmeyen işlev, işlevin parametresi olarak, yapıların üyeleri (Visual Basic'te kullanıcı tanımlı türler) veya yönetilen kodda tanımlanan sınıfların üyeleri olarak geçmenizi bekler. Yapıları veya sınıfları platform çağırıcıkullanarak yönetilmeyen koda geçerken, özgün düzeni ve hizalamayı korumak için ek bilgiler sağlamanız gerekir. Bu konu, <xref:System.Runtime.InteropServices.StructLayoutAttribute> biçimlendirilmiş türleri tanımlamak için kullandığınız özniteliği tanır. Yönetilen yapılar ve sınıflar **için, LayoutKind** numaralandırması tarafından sağlanan birkaç öngörülebilir düzen davranışı arasından seçim yapabilirsiniz.  
   
- Bu konu başlığı altında sunulan kavramlara, yapı ve sınıf türleri arasındaki önemli bir fark vardır. Yapılar değer türlerdir ve sınıflardır başvuru türleridir — sınıflar her zaman en az bir bellek yöneltme düzeyi (bir değere işaretçi) sağlar. Yönetilmeyen işlevler, aşağıdaki tablonun ilk sütunundaki imzalarda gösterildiği gibi genellikle dolaylı olarak talep ettiği için bu farklılık önemlidir. Kalan sütunlardaki yönetilen yapı ve sınıf bildirimleri, bildirimindeki yöneltme düzeyini ayarlayabileceğiniz dereceyi gösterir. Bildirimler hem Visual Basic hem de görsel C#için sağlanır.  
+ Bu konuda sunulan kavramların merkezinde yapı ve sınıf türleri arasında önemli bir fark vardır. Yapılar değer türleridir ve sınıflar başvuru türleridir — sınıflar her zaman en az bir bellek yönlendirme düzeyi (bir değer işaretçisi) sağlar. Yönetilmeyen işlevler genellikle aşağıdaki tablonun ilk sütunundaki imzalarda gösterildiği gibi, genellikle yönlendirme gerektirdiğinden, bu fark önemlidir. Kalan sütunlarda yönetilen yapı ve sınıf bildirimleri, bildiriminizdeki yön düzeyini ayarlama derecenizi gösterir. Görsel Temel ve Görsel C# bildirimleri sağlanır.  
   
-|Yönetilmeyen imza|Yönetilen bildirim: <br />yöneltme yok<br />`Structure MyType`<br />`struct MyType;`|Yönetilen bildirim: <br />Tek düzeyli yöneltme<br />`Class MyType`<br />`class MyType;`|  
+|Yönetilmeyen imza|Yönetilen bildirim: <br />yön yok<br />`Structure MyType`<br />`struct MyType;`|Yönetilen bildirim: <br />bir yön<br />`Class MyType`<br />`class MyType;`|  
 |-------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|  
-|`DoWork(MyType x);`<br /><br /> Sıfır yöneltme düzeyini talep edin.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Sıfır yöneltme düzeyleri ekler.|Zaten tek bir yöneltme düzeyi olduğundan mümkün değil.|  
-|`DoWork(MyType* x);`<br /><br /> Tek düzey yöneltme taleplerini ister.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Tek bir yöneltme düzeyi ekler.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Sıfır yöneltme düzeyleri ekler.|  
-|`DoWork(MyType** x);`<br /><br /> İki yöneltme düzeyi talep edin.|**ByRef** **byref** veya `ref` `ref` kullanılamadığından mümkün değildir.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Tek bir yöneltme düzeyi ekler.|  
+|`DoWork(MyType x);`<br /><br /> Sıfır yönlendirme seviyesi gerektirir.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Sıfır yönlendirme düzeyi ekler.|Zaten bir yönlendirme düzeyi olduğundan mümkün değil.|  
+|`DoWork(MyType* x);`<br /><br /> Bir seviye yönlendirme gerektirir.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Bir yönlendirme düzeyi ekler.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Sıfır yönlendirme düzeyi ekler.|  
+|`DoWork(MyType** x);`<br /><br /> İki seviyede yönlendirme gerektirir.|**ByRef ByRef** **ByRef** veya `ref` `ref` kullanılamaz çünkü mümkün değildir.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Bir yönlendirme düzeyi ekler.|  
   
  Tablo, platform çağırma bildirimleri için aşağıdaki yönergeleri açıklar:  
   
-- Yönetilmeyen işlev yöneltme olmadığında, değer tarafından geçirilen yapıyı kullanın.  
+- Yönetilmeyen işlev yönlendirme gerektirdiğinde değer tarafından geçirilen bir yapı kullanın.  
   
-- Yönetilmeyen işlev tek bir yöneltme düzeyi talep edildiğinde, başvuruya göre geçirilen bir yapıyı veya değer tarafından geçirilen bir sınıfı kullanın.  
+- Yönetilmeyen işlev bir yönlendirme düzeyi gerektirdiğinde, başvuru tarafından geçirilen bir yapı yı veya değertarafından geçirilen bir sınıf kullanın.  
   
-- Yönetilmeyen işlev iki yöneltme düzeyi talep edildiğinde başvuruya göre geçirilen bir sınıf kullanın.  
+- Yönetilmeyen işlev iki yönlendirme düzeyi gerektirdiğinde başvuru tarafından geçirilen bir sınıf kullanın.  
   
-## <a name="declaring-and-passing-structures"></a>Yapıları bildirme ve geçirme  
- Aşağıdaki örnek, Yönetilen koddaki `Point` ve `Rect` yapıların nasıl tanımlanacağını gösterir ve türleri parametre olarak User32. dll dosyasındaki **Ptinrect** işlevine iletir. **Pınrect** aşağıdaki yönetilmeyen imzaya sahiptir:  
+## <a name="declaring-and-passing-structures"></a>Beyan ve Geçen Yapılar  
+ Aşağıdaki örnek, yönetilen `Point` koddaki `Rect` yapıları ve yapıları nasıl tanımlayacaklarını ve türleri kullanıcı32.dll dosyasındaki **PtInRect** işlevine parametre olarak nasıl geçireceğini gösterir. **PtInRect** aşağıdaki yönetilmeyen imzaya sahiptir:  
   
 ```cpp
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
- İşlev bir RECT türüne işaretçi beklediği için rect yapısını başvuruya göre geçirmeniz gerektiğini unutmayın.  
+ İşlev BIR RECt türüne işaretçi beklediğinden, Rect yapısını referans olarak geçmeniz gerektiğine dikkat edin.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -57,7 +57,7 @@ Public Structure <StructLayout(LayoutKind.Explicit)> Rect
     <FieldOffset(12)> Public bottom As Integer  
 End Structure  
   
-Friend Class NativeMethods      
+Friend Class NativeMethods
     Friend Declare Auto Function PtInRect Lib "user32.dll" (
         ByRef r As Rect, p As Point) As Boolean  
 End Class  
@@ -70,7 +70,7 @@ using System.Runtime.InteropServices;
 public struct Point {  
     public int x;  
     public int y;  
-}     
+}
   
 [StructLayout(LayoutKind.Explicit)]  
 public struct Rect {  
@@ -78,7 +78,7 @@ public struct Rect {
     [FieldOffset(4)] public int top;  
     [FieldOffset(8)] public int right;  
     [FieldOffset(12)] public int bottom;  
-}     
+}
   
 internal static class NativeMethods
 {  
@@ -87,14 +87,14 @@ internal static class NativeMethods
 }  
 ```  
   
-## <a name="declaring-and-passing-classes"></a>Sınıfları bildirme ve geçirme  
- Sınıf, sabit bir üye düzenine sahip olduğu sürece, bir sınıfın üyelerini yönetilmeyen DLL işlevine geçirebilirsiniz. Aşağıdaki örnek, sıralı sırada tanımlanan `MySystemTime` sınıfının üyelerinin, User32. dll dosyasındaki **GetSystemTime** 'a nasıl geçirileceğini gösterir. **GetSystemTime** , şu yönetilmeyen imzaya sahiptir:  
+## <a name="declaring-and-passing-classes"></a>Beyan ve Geçen Dersler  
+ Sınıfın sabit bir üye düzeni olduğu sürece, sınıfın üyelerini yönetilmeyen bir DLL işlevine geçirebilirsiniz. Aşağıdaki örnek, sıralı sırada tanımlanan `MySystemTime` sınıfın üyelerinin User32.dll dosyasındaki **GetSystemTime'a** nasıl geçirileceğini gösterir. **GetSystemTime** aşağıdaki yönetilmeyen imzaya sahiptir:  
   
 ```cpp
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
- Değer türlerinin aksine, sınıfların her zaman en az bir yöneltme düzeyi vardır.  
+ Değer türlerinden farklı olarak, sınıflar her zaman en az bir yönlendirme düzeyine sahiptir.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -102,7 +102,7 @@ Imports System.Runtime.InteropServices
 <StructLayout(LayoutKind.Sequential)> Public Class MySystemTime  
     Public wYear As Short  
     Public wMonth As Short  
-    Public wDayOfWeek As Short   
+    Public wDayOfWeek As Short
     Public wDay As Short  
     Public wHour As Short  
     Public wMinute As Short  
@@ -117,7 +117,7 @@ Friend Class NativeMethods
         hWnd As IntPtr, lpText As String, lpCaption As String, uType As UInteger) As Integer  
 End Class  
   
-Public Class TestPlatformInvoke      
+Public Class TestPlatformInvoke
     Public Shared Sub Main()  
         Dim sysTime As New MySystemTime()  
         NativeMethods.GetSystemTime(sysTime)  
@@ -128,7 +128,7 @@ Public Class TestPlatformInvoke
               ControlChars.CrLf & "Month: " & sysTime.wMonth & _  
               ControlChars.CrLf & "DayOfWeek: " & sysTime.wDayOfWeek & _  
               ControlChars.CrLf & "Day: " & sysTime.wDay  
-        NativeMethods.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)        
+        NativeMethods.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)
     End Sub  
 End Class  
 ```  
@@ -136,14 +136,14 @@ End Class
 ```csharp  
 [StructLayout(LayoutKind.Sequential)]  
 public class MySystemTime {  
-    public ushort wYear;   
+    public ushort wYear;
     public ushort wMonth;  
-    public ushort wDayOfWeek;   
-    public ushort wDay;   
-    public ushort wHour;   
-    public ushort wMinute;   
-    public ushort wSecond;   
-    public ushort wMilliseconds;   
+    public ushort wDayOfWeek;
+    public ushort wDay;
+    public ushort wHour;
+    public ushort wMinute;
+    public ushort wSecond;
+    public ushort wMilliseconds;
 }  
 internal static class NativeMethods
 {  

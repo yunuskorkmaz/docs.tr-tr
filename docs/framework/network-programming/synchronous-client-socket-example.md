@@ -9,15 +9,15 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-ms.openlocfilehash: 70c4f26e3b4fc1c3dcb4c34e8858525b7f1660c3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d55d875546ff34bc38b13f792668cd00309c6e34
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047193"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180668"
 ---
 # <a name="synchronous-client-socket-example"></a>Zaman Uyumlu İstemci Yuvası Örneği
-Aşağıdaki örnek program bir sunucusuna bağlanan bir istemci oluşturur. İstemci, zaman uyumlu bir yuva ile oluşturulmuştur, bu nedenle sunucu bir yanıt döndürünceye kadar istemci uygulamanın yürütülmesi askıya alınır. Uygulama sunucuya bir dize gönderir ve ardından sunucu tarafından konsolda döndürülen dizeyi görüntüler.  
+Aşağıdaki örnek program, bir sunucuya bağlanan bir istemci oluşturur. İstemci senkron bir soketle oluşturulmuş, bu nedenle istemci uygulaması, sunucu bir yanıt döndürene kadar askıya alınır. Uygulama sunucuya bir dize gönderir ve ardından konsolda sunucu tarafından döndürülen dize görüntüler.  
   
 ```vb  
 Imports System  
@@ -90,7 +90,7 @@ public class SynchronousSocketClient {
             IPEndPoint remoteEP = new IPEndPoint(ipAddress,11000);  
   
             // Create a TCP/IP  socket.  
-            Socket sender = new Socket(ipAddress.AddressFamily,   
+            Socket sender = new Socket(ipAddress.AddressFamily,
                 SocketType.Stream, ProtocolType.Tcp );  
   
             // Connect the socket to the remote endpoint. Catch any errors.  

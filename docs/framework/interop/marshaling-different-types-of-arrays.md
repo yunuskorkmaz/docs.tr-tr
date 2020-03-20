@@ -8,101 +8,101 @@ helpviewer_keywords:
 - marshaling, Arrays sample
 - data marshaling, Arrays sample
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
-ms.openlocfilehash: 1490171c4dd423baa3b6c5f5e00cf133c2584cae
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 66c7ba5989952edb55f21aab960ad7395a92ae0d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124388"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181361"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Farklı Dizi Türlerini Hazırlama
-Dizi, aynı türde bir veya daha fazla öğe içeren Yönetilen koddaki bir başvuru türüdür. Diziler başvuru türleri olsa da, yönetilmeyen işlevlere parametre olarak geçirilir. Bu davranış, yönetilen dizilerin ın/out parametreleri gibi yönetilen nesnelere geçirilme yöntemi ile tutarlı değildir. Daha fazla bilgi için bkz. [kopyalama ve sabitleme](copying-and-pinning.md).  
+Dizi, yönetilen kodda aynı türden bir veya daha fazla öğe içeren bir başvuru türüdür. Diziler başvuru türleri olsa da, yönetilmeyen işlevlere parametreler olarak geçirilirler. Bu davranış, yönetilen dizilerin yönetilen nesnelere geçirildiği ve In/Out parametreleri olarak geçirildiğiyle tutarsızdır. Ek ayrıntılar için [bkz.](copying-and-pinning.md)  
   
- Aşağıdaki tabloda diziler için sıralama seçenekleri listelenmekte ve kullanımları açıklanmaktadır.  
+ Aşağıdaki tabloda diziler için mareşal seçenekleri listelanır ve bunların kullanımını açıklar.  
   
-|dizide|Açıklama|  
+|Dizi|Açıklama|  
 |-----------|-----------------|  
-|Değere göre tamsayılar.|Bir tamsayılar dizisini ın parametresi olarak geçirir.|  
-|Başvuruya göre tamsayılar.|Bir tamsayı dizisini bir ın/out parametresi olarak geçirir.|  
-|Değere göre tamsayılar (iki boyutlu).|Bir tamsayı matrisini bir ın parametresi olarak geçirir.|  
-|Değere göre dizeler.|Bir dize dizisini ın parametresi olarak geçirir.|  
-|, Tamsayılar içeren yapılar.|As parametresi olarak tamsayılar içeren bir yapı dizisini geçirir.|  
-|Dizeleri olan yapılar.|Yalnızca dizeleri içeren bir yapı dizisini bir ın/out parametresi olarak geçirir. Dizi üyeleri değiştirilebilir.|  
+|Değere göre tümsadanların.|Bir in parametresi olarak bir dizi tümseci geçirir.|  
+|Referans olarak tümsadanların.|Bir dizi integer'ı Giriş/Çıkış parametresi olarak geçirir.|  
+|Değere göre tümsaderlerin (iki boyutlu).|Tamsayılar matrisini In parametresi olarak geçirir.|  
+|Dizilerin değerine göre.|Bir dizi dizeyi In parametresi olarak geçirir.|  
+|İntegerli yapıların.|In parametresi olarak, içinde hiçsesayı içeren bir dizi yapıyı geçirir.|  
+|Dizeleri olan yapıların.|Yalnızca Giriş/Çıkış parametresi olarak dizeleri içeren bir dizi yapıyı geçirir. Dizinin üyeleri değiştirilebilir.|  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, aşağıdaki dizi türlerin nasıl geçirileceğini gösterir:  
+ Bu örnek, aşağıdaki dizi türlerinin nasıl geçirilen gösteriş gösterir:  
   
-- Değere göre tamsayılar dizisi.  
+- Değere göre tümerler dizisi.  
   
-- Başvuruya göre tamsayılar dizisi, yeniden boyutlandırılabilir.  
+- Yeniden boyutlandırılabilen başvuru yaylaları dizisi.  
   
-- Değere göre tamsayılar için çok boyutlu dizi (matris).  
+- Değere göre çok boyutlu dizi (matris).  
   
-- Değere göre dizeler dizisi.  
+- Değere göre dize dizisi.  
   
-- Tamsayılarla yapıların dizisi.  
+- Tümsegeriçeren yapıların dizisi.  
   
-- Dizeler içeren yapıların dizisi.  
+- Dizeleri ile yapıların dizi.  
   
- Bir dizi başvuruya göre açıkça sıralanmamışsa, varsayılan davranış diziyi bir ın parametresi olarak sıraladığında. <xref:System.Runtime.InteropServices.InAttribute> ve <xref:System.Runtime.InteropServices.OutAttribute> özniteliklerini açıkça uygulayarak bu davranışı değiştirebilirsiniz.  
+ Bir dizi açıkça başvuru tarafından marshaled sürece, varsayılan davranış bir In parametresi olarak dizi marshals. Bu davranışı <xref:System.Runtime.InteropServices.InAttribute> ve <xref:System.Runtime.InteropServices.OutAttribute> öznitelikleri açıkça uygulayarak değiştirebilirsiniz.  
   
- Diziler örneği, özgün işlev bildirimiyle gösterilen aşağıdaki yönetilmeyen işlevleri kullanır:  
+ Diziler örneği, özgün işlev bildirimiile gösterilen aşağıdaki yönetilmeyen işlevleri kullanır:  
   
-- PInvokeLib. dll ' den alınan **Tebaşlangıçraylar** .  
+- PinvokeLib.dll'den ihraç edilen **TestArrayOfInts.**  
   
     ```cpp
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
-- PInvokeLib. dll dosyasından **test edilmiş Testrefarray.**  
+- **TestRefArrayOfInts** PinvokeLib.dll ihraç.  
   
     ```cpp
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
-- PInvokeLib. dll dosyasından alınan **Testmatrixoflitre** .  
+- PinvokeLib.dll'den ihraç edilen **TestMatrixOfInts.**  
   
     ```cpp
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
-- **TestArrayOfStrings** , PInvokeLib. dll dosyasından verildi.  
+- PinvokeLib.dll'den dışa aktarılan **TestArrayOfStrings.**  
   
     ```cpp
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
-- PInvokeLib. dll dosyasından aktarılmış **Testarrayofyapılar** .  
+- PinvokeLib.dll'den ihraç edilen **TestArrayOfStructs.**  
   
     ```cpp
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
-- **TestArrayOfStructs2** , PInvokeLib. dll dosyasından verildi.  
+- **TestArrayOfStructs2** PinvokeLib.dll'den ihraç edildi.  
   
     ```cpp
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PInvokeLib. dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) , önceden listelenen işlevler ve iki yapı değişkeni, **myPoint** ve **MyPerson**için uygulamalar içeren özel bir yönetilmeyen kitaplıktır. Yapılar aşağıdaki öğeleri içerir:  
+ [PinvokeLib.dll,](marshaling-data-with-platform-invoke.md#pinvokelibdll) daha önce listelenen işlevler ve **MYPOINT** ve **MYPERSON**olmak üzere iki yapı değişkeni için uygulamalar içeren özel bir yönetilmeyen kitaplıktır. Yapılar aşağıdaki öğeleri içerir:  
   
 ```cpp
 typedef struct _MYPOINT  
 {  
-   int x;   
-   int y;   
+   int x;
+   int y;
 } MYPOINT;  
   
 typedef struct _MYPERSON  
 {  
-   char* first;   
-   char* last;   
+   char* first;
+   char* last;
 } MYPERSON;  
 ```  
   
- Bu örnekte, `MyPoint` ve `MyPerson` yapıları gömülü türler içerir. <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliği, üyelerin bellekte sırayla, göründükleri sırada düzenlendiğinden emin olmak üzere ayarlanır.  
+ Bu örnekte, `MyPoint` `MyPerson` ve yapılar gömülü türleri içerir. Öznitelik, <xref:System.Runtime.InteropServices.StructLayoutAttribute> üyelerin göründükleri sırada, sırayla bellekte düzenlendiğinden emin olmak için ayarlanır.  
   
- `NativeMethods` sınıfı, `App` sınıfı tarafından çağrılan bir yöntemler kümesi içerir. Dizileri geçirme hakkında ayrıntılı bilgi için aşağıdaki örnekteki açıklamalara bakın. Başvuru türü olan bir dizi, varsayılan olarak bir ın parametresi olarak geçirilir. Çağıranın sonuçları alması için, **InAttribute** ve **OutAttribute** 'un, diziyi içeren bağımsız değişkene açıkça uygulanması gerekir.  
+ Sınıf, `NativeMethods` `App` sınıf tarafından çağrılan bir dizi yöntem içerir. Geçen diziler hakkında özel ayrıntılar için aşağıdaki örnekteki yorumlara bakın. Başvuru türü olan bir dizi varsayılan olarak In parametresi olarak geçirilir. Arayanın sonuçları alabilmesi için, diziyi içeren bağımsız değişkene açık olarak **InAttribute** ve **OutAttribute** uygulanmalıdır.  
   
 ### <a name="declaring-prototypes"></a>Prototipleri Bildirme  
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]
@@ -114,5 +114,5 @@ typedef struct _MYPERSON
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Platform çağırma veri türleri](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
+- [Platform çağrıcı veri türleri](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [Yönetilen Kodda Prototipler Oluşturma](creating-prototypes-in-managed-code.md)

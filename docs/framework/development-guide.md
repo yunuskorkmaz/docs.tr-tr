@@ -4,78 +4,76 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: abc392116aec8ffd8aa94f46ef97887c48516ca0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0500e11d2897cfa7392cc8280a0b69c5e2fc515f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122475"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79181627"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework Geliştirme Kılavuzu
-Bu bölümde .NET Framework uygulamalarınızı oluşturma, yapılandırma, hata ayıklama, güvenli hale getirme ve dağıtma işlemleri açıklanmaktadır. Bu bölüm ayrıca dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek yönetimi ve iş parçacığı gibi teknoloji alanlarıyla ilgili bilgiler de sağlar.  
+Bu bölümde,.NET Framework uygulamalarınızın nasıl oluşturulup, yapılandırışlanın, hata ayıklamanın, güvenli hale nasıl sağlanınve dağıtılanın açıklanmaktadır. Bu bölümde ayrıca dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek yönetimi ve iş parçacığı gibi teknoloji alanları hakkında bilgi de verilmektedir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Uygulama Temelleri](../standard/application-essentials.md)  
- Uygulama etki alanları ve Derlemeleriyle programlama, öznitelikleri kullanma, temel türleri biçimlendirme ve ayrıştırma, koleksiyonları kullanma, olayları ve özel durumları işleme, dosyaları ve veri akışlarını kullanma ve kullanma gibi temel uygulama geliştirme görevleri hakkında bilgi sağlar. tür.  
+ Uygulama etki alanları ve derlemelerle programlama, öznitelikleri kullanma, temel türleri biçimlendirme ve ayrıştma, koleksiyonları kullanma, olayları ve özel durumları işleme, dosya ve veri akışlarını kullanma ve kullanma gibi temel uygulama geliştirme görevleri hakkında bilgi sağlar Generics.  
   
  [Veri ve Modelleme](./data/index.md)  
- ADO.NET, dil ile tümleşik sorgu (LINQ), WCF Veri Hizmetleri ve XML kullanarak verilere erişme hakkında bilgi sağlar.  
+ ADO.NET, Dil Tümleşik Sorgusu (LINQ), WCF Veri Hizmetleri ve XML'i kullanarak verilere nasıl erişilir hakkında bilgi sağlar.  
   
  [İstemci Uygulamaları](develop-client-apps.md)  
- Windows Presentation Foundation (WPF) veya Windows Forms kullanarak Windows tabanlı uygulamalar oluşturmayı açıklar.  
+ Windows Sunu Temeli (WPF) veya Windows Formları'nı kullanarak Windows tabanlı uygulamaların nasıl oluşturulutur açıklar.  
   
  [ASP.NET ile Web Uygulamaları](develop-web-apps-with-aspnet.md)  
- Minimum kodlama ile kurumsal sınıf Web uygulamaları oluşturmak için ASP.NET kullanma hakkındaki bilgilere bağlantılar sağlar.  
+ En az kodlama içeren kurumsal sınıf web uygulamaları oluşturmak için ASP.NET kullanma hakkındaki bilgilere bağlantılar sağlar.  
   
  [WCF ile Hizmet Odaklı Uygulamalar](./wcf/index.md)  
- Güvenli ve güvenilir olan hizmet yönelimli uygulamalar oluşturmak için Windows Communication Foundation (WCF) kullanmayı açıklar.  
+ Güvenli ve güvenilir hizmet odaklı uygulamalar oluşturmak için Windows Communication Foundation'ın (WCF) nasıl kullanılacağını açıklar.  
   
- [Windows Workflow Foundation    iş akışları oluşturma](windows-workflow-foundation/index.md)  
- Windows Workflow Foundation (WF) kullanmaya yönelik programlama modeli, örnekler ve araçlar hakkında bilgi sağlar.  
+ [Windows İş Akışı Temeli ile iş akışları oluşturma](windows-workflow-foundation/index.md) Windows İş Akışı Temeli (WF) kullanmak için programlama modeli, örnekler ve araçlar hakkında bilgi sağlar.  
 
  [Windows Hizmeti Uygulamaları](./windows-services/index.md)  
- Bir hizmet olarak yüklenen bir uygulama oluşturmak için Visual Studio 'Yu ve .NET Framework nasıl kullanabileceğinizi açıklar ve davranışını başlatabilir, durdurabilir ve başka bir şekilde denetleyebilirsiniz.  
+ Hizmet olarak yüklenmiş bir uygulama oluşturmak ve davranışını başlatmak, durdurmak ve başka şekilde denetlemek için Visual Studio ve .NET Framework'u nasıl kullanabileceğinizi açıklar.  
   
- [.NET ' te paralel Işleme, eşzamanlılık ve zaman uyumsuz programlama](../standard/parallel-processing-and-concurrency.md)  
- Yönetilen iş parçacığı, paralel programlama ve zaman uyumsuz programlama tasarım desenleri hakkında bilgi sağlar.  
+ [.NET'te Paralel İşleme, Eşzamanlılık ve Async Programlama](../standard/parallel-processing-and-concurrency.md)  
+ Yönetilen iş parçacığı, paralel programlama ve eşzamanlı programlama tasarım desenleri hakkında bilgi sağlar.  
   
  [.NET Framework'te Ağ Programlaması](./network-programming/index.md)  
- Uygulamalarınızın hızla ve kolayca tümleştirebilmesini sağlayan katmanlı, genişletilebilir ve yönetilen Internet Hizmetleri uygulamasını açıklar.  
+ Uygulamalarınız için hızlı ve kolay bir şekilde entegre edilebilen Internet hizmetlerinin katmanlı, genişletilebilir ve yönetilen uygulamasını açıklar.  
   
- [.NET Framework uygulamalarını yapılandırma](configure-apps/index.md)    
- .NET Framework uygulamalarınızı yeniden derlemek zorunda kalmadan ayarları değiştirmek için yapılandırma dosyalarını nasıl kullanabileceğinizi açıklar.  
+ [.NET Framework Uygulamalarını Yapılandırma](configure-apps/index.md) .NET Framework uygulamalarınızı yeniden derlemek zorunda kalmadan ayarları değiştirmek için yapılandırma dosyalarını nasıl kullanabileceğinizi açıklar.  
   
- [.NET Native ile Uygulama Derleme](./net-native/index.md)  
- Windows Mağazası uygulamalarını derlemek ve dağıtmak için .NET Native ön derleme teknolojisini nasıl kullanabileceğinizi açıklar. .NET Native yönetilen kodda (C#) yazılmış ve .NET Framework yerel koda hedefleyen uygulamaları derler.  
+ [.NET Yerel ile Uygulama Derleme](./net-native/index.md)  
+ Windows Mağazası uygulamaları oluşturmak ve dağıtmak için .NET Native precompilation teknolojisini nasıl kullanabileceğinizi açıklar. .NET Native, yönetilen kod (C#) ile yazılmış ve .NET Framework'ü yerel koda hedefleyen uygulamaları derler.  
   
  [Güvenlik](../standard/security/index.md)  
- Güvenli uygulama geliştirmeyi kolaylaştıran .NET Framework sınıflar ve hizmetlerle ilgili bilgiler sağlar.  
+ .NET Framework'de güvenli uygulama geliştirmeyi kolaylaştıran sınıflar ve hizmetler hakkında bilgi sağlar.  
   
  [Hata Ayıklama, İzleme ve Profil Oluşturma](./debug-trace-profile/index.md)  
- .NET Framework uygulamalarının ve uygulama ortamının nasıl test edileceğini, iyileştirileceği ve profilin nasıl yapılacağını açıklar. Bu bölüm, Yöneticiler ve geliştiriciler için bilgiler içerir.  
+ .NET Framework uygulamalarını ve uygulama ortamını nasıl test edin, optimize edin ve profilini nasıl oluşturup profilini açıklar. Bu bölümde yöneticiler ve geliştiriciler için bilgiler yer alır.  
   
  [Çoklu Platformlar için Geliştirme](../standard/cross-platform/index.md)  
- Birden çok platformda paylaşılabilen derlemeler oluşturmak için .NET Framework nasıl kullanabileceğiniz hakkında bilgi sağlar ve telefon, masaüstü ve Web gibi birden çok cihaz oluşturabilirsiniz.  
+ Birden çok platformda ve telefonlar, masaüstü ve web gibi birden çok aygıtarasında paylaşılabilen derlemeler oluşturmak için .NET Framework'ünü nasıl kullanabileceğiniz hakkında bilgi sağlar.  
   
  [Dağıtım](./deployment/index.md)  
- .NET Framework uygulamanızı paketlemeyi ve dağıtmayı açıklar ve hem geliştiriciler hem de Yöneticiler için dağıtım kılavuzlarını içerir.  
+ .NET Framework uygulamanızın nasıl paketlenip dağıtılabildiğini açıklar ve hem geliştiriciler hem de yöneticiler için dağıtım kılavuzları içerir.  
   
  [Performans](./performance/index.md)  
- Önbelleğe alma, yavaş başlatma, güvenilirlik ve ETW olayları hakkında bilgi sağlar.  
- 
+ Önbelleğe alma, tembel başlatma, güvenilirlik ve ETW olayları hakkında bilgi sağlar.  
+
 ## <a name="reference"></a>Başvuru  
- [.NET Framework sınıf kitaplığı](/dotnet/api/?view=netframework-4.7)  
- .NET Framework ad alanlarında bulunan her bir sınıf için sözdizimi, kod örnekleri ve kullanım bilgileri sağlar.  
+ [.NET Çerçeve Sınıf Kütüphanesi](/dotnet/api/?view=netframework-4.7)  
+ .NET Framework ad alanlarında bulunan her sınıf için sözdizimi, kod örnekleri ve kullanım bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Başlarken](./get-started/index.md)  
  .NET Framework'e kapsamlı bir genel bakış ve ek kaynaklara bağlantılar sağlar.  
   
  [Yenilikler](./whats-new/index.md)  
- .NET Framework en son sürümündeki temel yeni özellikleri ve değişiklikleri açıklar. Yeni ve eski türlerin ve üyelerin listelerini içerir ve uygulamalarınızı .NET Framework önceki sürümünden geçirmek için bir kılavuz sağlar.  
+ .NET Framework'ün en son sürümündeki temel yeni özellikleri ve değişiklikleri açıklar. Yeni ve eski türlerin ve üyelerin listelerini içerir ve uygulamalarınızı .NET Framework'ün önceki sürümünden geçirmek için bir kılavuz sağlar.  
   
  [Araçlar](./tools/index.md)  
- .NET Framework teknolojilerini kullanarak uygulamalar geliştirmenize, yapılandırmanıza ve dağıtmanıza yardımcı olan araçları açıklar.  
+ .NET Framework teknolojilerini kullanarak uygulamaları geliştirmenize, yapılandırmanıza ve dağıtmanıza yardımcı olan araçları açıklar.  
   
- [.NET örnekleri ve öğreticiler](../samples-and-tutorials/index.md)  
- .NET hakkında bilgi edinmenize yardımcı olacak örneklere ve öğreticilere bağlantılar sağlar.
+ [.NET örnekleri ve eğitimleri](../samples-and-tutorials/index.md)  
+ .NET hakkında bilgi edinmenize yardımcı olan örneklere ve öğreticilere bağlantılar sağlar.

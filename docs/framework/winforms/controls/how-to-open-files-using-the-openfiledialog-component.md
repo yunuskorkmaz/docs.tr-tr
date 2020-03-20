@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: OpenFileDialog bileşeni ile açık dosyalar'
+title: 'Nasıl açılır: OpenFileDialog bileşeni ile dosyaları açın'
 ms.date: 02/11/2019
 dev_langs:
 - csharp
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - OpenFile method [Windows Forms], OpenFileDialog component
 - files [Windows Forms], opening with OpenFileDialog component
 ms.assetid: 9d88367a-cc21-4ffd-be74-89fd63767d35
-ms.openlocfilehash: 7f4e96f1714a182647665f12e29d38f2b8037478
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca69de19ab1b9ae387002898145fe99e35a7b6b9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913464"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182126"
 ---
-# <a name="how-to-open-files-with-the-openfiledialog"></a>Nasıl yapılır: OpenFileDialog ile açık dosyalar 
+# <a name="how-to-open-files-with-the-openfiledialog"></a>Nasıl yapılı: OpenFileDialog ile dosyaları açın
 
-<xref:System.Windows.Forms.OpenFileDialog?displayProperty=nameWithType> Bileşeni göz atma ve dosyalar seçmek için Windows iletişim kutusunu açar. Seçili dosyaları açmak ve okumak için kullanabileceğiniz <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A?displayProperty=nameWithType> yöntemi veya bir örneğini oluşturmak <xref:System.IO.StreamReader?displayProperty=nameWithType> sınıfı. Aşağıdaki örnekler, iki yaklaşımı gösterir. 
+Bileşen, <xref:System.Windows.Forms.OpenFileDialog?displayProperty=nameWithType> dosyaları tarama ve seçmek için Windows iletişim kutusunu açar. Seçili dosyaları açıp okumak için <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A?displayProperty=nameWithType> yöntemi kullanabilir veya sınıfın bir <xref:System.IO.StreamReader?displayProperty=nameWithType> örneğini oluşturabilirsiniz. Aşağıdaki örnekler her iki yaklaşımı da göstermektedir.
 
-.NET Framework'teki almak veya ayarlamak için <xref:System.Windows.Forms.FileDialog.FileName%2A> özelliği gerektiren bir ayrıcalık düzeyi verilmiş tarafından <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> sınıfı. Örnekleri çalıştırmak bir <xref:System.Security.Permissions.FileIOPermission> izni denetleyin ve bir özel durum yetersiz ayrıcalıklar nedeniyle bir kısmi güven bağlamında çalıştırırsanız atabilirsiniz. Daha fazla bilgi için [kod erişimi güvenliği Temelleri](../../misc/code-access-security-basics.md).
+.NET Framework'de, <xref:System.Windows.Forms.FileDialog.FileName%2A> özelliği almak veya ayarlamak için <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> sınıf tarafından verilen bir ayrıcalık düzeyi gerektirir. Örnekler bir <xref:System.Security.Permissions.FileIOPermission> izin denetimi çalıştırın ve kısmi güven bağlamında çalıştırılırsa yetersiz ayrıcalıklar nedeniyle bir özel durum atabilir. Daha fazla bilgi için [Kod erişim güvenlik temellerine](../../misc/code-access-security-basics.md)bakın.
 
-Derleme ve bu örnekler, .NET Framework uygulamaları Çalıştır C# veya Visual Basic komut satırı. Daha fazla bilgi için [csc.exe ile komut satırı derleme](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) veya [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md). 
+Bu örnekleri C# veya Visual Basic komut satırından .NET Framework uygulamaları olarak oluşturabilir ve çalıştırabilirsiniz. Daha fazla bilgi için [csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) veya [Build komut satırına](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)sahip Command-line binasına bakın.
 
-.NET Core 3.0 ile başlayarak, ayrıca yapı ve örnekler Windows .NET Core uygulamaları .NET Core Windows Forms bir klasörden Çalıştır  *\<klasör adı > .csproj* proje dosyası. 
+.NET Core 3.0 ile başlayarak, .NET Core Windows Forms * \<klasör adı>.csproj* proje dosyasına sahip bir klasörden windows .NET Core uygulamaları olarak örnekler oluşturabilir ve çalıştırabilirsiniz.
 
-## <a name="example-read-a-file-as-a-stream-with-streamreader"></a>Örnek: StreamReader olan bir akış olarak bir dosyayı okuma  
+## <a name="example-read-a-file-as-a-stream-with-streamreader"></a>Örnek: Bir dosyayı StreamReader ile akış olarak okuyun  
   
-Aşağıdaki örnek Windows Forms kullanan <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> açmak için olay işleyicisi <xref:System.Windows.Forms.OpenFileDialog> ile <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> yöntemi. Kullanıcı bir dosya seçer ve seçer sonra **Tamam**, örneği <xref:System.IO.StreamReader> sınıf dosyasını okur ve form denetiminin metin kutusuna içeriğini görüntüler. Dosya akışları okuma hakkında daha fazla bilgi için bkz: <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> ve <xref:System.IO.FileStream.Read%2A?displayProperty=nameWithType>.  
+<xref:System.Windows.Forms.Button> Aşağıdaki örnekte, <xref:System.Windows.Forms.Control.Click> <xref:System.Windows.Forms.OpenFileDialog> yöntemle açmak için Windows Forms denetiminin olay işleyicisi <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> kullanır. Kullanıcı bir dosya yı seçip **Tamam'ı**seçtikten sonra sınıfın bir örneği dosyayı <xref:System.IO.StreamReader> okur ve içeriğini formun metin kutusunda görüntüler. Dosya akışlarından okuma hakkında daha <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> fazla <xref:System.IO.FileStream.Read%2A?displayProperty=nameWithType>bilgi için bkz.  
 
  [!code-csharp[OpenFileDialog#1](~/samples/snippets/winforms/open-files/example1/cs/Form1.cs)]
  [!code-vb[OpenFileDialog#1](~/samples/snippets/winforms/open-files/example1/vb/Form1.vb)]  
 
-## <a name="example-open-a-file-from-a-filtered-selection-with-openfile"></a>Örnek: Openfıle ile filtre uygulanmış bir seçimin bir dosyayı açma 
+## <a name="example-open-a-file-from-a-filtered-selection-with-openfile"></a>Örnek: OpenFile ile filtre uygulanmış bir seçimden dosya açma
 
-Aşağıdaki örnekte <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> açmak için olay işleyicisi <xref:System.Windows.Forms.OpenFileDialog> bir filtreyle yalnızca metin dosyaları gösterir. Kullanıcı bir metin dosyası seçer ve seçer sonra **Tamam**, <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> yöntemi dosyasını Not Defteri'nde açmak için kullanılır.
+Aşağıdaki örnekte, <xref:System.Windows.Forms.Button> yalnızca <xref:System.Windows.Forms.Control.Click> metin dosyalarını gösteren <xref:System.Windows.Forms.OpenFileDialog> bir filtreyi açmak için denetimin olay işleyicisi kullanır. Kullanıcı bir metin dosyası seçtikten ve **Tamam'ı**seçtikten sonra, dosyayı <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> Not Defteri'nde açmak için yöntem kullanılır.
 
  [!code-csharp[OpenFileDialog#2](~/samples/snippets/winforms/open-files/example2/cs/Form1.cs)]
  [!code-vb[OpenFileDialog#2](~/samples/snippets/winforms/open-files/example2/vb/Form1.vb)]  

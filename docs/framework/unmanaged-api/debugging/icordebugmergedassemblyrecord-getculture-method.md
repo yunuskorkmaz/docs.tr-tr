@@ -1,51 +1,51 @@
 ---
-title: 'Icordebugmergedassemblyrecord:: GetCulture yöntemi'
+title: ICorDebugMergedAssemblyRecord::GetCulture Yöntemi
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
-ms.openlocfilehash: 77ad8ee7977096e87b9fd2e131920a042243560e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ad54a93b16e803170987dd56d8063669f7e67f94
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793152"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178748"
 ---
-# <a name="icordebugmergedassemblyrecordgetculture-method"></a>Icordebugmergedassemblyrecord:: GetCulture yöntemi
+# <a name="icordebugmergedassemblyrecordgetculture-method"></a>ICorDebugMergedAssemblyRecord::GetCulture Yöntemi
 Derlemenin kültür adı dizesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetCulture(  
-   [in] ULONG32 cchCulture,   
-   [out] ULONG32 *pcchCulture,   
+   [in] ULONG32 cchCulture,
+   [out] ULONG32 *pcchCulture,
    [out, size_is(cchCulture), length_is(*pcchCulture)] WCHAR szCulture[]  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `cchCulture`  
- 'ndaki `szCulture` arabelleğindeki karakterlerin sayısı.  
+ [içinde] `szCulture` Arabellekteki karakter sayısı.  
   
  `pcchCulture`  
- dışı Gerçekten `szCulture` arabelleğine yazılan karakterlerin sayısı.  
+ [çıkış] `szCulture` Arabelleğe yazılan karakter sayısı.  
   
  `szCulture`  
- dışı Kültür adını içeren bir karakter dizisi.  
+ [çıkış] Kültür adını içeren bir karakter dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kültür adı, "en-US" (Ingilizce (Birleşik Devletler) kültürü için) veya "nötr" (nötr kültür için) gibi bir kültürü tanımlayan benzersiz bir dizedir.  
+ Kültür adı, "en-US" (İngilizce (ABD) kültürü veya "tarafsız" (tarafsız bir kültür için) gibi bir kültürü tanımlayan benzersiz bir dizedir.  
   
 > [!NOTE]
-> Bu yöntem yalnızca .NET Native kullanılabilir.  
+> Bu yöntem yalnızca .NET Native ile kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

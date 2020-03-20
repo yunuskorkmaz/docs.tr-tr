@@ -1,55 +1,55 @@
 ---
-title: 'Icordebugmergedassemblyrecord:: GetVersion yöntemi'
+title: ICorDebugMergedAssemblyRecord::GetVersion Yöntemi
 ms.date: 03/30/2017
 ms.assetid: c6858b06-ae26-4312-b325-ea6025016675
-ms.openlocfilehash: 8b5995183be7f1c992cf3230e16456cb248eff0c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5dc9995e88086da854d2e9382cef81b229ff9dc9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793076"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178678"
 ---
-# <a name="icordebugmergedassemblyrecordgetversion-method"></a>Icordebugmergedassemblyrecord:: GetVersion yöntemi
+# <a name="icordebugmergedassemblyrecordgetversion-method"></a>ICorDebugMergedAssemblyRecord::GetVersion Yöntemi
 Derlemenin sürüm bilgilerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetVersion(  
-   [out] USHORT *pMajor,   
-   [out] USHORT *pMinor,   
-   [out] USHORT *pBuild,   
+   [out] USHORT *pMajor,
+   [out] USHORT *pMinor,
+   [out] USHORT *pBuild,
    [out] USHORT *pRevision  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pMajor`  
- dışı Ana sürüm numarasına yönelik bir işaretçi.  
+ [çıkış] Ana sürüm numarasıiçin bir işaretçi.  
   
  `pMinor`  
- dışı Küçük sürüm numarasına yönelik bir işaretçi.  
+ [çıkış] Küçük sürüm numarasıiçin bir işaretçi.  
   
  `pBuild`  
- dışı Yapı numarasına yönelik bir işaretçi.  
+ [çıkış] Yapı numarasıiçin bir işaretçi.  
   
  `pRevision`  
- dışı Düzeltme numarasına yönelik bir işaretçi.  
+ [çıkış] Düzeltme numarasıiçin bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Derleme sürüm numaraları hakkında daha fazla bilgi için <xref:System.Version> sınıfı konusuna bakın.  
+ Derleme sürüm numaraları hakkında bilgi <xref:System.Version> için sınıf konusuna bakın.  
   
 > [!NOTE]
-> Bu yöntem yalnızca .NET Native kullanılabilir.  
+> Bu yöntem yalnızca .NET Native ile kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

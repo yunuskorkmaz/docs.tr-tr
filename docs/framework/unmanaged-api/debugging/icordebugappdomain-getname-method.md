@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 02c596d7-00b0-4e2c-856b-5425158fcefd
 topic_type:
 - apiref
-ms.openlocfilehash: 2c9aa6792885c685195049948a540453b1f5235e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 45d27fca888bdabedf197525c63dbd03af7ba1ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110306"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179085"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName Yöntemi
 Uygulama etki alanının adını alır.  
@@ -31,29 +31,29 @@ Uygulama etki alanının adını alır.
 HRESULT GetName (  
     [in]  ULONG32           cchName,  
     [out] ULONG32           *pcchName,  
-    [out, size_is(cchName), length_is(*pcchName)]   
+    [out, size_is(cchName), length_is(*pcchName)]
          WCHAR              szName[]  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- 'ndaki `szName` dizisinin boyutu. Bu yöntemi sorgu moduna almak için bu değeri sıfır olarak ayarlayın.  
+ [içinde] `szName` Dizinin boyutu. Bu yöntemi sorgu moduna koymak için bu değeri sıfıra ayarlayın.  
   
  `pcchName`  
- dışı Adın boyutuna veya aslında `szName`geri döndürülen karakterlerin sayısına yönelik bir işaretçi. Sorgu modunda, bu değer çağıranın ad için ne kadar büyük bir arabellek ayrılacağını bilmesini sağlar.  
+ [çıkış] Adın boyutuna veya gerçekte döndürülen `szName`karakter sayısına işaretçi. Sorgu modunda, bu değer arayan ada ne kadar büyük bir arabellek ayırmak için bildirin.  
   
  `szName`  
- dışı Uygulama etki alanının adını depolayan bir dizi.  
+ [çıkış] Uygulama etki alanının adını depolayan bir dizi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir hata ayıklayıcı, ad için gereken bir arabellek boyutunu almak için `GetName` yöntemini bir kez çağırır. Hata ayıklayıcı arabelleği ayırır ve sonra arabelleği dolduracak ikinci kez yöntemi çağırır. Adın boyutunu almak için ilk çağrı *sorgu modu*olarak adlandırılır.  
+ Hata ayıklama, `GetName` ad için gereken arabellek boyutunu almak için yöntemi bir kez çağırır. Hata ayıklama arabelleği ayırır ve sonra arabellek doldurmak için yöntemi ikinci kez çağırır. Adın boyutunu almak için ilk arama, sorgu *modu*olarak adlandırılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

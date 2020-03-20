@@ -17,64 +17,64 @@ helpviewer_keywords:
 ms.assetid: 8c2ff5d8-8c04-4423-b1e1-e1c8764b36d3
 topic_type:
 - apiref
-ms.openlocfilehash: dc03365b72a5f3613402faf1aed44b5683e9892c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 34d543dd76de05bdf55d8187cf192455d1387a9f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777833"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178948"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>ICorDebugCode3::GetReturnValueLiveOffset Metodu
-Belirtilen bir Il ofseti için, hata ayıklayıcının bir işlevden dönüş değeri alabileceği şekilde, bir kesme noktasının yerleştirilmesi gereken yerel uzaklıkları alır.  
+Belirli bir IL ofset için, hata ayıklamanın bir işlevden geri dönüş değerini elde edilebilmek için kesme noktasının yerleştirilmesi gereken yerel uzaklıkları alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp
 HRESULT GetReturnValueLiveOffset(  
     [in] ULONG32 ILoffset,  
-    [in] ULONG32 bufferSize,   
-    [out] ULONG32 *pFetched,   
+    [in] ULONG32 bufferSize,
+    [out] ULONG32 *pFetched,
     [out, size_is(buffersize), length_is(*pFetched)] ULong32 pOffsets[]  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `ILoffset`  
- Il kayması. İşlevin çağrı sitesi olması gerekir veya işlev çağrısı başarısız olur.  
+ IL ofset. Bir işlev arama sitesi olmalıdır veya işlev çağrısı başarısız olur.  
   
  `bufferSize`  
- `pOffsets`depolamak için kullanılabilir bayt sayısı.  
+ Depolamak `pOffsets`için kullanılabilir bayt sayısı.  
   
  `pFetched`  
- Gerçekten döndürülen uzaklık sayısına yönelik bir işaretçi. Genellikle değeri 1 ' dir, ancak tek bir Il yönergesi birden çok `CALL` derleme yönergesiyle eşleyebilirsiniz.  
+ Geri döndürülen uzaklık sayısına işaretçi. Genellikle değeri 1'dir, ancak tek bir IL `CALL` yönergesi birden çok montaj yönergesi ile eşlenebilir.  
   
  `pOffsets`  
- Yerel uzaklık dizisi. Genellikle, `pOffsets` tek bir konum içerir, ancak tek bir Il yönergesi birden çok `CALL` derleme yönergelerine eşleyebilir.  
+ Bir dizi yerel uzaklık. Tipik olarak, tek bir IL yönergesi birden çok `CALL` derleme yönergesi için birden çok harita eşleyebilir rağmen, `pOffsets` tek bir ofset içerir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, başvuru türü döndüren bir yöntemin dönüş değerini almak için [ICorDebugILFrame3:: Getreturnvalueforılsapmasını](icordebugilframe3-getreturnvalueforiloffset-method.md) yöntemi ile birlikte kullanılır. Bir işlev çağrısı sitesine bir Il uzaklığının bu yönteme geçirilmesi bir veya daha fazla yerel uzaklık döndürür. Hata ayıklayıcı daha sonra işlevdeki bu yerel kaydırmalar üzerinde kesme noktaları ayarlayabilir. Hata ayıklayıcı kesme noktalarından birine geçtiğinde, dönüş değerini almak için bu yönteme geçirdiğiniz Il sapmasını [ICorDebugILFrame3:: Getreturnvalueforılsapmasını](icordebugilframe3-getreturnvalueforiloffset-method.md) yöntemine geçirebilirsiniz. Hata ayıklayıcı daha sonra, ayarlandığı tüm kesme noktalarını temizlemelidir.  
+ Bu yöntem, başvuru türünü döndüren bir yöntemin geri dönüş değerini almak için [ICorDebugILFrame3::GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) yöntemi ile birlikte kullanılır. Bir IŞLEV çağrı sitesine IL ofset'in bu yönteme geçirilmesi bir veya daha fazla yerel uzaklık döndürür. Hata ayıklama, işlevdeki bu yerel uzaklıklarda kesme noktaları ayarlayabilir. Hata ayıklayıcı kesme noktalarından birine ulaştığında, bu yönteme geçtiğiniz IL ofsetini iade değerini almak için [ICorDebugILFrame3::GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) yöntemine geçirebilirsiniz. Hata ayıklama daha sonra ayarladığının tüm kesme noktalarını temizlemelidir.  
   
 > [!WARNING]
-> `ICorDebugCode3::GetReturnValueLiveOffset` ve [ICorDebugILFrame3:: Getreturnvalueforılsapmasını](icordebugilframe3-getreturnvalueforiloffset-method.md) yöntemleri yalnızca başvuru türleri için dönüş değeri bilgilerini almanızı sağlar. Değer türlerinden dönüş değeri bilgileri alma (yani, <xref:System.ValueType>türetilen tüm türler) desteklenmez.  
+> `ICorDebugCode3::GetReturnValueLiveOffset` Ve [ICorDebugILFrame3::GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) yöntemleri yalnızca başvuru türleri için iade değeri bilgileri almanızı sağlar. İade değeri bilgilerinin değer türlerinden (diğer bir şekilde) <xref:System.ValueType>alınması desteklenmez.  
   
- İşlevi, aşağıdaki tabloda gösterilen `HRESULT` değerlerini döndürür.  
+ İşlev aşağıdaki `HRESULT` tabloda gösterilen değerleri döndürür.  
   
-|`HRESULT` değeri|Açıklama|  
+|`HRESULT`Değer|Açıklama|  
 |---------------------|-----------------|  
 |`S_OK`|Başarılı.|  
-|`CORDBG_E_INVALID_OPCODE`|Verilen Il konum sitesi bir çağrı yönergesi değil veya işlev `void`döndürüyor.|  
-|`CORDBG_E_UNSUPPORTED`|Verilen Il kayması uygun bir çağrıdır, ancak dönüş türü bir dönüş değeri almak için desteklenmez.|  
+|`CORDBG_E_INVALID_OPCODE`|Verilen IL ofset sitesi bir çağrı yönergesi değildir veya işlev döndürür. `void`|  
+|`CORDBG_E_UNSUPPORTED`|Verilen IL ofset uygun bir çağrıdır, ancak iade türü iade değeri almak için desteklenmez.|  
   
- `ICorDebugCode3::GetReturnValueLiveOffset` yöntemi yalnızca x86 tabanlı ve AMD64 sistemlerinde kullanılabilir.  
+ Bu `ICorDebugCode3::GetReturnValueLiveOffset` yöntem yalnızca x86 tabanlı ve AMD64 sistemlerinde kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

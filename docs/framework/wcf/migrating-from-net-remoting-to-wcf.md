@@ -2,36 +2,36 @@
 title: .NET Uzaktan İletişimden WCF'ye Taşınma
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 4b6996b01da6312486649482ffbb812fcb021306
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 8dcc019017195fd55231fbea3493d4c53d500cb3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452558"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183959"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>.NET Uzaktan İletişimden WCF'ye Taşınma
-Bu makalede, .NET Remoting kullanan bir uygulamanın Windows Communication Foundation (WCF) kullanmak üzere nasıl geçirileceği açıklanır. Bu ürünler arasındaki benzer kavramları karşılaştırır ve daha sonra WCF 'de birkaç genel uzaktan Iletişim senaryosu gerçekleştirmeyi açıklar.  
+Bu makalede, Windows Communication Foundation (WCF) kullanmak için .NET Remoting kullanan bir uygulamanın nasıl geçirilen açıklanmaktadır. Bu ürünler arasındaki benzer kavramları karşılaştırır ve wcf'de birkaç yaygın Remoting senaryosunun nasıl gerçekleştirileceğine açıklanır.  
   
- .NET uzaktan Iletişim yalnızca geriye dönük uyumluluk için desteklenen eski bir üründür. İstemci ve sunucu arasında ayrı güven düzeylerini koruyamadığından, karma güven ortamlarında güvenli değildir. Örneğin, hiç bir .NET Remoting uç noktasını Internet 'e veya güvenilmeyen istemcilere sunmamanız gerekir. Mevcut uzaktan Iletişim uygulamalarının daha yeni ve daha güvenli teknolojilere geçirilmesi önerilir. Uygulamanın tasarımı yalnızca HTTP kullanıyorsa ve yeniden karşılaşırsanız, ASP.NET Web API 'SI önerilir. Daha fazla bilgi için bkz. ASP.NET Web API. Uygulama SOAP 'yi temel alıyorsa veya TCP gibi http olmayan protokoller gerektiriyorsa, WCF önerilir.  
+ .NET Remoting, yalnızca geriye dönük uyumluluk için desteklenen eski bir üründür. İstemci ve sunucu arasındaki ayrı güven düzeylerini koruyamadığından karışık güven ortamları arasında güvenli değildir. Örneğin, .NET Remoting bitiş noktasını Hiçbir zaman Internet'e veya güvenilmeyen istemcilere maruz bırakmamalısınız. Mevcut Remoting uygulamalarının daha yeni ve daha güvenli teknolojilere geçirilmelerini öneririz. Uygulamanın tasarımı yalnızca HTTP kullanıyorsa ve RESTful ise, Web API ASP.NET öneririz. Daha fazla bilgi için ASP.NET Web API'ye bakın. Uygulama SOAP'a dayanıyorsa veya TCP gibi Http dışı protokoller gerektiriyorsa, WCF'yi öneririz.  
 
-## <a name="comparing-net-remoting-to-wcf"></a>.NET uzaktan iletişimini WCF ile karşılaştırma  
- Bu bölüm, .NET uzaktan Iletişim uygulamasının temel yapı taşlarını WCF eşdeğerlerine göre karşılaştırır. Bu yapı taşlarını daha sonra WCF 'de bazı yaygın istemci-sunucu senaryoları oluşturmak için kullanacağız. Aşağıdaki grafik, .NET uzaktan Iletişim ve WCF arasındaki önemli benzerlikleri ve farklılıkları özetler.  
+## <a name="comparing-net-remoting-to-wcf"></a>.NET Remoting ile WCF karşılaştırması  
+ Bu bölümde .NET Remoting'in temel yapı taşları WCF eşdeğerleri ile karşılaştırılır. Bu yapı taşlarını daha sonra WCF'de bazı ortak istemci sunucu senaryoları oluşturmak için kullanacağız. Aşağıdaki grafikte .NET Remoting ve WCF arasındaki temel benzerlikler ve farklar özetlenmiştir.  
   
 ||.NET uzaktan iletişim|WCF|  
 |-|-------------------|---------|  
-|Sunucu türü|Subclass MarshalByRefObject|[ServiceContract] özniteliğiyle işaretle|  
-|Hizmet işlemleri|Sunucu türündeki ortak Yöntemler|[OperationContract] özniteliğiyle işaretle|  
+|Sunucu türü|Alt sınıf MarshalByRefObject|[ServiceContract] özniteliği ile işaretle|  
+|Servis işlemleri|Sunucu türünde genel yöntemler|[OperationContract] özniteliği ile işaretle|  
 |Serileştirme|ISerializable veya [Serializable]|DataContractSerializer veya XmlSerializer|  
-|Geçirilen nesneler|Değere göre veya başvuruya göre|Yalnızca değere göre|  
-|Hatalar/özel durumlar|Herhangi bir serileştirilebilir özel durum|FaultContract\<TDetail >|  
-|İstemci proxy nesneleri|Kesin olarak yazılan saydam proxy 'ler bulunan MarshalByRefObjects adresinden otomatik olarak oluşturulur|Türü kesin belirlenmiş proxy 'ler, ChannelFactory\<TChannel kullanılarak isteğe bağlı olarak oluşturulur >|  
+|Geçen nesneler|Değer veya referans|Yalnızca göredeğer|  
+|Hatalar/özel durumlar|Herhangi bir serializable özel durum|Arıza\<Sözleşme Detay>|  
+|İstemci proxy nesneleri|Güçlü bir şekilde yazılan saydam yakınlıklar MareşalByRefObjects'ten otomatik olarak oluşturulur|Güçlü dakti-sa'lar ChannelFactory\<TChannel kullanılarak isteğe bağlı olarak oluşturulur>|  
 |Platform gerekli|Hem istemci hem de sunucu Microsoft OS ve .NET kullanmalıdır|Platformlar arası|  
-|İleti biçimi|Özel|Sektör standartları (SOAP, WS-*, vb.)|  
+|İleti biçimi|Özel|Endüstri standartları (SOAP, WS-*, vb.)|  
   
-### <a name="server-implementation-comparison"></a>Sunucu uygulama karşılaştırması  
+### <a name="server-implementation-comparison"></a>Sunucu Uygulama Karşılaştırması  
   
-#### <a name="creating-a-server-in-net-remoting"></a>.NET uzaktan Iletişim kutusunda sunucu oluşturma  
- .NET uzaktan Iletişim sunucusu türleri MarshalByRefObject 'den türetilmelidir ve istemcinin çağırabilmesine ve aşağıdaki gibi arama yöntemlerini tanımlamalıdır:  
+#### <a name="creating-a-server-in-net-remoting"></a>.NET Remoting'de Sunucu Oluşturma  
+ .NET Remoting sunucu türleri MarshalByRefObject'ten türemiş olmalı ve istemcinin çağırabileceği yöntemleri tanımlamalıdır:  
   
 ```csharp
 public class RemotingServer : MarshalByRefObject  
@@ -40,25 +40,25 @@ public class RemotingServer : MarshalByRefObject
 }  
 ```  
   
- Bu sunucu türünün genel yöntemleri, istemcilerin kullanabildiği ortak sözleşme olur.  Sunucunun ortak arabirimi ve onun uygulamasıyla arasında ayrım yoktur, her ikisini de bir tür işler.  
+ Bu sunucu türünün ortak yöntemleri istemcilerin kullanabileceği ortak sözleşme haline gelir.  Sunucunun ortak arabirimi ile uygulanması arasında ayrım yoktur – bir tür her ikisini de işler.  
   
- Sunucu türü tanımlandıktan sonra, aşağıdaki örnekte olduğu gibi istemciler için kullanılabilir hale getirilebilir:  
+ Sunucu türü tanımlandıktan sonra, aşağıdaki örnekte olduğu gibi istemcilerin kullanımına sunulabilir:  
   
 ```csharp
 TcpChannel channel = new TcpChannel(8080);  
 ChannelServices.RegisterChannel(channel, ensureSecurity : true);  
 RemotingConfiguration.RegisterWellKnownServiceType(  
-    typeof(RemotingServer),   
-    "RemotingServer",   
+    typeof(RemotingServer),
+    "RemotingServer",
     WellKnownObjectMode.Singleton);  
 Console.WriteLine("RemotingServer is running.  Press ENTER to terminate...");  
 Console.ReadLine();  
 ```  
   
- Yapılandırma dosyalarını kullanma dahil, uzaktan Iletişim türünü sunucu olarak kullanılabilir hale getirmek için birçok yol vardır. Bu yalnızca bir örnektir.  
+ Yapılandırma dosyalarını kullanmak da dahil olmak üzere Remoting türünü sunucu olarak kullanılabilir hale getirmenin birçok yolu vardır. Bu sadece bir örnektir.  
   
-#### <a name="creating-a-server-in-wcf"></a>WCF 'de sunucu oluşturma  
- WCF 'deki eşdeğer adım iki tür oluşturmayı içerir--genel "hizmet sözleşmesi" ve somut uygulama. İlki [ServiceContract] ile işaretlenmiş bir arabirim olarak bildirilmiştir. İstemciler için kullanılabilir yöntemler [OperationContract] ile işaretlenir:  
+#### <a name="creating-a-server-in-wcf"></a>WCF'de Sunucu Oluşturma  
+ WCF'deki eşdeğer adım, iki tür -kamu "hizmet sözleşmesi" ve somut uygulama olmak üzere oluşturulmasını içeriyor. İlki [ServiceContract] ile işaretlenmiş bir arabirim olarak bildirilir. İstemciler için kullanılabilen yöntemler [OperationContract] ile işaretlenir:  
   
 ```csharp
 [ServiceContract]  
@@ -69,7 +69,7 @@ public interface IWCFServer
 }  
 ```  
   
- Sunucunun uygulanması, aşağıdaki örnekte olduğu gibi ayrı bir somut sınıfta tanımlanmıştır:  
+ Sunucunun uygulaması aşağıdaki örnekte olduğu gibi ayrı bir somut sınıfta tanımlanır:  
   
 ```csharp
 public class WCFServer : IWCFServer  
@@ -78,7 +78,7 @@ public class WCFServer : IWCFServer
 }  
 ```  
   
- Bu türler tanımlandıktan sonra, aşağıdaki örnekte olduğu gibi WCF sunucusu istemciler için kullanılabilir hale getirilebilir:  
+ Bu türler tanımlandıktan sonra, WCF sunucusu aşağıdaki örnekte olduğu gibi istemcilerin kullanımına sunulabilir:  
   
 ```csharp
 NetTcpBinding binding = new NetTcpBinding();  
@@ -97,9 +97,9 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
 ```  
   
 > [!NOTE]
-> TCP her iki örnekte de, mümkün olduğunca benzer şekilde devam etmek için kullanılır. HTTP kullanan örnekler için bu konunun ilerleyen kısımlarında yer alarak izlenecek yol-kılavuzlarına bölümüne bakın.  
+> TCP, her iki örnekte de mümkün olduğunca benzer tutmak için kullanılır. HTTP'yi kullanan örnekler için bu konunun ilerleyen yerlerine bakın.  
   
- WCF hizmetlerini yapılandırmak ve barındırmak için birçok yol vardır. Bu, "kendiliğinden konak" olarak bilinen tek bir örnektir. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:  
+ WCF hizmetlerini yapılandırmanın ve barındırmanın birçok yolu vardır. Bu sadece bir örnektir, "kendi kendine barındırılan" olarak bilinir. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:  
   
 - [Nasıl yapılır: Bir Hizmet Anlaşması Tanımlama](how-to-define-a-wcf-service-contract.md)  
   
@@ -107,32 +107,32 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
   
 - [Barındırma Hizmetleri](hosting-services.md)  
   
-### <a name="client-implementation-comparison"></a>İstemci uygulama karşılaştırması  
+### <a name="client-implementation-comparison"></a>İstemci Uygulama Karşılaştırması  
   
-#### <a name="creating-a-client-in-net-remoting"></a>.NET Remoting 'te Istemci oluşturma  
- .NET uzaktan Iletişim sunucusu nesnesi kullanılabilir duruma getirildikten sonra, aşağıdaki örnekte olduğu gibi istemciler tarafından tüketilebilir:  
+#### <a name="creating-a-client-in-net-remoting"></a>.NET Remoting'de İstemci Oluşturma  
+ Bir .NET Remoting sunucu nesnesi kullanıma sunulduktan sonra, aşağıdaki örnekte olduğu gibi istemciler tarafından tüketilebilir:  
   
 ```csharp
 TcpChannel channel = new TcpChannel();  
 ChannelServices.RegisterChannel(channel, ensureSecurity : true);  
 RemotingServer server = (RemotingServer)Activator.GetObject(  
-                            typeof(RemotingServer),   
+                            typeof(RemotingServer),
                             "tcp://localhost:8080/RemotingServer");  
   
 RemotingCustomer customer = server.GetCustomer(42);  
 Console.WriteLine($"Customer {customer.FirstName} {customer.LastName} received.");
 ```  
   
- Etkinleştirici. GetObject () öğesinden döndürülen RemotingServer örneği "saydam proxy" olarak bilinir. İstemcideki RemotingServer türü için ortak API 'yi uygular, ancak tüm yöntemler farklı bir işlemde veya makinede çalışan sunucu nesnesini çağırır.  
+ Activator.GetObject() döndürülen RemotingServer örneği "saydam proxy" olarak bilinir. İstemcide RemotingServer türü için genel API uygular, ancak tüm yöntemler farklı bir işlem veya makinede çalışan sunucu nesnesini çağırır.  
   
-#### <a name="creating-a-client-in-wcf"></a>WCF 'de Istemci oluşturma  
- WCF 'deki eşdeğer adım, ara sunucuyu açıkça oluşturmak için bir kanal fabrikası kullanmayı içerir. Uzaktan Iletişim gibi, proxy nesnesi, aşağıdaki örnekte olduğu gibi, sunucu üzerindeki işlemleri çağırmak için kullanılabilir:  
+#### <a name="creating-a-client-in-wcf"></a>WCF'de İstemci Oluşturma  
+ WCF eşdeğer adım açıkça proxy oluşturmak için bir kanal fabrikası kullanarak içerir. Remoting gibi proxy nesnesi de aşağıdaki örnekte olduğu gibi sunucudaki işlemleri çağırmak için kullanılabilir:  
   
 ```csharp
 NetTcpBinding binding = new NetTcpBinding();  
 String url = "net.tcp://localhost:8000/wcfserver";  
 EndpointAddress address = new EndpointAddress(url);  
-ChannelFactory<IWCFServer> channelFactory =   
+ChannelFactory<IWCFServer> channelFactory =
     new ChannelFactory<IWCFServer>(binding, address);  
 IWCFServer server = channelFactory.CreateChannel();  
   
@@ -140,29 +140,29 @@ Customer customer = server.GetCustomer(42);
 Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received.");
 ```  
   
- Bu örnek, en çok uzaktan Iletişim örneğine benzer olduğundan, kanal düzeyinde programlama gösterir. Ayrıca, Visual Studio 'da istemci programlamayı basitleştirecek kod üreten **hizmet başvurusu Ekle** yaklaşımı de mevcuttur. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:  
+ Bu örnek, Remoting örneğine en çok benzediği için programlamayı kanal düzeyinde gösterir. Ayrıca, Visual Studio'da istemci programlamayı basitleştirmek için kod üreten **Hizmet Başvurusu Ekle** yaklaşımı da mevcuttur. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:  
   
 - [İstemci Kanal Düzeyi Programlama](./extending/client-channel-level-programming.md)  
   
-- [Nasıl yapılır: hizmet başvurusu ekleme, güncelleştirme veya kaldırma](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
+- [Nasıl yapilir: Hizmet Başvurusu Ekleme, Güncelleştirme veya Kaldırma](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   
-### <a name="serialization-usage"></a>Serileştirme kullanımı  
- Hem .NET Remoting hem de WCF, nesneleri istemci ile sunucu arasında göndermek için serileştirme kullanır, ancak bu önemli yollarla farklılık gösterir:  
+### <a name="serialization-usage"></a>Serileştirme Kullanımı  
+ Hem .NET Remoting hem de WCF, istemci ve sunucu arasında nesneleri göndermek için serileştirme kullanır, ancak bunlar şu önemli şekillerde farklılık gösterir:  
   
-1. Bunlar, serileştirildiklerinizi göstermek için farklı serileştiriciler ve kurallar kullanır.  
+1. Neyi seri hale getirmek için farklı serializers ve kurallar kullanırlar.  
   
-2. .NET uzaktan Iletişim, bir katmanda Yöntem veya özellik erişiminin, güvenlik sınırları genelinde olan diğer katmanda kod yürütmesine olanak tanıyan "başvuruya göre" serileştirmesini destekler. Bu özellik güvenlik açıklarını açığa çıkarır ve uzaktan Iletişim uç noktalarının güvenilmeyen istemcilere hiçbir şekilde gösterilmemesi için önemli nedenlerden biridir.  
+2. .NET Remoting, bir katmanda yöntem veya özellik erişiminin diğer katmanda, güvenlik sınırlarının ötesinde olan kodu yürütmesine olanak tanıyan "referans" serileştirmeyi destekler. Bu özellik güvenlik açıklarını ortaya çıkarır ve Remoting uç noktalarının asla güvenilmeyen istemcilere maruz kalmaması için temel nedenlerden biridir.  
   
-3. Uzaktan Iletişim tarafından kullanılan serileştirme geri çevrildi (serileştirilmeyen öğeleri açıkça hariç bırakır) ve WCF serileştirme kabul etme (hangi üyelerin serileştirilmek için açıkça işaretlenmesi).  
+3. Remoting tarafından kullanılan serileştirme devre dışı bırakma (serileştirmeme ne hariç) ve WCF serileştirme opt-in (açıkça hangi üyeleri serileştirmek için işaret) olduğunu.  
   
-#### <a name="serialization-in-net-remoting"></a>.NET Remoting 'de serileştirme  
- .NET uzaktan Iletişim, istemci ve sunucu arasında nesneleri serileştirmek ve seri durumdan çıkarmak için iki yolu destekler:  
+#### <a name="serialization-in-net-remoting"></a>.NET Remoting'de serileştirme  
+ .NET Remoting, istemci ve sunucu arasındaki nesneleri serihale ve deserialize etmenin iki yolunu destekler:  
   
-- *Değere göre* – nesnenin değerleri katman sınırları genelinde serileştirilir ve diğer katmanda bu nesnenin yeni bir örneği oluşturulur. Bu yeni örneğin yöntemlere veya özelliklerine yapılan çağrılar yalnızca yerel olarak yürütülür ve özgün nesneyi veya katmanı etkilemez.  
+- *Değer* olarak – nesnenin değerleri katman sınırları arasında seri hale getirilir ve bu nesnenin yeni bir örneği diğer katmanda oluşturulur. Bu yeni örneğin yöntemlerine veya özelliklerine yapılan tüm çağrılar yalnızca yerel olarak yürütülür ve özgün nesneyi veya katmanı etkilemez.  
   
-- *Başvuruya göre* – özel bir "nesne başvurusu" katman sınırları genelinde serileştirilir. Bir katman bu nesnenin yöntemleriyle veya özellikleriyle etkileşime geçtiğinde, özgün katmandaki özgün nesneye geri iletişim kurar. Başvuruya göre nesneler, istemci veya istemciden sunucuya kadar her iki yönde de akabilir.  
+- *Referans olarak* – özel bir "nesne başvurusu" katman sınırları arasında seri hale getirilir. Bir katman, o nesnenin yöntemleri veya özellikleriyle etkileşime girdiğinde, özgün katmandaki özgün nesneye geri iletir. Başvuru nesneleri her iki yönde de akabilir – sunucudan istemciye veya istemciden sunucuya.  
   
- Remoting 'teki değer tabanlı türler, [Serializable] özniteliğiyle işaretlenir veya aşağıdaki örnekte olduğu gibi ISerializable uygular:  
+ Remoting'deki yan değer türleri aşağıdaki örnekte olduğu gibi [Serializable] özniteliği ile işaretlenir veya ISerializable'ı uygular:  
   
 ```csharp
 [Serializable]  
@@ -174,7 +174,7 @@ public class RemotingCustomer
 }  
 ```  
   
- Başvuruya göre türler, aşağıdaki örnekte olduğu gibi MarshalByRefObject sınıfından türetilir:  
+ Başvuru türleri aşağıdaki örnekte olduğu gibi MarshalByRefObject sınıfından türetilmiştir:  
   
 ```csharp
 public class RemotingCustomerReference : MarshalByRefObject  
@@ -185,10 +185,10 @@ public class RemotingCustomerReference : MarshalByRefObject
 }  
 ```  
   
- Uzaktan Iletişimin başvuru nesnelerinin etkilerini anlamak son derece önemlidir. Herhangi bir katman (istemci veya sunucu) diğer katmana başvuruya göre bir nesne gönderiyorsa, tüm yöntem, nesnenin sahip olduğu katmanda yürütülür. Örneğin, sunucu tarafından döndürülen bir başvuruya göre nesne üzerinde Yöntemler çağıran bir istemci, sunucuda kod yürütür. Benzer şekilde, istemci tarafından sağlanmış bir başvuru nesnesi üzerinde Yöntemler çağıran bir sunucu, kodu istemciye geri yürütür. Bu nedenle, .NET Remoting kullanımı yalnızca tam olarak güvenilen ortamlarda önerilir. Güvenli bir .NET Remoting uç noktasının güvenilir olmayan istemcilere açık olması, uzaktan Iletişim sunucusu saldırılara karşı savunmasız hale getirir.  
+ Remoting'in referans nesnelerinin sonuçlarını anlamak son derece önemlidir. Katmandan biri (istemci veya sunucu) diğer katmana bir by-reference nesnesi gönderirse, tüm yöntem çağrıları nesneye sahip olan katmanda yürütülür. Örneğin, sunucu tarafından döndürülen bir başvuru nesnesi üzerinde arama yöntemleri çağıran bir istemci sunucuda kod yürütecektir. Benzer şekilde, istemci tarafından sağlanan bir başvuru nesnesi üzerinde arama yöntemleri bir sunucu istemci üzerinde kodu geri yürütecektir. Bu nedenle, .NET Remoting'in kullanımı yalnızca tam güvenilen ortamlarda önerilir. Bir public .NET Remoting bitiş noktasını güvenilmeyen istemcilere vermek, Remoting sunucusunun saldırıya açık olmasını sağlar.  
   
-#### <a name="serialization-in-wcf"></a>WCF 'de serileştirme  
- WCF yalnızca değere göre serileştirme destekler. İstemci ve sunucu arasında Exchange için bir tür tanımlamanın en yaygın yolu aşağıdaki örnekte gibidir:  
+#### <a name="serialization-in-wcf"></a>WCF'de serileştirme  
+ WCF yalnızca yan değer serileştirmeyi destekler. İstemci ve sunucu arasında alışverişyapmak için bir tür tanımlamak için en yaygın yolu aşağıdaki örnekte olduğu gibi:  
   
 ```csharp
 [DataContract]  
@@ -205,19 +205,19 @@ public class WCFCustomer
 }  
 ```  
   
- [DataContract] özniteliği bu türü, istemci ile sunucu arasında seri hale getirileve seri durumdan çıkarılacak bir şekilde tanımlar. [DataMember] özniteliği, serileştirme için tek tek özellikleri veya alanları tanımlar.  
+ [DataContract] özniteliği, bu türü istemci ve sunucu arasında serileştirilebilen ve deserialize edilebilen bir tür olarak tanımlar. [DataMember] özniteliği, seri hale getirmek için tek tek özellikleri veya alanları tanımlar.  
   
- WCF, katmanlar arasında bir nesne gönderdiğinde, yalnızca değerleri seri hale getirir ve diğer katmanda nesnenin yeni bir örneğini oluşturur. Nesne değerleri yalnızca yerel olarak oluşur; diğer katmanla aynı şekilde .NET Remoting ile başvuru nesneleriyle iletişim kurmazlar. Daha fazla bilgi için bkz. [serileştirme ve seri durumundan çıkarma](./feature-details/serialization-and-deserialization.md).  
+ WCF bir nesneyi katmanlar arasında gönderdiğinde, yalnızca değerleri seri hale eder ve diğer katmandaki nesnenin yeni bir örneğini oluşturur. Nesnenin değerleri ile herhangi bir etkileşim yalnızca yerel olarak oluşur - onlar diğer katman ile iletişim yok .NET Remoting by-reference nesneleri yapmak. Daha fazla bilgi için [serileştirme ve deserialization'a](./feature-details/serialization-and-deserialization.md)bakın.  
   
-### <a name="exception-handling-capabilities"></a>Özel durum Işleme özellikleri  
+### <a name="exception-handling-capabilities"></a>Özel Durum İşleme Yetenekleri  
   
-#### <a name="exceptions-in-net-remoting"></a>.NET Remoting 'teki özel durumlar  
- Bir uzak sunucu tarafından oluşturulan özel durumlar serileştirilir, istemciye gönderilir ve başka bir özel durum gibi istemcide yerel olarak oluşturulur. Özel özel durumlar, özel durum türünü alt sınıflama tarafından, [Serializable] ile işaretleyerek oluşturulabilir.   Çoğu Framework özel durumu zaten bu şekilde işaretlenir, bu sayede sunucuda sunucu tarafından oluşturulması, serileştirilmesi ve yeniden oluşturulması sağlanır. Bu tasarım geliştirme sırasında kullanışlı olsa da, sunucu tarafı bilgileri istenmeden istemciye daha da açıklanamaz. Bu, uzaktan Iletişimin yalnızca tam güvenilir ortamlarda kullanılması gereken pek çok nedenden biridir.  
+#### <a name="exceptions-in-net-remoting"></a>.NET Remoting'deki özel durumlar  
+ Remoting sunucusu tarafından atılan özel durumlar seri hale getirilir, istemciye gönderilir ve diğer özel durumlar gibi istemciye yerel olarak atılır. Özel özel durumlar, Özel Durum türünü alt sınıflayarak ve [Serializable] ile işaretleyerek oluşturulabilir.   Çoğu çerçeve özel durumu zaten bu şekilde işaretlenir ve çoğu sunucu tarafından atılmasına, seri hale getirilmesine ve istemciye yeniden atılmasına izin verir. Bu tasarım geliştirme sırasında kullanışlı olsa da, sunucu tarafındaki bilgiler istemeden istemciye açıklanabilir. Bu, Remoting'in yalnızca tam güvenilen ortamlarda kullanılmasının birçok nedenidir.  
   
-#### <a name="exceptions-and-faults-in-wcf"></a>WCF 'de özel durumlar ve hatalar  
- WCF, yanlışlıkla bilginin açığa çıkmasına yol açacağından sunucudan istemciye rastgele özel durum türleri döndürülmesine izin vermez. Bir hizmet işlemi beklenmeyen bir özel durum oluşturursa, istemci üzerinde genel amaçlı bir FaultException oluşturulmasına neden olur. Bu özel durum, sorunun neden veya nerede oluştuğunu ve bazı uygulamalar için yeterli bilgi taşımaz. İstemciye daha zengin hata bilgilerini iletmeniz gereken uygulamalar, bir hata sözleşmesini tanımlayarak bunu yapın.  
+#### <a name="exceptions-and-faults-in-wcf"></a>WCF'deki Özel Durumlar ve Hatalar  
+ WCF, yanlışlıkla bilgi ifşasına yol açabileceğinden, rasgele özel durum türlerinin sunucudan istemciye döndürülmesine izin vermez. Bir hizmet işlemi beklenmeyen bir özel durum atarsa, genel amaçlı bir hata özel durum istemcisi üzerine atılmasına neden olur. Bu özel durum, sorunun neden veya nerede oluştuğu hakkında herhangi bir bilgi taşımaz ve bazı uygulamalar için bu yeterlidir. İstemciye daha zengin hata bilgilerini iletmesi gereken uygulamalar, hata sözleşmesi tanımlayarak bunu yapar.  
   
- Bunu yapmak için ilk olarak hata bilgilerini taşıyan bir [DataContract] türü oluşturun.  
+ Bunu yapmak için, önce hata bilgilerini taşımak için bir [DataContract] türü oluşturun.  
   
 ```csharp
 [DataContract]  
@@ -231,7 +231,7 @@ public class CustomerServiceFault
 }  
 ```  
   
- Her bir hizmet işlemi için kullanılacak hata sözleşmesini belirtin.  
+ Her hizmet işlemi için kullanılacak hata sözleşmesini belirtin.  
   
 ```csharp
 [ServiceContract]  
@@ -243,17 +243,17 @@ public interface IWCFServer
 }  
 ```  
   
- Sunucu, bir FaultException oluşturarak hata koşullarını raporlar.  
+ Sunucu, hata özel durumlarını bir Hata Özel Durum atarak bildirir.  
   
 ```csharp
 throw new FaultException<CustomerServiceFault>(  
-    new CustomerServiceFault() {   
-        CustomerId = customerId,   
-        ErrorMessage = "Illegal customer Id"   
+    new CustomerServiceFault() {
+        CustomerId = customerId,
+        ErrorMessage = "Illegal customer Id"
     });  
 ```  
   
- İstemci sunucuya bir istek yaptığında hataları normal özel durumlar olarak yakalayabilir.  
+ İstemci sunucuya bir istekte bulunsa, hataları normal özel durumlar olarak yakalayabilir.  
   
 ```csharp
 try  
@@ -266,60 +266,60 @@ catch (FaultException<CustomerServiceFault> fault)
 }  
 ```  
   
- Hata sözleşmeleri hakkında daha fazla bilgi için bkz. <xref:System.ServiceModel.FaultException>.  
+ Hata sözleşmeleri hakkında daha <xref:System.ServiceModel.FaultException>fazla bilgi için bkz.  
   
 ### <a name="security-considerations"></a>Güvenlikle İlgili Dikkat Edilmesi Gerekenler  
   
-#### <a name="security-in-net-remoting"></a>.NET Remoting 'de güvenlik  
- Bazı .NET uzaktan Iletişim kanalları, kanal katmanında (IPC ve TCP) kimlik doğrulaması ve şifreleme gibi güvenlik özelliklerini destekler. HTTP kanalı, kimlik doğrulaması ve şifreleme için Internet Information Services (IIS) kullanır. Bu desteğe rağmen, .NET Remoting güvenli olmayan bir iletişim protokolünü güvenilir hale getirmek ve yalnızca tam güvenilir ortamlarda kullanmanız gerekir. Internet veya güvenilmeyen istemcilere genel bir uzaktan Iletişim uç noktası sunmaz.  
+#### <a name="security-in-net-remoting"></a>.NET Remoting'de güvenlik  
+ Bazı .NET Remoting kanalları, kanal katmanındaki kimlik doğrulama ve şifreleme (IPC ve TCP) gibi güvenlik özelliklerini destekler. HTTP kanalı, hem kimlik doğrulaması hem de şifreleme için Internet Information Services'a (IIS) dayanır. Bu desteğe rağmen, .NET Güvenli olmayan bir iletişim protokolünü yeniden ifade etmeyi ve yalnızca tam güvenilen ortamlarda kullanmayı düşünmelisiniz. Genel Remoting bitiş noktasını asla Internet'e veya güvenilmeyen istemcilere ifşa etmeyin.  
   
 #### <a name="security-in-wcf"></a>WCF'de Güvenlik  
- WCF, .NET uzaktan Iletişim kutusunda bulunan güvenlik açıklarına yönelik güvenlik açıklarını ele almak için göz önünde bulundurularak tasarlanmıştır. WCF hem aktarım hem de ileti düzeyinde güvenlik sağlar ve kimlik doğrulama, yetkilendirme, şifreleme gibi birçok seçenek sunar. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:  
+ WCF, kısmen .NET Remoting'de bulunan güvenlik açıklarını gidermek için güvenlik göz önünde bulundurularak tasarlanmıştır. WCF hem aktarım hem de ileti düzeyinde güvenlik sunar ve kimlik doğrulama, yetkilendirme, şifreleme ve benzeri birçok seçenek sunar. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:  
   
 - [Güvenlik](./feature-details/security.md)  
   
-- [WCF güvenlik kılavuzu](./feature-details/security-guidance-and-best-practices.md)  
+- [WCF Güvenlik Rehberi](./feature-details/security-guidance-and-best-practices.md)  
   
-## <a name="migrating-to-wcf"></a>WCF 'ye geçiş  
+## <a name="migrating-to-wcf"></a>WCF'ye geçiş  
   
-### <a name="why-migrate-from-remoting-to-wcf"></a>Neden uzaktan Iletişim 'ten WCF 'ye geçirilir?  
+### <a name="why-migrate-from-remoting-to-wcf"></a>Neden Remoting'den WCF'ye geçiş?  
   
-- **.NET uzaktan Iletişim, eski bir üründür.** [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29)' de açıklandığı gibi, eski bir ürün olarak kabul edilir ve yeni geliştirme için önerilmez. WCF veya ASP.NET Web API 'SI, yeni ve mevcut uygulamalar için önerilir.  
+- **.NET Remoting eski bir üründür.** [.NET Remoting'de](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29)açıklandığı gibi, eski bir ürün olarak kabul edilir ve yeni geliştirme için önerilmez. WCF veya ASP.NET Web API'si yeni ve varolan uygulamalar için önerilir.  
   
-- **WCF platformlar arası standartları kullanır.** WCF, platformlar arası birlikte çalışabilirlik ile tasarlanmıştı ve birçok sektör standardını (SOAP, WS-Security, WS-Trust, vb.) destekler. Bir WCF hizmeti, Windows dışındaki işletim sistemlerinde çalışan istemcilerle birlikte çalışabilir. Uzaktan iletişim, birincil olarak hem sunucu hem de istemci uygulamaların bir Windows işletim sisteminde .NET Framework kullanarak çalıştığı ortamlar için tasarlanmıştır.
+- **WCF çapraz platform standartları kullanır.** WCF, platformlar arası birlikte çalışabilirlik göz önünde bulundurularak tasarlanmıştır ve birçok endüstri standardına (SOAP, WS-Security, WS-Trust, vb.) destek vermektedir. Bir WCF hizmeti, Windows dışındaki işletim sistemlerinde çalışan istemcilerle birlikte çalışabilir. Remoting, öncelikle windows işletim sisteminde .NET Framework kullanılarak hem sunucu hem de istemci uygulamalarının çalıştığı ortamlar için tasarlanmıştır.
   
-- **WCF yerleşik güvenliğe sahiptir.** WCF güvenlik göz önünde bulundurularak tasarlandı ve kimlik doğrulama, aktarım düzeyi güvenliği, ileti düzeyi güvenlik vb. için birçok seçenek sunar. Uzaktan iletişim, uygulamaların birlikte çalışabilmesini ve güvenilir olmayan ortamlarda güvenli hale getirmek üzere tasarlanmadığı için tasarlanmıştır. WCF hem güvenilen hem de güvenilmeyen ortamlarda çalışacak şekilde tasarlanmıştır.  
+- **WCF yerleşik güvenlik vardır.** WCF güvenlik göz önünde bulundurularak tasarlanmıştır ve kimlik doğrulama, aktarım düzeyi güvenliği, ileti düzeyi güvenliği, vb. için birçok seçenek sunar. Remoting, uygulamaların birlikte çalışmasını kolaylaştırmak için tasarlanmıştır, ancak güvenilmeyen ortamlarda güvenli olacak şekilde tasarlanmamaktadır. WCF hem güvenilir hem de güvenilmeyen ortamlarda çalışacak şekilde tasarlanmıştır.  
   
-### <a name="migration-recommendations"></a>Geçiş önerileri  
- .NET uzaktan Iletişim 'dan WCF 'ye geçiş için önerilen adımlar aşağıda verilmiştir:  
+### <a name="migration-recommendations"></a>Geçiş Önerileri  
+ .NET Remoting'den WCF'ye geçiş için önerilen adımlar şunlardır:  
   
-- **Hizmet sözleşmesini oluşturun.** Hizmet arabirimi türlerinizi tanımlayın ve bunları [ServiceContract] özniteliğiyle işaretleyin. İstemcilerin [OperationContract] ile çağrı yapmasına izin verilecek tüm yöntemleri işaretleyin.  
+- **Hizmet sözleşmesini oluşturun.** Hizmet arabirimi türlerinizi tanımlayın ve [ServiceContract] özniteliğiyle işaretleyin. Müşterilerin [OperationContract] ile aramalarına izin verilecek tüm yöntemleri işaretleyin.  
   
-- **Veri sözleşmesini oluşturun.** Sunucu ve istemci arasında değiş tokuş edilecek veri türlerini tanımlayın ve bunları [DataContract] özniteliğiyle işaretleyin. İstemcinin [DataMember] ile kullanmasına izin verilecek tüm alanları ve özellikleri işaretleyin.  
+- **Veri sözleşmesini oluşturun.** Sunucu ve istemci arasında değiş tokuş edilecek veri türlerini tanımlayın ve bunları [DataContract] özniteliğiyle işaretleyin. İstemcinin kullanmasına izin verilecek tüm alanları ve özellikleri [DataMember] ile işaretleyin.  
   
-- **Hata sözleşmesini oluşturun (isteğe bağlı).** Hatalarla karşılaşıldığında sunucu ile istemci arasında değiş tokuş edilecek türleri oluşturun. Bu türleri seri hale getirilebilir hale getirmek için [DataContract] ve [DataMember] ile işaretleyin. [OperationContract] ile işaretlediğiniz tüm hizmet işlemleri için, hangi hataların dönebileceği göstermek için bunları [FaultContract] ile de işaretleyebilirsiniz.  
+- **Hata sözleşmesini oluşturun (isteğe bağlı).** Hatalarla karşılaşıldığında sunucu ve istemci arasında değiş tokuş edilecek türleri oluşturun. Serileştirilebilir hale getirmek için bu türleri [DataContract] ve [DataMember] ile işaretleyin. [OperationContract] ile işaretlediğiniz tüm hizmet işlemleri için, hangi hataları geri getirebileceklerini belirtmek için bunları [Hata Sözleşmesi] ile işaretleyin.  
   
-- **Hizmeti yapılandırın ve barındırın.** Hizmet sözleşmesi oluşturulduktan sonra, bir sonraki adım, hizmeti bir uç noktada kullanıma sunmak için bir bağlama yapılandırmaktır. Daha fazla bilgi için bkz. [uç noktalar: adresler, bağlamalar ve sözleşmeler](./feature-details/endpoints-addresses-bindings-and-contracts.md).  
+- **Hizmeti yapılandırın ve barındırın.** Hizmet sözleşmesi oluşturulduktan sonra, bir sonraki adım, hizmeti bir bitiş noktasında ortaya çıkarmak için bir bağlama yapılandırmaktır. Daha fazla bilgi için [Bkz. Uç Noktalar: Adresler, Ciltler ve Sözleşmeler.](./feature-details/endpoints-addresses-bindings-and-contracts.md)  
   
- Uzaktan Iletişim uygulaması WCF 'ye geçirildiğinde, .NET uzaktan Iletişim üzerinde bağımlılıkları kaldırmak yine de önemlidir. Bu, tüm uzaktan Iletişim açıklarının uygulamadan kaldırılmasını sağlar. Bu adımlar şunları içerir:  
+ Bir Remoting uygulaması WCF'ye geçirildikten sonra ,.NET Remoting'e olan bağımlılıkları kaldırmak yine de önemlidir. Bu, Remoting güvenlik açıklarının uygulamadan kaldırılmasını sağlar. Bu adımlar şunlardır:  
   
-- **MarshalByRefObject kullanımını durdur.** MarshalByRefObject türü yalnızca uzaktan Iletişim için bulunur ve WCF tarafından kullanılmaz. Alt sınıf MarshalByRefObject olan herhangi bir uygulama türü kaldırılmalı veya değiştirilmelidir.  
+- **MarshalByRefObject kullanımını durdurun.** MarshalByRefObject türü yalnızca Remoting için vardır ve WCF tarafından kullanılmaz. Alt sınıf MarshalByRefObject kaldırılmalıdır veya değiştirilmelidir herhangi bir uygulama türleri.  
   
-- **[Serializable] ve ISerializable kullanımını durdur.** [Serializable] özniteliği ve ISerializable arabirimi, başlangıçta güvenilen ortamlarda türleri seri hale getirmek için tasarlanmıştır ve uzaktan Iletişim tarafından kullanılır. WCF serileştirme, [DataContract] ve [DataMember] ile işaretlenmiş türlere dayanır. Bir uygulama tarafından kullanılan veri türleri ISerializable veya [Serializable] kullanmak için değil [DataContract] kullanacak şekilde değiştirilmelidir.  
+- **[Serializable] ve ISerializable kullanımını durdurun.** [Serializable] öznitelik ve ISerializable arabirimi başlangıçta güvenilen ortamlarda türleri serileştirmek için tasarlanmıştır ve Remoting tarafından kullanılır. WCF serileştirmesi, [DataContract] ve [DataMember] ile işaretlenmiş türlere dayanır. Bir uygulama tarafından kullanılan veri türleri [DataContract] kullanmak ve ISerializable veya [Serializable] kullanmak için değiştirilmelidir.  
   
 ### <a name="migration-scenarios"></a>Geçiş Senaryoları  
- Şimdi, WCF 'de aşağıdaki genel uzaktan Iletişim senaryolarını nasıl gerçekleştireceğinizi görelim:  
+ Şimdi WCF'de aşağıdaki ortak Remoting senaryolarının nasıl gerçekleştirileceğine bakalım:  
   
-1. Sunucu istemciye bir nesne değeri döndürür  
+1. Sunucu istemciye bir nesne yan değer döndürür  
   
-2. Sunucu, istemciye başvuruya göre bir nesne döndürür  
+2. Sunucu istemciye bir nesne by-reference döndürür  
   
-3. İstemci sunucuya bir nesne değere göre gönderir  
+3. İstemci sunucuya bir nesneyi göre değer gönderir  
   
 > [!NOTE]
-> İstemciden sunucuya bir nesne başvuruya göre göndermeye, WCF 'de izin verilmez.  
+> WCF'de istemciden sunucuya nesne gönderme izni verilmez.  
   
- Bu senaryolarla okurken, .NET uzaktan Iletişim için temel arabirimlerimizin aşağıdaki örnekteki gibi göründüğünü varsayın. Yalnızca WCF 'nin eşdeğer işlevselliği uygulamak için nasıl kullanılacağını göstermek istediğimizden, .NET Remoting uygulaması burada önemli değildir.  
+ Bu senaryoları okurken,.NET Remoting için temel arabirimlerimizin aşağıdaki örnek gibi göründüğünü varsayalım. .NET Remoting uygulaması burada önemli değildir, çünkü yalnızca eşdeğer işlevselliği uygulamak için WCF'nin nasıl kullanılacağını göstermek istiyoruz.  
   
 ```csharp
 public class RemotingServer : MarshalByRefObject  
@@ -335,10 +335,10 @@ public class RemotingServer : MarshalByRefObject
 }  
 ```  
   
-#### <a name="scenario-1-service-returns-an-object-by-value"></a>Senaryo 1: hizmet bir nesne değere göre döndürüyor  
- Bu senaryoda istemciye değerine göre bir nesne döndüren bir sunucu gösterilir. WCF her zaman sunucudan değere göre nesneleri döndürür, bu nedenle aşağıdaki adımlar normal bir WCF hizmetinin nasıl oluşturulacağını açıklamaktadır.  
+#### <a name="scenario-1-service-returns-an-object-by-value"></a>Senaryo 1: Hizmet Nesneyi Değere Göre Döndürür  
+ Bu senaryo, bir nesneyi istemciye değer olarak döndüren bir sunucuyu gösterir. WCF nesneleri her zaman sunucudan değer olarak döndürür, bu nedenle aşağıdaki adımlar normal bir WCF hizmetinin nasıl oluşturulabildiğini açıklar.  
   
-1. WCF hizmeti için bir ortak arabirim tanımlayarak başlayın ve [ServiceContract] özniteliğiyle işaretleyin. İstemcimizin çağıracağız sunucu tarafı yöntemleri belirlemek için [OperationContract] kullanıyoruz.  
+1. WCF hizmeti için ortak arabirim tanımlayarak başlayın ve [ServiceContract] özniteliği ile işaretleyin. İstemcimizin çağıracağı sunucu tarafındaki yöntemleri tanımlamak için [OperationContract] kullanırız.  
   
    ```csharp
    [ServiceContract]  
@@ -352,7 +352,7 @@ public class RemotingServer : MarshalByRefObject
    }  
    ```  
   
-2. Bir sonraki adım, bu hizmet için veri sözleşmesinin oluşturmaktır. Bunu, [DataContract] özniteliğiyle işaretlenmiş sınıflar (arabirimler değil) oluşturarak yapacağız. Hem istemci hem de sunucu için görünür olmasını istediğimiz her bir özellik veya alan [DataMember] ile işaretlenmiş. Türetilmiş türlerin izin verilmesini istiyoruz, bunları tanımlamak için [KnownType] özniteliğini kullanmanız gerekir. WCF, bu hizmet için yalnızca seri hale getirilebilir veya seri durumdan çıkarılan türler hizmet arabirimindeki ve bu "bilinen türler" olur. Bu listede olmayan başka bir türü alışverişi yapılmaya çalışılması reddedilir.  
+2. Bir sonraki adım, bu hizmet için veri sözleşmesi oluşturmaktır. Bunu, [DataContract] özniteliği ile işaretlenmiş sınıflar (arabirimler değil) oluşturarak yapıyoruz. Hem istemci hem de sunucu tarafından görülebilmesini istediğimiz tek tek özellikler veya alanlar [DataMember] ile işaretlenir. Türemiş türlerine izin verilmesini istiyorsak, bunları tanımlamak için [KnownType] özniteliğini kullanmalıyız. WCF'nin bu hizmet için seri hale getirilmesine veya seri hale getirilmesine izin verecek tek türleri, hizmet arabirimindeki ler ve bu "bilinen türler"dir. Bu listede olmayan başka bir tür değiştirme girişimi reddedilecektir.  
   
    ```csharp
    [DataContract]  
@@ -370,14 +370,14 @@ public class RemotingServer : MarshalByRefObject
    }  
   
    [DataContract]  
-   public class PremiumCustomer : Customer   
+   public class PremiumCustomer : Customer
    {  
        [DataMember]  
        public int AccountId { get; set; }  
    }  
    ```  
   
-3. Ardından, hizmet arabirimi için uygulama sağlıyoruz.  
+3. Ardından, hizmet arabirimi için uygulama sağlar.  
   
    ```csharp  
    public class CustomerService : ICustomerService  
@@ -394,7 +394,7 @@ public class RemotingServer : MarshalByRefObject
    }  
    ```  
   
-4. WCF hizmetini çalıştırmak için belirli bir WCF bağlamasını kullanarak bu hizmet arabirimini belirli bir URL 'de kullanıma sunan bir uç nokta bildirmemiz gerekir. Bu, genellikle aşağıdaki bölümler sunucu projesinin Web. config dosyasına eklenerek yapılır.  
+4. WCF hizmetini çalıştırmak için, belirli bir WCF bağlama kullanarak bu hizmet arabirimini belirli bir URL'de ortaya çıkaran bir bitiş noktası beyan etmemiz gerekir. Bu genellikle sunucu projesinin web.config dosyasına aşağıdaki bölümleri ekleyerek yapılır.  
   
     ```xml  
     <configuration>  
@@ -417,9 +417,9 @@ public class RemotingServer : MarshalByRefObject
        customerServiceHost.Open();  
    ```  
   
-     Bu ServiceHost başlatıldığında, uygun sözleşmeyi, bağlamayı ve uç noktayı oluşturmak için Web. config dosyasını kullanır. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyalarını kullanarak hizmetleri yapılandırma](./configuring-services-using-configuration-files.md). Sunucunun başlatılmasına yönelik bu stil, kendi kendine barındırma olarak bilinir. WCF hizmetlerini barındırmak için diğer seçimler hakkında daha fazla bilgi edinmek için bkz. [barındırma hizmetleri](./hosting-services.md).  
+     Bu ServiceHost başlatıldığında, uygun sözleşme, bağlama ve bitiş noktası kurmak için web.config dosyasını kullanır. Yapılandırma dosyaları hakkında daha fazla bilgi için [bkz.](./configuring-services-using-configuration-files.md) Sunucuyu başlatma bu stil kendi kendine barındırma olarak bilinir. WCF hizmetlerini barındırmak için diğer seçenekler hakkında daha fazla bilgi edinmek için [Barındırma Hizmetleri'ne](./hosting-services.md)bakın.  
   
-6. İstemci projenin App. config dosyasının, hizmetin uç noktası için eşleşen bağlama bilgilerini bildirmesi gerekir. Visual Studio 'da bunu yapmanın en kolay yolu, App. config dosyasını otomatik olarak güncelleştirecek **hizmet başvurusu Ekle**kullanmaktır. Alternatif olarak, aynı değişiklikler el ile de eklenebilir.  
+6. İstemci projenin app.config hizmetin bitiş noktası için eşleşen bağlayıcı bilgileri bildirmelidir. Visual Studio'da bunu yapmanın en kolay yolu, app.config dosyasını otomatik olarak güncelleştiren **Hizmet Başvurusu Ekle'yi**kullanmaktır. Alternatif olarak, bu aynı değişiklikler el ile eklenebilir.  
   
     ```xml  
     <configuration>  
@@ -434,9 +434,9 @@ public class RemotingServer : MarshalByRefObject
     </configuration>  
     ```  
   
-     **Hizmet başvurusu Ekle**kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: hizmet başvurusu ekleme, güncelleştirme veya kaldırma](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference).  
+     **Hizmet Başvurusu Ekle'yi**kullanma hakkında daha fazla bilgi için [bkz.](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   
-7. Artık WCF hizmetini istemciden çağırabiliriz. Bu, söz konusu hizmet için bir kanal fabrikası oluşturup bunu bir kanal için sorarak ve bu kanalda istediğiniz yöntemi doğrudan çağırarak yaptık. Kanal hizmetin arabirimini gerçekleştirdiğinden ve temel alınan istek/yanıt mantığını bizim için işletiğinden bunu yapabiliriz. Bu yöntem çağrısından gelen dönüş değeri, sunucu yanıtının Serisi kaldırılan kopyasıdır.  
+7. Artık müşteriden WCF servisini arayabiliriz. Bunu, bu hizmet için bir kanal fabrikası oluşturarak, bir kanal isteyerek ve doğrudan o kanalda istediğimiz yöntemi arayarak yapıyoruz. Bunu yapabiliriz, çünkü kanal hizmetin arabirimini uygular ve bizim için temel istek/yanıt mantığını işler. Bu yöntem çağrısından gelen iade değeri, sunucunun yanıtının deserialized kopyasıdır.  
   
    ```csharp
    ChannelFactory<ICustomerService> factory =  
@@ -446,12 +446,12 @@ public class RemotingServer : MarshalByRefObject
    Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received.");
    ```  
   
- Sunucudan istemciye WCF tarafından döndürülen nesneler her zaman değere göre yapılır. Nesneler, sunucu tarafından gönderilen verilerin seri durumdan çıkarılmakta. İstemci, geri çağırmalar aracılığıyla sunucu kodu çağırma tehlikiyeti olmadan bu yerel kopyalara Yöntemler çağırabilir.  
+ WCF tarafından sunucudan istemciye döndürülen nesneler her zaman değere göredir. Nesneler, sunucu tarafından gönderilen verilerin seri olarak kopyalanır. İstemci, geri aramayoluyla sunucu kodu çağırma tehlikesi olmadan bu yerel kopyalarda yöntemleri çağırabilir.  
   
-#### <a name="scenario-2-server-returns-an-object-by-reference"></a>Senaryo 2: sunucu başvuruya göre bir nesne döndürüyor  
- Bu senaryoda, istemciye başvuruya göre bir nesne sağlayan sunucu gösterilmektedir. .NET uzaktan Iletişim kutusunda, bu, başvuruya göre seri hale getirilen MarshalByRefObject öğesinden türetilen herhangi bir tür için otomatik olarak işlenir. Bu senaryonun bir örneği, birden çok istemcinin bağımsız oturumlı sunucu tarafı nesnelerine sahip olmasını sağlar. Daha önce belirtildiği gibi, bir WCF hizmeti tarafından döndürülen nesneler her zaman değere göre yapılır, bu nedenle bir başvuruya göre nesnenin doğrudan eşdeğeri olmaz, ancak bir <xref:System.ServiceModel.EndpointAddress10> nesnesi kullanarak başvuru semantiğine benzer bir şeye ulaşmak mümkündür. Bu, istemci tarafından sunucuda bir sessionby başvuruya göre nesne almak için kullanılabilen, seri hale getirilebilir bir nesne nesnesidir. Bu, bağımsız oturumlarla aynı sunucu tarafı nesneleriyle birden çok istemcisine sahip olan senaryoya izin vermez.  
+#### <a name="scenario-2-server-returns-an-object-by-reference"></a>Senaryo 2: Sunucu Başvuruya Göre Bir Nesneyi Döndürür  
+ Bu senaryo, istemciye başvuru yla bir nesne sağlayan sunucuyu gösterir. .NET Remoting'de bu işlem, başvuru tarafından serihale getirilmiş olan MarshalByRefObject'ten türetilen herhangi bir tür için otomatik olarak işlenir. Bu senaryoya örnek olarak, birden çok istemcinin bağımsız oturumlu sunucu tarafı nesnelerine sahip olmasını sağlamaktır. Daha önce de belirtildiği gibi, bir WCF hizmeti tarafından döndürülen nesneler her zaman değere göredir, bu nedenle başvuru saladeği doğrudan <xref:System.ServiceModel.EndpointAddress10> eşdeğeri yoktur, ancak bir nesne kullanarak başvuru salatiğine benzer bir şey elde etmek mümkündür. Bu, istemci tarafından sunucuda oturum dolu bir by-reference nesnesi elde etmek için kullanılabilecek serileştirilebilir bir yan değer nesnesidir. Bu, bağımsız oturumlu sunucu tarafı nesneleri ile birden çok istemciye sahip olma senaryosunu sağlar.  
   
-1. İlk olarak, sessionobject nesnesine karşılık gelen bir WCF hizmeti sözleşmesi tanımlamamız gerekir.  
+1. İlk olarak, oturum oluşturan nesnenin kendisine karşılık gelen bir WCF hizmet sözleşmesi tanımlamamız gerekir.  
   
    ```csharp
    [ServiceContract(SessionMode = SessionMode.Allowed)]  
@@ -466,9 +466,9 @@ public class RemotingServer : MarshalByRefObject
    ```  
   
     > [!TIP]
-    > Oturumsuz nesnenin [ServiceContract] ile işaretlendiğine dikkat edin. Bu, normal bir WCF hizmeti arabirimi haline gelir. SessionMode özelliği ayarlandığında, bu bir sessionservice olacağını gösterir. WCF 'de oturum, iki uç nokta arasında gönderilen birden fazla iletiyi eş bir şekilde ilişkilendirme yöntemidir. Bu, bir istemci bu hizmete bir bağlantı edinirse, istemci ile sunucu arasında bir oturum kurulacağı anlamına gelir. İstemci, bu tek oturumdaki tüm etkileşimleri için sunucu tarafı nesnesinin tek bir benzersiz örneğini kullanır.  
+    > Oturum oluşturan nesnenin [ServiceContract] ile işaretlendiğini ve bu nedenle normal bir WCF hizmet arabirimi yaptığına dikkat edin. SessionMode özelliğinin ayarlanması, bunun oturum lu bir hizmet olacağını gösterir. WCF'de oturum, iki uç nokta arasında gönderilen birden çok iletiyi ilişkilendirme yoludur. Bu, istemci bu hizmete bağlantı ulaştığında istemci ve sunucu arasında bir oturum oluşturulacağı anlamına gelir. İstemci, bu tek oturumdaki tüm etkileşimleri için sunucu tarafındaki nesnenin tek bir benzersiz örneğini kullanır.  
   
-2. Daha sonra, bu hizmet arabiriminin uygulamasını sağlamamız gerekir. Bunu [ServiceBehavior] ile belirterek ve InstanceContextMode 'i ayarlayarak, her oturum için bu türün benzersiz bir örneğini kullanmak istediğimizi anladık.  
+2. Sonra, bu hizmet arabiriminin uygulanmasını sağlamamız gerekir. [ServiceBehavior] ile ifade ederek ve InstanceContextMode ayarlayarak, WCF'ye her oturum için bu türbenzersiz bir örnek kullanmak istediğimizi söyleriz.  
   
    ```csharp
    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]  
@@ -489,7 +489,7 @@ public class RemotingServer : MarshalByRefObject
        }  
    ```  
   
-3. Şimdi bu oturumsuz nesnenin bir örneğini elde etmek için bir yol gerekiyor. Bunu, bir EndpointAddress10 nesnesi döndüren başka bir WCF hizmeti arabirimi oluşturarak yapacağız. Bu, istemcinin oturumsuz nesneyi oluşturmak için kullanabileceği bir uç noktanın seri hale getirilebilir bir biçimidir.  
+3. Şimdi bu oturumlu nesnenin bir örneğini elde etmek için bir yol gerekir. Bunu, Bir EndpointAddress10 nesnesi döndüren başka bir WCF hizmet arabirimi oluşturarak yapıyoruz. Bu, istemcinin oturum oluşturabilecek nesneyi oluşturmak için kullanabileceği bir bitiş noktasının serileştirilebilir biçimidir.  
   
    ```csharp
    [ServiceContract]  
@@ -500,14 +500,14 @@ public class RemotingServer : MarshalByRefObject
        }  
    ```  
   
-     Bu WCF hizmetini uyguladık:  
+     Ve bu WCF hizmetini uyguluyoruz:  
   
    ```csharp
    public class SessionBoundFactory : ISessionBoundFactory  
        {  
-           public static ChannelFactory<ISessionBoundObject> _factory =   
+           public static ChannelFactory<ISessionBoundObject> _factory =
                new ChannelFactory<ISessionBoundObject>("sessionbound");  
- 
+
            public SessionBoundFactory()  
            {  
            }  
@@ -520,13 +520,13 @@ public class RemotingServer : MarshalByRefObject
        }  
    ```  
   
-     Bu uygulama, oturumsuz nesneler oluşturmak için tek bir kanal fabrikası sağlar. GetInstanceAddress () çağrıldığında, bir kanal oluşturur ve bu kanalla ilişkili uzak adresi etkin bir şekilde işaret eden bir EndpointAddress10 nesnesi oluşturur. EndpointAddress10 yalnızca istemciye değere göre döndürülebilecek bir veri türüdür.  
+     Bu uygulama, oturumlu nesneler oluşturmak için bir singleton kanal fabrika tutar. GetInstanceAddress() çağrıldığında, bir kanal oluşturur ve bu kanalla ilişkili uzak adresi etkili bir şekilde işaret eden bir EndpointAddress10 nesnesi oluşturur. EndpointAddress10 yalnızca istemciye göre döndürülebilen bir veri türüdür.  
   
 4. Aşağıdaki örnekte gösterildiği gibi aşağıdaki iki şeyi yaparak sunucunun yapılandırma dosyasını değiştirmemiz gerekir:  
   
-    1. Sessionobject nesnesinin bitiş noktasını açıklayan \<istemci > bölümü bildirin. Bu durum, sunucu aynı zamanda bir istemci görevi görtiğinden gereklidir.  
+    1. Oturum \<açan nesnenin bitiş noktasını açıklayan bir istemci> bölümü bildirin. Sunucu da bu durumda bir istemci olarak hareket eder, çünkü bu gereklidir.  
   
-    2. Fabrika ve oturumsuz nesne için uç noktalar bildirin. Bu, istemcinin EndpointAddress10 almak ve Oturumsuz kanalı oluşturmak için hizmet uç noktalarıyla iletişim kurmasına izin vermek için gereklidir.  
+    2. Fabrika ve oturum alagelen nesne için uç noktalarını bildirin. Bu, istemcinin EndpointAddress10'u elde etmek ve oturum lu kanalı oluşturmak için hizmet bitiş noktalarıyla iletişim kurmasına izin vermek için gereklidir.  
   
     ```xml  
     <configuration>  
@@ -558,7 +558,7 @@ public class RemotingServer : MarshalByRefObject
     </configuration>  
     ```  
   
-     Bu hizmetleri başlatabiliriz:  
+     Ve sonra şu hizmetleri başlatabiliriz:  
   
    ```csharp
    ServiceHost factoryHost = new ServiceHost(typeof(SessionBoundFactory));  
@@ -568,7 +568,7 @@ public class RemotingServer : MarshalByRefObject
    sessionHost.Open();  
    ```  
   
-5. Bu uç noktaları projenin App. config dosyasında bildirerek istemciyi yapılandıracağız.  
+5. İstemciyi, projesinin app.config dosyasında aynı uç noktaları beyan ederek yapılandırıyoruz.  
   
     ```xml  
     <configuration>  
@@ -591,29 +591,29 @@ public class RemotingServer : MarshalByRefObject
     </configuration>  
     ```  
   
-6. Bu oturumsuz nesneyi oluşturmak ve kullanmak için, istemcinin aşağıdaki adımları yapması gerekir:  
+6. Bu oturumlu nesneyi oluşturmak ve kullanmak için istemci aşağıdaki adımları yapmalıdır:  
   
-    1. ISessionBoundFactory hizmetine bir kanal oluşturun.  
+    1. ISessionBoundFactory hizmetiiçin bir kanal oluşturun.  
   
-    2. Bu kanalı, bir EndpointAddress10 almak için bu hizmeti çağırmak üzere kullanın.  
+    2. Bir EndpointAddress10 almak için bu hizmeti çağırmak için bu kanalı kullanın.  
   
-    3. Oturumsuz bir nesne almak için bir kanal oluşturmak için EndpointAddress10 kullanın.  
+    3. Oturum lu bir nesne elde etmek için bir kanal oluşturmak için EndpointAddress10'u kullanın.  
   
-    4. Birden çok çağrıda aynı örnekle kaldığını göstermek için sessionobject nesnesiyle etkileşime geçin.  
+    4. Birden çok aramada aynı örnek olarak kaldığını göstermek için oturuma uygun nesneyle etkileşimkurun.  
   
    ```csharp
-   ChannelFactory<ISessionBoundFactory> channelFactory =   
+   ChannelFactory<ISessionBoundFactory> channelFactory =
        new ChannelFactory<ISessionBoundFactory>("factory");  
    ISessionBoundFactory sessionFactory = channelFactory.CreateChannel();  
   
    EndpointAddress10 address1 = sessionFactory.GetInstanceAddress();  
    EndpointAddress10 address2 = sessionFactory.GetInstanceAddress();  
   
-   ChannelFactory<ISessionBoundObject> sessionObjectFactory1 =   
-       new ChannelFactory<ISessionBoundObject>(new NetTcpBinding(),   
+   ChannelFactory<ISessionBoundObject> sessionObjectFactory1 =
+       new ChannelFactory<ISessionBoundObject>(new NetTcpBinding(),
                                                address1.ToEndpointAddress());  
-   ChannelFactory<ISessionBoundObject> sessionObjectFactory2 =   
-       new ChannelFactory<ISessionBoundObject>(new NetTcpBinding(),   
+   ChannelFactory<ISessionBoundObject> sessionObjectFactory2 =
+       new ChannelFactory<ISessionBoundObject>(new NetTcpBinding(),
                                                address2.ToEndpointAddress());  
   
    ISessionBoundObject sessionInstance1 = sessionObjectFactory1.CreateChannel();  
@@ -629,34 +629,34 @@ public class RemotingServer : MarshalByRefObject
    }  
    ```  
   
- WCF her zaman nesneleri değere göre döndürür, ancak EndpointAddress10 kullanımı aracılığıyla başvuru semantiğinin eşdeğerini desteklemek mümkündür. Bu, istemcinin, diğer herhangi bir WCF hizmeti gibi etkileşime girebileceği bir sessionwcf hizmeti örneği istemesine izin verir.  
+ WCF nesneleri her zaman değere göre döndürür, ancak EndpointAddress10'u kullanarak referans semantik eşdeğerini desteklemek mümkündür. Bu, istemcinin oturum lu bir WCF hizmeti örneği istemesine izin verir ve bundan sonra diğer WCF hizmetleri gibi onunla etkileşimkurabilir.  
   
-#### <a name="scenario-3-client-sends-server-a-by-value-instance"></a>Senaryo 3: Istemci sunucu a-değer örneği gönderir  
- Bu senaryoda, temel olmayan bir nesne örneğini sunucuya göre sunucusuna gönderen istemci gösterilmektedir. WCF yalnızca değere göre nesneler gönderdiğinden, bu senaryo normal WCF kullanımını gösterir.  
+#### <a name="scenario-3-client-sends-server-a-by-value-instance"></a>Senaryo 3: İstemci Sunucuya Bir By-Value Örneği Gönderir  
+ Bu senaryo, istemcinin sunucuya değer bazında ilkel olmayan bir nesne örneği gönderdiğini gösterir. WCF nesneleri yalnızca değere göre gönderdiğinden, bu senaryo normal WCF kullanımını gösterir.  
   
-1. Senaryo 1 ' de aynı WCF hizmetini kullanın.  
+1. Senaryo 1'deki aynı WCF Hizmetini kullanın.  
   
-2. Yeni bir değere göre nesne oluşturmak için istemcisini kullanın, ıcustomerservice hizmetiyle iletişim kurmak için bir kanal oluşturun ve nesneyi buna gönderin.  
+2. İstemciyi yeni bir yan değer nesnesi (Müşteri) oluşturmak, ICustomerService hizmetiyle iletişim kurmak için bir kanal oluşturmak ve nesneyi ona göndermek için kullanın.  
   
    ```csharp
    ChannelFactory<ICustomerService> factory =  
        new ChannelFactory<ICustomerService>("customerservice");  
    ICustomerService service = factory.CreateChannel();  
-   PremiumCustomer customer = new PremiumCustomer {   
-   FirstName = "Bob",   
-   LastName = "Jones",   
-   CustomerId = 43,   
+   PremiumCustomer customer = new PremiumCustomer {
+   FirstName = "Bob",
+   LastName = "Jones",
+   CustomerId = 43,
    AccountId = 99};  
    bool success = service.UpdateCustomer(customer);  
    Console.WriteLine($"  Server returned {success}.");
    ```  
   
-     Müşteri nesnesi serileştirilir ve sunucuya gönderilir ve bu nesnenin yeni bir kopyasına seri hale gelir.  
+     Müşteri nesnesi seri hale getirilecek ve sunucuya gönderilir ve bu nesnenin yeni bir kopyasına dönüştürülür.  
   
     > [!NOTE]
-    > Bu kod ayrıca, türetilmiş bir tür göndermeyi de gösterir (PremiumCustomer). Hizmet arabirimi bir müşteri nesnesi bekliyor, ancak Customer sınıfında [KnownType] özniteliğine de PremiumCustomer de izin verildi. WCF, bu hizmet arabirimi aracılığıyla başka herhangi bir türü serileştirme veya serisini kaldırma girişiminde bulunamaz.  
+    > Bu kod, türetilmiş bir tür (PremiumCustomer) göndermeyi de gösterir. Hizmet arabirimi bir Müşteri nesnesi bekler, ancak Müşteri sınıfındaki [KnownType] özniteliği premiumcustomer'a da izin verildiğini belirtir. WCF, bu hizmet arabirimi aracılığıyla başka bir türü serihale veya deserialize etme girişimlerini başarısız alacaktır.  
   
- Normal WCF verileri alışverişi değere göre yapılır. Bu, bu veri nesnelerinden birindeki yöntemlerin çağrılması için yalnızca yerel olarak yürütülür; diğer katmanda kod çağırmaz. *Sunucudan döndürülen başvuru* nesneleri gibi bir şeye ulaşmak mümkün olsa da, bir istemcinin sunucuya başvuruya göre *bir nesne geçirmesi* mümkün değildir. Bir çift yönlü hizmet kullanılarak, istemci ve sunucu arasında geri ve ileri bir konuşma gerektiren bir senaryo WCF 'de elde edilebilir. Daha fazla bilgi için bkz. [çift yönlü hizmetler](./feature-details/duplex-services.md).  
+ Normal WCF veri değişimleri değere göredir. Bu, bu veri nesnelerinden birine çağrı yöntemlerinin yalnızca yerel olarak yürütüleceğini garanti eder – diğer katmanda kod çağırmaz. Sunucudan döndürülen by-reference nesneleri gibi *from* bir şey elde etmek mümkün olsa da, istemcinin bir ara başvuru nesnesini *sunucuya* geçirmesi mümkün değildir. İstemci ve sunucu arasında ileri geri görüşme gerektiren bir senaryo, çift yönlü bir hizmet kullanılarak WCF'de elde edilebilir. Daha fazla bilgi için [Çift Yönlü Hizmetler'e](./feature-details/duplex-services.md)bakın.  
   
 ## <a name="summary"></a>Özet  
- .NET Remoting, yalnızca tam olarak güvenilen ortamlarda kullanılması amaçlanan bir iletişim çerçevesidir. Eski bir üründür ve yalnızca geriye dönük uyumluluk için desteklenir. Yeni uygulamalar oluşturmak için kullanılmamalıdır. Buna karşılık, WCF güvenlik göz önünde bulundurularak tasarlanmıştır ve yeni ve mevcut uygulamalar için önerilir. Microsoft, mevcut uzaktan Iletişim uygulamalarının WCF veya ASP.NET Web API 'SI kullanacak şekilde geçirilmesini önerir.
+ .NET Remoting, yalnızca tam güvenilen ortamlarda kullanılmak üzere tasarlanmış bir iletişim çerçevesidir. Eski bir üründür ve yalnızca geriye dönük uyumluluk için desteklenir. Yeni uygulamalar oluşturmak için kullanılmamalıdır. Tam tersine, WCF güvenlik göz önünde bulundurularak tasarlanmıştır ve yeni ve mevcut uygulamalar için önerilir. Microsoft, varolan Remoting uygulamalarının WCF veya ASP.NET Web API'sını kullanmak üzere geçirilmelerini önerir.

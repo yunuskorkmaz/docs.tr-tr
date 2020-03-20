@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: 14218249-bdec-48ae-b5fc-9f57f7ca8501
 topic_type:
 - apiref
-ms.openlocfilehash: 04e0fabfc0d70c9d922e0715f32bd07237ce8741
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 492c37540ad68b5b134520218eedc59013c68519
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442317"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175934"
 ---
 # <a name="imetadatadispenseropenscopeonmemory-method"></a>IMetaDataDispenser::OpenScopeOnMemory Yöntemi
-Mevcut meta verileri içeren bir bellek alanını açar. Diğer bir deyişle, bu yöntem mevcut verilerin meta veri olarak değerlendirilme belirtilen bir bellek alanını açar.  
+Varolan meta verileri içeren bir bellek alanı açar. Diğer bir deyişle, bu yöntem, varolan verilerin meta veri olarak kabul edildiği belirli bir bellek alanını açar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT OpenScopeOnMemory (  
-    [in]  LPCVOID     pData,   
-    [in]  ULONG       cbData,   
-    [in]  DWORD       dwOpenFlags,   
-    [in]  REFIID      riid,   
+    [in]  LPCVOID     pData,
+    [in]  ULONG       cbData,
+    [in]  DWORD       dwOpenFlags,
+    [in]  REFIID      riid,
     [out] IUnknown    **ppIUnk  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pData`  
- 'ndaki Bellek alanının başlangıç adresini belirten bir işaretçi.  
+ [içinde] Bellek alanının başlangıç adresini belirten bir işaretçi.  
   
  `cbData`  
- 'ndaki Bellek alanının bayt cinsinden boyutu.  
+ [içinde] Bellek alanının boyutu, baytlar halinde.  
   
  `dwOpenFlags`  
- 'ndaki Açma için modu (okuma, yazma, vb.) belirtmek için [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) numaralandırması değeri.  
+ [içinde] Açılış kipini (okuma, yazma vb.) belirtmek için [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) numaralandırmasının değeri.  
   
  `riid`  
- 'ndaki Döndürülecek istenen meta veri arabiriminin IID 'si; çağıran, meta verileri içeri aktarmak (okumak) veya yayma (yazmak) için arabirimini kullanır.  
+ [içinde] Döndürülecek istenilen meta veri arabiriminin IID'si; arayan, meta verileri almak (okumak) veya yayacak (yazmak) için arabirimi kullanır.  
   
- `riid` değeri, "import" veya "yayma" arabirimlerinden birini belirtmelidir. Geçerli değerler IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 veya IID_IMetaDataImport2.  
+ Değeri "içe aktarma" veya "yayış" arabirimlerinden birini `riid` belirtmelidir. Geçerli değerler IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 veya IID_IMetaDataImport2.  
   
  `ppIUnk`  
- dışı Döndürülen arabirime yönelik işaretçi.  
+ [çıkış] Döndürülen arabirimin işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Meta verilerin bellek içi kopyası, "içeri aktarma" arabirimlerinden birindeki yöntemler kullanılarak sorgulanabilir veya "yayma" arabirimlerinden birindeki yöntemleri kullanarak eklenebilir.  
+ Meta verilerin bellek içi kopyası ,"alma" arabirimlerinden birinden yöntemler kullanılarak sorgulanabilir veya "yaslamak" arabirimlerinden yöntemler kullanılarak sorgulanabilir.  
   
- `OpenScopeOnMemory` yöntemi [ımetadatadağıtıcı:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) yöntemine benzerdir, ancak ilgilendiğiniz meta veriler disk üzerindeki bir dosya yerine bellekte zaten mevcuttur.  
+ `OpenScopeOnMemory` Yöntem, [iMetaDataDispenser'a benzer::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) yöntemi, ilgi meta verilerinin diskteki bir dosya yerine bellekte zaten var olması dışında.  
   
- Belleğin hedef alanı ortak dil çalışma zamanı (CLR) meta verileri içermiyorsa `OpenScopeOnMemory` yöntemi başarısız olur.  
+ Bellek hedef alanı ortak dil çalışma zamanı (CLR) meta `OpenScopeOnMemory` verileri içermiyorsa, yöntem başarısız olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

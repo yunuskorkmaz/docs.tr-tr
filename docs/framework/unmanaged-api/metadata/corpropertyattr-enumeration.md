@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 58ac8202-854d-4efd-acfb-d2da8b446e12
 topic_type:
 - apiref
-ms.openlocfilehash: 2d49a146a465210cea8466a75666ca3f800b090b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 95a798d662b44cf2e088af84d3b1eec97da8e7fb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450134"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177939"
 ---
 # <a name="corpropertyattr-enumeration"></a>CorPropertyAttr Numaralandırması
-Bir özelliğin meta verilerini tanımlayan değerleri içerir.  
+Bir özelliğin meta verilerini açıklayan değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 typedef enum CorPropertyAttr {  
   
-    prSpecialName           =   0x0200,   
+    prSpecialName           =   0x0200,
     prReservedMask          =   0xf400,  
     prRTSpecialName         =   0x0400,  
     prHasDefault            =   0x1000,  
@@ -38,23 +38,23 @@ typedef enum CorPropertyAttr {
 } CorPropertyAttr;  
 ```  
   
-## <a name="members"></a>Üyeleri  
+## <a name="members"></a>Üyeler  
   
-|Üyesi|Açıklama|  
+|Üye|Açıklama|  
 |------------|-----------------|  
-|`prSpecialName`|Özelliğin özel olduğunu ve adının nasıl kullanıldığını belirtir.|  
-|`prReservedMask`|Ortak dil çalışma zamanı tarafından iç kullanım için ayrılmıştır.|  
-|`prRTSpecialName`|Ortak dil çalışma zamanı meta veri iç API 'Lerinin, özellik adının kodlamasını denetlemesi gerektiğini belirtir.|  
-|`prHasDefault`|Özelliğin varsayılan bir değere sahip olduğunu belirtir.|  
-|`prUnused`|Kullanılmayan.|  
+|`prSpecialName`|Özelliğin özel olduğunu ve adının nasıl olduğunu açıklar.|  
+|`prReservedMask`|Ortak dil çalışma zamanı tarafından dahili kullanım için ayrılmıştır.|  
+|`prRTSpecialName`|Ortak dil çalışma zamanı meta veri iç API'lerinin özellik adının kodlayıcılığını denetlemesi gerektiğini belirtir.|  
+|`prHasDefault`|Özelliğin varsayılan bir değeri olduğunu belirtir.|  
+|`prUnused`|Kullanılmıyor.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr. h  
+ **Üstbilgi:** CorHdr.h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

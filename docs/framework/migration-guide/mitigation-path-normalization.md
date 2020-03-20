@@ -1,61 +1,61 @@
 ---
-title: 'Risk azaltma: yol normalleştirme'
+title: 'Azaltma: Yol Normalleştirme'
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-ms.openlocfilehash: 1e7b540975b84320d099ca004df5b6a87aa60f6a
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 61c8eec2043aa2fb9309ee6052e27fc2c91c6c6a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457892"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181231"
 ---
-# <a name="mitigation-path-normalization"></a>Risk azaltma: yol normalleştirme
-Uygulamalarla başlayarak .NET Framework 4.6.2 hedefini hedefleyin .NET Framework yol normalleştirme değişmiştir.  
+# <a name="mitigation-path-normalization"></a>Azaltma: Yol Normalleştirme
+.NET Framework 4.6.2'yi hedefleyen uygulamalardan başlayarak,.NET Framework'deki yol normalleştirmesi değişti.  
   
 ## <a name="what-is-path-normalization"></a>Yol normalleştirme nedir?  
- Bir yolun normalleştirilmesi, bir yolu veya dosyayı tanımlayan dizeyi, hedef işletim sisteminde geçerli bir yola uygun olacak şekilde değiştirmeyi içerir. Normalleştirme genellikle şunları içerir:  
+ Bir yolu normalleştirmek, hedef işletim sistemindegeçerli bir yola uyacak şekilde bir yolu veya dosyayı tanımlayan dizeyi değiştirmeyi içerir. Normalleştirme genellikle içerir:  
   
-- Standart hale getirme bileşeni ve Dizin ayırıcıları.  
+- Bileşen ve dizin ayırıcıları canonicalizing.  
   
-- Geçerli dizin göreli bir yola uygulanıyor.  
+- Geçerli dizini göreli bir yola uygulama.  
   
-- Göreli dizin (`.`) veya üst dizin (`..`) bir yolda değerlendiriliyor.  
+- Bir yolda göreli`.`dizinin ( ) veya`..`üst dizinin değerlendirilmesi.  
   
-- Belirtilen karakterler kırpılırken.  
+- Belirtilen karakterleri kırpma.  
   
 ## <a name="the-changes"></a>Değişiklikler  
- .NET Framework 4.6.2 hedefleyen uygulamalarla başlayarak, yol normalleştirme aşağıdaki yollarla değiştirilmiştir:  
+ .NET Framework 4.6.2'yi hedefleyen uygulamalardan başlayarak yol normalleştirmesi aşağıdaki şekillerde değişti:  
   
-- Çalışma zamanı, yolları normalleştirmek için işletim sisteminin [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) işlevine erteler.  
+- Çalışma süresi, yolları normalleştirmek için işletim sisteminin [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) işlevine erteler.  
   
-- Normalleştirme artık Dizin segmentlerinin bitmesini (Dizin adının sonundaki bir boşluk gibi) kırpmasını kapsar.  
+- Normalleştirme artık dizin kesimlerinin sonunda (dizin adının sonundaki boşluk gibi) kırpmayı içermez.  
   
-- `\\.\` ve, mscorlib. dll ' deki dosya g/ç API 'Leri için `\\?\`dahil olmak üzere tam güvende cihaz yolu sözdizimi desteği.  
+- Aygıt yolu sözdizimini tam `\\.\` güven içinde ve mscorlib.dll'deki `\\?\`dosya G/Ç API'leri için destek.  
   
-- Çalışma zamanı, cihaz sözdizimi yollarını doğrulamaz.  
+- Çalışma zamanı aygıt sözdizimi yollarını doğrulamaz.  
   
-- Alternatif veri akışlarına erişmek için cihaz sözdiziminin kullanılması desteklenir.  
+- Alternatif veri akışlarına erişmek için aygıt sözdizimi kullanımı desteklenir.  
   
 ## <a name="impact"></a>Etki  
 
-.NET Framework 4.6.2 veya üstünü hedefleyen uygulamalar için bu değişiklikler varsayılan olarak açık. Daha önce erişilemeyen yollara erişme yöntemlerine izin verirken performansı artırmalıdır.  
+.NET Framework 4.6.2 veya sonraki lerini hedefleyen uygulamalar için bu değişiklikler varsayılan olarak açıktır. Yöntemlerin daha önce erişilemeyen yollara erişmesine izin verirken performansı artırmaları gerekir.  
   
-.NET Framework 4.6.1 ve önceki sürümlerini hedefleyen ancak .NET Framework 4.6.2 veya üzeri sürümlerde çalışan uygulamalar bu değişiklikten etkilenmez.  
+.NET Framework 4.6.1 ve önceki sürümleri hedefleyen ancak .NET Framework 4.6.2 veya daha sonra ları altında çalışan uygulamalar bu değişiklikten etkilenmez.  
   
-## <a name="mitigation"></a>Azaltma  
- .NET Framework 4.6.2 veya üstünü hedefleyen uygulamalar bu değişikliği devre dışı bırakabilirsiniz ve uygulama yapılandırma dosyasının [\<runtime >](../configure-apps/file-schema/runtime/runtime-element.md) bölümüne aşağıdakileri ekleyerek eski normalleştirmeyi kullanabilir:  
+## <a name="mitigation"></a>Risk azaltma  
+ .NET Framework 4.6.2 veya daha sonrasını hedefleyen uygulamalar bu değişikliği devre dışı bırakıp [ \<](../configure-apps/file-schema/runtime/runtime-element.md) uygulama yapılandırma dosyasının çalışma süresi>bölümüne aşağıdakileri ekleyerek eski normalleştirmeyi kullanabilir:  
   
 ```xml  
 <runtime>  
-    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />    
+    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />
 </runtime>  
 ```  
   
-.NET Framework 4.6.1 veya önceki sürümlerini hedefleyen ancak .NET Framework 4.6.2 veya üzeri sürümlerde çalışan uygulamalar, uygulama. yapılandırma dosyasının [\<runtime >](../configure-apps/file-schema/runtime/runtime-element.md) bölümüne aşağıdaki satırı ekleyerek yol normalleştirmede yapılan değişiklikleri etkinleştirebilir:  
+.NET Framework 4.6.1 veya daha öncesini hedefleyen ancak .NET Framework 4.6.2 veya sonraki bölümlerinde çalışan uygulamalar, uygulamanın [ \<çalışma süresi>](../configure-apps/file-schema/runtime/runtime-element.md) bölümüne aşağıdaki satırı ekleyerek normalize yol değişikliklerini etkinleştirebilir .configuration dosyası:  
   
 ```xml  
 <runtime>  
-    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=false" />    
+    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=false" />
 </runtime>  
 ```  
   

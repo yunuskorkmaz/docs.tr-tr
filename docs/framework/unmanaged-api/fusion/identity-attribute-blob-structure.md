@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-ms.openlocfilehash: 212a9f46dd33f98abd31e7a78c7a830cb3386cb6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8f838d5c812842e2a637065b25182b6a12609231
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108004"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176558"
 ---
 # <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB Yapısı
-Bir derlemedeki tek bir öznitelikle ilgili bilgiler içerir ve üç `DWORD`s oluşur. Her `DWORD`, [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) arabiriminin `CurrentIntoBuffer` yöntemi tarafından oluşturulan bir karakter arabelleği için bir uzaklığa sahiptir  
+Bir derlemede tek bir öznitelik hakkında bilgi `DWORD`içerir ve üç s oluşur. Her `DWORD` `CurrentIntoBuffer` [biri, IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) arabiriminin yöntemiyle üretilen bir karakter arabelleği içine bir ofset  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,20 +40,20 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`ofsNamespace`|Karakter arabelleğinin ilk boşluğu. Bu uzaklığa daha sonra özniteliğin ad alanı, ancak bir dizi null karakteri gelmelidir. Bu nedenle, kullanılmaz.|  
-|`ofsName`|Karakter arabelleğinin ikinci değeri. Bu konum, özniteliğin adının başlangıcını belirtir.|  
-|`ofsValue`|Karakter arabelleğinin üçüncü boşluğu. Bu konum, öznitelik değerinin başlangıcını işaretler.|  
+|`ofsNamespace`|Karakter arabelleği içine ilk ofset. Bu uzaklık özniteliğin ad alanı tarafından değil, bir dizi boş karakter tarafından izlenir. Bu nedenle, kullanılmaz.|  
+|`ofsName`|Karakter arabelleği içine ikinci ofset. Bu konum, özniteliğin adının başlangıcını işaretler.|  
+|`ofsValue`|Karakter arabelleği içine üçüncü ofset. Bu konum, öznitelik değerinin başlangıcını işaretler.|  
   
 ## <a name="sample"></a>Örnek  
- Aşağıdaki örnek, sonunda doldurulmuş `IDENTITY_ATTRIBUTE_BLOB` yapısına neden olan birkaç temel adımı göstermektedir:  
+ Aşağıdaki örnek, sonunda kalabalık `IDENTITY_ATTRIBUTE_BLOB` bir yapıyla sonuçlanan birkaç temel adımı göstermektedir:  
   
-1. Derleme için bir [IReferenceIdentity](ireferenceidentity-interface.md) alın.  
+1. Derleme için bir [IReferenceIdentity](ireferenceidentity-interface.md) edinin.  
   
-2. `IReferenceIdentity::EnumAttributes` yöntemini çağırın ve bir [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)edinin.  
+2. Yöntemi arayın ve bir IEnumIDENTITY_ATTRIBUTE edinin. [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) `IReferenceIdentity::EnumAttributes`  
   
-3. Bir karakter arabelleği oluşturun ve `IDENTITY_ATTRIBUTE_BLOB` yapısı olarak atayın.  
+3. Bir karakter arabelleği oluşturun ve `IDENTITY_ATTRIBUTE_BLOB` bir yapı olarak döküm.  
   
-4. `IEnumIDENTITY_ATTRIBUTE` arabiriminin `CurrentIntoBuffer` yöntemini çağırın. Bu yöntem, `Namespace`, `Name`ve `Value` özniteliklerini karakter arabelleğine kopyalar. Bu dizelerin üç uzaklıkları `IDENTITY_ATTRIBUTE_BLOB` yapısında kullanılabilir hale gelir.  
+4. Arabirimin `CurrentIntoBuffer` yöntemini `IEnumIDENTITY_ATTRIBUTE` arayın. Bu yöntem öznitelikleri `Namespace` `Name`kopyalar `Value` , , ve karakter arabelleği içine. Bu dizeleri için üç `IDENTITY_ATTRIBUTE_BLOB` uzaklıklar yapıda kullanılabilir olacaktır.  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -97,7 +97,7 @@ bool Init()
                                 (VOID **)&g_pfnGetIdentityAuthority);  
     }  
   
-    if (!g_pfnGetAssemblyIdentityFromFile ||   
+    if (!g_pfnGetAssemblyIdentityFromFile ||
         !g_pfnGetIdentityAuthority)  
     {  
         printf("Error: Cannot get required APIs from fusion.dll!\n");  
@@ -120,7 +120,7 @@ void Shutdown()
   
 void Usage()  
 {  
-    printf("EnumAssemblyAttributes: A tool to enumerate the identity   
+    printf("EnumAssemblyAttributes: A tool to enumerate the identity
             attributes of a given assembly.\n\n");  
     printf("Usage: EnumAssemblyAttributes AssemblyFilePath\n");  
     printf("\n");  
@@ -131,7 +131,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
     int     iResult = 1;  
     IUnknown                    *pUnk  = NULL;  
     IReferenceIdentity          *pRef  = NULL;  
-    HRESULT                     hr     = S_OK;     
+    HRESULT                     hr     = S_OK;
     IEnumIDENTITY_ATTRIBUTE     *pEnum = NULL;  
     BYTE                        abData[1024];  
     DWORD                       cbAvailable;  
@@ -148,16 +148,16 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
         goto Exit;  
     }  
   
-    hr = g_pfnGetAssemblyIdentityFromFile(argv[1],   
+    hr = g_pfnGetAssemblyIdentityFromFile(argv[1],
                             __uuidof(IReferenceIdentity), &pUnk);  
   
     if (FAILED(hr)) {  
-        printf("GetAssemblyIdentityFromFile failed with hr = 0x%x",   
+        printf("GetAssemblyIdentityFromFile failed with hr = 0x%x",
                 hr);  
         goto Exit;  
     }  
   
-    hr = pUnk->QueryInterface(__uuidof(IReferenceIdentity),   
+    hr = pUnk->QueryInterface(__uuidof(IReferenceIdentity),
                               (void**)&pRef);  
     if (FAILED(hr)) {  
         goto Exit;  
@@ -165,7 +165,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
   
     hr = pRef->EnumAttributes(&pEnum);  
     if (FAILED(hr)) {  
-        printf("IReferenceIdentity::EnumAttributes failed with hr =   
+        printf("IReferenceIdentity::EnumAttributes failed with hr =
                 0x%x", hr);  
         goto Exit;  
     }  
@@ -175,7 +175,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
         cbAvailable = sizeof(abData);  
         hr = pEnum->CurrentIntoBuffer(cbAvailable, abData, &cbUsed);  
         if (FAILED(hr)) {  
-            printf("IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer failed   
+            printf("IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer failed
                     with hr = 0x%x", hr);  
             goto Exit;  
         }  
@@ -191,7 +191,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
   
         hr = pEnum->Skip(1);  
         if (FAILED(hr)) {  
-            printf("IEnumIDENTITY_ATTRIBUTE::Skip failed with hr =   
+            printf("IEnumIDENTITY_ATTRIBUTE::Skip failed with hr =
                     0x%x", hr);  
             goto Exit;  
         }  
@@ -220,12 +220,12 @@ Exit:
 ```  
   
 ### <a name="to-run-the-sample"></a>Örnek çalıştırmak için  
- C:\\> EnumAssemblyAttributes. exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
+ C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
-### <a name="sample-output"></a>Örnek çıkış  
- Kültür = bağımsız  
+### <a name="sample-output"></a>Örnek çıktı  
+ Kültür = nötr  
   
- ad = sistem  
+ isim = Sistem  
   
  processorArchitecture = MSIL  
   
@@ -234,11 +234,11 @@ Exit:
  Sürüm = 2.0.0.0  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Yalıtım. h  
+ **Üstbilgi:** Yalıtım.h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

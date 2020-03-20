@@ -1,50 +1,50 @@
 ---
-title: 'ICorDebugSymbolProvider:: GetCodeRange yöntemi'
+title: ICorDebugSymbolProvider::GetCodeRange Yöntemi
 ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
-ms.openlocfilehash: dbe042641cadae182efac30502a70631be359bbe
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 81babade2ba499ce9326c664e83fa582abbd216f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791648"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178474"
 ---
-# <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider:: GetCodeRange yöntemi
-Bir yöntemde göreli bir sanal adres (RVA) verilen yöntem başlangıç adresini ve boyutunu alır.  
+# <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider::GetCodeRange Yöntemi
+Yöntemde göreli sanal adres (RVA) verilen yöntem başlangıç adresini ve boyutunu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetCodeRange(  
-   [in] ULONG32 codeRva,   
-   [out] ULONG32* pCodeStartAddress,   
+   [in] ULONG32 codeRva,
+   [out] ULONG32* pCodeStartAddress,
    [out] ULONG32* pCodeSize  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `codeRva`  
- 'ndaki Bir yöntemde göreli sanal adres (RVA).  
+ [içinde] Bir yöntemdeki göreli sanal adres (RVA).  
   
  `pCodeStartAddress`  
- dışı Metodun başlangıç adresine yönelik bir işaretçi.  
+ [çıkış] Yöntemin başlangıç adresine işaretçi.  
   
  `pCodeSize`  
- Yöntem kodu boyutuna yönelik bir işaretçi (yöntemin kodunun bayt sayısı).  
+ Yöntem kodu boyutu (yöntem kodu bayt sayısı) için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
-> Bu yöntem yalnızca .NET Native kullanılabilir.  
+> Bu yöntem yalnızca .NET Native ile kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 381b8ba08db6ff5bb817c9c89008dacb1085ac1b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 99db077b41a59fe9263f7283b58b8c31959c7c79
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956032"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182071"
 ---
 # <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Nasıl yapılır: Araç Çubuğu Düğmeleri için Menü Olaylarını Tetikleme
 > [!NOTE]
-> Denetim yerini alır ve <xref:System.Windows.Forms.ToolBar> <xref:System.Windows.Forms.ToolBar> denetime işlevsellik ekler; ancak, isterseniz denetim hem geri uyumluluk hem de gelecekteki kullanım için korunur. <xref:System.Windows.Forms.ToolStrip>  
+> Denetim, <xref:System.Windows.Forms.ToolStrip> denetimin <xref:System.Windows.Forms.ToolBar> yerini alır ve işlevsellik ekler; ancak, <xref:System.Windows.Forms.ToolBar> isterseniz, denetim hem geriye dönük uyumluluk hem de gelecekteki kullanım için korunur.  
   
- Windows formunuz araç çubuğu düğmeleriyle bir <xref:System.Windows.Forms.ToolBar> denetim özelliklarsa, kullanıcının hangi düğmeyi tıkladığı hakkında bilgi edinmek isteyeceksiniz.  
+ Windows Form'unuzda <xref:System.Windows.Forms.ToolBar> araç çubuğu düğmeleriyle bir denetim varsa, kullanıcının hangi düğmeyi tıklattıklarını bilmek istersiniz.  
   
- <xref:System.Windows.Forms.ToolBar.ButtonClick> Denetiminolayında<xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> , sınıfının<xref:System.Windows.Forms.ToolBarButtonClickEventArgs> özelliğini değerlendirebilirsiniz. <xref:System.Windows.Forms.ToolBar> Aşağıdaki örnekte, hangi düğmenin tıklandığını gösteren bir ileti kutusu gösterilir. Ayrıntılar için bkz <xref:System.Windows.Forms.MessageBox>.  
+ Denetim <xref:System.Windows.Forms.ToolBar.ButtonClick> durumunda, sınıfın özelliğini <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> değerlendirebilirsiniz. <xref:System.Windows.Forms.ToolBar> Aşağıdaki örnekte, hangi düğmenin tıklandığını belirten bir ileti kutusu gösterilir. Ayrıntılar için bkz. <xref:System.Windows.Forms.MessageBox>.  
   
- Aşağıdaki örnek, bir denetimin <xref:System.Windows.Forms.ToolBar> bir Windows formuna eklendiğini varsayar.  
+ Aşağıdaki örnekte, <xref:System.Windows.Forms.ToolBar> windows formuna bir denetim eklendiğini varsayar.  
   
-### <a name="to-handle-the-click-event-on-a-toolbar"></a>Bir araç çubuğunda tıklama olayını işlemek için  
+### <a name="to-handle-the-click-event-on-a-toolbar"></a>Araç çubuğundaki Click olayını işlemek için  
   
 1. Bir yordamda, <xref:System.Windows.Forms.ToolBar> denetime araç çubuğu düğmeleri ekleyin.  
   
@@ -45,13 +45,13 @@ ms.locfileid: "69956032"
     ```  
   
     ```csharp  
-    public void ToolBarConfig()   
+    public void ToolBarConfig()
     {  
        toolBar1.Buttons.Add(new ToolBarButton("One"));  
        toolBar1.Buttons.Add(new ToolBarButton("Two"));  
        toolBar1.Buttons.Add(new ToolBarButton("Three"));  
   
-       toolBar1.ButtonClick +=   
+       toolBar1.ButtonClick +=
           new ToolBarButtonClickEventHandler(this.toolBar1_ButtonClick);  
     }  
     ```  
@@ -64,16 +64,16 @@ ms.locfileid: "69956032"
           toolBar1->Buttons->Add(gcnew ToolBarButton("Two"));  
           toolBar1->Buttons->Add(gcnew ToolBarButton("Three"));  
   
-          toolBar1->ButtonClick +=   
+          toolBar1->ButtonClick +=
              gcnew ToolBarButtonClickEventHandler(this,  
              &Form1::toolBar1_ButtonClick);  
        }  
     ```  
   
-2. <xref:System.Windows.Forms.ToolBar> Denetimin olayıiçinbirolayişleyicisiekleyin.<xref:System.Windows.Forms.ToolBar.ButtonClick> Tıklanan araç çubuğu düğmesini belirleyebilmek için <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> bir Case anahtarlama ifadesini ve sınıfını kullanın. Buna bağlı olarak, uygun bir ileti kutusu görüntüleyin.  
+2. Denetimolayı için bir <xref:System.Windows.Forms.ToolBar> olay işleyicisi <xref:System.Windows.Forms.ToolBar.ButtonClick> ekleyin. Tıklanan araç çubuğu <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> düğmesini belirlemek için büyük/küçük harf anahtarlama deyimini ve sınıfı kullanın. Buna dayanarak, uygun bir ileti kutusu gösterin.  
   
     > [!NOTE]
-    > Bu örnekte yalnızca bir yer tutucu olarak bir ileti kutusu kullanılır. Araç çubuğu düğmelerine tıklandığında yürütülecek diğer kodu ekleyebilirsiniz.  
+    > İleti kutusu bu örnekte yalnızca yer tutucu olarak kullanılıyor. Araç çubuğu düğmeleri tıklandığında yürütmek için başka kod eklemekten çekinmeyin.  
   
     ```vb  
     Protected Sub ToolBar1_ButtonClick(ByVal sender As Object, _  
@@ -137,6 +137,6 @@ ms.locfileid: "69956032"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Nasıl yapılır: Araç çubuğu denetimine düğme ekleme](how-to-add-buttons-to-a-toolbar-control.md)
-- [Nasıl yapılır: Bir araç çubuğu düğmesi için simge tanımlama](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Nasıl yapılır: Bir ToolBar Denetimine Düğme Ekleme](how-to-add-buttons-to-a-toolbar-control.md)
+- [Nasıl yapılır: ToolBar Düğmesi için Simge Tanımlama](how-to-define-an-icon-for-a-toolbar-button.md)
 - [ToolBar Denetimi](toolbar-control-windows-forms.md)

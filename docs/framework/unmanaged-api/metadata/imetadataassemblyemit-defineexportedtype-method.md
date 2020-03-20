@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: fad01d7a-3178-4c8c-9f0a-4641e3701c9b
 topic_type:
 - apiref
-ms.openlocfilehash: 44f97ef498eb8e64c55fc86b9f290b9e088293f6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 388f227377ddf73fe1297e1c777bb1c0607c13d2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432075"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177874"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType Yöntemi
-Belirtilen içe aktarılmış tür için meta verileri içeren bir `ExportedType` yapısı oluşturur ve ilişkili meta veri belirtecini döndürür.  
+Belirtilen dışa aktarılan tür için meta veri içeren bir `ExportedType` yapı oluşturur ve ilişkili meta veri belirteci döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT DefineExportedType (  
     [in]  LPCWSTR             szName,  
-    [in]  mdToken             tkImplementation,   
+    [in]  mdToken             tkImplementation,
     [in]  mdTypeDef           tkTypeDef,  
     [in]  DWORD               dwExportedTypeFlags,  
     [out] mdExportedType      *pmdct  
@@ -39,39 +39,39 @@ HRESULT DefineExportedType (
   
 ## <a name="parameters"></a>Parametreler  
  `szName`  
- 'ndaki Aktarılacak türün adı. Ortak dil çalışma zamanının 1,1 sürümü için, verilen türün adı tür için `TypeDef` verilen adla tam olarak eşleşmelidir.  
+ [içinde] Dışa aktarılacak türün adı. Ortak dil çalışma zamanının sürüm 1.1 sürümü için, dışa aktarılan türün `TypeDef` adı, tür için verilen adla tam olarak eşleşmelidir.  
   
  `tkImplementation`  
- 'ndaki İçe aktarılmış türün nerede uygulandığını belirten bir belirteç. Geçerli değerler ve bunlarla ilişkili anlamları şunlardır:  
+ [içinde] Dışa aktarılan türün nerede uygulandığını belirten bir belirteç. Geçerli değerler ve bunlara bağlı anlamları şunlardır:  
   
-- `mdFile` bu derleme içindeki farklı bir dosyada uygulandı.  
+- `mdFile`Tür, bu derleme içinde farklı bir dosyada uygulanır.  
   
-- `mdAssemblyRef` türü farklı bir derlemede uygulandı.  
+- `mdAssemblyRef`Tür farklı bir derlemede uygulanır.  
   
-- tür başka bir tür içinde iç içe `mdExportedTYpe`.  
+- `mdExportedTYpe`Tür başka bir tür içinde iç içe.  
   
-- `mdFileNil` türü bildirimle aynı dosyada ve iç içe geçmiş bir tür değil.  
+- `mdFileNil`Tür, bildirimle aynı dosyadadır ve iç içe geçen bir tür değildir.  
   
  `tkTypeDef`  
- 'ndaki Meta veriye aktarılacak türü belirten bir belirteç. Bu değer, türü uygulayan dosyadaki `TypeDef` tablosuna girilir ve yalnızca bu dosya bu derlemede olduğunda ilgilidir.  
+ [içinde] Dışa aktarılacak türü belirten meta verilerin belirteci. Bu değer, türü `TypeDef` uygulayan dosyadaki tabloya girilir ve yalnızca bu dosya bu derlemedeyse alakalıdır.  
   
  `dwExportedTypeFlags`  
- 'ndaki İçe aktarılmış tür için özellik ayarlarını tanımlayan [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) numaralandırma değerlerinin bit düzeyinde birleşimi.  
+ [içinde] Dışa aktarılan türiçin özellik ayarlarını tanımlayan [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) numaralandırma değerlerinin bitwise kombinasyonu.  
   
  `pmdct`  
- dışı Verilen türü gösteren döndürülen meta veri belirtecine yönelik bir işaretçi.  
+ [çıkış] Dışa aktarılan türü gösteren döndürülen meta veri belirteci için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu derleme tarafından sunulan ve bildirimi içeren bir modülde uygulanan her tür için bir `ExportedType` meta veri yapısı tanımlanmalıdır.  
+ Bu `ExportedType` derleme tarafından maruz kalan ve manifestoyu içeren bir modül dışında bir modülde uygulanan her tür için bir meta veri yapısı tanımlanmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

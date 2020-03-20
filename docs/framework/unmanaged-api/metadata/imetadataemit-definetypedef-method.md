@@ -15,59 +15,59 @@ helpviewer_keywords:
 ms.assetid: dd11c485-be95-4b97-9cd8-68679a4fb432
 topic_type:
 - apiref
-ms.openlocfilehash: 031996813718a074eebab62ff54a2de52b898c22
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4f1c3e823b35fcf7d5935eee111e042b2291d216
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450221"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175765"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>IMetaDataEmit::DefineTypeDef Yöntemi
-Ortak dil çalışma zamanı türü için bir tür tanımı oluşturur ve bu tür tanımı için bir meta veri belirteci alır.  
+Ortak bir dil çalışma zamanı türü için bir tür tanımı oluşturur ve bu tür tanımı için bir meta veri belirteci alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT DefineTypeDef (   
-    [in]  LPCWSTR     szTypeDef,   
-    [in]  DWORD       dwTypeDefFlags,   
-    [in]  mdToken     tkExtends,   
-    [in]  mdToken     rtkImplements[],   
+HRESULT DefineTypeDef (
+    [in]  LPCWSTR     szTypeDef,
+    [in]  DWORD       dwTypeDefFlags,
+    [in]  mdToken     tkExtends,
+    [in]  mdToken     rtkImplements[],
     [out] mdTypeDef   *ptd  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `szTypeDef`  
- 'ndaki Unicode 'daki türün adı.  
+ [içinde] Unicode'daki türün adı.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` öznitelikleri. Bu, `CoreTypeAttr` değerlerinin bir bit dır.  
+ [içinde] `TypeDef` öznitelikleri. Bu `CoreTypeAttr` değerlerin bir bitmask olduğunu.  
   
  `tkExtends`  
- 'ndaki Taban sınıfının belirteci. `mdTypeDef` ya da `mdTypeRef` belirteci olmalıdır.  
+ [içinde] Taban sınıfın belirteci. Ya bir `mdTypeDef` belirteç `mdTypeRef` ya da bir belirteç olmalı.  
   
  `rtkImplements`  
- 'ndaki Bu sınıfın veya arabirimin uyguladığı arabirimleri belirten bir belirteç dizisi.  
+ [içinde] Bu sınıfın veya arabirimin uyguladığı arabirimleri belirten bir dizi belirteç.  
   
  `ptd`  
- dışı `mdTypeDef` belirteci atandı.  
+ [çıkış] Atanan `mdTypeDef` belirteç.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `dwTypeDefFlags` bir bayrak, oluşturulan türün ortak bir tür sistem başvuru türü (sınıf veya arabirim) mi yoksa ortak bir tür sistemi değer türü mi olduğunu belirtir.  
+ Bir `dwTypeDefFlags` bayrak, oluşturulan türün ortak bir tür sistem başvuru türü (sınıf veya arabirim) veya ortak bir tür sistem değer türü olup olmadığını belirtir.  
   
- Sağlanan parametrelere bağlı olarak, bu yöntem bir yan etkisi olarak, bu tür tarafından devralınan veya uygulanan her arabirim için bir `mdInterfaceImpl` kaydı da oluşturabilir. Ancak, bu yöntem bu `mdInterfaceImpl` belirteçlerinin hiçbirini döndürmez. Bir istemci daha sonra bir `mdInterfaceImpl` belirtecini eklemek veya değiştirmek isterse, bunları numaralandırmak için `IMetaDataImport` arabirimini kullanması gerekir. `[default]` arabiriminin COM semantiğini kullanmak istiyorsanız, varsayılan arabirimi `rtkImplements`ilk öğe olarak sağlamalısınız; sınıfında ayarlanan özel bir öznitelik, sınıfın varsayılan bir arabirime sahip olduğunu gösterir (Bu, her zaman sınıf için bildirildiği ilk `mdInterfaceImpl` belirteç olarak varsayılır).  
+ Sağlanan parametrelere bağlı olarak, bu yöntem, bir yan etki `mdInterfaceImpl` olarak, aynı zamanda bu tür tarafından devralınan veya uygulanan her arabirim için bir kayıt oluşturabilir. Ancak, bu yöntem bu `mdInterfaceImpl` belirteçlerin hiçbirini döndürmez. İstemci daha sonra bir `mdInterfaceImpl` belirteç eklemek veya `IMetaDataImport` değiştirmek isterse, bunları sayısallandırmak için arabirimi kullanmalıdır. `[default]` Arabirimin COM semantiklerini kullanmak istiyorsanız, varsayılan arabirimi ilk öğe olarak `rtkImplements`sağlamanız gerekir; sınıfa ayarlanan özel bir öznitelik, sınıfın varsayılan arabirimi olduğunu gösterir (bu her zaman sınıf için bildirilen ilk `mdInterfaceImpl` belirteç olarak kabul edilir).  
   
- `rtkImplements` dizisinin her öğesi bir `mdTypeDef` veya `mdTypeRef` belirteci barındırır. Dizideki son öğe `mdTokenNil`olmalıdır.  
+ `rtkImplements` Dizinin her öğesi bir `mdTypeDef` `mdTypeRef` veya belirteç tutar. Dizideki son öğe `mdTokenNil`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

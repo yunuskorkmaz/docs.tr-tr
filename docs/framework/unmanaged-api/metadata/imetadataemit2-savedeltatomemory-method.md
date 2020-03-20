@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: e2146726-0084-4c9e-a2d2-e8d461b13b21
 topic_type:
 - apiref
-ms.openlocfilehash: d0718ff9a7e288ffc6a856032aa47949fda443f5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5ec4fe2a8e949cf6e9aa0ce68f4d4e49b72170b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447889"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177430"
 ---
 # <a name="imetadataemit2savedeltatomemory-method"></a>IMetaDataEmit2::SaveDeltaToMemory Yöntemi
-Değişiklikleri geçerli Düzenle ve devam et oturumundan belleğe kaydeder.  
+Değişiklikleri geçerli düzenlenen ve devam eden oturumdan belleğe kaydeder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SaveDeltaToMemory (  
-    [out] void        *pbData,   
+    [out] void        *pbData,
     [in]  ULONG       cbData  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pbData`  
- dışı Meta veri değişim yazmanın başlayacağı adres.  
+ [çıkış] Meta veri deltasını yazmaya başlamak için adres.  
   
  `cbData`  
- 'ndaki Değişikliklerin boyutu. Boyutunu öğrenmek için [IMetaDataEmit2:: GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) kullanın.  
+ [içinde] Değişikliklerin boyutu. Boyutunu belirlemek için [IMetaDataEmit2::GetDeltaSaveSize'ı](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

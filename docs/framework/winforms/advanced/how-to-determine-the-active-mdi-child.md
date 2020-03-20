@@ -11,26 +11,26 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 91100b37e4cae9041479b209e40034efe376df5b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 57491faa10c182630d41565ba236d65e393929b3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946213"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182539"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Nasıl yapılır: Etkin MDI Alt Öğesini Belirleme
-Bazen, geçerli etkin alt form üzerinde odağa sahip olan denetimde çalışan bir komut sağlamak isteyeceksiniz. Örneğin, alt formun metin kutusundan seçili metni pano 'ya kopyalamak istediğinizi varsayalım. Standart düzenleme menüsündeki Kopyala menü öğesinin <xref:System.Windows.Forms.Control.Click> olayını kullanarak seçili metni panoya kopyalayan bir yordam oluşturacaksınız.  
+Zaman zaman, şu anda etkin olan alt forma odaklanan denetim üzerinde çalışan bir komut sağlamak isteyeceksiniz. Örneğin, seçili metni alt formun metin kutusundan Pano'ya kopyalamak istediğinizi varsayalım. Standart Edit menüsündeki Kopyala menüsündeki <xref:System.Windows.Forms.Control.Click> etkinliğini kullanarak seçili metni Pano'ya kopyalayan bir yordam oluşturursunuz.  
   
- Bir MDI uygulamasının aynı alt formun birçok örneği olabileceğinden, yordamın hangi formun kullanılacağını bilmeleri gerekir. Doğru formu belirtmek için, odağa sahip olan <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> veya en son etkin olan alt formu döndüren özelliğini kullanın.  
+ Bir MDI uygulaması aynı alt formun birçok örneğine sahip olabileceğinden, yordamın hangi formu kullanacağını bilmesi gerekir. Doğru formu belirtmek için, <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> odak noktası olan veya en son etkin olan alt formu döndüren özelliği kullanın.  
   
- Form üzerinde çeşitli denetimleriniz olduğunda, hangi denetimin etkin olduğunu da belirtmeniz gerekir. <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> Özelliği gibi<xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> , özelliği de etkin alt form üzerinde odak olan denetimi döndürür. Aşağıdaki yordam alt form menüsünden çağrılabilen bir kopyalama yordamını, MDI formundaki menüyü veya bir araç çubuğu düğmesini gösterir.  
+ Form üzerinde birden fazla denetiminiz olduğunda, hangi denetimin etkin olduğunu da belirtmeniz gerekir. <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> Özellik gibi, <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> özellik de etkin alt forma odaklanarak denetimi döndürür. Aşağıdaki yordam, alt form menüsünden, MDI formundaki menüden veya araç çubuğu düğmesinden çağrılabilen bir kopyalama yordamını göstermektedir.  
   
-### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>Etkin MDI alt öğesini belirleme (metnini panoya kopyalamak için)  
+### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>Etkin MDI alt çocuğunu belirlemek için (metnini Panoya kopyalamak için)  
   
-1. Bir yöntem içinde, etkin alt formun etkin denetiminin metnini panoya kopyalayın.  
+1. Bir yöntem içinde, etkin alt formun etkin denetiminin metnini Pano'ya kopyalayın.  
   
     > [!NOTE]
-    > Bu örnek, bir`Form1` <xref:System.Windows.Forms.RichTextBox> denetim içeren bir veya daha fazla MDI alt penceresi olan bir MDI parent formu () olduğunu varsayar. Daha fazla bilgi için bkz. [MDI parent Forms oluşturma](how-to-create-mdi-parent-forms.md).  
+    > Bu örnek, denetim içeren bir veya`Form1`daha fazla MDI alt penceresi <xref:System.Windows.Forms.RichTextBox> olan bir MDI üst formu () olduğunu varsayar. Daha fazla bilgi için Bkz. [MDI Üst Formları Oluşturma.](how-to-create-mdi-parent-forms.md)  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -64,7 +64,7 @@ Bazen, geçerli etkin alt form üzerinde odağa sahip olan denetimde çalışan 
        // If there is an active child form, find the active control, which  
        // in this example should be a RichTextBox.  
        if (activeChild != null)  
-       {    
+       {
           try  
           {  
              RichTextBox theBox = (RichTextBox)activeChild.ActiveControl;  
@@ -85,8 +85,8 @@ Bazen, geçerli etkin alt form üzerinde odağa sahip olan denetimde çalışan 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çok Belgeli Arabirim (MDI) Uygulamaları](multiple-document-interface-mdi-applications.md)
-- [Nasıl yapılır: MDI üst formları oluşturma](how-to-create-mdi-parent-forms.md)
-- [Nasıl yapılır: MDI alt formları oluşturma](how-to-create-mdi-child-forms.md)
-- [Nasıl yapılır: Etkin MDI alt öğesine veri gönderme](how-to-send-data-to-the-active-mdi-child.md)
-- [Nasıl yapılır: MDI alt formlarını düzenleme](how-to-arrange-mdi-child-forms.md)
+- [Çoklu Belge Arabirimi (MDI) Uygulamaları](multiple-document-interface-mdi-applications.md)
+- [Nasıl yapılır: MDI Üst Formları Oluşturma](how-to-create-mdi-parent-forms.md)
+- [Nasıl yapılır: MDI Alt Formları Oluşturma](how-to-create-mdi-child-forms.md)
+- [Nasıl yapılır: Etkin MDI Alt Öğesine Veri Gönderme](how-to-send-data-to-the-active-mdi-child.md)
+- [Nasıl yapılır: MDI Alt Formlarını Düzenleme](how-to-arrange-mdi-child-forms.md)

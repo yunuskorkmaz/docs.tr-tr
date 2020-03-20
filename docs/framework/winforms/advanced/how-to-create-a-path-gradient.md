@@ -9,108 +9,108 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 8399a56fca87704e10456a4cf8109d7c80d4db45
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cf4dc558c008fb8adfc327a6a894a428e985df03
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964411"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182641"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Nasıl yapılır: Yol Gradyanı Oluşturma
-<xref:System.Drawing.Drawing2D.PathGradientBrush> Sınıfı, bir şekli aşamalı olarak değişen renklerle doldurmanıza olanak sağlar. Örneğin, bir yolun ortası için bir renk ve yolun sınırı için başka bir renk belirtebilirsiniz. Ayrıca, bir yolun sınırı boyunca birkaç noktadan her biri için ayrı renkler belirtebilirsiniz.  
+Sınıf, <xref:System.Drawing.Drawing2D.PathGradientBrush> bir şekli yavaş yavaş değişen renklerle doldurma şeklinizi özelleştirmenize olanak tanır. Örneğin, bir yolun ortası için bir renk ve bir yolun sınırı için başka bir renk belirtebilirsiniz. Ayrıca, bir yolun sınırı boyunca birkaç noktanın her biri için ayrı renkler belirtebilirsiniz.  
   
 > [!NOTE]
-> GDI+ ' da, bir yol bir <xref:System.Drawing.Drawing2D.GraphicsPath> nesne tarafından tutulan çizgiler ve eğrilerden oluşan bir dizidir. GDI+ yolları hakkında daha fazla bilgi için bkz. [GDI+ Içindeki grafik yolları](graphics-paths-in-gdi.md) ve [yolları oluşturma ve çizme](constructing-and-drawing-paths.md).  
+> GDI+'da yol, bir <xref:System.Drawing.Drawing2D.GraphicsPath> nesne tarafından korunan çizgiler ve eğriler dizisidir. GDI+ yolları hakkında daha fazla bilgi için [GDI+'daki Grafik Yolları](graphics-paths-in-gdi.md) ve [Oluşturma ve Çizim Yolları'na](constructing-and-drawing-paths.md)bakın.  
 
-Bu makaledeki örnekler, bir denetimin <xref:System.Windows.Forms.Control.Paint> olay işleyicisinden çağrılan yöntemlerdir.  
+Bu makaledeki örnekler, denetimin <xref:System.Windows.Forms.Control.Paint> olay işleyicisinden çağrılan yöntemlerdir.  
 
-### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Bir elipsi yol degradeyle doldurmanız için  
+### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Bir elipsi yol degradesi ile doldurmak için  
   
-- Aşağıdaki örnek, bir elipsi yol gradyan fırçası ile doldurur. Merkez rengi mavi olarak ayarlanır ve sınır rengi deniz mavisi olarak ayarlanır. Aşağıdaki çizimde doldurulmuş elips gösterilmektedir.  
+- Aşağıdaki örnek, bir elipsi yol degrade fırçasıyla doldurur. Orta renk maviye, sınır rengi ise aqua olarak ayarlanır. Aşağıdaki resimde dolgulu elips gösterilmektedir.  
   
-     ![Gradyan yolu bir elipsi doldurur.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
+     ![Degrade Path bir elips doldurur.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
-     Varsayılan olarak, bir yol gradyan fırçası yolun sınırının dışına genişlemez. Yolun sınırının ötesine geçen bir şekli doldurmak için yol gradyan fırçası ' nı kullanırsanız, yolun dışındaki ekranın alanı doldurulmaz.  
+     Varsayılan olarak, bir yol degrade fırçası yolun sınırıdışında genişlemez. Yol eğimfırçasini, yolun sınırının ötesine uzanan bir şekli doldurmak için kullanırsanız, ekranın yolun dışındaki alanı doldurulmayaz.  
   
-     Aşağıdaki resimde aşağıdaki <xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType> `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`kodda yapılan çağrıyı değiştirirseniz ne olacağı gösterilmektedir:  
+     Aşağıdaki resimde, aşağıdaki koddaki <xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType> çağrıyı değiştirirseniz `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`ne olur:  
   
-     ![Gradyan yolu yolun sınırının ötesine genişletildi.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
+     ![Gradyan Yol, yolun sınırlarının ötesine uzanıyordu.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
      [!code-vb[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
   
-     Yukarıdaki kod örneği, Windows Forms ile kullanım için tasarlanmıştır ve <xref:System.Windows.Forms.PaintEventArgs> <xref:System.Windows.Forms.PaintEventHandler>parametresi olan e 'yi gerektirir.  
+     Önceki kod örneği Windows Formlar ile kullanılmak üzere <xref:System.Windows.Forms.PaintEventArgs> tasarlanmıştır ve e gerektirir, <xref:System.Windows.Forms.PaintEventHandler>hangi bir parametre .  
   
-### <a name="to-specify-points-on-the-boundary"></a>Sınır üzerine noktaları belirtmek için  
+### <a name="to-specify-points-on-the-boundary"></a>Sınırdaki noktaları belirtmek için  
   
-- Aşağıdaki örnek, yıldız şeklindeki bir yoldan yol gradyan fırçası oluşturur. Kod, yıldızın <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> centroıd kısmındaki rengi kırmızı olarak ayarlayan özelliği ayarlar. Daha sonra kod, <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> `points` dizideki tek noktalarda çeşitli renkler ( `colors` dizide depolanır) belirtmek için özelliğini ayarlar. Son kod ifadesinde, yıldız şeklindeki yol gradyan fırçası ile doldurulur.  
+- Aşağıdaki örnek, yıldız şeklindeki bir yoldan bir yol degrade fırçası inşa eder. Kod, yıldızın <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> merkezsindeki rengi kırmızıya ayarlayan özelliği ayarlar. Ardından kod, <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> `points` dizideki tek tek noktalarda `colors` çeşitli renkleri (dizide depolanan) belirtmek için özelliği ayarlar. Son kod deyimi, yıldız şeklindeki yolu yol degrade fırçasıyla doldurur.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
-- Aşağıdaki örnek, koddaki bir <xref:System.Drawing.Drawing2D.GraphicsPath> nesne olmadan bir yol gradyanı çizer. Örnekteki belirli <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> Oluşturucu bir dizi işaret alır, ancak bir <xref:System.Drawing.Drawing2D.GraphicsPath> nesne gerektirmez. Ayrıca, bir yolu değil <xref:System.Drawing.Drawing2D.PathGradientBrush> dikdörtgeni dolduriçin kullanıldığını unutmayın. Dikdörtgen, fırçayı tanımlamak için kullanılan kapalı yoldan daha büyükse, dikdörtgenden bazıları fırça tarafından boyanmaz. Aşağıdaki çizimde, dikdörtgenin (noktalı çizgi) ve yolun gradyan fırçası tarafından boyanmış olan kısmı gösterilmektedir: 
+- Aşağıdaki örnek, kodda nesne <xref:System.Drawing.Drawing2D.GraphicsPath> olmayan bir yol degradesi çizer. Örnekteki <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> belirli bir oluşturucu bir dizi nokta alır, ancak bir <xref:System.Drawing.Drawing2D.GraphicsPath> nesne gerektirmez. Ayrıca, bir <xref:System.Drawing.Drawing2D.PathGradientBrush> dikdörtgen değil, bir yol doldurmak için kullanılır unutmayın. Dikdörtgen, fırçayı tanımlamak için kullanılan kapalı yoldan daha büyüktür, bu nedenle dikdörtgenin bir kısmı fırçayla boyanmamış. Aşağıdaki resimde dikdörtgen (noktalı çizgi) ve dikdörtgenin yol degrade fırçası ile boyanmış kısmı gösterilmektedir:
   
-     ![Yol gradyan fırçası tarafından boyanan gradyan bölümü.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
+     ![Yol degrade fırçası ile boyanmış degrade kısmı.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#13)]
      [!code-vb[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#13)]  
   
-### <a name="to-customize-a-path-gradient"></a>Yol degradesini özelleştirmek için  
+### <a name="to-customize-a-path-gradient"></a>Yol eğimini özelleştirmek için  
   
-- Yol gradyan fırçası 'nı özelleştirmenin bir yolu, <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> özelliğini ayarlamaya yönelik bir yoldur. Odak ölçeği, ana yolun içinde yer alan bir iç yol belirtir. Merkez rengi, yalnızca orta nokta yerine bu iç yolun içinde her yerde görüntülenir.  
+- Yol degrade fırçasını özelleştirmenin bir yolu, özelliğini <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> ayarlamaktır. Odak ölçekleri, ana yolun içinde yer alan bir iç yolu belirtir. Orta daki renk, yalnızca merkez noktasında değil, bu iç yolun içinde her yerde görüntülenir.  
   
-     Aşağıdaki örnek, elips yolunu temel alan bir yol gradyan fırçası oluşturur. Kod, sınır rengini mavi olarak ayarlar, orta rengi deniz mavisi olarak ayarlar ve ardından elips yolunu dolduracak şekilde yol gradyan fırçası kullanır.  
+     Aşağıdaki örnek, eliptik bir yola dayalı bir yol degrade fırçası oluşturur. Kod sınır rengini maviye ayarlar, orta rengi aqua olarak ayarlar ve eliptik yolu doldurmak için yol degrade fırçasını kullanır.  
   
-     Daha sonra kod, yol gradyan fırçasının odak ölçeklerini ayarlar. X odak Ölçeği 0,3 olarak ayarlanır ve y odak Ölçeği 0,8 olarak ayarlanır. Kod, sonraki çağrının <xref:System.Drawing.Graphics.TranslateTransform%2A> ilk elipsin sağına <xref:System.Drawing.Graphics> oturan bir elipsi doldurması için <xref:System.Drawing.Graphics.FillPath%2A> bir nesnenin yöntemini çağırır.  
+     Ardından, kod yol degrade fırçasının odak ölçeklerini ayarlar. x odak ölçeği 0,3 olarak, y odak ölçeği 0,8 olarak ayarlanır. Kod, bir <xref:System.Drawing.Graphics.TranslateTransform%2A> <xref:System.Drawing.Graphics> nesnenin yöntemini çağırır, <xref:System.Drawing.Graphics.FillPath%2A> böylece sonraki çağrı ilk elipsin sağına oturur bir elipsi doldurur.  
   
-     Odak ölçeklerinin etkisini görmek için ana elips ile merkezini paylaşan küçük bir elips düşünün. Küçük (iç) elips, 0,3 faktörü ile yatay olarak ölçeklendirilen ana elips (merkeziyle yaklaşık olarak) ve 0,8 faktörüyle dikey olarak ayarlanır. Dış elips sınırından iç elipsin sınırına geçtiğinizde, renk mavi ile deniz mavisi arasında değişir. İç elipsin sınırından paylaşılan merkezine geçtiğinizde, renk deniz mavisi kalır.  
+     Odak ölçeklerinin etkisini görmek için, merkezini ana elipsle paylaşan küçük bir elips hayal edin. Küçük (iç) elips, yatay olarak 0,3 ve dikey olarak 0,8 faktörüyle ölçeklenmiş ana elipstir. Dış elipsin sınırından iç elipsin sınırına doğru ilerlerken, renk maviden kuyruktan yavaş yavaş değişir. İç elipsin sınırından paylaşılan merkeze doğru ilerlerken, renk suda kalır.  
   
-     Aşağıdaki çizimde aşağıdaki kodun çıkışı gösterilmektedir. Sol taraftaki elips yalnızca merkez noktada açık olur. Sağdaki elips, iç yolun içindeki her yerde açık bir şekilde bulunur.  
+     Aşağıdaki resimde aşağıdaki kodun çıktısı gösterilmektedir. Soldaki elips sadece orta noktada ki aqua. Sağdaki elips iç yolun her yerinde aqua.  
   
- ![Odak ölçeklerinin gradyan etkisi](./media/how-to-create-a-path-gradient/focus-scales-aqua-inner-outer-ellipse.png)  
+ ![Odak ölçeklerinin degrade etkisi](./media/how-to-create-a-path-gradient/focus-scales-aqua-inner-outer-ellipse.png)  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
   
-### <a name="to-customize-with-interpolation"></a>İlişkilendirme ile özelleştirmek için  
+### <a name="to-customize-with-interpolation"></a>Enterpolasyon ile özelleştirmek için  
   
-- Yol gradyan fırçası 'nı özelleştirmenin başka bir yolu da enterpolasyon renkleri dizisi ve ilişkilendirme konumları dizisi belirtmektir.  
+- Yol degrade fırçasını özelleştirmenin başka bir yolu, bir dizi enterpolasyon rengi ve bir dizi enterpolasyon pozisyonu belirtmektir.  
   
-     Aşağıdaki örnek, bir üçgeni temel alan bir yol gradyan fırçası oluşturur. Kod, yol gradyanı <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> fırçasının özelliğini, bir enterpolasyon renkleri dizisi (koyu yeşil, deniz mavisi, mavi) ve ilişkilendirme konumları dizisi (0, 0,25, 1) belirtmek için ayarlar. Üçgenin sınırından orta noktaya geçtiğinizde, renk koyu yeşil ve sonra deniz mavisi ile mavi arasında değişir. Koyu yeşil ile deniz mavisi arasındaki değişiklik, koyu yeşil ile mavi arasındaki uzaklığın yüzde 25 ' i oranında olur.  
+     Aşağıdaki örnek, üçgene dayalı bir yol degrade fırçası oluşturur. Kod, bir <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> dizi enterpolasyon rengi (koyu yeşil, aqua, mavi) ve bir dizi enterpolasyon pozisyonu (0, 0,25, 1) belirtmek için yol degrade fırçasının özelliğini ayarlar. Üçgenin sınırından merkez noktaya doğru ilerlerken, renk koyu yeşilden aquaya ve sonra sudan maviye doğru kademeli olarak değişir. Koyu yeşilden aqua'ya geçiş, koyu yeşilden maviye olan mesafenin yüzde 25'inde gerçekleşir.  
   
-     Aşağıdaki çizimde, özel yol gradyan fırçası ile doldurulmuş üçgen gösterilmektedir.  
+     Aşağıdaki resimde özel yol degrade fırça ile dolu üçgen gösterir.  
   
-     ![Özel yol gradyan fırçası ile doldurulmuş üçgen.](./media/how-to-create-a-path-gradient/gradient-brush-filled-triangle.png)  
+     ![Üçgen özel yol degrade fırça ile doldurulur.](./media/how-to-create-a-path-gradient/gradient-brush-filled-triangle.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
      [!code-vb[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
   
-### <a name="to-set-the-center-point"></a>Merkez noktasını ayarlamak için  
+### <a name="to-set-the-center-point"></a>Merkez noktayı ayarlamak için  
   
-- Varsayılan olarak, bir yol gradyan fırçasının orta noktası, fırçayı oluşturmak için kullanılan yolun centroıd 'si olur. <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> Sınıfın özelliğini<xref:System.Drawing.Drawing2D.PathGradientBrush> ayarlayarak merkez noktasının konumunu değiştirebilirsiniz.  
+- Varsayılan olarak, bir yol degrade fırçasının orta noktası, fırçayı oluşturmak için kullanılan yolun merkezsidir. Sınıfın özelliğini ayarlayarak merkez noktanın <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> konumunu değiştirebilirsiniz. <xref:System.Drawing.Drawing2D.PathGradientBrush>  
   
-     Aşağıdaki örnek, bir elips temelinde yol gradyan fırçası oluşturur. Elips Merkezi (70, 35), ancak yol gradyan fırçasının orta noktası (120, 40) olarak ayarlanır.  
+     Aşağıdaki örnek, bir elipsdayalı bir yol gradyan fırça oluşturur. Elipsin merkezi (70, 35) dır, ancak yol degrade fırçasının orta noktası (120, 40) olarak ayarlanır.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#16)]
      [!code-vb[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#16)]  
   
-     Aşağıdaki çizimde, yol gradyan fırçasının doldurulmuş elips ve orta noktası gösterilmektedir:  
+     Aşağıdaki resimde dolgulu elips ve yol gradyan fırçanın orta noktası gösterilmektedir:  
   
-     ![Dolgulu elips ve orta nokta ile gradyan yolu.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
+     ![Dolu elips ve orta nokta ile Gradyan Yol.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
-- Bir yol gradyanı fırçasının merkez noktasını, fırçayı oluşturmak için kullanılan yolun dışında bir konuma ayarlayabilirsiniz. Aşağıdaki örnek, önceki kodda <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> özelliğini ayarlamak için çağrısının yerini alır.  
+- Yol degrade fırçasının orta noktasını, fırçayı oluşturmak için kullanılan yolun dışındaki bir konuma ayarlayabilirsiniz. Aşağıdaki örnek, <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> önceki koddaki özelliği ayarlamak için yapılan çağrının yerini alır.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
   
-     Aşağıdaki çizim, bu değişikliğe sahip çıktıyı göstermektedir:  
+     Aşağıdaki resimde bu değişiklikle çıktı gösterilmektedir:  
   
-     ![Merkez noktası yol dışında bir gradyan yolu.](./media/how-to-create-a-path-gradient/gradient-path-center-point-outside.png)  
+     ![Yolun dışındaki merkez noktası olan Degrade Yolu.](./media/how-to-create-a-path-gradient/gradient-path-center-point-outside.png)  
   
-     Yukarıdaki çizimde, elipsin en sağdaki noktaları saf mavi değildir (çok yakın olsa da). Gradyandaki renkler, rengin saf mavi (0, 0, 255) olacağı noktaya (145, 35) ulaşmış gibi konumlandırılır. Ancak, bir yol gradyan fırçası yalnızca yolunun içinde boyaydığı için Fill hiçbir an (145, 35) öğesine ulaşmaz.  
+     Önceki resimde, elipsin en sağındaki noktalar saf mavi değildir (çok yakın olmalarına rağmen). Degradedeki renkler, dolgu, rengin saf mavi (0, 0, 0, 255) olacağı noktaya (145, 35) ulaşmış gibi konumlandırılır. Ama dolgu asla (145, 35) ulaşır, çünkü bir yol degrade fırça sadece kendi yolunun içinde boyar.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki örnekler, Windows Forms kullanımı için tasarlanmıştır ve <xref:System.Windows.Forms.PaintEventArgs> <xref:System.Windows.Forms.Control.Paint> olay işleyicisinin bir parametresi olan gerektirir `e`.  
+ Önceki örnekler Windows Formlar ile kullanılmak üzere <xref:System.Windows.Forms.PaintEventArgs> `e`tasarlanmıştır ve <xref:System.Windows.Forms.Control.Paint> olay işleyicisinin bir parametresi olan bir parametre gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

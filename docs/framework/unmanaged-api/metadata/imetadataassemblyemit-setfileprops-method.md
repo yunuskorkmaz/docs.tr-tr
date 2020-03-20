@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85667d38-611c-45a9-938d-930ac7a7b681
 topic_type:
 - apiref
-ms.openlocfilehash: 106ffeee521f69a73628b1fb6a611abc733583f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25baa6ffda3d50915cc7898275d6a557c1b3e947
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431880"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176038"
 ---
 # <a name="imetadataassemblyemitsetfileprops-method"></a>IMetaDataAssemblyEmit::SetFileProps Yöntemi
 Belirtilen `File` meta veri yapısını değiştirir.  
@@ -30,7 +30,7 @@ Belirtilen `File` meta veri yapısını değiştirir.
 ```cpp  
 HRESULT SetFileProps (  
     [in] mdFile        file,  
-    [in] const void    *pbHashValue,   
+    [in] const void    *pbHashValue,
     [in] ULONG         cbHashValue,  
     [in] DWORD         dwFileFlags  
 );  
@@ -38,28 +38,28 @@ HRESULT SetFileProps (
   
 ## <a name="parameters"></a>Parametreler  
  `file`  
- 'ndaki Değiştirilecek `File` meta veri yapısını belirten meta veri belirteci.  
+ [içinde] Değiştirilecek `File` meta veri yapısını belirten meta veri belirteci.  
   
  `pbHashValue`  
- 'ndaki Dosyayla ilişkili karma verilere yönelik bir işaretçi.  
+ [içinde] Dosyayla ilişkili karma verilere işaretçi.  
   
  `cbHashValue`  
- 'ndaki `pbHashValue`bayt cinsinden boyutu.  
+ [içinde] `pbHashValue`Baytboyutu.  
   
  `dwFileFlags`  
- 'ndaki Dosyanın çeşitli özniteliklerini belirten [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) değerlerinin bit düzeyinde birleşimi.  
+ [içinde] Dosyanın çeşitli özniteliklerini belirten [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) değerlerinin bitwise birleşimi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `File` meta veri yapısı oluşturmak için [IMetaDataAssemblyEmit::D efineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) metodunu kullanın.  
+ Meta `File` veri yapısı oluşturmak için [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) yöntemini kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

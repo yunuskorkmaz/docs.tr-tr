@@ -15,36 +15,36 @@ helpviewer_keywords:
 ms.assetid: 9afd0e04-a403-41e2-9528-a6dcbcdcbd4d
 topic_type:
 - apiref
-ms.openlocfilehash: 55d0b40bbdb5628f60090d9d70f7dccbebe9d58f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e5fd1730bbe5b6f2905691dce41a7f503227534a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784992"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179078"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypes-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypes Metodu
-Tüm önbelleğe alınmış Windows Çalışma Zamanı türleri için bir Numaralandırıcı alır.  
+Önbelleğe alınmış tüm Windows Runtime türleri için bir sayısallaştırıcı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT GetCachedWinRTTypes (   
+HRESULT GetCachedWinRTTypes (
     [out] ICorDebugGuidToTypeEnum **ppGuidToTypeEnum)  
 ;  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `ppGuidToTypeEnum`  
- dışı Bir [ICorDebugGuidToTypeEnum](icordebugguidtotypeenum-interface.md) arabirim nesnesine yönelik bir işaretçi, uygulama etki alanında şu anda yüklü olan Windows çalışma zamanı türlerinin yönetilen gösterimlerini numaralandırabilirler.  
+ [çıkış] Şu anda uygulama etki alanında yüklenen Windows Runtime türlerinin yönetilen gösterimlerini sayısala bilen [bir ICorDebugGuidToTypeEnum](icordebugguidtotypeenum-interface.md) arabirim nesnesine işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Windows Çalışma Zamanı  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

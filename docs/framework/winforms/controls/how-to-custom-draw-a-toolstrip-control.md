@@ -16,42 +16,42 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: 810a680a1a9d9065e80ed87453a728fe628a953d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9f603efdb4b4a5f68154da9c6a8bd05b55b8f46
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935363"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182219"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>Nasıl yapılır: Bir ToolStrip Denetimini Özel Olarak Çizme
-<xref:System.Windows.Forms.ToolStrip> Denetimlerde aşağıdaki ilişkili işleme (boyama) sınıfları vardır:  
+Denetimler <xref:System.Windows.Forms.ToolStrip> aşağıdaki ilişkili işleme (boyama) sınıfları vardır:  
   
-- <xref:System.Windows.Forms.ToolStripSystemRenderer>işletim sisteminizin görünüşünü ve stilini sağlar.  
+- <xref:System.Windows.Forms.ToolStripSystemRenderer>işletim sisteminizin görünümünü ve stilini sağlar.  
   
-- <xref:System.Windows.Forms.ToolStripProfessionalRenderer>Microsoft Office görünümünü ve stilini sağlar.  
+- <xref:System.Windows.Forms.ToolStripProfessionalRenderer>Microsoft Office'in görünümünü ve stilini sağlar.  
   
-- <xref:System.Windows.Forms.ToolStripRenderer>, diğer iki işleme sınıfı için soyut temel sınıftır.  
+- <xref:System.Windows.Forms.ToolStripRenderer>diğer iki işleme sınıfının soyut taban sınıfıdır.  
   
- Özel çizim (sahip çizimi olarak da bilinir) a <xref:System.Windows.Forms.ToolStrip>için, işleyici sınıflarından birini geçersiz kılabilir ve işleme mantığının bir yönünü değiştirebilirsiniz.  
+ Özel çizmek için (ayrıca sahibi <xref:System.Windows.Forms.ToolStrip>çizmek olarak da bilinir) a, işleyici sınıflarından birini geçersiz kılmak ve işleme mantığının bir yönünü değiştirebilirsiniz.  
   
- Aşağıdaki yordamlar özel çizimin çeşitli yönlerini anlatmaktadır.  
+ Aşağıdaki yordamlar özel çizim çeşitli yönlerini açıklar.  
   
-### <a name="to-switch-between-the-provided-renderers"></a>Belirtilen işleyicilere arasında geçiş yapmak için  
+### <a name="to-switch-between-the-provided-renderers"></a>Sağlanan işleyiciler arasında geçiş yapmak için  
   
-- <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> Özelliği<xref:System.Windows.Forms.ToolStripRenderMode> istediğiniz değere ayarlayın.  
+- <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> Özelliği istediğiniz değere <xref:System.Windows.Forms.ToolStripRenderMode> ayarlayın.  
   
-     İle <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>, statik <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> , uygulamanız için oluşturucuyu belirler. Diğer değerleri <xref:System.Windows.Forms.ToolStripRenderMode> , ve<xref:System.Windows.Forms.ToolStripRenderMode.Professional> <xref:System.Windows.Forms.ToolStripRenderMode.Custom> '<xref:System.Windows.Forms.ToolStripRenderMode.System>dir.  
+     <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>Ile , <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> statik uygulamanızın işleyicibelirler. Diğer değerler <xref:System.Windows.Forms.ToolStripRenderMode> , <xref:System.Windows.Forms.ToolStripRenderMode.Custom> <xref:System.Windows.Forms.ToolStripRenderMode.Professional>, <xref:System.Windows.Forms.ToolStripRenderMode.System>ve .  
   
-### <a name="to-change-the-microsoft-officestyle-borders-to-straight"></a>Microsoft Office stili kenarlıklarını düz olarak değiştirmek için  
+### <a name="to-change-the-microsoft-officestyle-borders-to-straight"></a>Microsoft Office stili kenarlıkları düz olarak değiştirmek için  
   
-- Geçersiz <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>kıl, ancak temel sınıfı çağırmayın.  
+- Geçersiz <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>kılma, ancak taban sınıf aramayın.  
   
 > [!NOTE]
-> , <xref:System.Windows.Forms.ToolStripRenderer> <xref:System.Windows.Forms.ToolStripSystemRenderer>Ve içinbuyönteminbirsürümüvardır.<xref:System.Windows.Forms.ToolStripProfessionalRenderer>  
+> Bu yöntemin bir sürümü <xref:System.Windows.Forms.ToolStripRenderer> <xref:System.Windows.Forms.ToolStripSystemRenderer>vardır <xref:System.Windows.Forms.ToolStripProfessionalRenderer>, , , ve .  
   
-### <a name="to-change-the-professionalcolortable"></a>ProfessionalColorTable değiştirmek için  
+### <a name="to-change-the-professionalcolortable"></a>ProfessionalColorTable'ı değiştirmek için  
   
-- İstediğiniz <xref:System.Windows.Forms.ProfessionalColorTable> renkleri geçersiz kılın ve değiştirin.  
+- Geçersiz <xref:System.Windows.Forms.ProfessionalColorTable> kılın ve istediğiniz renkleri değiştirin.  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As _  
@@ -60,7 +60,7 @@ ms.locfileid: "69935363"
         ToolStrip1.Renderer = New ToolStripProfessionalRenderer(t)  
     End Sub  
   
-    Class MyColorTable   
+    Class MyColorTable
     Inherits ProfessionalColorTable  
   
     Public Overrides ReadOnly Property ButtonPressedGradientBegin() As Color  
@@ -105,21 +105,21 @@ ms.locfileid: "69935363"
     End Class  
     ```  
   
-### <a name="to-change-the-rendering-for-all-toolstrip-controls-in-your-application"></a>Uygulamanızdaki tüm ToolStrip denetimleri için işlemeyi değiştirmek için  
+### <a name="to-change-the-rendering-for-all-toolstrip-controls-in-your-application"></a>Uygulamanızdaki tüm ToolStrip denetimleri için oluşturmayı değiştirmek için  
   
-1. Bu özelliği <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> kullanarak, belirtilen oluşturuculara birini seçin.  
+1. Sağlanan <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> işleyicilerden birini seçmek için özelliği kullanın.  
   
 2. Özel <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> bir işleyici atamak için kullanın.  
   
-3. <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> Öğesinin<xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>varsayılan değerine ayarlandığından emin olun.  
+3. <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>Varsayılan değere ayarlandığından <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> emin olun.  
   
-### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a>Tüm uygulamanın Microsoft Office renklerini devre dışı bırakmak için  
+### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a>Tüm uygulama için Microsoft Office renklerini kapatmak için  
   
-- <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> Olarak`false`ayarlayın.  
+- `false`Ayarlayın. <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType>  
   
-### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a>Tek bir ToolStrip denetimi için Microsoft Office renkleri devre dışı bırakmak için  
+### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a>Tek bir ToolStrip denetimi için Microsoft Office renklerini kapatmak için  
   
-- Aşağıdaki kod örneğine benzer bir kod kullanın.  
+- Aşağıdaki kod örneğine benzer kod kullanın.  
   
     ```vb  
     Dim colorTable As ProfessionalColorTable()  
@@ -139,5 +139,5 @@ ms.locfileid: "69935363"
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - [Yerleşik Sahip Çizimi Destekli Denetimler](controls-with-built-in-owner-drawing-support.md)
-- [Nasıl yapılır: Windows Forms ToolStrip denetimi için özel Oluşturucu oluşturma ve ayarlama](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [Nasıl yapılır: Windows Forms'da ToolStrip Denetimi için Özel Oluşturucu Oluşturma ve Ayarlama](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
 - [ToolStrip Denetimine Genel Bakış](toolstrip-control-overview-windows-forms.md)

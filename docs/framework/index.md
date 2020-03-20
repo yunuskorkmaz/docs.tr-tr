@@ -1,5 +1,5 @@
 ---
-title: .NET Framework belgeleri
+title: .NET Çerçeve dokümantasyonu
 ms.date: 04/02/2019
 ms.custom: updateeachrelease
 f1_keywords:
@@ -8,47 +8,47 @@ helpviewer_keywords:
 - .NET Framework, documentation
 - documentation, .NET Framework
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
-ms.openlocfilehash: e00fb73bf884446ec220a114c49863386da456ef
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d94d97cd1b519025ff360dc903558ea3656818d5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114252"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181529"
 ---
-# <a name="net-framework-guide"></a>.NET Framework Kılavuzu
+# <a name="net-framework-guide"></a>.NET Framework kılavuzu
 
 > [!NOTE]
-> Bu .NET Framework içerik kümesi, 4,5 ile 4,8 arasındaki .NET Framework sürümleri için bilgiler içerir. .NET Framework indirmek için, bkz. [.NET Framework yükleme](./install/guide-for-developers.md). Ağ çerçevesindeki yeni özelliklerin ve değişikliklerin listesi için bkz. [.NET Framework](./whats-new/index.md)yenilikler. Desteklenen platformların listesi için bkz. [sistem gereksinimleri .NET Framework](./get-started/system-requirements.md). .NET Framework eski sürümleri hakkındaki belgeler için bkz. [.NET önceki sürümler belgeleri](https://docs.microsoft.com/previous-versions/dotnet/).
+> Bu .NET Framework içerik kümesi .NET Framework sürümleri 4.5 ile 4.8 için bilgi içerir. .NET Framework'ü indirmek için [bkz.](./install/guide-for-developers.md) .NET Framework'deki yeni özelliklerin ve değişikliklerin listesi için [bkz.](./whats-new/index.md) Desteklenen platformların listesi için [bkz.](./get-started/system-requirements.md) .NET Framework'ün eski sürümleriyle ilgili belgeler için [bkz.](https://docs.microsoft.com/previous-versions/dotnet/)
 
-.NET Framework Web, Windows, Windows Phone, Windows Server ve Microsoft Azure için uygulama oluşturmaya yönelik bir geliştirme platformudur. Birçok sektör standardı için çok çeşitli işlevler ve destek içeren ortak dil çalışma zamanı (CLR) ve .NET Framework sınıf kitaplığından oluşur.
+.NET Framework, web, Windows, Windows Server ve Microsoft Azure için uygulamalar oluşturmak için bir geliştirme platformudur. Ortak dil çalışma süresi (CLR) ve birçok endüstri standardı için geniş bir işlevsellik ve destek yelpazesi içeren .NET Framework sınıf kitaplığından oluşur.
 
-.NET Framework bellek yönetimi, tür ve bellek güvenliği, güvenlik, ağ ve uygulama dağıtımı dahil olmak üzere birçok hizmeti sağlar. Bu, alt düzey Windows işletim sistemini soyutlamak için kullanımı kolay veri yapıları ve API 'Ler sağlar. , Ve Visual Basic dahil olmak üzere C# F#.NET Framework farklı programlama dilleri kullanabilirsiniz.
+.NET Framework bellek yönetimi, tür ve bellek güvenliği, güvenlik, ağ ve uygulama dağıtımı dahil olmak üzere birçok hizmet sağlar. Alt düzey Windows işletim sistemini özetleyen kullanımı kolay veri yapıları ve API'ler sağlar. C#, F#ve Visual Basic dahil olmak üzere .NET Framework ile farklı programlama dilleri kullanabilirsiniz.
 
-Hem kullanıcılar hem de geliştiriciler için .NET Framework genel bir giriş için [bkz. Başlarken](./get-started/index.md). .NET Framework mimarisine ve temel özelliklerine giriş için bkz. [genel bakış](./get-started/overview.md).
+Hem kullanıcılar hem de geliştiriciler için .NET Framework'e genel bir giriş için [başlarken](./get-started/index.md)bkz. .NET Framework'ün mimarisine ve temel özelliklerine giriş için [genel bakışa](./get-started/overview.md)bakın.
 
-.NET Framework, Docker ve [Windows kapsayıcıları](/virtualization/windowscontainers/about/)ile kullanılabilir.
+.NET Framework Docker ve [Windows Kapsayıcıları](/virtualization/windowscontainers/about/)ile kullanılabilir.
 
 ## <a name="installation"></a>Yükleme
 
-.NET Framework, Windows ile birlikte gelir ve .NET Framework uygulamaları çalıştırmanızı sağlar. .NET Framework, Windows sürümünüzle birlikte gelen bir sonraki sürümüne ihtiyacınız olabilir. Daha fazla bilgi için, bkz. [.NET Framework Windows 'A Install](./install/index.md).
+.NET Framework, .NET Framework uygulamalarını çalıştırmanızı sağlayan Windows ile birlikte gelir. Windows sürümünüzle birlikte gelenden daha sonra .NET Framework sürümüne ihtiyacınız olabilir. Daha fazla bilgi için [Windows'da Install .NET Framework](./install/index.md)'e bakın.
 
-.NET Framework yüklerken hata yaşıyorsanız .NET Framework yüklemenizi onarmayı öğrenmek için bkz. [.NET Framework onarma](./install/repair.md) .
+Yükleme sırasında hatalar yaşıyorsanız .NET Framework yüklemenizi nasıl onarabileceğinizi öğrenmek için [Bkz.](./install/repair.md)
 
-.NET Framework indirme hakkında daha ayrıntılı bilgi için bkz. [geliştiricilere yönelik .NET Framework yükleme](./install/guide-for-developers.md).
+.NET Framework'ü indirme hakkında daha ayrıntılı bilgi için [geliştiriciler için .NET Framework'ü yükleyin'](./install/guide-for-developers.md)e bakın.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
 * [Yenilikler](./whats-new/index.md)  
 .NET Framework'ün en son sürümlerindeki yeni temel özellikleri ve değişiklikleri açıklar. Kullanılmayan türlerin ve üyelerin listelerini içerir ve uygulamalarınızı .net Framework'ün önceki sürümünden yenisine geçirmek için bir kılavuz sağlar.
 
-* [Başlarken](./get-started/index.md)  
+* [Başlayın](./get-started/index.md)  
 .NET Framework'e kapsamlı bir genel bakış ve ek kaynaklara bağlantılar sağlar.
 
-* [Yükleme Kılavuzu](./install/index.md)  
-.NET Framework yükleme ve sorun giderme hakkında kaynak ve kılavuz sağlar.
+* [Kurulum Kılavuzu](./install/index.md)  
+.NET Framework yükleme ve sorun giderme hakkında kaynaklar ve rehberlik sağlar.
 
 * [Geçiş Kılavuzu](./migration-guide/index.md)  
-Uygulamanızı .NET Framework yeni bir sürümüne geçirdiğinizde göz önünde bulundurmanız gereken kaynak ve değişikliklerin listesini sağlar.
+Uygulamanızı .NET Framework'ün yeni bir sürümüne geçirerek göz önünde bulundurmanız gereken değişikliklerin listesini ve kaynakları sağlar.
 
 * [Geliştirme Kılavuzu](./development-guide.md)  
 Dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek yönetimi ve iş parçacığı oluşturma hakkında uygulama ve bilgilerinizi oluşturma, yapılandırma, hatasını ayıklama, güvenliğini sağlama ve dağıtma gibi, uygulama geliştirmesine yönelik tüm temel teknoloji alanları ve görevleri için kılavuz sağlar.
@@ -57,8 +57,8 @@ Dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek y�
 .NET Framework teknolojilerini kullanarak uygulamalar geliştirmenize, yapılandırmanıza ve dağıtmanıza yardımcı olacak araçları açıklar.
 
 * [Ek sınıf kitaplıkları ve API'ler](./additional-apis/index.md)  
-Microsoft araçları tarafından kullanılan özel .NET Framework API 'Leri için belgeler sağlar.
+Microsoft araçları tarafından kullanılan özel .NET Framework API'leri için belgeler sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [.NET Framework sınıf kitaplığı](/dotnet/api/?view=netframework-4.8)
+* [.NET Çerçeve Sınıf Kütüphanesi](/dotnet/api/?view=netframework-4.8)

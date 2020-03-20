@@ -6,50 +6,50 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: be9bc6e0cddc0581b9acb319f7d1fc1c81dae268
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 30cb69fcf05108822e8f3e2d45c9e79dbced26ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095118"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181904"
 ---
 # <a name="sample-opentype-font-pack"></a>Örnek OpenType Yazı Tipi Paketi
-Bu konu, Windows SDK dağıtılan örnek OpenType yazı tiplerine genel bir bakış sağlar. Örnek yazı tipleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar tarafından kullanılabilen genişletilmiş OpenType özelliklerini destekler.  
+Bu konu, Windows SDK ile dağıtılan örnek OpenType yazı tiplerine genel bir bakış sağlar. Örnek yazı tipleri, uygulamalar tarafından [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kullanılabilecek genişletilmiş OpenType özelliklerini destekler.  
 
-<a name="overview"></a>   
-## <a name="fonts-in-the-opentype-font-pack"></a>OpenType yazı tipi paketindeki yazı tipleri  
- Windows SDK, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar oluşturmak için kullanabileceğiniz örnek bir OpenType yazı tipi kümesi sağlar. Örnek yazı tipleri, Ascender Corporation lisansı altında sağlanır. Bu yazı tipleri, OpenType biçimi tarafından tanımlanan toplam özelliklerin yalnızca bir alt kümesini uygular. Aşağıdaki tabloda örnek OpenType yazı tiplerinin adları listelenmektedir.  
+<a name="overview"></a>
+## <a name="fonts-in-the-opentype-font-pack"></a>OpenType Font Paketi'ndeki yazı tipleri  
+ Windows SDK, uygulama oluştururken [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kullanabileceğiniz bir dizi örnek OpenType yazı tipi sağlar. Örnek yazı tipleri Ascender Corporation lisansı altında sağlanır. Bu yazı tipleri, OpenType biçimi tarafından tanımlanan toplam özelliklerin yalnızca bir alt kümesini uygular. Aşağıdaki tabloda opentype yazı tiplerinin adları listelenir.  
   
-|**Ad**|**Dosya**|  
+|**Adı**|**Dosya**|  
 |--------------|--------------|  
 |Kootenay|Kooten.ttf|  
-|Juniors|Linds.ttf|  
+|Lindsey|Linds.ttf|  
 |Miramonte|Miramo.ttf|  
-|Miramonte Bold|Miramob.ttf|  
+|Miramonte Kalın|Miramob.ttf|  
 |Pericles|Peric.ttf|  
-|Pericles ışığı|Pericl.ttf|  
-|Pescadero|Pesca.ttf|  
-|Pescadero Bold|Pescab.ttf|  
+|Perikles Işık|Pericl.ttf|  
+|Palatino|Pesca.ttf|  
+|Pescadero Kalın|Pescab.ttf|  
   
- Aşağıdaki çizimde örnek OpenType yazı tiplerinin nasıl görüneceği gösterilmektedir.  
+ Aşağıdaki resimde, örnek OpenType yazı tiplerinin nasıl göründüğü gösterilmektedir.  
   
  ![Örnek yazı tipi paketindeki yazı tipi adlarının listesi](./media/sample-opentype-font-pack/font-names-sample-pack.gif)  
   
- Örnek yazı tipleri, Ascender Corporation lisansı altında sağlanır. Ascender, gelişmiş yazı tipi ürünlerinin bir sağlayıcısıdır. Örnek yazı tiplerinin genişletilmiş veya özel sürümlerini lisanslamak için, bkz. [Ascender Corporation 'ın Web sitesi](https://www.monotype.com/).  
+ Örnek yazı tipleri Ascender Corporation lisansı altında sağlanır. Ascender gelişmiş yazı tipi ürünleri sağlayıcısıdır. Örnek yazı tiplerinin genişletilmiş veya özel sürümlerini lisanslamak için [Ascender Corporation'ın Web sitesine](https://www.monotype.com/)bakın.  
   
 > [!NOTE]
-> Geliştirici olarak, bir uygulama içine eklediğiniz veya başka bir şekilde yeniden dağıtırabilmeniz gereken herhangi bir yazı tipi için gerekli lisans haklarına sahip olduğunuzdan emin olmak sizin sorumluluğunuzdadır.  
+> Bir geliştirici olarak, bir uygulamaya katıştırdığınız veya başka bir şekilde yeniden dağıttığınız herhangi bir yazı tipi için gerekli lisans haklarına sahip olduğunuzdan emin olmak sizin sorumluluğunuzdadır.  
   
-<a name="installing_the_fonts"></a>   
-## <a name="installing-the-fonts"></a>Yazı tiplerini yükleme  
- Örnek OpenType yazı tiplerini varsayılan Windows Fonts dizinine ( **\Windows\fonts**) yükleme seçeneğiniz vardır. Yazı tiplerini yüklemek için yazı tipleri denetim masasını kullanın. Bu yazı tipleri bilgisayarınızda olduktan sonra, varsayılan Windows yazı tiplerine başvuran tüm uygulamalar tarafından erişilebilir. Yazı tipi dosyasına çift tıklayarak çeşitli yazı tipi boyutlarında temsili bir karakter kümesi görüntüleyebilirsiniz. Aşağıdaki ekran görüntüsünde Lindsey yazı tipi dosyası, Linds. ttf gösterilmektedir.  
+<a name="installing_the_fonts"></a>
+## <a name="installing-the-fonts"></a>Yazı Tiplerini Yükleme  
+ Örnek OpenType yazı tiplerini varsayılan Windows Fontlar dizini, **\WINDOWS\Fontlar'a**yükleme seçeneğiniz vardır. Yazı tiplerini yüklemek için Fontlar denetim panelini kullanın. Bu yazı tipleri bilgisayarınızda bir kez açıldıktan sonra, varsayılan Windows yazı tiplerine başvuran tüm uygulamalar tarafından erişilebilir. Yazı tipi dosyasını iki katına çıkararak çeşitli yazı tipi boyutlarında temsili karakter kümesini görüntüleyebilirsiniz. Aşağıdaki ekran görüntüsü Lindsey yazı tipi dosyasını gösterir, Linds.ttf.  
   
- ![Lindsey yazı &#40;tipi OpenType&#41;](./media/typographyinwpf-04.png "TypographyInWPF_04")  
+ ![Lindsey font &#40;OpenType&#41;](./media/typographyinwpf-04.png "TypographyInWPF_04")  
 Lindsey yazı tipini görüntüleme  
   
-<a name="using_the_fonts"></a>   
-## <a name="using-the-fonts"></a>Yazı tiplerini kullanma  
- Uygulamanızda yazı tiplerini kullanmanın iki yolu vardır. Uygulamanıza, derleme içinde kaynak olarak gömülü olmayan proje içerik öğeleri olarak yazı tipi ekleyebilirsiniz. Alternatif olarak, uygulamanıza, uygulamanın derleme dosyaları içine katıştırılmış proje kaynak öğeleri olarak yazı tipleri ekleyebilirsiniz. Daha fazla bilgi için bkz. [uygulamaları Ile paketleme yazı tipleri](packaging-fonts-with-applications.md).  
+<a name="using_the_fonts"></a>
+## <a name="using-the-fonts"></a>Yazı Tiplerini Kullanma  
+ Uygulamanızda yazı tiplerini kullanmanın iki yolu vardır. Uygulamanıza, derleme içinde kaynak olarak katıştırılmış olmayan proje içerik öğeleri olarak yazı tipleri ekleyebilirsiniz. Alternatif olarak, uygulamanızın derleme dosyalarına katıştırılmış proje kaynağı öğeleri olarak uygulamanıza yazı tipleri ekleyebilirsiniz. Daha fazla bilgi için [bkz.](packaging-fonts-with-applications.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

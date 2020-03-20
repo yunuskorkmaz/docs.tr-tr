@@ -1,5 +1,5 @@
 ---
-title: ListView denetiminde kutucuk görünümünü etkinleştir
+title: ListView Denetiminde Döşeme Görünümü etkinleştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: 8ccbd42d870e44fc6fd80169327922409ea4f6e7
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1478ba5e4f175cd7d9ec7ab5c3c4bc9050ce02fb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745469"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182160"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Nasıl yapılır Windows Forms ListView Denetiminde Döşeme Görünümünü Etkinleştirme
-<xref:System.Windows.Forms.ListView> denetimin kutucuk görünümü özelliği ile grafik ve metin bilgileri arasında görsel bir denge sağlayabilirsiniz. Kutucuk görünümündeki bir öğe için görünen metin bilgileri, Ayrıntılar görünümü için tanımlanan sütun bilgileri ile aynıdır. Kutucuk görünümü, <xref:System.Windows.Forms.ListView> denetimindeki gruplandırma ya da ekleme işareti özellikleriyle birlikte kullanılır.  
+<xref:System.Windows.Forms.ListView> Denetimin döşeme görünümü özelliği yle, grafik ve metinsel bilgiler arasında görsel bir denge sağlayabilirsiniz. Döşeme görünümünde bir öğe için görüntülenen metin bilgileri, ayrıntılar görünümü için tanımlanan sütun bilgileriyle aynıdır. Döşeme <xref:System.Windows.Forms.ListView> görünümü, denetimdeki gruplandırma veya ekleme işareti özellikleriyle birlikte çalışır.  
   
- Kutucuk görünümü, aşağıdaki görüntülerde gösterildiği gibi bir 32 x 32 piksel simgesi ve birkaç satırlık metin kullanır.  
+ Döşeme görünümü, aşağıdaki resimlerde gösterildiği gibi 32 x 32 piksel simgesi ve birkaç metin satırı kullanır.  
   
- ![ListView denetimindeki kutucuk görünümü](./media/how-to-enable-tile-view-in-a-windows-forms-listview-control/tile-view-in-listview-control.gif "Kutucuk görünümü simgeleri ve metni")  
- 
- Kutucuk görünümünü etkinleştirmek için <xref:System.Windows.Forms.ListView.View%2A> özelliğini <xref:System.Windows.Forms.View.Tile>olarak ayarlayın. <xref:System.Windows.Forms.ListView.TileSize%2A> özelliğini ayarlayarak kutucukların boyutunu ve <xref:System.Windows.Forms.ListView.Columns%2A> koleksiyonunu ayarlayarak kutucukta görünen metin çizgilerinin sayısını ayarlayabilirsiniz.  
+ ![ListView Denetiminde Döşeme Görünümü](./media/how-to-enable-tile-view-in-a-windows-forms-listview-control/tile-view-in-listview-control.gif "Döşeme görünümü simgeleri ve metin")  
+
+ Döşeme görünümünü etkinleştirmek için <xref:System.Windows.Forms.ListView.View%2A> <xref:System.Windows.Forms.View.Tile>özelliği ' niçin ayarla <xref:System.Windows.Forms.ListView.TileSize%2A> Özelliği ayarlayarak kutucukların boyutunu ve <xref:System.Windows.Forms.ListView.Columns%2A> koleksiyonu ayarlayarak kutucukta görüntülenen metin satırlarının sayısını ayarlayabilirsiniz.  
   
-### <a name="to-set-tile-view-programmatically"></a>Kutucuk görünümünü programlı bir şekilde ayarlamak için  
+### <a name="to-set-tile-view-programmatically"></a>Döşeme görünümünü programlı olarak ayarlamak için  
   
-1. <xref:System.Windows.Forms.ListView> denetiminin <xref:System.Windows.Forms.View> sabit listesini kullanın.  
+1. Denetimin <xref:System.Windows.Forms.View> numaralandırmasını <xref:System.Windows.Forms.ListView> kullanın.  
   
     ```vb  
     ListView1.View = View.Tile  
@@ -40,7 +40,7 @@ ms.locfileid: "76745469"
     ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, üç satırlık metin göstermek için değiştirilen kutucukları içeren kutucuk görünümünü gösterir. Kutucuk boyutu, satır kaydırmayı engelleyecek şekilde ayarlandı.  
+ Aşağıdaki tam kod örneği, üç metin satırı göstermek üzere değiştirilmiş kutucuklarla Kutucuk görünümünü gösterir. Döşeme boyutu, satır kaydırmayı önlemek için ayarlanmış.  
   
  [!code-cpp[System.Windows.Forms.ListView.Tiling#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Tiling/CPP/listviewtilingexample.cpp#1)]
  [!code-csharp[System.Windows.Forms.ListView.Tiling#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Tiling/CS/listviewtilingexample.cs#1)]
@@ -49,9 +49,9 @@ ms.locfileid: "76745469"
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek şunları gerektirir:  
   
-- System ve System. Windows. Forms derlemelerine başvurular.  
+- Sistem ve System.Windows.Forms derlemelerine başvurular.  
   
-- Yürütülebilir dosya ile aynı dizinde Book. ico adlı bir simge dosyası.  
+- Yürütülebilir dosyayla aynı dizinde book.ico adlı bir simge dosyası.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

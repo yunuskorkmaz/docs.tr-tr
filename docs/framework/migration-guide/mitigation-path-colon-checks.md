@@ -1,32 +1,32 @@
 ---
-title: 'Risk azaltma: yol Iki nokta denetimleri'
+title: 'Azaltma: Yol Kolon Denetimleri'
 ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
-ms.openlocfilehash: e88643fea3bd507289436f41880a2de34117884f
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c6e1106b6f5d8457417992941b9f28712d484442
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457902"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181240"
 ---
-# <a name="mitigation-path-colon-checks"></a>Risk azaltma: yol Iki nokta denetimleri
-.NET Framework 4.6.2 hedefleyen uygulamalarla başlayarak, daha önce desteklenmeyen yolları (hem uzunluk hem de biçim bakımından) desteklemeye yönelik bir dizi değişiklik yapılmıştır. Özellikle, uygun sürücü ayırıcı söz dizimini (iki nokta üst üste) denetler.  
+# <a name="mitigation-path-colon-checks"></a>Azaltma: Yol Kolon Denetimleri
+.NET Framework 4.6.2'yi hedefleyen uygulamalardan başlayarak, daha önce desteklenmeyen yolları (hem uzunluk hem de biçim açısından) desteklemek için bir dizi değişiklik yapıldı. Özellikle, uygun sürücü ayırıcı sözdizimi (iki nokta üst üste) için denetimler daha doğru yapıldı.  
   
 ## <a name="impact"></a>Etki  
- Bu değişiklikler <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> ve <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> yöntemlerinin daha önce desteklediği bazı URI yollarını engeller.  
+ Bu değişiklikler, daha <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> önce <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> desteklenen bazı URI yollarını ve yöntemleri engeller.  
   
-## <a name="mitigation"></a>Azaltma  
- Artık <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> ve <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> yöntemleri tarafından desteklenmeyen daha önceden kabul edilebilir bir yolun sorununu çözmek için şunları yapabilirsiniz:  
+## <a name="mitigation"></a>Risk azaltma  
+ Artık <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> yöntemler ve <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> yöntemler tarafından desteklenen daha önce kabul edilebilir bir yol sorununu çözüme getirmek için aşağıdakileri yapabilirsiniz:  
   
-- Düzeni bir URL 'den el ile kaldırın. Örneğin, URL 'den `file://` kaldırın.  
+- Düzeni bir URL'den el ile kaldırın. Örneğin, bir `file://` URL'den kaldırın.  
   
-- URI 'yi bir <xref:System.Uri> oluşturucusuna geçirin ve <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType> özelliğinin değerini alın.  
+- URI'yi bir <xref:System.Uri> oluşturucuya geçirin ve <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType> özelliğin değerini alın.  
   
-- `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> anahtarını `true`ayarlayarak yeni yol normalleştirmesini geri çevirin.  
+- Anahtarı `Switch.System.IO.UseLegacyPathHandling` <xref:System.AppContext> `true`' ya ayarlayarak yeni yol normalleştirmesi dışında  
   
     ```xml  
     <runtime>  
-        <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />    
+        <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />
     </runtime>  
     ```  
   

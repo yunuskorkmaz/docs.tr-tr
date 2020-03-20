@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dec7df60-4d30-47c8-99db-72e0419e5f76
 topic_type:
 - apiref
-ms.openlocfilehash: fded6b95144d4088a2abc8dfcc4ef8eda331c34f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9ca2167e66ac3aa5bcc0e92ff357eed18d366c67
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438426"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179407"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType Yöntemi
-İç içe geçmiş türleri verilebilir olarak belirtir. [ExportType Yöntemi](exporttype-method.md) iç içe geçmiş türleri de dışa aktarabilir, ancak bu yöntem daha hızlıdır.  
+İç içe geçme türlerini dışa aktarılabilir olarak belirtir. [Dışa Aktarma Türü Yöntemi](exporttype-method.md) iç içe geçen türleri de dışa aktarabilir, ancak bu yöntem daha hızlıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,36 +36,36 @@ HRESULT ExportNestedType(
     LPCWSTR         pszTypename,  
     DWORD           dwFlags,  
     mdExportedType* pType  
-) PURE;   
+) PURE;
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Dışarı aktarılacak derlemenin KIMLIĞI.  
+ Dışa aktarmak için montaj kimliği.  
   
  `FileToken`  
- Dışarı aktarılabilir hale getirilme türünü tanımlayan dosya belirteci veya dosya derlemesi.  
+ Dışa aktarılacak türü tanımlayan dosya belirteci veya derlemesi.  
   
  `TypeToken`  
- Dışarı aktarılabilir hale getirilme türünün tür belirteci.  
+ Dışa aktarılabilir hale getirilecek türü belirteç.  
   
  `ParentType`  
- Üst tür belirteci.  
+ Ana tip belirteç.  
   
  `pszTypename`  
- Dışarı aktarılacak tam tür adı.  
+ Dışa aktarmak için tam nitelikli tür adı.  
   
  `dwFlags`  
- `tdPublic` veya `tdNested`gibi bayrakları `ComType`. Bu değer [DefineExportedType yöntemine](../metadata/imetadataassemblyemit-defineexportedtype-method.md)geçirilebilir.  
+ `ComType`gibi `tdPublic` bayraklar `tdNested`veya . Bu değer [DefineExportedType Yöntemi'ne](../metadata/imetadataassemblyemit-defineexportedtype-method.md)geçirilebilir.  
   
  `pType`  
- İçe aktarılmış tür için belirteç alır.  
+ Dışa aktarılan tür için belirteç alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink. h gerektirir  
+ alink.h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

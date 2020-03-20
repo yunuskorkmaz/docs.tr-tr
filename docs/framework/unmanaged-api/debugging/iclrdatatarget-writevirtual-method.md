@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: d627e8b7-a605-40ac-b9bb-da9a3f1b66d9
 topic_type:
 - apiref
-ms.openlocfilehash: 4382d3c9f69df2808f8cd0aaf7f8eaf19bc9891e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: bd2f67c2d7230d3873b4dc0df73ac1be778a0828
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793672"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179103"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual Yöntemi
-Belirtilen arabellekteki verileri belirtilen sanal bellek adresine yazar.  
+Belirtilen arabellekten belirtilen sanal bellek adresine veri yazar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT WriteVirtual (  
     [in] CLRDATA_ADDRESS    address,  
-    [in, size_is(bytesRequested)]   
+    [in, size_is(bytesRequested)]
         BYTE                *buffer,  
     [in] ULONG32            bytesRequested,  
     [out] ULONG32           *bytesWritten  
@@ -39,25 +39,25 @@ HRESULT WriteVirtual (
   
 ## <a name="parameters"></a>Parametreler  
  `address`  
- 'ndaki Sanal bellek adresini depolayan bir CLRDATA_ADDRESS.  
+ [içinde] Sanal bellek adresini depolayan bir CLRDATA_ADDRESS.  
   
  `buffer`  
- 'ndaki Yazılacak verileri depolayan bir arabelleğin işaretçisi.  
+ [içinde] Yazılacak verileri depolayan bir arabellek için işaretçi.  
   
  `bytesRequested`  
- 'ndaki Yazılacak baytların sayısı.  
+ [içinde] Yazılacak bayt sayısı.  
   
  `bytesWritten`  
- dışı Yazılan gerçek bayt sayısına yönelik bir işaretçi.  
+ [çıkış] Yazılan baytların gerçek sayısına işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** ClrData. IDL, ClrData. h  
+ **Üstbilgi:** ClrData.idl, ClrData.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

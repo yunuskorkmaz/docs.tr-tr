@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36c76266-71d8-48dc-bd89-54943fa659c1
 topic_type:
 - apiref
-ms.openlocfilehash: e4abf876681d5b04555c9f030a94b722874e326e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bf0008ce9429671f0c156df4256bed0b2aaee184
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450282"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176181"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr Numaralandırması
-[IMetaDataEmit2::D efineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)çağrılarında kullanılan genel türler için <xref:System.Type> parametrelerini tanımlayan değerleri içerir.  
+<xref:System.Type> [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)çağrılarında kullanıldığı gibi, genel türlerin parametrelerini açıklayan değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -30,40 +30,40 @@ ms.locfileid: "74450282"
 typedef enum CorGenericParamAttr {  
   
     gpVarianceMask                     =   0x0003,  
-    gpNonVariant                       =   0x0000,   
+    gpNonVariant                       =   0x0000,
     gpCovariant                        =   0x0001,  
     gpContravariant                    =   0x0002,  
   
     gpSpecialConstraintMask            =   0x001C,  
     gpNoSpecialConstraint              =   0x0000,  
-    gpReferenceTypeConstraint          =   0x0004,   
+    gpReferenceTypeConstraint          =   0x0004,
     gpNotNullableValueTypeConstraint   =   0x0008,  
     gpDefaultConstructorConstraint     =   0x0010  
   
 } CorGenericParamAttr;  
 ```  
   
-## <a name="members"></a>Üyeleri  
+## <a name="members"></a>Üyeler  
   
-|Üyesi|Açıklama|  
+|Üye|Açıklama|  
 |------------|-----------------|  
-|`gpVarianceMask`|Parametre varyansı yalnızca arabirimler ve temsilciler için genel parametreler için geçerlidir.|  
+|`gpVarianceMask`|Parametre varyansı yalnızca arabirimler ve temsilciler için genel parametreleriçin geçerlidir.|  
 |`gpNonVariant`|Varyans yokluğunu gösterir.|  
-|`gpCovariant`|Kovaryansı gösterir.|  
-|`gpContravariant`|Değişken varyansı gösterir.|  
-|`gpSpecialConstraintMask`|Özel kısıtlamalar, herhangi bir <xref:System.Type> parametresi için uygulanabilir.|  
-|`gpNoSpecialConstraint`|<xref:System.Type> parametresine hiçbir kısıtlamanın uygulanacağını gösterir.|  
-|`gpReferenceTypeConstraint`|<xref:System.Type> parametresinin bir başvuru türü olması gerektiğini belirtir.|  
-|`gpNotNullableValueTypeConstraint`|<xref:System.Type> parametresinin null değer olmayan bir değer türü olması gerektiğini belirtir.|  
-|`gpDefaultConstructorConstraint`|<xref:System.Type> parametresinin, hiçbir parametre alan bir varsayılan genel oluşturucuya sahip olması gerektiğini belirtir.|  
+|`gpCovariant`|Tutarlılık gösterir.|  
+|`gpContravariant`|Zıtlığı gösterir.|  
+|`gpSpecialConstraintMask`|Herhangi bir <xref:System.Type> parametreye özel kısıtlamalar uygulanabilir.|  
+|`gpNoSpecialConstraint`|<xref:System.Type> Parametreiçin kısıtlama uygulanmadığını gösterir.|  
+|`gpReferenceTypeConstraint`|Parametrenin <xref:System.Type> bir başvuru türü olması gerektiğini gösterir.|  
+|`gpNotNullableValueTypeConstraint`|Parametrenin <xref:System.Type> null değeri olmayan bir değer türü olması gerektiğini gösterir.|  
+|`gpDefaultConstructorConstraint`|Parametrenin <xref:System.Type> hiçbir parametre almayacak varsayılan bir ortak oluşturucuya sahip olması gerektiğini gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorHdr. h  
+ **Üstbilgi:** CorHdr.h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

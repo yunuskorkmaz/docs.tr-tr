@@ -9,52 +9,52 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: 4533fbba62c36714f55cd8bd55fde7a1c8f6c9e6
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 460ebb37ee62691a1e282f756840121fd378ebd8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505050"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182472"
 ---
 # <a name="using-nested-graphics-containers"></a>İç İçe Grafik Kapsayıcılarını Kullanma
-GDI +'da geçici olarak değiştirin ya da durumda parçası genişletmek için kullanabileceğiniz bir kapsayıcı sağlayan bir <xref:System.Drawing.Graphics> nesne. Bir kapsayıcı oluşturmanız <xref:System.Drawing.Graphics.BeginContainer%2A> yöntemi bir <xref:System.Drawing.Graphics> nesne. Çağırabilirsiniz <xref:System.Drawing.Graphics.BeginContainer%2A> sürekli olarak iç içe geçmiş kapsayıcılar oluşturmak için. Her çağrı <xref:System.Drawing.Graphics.BeginContainer%2A> bir çağrı ile eşleştirilmelidir <xref:System.Drawing.Graphics.EndContainer%2A>.  
+GDI+, bir <xref:System.Drawing.Graphics> nesnedeki durum bölümünü geçici olarak değiştirmek veya artırmak için kullanabileceğiniz kapsayıcılar sağlar. Bir nesnenin yöntemini <xref:System.Drawing.Graphics.BeginContainer%2A> çağırarak <xref:System.Drawing.Graphics> bir kapsayıcı oluşturursunuz. İç içe <xref:System.Drawing.Graphics.BeginContainer%2A> kapsayıcılar oluşturmak için art arda arayabilirsiniz. Her <xref:System.Drawing.Graphics.BeginContainer%2A> çağrı için bir çağrı ile <xref:System.Drawing.Graphics.EndContainer%2A>eşleştirilmiş olmalıdır.  
   
-## <a name="transformations-in-nested-containers"></a>İç içe geçmiş kapsayıcılar dönüşümleri  
- Aşağıdaki örnek, oluşturur bir <xref:System.Drawing.Graphics> nesnesi ve bir kapsayıcı içindeki <xref:System.Drawing.Graphics> nesne. Dünya dönüşümü <xref:System.Drawing.Graphics> nesnedir x yönünde 100 çeviri biriminde ve y yönünde 80 birimlik. Gerçek koordinat dönüştürmesini kapsayıcının 30 derece döndürme ' dir. Kod çağrıda `DrawRectangle(pen, -60, -30, 120, 60)` iki kez. İlk çağrıda <xref:System.Drawing.Graphics.DrawRectangle%2A> kapsayıcının içinde; diğer bir deyişle, çağrıları arasında çağrıdır <xref:System.Drawing.Graphics.BeginContainer%2A> ve <xref:System.Drawing.Graphics.EndContainer%2A>. İçin yapılan ikinci çağrı <xref:System.Drawing.Graphics.DrawRectangle%2A> çağrısı sonra <xref:System.Drawing.Graphics.EndContainer%2A>.  
+## <a name="transformations-in-nested-containers"></a>İç Içe Kapsayıcılarda Dönüşümler  
+ Aşağıdaki örnek, bu <xref:System.Drawing.Graphics> <xref:System.Drawing.Graphics> nesnenin içinde bir nesne ve kapsayıcı oluşturur. Nesnenin <xref:System.Drawing.Graphics> dünya dönüşümü x yönünde 100 birim, y yönünde ise 80 birim lik bir çeviridir. Konteynerin dünya dönüşümü 30 derecelik bir dönüş. Kod aramayı `DrawRectangle(pen, -60, -30, 120, 60)` iki kez yapar. İlk çağrı <xref:System.Drawing.Graphics.DrawRectangle%2A> konteynerin içindedir; diğer bir deyişle, arama aramaları <xref:System.Drawing.Graphics.BeginContainer%2A> arasında <xref:System.Drawing.Graphics.EndContainer%2A>ve . İkinci çağrı. <xref:System.Drawing.Graphics.DrawRectangle%2A> <xref:System.Drawing.Graphics.EndContainer%2A>  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#61)]  
   
- Önceki kodda, gerçek koordinat dönüştürmesini kapsayıcısının (döndürme) ve ardından gerçek koordinat dönüştürmesini göre ilk öğesinden kapsayıcısının içinde çizilmiş dikdörtgen dönüştürülür <xref:System.Drawing.Graphics> nesne (çeviri). Yalnızca gerçek koordinat dönüştürmesini tarafından gelen kapsayıcı dışında çizilmiş dikdörtgen dönüştürülür <xref:System.Drawing.Graphics> nesne (çeviri). Aşağıdaki çizimde, iki dikdörtgenler gösterir: 
+ Önceki kodda, kapsayıcının içinden çizilen dikdörtgen önce kapsayıcının dünya dönüşümü (döndürme) ve daha sonra <xref:System.Drawing.Graphics> nesnenin dünya dönüşümü (çeviri) tarafından dönüştürülür. Kapsayıcının dışından çizilen dikdörtgen, yalnızca <xref:System.Drawing.Graphics> nesnenin dünya dönüşümü (çeviri) ile dönüştürülür. Aşağıdaki resimde iki dikdörtgen gösterilmektedir:
   
- ![İç içe geçmiş kapsayıcılar gösteren şekil.](./media/using-nested-graphics-containers/nested-containers-illustration.png)  
+ ![İç içe kapsayıcıları gösteren çizim.](./media/using-nested-graphics-containers/nested-containers-illustration.png)  
   
-## <a name="clipping-in-nested-containers"></a>İç içe geçmiş kapsayıcılarda kırpma  
- Aşağıdaki örnek nasıl iç içe geçmiş kapsayıcılar gösterir kırpma bölgeleri tanıtıcı. Kod oluşturur bir <xref:System.Drawing.Graphics> nesnesi ve bir kapsayıcı içindeki <xref:System.Drawing.Graphics> nesne. Kırpma bölgesini <xref:System.Drawing.Graphics> nesne bir dikdörtgen ve kırpma bölgesinin kapsayıcının elips. Kod iki çağrılar <xref:System.Drawing.Graphics.DrawLine%2A> yöntemi. İlk çağrıda <xref:System.Drawing.Graphics.DrawLine%2A> kapsayıcı ve ikinci çağrının içinde <xref:System.Drawing.Graphics.DrawLine%2A> kapsayıcıdır dışında (çağrısından sonra <xref:System.Drawing.Graphics.EndContainer%2A>). İlk satır, kırpma iki bölgeleri kesişimi ile kırpılır. İkinci satır yalnızca dikdörtgen kırpma bölgesini tarafından kırpılır <xref:System.Drawing.Graphics> nesne.  
+## <a name="clipping-in-nested-containers"></a>İç Içe Kapsayıcılarda Kırpma  
+ Aşağıdaki örnek, iç içe kapların kırpma bölgelerini nasıl işleyeceğini göstermektedir. Kod, bu <xref:System.Drawing.Graphics> <xref:System.Drawing.Graphics> nesnenin içinde bir nesne ve kapsayıcı oluşturur. Nesnenin <xref:System.Drawing.Graphics> kırpma bölgesi bir dikdörtgen, kapsayıcının kırpma bölgesi ise bir elipstir. Kod <xref:System.Drawing.Graphics.DrawLine%2A> yönteme iki arama yapar. İlk arama <xref:System.Drawing.Graphics.DrawLine%2A> kapsayıcının içinde, ikinci arama <xref:System.Drawing.Graphics.DrawLine%2A> ise kapsayıcının dışındadır (çağrıdan <xref:System.Drawing.Graphics.EndContainer%2A>sonra). İlk satır, iki kırpma bölgesinin kesiştiği noktada kırpılır. İkinci satır yalnızca <xref:System.Drawing.Graphics> nesnenin dikdörtgen kırpma bölgesi tarafından kırpılır.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#62)]
  [!code-vb[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#62)]  
   
- Aşağıdaki çizimde, iki kırpılmış satır gösterir:
+ Aşağıdaki resimde kırpılan iki satır gösterilmektedir:
   
- ![Çizim kırpılmış satır ile iç içe geçmiş bir kapsayıcı gösterir.](./media/using-nested-graphics-containers/nested-container-clipped-lines.png)  
+ ![Kırpılmış çizgileri olan iç içe bir kapsayıcıyı gösteren çizim.](./media/using-nested-graphics-containers/nested-container-clipped-lines.png)  
   
- İki Yukarıdaki örneklerde gösterildiği gibi dönüşümler ve kırpma bölgeleri içinde iç içe geçmiş kapsayıcılar bunların toplamı olur. Kapsayıcının dünya dönüştürmeleri ayarlarsanız ve <xref:System.Drawing.Graphics> nesnesi, her iki dönüşümleri gelen kapsayıcı içinde çizilen öğeleri için uygulanır. Kapsayıcının dönüşümü uygulanan ilk ve dönüştürmeyi olacaktır <xref:System.Drawing.Graphics> nesne ikinci uygulanır. Kapsayıcının kırpma bölgeleri ayarlarsanız ve <xref:System.Drawing.Graphics> nesne öğesinden kapsayıcısının içinde çizilen öğeleri kırpma iki bölgeleri kesişimi ile kırpılarak.  
+ Önceki iki örnekte de belirtildiği gibi, dönüşümler ve kırpma bölgeleri iç içe kaplarda birikmelidir. Kapsayıcının ve <xref:System.Drawing.Graphics> nesnenin dünya dönüşümlerini ayarlarsanız, her iki dönüşüm de kapsayıcının içinden çekilen öğeler için de geçerli olur. Önce kapsayıcının dönüşümü, <xref:System.Drawing.Graphics> nesnenin dönüşümü ise ikinci olarak uygulanacaktır. Kapsayıcının ve <xref:System.Drawing.Graphics> nesnenin kırpma bölgelerini ayarlarsanız, kapsayıcının içinden çizilen öğeler iki kırpma bölgesinin kesiştiği nokta tarafından kırpılır.  
   
-## <a name="quality-settings-in-nested-containers"></a>İç içe geçmiş kapsayıcılar kalite ayarları  
- Kalite ayarları (<xref:System.Drawing.Graphics.SmoothingMode%2A>, <xref:System.Drawing.Graphics.TextRenderingHint%2A>vb.), iç içe geçmiş kapsayıcılar toplu değildir; bunun yerine, kapsayıcı kalite ayarlarını geçici olarak kalite ayarlarını değiştirin. bir <xref:System.Drawing.Graphics> nesne. Yeni bir kapsayıcı oluşturduğunuzda, bu kapsayıcı için kalite ayarı varsayılan değerlere ayarlanır. Örneğin, sahip olduğunuz varsayalım. bir <xref:System.Drawing.Graphics> yumuşatma modu nesnesiyle <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>. Bir kapsayıcı oluşturduğunuzda, kapsayıcı içinde yumuşatma modu modu düzgünleştirme varsayılandır. Kapsayıcının yumuşatma modu ayarlamak ücretsizdir ve gelen kapsayıcı içinde çizilen öğelerde ayarladığınız modu göre çizileceğini. Çağrısından sonra çizilen öğeleri <xref:System.Drawing.Graphics.EndContainer%2A> göre yumuşatma moduna çizilmiş (<xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>) olduğu yerde çağırmadan önce <xref:System.Drawing.Graphics.BeginContainer%2A>.  
+## <a name="quality-settings-in-nested-containers"></a>İç Içe Kapsayıcılarda Kalite Ayarları  
+ İç içe<xref:System.Drawing.Graphics.SmoothingMode%2A> <xref:System.Drawing.Graphics.TextRenderingHint%2A>kaplarda kalite ayarları (, ve benzeri) kümülatif değildir; bunun yerine, kapsayıcının kalite ayarları geçici olarak <xref:System.Drawing.Graphics> bir nesnenin kalite ayarlarını değiştirir. Yeni bir kapsayıcı oluşturduğunuzda, bu kapsayıcının kalite ayarları varsayılan değerlere ayarlanır. Örneğin, düzgünleme moduna sahip bir <xref:System.Drawing.Graphics> nesneniz olduğunu <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>varsayalım. Bir kapsayıcı oluşturduğunuzda, kapsayıcının içindeki yumuşatma modu varsayılan yumuşatma modudur. Kapsayıcının yumuşatma modunu ayarlamakta özgürsunuz ve kapsayıcının içinden çekilen öğeler ayarladığınız moda göre çizilir. Aramadan <xref:System.Drawing.Graphics.EndContainer%2A> sonra çizilen öğeler, çağrıdan önce<xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>yerinde olan yumuşatma moduna <xref:System.Drawing.Graphics.BeginContainer%2A>( ) göre çizilir.  
   
-## <a name="several-layers-of-nested-containers"></a>İç içe geçmiş kapsayıcılar birkaç katmanı  
- Bir kapsayıcı içinde bunlarla sınırlı olmayan bir <xref:System.Drawing.Graphics> nesne. Gerçek koordinat dönüştürmesini, kırpma bölgesini ve her birinin bu iç içe geçmiş kapsayıcılar kalite ayarlarını belirtin ve önceki her iç içe veya bir dizi kapsayıcıları oluşturabilirsiniz. En içteki kapsayıcı içinde çizim yöntemden çağırırsanız, dönüştürmeleri en içteki kapsayıcı ile başlayıp en dıştaki kapsayıcıda sırasıyla uygulanır. Gelen en içteki kapsayıcısının içinde çizilen öğeleri tüm kırpma bölgeler kesişimini tarafından kırpılır.  
+## <a name="several-layers-of-nested-containers"></a>İç içe kapsayıcıların çeşitli katmanları  
+ Bir <xref:System.Drawing.Graphics> nesnedeki bir kapsayıcıyla sınırlı değildir. Her biri bir önceki iç içe olan kapsayıcılar dizisi oluşturabilir ve bu iç içe geçen kapsayıcıların her birinin dünya dönüşümünü, kırpma bölgesini ve kalite ayarlarını belirtebilirsiniz. En içteki kapsayıcının içinden bir çizim yöntemi çağırırsanız, dönüşümler en içteki kapsayıcıdan başlayıp en dıştaki kapsayıcıyla biten sırayla uygulanır. En içteki kapsayıcının içinden çekilen öğeler, tüm kırpma bölgelerinin kesiştiği noktada kırpılır.  
   
- Aşağıdaki örnek, oluşturur bir <xref:System.Drawing.Graphics> nesne ve onun metin işleme ipucu ayarlar <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>. Kod, bir iç içe iki kapsayıcı oluşturur. Dış kapsayıcının metin işleme ipucu kümesine <xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>, ve metin işleme ipucu iç kapsayıcısı kümesine <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>. Kod üç dizeyi çizer: iç kapsayıcısı, bir dış kapsayıcısından ve birinden diğerine <xref:System.Drawing.Graphics> nesnenin kendisi.  
+ Aşağıdaki örnekbir <xref:System.Drawing.Graphics> nesne oluşturur ve metin oluşturma <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>ipucunu . Kod, biri diğeri içinde iç içe olmak üzere iki kapsayıcı oluşturur. Dış kapsayıcının metin oluşturma ipucu ayarlanır <xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>ve iç kapsayıcının metin oluşturma ipucu <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>. Kod üç dize çizer: biri iç kapsayıcıdan, biri dış <xref:System.Drawing.Graphics> kapsayıcıdan ve diğeri de nesnenin kendisinden.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#63](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#63)]
  [!code-vb[System.Drawing.MiscLegacyTopics#63](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#63)]  
   
- Aşağıdaki çizim üç dizeyi gösterir. İç kapsayıcısı'ndan ve çizilmiş dizeleri <xref:System.Drawing.Graphics> nesne tarafından düzgünleştirme düzleştirilir. Dış kapsayıcıdan çizilmiş dize tarafından düzgünleştirme çünkü düzleştirilmiş değil <xref:System.Drawing.Graphics.TextRenderingHint%2A> özelliği <xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>.  
+ Aşağıdaki resimde üç dizeleri gösterilmektedir. İç kapsayıcıdan ve <xref:System.Drawing.Graphics> nesneden çekilen dizeleri antialiasing tarafından düzeltilir. <xref:System.Drawing.Graphics.TextRenderingHint%2A> Dış kapsayıcıdan çizilen dize, özelliği <xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>.  
   
- ![İç içe geçmiş kapsayıcılardan çizilmiş dizeleri gösteren şekil.](./media/using-nested-graphics-containers/nested-containers-three-strings.png)  
+ ![İç içe kaplardan çekilen dizeleri gösteren çizim.](./media/using-nested-graphics-containers/nested-containers-three-strings.png)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

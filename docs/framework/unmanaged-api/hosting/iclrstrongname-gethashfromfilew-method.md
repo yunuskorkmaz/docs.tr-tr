@@ -15,58 +15,58 @@ helpviewer_keywords:
 ms.assetid: c6ff45fc-905d-4c6e-b00c-97c6c7c55d99
 topic_type:
 - apiref
-ms.openlocfilehash: e5821abed4d6c7f7595bad3240ab86d5a128d794
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 8f2d74531233f2ba423c39126ddc43e499cbb5d8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901158"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176376"
 ---
 # <a name="iclrstrongnamegethashfromfilew-method"></a>ICLRStrongName::GetHashFromFileW Yöntemi
-Unicode dizesi tarafından belirtilen dosyanın içeriği üzerinde bir karma oluşturur.  
+Unicode dizesi tarafından belirtilen dosyanın içeriği üzerinde karma oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT GetHashFromFileW (   
+HRESULT GetHashFromFileW (
     [in]  LPCWSTR   wszFilePath,  
     [in, out] unsigned int   *piHashAlg,  
     [out] BYTE      *pbHash,  
     [in]  DWORD     cchHash,  
     [out] DWORD     *pchHash  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `wszFilePath`  
- 'ndaki Karma olacak dosyanın Unicode adı.  
+ [içinde] Karma dosyanın Unicode adı.  
   
  `piHashAlg`  
- [in, out] Karma oluşturulurken kullanılacak algoritma. Geçerli algoritmalar Win32 CryptoAPI tarafından tanımlı olanlardır. `piHashAlg` 0 olarak ayarlanırsa, varsayılan algoritma CALG_SHA-1 kullanılır.  
+ [içinde, dışarı] Karma oluştururken kullanılacak algoritma. Geçerli algoritmalar Win32 CryptoAPI tarafından tanımlanan algoritmalardır. 0 `piHashAlg` olarak ayarlanırsa, varsayılan algoritma CALG_SHA-1 kullanılır.  
   
  `pbHash`  
- dışı Oluşturulan karmayı içeren bir bayt dizisi.  
+ [çıkış] Oluşturulan karma içeren bir bayt dizisi.  
   
  `cchHash`  
- 'ndaki `pbHash`tarafından işaret edilen arabelleğin en büyük boyutu.  
+ [içinde] Tarafından işaret edilen arabelleğe `pbHash`işaret edilen maksimum boyutu.  
   
  `pchHash`  
- dışı `pbHash`bayt cinsinden boyutu.  
+ [çıkış] Boyutu, bayt, ve. `pbHash`  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](/windows/win32/seccrypto/common-hresult-values) ).  
+ `S_OK`yöntem başarıyla tamamlanırsa; aksi takdirde, başarısızlığı gösteren bir HRESULT değeri (liste için [Ortak HRESULT Değerleri'ne](/windows/win32/seccrypto/common-hresult-values) bakın).  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, [ICLRStrongName:: GetHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) yöntemiyle aynıdır, ancak dosya adı belirtimi ANSI yerine Unicode olur.  
+ Bu yöntem, dosya adı belirtimi NINAnSI yerine Unicode [dışında, ICLRStrongName aynıdır::GetHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MetaHost. h  
+ **Üstbilgi:** MetaHost.h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MSCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

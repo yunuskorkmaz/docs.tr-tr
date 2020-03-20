@@ -8,26 +8,26 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-ms.openlocfilehash: 0fec817226a7da4b44ec992f9e384a2ad5449001
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7223f8c88bee4ee9c1db621cc39bbcf70d0c4589
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746099"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182381"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Windows Forms Denetimlerinde Özellik Tanımlama
-Özelliklere genel bakış için bkz. [özelliklere genel bakış](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Bir özellik tanımlarken dikkat etmeniz gereken birkaç önemli nokta vardır:  
+Özelliklere genel bakış için [bkz.](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)) Bir özelliği tanımlarken göz önünde bulundurulması gereken birkaç önemli husus vardır:  
   
-- Tanımladığınız özelliklere öznitelikler uygulamanız gerekir. Öznitelikler, tasarımcının bir özelliği nasıl görüntülemesi gerektiğini belirtir. Ayrıntılar için bkz. [Bileşenler Için tasarım zamanı öznitelikleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
+- Öznitelikleri tanımladığınız özelliklere uygulamanız gerekir. Öznitelikler, tasarımcının bir özelliği nasıl görüntülemesi gerektiğini belirtir. Ayrıntılar için, [Bileşenler için Tasarım-Zaman Öznitelikleri'ne](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))bakın.  
   
-- Özelliği değiştirmek denetimin görsel görüntüsünü etkiliyorsa, `set` erişimcisindeki <xref:System.Windows.Forms.Control.Invalidate%2A> yöntemini (denetiminizin <xref:System.Windows.Forms.Control>devraldığından) çağırın. <xref:System.Windows.Forms.Control.Invalidate%2A>, <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemini çağırır ve bu da denetimi yeniden çizer. <xref:System.Windows.Forms.Control.Invalidate%2A> birden çok çağrısı, verimlilik için <xref:System.Windows.Forms.Control.OnPaint%2A> tek bir çağrıda sonuçlanır.  
+- Özelliği değiştirmek denetimin görsel ekranını etkiliyorsa, <xref:System.Windows.Forms.Control.Invalidate%2A> <xref:System.Windows.Forms.Control> `set` erişimciden (denetiminizin devraldığı) yöntemi arayın. <xref:System.Windows.Forms.Control.Invalidate%2A>sırayla denetimi <xref:System.Windows.Forms.Control.OnPaint%2A> yeniden çizen yöntemi çağırır. Verimlilik için <xref:System.Windows.Forms.Control.Invalidate%2A> tek bir çağrı <xref:System.Windows.Forms.Control.OnPaint%2A> yla sonuçlanması için birden çok çağrı.  
   
-- .NET Framework sınıf kitaplığı, tamsayılar, ondalık sayılar, Boole değerleri ve diğerleri gibi ortak veri türleri için tür dönüştürücüler sağlar. Bir tür dönüştürücünün amacı genellikle dizeden değere dönüştürme (dize verilerinden diğer veri türlerine) sağlamaktır. Ortak veri türleri, değerleri dizelere ve dizilere uygun veri türlerine dönüştüren varsayılan tür dönüştürücülerle ilişkilendirilir. Özel (Standart olmayan) veri türü olan bir özellik tanımlarsanız, bu özellik ile ilişkilendirilecek tür dönüştürücüsünü belirten bir öznitelik uygulamanız gerekir. Özel bir UI türü düzenleyicisini bir özelliği ile ilişkilendirmek için de bir özniteliği kullanabilirsiniz. Kullanıcı arabirimi tür Düzenleyicisi, bir özellik veya veri türü düzenleme için bir kullanıcı arabirimi sağlar. Renk Seçici, UI türü düzenleyicinin bir örneğidir. Bu konunun sonunda özniteliklerin örnekleri verilmiştir.  
+- .NET Framework sınıf kitaplığı, tamsayılar, ondalık sayılar, Boolean değerleri ve diğerleri gibi yaygın veri türleri için tür dönüştürücüler sağlar. Tür dönüştürücünün amacı genellikle dize-değer dönüştürme (dize verilerinden diğer veri türlerine) sağlamaktır. Yaygın veri türleri, değerleri dizeleri ve dizeleri uygun veri türlerine dönüştüren varsayılan tür dönüştürücülerle ilişkilidir. Özel (yani standart dışı) bir özellik tanımlarsanız, bu özellik ile ilişkilendirmek için tür dönüştürücü belirten bir öznitelik uygulamak zorunda kalacaktır. Özel bir Kullanıcı Arabirimi türü düzenleyicisini bir özellikle ilişkilendirmek için bir öznitelik de kullanabilirsiniz. Kullanıcı Arabirimi türü düzenleyicisi, bir özelliği veya veri türünü düzenlemek için bir kullanıcı arabirimi sağlar. Renk seçici, ui türü düzenleyicisine bir örnektir. Bu konunun sonunda özniteliklere örnekler verilmiştir.  
   
     > [!NOTE]
-    > Özel özellik için bir tür dönüştürücü veya Kullanıcı arabirimi türü Düzenleyicisi yoksa, [Tasarım zamanı desteğini genişletme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))bölümünde açıklandığı gibi bir tane uygulayabilirsiniz.  
+    > Özel mülkünüz için bir tür dönüştürücü veya kullanıcı arabirimi türü düzenleyicisi kullanılamıyorsa, [Tasarım-Zaman Desteğini Genişletme'de](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))açıklandığı gibi bir tane uygulayabilirsiniz.  
   
- Aşağıdaki kod parçası, özel denetim `FlashTrackBar`için `EndColor` adlı özel bir özelliği tanımlar.  
+ Aşağıdaki kod parçası özel denetim `EndColor` `FlashTrackBar`için adlı özel bir özellik tanımlar.  
   
 ```vb  
 Public Class FlashTrackBar  
@@ -37,9 +37,9 @@ Public Class FlashTrackBar
    Private _endColor As Color = Color.LimeGreen  
   
    ' The Category attribute tells the designer to display  
-   ' it in the Flash grouping.   
+   ' it in the Flash grouping.
    ' The Description attribute provides a description of  
-   ' the property.   
+   ' the property.
    <Category("Flash"), _  
    Description("The ending color of the bar.")>  _  
    Public Property EndColor() As Color  
@@ -53,7 +53,7 @@ Public Class FlashTrackBar
             baseBackground.Dispose()  
             baseBackground = Nothing  
          End If  
-         ' The Invalidate method calls the OnPaint method, which redraws    
+         ' The Invalidate method calls the OnPaint method, which redraws
          ' the control.  
          Invalidate()  
       End Set  
@@ -68,9 +68,9 @@ public class FlashTrackBar : Control {
    // Private data member that backs the EndColor property.  
    private Color endColor = Color.LimeGreen;  
    // The Category attribute tells the designer to display  
-   // it in the Flash grouping.   
+   // it in the Flash grouping.
    // The Description attribute provides a description of  
-   // the property.   
+   // the property.
    [  
    Category("Flash"),  
    Description("The ending color of the bar.")  
@@ -86,7 +86,7 @@ public class FlashTrackBar : Control {
             baseBackground.Dispose();  
             baseBackground = null;  
          }  
-         // The Invalidate method calls the OnPaint method, which redraws   
+         // The Invalidate method calls the OnPaint method, which redraws
          // the control.  
          Invalidate();  
       }  
@@ -95,7 +95,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
- Aşağıdaki kod parçası, bir tür dönüştürücüsünü ve Kullanıcı arabirimi tür düzenleyicisini `Value`özellik ile ilişkilendirir. Bu durumda `Value` bir tamsayıdır ve varsayılan bir tür dönüştürücüde bulunur, ancak <xref:System.ComponentModel.TypeConverterAttribute> özniteliği tasarımcının bir yüzde olarak görüntülenmesini sağlayan özel bir tür Dönüştürücüsü (`FlashTrackBarValueConverter`) uygular. `FlashTrackBarValueEditor`Kullanıcı arabirimi tür Düzenleyicisi, yüzdenin görsel olarak görüntülenmesine izin verir. Bu örnek ayrıca, <xref:System.ComponentModel.TypeConverterAttribute> veya <xref:System.ComponentModel.EditorAttribute> özniteliği tarafından belirtilen tür dönüştürücüsünün ya da düzenleyicinin varsayılan dönüştürücüyü geçersiz kıldığını gösterir.  
+ Aşağıdaki kod parçası, bir tür dönüştürücü ve bir `Value`UI türü düzenleyiciözelliği ile ilişkilendiriler. Bu durumda `Value` bir tamsayı dır ve varsayılan tür dönüştürücüsi vardır, ancak <xref:System.ComponentModel.TypeConverterAttribute> öznitelik, tasarımcının bunu yüzde olarak görüntülemesini sağlayan özel bir tür dönüştürücü (`FlashTrackBarValueConverter`) uygular. Kullanıcı Arabirimi türü `FlashTrackBarValueEditor`düzenleyicisi, yüzdenin görsel olarak görüntülenmesini sağlar. Bu örnek, tür dönüştürücü veya düzenleyici <xref:System.ComponentModel.TypeConverterAttribute> tarafından <xref:System.ComponentModel.EditorAttribute> belirtilen veya öznitelik varsayılan dönüştürücü geçersiz kılar gösterir.  
   
 ```vb  
 <Category("Flash"), _  
@@ -110,7 +110,7 @@ End Property
   
 ```csharp  
 [  
-Category("Flash"),   
+Category("Flash"),
 TypeConverter(typeof(FlashTrackBarValueConverter)),  
 Editor(typeof(FlashTrackBarValueEditor), typeof(UITypeEditor)),  
 Description("The current value of the track bar.  You can enter an actual value or a percentage.")  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab894dc4-f7b6-4afc-bfcb-582a4b7e53a2
 topic_type:
 - apiref
-ms.openlocfilehash: 205f48fb417365565695c72095187d349127e536
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5af59e158a34b06d304a98db1dfaa46585b22eb6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436854"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177201"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>IMetaDataImport::GetSigFromToken Yöntemi
 Belirtilen belirteçle ilişkili ikili meta veri imzasını alır.  
@@ -28,31 +28,31 @@ Belirtilen belirteçle ilişkili ikili meta veri imzasını alır.
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT GetSigFromToken (   
-   [in]   mdSignature        mdSig,   
-   [out]  PCCOR_SIGNATURE    *ppvSig,   
-   [out]  ULONG              *pcbSig   
+HRESULT GetSigFromToken (
+   [in]   mdSignature        mdSig,
+   [out]  PCCOR_SIGNATURE    *ppvSig,
+   [out]  ULONG              *pcbSig
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `mdSig`  
- 'ndaki İçin ikili meta veri imzasını döndürecek belirteç.  
+ [içinde] İkili meta veri imzasını döndürmek için belirteç.  
   
  `ppvSig`  
- dışı Döndürülen meta veri imzasına yönelik bir işaretçi.  
+ [çıkış] Döndürülen meta veri imzası için bir işaretçi.  
   
  `pcbSig`  
- dışı İkili meta veri imzasının bayt cinsinden boyutu.  
+ [çıkış] İkili meta veri imzasının baytboyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

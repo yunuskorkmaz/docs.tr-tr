@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-ms.openlocfilehash: c5199794098e4d83588728eeb165aee5f81fe4c4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 35e043c56977bf644efe1dd9cee1409f50cc877f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088507"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179021"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>ICorDebugArrayValue::GetDimensions Metodu
-Bu dizinin her bir boyutundaki öğelerin sayısını alır.  
+Bu dizinin her boyutundaki öğelerin sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetDimensions (  
     [in] ULONG32         cdim,  
-    [out, size_is(cdim), length_is(cdim)]   
+    [out, size_is(cdim), length_is(cdim)]
         ULONG32          dims[]  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `cdim`  
- 'ndaki Bu ıcorınumber Garrayvalue nesnesinin boyut sayısı.  
+ [içinde] Bu ICorDebugArrayValue nesnesinin boyut sayısı.  
   
- Boyutu, `ICorDebugArrayValue` nesnesinin boyut sayısına eşit olduğundan, bu değer ayrıca `dims` dizisinin boyutudur.  
+ Boyutu `dims` `ICorDebugArrayValue` nesnenin boyut sayısına eşit olduğundan, bu değer de dizinin boyutudur.  
   
  `dims`  
- dışı Her biri bu `ICorDebugArrayValue` nesnesindeki bir boyuttaki öğelerin sayısını belirten bir tamsayılar dizisi.  
+ [çıkış] Her biri bu `ICorDebugArrayValue` nesnedeki bir boyuttaki öğe sayısını belirten bir tamsayı dizisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

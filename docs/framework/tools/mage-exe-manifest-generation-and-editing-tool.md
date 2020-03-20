@@ -5,22 +5,22 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 3752ac7108a9fcd55b61b32b889a717ef7c0faff
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b04fda81ae51462d9e686585de1477b4c9af4b26
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714470"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180386"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Bildirim Üretme ve Düzenleme Aracı)
 
-Bildirim Oluşturma ve Düzenleme Aracı (*Mage. exe*), uygulama ve dağıtım bildirimlerinin oluşturulmasını ve düzenlemesini destekleyen bir komut satırı aracıdır. Komut satırı aracı olarak *Mage. exe* , ASP.NET uygulamaları da dahil olmak üzere hem toplu betiklerden hem de diğer Windows tabanlı uygulamalardan çalıştırılabilir.
+Manifesto Oluşturma ve Düzenleme Aracı *(Mage.exe),* uygulama ve dağıtım bildirimlerinin oluşturulmasını ve düzenlenmesini destekleyen bir komut satırı aracıdır. Komut satırı aracı olarak *Mage.exe,* hem toplu komut dosyalarından hem de ASP.NET uygulamaları da dahil olmak üzere diğer Windows tabanlı uygulamalardan çalıştırılabilir.
 
-*Mage. exe*yerine bir grafik uygulama olan *MageUI. exe*' yi de kullanabilirsiniz. Daha fazla bilgi için bkz. [MageUI. exe (bildirim oluşturma ve düzenleme aracı, grafik istemci)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
+Ayrıca *MageUI.exe*kullanabilirsiniz , grafik uygulama, *Mage.exe*yerine . Daha fazla bilgi için [MageUI.exe (Manifesto Oluşturma ve Düzenleme Aracı, Grafik İstemci)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)bakın.
 
-Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
+Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için Visual Studio için Geliştirici Komut Komut Ustem'ini kullanın. Daha fazla bilgi için [Komut İstemleri'ne](developer-command-prompt-for-vs.md)bakın.
 
-Visual Studio 'da *Mage. exe* ve *MageUI. exe* ' nin iki sürümü dahildir. Sürüm bilgilerini görmek için *MageUI. exe*' yi çalıştırın, **Yardım**' ı seçin ve **hakkında**' yı seçin. Bu belgelerde *Mage. exe* ve *MageUI. exe*' nin 4.0. x. x sürümü açıklanmaktadır.
+*Mage.exe* ve *MageUI.exe'nin* iki versiyonu Visual Studio'ya dahildir. Sürüm bilgilerini görmek için *MageUI.exe'yi*çalıştırın, **Yardım'ı**seçin ve **Hakkında'yı**seçin. Bu dokümantasyon, *Mage.exe ve MageUI.exe* sürüm 4.0.x açıklar. *MageUI.exe*
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,66 +30,66 @@ Mage [commands] [commandOptions]
 
 ## <a name="parameters"></a>Parametreler
 
-Aşağıdaki tabloda *Mage. exe*tarafından desteklenen komutlar gösterilmektedir. Bu komutlar tarafından desteklenen seçenekler hakkında daha fazla bilgi için, bkz. [yeni ve güncelleştirme komut seçenekleri](#new-and-update-command-options) ve [imza komutu seçenekleri](#sign-command-options).
+Aşağıdaki tabloda *Mage.exe*tarafından desteklenen komutlar gösterilmektedir. Bu komutlar tarafından desteklenen seçenekler hakkında daha fazla bilgi için [Yeni ve Güncelleştir komut seçenekleri](#new-and-update-command-options) ve İşaret komut [seçeneklerine](#sign-command-options)bakın.
 
 |Komut|Açıklama|
 |-------------|-----------------|
-|**-CC, ClearApplicationCache**|Tüm yalnızca çevrimiçi uygulamalar için indirilen uygulama önbelleğini temizler.|
-|**-n,-yeni** *filetype [newoptions]*|Belirtilen türde yeni bir dosya oluşturur. Geçerli türler:<br /><br /> -   `Deployment`: yeni bir dağıtım bildirimi oluşturur.<br />-   `Application`: yeni bir uygulama bildirimi oluşturur.<br /><br /> Eğer bu komutla birlikte hiçbir ek parametre belirtmezseniz, uygun türde ve uygun varsayılan etiketlere ve öznitelik değerlerine sahip bir dosya oluşturur.<br /><br /> Yeni dosyanın dosya adını ve yolunu belirtmek için **-ToFile** seçeneğini (aşağıdaki tabloda bakın) kullanın.<br /><br /> Bildirimin \<bağımlılık > bölümüne eklenen bir uygulamanın tüm Derlemeleriyle bir uygulama bildirimi oluşturmak için **-FromDirectory** seçeneğini kullanın (aşağıdaki tabloda bulunan).|
-|**-u,-Update** *[filepath] [UpdateOptions]*|Bir bildirim dosyasına bir veya daha fazla değişiklik yapar. Düzenlediğiniz dosya türünü belirtmeniz gerekli değildir. Mage.exe, bir buluşsal yöntem kümesi kullanarak dosyayı inceler ve bir dağıtım bildirimi ya da uygulama bildirimi olup olmadığını belirler.<br /><br /> Zaten bir sertifikayı olan bir dosyayı imzaladıysanız **-güncelleştirme** , anahtar imza bloğunu kaldırır. Bunun nedeni, anahtar imzasının dosyasının bir karmasını içermesi ve dosyayı değiştirmenin karmayı geçersiz kılmasıdır.<br /><br /> Mevcut dosyanın üzerine yazmak yerine yeni bir dosya adı ve yolu belirtmek için **-ToFile** seçeneğini (aşağıdaki tabloda bakın) kullanın.|
-|**-s,-Sign** `[signOptions]`|Bir dosyayı imzalamak için bir anahtar çifti veya X509 sertifikası kullanır. İmzalar, dosyaların içine XML öğeleri olarak eklenir.<br /><br /> Bir **-timestampuri** değeri belirten bir bildirimi imzalarken Internet 'e bağlı olmanız gerekir.|
-|**-ver,-Doğrula** *[bildirim-dosya adı]*|Bildirimin doğru şekilde imzalandığını doğrular. Diğer komutlarla birleştirilemez. <br/><br/>**.NET Framework 4,7 ve sonraki sürümlerde kullanılabilir.**|
-|**-h,-?,-yardımı** *[verbose]*|Tüm kullanılabilir komutları ve seçeneklerini açıklar. Ayrıntılı yardım almak için `verbose` belirtin.|
+|**-cc, ClearApplicationÖnbellek**|Tüm yalnızca çevrimiçi uygulamalar için indirilen uygulama önbelleğini temizler.|
+|**-n, -Yeni** *fileType [newOptions]*|Belirtilen türde yeni bir dosya oluşturur. Geçerli türler şunlardır:<br /><br /> -   `Deployment`: Yeni bir dağıtım bildirimi oluşturur.<br />-   `Application`: Yeni bir uygulama bildirimi oluşturur.<br /><br /> Eğer bu komutla birlikte hiçbir ek parametre belirtmezseniz, uygun türde ve uygun varsayılan etiketlere ve öznitelik değerlerine sahip bir dosya oluşturur.<br /><br /> Yeni dosyanın dosya adını ve yolunu belirtmek için **-ToFile** seçeneğini (aşağıdaki tabloya bakın) kullanın.<br /><br /> **-FromDirectory** seçeneğini (aşağıdaki tabloya bakın) kullanarak, bildirimin \<bağımlılık> bölümüne eklenen bir uygulama için tüm derlemelerle birlikte bir uygulama bildirimi oluşturun.|
+|**-u, -Update** *[filePath] [updateOptions]*|Bir bildirim dosyasına bir veya daha fazla değişiklik yapar. Düzenlediğiniz dosya türünü belirtmeniz gerekli değildir. Mage.exe, bir buluşsal yöntem kümesi kullanarak dosyayı inceler ve bir dağıtım bildirimi ya da uygulama bildirimi olup olmadığını belirler.<br /><br /> Sertifikaiçeren bir dosyayı zaten imzaladıysanız, **-Güncelleştirme** anahtar imza bloğunu kaldırır. Bunun nedeni, anahtar imzasının dosyasının bir karmasını içermesi ve dosyayı değiştirmenin karmayı geçersiz kılmasıdır.<br /><br /> Varolan dosyanın üzerine yazmak yerine yeni bir dosya adı ve yol belirtmek için **-ToFile** seçeneğini (aşağıdaki tabloya bakın) kullanın.|
+|**-ler, -İşaret**`[signOptions]`|Bir dosyayı imzalamak için bir anahtar çifti veya X509 sertifikası kullanır. İmzalar, dosyaların içine XML öğeleri olarak eklenir.<br /><br /> **-TimestampUri** değeri belirten bir bildirim imzalarken Internet'e bağlı olmalısınız.|
+|**-ver, -Doğrula** *[manifest-filename]*|Bildirimin doğru imzalanmış olduğunu doğrular. Diğer komutlarla birleştirilemez. <br/><br/>**.NET Framework 4.7 ve sonraki sürümlerde mevcuttur.**|
+|**-h, -?, -Yardım** *[verbose]*|Tüm kullanılabilir komutları ve seçeneklerini açıklar. Ayrıntılı `verbose` yardım almak için belirtin.|
 
-## <a name="new-and-update-command-options"></a>Yeni ve güncelleştirme komutu seçenekleri
+## <a name="new-and-update-command-options"></a>Yeni ve Güncelleştir komut seçenekleri
 
-Aşağıdaki tabloda `-New` ve `-Update` komutlarının desteklediği seçenekler gösterilmektedir:
+Aşağıdaki tabloda, komutlar `-New` tarafından `-Update` desteklenen seçenekler gösterilmektedir:
 
-|Seçenekler|Varsayılan Değer|Uygulama Hedefi|Açıklama|
+|Seçenekler|Varsayılan Değer|Uygulanan Öğe|Açıklama|
 |-------------|-------------------|----------------|-----------------|
-|**-a,-algoritması**|sha1RSA|Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Bağımlılık özetlerinin oluşturması için kullanılan algoritmayı belirtir. Değer "sha256RSA" veya "sha1RSA" olmalıdır.<br /><br /> "-Update" seçeneğiyle kullanın. Bu seçenek "-Sign" seçeneğini kullanırken yok sayılır.|
-|**-APPC,-AppCodeBase** `manifestReference`||Dağıtım bildirimleri.|Uygulama bildirim dosyasına bir URL veya dosya yolu başvurusu ekler. Bu değer, uygulama bildiriminin tam yolu olmalıdır.|
-|**-appı,-AppManifest** `manifestPath`||Dağıtım bildirimleri.|Bir dağıtım bildirimine, dağıtımın uygulama bildirimindeki bir başvuruyu ekler.<br /><br /> `manifestPath` tarafından belirtilen dosya var olmalı veya *Mage. exe* bir hata verecek. `manifestPath` tarafından başvurulan dosya bir uygulama bildirimi değilse, *Mage. exe* bir hata verecek.|
-|**-CF,-sertifikadosyası** `filePath`||Tüm dosya türleri.|Bir bildirim veya lisans dosyasını imzalamak için x509 dijital sertifikasının konumunu belirtir. Sertifika, kişisel bilgi değişimi (PFX) dosyaları için bir parola gerektiriyorsa, bu seçenek **-Password** seçeneğiyle birlikte kullanılabilir. .NET Framework 4,7 ' den başlayarak, dosya bir özel anahtar içermiyorsa, **-CryptoProvider** ve **-keycontainer** seçeneklerinin bir birleşimi gereklidir.<br/><br/>.NET Framework 4.6.2 ile başlayarak, *Mage. exe* bildirimleri CNG ve CAPI sertifikaları ile imzalar.|
-|**-ch,-sunucunuzda certhash** `hashSignature`||Tüm dosya türleri.|İstemci bilgisayarın kişisel sertifika deposunda tutulan bir dijital sertifikanın karması. Bu, Windows Sertifikaları Konsolu içinde görüntülenen bir dijital sertifikanın Parmak İzi dizesine karşılık gelir.<br /><br /> `hashSignature` büyük veya küçük harf olabilir ve tek bir dize olarak ya da her bir parmak Izine ait her sekizli ile, boşluk ve tüm Parmak Izi tırnak işareti içine alınmış olarak sağlanabilir.|
-|**-CSP,-CryptoProvider** `provider-name`||Tüm dosya türleri.|Özel anahtar kapsayıcısını içeren bir şifreleme hizmeti sağlayıcısının (CSP) adını belirtir. Bu seçenek **-keycontainer** seçeneğini gerektirir.<br/><br/>Bu seçenek .NET Framework 4,7 ' den başlayarak kullanılabilir.|
-|**-FD,-FromDirectory** `directoryPath`||Uygulama bildirimleri.|Uygulama bildirimini tüm alt dizinler de dahil olmak üzere tüm derlemelerin ve `directoryPath`bulunan dosyaların açıklamalarıyla doldurur. burada `directoryPath`, dağıtmak istediğiniz uygulamayı içeren dizindir. Dizindeki her dosya için, *Mage. exe* dosyanın bir derleme mi yoksa statik bir dosya mı olduğuna karar verir. Bir derlemedir, derleme adı, kod tabanı ve sürümü ile uygulamaya bir `<dependency>` Tag ve `installFrom` özniteliği ekler. Statik bir dosya ise, bir `<file>` etiketi ekler. *Mage. exe* Ayrıca uygulamanın ana yürütülebilir dosyasını tespit etmek için basit bir buluşsal yöntem kümesi kullanacaktır ve bunu bildirimde ClickOnce uygulamasının giriş noktası olarak işaretleyecek.<br /><br /> *Mage. exe* hiçbir dosyayı "veri" dosyası olarak hiçbir şekilde otomatik olarak işaretlemez. Bunu elle yapmanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: bir ClickOnce uygulamasına veri dosyası ekleme](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application).<br /><br /> *Mage. exe* Ayrıca boyutuna bağlı olarak her dosya için bir karma üretir. ClickOnce bu karmaları kullanarak, bildirim oluşturulduktan sonra dağıtımın dosyaları üzerinde kimsenin değişiklik yapmadığından emin olur. Dağıtımınızdaki dosyalardan herhangi biri değiştiğinde, *Mage. exe* ' yi **-Update** komutuyla ve **-FromDirectory** seçeneğiyle çalıştırabilir ve başvurulan tüm dosyaların karmalarını ve derleme sürümlerini güncelleştirir.<br /><br /> **-FromDirectory** , `directoryPath`içinde bulunan tüm alt dizinlerdeki tüm dosyaları içerir.<br /><br /> \- **Update** komutuyla **-FromDirectory** kullanırsanız, *Mage. exe* uygulama bildiriminde artık dizinde bulunmayan tüm dosyaları kaldırır.|
-|**-IF,-IconFile**`filePath`||Uygulama bildirimleri.|Bir .ICO simge dosyasının tam yolunu belirtir. Bu simge başlat menüsünde uygulamanızın adının yanında ve Program Ekle/Kaldır girdisinde görünür. Eğer simge sağlanmazsa, varsayılan bir simge kullanılır.|
-|**-ip,-ıncludeproviderurl**`url`|true|Dağıtım bildirimleri.|Dağıtım bildiriminin, **-providerUrl**tarafından ayarlanan güncelleştirme konumu değerini içerip içermediğini gösterir.|
-|**-i,-ınstall** `willInstall`|true|Dağıtım bildirimleri.|ClickOnce uygulamasının yerel bilgisayara yüklenip yüklenmeyeceğini veya Web'den çalışıp çalışmayacağını belirtir. Bir uygulamayı yüklemek, bu uygulamaya Windows **Başlat** menüsünde bir varlık sağlar. Geçerli değerler "true" veya "t" ve "false" veya "f" değerleridir.<br /><br /> **-MinVersion** seçeneğini belirtirseniz ve bir kullanıcının sürümü **-MinVersion** ' dan daha az yüklüyse, **yüklemeyi**geçirdiğiniz değere bakılmaksızın uygulamayı yüklemeye zorlayacaktır.<br /><br /> Bu seçenek **-BrowserHosted** seçeneğiyle birlikte kullanılamaz. Aynı bildirimde ikisini de belirtmeyi denemek hata oluşturur.|
-|**-KC,-KeyContainer** `name`||Tüm dosya türleri.|Özel anahtarın adını içeren anahtar kapsayıcısını belirtir. Bu seçenek **CryptoProvider** seçeneğini gerektirir.<br/><br/>Bu seçenek .NET Framework 4,7 ' den başlayarak kullanılabilir.|
-|**-MV,-MinVersion**`[version]`|**-Version** bayrağı tarafından belirtilen şekilde ClickOnce dağıtım bildiriminde listelenen sürüm.|Dağıtım bildirimleri.|Bir kullanıcının çalıştırabileceği bu uygulamanın en düşük sürümü. Bu bayrak uygulamanızın adlandırılmış sürümünü gereken bir güncelleştirme yapar. Eğer ürününüzün bir sürümünü bozucu bir değişiklik veya kritik bir güvenlik açığı için güncelleştirirseniz, bu bayrağı kullanarak bu güncelleştirmenin yüklenmesi gerektiğini ve kullanıcının önceki sürümleri kullanamayacağını belirtebilirsiniz.<br /><br /> `version`, **-Version** bayrağıyla bağımsız değişkenle aynı semantiğe sahip.|
-|**-n,-adı** `nameString`|dağıtımı|Tüm dosya türleri.|Uygulamayı tanımlamak için kullanılan ad. ClickOnce **Başlangıç** menüsünde uygulamayı tanımlamak için bu adı kullanır (uygulama kendisi yüklenmek üzere yapılandırılmışsa) ve izin yükseltme iletişim kutularında. **Note:**  Var olan bir bildirimi güncelleştiriyorsanız ve bu seçenekle bir yayımcı adı belirtmezseniz, *Mage. exe* bildirimi bilgisayarda tanımlanan kuruluş adıyla güncelleştirir. Farklı bir ad kullanmak için, bu seçeneği kullanmayı ve istediğiniz yayımcı adını belirtmeyi unutmayın.|
-|**-PWD,-Password** `passwd`||Tüm dosya türleri.|Bir bildirimi dijital sertifika ile imzalamak için kullanılan şifre. **-SertifikaDosyası** seçeneğiyle birlikte kullanılmalıdır.|
-|**-p, işlemci** `processorValue`|Msil|Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Bu dağıtımın çalışabileceği mikro işlemci mimarisi. Eğer derlemeleri belirli bir mikro işlemci için önceden derlenmiş olan bir veya daha fazla yükleme için hazırlanıyorsanız bu değer gereklidir. Geçerli değerler şunlardır `msil`, `x86`, `ia64`ve `amd64`. `msil`, tüm derlemelerinizin platformdan bağımsız olduğu ve ortak dil çalışma zamanı (CLR), uygulamanız ilk çalıştırıldığında onları tek bir kez derleyeceği anlamına gelen Microsoft ara dilidir.|
-|**-PU,** **-providerUrl** `url`||Dağıtım bildirimleri.|ClickOnce'ın uygulama güncelleştirmeleri için inceleyeceği URL'yi belirtir.|
-|**-pub,-Publisher** `publisherName`||Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Dağıtım veya uygulama bildiriminin açıklama öğesine yayımcı adını ekler. Uygulama bildiriminde kullanıldığında, **-useManifestForTrust** Ayrıca "true" veya "t" değeriyle birlikte belirtilmelidir; Aksi takdirde, bu parametre bir hata oluşturacak.|
-|**-s,-SupportURL**`url`||Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|ClickOnce uygulaması için Program Ekle veya Kaldır'da görünen bağlantıyı belirtir.|
-|**-ti,-TimestampUri** `uri`||Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Bir dijital zaman damgası hizmetinin URL'si. Bildirimlere zaman damgası koymak, uygulamanızın sonraki sürümünü dağıtmadan önce dijital sertifikanızın süresi dolarsa bildirimleri yeniden imzalamanıza gerek kalmamasını sağlar. Daha fazla bilgi için bkz. [Windows kök sertifika programı üyeleri](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)).|
-|**-t,-ToFile** `filePath`|Yeni<br />-Dağıtım: Deploy. Application<br />-Application: Application. exe. manifest<br />Update<br />-Giriş dosyası.|Tüm dosya türleri.|Oluşturulan veya değiştirilen dosyanın çıkış yolunu belirtir.<br /><br /> **-New**kullandığınızda, **Çıkış, geçerli** çalışma dizinine yazılır. **-Update**kullandığınızda- **ToFile** sağlanmazsa, *Mage. exe* dosyayı giriş dosyasına geri yazar.|
-|**-tr,-TrustLevel** `level`|Uygulama URL'sinin bulunduğu bölgeyi temel alır.|Uygulama bildirimleri.|İstemci bilgisayarlarda uygulamaya sağlanacak güven düzeyi. Değerler "Internet", "Intranet" ve "FullTrust" değerlerini içerir.|
-|**-um,-UseManifestForTrust** `willUseForTrust`|False|Uygulama bildirimleri.|Uygulama bildiriminin dijital imzasının, uygulama istemcide çalışırken güven kararları için kullanılıp kullanılmayacağını belirtir. "true" veya "t" belirtmek uygulama bildiriminin güven kararları için kullanılacağını belirtir. "false" veya "f" belirtmek dağıtım bildiriminin imzasının kullanılacağını belirtir.|
-|**-v,-sürüm** `versionNumber`|1.0.0.0|Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Dağıtımın sürümü. Bağımsız değişken, "*n. n. n. n*" biçiminde geçerli bir sürüm dizesi olmalıdır; burada "*n*" işaretsiz 32 bitlik bir tamsayıdır.|
-|**-WPF,-WPFBrowserApp**`isWPFApp`|{1&gt;false&lt;1}|Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Bu bayrağı yalnızca, uygulama Internet Explorer içinde barındırılacak bir Windows Presentation Foundation (WPF) uygulaması ise ve tek başına yürütülebilir dosya değil ise kullanın. Geçerli değerler "true" veya "t" ve "false" veya "f" değerleridir.<br /><br /> Uygulama bildirimleri için, uygulama bildiriminin `entryPoint` öğesinin altına `hostInBrowser` özniteliğini ekler.<br /><br /> Dağıtım bildirimleri için, `deployment` öğesindeki `install` özniteliğini false olarak ayarlar ve dağıtım bildirimini bir. xbap uzantısıyla kaydeder. Bu bağımsız değişkeni **-Install** bağımsız değişkeniyle birlikte belirtmek bir hata oluşturur, çünkü tarayıcıda barındırılan bir uygulama yüklü, çevrimdışı bir uygulama olamaz.|
+|**-a, -Algoritma**|sha1RSA|Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Bağımlılık özetlerinin oluşturması için kullanılan algoritmayı belirtir. Değer "sha256RSA" veya "sha1RSA" olmalıdır.<br /><br /> "-Update" seçeneğiyle kullanın. Bu seçenek "-Sign" seçeneğini kullanırken yok sayılır.|
+|**-appc, -AppCodeBase**`manifestReference`||Dağıtım bildirimleri.|Uygulama bildirim dosyasına bir URL veya dosya yolu başvurusu ekler. Bu değer, uygulama bildiriminin tam yolu olmalıdır.|
+|**-appm, -AppManifest**`manifestPath`||Dağıtım bildirimleri.|Bir dağıtım bildirimine, dağıtımın uygulama bildirimindeki bir başvuruyu ekler.<br /><br /> Tarafından `manifestPath` belirtilen dosya var olmalıdır veya *Mage.exe* bir hata yayımlar. Başvurulan `manifestPath` dosya bir uygulama bildirimi değilse, *Mage.exe* bir hata yayımlar.|
+|**-cf, -CertFile**`filePath`||Tüm dosya türleri.|Bir bildirim veya lisans dosyasını imzalamak için X509 dijital sertifikanın konumunu belirtir. Sertifika Kişisel Bilgi Alışverişi (PFX) dosyaları için bir parola gerektiriyorsa, bu seçenek **-Parola** seçeneğiyle birlikte kullanılabilir. .NET Framework 4.7 ile başlayarak, dosya özel bir anahtar içermiyorsa, **-CryptoProvider** ve **-KeyContainer** seçeneklerinin bir kombinasyonu gereklidir.<br/><br/>.NET Framework 4.6.2 ile başlayan *Mage.exe* işaretleri CNG ve CAPI sertifikaları ile birlikte ortaya çıkar.|
+|**-ch, -CertHash**`hashSignature`||Tüm dosya türleri.|İstemci bilgisayarın kişisel sertifika deposunda tutulan bir dijital sertifikanın karması. Bu, Windows Sertifikaları Konsolu içinde görüntülenen bir dijital sertifikanın Parmak İzi dizesine karşılık gelir.<br /><br /> `hashSignature`büyük veya küçük harfli olabilir ve tek bir dize olarak veya Thumbprint'in her sekizlisi boşluklarla ve tüm Thumbprint'in tırnak işaretleriyle birlikte ayrılmasıyla birlikte sağlanabilir.|
+|**-csp, -CryptoProvider**`provider-name`||Tüm dosya türleri.|Özel anahtar kapsayıcısını içeren bir şifreleme hizmet sağlayıcısının (CSP) adını belirtir. Bu seçenek **-KeyContainer** seçeneğini gerektirir.<br/><br/>Bu seçenek .NET Framework 4.7 ile başlayarak kullanılabilir.|
+|**-fd, -FromDirectory**`directoryPath`||Uygulama bildirimleri.|Tüm alt dizinler de dahil olmak üzere `directoryPath`bulunan tüm derlemeler ve `directoryPath` dosyaların açıklamaları ile uygulama bildirimini doldurur, dağıtmak istediğiniz uygulamayı içeren dizin nerede. Dizindeki her dosya için *Mage.exe,* dosyanın derleme mi yoksa statik dosya mı olduğuna karar verir. Bir derleme ise, bir `<dependency>` etiket `installFrom` ve derleme adı, kod tabanı ve sürümü ile uygulamaya öznitelik ekler. Statik bir dosyaysa, bir `<file>` etiket ekler. *Mage.exe* ayrıca uygulama için ana yürütülebilir algılamak için sezgisel basit bir dizi kullanır ve bildirimde ClickOnce uygulamagiriş noktası olarak işaretleyecek.<br /><br /> *Mage.exe* hiçbir dosyayı otomatik olarak "veri" dosyası olarak işaretlemez. Bunu elle yapmanız gerekir. Daha fazla bilgi için [bkz: ClickOnce Uygulamasına Veri Dosyası Ekleme](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application).<br /><br /> *Mage.exe* ayrıca her dosya için boyutuna göre bir karma oluşturur. ClickOnce bu karmaları kullanarak, bildirim oluşturulduktan sonra dağıtımın dosyaları üzerinde kimsenin değişiklik yapmadığından emin olur. Dağıtımınızdaki dosyalardan herhangi biri değişirse, *Mage.exe'yi* **-Update** komutu ve **-FromDirectory** seçeneğiyle çalıştırabilirsiniz ve başvurulan tüm dosyaların iş ve derleme sürümlerini güncelleştirebilirsiniz.<br /><br /> **-FromDirectory** içinde `directoryPath`bulunan tüm alt dizinlerde tüm dosyaları içerecektir.<br /><br /> **-Update** komutu yla **-FromDirectory** kullanıyorsanız, *Mage.exe* uygulama bildiriminde artık dizinde bulunmayan dosyaları kaldırır.|
+|**-if, -IconFile**  `filePath`||Uygulama bildirimleri.|Bir .ICO simge dosyasının tam yolunu belirtir. Bu simge başlat menüsünde uygulamanızın adının yanında ve Program Ekle/Kaldır girdisinde görünür. Eğer simge sağlanmazsa, varsayılan bir simge kullanılır.|
+|**-ip, -IncludeProviderURL**  `url`|true|Dağıtım bildirimleri.|Dağıtım bildiriminin **-ProviderURL**tarafından ayarlanan güncelleştirme konum değerini içerip içermediğini gösterir.|
+|**-i, -Yükle**`willInstall`|true|Dağıtım bildirimleri.|ClickOnce uygulamasının yerel bilgisayara yüklenip yüklenmeyeceğini veya Web'den çalışıp çalışmayacağını belirtir. Bir uygulamayı yüklemek, bu uygulamaya Windows **Başlat** menüsünde bir varlık sağlar. Geçerli değerler "true" veya "t" ve "false" veya "f" değerleridir.<br /><br /> **-MinVersion** seçeneğini belirtirseniz ve bir kullanıcının **-MinVersion** yüklü sürümünden daha az bir sürümü varsa, **-Install'a**geçtiğiniz değerden bağımsız olarak uygulamayı yüklemeye zorlar.<br /><br /> Bu seçenek **-BrowserHosted** seçeneği ile kullanılamaz. Aynı bildirimde ikisini de belirtmeyi denemek hata oluşturur.|
+|**-kc, -KeyContainer**`name`||Tüm dosya türleri.|Özel anahtarın adını içeren anahtar kapsayıcısını belirtir. Bu seçenek **CryptoProvider** seçeneğini gerektirir.<br/><br/>Bu seçenek .NET Framework 4.7 ile başlayarak kullanılabilir.|
+|**-mv, -MinVersiyon**  `[version]`|ClickOnce dağıtım bildiriminde listelenen sürüm **-Sürüm** bayrağı tarafından belirtilir.|Dağıtım bildirimleri.|Bir kullanıcının çalıştırabileceği bu uygulamanın en düşük sürümü. Bu bayrak uygulamanızın adlandırılmış sürümünü gereken bir güncelleştirme yapar. Eğer ürününüzün bir sürümünü bozucu bir değişiklik veya kritik bir güvenlik açığı için güncelleştirirseniz, bu bayrağı kullanarak bu güncelleştirmenin yüklenmesi gerektiğini ve kullanıcının önceki sürümleri kullanamayacağını belirtebilirsiniz.<br /><br /> `version`**-Sürüm** bayrağının bağımsız değişkeni ile aynı anlambilime sahiptir.|
+|**-n, -İsim**`nameString`|Dağıtma|Tüm dosya türleri.|Uygulamayı tanımlamak için kullanılan ad. ClickOnce, **Başlat** menüsündeki (uygulama kendisini yüklemek üzere yapılandırılırsa) ve İzin Yüksekliği iletişim kutularındaki uygulamayı tanımlamak için bu adı kullanır. **Not:**  Varolan bir bildirimi güncelliyorsanız ve bu seçenekle bir yayımcı adı belirtmiyorsanız, *Mage.exe* bildirimi bilgisayarda tanımlanan kuruluş adıyla güncelleştirir. Farklı bir ad kullanmak için, bu seçeneği kullanmayı ve istediğiniz yayımcı adını belirtmeyi unutmayın.|
+|**-pwd, -Şifre**`passwd`||Tüm dosya türleri.|Bir bildirimi dijital sertifika ile imzalamak için kullanılan şifre. **-CertFile** seçeneği ile birlikte kullanılmalıdır.|
+|**-p, İşlemci**`processorValue`|Msil|Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Bu dağıtımın çalışabileceği mikro işlemci mimarisi. Eğer derlemeleri belirli bir mikro işlemci için önceden derlenmiş olan bir veya daha fazla yükleme için hazırlanıyorsanız bu değer gereklidir. Geçerli değerler `msil` `x86`, `ia64`, `amd64`, ve . `msil`Microsoft ara dilidir, bu da tüm derlemelerinizin platformdan bağımsız olduğu anlamına gelir ve ortak dil çalışma süresi (CLR) uygulamanız ilk çalıştırıldığında bunları tam zamanında derler.|
+|**-pu,** **-SağlayıcıURL**`url`||Dağıtım bildirimleri.|ClickOnce'ın uygulama güncelleştirmeleri için inceleyeceği URL'yi belirtir.|
+|**-pub, -Yayıncı**`publisherName`||Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Dağıtım veya uygulama bildiriminin açıklama öğesine yayımcı adını ekler. Bir uygulama bildiriminde kullanıldığında, **-UseManifestForTrust** da "true" veya "t" değeriile belirtilmelidir; aksi takdirde, bu parametre bir hata yükseltir.|
+|**-ler, -SupportURL**  `url`||Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|ClickOnce uygulaması için Program Ekle veya Kaldır'da görünen bağlantıyı belirtir.|
+|**-ti, -TimestampUri**`uri`||Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Bir dijital zaman damgası hizmetinin URL'si. Bildirimlere zaman damgası koymak, uygulamanızın sonraki sürümünü dağıtmadan önce dijital sertifikanızın süresi dolarsa bildirimleri yeniden imzalamanıza gerek kalmamasını sağlar. Daha fazla bilgi için [Windows kök sertifika programı üyelerine](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11))bakın.|
+|**-t, -ToFile**`filePath`|- Yeni:<br />- Deployment: deploy.application<br />- Uygulama: application.exe.manifest<br />- Güncelleme:<br />- Giriş dosyası.|Tüm dosya türleri.|Oluşturulan veya değiştirilen dosyanın çıkış yolunu belirtir.<br /><br /> **-ToFile'ı** kullandığınızda sağlanmazsa **-Yeni,** çıktı geçerli çalışma dizinine yazılır. **-ToFile'ı** kullandığınızda sağlanmazsa **-Update**, *Mage.exe* dosyayı giriş dosyasına geri yazar.|
+|**-tr, -TrustLevel**`level`|Uygulama URL'sinin bulunduğu bölgeyi temel alır.|Uygulama bildirimleri.|İstemci bilgisayarlarda uygulamaya sağlanacak güven düzeyi. Değerler "Internet", "Intranet" ve "FullTrust" değerlerini içerir.|
+|**-um, -UseManifestForTrust**`willUseForTrust`|False|Uygulama bildirimleri.|Uygulama bildiriminin dijital imzasının, uygulama istemcide çalışırken güven kararları için kullanılıp kullanılmayacağını belirtir. "true" veya "t" belirtmek uygulama bildiriminin güven kararları için kullanılacağını belirtir. "false" veya "f" belirtmek dağıtım bildiriminin imzasının kullanılacağını belirtir.|
+|**-v, -Sürüm**`versionNumber`|1.0.0.0|Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Dağıtımın sürümü. Bağımsız değişken, "*N.N.N.N*" biçiminin geçerli bir sürüm dizesi olmalıdır, burada "*N*" imzasız 32 bit tamsayıdır.|
+|**-wpf, -WPFBrowserApp**  `isWPFApp`|yanlış|Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Bu bayrağı yalnızca, uygulama Internet Explorer içinde barındırılacak bir Windows Presentation Foundation (WPF) uygulaması ise ve tek başına yürütülebilir dosya değil ise kullanın. Geçerli değerler "true" veya "t" ve "false" veya "f" değerleridir.<br /><br /> Uygulama bildirimleri için, özniteliği uygulama `entryPoint` bildiriminin öğesinin altına ekler. `hostInBrowser`<br /><br /> Dağıtım bildirimleri için, `install` `deployment` öğedeki özniteliği yanlış olarak ayarlar ve dağıtım bildirimini .xbap uzantısı ile kaydeder. Tarayıcı tarafından barındırılan bir uygulama yüklü, çevrimdışı bir uygulama olamayacağından, **-Install** bağımsız değişkeni ile birlikte bu bağımsız değişkeni belirtmek bir hata üretir.|
 
-## <a name="sign-command-options"></a>İmza komut seçenekleri
+## <a name="sign-command-options"></a>Komut seçeneklerini imzala
 
-Aşağıdaki tablo, tüm dosya türlerine uygulanan `-Sign` komutu tarafından desteklenen seçenekleri gösterir.
+Aşağıdaki tablo, tüm dosya türleri `-Sign` için geçerli olan komut tarafından desteklenen seçenekleri gösterir.
 
 |Seçenekler|Açıklama|
 |-------------|-----------------|
-|**-CF,-sertifikadosyası** `filePath`|Bildirim imzalamak için bir dijital sertifikanın konumunu belirtir. Sertifika, kişisel bilgi değişimi (PFX) dosyaları için bir parola gerektiriyorsa, bu seçenek **-Password** seçeneğiyle birlikte kullanılabilir. .NET Framework 4,7 ' den başlayarak, dosya bir özel anahtar içermiyorsa, **-CryptoProvider** ve **-keycontainer** seçeneklerinin bir birleşimi gereklidir.<br/><br/>.NET Framework 4.6.2 ile başlayarak, *Mage. exe* bildirimleri CNG ve CAPI sertifikaları ile imzalar.|
-|**-ch,-sunucunuzda certhash** `hashSignature`|İstemci bilgisayarın kişisel sertifika deposunda tutulan bir dijital sertifikanın karması. Bu, Windows Sertifikaları Konsolu içinde görüntülenen bir dijital sertifikanın Parmak İzi özelliğine karşılık gelir.<br /><br /> `hashSignature` büyük veya küçük harf olabilir ve tek bir dize olarak ya da her bir parmak Izine ait her sekizli ile boşluk ve tüm Parmak Izi tırnak işareti içine alınmış olarak sağlanabilir.|
-**-CSP,-CryptoProvider** `provider-name`|Özel anahtar kapsayıcısını içeren bir şifreleme hizmeti sağlayıcısının (CSP) adını belirtir. Bu seçenek **-keycontainer** seçeneğini gerektirir.<br/><br/>Bu seçenek .NET Framework 4,7 ' den başlayarak kullanılabilir.|
-|**-KC,-KeyContainer** `name`|Özel anahtarın adını içeren anahtar kapsayıcısını belirtir. Bu seçenek **CryptoProvider** seçeneğini gerektirir.<br/><br/>Bu seçenek .NET Framework 4,7 ' den başlayarak kullanılabilir.|
-|**-PWD,-Password** `passwd`|Bir bildirimi dijital sertifika ile imzalamak için kullanılan şifre. **-SertifikaDosyası** seçeneğiyle birlikte kullanılmalıdır.|
-|**-t,-ToFile** `filePath`|Oluşturulan veya değiştirilen dosyanın çıkış yolunu belirtir.|
+|**-cf, -CertFile**`filePath`|Bildirim imzalamak için bir dijital sertifikanın konumunu belirtir. Sertifika Kişisel Bilgi Alışverişi (PFX) dosyaları için bir parola gerektiriyorsa, bu seçenek **-Parola** seçeneğiyle birlikte kullanılabilir. .NET Framework 4.7 ile başlayarak, dosya özel bir anahtar içermiyorsa, **-CryptoProvider** ve **-KeyContainer** seçeneklerinin bir kombinasyonu gereklidir.<br/><br/>.NET Framework 4.6.2 ile başlayan *Mage.exe* işaretleri CNG ve CAPI sertifikaları ile birlikte ortaya çıkar.|
+|**-ch, -CertHash**`hashSignature`|İstemci bilgisayarın kişisel sertifika deposunda tutulan bir dijital sertifikanın karması. Bu, Windows Sertifikaları Konsolu içinde görüntülenen bir dijital sertifikanın Parmak İzi özelliğine karşılık gelir.<br /><br /> `hashSignature`büyük veya küçük harfli olabilir ve tek bir dize olarak veya boşluklarla ayrılan Parmak İzi'nin her sekizlisi ve tırnak işaretleriyle eklenen tüm Thumbprint ile birlikte sağlanabilir.|
+**-csp, -CryptoProvider**`provider-name`|Özel anahtar kapsayıcısını içeren bir şifreleme hizmet sağlayıcısının (CSP) adını belirtir. Bu seçenek **-KeyContainer** seçeneğini gerektirir.<br/><br/>Bu seçenek .NET Framework 4.7 ile başlayarak kullanılabilir.|
+|**-kc, -KeyContainer**`name`|Özel anahtarın adını içeren anahtar kapsayıcısını belirtir. Bu seçenek **CryptoProvider** seçeneğini gerektirir.<br/><br/>Bu seçenek .NET Framework 4.7 ile başlayarak kullanılabilir.|
+|**-pwd, -Şifre**`passwd`|Bir bildirimi dijital sertifika ile imzalamak için kullanılan şifre. **-CertFile** seçeneği ile birlikte kullanılmalıdır.|
+|**-t, -ToFile**`filePath`|Oluşturulan veya değiştirilen dosyanın çıkış yolunu belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-*Mage. exe* için tüm bağımsız değişkenler büyük/küçük harfe duyarlıdır. Komutlar ve seçenekler bir tire (-) veya eğik çizgi (/) ile belirtilebilir.
+*Mage.exe'deki* tüm argümanlar duyarsız. Komutlar ve seçenekler bir tire (-) veya eğik çizgi (/) ile belirtilebilir.
 
-**-Sign** komutuyla kullanılan bağımsız değişkenlerin tümü, **-New** veya **-Update** komutlarıyla birlikte her zaman kullanılabilir. Aşağıdaki komutlar eşdeğerdir.
+**-Sign** komutu ile kullanılan tüm bağımsız değişkenler, **-Yeni** **veya-Güncelleştir** komutları ile de herhangi bir zamanda kullanılabilir. Aşağıdaki komutlar eşdeğerdir.
 
 ```console
 mage -Sign c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
@@ -97,51 +97,51 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 ```
 
 > [!NOTE]
-> .NET Framework sürüm 4.6.2 başlayarak, CNG sertifikaları da desteklenir.
+> .NET Framework sürümü 4.6.2 ile başlayarak CNG sertifikaları da desteklenir.
 
- İmzalama gerçekleştireceğiniz son görevdir; çünkü imzalanmış bir belge, imzanın belge için geçerli olup olmadığını doğrulamak için dosyanın bir karmasını kullanır. Eğer imzalanan dosyada bir değişiklik yaparsanız, yeniden imzalamanız gerekir. Daha önce imzalanmış bir belgeyi imzaladıysanız, *Mage. exe* eski imzayı yeni ile değiştirir.
+ İmzalama gerçekleştireceğiniz son görevdir; çünkü imzalanmış bir belge, imzanın belge için geçerli olup olmadığını doğrulamak için dosyanın bir karmasını kullanır. Eğer imzalanan dosyada bir değişiklik yaparsanız, yeniden imzalamanız gerekir. Daha önce imzalanmış bir belgeyi imzalarsanız, *Mage.exe* eski imzayı yeniyle değiştirir.
 
- Bir dağıtım bildirimini doldurmak için **-AppManifest** seçeneğini kullandığınızda *Mage. exe* , uygulama bildirimin geçerli dağıtım sürümünden sonra adlı bir alt dizin içindeki dağıtım bildirimiyle aynı dizinde yer alacağı ve Dağıtım bildiriminizi uygun şekilde yapılandıracağı varsayacaktır. Uygulama bildiriminiz başka bir yerde yer alabiliyorsanız, alternatif konumu ayarlamak için **-AppCodeBase** seçeneğini kullanın.
+ Bir dağıtım bildirimini doldurmak için **-AppManifest** seçeneğini kullandığınızda, *Mage.exe* uygulama bildiriminizin geçerli dağıtım sürümünden sonra bir alt dizinde dağıtım bildirimiyle aynı dizinde yer alacaktır ve dağıtım bildiriminizi uygun şekilde yapılandıracaktır. Uygulama bildiriminiz başka bir yerde kalacaksa, alternatif konumu ayarlamak için **-AppCodeBase** seçeneğini kullanın.
 
- Uygulamanızı dağıtmadan önce dağıtım ve uygulama belgeleriniz imzalanmalıdır. Bildirimleri imzalama hakkında rehberlik için bkz. [Güvenilen uygulama dağıtımına genel bakış](/visualstudio/deployment/trusted-application-deployment-overview).
+ Uygulamanızı dağıtmadan önce dağıtım ve uygulama belgeleriniz imzalanmalıdır. İmzalama bildirimleri hakkında bilgi için [bkz.](/visualstudio/deployment/trusted-application-deployment-overview)
 
- Uygulama bildirimleri için **-TrustLevel** seçeneği, bir uygulamanın istemci bilgisayarda çalıştırılması gereken izin kümesini açıklar. Varsayılan olarak, uygulamalara URL 'sinin bulunduğu *bölgeyi* temel alan bir güven düzeyi atanır. Bir şirket ağında dağıtılan uygulamalar genellikle Intranet bölgesine yerleştirilirken, Internet üzerinden dağıtılan uygulamalar Internet bölgesine yerleştirilir. İki güvenlik bölgesi de uygulamanın yerel kaynaklara erişimine kısıtlamalar koyar, ancak Intranet bölgesi Internet bölgesine göre biraz daha az sınırlayıcıdır. FullTrust bölgesi uygulamalara, bir bilgisayarın yerel kaynakları için tam erişim sağlar. Bir uygulamayı bu bölgeye yerleştirmek için **-TrustLevel** seçeneğini KULLANıRSANıZ, clr 'Nin güven Yöneticisi bileşeni kullanıcıdan bu yüksek düzeyde güven sağlamak isteyip istemediğini karar vermesini ister. Eğer uygulamanızı bir şirket ağı üzerinden dağıtıyorsanız, kullanıcıya sormadan uygulamanın güven düzeyini yükseltmek için Güvenilen Uygulama Dağıtımı'nı kullanabilirsiniz.
+ -Uygulama bildirimleri için **-TrustLevel** seçeneği, bir uygulamanın istemci bilgisayarda çalıştırılması için gereken izin kümesini açıklar. Varsayılan olarak, uygulamalara URL'lerinin bulunduğu *bölgeye* göre bir güven düzeyi atanır. Bir şirket ağında dağıtılan uygulamalar genellikle Intranet bölgesine yerleştirilirken, Internet üzerinden dağıtılan uygulamalar Internet bölgesine yerleştirilir. İki güvenlik bölgesi de uygulamanın yerel kaynaklara erişimine kısıtlamalar koyar, ancak Intranet bölgesi Internet bölgesine göre biraz daha az sınırlayıcıdır. FullTrust bölgesi uygulamalara, bir bilgisayarın yerel kaynakları için tam erişim sağlar. Bir uygulamayı bu bölgeye yerleştirmek için **-TrustLevel** seçeneğini kullanırsanız, CLR'nin Güven Yöneticisi bileşeni kullanıcıdan bu yüksek düzeyde güven vermek isteyip istemediklerine karar vermesini ister. Eğer uygulamanızı bir şirket ağı üzerinden dağıtıyorsanız, kullanıcıya sormadan uygulamanın güven düzeyini yükseltmek için Güvenilen Uygulama Dağıtımı'nı kullanabilirsiniz.
 
- Uygulama bildirimleri de özel güven bölümlerini destekler. Bu, uygulamanızın en az izni isteme güvenlik ilkesine uymasına yardımcı olur; çünkü bildirimi, uygulamanın yürütülebilmesi için gereken belirli izinleri isteyecek şekilde yapılandırabilirsiniz. *Mage. exe* özel güven bölümü eklemeyi doğrudan desteklemez. Bir metin Düzenleyicisi, XML Ayrıştırıcısı veya grafik aracı *MageUI. exe*' yi kullanarak bir tane ekleyebilirsiniz. Özel güven bölümleri eklemek için *MageUI. exe* ' nin nasıl kullanılacağı hakkında daha fazla bilgi için, bkz. [MageUI. exe (bildirim oluşturma ve düzenleme aracı, grafik istemci)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
+ Uygulama bildirimleri de özel güven bölümlerini destekler. Bu, uygulamanızın en az izni isteme güvenlik ilkesine uymasına yardımcı olur; çünkü bildirimi, uygulamanın yürütülebilmesi için gereken belirli izinleri isteyecek şekilde yapılandırabilirsiniz. *Mage.exe* doğrudan özel bir güven bölümü eklemeyi desteklemez. Bir metin düzenleyicisi, bir XML ayrıştırıcı veya grafik aracı *MageUI.exe*kullanarak ekleyebilirsiniz. Özel güven bölümleri eklemek için *MageUI.exe'nin* nasıl kullanılacağı hakkında daha fazla bilgi için Bkz. [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
 
-Visual Studio 2017, *Mage. exe*' nin 4.6.1 sürümünü içerir. Bu *Mage. exe* hedefinin bu sürümüyle oluşturulan bildirimler .NET Framework 4. .NET Framework eski sürümlerini hedeflemek için *Mage. exe*' nin önceki bir sürümünü kullanın.
+Visual Studio 2017 *Mage.exe*sürümü 4.6.1 içerir. *Mage.exe* target .NET Framework 4'ün bu sürümüyle oluşturulan manifestolar. .NET Framework'ün eski sürümlerini hedeflemek için *Mage.exe'nin*önceki bir sürümünü kullanın.
 
-Var olan bir bildirime derlemeleri ekler veya var olan bir bildirimi yeniden imzaladığınızda, *Mage. exe* bildirimi .NET Framework 4 ' ü hedefleyecek şekilde güncelleştirmez.
+Derlemeleri varolan bir bildirimden eklediğinizde veya kaldırdığınızda veya varolan bir manifestoyu yeniden imzaladığınızda, *Mage.exe* bildirimi .NET Framework 4'ü hedeflemek üzere güncelleştirmez.
 
-Aşağıdaki tablolarda bu özellikler ve kısıtlamalar gösterilmektedir:
+Aşağıdaki tablolarda bu özellikler ve kısıtlamalar göster:
 
-|Bildirim sürümü|Çalışma|Mage v2.0|Mage v4.0|
+|Bildirim sürümü|İşlem|Mage v2.0|Mage v4.0|
 |----------------------|---------------|---------------|---------------|
 |.NET Framework'ün 2.0 veya 3.x sürümünü hedefleyen uygulamalar için bildirim|Open|Tamam|Tamam|
-||Close|Tamam|Tamam|
+||Kapat|Tamam|Tamam|
 ||Kaydet|Tamam|Tamam|
 ||Yeniden İmzala|Tamam|Tamam|
-||Yeni|Tamam|Desteklenmez|
+||Yeni|Tamam|Desteklenmiyor|
 ||Update (aşağıya bakın)|Tamam|Tamam|
 |.NET Framework'ün 4 sürümünü hedefleyen uygulamalar için bildirim|Open|Tamam|Tamam|
-||Close|Tamam|Tamam|
+||Kapat|Tamam|Tamam|
 ||Kaydet|Tamam|Tamam|
 ||Yeniden İmzala|Tamam|Tamam|
-||Yeni|Desteklenmez|Tamam|
-||Update (aşağıya bakın)|Desteklenmez|Tamam|
+||Yeni|Desteklenmiyor|Tamam|
+||Update (aşağıya bakın)|Desteklenmiyor|Tamam|
 
 |Bildirim sürümü|Update İşlemi Ayrıntıları|Mage v2.0|Mage v4.0|
 |----------------------|------------------------------|---------------|---------------|
 |.NET Framework'ün 2.0 veya 3.x sürümünü hedefleyen uygulamalar için bildirim|Bir derlemeyi değiştir|Tamam|Tamam|
 ||Bir derleme ekle|Tamam|Tamam|
 ||Bir derlemeyi kaldır|Tamam|Tamam|
-|.NET Framework'ün 4 sürümünü hedefleyen uygulamalar için bildirim|Bir derlemeyi değiştir|Desteklenmez|Tamam|
-||Bir derleme ekle|Desteklenmez|Tamam|
-||Bir derlemeyi kaldır|Desteklenmez|Tamam|
+|.NET Framework'ün 4 sürümünü hedefleyen uygulamalar için bildirim|Bir derlemeyi değiştir|Desteklenmiyor|Tamam|
+||Bir derleme ekle|Desteklenmiyor|Tamam|
+||Bir derlemeyi kaldır|Desteklenmiyor|Tamam|
 
- Mage. exe, .NET Framework 4 Istemci profilini hedefleyen yeni bildirimler oluşturur. .NET Framework 4 Istemci profilini hedefleyen ClickOnce uygulamaları hem .NET Framework 4 Istemci profilinde hem de .NET Framework 4 ' ün tam sürümünde çalıştırılabilir. Uygulamanız .NET Framework 4 ' ün tam sürümünü hedefliyorsa ve .NET Framework 4 Istemci profilinde çalıştırıdıysanız, bir metin düzenleyicisi kullanarak istemci `<framework>` öğesini kaldırın ve bildirimi yeniden imzalayın.
+ Mage.exe ,.NET Framework 4 İstemci Profilini hedefleyen yeni bildirimler oluşturur. .NET Framework 4 İstemci Profilini hedefleyen clickOnce uygulamaları hem .NET Framework 4 İstemci Profili'nde hem de .NET Framework 4'ün tam sürümünde çalıştırılabilir. Uygulamanız .NET Framework 4'ün tam sürümünü hedefliyorsa ve .NET Framework 4 `<framework>` İstemci Profili'nde çalıştırılamıyorsa, bir metin düzenleyicisi kullanarak istemci öğesini kaldırın ve bildirimi yeniden imzalayın.
 
-Aşağıda, .NET Framework 4 Istemci profilini hedefleyen bir örnek `<framework>` öğesi verilmiştir:
+Aşağıda .NET `<framework>` Framework 4 İstemci Profilini hedefleyen bir örnek öğesi ver:
 
 ```xml
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />
@@ -149,7 +149,7 @@ Aşağıda, .NET Framework 4 Istemci profilini hedefleyen bir örnek `<framework
 
 ## <a name="examples"></a>Örnekler
 
-Aşağıdaki örnek, Mage için Kullanıcı arabirimini açar (*MageUI. exe*).
+Aşağıdaki örnek, Mage *(MageUI.exe)* için kullanıcı arabirimini açar.
 
 ```console
 mage
@@ -162,7 +162,7 @@ mage -New Deployment
 mage -New Application
 ```
 
-Aşağıdaki örnek, geçerli dizindeki derlemelerle ve kaynak dosyalarıyla doldurulan bir uygulama bildirimi oluşturur.
+Aşağıdaki örnek, geçerli dizindeki tüm derlemeler ve kaynak dosyalarıyla dolu bir uygulama bildirimi oluşturur.
 
 ```console
 mage -New Application -FromDirectory . -Version 1.0.0.0
@@ -181,7 +181,7 @@ mage -New Application -FromDirectory . -Version 1.0.0.0 -WPFBrowserApp true
 mage -New Deployment -AppManifest 1.0.0.0\application.manifest -WPFBrowserApp true
 ```
 
-Aşağıdaki örnek, geçerli dizinden alınan tüm derlemeler ve kaynak dosyaları ile doldurulmuş bir uygulama bildirimi oluşturur ve imzalar.
+Aşağıdaki örnek, geçerli dizin ve işaretlerden tüm derlemeler ve kaynak dosyalarıyla dolu bir uygulama bildirimi oluşturur.
 
 ```console
 mage -New Application -FromDirectory . -Version 1.0.0.0 -KeyContainer keypair.snk -CryptoProvider "Microsoft Enhanced Cryptographic Provider v1.0"
@@ -211,7 +211,7 @@ Aşağıdaki örnek geçerli çalışma dizinindeki bir dijital sertifikayı kul
 mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
 ```
 
-Aşağıdaki örnek, geçerli çalışma dizininde bir dijital sertifika ve özel anahtar kullanarak mevcut bir dağıtım bildirimini imzalar.
+Aşağıdaki örnek, geçerli çalışma dizininde dijital sertifika ve özel anahtar kullanarak varolan bir dağıtım bildirimini imzalar.
 
 ```console
 mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enhanced Cryptographic Provider v1.0"
@@ -222,5 +222,5 @@ mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -Cryp
 - [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)
 - [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
 - [Güvenilir Uygulama Dağıtımına Genel Bakış](/visualstudio/deployment/trusted-application-deployment-overview)
-- [MageUI.exe (Bildirim Oluşturma ve Düzenleme Aracı, Grafik İstemci)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [MageUI.exe (Bildirim Üretme ve Düzenleme Aracı, Grafik İstemci)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
 - [Komut İstemleri](developer-command-prompt-for-vs.md)

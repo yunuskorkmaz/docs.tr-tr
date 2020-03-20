@@ -1,53 +1,53 @@
 ---
-title: 'Öğretici: Windows Communication Foundation uygulamalarla çalışmaya başlama'
-description: Bu öğreticiler WCF uygulamaları oluşturmaya yönelik bir giriş sağlar.
+title: 'Öğretici: Windows Communication Foundation uygulamaları ile başlayın'
+description: Bu öğreticiler WCF uygulamaları oluşturmak için bir giriş sağlar.
 ms.date: 01/25/2019
 helpviewer_keywords:
 - WCF [WCF], get started
 - Windows Communication Foundation [WCF], get started
 - get started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: d4613edefeb8db2c0d1e11e925f8ac41329efb0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df73f953372202796cebce9d3e3f28bd617c67ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929551"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184118"
 ---
-# <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>Öğretici: Windows Communication Foundation uygulamalarla çalışmaya başlama
-Şu öğretici serisinde, Windows Communication Foundation (programlama deneyimi WCF için) sunar. Bu öğreticileri sırasıyla üzerinden geçmeden WCF uygulamaları oluşturmak için gerekli adımları tanıtıcı bir anlayış verir. İşlemi tamamladığınızda, çalışan bir WCF hizmeti ve hizmetini çağıran bir WCF istemcisi sahip olacaksınız. 
+# <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>Öğretici: Windows Communication Foundation uygulamaları ile başlayın
+Aşağıdaki öğreticiler serisi sizi Windows Communication Foundation (WCF) programlama deneyimiyle tanıştırır. Bu öğreticiler aracılığıyla çalışmak, WCF uygulamaları oluşturmak için gereken adımları anlamanızı sağlayacaktır. Bitirdikten sonra, çalışan bir WCF hizmetiniz ve hizmeti çağıran bir WCF istemciniz olur.
 
-Bu öğretici, geliştirme ortamı olarak Visual Studio kullanıyorsanız varsayar. Başka bir geliştirme ortamı kullanıyorsanız, Visual Studio özgü yönergeleri yoksayın. 
+Öğretici, Visual Studio'yu geliştirme ortamı olarak kullandığınızı varsayar. Başka bir geliştirme ortamı kullanıyorsanız, Visual Studio'ya özgü yönergeleri yoksayın.
 
-İndirip çalıştırabileceğiniz örnek WCF uygulamalar için bkz: [Windows Communication Foundation örnekleri](samples/index.md). Örnekleri bir giriş için bkz [Başlarken örnek](samples/getting-started-sample.md).
+İndirebileceğiniz ve çalıştırabileceğiniz örnek WCF uygulamaları için [Windows Communication Foundation örneklerine](samples/index.md)bakın. Örneklere giriş için [bkz.](samples/getting-started-sample.md)
 
-Hizmetler ve istemcileri oluşturma hakkında daha ayrıntılı bilgi için bkz: [temel WCF programlama](basic-wcf-programming.md).
+Hizmet ve istemci oluşturma hakkında daha ayrıntılı bilgi için [Temel WCF programlamaya](basic-wcf-programming.md)bakın.
 
-## <a name="wcf-tutorials"></a>WCF öğreticiler
+## <a name="wcf-tutorials"></a>WCF eğitimleri
 
-İlk üç öğretici, bir WCF hizmet sözleşmesini tanımlama, nasıl ve sitemi barındırmak nasıl açıklanmaktadır. Oluşturduğunuz bir konsol uygulaması içinde şirket içinde barındırılan hizmetidir. Ayrıca Microsoft Internet Information Services (IIS) altında Hizmetleri barındırabilir. Daha fazla bilgi için [nasıl yapılır: IIS'de WCF Hizmeti barındırma](feature-details/how-to-host-a-wcf-service-in-iis.md). Öğreticide hizmeti yapılandırmak için kod kullansa da, ayrıca [hizmetlerini yapılandırma dosyasındaki yapılandırma](configuring-services-using-configuration-files.md). 
+İlk üç öğretici, bir WCF hizmet sözleşmesinin nasıl tanımlanacağını, nasıl uygulanacağını ve nasıl barındırılabildiğini açıklar. Oluşturduğunuz hizmet, konsol uygulamasında kendi kendine barındırılır. Ayrıca, Microsoft Internet Information Services (IIS) altında da hizmetleri barındırabilirsiniz. Daha fazla bilgi için [bkz: IIS'de bir WCF Hizmeti barındırın.](feature-details/how-to-host-a-wcf-service-in-iis.md) Öğreticideki hizmeti yapılandırmak için kod kullanmanıza rağmen, bir yapılandırma dosyasındaki hizmetleri de [yapılandırabilirsiniz.](configuring-services-using-configuration-files.md)
 
-- [Öğretici: Bir hizmet sözleşmesini tanımlama](how-to-define-a-wcf-service-contract.md)
+- [Öğretici: Hizmet sözleşmesi tanımlama](how-to-define-a-wcf-service-contract.md)
 
-    Kullanıcı tanımlı bir arabirimle'de bir WCF sözleşmesi oluşturun. Bu sözleşme hizmet sunan işlevleri tanımlar.
+    Kullanıcı tanımlı arabirimiçeren bir WCF sözleşmesi oluşturursunuz. Bu sözleşme, hizmetin ortaya çıkardığı işlevselliği tanımlar.
 
-- [Öğretici: Bir hizmet sözleşmesini uygulama](how-to-implement-a-wcf-contract.md)
+- [Öğretici: Bir hizmet sözleşmesi uygulayın](how-to-implement-a-wcf-contract.md)
 
-    Bir sözleşme tanımladıktan sonra bir hizmet sınıfı ile uygulamanız gerekir.
+    Bir sözleşme tanımladıktan sonra, bir hizmet sınıfı ile uygulamanız gerekir.
 
-- [Öğretici: Temel hizmet barındırma ve çalıştırma](how-to-host-and-run-a-basic-wcf-service.md)
+- [Öğretici: Ana bilgisayar ve temel bir hizmet çalıştırın](how-to-host-and-run-a-basic-wcf-service.md)
 
-    Hizmet için bir uç noktasını yapılandırın ve hizmeti bir konsol uygulamasında barındırın. Bir hizmeti etkin duruma gelmesi bir çalışma zamanı ortamında ana ve yapılandırmanız gerekir. Bu çalışma zamanı ortamının hizmeti oluşturur ve yaşam süresi ve bağlam denetler.
+    Hizmet için bir bitiş noktası yapılandırın ve hizmeti bir konsol uygulamasında barındırın. Bir hizmetin etkin olabilmesi için, bir hizmetin çalışma zamanı ortamında yapılandırması ve barındırması gerekir. Bu çalışma zamanı ortamı hizmeti oluşturur ve içeriğini ve kullanım ömrünü denetler.
 
-Sonraki iki öğreticiler açıklayan oluşturma, yapılandırma ve kullanım hizmeti işlemleri çağırmak için bir istemci uygulaması kullanıma sunar. Hizmetleri, bir istemci uygulama hizmeti ile iletişim için gereken bilgileri tanımlayan meta verileri yayımlama. Visual Studio bu meta verilere erişme işlemini otomatikleştiren ve hizmeti için istemci uygulaması oluşturmak için kullanır. Visual Studio kullanmamaya karar verirseniz, kullanabileceğiniz [ServiceModel meta veri yardımcı programracı (*Svcutil.exe*)](servicemodel-metadata-utility-tool-svcutil-exe.md) yerine.
+Sonraki iki öğretici, hizmetin ortaya çıkardığı işlemleri çağırmak için bir istemci uygulamasını nasıl oluşturup, yapılandıracak ve kullanacağınızı açıklar. Hizmetler, istemci uygulamasının hizmetle iletişim kurmak için ihtiyaç duyduğu bilgileri tanımlayan meta veriler yayımlar. Visual Studio bu meta verilere erişim işlemini otomatikleştirir ve hizmet için istemci uygulamasını oluşturmak için kullanır. Visual Studio'yu kullanmamaya karar verirseniz, bunun yerine [ServiceModel Metadata Utility aracını *(Svcutil.exe)*](servicemodel-metadata-utility-tool-svcutil-exe.md) kullanabilirsiniz.
 
-- [Öğretici: Bir istemci oluşturma](how-to-create-a-wcf-client.md)
+- [Öğretici: İstemci oluşturma](how-to-create-a-wcf-client.md)
 
-    Bir WCF hizmetinden WCF istemci proxy oluşturma için meta verileri alır. Bir hizmet başvurusu eklemek için Visual Studio kullanarak meta verilerini almak veya ServiceModel meta veri yardımcı programracı kullanabilirsiniz. İstemcinin hizmete erişmek için kullandığı uç noktası belirtin.
+    Bir WCF hizmetinden WCF istemci proxy'si oluşturmak için meta verileri alın. Bir hizmet başvurusu eklemek için Visual Studio'yu kullanarak meta verileri alırsınız veya ServiceModel Metadata Utility aracını kullanabilirsiniz. İstemcinin hizmete erişmek için kullandığı bitiş noktasını belirtirsiniz.
 
-- [Öğretici: Bir istemci kullanın](how-to-use-a-wcf-client.md)
+- [Öğretici: İstemci kullanma](how-to-use-a-wcf-client.md)
 
-    WCF istemci proxy hizmet işlemlerini aramak üzere kullanın.
+    Hizmet işlemlerini aramak için WCF istemci proxy'sini kullanın.
 
 ## <a name="reference"></a>Başvuru
 
@@ -57,18 +57,18 @@ Sonraki iki öğreticiler açıklayan oluşturma, yapılandırma ve kullanım hi
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kavramsal genel bakış](conceptual-overview.md)
-- [Belgeler için kılavuz](guide-to-the-documentation.md)
+- [Dokümantasyon kılavuzu](guide-to-the-documentation.md)
 - [Windows Communication Foundation nedir](whats-wcf.md)
 - [WCF özellik ayrıntıları](feature-details/index.md)
 - [Temel programlama yaşam döngüsü](basic-programming-lifecycle.md)
-- [İstemci derleme](building-clients.md)
+- [Müşteri oluşturma](building-clients.md)
 - [Temel WCF programlama](basic-wcf-programming.md)
-- [Nasıl yapılır: Çift yönlü sözleşme oluşturma](feature-details/how-to-create-a-duplex-contract.md)
-- [Nasıl yapılır: Çift yönlü sözleşme ile hizmetlere erişim](feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [ServiceModel meta veri yardımcı programracı (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Nasıl yapılır: Meta veri belgelerini indirmek için svcutil.exe kullanma](feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
-- [Nasıl yapılır: Bir yapılandırma dosyası kullanarak bir hizmet için meta verileri yayımlama](feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [Hizmetler ve istemcileri yapılandırmak için bağlamaları kullanma](using-bindings-to-configure-services-and-clients.md)
-- [Başlarken örneği](samples/getting-started-sample.md)
+- [Nasıl?](feature-details/how-to-create-a-duplex-contract.md)
+- [Nasıl yapilir: Çift yönlü sözleşmeyle hizmetlere erişin](feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [ServiceModel Metadata Yardımcı araç (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Nasıl kullanılır: Meta veri belgelerini indirmek için Svcutil.exe'yi kullanın](feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
+- [Nasıl kullanılır: Yapılandırma dosyasını kullanarak bir hizmet için meta veri yayımlama](feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](using-bindings-to-configure-services-and-clients.md)
+- [Başlatma örneği](samples/getting-started-sample.md)
 - [Windows Communication Foundation örnekleri](samples/index.md)
 - [Kendini Barındırma](samples/self-host.md)

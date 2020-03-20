@@ -14,48 +14,48 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-ms.openlocfilehash: f197c8802bd9e55391b3e3e20c64398736070a16
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f3b51c1b376fa9c664de53aa76ec724ca305ae6a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136330"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178173"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion İşlevi
-Belirtilen arabelleği kullanarak belirtilen dosyanın ortak dil çalışma zamanı (CLR) sürüm bilgilerini alır.  
+Belirtilen arabelleği kullanarak, belirtilen dosyanın ortak dil çalışma süresi (CLR) sürüm bilgilerini alır.  
   
- Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
+ Bu işlev .NET Framework 4'te amortismana hazırlanmıştır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetFileVersion (  
-    [in]  LPCWSTR      szFilename,   
-    [in, out] LPWSTR   szBuffer,   
-    [in]  DWORD        cchBuffer,   
+    [in]  LPCWSTR      szFilename,
+    [in, out] LPWSTR   szBuffer,
+    [in]  DWORD        cchBuffer,
     [out] DWORD        *dwLength  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `szFilename`  
- 'ndaki İnceedilecek dosyanın yolu.  
+ [içinde] İncelenecek dosyanın yolu.  
   
  `szBuffer`  
- [in, out] Döndürülen sürüm bilgileri için ayrılan arabellek.  
+ [içinde, dışarı] Döndürülen sürüm bilgileri için ayrılan arabellek.  
   
  `cchBuffer`  
- 'ndaki `szBuffer`geniş karakterdeki boyut.  
+ [içinde] Boyutu, geniş karakterler, . `szBuffer`  
   
  `dwLength`  
- dışı Döndürülen `szBuffer`bayt cinsinden boyutu.  
+ [çıkış] Döndürülen baytların `szBuffer`boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE. h  
+ **Üstbilgi:** MSCorEE.h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

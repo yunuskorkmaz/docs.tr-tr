@@ -15,60 +15,60 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-ms.openlocfilehash: 76c033b11f3212241827d74f4fe18ee881f20b64
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a04a0c5e6865c3664d2cb5fb341c3625e35d4d7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127044"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178123"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess İşlevi
 Belirtilen işlem tanıtıcısıyla ilişkili ortak dil çalışma zamanının (CLR) sürüm numarasını alır.  
   
- Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
+ Bu işlev .NET Framework 4'te amortismana hazırlanmıştır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetVersionFromProcess (  
-    [in]  HANDLE  hProcess,   
-    [out] LPWSTR  pVersion,   
-    [in]  DWORD   cchBuffer,   
+    [in]  HANDLE  hProcess,
+    [out] LPWSTR  pVersion,
+    [in]  DWORD   cchBuffer,
     [out] DWORD  *dwLength  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `hProcess`  
- 'ndaki Bir işleme yönelik bir tanıtıcı.  
+ [içinde] Bir işlemin sapı.  
   
  `pVersion`  
- dışı Yöntemi başarıyla tamamlandıktan sonra sürüm numarası dizesini içeren bir arabellek.  
+ [çıkış] Yöntemin başarıyla tamamlanmasından sonra sürüm numarası dizesini içeren bir arabellek.  
   
  `cchBuffer`  
- 'ndaki Sürüm arabelleğinin uzunluğu.  
+ [içinde] Sürüm arabelleği uzunluğu.  
   
  `pdwLength`  
- dışı Sürüm numarası dizesinin uzunluğuna yönelik bir işaretçi.  
+ [çıkış] Sürüm numarası dizesinin uzunluğuna işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem, aşağıdaki değerlere ek olarak, WinError. h içinde tanımlanan standart bileşen nesne modeli (COM) hata kodlarını döndürür.  
+ Bu yöntem, aşağıdaki değerlere ek olarak WinError.h'de tanımlandığı şekilde standart Bileşen Nesne Modeli (COM) hata kodlarını döndürür.  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_INVALIDARG|`pVersion` null ve `cchBuffer` null ya da tam tersi.<br /><br /> veya<br /><br /> `hProcess`, işlem için geçerli bir tanıtıcı değil.<br /><br /> veya<br /><br /> CLR yüklü değil.|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` null veya sürüm dizesinin uzunluğundan daha küçük.|  
-|E_NOTIMPL|Bu yöntem Microsoft Windows 95, Microsoft Windows 98 veya Microsoft Windows Millennium Edition işletim sisteminde kullanılamaz.|  
+|E_ınvalıdarg|`pVersion`null ve `cchBuffer` null değildir, ya da tersi.<br /><br /> -veya-<br /><br /> `hProcess`bir işlem için geçerli bir tutamaç değildir.<br /><br /> -veya-<br /><br /> CLR dolu değil.|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer`null veya sürüm dize uzunluğu daha azdır.|  
+|E_notımpl|Bu yöntem Microsoft Windows 95, Microsoft Windows 98 veya Microsoft Windows Millennium Edition işletim sisteminde kullanılamaz.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE. h  
+ **Üstbilgi:** MSCorEE.h  
   
- **Kitaplık:** MSCorEE. dll  
+ **Kütüphane:** Mscoree.dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

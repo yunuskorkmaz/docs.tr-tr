@@ -1,5 +1,5 @@
 ---
-title: Createıdispatchstaforwarder Işlevi-WPF yönetilmeyen API başvurusu
+title: CreateIDispatchSTAForwarder Fonksiyonu - WPF yönetilmeyen API başvurusu
 titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
@@ -9,23 +9,23 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 57a02dfa-f091-4ace-9c06-1f4ab52b3527
-ms.openlocfilehash: 67f2542733fb9c6af197c99ede2bd097ce876b5d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e151ffa6eb5f1dc7479c699e0d7f9f3f57833ebd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738037"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174725"
 ---
-# <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a>Createıdispatchstaforwarder Işlevi (WPF yönetilmeyen API Başvurusu)
-Bu API Windows Presentation Foundation (WPF) altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
+# <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a>CreateIDispatchSTAForwarder Fonksiyonu (WPF Yönetilmeyen API Başvurusu)
+Bu API, Windows Sunu Temeli (WPF) altyapısını destekler ve doğrudan kodunuzdan kullanılmak üzere tasarlanmamıştır.  
   
- İş parçacığı ve Windows yönetimi için Windows Presentation Foundation (WPF) altyapısı tarafından kullanılır.  
+ İş parçacığı ve windows yönetimi için Windows Presentation Foundation (WPF) altyapısı tarafından kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT CreateIDispatchSTAForwarder(  
-   __in IDispatch *pDispatchDelegate,   
+   __in IDispatch *pDispatchDelegate,
    __deref_out IDispatch **ppForwarder  
 )  
 ```  
@@ -33,22 +33,22 @@ HRESULT CreateIDispatchSTAForwarder(
 ## <a name="parameters"></a>Parametreler  
   
 ## <a name="property-valuereturn-value"></a>Özellik Değeri/Dönüş Değeri  
- pDispatchDelegate  
- `IDispatch` arabirimine yönelik bir işaretçi.  
+ pDispatchTemsilcisi  
+ `IDispatch` Arabirime işaretçi.  
   
  ppForwarder  
- `IDispatch` arabiriminin adresine yönelik bir işaretçi.  
+ `IDispatch` Arabirimin adresine işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [.NET Framework sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [.NET Çerçeve Sistem Gereksinimleri](../../get-started/system-requirements.md).  
   
- **DOSYASıNı**  
+ **Dll:**  
   
- .NET Framework 3,0 ve 3,5: PresentationHostDLL. dll  
+ .NET Framework 3.0 ve 3.5: PresentationHostDLL.dll  
   
- .NET Framework 4 ve üzeri: PresentationHost_v0400. dll  
+ .NET Framework 4 ve sonraki olarak: PresentationHost_v0400.dll  
   
- **.NET Framework sürümü:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **.NET Çerçeve Sürümü:**[!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

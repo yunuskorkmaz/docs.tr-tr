@@ -2,42 +2,42 @@
 title: HTTPS Üzerinden Özel Bağlama Güvenli Oturum
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: b83f7af2cd4d0518454a5147904c21c9ffbbbf21
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 051e7f56662a2ca67018ae7dd29189ff50245fc8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710971"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183871"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>HTTPS Üzerinden Özel Bağlama Güvenli Oturum
-Bu örnek, SSL Aktarım güvenliği 'nin güvenilir oturumlarla kullanımını gösterir. Güvenilir Oturumlar, WS-güvenilir mesajlaşma protokolünü uygular. Güvenilir Oturumlar üzerinde WS-Security oluşturarak güvenli bir güvenilir oturumunuz olabilir. Ancak bazen, SSL ile HTTP Transport Security kullanmayı tercih edebilirsiniz.  
+Bu örnek, Güvenilir Oturumlar ile SSL taşıma güvenliği kullanımını göstermektedir. Güvenilir Oturumlar, WS-Güvenilir Mesajlaşma protokolünü uygular. Güvenilir Oturumlar üzerinden WS-Security oluşturarak güvenli ve güvenilir bir oturum alabilirsiniz. Ancak bazen, bunun yerine SSL ile HTTP aktarım güvenliğini kullanmayı seçebilirsiniz.  
   
 > [!IMPORTANT]
-> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
->   
+> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
->   
+>
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSessionOverHttps`  
   
 ## <a name="sample-details"></a>Örnek Ayrıntılar  
- SSL, paketlerin kendilerine güvenmesini sağlar. Bu, WS-Secure konuşması kullanılarak güvenilir oturumu güvenli hale getirmenin farklı olduğunu unutmamak önemlidir.  
+ SSL, paketlerin kendilerinin güvende olmasını sağlar. Bunun WS-Secure Conversation'ı kullanarak güvenilir oturumu güvence altına almaktan farklı olduğunu unutmayın.  
   
- HTTPS üzerinden güvenilir oturum kullanmak için özel bir bağlama oluşturmanız gerekir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) Başlarken hizmetini temel alır. Güvenilir oturum bağlama öğesi ve [\<httpsTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md)kullanılarak özel bir bağlama oluşturulur. Aşağıdaki yapılandırma özel bağlamadır.  
+ HTTPS üzerinden güvenilir oturum kullanmak için özel bir bağlama oluşturmanız gerekir. Bu örnek, bir hesap makinesi hizmeti uygulayan [Başlarken'e](../../../../docs/framework/wcf/samples/getting-started-sample.md) dayanır. Güvenilir oturum bağlama öğesi ve [ \<httpsTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md)kullanılarak özel bir bağlama oluşturulur. Aşağıdaki yapılandırma özel bağlama dır.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
     <services>  
-      <service   
+      <service
           name="Microsoft.ServiceModel.Samples.CalculatorService"  
           behaviorConfiguration="CalculatorServiceBehavior">  
         <!-- use base address provided by host -->  
         <endpoint address=""  
                   binding="customBinding"  
-                  bindingConfiguration="reliableSessionOverHttps"   
+                  bindingConfiguration="reliableSessionOverHttps"
                   contract="Microsoft.ServiceModel.Samples.ICalculator" />  
         <!-- the mex endpoint is exposed as http://localhost/servicemodelsamples/service.svc/mex-->  
         <endpoint address="mex"  
@@ -70,7 +70,7 @@ Bu örnek, SSL Aktarım güvenliği 'nin güvenilir oturumlarla kullanımını g
 </configuration>  
 ```  
   
- Örnekteki program kodu, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hizmetindekilerle aynıdır. Örneği oluşturmadan önce bir sertifika oluşturmalı ve Web sunucusu Sertifika sihirbazını kullanarak atamanız gerekir. Yapılandırma dosyası ayarlarındaki uç nokta tanımı ve bağlama tanımı, istemci için aşağıdaki örnek yapılandırmada gösterildiği gibi özel bağlamanın kullanımını etkinleştirir.  
+ Örnekteki program kodu, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hizmetiyle aynıdır. Örneği oluşturmadan ve çalıştırmadan önce Web Sunucusu Sertifika Sihirbazı'nı kullanarak bir sertifika oluşturmanız ve atamanız gerekir. Yapılandırma dosyası ayarlarındaki uç nokta tanımı ve bağlama tanımı, istemci için aşağıdaki örnek yapılandırmada gösterildiği gibi özel bağlama kullanımını sağlar.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -80,9 +80,9 @@ Bu örnek, SSL Aktarım güvenliği 'nin güvenilir oturumlarla kullanımını g
     <client>  
       <!-- this endpoint has an https: address -->  
       <endpoint name=""  
-                address="https://localhost/servicemodelsamples/service.svc"   
-                binding="customBinding"   
-                bindingConfiguration="reliableSessionOverHttps"   
+                address="https://localhost/servicemodelsamples/service.svc"
+                binding="customBinding"
+                bindingConfiguration="reliableSessionOverHttps"
                 contract="Microsoft.ServiceModel.Samples.ICalculator" />  
     </client>  
   
@@ -92,7 +92,7 @@ Bu örnek, SSL Aktarım güvenliği 'nin güvenilir oturumlarla kullanımını g
             <reliableSession />  
             <httpsTransport />  
           </binding>  
-        </customBinding>        
+        </customBinding>
     </bindings>  
   
   </system.serviceModel>  
@@ -100,16 +100,16 @@ Bu örnek, SSL Aktarım güvenliği 'nin güvenilir oturumlarla kullanımını g
 </configuration>  
 ```  
   
- Belirtilen adres https://düzenini kullanır.  
+ Belirtilen adres https:// düzenini kullanır.  
   
- Bu örnekte kullanılan sertifika, MakeCert. exe ile oluşturulmuş bir test sertifikası olduğundan, https://localhost/servicemodelsamples/service.svc gibi bir https: adresine erişmeye çalıştığınızda bir güvenlik uyarısı görüntülenir. Windows Communication Foundation (WCF) istemcisinin bir test sertifikasıyla çalışmasına izin vermek için, güvenlik uyarısını bastırmak üzere istemciye bazı ek kodlar eklenmiştir. Üretim sertifikaları kullanılırken bu kod ve eşlik eden sınıf gerekli değildir.  
+ Bu örnekte kullanılan sertifika Makecert.exe ile oluşturulmuş bir test sertifikası olduğundan, tarayıcınızdan bir https adresine https://localhost/servicemodelsamples/service.svcerişmeye çalıştığınızda bir güvenlik uyarısı görüntülenir. Windows Communication Foundation (WCF) istemcisinin yerinde bir test sertifikasıyla çalışmasına izin vermek için, istemciye güvenlik uyarısını bastırmak için bazı ek kodlar eklendi. Üretim sertifikaları kullanırken bu kod ve beraberindeki sınıf gerekli değildir.  
 
 ```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
 ```
 
- Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemciyi kapatmak için istemci penceresinde ENTER tuşuna basın.  
   
 ```console  
 Add(100,15.99) = 115.99  
@@ -120,18 +120,18 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
   
-1. Aşağıdaki komutu kullanarak ASP.NET 4,0 ' ü yükler.  
+1. Aşağıdaki komutu kullanarak 4.0 ASP.NET yükleyin.  
   
     ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
+2. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
   
-3. [Internet Information Services (IIS) sunucu sertifikası yükleme yönergelerini](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)gerçekleştirdiğinizden emin olun.  
+3. Internet Information Services [(IIS) Server Certificate Kurulum Yönergesi'ni](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)gerçekleştirdiğinizi belirtin.  
   
-4. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
+4. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak [için, Windows Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
   
-5. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
+5. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  

@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: fbc418e8-fa22-420d-84ec-e0e1800db041
 topic_type:
 - apiref
-ms.openlocfilehash: b9eab1274f2d0ad562c0dec6adeddb85c6cfc458
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c7a1bf3cb10cbc8cdae2788b45e1badaf66a9dbd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138388"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178874"
 ---
 # <a name="icordebugheapvalue2createhandle-method"></a>ICorDebugHeapValue2::CreateHandle Yöntemi
-Bu ICorDebugHeapValue2 nesnesi tarafından temsil edilen yığın değeri için belirtilen türden bir tanıtıcı oluşturur.  
+Bu ICorDebugHeapValue2 nesnesi tarafından temsil edilen yığın değeri için belirtilen türde bir tutamaç oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT CreateHandle (  
-    [in] CorDebugHandleType      type,   
+    [in] CorDebugHandleType      type,
     [out] ICorDebugHandleValue   **ppHandle  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `type`  
- 'ndaki Oluşturulacak tanıtıcının türünü belirten Cordebugghandlitype numaralandırmasının değeri.  
+ [içinde] Oluşturulacak tutamaç türünü belirten CorDebugHandleType numaralandırmasının değeri.  
   
  `ppHandle`  
- dışı Bu yığın değeri için yeni tanıtıcıyı temsil eden bir ıcorıbu Ghandtavalue nesnesinin adresine yönelik bir işaretçi.  
+ [çıkış] Bu yığın değeri için yeni tanıtıcıyı temsil eden bir ICorDebugHandleValue nesnesinin adresine işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tanıtıcı, yığın değeriyle ilişkili uygulama etki alanında oluşturulur ve uygulama etki alanı kaldırıldığında geçersiz olur.  
+ Tanıtıcı, yığın değeriyle ilişkili uygulama etki alanında oluşturulur ve uygulama etki alanı boşaltılırsa geçersiz olur.  
   
- Aynı yığın değeri için bu işleve birden çok çağrı birden çok tanıtıcı oluşturacak. Tutamaçlar çöp toplayıcısının performansını etkilediği için, hata ayıklayıcı kendisini her seferinde etkin olan görece küçük tanıtıcılara (yaklaşık 256) sınıralmalıdır.  
+ Aynı yığın değeri için bu işleve yapılan birden çok çağrı birden çok tutamaç oluşturur. Tutamaçları çöp toplayıcının performansını etkilediğinden, hata ayıklayıcı nın kendisini bir seferde etkin olan nispeten az sayıda (yaklaşık 256) tutamakla sınırlaması gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

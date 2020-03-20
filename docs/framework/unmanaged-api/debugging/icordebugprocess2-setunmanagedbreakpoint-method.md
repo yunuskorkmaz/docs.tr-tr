@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93829d15-d942-4e2d-b7a4-dfc9d7fb96be
 topic_type:
 - apiref
-ms.openlocfilehash: ffab2762fd86e95c3272ca456039028e0897bc41
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb8b8f3e29c141e91587a4d0cdc81cdabccdbc9e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137173"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178643"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint Yöntemi
-Belirtilen yerel görüntü uzaklığında yönetilmeyen bir kesme noktası ayarlar.  
+Belirtilen yerel görüntü ofsetinde yönetilmeyen bir kesme noktası ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,7 +31,7 @@ Belirtilen yerel görüntü uzaklığında yönetilmeyen bir kesme noktası ayar
 HRESULT SetUnmanagedBreakpoint (  
     [in]  CORDB_ADDRESS    address,  
     [in]  ULONG32          bufsize,  
-    [out, size_is(bufsize), length_is(*bufLen)]   
+    [out, size_is(bufsize), length_is(*bufLen)]
         BYTE               buffer[],  
     [out] ULONG32          *bufLen  
 );  
@@ -39,25 +39,25 @@ HRESULT SetUnmanagedBreakpoint (
   
 ## <a name="parameters"></a>Parametreler  
  `address`  
- 'ndaki Yerel görüntü sapmasını belirten `CORDB_ADDRESS` nesnesi.  
+ [içinde] Yerel `CORDB_ADDRESS` görüntü ofset belirten bir nesne.  
   
  `bufsize`  
- 'ndaki `buffer` dizisinin bayt cinsinden boyutu.  
+ [içinde] Dizinin boyutu, baytlar halinde. `buffer`  
   
  `buffer`  
- dışı Kesme noktası tarafından değiştirilmiş Opcode içeren bir dizi.  
+ [çıkış] Kesme noktası yla değiştirilen opcode içeren bir dizi.  
   
  `bufLen`  
- dışı `buffer` dizisinde döndürülen bayt sayısına yönelik bir işaretçi.  
+ [çıkış] Dizide döndürülen bayt sayısına `buffer` işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yerel görüntü boşluğu ortak dil çalışma zamanı (CLR) içindeyse, kesme noktası yok sayılır. Bu, bir kesme noktası hata ayıklayıcı tarafından ayarlandığında, CLR 'nin bant dışı bir kesme noktası gönderdikten engel olmasını sağlar.  
+ Yerel görüntü ofset ortak dil çalışma süresi (CLR) içinde ise, kesme noktası yoksayılır. Bu, CLR'nin hata ayıklayıcı tarafından kesme noktası ayarlandığında bant dışı bir kesme noktası göndermekten kaçınmasını sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

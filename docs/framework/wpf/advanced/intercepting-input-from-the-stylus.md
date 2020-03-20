@@ -10,67 +10,67 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: 7629843730a82584e94448ceac1ea574906876c9
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 17cf42a9d6d94d6ea12399561af5647df3b4d8c2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095144"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181927"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Ekran Kaleminden Gelen Girişi Önleme
-<xref:System.Windows.Input.StylusPlugIns> mimarisi, <xref:System.Windows.Input.Stylus> giriş ve dijital mürekkep <xref:System.Windows.Ink.Stroke> nesnelerinin oluşturulması üzerinde alt düzey denetimi uygulamaya yönelik bir mekanizma sağlar. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> sınıfı, özel davranışı uygulamanız ve en iyi performans için ekran kalemi aygıtından gelen veri akışına uygulamanız için bir mekanizma sağlar.  
+Mimari, <xref:System.Windows.Input.StylusPlugIns> giriş ve dijital mürekkep <xref:System.Windows.Input.Stylus> <xref:System.Windows.Ink.Stroke> nesnelerinoluşturulması üzerinde düşük düzeyli denetimi uygulamak için bir mekanizma sağlar. Sınıf, <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> özel davranışı uygulamanız ve en iyi performans için kalem aygıtından gelen veri akışına uygulamanız için bir mekanizma sağlar.  
   
- Bu konu, aşağıdaki alt bölümleri içerir:  
+ Bu konu aşağıdaki alt bölümleri içerir:  
   
 - [Mimari](#Architecture)  
   
-- [Ekran kalemi eklentilerini uygulama](#ImplementingStylusPlugins)  
+- [Stylus Eklentilerinin Uygulanması](#ImplementingStylusPlugins)  
   
-- [InkCanvas 'a eklenti ekleme](#AddingYourPluginToAnInkCanvas)  
+- [Eklentinizi Mürekkep Tuvaline Ekleme](#AddingYourPluginToAnInkCanvas)  
   
 - [Sonuç](#Conclusion)  
   
-<a name="Architecture"></a>   
+<a name="Architecture"></a>
 ## <a name="architecture"></a>Mimari  
- <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, [kalem girişine erişme ve düzenleme](https://docs.microsoft.com/previous-versions/ms818317(v%3dmsdn.10))konularında açıklanan [StylusInput](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms574861(v=vs.90)) API 'lerinin gelişmidir.  
+ Kalem <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> [Girişine Erişim ve Manipüle](https://docs.microsoft.com/previous-versions/ms818317(v%3dmsdn.10))etmede açıklanan [StylusInput](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms574861(v=vs.90)) API'lerinin evrimidir.  
   
- Her <xref:System.Windows.UIElement>, <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>bir <xref:System.Windows.UIElement.StylusPlugIns%2A> özelliğine sahiptir. Oluşturulan <xref:System.Windows.Input.StylusPoint> verileri işlemek için bir öğenin <xref:System.Windows.UIElement.StylusPlugIns%2A> özelliğine <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> ekleyebilirsiniz. <xref:System.Windows.Input.StylusPoint> veriler, sistem çizim tablası tarafından desteklenen <xref:System.Windows.Input.StylusPoint.X%2A> ve <xref:System.Windows.Input.StylusPoint.Y%2A> Point <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> verileri de dahil olmak üzere tüm özelliklerden oluşur.  
+ Her <xref:System.Windows.UIElement> biri <xref:System.Windows.UIElement.StylusPlugIns%2A> bir <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>. Verileri oluşturuldukça <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> işlemek <xref:System.Windows.Input.StylusPoint> için <xref:System.Windows.UIElement.StylusPlugIns%2A> bir öğenin özelliğine a ekleyebilirsiniz. <xref:System.Windows.Input.StylusPoint>veriler, sistem sayısallaştırıcısı tarafından desteklenen tüm özelliklerden, <xref:System.Windows.Input.StylusPoint.X%2A> <xref:System.Windows.Input.StylusPoint.Y%2A> nokta verileri ve <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> veriler de dahil olmak üzere oluşur.  
   
- <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> nesneleriniz, <xref:System.Windows.UIElement.StylusPlugIns%2A> özelliğine <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> eklediğinizde <xref:System.Windows.Input.Stylus> cihazdan gelen veri akışına doğrudan eklenir. <xref:System.Windows.UIElement.StylusPlugIns%2A> koleksiyonuna eklenen eklentilerin sırası, <xref:System.Windows.Input.StylusPoint> verileri alma sırasını belirler. Örneğin, girişi belirli bir bölgeye kısıtlayan bir filtre eklentisi ekler ve sonra yazıldığı şekilde hareketleri tanıyan bir eklenti eklerseniz, hareketleri tanıyan eklenti, filtrelenmiş <xref:System.Windows.Input.StylusPoint> verileri alır.  
+ Nesneyi <xref:System.Windows.UIElement.StylusPlugIns%2A> özelliğe eklediğinizde nesneleriniz doğrudan <xref:System.Windows.Input.Stylus> aygıttan gelen veri <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> akışına eklenir. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Eklentilerin <xref:System.Windows.UIElement.StylusPlugIns%2A> koleksiyona eklenme sırası, veri alma <xref:System.Windows.Input.StylusPoint> sırasını belirler. Örneğin, girişi belirli bir bölgeye kısıtlayan bir filtre eklentisi eklerseniz ve sonra hareketleri yazılı olarak tanıyan bir eklenti eklerseniz, hareketleri tanıyan eklenti <xref:System.Windows.Input.StylusPoint> filtrelenmiş veri alır.  
   
-<a name="ImplementingStylusPlugins"></a>   
-## <a name="implementing-stylus-plug-ins"></a>Ekran kalemi eklentilerini uygulama  
- Bir eklenti uygulamak için <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>bir sınıf türetebilirsiniz. Bu sınıf, <xref:System.Windows.Input.Stylus>veri akışını, ' dan geldiği şekilde uygulanır. Bu sınıfta <xref:System.Windows.Input.StylusPoint> verilerinin değerlerini değiştirebilirsiniz.  
+<a name="ImplementingStylusPlugins"></a>
+## <a name="implementing-stylus-plug-ins"></a>Stylus Eklentilerinin Uygulanması  
+ Bir eklenti uygulamak için, <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>bir sınıf türetmek. Bu sınıf o veri akışı ndan gelir olarak <xref:System.Windows.Input.Stylus>uygulanır. Bu sınıfta <xref:System.Windows.Input.StylusPoint> verilerin değerlerini değiştirebilirsiniz.  
   
 > [!CAUTION]
-> Bir <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> bir özel durum oluşturursa veya neden olursa uygulama kapanır. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> kullanan denetimleri kapsamlı test etmelisiniz ve yalnızca <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> özel durum oluşturmayacağından emin olmanız durumunda bir denetim kullanabilirsiniz.  
+> Bir <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> özel durum atar veya neden olursa, uygulama kapanır. Bir <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> tüketen denetimleri iyice test etmeli ve yalnızca <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> bir özel durum atmayacağından eminseniz bir denetim kullanmalısınız.  
   
- Aşağıdaki örnek, <xref:System.Windows.Input.Stylus> cihazdan geldiği gibi <xref:System.Windows.Input.StylusPoint> verilerdeki <xref:System.Windows.Input.StylusPoint.X%2A> ve <xref:System.Windows.Input.StylusPoint.Y%2A> değerlerini değiştirerek ekran kalemi girişini kısıtlayan bir eklentiyi gösterir.  
+ Aşağıdaki örnekte, cihazdan <xref:System.Windows.Input.StylusPoint.X%2A> gelirken <xref:System.Windows.Input.StylusPoint.Y%2A> <xref:System.Windows.Input.StylusPoint> verilerdeki ve değerleri değiştirerek kalem girişinin kısıtlanmasına <xref:System.Windows.Input.Stylus> neden olan bir eklenti gösterilmiş olur.  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
 [!code-csharp[AdvancedInkTopicsSamples#3](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#3)]
 [!code-vb[AdvancedInkTopicsSamples#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#3)]  
   
-<a name="AddingYourPluginToAnInkCanvas"></a>   
-## <a name="adding-your-plug-in-to-an-inkcanvas"></a>InkCanvas 'a eklenti ekleme  
- Özel eklentiyi kullanmanın en kolay yolu, InkCanvas 'dan türeyen bir sınıfı uygulamak ve <xref:System.Windows.UIElement.StylusPlugIns%2A> özelliğine eklemektir.  
+<a name="AddingYourPluginToAnInkCanvas"></a>
+## <a name="adding-your-plug-in-to-an-inkcanvas"></a>Eklentinizi Mürekkep Tuvaline Ekleme  
+ Özel eklentinizi kullanmanın en kolay yolu, InkCanvas'tan türetilen bir sınıf uygulamak <xref:System.Windows.UIElement.StylusPlugIns%2A> ve özelliğine eklemektir.  
   
- Aşağıdaki örnek, mürekkebe filtre uygulayan özel bir <xref:System.Windows.Controls.InkCanvas> gösterir.  
+ Aşağıdaki örnek, mürekçe filtreleyen bir özel <xref:System.Windows.Controls.InkCanvas> gösterir.  
   
  [!code-csharp[AdvancedInkTopicsSamples#4](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#4)]  
   
- Uygulamanıza bir `FilterInkCanvas` ekler ve bunu çalıştırırsanız, Kullanıcı bir vuruş tamamlanana kadar mürekkebin bir bölgeyle sınırlı olmadığını fark edeceksiniz. Bunun nedeni, <xref:System.Windows.Controls.InkCanvas> bir <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> olan ve zaten <xref:System.Windows.UIElement.StylusPlugIns%2A> koleksiyonunun bir üyesi olan bir <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> özelliğine sahip olmasından kaynaklanır. <xref:System.Windows.UIElement.StylusPlugIns%2A> koleksiyonuna eklediğiniz özel <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> veri aldıktan sonra <xref:System.Windows.Input.StylusPoint> verileri alır. Sonuç olarak, <xref:System.Windows.Input.StylusPoint> veriler, Kullanıcı vuruşu sona erdirmek için kalemi kaldırıncaya kadar filtrelenmez. Kullanıcı çizerken mürekkebi filtrelemek için, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>önce `FilterPlugin` eklemeniz gerekir.  
+ Uygulamanıza bir `FilterInkCanvas` a ekler ve çalıştırArsanız, kullanıcı konturunuzu tamamlayana kadar mürekbin bir bölgeyle sınırlı olmadığını fark esiniz. Bunun nedeni, <xref:System.Windows.Controls.InkCanvas> a <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> ve zaten <xref:System.Windows.UIElement.StylusPlugIns%2A> koleksiyonun bir üyesi olan bir özelliğe sahip olmasıdır. Koleksiyona <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> eklediğiniz özel, <xref:System.Windows.Input.StylusPoint> verileri <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> aldıktan sonra alır. <xref:System.Windows.UIElement.StylusPlugIns%2A> Sonuç olarak, <xref:System.Windows.Input.StylusPoint> kullanıcı konturun sona erdirilmesi için kalemi kaldırana kadar veriler filtrelenmez. Kullanıcı çizerken mürekçe filtrelemek için, `FilterPlugin` <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>'den önce.  
   
- Aşağıdaki C# kod, mürekkebi çizmiş gibi filtreleyerek özel bir <xref:System.Windows.Controls.InkCanvas> gösterir.  
+ Aşağıdaki C# kodu, çizildikçe mürekçe filtreleyen bir özel <xref:System.Windows.Controls.InkCanvas> gösterir.  
   
  [!code-csharp[AdvancedInkTopicsSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#5)]  
   
-<a name="Conclusion"></a>   
+<a name="Conclusion"></a>
 ## <a name="conclusion"></a>Sonuç  
- Kendi <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> sınıflarınızı türeterek ve <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> koleksiyonlara yerleştirerek dijital mürekkebinizin davranışını büyük ölçüde geliştirebilirsiniz. <xref:System.Windows.Input.StylusPoint> verilerine erişim elde edersiniz ve size <xref:System.Windows.Input.Stylus> girişi özelleştirme fırsatı vermiş olursunuz. <xref:System.Windows.Input.StylusPoint> verilerine düşük düzeyde erişim sahibi olduğunuzdan, uygulamanız için en iyi performansla birlikte mürekkep toplamayı ve işlemeyi uygulayabilirsiniz.  
+ Kendi <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> sınıflarınızı türeterek ve bunları <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> koleksiyonlara ekleyerek, dijital mürekİğİnizin davranışını büyük ölçüde geliştirebilirsiniz. Oluşturulan <xref:System.Windows.Input.StylusPoint> verilere erişebilirsiniz ve bu da size girişi özelleştirme <xref:System.Windows.Input.Stylus> fırsatı verir. <xref:System.Windows.Input.StylusPoint> Verilere bu kadar düşük düzeyde erişiminiz olduğundan, uygulamanız için en iyi performansla mürekkep toplama ve işleme uygulayabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Gelişmiş Mürekkep İşleme](advanced-ink-handling.md)
-- [Kalem girişine erişme ve Işleme](https://docs.microsoft.com/previous-versions/ms818317(v%3dmsdn.10))
+- [Kalem Girişine Erişim ve Manipülasyon](https://docs.microsoft.com/previous-versions/ms818317(v%3dmsdn.10))

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yuva Oluşturma'
+title: 'Nasıl Yapılır: Yuva Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: 54706293784d77e535cac582c99b1dd21a12e380
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e71e7e235048361580c65bdb551919fe3038130b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048379"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180832"
 ---
-# <a name="how-to-create-a-socket"></a>Nasıl yapılır: Yuva Oluşturma
-Uzak cihazlarla iletişim kurmak üzere bir yuva kullanabilmeniz için, yuva protokol ve ağ adresi bilgileriyle başlatılmalıdır. <xref:System.Net.Sockets.Socket> Sınıfına yönelik oluşturucunun, bağlantı kurmak için yuvanın kullandığı adres ailesini, yuva türünü ve protokol türünü belirten parametreleri vardır.  
+# <a name="how-to-create-a-socket"></a>Nasıl Yapılır: Yuva Oluşturma
+Uzak aygıtlarla iletişim kurmak için bir soket kullanabilmek için önce, soketin protokol ve ağ adresi bilgileriyle başlatılması gerekir. Sınıfın oluşturucusu, yuvanın <xref:System.Net.Sockets.Socket> bağlantı yapmak için kullandığı adres ailesini, yuva türünü ve protokol türünü belirten parametrelere sahiptir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, Internet gibi TCP/IP tabanlı bir ağda iletişim kurmak için kullanılabilecek bir yuva oluşturur.  
+ Aşağıdaki örnek, Internet gibi TCP/IP tabanlı bir ağda iletişim kurmak için kullanılabilecek bir Soket oluşturur.  
   
 ```csharp  
-Socket s = new Socket(AddressFamily.InterNetwork,   
+Socket s = new Socket(AddressFamily.InterNetwork,
    SocketType.Stream, ProtocolType.Tcp);  
 ```  
   
@@ -43,7 +43,7 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
  TCP yerine UDP kullanmak için, aşağıdaki örnekte olduğu gibi protokol türünü değiştirin:  
   
 ```csharp  
-Socket s = new Socket(AddressFamily.InterNetwork,   
+Socket s = new Socket(AddressFamily.InterNetwork,
    SocketType.Dgram, ProtocolType.Udp);  
 ```  
   
@@ -52,13 +52,13 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
    SocketType.Dgram, ProtocolType.Udp)  
 ```  
   
- Sabit listesi, ağ adreslerini çözümlemek için **yuva** sınıfı tarafından kullanılan standart adres aileleri belirtir (örneğin, **AddressFamily. InterNetwork** üyesi, IP sürüm 4 adres ailesini belirtir). <xref:System.Net.Sockets.AddressFamily>  
+ Numaralandırma, <xref:System.Net.Sockets.AddressFamily> **soket** sınıfı tarafından ağ adreslerini çözmek için kullanılan standart adres ailelerini belirtir (örneğin, **AddressFamily.InterNetwork** üyesi IP sürüm 4 adres ailesini belirtir).  
   
- Numaralandırma, yuva türünü belirtir (örneğin, **SocketType. Stream** üyesi, akış denetimiyle veri gönderme ve alma için standart bir yuva gösterir). <xref:System.Net.Sockets.SocketType>  
+ Numaralandırma <xref:System.Net.Sockets.SocketType> soket türünü belirtir (örneğin, **SocketType.Stream** üyesi akış denetimi ile veri göndermek ve almak için standart bir soket gösterir).  
   
- Sabit listesi, **yuvada** iletişim kurulurken kullanılacak ağ protokolünü belirtir (örneğin, **ProtocolType. TCP** , yuvanın TCP kullandığını gösterir; <xref:System.Net.Sockets.ProtocolType> **ProtocolType. UDP** , yuvanın UDP kullandığını gösterir.  
+ Numaralandırma, <xref:System.Net.Sockets.ProtocolType> **Soket** üzerinde iletişim kurarken kullanılacak ağ protokolünü belirtir (örneğin, **ProtocolType.Tcp** soketin TCP kullandığını gösterir; **ProtocolType.Udp** soketin UDP kullandığını gösterir).  
   
- Bir **yuva** oluşturulduktan sonra, uzak bir uç noktaya bağlantı başlatabilir veya uzak cihazlardan gelen bağlantıları alabilir.  
+ Bir **Soket** oluşturulduktan sonra, uzak bir uç noktaya bağlantı başlatabilir veya uzak aygıtlardan bağlantı alabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir TreeView veya ListView denetimine özel bilgi ekleme'
+title: 'Nasıl yapilir: TreeView veya ListView Denetimine Özel Bilgiler Ekleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: fe507c41de97e9332f3f27e453a476d992f86627
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: faed586a5814526b0169ea46c8bb452e3777d8ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732223"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182434"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Nasıl yapılır: Bir TreeView veya ListView Denetimine Özel Bilgi Ekleme (Windows Forms)
-Bir Windows Forms <xref:System.Windows.Forms.TreeView> denetiminde veya bir <xref:System.Windows.Forms.ListView> denetimindeki türetilmiş bir öğede türetilmiş bir düğüm oluşturabilirsiniz. Türetme, ihtiyacınız olan tüm alanları, ayrıca bunları işlemeye yönelik özel yöntemleri ve oluşturucuları eklemenize olanak tanır. Bu özelliğin bir kullanımı, her ağaç düğümüne veya liste öğesine bir müşteri nesnesi eklemektir. Buradaki örnekler bir <xref:System.Windows.Forms.TreeView> denetimine yöneliktir, ancak aynı yaklaşım bir <xref:System.Windows.Forms.ListView> denetimi için de kullanılabilir.  
+Windows Forms <xref:System.Windows.Forms.TreeView> denetiminde türetilmiş bir düğüm veya denetimde <xref:System.Windows.Forms.ListView> türetilmiş bir öğe oluşturabilirsiniz. Türetme, gereksinim duyduğunuz alanlarıve bunları işlemek için özel yöntemler ve yapıcılar eklemenize olanak tanır. Bu özelliğin kullanımı, her ağaç düğümü veya liste öğesine bir Müşteri nesnesi eklemektir. Buradaki örnekler bir <xref:System.Windows.Forms.TreeView> denetim içindir, ancak aynı yaklaşım <xref:System.Windows.Forms.ListView> bir denetim için kullanılabilir.  
   
-### <a name="to-derive-a-tree-node"></a>Bir ağaç düğümü türetmek için  
+### <a name="to-derive-a-tree-node"></a>Ağaç düğümü türetmek için  
   
-- Bir dosya yolunu kaydetmek için özel bir alan olan <xref:System.Windows.Forms.TreeNode> sınıfından türetilmiş yeni bir Node sınıfı oluşturun.  
+- Dosya yolunu kaydetmek için özel <xref:System.Windows.Forms.TreeNode> bir alana sahip sınıftan türetilen yeni bir düğüm sınıfı oluşturun.  
   
     ```vb  
     Class myTreeNode  
@@ -68,14 +68,14 @@ Bir Windows Forms <xref:System.Windows.Forms.TreeView> denetiminde veya bir <xre
     };  
     ```  
   
-### <a name="to-use-a-derived-tree-node"></a>Türetilmiş bir ağaç düğümünü kullanmak için  
+### <a name="to-use-a-derived-tree-node"></a>Türetilmiş ağaç düğümü kullanmak için  
   
-1. İşlev çağrılarını bir parametre olarak, yeni türetilmiş ağaç düğümünü kullanabilirsiniz.  
+1. Çağrıları işletmek için yeni türetilmiş ağaç düğümunu parametre olarak kullanabilirsiniz.  
   
-     Aşağıdaki örnekte, metin dosyasının konumu için ayarlanan yol Belgelerim klasörüdür. Bu, Windows işletim sistemini çalıştıran bilgisayarların çoğunun bu dizini içerdiğini varsaydığı için yapılır. Bu Ayrıca, en az sistem erişim düzeylerine sahip kullanıcıların uygulamayı güvenle çalıştırmasına olanak tanır.  
+     Aşağıdaki örnekte, metin dosyasının konumu için ayarlanan yol Belgelerim klasörüdür. Windows işletim sistemini çalıştıran bilgisayarların çoğunun bu dizini içereceğini varsayabileceğiniz için bu işlem yapılır. Bu aynı zamanda en az sistem erişim düzeylerine sahip kullanıcıların uygulamayı güvenli bir şekilde çalıştırmasına olanak tanır.  
   
     ```vb  
-    ' You should replace the bold text file   
+    ' You should replace the bold text file
     ' in the sample below with a text file of your own choosing.  
     TreeView1.Nodes.Add(New myTreeNode (System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.Personal) _  
@@ -83,7 +83,7 @@ Bir Windows Forms <xref:System.Windows.Forms.TreeView> denetiminde veya bir <xre
     ```  
   
     ```csharp  
-    // You should replace the bold text file   
+    // You should replace the bold text file
     // in the sample below with a text file of your own choosing.  
     // Note the escape character used (@) when specifying the path.  
     treeView1.Nodes.Add(new myTreeNode(System.Environment.GetFolderPath
@@ -92,7 +92,7 @@ Bir Windows Forms <xref:System.Windows.Forms.TreeView> denetiminde veya bir <xre
     ```  
   
     ```cpp  
-    // You should replace the bold text file   
+    // You should replace the bold text file
     // in the sample below with a text file of your own choosing.  
     treeView1->Nodes->Add(new myTreeNode(String::Concat(  
        System::Environment::GetFolderPath  
@@ -100,7 +100,7 @@ Bir Windows Forms <xref:System.Windows.Forms.TreeView> denetiminde veya bir <xre
        "\\TextFile.txt")));  
     ```  
   
-2. Ağaç düğümünü geçirmiş ve bu bir <xref:System.Windows.Forms.TreeNode> sınıfı olarak yazılmışsa, türetilmiş sınıfınıza dönüştürmeniz gerekir. Atama bir nesne türünden diğerine açık bir dönüşümtür. Atama hakkında daha fazla bilgi için bkz. [örtük ve açık dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic) [, atama ve tür dönüştürmeleri](../../../csharp/programming-guide/types/casting-and-type-conversions.md) ( C#görsel) veya [atama işleci: ()](/cpp/cpp/cast-operator-parens) (görsel C++).  
+2. Ağaç düğümü geçtiyseniz ve sınıf <xref:System.Windows.Forms.TreeNode> olarak yazılıyorsa, türemiş sınıfınıza dökmeniz gerekir. Döküm, bir nesne türünden diğerine açık bir dönüştürmedir. Döküm hakkında daha fazla bilgi için [örtük ve Açık Dönüşümler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [Döküm ve tür dönüşümleri](../../../csharp/programming-guide/types/casting-and-type-conversions.md) (Visual C#) veya [Cast Operator: ()](/cpp/cpp/cast-operator-parens) (Visual C++) bakın.  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  
@@ -125,7 +125,7 @@ Bir Windows Forms <xref:System.Windows.Forms.TreeView> denetiminde veya bir <xre
           System::Windows::Forms::TreeViewEventArgs ^  e)  
        {  
           myTreeNode ^ myNode = safe_cast<myTreeNode^>(e->Node);  
-          MessageBox::Show(String::Concat("Node selected is ",   
+          MessageBox::Show(String::Concat("Node selected is ",
              myNode->FilePath));  
        }  
     ```  

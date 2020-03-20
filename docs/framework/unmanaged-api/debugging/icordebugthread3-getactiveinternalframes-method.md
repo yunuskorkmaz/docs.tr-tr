@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: d69796b4-5b6d-457c-85f6-2cf42e8a8773
 topic_type:
 - apiref
-ms.openlocfilehash: 25cd3e05bc80dd39d2ca558bb4dd5fb77d255f5a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 680af5afa3ebef5bcaf9e34580e421dcc8093aaf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791403"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178460"
 ---
 # <a name="icordebugthread3getactiveinternalframes-method"></a>ICorDebugThread3::GetActiveInternalFrames Metodu
-Yığında iç çerçeveler ([ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) nesneleri) dizisini döndürür.  
+Yığında bir dizi iç çerçeve[(ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) nesneleri) döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```cpp 
+```cpp
 HRESULT GetActiveInternalFrames  
       (  
       [in] ULONG32 cInternalFrames,  
@@ -39,44 +39,44 @@ HRESULT GetActiveInternalFrames
   
 ## <a name="parameters"></a>Parametreler  
  `cInternalFrames`  
- 'ndaki `ppInternalFrames`beklenen iç çerçeve sayısı.  
+ [içinde] 'de `ppInternalFrames`beklenen iç çerçeve sayısı.  
   
  `pcInternalFrames`  
- dışı Yığındaki iç çerçevelerin sayısını içeren bir `ULONG32` işaretçisi.  
+ [çıkış] Yığındaki iç `ULONG32` çerçeve sayısını içeren bir işaretçi.  
   
  `ppInternalFrames`  
- [in, out] Yığındaki iç çerçeveler dizisinin adresine yönelik bir işaretçi.  
+ [içinde, dışarı] Yığındaki bir iç çerçeve dizisinin adresine işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
+ Bu yöntem, yöntem hatasını gösteren HRESULT hatalarının yanı sıra aşağıdaki özel HRESULT'ları da döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|[ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) nesnesi başarıyla oluşturuldu.|  
-|E_INVALIDARG|`cInternalFrames` sıfır değil ve `ppInternalFrames` `null`ya da `pcInternalFrames` `null`.|  
-|HRESULT_FROM_WIN32 (ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames` iç çerçeve sayısından daha küçüktür.|  
+|E_ınvalıdarg|`cInternalFrames`sıfır değildir `ppInternalFrames` ve `null`, `pcInternalFrames` `null`ya da .|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames`iç çerçeve sayısından daha küçüktür.|  
   
-## <a name="exceptions"></a>Özel Durumlar  
+## <a name="exceptions"></a>Özel durumlar  
   
 ## <a name="remarks"></a>Açıklamalar  
- İç çerçeveler, geçici verileri depolamak için çalışma zamanı tarafından yığına gönderilen veri yapılarıdır.  
+ İç çerçeveler, geçici verileri depolamak için çalışma zamanı tarafından yığına itilen veri yapılarıdır.  
   
- `GetActiveInternalFrames`ilk kez çağırdığınızda, `cInternalFrames` parametresini 0 (sıfır) ve `ppInternalFrames` parametresini null olarak ayarlamanız gerekir. `GetActiveInternalFrames` ilk döndürüldüğünde, `pcInternalFrames` yığındaki iç çerçevelerin sayısını içerir.  
+ İlk aradığınızda, `GetActiveInternalFrames`parametreyi `cInternalFrames` 0 (sıfır) ve `ppInternalFrames` parametreyi null olarak ayarlamanız gerekir. İlk `GetActiveInternalFrames` döndürdüğünde, `pcInternalFrames` yığındaki iç çerçevesayısını içerir.  
   
- `GetActiveInternalFrames` ikinci kez çağrılmalıdır. Uygun sayıyı (`pcInternalFrames`) `cInternalFrames` parametresine geçirmeniz ve `ppInternalFrames`uygun boyutta bir diziye yönelik bir işaretçi belirtmeniz gerekir.  
+ `GetActiveInternalFrames`sonra ikinci kez çağrılmalıdır. Parametredeki uygun sayıyı (`pcInternalFrames`) geçirmeli ve 'de `ppInternalFrames`uygun büyüklükteki bir diziye işaretçi belirtmelisiniz. `cInternalFrames`  
   
- Gerçek yığın çerçevelerini döndürmek için [ıcordebugstackyürüme:: GetFrame](icordebugthread3-getactiveinternalframes-method.md) metodunu kullanın.  
+ Gerçek yığın çerçevelerini döndürmek için [ICorDebugStackWalk::GetFrame](icordebugthread3-getactiveinternalframes-method.md) yöntemini kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
-- [Hata Ayıklama](index.md)
+- [Hata ayıklama](index.md)

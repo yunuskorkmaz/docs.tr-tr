@@ -1,5 +1,5 @@
 ---
-title: Yazdırma işlerini Tamam
+title: Tam Yazdırma İşleri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: b8ef4fa05b2107247181e82b72389f9503507135
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 62f67002bfbaf46e73bae06fdaff26efde865c06
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746495"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182593"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>Nasıl yapılır: Windows Forms Yazdırma İşlerini Tamamlama
-Genellikle, Word işlemcileri ve yazdırmayı içeren diğer uygulamalar, bir yazdırma işinin tamamlandığını kullanıcılara bir ileti görüntüleme seçeneği sağlar. <xref:System.Drawing.Printing.PrintDocument> bileşeninin <xref:System.Drawing.Printing.PrintDocument.EndPrint> olayını işleyerek bu işlevselliği Windows Forms sağlayabilirsiniz.  
+Sık sık, sözcük işlemcileri ve yazdırma içeren diğer uygulamalar, kullanıcılara yazdırma işinin tamamladığını belirten bir ileti görüntüleme seçeneği sağlar. Bu <xref:System.Drawing.Printing.PrintDocument.EndPrint> <xref:System.Drawing.Printing.PrintDocument> işlevselliği, bileşenin olayını işleyerek Windows Formlarınızda sağlayabilirsiniz.  
   
- Aşağıdaki yordam, Windows tabanlı bir uygulamadan yazdırmayı etkinleştirmenin standart yolu olan üzerinde <xref:System.Drawing.Printing.PrintDocument> bir bileşeni olan Windows tabanlı bir uygulama oluşturmanız gerekir. <xref:System.Drawing.Printing.PrintDocument> bileşenini kullanarak Windows Forms yazdırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: standart Windows Forms Yazdırma Işleri oluşturma](how-to-create-standard-windows-forms-print-jobs.md).  
+ Aşağıdaki yordam, üzerinde bir bileşen bulunan Windows <xref:System.Drawing.Printing.PrintDocument> tabanlı bir uygulama oluşturmanızı gerektirir ve bu da Windows tabanlı bir uygulamadan yazdırmayı etkinleştirmenin standart yoludur. Bileşeni kullanarak Windows Formlarından yazdırma hakkında daha fazla bilgi için [bkz: Standart Windows Formları Yazdırma İşleri Oluşturma](how-to-create-standard-windows-forms-print-jobs.md). <xref:System.Drawing.Printing.PrintDocument>  
   
-### <a name="to-complete-a-print-job"></a>Bir yazdırma işini tamamlamaya yönelik  
+### <a name="to-complete-a-print-job"></a>Yazdırma işini tamamlamak için  
   
-1. <xref:System.Drawing.Printing.PrintDocument> bileşenin <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> özelliğini ayarlayın.  
+1. Bileşenin <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> özelliğini <xref:System.Drawing.Printing.PrintDocument> ayarlayın.  
   
     ```vb  
     PrintDocument1.DocumentName = "MyTextFile"  
@@ -37,9 +37,9 @@ Genellikle, Word işlemcileri ve yazdırmayı içeren diğer uygulamalar, bir ya
     printDocument1->DocumentName = "MyTextFile";  
     ```  
   
-2. <xref:System.Drawing.Printing.PrintDocument.EndPrint> olayını işlemek için kod yazın.  
+2. <xref:System.Drawing.Printing.PrintDocument.EndPrint> Olayı işlemek için kod yazın.  
   
-     Aşağıdaki kod örneğinde, belgenin yazdırılmasını tamamladığını belirten bir ileti kutusu görüntülenir.  
+     Aşağıdaki kod örneğinde, belgenin yazdırmayı tamamladığını belirten bir ileti kutusu görüntülenir.  
   
     ```vb  
     Private Sub PrintDocument1_EndPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles PrintDocument1.EndPrint  
@@ -48,10 +48,10 @@ Genellikle, Word işlemcileri ve yazdırmayı içeren diğer uygulamalar, bir ya
     ```  
   
     ```csharp  
-    private void printDocument1_EndPrint(object sender,   
+    private void printDocument1_EndPrint(object sender,
     System.Drawing.Printing.PrintEventArgs e)  
     {  
-       MessageBox.Show(printDocument1.DocumentName +   
+       MessageBox.Show(printDocument1.DocumentName +
           " has finished printing.");  
     }  
     ```  
@@ -66,7 +66,7 @@ Genellikle, Word işlemcileri ve yazdırmayı içeren diğer uygulamalar, bir ya
        }  
     ```  
   
-     (Görsel C# ve görsel C++) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.  
+     (Görsel C# ve Görsel C++) Olay işleyicisini kaydetmek için aşağıdaki kodu formun oluşturucusuna yerleştirin.  
   
     ```csharp  
     this.printDocument1.EndPrint += new  
