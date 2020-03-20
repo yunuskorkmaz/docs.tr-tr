@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: 2b94bda7-09ee-435d-91b9-c4e31af1896c
 topic_type:
 - apiref
-ms.openlocfilehash: c4b01b2c346d3173b2a5ecc144474d7fb1e6dce5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e23133176cbd703a58c92f9bf1ead530b0bbb8a8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138968"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178508"
 ---
-# <a name="icordebugstringvaluegetstring-method"></a><span data-ttu-id="a1cf3-102">ICorDebugStringValue::GetString Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a1cf3-102">ICorDebugStringValue::GetString Method</span></span>
-<span data-ttu-id="a1cf3-103">Bu ICorDebugStringValue tarafından başvurulan dizeyi alır.</span><span class="sxs-lookup"><span data-stu-id="a1cf3-103">Gets the string referenced by this ICorDebugStringValue.</span></span>  
+# <a name="icordebugstringvaluegetstring-method"></a><span data-ttu-id="b029a-102">ICorDebugStringValue::GetString Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b029a-102">ICorDebugStringValue::GetString Method</span></span>
+<span data-ttu-id="b029a-103">Bu ICorDebugStringValue tarafından başvurulan dize alır.</span><span class="sxs-lookup"><span data-stu-id="b029a-103">Gets the string referenced by this ICorDebugStringValue.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a1cf3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a1cf3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b029a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b029a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetString (  
     [in] ULONG32    cchString,  
     [out] ULONG32   *pcchString,  
-    [out, size_is(cchString), length_is(*pcchString)]   
+    [out, size_is(cchString), length_is(*pcchString)]
         WCHAR       szString[]  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a1cf3-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a1cf3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b029a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b029a-105">Parameters</span></span>  
  `cchString`  
- <span data-ttu-id="a1cf3-106">'ndaki `szString` dizisinin boyutu.</span><span class="sxs-lookup"><span data-stu-id="a1cf3-106">[in] The size of the `szString` array.</span></span>  
+ <span data-ttu-id="b029a-106">[içinde] `szString` Dizinin boyutu.</span><span class="sxs-lookup"><span data-stu-id="b029a-106">[in] The size of the `szString` array.</span></span>  
   
  `pcchString`  
- <span data-ttu-id="a1cf3-107">dışı `szString` dizisinde döndürülen karakter sayısına yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a1cf3-107">[out] A pointer to the number of characters returned in the `szString` array.</span></span>  
+ <span data-ttu-id="b029a-107">[çıkış] Dizide döndürülen karakter sayısına `szString` işaretçi.</span><span class="sxs-lookup"><span data-stu-id="b029a-107">[out] A pointer to the number of characters returned in the `szString` array.</span></span>  
   
  `szString`  
- <span data-ttu-id="a1cf3-108">dışı Alınan dizeyi depolayan bir dizi.</span><span class="sxs-lookup"><span data-stu-id="a1cf3-108">[out] An array that stores the retrieved string.</span></span>  
+ <span data-ttu-id="b029a-108">[çıkış] Alınan dizeyi depolayan bir dizi.</span><span class="sxs-lookup"><span data-stu-id="b029a-108">[out] An array that stores the retrieved string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a1cf3-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a1cf3-109">Requirements</span></span>  
- <span data-ttu-id="a1cf3-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a1cf3-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b029a-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b029a-109">Requirements</span></span>  
+ <span data-ttu-id="b029a-110">**Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b029a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a1cf3-111">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="a1cf3-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b029a-111">**Üstbilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b029a-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a1cf3-112">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="a1cf3-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b029a-112">**Kütüphane:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b029a-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a1cf3-113">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a1cf3-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="b029a-113">**.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b029a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

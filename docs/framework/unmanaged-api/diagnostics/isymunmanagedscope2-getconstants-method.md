@@ -15,43 +15,43 @@ helpviewer_keywords:
 ms.assetid: f241b620-9ec5-42fd-92ef-3b22329db72a
 topic_type:
 - apiref
-ms.openlocfilehash: f7cd45a90a750c357706f720453ff23697875b58
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 45268929b6e9ad6ac6423aa0fa2b7b5022bc9179
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446242"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176623"
 ---
-# <a name="isymunmanagedscope2getconstants-method"></a><span data-ttu-id="8ad39-102">ISymUnmanagedScope2::GetConstants Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8ad39-102">ISymUnmanagedScope2::GetConstants Method</span></span>
-<span data-ttu-id="8ad39-103">Bu kapsam içinde tanımlanan yerel sabitleri alır.</span><span class="sxs-lookup"><span data-stu-id="8ad39-103">Gets the local constants defined within this scope.</span></span>  
+# <a name="isymunmanagedscope2getconstants-method"></a><span data-ttu-id="5d947-102">ISymUnmanagedScope2::GetConstants Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5d947-102">ISymUnmanagedScope2::GetConstants Method</span></span>
+<span data-ttu-id="5d947-103">Bu kapsamda tanımlanan yerel sabitleri alır.</span><span class="sxs-lookup"><span data-stu-id="5d947-103">Gets the local constants defined within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8ad39-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8ad39-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5d947-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5d947-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetConstants(  
      [in]  ULONG32  cConstants,  
      [out] ULONG32  *pcConstants,  
      [out, size_is(cConstants),  
-         length_is(*pcConstants)] ISymUnmanagedConstant*   
+         length_is(*pcConstants)] ISymUnmanagedConstant*
              constants[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8ad39-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8ad39-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5d947-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5d947-105">Parameters</span></span>  
  `cConstants`  
- <span data-ttu-id="8ad39-106">'ndaki `pcConstants` parametresinin işaret ettiği arabelleğin uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="8ad39-106">[in] The length of the buffer that the `pcConstants` parameter points to.</span></span>  
+ <span data-ttu-id="5d947-106">[içinde] `pcConstants` Parametrenin işaret ettiği arabelleğe in uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="5d947-106">[in] The length of the buffer that the `pcConstants` parameter points to.</span></span>  
   
  `pcConstants`  
- <span data-ttu-id="8ad39-107">dışı Sabitleri içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir `ULONG32` işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="8ad39-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
+ <span data-ttu-id="5d947-107">[çıkış] Sabitleri içermek için gereken arabelleğe in boyutlarını karakterlerde alan bir `ULONG32` işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5d947-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
   
  `constants`  
- <span data-ttu-id="8ad39-108">dışı Sabitleri depolayan arabellek.</span><span class="sxs-lookup"><span data-stu-id="8ad39-108">[out] The buffer that stores the constants.</span></span>  
+ <span data-ttu-id="5d947-108">[çıkış] Sabitleri depolayan arabellek.</span><span class="sxs-lookup"><span data-stu-id="5d947-108">[out] The buffer that stores the constants.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8ad39-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="8ad39-109">Return Value</span></span>  
- <span data-ttu-id="8ad39-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="8ad39-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5d947-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="5d947-109">Return Value</span></span>  
+ <span data-ttu-id="5d947-110">yöntem başarılı olursa S_OK; aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="5d947-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8ad39-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8ad39-111">Requirements</span></span>  
- <span data-ttu-id="8ad39-112">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="8ad39-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5d947-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5d947-111">Requirements</span></span>  
+ <span data-ttu-id="5d947-112">**Üstbilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5d947-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8ad39-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8ad39-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d947-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5d947-113">See also</span></span>
 
-- [<span data-ttu-id="8ad39-114">ISymUnmanagedScope2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8ad39-114">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+- [<span data-ttu-id="5d947-114">ISymUnmanagedScope2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5d947-114">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)

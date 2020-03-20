@@ -15,38 +15,38 @@ helpviewer_keywords:
 ms.assetid: 3c4f6b54-5ce7-4a2a-83e1-6dec16441f50
 topic_type:
 - apiref
-ms.openlocfilehash: 1621e955795fcdbb651114c60eb6a1126a23d037
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 45f40dcd419e8e2fdf8a3349ccc9461854ad9aaf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434353"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175739"
 ---
-# <a name="imetadataemitdeletepinvokemap-method"></a><span data-ttu-id="445c7-102">IMetaDataEmit::DeletePinvokeMap Yöntemi</span><span class="sxs-lookup"><span data-stu-id="445c7-102">IMetaDataEmit::DeletePinvokeMap Method</span></span>
-<span data-ttu-id="445c7-103">Belirtilen belirteç tarafından başvurulan nesne için PInvoke eşleme meta verilerini yok eder.</span><span class="sxs-lookup"><span data-stu-id="445c7-103">Destroys the PInvoke mapping metadata for the object referenced by the specified token.</span></span>  
+# <a name="imetadataemitdeletepinvokemap-method"></a><span data-ttu-id="3b0db-102">IMetaDataEmit::DeletePinvokeMap Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3b0db-102">IMetaDataEmit::DeletePinvokeMap Method</span></span>
+<span data-ttu-id="3b0db-103">Belirtilen belirteç tarafından başvurulan nesne için PInvoke eşleme meta verilerini yok eder.</span><span class="sxs-lookup"><span data-stu-id="3b0db-103">Destroys the PInvoke mapping metadata for the object referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="445c7-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="445c7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3b0db-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3b0db-104">Syntax</span></span>  
   
 ```cpp  
-HRESULT DeletePinvokeMap (   
-    [in]  mdToken     tk   
+HRESULT DeletePinvokeMap (
+    [in]  mdToken     tk
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="445c7-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="445c7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3b0db-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3b0db-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="445c7-106">'ndaki PInvoke eşleme meta verilerinin silineceği nesneyi temsil eden bir `mdFieldDef` veya `mdMethodDef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="445c7-106">[in] An `mdFieldDef` or `mdMethodDef` token that represents the object for which to delete the PInvoke mapping metadata.</span></span>  
+ <span data-ttu-id="3b0db-106">[içinde] PInvoke eşleme meta verilerini silmek için nesneyi temsil eden bir `mdFieldDef` veya `mdMethodDef` belirteç.</span><span class="sxs-lookup"><span data-stu-id="3b0db-106">[in] An `mdFieldDef` or `mdMethodDef` token that represents the object for which to delete the PInvoke mapping metadata.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="445c7-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="445c7-107">Requirements</span></span>  
- <span data-ttu-id="445c7-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="445c7-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3b0db-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3b0db-107">Requirements</span></span>  
+ <span data-ttu-id="3b0db-108">**Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3b0db-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="445c7-109">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="445c7-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="3b0db-109">**Üstbilgi:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3b0db-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="445c7-110">**Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="445c7-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3b0db-110">**Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="3b0db-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="445c7-111">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="445c7-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3b0db-111">**.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b0db-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="445c7-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="445c7-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3b0db-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3b0db-112">See also</span></span>
 
-- [<span data-ttu-id="445c7-113">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="445c7-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="445c7-114">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="445c7-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="3b0db-113">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3b0db-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="3b0db-114">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3b0db-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

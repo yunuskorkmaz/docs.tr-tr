@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-ms.openlocfilehash: 0c833416cca965f2655266152c5bdf5f11624d14
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b6e26d1538cab30db66e887aee89b8fbae501bdb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861144"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177013"
 ---
-# <a name="icorprofilerobjectenumnext-method"></a><span data-ttu-id="c5c0b-102">ICorProfilerObjectEnum::Next Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c5c0b-102">ICorProfilerObjectEnum::Next Method</span></span>
-<span data-ttu-id="c5c0b-103">Numaralandırıcının dizideki geçerli konumundan başlayarak sıralı nesne koleksiyonundan belirtilen sayıda bitişik nesneyi alır.</span><span class="sxs-lookup"><span data-stu-id="c5c0b-103">Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.</span></span>  
+# <a name="icorprofilerobjectenumnext-method"></a><span data-ttu-id="529ce-102">ICorProfilerObjectEnum::Next Yöntemi</span><span class="sxs-lookup"><span data-stu-id="529ce-102">ICorProfilerObjectEnum::Next Method</span></span>
+<span data-ttu-id="529ce-103">Sıralı bir nesne koleksiyonundan, numaralandırıcının dizideki geçerli konumundan başlayarak, belirtilen bitişik nesne sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="529ce-103">Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c5c0b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c5c0b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="529ce-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="529ce-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next (  
     [in] ULONG                    celt,  
-    [out, size_is(celt), length_is(*pceltFetched)]    
+    [out, size_is(celt), length_is(*pceltFetched)]
         ObjectID                  objects[],  
     [out] ULONG                   *pceltFetched  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c5c0b-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c5c0b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="529ce-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="529ce-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="c5c0b-106">'ndaki Alınacak nesne sayısı.</span><span class="sxs-lookup"><span data-stu-id="c5c0b-106">[in] The number of objects to be retrieved.</span></span>  
+ <span data-ttu-id="529ce-106">[içinde] Alınacak nesne sayısı.</span><span class="sxs-lookup"><span data-stu-id="529ce-106">[in] The number of objects to be retrieved.</span></span>  
   
  `objects`  
- <span data-ttu-id="c5c0b-107">dışı Her biri alınan bir nesneyi temsil eden `ObjectID` değerleri dizisi.</span><span class="sxs-lookup"><span data-stu-id="c5c0b-107">[out] An array of `ObjectID` values, each of which represents a retrieved object.</span></span>  
+ <span data-ttu-id="529ce-107">[çıkış] Her biri `ObjectID` alınan nesneyi temsil eden bir değer dizisi.</span><span class="sxs-lookup"><span data-stu-id="529ce-107">[out] An array of `ObjectID` values, each of which represents a retrieved object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="c5c0b-108">dışı `objects` dizisinde aslında döndürülen öğe sayısına yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="c5c0b-108">[out] A pointer to the number of elements actually returned in the `objects` array.</span></span>  
+ <span data-ttu-id="529ce-108">[çıkış] Dizide döndürülen öğelerin sayısına `objects` işaretçi.</span><span class="sxs-lookup"><span data-stu-id="529ce-108">[out] A pointer to the number of elements actually returned in the `objects` array.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c5c0b-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c5c0b-109">Requirements</span></span>  
- <span data-ttu-id="c5c0b-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c5c0b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="529ce-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="529ce-109">Requirements</span></span>  
+ <span data-ttu-id="529ce-110">**Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="529ce-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c5c0b-111">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="c5c0b-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="529ce-111">**Üstbilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="529ce-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="c5c0b-112">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="c5c0b-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="529ce-112">**Kütüphane:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="529ce-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c5c0b-113">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c5c0b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="529ce-113">**.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="529ce-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c5c0b-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c5c0b-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="529ce-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="529ce-114">See also</span></span>
 
-- [<span data-ttu-id="c5c0b-115">ICorProfilerObjectEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c5c0b-115">ICorProfilerObjectEnum Interface</span></span>](icorprofilerobjectenum-interface.md)
+- [<span data-ttu-id="529ce-115">ICorProfilerObjectEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="529ce-115">ICorProfilerObjectEnum Interface</span></span>](icorprofilerobjectenum-interface.md)
