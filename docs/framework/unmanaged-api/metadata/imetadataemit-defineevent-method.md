@@ -15,68 +15,68 @@ helpviewer_keywords:
 ms.assetid: cf064bac-9a9f-41c5-9e1d-108ff7af3afe
 topic_type:
 - apiref
-ms.openlocfilehash: 6966d0ad2fefd8401b19d8e8dcf7776799a066b2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a9598be850604f16ee8cc62187e1fed7ecf3a7e4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432558"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175856"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent Yöntemi
-Belirtilen meta veri imzasıyla bir olay tanımı oluşturur ve bu olay tanımına bir belirteç alır.  
+Belirtilen meta veri imzasına sahip bir olay için tanım oluşturur ve bu olay tanımına bir belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT DefineEvent (   
-    [in]  mdTypeDef    td,   
-    [in]  LPCWSTR      szEvent,   
-    [in]  DWORD        dwEventFlags,   
-    [in]  mdToken      tkEventType,   
-    [in]  mdMethodDef  mdAddOn,   
-    [in]  mdMethodDef  mdRemoveOn,   
-    [in]  mdMethodDef  mdFire,   
-    [in]  mdMethodDef  rmdOtherMethods[],   
-    [out] mdEvent      *pmdEvent   
+HRESULT DefineEvent (
+    [in]  mdTypeDef    td,
+    [in]  LPCWSTR      szEvent,
+    [in]  DWORD        dwEventFlags,
+    [in]  mdToken      tkEventType,
+    [in]  mdMethodDef  mdAddOn,
+    [in]  mdMethodDef  mdRemoveOn,
+    [in]  mdMethodDef  mdFire,
+    [in]  mdMethodDef  rmdOtherMethods[],
+    [out] mdEvent      *pmdEvent
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- 'ndaki Hedef sınıf veya arabirim için belirteç. Bu bir `mdTypeDef` veya `mdTypeDefNil` belirtecidir.  
+ [içinde] Hedef sınıf veya arabirim için belirteç. Bu ya `mdTypeDef` bir `mdTypeDefNil` ya da bir belirteç.  
   
  `szEvent`  
- 'ndaki Etkinliğin adı.  
+ [içinde] Olayın adı.  
   
  `dwEventFlags`  
- 'ndaki Olay bayrakları.  
+ [içinde] Olay bayrakları.  
   
  `tkEventType`  
- 'ndaki Olay sınıfı için belirteç. Bu bir `mdTypeDef`, bir `mdTypeRef`veya `mdTokenNil` belirteç.  
+ [içinde] Olay sınıfının belirteci. Bu bir `mdTypeDef`, `mdTypeRef`a `mdTokenNil` , ya da bir belirteç.  
   
  `mdAddOn`  
- 'ndaki Olaya abone olmak için kullanılan yöntem veya null.  
+ [içinde] Olaya abone olmak için kullanılan yöntem veya null.  
   
  `mdRemoveOn`  
- 'ndaki Olayın aboneliğini kaldırmak için kullanılan yöntem veya null.  
+ [içinde] Olaya aboneliğini iptal etmek veya geçersiz kılmak için kullanılan yöntem.  
   
  `mdFire`  
- 'ndaki Olayı yükseltmek için kullanılan Yöntem (türetilmiş bir sınıf tarafından).  
+ [içinde] Olayı yükseltmek için (türetilmiş bir sınıf tarafından) kullanılan yöntem.  
   
  `rmdOtherMethods[]`  
- 'ndaki Olayla ilişkili diğer yöntemler için bir belirteç dizisi. Dizi `mdMethodDefNil` belirteciyle sonlandırılır.  
+ [içinde] Olayla ilişkili diğer yöntemler için bir dizi belirteç. Dizi bir `mdMethodDefNil` belirteç ile sonlandırılır.  
   
  `pmdEvent`  
- dışı Olaya atanan meta veri belirteci.  
+ [çıkış] Olaya atanan meta veri belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

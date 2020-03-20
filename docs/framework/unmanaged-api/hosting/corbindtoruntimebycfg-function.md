@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: ded1e492-a782-4185-9c66-709e421c1782
 topic_type:
 - apiref
-ms.openlocfilehash: 3802354bf52cd2aab2a4149d565993b9965e8312
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4fbc6e7ea531f65a6b1cd0ec93f4847ab8e4fe83
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138295"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178240"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg İşlevi
-Bir XML dosyasından okunan sürüm bilgilerini kullanarak ortak dil çalışma zamanını (CLR) bir işleme yükler.  
+XML dosyasından okunan sürüm bilgilerini kullanarak ortak dil çalışma süresini (CLR) işleme yükler.  
   
- Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
+ Bu işlev .NET Framework 4'te amortismana hazırlanmıştır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,41 +34,41 @@ HRESULT CorBindToRuntimeByCfg (
     [in]  DWORD        reserved,  
     [in]  DWORD        startupFlags,  
     [in]  REFCLSID     rclsid,  
-    [in]  REFIID       riid,   
+    [in]  REFIID       riid,
     [out] LPVOID FAR*  ppv  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pCfgStream`  
- 'ndaki XML dosyasını okuyan `IStream` nesnesine yönelik bir işaretçi.  
+ [içinde] XML dosyasını okuyan bir `IStream` nesneye işaretçi.  
   
  `reserved`  
- 'ndaki Gelecekte kullanılmak üzere ayrılmıştır. Değer olarak 0 (sıfır) kullanın.  
+ [içinde] İleride kullanım için ayrılmıştır. Değer olarak 0 (sıfır) kullanın.  
   
  `startupFlags`  
- 'ndaki CLR 'nin başlangıç davranışını belirten [startup_flags](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) numaralandırması değeri.  
+ [içinde] CLR'nin başlangıç davranışını belirten [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) numaralandırmadeğeri.  
   
  `rclsid`  
- 'ndaki [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) veya [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) arabirimini uygulayan coclass 'ın `CLSID`. Desteklenen değerler CLSID_CorRuntimeHost veya CLSID_CLRRuntimeHost.  
+ [içinde] `CLSID` [ICorRuntimeHost veya ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) arabirimi [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) ya uygular coclass. Desteklenen değerler CLSID_CorRuntimeHost veya CLSID_CLRRuntimeHost.  
   
  `riid`  
- 'ndaki `ICorRuntimeHost` ya da `ICLRRuntimeHost` arabiriminin `IID`. Desteklenen değerler IID_ICorRuntimeHost veya IID_ICLRRuntimeHost.  
+ [içinde] Ya `IID` `ICorRuntimeHost` arayüz ya `ICLRRuntimeHost` da. Desteklenen değerler IID_ICorRuntimeHost veya IID_ICLRRuntimeHost.  
   
  `ppv`  
- dışı Döndürülen arabirimin adresine yönelik bir işaretçi.  
+ [çıkış] Döndürülen arabirimin adresine işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- XML dosyasının biçimi, standart uygulama yapılandırma dosyasından sonra modellenir. XML dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosya şeması](../../../../docs/framework/configure-apps/file-schema/index.md).  
+ XML dosyasının biçimi standart uygulama yapılandırma dosyasından sonra modellenir. XML dosyaları hakkında daha fazla bilgi için [Configuration File Schema'ya](../../../../docs/framework/configure-apps/file-schema/index.md)bakın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE. h  
+ **Üstbilgi:** MSCorEE.h  
   
- **Kitaplık:** MSCorEE. dll  
+ **Kütüphane:** Mscoree.dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b9240712-829c-4c8d-9a09-a6e7aa63f63a
 topic_type:
 - apiref
-ms.openlocfilehash: 6c58a0726e0869178838999c6b000e0ad975f145
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3b00bf8295a635871bd7263928ff21c97053cc39
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140611"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176961"
 ---
 # <a name="publickeyblob-structure"></a>PublicKeyBlob Yapısı
-Ortak/özel anahtar çiftinin ortak anahtarını ikili biçimde temsil eder.  
+İkili biçimde, ortak/özel anahtar çiftinin ortak anahtarını temsil eder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,29 +32,29 @@ typedef struct {
     unsigned int HashAlgId;  
     ULONG cbPublicKey;  
     BYTE PublicKey[1]  
-} PublicKeyBlob;   
+} PublicKeyBlob;
 ```  
   
 ## <a name="members"></a>Üyeler  
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`SigAlgId`|Ortak anahtarın imza algoritmasının (WinCrypt. h içinde tanımlanan `ALG_ID`türü) tanımlayıcı.|  
-|`HashAlgId`|Ortak anahtarın karma algoritma (WinCrypt. h içinde tanımlanan `ALG_ID`türü) için tanımlayıcı.|  
-|`cbPublicKey`|Anahtarın bayt cinsinden uzunluğu.|  
-|`PublicKey`|CryptoAPI tarafından döndürülen biçimdeki anahtar değerini içeren değişken uzunlukta bir bayt dizisi.|  
+|`SigAlgId`|Ortak anahtarın imza algoritması (winCrypt.h'de tanımlandığı gibi türü) `ALG_ID`tanımlayıcısı.|  
+|`HashAlgId`|Ortak anahtarın karma algoritması (türü `ALG_ID`, WinCrypt.h'de tanımlandığı şekilde) tanımlayıcısı.|  
+|`cbPublicKey`|Baytlarda anahtarın uzunluğu.|  
+|`PublicKey`|CryptoAPI tarafından döndürülen biçimdeki anahtar değerini içeren değişken uzunlukta bayt dizisi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `PublicKeyBlob` yapısı, [StrongNameGetPublicKey](strongnamegetpublickey-function.md), [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md)ve Public/Private anahtar çiftinin ortak anahtarını temsil eden diğer tanımlayıcı ad işlevleri tarafından kullanılır.  
+ Yapı, `PublicKeyBlob` genel/özel anahtar çiftinin ortak anahtarını temsil etmek için [StrongNameGetPublicKey](strongnamegetpublickey-function.md), [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md)ve diğer güçlü ad işlevleri tarafından kullanılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** StrongName. h  
+ **Üstbilgi:** StrongName.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

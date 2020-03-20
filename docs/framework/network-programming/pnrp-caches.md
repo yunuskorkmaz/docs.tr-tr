@@ -3,37 +3,37 @@ title: PNRP Önbellekleri
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
 ms.openlocfilehash: 3ed3e11e702c8933b500421de5654b212cdd80d8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "64622986"
 ---
 # <a name="pnrp-caches"></a>PNRP Önbellekleri
-Eş Adı Çözümleme Protokolü (PNRP) önbellekler algorithmically seçili eş uç noktaları eş tutulan yerel koleksiyonlarıdır.  
+Eş Adı Çözümleme Protokolü (PNRP) önbellekleri, eş üzerinde tutulan algoritmik olarak seçilmiş eş uç noktalarının yerel koleksiyonlarıdır.  
   
-## <a name="pnrp-cache-initialization"></a>PNRP önbellek başlatma  
- Bir eşdüzey düğüm başlatıldığında PNRP önbellek ya da eş ad kaydı koleksiyonuna başlatmak için bir düğüm aşağıdaki yöntemleri kullanabilirsiniz:  
+## <a name="pnrp-cache-initialization"></a>PNRP Önbellek Başlatma  
+ Eş düğümü başlatıldığında, PNRP önbelleğini veya Eş Adı Kaydı Koleksiyonu'nu başlatacak şekilde, bir düğüm aşağıdaki yöntemleri kullanabilir:  
   
-- Düğüm kapatıldığı sırada mevcut kalıcı önbellek girişlerinin sabit disk depolama alanından yüklenir.  
+- Düğüm kapatıldığında bulunan kalıcı önbellek girişleri sabit disk depolamadan yüklenir.  
   
-- Bir uygulama P2P işbirliği altyapınızın kullanıyorsa, kişinin Yöneticisi'nde bu düğüm için işbirliği bilgileri kullanılabilir.  
+- Bir uygulama P2P işbirliği altyapısını kullanıyorsa, bu düğüm için İletişim Yöneticisi'nde işbirliği bilgileri kullanılabilir.  
   
-## <a name="scaling-peer-name-resolution-with-a-multi-level-cache"></a>Eş adı çözümleme çok düzeyli bir önbellek ile ölçeklendirme  
- PNRP önbellekleri boyutlarını küçük tutmak için her düzeyi bir giriş sayısı üst sınırı içeren, çok düzeyli bir önbellek eş düğümleri kullanın. Önbellekteki her düzeyi bir saniyenin onda daha küçük bir bölümünü PNRP kimlik numarası alanı temsil eder (2<sup>256</sup>). Önbellekteki en alt düzeyin bir yerel olarak kayıtlı PNRP kimliği ve sayısal olarak onu yakın olan diğer PNRP kimlikleri içeriyor. Yeni bir alt düzey önbelleği düzeyini, en fazla 20 girişleri ile doldurulmuş şekilde oluşturulur. Log10 bazında önbelleğinde düzeylerinin sayısı olan (PNRP kimlikleri bulutta toplam sayısı). Örneğin, bir genel bulut için 100 milyon PNRP kimlikleri vardır en fazla 8 (=log10(100,000,000)) düzeyleri önbellek ve benzer bir ad çözümlemesi sırasında PNRP kimliği çözmek için atlama sayısı. Bir rastgele PNRP kimliği için çözülebilir karşılık gelen CPA Eşle bulunana kadar PNRP istek iletilerini sonraki en yakın eşler arası iletme tarafından dağıtılmış karma tablo bu mekanizma sağlar.  
+## <a name="scaling-peer-name-resolution-with-a-multi-level-cache"></a>Eş Adı Çözümünü Çok Düzeyli Önbellekle Ölçekleme  
+ PNRP önbelleklerinin boyutlarını küçük tutmak için eş düğümleri, her düzeyin en fazla sayıda giriş içerdiği çok düzeyli bir önbellek kullanır. Önbellekteki her düzey PNRP kimlik numarası alanının onda bir küçük kısmını temsil eder (2<sup>256).</sup> Önbellekteki en düşük düzey, yerel olarak kaydedilmiş bir PNRP Kimliği ve sayısal olarak yakın olan diğer PNRP kimlikleri içerir. Önbelleğin düzeyi en fazla 20 girişle doldurulduğundan, yeni bir alt düzey oluşturulur. Önbellekteki maksimum düzey sayısı log10 (Buluttaki Toplam PNRP ID sayısı) sırasına göredir. Örneğin, 100 milyon PNRP Kimliğine sahip küresel bir bulut için, önbellekte en fazla 8 (=log10(100.000.000)) düzeyi ve ad çözümlemesi sırasında bir PNRP Kimliğini çözmek için benzer sayıda atlama vardır. Bu mekanizma, ilgili EBM'ye sahip eş bulunana kadar PNRP İstek iletilerini en yakın eşe ileterek rasgele bir PNRP Kimliğinin çözülebileceği dağıtılmış bir karma tabloya olanak tanır.  
   
- Çözüm, bir düğüm bir giriş, önbellek, en düşük düzeyine eklediği her durumda tamamlamasını sağlamak için giriş son düzey önbellek içindeki tüm düğümlere bir kopyasını şişirir.  
+ Çözünürlüğün tamamlanınabilmesi için, bir düğüm önbelleğinin en alt düzeye her girişinde, önbelleğin son düzeyindeki tüm düğümlere girişin bir kopyasını sel basıyor.  
   
- Önbellek girişlerinin zamanla yenilenir. Eski önbellek girişlerinin önbellekten kaldırılır. Etkin uç noktaları, farklı DNS adresi kayıtlarını ve DNS protokolünü adresle ilişkilendirilen düğümü etkin olduğundan garanti sağlayan dağıtılmış bir karma tablo PNRP kimlikleri dayalı sonucudur.  
+ Önbellek girişleri zaman içinde yenilenir. Eski önbellek girişleri önbellekten kaldırılır. Sonuç olarak, PNRP ID'lerinin dağıtılmış karma tablosu, adres kayıtlarının ve DNS protokolünün adresle ilişkili düğümün ağda etkin olduğuna dair hiçbir garanti vermediği DNS'nin aksine etkin uç noktaları temel almaktadır.  
   
-## <a name="other-pnrp-caches"></a>Diğer PNRP önbellekleri  
- Başka bir kalıcı veri deposu yerel bir önbellektir.  PNRP etkinliği için gereken diğer bir nesnelerin yanı sıra, bu, güvenli bir şekilde yayımlanan ve tüm bulut üyeleri arasında eşitlenen bir PNRP Bulut veya işbirliği oturumu ile ilişkili kayıt içerebilir. Çoğaltılan bu depo, tüm Grup üyeleri için aynı olmalıdır Grup verileri görünümünü temsil eder. Teknik olarak, bu nesneler kayıt başına uzatılmasında yerine uygulama, durum ve nesne verileri için yerel önbelleğin hedefleyen ancak değildir. PNRP bulut işbirliği oturumu veya PNRP bulut nesneleri tüm düğümlere yayılır sağlar.  Kayıt çoğaltma bulut üyeleri arasında şifreleme ve veri bütünlüğünü sağlamak için SSL kullanır.  
+## <a name="other-pnrp-caches"></a>Diğer PNRP Önbellekleri  
+ Başka bir kalıcı veri deposu yerel önbellektir.  PNRP etkinliği için gereken diğer nesnelere ek olarak, bir PNRP bulutu veya bulutun tüm üyeleri arasında güvenli bir şekilde yayınlanan ve eşitlenen işbirliği oturumuyla ilişkili kayıtları içerebilir. Bu çoğaltılan depo, tüm grup üyeleri için aynı olması gereken grup verilerinin görünümünü temsil eder. Teknik olarak, bu nesneler kendi başına kayıt değil, daha çok uygulama, durum ve nesne verileri yerel bir önbellek için mukadder. PNRP bulutunun kullanımı, nesnelerin işbirliği oturumundaki veya PNRP bulutundaki tüm düğümlere yayılmasını sağlar.  Bulut üyeleri arasındaki kayıt çoğaltma şifreleme ve veri bütünlüğü sağlamak için SSL kullanır.  
   
- Bir eş Bulutu katıldığında, otomatik olarak yerel önbellek veri ekleme, konak eşten aldıkları değil; Uygulama, durum ve nesne verilerini güncelleştirmeleri almak için konağı eş abone olmak sahiptirler. İlk eşitleme sonrasında eşleri çoğaltılmış mağazalarındaki tüm Grup üyeleri aynı görünümde tutarlı olmasını sağlamak için düzenli aralıklarla yeniden eşitleyin.  Ayrıca işbirliği oturumu veya işbirliği oturum içindeki uygulamalar aynı işlevi gerçekleştirebilir.  
+ Bir eş bir buluta katıldığında, bağlı oldukları ana bilgisayar eşlerinden yerel önbellek verilerini otomatik olarak almazlar; uygulama, durum ve nesne verilerinde güncelleştirmeler almak için ana bilgisayar eşe abone olmaları gerekir. İlk eşitlemeden sonra, eşler, tüm grup üyelerinin tutarlı bir şekilde aynı görünüme sahip olmasını sağlamak için çoğaltılan depolarını düzenli olarak yeniden eşitler.  İşbirliği oturumu veya işbirliği oturumu içindeki uygulamalar da aynı işlevi gerçekleştirebilir.  
   
- İçin bulut işbirliği oturumu başladıktan sonra uygulamaları eş kaydedebilir veya Bulut kapsamı tarafından tanımlanan güvenlik kullanarak kendi bilgilerini yayımlama başlayın. Bir eş Bulutu katıldığında, bulut için güvenlik mekanizmaları katılmak için kapsamda vererek çiftine uygulanır.  Kayıtlarını ardından güvenli bir şekilde bulut kapsamında yayımlanabilir. Bulut kapsamına işbirliği uygulama kapsamı aynı olabileceğini unutmayın.  
+ Bulut için bir işbirliği oturumu başladıktan sonra, uygulamalar eşlerini kaydedebilir ve bulut kapsamı tarafından tanımlanan güvenliği kullanarak bilgilerini yayımlamaya başlayabilir. Bir eş buluta katıldığında, bulutun güvenlik mekanizmaları eşe uygulanır ve bu da ona katılacağı bir kapsam verir.  Kayıtları daha sonra bulut kapsamında güvenli bir şekilde yayımlanabilir. Bulut kapsamının işbirliği uygulama kapsamıyla aynı olmayabileceğini unutmayın.  
   
- Eş diğer eşlerden nesneler alınıyor ilgi azalmasını kaydedebilirsiniz. Bir nesne güncelleştirildiğinde işbirliği uygulaması bildirilir ve uygulamanın tüm abonelerine yeni bir nesne geçirilir. Örneğin, bir grup sohbet uygulaması bir eş sohbet kayıtları tüm uygulama verileri olarak gönderir, uygulama bilgilerini alma ilgi kaydedebilirsiniz.  Bu bulut içinde sohbet etkinliğini izlemesine izin verir.  
+ Eşler, diğer eşlerden nesne alma ilgi kaydedebilirsiniz. Bir nesne güncelleştirildiğinde, işbirliği uygulaması bildirilir ve yeni nesne uygulamanın tüm abonelerine geçirilir. Örneğin, grup sohbet uygulamasındaki bir eş, tüm sohbet kayıtlarını uygulama verisi olarak gönderecek olan uygulama bilgilerini alma ilgisini kaydedebilir.  Bu, bulut içindeki sohbet etkinliğini izlemesine olanak tanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -6,39 +6,39 @@ helpviewer_keywords:
 - UI Automation, Table Item control pattern
 - TableItem control pattern
 ms.assetid: ac178408-1485-436f-8d3e-eee3bf80cb24
-ms.openlocfilehash: 4374666ba5e03720413614c63b00ba987f81f58f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f35b491c31e8725eac0025dfd6815079d0ea9b79
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447088"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180071"
 ---
 # <a name="implementing-the-ui-automation-tableitem-control-pattern"></a>UI Otomasyon TableItem Denetim Düzeni Uygulama
 > [!NOTE]
-> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu dokümantasyon, ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıfları kullanmak <xref:System.Windows.Automation> isteyen .NET Framework geliştiricileri için tasarlanmıştır. Hakkında en son [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bilgi için [Bkz. Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
   
- Bu konu, olaylar ve özellikler hakkında bilgiler de dahil olmak üzere <xref:System.Windows.Automation.Provider.ITableItemProvider>uygulamak için kılavuz ve kuralları tanıtır. Ek başvuruların bağlantıları genel bakış sonunda listelenir.  
+ Bu <xref:System.Windows.Automation.Provider.ITableItemProvider>konu, olaylar ve özellikler hakkında bilgiler de dahil olmak üzere, uygulama yönergeleri ve kuralları sunar. Ek başvurulara bağlantılar genel bakışın sonunda listelenir.  
   
- <xref:System.Windows.Automation.TableItemPattern> denetim stili, <xref:System.Windows.Automation.Provider.ITableProvider>uygulayan kapsayıcıların alt denetimlerini desteklemek için kullanılır. Tek tek hücre işlevselliğine erişim, gerekli <xref:System.Windows.Automation.Provider.IGridItemProvider>eşzamanlı uygulamasıyla sağlanır. Bu denetim deseninin, <xref:System.Windows.Automation.Provider.ITableItemProvider> uygulayan her denetim, tek bir hücre ve onun satır ve sütun bilgileri arasındaki ilişkiyi programlı bir şekilde kullanıma sunmasının gereken ayrım ile <xref:System.Windows.Automation.Provider.IGridItemProvider> benzerdir. Bu denetim modelini uygulayan denetimlerin örnekleri için bkz. [UI Otomasyonu istemcileri Için denetim model eşlemesi](control-pattern-mapping-for-ui-automation-clients.md).  
+ Denetim <xref:System.Windows.Automation.TableItemPattern> deseni, uygulayan <xref:System.Windows.Automation.Provider.ITableProvider>kapsayıcıların alt denetimlerini desteklemek için kullanılır. Tek tek hücre işlevselliği erişim gerekli eşzamanlı <xref:System.Windows.Automation.Provider.IGridItemProvider>uygulama tarafından sağlanır. Bu denetim deseni, <xref:System.Windows.Automation.Provider.IGridItemProvider> herhangi bir denetim uygulamasının tek tek hücre ile satır ve sütun bilgileri arasındaki ilişkiyi programlı olarak ortaya koyması <xref:System.Windows.Automation.Provider.ITableItemProvider> gerektiği ayrımına benzer. Bu denetim deseni uygulayan denetim örnekleri için, [UI Otomasyon Istemcileri için Denetim Deseni Eşleciliği'ne](control-pattern-mapping-for-ui-automation-clients.md)bakın.  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Uygulama kılavuzları ve kuralları  
+<a name="Implementation_Guidelines_and_Conventions"></a>
+## <a name="implementation-guidelines-and-conventions"></a>Uygulama Yönergeleri ve Sözleşmeleri  
   
-- İlgili ızgara öğesi işlevselliği için bkz. [UI Otomasyonu GridItem denetim modelini uygulama](implementing-the-ui-automation-griditem-control-pattern.md).  
+- İlgili ızgara öğesi işlevselliği için [bkz.](implementing-the-ui-automation-griditem-control-pattern.md)  
   
-<a name="Required_Members_for_ITableItemProvider"></a>   
-## <a name="required-members-for-itableitemprovider"></a>ITableItemProvider için gerekli Üyeler  
+<a name="Required_Members_for_ITableItemProvider"></a>
+## <a name="required-members-for-itableitemprovider"></a>ITableItemProvider için Gerekli Üyeler  
   
-|Gerekli üye|Üye türü|Notlar|  
+|Gerekli üye|Üye tipi|Notlar|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetColumnHeaderItems%2A>|Yöntem|Yok.|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetRowHeaderItems%2A>|Yöntem|Yok.|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetColumnHeaderItems%2A>|Yöntem|None|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetRowHeaderItems%2A>|Yöntem|None|  
   
- Bu denetim deseninin ilişkili özellikleri veya olayları yok.  
+ Bu denetim deseni ilişkili özellikleri veya olayları vardır.  
   
-<a name="Exceptions"></a>   
-## <a name="exceptions"></a>Özel Durumlar  
- Bu denetim deseninin ilişkili özel durumları yok.  
+<a name="Exceptions"></a>
+## <a name="exceptions"></a>Özel durumlar  
+ Bu denetim deseni ilişkili özel durumlar vardır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

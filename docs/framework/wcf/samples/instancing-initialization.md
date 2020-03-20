@@ -2,38 +2,38 @@
 title: Başlatmayı Örneklendirme
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: ee7d470cb80e913707ae6e92039061efde8fcb7f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 897bb62df0a23073827aeed18b54bf77e8c6d4bc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715796"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183604"
 ---
 # <a name="instancing-initialization"></a>Başlatmayı Örneklendirme
-Bu örnek, bir arabirimini etkinleştirerek ve devre dışı bırakarak bir nesnenin başlatılmasını özelleştiren `IObjectControl`bir arabirim tanımlayarak [Havuz](../../../../docs/framework/wcf/samples/pooling.md) örneğini genişletir. İstemci, nesneyi havuza döndüren ve havuza nesne döndüren yöntemleri çağırır.  
+Bu örnek, bir arabirim tanımlayarak [Havuzlama](../../../../docs/framework/wcf/samples/pooling.md) örneğini genişletir, `IObjectControl`bu da bir nesnenin başlatılmasını etkinleştirerek ve devre dışı kılarak özelleştirir. İstemci, nesneyi havuza döndüren ve nesneyi havuza döndürmeden yöntemler çağırır.  
   
 > [!NOTE]
-> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
+> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
   
-## <a name="extensibility-points"></a>Genişletilebilirlik noktaları  
- Windows Communication Foundation (WCF) uzantısı oluşturmanın ilk adımı, genişletilebilirlik noktasının kullanılmasına karar vermaktır. WCF 'de, *EndpointDispatcher* terimi, gelen iletileri kullanıcının hizmetinde Yöntem etkinleştirmeleri içine dönüştürmeden ve dönüş değerlerini Bu yöntemden giden bir iletiye dönüştürmekten sorumlu bir çalışma zamanı bileşenine başvurur. WCF hizmeti her uç nokta için bir EndpointDispatcher oluşturur.  
+## <a name="extensibility-points"></a>Genişletilebilirlik Noktaları  
+ Bir Windows Communication Foundation (WCF) uzantısı oluşturmanın ilk adımı, kullanılacak genişletilebilirlik noktasına karar vermektir. WCF'de *EndpointDispatcher* terimi, gelen iletileri kullanıcının hizmetindeki yöntem çağrılarına dönüştürmekten ve bu yöntemden gelen bir iletiye dönüş değerlerini dönüştürmekten sorumlu bir çalışma zamanı bileşenini ifade eder. WCF hizmeti, her bitiş noktası için bir EndpointDispatcher oluşturur.  
   
- EndpointDispatcher, <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> sınıfını kullanarak uç nokta kapsamı (hizmetin aldığı veya hizmet tarafından gönderilen tüm iletiler için) sağlar. Bu sınıf, EndpointDispatcher davranışını denetleyen çeşitli özellikleri özelleştirmenize olanak sağlar. Bu örnek, hizmet sınıfının örneklerini sağlayan nesnesine işaret eden <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> özelliğine odaklanır.  
+ <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> EndpointDispatcher, sınıfı kullanarak uç nokta kapsamı (hizmet tarafından alınan veya gönderilen tüm iletiler için) genişletilebilirlik sunar. Bu sınıf, EndpointDispatcher davranışını denetleyen çeşitli özellikleri özelleştirmenize olanak sağlar. Bu örnek, hizmet <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> sınıfının örneklerini sağlayan nesneyi işaret eden özelliğe odaklanır.  
   
-## <a name="iinstanceprovider"></a>IInstanceProvider  
- WCF 'de, EndpointDispatcher <xref:System.ServiceModel.Dispatcher.IInstanceProvider> arabirimini uygulayan bir örnek sağlayıcısı kullanarak bir hizmet sınıfının örneklerini oluşturur. Bu arabirimin yalnızca iki yöntemi vardır:  
+## <a name="iinstanceprovider"></a>ıınstanceprovider  
+ WCF'de, EndpointDispatcher <xref:System.ServiceModel.Dispatcher.IInstanceProvider> arabirimi uygulayan bir örnek sağlayıcı kullanarak bir hizmet sınıfı örnekleri oluşturur. Bu arabirimin yalnızca iki yöntemi vardır:  
   
-- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>: bir ileti geldiğinde dağıtıcı, iletiyi işlemek üzere hizmet sınıfının bir örneğini oluşturmak için <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> yöntemini çağırır. Bu yönteme yapılan çağrıların sıklığı <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> özelliği tarafından belirlenir. Örneğin <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> özelliği <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>olarak ayarlanırsa, gelen her iletiyi işlemek için yeni bir hizmet sınıfı örneği oluşturulur, bu nedenle <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> ileti geldiğinde çağrılır.  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>: İleti geldiğinde, Dispatcher iletiyi <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> işlemek için hizmet sınıfının bir örneğini oluşturmak için yöntemi çağırır. Bu yönteme yapılan çağrıların <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> sıklığı özellik tarafından belirlenir. Örneğin, <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> özellik , gelen her iletiyi işlemek için yeni bir hizmet <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> sınıfı örneği oluşturulacak şekilde ayarlanmışsa, ileti geldiğinde çağrılır. <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>  
   
-- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>: hizmet örneği iletiyi işlemeyi tamamladığında, EndpointDispatcher <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A> yöntemini çağırır. <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> yönteminde olduğu gibi, bu yönteme yapılan çağrıların sıklığı <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> özelliği tarafından belirlenir.  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>: Hizmet örneği iletiyi işlemeyi bitirdiğinde, EndpointDispatcher <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A> yöntemi çağırır. <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> Yöntemde olduğu gibi, bu yönteme yapılan çağrıların <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> sıklığı özellik tarafından belirlenir.  
   
-## <a name="the-object-pool"></a>Nesne havuzu  
- `ObjectPoolInstanceProvider` sınıfı, nesne havuzunun uygulamasını içerir. Bu sınıf, hizmet modeli katmanıyla etkileşimde bulunmak için <xref:System.ServiceModel.Dispatcher.IInstanceProvider> arabirimini uygular. EndpointDispatcher, yeni bir örnek oluşturmak yerine <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> yöntemini çağırdığında, özel uygulama bellek içi havuzda var olan bir nesneyi arar. Kullanılabilir bir tane varsa, döndürülür. Aksi takdirde, `ActiveObjectsCount` özelliğinin (havuzdan döndürülen nesne sayısı) en yüksek havuz boyutuna ulaştığından `ObjectPoolInstanceProvider` denetler. Aksi takdirde, yeni bir örnek oluşturulur ve çağırana döndürülür ve `ActiveObjectsCount` daha sonra artırılır. Aksi takdirde, bir nesne oluşturma isteği yapılandırılmış bir süre için sıraya alınır. `GetObjectFromThePool` uygulanması aşağıdaki örnek kodda gösterilmiştir.  
+## <a name="the-object-pool"></a>Nesne Havuzu  
+ Sınıf `ObjectPoolInstanceProvider` nesne havuzu için uygulama içerir. Bu sınıf, <xref:System.ServiceModel.Dispatcher.IInstanceProvider> hizmet modeli katmanı ile etkileşim için arabirimi uygular. EndpointDispatcher <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> yöntemi çağırdığında, yeni bir örnek oluşturmak yerine, özel uygulama bellek içi bir havuzda varolan bir nesneyi arar. Varsa, döndürülür. Aksi `ObjectPoolInstanceProvider` takdirde, `ActiveObjectsCount` özelliğin (havuzdan döndürülen nesne sayısı) maksimum havuz boyutuna ulaşıp ulaşmadığını denetler. Değilse, yeni bir örnek oluşturulur ve arayana döndürülür ve `ActiveObjectsCount` daha sonra artımlanır. Aksi takdirde, nesne oluşturma isteği yapılandırılmış bir süre için sıraya alınır. `GetObjectFromThePool` Uygulama aşağıdaki örnek kodda gösterilir.  
   
 ```csharp
 private object GetObjectFromThePool()  
 {  
-    bool didNotTimeout =   
+    bool didNotTimeout =
        availableCount.WaitOne(creationTimeout, true);  
     if(didNotTimeout)  
     {  
@@ -56,7 +56,7 @@ private object GetObjectFromThePool()
                         WritePoolMessage(  
                              ResourceHelper.GetString("MsgNewObject"));  
                        #endif  
-                   }                          
+                   }
             }  
            idleTimer.Stop();  
       }  
@@ -72,14 +72,14 @@ ResourceHelper.GetString("ExObjectCreationTimeout"));
 }  
 ```  
   
- Özel `ReleaseInstance` uygulama, yayımlanan örneği havuza geri ekler ve `ActiveObjectsCount` değerini azaltır. EndpointDispatcher Bu yöntemleri farklı iş parçacıklarından çağırabilir ve bu nedenle `ObjectPoolInstanceProvider` sınıfındaki sınıf düzeyi üyelerine eşitlenen erişim gereklidir.  
+ Özel `ReleaseInstance` uygulama, serbest bırakılan örneği havuza geri ekler `ActiveObjectsCount` ve değeri eriter. EndpointDispatcher bu yöntemleri farklı iş iş parçacıklarından çağırabilir ve bu nedenle `ObjectPoolInstanceProvider` sınıftaki sınıf düzeyi üyelerine eşitlenmiş erişim gereklidir.  
   
 ```csharp
 public void ReleaseInstance(InstanceContext instanceContext, object instance)  
 {  
     lock (poolLock)  
     {  
-        // Check whether the object can be pooled.   
+        // Check whether the object can be pooled.
         // Call the Deactivate method if possible.  
         if (instance is IObjectControl)  
         {  
@@ -93,7 +93,7 @@ public void ReleaseInstance(InstanceContext instanceContext, object instance)
                 #if(DEBUG)  
                 WritePoolMessage(  
                     ResourceHelper.GetString("MsgObjectPooled"));  
-                #endif                          
+                #endif
             }  
             else  
             {  
@@ -110,14 +110,14 @@ public void ReleaseInstance(InstanceContext instanceContext, object instance)
             #if(DEBUG)  
             WritePoolMessage(  
                 ResourceHelper.GetString("MsgObjectPooled"));  
-            #endif   
+            #endif
         }  
   
         activeObjectsCount--;  
   
         if (activeObjectsCount == 0)  
         {  
-            idleTimer.Start();                       
+            idleTimer.Start();
         }  
     }  
   
@@ -125,42 +125,42 @@ public void ReleaseInstance(InstanceContext instanceContext, object instance)
 }  
 ```  
   
- `ReleaseInstance` yöntemi bir *Temizleme başlatma* özelliği sağlar. Normalde havuz, havuzun ömrü boyunca en az sayıda nesne tutar. Ancak, yapılandırmada belirtilen en yüksek sınıra ulaşmak için havuzda ek nesneler oluşturulmasını gerektiren aşırı kullanım süreleri olabilir. Sonuç olarak, havuz daha az etkin hale geldiğinde, bu fazlalık nesneler ek bir ek yük haline gelebilir. Bu nedenle `activeObjectsCount` sıfırdan ulaştığında bir boşta kalma süreölçeri tetiklenir ve Temizleme döngüsünü gerçekleştirir.  
+ Yöntem, `ReleaseInstance` bir *temizleme başlatma* özelliği sağlar. Normalde havuz, havuzun ömrü boyunca en az sayıda nesne tutar. Ancak, yapılandırmada belirtilen maksimum sınıra ulaşmak için havuzda ek nesneler oluşturmayı gerektiren aşırı kullanım dönemleri olabilir. Sonunda havuz daha az aktif hale geldiğinde bu artı nesneler ekstra bir ek yükü haline gelebilir. Bu nedenle `activeObjectsCount` sıfıra ulaştığında bir temizleme döngüsü tetikler ve gerçekleştirir bir boşta zamanlayıcı başlatılır.  
   
 ```csharp  
 if (activeObjectsCount == 0)  
 {  
-    idleTimer.Start();   
+    idleTimer.Start();
 }  
 ```  
   
- ServiceModel katman uzantıları aşağıdaki davranışlar kullanılarak kullanıma alınır:  
+ ServiceModel katman uzantıları aşağıdaki davranışları kullanarak bağlanır:  
   
-- Hizmet davranışları: Bu, tüm hizmet çalışma zamanının özelleştirilmesine izin verir.  
+- Hizmet Davranışları: Bunlar, tüm hizmet çalışma zamanının özelleştirilmesine olanak sağlar.  
   
-- Uç nokta davranışları: Bu, EndpointDispatcher dahil olmak üzere belirli bir hizmet uç noktasının özelleştirilmesine izin verir.  
+- Bitiş Noktası Davranışları: Bunlar, EndpointDispatcher da dahil olmak üzere belirli bir hizmet bitiş noktasının özelleştirilmesine olanak sağlar.  
   
-- Sözleşme davranışları: Bu, sırasıyla istemci veya hizmette <xref:System.ServiceModel.Dispatcher.ClientRuntime> ya da <xref:System.ServiceModel.Dispatcher.DispatchRuntime> sınıfların özelleştirilmesine izin verir.  
+- Sözleşme Davranışları: Bunlar, istemci veya <xref:System.ServiceModel.Dispatcher.ClientRuntime> <xref:System.ServiceModel.Dispatcher.DispatchRuntime> hizmetteki sınıfların sırasıyla özelleştirilmesine olanak sağlar.  
   
-- İşlem davranışları: Bu, sırasıyla istemci veya hizmette <xref:System.ServiceModel.Dispatcher.ClientOperation> ya da <xref:System.ServiceModel.Dispatcher.DispatchOperation> sınıfların özelleştirilmesine izin verir.  
+- İşlem Davranışları: Bunlar, istemci <xref:System.ServiceModel.Dispatcher.ClientOperation> veya <xref:System.ServiceModel.Dispatcher.DispatchOperation> hizmetteki sınıfların sırasıyla özelleştirilmesine olanak sağlar.  
   
- Bir nesne havuzu uzantısının amacı için bir uç nokta davranışı veya bir hizmet davranışı oluşturulabilir. Bu örnekte, hizmetin her uç noktasına nesne havuzu oluşturma özelliğini uygulayan bir hizmet davranışı kullanıyoruz. Hizmet davranışları <xref:System.ServiceModel.Description.IServiceBehavior> arabirimi uygulayarak oluşturulur. Özel davranışları ServiceModel olarak algılayan çeşitli yollar vardır:  
+ Nesne birleştirme uzantısı amacıyla, bitiş noktası davranışı veya hizmet davranışı oluşturulabilir. Bu örnekte, nesne birleştirme yeteneğini hizmetin her bitiş noktasına uygulayan bir hizmet davranışı kullanırız. Hizmet davranışları <xref:System.ServiceModel.Description.IServiceBehavior> arabirimi uygulanarak oluşturulur. ServiceModel'i özel davranışlardan haberdar etmenin birkaç yolu vardır:  
   
 - Özel bir öznitelik kullanma.  
   
-- Imperatively, hizmet açıklamasının davranış koleksiyonuna ekleniyor.  
+- Zorunlu olarak hizmet açıklamasının davranış koleksiyonuna ekleme.  
   
-- Yapılandırma dosyası genişletiliyor.  
+- Yapılandırma dosyasını genişletme.  
   
- Bu örnek özel bir özniteliği kullanır. <xref:System.ServiceModel.ServiceHost> oluşturulduğunda, hizmetin tür tanımında kullanılan öznitelikleri inceler ve kullanılabilir davranışları hizmet açıklamasının davranış koleksiyonuna ekler.  
+ Bu örnek özel bir öznitelik kullanır. <xref:System.ServiceModel.ServiceHost> Oluşturulduğunda, hizmetin tür tanımında kullanılan öznitelikleri inceler ve hizmet açıklamasının davranış koleksiyonuna kullanılabilir davranışları ekler.  
   
- <xref:System.ServiceModel.Description.IServiceBehavior> arabirimi üç yönteme sahiptir: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>`,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>`,` ve <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. <xref:System.ServiceModel.ServiceHost> başlatıldığında bu yöntemler WCF tarafından çağırılır. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> ilk olarak çağrılır; hizmetin tutarsızlıklar için inceleneme izin verir. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> daha sonra çağrılır; Bu yöntem yalnızca Gelişmiş senaryolarda gereklidir. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> son olarak adlandırılır ve çalışma zamanının yapılandırılmasından sorumludur. Aşağıdaki parametreler <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>geçirilir:  
+ <xref:System.ServiceModel.Description.IServiceBehavior> Arabirimin üç yöntemi <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>vardır: ve . Bu yöntemler, başharflere <xref:System.ServiceModel.ServiceHost> alınırken WCF tarafından çağrılır. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>ilk denir; tutarsızlıklar için hizmetin denetlenmesini sağlar. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>sonraki denir; bu yöntem yalnızca çok gelişmiş senaryolarda gereklidir. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>sonuncu olarak adlandırılır ve çalışma süresini yapılandırmaktan sorumludur. Aşağıdaki parametreler e <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>aktarılır:  
   
-- `Description`: Bu parametre hizmetin tamamı için hizmet açıklamasını sağlar. Bu, hizmetin uç noktaları, sözleşmeleri, bağlamaları ve hizmetle ilişkili diğer verilerle ilgili açıklama verilerini denetlemek için kullanılabilir.  
+- `Description`: Bu parametre, tüm hizmet için hizmet açıklamasını sağlar. Bu, hizmetin bitiş noktaları, sözleşmeleri, bağlamaları ve hizmetle ilişkili diğer verilerle ilgili açıklama verilerini incelemek için kullanılabilir.  
   
-- `ServiceHostBase`: Bu parametre, şu anda başlatılmış olan <xref:System.ServiceModel.ServiceHostBase> sağlar.  
+- `ServiceHostBase`: Bu parametre, şu anda başharflere getirilmekte olan parametreyi <xref:System.ServiceModel.ServiceHostBase> sağlar.  
   
- Özel <xref:System.ServiceModel.Description.IServiceBehavior> uygulamasında, yeni bir `ObjectPoolInstanceProvider` örneği oluşturulur ve <xref:System.ServiceModel.ServiceHostBase>eklenen her <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> özelliğine atanır.  
+ Özel <xref:System.ServiceModel.Description.IServiceBehavior> uygulamada, yeni bir `ObjectPoolInstanceProvider` örnek anında ve bağlı her <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> bir <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> özellik <xref:System.ServiceModel.ServiceHostBase>atanır.  
   
 ```csharp
 public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBase serviceHostBase)  
@@ -171,7 +171,7 @@ public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBas
         instanceProvider = new ObjectPoolInstanceProvider(description.ServiceType,  
         maxPoolSize, minPoolSize, creationTimeout);  
   
-        // Assign our instance provider to Dispatch behavior in each   
+        // Assign our instance provider to Dispatch behavior in each
         // endpoint.  
         foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)  
         {  
@@ -185,27 +185,27 @@ public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBas
              }  
          }  
      }  
-}   
+}
 ```  
   
- <xref:System.ServiceModel.Description.IServiceBehavior> uygulamasına ek olarak, `ObjectPoolingAttribute` sınıfı, nesne havuzunu öznitelik bağımsız değişkenlerini kullanarak özelleştirmek için çeşitli üyelere sahiptir. Bu Üyeler, .NET Enterprise Services tarafından sunulan nesne havuzu özellik kümesiyle eşleşecek `MaxSize`, `MinSize`, `Enabled` ve `CreationTimeout`içerir.  
+ Bir <xref:System.ServiceModel.Description.IServiceBehavior> uygulamaya ek `ObjectPoolingAttribute` olarak sınıf öznitelik bağımsız değişkenleri kullanarak nesne havuzu özelleştirmek için birkaç üye vardır. Bu `MaxSize`üyeler, `MinSize` `Enabled` .NET Enterprise Services tarafından sağlanan nesne birleştirme özelliğini eşleştirmek için , ve `CreationTimeout`, içerir.  
   
- Nesne havuzu oluşturma davranışı artık yeni oluşturulan özel `ObjectPooling` özniteliğiyle hizmet uygulamasına ek olarak bir WCF hizmetine eklenebilir.  
+ Nesne birleştirme davranışı artık yeni oluşturulan özel `ObjectPooling` öznitelik ile hizmet uygulaması açıklama yaparak bir WCF hizmetine eklenebilir.  
   
 ```csharp  
-[ObjectPooling(MaxSize=1024, MinSize=10, CreationTimeout=30000]      
+[ObjectPooling(MaxSize=1024, MinSize=10, CreationTimeout=30000]
 public class PoolService : IPoolService  
 {  
   // …  
 }  
 ```  
   
-## <a name="hooking-activation-and-deactivation"></a>Etkinleştirme ve devre dışı bırakma  
- Nesne havuzunun birincil amacı, kısa süreli nesneleri görece maliyetli oluşturma ve başlatma ile optimize etmek. Bu nedenle, düzgün şekilde kullanılırsa uygulamaya çarpıcı bir performans artışı verebilir. Nesne havuzdan döndürüldüğünden, Oluşturucu yalnızca bir kez çağrılır. Ancak bazı uygulamalar, tek bir bağlam sırasında kullanılan kaynakları başlatıp temizleyebilecekleri bir denetim düzeyi gerektirir. Örneğin, bir hesaplamalar kümesi için kullanılan bir nesne, bir sonraki hesaplamayı işlemeden önce özel alanlarını sıfırlayabilir. Kurumsal Hizmetler, nesne geliştiricisinin <xref:System.EnterpriseServices.ServicedComponent> taban sınıfından `Activate` ve `Deactivate` yöntemleri geçersiz kılmasına izin vererek bu tür içeriğe özgü başlatma işlemini etkinleştirdi.  
+## <a name="hooking-activation-and-deactivation"></a>Hooking Aktivasyon ve Devre Dışı Bırakma  
+ Nesne birleştirmenin birincil amacı, göreceli olarak pahalı oluşturma ve başlatma ile kısa ömürlü nesneleri en iyi duruma getirmektir. Bu nedenle, düzgün kullanıldığında bir uygulamaya önemli bir performans artışı sağlayabilir. Nesne havuzdan döndürüldinandığından, oluşturucu yalnızca bir kez çağrılır. Ancak, bazı uygulamalar, tek bir bağlam sırasında kullanılan kaynakları başlatma ve temizleme yapabilmeleri için bir miktar denetim gerektirir. Örneğin, bir hesaplama kümesi için kullanılan bir nesne, sonraki hesaplamayı işlemeden önce özel alanlarını sıfırlayabilir. Kurumsal Hizmetler, nesne geliştiricisinin ve `Activate` `Deactivate` yöntemleri <xref:System.EnterpriseServices.ServicedComponent> temel sınıftan geçersiz kılmasına izin vererek bu tür içeriğe özgü bir başlatma olanağı sağladı.  
   
- Nesne havuzu, nesneyi havuzdan döndürmeden hemen önce `Activate` yöntemini çağırır. `Deactivate`, nesne havuza geri dönzaman çağrılır. <xref:System.EnterpriseServices.ServicedComponent> temel sınıfı `CanBePooled`adlı bir `boolean` özelliğine sahiptir ve bu, havuzun daha fazla havuza eklenip eklenmeyeceğini bildirmek için de kullanılabilir.  
+ Nesne havuzu, `Activate` nesneyi havuzdan döndürmeden hemen önce yöntemi çağırır. `Deactivate`nesne havuza geri döndüğünde çağrılır. Taban sınıfın, nesnenin `CanBePooled`daha fazla havuza alınıp alınamayacağını havuza bildirmek için kullanılabilecek , adlı bir `boolean` özelliği de vardır. <xref:System.EnterpriseServices.ServicedComponent>  
   
- Bu işlevselliği taklit etmek için örnek, belirtilen üyelere sahip ortak bir arabirim (`IObjectControl`) bildirir. Bu arabirim daha sonra içeriğe özgü başlatma sağlamak üzere amaçlanan hizmet sınıfları tarafından uygulanır. <xref:System.ServiceModel.Dispatcher.IInstanceProvider> uygulamasının bu gereksinimleri karşılayacak şekilde değiştirilmesi gerekir. Artık `GetInstance` yöntemini çağırarak bir nesne aldığınızda, nesnenin `IObjectControl.` uygulayıp uygulamadığını denetlemeniz gerekir, `Activate` yöntemini uygun şekilde çağırmanız gerekir.  
+ Bu işlevselliği taklit etmek için, örnek`IObjectControl`yukarıda belirtilen üyeleri olan bir ortak arabirim ( ) bildirir. Bu arabirim daha sonra bağlam belirli bir başlangıç sağlamak amacıyla hizmet sınıfları tarafından uygulanır. Uygulama, <xref:System.ServiceModel.Dispatcher.IInstanceProvider> bu gereksinimleri karşılamak için değiştirilmelidir. Şimdi, `GetInstance` yöntemi çağırarak bir nesne almak her zaman, nesne `IObjectControl.` uygular eğer olup olmadığını `Activate` kontrol etmelisiniz, uygun şekilde yöntemi aramanız gerekir.  
   
 ```csharp  
 if (obj is IObjectControl)  
@@ -214,7 +214,7 @@ if (obj is IObjectControl)
 }  
 ```  
   
- Havuza bir nesne döndürürken, nesne havuza geri eklenmeden önce `CanBePooled` özelliği için bir denetim gereklidir.  
+ Bir nesneyi havuza döndürdükten sonra, `CanBePooled` nesneyi havuza geri eklemeden önce özellik için bir denetim gerekir.  
   
 ```csharp  
 if (instance is IObjectControl)  
@@ -228,14 +228,14 @@ if (instance is IObjectControl)
 }  
 ```  
   
- Hizmet geliştiricisi bir nesnenin havuza kaydedilip edilmeyeceğini belirleyebildiğinden, havuzdaki belirli bir zamanda bulunan nesne sayısı en düşük boyutun altına gidebilir. Bu nedenle, nesne sayısının en düşük düzeyin altında olup olmadığını ve Temizleme yordamında gerekli başlatmayı gerçekleştirip gerçekleştirmediğini denetlemeniz gerekir.  
+ Hizmet geliştiricisi bir nesnenin bir araya gelip gelemeyeceğine karar verebildiği için, belirli bir zamanda havuzdaki nesne sayısı minimum boyutun altına inebilir. Bu nedenle, nesne sayısının minimum düzeyin altına inip gitmediğini kontrol etmeli ve temizleme yordamında gerekli başlatmaişlemini gerçekleştirmelisiniz.  
   
 ```csharp  
 // Remove the surplus objects.  
 if (pool.Count > minPoolSize)  
 {  
   // Clean the surplus objects.  
-}                      
+}
 else if (pool.Count < minPoolSize)  
 {  
   // Reinitialize the missing objects.  
@@ -246,21 +246,21 @@ else if (pool.Count < minPoolSize)
 }  
 ```  
   
- Örneği çalıştırdığınızda, işlem istekleri ve yanıtları hem hizmet hem de istemci konsol penceresinde görüntülenir. Hizmeti ve istemciyi kapatmak için her bir konsol penceresinde ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları hem hizmet hem de istemci konsol pencerelerinde görüntülenir. Hizmeti ve istemciyi kapatmak için her konsol penceresinde Enter tuşuna basın.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
   
-1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
+1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
   
-2. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümündeki yönergeleri izleyin.  
+2. Çözümü oluşturmak için, Windows [Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
   
-3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
+3. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
   
 > [!IMPORTANT]
-> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
->   
+> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
->   
+>
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  

@@ -15,44 +15,44 @@ helpviewer_keywords:
 ms.assetid: 9dcc8b3d-33ee-4c7c-8d6f-322c57b94a0f
 topic_type:
 - apiref
-ms.openlocfilehash: 99f529a151a42cf4a9ee1f74bd3a76a5b6b1b35f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 64d76efa8c2f29fda559e5c84217b865540027ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445267"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175830"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl Yöntemi
-Bir arabirimden devralınan yöntemin uygulanması için bir tanım oluşturur ve bu yöntem uygulama tanımına bir belirteç döndürür.  
+Arabirimden devralınan bir yöntemin uygulanması için bir tanım oluşturur ve bu yöntem-uygulama tanımına bir belirteç döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT DefineMethodImpl (   
-    [in]  mdTypeDef         td,   
-    [in]  mdToken           tkBody,   
+HRESULT DefineMethodImpl (
+    [in]  mdTypeDef         td,
+    [in]  mdToken           tkBody,
     [in]  mdToken           tkDecl  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- 'ndaki Uygulama sınıfının `mdTypedef` belirteci.  
+ [içinde] Uygulama `mdTypedef` sınıfının belirteci.  
   
  `tkBody`  
- 'ndaki Kod gövdesinin `mdMethodDef` veya `mdMemberRef` belirteci.  
+ [içinde] Kod `mdMethodDef` `mdMemberRef` gövdesinin belirteci.  
   
  `tkDecl`  
- 'ndaki Uygulanan arabirim yönteminin `mdMethodDef` veya `mdMemberRef` belirteci.  
+ [içinde] Uygulanan `mdMethodDef` `mdMemberRef` arabirim yönteminin belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

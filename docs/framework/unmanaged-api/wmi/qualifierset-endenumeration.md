@@ -1,6 +1,6 @@
 ---
-title: QualifierSet_EndEnumeration işlevi (yönetilmeyen API Başvurusu)
-description: QualifierSet_EndEnumeration işlevi bir numaralandırmayı sonlandırır.
+title: QualifierSet_EndEnumeration işlevi (Yönetilmeyen API Başvurusu)
+description: QualifierSet_EndEnumeration işlevi numaralandırmayı sonlandırır.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_EndEnumeration
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - QualifierSet_EndEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 82627fa416f71e123ed2c03bae4584e4433310eb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c606580ff2e02c5659c14b134b1a17a65651952b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127285"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176753"
 ---
-# <a name="qualifierset_endenumeration-function"></a>QualifierSet_EndEnumeration işlevi
-[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) işlevine yapılan bir çağrıyla başlatılan numaralandırmayı sonlandırır.  
+# <a name="qualifierset_endenumeration-function"></a>QualifierSet_EndEnumeration fonksiyonu
+[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) işlevine yapılan bir çağrıyla başlayan numaralandırmayı sonlandırır.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -30,22 +30,21 @@ ms.locfileid: "73127285"
   
 ```cpp  
 HRESULT QualifierSet_EndEnumeration (
-   [in] int                  vFunc, 
+   [in] int                  vFunc,
    [in] IWbemQualifierSet*   ptr
-); 
+);
 ```  
 
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-'ndaki Bu parametre kullanılmıyor.
+[içinde] Bu parametre kullanılmaz.
 
-`ptr`   
-'ndaki Bir [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneği işaretçisi.
+`ptr`[içinde] [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneğine işaretçi.
 
-## <a name="return-value"></a>Dönüş değeri
+## <a name="return-value"></a>Döndürülen değer
 
-Bu işlev tarafından döndürülen aşağıdaki değer *Wbemcli. h* üstbilgi dosyasında tanımlanır veya kodunuzda bir sabit olarak tanımlayabilirsiniz:
+Bu işlev tarafından döndürülen aşağıdaki değer *WbemCli.h* üstbilgi dosyasında tanımlanır veya kodunuzda bir sabit olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
@@ -53,18 +52,18 @@ Bu işlev tarafından döndürülen aşağıdaki değer *Wbemcli. h* üstbilgi d
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev, [IWbemQualifierSet:: EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) yöntemine bir çağrı kaydırır.
+Bu işlev [IWbemQualifierSet::EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) yöntemine bir çağrı yıkıyor.
 
-Bu çağrı önerilir, ancak gerekli değildir. Numaralandırmada ilişkili kaynakları hemen yayınlar.
+Bu arama önerilir, ancak gerekli değildir. Numaralandırmayla ilişkili kaynakları hemen serbest bırakır.
 
 ## <a name="requirements"></a>Gereksinimler  
 
-**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+**Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
   
-**Üst bilgi:** WMINet_Utils. IDL  
+**Üstbilgi:** WMINet_Utils.idl  
   
-**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+**.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)

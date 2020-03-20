@@ -15,43 +15,43 @@ helpviewer_keywords:
 ms.assetid: c5143805-2eb7-45b8-85ed-c8fb34df1084
 topic_type:
 - apiref
-ms.openlocfilehash: 0368349e6c6a566cb569738bf3bda40eb9f5de96
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 46f047dbec7ff008873540806b76ffe7085086b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790741"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178429"
 ---
 # <a name="icorpublishgetprocess-method"></a>ICorPublish::GetProcess Yöntemi
-Belirtilen tanımlayıcıya sahip işlemi temsil eden bir [ICorPublishProcess](icorpublishprocess-interface.md) örneğini alır.  
+Belirtilen tanımlayıcıile işlemi temsil eden bir [ICorPublishProcess](icorpublishprocess-interface.md) örneği alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetProcess(  
-    [in] unsigned              pid,   
+    [in] unsigned              pid,
     [out] ICorPublishProcess   **ppProcess  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pid`  
- 'ndaki İşlemin tanımlayıcısı.  
+ [içinde] İşlemin tanımlayıcısı.  
   
  `ppProcess`  
- dışı İşlemi temsil eden bir `ICorPublishProcess` örneğinin adresine yönelik bir işaretçi.  
+ [çıkış] İşlemi temsil eden `ICorPublishProcess` bir örneğin adresine işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- işlem yoksa `GetProcess` başarısız olur veya geçerli kullanıcı tarafından hata ayıklanabilecek yönetilen bir işlem değildir.  
+ `GetProcess`işlem yoksa veya geçerli kullanıcı tarafından debugged olabilir yönetilen bir işlem değilse başarısız olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorPub. IDL, CorPub. h  
+ **Üstbilgi:** CorPub.idl, CorPub.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

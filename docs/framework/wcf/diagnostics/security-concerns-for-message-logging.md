@@ -2,42 +2,42 @@
 title: İleti Günlüğe Kaydetme ile İlgili Güvenlik Konuları
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 679975be44244f10232b805a6cc2776b48ed6058
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: bb1a6ab84ceba27b398d397b4407a55aa02c4cae
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935763"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185769"
 ---
 # <a name="security-concerns-for-message-logging"></a>İleti Günlüğe Kaydetme ile İlgili Güvenlik Konuları
-Bu konu başlığı altında, gizli verilerin ileti günlüklerinde gösterilmesini ve ileti günlüğe kaydetme tarafından oluşturulan olayları nasıl koruyabileceğiniz açıklanmaktadır.  
+Bu konu, hassas verilerin ileti günlüklerinde açığa çıkarılmasını nasıl koruyabileceğinizi ve ileti günlüğe kaydetmenin oluşturduğu olayları açıklar.  
   
-## <a name="security-concerns"></a>Güvenlik sorunları  
+## <a name="security-concerns"></a>Güvenlik Endişeleri  
   
-### <a name="logging-sensitive-information"></a>Gizli bilgileri günlüğe kaydetme  
- Windows Communication Foundation (WCF), uygulamaya özgü üst bilgilerdeki ve gövdedeki hiçbir veriyi değiştirmez. WCF Ayrıca uygulamaya özgü üst bilgilerde veya gövde verilerinde kişisel bilgileri izlemez.  
+### <a name="logging-sensitive-information"></a>Hassas Bilgileri Günlüğe Kaydetme  
+ Windows Communication Foundation (WCF), uygulamaya özgü üstbilgiler ve gövdedeki verileri değiştirmez. WCF ayrıca uygulamaya özel üstbilgilerdeki veya gövde verilerindeki kişisel bilgileri izlemez.  
   
- İleti günlüğe kaydetme etkin olduğunda, bir sorgu dizesi gibi uygulamaya özgü üst bilgilerde kişisel bilgiler; ve kredi kartı numarası gibi gövde bilgileri günlüklerde görünür hale gelebilir. Uygulama dağıtıcı, yapılandırma ve günlük dosyalarında erişim denetimini zormaktan sorumludur. Bu tür bilgilerin görünmesini istemiyorsanız, günlükleri paylaşmak istiyorsanız günlüğe kaydetmeyi devre dışı bırakmanız veya verilerin bir kısmını filtrelemeniz gerekir.  
+ İleti günlüğe kaydetme etkinleştirildiğinde, sorgu dizesi gibi uygulamaya özgü üstbilgilerdeki kişisel bilgiler; ve kredi kartı numarası gibi gövde bilgileri günlüklerde görülebilir. Uygulama dağıtıcı, yapılandırma ve günlük dosyaları üzerinde erişim denetimini zorlamakiçin sorumludur. Bu tür bilgilerin görünür olmasını istemiyorsanız, günlükleri paylaşmak istiyorsanız günlüğe kaydetmeyi devre dışı kesmeniz veya verilerin bir kısmını filtrelemeniz gerekir.  
   
- Aşağıdaki ipuçları, bir günlük dosyasının içeriğinin istenmeden gösterilmesini önlemeye yardımcı olabilir:  
+ Aşağıdaki ipuçları, günlük dosyasının içeriğinin istemeden açığa çıkarOlmasını önlemenize yardımcı olabilir:  
   
-- Günlük dosyalarının hem Web hem de Self-Host senaryolarında Access Control listeleriyle (ACL) korunduğundan emin olun.  
+- Günlük dosyalarının hem Web barındırma hem de kendi barındırma senaryolarında Erişim Denetim Listeleri (ACL) tarafından korunduğundan emin olun.  
   
-- Web isteği kullanılarak kolayca sunulamayan bir dosya uzantısı seçin. Örneğin,. xml dosya uzantısı güvenli bir seçenek değildir. Sunulabilecek uzantıların listesini görmek için Internet Information Services (IIS) yönetim kılavuzuna bakabilirsiniz.  
+- Web isteği kullanılarak kolayca sunulamayan bir dosya uzantısı seçin. Örneğin, .xml dosya uzantısı güvenli bir seçim değildir. Sunulabilecek uzantıların listesini görmek için Internet Information Services (IIS) yönetim kılavuzuna bakabilirsiniz.  
   
-- Bir Web tarayıcısı kullanarak harici bir tarafın erişmesini engellemek için, günlük dosyası konumu için bir mutlak yol belirtin. Bu, Web Konağı vroot ortak dizininin dışında olmalıdır.  
+- Bir Web tarayıcısı kullanarak harici bir taraf tarafından erişmesini önlemek için Web ana bilgisayar vroot genel dizininin dışında olması gereken günlük dosyası konumu için mutlak bir yol belirtin.  
   
- Varsayılan olarak, Kullanıcı adı ve parola gibi anahtarlar ve kişisel bilgiler (PII), izlemelerde ve günlüğe kaydedilen iletilerde günlüğe kaydedilmez. Ancak Makine Yöneticisi, makinede çalışan uygulamaların bilinen kişisel olarak tanımlanabilen bilgileri (PII) günlüğe almasına izin vermek için Machine. config dosyasının `machineSettings` öğesindeki `enableLoggingKnownPII` özniteliğini kullanabilir. Aşağıdaki yapılandırmada bunun nasıl yapılacağı gösterilmektedir:  
+ Varsayılan olarak, kullanıcı adı ve parola gibi anahtarlar ve kişisel olarak tanımlanabilir bilgiler (PII) izlemelerde ve günlüğe kaydedilmiş iletilerde günlüğe kaydedilmez. Ancak bir makine yöneticisi, `enableLoggingKnownPII` Machine.config `machineSettings` dosyasının öğesindeki özniteliği, bilinen kişisel olarak tanımlanabilir bilgileri (PII) günlüğe kaydetmek için makinede çalışan uygulamalara izin vermek için kullanabilir. Aşağıdaki yapılandırma bunu nasıl yapacağız gösterir:  
   
 ```xml  
 <configuration>  
    <system.serviceModel>  
       <machineSettings enableLoggingKnownPii="true"/>  
    </system.serviceModel>  
-</configuration>   
+</configuration>
 ```  
   
- Daha sonra bir uygulama dağıtıcısı, PII günlüğünü etkinleştirmek için App. config veya Web. config dosyasında `logKnownPii` özniteliğini aşağıdaki şekilde kullanabilir:  
+ Bir uygulama dağıtıcısı `logKnownPii` daha sonra aşağıdaki gibi KIŞISEL günlüğe kaydetmeyi etkinleştirmek için App.config veya Web.config dosyasındaki özniteliği kullanabilir:  
   
 ```xml  
 <system.diagnostics>  
@@ -54,12 +54,12 @@ Bu konu başlığı altında, gizli verilerin ileti günlüklerinde gösterilmes
 </system.diagnostics>  
 ```  
   
- Yalnızca her iki ayar de PII günlüğü etkin `true`. İki anahtar birleşimi, her bir uygulama için bilinen PII 'yi günlüğe kaydetme esnekliğini sağlar.  
+ Yalnızca her iki `true` ayar da KIŞISEL olarak günlüğe kaydetme etkin olduğunda. İki anahtarın birleşimi, her uygulama için bilinen KIŞISEL Bilgiler'i günlüğe kaydetme esnekliğisağlar.  
   
 > [!IMPORTANT]
-> [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] `logEntireMessage` ve `logKnownPii` bayrakları, aşağıdaki `<system.serviceModel><messageLogging logEntireMessage="true" logKnownPii="true" …`örnekte gösterildiği gibi, PII günlüğünü etkinleştirmek için Web. config dosyasında veya App. config dosyasında da `true` olarak ayarlanmalıdır.  
+> `logEntireMessage` Ve [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] `logKnownPii` bayraklar da Web.config `true` dosyasında veya App.config dosyasında pii günlüğe etkinleştirmek için `<system.serviceModel><messageLogging logEntireMessage="true" logKnownPii="true" …`ayarlanmalıdır, aşağıdaki örnekte gösterdiği gibi .  
   
- Bir yapılandırma dosyasında iki veya daha fazla özel kaynak belirtirseniz, yalnızca ilk kaynağın özniteliklerinin okunup okunduğuna dikkat edin. Diğerleri yok sayılır. Bu, aşağıdaki App. config, File, PII için her iki kaynak için de PII günlüğü, ikinci kaynak için açık olarak etkinleştirilmiş olsa da bu şekilde günlüğe kaydedilmez.  
+ Bir yapılandırma dosyasında iki veya daha fazla özel kaynak belirtirseniz, yalnızca ilk kaynağın özniteliklerinin okunduğunu unutmayın. Diğerleri yok sayılır. Bu, aşağıdaki App.config, dosya için, kişisel bilgiler ikinci kaynak için açıkça etkin olsa bile, her iki kaynak için de günlüğe kaydedilmez anlamına gelir.  
   
 ```xml  
 <system.diagnostics>  
@@ -72,7 +72,7 @@ Bu konu başlığı altında, gizli verilerin ileti günlüklerinde gösterilmes
                       initializeData="c:\logs\messages.svclog" />  
               </listeners>  
             </source>  
-      <source name="System.ServiceModel"   
+      <source name="System.ServiceModel"
               logKnownPii="true">  
               <listeners>  
                  <add name="traces"  
@@ -84,30 +84,30 @@ Bu konu başlığı altında, gizli verilerin ileti günlüklerinde gösterilmes
 </system.diagnostics>  
 ```  
   
- `<machineSettings enableLoggingKnownPii="Boolean"/>` öğesi Machine. config dosyasının dışında varsa, sistem bir <xref:System.Configuration.ConfigurationErrorsException>oluşturur.  
+ `<machineSettings enableLoggingKnownPii="Boolean"/>` Öğe Machine.config dosyasının dışında varsa, sistem <xref:System.Configuration.ConfigurationErrorsException>bir .  
   
- Değişiklikler yalnızca uygulama başlatıldığında veya yeniden başlatıldığında geçerli olur. Her iki öznitelik de `true`olarak ayarlandığında, bir olay başlangıçta günlüğe kaydedilir. `logKnownPii`, `true` olarak ayarlanırsa `enableLoggingKnownPii` `false`bir olay da günlüğe kaydedilir.  
+ Değişiklikler yalnızca uygulama başlatıldığında veya yeniden başlatıldığında etkili dir. Her iki öznitelik de `true`'' de ayarlandığında, bir olay başlangıçta günlüğe kaydedilir. Bir olay, ayarlanmış `logKnownPii` `true` ancak `enableLoggingKnownPii` . `false`  
   
- Makine Yöneticisi ve uygulama dağıtıcı, bu iki anahtarı kullanırken çok dikkatli olmalıdır. PII günlüğü etkinse, güvenlik anahtarları ve PII günlüğe kaydedilir. Devre dışıysa, hassas ve uygulamaya özgü veriler hala ileti üstbilgilerinde ve gövdede günlüğe kaydedilir. Gizlilik ve PII 'nin gösterilmesini sağlama hakkında daha kapsamlı bir tartışma için bkz. [Kullanıcı gizliliği](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10)).  
+ Makine yöneticisi ve uygulama dağıtıcı, bu iki anahtarı kullanırken çok dikkatli olmalıdır. Kişisel günlük etkinse, güvenlik anahtarları ve KIŞISEL bilgiler günlüğe kaydedilir. Devre dışı bırakılmışsa, duyarlı ve uygulamaya özgü veriler ileti üstbilgileri ve gövdelerinde günlüğe kaydedilir. Gizlilik hakkında daha ayrıntılı bir tartışma ve kişisel bilgilerin açığa çıkarılmaktan korunması için [Bkz. Kullanıcı Gizliliği.](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10))  
   
 > [!CAUTION]
-> PII hatalı biçimlendirilmiş iletilerde gizli değil. Bu tür bir ileti, hiçbir değişiklik yapılmadan olduğu gibi kaydedilir. Daha önce bahsedilen özniteliklerin bunun üzerinde hiçbir etkisi yoktur.  
+> Kişisel bilgiler yanlış biçimlendirilmiş iletilerde gizli değildir. Bu tür iletiler herhangi bir değişiklik yapılmadan olduğu gibi günlüğe kaydedilir. Daha önce bahsedilen özniteliklerin bu konuda hiçbir etkisi yoktur.  
   
-### <a name="custom-trace-listener"></a>Özel Izleme dinleyicisi  
- Ileti günlüğe kaydetme izleme kaynağına özel bir izleme dinleyicisi eklemek, yönetici ile kısıtlanması gereken bir ayrıcalıkdır. Bunun nedeni, kötü amaçlı özel dinleyicilerinin iletileri uzaktan göndermek üzere yapılandırılabilmektir. Bu, hassas bilgilerin açığa çıkmasına yol açar. Ayrıca, bir uzak veritabanına gibi, hatta ileti göndermek için özel bir dinleyici yapılandırırsanız, uzak makinedeki ileti günlüklerinde doğru erişim denetimini zorunlu kılabilirsiniz.  
+### <a name="custom-trace-listener"></a>Özel İzleme Dinleyicisi  
+ İleti Günlüğü izleme kaynağına özel bir izleme dinleyicisi eklemek, yöneticiyle sınırlandırılması gereken bir ayrıcalıktır. Bunun nedeni, kötü amaçlı özel dinleyicilerin iletileri uzaktan gönderecek şekilde yapılandırılabiliyor ve bu da hassas bilgilerin açığa çıkmasına yol açabiliyor. Ayrıca, kabloya ileti gönderecek özel bir dinleyiciyi (örneğin, uzak bir veritabanına) yapılandırıyorsanız, uzak makinedeki ileti günlükleri üzerinde uygun erişim denetimini zorlamanız gerekir.  
   
-## <a name="events-triggered-by-message-logging"></a>Ileti günlüğe kaydetme tarafından tetiklenen olaylar  
- İleti günlüğe kaydetme tarafından oluşturulan tüm olaylar aşağıda listelenmiştir.  
+## <a name="events-triggered-by-message-logging"></a>İleti Günlüğe Kaydetmenin Tetiklediği Olaylar  
+ Aşağıda, ileti günlüğe kaydetme nin yaydığı tüm olaylar listelenir.  
   
-- İleti günlüğe kaydetme: Bu olay, yapılandırmada ileti günlüğe kaydetme etkin olduğunda veya WMI üzerinden yayınlanır. Olay içeriği "Ileti günlüğe kaydetme açıldı. Hassas bilgiler, hatta ileti gövdeleri gibi, tel üzerinde şifrelenseler bile şifresiz metin olarak kaydedilebilir. "  
+- İleti oturumu açma: İleti günlüğe kaydetme yapılandırmada veya WMI aracılığıyla etkinleştirildiğinde bu olay yayımlanır. Etkinliğin içeriği "İleti günlüğe kaydetme açık. Hassas bilgiler, örneğin ileti gövdeleri gibi, telüzerinde şifrelenmiş olsalar bile, açık metin olarak günlüğe kaydedilebilir."  
   
-- İleti oturumu kapatma: Bu olay, ileti günlüğü WMI aracılığıyla devre dışı bırakıldığında yayınlanır. Olayın içeriği "Ileti günlüğe kaydetme kapatıldı" dir.  
+- İleti oturumu kapatma: İleti günlüğe kaydetme WMI üzerinden devre dışı bırakıldığında bu olay yayımlanır. Etkinliğin içeriği "İleti günlüğe kaydetme kapatıldı."  
   
-- Bilinen PII 'Yi günlüğe kaydet: Bu olay, bilinen PII günlüğü etkinken yayınlanır. Bu, Machine. config dosyasının `machineSettings` öğesindeki `enableLoggingKnownPii` özniteliği `true`olarak ayarlandığında ve App. config veya Web. config dosyasındaki `source` öğesinin `logKnownPii` özniteliği `true`olarak ayarlandığında gerçekleşir.  
+- Günlük Bilinen Kişisel Bilgiler: Bilinen KIŞISEL'lerin günlüğe kaydedilmesi etkinleştirildiğinde bu olay yayılır. `enableLoggingKnownPii` Bu, Machine.config `machineSettings` dosyasının öğesindeki öznitelik ayarlandığında `true`ve `logKnownPii` App.config `source` veya Web.config dosyasındaki öğenin özniteliği `true`.  
   
-- Bilinen PII günlüğüne Izin verilmiyor: Bu olay, bilinen PII kaydına izin verilmediği zaman yayınlanır. Bu durum, App. config veya Web. config dosyasındaki `source` öğesinin `logKnownPii` özniteliği `true`olarak ayarlandığında gerçekleşir ancak Machine. config dosyasının `machineSettings` öğesindeki `enableLoggingKnownPii` özniteliği `false`olarak ayarlanır. Özel durum oluşturulmaz.  
+- Günlük Bilinen Kişisel Bilgiler'e Izin Verilmez: Bilinen KIŞISEL'in günlüğe kaydedilmesine izin verilmediğinde bu olay yayımlanır. Bu, App.config `source` veya Web.config dosyasındaki öğenin `true`özniteliği ayarlandığında `enableLoggingKnownPii` `machineSettings` `false` `logKnownPii` olur, ancak Machine.config dosyasının öğesindeki öznitelik . Özel durum oluşturulmaz.  
   
- Bu olaylar, Windows ile birlikte gelen Olay Görüntüleyicisi aracında görüntülenebilir. Bunun hakkında daha fazla bilgi için bkz. [olay günlüğü](./event-logging/index.md).  
+ Bu olaylar, Windows ile birlikte gelen Olay Görüntüleyici aracında görüntülenebilir. Bu konuda daha fazla bilgi için [Olay Günlüğü'ne](./event-logging/index.md)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

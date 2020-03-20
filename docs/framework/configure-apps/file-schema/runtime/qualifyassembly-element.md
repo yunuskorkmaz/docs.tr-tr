@@ -9,20 +9,20 @@ helpviewer_keywords:
 - <qualifyAssembly> element
 - qualifyAssembly element
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
-ms.openlocfilehash: 17cfe9fc39d65f146beef5d02c701f5e3e2fbbe1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 74e83900c68ab4b3fe01beb3f97657b0140d78ad
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115780"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153925"
 ---
-# <a name="qualifyassembly-element"></a>\<qualifyAssembly > öğesi
+# <a name="qualifyassembly-element"></a>\<qualifyAssembly> Elemanı
 Kısmi bir ad kullanıldığında dinamik olarak yüklenmesi gereken derlemenin tam adını belirtir.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<qualifyAssembly >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<çalışma zamanı>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<montajBağlama>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<uygunMontaj>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,7 +40,7 @@ Kısmi bir ad kullanıldığında dinamik olarak yüklenmesi gereken derlemenin 
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |`partialName`|Gerekli öznitelik.<br /><br /> Kodda göründüğü gibi derlemenin kısmi adını belirtir.|  
-|`fullName`|Gerekli öznitelik.<br /><br /> Derlemenin genel derleme önbelleğinde göründüğü haliyle tam adını belirtir.|  
+|`fullName`|Gerekli öznitelik.<br /><br /> Derlemenin tam adını, genel derleme önbelleğinde göründüğü gibi belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -54,18 +54,18 @@ Kısmi bir ad kullanıldığında dinamik olarak yüklenmesi gereken derlemenin 
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kısmi derleme adlarını kullanarak <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yönteminin çağrılması, ortak dil çalışma zamanının derlemeyi yalnızca uygulama temel dizininde aramasını sağlar. Tüm derleme bilgilerini (ad, sürüm, ortak anahtar belirteci ve kültür) sağlamak için uygulama yapılandırma dosyanızda **\<qualifyAssembly >** öğesini kullanın ve ortak dil çalışma zamanının, derlemeyi küresel bir şekilde aramasına neden olur bütünleştirilmiş kod önbelleği.  
+ Yöntemin <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> kısmi derleme adlarını kullanarak çağrılması, ortak dil çalışma zamanının yalnızca uygulama temel dizininde derlemeyi aramasına neden olur. Tam montaj bilgilerini (ad, sürüm, ortak anahtar belirteci ve kültür) sağlamak ve genel derleme önbelleğinde derlemeyi aramak için ortak dil çalışma süresine neden olmak için uygulama yapılandırma dosyanızdaki ** \<uygun Assembly>** öğesini kullanın.  
   
- **FullName** özniteliği, derleme kimliğinin dört alanını içermelidir: ad, sürüm, ortak anahtar belirteci ve kültür. **PartialName** özniteliği kısmen bir derlemeye başvurmalıdır. En azından derlemenin metin adını (en yaygın durum) belirtmeniz gerekir, ancak sürüm, ortak anahtar belirteci veya kültürü (ya da dört ' un herhangi bir birleşimini değil) dahil edebilirsiniz. **PartialName** , çağrın içinde belirtilen ad ile aynı olmalıdır. Örneğin, yapılandırma dosyanızda **partialName** özniteliği olarak `"math"` belirtemezsiniz ve kodunuzda `Assembly.Load("math, Version=3.3.3.3")` çağırabilirsiniz.  
+ **FullName** özniteliği, montaj kimliğinin dört alanını içermelidir: ad, sürüm, ortak anahtar belirteci ve kültür. **PartialName** özniteliği kısmen bir derleme başvuru gerekir. En azından derlemenin metin adını (en yaygın durum) belirtmeniz gerekir, ancak sürüm, ortak anahtar belirteci veya kültür (veya dördünün herhangi bir birleşimi, ancak dördünü de eklemeyin) de ekleyebilirsiniz. **PartialName,** aramanızda belirtilen adla eşleşmelidir. Örneğin, yapılandırma dosyanızda **kısmi Ad** özniteliği olarak belirtemezsiniz `Assembly.Load("math, Version=3.3.3.3")` `"math"` ve kodunuzda arama yapamazsınız.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, `Assembly.Load("math")` çağrı `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`mantıksal olarak etkinleştirir.  
+ Aşağıdaki örnek, aramayı `Assembly.Load("math")` mantıksal `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`olarak .  
   
 ```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
-         <qualifyAssembly partialName="math"   
+         <qualifyAssembly partialName="math"
                          fullName=  
 "math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral"/>  
       </assemblyBinding>  
@@ -76,5 +76,5 @@ Kısmi bir ad kullanıldığında dinamik olarak yüklenmesi gereken derlemenin 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Çalışma Zamanı Ayarları Şeması](index.md)
-- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../deployment/how-the-runtime-locates-assemblies.md)
-- [Kısmi derleme başvuruları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))
+- [Çalışma Zamanının Derlemelerin Konumunu Bulması](../../../deployment/how-the-runtime-locates-assemblies.md)
+- [Kısmi Montaj Başvuruları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

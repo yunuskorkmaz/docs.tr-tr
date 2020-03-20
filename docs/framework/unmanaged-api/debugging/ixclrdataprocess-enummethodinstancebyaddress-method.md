@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::EnumMethodInstanceByAddress yöntemi
+title: IXCLRDataProcess::EnumMethodInstanceByAddress Yöntemi
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EnumMethodInstanceByAddress Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 89b89a0cb056a0515bf0859069455a73f62aae4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: afc5fc377dd45d5e8d4d2d7b3385ca0524df69e1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769621"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176662"
 ---
-# <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>IXCLRDataProcess::EnumMethodInstanceByAddress yöntemi
+# <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>IXCLRDataProcess::EnumMethodInstanceByAddress Yöntemi
 
-Bu işlem bir adresi uzaklıkta başlayan yöntemi örneklerini sıralar.
+Bir adres mahsup adresinden başlayan bu işlemin yöntem örneklerini dizir.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,24 +40,22 @@ HRESULT EnumMethodInstanceByAddress(
 ## <a name="parameters"></a>Parametreler
 
 `handle`\
-[in] Yöntem örnekleri numaralandırma tanıtıcısı.
+[içinde] Yöntem örneklerini sayısallandırmak için bir tutamaç.
 
 `mod`\
-[out] Numaralandırılmış yöntemi örneği.
+[çıkış] Numaralandırılmış yöntem örneği.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sağlanan yöntem parçasıdır `IXCLRDataProcess` arabirim ve sanal yöntem tablosunu 28 yuvaya karşılık gelir.
+Sağlanan yöntem `IXCLRDataProcess` arabirimin bir parçasıdır ve sanal yöntem tablosunun 28 yuvasına karşılık gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).   
-**Üst bilgi:** Yok.   
-**Kitaplığı:** None   
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]   
- 
+**Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Üstbilgi:** Yok **Kitaplık:** Yok **.NET Framework Sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CLRDataSourceType numaralandırması](clrdatasourcetype-enumeration.md)
-- [Hata Ayıklama](index.md)
-- [IXCLRDataProcess arabirimi](ixclrdataprocess-interface.md)
+- [CLRDataSourceType Numaralandırma](clrdatasourcetype-enumeration.md)
+- [Hata ayıklama](index.md)
+- [IXCLRDataProcess Arabirimi](ixclrdataprocess-interface.md)

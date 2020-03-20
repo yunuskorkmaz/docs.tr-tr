@@ -8,24 +8,24 @@ helpviewer_keywords:
 - <CompatSortNLSVersion> element
 - CompatSortNLSVersion element
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
-ms.openlocfilehash: 5de760fe07283ddee36b3475fa0975c8d46776e5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 30afeb2ab9380db75cbeb723ea15a23e4313c9e8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969253"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154276"
 ---
-# <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > öğesi
+# <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion> Elemanı
 Çalışma zamanının, dize karşılaştırmaları yaparken eski sıralama düzenlerini kullanması gerektiğini belirtir.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<CompatSortNLSVersion >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<çalışma zamanı>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<CompatSortNLSVersion>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<CompatSortNLSVersion    
+<CompatSortNLSVersion
    enabled="4096"/>  
 ```  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73969253"
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|4096|Alternatif bir sıralama düzenini temsil eden yerel ayar kimliği. Bu durumda 4096, .NET Framework 3,5 ve önceki sürümlerin sıralama düzenini temsil eder.|  
+|4096|Alternatif bir sıralama düzenini temsil eden yerel ayar kimliği. Bu durumda, 4096 .NET Framework 3.5 ve önceki sürümlerinin sıralama sırasını temsil eder.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -55,32 +55,32 @@ ms.locfileid: "73969253"
 |`runtime`|Çalışma zamanı başlatma seçenekleri hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework 4 ' te <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> sınıfı tarafından gerçekleştirilen dize karşılaştırma, sıralama ve büyük/küçük harf işlemleri Unicode 5,1 standardına uygun olduğundan, <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> ve <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> gibi dize karşılaştırma yöntemlerinin sonuçları .NET Framework önceki sürümlerinden farklı olabilir. Uygulamanız eski davranışa bağımlıysa, uygulamanızın yapılandırma dosyasına `<CompatSortNLSVersion>` öğesini ekleyerek .NET Framework 3,5 ve önceki sürümlerde kullanılan dize karşılaştırma ve sıralama kurallarını geri yükleyebilirsiniz.  
+ .NET Framework 4'te <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> sınıf tarafından gerçekleştirilen dize karşılaştırması, sıralama ve kasa işlemleri Unicode 5.1 standardına <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> uygun olduğundan, string karşılaştırma yöntemlerinin sonuçları .NET Framework'ün önceki sürümlerinden farklı olabilir. Uygulamanız eski davranışa bağlıysa, .NET Framework 3.5 ve önceki sürümlerde kullanılan dize karşılaştırmave `<CompatSortNLSVersion>` sıralama kurallarını uygulamanızın yapılandırma dosyasına öğeyi ekleyerek geri yükleyebilirsiniz.  
   
 > [!IMPORTANT]
 > Eski dize karşılaştırma ve sıralama kurallarını geri yüklemek, sort00001000.dll dinamik bağlantı kitaplığının yerel sistemde kullanılabilir olmasını da gerektirir.  
   
- Ayrıca, uygulama etki alanını oluştururken "NetFx40_Legacy20SortingBehavior" dizesini <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> yöntemine geçirerek belirli bir uygulama etki alanındaki eski dize sıralama ve karşılaştırma kurallarını da kullanabilirsiniz.  
+ Ayrıca, uygulama etki alanını oluştururken yönteme <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> "NetFx40_Legacy20SortingBehavior" dizesini geçirerek, belirli bir uygulama etki alanında eski dize sıralama ve karşılaştırma kurallarını da kullanabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek iki <xref:System.String> nesnesini örnekleyerek, geçerli kültürün kurallarını kullanarak bunları karşılaştırmak için <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> yöntemini çağırır.  
+ Aşağıdaki örnek, iki <xref:System.String> nesneyi anında kullanır <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> ve geçerli kültürün kurallarını kullanarak bunları karşılaştırma yöntemini çağırır.  
   
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- .NET Framework 4 ' te örneği çalıştırdığınızda aşağıdaki çıktıyı görüntüler:
+ Örneği .NET Framework 4'te çalıştırdığınızda, aşağıdaki çıktıyı görüntüler:
   
 ```console
 sta follows a in the sort order.  
 ```  
   
- Bu, örneği .NET Framework 3,5 ' de çalıştırdığınızda görüntülenen çıktıdan tamamen farklıdır:
+ Bu, .NET Framework 3.5'te örneği çalıştırdığınızda görüntülenen çıktıdan tamamen farklıdır:
   
 ```console
 sta equals a in the sort order.  
 ```  
   
- Ancak, aşağıdaki yapılandırma dosyasını örnek dizinine ekleyip .NET Framework 4 ' te örneği çalıştırırsanız, çıkış, .NET Framework 3,5 üzerinde çalıştırıldığında örnek tarafından oluşturulan ile aynıdır.  
+ Ancak, aşağıdaki yapılandırma dosyasını örnek dizine ekler ve örneği .NET Framework 4'te çalıştırırsanız, çıktı ,.NET Framework 3.5'te çalıştırıldığında örnek tarafından üretilenle aynıdır.  
   
 ```xml  
 <?xml version ="1.0"?>  

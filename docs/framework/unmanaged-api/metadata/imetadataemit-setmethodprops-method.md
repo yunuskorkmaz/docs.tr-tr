@@ -15,48 +15,48 @@ helpviewer_keywords:
 ms.assetid: e0c6ac12-22ea-43f5-b799-8cda0faf3336
 topic_type:
 - apiref
-ms.openlocfilehash: 1fb3f4486bc0ee7a85975770f94a8241999f10e0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9662a14b4ea97aed16968083489324d46c38dda2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442120"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177519"
 ---
 # <a name="imetadataemitsetmethodprops-method"></a>IMetaDataEmit::SetMethodProps Yöntemi
-[Imetadatayayma::D efineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)için önceki bir çağrı tarafından tanımlanan bir yöntemin belirtilen göreli sanal adresinde depolanan özelliği ayarlar veya güncelleştirir.  
+[IMetaDataEmit::DefineMethod'a](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)yapılan bir önceki çağrıyla tanımlanan bir yöntemin belirtilen göreli sanal adreste depolanan özelliği nispi olarak ayarlar veya güncelleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT SetMethodProps (   
-    [in]  mdMethodDef md,   
+HRESULT SetMethodProps (
+    [in]  mdMethodDef md,
     [in]  DWORD       dwMethodFlags,  
-    [in]  ULONG       ulCodeRVA,   
-    [in]  DWORD       dwImplFlags   
+    [in]  ULONG       ulCodeRVA,
+    [in]  DWORD       dwImplFlags
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `md`  
- 'ndaki Değiştirilecek metodun belirteci.  
+ [içinde] Yöntemin değiştirilmesi için belirteç.  
   
  `dwMethodFlags`  
- 'ndaki Üye öznitelikleri.  
+ [içinde] Üye öznitelikleri.  
   
  `ulCodeRVA`  
- 'ndaki Kodun adresi.  
+ [içinde] Kodun adresi.  
   
  `dwImplFlags`  
- 'ndaki Yöntemi için uygulama bayrakları.  
+ [içinde] Yöntem için uygulama bayrakları.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

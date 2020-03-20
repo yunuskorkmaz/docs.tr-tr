@@ -9,136 +9,136 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 5679bac06b87b3c4e50cbc4a238d7daf3e33a564
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 08f6342095706e5ffe9479f5236457d21474152a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636282"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174205"
 ---
 # <a name="navigation-topologies-overview"></a>Gezinti Topolojilerine Genel Bakış
-<a name="introduction"></a>Bu genel bakış, WPF 'de gezinti topolojilerine bir giriş sağlar. Örneklerle birlikte üç ortak gezinti topolojisi daha sonra ele alınmıştır.  
+<a name="introduction"></a>Bu genel bakış, WPF'deki gezinme topolojilerine giriş sağlar. Üç ortak navigasyon topolojisi, örnekleri ile, daha sonra tartışılır.  
   
 > [!NOTE]
-> Bu konuyu okumadan önce, sayfa işlevlerini kullanarak WPF 'de yapılandırılmış gezinme kavramıyla ilgili bilgi sahibi olmanız gerekir. Bu konuların her ikisi hakkında daha fazla bilgi için bkz. [yapılandırılmış gezintiye genel bakış](structured-navigation-overview.md).  
+> Bu konuyu okumadan önce, sayfa işlevlerini kullanarak WPF yapılandırılmış gezinme kavramına aşina olmalısınız. Bu konuların her ikisi hakkında daha fazla bilgi için [Yapılandırılmış Gezintiye Genel Bakış](structured-navigation-overview.md)bölümüne bakın.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
-- [Gezinti topolojileri](#Navigation_Topologies)  
+- [Navigasyon Topolojileri](#Navigation_Topologies)  
   
-- [Yapılandırılmış gezinti topolojileri](#Structured_Navigation_Topologies)  
+- [Yapılandırılmış Navigasyon Topolojileri](#Structured_Navigation_Topologies)  
   
-- [Sabit doğrusal topoloji üzerinden gezinme](#Navigation_over_a_Fixed_Linear_Topology)  
+- [Sabit Doğrusal Topoloji üzerinde gezinme](#Navigation_over_a_Fixed_Linear_Topology)  
   
-- [Sabit hiyerarşik topoloji üzerinde dinamik gezinti](#Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology)  
+- [Sabit Hiyerarşik Topoloji Üzerinde Dinamik Gezinme](#Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology)  
   
-- [Dinamik olarak oluşturulan bir topoloji üzerinden gezinme](#Navigation_over_a_Dynamically_Generated_Topology)  
+- [Dinamik Olarak Oluşturulan Topoloji Üzerinde Gezinme](#Navigation_over_a_Dynamically_Generated_Topology)  
   
-<a name="Navigation_Topologies"></a>   
-## <a name="navigation-topologies"></a>Gezinti topolojileri  
- WPF 'de, gezinti genellikle diğer sayfalara tıklanan köprüler (<xref:System.Windows.Documents.Hyperlink>) ile sayfalardan (<xref:System.Windows.Controls.Page>) oluşur. ' Ye gidildiği sayfalar Tekdüzen Kaynak tanımlayıcıları (URI 'Ler) tarafından tanımlanır (bkz. [WPF 'de paket URI 'leri](pack-uris-in-wpf.md)). Sayfaları, köprüleri ve Tekdüzen Kaynak tanımlayıcılarını (URI) gösteren aşağıdaki basit örneği göz önünde bulundurun:  
+<a name="Navigation_Topologies"></a>
+## <a name="navigation-topologies"></a>Navigasyon Topolojileri  
+ WPF'de gezinme genellikle tıklatıldığında<xref:System.Windows.Controls.Page>diğer sayfalara<xref:System.Windows.Documents.Hyperlink>yönlendiren köprülere sahip sayfalardan () oluşur. Gezinmek üzere yönlendirilen sayfalar, tek düzen kaynak tanımlayıcıları (URI' ler) tarafından tanımlanır (bkz. [WPF'deki Paket URI'leri).](pack-uris-in-wpf.md) Sayfaları, köprüleri ve tek düzen kaynak tanımlayıcılarını (UrI'ler) gösteren aşağıdaki basit örneği göz önünde bulundurun:  
   
  [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
   
  [!code-xaml[NavigationTopologiesOverviewSnippets#Page2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page2.xaml#page2)]  
   
- Bu sayfalar, yapısı sayfalar arasında nasıl gezindiğinize göre belirlenen bir *gezinti topolojisi* içinde düzenlenir. Bu özel gezinti topolojisi basit senaryolarda uygundur, ancak bazıları yalnızca bir uygulama çalışırken tanımlanabilseler de, daha karmaşık topolojiler gerektirebilir.  
+ Bu sayfalar, yapısı sayfalar arasında nasıl gezinebileceğinize göre belirlenen bir *gezinti topolojisinde* düzenlenir. Bu özel navigasyon topolojisi basit senaryolarda uygundur, ancak navigasyon daha karmaşık topolojiler gerektirebilir ve bunların bazıları yalnızca bir uygulama çalışırken tanımlanabilir.  
   
- Bu konuda üç genel gezinti topolojisi ele alınmaktadır: *Sabit doğrusal*, *sabit hiyerarşik*ve *dinamik olarak üretilen*. Her gezinti topolojisi, aşağıdaki şekilde gösterildiği gibi bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] olan bir örnekle gösterilmiştir:  
+ Bu konu üç ortak navigasyon topolojisi kapsar: *sabit doğrusal*, *sabit hiyerarşik*, ve *dinamik olarak oluşturulan*. Her navigasyon topolojisi, aşağıdaki şekilde [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] gösterilene benzer bir örneğe sahip bir örnekle gösterilmiştir:  
   
- ![Veri öğeleri ve gezinti düğmeleri içeren görev sayfaları.](./media/navigation-topologies-overview/navigation-topology-data-items.png)  
+ ![Veri öğeleri ve gezinme düğmeleri ile görev sayfaları.](./media/navigation-topologies-overview/navigation-topology-data-items.png)  
   
-<a name="Structured_Navigation_Topologies"></a>   
-## <a name="structured-navigation-topologies"></a>Yapılandırılmış gezinti topolojileri  
- İki geniş gezinti topolojisi türü vardır:  
+<a name="Structured_Navigation_Topologies"></a>
+## <a name="structured-navigation-topologies"></a>Yapılandırılmış Navigasyon Topolojileri  
+ Navigasyon topolojilerinin iki geniş türü vardır:  
   
-- **Sabit topoloji**: derleme zamanında tanımlanır ve çalışma zamanında değişmez. Sabit topolojiler, doğrusal veya hiyerarşik bir düzende sabit bir sayfa dizisi aracılığıyla gezinme için faydalıdır.  
+- **Sabit Topoloji**: derleme zamanında tanımlanır ve çalışma zamanında değişmez. Sabit topolojiler, doğrusal veya hiyerarşik bir sırada sabit bir sayfa dizisinde gezinmek için yararlıdır.  
   
-- **Dinamik topoloji**: Kullanıcı, uygulama veya sistem tarafından toplanan girişe dayalı olarak çalışma zamanında tanımlanır. Dinamik topolojiler, sayfalar farklı dizilerle gezinilebilir olduğunda faydalıdır.  
+- **Dinamik Topoloji**: kullanıcıdan, uygulamadan veya sistemden toplanan girdiye göre çalışma zamanında tanımlanır. Dinamik topolojiler, sayfalar farklı dizilerde gezinildiğinde kullanışlıdır.  
   
- Sayfaları kullanarak gezinti topolojileri oluşturmak mümkün olsa da, örnekler, bir topolojinin sayfaları aracılığıyla veri geçirme ve döndürme desteğini kolaylaştıran ek destek sağladığından, örnek sayfa işlevlerini kullanır.  
+ Sayfaları kullanarak gezinme topolojileri oluşturmak mümkün olsa da, örnekler sayfa işlevlerini kullanır, çünkü bir topolojinin sayfaları üzerinden veri geçişi ve döndürülme desteği için desteği kolaylaştıran ek destek sağlarlar.  
   
-<a name="Navigation_over_a_Fixed_Linear_Topology"></a>   
-## <a name="navigation-over-a-fixed-linear-topology"></a>Sabit doğrusal topoloji üzerinden gezinme  
- Sabit bir doğrusal topoloji, sabit bir dizide gezindiği bir veya daha fazla sihirbaz sayfasına sahip olan bir sihirbazın yapısına benzer. Aşağıdaki şekilde, sabit bir doğrusal topolojiyle bir sihirbazın üst düzey yapısı ve akışı gösterilmektedir:  
+<a name="Navigation_over_a_Fixed_Linear_Topology"></a>
+## <a name="navigation-over-a-fixed-linear-topology"></a>Sabit Doğrusal Topoloji üzerinde gezinme  
+ Sabit doğrusal topoloji, sabit bir sırada gezinen bir veya daha fazla sihirbaz sayfası olan bir sihirbazın yapısına benzer. Aşağıdaki şekil, sabit doğrusal topolojiye sahip bir sihirbazın üst düzey yapısını ve akışını gösterir:  
   
- ![Sabit bir doğrusal topolojiyi gösteren diyagram.](./media/navigation-topologies-overview/navigation-topology-fixed-linear.png)  
+ ![Sabit doğrusal topolojiyi gösteren diyagram.](./media/navigation-topologies-overview/navigation-topology-fixed-linear.png)  
   
- Sabit bir doğrusal topoloji üzerinde gezinmek için tipik davranışlar şunları içerir:  
+ Sabit doğrusal bir topolojide gezinmek için tipik davranışlar şunlardır:  
   
-- Çağıran sayfadan, Sihirbazı başlatan ve ilk sihirbaz sayfasına gezinen bir başlatıcı sayfasına gitme. Çağıran bir sayfa ilk sihirbaz sayfasını doğrudan çağırabileceğinizden, bir başlatıcı sayfası ([!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Less <xref:System.Windows.Navigation.PageFunction%601>) gerekli değildir. Ancak, bir başlatıcı sayfası kullanılması, özellikle başlatma karmaşık ise, sihirbaz başlatmasını kolaylaştırabilir.  
+- Arama sayfasından sihirbazı başlatan ve ilk sihirbaz sayfasına yönlendiren başlatıcı sayfasına gezinme. Bir arama sayfası [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]ilk <xref:System.Windows.Navigation.PageFunction%601>sihirbaz sayfasını doğrudan arayabildiği için başlatıcı sayfası (a-az) gerekmez. Ancak, başlatıcı sayfası kullanmak, özellikle başlatma karmaşıksa sihirbaz ın başlatılmasını basitleştirebilir.  
   
-- Kullanıcılar, geri ve Ileri düğmelerini (veya köprüleri) kullanarak sayfalar arasında gezinebilirsiniz.  
+- Kullanıcılar, İleri ve İleri düğmelerini (veya köprüleri) kullanarak sayfalar arasında gezinebilirler.  
   
-- Kullanıcılar, günlüğü kullanarak sayfalar arasında gezinebilirler.  
+- Kullanıcılar günlüğü kullanarak sayfalar arasında gezinebilir.  
   
-- Kullanıcılar bir Iptal düğmesine basarak Sihirbazı herhangi bir sihirbaz sayfasından iptal edebilir.  
+- Kullanıcılar, İptal düğmesine basarak sihirbazı herhangi bir sihirbaz sayfasından iptal edebilir.  
   
-- Kullanıcılar son sihirbaz sayfasında son düğmesine basarak sihirbazı kabul edebilir.  
+- Kullanıcılar son sihirbaz sayfasındaki sihirbazı Bitiş düğmesine basarak kabul edebilirler.  
   
-- Sihirbaz iptal edilirse, sihirbaz uygun bir sonuç döndürür ve herhangi bir veri döndürmez.  
+- Sihirbaz iptal edilirse, sihirbaz uygun bir sonuç verir ve herhangi bir veri döndürmez.  
   
-- Bir Kullanıcı bir Sihirbazı kabul ediyorsa, sihirbaz uygun bir sonuç döndürür ve topladığı verileri döndürür.  
+- Kullanıcı bir sihirbaz kabul ederse, sihirbaz uygun bir sonucu döndürür ve topladığı verileri döndürür.  
   
-- Sihirbaz tamamlandığında (kabul edildiğinde veya iptal edildiğinde), sihirbazın içerdiği sayfalar günlükten kaldırılır. Bu, sihirbazın her örneğini yalıtılmış tutar, böylece potansiyel veri veya durum bozukluileri önlenir.  
+- Sihirbaz tamamlandığında (kabul edilen veya iptal edilen), sihirbazın oluşturduğu sayfalar günlükten kaldırılır. Bu, sihirbazın her örneğini izole eder ve böylece olası verilerden veya durum anormalliklerinden kaçınır.  
   
-<a name="Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology"></a>   
-## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a>Sabit hiyerarşik topoloji üzerinde dinamik gezinti  
- Bazı uygulamalarda, sayfalar aşağıdaki şekilde gösterildiği gibi iki veya daha fazla sayfaya gezinmesine izin verir: 
+<a name="Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology"></a>
+## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a>Sabit Hiyerarşik Topoloji Üzerinde Dinamik Gezinme  
+ Bazı uygulamalarda, sayfalar aşağıdaki şekilde gösterildiği gibi iki veya daha fazla başka sayfaya gezinmeye izin verir:
   
- ![Birden çok sayfaya gidebileceğiniz bir sayfayı gösteren diyagram.](./media/navigation-topologies-overview/navigation-topology-multiple-pages.png)  
+ ![Birden çok sayfaya gidebilecek bir sayfayı gösteren diyagram.](./media/navigation-topologies-overview/navigation-topology-multiple-pages.png)  
   
- Bu yapı sabit bir hiyerarşik topoloji olarak bilinir ve hiyerarşinin çapraz geçen sırası genellikle uygulama veya Kullanıcı tarafından çalışma zamanında belirlenir. Çalışma zamanında, hiyerarşideki iki veya daha fazla sayfaya gezinmesine izin veren her sayfa, hangi sayfanın ekleneceğini belirlemede gereken verileri toplar. Aşağıdaki şekilde, önceki şekle göre olası çeşitli gezinti dizilerinden biri gösterilmektedir:  
+ Bu yapı sabit hiyerarşik topoloji olarak bilinir ve hiyerarşinin geçiş sırası genellikle çalışma zamanında uygulama veya kullanıcı tarafından belirlenir. Çalışma zamanında, hiyerarşideki iki veya daha fazla diğer sayfaya gezinmeye izin veren her sayfa, hangi sayfaya gidileni belirlemek için gereken verileri toplar. Aşağıdaki şekil, önceki şeme göre birkaç olası gezinme dizisinden birini göstermektedir:  
   
- ![Olası bir gezinti sırasını gösteren diyagram.](./media/navigation-topologies-overview/navigation-topology-fixed-hierarchical.png)  
+ ![Olası bir gezinme sırasını gösteren diyagram.](./media/navigation-topologies-overview/navigation-topology-fixed-hierarchical.png)  
   
- Sabit hiyerarşik bir yapıdaki sayfaların çalışma zamanında gezinmesine rağmen, Kullanıcı deneyimi sabit bir doğrusal topoloji için Kullanıcı deneyimiyle aynıdır:  
+ Sabit hiyerarşik yapıdaki sayfaların gezinme sırası çalışma zamanında belirlense de, kullanıcı deneyimi sabit doğrusal bir topoloji için kullanıcı deneyimiyle aynıdır:  
   
-- Çağıran sayfadan, Sihirbazı başlatan ve ilk sihirbaz sayfasına gezinen bir başlatıcı sayfasına gitme. Çağıran bir sayfa ilk sihirbaz sayfasını doğrudan çağırabileceğinizden, bir başlatıcı sayfası ([!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Less <xref:System.Windows.Navigation.PageFunction%601>) gerekli değildir. Ancak, bir başlatıcı sayfası kullanılması, özellikle başlatma karmaşık ise, sihirbaz başlatmasını kolaylaştırabilir.  
+- Arama sayfasından sihirbazı başlatan ve ilk sihirbaz sayfasına yönlendiren başlatıcı sayfasına gezinme. Bir arama sayfası [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]ilk <xref:System.Windows.Navigation.PageFunction%601>sihirbaz sayfasını doğrudan arayabildiği için başlatıcı sayfası (a-az) gerekmez. Ancak, başlatıcı sayfası kullanmak, özellikle başlatma karmaşıksa sihirbaz ın başlatılmasını basitleştirebilir.  
   
-- Kullanıcılar, geri ve Ileri düğmelerini (veya köprüleri) kullanarak sayfalar arasında gezinebilirsiniz.  
+- Kullanıcılar, İleri ve İleri düğmelerini (veya köprüleri) kullanarak sayfalar arasında gezinebilirler.  
   
-- Kullanıcılar, günlüğü kullanarak sayfalar arasında gezinebilirler.  
+- Kullanıcılar günlüğü kullanarak sayfalar arasında gezinebilir.  
   
-- Kullanıcılar, günlük üzerinden geri gittiklerinde, gezinti sırasını değiştirebilir.  
+- Kullanıcılar günlükte geri gezindiklerinde gezinme sırasını değiştirebilirler.  
   
-- Kullanıcılar bir Iptal düğmesine basarak Sihirbazı herhangi bir sihirbaz sayfasından iptal edebilir.  
+- Kullanıcılar, İptal düğmesine basarak sihirbazı herhangi bir sihirbaz sayfasından iptal edebilir.  
   
-- Kullanıcılar son sihirbaz sayfasında son düğmesine basarak sihirbazı kabul edebilir.  
+- Kullanıcılar son sihirbaz sayfasındaki sihirbazı Bitiş düğmesine basarak kabul edebilirler.  
   
-- Sihirbaz iptal edilirse, sihirbaz uygun bir sonuç döndürür ve herhangi bir veri döndürmez.  
+- Sihirbaz iptal edilirse, sihirbaz uygun bir sonuç verir ve herhangi bir veri döndürmez.  
   
-- Bir Kullanıcı bir Sihirbazı kabul ediyorsa, sihirbaz uygun bir sonuç döndürür ve topladığı verileri döndürür.  
+- Kullanıcı bir sihirbaz kabul ederse, sihirbaz uygun bir sonucu döndürür ve topladığı verileri döndürür.  
   
-- Sihirbaz tamamlandığında (kabul edildiğinde veya iptal edildiğinde), sihirbazın içerdiği sayfalar günlükten kaldırılır. Bu, sihirbazın her örneğini yalıtılmış tutar, böylece potansiyel veri veya durum bozukluileri önlenir.  
+- Sihirbaz tamamlandığında (kabul edilen veya iptal edilen), sihirbazın oluşturduğu sayfalar günlükten kaldırılır. Bu, sihirbazın her örneğini izole eder ve böylece olası verilerden veya durum anormalliklerinden kaçınır.  
   
-<a name="Navigation_over_a_Dynamically_Generated_Topology"></a>   
-## <a name="navigation-over-a-dynamically-generated-topology"></a>Dinamik olarak oluşturulan bir topoloji üzerinden gezinme  
- Bazı uygulamalarda, iki veya daha fazla sayfanın gezindiği sıra yalnızca çalışma zamanında, Kullanıcı, uygulama veya dış veriler tarafından belirlenebilir. Aşağıdaki şekilde, belirlenmemiş bir gezinti sırası olan bir sayfa kümesi gösterilmektedir:  
+<a name="Navigation_over_a_Dynamically_Generated_Topology"></a>
+## <a name="navigation-over-a-dynamically-generated-topology"></a>Dinamik Olarak Oluşturulan Topoloji Üzerinde Gezinme  
+ Bazı uygulamalarda, iki veya daha fazla sayfanın gezinildiği sıra, kullanıcı, uygulama veya dış veri tarafından yalnızca çalışma zamanında belirlenebilir. Aşağıdaki şekil, belirsiz gezinme sıralı bir sayfa kümesini gösterir:  
   
- ![Belirlenmemiş bir gezinti dizisine sahip bir sayfa kümesi.](./media/navigation-topologies-overview/navigation-topology-dynamically-generated.png)  
+ ![Belirsiz gezinme sırasını olan bir sayfa kümesi.](./media/navigation-topologies-overview/navigation-topology-dynamically-generated.png)  
   
- Sonraki şekilde, çalışma zamanında Kullanıcı tarafından seçilen bir gezinti sırası gösterilmektedir:  
+ Bir sonraki şekil, kullanıcı tarafından çalışma zamanında seçilen bir gezinti dizisini gösterir:  
   
  ![Çalışma zamanında seçilen bir gezinti sırasını gösteren diyagram.](./media/navigation-topologies-overview/navigation-topology-sequence-chosen-run-time.png)  
   
- Gezinti sırası, dinamik olarak oluşturulan bir topoloji olarak bilinir. Diğer gezinti topolojilerinde olduğu gibi, Kullanıcı deneyimi, önceki topolojilerle aynı olur:  
+ Navigasyon sırası dinamik olarak oluşturulan topoloji olarak bilinir. Kullanıcı için, diğer navigasyon topolojilerinde olduğu gibi, kullanıcı deneyimi önceki topolojiler için olduğu gibi aynıdır:  
   
-- Çağıran sayfadan, Sihirbazı başlatan ve ilk sihirbaz sayfasına gezinen bir başlatıcı sayfasına gitme. Çağıran bir sayfa ilk sihirbaz sayfasını doğrudan çağırabileceğinizden, bir başlatıcı sayfası ([!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Less <xref:System.Windows.Navigation.PageFunction%601>) gerekli değildir. Ancak, bir başlatıcı sayfası kullanılması, özellikle başlatma karmaşık ise, sihirbaz başlatmasını kolaylaştırabilir.  
+- Arama sayfasından sihirbazı başlatan ve ilk sihirbaz sayfasına yönlendiren başlatıcı sayfasına gezinme. Bir arama sayfası [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]ilk <xref:System.Windows.Navigation.PageFunction%601>sihirbaz sayfasını doğrudan arayabildiği için başlatıcı sayfası (a-az) gerekmez. Ancak, başlatıcı sayfası kullanmak, özellikle başlatma karmaşıksa sihirbaz ın başlatılmasını basitleştirebilir.  
   
-- Kullanıcılar, geri ve Ileri düğmelerini (veya köprüleri) kullanarak sayfalar arasında gezinebilirsiniz.  
+- Kullanıcılar, İleri ve İleri düğmelerini (veya köprüleri) kullanarak sayfalar arasında gezinebilirler.  
   
-- Kullanıcılar, günlüğü kullanarak sayfalar arasında gezinebilirler.  
+- Kullanıcılar günlüğü kullanarak sayfalar arasında gezinebilir.  
   
-- Kullanıcılar bir Iptal düğmesine basarak Sihirbazı herhangi bir sihirbaz sayfasından iptal edebilir.  
+- Kullanıcılar, İptal düğmesine basarak sihirbazı herhangi bir sihirbaz sayfasından iptal edebilir.  
   
-- Kullanıcılar son sihirbaz sayfasında son düğmesine basarak sihirbazı kabul edebilir.  
+- Kullanıcılar son sihirbaz sayfasındaki sihirbazı Bitiş düğmesine basarak kabul edebilirler.  
   
-- Sihirbaz iptal edilirse, sihirbaz uygun bir sonuç döndürür ve herhangi bir veri döndürmez.  
+- Sihirbaz iptal edilirse, sihirbaz uygun bir sonuç verir ve herhangi bir veri döndürmez.  
   
-- Bir Kullanıcı bir Sihirbazı kabul ediyorsa, sihirbaz uygun bir sonuç döndürür ve topladığı verileri döndürür.  
+- Kullanıcı bir sihirbaz kabul ederse, sihirbaz uygun bir sonucu döndürür ve topladığı verileri döndürür.  
   
-- Sihirbaz tamamlandığında (kabul edildiğinde veya iptal edildiğinde), sihirbazın içerdiği sayfalar günlükten kaldırılır. Bu, sihirbazın her örneğini yalıtılmış tutar, böylece potansiyel veri veya durum bozukluileri önlenir.  
+- Sihirbaz tamamlandığında (kabul edilen veya iptal edilen), sihirbazın oluşturduğu sayfalar günlükten kaldırılır. Bu, sihirbazın her örneğini izole eder ve böylece olası verilerden veya durum anormalliklerinden kaçınır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

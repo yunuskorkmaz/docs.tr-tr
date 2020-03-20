@@ -15,59 +15,59 @@ helpviewer_keywords:
 ms.assetid: 65063ad5-e0d9-4c01-8f8b-9a5950109fa6
 topic_type:
 - apiref
-ms.openlocfilehash: 5ce1af82631531f8f7105fbf92ba78db3cca437b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5185fb6663910c85ce5dae1225b9b10c5dd8bb28
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442320"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175947"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope Yöntemi
-Mevcut, disk üzerindeki bir dosyayı açar ve meta verilerini belleğe eşler.  
+Varolan, diskteki bir dosyayı açar ve meta verilerini belleğe eşler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT OpenScope (  
-    [in]  LPCWSTR     szScope,   
-    [in]  DWORD       dwOpenFlags,   
-    [in]  REFIID      riid,   
+    [in]  LPCWSTR     szScope,
+    [in]  DWORD       dwOpenFlags,
+    [in]  REFIID      riid,
     [out] IUnknown    **ppIUnk  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `szScope`  
- 'ndaki Açılacak dosyanın adı. Dosya, ortak dil çalışma zamanı (CLR) meta verilerini içermelidir.  
+ [içinde] Açılacak dosyanın adı. Dosya ortak dil çalışma zamanı (CLR) meta verileri içermelidir.  
   
  `dwOpenFlags`  
- 'ndaki Açma için modu (okuma, yazma, vb.) belirtmek için [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) numaralandırması değeri.  
+ [içinde] Açılış kipini (okuma, yazma vb.) belirtmek için [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) numaralandırmasının değeri.  
   
  `riid`  
- 'ndaki Döndürülecek istenen meta veri arabiriminin IID 'si; çağıran, meta verileri içeri aktarmak (okumak) veya yayma (yazmak) için arabirimini kullanır.  
+ [içinde] Döndürülecek istenilen meta veri arabiriminin IID'si; arayan, meta verileri almak (okumak) veya yayacak (yazmak) için arabirimi kullanır.  
   
- `riid` değeri, "import" veya "yayma" arabirimlerinden birini belirtmelidir. Geçerli değerler IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 veya IID_IMetaDataImport2.  
+ Değeri "içe aktarma" veya "yayış" arabirimlerinden birini `riid` belirtmelidir. Geçerli değerler IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 veya IID_IMetaDataImport2.  
   
  `ppIUnk`  
- dışı Döndürülen arabirime yönelik işaretçi.  
+ [çıkış] Döndürülen arabirimin işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Meta verilerin bellek içi kopyası, "içeri aktarma" arabirimlerinden birindeki yöntemler kullanılarak sorgulanabilir veya "yayma" arabirimlerinden birindeki yöntemleri kullanarak eklenebilir.  
+ Meta verilerin bellek içi kopyası ,"alma" arabirimlerinden birinden yöntemler kullanılarak sorgulanabilir veya "yaslamak" arabirimlerinden yöntemler kullanılarak sorgulanabilir.  
   
- Hedef dosya CLR meta verileri içermiyorsa `OpenScope` yöntemi başarısız olur.  
+ Hedef dosya CLR meta verileri içermiyorsa, `OpenScope` yöntem başarısız olur.  
   
- .NET Framework sürüm 1,0 ve sürüm 1,1 ' de bir kapsam, `dwOpenFlags` ofRead olarak ayarlandıysa, paylaşım için uygundur. Diğer bir deyişle, daha önce açılan `OpenScope` için yapılan çağrılar daha önce açılmış bir dosyanın adı geçer, mevcut kapsam yeniden kullanılır ve yeni bir veri yapıları kümesi oluşturulmaz. Ancak, bu paylaşım nedeniyle sorunlar ortaya çıkabilir.  
+ .NET Framework sürüm 1.0 ve sürüm 1.1'de, `dwOpenFlags` ofRead'e ayarlı bir kapsam açılırsa, paylaşım için uygundur. Diğer bir deyişle, `OpenScope` daha önce açılmış bir dosyanın adına sonraki çağrıları geçmek için, varolan kapsam yeniden kullanılır ve yeni bir veri yapıları kümesi oluşturulmaz. Ancak, sorunlar bu paylaşım nedeniyle ortaya çıkabilir.  
   
- .NET Framework sürüm 2,0 ' de, ofRead olarak ayarlanan `dwOpenFlags` ile açılan kapsamlar artık paylaşılmaz. Kapsamın paylaşılmasını sağlamak için ofReadOnly değerini kullanın. Bir kapsam paylaşıldığında, "okuma/yazma" meta veri arabirimlerini kullanan sorgular başarısız olur.  
+ .NET Framework sürüm 2.0'da, `dwOpenFlags` ofRead'e ayarlı olarak açılan kapsamlar artık paylaşılmaz. Kapsamın paylaşılmasına izin vermek için ReadOnly değerini kullanın. Kapsam paylaşıldığında, "okuma/yazma" meta veri arabirimleri kullanan sorgular başarısız olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

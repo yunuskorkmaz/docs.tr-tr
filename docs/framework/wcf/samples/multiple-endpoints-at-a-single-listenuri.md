@@ -2,51 +2,51 @@
 title: Bir ListenUri için Birden Fazla Belirteç
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-ms.openlocfilehash: ef4212fa0989f80393f62119d9b2b6cda370ef94
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 8e26cc18ed35c446dda120c678dd7e879c756c0f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714728"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183480"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Bir ListenUri için Birden Fazla Belirteç
-Bu örnek, tek bir `ListenUri`birden çok uç noktayı barındıran bir hizmeti gösterir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) Başlarken hizmetini temel alır.  
+Bu örnek, tek `ListenUri`bir noktada birden çok uç noktayı barındıran bir hizmeti gösterir. Bu örnek, bir hesap makinesi hizmeti uygulayan [Başlarken'e](../../../../docs/framework/wcf/samples/getting-started-sample.md) dayanır.  
   
 > [!NOTE]
-> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
+> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
   
- [Birden çok uç nokta](../../../../docs/framework/wcf/samples/multiple-endpoints.md) örneğinde gösterildiği gibi, bir hizmet, her biri farklı adreslere ve muhtemelen farklı bağlamalara sahip birden fazla uç nokta barındırabilir. Bu örnek, aynı adreste birden çok uç noktanın barındırmada mümkün olduğunu gösterir. Bu örnek ayrıca bir hizmet uç noktasının sahip olduğu iki tür adres arasındaki farklılıkları gösterir: `EndpointAddress` ve `ListenUri`.  
+ [Birden çok Uç Nokta](../../../../docs/framework/wcf/samples/multiple-endpoints.md) örneğinde gösterildiği gibi, bir hizmet her biri farklı adreslere ve büyük olasılıkla farklı bağlamalara sahip birden çok uç nokta barındırabilir. Bu örnek, aynı adreste birden çok uç nokta barındırmanın mümkün olduğunu gösterir. Bu örnek, bir hizmet bitiş noktasının sahip olduğu iki tür `EndpointAddress` adres `ListenUri`arasındaki farkları da gösterir: ve .  
   
- `EndpointAddress`, bir hizmetin mantıksal adresidir. SOAP iletilerinin adreslendiği adrestir. `ListenUri`, hizmetin fiziksel adresidir. Hizmet uç noktasının geçerli makinedeki iletileri gerçekten dinlediği bağlantı noktası ve adres bilgileri bulunur. Çoğu durumda, bu adreslerin farklı olması gerekmez; `ListenUri` açıkça belirtilmediğinde, varsayılan olarak uç noktanın `EndpointAddress` URI 'sidir. Birkaç durumda, bir yönlendiriciyi yapılandırırken olduğu gibi farklı hizmetlere yönelik iletileri kabul edebilecek şekilde ayırt etmek yararlı olur.  
+ Bir `EndpointAddress` hizmetin mantıksal adresidir. SOAP mesajlarının adresolduğu adrestir. Hizmetin `ListenUri` fiziksel adresidir. Hizmet bitiş noktasının geçerli makinedeki iletileri gerçekten dinlediği bağlantı noktası ve adres bilgilerine sahiptir. Çoğu durumda, bu adreslerin farklı olmasına gerek yoktur; a `ListenUri` açıkça belirtilmemişse, bitiş noktasının `EndpointAddress` URI'sine varsayılan olarak Birkaç durumda, bir yönlendirici, farklı hizmetler bir dizi adresli iletileri kabul edebilir yapılandırma gibi bunları ayırt etmek yararlıdır.  
   
 ## <a name="service"></a>Hizmet  
- Bu örnekteki hizmette iki sözleşme, `ICalculator` ve `IEcho`vardır. Normal `IMetadataExchange` uç noktasına ek olarak, aşağıdaki kodda gösterildiği gibi üç uygulama uç noktası vardır.  
+ Bu örnekteki hizmetin iki `ICalculator` `IEcho`sözleşmesi vardır ve . Alışılmış `IMetadataExchange` bitiş noktasına ek olarak, aşağıdaki kodda gösterildiği gibi üç uygulama bitiş noktası vardır.  
   
 ```xml  
 <endpoint address="urn:Stuff"  
         binding="wsHttpBinding"  
-        contract="Microsoft.ServiceModel.Samples.ICalculator"   
+        contract="Microsoft.ServiceModel.Samples.ICalculator"
         listenUri="http://localhost/servicemodelsamples/service.svc" />  
 <endpoint address="urn:Stuff"  
         binding="wsHttpBinding"  
-        contract="Microsoft.ServiceModel.Samples.IEcho"   
+        contract="Microsoft.ServiceModel.Samples.IEcho"
         listenUri="http://localhost/servicemodelsamples/service.svc" />  
 <endpoint address="urn:OtherEcho"  
         binding="wsHttpBinding"  
-        contract="Microsoft.ServiceModel.Samples.IEcho"   
+        contract="Microsoft.ServiceModel.Samples.IEcho"
         listenUri="http://localhost/servicemodelsamples/service.svc" />  
 ```  
   
- Üç uç noktanın tümü aynı `ListenUri` barındırılır ve aynı `binding` uç noktaların aynı `ListenUri` aynı bağlama sahip olması gerekir, çünkü makinede o fiziksel adresteki iletileri dinleyen tek bir kanal yığınını paylaşıyor. Her uç noktanın `address` URN olur; genellikle adresler fiziksel konumları temsil ediyorsa, aslında adres, bu örnekte gösterildiği gibi eşleştirme ve filtreleme amaçları için kullanıldığından adres herhangi bir tür URI olabilir.  
+ Her üç uç nokta da `ListenUri` aynı şekilde `binding` barındırılır ve `ListenUri` aynı uç noktaları kullanır - aynı uç noktalar aynı bağlamaya sahip olmalıdır, çünkü makinedeki fiziksel adresteki iletileri dinleyen tek bir kanal yığınını paylaşıyorlar. Her `address` bitiş noktasının bir URN'si; genellikle adresler fiziksel konumları temsil etse de, adres bu örnekte gösterildiği gibi eşleştirme ve filtreleme amacıyla kullanıldığından, adres her türlü URI olabilir.  
   
- Üç uç noktanın tümü aynı `ListenUri`paylaştığından, bir ileti buraya ulaştığında, Windows Communication Foundation (WCF) iletinin hangi uç noktaya ait olduğunu karar vermelidir. Her uç noktanın iki bölümden oluşan bir ileti filtresi vardır: adres filtresi ve sözleşme filtresi. Adres filtresi, SOAP iletisinin `To` hizmet uç noktasının adresiyle eşleştirir. Örneğin, yalnızca `To "Urn:OtherEcho"` iletiler bu hizmetin üçüncü uç noktası için adaylardır. Sözleşme filtresi, belirli bir sözleşmenin işlemleriyle ilişkili eylemlerle eşleşir. Örneğin, `IEcho`eylemine sahip mesajlar. `Echo`, bu uç noktaların her ikisi de `IEcho` sözleşmesini barındırdığından bu hizmetin ikinci ve üçüncü bitiş noktalarının sözleşme filtreleriyle eşleşir.  
+ Üç uç nokta da `ListenUri`aynı olduğundan , bir ileti geldiğinde, Windows Communication Foundation (WCF) iletinin kaderinde olan bitiş noktasına karar vermelidir. Her uç noktanın iki bölümden oluşan bir ileti filtresi vardır: adres filtresi ve sözleşme filtresi. Adres filtresi, `To` SOAP iletisinin hizmet bitiş noktasının adresiyle eşleşir. Örneğin, yalnızca bu hizmetin üçüncü bitiş noktası için adaylar yalnızca adreslenir. `To "Urn:OtherEcho"` Sözleşme filtresi, belirli bir sözleşmenin işlemleriyle ilişkili Eylemlerle eşleşir. Örneğin, eylemi ile iletileri `IEcho`. `Echo`bu uç noktaların her ikisi de sözleşmeyi barındırdığından, bu hizmetin `IEcho` hem ikinci hem de üçüncü uç noktalarının sözleşme filtrelerini eşleşir.  
   
- Bu nedenle, adres filtresi ve sözleşme filtresi birleşimi, bu hizmetin `ListenUri` gelen her iletiyi doğru uç noktaya yönlendirmeye olanak tanır. Diğer uç noktalardan farklı bir adrese gönderilen iletileri kabul ettiğinden, üçüncü uç nokta diğer iki sunucudan farklılaştırılabilir. Birinci ve ikinci uç noktalar, sözleşmeleri (gelen ileti eylemi) temel alınarak birbirinden farklılaştırılır.  
+ Böylece adres filtresi ve sözleşme filtresi nin birleşimi, bu hizmete `ListenUri` gelen her iletiyi doğru bitiş noktasına yönlendirmeyi mümkün kılar. Üçüncü uç nokta, diğer uç noktalardan farklı bir adrese gönderilen iletileri kabul ettiği için diğer ikisinden ayrılır. Birinci ve ikinci uç noktalar, sözleşmelerine (gelen iletinin Eylemi) göre birbirinden ayrılır.  
   
 ## <a name="client"></a>İstemci  
- Sunucudaki uç noktaların iki farklı adresi olduğu gibi, istemci uç noktalarında da iki adres vardır. Hem sunucu hem de istemcide, mantıksal adrese `EndpointAddress`denir. Ancak fiziksel adrese sunucuda `ListenUri` çağrıldığında, istemcide fiziksel adrese `Via`adı verilir.  
+ Sunucudaki uç noktaların iki farklı adresi olduğu gibi, istemci uç noktalarının da iki adresi vardır. Hem sunucuda hem de istemcide, `EndpointAddress`mantıksal adres . Ancak fiziksel adres `ListenUri` sunucuda, istemcide ise fiziksel adrese . `Via`  
   
- Sunucuda olduğu gibi, varsayılan olarak bu iki adres aynıdır. İstemcide bitiş noktasının adresinden farklı bir `Via` belirtmek için, `ClientViaBehavior` kullanılır:  
+ Sunucuda olduğu gibi, varsayılan olarak, bu iki adres aynıdır. Uç noktanın adresinden `Via` `ClientViaBehavior` farklı bir istemci üzerinde bir belirtmek için kullanılır:  
   
 ```csharp  
 Uri via = new Uri("http://localhost/ServiceModelSamples/service.svc");  
@@ -55,26 +55,26 @@ calcClient.ChannelFactory.Endpoint.Behaviors.Add(
         new ClientViaBehavior(via));  
 ```  
   
- Her zamanki gibi, adres, Svcutil. exe tarafından oluşturulan istemci yapılandırma dosyasından gelir. `Via` (hizmetin `ListenUri` karşılık gelen), hizmetin meta verilerinde görünmez ve bu nedenle bu bilgilerin istemciye bant dışı (hizmetin meta veri adresi gibi) bildirilmesi gerekir.  
+ Her zamanki gibi, adres Svcutil.exe tarafından oluşturulan istemci yapılandırma dosyasından gelir. `Via` (Hizmetin `ListenUri` karşısına karşılık gelen) hizmetin meta verilerinde görünmez ve bu nedenle bu bilgilerin bant dışı istemciye iletilmesi gerekir (hizmetin meta veri adresi gibi).  
   
- Bu örnekteki istemci, her bir sunucunun üç uygulama uç noktasına ileti gönderir ve bunların hepsi aynı `Via`sahip olsa da üç uç nokta ile iletişim kurabildiğini gösterir.  
+ Bu örnekteki istemci, sunucunun üç uygulama uç noktasının her birine, hepsi aynı `Via`olmasına rağmen üç uç noktayla da iletişim kurabileceğini (ve ayırt edebildiği) iletiler gönderir.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
   
-1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
+1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
   
-2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak [için, Windows Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
   
-3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
+3. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
   
     > [!NOTE]
-    > Çapraz makine için, Client.cs dosyasındaki localhost 'u hizmet makinesinin adıyla değiştirmelisiniz.  
+    > Çapraz makine için, Client.cs dosyasındaki localhost'u servis makinesinin adı ile değiştirmeniz gerekir.  
   
 > [!IMPORTANT]
-> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
->   
+> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
->   
+>
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpointsSingleUri`  

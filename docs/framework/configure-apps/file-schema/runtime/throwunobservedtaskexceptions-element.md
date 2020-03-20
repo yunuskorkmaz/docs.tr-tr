@@ -8,19 +8,19 @@ helpviewer_keywords:
 - ThrowUnobservedTaskExceptions element
 - <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-ms.openlocfilehash: 99eef6b8c264e21df7f4ecf9fc79dc607d484a0a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: de5a686bcbd88fc52173b488103f033575623d62
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115413"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153821"
 ---
-# <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > öğesi
-İşlenmemiş görev özel durumlarının çalışan bir işlemi sonlandırmayı gerekip gerekmediğini belirtir.  
+# <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions> Öğesi
+İşlenmemiş görev özel durumlarının çalışan bir işlemi sonlandırıp sonlandırmayacağını belirtir.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<ThrowUnobservedTaskExceptions >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<çalışma zamanı>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<ThrowUnobservedTaskExceptions>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,13 +36,13 @@ ms.locfileid: "73115413"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`enabled`|Gerekli öznitelik.<br /><br /> İşlenmemiş görev özel durumlarının çalışan işlemi sonlandırmayı gerekip gerekmediğini belirtir.|  
+|`enabled`|Gerekli öznitelik.<br /><br /> İşlenmemiş görev özel durumlarının yürütme işlemini sonlandırıp sonlandırmayacağını belirtir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`false`|İşlenmemiş bir görev özel durumu için çalışan işlemi sonlandırır. Bu varsayılandır.|  
+|`false`|İşlenmemiş bir görev özel durumu için çalışan işlemi sonlandırmaz. Bu varsayılandır.|  
 |`true`|İşlenmemiş bir görev özel durumu için çalışan işlemi sonlandırır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -57,33 +57,33 @@ ms.locfileid: "73115413"
 |||  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir <xref:System.Threading.Tasks.Task> ilişkili bir özel durum gözlemlenmişse, hiçbir <xref:System.Threading.Tasks.Task.Wait%2A> işlemi yoktur, üst öğe eklenmez ve <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> özelliği okunmadı. görev özel durumunun gözlemlenen olarak kabul edildiği kabul edilir.  
+ Bir <xref:System.Threading.Tasks.Task> özel durumla ilişkili bir özel durum gözlenmemişse, işlem yapılmaz, <xref:System.Threading.Tasks.Task.Wait%2A> üst <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> öğe eklenmez ve özellik okunmamışsa görev özel durumu gözlenmemiş olarak kabul edilir.  
   
- .NET Framework 4 ' te, varsayılan olarak, gözlemlenen olmayan bir özel durum içeren bir <xref:System.Threading.Tasks.Task> atık olarak toplanırsa Sonlandırıcı bir özel durum oluşturur ve işlemi sonlandırır. İşlemin sonlandırılması çöp toplama ve sonlandırma zamanlaması tarafından belirlenir.  
+ .NET Framework 4'te, varsayılan <xref:System.Threading.Tasks.Task> olarak, gözlenmeyen bir özel durum varsa, çöp toplanmışsa, sonlandırıcı bir özel durum atar ve işlemi sonlandırır. Sürecin sona ermesi çöp toplama ve sonuçlandırma zamanlaması ile belirlenir.  
   
- Geliştiricilerin görevlere göre zaman uyumsuz kod yazmasını kolaylaştırmak için .NET Framework 4,5, gözlemlenen özel durumlar için bu varsayılan davranışı değiştirir. Gözlemlenen özel durumlar hala <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> olayının oluşturulmasına neden olur, ancak varsayılan olarak işlem sonlanmaz. Bunun yerine, bir olay işleyicisinin özel durumu görmediğine bakılmaksızın, olay oluşturulduktan sonra özel durum yoksayılır.  
+ Geliştiricilerin görevlere dayalı eşzamanlı kod yazmasını kolaylaştırmak için .NET Framework 4.5 bu varsayılan davranışı gözlenmemiş özel durumlar için değiştirir. Gözlenmeyen özel durumlar <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> yine de olayın yükseltilmesine neden olur, ancak varsayılan olarak işlem sonlandırmaz. Bunun yerine, olay büyütüldükten sonra, bir olay işleyicisinin özel durumu gözlemleyip izlemediğine bakılmaksızın özel durum yoksayılır.  
   
- .NET Framework 4,5 ' de, bir özel durum oluşturmak için .NET Framework 4 davranışını etkinleştirmek üzere bir uygulama yapılandırma dosyasında [\<ThrowUnobservedTaskExceptions > öğesini](throwunobservedtaskexceptions-element.md) kullanabilirsiniz.  
+ .NET Framework 4.5'te, bir uygulama yapılandırma dosyasındaki [ \<ThrowUnobservedTaskExceptions> öğesini](throwunobservedtaskexceptions-element.md) kullanarak .NET Framework 4'ün özel durum atma davranışını etkinleştirebilirsiniz.  
   
- Özel durum davranışını aşağıdaki yollarla da belirtebilirsiniz:  
+ Özel durum davranışını aşağıdaki yollardan birinde de belirtebilirsiniz:  
   
-- Ortam değişkenini ayarlayarak `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
+- Çevre değişkenini `COMPlus_ThrowUnobservedTaskExceptions` `set COMPlus_ThrowUnobservedTaskExceptions=1`ayarlayarak ( ).  
   
-- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\kayıt defteri DWORD değerini ThrowUnobservedTaskExceptions = 1 olarak ayarlayarak. NETFramework anahtarı.  
+- Kayıt defteri DWORD değeri ThrowUnobservedTaskExceptions = 1 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\ayarlayarak . NETFramework anahtarı.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir uygulama yapılandırma dosyası kullanarak görevlerde özel durumların üretilmesini nasıl etkinleştireceğinizi gösterir.  
+ Aşağıdaki örnekte, bir uygulama yapılandırma dosyası kullanarak görevlerde özel durumların atılması nasıl etkinleştirilir gösterilmektedir.  
   
 ```xml  
-<configuration>   
-    <runtime>   
-        <ThrowUnobservedTaskExceptions enabled="true"/>   
-    </runtime>   
+<configuration>
+    <runtime>
+        <ThrowUnobservedTaskExceptions enabled="true"/>
+    </runtime>
 </configuration>  
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, bir görevden gözlemlenen bir özel durumun nasıl oluşturulduğu gösterilmektedir. Kod, doğru bir şekilde çalışması için yayınlanmış bir program olarak çalıştırılmalıdır.  
+ Aşağıdaki örnek, gözlenmeyen bir özel durum bir görevden nasıl atıldığını gösterir. Kodun düzgün çalışması için serbest bırakılmış bir program olarak çalıştırılması gerekir.  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  

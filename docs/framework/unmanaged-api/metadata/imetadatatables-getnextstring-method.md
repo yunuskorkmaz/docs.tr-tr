@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9720428-c353-4f07-a7e8-899e106a1b37
 topic_type:
 - apiref
-ms.openlocfilehash: 8d25f178a3c5e160e78e042d5016bb93aabf3e2d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a1cd932051a9ed90a29ff5eeaa818a67104192bb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443442"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175258"
 ---
 # <a name="imetadatatablesgetnextstring-method"></a>IMetaDataTables::GetNextString Yöntemi
 Geçerli tablo sütunundaki sonraki dizenin dizinini alır.  
@@ -28,7 +28,7 @@ Geçerli tablo sütunundaki sonraki dizenin dizinini alır.
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT GetNextString (   
+HRESULT GetNextString (
     [in]  ULONG   ixString,  
     [out] ULONG   *pNext  
 );  
@@ -36,19 +36,19 @@ HRESULT GetNextString (
   
 ## <a name="parameters"></a>Parametreler  
  `ixString`  
- 'ndaki Dize tablosu sütunundan dizin değeri.  
+ [içinde] Dize tablo sütunundaki dizin değeri.  
   
  `pNext`  
- dışı Sütundaki sonraki dizenin dizinine yönelik bir işaretçi.  
+ [çıkış] Sütundaki sonraki dizenin dizinine işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -10,34 +10,34 @@ helpviewer_keywords:
 - Suspend method
 - threading [.NET Framework], managed debugging assistants
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
-ms.openlocfilehash: 4e7e858dfb85eeccbadb23da60d081d1407e89d8
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: d3fe7d11657c2f9edd1fea7ff639f878f993d6b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216679"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174777"
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI MDA
-`dangerousThreadingAPI` yönetilen hata ayıklama Yardımcısı (MDA), <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> yöntemi geçerli iş parçacığı dışında bir iş parçacığında çağrıldığında etkinleştirilir.  
+Yönetilen `dangerousThreadingAPI` hata ayıklama yardımcısı (MDA) <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> yöntem geçerli iş parçacığı dışında bir iş parçacığı çağrıldığında etkinleştirilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Bir uygulama süresiz olarak yanıt vermemeye başlıyor veya askıda kalıyor. Sistem veya uygulama verileri, geçici olarak veya bir uygulama kapatıldıktan sonra bile öngörülemeyen bir durumda kalabilir. Bazı işlemler beklendiği gibi tamamlanmıyor.  
+ Bir uygulama yanıt vermiyor veya süresiz olarak asılı. Sistem veya uygulama verileri geçici olarak veya bir uygulama kapatıldıktan sonra bile öngörülemeyen bir durumda bırakılabilir. Bazı işlemler beklendiği gibi tamamlanınmıyor.  
   
- Belirtiler, soruna bağlı rasgelelik nedeniyle büyük ölçüde farklılık gösterebilir.  
+ Belirtiler büyük ölçüde soruna bağlı rasgelelik nedeniyle değişebilir.  
   
 ## <a name="cause"></a>Nedeni  
- Bir iş parçacığı <xref:System.Threading.Thread.Suspend%2A> yöntemi kullanılarak başka bir iş parçacığı tarafından zaman uyumsuz olarak askıya alındı. Bir işlemin ortasında olabilecek başka bir iş parçacığını askıya almanın ne zaman güvenli olduğunu belirlemenin bir yolu yoktur. İş parçacığını askıya almak, verilerin bozulmasına veya ınvarıant 'ların bozulmasına yol açabilir. Bir iş parçacığının askıya alınma durumuna yerleştirilmesi ve <xref:System.Threading.Thread.Resume%2A> yöntemi kullanılarak hiçbir şekilde sürdürülmemesi, uygulamanın süresiz olarak askıda kalması ve muhtemelen uygulama verilerine zarar verebiliyor olması gerekir. Bu yöntemler artık kullanılmıyor olarak işaretlendi.  
+ Bir iş <xref:System.Threading.Thread.Suspend%2A> parçacığı, yöntemi kullanarak başka bir iş parçacığı tarafından eş senkronize olarak askıya alınır. Bir işlemin ortasında olabilecek başka bir iş parçacığının ne zaman askıya alınabileceğini belirlemenin bir yolu yoktur. İş parçacığının askıya alınması, verilerin bozulmasına veya değişmezlerin kırılması ile sonuçlanabilir. Bir iş parçacığı askıya alınmış bir duruma yerleştirilir <xref:System.Threading.Thread.Resume%2A> ve yöntemi kullanarak devam asla, uygulama süresiz olarak asmak ve büyük olasılıkla uygulama verilerine zarar verebilir. Bu yöntemler eski olarak işaretlenmiştir.  
   
- Eşitleme temelleri hedef iş parçacığı tarafından tutuluyorsa, askıya alma sırasında tutuluyor olarak kalırlar. Bu, kilitlenmeleri başka bir iş parçacığı olmalıdır, örneğin <xref:System.Threading.Thread.Suspend%2A>yapan iş parçacığı temel üzerinde bir kilit elde etmeye çalışır. Bu durumda, sorun kendi kendine bir kilitlenme olarak bildirim gösterir.  
+ Senkronizasyon ilkel hedef iş parçacığı tarafından tutulursa, onlar süspansiyon sırasında tutulur. Bu kilitlenmelere yol açabilir başka bir iş <xref:System.Threading.Thread.Suspend%2A>parçacığı, örneğin iş parçacığı gerçekleştiren , ilkel bir kilit elde etmek için girişimi. Bu durumda, sorun bir kilitlenme olarak kendini gösterir.  
   
 ## <a name="resolution"></a>Çözüm  
- <xref:System.Threading.Thread.Suspend%2A> ve <xref:System.Threading.Thread.Resume%2A>kullanımını gerektiren tasarımlardan kaçının. İş parçacıkları arasındaki ortak işlem için <xref:System.Threading.Monitor>, <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Mutex>veya C# `lock` ifadesiyle ilgili eşitleme temel öğelerini kullanın. Bu yöntemleri kullanmanız gerekiyorsa, zaman penceresini küçültün ve iş parçacığı askıya alınma durumundayken yürütülen kod miktarını en aza indirin.  
+ Kullanımı <xref:System.Threading.Thread.Suspend%2A> ve gerektiren tasarımlar <xref:System.Threading.Thread.Resume%2A>kaçının. İş parçacıkları arasındaki işbirliği için, " , <xref:System.Threading.Monitor> <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Mutex>, veya `lock` C# deyimi gibi senkronizasyon ilkellerini kullanın. Bu yöntemleri kullanmanız gerekiyorsa, zaman penceresini azaltın ve iş parçacığı askıya alınmış durumdayken çalıştıran kod miktarını en aza indirin.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
- Bu MDA, CLR üzerinde hiçbir etkisi yoktur. Yalnızca tehlikeli iş parçacığı oluşturma işlemleriyle ilgili verileri raporlar.  
+## <a name="effect-on-the-runtime"></a>Çalışma Süresi üzerindeki etkisi  
+ Bu MDA'nın CLR üzerinde hiçbir etkisi yoktur. Yalnızca tehlikeli iş parçacığı işlemleriyle ilgili verileri bildirir.  
   
 ## <a name="output"></a>Çıktı  
- MDA, etkinleştirilmesinin nedeni olan tehlikeli iş parçacığı yöntemini tanımlar.  
+ MDA, etkinleştirilmesine neden olan tehlikeli iş parçacığı yöntemini tanımlar.  
   
 ## <a name="configuration"></a>Yapılandırma  
   
@@ -50,7 +50,7 @@ ms.locfileid: "77216679"
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, `dangerousThreadingAPI`etkinleştirmesine neden olan <xref:System.Threading.Thread.Suspend%2A> yöntemine yapılan çağrıyı gösterir.  
+ Aşağıdaki kod örneği, <xref:System.Threading.Thread.Suspend%2A> `dangerousThreadingAPI`.'ın etkinleştirilmesine neden olan yönteme yapılan bir çağrıyı gösterir.  
   
 ```csharp
 using System.Threading;  
@@ -59,7 +59,7 @@ void FireMda()
 Thread t = new Thread(delegate() { Thread.Sleep(1000); });  
     t.Start();  
     // The following line activates the MDA.  
-    t.Suspend();   
+    t.Suspend();
     t.Resume();  
     t.Join();  
 }  

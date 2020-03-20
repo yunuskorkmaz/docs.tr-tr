@@ -5,24 +5,24 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: b04ef53d6e9c3d954b0925ea8634b3d220b36af7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 24a5ea02992a5bce681b5bab4fb7f75505bd225d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116571"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154120"
 ---
-# <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence > öğesi
-Çalışma zamanının kod erişim güvenliği (CAS) için <xref:System.Security.Policy.Publisher> kanıt oluşturup oluşturmadığını belirtir.  
+# <a name="generatepublisherevidence-element"></a>\<PublisherEvidence> Öğesi'ni oluşturur
+Çalışma zamanının kod erişim <xref:System.Security.Policy.Publisher> güvenliği (CAS) için kanıt oluşturup oluşturmadığını belirtir.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<generatePublisherEvidence >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<çalışma zamanı>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<PublisherEvidence>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<generatePublisherEvidence    
+<generatePublisherEvidence
    enabled="true|false"/>  
 ```  
   
@@ -33,14 +33,14 @@ ms.locfileid: "73116571"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`enabled`|Gerekli öznitelik.<br /><br /> Çalışma zamanının <xref:System.Security.Policy.Publisher> bulgu oluşturup oluşturmadığını belirtir.|  
+|`enabled`|Gerekli öznitelik.<br /><br /> Çalışma zamanının kanıt oluşturup <xref:System.Security.Policy.Publisher> oluşturmadığını belirtir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`false`|<xref:System.Security.Policy.Publisher> bulgu oluşturmaz.|  
-|`true`|<xref:System.Security.Policy.Publisher> kanıt oluşturur. Bu varsayılandır.|  
+|`false`|Kanıt yaratmaz. <xref:System.Security.Policy.Publisher>|  
+|`true`|Kanıt <xref:System.Security.Policy.Publisher> yaratır. Bu varsayılandır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -55,18 +55,18 @@ ms.locfileid: "73116571"
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
-> .NET Framework 4 ve sonrasında, bu öğenin derleme yükleme süreleri üzerinde hiçbir etkisi yoktur. Daha fazla bilgi için [güvenlik değişikliklerinin](../../../security/security-changes.md)"güvenlik ilkesi basitleştirmesi" bölümüne bakın.  
+> .NET Framework 4 ve sonraki durumlarda, bu öğenin montaj yük süreleri üzerinde hiçbir etkisi yoktur. Daha fazla bilgi için, [Güvenlik Değişiklikleri'ndeki](../../../security/security-changes.md)"Güvenlik İlkesi Basitleştirme" bölümüne bakın.  
   
- Ortak dil çalışma zamanı (CLR), derleme için <xref:System.Security.Policy.Publisher> kanıt oluşturmak üzere yükleme sırasında Authenticode imzasını doğrulamaya çalışır. Ancak, varsayılan olarak çoğu uygulama <xref:System.Security.Policy.Publisher> kanıta gerek kalmaz. Standart CAS ilkesi <xref:System.Security.Policy.PublisherMembershipCondition>bağımlı değildir. Uygulamanız özel CAS ilkesi olan bir bilgisayarda yürütülmediği veya kısmi güven ortamındaki <xref:System.Security.Permissions.PublisherIdentityPermission> taleplerini karşılamaya yönelik olarak, yayımcı imzasını doğrulama ile ilişkili gereksiz başlangıç maliyetinden kaçının. (Kimlik izinlerinin istekleri her zaman tam güven ortamında başarılı olur.)  
+ Ortak dil çalışma süresi (CLR), derleme için kanıt oluşturmak <xref:System.Security.Policy.Publisher> için yük zamanında Authenticode imzasını doğrulamaya çalışır. Ancak, varsayılan olarak, çoğu uygulamakanıt gerekmez. <xref:System.Security.Policy.Publisher> Standart CAS <xref:System.Security.Policy.PublisherMembershipCondition>ilkesi, .. Uygulamanız özel CAS ilkesine sahip bir bilgisayarda yürütülmedikçe veya kısmi güven ortamında taleplerini <xref:System.Security.Permissions.PublisherIdentityPermission> karşılamayı amaçlamıyorsa, yayımcı imzasını doğrulamayla ilişkili gereksiz başlangıç maliyetinden kaçınmalısınız. (Kimlik izinleri talepleri her zaman tam güven ortamında başarılı olur.)  
   
 > [!NOTE]
-> Hizmetin başlangıç performansını artırmak için `<generatePublisherEvidence>` öğesini kullanmasını öneririz.  Bu öğenin kullanılması, zaman aşımına neden olabilecek ve hizmet başlangıcını iptal eden gecikmelerden kaçınmaya da yardımcı olabilir.  
+> Hizmetlerin başlangıç performansını `<generatePublisherEvidence>` artırmak için öğeyi kullanmasını öneririz.  Bu öğeyi kullanmak, zaman ayarı ve hizmet başlatmanın iptaline neden olabilecek gecikmeleri önlemeye de yardımcı olabilir.  
   
 ## <a name="configuration-file"></a>Yapılandırma Dosyası  
  Bu öğe yalnızca uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir uygulama için CAS yayımcı ilkesi denetimini devre dışı bırakmak için `<generatePublisherEvidence>` öğesinin nasıl kullanılacağını gösterir.  
+ Aşağıdaki örnek, bir uygulama `<generatePublisherEvidence>` için CAS yayımcı ilkesini denetlemeyi devre dışı betmek için öğenin nasıl kullanılacağını gösterir.  
   
 ```xml  
 <configuration>  

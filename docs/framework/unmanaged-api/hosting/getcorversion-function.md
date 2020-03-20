@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: 2f09cd37-bf3a-4cc5-87b0-adc42a7eed31
 topic_type:
 - apiref
-ms.openlocfilehash: 1283abaf6b08af1d842d8fe4469f7f6c15e38ec5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1f40f27651d2d75cf2c3e4d7d1c21e1f47d402af
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136430"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178185"
 ---
 # <a name="getcorversion-function"></a>GetCORVersion İşlevi
-Geçerli işlemde çalışan ortak dil çalışma zamanının (CLR) sürüm numarasını döndürür.  
+Geçerli işlemde çalışan ortak dil çalışma zamanının (CLR) sürüm numarasını verir.  
   
- Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
+ Bu işlev .NET Framework 4'te amortismana hazırlanmıştır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetCORVersion (  
     [in] LPWSTR  pbuffer,  
-    [in]  DWORD   cchBuffer,   
+    [in]  DWORD   cchBuffer,
     [out] DWORD*  dwlength  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pbuffer`  
- CLR 'nin şu anda işleme yüklenmiş çalışma zamanının sürümünü belirten bir dize döndürdüğü bir arabelleğin işaretçisi. Döndürülen dize [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)öğesine geçirilen dizelerle aynı formu alır, örneğin, "v 1.0.1216". Çalışma zamanı işleme henüz yüklenmemişse, işlev, bilgisayarda yüklü olan çalışma zamanının en son sürümü için uygun dizin bilgilerini döndürür.  
+ CLR'nin şu anda işleme yüklenen çalışma zamanının sürümünü belirten bir dize döndürdeği arabelleği için bir işaretçi. Döndürülen dize, [CorBindToRuntimeEx'e](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)geçen dizeleri ile aynı şekilde alır, örneğin, "v1.0.1216". Çalışma süresi henüz işleme yüklenmediyse, işlev bilgisayarda yüklenen çalışma zamanının en son sürümü için uygun dizin bilgilerini döndürür.  
   
  `cchBuffer`  
- `pbuffer`tutulabilecek karakter sayısı (`WCHAR`s).  
+ 'de `pbuffer`tutulabilen`WCHAR`karakter (ler) sayısı.  
   
  `dwLength`  
- `pbuffer`' de aslında döndürülen karakter sayısına yönelik bir işaretçi. `pbuffer` null işaretçisiyse, çalışma zamanı E_POINTER döndürür. Karakter sayısı daha büyükse `pbuffer`, çalışma zamanı ERROR_INSUFFICIENT_BUFFER döndürür.  
+ Gerçekte döndürülen `pbuffer`karakter sayısına işaretçi Null `pbuffer` işaretçiise, çalışma süresi E_POINTER döndürür. Karakter sayısı daha büyükse, `pbuffer` çalışma süresi ERROR_INSUFFICIENT_BUFFER.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE. h  
+ **Üstbilgi:** MSCorEE.h  
   
- **Kitaplık:** MSCorEE. dll  
+ **Kütüphane:** Mscoree.dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

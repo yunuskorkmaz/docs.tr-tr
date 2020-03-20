@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-ms.openlocfilehash: 6914437b9b238c1d82cf4cc8a480a15dd8dda7ad
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8f9761cc8bc881cd694f5d9620e5c4ab5987a2ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126801"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176402"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen Sınıfı
-Yerel bir Taşınabilir çalıştırılabilir (PE) dosyası oluşturmak için işlevsellik sağlar. Arabirim, genellikle derleyiciler tarafından derlenen çıkış yürütülebiliri oluşturmak için kullanılır.  
+Yerel taşınabilir çalıştırılabilir (PE) dosya oluşturmak için işlevsellik sağlar. Arabirim genellikle derlenmiş çıktı yürütülebilir oluşturmak için derleyiciler tarafından kullanılacaktır.  
   
 > [!NOTE]
-> `ICeeFileGen`, .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
+> `ICeeFileGen`.NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılması amaçlanmamıştır.  
   
- Bu arabirim kullanımdan kaldırılmıştır ve gelecekte yayınlanacak bir sürümde kaldırılacak.  
+ Bu arabirim amortismana kaldırıldı ve gelecekteki bir sürümde kaldırılacak.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -149,7 +149,7 @@ public:
         HCEESECTION section, ULONG num, ULONG size, ULONG offset = 0);  
   
     virtual HRESULT EmitMetaDataEx (HCEEFILE ceeFile,  
-        IMetaDataEmit *emitter);   
+        IMetaDataEmit *emitter);
   
     virtual HRESULT EmitLibraryNameEx (HCEEFILE ceeFile,  
         IMetaDataEmit *emitter);  
@@ -235,11 +235,11 @@ public:
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** ICeeFileGen. h  
+ **Üstbilgi:** ICeeFileGen.h  
   
- **.NET Framework sürümü:** 1,0  
+ **.NET Framework Versiyon:** 1.0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c090153-fd5f-46c7-9cff-39a78d992c8f
 topic_type:
 - apiref
-ms.openlocfilehash: ae682c354a7a5188611b103008a3e18f8d821260
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dd1d6f1da6e49837eebd9356500f403c199b011b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431933"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177846"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>IMetaDataAssemblyEmit::SetExportedTypeProps Yöntemi
 Belirtilen `ExportedType` meta veri yapısını değiştirir.  
@@ -29,7 +29,7 @@ Belirtilen `ExportedType` meta veri yapısını değiştirir.
   
 ```cpp  
 HRESULT SetExportedTypeProps (  
-    [in] mdExportedType   ct,   
+    [in] mdExportedType   ct,
     [in] mdToken          tkImplementation,  
     [in] mdTypeDef        tkTypeDef,  
     [in] DWORD            dwExportedTypeFlags  
@@ -38,28 +38,28 @@ HRESULT SetExportedTypeProps (
   
 ## <a name="parameters"></a>Parametreler  
  `ct`  
- 'ndaki Değiştirilecek `ExportedType` meta veri yapısını belirten meta veri belirteci.  
+ [içinde] Değiştirilecek `ExportedType` meta veri yapısını belirten meta veri belirteci.  
   
  `tkImplementation`  
- 'ndaki Bu türün nasıl uygulandığını belirten `File`, `AssemblyRef`veya `ExportedType`türündeki belirteç.  
+ [içinde] Bu türün nasıl `File` `AssemblyRef`uygulanacağını `ExportedType`belirten belirteç, türü , veya , belirtin.  
   
  `tkTypeDef`  
- 'ndaki Kod dosyasında başvurulan `TypeDef` belirteci.  
+ [içinde] Kod `TypeDef` dosyasında başvurulan belirteç.  
   
  `dwExportedTypeFlags`  
- 'ndaki Türün özniteliklerini belirten bir bit düzeyinde değer birleşimi.  
+ [içinde] Türün özniteliklerini belirten değerlerin bitwise birleşimi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ExportedType` meta veri yapısı oluşturmak için [IMetaDataAssemblyEmit::D efineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) metodunu kullanın.  
+ Meta `ExportedType` veri yapısı oluşturmak için [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) yöntemini kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

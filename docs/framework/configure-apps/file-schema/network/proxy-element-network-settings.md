@@ -8,26 +8,26 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 5f327a2bb4fe316497614f14669907d514c20654
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 590ea747c2fa9e5e85e5e9d05f6fb80fe60251d3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089188"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154796"
 ---
-# <a name="proxy-element-network-settings"></a>\<proxy > öğesi (ağ ayarları)
-Bir ara sunucu tanımlar.  
+# <a name="proxy-element-network-settings"></a>\<proxy> Elemanı (Ağ Ayarları)
+Proxy sunucusu tanımlar.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<proxy >**
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<proxy>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
 <proxy
-  autoDetect="true|false|unspecified" 
+  autoDetect="true|false|unspecified"
   bypassonlocal="true|false|unspecified"
   proxyaddress="uriString"
   scriptLocation="uriString"
@@ -42,11 +42,11 @@ Bir ara sunucu tanımlar.
   
 |**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|`autoDetect`|Proxy 'nin otomatik olarak algılanıp algılanmayacağını belirtir. Varsayılan değer `unspecified` şeklindedir.|  
-|`bypassonlocal`|Yerel kaynaklar için proxy 'nin atlanıp atlanmayacağını belirtir. Yerel kaynaklar yerel sunucuyu (`http://localhost`, `http://loopback` veya `http://127.0.0.1`) ve nokta olmayan bir URI 'yi (`http://webserver`) içerir. Varsayılan değer `unspecified` şeklindedir.|  
-|`proxyaddress`|Kullanılacak proxy URI 'sini belirtir.|  
-|`scriptLocation`|Yapılandırma betiğinin konumunu belirtir. Bu öznitelikle `bypassonlocal` özniteliğini kullanmayın. |  
-|`usesystemdefault`|Internet Explorer proxy ayarlarının kullanılıp kullanılmayacağını belirtir. `true`olarak ayarlanırsa, sonraki öznitelikler Internet Explorer proxy ayarlarını geçersiz kılar. Varsayılan değer `unspecified` şeklindedir.|  
+|`autoDetect`|Proxy'nin otomatik olarak algılanıp algılanmayanı belirtir. Varsayılan değer: `unspecified`.|  
+|`bypassonlocal`|Proxy'nin yerel kaynaklar için atlanıp atlanıp atlılmayacağını belirtir. Yerel kaynaklar yerel sunucu`http://localhost` `http://loopback`(, `http://127.0.0.1`, veya ) ve`http://webserver`bir dönem olmadan bir URI içerir ( ). Varsayılan değer: `unspecified`.|  
+|`proxyaddress`|Kullanılacak proxy URI'yi belirtir.|  
+|`scriptLocation`|Yapılandırma komut dosyasının konumunu belirtir. Özniteliği bu `bypassonlocal` öznitelik ile kullanmayın. |  
+|`usesystemdefault`|Internet Explorer proxy ayarlarını kullanıp kullanmayacağını belirtir. `true`Ayarlanırsa, sonraki öznitelikler Internet Explorer proxy ayarlarını geçersiz kılar. Varsayılan değer: `unspecified`.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -55,26 +55,26 @@ Bir ara sunucu tanımlar.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[defaultProxy](defaultproxy-element-network-settings.md)|Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.|  
+|[Defaultproxy](defaultproxy-element-network-settings.md)|Hypertext Transfer Protocol (HTTP) proxy sunucusunu yapılandırır.|  
   
 ## <a name="text-value"></a>Metin Değeri  
   
 ## <a name="remarks"></a>Açıklamalar  
- `proxy` öğesi bir uygulama için ara sunucu tanımlar. Yapılandırma dosyasında bu öğe eksikse .NET Framework, Internet Explorer 'daki proxy ayarlarını kullanacaktır.  
+ Öğe, `proxy` bir uygulama için bir proxy sunucusu tanımlar. Bu öğe yapılandırma dosyasında eksikse, .NET Framework Internet Explorer'daki proxy ayarlarını kullanır.  
   
- `proxyaddress` özniteliğinin değeri iyi biçimlendirilmiş bir Tekdüzen Kaynak göstergesi (URI) olmalıdır.  
+ Öznitelik değeri `proxyaddress` iyi biçimlendirilmiş bir Tekdüzen Kaynak Göstergesi (URI) olmalıdır.  
   
- `scriptLocation` özniteliği, proxy yapılandırma betikleri otomatik algılamayı ifade eder. <xref:System.Net.WebProxy> sınıfı, Internet Explorer 'da **otomatik yapılandırma betiği kullan** seçeneği belirlendiğinde bir yapılandırma betiğini (genellikle WPAD. dat olarak adlandırılır) bulmaya çalışır. `bypassonlocal` herhangi bir değere ayarlanırsa, `scriptLocation` yok sayılır.
+ Öznitelik `scriptLocation` proxy yapılandırma komut dosyalarının otomatik algılama anlamına gelir. Sınıf, <xref:System.Net.WebProxy> Internet Explorer'da **Otomatik yapılandırma komut dosyası kullan** seçeneği seçildiğinde bir yapılandırma komut dosyası (genellikle Wpad.dat olarak adlandırılır) bulmaya çalışır. Herhangi `bypassonlocal` bir değere `scriptLocation` ayarlanmışsa, yoksayılır.
   
- 2,0 sürümüne geçiş yapan .NET Framework sürüm 1,1 uygulamaları için `usesystemdefault` özniteliğini kullanın.  
+ `usesystemdefault` .NET Framework sürüm 1.1 uygulamalarının sürüm 2.0'a geçiş yapan özniteliğini kullanın.  
   
- `proxyaddress` özniteliği geçersiz bir varsayılan proxy belirtiyorsa bir özel durum oluşturulur. Özel durumun <xref:System.Exception.InnerException%2A> özelliği, hatanın kök nedeni hakkında daha fazla bilgiye sahip olmalıdır.  
+ `proxyaddress` Öznitelik geçersiz bir varsayılan proxy belirtirse bir özel durum atılır. Özel <xref:System.Exception.InnerException%2A> durum özelliği, hatanın temel nedeni hakkında daha fazla bilgiye sahip olmalıdır.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+ Bu öğe uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, Internet Explorer proxy 'sinin varsayılan değerlerini kullanır, proxy adresini belirtir ve yerel erişim için ara sunucuyu atlar.  
+ Aşağıdaki örnek, Internet Explorer proxy'sinden varsayılanları kullanır, proxy adresini belirtir ve yerel erişim için proxy'yi atlar.  
   
 ```xml  
 <configuration>  

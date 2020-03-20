@@ -9,19 +9,19 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: a903d009f2056e65414c1792494fbbd20e224413
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 2a76816ee73f516b3c7544877a77531acaa8e09c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088809"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153275"
 ---
-# <a name="sources-element"></a>\<kaynak > öğesi
-İzleme iletilerini Başlatan izleme kaynaklarını belirtir.  
+# <a name="sources-element"></a>\<kaynaklar> Element
+İletileri izlemeyi başlatan izleme kaynaklarını belirtir.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-[**System. diagnostics\<** ](system-diagnostics-element.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<kaynakları >**
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<kaynaklar>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,31 +41,31 @@ ms.locfileid: "74088809"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[Kaynak > \<](source-element.md)|Gerekli öğe.<br /><br /> İzleme iletilerini Başlatan bir izleme kaynağını belirtir.|  
+|[\<kaynak>](source-element.md)|Gerekli öğe.<br /><br /> İletilerin izlenmesini başlatan bir izleme kaynağı belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
+|`system.diagnostics`|İletileri toplayan, depolayan ve yönlendiren izleme dinleyicilerini ve izleme anahtarının ayarlandığı düzeyi belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe makine yapılandırma dosyasında (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, izleme kaynağı `mySource` eklemek ve `sourceSwitch`adlı kaynak anahtarın düzeyini ayarlamak için `<sources>` öğesinin nasıl kullanılacağını gösterir. İzleme bilgilerini konsola yazan bir konsol izleme dinleyicisi eklenir.  
+ Aşağıdaki örnek, izleme kaynağını `<sources>` `mySource` eklemek ve adlı `sourceSwitch`kaynak anahtarının düzeyini ayarlamak için öğenin nasıl kullanılacağını gösterir. Konsola izleme bilgileri yazan bir konsol izleme dinleyicisi eklenir.  
   
 ```xml  
 <configuration>  
    <system.diagnostics>  
       <sources>  
-         <source name="mySource" switchName="sourceSwitch"   
+         <source name="mySource" switchName="sourceSwitch"
             switchType="System.Diagnostics.SourceSwitch"  >  
             <listeners>  
-               <add name="console"   
+               <add name="console"
                   type="System.Diagnostics.ConsoleTraceListener" >  
-                  <filter type="System.Diagnostics.EventTypeFilter"   
+                  <filter type="System.Diagnostics.EventTypeFilter"
                      initializeData="Error" />  
                </add>  
                <remove name="Default" />  
@@ -74,8 +74,8 @@ ms.locfileid: "74088809"
       </sources>  
       <switches>  
          <add name="sourceSwitch" value="Warning" />  
-      </switches>    
-   </system.diagnostics>   
+      </switches>
+   </system.diagnostics>
 </configuration>  
 ```  
   
@@ -88,4 +88,4 @@ ms.locfileid: "74088809"
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
 - [İzleme ve Hata Ayıklama Ayarları Şeması](index.md)
-- [Kaynak > \<](source-element.md)
+- [\<kaynak>](source-element.md)

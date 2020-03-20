@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 0eaa4aa9-9441-444a-920c-e4b2a2db899e
 topic_type:
 - apiref
-ms.openlocfilehash: c3c57074ae53e2e1d8d41aa04cb6eb6089db58b5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dfa900e2184a8c415d75f5702c572b14c4018749
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449437"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177784"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps Yöntemi
-Belirtilen meta veri imzasına sahip derleme için özellik kümesini alır.  
+Belirtilen meta veri imzasıyla derleme için özellik kümesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetAssemblyProps (  
     [in]  mdAssembly          mda,  
-    [out] const void          **ppbPublicKey,   
+    [out] const void          **ppbPublicKey,
     [out] ULONG               *pcbPublicKey,  
     [out] ULONG               *pulHashAlgId,  
     [out] LPWSTR              szName,  
@@ -43,40 +43,40 @@ HRESULT GetAssemblyProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mda`  
- [in]. Özelliklerinin alınacağı derlemeyi temsil eden `mdAssembly` meta veri belirteci.  
+ [içinde]. Özellikleri `mdAssembly` almak için derlemeyi temsil eden meta veri belirteci.  
   
  `ppbPublicKey`  
- dışı Ortak anahtara veya meta veri belirtecine yönelik bir işaretçi.  
+ [çıkış] Ortak anahtarveya meta veri belirteci için bir işaretçi.  
   
  `pcbPublicKey`  
- dışı Döndürülen ortak anahtardaki bayt sayısı.  
+ [çıkış] Döndürülen ortak anahtardaki bayt sayısı.  
   
  `pulHashAlgId`  
- dışı Derlemedeki dosyaları karma hale almak için kullanılan algoritmanın işaretçisi.  
+ [çıkış] Derlemedeki dosyaları karmalamak için kullanılan algoritmaya işaretçi.  
   
  `szName`  
- dışı Derlemenin basit adı.  
+ [çıkış] Derlemenin basit adı.  
   
  `cchName`  
- 'ndaki `szName`geniş karakter cinsinden boyutu.  
+ [içinde] Boyutu, geniş chars, `szName`ve .  
   
  `pchName`  
- dışı `szName`' de döndürülen geniş karakter sayısı.  
+ [çıkış] Geniş karakter sayısı aslında döndü `szName`.  
   
  `pMetaData`  
- dışı Derleme meta verilerini içeren bir ASSEMBLYMETADATA yapısına yönelik işaretçi.  
+ [çıkış] Derleme meta verilerini içeren bir ASSEMBLYMETADATA yapısına işaretçi.  
   
  `pdwAssemblyFlags`  
- dışı Bir derlemeye uygulanan meta verileri tanımlayan bayraklar. Bu değer bir veya daha fazla [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) değerinin birleşimidir.  
+ [çıkış] Derlemeye uygulanan meta verileri açıklayan bayraklar. Bu değer, bir veya daha fazla [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) değerinin bir leşimidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

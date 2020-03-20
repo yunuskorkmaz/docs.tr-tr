@@ -8,17 +8,17 @@ helpviewer_keywords:
 - graphics [WPF], rotating objects [WPF]
 - rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
-ms.openlocfilehash: d1c4700a5dc8f6ed99043552999d8f014116da8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02d8144c28b7a4e54fb86fea5abb694cf7af34af
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61804173"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185960"
 ---
 # <a name="how-to-rotate-an-object"></a>Nasıl yapılır: Nesne Döndürme
-Bu örnek, bir nesnenin nasıl döndürüleceğini gösterir. Örneğin ilk oluşturur bir <xref:System.Windows.Media.RotateTransform> ve ardından belirtir, <xref:System.Windows.Media.RotateTransform.Angle%2A> derece cinsinden.  
+Bu örnek, bir nesnenin nasıl döndürüldüğünü gösterir. Örnek önce bir <xref:System.Windows.Media.RotateTransform> oluşturur ve sonra <xref:System.Windows.Media.RotateTransform.Angle%2A> derece olarak belirtir.  
   
- Aşağıdaki örnek döndürür bir <xref:System.Windows.Shapes.Polyline> kendi üst sol löşede 45 derece nesne.  
+ Aşağıdaki örnek, bir <xref:System.Windows.Shapes.Polyline> nesneyi sol üst köşesinde 45 derece döndürür.  
   
 ## <a name="example"></a>Örnek  
  [!code-xaml[Transforms_snip#RotatePolylineAboutTopLeft](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/RotateTransformExample.xaml#rotatepolylineabouttopleft)]  
@@ -26,26 +26,26 @@ Bu örnek, bir nesnenin nasıl döndürüleceğini gösterir. Örneğin ilk olu�
  [!code-csharp[Transforms_Procedural_snip#RotatePolylineAboutTopLeft](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_Procedural_snip/CSharp/RotateTransformExample.cs#rotatepolylineabouttopleft)]
  [!code-vb[Transforms_Procedural_snip#RotatePolylineAboutTopLeft](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Transforms_Procedural_snip/VisualBasic/RotateTransformExample.vb#rotatepolylineabouttopleft)]  
   
- <xref:System.Windows.Media.RotateTransform.CenterX%2A> Ve <xref:System.Windows.Media.RotateTransform.CenterY%2A> özelliklerini <xref:System.Windows.Media.RotateTransform> nesne döndürüldüğü noktasını belirtin. Bu merkez noktasını dönüştürülür öğenin koordinat ifade edilir. Varsayılan olarak, döndürme (0,0), sol üst köşesinin dönüştürmek için nesnenin olduğu uygulanır.  
+ Nesnenin <xref:System.Windows.Media.RotateTransform.CenterX%2A> döndürüldettiği noktayı belirtin. <xref:System.Windows.Media.RotateTransform> <xref:System.Windows.Media.RotateTransform.CenterY%2A> Bu merkez noktası dönüştürülen öğenin koordinat alanında ifade edilir. Varsayılan olarak, döndürme (0,0), dönüştürmek için nesnenin sol üst köşesi olan uygulanır.  
   
- Sonraki örnekte döndürür bir <xref:System.Windows.Shapes.Polyline> noktası (25,50) 45 derece saat yönünde nesne.  
+ Sonraki örnek, nesneyi <xref:System.Windows.Shapes.Polyline> saat yönünde 45 derece olarak nokta (25,50) döndürür.  
   
  [!code-xaml[Transforms_snip#RotatePolylineAboutCenter](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/RotateTransformExample.xaml#rotatepolylineaboutcenter)]  
   
  [!code-csharp[Transforms_Procedural_snip#RotatePolylineAboutCenter](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_Procedural_snip/CSharp/RotateTransformExample.cs#rotatepolylineaboutcenter)]
  [!code-vb[Transforms_Procedural_snip#RotatePolylineAboutCenter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Transforms_Procedural_snip/VisualBasic/RotateTransformExample.vb#rotatepolylineaboutcenter)]  
   
- Uygulama sonuçlarını aşağıdaki çizimde bir <xref:System.Windows.Media.Transform> iki nesne için.  
+ Aşağıdaki resimde iki nesneye a <xref:System.Windows.Media.Transform> uygulamanın sonuçları gösterilmektedir.  
   
- ![farklı merkezi noktalarıyla 45 derece döndürme](./media/wcpsdk-graphicsmm-rotatetransform45degrees.gif "wcpsdk_graphicsmm_rotatetransform45degrees")  
-Döngüsel 45 derece farklı döndürmek iki nesne merkezleri  
+ ![Farklı merkez noktaları ile 45 derece rotasyonlar](./media/wcpsdk-graphicsmm-rotatetransform45degrees.gif "wcpsdk_graphicsmm_rotatetransform45degrees")  
+Farklı dönme merkezlerinden 45 derece dönen iki nesne  
   
- <xref:System.Windows.Shapes.Polyline> Önceki örneklerde olduğu bir <xref:System.Windows.UIElement>. Uyguladığınızda bir <xref:System.Windows.Media.Transform> için <xref:System.Windows.UIElement.RenderTransform%2A> özelliği bir <xref:System.Windows.UIElement>, kullanabileceğiniz <xref:System.Windows.UIElement.RenderTransformOrigin%2A> özelliği için bir kaynak belirtmek için her <xref:System.Windows.Media.Transform> öğeye uygulanacak. Çünkü <xref:System.Windows.UIElement.RenderTransformOrigin%2A> özelliği kullanan göreli koordinatlarda, boyutuna sahibi olmasanız bile, bir dönüştürme öğesinin merkezine uygulayabilirsiniz. Daha fazla bilgi ve örnek için bkz: [göreli değerler kullanarak dönüşümün kaynağını belirtme](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md).  
+ Önceki <xref:System.Windows.Shapes.Polyline> örneklerde bir <xref:System.Windows.UIElement>. Bir <xref:System.Windows.Media.Transform> <xref:System.Windows.UIElement.RenderTransform%2A> <xref:System.Windows.UIElement>özelliğine a uyguladığınız zaman, öğeye uyguladığınız her <xref:System.Windows.Media.Transform> bir kaynak için bir kaynak belirtmek için <xref:System.Windows.UIElement.RenderTransformOrigin%2A> özelliği kullanabilirsiniz. Özellik <xref:System.Windows.UIElement.RenderTransformOrigin%2A> göreli koordinatlar kullandığından, boyutunu bilmeseniz bile öğenin merkezine dönüşüm uygulayabilirsiniz. Daha fazla bilgi ve örnek için bkz. [Göreli Değerleri Kullanarak Dönüşümün Kaynağını Belirtin.](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
   
- Tam bir örnek için bkz. [2B dönüşüm örnek](https://go.microsoft.com/fwlink/?LinkID=158252).  
+ Numunenin tamamı için [2-B Dönüşüm Örneği'ne](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Media.Transform>
 - [Dönüşümlere Genel Bakış](transforms-overview.md)
-- [Nasıl Yapılır Konuları](transformations-how-to-topics.md)
+- [Nasıl Dır Konular](transformations-how-to-topics.md)

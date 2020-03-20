@@ -2,48 +2,48 @@
 title: Özel Etkinlik Tasarımcısında ExpressionTextBox Kullanma
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: 6b581b42c882c12425a17b9a518f8957ca10898a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 6d3df9e18c7239f0e4695509d80edfd02e9a9d6f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715544"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182761"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>Özel Etkinlik Tasarımcısında ExpressionTextBox Kullanma
-Bu örnek, <xref:System.Activities.Presentation.View.ExpressionTextBox> özel bir etkinlik tasarımcısında nasıl kullanılacağını gösterir. `MultiAssign`özel etkinlik iki dize değişkenine iki dize değeri atar. Bazı <xref:System.Activities.Presentation.View.ExpressionTextBox> denetimleri <xref:System.Activities.InArgument>s 'ye bağlanır ve bazı <xref:System.Activities.OutArgument>s öğesine bağlanır.
+Bu örnek, özel <xref:System.Activities.Presentation.View.ExpressionTextBox> bir etkinlik tasarımcısında nasıl kullanılacağını gösterir. Özel etkinlik, `MultiAssign`iki dize değişkenine iki dize değeri atar. Bazı <xref:System.Activities.Presentation.View.ExpressionTextBox> denetimler <xref:System.Activities.InArgument>s'ye, bazıları <xref:System.Activities.OutArgument>da s'ye bağlanır.
 
-## <a name="sample-details"></a>Örnek Ayrıntılar
- `ArgumentToExpressionConverter`, ifadeleri bağımsız değişkenlere bağlarken kullanılan tür dönüştürücütür. `ConverterParameter` `In` veya `Out` uygun şekilde ayarlanmalıdır. `InOut` desteklenmez.
+## <a name="sample-details"></a>Örnek ayrıntılar
+ İfadeleri `ArgumentToExpressionConverter` bağımsız değişkenlere bağlarken kullanılan tür dönüştürücüdür. Ayarlanmalıdır `ConverterParameter` `In` veya `Out` uygun olarak. `InOut`Desteklenmez.
 
- `UseLocationExpression` özniteliği, ifadenin bir L-değeri ("sol değer" veya "konum değeri") ifadesi olması gerektiğini belirtmek için `OutArgument`s üzerinde kullanılır. Çoğu durumda, bir L-değer ifadesi, döndürülmekte olan `OutArgument` bir değişken veya bağımsız değişken adı olduğunu belirtmek için kullanılan geçerli bir Visual Basic tanımlayıcıdır.
+ `OutArgument`Öznitelik, `UseLocationExpression` ifadenin Bir L değeri ("sol değer" veya "konum değeri") ifadesi olması gerektiğini belirtmek için s üzerinde kullanılır. Çoğu durumda, L değeri ifadesi, `OutArgument` döndürülen değişken veya bağımsız değişken adı olduğunu belirtmek için kullanılan geçerli bir Visual Basic tanımlayıcısıdır.
 
- `MaxLines` özniteliği bu örnekte bir olarak ayarlanır ve `MinLines` ayarlı değildir. Bu, <xref:System.Activities.Presentation.View.ExpressionTextBox>, Kullanıcı tarafından yazılan metin miktarına bakılmaksızın, bir satırın sabit bir boyutu olduğunu gösterir. <xref:System.Activities.Presentation.View.ExpressionTextBox>, kullanıcı girişine sığacak şekilde büyümeye izin vermek için, `MinLines`daha büyük `MaxLines` ayarlayın.
+ Öznitelik `MaxLines` bu örnekte bir olarak `MinLines` ayarlanır ve ayarlanmaz. Bu, kullanıcı <xref:System.Activities.Presentation.View.ExpressionTextBox> tarafından yazılan metin miktarına bakılmaksızın bir satırın sabit boyutu olduğunu gösterir. Kullanıcı <xref:System.Activities.Presentation.View.ExpressionTextBox> girişine uyacak şekilde büyümesine `MaxLines` izin `MinLines`vermek için, 'den büyük.
 
- ExpressionTextBox yalnızca bağımsız değişkenlere bağlanabilir ve CLR özelliklerine bağlanamaz.
+ ExpressionTextBox yalnızca bağımsız değişkenlere bağlı olabilir ve CLR özelliklerine bağlanamaz.
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 
-1. Visual Studio 2010 kullanarak, ExpressionTextBoxSample. sln dosyasını açın.
+1. Visual Studio 2010'u kullanarak ExpressionTextBoxSample.sln dosyasını açın.
 
-2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
+2. Çözümü oluşturmak için CTRL+SHIFT+B tuşuna basın.
 
 #### <a name="to-run-this-sample"></a>Bu örneği çalıştırmak için
 
-1. Çözüme yeni bir Iş akışı konsol uygulaması ekleyin.
+1. Çözüme yeni bir İş Akışı Konsolu Uygulaması ekleyin.
 
-2. Yeni Iş akışı konsol uygulaması projesinden **ExpressionTextBoxSample** projesine bir başvuru ekleyin.
+2. Yeni İş Akışı Konsolu Uygulaması projesinden **ExpressionTextBoxSample** projesine bir başvuru ekleyin.
 
-3. Çözümü oluşturun.
+3. Çözümü derleyin.
 
-4. Araç kutusundan **MultiAssign** etkinliğini sürükleyin ve iş akışına bırakın.
+4. **MultiAssign** etkinliğini araç kutusundan sürükleyin ve iş akışına bırakın.
 
 > [!IMPORTANT]
-> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
->   
+> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
->   
+>
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\ExpressionTextBox`  
   
 ## <a name="see-also"></a>Ayrıca bkz.

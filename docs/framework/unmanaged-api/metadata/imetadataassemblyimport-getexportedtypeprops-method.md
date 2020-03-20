@@ -15,60 +15,60 @@ helpviewer_keywords:
 ms.assetid: 25ca7623-5a55-4f09-b44a-36b03d142278
 topic_type:
 - apiref
-ms.openlocfilehash: 82302124828a2dab73b445128d7d847e112edd36
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 15b58e01d4ce99f19f510c760819471b84380b45
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448211"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177767"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps Metodu
-Belirtilen meta veri imzasıyla, dışarıya aktarılmış türün özelliklerinin kümesini alır.  
+Belirtilen meta veri imzasıyla dışa aktarılan türdeki özellikler kümesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetExportedTypeProps (  
-    [in]  mdExportedType    mdct,   
-    [out] LPWSTR            szName,   
-    [in]  ULONG             cchName,   
-    [out] ULONG             *pchName,   
-    [out] mdToken           *ptkImplementation,   
-    [out] mdTypeDef         *ptkTypeDef,   
+    [in]  mdExportedType    mdct,
+    [out] LPWSTR            szName,
+    [in]  ULONG             cchName,
+    [out] ULONG             *pchName,
+    [out] mdToken           *ptkImplementation,
+    [out] mdTypeDef         *ptkTypeDef,
     [out] DWORD             *pdwExportedTypeFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `mdct`  
- 'ndaki Bir `mdExportedType` meta veri belirteci, dışarıya aktarılmış türü temsil eder.  
+ [içinde] Dışa aktarılan türü temsil eden `mdExportedType` bir meta veri belirteci.  
   
  `szName`  
- dışı İçe aktarılmış türün adı.  
+ [çıkış] Dışa aktarılan türün adı.  
   
  `cchName`  
- 'ndaki `szName`geniş karakterdeki boyut.  
+ [içinde] Boyutu, geniş karakterler, . `szName`  
   
  `pchName`  
- dışı `szName` ' de döndürülen geniş karakter sayısı  
+ [çıkış] Dönen geniş karakter sayısı`szName`  
   
  `ptkImplementation`  
- dışı `mdFile`, `mdAssemblyRef`veya bir `mdExportedType` meta veri belirteci, ancak bu, içe aktarılmış türün özelliklerine erişim izni verir.  
+ [çıkış] Dışa `mdAssemblyRef`aktarılan `mdExportedType` türdeki özellikleri içeren veya erişime izin veren bir `mdFile`, veya meta veri belirteci.  
   
  `ptkTypeDef`  
- dışı Dosyadaki bir türü temsil eden `mdTypeDef` belirtecine yönelik bir işaretçi.  
+ [çıkış] Dosyadaki bir `mdTypeDef` türü temsil eden bir belirteç için işaretçi.  
   
  `pdwExportedTypeFlags`  
- dışı İçe aktarılmış türe uygulanan meta verileri tanımlayan bayrakların işaretçisi. Bayrak değeri bir veya daha fazla [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) değeri olabilir.  
+ [çıkış] Dışa aktarılan türe uygulanan meta verileri açıklayan bayraklar için bir işaretçi. Bayrak değeri bir veya daha fazla [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) değeri olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

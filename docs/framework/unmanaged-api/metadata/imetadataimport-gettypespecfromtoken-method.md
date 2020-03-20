@@ -15,47 +15,47 @@ helpviewer_keywords:
 ms.assetid: ee518bda-3296-482e-a7b7-e9d51dd1a181
 topic_type:
 - apiref
-ms.openlocfilehash: 3ab24ab869e1f2cff9beafe50e6982ba2e7cf0aa
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 34b7cebfa063a3ad077b74a753fd37ba67ff53a5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436698"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175323"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken Metodu
-Belirtilen belirteçle temsil edilen tür belirtiminin ikili meta veri imzasını alır.  
+Belirtilen belirteç tarafından temsil edilen tür belirtiminin ikili meta veri imzasını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-HRESULT GetTypeSpecFromToken (   
-   [in]  mdTypeSpec            typespec,   
-   [out] PCCOR_SIGNATURE       *ppvSig,   
+HRESULT GetTypeSpecFromToken (
+   [in]  mdTypeSpec            typespec,
+   [out] PCCOR_SIGNATURE       *ppvSig,
    [out] ULONG                 *pcbSig  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `typespec`  
- 'ndaki İstenen meta veri imzasıyla ilişkili TypeSpec belirteci.  
+ [içinde] İstenen meta veri imzasıyla ilişkili TypeSpec belirteci.  
   
  `ppvSig`  
- dışı İkili meta veri imzasına yönelik bir işaretçi.  
+ [çıkış] İkili meta veri imzası için bir işaretçi.  
   
  `pcbSig`  
- dışı Meta veri imzasının bayt cinsinden boyutu.  
+ [çıkış] Meta veri imzasının baytboyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı veya başarısız olduğunu gösteren bir HRESULT. Başarısızlıklar başarısız makroyla test edilebilir.  
+ Başarı veya başarısızlığı gösteren bir HRESULT. Hatalar FAILED makrosu ile test edilebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

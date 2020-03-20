@@ -1,29 +1,29 @@
 ---
-title: Tasarımcı yeniden barındırma
+title: Tasarımcı Rehosting
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: f98b1823c74471c96f6d4b67ec47637bb0785d8f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b72e3450799db40988c8b99e4db3707de330d8ad
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715245"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182816"
 ---
 # <a name="designer-rehosting"></a>Tasarımcıyı Yeniden Barındırma
-Tasarımcı yeniden barındırma, iş akışı tasarım tuvalinin özel bir uygulamanın içinde barındırılmasına işaret eden yaygın bir senaryodur. Çoğu kişinin en çok öğrenme uygulaması Visual Studio, ancak bir uygulamada iş akışı tasarımcısının gösterildiği birçok senaryo vardır:  
+Tasarımcı yeniden barındırma, özel bir uygulamanın içinde iş akışı tasarım tuvalbarındırma anlamına gelen yaygın bir senaryodur. Çoğu insanın aşina olduğu barındırma uygulaması Visual Studio'dur, ancak bir uygulamada iş akışı tasarımcısını göstermenin yararlı olabileceği bir dizi senaryo vardır:  
   
-- Uygulamaları izleme (son kullanıcının işlemi görselleştirmesine ve şu anda etkin durum, toplu yürütme süresi verileri veya iş akışı örneğiyle ilgili diğer bilgiler gibi işlem hakkındaki çalışma zamanı verileri).  
+- Uygulamaları izleme (son kullanıcının işlemi görselleştirmesine ve şu anda etkin olan durum, toplu yürütme süresi verileri veya iş akışının bir örneği yle ilgili diğer bilgiler gibi işlemle ilgili çalışma zamanı verilerine izin verir).  
   
-- Kullanıcının işlemi sınırlı bir etkinlik kümesiyle özelleştirmesini sağlayan uygulamalar.  
+- Kullanıcının işlemi sınırlı bir etkinlik kümesiyle özelleştirmesine olanak tanıyan uygulamalar.  
   
- Bu uygulama türlerini desteklemek için, iş akışı Tasarımcısı .NET Framework içinde dağıtılır ve bir WPF uygulamasında veya uygun WPF barındırma kodu ile bir WinForms uygulamasında barındırılabilir. Bu örnek şunları gösterir:  
+ Bu tür uygulamaları desteklemek için, iş akışı tasarımcısı .NET Framework içinde yer alabilir ve bir WPF uygulaması içinde veya uygun WPF barındırma koduna sahip bir WinForms uygulamasında barındırılabilir. Bu örnek şunları göstermektedir:  
   
-- WF tasarımcısını yeniden barındırma.  
+- WF tasarımcısı yeniden barındırma.  
   
-- Yeniden barındırılan araç kutusu ve özellik kılavuzunu de kullanma.  
+- Yeniden barındırılan araç kutusunu ve özellik ızgarasını da kullanma.  
   
 ## <a name="rehosting-the-designer"></a>Tasarımcıyı yeniden barındırma  
- Bu örnek, aşağıdaki kılavuz düzeninde görülen, tasarımcıyı içeren WPF düzeninin nasıl oluşturulacağını gösterir (alan kaygıları için araç kutusu kodu atlandı). Tasarımcı ve özellik kılavuzunu içeren kenarlıkların adlandırmasını aklınızda bulundurun.  
+ Bu örnek, aşağıdaki ızgara düzeninde görülen tasarımcıyı içerecek şekilde WPF düzeninin nasıl oluşturultuğa (alan sorunları için atlanan araç kutusu kodu) gösterir. Tasarımcı ve özellik ızgarası içeren kenarlıkların adlandırma dikkat edin.  
   
 ```xaml  
 <Grid>  
@@ -40,7 +40,7 @@ Tasarımcı yeniden barındırma, iş akışı tasarım tuvalinin özel bir uygu
 </Grid>  
 ```  
   
- Örnek, tasarımcı oluşturur ve birincil <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> ve <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> Kullanıcı arabirimindeki uygun kapsayıcıyla ilişkilendirir. Aşağıdaki örnekte, biraz açıklama olan bazı ek kod satırları vardır. <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> çağrısı, .NET Framework ile gönderilen etkinliklerin varsayılan etkinlik tasarımcılarını ilişkilendirmek için gereklidir. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A>, düzenlenecek WF öğesini geçirmek için çağrılır. Son olarak, <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (birincil tuval) ve <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (Özellik Kılavuzu) Kullanıcı arabirimi yüzeyine yerleştirilir.  
+ Sonraki örnek tasarımcıoluşturur ve birincil <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> ve <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> kullanıcı arabiriminde uygun kapsayıcı ile ilişkilendirir. Aşağıdaki örnekte bazı açıklamaları hak eden birkaç ek kod satırı vardır. Çağrı, <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> .NET Framework ile gönderilen etkinlikler için varsayılan etkinlik tasarımcılarını ilişkilendirmek için gereklidir. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A>düzenlenecek WF öğesinde geçmek için çağrılır. Son olarak, <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (birincil <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> tuval) ve (özellik ızgarası) kullanıcı arabirimi yüzeyine yerleştirilir.  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  
@@ -58,7 +58,7 @@ protected override void OnInitialized(EventArgs e)
 ```  
   
 ## <a name="using-the-rehosted-toolbox"></a>Yeniden barındırılan araç kutusunu kullanma  
- Bu örnekte, yeniden barındırılan araç kutusu denetimi XAML 'de bildirimli olarak kullanılmaktadır. Kodda, bir türü <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper> oluşturucusuna geçirebileceğini unutmayın.  
+ Bu örnek, XAML'de yeniden barındırılan araç kutusu denetimini bildirimsel olarak kullanır. Kodda, bir tür <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper> oluşturucuya geçebilirsiniz unutmayın.  
   
 ```xaml  
 <!-- Copyright (c) Microsoft Corporation. All rights reserved-->  
@@ -114,17 +114,17 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>Örneği kullanma  
   
-1. Visual Studio 2010 ' de DesignerRehosting. sln çözümünü açın.  
+1. Visual Studio 2010'da DesignerRehosting.sln çözümlerini açın.  
   
 2. Uygulamayı derlemek ve çalıştırmak için F5 tuşuna basın.  
   
-3. WPF uygulaması yeniden barındırılan bir tasarımcı ile başlar.  
+3. WPF uygulaması yeniden barındırılan bir tasarımcıyla başlar.  
   
 > [!IMPORTANT]
-> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
->   
+> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
->   
+>
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`

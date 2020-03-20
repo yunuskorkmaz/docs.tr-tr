@@ -2,22 +2,22 @@
 title: XMLSerializer Örneği
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: 07211ff61091107d469a482cc60783b30621ee21
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c6d10a74a00bf534000f79457f2c80b0a9361230
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714512"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143349"
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer Örneği
-Bu örnek, <xref:System.Xml.Serialization.XmlSerializer>uyumlu olan türlerin serileştirilmesinin ve serisini kaldırma işlemlerinin nasıl yapılacağını gösterir. Varsayılan Windows Communication Foundation (WCF) biçimlendiricisi <xref:System.Runtime.Serialization.DataContractSerializer> sınıfıdır. <xref:System.Xml.Serialization.XmlSerializer> sınıfı, <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı kullanılamaz olduğunda türleri seri hale getirmek ve seri durumdan çıkarmak için kullanılabilir. Bu, genellikle XML üzerinde kesin denetim gerektiğinde (örneğin, bir veri parçasının bir XML özniteliği olması ve bir XML öğesi olması gerekiyorsa) büyük bir durumdur. Ayrıca, WCF olmayan hizmetler için istemciler oluşturulurken <xref:System.Xml.Serialization.XmlSerializer> genellikle otomatik olarak seçilir.  
+Bu örnek, <xref:System.Xml.Serialization.XmlSerializer>'ile uyumlu türleri serihale ve deserialize nasıl gösterir. Varsayılan Windows Communication Foundation (WCF) <xref:System.Runtime.Serialization.DataContractSerializer> madde sınıfıdır. Sınıf <xref:System.Xml.Serialization.XmlSerializer> kullanılamadığında <xref:System.Runtime.Serialization.DataContractSerializer> sınıf türleri serihale getirmek ve deserialize etmek için kullanılabilir. XML üzerinde hassas denetim gerektiğinde bu genellikle durumdur - örneğin, bir veri parçası xml özniteliği değil, Bir XML özniteliği olmalıdır. Ayrıca, <xref:System.Xml.Serialization.XmlSerializer> WCF olmayan hizmetler için istemci oluştururken genellikle otomatik olarak seçilir.  
   
- Bu örnekte, istemci bir konsol uygulaması (. exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
+ Bu örnekte, istemci bir konsol uygulamasıdır (.exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
   
 > [!NOTE]
-> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
+> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
   
- Aşağıdaki örnek kodda gösterildiği gibi <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.XmlSerializerFormatAttribute> arabirime uygulanmalıdır.  
+ Ve <xref:System.ServiceModel.ServiceContractAttribute> <xref:System.ServiceModel.XmlSerializerFormatAttribute> aşağıdaki örnek kodda gösterildiği gibi arabirime uygulanmalıdır.  
   
 ```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"), XmlSerializerFormat]  
@@ -34,7 +34,7 @@ public interface IXmlSerializerCalculator
 }  
 ```  
   
- `ComplexNumber` sınıfının ortak üyeleri, <xref:System.Xml.Serialization.XmlSerializer> tarafından XML öznitelikleri olarak serileştirilir. <xref:System.Runtime.Serialization.DataContractSerializer> bu tür bir XML örneği oluşturmak için kullanılamaz.  
+ `ComplexNumber` Sınıfın ortak üyeleri XML <xref:System.Xml.Serialization.XmlSerializer> öznitelikleri olarak serihale edilir. Bu <xref:System.Runtime.Serialization.DataContractSerializer> tür Bir XML örneği oluşturmak için kullanılamaz.  
   
 ```csharp  
 public class ComplexNumber  
@@ -70,7 +70,7 @@ public class ComplexNumber
 }  
 ```  
   
- Hizmet uygulama, `ComplexNumber` türünün değerlerini kabul ederek ve döndürürken uygun sonucu hesaplar ve döndürür.  
+ Hizmet uygulaması, `ComplexNumber` türün kabul ve iade değerlerini uygun sonucu hesaplar ve döndürür.  
   
 ```csharp  
 public class XmlSerializerCalculatorService : IXmlSerializerCalculator  
@@ -84,7 +84,7 @@ public class XmlSerializerCalculatorService : IXmlSerializerCalculator
 }  
 ```  
   
- İstemci uygulama da karmaşık sayılar kullanır. Hizmet sözleşmesinin ve veri türlerinin her ikisi de, hizmet meta verilerinden [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan generatedClient.cs kaynak dosyasında tanımlanmıştır. Svcutil. exe, bir sözleşmenin <xref:System.Runtime.Serialization.DataContractSerializer> seri hale getirilmediği zaman algılayabilir ve bu durumda `XmlSerializable` türlerini yayarak geri döner. <xref:System.Xml.Serialization.XmlSerializer>kullanımını zorlamak isterseniz, Svcutil. exe aracına/Serializer: XmlSerializer (XmlSerializer kullanın) komut seçeneğini geçirebilirsiniz.  
+ İstemci uygulaması karmaşık sayılar da kullanır. Hizmet meta verilerinden [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan generatedClient.cs kaynak dosyasında hem hizmet sözleşmesi hem de veri türleri tanımlanır. Svcutil.exe, bir sözleşmenin <xref:System.Runtime.Serialization.DataContractSerializer> seri olarak ne zaman seri hale edilemediğini algılayabilir ve bu durumda yayan `XmlSerializable` türlere geri döner. Eğer kullanmak zorlamak istiyorsanız <xref:System.Xml.Serialization.XmlSerializer>, Svcutil.exe aracına /serializer:XmlSerializer (XmlSerializer kullanın) komut seçeneğini geçebilirsiniz.  
   
 ```csharp  
 // Create a client.  
@@ -100,13 +100,13 @@ value2.Real = 3;
 value2.Imaginary = 4;  
 ComplexNumber result = client.Add(value1, value2);  
 Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",  
-    value1.Real, value1.Imaginary, value2.Real, value2.Imaginary,   
+    value1.Real, value1.Imaginary, value2.Real, value2.Imaginary,
     result.Real, result.Imaginary);  
     …  
 }  
 ```  
   
- Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemciyi kapatmak için istemci penceresinde ENTER tuşuna basın.  
   
 ```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
@@ -117,19 +117,19 @@ Divide(3 + 7i, 5 + -2i) = 0.0344827586206897 + 1.41379310344828i
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
   
-1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
+1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
   
-2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak [için, Windows Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
   
-3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
+3. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
   
 > [!IMPORTANT]
-> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
->   
+> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
->   
+>
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  

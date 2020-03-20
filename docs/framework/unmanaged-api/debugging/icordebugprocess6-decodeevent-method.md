@@ -2,15 +2,15 @@
 title: ICorDebugProcess6::DecodeEvent Yöntemi
 ms.date: 03/30/2017
 ms.assetid: 1453bc0c-6e0d-4d5a-b176-22607f8a3e6c
-ms.openlocfilehash: be30b1ff79c2aceb97eb4ad42052da7dd162f5d3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a0b77724a5a70461073d554a9794c5a904f6a363
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792280"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178575"
 ---
 # <a name="icordebugprocess6decodeevent-method"></a>ICorDebugProcess6::DecodeEvent Yöntemi
-Özel olarak hazırlanmış yerel özel durum hata ayıklama olaylarının yükünde kapsüllenmiş yönetilen hata ayıklama olaylarının kodunu çözer.  
+Özel olarak hazırlanmış yerel özel durum hata ayıklama olaylarının yükünde kapsüllenmiş yönetilen hata ayıklama olaylarını çözme.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -19,44 +19,44 @@ HRESULT DecodeEvent(
         [in, length_is(countBytes), size_is(countBytes)]  const BYTE pRecord[],  
         [in] DWORD countBytes,  
         [in] CorDebugRecordFormat format,  
-        [in] DWORD dwFlags,   
-        [in] DWORD dwThreadId,   
+        [in] DWORD dwFlags,
+        [in] DWORD dwThreadId,
         [out] ICorDebugDebugEvent **ppEvent  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pRecord`  
- 'ndaki Bir yönetilen hata ayıklama olayı hakkında bilgi içeren bir yerel özel durum ayıklama olayından bayt dizisine yönelik bir işaretçi.  
+ [içinde] Yönetilen hata ayıklama olayı hakkında bilgi içeren yerel bir özel durum hata ayıklama olayından bir bayt diziiçin işaretçi.  
   
  `countBytes`  
- 'ndaki `pRecord` bayt dizisindeki öğelerin sayısı.  
+ [içinde] Bayt dizisindeki `pRecord` öğelerin sayısı.  
   
  `format`  
- 'ndaki Yönetilmeyen hata ayıklama olayının biçimini belirten [Cordebugrecordformat](cordebugrecordformat-enumeration.md) numaralandırma üyesi.  
+ [içinde] Yönetilmeyen hata ayıklama olayının biçimini belirten [bir CorDebugRecordFormat](cordebugrecordformat-enumeration.md) numaralandırma üyesi.  
   
  `dwFlags`  
- 'ndaki Hedef mimarisine bağlı ve hata ayıklama olayı hakkında ek bilgiler belirten bir bit alanı. Windows sistemleri için, [Cordebugdecodeeventflagswindows](cordebugdecodeeventflagswindows-enumeration.md) sabit listesinin bir üyesi olabilir.  
+ [içinde] Hedef mimariye bağlı olan ve hata ayıklama olayı hakkında ek bilgiler belirten bir bit alanı. Windows sistemleri için, [CorDebugDecodeEventFlagsWindows](cordebugdecodeeventflagswindows-enumeration.md) numaralandırma üyesi olabilir.  
   
  `dwThreadId`  
- 'ndaki Özel durumun oluşturulduğu iş parçacığının işletim sistemi tanımlayıcısı.  
+ [içinde] Özel durum atıldığı iş parçacığının işletim sistemi tanımlayıcısı.  
   
  `ppEvent`  
- dışı Kodu çözülmüş bir yönetilen hata ayıklama olayını temsil eden [ıcordebugdebugger gevent](icordebugdebugevent-interface.md) nesnesinin adresine yönelik bir işaretçi.  
+ [çıkış] Çözülmüş yönetilen hata ayıklama olayını temsil eden bir [ICorDebugDebugEvent](icordebugdebugevent-interface.md) nesnesinin adresine işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
-> Bu yöntem yalnızca .NET Native kullanılabilir.  
+> Bu yöntem yalnızca .NET Native ile kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+ **Üstbilgi:** CorDebug.idl, CorDebug.h  
   
- **Kitaplık:** Corguid. lib  
+ **Kütüphane:** CorGuids.lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

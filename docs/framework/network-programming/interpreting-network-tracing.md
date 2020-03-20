@@ -10,23 +10,23 @@ helpviewer_keywords:
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
 ms.openlocfilehash: fd617e152b1e86cc71dd8e3cc8a01f1d2f52c30a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047899"
 ---
 # <a name="interpreting-network-tracing"></a>Ağ İzlemeyi Yorumlama
-Ağ izleme etkinleştirildiğinde, uygulamanızın çeşitli <xref:System.Net> sınıf üyelerine yaptığı çağrıları yakalamak için izlemeyi kullanabilirsiniz. Bu çağrılardan alınan çıkış aşağıdaki örneklere benzer olabilir.  
+Ağ izleme etkinleştirildiğinde, uygulamanızın çeşitli <xref:System.Net> sınıf üyelerine yaptığı aramaları yakalamak için izleme özelliğini kullanabilirsiniz. Bu aramalardan çıkan çıktı aşağıdaki örneklere benzer olabilir.  
   
 ```output
 [588]   (4357)   Entering Socket#33574638::Send()  
 [588]   (4387)   Exiting Socket#33574638::Send()-> 61#61
 ```  
   
- Yukarıdaki örnekte, [588] geçerli iş parçacığının benzersiz tanımlayıcısıdır. (4357) ve (4387), uygulamanın başlatılmasından bu yana geçen milisaniye sayısını belirten tarih damgalardır. Zaman damgasından sonraki veriler, uygulamanın **yuva. Send**yöntemine giriş ve çıkış yöntemini gösterir. **Send** metodunu yürüten nesne benzersiz tanımlayıcı olarak 33574638 sahiptir. Çıkış izleme yöntemi, dönüş değerini (önceki örnekte 61) içerir.  
+ Önceki örnekte,[588] geçerli iş parçacığının benzersiz tanımlayıcısIdır. (4357) ve (4387) uygulamanın başlamasından bu yana geçen milisaniye sayısını gösteren zaman damgalarıdır. Zaman damgasını izleyen **veriler, Socket.Send**yöntemine giren ve çıkan uygulamayı gösterir. **Gönder** yöntemini çalıştıran nesne, benzersiz tanımlayıcısı olarak 33574638'e sahiptir. Yöntem çıkış izi iade değerini içerir (önceki örnekte 61).  
   
- Ağ izlemeleri, uygulamanız tarafından gönderilen veya alınan ve Köprü Metni Aktarım Protokolü (HTTP) gibi uygulama düzeyi protokoller kullanılarak gönderilen ağ trafiğini yakalayabilir. Bu veriler metin ve isteğe bağlı olarak onaltılık veri olarak yakalanabilir. **TraceMode** özniteliğinin değeri olarak **ıncludehex** belirttiğinizde onaltılık veriler kullanılabilir. (Bu öznitelikle ilgili ayrıntılı bilgi için bkz [. nasıl yapılır: Ağ Izlemeyi](how-to-configure-network-tracing.md)yapılandırın.) Aşağıdaki örnek izleme **ıncludehex**kullanılarak oluşturulmuştur.  
+ Ağ izlemeleri, Hypertext Transfer Protocol (HTTP) gibi uygulama düzeyi protokollerini kullanarak uygulamanızdan gönderilen veya uygulamanız tarafından alınan ağ trafiğini yakalayabilir. Bu veriler metin ve isteğe bağlı olarak hexadecimal veri olarak yakalanabilir. **Tracemode** özniteliğinin değeri olarak **includehex** belirttiğiniz zaman hexadecimal veriler kullanılabilir. (Bu öznitelik hakkında ayrıntılı bilgi için [bkz.](how-to-configure-network-tracing.md) Aşağıdaki örnek izleme **includehex**kullanılarak oluşturuldu.  
   
  `[1692]   (1142)   00000000 : 47 45 54 20 2F 77 70 61-64 2E 64 61 74 20 48 54 : GET /wpad.dat HT`  
   
@@ -36,7 +36,7 @@ Ağ izleme etkinleştirildiğinde, uygulamanızın çeşitli <xref:System.Net> s
   
  `[1692]   (1142)   00000030 : 6F 6E 3A 20 43 6C 6F 73-65 0D 0A 0D 0A     : on: Close....`  
   
- Onaltılık verileri atlamak için, yalnızca bir **TraceMode** özniteliği değeri olarak **protocolbelirtin** . Aşağıdaki örnek, **yalnızca protocolbelirtildiğinde** izlemeyi gösterir.  
+ Hexadecimal verileri atlamak **için, yalnızca** **izleme modu** özniteliği için değer olarak protokol belirtin. Aşağıdaki örnek, yalnızca **protokol** belirtildiğinde izlemeyi gösterir.  
   
  `[2444]   (594)   Data from ConnectStream#33574638::WriteHeaders<<GET /wpad.dat HTTP/1.1`  
   
@@ -47,5 +47,5 @@ Ağ izleme etkinleştirildiğinde, uygulamanızın çeşitli <xref:System.Net> s
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Ağ İzlemeyi Etkinleştirme](enabling-network-tracing.md)
-- [Nasıl yapılır: Ağ Izlemeyi yapılandırma](how-to-configure-network-tracing.md)
+- [Nasıl yapılır: Ağ İzlemeyi Yapılandırma](how-to-configure-network-tracing.md)
 - [.NET Framework'te Ağ İzleme](network-tracing.md)

@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: 7d90dcee-0206-4540-807b-06982fe65f1a
 topic_type:
 - apiref
-ms.openlocfilehash: 10f31d56a9727e99157f49038c19781f12cd9958
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 47377e892aaf2bdd96a297630c47fe52215b0564
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440422"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177390"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>IMetaDataFilter::IsTokenMarked Yöntemi
-Belirtilen meta veri belirtecinin işlenmiş olarak işaretlenip işaretlenmediğini gösteren bir değer alır.  
+Belirtilen meta veri belirteci işlenmiş olarak işaretlenmiş olup olmadığını belirten bir değer alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT IsTokenMarked (  
-    [in]  mdToken  tk,   
+    [in]  mdToken  tk,
     [out] BOOL     *pIsMarked  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `tk`  
- 'ndaki Bir işleme işareti için incelenecek belirteç.  
+ [içinde] İşlem işareti için incelenmek üzere belirteç.  
   
  `pIsMarked`  
- dışı `tk` işlendiyse `true` bir değer; Aksi takdirde `false`.  
+ [çıkış] İşlenmiş `true` sayılsa `tk` değeri; aksi `false`takdirde .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

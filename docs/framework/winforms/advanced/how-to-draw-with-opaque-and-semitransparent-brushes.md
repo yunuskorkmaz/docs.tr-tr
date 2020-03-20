@@ -10,34 +10,34 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], brush
 - brushes [Windows Forms], using semi-transparent
 ms.assetid: a4f6f6b8-3bc8-440a-84af-d62ef0f8ff40
-ms.openlocfilehash: 1be3fd2ce10f6681e531559a6e9594fe3d021f5f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1e48bbd563f6377380848949325962b568fa432c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582583"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142413"
 ---
 # <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>Nasıl yapılır: Donuk ve Yarı Saydam Fırçalarla Çizme
-Bir şekil doldururken geçmesi gereken bir <xref:System.Drawing.Brush> dolgu yöntemlerinden birini nesnesine <xref:System.Drawing.Graphics> sınıfı. Bir parametre <xref:System.Drawing.SolidBrush.%23ctor%2A> Oluşturucusu bir <xref:System.Drawing.Color> nesne. Donuk bir şekli doldurmak için renk alfa bileşeni 255'e ayarlayın. Yarı saydam bir şekil doldurmak için 1 ila 254 herhangi bir değere alfa bileşenini ayarlayın.  
+Bir şekli doldurduğınızda, bir <xref:System.Drawing.Brush> nesneyi <xref:System.Drawing.Graphics> sınıfın doldurma yöntemlerinden birine geçirmeniz gerekir. <xref:System.Drawing.SolidBrush.%23ctor%2A> Oluşturucunun tek parametresi <xref:System.Drawing.Color> bir nesnedir. Opak bir şekli doldurmak için rengin alfa bileşenini 255 olarak ayarlayın. Yarı saydam bir şekli doldurmak için alfa bileşenini 1'den 254'e kadar herhangi bir değere ayarlayın.  
   
- Yarı saydam bir şekil doldururken şeklin rengi ile arka plan renklerini harmanlanan. Alfa bileşeni şekli ve arka plan renkleri nasıl karıştırılır belirtir. alfa değerleri 0 yakın daha fazla ağırlık arka plan renkleriyle yerleştirin ve alfa değerleri 255 yakın şekil rengine üzerinde daha fazla ağırlık yerleştirin.  
+ Yarı saydam bir şekli doldurduğunda, şeklin rengi arka plan daki renklerle karıştırılır. Alfa bileşeni şekil ve arka plan renklerinin nasıl karıştırıldığını belirtir; 0'a yakın alfa değerleri arka plan renklerine daha fazla ağırlık, 255'e yakın alfa değerleri ise şekil rengine daha fazla ağırlık yerleştirir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir bit eşlem çizer ve sonra bit eşlem çakışma üç elips doldurur. Donuk bir alfa bileşeni, 255, ilk üç nokta kullanır. Yarı saydam şekilde bir alfa bileşeni 128, ikinci ve üçüncü üç nokta simgesini kullanın. üç nokta üzerinden arka plan resmi görebilirsiniz. Ayarlar arama <xref:System.Drawing.Graphics.CompositingQuality%2A> özelliği neden olur üçüncü bir elipsin gama düzeltmesi ile birlikte yapılması karıştırma.  
+ Aşağıdaki örnek bir bit eşlemi çizer ve sonra bit eşlemiyle çakışan üç elipsi doldurur. İlk elips 255 alfa bileşeni kullanır, bu yüzden opaktır. İkinci ve üçüncü elipsler 128'lik bir alfa bileşeni kullanırlar, bu yüzden yarı saydamdırlar; elipslerden arka plan görüntüsünü görebilirsiniz. <xref:System.Drawing.Graphics.CompositingQuality%2A> Özelliği ayarlayan çağrı, üçüncü elipsin karıştırmasının gama düzeltmesi ile birlikte yapılmasına neden olur.  
 
  [!code-csharp[System.Drawing.AlphaBlending#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.AlphaBlending#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#31)]  
 
- Aşağıdaki kodu çıktı aşağıda gösterilmiştir: 
+ Aşağıdaki resimde aşağıdaki kodun çıktısı gösterilmektedir:
   
- ![Çizim donuk ve yarı saydam fırçalarla çıktısını gösterir.](./media/how-to-draw-with-opaque-and-semitransparent-brushes/compositingquality-ellipse-semitransparent.png)  
+ ![Opak ve yarı saydam çıktı gösteren çizim.](./media/how-to-draw-with-opaque-and-semitransparent-brushes/compositingquality-ellipse-semitransparent.png)  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
+ Önceki örnek Windows Formlar ile kullanılmak üzere <xref:System.Windows.Forms.PaintEventArgs> `e`tasarlanmıştır ve gerektirir , <xref:System.Windows.Forms.PaintEventHandler>hangi bir parametre .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
 - [Çizgi ve Dolgularda Alfa Karışım Kullanma](alpha-blending-lines-and-fills.md)
-- [Nasıl yapılır: Denetiminize saydam arka plan verme](../controls/how-to-give-your-control-a-transparent-background.md)
-- [Nasıl yapılır: Donuk ve yarı saydam çizgiler çizme](how-to-draw-opaque-and-semitransparent-lines.md)
+- [Nasıl yapılır: Denetiminize Saydam Arka Plan Verme](../controls/how-to-give-your-control-a-transparent-background.md)
+- [Nasıl yapılır: Donuk ve Yarı Saydam Çizgiler Çizme](how-to-draw-opaque-and-semitransparent-lines.md)

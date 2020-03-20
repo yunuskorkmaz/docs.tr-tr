@@ -3,22 +3,22 @@ title: <sessionTokenRequirement>
 ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
-ms.openlocfilehash: 968c48df9e92a1dfbfb6e248b06cf4f97cece8b4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ade55a5b26826633faf2e7ef7598a4071d613bbc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251825"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152547"
 ---
-# <a name="sessiontokenrequirement"></a>\<sessionTokenRequirement >
+# <a name="sessiontokenrequirement"></a>\<oturumTokenRequirement>
 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> Sınıf veya türetilmiş sınıflar için yapılandırma sağlar.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. IdentityModel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<IdentityConfiguration >** ](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> Ekle**](add.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<sessionTokenRequirement >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<güvenlikTokenHandlers>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>ekleyin**](add.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<oturumTokenRequirement>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,21 +42,21 @@ ms.locfileid: "70251825"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|ömür|Oturum belirteçlerinin ömrünü belirtir.|  
+|ömür|Oturum belirteçlerinin kullanım ömrünü belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ None  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<> Ekle](add.md)|Belirtilen güvenlik belirteci işleyicisini belirteç işleyici koleksiyonuna ekler.|  
+|[\<>ekleyin](add.md)|Belirteç işleyicisi koleksiyonuna belirtilen güvenlik belirteci işleyicisi ekler.|  
   
 ## <a name="example"></a>Örnek  
   
 ```xml  
-<add type="System.IdentityModel.Tokens.SessionSecurityTokenHandler, System.IdentityModel">           
+<add type="System.IdentityModel.Tokens.SessionSecurityTokenHandler, System.IdentityModel">
     <sessionTokenRequirement lifetime="10:00" />  
 </add>  
 ```

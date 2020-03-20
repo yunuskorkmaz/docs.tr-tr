@@ -5,53 +5,53 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: a98239886d6745bbb6e13e71a12764008460cdd7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 30198930a260b7370d061e85efe4935e88ad4d8a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785667"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151633"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Bağlantı Dizeleri ve Yapılandırma Dosyaları
-Uygulamanızın koduna bağlantı dizeleri katıştırmak, güvenlik açıklarına ve bakım sorunlarına yol açabilir. Bir uygulamanın kaynak kodunda derlenen şifrelenmemiş bağlantı dizeleri [ıldadsm. exe (IL Disassembler)](../../tools/ildasm-exe-il-disassembler.md) Aracı kullanılarak görüntülenebilir. Ayrıca, bağlantı dizesi herhangi bir zaman değişirse uygulamanızın yeniden derlenmesi gerekir. Bu nedenlerden dolayı, bağlantı dizelerini bir uygulama yapılandırma dosyasında depolamanızı öneririz.  
+Bağlantı dizelerini uygulamanızın koduna yerleştirmek güvenlik açıklarına ve bakım sorunlarına neden olabilir. Bir uygulamanın kaynak kodunda derlenen şifrelenmemiş bağlantı dizeleri [Ildasm.exe (IL Desassembler)](../../tools/ildasm-exe-il-disassembler.md) aracı kullanılarak görüntülenebilir. Ayrıca, bağlantı dizesi hiç değişirse, uygulamanızın yeniden derlenmiş olması gerekir. Bu nedenlerden dolayı, bağlantı dizelerini bir uygulama yapılandırma dosyasında depolamanızı öneririz.  
   
-## <a name="working-with-application-configuration-files"></a>Uygulama yapılandırma dosyalarıyla çalışma  
- Uygulama yapılandırma dosyaları, belirli bir uygulamaya özgü ayarları içerir. Örneğin, bir ASP.NET uygulamasının bir veya daha fazla **Web. config** dosyası olabilir ve bir Windows uygulaması isteğe bağlı bir **app. config** dosyasına sahip olabilir. Yapılandırma dosyaları ortak öğeleri paylaşır, ancak bir yapılandırma dosyasının adı ve konumu uygulamanın ana bilgisayarına bağlı olarak değişir.  
+## <a name="working-with-application-configuration-files"></a>Uygulama Yapılandırma Dosyalarıyla Çalışma  
+ Uygulama yapılandırma dosyaları belirli bir uygulamaya özgü ayarlar içerir. Örneğin, bir ASP.NET uygulaması nda bir veya daha fazla **web.config** dosyası olabilir ve windows uygulaması isteğe bağlı bir **app.config** dosyasına sahip olabilir. Yapılandırma dosyasının adı ve konumu uygulamanın ana bilgisayarına bağlı olarak değişse de yapılandırma dosyaları ortak öğeleri paylaşır.  
   
-### <a name="the-connectionstrings-section"></a>ConnectionStrings bölümü  
- Bağlantı dizeleri, bir uygulama yapılandırma dosyasının **yapılandırma** öğesinin **connectionStrings** bölümünde anahtar/değer çiftleri olarak depolanabilir. Alt öğeler **ekleme**, **Temizleme**ve **kaldırma**içerir.  
+### <a name="the-connectionstrings-section"></a>ConnectionStrings Bölümü  
+ Bağlantı dizeleri, bir uygulama yapılandırma dosyasının **yapılandırma** öğesinin **bağlantıDizelleri** bölümünde anahtar/değer çiftleri olarak depolanabilir. Alt öğeler **ekle,** **temizleyin**ve **kaldırın.**  
   
- Aşağıdaki yapılandırma dosyası parçası, bir bağlantı dizesini depolamak için şemayı ve sözdizimini gösterir. **Ad** özniteliği, bir bağlantı dizesini, çalışma zamanında alınabilmesi için benzersiz şekilde tanımlamak için sağladığınız addır. **ProviderName** , Machine. config dosyasında kayıtlı olan .NET Framework veri sağlayıcısının sabit adıdır.  
+ Aşağıdaki yapılandırma dosyası parçası, bağlantı dizesini depolamak için şema ve sözdizimini gösterir. **Ad** özniteliği, bir bağlantı dizesini çalışma zamanında alınabilmesi için benzersiz olarak tanımlamak için sağladığınız bir addır. **ProviderName,** machine.config dosyasında kayıtlı olan .NET Framework veri sağlayıcısının değişmez adıdır.  
   
 ```xml  
 <?xml version='1.0' encoding='utf-8'?>  
   <configuration>  
     <connectionStrings>  
       <clear />  
-      <add name="Name"   
-       providerName="System.Data.ProviderName"   
+      <add name="Name"
+       providerName="System.Data.ProviderName"
        connectionString="Valid Connection String;" />  
     </connectionStrings>  
   </configuration>  
 ```  
   
 > [!NOTE]
-> Bir bağlantı dizesinin bir bölümünü yapılandırma dosyasına kaydedebilir ve çalışma zamanında bunu gerçekleştirmek için <xref:System.Data.Common.DbConnectionStringBuilder> sınıfını kullanabilirsiniz. Bu, bağlantı dizesinin, zaman içinde veya bir yapılandırma dosyasına hassas bilgileri kaydetmek istemediğiniz senaryolarda faydalıdır... Daha fazla bilgi için bkz. [bağlantı dizesi oluşturucuları](connection-string-builders.md).  
+> Bir bağlantı dizesinin bir kısmını yapılandırma dosyasına kaydedebilir ve çalışma zamanında tamamlamak için <xref:System.Data.Common.DbConnectionStringBuilder> sınıfı kullanabilirsiniz. Bu, bağlantı dizesinin öğelerini önceden bilmediğiniz veya hassas bilgileri yapılandırma dosyasına kaydetmek istemediğiniz senaryolarda yararlıdır. Daha fazla bilgi için [Bağlantı Dize Oluşturucuları'na](connection-string-builders.md)bakın.  
   
-### <a name="using-external-configuration-files"></a>Dış yapılandırma dosyalarını kullanma  
- Dış yapılandırma dosyaları, tek bir bölümden oluşan bir yapılandırma dosyasının bir parçasını içeren ayrı dosyalardır. Dış yapılandırma dosyasına daha sonra ana yapılandırma dosyası tarafından başvurulur. **ConnectionString** bölümünü fiziksel olarak ayrı bir dosyada depolamak, uygulama dağıtıldıktan sonra bağlantı dizelerinin düzenlenebileceği durumlarda faydalıdır. Örneğin, standart ASP.NET davranışı yapılandırma dosyaları değiştirildiğinde bir uygulama etki alanını yeniden başlatmakta, bu da durum bilgilerinin kaybolmasına neden olur. Ancak, bir dış yapılandırma dosyasının değiştirilmesi, uygulamanın yeniden başlatılmasına neden olmaz. Dış yapılandırma dosyaları ASP.NET ile sınırlı değildir; Bunlar, Windows uygulamaları tarafından da kullanılabilir. Ayrıca, dosya erişimi güvenliği ve izinleri dış yapılandırma dosyalarına erişimi kısıtlamak için kullanılabilir. Çalışma zamanında dış yapılandırma dosyalarıyla çalışma işlemi saydamdır ve özel bir kodlama gerektirmez.  
+### <a name="using-external-configuration-files"></a>Dış Yapılandırma Dosyalarını Kullanma  
+ Dış yapılandırma dosyaları, tek bir bölümden oluşan bir yapılandırma dosyasının bir parçasını içeren ayrı dosyalardır. Dış yapılandırma dosyası daha sonra ana yapılandırma dosyası tarafından başvurur. **BağlantıStrings** bölümünü fiziksel olarak ayrı bir dosyada depolamak, uygulama dağıtıldıktan sonra bağlantı dizeleri düzenlenebileceği durumlarda yararlıdır. Örneğin, standart ASP.NET davranışı, yapılandırma dosyaları değiştirildiğinde bir uygulama etki alanını yeniden başlatmaktır ve bu da durum bilgilerinin kaybolmasına neden olmaktadır. Ancak, harici bir yapılandırma dosyanın değiştirilmesi bir uygulamayeniden başlatmaya neden olmaz. Dış yapılandırma dosyaları ASP.NET ile sınırlı değildir; Windows uygulamaları tarafından da kullanılabilir. Ayrıca, dosya erişim güvenliği ve izinler harici yapılandırma dosyalarına erişimi kısıtlamak için kullanılabilir. Çalışma zamanında harici yapılandırma dosyalarıyla çalışmak saydamdır ve özel kodlama gerektirmez.  
   
- Bağlantı dizelerini bir dış yapılandırma dosyasında depolamak için, yalnızca **connectionStrings** bölümünü içeren ayrı bir dosya oluşturun. Herhangi bir ek öğe, bölüm veya öznitelik eklemeyin. Bu örnek, bir dış yapılandırma dosyası için söz dizimini gösterir.  
+ Bağlantı dizelerini harici bir yapılandırma dosyasında depolamak için yalnızca **bağlantıStrings** bölümünü içeren ayrı bir dosya oluşturun. Ek öğeler, bölümler veya öznitelikler eklemeyin. Bu örnek, harici bir yapılandırma dosyası için sözdizimini gösterir.  
   
 ```xml  
 <connectionStrings>  
-  <add name="Name"   
-   providerName="System.Data.ProviderName"   
+  <add name="Name"
+   providerName="System.Data.ProviderName"
    connectionString="Valid Connection String;" />  
 </connectionStrings>  
 ```  
   
- Ana uygulama yapılandırma dosyasında, dış dosyanın tam adını ve konumunu belirtmek için **configSource** özniteliğini kullanırsınız. Bu örnek adlı `connections.config`bir dış yapılandırma dosyası anlamına gelir.  
+ Ana uygulama yapılandırma dosyasında, dış dosyanın tam nitelikli adını ve konumunu belirtmek için **configSource** özniteliğini kullanırsınız. Bu örnek, adlı `connections.config`harici bir yapılandırma dosyası anlamına gelir.  
   
 ```xml  
 <?xml version='1.0' encoding='utf-8'?>  
@@ -60,51 +60,51 @@ Uygulamanızın koduna bağlantı dizeleri katıştırmak, güvenlik açıkları
 </configuration>  
 ```  
   
-## <a name="retrieving-connection-strings-at-run-time"></a>Çalışma zamanında bağlantı dizelerini alma  
- .NET Framework 2,0, çalışma zamanında yapılandırma dosyalarından bağlantı <xref:System.Configuration> dizelerini almayı kolaylaştırmak için ad alanına yeni sınıflar getirmiştir. Bir bağlantı dizesini ada veya sağlayıcı adına göre program aracılığıyla alabilirsiniz.  
+## <a name="retrieving-connection-strings-at-run-time"></a>Çalışma Zamanında Bağlantı Dizeleri Alma  
+ .NET Framework 2.0, çalışma zamanında <xref:System.Configuration> yapılandırma dosyalarından bağlantı dizelerini almamayı kolaylaştırmak için ad alanında yeni sınıflar tanıttı. Bir bağlantı dizelerini ad veya sağlayıcı adına göre programlı olarak alabilirsiniz.  
   
 > [!NOTE]
-> **Machine. config** dosyası Ayrıca, Visual Studio tarafından kullanılan bağlantı dizelerini Içeren bir **connectionStrings** bölümü içerir. Bir Windows uygulamasındaki **app. config** dosyasından sağlayıcı adına göre bağlantı dizeleri alınırken, **Machine. config** dosyasındaki bağlantı dizeleri önce yüklenir, sonra **app. config**' den girişler. **ConnectionString** öğesinden hemen sonra **clear seçeneğinin** eklenmesi, yalnızca yerel **app. config** dosyasında tanımlanan bağlantı dizelerinin kabul edilmesi için bellekteki veri yapısındaki tüm devralınan başvuruları kaldırır.  
+> **Machine.config** dosyası ayrıca Visual Studio tarafından kullanılan bağlantı dizeleri içeren bir **connectionStrings** bölümü içerir. Bir Windows uygulamasında **app.config** dosyasından sağlayıcı adına göre bağlantı dizeleri alırken, **machine.config'deki** bağlantı dizeleri önce yüklenir, ardından **app.config'den**girişler yüklenir. **ConnectionStrings** öğesi bellekteki veri yapısından tüm devralınan başvuruları kaldırır, böylece yalnızca yerel **app.config** dosyasında tanımlanan bağlantı dizeleri dikkate alınır sonra **net** ekleme.  
   
-### <a name="working-with-the-configuration-classes"></a>Yapılandırma sınıflarıyla çalışma  
- .NET Framework 2,0 ' den başlayarak, <xref:System.Configuration.ConfigurationManager> yerel bilgisayardaki yapılandırma dosyalarıyla çalışırken kullanım dışı <xref:System.Configuration.ConfigurationSettings>olarak değiştirilerek kullanılır. <xref:System.Web.Configuration.WebConfigurationManager>, ASP.NET yapılandırma dosyalarıyla çalışmak için kullanılır. Bir Web sunucusunda yapılandırma dosyalarıyla çalışmak üzere tasarlanmıştır ve **System. Web**gibi yapılandırma dosyası bölümlerine programlı erişim sağlar.  
+### <a name="working-with-the-configuration-classes"></a>Yapılandırma Sınıfları ile çalışma  
+ .NET Framework 2.0 ile <xref:System.Configuration.ConfigurationManager> başlayarak, yerel bilgisayardaki yapılandırma dosyalarıyla çalışırken, amortismana alınanın <xref:System.Configuration.ConfigurationSettings>yerine kullanılır. <xref:System.Web.Configuration.WebConfigurationManager>yapılandırma dosyaları yla çalışmak için ASP.NET kullanılır. Bir Web sunucusundaki yapılandırma dosyalarıyla çalışmak üzere tasarlanmıştır ve **system.web**gibi yapılandırma dosyası bölümlerine programlı erişim sağlar.  
   
 > [!NOTE]
-> Çalışma zamanında yapılandırma dosyalarına erişilmesi arayan için izin verilmesini gerektirir; gerekli izinler, uygulamanın, yapılandırma dosyasının ve konumun türüne bağlıdır. Daha fazla bilgi için bkz. [yapılandırma sınıflarını](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100)) ve <xref:System.Web.Configuration.WebConfigurationManager> ASP.NET uygulamalarını kullanma ve <xref:System.Configuration.ConfigurationManager> Windows uygulamaları için.  
+> Yapılandırma dosyalarına çalışma zamanında erişmek için arayanın izni verilmesi; gerekli izinler uygulama türüne, yapılandırma dosyasına ve konuma bağlıdır. Daha fazla bilgi için yapılandırma <xref:System.Web.Configuration.WebConfigurationManager> [sınıflarını kullanma,](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100)) <xref:System.Configuration.ConfigurationManager> ASP.NET uygulamaları ve Windows uygulamaları için bkz.  
   
- Uygulama yapılandırma dosyalarından bağlantı <xref:System.Configuration.ConnectionStringSettingsCollection> dizelerini almak için öğesini kullanabilirsiniz. Her biri **ConnectionString** bölümünde tek <xref:System.Configuration.ConnectionStringSettings> bir girişi temsil eden bir nesne koleksiyonu içerir. Özellikleri bağlantı dizesi öznitelikleriyle eşlenir ve ad ya da sağlayıcı adını belirterek bir bağlantı dizesi almanızı sağlar.  
+ Uygulama yapılandırma <xref:System.Configuration.ConnectionStringSettingsCollection> dosyalarından bağlantı dizeleri almak için kullanabilirsiniz. Her biri <xref:System.Configuration.ConnectionStringSettings> **connectionStrings** bölümünde tek bir girişi temsil eden bir nesne koleksiyonu içerir. Özellikleri bağlantı dizeözleri eşleyerek, adı veya sağlayıcı adını belirterek bir bağlantı dizesini almanıza olanak sağlar.  
   
 |Özellik|Açıklama|  
 |--------------|-----------------|  
-|<xref:System.Configuration.ConnectionStringSettings.Name%2A>|Bağlantı dizesinin adı. **Ad** özniteliğiyle eşlenir.|  
-|<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|Tam sağlayıcı adı. **ProviderName** özniteliğiyle eşlenir.|  
-|<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|Bağlantı dizesi. **ConnectionString** özniteliğiyle eşlenir.|  
+|<xref:System.Configuration.ConnectionStringSettings.Name%2A>|Bağlantı dizesinin adı. **Ad** özniteliğine eşler.|  
+|<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|Tam nitelikli sağlayıcı adı. **SağlayıcıAd** özniteliğine eşler.|  
+|<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|Bağlantı dizesi. **Bağlantıya eşlerString** özniteliği.|  
   
-### <a name="example-listing-all-connection-strings"></a>Örnek: Tüm bağlantı dizelerini listeleme  
- Bu örnek içinde <xref:System.Configuration.ConnectionStringSettingsCollection> yinelenir ve konsol penceresinde <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>, ve <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> özelliklerini görüntüler.  
+### <a name="example-listing-all-connection-strings"></a>Örnek: Tüm Bağlantı Dizeleri Listeleme  
+ Bu <xref:System.Configuration.ConnectionStringSettingsCollection> örnek, konsol <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>penceresindeki , <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>ve <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> özellikleri görüntüler.  
   
 > [!NOTE]
-> System. Configuration. dll tüm proje türlerine dahil değildir ve yapılandırma sınıflarını kullanmak için buna bir başvuru ayarlamanız gerekebilir. Belirli bir uygulama yapılandırma dosyasının adı ve konumu, uygulama türüne ve barındırma işlemine göre farklılık gösterir.  
+> System.Configuration.dll tüm proje türlerine dahil değildir ve yapılandırma sınıflarını kullanmak için buna bir başvuru ayarlamanız gerekebilir. Belirli bir uygulama yapılandırma dosyasının adı ve konumu uygulama türüne ve barındırma işlemine göre değişir.  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/VB/source.vb#1)]  
   
-### <a name="example-retrieving-a-connection-string-by-name"></a>Örnek: Bir bağlantı dizesini ada göre alma  
- Bu örnek, bir yapılandırma dosyasından adını belirterek bir bağlantı dizesinin nasıl alınacağını gösterir. Kod, <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A> adı verilen <xref:System.Configuration.ConnectionStringSettings> giriş parametresiyle eşleşen bir nesne oluşturur. Eşleşen ad bulunamazsa, işlev döndürür `null` (`Nothing` Visual Basic).  
+### <a name="example-retrieving-a-connection-string-by-name"></a>Örnek: Bir Bağlantı Dizesini Ada Göre Alma  
+ Bu örnek, adını belirterek bir yapılandırma dosyasından bağlantı dizesi nasıl alındığını gösterir. Kod, sağlanan <xref:System.Configuration.ConnectionStringSettings> giriş parametresini <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A> ada eşleştirecek bir nesne oluşturur. Eşleşen bir ad bulunamazsa, `null` `Nothing` işlev döndürür (Visual Basic'te).  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/VB/source.vb#1)]  
   
-### <a name="example-retrieving-a-connection-string-by-provider-name"></a>Örnek: Sağlayıcı adına göre bir bağlantı dizesi alınıyor  
- Bu örnek, *System. Data. ProviderName*biçiminde sağlayıcı-sabit adı belirtilerek bir bağlantı dizesinin nasıl alınacağını gösterir. Kod üzerinden <xref:System.Configuration.ConnectionStringSettingsCollection> yinelenir ve ilk <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> bulunan için bağlantı dizesini döndürür. Sağlayıcı adı bulunamazsa, işlev döndürür `null` (`Nothing` Visual Basic).  
+### <a name="example-retrieving-a-connection-string-by-provider-name"></a>Örnek: Sağlayıcı Adına Göre Bağlantı Dizesi Alma  
+ Bu örnek, *System.Data.ProviderName*biçiminde sağlayıcı değişmez adını belirterek bir bağlantı dizesi nasıl alındığını gösterir. Kod, ilk <xref:System.Configuration.ConnectionStringSettingsCollection> <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> bulunanın bağlantı dizesini yineler ve döndürür. Sağlayıcı adı bulunamazsa, işlev `null` (Visual`Nothing` Basic'te) döndürür.  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/VB/source.vb#1)]  
   
-## <a name="encrypting-configuration-file-sections-using-protected-configuration"></a>Korumalı yapılandırma kullanarak yapılandırma dosyası bölümlerini şifreleme  
- ASP.NET 2,0, *korunan yapılandırma*adlı, önemli bilgileri bir yapılandırma dosyasında şifrelemenizi sağlayan yeni bir özellik sunmuştur. Birincil olarak ASP.NET için tasarlanmış olsa da, korumalı yapılandırma Windows uygulamalarındaki yapılandırma dosyası bölümlerini şifrelemek için de kullanılabilir. Korunan yapılandırma özelliklerine ilişkin ayrıntılı bir açıklama için bkz. [korumalı yapılandırma kullanarak yapılandırma bilgilerini şifreleme](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
+## <a name="encrypting-configuration-file-sections-using-protected-configuration"></a>Korumalı Yapılandırmayı Kullanarak Yapılandırma Dosya Bölümlerini Şifreleme  
+ ASP.NET 2.0, bir yapılandırma dosyasında hassas bilgileri şifrelemenize olanak tanıyan *korumalı yapılandırma*adı verilen yeni bir özellik sundu. Öncelikle ASP.NET için tasarlanmış olsa da, windows uygulamalarında yapılandırma dosya bölümlerini şifrelemek için korumalı yapılandırma da kullanılabilir. Korumalı yapılandırma özelliklerinin ayrıntılı açıklaması için, [Korumalı Yapılandırmayı Kullanarak Yapılandırma Bilgilerini Şifreleme](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))bölümüne bakın.  
   
- Aşağıdaki yapılandırma dosyası parçası, şifrelendikten sonra **ConnectionString** bölümünü gösterir. **ConfigProtectionProvider** , bağlantı dizelerini şifrelemek ve şifresini çözmek için kullanılan korumalı yapılandırma sağlayıcısını belirtir. **EncryptedData** bölümü şifre metnini içerir.  
+ Aşağıdaki yapılandırma dosyası parçası şifrelendikten sonra **connectionStrings** bölümünü gösterir. **ConfigProtectionProvider,** bağlantı dizelerini şifrelemek ve çözmek için kullanılan korumalı yapılandırma sağlayıcısını belirtir. **EncryptedData** bölümünde şifre metni içerir.  
   
 ```xml  
 <connectionStrings configProtectionProvider="DataProtectionConfigurationProvider">  
@@ -116,64 +116,64 @@ Uygulamanızın koduna bağlantı dizeleri katıştırmak, güvenlik açıkları
 </connectionStrings>  
 ```  
   
- Şifrelenmiş bağlantı dizesi çalışma zamanında alındığında, .NET Framework **CipherValue** şifresini çözmek ve uygulamanızda kullanılabilir hale getirmek için belirtilen sağlayıcıyı kullanır. Şifre çözme işlemini yönetmek için ek kod yazmanız gerekmez.  
+ Şifreli bağlantı dizesi çalışma zamanında alındığı zaman, .NET **Framework, CipherValue'nin** şifresini çözmek ve uygulamanız için kullanılabilir hale getirmek için belirtilen sağlayıcıyı kullanır. Şifre çözme işlemini yönetmek için ek kod yazmanız gerekmez.  
   
-### <a name="protected-configuration-providers"></a>Korumalı yapılandırma sağlayıcıları  
- Korumalı yapılandırma sağlayıcıları, ile sağlanan iki korumalı yapılandırma sağlayıcısını gösteren aşağıdaki parçada gösterildiği gibi, yerel bilgisayardaki **Machine. config** dosyasının **configProtectedData** bölümüne kaydedilir. .NET Framework. Burada gösterilen değerler okunabilirlik için kesildi.  
+### <a name="protected-configuration-providers"></a>Korumalı Yapılandırma Sağlayıcıları  
+ Korumalı yapılandırma sağlayıcıları, .NET Framework ile birlikte verilen iki korumalı yapılandırma sağlayıcısını gösteren aşağıdaki parçada gösterildiği gibi, **machine.config** dosyasının yerel bilgisayardaki **configProtectedData** bölümüne kaydedilir. Burada gösterilen değerler okunabilirlik için kesildi.  
   
 ```xml  
 <configProtectedData defaultProvider="RsaProtectedConfigurationProvider">  
   <providers>  
-    <add name="RsaProtectedConfigurationProvider"   
+    <add name="RsaProtectedConfigurationProvider"
       type="System.Configuration.RsaProtectedConfigurationProvider, ... />  
-    <add name="DataProtectionConfigurationProvider"   
+    <add name="DataProtectionConfigurationProvider"
       type="System.Configuration.DpapiProtectedConfigurationProvider, ... />  
   </providers>  
 </configProtectedData>  
 ```  
   
- **Machine. config** dosyasına ekleyerek, ek korumalı yapılandırma sağlayıcıları yapılandırabilirsiniz. <xref:System.Configuration.ProtectedConfigurationProvider> Soyut temel sınıftan devralarak, kendi korumalı yapılandırma sağlayıcınızı de oluşturabilirsiniz. Aşağıdaki tabloda .NET Framework eklenen iki yapılandırma dosyası açıklanmaktadır.  
+ **Machine.config** dosyasına ekleyerek ek korumalı yapılandırma sağlayıcıları yapılandırabilirsiniz. <xref:System.Configuration.ProtectedConfigurationProvider> Ayrıca soyut taban sınıftan devralarak kendi korumalı yapılandırma sağlayıcınızı da oluşturabilirsiniz. Aşağıdaki tabloda .NET Framework ile birlikte iki yapılandırma dosyası açıklanmaktadır.  
   
 |Sağlayıcı|Açıklama|  
 |--------------|-----------------|  
-|<xref:System.Configuration.RsaProtectedConfigurationProvider>|, Verileri şifrelemek ve şifrelerini çözmek için RSA şifreleme algoritmasını kullanır. RSA algoritması, hem ortak anahtar şifrelemesi hem de dijital imzalar için kullanılabilir. İki farklı anahtar kullandığından, "ortak anahtar" veya asymmetrik şifreleme olarak da bilinir. Bir Web. config dosyasındaki bölümleri şifrelemek ve şifreleme anahtarlarını yönetmek için [ASP.NET IIS kayıt aracı 'nı (Aspnet_regiis. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) kullanabilirsiniz. ASP.NET, dosyayı işlerken yapılandırma dosyasının şifresini çözer. ASP.NET uygulamasının kimliği, şifrelenmiş bölümleri şifrelemek ve şifresini çözmek için kullanılan şifreleme anahtarına okuma erişimine sahip olmalıdır.|  
-|<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Yapılandırma bölümlerini şifrelemek için Windows Data Protection API 'YI (DPAPI) kullanır. Windows yerleşik şifreleme hizmetlerini kullanır ve makineye özgü ya da kullanıcıya özgü koruma için yapılandırılabilir. Makineye özgü koruma, aynı sunucuda bilgi paylaşması gereken birden çok uygulama için yararlıdır. Kullanıcı hesabına özgü koruma, paylaşılan barındırma ortamı gibi belirli bir kullanıcı kimliğiyle çalışan hizmetlerle birlikte kullanılabilir. Her uygulama, dosyalar ve veritabanları gibi kaynaklarla erişimi kısıtlayan ayrı bir kimlik altında çalışır.|  
+|<xref:System.Configuration.RsaProtectedConfigurationProvider>|Verileri şifrelemek ve çözmek için RSA şifreleme algoritmasını kullanır. RSA algoritması hem ortak anahtar şifrelemesi hem de dijital imzalar için kullanılabilir. İki farklı anahtar kullandığından "ortak anahtar" veya asimetrik şifreleme olarak da bilinir. Bir Web.config dosyasındaki bölümleri şifrelemek ve şifreleme anahtarlarını yönetmek için [ASP.NET IIS Kayıt Aracı'nı (Aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) kullanabilirsiniz. ASP.NET, dosyayı işlerken yapılandırma dosyasının şifresini çözer. ASP.NET uygulamasının kimliği, şifrelenmiş bölümleri şifrelemek ve şifresini çözmek için kullanılan şifreleme anahtarına okuma erişimine sahip olmalıdır.|  
+|<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Yapılandırma bölümlerini şifrelemek için Windows Veri Koruma API'sını (DPAPI) kullanır. Windows yerleşik şifreleme hizmetlerini kullanır ve makineye özgü veya kullanıcı hesabına özgü koruma için yapılandırılabilir. Makineye özgü koruma, aynı sunucuda bilgi paylaşması gereken birden çok uygulama için yararlıdır. Kullanıcı hesabına özgü koruma, paylaşılan barındırma ortamı gibi belirli bir kullanıcı kimliğiyle çalışan hizmetlerle kullanılabilir. Her uygulama, dosyalar ve veritabanları gibi kaynaklara erişimi kısıtlayan ayrı bir kimlik altında çalışır.|  
   
- Her iki sağlayıcı de verilerin güçlü şifrelenmesini sağlar. Ancak, aynı şifrelenmiş yapılandırma dosyasını bir Web grubu gibi birden çok sunucuda kullanmayı planlıyorsanız, yalnızca, <xref:System.Configuration.RsaProtectedConfigurationProvider> verileri şifrelemek ve başka bir sunucuya aktarmak için kullanılan şifreleme anahtarlarını dışarı aktarmanızı sağlar. Daha fazla bilgi için bkz. [korumalı yapılandırma RSA anahtar kapsayıcılarını içeri ve dışarı aktarma](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
+ Her iki sağlayıcı da güçlü veri şifrelemesi sunar. Ancak, web çiftliği gibi birden çok sunucuda aynı şifreli yapılandırma dosyasını kullanmayı <xref:System.Configuration.RsaProtectedConfigurationProvider> planlıyorsanız, yalnızca verileri şifrelemek ve bunları başka bir sunucuda aktarmak için kullanılan şifreleme anahtarlarını dışa aktarmaolanağı sağlar. Daha fazla bilgi için [bkz.](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100))  
   
-### <a name="using-the-configuration-classes"></a>Yapılandırma sınıflarını kullanma  
- Ad <xref:System.Configuration> alanı, sınıfların yapılandırma ayarları aracılığıyla programlı olarak çalışmasını sağlar. <xref:System.Configuration.ConfigurationManager> Sınıfı, makine, uygulama ve Kullanıcı yapılandırma dosyalarına erişim sağlar. Bir ASP.NET uygulaması oluşturuyorsanız, aynı işlevselliği sağlayan <xref:System.Web.Configuration.WebConfigurationManager> sınıfını kullanarak, **\<System. Web > gibi ASP.NET uygulamalarına özgü ayarlara da erişmenize izin vermiş olursunuz.** .  
-  
-> [!NOTE]
-> Ad <xref:System.Security.Cryptography> alanı, verileri şifrelemek ve şifrelerini çözmek için ek seçenekler sağlayan sınıflar içerir. Korunan yapılandırma kullanılarak kullanılamayan şifreleme hizmetleri istiyorsanız bu sınıfları kullanın. Bu sınıflardan bazıları yönetilmeyen Microsoft CryptoAPI için sarmalayıcılardır, diğerleri ise yalnızca yönetilen uygulamalardır. Daha fazla bilgi için bkz. [Şifreleme Hizmetleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90)).  
-  
-### <a name="appconfig-example"></a>App. config örneği  
- Bu örnek, bir Windows uygulaması için **app. config** dosyasında **connectionStrings** bölümünün nasıl şifrelendiğini gösterir. Bu örnekte, yordam uygulamanın adını bağımsız değişken olarak alır (örneğin, "MyApplication. exe"). Daha sonra **app. config** dosyası şifrelenir ve "MyApplication. exe. config" adı altındaki yürütülebilir dosyayı içeren klasöre kopyalanacaktır.  
+### <a name="using-the-configuration-classes"></a>Yapılandırma Sınıflarını Kullanma  
+ Ad <xref:System.Configuration> alanı, sınıfların yapılandırma ayarlarıyla programlı olarak çalışmasını sağlar. Sınıf <xref:System.Configuration.ConfigurationManager> makine, uygulama ve kullanıcı yapılandırma dosyalarına erişim sağlar. ASP.NET bir uygulama oluşturuyorsanız, aynı <xref:System.Web.Configuration.WebConfigurationManager> işlevselliği sağlayan sınıfı kullanabilirsiniz ve aynı zamanda ** \<system.web>'da **bulunanlar gibi ASP.NET uygulamalara özgü ayarlara erişmenizi de sağlayabilirsiniz.  
   
 > [!NOTE]
-> Bağlantı dizesinin şifresi yalnızca şifreli olduğu bilgisayarda çözülür.  
+> Ad <xref:System.Security.Cryptography> alanı, verileri şifrelemek ve çözmek için ek seçenekler sağlayan sınıflar içerir. Korumalı yapılandırma yı kullanarak kullanılamayan şifreleme hizmetlerine ihtiyaç duyuyorsanız bu sınıfları kullanın. Bu sınıflardan bazıları yönetilmeyen Microsoft CryptoAPI için paketleyiciler, diğerleri ise tamamen yönetilen uygulamalardır. Daha fazla bilgi için [Cryptographic Services'a](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90))bakın.  
   
- Kod <xref:System.Configuration.ConfigurationManager.OpenExeConfiguration%2A> yöntemi, **düzenlenecek App. config** dosyasını açmak için yöntemini kullanır ve yöntemiConnectionStringbölümünüdöndürür.<xref:System.Configuration.ConfigurationManager.GetSection%2A> Daha sonra kod, şifrelenmemişse bölümü şifrelemek <xref:System.Configuration.SectionInformation.IsProtected%2A> <xref:System.Configuration.SectionInformation.ProtectSection%2A> için öğesini çağırarak özelliği denetler. <xref:System.Configuration.SectionInformation.UnprotectSection%2A> Yöntemi, bölümün şifresini çözmek için çağrılır. <xref:System.Configuration.Configuration.Save%2A> Yöntemi işlemi tamamlar ve değişiklikleri kaydeder.  
+### <a name="appconfig-example"></a>App.config Örneği  
+ Bu örnek, bir Windows uygulaması için **app.config** dosyasında **connectionStrings** bölümünün şifrelenmeyi nasıl gösterin. Bu örnekte, yordam, uygulamanın adını bir bağımsız değişken olarak alır, örneğin, "MyApplication.exe". **App.config** dosyası daha sonra şifrelenecek ve "MyApplication.exe.config" adı altında yürütülebilir içeren klasöre kopyalanır.  
   
 > [!NOTE]
-> Kodun çalışması için projenizde bir başvuru `System.Configuration.dll` ayarlamanız gerekir.  
+> Bağlantı dizesi yalnızca şifrelendiği bilgisayarda deşifre edilebilir.  
+  
+ Kod düzenleme <xref:System.Configuration.ConfigurationManager.OpenExeConfiguration%2A> için **app.config** dosyasını açmak için <xref:System.Configuration.ConfigurationManager.GetSection%2A> yöntemi kullanır ve yöntem **connectionStrings** bölümünü döndürür. Kod daha sonra <xref:System.Configuration.SectionInformation.IsProtected%2A> özelliği denetler ve şifrelenmemişse bölümü <xref:System.Configuration.SectionInformation.ProtectSection%2A> şifrelemek için çağırır. Yöntem, <xref:System.Configuration.SectionInformation.UnprotectSection%2A> bölümün şifresini çözmek için çağrılır. Yöntem <xref:System.Configuration.Configuration.Save%2A> işlemi tamamlar ve değişiklikleri kaydeder.  
+  
+> [!NOTE]
+> Kodun çalışması için `System.Configuration.dll` projenizde bir başvuru ayarlamanız gerekir.  
   
  [!code-csharp[DataWorks ConnectionStrings.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStrings.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStrings.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStrings.Encrypt/VB/source.vb#1)]  
   
-### <a name="webconfig-example"></a>Web. config örneği  
- Bu örnek, <xref:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration%2A> `WebConfigurationManager`yöntemini kullanır. Bu durumda, bir tilde kullanarak **Web. config** dosyasının göreli yolunu sağlayabileceğinizi unutmayın. Kod, `System.Web.Configuration` sınıfa bir başvuru gerektirir.  
+### <a name="webconfig-example"></a>Web.config Örneği  
+ Bu örnekte <xref:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration%2A> `WebConfigurationManager`. Bu durumda, bir tilde kullanarak **Web.config** dosyasına göreli yolu sağlayabilirsiniz. Kod `System.Web.Configuration` sınıfa bir başvuru gerektirir.  
   
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- ASP.NET uygulamalarının güvenliğini sağlama hakkında daha fazla bilgi için bkz. [Web sitelerini güvenli hale getirme](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100)).  
+ ASP.NET uygulamalarının güvenliğini sağlama hakkında daha fazla bilgi [ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))için bkz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bağlantı Dizesi Oluşturucular](connection-string-builders.md)
 - [Bağlantı Bilgilerini Koruma](protecting-connection-information.md)
-- [Yapılandırma sınıflarını kullanma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
+- [Yapılandırma Sınıflarını Kullanma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
 - [Uygulamaları Yapılandırma](../../configure-apps/index.md)
-- [ASP.NET Web sitesi yönetimi](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
+- [ASP.NET Web Sitesi Yönetimi](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
 - [ADO.NET’e Genel Bakış](ado-net-overview.md)

@@ -15,57 +15,57 @@ helpviewer_keywords:
 ms.assetid: 2576c449-388d-4434-a0e1-9f53991e11b6
 topic_type:
 - apiref
-ms.openlocfilehash: 5214298c6ad9594548ab45ed583cb5b14ce1f30d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e855868d18fc6cffdd5d92cfa401606caf45b76c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441770"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177570"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout Yöntemi
-Önceki bir [DefineTypeDef yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)çağrısıyla tanımlanmış bir sınıf için alanların yerleşimini tamamlar.  
+[DefineTypeDef Yöntemi'ne](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)önceki bir çağrıyla tanımlanan bir sınıfın alanlarının düzenini tamamlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetClassLayout (  
-    [in]  mdTypeDef           td,   
-    [in]  DWORD               dwPackSize,   
-    [in]  COR_FIELD_OFFSET    rFieldOffsets[],   
-    [in]  ULONG               ulClassSize   
+    [in]  mdTypeDef           td,
+    [in]  DWORD               dwPackSize,
+    [in]  COR_FIELD_OFFSET    rFieldOffsets[],
+    [in]  ULONG               ulClassSize
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- 'ndaki Çıkarılacak sınıfı belirten `mdTypeDef` belirteci.  
+ [içinde] Ortaya `mdTypeDef` konacak sınıfı belirten bir belirteç.  
   
  `dwPackSize`  
- 'ndaki Paketleme boyutu: 1, 2, 4, 8 veya 16 bayt. Paketleme boyutu bitişik alanlar arasındaki baytların sayısıdır.  
+ [içinde] Ambalaj boyutu: 1, 2, 4, 8 veya 16 bayt. Paketleme boyutu, bitişik alanlar arasındaki bayt sayısıdır.  
   
  `rFieldOffsets`  
- 'ndaki Her biri sınıfının bir alanını ve alanın içindeki sapmasını belirten [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) yapılarının bir dizisi. Diziyi `mdTokenNil`sonlandırın.  
+ [içinde] Her biri sınıfın bir alanını ve sınıfın içindeki alanın ofsetini belirten [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) yapıları dizisi. Diziyi `mdTokenNil`' ile sonlandırın.  
   
  `ulClassSize`  
- 'ndaki Sınıfın bayt cinsinden boyutu.  
+ [içinde] Sınıfın büyüklüğü, baytlar halinde.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Sınıfı ilk olarak [ımetadatayayma::D efinetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) yöntemi çağırarak ve sınıfın alanları için üç düzenden birini belirterek tanımlanır: otomatik, sıralı veya açık. Normal olarak, Otomatik düzeni kullanır ve çalışma zamanının alanları düzenlemenin en iyi yolunu seçmesini sağlayabilirsiniz.  
+ Sınıf başlangıçta [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) yöntemini çağırarak ve sınıfın alanları için üç düzenden birini belirterek tanımlanır: otomatik, sıralı veya açık. Normalde, otomatik düzeni kullanır ve çalışma zamanı alanları düzenlemek için en iyi yolu seçmesine izin.  
   
- Ancak, alanların yönetilmeyen kodun kullandığı düzenlemeye göre yerleşimini tercih edebilirsiniz. Bu durumda, alanların yerleşimini tamamlamaya yönelik sıralı veya açık Düzen ' i seçin ve `SetClassLayout` çağırın:  
+ Ancak, yönetilmeyen kodun kullandığı düzenlemeye göre alanların düzenlenmesini isteyebilirsiniz. Bu durumda, alanların düzenini tamamlamak `SetClassLayout` için sıralı veya açık düzeni seçin ve arayın:  
   
-- Sıralı Düzen: paketleme boyutunu belirtin. Bir alan doğal boyutuna veya paketleme boyutuna göre hizalanır ve bu da alanın daha küçük bir uzaklığa neden olur. `rFieldOffsets` ve `ulClassSize` sıfır olarak ayarlayın.  
+- Sıralı düzen: Ambalaj boyutunu belirtin. Bir alan, alanın daha küçük ofset ile sonuçlandığı doğal boyutuna veya ambalaj boyutuna göre hizalanır. Ayarlayın `rFieldOffsets` `ulClassSize` ve sıfıra ayarlayın.  
   
-- Açık Düzen: her alanın sapmasını belirtin ya da sınıf boyutunu ve paketleme boyutunu belirtin.  
+- Açık düzen: Her alanın mahsupını belirtin veya sınıf boyutunu ve ambalaj boyutunu belirtin.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

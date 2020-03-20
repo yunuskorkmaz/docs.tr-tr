@@ -1,5 +1,5 @@
 ---
-title: HttpWebRequest. _AutoRedirects alanı
+title: httpWebRequest._AutoRedirects Alanı
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: bd58e91c-4e35-4866-9d55-75ff58c3ed73
-ms.openlocfilehash: da7acdd890d0bff267fb592e81ceb6553421323f
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: ff4b9b430bdb9ebc82a945012dcb53ed83b1e48f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215708"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156304"
 ---
-# <a name="httpwebrequest_autoredirects-field"></a>HttpWebRequest.\_oto yeniden yönlendirmeler alanı
+# <a name="httpwebrequest_autoredirects-field"></a>httpwebrequest. \_AutoRedirects Alanı
 
-`HttpWebRequest._AutoRedirects`, bu <xref:System.Net.HttpWebRequest>için yapılan yeniden yönlendirme sayısını yansıtan bir <xref:System.Int32>.
+`HttpWebRequest._AutoRedirects`bunun <xref:System.Net.HttpWebRequest> <xref:System.Int32> için yapılan yönlendirmelerin sayısını yansıtan bir durumdur.
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,14 +28,14 @@ private int _AutoRedirects
 ```
 
 > [!WARNING]
-> `HttpWebRequest._AutoRedirects` alanı dahili ve doğrudan kodunuzda kullanılmamalıdır.
-> 
-> Microsoft, herhangi bir koşulda bu alanın bir üretim uygulamasında kullanımını desteklemez.
+> Alan `HttpWebRequest._AutoRedirects` dahilidir ve doğrudan kodunuzda kullanılmamalıdır.
+>
+> Microsoft, hiçbir koşulda bir üretim uygulamasında bu alanın kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Ad alanı:** <xref:System.Net>
+**Ad alanı:**<xref:System.Net>
 
-**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
+**Montaj:** Sistem (System.dll'de)
 
-**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2.0'dan beri mevcuttur.

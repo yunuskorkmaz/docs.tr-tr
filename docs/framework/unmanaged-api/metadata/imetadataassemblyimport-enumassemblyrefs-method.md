@@ -15,55 +15,55 @@ helpviewer_keywords:
 ms.assetid: 8844d0dd-730e-4592-8a7b-c1462d312c70
 topic_type:
 - apiref
-ms.openlocfilehash: 06b81615565a04db7d6cfef4da9b5372a85afd68
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6a4489d094974eb872b39824ceb185b0cbe48625
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450350"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177822"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs Yöntemi
-Derleme bildiriminde tanımlanan `mdAssemblyRef` örneklerini numaralandırır.  
+Derleme bildiriminde `mdAssemblyRef` tanımlanan örnekleri oyalar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumAssemblyRefs (  
-    [in, out] HCORENUM        *phEnum,   
-    [out]     mdAssemblyRef   rAssemblyRefs[],   
-    [in]      ULONG           cMax,   
+    [in, out] HCORENUM        *phEnum,
+    [out]     mdAssemblyRef   rAssemblyRefs[],
+    [in]      ULONG           cMax,
     [out]     ULONG           *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] Numaralandırıcı için bir işaretçi. `EnumAssemblyRefs` yöntemi ilk kez çağrıldığında bu null bir değer olmalıdır.  
+ [içinde, dışarı] Sayıya işaretçisi. `EnumAssemblyRefs` Yöntem ilk kez çağrıldığında bu null bir değer olmalıdır.  
   
  `rAssemblyRefs`  
- dışı `mdAssemblyRef` meta veri belirteçleri numaralandırması.  
+ [çıkış] `mdAssemblyRef` Meta veri belirteçlerinin numaralandırması.  
   
  `cMax`  
- 'ndaki `rAssemblyRefs` dizisine yerleştirilebilecek en fazla belirteç sayısı.  
+ [içinde] `rAssemblyRefs` Diziye yerleştirilebilir belirteçleri maksimum sayısı.  
   
  `pcTokens`  
- dışı Gerçekten `rAssemblyRefs`yer aldığı belirteçlerin sayısı.  
+ [çıkış] Yerleştirilen belirteçlerin `rAssemblyRefs`sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumAssemblyRefs` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda `pcTokens` sıfır olarak ayarlanır.|  
+|`S_OK`|`EnumAssemblyRefs`başarıyla döndürülür.|  
+|`S_FALSE`|Sayısala rendelemek için hiçbir belirteçleri vardır. Bu durumda, `pcTokens` sıfıra ayarlanır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

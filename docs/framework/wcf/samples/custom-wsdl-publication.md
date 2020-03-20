@@ -2,32 +2,32 @@
 title: Özel WSDL Yayımı
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: 173deaf280c052b76e6937b2cec44ebdeafc57f9
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ae6d5fdf243d5000090e993bd3353c6180d0ccaa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714912"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145065"
 ---
 # <a name="custom-wsdl-publication"></a>Özel WSDL Yayımı
-Bu örnekte nasıl yapılacağı gösterilmektedir:  
+Bu örnek nasıl gösteriş yapılacağını gösterir:  
   
-- Öznitelik özelliklerini WSDL ek açıklamaları olarak dışarı aktarmak için özel bir <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> özniteliğinde <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> uygulayın.  
+- WSDL ek <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> açıklamaları olarak öznitelik özellikleri dışa aktarmak için özel bir öznitelik <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> bir uygulayın.  
   
-- Özel WSDL ek açıklamalarını içeri aktarmak için <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> uygulayın.  
+- Özel <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> WSDL ek açıklamalarını almak için uygulayın.  
   
-- İçeri aktarılan ek açıklamaları, içeri aktarılan sözleşme ve işlem için CodeDom içinde açıklama olarak yazmak üzere bir özel sözleşme davranışına ve sırasıyla özel bir işlem davranışına <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> ve <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> uygulayın.  
+- İthal <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> edilen sözleşme ve işlem için CodeDom'da yorum olarak içe aktarılan ek açıklamaları yazmak için, sırasıyla özel bir sözleşme davranışı ve özel bir işlem davranışı uygulayın. <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType>  
   
-- WSDL 'yi indirmek için <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>, özel WSDL İçeri Aktarıcısı kullanılarak WSDL 'yi içeri aktarmak için bir <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> ve ' a C# ve Visual Basic ' ' ' ve ' ' ' AÇıKLAMALARı olarak WSDL ek açıklamaları ile WINDOWS COMMUNICATION FOUNDATION (WCF) istemci kodu oluşturmak için <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> kullanın.  
+- Özel <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> WSDL içe aktarıcısını kullanarak WSDL'yi almak <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> için WSDL'yi ve WSDL ek açıklamalarını wsdl ek açıklamaları yla birlikte Windows Communication Foundation (WCF) istemci kodunu oluşturmak <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> için C# ve Visual Basic'teki ''' yorumlarını indirmek için kullanın.  
   
 > [!NOTE]
-> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
+> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
   
 ## <a name="service"></a>Hizmet  
- Bu örnekteki hizmet iki özel öznitelikle işaretlenir. İlki `WsdlDocumentationAttribute`, oluşturucuda bir dize kabul eder ve bir sözleşme arabirimi ya da kullanımını açıklayan bir dize içeren bir işlem sağlamak için uygulanabilir. İkinci, `WsdlParamOrReturnDocumentationAttribute`, işlem içindeki değerleri tanımlayacak şekilde dönüş değerleri veya parametrelerine uygulanabilir. Aşağıdaki örnek, bu öznitelikler kullanılarak açıklanan `ICalculator`bir hizmet sözleşmesini gösterir.  
+ Bu örnekteki hizmet iki özel öznitelikile işaretlenir. İlk, `WsdlDocumentationAttribute`, oluşturucu bir dize kabul eder ve kullanımını açıklayan bir dize ile bir sözleşme arabirimi veya işlem sağlamak için uygulanabilir. İkinci,, `WsdlParamOrReturnDocumentationAttribute`işlemde bu değerleri açıklamak için değerleri veya parametreleri döndürmek için uygulanabilir. Aşağıdaki örnek, bu öznitelikleri kullanılarak açıklanan bir hizmet sözleşmesi `ICalculator`gösterir.  
   
 ```csharp  
-// Define a service contract.      
+// Define a service contract.
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 // Document it.  
 [WsdlDocumentation("The ICalculator contract performs basic calculation services.")]  
@@ -37,7 +37,7 @@ public interface ICalculator
     [WsdlDocumentation("The Add operation adds two numbers and returns the result.")]  
     [return:WsdlParamOrReturnDocumentation("The result of adding the two arguments together.")]  
     double Add(  
-      [WsdlParamOrReturnDocumentation("The first value to add.")]double n1,   
+      [WsdlParamOrReturnDocumentation("The first value to add.")]double n1,
       [WsdlParamOrReturnDocumentation("The second value to add.")]double n2  
     );  
   
@@ -45,7 +45,7 @@ public interface ICalculator
     [WsdlDocumentation("The Subtract operation subtracts the second argument from the first.")]  
     [return:WsdlParamOrReturnDocumentation("The result of the second argument subtracted from the first.")]  
     double Subtract(  
-      [WsdlParamOrReturnDocumentation("The value from which the second is subtracted.")]double n1,   
+      [WsdlParamOrReturnDocumentation("The value from which the second is subtracted.")]double n1,
       [WsdlParamOrReturnDocumentation("The value that is subtracted from the first.")]double n2  
     );  
   
@@ -53,7 +53,7 @@ public interface ICalculator
     [WsdlDocumentation("The Multiply operation multiplies two values.")]  
     [return:WsdlParamOrReturnDocumentation("The result of multiplying the first and second arguments.")]  
     double Multiply(  
-      [WsdlParamOrReturnDocumentation("The first value to multiply.")]double n1,   
+      [WsdlParamOrReturnDocumentation("The first value to multiply.")]double n1,
       [WsdlParamOrReturnDocumentation("The second value to multiply.")]double n2  
     );  
   
@@ -61,15 +61,15 @@ public interface ICalculator
     [WsdlDocumentation("The Divide operation returns the value of the first argument divided by the second argument.")]  
     [return:WsdlParamOrReturnDocumentation("The result of dividing the first argument by the second.")]  
     double Divide(  
-      [WsdlParamOrReturnDocumentation("The numerator.")]double n1,   
+      [WsdlParamOrReturnDocumentation("The numerator.")]double n1,
       [WsdlParamOrReturnDocumentation("The denominator.")]double n2  
     );  
 }  
 ```  
   
- `WsdlDocumentationAttribute`, <xref:System.ServiceModel.Description.IContractBehavior> ve <xref:System.ServiceModel.Description.IOperationBehavior>uygular, bu nedenle öznitelik örnekleri, hizmet açıldığında karşılık gelen <xref:System.ServiceModel.Description.ContractDescription> veya <xref:System.ServiceModel.Description.OperationDescription> eklenir. Öznitelik <xref:System.ServiceModel.Description.IWsdlExportExtension>de uygular. <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> çağrıldığında, meta verileri dışarı aktarmak için kullanılan <xref:System.ServiceModel.Description.WsdlExporter> ve hizmet açıklaması nesnelerini içeren <xref:System.ServiceModel.Description.WsdlContractConversionContext>, dışarı aktarılan meta verilerin değiştirilmesini etkinleştiren parametreler olarak geçirilir.  
+ Uygular `WsdlDocumentationAttribute` <xref:System.ServiceModel.Description.IContractBehavior> ve <xref:System.ServiceModel.Description.IOperationBehavior>, böylece öznitelik örnekleri ilgili <xref:System.ServiceModel.Description.ContractDescription> veya <xref:System.ServiceModel.Description.OperationDescription> hizmet açıldığında eklenir. Öznitelik de <xref:System.ServiceModel.Description.IWsdlExportExtension>uygular. Çağrıldığında, <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> <xref:System.ServiceModel.Description.WsdlExporter> meta verileri dışa aktarmak için <xref:System.ServiceModel.Description.WsdlContractConversionContext> kullanılan ve hizmet açıklaması nesneleri içeren dışa aktarılan meta verilerin modifikasyonuna olanak tanıyan parametreler olarak geçirilir.  
   
- Bu örnekte, dışa aktarma bağlamı nesnesinin bir <xref:System.ServiceModel.Description.ContractDescription> veya <xref:System.ServiceModel.Description.OperationDescription>sahip olmasına bağlı olarak, metin özelliği kullanılarak öznitelikten bir açıklama ayıklanır ve aşağıdaki kodda gösterildiği gibi WSDL Annotation öğesine eklenir.  
+ Bu örnekte, dışa aktarma bağlam nesnesinin <xref:System.ServiceModel.Description.OperationDescription>metin özelliği kullanılarak öznitelikten bir <xref:System.ServiceModel.Description.ContractDescription> yorum alınıp alınmadığına bağlı olarak aşağıdaki kodda gösterildiği gibi WSDL ek açıklama öğesine eklenir.  
   
 ```csharp
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)
@@ -108,7 +108,7 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 }
 ```  
   
- Bir işlem aktarılıyorsa, örnek, parametreler ve dönüş değerleri için `WsdlParamOrReturnDocumentationAttribute` değerler elde etmek üzere yansıma kullanır ve bu işlem için aşağıdaki gibi WSDL ek açıklama öğelerine ekler.  
+ Bir işlem dışa aktarılıyorsa, örnek `WsdlParamOrReturnDocumentationAttribute` parametreler ve iade değerleri için herhangi bir değer elde etmek için yansımayı kullanır ve bunları aşağıdaki gibi bu işlem için WSDL ek açıklama öğelerine ekler.  
   
 ```csharp
 // Get returns information  
@@ -140,11 +140,11 @@ for (int i = 0; i < args.Length; i++)
 }  
 ```  
   
- Örnek, aşağıdaki yapılandırma dosyasını kullanarak meta verileri standart şekilde yayımlar.  
+ Örnek daha sonra aşağıdaki yapılandırma dosyasını kullanarak meta verileri standart şekilde yayımlar.  
   
 ```xml  
 <services>  
-  <service   
+  <service
       name="Microsoft.ServiceModel.Samples.CalculatorService"  
       behaviorConfiguration="CalculatorServiceBehavior">  
     <!-- ICalculator is exposed at the base address provided by host: http://localhost/servicemodelsamples/service.svc  -->  
@@ -170,12 +170,12 @@ for (int i = 0; i < args.Length; i++)
 ```  
   
 ## <a name="svcutil-client"></a>Svcutil istemcisi  
- Bu örnek Svcutil. exe kullanmaz. Sözleşme, generatedClient.cs dosyasında sağlanır, böylece örnek özel WSDL içeri aktarma ve kod oluşturmayı gösterir, hizmet çağrılabilir. Bu örnek için aşağıdaki özel WSDL İçeri Aktarıcı 'yı kullanmak için Svcutil. exe ' yi çalıştırabilir ve bu örnekte kullanılan istemci yapılandırma dosyasının yolunu vererek, `WsdlDocumentation.dll` kitaplığına başvuran `/svcutilConfig` seçeneğini belirtebilirsiniz. `WsdlDocumentationImporter`yüklemek için, Svuctil. exe ' nin `WsdlDocumentation.dll` kitaplığını bulması ve yükleyebilmeleri gerekir. Bu, genel derleme önbelleğinde, yoldaki veya Svcutil. exe ile aynı dizinde olduğu anlamına gelir. Bunun gibi temel bir örnek için, en kolay şey, Svcutil. exe ' yi ve istemci yapılandırma dosyasını `WsdlDocumentation.dll` ile aynı dizine kopyalamak ve oradan çalıştırmak içindir.  
+ Bu örnek Svcutil.exe kullanmaz. Sözleşme, örnek özel WSDL alma ve kod oluşturma yı gösterdikten sonra hizmetin çağrılabilmesi için generatedClient.cs dosyasında sağlanır. Bu örnek için aşağıdaki özel WSDL aktarıcısını kullanmak için, Svcutil.exe'yi çalıştırabilir ve `/svcutilConfig` bu örnekte kullanılan `WsdlDocumentation.dll` ve kitaplıkla başvuran istemci yapılandırma dosyasına yol vererek seçeneği belirtebilirsiniz. `WsdlDocumentationImporter`Ancak, Svuctil.exe'yi yüklemek için `WsdlDocumentation.dll` kitaplığı bulabilmesi ve yükleyebilmesi gerekir, bu da genel montaj önbelleğinde, yolda kayıtlı olduğu veya Svcutil.exe ile aynı dizinde olduğu anlamına gelir. Bu gibi temel bir örnek için, yapılacak en kolay şey Svcutil.exe ve istemci yapılandırma `WsdlDocumentation.dll` dosyası aynı dizin içine kopyalamak ve oradan çalıştırın.  
   
-## <a name="the-custom-wsdl-importer"></a>Özel WSDL Içeri aktarıcı  
- Özel <xref:System.ServiceModel.Description.IWsdlImportExtension> nesnesi `WsdlDocumentationImporter` Ayrıca içeri aktarılan ServiceEndpoints ve <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> eklemek için <xref:System.ServiceModel.Description.IContractBehavior> ve <xref:System.ServiceModel.Description.IOperationBehavior> ve anlaşma ya da işlem kodu oluşturulurken kod oluşturmayı değiştirmek üzere çağrılacak <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> uygular.  
+## <a name="the-custom-wsdl-importer"></a>Özel WSDL İthalatçı  
+ Özel <xref:System.ServiceModel.Description.IWsdlImportExtension> nesne `WsdlDocumentationImporter` de <xref:System.ServiceModel.Description.IContractBehavior> uygular <xref:System.ServiceModel.Description.IOperationBehavior> ve içe aktarılan ServiceEndpoints <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> eklenecek ve sözleşme veya işlem kodu oluşturulurken kod oluşturma değiştirmek için çağrılacak.  
   
- İlk olarak, <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> yönteminde, WSDL ek açıklamanın anlaşma veya işlem düzeyinde olup olmadığını ve kendisini uygun kapsamda bir davranış olarak ekleyerek içeri aktarılan ek açıklama metnini oluşturucuya geçirerek, örnek.  
+ İlk olarak, <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> yöntemde, örnek WSDL ek açıklama sözleşme veya işlem düzeyinde olup olmadığını belirler ve içe aktarılan ek açıklama metnini oluşturucuya geçirerek kendisini uygun kapsamda bir davranış olarak ekler.  
   
 ```csharp
 public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
@@ -202,7 +202,7 @@ public void ImportContract(WsdlImporter importer, WsdlContractConversionContext 
 }  
 ```  
   
- Ardından, kod oluşturulduğunda, sistem <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> ve <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29> yöntemlerini çağırır ve uygun bağlam bilgilerini geçirir. Örnek, özel WSDL ek açıklamalarını biçimlendirir ve bunları CodeDom öğesine açıklama olarak ekler.  
+ Daha sonra, kod oluşturulduğunda, sistem <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> uygun <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29> bağlam bilgilerini geçirerek, yöntemleri ve yöntemleri çağırır. Örnek, özel WSDL ek açıklamalarını biçimlendiriyor ve CodeDom'a yorum olarak ekler.  
   
 ```csharp
 public void GenerateContract(ServiceContractGenerationContext context)  
@@ -218,13 +218,13 @@ public void GenerateOperation(OperationContractGenerationContext context)
 }  
 ```  
   
-## <a name="the-client-application"></a>Istemci uygulaması  
- İstemci uygulaması, uygulama yapılandırma dosyasında belirterek özel WSDL İçeri Aktarıcı yükler.  
+## <a name="the-client-application"></a>İstemci Başvurusu  
+ İstemci uygulaması, uygulama yapılandırma dosyasında belirterek özel WSDL içe aktarıcısını yükler.  
   
 ```xml  
 <client>  
-  <endpoint address="http://localhost/servicemodelsamples/service.svc"   
-  binding="wsHttpBinding"   
+  <endpoint address="http://localhost/servicemodelsamples/service.svc"
+  binding="wsHttpBinding"
   contract="ICalculator" />  
   <metadata>  
     <wsdlImporters>  
@@ -234,75 +234,75 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- Özel İçeri Aktarıcı belirtildiğinde, WCF meta veri sistemi özel İçeri Aktarıcı 'yı bu amaçla oluşturulan herhangi bir <xref:System.ServiceModel.Description.WsdlImporter> yükler. Bu örnek <xref:System.ServiceModel.Description.WsdlImporter>, meta verileri indirmek için <xref:System.ServiceModel.Description.MetadataExchangeClient> kullanır, örnek tarafından oluşturulan özel İçeri Aktarıcı kullanılarak meta verileri içeri aktarmak üzere düzgün şekilde yapılandırılmıştır ve "IntelliSense 'i desteklemek ya da XML belgelerine derlemek için Visual Studio C# 'da kullanılabilecek hem Visual Basic hem de istemci kodunda değiştirilen sözleşme bilgilerini derlemek için <xref:System.ServiceModel.Description.ServiceContractGenerator>.  
+ Özel içe aktarıcı belirtildikten sonra, WCF meta veri sistemi <xref:System.ServiceModel.Description.WsdlImporter> özel içe aktarıcıyı bu amaç için oluşturulan herhangi bir aygıta yükler. Bu örnek <xref:System.ServiceModel.Description.MetadataExchangeClient> meta verileri indirmek için <xref:System.ServiceModel.Description.WsdlImporter> kullanır, örnek oluşturur özel içe aktarmacı kullanarak meta veri <xref:System.ServiceModel.Description.ServiceContractGenerator> almak için düzgün yapılandırılmış ve görsel temel ve C# istemci kodu hem De görsel studio intellisense desteklemek için kullanılabilir veya XML belgelerine derlenmiş değiştirilmiş sözleşme bilgilerini derlemek için.  
   
 ```csharp
 /// From WSDL Documentation:  
-///   
-/// <summary>The ICalculator contract performs basic calculation   
-/// services.</summary>   
-///   
+///
+/// <summary>The ICalculator contract performs basic calculation
+/// services.</summary>
+///
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
 [System.ServiceModel.ServiceContractAttribute(Namespace="http://Microsoft.ServiceModel.Samples", ConfigurationName="ICalculator")]  
 public interface ICalculator  
 {  
   
     /// From WSDL Documentation:  
-    ///   
-    /// <summary>The Add operation adds two numbers and returns the   
-    /// result.</summary><returns>The result of adding the two arguments   
-    /// together.</returns><param name="n1">The first value to add.</param><param   
-    /// name="n2">The second value to add.</param>   
-    ///   
+    ///
+    /// <summary>The Add operation adds two numbers and returns the
+    /// result.</summary><returns>The result of adding the two arguments
+    /// together.</returns><param name="n1">The first value to add.</param><param
+    /// name="n2">The second value to add.</param>
+    ///
     [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Add", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/AddResponse")]  
     double Add(double n1, double n2);  
   
     /// From WSDL Documentation:  
-    ///   
-    /// <summary>The Subtract operation subtracts the second argument from the   
-    /// first.</summary><returns>The result of the second argument subtracted from the   
-    /// first.</returns><param name="n1">The value from which the second is   
-    /// subtracted.</param><param name="n2">The value that is subtracted from the   
-    /// first.</param>   
-    ///   
+    ///
+    /// <summary>The Subtract operation subtracts the second argument from the
+    /// first.</summary><returns>The result of the second argument subtracted from the
+    /// first.</returns><param name="n1">The value from which the second is
+    /// subtracted.</param><param name="n2">The value that is subtracted from the
+    /// first.</param>
+    ///
     [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Subtract", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/SubtractResponse")]  
     double Subtract(double n1, double n2);  
   
     /// From WSDL Documentation:  
-    ///   
-    /// <summary>The Multiply operation multiplies two values.</summary><returns>The   
-    /// result of multiplying the first and second arguments.</returns><param   
-    /// name="n1">The first value to multiply.</param><param name="n2">The second value   
-    /// to multiply.</param>   
-    ///   
+    ///
+    /// <summary>The Multiply operation multiplies two values.</summary><returns>The
+    /// result of multiplying the first and second arguments.</returns><param
+    /// name="n1">The first value to multiply.</param><param name="n2">The second value
+    /// to multiply.</param>
+    ///
     [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Multiply", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/MultiplyResponse")]  
     double Multiply(double n1, double n2);  
   
     /// From WSDL Documentation:  
-    ///   
-    /// <summary>The Divide operation returns the value of the first argument divided   
-    /// by the second argument.</summary><returns>The result of dividing the first   
-    /// argument by the second.</returns><param name="n1">The numerator.</param><param   
-    /// name="n2">The denominator.</param>   
-    ///   
+    ///
+    /// <summary>The Divide operation returns the value of the first argument divided
+    /// by the second argument.</summary><returns>The result of dividing the first
+    /// argument by the second.</returns><param name="n1">The numerator.</param><param
+    /// name="n2">The denominator.</param>
+    ///
     [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Divide", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/DivideResponse")]  
     double Divide(double n1, double n2);  
 }  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
   
-1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
+1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
   
-2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak [için, Windows Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
   
-3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
+3. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
   
 > [!IMPORTANT]
-> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
->   
+> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
->   
+>
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  

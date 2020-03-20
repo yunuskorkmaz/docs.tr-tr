@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2868dfec-c992-4606-88bb-a8e0b6b18271
 topic_type:
 - apiref
-ms.openlocfilehash: 0cd2071d4410615a08e774ba30e0e8fe8d1fa7c7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0f5bdf97132c05e765cd6fa423a19bb996105d28
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436182"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175271"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping Yöntemi
 Eşlenen dosyanın bellek bölgesini ve eşleme türünü alır.  
@@ -29,47 +29,47 @@ Eşlenen dosyanın bellek bölgesini ve eşleme türünü alır.
   
 ```cpp  
 HRESULT GetFileMapping (  
-    [out] const void           **ppvData,   
-    [out] ULONGLONG            *pcbData,   
+    [out] const void           **ppvData,
+    [out] ULONGLONG            *pcbData,
     [out] DWORD                *pdwMappingType  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `ppvData`  
- dışı Eşlenen dosyanın başlangıcına yönelik bir işaretçi.  
+ [çıkış] Eşlenen dosyanın başlangıcına işaretçi.  
   
  `pcbData`  
- dışı Eşlenen bölgenin boyutu. `pdwMappingType` `fmFlat`, bu dosyanın boyutudur.  
+ [çıkış] Eşlenen bölgenin boyutu. `pdwMappingType` Varsa, `fmFlat`bu dosyanın boyutudur.  
   
  `pdwMappingType`  
- dışı Eşleme türünü gösteren [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) değeri. Ortak dil çalışma zamanının (CLR) geçerli uygulanması her zaman `fmFlat`döndürür. Diğer değerler gelecekte kullanılmak üzere ayrılmıştır. Bununla birlikte, döndürülen değeri her zaman doğrulamanız gerekir, çünkü diğer değerler gelecek sürümlerde veya hizmet sürümlerinde etkinleştirilebilir.  
+ [çıkış] Eşleme türünü gösteren [bir CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) değeri. Ortak dil çalışma zamanı (CLR) geçerli `fmFlat`uygulama her zaman döndürür. Diğer değerler ileride kullanılmak üzere ayrılmıştır. Ancak, diğer değerler gelecekteki sürümlerde veya hizmet sürümlerinde etkinleştirilebileceğinden, döndürülen değeri her zaman doğrulamanız gerekir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|Tüm çıkışlar doldurulur.|  
-|`E_INVALIDARG`|NULL bir bağımsız değişken değeri olarak geçirildi.|  
-|`COR_E_NOTSUPPORTED`|CLR uygulama bellek bölgesi hakkında bilgi sağlayamıyor. Bu durum aşağıdaki nedenlerden kaynaklanabilir:<br /><br /> -Meta veri kapsamı `ofWrite` veya `ofCopyMemory` bayrağıyla açıldı.<br />-Meta veri kapsamı `ofReadOnly` bayrağı olmadan açıldı.<br />-Dosyanın yalnızca meta veri bölümünü açmak için [ımetadatadağıtıcı:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) yöntemi kullanıldı.<br />-Dosya taşınabilir bir çalıştırılabilir (PE) dosyası değil. **Note:**  Bu koşullar CLR uygulamasına Bağımlıdır ve CLR 'nin gelecek sürümlerinde zayıflatılmış olma olasılığı yüksektir.|  
+|`S_OK`|Tüm çıktılar doldurulur.|  
+|`E_INVALIDARG`|NULL bağımsız değişken değeri olarak geçirildi.|  
+|`COR_E_NOTSUPPORTED`|CLR uygulaması bellek bölgesi hakkında bilgi sağlayamaz. Bu aşağıdaki nedenlerle olabilir:<br /><br /> - Meta veri kapsamı `ofWrite` veya `ofCopyMemory` bayrak ile açıldı.<br />- Meta veri kapsamı `ofReadOnly` bayrak olmadan açıldı.<br />- Dosyanın yalnızca meta veri bölümünü açmak için [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) yöntemi kullanılmıştır.<br />- Dosya taşınabilir bir yürütülebilir (PE) dosya değildir. **Not:**  Bu koşullar CLR uygulamasına bağlıdır ve CLR'nin gelecekteki sürümlerinde zayıflamış olma olasılığı yüksektir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ppvData`, işaret eden bellek yalnızca temeldeki meta veri kapsamı açık olduğu sürece geçerlidir.  
+ Yalnızca temel `ppvData` meta veri kapsamı açık olduğu sürece işaret eden bellek geçerlidir.  
   
- Bu yöntemin çalışması için, [ımetadatadağıtıcı:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) metodunu çağırarak disk üzerindeki bir dosyanın meta verilerini belleğe eşlediğinizde `ofReadOnly` bayrağını belirtmeniz gerekir ve `ofWrite` veya `ofCopyMemory` bayrağını belirtmemelidir.  
+ Bu yöntemin işe yaraması için, bir disk dosyasının meta verilerini [IMetaDataDispenser'ı](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) arayarak belleğe eşlediğinizde::OpenScope yöntemi, `ofReadOnly` bayrağı belirtmeniz gerekir ve bayrağı `ofWrite` belirtmemelisiniz. `ofCopyMemory`  
   
- Her kapsam için dosya eşleme türü seçimi, CLR 'nin belirli bir uygulamasına özgüdür. Kullanıcı tarafından ayarlanamaz. CLR 'nin geçerli uygulanması her zaman `pdwMappingType``fmFlat` döndürür, ancak bu, CLR 'nin gelecekteki sürümlerinde veya belirli bir sürümün gelecekteki hizmet sürümlerinde değişebilir. Farklı türlerin farklı düzenlerine ve uzaklıklara sahip olacağı için `pdwMappingType`döndürülen değeri her zaman denetlemeniz gerekir.  
+ Her kapsam için dosya eşleme türü seçimi CLR belirli bir uygulamaya özgüdür. Kullanıcı tarafından ayarlanamaz. CLR'nin geçerli uygulaması `fmFlat` her `pdwMappingType`zaman , ancak bu CLR'nin gelecekteki sürümlerinde veya belirli bir sürümün gelecekteki hizmet sürümlerinde değişebilir. Farklı türlerde farklı düzenler `pdwMappingType`ve uzaklıklar olacağından, iade edilen değeri her zaman denetlemeniz gerekir.  
   
- Üç parametreden herhangi biri için NULL geçirme desteklenmez. Yöntemi `E_INVALIDARG`döndürür ve çıktıların hiçbiri doldurulmaz. Eşleme türü yok sayılıyor veya bölgenin boyutu olağan dışı program sonlandırmasına neden olabilir.  
+ Üç parametreden herhangi biri için NULL'u geçmek desteklenmez. Yöntem döndürür `E_INVALIDARG`ve çıktıların hiçbiri doldurulur. Eşleme türünü veya bölgenin boyutunu yok saymak anormal program sonlandırmaneden olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

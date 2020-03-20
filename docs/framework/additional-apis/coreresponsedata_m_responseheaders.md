@@ -1,5 +1,5 @@
 ---
-title: CoreResponseData. m_ResponseHeaders alanı
+title: CoreResponseData.m_ResponseHeaders Alanı
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: df0b592a5f85d4c99dee4ecb60963f4abb560a13
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 723df6dc2de978695608d106e3a01bde286fc4fe
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741011"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156109"
 ---
-# <a name="coreresponsedatam_responseheaders-field"></a>CoreResponseData. d\_ResponseHeaders alanı
+# <a name="coreresponsedatam_responseheaders-field"></a>CoreResponseData.m\_ResponseHeaders Alanı
 
-`CoreResponseData.m_ResponseHeaders`, sunucu yanıtıyla ilişkili üst bilgilerin bir <xref:System.Net.WebHeaderCollection>.
+`CoreResponseData.m_ResponseHeaders`<xref:System.Net.WebHeaderCollection> sunucu yanıtı ile ilişkili üstbilgi biridir.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -28,14 +28,14 @@ public WebHeaderCollection m_ResponseHeaders
 ```
 
 > [!WARNING]
-> Bu API 'nin doğrudan kodunuzda kullanılması amaçlıyordu. Bunun yerine, ağ kodunu bağlamak için bir <xref:System.Diagnostics.DiagnosticSource> kullanmanız gerekir. Bkz. [Diagnosticsource Kullanıcı Kılavuzu](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
-> 
-> Microsoft, bu sınıfın herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
+> Bu API doğrudan kodunuzda kullanılmak üzere değildir. Bunun yerine, bir <xref:System.Diagnostics.DiagnosticSource> bağlantı ağ kodu kullanmalısınız. [Bkz. DiagnosticSource Kullanıcı Kılavuzu.](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)
+>
+> Microsoft, hiçbir koşulda bir üretim uygulamasında bu sınıfın kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Ad alanı:** <xref:System.Net>
+**Ad alanı:**<xref:System.Net>
 
-**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
+**Montaj:** Sistem (System.dll'de)
 
-**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2.0'dan beri mevcuttur.

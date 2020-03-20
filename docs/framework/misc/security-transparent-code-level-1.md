@@ -1,5 +1,5 @@
 ---
-title: Güvenliği saydam kod, düzey 1
+title: Güvenlik-Saydam Kod, Düzey 1
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent
@@ -9,96 +9,96 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: 8f232a7724ad831818627cbfc2845ea808a3fcfd
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 980c684bced685a61ad82ff5713ccff2b974028f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215802"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181124"
 ---
-# <a name="security-transparent-code-level-1"></a>Güvenliği saydam kod, düzey 1
+# <a name="security-transparent-code-level-1"></a>Güvenlik-Saydam Kod, Düzey 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Saydamlık, geliştiricilerin kısmen güvenilen koda işlevsellik sunan daha güvenli .NET Framework kitaplıklar yazmasını sağlar. 1\. düzey saydamlık .NET Framework sürüm 2,0 ' de tanıtılmıştı ve öncelikle yalnızca Microsoft içinde kullanılmıştı. 4\. .NET Framework başlayarak [düzey 2 saydamlığını](security-transparent-code-level-2.md)kullanabilirsiniz. Ancak, 1. düzey saydamlık, önceki güvenlik kuralları ile çalışması gereken eski kodu tanımlayabilmeniz için korunur.  
+ Saydamlık, geliştiricilerin işlevselliği kısmen güvenilen koda maruz bırakan daha güvenli .NET Framework kitaplıkları yazmalarına yardımcı olur. Düzey 1 saydamlığı .NET Framework sürüm 2.0'da tanıtıldı ve öncelikle yalnızca Microsoft içinde kullanıldı. .NET Framework 4'ten başlayarak [düzey 2 saydamlığı](security-transparent-code-level-2.md)kullanabilirsiniz. Ancak, önceki güvenlik kurallarıyla çalışması gereken eski kodu tanımlayabilmeniz için düzey 1 saydamlığı korunmuştur.  
   
 > [!IMPORTANT]
-> Düzey 1 saydamlığı yalnızca uyumluluk için belirtmelisiniz; diğer bir deyişle, yalnızca <xref:System.Security.AllowPartiallyTrustedCallersAttribute> kullanan veya saydamlık modelini kullanmayan .NET Framework 3,5 veya önceki bir sürümüyle geliştirilmiş kod için düzey 1 ' i belirtin. Örneğin, kısmen güvenilen çağıranların (APTCA) çağrılara izin veren .NET Framework 2,0 derlemeleri için düzey 1 saydamlığı kullanın. .NET Framework 4 için geliştirilen kod için her zaman düzey 2 saydamlığı kullanın.  
+> Yalnızca uyumluluk için düzey 1 saydamlık belirtmeniz gerekir; diğer bir şey, düzey 1'i yalnızca .NET Framework 3.5 veya <xref:System.Security.AllowPartiallyTrustedCallersAttribute> önceki saydamlık modelini kullanan veya kullanmayan kod için belirtin. Örneğin, kısmen güvenilen arayanlardan (APTCA) gelen çağrılara izin veren .NET Framework 2.0 derlemeleri için düzey 1 saydamlığı kullanın. .NET Framework 4 için geliştirilen kod için her zaman düzey 2 saydamlığı kullanın.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
-- [Düzey 1 saydamlık modeli](#the_level_1_transparency_model)  
+- [Düzey 1 Saydamlık Modeli](#the_level_1_transparency_model)  
   
-- [Saydamlık öznitelikleri](#transparency_attributes)  
+- [Saydamlık Öznitelikleri](#transparency_attributes)  
   
-- [Güvenlik saydamlığı örnekleri](#security_transparency_examples)  
+- [Güvenlik Şeffaflığı Örnekleri](#security_transparency_examples)  
   
-<a name="the_level_1_transparency_model"></a>   
-## <a name="the-level-1-transparency-model"></a>Düzey 1 saydamlık modeli  
- Düzey 1 saydamlık kullandığınızda, kodu güvenlik açısından saydam, güvenlik açısından güvenli-kritik ve güvenlik açısından kritik yöntemlere ayıran bir güvenlik modeli kullanıyorsunuz.  
+<a name="the_level_1_transparency_model"></a>
+## <a name="the-level-1-transparency-model"></a>Düzey 1 Saydamlık Modeli  
+ Düzey 1 saydamlık kullandığınızda, kodu güvenlik saydamlığı, güvenlik açısından kritik ve güvenlik açısından kritik yöntemlere ayıran bir güvenlik modeli kullanırsınız.  
   
- Tüm bir derlemeyi, bir derlemedeki bazı sınıfları veya bir sınıftaki bazı yöntemleri güvenlik açısından saydam olarak işaretleyebilirsiniz. Güvenliği saydam kod ayrıcalıkları yükseltemez. Bu kısıtlama üç sonuçlara sahiptir:  
+ Tüm derlemeyi, derlemedeki bazı sınıfları veya bir sınıftaki bazı yöntemleri güvenlik saydamolarak işaretleyebilirsiniz. Güvenlik saydam kod ayrıcalıkları yükseltemez. Bu kısıtlamanın üç sonucu vardır:  
   
-- Güvenliği saydam kod <xref:System.Security.Permissions.SecurityAction.Assert> eylemleri gerçekleştiremez.  
+- Güvenlik saydam kod <xref:System.Security.Permissions.SecurityAction.Assert> eylemleri gerçekleştiremez.  
   
-- Güvenliği saydam kod tarafından karşılanması gereken herhangi bir bağlantı talebi, tam talep haline gelir.  
+- Güvenlik saydam kodu tarafından karşılanacak herhangi bir bağlantı talebi tam bir talep haline gelir.  
   
-- Güvenlik açısından saydam kodda yürütülmesi gereken güvenli olmayan (doğrulanamayan) kod, <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> güvenlik izni için tam talebe neden olur.  
+- Güvenlik saydam kodda yürütülmesi gereken güvenli olmayan (doğrulanamayan) kod, <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> güvenlik izni için tam bir talep neden olur.  
   
- Bu kurallar, ortak dil çalışma zamanı (CLR) tarafından yürütme sırasında zorlanır. Güvenliği saydam kod, geri arayanlara geri çağrı yaptığı kodun tüm güvenlik gereksinimlerini geçirir. Güvenlik açısından saydam kod üzerinden akan talepler ayrıcalıkların yükselmez. Düşük öncelikli bir uygulama, güvenlik açısından saydam kodu çağırırsa ve yüksek ayrıcalıklı bir talebe neden oluyorsa, talep düşük güven koduna geri akacaktır ve başarısız olur. Güvenlik saydam kodu, onay eylemleri gerçekleştiremediğinden isteği durduramıyor. Tam güven kodundan çağrılan aynı güvenlik saydam kodu, başarılı bir talebe neden olur.  
+ Bu kurallar, ortak dil çalışma zamanı (CLR) tarafından yürütme sırasında uygulanır. Güvenlik saydam kodu, aradığı kodun tüm güvenlik gereksinimlerini arayanlara geri geçirir. Güvenlik saydam kodundan geçen talepler ayrıcalıkları yükseltemez. Düşük güven uygulaması güvenlik saydam kodu çağırır ve yüksek ayrıcalık için bir talep neden olur, talep düşük güven koduna geri akacak ve başarısız olur. Güvenlik saydam kodu, iddialı eylemler gerçekleştiremediği için talebi durduramaz. Tam güven kodundan çağrılan aynı güvenlik saydam kodu, başarılı bir taleple sonuçlanır.  
   
- Güvenlik açısından kritik, güvenlik açısından şeffaf bir tersidir. Güvenlik açısından kritik kod tam güvenle yürütülür ve tüm ayrıcalıklı işlemleri gerçekleştirebilir. Güvenli kritik kod, kısmen güvenilen çağıranların erişim izni olmayan kaynakları kullanmasına izin vermediğini onaylamak için kapsamlı bir güvenlik denetimi aracılığıyla oluşturulmuş ayrıcalıklı koddur.  
+ Güvenlik açısından kritik güvenlik saydamının tam tersidir. Güvenlik açısından kritik kod tam güvenle yürütülür ve tüm ayrıcalıklı işlemleri gerçekleştirebilir. Güvenlik açısından güvenli kritik kod, kısmen güvenilen arayanların erişim izni olmayan kaynakları kullanmalarına izin vermediğini doğrulamak için kapsamlı bir güvenlik denetimiyoluyla geçen ayrıcalıklı koddur.  
   
- Saydamlığı açıkça uygulamanız gerekir. Veri işleme ve mantığını işleyen kodunuzun büyük bölümü genellikle güvenlik açısından saydam olarak işaretlenebilir, ancak ayrıcalıkların yükseltme işlemini gerçekleştiren daha az miktarda kod miktarı güvenlik açısından kritik veya güvenlik açısından güvenli olarak işaretlenir.  
+ Saydamlığı açıkça uygulamanız gerekir. Veri işleme ve mantık işleyen kodlarınızın çoğunluğu genellikle güvenlik saydam olarak işaretlenebilirken, ayrıcalıkların yükseltilerini gerçekleştiren daha az kod miktarı güvenlik açısından kritik veya güvenlik açısından güvenli kritik olarak işaretlenir.  
   
 > [!IMPORTANT]
-> Düzey 1 saydamlık, derleme kapsamıyla sınırlıdır; derlemeler arasında zorlanmaz. Düzey 1 saydamlık öncelikle Microsoft 'un güvenlik denetimi amacıyla kullanıldığı bir şekilde kullanılır. Düzey 1 derlemesi içindeki güvenlik açısından kritik türlere ve üyelere, diğer derlemelerde güvenlik açısından saydam kod tarafından erişilebilir. Tüm düzey 1 güvenlik açısından kritik türlerde ve üyelerde tam güven için bağlantı talepleri gerçekleştirmeniz önemlidir. Güvenlik açısından kritik olan türler ve Üyeler, çağıranların tür veya üye tarafından erişilen korunan kaynaklar için izinlere sahip olduğunu da doğrulamamalıdır.  
+> Düzey 1 saydamlık montaj kapsamıyla sınırlıdır; derlemeler arasında zorlanmaz. Düzey 1 saydamlığı öncelikle Microsoft içinde güvenlik denetimi amacıyla kullanılmıştır. Düzey 1 derlemesi içindeki güvenlik açısından kritik türlere ve üyelere diğer derlemelerde güvenlik saydam koduyla erişilebilir. Tüm düzey 1 güvenlik açısından kritik türleri ve üyeleri tam güven için bağlantı taleplerini gerçekleştirmek önemlidir. Güvenlik açısından güvenli kritik türler ve üyeler, arayanların tür veya üye tarafından erişilen korumalı kaynaklar için izinleri olduğunu da onaylamalıdır.  
   
- .NET Framework önceki sürümleriyle geriye dönük uyumluluk için, saydamlık öznitelikleriyle açıklama eklenmiş olmayan tüm Üyeler güvenlik açısından kritik olarak kabul edilir. Açıklamalı olmayan tüm türler saydam olarak değerlendirilir. Saydamlığı doğrulamaya yönelik bir statik analiz kuralı yok. Bu nedenle, çalışma zamanında saydam hatalarda hata ayıklaması yapmanız gerekebilir.  
+ .NET Framework'ün önceki sürümleriyle geriye dönük uyumluluk için, saydamlık öznitelikleriyle açıklama ekaçıklama lı olmayan tüm üyeler güvenlik açısından güvenli kritik olarak kabul edilir. Açıklamalı olmayan tüm türler saydam olarak kabul edilir. Saydamlığı doğrulamak için statik çözümleme kuralları yoktur. Bu nedenle, çalışma zamanında saydamlık hatalarını ayıklamanız gerekebilir.  
   
-<a name="transparency_attributes"></a>   
-## <a name="transparency-attributes"></a>Saydamlık öznitelikleri  
- Aşağıdaki tabloda, saydamlığa yönelik kodunuza açıklama eklemek için kullandığınız üç öznitelik açıklanmaktadır.  
+<a name="transparency_attributes"></a>
+## <a name="transparency-attributes"></a>Saydamlık Öznitelikleri  
+ Aşağıdaki tabloda, saydamlık için kodunuzu açıklama yapmak için kullandığınız üç öznitelik açıklanmaktadır.  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|<xref:System.Security.SecurityTransparentAttribute>|Yalnızca derleme düzeyinde izin verilir. Derlemedeki tüm türleri ve üyeleri güvenlik açısından saydam olarak tanımlar. Derleme, güvenlik açısından kritik kod içeremez.|  
-|<xref:System.Security.SecurityCriticalAttribute>|Derleme düzeyinde <xref:System.Security.SecurityCriticalAttribute.Scope%2A> özelliği olmadan kullanıldığında, derlemedeki tüm kodu varsayılan olarak güvenlik açısından saydam olarak tanımlar, ancak derlemenin güvenlik açısından kritik kod içerebileceğini gösterir.<br /><br /> Sınıf düzeyinde kullanıldığında, sınıfı veya yöntemi, sınıfın üyelerini değil, güvenlik açısından kritik olarak tanımlar. Tüm üyelerin güvenlik açısından kritik olmasını sağlamak için <xref:System.Security.SecurityCriticalAttribute.Scope%2A> özelliğini <xref:System.Security.SecurityCriticalScope.Everything>olarak ayarlayın.<br /><br /> Üye düzeyinde kullanıldığında, özniteliği yalnızca o üye için geçerlidir.<br /><br /> Güvenlik açısından kritik olarak tanımlanan sınıf veya üye, ayrıcalık yükseltme işlemini gerçekleştirebilir. **Önemli:**  Düzey 1 saydamlıkla, güvenlik açısından kritik türler ve Üyeler, derleme dışından çağrıldığında güvenlik açısından kritik öneme sahip olarak değerlendirilir. Ayrıcalık yükselmesine engel olmak için, güvenlik açısından kritik türleri ve üyeleri tam güven için bir bağlantı talebi ile korumanız gerekir.|  
-|<xref:System.Security.SecuritySafeCriticalAttribute>|Derlemede güvenlik açısından saydam kod tarafından erişilebilen güvenlik açısından kritik kodu belirler. Aksi takdirde, güvenlik açısından saydam kod aynı derlemede özel veya iç güvenlik açısından kritik üyelere erişemez. Bunun yapılması, güvenlik açısından kritik kodu etkiler ve olası ayrıcalıkların beklenmedik şekilde yükselmesine neden olur. Güvenliğe güvenli kritik kod, ciddi bir güvenlik denetimine gitmelidir. **Note:**  Güvenlik açısından kritik olan türler ve Üyeler, çağıranın korumalı kaynaklara erişme yetkisi olup olmadığını belirlemede çağıranların izinlerini doğrulamalıdır.|  
+|<xref:System.Security.SecurityTransparentAttribute>|Yalnızca montaj düzeyinde izin verilir. Derlemedeki tüm türleri ve üyeleri güvenlik saydamolarak tanımlar. Derleme herhangi bir güvenlik kritik kod içeremez.|  
+|<xref:System.Security.SecurityCriticalAttribute>|<xref:System.Security.SecurityCriticalAttribute.Scope%2A> Özellik olmadan montaj düzeyinde kullanıldığında, varsayılan olarak derlemedeki tüm kodları güvenlik saydam olarak tanımlar, ancak derlemenin güvenlik açısından kritik kod içerebileceğini gösterir.<br /><br /> Sınıf düzeyinde kullanıldığında, sınıfı veya yöntemi güvenlik açısından kritik olarak tanımlar, ancak sınıfın üyeleri olarak değil. Tüm üyeleri güvenlik açısından kritik hale <xref:System.Security.SecurityCriticalAttribute.Scope%2A> getirmek <xref:System.Security.SecurityCriticalScope.Everything>için özelliği .<br /><br /> Üye düzeyinde kullanıldığında, öznitelik yalnızca bu üye için geçerlidir.<br /><br /> Güvenlik açısından kritik olarak tanımlanan sınıf veya üye ayrıcalık yükseklikleri gerçekleştirebilir. **Önemli:**  Düzey 1 saydamlık, güvenlik açısından kritik türleri ve üyeleri, montaj dışından çağrıldığında güvenlik açısından kritik olarak kabul edilir. Yetkisiz ayrıcalık yükselmesini önlemek için güvenlik açısından kritik türleri ve üyeleri tam güven için bir bağlantı talebiyle korumanız gerekir.|  
+|<xref:System.Security.SecuritySafeCriticalAttribute>|Derlemede güvenlik saydam kodu tarafından erişilebilen güvenlik açısından kritik kodu tanımlar. Aksi takdirde, güvenlik saydam kodu aynı derlemede özel veya iç güvenlik açısından kritik üyelere erişemez. Bunu yapmak, güvenlik açısından kritik kodu etkiler ve beklenmeyen ayrıcalık yükselmelerini mümkün kılar. Güvenlik açısından güvenli kritik kod sıkı bir güvenlik denetiminden geçmelidir. **Not:**  Güvenlik açısından güvenli kritik türler ve üyeler, arayanın korumalı kaynaklara erişme yetkisiolup olmadığını belirlemek için arayanların izinlerini doğrulamalıdır.|  
   
- <xref:System.Security.SecuritySafeCriticalAttribute> özniteliği, güvenlik açısından saydam kodun aynı derlemede bulunan güvenlik açısından kritik üyelere erişmesine olanak sağlar. Derlemelerinizdeki güvenlik açısından saydam ve kritik güvenlik kodunu iki derlemeye ayırarak göz önünde bulundurun. Güvenliği saydam kod, güvenlik açısından kritik kodun özel veya iç üyelerini göremez. Ayrıca, güvenlik açısından kritik kod genel arabirimine erişim için genellikle denetlenir. Özel veya iç durumun derleme dışında erişilebilir olması beklenmez; durumu yalıtılmış tutmak isteyebilirsiniz. <xref:System.Security.SecuritySafeCriticalAttribute> özniteliği, gerektiğinde yalıtımın geçersiz kılınmasına izin verirken, güvenlik açısından saydam ve güvenlik açısından kritik kod arasındaki durumun yalıtımının tutulmasını sağlar. Bu Üyeler <xref:System.Security.SecuritySafeCriticalAttribute>olarak işaretlenmedikçe, güvenlik açısından saydam kod özel veya iç güvenlik açısından kritik koda erişemez. <xref:System.Security.SecuritySafeCriticalAttribute>uygulamadan önce, bu üyeyi genel kullanıma sunulmiş gibi denetleyin.  
+ Öznitelik, <xref:System.Security.SecuritySafeCriticalAttribute> güvenlik saydam kodunun aynı derlemede güvenlik açısından kritik üyelere erişmesini sağlar. Derlemenizdeki güvenlik saydam ve güvenlik açısından kritik kodu iki derlemeye ayrılmış olarak düşünün. Güvenlik saydam kodu, güvenlik açısından kritik kodun özel veya dahili üyelerini göremez. Ayrıca, güvenlik açısından kritik kod genel arabirimine erişim için genellikle denetlenir. Özel veya dahili bir devletin montaj dışında erişilebilir olmasını beklemezsiniz; Eyaleti izole etmek isterdin. Öznitelik, <xref:System.Security.SecuritySafeCriticalAttribute> gerektiğinde yalıtımı geçersiz kılma olanağı sağlarken, durum yalıtımını güvenlik saydamlığı ve güvenlik açısından kritik kod arasında tutar. Güvenlik saydam kodu, bu üyeler ile işaretlenmiş sürece özel veya <xref:System.Security.SecuritySafeCriticalAttribute>iç güvenlik kritik kod erişemez. Uygulamadan <xref:System.Security.SecuritySafeCriticalAttribute>önce, bu üyeyi kamuya açıklanmış gibi denetle.  
   
-### <a name="assembly-wide-annotation"></a>Bütünleştirilmiş kod genelinde ek açıklama  
- Aşağıdaki tabloda, derleme düzeyinde güvenlik özniteliklerini kullanmanın etkileri açıklanmaktadır.  
+### <a name="assembly-wide-annotation"></a>Montaj genelinde Ek Açıklama  
+ Aşağıdaki tabloda montaj düzeyinde güvenlik öznitelikleri kullanmanın etkileri açıklanmaktadır.  
   
-|Derleme özniteliği|Derleme durumu|  
+|Montaj özniteliği|Meclis durumu|  
 |------------------------|--------------------|  
-|Kısmen güvenilen bir derlemede öznitelik yok|Tüm türler ve Üyeler saydamdır.|  
-|Tam güvenilir bir derlemede (genel derleme önbelleğinde veya `AppDomain`tam güven olarak tanımlanan) öznitelik yok|Tüm türler saydamdır ve tüm Üyeler güvenlik açısından güvenlidir.|  
-|`SecurityTransparent`|Tüm türler ve Üyeler saydamdır.|  
-|`SecurityCritical(SecurityCriticalScope.Everything)`|Tüm türler ve Üyeler güvenlik açısından kritik öneme sahiptir.|  
-|`SecurityCritical`|Tüm kod varsayılan olarak saydam olur. Ancak, ayrı türler ve üyelerin diğer öznitelikleri olabilir.|  
+|Kısmen güvenilen bir derlemede öznitelik yok|Tüm tür ve üyeler saydamdır.|  
+|Tam olarak güvenilen bir derlemede öznitelik yok (genel montaj `AppDomain`önbelleğinde veya tam güven olarak tanımlanır)|Tüm türler saydamdır ve tüm üyeler güvenlik açısından kritik öneme sahiptir.|  
+|`SecurityTransparent`|Tüm tür ve üyeler saydamdır.|  
+|`SecurityCritical(SecurityCriticalScope.Everything)`|Tüm türler ve üyeler güvenlik açısından kritik öneme sahiptir.|  
+|`SecurityCritical`|Tüm kod varsayılan olarak saydamdır. Ancak, tek tek türleri ve üyeleri başka öznitelikleri olabilir.|  
   
-<a name="security_transparency_examples"></a>   
-## <a name="security-transparency-examples"></a>Güvenlik saydamlığı örnekleri  
- .NET Framework 2,0 saydamlık kurallarını (düzey 1 saydamlık) kullanmak için aşağıdaki derleme ek açıklamasını kullanın:  
+<a name="security_transparency_examples"></a>
+## <a name="security-transparency-examples"></a>Güvenlik Şeffaflığı Örnekleri  
+ .NET Framework 2.0 saydamlık kurallarını (düzey 1 saydamlığı) kullanmak için aşağıdaki derleme ek açıklamasını kullanın:  
   
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level1)]  
 ```  
   
- Derlemenin herhangi bir kritik kod içermediğini ve ayrıcalıkları herhangi bir şekilde yükselmediğini belirtmek için bir derlemenin tamamını saydam hale getirmek isterseniz, aşağıdaki öznitelik ile derlemeye açıkça saydamlık ekleyebilirsiniz:  
+ Derlemenin herhangi bir kritik kod içermediğini ve ayrıcalıkları herhangi bir şekilde yükseltmediğini belirtmek için tüm derlemeyi saydam hale getirmek istiyorsanız, derlemeye aşağıdaki öznitelik içeren saydamlık ekleyebilirsiniz:  
   
 ```csharp  
 [assembly: SecurityTransparent]  
 ```  
   
- Aynı derlemede kritik ve saydam kodu karıştırmak istiyorsanız, derlemenin önemli kodu içerebileceğini belirtmek için derlemeyi <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle işaretleyerek başlayın:  
+ Kritik ve saydam kodu aynı derlemede karıştırmak istiyorsanız, derlemenin <xref:System.Security.SecurityCriticalAttribute> kritik kod içerebileceğini belirtmek için derlemeyi öznitelikile işaretleyerek başlayın:  
   
 ```csharp  
 [assembly: SecurityCritical]  
 ```  
   
- Güvenlik açısından kritik eylemler gerçekleştirmek istiyorsanız, aşağıdaki kod örneğinde gösterildiği gibi, kritik eylemi gerçekleştirecek kodu başka bir <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle birlikte açıkça işaretlemeniz gerekir:  
+ Güvenlik açısından kritik eylemler gerçekleştirmek istiyorsanız, aşağıdaki kod örneğinde gösterildiği gibi, <xref:System.Security.SecurityCriticalAttribute> kritik eylemi gerçekleştirecek kodu başka bir öznitelikle açıkça işaretlemeniz gerekir:  
   
 ```csharp  
 [assembly: SecurityCritical]  
@@ -126,9 +126,9 @@ public class B
 }  
 ```  
   
- Önceki kod, açıkça güvenlik açısından kritik olarak işaretlenen `Critical` yöntemi dışında saydamdır. Saydamlık, derleme düzeyi <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle bile varsayılan ayardır.  
+ Önceki kod, açıkça güvenlik `Critical` açısından kritik olarak işaretlenmiş yöntem dışında saydamdır. Saydamlık, derleme düzeyi <xref:System.Security.SecurityCriticalAttribute> özniteliği olsa bile varsayılan ayardır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenliği saydam kod, düzey 2](security-transparent-code-level-2.md)
+- [Güvenliği Saydam Kod, 2. Düzey](security-transparent-code-level-2.md)
 - [Güvenlik Değişiklikleri](../security/security-changes.md)

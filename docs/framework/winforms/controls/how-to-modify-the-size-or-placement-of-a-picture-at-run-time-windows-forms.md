@@ -11,38 +11,38 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: 9bb094ce0b7945f23a2e9b8614e56c9492d5f832
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: fea813d7b9fe585e35b729b8b64e3a5f414ef76d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736029"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141972"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Nasıl yapılır: Çalışma Zamanında Resmin Boyutunu veya Konumunu Değiştirme (Windows Forms)
-Bir form üzerinde Windows Forms <xref:System.Windows.Forms.PictureBox> denetimini kullanıyorsanız, üzerinde <xref:System.Windows.Forms.PictureBox.SizeMode%2A> özelliğini şu şekilde ayarlayabilirsiniz:  
+Bir formüzerinde Windows <xref:System.Windows.Forms.PictureBox> Forms denetimini kullanırsanız, bu formdaki <xref:System.Windows.Forms.PictureBox.SizeMode%2A> özelliği şu şekilde ayarlayabilirsiniz:  
   
-- Resmin sol üst köşesini denetimin sol üst köşesinden hizalayın  
+- Resmin sol üst köşesini kontrolün sol üst köşesiyle hizala  
   
-- Denetimin içindeki resmi Ortala  
+- Resmi denetim içinde ortala  
   
-- Denetimin boyutunu gösterdiği resme uyacak şekilde ayarlayın  
+- Denetimin boyutunu görüntülenebilmek için ayarlama  
   
-- Denetimin sığması için görüntülediği tüm resimleri uzat  
+- Görüntülenedeki herhangi bir resmi denetime uyacak şekilde esnetin  
   
- Bir resmi uzatma (özellikle bit eşlem biçiminde), görüntü kalitesinde bir kayıp üretebilir. Çalışma zamanında görüntülerin çizilmesine yönelik grafik yönergelerinin listesi olan meta dosyalar, bit eşlemlerden uzama için daha uygundur.  
+ Bir resmi germe (özellikle bitmap biçiminde) görüntü kalitesinde bir kayıp yaratabilir. Çalışma zamanında resim çizmek için grafik yönergeleri listeleri olan metafiles, bit eşlemler daha germe için daha uygundur.  
   
-### <a name="to-set-the-sizemode-property-at-run-time"></a>Çalışma zamanında SizeMode özelliğini ayarlamak için  
+### <a name="to-set-the-sizemode-property-at-run-time"></a>SizeMode özelliğini çalışma zamanında ayarlamak için  
   
-1. <xref:System.Windows.Forms.PictureBox.SizeMode%2A> <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (varsayılan), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>veya <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>olarak ayarlayın. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal>, görüntünün denetimin sol üst köşesine yerleştirildiği anlamına gelir; görüntü denetimden büyükse, alt ve sağ kenarları kırpılır. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, görüntünün denetimin içinde ortalanmasıdır; görüntü denetimden büyükse, resmin dış kenarları kırpılır. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, denetimin boyutunun görüntünün boyutuna ayarlandığı anlamına gelir. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> ters ve görüntünün boyutunun denetimin boyutuna ayarlandığı anlamına gelir.  
+1. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (varsayılan), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> <xref:System.Windows.Forms.PictureBox.SizeMode%2A> , , <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>veya <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal>görüntünün kontrolün sol üst köşesine yerleştirildiği anlamına gelir; görüntü denetimden daha büyükse, alt ve sağ kenarları kırpılır. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>görüntünün denetim içinde ortalanmış olduğu anlamına gelir; görüntü denetimden daha büyükse, resmin dış kenarları kırpılır. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>denetimboyutunu görüntünün boyutuna ayarlanır anlamına gelir. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>tersidir ve görüntünün boyutunun denetimboyutuna ayarlanması anlamına gelir.  
   
-     Aşağıdaki örnekte, görüntü konumu için ayarlanan yol Belgelerim klasörüdür. Bu, Windows işletim sistemini çalıştıran bilgisayarların çoğunun bu dizini içerdiğini varsaydığı için yapılır. Bu Ayrıca, en az sistem erişim düzeylerine sahip kullanıcıların uygulamayı güvenle çalıştırmasına olanak tanır. Aşağıdaki örnekte, <xref:System.Windows.Forms.PictureBox> denetimi zaten eklenmiş bir form varsayılır.  
+     Aşağıdaki örnekte, görüntünün konumu için ayarlanan yol Belgelerim klasörüdür. Windows işletim sistemini çalıştıran bilgisayarların çoğunun bu dizini içereceğini varsayabileceğinizden, bu işlem yapılır. Bu aynı zamanda en az sistem erişim düzeylerine sahip kullanıcıların uygulamayı güvenli bir şekilde çalıştırmasına olanak tanır. Aşağıdaki <xref:System.Windows.Forms.PictureBox> örnekte, denetimzaten eklenmiştir.  
   
     ```vb  
     Private Sub StretchPic()  
        ' Stretch the picture to fit the control.  
        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage  
        ' Load the picture into the control.  
-       ' You should replace the bold image   
+       ' You should replace the bold image
        ' in the sample below with an icon of your own choosing.  
        PictureBox1.Image = Image.FromFile _  
        (System.Environment.GetFolderPath _  
@@ -56,7 +56,7 @@ Bir form üzerinde Windows Forms <xref:System.Windows.Forms.PictureBox> denetimi
        // Stretch the picture to fit the control.  
        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;  
        // Load the picture into the control.  
-       // You should replace the bold image   
+       // You should replace the bold image
        // in the sample below with an icon of your own choosing.  
        // Note the escape character used (@) when specifying the path.  
        PictureBox1.Image = Image.FromFile _  
@@ -73,7 +73,7 @@ Bir form üzerinde Windows Forms <xref:System.Windows.Forms.PictureBox> denetimi
           // Stretch the picture to fit the control.  
           pictureBox1->SizeMode = PictureBoxSizeMode::StretchImage;  
           // Load the picture into the control.  
-          // You should replace the bold image   
+          // You should replace the bold image
           // in the sample below with an icon of your own choosing.  
           pictureBox1->Image = Image::FromFile(String::Concat(  
              System::Environment::GetFolderPath(  

@@ -8,24 +8,24 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: ca0a9a4b37f28eb03f58de4fd9b120cb7e654e0c
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: fe6de09213c6f980e8eb205a318aae50033b2a84
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088651"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155238"
 ---
-# <a name="cryptographysettings-element"></a>\<Cryptographyısettings > öğesi
-Şifreleme ayarlarını içerir.  
+# <a name="cryptographysettings-element"></a>\<şifrelemeAyarlar> Öğesi
+Şifreleme ayarları içerir.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Cryptographyısettings >**
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<şifrelemeAyarlar>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-      <cryptographySettings>   
+      <cryptographySettings>
 </cryptographySettings>  
 ```  
   
@@ -39,18 +39,18 @@ ms.locfileid: "74088651"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[cryptoNameMapping > \<](cryptonamemapping-element.md)|Kolay adlarla sınıfların eşlemelerini içerir.|  
-|[\<Oıdmap >](oidmap-element.md)|Sınıflara ASN. 1 nesne tanımlayıcısı (OID) eşlemelerini içerir.|  
+|[\<cryptoNameMapping>](cryptonamemapping-element.md)|Sınıfların dost adlara eşlemelerini içerir.|  
+|[\<oidMap>](oidmap-element.md)|Sınıflara ASN.1 nesne tanımlayıcısı (OID) eşlemeleri içerir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`mscorlib`|`cryptographySettings` öğesini içerir.|  
+|`mscorlib`|Öğeyi `cryptographySettings` içerir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, şifreleme adı eşlemelerini ve OID eşlemelerini içeren **\<Cryptographısettings >** öğesinin nasıl kullanılacağını gösterir. Bu örnek, <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> bir `MyHashClass` nesnesi döndürmesi ve `MyCryptoClass` sınıfı 1.3.36.2.1 nesne tanımlayıcısına eşlenecek şekilde çalışma zamanını yapılandırır.  
+ Aşağıdaki örnek, ** \<şifreleme** adı eşlemeleri ve OID eşlemeleri içeren şifreleme Ayarları>öğesini nasıl kullandığını gösterir. Bu örnek, bir <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> `MyHashClass` nesneyi ve `MyCryptoClass` sınıf eşlemlerini nesne tanımlayıcı1.3.36.2.1'e döndürecek şekilde çalışma zamanını yapılandırır.  
   
 ```xml  
 <configuration>  

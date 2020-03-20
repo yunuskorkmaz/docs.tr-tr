@@ -1,5 +1,5 @@
 ---
-title: <source> için <listeners> için <add> <filter> öğesi
+title: <filter><add> Için <listeners> element<source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-ms.openlocfilehash: 766088b8a26ce3218031df74b193658ba8024280
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 0cb668782de263d5f784691f46cb8b74541d942b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088901"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153522"
 ---
-# <a name="filter-element-for-add-for-listeners-for-source"></a>\<> için \<dinleyicileri > için \<ekleme > için Filtre > öğesi \<
-İzleme kaynağı için `Listeners` koleksiyonundaki bir dinleyiciye bir filtre ekler.  
+# <a name="filter-element-for-add-for-listeners-for-source"></a>\<kaynak> \<için> \<dinleyiciler \<için> eklemek için> Öğesi'ni filtreleyin
+İzleme kaynağı için `Listeners` koleksiyondaki dinleyiciye filtre ekler.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-[**System. diagnostics\<** ](system-diagnostics-element.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<kaynakları >** ](sources-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<kaynak >** ](source-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**dinleyicileri >** ](listeners-element-for-source.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**add >** ](add-element-for-listeners-for-source.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<filtresi >**
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<kaynaklar>**](sources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<kaynak>**](source-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dinleyici ler>**](listeners-element-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>ekleyin**](add-element-for-listeners-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<filtre>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<filter   
-  type="traceFilterClassName"   
+<filter
+  type="traceFilterClassName"
   initializeData="data" />  
 ```  
   
@@ -42,8 +42,8 @@ ms.locfileid: "74088901"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`type`|Gerekli öznitelik.<br /><br /> <xref:System.Diagnostics.TraceFilter> sınıfından devralması gereken filtrenin türünü belirtir. Türün <xref:System.Type.FullName%2A> özelliğine karşılık gelen ad alanı nitelenmiş adını kullanabilir veya <xref:System.Type.AssemblyQualifiedName%2A> özelliğine karşılık gelen derleme bilgileri de dahil olmak üzere tam tür adı kullanabilirsiniz. Tam nitelikli tür adları hakkında daha fazla bilgi için bkz. [tam nitelikli tür adlarını belirtme](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|`initializeData`|İsteğe bağlı öznitelik.<br /><br /> Belirtilen filtre sınıfı için oluşturucuya geçirilen dize.|  
+|`type`|Gerekli öznitelik.<br /><br /> <xref:System.Diagnostics.TraceFilter> Sınıftan devralması gereken filtrenin türünü belirtir. Türün <xref:System.Type.FullName%2A> özelliğine karşılık gelen ad alanı nitelikli adını kullanabilir veya <xref:System.Type.AssemblyQualifiedName%2A> derleme bilgilerini de içeren ve özelliğe karşılık gelen tam nitelikli tür adını kullanabilirsiniz. Tam nitelikli tür adları hakkında bilgi için [bkz.](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)|  
+|`initializeData`|İsteğe bağlı öznitelik.<br /><br /> Dize, belirtilen filtre sınıfı için oluşturucuya geçti.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -53,30 +53,30 @@ ms.locfileid: "74088901"
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
-|`sources`|İzleme iletilerini Başlatan izleme kaynaklarını içerir.|  
-|`source`|İzleme iletilerini Başlatan bir izleme kaynağını belirtir.|  
-|`listeners`|İletileri toplayacak, depolayan ve yönlendiren dinleyicileri içerir. Dinleyiciler izleme çıkışını uygun bir hedefe yönlendirir.|  
-|`add`|İzleme kaynağı için `Listeners` koleksiyonuna bir dinleyici ekler.|  
+|`system.diagnostics`|İletileri toplayan, depolayan ve yönlendiren izleme dinleyicilerini ve izleme anahtarının ayarlandığı düzeyi belirtir.|  
+|`sources`|İletileri izlemeyi başlatan izleme kaynakları içerir.|  
+|`source`|İletilerin izlenmesini başlatan bir izleme kaynağı belirtir.|  
+|`listeners`|İletileri toplayan, depolayan ve yönlendiren dinleyicileri içerir. Dinleyiciler izleme çıktısını uygun bir hedefe yönlendirir.|  
+|`add`|İzleme kaynağı için `Listeners` koleksiyona dinleyici ekler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<filter>` öğesi, yalnızca [\<sharedListeners >](sharedlisteners-element.md)tanımlanmış bir dinleyicinin adını değil, dinleyicinin türünü belirten bir izleme kaynak dinleyicisi için bir `<add>` öğesinde bulunmalıdır. Dinleyici bir [\<sharedListeners >](sharedlisteners-element.md)tanımlanmışsa, bu dinleyicinin filtresi o öğede tanımlanmalıdır.  
+ Öğe, `<filter>` yalnızca paylaşılan `<add>` [ \<Dinleyiciler>](sharedlisteners-element.md)tanımlanan bir dinleyicinin adını değil, dinleyicinin türünü belirten bir izleme kaynağı dinleyicisi için bir öğeiçermelidir. Dinleyici [ \<paylaşılan ](sharedlisteners-element.md)dinleyici>tanımlanırsa, bu dinleyicinin filtresi bu öğede tanımlanmalıdır.  
   
- Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe makine yapılandırma dosyasında (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir filtre olay düzeyini `Error`olarak belirterek izleme kaynağı `myTraceSource``Listeners` koleksiyonundaki dinleyic`console` iye bir filtre eklemek için `<filter>` öğesinin nasıl kullanılacağını gösterir.  
+ Aşağıdaki örnek, izleme kaynağı `<filter>` `console` `myTraceSource`için `Error` `Listeners` koleksiyondaki dinleyiciye bir filtre eklemek için öğenin nasıl kullanılacağını gösterir ve filtre olay düzeyini .  
   
 ```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
-      <source name="myTraceSource" switchName="SourceSwitch"   
+      <source name="myTraceSource" switchName="SourceSwitch"
         switchType="System.Diagnostics.SourceSwitch"  >  
         <listeners>  
-          <add name="console"   
+          <add name="console"
             type="System.Diagnostics.ConsoleTraceListener" >  
-            <filter type="System.Diagnostics.EventTypeFilter"   
+            <filter type="System.Diagnostics.EventTypeFilter"
               initializeData="Error" />  
           </add>  
           <remove name="Default" />  

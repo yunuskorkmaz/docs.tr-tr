@@ -15,49 +15,49 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-ms.openlocfilehash: 3e470250fa0e86610fcc9a6d6e2ca03569d62b54
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: edfe5de9c9d7ef9607a2eea5146194bbd4393a92
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449454"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175999"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName Yöntemi
-Adı ve kapsayan türü verilen, verilen bir türe yönelik bir işaretçi alır.  
+Adı ve çevreleyen türü verilen dışa aktarılan bir türü işaretçialır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT FindExportedTypeByName (  
-    [in]  LPCWSTR           szName,   
-    [in]  mdToken           mdtExportedType,   
+    [in]  LPCWSTR           szName,
+    [in]  mdToken           mdtExportedType,
     [out] mdExportedType    *ptkExportedType  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `szName`  
- 'ndaki İçe aktarılmış türün adı.  
+ [içinde] Dışa aktarılan türün adı.  
   
  `mdtExportedType`  
- 'ndaki İçe aktarılmış türün kapsayan sınıfına ait meta veri belirteci. İstenen veriliyor türü iç içe bir tür değilse, bu değer `mdExportedTypeNil`.  
+ [içinde] Dışa aktarılan türdeki enilgili sınıfın meta veri belirteci. İstenilen dışa aktarılan tür iç içe bir tür değilse, bu değerdir. `mdExportedTypeNil`  
   
  `ptkExportedType`  
- dışı `mdExportedType` belirtecin bir işaretçisi, dışarıya aktarılmış türü temsil eder.  
+ [çıkış] Dışa `mdExportedType` aktarılan türü temsil eden belirteç için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `FindExportedTypeByName` yöntemi, başvuruları çözümlemek için ortak dil çalışma zamanı tarafından çalıştırılan standart kuralları kullanır.  
+ Yöntem, `FindExportedTypeByName` başvuruları çözmek için ortak dil çalışma zamanı tarafından kullanılan standart kuralları kullanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** Cor. h  
+ **Üstbilgi:** Cor.h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Çalışma Zamanının Derlemelerin Konumunu Bulması](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

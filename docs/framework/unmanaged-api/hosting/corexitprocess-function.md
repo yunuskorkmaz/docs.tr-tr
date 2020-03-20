@@ -18,43 +18,43 @@ helpviewer_keywords:
 ms.assetid: a5cab4c6-990e-47f3-8798-cf422b791015
 topic_type:
 - apiref
-ms.openlocfilehash: fe61503cdf46b6b2cf568deb78b96f8fa885c203
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 44578595b3cb790570c5359e714bd39c109cf1f8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136928"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176467"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess İşlevi
 Geçerli yönetilmeyen işlemi kapatır.  
   
- Bu işlev .NET Framework 4 ' te kullanım dışıdır. Bunun yerine [ICLRMetaHost:: ExitProcess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) metodunu kullanın.  
+ Bu işlev .NET Framework 4'te amortismana hazırlanmıştır. Bunun yerine [ICLRMetaHost::ExitProcess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) yöntemini kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
-void STDMETHODCALLTYPE CorExitProcess (   
+void STDMETHODCALLTYPE CorExitProcess (
   int  exitCode  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `exitCode`  
- İşlem çıkış kodunu belirten bir tamsayı.  
+ İşlem çıkış kodunu belirten bir sonsayı.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
-> .NET Framework 4 ' ten başlayarak, yalnızca eski API 'Lerin bağlandığı çalışma zamanına değil, işlemdeki tüm başlatılan çalışma zamanına çıkış `CorExitProcess`.  
+> .NET Framework 4'ten `CorExitProcess` başlayarak, sadece eski API'lerin bağlı olduğu çalışma zamanı değil, işlemdeki her başlangıç çalışma zamanından çıkar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE. h  
+ **Üstbilgi:** MSCorEE.h  
   
- **Kitaplık:** MSCorEE. dll  
+ **Kütüphane:** Mscoree.dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

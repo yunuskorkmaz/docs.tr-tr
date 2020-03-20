@@ -1,50 +1,50 @@
 ---
-title: '&amp;&amp; (ve) (Entity SQL)'
+title: '&amp;&amp;(VE) (Varlık SQL)'
 ms.date: 03/30/2017
 ms.assetid: e7d24213-471d-4807-b85e-570375df89b5
-ms.openlocfilehash: be6e7120e6c19714f151aa38a8b9a1355de29d1a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: eccad616de287a39c42e986cea84dc22feec7f70
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039960"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150523"
 ---
-# <a name="ampamp-and-entity-sql"></a>&amp;&amp; (ve) (Entity SQL)
-Her iki ifade de `true``true` döndürür; Aksi takdirde, `false` veya `NULL`.  
+# <a name="ampamp-and-entity-sql"></a>&amp;&amp;(VE) (Varlık SQL)
+Her `true` iki ifade `true`de varsa döndürür; aksi `false` takdirde, ya da `NULL`.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```csharp  
 boolean_expression AND boolean_expression
 ```
- 
-veya  
+
+or  
 
 ```csharp
 boolean_expression && boolean_expression  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  `boolean_expression`  
  Boolean döndüren geçerli bir ifade.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çift ve işareti (& &), ve işleciyle aynı işlevselliğe sahiptir.  
+ Çift amperandlar (&&) AND işleci ile aynı işlevsellik vardır.  
   
  Aşağıdaki tabloda olası giriş değerleri ve dönüş türleri gösterilmektedir.  
   
 ||`TRUE`|`FALSE`|`NULL`|  
 |-|------------|-------------|------------|  
-|`TRUE`|TRUE|YANLÝÞ|NULL|  
-|`FALSE`|YANLÝÞ|YANLÝÞ|YANLÝÞ|  
-|`NULL`|NULL|YANLÝÞ|NULL|  
+|`TRUE`|TRUE|FALSE|NULL|  
+|`FALSE`|FALSE|FALSE|FALSE|  
+|`NULL`|NULL|FALSE|NULL|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki Entity SQL sorgusu, ve işlecinin nasıl kullanılacağını göstermektedir. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
+ Aşağıdaki Entity SQL sorgusu, AND işlecinin nasıl kullanılacağını gösterir. Sorgu AdventureWorks Satış Modeli dayanmaktadır. Bu sorguyı derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. [Nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../how-to-execute-a-query-that-returns-structuraltype-results.md)bölümündeki yordamı izleyin.  
+1. [YapısalTürü Sonuçları Döndüren Bir Sorguyu Yürütme: Nasıl Yapılır'daki](../how-to-execute-a-query-that-returns-structuraltype-results.md)yordamı izleyin.  
   
-2. Aşağıdaki sorguyu `ExecuteStructuralTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
+2. Aşağıdaki sorguyu bağımsız değişken `ExecuteStructuralTypeQuery` olarak yönteme geçirin:  
   
  [!code-csharp[DP EntityServices Concepts 2#AND](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#and)]  
   
