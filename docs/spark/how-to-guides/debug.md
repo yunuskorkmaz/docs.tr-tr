@@ -1,19 +1,19 @@
 ---
-title: Windows 'da Apache Spark uygulama için bir .NET hatası ayıklama
-description: Windows 'da Apache Spark için .NET uygulamanızı nasıl ayıklayacağınızı öğrenin.
+title: Windows'da Apache Spark uygulaması için bir .NET hata ayıklama
+description: Windows'da Apache Spark uygulaması için .NET'inizi nasıl hata ayıklamanız gerektiğini öğrenin.
 ms.date: 01/29/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 25f5291c47dc1cdf2668cb077fae7439e330cc1c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: dac6aed1f7faba7f07b722a6dac0da930ab9ec66
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919935"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185803"
 ---
-# <a name="debug-a-net-for-apache-spark-application"></a>Apache Spark uygulama için bir .NET hatası ayıklama
+# <a name="debug-a-net-for-apache-spark-application"></a>Apache Spark uygulaması için bir .NET hata ayıklama
 
-Bu nasıl yapılır, Windows 'da Apache Spark için .NET uygulamanızı hata ayıklama adımlarını sağlar.
+Bu nasıl yapılsa, Windows'taki Apache Spark uygulaması için .NET'inizi hata ayıklamak için adımlar sağlar.
 
 ## <a name="debug-your-application"></a>Uygulamanızda hata ayıklama
 
@@ -27,7 +27,7 @@ spark-submit \
   debug
 ```
 
-Komutu çalıştırdığınızda aşağıdaki çıktıyı görürsünüz:
+Komutu çalıştırdığınızda, aşağıdaki çıktıyı görürsünüz:
 
 ```console
 ***********************************************************************
@@ -35,22 +35,22 @@ Komutu çalıştırdığınızda aşağıdaki çıktıyı görürsünüz:
 ***********************************************************************
 ```
 
-Hata ayıklama modunda, DotnetRunner .NET uygulamasını başlatmaz, bunun yerine .NET uygulamasını başlatmanız için bekler. Uygulamanızda hata ayıklamak için bu komut istemi penceresini açık bırakın ve hata C# ayıklayıcı aracılığıyla .NET uygulamanızı başlatın. Uygulamanızda hata ayıklamak için, .net C# uygulamanızı bir hata ayıklayıcı ([Windows/MacOS için Visual Studio hata ayıklayıcı](https://visualstudio.microsoft.com/vs/) veya [ C# Visual Studio Code hata ayıklama uzantısı](https://code.visualstudio.com/Docs/editor/debugging)) ile başlatın.
+Hata ayıklama modunda, DotnetRunner .NET uygulamasını başlatmaz, ancak .NET uygulamasını başlatmanızı bekler. Bu komut istemi penceresini açık bırakın ve .NET uygulamanızı C# hata ayıklama yoluyla başlatın ve uygulamanızı hata ayıkla. .NET uygulamanızı hata ayıklamak için bir C# hata[ayıklayıcı (Windows/macOS için Visual Studio Debugger](https://visualstudio.microsoft.com/vs/) veya [Visual Studio Code'da C# Debugger Uzantısı)](https://code.visualstudio.com/Docs/editor/debugging)ile başlatın.
 
-## <a name="debug-a-user-defined-function-udf"></a>Kullanıcı tanımlı bir işlevde hata ayıklama (UDF)
+## <a name="debug-a-user-defined-function-udf"></a>Kullanıcı tanımlı işlevin hata ayıklama (UDF)
 
 > [!NOTE]
-> Kullanıcı tanımlı işlevler yalnızca Visual Studio hata ayıklayıcı ile Windows 'da desteklenir.
+> Kullanıcı tanımlı işlevler yalnızca Visual Studio Debugger ile Windows'da desteklenir.
 
-`spark-submit`çalıştırmadan önce, aşağıdaki ortam değişkenini ayarlayın:
+Çalıştırmadan `spark-submit`önce, aşağıdaki ortam değişkenini ayarlayın:
 
 ```bat
 set DOTNET_WORKER_DEBUG=1
 ```
 
-Spark uygulamanızı çalıştırdığınızda `Choose Just-In-Time Debugger` bir pencere açılır. Bir Visual Studio hata ayıklayıcısı seçin.
+Spark uygulamanızı çalıştırdığınızda, bir `Choose Just-In-Time Debugger` pencere açılır. Visual Studio hata ayıklama seçin.
 
-Hata ayıklayıcı [TaskRunner.cs](https://github.com/dotnet/spark/blob/5e9c08b430b4bc56b5f42252c4b73437377afaed/src/csharp/Microsoft.Spark.Worker/TaskRunner.cs#L52)içinde aşağıdaki konumda kesilir:
+Hata ayıklama [TaskRunner.cs](https://github.com/dotnet/spark/blob/5e9c08b430b4bc56b5f42252c4b73437377afaed/src/csharp/Microsoft.Spark.Worker/TaskRunner.cs#L52)aşağıdaki konumda kırılır:
 
 ```csharp
 if (EnvironmentUtils.GetEnvironmentVariableAsBool("DOTNET_WORKER_DEBUG"))
@@ -59,16 +59,16 @@ if (EnvironmentUtils.GetEnvironmentVariableAsBool("DOTNET_WORKER_DEBUG"))
 }
 ```
 
-Hata ayıklamayı planladığınız UDF 'yi içeren *. cs* dosyasına gidin ve [bir kesme noktası ayarlayın](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints?view=vs-2019). Çalışan, henüz UDF içeren derlemeyi yüklemediği için kesme noktası `The breakpoint will not currently be hit` olur.
+Hata ayıklamayapmayı planladığınız UDF'yi içeren *.cs* dosyasına gidin ve [bir kesme noktası ayarlayın.](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints?view=vs-2019) İşçi udf `The breakpoint will not currently be hit` içeren derlemeyi henüz yüklemediğinden, kesme noktası der ki.
 
-Uygulamanıza devam etmek için `F5` vurun ve kesme noktası sonunda vuracaktır.
+Uygulamanızı devam etmek için vurmak `F5` ve kesme noktası sonunda vurulur.
 
-> [!NOTE] 
-> Tam zamanında hata ayıklayıcı Seç penceresi her bir görev için açılır. Aşırı açılan pencerelerin olmaması için, yürüticilerinin sayısını düşük bir sayı olarak ayarlayın. Örneğin, tek bir hata ayıklayıcı örneği başlatan görev sayısını 1 olarak ayarlamak için Spark-Gönder için **--Master yerel [1]** seçeneğini kullanabilirsiniz.
+> [!NOTE]
+> Her görev için Tam Zamanında Hata Ayıklama penceresi açılır. Aşırı açılır pencerelerden kaçınmak için, çalıştırıcı ların sayısını düşük bir sayıya ayarlayın. Örneğin, tek bir hata ayıklama örneği başlatan görev sayısını 1 olarak ayarlamak için kıvılcım gönderme için **--ana yerel[1]** seçeneğini kullanabilirsiniz.
 
-## <a name="debug-scala-code"></a>Scala kodunda hata ayıklama
+## <a name="debug-scala-code"></a>Hata Ayıklama Scala kodu
 
-Scala tarafı kodunda (`DotnetRunner`, `DotnetBackendHandler`, vb.) hata ayıklaması yapmanız gerekirse, aşağıdaki komutu kullanabilir ve [IntelliJ](https://www.jetbrains.com/help/idea/attaching-to-local-process.html)kullanarak çalışan işleme bir hata ayıklayıcı ekleyebilirsiniz:
+Scala yan kodunu`DotnetRunner`(, , `DotnetBackendHandler`vb.) hata ayıklamanız gerekiyorsa, aşağıdaki komutu kullanabilir ve [IntelliJ](https://www.jetbrains.com/help/idea/attaching-to-local-process.html)kullanarak çalışan işleme hata ayıklama ekleyebilirsiniz:
 
 ```shell
 spark-submit \
@@ -79,11 +79,11 @@ spark-submit \
   <path-to-your-app-exe> <argument(s)-to-your-app>
 ```
 
-Komutu çalıştırdıktan sonra, [IntelliJ](https://www.jetbrains.com/help/idea/attaching-to-local-process.html)kullanarak çalışan işleme bir hata ayıklayıcı ekleyin.
+Komutu çalıştırdıktan sonra, [Intellij](https://www.jetbrains.com/help/idea/attaching-to-local-process.html)kullanarak çalışan işleme bir hata ayıklama takın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-* [Apache Spark için .NET ile çalışmaya başlama](../tutorials/get-started.md)
-* [Azure HDInsight 'a bir .NET Apache Spark uygulaması dağıtma](../tutorials/hdinsight-deployment.md)
-* [Databricks 'e Apache Spark uygulamasına yönelik bir .NET dağıtımı](../tutorials/databricks-deployment.md)
-* [Amazon EMR Spark için bir .NET Apache Spark uygulaması dağıtma](../tutorials/amazon-emr-spark-deployment.md)
+* [Apache Spark için .NET ile başlayın](../tutorials/get-started.md)
+* [Azure HDInsight'a Apache Spark uygulaması için bir .NET dağıtma](../tutorials/hdinsight-deployment.md)
+* [Apache Spark uygulaması için Bir .NET'i Databricks'e dağıtma](../tutorials/databricks-deployment.md)
+* [Amazon EMR Spark'a Apache Spark uygulaması için bir .NET dağıtın](../tutorials/amazon-emr-spark-deployment.md)

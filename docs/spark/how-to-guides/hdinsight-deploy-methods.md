@@ -1,29 +1,29 @@
 ---
-title: Azure HDInsight 'a Apache Spark iş için .NET gönderme
-description: Spark-gönder ve Apache Livy kullanarak Azure HDInsight 'a Apache Spark iş için .NET gönderme hakkında bilgi edinin.
+title: Azure HDInsight'a Apache Spark işi için bir .NET gönderme
+description: Kıvılcım gönder ve Apache Livy'yi kullanarak Azure HDInsight'a Apache Spark için bir .NET işini nasıl göndereceğinizi öğrenin.
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d558234a53cc22d65540a380ac7f5b3ac03ba0ae
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 83359f7f613b500a4ce121ce1612cda0ad1191ab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868024"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185792"
 ---
-# <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>Azure HDInsight 'a Apache Spark iş için .NET gönderme
+# <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>Azure HDInsight'a Apache Spark işi için bir .NET gönderme
 
-Apache Spark iş için .NET uygulamanızı HDInsight 'a dağıtmanın iki yolu vardır: `spark-submit` ve Apache Livy.
+Apache Spark için .NET işinizi HDInsight'a `spark-submit` ve Apache Livy'ye dağıtmanın iki yolu vardır.
 
-## <a name="deploy-using-spark-submit"></a>Spark-gönder kullanarak dağıtma
+## <a name="deploy-using-spark-submit"></a>Kıvılcım gönder'i kullanarak dağıtma
 
-Azure HDInsight 'a Apache Spark işleri için .NET göndermek için [Spark-gönder](https://spark.apache.org/docs/latest/submitting-applications.html) komutunu kullanabilirsiniz.
- 
-1. Azure portal HDInsight Spark kümenize gidin ve ardından **SSH + küme oturumu aç**' ı seçin.
+Apache [Spark](https://spark.apache.org/docs/latest/submitting-applications.html) işleri için .NET'i Azure HDInsight'a göndermek için kıvılcım gönder komutunu kullanabilirsiniz.
 
-2. SSH oturum açma bilgilerini kopyalayın ve oturumu bir terminale yapıştırın. Küme oluşturma sırasında ayarladığınız parolayı kullanarak kümenizde oturum açın. Sizi Ubuntu ve Spark 'a yönlendiren iletiler görmeniz gerekir.
+1. Azure portalında HDInsight Spark kümenize gidin ve ardından **SSH + Cluster oturum açma'yı**seçin.
 
-3. Uygulamanızı HDInsight kümenizde çalıştırmak için **Spark-gönder** komutunu kullanın. Örnek betikteki **myContainer** ve **mystorageaccount** ' ın blob Kapsayıcınızın ve depolama hesabınızın gerçek adlarıyla değiştirilmesini unutmayın. Ayrıca `microsoft-spark-2.3.x-0.6.0.jar`, dağıtım için kullanmakta olduğunuz uygun jar dosyası ile değiştirdiğinizden emin olun. `2.3.x`, Apache Spark sürümünü temsil eder ve `0.6.0` [Apache Spark Worker için .net](https://github.com/dotnet/spark/releases)sürümünü temsil eder.
+2. Ssh giriş bilgilerini kopyalayın ve girişi bir terminale yapıştırın. Küme oluşturma sırasında ayarladığınız parolayı kullanarak kümenizde oturum açın. Ubuntu ve Spark'a hoş geldin mesajları görmelisin.
+
+3. UYGULAMANIZI HDInsight kümenizde çalıştırmak için **kıvılcım gönder** komutunu kullanın. Örnek komut dosyasındaki **mycontainer** ve **mystorage account'u** blob kapsayıcınızın ve depolama hesabınızın gerçek adlarıyla değiştirmeyi unutmayın. Ayrıca, dağıtım için `microsoft-spark-2.3.x-0.6.0.jar` kullandığınız uygun kavanoz dosyasıyla değiştirdiğinden emin olun. `2.3.x`Apache Spark sürümünü temsil `0.6.0` eder ve [Apache Spark işçisi için .NET](https://github.com/dotnet/spark/releases)sürümünü temsil eder.
 
    ```bash
    $SPARK_HOME/bin/spark-submit \
@@ -33,11 +33,11 @@ Azure HDInsight 'a Apache Spark işleri için .NET göndermek için [Spark-gönd
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
 
-## <a name="deploy-using-apache-livy"></a>Apache Livy kullanarak dağıtma
+## <a name="deploy-using-apache-livy"></a>Apache Livy kullanarak dağıtın
 
-Apache Spark işlerini bir Azure HDInsight Spark kümesine göndermek için Apache Spark REST API [Apache Livy](https://livy.incubator.apache.org/)'ı kullanabilirsiniz. Daha fazla bilgi için bkz. [Apache Livy Ile uzak işler](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-livy-rest-interface).
+[Apache Livy](https://livy.incubator.apache.org/),Apache Spark REST API'yi kullanarak Apache Spark işleri için .NET'i bir Azure HDInsight Spark kümesine gönderebilirsiniz. Daha fazla bilgi için, [Apache Livy ile Uzak işleri](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-livy-rest-interface)bakın.
 
-Linux üzerinde `curl`kullanarak aşağıdaki komutu çalıştırabilirsiniz:
+Aşağıdaki komutu Kullanarak Linux `curl`üzerinde çalıştırabilirsiniz:
 
 ```bash
 curl -k -v -X POST "https://<your spark cluster>.azurehdinsight.net/livy/batches" \
@@ -56,6 +56,6 @@ EOF
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-* [Apache Spark için .NET ile çalışmaya başlama](../tutorials/get-started.md)
-* [Azure HDInsight 'a bir .NET Apache Spark uygulaması dağıtma](../tutorials/hdinsight-deployment.md)
-* [HDInsight belgeleri](https://docs.microsoft.com/azure/hdinsight/)
+* [Apache Spark için .NET ile başlayın](../tutorials/get-started.md)
+* [Azure HDInsight'a Apache Spark uygulaması için bir .NET dağıtma](../tutorials/hdinsight-deployment.md)
+* [HDInsight Dokümantasyon](https://docs.microsoft.com/azure/hdinsight/)

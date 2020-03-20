@@ -1,59 +1,59 @@
 ---
-title: Apache Spark öğreticisi için .NET ile yapılandırılmış akış
-description: Bu öğreticide, Spark yapılandırılmış akış için Apache Spark .NET kullanmayı öğreneceksiniz.
+title: Apache Spark öğretici için .NET ile Yapılandırılmış Akış
+description: Bu eğitimde, Spark Structured Streaming için Apache Spark için .NET'i nasıl kullanacağınızı öğreneceksiniz.
 author: mamccrea
 ms.author: mamccrea
 ms.date: 12/04/2019
 ms.topic: tutorial
-ms.openlocfilehash: 83d44af080d95ab6f9311ddd3ca4860806757436
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 125ef834da8e42c99c8080a3d5414a7927ce7636
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504036"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79186507"
 ---
-# <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>Öğretici: Apache Spark için .NET ile yapılandırılmış akış 
+# <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>Öğretici: Apache Spark için .NET ile Yapılandırılmış Akış
 
-Bu öğreticide, Apache Spark için .NET kullanarak Spark yapılandırılmış akış çağırma öğretilir. Spark yapısal akışı, gerçek zamanlı veri akışlarını işleme Apache Spark. Akış işleme, canlı verileri üretildiğinde analiz anlamına gelir.
+Bu öğretici, Apache Spark için .NET kullanarak Spark Yapılandırılmış Akışı nasıl çağıracağınız öğretilir. Spark Structured Streaming, Apache Spark'ın gerçek zamanlı veri akışlarını işlemek için verdiği destektir. Akış işleme, canlı verilerin üretilirken analiz edilmesi anlamına gelir.
 
 Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
 
 > [!div class="checklist"]
 >
-> * Apache Spark uygulaması için .NET oluşturma ve çalıştırma
-> * Netcat kullanarak bir veri akışı oluşturun
-> * Akış verilerini çözümlemek için Kullanıcı tanımlı işlevler ve parlak SQL kullanma
+> * Apache Spark uygulaması için bir .NET oluşturma ve çalıştırma
+> * Veri akışı oluşturmak için netcat'i kullanma
+> * Akış verilerini analiz etmek için kullanıcı tanımlı işlevleri ve SparkSQL'i kullanma
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Apache Spark uygulama için ilk .NET ise, temel bilgileri öğrenecek başlangıç [öğreticisiyle](get-started.md) başlayın.
+Apache Spark uygulaması için ilk .NET uygulamanızsa, temel bilgileri tanımak için [Başlangıç eğitimiyle](get-started.md) başlayın.
 
 ## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 
-1. Komut istemindeki yeni bir konsol uygulaması oluşturmak için aşağıdaki komutları çalıştırın:
+1. Komut isteminizde, yeni bir konsol uygulaması oluşturmak için aşağıdaki komutları çalıştırın:
 
    ```dotnetcli
    dotnet new console -o mySparkStreamingApp
    cd mySparkStreamingApp
    ```
 
-   `dotnet` komutu sizin için `console` türünde bir `new` uygulaması oluşturur. `-o` parametresi, uygulamanızın depolandığı *Mymini Streamingapp* adlı bir dizin oluşturur ve gerekli dosyalarla doldurur. `cd mySparkStreamingApp` komutu, dizini yeni oluşturduğunuz uygulama diziniyle değiştirir.
+   Komut `dotnet` sizin için `new` bir `console` tür uygulaması oluşturur. Parametre, `-o` uygulamanızın depolandığı *mySparkStreamingApp* adında bir dizin oluşturur ve gerekli dosyalarla doldurulur. Komut, `cd mySparkStreamingApp` dizini yeni oluşturduğunuz uygulama dizinine değiştirir.
 
-1. .NET uygulamasını bir uygulamada Apache Spark için kullanmak üzere Microsoft. Spark paketini yüklemek için. Konsolunuza aşağıdaki komutu çalıştırın:
+1. Bir uygulamada Apache Spark için .NET'i kullanmak için Microsoft.Spark paketini yükleyin. Konsolunuzda aşağıdaki komutu çalıştırın:
 
    ```dotnetcli
    dotnet add package Microsoft.Spark
    ```
 
-## <a name="establish-and-connect-to-a-data-stream"></a>Bir veri akışı oluşturun ve bu akışa bağlanın
+## <a name="establish-and-connect-to-a-data-stream"></a>Veri akışı oluşturma ve bağlanma
 
-Akış işlemeyi test etmenin popüler bir yolu **netcat**kullanmaktır. netcat ( *NC*olarak da bilinir) ağ bağlantılarından okuyup yazmanızı sağlar. Bir Terminal penceresi aracılığıyla netcat ile bir ağ bağlantısı kurarsınız. 
+Akış işlemetest etmek için bir popüler yolu **netcat**geçer. netcat *(nc*olarak da bilinir) ağ bağlantılarından okumanızı ve yazmanızı sağlar. Terminal penceresinden netcat ile ağ bağlantısı kurarsınız.
 
-### <a name="create-a-data-stream-with-netcat"></a>Netcat ile veri akışı oluşturma
+### <a name="create-a-data-stream-with-netcat"></a>netcat ile veri akışı oluşturma
 
-1. [Netcat 'ı indirin](https://sourceforge.net/projects/nc110/files/). Sonra, dosyayı ZIP indirsitesinden ayıklayın ve "PATH" ortam değişkeninizden ayıkladığınız dizini ekleyin.
+1. [Netcat'i indirin.](https://sourceforge.net/projects/nc110/files/) Ardından, dosyayı zip indirmeden ayıklayın ve çıkardığınız dizin "PATH" ortam değişkenine ekleyip.
 
-2. Yeni bir bağlantı başlatmak için yeni bir konsol açın ve 9999 numaralı bağlantı noktasında localhost 'a bağlanan aşağıdaki komutu çalıştırın.
+2. Yeni bir bağlantı başlatmak için yeni bir konsol açın ve 9999 portundaki localhost'a bağlanan aşağıdaki komutu çalıştırın.
 
    Windows'da:
 
@@ -67,11 +67,11 @@ Akış işlemeyi test etmenin popüler bir yolu **netcat**kullanmaktır. netcat 
    nc -lk 9999
    ```
 
-   Spark programınız, bu komut istemine yazdığınız girişi dinler.
+   Spark programınız bu komut istemine yazdığınız girişi dinler.
 
-### <a name="create-a-sparksession"></a>Mini oturum oluşturma
+### <a name="create-a-sparksession"></a>Bir SparkSession oluşturma
 
-1. Aşağıdaki ek `using` deyimlerini *Mymini Streamingapp*içindeki *program.cs* dosyasının en üstüne ekleyin:
+1. `using` *mySparkStreamingApp'taki* *Program.cs* dosyasının üst bölümüne aşağıdaki ek ifadeleri ekleyin:
 
    ```csharp
    using System;
@@ -80,7 +80,7 @@ Akış işlemeyi test etmenin popüler bir yolu **netcat**kullanmaktır. netcat 
    using static Microsoft.Spark.Sql.Functions;
    ```
 
-1. Yeni bir `SparkSession`oluşturmak için `Main` yöntemine aşağıdaki kodu ekleyin. Spark oturumu, veri kümesi ve DataFrame API 'SI ile Spark programlamanın giriş noktasıdır.
+1. `Main` Yeni `SparkSession`bir . Kıvılcım Oturumu, Dataset ve DataFrame API ile Spark programlamanın giriş noktasıdır.
 
    ```csharp
    SparkSession spark = SparkSession
@@ -89,11 +89,11 @@ Akış işlemeyi test etmenin popüler bir yolu **netcat**kullanmaktır. netcat 
         .GetOrCreate();
    ```
 
-   Yukarıda oluşturulan *Spark* nesnesini çağırmak, programınızın tamamında Spark ve dataframe işlevlerine erişmenize olanak tanır.
+   Yukarıda oluşturulan *kıvılcım* nesnesini aramak, programınız boyunca Spark ve DataFrame işlevlerine erişmenizi sağlar.
 
-### <a name="connect-to-a-stream-with-readstream"></a>ReadStream () ile bir akışa bağlanma
+### <a name="connect-to-a-stream-with-readstream"></a>ReadStream ile bir akışa bağlanın()
 
-`ReadStream()` yöntemi, içindeki akış verilerini `DataFrame`olarak okumak için kullanılabilecek bir `DataStreamReader` döndürür. Spark uygulamanıza akış verilerinin nerede beklendiğini bildirmek için konak ve bağlantı noktası bilgilerini ekleyin.
+Yöntem, `ReadStream()` akış `DataStreamReader` verilerini bir ' de okumak `DataFrame`için kullanılabilecek bir yöntem döndürür. Spark uygulamanıza akış verilerini nerede beklediğini söylemek için ana bilgisayar ve bağlantı noktası bilgilerini ekleyin.
 
 ```csharp
 DataFrame lines = spark
@@ -104,37 +104,37 @@ DataFrame lines = spark
     .Load();
 ```
 
-## <a name="register-a-user-defined-function"></a>Kullanıcı tanımlı bir işlevi kaydetme
+## <a name="register-a-user-defined-function"></a>Kullanıcı tanımlı bir işlev kaydetme
 
-Verilerinizde hesaplamalar ve analiz yapmak için Spark uygulamalarında Kullanıcı tanımlı UDF 'ler, *Kullanıcı tanımlı işlevler*' i kullanabilirsiniz.
+Verilerinizde hesaplamalar ve analizler gerçekleştirmek için Spark uygulamalarında *kullanıcı tanımlı işlevler*olan UDF'leri kullanabilirsiniz.
 
-`udfArray`adlı bir UDF kaydetmek için `Main` yöntemine aşağıdaki kodu ekleyin. 
+Bir UDF'yi `Main` `udfArray`kaydetmek için yönteminize aşağıdaki kodu ekleyin.
 
 ```csharp
 Func<Column, Column> udfArray =
     Udf<string, string[]>((str) => new string[] { str, $"{str} {str.Length}" });
 ```
 
-Bu UDF, özgün dizeyi ( *Str*içinde bulunur) içeren bir dizi oluşturmak için netcat terminalinden aldığı her dizeyi işler ve özgün dizenin uzunluğu ile birleştirilmiş özgün dizenin önüne gelir. 
+Bu UDF, netcat terminalinden aldığı her dizeyi, özgün dizeyi *(str'de*bulunan) içeren bir dizi oluşturmak için işler ve ardından özgün dize uzunluğuyla birlikte eklenen özgün dizeyi işler.
 
-Örneğin, Netcat terminalinde *Hello World* girilmesi, şu durumlarda bir dizi üretir:
+Örneğin, netcat terminalinde *Hello dünyasına* girmek aşağıdakileri yaptığı bir dizi üretir:
 
-* dizi\[0] = Merhaba Dünya
-* dizi\[1] = Merhaba Dünya 11
+* dizi\[0] = Merhaba dünya
+* dizi\[1] = Merhaba dünya 11
 
-## <a name="use-sparksql"></a>Mini kullanılan SQL kullan
+## <a name="use-sparksql"></a>SparkSQL kullanın
 
-Veri Çerçeverinizdeki depolanan veriler üzerinde çeşitli işlevler gerçekleştirmek için, parlak SQL kullanın. Veri çerçevesinin her satırına bir UDF uygulamak için UDF 'Leri ve parlak SQL 'i birleştirmek yaygındır.
+DataFrame'inizde depolanan verilerüzerinde çeşitli işlevleri gerçekleştirmek için SparkSQL'i kullanın. Bir DataFrame'in her satırına UDF uygulamak için UDF'leri ve SparkSQL'i birleştirmek yaygındır.
 
 ```csharp
 DataFrame arrayDF = lines.Select(Explode(udfArray(lines["value"])));
 ```
 
-Bu kod parçacığı, Netcat terminalinizden okunan her dizeyi temsil eden veri Çerçevenizle her bir değere *Udfarray* uygular. Dizinizin her girdisini kendi satırına yerleştirmek için <xref:Microsoft.Spark.Sql.Functions.Explode%2A>, Mini SQL metodunu uygulayın. Son olarak, yeni DataFrame *Arraydf* içinde üretilebilen sütunları yerleştirmek için <xref:Microsoft.Spark.Sql.DataFrame.Select%2A> kullanın.
+Bu kod snippet, netcat terminalinizden okunan her dizeyi temsil eden DataFrame'inizdeki her değere *udfArray* uygular. Dizinizin her <xref:Microsoft.Spark.Sql.Functions.Explode%2A> girişini kendi satırına koymak için SparkSQL yöntemini uygulayın. Son olarak, yeni DataFrame <xref:Microsoft.Spark.Sql.DataFrame.Select%2A> *arrayDF'de* ürettiğiniz sütunları yerleştirmek için kullanın.
 
 ## <a name="display-your-stream"></a>Akışınızı görüntüleme
 
-Sonuçları konsola yazdırma ve yalnızca en son çıktıyı görüntüleme gibi, çıktlarınızın özelliklerini oluşturmak için <xref:Microsoft.Spark.Sql.DataFrame.WriteStream> kullanın.
+Sonuçları <xref:Microsoft.Spark.Sql.DataFrame.WriteStream> konsola yazdırmak ve yalnızca en son çıktıyı görüntülemek gibi çıktınızın özelliklerini oluşturmak için kullanın.
 
 ```csharp
 StreamingQuery query = arrayDf
@@ -145,29 +145,29 @@ StreamingQuery query = arrayDf
 
 ## <a name="run-your-code"></a>Kodunuzu çalıştırın
 
-Spark 'ta yapılandırılmış akış, bir dizi küçük **toplu iş**aracılığıyla verileri işler.  Programınızı çalıştırdığınızda, Netcat bağlantısını oluşturduğunuz komut istemi yazmaya başlayabilmeniz için izin verir. Bu komut istemine veri yazdıktan sonra ENTER tuşuna her bastığınızda, Spark girişi bir toplu iş olarak değerlendirir ve UDF 'yi çalıştırır.
+Spark'taki yapılandırılmış akış, verileri bir dizi küçük **toplu işlem**le işler.  Programınızı çalıştırdığınızda, netcat bağlantısını kurduğunuz komut istemi yazmaya başlamanızı sağlar. Bu komut istemine veri yazdıktan sonra Enter tuşuna her bastığınızda, Spark girişinizi bir toplu iş olarak kabul eder ve UDF'yi çalıştırır.
 
-### <a name="use-spark-submit-to-run-your-app"></a>Uygulamanızı çalıştırmak için Spark-Gönder kullanın
+### <a name="use-spark-submit-to-run-your-app"></a>Uygulamanızı çalıştırmak için kıvılcım gönder'i kullanma
 
-Yeni bir netcat oturumu başlattıktan sonra, yeni bir Terminal açın ve aşağıdaki komuta benzer şekilde `spark-submit` komutunu çalıştırın:
+Yeni bir netcat oturumuna başladıktan sonra, `spark-submit` yeni bir terminal açın ve aşağıdaki komuta benzer şekilde komutunuzu çalıştırın:
 
 ```powershell
 spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /path/to/microsoft-spark-<version>.jar Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredNetworkCharacterCount localhost 9999
 ```
 
 > [!NOTE]
-> Yukarıdaki komutu, Microsoft Spark jar dosyanızın gerçek yoluyla güncelleştirdiğinizden emin olun. Yukarıdaki komut Ayrıca, Netcat sunucunuzun localhost bağlantı noktası 9999 üzerinde çalıştığını varsayar.
+> Yukarıdaki komutu Microsoft Spark jar dosyanıza giden gerçek yol ile güncelleştirdiğinden emin olun. Yukarıdaki komut, netcat sunucunuzun localhost port 9999'da çalıştığını da varsayar.
 
 ## <a name="get-the-code"></a>Kodu alma
 
-Bu öğretici [StructuredNetworkCharacterCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkCharacterCount.cs) örneğini kullanır, ancak GitHub 'da üç farklı tam akış işleme örneği vardır:
+Bu öğretici [StructuredNetworkCharacterCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkCharacterCount.cs) örneğini kullanır, ancak GitHub'da üç tam akış işleme örneği daha vardır:
 
-* [StructuredNetworkWordCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs): herhangi bir kaynaktan akan verilerdeki sözcük sayısı
-* [StructuredNetworkWordCountWindowed.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCountWindowed.cs): Pencereleme mantığı ile veri üzerinde sözcük sayısı
-* [StructuredKafkaWordCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs): Kafka 'den akan verilerdeki sözcük sayısı
+* [StructuredNetworkWordCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs): herhangi bir kaynaktan aktarılan verilere ilişkin sözcük sayısı
+* [StructuredNetworkWordCountWindowed.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCountWindowed.cs): pencereleme mantığı ile verilere kelime sayısı
+* [StructuredKafkaWordCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs): Kafka'dan aktarılan verilere ilişkin kelime sayısı
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-.NET Apache Spark uygulamanızı Databricks 'e dağıtmayı öğrenmek için sonraki makaleye ilerleyin.
+Apache Spark uygulamanızı Databricks'e nasıl dağıtacağınız hakkında bilgi edinmek için bir sonraki makaleye ilerleyin.
 > [!div class="nextstepaction"]
-> [Öğretici: Databricks 'e Apache Spark uygulamasına yönelik bir .NET dağıtımı](databricks-deployment.md)
+> [Öğretici: Databricks'e Apache Spark uygulaması için bir .NET dağıtma](databricks-deployment.md)

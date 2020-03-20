@@ -1,27 +1,27 @@
 ---
-title: Ubuntu üzerinde Apache Spark uygulaması için .NET oluşturma
-description: Ubuntu 'da Apache Spark için .NET uygulamanızı nasıl oluşturacağınızı öğrenin
+title: Ubuntu'da Apache Spark uygulaması için bir .NET oluşturma
+description: Ubuntu'da Apache Spark uygulaması için .NET'inizi nasıl oluşturacağınız hakkında bilgi edinin
 ms.date: 01/29/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: a12c861d0f231910f715a13fd41d1f3f0d6748a7
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 6dd6f60bb89a51c47fe17182fc47de818cd00b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76928045"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187565"
 ---
-# <a name="learn-how-to-build-your-net-for-apache-spark-application-on-ubuntu"></a>Ubuntu 'da Apache Spark için .NET uygulamanızı nasıl oluşturacağınızı öğrenin
+# <a name="learn-how-to-build-your-net-for-apache-spark-application-on-ubuntu"></a>Ubuntu'da Apache Spark uygulaması için .NET'inizi nasıl oluşturacağınız hakkında bilgi edinin
 
-Bu makalede, Ubuntu üzerinde Apache Spark uygulamalarınızı .NET için nasıl oluşturabileceğiniz öğretilir.
+Bu makalede, Ubuntu'da Apache Spark uygulamaları için .NET'inizi nasıl oluşturabileceğinizöğretilir.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
-Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adımlarına atlayın.
+Aşağıdaki ön koşulların tümüne zaten sahipseniz, [yapı](#build) adımlarına atlayın.
 
-1. **[.Net core 2,1 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1)** 'sını veya **[.NET Core 3,1 SDK 'sını](https://dotnet.microsoft.com/download/dotnet-core/3.1)** indirin ve yükleyin-SDK 'yı yüklemek, yolunuza `dotnet` toolzincirini ekler.  .NET Core 2,1, 2,2 ve 3,1 desteklenir.
+1. .NET **[Core 2.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1)** veya **[.NET Core 3.1 SDK'yı](https://dotnet.microsoft.com/download/dotnet-core/3.1)** `dotnet` indirin ve kurun - SDK'yı yüklemek araç zincirini yolunuza ekler.  .NET Core 2.1, 2.2 ve 3.1 desteklenir.
 
-2. **[OpenJDK 8](https://openjdk.java.net/install/)** ' i yükler. 
+2. **[OpenJDK 8'i](https://openjdk.java.net/install/)** yükleyin.
 
    - Aşağıdaki komutu kullanabilirsiniz:
 
@@ -29,23 +29,23 @@ Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adıml
    sudo apt install openjdk-8-jdk
    ```
 
-   * Komut satırınızdan `java` çalıştırabildiğinizi doğrulayın.       
+   * Komut satırınızdan çalıştırabileceğinizi `java` doğrulayın.
 
-      Örnek Java-sürüm çıkışı:
-          
+      Örnek java sürüm çıktısı:
+
       ```bash
       openjdk version "1.8.0_191"
       OpenJDK Runtime Environment (build 1.8.0_191-8u191-b12-2ubuntu0.18.04.1-b12)
       OpenJDK 64-Bit Server VM (build 25.191-b12, mixed mode)
       ```
 
-   * Zaten birden fazla OpenJDK sürümü yüklüyse ve OpenJDK 8 ' i seçmek istiyorsanız aşağıdaki komutu kullanın:
+   * Zaten birden çok OpenJDK sürümü yüklüyse ve OpenJDK 8'i seçmek istiyorsanız, aşağıdaki komutu kullanın:
 
       ```bash
       sudo update-alternatives --config java
       ```
 
-3. **[Apache Maven 3.6.0 +](https://maven.apache.org/download.cgi)** 'yi yükler.
+3. **[Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)** yükleyin.
 
    * Şu komutu çalıştırın:
 
@@ -59,13 +59,13 @@ Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adıml
       export PATH=${M2_HOME}/bin:${PATH}
       source ~/.bashrc
       ```
-       
-       Terminalinizi kapattığınızda bu ortam değişkenlerinin kaybolacağını unutmayın. Değişikliklerin kalıcı olmasını istiyorsanız `~/.bashrc` dosyanıza `export` satırları ekleyin.
 
-   * Komut satırınızdan `mvn` çalıştırabildiğinizi doğrulayın       
+       Terminalinizi kapattığınızda bu ortam değişkenlerinin kaybolacağını unutmayın. Değişikliklerin kalıcı olmasını istiyorsanız, `export` satırları dosyanıza `~/.bashrc` ekleyin.
 
-       Örnek MVN sürümü çıkışı:
-       
+   * Komut satırınızdan çalıştırabildiğinizi `mvn` doğrulayın
+
+       Örnek mvn-sürüm çıktısı:
+
        ```
        Apache Maven 3.6.0 (97c98ec64a1fdfee7767ce5ffb20918da4f719f3; 2018-10-24T18:41:47Z)
        Maven home: ~/bin/apache-maven-3.6.0
@@ -74,27 +74,27 @@ Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adıml
        OS name: "linux", version: "4.4.0-17763-microsoft", arch: "amd64", family: "unix"
        ```
 
-4. **[Apache Spark 2.3 +](https://spark.apache.org/downloads.html)** ' yı yükler.
-[Apache Spark 2.3 +](https://spark.apache.org/downloads.html) indirin ve yerel bir klasöre ayıklayın (ör., `~/bin/spark-2.3.2-bin-hadoop2.7`). (Desteklenen Spark sürümleri 2,3. *, 2.4.0, 2.4.1, 2.4.3 ve 2.4.4)
+4. **[Apache Spark 2.3+ yükleyin.](https://spark.apache.org/downloads.html)**
+[Apache Spark 2.3+](https://spark.apache.org/downloads.html) indirin ve yerel bir klasöre `~/bin/spark-2.3.2-bin-hadoop2.7`ayıklayın (örn. ). (Desteklenen kıvılcım versiyonları 2.3.*, 2.4.0, 2.4.1, 2.4.3 ve 2.4.4'tür)
 
    ```bash
    tar -xvzf /path/to/spark-2.3.2-bin-hadoop2.7.tgz -C ~/bin/spark-2.3.2-bin-hadoop2.7
    ```
 
-   * Gerekli [ortam değişkenlerini](https://www.java.com/en/download/help/path.xml) `SPARK_HOME` ekleyin (örneğin, `~/bin/spark-2.3.2-bin-hadoop2.7/`) ve `PATH` (örn. `$SPARK_HOME/bin:$PATH`)
+   * Gerekli [ortam değişkenlerini](https://www.java.com/en/download/help/path.xml) `SPARK_HOME` (örn. `~/bin/spark-2.3.2-bin-hadoop2.7/`) ve `PATH` (örn. `$SPARK_HOME/bin:$PATH`
 
       ```bash
       export SPARK_HOME=~/bin/spark-2.3.2-hadoop2.7
       export PATH="$SPARK_HOME/bin:$PATH"
       source ~/.bashrc
       ```
-       
-      Terminalinizi kapattığınızda bu ortam değişkenlerinin kaybolacağını unutmayın. Değişikliklerin kalıcı olmasını istiyorsanız `~/.bashrc` dosyanıza `export` satırları ekleyin.
 
-   * Komut satırınızdan `spark-shell` çalıştırabildiğinizi doğrulayın.
+      Terminalinizi kapattığınızda bu ortam değişkenlerinin kaybolacağını unutmayın. Değişikliklerin kalıcı olmasını istiyorsanız, `export` satırları dosyanıza `~/.bashrc` ekleyin.
+
+   * Komut satırınızdan çalıştırabileceğinizi `spark-shell` doğrulayın.
 
       Örnek konsol çıkışı:
-      
+
       ```
       Welcome to
             ____              __
@@ -109,52 +109,52 @@ Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adıml
 
       scala> sc
       res0: org.apache.spark.SparkContext = org.apache.spark.SparkContext@6eaa6b0c
-      ```                      
+      ```
 
-Bir sonraki bölüme geçmeden önce komut satırınızdan `dotnet`, `java`, `mvn``spark-shell` çalıştırabildiğinizden emin olun. Daha iyi bir yol var mı? Lütfen [bir sorun açıp](https://github.com/dotnet/spark/issues) katkıda bulunmaktan çekinmeyin.
+Bir sonraki bölüme `dotnet`geçmeden `java` `mvn`önce `spark-shell` komut satırınızdan , , , çalıştırabildiğinizden emin olun. Daha iyi bir yol olduğunu mu düşünüyorsun? Lütfen [bir sorun açın](https://github.com/dotnet/spark/issues) ve katkıda bulunmakiçin çekinmeyin.
 
-## <a name="build"></a>{1&gt;Yapı (Build)&lt;1}
+## <a name="build"></a>Oluşturma
 
-Bu kılavuzun geri kalanında, .NET Apache Spark deposunu makinenize kopyaladınız, örneğin, `~/dotnet.spark/`.
+Bu kılavuzun geri kalanı için, apache Spark deposu için .NET'i makinenize klonlamış olmanız `~/dotnet.spark/`gerekir.
 
 ```bash
 git clone https://github.com/dotnet/spark.git ~/dotnet.spark
 ```
 
-### <a name="build-net-for-spark-scala-extensions-layer"></a>Spark Scala uzantıları katmanı için .NET derleme
+### <a name="build-net-for-spark-scala-extensions-layer"></a>Kıvılcım Scala uzantıları katmanı için .NET oluştur
 
-.NET uygulaması gönderdiğinizde, Apache Spark için .NET, isteklerinizi nasıl işleyeceğinizi (örneğin, yeni bir Spark oturumu oluşturma isteği, .NET tarafından JVM 'ye veri aktarma isteği vb.) Apache Spark bildiren gerekli mantığı içerir. Bu mantık, [Apache Spark Scala kaynak kodu için .net](https://github.com/dotnet/spark/tree/master/src/scala)içinde bulunabilir.
+Bir .NET başvurusu yaptığınızda, .NET for Apache Spark,Scala'da yazılı olan ve Apache Spark'a isteklerinizi nasıl işleyeceğini bildiren gerekli bir mantığa sahiptir (örneğin, yeni bir Kıvılcım Oturumu oluşturma isteği, .NET tarafından JVM tarafına veri aktarımı isteği vb.). Bu mantık [Apache Spark Scala Kaynak Kodu için .NET](https://github.com/dotnet/spark/tree/master/src/scala)bulunabilir.
 
-Sonraki adım, Apache Spark Scala uzantı katmanını .NET için derlemenize yöneliktir:
+Bir sonraki adım Apache Spark Scala uzantısı katmanı için .NET oluşturmaktır:
 
 ```bash
 cd src/scala
-mvn clean package 
+mvn clean package
 ```
 
-Desteklenen Spark sürümleri için oluşturulan JARs ' i görmeniz gerekir:
+Desteklenen Spark sürümleri için oluşturulan JAR'ları görmelisiniz:
 
 * `microsoft-spark-2.3.x/target/microsoft-spark-2.3.x-<version>.jar`
 * `microsoft-spark-2.4.x/target/microsoft-spark-2.4.x-<version>.jar`
 
-### <a name="build-net-sample-applications-using-net-core-cli"></a>.NET Core CLI kullanarak .NET örnek uygulamaları oluşturun
+### <a name="build-net-sample-applications-using-net-core-cli"></a>.NET Core CLI kullanarak .NET örnek uygulamalar oluşturun
 
-Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.com/dotnet/spark/tree/master/examples) nasıl oluşturulacağı açıklanmaktadır. Bu adımlar, tüm Spark uygulamaları için tüm .NET oluşturma sürecini kavramaya yardımcı olur.
+Bu bölümde, Apache Spark için .NET [için örnek uygulamaların](https://github.com/dotnet/spark/tree/master/examples) nasıl oluşturulabildiği açıklanmaktadır. Bu adımlar, Kıvılcım uygulaması için herhangi bir .NET için genel oluşturma işlemini anlamada yardımcı olacaktır.
 
-1. Çalışanı oluşturun:
+1. İşçiyi oluşturun:
 
    ```dotnetcli
    cd ~/dotnet.spark/src/csharp/Microsoft.Spark.Worker/
    dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
    ```
-      
+
    Örnek konsol çıkışı:
 
    ```bash
    user@machine:/home/user/dotnet.spark/src/csharp/Microsoft.Spark.Worker$ dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
    Microsoft (R) Build Engine version 16.0.462+g62fb89029d for .NET Core
    Copyright (C) Microsoft Corporation. All rights reserved.
-      
+
       Restore completed in 36.03 ms for /home/user/dotnet.spark/src/csharp/Microsoft.Spark.Worker/Microsoft.Spark.Worker.csproj.
       Restore completed in 35.94 ms for /home/user/dotnet.spark/src/csharp/Microsoft.Spark/Microsoft.Spark.csproj.
       Microsoft.Spark -> /home/user/dotnet.spark/artifacts/bin/Microsoft.Spark/Debug/netstandard2.0/Microsoft.Spark.dll
@@ -168,7 +168,7 @@ Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.
    cd ~/dotnet.spark/examples/Microsoft.Spark.CSharp.Examples/
    dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
    ```
-      
+
    Örnek konsol çıkışı:
 
    ```bash
@@ -183,17 +183,17 @@ Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.
       Microsoft.Spark.CSharp.Examples -> /home/user/dotnet.spark/artifacts/bin/Microsoft.Spark.CSharp.Examples/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish/
    ```  
 
-## <a name="run-the-net-for-spark-sample-applications"></a>Spark örnek uygulamaları için .NET çalıştırın
+## <a name="run-the-net-for-spark-sample-applications"></a>Kıvılcım örnek uygulamaları için .NET'i çalıştırın
 
-Örnekleri derleyip, .NET Core uygulamalarınızı göndermek için `spark-submit` kullanabilirsiniz. [Önkoşul](#prerequisites) bölümünü izlediğinizden ve Apache Spark yüklediğinizden emin olun.
+Örnekleri oluşturduğunuzda ,.NET `spark-submit` Core uygulamalarınızı göndermek için kullanabilirsiniz. [Önkoşullar](#prerequisites) bölümünü takip ettiğinizden ve Apache Spark'ı yüklediğinizden emin olun.
 
-1. `DOTNET_WORKER_DIR` veya `PATH` ortam değişkenini `Microsoft.Spark.Worker` ikilisinin oluşturulduğu yolu içerecek şekilde ayarlayın (örn., `~/dotnet.spark/artifacts/bin/Microsoft.Spark.Worker/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish`).
+1. `Microsoft.Spark.Worker` Veya `DOTNET_WORKER_DIR` `PATH` ortam değişkenini ikilinin oluşturulduğu yolu içerecek şekilde ayarlayın `~/dotnet.spark/artifacts/bin/Microsoft.Spark.Worker/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish`(örn.. ).
 
    ```bash
    export DOTNET_WORKER_DIR=~/dotnet.spark/artifacts/bin/Microsoft.Spark.Worker/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish
    ```
 
-2. Bir Terminal açın ve uygulama ikilisinin oluşturulduğu dizine gidin (örneğin, `~/dotnet.spark/artifacts/bin/Microsoft.Spark.CSharp.Examples/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish`).
+2. Bir terminal açın ve uygulama ikilinizin oluşturulduğu dizine gidin `~/dotnet.spark/artifacts/bin/Microsoft.Spark.CSharp.Examples/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish`(örn.
 
    ```bash
    cd ~/dotnet.spark/artifacts/bin/Microsoft.Spark.CSharp.Examples/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish
@@ -210,9 +210,9 @@ Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.
      <path-to-your-app-binary> <argument(s)-to-your-app>
    ```
 
-   Şunları çalıştırabilmeniz için bazı örnekler aşağıda verilmiştir:
+   Çalıştırabileceğiniz bazı örnekler şunlardır:
 
-   * **[Microsoft. spark. Examples. Sql. Batch. Basic](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**
+   * **[Microsoft.Spark.Examples.Sql.Batch.Basic](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**
 
       ```bash
       spark-submit \
@@ -222,7 +222,7 @@ Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.
       Microsoft.Spark.CSharp.Examples Sql.Batch.Basic $SPARK_HOME/examples/src/main/resources/people.json
       ```
 
-   * **[Microsoft. spark. Examples. Sql. streaming. StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**
+   * **[Microsoft.Spark.Examples.Sql.Streaming.StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**
 
       ```bash
       spark-submit \
@@ -232,7 +232,7 @@ Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.
       Microsoft.Spark.CSharp.Examples Sql.Streaming.StructuredNetworkWordCount localhost 9999
       ```
 
-   * **[Microsoft. spark. Examples. Sql. streaming. StructuredKafkaWordCount (Maven erişilebilir)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
+   * **[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (maven erişilebilir)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
 
       ```bash
       spark-submit \
@@ -243,7 +243,7 @@ Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.
       Microsoft.Spark.CSharp.Examples Sql.Streaming.StructuredKafkaWordCount localhost:9092 subscribe test
       ```
 
-   * **[Microsoft. spark. Examples. Sql. streaming. StructuredKafkaWordCount (jars sağlanmış)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
+   * **[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (kavanoz lar sağlandı)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
 
       ```bash
       spark-submit \
