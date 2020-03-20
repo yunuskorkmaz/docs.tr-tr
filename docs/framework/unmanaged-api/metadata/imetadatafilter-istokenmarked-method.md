@@ -15,41 +15,41 @@ helpviewer_keywords:
 ms.assetid: 7d90dcee-0206-4540-807b-06982fe65f1a
 topic_type:
 - apiref
-ms.openlocfilehash: 10f31d56a9727e99157f49038c19781f12cd9958
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 47377e892aaf2bdd96a297630c47fe52215b0564
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440422"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177390"
 ---
-# <a name="imetadatafilteristokenmarked-method"></a><span data-ttu-id="f2c1c-102">IMetaDataFilter::IsTokenMarked Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f2c1c-102">IMetaDataFilter::IsTokenMarked Method</span></span>
-<span data-ttu-id="f2c1c-103">Belirtilen meta veri belirtecinin işlenmiş olarak işaretlenip işaretlenmediğini gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="f2c1c-103">Gets a value indicating whether the specified metadata token has been marked as processed.</span></span>  
+# <a name="imetadatafilteristokenmarked-method"></a><span data-ttu-id="20edd-102">IMetaDataFilter::IsTokenMarked Yöntemi</span><span class="sxs-lookup"><span data-stu-id="20edd-102">IMetaDataFilter::IsTokenMarked Method</span></span>
+<span data-ttu-id="20edd-103">Belirtilen meta veri belirteci işlenmiş olarak işaretlenmiş olup olmadığını belirten bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="20edd-103">Gets a value indicating whether the specified metadata token has been marked as processed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f2c1c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f2c1c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="20edd-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="20edd-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT IsTokenMarked (  
-    [in]  mdToken  tk,   
+    [in]  mdToken  tk,
     [out] BOOL     *pIsMarked  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f2c1c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f2c1c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="20edd-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="20edd-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="f2c1c-106">'ndaki Bir işleme işareti için incelenecek belirteç.</span><span class="sxs-lookup"><span data-stu-id="f2c1c-106">[in] The token to examine for a processing mark.</span></span>  
+ <span data-ttu-id="20edd-106">[içinde] İşlem işareti için incelenmek üzere belirteç.</span><span class="sxs-lookup"><span data-stu-id="20edd-106">[in] The token to examine for a processing mark.</span></span>  
   
  `pIsMarked`  
- <span data-ttu-id="f2c1c-107">dışı `tk` işlendiyse `true` bir değer; Aksi takdirde `false`.</span><span class="sxs-lookup"><span data-stu-id="f2c1c-107">[out] A value that is `true` if `tk` has been processed; otherwise `false`.</span></span>  
+ <span data-ttu-id="20edd-107">[çıkış] İşlenmiş `true` sayılsa `tk` değeri; aksi `false`takdirde .</span><span class="sxs-lookup"><span data-stu-id="20edd-107">[out] A value that is `true` if `tk` has been processed; otherwise `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f2c1c-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f2c1c-108">Requirements</span></span>  
- <span data-ttu-id="f2c1c-109">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f2c1c-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="20edd-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="20edd-108">Requirements</span></span>  
+ <span data-ttu-id="20edd-109">**Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="20edd-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f2c1c-110">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="f2c1c-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="20edd-110">**Üstbilgi:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="20edd-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f2c1c-111">**Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="f2c1c-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="20edd-111">**Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="20edd-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f2c1c-112">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f2c1c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="20edd-112">**.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20edd-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f2c1c-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f2c1c-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="20edd-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="20edd-113">See also</span></span>
 
-- [<span data-ttu-id="f2c1c-114">IMetaDataFilter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f2c1c-114">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+- [<span data-ttu-id="20edd-114">IMetaDataFilter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="20edd-114">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
