@@ -8,21 +8,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: 309d0e5214897675e1758bd98b964392b379ca1b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 73d3f999e95c484dff3f5409f2cdb9032b64fe38
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346114"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266865"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Yapılar ve Diğer Programlama Öğeleri (Visual Basic)
-Yapıları diziler, nesneler ve yordamlarla birlikte, birbirleriyle de kullanabilirsiniz. Etkileşimler, bu öğeler tek tek kullanıldığı için aynı sözdizimini kullanır.  
+Yapıları diziler, nesneler ve yordamlarla ve birbiriyle birlikte kullanabilirsiniz. Etkileşimler, bu öğelerin tek tek kullandığı sözdizimini kullanır.  
   
 > [!NOTE]
-> Yapı bildiriminde yapı öğelerinden hiçbirini başlatamıyor. Yalnızca bir yapı türü olarak tanımlanmış bir değişkenin öğelerine değerler atayabilirsiniz.  
+> Yapı bildirimindeki yapı öğelerinden hiçbirini başharfe agiremezsiniz. Değerleri yalnızca bir yapı türüne ait olduğu bildirilen bir değişkenin öğelerine atayabilirsiniz.  
   
-## <a name="structures-and-arrays"></a>Yapılar ve diziler  
- Bir yapı, öğelerinden biri veya daha fazlası olarak bir dizi içerebilir. Aşağıdaki örnek bunu göstermektedir.  
+## <a name="structures-and-arrays"></a>Yapılar ve Diziler  
+ Bir yapı, bir veya daha fazla öğesi olarak bir dizi içerebilir. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Public Structure systemInfo  
@@ -30,10 +30,10 @@ Public Structure systemInfo
     Public memory As Long  
     Public diskDrives() As String  
     Public purchaseDate As Date  
-End Structure   
+End Structure
 ```  
   
- Bir yapı içindeki bir dizinin değerlerine, bir nesne üzerindeki bir özelliğe erişirken aynı şekilde erişirsiniz. Aşağıdaki örnek bunu göstermektedir.  
+ Bir nesnedeki bir özelliğe eriştiğin gibi bir yapı içindeki dizinin değerlerine erişirsiniz. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -41,13 +41,13 @@ ReDim mySystem.diskDrives(3)
 mySystem.diskDrives(0) = "1.44 MB"  
 ```  
   
- Ayrıca, bir yapı dizisi bildirebilirsiniz. Aşağıdaki örnek bunu göstermektedir.  
+ Bir dizi yapıyı da bildirebilirsiniz. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
 ```  
   
- Bu veri mimarisinin bileşenlerine erişmek için aynı kurallara uyun. Aşağıdaki örnek bunu göstermektedir.  
+ Bu veri mimarisinin bileşenlerine erişmek için aynı kurallara uyarsınız. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 ReDim allSystems(5).diskDrives(3)  
@@ -55,8 +55,8 @@ allSystems(5).CPU = "386SX"
 allSystems(5).diskDrives(2) = "100M SCSI"  
 ```  
   
-## <a name="structures-and-objects"></a>Yapılar ve nesneler  
- Bir yapı, bir veya daha fazla öğelerinden oluşan bir nesne içerebilir. Aşağıdaki örnek bunu göstermektedir.  
+## <a name="structures-and-objects"></a>Yapılar ve Nesneler  
+ Bir yapı, bir nesneyi bir veya daha fazla öğe olarak içerebilir. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Protected Structure userInput  
@@ -66,9 +66,9 @@ Protected Structure userInput
 End Structure  
 ```  
   
- `Object`yerine, böyle bir bildirimde belirli bir nesne sınıfını kullanmanız gerekir.  
+ Böyle bir bildirimde belirli bir nesne sınıfı `Object`yerine kullanmalısınız.  
   
-## <a name="structures-and-procedures"></a>Yapılar ve yordamlar  
+## <a name="structures-and-procedures"></a>Yapı ve Prosedürler  
  Bir yapıyı yordam bağımsız değişkeni olarak geçirebilirsiniz. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- Önceki örnek, yapıyı *başvuruya göre*geçirir, bu da değişikliklerin çağıran kodda etkili olması için öğelerini değiştirmesine olanak tanır. Bir yapıyı bu değişikliğe karşı korumak istiyorsanız, değere göre geçirin.  
+ Önceki örnek, yordamın öğelerini değiştirmesini sağlayan, arama kodunda değişikliklerin etkili olmasını sağlayan yapıyı *referansla*geçirir. Bir yapıyı bu tür değişikliklere karşı korumak istiyorsanız, değerine göre geçirin.  
   
- Ayrıca, bir `Function` yordamından bir yapı da döndürebilirsiniz. Aşağıdaki örnek bunu göstermektedir.  
+ Ayrıca bir `Function` yordamdan bir yapı döndürebilirsiniz. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -96,8 +96,8 @@ Function findByDate(ByVal searchDate As Date) As systemInfo
 End Function  
 ```  
   
-## <a name="structures-within-structures"></a>Yapılar Içindeki yapılar  
- Yapılar, diğer yapıları içerebilir. Aşağıdaki örnek bunu göstermektedir.  
+## <a name="structures-within-structures"></a>Yapıların İçindeki Yapılar  
+ Yapılar başka yapılar içerebilir. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Public Structure driveInfo  
@@ -118,9 +118,9 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- Bu tekniği, farklı bir modülde tanımlanan bir yapıda bir modülde tanımlanan bir yapıyı kapsüllemek için de kullanabilirsiniz.  
+ Ayrıca, farklı bir modülde tanımlanan bir yapı içinde tek bir modülde tanımlanan bir yapıyı kapsüllemek için de bu tekniği kullanabilirsiniz.  
   
- Yapılar, rastgele bir derinlikte diğer yapıları içerebilir.  
+ Yapılar rasgele bir derinliğe diğer yapıları içerebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -129,7 +129,7 @@ allSystems(1).diskDrives(0).type = "Floppy"
 - [Bileşik Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Veri Türleri Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Nasıl yapılır: Bir Yapıyı Bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Yapı Değişkenleri](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
 - [Yapılar ve Sınıflar](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)

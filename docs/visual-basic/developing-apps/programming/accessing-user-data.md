@@ -12,24 +12,24 @@ helpviewer_keywords:
 - examples [Visual Basic], accessing user data
 ms.assetid: 32492a15-ee59-4a63-a1f1-9b24cc13140a
 ms.openlocfilehash: 463d3bc77237482d4cd568b9558bb72cd19e7216
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349212"
 ---
 # <a name="accessing-user-data-visual-basic"></a>Kullanıcı Verilerine Erişme (Visual Basic)
 
-Bu bölümde, `My.User` nesne ve bunlarla ilgili konular yer almaktadır.  
+Bu bölümde, `My.User` nesneyle ilgili konular ve onunla gerçekleştirebileceğiniz görevler yer almaktadır.  
   
- `My.User` nesnesi, <xref:System.Security.Principal.IPrincipal> arabirimini uygulayan bir nesne döndürerek oturum açan kullanıcı hakkındaki bilgilere erişim sağlar.  
+ Nesne, `My.User` <xref:System.Security.Principal.IPrincipal> arabirimi uygulayan bir nesneyi döndürerek oturum açmış kullanıcı hakkındaki bilgilere erişim sağlar.  
   
 ## <a name="tasks"></a>Görevler  
   
-|Bitiş|Bkz.|  
+|Alıcı|Bkz.|  
 |--------|---------|  
-|Kullanıcının oturum açma adını al|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
-|Uygulamanın Windows kimlik doğrulamasını kullanması durumunda kullanıcının etki alanı adını al|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
+|Kullanıcının oturum açma adını alma|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
+|Uygulama Windows kimlik doğrulaması kullanıyorsa, kullanıcının etki alanı adını alın|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
 |Kullanıcının rolünü belirleme|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.

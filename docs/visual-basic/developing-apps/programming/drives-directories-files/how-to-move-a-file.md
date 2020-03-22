@@ -5,25 +5,25 @@ helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
 ms.openlocfilehash: 29c64a7a81028d47bf489212e6d8faec5e8dda75
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74335367"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dosya Taşıma
 
-`My.Computer.FileSystem.MoveFile` yöntemi, bir dosyayı başka bir klasöre taşımak için kullanılabilir. Hedef yapı yoksa, oluşturulur.  
+Yöntem, `My.Computer.FileSystem.MoveFile` bir dosyayı başka bir klasöre taşımak için kullanılabilir. Hedef yapı yoksa, oluşturulur.  
   
-### <a name="to-move-a-file"></a>Bir dosyayı taşımak için  
+### <a name="to-move-a-file"></a>Dosyayı taşımak için  
   
-- Kaynak dosya ve hedef dosya için dosya adını ve konumunu belirterek dosyayı taşımak için `MoveFile` yöntemini kullanın. Bu örnek `test.txt` adlı dosyayı `TestDir1` `TestDir2`olarak taşır. Hedef dosya adının, kaynak dosya adıyla aynı olmasına rağmen belirtildiğine unutmayın.  
+- Hem `MoveFile` kaynak dosya hem de hedef dosya için dosya adını ve konumunu belirterek dosyayı taşımak için yöntemi kullanın. Bu örnek, adlı `test.txt` `TestDir1` dosyayı `TestDir2`. Kaynak dosya adı ile aynı olmasına rağmen hedef dosya adının belirtildiğini unutmayın.  
   
      [!code-vb[VbVbcnMyFileSystem#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#24)]  
   
 ### <a name="to-move-a-file-and-rename-it"></a>Bir dosyayı taşımak ve yeniden adlandırmak için  
   
-- Kaynak dosya adını ve konumunu, hedef konumu ve hedef konumdaki yeni adı belirterek dosyayı taşımak için `MoveFile` yöntemini kullanın. Bu örnek, `TestDir1` `test.txt` adlı dosyayı `TestDir2` 'e taşır ve `nexttest.txt`yeniden adlandırır.  
+- Dosyayı `MoveFile` taşımak için, kaynak dosya adını ve konumunu, hedef konumu ve hedef konumdaki yeni adı belirterek yöntemi kullanın. Bu örnek, adlı `test.txt` `TestDir1` dosyayı taşır `TestDir2` `nexttest.txt`ve yeniden adlandırır.  
   
      [!code-vb[VbVbcnMyFileSystem#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#25)]  
   
@@ -31,25 +31,25 @@ ms.locfileid: "74335367"
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (\\\\.\\) (<xref:System.ArgumentException>) ile başlar.  
+- Yol aşağıdaki nedenlerden biri için geçerli değildir: bir sıfır uzunlukta dize, sadece beyaz boşluk içerir, geçersiz karakterler içerir, \\ \\ya\\da bir aygıt yolu (ile başlar . ) (<xref:System.ArgumentException>).  
   
-- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğundan geçerli değil.  
+- Yol geçerli değildir, çünkü `Nothing` <xref:System.ArgumentNullException>( ).  
   
-- `destinationFileName` `Nothing` veya boş bir dizedir (<xref:System.ArgumentNullException>).  
+- `destinationFileName`veya `Nothing` boş bir<xref:System.ArgumentNullException>dize ( ).  
   
-- Kaynak dosya geçerli değil veya yok (<xref:System.IO.FileNotFoundException>).  
+- Kaynak dosya geçerli değil veya yok<xref:System.IO.FileNotFoundException>( ).  
   
-- Birleşik yol, var olan bir dizine işaret eder, hedef dosya bulunur ve `overwrite` `False`, hedef dizindeki aynı ada sahip bir dosya kullanımda veya kullanıcı dosyaya erişmek için yeterli izinlere sahip değil (<xref:System.IO.IOException>).  
+- Birleştirilmiş yol varolan bir dizine işaret `overwrite` eder, `False`hedef dosya vardır ve hedef dizinde aynı ada sahip bir dosya kullanılıyor veya kullanıcının<xref:System.IO.IOException>dosyaya erişmek için yeterli izine sahip olmadığı ( ) ayarlanır.  
   
-- Yoldaki bir dosya veya dizin adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
+- Yoldaki bir dosya veya dizin adı bir üst üste (:) veya geçersiz bir biçimde<xref:System.NotSupportedException>( ).  
   
-- `showUI` `True`olarak ayarlanır `onUserCancel` `ThrowException`olarak ayarlanır ve Kullanıcı işlemi iptal etti ya da belirtilmeyen g/ç hatası oluşur (<xref:System.OperationCanceledException>).  
+- `showUI`ayarlanır `True`, `onUserCancel` olarak ayarlanır `ThrowException`ve ya kullanıcı işlemi iptal etti ya da belirtilmeyen bir<xref:System.OperationCanceledException>G/Ç hatası oluşur ( ).  
   
-- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
+- Yol, sistem tarafından tanımlanan maksimum<xref:System.IO.PathTooLongException>uzunluğu aşıyor ( ).  
   
-- Kullanıcı, yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
+- Kullanıcı yolu görüntülemek için gerekli izinlerden<xref:System.Security.SecurityException>yoksundur ( ).  
   
-- Kullanıcı gerekli izne sahip değil (<xref:System.UnauthorizedAccessException>).  
+- Kullanıcının gerekli izni yoktur<xref:System.UnauthorizedAccessException>( ).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

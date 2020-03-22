@@ -17,38 +17,38 @@ helpviewer_keywords:
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
 ms.openlocfilehash: 7cdbd5fb192fd5cc1be6260dcdcdb1f30cf3f865
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343862"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400696"
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort veri türü (Visual Basic)
 
-0 ile 65.535 arasında değer değişen işaretsiz 16 bit (2 baytlık) tamsayılar barındırır.  
+0 ile 65.535 arasında değişen imzasız 16 bit (2 bayt) tümsedoları tutar.  
   
 ## <a name="remarks"></a>Açıklamalar
 
- `Byte`için çok büyük olan ikili verileri içeren `UShort` veri türünü kullanın.  
+ `UShort` Için çok büyük ikili veri içerecek `Byte`şekilde veri türünü kullanın.  
   
- `UShort` varsayılan değeri 0 ' dır.  
+ Varsayılan değeri `UShort` 0'dır.  
 
-## <a name="literal-assignments"></a>Değişmez değer atamaları
+## <a name="literal-assignments"></a>Gerçek atamalar
 
-Bir `UShort` değişkenini bir ondalık değişmez değeri, onaltılı bir sabit değer, sekizlik bir sabit değer veya (Visual Basic 2017 ' den başlayarak) ikili bir değişmez değer atayarak bildirebilirsiniz. Tamsayı sabit değeri `UShort` aralığının dışındaysa (yani, <xref:System.UInt16.MinValue?displayProperty=nameWithType> veya <xref:System.UInt16.MaxValue?displayProperty=nameWithType>değerinden daha küçükse, bir derleme hatası oluşur.
+Bir `UShort` değişkeni ondalık edebi, hekzadesmal literal, sekizli bir literal veya (Visual Basic 2017 ile başlayan) ikili bir edebi olarak atayarak bildirebilir ve başlatabilirsiniz. Tamsayı literal aralığının `UShort` dışında ysa (yani, daha az <xref:System.UInt16.MinValue?displayProperty=nameWithType> veya daha <xref:System.UInt16.MaxValue?displayProperty=nameWithType>büyükse, bir derleme hatası oluşur.
 
-Aşağıdaki örnekte, ondalık, onaltılık ve ikili sabit değerler olarak temsil edilen 65.034 'e eşit tamsayılar `UShort` değerlere atanır.
+Aşağıdaki örnekte, ondalık, heksadeondamal ve ikili literaller olarak temsil edilen 65.034'e eşit tamsayılar değerlere `UShort` atanır.
   
 [!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShort)]
 
 > [!NOTE]
-> Ön ek `&h` veya `&H` bir onaltılık sabit değeri, ön ek `&b` veya `&B` bir ikili sabit değer belirtmek için, önek `&o` veya `&O`, sekizlik bir sabit değeri belirtmek için kullanılır. Ondalık değişmez değerlerinin ön eki yok.
+> `&h` Önek'i veya `&H` hexadecimal literal'ı, önek'i `&b` `&B` veya ikili bir edebi yi `&o` belirtmek `&O` için ve önek'i veya bir sekizli edebi yi belirtmek için kullanırsınız. Ondalık edebi hiçbir önek var.
 
-Visual Basic 2017 ' den başlayarak, aşağıdaki örnekte gösterildiği gibi, okunabilirliği geliştirmek için `_`alt çizgi karakterini bir rakam ayırıcısı olarak da kullanabilirsiniz.
+Visual Basic 2017'den başlayarak, aşağıdaki örnekte de görüldüğü gibi okunabilirliği artırmak için alt puan `_`karakterini, basamak ayırıcısı olarak da kullanabilirsiniz.
 
 [!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShortS)]
 
-Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini (`_`) ön ek ile onaltılık, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak kullanabilirsiniz. Örneğin:
+Visual Basic 15.5 ile başlayarak, önek`_`ile heksadecimal, ikili veya sekizli basamaklar arasında baş ayırıcı olarak alt çizilme karakterini de kullanabilirsiniz. Örnek:
 
 ```vb
 Dim number As UShort = &H_FF8C
@@ -56,7 +56,7 @@ Dim number As UShort = &H_FF8C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Sayısal değişmez değerler, aşağıdaki örnekte gösterildiği gibi `UShort` veri türünü belirtmek için `US` ya da `us` [tür karakterini](../../programming-guide/language-features/data-types/type-characters.md) içerebilir.
+Sayısal literals, aşağıdaki `US` örnekte `us` görüldüğü `UShort` gibi, veri türünü ifade etmek için veya [türü karakterini](../../programming-guide/language-features/data-types/type-characters.md) de içerebilir.
 
 ```vb
 Dim number = &H_5826us
@@ -64,15 +64,15 @@ Dim number = &H_5826us
 
 ## <a name="programming-tips"></a>Programlama ipuçları
   
-- **Negatif sayılar.** `UShort` işaretsiz bir tür olduğundan, negatif bir sayıyı temsil edemez. `UShort`türü değerlendirilen bir ifadede birli eksi (`-`) işlecini kullanırsanız, Visual Basic ifadeyi önce `Integer` dönüştürür.  
+- **Negatif Sayılar.** İmzalanmamış bir tür `UShort` olduğundan, negatif bir sayıyı temsil edemez. Unary eksi (`-`) işleci, yazmayı `UShort`değerlendiren bir ifadeüzerinde kullanırsanız, `Integer` Visual Basic ifadeyi önce dönüştürür.  
   
-- **CLS uyumluluğu.** `UShort` veri türü [ortak dil belirtiminin](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS) bir parçası değildir, bu nedenle CLS uyumlu kod onu kullanan bir bileşeni tüketmez.
+- **CLS Uyumluluğu.** Veri `UShort` türü Ortak Dil [Belirtimi'nin](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS) bir parçası değildir, bu nedenle CLS uyumlu kod onu kullanan bir bileşeni tüketemez.
   
-- **Kan.** `UShort` veri türü `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`ve `Double`için. Bu, bir <xref:System.OverflowException?displayProperty=nameWithType> hatasıyla karşılaşmadan `UShort` bu türlerden birine dönüştürebileceğiniz anlamına gelir.  
+- **Genişletme.** Veri `UShort` `Integer`türü , , `UInteger` `Long` `ULong`, `Decimal`, `Single`, `Double`ve . Bu, bir <xref:System.OverflowException?displayProperty=nameWithType> `UShort` hatayla karşılaşmadan bu türlerden herhangi birini dönüştürebileceğiniz anlamına gelir.  
   
-- **Tür karakterleri.** Değişmez değer türü karakterlerinin bir hazır `US` eklenmesi, `UShort` veri türüne zorlar. `UShort` tanımlayıcı türü karakteri yok.  
+- **Karakterleri yazın.** Gerçek türdeki `US` karakterleri `UShort` bir edebi aygıta ekler, onu veri türüne zorlar. `UShort`tanımlayıcı türü karakteri yoktur.  
   
-- **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.UInt16?displayProperty=nameWithType> yapısıdır.  
+- **Çerçeve Türü.** .NET Framework'de karşılık gelen <xref:System.UInt16?displayProperty=nameWithType> tür yapıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

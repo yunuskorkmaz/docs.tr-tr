@@ -15,38 +15,38 @@ helpviewer_keywords:
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
 ms.openlocfilehash: 01a0a4a261213d7e6e2016bf49128092e5b22308
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343943"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400794"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte veri türü (Visual Basic)
 
--128 ile 127 arasında bir değer olan işaretli 8 bit (1 baytlık) tamsayıları tutar.
+-128 ile 127 arasında değişen imzalı 8 bit (1 bayt) tümseci tutar.
 
 ## <a name="remarks"></a>Açıklamalar
 
-`Integer` tam veri genişliğine veya `Short`yarı veri genişliğine gerek gerektirmeyen tamsayı değerleri içermesi için `SByte` veri türünü kullanın. Bazı durumlarda, ortak dil çalışma zamanı `SByte` değişkenlerinizi birbirine yakından paketlenebilir ve bellek tüketimini kaydedebilir.
+Tam `SByte` veri genişliği `Integer` ve hatta yarım veri genişliği gerektirmeyen tamsayı değerlerini içerecek şekilde veri türünü kullanın. `Short` Bazı durumlarda, ortak dil çalışma süresi değişkenlerinizi `SByte` birbirine yakın bir şekilde paketleyebilir ve bellek tüketiminden tasarruf edebilir.
 
-`SByte` varsayılan değeri 0 ' dır.
+Varsayılan değeri `SByte` 0'dır.
 
-## <a name="literal-assignments"></a>Değişmez değer atamaları
+## <a name="literal-assignments"></a>Gerçek atamalar
 
-Bir `SByte` değişkeni bir ondalık sabit değer, bir onaltılı sabit değer, sekizlik bir sabit değer veya (Visual Basic 2017 ' den başlayarak) ikili bir değişmez değer atayarak başlatabilir ve başlatabilirsiniz.
+Bir `SByte` değişkeni ondalık edebi, hekzadesmal literal, sekizli bir literal veya (Visual Basic 2017 ile başlayan) ikili bir edebi olarak atayarak bildirebilir ve başlatabilirsiniz.
 
-Aşağıdaki örnekte, ondalık, onaltılık ve ikili sabit değerler olarak temsil edilen-102 ' e eşit tamsayılar `SByte` değerlere atanır. Bu örnek, `/removeintchecks` derleyici anahtarıyla derlemeniz gerekir.
+Aşağıdaki örnekte, ondalık, hexadecimal ve ikili literals olarak temsil edilen -102'ye `SByte` eşit tamsayılar değerlere atanır. Bu örnek, `/removeintchecks` derleyici anahtarı yla derlemenizi gerektirir.
 
 [!code-vb[SByte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByte)]
 
 > [!NOTE]
-> Ön ek `&h` veya `&H` bir onaltılık sabit değeri, ön ek `&b` veya `&B` bir ikili sabit değer belirtmek için, önek `&o` veya `&O`, sekizlik bir sabit değeri belirtmek için kullanılır. Ondalık değişmez değerlerinin ön eki yok.
+> `&h` Önek'i veya `&H` hexadecimal literal'ı, önek'i `&b` `&B` veya ikili bir edebi yi `&o` belirtmek `&O` için ve önek'i veya bir sekizli edebi yi belirtmek için kullanırsınız. Ondalık edebi hiçbir önek var.
 
-Visual Basic 2017 ' den başlayarak, aşağıdaki örnekte gösterildiği gibi, okunabilirliği geliştirmek için `_`alt çizgi karakterini bir rakam ayırıcısı olarak da kullanabilirsiniz.
+Visual Basic 2017'den başlayarak, aşağıdaki örnekte de görüldüğü gibi okunabilirliği artırmak için alt puan `_`karakterini, basamak ayırıcısı olarak da kullanabilirsiniz.
 
 [!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]
 
-Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini (`_`) ön ek ile onaltılık, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak kullanabilirsiniz. Örneğin:
+Visual Basic 15.5 ile başlayarak, önek`_`ile heksadecimal, ikili veya sekizli basamaklar arasında baş ayırıcı olarak alt çizilme karakterini de kullanabilirsiniz. Örnek:
 
 ```vb
 Dim number As SByte = &H_F9
@@ -54,23 +54,23 @@ Dim number As SByte = &H_F9
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Tamsayı sabit değeri `SByte` aralığının dışındaysa (yani, <xref:System.SByte.MinValue?displayProperty=nameWithType> veya <xref:System.SByte.MaxValue?displayProperty=nameWithType>değerinden daha küçükse, bir derleme hatası oluşur. Bir tamsayı değişmez değeri hiç sonekine sahip olmadığında, bir [tamsayı](integer-data-type.md) çıkarsanın. Tamsayı sabit değeri `Integer` türü aralığının dışındaysa [Long](long-data-type.md) değeri algılanır. Yani, önceki örneklerde `0x9A` ve `0b10011010` sayısal değişmez değerler 156 değerine sahip 32 bitlik işaretli tamsayılar olarak yorumlanır ve bu da <xref:System.SByte.MaxValue?displayProperty=nameWithType>değerini aşar. Bir `SByte`ondalık olmayan bir tamsayı atayan bu gibi bir kodu başarıyla derlemek için aşağıdakilerden birini yapabilirsiniz:
+Tamsayı literal aralığının `SByte` dışında ysa (yani, daha az <xref:System.SByte.MinValue?displayProperty=nameWithType> veya daha <xref:System.SByte.MaxValue?displayProperty=nameWithType>büyükse, bir derleme hatası oluşur. Bir sondanın sonek yoksa, bir [Integer](integer-data-type.md) çıkarılır. Tamsayı literal `Integer` türünün aralığının dışındaysa, [Uzun](long-data-type.md) çıkarılır. Bu, önceki örneklerde, sayısal literals `0x9A` ve `0b10011010` 32-bit imzalı tamsayılar 156 değerini aşan, aşan olarak yorumlanır anlamına gelir. <xref:System.SByte.MaxValue?displayProperty=nameWithType> Ondalık olmayan bir tamsayıyı bir `SByte`nesle atayan bu gibi kodu başarılı bir şekilde derlemek için aşağıdakilerden birini yapabilirsiniz:
 
-- `/removeintchecks` derleyici anahtarıyla derleme yaparak tamsayı sınırları denetimlerini devre dışı bırakın.
+- `/removeintchecks` Derleme anahtarıyla derleyerek, tümsesayı sınır denetimlerini devre dışı.
 
-- `SByte`atamak istediğiniz sabit değeri açıkça tanımlamak için bir [tür karakteri](../../programming-guide/language-features/data-types/type-characters.md) kullanın. Aşağıdaki örnek bir `SByte`negatif değişmez değer `Short` değeri atar. Negatif sayılar için, sayısal sabit değerin yüksek sıralı sözcüğünün yüksek sıralı bitinin ayarlanmış olması gerektiğini unutmayın. Örneğimizde bu, sabit değer `Short` değerinin 15 bit değeridir.
+- 'ye atamak istediğiniz gerçek değeri açıkça tanımlamak için bir tür karakteri kullanın [type character](../../programming-guide/language-features/data-types/type-characters.md) `SByte` Aşağıdaki örnek, negatif bir `Short` edebi değer `SByte`atar. Negatif sayılar için sayısal kelimenin yüksek sıralı sözcüğünün yüksek sıralı bitinin ayarlanılması gerektiğini unutmayın. Örneğimizde, bu gerçek `Short` değerin bit 15'idir.
 
    [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
 
 ## <a name="programming-tips"></a>Programlama ipuçları
 
-- **CLS uyumluluğu.** `SByte` veri türü [ortak dil belirtiminin](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS) bir parçası değildir, bu nedenle CLS uyumlu kod onu kullanan bir bileşeni tüketmez.
+- **CLS Uyumluluğu.** Veri `SByte` türü Ortak Dil [Belirtimi'nin](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS) bir parçası değildir, bu nedenle CLS uyumlu kod onu kullanan bir bileşeni tüketemez.
 
-- **Kan.** `SByte` veri türü `Short`, `Integer`, `Long`, `Decimal`, `Single`ve `Double`için. Bu, bir <xref:System.OverflowException?displayProperty=nameWithType> hatasıyla karşılaşmadan `SByte` bu türlerden birine dönüştürebileceğiniz anlamına gelir.
+- **Genişletme.** Veri `SByte` `Short`türü , , `Integer`, `Long` `Decimal` `Single`, ve `Double`. Bu, bir <xref:System.OverflowException?displayProperty=nameWithType> `SByte` hatayla karşılaşmadan bu türlerden herhangi birini dönüştürebileceğiniz anlamına gelir.
 
-- **Tür karakterleri.** `SByte` değişmez değer türü karakteri veya tanımlayıcı türü karakteri yok.
+- **Karakterleri yazın.** `SByte`gerçek bir tür karakteri veya tanımlayıcı türü karakteri yoktur.
 
-- **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.SByte?displayProperty=nameWithType> yapısıdır.
+- **Çerçeve Türü.** .NET Framework'de karşılık gelen <xref:System.SByte?displayProperty=nameWithType> tür yapıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

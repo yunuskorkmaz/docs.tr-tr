@@ -1,5 +1,5 @@
 ---
-title: 'Sorun giderme: metin dosyalarını okuma ve yazma'
+title: 'Sorun giderme: metin dosyalarından okuma ve yazma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting file I/O
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - reading text files [Visual Basic], troubleshooting
 ms.assetid: a8e9b44d-facb-4718-8c0f-466537171182
 ms.openlocfilehash: dbc53ca3cc9ae9b2d14b925f891d0409b2b7debd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333793"
 ---
-# <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>Sorun giderme: metin dosyalarını okuma ve yazma (Visual Basic)
+# <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>Sorun giderme: metin dosyalarından okuma ve yazma (Visual Basic)
 
-Bu konuda, metin dosyalarıyla çalışırken karşılaşılan yaygın sorunlar ele alınmaktadır ve her birine bir yaklaşım önerisinde bulunur.  
+Bu konu, metin dosyalarıyla çalışırken karşılaşılan sık karşılaşılan sorunları tartışır ve her birine bir yaklaşım önerir.  
   
-## <a name="common-problems"></a>Yaygın sorunlar  
+## <a name="common-problems"></a>Sık karşılaşılan sorunlar  
 
- Metin dosyalarıyla çalışırken karşılaşılan en yaygın sorunlar, güvenlik özel durumları, dosya kodlamaları veya geçersiz yollar içerir.  
+ Metin dosyalarıyla çalışırken karşılaşılan en sık karşılaşılan sorunlar arasında güvenlik özel durumları, dosya kodlamaları veya geçersiz yollar yer almaktadır.  
   
 ### <a name="security-exceptions"></a>Güvenlik özel durumları  
 
- Bir güvenlik hatası oluştuğunda bir <xref:System.Security.SecurityException> oluşturulur. Bu genellikle kullanıcının gerekli izinlere sahip olmadığı bir sonucudur. Bu, izinleri ekleyerek veya yalıtılmış depolamada dosyalarla çalışarak çözülebilen bir sonucudur.  
+ Bir <xref:System.Security.SecurityException> güvenlik hatası oluştuğunda A atılır. Bu genellikle, kullanıcının gerekli izinlerden yoksun olmasının bir sonucudur ve bu izinler eklenerek veya yalıtılmış depolama daki dosyalarla çalışarak çözülebilir.  
   
 ### <a name="file-encodings"></a>Dosya kodlamaları  
 
- Karakter kodlamaları olarak da bilinen dosya kodlamaları, metin işleme sırasında karakterlerin nasıl temsil edileceğini belirtir. Metin dosyasında beklenmeyen karakterler yanlış kodlamadan kaynaklanıyor olabilir. Çoğu dosya için, tek bir kodlama bir veya işleyemeyen dil karakterleri açısından tercih edilebilir, ancak UNICODE genellikle tercih edilir. Daha fazla bilgi için bkz. [dosya kodlamaları](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md) ve <xref:System.Text.Encoding>.  
+ Karakter kodlamaları olarak da bilinen dosya kodlamaları, metin işlenirken karakterlerin nasıl temsil edilecek lerini belirtir. Metin dosyasındaki beklenmeyen karakterler yanlış kodlamadan kaynaklanabilir. Çoğu dosya için, unicode genellikle tercih edilse de, bir kodlama hangi dil karakterlerini işleyebileceği veya işleyemeyeceği açısından diğerine göre tercih edilebilir. Daha fazla bilgi için Dosya <xref:System.Text.Encoding> [Kodlamaları](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md) ve .  
   
 ### <a name="incorrect-paths"></a>Yanlış yollar  
 
- Dosya yollarını ayrıştırırken özellikle göreli yollar, yanlış verileri sağlamak kolaydır. Doğru yolu belirttiğinizden emin olmak için birçok sorun düzeltilebilir. Daha fazla bilgi için bkz. [nasıl yapılır: dosya yollarını ayrıştırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md).  
+ Dosya yollarını, özellikle de göreli yolları ayrıştırırken, yanlış verileri sağlamak kolaydır. Doğru yolu sağladığından emin olunarak birçok sorun düzeltilebilir. Daha fazla bilgi için [bkz: Dosya Yollarını Ayrışdırın.](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

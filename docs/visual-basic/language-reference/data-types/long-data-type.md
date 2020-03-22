@@ -21,38 +21,38 @@ helpviewer_keywords:
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
 ms.openlocfilehash: 16d7409c802e97b1f33474d810134db4d9f0ad6c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343971"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400815"
 ---
-# <a name="long-data-type-visual-basic"></a>Long veri türü (Visual Basic)
+# <a name="long-data-type-visual-basic"></a>Uzun veri türü (Visual Basic)
 
--9223372036854775808 ile 9.223.372.036.854.775.807 (9.2... E + 18) değerinde değişen 64 bitlik (8 baytlık) tamsayıları barındırır.
+-9.223.372.036.854.775.808 ile 9.223.036.854.775.807 (9.2...E+18) değerinde 64 bit (8 bayt) tümleç ler imzalı tutar.
 
 ## <a name="remarks"></a>Açıklamalar
 
-`Integer` veri türüne sığamayacak kadar büyük tamsayı sayılar içermesi için `Long` veri türünü kullanın.
+`Integer` Veri türüne `Long` sığmayacak kadar büyük tamsayı numaraları içerecek şekilde veri türünü kullanın.
 
-`Long` varsayılan değeri 0 ' dır.
+Varsayılan değeri `Long` 0'dır.
 
-## <a name="literal-assignments"></a>Değişmez değer atamaları
+## <a name="literal-assignments"></a>Gerçek atamalar
 
-Bir `Long` değişkenini bir ondalık değişmez değeri, onaltılı bir sabit değer, sekizlik bir sabit değer veya (Visual Basic 2017 ' den başlayarak) ikili bir değişmez değer atayarak bildirebilirsiniz. Tamsayı sabit değeri `Long` aralığının dışındaysa (yani, <xref:System.Int64.MinValue?displayProperty=nameWithType> veya <xref:System.Int64.MaxValue?displayProperty=nameWithType>değerinden daha küçükse, bir derleme hatası oluşur.
+Bir `Long` değişkeni ondalık edebi, hekzadesmal literal, sekizli bir literal veya (Visual Basic 2017 ile başlayan) ikili bir edebi olarak atayarak bildirebilir ve başlatabilirsiniz. Tamsayı literal aralığının `Long` dışında ysa (yani, daha az <xref:System.Int64.MinValue?displayProperty=nameWithType> veya daha <xref:System.Int64.MaxValue?displayProperty=nameWithType>büyükse, bir derleme hatası oluşur.
 
-Aşağıdaki örnekte, ondalık, onaltılık ve ikili sabit değerler olarak temsil edilen 4.294.967.296 'e eşit tamsayılar `Long` değerlere atanır.
+Aşağıdaki örnekte, ondalık, heksadesibel ve ikili edebi değerlerolarak temsil edilen 4.294.967.296'ya `Long` eşit tamsayılar atamıştır.
 
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Long)]
 
 > [!NOTE]
-> Ön ek `&h` veya `&H` bir onaltılık sabit değeri, ön ek `&b` veya `&B` bir ikili sabit değer belirtmek için, önek `&o` veya `&O`, sekizlik bir sabit değeri belirtmek için kullanılır. Ondalık değişmez değerlerinin ön eki yok.
+> `&h` Önek'i veya `&H` hexadecimal literal'ı, önek'i `&b` `&B` veya ikili bir edebi yi `&o` belirtmek `&O` için ve önek'i veya bir sekizli edebi yi belirtmek için kullanırsınız. Ondalık edebi hiçbir önek var.
 
-Visual Basic 2017 ' den başlayarak, aşağıdaki örnekte gösterildiği gibi, okunabilirliği geliştirmek için `_`alt çizgi karakterini bir rakam ayırıcısı olarak da kullanabilirsiniz.
+Visual Basic 2017'den başlayarak, aşağıdaki örnekte de görüldüğü gibi okunabilirliği artırmak için alt puan `_`karakterini, basamak ayırıcısı olarak da kullanabilirsiniz.
 
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini (`_`) ön ek ile onaltılık, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak kullanabilirsiniz. Örneğin:
+Visual Basic 15.5 ile başlayarak, önek`_`ile heksadecimal, ikili veya sekizli basamaklar arasında baş ayırıcı olarak alt çizilme karakterini de kullanabilirsiniz. Örnek:
 
 ```vb
 Dim number As Long = &H_0FAC_0326_1489_D68C
@@ -60,7 +60,7 @@ Dim number As Long = &H_0FAC_0326_1489_D68C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Sayısal değişmez değerler, aşağıdaki örnekte gösterildiği gibi `Long` veri türünü belirtmek için `L` [tür karakterini](../../programming-guide/language-features/data-types/type-characters.md) de içerebilir.
+Sayısal literals, aşağıdaki örnekte görüldüğü `L` [type character](../../programming-guide/language-features/data-types/type-characters.md) `Long` gibi, veri türünü ifade etmek için tür karakterini de içerebilir.
 
 ```vb
 Dim number = &H_0FAC_0326_1489_D68CL
@@ -68,13 +68,13 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 ## <a name="programming-tips"></a>Programlama ipuçları
 
-- **Birlikte çalışma konuları.** .NET Framework için yazılmayan bileşenlerle (örneğin, Automation veya COM nesneleri) arabirimleriniz varsa, `Long` başka ortamlarda farklı bir veri genişliğine (32 bit) sahip olduğunu unutmayın. Böyle bir bileşene 32 bitlik bir bağımsız değişken geçirdiğinizden, bunu yeni Visual Basic kodunuzda `Long` yerine `Integer` olarak bildirin.
+- **Interop Hususlar.** .NET Framework için yazılmayan bileşenlerle (örneğin Otomasyon veya COM nesneleri) `Long` bir araya geldiyseniz, diğer ortamlarda farklı veri genişliğine (32 bit) sahip olduğunu unutmayın. Böyle bir bileşene 32 bitlik bir bağımsız değişken `Integer` geçiyorsanız, bunu yeni Visual Basic kodunuzda değil, `Long` olarak bildirin.
 
-- **Kan.** `Long` veri türü `Decimal`, `Single`veya `Double`için. Bu, bir <xref:System.OverflowException?displayProperty=nameWithType> hatasıyla karşılaşmadan `Long` bu türlerden birine dönüştürebileceğiniz anlamına gelir.
+- **Genişletme.** Veri `Long` türü `Decimal`, veya `Single` `Double`. Bu, bir <xref:System.OverflowException?displayProperty=nameWithType> `Long` hatayla karşılaşmadan bu türlerden herhangi birine dönüştürebileceğiniz anlamına gelir.
 
-- **Tür karakterleri.** Değişmez değer türü karakter `L` bir sabit değere eklenmesi, `Long` veri türüne zorlar. Tanımlayıcı türü karakter `&` herhangi bir tanımlayıcıya eklemek bunu `Long`zorlar.
+- **Karakterleri yazın.** Gerçek tür karakterini `L` bir edebi karaktere ekler, `Long` onu veri türüne zorlar. Tanımlayıcı türü karakterini `&` herhangi bir tanımlayıcıya `Long`ekolarak .
 
-- **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.Int64?displayProperty=nameWithType> yapısıdır.
+- **Çerçeve Türü.** .NET Framework'de karşılık gelen <xref:System.Int64?displayProperty=nameWithType> tür yapıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

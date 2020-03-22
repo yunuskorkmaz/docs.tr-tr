@@ -6,21 +6,21 @@ helpviewer_keywords:
 - folders, finding
 ms.assetid: c9265fd1-7483-4150-8b7f-ff642caa939d
 ms.openlocfilehash: c8e13598080139cafabffb2e17d0a3b99c37dc5d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348768"
 ---
 # <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Belirli bir Desendeki Alt Dizinleri Bulma
 
-<xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> yöntemi, bir dizindeki alt dizinlerin yol adlarını temsil eden salt okunurdur bir dize koleksiyonu döndürür. Belirli bir kalıbı belirtmek için `wildCards` parametresini kullanabilirsiniz. Aramaya alt dizinlerin içeriğini eklemek istiyorsanız, `searchType` parametresini `SearchOption.SearchAllSubDirectories`olarak ayarlayın.
+Yöntem, <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> bir dizindeki alt dizinlerin yol adlarını temsil eden salt okunur dizeler koleksiyonunu döndürür. `wildCards` Belirli bir desen belirtmek için parametrekullanabilirsiniz. Alt dizinlerin içeriğini aramaya eklemek isterseniz, parametreyi `searchType` ' `SearchOption.SearchAllSubDirectories`ye göre ayarlayın.
 
-Belirtilen Düzenle eşleşen hiçbir dizin bulunamazsa boş bir koleksiyon döndürülür.
+Belirtilen desenle eşleşen dizinler bulunmazsa boş bir koleksiyon döndürülür.
 
-## <a name="to-find-subdirectories-with-a-specific-pattern"></a>Belirli bir düzene sahip alt dizinleri bulmak için
+## <a name="to-find-subdirectories-with-a-specific-pattern"></a>Belirli bir desene sahip alt dizinleri bulmak için
 
-Arama yapmak istediğiniz dizinin adını ve yolunu sağlayarak `GetDirectories` yöntemini kullanın. Aşağıdaki örnek, dizin yapısındaki, adında "Logs" sözcüğünü içeren tüm dizinleri döndürür ve bunları `ListBox1`ekler.
+Aramak `GetDirectories` istediğiniz dizinin adını ve yolunu sağlayarak yöntemi kullanın. Aşağıdaki örnek, dizin yapısında kendi adlarında "Günlükler" sözcüğünü içeren tüm `ListBox1`dizinleri döndürür ve bunları .
 
 [!code-vb[VbVbcnFileAccess#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnFileAccess/VB/Class1.vb#1)]
 
@@ -28,23 +28,23 @@ Arama yapmak istediğiniz dizinin adını ve yolunu sağlayarak `GetDirectories`
 
 Aşağıdaki koşullar özel bir duruma neden olabilir:
 
-- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (\\\\.\\) (<xref:System.ArgumentException>) ile başlar.
+- Yol aşağıdaki nedenlerden biri için geçerli değildir: bir sıfır uzunlukta dize, sadece beyaz boşluk içerir, geçersiz karakterler içerir, \\ \\ya\\da bir aygıt yolu (ile başlar . ) (<xref:System.ArgumentException>).
 
-- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğundan geçerli değil.
+- Yol geçerli değildir, çünkü `Nothing` <xref:System.ArgumentNullException>( ).
 
-- Belirtilen bir veya daha fazla joker karakter `Nothing`, boş bir dize veya yalnızca boşluk içeriyor (<xref:System.ArgumentNullException>).
+- Belirtilen joker karakterlerden biri veya `Nothing`birkaçı boş bir dizedir<xref:System.ArgumentNullException>veya yalnızca boşluk içerir ( ).
 
-- `directory` yok (<xref:System.IO.DirectoryNotFoundException>).
+- `directory`yok (<xref:System.IO.DirectoryNotFoundException>).
 
-- `directory` var olan bir dosyaya (<xref:System.IO.IOException>) işaret eder.
+- `directory`varolan bir dosyaya işaret eder (<xref:System.IO.IOException>).
 
-- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.
+- Yol, sistem tarafından tanımlanan maksimum<xref:System.IO.PathTooLongException>uzunluğu aşıyor ( ).
 
-- Yoldaki bir dosya veya klasör adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).
+- Yoldaki bir dosya veya klasör adı bir üst üste içerir (:) veya geçersiz bir biçimde<xref:System.NotSupportedException>( ).
 
-- Kullanıcı, yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).
+- Kullanıcı yolu görüntülemek için gerekli izinlerden<xref:System.Security.SecurityException>yoksundur ( ).
 
-- Kullanıcının gerekli izinleri yok (<xref:System.UnauthorizedAccessException>).
+- Kullanıcı gerekli izinleri yoksun<xref:System.UnauthorizedAccessException>( ).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

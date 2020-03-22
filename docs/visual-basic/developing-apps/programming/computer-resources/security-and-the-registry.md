@@ -6,40 +6,40 @@ helpviewer_keywords:
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
 ms.openlocfilehash: 454180207d6432e80d87941d1f329f2a4ea7a801
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345478"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>Güvenlik ve Kayıt Defteri (Visual Basic)
 
-Bu sayfada, verileri kayıt defterine depolamanın güvenlik etkileri ele alınmaktadır.  
+Bu sayfada, kayıt defterinde veri depolamanın güvenlik sonuçları anlatılmaktadır.  
   
 ## <a name="permissions"></a>İzinler  
 
- Kayıt defteri anahtarı ACL 'Ler (erişim denetim listeleri) tarafından korunsa bile, parolalar gibi gizli dizileri, kayıt defterindeki düz metin olarak depolamak güvenli değildir.  
+ Kayıt defteri anahtarı ALA'lar (erişim denetim listeleri) tarafından korunsa bile, parolalar gibi sırları kayıt defterinde düz metin olarak depolamak güvenli değildir.  
   
- Kayıt defteriyle çalışma, sistem kaynaklarına veya korunan bilgilere uygunsuz erişime izin vererek güvenliği tehlikeye atabilir. Bu özellikleri kullanmak için, kayıt defteri değişkenlerine erişimi denetleyen <xref:System.Security.Permissions.RegistryPermissionAccess> numaralandırmasından okuma ve yazma izinlerine sahip olmanız gerekir. Tam güvenle çalışan tüm kodlar (varsayılan güvenlik ilkesi altında, kullanıcının yerel sabit diskinde yüklü olan tüm kodlar), kayıt defterine erişmek için gerekli izinlere sahiptir. Daha fazla bilgi için bkz. <xref:System.Security.Permissions.RegistryPermission> sınıfı.  
+ Kayıt defteriyle çalışmak, sistem kaynaklarına veya korunan bilgilere uygunsuz erişime izin vererek güvenliği tehlikeye atabilir. Bu özellikleri kullanmak için, kayıt defteri değişkenlerine <xref:System.Security.Permissions.RegistryPermissionAccess> erişimi denetleyen numaralandırmadan izinleri okuma ve yazma nız gerekir. Tam güvenle çalışan herhangi bir kod (varsayılan güvenlik ilkesi altında, bu kullanıcının yerel sabit diskine yüklenen herhangi bir koddur) kayıt defterine erişmek için gerekli izinlere sahiptir. Daha fazla bilgi <xref:System.Security.Permissions.RegistryPermission> için sınıfa bakın.  
   
- Kayıt defteri değişkenleri <xref:System.Security.Permissions.RegistryPermission> olmayan kodun bunlara erişebilmesi için bellek konumlarında depolanmamalıdır. Benzer şekilde, izin verirken işi almak için gereken en düşük ayrıcalıklara izin verin.  
+ Kayıt defteri değişkenleri, kodun <xref:System.Security.Permissions.RegistryPermission> erişilebileceği bellek konumlarında depolanmamalıdır. Benzer şekilde, izin verirken, işi yapmak için gereken minimum ayrıcalıkları tanıyın.  
   
- Kayıt defteri izin erişim değerleri <xref:System.Security.Permissions.RegistryPermissionAccess> numaralandırması tarafından tanımlanır. Aşağıdaki tabloda üyelerinin ayrıntıları verilmiştir.  
+ Kayıt defteri izni erişim değerleri <xref:System.Security.Permissions.RegistryPermissionAccess> numaralandırma ile tanımlanır. Aşağıdaki tablo üyeleri ayrıntıları.  
   
-|Değer|Kayıt defteri değişkenlerine erişim|  
+|Değer|Kayıt Defteri Değişkenlerine Erişim|  
 |-----------|----------------------------------|  
 |`AllAccess`|Oluşturma, okuma ve yazma|  
-|`Create`|Create|  
+|`Create`|Oluşturma|  
 |`NoAccess`|Erişim yok|  
-|`Read`|Oku|  
-|`Write`|Write|  
+|`Read`|Okuma|  
+|`Write`|Yazma|  
   
-## <a name="checking-values-in-registry-keys"></a>Kayıt defteri anahtarlarındaki değerler denetleniyor  
+## <a name="checking-values-in-registry-keys"></a>Kayıt Defteri Anahtarlarında Değerleri Denetleme  
 
- Bir kayıt defteri değeri oluşturduğunuzda, bu değer zaten varsa ne yapılacağını belirlemeniz gerekir. Belki de kötü amaçlı olan bir işlem, değeri zaten oluşturmuş ve ona erişime sahip olabilir. Verileri kayıt defteri değerine yerleştirdiğinizde, veriler diğer işlem tarafından kullanılabilir. Bunu engellemek için `GetValue` yöntemini kullanın. Anahtar zaten yoksa `Nothing` döndürür.  
+ Bir kayıt defteri değeri oluşturduğunuzda, bu değer zaten varsa ne yapacağınız gerektiğine karar vermeniz gerekir. Başka bir işlem, belki de kötü niyetli bir, zaten değer yarattı ve ona erişimi olabilir. Verileri kayıt defteri değerine koyduğunuzda, veriler diğer işlem için kullanılabilir. Bunu önlemek için `GetValue` yöntemi kullanın. Anahtar `Nothing` zaten yoksa döndürür.  
   
 > [!IMPORTANT]
-> Bir Web uygulamasından kayıt defteri okunurken geçerli kullanıcının kimliği, Web uygulamasında uygulanan kimlik doğrulama ve kimliğe bürünme özelliğine bağlıdır.  
+> Bir Web uygulamasından kayıt defterini okurken, geçerli kullanıcının kimliği Web uygulamasında uygulanan kimlik doğrulama ve kimliğe bürünme bağlıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

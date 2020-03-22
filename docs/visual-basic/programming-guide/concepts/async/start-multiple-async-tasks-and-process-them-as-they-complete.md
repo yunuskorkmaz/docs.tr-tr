@@ -2,55 +2,55 @@
 title: Birden Çok Zaman Uyumsuz Görev Başlatma ve Görevleri Tamamlandıkça İşleme
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: 5293c2f6e1a17d3645fd1ce5a4ba61eac4d8b3a2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b14171196a95e9a6a12f6b13f6f17d3cfe352bce
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346676"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266852"
 ---
-# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Birden çok zaman uyumsuz görev başlatın ve bunları tamamlarsa Işleyin (Visual Basic)
-<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>kullanarak, aynı anda birden çok görev başlatabilir ve bunları, başlatıldıkları sırada işlemek yerine, bir kez işlem tamamlanır.  
+# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Birden Çok Async Görevi Başlatın ve Tamamladıkları Gibi İşleyin (Visual Basic)
+Kullanarak, <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>birden çok görevi aynı anda başlatabilir ve başlatıldıkları sırada işlemek yerine tamamlandıkları gibi tek tek işleyebilirsiniz.  
   
- Aşağıdaki örnek, bir görev koleksiyonu oluşturmak için bir sorgu kullanır. Her görev belirtilen bir Web sitesinin içeriğini indirir. Bir while döngüsünün her yinelemesinde, bir `WhenAny` çağrısı, ilk önce indirmeyi izleyen görevler koleksiyonundaki görevi döndürür. Bu görev koleksiyondan kaldırılır ve işlenir. Döngü, koleksiyon daha fazla görev içerene kadar yinelenir.  
+ Aşağıdaki örnekte, görev koleksiyonu oluşturmak için bir sorgu kullanır. Her görev, belirli bir web sitesinin içeriğini indirir. Bir while döngüsünün her yinelemesinde, önce `WhenAny` karşıdan yüklemeyi tamamlayan görevler koleksiyonundaki görevi döndürecek beklenen bir çağrı. Bu görev koleksiyondan kaldırılır ve işlenir. Döngü, koleksiyon başka görev içermeyene kadar yinelenir.  
   
 > [!NOTE]
-> Örnekleri çalıştırmak için, bilgisayarınızda Visual Studio 2012 veya daha yeni bir sürümü ve .NET Framework 4,5 ya da daha yeni bir sürümü yüklü olmalıdır.  
+> Örnekleri çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 veya daha yeni bilgisayarınıza yüklü olması gerekir.  
   
-## <a name="downloading-the-example"></a>Örnek indiriliyor  
- Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten indirebilirsiniz: uygulamanızı Ince ayar](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) yapın ve ardından aşağıdaki adımları izleyin.  
+## <a name="downloading-the-example"></a>Örneği İndirme  
+ Windows Presentation Foundation (WPF) projesinin tamamını [Async Sample: Fine Tuning Application'dan](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) indirebilir ve ardından aşağıdaki adımları izleyebilirsiniz.  
   
-1. İndirdiğiniz dosyayı sıkıştırmasını açın ve ardından Visual Studio 'Yu başlatın.  
+1. İndirdiğiniz dosyayı sıkıştırın ve Visual Studio'yu başlatın.  
   
-2. Menü çubuğunda **Dosya**, **Aç**, **Proje/çözüm**' ü seçin.  
+2. Menü çubuğunda **Dosya**, **Aç**, **Proje/Çözüm'ü**seçin.  
   
-3. **Proje Aç** iletişim kutusunda, açtığınız örnek kodu tutan klasörü açın ve ardından AsyncFineTuningVB için çözüm (. sln) dosyasını açın.  
+3. **Projeyi Aç** iletişim kutusunda, sıkıştırdığınız örnek kodu tutan klasörü açın ve ardından AsyncFineTuningVB için çözüm (.sln) dosyasını açın.  
   
-4. **Çözüm Gezgini**' de, **Processtasksastheyıfinish** projesinin kısayol menüsünü açın ve ardından **Başlangıç projesi olarak ayarla**' yı seçin.  
+4. **Çözüm Gezgini'nde,** **ProcessTasksAsTheyFinish** projesi için kısayol menüsünü açın ve ardından **StartUp Project olarak ayarla'yı**seçin.  
   
 5. Projeyi çalıştırmak için F5 tuşunu seçin.  
   
-     Projeyi hata ayıklamadan çalıştırmak için CTRL + F5 tuşlarını seçin.  
+     Projeyi hata ayıklamadan çalıştırmak için Ctrl+F5 tuşlarını seçin.  
   
-6. İndirilen uzunluklarının her zaman aynı sırada görünmediğini doğrulamak için projeyi birkaç kez çalıştırın.  
+6. İndirilen uzunlukların her zaman aynı sırada görünmediğini doğrulamak için projeyi birkaç kez çalıştırın.  
   
- Projeyi indirmek istemiyorsanız, bu konunun sonundaki MainWindow. xaml. vb dosyasını gözden geçirebilirsiniz.  
+ Projeyi indirmek istemiyorsanız, bu konunun sonundaki MainWindow.xaml.vb dosyasını inceleyebilirsiniz.  
   
-## <a name="building-the-example"></a>Örnek oluşturma  
- Bu örnek, [bir tane tamamlandıktan sonra kalan zaman uyumsuz görevleri Iptal et (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) ve aynı kullanıcı arabirimini kullanır.  
+## <a name="building-the-example"></a>Örnek Oluşturma  
+ Bu örnek, [Bir Tamamlandıktan Sonra Kalan Async Görevlerini İptal Etme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) olarak geliştirilen ve aynı UI'yi kullanan koda ekler.  
   
- Bu örneği kendiniz oluşturmak için, "örneği Indirme" bölümündeki yönergeleri izleyin, ancak **Başlangıç projesi**olarak iptal eden **ınfteronetask** ' ı seçin. Bu konudaki değişiklikleri bu projedeki `AccessTheWebAsync` yöntemine ekleyin. Değişiklikler yıldız işaretiyle işaretlenir.  
+ Örneği adım adım oluşturmak için, "Örneği İndirme" bölümündeki yönergeleri izleyin, ancak **StartUp Project**olarak **CancelAfterOneTask'ı** seçin. Bu konudaki değişiklikleri bu `AccessTheWebAsync` projedeki yönteme ekleyin. Değişiklikler yıldız işaretleriyle işaretlenir.  
   
- Bu **görev** projesi, yürütüldüğünde bir görev koleksiyonu oluşturduğunda zaten bir sorgu içeriyor. Aşağıdaki koddaki `ProcessURLAsync` her bir çağrı, `TResult` bir tamsayı olduğu bir <xref:System.Threading.Tasks.Task%601> döndürür.  
+ **CancelAfterOneTask** projesi zaten yürütüldüğünde bir görev koleksiyonu oluşturan bir sorgu içerir. Aşağıdaki `ProcessURLAsync` koddaki her arama <xref:System.Threading.Tasks.Task%601> bir `TResult` tamsayı yıkıntır döndürür.  
   
 ```vb  
 Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =  
     From url In urlList Select ProcessURLAsync(url, client, ct)  
 ```  
   
- Projenin MainWindow. xaml. vb dosyasında `AccessTheWebAsync` yönteminde aşağıdaki değişiklikleri yapın.  
+ Projenin MainWindow.xaml.vb dosyasında yöntemde `AccessTheWebAsync` aşağıdaki değişiklikleri yapın.  
   
-- <xref:System.Linq.Enumerable.ToArray%2A>yerine <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> uygulayarak sorguyu yürütün.  
+- <xref:System.Linq.Enumerable.ToArray%2A>Yerine uygulayarak <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> sorguyu yürütün  
   
     ```vb  
     Dim downloadTasks As List(Of Task(Of Integer)) = downloadTasksQuery.ToList()  
@@ -58,7 +58,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
   
 - Koleksiyondaki her görev için aşağıdaki adımları gerçekleştiren bir while döngüsü ekleyin.  
   
-    1. Bir `WhenAny` çağrısını, son indirme işleminin sona ermesi için koleksiyondaki ilk görevi tanımlamak üzere bekler.  
+    1. İndirmeyi tamamlamak `WhenAny` için koleksiyondaki ilk görevi belirlemek için bir çağrı bekler.  
   
         ```vb  
         Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
@@ -70,24 +70,24 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
         downloadTasks.Remove(firstFinishedTask)  
         ```  
   
-    3. Await `firstFinishedTask`, bir `ProcessURLAsync`çağrısıyla döndürülür. `firstFinishedTask` değişkeni, `TReturn` bir tamsayı olduğu bir <xref:System.Threading.Tasks.Task%601>. Görev zaten tamamlanmış, ancak aşağıdaki örnekte gösterildiği gibi, indirilen Web sitesinin uzunluğunu almak için bu işlemi beklediniz.  
+    3. Bekliyor `firstFinishedTask`, bir çağrı ile `ProcessURLAsync`döndürülür . `firstFinishedTask` Değişken bir <xref:System.Threading.Tasks.Task%601> tamsayı `TReturn` dır. Görev zaten tamamlandı, ancak aşağıdaki örnekte görüldüğü gibi, indirilen web sitesinin uzunluğunu almak için onu bekliyorsunuz.  
   
         ```vb  
         Dim length = Await firstFinishedTask  
         resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:  {0}" & vbCrLf, length)  
         ```  
   
- İndirilen uzunluklarının her zaman aynı sırada görünmediğini doğrulamak için projeyi birkaç kez çalıştırmanız gerekir.  
+ İndirilen uzunlukların her zaman aynı sırada görünmediğini doğrulamak için projeyi birkaç kez çalıştırmalısınız.  
   
 > [!CAUTION]
-> Az sayıda görevle ilgili sorunları gidermek için örnekte açıklandığı gibi bir döngüde `WhenAny` kullanabilirsiniz. Ancak, işlemek için çok sayıda göreviniz varsa diğer yaklaşımlar daha etkilidir. Daha fazla bilgi ve örnek için bkz. [görevleri tamamladıklarında işleme](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/).  
+> Az sayıda `WhenAny` görev içeren sorunları çözmek için örnekte açıklandığı gibi bir döngüde kullanabilirsiniz. Ancak, işlemek için çok sayıda göreviniz varsa, diğer yaklaşımlar daha verimlidir. Daha fazla bilgi ve örnek için, [tamamlandıkça İşleme Görevleri'ne](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)bakın.  
   
 ## <a name="complete-example"></a>Tam Örnek  
- Aşağıdaki kod, örnek için MainWindow. xaml. vb dosyasının tüm metinkodudur. Yıldız işaretleri bu örnek için eklenen öğeleri işaretler.  
+ Aşağıdaki kod, örnek için MainWindow.xaml.vb dosyasının tam metnidir. Yıldız işaretleri, bu örnek için eklenen öğeleri işaretler.  
   
- <xref:System.Net.Http>için bir başvuru eklemeniz gerektiğini unutmayın.  
+ Için bir başvuru eklemeniz <xref:System.Net.Http>gerektiğine dikkat edin.  
   
- Projeyi [zaman uyumsuz örnekten indirebilirsiniz: uygulamanızı hassas bir şekilde ayarlama](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Projeyi [Async Sample: Fine Tuning Application'dan](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)indirebilirsiniz.  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -144,7 +144,7 @@ Class MainWindow
         Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =  
             From url In urlList Select ProcessURLAsync(url, client, ct)  
   
-        ' ***Use ToList to execute the query and start the download tasks.   
+        ' ***Use ToList to execute the query and start the download tasks.
         Dim downloadTasks As List(Of Task(Of Integer)) = downloadTasksQuery.ToList()  
   
         ' ***Add a loop to process the tasks one at a time until none remain.  
@@ -166,7 +166,7 @@ Class MainWindow
     ' Bundle the processing steps for a website into one async method.  
     Async Function ProcessURLAsync(url As String, client As HttpClient, ct As CancellationToken) As Task(Of Integer)  
   
-        ' GetAsync returns a Task(Of HttpResponseMessage).   
+        ' GetAsync returns a Task(Of HttpResponseMessage).
         Dim response As HttpResponseMessage = Await client.GetAsync(url, ct)  
   
         ' Retrieve the website contents from the HttpResponseMessage.  
@@ -208,6 +208,6 @@ End Class
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Zaman uyumsuz uygulamanızda ince ayar yapma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Async ve await ile zaman uyumsuz programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Zaman uyumsuz örnek: uygulamanıza Ince ayar yapma](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async Uygulamanızda İnce Ayar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Async ve Await ile Asynchronous Programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Async Örnek: Uygulamanızı İyi Ayar](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

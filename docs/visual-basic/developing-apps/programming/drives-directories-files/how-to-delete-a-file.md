@@ -8,31 +8,31 @@ helpviewer_keywords:
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
 ms.openlocfilehash: 57182f1a1d92b7fe954fd26b32c5e4b1107823ee
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348789"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dosya Silme
 
-`My.Computer.FileSystem` nesnesinin `DeleteFile` yöntemi bir dosyayı silmenizi sağlar. Bunun sunduğu seçenekler arasında: Silinen dosyanın **geri dönüşüm kutusu**'na gönderilmesi, kullanıcıdan dosyanın silinip silinmeyeceğini ve Kullanıcı işlemi iptal ettiğinde ne yapılacağını onaylamasını isteyip istemediğini sorar.  
+Nesnenin `DeleteFile` `My.Computer.FileSystem` yöntemi bir dosyayı silmenizi sağlar. Sunduğu seçenekler arasında: silinen dosyayı Geri **Dönüşüm Kutusu'na**gönderip göndermeme, kullanıcıdan dosyanın silinmesi gerektiğini onaylamasını isteyip istememesi ve kullanıcı işlemi iptal ettiğinde ne yapması gerektiği.  
   
-### <a name="to-delete-a-text-file"></a>Bir metin dosyasını silmek için  
+### <a name="to-delete-a-text-file"></a>Metin dosyasını silmek için  
   
-- Dosyayı silmek için `DeleteFile` yöntemini kullanın. Aşağıdaki kod, `test.txt`adlı dosyanın nasıl silineceğini gösterir.  
+- Dosyayı `DeleteFile` silmek için yöntemi kullanın. Aşağıdaki kod, adlı `test.txt`dosyanın nasıl silinecek olduğunu gösterir.  
   
      [!code-vb[VbVbcnMyFileSystem#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#22)]  
   
-### <a name="to-delete-a-text-file-and-ask-the-user-to-confirm-that-the-file-should-be-deleted"></a>Bir metin dosyasını silmek ve kullanıcıdan dosyanın silinmesi gerektiğini doğrulamasını istemek için  
+### <a name="to-delete-a-text-file-and-ask-the-user-to-confirm-that-the-file-should-be-deleted"></a>Bir metin dosyasını silmek ve kullanıcıdan dosyanın silinmesi gerektiğini onaylamasını istemek için  
   
-- Dosyayı silmek için `DeleteFile` yöntemi kullanın, `showUI` `AllDialogs`olarak ayarlar. Aşağıdaki kod, `test.txt` adlı dosyanın nasıl silineceğini ve kullanıcının dosyanın silinmesi gerektiğini onaylamasını sağlar.  
+- Dosyayı `DeleteFile` silmek için yöntemi `showUI` `AllDialogs`kullanın, ayar . Aşağıdaki kod, adlandırılmış `test.txt` dosyanın nasıl silineceğini gösterir ve kullanıcının dosyanın silinmesi gerektiğini onaylamasına izin verir.  
   
      [!code-vb[VbFileIOMisc#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#9)]  
   
-### <a name="to-delete-a-text-file-and-send-it-to-the-recycle-bin"></a>Bir metin dosyasını silmek ve geri dönüşüm kutusu 'na göndermek için  
+### <a name="to-delete-a-text-file-and-send-it-to-the-recycle-bin"></a>Bir metin dosyasını silmek ve Geri Dönüşüm Kutusu'na göndermek için  
   
-- `recycle` parametresi için `SendToRecycleBin` belirterek dosyayı silmek için `DeleteFile` yöntemi kullanın. Aşağıdaki kod, `test.txt` adlı dosyanın nasıl silineceğini ve **geri dönüşüm kutusu**'na nasıl gönderileceğini gösterir.  
+- Parametre `DeleteFile` için belirterek `SendToRecycleBin` dosyayı silmek için yöntemi kullanın. `recycle` Aşağıdaki kod, adlı `test.txt` dosyanın nasıl silinip Geri Dönüşüm **Kutusu'na**gönderilebildiğini gösterir.  
   
      [!code-vb[VbFileIOMisc#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#10)]  
   
@@ -40,25 +40,25 @@ ms.locfileid: "74348789"
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (\\\\.\\) (<xref:System.ArgumentException>) ile başlar.  
+- Yol aşağıdaki nedenlerden biri için geçerli değildir: bir sıfır uzunlukta dize, sadece beyaz boşluk içerir, geçersiz karakterler içerir, \\ \\ya\\da bir aygıt yolu (ile başlar . ) (<xref:System.ArgumentException>).  
   
-- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğundan geçerli değil.  
+- Yol geçerli değildir, çünkü `Nothing` <xref:System.ArgumentNullException>( ).  
   
-- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
+- Yol, sistem tarafından tanımlanan maksimum<xref:System.IO.PathTooLongException>uzunluğu aşıyor ( ).  
   
-- Yoldaki bir dosya veya klasör adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
+- Yoldaki bir dosya veya klasör adı bir üst üste içerir (:) veya geçersiz bir biçimde<xref:System.NotSupportedException>( ).  
   
 - Dosya kullanımda (<xref:System.IO.IOException>).  
   
-- Kullanıcı, yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
+- Kullanıcı yolu görüntülemek için gerekli izinlerden<xref:System.Security.SecurityException>yoksundur ( ).  
   
 - Dosya yok (<xref:System.IO.FileNotFoundException>).  
   
-- Kullanıcının dosyayı silme izni yok veya dosya salt okunurdur (<xref:System.UnauthorizedAccessException>).  
+- Kullanıcının dosyayı silme izni yoktur veya dosya salt okunur<xref:System.UnauthorizedAccessException>( ).  
   
-- Kullanıcının yeterli izinlere sahip olmadığı bir kısmi güven durumu (<xref:System.Security.SecurityException>) vardır.  
+- Kullanıcının yeterli izine sahip olmadığı kısmi güven durumu<xref:System.Security.SecurityException>vardır ( ).  
   
-- Kullanıcı işlemi iptal etti ve `onUserCancel` `ThrowException` (<xref:System.OperationCanceledException>) olarak ayarlandı.  
+- Kullanıcı işlemi iptal etti `onUserCancel` ve `ThrowException` ayarlanır<xref:System.OperationCanceledException>( ).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

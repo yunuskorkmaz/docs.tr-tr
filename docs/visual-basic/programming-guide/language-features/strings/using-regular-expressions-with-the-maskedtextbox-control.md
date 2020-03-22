@@ -5,59 +5,59 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 12d500fa0ff4945dcf2d5009bdba6d337834707e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b997f6f495fca51e888bb995fee0361d29d68048
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346258"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148290"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Visual Basic'de Normal İfadeleri MaskedTextBox Denetimi ile Kullanma
-Bu örnek, <xref:System.Windows.Forms.MaskedTextBox> denetimiyle çalışacak basit normal ifadelerin nasıl dönüştürüleceğini gösterir.  
+Bu örnek, denetimle çalışmak için basit normal <xref:System.Windows.Forms.MaskedTextBox> ifadeleri nasıl dönüştüreceklerini gösterir.  
   
-## <a name="description-of-the-masking-language"></a>Maskeleme dilinin açıklaması  
- Standart <xref:System.Windows.Forms.MaskedTextBox> maskeleme dili, Visual Basic 6,0 ' de `Masked Edit` denetimi tarafından kullanılan bir temel alır ve bu platformdan geçiş yapan kullanıcılara tanıdık gelmelidir.  
+## <a name="description-of-the-masking-language"></a>Maskeleme Dilinin Tanımı  
+ Standart <xref:System.Windows.Forms.MaskedTextBox> maskeleme dili Visual Basic 6.0'daki `Masked Edit` denetim tarafından kullanılan adayalıdır ve bu platformdan geçiş yapan kullanıcılara tanıdık olmalıdır.  
   
- <xref:System.Windows.Forms.MaskedTextBox> denetiminin <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> özelliği kullanılacak giriş maskesini belirtir. Maske, aşağıdaki tablodaki bir veya daha fazla maskeleme öğelerinden oluşan bir dize olmalıdır.  
+ Denetimin <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> özelliği, hangi giriş maskesinin kullanılacağını <xref:System.Windows.Forms.MaskedTextBox> belirtir. Maske, aşağıdaki tablodaki maskeleme öğelerinden bir veya daha fazlasından oluşan bir dize olmalıdır.  
   
-|Maskeleme öğesi|Açıklama|Normal ifade öğesi|  
+|Maskeleme elemanı|Açıklama|Normal ifade öğesi|  
 |---------------------|-----------------|--------------------------------|  
-|0|0 ile 9 arasında herhangi bir tek basamak. Giriş gerekiyor.|\d|  
-|9|Sayı veya boşluk. Giriş isteğe bağlı.|[\d]?|  
-|#|Sayı veya boşluk. Giriş isteğe bağlı. Bu konum maskede boş bırakılırsa, bir boşluk olarak işlenir. Artı (+) ve eksi (-) işaretlerine izin verilir.|[\d +-]?|  
-|L|ASCII harfi. Giriş gerekiyor.|[a-zA-Z]|  
-|?|ASCII harfi. Giriş isteğe bağlı.|[a-zA-Z]?|  
-|&|İnde. Giriş gerekiyor.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
-|Mş|İnde. Giriş isteğe bağlı.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
-|A|Sayısal. Giriş isteğe bağlı.|\W|  
-|.|Kültüre uygun ondalık yer tutucusu.|Kullanılamıyor.|  
+|0|0 ile 9 arasında herhangi bir tek rakam. Giriş gerekli.|\d|  
+|9|Basamak veya boşluk. Giriş isteğe bağlı.|[ \d]?|  
+|#|Basamak veya boşluk. Giriş isteğe bağlı. Bu konum maskede boş bırakılırsa, boşluk olarak işlenir. Artı (+) ve eksi (-) işaretlerine izin verilir.|[ \d+-]?|  
+|L|ASCII mektubu. Giriş gerekli.|[a-zA-Z]|  
+|?|ASCII mektubu. Giriş isteğe bağlı.|[a-zA-Z]?|  
+|&|Karakter. Giriş gerekli.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
+|C|Karakter. Giriş isteğe bağlı.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
+|A|Alfasayısal. Giriş isteğe bağlı.|\W|  
+|.|Kültüre uygun ondalık yer tutucu.|Kullanılamıyor.|  
 |,|Kültüre uygun binlerce yer tutucu.|Kullanılamıyor.|  
 |:|Kültüre uygun zaman ayırıcısı.|Kullanılamıyor.|  
-|/|Kültüre uygun Tarih ayırıcısı.|Kullanılamıyor.|  
-|$|Kültüre uygun para birimi simgesi.|Kullanılamıyor.|  
-|\<|İzleyen tüm karakterleri küçük harfe dönüştürür.|Kullanılamıyor.|  
-|>|İzleyen tüm karakterleri büyük harfe dönüştürür.|Kullanılamıyor.|  
-|&#124;|Önceki SHIFT 'i geri alır veya Aşağı Ötele.|Kullanılamıyor.|  
-|&#92;|Bir maske karakteriyle çıkar ve onu değişmez değere dönüştürür. "\\\\" bir ters eğik çizgi için kaçış sırasıdır.|&#92;|  
-|Diğer tüm karakterler.|Leri. Maskenin olmayan tüm öğeler <xref:System.Windows.Forms.MaskedTextBox>içinde görünür.|Diğer tüm karakterler.|  
+|/|Kültüre uygun tarih ayırıcısı.|Kullanılamıyor.|  
+|$|Kültüre uygun para birimi sembolü.|Kullanılamıyor.|  
+|\<|Takip eden tüm karakterleri küçük harfe dönüştürür.|Kullanılamıyor.|  
+|>|Takip eden tüm karakterleri büyük harfe dönüştürür.|Kullanılamıyor.|  
+|&#124;|Önceki bir vardiyayı yukarı veya aşağı doğru geri alar.|Kullanılamıyor.|  
+|&#92;|Bir maske karakterinden kaçıyor, onu gerçek bir karaktere dönüştürüyor. "\\\\" " ters eğik çizgi için kaçış sekansidir.|&#92;|  
+|Diğer tüm karakterler.|Hazır. Tüm maske olmayan öğeler içinde <xref:System.Windows.Forms.MaskedTextBox>kendileri olarak görünür.|Diğer tüm karakterler.|  
   
- Ondalık (.), binde (,), saat (:), Tarih (/) ve para birimi ($) sembolleri, bu sembolleri uygulamanın kültürüyle tanımlandığı şekilde görüntülemek için varsayılandır. <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> özelliğini kullanarak, bunları başka bir kültür için sembolleri görüntülemeye zorlayabilirsiniz.  
+ Ondalık (.), binde (,), saat (:), tarih (/) ve para birimi ($) sembolleri, uygulamanın kültürü tarafından tanımlanan bu sembolleri görüntülemek için varsayılan dır. Özelliği kullanarak onları başka bir kültür için <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> semboller görüntülemeye zorlayabilirsiniz.  
   
-## <a name="regular-expressions-and-masks"></a>Normal Ifadeler ve maskeler  
- Kullanıcı girişini doğrulamak için normal ifadeleri ve maskeleri kullanabilseniz de tamamen eşdeğer değildir. Normal ifadeler maskelerden daha karmaşık desenler ifade edebilir, ancak maskeler aynı bilgileri daha succinctly ve ilgili bir biçimde ifade edebilir.  
+## <a name="regular-expressions-and-masks"></a>Düzenli İfadeler ve Maskeler  
+ Kullanıcı girişini doğrulamak için normal ifadeler ve maskeler kullanabiliyor olsada, bunlar tamamen eşdeğer değildir. Normal ifadeler maskelerden daha karmaşık desenleri ifade edebilir, ancak maskeler aynı bilgileri daha kısa ve kültürel açıdan uygun bir biçimde ifade edebilir.  
   
- Aşağıdaki tabloda dört normal ifade ve her biri için eşdeğer maske karşılaştırılmaktadır.  
+ Aşağıdaki tablo, her biri için dört normal ifade ve eşdeğer maskeyi karşılaştırır.  
   
-|Normal ifade|Maskesi|Notlar|  
+|Normal ifade|Maskeleme|Notlar|  
 |------------------------|----------|-----------|  
-|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|Maskede `/` karakteri bir mantıksal Tarih ayırıcısıdır ve uygulamanın geçerli kültürüne uygun olan Tarih ayırıcısı olarak kullanıcıya görünür.|  
-|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|Bir tarih (gün, ay kısaltması ve yıl), üç harfli ay kısaltmasının ilk büyük harfle ve ardından iki küçük harf ile görüntülendiği Birleşik Devletler biçimde görüntülenir.|  
-|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|Birleşik Devletler telefon numarası, alan kodu isteğe bağlıdır. Kullanıcı isteğe bağlı karakterleri girmek istemezseniz, boşluk girebilir veya fare işaretçisini, ilk 0 ile temsil edilen maskenin içindeki konuma doğrudan yerleştirebilir.|  
-|`$\d{6}.00`|`$999,999.00`|0 ile 999999 arasında bir para birimi değeri. Para birimi, thousandth ve ondalık karakterler, çalışma zamanında kültüre özgü eşdeğerleriyle değiştirilir.|  
+|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|Maskedeki `/` karakter mantıksal bir tarih ayırıcısıdır ve uygulamanın geçerli kültürüne uygun tarih ayırıcısı olarak kullanıcıya görünür.|  
+|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|Üç harfli aylık kısaltmanın ilk büyük harfle ve ardından iki küçük harfle görüntülendiği ABD biçimindeki bir tarih (gün, ay kısaltması ve yıl).|  
+|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|Amerika Birleşik Devletleri telefon numarası, alan kodu isteğe bağlı. Kullanıcı isteğe bağlı karakterleri girmek istemiyorsa, boşluklara girebilir veya fare işaretçisini doğrudan ilk 0'ın temsil ettiği maskedeki konuma yerleyebilir.|  
+|`$\d{6}.00`|`$999,999.00`|0 ile 999999 aralığında bir para birimi değeri. Para birimi, binde ve ondalık karakterler çalışma zamanında kültüre özgü eşdeğerleriyle değiştirilir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
 - <xref:System.Windows.Forms.MaskedTextBox>
-- [Visual Basic dizeleri doğrulanıyor](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)
+- [Visual Basic'de Dizeleri Doğrulama](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)
 - [MaskedTextBox Denetimi](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)

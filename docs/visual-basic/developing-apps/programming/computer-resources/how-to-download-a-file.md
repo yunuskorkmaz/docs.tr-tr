@@ -9,51 +9,51 @@ helpviewer_keywords:
 - files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
 ms.openlocfilehash: 4923feb46ff638de9514a4d70fc00367491a6f44
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345628"
 ---
 # <a name="how-to-download-a-file-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dosya İndirme
 
-<xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> yöntemi, uzak bir dosyayı indirmek ve belirli bir konuma depolamak için kullanılabilir. `ShowUI` parametresi `True`olarak ayarlanırsa, indirmenin ilerlemesini gösteren bir iletişim kutusu görüntülenir ve kullanıcıların işlemi iptal edebilmesine izin verir. Varsayılan olarak, aynı ada sahip var olan dosyaların üzerine yazılmaz; Varolan dosyaların üzerine yazmak istiyorsanız `overwrite` parametresini `True`olarak ayarlayın.
+Yöntem, <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> uzak bir dosyayı karşıdan yükleyip belirli bir konuma depolamak için kullanılabilir. `ShowUI` Parametre `True`ayarlanmışsa, karşıdan yüklemenin ilerlemesini gösteren ve kullanıcıların işlemi iptal etmesine izin veren bir iletişim kutusu görüntülenir. Varsayılan olarak, aynı ada sahip varolan dosyalar üzerine yazılmamışsa; varolan dosyaların üzerine yazmak istiyorsanız, `overwrite` parametreyi ' ye `True`ayarla
 
 Aşağıdaki koşullar özel bir duruma neden olabilir:
 
-- Sürücü adı geçerli değil (<xref:System.ArgumentException>).
+- Sürücü adı geçerli<xref:System.ArgumentException>değil ( ).
 
-- Gerekli kimlik doğrulaması sağlanmadı (<xref:System.UnauthorizedAccessException> veya <xref:System.Security.SecurityException>).
+- Gerekli kimlik doğrulaması sağlanmadı<xref:System.UnauthorizedAccessException> <xref:System.Security.SecurityException>(veya).
 
-- Sunucu belirtilen `connectionTimeout` (<xref:System.TimeoutException>) içinde yanıt vermiyor.
+- Sunucu belirtilen `connectionTimeout` (<xref:System.TimeoutException>) içinde yanıt vermez.
 
-- İstek Web sitesi tarafından reddedildi (<xref:System.Net.WebException>).
+- İstek Web sitesi tarafından reddedilir<xref:System.Net.WebException>( ).
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
 > [!IMPORTANT]
-> Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, Form1. vb dosyası bir Visual Basic kaynak dosyası olmayabilir. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın. Dosyanın içeriği beklendiği gibi olmayabilir ve dosyadan okuma yöntemleri başarısız olabilir.
+> Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, Form1.vb dosyası Visual Basic kaynak dosyası olmayabilir. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın. Dosyanın içeriği beklendiği gibi olmayabilir ve dosyadan okuma yöntemleri başarısız olabilir.
 
-### <a name="to-download-a-file"></a>Bir dosyayı indirmek için
+### <a name="to-download-a-file"></a>Dosyayı indirmek için
 
-- Hedef dosyanın konumunu bir dize veya URI olarak belirterek ve dosyanın kaydedileceği konumu belirterek dosyayı indirmek için `DownloadFile` yöntemini kullanın. Bu örnek, `http://www.cohowinery.com/downloads` `WineList.txt` dosyayı indirir ve `C:\Documents and Settings\All Users\Documents`kaydeder:
+- Dosyayı `DownloadFile` karşıdan yükleyerek, hedef dosyanın konumunu dize veya URI olarak belirterek ve dosyayı depolayabilmek için konumu belirtmek için yöntemi kullanın. Bu örnek, dosyayı `http://www.cohowinery.com/downloads` indirir ve `C:\Documents and Settings\All Users\Documents`aşağıdakilere `WineList.txt` kaydeder:
 
   [!code-vb[VbResourceTasks#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#9)]
 
-### <a name="to-download-a-file-specifying-a-time-out-interval"></a>Bir dosya indirmek için bir zaman aşımı aralığı belirtme
+### <a name="to-download-a-file-specifying-a-time-out-interval"></a>Bir dosyayı indirmek için, zaman ayırma aralığı nı belirtmek
 
-- Dosyayı indirmek için `DownloadFile` yöntemi kullanın, hedef dosyanın konumunu bir dize veya URI olarak belirterek, dosyanın kaydedileceği konumu belirterek ve zaman aşımı aralığını milisaniye cinsinden (varsayılan: 1000) belirterek. Bu örnek, `http://www.cohowinery.com/downloads` `WineList.txt` dosyayı indirir ve 500 milisaniyelik zaman aşımı aralığını belirterek `C:\Documents and Settings\All Users\Documents`kaydeder:
+- Dosyayı `DownloadFile` indirmek, hedef dosyanın konumunu dize veya URI olarak belirtmek, dosyanın depolanacak yeri belirtmek ve zaman aralığını milisaniye cinsinden belirtmek için yöntemi kullanın (varsayılan değer 1000'dir). Bu örnek, dosyayı `http://www.cohowinery.com/downloads` karşıdan yüklenir ve 500 milisaniyelik bir zaman çıkış aralığı belirterek dosyayı `C:\Documents and Settings\All Users\Documents` `WineList.txt` kaydeder:
 
   [!code-vb[VbResourceTasks#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#10)]
 
-### <a name="to-download-a-file-supplying-a-user-name-and-password"></a>Bir dosyayı indirmek için Kullanıcı adı ve parola sağlama
+### <a name="to-download-a-file-supplying-a-user-name-and-password"></a>Bir dosyayı indirmek için, kullanıcı adı ve parola sağlama
 
-- Dosyayı indirmek için `DownLoadFile` yöntemini kullanın, hedef dosyanın konumunu bir dize veya URI olarak belirterek ve dosyanın kaydedileceği konumu, Kullanıcı adını ve parolayı belirtin. Bu örnek, `http://www.cohowinery.com/downloads` `WineList.txt` dosyayı indirir ve Kullanıcı adı `anonymous` ve boş bir parolayla `C:\Documents and Settings\All Users\Documents`kaydeder.
+- Dosyayı `DownLoadFile` karşıdan yükleyerek, hedef dosyanın konumunu dize veya URI olarak belirterek ve dosyayı, kullanıcı adını ve parolayı depolayabilmek için konumu belirtmek için yöntemi kullanın. Bu örnek, `WineList.txt` dosyayı `http://www.cohowinery.com/downloads` kullanıcı adı `C:\Documents and Settings\All Users\Documents` `anonymous` ve boş bir parolayla karşıdan yükler ve kaydeder.
 
   [!code-vb[VbResourceTasks#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#11)]
 
   > [!IMPORTANT]
-  > `DownLoadFile` yöntemi tarafından kullanılan FTP protokolü, parolalar da dahil olmak üzere bilgileri düz metin olarak gönderir ve hassas bilgilerin iletilmesi için kullanılmamalıdır.
+  > `DownLoadFile` Yöntem tarafından kullanılan FTP protokolü, parolalar da dahil olmak üzere bilgileri düz metin olarak gönderir ve hassas bilgilerin iletilmesi için kullanılmamalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

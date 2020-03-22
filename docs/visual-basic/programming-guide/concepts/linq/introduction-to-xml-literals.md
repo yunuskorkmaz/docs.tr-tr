@@ -1,23 +1,23 @@
 ---
-title: Visual Basic2 'de XML değişmez değerlerine giriş
+title: Visual Basic2'de XML Literals'e Giriş2
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: 5355a3c0f01bb247e38e52816693ee47d7d50556
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 9f5c54574e51c537d9ea58d307afda10736d0d88
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834987"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266956"
 ---
-# <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic XML değişmez değerlerine giriş
-Bu bölüm, Visual Basic XML ağaçları oluşturma hakkında bilgi sağlar.  
+# <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic'te XML Literals'e Giriş
+Bu bölümde Visual Basic'te XML ağaçları oluşturma hakkında bilgi verilmektedir.  
   
- XML ağacının içeriği olarak LINQ sorgularının sonuçlarını kullanma hakkında daha fazla bilgi için bkz. [Işlevsel oluşturma (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ BIR XML ağacının içeriği olarak LINQ sorgularının sonuçlarını kullanma hakkında bilgi [için](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)bkz.  
   
- Visual Basic XML değişmez değerleri hakkında daha fazla bilgi için bkz. [Visual Basic LINQ to XML genel bakış](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
+ Visual Basic'teki XML literalleri hakkında daha fazla bilgi için [Visual Basic'te LINQ'dan XML'e Genel Bakış bölümüne](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)bakın.  
   
-## <a name="creating-xml-trees"></a>XML ağaçları oluşturma  
- Aşağıdaki örnek, bu durumda <xref:System.Xml.Linq.XElement> `contacts` ' in nasıl oluşturulacağını gösterir:  
+## <a name="creating-xml-trees"></a>XML Ağaçları Oluşturma  
+ Aşağıdaki örnek, bu durumda <xref:System.Xml.Linq.XElement> `contacts`nasıl oluşturulacak gösterir:  
   
 ```vb  
 Dim contacts As XElement = _  
@@ -35,42 +35,42 @@ Dim contacts As XElement = _
     </Contacts>  
 ```  
   
-### <a name="creating-an-xelement-with-simple-content"></a>Basit Içerikle XElement oluşturma  
- Basit içerik içeren <xref:System.Xml.Linq.XElement> ' ı aşağıdaki gibi oluşturabilirsiniz:  
+### <a name="creating-an-xelement-with-simple-content"></a>Basit İçerikli XElement Oluşturma  
+ Aşağıdaki gibi <xref:System.Xml.Linq.XElement> basit içerik içeren bir oluşturabilirsiniz:  
   
 ```vb  
 Dim n as XElement = <Customer>Adventure Works</Customer>  
-Console.WriteLine(n)   
+Console.WriteLine(n)
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Customer>Adventure Works</Customer>  
 ```  
   
-### <a name="creating-an-empty-element"></a>Boş bir öğe oluşturma  
- Boş bir <xref:System.Xml.Linq.XElement>, aşağıdaki gibi oluşturabilirsiniz:  
+### <a name="creating-an-empty-element"></a>Boş Öğe Oluşturma  
+ Aşağıdaki gibi boş <xref:System.Xml.Linq.XElement>bir oluşturabilirsiniz:  
   
 ```vb  
 Dim n As XElement = <Customer/>  
 Console.WriteLine(n)  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Customer />  
 ```  
   
-### <a name="using-embedded-expressions"></a>Katıştırılmış Ifadeler kullanma  
- XML sabit değerlerinin önemli bir özelliği, katıştırılmış ifadelere izin verleridir. Katıştırılmış ifadeler bir ifadeyi değerlendirmenizi ve ifadenin sonuçlarını XML ağacına eklemeyi sağlar. İfade <xref:System.Xml.Linq.XElement> türü olarak değerlendirilirse, ağaca bir öğe eklenir. İfade <xref:System.Xml.Linq.XAttribute> türü olarak değerlendirilirse, ağaca bir öznitelik eklenir. Öğeleri ve öznitelikleri yalnızca geçerli oldukları yerde ağaca ekleyebilirsiniz.  
+### <a name="using-embedded-expressions"></a>Gömülü İfadeleri Kullanma  
+ XML literals önemli bir özelliği gömülü ifadeler izin olmasıdır. Katıştılmış ifadeler, bir ifadeyi değerlendirmenize ve ifadenin sonuçlarını XML ağacına eklemenize olanak tanır. İfade bir <xref:System.Xml.Linq.XElement>tür, öğe ağaca eklenir değerlendirirse. İfade bir <xref:System.Xml.Linq.XAttribute>tür, bir öznitelik ağaca eklenir değerlendirirse. Öğeleri ve öznitelikleri yalnızca geçerli oldukları ağaca ekleyebilirsiniz.  
   
- Yalnızca tek bir ifadenin katıştırılmış ifadeye gidebileceğini unutmayın. Birden çok deyimi katıştıramazsınız. Bir ifade tek bir çizgiyi aşarsa, satır devamlılık karakterini kullanmanız gerekir.  
+ Yalnızca tek bir ifadenin katıştırılmış bir ifadeye girebileceğini unutmayın. Birden çok deyim katıştıramazsınız. Bir ifade tek bir satırın ötesine uzanıyorsa, satır devam karakterini kullanmanız gerekir.  
   
- Varolan düğümleri (öğeler dahil) ve özniteliklerini yeni bir XML ağacına eklemek için katıştırılmış bir ifade kullanırsanız ve mevcut düğümlerin zaten üst öğesi varsa, düğümler klonlanır. Yeni kopyalanan düğümler yeni XML ağacına eklenir. Mevcut düğümler üst öğe değilse, düğümler yalnızca yeni XML ağacına eklenir. Bu konudaki son örnekte bu gösterilmektedir.  
+ Yeni bir XML ağacına varolan düğümleri (öğeler dahil) ve öznitelikleri eklemek için katıştırılmış bir ifade kullanırsanız ve varolan düğümler zaten ebeveynlik varsa, düğümler klonlanır. Yeni klonlanan düğümler yeni XML ağacına eklenir. Varolan düğümler ebeveynli değilse, düğümler yalnızca yeni XML ağacına eklenir. Bu konudaki son örnek bunu göstermektedir.  
   
- Aşağıdaki örnek, ağaca bir öğe eklemek için gömülü bir ifade kullanır:  
+ Aşağıdaki örnek, ağaca bir öğe eklemek için katışlı bir ifade kullanır:  
   
 ```vb  
 xmlTree1 As XElement = _  
@@ -84,7 +84,7 @@ Dim xmlTree2 As XElement = _
 Console.WriteLine(xmlTree2)  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root>  
@@ -92,8 +92,8 @@ Console.WriteLine(xmlTree2)
 </Root>  
 ```  
   
-### <a name="using-embedded-expressions-for-content"></a>Içerik için katıştırılmış Ifadeler kullanma  
- Bir öğenin içeriğini sağlamak için gömülü bir ifade kullanabilirsiniz:  
+### <a name="using-embedded-expressions-for-content"></a>İçerik için Gömülü İfadeleri Kullanma  
+ Bir öğenin içeriğini sağlamak için katıştırılmış bir ifade kullanabilirsiniz:  
   
 ```vb  
 Dim str As String  
@@ -102,13 +102,13 @@ Dim root As XElement = <Root><%= str %></Root>
 Console.WriteLine(root)  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root>Some content</Root>  
 ```  
   
-### <a name="using-a-linq-query-in-an-embedded-expression"></a>Katıştırılmış Ifadede LINQ sorgusu kullanma  
+### <a name="using-a-linq-query-in-an-embedded-expression"></a>Gömülü İfadede LINQ Sorgusu Kullanma  
  Bir öğenin içeriği için LINQ sorgusunun sonuçlarını kullanabilirsiniz:  
   
 ```vb  
@@ -122,7 +122,7 @@ Dim n As XElement = _
 Console.WriteLine(n)  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root>  
@@ -132,8 +132,8 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="using-embedded-expressions-for-node-names"></a>Düğüm adları için katıştırılmış Ifadeler kullanma  
- Öznitelik adlarını, öznitelik değerlerini, öğe adlarını ve öğe değerlerini hesaplamak için katıştırılmış ifadeler de kullanabilirsiniz:  
+### <a name="using-embedded-expressions-for-node-names"></a>Düğüm Adları için Gömülü İfadeleri Kullanma  
+ Öznitelik adlarını, öznitelik değerlerini, öğe adlarını ve öğe değerlerini hesaplamak için közlediğiniz ifadeleri de kullanabilirsiniz:  
   
 ```vb  
 Dim eleName As String = "ele"  
@@ -149,7 +149,7 @@ Dim n As XElement = _
 Console.WriteLine(n)  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root att="aValue">  
@@ -157,8 +157,8 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="cloning-vs-attaching"></a>Kopyalama ve Iliştirme  
- Daha önce belirtildiği gibi, var olan düğümleri (öğeler dahil) ve özniteliklerini yeni bir XML ağacına eklemek için katıştırılmış bir ifade kullanırsanız, varolan düğümlerin zaten üst öğesi varsa, düğümler kopyalanır ve yeni kopyalanan düğümler yeni XML ağacına eklenir. Mevcut düğümler üst öğe değilse, bunlar yalnızca yeni XML ağacına eklenir.  
+### <a name="cloning-vs-attaching"></a>Klonlama ve Takma  
+ Daha önce de belirtildiği gibi, varolan düğümleri (öğeler dahil) ve yeni bir XML ağacına öznitelikleri eklemek için katıştırılmış bir ifade kullanırsanız, varolan düğümler zaten ebeveynlik varsa, düğümler klonlanır ve yeni klonlanan düğümler yeni XML ağacına eklenir. Varolan düğümler ebeveynli değilse, yalnızca yeni XML ağacına eklenir.  
   
 ```vb  
 ' Create a tree with a child element.  
@@ -188,7 +188,7 @@ Console.WriteLine("Child2 was {0}", _
     "attached", "cloned"))  
 ```  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Bu örnek, aşağıdaki çıktıyı üretir:  
   
 ```console  
 Child1 was cloned  
@@ -197,4 +197,4 @@ Child2 was attached
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML ağaçları oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML Ağaçları Oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

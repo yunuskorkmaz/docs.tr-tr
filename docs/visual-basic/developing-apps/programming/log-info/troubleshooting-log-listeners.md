@@ -7,33 +7,33 @@ helpviewer_keywords:
 - troubleshooting event logs
 ms.assetid: ac6eb760-3d5d-461e-aedd-40599ee22e49
 ms.openlocfilehash: dd139935dae7fe4d1334b861e6590df29bab7202
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74346864"
 ---
 # <a name="troubleshooting-log-listeners-visual-basic"></a>Sorun Giderme: Günlük Dinleyicileri (Visual Basic)
 
-Uygulamanızda oluşan olaylarla ilgili bilgileri günlüğe kaydetmek için `My.Application.Log` ve `My.Log` nesnelerini kullanabilirsiniz.  
+Uygulamanızda meydana `My.Application.Log` `My.Log` gelen olaylarla ilgili bilgileri günlüğe kaydetmek için nesneleri kullanabilirsiniz.  
   
- Bu iletileri hangi günlük dinleyicilerinin alacağını belirlemek için bkz. [Walkthrough: My. Application. log bilgisinin nereden yazabileceğini belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
+ Bu iletileri hangi log dinleyicilerinin aldığını belirlemek [için, Bkz. Walkthrough: My.Application.Log Yazma Bilgileri nerede belirleyin](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
- `Log` nesnesi, günlük filtrelemeyi günlüğe kaydettiği bilgi miktarını sınırlamak için kullanabilir. Filtreler yanlış yapılandırılmış ise, günlüklerde yanlış bilgiler bulunabilir. Filtreleme hakkında daha fazla bilgi için bkz. [Izlenecek yol: My. Application. log çıktısını filtreleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).  
+ Nesne, `Log` günlük tutarını sınırlamak için günlük filtrelemesini kullanabilir. Filtreler yanlış yapılandırılmışsa, günlükler yanlış bilgiler içerebilir. Filtreleme hakkında daha fazla bilgi için [bkz.](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)  
   
- Ancak, bir günlük yanlış yapılandırılmışsa, geçerli yapılandırması hakkında daha fazla bilgiye ihtiyacınız olabilir. Bu bilgilere günlüğün gelişmiş `TraceSource` özelliği aracılığıyla ulaşabilirsiniz.  
+ Ancak, bir günlük yanlış yapılandırılırsa, geçerli yapılandırması hakkında daha fazla bilgiye ihtiyacınız olabilir. Bu bilgilere günlüğün gelişmiş `TraceSource` özelliğinden ulaşabilirsiniz.  
   
-### <a name="to-determine-the-log-listeners-for-the-log-object-in-code"></a>Koddaki günlük nesnesinin günlük dinleyicilerini belirleme  
+### <a name="to-determine-the-log-listeners-for-the-log-object-in-code"></a>Koddaki Log nesnesinin günlük dinleyicilerini belirlemek için  
   
-1. Kod dosyasının başındaki <xref:System.Diagnostics> ad alanını içeri aktarın. Daha fazla bilgi için bkz. [Imports açıklaması (.net ad alanı ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+1. Kod <xref:System.Diagnostics> dosyasının başındaki ad alanını içeri aktarın. Daha fazla bilgi [için, Bkz. İçerme Bildirimi (.NET Ad Alanı ve Türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
      [!code-vb[VbVbalrMyApplicationLog#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#13)]  
   
-2. Günlük dinleyicilerinin her biri için bilgilerden oluşan bir dize döndüren bir işlev oluşturun.  
+2. Log'un dinleyicilerinin her biri için bilgilerden oluşan bir dize döndüren bir işlev oluşturun.  
   
      [!code-vb[VbVbalrMyApplicationLog#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#14)]  
   
-3. Günlük izleme dinleyicilerinin koleksiyonunu `GetListeners` işlevine geçirin ve dönüş değerini görüntüleyin.  
+3. Log'un izleme dinleyicilerinin koleksiyonunu işleve `GetListeners` geçirin ve iade değerini görüntüleyin.  
   
      [!code-vb[VbVbalrMyApplicationLog#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#19)]  
   

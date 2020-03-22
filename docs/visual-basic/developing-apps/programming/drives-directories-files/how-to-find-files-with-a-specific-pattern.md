@@ -7,24 +7,24 @@ helpviewer_keywords:
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
 ms.openlocfilehash: 5faaa16615f52714db3de6853786990265716501
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348753"
 ---
 # <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Belirli bir Düzendeki Dosyaları Bulma
 
-<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> yöntemi, dosyaların yol adlarını temsil eden salt okunurdur bir dize koleksiyonu döndürür. Belirli bir kalıbı belirtmek için `wildCards` parametresini kullanabilirsiniz. Aramaya alt dizinler eklemek isterseniz, `searchType` parametresini `SearchOption.SearchAllSubDirectories`olarak ayarlayın.  
+Yöntem, <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> dosyaların yol adlarını temsil eden salt okunur dizeler koleksiyonunu döndürür. `wildCards` Belirli bir desen belirtmek için parametrekullanabilirsiniz. Alt dizinleri aramaya eklemek istiyorsanız, parametreyi `searchType` ' `SearchOption.SearchAllSubDirectories`ye ayarlarsınız.  
   
- Belirtilen Düzenle eşleşen hiçbir dosya bulunamazsa boş bir koleksiyon döndürülür.  
+ Belirtilen desenle eşleşen dosya bulunmazsa boş bir koleksiyon döndürülür.  
   
 > [!NOTE]
-> `System.IO` ad alanının `DirectoryInfo` sınıfını kullanarak bir dosya listesi döndürme hakkında daha fazla bilgi için bkz. <xref:System.IO.DirectoryInfo.GetFiles%2A>.  
+> Ad `DirectoryInfo` alanının sınıfını kullanarak dosya listesini döndürme hakkında bilgi için bkz. <xref:System.IO.DirectoryInfo.GetFiles%2A> `System.IO`  
   
-### <a name="to-find-files-with-a-specified-pattern"></a>Belirtilen bir düzene sahip dosyaları bulmak için  
+### <a name="to-find-files-with-a-specified-pattern"></a>Belirli bir desene sahip dosyaları bulmak için  
   
-- Arama yapmak istediğiniz dizinin adını ve yolunu sağlayarak ve modelini belirterek `GetFiles` yöntemini kullanın. Aşağıdaki örnek, dizinde `.dll` uzantısı olan tüm dosyaları döndürür ve `ListBox1`ekler.  
+- Arama `GetFiles` yapmak istediğiniz dizinin adını ve yolunu sağlayarak ve deseni belirterek yöntemi kullanın. Aşağıdaki örnek, dizindeki uzantılı `.dll` tüm dosyaları döndürür ve `ListBox1`ekler.  
   
      [!code-vb[VbFileIOMisc#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#4)]  
   
@@ -32,21 +32,21 @@ ms.locfileid: "74348753"
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (\\\\.\\) (<xref:System.ArgumentException>) ile başlar.  
+- Yol aşağıdaki nedenlerden biri için geçerli değildir: bir sıfır uzunlukta dize, sadece beyaz boşluk içerir, geçersiz karakterler içerir, \\ \\ya\\da bir aygıt yolu (ile başlar . ) (<xref:System.ArgumentException>).  
   
-- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğundan geçerli değil.  
+- Yol geçerli değildir, çünkü `Nothing` <xref:System.ArgumentNullException>( ).  
   
-- `directory` yok (<xref:System.IO.DirectoryNotFoundException>).  
+- `directory`yok (<xref:System.IO.DirectoryNotFoundException>).  
   
-- `directory` var olan bir dosyaya (<xref:System.IO.IOException>) işaret eder.  
+- `directory`varolan bir dosyaya işaret eder (<xref:System.IO.IOException>).  
   
-- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
+- Yol, sistem tarafından tanımlanan maksimum<xref:System.IO.PathTooLongException>uzunluğu aşıyor ( ).  
   
-- Yoldaki bir dosya veya klasör adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
+- Yoldaki bir dosya veya klasör adı bir üst üste içerir (:) veya geçersiz bir biçimde<xref:System.NotSupportedException>( ).  
   
-- Kullanıcı, yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
+- Kullanıcı yolu görüntülemek için gerekli izinlerden<xref:System.Security.SecurityException>yoksundur ( ).  
   
-- Kullanıcının gerekli izinleri yok (<xref:System.UnauthorizedAccessException>).  
+- Kullanıcı gerekli izinleri yoksun<xref:System.UnauthorizedAccessException>( ).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

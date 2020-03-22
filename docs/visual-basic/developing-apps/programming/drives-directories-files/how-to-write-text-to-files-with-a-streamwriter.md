@@ -7,15 +7,15 @@ helpviewer_keywords:
 - writing to files [Visual Basic], StreamWriter
 ms.assetid: 99762e57-ef46-4dcc-8959-a8f79c22f067
 ms.openlocfilehash: 869e29263abcdd8525b2c372c7bb466e3e21fc65
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334493"
 ---
 # <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te StreamWriter ile Dosyalara Metin Yazma
 
-Bu örnek, `My.Computer.FileSystem.OpenTextFileWriter` yöntemiyle bir <xref:System.IO.StreamWriter> nesnesi açar ve <xref:System.IO.StreamWriter> sınıfının <xref:System.IO.TextWriter.WriteLine%2A> yöntemiyle bir metin dosyasına dize yazmak için onu kullanır.  
+Bu örnek, <xref:System.IO.StreamWriter> `My.Computer.FileSystem.OpenTextFileWriter` yöntemle bir nesne açar ve <xref:System.IO.TextWriter.WriteLine%2A> <xref:System.IO.StreamWriter> sınıfın yöntemi ile bir metin dosyasına bir dize yazmak için kullanır.  
   
 ## <a name="example"></a>Örnek  
 
@@ -25,19 +25,19 @@ Bu örnek, `My.Computer.FileSystem.OpenTextFileWriter` yöntemiyle bir <xref:Sys
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Dosya var ve salt okunurdur (<xref:System.IO.IOException>).  
+- Dosya var ve salt okunur<xref:System.IO.IOException>( ).  
   
 - Disk dolu (<xref:System.IO.IOException>).  
   
-- Yol adı çok uzun (<xref:System.IO.PathTooLongException>).  
+- Yol adı çok uzun<xref:System.IO.PathTooLongException>( ).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
 
- Bu örnek, dosya zaten yoksa yeni bir dosya oluşturur. Bir uygulamanın bir dosya oluşturması gerekiyorsa, bu uygulamanın klasör için `Create` erişimi olması gerekir. Dosya zaten mevcutsa, uygulamanın daha az bir ayrıcalığa yalnızca `Write` erişimi olması gerekir. Mümkün olduğunda, dağıtım sırasında dosyanın oluşturulması ve bir klasör için `Create` erişimi yerine yalnızca tek bir dosyaya `Read` erişim izni verilmesi daha güvenlidir.  
+ Bu örnek, dosya zaten yoksa yeni bir dosya oluşturur. Bir uygulamanın bir dosya oluşturması gerekiyorsa, bu uygulamanın klasöre erişmesi gerekir. `Create` Dosya zaten varsa, uygulamanın `Write` yalnızca daha az bir ayrıcalıkla erişmesi gerekir. Mümkün olduğunda, dosyayı dağıtım sırasında oluşturmak ve bir `Read` klasöre erişmek yerine `Create` yalnızca tek bir dosyaya erişim vermek daha güvenlidir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IO.StreamWriter>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>
-- [Nasıl yapılır: metin dosyalarından okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+- [Nasıl Yapılsın: Metin Dosyalarından Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
 - [Dosyalara Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

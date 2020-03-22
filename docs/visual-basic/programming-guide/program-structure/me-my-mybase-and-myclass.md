@@ -22,19 +22,19 @@ helpviewer_keywords:
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
 ms.openlocfilehash: a21dfeb12e8d99f5f8b8afede084846711c299ab
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347345"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400850"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic'de Me, My, MyBase ve MyClass
-Visual Basic 'de `Me`, `My`, `MyBase`ve `MyClass` benzer adlara sahiptir ancak farklı amaçlar vardır. Bu konu, bu varlıkların her birini ayırt edebilmek için açıklar.  
+`Me`, `My` `MyBase`, `MyClass` , , ve Visual Basic'te benzer adlar vardır, ancak farklı amaçlara sahiptir. Bu konu, bunları ayırt etmek için bu varlıkların her birini açıklar.  
   
-## <a name="me"></a>Beni  
- `Me` anahtar sözcüğü, kodun Şu anda yürütüldüğü bir sınıfın veya yapının belirli bir örneğine başvurmak için bir yol sağlar. `Me`, nesne değişkeni ya da geçerli örneğe başvuran bir yapı değişkeni gibi davranır. `Me` kullanmak, bir sınıfın veya yapının Şu anda yürütülmekte olan örneği hakkındaki bilgileri başka bir sınıf, yapı veya modüldeki bir yordama iletmek için özellikle yararlıdır.  
+## <a name="me"></a>Ben  
+ Anahtar `Me` kelime, kodun şu anda yürütüldettiği bir sınıfın veya yapının belirli örneğine başvurmak için bir yol sağlar. `Me`bir nesne değişkeni veya geçerli örne atıfta bulunan bir yapı değişkeni gibi olur. Kullanmak, `Me` özellikle bir sınıfın veya yapının şu anda yürütülen örneği hakkında başka bir sınıf, yapı veya modüldeki bir yordamhakkında bilgi aktarmak için yararlıdır.  
   
- Örneğin, bir modülde aşağıdaki yordama sahip olduğunuzu varsayalım.  
+ Örneğin, bir modülde aşağıdaki yordamı gördüğünüzün olduğunu varsayalım.  
   
 ```vb  
 Sub ChangeFormColor(FormName As Form)  
@@ -43,20 +43,20 @@ Sub ChangeFormColor(FormName As Form)
 End Sub  
 ```  
   
- Aşağıdaki ifadeyi kullanarak, bu yordamı çağırabilir ve <xref:System.Windows.Forms.Form> sınıfının geçerli örneğini bir bağımsız değişken olarak geçirebilirsiniz.  
+ Aşağıdaki deyimi kullanarak bu yordamı arayabilir <xref:System.Windows.Forms.Form> ve sınıfın geçerli örneğini bağımsız değişken olarak geçirebilirsiniz.  
   
 ```vb  
 ChangeFormColor(Me)  
 ```  
   
-## <a name="my"></a>My  
- `My` özelliği, Visual Basic kullanıcının bilgisayar, uygulama, ayarlar, kaynaklar vb. ile etkileşime geçmesini sağlayan bir dizi .NET Framework sınıfına kolay ve sezgisel erişim sağlar.  
+## <a name="my"></a>Benim  
+ Bu `My` özellik, Visual Basic kullanıcısının bilgisayar, uygulama, ayarlar, kaynaklar ve benzeri şeylerle etkileşimkurmasını sağlayarak bir dizi .NET Framework sınıfına kolay ve sezgisel erişim sağlar.  
   
-## <a name="mybase"></a>MyBase  
- `MyBase` anahtar sözcüğü, sınıfın geçerli örneğinin temel sınıfına başvuran bir nesne değişkeni gibi davranır. `MyBase`, türetilmiş bir sınıfta geçersiz kılınan veya gölgeli temel sınıf üyelerine erişmek için kullanılır. `MyBase.New`, türetilmiş bir sınıf oluşturucusundan bir taban sınıf oluşturucuyu açıkça çağırmak için kullanılır.  
+## <a name="mybase"></a>Mybase  
+ Anahtar `MyBase` kelime, bir sınıfın geçerli örneğinin taban sınıfına atıfta bulunan bir nesne değişkeni gibi olur. `MyBase`türemiş bir sınıfta geçersiz kılınan veya gölgelenen taban sınıf üyelerine erişmek için genellikle kullanılır. `MyBase.New`türemiş bir sınıf oluşturucudan taban sınıf oluşturucusu çağırmak için kullanılır.  
   
-## <a name="myclass"></a>Sınıfım  
- `MyClass` anahtar sözcüğü, başlangıçta uygulanmış olan bir sınıfın geçerli örneğine başvuran bir nesne değişkeni gibi davranır. `MyClass`, `Me`benzerdir, ancak tüm Yöntem çağrıları Yöntem `NotOverridable`olarak değerlendirilir.  
+## <a name="myclass"></a>Myclass  
+ Anahtar `MyClass` kelime, başlangıçta uygulanan bir sınıfın geçerli örneğine atıfta bulunan bir nesne değişkeni gibi olur. `MyClass``Me`benzer, ancak tüm yöntem çağrıları yöntem gibi `NotOverridable`kabul edilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

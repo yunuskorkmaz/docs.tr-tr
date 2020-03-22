@@ -8,37 +8,37 @@ helpviewer_keywords:
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
 ms.openlocfilehash: ee3951e967436a1b8aec09b8e42dc6d1b547bc02
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348848"
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Belirli Düzendeki Dosyaları Dizine Kopyalama
 
-<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> yöntemi, dosyaların yol adlarını temsil eden salt okunurdur bir dize koleksiyonu döndürür. Belirli bir kalıbı belirtmek için `wildCards` parametresini kullanabilirsiniz.  
+Yöntem, <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> dosyaların yol adlarını temsil eden salt okunur dizeler koleksiyonunu döndürür. `wildCards` Belirli bir desen belirtmek için parametrekullanabilirsiniz.  
   
  Eşleşen dosya bulunmazsa boş bir koleksiyon döndürülür.  
   
- Dosyaları bir dizine kopyalamak için <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A> yöntemini kullanabilirsiniz.  
+ Dosyaları bir <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A> dizine kopyalamak için yöntemi kullanabilirsiniz.  
   
-### <a name="to-copy-files-with-a-specific-pattern-to-a-directory"></a>Belirli bir düzene sahip dosyaları dizine kopyalamak için  
+### <a name="to-copy-files-with-a-specific-pattern-to-a-directory"></a>Belirli bir desene sahip dosyaları bir dizine kopyalamak için  
   
-1. Dosya listesini döndürmek için `GetFiles` yöntemini kullanın. Bu örnek, belirtilen dizindeki tüm. rtf dosyalarını döndürür.  
+1. Dosya `GetFiles` listesini döndürmek için yöntemi kullanın. Bu örnek, belirtilen dizindeki tüm .rtf dosyalarını döndürür.  
   
      [!code-vb[VbFileIOMisc#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#36)]  
   
-2. Dosyaları kopyalamak için `CopyFile` yöntemini kullanın. Bu örnek, dosyaları `testdirectory`adlı dizine kopyalar.  
+2. Dosyaları `CopyFile` kopyalamak için yöntemi kullanın. Bu örnek, dosyaları adlı `testdirectory`dizine kopyalar.  
   
      [!code-vb[VbVbcnMyFileSystem#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#88)]  
   
-3. `Next` ifadesiyle `For` ifadesini kapatın.  
+3. İfadeyi `For` bir `Next` deyimle kapatın.  
   
      [!code-vb[VbVbcnMyFileSystem#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#89)]  
   
 ## <a name="example"></a>Örnek  
 
- Aşağıdaki örnek, yukarıdaki kod parçacıklarını tamamlanmış bir biçimde sunar, belirtilen dizindeki tüm. rtf dosyalarını `testdirectory`adlı dizine kopyalar.  
+ Yukarıdaki parçacıkları eksiksiz olarak sunan aşağıdaki örnek, belirtilen dizindeki tüm .rtf dosyalarını adlı `testdirectory`dizine kopyalar.  
   
  [!code-vb[VbFileIOMisc#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#37)]  
   
@@ -46,19 +46,19 @@ ms.locfileid: "74348848"
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (\\\\.\\) (<xref:System.ArgumentException>) ile başlar.  
+- Yol aşağıdaki nedenlerden biri için geçerli değildir: bir sıfır uzunlukta dize, sadece beyaz boşluk içerir, geçersiz karakterler içerir, \\ \\ya\\da bir aygıt yolu (ile başlar . ) (<xref:System.ArgumentException>).  
   
-- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğundan geçerli değil.  
+- Yol geçerli değildir, çünkü `Nothing` <xref:System.ArgumentNullException>( ).  
   
 - Dizin yok (<xref:System.IO.DirectoryNotFoundException>).  
   
-- Dizin, var olan bir dosyaya (<xref:System.IO.IOException>) işaret eder.  
+- Dizin varolan bir dosyayı işaret eder (<xref:System.IO.IOException>).  
   
-- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
+- Yol, sistem tarafından tanımlanan maksimum<xref:System.IO.PathTooLongException>uzunluğu aşıyor ( ).  
   
-- Yoldaki bir dosya veya dizin adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
+- Yoldaki bir dosya veya dizin adı bir üst üste (:) veya geçersiz bir biçimde<xref:System.NotSupportedException>( ).  
   
-- Kullanıcı, yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>). Kullanıcının gerekli izinleri yok (<xref:System.UnauthorizedAccessException>).  
+- Kullanıcı yolu görüntülemek için gerekli izinlerden<xref:System.Security.SecurityException>yoksundur ( ). Kullanıcı gerekli izinleri yoksun<xref:System.UnauthorizedAccessException>( ).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

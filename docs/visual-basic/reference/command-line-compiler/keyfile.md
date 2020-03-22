@@ -6,47 +6,47 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: 2617c42d7b176806cfac0fc2247760727608261a
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: cffc3c5f0ff3dd48ca2c74bde346a967b209dc5f
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775638"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266748"
 ---
 # <a name="-keyfile"></a>-keyfile
-Derlemeye tanımlayıcı ad vermek için bir anahtar veya anahtar çifti içeren bir dosya belirtir.  
+Derlemeye güçlü bir ad vermek için anahtar veya anahtar çifti içeren bir dosya belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```console 
+```console
 -keyfile:file  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  `file`  
- Gerekli. Anahtarı içeren dosya. Dosya adı bir boşluk içeriyorsa, adı tırnak işaretleri ("") içine alın.  
+ Gereklidir. Anahtarı içeren dosya. Dosya adı bir boşluk içeriyorsa, adı tırnak işaretlerine (" ") dahil edin.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Derleyici ortak anahtarı derleme bildirimine ekler ve ardından son derlemeyi özel anahtarla imzalar. Anahtar dosyası oluşturmak için komut satırına `sn -k file` yazın. Daha fazla bilgi için bkz. [sn. exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
+ Derleyici ortak anahtarı derleme manifestosuna ekler ve sonra son derlemeyi özel anahtarla imzalar. Anahtar dosyası oluşturmak için `sn -k file` komut satırına yazın. Daha fazla bilgi için [Bkz. Sn.exe (Güçlü Ad Aracı)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
- @No__t_0 ile derlerseniz, anahtar dosyasının adı modülde tutulur ve [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)ile bir derlemeyi derlerken oluşturulan derlemeye dahil edilir.  
+ Eğer derlerseniz `-target:module`, anahtar dosyasının adı modülde tutulur ve [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)ile bir derleme derlediğinizde oluşturulan derleme içine dahil edilir.  
   
- Ayrıca, şifreleme bilgilerinizi [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)ile derleyiciye geçirebilirsiniz. Kısmen imzalanmış bir derleme istiyorsanız [-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) kullanın.  
+ Şifreleme bilgilerinizi [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)ile derleyiciye de iletebilirsiniz. Kısmen imzalanmış bir montaj istiyorsanız [-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) kullanın.  
   
- Bu seçeneği, herhangi bir Microsoft ara dil modülünün kaynak kodunda özel bir öznitelik (<xref:System.Reflection.AssemblyKeyFileAttribute>) olarak da belirtebilirsiniz.  
+ Bu seçeneği, herhangi bir Microsoft ara<xref:System.Reflection.AssemblyKeyFileAttribute>dil modülü için kaynak kodunda özel bir öznitelik ( ) olarak da belirtebilirsiniz.  
   
- Aynı derlemede hem `-keyfile` hem de [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) belirtildiğinde (komut satırı seçeneği ya da özel öznitelik tarafından), derleyici ilk olarak anahtar kapsayıcısını dener. Bu başarılı olursa, derleme anahtar kapsayıcısındaki bilgilerle imzalanır. Derleyici anahtar kapsayıcısını bulamazsa, `-keyfile` ile belirtilen dosyayı dener. Bu başarılı olursa, derleme anahtar dosyasındaki bilgilerle imzalanır ve anahtar bilgileri, sonraki derlemede anahtar kapsayıcısının geçerli olacağı şekilde anahtar kapsayıcısına (`sn -i` ' a benzer) yüklenir.  
+ Aynı derlemede hem hem ve `-keyfile` [-keycontainer'ın](../../../visual-basic/reference/command-line-compiler/keycontainer.md) (komut satırı seçeneğiyle veya özel öznitelik ile) belirtilmesi durumunda, derleyici önce anahtar kapsayıcısını dener. Bu başarılı olursa, o zaman derleme anahtar kapsayıcısında bilgi ile imzalanır. Derleyici anahtar kapsayıcısını bulamazsa, `-keyfile`'ile belirtilen dosyayı dener. Bu başarılı olursa, derleme anahtar dosyasındaki bilgilerle imzalanır ve anahtar bilgileri anahtar kapsayıcısına `sn -i`(benzer şekilde) yüklenir, böylece bir sonraki derlemede anahtar kapsayıcı geçerli olur.  
   
- Anahtar dosyasının yalnızca ortak anahtar içerebileceğini unutmayın.  
+ Anahtar dosyasının yalnızca ortak anahtarı içerebileceğini unutmayın.  
   
- Bir derlemeyi imzalama hakkında daha fazla bilgi için bkz. [tanımlayıcı adlı derlemeler oluşturma ve kullanma](../../../standard/assembly/create-use-strong-named.md) .  
+ Derleme yi imzalama hakkında daha fazla bilgi için [Güçlü Adlandırılmış Derlemeler Oluşturma ve Kullanma](../../../standard/assembly/create-use-strong-named.md) hakkında bkz.  
   
 > [!NOTE]
-> @No__t_0 seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.
+> Bu `-keyfile` seçenek Visual Studio geliştirme ortamından kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod `Input.vb` kaynak dosyasını derler ve bir anahtar dosyası belirtir.
+Aşağıdaki kod kaynak dosyayı `Input.vb` derler ve bir anahtar dosyası belirtir.
 
 ```console
 vbc -keyfile:myfile.sn input.vb
@@ -55,6 +55,6 @@ vbc -keyfile:myfile.sn input.vb
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET’te bütünleştirilmiş kodlar](../../../standard/assembly/index.md)
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-başvuru (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [Visual Basic Command-Line Derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-referans (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

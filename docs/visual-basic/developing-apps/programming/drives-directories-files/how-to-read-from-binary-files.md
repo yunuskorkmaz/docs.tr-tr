@@ -8,47 +8,47 @@ helpviewer_keywords:
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
 ms.openlocfilehash: c33bc72a5c79901e3715ed6a587ffdb8e3565e48
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74335289"
 ---
 # <a name="how-to-read-from-binary-files-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te İkili Dosyaları Okuma
 
-`My.Computer.FileSystem` nesnesi, ikili dosyalardan okumak için `ReadAllBytes` yöntemi sağlar.  
+Nesne `My.Computer.FileSystem` ikili `ReadAllBytes` dosyalardan okuma yöntemini sağlar.  
   
 ### <a name="to-read-from-a-binary-file"></a>İkili dosyadan okumak için  
   
-- Bir dosyanın içeriğini bayt dizisi olarak döndüren `ReadAllBytes` yöntemini kullanın. Bu örnek `C:/Documents and Settings/selfportrait.jpg`dosyadan okur.  
+- Bir `ReadAllBytes` dosyanın içeriğini bayt dizisi olarak döndüren yöntemi kullanın. Bu örnek dosyadan `C:/Documents and Settings/selfportrait.jpg`okur.  
   
      [!code-vb[VbVbcnMyFileSystem#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#78)]  
   
-- Büyük ikili dosyalar için, aynı anda yalnızca belirtilen miktarı dosyadan okumak üzere <xref:System.IO.FileStream> nesnesinin <xref:System.IO.FileStream.Read%2A> yöntemini kullanabilirsiniz. Böylece, her okuma işlemi için dosyanın belleğe ne kadarının yüklendiğini sınırlayabilirsiniz. Aşağıdaki kod örneği bir dosyayı kopyalar ve çağıranın okuma işlemi başına ne kadar dosyanın belleğe okunduğunu belirtmesini sağlar.  
+- Büyük ikili dosyalar için, <xref:System.IO.FileStream.Read%2A> <xref:System.IO.FileStream> dosyadan yalnızca belirli bir miktarı aynı anda okumak için nesnenin yöntemini kullanabilirsiniz. Daha sonra, her okuma işlemi için dosyanın ne kadarının belleğe yüklendiğini sınırlayabilirsiniz. Aşağıdaki kod örneği bir dosyayı kopyalar ve arayanın dosyanın okuma işlemi başına belleğe ne kadarının okunduğunu belirtmesine olanak tanır.  
   
      [!code-vb[VbVbcnMyFileSystem#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#91)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- Aşağıdaki koşullar bir özel durumun oluşturulmasına neden olabilir:  
+ Aşağıdaki koşullar bir özel durum atılmasına neden olabilir:  
   
-- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (<xref:System.ArgumentException>).  
+- Yol aşağıdaki nedenlerden biri için geçerli değildir: sıfır uzunlukta bir dize, sadece beyaz boşluk içerir, geçersiz karakterler içerir, ya da bir aygıt yolu ( ).<xref:System.ArgumentException>  
   
-- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğundan geçerli değil.  
+- Yol geçerli değildir, çünkü `Nothing` <xref:System.ArgumentNullException>( ).  
   
 - Dosya yok (<xref:System.IO.FileNotFoundException>).  
   
-- Dosya başka bir işlem tarafından kullanılıyor veya bir g/ç hatası oluştu (<xref:System.IO.IOException>).  
+- Dosya başka bir işlem tarafından kullanılıyor veya G/Ç<xref:System.IO.IOException>hatası oluşur ( ).  
   
-- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
+- Yol, sistem tarafından tanımlanan maksimum<xref:System.IO.PathTooLongException>uzunluğu aşıyor ( ).  
   
-- Yoldaki bir dosya veya dizin adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
+- Yoldaki bir dosya veya dizin adı bir üst üste (:) veya geçersiz bir biçimde<xref:System.NotSupportedException>( ).  
   
-- Dizeyi arabelleğe yazmak için yeterli bellek yok (<xref:System.OutOfMemoryException>).  
+- Arabellek için dize yazmak için yeterli<xref:System.OutOfMemoryException>bellek yoktur ( ).  
   
-- Kullanıcı, yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
+- Kullanıcı yolu görüntülemek için gerekli izinlerden<xref:System.Security.SecurityException>yoksundur ( ).  
   
- Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, Form1. vb dosyası bir Visual Basic kaynak dosyası olmayabilir.  
+ Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, Form1.vb dosyası Visual Basic kaynak dosyası olmayabilir.  
   
  Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın. Dosyanın içeriği beklendiği gibi olmayabilir ve dosyadan okuma yöntemleri başarısız olabilir.  
   

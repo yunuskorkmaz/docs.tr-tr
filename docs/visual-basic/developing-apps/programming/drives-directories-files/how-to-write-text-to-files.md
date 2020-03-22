@@ -8,29 +8,29 @@ helpviewer_keywords:
 - examples [Visual Basic], text files
 ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
 ms.openlocfilehash: ce1ee59ba71af6bb13e05a5bce37a2f7eee37712
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334468"
 ---
 # <a name="how-to-write-text-to-files-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dosyalara Metin Yazma
 
-<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> yöntemi, dosyalara metin yazmak için kullanılabilir. Belirtilen dosya yoksa, oluşturulur.  
+Yöntem, <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> dosyalara metin yazmak için kullanılabilir. Belirtilen dosya yoksa, oluşturulur.  
   
 ## <a name="procedure"></a>Yordam  
   
-#### <a name="to-write-text-to-a-file"></a>Bir dosyaya metin yazmak için  
+#### <a name="to-write-text-to-a-file"></a>Dosyaya metin yazmak için  
   
-- Bir dosyaya metin yazmak için `WriteAllText` yöntemi kullanın, yazılacak dosyayı ve metni belirtin. Bu örnek `"This is new text."` satırı, dosyadaki mevcut metinlere metin ekleyerek `test.txt`adlı dosyaya yazar.  
+- Dosyaya `WriteAllText` metin yazmak için, dosyayı ve yazılacak metni belirtmek için yöntemi kullanın. Bu örnek, `"This is new text."` satırı dosyadaki `test.txt`varolan herhangi bir metne ekolarak, adlı dosyaya yazar.  
   
      [!code-vb[VbFileIOWrite#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#3)]  
   
 #### <a name="to-write-a-series-of-strings-to-a-file"></a>Bir dosyaya bir dizi dize yazmak için  
   
-- Dize koleksiyonu aracılığıyla döngü yapın. Bir dosyaya metin yazmak için `WriteAllText` yöntemini kullanın, eklenecek hedef dosyayı ve dizeyi belirterek `append` ve `True`olarak ayarlamayı yapın.  
+- Dize koleksiyonu üzerinden döngü. Dosyaya `WriteAllText` metin yazmak, eklenecek hedef dosya ve dizeyi belirtmek `append` ve `True`''e ayar yapmak için yöntemi kullanın.  
   
-     Bu örnek, `FileList.txt``Documents and Settings` dizindeki dosyaların adlarını, daha iyi okunabilirlik için her biri arasına bir satır başı ekleyerek yazar.  
+     Bu örnek, daha iyi okunabilirlik için `FileList.txt`her biri arasında bir satır başı eklemek için `Documents and Settings` dizindeki dosyaların adlarını yazar.  
   
      [!code-vb[VbFileIOWrite#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#4)]  
   
@@ -38,26 +38,26 @@ ms.locfileid: "74334468"
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (\\\\.\\) (<xref:System.ArgumentException>) ile başlar.  
+- Yol aşağıdaki nedenlerden biri için geçerli değildir: bir sıfır uzunlukta dize, sadece beyaz boşluk içerir, geçersiz karakterler içerir, \\ \\ya\\da bir aygıt yolu (ile başlar . ) (<xref:System.ArgumentException>).  
   
-- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğundan geçerli değil.  
+- Yol geçerli değildir, çünkü `Nothing` <xref:System.ArgumentNullException>( ).  
   
-- `File`, varolmayan bir yola işaret eder (<xref:System.IO.FileNotFoundException> veya <xref:System.IO.DirectoryNotFoundException>).  
+- `File`olmayan bir yola işaret eder<xref:System.IO.FileNotFoundException> <xref:System.IO.DirectoryNotFoundException>( veya ).  
   
-- Dosya başka bir işlem tarafından kullanılıyor veya bir g/ç hatası oluştu (<xref:System.IO.IOException>).  
+- Dosya başka bir işlem tarafından kullanılıyor veya G/Ç<xref:System.IO.IOException>hatası oluşur ( ).  
   
-- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
+- Yol, sistem tarafından tanımlanan maksimum<xref:System.IO.PathTooLongException>uzunluğu aşıyor ( ).  
   
-- Yoldaki bir dosya veya dizin adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
+- Yoldaki bir dosya veya dizin adı bir üst üste (:) veya geçersiz bir biçimde<xref:System.NotSupportedException>( ).  
   
-- Kullanıcı, yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
+- Kullanıcı yolu görüntülemek için gerekli izinlerden<xref:System.Security.SecurityException>yoksundur ( ).  
   
-- Disk dolu ve `WriteAllText` çağrısı başarısız olur (<xref:System.IO.IOException>).  
+- Disk dolu ve çağrı `WriteAllText` başarısız olur<xref:System.IO.IOException>( ).  
   
- Kısmi güven bağlamında çalıştırıyorsanız, yetersiz ayrıcalıklar nedeniyle kod bir özel durum oluşturabilir. Daha fazla bilgi için bkz. [kod erişimi güvenlik temelleri](../../../../framework/misc/code-access-security-basics.md).  
+ Kısmi güven bağlamında çalışıyorsanız, kod yetersiz ayrıcalıklar nedeniyle bir özel durum atabilir. Daha fazla bilgi için [Kod Erişim Güvenlik Temelleri'ne](../../../../framework/misc/code-access-security-basics.md)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
-- [Nasıl yapılır: metin dosyalarından okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+- [Nasıl Yapılsın: Metin Dosyalarından Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)

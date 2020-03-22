@@ -9,43 +9,43 @@ helpviewer_keywords:
 - My.Computer.Network.UploadFile method
 ms.assetid: a8b37924-c523-4fd3-b5ca-cb0074df29cd
 ms.openlocfilehash: 52b731606c74ab7ff06a42dfdbe078616ba33d88
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345555"
 ---
 # <a name="how-to-upload-a-file-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Karşıya Dosya Yükleme
 
-<xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> yöntemi bir dosyayı karşıya yüklemek ve uzak bir konuma depolamak için kullanılabilir. `ShowUI` parametresi `True`olarak ayarlanırsa, karşıya yüklemenin ilerlemesini gösteren bir iletişim kutusu görüntülenir ve kullanıcıların işlemi iptal etmesine izin verir.  
+Yöntem, <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> bir dosyayı yüklemek ve uzak bir konuma depolamak için kullanılabilir. `ShowUI` Parametre `True`ayarlanmışsa, yüklemenin ilerlemesini gösteren ve kullanıcıların işlemi iptal etmesine izin veren bir iletişim kutusu görüntülenir.  
   
-### <a name="to-upload-a-file"></a>Bir dosyayı karşıya yüklemek için  
+### <a name="to-upload-a-file"></a>Dosya yüklemek için  
   
-- Kaynak dosyanın konumunu ve hedef dizin konumunu bir dize veya URI (Tekdüzen Kaynak tanımlayıcısı) olarak belirterek bir dosyayı karşıya yüklemek için `UploadFile` yöntemini kullanın. Bu örnek, `http://www.cohowinery.com/uploads.aspx``Order.txt` dosyayı karşıya yükler.  
+- Kaynak `UploadFile` dosyanın konumunu ve hedef dizin konumunu dize veya URI (Tekdüzen Kaynak Tanımlayıcı) olarak belirterek dosya yüklemek için yöntemi kullanın. Bu örnek, `Order.txt` dosyayı `http://www.cohowinery.com/uploads.aspx`.  
   
      [!code-vb[VbResourceTasks#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#6)]  
   
-### <a name="to-upload-a-file-and-show-the-progress-of-the-operation"></a>Bir dosyayı karşıya yüklemek ve işlemin ilerlemesini göstermek için  
+### <a name="to-upload-a-file-and-show-the-progress-of-the-operation"></a>Bir dosya yüklemek ve işlemin ilerlemesini göstermek için  
   
-- Kaynak dosyanın konumunu ve hedef dizin konumunu dize veya URI olarak belirterek bir dosyayı karşıya yüklemek için `UploadFile` yöntemini kullanın. Bu örnek, bir Kullanıcı adı veya parola sağlamadan dosya `Order.txt` `http://www.cohowinery.com/uploads.aspx` yükler, karşıya yüklemenin ilerlemesini gösterir ve 500 milisaniyelik zaman aşımı aralığına sahiptir.  
+- Kaynak `UploadFile` dosyanın konumunu ve hedef dizin konumunu dize veya URI olarak belirterek dosya yüklemek için yöntemi kullanın. Bu örnek, bir `Order.txt` `http://www.cohowinery.com/uploads.aspx` kullanıcı adı veya parola sağlamadan dosyayı yükler, yüklemenin ilerlemesini gösterir ve 500 milisaniyelik bir zaman aralığına sahiptir.  
   
      [!code-vb[VbResourceTasks#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#7)]  
   
-### <a name="to-upload-a-file-supplying-a-user-name-and-password"></a>Bir dosyayı karşıya yüklemek için Kullanıcı adı ve parola sağlama  
+### <a name="to-upload-a-file-supplying-a-user-name-and-password"></a>Bir dosya yüklemek için, kullanıcı adı ve parola sağlama  
   
-- Kaynak dosyanın konumunu ve hedef dizin konumunu bir dize veya URI olarak belirterek ve Kullanıcı adını ve parolayı belirterek bir dosyayı karşıya yüklemek için `UploadFile` yöntemini kullanın. Bu örnek, Kullanıcı adı `anonymous` ve boş bir parola sunarak dosya `Order.txt` `http://www.cohowinery.com/uploads.aspx`karşıya yükler.  
+- Bir `UploadFile` dosyayı yüklemek, kaynak dosyanın konumunu ve hedef dizin konumunu dize veya URI olarak belirterek ve kullanıcı adını ve parolayı belirtmek için yöntemi kullanın. Bu örnek, `Order.txt` dosyayı `http://www.cohowinery.com/uploads.aspx`kullanıcı adı `anonymous` ve boş bir parola sağlayan dosyaya yükler.  
   
      [!code-vb[VbResourceTasks#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#8)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- Aşağıdaki koşullar bir özel durum oluşturabilir:  
+ Aşağıdaki koşullar bir özel durum atabilir:  
   
-- Yerel dosya yolu geçerli değil (<xref:System.ArgumentException>).  
+- Yerel dosya yolu geçerli<xref:System.ArgumentException>değil ( ).  
   
-- Kimlik doğrulama başarısız oldu (<xref:System.Security.SecurityException>).  
+- Kimlik doğrulama<xref:System.Security.SecurityException>başarısız oldu ( ).  
   
-- Bağlantı zaman aşımına uğradı (<xref:System.TimeoutException>).  
+- Bağlantı zamanlanmış (<xref:System.TimeoutException>).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

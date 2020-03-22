@@ -2,18 +2,18 @@
 title: 'Nasıl yapılır: Dosyaları Uzantıya Göre Gruplama (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: 67beec0d3681bf7f0b04d9a402566076fd27ceba
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4d2c51fa62b3ec144bc5ad51b4a9f8305476645e
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347490"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78267034"
 ---
-# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Nasıl yapılır: dosyaları uzantıya göre gruplama (LINQ) (Visual Basic)
-Bu örnek, LINQ 'ın dosya veya klasör listelerinde gelişmiş gruplandırma ve sıralama işlemleri gerçekleştirmek için nasıl kullanılabileceğini gösterir. Ayrıca, <xref:System.Linq.Enumerable.Skip%2A> ve <xref:System.Linq.Enumerable.Take%2A> yöntemleri kullanılarak konsol penceresinde nasıl çıkış yapılacağını gösterir.  
+# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Nasıl yapılır: Uzantıya Göre Dosyaları Grupla (LINQ) (Visual Basic)
+Bu örnek, LINQ'nin dosya veya klasör listelerinde gelişmiş gruplandırma ve sıralama işlemleri gerçekleştirmek için nasıl kullanılabileceğini gösterir. Ayrıca, konsol penceresinde ki çıktının nasıl <xref:System.Linq.Enumerable.Skip%2A> ve <xref:System.Linq.Enumerable.Take%2A> yöntemleri kullanılarak nasıl sayfaya çıkarı yapılacağını da gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki sorguda, belirtilen dizin ağacının içeriğini dosya adı uzantısı tarafından nasıl gruplandırmak gösterilmektedir.  
+ Aşağıdaki sorgu, belirtilen bir dizin ağacının içeriğini dosya adı uzantısına göre nasıl gruplanır şekilde gösterir.  
   
 ```vb  
 Module GroupByExtension  
@@ -39,7 +39,7 @@ Module GroupByExtension
         ' page the display with good performance.  
         Dim groupByExtList = queryGroupByExt.ToList()  
   
-        ' Display one group at a time. If the number of   
+        ' Display one group at a time. If the number of
         ' entries is greater than the number of lines  
         ' in the console window, then page the output.  
         Dim trimLength = startFolder.Length  
@@ -91,12 +91,12 @@ Module GroupByExtension
 End Module  
 ```  
   
- Bu programın çıktısı, yerel dosya sisteminin ayrıntılarına ve `startFolder` ne şekilde ayarlandığına bağlı olarak uzun olabilir. Tüm sonuçların görüntülenmesini sağlamak için bu örnek, sonuçların nasıl ekleneceğini gösterir. Windows ve Web uygulamalarına aynı teknikler de uygulanabilir. Kodun bir gruptaki öğelerin, iç içe geçmiş `For Each` döngüsünün gerekli olduğundan emin olun. Ayrıca, listedeki geçerli konumu hesaplamak için bazı ek Logic de vardır ve kullanıcının sayfalamayı durdurmasına ve programdan çıkmasına olanak tanır. Bu durumda, disk belleği sorgusu özgün sorgudaki önbelleğe alınmış sonuçlara karşı çalıştırılır. Diğer bağlamlarda, örneğin LINQ to SQL, önbelleğe alma gerekli değildir.  
+ Bu programdan çıktı, yerel dosya sisteminin ayrıntılarına ve ne `startFolder` için ayarlanana bağlı olarak uzun olabilir. Tüm sonuçların görüntülenmesini sağlamak için, bu örnek, sonuçlar üzerinden nasıl sayfa yapılacağını gösterir. Aynı teknikler Windows ve Web uygulamalarına da uygulanabilir. Kod, gruptaki öğeleri sayfalarından dolayı iç `For Each` içe bir döngü gerektirdiğine dikkat edin. Ayrıca, listedeki geçerli konumu hesaplamak ve kullanıcının sayfalamayı durdurup programdan çıkmasını sağlamak için bazı ek mantık da vardır. Bu özel durumda, sayfalama sorgusu özgün sorgunun önbelleğe alınmış sonuçlarına göre çalıştırılır. LINQ'dan SQL'e gibi diğer bağlamlarda, bu tür önbelleğe alma gerekmez.  
   
-## <a name="compile-the-code"></a>Kod derleme  
-System. Linq ad alanı için `Imports` bildirimiyle bir Visual Basic konsol uygulaması projesi oluşturun.
+## <a name="compile-the-code"></a>Kodu derleme  
+System.Linq ad alanı için `Imports` bir deyim içeren Visual Basic konsol uyrama projesi oluşturun.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ ve dosya dizinleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [Nesnelere LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ ve Dosya Dizinleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
