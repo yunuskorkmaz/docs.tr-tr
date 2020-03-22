@@ -5,23 +5,23 @@ helpviewer_keywords:
 - My Documents directory
 ms.assetid: 26560d01-7dda-4457-8e95-21db23d71aea
 ms.openlocfilehash: cf4470020507c581999b9d72602ddb6e3e76ed74
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334529"
 ---
-# <a name="how-to-retrieve-the-contents-of-the-my-documents-directory-in-visual-basic"></a><span data-ttu-id="67655-102">Nasıl Yapılır: Visual Basic'te Belgelerim Dizini İçeriğini Alma</span><span class="sxs-lookup"><span data-stu-id="67655-102">How to: Retrieve the Contents of the My Documents Directory in Visual Basic</span></span>
+# <a name="how-to-retrieve-the-contents-of-the-my-documents-directory-in-visual-basic"></a><span data-ttu-id="414d0-102">Nasıl Yapılır: Visual Basic'te Belgelerim Dizini İçeriğini Alma</span><span class="sxs-lookup"><span data-stu-id="414d0-102">How to: Retrieve the Contents of the My Documents Directory in Visual Basic</span></span>
 
-<span data-ttu-id="67655-103"><xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> nesnesi, **Belgelerim veya Masaüstlerim** gibi **tüm Kullanıcı** dizinlerinden okumak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="67655-103">The <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> object can be used to read from many of the **All Users** directories, such as **My Documents** or **Desktop**.</span></span>  
+<span data-ttu-id="414d0-103"><xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> Nesne, **Belgelerim** veya **Masaüstüm**gibi **Tüm Kullanıcılar** dizinlerinin çoğundan okumak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="414d0-103">The <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> object can be used to read from many of the **All Users** directories, such as **My Documents** or **Desktop**.</span></span>  
   
-### <a name="to-read-from-the-my-documents-folder"></a><span data-ttu-id="67655-104">Belgelerim klasöründen okumak için</span><span class="sxs-lookup"><span data-stu-id="67655-104">To read from the My Documents folder</span></span>  
+### <a name="to-read-from-the-my-documents-folder"></a><span data-ttu-id="414d0-104">Belgelerim klasöründen okumak için</span><span class="sxs-lookup"><span data-stu-id="414d0-104">To read from the My Documents folder</span></span>  
   
-- <span data-ttu-id="67655-105">Belirli bir dizindeki her bir dosyanın metnini okumak için `ReadAllText` yöntemini kullanın.</span><span class="sxs-lookup"><span data-stu-id="67655-105">Use the `ReadAllText` method to read the text from each file in a specific directory.</span></span> <span data-ttu-id="67655-106">Aşağıdaki kod, bir dizin ve dosya belirtir ve sonra `ReadAllText` kullanarak bunları `patients`adlı dizeye okur.</span><span class="sxs-lookup"><span data-stu-id="67655-106">The following code specifies a directory and file and then uses `ReadAllText` to read them into the string named `patients`.</span></span>  
+- <span data-ttu-id="414d0-105">Her `ReadAllText` dosyadaki metni belirli bir dizindeki okumak için yöntemi kullanın.</span><span class="sxs-lookup"><span data-stu-id="414d0-105">Use the `ReadAllText` method to read the text from each file in a specific directory.</span></span> <span data-ttu-id="414d0-106">Aşağıdaki kod bir dizin ve dosya belirtir `ReadAllText` ve sonra onları `patients`adlı dize içine okumak için kullanır.</span><span class="sxs-lookup"><span data-stu-id="414d0-106">The following code specifies a directory and file and then uses `ReadAllText` to read them into the string named `patients`.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#15)]  
   
-## <a name="see-also"></a><span data-ttu-id="67655-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="67655-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="414d0-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="414d0-107">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>

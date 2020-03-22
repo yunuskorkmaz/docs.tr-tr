@@ -5,28 +5,28 @@ helpviewer_keywords:
 - My.Computer.Info object [Visual Basic], tasks
 ms.assetid: 13c145bc-5c85-4fea-a5dd-2ca8681a0252
 ms.openlocfilehash: fd5b49cd053d70e752352e2b050f9202564ee7d7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348117"
 ---
-# <a name="getting-information-about-the-computer-visual-basic"></a><span data-ttu-id="ffc61-102">Bilgisayar Hakkında Bilgi Alma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ffc61-102">Getting Information about the Computer (Visual Basic)</span></span>
+# <a name="getting-information-about-the-computer-visual-basic"></a><span data-ttu-id="997ad-102">Bilgisayar Hakkında Bilgi Alma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="997ad-102">Getting Information about the Computer (Visual Basic)</span></span>
 
-<span data-ttu-id="ffc61-103">`My.Computer.Info` nesnesi, bilgisayarın belleği, yüklü derlemeler, ad ve işletim sistemi hakkında bilgi almak için özellikler sağlar.</span><span class="sxs-lookup"><span data-stu-id="ffc61-103">The `My.Computer.Info` object provides properties for getting information about the computer's memory, loaded assemblies, name, and operating system.</span></span>
+<span data-ttu-id="997ad-103">Nesne, `My.Computer.Info` bilgisayarın belleği, yüklü derlemeler, ad ve işletim sistemi hakkında bilgi almak için özellikler sağlar.</span><span class="sxs-lookup"><span data-stu-id="997ad-103">The `My.Computer.Info` object provides properties for getting information about the computer's memory, loaded assemblies, name, and operating system.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="ffc61-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ffc61-104">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="997ad-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="997ad-104">Remarks</span></span>
 
-<span data-ttu-id="ffc61-105">Bu tablo, `My.Computer.Info` nesnesi aracılığıyla sık gerçekleştirilen görevleri listeler ve her birinin nasıl yapılacağını gösteren konulara işaret eder.</span><span class="sxs-lookup"><span data-stu-id="ffc61-105">This table lists tasks commonly accomplished through the `My.Computer.Info` object and points to topics demonstrating how to perform each.</span></span>
+<span data-ttu-id="997ad-105">Bu tablo, `My.Computer.Info` nesne üzerinden sık olarak gerçekleştirilen görevleri listeler ve her birinin nasıl gerçekleştirilingerektiğini gösteren konulara işaret edilir.</span><span class="sxs-lookup"><span data-stu-id="997ad-105">This table lists tasks commonly accomplished through the `My.Computer.Info` object and points to topics demonstrating how to perform each.</span></span>
 
-|<span data-ttu-id="ffc61-106">Bitiş</span><span class="sxs-lookup"><span data-stu-id="ffc61-106">To</span></span>|<span data-ttu-id="ffc61-107">Bkz.</span><span class="sxs-lookup"><span data-stu-id="ffc61-107">See</span></span>|
+|<span data-ttu-id="997ad-106">Alıcı</span><span class="sxs-lookup"><span data-stu-id="997ad-106">To</span></span>|<span data-ttu-id="997ad-107">Bkz.</span><span class="sxs-lookup"><span data-stu-id="997ad-107">See</span></span>|
 |---|---|
-|<span data-ttu-id="ffc61-108">Uygulamanın yüklendiği bilgisayar için ne kadar kullanılabilir sanal adres alanı olduğunu belirleme</span><span class="sxs-lookup"><span data-stu-id="ffc61-108">Determine how much virtual address space is available for the computer on which the application is installed</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory%2A>|
-|<span data-ttu-id="ffc61-109">Uygulamanın çalıştığı bilgisayarın Platform türünü belirleme</span><span class="sxs-lookup"><span data-stu-id="ffc61-109">Determine the platform type of the computer on which the application is running</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform%2A>|
-|<span data-ttu-id="ffc61-110">Uygulamanın çalıştığı bilgisayarın işletim sistemini belirleme</span><span class="sxs-lookup"><span data-stu-id="ffc61-110">Determine the operating system of the computer on which the application is running</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName%2A>|
-|<span data-ttu-id="ffc61-111">Uygulamanın üzerinde çalıştığı bilgisayarda hangi hizmet paketlerinin yüklü olduğunu belirleme</span><span class="sxs-lookup"><span data-stu-id="ffc61-111">Determine what service packs have been installed on the computer on which the application is running</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSVersion%2A>|
-|<span data-ttu-id="ffc61-112">Uygulamanın üzerinde çalıştığı bilgisayarda yüklü `UICulture` belirlenir.</span><span class="sxs-lookup"><span data-stu-id="ffc61-112">Determine the installed `UICulture` on the computer on which the application is running.</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|
+|<span data-ttu-id="997ad-108">Uygulamanın yüklü olduğu bilgisayar için ne kadar sanal adres alanı olduğunu belirleme</span><span class="sxs-lookup"><span data-stu-id="997ad-108">Determine how much virtual address space is available for the computer on which the application is installed</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory%2A>|
+|<span data-ttu-id="997ad-109">Uygulamanın çalıştırıldığı bilgisayarın platform türünü belirleme</span><span class="sxs-lookup"><span data-stu-id="997ad-109">Determine the platform type of the computer on which the application is running</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform%2A>|
+|<span data-ttu-id="997ad-110">Uygulamanın çalıştığı bilgisayarın işletim sistemini belirleme</span><span class="sxs-lookup"><span data-stu-id="997ad-110">Determine the operating system of the computer on which the application is running</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName%2A>|
+|<span data-ttu-id="997ad-111">Uygulamanın çalıştırıldığı bilgisayara hangi hizmet paketlerinin yüklendiğini belirleme</span><span class="sxs-lookup"><span data-stu-id="997ad-111">Determine what service packs have been installed on the computer on which the application is running</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSVersion%2A>|
+|<span data-ttu-id="997ad-112">Uygulamanın çalıştırıldığı `UICulture` bilgisayarda yüklü olanları belirleyin.</span><span class="sxs-lookup"><span data-stu-id="997ad-112">Determine the installed `UICulture` on the computer on which the application is running.</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|
 
-## <a name="see-also"></a><span data-ttu-id="ffc61-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ffc61-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="997ad-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="997ad-113">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>
