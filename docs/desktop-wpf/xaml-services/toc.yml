@@ -1,7 +1,7 @@
 - name: XAML Dil Başvurusu
   href: index.md
   items:
-    - name: 'XAML Ad Uzayı (x:) Dil Özellikleri'
+    - name: 'XAML Ad Alanı (x:) Dil Özellikleri'
       href: namespace-language-features.md
       items:
         - name: XAML 2009 (WPF değil) Dil Özellikleri
@@ -59,8 +59,6 @@
           href: xml-language-handling.md
         - name: 'XAML''de xml:space İşleme'
           href: xml-space-handling.md
-    - name: WPF'den System.Xaml'e Geçirilen Türler
-      href: types-migrated-from-wpf-to-system.md
     - name: XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama
       href: understanding-xaml-node-stream-structures-and-concepts.md
     - name: XAMLServices Sınıfı ve Temel XAML Okuma veya Yazma
