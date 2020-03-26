@@ -2,17 +2,17 @@
 title: Bir öğenin değeri (LINQ - XML) (C#) nasıl alınır?
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 6f2d355eac9914cd4c03d3a4521992b346b92f0b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17a7dac464e1ec40db357194000f5745cdf2f3a8
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168693"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249213"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Bir öğenin değeri (LINQ - XML) (C#) nasıl alınır?
 Bu konu, öğelerin değerini nasıl elde edilebildiğini gösterir. Bunu yapmanın iki ana yolu vardır. Bir yolu istenilen <xref:System.Xml.Linq.XElement> türe <xref:System.Xml.Linq.XAttribute> bir veya bir döküm etmektir. Açık dönüştürme işleci daha sonra öğenin içeriğini dönüştürür veya belirtilen türe atfeder ve değişkeninize atar. Alternatif olarak, <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> özelliği veya <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> mülkü kullanabilirsiniz.  
   
- C # ile, ancak, döküm genellikle daha iyi bir yaklaşımdır. Öğeyi veya özniteliği boşta bir türe atarsanız, var olabilecek veya var olmayan bir öğenin (veya öznitelik) değerini alırken kod yazmak daha kolaydır. Bu konudaki son örnek bunu göstermektedir. Ancak, bir öğenin içeriğini, özellik aracılığıyla olduğu <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> gibi, döküm yoluyla ayarlayamazsınız.  
+ C # ile, ancak, döküm genellikle daha iyi bir yaklaşımdır. Öğeyi veya özniteliği boşalabilir bir değer türüne atarsanız, var olabilecek veya var olmayan bir öğenin (veya öznitelik) değerini alırken kod yazmak daha kolaydır. Bu konudaki son örnek bunu göstermektedir. Ancak, bir öğenin içeriğini, özellik aracılığıyla olduğu <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> gibi, döküm yoluyla ayarlayamazsınız.  
   
 ## <a name="example"></a>Örnek  
  Bir öğenin değerini almak için, <xref:System.Xml.Linq.XElement> nesneyi istediğiniz türe dökmeniz yalnızca Bir öğeyi her zaman aşağıdaki gibi bir dize atabilirsiniz:  
@@ -67,7 +67,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>Örnek  
- Bazen var olduğundan emin olsanız bile bir öğenin değerini almaya çalışırsınız. Bu durumda, döküm öğeyi boşta bırakılmaz bir `string` türe (.NET Çerçevesi'ndeki nullable türlerinden birine veya biri) atadığınızda, öğe yoksa atanan değişken sadece `null`. Aşağıdaki kod, öğe var olabilir veya olmayabilir, <xref:System.Xml.Linq.XElement.Value%2A> özelliği kullanmak için daha döküm kullanmak daha kolay olduğunu gösterir.  
+ Bazen var olduğundan emin olsanız bile bir öğenin değerini almaya çalışırsınız. Bu durumda, döküm öğeyi nullable bir başvuru türüne veya nullable değer türüne atadığınızda, öğe yoksa `null`atanan değişken sadece . Aşağıdaki kod, öğe var olabilir veya olmayabilir, <xref:System.Xml.Linq.XElement.Value%2A> özelliği kullanmak için daha döküm kullanmak daha kolay olduğunu gösterir.  
   
 ```csharp  
 XElement root = new XElement("Root",  

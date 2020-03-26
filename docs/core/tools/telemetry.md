@@ -3,12 +3,12 @@ title: .NET Çekirdek SDK telemetri
 description: Analiz için kullanım bilgilerini toplayan .NET Core SDK telemetri özelliklerini, hangi verilerin toplandığını ve nasıl devre dışı kalındığını keşfedin.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 9d5d7ff09ade89712f2fbbe35224851bb1c28b4c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a79b791abc99331ff39f5e281ee0fdc62b258989
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156692"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507288"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Çekirdek SDK telemetri
 
@@ -46,6 +46,8 @@ The .NET Core tools collect usage data in order to help us improve your experien
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
 
+Bu iletiyi ve .NET Core karşılama iletisini devre dışı kılabilir, ortam değişkenini `DOTNET_NOLOGO` `true`. Bu değişkenin telemetri devre dışı bırakma üzerinde hiçbir etkisi olmadığını unutmayın.
+
 ## <a name="data-points"></a>Veri noktaları
 
 Telemetri özelliği, kullanıcı adları veya e-posta adresleri gibi kişisel verileri toplamaz. Kodunuzu tarayıp ad, depo veya yazar gibi proje düzeyinde veri ayıklamaz. Veriler, [Azure Monitor](https://azure.microsoft.com/services/monitor/) teknolojisini kullanarak Microsoft sunucularına güvenli bir şekilde gönderilir, sınırlı erişim altında tutulur ve güvenli [Azure Depolama](https://azure.microsoft.com/services/storage/) sistemlerinden gelen sıkı güvenlik denetimleri altında yayımlanır.
@@ -54,7 +56,7 @@ Gizliliğinizi korumak bizim için önemlidir. Telemetrinin hassas verileri topl
 
 Telemetri özelliği aşağıdaki verileri toplar:
 
-| SDK sürümleri | Veriler |
+| SDK sürümleri | Veri |
 |--------------|------|
 | Tümü          | Çağırma zaman damgası. |
 | Tümü          | Komut çağrıldı (örneğin, "inşa"), 2.1'den başlayarak haşiye. |

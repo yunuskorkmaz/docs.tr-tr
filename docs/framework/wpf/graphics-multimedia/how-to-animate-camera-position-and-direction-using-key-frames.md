@@ -9,21 +9,21 @@ helpviewer_keywords:
 - key frames [WPF], animating camera position
 - camera direction [WPF], animating with key frames
 ms.assetid: 5753024e-0057-454d-947f-43ea686879c7
-ms.openlocfilehash: 44464cc314d649516998338e36c1b523101ac4e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28471f9b42140a6c75b043d33939503528b63194
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651343"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112173"
 ---
 # <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a>Nasıl yapılır: Anahtar Çerçeveler Kullanarak Kamera Konumuna ve Yönüne Animasyon Ekleme
-Aşağıdaki örnekte, <xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames> animasyon ekleme için kullanılan bir <xref:System.Windows.Media.Media3D.PerspectiveCamera> 3B görünümde. Ayrıca, <xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames> 3B görünümde kamera işaret eden yönüne animasyon uygulamak için kullanılır. Bu animasyonları her ikisi de, animasyon efektleri bir dizi oluşturmak birkaç anahtar çerçeveleri kullanın:  
+Aşağıdaki örnekte, <xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames> bir 3B sahnedeki konumu <xref:System.Windows.Media.Media3D.PerspectiveCamera> canlandırmak için kullanılır. Buna ek <xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames> olarak, kameranın 3B sahnede işaret olduğu yönü canlandırmak için kullanılır. Bu animasyonların her ikisi de bir dizi animasyon efekti oluşturan birkaç anahtar kare kullanır:  
   
-1. <xref:System.Windows.Media.Animation.LinearPoint3DKeyFrame> ve <xref:System.Windows.Media.Animation.LinearVector3DKeyFrame> değerler arasında sorunsuz, doğrusal bir ilişkilendirme oluşturmak için kullanılır.  
+1. <xref:System.Windows.Media.Animation.LinearPoint3DKeyFrame><xref:System.Windows.Media.Animation.LinearVector3DKeyFrame> ve değerler arasında düzgün, doğrusal enterpolasyon oluşturmak için kullanılır.  
   
-2. <xref:System.Windows.Media.Animation.DiscretePoint3DKeyFrame> ve <xref:System.Windows.Media.Animation.DiscreteVector3DKeyFrame> değerleri (ilişkilendirme yok) arasında ani "atlar" oluşturmak için kullanılır.  
+2. <xref:System.Windows.Media.Animation.DiscretePoint3DKeyFrame><xref:System.Windows.Media.Animation.DiscreteVector3DKeyFrame> ve değerler arasında ani "atlar" oluşturmak için kullanılır (enterpolasyon yok).  
   
-3. <xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame> ve <xref:System.Windows.Media.Animation.SplineVector3DKeyFrame> bağlı olarak değerler arasında değişken bir geçiş oluşturmak için kullanılan <xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame.KeySpline%2A> özelliği. Aşağıdaki örnekte, animasyon başlar yavaş ama zaman diliminin sonuna doğru katlanarak hızlandırır.  
+3. <xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame><xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame.KeySpline%2A> ve <xref:System.Windows.Media.Animation.SplineVector3DKeyFrame> özelliğe bağlı olarak değerler arasında değişken bir geçiş oluşturmak için kullanılır. Aşağıdaki örnekte, animasyon yavaş başlar, ancak zaman diliminin sonuna doğru, katlanarak hızlar.  
   
 ## <a name="example"></a>Örnek  
  [!code-xaml[Animation3DGallery_snip#PointVector3DAnimationUsingKeyFramesExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/PointVector3DAnimationUsingKeyFramesExample.xaml#pointvector3danimationusingkeyframesexamplewholepage)]  
@@ -31,4 +31,4 @@ Aşağıdaki örnekte, <xref:System.Windows.Media.Animation.Point3DAnimationUsin
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [3B Görünümde Kamera Konumuna ve Yönüne Animasyon Ekleme](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)
-- [3B Grafiklere Genel Bakış](3-d-graphics-overview.md)
+- [3D Grafiklere Genel Bakış](3-d-graphics-overview.md)

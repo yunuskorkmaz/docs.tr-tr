@@ -5,12 +5,12 @@ ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 93b6079b9a3bbf6d537094cab9dfb305ace7f6bf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e34d291ec15c738f3bc9409df321ede454b6710
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77625871"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507262"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>C# türlerinin varsayılan değerleri (C# başvurusu)
 
@@ -27,7 +27,7 @@ Aşağıdaki tabloc# türlerinin varsayılan değerlerini gösterir:
 |[Yapı](struct.md)|Tüm değer türü alanlarını varsayılan değerlerine ve tüm başvuru türü `null`alanlarının .'a ayarlanmasıyla üretilen değer.|
 |Herhangi bir [nullable değer türü](nullable-value-types.md)|Özelliğin ve <xref:System.Nullable%601.HasValue%2A> özelliğin `false` <xref:System.Nullable%601.Value%2A> tanımsız olduğu bir örnek. Bu varsayılan değer, nullable değer türünün *null* değeri olarak da bilinir.|
 
-Aşağıdaki örnekte görüldüğü gibi, bir türün varsayılan değerini üretmek için [varsayılan işleci](../operators/default.md) kullanın:
+Aşağıdaki örnekte görüldüğü gibi, bir türün varsayılan değerini üretmek için [ `default` işleci](../operators/default.md#default-operator) kullanın:
 
 ```csharp
 int a = default(int);

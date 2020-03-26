@@ -8,12 +8,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: dedf5ab51ab5cf9befb5bd183968388406df4e5b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e273bd3e4bf2bb6945fe48c850783a54fa9a869
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181469"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291750"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Nasıl yapılır: Kayıtsız Etkinleştirme için .NET Framework Tabanlı COM Bileşenlerini Yapılandırma
 .NET Framework tabanlı bileşenler için kayıt gerektirmeden etkinleştirme, COM bileşenlerine göre yalnızca biraz daha karmaşıktır. Kurulum iki bildirim gerektirir:  
@@ -24,7 +24,7 @@ ms.locfileid: "79181469"
   
  Bu konu, bir uygulama bildiriminin bir uygulamayla nasıl ilişkilendirilen; bileşen bildirimini bir bileşenle ilişkilendirin; ve bir bileşen bildirimini bir derlemeye katıştırın.  
   
-### <a name="to-create-an-application-manifest"></a>Uygulama bildirimi oluşturmak için  
+## <a name="create-an-application-manifest"></a>Uygulama bildirimi oluşturma  
   
 1. Bir XML düzenleyicisi kullanarak, com uygulamasının sahip olduğu ve bir veya daha fazla yönetilen bileşenle birlikte çalışan uygulama bildirimini oluşturun (veya değiştirin).  
   
@@ -32,7 +32,8 @@ ms.locfileid: "79181469"
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
-    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    </assembly>
     ```  
   
      Bildirim öğeleri ve öznitelikleri hakkında bilgi için [Uygulama Bildirimleri'ne](/windows/desktop/SbsCs/application-manifests)bakın.  
@@ -46,7 +47,8 @@ ms.locfileid: "79181469"
                         name="myOrganization.myDivision.myComApp"
                         version="1.0.0.0"
                         processorArchitecture="msil"
-      />  
+      />
+    </assembly>  
     ```  
   
 4. Bağımlı derlemeleri tanımlayın. Aşağıdaki örnekte, `myComApp` `myManagedComp`bağlıdır.  
@@ -75,9 +77,9 @@ ms.locfileid: "79181469"
   
 5. Bildirim dosyasını kaydedin ve adlandırın. Bir uygulama bildiriminin adı, .manifest uzantısı tarafından izlenen yürütülebilir derlemenin adıdır. Örneğin, myComApp.exe için uygulama bildirimi dosya adı myComApp.exe.manifest olduğunu.  
   
- Com uygulamasıyla aynı dizinde bir uygulama bildirimi yükleyebilirsiniz. Alternatif olarak, uygulamanın .exe dosyasına kaynak olarak ekleyebilirsiniz. Daha fazla bilgi için, [Yan Yana Derlemeler Hakkında'ya](/windows/desktop/SbsCs/about-side-by-side-assemblies-)bakın.  
+Com uygulamasıyla aynı dizinde bir uygulama bildirimi yükleyebilirsiniz. Alternatif olarak, uygulamanın .exe dosyasına kaynak olarak ekleyebilirsiniz. Daha fazla bilgi için Yan [Yana Montajlar Hakkında'ya](/windows/desktop/SbsCs/about-side-by-side-assemblies-)bakın.  
   
-#### <a name="to-create-a-component-manifest"></a>Bileşen bildirimi oluşturmak için  
+## <a name="create-a-component-manifest"></a>Bileşen bildirimi oluşturma  
   
 1. Bir XML düzenleyicisi kullanarak, yönetilen derlemeyi açıklamak için bir bileşen bildirimi oluşturun.  
   
@@ -85,7 +87,8 @@ ms.locfileid: "79181469"
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
-    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    </assembly>
     ```  
   
 3. Dosyanın sahibini tanımlayın. Uygulama `<assemblyIdentity>` bildirimi `<dependentAssembly>` dosyasındaki öğe öğesi, bileşen bildirimindeki öğeyle eşleşmelidir. Aşağıdaki örnekte, `myManagedComp` sürüm 1.2.3.4 bildirim dosyasının sahibidir.  
@@ -98,7 +101,8 @@ ms.locfileid: "79181469"
                         version="1.2.3.4"  
                         publicKeyToken="8275b28176rcbbef"  
                         processorArchitecture="msil"  
-           />  
+           />
+    </assembly>
     ```  
   
 4. Derlemedeki her sınıfı tanımlayın. Yönetilen `<clrClass>` derlemedeki her sınıfı benzersiz olarak tanımlamak için öğeyi kullanın. Öğenin `<assembly>` bir alt öğesi olan öğe, aşağıdaki tabloda açıklanan özniteliklere sahiptir.  

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a8146db1fb54d63d4716b879ce793f7d817cef59
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64e854b06895ca54a9ab9870b85868788a731c00
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937280"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79549611"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Paylaşılan çerçeve: Microsoft.AspNetCore.App'ten kaldırılan derlemeler
 
@@ -36,7 +36,7 @@ Artık başvuru, `Microsoft.AspNetCore.App` proje `<PackageReference>` dosyasın
 
 Daha fazla bilgi için [dotnet/aspnetcore#3612'ye](https://github.com/dotnet/aspnetcore/issues/3612)bakın.
 
-NuGet paketleri olarak Entity Framework Core gemileri. Bu değişiklik, gönderi modelini .NET'teki diğer tüm veri erişim kitaplıklarıyla hizalar. Çeşitli .NET platformlarını desteklerken yenilik yapmaya devam etmek için en basit yolu Entity Framework Core sağlar. Entity Framework Core'un paylaşılan çerçevenin dışına taşınmasının, Microsoft tarafından geliştirilen, desteklenen ve hizmet verilen kitaplık olarak durumu üzerinde hiçbir etkisi yoktur. [.NET Core destek politikası](https://www.microsoft.com/net/platform/support-policy) bunu karşılamaya devam ediyor.
+NuGet paketleri olarak Entity Framework Core gemileri. Bu değişiklik, gönderi modelini .NET'teki diğer tüm veri erişim kitaplıklarıyla hizalar. Çeşitli .NET platformlarını desteklerken yenilik yapmaya devam etmek için en basit yolu Entity Framework Core sağlar. Entity Framework Core'un paylaşılan çerçevenin dışına taşınmasının, Microsoft tarafından geliştirilen, desteklenen ve hizmet verilen kitaplık olarak durumu üzerinde hiçbir etkisi yoktur. [.NET Core destek politikası](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) bunu karşılamaya devam ediyor.
 
 Json.NET ve Entity Framework Core ASP.NET Core ile çalışmaya devam ediyor. Ancak, ortak çerçeveye dahil edilmeyecekler.
 
@@ -67,7 +67,7 @@ Daha fazla bilgi için bkz: [3.0'daki paylaşılan çerçeve derlemeleri için p
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

@@ -3,12 +3,12 @@ title: Null değerleri için beklentileri tanımlayan özniteliklere sahip nulla
 description: ApI'lerinizin null durumunu tam olarak açıklamak için AllowNull, DisallowNull, MaybeNull, NotNull ve daha fazlasını tanımlayıcı öznitelikleri kullanmayı öğrenin.
 ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: a4b1f851bcbe27dd4884d45eb6d1209ab54271d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ca04db800271b9b01b5b9f1482dd5a0db2cc1c35
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79170364"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249246"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Geçersiz başvuru türlerini kullanmak ve arayanlara geçersiz kuralları iletmek için kitaplıkları güncelleştirme
 
@@ -30,7 +30,7 @@ Kitaplığınızı geçersiz başvurular için güncelleştirmek, bazı `?` değ
 
 Bu iş zaman alır. Diğer gereksinimleri ve teslim edilebilirleri dengelerken kitaplığınızı veya uygulamanızı geçersiz kılınabilir hale getirecek stratejilerle başlayalım. Geçersiz başvuru türlerini etkinleştiren devam eden geliştirmeyi nasıl dengelersiniz göreceğiniz. Genel tür tanımları için zorlukları öğreneceksiniz. Tek tek API'larda ön ve sonrası koşulları açıklamak için öznitelikleri uygulamayı öğreneceksiniz.
 
-## <a name="choose-a-nullable-strategy"></a>Geçersiz bir strateji seçin
+## <a name="choose-a-strategy-for-nullable-reference-types"></a>Nullable başvuru türleri için bir strateji seçin
 
 İlk seçenek, geçersiz başvuru türlerinin varsayılan olarak açık mı yoksa kapalı mı olması gerektiğidir. İki stratejiniz var:
 
@@ -41,7 +41,7 @@ Bu iş zaman alır. Diğer gereksinimleri ve teslim edilebilirleri dengelerken k
 
 Bu ilk stratejiyi izleyerek aşağıdakileri yaparsınız:
 
-1. Öğeyi `<Nullable>enable</Nullable>` *csproj* dosyalarınıza ekleyerek tüm proje için geçersiz türleri etkinleştirin.
+1. Öğeyi `<Nullable>enable</Nullable>` *csproj* dosyalarınıza ekleyerek tüm proje için nullable başvuru türlerini etkinleştirin.
 1. Projenizdeki `#nullable disable` her kaynak dosyaya pragma ekleyin.
 1. Her dosya üzerinde çalışırken, pragma kaldırın ve herhangi bir uyarı adresi.
 
@@ -129,7 +129,7 @@ Bu ve bu `using` makalede <xref:System.Diagnostics.CodeAnalysis> tartışılan d
 
 Çoğu zaman özellikleri veya `in`, , `out`ve `ref` bağımsız değişkenler için bu öznitelik gerekir. Öznitelik, `AllowNull` bir değişken genellikle null olmayan en iyi seçimdir, `null` ancak bir ön koşul olarak izin vermek gerekir.
 
-Kontrast kullanarak senaryoları `DisallowNull`ile : Bu özniteliği nullable türünden bir giriş değişkeni `null`olmamalıdır belirtmek için kullanabilirsiniz . Varsayılan değerin `null` olduğu bir özellik düşünün, ancak istemciler onu yalnızca null olmayan bir değere ayarlayabilir. Aşağıdaki kodu inceleyin:
+Kontrast bu kullanım `DisallowNull`senaryoları ile : Bu özniteliği, nullable başvuru türünden bir giriş `null`değişkeninin olmaması gerektiğini belirtmek için kullanırsınız. Varsayılan değerin `null` olduğu bir özellik düşünün, ancak istemciler onu yalnızca null olmayan bir değere ayarlayabilir. Aşağıdaki kodu inceleyin:
 
 ```csharp
 public string ReviewComment
@@ -189,7 +189,7 @@ public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)
 
 Önceki kod, arayanlara sözleşmenin geçersiz bir tür ima ettiğini, ancak iade değerinin aslında null *olabileceğini* bildirir.  `MaybeNull` API'niz genellikle genel bir tür parametresi olan nullable olmayan bir tür olması gerektiğinde `null` özniteliği kullanın, ancak döndürülecek örnekler olabilir.
 
-Ayrıca, tür geçersiz bir tür `out` `ref` olsa bile, bir iade değerinin veya bağımsız değişkenin null olmadığını da belirtebilirsiniz. Bir dizinin bir dizi öğeyi tutacak kadar büyük olmasını sağlayan bir yöntem düşünün. Giriş bağımsız değişkeninin kapasitesi yoksa, yordam yeni bir dizi ayırır ve varolan tüm öğeleri kopyalar. Giriş bağımsız değişkeni `null`ise, yordam yeni depolama ayırır. Yeterli kapasite varsa, rutin hiçbir şey yapmaz:
+Tür geçersiz bir başvuru türü `out` olsa `ref` bile, iade değerinin veya bağımsız değişkenin null olmadığını da belirtebilirsiniz. Bir dizinin bir dizi öğeyi tutacak kadar büyük olmasını sağlayan bir yöntem düşünün. Giriş bağımsız değişkeninin kapasitesi yoksa, yordam yeni bir dizi ayırır ve varolan tüm öğeleri kopyalar. Giriş bağımsız değişkeni `null`ise, yordam yeni depolama ayırır. Yeterli kapasite varsa, rutin hiçbir şey yapmaz:
 
 ```csharp
 public void EnsureCapacity<T>(ref T[] storage, int size)
@@ -219,7 +219,7 @@ Aşağıdaki öznitelikleri kullanarak koşulsuz postconditions belirtin:
 
 ## <a name="specify-conditional-post-conditions-notnullwhen-maybenullwhen-and-notnullifnotnull"></a>Koşullu koşullar `NotNullWhen`belirtin: `MaybeNullWhen`, , ve`NotNullIfNotNull`
 
-Muhtemelen yönteme `string` <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType>aşinasınızdır. Bağımsız değişken `true` null veya boş bir dize olduğunda bu yöntem döndürür. Bu bir null-check şeklidir: Arayanların yöntem dönerse `false`bağımsız değişkeni geçersiz olarak denetlemelerine gerek yoktur. Bu gibi bir yöntemi kullanılabilir farkında yapmak için, bağımsız değişkeni nullable `NotNullWhen` türüne ayarlar ve öznitelik eklemek istiyorum:
+Muhtemelen yönteme `string` <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType>aşinasınızdır. Bağımsız değişken `true` null veya boş bir dize olduğunda bu yöntem döndürür. Bu bir null-check şeklidir: Arayanların yöntem dönerse `false`bağımsız değişkeni geçersiz olarak denetlemelerine gerek yoktur. Bu gibi bir yöntemi kullanılabilir farkında yapmak için, bağımsız değişkeni boşolabilir başvuru `NotNullWhen` türüne ayarlar ve özniteliği eklersiniz:
 
 ```csharp
 bool IsNullOrEmpty([NotNullWhen(false)]string? value);

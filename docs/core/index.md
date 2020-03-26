@@ -4,12 +4,12 @@ description: .NET Core, Windows, Linux ve macOS uygulamaları oluşturmak için 
 author: richlander
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 3db98d21a7cdc80d8a98b23782a81ffa37520937
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6d2ce5951fa01ca3945ce0e64aa58fbadc8ab5af
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75740749"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546555"
 ---
 # <a name="net-core-guide"></a>.NET Core kılavuzu
 
@@ -21,7 +21,7 @@ Basit bir .NET Core uygulaması nın nasıl oluşturulacağımı öğrenmek içi
 
 ## <a name="download-net-core"></a>Karşıdan yükleme .NET Core
 
-Windows, macOS veya Linux makinenizde .NET Core'u denemek için [.NET Core SDK'yı](https://www.microsoft.com/net/download) indirin. Docker konteynerlerini kullanmayı tercih ederseniz [,NET Core Docker Hub'ı](https://hub.docker.com/_/microsoft-dotnet-core/)ziyaret edin.
+Windows, macOS veya Linux makinenizde .NET Core'u denemek için [.NET Core SDK'yı](https://dotnet.microsoft.com/download) indirin. Docker konteynerlerini kullanmayı tercih ederseniz [,NET Core Docker Hub'ı](https://hub.docker.com/_/microsoft-dotnet-core/)ziyaret edin.
 
 Başka bir .NET Core sürümü arıyorsanız tüm .NET Core sürümleri [.NET Core İndirme sürümlerinde](https://dotnet.microsoft.com/download/dotnet-core) mevcuttur.
 

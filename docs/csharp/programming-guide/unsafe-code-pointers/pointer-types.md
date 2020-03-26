@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: dc03744559a87a2548c5bee9452c22cd20f337b8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7bbfa6b2238458d3248da830cf9d6ac36551b431
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77627716"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507041"
 ---
 # <a name="pointer-types-c-programming-guide"></a>İşaretçi türleri (C# Programlama Kılavuzu)
 
@@ -72,7 +72,7 @@ Aşağıdaki tabloda, güvenli olmayan bir bağlamda işaretçiler üzerinde iş
 |`++` ve `--`|İşaretçileri artırır ve azaltır.|
 |`+` ve `-`|İşaretçi aritmetiği gerçekleştirir.|
 |`==`, `!=` `<`, `>` `<=`, , ve`>=`|İşaretçileri karşılaştırır.|
-|[`stackalloc`Işleç](../../language-reference/operators/stackalloc.md)|Yığında bellek ayırır.|
+|[`stackalloc`](../../language-reference/operators/stackalloc.md)|Yığında bellek ayırır.|
 |[`fixed`Deyim](../../language-reference/keywords/fixed-statement.md)|Adresinin bulunamaması için bir değişkeni geçici olarak sabitler.|
 
 İşaretçi yle ilgili işleçler hakkında daha fazla bilgi için [Işaretçi ile ilgili işleçler'e](../../language-reference/operators/pointer-related-operators.md)bakın.

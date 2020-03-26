@@ -3,12 +3,12 @@ title: .NET'e Hoş Geldiniz
 description: .NET teknoloji ailesiyle başlarken.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bfc9b55f06a5830c13df52f992d2630f1f45d8be
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124227"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228792"
 ---
 # <a name="welcome-to-net"></a>.NET'e Hoş Geldiniz
 
@@ -42,13 +42,13 @@ Ayrıca en son .NET olaylarını takip edin:
 
 Bu dokümantasyon,.NET'in platformlar ve diller arasında genişliğini kapsar. .NET ve dilleriyle aşağıdaki bölümlerden herhangi birinde işe alabilirsiniz:
 
-- [.NET Kılavuzu](standard/index.md)
-- [.NET Core Kılavuzu](core/index.md)
-- [.NET Çerçeve Rehberi](framework/index.md)
+- [.NET Rehberi](standard/index.md)
+- [.NET Çekirdek Rehberi](core/index.md)
+- [.NET Çerçeve Rehberi](framework/index.yml)
 - [C# Rehberi](csharp/index.yml)
 - [F# Rehberi](fsharp/index.yml)
-- [Visual Basic Kılavuzu](visual-basic/index.yml)
-- [ML.NET Kılavuzu](machine-learning/index.yml)
+- [Görsel Temel Kılavuz](visual-basic/index.yml)
+- [ML.NET Rehberi](machine-learning/index.yml)
 - [Apache Spark için .NET](spark/index.yml)
 - [.NET Uygulama Mimarisi](architecture/index.yml)
 

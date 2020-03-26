@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: d2fd879203932ea3f2211e38a2efdd626928962b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 828543b95ed82f465c92212748c6250b7fc84051
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713906"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249389"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# diline giriş ve .NET Çerçevesi
 
@@ -22,7 +22,7 @@ C#, geliştiricilerin .NET Framework üzerinde çalışan çeşitli güvenli ve 
   
 ## <a name="c-language"></a>C# dili
 
-C# sözdizimi son derece anlamlı, ama aynı zamanda basit ve öğrenmesi kolay. C#'ın kıvırcık ayraç sözdizimi C, C++veya Java'yı bilen herkes tarafından anında tanınabilir. Bu dillerden herhangi birini bilen geliştiriciler genellikle çok kısa bir süre içinde C# alanında verimli bir şekilde çalışmaya başlayabilirler. C# sözdizimi C++'ın karmaşıklıklarının çoğunu basitleştirir ve nullable değer türleri, numaralandırmalar, temsilciler, lambda ifadeleri ve doğrudan bellek erişimi gibi güçlü özellikler sağlar. C#, artan tür güvenliği ve performansı sağlayan genel yöntemleri ve türleri ve koleksiyon sınıflarının uygulayıcılarının istemci koduyla kullanımı kolay özel yineleme davranışlarını tanımlamasını sağlayan yinelemeleri destekler. Dil-Tümleşik Sorgu (LINQ) ifadeleri, güçlü bir şekilde yazılan sorguyu birinci sınıf bir dil yapısı haline getirin.  
+C# sözdizimi son derece anlamlı, ama aynı zamanda basit ve öğrenmesi kolay. C#'ın kıvırcık ayraç sözdizimi C, C++veya Java'yı bilen herkes tarafından anında tanınabilir. Bu dillerden herhangi birini bilen geliştiriciler genellikle çok kısa bir süre içinde C# alanında verimli bir şekilde çalışmaya başlayabilirler. C# sözdizimi C++'ın karmaşıklıklarının çoğunu basitleştirir ve nullable türleri, numaralandırmalar, temsilciler, lambda ifadeleri ve doğrudan bellek erişimi gibi güçlü özellikler sağlar. C#, artan tür güvenliği ve performansı sağlayan genel yöntemleri ve türleri ve koleksiyon sınıflarının uygulayıcılarının istemci koduyla kullanımı kolay özel yineleme davranışlarını tanımlamasını sağlayan yinelemeleri destekler. Dil-Tümleşik Sorgu (LINQ) ifadeleri, güçlü bir şekilde yazılan sorguyu birinci sınıf bir dil yapısı haline getirin.  
   
  Nesne yönelimli bir dil olarak C#, kapsülleme, kalıtım ve çok biçimlilik kavramlarını destekler. Yöntem, uygulamanın `Main` giriş noktası da dahil olmak üzere tüm değişkenler ve yöntemler sınıf tanımları içinde kapsüllenir. Bir sınıf doğrudan bir üst sınıftan devralınabilir, ancak herhangi bir sayıda arabirim uygulayabilir. Bir üst sınıftasanal yöntemleri geçersiz kılma `override` yöntemleri yanlışlıkla yeniden tanımlanmasını önlemek için bir yol olarak anahtar kelime gerektirir. C#'da, bir yapı hafif bir sınıf gibidir; arabirimleri uygulayabilen ancak devralmayı desteklemeyen yığın ayarı bir türdür.  
   

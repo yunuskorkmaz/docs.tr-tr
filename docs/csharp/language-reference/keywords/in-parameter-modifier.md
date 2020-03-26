@@ -1,15 +1,15 @@
 ---
 title: parametre değiştirici - C# Referans
-ms.date: 03/26/2019
+ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: cbde7a571fb71ed7577077c77a5c61db553ec859
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 20956f9e25b6830a8876824a4c9dad1dbc4c4f3e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173620"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249376"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>parametre değiştirici (C# Reference)
 
@@ -115,7 +115,9 @@ Bağımsız değişkenin başvuru yla geçtiği tek yöntem çağrısı son yön
 Aşağıdaki yöntem türleri `in`için `ref`, `out` ve anahtar kelimeleri kullanamazsınız:  
   
 - Async değiştirici kullanarak tanımladığınız [async](async.md) yöntemleri.  
-- [Verim getirisi](yield.md) veya `yield break` deyimi içeren yineleyici yöntemleri.  
+- [Verim getirisi](yield.md) veya `yield break` deyimi içeren yineleyici yöntemleri.
+- Bir uzantı yönteminin ilk `in` bağımsız değişkeni, bu bağımsız değişken bir yapı olmadığı sürece değiştiriciye sahip olamaz.
+- Bu bağımsız değişkenin genel bir tür olduğu bir uzantı yönteminin ilk bağımsız değişkeni (bu tür bir yapı olarak sınırlandırılsa bile.)
 
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

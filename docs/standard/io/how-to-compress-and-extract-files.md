@@ -10,12 +10,12 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: 5aa25e265ed6ffb613e9916414c6f2335a4aaf57
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 10f990401830bc5f77176f4e586f15f7dd75ff14
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159383"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248023"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Nasıl yapılır: Dosyaları sıkıştırın ve ayıklayın
 
@@ -27,15 +27,21 @@ Ad <xref:System.IO.Compression> alanı, dosyaları ve akışları sıkıştırma
 - <xref:System.IO.Compression.DeflateStream>
 - <xref:System.IO.Compression.GZipStream>
 
-Aşağıdaki örnekler, sıkıştırılmış dosyalarla gerçekleştirebileceğiniz bazı işlemleri gösterir.
+Aşağıdaki örnekler, sıkıştırılmış dosyalarla gerçekleştirebileceğiniz bazı işlemleri gösterir. Bu örnekler, projenize aşağıdaki NuGet paketlerinin eklenmesini gerektirir:
+
+- [System.IO.Sıkıştırma](https://www.nuget.org/packages/System.IO.Compression)
+- [System.IO.Compression.ZipFile](https://www.nuget.org/packages/System.IO.Compression.ZipFile)
+
+.NET Framework kullanıyorsanız, projenize bu iki kitaplık için başvurular ekleyin:
+
+- `System.IO.Compression`
+- `System.IO.Compression.FileSystem`
 
 ## <a name="example-1-create-and-extract-a-zip-file"></a>Örnek 1: .zip dosyası oluşturma ve ayıklama
 
 Aşağıdaki örnek, sınıfı kullanarak sıkıştırılmış bir *.zip* dosyasının <xref:System.IO.Compression.ZipFile> nasıl oluşturulup ayıklanılmayı gösterir. Örnek, bir klasörün içeriğini yeni bir *.zip* dosyasına sıkıştırır ve zip'i yeni bir klasöre ayıklar.
 
 Örneği çalıştırmak için, program klasörünüzde bir *başlangıç* klasörü oluşturun ve zip dosyalarıyla doldurun.
-
-"'ZipFile' adı geçerli bağlamda yok" yapı hatası alırsanız, projenize `System.IO.Compression.FileSystem` derlemeye bir başvuru ekleyin.
 
 [!code-csharp[System.IO.Compression.ZipFile#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.zipfile/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipFile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.zipfile/vb/program1.vb#1)]
@@ -45,10 +51,6 @@ Aşağıdaki örnek, sınıfı kullanarak sıkıştırılmış bir *.zip* dosyas
 Sonraki örnek, varolan bir *.zip* dosyasının içeriğini yineler ve *.txt* uzantılı dosyaları ayıklar. Fermuara <xref:System.IO.Compression.ZipArchive> erişmek için sınıfı <xref:System.IO.Compression.ZipArchiveEntry> ve tek tek girişleri incelemek için sınıfı kullanır. Nesnenin <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> <xref:System.IO.Compression.ZipArchiveEntry> uzantı yöntemi <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> sınıfta kullanılabilir.
 
 Örneği çalıştırmak için program klasörünüze *result.zip* adlı bir *.zip* dosyası yerleştirin. İstendiğinde, ayıklamak için bir klasör adı sağlayın.
-
-"'ZipFile' adı geçerli bağlamda yok" yapı hatası alırsanız, projenize `System.IO.Compression.FileSystem` derlemeye bir başvuru ekleyin.
-
-"ZipArchive türü başvurulmayan bir derlemede tanımlanır" hatasını alırsanız, projenize `System.IO.Compression` derlemeye bir başvuru ekleyin.
 
 > [!IMPORTANT]
 > Dosyaların gün açmakısmını açarken, içine sızdırdığınız dizinden kaçabilen kötü amaçlı dosya yollarını aramanız gerekir. Bu bir yol geçiş saldırısı olarak bilinir. Aşağıdaki örnek, kötü amaçlı dosya yollarının nasıl denetlenebildiğini gösterir ve fermuarını açmak için güvenli bir yol sağlar.

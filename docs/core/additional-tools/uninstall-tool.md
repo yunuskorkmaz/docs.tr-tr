@@ -3,12 +3,12 @@ title: Aracı Kaldır
 description: .NET Core SDK'ların ve çalışma saatlerinin kontrollü olarak temizlenmesini sağlayan kılavuzlu bir araç olan .NET Çekirdek Kaldırma Aracı'na genel bir bakış.
 author: sfoslund
 ms.date: 01/06/2020
-ms.openlocfilehash: bd20cba133cbb754dcca48e48b76a391a9efacba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 816aef6ab8bc0e51bb8befb14fde60513d4fadfc
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847096"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507327"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core Kaldırma Aracı
 
@@ -44,6 +44,9 @@ Aşağıdaki adımlar, kaldırma aracını çalıştırmak için önerilen yakla
 ### <a name="step-1---display-installed-net-core-sdks-and-runtimes"></a>Adım 1 - Ekran yüklü .NET Core SDK'lar ve çalışma süreleri
 
 Komut, `dotnet-core-uninstall list` yüklenen .NET Core SDK'ları ve bu araçla kaldırılabilen çalışma sürelerini listeler. Bazı SDK'lar ve çalışma süreleri Visual Studio tarafından gerekli olabilir ve bunları kaldırmak için tavsiye edilmez neden bir not ile görüntülenir.
+
+> [!NOTE]
+> `dotnet-core-uninstall list` Komutun çıktısı, çoğu durumda çıktıdaki yüklü sürümlerin `dotnet --info` listesiyle eşleşmez. Özellikle, bu araç zip dosyaları tarafından yüklenen veya Visual Studio tarafından yönetilen sürümleri görüntülemez (Visual Studio 2019 16.3 veya sonraki sürümler). Bir sürümün Visual Studio tarafından yönetilip yönetilmeyişini denetlemenin bir `Add or Remove Programs`yolu, görsel stüdyo yönetilen sürümlerinin görüntü adlarında bu şekilde işaretlendiği, bu sürümü görüntülemektir.
 
 **dotnet-core-uninstall listesi**
 

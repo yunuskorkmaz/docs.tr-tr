@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
-ms.openlocfilehash: 06dc6f1532fecefba4e507bd0cc24aadc936d137
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 1660971e2a1a11d7a2d14f222cd149edf4aa4c7b
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524377"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249519"
 ---
 # <a name="isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a>'typename' türündeki 'IsNot' işleneni, 'typename' boş değer atanabilir bir tür olduğundan, sadece 'Nothing' ile karşılaştırılabilir.
 
-Null yapılabilir olarak belirtilen bir değişken, `IsNot` işleci kullanılarak `Nothing` dışındaki bir ifadeyle karşılaştırılır.
+Nullable değer türü olarak bildirilen bir değişken `Nothing` `IsNot` işleci kullanarak dışında bir ifade ile karşılaştırılmıştır.
 
-**Hata kimliği:** BC32128
+**Hata Kimliği:** BC32128
 
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-Null yapılabilir bir türü `Nothing` dışındaki bir ifadeyle karşılaştırmak için `IsNot` işlecini kullanarak, null yapılabilir türde `GetType` yöntemini çağırın ve sonucu aşağıdaki örnekte gösterildiği gibi ifadesiyle karşılaştırın.
+Nullable türü `Nothing` `IsNot` işleci kullanmak dışında bir ifadeyle karşılaştırmak için, `GetType` yöntemin nullable türündeki çağrısını arayın ve sonucu aşağıdaki örnekte gösterildiği gibi ifadeyle karşılaştırın.
 
 ```vb
 Dim number? As Integer = 5

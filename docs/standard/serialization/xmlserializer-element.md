@@ -6,23 +6,23 @@ helpviewer_keywords:
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-ms.openlocfilehash: 2919e8d4c1af858973ff3d2b58b4d3bc4f925527
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b83ecda30bba8af1f3175eb6ad08593b07a80e6c
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018077"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249545"
 ---
-# <a name="xmlserializer-element"></a>\<xmlSerializer > öğesi
+# <a name="xmlserializer-element"></a>\<xmlSerializer> Elemanı
 Belirtir ilerleme durumunu ek bir denetim olup olmadığını <xref:System.Xml.Serialization.XmlSerializer> yapılır.  
   
- \<Yapılandırma >  
+ \<yapılandırma>  
 \<system.xml.serialization>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
-<xmlSerializer checkDeserializerAdvance = "true"|"false" />  
+<xmlSerializer checkDeserializerAdvance = "true|false" />  
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
@@ -32,8 +32,8 @@ Belirtir ilerleme durumunu ek bir denetim olup olmadığını <xref:System.Xml.S
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**checkDeserializeAdvances**|Belirtir olup olmadığını ilerleme durumunu <xref:System.Xml.Serialization.XmlSerializer> denetlenir. Özniteliği "true" veya "false" olarak ayarlayın. Varsayılan değer "true" ise.|  
-|**useLegacySerializationGeneration**|Belirtir olup olmadığını <xref:System.Xml.Serialization.XmlSerializer> C# kod bir dosyaya yazmak ve sonra da bir derlemeye derlemek tarafından derlemeleri oluşturan eski serileştirme oluşturma kullanır. Varsayılan değer **false**.|  
+|**kontrolDeserializeAvanslar**|Belirtir olup olmadığını ilerleme durumunu <xref:System.Xml.Serialization.XmlSerializer> denetlenir. Özniteliği "true" veya "false" olarak ayarlayın. Varsayılan "true"dur.|  
+|**useLegacySerializationGeneration**|Belirtir olup olmadığını <xref:System.Xml.Serialization.XmlSerializer> C# kod bir dosyaya yazmak ve sonra da bir derlemeye derlemek tarafından derlemeleri oluşturan eski serileştirme oluşturma kullanır. Varsayılan **yanlıştır.**|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -42,15 +42,15 @@ Belirtir ilerleme durumunu ek bir denetim olup olmadığını <xref:System.Xml.S
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<system.xml.serialization> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)|İçin yapılandırma ayarlarını içeren <xref:System.Xml.Serialization.XmlSerializer> ve <xref:System.Xml.Serialization.XmlSchemaImporter> sınıfları.|  
+|[\<system.xml.serialization> Elemanı](../../../docs/standard/serialization/system-xml-serialization-element.md)|İçin yapılandırma ayarlarını içeren <xref:System.Xml.Serialization.XmlSerializer> ve <xref:System.Xml.Serialization.XmlSchemaImporter> sınıfları.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsayılan olarak, <xref:System.Xml.Serialization.XmlSerializer> güvenilmeyen verileri işlenirken bir ek güvenlik olası hizmet reddi saldırılarını karşı katmanı sağlar. Bunu seri durumundan çıkarma sırasında sonsuz döngü algılamak deneyerek yapar. Bir koşul algılanırsa, aşağıdaki iletisiyle bir özel durum: "İç hata: temel alınan akışta seri kaldırma başarısız oldu."  
+ Varsayılan olarak, <xref:System.Xml.Serialization.XmlSerializer> güvenilmeyen verileri deserializing hizmet reddi olası reddi saldırılarına karşı ek bir güvenlik katmanı sağlar. Bunu seri durumundan çıkarma sırasında sonsuz döngü algılamak deneyerek yapar. Böyle bir durum algılanırsa, bir özel durum şu iletiyle atılır: "İç hata: deserialization altta yatan akış üzerinde ilerlemek için başarısız oldu."  
   
- Bu iletiyi alan değil gerekmeyen gösteren bir saldırı hizmet reddi devam ediyor. Bazı ender durumlarda, yanlış Pozitif sonsuz döngü algılama mekanizması oluşturur ve yasal gelen ileti için özel durum. Belirli uygulamanızda bu ek koruma katmanı tarafından yasal iletileri reddediliyor bulursanız ayarlamak **checkDeserializeAdvances** "false" özniteliği.  
+ Bu iletiyi alan değil gerekmeyen gösteren bir saldırı hizmet reddi devam ediyor. Bazı ender durumlarda, yanlış Pozitif sonsuz döngü algılama mekanizması oluşturur ve yasal gelen ileti için özel durum. Özel uygulamanızda meşru iletilerin bu ekstra koruma katmanı tarafından reddedildiğini fark ederseniz, "false" olarak **denetleDeserializeAdvances** özniteliği ni ayarlayın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek kod **checkDeserializeAdvances** "false" özniteliği.  
+ Aşağıdaki kod örneği, "false" özniteliğini **deserializeAdvances** olarak ayarlar.  
   
 ```xml  
 <configuration>  
@@ -63,5 +63,5 @@ Belirtir ilerleme durumunu ek bir denetim olup olmadığını <xref:System.Xml.S
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [\<system.xml.serialization> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [\<system.xml.serialization> Elemanı](../../../docs/standard/serialization/system-xml-serialization-element.md)
 - [XML ve SOAP Serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rotating objects [WPF]
 - rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
-ms.openlocfilehash: 02d8144c28b7a4e54fb86fea5abb694cf7af34af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e17d3b7b9986b477df198480129edaf4c139c6bc
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185960"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112069"
 ---
 # <a name="how-to-rotate-an-object"></a>Nasıl yapılır: Nesne Döndürme
 Bu örnek, bir nesnenin nasıl döndürüldüğünü gösterir. Örnek önce bir <xref:System.Windows.Media.RotateTransform> oluşturur ve sonra <xref:System.Windows.Media.RotateTransform.Angle%2A> derece olarak belirtir.  
@@ -42,7 +42,7 @@ Farklı dönme merkezlerinden 45 derece dönen iki nesne
   
  Önceki <xref:System.Windows.Shapes.Polyline> örneklerde bir <xref:System.Windows.UIElement>. Bir <xref:System.Windows.Media.Transform> <xref:System.Windows.UIElement.RenderTransform%2A> <xref:System.Windows.UIElement>özelliğine a uyguladığınız zaman, öğeye uyguladığınız her <xref:System.Windows.Media.Transform> bir kaynak için bir kaynak belirtmek için <xref:System.Windows.UIElement.RenderTransformOrigin%2A> özelliği kullanabilirsiniz. Özellik <xref:System.Windows.UIElement.RenderTransformOrigin%2A> göreli koordinatlar kullandığından, boyutunu bilmeseniz bile öğenin merkezine dönüşüm uygulayabilirsiniz. Daha fazla bilgi ve örnek için bkz. [Göreli Değerleri Kullanarak Dönüşümün Kaynağını Belirtin.](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
   
- Numunenin tamamı için [2-B Dönüşüm Örneği'ne](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)bakın.  
+ Tam örnek için [2B Dönüşümler Örneği'ne](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,12 +2,12 @@
 title: dotnet yayımlama komutu
 description: Dotnet yayımlama komutu bir .NET Core projesi veya çözüm bir dizine yayımlar.
 ms.date: 02/24/2020
-ms.openlocfilehash: c34618409c9a539043c84c7e03daa8aa249d64f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed5b87b3343210ca81486ef4b9a9d70d1b534464
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146561"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110977"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -168,5 +168,5 @@ Komutun `dotnet publish` çıktısı yürütme için bir barındırma sistemine 
 - [.NET Core CLI ile .NET Core uygulamalarını yayımla](../deploying/deploy-with-cli.md)
 - [Hedef çerçeveler](../../standard/frameworks.md)
 - [Çalışma Zamanı Tanımlayıcı (RID) kataloğu](../rid-catalog.md)
-- [macOS Catalina Noterizasyonu ile çalışma](../install/macos-notarization-issues.md) Daha fazla bilgi için aşağıdaki kaynaklara bakın:
+- [macOS Catalina Noterizasyonu ile çalışma](../install/macos-notarization-issues.md)
 - [Yayınlanan bir uygulamanın dizin yapısı](/aspnet/core/hosting/directory-structure)

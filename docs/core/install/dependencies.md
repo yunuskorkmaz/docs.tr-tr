@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: ca86b3c158bb38c1293cd4303dcf4c00ea9175b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 023b8fdf029dd6b17fe2186296d87dd7507c60b5
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157822"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546568"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Temel bağımlılıklar ve gereksinimler
 
@@ -41,6 +41,8 @@ Aşağıdaki Windows sürümleri .NET Core 3.1 ile desteklenir:
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
+*.NET Core 3.0 şu anda destek değil. Daha fazla bilgi için [.NET Çekirdek Destek Politikası'na](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)bakın.*
+
 Aşağıdaki Windows sürümleri .NET Core 3.0 ile desteklenir:
 
 > [!NOTE]
@@ -56,6 +58,8 @@ Aşağıdaki Windows sürümleri .NET Core 3.0 ile desteklenir:
 .NET Core 3.0 destekli işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi [için](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)bkz.
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
+
+*.NET Core 2.2 şu anda destek değil. Daha fazla bilgi için [.NET Çekirdek Destek Politikası'na](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)bakın.*
 
 Aşağıdaki Windows sürümleri .NET Core 2.2 ile desteklenir:
 
@@ -132,7 +136,7 @@ Aşağıdaki hatalardan biriyle karşılaşırsanız yukarıdaki gereksinimler d
 | Red Hat Enterprise Linux       | 6, 7, 8               | x64 |
 | CentOS                         | 7+                    | x64 |
 | Oracle Linux                   | 7+                    | x64 |
-| Fedora                         | 29+                   | x64 |
+| Fedora                         | 30+                   | x64 |
 | Debian                         | 9+                    | x64, ARM32, ARM64 |
 | Ubuntu                         | 16,04+                | x64, ARM32, ARM64 |
 | Linux Darphane                     | 18+                   | x64 |
@@ -148,6 +152,8 @@ ARM64'e .NET Core 3.1'in nasıl yüklenir (çekirdek 4.14+) nasıl yüklenirhakk
 > ARM64 desteği Linux çekirdeği 4.14 veya daha yüksek gerektirir. Bazı linux dağıtımları bu gereksinimi karşılarken, diğerleri bunu karşılamaz. Örneğin, Ubuntu 18.04 desteklenir, ancak Ubuntu 16.04 desteklenmez.
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
+
+*.NET Core 3.0 şu anda destek değil. Daha fazla bilgi için [.NET Çekirdek Destek Politikası'na](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)bakın.*
 
 .NET Core 3.0, Linux'u tek bir işletim sistemi olarak ele alıyor. Desteklenen Linux dağıtımları için tek bir Linux yapısı (yonga mimarisi başına) vardır.
 
@@ -174,6 +180,8 @@ ARM64'e .NET Core 3.1'in nasıl yüklenir (çekirdek 4.14+) nasıl yüklenirhakk
 ARM64'e .NET Core 3.0 nasıl yüklenir hakkında daha fazla bilgi için Linux [ARM64'te .NET Core 3.0](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213)yükleme'ye bakın.
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
+
+*.NET Core 2.2 şu anda destek değil. Daha fazla bilgi için [.NET Çekirdek Destek Politikası'na](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)bakın.*
 
 .NET Core 2.2, Linux'u tek bir işletim sistemi olarak ele alıyor. Desteklenen Linux dağıtımları için tek bir Linux yapısı (yonga mimarisi başına) vardır.
 
@@ -211,7 +219,7 @@ ARM64'e .NET Core 3.0 nasıl yüklenir hakkında daha fazla bilgi için Linux [A
 | Red Hat Enterprise Linux       |  6, 7, 8                | x64 |
 | CentOS                         |  7+                     | x64 |
 | Oracle Linux                   |  7+                     | x64 |
-| Fedora                         |  29+                    | x64 |
+| Fedora                         |  30+                    | x64 |
 | Debian                         |  9                      | x64, ARM32 |
 | Ubuntu                         |  16.04, 18.04, 19.04, 19.10    | x64, ARM32 |
 | Linux Darphane                     |  17+                    | x64 |

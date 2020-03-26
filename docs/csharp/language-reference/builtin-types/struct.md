@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: b85d0df086f3ca65ed995594dd374286e1c3ba5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b126706ff9c881e5c2d5cc7ee4833ac8896e3fcc
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847735"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507249"
 ---
 # <a name="structure-types-c-reference"></a>Yapı türleri (C# başvurusu)
 
@@ -43,7 +43,7 @@ Bir yapı türü tasarlarken, aşağıdaki özel durumlar dışında, [sınıf](
 
 C#'da, kullanılmadan önce bildirilen bir değişkeni başlatmanız gerekir. Yapı türünde bir değişken `null` olamayacağından [(nullable değer türünde](nullable-value-types.md)bir değişken olmadığı sürece), ilgili türdeki bir örneği anında alabilmeniz gerekir. Bunu yapmanın birkaç yolu vardır.
 
-Genellikle, [`new`](../operators/new-operator.md) işleç ile uygun bir yapıcı çağırarak bir yapı türü anında. Her yapı türünde en az bir oluşturucu vardır. Bu, türün [varsayılan değerini](default-values.md) üreten örtük bir parametresiz oluşturucu. Bir türün [varsayılan](../operators/default.md) değerini üretmek için varsayılan işleci veya literal de kullanabilirsiniz.
+Genellikle, [`new`](../operators/new-operator.md) işleç ile uygun bir yapıcı çağırarak bir yapı türü anında. Her yapı türünde en az bir oluşturucu vardır. Bu, türün [varsayılan değerini](default-values.md) üreten örtük bir parametresiz oluşturucu. Bir türün [varsayılan](../operators/default.md) değerini oluşturmak için varsayılan değer ifadesini de kullanabilirsiniz.
 
 Yapı türünün tüm örnek alanlarına erişilebilirse, `new` operatör olmadan da anında ekleyebilirsiniz. Bu durumda, örneğin ilk kullanımından önce tüm örnek alanları başlatmanız gerekir. Aşağıdaki örnek, bunun nasıl yapılacağını gösterir:
 

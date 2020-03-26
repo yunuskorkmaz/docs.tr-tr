@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '@ special character [C#]'
 - '@ language element [C#]'
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
-ms.openlocfilehash: a3446eceb0d3c415e36ea1d2c7d8d6d34f65350d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b37f77273e767a5e5292e7707933892f57811d2a
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712422"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291768"
 ---
 # <a name="-c-reference"></a>@ (C# Referans)
 
@@ -23,7 +23,7 @@ ms.locfileid: "75712422"
 
    [!code-csharp[verbatim1](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#1)]
 
-1. Bir dize harfinin harfi harfine harfiharfini belirtmek için harfi harfi harfine yorumlanmalıdır. Bu `@` örnekteki *karakter, harfi harfine bir dize harfini*tanımlar. Basit kaçış sekansları (ters eğik çizgi gibi), `"\\"` hexadecimal kaçış dizileri (büyük A `"\x0041"` için gibi) ve Unicode kaçış dizileri (a harfi `"\u0041"` için olduğu gibi) kelimenin tam anlamıyla yorumlanır. Sadece bir alıntı`""`kaçış sırası ( ) kelimenin tam anlamıyla yorumlanmaz; tek bir tırnak işareti üretir. Ayrıca, bir kelimenin tam olarak [interpolasyonlu dize](interpolated.md) `{{` ayraç kaçış dizileri durumunda ( ve `}}`) kelimenin tam anlamıyla yorumlanmaz; tek ayraç karakterleri üretirler. Aşağıdaki örnek, biri normal bir dize literal, diğeri ise harfi harfine dize kullanarak iki özdeş dosya yolunu tanımlar. Bu, kelimenin tam anlamıyla dize literals daha yaygın kullanımlarından biridir.
+1. Bir dize harfinin harfi harfine harfiharfini belirtmek için harfi harfi harfine yorumlanmalıdır. Bu `@` örnekteki *karakter, harfi harfine bir dize harfini*tanımlar. Basit kaçış sekansları (ters eğik çizgi gibi), `"\\"` hexadecimal kaçış dizileri (büyük A `"\x0041"` için gibi) ve Unicode kaçış dizileri (a harfi `"\u0041"` için olduğu gibi) kelimenin tam anlamıyla yorumlanır. Sadece bir alıntı`""`kaçış sırası ( ) kelimenin tam anlamıyla yorumlanmaz; bir çift tırnak işareti üretir. Ayrıca, bir kelimenin tam olarak [interpolasyonlu dize](interpolated.md) `{{` ayraç kaçış dizileri durumunda ( ve `}}`) kelimenin tam anlamıyla yorumlanmaz; tek ayraç karakterleri üretirler. Aşağıdaki örnek, biri normal bir dize literal, diğeri ise harfi harfine dize kullanarak iki özdeş dosya yolunu tanımlar. Bu, kelimenin tam anlamıyla dize literals daha yaygın kullanımlarından biridir.
 
    [!code-csharp[verbatim2](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#2)]
 

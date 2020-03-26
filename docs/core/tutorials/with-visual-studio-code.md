@@ -3,18 +3,18 @@ title: C# ve Visual Studio Code kullanmaya başlama
 description: Visual Studio Code'u kullanarak C#'daki ilk .NET Core uygulamanızı nasıl oluşturup hata ayıklayarak hata ayıklamayı öğrenin.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: 8eaf1ba2314dcab96db615a8691afed82c5011a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49a1271f2bf74224e189e70bebf0d22c49408e5d
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398883"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111068"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# ve Visual Studio Code kullanmaya başlama
 
 .NET Core, Windows, Linux ve macOS'ta çalışan uygulamalar oluşturmak için size hızlı ve modüler bir platform sağlar. C# IntelliSense (akıllı kod tamamlama) ve hata ayıklama için tam destek ile güçlü bir düzenleme deneyimi elde etmek için C# uzantısı ile Visual Studio Code kullanın.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 1. [Visual Studio Kodunu](https://code.visualstudio.com/)Yükleyin.
 2. [.NET Çekirdek SDK'yı](https://dotnet.microsoft.com/download)yükleyin.
@@ -79,7 +79,7 @@ Ayrıca [Windows,](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Co
     ![Kesme Noktası Ayarlama](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
 6. Hata ayıklamaya başlamak için <kbd>F5</kbd> tuşuna basın veya yeşil oku seçin. Hata ayıklama, önceki adımda ayarladığınız kesme noktasına ulaştığında programınızın yürütülmesini durdurur.
-    - Hata ayıklama sırasında, sol üst bölmede yerel değişkenlerinizi görüntüleyebilir veya hata ayıklama konsolunu kullanabilirsiniz.
+    - Hata ayıklama sırasında, yerel değişkenlerinizi sol üst bölmede görüntüleyebilir veya hata ayıklama konsolunu kullanabilirsiniz.
 
 7. Hata ayıklama devam etmek için üstteki mavi oku seçin veya durdurmak için üstteki kırmızı kareyi seçin.
 

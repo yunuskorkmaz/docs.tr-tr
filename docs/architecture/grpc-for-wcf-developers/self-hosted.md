@@ -2,12 +2,12 @@
 title: Kendi kendine barındırılan gRPC uygulamaları - WCF geliştiricileri için gRPC
 description: Core gRPC uygulamalarını kendi kendine barındırılan hizmetler olarak ASP.NET dağıtma.
 ms.date: 09/02/2019
-ms.openlocfilehash: 00fb1453e19a02469f80af79672e0c1f72c7280f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 69f70e4077247fd07eba7abeee82f257dd1f4f90
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79147808"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110912"
 ---
 # <a name="self-hosted-grpc-applications"></a>Kendi kendine barındırılan gRPC uygulamaları
 
@@ -107,7 +107,7 @@ ExecStart=/usr/sbin/myapp
 WantedBy=multi-user.target
 ```
 
-Özellik, `Type=notify` `systemd` uygulamanın başlangıç ve kapatma konusunda bunu bildireceğini söyler. Ayar, `WantedBy=multi-user.target` Linux sistemi "runlevel 2"ye ulaştığında hizmetin başlamasına neden olur, bu da grafiksel olmayan çok kullanıcılı bir kabuğun etkin olduğu anlamına gelir.
+Özellik, `Type=notify` `systemd` uygulamanın başlangıç ve kapatma konusunda bunu bildireceğini söyler. Ayar, `WantedBy=multi-user.target` Linux sistemi "runlevel 2"ye ulaştığında hizmetin başlamasına neden olur, bu da grafiksel olmayan, çok kullanıcılı bir kabuğun etkin olduğu anlamına gelir.
 
 Hizmeti `systemd` tanımadan önce yapılandırmasını yeniden yüklemesi gerekir. Komutu `systemd` kullanarak `systemctl` kontrol edin. Yeniden yüklendikten sonra, uygulamanın `status` başarıyla kaydolduğunu doğrulamak için alt komutu kullanın.
 
@@ -152,7 +152,7 @@ sudo journalctl -u myapp
 > [!TIP]
 > Ev sahibinizde bir GUI ortamı varsa, Linux için *QJournalctl* ve *gnome günlükleri*gibi birkaç grafik günlük görüntüleyen kullanılabilir.
 
-`systemd` Kullanarak komut satırından günlüğü sorgulama hakkında daha `journalctl`fazla bilgi edinmek için, [adam sayfalarına](https://manpages.debian.org/buster/systemd/journalctl.1)bakın.
+`systemd` Kullanarak komut satırından günlüğü sorgulama hakkında daha `journalctl`fazla bilgi edinmek için, [bkz.](https://manpages.debian.org/buster/systemd/journalctl.1)
 
 ## <a name="https-certificates-for-self-hosted-applications"></a>Kendi barındırılan uygulamalar için HTTPS sertifikaları
 

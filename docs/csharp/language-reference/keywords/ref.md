@@ -1,18 +1,18 @@
 ---
 title: ref anahtar kelime - C# Referans
-ms.date: 03/26/2019
+ms.date: 03/19/2020
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 05f0bd8566851678203a3f064b96bfff7dee18b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 61ee0e320f85925e4d804a6032e01c0485a31451
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399366"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249337"
 ---
 # <a name="ref-c-reference"></a>ref (C# Başvurusu)
 
@@ -59,7 +59,13 @@ Ancak, yöntemlerden biri `ref`, , `in`parametresi `out` ve diğer bir değer pa
  Aşağıdaki yöntem türleri `ref`için `in`, `out` ve anahtar kelimeleri kullanamazsınız:  
   
 - Async değiştirici kullanarak tanımladığınız [async](async.md) yöntemleri.  
-- [Verim getirisi](yield.md) veya `yield break` deyimi içeren yineleyici yöntemleri.  
+- [Verim getirisi](yield.md) veya `yield break` deyimi içeren yineleyici yöntemleri.
+
+Buna ek olarak, [uzantı yöntemleri](../../programming-guide/classes-and-structs/extension-methods.md) aşağıdaki kısıtlamalara sahiptir:
+
+- Keywoard `out` bir uzantı yönteminin ilk bağımsız değişkeninde kullanılamaz.
+- Anahtar `ref` kelime, bağımsız değişken bir yapı olmadığında veya yapı olarak sınırlandırılmamış genel bir tür olduğunda, uzantı yönteminin ilk bağımsız değişkeninde kullanılamaz.
+- İlk `in` bağımsız değişken bir yapı olmadığı sürece anahtar sözcük kullanılamaz. Anahtar `in` kelime, yapı olarak sınırlandırılsa bile, herhangi bir genel türde kullanılamaz.
 
 ## <a name="passing-an-argument-by-reference-an-example"></a>Bir bağımsız değişkeni başvuruyla geçirme: Bir örnek
 

@@ -2,12 +2,12 @@
 title: Değer nesneleri uygulama
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Yeni Varlık Çerçevesi özelliklerini kullanarak değer nesnelerini uygulamak için ayrıntılara ve seçeneklere bakın.
 ms.date: 01/30/2020
-ms.openlocfilehash: 4ace5c141b1cbd2dcfefb7ea7165a4006b130479
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 919b23f7c1a0cd0aec8c4417f3af98469a0743dd
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502509"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249428"
 ---
 # <a name="implement-value-objects"></a>Değer nesnelerini uygulama
 
@@ -295,7 +295,7 @@ public class Address
 
 - Sahip olunan `ModelBuilder.Entity<T>()` türleri (şu anda tasarımgereği) arayamayabilirsiniz.
 
-- Aynı tabloda sahibiyle eşlenen isteğe bağlı (yani geçersiz kılınabilir) sahip olunan türler için destek yok (diğer bir deyişle, tablo bölmeyi kullanarak). Bunun nedeni, haritalama nın her özellik için yapılmasıdır, null karmaşık değeri bir bütün olarak ayrı bir sentinel imiz yoktur.
+- Aynı tabloda sahibiyle eşlenen isteğe bağlı (yani geçersiz kılınabilir) sahip olunan türler için destek yok (diğer bir deyişle, tablo bölmeyi kullanarak). Bunun nedeni, haritalama nın her özellik için yapılmasıdır, bir bütün olarak null karmaşık değeri için ayrı bir nöbetçimiz yoktur.
 
 - Sahip olunan türler için devralma eşleme desteği yok, ancak aynı devralma hiyerarşilerinin iki yaprak türünü farklı sahip olunan türler olarak eşlenebilmelisiniz. EF Core, aynı hiyerarşinin bir parçası oldukları gerçeğini düşünmez.
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 7c95fe07220a78b388a5c6850e4123feb029d951
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd25cd419f8c3bfe905850e6a252f4a8cf65478c
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399548"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507106"
 ---
 # <a name="pointer-related-operators-c-reference"></a>İşaretçi ile ilgili işleçler (C# başvurusu)
 
@@ -42,7 +42,7 @@ ms.locfileid: "79399548"
 > [!NOTE]
 > İşaretçileri olan herhangi bir işlem [güvenli olmayan](../keywords/unsafe.md) bir bağlam gerektirir. Güvenli olmayan bloklar içeren kod [`-unsafe`](../compiler-options/unsafe-compiler-option.md) derleyici seçeneği ile derlenmiş olmalıdır.
 
-## <a name="address-of-operator-"></a>İşleticinin adresi&amp;
+## <a name="address-of-operator-amp"></a><a name="address-of-operator-"></a>İşleticinin adresi&amp;
 
 Unary `&` işleticisi operand adresini döndürür:
 
@@ -70,7 +70,7 @@ Unary işaretçi indirection işleci, `*` operand noktaları değişkeni elde ed
 
 ## <a name="pointer-member-access-operator--"></a>Pointer üye erişim işleci ->
 
-İşleç `->` [işaretçi yönlendirme](#pointer-indirection-operator-) ve [üye erişimi](member-access-operators.md#member-access-operator-)birleştirir. Diğer bir `x` yazı, bir `T*` tür `y` işaretçisi `T`yse ve türünün erişilebilir bir üyesiyse, formun bir ifadesi
+İşleç `->` [işaretçi yönlendirme](#pointer-indirection-operator-) ve [üye erişimi](member-access-operators.md#member-access-expression-)birleştirir. Diğer bir `x` yazı, bir `T*` tür `y` işaretçisi `T`yse ve türünün erişilebilir bir üyesiyse, formun bir ifadesi
 
 ```csharp
 x->y
@@ -96,7 +96,7 @@ Aşağıdaki örnek, bir işaretçi ve `[]` işleç ile dizi öğelerine nasıl 
 
 [!code-csharp[pointer element access](snippets/PointerOperators.cs#ElementAccess)]
 
-Örnek, yığında bir bellek bloğu ayırmak için [ `stackalloc` işleci](stackalloc.md) kullanır.
+Önceki örnekte, bir [ `stackalloc` ifade](stackalloc.md) yığınüzerinde bellek bloğu ayırır.
 
 > [!NOTE]
 > İşaretçi öğesi erişim işleci, sınır dışı hataları denetlemez.
@@ -192,5 +192,5 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 - [İşaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [güvenli olmayan anahtar kelime](../keywords/unsafe.md)
 - [sabit anahtar kelime](../keywords/fixed-statement.md)
-- [stackalloc işleci](stackalloc.md)
+- [stackalloc](stackalloc.md)
 - [sizeof işleci](sizeof.md)

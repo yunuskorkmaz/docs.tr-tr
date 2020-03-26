@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: f85fef37ac952c91ac73570f26d80d8a46f4eedf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b61d079a86bdd4a809d44ad128f19a7b358c8384
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156511"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228671"
 ---
 # <a name="assemblies-in-net"></a>.NET’te bütünleştirilmiş kodlar
 
@@ -116,3 +116,4 @@ C#'da, aynı derlemenin iki sürümütek bir uygulamada kullanabilirsiniz. Daha 
 - [Nasıl yapılsın: Montajları yükleme ve boşaltma](load-unload.md)
 - [Nasıl kullanılır: .NET Core'da montaj boşaltılabilirliğini kullanma ve hata ayıklama](unloadability.md)
 - [Nasıl Yapılır: Dosyanın derleme olup olmadığını belirleme](identify.md)
+- [Nasıl yapilir: MetadataLoadContext kullanarak montaj içeriğini inceleyin](inspect-contents-using-metadataloadcontext.md)

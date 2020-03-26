@@ -12,14 +12,16 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49b3836f17e91ae8de10d68e97fd662aae80d1ff
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345388"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249324"
 ---
 # <a name="switch-c-reference"></a>anahtar (C# referansı)
+
+Bu makale, `switch` deyimi kapsar. İfade (C# `switch` 8.0'da tanıtılan) ile ilgili bilgi [için, ifadeler ve işleçler](../operators/index.md) bölümündeki [ `switch` ifadeler](../operators/switch-expression.md) hakkındaki makaleye bakın.
 
 `switch`*eşleşme ifadesi*ile bir desen eşleşmesi dayalı aday listesinden yürütmek için tek bir *anahtar bölümü* seçen bir seçim deyimidir.
 
@@ -106,7 +108,7 @@ Servis `default` talebi, eşleşme ifadesi başka `case` bir etiketle eşleşmiy
 
 Servis `default` `switch` talebi, ifadedeki herhangi bir sırada görünebilir. Kaynak kodundaki sırası ne olursa olsun, tüm `case` etiketler değerlendirildikten sonra her zaman en son değerlendirilir.
 
-## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><a name="pattern" />`switch` Deyimle eşleşen desen
+## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern" />`switch` Deyimle eşleşen desen
 
 Her `case` deyim, eşleşme ifadesiyle eşleşirse, içerdiği anahtar bölümünün yürütülmesine neden olan bir desen tanımlar. C#'nin tüm sürümleri sabit deseni destekler. Kalan desenler C# 7.0 ile başlayarak desteklenir.
 
@@ -183,7 +185,7 @@ Desen eşleştirme olmadan, bu kod aşağıdaki gibi yazılabilir. Tür deseni e
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" />İfade `case` ve `when` fıkra
+## <a name="the-case-statement-and-the-when-clause"></a><a name="when" />İfade `case` ve `when` fıkra
 
 C# 7.0 ile başlayarak, büyük/küçük harf deyimleri `when` birbirini dışlamadığıiçin, servis talebi bildiriminin doğru olarak değerlendirilmesi için tatmin edilmesi gereken ek bir koşul belirtmek için bir yan tümce ekleyebilirsiniz. Yan `when` tümce boolean değerini döndüren herhangi bir ifade olabilir.
 

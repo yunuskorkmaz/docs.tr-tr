@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: cdb35b212d5bfc4cc685fbfd6c294066983709df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec67d8ec5c0b102ea0b2434119c99f93a0bbe8dd
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847306"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507119"
 ---
 # <a name="operator-overloading-c-reference"></a>Operatör aşırı yüklemesi (C# referansı)
 
@@ -43,7 +43,7 @@ Aşağıdaki tablo, C# işleçlerinin aşırı yüklenebilirliği hakkında bilg
 |[bir&#91;i&#93;](member-access-operators.md#indexer-operator-)|Öğe erişimi aşırı yüklenebilir işleç olarak kabul edilmez, ancak bir [dizinleyici](../../programming-guide/indexers/index.md)tanımlayabilirsiniz.|
 |[(T)x](type-testing-and-cast.md#cast-operator-)|Döküm işleci aşırı yüklenemez, ancak yeni dönüşüm işleçleri tanımlayabilirsiniz. Daha fazla bilgi için [Bkz. Kullanıcı tanımlı dönüşüm operatörleri.](user-defined-conversion-operators.md)|
 |[+=](arithmetic-operators.md#compound-assignment), [-=](arithmetic-operators.md#compound-assignment) [ \* ](arithmetic-operators.md#compound-assignment), [/=](arithmetic-operators.md#compound-assignment) [%=](arithmetic-operators.md#compound-assignment), [&=](boolean-logical-operators.md#compound-assignment), , [^=](boolean-logical-operators.md#compound-assignment) [ \< \< ](bitwise-and-shift-operators.md#compound-assignment), [&#124;=](boolean-logical-operators.md#compound-assignment), , ,[>>=](bitwise-and-shift-operators.md#compound-assignment)|Bileşik atama işleçleri açıkça aşırı yüklenemez. Ancak, bir ikili işleci aşırı yüklediğinizde, ilgili bileşik atama işleci, varsa, aynı zamanda örtülü olarak aşırı yüklenir. Örneğin, `+=` aşırı yüklenebilir `+`, kullanılarak değerlendirilir.|
-|[^x](member-access-operators.md#index-from-end-operator-), [x = y](assignment-operator.md), [x.y](member-access-operators.md#member-access-operator-), [c ? t : f](conditional-operator.md), x ?? [y](null-coalescing-operator.md), [x ?? = y](null-coalescing-operator.md), [x. y](member-access-operators.md#range-operator-), [x->y](pointer-related-operators.md#pointer-member-access-operator--) [=>](lambda-operator.md), , [f(x)](member-access-operators.md#invocation-operator-), [olarak](type-testing-and-cast.md#as-operator), [bekliyor](await.md), [kontrol ,](../keywords/checked.md) [işaretsiz](../keywords/unchecked.md), [varsayılan](default.md), [temsilci](delegate-operator.md), [is](type-testing-and-cast.md#is-operator) [, nameof](nameof.md), [yeni](new-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [typeof](type-testing-and-cast.md#typeof-operator)|Bu işleçler aşırı yüklenemez.|
+|[^x](member-access-operators.md#index-from-end-operator-), [x = y](assignment-operator.md), [x.y](member-access-operators.md#member-access-expression-), [c ? t : f](conditional-operator.md), x ?? [y](null-coalescing-operator.md), [x ?? = y](null-coalescing-operator.md), [x. y](member-access-operators.md#range-operator-), [x->y](pointer-related-operators.md#pointer-member-access-operator--) [=>](lambda-operator.md), , [f(x)](member-access-operators.md#invocation-expression-), [olarak](type-testing-and-cast.md#as-operator), [bekliyor](await.md), [kontrol ,](../keywords/checked.md) [işaretsiz](../keywords/unchecked.md), [varsayılan](default.md), [temsilci](delegate-operator.md), [is](type-testing-and-cast.md#is-operator) [, nameof](nameof.md), [yeni](new-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [typeof](type-testing-and-cast.md#typeof-operator)|Bu işleçler aşırı yüklenemez.|
 
 > [!NOTE]
 > Karşılaştırma işleçleri çiftler halinde aşırı yüklenmelidir. Diğer bir deyişle, bir çiftin her iki işleci de aşırı yüklüyse, diğer işleç de aşırı yüklenmiş olmalıdır. Bu çiftler aşağıdaki gibidir:

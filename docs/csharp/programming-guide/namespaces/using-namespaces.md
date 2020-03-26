@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 5193fc7aaae83cbc0c75e81835244eaaaece69a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0947e597da93d6db1c5965b3685a509961778586
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700204"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507054"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Ad alanlarını kullanma (C# Programlama Kılavuzu)
 
@@ -42,7 +42,7 @@ Ad boşlukları C# programlarında iki şekilde yoğun olarak kullanılır. İlk
   
 ## <a name="using-namespaces-to-control-scope"></a>Kapsamı denetlemek için ad alanlarını kullanma
 
- Anahtar `namespace` kelime bir kapsamı bildirmek için kullanılır. Projenizde kapsam oluşturma olanağı, kodun düzenlenmesine yardımcı olur ve genel olarak benzersiz türler oluşturmanıza yardımcı olur. Aşağıdaki örnekte, başlıklı `SampleClass` bir sınıf, biri diğerinin iç içe olduğu iki ad alanında tanımlanır. [Üye erişim `.` işleci,](../../language-reference/operators/member-access-operators.md#member-access-operator-) hangi yöntemin çağrıldığını ayırt etmek için kullanılır.  
+ Anahtar `namespace` kelime bir kapsamı bildirmek için kullanılır. Projenizde kapsam oluşturma olanağı, kodun düzenlenmesine yardımcı olur ve genel olarak benzersiz türler oluşturmanıza yardımcı olur. Aşağıdaki örnekte, başlıklı `SampleClass` bir sınıf, biri diğerinin iç içe olduğu iki ad alanında tanımlanır. [ `.` Belirteç,](../../language-reference/operators/member-access-operators.md#member-access-expression-) hangi yöntemin çağrıldığını ayırt etmek için kullanılır.  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -94,6 +94,6 @@ Ad boşlukları C# programlarında iki şekilde yoğun olarak kullanılır. İlk
 
 - [C# Programlama Kılavuzu](../index.md)
 - [Ad Alanları](./index.md)
-- [. Işleç](../../language-reference/operators/member-access-operators.md#member-access-operator-)
+- [Üye erişim ifadesi](../../language-reference/operators/member-access-operators.md#member-access-expression-)
 - [:: operatör](../../language-reference/operators/namespace-alias-qualifier.md)
 - [extern alias](../../language-reference/keywords/extern-alias.md)

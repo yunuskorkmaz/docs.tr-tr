@@ -3,12 +3,12 @@ title: .NET Core'u kullanarak BIR REST istemcisi oluşturma
 description: Bu öğretici size .NET Core ve C# dillerinde bir dizi özellik öğretir.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 5796df2d2fd8c4d9aaca783d720448c90858c067
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0105db519f7accec6bf8bfbafdc6a67a444b1074
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156863"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249174"
 ---
 # <a name="rest-client"></a>REST istemcisi
 
@@ -27,7 +27,7 @@ Bu öğretici birçok özelliği vardır. Onları teker teker inşa edelim.
 
 Bu konu için son [örnekle](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) birlikte takip etmeyi tercih ederseniz, indirebilirsiniz. İndirme talimatları için [Örnekler ve Öğreticiler'e](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)bakın.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 .NET çekirdeğini çalıştırmak için makinenizi ayarlamanız gerekir. Yükleme yönergelerini [.NET Çekirdek İndirmeler](https://dotnet.microsoft.com/download) sayfasında bulabilirsiniz. Bu uygulamayı Windows, Linux, macOS veya Docker kapsayıcısında çalıştırabilirsiniz.
 En sevdiğiniz kod düzenleyicisini yüklemeniz gerekir. Aşağıdaki açıklamalar, açık kaynak kodlu, çapraz platform düzenleyicisi olan [Visual Studio Code'u](https://code.visualstudio.com/)kullanabilmiştir. Ancak, hangi araçları ile rahat kullanabilirsiniz.
@@ -163,7 +163,7 @@ Bu özellik, JSON paketindeki alanların yalnızca bir alt kümesiyle çalışan
 
 Şimdi türü oluşturduğunuza göre, onu deserialize edelim.
 
-Daha sonra, JSON'u C# nesnelerine dönüştürmek için serileştiriciyi kullanırsınız. Aramayı <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> yönteminizde `ProcessRepositories` aşağıdaki üç satırla değiştirin:
+Daha sonra, JSON'u C# nesnelerine dönüştürmek için serileştiriciyi kullanırsınız. <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> Yöntemdeki `ProcessRepositories` aramayı aşağıdaki satırlarla değiştirin:
 
 ```csharp
 var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
@@ -288,23 +288,16 @@ Son adım olarak, son itme işlemi için bilgileri ekleyelim. Bu bilgiler JSON y
 2016-02-08T21:27:00Z
 ```
 
-Bu biçim, standart .NET <xref:System.DateTime> biçimlerinin hiçbirini izlemez. Bu nedenle, özel bir dönüştürme yöntemi yazmanız gerekir. Ayrıca büyük olasılıkla ham dize `Repository` sınıfın kullanıcılarına maruz istemiyorum. Öznitelikler de bunu denetlemeye yardımcı olabilir. İlk olarak, `public` `Repository` sınıfınızdaki tarih ve saatin dize temsilini `LastPush` `readonly` ve döndürülen tarihi temsil eden biçimlendirilmiş bir dize döndüren bir özelliği tanımla:
+Bu biçim Eşgüdümlü Evrensel Zaman (UTC) 'de <xref:System.DateTime> (UTC) olduğundan, özelliği olan <xref:System.DateTime.Kind%2A> bir değer elde <xref:System.DateTimeKind.Utc>elabilirsiniz. Saat diliminizde temsil edilen bir tarihi tercih ederseniz, özel bir dönüşüm yöntemi yazmanız gerekir. İlk olarak, `public` `Repository` sınıfınızdaki tarih ve saatin UTC temsilini `LastPush` `readonly` ve yerel saate dönüştürülen tarihi döndüren bir özelliği tanımla:
 
 ```csharp
 [JsonPropertyName("pushed_at")]
-public string JsonDate { get; set; }
+public DateTime LastPushUtc { get; set; }
 
-public DateTime LastPush =>
-    DateTime.ParseExact(JsonDate, "yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture);
+public DateTime LastPush => LastPushUtc.ToLocalTime();
 ```
 
-Az önce tanımladığımız yeni yapılara bakalım. Özellik, `LastPush` `get` erişimci için *ifade gövdeli* bir üye kullanılarak tanımlanır. Erişimci `set` yok. Erişime erişim amacını atlayarak C#'da salt okunur özelliği nasıl tanımladığınızdır. *read-only* `set` (Evet, C#'da *yalnızca yazma* özellikleri oluşturabilirsiniz, ancak değerleri sınırlıdır.) Yöntem, <xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> bir dizeyi ayrıştırır ve sağlanan tarih biçimini kullanarak bir <xref:System.DateTime> nesne oluşturur ve `DateTime` kullanan `CultureInfo` nesneye ek meta veriler ekler. Ayrışdırıcı işlemi başarısız olursa, özellik erişimcisi bir özel durum atar.
-
-Kullanmak <xref:System.Globalization.CultureInfo.InvariantCulture>için, <xref:System.Globalization> `using` aşağıdaki yönergelere ad alanını eklemeniz `repo.cs`gerekir:
-
-```csharp
-using System.Globalization;
-```
+Az önce tanımladığımız yeni yapılara bakalım. Özellik, `LastPush` `get` erişimci için *ifade gövdeli* bir üye kullanılarak tanımlanır. Erişimci `set` yok. Erişime erişim amacını atlayarak C#'da salt okunur özelliği nasıl tanımladığınızdır. *read-only* `set` (Evet, C#'da *yalnızca yazma* özellikleri oluşturabilirsiniz, ancak değerleri sınırlıdır.)
 
 Son olarak, konsola bir çıkış deyimi daha ekleyin ve bu uygulamayı yeniden oluşturmaya ve çalıştırmaya hazır sınız:
 

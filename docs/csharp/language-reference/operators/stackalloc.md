@@ -1,22 +1,22 @@
 ---
-title: stackalloc operatörü - C# referans
-ms.date: 09/20/2019
+title: stackalloc ifade - C# referans
+ms.date: 03/13/2020
 f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
-- stackalloc operator [C#]
-ms.openlocfilehash: 9c9767e0c9945a9589d049fa7abba192cb928ad5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+- stackalloc expression [C#]
+ms.openlocfilehash: 2e99ce8b1e44dfa040c1acac799a3a55b375bd91
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846264"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546607"
 ---
-# <a name="stackalloc-operator-c-reference"></a>stackalloc operatörü (C# referansı)
+# <a name="stackalloc-expression-c-reference"></a>stackalloc ifadesi (C# başvurusu)
 
-İşleç `stackalloc` yığına bir bellek bloğu ayırır. Yöntem yürütülmesi sırasında oluşturulan bir yığın ayrılmış bellek bloğu, yöntem döndüğünde otomatik olarak atılır. `stackalloc` İşleç ile ayrılan belleği açıkça boşaltamazsınız. Yığın ayrılmış bellek bloğu çöp [toplama](../../../standard/garbage-collection/index.md) tabi değildir ve bir [ `fixed` deyim](../keywords/fixed-statement.md)ile sabitlenmiş olması gerekmez.
+İfade, `stackalloc` yığında bellek bloğunu ayırır. Yöntem yürütülmesi sırasında oluşturulan bir yığın ayrılmış bellek bloğu, yöntem döndüğünde otomatik olarak atılır. 'ile ayrılan belleği açıkça `stackalloc`serbest kalamazsınız. Yığın ayrılmış bellek bloğu çöp [toplama](../../../standard/garbage-collection/index.md) tabi değildir ve bir [ `fixed` deyim](../keywords/fixed-statement.md)ile sabitlenmiş olması gerekmez.
 
-İşleticinin `stackalloc` sonucunu aşağıdaki türlerden birinin değişkenine atayabilirsiniz:
+Bir `stackalloc` ifadenin sonucunu aşağıdaki türlerden birinin değişkenine atayabilirsiniz:
 
 - C# 7.2 <xref:System.Span%601?displayProperty=nameWithType> ile <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>başlayarak veya aşağıdaki örnekte görüldüğü gibi:
 
@@ -43,11 +43,23 @@ ms.locfileid: "78846264"
 
   İşaretçi türleri söz konusu olduğunda, `stackalloc` değişkeni başlatmak için yalnızca yerel bir değişken bildiriminde bir ifade kullanabilirsiniz.
 
-Yeni ayrılan belleğin içeriği tanımsız. C# 7.3 ile başlayarak, yeni ayrılan belleğin içeriğini tanımlamak için dizi başlandırıcı sözdizimini kullanabilirsiniz. Aşağıdaki örnek, bunu yapmanın çeşitli yollarını göstermektedir:
+Yığında bulunan bellek miktarı sınırlıdır. Yığına çok fazla bellek ayırırsanız, <xref:System.StackOverflowException> bir atılır. Bunu önlemek için aşağıdaki kurallara uyun:
+
+- Ayırdığınız bellek miktarını `stackalloc`sınırlandırın:
+
+  [!code-csharp[limit stackalloc](snippets/StackallocOperator.cs#LimitStackalloc)]
+
+  Yığında kullanılabilir bellek miktarı kodun yürütüldürün bulunduğu ortama bağlı olduğundan, gerçek sınır değerini tanımlarken tutucu olun.
+
+- İç `stackalloc` döngüleri kullanmaktan kaçının. Bellek bloğunu bir döngünün dışına ayırın ve döngü içinde yeniden kullanın.
+
+Yeni ayrılan belleğin içeriği tanımsız. Kullanmadan önce paranızı almalısınız. Örneğin, tüm öğeleri <xref:System.Span%601.Clear%2A?displayProperty=nameWithType> varsayılan değer türüne `T`ayarlayan yöntemi kullanabilirsiniz.
+
+C# 7.3 ile başlayarak, yeni ayrılan belleğin içeriğini tanımlamak için dizi başlandırıcı sözdizimini kullanabilirsiniz. Aşağıdaki örnek, bunu yapmanın çeşitli yollarını göstermektedir:
 
 [!code-csharp[stackalloc initialization](snippets/StackallocOperator.cs#StackallocInit)]
 
-`stackalloc T[E]`İfadede, `T` [yönetilmeyen](../builtin-types/unmanaged-types.md) bir tür `E` olmalı ve yazı [int](../builtin-types/integral-numeric-types.md)bir ifadesi olmalıdır.
+`stackalloc T[E]`İfadede, `T` [yönetilmeyen](../builtin-types/unmanaged-types.md) bir tür `E` olmalı ve negatif olmayan bir [int](../builtin-types/integral-numeric-types.md) değerine değer vermelidir.
 
 ## <a name="security"></a>Güvenlik
 
@@ -64,3 +76,4 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 - [İşaretçi bağlantılı işleçler](pointer-related-operators.md)
 - [İşaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Bellek ve aralıkla ilgili türler](../../../standard/memory-and-spans/index.md)
+- [Stackalloc Dos ve Don'ts](https://vcsjones.dev/2020/02/24/stackalloc/)

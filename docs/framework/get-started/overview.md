@@ -7,12 +7,12 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: de9cbdab5d5786b9d59d23ba675fa3f78f807716
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ace42738118cde4bcda4b78607d7bdb045d3501e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181602"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248927"
 ---
 # <a name="overview-of-net-framework"></a>.NET Framework'e Genel Bakış
 
@@ -31,7 +31,7 @@ ms.locfileid: "79181602"
 - .NET Framework'e dayalı kodun diğer kodlarla tümlağandığından emin olmak için endüstri standartlarında tüm iletişimi oluşturmak.
 
 > [!NOTE]
-> Hem kullanıcılar hem de geliştiriciler için .NET Framework'e genel bir giriş için [başlarken](index.md)bkz.
+> Hem kullanıcılar hem de geliştiriciler için .NET Framework'e genel bir giriş için [bkz.](index.md)
 
 .NET Framework ortak dil çalışma süresi (CLR) ve .NET Framework sınıf kitaplığından oluşur. Ortak dil çalışma süresi .NET Framework'ün temelidir. Çalışma zamanını yürütme sırasında kodu yöneten, bellek yönetimi, iş parçacığı yönetimi ve remoting gibi temel hizmetleri sağlayan ve aynı zamanda sıkı tür güvenliğini ve güvenliği ve sağlamlığı teşvik eden diğer kod doğruluğu biçimlerini uygulayan bir aracı olarak düşünün. Aslında, kod yönetimi kavramı çalışma zamanının temel bir ilkesidir. Çalışma saatini hedefleyen kod yönetilen kod olarak bilinirken, çalışma süresini hedeflemeyen kod yönetilmeyen kod olarak bilinir. Sınıf kitaplığı, geleneksel komut satırı veya grafik kullanıcı arabirimi (GUI) uygulamalarından, web gibi ASP.NET tarafından sağlanan en son yeniliklere dayalı uygulamalara kadar çeşitli uygulamalar geliştirmek için kullandığınız yeniden kullanılabilir türlerin kapsamlı, nesne yönelimli bir koleksiyonudur Formlar ve XML web hizmetleri.
 
@@ -71,7 +71,7 @@ Son olarak, çalışma süresi Microsoft SQL Server ve Internet Information Serv
 
 Örneğin, .NET Framework toplama sınıfları kendi koleksiyon sınıflarınızı geliştirmek için bir dizi arabirim uygular. Koleksiyon sınıflarınız .NET Framework'deki sınıflarla sorunsuz bir şekilde uyum sağlar.
 
-Nesne yönelimli sınıf kitaplığından beklediğiniz gibi,.NET Framework türleri dize yönetimi, veri toplama, veritabanı bağlantısı ve dosya erişimi gibi görevler de dahil olmak üzere bir dizi ortak programlama görevi gerçekleştirmenize olanak tanır. Bu ortak görevlere ek olarak, sınıf kitaplığı çeşitli özel geliştirme senaryolarını destekleyen türleri içerir. Aşağıdaki uygulama ve hizmet türlerini geliştirmek için .NET Framework'ü kullanın:
+Nesne yönelimli sınıf kitaplığından beklediğiniz gibi,.NET Framework türleri dize yönetimi, veri toplama, veritabanı bağlantısı ve dosya erişimi gibi bir dizi ortak programlama görevini gerçekleştirmenize olanak tanır. Bu ortak görevlere ek olarak, sınıf kitaplığı çeşitli özel geliştirme senaryolarını destekleyen türleri içerir. .NET Framework'ü aşağıdaki uygulama ve hizmet türlerini geliştirmek için kullanabilirsiniz:
 
 - Konsol uygulamaları. [Yapı Konsolu Uygulamalarına](../../standard/building-console-apps.md)bakın.
 
@@ -93,7 +93,7 @@ Windows Forms sınıfları, Windows GUI geliştirmeyi büyük ölçüde basitle�
 
 - [Sistem Gereksinimleri](system-requirements.md)
 - [Yükleme kılavuzu](../install/index.md)
-- [Geliştirme Kılavuzu](../development-guide.md)
+- [Geliştirme rehberi](../development-guide.md)
 - [Araçlar](../tools/index.md)
 - [.NET örnekleri ve eğitimleri](../../samples-and-tutorials/index.md)
 - [.NET API tarayıcısı](../../../api/index.md)

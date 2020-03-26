@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: fa7138127379b069b646c4b2488d1973a3ddd628
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79143323"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249701"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework'deki yenilikler
 
@@ -201,7 +201,7 @@ Karışık Mod yüksek DPI ölçekleme desteği etkinleştirmek için, aşağıd
 
 - [Taban sınıflar](#core-472)
 - [ASP.NET](#asp-net472)
-- [Ağ](#net472)
+- [Ağ Oluşturma](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
@@ -427,14 +427,14 @@ Web config dosyasını değiştirerek SameSite for <xref:System.Web.Security.For
       <forms cookieSameSite="Lax">
          <!-- ...   -->
       </forms>
-   <authentication />
+   </authentication>
    <sessionState cookieSameSite="Lax"></sessionState>
 </system.web>
 ```
 
 <a name="net472" />
 
-#### <a name="networking"></a>Ağ
+#### <a name="networking"></a>Ağ Oluşturma
 
 **HttpClientHandler özelliklerinin uygulanması**
 
@@ -500,7 +500,7 @@ Her Zaman Şifrelenmiş enklav tabanlı temel akışı:
 .NET Framework 4.7.2 ile başlayarak, <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries> bir tanı asistanı belirli bir kaynak Uri oluşturulan yerini bulabilir.(Bu özellik üretim uygulamaları tarafından değil, tanı asistanları tarafından kullanılmak üzeredir.) Visual Studio'nun "Edit-and-Continue" tesisi gibi bir tanı asistanı, kullanıcının, değişikliklerin çalışan uygulamaya uygulanması amacıyla bir Kaynak Sözlüğü'nü yönetmesine olanak tanır. Bunu başarmanın bir adımı, çalışan uygulamanın düzenlenen sözlükten oluşturduğu tüm KaynakDictions'ları bulmaktır. Örneğin, bir uygulama, içeriği belirli bir kaynak URI'den kopyalanan bir Kaynak Sözlüğü'nü bildirebilir:
 
 ```xml
-<ResourceDictionary Source="MyRD.xaml">
+<ResourceDictionary Source="MyRD.xaml" />
 ```
 
 *MyRD.xaml'da* orijinal biçimlendirmeyi ayarlayan bir tanı asistanı, sözlüğü bulmak için yeni özelliği kullanabilir.Özellik yeni bir statik yöntem ile <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>uygulanır. Tanıasistanı, aşağıdaki kodda gösterildiği gibi, özgün biçimlendirmeyi tanımlayan mutlak bir Uri kullanarak yeni yöntemi çağırır:
@@ -589,7 +589,7 @@ Windows Forms uygulaması için, uygulama bildirimi yerine uygulama yapılandır
 
 - [Taban sınıflar](#core471)
 - [Ortak dil çalışma zamanı (CLR)](#clr)
-- [Ağ](#net471)
+- [Ağ Oluşturma](#net471)
 - [ASP.NET](#asp-net471)
 
 Buna ek olarak, .NET Framework 4.7.1'deki önemli bir odak noktası, bir uygulamanın Yardımcı Teknoloji kullanıcıları için uygun bir deneyim sağlamasına olanak tanıyan gelişmiş erişilebilirliktir. .NET Framework 4.7.1'deki erişilebilirlik geliştirmeleri hakkında bilgi için [.NET Framework'de erişilebilirlikte yenilikler](whats-new-in-accessibility.md)egörebilirsiniz.
@@ -630,7 +630,7 @@ Sınıf, <xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=na
 
 <a name="net471"/>
 
-#### <a name="networking"></a>Ağ
+#### <a name="networking"></a>Ağ Oluşturma
 
 **Message.HashAlgorithm için SHA-2 desteği**
 
@@ -671,7 +671,7 @@ ASP.NET, 23 olay içeren önceden tanımlanmış bir ardışık ardışık işle
 .NET Framework 4.7 aşağıdaki alanlarda yeni özellikler içerir:
 
 - [Taban sınıflar](#Core47)
-- [Ağ](#net47)
+- [Ağ Oluşturma](#net47)
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Forms](#wf47)
@@ -699,7 +699,7 @@ ASP.NET, 23 olay içeren önceden tanımlanmış bir ardışık ardışık işle
 
 <a name="net47" />
 
-#### <a name="networking"></a>Ağ
+#### <a name="networking"></a>Ağ Oluşturma
 
 .NET Framework 4.7 ağla ilgili aşağıdaki özelliği ekler:
 
@@ -1256,7 +1256,7 @@ Dönüştürülmüş masaüstü uygulamaları, UWP uygulamalarının uygulama ki
 
 - [Windows Workflow Foundation](#WWF461)
 
-- [Profil oluşturma](#Profile461)
+- [Profil Oluşturma](#Profile461)
 
 - [Ngen](#NGEN461)
 
@@ -1371,7 +1371,7 @@ Promosyon işleminin <xref:System.Transactions.Transaction.EnlistPromotableSingl
 
 <a name="Profile461" />
 
-### <a name="profiling"></a>Profil oluşturma
+### <a name="profiling"></a>Profil Oluşturma
 
 Yönetilmeyen profil oluşturma API'si aşağıdaki gibi geliştirilmiştir:
 
@@ -1709,7 +1709,7 @@ Ngen PDB'leri ile NGen, IL PDB'ye bağımlı olmadan IL-to-native eşlemi içere
 
   Varsayılan değer: `false`.
 
-- **Ağ**
+- **Ağ Oluşturma**
 
   - **Soket yeniden kullanımı**
 

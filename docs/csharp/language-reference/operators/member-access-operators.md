@@ -1,5 +1,5 @@
 ---
-title: Üye erişim operatörleri - C# referansı
+title: Üye erişim işleçleri ve ifadeleri - C# başvurusu
 description: Tür üyelerine erişmek için kullanabileceğiniz C# işleçleri hakkında bilgi edinin.
 ms.date: 09/18/2019
 author: pkulikov
@@ -32,25 +32,25 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 4d4bc0c192912b5fa87a8e91bc5ba0e1d4ce3598
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: da2ca4517bd007678d74ae9b76e10cad4c2696b4
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399513"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546646"
 ---
-# <a name="member-access-operators-c-reference"></a>Üye erişim operatörleri (C# başvurusu)
+# <a name="member-access-operators-and-expressions-c-reference"></a>Üye erişim işleçleri ve ifadeleri (C# başvurusu)
 
-Bir tür üyesine erişirken aşağıdaki işleçleri kullanabilirsiniz:
+Bir tür üyesine erişirken aşağıdaki işleçleri ve ifadeleri kullanabilirsiniz:
 
-- (üye erişimi) : bir ad alanı nın veya bir türün üyesine erişmek için [ `.` ](#member-access-operator-)
+- (üye erişimi) : bir ad alanı nın veya bir türün üyesine erişmek için [ `.` ](#member-access-expression-)
 - [(dizi öğesi veya dizinleyici erişimi) : bir dizi öğesi veya bir tür dizinleyici erişmek için `[]` ](#indexer-operator-)
 - ve (null-conditional operators) : bir üye veya eleman erişim işlemi gerçekleştirmek için sadece bir operand null olmayan [ `?.` `?[]` ](#null-conditional-operators--and-)
-- (çağırma) : erişilen bir yöntemi çağırmak veya bir temsilci çağırmak [ `()` ](#invocation-operator-)
+- (çağırma) : erişilen bir yöntemi çağırmak veya bir temsilci çağırmak [ `()` ](#invocation-expression-)
 - (dizini sona) : eleman konumunun bir dizinin sonundan geldiğini belirtmek için [ `^` ](#index-from-end-operator-)
 - (aralık) : dizi öğeleri aralığı elde etmek için kullanabileceğiniz bir dizi endeks belirtmek için [ `..` ](#range-operator-)
 
-## <a name="member-access-operator-"></a>Üye erişim operatörü .
+## <a name="member-access-expression-"></a>Üye erişim ifadesi .
 
 Aşağıdaki örneklerde gösterildiği gibi, bir ad alanı nın veya bir türün üyesine erişmek için `.` belirteci kullanırsınız:
 
@@ -109,7 +109,7 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Null-koşullu operatörler ?. Ve? []
 
-C# 6 ve sonraki durumlarda, null-koşullu bir işleç [üye erişimi](#member-access-operator-), `?.`veya [eleman erişimi](#indexer-operator-), `?[]`, operand non-null değerlendirir sadece operand için işlem uygular; aksi takdirde, `null`döner . Yani
+C# 6 ve sonraki durumlarda, null-koşullu bir işleç [üye erişimi](#member-access-expression-), `?.`veya [eleman erişimi](#indexer-operator-), `?[]`, operand non-null değerlendirir sadece operand için işlem uygular; aksi takdirde, `null`döner . Yani
 
 - Eğer `a` `null`değerlendirirse , `a?.x` sonucu `a?[x]` `null`veya .
 - Null `a` olmayan olarak değerlendirilirse, `a?.x` sonucu `a?[x]` veya sonucu `a.x` olarak aynıdır `a[x]`veya , sırasıyla.
@@ -150,7 +150,7 @@ if (handler != null)
 }
 ```
 
-## <a name="invocation-operator-"></a>Çağırma operatörü ()
+## <a name="invocation-expression-"></a>Çağırma ifadesi ()
 
 Bir yöntemi çağırmak `()`veya bir [method](../../programming-guide/classes-and-structs/methods.md) [temsilci](../../programming-guide/delegates/index.md)çağırmak için parantez kullanın.
 

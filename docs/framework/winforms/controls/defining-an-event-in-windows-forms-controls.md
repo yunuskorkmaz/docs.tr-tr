@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [Windows Forms], defining within Windows Forms custom controls
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
-ms.openlocfilehash: 6799b229de8e8eb49dd3b8bbaffe0d08a32b7208
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a4738373b10fbcb1d2406406d30f10b795aeb914
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142296"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228850"
 ---
 # <a name="defining-an-event-in-windows-forms-controls"></a>Windows Forms Denetimlerinde Olay Tanımlama
 Özel olayları tanımlama hakkında ayrıntılı bilgi için [Etkinlikler'e](../../../standard/events/index.md)bakın. İlişkili verisi olmayan bir olay tanımlarsanız, olay verileri <xref:System.EventArgs>için temel <xref:System.EventHandler> türü kullanın ve olay temsilcisi olarak kullanın. Geriye kalan tek şey bir olay üyesi ve `On`olayı yükselten korumalı bir *EventName* yöntemi tanımlamaktır.  
@@ -71,7 +71,7 @@ public class FlashTrackBar : Control {
    // changed. Derived controls can override this method.
    protected virtual void OnValueChanged(EventArgs e)
    {  
-       ValueChanged?.Invoke(this, e);  
+       onValueChanged?.Invoke(this, e);  
    }  
 }  
 ```  

@@ -1,6 +1,6 @@
 ---
-title: .NET içinde Karakter Kodlaması
-description: .NET'te karakter kodlama ve kod çözme hakkında bilgi edinin.
+title: .NET'te karakter kodlama sınıfları nasıl kullanılır?
+description: .NET'te karakter kodlama sınıflarını nasıl kullanacağınızı öğrenin.
 ms.date: 12/22/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,76 +11,53 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: 3cd461d8c56c3f31bf3ffe04acf239ecd32fe328
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 063cac1de6634125d7dabad9d627bceff877e567
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711447"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546743"
 ---
-# <a name="character-encoding-in-net"></a>.NET içinde Karakter Kodlaması
+# <a name="how-to-use-character-encoding-classes-in-net"></a>.NET'te karakter kodlama sınıfları nasıl kullanılır?
 
-Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bir karakter kodlaması, desteklenen bir karakter kümesindeki her karakteri, o karakteri temsil eden değerle eşleştiren bir sistemdir. Örneğin; Morse kodu, Roma alfabesindeki her karakteri telgraf hattı üzerinden iletilmeye uygun olan bir nokta ve çizgi deseniyle eşleştiren bir karakter kodlamasıdır. Bilgisayarlar için bir karakter kodlaması, desteklenen bir karakter kümesindeki her karakteri, o karakteri temsil eden sayısal bir değerle eşleştirir. Bir karakter kodlaması iki farklı bileşene sahiptir:
+Bu makalede, .NET'in çeşitli kodlama şemaları kullanarak metni kodlama ve çözme için sağladığı sınıfların nasıl kullanılacağı açıklanmaktadır. [Yönergeler.NET'te karakter kodlamasına Giriş'i](character-encoding-introduction.md)okuduğunuz varsayar.
 
-- Bir karakter dizisini sayısal değerler dizisine (baytlara) çeviren bir kodlayıcı.
+## <a name="encoders-and-decoders"></a>Kodlayıcılar ve kod çözücüler
 
-- Bir bayt dizisini karakter dizisine çeviren bir kod çözücü.
+.NET, çeşitli kodlama sistemleri kullanarak metni kodlayan ve çözen kodlama sınıfları sağlar. Örneğin, <xref:System.Text.UTF8Encoding> sınıf, UTF-8'e kodlama ve kod çözme kurallarını açıklar. .NET, <xref:System.Text.UnicodeEncoding> `string` örneğin UTF-16 kodlamasını (sınıf tarafından temsil edilir) kullanır. Kodlayıcılar ve kod çözücüler diğer kodlama düzenleri için kullanılabilir.
 
-Karakter kodlama, bir kodlayıcının ve kod çözücünün çalışma kurallarını açıklar. Örneğin <xref:System.Text.UTF8Encoding> sınıfı, tek bir Unicode karakterini temsil etmek için bir ile dört arasında bayt kullanan 8 bitlik Unicode Dönüştürme Biçimi (UTF-8) için kodlama ve kod çözme kurallarını açıklar. Kodlama ve kod çözme aynı zamanda doğrulamayı da içerebilir. Örneğin <xref:System.Text.UnicodeEncoding> sınıfı, geçerli yedek çiftleri olduklarından emin olmak için tüm yedekleri denetler. (Vekil çifti, U+D800 ile U+DBFF arasında değişen kod noktası olan bir karakterden ve ardından U+DC00 ile U+DFFF arasında değişen bir kod noktası olan bir karakterden oluşur.)  Geri dönüş stratejisi, kodlayıcının geçersiz karakterleri nasıl işleyeceğini veya kod çözücüün geçersiz baytları nasıl işleyeceğini belirler.
+Kodlama ve kod çözme aynı zamanda doğrulamayı da içerebilir. Örneğin, <xref:System.Text.UnicodeEncoding> sınıf, geçerli `char` vekil çiftleri olduğundan emin olmak için vekil aralığındaki tüm örnekleri denetler. Geri dönüş stratejisi, kodlayıcının geçersiz karakterleri nasıl işleyeceğini veya kod çözücüün geçersiz baytları nasıl işleyeceğini belirler.
 
 > [!WARNING]
 > .NET kodlama sınıfları karakter verilerini depolamak ve dönüştürmek için bir yol sağlar. İkili verileri dize biçiminde depolamak için kullanılmamaları gerekir. Kullanılan kodlamaya bağlı olarak, kodlama sınıflarıyla ikili veriyi dize biçimine dönüştürmek beklenmedik davranışa sebep olabilir ve doğru olmayan ya da bozuk veriler üretebilir. İkili verileri bir dize biçimine dönüştürmek için, <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> yöntemini kullanın.
 
-.NET, karakterleri ve dizeleri temsil etmek için <xref:System.Text.UnicodeEncoding> UTF-16 kodlamasını (sınıf tarafından temsil edilir) kullanır. Ortak dil çalışma zamanını hedef alan uygulamalar, ortak dil çalışma zamanı tarafından desteklenen Unicode karakter temsillerini başka kodlama düzenleriyle eşlemek için kodlayıcıları kullanır. Unicode olmayan kodlamalar daki karakterleri Unicode karakterleriyle eşlemek için kod çözücüler kullanırlar.
-
-Bu konu aşağıdaki bölümlerden oluşur:
-
-- [.NET'teki kodlamalar](../../../docs/standard/base-types/character-encoding.md#Encodings)
-
-- [Bir Kodlama Sınıfı Seçme](../../../docs/standard/base-types/character-encoding.md#Selecting)
-
-- [Using an Encoding Object](../../../docs/standard/base-types/character-encoding.md#Using)
-
-- [Choosing a Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)
-
-- [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom)
-
-<a name="Encodings"></a>
-
-## <a name="encodings-in-net"></a>.NET'teki kodlamalar
-
 .NET'teki tüm karakter kodlama <xref:System.Text.Encoding?displayProperty=nameWithType> sınıfları, tüm karakter kodlamalarında ortak olan işlevselliği tanımlayan soyut bir sınıf olan sınıftan devralır. .NET'te uygulanan tek tek kodlama nesnelerine erişmek için aşağıdakileri yapın:
 
-- .NET'te (ASCII, UTF-7, UTF-8, UTF-16 ve UTF-32) bulunan standart karakter kodlamalarını temsil eden nesneleri döndüren <xref:System.Text.Encoding> sınıfın statik özelliklerini kullanın. Örneğin, <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> özelliği bir <xref:System.Text.UnicodeEncoding> nesnesini döndürür. Her bir nesne, kodlayamadığı dizeleri ve kodunu çözemediği baytları işlemek için değiştirme geri dönüşünü kullanır. (Daha fazla bilgi için [Yedek Geri Dönüş](../../../docs/standard/base-types/character-encoding.md#Replacement) bölümüne bakın.)
+- .NET'te (ASCII, UTF-7, UTF-8, UTF-16 ve UTF-32) bulunan standart karakter kodlamalarını temsil eden nesneleri döndüren <xref:System.Text.Encoding> sınıfın statik özelliklerini kullanın. Örneğin, <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> özelliği bir <xref:System.Text.UnicodeEncoding> nesnesini döndürür. Her bir nesne, kodlayamadığı dizeleri ve kodunu çözemediği baytları işlemek için değiştirme geri dönüşünü kullanır. Daha fazla bilgi için Bkz. [Yedek geri dönüş.](../../../docs/standard/base-types/character-encoding.md#Replacement)
 
-- Kodlamanın sınıf oluşturucusunu çağırın. ASCII, UTF-7, UTF-8, UTF-16 ve UTF-32 kodlamalarına ait nesneler bu şekilde örneklenebilir. Varsayılan olarak her nesne, kodlayamadığı dizeleri ve kodunu çözemediği baytları işlemek için değiştirme geri dönüşünü kullanır, ancak bunun yerine bir özel durumun oluşturulmasını da belirtebilirsiniz. (Daha fazla bilgi [için, Yedek Geri Dönüş](../../../docs/standard/base-types/character-encoding.md#Replacement) ve [Özel Durum Geri Dönüş](../../../docs/standard/base-types/character-encoding.md#Exception) bölümlerine bakın.)
+- Kodlamanın sınıf oluşturucusunu çağırın. ASCII, UTF-7, UTF-8, UTF-16 ve UTF-32 kodlamalarına ait nesneler bu şekilde örneklenebilir. Varsayılan olarak her nesne, kodlayamadığı dizeleri ve kodunu çözemediği baytları işlemek için değiştirme geri dönüşünü kullanır, ancak bunun yerine bir özel durumun oluşturulmasını da belirtebilirsiniz. Daha fazla bilgi için Bkz. [Değiştirme geri dönüş](../../../docs/standard/base-types/character-encoding.md#Replacement) ve Özel Durum geri [dönüş.](../../../docs/standard/base-types/character-encoding.md#Exception)
 
-- <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> oluşturucusunu çağırın ve kodlamayı temsil eden bir tamsayı geçirin. Kodlanamayan dizeleri ve kodu çözülemeyen baytları işlemek için, standart kodlama nesneleri değiştirme geri dönüşünü kullanır ve kod sayfası ile çift bayt karakter kümesi (DBCS) kodlama nesneleri, en uygun geri dönüşü kullanır. (Daha fazla bilgi için, [En Uygun Geri Dönüş](../../../docs/standard/base-types/character-encoding.md#BestFit) bölümüne bakın.)
+- <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> oluşturucusunu çağırın ve kodlamayı temsil eden bir tamsayı geçirin. Kodlanamayan dizeleri ve kodu çözülemeyen baytları işlemek için, standart kodlama nesneleri değiştirme geri dönüşünü kullanır ve kod sayfası ile çift bayt karakter kümesi (DBCS) kodlama nesneleri, en uygun geri dönüşü kullanır. Daha fazla bilgi için en [uygun geri dönüş](../../../docs/standard/base-types/character-encoding.md#BestFit)e bakın.
 
 - .NET'te <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> bulunan herhangi bir standart, kod sayfası veya DBCS kodlamasını döndüren yöntemi arayın. Aşırı yüklemeler, hem kodlayıcı hem de kod çözücü için bir geri dönüş nesnesi belirtmenizi sağlar.
 
-> [!NOTE]
-> Unicode Standardı, desteklenen tüm betiklerde her karaktere bir kod noktası (bir sayı) ve bir ad atar. Örneğin "A" karakteri, U+0041 kod noktası ile ve "LATIN BÜYÜK HARF A" adıyla temsil edilir. Unicode Dönüştürme Biçimi (UTF) kodlamaları, bu kod noktasını bir veya daha fazla bayt dizisi olarak kodlamanın yollarını tanımlar. Bir Unicode kodlama düzeni, herhangi bir karakter kümesindeki karakterlerin tek bir kodlama içinde temsil edilmesini sağladığından, dünya çapında kullanılmaya hazır uygulama geliştirmeyi basitleştirir. Uygulama geliştiricilerin artık belirli bir dil veya yazı sistemi için karakter oluşturmakta kullanılan kodlama düzenini takip etmesine gerek yoktur ve veriler bozulmadan sistemler arasında uluslararası olarak paylaşılabilir.
->
-> .NET, Unicode standardıtarafından tanımlanan üç kodlamayı destekler: UTF-8, UTF-16 ve UTF-32. Daha fazla bilgi için [Unicode ana sayfasındaki Unicode](https://www.unicode.org/)Standardı'na bakın.
+<xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> Yöntemi arayarak .NET'te bulunan tüm kodlamalar hakkında bilgi alabilirsiniz. .NET, aşağıdaki tabloda listelenen karakter kodlama düzenlerini destekler.
 
-<xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> Yöntemi arayarak .NET'te bulunan tüm kodlamalar hakkında bilgi alabilirsiniz. .NET, aşağıdaki tabloda listelenen karakter kodlama sistemlerini destekler.
-
-|Encoding|Sınıf|Açıklama|Avantajlar/dezavantajlar|
-|--------------|-----------|-----------------|-------------------------------|
-|ASCII|<xref:System.Text.ASCIIEncoding>|Bir baytın alt yedi bitini kullanarak sınırlı bir karakter aralığını kodlar.|Bu kodlama yalnızca U+0000 ile U+007F arasındaki karakter değerlerini desteklediğinden, çoğu zaman uluslararası uygulamalar için yeterli değildir.|
-|UTF-7|<xref:System.Text.UTF7Encoding>|Karakterleri 7-bitlik ASCII karakter dizileri olarak temsil eder. ASCII olmayan Unicode karakterleri, ASCII karakterlerinin bir kaçış dizisi ile temsil edilir.|UTF-7, e-posta ve haber grubu protokolleri gibi protokolleri destekler. Ancak, UTF-7 özellikle güvenli veya sağlam değildir. Bazı durumlarda bir biti değiştirmek, bütün bir UTF-7 dizesinin yorumunu tamamen değiştirebilir. Diğer durumlarda, farklı UTF-7 dizeleri aynı metni kodlayabilir. ASCII olmayan karakterleri içeren diziler için UTF-7, UTF-8'den daha fazla alan gerektirir ve kodlama/kod çözme daha yavaştır. Sonuç olarak, mümkünse UTF-7 yerine UTF-8 kullanmanız gerekir.|
-|UTF-8|<xref:System.Text.UTF8Encoding>|Her Unicode kod noktasını bir ile dört bayt arası bir dizi olarak temsil eder.|UTF-8, 8 bitlik veri boyutlarını destekler ve mevcut çoğu işletim sistemi ile çalışır. ASCII aralığındaki karakterler için, UTF-8 ASCII kodlaması ile aynıdır ve daha geniş bir karakter kümesi sağlar. Ancak, Çince-Japonca-Korece (CJK) betikleri için UTF-8, her karakter için üç bayt gerektirir ve UTF-16'dan daha büyük veri boyutlarına neden olabilir. Bazen HTML etiketleri gibi ASCII verilerinin miktarının, CJK aralığındaki artan boyutu haklı çıkarabilir, buna dikkat edin.|
-|UTF-16|<xref:System.Text.UnicodeEncoding>|Her Unicode kod noktasını bir veya iki 16 bitlik tamsayı dizisi olarak temsil eder. En yaygın Unicode karakterleri yalnızca bir UTF-16 kod noktası gerektirir, ancak Unicode ek karakterleri (U+10000 ve daha üstü) iki UTF-16 yedek kod noktası gerektirir. Küçük endian ve büyük endian bayt sıralarının her ikisi de desteklenir.|UTF-16 kodlaması ortak dil çalışma zamanı tarafından <xref:System.Char> ve <xref:System.String> değerlerini ve Windows işletim sistemi tarafından `WCHAR` değerlerini temsil etmek için kullanılır.|
-|UTF-32|<xref:System.Text.UTF32Encoding>|Her Unicode kod noktasını bir 32-bit tamsayı olarak temsil eder. Küçük endian ve büyük endian bayt sıralarının her ikisi de desteklenir.|UTF-32 kodlama, uygulamalar kodlama alanının çok önemli olduğu işletim sistemlerinde UTF-16 kodlama davranışının yedek kod noktası davranışından kaçınmak istediğinde kullanılır. Görüntü üzerinde işlenen tek simgeler hala birden fazla UTF-32 karakteriyle kodlanabilir.|
-|ANSI/ISO kodlamaları||Çeşitli kod sayfaları için destek sağlar. Windows işletim sistemlerinde, kod sayfaları belirli bir dili veya dil grubunu desteklemek için kullanılır. .NET tarafından desteklenen kod sayfalarını listeleyen bir <xref:System.Text.Encoding> tablo için sınıfa bakın. <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> yöntemini çağırarak belirli bir kod sayfası için bir kodlama nesnesi alabilirsiniz.|Bir kod sayfası 256 kod noktası içerir ve sıfır tabanlıdır. Çoğu kod sayfasında, 0 ile 127 arasındaki kod noktaları ASCII karakter kümesini temsil eder, ve 128 ile 255 arasındaki kod noktaları kod sayfaları arasında önemli ölçüde değişir. Örneğin kod sayfası 1252; İngilizce, Almanca ve Fransızca dahil olmak üzere Latin yazma sistemleri için karakterler sağlar. Kod sayfası 1252'deki son 128 kod noktası vurgu karakterlerini içerir. Kod sayfası 1253, Yunanca yazma sisteminde gerekli olan karakter kodlarını sağlar. Kod sayfası 1253'deki son 128 kod noktası Yunanca karakterleri içerir. Sonuç olarak, ANSI kod sayfalarını temel alan bir uygulama, başvurulan kod sayfasını gösteren bir tanımlayıcı eklemediği sürece aynı metin akışında Yunanca ve Almanca karakterleri depolayamaz.|
-|Çift bayt karakter kümesi (DBCS) kodlamaları||256 karakterden daha fazla karakter içeren Çince, Japonca ve Korece gibi dilleri destekler. DBCS içinde, bir kod noktası çifti (bir çift bayt), her bir karakteri temsil eder. <xref:System.Text.Encoding.IsSingleByte%2A?displayProperty=nameWithType> özelliği, DBCS kodlamaları için `false`'i döndürür. <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> yöntemini çağırarak belirli bir DBCS için bir kodlama nesnesi alabilirsiniz.|DBCS içinde, bir kod noktası çifti (bir çift bayt), her bir karakteri temsil eder. Bir uygulama DBCS verilerini işlediğinde, bir DBCS karakterinin (öndeki bayt) ilk baytı, hemen ardından gelen sondaki bayt ile birlikte işlenir. Tek bir çift bayt kod noktası çifti kod sayfasına bağlı olarak farklı karakterleri temsil edebileceğinden, bu düzen yine de Japonca ve Çince gibi iki dilin aynı veri akışında bulunmasına izin vermez.|
+|Kodlama sınıfı|Açıklama|
+|--------------|-----------|
+|[Ascıı](xref:System.Text.ASCIIEncoding)|Bir baytın alt yedi bitini kullanarak sınırlı bir karakter aralığını kodlar. Bu kodlama yalnızca U+0000 ile U+007F arasındaki karakter değerlerini desteklediğinden, çoğu zaman uluslararası uygulamalar için yeterli değildir.|
+|[UTF-7](xref:System.Text.UTF7Encoding)|Karakterleri 7-bitlik ASCII karakter dizileri olarak temsil eder. ASCII olmayan Unicode karakterleri, ASCII karakterlerinin bir kaçış dizisi ile temsil edilir. UTF-7, e-posta ve haber grubu gibi protokolleri destekler. Ancak, UTF-7 özellikle güvenli veya sağlam değildir. Bazı durumlarda bir biti değiştirmek, bütün bir UTF-7 dizesinin yorumunu tamamen değiştirebilir. Diğer durumlarda, farklı UTF-7 dizeleri aynı metni kodlayabilir. ASCII olmayan karakterleri içeren diziler için UTF-7, UTF-8'den daha fazla alan gerektirir ve kodlama/kod çözme daha yavaştır. Sonuç olarak, mümkünse UTF-7 yerine UTF-8 kullanmanız gerekir.|
+|[UTF-8](xref:System.Text.UTF8Encoding)|Her Unicode kod noktasını bir ile dört bayt arası bir dizi olarak temsil eder. UTF-8, 8 bitlik veri boyutlarını destekler ve mevcut çoğu işletim sistemi ile çalışır. ASCII aralığındaki karakterler için, UTF-8 ASCII kodlaması ile aynıdır ve daha geniş bir karakter kümesi sağlar. Ancak, Çince-Japonca-Korece (CJK) komut dosyaları için UTF-8 her karakter için üç bayt gerektirebilir ve UTF-16'dan daha büyük veri boyutlarına neden olabilir. Bazen HTML etiketleri gibi ASCII veri miktarı, CJK aralığı için artan boyutu haklı.|
+|[UTF-16](xref:System.Text.UnicodeEncoding)|Her Unicode kod noktasını bir veya iki 16 bitlik tamsayı dizisi olarak temsil eder. En yaygın Unicode karakterleri yalnızca bir UTF-16 kod noktası gerektirir, ancak Unicode ek karakterleri (U+10000 ve daha üstü) iki UTF-16 yedek kod noktası gerektirir. Küçük endian ve büyük endian bayt sıralarının her ikisi de desteklenir. UTF-16 kodlaması ortak dil çalışma zamanı tarafından <xref:System.Char> ve <xref:System.String> değerlerini ve Windows işletim sistemi tarafından `WCHAR` değerlerini temsil etmek için kullanılır.|
+|[UTF-32](xref:System.Text.UTF32Encoding)|Her Unicode kod noktasını bir 32-bit tamsayı olarak temsil eder. Küçük endian ve büyük endian bayt sıralarının her ikisi de desteklenir. UTF-32 kodlama, uygulamalar kodlama alanının çok önemli olduğu işletim sistemlerinde UTF-16 kodlama davranışının yedek kod noktası davranışından kaçınmak istediğinde kullanılır. Görüntü üzerinde işlenen tek simgeler hala birden fazla UTF-32 karakteriyle kodlanabilir.|
+|ANSI/ISO kodlama|Çeşitli kod sayfaları için destek sağlar. Windows işletim sistemlerinde, kod sayfaları belirli bir dili veya dil grubunu desteklemek için kullanılır. .NET tarafından desteklenen kod sayfalarını listeleyen bir <xref:System.Text.Encoding> tablo için sınıfa bakın. <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> yöntemini çağırarak belirli bir kod sayfası için bir kodlama nesnesi alabilirsiniz. Bir kod sayfası 256 kod noktası içerir ve sıfır tabanlıdır. Çoğu kod sayfasında, 0 ile 127 arasındaki kod noktaları ASCII karakter kümesini temsil eder, ve 128 ile 255 arasındaki kod noktaları kod sayfaları arasında önemli ölçüde değişir. Örneğin kod sayfası 1252; İngilizce, Almanca ve Fransızca dahil olmak üzere Latin yazma sistemleri için karakterler sağlar. Kod sayfası 1252'deki son 128 kod noktası vurgu karakterlerini içerir. Kod sayfası 1253, Yunanca yazma sisteminde gerekli olan karakter kodlarını sağlar. Kod sayfası 1253'deki son 128 kod noktası Yunanca karakterleri içerir. Sonuç olarak, ANSI kod sayfalarını temel alan bir uygulama, başvurulan kod sayfasını gösteren bir tanımlayıcı eklemediği sürece aynı metin akışında Yunanca ve Almanca karakterleri depolayamaz.|
+|Çift bayt karakter kümesi (DBCS) kodlamaları|256 karakterden daha fazla karakter içeren Çince, Japonca ve Korece gibi dilleri destekler. DBCS içinde, bir kod noktası çifti (bir çift bayt), her bir karakteri temsil eder. <xref:System.Text.Encoding.IsSingleByte%2A?displayProperty=nameWithType> özelliği, DBCS kodlamaları için `false`'i döndürür. <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> yöntemini çağırarak belirli bir DBCS için bir kodlama nesnesi alabilirsiniz. Bir uygulama DBCS verilerini işlediğinde, bir DBCS karakterinin (öndeki bayt) ilk baytı, hemen ardından gelen sondaki bayt ile birlikte işlenir. Tek bir çift bayt kod noktası çifti kod sayfasına bağlı olarak farklı karakterleri temsil edebileceğinden, bu düzen yine de Japonca ve Çince gibi iki dilin aynı veri akışında bulunmasına izin vermez.|
 
 Bu kodlamalar, hem Unicode karakterleriyle hem de eski uygulamalarda yaygın olarak kullanılan kodlamalarla birlikte çalışmanıza olanak sağlar. Ek olarak, <xref:System.Text.Encoding> sınıfından türetilen bir sınıf tanımlayarak ve üyelerini geçersiz kılarak özel bir kodlama oluşturabilirsiniz.
 
-### <a name="platform-notes-net-core"></a>Platform Notları: .NET Core
+## <a name="net-core-encoding-support"></a>.NET Çekirdek kodlama desteği
 
-Varsayılan olarak, .NET Core kod sayfası 28591 ve UTF-8 ve UTF-16 gibi Unicode kodlamaları dışında herhangi bir kod sayfası kodlaması sağlamaz. Ancak, .NET'i hedefleyen standart Windows uygulamalarında bulunan kod sayfası kodlamalarını uygulamanıza ekleyebilirsiniz. Tam bilgi için <xref:System.Text.CodePagesEncodingProvider> konuya bakın.
+Varsayılan olarak, .NET Core kod sayfası 28591 ve UTF-8 ve UTF-16 gibi Unicode kodlamaları dışında herhangi bir kod sayfası kodlaması sağlamaz. Ancak, .NET'i hedefleyen standart Windows uygulamalarında bulunan kod sayfası kodlamalarını uygulamanıza ekleyebilirsiniz. Daha fazla bilgi <xref:System.Text.CodePagesEncodingProvider> için konuya bakın.
 
 <a name="Selecting"></a>
 
@@ -285,9 +262,10 @@ Aşağıdaki kod, daha sonra `CustomMapper` nesnesinin örneğini oluşturur ve 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- [.NET'te karakter kodlamasına giriş](character-encoding-introduction.md)
 - <xref:System.Text.Encoder>
 - <xref:System.Text.Decoder>
 - <xref:System.Text.DecoderFallback>
 - <xref:System.Text.Encoding>
 - <xref:System.Text.EncoderFallback>
-- [Genelleştirme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)
+- [Küreselleşme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)

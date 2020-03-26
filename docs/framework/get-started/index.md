@@ -6,19 +6,19 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 0fffbb2f1b58d8ba65d9c5ca8b7c8edc583af2da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd27f2fb893def9e186504cc9973bae71473f005
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400017"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248914"
 ---
 # <a name="get-started-with-net-framework"></a>.NET Framework ile başlayın
 
 .NET Framework, .NET Framework'u hedefleyen uygulamaları yöneten bir yürütme ortamıdır. Bellek yönetimi ve diğer sistem hizmetleri sağlayan ortak dil çalışma süresi ve programcıların uygulama geliştirmenin tüm önemli alanları için sağlam ve güvenilir koddan yararlanmalarını sağlayan kapsamlı bir sınıf kitaplığından oluşur.
 
 > [!NOTE]
-> .NET Framework yalnızca Windows sistemlerinde kullanılabilir. .NET [Core'u](../../core/index.md) Windows, MacOS ve Linux'ta uygulamaları çalıştırmak için kullanabilirsiniz.
+> .NET Framework yalnızca Windows sistemlerinde kullanılabilir. Windows, MacOS ve Linux'ta uygulama geliştirmek ve çalıştırmak için [.NET Core'u](../../core/index.md) kullanabilirsiniz.
 
 ## <a name="what-is-net-framework"></a>.NET Framework nedir?
 
@@ -85,7 +85,7 @@ Geliştiriciyseniz, uygulamalarınızı oluşturmak için .NET Framework'u deste
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Çerçeve Rehberi](../index.md)
+- [.NET Framework kılavuzu](../index.yml)
 - [Yenilikler](../whats-new/index.md)
-- [.NET API Tarayıcısı](../../../api/index.md)
-- [Geliştirme Kılavuzu](../development-guide.md)
+- [.NET API tarayıcısı](../../../api/index.md)
+- [Geliştirme rehberi](../development-guide.md)

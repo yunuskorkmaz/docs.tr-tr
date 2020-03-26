@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 3c21ae3d00aa9f1b48a89650430b89ceccb2a1b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 05847271cf82739a6a0b609771043c02a7ffc0e9
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186021"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291582"
 ---
 # <a name="graphics-rendering-tiers"></a>Grafik İşleme Katmanları
 İşleme katmanı, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir uygulamayı çalıştıran bir aygıt için grafik donanımı yeteneği ve performansı düzeyini tanımlar.  
@@ -45,7 +45,7 @@ ms.locfileid: "79186021"
 ### <a name="rendering-tier-0"></a>Rendering Tier 0  
  Görüntüleme katmanı değeri 0, aygıttaki uygulama için grafik donanımı ivmesi olmadığı anlamına gelir. Bu katman düzeyinde, tüm grafiklerin donanım ivmesi olmayan yazılımlar tarafından işleneceğini varsaymalısınız. Bu aşamanın işlevselliği, 9.0'dan küçük bir DirectX sürümüne karşılık gelir.  
   
-### <a name="rendering-tier-1-and-rendering-tier-2"></a>Katman 1'i oluşturma ve Oluşturma Katmanı 2  
+### <a name="rendering-tier-1-and-rendering-tier-2"></a>Katman 1'i oluşturma ve Oluşturma Katmanı 2
   
 > [!NOTE]
 > .NET Framework 4'ten başlayarak, 1. DirectX 7 veya 8'i destekleyen grafik donanımı artık 0'ı oluşturma olarak tanımlanır.  
@@ -57,7 +57,7 @@ ms.locfileid: "79186021"
 |Özellik|Katman 1|Katman 2|  
 |-------------|------------|------------|  
 |DirectX sürümü|9.0'dan büyük veya eşit olmalıdır.|9.0'dan büyük veya eşit olmalıdır.|  
-|Video RAM|60MB'dan büyük veya eşit olmalıdır.|120MB'dan büyük veya eşit olmalıdır.|  
+|Video RAM|60 MB'dan büyük veya eşit olmalıdır.|120 MB'dan büyük veya eşit olmalıdır.|  
 |Piksel gölgeleyici|Sürüm düzeyi 2.0'dan büyük veya eşit olmalıdır.|Sürüm düzeyi 2.0'dan büyük veya eşit olmalıdır.|  
 |Tepe noktası|Gerek yok.|Sürüm düzeyi 2.0'dan büyük veya eşit olmalıdır.|  
 |Çok dokulu birimler|Gerek yok.|Birim sayısı 4'ten büyük veya eşit olmalıdır.|  
@@ -72,7 +72,7 @@ ms.locfileid: "79186021"
 |3D MIP eşleme|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]3B içerik görüntülerken MIP eşleme kullanmaya çalışır. MIP eşleme, bir doku daha küçük bir görüş alanını kapladığında <xref:System.Windows.Controls.Viewport3D>doku oluşturma kalitesini artırır.|  
 |Radyal degradeler|Desteklenirken, büyük <xref:System.Windows.Media.RadialGradientBrush> nesnelerde kullanmaktan kaçının.|  
 |3B aydınlatma hesaplamaları|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bir kafese uygulanan her malzeme için her tepe noktasında bir ışık yoğunluğunun hesaplanması gerektiği anlamına gelir.|  
-|Metin oluşturma|Alt piksel yazı tipi işleme grafik donanımında kullanılabilir piksel gölgeleyicileri kullanır.|  
+|Metin oluşturma|Alt piksel yazı tipi işleme grafik donanımı üzerinde kullanılabilir piksel gölgeleyiciler kullanır.|  
   
  Aşağıdaki özellikler ve özellikler yalnızca katman 2'yi işlemek için hızlandırılmış donanımdır:  
   
@@ -101,7 +101,7 @@ ms.locfileid: "79186021"
 |Ayar|Açıklama|  
 |-------------|-----------------|  
 |**Donanım Hızlandırma Seçeneğini Devre Dışı**|Donanım hızlandırmanın etkinlenip etkinleştirilmeyeceğini belirtir.|  
-|**Maksimum Çoklu Örnek değeri**|3-B içeriğin antialiasing için çoklu örnekleme derecesini belirtir.|  
+|**Maksimum Çoklu Örnek değeri**|3B içeriğin antialiasing için çoklu örnekleme derecesini belirtir.|  
 |**Gerekli Video Sürücü Tarih Ayarı**|Sistemin Kasım 2004'ten önce yayımlanan sürücüler için donanım ivmesini devre dışı bırakıp devre dışı bırakmayacağını belirtir.|  
 |**Referans Rasterizer Seçeneğini Kullanın**|Referans rasterizer kullanılıp [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanılmaması gerektiğini belirtir.|  
   
@@ -124,7 +124,7 @@ ms.locfileid: "79186021"
   
  DirectX Tanılama Aracı'nı çalıştırdığınızda, ana pencere, DirectX ile ilgili bilgileri görüntülemenize ve tanılamanıza olanak tanıyan bir sekme kümesi içerir. Örneğin, **Sistem** sekmesi bilgisayarınız hakkında sistem bilgileri sağlar ve bilgisayarınızda yüklenen DirectX sürümünü belirtir.  
   
- ![Screenhot: DirectX Tanı Lama Aracı](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![Ekran Görüntüsü: DirectX Tanılama Aracı](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 DirectX Tanılama Aracı ana pencere  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -4,12 +4,12 @@ description: C# dilinde yapılan son geliştirmeler, daha önce güvenli olmayan
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: d4a7916b80e15c7f00fa0a7da213ed0593e0959d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb53264f61192c042da469ba687da6c472e8c6d4
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78239982"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79506989"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Güvenli ve verimli C# kodu yazın
 
@@ -72,7 +72,7 @@ Tasarım amacınız değişmez bir değer türü oluşturmak olduğunda bu öner
 
 ## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>Bir yapı değişmez olamaz zaman salt okunur üyeleri bildirin
 
-C# 8.0 ve daha sonra, bir yapı türü mutasyona neden olmayan üyeleri beyan `readonly`etmeniz gerekir. Örneğin, aşağıdaki 3B nokta yapısının değişmez bir varyasyonudur:
+C# 8.0 ve daha sonra, bir yapı türü mutasyona neden olmayan üyeleri beyan `readonly`etmeniz gerekir. 3B nokta yapısı gerektiren, ancak susturulabilirliği desteklemesi gereken farklı bir uygulama düşünün. 3B nokta yapısının aşağıdaki sürümü, değiştiriciyi `readonly` yalnızca yapıyı değiştirmeyen üyelere ekler. Tasarımınızın bazı üyeler tarafından yapıda yapılan değişiklikleri desteklemesi gerektiğinde, ancak yine de yalnızca bazı üyelere okunan zorlamanın avantajlarını istediğinizde bu örneği izleyin:
 
 ```csharp
 public struct Point3D
@@ -214,13 +214,13 @@ Bu davranış, performans kazançlarının mümkün olduğu büyük kod tabanlar
 
 `in` Parametre ataması, başvuru türleri veya sayısal değerlerle de kullanılabilir. Ancak, her iki durumda da yararları, varsa, en azdır.
 
-## <a name="never-use-mutable-structs-as-in-in-argument"></a>Bağımsız değişkendeki gibi değişken structs asla kullanmayın `in`
+## <a name="avoid-mutable-structs-as-an-in-argument"></a>`in` Bağımsız değişken olarak değişken structs kaçının
 
 Yukarıda açıklanan teknikler, referansları döndürerek ve değerleri referansla geçirerek kopyalardan nasıl kaçınılanın açıklar. Bu teknikler, bağımsız değişken türleri `readonly struct` tür olarak bildirilirken en iyi şekilde çalışır. Aksi takdirde, derleyici, herhangi bir bağımsız değişkenin yalnızca okuma sını uygulamak için birçok durumda **savunma kopyaları** oluşturmalıdır. Bir 3B noktanın kaynaktan uzaklığı hesaplayan aşağıdaki örneği göz önünde bulundurun:
 
 [!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
-Yapı `Point3D` sadece okunan bir yapı *değildir.* Bu yöntemin gövdesinde altı farklı özellik erişim çağrıları vardır. İlk muayenede, bu erişimlerin güvenli olduğunu düşünmüş olabilirsiniz. Sonuçta, bir `get` erişimci nesnenin durumunu değiştirmemelidir. Ama bunu zorunlu kılacak bir dil kuralı yok. Bu sadece sıradan bir toplantı. Herhangi bir tür `get` iç durumu değiştiren bir erişimci uygulayabilir. Bazı dil garantisi olmadan, derleyici herhangi bir üye aramadan önce bağımsız değişkenin geçici bir kopyasını oluşturmalıdır. Yığında geçici depolama oluşturulur, bağımsız değişkenin değerleri geçici depolama alanına kopyalanır ve değer `this` bağımsız değişken olarak her üye erişim için yığına kopyalanır. Çoğu durumda, bu kopyalar performansa, bağımsız değişken türü bir `readonly struct`' olmadığında yalnızca okunan geçişten daha hızlı olan bir performansa yeterince zarar verir.
+Yapı `Point3D` sadece okunan bir yapı *değildir.* Bu yöntemin gövdesinde altı farklı özellik erişim çağrıları vardır. İlk muayenede, bu erişimlerin güvenli olduğunu düşünmüş olabilirsiniz. Sonuçta, bir `get` erişimci nesnenin durumunu değiştirmemelidir. Ama bunu zorunlu kılacak bir dil kuralı yok. Bu sadece sıradan bir toplantı. Herhangi bir tür `get` iç durumu değiştiren bir erişimci uygulayabilir. Bazı dil garantisi olmadan, derleyici `readonly` değiştirici ile işaretlenmemiş herhangi bir üye çağırmadan önce bağımsız değişkenin geçici bir kopyasını oluşturması gerekir. Yığında geçici depolama oluşturulur, bağımsız değişkenin değerleri geçici depolama alanına kopyalanır ve değer `this` bağımsız değişken olarak her üye erişim için yığına kopyalanır. Çoğu durumda, bu kopyalar, bağımsız değişken türü bir `readonly struct` olmadığında ve yöntem işaretlenmemiş `readonly`üyeleri aradığında, geçiş değeri nin yalnızca okunan başvurudan daha hızlı olduğu performansa yeterince zarar verir. Yapı durumunu değiştirmeyen tüm yöntemleri `readonly`işaretlerseniz, derleyici yapı durumunun değiştirilmediğini ve savunma kopyasının gerekli olmadığını güvenli bir şekilde belirleyebilir.
 
 Bunun yerine, mesafe hesaplaması değişmez yapıyı `ReadonlyPoint3D`kullanıyorsa, geçici nesnelergerekmez:
 

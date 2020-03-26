@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 7bb8d8e19ac9cf36eabc061ceba9c649b8a4cc00
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89c90fd217285fac449aba40682aa947fcfb3a07
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148978"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249096"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Tek Tablolu Sorgular (LINQ to DataSet)
 Dil-Tümleşik Sorgu (LINQ) <xref:System.Collections.Generic.IEnumerable%601> sorguları, arabirimi <xref:System.Linq.IQueryable%601> veya arabirimi uygulayan veri kaynakları üzerinde çalışır. Sınıf <xref:System.Data.DataTable> her iki arabirimi de uygulamaz, bu nedenle bir <xref:System.Data.DataTable> LINQ sorgusunun `From` yan tümcesinde kaynak olarak kullanmak istiyorsanız <xref:System.Data.DataTableExtensions.AsEnumerable%2A> yöntemi aramanız gerekir.  
@@ -26,7 +26,7 @@ Dil-Tümleşik Sorgu (LINQ) <xref:System.Collections.Generic.IEnumerable%601> so
   
  Döngü `foreach` daha sonra döndürülen `Select` sayısal nesneyi kaydeder ve sorgu sonuçlarını verir. Sorgu uygulayan <xref:System.Linq.Enumerable> bir tür <xref:System.Collections.Generic.IEnumerable%601>olduğundan, sorgu değişkeni `foreach` döngü kullanılarak üzerinde yinelenene kadar sorgunun değerlendirilmesi ertelenir. Ertelenmiş sorgu değerlendirmesi, sorguların her seferinde farklı sonuçlar elde ederek birden çok kez değerlendirilebilecek değerler olarak tutulmasını sağlar.  
   
- Yöntem <xref:System.Data.DataRowExtensions.Field%2A> a sütun değerlerine erişim <xref:System.Data.DataRow> sağlar <xref:System.Data.DataRowExtensions.SetField%2A> ve (önceki örnekte gösterilmez) <xref:System.Data.DataRow>bir . sütun değerlerini ayarlar . Hem <xref:System.Data.DataRowExtensions.Field%2A> yöntem <xref:System.Data.DataRowExtensions.SetField%2A> hem de yöntem nullable türleri işler, bu nedenle açıkça null değerleri denetlemek zorunda değildir. Her iki yöntem de genel yöntemlerdir, bu da dönüş türünü atmanız gerekolmadığı anlamına gelir. Önceden varolan sütun aksesuarını <xref:System.Data.DataRow> (örneğin, ) `o["OrderDate"]`kullanabilirsiniz, ancak bunu yapmak için iade nesnesini uygun türe dökmeniz gerekir.  Sütun nullable ise <xref:System.Data.DataRow.IsNull%2A> yöntemi kullanarak değeri null olup olmadığını kontrol etmek zorunda. Daha fazla bilgi için [Genel Alan ve SetField Yöntemleri'ne](generic-field-and-setfield-methods-linq-to-dataset.md)bakın.  
+ Yöntem <xref:System.Data.DataRowExtensions.Field%2A> a sütun değerlerine erişim <xref:System.Data.DataRow> sağlar <xref:System.Data.DataRowExtensions.SetField%2A> ve (önceki örnekte gösterilmez) <xref:System.Data.DataRow>bir . sütun değerlerini ayarlar . Hem <xref:System.Data.DataRowExtensions.Field%2A> yöntem <xref:System.Data.DataRowExtensions.SetField%2A> hem de yöntem nullable değer türlerini işler, bu nedenle null değerleri açıkça denetlemeniz gerekmez. Her iki yöntem de genel yöntemlerdir, bu da dönüş türünü atmanız gerekolmadığı anlamına gelir. Önceden varolan sütun aksesuarını <xref:System.Data.DataRow> (örneğin, ) `o["OrderDate"]`kullanabilirsiniz, ancak bunu yapmak için iade nesnesini uygun türe dökmeniz gerekir.  Sütun nullable değer türü <xref:System.Data.DataRow.IsNull%2A> ise, yöntemi kullanarak değerin null olup olmadığını kontrol etniz gerekir. Daha fazla bilgi için [Genel Alan ve SetField Yöntemleri'ne](generic-field-and-setfield-methods-linq-to-dataset.md)bakın.  
   
  Yöntem <xref:System.Data.DataRowExtensions.SetField%2A> ve yöntemin genel parametresinde <xref:System.InvalidCastException> `T` belirtilen veri türünün, temel değerin türüyle eşleşmesi veya atılacağına dikkat edin. <xref:System.Data.DataRowExtensions.Field%2A> Belirtilen sütun adı da bir sütunun <xref:System.Data.DataSet> <xref:System.ArgumentException> adı veya bir atAtılacak eşleşmesi gerekir. Her iki durumda da, sorgu yürütüldüğünde özel durum çalışma zamanı veri numaralandırmasında atılır.  
   

@@ -4,71 +4,71 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-ms.openlocfilehash: aeb7a8e61d6bbba4391610d43083e5b65bca81f8
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: f3eedda6c9493688680099f4b07810aebf69ff8a
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664067"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249467"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler
 
-Windows Communication Foundation (WCF) kullanan <xref:System.Runtime.Serialization.DataContractSerializer> XML verileri dönüştürmek için ve XML geri verisine dönüştüremedi, varsayılan seri hale getirme altyapısı olarak. <xref:System.Runtime.Serialization.DataContractSerializer> Seri hale getirmek için tasarlanan *veri anlaşması* türleri. Ancak, bir örtük veri anlaşması sahip olduğu düşünülebilir birçok diğer türleri destekler. Seri hale getirilebilir türlerin tam listesi verilmiştir:
+Windows Communication Foundation (WCF), verileri XML'ye dönüştürmek ve XML'i tekrar veriye dönüştürmek için varsayılan serileştirme altyapısı <xref:System.Runtime.Serialization.DataContractSerializer> olarak kullanır. Veri <xref:System.Runtime.Serialization.DataContractSerializer> *sözleşmesi* türlerini seri hale getirmek için tasarlanmıştır. Ancak, örtük bir veri sözleşmesi ne olduğu düşünülebilir diğer birçok türleri destekler. Serileştirilebilen türlerin tam listesi aşağıda verilmiştir:
 
-- Parametreleri olmayan bir oluşturucuya sahip tüm herkese görünür türler.
+- Parametreleri olmayan bir oluşturucusu olan tüm genel olarak görünür türleri.
 
-- Veri sözleşmesi türleri. Bunlar türlerini <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği uygulandı. İş nesnelerini temsil eden yeni bir özel türler normalde sözleşmesi türleri veri oluşturulmalıdır. Daha fazla bilgi için [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md) ve [Serializable türler](../../../../docs/framework/wcf/feature-details/serializable-types.md).
+- Veri sözleşmesi türleri. Bunlar özniteliğin <xref:System.Runtime.Serialization.DataContractAttribute> uygulandığı türlerdir. İş nesnelerini temsil eden yeni özel türleri normalde veri sözleşmesi türleri olarak oluşturulmalıdır. Daha fazla bilgi için [bkz.](../../../../docs/framework/wcf/feature-details/using-data-contracts.md) [Serializable Types](../../../../docs/framework/wcf/feature-details/serializable-types.md)
 
-- Koleksiyon türleri. Bunlar veri listeleri temsil eden türleridir. Bunlar normal dizilerin türleri veya koleksiyon türleri gibi olabilir <xref:System.Collections.ArrayList> ve <xref:System.Collections.Generic.Dictionary%602>. <xref:System.Runtime.Serialization.CollectionDataContractAttribute> Özniteliği, bu türlerin seri hale getirme özelleştirmek için kullanılabilir ancak gerekli değildir. Daha fazla bilgi için [veri anlaşmalarında koleksiyon türleri](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).
+- Toplama türleri. Bunlar veri listelerini temsil eden türlerdir. Bunlar, düzenli tür dizileri veya koleksiyon türleri <xref:System.Collections.ArrayList> <xref:System.Collections.Generic.Dictionary%602>olabilir. Öznitelik <xref:System.Runtime.Serialization.CollectionDataContractAttribute> bu tür serileştirme özelleştirmek için kullanılabilir, ancak gerekli değildir. Daha fazla bilgi için [bkz.](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)
 
-- Numaralandırma türleri. Bayrak sabit listeleri, dahil olmak üzere sabit listeleri, seri hale getirilebilir. Numaralandırma türleri ile isteğe bağlı olarak işaretlenebilir <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği, bu durumda serileştirme katılan her üyesi ile işaretlenmelidir <xref:System.Runtime.Serialization.EnumMemberAttribute> özniteliği. İşaretlenmemiş üyeleri seri duruma getirilmez. Daha fazla bilgi için [veri sözleşmelerinde Numaralandırma türleri](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).
+- Numaralandırma türleri. Bayrak sayısallaştırmaları da dahil olmak üzere sayısallaştırmalar serileştirilebilir. İsteğe bağlı olarak, numaralandırma türleri <xref:System.Runtime.Serialization.DataContractAttribute> öznitelik ile işaretlenebilir, bu durumda serileştirmeye katılan her <xref:System.Runtime.Serialization.EnumMemberAttribute> üye öznitelik ile işaretlenmiş olmalıdır. İşaretlenmemiş üyeler seri hale getirilmeyecektir. Daha fazla bilgi için [bkz.](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)
 
-- .NET framework ilkel türleri. .NET Framework'e yerleşik aşağıdaki türleri tüm seri hale getirilebilir ve basit türler olarak değerlendirilir: <xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Boolean>, <xref:System.Char>, <xref:System.Decimal>, <xref:System.Object>, ve <xref:System.String>.
+- .NET Framework ilkel türleri. .NET Framework'de yerleşik olarak yer alan aşağıdaki türler seri hale <xref:System.Byte> <xref:System.SByte>getirilebilir ve ilkel tipler olarak <xref:System.Decimal> <xref:System.Object>kabul <xref:System.String>edilir: , , <xref:System.Int16> <xref:System.Int32> <xref:System.Int64> <xref:System.UInt16> <xref:System.UInt32> <xref:System.UInt64> <xref:System.Single> <xref:System.Double> <xref:System.Boolean> <xref:System.Char>, , , , , , , ve .
 
-- Diğer ilkel türler. Bu tür, .NET Framework ilkel değildir ancak temelleri serileştirilmiş XML biçiminde olarak kabul edilir. Bu türler <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>, <xref:System.Xml.XmlQualifiedName>ve dizileri <xref:System.Byte>.
+- Diğer ilkel tipler. Bu türler .NET Framework'de ilkel değildir, ancak serixml formunda ilkel olarak kabul edilir. Bu tür <xref:System.DateTime> <xref:System.DateTimeOffset>, <xref:System.TimeSpan> <xref:System.Guid>, <xref:System.Uri> <xref:System.Xml.XmlQualifiedName>, , , <xref:System.Byte>, , ve dizileri .
 
   > [!NOTE]
-  > Diğer ilkel türler, aksine <xref:System.DateTimeOffset> varsayılan olarak bilinen bir tür değil. Daha fazla bilgi için [veri sözleşme bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)).
+  > Diğer ilkel türlerin <xref:System.DateTimeOffset> aksine, varsayılan olarak bilinen bir tür değildir. Daha fazla bilgi için [bkz.](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 
-- Türleri ile işaretlenen <xref:System.SerializableAttribute> özniteliği. .NET Framework temel sınıf kitaplığı'nda dahil birçok türü, bu kategoriye girer. <xref:System.Runtime.Serialization.DataContractSerializer> Tam .NET Framework uzaktan iletişim tarafından kullanılan bu serileştirme programlama modelini destekler <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>, desteği dahil olmak üzere <xref:System.Runtime.Serialization.ISerializable> arabirimi.
+- Öznitelik ile <xref:System.SerializableAttribute> işaretlenmiş türleri. .NET Framework taban sınıf kitaplığında yer alan birçok tür bu kategoriye girer. .NET <xref:System.Runtime.Serialization.DataContractSerializer> Framework remoting tarafından kullanılan bu serileştirme programlama modelini <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> <xref:System.Runtime.Serialization.ISerializable> tam olarak destekler, ve arayüz desteği de dahil olmak üzere.
 
-- Ham XML veya ADO.NET ilişkisel verileri temsil eden türleri temsil eden tür. <xref:System.Xml.XmlElement> Ve dizi <xref:System.Xml.XmlNode> türleri, doğrudan XML temsil eden bir yol desteklenir. Ayrıca, uygulayan türleri <xref:System.Xml.Serialization.IXmlSerializable> arabirimi desteklenir, ilgili dahil olmak üzere <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> özniteliği ve <xref:System.Xml.Linq.XDocument> ve <xref:System.Xml.Linq.XElement> türleri. ADO.NET<xref:System.Data.DataTable> türü ve <xref:System.Data.DataSet> türü (yazılan türetilmiş sınıflarının yanı sıra) tüm uygulama <xref:System.Xml.Serialization.IXmlSerializable> arabirim ve bu nedenle bu kategoriye uygun. Daha fazla bilgi için [XML ve ADO.NET türleri veri anlaşmalarında](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).
+- Ham XML'i veya ADO.NET ilişkisel verileri temsil eden türleri temsil eden türler. Ve <xref:System.Xml.XmlElement> türleri <xref:System.Xml.XmlNode> dizi doğrudan XML temsil eden bir yolu olarak desteklenir. Ayrıca, <xref:System.Xml.Serialization.IXmlSerializable> arabirimi uygulayan türler, ilgili <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> öznitelik ve <xref:System.Xml.Linq.XDocument> türleri <xref:System.Xml.Linq.XElement> de dahil olmak üzere desteklenir. ADO.NET<xref:System.Data.DataTable> türü ve <xref:System.Data.DataSet> türü (yanı sıra, türtintin <xref:System.Xml.Serialization.IXmlSerializable> sınıflar) tüm arabirimi uygulamak ve bu nedenle bu kategoriye uygun. Daha fazla bilgi için [ADO.NET](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)bkz.
 
-## <a name="limitations-of-using-certain-types-in-partial-trust-mode"></a>Kısmi belirli türlerini kullanma sınırlamaları güven modu
+## <a name="limitations-of-using-certain-types-in-partial-trust-mode"></a>Kısmi Güven Modunda Belirli Türleri Kullanmanın Sınırlamaları
 
-Kısıtlamaların listesi belirli türlerini kısmi güven modu senaryolarda kullanırken verilmiştir:
+Kısmi güven modu senaryolarında belirli türleri kullanırken sınırlamalar listesi aşağıda verilmiştir:
 
-- Serileştirmek veya seri durumdan uygulayan bir tür için <xref:System.Runtime.Serialization.ISerializable> kısmen güvenilen kod kullanarak <xref:System.Runtime.Serialization.DataContractSerializer> gerektirir <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> ve <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> izinleri.
+- <xref:System.Runtime.Serialization.DataContractSerializer> Gerektiren <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> izinleri <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> kullanarak kısmen güvenilen <xref:System.Runtime.Serialization.ISerializable> kodda uygulayan bir türü serihale getirmek veya deserialize etmek.
 
-- WCF kod çalıştırırken [kısmi güven](../../../../docs/framework/wcf/feature-details/partial-trust.md) modu, serileştirme ve seri durumdan çıkarma `readonly` alanları (her ikisi de `public` ve `private`) desteklenmiyor. Oluşturulan IL doğrulanamaz ve bu nedenle, yükseltilmiş izinler gerektirir olmasıdır.
+- [Kısmi Güven](../../../../docs/framework/wcf/feature-details/partial-trust.md) modunda WCF kodu çalıştırılırken, `readonly` alanların serileştirme `public` ve `private`deserialization (hem de) desteklenmez. Bunun nedeni, oluşturulan IL'nin doğrulanamayan olması ve bu nedenle yüksek izinler gerektirmesidir.
 
-- Hem <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Xml.Serialization.XmlSerializer> kısmi güven ortamında desteklenir. Ancak, kullanım <xref:System.Runtime.Serialization.DataContractSerializer> aşağıdaki koşullara tabi olan:
+- Hem <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Xml.Serialization.XmlSerializer> kısmi bir güven ortamında desteklenir. Ancak, kullanımı <xref:System.Runtime.Serialization.DataContractSerializer> aşağıdaki koşullara tabidir:
 
-  - Tüm serileştirilebilir `[DataContract]` türler genel olmalıdır.
+  - Tüm serileştirilebilir `[DataContract]` türleri ortak olmalıdır.
 
-  - Tüm serileştirilebilir `[DataMember]` alanlar ve özellikler bir `[DataContract]` türü genel olmalıdır ve okuma/yazma. Serileştirme ve seri durumundan çıkarma `readonly` WCF kısmen güvenilen bir uygulamada çalışırken alanları desteklenmiyor.
+  - Bir `[DataContract]` türdeki `[DataMember]` tüm serileştirilebilir alanlar veya özellikler herkese açık olmalı ve okuma/yazma olmalıdır. Kısmen güvenilen `readonly` bir uygulamada WCF çalıştırılırken alanların serileştirme ve deserialization desteklenmez.
 
-  - `[Serializable]` / `ISerializable]` Programlama modeli, kısmi güven ortamında desteklenmez.
+  - `[Serializable]` / Programlama `ISerializable]` modeli kısmi bir güven ortamında desteklenmez.
 
-  - Bilinen türleri, kod veya makine düzeyinde yapılandırma belirtilmelidir (`Machine.config`). Uygulama düzeyinde yapılandırma güvenlik nedenleriyle, bilinen türleri belirtilemez.
+  - Bilinen türler kod veya makine düzeyinde yapılandırmada belirtilmelidir (`Machine.config`). Bilinen türler, güvenlik nedenleriyle uygulama düzeyinde yapılandırmada belirtilemez.
 
-- Türleri uygulayan <xref:System.Runtime.Serialization.IObjectReference> kısmen güvenilen bir ortamda, çünkü bir özel durum <xref:System.Runtime.Serialization.IObjectReference.GetRealObject%2A> gerektirdiğine güvenlik izni `[SecurityPermission(SecurityAction.LinkDemand, Flags=SecurityPermissionFlag.SerializationFormatter)]`.
+- Yöntem güvenlik izni `[SecurityPermission(SecurityAction.LinkDemand, Flags=SecurityPermissionFlag.SerializationFormatter)]`gerektirdiğinden, kısmen güvenilen bir ortama özel durum atan türler. <xref:System.Runtime.Serialization.IObjectReference> <xref:System.Runtime.Serialization.IObjectReference.GetRealObject%2A>
 
-## <a name="additional-notes-on-serialization"></a>Serileştirme hakkında ek notlar
+## <a name="additional-notes-on-serialization"></a>Serileştirme İlave Notlar
 
-Veri sözleşme seri hale getirici tarafından desteklenen türler de aşağıdaki kurallar geçerlidir:
+Aşağıdaki kurallar, Veri Sözleşmesi Serializer tarafından desteklenen türler için de geçerlidir:
 
-- Genel türler, veri sözleşme seri hale getirici tarafından tam olarak desteklenir.
+- Genel türleri tamamen veri sözleşmesi serializer tarafından desteklenir.
 
-- Boş değer atanabilir türler, veri sözleşme seri hale getirici tarafından tam olarak desteklenir.
+- Nullable değer türleri tamamen veri sözleşmesi serializer tarafından desteklenir.
 
-- Arabirim türlerinde kabul edilir ya da farklı <xref:System.Object> veya koleksiyon türleri olarak koleksiyon arabirimleri.
+- Arabirim türleri, <xref:System.Object> koleksiyon arabirimleri söz konusu olduğunda, koleksiyon türleri olarak kabul edilir.
 
-- Yapılar ve sınıflar hem desteklenir.
+- Hem yapılar hem de sınıflar desteklenir.
 
-- <xref:System.Runtime.Serialization.DataContractSerializer> Tarafından kullanılan programlama modelini desteklemiyor <xref:System.Xml.Serialization.XmlSerializer> ve ASP.NET Web Hizmetleri. Özellikle, gibi öznitelikleri desteklemiyor <xref:System.Xml.Serialization.XmlElementAttribute> ve <xref:System.Xml.Serialization.XmlAttributeAttribute>. Bu programlama modeli desteğini etkinleştirmek için WCF kullanmaya geçiş gerekir <xref:System.Xml.Serialization.XmlSerializer> yerine <xref:System.Runtime.Serialization.DataContractSerializer>.
+- Web <xref:System.Runtime.Serialization.DataContractSerializer> hizmetleri ve ASP.NET tarafından kullanılan <xref:System.Xml.Serialization.XmlSerializer> programlama modelini desteklemez. Özellikle, gibi <xref:System.Xml.Serialization.XmlElementAttribute> öznitelikleri desteklemez <xref:System.Xml.Serialization.XmlAttributeAttribute>ve . Bu programlama modeli için destek etkinleştirmek için, WCF <xref:System.Xml.Serialization.XmlSerializer> yerine <xref:System.Runtime.Serialization.DataContractSerializer>kullanmak için anahtarlanmış olmalıdır.
 
-- <xref:System.DBNull> Türü özel bir şekilde kabul edilir. Singleton türüdür ve seri durumundan çıkarma sırasında seri durumdan çıkarıcı tekil kısıtlaması uyar ve tüm işaret `DBNull` tekil örneğini başvuruları. Çünkü `DBNull` gerektirmesi seri hale getirilebilir bir tür olduğunda <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> izni.
+- Türü <xref:System.DBNull> özel bir şekilde tedavi edilir. Bu bir singleton türüdür ve deserializer deserializer singleton kısıtlamasaygı `DBNull` ve singleton örneğine tüm referansları puan. Serileştirilebilir `DBNull` bir tür olduğundan, <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> izin ister.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -76,4 +76,4 @@ Veri sözleşme seri hale getirici tarafından desteklenen türler de aşağıda
 - [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Seri Hale Getirilebilir Türler](../../../../docs/framework/wcf/feature-details/serializable-types.md)
 - [Veri Anlaşmalarında Koleksiyon Türleri](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)
-- [Veri Anlaşmalarında Sabit Listesi Türleri](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)
+- [Veri Sözleşmelerinde Numaralandırma Türleri](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)

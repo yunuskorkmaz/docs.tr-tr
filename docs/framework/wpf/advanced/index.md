@@ -9,31 +9,33 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: f2ed51a2ad757fe29e70c0930e962d22add8de75
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710208"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248192"
 ---
 # <a name="advanced-windows-presentation-foundation"></a>Gelişmiş (Windows Presentation Foundation)
-Bu bölümde WPF içindeki bazı gelişmiş alanlardan bazıları açıklanmaktadır.  
-  
+
+Bu bölümde WPF'deki bazı gelişmiş alanlar açıklanmaktadır.
+
 ## <a name="in-this-section"></a>Bu Bölümde
 
-[WPF Mimarisi](wpf-architecture.md)  
-[WPF'de XAML](xaml-in-wpf.md)  
-[Temel öğe sınıfları](base-elements.md)  
-[Öğe Ağacı ve Serileştirme](element-tree-and-serialization.md)  
-[WPF özellik sistemi](properties-wpf.md)  
-[WPF içindeki olaylar](events-wpf.md)  
-[Giriş](input-wpf.md)  
-[Sürükleme ve Bırakma](drag-and-drop.md)  
-[Kaynaklar](resources-wpf.md)  
-[Belgeler](documents.md)  
-[Genelleştirme ve Yerelleştirme](globalization-and-localization.md)  
-[Düzen](layout.md)  
-[Geçiş ve Birlikte Çalışabilirlik](migration-and-interoperability.md)  
-[Performans](performance.md)  
-[İş Parçacığı Modeli](threading-model.md)  
-[Yönetilmeyen WPF API başvurusu](wpf-unmanaged-api-reference.md)  
+[WPF Mimarisi](wpf-architecture.md)\
+[WPF'de XAML](xaml-in-wpf.md)\
+[Temel Element Sınıfları](base-elements.md)\
+[Eleman Ağacı ve Serileştirme](element-tree-and-serialization.md)\
+[WPF Özellik Sistemi](properties-wpf.md)\
+[WPF'deki olaylar](events-wpf.md)\
+[Giriş](input-wpf.md)\
+[Sürükle ve Bırak](drag-and-drop.md)\
+[Kaynak](resources-wpf.md)\
+[Belge](documents.md)\
+[Küreselleşme ve Yerelleştirme](globalization-and-localization.md)\
+[Düzen](layout.md)\
+[WPF'den System.Xaml'a geçirilen türler](types-migrated-from-wpf-to-system.md)\
+[Göç ve Birlikte Çalışabilirlik](migration-and-interoperability.md)\
+[Performans](performance.md)\
+[İş Parçacığı Modeli](threading-model.md)\
+[Yönetilmeyen WPF API Başvurusu](wpf-unmanaged-api-reference.md)\
